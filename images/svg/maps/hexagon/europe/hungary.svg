@@ -1,0 +1,226 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 362.66 214.77" width="362.66" height="214.77" role="img" aria-labelledby="hungary-title hungary-desc">
+  <title id="hungary-title">Hungary hex map</title>
+  <desc id="hungary-desc">Hexagon map with 43 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 1.81; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 8.93 6.38; }
+    .label { fill: #52525b; font: 600 7.23px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="SZ">
+    <title>Szabolcs-Szatmár-Bereg</title>
+    <polygon class="tile" points="337.86,38.28 356.28,48.91 356.28,70.17 337.86,80.81 319.45,70.17 319.45,48.91" aria-label="Szabolcs-Szatmár-Bereg"/>
+    <text class="label" x="337.86" y="59.54">SZ</text>
+  </g>
+  <g class="state" data-state="NY">
+    <title>Nyíregyháza</title>
+    <polygon class="tile" points="319.45,6.38 337.86,17.01 337.86,38.28 319.45,48.91 301.03,38.28 301.03,17.01" aria-label="Nyíregyháza"/>
+    <text class="label" x="319.45" y="27.64">NY</text>
+  </g>
+  <g class="state" data-state="DE">
+    <title>Debrecen</title>
+    <polygon class="tile" points="319.45,70.17 337.86,80.81 337.86,102.07 319.45,112.70 301.03,102.07 301.03,80.81" aria-label="Debrecen"/>
+    <text class="label" x="319.45" y="91.44">DE</text>
+  </g>
+  <g class="state" data-state="HB">
+    <title>Hajdú-Bihar</title>
+    <polygon class="tile" points="301.03,38.28 319.45,48.91 319.45,70.17 301.03,80.81 282.62,70.17 282.62,48.91" aria-label="Hajdú-Bihar"/>
+    <text class="label" x="301.03" y="59.54">HB</text>
+  </g>
+  <g class="state" data-state="BC">
+    <title>Békéscsaba</title>
+    <polygon class="tile" points="301.03,102.07 319.45,112.70 319.45,133.97 301.03,144.60 282.62,133.97 282.62,112.70" aria-label="Békéscsaba"/>
+    <text class="label" x="301.03" y="123.34">BC</text>
+  </g>
+  <g class="state" data-state="EG">
+    <title>Eger</title>
+    <polygon class="tile" points="282.62,6.38 301.03,17.01 301.03,38.28 282.62,48.91 264.20,38.28 264.20,17.01" aria-label="Eger"/>
+    <text class="label" x="282.62" y="27.64">EG</text>
+  </g>
+  <g class="state" data-state="SK">
+    <title>Szolnok</title>
+    <polygon class="tile" points="282.62,70.17 301.03,80.81 301.03,102.07 282.62,112.70 264.20,102.07 264.20,80.81" aria-label="Szolnok"/>
+    <text class="label" x="282.62" y="91.44">SK</text>
+  </g>
+  <g class="state" data-state="HV">
+    <title>Hódmezôvásárhely</title>
+    <polygon class="tile" points="282.62,133.97 301.03,144.60 301.03,165.87 282.62,176.50 264.20,165.87 264.20,144.60" aria-label="Hódmezôvásárhely"/>
+    <text class="label" x="282.62" y="155.23">HV</text>
+  </g>
+  <g class="state" data-state="BZ">
+    <title>Borsod-Abaúj-Zemplén</title>
+    <polygon class="tile" points="264.20,38.28 282.62,48.91 282.62,70.17 264.20,80.81 245.79,70.17 245.79,48.91" aria-label="Borsod-Abaúj-Zemplén"/>
+    <text class="label" x="264.20" y="59.54">BZ</text>
+  </g>
+  <g class="state" data-state="BE">
+    <title>Békés</title>
+    <polygon class="tile" points="264.20,102.07 282.62,112.70 282.62,133.97 264.20,144.60 245.79,133.97 245.79,112.70" aria-label="Békés"/>
+    <text class="label" x="264.20" y="123.34">BE</text>
+  </g>
+  <g class="state" data-state="SD">
+    <title>Szeged</title>
+    <polygon class="tile" points="264.20,165.87 282.62,176.50 282.62,197.76 264.20,208.39 245.79,197.76 245.79,176.50" aria-label="Szeged"/>
+    <text class="label" x="264.20" y="187.13">SD</text>
+  </g>
+  <g class="state" data-state="MI">
+    <title>Miskolc</title>
+    <polygon class="tile" points="245.79,6.38 264.20,17.01 264.20,38.28 245.79,48.91 227.37,38.28 227.37,17.01" aria-label="Miskolc"/>
+    <text class="label" x="245.79" y="27.64">MI</text>
+  </g>
+  <g class="state" data-state="JN">
+    <title>Jász-Nagykun-Szolnok</title>
+    <polygon class="tile" points="245.79,70.17 264.20,80.81 264.20,102.07 245.79,112.70 227.37,102.07 227.37,80.81" aria-label="Jász-Nagykun-Szolnok"/>
+    <text class="label" x="245.79" y="91.44">JN</text>
+  </g>
+  <g class="state" data-state="CS">
+    <title>Csongrád</title>
+    <polygon class="tile" points="245.79,133.97 264.20,144.60 264.20,165.87 245.79,176.50 227.37,165.87 227.37,144.60" aria-label="Csongrád"/>
+    <text class="label" x="245.79" y="155.23">CS</text>
+  </g>
+  <g class="state" data-state="HE">
+    <title>Heves</title>
+    <polygon class="tile" points="227.37,38.28 245.79,48.91 245.79,70.17 227.37,80.81 208.95,70.17 208.95,48.91" aria-label="Heves"/>
+    <text class="label" x="227.37" y="59.54">HE</text>
+  </g>
+  <g class="state" data-state="KM">
+    <title>Kecskemét</title>
+    <polygon class="tile" points="227.37,102.07 245.79,112.70 245.79,133.97 227.37,144.60 208.95,133.97 208.95,112.70" aria-label="Kecskemét"/>
+    <text class="label" x="227.37" y="123.34">KM</text>
+  </g>
+  <g class="state" data-state="SS">
+    <title>Szekszárd</title>
+    <polygon class="tile" points="227.37,165.87 245.79,176.50 245.79,197.76 227.37,208.39 208.95,197.76 208.95,176.50" aria-label="Szekszárd"/>
+    <text class="label" x="227.37" y="187.13">SS</text>
+  </g>
+  <g class="state" data-state="NO">
+    <title>Nógrád</title>
+    <polygon class="tile" points="208.95,6.38 227.37,17.01 227.37,38.28 208.95,48.91 190.54,38.28 190.54,17.01" aria-label="Nógrád"/>
+    <text class="label" x="208.95" y="27.64">NO</text>
+  </g>
+  <g class="state" data-state="PE">
+    <title>Pest</title>
+    <polygon class="tile" points="208.95,70.17 227.37,80.81 227.37,102.07 208.95,112.70 190.54,102.07 190.54,80.81" aria-label="Pest"/>
+    <text class="label" x="208.95" y="91.44">PE</text>
+  </g>
+  <g class="state" data-state="BK">
+    <title>Bács-Kiskun</title>
+    <polygon class="tile" points="208.95,133.97 227.37,144.60 227.37,165.87 208.95,176.50 190.54,165.87 190.54,144.60" aria-label="Bács-Kiskun"/>
+    <text class="label" x="208.95" y="155.23">BK</text>
+  </g>
+  <g class="state" data-state="BU">
+    <title>Budapest</title>
+    <polygon class="tile" points="190.54,38.28 208.95,48.91 208.95,70.17 190.54,80.81 172.12,70.17 172.12,48.91" aria-label="Budapest"/>
+    <text class="label" x="190.54" y="59.54">BU</text>
+  </g>
+  <g class="state" data-state="SF">
+    <title>Székesfehérvár</title>
+    <polygon class="tile" points="190.54,102.07 208.95,112.70 208.95,133.97 190.54,144.60 172.12,133.97 172.12,112.70" aria-label="Székesfehérvár"/>
+    <text class="label" x="190.54" y="123.34">SF</text>
+  </g>
+  <g class="state" data-state="ST">
+    <title>Salgótarján</title>
+    <polygon class="tile" points="172.12,6.38 190.54,17.01 190.54,38.28 172.12,48.91 153.71,38.28 153.71,17.01" aria-label="Salgótarján"/>
+    <text class="label" x="172.12" y="27.64">ST</text>
+  </g>
+  <g class="state" data-state="ED">
+    <title>Érd</title>
+    <polygon class="tile" points="172.12,70.17 190.54,80.81 190.54,102.07 172.12,112.70 153.71,102.07 153.71,80.81" aria-label="Érd"/>
+    <text class="label" x="172.12" y="91.44">ED</text>
+  </g>
+  <g class="state" data-state="DU">
+    <title>Dunaújváros</title>
+    <polygon class="tile" points="172.12,133.97 190.54,144.60 190.54,165.87 172.12,176.50 153.71,165.87 153.71,144.60" aria-label="Dunaújváros"/>
+    <text class="label" x="172.12" y="155.23">DU</text>
+  </g>
+  <g class="state" data-state="TB">
+    <title>Tatabánya</title>
+    <polygon class="tile" points="153.71,38.28 172.12,48.91 172.12,70.17 153.71,80.81 135.29,70.17 135.29,48.91" aria-label="Tatabánya"/>
+    <text class="label" x="153.71" y="59.54">TB</text>
+  </g>
+  <g class="state" data-state="FE">
+    <title>Fejér</title>
+    <polygon class="tile" points="153.71,102.07 172.12,112.70 172.12,133.97 153.71,144.60 135.29,133.97 135.29,112.70" aria-label="Fejér"/>
+    <text class="label" x="153.71" y="123.34">FE</text>
+  </g>
+  <g class="state" data-state="PS">
+    <title>Pécs</title>
+    <polygon class="tile" points="153.71,165.87 172.12,176.50 172.12,197.76 153.71,208.39 135.29,197.76 135.29,176.50" aria-label="Pécs"/>
+    <text class="label" x="153.71" y="187.13">PS</text>
+  </g>
+  <g class="state" data-state="KE">
+    <title>Komárom-Esztergom</title>
+    <polygon class="tile" points="135.29,70.17 153.71,80.81 153.71,102.07 135.29,112.70 116.87,102.07 116.87,80.81" aria-label="Komárom-Esztergom"/>
+    <text class="label" x="135.29" y="91.44">KE</text>
+  </g>
+  <g class="state" data-state="TO">
+    <title>Tolna</title>
+    <polygon class="tile" points="135.29,133.97 153.71,144.60 153.71,165.87 135.29,176.50 116.87,165.87 116.87,144.60" aria-label="Tolna"/>
+    <text class="label" x="135.29" y="155.23">TO</text>
+  </g>
+  <g class="state" data-state="GY">
+    <title>Gyôr</title>
+    <polygon class="tile" points="116.87,38.28 135.29,48.91 135.29,70.17 116.87,80.81 98.46,70.17 98.46,48.91" aria-label="Gyôr"/>
+    <text class="label" x="116.87" y="59.54">GY</text>
+  </g>
+  <g class="state" data-state="VM">
+    <title>Veszprém</title>
+    <polygon class="tile" points="116.87,102.07 135.29,112.70 135.29,133.97 116.87,144.60 98.46,133.97 98.46,112.70" aria-label="Veszprém"/>
+    <text class="label" x="116.87" y="123.34">VM</text>
+  </g>
+  <g class="state" data-state="BA">
+    <title>Baranya</title>
+    <polygon class="tile" points="116.87,165.87 135.29,176.50 135.29,197.76 116.87,208.39 98.46,197.76 98.46,176.50" aria-label="Baranya"/>
+    <text class="label" x="116.87" y="187.13">BA</text>
+  </g>
+  <g class="state" data-state="VE">
+    <title>Veszprém</title>
+    <polygon class="tile" points="98.46,70.17 116.87,80.81 116.87,102.07 98.46,112.70 80.04,102.07 80.04,80.81" aria-label="Veszprém"/>
+    <text class="label" x="98.46" y="91.44">VE</text>
+  </g>
+  <g class="state" data-state="SO">
+    <title>Somogy</title>
+    <polygon class="tile" points="98.46,133.97 116.87,144.60 116.87,165.87 98.46,176.50 80.04,165.87 80.04,144.60" aria-label="Somogy"/>
+    <text class="label" x="98.46" y="155.23">SO</text>
+  </g>
+  <g class="state" data-state="GS">
+    <title>Gyor-Moson-Sopron</title>
+    <polygon class="tile" points="80.04,38.28 98.46,48.91 98.46,70.17 80.04,80.81 61.63,70.17 61.63,48.91" aria-label="Gyor-Moson-Sopron"/>
+    <text class="label" x="80.04" y="59.54">GS</text>
+  </g>
+  <g class="state" data-state="ZA">
+    <title>Zala</title>
+    <polygon class="tile" points="80.04,102.07 98.46,112.70 98.46,133.97 80.04,144.60 61.63,133.97 61.63,112.70" aria-label="Zala"/>
+    <text class="label" x="80.04" y="123.34">ZA</text>
+  </g>
+  <g class="state" data-state="KV">
+    <title>Kaposvár</title>
+    <polygon class="tile" points="80.04,165.87 98.46,176.50 98.46,197.76 80.04,208.39 61.63,197.76 61.63,176.50" aria-label="Kaposvár"/>
+    <text class="label" x="80.04" y="187.13">KV</text>
+  </g>
+  <g class="state" data-state="VA">
+    <title>Vas</title>
+    <polygon class="tile" points="61.63,70.17 80.04,80.81 80.04,102.07 61.63,112.70 43.21,102.07 43.21,80.81" aria-label="Vas"/>
+    <text class="label" x="61.63" y="91.44">VA</text>
+  </g>
+  <g class="state" data-state="NK">
+    <title>Nagykanizsa</title>
+    <polygon class="tile" points="61.63,133.97 80.04,144.60 80.04,165.87 61.63,176.50 43.21,165.87 43.21,144.60" aria-label="Nagykanizsa"/>
+    <text class="label" x="61.63" y="155.23">NK</text>
+  </g>
+  <g class="state" data-state="SN">
+    <title>Sopron</title>
+    <polygon class="tile" points="43.21,38.28 61.63,48.91 61.63,70.17 43.21,80.81 24.80,70.17 24.80,48.91" aria-label="Sopron"/>
+    <text class="label" x="43.21" y="59.54">SN</text>
+  </g>
+  <g class="state" data-state="ZE">
+    <title>Zalaegerszeg</title>
+    <polygon class="tile" points="43.21,102.07 61.63,112.70 61.63,133.97 43.21,144.60 24.80,133.97 24.80,112.70" aria-label="Zalaegerszeg"/>
+    <text class="label" x="43.21" y="123.34">ZE</text>
+  </g>
+  <g class="state" data-state="SH">
+    <title>Szombathely</title>
+    <polygon class="tile" points="24.80,70.17 43.21,80.81 43.21,102.07 24.80,112.70 6.38,102.07 6.38,80.81" aria-label="Szombathely"/>
+    <text class="label" x="24.80" y="91.44">SH</text>
+  </g>
+</svg>

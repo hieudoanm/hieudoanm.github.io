@@ -1,0 +1,236 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 362.17 259.52" width="362.17" height="259.52" role="img" aria-labelledby="burkina-faso-title burkina-faso-desc">
+  <title id="burkina-faso-title">Burkina Faso hex map</title>
+  <desc id="burkina-faso-desc">Hexagon map with 45 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 1.90; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 9.40 6.71; }
+    .label { fill: #52525b; font: 600 7.61px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="TAP">
+    <title>Tapoa</title>
+    <polygon class="tile" points="336.09,140.95 355.46,152.13 355.46,174.50 336.09,185.69 316.71,174.50 316.71,152.13" aria-label="Tapoa"/>
+    <text class="label" x="336.09" y="163.32">TAP</text>
+  </g>
+  <g class="state" data-state="KMD">
+    <title>Komondjari</title>
+    <polygon class="tile" points="316.71,107.39 336.09,118.57 336.09,140.95 316.71,152.13 297.34,140.95 297.34,118.57" aria-label="Komondjari"/>
+    <text class="label" x="316.71" y="129.76">KMD</text>
+  </g>
+  <g class="state" data-state="KMP">
+    <title>Kompienga</title>
+    <polygon class="tile" points="316.71,174.50 336.09,185.69 336.09,208.06 316.71,219.25 297.34,208.06 297.34,185.69" aria-label="Kompienga"/>
+    <text class="label" x="316.71" y="196.88">KMP</text>
+  </g>
+  <g class="state" data-state="YAG">
+    <title>Yagha</title>
+    <polygon class="tile" points="297.34,73.83 316.71,85.01 316.71,107.39 297.34,118.57 277.96,107.39 277.96,85.01" aria-label="Yagha"/>
+    <text class="label" x="297.34" y="96.20">YAG</text>
+  </g>
+  <g class="state" data-state="GOU">
+    <title>Gourma</title>
+    <polygon class="tile" points="297.34,140.95 316.71,152.13 316.71,174.50 297.34,185.69 277.96,174.50 277.96,152.13" aria-label="Gourma"/>
+    <text class="label" x="297.34" y="163.32">GOU</text>
+  </g>
+  <g class="state" data-state="SEN">
+    <title>Séno</title>
+    <polygon class="tile" points="277.96,40.27 297.34,51.46 297.34,73.83 277.96,85.01 258.59,73.83 258.59,51.46" aria-label="Séno"/>
+    <text class="label" x="277.96" y="62.64">SEN</text>
+  </g>
+  <g class="state" data-state="GNA">
+    <title>Gnagna</title>
+    <polygon class="tile" points="277.96,107.39 297.34,118.57 297.34,140.95 277.96,152.13 258.59,140.95 258.59,118.57" aria-label="Gnagna"/>
+    <text class="label" x="277.96" y="129.76">GNA</text>
+  </g>
+  <g class="state" data-state="KOP">
+    <title>Koulpélogo</title>
+    <polygon class="tile" points="277.96,174.50 297.34,185.69 297.34,208.06 277.96,219.25 258.59,208.06 258.59,185.69" aria-label="Koulpélogo"/>
+    <text class="label" x="277.96" y="196.88">KOP</text>
+  </g>
+  <g class="state" data-state="OUD">
+    <title>Oudalan</title>
+    <polygon class="tile" points="258.59,6.71 277.96,17.90 277.96,40.27 258.59,51.46 239.21,40.27 239.21,17.90" aria-label="Oudalan"/>
+    <text class="label" x="258.59" y="29.08">OUD</text>
+  </g>
+  <g class="state" data-state="NAM">
+    <title>Namentenga</title>
+    <polygon class="tile" points="258.59,73.83 277.96,85.01 277.96,107.39 258.59,118.57 239.21,107.39 239.21,85.01" aria-label="Namentenga"/>
+    <text class="label" x="258.59" y="96.20">NAM</text>
+  </g>
+  <g class="state" data-state="KOT">
+    <title>Kouritenga</title>
+    <polygon class="tile" points="258.59,140.95 277.96,152.13 277.96,174.50 258.59,185.69 239.21,174.50 239.21,152.13" aria-label="Kouritenga"/>
+    <text class="label" x="258.59" y="163.32">KOT</text>
+  </g>
+  <g class="state" data-state="BLG">
+    <title>Boulgou</title>
+    <polygon class="tile" points="258.59,208.06 277.96,219.25 277.96,241.62 258.59,252.81 239.21,241.62 239.21,219.25" aria-label="Boulgou"/>
+    <text class="label" x="258.59" y="230.43">BLG</text>
+  </g>
+  <g class="state" data-state="SMT">
+    <title>Sanmatenga</title>
+    <polygon class="tile" points="239.21,40.27 258.59,51.46 258.59,73.83 239.21,85.01 219.84,73.83 219.84,51.46" aria-label="Sanmatenga"/>
+    <text class="label" x="239.21" y="62.64">SMT</text>
+  </g>
+  <g class="state" data-state="GAN">
+    <title>Ganzourgou</title>
+    <polygon class="tile" points="239.21,107.39 258.59,118.57 258.59,140.95 239.21,152.13 219.84,140.95 219.84,118.57" aria-label="Ganzourgou"/>
+    <text class="label" x="239.21" y="129.76">GAN</text>
+  </g>
+  <g class="state" data-state="ZOU">
+    <title>Zoundwéogo</title>
+    <polygon class="tile" points="239.21,174.50 258.59,185.69 258.59,208.06 239.21,219.25 219.84,208.06 219.84,185.69" aria-label="Zoundwéogo"/>
+    <text class="label" x="239.21" y="196.88">ZOU</text>
+  </g>
+  <g class="state" data-state="SOM">
+    <title>Soum</title>
+    <polygon class="tile" points="219.84,6.71 239.21,17.90 239.21,40.27 219.84,51.46 200.46,40.27 200.46,17.90" aria-label="Soum"/>
+    <text class="label" x="219.84" y="29.08">SOM</text>
+  </g>
+  <g class="state" data-state="OUB">
+    <title>Oubritenga</title>
+    <polygon class="tile" points="219.84,73.83 239.21,85.01 239.21,107.39 219.84,118.57 200.46,107.39 200.46,85.01" aria-label="Oubritenga"/>
+    <text class="label" x="219.84" y="96.20">OUB</text>
+  </g>
+  <g class="state" data-state="BAZ">
+    <title>Bazéga</title>
+    <polygon class="tile" points="219.84,140.95 239.21,152.13 239.21,174.50 219.84,185.69 200.46,174.50 200.46,152.13" aria-label="Bazéga"/>
+    <text class="label" x="219.84" y="163.32">BAZ</text>
+  </g>
+  <g class="state" data-state="NAO">
+    <title>Nahouri</title>
+    <polygon class="tile" points="219.84,208.06 239.21,219.25 239.21,241.62 219.84,252.81 200.46,241.62 200.46,219.25" aria-label="Nahouri"/>
+    <text class="label" x="219.84" y="230.43">NAO</text>
+  </g>
+  <g class="state" data-state="BAM">
+    <title>Bam</title>
+    <polygon class="tile" points="200.46,40.27 219.84,51.46 219.84,73.83 200.46,85.01 181.09,73.83 181.09,51.46" aria-label="Bam"/>
+    <text class="label" x="200.46" y="62.64">BAM</text>
+  </g>
+  <g class="state" data-state="KOW">
+    <title>Kourwéogo</title>
+    <polygon class="tile" points="200.46,107.39 219.84,118.57 219.84,140.95 200.46,152.13 181.09,140.95 181.09,118.57" aria-label="Kourwéogo"/>
+    <text class="label" x="200.46" y="129.76">KOW</text>
+  </g>
+  <g class="state" data-state="ZIR">
+    <title>Ziro</title>
+    <polygon class="tile" points="200.46,174.50 219.84,185.69 219.84,208.06 200.46,219.25 181.09,208.06 181.09,185.69" aria-label="Ziro"/>
+    <text class="label" x="200.46" y="196.88">ZIR</text>
+  </g>
+  <g class="state" data-state="LOR">
+    <title>Loroum</title>
+    <polygon class="tile" points="181.09,6.71 200.46,17.90 200.46,40.27 181.09,51.46 161.71,40.27 161.71,17.90" aria-label="Loroum"/>
+    <text class="label" x="181.09" y="29.08">LOR</text>
+  </g>
+  <g class="state" data-state="PAS">
+    <title>Passoré</title>
+    <polygon class="tile" points="181.09,73.83 200.46,85.01 200.46,107.39 181.09,118.57 161.71,107.39 161.71,85.01" aria-label="Passoré"/>
+    <text class="label" x="181.09" y="96.20">PAS</text>
+  </g>
+  <g class="state" data-state="KAD">
+    <title>Kadiogo</title>
+    <polygon class="tile" points="181.09,140.95 200.46,152.13 200.46,174.50 181.09,185.69 161.71,174.50 161.71,152.13" aria-label="Kadiogo"/>
+    <text class="label" x="181.09" y="163.32">KAD</text>
+  </g>
+  <g class="state" data-state="NOU">
+    <title>Noumbiel</title>
+    <polygon class="tile" points="181.09,208.06 200.46,219.25 200.46,241.62 181.09,252.81 161.71,241.62 161.71,219.25" aria-label="Noumbiel"/>
+    <text class="label" x="181.09" y="230.43">NOU</text>
+  </g>
+  <g class="state" data-state="YAT">
+    <title>Yatenga</title>
+    <polygon class="tile" points="161.71,40.27 181.09,51.46 181.09,73.83 161.71,85.01 142.34,73.83 142.34,51.46" aria-label="Yatenga"/>
+    <text class="label" x="161.71" y="62.64">YAT</text>
+  </g>
+  <g class="state" data-state="BLK">
+    <title>Boulkiemdé</title>
+    <polygon class="tile" points="161.71,107.39 181.09,118.57 181.09,140.95 161.71,152.13 142.34,140.95 142.34,118.57" aria-label="Boulkiemdé"/>
+    <text class="label" x="161.71" y="129.76">BLK</text>
+  </g>
+  <g class="state" data-state="SIS">
+    <title>Sissili</title>
+    <polygon class="tile" points="161.71,174.50 181.09,185.69 181.09,208.06 161.71,219.25 142.34,208.06 142.34,185.69" aria-label="Sissili"/>
+    <text class="label" x="161.71" y="196.88">SIS</text>
+  </g>
+  <g class="state" data-state="ZON">
+    <title>Zondoma</title>
+    <polygon class="tile" points="142.34,6.71 161.71,17.90 161.71,40.27 142.34,51.46 122.96,40.27 122.96,17.90" aria-label="Zondoma"/>
+    <text class="label" x="142.34" y="29.08">ZON</text>
+  </g>
+  <g class="state" data-state="NAY">
+    <title>Nayala</title>
+    <polygon class="tile" points="142.34,73.83 161.71,85.01 161.71,107.39 142.34,118.57 122.96,107.39 122.96,85.01" aria-label="Nayala"/>
+    <text class="label" x="142.34" y="96.20">NAY</text>
+  </g>
+  <g class="state" data-state="BAL">
+    <title>Balé</title>
+    <polygon class="tile" points="142.34,140.95 161.71,152.13 161.71,174.50 142.34,185.69 122.96,174.50 122.96,152.13" aria-label="Balé"/>
+    <text class="label" x="142.34" y="163.32">BAL</text>
+  </g>
+  <g class="state" data-state="PON">
+    <title>Poni</title>
+    <polygon class="tile" points="142.34,208.06 161.71,219.25 161.71,241.62 142.34,252.81 122.96,241.62 122.96,219.25" aria-label="Poni"/>
+    <text class="label" x="142.34" y="230.43">PON</text>
+  </g>
+  <g class="state" data-state="SOR">
+    <title>Sourou</title>
+    <polygon class="tile" points="122.96,40.27 142.34,51.46 142.34,73.83 122.96,85.01 103.59,73.83 103.59,51.46" aria-label="Sourou"/>
+    <text class="label" x="122.96" y="62.64">SOR</text>
+  </g>
+  <g class="state" data-state="SNG">
+    <title>Sanguié</title>
+    <polygon class="tile" points="122.96,107.39 142.34,118.57 142.34,140.95 122.96,152.13 103.59,140.95 103.59,118.57" aria-label="Sanguié"/>
+    <text class="label" x="122.96" y="129.76">SNG</text>
+  </g>
+  <g class="state" data-state="IOB">
+    <title>Ioba</title>
+    <polygon class="tile" points="122.96,174.50 142.34,185.69 142.34,208.06 122.96,219.25 103.59,208.06 103.59,185.69" aria-label="Ioba"/>
+    <text class="label" x="122.96" y="196.88">IOB</text>
+  </g>
+  <g class="state" data-state="KOS">
+    <title>Kossi</title>
+    <polygon class="tile" points="103.59,73.83 122.96,85.01 122.96,107.39 103.59,118.57 84.21,107.39 84.21,85.01" aria-label="Kossi"/>
+    <text class="label" x="103.59" y="96.20">KOS</text>
+  </g>
+  <g class="state" data-state="TUI">
+    <title>Tuy</title>
+    <polygon class="tile" points="103.59,140.95 122.96,152.13 122.96,174.50 103.59,185.69 84.21,174.50 84.21,152.13" aria-label="Tuy"/>
+    <text class="label" x="103.59" y="163.32">TUI</text>
+  </g>
+  <g class="state" data-state="BGR">
+    <title>Bougouriba</title>
+    <polygon class="tile" points="103.59,208.06 122.96,219.25 122.96,241.62 103.59,252.81 84.21,241.62 84.21,219.25" aria-label="Bougouriba"/>
+    <text class="label" x="103.59" y="230.43">BGR</text>
+  </g>
+  <g class="state" data-state="MOU">
+    <title>Mou Houn</title>
+    <polygon class="tile" points="84.21,107.39 103.59,118.57 103.59,140.95 84.21,152.13 64.84,140.95 64.84,118.57" aria-label="Mou Houn"/>
+    <text class="label" x="84.21" y="129.76">MOU</text>
+  </g>
+  <g class="state" data-state="HOU">
+    <title>Houet</title>
+    <polygon class="tile" points="84.21,174.50 103.59,185.69 103.59,208.06 84.21,219.25 64.84,208.06 64.84,185.69" aria-label="Houet"/>
+    <text class="label" x="84.21" y="196.88">HOU</text>
+  </g>
+  <g class="state" data-state="BAN">
+    <title>Banwa</title>
+    <polygon class="tile" points="64.84,140.95 84.21,152.13 84.21,174.50 64.84,185.69 45.46,174.50 45.46,152.13" aria-label="Banwa"/>
+    <text class="label" x="64.84" y="163.32">BAN</text>
+  </g>
+  <g class="state" data-state="COM">
+    <title>Komoé</title>
+    <polygon class="tile" points="64.84,208.06 84.21,219.25 84.21,241.62 64.84,252.81 45.46,241.62 45.46,219.25" aria-label="Komoé"/>
+    <text class="label" x="64.84" y="230.43">COM</text>
+  </g>
+  <g class="state" data-state="KEN">
+    <title>Kénédougou</title>
+    <polygon class="tile" points="45.46,174.50 64.84,185.69 64.84,208.06 45.46,219.25 26.09,208.06 26.09,185.69" aria-label="Kénédougou"/>
+    <text class="label" x="45.46" y="196.88">KEN</text>
+  </g>
+  <g class="state" data-state="LER">
+    <title>Léraba</title>
+    <polygon class="tile" points="26.09,208.06 45.46,219.25 45.46,241.62 26.09,252.81 6.71,241.62 6.71,219.25" aria-label="Léraba"/>
+    <text class="label" x="26.09" y="230.43">LER</text>
+  </g>
+</svg>

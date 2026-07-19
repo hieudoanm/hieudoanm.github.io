@@ -1,0 +1,15 @@
+flowchart TD
+    IN["DBML input (file or string)"] --> P["Parser (internal/dbml/parser.go)"]
+    P --> AST["Internal AST — tables · columns · constraints · enums · indexes · notes"]
+    AST --> SQL["SQL generator — PostgreSQL DDL"]
+    AST --> MER["Mermaid generator — erDiagram syntax"]
+    AST --> SVG["SVG generator — rendered directly in Go"]
+    SQL --> TR{"Transport layer"}
+    MER --> TR
+    SVG --> TR
+    TR --> CLI["CLI commands (cmd/)"]
+    TR --> HTTP["HTTP handlers (internal/server/)"]
+    TR --> MCP["MCP tools (internal/mcp/)"]
+    CLI --> W["Write files"]
+    HTTP --> J["Return JSON"]
+    MCP --> T["Return tool text"]

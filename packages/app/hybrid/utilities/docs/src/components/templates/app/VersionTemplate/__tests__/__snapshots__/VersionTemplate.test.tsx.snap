@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`VersionTemplate to match snapshot 1`] = `
+<div>
+  <div
+    class="mx-auto flex w-full max-w-2xl flex-col items-center gap-4 px-4 py-10 text-center sm:gap-6 sm:px-6 sm:py-16"
+  >
+    <p
+      class="text-base-content/50 text-xs tracking-[0.2em] uppercase"
+    >
+      Current deployment
+    </p>
+    <h1
+      class="mb-1"
+    >
+      Version
+    </h1>
+    <div
+      class="border-base-content/10 bg-base-200 w-full max-w-lg overflow-x-auto rounded-2xl border p-4 sm:p-6"
+    >
+      <div
+        class="flex min-w-max items-center justify-center gap-0"
+      >
+        <div
+          class="flex flex-col items-center px-2 sm:px-4"
+        >
+          <span
+            class="font-mono text-xl font-bold sm:text-2xl text-primary"
+          >
+            0
+          </span>
+          <span
+            class="text-base-content/50 mt-1 hidden text-[10px] tracking-[0.2em] uppercase sm:inline sm:text-xs"
+          >
+            Year
+          </span>
+        </div>
+        <span
+          class="text-base-content/50 font-mono text-xl"
+        >
+          .
+        </span>
+        <div
+          class="flex flex-col items-center px-2 sm:px-4"
+        >
+          <span
+            class="font-mono text-xl font-bold sm:text-2xl text-base-content"
+          >
+            0
+          </span>
+          <span
+            class="text-base-content/50 mt-1 hidden text-[10px] tracking-[0.2em] uppercase sm:inline sm:text-xs"
+          >
+            Month
+          </span>
+        </div>
+        <span
+          class="text-base-content/50 font-mono text-xl"
+        >
+          .
+        </span>
+        <div
+          class="flex flex-col items-center px-2 sm:px-4"
+        >
+          <span
+            class="font-mono text-xl font-bold sm:text-2xl text-base-content"
+          >
+            0
+          </span>
+          <span
+            class="text-base-content/50 mt-1 hidden text-[10px] tracking-[0.2em] uppercase sm:inline sm:text-xs"
+          >
+            Day
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex w-full flex-col items-center gap-3 sm:flex-row sm:justify-center"
+    >
+      <button
+        class="btn btn-sm w-full rounded-full sm:w-auto btn-primary"
+      >
+        <svg
+          fill="none"
+          height="1em"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            height="13"
+            rx="2"
+            ry="2"
+            width="13"
+            x="9"
+            y="9"
+          />
+          <path
+            d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+          />
+        </svg>
+        Copy version
+      </button>
+      <button
+        class="btn btn-neutral btn-sm w-full truncate rounded-full sm:w-auto"
+      >
+        0.0.0
+      </button>
+    </div>
+    <div
+      class="flex flex-wrap justify-center gap-3"
+    >
+      <span
+        class="border-base-content/20 text-base-content/50 rounded-full border px-3 py-1 text-xs"
+      >
+        Format: YYYY.MM.DD.hh.mm.ss
+      </span>
+      <span
+        class="badge badge-neutral rounded-full"
+      >
+        Stable
+      </span>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en" data-theme="auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>v0.3.0 · Changelog</title>
+    
+    <meta name="description" content="Added wikilink extraction and extended link formats" />
+    
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="header">
+      <div class="header__bar">
+        
+        <button
+          class="header__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="sidebar"
+          data-nav-toggle
+        >
+          <span class="header__toggle-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Menu</span>
+        </button>
+        
+        <a class="header__title" href="/">Changelog</a>
+        <div class="header__actions">
+          <label class="header__search" for="search">
+            <span class="visually-hidden">Search</span>
+            <input
+              id="search"
+              type="search"
+              placeholder="Search"
+              autocomplete="off"
+              data-search
+              data-search-index="/assets/search-index.json"
+            />
+          </label>
+          <button class="header__theme" type="button" data-theme-toggle>
+            <span class="visually-hidden">Toggle colour theme</span>
+          </button>
+        </div>
+      </div>
+      <div class="search" data-search-panel hidden>
+        <p class="search__status" role="status" data-search-status></p>
+        <ul class="search__results" data-search-results></ul>
+      </div>
+    </header>
+
+    <div class="layout">
+      
+      <nav class="sidebar" id="sidebar" aria-label="Site">
+        <ul class="nav">
+  <li class="nav__item">
+  <a
+    class="nav__link"
+    href="/"
+    >Changelog</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v0-0-1/"
+    >v0.0.1</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v0-0-2/"
+    >v0.0.2</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v0-0-3/"
+    >v0.0.3</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v0-1-0/"
+    >v0.1.0</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v0-2-0/"
+    >v0.2.0</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link nav__link--current"
+    href="/v0-3-0/"
+    aria-current="page">v0.3.0</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v1-0-0/"
+    >v1.0.0</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v2-0-0/"
+    >v2.0.0</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v3-0-0/"
+    >v3.0.0</a
+  > 
+</li>
+</ul>
+      </nav>
+      
+
+      <main class="main" id="main">
+        <article class="markdown"><h1 id="page-title" class="markdown__title">v0.3.0</h1>
+          
+          <p class="markdown__lede">Added wikilink extraction and extended link formats</p>
+          
+          <p>Released: May 15, 2024</p>
+<h2 id="added">Added</h2>
+<ul>
+<li><strong>Wikilink extraction</strong> — <code>[[target]]</code>, <code>[[target|alias]]</code>, <code>[[target#frag]]</code></li>
+<li><strong>Standard Markdown link extraction</strong> — <code>[text](target)</code> alongside wikilinks</li>
+<li><strong>Extensionless link resolution</strong> — <code>[Guide](guide/index)</code> resolves to <code>guide/index.md</code></li>
+<li><strong>Fenced code block skipping</strong> — Links inside <code> </code> ``` blocks are ignored</li>
+<li><strong>Broken link detection</strong> — Unresolved targets are marked, not silently dropped</li>
+<li><strong>Outside-root detection</strong> — Links escaping the scan root are reported</li>
+<li><strong>Duplicate edge removal</strong> — Normalized unordered pairs collapse</li>
+<li><strong>Deterministic ordering</strong> — Nodes and edges sorted before serialization</li>
+</ul>
+<h2 id="changed">Changed</h2>
+<ul>
+<li>Graph extractor refactored into <code>internal/graph</code> with separate renderer</li>
+</ul>
+<h2 id="fixed">Fixed</h2>
+<ul>
+<li>Nested fenced code blocks now parse correctly</li>
+</ul>
+<h2 id="security">Security</h2>
+<ul>
+<li>N/A</li>
+</ul>
+<h2 id="related">Related</h2>
+<ul>
+<li><a href="/">Changelog home</a></li>
+<li><a href="/v0-2-0/">v0.2.0</a> — previous release</li>
+<li><a href="/v1-0-0/">v1.0.0</a> — next major release</li>
+</ul>
+
+          
+        </article>
+        
+<aside class="outline" aria-label="On this page">
+  <h2 class="outline__title">On this page</h2>
+  <ul class="outline__list">
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#added">Added</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#changed">Changed</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#fixed">Fixed</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#security">Security</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#related">Related</a>
+    </li>
+    
+  </ul>
+</aside>
+
+      </main>
+    </div>
+
+    <footer class="footer">
+      <p>Built with pagify · © 2024 pagify</p>
+    </footer>
+
+    <script src="/assets/script.js" defer></script>
+    <script src="/assets/search.js" defer></script>
+  </body>
+</html>

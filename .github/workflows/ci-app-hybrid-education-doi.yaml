@@ -1,0 +1,33 @@
+name: CI - App - Hybrid - Education - DOI
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/education/doi/**/*'
+      - '.github/workflows/ci-app-hybrid-education-doi.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-hybrid-education-doi-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/education/doi
+      filter: '@hieudoanm.github.io/doi'
+      releaseName: app-hybrid-education-doi-latest
+      releaseTitle: App - Hybrid - Education - DOI (latest)
+      artifactPrefix: education-doi
+      artifactName: doi

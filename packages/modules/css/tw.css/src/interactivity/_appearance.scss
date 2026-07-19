@@ -1,0 +1,10 @@
+// Appearance utilities — Tailwind v3 default scale
+
+$appearances: (('none', none), ('auto', auto));
+
+@each $name, $value in $appearances {
+  .appearance-#{$name} {
+    -webkit-appearance: $value;
+    appearance: $value;
+  }
+}

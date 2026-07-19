@@ -1,0 +1,11 @@
+digraph graph {
+  rankdir=TB;
+  splines=polyline;
+  "getting-started.md" [label="getting-started.md", shape=note];
+  "index.md" [label="index.md", shape=note];
+  "reference/index.md" [label="index.md", shape=note];
+  "getting-started.md" -> "index.md";
+  "getting-started.md" -> "reference/index.md";
+  "index.md" -> "../blog/index.md";
+  "index.md" -> "reference/index.md";
+}

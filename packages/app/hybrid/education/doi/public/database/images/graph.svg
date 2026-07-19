@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>
+ .edge { stroke: #cbd5e1; stroke-width: 1; }
+ .node { fill: #6366f1; }
+ .label { font: 10px sans-serif; fill: #334155; text-anchor: middle; }
+</style>
+<line class="edge" x1="786.6" y1="526.7" x2="921.2" y2="730.5"/>
+<line class="edge" x1="786.6" y1="526.7" x2="888.4" y2="714.8"/>
+<line class="edge" x1="786.6" y1="526.7" x2="783.3" y2="708.6"/>
+<line class="edge" x1="786.6" y1="526.7" x2="759.8" y2="712.1"/>
+<line class="edge" x1="786.6" y1="526.7" x2="650.3" y2="709.3"/>
+<line class="edge" x1="786.6" y1="526.7" x2="654.3" y2="624.0"/>
+<line class="edge" x1="786.6" y1="526.7" x2="645.3" y2="587.3"/>
+<line class="edge" x1="786.6" y1="526.7" x2="636.9" y2="600.8"/>
+<line class="edge" x1="786.6" y1="526.7" x2="641.7" y2="476.1"/>
+<line class="edge" x1="786.6" y1="526.7" x2="643.7" y2="521.8"/>
+<line class="edge" x1="786.6" y1="526.7" x2="654.6" y2="356.3"/>
+<line class="edge" x1="786.6" y1="526.7" x2="807.0" y2="259.4"/>
+<line class="edge" x1="786.6" y1="526.7" x2="861.6" y2="348.1"/>
+<line class="edge" x1="921.2" y1="730.5" x2="1065.4" y2="832.9"/>
+<line class="edge" x1="921.2" y1="730.5" x2="1056.4" y2="843.3"/>
+<line class="edge" x1="921.2" y1="730.5" x2="1046.5" y2="852.9"/>
+<line class="edge" x1="921.2" y1="730.5" x2="1036.0" y2="861.6"/>
+<line class="edge" x1="921.2" y1="730.5" x2="1024.9" y2="869.3"/>
+<line class="edge" x1="921.2" y1="730.5" x2="774.7" y2="653.3"/>
+<line class="edge" x1="921.2" y1="730.5" x2="1001.5" y2="881.0"/>
+<line class="edge" x1="921.2" y1="730.5" x2="989.7" y2="885.6"/>
+<line class="edge" x1="921.2" y1="730.5" x2="977.9" y2="889.3"/>
+<line class="edge" x1="921.2" y1="730.5" x2="966.1" y2="892.2"/>
+<line class="edge" x1="921.2" y1="730.5" x2="954.4" y2="894.1"/>
+<line class="edge" x1="921.2" y1="730.5" x2="942.9" y2="895.3"/>
+<line class="edge" x1="921.2" y1="730.5" x2="786.9" y2="547.5"/>
+<line class="edge" x1="888.4" y1="714.8" x2="922.8" y2="879.7"/>
+<line class="edge" x1="888.4" y1="714.8" x2="909.8" y2="881.1"/>
+<line class="edge" x1="888.4" y1="714.8" x2="748.0" y2="734.3"/>
+<line class="edge" x1="888.4" y1="714.8" x2="759.9" y2="639.9"/>
+<line class="edge" x1="888.4" y1="714.8" x2="875.6" y2="879.2"/>
+<line class="edge" x1="783.3" y1="708.6" x2="636.9" y2="600.8"/>
+<line class="edge" x1="783.3" y1="708.6" x2="836.8" y2="865.0"/>
+<line class="edge" x1="783.3" y1="708.6" x2="821.4" y2="867.7"/>
+<line class="edge" x1="783.3" y1="708.6" x2="806.7" y2="869.0"/>
+<line class="edge" x1="759.8" y1="712.1" x2="758.4" y2="892.4"/>
+<line class="edge" x1="759.8" y1="712.1" x2="730.2" y2="858.7"/>
+<line class="edge" x1="759.8" y1="712.1" x2="666.1" y2="784.4"/>
+<line class="edge" x1="759.8" y1="712.1" x2="794.2" y2="534.7"/>
+<line class="edge" x1="759.8" y1="712.1" x2="759.9" y2="639.9"/>
+<line class="edge" x1="759.8" y1="712.1" x2="794.2" y2="535.3"/>
+<line class="edge" x1="759.8" y1="712.1" x2="691.7" y2="872.1"/>
+<line class="edge" x1="759.8" y1="712.1" x2="791.6" y2="537.6"/>
+<line class="edge" x1="759.8" y1="712.1" x2="672.1" y2="860.2"/>
+<line class="edge" x1="759.8" y1="712.1" x2="662.7" y2="854.1"/>
+<line class="edge" x1="759.8" y1="712.1" x2="653.9" y2="847.6"/>
+<line class="edge" x1="759.8" y1="712.1" x2="791.2" y2="536.5"/>
+<line class="edge" x1="650.3" y1="709.3" x2="595.6" y2="853.0"/>
+<line class="edge" x1="650.3" y1="709.3" x2="572.7" y2="843.4"/>
+<line class="edge" x1="650.3" y1="709.3" x2="554.6" y2="832.4"/>
+<line class="edge" x1="650.3" y1="709.3" x2="539.9" y2="820.9"/>
+<line class="edge" x1="650.3" y1="709.3" x2="730.2" y2="858.7"/>
+<line class="edge" x1="650.3" y1="709.3" x2="527.7" y2="809.0"/>
+<line class="edge" x1="650.3" y1="709.3" x2="517.5" y2="796.9"/>
+<line class="edge" x1="650.3" y1="709.3" x2="509.0" y2="784.8"/>
+<line class="edge" x1="650.3" y1="709.3" x2="545.0" y2="672.1"/>
+<line class="edge" x1="650.3" y1="709.3" x2="557.0" y2="632.8"/>
+<line class="edge" x1="650.3" y1="709.3" x2="493.6" y2="749.2"/>
+<line class="edge" x1="650.3" y1="709.3" x2="489.9" y2="738.0"/>
+<line class="edge" x1="650.3" y1="709.3" x2="487.0" y2="727.1"/>
+<line class="edge" x1="650.3" y1="709.3" x2="484.7" y2="716.5"/>
+<line class="edge" x1="650.3" y1="709.3" x2="605.6" y2="547.2"/>
+<line class="edge" x1="654.3" y1="624.0" x2="512.8" y2="671.3"/>
+<line class="edge" x1="654.3" y1="624.0" x2="791.6" y2="537.6"/>
+<line class="edge" x1="654.3" y1="624.0" x2="505.0" y2="656.9"/>
+<line class="edge" x1="654.3" y1="624.0" x2="500.0" y2="644.2"/>
+<line class="edge" x1="654.3" y1="624.0" x2="496.7" y2="632.5"/>
+<line class="edge" x1="645.3" y1="587.3" x2="504.3" y2="612.3"/>
+<line class="edge" x1="645.3" y1="587.3" x2="496.8" y2="596.6"/>
+<line class="edge" x1="645.3" y1="587.3" x2="492.8" y2="583.6"/>
+<line class="edge" x1="645.3" y1="587.3" x2="490.6" y2="571.8"/>
+<line class="edge" x1="636.9" y1="600.8" x2="539.4" y2="492.9"/>
+<line class="edge" x1="636.9" y1="600.8" x2="794.2" y2="534.7"/>
+<line class="edge" x1="636.9" y1="600.8" x2="495.6" y2="563.0"/>
+<line class="edge" x1="636.9" y1="600.8" x2="713.6" y2="762.5"/>
+<line class="edge" x1="636.9" y1="600.8" x2="495.6" y2="551.9"/>
+<line class="edge" x1="636.9" y1="600.8" x2="666.1" y2="784.4"/>
+<line class="edge" x1="636.9" y1="600.8" x2="496.4" y2="542.4"/>
+<line class="edge" x1="636.9" y1="600.8" x2="748.0" y2="734.3"/>
+<line class="edge" x1="636.9" y1="600.8" x2="485.4" y2="539.2"/>
+<line class="edge" x1="636.9" y1="600.8" x2="499.4" y2="525.1"/>
+<line class="edge" x1="636.9" y1="600.8" x2="791.6" y2="537.6"/>
+<line class="edge" x1="636.9" y1="600.8" x2="794.2" y2="535.3"/>
+<line class="edge" x1="636.9" y1="600.8" x2="791.2" y2="536.5"/>
+<line class="edge" x1="636.9" y1="600.8" x2="490.3" y2="522.5"/>
+<line class="edge" x1="636.9" y1="600.8" x2="492.8" y2="514.5"/>
+<line class="edge" x1="636.9" y1="600.8" x2="759.9" y2="639.9"/>
+<line class="edge" x1="636.9" y1="600.8" x2="696.1" y2="437.9"/>
+<line class="edge" x1="636.9" y1="600.8" x2="510.2" y2="495.0"/>
+<line class="edge" x1="636.9" y1="600.8" x2="503.7" y2="493.0"/>
+<line class="edge" x1="636.9" y1="600.8" x2="507.1" y2="485.9"/>
+<line class="edge" x1="641.7" y1="476.1" x2="557.0" y2="632.8"/>
+<line class="edge" x1="641.7" y1="476.1" x2="504.9" y2="401.9"/>
+<line class="edge" x1="641.7" y1="476.1" x2="539.4" y2="492.9"/>
+<line class="edge" x1="641.7" y1="476.1" x2="605.6" y2="547.2"/>
+<line class="edge" x1="641.7" y1="476.1" x2="507.9" y2="392.0"/>
+<line class="edge" x1="641.7" y1="476.1" x2="511.7" y2="382.9"/>
+<line class="edge" x1="643.7" y1="521.8" x2="526.5" y2="411.2"/>
+<line class="edge" x1="643.7" y1="521.8" x2="531.0" y2="403.8"/>
+<line class="edge" x1="643.7" y1="521.8" x2="495.6" y2="563.0"/>
+<line class="edge" x1="643.7" y1="521.8" x2="499.4" y2="525.1"/>
+<line class="edge" x1="643.7" y1="521.8" x2="545.0" y2="672.1"/>
+<line class="edge" x1="643.7" y1="521.8" x2="510.2" y2="495.0"/>
+<line class="edge" x1="643.7" y1="521.8" x2="759.9" y2="639.9"/>
+<line class="edge" x1="643.7" y1="521.8" x2="687.1" y2="372.8"/>
+<line class="edge" x1="643.7" y1="521.8" x2="794.2" y2="534.7"/>
+<line class="edge" x1="643.7" y1="521.8" x2="794.2" y2="535.3"/>
+<line class="edge" x1="643.7" y1="521.8" x2="791.6" y2="537.6"/>
+<line class="edge" x1="643.7" y1="521.8" x2="774.7" y2="653.3"/>
+<line class="edge" x1="643.7" y1="521.8" x2="495.6" y2="551.9"/>
+<line class="edge" x1="643.7" y1="521.8" x2="636.9" y2="600.8"/>
+<line class="edge" x1="643.7" y1="521.8" x2="541.7" y2="391.1"/>
+<line class="edge" x1="643.7" y1="521.8" x2="685.1" y2="368.4"/>
+<line class="edge" x1="643.7" y1="521.8" x2="496.4" y2="542.4"/>
+<line class="edge" x1="654.6" y1="356.3" x2="534.7" y2="265.7"/>
+<line class="edge" x1="654.6" y1="356.3" x2="540.8" y2="253.1"/>
+<line class="edge" x1="654.6" y1="356.3" x2="547.7" y2="242.6"/>
+<line class="edge" x1="654.6" y1="356.3" x2="786.9" y2="547.5"/>
+<line class="edge" x1="654.6" y1="356.3" x2="555.3" y2="233.4"/>
+<line class="edge" x1="654.6" y1="356.3" x2="563.4" y2="225.2"/>
+<line class="edge" x1="654.6" y1="356.3" x2="571.9" y2="217.8"/>
+<line class="edge" x1="654.6" y1="356.3" x2="580.7" y2="211.1"/>
+<line class="edge" x1="654.6" y1="356.3" x2="589.8" y2="205.1"/>
+<line class="edge" x1="654.6" y1="356.3" x2="539.4" y2="492.9"/>
+<line class="edge" x1="654.6" y1="356.3" x2="599.2" y2="199.8"/>
+<line class="edge" x1="654.6" y1="356.3" x2="608.7" y2="195.1"/>
+<line class="edge" x1="654.6" y1="356.3" x2="605.6" y2="547.2"/>
+<line class="edge" x1="654.6" y1="356.3" x2="618.3" y2="191.0"/>
+<line class="edge" x1="654.6" y1="356.3" x2="628.0" y2="187.6"/>
+<line class="edge" x1="654.6" y1="356.3" x2="637.6" y2="184.7"/>
+<line class="edge" x1="654.6" y1="356.3" x2="647.3" y2="182.3"/>
+<line class="edge" x1="807.0" y1="259.4" x2="730.9" y2="136.6"/>
+<line class="edge" x1="807.0" y1="259.4" x2="739.4" y2="125.4"/>
+<line class="edge" x1="807.0" y1="259.4" x2="748.5" y2="117.4"/>
+<line class="edge" x1="807.0" y1="259.4" x2="758.2" y2="111.0"/>
+<line class="edge" x1="807.0" y1="259.4" x2="768.5" y2="105.7"/>
+<line class="edge" x1="807.0" y1="259.4" x2="779.3" y2="101.5"/>
+<line class="edge" x1="807.0" y1="259.4" x2="790.6" y2="98.1"/>
+<line class="edge" x1="807.0" y1="259.4" x2="802.2" y2="95.5"/>
+<line class="edge" x1="807.0" y1="259.4" x2="814.3" y2="93.9"/>
+<line class="edge" x1="807.0" y1="259.4" x2="826.6" y2="93.2"/>
+<line class="edge" x1="807.0" y1="259.4" x2="839.0" y2="93.4"/>
+<line class="edge" x1="807.0" y1="259.4" x2="851.5" y2="94.5"/>
+<line class="edge" x1="807.0" y1="259.4" x2="863.9" y2="96.5"/>
+<line class="edge" x1="861.6" y1="348.1" x2="875.9" y2="192.5"/>
+<line class="edge" x1="861.6" y1="348.1" x2="696.1" y2="437.9"/>
+<line class="edge" x1="861.6" y1="348.1" x2="791.2" y2="536.5"/>
+<line class="edge" x1="861.6" y1="348.1" x2="885.8" y2="192.3"/>
+<line class="edge" x1="861.6" y1="348.1" x2="895.7" y2="192.8"/>
+<line class="edge" x1="861.6" y1="348.1" x2="905.5" y2="193.9"/>
+<line class="edge" x1="861.6" y1="348.1" x2="915.3" y2="195.7"/>
+<line class="edge" x1="861.6" y1="348.1" x2="924.9" y2="198.0"/>
+<line class="edge" x1="861.6" y1="348.1" x2="934.4" y2="200.9"/>
+<line class="edge" x1="861.6" y1="348.1" x2="943.7" y2="204.3"/>
+<line class="edge" x1="861.6" y1="348.1" x2="952.8" y2="208.2"/>
+<line class="edge" x1="861.6" y1="348.1" x2="961.6" y2="212.6"/>
+<line class="edge" x1="861.6" y1="348.1" x2="685.1" y2="368.4"/>
+<line class="edge" x1="861.6" y1="348.1" x2="687.1" y2="372.8"/>
+<line class="edge" x1="861.6" y1="348.1" x2="970.2" y2="217.5"/>
+<line class="edge" x1="861.6" y1="348.1" x2="978.4" y2="222.8"/>
+<line class="edge" x1="861.6" y1="348.1" x2="794.2" y2="534.7"/>
+<line class="edge" x1="861.6" y1="348.1" x2="986.4" y2="228.5"/>
+<line class="edge" x1="861.6" y1="348.1" x2="993.9" y2="234.5"/>
+<line class="edge" x1="861.6" y1="348.1" x2="791.6" y2="537.6"/>
+<line class="edge" x1="861.6" y1="348.1" x2="794.2" y2="535.3"/>
+<line class="edge" x1="861.6" y1="348.1" x2="1001.1" y2="240.9"/>
+<line class="edge" x1="1188.3" y1="493.3" x2="1177.5" y2="342.9"/>
+<line class="edge" x1="1188.3" y1="493.3" x2="1184.3" y2="342.2"/>
+<line class="edge" x1="1228.0" y1="466.5" x2="1135.0" y2="395.7"/>
+<line class="edge" x1="1228.0" y1="466.5" x2="1146.0" y2="589.9"/>
+<line class="edge" x1="1228.0" y1="466.5" x2="1152.4" y2="565.1"/>
+<line class="edge" x1="1228.0" y1="466.5" x2="1198.3" y2="319.0"/>
+<line class="edge" x1="1228.0" y1="466.5" x2="1190.6" y2="318.8"/>
+<line class="edge" x1="1228.0" y1="466.5" x2="1206.2" y2="320.1"/>
+<line class="edge" x1="1196.0" y1="586.7" x2="1207.8" y2="429.8"/>
+<line class="edge" x1="1196.0" y1="586.7" x2="1249.9" y2="449.3"/>
+<line class="edge" x1="1196.0" y1="586.7" x2="1257.5" y2="455.6"/>
+<line class="edge" x1="1152.4" y1="565.1" x2="1260.5" y2="459.1"/>
+<line class="edge" x1="1152.4" y1="565.1" x2="1135.0" y2="395.7"/>
+<line class="edge" x1="1152.4" y1="565.1" x2="1204.1" y2="427.6"/>
+<line class="edge" x1="1152.4" y1="565.1" x2="1257.5" y2="455.6"/>
+<line class="edge" x1="1152.4" y1="565.1" x2="1240.1" y2="439.5"/>
+<line class="edge" x1="1152.4" y1="565.1" x2="1267.6" y2="468.9"/>
+<line class="edge" x1="1146.0" y1="589.9" x2="1152.2" y2="433.0"/>
+<line class="edge" x1="1173.0" y1="681.6" x2="1233.2" y2="532.8"/>
+<line class="edge" x1="1104.9" y1="568.2" x2="1233.2" y2="532.8"/>
+<line class="edge" x1="1104.9" y1="568.2" x2="1207.3" y2="580.3"/>
+<line class="edge" x1="1104.9" y1="568.2" x2="1169.0" y2="727.6"/>
+<line class="edge" x1="1104.9" y1="568.2" x2="1210.7" y2="441.2"/>
+<line class="edge" x1="1104.9" y1="568.2" x2="1139.3" y2="408.4"/>
+<line class="edge" x1="1207.3" y1="580.3" x2="1204.1" y2="427.6"/>
+<line class="edge" x1="1207.3" y1="580.3" x2="1219.9" y2="423.6"/>
+<line class="edge" x1="1207.3" y1="580.3" x2="1212.7" y2="422.3"/>
+<line class="edge" x1="1207.3" y1="580.3" x2="1280.6" y2="472.8"/>
+<line class="edge" x1="1207.3" y1="580.3" x2="1240.1" y2="439.5"/>
+<circle class="node" cx="786.6" cy="526.7" r="10" title="Combining transformer and Mamba diffusion structures for super-resolution of brain MRI"/>
+<text class="label" x="786.6" y="550.7">Combining transformer a…</text>
+<circle class="node" cx="921.2" cy="730.5" r="10" title="Deep learning based MRI reconstruction with transformer"/>
+<text class="label" x="921.2" y="754.5">Deep learning based MRI…</text>
+<circle class="node" cx="888.4" cy="714.8" r="10" title="3D-MRI super-resolution reconstruction using multi-modality based on multi-resolution CNN"/>
+<text class="label" x="888.4" y="738.8">3D-MRI super-resolution…</text>
+<circle class="node" cx="783.3" cy="708.6" r="10" title="Cross-Fusion Adaptive Feature Enhancement Transformer: Efficient high-frequency integration and sparse attention enhancement for brain MRI super-resolution"/>
+<text class="label" x="783.3" y="732.6">Cross-Fusion Adaptive F…</text>
+<circle class="node" cx="759.8" cy="712.1" r="10" title="High-Frequency Modulated Transformer for Multi-Contrast MRI Super-Resolution"/>
+<text class="label" x="759.8" y="736.1">High-Frequency Modulate…</text>
+<circle class="node" cx="650.3" cy="709.3" r="10" title="MRI super-resolution using similarity distance and multi-scale receptive field based feature fusion GAN and pre-trained slice interpolation network"/>
+<text class="label" x="650.3" y="733.3">MRI super-resolution us…</text>
+<circle class="node" cx="654.3" cy="624.0" r="10" title="DISGAN: Wavelet-informed Discriminator Guides GAN to MRI Super-resolution with Noise Cleaning"/>
+<text class="label" x="654.3" y="648.0">DISGAN: Wavelet-informe…</text>
+<circle class="node" cx="645.3" cy="587.3" r="10" title="Arbitrary scale super-resolution diffusion model for brain MRI images"/>
+<text class="label" x="645.3" y="611.3">Arbitrary scale super-r…</text>
+<circle class="node" cx="636.9" cy="600.8" r="10" title="Rethinking Diffusion Model for Multi-Contrast MRI Super-Resolution"/>
+<text class="label" x="636.9" y="624.8">Rethinking Diffusion Mo…</text>
+<circle class="node" cx="641.7" cy="476.1" r="10" title="MRI Super-Resolution With Partial Diffusion Models"/>
+<text class="label" x="641.7" y="500.1">MRI Super-Resolution Wi…</text>
+<circle class="node" cx="643.7" cy="521.8" r="10" title="IM-Diff: Implicit Multi-Contrast Diffusion Model for Arbitrary Scale MRI Super-Resolution"/>
+<text class="label" x="643.7" y="545.8">IM-Diff: Implicit Multi…</text>
+<circle class="node" cx="654.6" cy="356.3" r="10" title="High-Frequency Space Diffusion Model for Accelerated MRI"/>
+<text class="label" x="654.6" y="380.3">High-Frequency Space Di…</text>
+<circle class="node" cx="807.0" cy="259.4" r="10" title="Implicit neural representations for unsupervised super-resolution and denoising of 4D flow MRI"/>
+<text class="label" x="807.0" y="283.4">Implicit neural represe…</text>
+<circle class="node" cx="861.6" cy="348.1" r="10" title="Multi-Contrast MRI Arbitrary-Scale Super-Resolution via Dynamic Implicit Network"/>
+<text class="label" x="861.6" y="372.1">Multi-Contrast MRI Arbi…</text>
+<circle class="node" cx="1188.3" cy="493.3" r="10" title="MRI of the central nervous system in MS patients with and without pain"/>
+<text class="label" x="1188.3" y="517.3">MRI of the central nerv…</text>
+<circle class="node" cx="1228.0" cy="466.5" r="10" title="Dissecting neuropathic from poststroke pain: the white matter within"/>
+<text class="label" x="1228.0" y="490.5">Dissecting neuropathic …</text>
+<circle class="node" cx="1169.0" cy="727.6" r="10" title="Cerebral decreases in opioid receptor binding in patients with central neuropathic pain measured by [&lt;sup&gt;11&lt;/sup&gt;C]diprenorphine binding and PET"/>
+<text class="label" x="1169.0" y="751.6">Cerebral decreases in o…</text>
+<circle class="node" cx="1196.0" cy="586.7" r="10" title="Anatomofunctional organization of the insular cortex: A study using intracerebral electrical stimulation in epileptic patients"/>
+<text class="label" x="1196.0" y="610.7">Anatomofunctional organ…</text>
+<circle class="node" cx="1152.4" cy="565.1" r="10" title="Mechanisms of central neuropathic pain: a combined psychophysical and fMRI study in syringomyelia"/>
+<text class="label" x="1152.4" y="589.1">Mechanisms of central n…</text>
+<circle class="node" cx="1146.0" cy="589.9" r="10" title="A hidden mesencephalic variant of central pain"/>
+<text class="label" x="1146.0" y="613.9">A hidden mesencephalic …</text>
+<circle class="node" cx="1173.0" cy="681.6" r="10" title="A somato-cognitive action network alternates with effector regions in motor cortex"/>
+<text class="label" x="1173.0" y="705.6">A somato-cognitive acti…</text>
+<circle class="node" cx="1104.9" cy="568.2" r="10" title="Discovery and validation of biomarkers to aid the development of safe and effective pain therapeutics: challenges and opportunities"/>
+<text class="label" x="1104.9" y="592.2">Discovery and validatio…</text>
+<circle class="node" cx="1207.3" cy="580.3" r="10" title="Central Mechanisms of Pain Revealed Through Functional and Structural MRI"/>
+<text class="label" x="1207.3" y="604.3">Central Mechanisms of P…</text>
+<circle class="node" cx="1065.4" cy="832.9" r="10" title="Applications of deep learning to MRI images: asurvey"/>
+<text class="label" x="1065.4" y="856.9">Applications of deep le…</text>
+<circle class="node" cx="1056.4" cy="843.3" r="10" title="Sparse MRI: the application of compressed sensing for rapid MR imaging"/>
+<text class="label" x="1056.4" y="867.3">Sparse MRI: the applica…</text>
+<circle class="node" cx="1046.5" cy="852.9" r="10" title="Image reconstruction with low-rankness and self-consistency of k-space data in parallel MRI"/>
+<text class="label" x="1046.5" y="876.9">Image reconstruction wi…</text>
+<circle class="node" cx="1036.0" cy="861.6" r="10" title="Compressed sensing MRI"/>
+<text class="label" x="1036.0" y="885.6">Compressed sensing MRI</text>
+<circle class="node" cx="1024.9" cy="869.3" r="10" title="AI-based reconstruction for fast MRI–A systematic review and meta-analysis"/>
+<text class="label" x="1024.9" y="893.3">AI-based reconstruction…</text>
+<circle class="node" cx="774.7" cy="653.3" r="10" title="Prior-guided image reconstruction for accelerated multi-contrast MRI via generative adversarial networks"/>
+<text class="label" x="774.7" y="677.3">Prior-guided image reco…</text>
+<circle class="node" cx="1001.5" cy="881.0" r="10" title="Compressed sensing MRI reconstruction using a generative adversarial network with a cyclic loss"/>
+<text class="label" x="1001.5" y="905.0">Compressed sensing MRI …</text>
+<circle class="node" cx="989.7" cy="885.6" r="10" title="Unsupervised MRI reconstruction via zero-shot learned adversarial transformers"/>
+<text class="label" x="989.7" y="909.6">Unsupervised MRI recons…</text>
+<circle class="node" cx="977.9" cy="889.3" r="10" title="High-dimensional embedding network derived prior for compressive sensing MRI reconstruction"/>
+<text class="label" x="977.9" y="913.3">High-dimensional embedd…</text>
+<circle class="node" cx="966.1" cy="892.2" r="10" title="A very deep densely connected network for compressed sensing MRI"/>
+<text class="label" x="966.1" y="916.2">A very deep densely con…</text>
+<circle class="node" cx="954.4" cy="894.1" r="10" title="MGH-USC human connectome project datasets with ultra-high b-value diffusion MRI"/>
+<text class="label" x="954.4" y="918.1">MGH-USC human connectom…</text>
+<circle class="node" cx="942.9" cy="895.3" r="10" title="Efficient and generalizable statistical models of shape and appearance for analysis of cardiac MRI"/>
+<text class="label" x="942.9" y="919.3">Efficient and generaliz…</text>
+<circle class="node" cx="786.9" cy="547.5" r="10" title="SENSE: sensitivity encoding for fast MRI"/>
+<text class="label" x="786.9" y="571.5">SENSE: sensitivity enco…</text>
+<circle class="node" cx="922.8" cy="879.7" r="10" title="Sparse representation of classified patches for CS-MRI reconstruction"/>
+<text class="label" x="922.8" y="903.7">Sparse representation o…</text>
+<circle class="node" cx="909.8" cy="881.1" r="10" title="Super-resolution of brain MRI images using over complete dictionaries and nonlocal similarity"/>
+<text class="label" x="909.8" y="905.1">Super-resolution of bra…</text>
+<circle class="node" cx="748.0" cy="734.3" r="10" title="Super-resolution method for MRI images based on multi-resolution CNN"/>
+<text class="label" x="748.0" y="758.3">Super-resolution method…</text>
+<circle class="node" cx="759.9" cy="639.9" r="10" title="Multi-contrast super-resolution MRI through a progressive network"/>
+<text class="label" x="759.9" y="663.9">Multi-contrast super-re…</text>
+<circle class="node" cx="875.6" cy="879.2" r="10" title="Multiscale brain MRI super-resolution using deep 3D convolutional networks"/>
+<text class="label" x="875.6" y="903.2">Multiscale brain MRI su…</text>
+<circle class="node" cx="713.6" cy="762.5" r="10" title="SuperFormer: Volumetric Transformer Architectures for MRI Super-Resolution"/>
+<text class="label" x="713.6" y="786.5">SuperFormer: Volumetric…</text>
+<circle class="node" cx="836.8" cy="865.0" r="10" title="A unified hybrid transformer for joint MRI sequences super-resolution and missing data imputation"/>
+<text class="label" x="836.8" y="889.0">A unified hybrid transf…</text>
+<circle class="node" cx="821.4" cy="867.7" r="10" title="Residual Attention Mechanism-Based MRI Super-Resolution"/>
+<text class="label" x="821.4" y="891.7">Residual Attention Mech…</text>
+<circle class="node" cx="806.7" cy="869.0" r="10" title="Advancing the cancer genome atlas glioma MRI collections with expert segmentation labels and radiomic features"/>
+<text class="label" x="806.7" y="893.0">Advancing the cancer ge…</text>
+<circle class="node" cx="758.4" cy="892.4" r="10" title="An efficient total variation algorithm for super-resolution in fetal brain MRI with adaptive regularization"/>
+<text class="label" x="758.4" y="916.4">An efficient total vari…</text>
+<circle class="node" cx="730.2" cy="858.7" r="10" title="Simultaneous single- and multi-contrast super-resolution for brain mri images based on a convolutional neural network"/>
+<text class="label" x="730.2" y="882.7">Simultaneous single- an…</text>
+<circle class="node" cx="666.1" cy="784.4" r="10" title="Accurate Multi-contrast MRI Super-Resolution via a Dual Cross-Attention Transformer Network"/>
+<text class="label" x="666.1" y="808.4">Accurate Multi-contrast…</text>
+<circle class="node" cx="794.2" cy="534.7" r="10" title="Multi-contrast MRI Super-Resolution via a Multi-stage Integration Network"/>
+<text class="label" x="794.2" y="558.7">Multi-contrast MRI Supe…</text>
+<circle class="node" cx="794.2" cy="535.3" r="10" title="WavTrans: Synergizing Wavelet and Cross-Attention Transformer for Multi-contrast MRI Super-Resolution"/>
+<text class="label" x="794.2" y="559.3">WavTrans: Synergizing W…</text>
+<circle class="node" cx="691.7" cy="872.1" r="10" title="Multi-Contrast Brain MRI Image Super-Resolution With Gradient-Guided Edge Enhancement"/>
+<text class="label" x="691.7" y="896.1">Multi-Contrast Brain MR…</text>
+<circle class="node" cx="791.6" cy="537.6" r="10" title="Transformer-empowered Multi-scale Contextual Matching and Aggregation for Multi-contrast MRI Super-resolution"/>
+<text class="label" x="791.6" y="561.6">Transformer-empowered M…</text>
+<circle class="node" cx="672.1" cy="860.2" r="10" title="Fast MRI Reconstruction via Edge Attention"/>
+<text class="label" x="672.1" y="884.2">Fast MRI Reconstruction…</text>
+<circle class="node" cx="662.7" cy="854.1" r="10" title="MAPANet: A Multi-Scale Attention-Guided Progressive Aggregation Network for Multi-Contrast MRI Super-Resolution"/>
+<text class="label" x="662.7" y="878.1">MAPANet: A Multi-Scale …</text>
+<circle class="node" cx="653.9" cy="847.6" r="10" title="Multi-contrast image super-resolution with deformable attention and neighborhood-based feature aggregation (DANCE): Applications in anatomic and metabolic MRI"/>
+<text class="label" x="653.9" y="871.6">Multi-contrast image su…</text>
+<circle class="node" cx="791.2" cy="536.5" r="10" title="Rethinking Multi-Contrast MRI Super-Resolution: Rectangle-Window Cross-Attention Transformer and Arbitrary-Scale Upsampling"/>
+<text class="label" x="791.2" y="560.5">Rethinking Multi-Contra…</text>
+<circle class="node" cx="595.6" cy="853.0" r="10" title="Physics of mri: a primer"/>
+<text class="label" x="595.6" y="877.0">Physics of mri: a primer</text>
+<circle class="node" cx="572.7" cy="843.4" r="10" title="Image quality evaluation in clinical research: a case study on brain and cardiac mri images in multi-center clinical trials"/>
+<text class="label" x="572.7" y="867.4">Image quality evaluatio…</text>
+<circle class="node" cx="554.6" cy="832.4" r="10" title="Incidental findings on brain mri in the general population"/>
+<text class="label" x="554.6" y="856.4">Incidental findings on …</text>
+<circle class="node" cx="539.9" cy="820.9" r="10" title="Mri inter-slice reconstruction using super-resolution"/>
+<text class="label" x="539.9" y="844.9">Mri inter-slice reconst…</text>
+<circle class="node" cx="527.7" cy="809.0" r="10" title="Deep robust residual network for super-resolution of 2d fetal brain mri"/>
+<text class="label" x="527.7" y="833.0">Deep robust residual ne…</text>
+<circle class="node" cx="517.5" cy="796.9" r="10" title="Dense channel splitting network for mr image super-resolution"/>
+<text class="label" x="517.5" y="820.9">Dense channel splitting…</text>
+<circle class="node" cx="509.0" cy="784.8" r="10" title="Super-resolution musculoskeletal mri using deep learning"/>
+<text class="label" x="509.0" y="808.8">Super-resolution muscul…</text>
+<circle class="node" cx="545.0" cy="672.1" r="10" title="Soup-gan: super-resolution mri using generative adversarial networks"/>
+<text class="label" x="545.0" y="696.1">Soup-gan: super-resolut…</text>
+<circle class="node" cx="557.0" cy="632.8" r="10" title="Smore: a self-supervised anti-aliasing and super-resolution algorithm for mri using deep learning"/>
+<text class="label" x="557.0" y="656.8">Smore: a self-supervise…</text>
+<circle class="node" cx="493.6" cy="749.2" r="10" title="Mriflow: magnetic resonance image super-resolution based on normalizing flow and frequency prior"/>
+<text class="label" x="493.6" y="773.2">Mriflow: magnetic reson…</text>
+<circle class="node" cx="489.9" cy="738.0" r="10" title="Diffusion mri super-resolution reconstruction via sub-pixel convolution generative adversarial network"/>
+<text class="label" x="489.9" y="762.0">Diffusion mri super-res…</text>
+<circle class="node" cx="487.0" cy="727.1" r="10" title="High-resolution 3d mri with deep generative networks via novel slice-profile transformation super-resolution"/>
+<text class="label" x="487.0" y="751.1">High-resolution 3d mri …</text>
+<circle class="node" cx="484.7" cy="716.5" r="10" title="Super-resolution reconstruction of t2-weighted thick-slice neonatal brain mri scans"/>
+<text class="label" x="484.7" y="740.5">Super-resolution recons…</text>
+<circle class="node" cx="605.6" cy="547.2" r="10" title="Fastmri: a publicly available raw k-space and dicom dataset of knee images for accelerated mr image reconstruction using machine learning"/>
+<text class="label" x="605.6" y="571.2">Fastmri: a publicly ava…</text>
+<circle class="node" cx="512.8" cy="671.3" r="10" title="Brain MRI super resolution using 3D deep densely connected neural networks"/>
+<text class="label" x="512.8" y="695.3">Brain MRI super resolut…</text>
+<circle class="node" cx="505.0" cy="656.9" r="10" title="Brain MRI super-resolution using deep 3D convolutional networks"/>
+<text class="label" x="505.0" y="680.9">Brain MRI super-resolut…</text>
+<circle class="node" cx="500.0" cy="644.2" r="10" title="An open presurgery MRI dataset of people with epilepsy and focal cortical dysplasia type II"/>
+<text class="label" x="500.0" y="668.2">An open presurgery MRI …</text>
+<circle class="node" cx="496.7" cy="632.5" r="10" title="Learning a Gradient Guidance for Spatially Isotropic MRI Super-Resolution Reconstruction"/>
+<text class="label" x="496.7" y="656.5">Learning a Gradient Gui…</text>
+<circle class="node" cx="504.3" cy="612.3" r="10" title="Robust super-resolution volume reconstruction from slice acquisitions: Application to fetal brain MRI"/>
+<text class="label" x="504.3" y="636.3">Robust super-resolution…</text>
+<circle class="node" cx="496.8" cy="596.6" r="10" title="Deep-learning-based 3D super-resolution MRI radiomics model: superior predictive performance in preoperative T-staging of rectal cancer"/>
+<text class="label" x="496.8" y="620.6">Deep-learning-based 3D …</text>
+<circle class="node" cx="492.8" cy="583.6" r="10" title="Improving structural MRI preprocessing with hybrid transformer GANs"/>
+<text class="label" x="492.8" y="607.6">Improving structural MR…</text>
+<circle class="node" cx="490.6" cy="571.8" r="10" title="Multi-scale deformable transformer for multi-contrast knee MRI super-resolution"/>
+<text class="label" x="490.6" y="595.8">Multi-scale deformable …</text>
+<circle class="node" cx="539.4" cy="492.9" r="10" title="Score-based diffusion models for accelerated MRI"/>
+<text class="label" x="539.4" y="516.9">Score-based diffusion m…</text>
+<circle class="node" cx="495.6" cy="563.0" r="10" title="Brain MRI super-resolution using coupled-projection residual network"/>
+<text class="label" x="495.6" y="587.0">Brain MRI super-resolut…</text>
+<circle class="node" cx="495.6" cy="551.9" r="10" title="Adaptive diffusion priors for accelerated MRI reconstruction"/>
+<text class="label" x="495.6" y="575.9">Adaptive diffusion prio…</text>
+<circle class="node" cx="496.4" cy="542.4" r="10" title="CoLa-Diff: Conditional Latent Diffusion Model for Multi-modal MRI Synthesis"/>
+<text class="label" x="496.4" y="566.4">CoLa-Diff: Conditional …</text>
+<circle class="node" cx="485.4" cy="539.2" r="10" title="Decomposition-Based Variational Network for Multi-Contrast MRI Super-Resolution and Reconstruction"/>
+<text class="label" x="485.4" y="563.2">Decomposition-Based Var…</text>
+<circle class="node" cx="499.4" cy="525.1" r="10" title="High-Resolution Pelvic MRI Reconstruction Using a Generative Adversarial Network With Attention and Cyclic Loss"/>
+<text class="label" x="499.4" y="549.1">High-Resolution Pelvic …</text>
+<circle class="node" cx="490.3" cy="522.5" r="10" title="Multicontrast MRI Super-Resolution via Transformer-Empowered Multiscale Contextual Matching and Aggregation"/>
+<text class="label" x="490.3" y="546.5">Multicontrast MRI Super…</text>
+<circle class="node" cx="492.8" cy="514.5" r="10" title="Region-focused multi-view transformer-based generative adversarial network for cardiac cine MRI reconstruction"/>
+<text class="label" x="492.8" y="538.5">Region-focused multi-vi…</text>
+<circle class="node" cx="696.1" cy="437.9" r="10" title="Non-local MRI upsampling"/>
+<text class="label" x="696.1" y="461.9">Non-local MRI upsampling</text>
+<circle class="node" cx="510.2" cy="495.0" r="10" title="DisC-Diff: Disentangled Conditional Diffusion Model for Multi-contrast MRI Super-Resolution"/>
+<text class="label" x="510.2" y="519.0">DisC-Diff: Disentangled…</text>
+<circle class="node" cx="503.7" cy="493.0" r="10" title="Improving the brain image resolution of generalized q-sampling MRI revealed by a three-dimensional CNN-based method"/>
+<text class="label" x="503.7" y="517.0">Improving the brain ima…</text>
+<circle class="node" cx="507.1" cy="485.9" r="10" title="InverseSR: 3D Brain MRI Super-Resolution Using a Latent Diffusion Model"/>
+<text class="label" x="507.1" y="509.9">InverseSR: 3D Brain MRI…</text>
+<circle class="node" cx="504.9" cy="401.9" r="10" title="Deep learning-based single image super-resolution for low-field MR brain images"/>
+<text class="label" x="504.9" y="425.9">Deep learning-based sin…</text>
+<circle class="node" cx="507.9" cy="392.0" r="10" title="Anisotropic Super Resolution In Prostate Mri Using Super Resolution Generative Adversarial Networks"/>
+<text class="label" x="507.9" y="416.0">Anisotropic Super Resol…</text>
+<circle class="node" cx="511.7" cy="382.9" r="10" title="CAT-Net: A Cross-Slice Attention Transformer Model for Prostate Zonal Segmentation in MRI"/>
+<text class="label" x="511.7" y="406.9">CAT-Net: A Cross-Slice …</text>
+<circle class="node" cx="526.5" cy="411.2" r="10" title="Improving magnetic resonance imaging with smart and thin metasurfaces"/>
+<text class="label" x="526.5" y="435.2">Improving magnetic reso…</text>
+<circle class="node" cx="531.0" cy="403.8" r="10" title="Magnetic resonance imaging (MRI): A review of genetic damage investigations"/>
+<text class="label" x="531.0" y="427.8">Magnetic resonance imag…</text>
+<circle class="node" cx="687.1" cy="372.8" r="10" title="DuDoRNet: Learning a Dual-Domain Recurrent Network for Fast MRI Reconstruction With Deep T1 Prior"/>
+<text class="label" x="687.1" y="396.8">DuDoRNet: Learning a Du…</text>
+<circle class="node" cx="541.7" cy="391.1" r="10" title="Single-subject Multi-contrast MRI Super-resolution via Implicit Neural Representations"/>
+<text class="label" x="541.7" y="415.1">Single-subject Multi-co…</text>
+<circle class="node" cx="685.1" cy="368.4" r="10" title="Dual Arbitrary Scale Super-Resolution for Multi-contrast MRI"/>
+<text class="label" x="685.1" y="392.4">Dual Arbitrary Scale Su…</text>
+<circle class="node" cx="534.7" cy="265.7" r="10" title="Compressed-Sensing MRI With Random Encoding"/>
+<text class="label" x="534.7" y="289.7">Compressed-Sensing MRI …</text>
+<circle class="node" cx="540.8" cy="253.1" r="10" title="A General Framework for Compressed Sensing and Parallel MRI Using Annihilating Filter Based Low-Rank Hankel Matrix"/>
+<text class="label" x="540.8" y="277.1">A General Framework for…</text>
+<circle class="node" cx="547.7" cy="242.6" r="10" title="Improving synthesis and analysis prior blind compressed sensing with low-rank constraints for dynamic MRI reconstruction"/>
+<text class="label" x="547.7" y="266.6">Improving synthesis and…</text>
+<circle class="node" cx="555.3" cy="233.4" r="10" title="Accelerated Dynamic MRI Exploiting Sparsity and Low-Rank Structure: k-t SLR"/>
+<text class="label" x="555.3" y="257.4">Accelerated Dynamic MRI…</text>
+<circle class="node" cx="563.4" cy="225.2" r="10" title="Efficient Dynamic Parallel MRI Reconstruction for the Low-Rank Plus Sparse Model"/>
+<text class="label" x="563.4" y="249.2">Efficient Dynamic Paral…</text>
+<circle class="node" cx="571.9" cy="217.8" r="10" title="ViGU: Vision GNN U-Net for fast MRI"/>
+<text class="label" x="571.9" y="241.8">ViGU: Vision GNN U-Net …</text>
+<circle class="node" cx="580.7" cy="211.1" r="10" title="${k}$ -Space Deep Learning for Accelerated MRI"/>
+<text class="label" x="580.7" y="235.1">${k}$ -Space Deep Learn…</text>
+<circle class="node" cx="589.8" cy="205.1" r="10" title="Unpaired Deep Learning for Accelerated MRI Using Optimal Transport Driven CycleGAN"/>
+<text class="label" x="589.8" y="229.1">Unpaired Deep Learning …</text>
+<circle class="node" cx="599.2" cy="199.8" r="10" title="Frequency-splitting dynamic MRI reconstruction using multi-scale 3D convolutional sparse coding and automatic parameter selection"/>
+<text class="label" x="599.2" y="223.8">Frequency-splitting dyn…</text>
+<circle class="node" cx="608.7" cy="195.1" r="10" title="CDiffMR: Can We Replace the Gaussian Noise with K-Space Undersampling for Fast MRI?"/>
+<text class="label" x="608.7" y="219.1">CDiffMR: Can We Replace…</text>
+<circle class="node" cx="618.3" cy="191.0" r="10" title="ESPIRiT—an eigenvalue approach to autocalibrating parallel MRI: Where SENSE meets GRAPPA"/>
+<text class="label" x="618.3" y="215.0">ESPIRiT—an eigenvalue a…</text>
+<circle class="node" cx="628.0" cy="187.6" r="10" title="End-to-End Variational Networks for Accelerated MRI Reconstruction"/>
+<text class="label" x="628.0" y="211.6">End-to-End Variational …</text>
+<circle class="node" cx="637.6" cy="184.7" r="10" title="On-the-Fly Adaptive ${k}$ -Space Sampling for Linear MRI Reconstruction Using Moment-Based Spectral Analysis"/>
+<text class="label" x="637.6" y="208.7">On-the-Fly Adaptive ${k…</text>
+<circle class="node" cx="647.3" cy="182.3" r="10" title="&lt;scp&gt;P‐LORAKS&lt;/scp&gt;: Low‐rank modeling of local k‐space neighborhoods with parallel imaging data"/>
+<text class="label" x="647.3" y="206.3">&lt;scp&gt;P‐LORAKS&lt;/scp&gt;: Lo…</text>
+<circle class="node" cx="730.9" cy="136.6" r="10" title="Merging computational fluid dynamics and 4D flow MRI using proper orthogonal decomposition and ridge regression"/>
+<text class="label" x="730.9" y="160.6">Merging computational f…</text>
+<circle class="node" cx="739.4" cy="125.4" r="10" title="Super-resolution and denoising of 4D-flow MRI using physics-informed deep neural nets"/>
+<text class="label" x="739.4" y="149.4">Super-resolution and de…</text>
+<circle class="node" cx="748.5" cy="117.4" r="10" title="4DFlowNet: super-resolution 4D flow MRI using deep learning and computational fluid dynamics"/>
+<text class="label" x="748.5" y="141.4">4DFlowNet: super-resolu…</text>
+<circle class="node" cx="758.2" cy="111.0" r="10" title="Hemodynamic measurement using four-dimensional phase-contrast MRI: quantification of hemodynamic parameters and clinical applications"/>
+<text class="label" x="758.2" y="135.0">Hemodynamic measurement…</text>
+<circle class="node" cx="768.5" cy="105.7" r="10" title="Quantifying errors in flow measurement using phase contrast magnetic resonance imaging: comparison of several boundary detection methods"/>
+<text class="label" x="768.5" y="129.7">Quantifying errors in f…</text>
+<circle class="node" cx="779.3" cy="101.5" r="10" title="Physics-informed compressed sensing for PC-MRI: an inverse Navier-Stokes problem"/>
+<text class="label" x="779.3" y="125.5">Physics-informed compre…</text>
+<circle class="node" cx="790.6" cy="98.1" r="10" title="4D flow MRI"/>
+<text class="label" x="790.6" y="122.1">4D flow MRI</text>
+<circle class="node" cx="802.2" cy="95.5" r="10" title="Assessment of the accuracy of MRI wall shear stress estimation using numerical simulations"/>
+<text class="label" x="802.2" y="119.5">Assessment of the accur…</text>
+<circle class="node" cx="814.3" cy="93.9" r="10" title="Computational fluid dynamics simulations of blood flow regularized by 3D phase contrast MRI"/>
+<text class="label" x="814.3" y="117.9">Computational fluid dyn…</text>
+<circle class="node" cx="826.6" cy="93.2" r="10" title="Enhancement of cerebrovascular 4D flow MRI velocity fields using machine learning and computational fluid dynamics simulation data"/>
+<text class="label" x="826.6" y="117.2">Enhancement of cerebrov…</text>
+<circle class="node" cx="839.0" cy="93.4" r="10" title="Evaluation of 4D flow MRI-based non-invasive pressure assessment in aortic coarctations"/>
+<text class="label" x="839.0" y="117.4">Evaluation of 4D flow M…</text>
+<circle class="node" cx="851.5" cy="94.5" r="10" title="3D axial and circumferential wall shear stress from 4D flow MRI data using a finite element method and a laplacian approach"/>
+<text class="label" x="851.5" y="118.5">3D axial and circumfere…</text>
+<circle class="node" cx="863.9" cy="96.5" r="10" title="Deep variational network for rapid 4D flow MRI reconstruction"/>
+<text class="label" x="863.9" y="120.5">Deep variational networ…</text>
+<circle class="node" cx="875.9" cy="192.5" r="10" title="Generalizable MRI Motion Correction via Compressed Sensing Equivariant Imaging Prior"/>
+<text class="label" x="875.9" y="216.5">Generalizable MRI Motio…</text>
+<circle class="node" cx="885.8" cy="192.3" r="10" title="&lt;scp&gt;Dual‐domain&lt;/scp&gt; reconstruction network with &lt;scp&gt;V‐Net&lt;/scp&gt; and &lt;scp&gt;K‐Net&lt;/scp&gt; for fast &lt;scp&gt;MRI&lt;/scp&gt;"/>
+<text class="label" x="885.8" y="216.3">&lt;scp&gt;Dual‐domain&lt;/scp&gt; …</text>
+<circle class="node" cx="895.7" cy="192.8" r="10" title="DSMENet: Detail and Structure Mutually Enhancing Network for under-sampled MRI reconstruction"/>
+<text class="label" x="895.7" y="216.8">DSMENet: Detail and Str…</text>
+<circle class="node" cx="905.5" cy="193.9" r="10" title="Accurate MRI Reconstruction via Multi-Domain Recurrent Networks"/>
+<text class="label" x="905.5" y="217.9">Accurate MRI Reconstruc…</text>
+<circle class="node" cx="915.3" cy="195.7" r="10" title="DDC-Net: Dual-Domain Cascaded Network With POCS Prior for Fast MRI Reconstruction"/>
+<text class="label" x="915.3" y="219.7">DDC-Net: Dual-Domain Ca…</text>
+<circle class="node" cx="924.9" cy="198.0" r="10" title="Task Transformer Network for Joint MRI Reconstruction and Super-Resolution"/>
+<text class="label" x="924.9" y="222.0">Task Transformer Networ…</text>
+<circle class="node" cx="934.4" cy="200.9" r="10" title="SMIR: A Transformer-Based Model for MRI super-resolution reconstruction"/>
+<text class="label" x="934.4" y="224.9">SMIR: A Transformer-Bas…</text>
+<circle class="node" cx="943.7" cy="204.3" r="10" title="ReconFormer: Accelerated MRI Reconstruction Using Recurrent Transformer"/>
+<text class="label" x="943.7" y="228.3">ReconFormer: Accelerate…</text>
+<circle class="node" cx="952.8" cy="208.2" r="10" title="SDMT: Spatial Dependence Multi-Task Transformer Network for 3D Knee MRI Segmentation and Landmark Localization"/>
+<text class="label" x="952.8" y="232.2">SDMT: Spatial Dependenc…</text>
+<circle class="node" cx="961.6" cy="212.6" r="10" title="Introducing spatial neighbourhood in Evidential C-Means for segmentation of multi-source images: Application to prostate multi-parametric MRI"/>
+<text class="label" x="961.6" y="236.6">Introducing spatial nei…</text>
+<circle class="node" cx="970.2" cy="217.5" r="10" title="Deep Unfolding Convolutional Dictionary Model for Multi-Contrast MRI Super-resolution and Reconstruction"/>
+<text class="label" x="970.2" y="241.5">Deep Unfolding Convolut…</text>
+<circle class="node" cx="978.4" cy="222.8" r="10" title="Misalignment-Resistant Deep Unfolding Network for multi-modal MRI super-resolution and reconstruction"/>
+<text class="label" x="978.4" y="246.8">Misalignment-Resistant …</text>
+<circle class="node" cx="986.4" cy="228.5" r="10" title="Model-Guided Multi-Contrast Deep Unfolding Network for MRI Super-resolution Reconstruction"/>
+<text class="label" x="986.4" y="252.5">Model-Guided Multi-Cont…</text>
+<circle class="node" cx="993.9" cy="234.5" r="10" title="MFTN: Multi-Level Feature Transfer Network Based on MRI-Transformer for MR Image Super-resolution"/>
+<text class="label" x="993.9" y="258.5">MFTN: Multi-Level Featu…</text>
+<circle class="node" cx="1001.1" cy="240.9" r="10" title="MRI Denoising Using Deep Learning"/>
+<text class="label" x="1001.1" y="264.9">MRI Denoising Using Dee…</text>
+<circle class="node" cx="1135.0" cy="395.7" r="10" title="Central poststroke pain: correlation of MRI with clinical pain characteristics and sensory abnormalities"/>
+<text class="label" x="1135.0" y="419.7">Central poststroke pain…</text>
+<circle class="node" cx="1139.3" cy="408.4" r="10" title="Pain sensitivity and fMRI pain-related brain activity in Alzheimer&#x27;s disease"/>
+<text class="label" x="1139.3" y="432.4">Pain sensitivity and fM…</text>
+<circle class="node" cx="1152.2" cy="433.0" r="10" title="Pure Sensory Syndromes in Thalamic Stroke"/>
+<text class="label" x="1152.2" y="457.0">Pure Sensory Syndromes …</text>
+<circle class="node" cx="1177.5" cy="342.9" r="10" title="MRI in chronic spinal cord injury patients with and without central pain"/>
+<text class="label" x="1177.5" y="366.9">MRI in chronic spinal c…</text>
+<circle class="node" cx="1184.3" cy="342.2" r="10" title="How accurate are measurements on MRI? a study on multiple sclerosis using reliable 3D stereological methods"/>
+<text class="label" x="1184.3" y="366.2">How accurate are measur…</text>
+<circle class="node" cx="1190.6" cy="318.8" r="10" title="Central post stroke pain: clinical, MRI, and SPECT correlation"/>
+<text class="label" x="1190.6" y="342.8">Central post stroke pai…</text>
+<circle class="node" cx="1198.3" cy="319.0" r="10" title="A probabilistic atlas of the human thalamic nuclei combining ex vivo MRI and histology"/>
+<text class="label" x="1198.3" y="343.0">A probabilistic atlas o…</text>
+<circle class="node" cx="1206.2" cy="320.1" r="10" title="Association of clinical headache features with stroke location: an MRI voxel-based symptom lesion mapping study"/>
+<text class="label" x="1206.2" y="344.1">Association of clinical…</text>
+<circle class="node" cx="1207.8" cy="429.8" r="10" title="Somatotopic organization of the processing of muscle and cutaneous pain in the left and right insula cortex: a single-trial fMRI study"/>
+<text class="label" x="1207.8" y="453.8">Somatotopic organizatio…</text>
+<circle class="node" cx="1204.1" cy="427.6" r="10" title="Functional MRI study of thalamic and cortical activations evoked by cutaneous heat, cold, and tactile stimuli"/>
+<text class="label" x="1204.1" y="451.6">Functional MRI study of…</text>
+<circle class="node" cx="1212.7" cy="422.3" r="10" title="Spontaneous low-frequency bold signal fluctuations: an fMRI investigation of the resting-state default mode of brain function hypothesis"/>
+<text class="label" x="1212.7" y="446.3">Spontaneous low-frequen…</text>
+<circle class="node" cx="1219.9" cy="423.6" r="10" title="Neural correlates of prickle sensation: a percept-related fMRI study."/>
+<text class="label" x="1219.9" y="447.6">Neural correlates of pr…</text>
+<circle class="node" cx="1210.7" cy="441.2" r="10" title="Multivariate classification of structural MRI data detects chronic low back pain"/>
+<text class="label" x="1210.7" y="465.2">Multivariate classifica…</text>
+<circle class="node" cx="1233.2" cy="532.8" r="10" title="An fMRI-based neurologic signature of physical pain"/>
+<text class="label" x="1233.2" y="556.8">An fMRI-based neurologi…</text>
+<circle class="node" cx="1240.1" cy="439.5" r="10" title="Percept-related activity in the human somatosensory system: functional magnetic resonance imaging studies"/>
+<text class="label" x="1240.1" y="463.5">Percept-related activit…</text>
+<circle class="node" cx="1249.9" cy="449.3" r="10" title="Role of operculoinsular cortices in human pain processing: converging evidence from PET, fMRI, dipole modeling, and intracerebral recordings of evoked potentials"/>
+<text class="label" x="1249.9" y="473.3">Role of operculoinsular…</text>
+<circle class="node" cx="1257.5" cy="455.6" r="10" title="An fMRI study of cortical representation of mechanical allodynia in patients with neuropathic pain"/>
+<text class="label" x="1257.5" y="479.6">An fMRI study of cortic…</text>
+<circle class="node" cx="1260.5" cy="459.1" r="10" title="Brain processing of capsaicin-induced secondary hyperalgesia: a functional MRI study."/>
+<text class="label" x="1260.5" y="483.1">Brain processing of cap…</text>
+<circle class="node" cx="1267.6" cy="468.9" r="10" title="Placebo-induced changes in FMRI in the anticipation and experience of pain."/>
+<text class="label" x="1267.6" y="492.9">Placebo-induced changes…</text>
+<circle class="node" cx="1280.6" cy="472.8" r="10" title="Arterial spin-labeled MRI study of migraine attacks treated with rizatriptan."/>
+<text class="label" x="1280.6" y="496.8">Arterial spin-labeled M…</text>
+</svg>

@@ -1,0 +1,113 @@
+{
+  "version": 1,
+  "root": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/app/headless/pagify/examples/basic-docs/docs",
+  "nodes": [
+    {
+      "id": "getting-started.md",
+      "path": "getting-started.md",
+      "extension": ".md"
+    },
+    {
+      "id": "guide/configuration.md",
+      "path": "guide/configuration.md",
+      "extension": ".md"
+    },
+    {
+      "id": "guide/index.md",
+      "path": "guide/index.md",
+      "extension": ".md"
+    },
+    {
+      "id": "guide/installation.md",
+      "path": "guide/installation.md",
+      "extension": ".md"
+    },
+    {
+      "id": "index.md",
+      "path": "index.md",
+      "extension": ".md"
+    }
+  ],
+  "edges": [
+    {
+      "source": "getting-started.md",
+      "target": "guide/configuration.md",
+      "raw_link": "./guide/configuration.md",
+      "line": 70,
+      "status": "resolved"
+    },
+    {
+      "source": "getting-started.md",
+      "target": "guide/index.md",
+      "raw_link": "./guide/index.md",
+      "line": 69,
+      "status": "resolved"
+    },
+    {
+      "source": "getting-started.md",
+      "target": "guide/installation.md",
+      "raw_link": "./guide/installation.md",
+      "line": 17,
+      "status": "resolved"
+    },
+    {
+      "source": "getting-started.md",
+      "target": "index.md",
+      "raw_link": "./index.md",
+      "line": 71,
+      "status": "resolved"
+    },
+    {
+      "source": "guide/configuration.md",
+      "target": "guide/index.md",
+      "raw_link": "./index.md",
+      "line": 46,
+      "status": "resolved"
+    },
+    {
+      "source": "guide/configuration.md",
+      "target": "guide/installation.md",
+      "raw_link": "./installation.md",
+      "line": 45,
+      "status": "resolved"
+    },
+    {
+      "source": "guide/configuration.md",
+      "target": "index.md",
+      "raw_link": "../index.md",
+      "line": 48,
+      "status": "resolved"
+    },
+    {
+      "source": "guide/index.md",
+      "target": "guide/installation.md",
+      "raw_link": "./installation.md",
+      "line": 7,
+      "status": "resolved"
+    },
+    {
+      "source": "guide/index.md",
+      "target": "index.md",
+      "raw_link": "../index.md",
+      "line": 15,
+      "status": "resolved"
+    },
+    {
+      "source": "guide/installation.md",
+      "target": "index.md",
+      "raw_link": "../index.md",
+      "line": 46,
+      "status": "resolved"
+    }
+  ],
+  "stats": {
+    "files": 5,
+    "ignored_files": 0,
+    "links": 10,
+    "broken_links": 0,
+    "resolved_links": 10,
+    "self_links": 0,
+    "orphan_files": 1,
+    "components": 0
+  }
+}

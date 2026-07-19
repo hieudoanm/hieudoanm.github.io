@@ -1,0 +1,11 @@
+[package]
+name = "layout"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+dom = { path = "../dom" }
+style = { path = "../style" }
+thiserror = { workspace = true }
+
+[dev-dependencies]

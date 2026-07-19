@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>theme Package · API Reference</title>
+    
+    <meta name="description" content="Theme and template system" />
+    
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="header">
+      <div class="header__bar">
+        
+        <button
+          class="header__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="sidebar"
+          data-nav-toggle
+        >
+          <span class="header__toggle-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Menu</span>
+        </button>
+        
+        <a class="header__title" href="/">API Reference</a>
+        <div class="header__actions">
+          <label class="header__search" for="search">
+            <span class="visually-hidden">Search</span>
+            <input
+              id="search"
+              type="search"
+              placeholder="Search"
+              autocomplete="off"
+              data-search
+              data-search-index="/assets/search-index.json"
+            />
+          </label>
+          <button class="header__theme" type="button" data-theme-toggle>
+            <span class="visually-hidden">Toggle colour theme</span>
+          </button>
+        </div>
+      </div>
+      <div class="search" data-search-panel hidden>
+        <p class="search__status" role="status" data-search-status></p>
+        <ul class="search__results" data-search-results></ul>
+      </div>
+    </header>
+
+    <div class="layout">
+      
+      <nav class="sidebar" id="sidebar" aria-label="Site">
+        <ul class="nav">
+  <li class="nav__item">
+  <a
+    class="nav__link"
+    href="/"
+    >API Reference</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/build/"
+    >build Package</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/markdown/"
+    >markdown Package</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/server/"
+    >server Package</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/site/"
+    >site Package</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link nav__link--current"
+    href="/theme/"
+    aria-current="page">theme Package</a
+  > 
+</li>
+</ul>
+      </nav>
+      
+
+      <main class="main" id="main">
+        <article class="markdown"><h1 id="page-title" class="markdown__title">theme Package</h1>
+          
+          <p class="markdown__lede">Theme and template system</p>
+          
+          <p>Owns every visual decision a pagify site makes: the HTML template, the
+stylesheet and the progressive-enhancement scripts.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="default-theme-error">Default() (*Theme, error)</h3>
+<p>Returns the theme embedded in the binary.</p>
+<pre><code class="language-go">theme, err := theme.Default()
+</code></pre>
+<h2 id="theme">Theme</h2>
+<pre><code class="language-go">type Theme struct {
+    templates *template.Template
+    assets    fs.FS
+}
+</code></pre>
+<h2 id="assetdir">AssetDir</h2>
+<p>The output-relative directory theme assets are written to. Templates
+reference the same path, so the two cannot drift apart.</p>
+<pre><code class="language-go">const AssetDir = &quot;assets&quot;
+</code></pre>
+<h2 id="embedded-assets">Embedded Assets</h2>
+<p>The default theme embeds:</p>
+<ul>
+<li><code>template.html</code> — semantic document: header, nav, main, article, footer</li>
+<li><code>styles.css</code> — design system built on CSS custom properties</li>
+<li><code>script.js</code> — theme toggle, mobile drawer, code-block copy buttons</li>
+<li><code>search.js</code> — client-side search over the generated index</li>
+<li><code>favicon.ico</code> / <code>favicon.svg</code></li>
+</ul>
+<h2 id="adding-a-theme">Adding a Theme</h2>
+<p>A theme is a template plus an asset tree. Embed it the way <code>theme.Default</code>
+does and resolve it by name in <code>build.Build</code>. Nothing in <code>internal/site</code> or
+<code>internal/markdown</code> needs to change, because neither knows a theme exists.</p>
+<h2 id="related">Related</h2>
+<ul>
+<li><a href="/build/">build Package</a> — how themes are applied during a build</li>
+<li><a href="/site/">site Package</a> — content discovery and navigation</li>
+<li><a href="/markdown/">markdown Package</a> — parsing and rendering</li>
+</ul>
+
+          
+        </article>
+        
+<aside class="outline" aria-label="On this page">
+  <h2 class="outline__title">On this page</h2>
+  <ul class="outline__list">
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#functions">Functions</a>
+    </li>
+    
+    <li class="outline__item outline__item--3">
+      <a class="outline__link" href="#default-theme-error">Default() (\*Theme, error)</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#theme">Theme</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#assetdir">AssetDir</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#embedded-assets">Embedded Assets</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#adding-a-theme">Adding a Theme</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#related">Related</a>
+    </li>
+    
+  </ul>
+</aside>
+
+      </main>
+    </div>
+
+    <footer class="footer">
+      <p>Built with pagify · © 2024 API Reference</p>
+    </footer>
+
+    <script src="/assets/script.js" defer></script>
+    <script src="/assets/search.js" defer></script>
+  </body>
+</html>

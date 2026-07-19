@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en" data-theme="auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>v0.2.0 · Changelog</title>
+    
+    <meta name="description" content="Added the graph command and interactive visualization" />
+    
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="header">
+      <div class="header__bar">
+        
+        <button
+          class="header__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="sidebar"
+          data-nav-toggle
+        >
+          <span class="header__toggle-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Menu</span>
+        </button>
+        
+        <a class="header__title" href="/">Changelog</a>
+        <div class="header__actions">
+          <label class="header__search" for="search">
+            <span class="visually-hidden">Search</span>
+            <input
+              id="search"
+              type="search"
+              placeholder="Search"
+              autocomplete="off"
+              data-search
+              data-search-index="/assets/search-index.json"
+            />
+          </label>
+          <button class="header__theme" type="button" data-theme-toggle>
+            <span class="visually-hidden">Toggle colour theme</span>
+          </button>
+        </div>
+      </div>
+      <div class="search" data-search-panel hidden>
+        <p class="search__status" role="status" data-search-status></p>
+        <ul class="search__results" data-search-results></ul>
+      </div>
+    </header>
+
+    <div class="layout">
+      
+      <nav class="sidebar" id="sidebar" aria-label="Site">
+        <ul class="nav">
+  <li class="nav__item">
+  <a
+    class="nav__link"
+    href="/"
+    >Changelog</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v0-0-1/"
+    >v0.0.1</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v0-0-2/"
+    >v0.0.2</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v0-0-3/"
+    >v0.0.3</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v0-1-0/"
+    >v0.1.0</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link nav__link--current"
+    href="/v0-2-0/"
+    aria-current="page">v0.2.0</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v0-3-0/"
+    >v0.3.0</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v1-0-0/"
+    >v1.0.0</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v2-0-0/"
+    >v2.0.0</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v3-0-0/"
+    >v3.0.0</a
+  > 
+</li>
+</ul>
+      </nav>
+      
+
+      <main class="main" id="main">
+        <article class="markdown"><h1 id="page-title" class="markdown__title">v0.2.0</h1>
+          
+          <p class="markdown__lede">Added the graph command and interactive visualization</p>
+          
+          <p>Released: March 1, 2024</p>
+<h2 id="added">Added</h2>
+<ul>
+<li><strong>Graph command</strong> — <code>pagify graph</code> scans Markdown and emits a link graph</li>
+<li><strong>Interactive HTML visualization</strong> — Offline vis-network graph view</li>
+<li><strong>JSON graph export</strong> — <code>--format json</code> for renderer-independent data</li>
+<li><strong>Graph dot export</strong> — <code>--format dot</code> for Graphviz</li>
+<li><strong>Obsidian-inspired theme</strong> — Dark palette, purple nodes, force-directed layout</li>
+<li><strong>Graph search and inspection</strong> — Search, hover tooltips, connected-file details</li>
+</ul>
+<h2 id="changed">Changed</h2>
+<ul>
+<li><code>pagify graph</code> defaults to writing <code>graph.dot</code>, <code>graph.json</code> and <code>graph.html</code></li>
+</ul>
+<h2 id="fixed">Fixed</h2>
+<ul>
+<li>Graph output directory paths now resolve correctly</li>
+</ul>
+<h2 id="security">Security</h2>
+<ul>
+<li>N/A</li>
+</ul>
+<h2 id="related">Related</h2>
+<ul>
+<li><a href="/">Changelog home</a></li>
+<li><a href="/v0-1-0/">v0.1.0</a> — previous release</li>
+<li><a href="/v0-3-0/">v0.3.0</a> — next release</li>
+</ul>
+
+          
+        </article>
+        
+<aside class="outline" aria-label="On this page">
+  <h2 class="outline__title">On this page</h2>
+  <ul class="outline__list">
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#added">Added</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#changed">Changed</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#fixed">Fixed</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#security">Security</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#related">Related</a>
+    </li>
+    
+  </ul>
+</aside>
+
+      </main>
+    </div>
+
+    <footer class="footer">
+      <p>Built with pagify · © 2024 pagify</p>
+    </footer>
+
+    <script src="/assets/script.js" defer></script>
+    <script src="/assets/search.js" defer></script>
+  </body>
+</html>

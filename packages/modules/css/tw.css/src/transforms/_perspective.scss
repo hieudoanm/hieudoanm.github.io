@@ -1,0 +1,16 @@
+// Perspective utilities — Tailwind v3 default scale
+
+$perspectives: (
+  ('none', none),
+  ('dramatic', 100px),
+  ('near', 300px),
+  ('normal', 500px),
+  ('midrange', 800px),
+  ('distant', 1200px)
+);
+
+@each $name, $value in $perspectives {
+  .perspective-#{$name} {
+    perspective: $value;
+  }
+}

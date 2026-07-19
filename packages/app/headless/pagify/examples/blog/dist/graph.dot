@@ -1,0 +1,32 @@
+digraph graph {
+  rankdir=TB;
+  splines=polyline;
+  "category/releases.md" [label="releases.md", shape=note];
+  "category/tips.md" [label="tips.md", shape=note];
+  "category/tutorials.md" [label="tutorials.md", shape=note];
+  "customizing-your-site.md" [label="customizing-your-site.md", shape=note];
+  "index.md" [label="index.md", shape=note];
+  "introducing-pagify-v0-1.md" [label="introducing-pagify-v0-1.md", shape=note];
+  "writing-markdown-for-pagify.md" [label="writing-markdown-for-pagify.md", shape=note];
+  "category/releases.md" -> "category/tips.md";
+  "category/releases.md" -> "category/tutorials.md";
+  "category/releases.md" -> "customizing-your-site.md";
+  "category/releases.md" -> "introducing-pagify-v0-1.md";
+  "category/releases.md" -> "writing-markdown-for-pagify.md";
+  "category/tips.md" -> "category/tutorials.md";
+  "category/tips.md" -> "customizing-your-site.md";
+  "category/tips.md" -> "introducing-pagify-v0-1.md";
+  "category/tips.md" -> "writing-markdown-for-pagify.md";
+  "category/tutorials.md" -> "customizing-your-site.md";
+  "category/tutorials.md" -> "introducing-pagify-v0-1.md";
+  "category/tutorials.md" -> "writing-markdown-for-pagify.md";
+  "customizing-your-site.md" -> "introducing-pagify-v0-1.md";
+  "customizing-your-site.md" -> "writing-markdown-for-pagify.md";
+  "index.md" -> "category/releases.md";
+  "index.md" -> "category/tips.md";
+  "index.md" -> "category/tutorials.md";
+  "index.md" -> "customizing-your-site.md";
+  "index.md" -> "introducing-pagify-v0-1.md";
+  "index.md" -> "writing-markdown-for-pagify.md";
+  "introducing-pagify-v0-1.md" -> "writing-markdown-for-pagify.md";
+}

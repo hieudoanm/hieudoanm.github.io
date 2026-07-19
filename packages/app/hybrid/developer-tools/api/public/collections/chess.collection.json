@@ -1,0 +1,1380 @@
+{
+  "id": "chess-com-published-data-api",
+  "name": "Chess.com Published-Data API",
+  "groups": [
+    {
+      "id": "player",
+      "name": "Player",
+      "entries": [
+        {
+          "id": "get-pub-player-username",
+          "name": "Player Profile",
+          "request": {
+            "method": "GET",
+            "url": "https://api.chess.com/pub/player/erik",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        },
+        {
+          "id": "get-pub-player-username-stats",
+          "name": "Player Stats",
+          "request": {
+            "method": "GET",
+            "url": "https://api.chess.com/pub/player/erik/stats",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        },
+        {
+          "id": "get-pub-player-username-is-online",
+          "name": "Player online status",
+          "request": {
+            "method": "GET",
+            "url": "https://api.chess.com/pub/player/erik/is-online",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        },
+        {
+          "id": "get-pub-player-username-games",
+          "name": "Current Daily Chess",
+          "request": {
+            "method": "GET",
+            "url": "https://api.chess.com/pub/player/erik/games",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        },
+        {
+          "id": "get-pub-player-username-games-to-move",
+          "name": "To-Move Daily Chess",
+          "request": {
+            "method": "GET",
+            "url": "https://api.chess.com/pub/player/erik/games/to-move",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        },
+        {
+          "id": "get-pub-player-username-games-archives",
+          "name": "List of Monthly Archives",
+          "request": {
+            "method": "GET",
+            "url": "https://api.chess.com/pub/player/erik/games/archives",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        },
+        {
+          "id": "get-pub-player-username-games-year-month",
+          "name": "Complete Monthly Archives",
+          "request": {
+            "method": "GET",
+            "url": "https://api.chess.com/pub/player/erik/games/2009/10",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        },
+        {
+          "id": "get-pub-player-username-games-live-basetime-increment",
+          "name": "Complete Live Archive by Time Control",
+          "request": {
+            "method": "GET",
+            "url": "https://api.chess.com/pub/player/erik/games/live/180/2",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        },
+        {
+          "id": "get-pub-player-username-games-year-month-pgn",
+          "name": "Multi-Game PGN Download",
+          "request": {
+            "method": "GET",
+            "url": "https://api.chess.com/pub/player/erik/games/2009/10/pgn",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        },
+        {
+          "id": "get-pub-player-username-clubs",
+          "name": "Player's Clubs",
+          "request": {
+            "method": "GET",
+            "url": "https://api.chess.com/pub/player/erik/clubs",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        },
+        {
+          "id": "get-pub-player-username-matches",
+          "name": "Player Matches",
+          "request": {
+            "method": "GET",
+            "url": "https://api.chess.com/pub/player/erik/matches",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        },
+        {
+          "id": "get-pub-player-username-tournaments",
+          "name": "Player's Tournaments",
+          "request": {
+            "method": "GET",
+            "url": "https://api.chess.com/pub/player/erik/tournaments",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "titled-players",
+      "name": "Titled Players",
+      "entries": [
+        {
+          "id": "get-pub-titled-titleabbrev",
+          "name": "Titled Players",
+          "request": {
+            "method": "GET",
+            "url": "https://api.chess.com/pub/titled/GM",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "clubs",
+      "name": "Clubs",
+      "entries": [
+        {
+          "id": "get-pub-club-cluburlid",
+          "name": "Club Profile",
+          "request": {
+            "method": "GET",
+            "url": "https://api.chess.com/pub/club/chess-com-developer-community",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        },
+        {
+          "id": "get-pub-club-cluburlid-members",
+          "name": "Club Members",
+          "request": {
+            "method": "GET",
+            "url": "https://api.chess.com/pub/club/chess-com-developer-community/members",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        },
+        {
+          "id": "get-pub-club-cluburlid-matches",
+          "name": "Club Matches",
+          "request": {
+            "method": "GET",
+            "url": "https://api.chess.com/pub/club/chess-com-developer-community/matches",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "tournaments",
+      "name": "Tournaments",
+      "entries": [
+        {
+          "id": "get-pub-tournament-tournamenturlid",
+          "name": "Tournament",
+          "request": {
+            "method": "GET",
+            "url": "https://api.chess.com/pub/tournament/-33rd-chesscom-quick-knockouts-1401-1600",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        },
+        {
+          "id": "get-pub-tournament-tournamenturlid-round",
+          "name": "Tournament's round",
+          "request": {
+            "method": "GET",
+            "url": "https://api.chess.com/pub/tournament/-33rd-chesscom-quick-knockouts-1401-1600/1",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        },
+        {
+          "id": "get-pub-tournament-tournamenturlid-round-group",
+          "name": "Tournament's round group",
+          "request": {
+            "method": "GET",
+            "url": "https://api.chess.com/pub/tournament/-33rd-chesscom-quick-knockouts-1401-1600/1/1",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "team-matches",
+      "name": "Team Matches",
+      "entries": [
+        {
+          "id": "get-pub-match-matchid",
+          "name": "Team Match",
+          "request": {
+            "method": "GET",
+            "url": "https://api.chess.com/pub/match/12803",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        },
+        {
+          "id": "get-pub-match-matchid-board",
+          "name": "Daily Team match board",
+          "request": {
+            "method": "GET",
+            "url": "https://api.chess.com/pub/match/12803/1",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        },
+        {
+          "id": "get-pub-match-live-matchid",
+          "name": "Live Team Match",
+          "request": {
+            "method": "GET",
+            "url": "https://api.chess.com/pub/match/live/5833",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        },
+        {
+          "id": "get-pub-match-live-matchid-board",
+          "name": "Live Team match board",
+          "request": {
+            "method": "GET",
+            "url": "https://api.chess.com/pub/match/live/5833/5",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "countries",
+      "name": "Countries",
+      "entries": [
+        {
+          "id": "get-pub-country-iso",
+          "name": "Country Profile",
+          "request": {
+            "method": "GET",
+            "url": "https://api.chess.com/pub/country/IT",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        },
+        {
+          "id": "get-pub-country-iso-players",
+          "name": "Country Players",
+          "request": {
+            "method": "GET",
+            "url": "https://api.chess.com/pub/country/IT/players",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        },
+        {
+          "id": "get-pub-country-iso-clubs",
+          "name": "Country Clubs",
+          "request": {
+            "method": "GET",
+            "url": "https://api.chess.com/pub/country/IT/clubs",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "puzzles",
+      "name": "Puzzles",
+      "entries": [
+        {
+          "id": "get-pub-puzzle",
+          "name": "Daily puzzle",
+          "request": {
+            "method": "GET",
+            "url": "https://api.chess.com/pub/puzzle",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        },
+        {
+          "id": "get-pub-puzzle-random",
+          "name": "Random daily puzzle",
+          "request": {
+            "method": "GET",
+            "url": "https://api.chess.com/pub/puzzle/random",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "streamers",
+      "name": "Streamers",
+      "entries": [
+        {
+          "id": "get-pub-streamers",
+          "name": "Streamers",
+          "request": {
+            "method": "GET",
+            "url": "https://api.chess.com/pub/streamers",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "leaderboards",
+      "name": "Leaderboards",
+      "entries": [
+        {
+          "id": "get-pub-leaderboards",
+          "name": "Leaderboards",
+          "request": {
+            "method": "GET",
+            "url": "https://api.chess.com/pub/leaderboards",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        }
+      ]
+    }
+  ]
+}

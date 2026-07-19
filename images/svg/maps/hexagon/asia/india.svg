@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360.35 387.12" width="360.35" height="387.12" role="img" aria-labelledby="india-title india-desc">
+  <title id="india-title">India hex map</title>
+  <desc id="india-desc">Hexagon map with 36 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.25; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 11.14 7.95; }
+    .label { fill: #52525b; font: 600 9.02px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="NL">
+    <title>Nagaland</title>
+    <polygon class="tile" points="329.44,87.50 352.40,100.76 352.40,127.27 329.44,140.53 306.47,127.27 306.47,100.76" aria-label="Nagaland"/>
+    <text class="label" x="329.44" y="114.02">NL</text>
+  </g>
+  <g class="state" data-state="AR">
+    <title>Arunachal Pradesh</title>
+    <polygon class="tile" points="306.47,47.73 329.44,60.99 329.44,87.50 306.47,100.76 283.51,87.50 283.51,60.99" aria-label="Arunachal Pradesh"/>
+    <text class="label" x="306.47" y="74.24">AR</text>
+  </g>
+  <g class="state" data-state="MN">
+    <title>Manipur</title>
+    <polygon class="tile" points="306.47,127.27 329.44,140.53 329.44,167.05 306.47,180.30 283.51,167.05 283.51,140.53" aria-label="Manipur"/>
+    <text class="label" x="306.47" y="153.79">MN</text>
+  </g>
+  <g class="state" data-state="AS">
+    <title>Assam</title>
+    <polygon class="tile" points="283.51,87.50 306.47,100.76 306.47,127.27 283.51,140.53 260.55,127.27 260.55,100.76" aria-label="Assam"/>
+    <text class="label" x="283.51" y="114.02">AS</text>
+  </g>
+  <g class="state" data-state="MZ">
+    <title>Mizoram</title>
+    <polygon class="tile" points="283.51,167.05 306.47,180.30 306.47,206.82 283.51,220.08 260.55,206.82 260.55,180.30" aria-label="Mizoram"/>
+    <text class="label" x="283.51" y="193.56">MZ</text>
+  </g>
+  <g class="state" data-state="AN">
+    <title>Andaman and Nicobar</title>
+    <polygon class="tile inset" points="283.51,246.59 306.47,259.85 306.47,286.37 283.51,299.62 260.55,286.37 260.55,259.85" aria-label="Andaman and Nicobar"/>
+    <text class="label" x="283.51" y="273.11">AN</text>
+  </g>
+  <g class="state" data-state="ML">
+    <title>Meghalaya</title>
+    <polygon class="tile" points="260.55,47.73 283.51,60.99 283.51,87.50 260.55,100.76 237.58,87.50 237.58,60.99" aria-label="Meghalaya"/>
+    <text class="label" x="260.55" y="74.24">ML</text>
+  </g>
+  <g class="state" data-state="TR">
+    <title>Tripura</title>
+    <polygon class="tile" points="260.55,127.27 283.51,140.53 283.51,167.05 260.55,180.30 237.58,167.05 237.58,140.53" aria-label="Tripura"/>
+    <text class="label" x="260.55" y="153.79">TR</text>
+  </g>
+  <g class="state" data-state="WB">
+    <title>West Bengal</title>
+    <polygon class="tile" points="237.58,87.50 260.55,100.76 260.55,127.27 237.58,140.53 214.62,127.27 214.62,100.76" aria-label="West Bengal"/>
+    <text class="label" x="237.58" y="114.02">WB</text>
+  </g>
+  <g class="state" data-state="OR">
+    <title>Odisha</title>
+    <polygon class="tile" points="237.58,167.05 260.55,180.30 260.55,206.82 237.58,220.08 214.62,206.82 214.62,180.30" aria-label="Odisha"/>
+    <text class="label" x="237.58" y="193.56">OR</text>
+  </g>
+  <g class="state" data-state="SK">
+    <title>Sikkim</title>
+    <polygon class="tile" points="214.62,47.73 237.58,60.99 237.58,87.50 214.62,100.76 191.66,87.50 191.66,60.99" aria-label="Sikkim"/>
+    <text class="label" x="214.62" y="74.24">SK</text>
+  </g>
+  <g class="state" data-state="JH">
+    <title>Jharkhand</title>
+    <polygon class="tile" points="214.62,127.27 237.58,140.53 237.58,167.05 214.62,180.30 191.66,167.05 191.66,140.53" aria-label="Jharkhand"/>
+    <text class="label" x="214.62" y="153.79">JH</text>
+  </g>
+  <g class="state" data-state="LA">
+    <title>Ladakh</title>
+    <polygon class="tile" points="191.66,7.95 214.62,21.21 214.62,47.73 191.66,60.99 168.70,47.73 168.70,21.21" aria-label="Ladakh"/>
+    <text class="label" x="191.66" y="34.47">LA</text>
+  </g>
+  <g class="state" data-state="BR">
+    <title>Bihar</title>
+    <polygon class="tile" points="191.66,87.50 214.62,100.76 214.62,127.27 191.66,140.53 168.70,127.27 168.70,100.76" aria-label="Bihar"/>
+    <text class="label" x="191.66" y="114.02">BR</text>
+  </g>
+  <g class="state" data-state="AP">
+    <title>Andhra Pradesh</title>
+    <polygon class="tile" points="191.66,167.05 214.62,180.30 214.62,206.82 191.66,220.08 168.70,206.82 168.70,180.30" aria-label="Andhra Pradesh"/>
+    <text class="label" x="191.66" y="193.56">AP</text>
+  </g>
+  <g class="state" data-state="UT">
+    <title>Uttarakhand</title>
+    <polygon class="tile" points="168.70,47.73 191.66,60.99 191.66,87.50 168.70,100.76 145.73,87.50 145.73,60.99" aria-label="Uttarakhand"/>
+    <text class="label" x="168.70" y="74.24">UT</text>
+  </g>
+  <g class="state" data-state="CT">
+    <title>Chhattisgarh</title>
+    <polygon class="tile" points="168.70,127.27 191.66,140.53 191.66,167.05 168.70,180.30 145.73,167.05 145.73,140.53" aria-label="Chhattisgarh"/>
+    <text class="label" x="168.70" y="153.79">CT</text>
+  </g>
+  <g class="state" data-state="PY">
+    <title>Puducherry</title>
+    <polygon class="tile" points="168.70,206.82 191.66,220.08 191.66,246.59 168.70,259.85 145.73,246.59 145.73,220.08" aria-label="Puducherry"/>
+    <text class="label" x="168.70" y="233.34">PY</text>
+  </g>
+  <g class="state" data-state="HP">
+    <title>Himachal Pradesh</title>
+    <polygon class="tile" points="145.73,7.95 168.70,21.21 168.70,47.73 145.73,60.99 122.77,47.73 122.77,21.21" aria-label="Himachal Pradesh"/>
+    <text class="label" x="145.73" y="34.47">HP</text>
+  </g>
+  <g class="state" data-state="UP">
+    <title>Uttar Pradesh</title>
+    <polygon class="tile" points="145.73,87.50 168.70,100.76 168.70,127.27 145.73,140.53 122.77,127.27 122.77,100.76" aria-label="Uttar Pradesh"/>
+    <text class="label" x="145.73" y="114.02">UP</text>
+  </g>
+  <g class="state" data-state="TG">
+    <title>Telangana</title>
+    <polygon class="tile" points="145.73,167.05 168.70,180.30 168.70,206.82 145.73,220.08 122.77,206.82 122.77,180.30" aria-label="Telangana"/>
+    <text class="label" x="145.73" y="193.56">TG</text>
+  </g>
+  <g class="state" data-state="TN">
+    <title>Tamil Nadu</title>
+    <polygon class="tile" points="145.73,246.59 168.70,259.85 168.70,286.37 145.73,299.62 122.77,286.37 122.77,259.85" aria-label="Tamil Nadu"/>
+    <text class="label" x="145.73" y="273.11">TN</text>
+  </g>
+  <g class="state" data-state="HR">
+    <title>Haryana</title>
+    <polygon class="tile" points="122.77,47.73 145.73,60.99 145.73,87.50 122.77,100.76 99.81,87.50 99.81,60.99" aria-label="Haryana"/>
+    <text class="label" x="122.77" y="74.24">HR</text>
+  </g>
+  <g class="state" data-state="MP">
+    <title>Madhya Pradesh</title>
+    <polygon class="tile" points="122.77,127.27 145.73,140.53 145.73,167.05 122.77,180.30 99.81,167.05 99.81,140.53" aria-label="Madhya Pradesh"/>
+    <text class="label" x="122.77" y="153.79">MP</text>
+  </g>
+  <g class="state" data-state="KA">
+    <title>Karnataka</title>
+    <polygon class="tile" points="122.77,206.82 145.73,220.08 145.73,246.59 122.77,259.85 99.81,246.59 99.81,220.08" aria-label="Karnataka"/>
+    <text class="label" x="122.77" y="233.34">KA</text>
+  </g>
+  <g class="state" data-state="JK">
+    <title>Jammu and Kashmir</title>
+    <polygon class="tile" points="99.81,7.95 122.77,21.21 122.77,47.73 99.81,60.99 76.84,47.73 76.84,21.21" aria-label="Jammu and Kashmir"/>
+    <text class="label" x="99.81" y="34.47">JK</text>
+  </g>
+  <g class="state" data-state="RJ">
+    <title>Rajasthan</title>
+    <polygon class="tile" points="99.81,87.50 122.77,100.76 122.77,127.27 99.81,140.53 76.84,127.27 76.84,100.76" aria-label="Rajasthan"/>
+    <text class="label" x="99.81" y="114.02">RJ</text>
+  </g>
+  <g class="state" data-state="MH">
+    <title>Maharashtra</title>
+    <polygon class="tile" points="99.81,167.05 122.77,180.30 122.77,206.82 99.81,220.08 76.84,206.82 76.84,180.30" aria-label="Maharashtra"/>
+    <text class="label" x="99.81" y="193.56">MH</text>
+  </g>
+  <g class="state" data-state="KL">
+    <title>Kerala</title>
+    <polygon class="tile" points="99.81,246.59 122.77,259.85 122.77,286.37 99.81,299.62 76.84,286.37 76.84,259.85" aria-label="Kerala"/>
+    <text class="label" x="99.81" y="273.11">KL</text>
+  </g>
+  <g class="state" data-state="PB">
+    <title>Punjab</title>
+    <polygon class="tile" points="76.84,47.73 99.81,60.99 99.81,87.50 76.84,100.76 53.88,87.50 53.88,60.99" aria-label="Punjab"/>
+    <text class="label" x="76.84" y="74.24">PB</text>
+  </g>
+  <g class="state" data-state="GJ">
+    <title>Gujarat</title>
+    <polygon class="tile" points="76.84,127.27 99.81,140.53 99.81,167.05 76.84,180.30 53.88,167.05 53.88,140.53" aria-label="Gujarat"/>
+    <text class="label" x="76.84" y="153.79">GJ</text>
+  </g>
+  <g class="state" data-state="GA">
+    <title>Goa</title>
+    <polygon class="tile" points="76.84,206.82 99.81,220.08 99.81,246.59 76.84,259.85 53.88,246.59 53.88,220.08" aria-label="Goa"/>
+    <text class="label" x="76.84" y="233.34">GA</text>
+  </g>
+  <g class="state" data-state="CH">
+    <title>Chandigarh</title>
+    <polygon class="tile" points="53.88,87.50 76.84,100.76 76.84,127.27 53.88,140.53 30.92,127.27 30.92,100.76" aria-label="Chandigarh"/>
+    <text class="label" x="53.88" y="114.02">CH</text>
+  </g>
+  <g class="state" data-state="DH">
+    <title>Dadra and Nagar Haveli and Daman and Diu</title>
+    <polygon class="tile" points="53.88,167.05 76.84,180.30 76.84,206.82 53.88,220.08 30.92,206.82 30.92,180.30" aria-label="Dadra and Nagar Haveli and Daman and Diu"/>
+    <text class="label" x="53.88" y="193.56">DH</text>
+  </g>
+  <g class="state" data-state="LD">
+    <title>Lakshadweep</title>
+    <polygon class="tile inset" points="53.88,326.14 76.84,339.40 76.84,365.91 53.88,379.17 30.92,365.91 30.92,339.40" aria-label="Lakshadweep"/>
+    <text class="label" x="53.88" y="352.65">LD</text>
+  </g>
+  <g class="state" data-state="DL">
+    <title>Delhi</title>
+    <polygon class="tile" points="30.92,127.27 53.88,140.53 53.88,167.05 30.92,180.30 7.95,167.05 7.95,140.53" aria-label="Delhi"/>
+    <text class="label" x="30.92" y="153.79">DL</text>
+  </g>
+</svg>

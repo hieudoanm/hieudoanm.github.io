@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138.18 292.40" width="138.18" height="292.40" role="img" aria-labelledby="israel-title israel-desc">
+  <title id="israel-title">Israel hex map</title>
+  <desc id="israel-desc">Hexagon map with 6 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.89; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 14.28 10.20; }
+    .label { fill: #52525b; font: 600 11.56px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="HZ">
+    <title>HaZafon</title>
+    <polygon class="tile" points="98.53,10.20 127.98,27.20 127.98,61.20 98.53,78.20 69.09,61.20 69.09,27.20" aria-label="HaZafon"/>
+    <text class="label" x="98.53" y="44.20">HZ</text>
+  </g>
+  <g class="state" data-state="TA">
+    <title>Tel Aviv</title>
+    <polygon class="tile" points="69.09,61.20 98.53,78.20 98.53,112.20 69.09,129.20 39.64,112.20 39.64,78.20" aria-label="Tel Aviv"/>
+    <text class="label" x="69.09" y="95.20">TA</text>
+  </g>
+  <g class="state" data-state="JM">
+    <title>Jerusalem</title>
+    <polygon class="tile" points="69.09,163.20 98.53,180.20 98.53,214.20 69.09,231.20 39.64,214.20 39.64,180.20" aria-label="Jerusalem"/>
+    <text class="label" x="69.09" y="197.20">JM</text>
+  </g>
+  <g class="state" data-state="HA">
+    <title>Haifa</title>
+    <polygon class="tile" points="39.64,10.20 69.09,27.20 69.09,61.20 39.64,78.20 10.20,61.20 10.20,27.20" aria-label="Haifa"/>
+    <text class="label" x="39.64" y="44.20">HA</text>
+  </g>
+  <g class="state" data-state="HM">
+    <title>HaMerkaz</title>
+    <polygon class="tile" points="39.64,112.20 69.09,129.20 69.09,163.20 39.64,180.20 10.20,163.20 10.20,129.20" aria-label="HaMerkaz"/>
+    <text class="label" x="39.64" y="146.20">HM</text>
+  </g>
+  <g class="state" data-state="HD">
+    <title>HaDarom</title>
+    <polygon class="tile" points="39.64,214.20 69.09,231.20 69.09,265.20 39.64,282.20 10.20,265.20 10.20,231.20" aria-label="HaDarom"/>
+    <text class="label" x="39.64" y="248.20">HD</text>
+  </g>
+</svg>

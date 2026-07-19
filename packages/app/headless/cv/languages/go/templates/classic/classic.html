@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - {{.Personal.FullName}}</title>
+  <style>
+    @page { margin: 40px; size: A4; }
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: #1f2937;
+      line-height: 1.5;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      margin: 0 0 4px;
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
+    .job-title {
+      font-size: 13px;
+      color: #334155;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    .contact, .websites {
+      text-align: center;
+      font-size: 10px;
+      color: #6b7280;
+    }
+    .contact { margin-bottom: 8px; }
+    .websites { margin-bottom: 20px; }
+    .section-title {
+      color: #334155;
+      border-bottom: 1px solid rgba(51, 65, 85, 0.13);
+      padding-bottom: 3px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-top: 16px;
+      margin-bottom: 8px;
+    }
+    .section { margin-bottom: 14px; }
+    .item { margin-bottom: 10px; }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .primary { font-size: 12px; font-weight: 600; }
+    .right { font-size: 10px; color: #6b7280; }
+    .role {
+      font-style: italic;
+      font-size: 11px;
+      color: #334155;
+      margin-bottom: 2px;
+    }
+    .location { font-size: 10px; color: #6b7280; }
+    .degree { font-size: 11px; color: #334155; }
+    .tech { font-size: 10px; color: #6b7280; margin-bottom: 2px; }
+    .skill-cat { font-size: 10.5px; font-weight: 700; color: #334155; }
+    .skill-items { font-size: 10.5px; }
+    .skill-row { margin-bottom: 3px; }
+    .cred { font-size: 10.5px; margin-bottom: 4px; }
+    .lang { font-size: 10.5px; margin-right: 16px; }
+    .interests { font-size: 10.5px; }
+    p { font-size: 11px; margin: 3px 0; }
+    ul { margin: 4px 0 0 16px; padding: 0; }
+    li { font-size: 11px; margin-bottom: 2px; }
+  </style>
+</head>
+<body>
+  <h1>{{.Personal.FullName}}</h1>
+  <div class="job-title">{{.Personal.JobTitle}}</div>
+  <div class="contact">
+    {{if .Contact.Email}}{{.Contact.Email}} • {{end}}
+    {{if .Contact.Phone}}{{.Contact.Phone}} • {{end}}
+    {{if .Contact.Address}}{{.Contact.Address}}{{end}}
+  </div>
+  <div class="websites">
+    {{if .Websites.Website}}{{.Websites.Website}}{{end}}
+    {{if .Websites.Linkedin}} • {{.Websites.Linkedin}}{{end}}
+    {{if .Websites.Github}} • {{.Websites.Github}}{{end}}
+  </div>
+
+  {{if .Summary}}
+  <div class="section">
+    <div class="section-title">Professional Summary</div>
+    <p>{{.Summary}}</p>
+  </div>
+  {{end}}
+
+  {{if .Experience}}
+  <div class="section">
+    <div class="section-title">Experience</div>
+    {{range .Experience}}
+    <div class="item">
+      <div class="header">
+        <div class="primary"><strong>{{.Company}}</strong></div>
+        <div class="right">{{.StartDate}} – {{.EndDate}}</div>
+      </div>
+      <div class="role">{{.Role}}</div>
+      {{if .Location}}<div class="location">{{.Location}}</div>{{end}}
+      {{if .Description}}<p>{{description .Description}}</p>{{end}}
+    </div>
+    {{end}}
+  </div>
+  {{end}}
+
+  {{if .Education}}
+  <div class="section">
+    <div class="section-title">Education</div>
+    {{range .Education}}
+    <div class="item">
+      <div class="header">
+        <div class="primary"><strong>{{.School}}</strong></div>
+        <div class="right">{{.StartDate}} – {{.EndDate}}</div>
+      </div>
+      <div class="degree">{{.Degree}}{{if .Field}} in {{.Field}}{{end}}</div>
+      {{if .Description}}<p>{{description .Description}}</p>{{end}}
+    </div>
+    {{end}}
+  </div>
+  {{end}}
+
+  {{if .Projects}}
+  <div class="section">
+    <div class="section-title">Projects</div>
+    {{range .Projects}}
+    <div class="item">
+      <div class="header">
+        <div class="primary"><strong>{{.Name}}</strong></div>
+        <div class="right">{{.Organization}}</div>
+      </div>
+      {{if .Technologies}}<div class="tech">{{.Technologies}}</div>{{end}}
+      {{if .Description}}<p>{{description .Description}}</p>{{end}}
+    </div>
+    {{end}}
+  </div>
+  {{end}}
+
+  {{if .Skills}}
+  <div class="section">
+    <div class="section-title">Skills</div>
+    {{range .Skills}}
+    <div class="skill-row">
+      <span class="skill-cat">{{.Category}}: </span><span class="skill-items">{{.Items}}</span>
+    </div>
+    {{end}}
+  </div>
+  {{end}}
+
+  {{if .Certifications}}
+  <div class="section">
+    <div class="section-title">Certifications</div>
+    {{range .Certifications}}<div class="cred"><strong>{{.Name}}</strong>{{if .Issuer}} — {{.Issuer}}{{end}}{{if .Date}} ({{.Date}}){{end}}</div>{{end}}
+  </div>
+  {{end}}
+
+  {{if .Languages}}
+  <div class="section">
+    <div class="section-title">Languages</div>
+    {{range .Languages}}<span class="lang"><strong>{{.Name}}</strong>{{if .Proficiency}} — {{.Proficiency}}{{end}}</span>{{end}}
+  </div>
+  {{end}}
+
+  {{if .Interests}}
+  <div class="section">
+    <div class="section-title">Interests</div>
+    <div class="interests">{{.Interests}}</div>
+  </div>
+  {{end}}
+</body>
+</html>

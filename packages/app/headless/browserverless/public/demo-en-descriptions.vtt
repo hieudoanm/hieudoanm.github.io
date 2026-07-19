@@ -1,0 +1,34 @@
+WEBVTT
+
+NOTE Animated terminal (1280x720, dark slate) showing the Browserverless
+workflow. Cues are timed to the line animations in demo.svg.
+
+00:00.900 --> 00:01.700
+Command: browserverless serve --port 3000
+
+00:01.700 --> 00:03.100
+Output: ok listening on 0.0.0.0:3000
+
+00:03.100 --> 00:03.900
+Command: browserverless shot --url https://example.com
+
+00:03.900 --> 00:05.300
+Output: ok page loaded in 412 ms
+
+00:05.300 --> 00:06.100
+Command: browserverless render --url https://example.com
+
+00:06.100 --> 00:07.600
+Output: ok page.html captured
+
+00:07.600 --> 00:08.400
+Command: browserverless version
+
+00:08.400 --> 00:09.400
+Output: servo renderer · headless
+
+00:09.400 --> 00:11.000
+Output: window (1280, 800) ready
+
+00:11.000 --> 00:14.800
+Blank prompt

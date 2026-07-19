@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "asia-indus-civilization-3000",
+    "title": "Indus Valley Civilization",
+    "year": -3000,
+    "description": "The Indus civilization arose along the river valleys.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-harappa-2600",
+    "title": "Harappa Flourishes",
+    "year": -2600,
+    "description": "Planned cities like Harappa grew wealthy.",
+    "category": "technology",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-indus-script-2500",
+    "title": "Indus Script Used",
+    "year": -2500,
+    "description": "Seals bear a script still undeciphered.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-indus-decline-1900",
+    "title": "Indus Civilization Declines",
+    "year": -1900,
+    "description": "The great cities were gradually abandoned.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-aryan-migrations-1700",
+    "title": "Indo-Aryan Migrations",
+    "year": -1700,
+    "description": "Indo-Aryan peoples entered the subcontinent.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-rigveda-1500",
+    "title": "Rigveda Composed",
+    "year": -1500,
+    "description": "The Rigveda's hymns were composed.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-iron-age-1000",
+    "title": "Iron Age Begins in India",
+    "year": -1000,
+    "description": "Iron tools spread across northern India.",
+    "category": "technology",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-upanishads-800",
+    "title": "Upanishads Composed",
+    "year": -800,
+    "description": "Philosophical texts reshaped Hindu thought.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-mahajanapadas-600",
+    "title": "Sixteen Mahajanapadas",
+    "year": -600,
+    "description": "Great states divided the Ganges plain.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-mahavira-599",
+    "title": "Mahavira Born",
+    "year": -599,
+    "description": "The Jain teacher was born into a royal family.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-buddha-563",
+    "title": "Buddha Born",
+    "year": -563,
+    "description": "Siddhartha Gautama was born in Lumbini.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-magadha-544",
+    "title": "Magadha Rises",
+    "year": -544,
+    "description": "Bimbisara made Magadha the leading state.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-panini-500",
+    "title": "Panini Writes Grammar",
+    "year": -500,
+    "description": "Panini codified Sanskrit grammar.",
+    "category": "science",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-buddha-dies-483",
+    "title": "Buddha Dies",
+    "year": -483,
+    "description": "The Buddha died at Kushinagar.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-alexander-india-327",
+    "title": "Alexander Invades India",
+    "year": -327,
+    "description": "Alexander the Great crossed into the Indus valley.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-maurya-322",
+    "title": "Maurya Empire Founded",
+    "year": -322,
+    "description": "Chandragupta founded India's first great empire.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-seleucus-treaty-305",
+    "title": "Seleucus Defeated",
+    "year": -305,
+    "description": "Chandragupta defeated the Greek general Seleucus.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-ashoka-272",
+    "title": "Ashoka Becomes Emperor",
+    "year": -272,
+    "description": "Ashoka took the Mauryan throne.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-kalinga-261",
+    "title": "Kalinga War",
+    "year": -261,
+    "description": "Ashoka's brutal conquest of Kalinga changed him.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-ashoka-buddhism-250",
+    "title": "Ashoka Embraces Buddhism",
+    "year": -250,
+    "description": "Ashoka spread Buddhist teachings across Asia.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-sanchi-stupa-249",
+    "title": "Sanchi Stupa Built",
+    "year": -249,
+    "description": "Builders raised the great stupa at Sanchi.",
+    "category": "technology",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-sunga-dynasty-185",
+    "title": "Sunga Dynasty",
+    "year": -185,
+    "description": "The Sungas ruled after the Mauryas.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-indo-greeks-180",
+    "title": "Indo-Greek Kingdoms",
+    "year": -180,
+    "description": "Greek rulers governed parts of the northwest.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-satavahana-50",
+    "title": "Satavahana Dynasty",
+    "year": -50,
+    "description": "The Satavahanas ruled the Deccan.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-kushan-empire-50",
+    "title": "Kushan Empire Rises",
+    "year": 50,
+    "description": "The Kushans linked India to the Silk Road.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-kanishka-78",
+    "title": "Kanishka Rules",
+    "year": 78,
+    "description": "Kanishka presided over a Buddhist golden age.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-charaka-100",
+    "title": "Charaka Writes Ayurveda",
+    "year": 100,
+    "description": "Charaka compiled a classic medical text.",
+    "category": "medicine",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-nagarjuna-150",
+    "title": "Nagarjuna Writes Philosophy",
+    "year": 150,
+    "description": "Nagarjuna expounded Mahayana Buddhism.",
+    "category": "science",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-gupta-320",
+    "title": "Gupta Empire Founded",
+    "year": 320,
+    "description": "Chandragupta I founded the Gupta dynasty.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-samudragupta-350",
+    "title": "Samudragupta Conquers",
+    "year": 350,
+    "description": "Samudragupta extended Gupta power widely.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-kalidasa-400",
+    "title": "Kalidasa Writes Plays",
+    "year": 400,
+    "description": "Kalidasa composed plays and poems.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-fa-hien-405",
+    "title": "Fa Hien Travels to India",
+    "year": 405,
+    "description": "The Chinese pilgrim recorded Gupta life.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-hun-invasions-450",
+    "title": "Huna Invasions",
+    "year": 450,
+    "description": "Central Asian Huns raided Gupta lands.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-aryabhata-476",
+    "title": "Aryabhata Born",
+    "year": 476,
+    "description": "The astronomer Aryabhata was born.",
+    "category": "science",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-aryabhatiya-499",
+    "title": "Aryabhatiya Written",
+    "year": 499,
+    "description": "Aryabhata described a heliocentric model.",
+    "category": "science",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-gupta-decline-535",
+    "title": "Gupta Empire Declines",
+    "year": 535,
+    "description": "Gupta power faded after the Huna wars.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-harsha-606",
+    "title": "Harsha Rules",
+    "year": 606,
+    "description": "Harsha united much of northern India.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-arab-sindh-712",
+    "title": "Arabs Conquer Sindh",
+    "year": 712,
+    "description": "Arab armies brought Islam to the Indus region.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-pala-dynasty-750",
+    "title": "Pala Dynasty",
+    "year": 750,
+    "description": "The Palas ruled Bengal and Bihar.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-shankara-788",
+    "title": "Adi Shankara Born",
+    "year": 788,
+    "description": "Shankara revived Advaita Vedanta.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-chola-empire-900",
+    "title": "Chola Empire Rises",
+    "year": 900,
+    "description": "The Cholas built a maritime empire.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-mahmud-ghazni-1000",
+    "title": "Mahmud Raids India",
+    "year": 1000,
+    "description": "Mahmud of Ghazni raided wealthy temples.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-tarain-1192",
+    "title": "Battle of Tarain",
+    "year": 1192,
+    "description": "Muhammad of Ghur defeated Prithviraj Chauhan.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-delhi-sultanate-1206",
+    "title": "Delhi Sultanate Founded",
+    "year": 1206,
+    "description": "Muslim rulers governed from Delhi.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-razia-1236",
+    "title": "Razia Sultana Rules",
+    "year": 1236,
+    "description": "Razia became the first woman sultan of Delhi.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-khilji-1290",
+    "title": "Khalji Dynasty",
+    "year": 1290,
+    "description": "The Khaljis seized the Delhi throne.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-vijayanagara-1336",
+    "title": "Vijayanagara Founded",
+    "year": 1336,
+    "description": "Harihara and Bukka founded the Hindu empire.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-timur-1398",
+    "title": "Timur Sacks Delhi",
+    "year": 1398,
+    "description": "Timur devastated the sultanate's capital.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-kabir-1440",
+    "title": "Kabir Born",
+    "year": 1440,
+    "description": "The poet-saint Kabir blended faiths.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-nanak-1469",
+    "title": "Guru Nanak Born",
+    "year": 1469,
+    "description": "Nanak founded the Sikh tradition.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-vasco-gama-1498",
+    "title": "Vasco da Gama Reaches India",
+    "year": 1498,
+    "description": "The Portuguese explorer landed at Calicut.",
+    "category": "technology",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-panipat-1526",
+    "title": "First Battle of Panipat",
+    "year": 1526,
+    "description": "Babur founded the Mughal empire.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-akbar-1556",
+    "title": "Akbar Becomes Emperor",
+    "year": 1556,
+    "description": "Akbar expanded and united Mughal India.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-talikota-1565",
+    "title": "Battle of Talikota",
+    "year": 1565,
+    "description": "Vijayanagara fell to allied sultanates.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-eic-1600",
+    "title": "East India Company Founded",
+    "year": 1600,
+    "description": "London merchants received a royal charter.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-taj-begins-1631",
+    "title": "Taj Mahal Construction Begins",
+    "year": 1631,
+    "description": "Shah Jahan ordered a tomb for Mumtaz Mahal.",
+    "category": "technology",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-taj-completed-1653",
+    "title": "Taj Mahal Completed",
+    "year": 1653,
+    "description": "The marble mausoleum took two decades.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-aurangzeb-1658",
+    "title": "Aurangzeb Takes Power",
+    "year": 1658,
+    "description": "Aurangzeb seized the Mughal throne.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-aurangzeb-dies-1707",
+    "title": "Aurangzeb Dies",
+    "year": 1707,
+    "description": "Mughal central power began to crumble.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-nadir-shah-1739",
+    "title": "Nadir Shah Sacks Delhi",
+    "year": 1739,
+    "description": "The Persian ruler plundered Delhi.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-plassey-1757",
+    "title": "Battle of Plassey",
+    "year": 1757,
+    "description": "Robert Clive secured British dominance in Bengal.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-buxar-1764",
+    "title": "Battle of Buxar",
+    "year": 1764,
+    "description": "The East India Company defeated Indian rulers.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-diwani-1765",
+    "title": "Company Wins Diwani Rights",
+    "year": 1765,
+    "description": "Britain gained revenue rights over Bengal.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-bengal-famine-1770",
+    "title": "Great Bengal Famine",
+    "year": 1770,
+    "description": "Misrule and drought caused millions of deaths.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-regulating-act-1773",
+    "title": "Regulating Act",
+    "year": 1773,
+    "description": "London placed the Company under state oversight.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-permanent-settlement-1793",
+    "title": "Permanent Settlement",
+    "year": 1793,
+    "description": "Britain fixed land revenues in Bengal.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-vellore-1806",
+    "title": "Vellore Mutiny",
+    "year": 1806,
+    "description": "Indian sepoys revolted against the Company.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-brahmo-samaj-1828",
+    "title": "Brahmo Samaj Founded",
+    "year": 1828,
+    "description": "Ram Mohan Roy reformed Hinduism.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-english-education-1835",
+    "title": "English Education Introduced",
+    "year": 1835,
+    "description": "English became the medium of higher education.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-first-railway-1853",
+    "title": "First Passenger Railway",
+    "year": 1853,
+    "description": "Trains ran from Bombay to Thane.",
+    "category": "technology",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-mutiny-1857",
+    "title": "Indian Rebellion of 1857",
+    "year": 1857,
+    "description": "Sepoys and rulers rose against British rule.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-british-raj-1858",
+    "title": "British Raj Begins",
+    "year": 1858,
+    "description": "The crown took direct control of India.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-tagore-1861",
+    "title": "Tagore Born",
+    "year": 1861,
+    "description": "Rabindranath Tagore was born in Calcutta.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-gandhi-1869",
+    "title": "Gandhi Born",
+    "year": 1869,
+    "description": "Mahatma Gandhi was born in Porbandar.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-congress-1885",
+    "title": "Indian National Congress Founded",
+    "year": 1885,
+    "description": "Moderates founded the Congress party.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-partition-bengal-1905",
+    "title": "Partition of Bengal",
+    "year": 1905,
+    "description": "Britain split Bengal and sparked protests.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-muslim-league-1906",
+    "title": "Muslim League Founded",
+    "year": 1906,
+    "description": "Muslim leaders founded a separate party.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-capital-delhi-1911",
+    "title": "Capital Moves to Delhi",
+    "year": 1911,
+    "description": "Britain shifted the capital from Calcutta.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-jallianwala-1919",
+    "title": "Jallianwala Bagh Massacre",
+    "year": 1919,
+    "description": "Troops fired on a peaceful crowd in Amritsar.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-noncooperation-1920",
+    "title": "Non-Cooperation Movement",
+    "year": 1920,
+    "description": "Gandhi launched nationwide civil disobedience.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-salt-march-1930",
+    "title": "Dandi Salt March",
+    "year": 1930,
+    "description": "Gandhi marched to break the salt tax.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-government-act-1935",
+    "title": "Government of India Act",
+    "year": 1935,
+    "description": "Britain created provincial legislatures.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-quit-india-1942",
+    "title": "Quit India Movement",
+    "year": 1942,
+    "description": "Gandhi demanded immediate independence.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-bengal-famine-1943",
+    "title": "Bengal Famine",
+    "year": 1943,
+    "description": "Wartime policies worsened a famine.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-independence-1947",
+    "title": "India Gains Independence",
+    "year": 1947,
+    "description": "India and Pakistan became separate nations.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 1,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-gandhi-assassinated-1948",
+    "title": "Gandhi Assassinated",
+    "year": 1948,
+    "description": "The Mahatma was shot in Delhi.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-constitution-1950",
+    "title": "Constitution Adopted",
+    "year": 1950,
+    "description": "India became a sovereign republic.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-states-reorg-1956",
+    "title": "States Reorganized",
+    "year": 1956,
+    "description": "States were redrawn along language lines.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-sino-war-1962",
+    "title": "Sino-Indian War",
+    "year": 1962,
+    "description": "China and India clashed in the Himalayas.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-indo-pak-war-1965",
+    "title": "Indo-Pakistani War",
+    "year": 1965,
+    "description": "India and Pakistan fought over Kashmir.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-bangladesh-1971",
+    "title": "Bangladesh Liberation War",
+    "year": 1971,
+    "description": "India aided Bangladesh's independence.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-smiling-buddha-1974",
+    "title": "Smiling Buddha Test",
+    "year": 1974,
+    "description": "India tested its first nuclear device.",
+    "category": "science",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-emergency-1975",
+    "title": "National Emergency",
+    "year": 1975,
+    "description": "Indira Gandhi suspended democratic rights.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-indira-assassinated-1984",
+    "title": "Indira Gandhi Assassinated",
+    "year": 1984,
+    "description": "The prime minister was killed by guards.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-reforms-1991",
+    "title": "Economic Reforms",
+    "year": 1991,
+    "description": "India opened its economy to markets.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-pokhran-1998",
+    "title": "Pokhran Nuclear Tests",
+    "year": 1998,
+    "description": "India tested nuclear weapons again.",
+    "category": "science",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-mumbai-attacks-2008",
+    "title": "Mumbai Attacks",
+    "year": 2008,
+    "description": "Militants attacked India's financial capital.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-modi-2014",
+    "title": "Modi Becomes Prime Minister",
+    "year": 2014,
+    "description": "Narendra Modi took office.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-demonetization-2016",
+    "title": "Demonetization",
+    "year": 2016,
+    "description": "India withdrew high-value banknotes.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-chandrayaan-2023",
+    "title": "Chandrayaan-3 Lands on Moon",
+    "year": 2023,
+    "description": "India landed near the lunar south pole.",
+    "category": "space",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  }
+]

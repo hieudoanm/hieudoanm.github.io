@@ -1,0 +1,29 @@
+//// ------------------------------------------------------
+//// THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+//// ------------------------------------------------------
+
+Table works {
+  doi String [pk]
+  title String [not null, default: '']
+  author String [not null, default: '']
+  year String [not null, default: '']
+  abstract String [not null, default: '']
+  type String [not null, default: '']
+  references references [not null]
+  referencedBy references [not null]
+}
+
+Table references {
+  workId String [not null]
+  referencedId String [not null]
+  work works [not null]
+  referenced works [not null]
+
+  indexes {
+    (workId, referencedId) [pk]
+  }
+}
+
+Ref: references.workId > works.doi [delete: Cascade]
+
+Ref: references.referencedId > works.doi [delete: Cascade]

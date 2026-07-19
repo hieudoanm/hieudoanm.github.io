@@ -1,0 +1,145 @@
+{
+  "name": "Inter Milan 2009-2010",
+  "formationId": "433",
+  "players": [
+    { "id": "julio", "name": "Júlio César", "number": 12, "role": "GK" },
+    { "id": "maicon", "name": "Maicon", "number": 13, "role": "DEF" },
+    { "id": "lucio", "name": "Lúcio", "number": 6, "role": "DEF" },
+    { "id": "samuel", "name": "Walter Samuel", "number": 25, "role": "DEF" },
+    { "id": "chivu", "name": "Cristian Chivu", "number": 26, "role": "DEF" },
+    {
+      "id": "cambiasso",
+      "name": "Esteban Cambiasso",
+      "number": 19,
+      "role": "MID"
+    },
+    { "id": "zanetti", "name": "Javier Zanetti", "number": 4, "role": "MID" },
+    {
+      "id": "sneijder",
+      "name": "Wesley Sneijder",
+      "number": 10,
+      "role": "MID"
+    },
+    { "id": "eto", "name": "Samuel Eto'o", "number": 9, "role": "FWD" },
+    { "id": "milito", "name": "Diego Milito", "number": 22, "role": "FWD" },
+    { "id": "pandev", "name": "Goran Pandev", "number": 27, "role": "FWD" },
+    {
+      "id": "toldo",
+      "name": "Francesco Toldo",
+      "number": 1,
+      "role": "GK",
+      "bench": true
+    },
+    {
+      "id": "castellazzi",
+      "name": "Luca Castellazzi",
+      "number": 21,
+      "role": "GK",
+      "bench": true
+    },
+    {
+      "id": "cordoba",
+      "name": "Iván Córdoba",
+      "number": 2,
+      "role": "DEF",
+      "bench": true
+    },
+    {
+      "id": "materazzi",
+      "name": "Marco Materazzi",
+      "number": 23,
+      "role": "DEF",
+      "bench": true
+    },
+    {
+      "id": "santon",
+      "name": "Davide Santon",
+      "number": 39,
+      "role": "DEF",
+      "bench": true
+    },
+    {
+      "id": "ranocchia",
+      "name": "Andrea Ranocchia",
+      "number": 41,
+      "role": "DEF",
+      "bench": true
+    },
+    {
+      "id": "rivas",
+      "name": "Nelson Rivas",
+      "number": 36,
+      "role": "DEF",
+      "bench": true
+    },
+    {
+      "id": "muntari",
+      "name": "Sulley Muntari",
+      "number": 11,
+      "role": "MID",
+      "bench": true
+    },
+    {
+      "id": "stankovic",
+      "name": "Dejan Stanković",
+      "number": 5,
+      "role": "MID",
+      "bench": true
+    },
+    {
+      "id": "motta",
+      "name": "Thiago Motta",
+      "number": 8,
+      "role": "MID",
+      "bench": true
+    },
+    {
+      "id": "mariga",
+      "name": "McDonald Mariga",
+      "number": 17,
+      "role": "MID",
+      "bench": true
+    },
+    {
+      "id": "krhin",
+      "name": "Rene Krhin",
+      "number": 16,
+      "role": "MID",
+      "bench": true
+    },
+    {
+      "id": "balotelli",
+      "name": "Mario Balotelli",
+      "number": 45,
+      "role": "FWD",
+      "bench": true
+    },
+    {
+      "id": "arnautovic",
+      "name": "Marko Arnautović",
+      "number": 89,
+      "role": "FWD",
+      "bench": true
+    },
+    {
+      "id": "obia",
+      "name": "Nwankwo Obia",
+      "number": 48,
+      "role": "FWD",
+      "bench": true
+    }
+  ],
+  "assignments": {
+    "433-0-0": ["julio"],
+    "433-1-1": ["maicon"],
+    "433-1-2": ["lucio"],
+    "433-1-3": ["samuel"],
+    "433-1-4": ["chivu"],
+    "433-2-5": ["cambiasso"],
+    "433-2-6": ["zanetti"],
+    "433-2-7": ["sneijder"],
+    "433-3-8": ["eto"],
+    "433-3-9": ["milito"],
+    "433-3-10": ["pandev"]
+  }
+}

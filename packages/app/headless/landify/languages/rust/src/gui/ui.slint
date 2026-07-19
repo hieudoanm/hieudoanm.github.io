@@ -1,0 +1,97 @@
+// landify studio — Material design editor for a single landify.yaml.
+//
+// All dynamic text (YAML source, status, path) is bound from Rust; the combo
+// box selection indexes are consumed by the Rust callbacks.
+
+import { Button, ComboBox, HorizontalBox, LineEdit, TextEdit, VerticalBox } from "std-widgets.slint";
+
+export component MainWindow inherits Window {
+    title: "landify — studio";
+    width: 920px;
+    height: 640px;
+
+    in-out property <string> yaml-text: "";
+    in-out property <string> status-text: "ready";
+    in-out property <string> path-text: "";
+    in-out property <string> page-type-label: "product";
+    in-out property <string> theme-label: "default";
+    in-out property <int> page-type-index: 0;
+    in-out property <int> theme-index: 0;
+    in-out property <[string]> page-types: [];
+    in-out property <[string]> theme-names: [];
+
+    callback load-clicked();
+    callback generate-clicked();
+    callback validate-clicked();
+    callback build-clicked();
+    callback save-clicked();
+    callback copy-clicked();
+    callback page-type-changed(int);
+    callback theme-changed(int);
+
+    VerticalBox {
+        padding: 8px;
+        spacing: 6px;
+
+        HorizontalBox {
+            spacing: 8px;
+            LineEdit {
+                read-only: true;
+                text: root.path-text;
+                height: 28px;
+            }
+            Button {
+                text: "Load";
+                clicked => { root.load-clicked(); }
+            }
+            Button {
+                text: "Save";
+                clicked => { root.save-clicked(); }
+            }
+            Button {
+                text: "Copy HTML";
+                clicked => { root.copy-clicked(); }
+            }
+        }
+
+        HorizontalBox {
+            spacing: 8px;
+            Text { text: "Type:"; }
+            ComboBox {
+                current-index: root.page-type-index;
+                model: root.page-types;
+                selected(v) => { root.page-type-label = v; root.page-type-changed(self.current-index); }
+            }
+            Text { text: "Theme:"; }
+            ComboBox {
+                current-index: root.theme-index;
+                model: root.theme-names;
+                selected(v) => { root.theme-label = v; root.theme-changed(self.current-index); }
+            }
+            Button {
+                text: "Generate";
+                clicked => { root.generate-clicked(); }
+            }
+            Button {
+                text: "Validate";
+                clicked => { root.validate-clicked(); }
+            }
+            Button {
+                text: "Build";
+                clicked => { root.build-clicked(); }
+            }
+        }
+
+        TextEdit {
+            height: 420px;
+            text <=> root.yaml-text;
+            wrap: TextWrap.word-wrap;
+            font-family: "monospace";
+        }
+
+        Text {
+            text: root.status-text;
+            overflow: TextOverflow.elide;
+        }
+    }
+}

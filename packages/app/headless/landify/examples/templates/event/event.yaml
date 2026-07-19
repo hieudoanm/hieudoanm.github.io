@@ -1,0 +1,69 @@
+type: event
+site:
+  name: Shape Guild
+  description: A one-day conference on flat, accessible pages.
+  nav:
+    - label: Agenda
+      href: "#agenda"
+    - label: Speakers
+      href: "#speakers"
+    - label: Tickets
+      href: "https://tickets.example.com"
+hero:
+  badge: "🎟️ Shaping the future of forms"
+  headline: Shaping the future of forms.
+  subheadline: A one-day conference on flat, accessible web pages and the tools behind them.
+  secondary:
+    label: Venue
+    href: "#venue"
+event:
+  date: "March 14, 2026"
+  time: "9:00 – 17:00"
+  venue:
+    name: Civic Hall
+    city: Paris
+    address: "1 Rue des Flots"
+  primary:
+    label: Get tickets
+    href: "https://tickets.example.com"
+  speakers_heading: Speakers
+  speakers_sub: The folks up on stage.
+  agenda:
+    - time: "09:30"
+      title: Keynote
+      speaker: Ana
+      body: A look at where forms go next.
+    - time: "11:00"
+      title: Hands-on lab
+      speaker: Sam
+      body: Build your first themed page, live.
+    - time: "14:00"
+      title: Design tokens
+      speaker: Bérénice
+      body: From eight colors to a whole design system.
+    - time: "16:00"
+      title: Fireside chat
+      speaker: Nico
+      body: Flat pages vs. the platform giants.
+  speakers:
+    - name: Ana
+      role: Principal Engineer
+      avatar: "🦊"
+    - name: Sam
+      role: Product Designer
+      avatar: "🐙"
+    - name: Bérénice
+      role: Design Systems Lead
+      avatar: "🐦"
+    - name: Nico
+      role: Indie Hacker
+      avatar: "🦥"
+cta:
+  icon: "🎟️"
+  heading: See you in March.
+  body: Get a ticket before they sell out.
+  button:
+    label: Get tickets
+    href: "https://tickets.example.com"
+footer:
+  copyright: "© 2026 Shape Guild"

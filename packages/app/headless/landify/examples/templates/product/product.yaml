@@ -1,0 +1,50 @@
+type: product
+site:
+  name: landify
+  description: A flat landing page from a single YAML file.
+  nav:
+    - label: Features
+      href: "#features"
+    - label: Demo
+      href: "#demo"
+hero:
+  badge: "🧱 YAML in, flat HTML out"
+  headline: Ship a landing page in minutes.
+  subheadline: One YAML file in, one dependency-free HTML page out.
+  primary:
+    label: Get started
+    href: "#demo"
+  secondary:
+    label: View source
+    href: "https://example.com/repo"
+  image:
+    src: ../media/demo.png
+    alt: Landify product preview
+features:
+  heading: Everything included
+  sub: Pure HTML and CSS — no JavaScript, no build step, no CDNs.
+  items:
+    - icon: "🎨"
+      title: 64 themes
+      body: Curated palettes and custom colors, with WCAG-checked contrast.
+    - icon: "📄"
+      title: Eight page types
+      body: Product, waitlist, event, download, app, pricing, portfolio, docs.
+    - icon: "🧩"
+      title: Small classes
+      body: A tiny, consistent design-system language across every layout.
+demo:
+  heading: See it in action
+  sub: The whole page renders from a single YAML file.
+  video:
+    src: ../media/demo.mp4
+    poster: ../media/demo.png
+cta:
+  icon: "🚀"
+  heading: Build your first page.
+  body: Copy the example, edit your copy, and run landify build.
+  button:
+    label: Get started
+    href: "https://example.com/docs"
+footer:
+  copyright: "© 2026 Landify"

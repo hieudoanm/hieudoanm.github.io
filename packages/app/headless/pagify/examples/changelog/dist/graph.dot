@@ -1,0 +1,37 @@
+digraph graph {
+  rankdir=TB;
+  splines=polyline;
+  "index.md" [label="index.md", shape=note];
+  "v0-0-1.md" [label="v0-0-1.md", shape=note];
+  "v0-0-2.md" [label="v0-0-2.md", shape=note];
+  "v0-0-3.md" [label="v0-0-3.md", shape=note];
+  "v0-1-0.md" [label="v0-1-0.md", shape=note];
+  "v0-2-0.md" [label="v0-2-0.md", shape=note];
+  "v0-3-0.md" [label="v0-3-0.md", shape=note];
+  "v1-0-0.md" [label="v1-0-0.md", shape=note];
+  "v2-0-0.md" [label="v2-0-0.md", shape=note];
+  "v3-0-0.md" [label="v3-0-0.md", shape=note];
+  "index.md" -> "v0-0-1.md";
+  "index.md" -> "v0-0-2.md";
+  "index.md" -> "v0-0-3.md";
+  "index.md" -> "v0-1-0.md";
+  "index.md" -> "v0-2-0.md";
+  "index.md" -> "v0-3-0.md";
+  "index.md" -> "v1-0-0.md";
+  "index.md" -> "v2-0-0.md";
+  "index.md" -> "v3-0-0.md";
+  "v0-0-1.md" -> "v0-0-2.md";
+  "v0-0-2.md" -> "v0-0-3.md";
+  "v0-0-3.md" -> "v0-1-0.md";
+  "v0-1-0.md" -> "v0-2-0.md";
+  "v0-2-0.md" -> "v0-3-0.md";
+  "v0-3-0.md" -> "v1-0-0.md";
+  "v1-0-0.md" -> "../reference/server.md";
+  "v1-0-0.md" -> "../reference/site.md";
+  "v1-0-0.md" -> "v2-0-0.md";
+  "v2-0-0.md" -> "../reference/build.md";
+  "v2-0-0.md" -> "../reference/theme.md";
+  "v2-0-0.md" -> "v3-0-0.md";
+  "v3-0-0.md" -> "../reference/build.md";
+  "v3-0-0.md" -> "../reference/server.md";
+}

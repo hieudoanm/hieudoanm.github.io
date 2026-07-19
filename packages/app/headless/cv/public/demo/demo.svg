@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+  <title>cv terminal: init, pdf, validate, serve</title>
+  <desc>Animated terminal window showing cv init, cv pdf with multiple templates, cv validate, cv serve with their output.</desc>
+
+  <style>
+    .line { opacity: 0; }
+    .line.init { animation: rise 0.4s ease-out 0.9s forwards; }
+    .line.initout { animation: rise 0.4s ease-out 1.7s forwards; }
+    .line.pdf1 { animation: rise 0.4s ease-out 2.4s forwards; }
+    .line.pdf1out { animation: rise 0.4s ease-out 3.1s forwards; }
+    .line.pdf2 { animation: rise 0.4s ease-out 3.8s forwards; }
+    .line.pdf2out { animation: rise 0.4s ease-out 4.5s forwards; }
+    .line.pdf3 { animation: rise 0.4s ease-out 5.2s forwards; }
+    .line.pdf3out { animation: rise 0.4s ease-out 5.9s forwards; }
+    .line.validate { animation: rise 0.4s ease-out 6.6s forwards; }
+    .line.validateout { animation: rise 0.4s ease-out 7.3s forwards; }
+    .line.serve { animation: rise 0.4s ease-out 8.0s forwards; }
+    .line.serving { animation: rise 0.4s ease-out 8.7s forwards; }
+    .line.stop { animation: rise 0.4s ease-out 9.4s forwards; }
+    .line.prompt { animation: rise 0.4s ease-out 10.1s forwards; }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+
+  <rect x="0" y="0" width="1280" height="720" fill="#0f172a"/>
+  <rect x="0" y="0" width="1280" height="48" fill="#1e293b"/>
+  <line x1="0" y1="48" x2="1280" y2="48" stroke="#334155" stroke-width="1"/>
+
+  <circle cx="32" cy="24" r="8" fill="#ef4444"/>
+  <circle cx="58" cy="24" r="8" fill="#f59e0b"/>
+  <circle cx="84" cy="24" r="8" fill="#22c55e"/>
+
+  <text x="640" y="32" font-size="20" fill="#94a3b8" text-anchor="middle">cv — zsh</text>
+
+  <g font-size="24" transform-origin="48 96">
+    <g class="line init" transform-origin="48 96">
+      <text x="48" y="96">
+        <tspan fill="#475569">~/cv </tspan><tspan fill="#e2e8f0">$ </tspan><tspan fill="#7c3aed">cv </tspan><tspan fill="#e2e8f0">init</tspan>
+      </text>
+    </g>
+    <g class="line initout" transform-origin="48 136">
+      <text x="48" y="136" fill="#34d399">✓ Created cv.yaml with default structure</text>
+    </g>
+
+    <g class="line pdf1" transform-origin="48 192">
+      <text x="48" y="192">
+        <tspan fill="#475569">~/cv </tspan><tspan fill="#e2e8f0">$ </tspan><tspan fill="#7c3aed">cv </tspan><tspan fill="#e2e8f0">pdf cv.yaml -o cv.pdf</tspan>
+      </text>
+    </g>
+    <g class="line pdf1out" transform-origin="48 232">
+      <text x="48" y="232" fill="#34d399">✓ Generated cv.pdf using template classic/classic</text>
+    </g>
+
+    <g class="line pdf2" transform-origin="48 288">
+      <text x="48" y="288">
+        <tspan fill="#475569">~/cv </tspan><tspan fill="#e2e8f0">$ </tspan><tspan fill="#7c3aed">cv </tspan><tspan fill="#e2e8f0">pdf cv.yaml --template minimal/minimal -o cv-minimal.pdf</tspan>
+      </text>
+    </g>
+    <g class="line pdf2out" transform-origin="48 328">
+      <text x="48" y="328" fill="#34d399">✓ Generated cv-minimal.pdf</text>
+    </g>
+
+    <g class="line pdf3" transform-origin="48 384">
+      <text x="48" y="384">
+        <tspan fill="#475569">~/cv </tspan><tspan fill="#e2e8f0">$ </tspan><tspan fill="#7c3aed">cv </tspan><tspan fill="#e2e8f0">pdf cv.yaml --template sidebar/modern -o cv-sidebar.pdf</tspan>
+      </text>
+    </g>
+    <g class="line pdf3out" transform-origin="48 424">
+      <text x="48" y="424" fill="#34d399">✓ Generated cv-sidebar.pdf</text>
+    </g>
+
+    <g class="line validate" transform-origin="48 480">
+      <text x="48" y="480">
+        <tspan fill="#475569">~/cv </tspan><tspan fill="#e2e8f0">$ </tspan><tspan fill="#7c3aed">cv </tspan><tspan fill="#e2e8f0">validate cv.yaml</tspan>
+      </text>
+    </g>
+    <g class="line validateout" transform-origin="48 520">
+      <text x="48" y="520" fill="#34d399">✓ cv.yaml is valid</text>
+    </g>
+
+    <g class="line serve" transform-origin="48 560">
+      <text x="48" y="560">
+        <tspan fill="#475569">~/cv </tspan><tspan fill="#e2e8f0">$ </tspan><tspan fill="#7c3aed">cv </tspan><tspan fill="#e2e8f0">serve --port 8080</tspan>
+      </text>
+    </g>
+    <g class="line serving" transform-origin="48 600">
+      <text x="48" y="600" fill="#34d399">🌐 HTTP server listening on http://localhost:8080</text>
+    </g>
+    <g class="line stop" transform-origin="48 640">
+      <text x="48" y="640" fill="#94a3b8">⏹️ Ctrl+C to stop</text>
+    </g>
+
+    <g class="line prompt" transform-origin="48 680">
+      <text x="48" y="680">
+        <tspan fill="#475569">~/cv </tspan><tspan fill="#e2e8f0">$ </tspan>
+      </text>
+    </g>
+  </g>
+</svg>

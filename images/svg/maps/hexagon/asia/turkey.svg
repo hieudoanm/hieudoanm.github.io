@@ -1,0 +1,416 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 365.75 164.99" width="365.75" height="164.99" role="img" aria-labelledby="turkey-title turkey-desc">
+  <title id="turkey-title">Turkey hex map</title>
+  <desc id="turkey-desc">Hexagon map with 81 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 1.21; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 5.97 4.27; }
+    .label { fill: #52525b; font: 600 4.84px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="IG">
+    <title>Iğdir</title>
+    <polygon class="tile" points="349.17,46.94 361.49,54.05 361.49,68.27 349.17,75.38 336.85,68.27 336.85,54.05" aria-label="Iğdir"/>
+    <text class="label" x="349.17" y="61.16">IG</text>
+  </g>
+  <g class="state" data-state="HK">
+    <title>Hakkari</title>
+    <polygon class="tile" points="349.17,89.61 361.49,96.72 361.49,110.94 349.17,118.05 336.85,110.94 336.85,96.72" aria-label="Hakkari"/>
+    <text class="label" x="349.17" y="103.83">HK</text>
+  </g>
+  <g class="state" data-state="KA">
+    <title>Kars</title>
+    <polygon class="tile" points="336.85,25.60 349.17,32.71 349.17,46.94 336.85,54.05 324.53,46.94 324.53,32.71" aria-label="Kars"/>
+    <text class="label" x="336.85" y="39.83">KA</text>
+  </g>
+  <g class="state" data-state="VA">
+    <title>Van</title>
+    <polygon class="tile" points="336.85,68.27 349.17,75.38 349.17,89.61 336.85,96.72 324.53,89.61 324.53,75.38" aria-label="Van"/>
+    <text class="label" x="336.85" y="82.50">VA</text>
+  </g>
+  <g class="state" data-state="SR">
+    <title>Sirnak</title>
+    <polygon class="tile" points="336.85,110.94 349.17,118.05 349.17,132.28 336.85,139.39 324.53,132.28 324.53,118.05" aria-label="Sirnak"/>
+    <text class="label" x="336.85" y="125.17">SR</text>
+  </g>
+  <g class="state" data-state="AR">
+    <title>Ardahan</title>
+    <polygon class="tile" points="324.53,4.27 336.85,11.38 336.85,25.60 324.53,32.71 312.21,25.60 312.21,11.38" aria-label="Ardahan"/>
+    <text class="label" x="324.53" y="18.49">AR</text>
+  </g>
+  <g class="state" data-state="AG">
+    <title>Agri</title>
+    <polygon class="tile" points="324.53,46.94 336.85,54.05 336.85,68.27 324.53,75.38 312.21,68.27 312.21,54.05" aria-label="Agri"/>
+    <text class="label" x="324.53" y="61.16">AG</text>
+  </g>
+  <g class="state" data-state="BT">
+    <title>Bitlis</title>
+    <polygon class="tile" points="324.53,89.61 336.85,96.72 336.85,110.94 324.53,118.05 312.21,110.94 312.21,96.72" aria-label="Bitlis"/>
+    <text class="label" x="324.53" y="103.83">BT</text>
+  </g>
+  <g class="state" data-state="AV">
+    <title>Artvin</title>
+    <polygon class="tile" points="312.21,25.60 324.53,32.71 324.53,46.94 312.21,54.05 299.90,46.94 299.90,32.71" aria-label="Artvin"/>
+    <text class="label" x="312.21" y="39.83">AV</text>
+  </g>
+  <g class="state" data-state="MS">
+    <title>Mus</title>
+    <polygon class="tile" points="312.21,68.27 324.53,75.38 324.53,89.61 312.21,96.72 299.90,89.61 299.90,75.38" aria-label="Mus"/>
+    <text class="label" x="312.21" y="82.50">MS</text>
+  </g>
+  <g class="state" data-state="SI">
+    <title>Siirt</title>
+    <polygon class="tile" points="312.21,110.94 324.53,118.05 324.53,132.28 312.21,139.39 299.90,132.28 299.90,118.05" aria-label="Siirt"/>
+    <text class="label" x="312.21" y="125.17">SI</text>
+  </g>
+  <g class="state" data-state="RI">
+    <title>Rize</title>
+    <polygon class="tile" points="299.90,4.27 312.21,11.38 312.21,25.60 299.90,32.71 287.58,25.60 287.58,11.38" aria-label="Rize"/>
+    <text class="label" x="299.90" y="18.49">RI</text>
+  </g>
+  <g class="state" data-state="EM">
+    <title>Erzurum</title>
+    <polygon class="tile" points="299.90,46.94 312.21,54.05 312.21,68.27 299.90,75.38 287.58,68.27 287.58,54.05" aria-label="Erzurum"/>
+    <text class="label" x="299.90" y="61.16">EM</text>
+  </g>
+  <g class="state" data-state="BM">
+    <title>Batman</title>
+    <polygon class="tile" points="299.90,89.61 312.21,96.72 312.21,110.94 299.90,118.05 287.58,110.94 287.58,96.72" aria-label="Batman"/>
+    <text class="label" x="299.90" y="103.83">BM</text>
+  </g>
+  <g class="state" data-state="BB">
+    <title>Bayburt</title>
+    <polygon class="tile" points="287.58,25.60 299.90,32.71 299.90,46.94 287.58,54.05 275.26,46.94 275.26,32.71" aria-label="Bayburt"/>
+    <text class="label" x="287.58" y="39.83">BB</text>
+  </g>
+  <g class="state" data-state="BG">
+    <title>Bingöl</title>
+    <polygon class="tile" points="287.58,68.27 299.90,75.38 299.90,89.61 287.58,96.72 275.26,89.61 275.26,75.38" aria-label="Bingöl"/>
+    <text class="label" x="287.58" y="82.50">BG</text>
+  </g>
+  <g class="state" data-state="MR">
+    <title>Mardin</title>
+    <polygon class="tile" points="287.58,110.94 299.90,118.05 299.90,132.28 287.58,139.39 275.26,132.28 275.26,118.05" aria-label="Mardin"/>
+    <text class="label" x="287.58" y="125.17">MR</text>
+  </g>
+  <g class="state" data-state="TB">
+    <title>Trabzon</title>
+    <polygon class="tile" points="275.26,4.27 287.58,11.38 287.58,25.60 275.26,32.71 262.94,25.60 262.94,11.38" aria-label="Trabzon"/>
+    <text class="label" x="275.26" y="18.49">TB</text>
+  </g>
+  <g class="state" data-state="TC">
+    <title>Tunceli</title>
+    <polygon class="tile" points="275.26,46.94 287.58,54.05 287.58,68.27 275.26,75.38 262.94,68.27 262.94,54.05" aria-label="Tunceli"/>
+    <text class="label" x="275.26" y="61.16">TC</text>
+  </g>
+  <g class="state" data-state="DY">
+    <title>Diyarbakir</title>
+    <polygon class="tile" points="275.26,89.61 287.58,96.72 287.58,110.94 275.26,118.05 262.94,110.94 262.94,96.72" aria-label="Diyarbakir"/>
+    <text class="label" x="275.26" y="103.83">DY</text>
+  </g>
+  <g class="state" data-state="GU">
+    <title>Gümüshane</title>
+    <polygon class="tile" points="262.94,25.60 275.26,32.71 275.26,46.94 262.94,54.05 250.62,46.94 250.62,32.71" aria-label="Gümüshane"/>
+    <text class="label" x="262.94" y="39.83">GU</text>
+  </g>
+  <g class="state" data-state="EG">
+    <title>Elazig</title>
+    <polygon class="tile" points="262.94,68.27 275.26,75.38 275.26,89.61 262.94,96.72 250.62,89.61 250.62,75.38" aria-label="Elazig"/>
+    <text class="label" x="262.94" y="82.50">EG</text>
+  </g>
+  <g class="state" data-state="SU">
+    <title>Sanliurfa</title>
+    <polygon class="tile" points="262.94,110.94 275.26,118.05 275.26,132.28 262.94,139.39 250.62,132.28 250.62,118.05" aria-label="Sanliurfa"/>
+    <text class="label" x="262.94" y="125.17">SU</text>
+  </g>
+  <g class="state" data-state="EN">
+    <title>Erzincan</title>
+    <polygon class="tile" points="250.62,46.94 262.94,54.05 262.94,68.27 250.62,75.38 238.31,68.27 238.31,54.05" aria-label="Erzincan"/>
+    <text class="label" x="250.62" y="61.16">EN</text>
+  </g>
+  <g class="state" data-state="AD">
+    <title>Adiyaman</title>
+    <polygon class="tile" points="250.62,89.61 262.94,96.72 262.94,110.94 250.62,118.05 238.31,110.94 238.31,96.72" aria-label="Adiyaman"/>
+    <text class="label" x="250.62" y="103.83">AD</text>
+  </g>
+  <g class="state" data-state="GI">
+    <title>Giresun</title>
+    <polygon class="tile" points="238.31,25.60 250.62,32.71 250.62,46.94 238.31,54.05 225.99,46.94 225.99,32.71" aria-label="Giresun"/>
+    <text class="label" x="238.31" y="39.83">GI</text>
+  </g>
+  <g class="state" data-state="ML">
+    <title>Malatya</title>
+    <polygon class="tile" points="238.31,68.27 250.62,75.38 250.62,89.61 238.31,96.72 225.99,89.61 225.99,75.38" aria-label="Malatya"/>
+    <text class="label" x="238.31" y="82.50">ML</text>
+  </g>
+  <g class="state" data-state="GA">
+    <title>Gaziantep</title>
+    <polygon class="tile" points="238.31,110.94 250.62,118.05 250.62,132.28 238.31,139.39 225.99,132.28 225.99,118.05" aria-label="Gaziantep"/>
+    <text class="label" x="238.31" y="125.17">GA</text>
+  </g>
+  <g class="state" data-state="OR">
+    <title>Ordu</title>
+    <polygon class="tile" points="225.99,4.27 238.31,11.38 238.31,25.60 225.99,32.71 213.67,25.60 213.67,11.38" aria-label="Ordu"/>
+    <text class="label" x="225.99" y="18.49">OR</text>
+  </g>
+  <g class="state" data-state="SV">
+    <title>Sivas</title>
+    <polygon class="tile" points="225.99,46.94 238.31,54.05 238.31,68.27 225.99,75.38 213.67,68.27 213.67,54.05" aria-label="Sivas"/>
+    <text class="label" x="225.99" y="61.16">SV</text>
+  </g>
+  <g class="state" data-state="KM">
+    <title>K. Maras</title>
+    <polygon class="tile" points="225.99,89.61 238.31,96.72 238.31,110.94 225.99,118.05 213.67,110.94 213.67,96.72" aria-label="K. Maras"/>
+    <text class="label" x="225.99" y="103.83">KM</text>
+  </g>
+  <g class="state" data-state="KI">
+    <title>Kilis</title>
+    <polygon class="tile" points="225.99,132.28 238.31,139.39 238.31,153.61 225.99,160.73 213.67,153.61 213.67,139.39" aria-label="Kilis"/>
+    <text class="label" x="225.99" y="146.50">KI</text>
+  </g>
+  <g class="state" data-state="TT">
+    <title>Tokat</title>
+    <polygon class="tile" points="213.67,25.60 225.99,32.71 225.99,46.94 213.67,54.05 201.35,46.94 201.35,32.71" aria-label="Tokat"/>
+    <text class="label" x="213.67" y="39.83">TT</text>
+  </g>
+  <g class="state" data-state="YZ">
+    <title>Yozgat</title>
+    <polygon class="tile" points="213.67,68.27 225.99,75.38 225.99,89.61 213.67,96.72 201.35,89.61 201.35,75.38" aria-label="Yozgat"/>
+    <text class="label" x="213.67" y="82.50">YZ</text>
+  </g>
+  <g class="state" data-state="OS">
+    <title>Osmaniye</title>
+    <polygon class="tile" points="213.67,110.94 225.99,118.05 225.99,132.28 213.67,139.39 201.35,132.28 201.35,118.05" aria-label="Osmaniye"/>
+    <text class="label" x="213.67" y="125.17">OS</text>
+  </g>
+  <g class="state" data-state="SS">
+    <title>Samsun</title>
+    <polygon class="tile" points="201.35,4.27 213.67,11.38 213.67,25.60 201.35,32.71 189.04,25.60 189.04,11.38" aria-label="Samsun"/>
+    <text class="label" x="201.35" y="18.49">SS</text>
+  </g>
+  <g class="state" data-state="AM">
+    <title>Amasya</title>
+    <polygon class="tile" points="201.35,46.94 213.67,54.05 213.67,68.27 201.35,75.38 189.04,68.27 189.04,54.05" aria-label="Amasya"/>
+    <text class="label" x="201.35" y="61.16">AM</text>
+  </g>
+  <g class="state" data-state="KY">
+    <title>Kayseri</title>
+    <polygon class="tile" points="201.35,89.61 213.67,96.72 213.67,110.94 201.35,118.05 189.04,110.94 189.04,96.72" aria-label="Kayseri"/>
+    <text class="label" x="201.35" y="103.83">KY</text>
+  </g>
+  <g class="state" data-state="HT">
+    <title>Hatay</title>
+    <polygon class="tile" points="201.35,132.28 213.67,139.39 213.67,153.61 201.35,160.73 189.04,153.61 189.04,139.39" aria-label="Hatay"/>
+    <text class="label" x="201.35" y="146.50">HT</text>
+  </g>
+  <g class="state" data-state="CM">
+    <title>Çorum</title>
+    <polygon class="tile" points="189.04,25.60 201.35,32.71 201.35,46.94 189.04,54.05 176.72,46.94 176.72,32.71" aria-label="Çorum"/>
+    <text class="label" x="189.04" y="39.83">CM</text>
+  </g>
+  <g class="state" data-state="NV">
+    <title>Nevsehir</title>
+    <polygon class="tile" points="189.04,68.27 201.35,75.38 201.35,89.61 189.04,96.72 176.72,89.61 176.72,75.38" aria-label="Nevsehir"/>
+    <text class="label" x="189.04" y="82.50">NV</text>
+  </g>
+  <g class="state" data-state="AA">
+    <title>Adana</title>
+    <polygon class="tile" points="189.04,110.94 201.35,118.05 201.35,132.28 189.04,139.39 176.72,132.28 176.72,118.05" aria-label="Adana"/>
+    <text class="label" x="189.04" y="125.17">AA</text>
+  </g>
+  <g class="state" data-state="SP">
+    <title>Sinop</title>
+    <polygon class="tile" points="176.72,4.27 189.04,11.38 189.04,25.60 176.72,32.71 164.40,25.60 164.40,11.38" aria-label="Sinop"/>
+    <text class="label" x="176.72" y="18.49">SP</text>
+  </g>
+  <g class="state" data-state="KK">
+    <title>Kinkkale</title>
+    <polygon class="tile" points="176.72,46.94 189.04,54.05 189.04,68.27 176.72,75.38 164.40,68.27 164.40,54.05" aria-label="Kinkkale"/>
+    <text class="label" x="176.72" y="61.16">KK</text>
+  </g>
+  <g class="state" data-state="NG">
+    <title>Nigde</title>
+    <polygon class="tile" points="176.72,89.61 189.04,96.72 189.04,110.94 176.72,118.05 164.40,110.94 164.40,96.72" aria-label="Nigde"/>
+    <text class="label" x="176.72" y="103.83">NG</text>
+  </g>
+  <g class="state" data-state="KR">
+    <title>Karaman</title>
+    <polygon class="tile" points="176.72,132.28 189.04,139.39 189.04,153.61 176.72,160.73 164.40,153.61 164.40,139.39" aria-label="Karaman"/>
+    <text class="label" x="176.72" y="146.50">KR</text>
+  </g>
+  <g class="state" data-state="CI">
+    <title>Çankiri</title>
+    <polygon class="tile" points="164.40,25.60 176.72,32.71 176.72,46.94 164.40,54.05 152.08,46.94 152.08,32.71" aria-label="Çankiri"/>
+    <text class="label" x="164.40" y="39.83">CI</text>
+  </g>
+  <g class="state" data-state="KH">
+    <title>Kirsehir</title>
+    <polygon class="tile" points="164.40,68.27 176.72,75.38 176.72,89.61 164.40,96.72 152.08,89.61 152.08,75.38" aria-label="Kirsehir"/>
+    <text class="label" x="164.40" y="82.50">KH</text>
+  </g>
+  <g class="state" data-state="IC">
+    <title>Mersin</title>
+    <polygon class="tile" points="164.40,110.94 176.72,118.05 176.72,132.28 164.40,139.39 152.08,132.28 152.08,118.05" aria-label="Mersin"/>
+    <text class="label" x="164.40" y="125.17">IC</text>
+  </g>
+  <g class="state" data-state="KS">
+    <title>Kastamonu</title>
+    <polygon class="tile" points="152.08,4.27 164.40,11.38 164.40,25.60 152.08,32.71 139.76,25.60 139.76,11.38" aria-label="Kastamonu"/>
+    <text class="label" x="152.08" y="18.49">KS</text>
+  </g>
+  <g class="state" data-state="AN">
+    <title>Ankara</title>
+    <polygon class="tile" points="152.08,46.94 164.40,54.05 164.40,68.27 152.08,75.38 139.76,68.27 139.76,54.05" aria-label="Ankara"/>
+    <text class="label" x="152.08" y="61.16">AN</text>
+  </g>
+  <g class="state" data-state="AK">
+    <title>Aksaray</title>
+    <polygon class="tile" points="152.08,89.61 164.40,96.72 164.40,110.94 152.08,118.05 139.76,110.94 139.76,96.72" aria-label="Aksaray"/>
+    <text class="label" x="152.08" y="103.83">AK</text>
+  </g>
+  <g class="state" data-state="KAR">
+    <title>Karabük</title>
+    <polygon class="tile" points="139.76,25.60 152.08,32.71 152.08,46.94 139.76,54.05 127.45,46.94 127.45,32.71" aria-label="Karabük"/>
+    <text class="label" x="139.76" y="39.83">KAR</text>
+  </g>
+  <g class="state" data-state="ES">
+    <title>Eskisehir</title>
+    <polygon class="tile" points="139.76,68.27 152.08,75.38 152.08,89.61 139.76,96.72 127.45,89.61 127.45,75.38" aria-label="Eskisehir"/>
+    <text class="label" x="139.76" y="82.50">ES</text>
+  </g>
+  <g class="state" data-state="KO">
+    <title>Konya</title>
+    <polygon class="tile" points="139.76,110.94 152.08,118.05 152.08,132.28 139.76,139.39 127.45,132.28 127.45,118.05" aria-label="Konya"/>
+    <text class="label" x="139.76" y="125.17">KO</text>
+  </g>
+  <g class="state" data-state="ZO">
+    <title>Bartın</title>
+    <polygon class="tile" points="127.45,4.27 139.76,11.38 139.76,25.60 127.45,32.71 115.13,25.60 115.13,11.38" aria-label="Bartın"/>
+    <text class="label" x="127.45" y="18.49">ZO</text>
+  </g>
+  <g class="state" data-state="BOL">
+    <title>Bolu</title>
+    <polygon class="tile" points="127.45,46.94 139.76,54.05 139.76,68.27 127.45,75.38 115.13,68.27 115.13,54.05" aria-label="Bolu"/>
+    <text class="label" x="127.45" y="61.16">BOL</text>
+  </g>
+  <g class="state" data-state="IP">
+    <title>Isparta</title>
+    <polygon class="tile" points="127.45,89.61 139.76,96.72 139.76,110.94 127.45,118.05 115.13,110.94 115.13,96.72" aria-label="Isparta"/>
+    <text class="label" x="127.45" y="103.83">IP</text>
+  </g>
+  <g class="state" data-state="ZIN">
+    <title>Zinguldak</title>
+    <polygon class="tile" points="115.13,25.60 127.45,32.71 127.45,46.94 115.13,54.05 102.81,46.94 102.81,32.71" aria-label="Zinguldak"/>
+    <text class="label" x="115.13" y="39.83">ZIN</text>
+  </g>
+  <g class="state" data-state="AF">
+    <title>Afyonkarahisar</title>
+    <polygon class="tile" points="115.13,68.27 127.45,75.38 127.45,89.61 115.13,96.72 102.81,89.61 102.81,75.38" aria-label="Afyonkarahisar"/>
+    <text class="label" x="115.13" y="82.50">AF</text>
+  </g>
+  <g class="state" data-state="AL">
+    <title>Antalya</title>
+    <polygon class="tile" points="115.13,110.94 127.45,118.05 127.45,132.28 115.13,139.39 102.81,132.28 102.81,118.05" aria-label="Antalya"/>
+    <text class="label" x="115.13" y="125.17">AL</text>
+  </g>
+  <g class="state" data-state="BL">
+    <title>Düzce</title>
+    <polygon class="tile" points="102.81,4.27 115.13,11.38 115.13,25.60 102.81,32.71 90.49,25.60 90.49,11.38" aria-label="Düzce"/>
+    <text class="label" x="102.81" y="18.49">BL</text>
+  </g>
+  <g class="state" data-state="BC">
+    <title>Bilecik</title>
+    <polygon class="tile" points="102.81,46.94 115.13,54.05 115.13,68.27 102.81,75.38 90.49,68.27 90.49,54.05" aria-label="Bilecik"/>
+    <text class="label" x="102.81" y="61.16">BC</text>
+  </g>
+  <g class="state" data-state="US">
+    <title>Usak</title>
+    <polygon class="tile" points="102.81,89.61 115.13,96.72 115.13,110.94 102.81,118.05 90.49,110.94 90.49,96.72" aria-label="Usak"/>
+    <text class="label" x="102.81" y="103.83">US</text>
+  </g>
+  <g class="state" data-state="SK">
+    <title>Sakarya</title>
+    <polygon class="tile" points="90.49,25.60 102.81,32.71 102.81,46.94 90.49,54.05 78.17,46.94 78.17,32.71" aria-label="Sakarya"/>
+    <text class="label" x="90.49" y="39.83">SK</text>
+  </g>
+  <g class="state" data-state="KU">
+    <title>Kütahya</title>
+    <polygon class="tile" points="90.49,68.27 102.81,75.38 102.81,89.61 90.49,96.72 78.17,89.61 78.17,75.38" aria-label="Kütahya"/>
+    <text class="label" x="90.49" y="82.50">KU</text>
+  </g>
+  <g class="state" data-state="BD">
+    <title>Burdur</title>
+    <polygon class="tile" points="90.49,110.94 102.81,118.05 102.81,132.28 90.49,139.39 78.17,132.28 78.17,118.05" aria-label="Burdur"/>
+    <text class="label" x="90.49" y="125.17">BD</text>
+  </g>
+  <g class="state" data-state="KC">
+    <title>Kocaeli</title>
+    <polygon class="tile" points="78.17,4.27 90.49,11.38 90.49,25.60 78.17,32.71 65.86,25.60 65.86,11.38" aria-label="Kocaeli"/>
+    <text class="label" x="78.17" y="18.49">KC</text>
+  </g>
+  <g class="state" data-state="BU">
+    <title>Bursa</title>
+    <polygon class="tile" points="78.17,46.94 90.49,54.05 90.49,68.27 78.17,75.38 65.86,68.27 65.86,54.05" aria-label="Bursa"/>
+    <text class="label" x="78.17" y="61.16">BU</text>
+  </g>
+  <g class="state" data-state="DN">
+    <title>Denizli</title>
+    <polygon class="tile" points="78.17,89.61 90.49,96.72 90.49,110.94 78.17,118.05 65.86,110.94 65.86,96.72" aria-label="Denizli"/>
+    <text class="label" x="78.17" y="103.83">DN</text>
+  </g>
+  <g class="state" data-state="YAL">
+    <title>Yalova</title>
+    <polygon class="tile" points="65.86,25.60 78.17,32.71 78.17,46.94 65.86,54.05 53.54,46.94 53.54,32.71" aria-label="Yalova"/>
+    <text class="label" x="65.86" y="39.83">YAL</text>
+  </g>
+  <g class="state" data-state="MN">
+    <title>Manisa</title>
+    <polygon class="tile" points="65.86,68.27 78.17,75.38 78.17,89.61 65.86,96.72 53.54,89.61 53.54,75.38" aria-label="Manisa"/>
+    <text class="label" x="65.86" y="82.50">MN</text>
+  </g>
+  <g class="state" data-state="MG">
+    <title>Mugla</title>
+    <polygon class="tile" points="65.86,110.94 78.17,118.05 78.17,132.28 65.86,139.39 53.54,132.28 53.54,118.05" aria-label="Mugla"/>
+    <text class="label" x="65.86" y="125.17">MG</text>
+  </g>
+  <g class="state" data-state="IB">
+    <title>Istanbul</title>
+    <polygon class="tile" points="53.54,4.27 65.86,11.38 65.86,25.60 53.54,32.71 41.22,25.60 41.22,11.38" aria-label="Istanbul"/>
+    <text class="label" x="53.54" y="18.49">IB</text>
+  </g>
+  <g class="state" data-state="BK">
+    <title>Balikesir</title>
+    <polygon class="tile" points="53.54,46.94 65.86,54.05 65.86,68.27 53.54,75.38 41.22,68.27 41.22,54.05" aria-label="Balikesir"/>
+    <text class="label" x="53.54" y="61.16">BK</text>
+  </g>
+  <g class="state" data-state="AY">
+    <title>Aydin</title>
+    <polygon class="tile" points="53.54,89.61 65.86,96.72 65.86,110.94 53.54,118.05 41.22,110.94 41.22,96.72" aria-label="Aydin"/>
+    <text class="label" x="53.54" y="103.83">AY</text>
+  </g>
+  <g class="state" data-state="TG">
+    <title>Tekirdag</title>
+    <polygon class="tile" points="41.22,25.60 53.54,32.71 53.54,46.94 41.22,54.05 28.90,46.94 28.90,32.71" aria-label="Tekirdag"/>
+    <text class="label" x="41.22" y="39.83">TG</text>
+  </g>
+  <g class="state" data-state="IZ">
+    <title>Izmir</title>
+    <polygon class="tile" points="41.22,68.27 53.54,75.38 53.54,89.61 41.22,96.72 28.90,89.61 28.90,75.38" aria-label="Izmir"/>
+    <text class="label" x="41.22" y="82.50">IZ</text>
+  </g>
+  <g class="state" data-state="KL">
+    <title>Kirklareli</title>
+    <polygon class="tile" points="28.90,4.27 41.22,11.38 41.22,25.60 28.90,32.71 16.58,25.60 16.58,11.38" aria-label="Kirklareli"/>
+    <text class="label" x="28.90" y="18.49">KL</text>
+  </g>
+  <g class="state" data-state="CK">
+    <title>Çanakkale</title>
+    <polygon class="tile" points="28.90,46.94 41.22,54.05 41.22,68.27 28.90,75.38 16.58,68.27 16.58,54.05" aria-label="Çanakkale"/>
+    <text class="label" x="28.90" y="61.16">CK</text>
+  </g>
+  <g class="state" data-state="ED">
+    <title>Edirne</title>
+    <polygon class="tile" points="16.58,25.60 28.90,32.71 28.90,46.94 16.58,54.05 4.27,46.94 4.27,32.71" aria-label="Edirne"/>
+    <text class="label" x="16.58" y="39.83">ED</text>
+  </g>
+</svg>

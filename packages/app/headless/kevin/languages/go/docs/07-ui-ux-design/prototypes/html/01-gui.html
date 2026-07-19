@@ -1,0 +1,1064 @@
+<!doctype html>
+<html lang="en" data-theme="sml-light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>kevin — Key/Value</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Code+Pro:wght@400;500&display=swap"
+      rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --font-sans:
+          Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+        --font-mono:
+          'Source Code Pro', ui-monospace, SFMono-Regular, Menlo, Monaco,
+          Consolas, 'Liberation Mono', monospace;
+
+        /* Material Design 3 — light */
+        --color-background: #fbf9fe;
+        --color-on-background: #1d1b20;
+        --color-surface: #ffffff;
+        --color-surface-container: #e7e0ec;
+        --color-surface-container-highest: #dcd4e1;
+        --color-surface-container-high: #ece6f0;
+        --color-surface-dim: #dad8e1;
+        --color-surface-bright: #fbf9fe;
+        --color-on-surface: #1d1b20;
+        --color-on-surface-variant: #49454f;
+        --color-primary: #6750a4;
+        --color-on-primary: #ffffff;
+        --color-primary-container: #eaddff;
+        --color-on-primary-container: #21005e;
+        --color-secondary: #625b71;
+        --color-on-secondary: #ffffff;
+        --color-secondary-container: #e8def8;
+        --color-on-secondary-container: #1e1b29;
+        --color-tertiary: #7d5260;
+        --color-on-tertiary: #ffffff;
+        --color-tertiary-container: #ffd8e4;
+        --color-on-tertiary-container: #31111d;
+        --color-error: #b3261e;
+        --color-on-error: #ffffff;
+        --color-error-container: #f9dedc;
+        --color-on-error-container: #410e0b;
+        --color-outline: #79747e;
+        --color-outline-variant: #cac4d0;
+        --color-inverse-surface: #312f37;
+        --color-inverse-on-surface: #f6eff7;
+        --color-inverse-primary: #d0bcff;
+
+        --radius-small: 4px;
+        --radius-medium: 12px;
+        --radius-large: 16px;
+        --radius-extra-large: 28px;
+      }
+    </style>
+    <style>
+      [data-theme='sml-dark'] {
+        color-scheme: dark;
+        --color-background: #1c1b1f;
+        --color-on-background: #e6e1e5;
+        --color-surface: #1c1b1f;
+        --color-surface-container: #28252e;
+        --color-surface-container-high: #2d2b33;
+        --color-surface-container-highest: #434049;
+        --color-surface-dim: #1c1b1f;
+        --color-surface-bright: #1c1b1f;
+        --color-on-surface: #e6e1e5;
+        --color-on-surface-variant: #cac4d0;
+        --color-primary: #d0bcff;
+        --color-on-primary: #381e72;
+        --color-primary-container: #4f378b;
+        --color-on-primary-container: #eaddff;
+        --color-secondary: #ccc2dc;
+        --color-on-secondary: #332e3e;
+        --color-secondary-container: #4f485f;
+        --color-on-secondary-container: #e8def8;
+        --color-tertiary: #efb8c9;
+        --color-on-tertiary: #492532;
+        --color-tertiary-container: #63414e;
+        --color-on-tertiary-container: #ffd8e4;
+        --color-error: #f2b8b5;
+        --color-on-error: #600701;
+        --color-error-container: #69140d;
+        --color-on-error-container: #f9dedc;
+        --color-outline: #8c8993;
+        --color-outline-variant: #49444e;
+        --color-inverse-surface: #e6e1e5;
+        --color-inverse-on-surface: #1c1b1f;
+        --color-inverse-primary: #6750a4;
+      }
+      body {
+        background-color: var(--color-background);
+        color: var(--color-on-surface);
+        font-family: var(--font-sans);
+        font-size: 16px;
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        box-sizing: border-box;
+      }
+      :focus-visible {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+      }
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+      .theme-switcher {
+        position: fixed;
+        right: 1rem;
+        bottom: 1rem;
+        z-index: 60;
+        display: inline-flex;
+        gap: 0.25rem;
+        padding: 0.25rem;
+        border-radius: 999px;
+        border: 1px solid var(--color-outline-variant);
+        background: var(--color-surface);
+        box-shadow:
+          0 1px 3px rgba(0, 0, 0, 0.08),
+          0 8px 24px rgba(0, 0, 0, 0.12);
+      }
+      .theme-switcher button {
+        font: inherit;
+        font-size: 11px;
+        line-height: 1;
+        padding: 0.35rem 0.7rem;
+        border-radius: 999px;
+        border: 0;
+        background: transparent;
+        color: var(--color-on-surface);
+        opacity: 0.65;
+        cursor: pointer;
+      }
+      .theme-switcher button[aria-pressed='true'] {
+        background: var(--color-surface-container);
+        opacity: 1;
+      }
+      .icon {
+        display: inline-block;
+        line-height: 1;
+        vertical-align: -0.125em;
+      }
+      .icon-sm {
+        font-size: 18px;
+      }
+      .icon-md {
+        font-size: 24px;
+      }
+
+      /* — Window shell (mirrors the 900×600 fyne window) — */
+      .stage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+      }
+      .window {
+        width: 100%;
+        max-width: 900px;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        border-radius: var(--radius-extra-large);
+        border: 1px solid var(--color-outline-variant);
+        background: var(--color-surface);
+        box-shadow:
+          0 1px 3px rgba(0, 0, 0, 0.08),
+          0 8px 24px rgba(0, 0, 0, 0.12);
+        overflow: hidden;
+      }
+      .window-chrome {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 8px 16px;
+        background: var(--color-surface-container);
+        border-bottom: 1px solid var(--color-outline-variant);
+        flex-shrink: 0;
+      }
+      .window-dots {
+        display: inline-flex;
+        gap: 6px;
+      }
+      .window-dots i {
+        width: 10px;
+        height: 10px;
+        border-radius: 999px;
+        background: var(--color-outline-variant);
+      }
+      .window-title {
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.4px;
+        color: var(--color-on-surface-variant);
+      }
+      .stage-caption {
+        font-size: 12px;
+        color: var(--color-outline);
+        text-align: center;
+        margin: 0;
+      }
+      .stage-caption code {
+        font-family: var(--font-mono);
+        font-size: 11px;
+      }
+      .stage-caption a {
+        color: var(--color-primary);
+        text-decoration: none;
+      }
+      .stage-caption a:hover {
+        text-decoration: underline;
+      }
+
+      /* — Card (widget.NewCard) — */
+      .card {
+        flex: 1;
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--color-surface);
+      }
+
+      /* — Control bar (controlLayout: count, key, value, Save, Refresh, Delete all) — */
+      .controls {
+        display: grid;
+        grid-template-columns:
+          50px minmax(100px, 1fr) minmax(100px, 1fr)
+          auto auto auto;
+        gap: 8px;
+        align-items: center;
+        padding: 16px;
+        flex-shrink: 0;
+      }
+      @media (max-width: 700px) {
+        .controls {
+          grid-template-columns: 1fr;
+          gap: 12px;
+        }
+        .count {
+          justify-self: start !important;
+        }
+      }
+      .count {
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--color-on-surface);
+        justify-self: center;
+      }
+      .field-input {
+        height: 40px;
+        width: 100%;
+        padding: 0 16px;
+        border-radius: var(--radius-small);
+        border: 1px solid var(--color-outline);
+        background: var(--color-surface);
+        color: var(--color-on-surface);
+        font: inherit;
+        font-size: 14px;
+        box-sizing: border-box;
+      }
+      .field-input::placeholder {
+        color: var(--color-on-surface-variant);
+        opacity: 1;
+      }
+      .field-input:focus {
+        border-color: var(--color-primary);
+        outline: none;
+        box-shadow: inset 0 0 0 1px var(--color-primary);
+      }
+      .btn-md3 {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        height: 40px;
+        padding: 0 16px;
+        border-radius: var(--radius-medium);
+        border: 0;
+        font: inherit;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.1px;
+        cursor: pointer;
+        white-space: nowrap;
+      }
+      .btn-md3:disabled {
+        opacity: 0.38;
+        cursor: default;
+      }
+      .btn-filled {
+        background: var(--color-primary);
+        color: var(--color-on-primary);
+      }
+      .btn-tonal {
+        background: var(--color-secondary-container);
+        color: var(--color-on-secondary-container);
+      }
+      .btn-filled-error {
+        background: var(--color-error);
+        color: var(--color-on-error);
+      }
+      .btn-outlined {
+        background: transparent;
+        color: var(--color-on-surface);
+        border: 1px solid var(--color-outline);
+      }
+
+      /* — Key/value table (widget.Table via flexTable: No, Key, Value, Edit, Copy, Delete) — */
+      .table-area {
+        flex: 1;
+        min-height: 0;
+        overflow: auto;
+        border-bottom: 1px solid var(--color-outline-variant);
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+      }
+      col.col-no {
+        width: 50px;
+      }
+      col.col-action {
+        width: 48px;
+      }
+      th {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        text-align: center;
+        padding: 10px 12px;
+        border-bottom: 1px solid var(--color-outline-variant);
+        font-weight: 700;
+        color: var(--color-on-surface);
+        background: var(--color-surface-container);
+      }
+      td {
+        text-align: left;
+        padding: 8px 12px;
+        border-bottom: 1px solid var(--color-outline-variant);
+        color: var(--color-on-surface);
+        vertical-align: middle;
+        max-width: 0;
+      }
+      td.no {
+        text-align: center;
+        color: var(--color-outline);
+        font-size: 13px;
+      }
+      td.key,
+      td.value {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      td.key {
+        font-weight: 500;
+      }
+      td.act {
+        text-align: center;
+        padding: 6px 4px;
+      }
+      tr[aria-selected='true'] td {
+        background: var(--color-primary-container);
+        color: var(--color-on-primary-container);
+      }
+      tr[aria-selected='true'] td.no {
+        color: var(--color-on-primary-container);
+      }
+      .action-btn {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        border: 0;
+        background: transparent;
+        color: var(--color-on-surface);
+        cursor: pointer;
+        opacity: 0.7;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        vertical-align: middle;
+      }
+      .action-btn:hover {
+        opacity: 1;
+        background: var(--color-surface-container-highest);
+      }
+      tr[aria-selected='true'] .action-btn {
+        color: var(--color-on-primary-container);
+      }
+      .empty {
+        padding: 48px 24px;
+        text-align: center;
+        color: var(--color-outline);
+        font-size: 14px;
+      }
+      .empty .icon-md {
+        display: block;
+        margin: 0 auto 8px;
+        opacity: 0.4;
+      }
+
+      /* — Status bar (widget.Label, trailing, low importance) — */
+      .status-bar {
+        padding: 10px 16px;
+        flex-shrink: 0;
+      }
+      .status {
+        font-size: 12px;
+        letter-spacing: 0.4px;
+        color: var(--color-outline);
+        text-align: right;
+        min-height: 18px;
+        margin: 0;
+      }
+
+      /* — Confirm dialog (dialog.ShowConfirm) — */
+      .dialog-scrim {
+        position: fixed;
+        inset: 0;
+        z-index: 50;
+        background: rgba(0, 0, 0, 0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+      }
+      .dialog-scrim[hidden] {
+        display: none;
+      }
+      .dialog {
+        width: 100%;
+        max-width: 420px;
+        border-radius: var(--radius-extra-large);
+        background: var(--color-surface-container-high);
+        color: var(--color-on-surface);
+        padding: 24px;
+        box-shadow:
+          0 1px 3px rgba(0, 0, 0, 0.08),
+          0 8px 24px rgba(0, 0, 0, 0.12);
+      }
+      .dialog h2 {
+        margin: 0 0 16px;
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 400;
+        letter-spacing: 0;
+      }
+      .dialog p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.25px;
+        color: var(--color-on-surface-variant);
+        word-break: break-word;
+      }
+      .dialog-actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 8px;
+        margin-top: 24px;
+      }
+    </style>
+    <script>
+      (function () {
+        try {
+          var t = window.localStorage.getItem('sml-theme');
+          if (t !== 'sml-light' && t !== 'sml-dark') {
+            t = window.matchMedia('(prefers-color-scheme: dark)').matches
+              ? 'sml-dark'
+              : 'sml-light';
+          }
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="theme-switcher" role="group" aria-label="Colour theme">
+      <button type="button" data-theme-value="sml-light" aria-pressed="true">
+        Light
+      </button>
+      <button type="button" data-theme-value="sml-dark" aria-pressed="false">
+        Dark
+      </button>
+    </div>
+    <script>
+      (function () {
+        var key = 'sml-theme';
+        function apply(theme) {
+          document.documentElement.setAttribute('data-theme', theme);
+          Array.prototype.forEach.call(
+            document.querySelectorAll('.theme-switcher button'),
+            function (button) {
+              button.setAttribute(
+                'aria-pressed',
+                String(button.getAttribute('data-theme-value') === theme)
+              );
+            }
+          );
+        }
+        apply(
+          document.documentElement.getAttribute('data-theme') || 'sml-light'
+        );
+        Array.prototype.forEach.call(
+          document.querySelectorAll('.theme-switcher button'),
+          function (button) {
+            button.addEventListener('click', function () {
+              var theme = button.getAttribute('data-theme-value');
+              try {
+                window.localStorage.setItem(key, theme);
+              } catch (error) {}
+              apply(theme);
+            });
+          }
+        );
+      })();
+    </script>
+
+    <div class="stage">
+      <div
+        class="window"
+        role="application"
+        aria-label="kevin key/value manager">
+        <div class="window-chrome">
+          <span class="window-dots" aria-hidden="true"
+            ><i></i><i></i><i></i
+          ></span>
+          <span class="window-title" id="window-title">kevin — Key/Value</span>
+        </div>
+
+        <div class="card">
+          <div class="controls">
+            <div class="count" id="count" aria-live="polite">0</div>
+            <input
+              class="field-input"
+              id="key-input"
+              placeholder="key / search"
+              aria-label="key / search"
+              autocomplete="off"
+              spellcheck="false" />
+            <input
+              class="field-input"
+              id="value-input"
+              placeholder="value"
+              aria-label="value"
+              autocomplete="off"
+              spellcheck="false" />
+            <button class="btn-md3 btn-filled" id="save-btn" title="Save">
+              <i class="ph ph-floppy-disk icon-sm" aria-hidden="true"></i>
+              Save
+            </button>
+            <button class="btn-md3 btn-tonal" id="refresh-btn" title="Refresh">
+              <i class="ph ph-arrows-clockwise icon-sm" aria-hidden="true"></i>
+              Refresh
+            </button>
+            <button
+              class="btn-md3 btn-filled-error"
+              id="del-all-btn"
+              title="Delete all">
+              <i class="ph ph-x icon-sm" aria-hidden="true"></i>
+              Delete all
+            </button>
+          </div>
+
+          <div class="table-area" id="table-area">
+            <table aria-label="Key/value entries">
+              <colgroup>
+                <col class="col-no" />
+                <col />
+                <col />
+                <col class="col-action" />
+                <col class="col-action" />
+                <col class="col-action" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">
+                    No<span class="sr-only"> — row number</span>
+                  </th>
+                  <th scope="col">Key</th>
+                  <th scope="col">Value</th>
+                  <th scope="col"><span class="sr-only">Edit</span></th>
+                  <th scope="col"><span class="sr-only">Copy</span></th>
+                  <th scope="col"><span class="sr-only">Delete</span></th>
+                </tr>
+              </thead>
+              <tbody id="tbody"></tbody>
+            </table>
+            <div class="empty" id="empty" hidden>
+              <i class="ph ph-database icon-md" aria-hidden="true"></i>
+              <span id="empty-text"></span>
+            </div>
+          </div>
+
+          <div class="status-bar">
+            <p class="status" id="status" role="status" aria-live="polite"></p>
+          </div>
+        </div>
+      </div>
+
+      <p class="stage-caption">
+        Interactive prototype of <code>internal/gui</code> (fyne,
+        <code>gui</code>
+        build tag) — 900×600 window, dynamic title, search-as-you-type,
+        select-to-edit, confirm dialogs, 500&nbsp;ms auto-refresh.
+        <a href="00-components.html">Component gallery &rarr;</a>
+      </p>
+    </div>
+
+    <div class="dialog-scrim" id="dialog-scrim" hidden>
+      <div
+        class="dialog"
+        role="alertdialog"
+        aria-modal="true"
+        aria-labelledby="dialog-title"
+        aria-describedby="dialog-message">
+        <h2 id="dialog-title"></h2>
+        <p id="dialog-message"></p>
+        <div class="dialog-actions">
+          <button class="btn-md3 btn-outlined" id="dialog-cancel">
+            Cancel
+          </button>
+          <button class="btn-md3 btn-filled-error" id="dialog-confirm">
+            Delete
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        'use strict';
+
+        // Mirrors internal/gui: maxValueRunes = 80.
+        var MAX_VALUE_RUNES = 80;
+
+        // In-memory store, mirroring internal/db (map[string]string).
+        var store = new Map([
+          ['cache:ttl', '300'],
+          ['config:theme', 'sml-dark'],
+          ['feature:gui', 'enabled'],
+          ['mcp:addr', 'stdio'],
+          [
+            'notes:readme',
+            'kevin is a Redis-style in-memory key/value store: PING, SET, GET, KEYS and DEL over TCP, behaviour-identical to the C and C++ builds.',
+          ],
+          ['session:abc123', 'abc123def456'],
+          ['user:session', 'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyOjEifQ'],
+        ]);
+
+        var selectedKey = '';
+        var lastRender = '';
+        var loading = false;
+        var rows = [];
+        var filtered = [];
+
+        var els = {
+          windowTitle: document.getElementById('window-title'),
+          count: document.getElementById('count'),
+          key: document.getElementById('key-input'),
+          value: document.getElementById('value-input'),
+          save: document.getElementById('save-btn'),
+          refresh: document.getElementById('refresh-btn'),
+          delAll: document.getElementById('del-all-btn'),
+          tbody: document.getElementById('tbody'),
+          empty: document.getElementById('empty'),
+          emptyText: document.getElementById('empty-text'),
+          status: document.getElementById('status'),
+          scrim: document.getElementById('dialog-scrim'),
+          dialogTitle: document.getElementById('dialog-title'),
+          dialogMessage: document.getElementById('dialog-message'),
+          dialogCancel: document.getElementById('dialog-cancel'),
+          dialogConfirm: document.getElementById('dialog-confirm'),
+        };
+
+        // — helpers (mirror controller.go) ————————————————
+
+        function truncate(s, max) {
+          var runes = Array.from(s);
+          if (runes.length <= max) {
+            return s;
+          }
+          return runes.slice(0, max).join('') + '…';
+        }
+
+        function setStatus(msg) {
+          els.status.textContent = msg;
+        }
+
+        // filterAndSort: case-insensitive substring match on key OR value,
+        // sorted lexicographically (controller.filterAndSort).
+        function filterAndSort() {
+          var keys = Array.from(store.keys());
+          var q = els.key.value.trim().toLowerCase();
+          var out = [];
+          keys.forEach(function (k) {
+            if (q === '') {
+              out.push(k);
+              return;
+            }
+            var v = store.get(k) || '';
+            if (
+              k.toLowerCase().indexOf(q) !== -1 ||
+              v.toLowerCase().indexOf(q) !== -1
+            ) {
+              out.push(k);
+            }
+          });
+          out.sort();
+          return out;
+        }
+
+        // setKeyText updates the key entry without treating it as a search
+        // edit (controller.setKeyText + loading guard).
+        function setKeyText(text) {
+          loading = true;
+          els.key.value = text;
+          loading = false;
+        }
+
+        // — actions (mirror actions.go) ————————————————————
+
+        function doSet() {
+          var key = els.key.value;
+          if (key.trim() === '') {
+            setStatus('enter a key first');
+            return;
+          }
+          var existed = store.has(key);
+          store.set(key, els.value.value);
+          setStatus((existed ? 'updated ' : 'set ') + key);
+          render();
+          syncSelection();
+        }
+
+        function doCopyKey(key) {
+          var value = store.get(key);
+          if (value === undefined) {
+            setStatus('key not found: ' + key);
+            return;
+          }
+          copyToClipboard(value);
+          setStatus('value copied to clipboard');
+        }
+
+        // Refresh clears the editor inputs and forces a full reload.
+        function refresh() {
+          setKeyText('');
+          els.value.value = '';
+          selectedKey = '';
+          lastRender = '';
+          render();
+        }
+
+        function confirmDelete(key) {
+          if (key.trim() === '') {
+            return;
+          }
+          showConfirm(
+            'Delete key',
+            'Delete "' + key + '"?',
+            'Delete',
+            function () {
+              if (!store.delete(key)) {
+                setStatus('key not found: ' + key);
+                return;
+              }
+              if (selectedKey === key) {
+                selectedKey = '';
+              }
+              setKeyText('');
+              els.value.value = '';
+              setStatus('deleted ' + key);
+              render();
+            }
+          );
+        }
+
+        function confirmDeleteAll() {
+          showConfirm(
+            'Delete all keys',
+            'Delete all keys? This cannot be undone.',
+            'Delete all',
+            function () {
+              var count = store.size;
+              store.clear();
+              selectedKey = '';
+              setKeyText('');
+              els.value.value = '';
+              setStatus('deleted ' + count + ' keys');
+              render();
+            }
+          );
+        }
+
+        // — selection (mirror controller.selectKey / loadRow) ————————
+
+        function selectKey(key) {
+          selectedKey = key;
+          loadRow(key);
+        }
+
+        function loadRow(key) {
+          setKeyText(key);
+          if (store.has(key)) {
+            els.value.value = store.get(key);
+            setStatus('loaded ' + key);
+            els.key.focus();
+            return;
+          }
+          els.value.value = '';
+          setStatus('key not found: ' + key);
+        }
+
+        // — rendering (mirror controller.render) ————————————
+
+        function rebuildRows() {
+          els.tbody.textContent = '';
+          rows = filtered.map(function (key, i) {
+            var tr = document.createElement('tr');
+            tr.setAttribute('aria-selected', 'false');
+
+            var no = document.createElement('td');
+            no.className = 'no';
+            no.textContent = String(i + 1);
+
+            var keyCell = document.createElement('td');
+            keyCell.className = 'key';
+            keyCell.textContent = key;
+            keyCell.title = key;
+
+            var valueCell = document.createElement('td');
+            valueCell.className = 'value';
+
+            var editCell = document.createElement('td');
+            editCell.className = 'act';
+            editCell.appendChild(
+              actionButton('pencil', 'Edit ' + key, function () {
+                selectKey(key);
+              })
+            );
+
+            var copyCell = document.createElement('td');
+            copyCell.className = 'act';
+            copyCell.appendChild(
+              actionButton('copy', 'Copy value of ' + key, function () {
+                doCopyKey(key);
+              })
+            );
+
+            var delCell = document.createElement('td');
+            delCell.className = 'act';
+            delCell.appendChild(
+              actionButton('trash', 'Delete ' + key, function () {
+                confirmDelete(key);
+              })
+            );
+
+            [no, keyCell, valueCell, editCell, copyCell, delCell].forEach(
+              function (cell) {
+                tr.appendChild(cell);
+              }
+            );
+            tr.addEventListener('click', function () {
+              selectKey(key);
+            });
+            els.tbody.appendChild(tr);
+            return { key: key, tr: tr, valueCell: valueCell };
+          });
+        }
+
+        function actionButton(icon, label, onClick) {
+          var button = document.createElement('button');
+          button.type = 'button';
+          button.className = 'action-btn';
+          button.setAttribute('aria-label', label);
+          button.title = label;
+          var i = document.createElement('i');
+          i.className = 'ph ph-' + icon + ' icon-sm';
+          i.setAttribute('aria-hidden', 'true');
+          button.appendChild(i);
+          button.addEventListener('click', function (event) {
+            event.stopPropagation();
+            onClick();
+          });
+          return button;
+        }
+
+        // updateCells mirrors widget.Table.Refresh: cell values are re-read
+        // from the store on every tick, not only when the key set changes.
+        function updateCells() {
+          rows.forEach(function (row, i) {
+            row.valueCell.textContent = truncate(
+              store.get(filtered[i]) || '',
+              MAX_VALUE_RUNES
+            );
+            row.valueCell.title = store.get(filtered[i]) || '';
+          });
+        }
+
+        // syncSelection mirrors controller.syncSelection.
+        function syncSelection() {
+          var index = selectedKey === '' ? -1 : filtered.indexOf(selectedKey);
+          rows.forEach(function (row, i) {
+            row.tr.setAttribute('aria-selected', String(i === index));
+          });
+          if (selectedKey !== '' && index === -1) {
+            selectedKey = '';
+          }
+        }
+
+        function render() {
+          filtered = filterAndSort();
+          var snapshot = filtered.join('\u0000');
+          if (snapshot !== lastRender) {
+            lastRender = snapshot;
+            rebuildRows();
+            syncSelection();
+          }
+          updateCells();
+
+          var total = store.size;
+          els.count.textContent = String(total);
+          var title = 'kevin — Key/Value (' + total + ' keys)';
+          els.windowTitle.textContent = title;
+          document.title = title;
+
+          if (filtered.length === 0) {
+            els.empty.hidden = false;
+            els.emptyText.textContent =
+              store.size === 0
+                ? 'No keys — enter a key and a value, then Save.'
+                : 'No keys match “' + els.key.value.trim() + '”.';
+          } else {
+            els.empty.hidden = true;
+          }
+        }
+
+        // — dialog (mirror dialog.ShowConfirm) ——————————————
+
+        var onConfirm = null;
+        var lastFocused = null;
+
+        function showConfirm(title, message, confirmLabel, callback) {
+          lastFocused = document.activeElement;
+          els.dialogTitle.textContent = title;
+          els.dialogMessage.textContent = message;
+          els.dialogConfirm.textContent = confirmLabel;
+          onConfirm = callback;
+          els.scrim.hidden = false;
+          els.dialogConfirm.focus();
+        }
+
+        function closeDialog(confirmed) {
+          els.scrim.hidden = true;
+          var callback = onConfirm;
+          onConfirm = null;
+          if (lastFocused && typeof lastFocused.focus === 'function') {
+            lastFocused.focus();
+          }
+          if (confirmed && callback) {
+            callback();
+          }
+        }
+
+        els.dialogConfirm.addEventListener('click', function () {
+          closeDialog(true);
+        });
+        els.dialogCancel.addEventListener('click', function () {
+          closeDialog(false);
+        });
+        els.scrim.addEventListener('click', function (event) {
+          if (event.target === els.scrim) {
+            closeDialog(false);
+          }
+        });
+        document.addEventListener('keydown', function (event) {
+          if (event.key === 'Escape' && !els.scrim.hidden) {
+            closeDialog(false);
+          }
+        });
+
+        // — clipboard (clipboard.SetContent) ————————————————
+
+        function copyToClipboard(text) {
+          function fallback() {
+            var area = document.createElement('textarea');
+            area.value = text;
+            area.setAttribute('readonly', '');
+            area.style.position = 'fixed';
+            area.style.opacity = '0';
+            document.body.appendChild(area);
+            area.select();
+            try {
+              document.execCommand('copy');
+            } catch (e) {}
+            document.body.removeChild(area);
+          }
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).catch(fallback);
+            return;
+          }
+          fallback();
+        }
+
+        // — wiring (gui_fyne.go Run) ————————————————————————
+
+        // The key entry doubles as the live search query: every keystroke
+        // re-renders, exactly like keyEntry.OnChanged → render.
+        els.key.addEventListener('input', function () {
+          if (loading) {
+            return;
+          }
+          render();
+        });
+        // Enter in key → focus value; Enter in value → Save.
+        els.key.addEventListener('keydown', function (event) {
+          if (event.key === 'Enter') {
+            event.preventDefault();
+            els.value.focus();
+          }
+        });
+        els.value.addEventListener('keydown', function (event) {
+          if (event.key === 'Enter') {
+            event.preventDefault();
+            doSet();
+          }
+        });
+
+        els.save.addEventListener('click', doSet);
+        els.refresh.addEventListener('click', refresh);
+        els.delAll.addEventListener('click', confirmDeleteAll);
+
+        render();
+        els.key.focus();
+
+        // The fyne app re-renders on a 500 ms ticker (gui_fyne.go Run).
+        setInterval(render, 500);
+      })();
+    </script>
+  </body>
+</html>

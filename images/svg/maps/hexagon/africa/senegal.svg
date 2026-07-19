@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 285.40 241.40" width="285.40" height="241.40" role="img" aria-labelledby="senegal-title senegal-desc">
+  <title id="senegal-title">Senegal hex map</title>
+  <desc id="senegal-desc">Hexagon map with 14 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.89; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 14.28 10.20; }
+    .label { fill: #52525b; font: 600 11.56px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="TC">
+    <title>Tambacounda</title>
+    <polygon class="tile" points="245.76,112.20 275.20,129.20 275.20,163.20 245.76,180.20 216.31,163.20 216.31,129.20" aria-label="Tambacounda"/>
+    <text class="label" x="245.76" y="146.20">TC</text>
+  </g>
+  <g class="state" data-state="MT">
+    <title>Matam</title>
+    <polygon class="tile" points="216.31,61.20 245.76,78.20 245.76,112.20 216.31,129.20 186.87,112.20 186.87,78.20" aria-label="Matam"/>
+    <text class="label" x="216.31" y="95.20">MT</text>
+  </g>
+  <g class="state" data-state="KE">
+    <title>Kédougou</title>
+    <polygon class="tile" points="216.31,163.20 245.76,180.20 245.76,214.20 216.31,231.20 186.87,214.20 186.87,180.20" aria-label="Kédougou"/>
+    <text class="label" x="216.31" y="197.20">KE</text>
+  </g>
+  <g class="state" data-state="SL">
+    <title>Saint-Louis</title>
+    <polygon class="tile" points="186.87,10.20 216.31,27.20 216.31,61.20 186.87,78.20 157.42,61.20 157.42,27.20" aria-label="Saint-Louis"/>
+    <text class="label" x="186.87" y="44.20">SL</text>
+  </g>
+  <g class="state" data-state="KD">
+    <title>Kolda</title>
+    <polygon class="tile" points="186.87,112.20 216.31,129.20 216.31,163.20 186.87,180.20 157.42,163.20 157.42,129.20" aria-label="Kolda"/>
+    <text class="label" x="186.87" y="146.20">KD</text>
+  </g>
+  <g class="state" data-state="KA">
+    <title>Kaffrine</title>
+    <polygon class="tile" points="157.42,61.20 186.87,78.20 186.87,112.20 157.42,129.20 127.98,112.20 127.98,78.20" aria-label="Kaffrine"/>
+    <text class="label" x="157.42" y="95.20">KA</text>
+  </g>
+  <g class="state" data-state="SE">
+    <title>Sédhiou</title>
+    <polygon class="tile" points="157.42,163.20 186.87,180.20 186.87,214.20 157.42,231.20 127.98,214.20 127.98,180.20" aria-label="Sédhiou"/>
+    <text class="label" x="157.42" y="197.20">SE</text>
+  </g>
+  <g class="state" data-state="LG">
+    <title>Louga</title>
+    <polygon class="tile" points="127.98,10.20 157.42,27.20 157.42,61.20 127.98,78.20 98.53,61.20 98.53,27.20" aria-label="Louga"/>
+    <text class="label" x="127.98" y="44.20">LG</text>
+  </g>
+  <g class="state" data-state="KL">
+    <title>Kaolack</title>
+    <polygon class="tile" points="127.98,112.20 157.42,129.20 157.42,163.20 127.98,180.20 98.53,163.20 98.53,129.20" aria-label="Kaolack"/>
+    <text class="label" x="127.98" y="146.20">KL</text>
+  </g>
+  <g class="state" data-state="DB">
+    <title>Diourbel</title>
+    <polygon class="tile" points="98.53,61.20 127.98,78.20 127.98,112.20 98.53,129.20 69.09,112.20 69.09,78.20" aria-label="Diourbel"/>
+    <text class="label" x="98.53" y="95.20">DB</text>
+  </g>
+  <g class="state" data-state="ZG">
+    <title>Ziguinchor</title>
+    <polygon class="tile" points="98.53,163.20 127.98,180.20 127.98,214.20 98.53,231.20 69.09,214.20 69.09,180.20" aria-label="Ziguinchor"/>
+    <text class="label" x="98.53" y="197.20">ZG</text>
+  </g>
+  <g class="state" data-state="TH">
+    <title>Thiès</title>
+    <polygon class="tile" points="69.09,10.20 98.53,27.20 98.53,61.20 69.09,78.20 39.64,61.20 39.64,27.20" aria-label="Thiès"/>
+    <text class="label" x="69.09" y="44.20">TH</text>
+  </g>
+  <g class="state" data-state="FK">
+    <title>Fatick</title>
+    <polygon class="tile" points="69.09,112.20 98.53,129.20 98.53,163.20 69.09,180.20 39.64,163.20 39.64,129.20" aria-label="Fatick"/>
+    <text class="label" x="69.09" y="146.20">FK</text>
+  </g>
+  <g class="state" data-state="DK">
+    <title>Dakar</title>
+    <polygon class="tile" points="39.64,61.20 69.09,78.20 69.09,112.20 39.64,129.20 10.20,112.20 10.20,78.20" aria-label="Dakar"/>
+    <text class="label" x="39.64" y="95.20">DK</text>
+  </g>
+</svg>

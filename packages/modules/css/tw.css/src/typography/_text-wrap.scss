@@ -1,0 +1,14 @@
+// Text wrap utilities — Tailwind v3 default scale
+
+$text-wraps: (
+  ('wrap', wrap),
+  ('nowrap', nowrap),
+  ('balance', balance),
+  ('pretty', pretty)
+);
+
+@each $name, $value in $text-wraps {
+  .text-#{$name} {
+    text-wrap: $value;
+  }
+}

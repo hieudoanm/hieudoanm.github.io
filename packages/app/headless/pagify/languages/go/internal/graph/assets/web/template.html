@@ -1,0 +1,80 @@
+{{- /*
+graphPage renders a standalone, offline-capable interactive file graph.
+
+The page is self-contained: every asset (vis-network, stylesheet, app
+JavaScript) is embedded through go:embed and written inline, so the file
+works when opened from disk with no network access.
+*/ -}}
+{{ define "page" -}}
+<!doctype html>
+<html lang="en" data-theme="obsidian">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ .Title }}</title>
+    <style>{{ .CSS }}</style>
+  </head>
+  <body>
+    <div class="graph-shell">
+      <header class="graph-header">
+        <div class="graph-header__title">
+          <h1>{{ .Title }}</h1>
+          <p class="graph-header__summary">
+            <span data-stat-nodes>{{ .Stats.Nodes }}</span> nodes ·
+            <span data-stat-edges>{{ .Stats.Edges }}</span> edges
+          </p>
+        </div>
+
+        <div class="graph-header__controls">
+          <div class="graph-search" role="search">
+            <input
+              id="graph-search"
+              type="search"
+              placeholder="Search files…"
+              autocomplete="off"
+              aria-label="Search files"
+            />
+            <button id="graph-search-clear" type="button" class="graph-search__clear" hidden aria-label="Clear search">×</button>
+          </div>
+
+          <label class="graph-toggle">
+            <input id="graph-physics" type="checkbox" checked />
+            <span>Physics</span>
+          </label>
+
+          <button id="graph-fit" type="button" class="graph-btn" title="Fit view">Fit</button>
+          <button id="graph-reset" type="button" class="graph-btn" title="Reset zoom">Reset</button>
+        </div>
+      </header>
+
+      <div id="graph-canvas" class="graph-canvas" aria-live="polite">
+        <div class="graph-empty" id="graph-empty" hidden>No files found to graph.</div>
+      </div>
+
+      <aside id="graph-details" class="graph-details" aria-label="Selected file">
+        <div class="graph-details__empty" id="graph-details-empty">
+          Select a node to inspect it.
+        </div>
+        <div class="graph-details__content" id="graph-details-content" hidden>
+          <h2 class="graph-details__name" data-detail-name></h2>
+          <p class="graph-details__path" data-detail-path></p>
+          <dl class="graph-details__meta">
+            <dt>Connections</dt>
+            <dd data-detail-degree></dd>
+            <dt>Extension</dt>
+            <dd data-detail-extension></dd>
+          </dl>
+          <div class="graph-details__links">
+            <h3>Connected files</h3>
+            <ul data-detail-links></ul>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <script>window.__GRAPH_DATA__ = {{ .GraphJSON }};</script>
+    <script>{{ .VendorJS }}</script>
+    <script>{{ .AppJS }}</script>
+  </body>
+</html>
+{{- end }}

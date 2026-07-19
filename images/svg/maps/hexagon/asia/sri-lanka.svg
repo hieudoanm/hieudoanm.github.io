@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 285.40 445.40" width="285.40" height="445.40" role="img" aria-labelledby="sri-lanka-title sri-lanka-desc">
+  <title id="sri-lanka-title">Sri Lanka hex map</title>
+  <desc id="sri-lanka-desc">Hexagon map with 25 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.89; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 14.28 10.20; }
+    .label { fill: #52525b; font: 600 11.56px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="AP">
+    <title>Ampāra</title>
+    <polygon class="tile" points="245.76,214.20 275.20,231.20 275.20,265.20 245.76,282.20 216.31,265.20 216.31,231.20" aria-label="Ampāra"/>
+    <text class="label" x="245.76" y="248.20">AP</text>
+  </g>
+  <g class="state" data-state="MJ">
+    <title>Mŏṇarāgala</title>
+    <polygon class="tile" points="245.76,316.20 275.20,333.20 275.20,367.20 245.76,384.20 216.31,367.20 216.31,333.20" aria-label="Mŏṇarāgala"/>
+    <text class="label" x="245.76" y="350.20">MJ</text>
+  </g>
+  <g class="state" data-state="BC">
+    <title>Maḍakalapuva</title>
+    <polygon class="tile" points="216.31,163.20 245.76,180.20 245.76,214.20 216.31,231.20 186.87,214.20 186.87,180.20" aria-label="Maḍakalapuva"/>
+    <text class="label" x="216.31" y="197.20">BC</text>
+  </g>
+  <g class="state" data-state="BD">
+    <title>Badulla</title>
+    <polygon class="tile" points="216.31,265.20 245.76,282.20 245.76,316.20 216.31,333.20 186.87,316.20 186.87,282.20" aria-label="Badulla"/>
+    <text class="label" x="216.31" y="299.20">BD</text>
+  </g>
+  <g class="state" data-state="HB">
+    <title>Hambantŏṭa</title>
+    <polygon class="tile" points="216.31,367.20 245.76,384.20 245.76,418.20 216.31,435.20 186.87,418.20 186.87,384.20" aria-label="Hambantŏṭa"/>
+    <text class="label" x="216.31" y="401.20">HB</text>
+  </g>
+  <g class="state" data-state="TC">
+    <title>Trikuṇāmalaya</title>
+    <polygon class="tile" points="186.87,112.20 216.31,129.20 216.31,163.20 186.87,180.20 157.42,163.20 157.42,129.20" aria-label="Trikuṇāmalaya"/>
+    <text class="label" x="186.87" y="146.20">TC</text>
+  </g>
+  <g class="state" data-state="MT">
+    <title>Mātale</title>
+    <polygon class="tile" points="186.87,214.20 216.31,231.20 216.31,265.20 186.87,282.20 157.42,265.20 157.42,231.20" aria-label="Mātale"/>
+    <text class="label" x="186.87" y="248.20">MT</text>
+  </g>
+  <g class="state" data-state="NW">
+    <title>Nuvara Ĕliya</title>
+    <polygon class="tile" points="186.87,316.20 216.31,333.20 216.31,367.20 186.87,384.20 157.42,367.20 157.42,333.20" aria-label="Nuvara Ĕliya"/>
+    <text class="label" x="186.87" y="350.20">NW</text>
+  </g>
+  <g class="state" data-state="MP">
+    <title>Mulativ</title>
+    <polygon class="tile" points="157.42,61.20 186.87,78.20 186.87,112.20 157.42,129.20 127.98,112.20 127.98,78.20" aria-label="Mulativ"/>
+    <text class="label" x="157.42" y="95.20">MP</text>
+  </g>
+  <g class="state" data-state="PR">
+    <title>Pŏḷŏnnaruva</title>
+    <polygon class="tile" points="157.42,163.20 186.87,180.20 186.87,214.20 157.42,231.20 127.98,214.20 127.98,180.20" aria-label="Pŏḷŏnnaruva"/>
+    <text class="label" x="157.42" y="197.20">PR</text>
+  </g>
+  <g class="state" data-state="KY">
+    <title>Mahanuvara</title>
+    <polygon class="tile" points="157.42,265.20 186.87,282.20 186.87,316.20 157.42,333.20 127.98,316.20 127.98,282.20" aria-label="Mahanuvara"/>
+    <text class="label" x="157.42" y="299.20">KY</text>
+  </g>
+  <g class="state" data-state="MH">
+    <title>Mātara</title>
+    <polygon class="tile" points="157.42,367.20 186.87,384.20 186.87,418.20 157.42,435.20 127.98,418.20 127.98,384.20" aria-label="Mātara"/>
+    <text class="label" x="157.42" y="401.20">MH</text>
+  </g>
+  <g class="state" data-state="JA">
+    <title>Yāpanaya</title>
+    <polygon class="tile" points="127.98,10.20 157.42,27.20 157.42,61.20 127.98,78.20 98.53,61.20 98.53,27.20" aria-label="Yāpanaya"/>
+    <text class="label" x="127.98" y="44.20">JA</text>
+  </g>
+  <g class="state" data-state="VA">
+    <title>Vavuniyāva</title>
+    <polygon class="tile" points="127.98,112.20 157.42,129.20 157.42,163.20 127.98,180.20 98.53,163.20 98.53,129.20" aria-label="Vavuniyāva"/>
+    <text class="label" x="127.98" y="146.20">VA</text>
+  </g>
+  <g class="state" data-state="KG">
+    <title>Kuruṇægala</title>
+    <polygon class="tile" points="127.98,214.20 157.42,231.20 157.42,265.20 127.98,282.20 98.53,265.20 98.53,231.20" aria-label="Kuruṇægala"/>
+    <text class="label" x="127.98" y="248.20">KG</text>
+  </g>
+  <g class="state" data-state="RN">
+    <title>Ratnapura</title>
+    <polygon class="tile" points="127.98,316.20 157.42,333.20 157.42,367.20 127.98,384.20 98.53,367.20 98.53,333.20" aria-label="Ratnapura"/>
+    <text class="label" x="127.98" y="350.20">RN</text>
+  </g>
+  <g class="state" data-state="KL">
+    <title>Kilinŏchchi</title>
+    <polygon class="tile" points="98.53,61.20 127.98,78.20 127.98,112.20 98.53,129.20 69.09,112.20 69.09,78.20" aria-label="Kilinŏchchi"/>
+    <text class="label" x="98.53" y="95.20">KL</text>
+  </g>
+  <g class="state" data-state="AD">
+    <title>Anurādhapura</title>
+    <polygon class="tile" points="98.53,163.20 127.98,180.20 127.98,214.20 98.53,231.20 69.09,214.20 69.09,180.20" aria-label="Anurādhapura"/>
+    <text class="label" x="98.53" y="197.20">AD</text>
+  </g>
+  <g class="state" data-state="KE">
+    <title>Kægalla</title>
+    <polygon class="tile" points="98.53,265.20 127.98,282.20 127.98,316.20 98.53,333.20 69.09,316.20 69.09,282.20" aria-label="Kægalla"/>
+    <text class="label" x="98.53" y="299.20">KE</text>
+  </g>
+  <g class="state" data-state="GL">
+    <title>Gālla</title>
+    <polygon class="tile" points="98.53,367.20 127.98,384.20 127.98,418.20 98.53,435.20 69.09,418.20 69.09,384.20" aria-label="Gālla"/>
+    <text class="label" x="98.53" y="401.20">GL</text>
+  </g>
+  <g class="state" data-state="MB">
+    <title>Mannārama</title>
+    <polygon class="tile" points="69.09,112.20 98.53,129.20 98.53,163.20 69.09,180.20 39.64,163.20 39.64,129.20" aria-label="Mannārama"/>
+    <text class="label" x="69.09" y="146.20">MB</text>
+  </g>
+  <g class="state" data-state="GQ">
+    <title>Gampaha</title>
+    <polygon class="tile" points="69.09,214.20 98.53,231.20 98.53,265.20 69.09,282.20 39.64,265.20 39.64,231.20" aria-label="Gampaha"/>
+    <text class="label" x="69.09" y="248.20">GQ</text>
+  </g>
+  <g class="state" data-state="KT">
+    <title>Kaḷutara</title>
+    <polygon class="tile" points="69.09,316.20 98.53,333.20 98.53,367.20 69.09,384.20 39.64,367.20 39.64,333.20" aria-label="Kaḷutara"/>
+    <text class="label" x="69.09" y="350.20">KT</text>
+  </g>
+  <g class="state" data-state="PX">
+    <title>Puttalama</title>
+    <polygon class="tile" points="39.64,163.20 69.09,180.20 69.09,214.20 39.64,231.20 10.20,214.20 10.20,180.20" aria-label="Puttalama"/>
+    <text class="label" x="39.64" y="197.20">PX</text>
+  </g>
+  <g class="state" data-state="CO">
+    <title>Kŏḷamba</title>
+    <polygon class="tile" points="39.64,265.20 69.09,282.20 69.09,316.20 39.64,333.20 10.20,316.20 10.20,282.20" aria-label="Kŏḷamba"/>
+    <text class="label" x="39.64" y="299.20">CO</text>
+  </g>
+</svg>

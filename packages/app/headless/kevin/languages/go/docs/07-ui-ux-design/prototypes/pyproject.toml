@@ -1,0 +1,11 @@
+[project]
+name = "kevin"
+version = "0.1.0"
+description = "kevin design screenshot generation"
+requires-python = ">=3.12"
+dependencies = [
+    "playwright==1.64.1",
+]
+
+[dependency-groups]
+dev = []

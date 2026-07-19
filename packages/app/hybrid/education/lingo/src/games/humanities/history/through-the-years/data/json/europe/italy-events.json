@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "europe-etruscan-900",
+    "title": "Etruscan Civilization Rises",
+    "year": -900,
+    "description": "The Etruscans grew strong in central Italy.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-rome-founded-753",
+    "title": "Rome Founded",
+    "year": -753,
+    "description": "Legend dates Rome's founding to this year.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-greek-colonies-750",
+    "title": "Greeks Colonize Southern Italy",
+    "year": -750,
+    "description": "Greek settlers built cities along the coast.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-etruscan-kings-616",
+    "title": "Etruscan Kings Rule Rome",
+    "year": -616,
+    "description": "Etruscan kings ruled over early Rome.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-republic-509",
+    "title": "Roman Republic Founded",
+    "year": -509,
+    "description": "Rome expelled its kings and formed a republic.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-plebeian-tribunes-494",
+    "title": "Plebeians Win Tribunes",
+    "year": -494,
+    "description": "Commoners gained officials to protect them.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-twelve-tables-451",
+    "title": "Twelve Tables Written",
+    "year": -451,
+    "description": "Rome's first written laws were published.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-veii-396",
+    "title": "Rome Captures Veii",
+    "year": -396,
+    "description": "Rome seized the rival Etruscan city.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-gauls-390",
+    "title": "Gauls Sack Rome",
+    "year": -390,
+    "description": "Gallic raiders burned much of Rome.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-samnite-wars-343",
+    "title": "Samnite Wars Begin",
+    "year": -343,
+    "description": "Rome fought the Samnites for central Italy.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-appian-way-312",
+    "title": "Appian Way Built",
+    "year": -312,
+    "description": "Rome paved its first great highway.",
+    "category": "technology",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-pyrrhus-defeated-275",
+    "title": "Rome Defeats Pyrrhus",
+    "year": -275,
+    "description": "Rome drove the Greek king from Italy.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-first-punic-264",
+    "title": "First Punic War Begins",
+    "year": -264,
+    "description": "Rome and Carthage clashed over Sicily.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-sicily-province-241",
+    "title": "Sicily Becomes a Province",
+    "year": -241,
+    "description": "Sicily became Rome's first province.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-second-punic-218",
+    "title": "Second Punic War Begins",
+    "year": -218,
+    "description": "Hannibal marched across the Alps.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-cannae-216",
+    "title": "Battle of Cannae",
+    "year": -216,
+    "description": "Hannibal annihilated a Roman army.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-zama-202",
+    "title": "Battle of Zama",
+    "year": -202,
+    "description": "Scipio defeated Hannibal in Africa.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-third-punic-149",
+    "title": "Third Punic War",
+    "year": -149,
+    "description": "Rome resolved to destroy Carthage.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-carthage-146",
+    "title": "Carthage Destroyed",
+    "year": -146,
+    "description": "Rome razed the city of Carthage.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-gracchi-133",
+    "title": "Gracchi Reforms",
+    "year": -133,
+    "description": "The Gracchi brothers pushed land reform.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-marius-107",
+    "title": "Marius Reforms the Army",
+    "year": -107,
+    "description": "Marius opened the legions to the poor.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-social-war-91",
+    "title": "Social War",
+    "year": -91,
+    "description": "Italian allies fought for citizenship.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-spartacus-73",
+    "title": "Spartacus Revolts",
+    "year": -73,
+    "description": "The gladiator led a slave rebellion.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-first-triumvirate-60",
+    "title": "First Triumvirate",
+    "year": -60,
+    "description": "Three rival generals shared power.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-gallic-wars-58",
+    "title": "Gallic Wars Begin",
+    "year": -58,
+    "description": "Caesar campaigned across Gaul.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-rubicon-49",
+    "title": "Caesar Crosses the Rubicon",
+    "year": -49,
+    "description": "Caesar marched on Rome to start a civil war.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-pharsalus-48",
+    "title": "Battle of Pharsalus",
+    "year": -48,
+    "description": "Caesar defeated Pompey in Greece.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-caesar-assassinated-44",
+    "title": "Julius Caesar Assassinated",
+    "year": -44,
+    "description": "Senators stabbed Caesar on the Ides of March.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-second-triumvirate-43",
+    "title": "Second Triumvirate",
+    "year": -43,
+    "description": "Three leaders divided Rome among themselves.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-philippi-42",
+    "title": "Battle of Philippi",
+    "year": -42,
+    "description": "The triumvirs crushed Caesar's assassins.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-augustus-27",
+    "title": "Augustus Becomes Emperor",
+    "year": -27,
+    "description": "Octavian became Rome's first emperor.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-aeneid-19",
+    "title": "Virgil's Aeneid Completed",
+    "year": -19,
+    "description": "The national epic was finished after Virgil's death.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-augustus-dies-14",
+    "title": "Augustus Dies",
+    "year": 14,
+    "description": "The first emperor died after four decades of rule.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-nero-54",
+    "title": "Nero Becomes Emperor",
+    "year": 54,
+    "description": "Nero took the throne at age sixteen.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-great-fire-64",
+    "title": "Great Fire of Rome",
+    "year": 64,
+    "description": "A great fire destroyed much of the city.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-vesuvius-79",
+    "title": "Mount Vesuvius Erupts",
+    "year": 79,
+    "description": "Pompeii and Herculaneum were buried in ash.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-colosseum-80",
+    "title": "Colosseum Opens",
+    "year": 80,
+    "description": "Rome's great amphitheater hosted its first games.",
+    "category": "technology",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-pantheon-126",
+    "title": "Pantheon Completed",
+    "year": 126,
+    "description": "Hadrian rebuilt the temple with a vast dome.",
+    "category": "technology",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-diocletian-284",
+    "title": "Diocletian Reforms Empire",
+    "year": 284,
+    "description": "Diocletian split and stabilized the empire.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-constantine-306",
+    "title": "Constantine Becomes Emperor",
+    "year": 306,
+    "description": "Constantine rose to power in the west.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-edict-milan-313",
+    "title": "Edict of Milan",
+    "year": 313,
+    "description": "Christianity was officially tolerated.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-alaric-410",
+    "title": "Visigoths Sack Rome",
+    "year": 410,
+    "description": "Alaric's Goths looted the city of Rome.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-rome-falls-476",
+    "title": "Western Roman Empire Falls",
+    "year": 476,
+    "description": "The last western emperor was deposed.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-ostrogoths-493",
+    "title": "Ostrogoths Rule Italy",
+    "year": 493,
+    "description": "Theodoric founded an Ostrogothic kingdom.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-gothic-war-535",
+    "title": "Gothic War Begins",
+    "year": 535,
+    "description": "Byzantium fought to reclaim Italy.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-lombards-568",
+    "title": "Lombards Invade Italy",
+    "year": 568,
+    "description": "The Lombards carved out a northern kingdom.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-gregory-590",
+    "title": "Gregory the Great Becomes Pope",
+    "year": 590,
+    "description": "Gregory expanded papal authority.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-charlemagne-774",
+    "title": "Charlemagne Conquers the Lombards",
+    "year": 774,
+    "description": "Charlemagne took the Lombard crown.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-charlemagne-crowned-800",
+    "title": "Charlemagne Crowned Emperor",
+    "year": 800,
+    "description": "The pope crowned Charlemagne in Rome.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-great-schism-1054",
+    "title": "Great Schism",
+    "year": 1054,
+    "description": "The eastern and western churches split.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-norman-sicily-1071",
+    "title": "Normans Conquer Sicily",
+    "year": 1071,
+    "description": "The Normans finished taking the island.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-gregory-vii-1073",
+    "title": "Gregory VII Becomes Pope",
+    "year": 1073,
+    "description": "Gregory VII fought the Investiture Controversy.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-first-crusade-1095",
+    "title": "First Crusade Preached",
+    "year": 1095,
+    "description": "Urban II summoned knights to the East.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-frederick-1155",
+    "title": "Frederick Barbarossa Crowned",
+    "year": 1155,
+    "description": "Barbarossa claimed the imperial crown.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-legnano-1176",
+    "title": "Battle of Legnano",
+    "year": 1176,
+    "description": "The Lombard League beat the emperor.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-sicilian-vespers-1282",
+    "title": "Sicilian Vespers",
+    "year": 1282,
+    "description": "Sicilians rose against French rule.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-avignon-1309",
+    "title": "Papacy Moves to Avignon",
+    "year": 1309,
+    "description": "The popes left Rome for southern France.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-dante-1321",
+    "title": "Dante Dies",
+    "year": 1321,
+    "description": "The Divine Comedy's author died in exile.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-black-death-1347",
+    "title": "Black Death Reaches Italy",
+    "year": 1347,
+    "description": "Plague devastated Italian cities.",
+    "category": "medicine",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-medici-rule-1434",
+    "title": "Medici Rule Florence",
+    "year": 1434,
+    "description": "Cosimo de' Medici dominated the city.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-duomo-1436",
+    "title": "Florence Cathedral Dome",
+    "year": 1436,
+    "description": "Brunelleschi completed the great dome.",
+    "category": "technology",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-french-italy-1494",
+    "title": "French Invade Italy",
+    "year": 1494,
+    "description": "Charles VIII marched into Italy.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-david-1504",
+    "title": "Michelangelo's David",
+    "year": 1504,
+    "description": "The statue was unveiled in Florence.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-sistine-1508",
+    "title": "Sistine Ceiling Painted",
+    "year": 1508,
+    "description": "Michelangelo painted the Sistine ceiling.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-prince-1513",
+    "title": "The Prince Written",
+    "year": 1513,
+    "description": "Machiavelli wrote his political manual.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-sack-rome-1527",
+    "title": "Sack of Rome",
+    "year": 1527,
+    "description": "Imperial troops plundered Rome.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-galileo-1610",
+    "title": "Galileo Observes Jupiter",
+    "year": 1610,
+    "description": "Galileo turned a telescope on the moons.",
+    "category": "science",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-galileo-trial-1633",
+    "title": "Galileo Condemned",
+    "year": 1633,
+    "description": "The Church forced Galileo to recant.",
+    "category": "science",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-pompeii-1748",
+    "title": "Pompeii Excavated",
+    "year": 1748,
+    "description": "Buried ruins were uncovered at Pompeii.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-napoleon-italy-1796",
+    "title": "Napoleon Invades Italy",
+    "year": 1796,
+    "description": "Napoleon conquered northern Italy.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-venice-falls-1797",
+    "title": "Venice Falls",
+    "year": 1797,
+    "description": "Venice's ancient republic came to an end.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-campo-formio-1797",
+    "title": "Treaty of Campo Formio",
+    "year": 1797,
+    "description": "Austria ceded territory to France.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-marengo-1800",
+    "title": "Battle of Marengo",
+    "year": 1800,
+    "description": "Napoleon defeated Austria in Italy.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-napoleon-king-1805",
+    "title": "Napoleon Crowned King of Italy",
+    "year": 1805,
+    "description": "Napoleon took the iron crown.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-congress-vienna-1815",
+    "title": "Congress of Vienna",
+    "year": 1815,
+    "description": "The powers redrew Europe's map.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-carbonari-1820",
+    "title": "Carbonari Revolts",
+    "year": 1820,
+    "description": "Secret societies rose against restored rulers.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-young-italy-1831",
+    "title": "Young Italy Founded",
+    "year": 1831,
+    "description": "Mazzini called for a unified republic.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-revolutions-1848",
+    "title": "Revolutions of 1848",
+    "year": 1848,
+    "description": "Uprisings shook the Italian states.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-solferino-1859",
+    "title": "Battle of Solferino",
+    "year": 1859,
+    "description": "Austria was driven from Lombardy.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-garibaldi-1860",
+    "title": "Garibaldi's Expedition",
+    "year": 1860,
+    "description": "Garibaldi conquered the south.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-unification-1861",
+    "title": "Italy Unifies",
+    "year": 1861,
+    "description": "Victor Emmanuel II became king of Italy.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-capital-florence-1865",
+    "title": "Florence Becomes Capital",
+    "year": 1865,
+    "description": "The capital moved from Turin to Florence.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-rome-capital-1870",
+    "title": "Rome Becomes Capital",
+    "year": 1870,
+    "description": "Rome joined and led the new kingdom.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-libya-1911",
+    "title": "Italy Takes Libya",
+    "year": 1911,
+    "description": "Italy seized Libya from the Ottomans.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-italy-ww1-1915",
+    "title": "Italy Enters World War I",
+    "year": 1915,
+    "description": "Italy joined the Allies against Austria.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-vittorio-veneto-1918",
+    "title": "Battle of Vittorio Veneto",
+    "year": 1918,
+    "description": "Italy won a decisive final victory.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-fasci-1919",
+    "title": "Mussolini Founds the Fasci",
+    "year": 1919,
+    "description": "The Fascist movement was launched in Milan.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-march-rome-1922",
+    "title": "March on Rome",
+    "year": 1922,
+    "description": "Mussolini took power in Italy.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-lateran-1929",
+    "title": "Lateran Treaty",
+    "year": 1929,
+    "description": "The Vatican became an independent state.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-ethiopia-1935",
+    "title": "Italy Invades Ethiopia",
+    "year": 1935,
+    "description": "Mussolini conquered Ethiopia.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-axis-1936",
+    "title": "Rome-Berlin Axis",
+    "year": 1936,
+    "description": "Italy and Germany formed the Axis alliance.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-italy-ww2-1940",
+    "title": "Italy Enters World War II",
+    "year": 1940,
+    "description": "Italy joined the war on Germany's side.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-armistice-1943",
+    "title": "Italy Surrenders",
+    "year": 1943,
+    "description": "Italy left the Axis and changed sides.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-liberation-1945",
+    "title": "Italy Liberated",
+    "year": 1945,
+    "description": "Allied forces completed the liberation.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-republic-1946",
+    "title": "Italian Republic Founded",
+    "year": 1946,
+    "description": "Italians voted to abolish the monarchy.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-treaty-rome-1957",
+    "title": "Treaty of Rome",
+    "year": 1957,
+    "description": "The treaty created the European Economic Community.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-rome-olympics-1960",
+    "title": "Rome Hosts Olympics",
+    "year": 1960,
+    "description": "Rome staged the summer games.",
+    "category": "sports",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-moro-1978",
+    "title": "Aldo Moro Kidnapped",
+    "year": 1978,
+    "description": "The Red Brigades killed the former premier.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-mani-pulite-1992",
+    "title": "Mani Pulite Investigations",
+    "year": 1992,
+    "description": "Corruption probes swept Italian politics.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-berlusconi-1994",
+    "title": "Berlusconi Becomes Prime Minister",
+    "year": 1994,
+    "description": "The media tycoon won a landslide.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  }
+]

@@ -1,0 +1,19 @@
+// Transition timing function utilities — Tailwind v3 default scale
+
+$transition-ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+$transition-eases: (
+  ('linear', linear),
+  ('in', cubic-bezier(0.4, 0, 1, 1)),
+  ('out', cubic-bezier(0, 0, 0.2, 1)),
+  ('in-out', cubic-bezier(0.4, 0, 0.2, 1))
+);
+
+.ease {
+  transition-timing-function: $transition-ease-default;
+}
+
+@each $name, $value in $transition-eases {
+  .ease-#{$name} {
+    transition-timing-function: $value;
+  }
+}

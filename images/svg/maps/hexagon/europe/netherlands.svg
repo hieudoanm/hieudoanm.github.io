@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357.71 328.67" width="357.71" height="328.67" role="img" aria-labelledby="netherlands-title netherlands-desc">
+  <title id="netherlands-title">Netherlands hex map</title>
+  <desc id="netherlands-desc">Hexagon map with 15 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.77; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 13.67 9.76; }
+    .label { fill: #52525b; font: 600 11.06px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="GR">
+    <title>Groningen</title>
+    <polygon class="tile" points="319.76,9.76 347.94,26.03 347.94,58.57 319.76,74.85 291.58,58.57 291.58,26.03" aria-label="Groningen"/>
+    <text class="label" x="319.76" y="42.30">GR</text>
+  </g>
+  <g class="state" data-state="OV">
+    <title>Overijssel</title>
+    <polygon class="tile" points="291.58,58.57 319.76,74.85 319.76,107.39 291.58,123.66 263.40,107.39 263.40,74.85" aria-label="Overijssel"/>
+    <text class="label" x="291.58" y="91.12">OV</text>
+  </g>
+  <g class="state" data-state="DR">
+    <title>Drenthe</title>
+    <polygon class="tile" points="263.40,9.76 291.58,26.03 291.58,58.57 263.40,74.85 235.22,58.57 235.22,26.03" aria-label="Drenthe"/>
+    <text class="label" x="263.40" y="42.30">DR</text>
+  </g>
+  <g class="state" data-state="GE">
+    <title>Gelderland</title>
+    <polygon class="tile" points="263.40,107.39 291.58,123.66 291.58,156.20 263.40,172.47 235.22,156.20 235.22,123.66" aria-label="Gelderland"/>
+    <text class="label" x="263.40" y="139.93">GE</text>
+  </g>
+  <g class="state" data-state="FL">
+    <title>Flevoland</title>
+    <polygon class="tile" points="235.22,58.57 263.40,74.85 263.40,107.39 235.22,123.66 207.04,107.39 207.04,74.85" aria-label="Flevoland"/>
+    <text class="label" x="235.22" y="91.12">FL</text>
+  </g>
+  <g class="state" data-state="LI">
+    <title>Limburg</title>
+    <polygon class="tile" points="235.22,156.20 263.40,172.47 263.40,205.01 235.22,221.28 207.04,205.01 207.04,172.47" aria-label="Limburg"/>
+    <text class="label" x="235.22" y="188.74">LI</text>
+  </g>
+  <g class="state" data-state="FR">
+    <title>Friesland</title>
+    <polygon class="tile" points="207.04,9.76 235.22,26.03 235.22,58.57 207.04,74.85 178.85,58.57 178.85,26.03" aria-label="Friesland"/>
+    <text class="label" x="207.04" y="42.30">FR</text>
+  </g>
+  <g class="state" data-state="UT">
+    <title>Utrecht</title>
+    <polygon class="tile" points="207.04,107.39 235.22,123.66 235.22,156.20 207.04,172.47 178.85,156.20 178.85,123.66" aria-label="Utrecht"/>
+    <text class="label" x="207.04" y="139.93">UT</text>
+  </g>
+  <g class="state" data-state="NH">
+    <title>Noord-Holland</title>
+    <polygon class="tile" points="178.85,58.57 207.04,74.85 207.04,107.39 178.85,123.66 150.67,107.39 150.67,74.85" aria-label="Noord-Holland"/>
+    <text class="label" x="178.85" y="91.12">NH</text>
+  </g>
+  <g class="state" data-state="NB">
+    <title>Noord-Brabant</title>
+    <polygon class="tile" points="178.85,156.20 207.04,172.47 207.04,205.01 178.85,221.28 150.67,205.01 150.67,172.47" aria-label="Noord-Brabant"/>
+    <text class="label" x="178.85" y="188.74">NB</text>
+  </g>
+  <g class="state" data-state="ZH">
+    <title>Zuid-Holland</title>
+    <polygon class="tile" points="150.67,107.39 178.85,123.66 178.85,156.20 150.67,172.47 122.49,156.20 122.49,123.66" aria-label="Zuid-Holland"/>
+    <text class="label" x="150.67" y="139.93">ZH</text>
+  </g>
+  <g class="state" data-state="ZE">
+    <title>Zeeland</title>
+    <polygon class="tile" points="122.49,156.20 150.67,172.47 150.67,205.01 122.49,221.28 94.31,205.01 94.31,172.47" aria-label="Zeeland"/>
+    <text class="label" x="122.49" y="188.74">ZE</text>
+  </g>
+  <g class="state" data-state="SB">
+    <title>Saba</title>
+    <polygon class="tile inset" points="122.49,253.82 150.67,270.09 150.67,302.64 122.49,318.91 94.31,302.64 94.31,270.09" aria-label="Saba"/>
+    <text class="label" x="122.49" y="286.37">SB</text>
+  </g>
+  <g class="state" data-state="SE">
+    <title>St. Eustatius</title>
+    <polygon class="tile inset" points="37.94,205.01 66.13,221.28 66.13,253.82 37.94,270.09 9.76,253.82 9.76,221.28" aria-label="St. Eustatius"/>
+    <text class="label" x="37.94" y="237.55">SE</text>
+  </g>
+  <g class="state" data-state="BQ">
+    <title>Bonaire</title>
+    <polygon class="tile inset" points="37.94,107.39 66.13,123.66 66.13,156.20 37.94,172.47 9.76,156.20 9.76,123.66" aria-label="Bonaire"/>
+    <text class="label" x="37.94" y="139.93">BQ</text>
+  </g>
+</svg>

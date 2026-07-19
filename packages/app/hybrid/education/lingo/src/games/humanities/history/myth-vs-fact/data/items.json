@@ -1,0 +1,194 @@
+[
+  {
+    "category": "Ancient World",
+    "myth": "The ancient Egyptians were primitive people",
+    "fact": "The ancient Egyptians built massive pyramids, developed hieroglyphic writing, practiced medicine, and had a sophisticated legal system.",
+    "isTrue": true
+  },
+  {
+    "category": "Ancient World",
+    "myth": "Roman gladiators always fought to the death",
+    "fact": "Most gladiatorial fights ended with surrender; referees could stop fights, and death was not the primary outcome.",
+    "isTrue": false
+  },
+  {
+    "category": "Ancient World",
+    "myth": "The pharaohs built the pyramids using slave labor",
+    "fact": "Evidence suggests the pyramids were built by paid skilled laborers who were well-fed and housed.",
+    "isTrue": false
+  },
+  {
+    "category": "Ancient World",
+    "myth": "Cleopatra was Egyptian",
+    "fact": "Cleopatra was of Macedonian Greek descent from the Ptolemaic dynasty that ruled Egypt after Alexander the Great.",
+    "isTrue": false
+  },
+  {
+    "category": "Ancient World",
+    "myth": "The ancient Romans had no concept of hygiene",
+    "fact": "Roman public baths were widespread and Romans valued cleanliness, with laws requiring waste disposal.",
+    "isTrue": false
+  },
+  {
+    "category": "Medieval",
+    "myth": "Medieval people believed the Earth was flat",
+    "fact": "Most educated medieval Europeans knew the Earth was spherical, following Greek and Roman scholarship.",
+    "isTrue": false
+  },
+  {
+    "category": "Medieval",
+    "myth": "The medieval period was a dark age of ignorance",
+    "fact": "The medieval period saw the rise of universities, Gothic architecture, the printing press, and significant scientific inquiry.",
+    "isTrue": false
+  },
+  {
+    "category": "Medieval",
+    "myth": "Knights in armor could not move or fight effectively",
+    "fact": "Armored knights were highly mobile and trained to fight effectively; a suit of armor weighed about 20-25 kg.",
+    "isTrue": false
+  },
+  {
+    "category": "Medieval",
+    "myth": "The Black Death was caused by rats alone",
+    "fact": "Fleas on various mammals, including humans, spread the plague bacteria; airborne transmission also played a role.",
+    "isTrue": false
+  },
+  {
+    "category": "Medieval",
+    "myth": "Medieval castles were always cold and drafty",
+    "fact": "Castles used tapestries, fireplaces, and thick stone walls to retain heat; some had central heating systems.",
+    "isTrue": false
+  },
+  {
+    "category": "Exploration",
+    "myth": "Christopher Columbus proved the Earth was round",
+    "fact": "Educated people already knew the Earth was spherical; Columbus proved the Americas were reachable by sailing west.",
+    "isTrue": false
+  },
+  {
+    "category": "Exploration",
+    "myth": "The Viking Leif Erikson was the first European to reach North America",
+    "fact": "Viking sagas and archaeological evidence at L'Anse aux Meadows confirm Norse settlement around 1000 CE.",
+    "isTrue": true
+  },
+  {
+    "category": "Exploration",
+    "myth": "Marco Polo invented pasta and brought it to Italy from China",
+    "fact": "Pasta existed in Italy before Marco Polo; his travelogue does not mention bringing noodles from China.",
+    "isTrue": false
+  },
+  {
+    "category": "Exploration",
+    "myth": "Magellan circumnavigated the globe",
+    "fact": "Magellan was killed in the Philippines; Juan Sebastián Elcano completed the voyage with the surviving crew.",
+    "isTrue": false
+  },
+  {
+    "category": "Wars and Conflicts",
+    "myth": "Napoleon was extremely short",
+    "fact": "Napoleon was about 5'7 inches, average height for a Frenchman of his era; the myth came from British propaganda.",
+    "isTrue": false
+  },
+  {
+    "category": "Wars and Conflicts",
+    "myth": "World War I was fought entirely in trenches",
+    "fact": "While trench warfare defined the Western Front, fighting also occurred at sea, in the air, and on other fronts.",
+    "isTrue": false
+  },
+  {
+    "category": "Wars and Conflicts",
+    "myth": "The Trojan War is entirely fictional",
+    "fact": "Archaeological evidence suggests Troy existed and was destroyed, supporting a historical basis for the conflict.",
+    "isTrue": true
+  },
+  {
+    "category": "Wars and Conflicts",
+    "myth": "Vikings wore horned helmets in battle",
+    "fact": "No archaeological evidence supports horned helmets; the myth originated from 19th century romantic nationalism.",
+    "isTrue": false
+  },
+  {
+    "category": "Wars and Conflicts",
+    "myth": "The Battle of Thermopylae was only 300 Spartans",
+    "fact": "The 300 Spartans were joined by several thousand Greek allies, including Thespians and Thebans.",
+    "isTrue": false
+  },
+  {
+    "category": "Famous Figures",
+    "myth": "Leonardo da Vinci was just an artist",
+    "fact": "Leonardo was a polymath who excelled in painting, anatomy, engineering, botany, and scientific observation.",
+    "isTrue": true
+  },
+  {
+    "category": "Famous Figures",
+    "myth": "Albert Einstein failed math in school",
+    "fact": "Einstein excelled in math and physics from an early age; the myth came from a mistranslated biographical source.",
+    "isTrue": false
+  },
+  {
+    "category": "Famous Figures",
+    "myth": "Joan of Arc was illiterate and uneducated",
+    "fact": "Joan of Arc could not read or write but was highly articulate, politically savvy, and tactically skilled.",
+    "isTrue": true
+  },
+  {
+    "category": "Famous Figures",
+    "myth": "Shakespeare wrote all his plays himself",
+    "fact": "Some scholars question sole authorship of certain works, though mainstream academic consensus credits Shakespeare.",
+    "isTrue": false
+  },
+  {
+    "category": "Famous Figures",
+    "myth": "Genghis Khan was purely a destructive conqueror",
+    "fact": "Genghis Khan established the Yam postal system, promoted religious tolerance, and fostered trade along the Silk Road.",
+    "isTrue": false
+  },
+  {
+    "category": "Science and Discovery",
+    "myth": "Archimedes used a mirror to set Roman ships on fire",
+    "fact": "There is no contemporary evidence this actually happened; it may be a later embellishment of his legacy.",
+    "isTrue": false
+  },
+  {
+    "category": "Science and Discovery",
+    "myth": "Isaac Newton discovered gravity when an apple hit his head",
+    "fact": "Newton observed a falling apple and began thinking about gravity, but the head-strike story is likely apocryphal.",
+    "isTrue": false
+  },
+  {
+    "category": "Science and Discovery",
+    "myth": "Marie Curie won Nobel Prizes in two different sciences",
+    "fact": "Marie Curie won the Nobel Prize in Physics in 1903 and Chemistry in 1911, the first person to win in two sciences.",
+    "isTrue": true
+  },
+  {
+    "category": "Science and Discovery",
+    "myth": "Galileo was imprisoned for saying the Earth moved around the Sun",
+    "fact": "Galileo was placed under house arrest and forced to recant, but he was never formally imprisoned.",
+    "isTrue": false
+  },
+  {
+    "category": "Science and Discovery",
+    "myth": "Da Vinci invented the helicopter and flying machine",
+    "fact": "Da Vinci designed concepts for flying machines, but none were built or functional during his lifetime.",
+    "isTrue": false
+  },
+  {
+    "category": "Myths and Legends",
+    "myth": "King Arthur was a real historical king",
+    "fact": "Historical evidence for Arthur is limited; he may be based on a 5th-6th century Romano-British war leader.",
+    "isTrue": false
+  },
+  {
+    "category": "Myths and Legends",
+    "myth": "The Library of Alexandria held all human knowledge",
+    "fact": "The library was significant but did not contain all knowledge; much was lost gradually over centuries, not in one fire.",
+    "isTrue": false
+  },
+  {
+    "category": "Myths and Legends",
+    "myth": "Vikings used skulls as drinking cups",
+    "fact": "This practice is not supported by archaeological evidence and likely comes from a mistranslation of Old Norse.",
+    "isTrue": false
+  }
+]

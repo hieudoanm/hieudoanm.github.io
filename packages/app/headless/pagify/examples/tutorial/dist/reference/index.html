@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en" data-theme="auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>API Reference · pagify Tutorial</title>
+    
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="header">
+      <div class="header__bar">
+        
+        <button
+          class="header__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="sidebar"
+          data-nav-toggle
+        >
+          <span class="header__toggle-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Menu</span>
+        </button>
+        
+        <a class="header__title" href="/">pagify Tutorial</a>
+        <div class="header__actions">
+          <label class="header__search" for="search">
+            <span class="visually-hidden">Search</span>
+            <input
+              id="search"
+              type="search"
+              placeholder="Search"
+              autocomplete="off"
+              data-search
+              data-search-index="/assets/search-index.json"
+            />
+          </label>
+          <button class="header__theme" type="button" data-theme-toggle>
+            <span class="visually-hidden">Toggle colour theme</span>
+          </button>
+        </div>
+      </div>
+      <div class="search" data-search-panel hidden>
+        <p class="search__status" role="status" data-search-status></p>
+        <ul class="search__results" data-search-results></ul>
+      </div>
+    </header>
+
+    <div class="layout">
+      
+      <nav class="sidebar" id="sidebar" aria-label="Site">
+        <ul class="nav">
+  <li class="nav__item">
+  <a
+    class="nav__link"
+    href="/"
+    >pagify Tutorial</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/getting-started/"
+    >Getting Started</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link nav__link--current"
+    href="/reference/"
+    aria-current="page">API Reference</a
+  > 
+</li>
+</ul>
+      </nav>
+      
+
+      <main class="main" id="main">
+        <article class="markdown"><h1 id="page-title" class="markdown__title">API Reference</h1>
+          
+          <h2 id="commands">Commands</h2>
+<h3 id="my-project-run"><code>my-project run</code></h3>
+<p>Runs the application.</p>
+<h3 id="my-project-build"><code>my-project build</code></h3>
+<p>Builds the project.</p>
+<h2 id="related">Related</h2>
+<ul>
+<li><a href="/">Tutorial Home</a></li>
+<li><a href="/getting-started/">Getting Started</a></li>
+</ul>
+
+          
+        </article>
+        
+<aside class="outline" aria-label="On this page">
+  <h2 class="outline__title">On this page</h2>
+  <ul class="outline__list">
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#commands">Commands</a>
+    </li>
+    
+    <li class="outline__item outline__item--3">
+      <a class="outline__link" href="#my-project-run">my-project run</a>
+    </li>
+    
+    <li class="outline__item outline__item--3">
+      <a class="outline__link" href="#my-project-build">my-project build</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#related">Related</a>
+    </li>
+    
+  </ul>
+</aside>
+
+      </main>
+    </div>
+
+    <footer class="footer">
+      <p>Built with pagify · © 2024 pagify Tutorial</p>
+    </footer>
+
+    <script src="/assets/script.js" defer></script>
+    <script src="/assets/search.js" defer></script>
+  </body>
+</html>

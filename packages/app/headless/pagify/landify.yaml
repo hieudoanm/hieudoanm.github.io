@@ -1,0 +1,135 @@
+# pagify.yaml — landing page configuration for pagify
+# 
+#   landify validate -f pagify.yaml   # check that this file is valid
+#   landify build -f pagify.yaml      # generate public/index.html from this file
+#
+# Type: product (hero + features + demo video + CTA)
+# Media: hero image (demo.png) and demo video (demo.mp4) required for product type
+
+type: product
+
+theme:
+  base: '#fafafa'
+  primary: '#2563eb'
+  secondary: '#7c3aed'
+  neutral: '#52525b'
+  info: '#2563eb'
+  warning: '#d97706'
+  success: '#16a34a'
+  error: '#dc2626'
+  radius: '10px'
+
+site:
+  name: pagify
+  mark: '📄'
+  description: >-
+    Write Markdown. Run one command. Get a beautiful website.
+  nav:
+    - label: Features
+      href: '#features'
+    - label: Demo
+      href: '#demo'
+    - label: Download
+      href: '#cta'
+    - label: GitHub
+      href: 'https://github.com/hieudoanm/pagify'
+
+  og:
+    title: 'Write Markdown. Run one command. Get a beautiful website.'
+    kicker: 'Zero-config static site generator'
+    tags:
+      - 'Zero configuration'
+      - 'Markdown first'
+      - 'Single binary'
+      - 'Deploy anywhere'
+    description: >-
+      pagify turns a directory of Markdown files into a complete, static website
+      with navigation, search, dark mode, and a polished theme — all from one
+      binary with no Node.js and no configuration.
+    image: 'https://hieudoanm.github.io/packages/app/headless/pagify/public/og/og.png'
+    image_alt: 'pagify — Write Markdown, run one command, get a beautiful website'
+    url: 'https://hieudoanm.github.io/packages/app/headless/pagify/public/'
+
+hero:
+  badge: '🚀 v0.1'
+  headline: Write Markdown. Run one command. Get a beautiful website.
+  subheadline: >-
+    pagify turns a directory of Markdown files into a complete, static website:
+    navigation, page rendering, search and a polished default theme, all from
+    one binary with no Node.js and no configuration.
+  primary:
+    label: Get Started
+    href: '#cta'
+  secondary:
+    label: View on GitHub
+    href: 'https://github.com/hieudoanm/pagify'
+  image:
+    src: 'demo.png'
+    alt: 'pagify terminal showing build command and generated site'
+
+features:
+  heading: Features
+  sub: Everything you need for beautiful documentation sites.
+  items:
+    - icon: '⚡'
+      title: Zero Configuration
+      body: >-
+        Point pagify at a directory of Markdown files and get a complete site.
+        No config files, no build step, no dependencies.
+    - icon: '📝'
+      title: Markdown First
+      body: >-
+        Write content in standard Markdown with GitHub-flavored extensions:
+        tables, task lists, footnotes, callouts, and more.
+    - icon: '🔍'
+      title: Built-in Search
+      body: >-
+        Client-side search index generated at build time. No backend required,
+        works on any static host.
+    - icon: '🌙'
+      title: Dark Mode
+      body: >-
+        Automatic OS detection with manual toggle. Persists preference in
+        localStorage.
+    - icon: '📱'
+      title: Responsive
+      body: >-
+        Sidebar navigation on desktop, collapsible drawer on mobile. Works on
+        all screen sizes.
+    - icon: '🚀'
+      title: Single Binary
+      body: >-
+        One Go binary with embedded assets. No Node.js, no Python, no runtime
+        dependencies. Install and run.
+
+demo:
+  heading: Demo
+  sub: Watch pagify build a documentation site in seconds.
+  video:
+    src: 'demo.mp4'
+    poster: 'demo.png'
+    track: 'demo-en-descriptions.vtt'
+
+cta:
+  icon: '📄'
+  heading: Start writing documentation today.
+  body: >-
+    Install pagify, create a docs folder, and run one command. Your
+    documentation site is live before your coffee cools.
+  button:
+    label: Install pagify
+    href: 'https://github.com/hieudoanm/pagify#install'
+
+footer:
+  copyright: '© 2026 pagify'
+  links:
+    - label: Features
+      href: '#features'
+    - label: Demo
+      href: '#demo'
+    - label: Download
+      href: '#cta'
+    - label: GitHub
+      href: 'https://github.com/hieudoanm/pagify'
+    - label: License
+      href: 'https://github.com/hieudoanm/pagify/blob/main/LICENSE'

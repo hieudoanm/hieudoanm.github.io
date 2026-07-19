@@ -1,0 +1,18 @@
+// Break before utilities — Tailwind v3 default scale
+
+$break-befores: (
+  ('auto', auto),
+  ('avoid', avoid),
+  ('all', all),
+  ('avoid-page', avoid-page),
+  ('page', page),
+  ('left', left),
+  ('right', right),
+  ('column', column)
+);
+
+@each $name, $value in $break-befores {
+  .break-before-#{$name} {
+    break-before: $value;
+  }
+}

@@ -1,0 +1,29 @@
+digraph graph {
+  rankdir=TB;
+  splines=polyline;
+  "00-overview.md" [label="00-overview.md", shape=note];
+  "04-architecture.md" [label="04-architecture.md", shape=note];
+  "09-testing-strategy.md" [label="09-testing-strategy.md", shape=note];
+  "10-implementation-plan.md" [label="10-implementation-plan.md", shape=note];
+  "10-implementation-plan/development.md" [label="development.md", shape=note];
+  "11-deployment.md" [label="11-deployment.md", shape=note];
+  "AGENTS.md" [label="AGENTS.md", shape=note];
+  "README.md" [label="README.md", shape=note];
+  "00-overview.md" -> "10-implementation-plan.md";
+  "00-overview.md" -> "10-implementation-plan/development.md";
+  "00-overview.md" -> "11-deployment.md";
+  "00-overview.md" -> "LICENSE";
+  "10-implementation-plan/development.md" -> "AGENTS.md";
+  "AGENTS.md" -> ".";
+  "AGENTS.md" -> "00-overview.md";
+  "AGENTS.md" -> "04-architecture.md";
+  "AGENTS.md" -> "09-testing-strategy.md";
+  "AGENTS.md" -> "10-implementation-plan.md";
+  "AGENTS.md" -> "11-deployment.md";
+  "README.md" -> "00-overview.md";
+  "README.md" -> "04-architecture.md";
+  "README.md" -> "09-testing-strategy.md";
+  "README.md" -> "10-implementation-plan.md";
+  "README.md" -> "10-implementation-plan/development.md";
+  "README.md" -> "11-deployment.md";
+}

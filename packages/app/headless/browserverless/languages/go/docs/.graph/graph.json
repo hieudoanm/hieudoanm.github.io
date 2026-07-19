@@ -1,0 +1,177 @@
+{
+  "version": 1,
+  "root": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/app/headless/browserverless/languages/go/docs",
+  "nodes": [
+    {
+      "id": "00-overview.md",
+      "path": "00-overview.md",
+      "extension": ".md"
+    },
+    {
+      "id": "04-architecture.md",
+      "path": "04-architecture.md",
+      "extension": ".md"
+    },
+    {
+      "id": "09-testing-strategy.md",
+      "path": "09-testing-strategy.md",
+      "extension": ".md"
+    },
+    {
+      "id": "10-implementation-plan.md",
+      "path": "10-implementation-plan.md",
+      "extension": ".md"
+    },
+    {
+      "id": "10-implementation-plan/development.md",
+      "path": "10-implementation-plan/development.md",
+      "extension": ".md"
+    },
+    {
+      "id": "11-deployment.md",
+      "path": "11-deployment.md",
+      "extension": ".md"
+    },
+    {
+      "id": "AGENTS.md",
+      "path": "AGENTS.md",
+      "extension": ".md"
+    },
+    {
+      "id": "README.md",
+      "path": "README.md",
+      "extension": ".md"
+    }
+  ],
+  "edges": [
+    {
+      "source": "00-overview.md",
+      "target": "10-implementation-plan.md",
+      "raw_link": "10-implementation-plan.md",
+      "line": 16,
+      "status": "resolved"
+    },
+    {
+      "source": "00-overview.md",
+      "target": "10-implementation-plan/development.md",
+      "raw_link": "10-implementation-plan/development.md",
+      "line": 17,
+      "status": "resolved"
+    },
+    {
+      "source": "00-overview.md",
+      "target": "11-deployment.md",
+      "raw_link": "11-deployment.md",
+      "line": 15,
+      "status": "resolved"
+    },
+    {
+      "source": "00-overview.md",
+      "target": "LICENSE",
+      "raw_link": "LICENSE",
+      "line": 148,
+      "status": "resolved"
+    },
+    {
+      "source": "10-implementation-plan/development.md",
+      "target": "AGENTS.md",
+      "raw_link": "../AGENTS.md",
+      "line": 29,
+      "status": "resolved"
+    },
+    {
+      "source": "AGENTS.md",
+      "target": ".",
+      "raw_link": "./",
+      "line": 96,
+      "status": "resolved"
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "00-overview.md",
+      "raw_link": "00-overview.md",
+      "line": 97,
+      "status": "resolved"
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "04-architecture.md",
+      "raw_link": "04-architecture.md",
+      "line": 98,
+      "status": "resolved"
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "09-testing-strategy.md",
+      "raw_link": "09-testing-strategy.md",
+      "line": 99,
+      "status": "resolved"
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "10-implementation-plan.md",
+      "raw_link": "10-implementation-plan.md",
+      "line": 100,
+      "status": "resolved"
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "11-deployment.md",
+      "raw_link": "11-deployment.md",
+      "line": 102,
+      "status": "resolved"
+    },
+    {
+      "source": "README.md",
+      "target": "00-overview.md",
+      "raw_link": "00-overview.md",
+      "line": 11,
+      "status": "resolved"
+    },
+    {
+      "source": "README.md",
+      "target": "04-architecture.md",
+      "raw_link": "04-architecture.md",
+      "line": 12,
+      "status": "resolved"
+    },
+    {
+      "source": "README.md",
+      "target": "09-testing-strategy.md",
+      "raw_link": "09-testing-strategy.md",
+      "line": 13,
+      "status": "resolved"
+    },
+    {
+      "source": "README.md",
+      "target": "10-implementation-plan.md",
+      "raw_link": "10-implementation-plan.md",
+      "line": 14,
+      "status": "resolved"
+    },
+    {
+      "source": "README.md",
+      "target": "10-implementation-plan/development.md",
+      "raw_link": "10-implementation-plan/development.md",
+      "line": 15,
+      "status": "resolved"
+    },
+    {
+      "source": "README.md",
+      "target": "11-deployment.md",
+      "raw_link": "11-deployment.md",
+      "line": 16,
+      "status": "resolved"
+    }
+  ],
+  "stats": {
+    "files": 8,
+    "ignored_files": 0,
+    "links": 17,
+    "broken_links": 0,
+    "resolved_links": 17,
+    "self_links": 0,
+    "orphan_files": 1,
+    "components": 0
+  }
+}

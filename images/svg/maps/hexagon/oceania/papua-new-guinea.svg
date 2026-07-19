@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 359.59 370.20" width="359.59" height="370.20" role="img" aria-labelledby="papua-new-guinea-title papua-new-guinea-desc">
+  <title id="papua-new-guinea-title">Papua New Guinea hex map</title>
+  <desc id="papua-new-guinea-desc">Hexagon map with 20 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.40; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 11.87 8.48; }
+    .label { fill: #52525b; font: 600 9.61px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="EBR">
+    <title>East New Britain</title>
+    <polygon class="tile inset" points="326.64,220.43 351.11,234.56 351.11,262.82 326.64,276.95 302.16,262.82 302.16,234.56" aria-label="East New Britain"/>
+    <text class="label" x="326.64" y="248.69">EBR</text>
+  </g>
+  <g class="state" data-state="WBK">
+    <title>West New Britain</title>
+    <polygon class="tile inset" points="277.69,135.65 302.16,149.78 302.16,178.04 277.69,192.17 253.21,178.04 253.21,149.78" aria-label="West New Britain"/>
+    <text class="label" x="277.69" y="163.91">WBK</text>
+  </g>
+  <g class="state" data-state="NSB">
+    <title>North Solomons</title>
+    <polygon class="tile inset" points="277.69,305.21 302.16,319.34 302.16,347.60 277.69,361.73 253.21,347.60 253.21,319.34" aria-label="North Solomons"/>
+    <text class="label" x="277.69" y="333.47">NSB</text>
+  </g>
+  <g class="state" data-state="MBA">
+    <title>Milne Bay</title>
+    <polygon class="tile" points="228.74,220.43 253.21,234.56 253.21,262.82 228.74,276.95 204.27,262.82 204.27,234.56" aria-label="Milne Bay"/>
+    <text class="label" x="228.74" y="248.69">MBA</text>
+  </g>
+  <g class="state" data-state="NPP">
+    <title>Northern</title>
+    <polygon class="tile" points="204.27,178.04 228.74,192.17 228.74,220.43 204.27,234.56 179.79,220.43 179.79,192.17" aria-label="Northern"/>
+    <text class="label" x="204.27" y="206.30">NPP</text>
+  </g>
+  <g class="state" data-state="MRL">
+    <title>Manus</title>
+    <polygon class="tile inset" points="204.27,8.48 228.74,22.61 228.74,50.87 204.27,65.00 179.79,50.87 179.79,22.61" aria-label="Manus"/>
+    <text class="label" x="204.27" y="36.74">MRL</text>
+  </g>
+  <g class="state" data-state="MPL">
+    <title>Morobe</title>
+    <polygon class="tile" points="179.79,135.65 204.27,149.78 204.27,178.04 179.79,192.17 155.32,178.04 155.32,149.78" aria-label="Morobe"/>
+    <text class="label" x="179.79" y="163.91">MPL</text>
+  </g>
+  <g class="state" data-state="CPM">
+    <title>Central</title>
+    <polygon class="tile" points="179.79,220.43 204.27,234.56 204.27,262.82 179.79,276.95 155.32,262.82 155.32,234.56" aria-label="Central"/>
+    <text class="label" x="179.79" y="248.69">CPM</text>
+  </g>
+  <g class="state" data-state="EPW">
+    <title>Enga</title>
+    <polygon class="tile" points="155.32,93.26 179.79,107.39 179.79,135.65 155.32,149.78 130.85,135.65 130.85,107.39" aria-label="Enga"/>
+    <text class="label" x="155.32" y="121.52">EPW</text>
+  </g>
+  <g class="state" data-state="EHG">
+    <title>Eastern Highlands</title>
+    <polygon class="tile" points="155.32,178.04 179.79,192.17 179.79,220.43 155.32,234.56 130.85,220.43 130.85,192.17" aria-label="Eastern Highlands"/>
+    <text class="label" x="155.32" y="206.30">EHG</text>
+  </g>
+  <g class="state" data-state="MPM">
+    <title>Madang</title>
+    <polygon class="tile" points="130.85,135.65 155.32,149.78 155.32,178.04 130.85,192.17 106.37,178.04 106.37,149.78" aria-label="Madang"/>
+    <text class="label" x="130.85" y="163.91">MPM</text>
+  </g>
+  <g class="state" data-state="NCD">
+    <title>National Capital District</title>
+    <polygon class="tile" points="130.85,220.43 155.32,234.56 155.32,262.82 130.85,276.95 106.37,262.82 106.37,234.56" aria-label="National Capital District"/>
+    <text class="label" x="130.85" y="248.69">NCD</text>
+  </g>
+  <g class="state" data-state="ESW">
+    <title>East Sepik</title>
+    <polygon class="tile" points="106.37,93.26 130.85,107.39 130.85,135.65 106.37,149.78 81.90,135.65 81.90,107.39" aria-label="East Sepik"/>
+    <text class="label" x="106.37" y="121.52">ESW</text>
+  </g>
+  <g class="state" data-state="CPK">
+    <title>Chimbu</title>
+    <polygon class="tile" points="106.37,178.04 130.85,192.17 130.85,220.43 106.37,234.56 81.90,220.43 81.90,192.17" aria-label="Chimbu"/>
+    <text class="label" x="106.37" y="206.30">CPK</text>
+  </g>
+  <g class="state" data-state="NIK">
+    <title>New Ireland</title>
+    <polygon class="tile inset" points="106.37,8.48 130.85,22.61 130.85,50.87 106.37,65.00 81.90,50.87 81.90,22.61" aria-label="New Ireland"/>
+    <text class="label" x="106.37" y="36.74">NIK</text>
+  </g>
+  <g class="state" data-state="SHM">
+    <title>Southern Highlands</title>
+    <polygon class="tile" points="81.90,135.65 106.37,149.78 106.37,178.04 81.90,192.17 57.43,178.04 57.43,149.78" aria-label="Southern Highlands"/>
+    <text class="label" x="81.90" y="163.91">SHM</text>
+  </g>
+  <g class="state" data-state="WHM">
+    <title>Western Highlands</title>
+    <polygon class="tile" points="81.90,220.43 106.37,234.56 106.37,262.82 81.90,276.95 57.43,262.82 57.43,234.56" aria-label="Western Highlands"/>
+    <text class="label" x="81.90" y="248.69">WHM</text>
+  </g>
+  <g class="state" data-state="SAN">
+    <title>Sandaun</title>
+    <polygon class="tile" points="57.43,93.26 81.90,107.39 81.90,135.65 57.43,149.78 32.95,135.65 32.95,107.39" aria-label="Sandaun"/>
+    <text class="label" x="57.43" y="121.52">SAN</text>
+  </g>
+  <g class="state" data-state="GPK">
+    <title>Gulf</title>
+    <polygon class="tile" points="57.43,178.04 81.90,192.17 81.90,220.43 57.43,234.56 32.95,220.43 32.95,192.17" aria-label="Gulf"/>
+    <text class="label" x="57.43" y="206.30">GPK</text>
+  </g>
+  <g class="state" data-state="WPD">
+    <title>Western</title>
+    <polygon class="tile" points="32.95,135.65 57.43,149.78 57.43,178.04 32.95,192.17 8.48,178.04 8.48,149.78" aria-label="Western"/>
+    <text class="label" x="32.95" y="163.91">WPD</text>
+  </g>
+</svg>

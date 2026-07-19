@@ -1,0 +1,36 @@
+name: CI - App - Headless - Pagify
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/headless/pagify/languages/go/**'
+      - '.github/workflows/ci-app-headless-pagify.yaml'
+      - '.github/workflows/ci-app-headless-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-headless-pagify-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-headless-template.yaml
+    with:
+      package: packages/app/headless/pagify/languages/go
+      rustPackage: ''
+      releaseName: app-headless-pagify-latest
+      releaseTitle: App - Headless - Pagify (latest)
+      artifactName: app-headless-pagify
+      artifactPath: packages/app/headless/pagify/languages/go/bin/*
+      rustArtifactPath: ''
+      installZig: false
+      installRustDeps: false

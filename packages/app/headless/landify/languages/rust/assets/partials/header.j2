@@ -1,0 +1,9 @@
+<header>
+      <a class="brand" href="#top">
+        {% if config.site.mark %}<span class="mark">{{ config.site.mark }}</span>{% endif %}
+        <span>{{ config.site.name }}</span>
+      </a>
+      <nav>
+        {% for item in config.site.nav %}<a href="{{ item.href }}">{{ item.label }}</a>{% endfor %}
+      </nav>
+    </header>

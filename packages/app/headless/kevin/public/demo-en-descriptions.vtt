@@ -1,0 +1,34 @@
+WEBVTT
+
+NOTE Animated terminal (1280x720, dark slate) showing the KeVIN key/value
+store workflow. Cues are timed to the line animations in demo.svg.
+
+00:00.900 --> 00:01.700
+Command: kv --port 6379
+
+00:01.700 --> 00:03.100
+Output: listening on 0.0.0.0:6379
+
+00:03.100 --> 00:03.900
+Command: SET session 7a1f
+
+00:03.900 --> 00:05.300
+Output: OK · stored in RAM
+
+00:05.300 --> 00:06.100
+Command: GET session
+
+00:06.100 --> 00:07.600
+Output: "7a1f"
+
+00:07.600 --> 00:08.400
+Command: KEYS *
+
+00:08.400 --> 00:09.400
+Output: session
+
+00:09.400 --> 00:11.000
+Output: lookups served from RAM in µs
+
+00:11.000 --> 00:14.800
+Blank prompt

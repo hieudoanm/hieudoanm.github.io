@@ -1,0 +1,72 @@
+@plugin 'daisyui' {
+  themes:
+    football-light --default,
+    football-dark;
+}
+
+@plugin 'daisyui/theme' {
+  name: 'football-light';
+  default: true;
+  color-scheme: 'light';
+  --color-base-100: #f4fbf4;
+  --color-base-200: #e0f2e0;
+  --color-base-300: #c6e6c6;
+  --color-base-content: #0d2b12;
+  --color-primary: #16a34a;
+  --color-primary-content: #ffffff;
+  --color-secondary: #f8fafc;
+  --color-secondary-content: #0d2b12;
+  --color-accent: #0ea5e9;
+  --color-accent-content: #ffffff;
+  --color-neutral: #3f8f52;
+  --color-neutral-content: #f4fbf4;
+  --color-info: #0284c7;
+  --color-info-content: #ffffff;
+  --color-success: #15803d;
+  --color-success-content: #ffffff;
+  --color-warning: #d97706;
+  --color-warning-content: #1f0f00;
+  --color-error: #dc2626;
+  --color-error-content: #ffffff;
+  --radius-selector: 2rem;
+  --radius-field: 2rem;
+  --radius-box: 2rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+@plugin 'daisyui/theme' {
+  name: 'football-dark';
+  color-scheme: 'dark';
+  --color-base-100: #0c2110;
+  --color-base-200: #122b17;
+  --color-base-300: #1d4024;
+  --color-base-content: #d8f2dd;
+  --color-primary: #22c55e;
+  --color-primary-content: #042718;
+  --color-secondary: #e6edf5;
+  --color-secondary-content: #0c2110;
+  --color-accent: #38bdf8;
+  --color-accent-content: #052029;
+  --color-neutral: #1d4024;
+  --color-neutral-content: #d8f2dd;
+  --color-info: #38bdf8;
+  --color-info-content: #052029;
+  --color-success: #34d399;
+  --color-success-content: #04271a;
+  --color-warning: #f59e0b;
+  --color-warning-content: #241700;
+  --color-error: #fb7185;
+  --color-error-content: #2b0508;
+  --radius-selector: 2rem;
+  --radius-field: 2rem;
+  --radius-box: 2rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}

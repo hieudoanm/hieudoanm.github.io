@@ -1,0 +1,1751 @@
+{
+  "version": 1,
+  "root": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/app/headless/pagify/languages/go/docs",
+  "nodes": [
+    {
+      "id": "00-overview.md",
+      "path": "00-overview.md",
+      "extension": ".md"
+    },
+    {
+      "id": "01-requirements.md",
+      "path": "01-requirements.md",
+      "extension": ".md"
+    },
+    {
+      "id": "01-requirements/README.md",
+      "path": "01-requirements/README.md",
+      "extension": ".md"
+    },
+    {
+      "id": "01-requirements/functional-requirements.md",
+      "path": "01-requirements/functional-requirements.md",
+      "extension": ".md"
+    },
+    {
+      "id": "01-requirements/non-functional-requirements.md",
+      "path": "01-requirements/non-functional-requirements.md",
+      "extension": ".md"
+    },
+    {
+      "id": "02-features.md",
+      "path": "02-features.md",
+      "extension": ".md"
+    },
+    {
+      "id": "02-features/FEATURE-01-Markdown-Build.md",
+      "path": "02-features/FEATURE-01-Markdown-Build.md",
+      "extension": ".md"
+    },
+    {
+      "id": "02-features/FEATURE-02-Zero-Config-Discovery.md",
+      "path": "02-features/FEATURE-02-Zero-Config-Discovery.md",
+      "extension": ".md"
+    },
+    {
+      "id": "02-features/FEATURE-03-Frontmatter.md",
+      "path": "02-features/FEATURE-03-Frontmatter.md",
+      "extension": ".md"
+    },
+    {
+      "id": "02-features/FEATURE-04-Client-Side-Search.md",
+      "path": "02-features/FEATURE-04-Client-Side-Search.md",
+      "extension": ".md"
+    },
+    {
+      "id": "02-features/FEATURE-05-Light-Dark-Theme.md",
+      "path": "02-features/FEATURE-05-Light-Dark-Theme.md",
+      "extension": ".md"
+    },
+    {
+      "id": "02-features/FEATURE-06-Responsive-Layout.md",
+      "path": "02-features/FEATURE-06-Responsive-Layout.md",
+      "extension": ".md"
+    },
+    {
+      "id": "02-features/FEATURE-07-Local-Preview.md",
+      "path": "02-features/FEATURE-07-Local-Preview.md",
+      "extension": ".md"
+    },
+    {
+      "id": "02-features/FEATURE-08-JSON-API.md",
+      "path": "02-features/FEATURE-08-JSON-API.md",
+      "extension": ".md"
+    },
+    {
+      "id": "02-features/README.md",
+      "path": "02-features/README.md",
+      "extension": ".md"
+    },
+    {
+      "id": "03-user-stories.md",
+      "path": "03-user-stories.md",
+      "extension": ".md"
+    },
+    {
+      "id": "03-user-stories/README.md",
+      "path": "03-user-stories/README.md",
+      "extension": ".md"
+    },
+    {
+      "id": "03-user-stories/US-001.md",
+      "path": "03-user-stories/US-001.md",
+      "extension": ".md"
+    },
+    {
+      "id": "03-user-stories/US-002.md",
+      "path": "03-user-stories/US-002.md",
+      "extension": ".md"
+    },
+    {
+      "id": "03-user-stories/US-003.md",
+      "path": "03-user-stories/US-003.md",
+      "extension": ".md"
+    },
+    {
+      "id": "03-user-stories/US-004.md",
+      "path": "03-user-stories/US-004.md",
+      "extension": ".md"
+    },
+    {
+      "id": "03-user-stories/US-005.md",
+      "path": "03-user-stories/US-005.md",
+      "extension": ".md"
+    },
+    {
+      "id": "03-user-stories/US-006.md",
+      "path": "03-user-stories/US-006.md",
+      "extension": ".md"
+    },
+    {
+      "id": "04-architecture.md",
+      "path": "04-architecture.md",
+      "extension": ".md"
+    },
+    {
+      "id": "04-architecture/README.md",
+      "path": "04-architecture/README.md",
+      "extension": ".md"
+    },
+    {
+      "id": "04-architecture/images/README.md",
+      "path": "04-architecture/images/README.md",
+      "extension": ".md"
+    },
+    {
+      "id": "04-architecture/svg/README.md",
+      "path": "04-architecture/svg/README.md",
+      "extension": ".md"
+    },
+    {
+      "id": "05-data-model.md",
+      "path": "05-data-model.md",
+      "extension": ".md"
+    },
+    {
+      "id": "05-data-model/README.md",
+      "path": "05-data-model/README.md",
+      "extension": ".md"
+    },
+    {
+      "id": "05-data-model/build/README.md",
+      "path": "05-data-model/build/README.md",
+      "extension": ".md"
+    },
+    {
+      "id": "05-data-model/markdown/README.md",
+      "path": "05-data-model/markdown/README.md",
+      "extension": ".md"
+    },
+    {
+      "id": "05-data-model/server/README.md",
+      "path": "05-data-model/server/README.md",
+      "extension": ".md"
+    },
+    {
+      "id": "05-data-model/site/README.md",
+      "path": "05-data-model/site/README.md",
+      "extension": ".md"
+    },
+    {
+      "id": "05-data-model/theme/README.md",
+      "path": "05-data-model/theme/README.md",
+      "extension": ".md"
+    },
+    {
+      "id": "05-data-model/workspace/README.md",
+      "path": "05-data-model/workspace/README.md",
+      "extension": ".md"
+    },
+    {
+      "id": "06-api-specification.md",
+      "path": "06-api-specification.md",
+      "extension": ".md"
+    },
+    {
+      "id": "06-api-specification/README.md",
+      "path": "06-api-specification/README.md",
+      "extension": ".md"
+    },
+    {
+      "id": "07-ui-ux-design.md",
+      "path": "07-ui-ux-design.md",
+      "extension": ".md"
+    },
+    {
+      "id": "07-ui-ux-design/README.md",
+      "path": "07-ui-ux-design/README.md",
+      "extension": ".md"
+    },
+    {
+      "id": "07-ui-ux-design/brand/README.md",
+      "path": "07-ui-ux-design/brand/README.md",
+      "extension": ".md"
+    },
+    {
+      "id": "07-ui-ux-design/brand/images/README.md",
+      "path": "07-ui-ux-design/brand/images/README.md",
+      "extension": ".md"
+    },
+    {
+      "id": "07-ui-ux-design/brand/svg/README.md",
+      "path": "07-ui-ux-design/brand/svg/README.md",
+      "extension": ".md"
+    },
+    {
+      "id": "07-ui-ux-design/prototypes/README.md",
+      "path": "07-ui-ux-design/prototypes/README.md",
+      "extension": ".md"
+    },
+    {
+      "id": "07-ui-ux-design/prototypes/images/README.md",
+      "path": "07-ui-ux-design/prototypes/images/README.md",
+      "extension": ".md"
+    },
+    {
+      "id": "07-ui-ux-design/prototypes/images/dark/README.md",
+      "path": "07-ui-ux-design/prototypes/images/dark/README.md",
+      "extension": ".md"
+    },
+    {
+      "id": "07-ui-ux-design/prototypes/images/light/README.md",
+      "path": "07-ui-ux-design/prototypes/images/light/README.md",
+      "extension": ".md"
+    },
+    {
+      "id": "07-ui-ux-design/system/accessibility.md",
+      "path": "07-ui-ux-design/system/accessibility.md",
+      "extension": ".md"
+    },
+    {
+      "id": "07-ui-ux-design/system/animation.md",
+      "path": "07-ui-ux-design/system/animation.md",
+      "extension": ".md"
+    },
+    {
+      "id": "07-ui-ux-design/system/components.md",
+      "path": "07-ui-ux-design/system/components.md",
+      "extension": ".md"
+    },
+    {
+      "id": "07-ui-ux-design/system/design-tokens.md",
+      "path": "07-ui-ux-design/system/design-tokens.md",
+      "extension": ".md"
+    },
+    {
+      "id": "07-ui-ux-design/system/iconography.md",
+      "path": "07-ui-ux-design/system/iconography.md",
+      "extension": ".md"
+    },
+    {
+      "id": "07-ui-ux-design/system/layout.md",
+      "path": "07-ui-ux-design/system/layout.md",
+      "extension": ".md"
+    },
+    {
+      "id": "07-ui-ux-design/system/responsive.md",
+      "path": "07-ui-ux-design/system/responsive.md",
+      "extension": ".md"
+    },
+    {
+      "id": "07-ui-ux-design/system/screens.md",
+      "path": "07-ui-ux-design/system/screens.md",
+      "extension": ".md"
+    },
+    {
+      "id": "07-ui-ux-design/system/states.md",
+      "path": "07-ui-ux-design/system/states.md",
+      "extension": ".md"
+    },
+    {
+      "id": "08-tech-stack.md",
+      "path": "08-tech-stack.md",
+      "extension": ".md"
+    },
+    {
+      "id": "08-tech-stack/README.md",
+      "path": "08-tech-stack/README.md",
+      "extension": ".md"
+    },
+    {
+      "id": "08-tech-stack/backend/README.md",
+      "path": "08-tech-stack/backend/README.md",
+      "extension": ".md"
+    },
+    {
+      "id": "08-tech-stack/backend/cobra.md",
+      "path": "08-tech-stack/backend/cobra.md",
+      "extension": ".md"
+    },
+    {
+      "id": "08-tech-stack/backend/go.md",
+      "path": "08-tech-stack/backend/go.md",
+      "extension": ".md"
+    },
+    {
+      "id": "08-tech-stack/backend/goldmark.md",
+      "path": "08-tech-stack/backend/goldmark.md",
+      "extension": ".md"
+    },
+    {
+      "id": "08-tech-stack/frontend/README.md",
+      "path": "08-tech-stack/frontend/README.md",
+      "extension": ".md"
+    },
+    {
+      "id": "08-tech-stack/frontend/core/README.md",
+      "path": "08-tech-stack/frontend/core/README.md",
+      "extension": ".md"
+    },
+    {
+      "id": "08-tech-stack/frontend/core/javascript.md",
+      "path": "08-tech-stack/frontend/core/javascript.md",
+      "extension": ".md"
+    },
+    {
+      "id": "08-tech-stack/frontend/core/template.md",
+      "path": "08-tech-stack/frontend/core/template.md",
+      "extension": ".md"
+    },
+    {
+      "id": "08-tech-stack/frontend/styles/README.md",
+      "path": "08-tech-stack/frontend/styles/README.md",
+      "extension": ".md"
+    },
+    {
+      "id": "08-tech-stack/frontend/styles/css.md",
+      "path": "08-tech-stack/frontend/styles/css.md",
+      "extension": ".md"
+    },
+    {
+      "id": "08-tech-stack/frontend/testing/README.md",
+      "path": "08-tech-stack/frontend/testing/README.md",
+      "extension": ".md"
+    },
+    {
+      "id": "08-tech-stack/frontend/tools/README.md",
+      "path": "08-tech-stack/frontend/tools/README.md",
+      "extension": ".md"
+    },
+    {
+      "id": "08-tech-stack/infrastructure/README.md",
+      "path": "08-tech-stack/infrastructure/README.md",
+      "extension": ".md"
+    },
+    {
+      "id": "08-tech-stack/infrastructure/docker.md",
+      "path": "08-tech-stack/infrastructure/docker.md",
+      "extension": ".md"
+    },
+    {
+      "id": "08-tech-stack/infrastructure/github-actions.md",
+      "path": "08-tech-stack/infrastructure/github-actions.md",
+      "extension": ".md"
+    },
+    {
+      "id": "08-tech-stack/tools/README.md",
+      "path": "08-tech-stack/tools/README.md",
+      "extension": ".md"
+    },
+    {
+      "id": "08-tech-stack/tools/gofmt.md",
+      "path": "08-tech-stack/tools/gofmt.md",
+      "extension": ".md"
+    },
+    {
+      "id": "08-tech-stack/tools/golangci-lint.md",
+      "path": "08-tech-stack/tools/golangci-lint.md",
+      "extension": ".md"
+    },
+    {
+      "id": "09-testing-strategy.md",
+      "path": "09-testing-strategy.md",
+      "extension": ".md"
+    },
+    {
+      "id": "09-testing-strategy/01-test-layers.md",
+      "path": "09-testing-strategy/01-test-layers.md",
+      "extension": ".md"
+    },
+    {
+      "id": "09-testing-strategy/02-test-fixtures.md",
+      "path": "09-testing-strategy/02-test-fixtures.md",
+      "extension": ".md"
+    },
+    {
+      "id": "09-testing-strategy/03-test-organization.md",
+      "path": "09-testing-strategy/03-test-organization.md",
+      "extension": ".md"
+    },
+    {
+      "id": "09-testing-strategy/04-quality-gates.md",
+      "path": "09-testing-strategy/04-quality-gates.md",
+      "extension": ".md"
+    },
+    {
+      "id": "09-testing-strategy/05-critical-test-scenarios.md",
+      "path": "09-testing-strategy/05-critical-test-scenarios.md",
+      "extension": ".md"
+    },
+    {
+      "id": "09-testing-strategy/06-definition-of-done.md",
+      "path": "09-testing-strategy/06-definition-of-done.md",
+      "extension": ".md"
+    },
+    {
+      "id": "09-testing-strategy/README.md",
+      "path": "09-testing-strategy/README.md",
+      "extension": ".md"
+    },
+    {
+      "id": "10-implementation-plan.md",
+      "path": "10-implementation-plan.md",
+      "extension": ".md"
+    },
+    {
+      "id": "10-implementation-plan/README.md",
+      "path": "10-implementation-plan/README.md",
+      "extension": ".md"
+    },
+    {
+      "id": "10-implementation-plan/definition-of-done.md",
+      "path": "10-implementation-plan/definition-of-done.md",
+      "extension": ".md"
+    },
+    {
+      "id": "10-implementation-plan/milestones.md",
+      "path": "10-implementation-plan/milestones.md",
+      "extension": ".md"
+    },
+    {
+      "id": "10-implementation-plan/phase-0-foundation.md",
+      "path": "10-implementation-plan/phase-0-foundation.md",
+      "extension": ".md"
+    },
+    {
+      "id": "10-implementation-plan/phase-1-core-build.md",
+      "path": "10-implementation-plan/phase-1-core-build.md",
+      "extension": ".md"
+    },
+    {
+      "id": "10-implementation-plan/phase-2-navigation.md",
+      "path": "10-implementation-plan/phase-2-navigation.md",
+      "extension": ".md"
+    },
+    {
+      "id": "10-implementation-plan/phase-3-theme.md",
+      "path": "10-implementation-plan/phase-3-theme.md",
+      "extension": ".md"
+    },
+    {
+      "id": "10-implementation-plan/phase-4-search.md",
+      "path": "10-implementation-plan/phase-4-search.md",
+      "extension": ".md"
+    },
+    {
+      "id": "10-implementation-plan/phase-5-preview.md",
+      "path": "10-implementation-plan/phase-5-preview.md",
+      "extension": ".md"
+    },
+    {
+      "id": "10-implementation-plan/phase-6-serve-api.md",
+      "path": "10-implementation-plan/phase-6-serve-api.md",
+      "extension": ".md"
+    },
+    {
+      "id": "10-implementation-plan/phase-7-polish.md",
+      "path": "10-implementation-plan/phase-7-polish.md",
+      "extension": ".md"
+    },
+    {
+      "id": "10-implementation-plan/phase-8-release.md",
+      "path": "10-implementation-plan/phase-8-release.md",
+      "extension": ".md"
+    },
+    {
+      "id": "10-implementation-plan/risk-mitigation.md",
+      "path": "10-implementation-plan/risk-mitigation.md",
+      "extension": ".md"
+    },
+    {
+      "id": "11-deployment.md",
+      "path": "11-deployment.md",
+      "extension": ".md"
+    },
+    {
+      "id": "11-deployment/README.md",
+      "path": "11-deployment/README.md",
+      "extension": ".md"
+    },
+    {
+      "id": "11-deployment/ci-cd-pipeline.md",
+      "path": "11-deployment/ci-cd-pipeline.md",
+      "extension": ".md"
+    },
+    {
+      "id": "11-deployment/local-development.md",
+      "path": "11-deployment/local-development.md",
+      "extension": ".md"
+    },
+    {
+      "id": "12-operations.md",
+      "path": "12-operations.md",
+      "extension": ".md"
+    },
+    {
+      "id": "12-operations/README.md",
+      "path": "12-operations/README.md",
+      "extension": ".md"
+    },
+    {
+      "id": "12-operations/backup-recovery.md",
+      "path": "12-operations/backup-recovery.md",
+      "extension": ".md"
+    },
+    {
+      "id": "12-operations/disaster-recovery.md",
+      "path": "12-operations/disaster-recovery.md",
+      "extension": ".md"
+    },
+    {
+      "id": "12-operations/monitoring-alerting.md",
+      "path": "12-operations/monitoring-alerting.md",
+      "extension": ".md"
+    },
+    {
+      "id": "12-operations/rollback-strategy.md",
+      "path": "12-operations/rollback-strategy.md",
+      "extension": ".md"
+    },
+    {
+      "id": "12-operations/security.md",
+      "path": "12-operations/security.md",
+      "extension": ".md"
+    },
+    {
+      "id": "AGENTS.md",
+      "path": "AGENTS.md",
+      "extension": ".md"
+    },
+    {
+      "id": "README.md",
+      "path": "README.md",
+      "extension": ".md"
+    }
+  ],
+  "edges": [
+    {
+      "source": "00-overview.md",
+      "target": "10-implementation-plan/definition-of-done.md",
+      "raw_link": "10-implementation-plan/definition-of-done.md",
+      "line": 145,
+      "status": "resolved"
+    },
+    {
+      "source": "01-requirements.md",
+      "target": "00-overview.md",
+      "raw_link": "00-overview.md",
+      "line": 3,
+      "status": "resolved"
+    },
+    {
+      "source": "01-requirements.md",
+      "target": "02-features.md",
+      "raw_link": "02-features.md",
+      "line": 52,
+      "status": "resolved"
+    },
+    {
+      "source": "01-requirements.md",
+      "target": "04-architecture.md",
+      "raw_link": "04-architecture.md",
+      "line": 53,
+      "status": "resolved"
+    },
+    {
+      "source": "01-requirements.md",
+      "target": "05-data-model.md",
+      "raw_link": "05-data-model.md",
+      "line": 54,
+      "status": "resolved"
+    },
+    {
+      "source": "01-requirements.md",
+      "target": "06-api-specification.md",
+      "raw_link": "06-api-specification.md",
+      "line": 55,
+      "status": "resolved"
+    },
+    {
+      "source": "01-requirements.md",
+      "target": "09-testing-strategy.md",
+      "raw_link": "09-testing-strategy.md",
+      "line": 56,
+      "status": "resolved"
+    },
+    {
+      "source": "01-requirements.md",
+      "target": "AGENTS.md",
+      "raw_link": "AGENTS.md",
+      "line": 3,
+      "status": "resolved"
+    },
+    {
+      "source": "01-requirements/README.md",
+      "target": "01-requirements.md",
+      "raw_link": "../01-requirements.md",
+      "line": 10,
+      "status": "resolved"
+    },
+    {
+      "source": "01-requirements/README.md",
+      "target": "01-requirements/functional-requirements.md",
+      "raw_link": "functional-requirements.md",
+      "line": 7,
+      "status": "resolved"
+    },
+    {
+      "source": "01-requirements/README.md",
+      "target": "01-requirements/non-functional-requirements.md",
+      "raw_link": "non-functional-requirements.md",
+      "line": 8,
+      "status": "resolved"
+    },
+    {
+      "source": "01-requirements/functional-requirements.md",
+      "target": "09-testing-strategy.md",
+      "raw_link": "../09-testing-strategy.md",
+      "line": 3,
+      "status": "resolved"
+    },
+    {
+      "source": "02-features.md",
+      "target": "02-features.md",
+      "raw_link": "02-features.md",
+      "line": 18,
+      "status": "resolved"
+    },
+    {
+      "source": "02-features.md",
+      "target": "03-user-stories.md",
+      "raw_link": "03-user-stories.md",
+      "line": 23,
+      "status": "resolved"
+    },
+    {
+      "source": "02-features.md",
+      "target": "04-architecture.md",
+      "raw_link": "04-architecture.md",
+      "line": 24,
+      "status": "resolved"
+    },
+    {
+      "source": "02-features/README.md",
+      "target": "02-features.md",
+      "raw_link": "../02-features.md",
+      "line": 16,
+      "status": "resolved"
+    },
+    {
+      "source": "02-features/README.md",
+      "target": "02-features/FEATURE-01-Markdown-Build.md",
+      "raw_link": "FEATURE-01-Markdown-Build.md",
+      "line": 7,
+      "status": "resolved"
+    },
+    {
+      "source": "02-features/README.md",
+      "target": "02-features/FEATURE-02-Zero-Config-Discovery.md",
+      "raw_link": "FEATURE-02-Zero-Config-Discovery.md",
+      "line": 8,
+      "status": "resolved"
+    },
+    {
+      "source": "02-features/README.md",
+      "target": "02-features/FEATURE-03-Frontmatter.md",
+      "raw_link": "FEATURE-03-Frontmatter.md",
+      "line": 9,
+      "status": "resolved"
+    },
+    {
+      "source": "02-features/README.md",
+      "target": "02-features/FEATURE-04-Client-Side-Search.md",
+      "raw_link": "FEATURE-04-Client-Side-Search.md",
+      "line": 10,
+      "status": "resolved"
+    },
+    {
+      "source": "02-features/README.md",
+      "target": "02-features/FEATURE-05-Light-Dark-Theme.md",
+      "raw_link": "FEATURE-05-Light-Dark-Theme.md",
+      "line": 11,
+      "status": "resolved"
+    },
+    {
+      "source": "02-features/README.md",
+      "target": "02-features/FEATURE-06-Responsive-Layout.md",
+      "raw_link": "FEATURE-06-Responsive-Layout.md",
+      "line": 12,
+      "status": "resolved"
+    },
+    {
+      "source": "02-features/README.md",
+      "target": "02-features/FEATURE-07-Local-Preview.md",
+      "raw_link": "FEATURE-07-Local-Preview.md",
+      "line": 13,
+      "status": "resolved"
+    },
+    {
+      "source": "02-features/README.md",
+      "target": "02-features/FEATURE-08-JSON-API.md",
+      "raw_link": "FEATURE-08-JSON-API.md",
+      "line": 14,
+      "status": "resolved"
+    },
+    {
+      "source": "03-user-stories.md",
+      "target": "01-requirements.md",
+      "raw_link": "01-requirements.md",
+      "line": 21,
+      "status": "resolved"
+    },
+    {
+      "source": "03-user-stories.md",
+      "target": "03-user-stories.md",
+      "raw_link": "03-user-stories.md",
+      "line": 16,
+      "status": "resolved"
+    },
+    {
+      "source": "03-user-stories/README.md",
+      "target": "03-user-stories.md",
+      "raw_link": "../03-user-stories.md",
+      "line": 14,
+      "status": "resolved"
+    },
+    {
+      "source": "03-user-stories/README.md",
+      "target": "03-user-stories/US-001.md",
+      "raw_link": "US-001.md",
+      "line": 7,
+      "status": "resolved"
+    },
+    {
+      "source": "03-user-stories/README.md",
+      "target": "03-user-stories/US-002.md",
+      "raw_link": "US-002.md",
+      "line": 8,
+      "status": "resolved"
+    },
+    {
+      "source": "03-user-stories/README.md",
+      "target": "03-user-stories/US-003.md",
+      "raw_link": "US-003.md",
+      "line": 9,
+      "status": "resolved"
+    },
+    {
+      "source": "03-user-stories/README.md",
+      "target": "03-user-stories/US-004.md",
+      "raw_link": "US-004.md",
+      "line": 10,
+      "status": "resolved"
+    },
+    {
+      "source": "03-user-stories/README.md",
+      "target": "03-user-stories/US-005.md",
+      "raw_link": "US-005.md",
+      "line": 11,
+      "status": "resolved"
+    },
+    {
+      "source": "03-user-stories/README.md",
+      "target": "03-user-stories/US-006.md",
+      "raw_link": "US-006.md",
+      "line": 12,
+      "status": "resolved"
+    },
+    {
+      "source": "04-architecture.md",
+      "target": "04-architecture/mmd/01-high-level-architecture.mmd",
+      "raw_link": "./04-architecture/mmd/01-high-level-architecture.mmd",
+      "line": 39,
+      "status": "resolved"
+    },
+    {
+      "source": "04-architecture.md",
+      "target": "05-data-model.md",
+      "raw_link": "05-data-model.md",
+      "line": 191,
+      "status": "resolved"
+    },
+    {
+      "source": "04-architecture.md",
+      "target": "06-api-specification.md",
+      "raw_link": "06-api-specification.md",
+      "line": 192,
+      "status": "resolved"
+    },
+    {
+      "source": "04-architecture.md",
+      "target": "08-tech-stack.md",
+      "raw_link": "08-tech-stack.md",
+      "line": 187,
+      "status": "resolved"
+    },
+    {
+      "source": "04-architecture.md",
+      "target": "11-deployment.md",
+      "raw_link": "11-deployment.md",
+      "line": 193,
+      "status": "resolved"
+    },
+    {
+      "source": "04-architecture/README.md",
+      "target": "04-architecture.md",
+      "raw_link": "../04-architecture.md",
+      "line": 12,
+      "status": "resolved"
+    },
+    {
+      "source": "04-architecture/README.md",
+      "target": "04-architecture/architecture.sh",
+      "raw_link": "architecture.sh",
+      "line": 7,
+      "status": "resolved"
+    },
+    {
+      "source": "04-architecture/README.md",
+      "target": "04-architecture/images",
+      "raw_link": "images/",
+      "line": 8,
+      "status": "resolved"
+    },
+    {
+      "source": "04-architecture/README.md",
+      "target": "04-architecture/mmd",
+      "raw_link": "mmd/",
+      "line": 9,
+      "status": "resolved"
+    },
+    {
+      "source": "04-architecture/README.md",
+      "target": "04-architecture/mmd/01-high-level-architecture.mmd",
+      "raw_link": "mmd/01-high-level-architecture.mmd",
+      "line": 18,
+      "status": "resolved"
+    },
+    {
+      "source": "04-architecture/README.md",
+      "target": "04-architecture/svg",
+      "raw_link": "svg/",
+      "line": 10,
+      "status": "resolved"
+    },
+    {
+      "source": "04-architecture/images/README.md",
+      "target": "04-architecture/mmd",
+      "raw_link": "../mmd/",
+      "line": 3,
+      "status": "resolved"
+    },
+    {
+      "source": "04-architecture/svg/README.md",
+      "target": "04-architecture/mmd",
+      "raw_link": "../mmd/",
+      "line": 3,
+      "status": "resolved"
+    },
+    {
+      "source": "05-data-model.md",
+      "target": "06-api-specification.md",
+      "raw_link": "06-api-specification.md",
+      "line": 88,
+      "status": "resolved"
+    },
+    {
+      "source": "05-data-model.md",
+      "target": "08-tech-stack.md",
+      "raw_link": "08-tech-stack.md",
+      "line": 89,
+      "status": "resolved"
+    },
+    {
+      "source": "05-data-model/README.md",
+      "target": "05-data-model.md",
+      "raw_link": "../05-data-model.md",
+      "line": 14,
+      "status": "resolved"
+    },
+    {
+      "source": "05-data-model/README.md",
+      "target": "05-data-model/build",
+      "raw_link": "build/",
+      "line": 9,
+      "status": "resolved"
+    },
+    {
+      "source": "05-data-model/README.md",
+      "target": "05-data-model/markdown",
+      "raw_link": "markdown/",
+      "line": 8,
+      "status": "resolved"
+    },
+    {
+      "source": "05-data-model/README.md",
+      "target": "05-data-model/server",
+      "raw_link": "server/",
+      "line": 11,
+      "status": "resolved"
+    },
+    {
+      "source": "05-data-model/README.md",
+      "target": "05-data-model/site",
+      "raw_link": "site/",
+      "line": 7,
+      "status": "resolved"
+    },
+    {
+      "source": "05-data-model/README.md",
+      "target": "05-data-model/theme",
+      "raw_link": "theme/",
+      "line": 10,
+      "status": "resolved"
+    },
+    {
+      "source": "05-data-model/README.md",
+      "target": "05-data-model/workspace",
+      "raw_link": "workspace/",
+      "line": 12,
+      "status": "resolved"
+    },
+    {
+      "source": "06-api-specification.md",
+      "target": "06-api-specification/backend/openapi.json",
+      "raw_link": "06-api-specification/backend/openapi.json",
+      "line": 76,
+      "status": "resolved"
+    },
+    {
+      "source": "06-api-specification.md",
+      "target": "06-api-specification/backend/openapi.yaml",
+      "raw_link": "06-api-specification/backend/openapi.yaml",
+      "line": 75,
+      "status": "resolved"
+    },
+    {
+      "source": "06-api-specification.md",
+      "target": "08-tech-stack.md",
+      "raw_link": "08-tech-stack.md",
+      "line": 84,
+      "status": "resolved"
+    },
+    {
+      "source": "06-api-specification/README.md",
+      "target": "06-api-specification.md",
+      "raw_link": "../06-api-specification.md",
+      "line": 12,
+      "status": "resolved"
+    },
+    {
+      "source": "06-api-specification/README.md",
+      "target": "06-api-specification/backend/openapi.json",
+      "raw_link": "backend/openapi.json",
+      "line": 8,
+      "status": "resolved"
+    },
+    {
+      "source": "06-api-specification/README.md",
+      "target": "06-api-specification/backend/openapi.yaml",
+      "raw_link": "backend/openapi.yaml",
+      "line": 7,
+      "status": "resolved"
+    },
+    {
+      "source": "06-api-specification/README.md",
+      "target": "06-api-specification/openapi.py",
+      "raw_link": "openapi.py",
+      "line": 9,
+      "status": "resolved"
+    },
+    {
+      "source": "06-api-specification/README.md",
+      "target": "06-api-specification/openapi.sh",
+      "raw_link": "openapi.sh",
+      "line": 10,
+      "status": "resolved"
+    },
+    {
+      "source": "07-ui-ux-design.md",
+      "target": "04-architecture.md",
+      "raw_link": "04-architecture.md",
+      "line": 124,
+      "status": "resolved"
+    },
+    {
+      "source": "07-ui-ux-design.md",
+      "target": "08-tech-stack.md",
+      "raw_link": "08-tech-stack.md",
+      "line": 125,
+      "status": "resolved"
+    },
+    {
+      "source": "07-ui-ux-design.md",
+      "target": "09-testing-strategy.md",
+      "raw_link": "09-testing-strategy.md",
+      "line": 126,
+      "status": "resolved"
+    },
+    {
+      "source": "07-ui-ux-design/README.md",
+      "target": "07-ui-ux-design.md",
+      "raw_link": "../07-ui-ux-design.md",
+      "line": 11,
+      "status": "resolved"
+    },
+    {
+      "source": "07-ui-ux-design/README.md",
+      "target": "07-ui-ux-design/brand",
+      "raw_link": "brand/",
+      "line": 7,
+      "status": "resolved"
+    },
+    {
+      "source": "07-ui-ux-design/README.md",
+      "target": "07-ui-ux-design/prototypes",
+      "raw_link": "prototypes/",
+      "line": 8,
+      "status": "resolved"
+    },
+    {
+      "source": "07-ui-ux-design/README.md",
+      "target": "07-ui-ux-design/system",
+      "raw_link": "system/",
+      "line": 9,
+      "status": "resolved"
+    },
+    {
+      "source": "07-ui-ux-design/brand/README.md",
+      "target": "07-ui-ux-design.md",
+      "raw_link": "../../07-ui-ux-design.md",
+      "line": 16,
+      "status": "resolved"
+    },
+    {
+      "source": "07-ui-ux-design/brand/README.md",
+      "target": "07-ui-ux-design/brand/brand.sh",
+      "raw_link": "brand.sh",
+      "line": 7,
+      "status": "resolved"
+    },
+    {
+      "source": "07-ui-ux-design/brand/README.md",
+      "target": "07-ui-ux-design/brand/images",
+      "raw_link": "images/",
+      "line": 8,
+      "status": "resolved"
+    },
+    {
+      "source": "07-ui-ux-design/brand/README.md",
+      "target": "07-ui-ux-design/brand/svg",
+      "raw_link": "svg/",
+      "line": 9,
+      "status": "resolved"
+    },
+    {
+      "source": "07-ui-ux-design/brand/images/README.md",
+      "target": "07-ui-ux-design/brand/svg",
+      "raw_link": "../svg/",
+      "line": 3,
+      "status": "resolved"
+    },
+    {
+      "source": "07-ui-ux-design/prototypes/README.md",
+      "target": "07-ui-ux-design.md",
+      "raw_link": "../../07-ui-ux-design.md",
+      "line": 13,
+      "status": "resolved"
+    },
+    {
+      "source": "07-ui-ux-design/prototypes/README.md",
+      "target": "07-ui-ux-design/prototypes/html",
+      "raw_link": "html/",
+      "line": 10,
+      "status": "resolved"
+    },
+    {
+      "source": "07-ui-ux-design/prototypes/README.md",
+      "target": "07-ui-ux-design/prototypes/images",
+      "raw_link": "images/",
+      "line": 11,
+      "status": "resolved"
+    },
+    {
+      "source": "07-ui-ux-design/prototypes/README.md",
+      "target": "07-ui-ux-design/prototypes/pyproject.toml",
+      "raw_link": "pyproject.toml",
+      "line": 9,
+      "status": "resolved"
+    },
+    {
+      "source": "07-ui-ux-design/prototypes/README.md",
+      "target": "07-ui-ux-design/prototypes/screenshot.py",
+      "raw_link": "screenshot.py",
+      "line": 7,
+      "status": "resolved"
+    },
+    {
+      "source": "07-ui-ux-design/prototypes/README.md",
+      "target": "07-ui-ux-design/prototypes/screenshot.sh",
+      "raw_link": "screenshot.sh",
+      "line": 8,
+      "status": "resolved"
+    },
+    {
+      "source": "07-ui-ux-design/prototypes/images/README.md",
+      "target": "07-ui-ux-design/prototypes/images/dark",
+      "raw_link": "dark/",
+      "line": 7,
+      "status": "resolved"
+    },
+    {
+      "source": "07-ui-ux-design/prototypes/images/README.md",
+      "target": "07-ui-ux-design/prototypes/images/light",
+      "raw_link": "light/",
+      "line": 8,
+      "status": "resolved"
+    },
+    {
+      "source": "08-tech-stack.md",
+      "target": "09-testing-strategy.md",
+      "raw_link": "09-testing-strategy.md",
+      "line": 34,
+      "status": "resolved"
+    },
+    {
+      "source": "08-tech-stack/README.md",
+      "target": "08-tech-stack.md",
+      "raw_link": "../08-tech-stack.md",
+      "line": 12,
+      "status": "resolved"
+    },
+    {
+      "source": "08-tech-stack/README.md",
+      "target": "08-tech-stack/backend",
+      "raw_link": "backend/",
+      "line": 7,
+      "status": "resolved"
+    },
+    {
+      "source": "08-tech-stack/README.md",
+      "target": "08-tech-stack/frontend",
+      "raw_link": "frontend/",
+      "line": 8,
+      "status": "resolved"
+    },
+    {
+      "source": "08-tech-stack/README.md",
+      "target": "08-tech-stack/infrastructure",
+      "raw_link": "infrastructure/",
+      "line": 9,
+      "status": "resolved"
+    },
+    {
+      "source": "08-tech-stack/README.md",
+      "target": "08-tech-stack/tools",
+      "raw_link": "tools/",
+      "line": 10,
+      "status": "resolved"
+    },
+    {
+      "source": "08-tech-stack/backend/README.md",
+      "target": "08-tech-stack.md",
+      "raw_link": "../../08-tech-stack.md",
+      "line": 11,
+      "status": "resolved"
+    },
+    {
+      "source": "08-tech-stack/backend/README.md",
+      "target": "08-tech-stack/backend/cobra.md",
+      "raw_link": "cobra.md",
+      "line": 8,
+      "status": "resolved"
+    },
+    {
+      "source": "08-tech-stack/backend/README.md",
+      "target": "08-tech-stack/backend/go.md",
+      "raw_link": "go.md",
+      "line": 7,
+      "status": "resolved"
+    },
+    {
+      "source": "08-tech-stack/backend/README.md",
+      "target": "08-tech-stack/backend/goldmark.md",
+      "raw_link": "goldmark.md",
+      "line": 9,
+      "status": "resolved"
+    },
+    {
+      "source": "08-tech-stack/frontend/README.md",
+      "target": "08-tech-stack.md",
+      "raw_link": "../../08-tech-stack.md",
+      "line": 12,
+      "status": "resolved"
+    },
+    {
+      "source": "08-tech-stack/frontend/README.md",
+      "target": "08-tech-stack/frontend/core",
+      "raw_link": "core/",
+      "line": 7,
+      "status": "resolved"
+    },
+    {
+      "source": "08-tech-stack/frontend/README.md",
+      "target": "08-tech-stack/frontend/styles",
+      "raw_link": "styles/",
+      "line": 8,
+      "status": "resolved"
+    },
+    {
+      "source": "08-tech-stack/frontend/README.md",
+      "target": "08-tech-stack/frontend/testing",
+      "raw_link": "testing/",
+      "line": 9,
+      "status": "resolved"
+    },
+    {
+      "source": "08-tech-stack/frontend/README.md",
+      "target": "08-tech-stack/frontend/tools",
+      "raw_link": "tools/",
+      "line": 10,
+      "status": "resolved"
+    },
+    {
+      "source": "08-tech-stack/frontend/core/README.md",
+      "target": "08-tech-stack/frontend/core/javascript.md",
+      "raw_link": "javascript.md",
+      "line": 7,
+      "status": "resolved"
+    },
+    {
+      "source": "08-tech-stack/frontend/core/README.md",
+      "target": "08-tech-stack/frontend/core/template.md",
+      "raw_link": "template.md",
+      "line": 8,
+      "status": "resolved"
+    },
+    {
+      "source": "08-tech-stack/frontend/styles/README.md",
+      "target": "08-tech-stack/frontend/styles/css.md",
+      "raw_link": "css.md",
+      "line": 7,
+      "status": "resolved"
+    },
+    {
+      "source": "08-tech-stack/infrastructure/README.md",
+      "target": "08-tech-stack.md",
+      "raw_link": "../../08-tech-stack.md",
+      "line": 10,
+      "status": "resolved"
+    },
+    {
+      "source": "08-tech-stack/infrastructure/README.md",
+      "target": "08-tech-stack/infrastructure/docker.md",
+      "raw_link": "docker.md",
+      "line": 7,
+      "status": "resolved"
+    },
+    {
+      "source": "08-tech-stack/infrastructure/README.md",
+      "target": "08-tech-stack/infrastructure/github-actions.md",
+      "raw_link": "github-actions.md",
+      "line": 8,
+      "status": "resolved"
+    },
+    {
+      "source": "08-tech-stack/tools/README.md",
+      "target": "08-tech-stack.md",
+      "raw_link": "../../08-tech-stack.md",
+      "line": 10,
+      "status": "resolved"
+    },
+    {
+      "source": "08-tech-stack/tools/README.md",
+      "target": "08-tech-stack/tools/gofmt.md",
+      "raw_link": "gofmt.md",
+      "line": 7,
+      "status": "resolved"
+    },
+    {
+      "source": "08-tech-stack/tools/README.md",
+      "target": "08-tech-stack/tools/golangci-lint.md",
+      "raw_link": "golangci-lint.md",
+      "line": 8,
+      "status": "resolved"
+    },
+    {
+      "source": "09-testing-strategy.md",
+      "target": "09-testing-strategy/01-test-layers.md",
+      "raw_link": "09-testing-strategy/01-test-layers.md",
+      "line": 18,
+      "status": "resolved"
+    },
+    {
+      "source": "09-testing-strategy.md",
+      "target": "09-testing-strategy/02-test-fixtures.md",
+      "raw_link": "09-testing-strategy/02-test-fixtures.md",
+      "line": 22,
+      "status": "resolved"
+    },
+    {
+      "source": "09-testing-strategy.md",
+      "target": "09-testing-strategy/03-test-organization.md",
+      "raw_link": "09-testing-strategy/03-test-organization.md",
+      "line": 26,
+      "status": "resolved"
+    },
+    {
+      "source": "09-testing-strategy.md",
+      "target": "09-testing-strategy/04-quality-gates.md",
+      "raw_link": "09-testing-strategy/04-quality-gates.md",
+      "line": 30,
+      "status": "resolved"
+    },
+    {
+      "source": "09-testing-strategy.md",
+      "target": "09-testing-strategy/05-critical-test-scenarios.md",
+      "raw_link": "09-testing-strategy/05-critical-test-scenarios.md",
+      "line": 34,
+      "status": "resolved"
+    },
+    {
+      "source": "09-testing-strategy.md",
+      "target": "09-testing-strategy/06-definition-of-done.md",
+      "raw_link": "09-testing-strategy/06-definition-of-done.md",
+      "line": 38,
+      "status": "resolved"
+    },
+    {
+      "source": "09-testing-strategy.md",
+      "target": "10-implementation-plan.md",
+      "raw_link": "10-implementation-plan.md",
+      "line": 51,
+      "status": "resolved"
+    },
+    {
+      "source": "09-testing-strategy/README.md",
+      "target": "09-testing-strategy.md",
+      "raw_link": "../09-testing-strategy.md",
+      "line": 14,
+      "status": "resolved"
+    },
+    {
+      "source": "09-testing-strategy/README.md",
+      "target": "09-testing-strategy/01-test-layers.md",
+      "raw_link": "01-test-layers.md",
+      "line": 7,
+      "status": "resolved"
+    },
+    {
+      "source": "09-testing-strategy/README.md",
+      "target": "09-testing-strategy/02-test-fixtures.md",
+      "raw_link": "02-test-fixtures.md",
+      "line": 8,
+      "status": "resolved"
+    },
+    {
+      "source": "09-testing-strategy/README.md",
+      "target": "09-testing-strategy/03-test-organization.md",
+      "raw_link": "03-test-organization.md",
+      "line": 9,
+      "status": "resolved"
+    },
+    {
+      "source": "09-testing-strategy/README.md",
+      "target": "09-testing-strategy/04-quality-gates.md",
+      "raw_link": "04-quality-gates.md",
+      "line": 10,
+      "status": "resolved"
+    },
+    {
+      "source": "09-testing-strategy/README.md",
+      "target": "09-testing-strategy/05-critical-test-scenarios.md",
+      "raw_link": "05-critical-test-scenarios.md",
+      "line": 11,
+      "status": "resolved"
+    },
+    {
+      "source": "09-testing-strategy/README.md",
+      "target": "09-testing-strategy/06-definition-of-done.md",
+      "raw_link": "06-definition-of-done.md",
+      "line": 12,
+      "status": "resolved"
+    },
+    {
+      "source": "10-implementation-plan.md",
+      "target": "01-requirements.md",
+      "raw_link": "01-requirements.md",
+      "line": 27,
+      "status": "resolved"
+    },
+    {
+      "source": "10-implementation-plan.md",
+      "target": "10-implementation-plan.md",
+      "raw_link": "10-implementation-plan.md",
+      "line": 9,
+      "status": "resolved"
+    },
+    {
+      "source": "10-implementation-plan.md",
+      "target": "11-deployment.md",
+      "raw_link": "11-deployment.md",
+      "line": 29,
+      "status": "resolved"
+    },
+    {
+      "source": "10-implementation-plan/README.md",
+      "target": "10-implementation-plan.md",
+      "raw_link": "../10-implementation-plan.md",
+      "line": 20,
+      "status": "resolved"
+    },
+    {
+      "source": "10-implementation-plan/README.md",
+      "target": "10-implementation-plan/definition-of-done.md",
+      "raw_link": "definition-of-done.md",
+      "line": 7,
+      "status": "resolved"
+    },
+    {
+      "source": "10-implementation-plan/README.md",
+      "target": "10-implementation-plan/milestones.md",
+      "raw_link": "milestones.md",
+      "line": 8,
+      "status": "resolved"
+    },
+    {
+      "source": "10-implementation-plan/README.md",
+      "target": "10-implementation-plan/phase-0-foundation.md",
+      "raw_link": "phase-0-foundation.md",
+      "line": 9,
+      "status": "resolved"
+    },
+    {
+      "source": "10-implementation-plan/README.md",
+      "target": "10-implementation-plan/phase-1-core-build.md",
+      "raw_link": "phase-1-core-build.md",
+      "line": 10,
+      "status": "resolved"
+    },
+    {
+      "source": "10-implementation-plan/README.md",
+      "target": "10-implementation-plan/phase-2-navigation.md",
+      "raw_link": "phase-2-navigation.md",
+      "line": 11,
+      "status": "resolved"
+    },
+    {
+      "source": "10-implementation-plan/README.md",
+      "target": "10-implementation-plan/phase-3-theme.md",
+      "raw_link": "phase-3-theme.md",
+      "line": 12,
+      "status": "resolved"
+    },
+    {
+      "source": "10-implementation-plan/README.md",
+      "target": "10-implementation-plan/phase-4-search.md",
+      "raw_link": "phase-4-search.md",
+      "line": 13,
+      "status": "resolved"
+    },
+    {
+      "source": "10-implementation-plan/README.md",
+      "target": "10-implementation-plan/phase-5-preview.md",
+      "raw_link": "phase-5-preview.md",
+      "line": 14,
+      "status": "resolved"
+    },
+    {
+      "source": "10-implementation-plan/README.md",
+      "target": "10-implementation-plan/phase-6-serve-api.md",
+      "raw_link": "phase-6-serve-api.md",
+      "line": 15,
+      "status": "resolved"
+    },
+    {
+      "source": "10-implementation-plan/README.md",
+      "target": "10-implementation-plan/phase-7-polish.md",
+      "raw_link": "phase-7-polish.md",
+      "line": 16,
+      "status": "resolved"
+    },
+    {
+      "source": "10-implementation-plan/README.md",
+      "target": "10-implementation-plan/phase-8-release.md",
+      "raw_link": "phase-8-release.md",
+      "line": 17,
+      "status": "resolved"
+    },
+    {
+      "source": "10-implementation-plan/README.md",
+      "target": "10-implementation-plan/risk-mitigation.md",
+      "raw_link": "risk-mitigation.md",
+      "line": 18,
+      "status": "resolved"
+    },
+    {
+      "source": "10-implementation-plan/milestones.md",
+      "target": "10-implementation-plan.md",
+      "raw_link": "../10-implementation-plan.md",
+      "line": 15,
+      "status": "resolved"
+    },
+    {
+      "source": "11-deployment.md",
+      "target": "11-deployment/ci-cd-pipeline.md",
+      "raw_link": "11-deployment/ci-cd-pipeline.md",
+      "line": 15,
+      "status": "resolved"
+    },
+    {
+      "source": "11-deployment.md",
+      "target": "11-deployment/local-development.md",
+      "raw_link": "11-deployment/local-development.md",
+      "line": 16,
+      "status": "resolved"
+    },
+    {
+      "source": "11-deployment.md",
+      "target": "12-operations.md",
+      "raw_link": "12-operations.md",
+      "line": 18,
+      "status": "resolved"
+    },
+    {
+      "source": "11-deployment/README.md",
+      "target": "11-deployment.md",
+      "raw_link": "../11-deployment.md",
+      "line": 10,
+      "status": "resolved"
+    },
+    {
+      "source": "11-deployment/README.md",
+      "target": "11-deployment/ci-cd-pipeline.md",
+      "raw_link": "ci-cd-pipeline.md",
+      "line": 7,
+      "status": "resolved"
+    },
+    {
+      "source": "11-deployment/README.md",
+      "target": "11-deployment/local-development.md",
+      "raw_link": "local-development.md",
+      "line": 8,
+      "status": "resolved"
+    },
+    {
+      "source": "12-operations.md",
+      "target": "12-operations/backup-recovery.md",
+      "raw_link": "12-operations/backup-recovery.md",
+      "line": 9,
+      "status": "resolved"
+    },
+    {
+      "source": "12-operations.md",
+      "target": "12-operations/disaster-recovery.md",
+      "raw_link": "12-operations/disaster-recovery.md",
+      "line": 10,
+      "status": "resolved"
+    },
+    {
+      "source": "12-operations.md",
+      "target": "12-operations/monitoring-alerting.md",
+      "raw_link": "12-operations/monitoring-alerting.md",
+      "line": 11,
+      "status": "resolved"
+    },
+    {
+      "source": "12-operations.md",
+      "target": "12-operations/rollback-strategy.md",
+      "raw_link": "12-operations/rollback-strategy.md",
+      "line": 12,
+      "status": "resolved"
+    },
+    {
+      "source": "12-operations.md",
+      "target": "12-operations/security.md",
+      "raw_link": "12-operations/security.md",
+      "line": 13,
+      "status": "resolved"
+    },
+    {
+      "source": "12-operations/README.md",
+      "target": "12-operations.md",
+      "raw_link": "../12-operations.md",
+      "line": 13,
+      "status": "resolved"
+    },
+    {
+      "source": "12-operations/README.md",
+      "target": "12-operations/backup-recovery.md",
+      "raw_link": "backup-recovery.md",
+      "line": 7,
+      "status": "resolved"
+    },
+    {
+      "source": "12-operations/README.md",
+      "target": "12-operations/disaster-recovery.md",
+      "raw_link": "disaster-recovery.md",
+      "line": 8,
+      "status": "resolved"
+    },
+    {
+      "source": "12-operations/README.md",
+      "target": "12-operations/monitoring-alerting.md",
+      "raw_link": "monitoring-alerting.md",
+      "line": 9,
+      "status": "resolved"
+    },
+    {
+      "source": "12-operations/README.md",
+      "target": "12-operations/rollback-strategy.md",
+      "raw_link": "rollback-strategy.md",
+      "line": 10,
+      "status": "resolved"
+    },
+    {
+      "source": "12-operations/README.md",
+      "target": "12-operations/security.md",
+      "raw_link": "security.md",
+      "line": 11,
+      "status": "resolved"
+    },
+    {
+      "source": "README.md",
+      "target": "00-overview.md",
+      "raw_link": "00-overview.md",
+      "line": 11,
+      "status": "resolved"
+    },
+    {
+      "source": "README.md",
+      "target": "01-requirements.md",
+      "raw_link": "01-requirements.md",
+      "line": 12,
+      "status": "resolved"
+    },
+    {
+      "source": "README.md",
+      "target": "02-features.md",
+      "raw_link": "02-features.md",
+      "line": 13,
+      "status": "resolved"
+    },
+    {
+      "source": "README.md",
+      "target": "03-user-stories.md",
+      "raw_link": "03-user-stories.md",
+      "line": 14,
+      "status": "resolved"
+    },
+    {
+      "source": "README.md",
+      "target": "04-architecture.md",
+      "raw_link": "04-architecture.md",
+      "line": 15,
+      "status": "resolved"
+    },
+    {
+      "source": "README.md",
+      "target": "05-data-model.md",
+      "raw_link": "05-data-model.md",
+      "line": 16,
+      "status": "resolved"
+    },
+    {
+      "source": "README.md",
+      "target": "06-api-specification.md",
+      "raw_link": "06-api-specification.md",
+      "line": 17,
+      "status": "resolved"
+    },
+    {
+      "source": "README.md",
+      "target": "07-ui-ux-design.md",
+      "raw_link": "07-ui-ux-design.md",
+      "line": 18,
+      "status": "resolved"
+    },
+    {
+      "source": "README.md",
+      "target": "08-tech-stack.md",
+      "raw_link": "08-tech-stack.md",
+      "line": 19,
+      "status": "resolved"
+    },
+    {
+      "source": "README.md",
+      "target": "09-testing-strategy.md",
+      "raw_link": "09-testing-strategy.md",
+      "line": 20,
+      "status": "resolved"
+    },
+    {
+      "source": "README.md",
+      "target": "10-implementation-plan.md",
+      "raw_link": "10-implementation-plan.md",
+      "line": 21,
+      "status": "resolved"
+    },
+    {
+      "source": "README.md",
+      "target": "11-deployment.md",
+      "raw_link": "11-deployment.md",
+      "line": 22,
+      "status": "resolved"
+    },
+    {
+      "source": "README.md",
+      "target": "12-operations.md",
+      "raw_link": "12-operations.md",
+      "line": 23,
+      "status": "resolved"
+    },
+    {
+      "source": "README.md",
+      "target": "AGENTS.md",
+      "raw_link": "AGENTS.md",
+      "line": 144,
+      "status": "resolved"
+    }
+  ],
+  "stats": {
+    "files": 110,
+    "ignored_files": 0,
+    "links": 169,
+    "broken_links": 0,
+    "resolved_links": 169,
+    "self_links": 3,
+    "orphan_files": 45,
+    "components": 0
+  }
+}

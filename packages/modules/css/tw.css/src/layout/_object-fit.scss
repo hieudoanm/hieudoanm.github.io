@@ -1,0 +1,15 @@
+// Object fit utilities — Tailwind v3 default scale
+
+$object-fits: (
+  ('contain', contain),
+  ('cover', cover),
+  ('fill', fill),
+  ('none', none),
+  ('scale-down', scale-down)
+);
+
+@each $name, $value in $object-fits {
+  .object-#{$name} {
+    object-fit: $value;
+  }
+}

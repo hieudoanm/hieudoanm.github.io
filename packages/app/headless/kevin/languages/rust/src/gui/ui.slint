@@ -1,0 +1,144 @@
+// kevin key/value manager — built with the Material design style.
+//
+// All display strings (row numbers, count) are pre-formatted in Rust to keep
+// the markup free of string interpolation. Custom colours come from the
+// style's Palette, spacing from an 8dp Material token set, and the table rows
+// sit on a level-1 elevated card so the window chrome reads as flat.
+
+import { Button, LineEdit, ScrollView, VerticalBox, HorizontalBox, ListView, Palette } from "std-widgets.slint";
+
+/// Material 8dp spacing grid, reused instead of ad-hoc pixel values.
+export global Spacing {
+    out property <length> xs: 4px;
+    out property <length> sm: 8px;
+    out property <length> md: 16px;
+    out property <length> lg: 24px;
+}
+
+export struct RowData {
+    index: int,
+    no: string,
+    key: string,
+    value: string,
+}
+
+export component MainWindow inherits Window {
+    title: "kevin — Key/Value";
+    width: 900px;
+    height: 600px;
+
+    in-out property <[RowData]> rows;
+    in-out property <string> status-text: "";
+    in-out property <string> count-text: "";
+    in-out property <string> key-text: "";
+    in-out property <string> value-text: "";
+
+    callback set-clicked();
+    callback refresh-clicked();
+    callback delete-all-clicked();
+    callback search-changed(string);
+    callback edit(int);
+    callback copy(int);
+    callback delete(int);
+
+    VerticalBox {
+        min-width: 480px;
+        min-height: 360px;
+        padding: Spacing.sm;
+        spacing: Spacing.md;
+
+        HorizontalBox {
+            spacing: Spacing.sm;
+            LineEdit {
+                placeholder-text: "key / search";
+                text <=> key-text;
+                edited(text) => { root.search-changed(text); }
+            }
+            LineEdit {
+                placeholder-text: "value";
+                text <=> value-text;
+            }
+            Button {
+                text: "Set";
+                primary: true;
+                clicked => { root.set-clicked(); }
+            }
+            Button {
+                text: "Refresh";
+                clicked => { root.refresh-clicked(); }
+            }
+            Button {
+                text: "Delete All";
+                clicked => { root.delete-all-clicked(); }
+            }
+        }
+
+        // data grid on a level-1 elevated surface — the card colour and
+        // shadow separate it from the flat window background
+        Rectangle {
+            border-radius: 12px;
+            background: Palette.alternate-background;
+            drop-shadow-blur: 4px;
+            drop-shadow-color: #00000022;
+            drop-shadow-offset-y: 1px;
+
+            VerticalBox {
+                padding: Spacing.sm;
+                spacing: Spacing.xs;
+
+                // column headings as a caption-size grid header
+                HorizontalBox {
+                    spacing: Spacing.xs;
+                    Text { text: "No"; width: 40px; font-size: 12px; font-weight: 600; horizontal-alignment: center; }
+                    Text { text: "Key"; width: 220px; font-size: 12px; font-weight: 600; }
+                    Text { text: "Value"; font-size: 12px; font-weight: 600; }
+                    Text { text: "Edit"; width: 64px; font-size: 12px; font-weight: 600; horizontal-alignment: center; }
+                    Text { text: "Copy"; width: 64px; font-size: 12px; font-weight: 600; horizontal-alignment: center; }
+                    Text { text: "Delete"; width: 64px; font-size: 12px; font-weight: 600; horizontal-alignment: center; }
+                }
+
+                ScrollView {
+                    ListView {
+                        for row in root.rows: HorizontalBox {
+                            spacing: Spacing.xs;
+                            Text { text: row.no; width: 40px; horizontal-alignment: center; }
+                            Text { text: row.key; width: 220px; }
+                            Text { text: row.value; }
+                            Button {
+                                width: 64px;
+                                text: "Edit";
+                                clicked => { root.edit(row.index); }
+                            }
+                            Button {
+                                width: 64px;
+                                text: "Copy";
+                                clicked => { root.copy(row.index); }
+                            }
+                            Button {
+                                width: 64px;
+                                text: "Delete";
+                                clicked => { root.delete(row.index); }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // footer — status (body) on the left, key count as a small label right
+        HorizontalBox {
+            spacing: Spacing.sm;
+            Text {
+                text: root.status-text;
+                vertical-alignment: center;
+            }
+            Rectangle { }
+            Text {
+                text: root.count-text;
+                font-size: 12px;
+                font-weight: 600;
+                vertical-alignment: center;
+            }
+        }
+    }
+}

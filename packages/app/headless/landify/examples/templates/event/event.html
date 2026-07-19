@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A one-day conference on flat, accessible pages." />
+    <title>Shape Guild</title>
+    <style>
+      :root {
+        --base-100: #f8fafc;
+        --base-200: #fefeff;
+        --base-300: #f1f3f4;
+        --base-content: #181d25;
+        --border: #64748b;
+        --border-soft: #bdc4cf;
+        --error: #ef4444;
+        --info: #0ea5e9;
+        --neutral: #64748b;
+        --neutral-faint: #a7b0be;
+        --primary: #1e293b;
+        --primary-content: #ffffff;
+        --primary-dark: #1a2332;
+        --primary-soft: #dee1e5;
+        --radius: 10px;
+        --secondary: #475569;
+        --secondary-content: #ffffff;
+        --success: #10b981;
+        --warning: #f59e0b;
+      }
+* {
+        box-sizing: border-box;
+      }
+      html {
+        margin: 0;
+        scroll-behavior: smooth;
+        scroll-padding-top: 76px;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background: var(--base-100);
+        color: var(--base-content);
+        font-family:
+          system-ui,
+          -apple-system,
+          'Segoe UI',
+          Roboto,
+          'Helvetica Neue',
+          Arial,
+          sans-serif;
+        line-height: 1.55;
+        -webkit-font-smoothing: antialiased;
+      }
+      a {
+        color: var(--primary);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        padding: 0 24px;
+        height: 60px;
+        background: var(--base-200);
+        border-bottom: 1px solid var(--border-soft);
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--base-content);
+      }
+      .brand:hover {
+        text-decoration: none;
+      }
+      .brand .mark {
+        font-size: 20px;
+        line-height: 1;
+      }
+      nav {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        font-size: 14px;
+      }
+      nav a {
+        color: var(--neutral);
+      }
+      nav a:hover {
+        color: var(--base-content);
+        text-decoration: none;
+      }
+
+      main {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 32px 24px 64px;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 28px;
+        justify-items: center;
+        max-width: 760px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 16px 0 8px;
+      }
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 4px 12px;
+        border-radius: 999px;
+        border: 1px solid var(--border-soft);
+        background: var(--primary-soft);
+        color: var(--primary-dark);
+      }
+      .hero h1 {
+        margin: 14px 0 8px;
+        font-size: 34px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        line-height: 1.15;
+      }
+      .lead {
+        margin: 0 auto;
+        max-width: 58ch;
+        font-size: 16px;
+        color: var(--neutral);
+      }
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 22px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        border: 1px solid transparent;
+        border-radius: var(--radius);
+        padding: 12px 22px;
+        font-size: 15px;
+        font-weight: 600;
+        font-family: inherit;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .btn:hover {
+        text-decoration: none;
+      }
+      .btn-primary {
+        color: var(--primary-content);
+        background: var(--primary);
+        border-color: var(--primary);
+      }
+      .btn-primary:hover {
+        background: var(--primary-dark);
+        border-color: var(--primary-dark);
+      }
+      .btn-ghost {
+        color: var(--base-content);
+        background: var(--base-200);
+        border-color: var(--border);
+      }
+      .btn-ghost:hover {
+        background: var(--base-300);
+      }
+
+       
+      .hero-media,
+      .demo-media {
+        display: block;
+        width: 100%;
+        max-width: 720px;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        margin-inline: auto;
+        background: var(--base-300);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+      }
+
+      section.block {
+        margin-top: 32px;
+      }
+      .block-head {
+        margin: 0 0 18px;
+        text-align: center;
+      }
+      .block-head h2 {
+        margin: 0;
+        font-size: 22px;
+        font-weight: 800;
+        letter-spacing: -0.01em;
+      }
+      .block-head .sub {
+        margin: 6px auto 0;
+        max-width: 60ch;
+        color: var(--neutral);
+        font-size: 14.5px;
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+      .feature {
+        background: var(--base-200);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+        padding: 24px 24px;
+        text-align: center;
+      }
+      .feature .icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        font-size: 22px;
+        border-radius: var(--radius);
+        background: var(--primary-soft);
+        border: 1px solid var(--border-soft);
+      }
+      .feature h3 {
+        margin: 14px 0 8px;
+        font-size: 16px;
+        font-weight: 700;
+      }
+      .feature p {
+        margin: 0;
+        font-size: 13.5px;
+        color: var(--neutral);
+      }
+
+      .cta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 6px;
+        background: var(--base-200);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+        padding: 48px 32px;
+      }
+      .cta .icon {
+        font-size: 34px;
+        line-height: 1;
+      }
+      .cta h2 {
+        margin: 10px 0 6px;
+        font-size: 26px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+      .cta p {
+        margin: 0;
+        max-width: 52ch;
+        color: var(--neutral);
+        font-size: 15px;
+      }
+      .cta .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      footer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 24px;
+        align-items: center;
+        justify-content: center;
+        border-top: 1px solid var(--border-soft);
+        margin-top: 48px;
+        padding: 24px 0 4px;
+        font-size: 13px;
+        color: var(--neutral-faint);
+      }
+      footer a {
+        color: var(--neutral-faint);
+      }
+      footer a:hover {
+        color: var(--base-content);
+      }
+
+      @media (max-width: 900px) {
+        .features {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 560px) {
+        nav {
+          display: none;
+        }
+        .hero h1 {
+          font-size: 26px;
+        }
+      }
+      .event-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 18px;
+      }
+      .event-meta span {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--base-content);
+        background: var(--base-200);
+        border: 1px solid var(--border-soft);
+        border-radius: 999px;
+        padding: 6px 14px;
+      }
+      .agenda {
+        list-style: none;
+        margin: 0 auto;
+        padding: 0;
+        max-width: 760px;
+        display: grid;
+        gap: 12px;
+      }
+      .agenda li {
+        display: grid;
+        grid-template-columns: 96px 1fr;
+        gap: 14px;
+        align-items: start;
+        background: var(--base-200);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+        padding: 18px 20px;
+      }
+      .agenda .time {
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--primary-dark);
+        background: var(--primary-soft);
+        border: 1px solid var(--border-soft);
+        border-radius: 999px;
+        padding: 6px 0;
+        text-align: center;
+      }
+      .agenda h3 {
+        margin: 0 0 6px;
+        font-size: 16px;
+        font-weight: 700;
+      }
+      .agenda .who {
+        margin: 0 0 6px;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--primary);
+      }
+      .agenda p {
+        margin: 0;
+        font-size: 13.5px;
+        color: var(--neutral);
+      }
+      .speakers {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+      .speaker {
+        background: var(--base-200);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+        padding: 24px;
+        text-align: center;
+      }
+      .speaker .avatar {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 56px;
+        height: 56px;
+        font-size: 28px;
+        border-radius: 999px;
+        background: var(--primary-soft);
+        border: 1px solid var(--border-soft);
+      }
+      .speaker h3 {
+        margin: 12px 0 4px;
+        font-size: 16px;
+        font-weight: 700;
+      }
+      .speaker .role {
+        margin: 0;
+        font-size: 13px;
+        color: var(--neutral);
+      }
+      @media (max-width: 900px) {
+        .speakers {
+          grid-template-columns: 1fr;
+        }
+        .agenda li {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="#top">
+        
+        <span>Shape Guild</span>
+      </a>
+      <nav>
+        <a href="#agenda">Agenda</a><a href="#speakers">Speakers</a><a href="https://tickets.example.com">Tickets</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div>
+          <span class="badge">🎟️ Shaping the future of forms</span>
+          <h1>Shaping the future of forms.</h1>
+          <p class="lead">A one-day conference on flat, accessible web pages and the tools behind them.</p>
+          <div class="event-meta">
+            <span>📅 March 14, 2026</span>
+            <span>🕒 9:00 – 17:00</span>
+            <span>📍 Civic Hall, Paris</span>
+          </div>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://tickets.example.com">Get tickets</a>
+            <a class="btn btn-ghost" href="#venue">Venue</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="agenda" class="block">
+        <div class="block-head">
+          <h2></h2>
+          <p class="sub"></p>
+        </div>
+        <ul class="agenda">
+          
+          <li>
+            <span class="time">09:30</span>
+            <div>
+              <h3>Keynote</h3>
+              <p class="who">Ana</p>
+              <p>A look at where forms go next.</p>
+            </div>
+          </li>
+          
+          <li>
+            <span class="time">11:00</span>
+            <div>
+              <h3>Hands-on lab</h3>
+              <p class="who">Sam</p>
+              <p>Build your first themed page, live.</p>
+            </div>
+          </li>
+          
+          <li>
+            <span class="time">14:00</span>
+            <div>
+              <h3>Design tokens</h3>
+              <p class="who">Bérénice</p>
+              <p>From eight colors to a whole design system.</p>
+            </div>
+          </li>
+          
+          <li>
+            <span class="time">16:00</span>
+            <div>
+              <h3>Fireside chat</h3>
+              <p class="who">Nico</p>
+              <p>Flat pages vs. the platform giants.</p>
+            </div>
+          </li>
+          
+        </ul>
+      </section>
+
+      
+      <section id="speakers" class="block">
+        <div class="block-head">
+          <h2>Speakers</h2>
+          <p class="sub">The folks up on stage.</p>
+        </div>
+        <div class="speakers">
+          
+          <div class="speaker">
+            <span class="avatar">🦊</span>
+            <h3>Ana</h3>
+            <p class="role">Principal Engineer</p>
+          </div>
+          
+          <div class="speaker">
+            <span class="avatar">🐙</span>
+            <h3>Sam</h3>
+            <p class="role">Product Designer</p>
+          </div>
+          
+          <div class="speaker">
+            <span class="avatar">🐦</span>
+            <h3>Bérénice</h3>
+            <p class="role">Design Systems Lead</p>
+          </div>
+          
+          <div class="speaker">
+            <span class="avatar">🦥</span>
+            <h3>Nico</h3>
+            <p class="role">Indie Hacker</p>
+          </div>
+          
+        </div>
+      </section>
+      
+
+      
+      <section id="cta" class="block">
+        <div class="cta">
+          <span class="icon" aria-hidden="true">🎟️</span>
+          <h2>See you in March.</h2>
+          <p>Get a ticket before they sell out.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://tickets.example.com">Get tickets</a>
+          </div>
+        </div>
+      </section>
+      
+
+      <footer>
+        <span>© 2026 Shape Guild</span>
+        
+      </footer>
+    </main>
+  </body>
+</html>

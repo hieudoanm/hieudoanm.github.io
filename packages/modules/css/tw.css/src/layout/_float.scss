@@ -1,0 +1,9 @@
+// Float utilities — Tailwind v3 default scale
+
+$floats: (('right', right), ('left', left), ('none', none));
+
+@each $name, $value in $floats {
+  .float-#{$name} {
+    float: $value;
+  }
+}

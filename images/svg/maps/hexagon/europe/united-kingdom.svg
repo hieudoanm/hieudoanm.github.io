@@ -1,0 +1,1171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 366.93 515.00" width="366.93" height="515.00" role="img" aria-labelledby="united-kingdom-title united-kingdom-desc">
+  <title id="united-kingdom-title">United Kingdom hex map</title>
+  <desc id="united-kingdom-desc">Hexagon map with 232 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 0.98; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 4.85 3.46; }
+    .label { fill: #52525b; font: 600 3.93px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="ORK">
+    <title>Orkney</title>
+    <polygon class="tile inset" points="353.46,315.23 363.46,321.01 363.46,332.55 353.46,338.33 343.46,332.55 343.46,321.01" aria-label="Orkney"/>
+    <text class="label" x="353.46" y="326.78">ORK</text>
+  </g>
+  <g class="state" data-state="ELS">
+    <title>Eilean Siar</title>
+    <polygon class="tile inset" points="333.46,280.59 343.46,286.37 343.46,297.91 333.46,303.69 323.46,297.91 323.46,286.37" aria-label="Eilean Siar"/>
+    <text class="label" x="333.46" y="292.14">ELS</text>
+  </g>
+  <g class="state" data-state="ZET">
+    <title>Shetland Islands</title>
+    <polygon class="tile inset" points="333.46,349.87 343.46,355.65 343.46,367.19 333.46,372.97 323.46,367.19 323.46,355.65" aria-label="Shetland Islands"/>
+    <text class="label" x="333.46" y="361.42">ZET</text>
+  </g>
+  <g class="state" data-state="GRE">
+    <title>Greenwich</title>
+    <polygon class="tile" points="313.46,315.23 323.46,321.01 323.46,332.55 313.46,338.33 303.46,332.55 303.46,321.01" aria-label="Greenwich"/>
+    <text class="label" x="313.46" y="326.78">GRE</text>
+  </g>
+  <g class="state" data-state="DRY">
+    <title>Derry</title>
+    <polygon class="tile inset" points="313.46,245.95 323.46,251.72 323.46,263.27 313.46,269.05 303.46,263.27 303.46,251.72" aria-label="Derry"/>
+    <text class="label" x="313.46" y="257.50">DRY</text>
+  </g>
+  <g class="state" data-state="TWH">
+    <title>Tower Hamlets</title>
+    <polygon class="tile" points="303.46,297.91 313.46,303.69 313.46,315.23 303.46,321.01 293.46,315.23 293.46,303.69" aria-label="Tower Hamlets"/>
+    <text class="label" x="303.46" y="309.46">TWH</text>
+  </g>
+  <g class="state" data-state="BDG">
+    <title>Barking and Dagenham</title>
+    <polygon class="tile" points="303.46,332.55 313.46,338.33 313.46,349.87 303.46,355.65 293.46,349.87 293.46,338.33" aria-label="Barking and Dagenham"/>
+    <text class="label" x="303.46" y="344.10">BDG</text>
+  </g>
+  <g class="state" data-state="BEX">
+    <title>Bexley</title>
+    <polygon class="tile" points="303.46,367.19 313.46,372.97 313.46,384.52 303.46,390.29 293.46,384.52 293.46,372.97" aria-label="Bexley"/>
+    <text class="label" x="303.46" y="378.74">BEX</text>
+  </g>
+  <g class="state" data-state="LND">
+    <title>City</title>
+    <polygon class="tile" points="293.46,280.59 303.46,286.37 303.46,297.91 293.46,303.69 283.46,297.91 283.46,286.37" aria-label="City"/>
+    <text class="label" x="293.46" y="292.14">LND</text>
+  </g>
+  <g class="state" data-state="NWM">
+    <title>Newham</title>
+    <polygon class="tile" points="293.46,315.23 303.46,321.01 303.46,332.55 293.46,338.33 283.46,332.55 283.46,321.01" aria-label="Newham"/>
+    <text class="label" x="293.46" y="326.78">NWM</text>
+  </g>
+  <g class="state" data-state="HAV">
+    <title>Havering</title>
+    <polygon class="tile" points="293.46,349.87 303.46,355.65 303.46,367.19 293.46,372.97 283.46,367.19 283.46,355.65" aria-label="Havering"/>
+    <text class="label" x="293.46" y="361.42">HAV</text>
+  </g>
+  <g class="state" data-state="MDW">
+    <title>Medway</title>
+    <polygon class="tile" points="293.46,384.52 303.46,390.29 303.46,401.84 293.46,407.61 283.46,401.84 283.46,390.29" aria-label="Medway"/>
+    <text class="label" x="293.46" y="396.06">MDW</text>
+  </g>
+  <g class="state" data-state="HCK">
+    <title>Hackney</title>
+    <polygon class="tile" points="283.46,297.91 293.46,303.69 293.46,315.23 283.46,321.01 273.46,315.23 273.46,303.69" aria-label="Hackney"/>
+    <text class="label" x="283.46" y="309.46">HCK</text>
+  </g>
+  <g class="state" data-state="RDB">
+    <title>Redbridge</title>
+    <polygon class="tile" points="283.46,332.55 293.46,338.33 293.46,349.87 283.46,355.65 273.46,349.87 273.46,338.33" aria-label="Redbridge"/>
+    <text class="label" x="283.46" y="344.10">RDB</text>
+  </g>
+  <g class="state" data-state="THR">
+    <title>Thurrock</title>
+    <polygon class="tile" points="283.46,367.19 293.46,372.97 293.46,384.52 283.46,390.29 273.46,384.52 273.46,372.97" aria-label="Thurrock"/>
+    <text class="label" x="283.46" y="378.74">THR</text>
+  </g>
+  <g class="state" data-state="SOS">
+    <title>Southend-on-Sea</title>
+    <polygon class="tile" points="283.46,401.84 293.46,407.61 293.46,419.16 283.46,424.93 273.46,419.16 273.46,407.61" aria-label="Southend-on-Sea"/>
+    <text class="label" x="283.46" y="413.38">SOS</text>
+  </g>
+  <g class="state" data-state="ARM">
+    <title>Armagh</title>
+    <polygon class="tile inset" points="283.46,228.63 293.46,234.40 293.46,245.95 283.46,251.72 273.46,245.95 273.46,234.40" aria-label="Armagh"/>
+    <text class="label" x="283.46" y="240.18">ARM</text>
+  </g>
+  <g class="state" data-state="ISL">
+    <title>Islington</title>
+    <polygon class="tile" points="273.46,280.59 283.46,286.37 283.46,297.91 273.46,303.69 263.46,297.91 263.46,286.37" aria-label="Islington"/>
+    <text class="label" x="273.46" y="292.14">ISL</text>
+  </g>
+  <g class="state" data-state="WFT">
+    <title>Waltham Forest</title>
+    <polygon class="tile" points="273.46,315.23 283.46,321.01 283.46,332.55 273.46,338.33 263.46,332.55 263.46,321.01" aria-label="Waltham Forest"/>
+    <text class="label" x="273.46" y="326.78">WFT</text>
+  </g>
+  <g class="state" data-state="ESS">
+    <title>Essex</title>
+    <polygon class="tile" points="273.46,349.87 283.46,355.65 283.46,367.19 273.46,372.97 263.46,367.19 263.46,355.65" aria-label="Essex"/>
+    <text class="label" x="273.46" y="361.42">ESS</text>
+  </g>
+  <g class="state" data-state="KEN">
+    <title>Kent</title>
+    <polygon class="tile" points="273.46,384.52 283.46,390.29 283.46,401.84 273.46,407.61 263.46,401.84 263.46,390.29" aria-label="Kent"/>
+    <text class="label" x="273.46" y="396.06">KEN</text>
+  </g>
+  <g class="state" data-state="LEW">
+    <title>Lewisham</title>
+    <polygon class="tile" points="273.46,419.16 283.46,424.93 283.46,436.48 273.46,442.25 263.46,436.48 263.46,424.93" aria-label="Lewisham"/>
+    <text class="label" x="273.46" y="430.70">LEW</text>
+  </g>
+  <g class="state" data-state="RUT">
+    <title>Rutland</title>
+    <polygon class="tile" points="263.46,263.27 273.46,269.05 273.46,280.59 263.46,286.37 253.46,280.59 253.46,269.05" aria-label="Rutland"/>
+    <text class="label" x="263.46" y="274.82">RUT</text>
+  </g>
+  <g class="state" data-state="NFK">
+    <title>Norfolk</title>
+    <polygon class="tile" points="263.46,297.91 273.46,303.69 273.46,315.23 263.46,321.01 253.46,315.23 253.46,303.69" aria-label="Norfolk"/>
+    <text class="label" x="263.46" y="309.46">NFK</text>
+  </g>
+  <g class="state" data-state="ENF">
+    <title>Enfield</title>
+    <polygon class="tile" points="263.46,332.55 273.46,338.33 273.46,349.87 263.46,355.65 253.46,349.87 253.46,338.33" aria-label="Enfield"/>
+    <text class="label" x="263.46" y="344.10">ENF</text>
+  </g>
+  <g class="state" data-state="SFK">
+    <title>Suffolk</title>
+    <polygon class="tile" points="263.46,367.19 273.46,372.97 273.46,384.52 263.46,390.29 253.46,384.52 253.46,372.97" aria-label="Suffolk"/>
+    <text class="label" x="263.46" y="378.74">SFK</text>
+  </g>
+  <g class="state" data-state="BRY">
+    <title>Bromley</title>
+    <polygon class="tile" points="263.46,401.84 273.46,407.61 273.46,419.16 263.46,424.93 253.46,419.16 253.46,407.61" aria-label="Bromley"/>
+    <text class="label" x="263.46" y="413.38">BRY</text>
+  </g>
+  <g class="state" data-state="STB">
+    <title>Strabane</title>
+    <polygon class="tile inset" points="263.46,193.99 273.46,199.76 273.46,211.31 263.46,217.08 253.46,211.31 253.46,199.76" aria-label="Strabane"/>
+    <text class="label" x="263.46" y="205.54">STB</text>
+  </g>
+  <g class="state" data-state="NEL">
+    <title>North East Lincolnshire</title>
+    <polygon class="tile" points="253.46,245.95 263.46,251.72 263.46,263.27 253.46,269.05 243.46,263.27 243.46,251.72" aria-label="North East Lincolnshire"/>
+    <text class="label" x="253.46" y="257.50">NEL</text>
+  </g>
+  <g class="state" data-state="PTE">
+    <title>Peterborough</title>
+    <polygon class="tile" points="253.46,280.59 263.46,286.37 263.46,297.91 253.46,303.69 243.46,297.91 243.46,286.37" aria-label="Peterborough"/>
+    <text class="label" x="253.46" y="292.14">PTE</text>
+  </g>
+  <g class="state" data-state="LUT">
+    <title>Luton</title>
+    <polygon class="tile" points="253.46,315.23 263.46,321.01 263.46,332.55 253.46,338.33 243.46,332.55 243.46,321.01" aria-label="Luton"/>
+    <text class="label" x="253.46" y="326.78">LUT</text>
+  </g>
+  <g class="state" data-state="HRY">
+    <title>Haringey</title>
+    <polygon class="tile" points="253.46,349.87 263.46,355.65 263.46,367.19 253.46,372.97 243.46,367.19 243.46,355.65" aria-label="Haringey"/>
+    <text class="label" x="253.46" y="361.42">HRY</text>
+  </g>
+  <g class="state" data-state="SWK">
+    <title>Southwark</title>
+    <polygon class="tile" points="253.46,384.52 263.46,390.29 263.46,401.84 253.46,407.61 243.46,401.84 243.46,390.29" aria-label="Southwark"/>
+    <text class="label" x="253.46" y="396.06">SWK</text>
+  </g>
+  <g class="state" data-state="SRY">
+    <title>Surrey</title>
+    <polygon class="tile" points="253.46,419.16 263.46,424.93 263.46,436.48 253.46,442.25 243.46,436.48 243.46,424.93" aria-label="Surrey"/>
+    <text class="label" x="253.46" y="430.70">SRY</text>
+  </g>
+  <g class="state" data-state="KHL">
+    <title>Kingston upon Hull</title>
+    <polygon class="tile" points="243.46,228.63 253.46,234.40 253.46,245.95 243.46,251.72 233.46,245.95 233.46,234.40" aria-label="Kingston upon Hull"/>
+    <text class="label" x="243.46" y="240.18">KHL</text>
+  </g>
+  <g class="state" data-state="LIN">
+    <title>Lincolnshire</title>
+    <polygon class="tile" points="243.46,263.27 253.46,269.05 253.46,280.59 243.46,286.37 233.46,280.59 233.46,269.05" aria-label="Lincolnshire"/>
+    <text class="label" x="243.46" y="274.82">LIN</text>
+  </g>
+  <g class="state" data-state="CAM">
+    <title>Cambridgeshire</title>
+    <polygon class="tile" points="243.46,297.91 253.46,303.69 253.46,315.23 243.46,321.01 233.46,315.23 233.46,303.69" aria-label="Cambridgeshire"/>
+    <text class="label" x="243.46" y="309.46">CAM</text>
+  </g>
+  <g class="state" data-state="HRT">
+    <title>Hertfordshire</title>
+    <polygon class="tile" points="243.46,332.55 253.46,338.33 253.46,349.87 243.46,355.65 233.46,349.87 233.46,338.33" aria-label="Hertfordshire"/>
+    <text class="label" x="243.46" y="344.10">HRT</text>
+  </g>
+  <g class="state" data-state="CMD">
+    <title>Camden</title>
+    <polygon class="tile" points="243.46,367.19 253.46,372.97 253.46,384.52 243.46,390.29 233.46,384.52 233.46,372.97" aria-label="Camden"/>
+    <text class="label" x="243.46" y="378.74">CMD</text>
+  </g>
+  <g class="state" data-state="CRY">
+    <title>Croydon</title>
+    <polygon class="tile" points="243.46,401.84 253.46,407.61 253.46,419.16 243.46,424.93 233.46,419.16 233.46,407.61" aria-label="Croydon"/>
+    <text class="label" x="243.46" y="413.38">CRY</text>
+  </g>
+  <g class="state" data-state="ESX">
+    <title>East Sussex</title>
+    <polygon class="tile" points="243.46,436.48 253.46,442.25 253.46,453.80 243.46,459.57 233.46,453.80 233.46,442.25" aria-label="East Sussex"/>
+    <text class="label" x="243.46" y="448.02">ESX</text>
+  </g>
+  <g class="state" data-state="CGV">
+    <title>Craigavon</title>
+    <polygon class="tile inset" points="243.46,159.35 253.46,165.12 253.46,176.67 243.46,182.44 233.46,176.67 233.46,165.12" aria-label="Craigavon"/>
+    <text class="label" x="243.46" y="170.90">CGV</text>
+  </g>
+  <g class="state" data-state="FER">
+    <title>Fermanagh</title>
+    <polygon class="tile inset" points="243.46,471.12 253.46,476.89 253.46,488.44 243.46,494.21 233.46,488.44 233.46,476.89" aria-label="Fermanagh"/>
+    <text class="label" x="243.46" y="482.66">FER</text>
+  </g>
+  <g class="state" data-state="ERY">
+    <title>East Riding of Yorkshire</title>
+    <polygon class="tile" points="233.46,211.31 243.46,217.08 243.46,228.63 233.46,234.40 223.46,228.63 223.46,217.08" aria-label="East Riding of Yorkshire"/>
+    <text class="label" x="233.46" y="222.86">ERY</text>
+  </g>
+  <g class="state" data-state="NLN">
+    <title>North Lincolnshire</title>
+    <polygon class="tile" points="233.46,245.95 243.46,251.72 243.46,263.27 233.46,269.05 223.46,263.27 223.46,251.72" aria-label="North Lincolnshire"/>
+    <text class="label" x="233.46" y="257.50">NLN</text>
+  </g>
+  <g class="state" data-state="NTH">
+    <title>Northamptonshire</title>
+    <polygon class="tile" points="233.46,280.59 243.46,286.37 243.46,297.91 233.46,303.69 223.46,297.91 223.46,286.37" aria-label="Northamptonshire"/>
+    <text class="label" x="233.46" y="292.14">NTH</text>
+  </g>
+  <g class="state" data-state="CBF">
+    <title>Central Bedfordshire</title>
+    <polygon class="tile" points="233.46,315.23 243.46,321.01 243.46,332.55 233.46,338.33 223.46,332.55 223.46,321.01" aria-label="Central Bedfordshire"/>
+    <text class="label" x="233.46" y="326.78">CBF</text>
+  </g>
+  <g class="state" data-state="BNE">
+    <title>Barnet</title>
+    <polygon class="tile" points="233.46,349.87 243.46,355.65 243.46,367.19 233.46,372.97 223.46,367.19 223.46,355.65" aria-label="Barnet"/>
+    <text class="label" x="233.46" y="361.42">BNE</text>
+  </g>
+  <g class="state" data-state="LBH">
+    <title>Lambeth</title>
+    <polygon class="tile" points="233.46,384.52 243.46,390.29 243.46,401.84 233.46,407.61 223.46,401.84 223.46,390.29" aria-label="Lambeth"/>
+    <text class="label" x="233.46" y="396.06">LBH</text>
+  </g>
+  <g class="state" data-state="STN">
+    <title>Sutton</title>
+    <polygon class="tile" points="233.46,419.16 243.46,424.93 243.46,436.48 233.46,442.25 223.46,436.48 223.46,424.93" aria-label="Sutton"/>
+    <text class="label" x="233.46" y="430.70">STN</text>
+  </g>
+  <g class="state" data-state="YOR">
+    <title>York</title>
+    <polygon class="tile" points="223.46,193.99 233.46,199.76 233.46,211.31 223.46,217.08 213.46,211.31 213.46,199.76" aria-label="York"/>
+    <text class="label" x="223.46" y="205.54">YOR</text>
+  </g>
+  <g class="state" data-state="DNC">
+    <title>Doncaster</title>
+    <polygon class="tile" points="223.46,228.63 233.46,234.40 233.46,245.95 223.46,251.72 213.46,245.95 213.46,234.40" aria-label="Doncaster"/>
+    <text class="label" x="223.46" y="240.18">DNC</text>
+  </g>
+  <g class="state" data-state="NTT">
+    <title>Nottinghamshire</title>
+    <polygon class="tile" points="223.46,263.27 233.46,269.05 233.46,280.59 223.46,286.37 213.46,280.59 213.46,269.05" aria-label="Nottinghamshire"/>
+    <text class="label" x="223.46" y="274.82">NTT</text>
+  </g>
+  <g class="state" data-state="BDF">
+    <title>Bedford</title>
+    <polygon class="tile" points="223.46,297.91 233.46,303.69 233.46,315.23 223.46,321.01 213.46,315.23 213.46,303.69" aria-label="Bedford"/>
+    <text class="label" x="223.46" y="309.46">BDF</text>
+  </g>
+  <g class="state" data-state="BKM">
+    <title>Buckinghamshire</title>
+    <polygon class="tile" points="223.46,332.55 233.46,338.33 233.46,349.87 223.46,355.65 213.46,349.87 213.46,338.33" aria-label="Buckinghamshire"/>
+    <text class="label" x="223.46" y="344.10">BKM</text>
+  </g>
+  <g class="state" data-state="BEN">
+    <title>Brent</title>
+    <polygon class="tile" points="223.46,367.19 233.46,372.97 233.46,384.52 223.46,390.29 213.46,384.52 213.46,372.97" aria-label="Brent"/>
+    <text class="label" x="223.46" y="378.74">BEN</text>
+  </g>
+  <g class="state" data-state="MRT">
+    <title>Merton</title>
+    <polygon class="tile" points="223.46,401.84 233.46,407.61 233.46,419.16 223.46,424.93 213.46,419.16 213.46,407.61" aria-label="Merton"/>
+    <text class="label" x="223.46" y="413.38">MRT</text>
+  </g>
+  <g class="state" data-state="WSX">
+    <title>West Sussex</title>
+    <polygon class="tile" points="223.46,436.48 233.46,442.25 233.46,453.80 223.46,459.57 213.46,453.80 213.46,442.25" aria-label="West Sussex"/>
+    <text class="label" x="223.46" y="448.02">WSX</text>
+  </g>
+  <g class="state" data-state="LMV">
+    <title>Limavady</title>
+    <polygon class="tile inset" points="223.46,124.71 233.46,130.48 233.46,142.03 223.46,147.80 213.46,142.03 213.46,130.48" aria-label="Limavady"/>
+    <text class="label" x="223.46" y="136.25">LMV</text>
+  </g>
+  <g class="state" data-state="RCC">
+    <title>Redcar and Cleveland</title>
+    <polygon class="tile" points="213.46,176.67 223.46,182.44 223.46,193.99 213.46,199.76 203.46,193.99 203.46,182.44" aria-label="Redcar and Cleveland"/>
+    <text class="label" x="213.46" y="188.22">RCC</text>
+  </g>
+  <g class="state" data-state="WKF">
+    <title>Wakefield</title>
+    <polygon class="tile" points="213.46,211.31 223.46,217.08 223.46,228.63 213.46,234.40 203.46,228.63 203.46,217.08" aria-label="Wakefield"/>
+    <text class="label" x="213.46" y="222.86">WKF</text>
+  </g>
+  <g class="state" data-state="ROT">
+    <title>Rotherham</title>
+    <polygon class="tile" points="213.46,245.95 223.46,251.72 223.46,263.27 213.46,269.05 203.46,263.27 203.46,251.72" aria-label="Rotherham"/>
+    <text class="label" x="213.46" y="257.50">ROT</text>
+  </g>
+  <g class="state" data-state="LEC">
+    <title>Leicestershire</title>
+    <polygon class="tile" points="213.46,280.59 223.46,286.37 223.46,297.91 213.46,303.69 203.46,297.91 203.46,286.37" aria-label="Leicestershire"/>
+    <text class="label" x="213.46" y="292.14">LEC</text>
+  </g>
+  <g class="state" data-state="MIK">
+    <title>Milton Keynes</title>
+    <polygon class="tile" points="213.46,315.23 223.46,321.01 223.46,332.55 213.46,338.33 203.46,332.55 203.46,321.01" aria-label="Milton Keynes"/>
+    <text class="label" x="213.46" y="326.78">MIK</text>
+  </g>
+  <g class="state" data-state="HRW">
+    <title>Harrow</title>
+    <polygon class="tile" points="213.46,349.87 223.46,355.65 223.46,367.19 213.46,372.97 203.46,367.19 203.46,355.65" aria-label="Harrow"/>
+    <text class="label" x="213.46" y="361.42">HRW</text>
+  </g>
+  <g class="state" data-state="HNS">
+    <title>Hounslow</title>
+    <polygon class="tile" points="213.46,384.52 223.46,390.29 223.46,401.84 213.46,407.61 203.46,401.84 203.46,390.29" aria-label="Hounslow"/>
+    <text class="label" x="213.46" y="396.06">HNS</text>
+  </g>
+  <g class="state" data-state="KTT">
+    <title>Kingston upon Thames</title>
+    <polygon class="tile" points="213.46,419.16 223.46,424.93 223.46,436.48 213.46,442.25 203.46,436.48 203.46,424.93" aria-label="Kingston upon Thames"/>
+    <text class="label" x="213.46" y="430.70">KTT</text>
+  </g>
+  <g class="state" data-state="HPL">
+    <title>Hartlepool</title>
+    <polygon class="tile" points="203.46,159.35 213.46,165.12 213.46,176.67 203.46,182.44 193.46,176.67 193.46,165.12" aria-label="Hartlepool"/>
+    <text class="label" x="203.46" y="170.90">HPL</text>
+  </g>
+  <g class="state" data-state="NYK">
+    <title>North Yorkshire</title>
+    <polygon class="tile" points="203.46,193.99 213.46,199.76 213.46,211.31 203.46,217.08 193.46,211.31 193.46,199.76" aria-label="North Yorkshire"/>
+    <text class="label" x="203.46" y="205.54">NYK</text>
+  </g>
+  <g class="state" data-state="BNS">
+    <title>Barnsley</title>
+    <polygon class="tile" points="203.46,228.63 213.46,234.40 213.46,245.95 203.46,251.72 193.46,245.95 193.46,234.40" aria-label="Barnsley"/>
+    <text class="label" x="203.46" y="240.18">BNS</text>
+  </g>
+  <g class="state" data-state="NGM">
+    <title>Nottingham</title>
+    <polygon class="tile" points="203.46,263.27 213.46,269.05 213.46,280.59 203.46,286.37 193.46,280.59 193.46,269.05" aria-label="Nottingham"/>
+    <text class="label" x="203.46" y="274.82">NGM</text>
+  </g>
+  <g class="state" data-state="LCE">
+    <title>Leicester</title>
+    <polygon class="tile" points="203.46,297.91 213.46,303.69 213.46,315.23 203.46,321.01 193.46,315.23 193.46,303.69" aria-label="Leicester"/>
+    <text class="label" x="203.46" y="309.46">LCE</text>
+  </g>
+  <g class="state" data-state="COV">
+    <title>Coventry</title>
+    <polygon class="tile" points="203.46,332.55 213.46,338.33 213.46,349.87 203.46,355.65 193.46,349.87 193.46,338.33" aria-label="Coventry"/>
+    <text class="label" x="203.46" y="344.10">COV</text>
+  </g>
+  <g class="state" data-state="EAL">
+    <title>Ealing</title>
+    <polygon class="tile" points="203.46,367.19 213.46,372.97 213.46,384.52 203.46,390.29 193.46,384.52 193.46,372.97" aria-label="Ealing"/>
+    <text class="label" x="203.46" y="378.74">EAL</text>
+  </g>
+  <g class="state" data-state="RIC">
+    <title>Richmond upon Thames</title>
+    <polygon class="tile" points="203.46,401.84 213.46,407.61 213.46,419.16 203.46,424.93 193.46,419.16 193.46,407.61" aria-label="Richmond upon Thames"/>
+    <text class="label" x="203.46" y="413.38">RIC</text>
+  </g>
+  <g class="state" data-state="BNH">
+    <title>Brighton and Hove</title>
+    <polygon class="tile" points="203.46,436.48 213.46,442.25 213.46,453.80 203.46,459.57 193.46,453.80 193.46,442.25" aria-label="Brighton and Hove"/>
+    <text class="label" x="203.46" y="448.02">BNH</text>
+  </g>
+  <g class="state" data-state="IOW">
+    <title>Isle of Wight</title>
+    <polygon class="tile inset" points="203.46,471.12 213.46,476.89 213.46,488.44 203.46,494.21 193.46,488.44 193.46,476.89" aria-label="Isle of Wight"/>
+    <text class="label" x="203.46" y="482.66">IOW</text>
+  </g>
+  <g class="state" data-state="CKT">
+    <title>Mid Ulster</title>
+    <polygon class="tile inset" points="203.46,90.07 213.46,95.84 213.46,107.39 203.46,113.16 193.46,107.39 193.46,95.84" aria-label="Mid Ulster"/>
+    <text class="label" x="203.46" y="101.61">CKT</text>
+  </g>
+  <g class="state" data-state="STY">
+    <title>South Tyneside</title>
+    <polygon class="tile" points="193.46,142.03 203.46,147.80 203.46,159.35 193.46,165.12 183.46,159.35 183.46,147.80" aria-label="South Tyneside"/>
+    <text class="label" x="193.46" y="153.58">STY</text>
+  </g>
+  <g class="state" data-state="MDB">
+    <title>Middlesbrough</title>
+    <polygon class="tile" points="193.46,176.67 203.46,182.44 203.46,193.99 193.46,199.76 183.46,193.99 183.46,182.44" aria-label="Middlesbrough"/>
+    <text class="label" x="193.46" y="188.22">MDB</text>
+  </g>
+  <g class="state" data-state="LDS">
+    <title>Leeds</title>
+    <polygon class="tile" points="193.46,211.31 203.46,217.08 203.46,228.63 193.46,234.40 183.46,228.63 183.46,217.08" aria-label="Leeds"/>
+    <text class="label" x="193.46" y="222.86">LDS</text>
+  </g>
+  <g class="state" data-state="SHF">
+    <title>Sheffield</title>
+    <polygon class="tile" points="193.46,245.95 203.46,251.72 203.46,263.27 193.46,269.05 183.46,263.27 183.46,251.72" aria-label="Sheffield"/>
+    <text class="label" x="193.46" y="257.50">SHF</text>
+  </g>
+  <g class="state" data-state="DER">
+    <title>Derby</title>
+    <polygon class="tile" points="193.46,280.59 203.46,286.37 203.46,297.91 193.46,303.69 183.46,297.91 183.46,286.37" aria-label="Derby"/>
+    <text class="label" x="193.46" y="292.14">DER</text>
+  </g>
+  <g class="state" data-state="SOL">
+    <title>Solihull</title>
+    <polygon class="tile" points="193.46,315.23 203.46,321.01 203.46,332.55 193.46,338.33 183.46,332.55 183.46,321.01" aria-label="Solihull"/>
+    <text class="label" x="193.46" y="326.78">SOL</text>
+  </g>
+  <g class="state" data-state="HIL">
+    <title>Hillingdon</title>
+    <polygon class="tile" points="193.46,349.87 203.46,355.65 203.46,367.19 193.46,372.97 183.46,367.19 183.46,355.65" aria-label="Hillingdon"/>
+    <text class="label" x="193.46" y="361.42">HIL</text>
+  </g>
+  <g class="state" data-state="HMF">
+    <title>Hammersmith and Fulham</title>
+    <polygon class="tile" points="193.46,384.52 203.46,390.29 203.46,401.84 193.46,407.61 183.46,401.84 183.46,390.29" aria-label="Hammersmith and Fulham"/>
+    <text class="label" x="193.46" y="396.06">HMF</text>
+  </g>
+  <g class="state" data-state="WND">
+    <title>Wandsworth</title>
+    <polygon class="tile" points="193.46,419.16 203.46,424.93 203.46,436.48 193.46,442.25 183.46,436.48 183.46,424.93" aria-label="Wandsworth"/>
+    <text class="label" x="193.46" y="430.70">WND</text>
+  </g>
+  <g class="state" data-state="NET">
+    <title>Newcastle upon Tyne</title>
+    <polygon class="tile" points="183.46,124.71 193.46,130.48 193.46,142.03 183.46,147.80 173.46,142.03 173.46,130.48" aria-label="Newcastle upon Tyne"/>
+    <text class="label" x="183.46" y="136.25">NET</text>
+  </g>
+  <g class="state" data-state="STT">
+    <title>Stockton-on-Tees</title>
+    <polygon class="tile" points="183.46,159.35 193.46,165.12 193.46,176.67 183.46,182.44 173.46,176.67 173.46,165.12" aria-label="Stockton-on-Tees"/>
+    <text class="label" x="183.46" y="170.90">STT</text>
+  </g>
+  <g class="state" data-state="BRD">
+    <title>Bradford</title>
+    <polygon class="tile" points="183.46,193.99 193.46,199.76 193.46,211.31 183.46,217.08 173.46,211.31 173.46,199.76" aria-label="Bradford"/>
+    <text class="label" x="183.46" y="205.54">BRD</text>
+  </g>
+  <g class="state" data-state="KIR">
+    <title>Kirklees</title>
+    <polygon class="tile" points="183.46,228.63 193.46,234.40 193.46,245.95 183.46,251.72 173.46,245.95 173.46,234.40" aria-label="Kirklees"/>
+    <text class="label" x="183.46" y="240.18">KIR</text>
+  </g>
+  <g class="state" data-state="DBY">
+    <title>Derbyshire</title>
+    <polygon class="tile" points="183.46,263.27 193.46,269.05 193.46,280.59 183.46,286.37 173.46,280.59 173.46,269.05" aria-label="Derbyshire"/>
+    <text class="label" x="183.46" y="274.82">DBY</text>
+  </g>
+  <g class="state" data-state="WLL">
+    <title>Walsall</title>
+    <polygon class="tile" points="183.46,297.91 193.46,303.69 193.46,315.23 183.46,321.01 173.46,315.23 173.46,303.69" aria-label="Walsall"/>
+    <text class="label" x="183.46" y="309.46">WLL</text>
+  </g>
+  <g class="state" data-state="WAR">
+    <title>Warwickshire</title>
+    <polygon class="tile" points="183.46,332.55 193.46,338.33 193.46,349.87 183.46,355.65 173.46,349.87 173.46,338.33" aria-label="Warwickshire"/>
+    <text class="label" x="183.46" y="344.10">WAR</text>
+  </g>
+  <g class="state" data-state="WBK">
+    <title>West Berkshire</title>
+    <polygon class="tile" points="183.46,367.19 193.46,372.97 193.46,384.52 183.46,390.29 173.46,384.52 173.46,372.97" aria-label="West Berkshire"/>
+    <text class="label" x="183.46" y="378.74">WBK</text>
+  </g>
+  <g class="state" data-state="KEC">
+    <title>Kensington and Chelsea</title>
+    <polygon class="tile" points="183.46,401.84 193.46,407.61 193.46,419.16 183.46,424.93 173.46,419.16 173.46,407.61" aria-label="Kensington and Chelsea"/>
+    <text class="label" x="183.46" y="413.38">KEC</text>
+  </g>
+  <g class="state" data-state="POR">
+    <title>Portsmouth</title>
+    <polygon class="tile" points="183.46,436.48 193.46,442.25 193.46,453.80 183.46,459.57 173.46,453.80 173.46,442.25" aria-label="Portsmouth"/>
+    <text class="label" x="183.46" y="448.02">POR</text>
+  </g>
+  <g class="state" data-state="BFS">
+    <title>Belfast</title>
+    <polygon class="tile inset" points="183.46,55.43 193.46,61.20 193.46,72.75 183.46,78.52 173.46,72.75 173.46,61.20" aria-label="Belfast"/>
+    <text class="label" x="183.46" y="66.97">BFS</text>
+  </g>
+  <g class="state" data-state="NTY">
+    <title>North Tyneside</title>
+    <polygon class="tile" points="173.46,107.39 183.46,113.16 183.46,124.71 173.46,130.48 163.46,124.71 163.46,113.16" aria-label="North Tyneside"/>
+    <text class="label" x="173.46" y="118.93">NTY</text>
+  </g>
+  <g class="state" data-state="GAT">
+    <title>Gateshead</title>
+    <polygon class="tile" points="173.46,142.03 183.46,147.80 183.46,159.35 173.46,165.12 163.46,159.35 163.46,147.80" aria-label="Gateshead"/>
+    <text class="label" x="173.46" y="153.58">GAT</text>
+  </g>
+  <g class="state" data-state="DAL">
+    <title>Darlington</title>
+    <polygon class="tile" points="173.46,176.67 183.46,182.44 183.46,193.99 173.46,199.76 163.46,193.99 163.46,182.44" aria-label="Darlington"/>
+    <text class="label" x="173.46" y="188.22">DAL</text>
+  </g>
+  <g class="state" data-state="CLD">
+    <title>Calderdale</title>
+    <polygon class="tile" points="173.46,211.31 183.46,217.08 183.46,228.63 173.46,234.40 163.46,228.63 163.46,217.08" aria-label="Calderdale"/>
+    <text class="label" x="173.46" y="222.86">CLD</text>
+  </g>
+  <g class="state" data-state="OLD">
+    <title>Oldham</title>
+    <polygon class="tile" points="173.46,245.95 183.46,251.72 183.46,263.27 173.46,269.05 163.46,263.27 163.46,251.72" aria-label="Oldham"/>
+    <text class="label" x="173.46" y="257.50">OLD</text>
+  </g>
+  <g class="state" data-state="TAM">
+    <title>Tameside</title>
+    <polygon class="tile" points="173.46,280.59 183.46,286.37 183.46,297.91 173.46,303.69 163.46,297.91 163.46,286.37" aria-label="Tameside"/>
+    <text class="label" x="173.46" y="292.14">TAM</text>
+  </g>
+  <g class="state" data-state="BIR">
+    <title>Birmingham</title>
+    <polygon class="tile" points="173.46,315.23 183.46,321.01 183.46,332.55 173.46,338.33 163.46,332.55 163.46,321.01" aria-label="Birmingham"/>
+    <text class="label" x="173.46" y="326.78">BIR</text>
+  </g>
+  <g class="state" data-state="OXF">
+    <title>Oxfordshire</title>
+    <polygon class="tile" points="173.46,349.87 183.46,355.65 183.46,367.19 173.46,372.97 163.46,367.19 163.46,355.65" aria-label="Oxfordshire"/>
+    <text class="label" x="173.46" y="361.42">OXF</text>
+  </g>
+  <g class="state" data-state="WIL">
+    <title>Wiltshire</title>
+    <polygon class="tile" points="173.46,384.52 183.46,390.29 183.46,401.84 173.46,407.61 163.46,401.84 163.46,390.29" aria-label="Wiltshire"/>
+    <text class="label" x="173.46" y="396.06">WIL</text>
+  </g>
+  <g class="state" data-state="WSM">
+    <title>Westminster</title>
+    <polygon class="tile" points="173.46,419.16 183.46,424.93 183.46,436.48 173.46,442.25 163.46,436.48 163.46,424.93" aria-label="Westminster"/>
+    <text class="label" x="173.46" y="430.70">WSM</text>
+  </g>
+  <g class="state" data-state="NBL">
+    <title>Northumberland</title>
+    <polygon class="tile" points="163.46,124.71 173.46,130.48 173.46,142.03 163.46,147.80 153.46,142.03 153.46,130.48" aria-label="Northumberland"/>
+    <text class="label" x="163.46" y="136.25">NBL</text>
+  </g>
+  <g class="state" data-state="DUR">
+    <title>Durham</title>
+    <polygon class="tile" points="163.46,159.35 173.46,165.12 173.46,176.67 163.46,182.44 153.46,176.67 153.46,165.12" aria-label="Durham"/>
+    <text class="label" x="163.46" y="170.90">DUR</text>
+  </g>
+  <g class="state" data-state="RCH">
+    <title>Rochdale</title>
+    <polygon class="tile" points="163.46,228.63 173.46,234.40 173.46,245.95 163.46,251.72 153.46,245.95 153.46,234.40" aria-label="Rochdale"/>
+    <text class="label" x="163.46" y="240.18">RCH</text>
+  </g>
+  <g class="state" data-state="SKP">
+    <title>Stockport</title>
+    <polygon class="tile" points="163.46,263.27 173.46,269.05 173.46,280.59 163.46,286.37 153.46,280.59 153.46,269.05" aria-label="Stockport"/>
+    <text class="label" x="163.46" y="274.82">SKP</text>
+  </g>
+  <g class="state" data-state="SAW">
+    <title>Sandwell</title>
+    <polygon class="tile" points="163.46,297.91 173.46,303.69 173.46,315.23 163.46,321.01 153.46,315.23 153.46,303.69" aria-label="Sandwell"/>
+    <text class="label" x="163.46" y="309.46">SAW</text>
+  </g>
+  <g class="state" data-state="WOR">
+    <title>Worcestershire</title>
+    <polygon class="tile" points="163.46,332.55 173.46,338.33 173.46,349.87 163.46,355.65 153.46,349.87 153.46,338.33" aria-label="Worcestershire"/>
+    <text class="label" x="163.46" y="344.10">WOR</text>
+  </g>
+  <g class="state" data-state="SWD">
+    <title>Swindon</title>
+    <polygon class="tile" points="163.46,367.19 173.46,372.97 173.46,384.52 163.46,390.29 153.46,384.52 153.46,372.97" aria-label="Swindon"/>
+    <text class="label" x="163.46" y="378.74">SWD</text>
+  </g>
+  <g class="state" data-state="SOM">
+    <title>Somerset</title>
+    <polygon class="tile" points="163.46,401.84 173.46,407.61 173.46,419.16 163.46,424.93 153.46,419.16 153.46,407.61" aria-label="Somerset"/>
+    <text class="label" x="163.46" y="413.38">SOM</text>
+  </g>
+  <g class="state" data-state="STH">
+    <title>Southampton</title>
+    <polygon class="tile" points="163.46,436.48 173.46,442.25 173.46,453.80 163.46,459.57 153.46,453.80 153.46,442.25" aria-label="Southampton"/>
+    <text class="label" x="163.46" y="448.02">STH</text>
+  </g>
+  <g class="state" data-state="NTA">
+    <title>Newtownabbey</title>
+    <polygon class="tile inset" points="163.46,20.78 173.46,26.56 173.46,38.11 163.46,43.88 153.46,38.11 153.46,26.56" aria-label="Newtownabbey"/>
+    <text class="label" x="163.46" y="32.33">NTA</text>
+  </g>
+  <g class="state" data-state="ABE">
+    <title>Aberdeen</title>
+    <polygon class="tile" points="153.46,72.75 163.46,78.52 163.46,90.07 153.46,95.84 143.46,90.07 143.46,78.52" aria-label="Aberdeen"/>
+    <text class="label" x="153.46" y="84.29">ABE</text>
+  </g>
+  <g class="state" data-state="MLN">
+    <title>Midlothian</title>
+    <polygon class="tile" points="153.46,107.39 163.46,113.16 163.46,124.71 153.46,130.48 143.46,124.71 143.46,113.16" aria-label="Midlothian"/>
+    <text class="label" x="153.46" y="118.93">MLN</text>
+  </g>
+  <g class="state" data-state="SND">
+    <title>Sunderland</title>
+    <polygon class="tile" points="153.46,142.03 163.46,147.80 163.46,159.35 153.46,165.12 143.46,159.35 143.46,147.80" aria-label="Sunderland"/>
+    <text class="label" x="153.46" y="153.58">SND</text>
+  </g>
+  <g class="state" data-state="BBD">
+    <title>Blackburn with Darwen</title>
+    <polygon class="tile" points="153.46,176.67 163.46,182.44 163.46,193.99 153.46,199.76 143.46,193.99 143.46,182.44" aria-label="Blackburn with Darwen"/>
+    <text class="label" x="153.46" y="188.22">BBD</text>
+  </g>
+  <g class="state" data-state="BOL">
+    <title>Bolton</title>
+    <polygon class="tile" points="153.46,211.31 163.46,217.08 163.46,228.63 153.46,234.40 143.46,228.63 143.46,217.08" aria-label="Bolton"/>
+    <text class="label" x="153.46" y="222.86">BOL</text>
+  </g>
+  <g class="state" data-state="MAN">
+    <title>Manchester</title>
+    <polygon class="tile" points="153.46,245.95 163.46,251.72 163.46,263.27 153.46,269.05 143.46,263.27 143.46,251.72" aria-label="Manchester"/>
+    <text class="label" x="153.46" y="257.50">MAN</text>
+  </g>
+  <g class="state" data-state="STE">
+    <title>Stoke-on-Trent</title>
+    <polygon class="tile" points="153.46,280.59 163.46,286.37 163.46,297.91 153.46,303.69 143.46,297.91 143.46,286.37" aria-label="Stoke-on-Trent"/>
+    <text class="label" x="153.46" y="292.14">STE</text>
+  </g>
+  <g class="state" data-state="DUD">
+    <title>Dudley</title>
+    <polygon class="tile" points="153.46,315.23 163.46,321.01 163.46,332.55 153.46,338.33 143.46,332.55 143.46,321.01" aria-label="Dudley"/>
+    <text class="label" x="153.46" y="326.78">DUD</text>
+  </g>
+  <g class="state" data-state="GLS">
+    <title>Gloucestershire</title>
+    <polygon class="tile" points="153.46,349.87 163.46,355.65 163.46,367.19 153.46,372.97 143.46,367.19 143.46,355.65" aria-label="Gloucestershire"/>
+    <text class="label" x="153.46" y="361.42">GLS</text>
+  </g>
+  <g class="state" data-state="BAS">
+    <title>Bath and North East Somerset</title>
+    <polygon class="tile" points="153.46,384.52 163.46,390.29 163.46,401.84 153.46,407.61 143.46,401.84 143.46,390.29" aria-label="Bath and North East Somerset"/>
+    <text class="label" x="153.46" y="396.06">BAS</text>
+  </g>
+  <g class="state" data-state="POL">
+    <title>Poole</title>
+    <polygon class="tile" points="153.46,419.16 163.46,424.93 163.46,436.48 153.46,442.25 143.46,436.48 143.46,424.93" aria-label="Poole"/>
+    <text class="label" x="153.46" y="430.70">POL</text>
+  </g>
+  <g class="state" data-state="DND">
+    <title>Dundee</title>
+    <polygon class="tile" points="143.46,55.43 153.46,61.20 153.46,72.75 143.46,78.52 133.46,72.75 133.46,61.20" aria-label="Dundee"/>
+    <text class="label" x="143.46" y="66.97">DND</text>
+  </g>
+  <g class="state" data-state="EDH">
+    <title>Edinburgh</title>
+    <polygon class="tile" points="143.46,90.07 153.46,95.84 153.46,107.39 143.46,113.16 133.46,107.39 133.46,95.84" aria-label="Edinburgh"/>
+    <text class="label" x="143.46" y="101.61">EDH</text>
+  </g>
+  <g class="state" data-state="SCB">
+    <title>Scottish Borders</title>
+    <polygon class="tile" points="143.46,124.71 153.46,130.48 153.46,142.03 143.46,147.80 133.46,142.03 133.46,130.48" aria-label="Scottish Borders"/>
+    <text class="label" x="143.46" y="136.25">SCB</text>
+  </g>
+  <g class="state" data-state="CMA">
+    <title>Cumbria</title>
+    <polygon class="tile" points="143.46,159.35 153.46,165.12 153.46,176.67 143.46,182.44 133.46,176.67 133.46,165.12" aria-label="Cumbria"/>
+    <text class="label" x="143.46" y="170.90">CMA</text>
+  </g>
+  <g class="state" data-state="WGN">
+    <title>Wigan</title>
+    <polygon class="tile" points="143.46,193.99 153.46,199.76 153.46,211.31 143.46,217.08 133.46,211.31 133.46,199.76" aria-label="Wigan"/>
+    <text class="label" x="143.46" y="205.54">WGN</text>
+  </g>
+  <g class="state" data-state="BUR">
+    <title>Bury</title>
+    <polygon class="tile" points="143.46,228.63 153.46,234.40 153.46,245.95 143.46,251.72 133.46,245.95 133.46,234.40" aria-label="Bury"/>
+    <text class="label" x="143.46" y="240.18">BUR</text>
+  </g>
+  <g class="state" data-state="CHE">
+    <title>Cheshire East</title>
+    <polygon class="tile" points="143.46,263.27 153.46,269.05 153.46,280.59 143.46,286.37 133.46,280.59 133.46,269.05" aria-label="Cheshire East"/>
+    <text class="label" x="143.46" y="274.82">CHE</text>
+  </g>
+  <g class="state" data-state="WLV">
+    <title>Wolverhampton</title>
+    <polygon class="tile" points="143.46,297.91 153.46,303.69 153.46,315.23 143.46,321.01 133.46,315.23 133.46,303.69" aria-label="Wolverhampton"/>
+    <text class="label" x="143.46" y="309.46">WLV</text>
+  </g>
+  <g class="state" data-state="HEF">
+    <title>Herefordshire</title>
+    <polygon class="tile" points="143.46,332.55 153.46,338.33 153.46,349.87 143.46,355.65 133.46,349.87 133.46,338.33" aria-label="Herefordshire"/>
+    <text class="label" x="143.46" y="344.10">HEF</text>
+  </g>
+  <g class="state" data-state="SGC">
+    <title>South Gloucestershire</title>
+    <polygon class="tile" points="143.46,367.19 153.46,372.97 153.46,384.52 143.46,390.29 133.46,384.52 133.46,372.97" aria-label="South Gloucestershire"/>
+    <text class="label" x="143.46" y="378.74">SGC</text>
+  </g>
+  <g class="state" data-state="NSM">
+    <title>North Somerset</title>
+    <polygon class="tile" points="143.46,401.84 153.46,407.61 153.46,419.16 143.46,424.93 133.46,419.16 133.46,407.61" aria-label="North Somerset"/>
+    <text class="label" x="143.46" y="413.38">NSM</text>
+  </g>
+  <g class="state" data-state="HAM">
+    <title>Hampshire</title>
+    <polygon class="tile" points="143.46,436.48 153.46,442.25 153.46,453.80 143.46,459.57 133.46,453.80 133.46,442.25" aria-label="Hampshire"/>
+    <text class="label" x="143.46" y="448.02">HAM</text>
+  </g>
+  <g class="state" data-state="DGN">
+    <title>Dungannon</title>
+    <polygon class="tile inset" points="143.46,471.12 153.46,476.89 153.46,488.44 143.46,494.21 133.46,488.44 133.46,476.89" aria-label="Dungannon"/>
+    <text class="label" x="143.46" y="482.66">DGN</text>
+  </g>
+  <g class="state" data-state="MRY">
+    <title>Moray</title>
+    <polygon class="tile" points="133.46,38.11 143.46,43.88 143.46,55.43 133.46,61.20 123.46,55.43 123.46,43.88" aria-label="Moray"/>
+    <text class="label" x="133.46" y="49.65">MRY</text>
+  </g>
+  <g class="state" data-state="FIF">
+    <title>Fife</title>
+    <polygon class="tile" points="133.46,72.75 143.46,78.52 143.46,90.07 133.46,95.84 123.46,90.07 123.46,78.52" aria-label="Fife"/>
+    <text class="label" x="133.46" y="84.29">FIF</text>
+  </g>
+  <g class="state" data-state="WLN">
+    <title>West Lothian</title>
+    <polygon class="tile" points="133.46,107.39 143.46,113.16 143.46,124.71 133.46,130.48 123.46,124.71 123.46,113.16" aria-label="West Lothian"/>
+    <text class="label" x="133.46" y="118.93">WLN</text>
+  </g>
+  <g class="state" data-state="ELN">
+    <title>East Lothian</title>
+    <polygon class="tile" points="133.46,142.03 143.46,147.80 143.46,159.35 133.46,165.12 123.46,159.35 123.46,147.80" aria-label="East Lothian"/>
+    <text class="label" x="133.46" y="153.58">ELN</text>
+  </g>
+  <g class="state" data-state="LAN">
+    <title>Lancashire</title>
+    <polygon class="tile" points="133.46,176.67 143.46,182.44 143.46,193.99 133.46,199.76 123.46,193.99 123.46,182.44" aria-label="Lancashire"/>
+    <text class="label" x="133.46" y="188.22">LAN</text>
+  </g>
+  <g class="state" data-state="SLF">
+    <title>Salford</title>
+    <polygon class="tile" points="133.46,211.31 143.46,217.08 143.46,228.63 133.46,234.40 123.46,228.63 123.46,217.08" aria-label="Salford"/>
+    <text class="label" x="133.46" y="222.86">SLF</text>
+  </g>
+  <g class="state" data-state="KWL">
+    <title>Knowsley</title>
+    <polygon class="tile" points="133.46,245.95 143.46,251.72 143.46,263.27 133.46,269.05 123.46,263.27 123.46,251.72" aria-label="Knowsley"/>
+    <text class="label" x="133.46" y="257.50">KWL</text>
+  </g>
+  <g class="state" data-state="CHW">
+    <title>Cheshire West and Chester</title>
+    <polygon class="tile" points="133.46,280.59 143.46,286.37 143.46,297.91 133.46,303.69 123.46,297.91 123.46,286.37" aria-label="Cheshire West and Chester"/>
+    <text class="label" x="133.46" y="292.14">CHW</text>
+  </g>
+  <g class="state" data-state="STS">
+    <title>Staffordshire</title>
+    <polygon class="tile" points="133.46,315.23 143.46,321.01 143.46,332.55 133.46,338.33 123.46,332.55 123.46,321.01" aria-label="Staffordshire"/>
+    <text class="label" x="133.46" y="326.78">STS</text>
+  </g>
+  <g class="state" data-state="MON">
+    <title>Monmouthshire</title>
+    <polygon class="tile" points="133.46,349.87 143.46,355.65 143.46,367.19 133.46,372.97 123.46,367.19 123.46,355.65" aria-label="Monmouthshire"/>
+    <text class="label" x="133.46" y="361.42">MON</text>
+  </g>
+  <g class="state" data-state="BST">
+    <title>Bristol</title>
+    <polygon class="tile" points="133.46,384.52 143.46,390.29 143.46,401.84 133.46,407.61 123.46,401.84 123.46,390.29" aria-label="Bristol"/>
+    <text class="label" x="133.46" y="396.06">BST</text>
+  </g>
+  <g class="state" data-state="BMH">
+    <title>Bournemouth</title>
+    <polygon class="tile" points="133.46,419.16 143.46,424.93 143.46,436.48 133.46,442.25 123.46,436.48 123.46,424.93" aria-label="Bournemouth"/>
+    <text class="label" x="133.46" y="430.70">BMH</text>
+  </g>
+  <g class="state" data-state="BLY">
+    <title>Ballymoney</title>
+    <polygon class="tile inset" points="133.46,3.46 143.46,9.24 143.46,20.78 133.46,26.56 123.46,20.78 123.46,9.24" aria-label="Ballymoney"/>
+    <text class="label" x="133.46" y="15.01">BLY</text>
+  </g>
+  <g class="state" data-state="ANS">
+    <title>Angus</title>
+    <polygon class="tile" points="123.46,55.43 133.46,61.20 133.46,72.75 123.46,78.52 113.46,72.75 113.46,61.20" aria-label="Angus"/>
+    <text class="label" x="123.46" y="66.97">ANS</text>
+  </g>
+  <g class="state" data-state="FAL">
+    <title>Falkirk</title>
+    <polygon class="tile" points="123.46,90.07 133.46,95.84 133.46,107.39 123.46,113.16 113.46,107.39 113.46,95.84" aria-label="Falkirk"/>
+    <text class="label" x="123.46" y="101.61">FAL</text>
+  </g>
+  <g class="state" data-state="BPL">
+    <title>Blackpool</title>
+    <polygon class="tile" points="123.46,159.35 133.46,165.12 133.46,176.67 123.46,182.44 113.46,176.67 113.46,165.12" aria-label="Blackpool"/>
+    <text class="label" x="123.46" y="170.90">BPL</text>
+  </g>
+  <g class="state" data-state="WRT">
+    <title>Warrington</title>
+    <polygon class="tile" points="123.46,193.99 133.46,199.76 133.46,211.31 123.46,217.08 113.46,211.31 113.46,199.76" aria-label="Warrington"/>
+    <text class="label" x="123.46" y="205.54">WRT</text>
+  </g>
+  <g class="state" data-state="SFT">
+    <title>Sefton</title>
+    <polygon class="tile" points="123.46,228.63 133.46,234.40 133.46,245.95 123.46,251.72 113.46,245.95 113.46,234.40" aria-label="Sefton"/>
+    <text class="label" x="123.46" y="240.18">SFT</text>
+  </g>
+  <g class="state" data-state="HAL">
+    <title>Halton</title>
+    <polygon class="tile" points="123.46,263.27 133.46,269.05 133.46,280.59 123.46,286.37 113.46,280.59 113.46,269.05" aria-label="Halton"/>
+    <text class="label" x="123.46" y="274.82">HAL</text>
+  </g>
+  <g class="state" data-state="SHR">
+    <title>Shropshire</title>
+    <polygon class="tile" points="123.46,297.91 133.46,303.69 133.46,315.23 123.46,321.01 113.46,315.23 113.46,303.69" aria-label="Shropshire"/>
+    <text class="label" x="123.46" y="309.46">SHR</text>
+  </g>
+  <g class="state" data-state="BGW">
+    <title>Blaenau Gwent</title>
+    <polygon class="tile" points="123.46,332.55 133.46,338.33 133.46,349.87 123.46,355.65 113.46,349.87 113.46,338.33" aria-label="Blaenau Gwent"/>
+    <text class="label" x="123.46" y="344.10">BGW</text>
+  </g>
+  <g class="state" data-state="NWP">
+    <title>Newport</title>
+    <polygon class="tile" points="123.46,367.19 133.46,372.97 133.46,384.52 123.46,390.29 113.46,384.52 113.46,372.97" aria-label="Newport"/>
+    <text class="label" x="123.46" y="378.74">NWP</text>
+  </g>
+  <g class="state" data-state="SLG">
+    <title>Slough</title>
+    <polygon class="tile" points="123.46,401.84 133.46,407.61 133.46,419.16 123.46,424.93 113.46,419.16 113.46,407.61" aria-label="Slough"/>
+    <text class="label" x="123.46" y="413.38">SLG</text>
+  </g>
+  <g class="state" data-state="DOR">
+    <title>Dorset</title>
+    <polygon class="tile" points="123.46,436.48 133.46,442.25 133.46,453.80 123.46,459.57 113.46,453.80 113.46,442.25" aria-label="Dorset"/>
+    <text class="label" x="123.46" y="448.02">DOR</text>
+  </g>
+  <g class="state" data-state="ABD">
+    <title>Aberdeenshire</title>
+    <polygon class="tile" points="113.46,38.11 123.46,43.88 123.46,55.43 113.46,61.20 103.46,55.43 103.46,43.88" aria-label="Aberdeenshire"/>
+    <text class="label" x="113.46" y="49.65">ABD</text>
+  </g>
+  <g class="state" data-state="CLK">
+    <title>Clackmannanshire</title>
+    <polygon class="tile" points="113.46,72.75 123.46,78.52 123.46,90.07 113.46,95.84 103.46,90.07 103.46,78.52" aria-label="Clackmannanshire"/>
+    <text class="label" x="113.46" y="84.29">CLK</text>
+  </g>
+  <g class="state" data-state="NLK">
+    <title>North Lanarkshire</title>
+    <polygon class="tile" points="113.46,107.39 123.46,113.16 123.46,124.71 113.46,130.48 103.46,124.71 103.46,113.16" aria-label="North Lanarkshire"/>
+    <text class="label" x="113.46" y="118.93">NLK</text>
+  </g>
+  <g class="state" data-state="SHN">
+    <title>Merseyside</title>
+    <polygon class="tile" points="113.46,176.67 123.46,182.44 123.46,193.99 113.46,199.76 103.46,193.99 103.46,182.44" aria-label="Merseyside"/>
+    <text class="label" x="113.46" y="188.22">SHN</text>
+  </g>
+  <g class="state" data-state="TRF">
+    <title>Trafford</title>
+    <polygon class="tile" points="113.46,211.31 123.46,217.08 123.46,228.63 113.46,234.40 103.46,228.63 103.46,217.08" aria-label="Trafford"/>
+    <text class="label" x="113.46" y="222.86">TRF</text>
+  </g>
+  <g class="state" data-state="LIV">
+    <title>Liverpool</title>
+    <polygon class="tile" points="113.46,245.95 123.46,251.72 123.46,263.27 113.46,269.05 103.46,263.27 103.46,251.72" aria-label="Liverpool"/>
+    <text class="label" x="113.46" y="257.50">LIV</text>
+  </g>
+  <g class="state" data-state="WRX">
+    <title>Wrexham</title>
+    <polygon class="tile" points="113.46,280.59 123.46,286.37 123.46,297.91 113.46,303.69 103.46,297.91 103.46,286.37" aria-label="Wrexham"/>
+    <text class="label" x="113.46" y="292.14">WRX</text>
+  </g>
+  <g class="state" data-state="TFW">
+    <title>Telford and Wrekin</title>
+    <polygon class="tile" points="113.46,315.23 123.46,321.01 123.46,332.55 113.46,338.33 103.46,332.55 103.46,321.01" aria-label="Telford and Wrekin"/>
+    <text class="label" x="113.46" y="326.78">TFW</text>
+  </g>
+  <g class="state" data-state="TOF">
+    <title>Torfaen</title>
+    <polygon class="tile" points="113.46,349.87 123.46,355.65 123.46,367.19 113.46,372.97 103.46,367.19 103.46,355.65" aria-label="Torfaen"/>
+    <text class="label" x="113.46" y="361.42">TOF</text>
+  </g>
+  <g class="state" data-state="CRF">
+    <title>Cardiff</title>
+    <polygon class="tile" points="113.46,384.52 123.46,390.29 123.46,401.84 113.46,407.61 103.46,401.84 103.46,390.29" aria-label="Cardiff"/>
+    <text class="label" x="113.46" y="396.06">CRF</text>
+  </g>
+  <g class="state" data-state="RDG">
+    <title>Reading</title>
+    <polygon class="tile" points="113.46,419.16 123.46,424.93 123.46,436.48 113.46,442.25 103.46,436.48 103.46,424.93" aria-label="Reading"/>
+    <text class="label" x="113.46" y="430.70">RDG</text>
+  </g>
+  <g class="state" data-state="CON">
+    <title>Cornwall</title>
+    <polygon class="tile" points="113.46,453.80 123.46,459.57 123.46,471.12 113.46,476.89 103.46,471.12 103.46,459.57" aria-label="Cornwall"/>
+    <text class="label" x="113.46" y="465.34">CON</text>
+  </g>
+  <g class="state" data-state="OMH">
+    <title>Omagh</title>
+    <polygon class="tile inset" points="113.46,488.44 123.46,494.21 123.46,505.76 113.46,511.53 103.46,505.76 103.46,494.21" aria-label="Omagh"/>
+    <text class="label" x="113.46" y="499.99">OMH</text>
+  </g>
+  <g class="state" data-state="PKN">
+    <title>Perthshire and Kinross</title>
+    <polygon class="tile" points="103.46,55.43 113.46,61.20 113.46,72.75 103.46,78.52 93.46,72.75 93.46,61.20" aria-label="Perthshire and Kinross"/>
+    <text class="label" x="103.46" y="66.97">PKN</text>
+  </g>
+  <g class="state" data-state="EDU">
+    <title>East Dunbartonshire</title>
+    <polygon class="tile" points="103.46,90.07 113.46,95.84 113.46,107.39 103.46,113.16 93.46,107.39 93.46,95.84" aria-label="East Dunbartonshire"/>
+    <text class="label" x="103.46" y="101.61">EDU</text>
+  </g>
+  <g class="state" data-state="SLK">
+    <title>South Lanarkshire</title>
+    <polygon class="tile" points="103.46,124.71 113.46,130.48 113.46,142.03 103.46,147.80 93.46,142.03 93.46,130.48" aria-label="South Lanarkshire"/>
+    <text class="label" x="103.46" y="136.25">SLK</text>
+  </g>
+  <g class="state" data-state="WRL">
+    <title>Halton</title>
+    <polygon class="tile" points="103.46,263.27 113.46,269.05 113.46,280.59 103.46,286.37 93.46,280.59 93.46,269.05" aria-label="Halton"/>
+    <text class="label" x="103.46" y="274.82">WRL</text>
+  </g>
+  <g class="state" data-state="DEN">
+    <title>Denbighshire</title>
+    <polygon class="tile" points="103.46,297.91 113.46,303.69 113.46,315.23 103.46,321.01 93.46,315.23 93.46,303.69" aria-label="Denbighshire"/>
+    <text class="label" x="103.46" y="309.46">DEN</text>
+  </g>
+  <g class="state" data-state="POW">
+    <title>Powys</title>
+    <polygon class="tile" points="103.46,332.55 113.46,338.33 113.46,349.87 103.46,355.65 93.46,349.87 93.46,338.33" aria-label="Powys"/>
+    <text class="label" x="103.46" y="344.10">POW</text>
+  </g>
+  <g class="state" data-state="CAY">
+    <title>Caerphilly</title>
+    <polygon class="tile" points="103.46,367.19 113.46,372.97 113.46,384.52 103.46,390.29 93.46,384.52 93.46,372.97" aria-label="Caerphilly"/>
+    <text class="label" x="103.46" y="378.74">CAY</text>
+  </g>
+  <g class="state" data-state="WNM">
+    <title>Royal Borough of Windsor and Maidenhead</title>
+    <polygon class="tile" points="103.46,401.84 113.46,407.61 113.46,419.16 103.46,424.93 93.46,419.16 93.46,407.61" aria-label="Royal Borough of Windsor and Maidenhead"/>
+    <text class="label" x="103.46" y="413.38">WNM</text>
+  </g>
+  <g class="state" data-state="DEV">
+    <title>Devon</title>
+    <polygon class="tile" points="103.46,436.48 113.46,442.25 113.46,453.80 103.46,459.57 93.46,453.80 93.46,442.25" aria-label="Devon"/>
+    <text class="label" x="103.46" y="448.02">DEV</text>
+  </g>
+  <g class="state" data-state="HLD">
+    <title>Highland</title>
+    <polygon class="tile" points="93.46,38.11 103.46,43.88 103.46,55.43 93.46,61.20 83.46,55.43 83.46,43.88" aria-label="Highland"/>
+    <text class="label" x="93.46" y="49.65">HLD</text>
+  </g>
+  <g class="state" data-state="STG">
+    <title>Stirling</title>
+    <polygon class="tile" points="93.46,72.75 103.46,78.52 103.46,90.07 93.46,95.84 83.46,90.07 83.46,78.52" aria-label="Stirling"/>
+    <text class="label" x="93.46" y="84.29">STG</text>
+  </g>
+  <g class="state" data-state="ERW">
+    <title>East Renfrewshire</title>
+    <polygon class="tile" points="93.46,107.39 103.46,113.16 103.46,124.71 93.46,130.48 83.46,124.71 83.46,113.16" aria-label="East Renfrewshire"/>
+    <text class="label" x="93.46" y="118.93">ERW</text>
+  </g>
+  <g class="state" data-state="DGY">
+    <title>Dumfries and Galloway</title>
+    <polygon class="tile" points="93.46,142.03 103.46,147.80 103.46,159.35 93.46,165.12 83.46,159.35 83.46,147.80" aria-label="Dumfries and Galloway"/>
+    <text class="label" x="93.46" y="153.58">DGY</text>
+  </g>
+  <g class="state" data-state="FLN">
+    <title>Flintshire</title>
+    <polygon class="tile" points="93.46,280.59 103.46,286.37 103.46,297.91 93.46,303.69 83.46,297.91 83.46,286.37" aria-label="Flintshire"/>
+    <text class="label" x="93.46" y="292.14">FLN</text>
+  </g>
+  <g class="state" data-state="GWN">
+    <title>Gwynedd</title>
+    <polygon class="tile" points="93.46,315.23 103.46,321.01 103.46,332.55 93.46,338.33 83.46,332.55 83.46,321.01" aria-label="Gwynedd"/>
+    <text class="label" x="93.46" y="326.78">GWN</text>
+  </g>
+  <g class="state" data-state="MTY">
+    <title>Merthyr Tydfil</title>
+    <polygon class="tile" points="93.46,349.87 103.46,355.65 103.46,367.19 93.46,372.97 83.46,367.19 83.46,355.65" aria-label="Merthyr Tydfil"/>
+    <text class="label" x="93.46" y="361.42">MTY</text>
+  </g>
+  <g class="state" data-state="VGL">
+    <title>Vale of Glamorgan</title>
+    <polygon class="tile" points="93.46,384.52 103.46,390.29 103.46,401.84 93.46,407.61 83.46,401.84 83.46,390.29" aria-label="Vale of Glamorgan"/>
+    <text class="label" x="93.46" y="396.06">VGL</text>
+  </g>
+  <g class="state" data-state="WOK">
+    <title>Wokingham</title>
+    <polygon class="tile" points="93.46,419.16 103.46,424.93 103.46,436.48 93.46,442.25 83.46,436.48 83.46,424.93" aria-label="Wokingham"/>
+    <text class="label" x="93.46" y="430.70">WOK</text>
+  </g>
+  <g class="state" data-state="TOB">
+    <title>Torbay</title>
+    <polygon class="tile" points="93.46,453.80 103.46,459.57 103.46,471.12 93.46,476.89 83.46,471.12 83.46,459.57" aria-label="Torbay"/>
+    <text class="label" x="93.46" y="465.34">TOB</text>
+  </g>
+  <g class="state" data-state="CLR">
+    <title>Coleraine</title>
+    <polygon class="tile inset" points="93.46,3.46 103.46,9.24 103.46,20.78 93.46,26.56 83.46,20.78 83.46,9.24" aria-label="Coleraine"/>
+    <text class="label" x="93.46" y="15.01">CLR</text>
+  </g>
+  <g class="state" data-state="AGB">
+    <title>Argyll and Bute</title>
+    <polygon class="tile" points="83.46,55.43 93.46,61.20 93.46,72.75 83.46,78.52 73.46,72.75 73.46,61.20" aria-label="Argyll and Bute"/>
+    <text class="label" x="83.46" y="66.97">AGB</text>
+  </g>
+  <g class="state" data-state="GLG">
+    <title>Glasgow</title>
+    <polygon class="tile" points="83.46,90.07 93.46,95.84 93.46,107.39 83.46,113.16 73.46,107.39 73.46,95.84" aria-label="Glasgow"/>
+    <text class="label" x="83.46" y="101.61">GLG</text>
+  </g>
+  <g class="state" data-state="EAY">
+    <title>East Ayrshire</title>
+    <polygon class="tile" points="83.46,124.71 93.46,130.48 93.46,142.03 83.46,147.80 73.46,142.03 73.46,130.48" aria-label="East Ayrshire"/>
+    <text class="label" x="83.46" y="136.25">EAY</text>
+  </g>
+  <g class="state" data-state="CWY">
+    <title>Conwy</title>
+    <polygon class="tile" points="83.46,297.91 93.46,303.69 93.46,315.23 83.46,321.01 73.46,315.23 73.46,303.69" aria-label="Conwy"/>
+    <text class="label" x="83.46" y="309.46">CWY</text>
+  </g>
+  <g class="state" data-state="CGN">
+    <title>Ceredigion</title>
+    <polygon class="tile" points="83.46,332.55 93.46,338.33 93.46,349.87 83.46,355.65 73.46,349.87 73.46,338.33" aria-label="Ceredigion"/>
+    <text class="label" x="83.46" y="344.10">CGN</text>
+  </g>
+  <g class="state" data-state="RCT">
+    <title>Rhondda, Cynon, Taff</title>
+    <polygon class="tile" points="83.46,367.19 93.46,372.97 93.46,384.52 83.46,390.29 73.46,384.52 73.46,372.97" aria-label="Rhondda, Cynon, Taff"/>
+    <text class="label" x="83.46" y="378.74">RCT</text>
+  </g>
+  <g class="state" data-state="BRC">
+    <title>Bracknell Forest</title>
+    <polygon class="tile" points="83.46,401.84 93.46,407.61 93.46,419.16 83.46,424.93 73.46,419.16 73.46,407.61" aria-label="Bracknell Forest"/>
+    <text class="label" x="83.46" y="413.38">BRC</text>
+  </g>
+  <g class="state" data-state="PLY">
+    <title>Plymouth</title>
+    <polygon class="tile" points="83.46,436.48 93.46,442.25 93.46,453.80 83.46,459.57 73.46,453.80 73.46,442.25" aria-label="Plymouth"/>
+    <text class="label" x="83.46" y="448.02">PLY</text>
+  </g>
+  <g class="state" data-state="WDU">
+    <title>West Dunbartonshire</title>
+    <polygon class="tile" points="73.46,72.75 83.46,78.52 83.46,90.07 73.46,95.84 63.46,90.07 63.46,78.52" aria-label="West Dunbartonshire"/>
+    <text class="label" x="73.46" y="84.29">WDU</text>
+  </g>
+  <g class="state" data-state="NAY">
+    <title>North Ayshire</title>
+    <polygon class="tile" points="73.46,107.39 83.46,113.16 83.46,124.71 73.46,130.48 63.46,124.71 63.46,113.16" aria-label="North Ayshire"/>
+    <text class="label" x="73.46" y="118.93">NAY</text>
+  </g>
+  <g class="state" data-state="PEM">
+    <title>Pembrokeshire</title>
+    <polygon class="tile" points="73.46,315.23 83.46,321.01 83.46,332.55 73.46,338.33 63.46,332.55 63.46,321.01" aria-label="Pembrokeshire"/>
+    <text class="label" x="73.46" y="326.78">PEM</text>
+  </g>
+  <g class="state" data-state="NTL">
+    <title>Neath Port Talbot</title>
+    <polygon class="tile" points="73.46,349.87 83.46,355.65 83.46,367.19 73.46,372.97 63.46,367.19 63.46,355.65" aria-label="Neath Port Talbot"/>
+    <text class="label" x="73.46" y="361.42">NTL</text>
+  </g>
+  <g class="state" data-state="AGY">
+    <title>Anglesey</title>
+    <polygon class="tile inset" points="73.46,245.95 83.46,251.72 83.46,263.27 73.46,269.05 63.46,263.27 63.46,251.72" aria-label="Anglesey"/>
+    <text class="label" x="73.46" y="257.50">AGY</text>
+  </g>
+  <g class="state" data-state="ARD">
+    <title>Ards</title>
+    <polygon class="tile inset" points="73.46,211.31 83.46,217.08 83.46,228.63 73.46,234.40 63.46,228.63 63.46,217.08" aria-label="Ards"/>
+    <text class="label" x="73.46" y="222.86">ARD</text>
+  </g>
+  <g class="state" data-state="NDN">
+    <title>North Down</title>
+    <polygon class="tile inset" points="73.46,176.67 83.46,182.44 83.46,193.99 73.46,199.76 63.46,193.99 63.46,182.44" aria-label="North Down"/>
+    <text class="label" x="73.46" y="188.22">NDN</text>
+  </g>
+  <g class="state" data-state="IOS">
+    <title>Isles of Scilly</title>
+    <polygon class="tile inset" points="73.46,488.44 83.46,494.21 83.46,505.76 73.46,511.53 63.46,505.76 63.46,494.21" aria-label="Isles of Scilly"/>
+    <text class="label" x="73.46" y="499.99">IOS</text>
+  </g>
+  <g class="state" data-state="RFW">
+    <title>Renfrewshire</title>
+    <polygon class="tile" points="63.46,90.07 73.46,95.84 73.46,107.39 63.46,113.16 53.46,107.39 53.46,95.84" aria-label="Renfrewshire"/>
+    <text class="label" x="63.46" y="101.61">RFW</text>
+  </g>
+  <g class="state" data-state="SAY">
+    <title>South Ayrshire</title>
+    <polygon class="tile" points="63.46,124.71 73.46,130.48 73.46,142.03 63.46,147.80 53.46,142.03 53.46,130.48" aria-label="South Ayrshire"/>
+    <text class="label" x="63.46" y="136.25">SAY</text>
+  </g>
+  <g class="state" data-state="CMN">
+    <title>Carmarthenshire</title>
+    <polygon class="tile" points="63.46,332.55 73.46,338.33 73.46,349.87 63.46,355.65 53.46,349.87 53.46,338.33" aria-label="Carmarthenshire"/>
+    <text class="label" x="63.46" y="344.10">CMN</text>
+  </g>
+  <g class="state" data-state="BGE">
+    <title>Bridgend</title>
+    <polygon class="tile" points="63.46,367.19 73.46,372.97 73.46,384.52 63.46,390.29 53.46,384.52 53.46,372.97" aria-label="Bridgend"/>
+    <text class="label" x="63.46" y="378.74">BGE</text>
+  </g>
+  <g class="state" data-state="BLA">
+    <title>Ballymena</title>
+    <polygon class="tile inset" points="63.46,20.78 73.46,26.56 73.46,38.11 63.46,43.88 53.46,38.11 53.46,26.56" aria-label="Ballymena"/>
+    <text class="label" x="63.46" y="32.33">BLA</text>
+  </g>
+  <g class="state" data-state="IVC">
+    <title>Inverclyde</title>
+    <polygon class="tile" points="53.46,107.39 63.46,113.16 63.46,124.71 53.46,130.48 43.46,124.71 43.46,113.16" aria-label="Inverclyde"/>
+    <text class="label" x="53.46" y="118.93">IVC</text>
+  </g>
+  <g class="state" data-state="SWA">
+    <title>Swansea</title>
+    <polygon class="tile" points="53.46,349.87 63.46,355.65 63.46,367.19 53.46,372.97 43.46,367.19 43.46,355.65" aria-label="Swansea"/>
+    <text class="label" x="53.46" y="361.42">SWA</text>
+  </g>
+  <g class="state" data-state="ANT">
+    <title>Antrim</title>
+    <polygon class="tile inset" points="53.46,280.59 63.46,286.37 63.46,297.91 53.46,303.69 43.46,297.91 43.46,286.37" aria-label="Antrim"/>
+    <text class="label" x="53.46" y="292.14">ANT</text>
+  </g>
+  <g class="state" data-state="MFT">
+    <title>Magherafelt</title>
+    <polygon class="tile inset" points="53.46,419.16 63.46,424.93 63.46,436.48 53.46,442.25 43.46,436.48 43.46,424.93" aria-label="Magherafelt"/>
+    <text class="label" x="53.46" y="430.70">MFT</text>
+  </g>
+  <g class="state" data-state="BNB">
+    <title>Banbridge</title>
+    <polygon class="tile inset" points="53.46,453.80 63.46,459.57 63.46,471.12 53.46,476.89 43.46,471.12 43.46,459.57" aria-label="Banbridge"/>
+    <text class="label" x="53.46" y="465.34">BNB</text>
+  </g>
+  <g class="state" data-state="MYL">
+    <title>Moyle</title>
+    <polygon class="tile inset" points="43.46,159.35 53.46,165.12 53.46,176.67 43.46,182.44 33.46,176.67 33.46,165.12" aria-label="Moyle"/>
+    <text class="label" x="43.46" y="170.90">MYL</text>
+  </g>
+  <g class="state" data-state="DOW">
+    <title>Down</title>
+    <polygon class="tile inset" points="43.46,55.43 53.46,61.20 53.46,72.75 43.46,78.52 33.46,72.75 33.46,61.20" aria-label="Down"/>
+    <text class="label" x="43.46" y="66.97">DOW</text>
+  </g>
+  <g class="state" data-state="LSB">
+    <title>Lisburn</title>
+    <polygon class="tile inset" points="33.46,315.23 43.46,321.01 43.46,332.55 33.46,338.33 23.46,332.55 23.46,321.01" aria-label="Lisburn"/>
+    <text class="label" x="33.46" y="326.78">LSB</text>
+  </g>
+  <g class="state" data-state="NYM">
+    <title>Newry and Mourne</title>
+    <polygon class="tile inset" points="33.46,384.52 43.46,390.29 43.46,401.84 33.46,407.61 23.46,401.84 23.46,390.29" aria-label="Newry and Mourne"/>
+    <text class="label" x="33.46" y="396.06">NYM</text>
+  </g>
+  <g class="state" data-state="LRN">
+    <title>Larne</title>
+    <polygon class="tile inset" points="23.46,124.71 33.46,130.48 33.46,142.03 23.46,147.80 13.46,142.03 13.46,130.48" aria-label="Larne"/>
+    <text class="label" x="23.46" y="136.25">LRN</text>
+  </g>
+  <g class="state" data-state="CKF">
+    <title>Carrickfergus</title>
+    <polygon class="tile inset" points="23.46,90.07 33.46,95.84 33.46,107.39 23.46,113.16 13.46,107.39 13.46,95.84" aria-label="Carrickfergus"/>
+    <text class="label" x="23.46" y="101.61">CKF</text>
+  </g>
+  <g class="state" data-state="CSR">
+    <title>Castlereagh</title>
+    <polygon class="tile inset" points="13.46,349.87 23.46,355.65 23.46,367.19 13.46,372.97 3.46,367.19 3.46,355.65" aria-label="Castlereagh"/>
+    <text class="label" x="13.46" y="361.42">CSR</text>
+  </g>
+</svg>

@@ -1,0 +1,26 @@
+type: waitlist
+site:
+  name: Hype
+  description: Join the waitlist for the world's flattest app.
+  nav:
+    - label: Join
+      href: "#join"
+hero:
+  badge: "🪄 Now building"
+  headline: The tool the internet asked for.
+  subheadline: A dependency-free page generated from a single YAML file.
+waitlist:
+  launches: "🧡 Open to the first 1,000 on November 1"
+  heading: Join the waitlist.
+  body: Leave your email and we will send one note when seats open — nothing else.
+  form:
+    action: "https://forms.example.com/signup"
+    placeholder: "you@example.com"
+    button: Notify me
+  social:
+    - label: "𝕏"
+      href: "https://twitter.com"
+    - label: "🎮"
+      href: "https://discord.example.com"
+footer:
+  copyright: "© 2026 Hype"

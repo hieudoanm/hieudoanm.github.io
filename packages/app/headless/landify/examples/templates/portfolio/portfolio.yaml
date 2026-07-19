@@ -1,0 +1,46 @@
+type: portfolio
+site:
+  name: Ana Ruiz
+  description: Design engineer and YAML evangelist.
+  nav:
+    - label: Work
+      href: "#work"
+    - label: Contact
+      href: "mailto:ana@example.com"
+portfolio:
+  name: Ana Ruiz
+  role: Design engineer and YAML evangelist.
+  location: Lisbon
+  avatar: "🦊"
+  about: I build flat, accessible pages and the tiny tools behind them — one YAML file at a time.
+  skills:
+    - HTML
+    - CSS
+    - Go
+    - Design systems
+    - Accessibility
+  projects:
+    - icon: "📐"
+      title: Tokens
+      body: Derive a full design system from eight colors.
+      href: "https://example.com/tokens"
+    - icon: "🎨"
+      title: Themes
+      body: Sixty-four curated color presets with one command.
+      href: "https://example.com/themes"
+    - icon: "🧪"
+      title: Specs
+      body: Contract tests that guard YAML pages from drift.
+      href: "https://example.com/specs"
+features:
+  heading: Selected work
+  sub: A few things I have shipped recently.
+cta:
+  icon: "💌"
+  heading: Let's make something flat.
+  body: Open to freelance, talks, and side projects.
+  button:
+    label: Say hello
+    href: "mailto:ana@example.com"
+footer:
+  copyright: "© 2026 Ana Ruiz"
