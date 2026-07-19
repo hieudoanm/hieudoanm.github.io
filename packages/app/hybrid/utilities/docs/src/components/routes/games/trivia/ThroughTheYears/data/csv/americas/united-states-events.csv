@@ -1,0 +1,101 @@
+id,title,year,description,category,region,difficulty,source
+americas-jamestown-founded-1607,Jamestown Founded,1607,The English founded Jamestown the first permanent colony in America.,politics,americas,3,britannica
+americas-mayflower-1620,Mayflower Compact Signed,1620,The Pilgrims signed the Mayflower Compact aboard ship.,politics,americas,3,britannica
+americas-harvard-founded-1636,Harvard University Founded,1636,Harvard became the first college in the American colonies.,science,americas,4,britannica
+americas-salem-trials-1692,Salem Witch Trials,1692,Witch trials in Salem Massachusetts led to mass executions.,culture,americas,4,britannica
+americas-french-indian-war-1754,French and Indian War Begins,1754,Britain and France fought for control of North America.,war,americas,3,britannica
+americas-stamp-act-1765,Stamp Act Passed,1765,Parliament taxed the American colonies with the Stamp Act.,politics,americas,3,britannica
+americas-boston-massacre-1770,Boston Massacre,1770,British soldiers fired on a crowd in Boston killing five people.,politics,americas,4,britannica
+americas-boston-tea-party-1773,Boston Tea Party,1773,Colonists dumped British tea into Boston Harbor.,politics,americas,3,britannica
+americas-intolerable-acts-1774,Intolerable Acts Passed,1774,Parliament punished Boston with the Coercive Acts.,politics,americas,4,britannica
+americas-lexington-concord-1775,Shots Heard Round the World,1775,Fighting broke out at Lexington and Concord starting the Revolution.,war,americas,2,britannica
+americas-declaration-independence-1776,Declaration of Independence,1776,The colonies declared independence from Britain on July 4.,politics,americas,1,britannica
+americas-valley-forge-1777,Winter at Valley Forge,1777,Washington's army endured a brutal winter at Valley Forge.,war,americas,4,britannica
+americas-treaty-paris-1783,Treaty of Paris Signed,1783,Britain recognized American independence.,politics,americas,3,britannica
+americas-constitution-1787,US Constitution Adopted,1787,Delegates in Philadelphia approved the Constitution.,politics,americas,2,britannica
+americas-bill-of-rights-1791,Bill of Rights Ratified,1791,The first ten amendments were added to the Constitution.,politics,americas,3,britannica
+americas-whiskey-rebellion-1794,Whiskey Rebellion,1794,Farmers in Pennsylvania rebelled against a whiskey tax.,politics,americas,4,britannica
+americas-louisiana-purchase-1803,Louisiana Purchase,1803,The United States bought Louisiana from France doubling its size.,politics,americas,2,britannica
+americas-lewis-clark-1804,Lewis and Clark Expedition,1804,The Corps of Discovery set out to explore the American West.,culture,americas,3,britannica
+americas-steamboat-clermont-1807,Steamboat Clermont Sails,1807,Robert Fulton's steamboat steamed up the Hudson River.,technology,americas,4,britannica
+americas-erie-canal-1825,Erie Canal Opens,1825,The Erie Canal linked the Great Lakes to the Hudson River.,technology,americas,4,britannica
+americas-trail-of-tears-1830,Indian Removal Act Passed,1830,The Act forced Native American tribes to leave their lands.,politics,americas,4,britannica
+americas-mccormick-reaper-1834,McCormick Reaper Patented,1834,Cyrus McCormick patented a mechanical reaper for wheat.,technology,americas,4,britannica
+americas-texas-independence-1836,Texas Declares Independence,1836,Texas declared independence from Mexico at the Alamo.,war,americas,4,britannica
+americas-trail-of-tears-1838,Trail of Tears,1838,Cherokee people were forced to march west in deadly conditions.,politics,americas,3,britannica
+americas-gold-rush-1848,California Gold Rush,1848,Gold was discovered at Sutter's Mill in California.,culture,americas,3,britannica
+americas-seneca-falls-1848,Seneca Falls Convention,1848,Reformers demanded women's rights at Seneca Falls.,politics,americas,4,britannica
+americas-compromise-1850,Compromise of 1850,1850,New laws tried to settle the slavery debate after the Mexican War.,politics,americas,5,britannica
+americas-uncle-toms-cabin-1852,Uncle Tom's Cabin Published,1852,Harriet Beecher Stowe's novel fueled the anti-slavery movement.,culture,americas,4,britannica
+americas-fugitive-slave-act-1850,Fugitive Slave Act Passed,1850,The Act required the return of escaped enslaved people.,politics,americas,5,britannica
+americas-kansas-nebraska-1854,Kansas-Nebraska Act,1854,The Act reopened the slavery question in western territories.,politics,americas,4,britannica
+americas-dred-scott-1857,Dred Scott Decision,1857,The Supreme Court ruled against Dred Scott's freedom.,politics,americas,4,britannica
+americas-lincoln-elected-1860,Lincoln Elected President,1860,Abraham Lincoln won the presidency without southern support.,politics,americas,3,britannica
+americas-civil-war-begins-1861,Civil War Begins,1861,Confederate forces attacked Fort Sumter starting the Civil War.,war,americas,2,britannica
+americas-emancipation-1863,Emancipation Proclamation,1863,Lincoln freed enslaved people in the Confederacy.,politics,americas,3,britannica
+americas-gettysburg-1863,Battle of Gettysburg,1863,The largest battle of the Civil War was fought at Gettysburg.,war,americas,2,britannica
+americas-gettysburg-address-1863,Gettysburg Address,1863,Lincoln delivered his famous address at Gettysburg.,politics,americas,3,britannica
+americas-civil-war-ends-1865,Civil War Ends,1865,Robert E. Lee surrendered at Appomattox.,war,americas,2,britannica
+americas-lincoln-assassinated-1865,Lincoln Assassinated,1865,John Wilkes Booth shot President Lincoln.,politics,americas,3,britannica
+americas-13th-amendment-1865,Thirteenth Amendment Ratified,1865,The Amendment abolished slavery in the United States.,politics,americas,4,britannica
+americas-transcontinental-railroad-1869,Transcontinental Railroad Completed,1869,The golden spike joined the nation's first transcontinental railroad.,technology,americas,3,britannica
+americas-bell-telephone-1876,Alexander Graham Bell Patents Telephone,1876,Bell patented the telephone in 1876.,technology,americas,3,britannica
+americas-edison-light-bulb-1879,Edison Demos Light Bulb,1879,Thomas Edison demonstrated a practical incandescent lamp.,technology,americas,4,britannica
+americas-haymarket-riot-1886,Haymarket Riot,1886,A labor rally in Chicago turned violent.,politics,americas,4,britannica
+americas-statue-of-liberty-1886,Statue of Liberty Dedicated,1886,The Statue of Liberty was dedicated in New York Harbor.,culture,americas,3,britannica
+americas-wounded-knee-1890,Wounded Knee Massacre,1890,US troops killed Lakota people at Wounded Knee.,war,americas,4,britannica
+americas-wright-brothers-1903,First Powered Flight,1903,The Wright brothers flew at Kitty Hawk on December 17.,technology,americas,2,britannica
+americas-ford-model-t-1908,Model T Introduced,1908,Ford launched the Model T automobile.,technology,americas,3,britannica
+americas-naacp-founded-1909,NAACP Founded,1909,Activists founded the NAACP to fight racial injustice.,politics,americas,4,britannica
+americas-titanic-sinks-1912,Titanic Sinks,1912,The Titanic struck an iceberg and sank in the Atlantic.,culture,americas,3,britannica
+americas-federal-reserve-1913,Federal Reserve Created,1913,Congress created the Federal Reserve System.,politics,americas,5,britannica
+americas-zimmermann-telegram-1917,Zimmermann Telegram Intercepted,1917,The telegram helped push the United States into World War I.,politics,americas,4,britannica
+americas-us-enters-ww1-1917,United States Enters World War I,1917,Congress declared war on Germany.,war,americas,2,britannica
+americas-18th-amendment-1919,Prohibition Enacted,1919,The Eighteenth Amendment banned alcohol nationwide.,politics,americas,4,britannica
+americas-19th-amendment-1920,Woman Suffrage Amendment,1920,Women won the right to vote with the Nineteenth Amendment.,politics,americas,3,britannica
+americas-scopes-trial-1925,Scopes Monkey Trial,1925,John Scopes was tried for teaching evolution.,science,americas,4,britannica
+americas-stock-market-crash-1929,Stock Market Crash,1929,Wall Street crashed starting the Great Depression.,culture,americas,3,britannica
+americas-dust-bowl-1934,Dust Bowl,1934,Huge dust storms devastated the Great Plains.,culture,americas,4,britannica
+americas-social-security-1935,Social Security Act,1935,The Act created old-age benefits and unemployment insurance.,politics,americas,4,britannica
+americas-golden-gate-1937,Golden Gate Bridge Opens,1937,The Golden Gate Bridge opened in San Francisco.,technology,americas,4,britannica
+americas-nylon-1938,Nylon Introduced,1938,DuPont unveiled nylon at the World's Fair.,technology,americas,5,britannica
+americas-pearl-harbor-1941,Pearl Harbor Attack,1941,Japan attacked Pearl Harbor bringing America into World War II.,war,americas,2,britannica
+americas-internment-1942,Japanese Internment Begins,1942,The government imprisoned Japanese Americans in camps.,politics,americas,4,britannica
+americas-manhattan-project-1945,Manhattan Project Test,1945,The first atomic bomb was tested at Trinity site.,war,americas,4,britannica
+americas-us-joins-un-1945,United States Joins the UN,1945,The UN Charter was ratified in San Francisco.,politics,americas,3,britannica
+americas-amelia-earhart-1937,Amelia Earhart Disappears,1937,Earhart vanished over the Pacific on a round-the-world flight.,culture,americas,3,britannica
+americas-rosie-riveter-1942,Rosie the Riveter Campaign,1942,Women entered factories to support the war effort.,culture,americas,4,britannica
+americas-jackie-robinson-1947,Jackie Robinson Breaks Barrier,1947,Robinson became the first Black player in modern Major League Baseball.,sports,americas,4,britannica
+americas-polaroid-camera-1948,Polaroid Camera Launched,1948,Edwin Land sold the first instant camera.,technology,americas,4,britannica
+americas-rock-n-roll-era-1950,Rock and Roll Emerges,1950,Rock and roll music exploded across America.,music,americas,3,britannica
+americas-supreme-court-brown-1954,Brown v. Board of Education,1954,The Supreme Court banned school segregation.,politics,americas,3,britannica
+americas-polio-vaccine-1955,Polio Vaccine Approved,1955,Jonas Salk's vaccine was declared safe and effective.,medicine,americas,3,britannica
+americas-interstate-system-1956,Interstate Highway Act,1956,Eisenhower signed the Interstate Highway Act.,technology,americas,4,britannica
+americas-nasa-founded-1958,NASA Founded,1958,NASA began operations as the civilian space agency.,space,americas,3,britannica
+americas-greensboro-sit-ins-1960,Greensboro Sit-Ins,1960,Students staged sit-ins at a segregated Woolworth lunch counter.,politics,americas,4,britannica
+americas-mercury-lauder-1961,Alan Shepard Flies to Space,1961,Shepard became the first American in space.,space,americas,3,britannica
+americas-march-washington-1963,March on Washington,1963,Martin Luther King Jr. delivered his I Have a Dream speech.,politics,americas,3,britannica
+americas-kennedy-assassinated-1963,Kennedy Assassinated,1963,President Kennedy was shot in Dallas.,politics,americas,3,britannica
+americas-civil-rights-act-1964,Civil Rights Act,1964,The Act outlawed segregation and discrimination.,politics,americas,3,britannica
+americas-voting-rights-act-1965,Voting Rights Act,1965,The Act protected the right to vote for Black Americans.,politics,americas,4,britannica
+americas-first-spacewalk-1965,First American Spacewalk,1965,Ed White walked in space during Gemini 4.,space,americas,4,britannica
+americas-super-bowl-1967,First Super Bowl,1967,The Packers beat the Chiefs in the first Super Bowl.,sports,americas,5,britannica
+americas-mlk-assassinated-1968,Martin Luther King Jr. Assassinated,1968,King was killed in Memphis.,politics,americas,3,britannica
+americas-apollo-11-1969,Apollo 11 Moon Landing,1969,Neil Armstrong walked on the Moon.,space,americas,1,britannica
+americas-earth-day-1970,First Earth Day,1970,Millions took part in the first Earth Day.,culture,americas,4,britannica
+americas-watergate-1972,Watergate Break-In,1972,Burglars were caught at the Watergate complex.,politics,americas,4,britannica
+americas-roe-wade-1973,Roe v. Wade Decided,1973,The Supreme Court recognized a right to abortion.,politics,americas,4,britannica
+americas-sony-walkman-1979,Sony Walkman Released,1979,Sony introduced the personal cassette player.,technology,americas,5,britannica
+americas-mtv-launched-1981,MTV Launches,1981,MTV went on the air with music videos.,culture,americas,5,britannica
+americas-challenger-disaster-1986,Challenger Disaster,1986,The space shuttle Challenger broke apart after launch.,space,americas,4,britannica
+americas-berlin-wall-speech-1987,Reagan at the Berlin Wall,1987,Reagan told Gorbachev to tear down the Berlin Wall.,politics,americas,4,britannica
+americas-world-wide-web-1991,World Wide Web Goes Public,1991,Tim Berners-Lee shared the web with the public.,technology,americas,4,britannica
+americas-los-angeles-riots-1992,Los Angeles Riots,1992,Riots erupted after the Rodney King verdict.,politics,americas,4,britannica
+americas-dot-com-bubble-2000,Dot-Com Bubble Peak,2000,Technology stocks peaked before a market crash.,culture,americas,5,britannica
+americas-september-11-2001,September 11 Attacks,2001,Terrorists attacked the World Trade Center and the Pentagon.,war,americas,2,britannica
+americas-facebook-launches-2004,Facebook Launches,2004,Facebook started at Harvard University.,technology,americas,4,britannica
+americas-hurricane-katrina-2005,Hurricane Katrina,2005,The hurricane devastated New Orleans.,culture,americas,3,britannica
+americas-obama-elected-2008,Obama Elected President,2008,Barack Obama became the first Black president.,politics,americas,3,britannica
+americas-affordable-care-2010,Affordable Care Act,2010,Obama signed the healthcare reform law.,politics,americas,4,britannica
+americas-osama-bin-laden-2011,Osama bin Laden Killed,2011,US forces killed bin Laden in Pakistan.,war,americas,4,britannica
+americas-supreme-court-gay-marriage-2015,Same-Sex Marriage Legalized,2015,The Supreme Court recognized same-sex marriage nationwide.,politics,americas,4,britannica

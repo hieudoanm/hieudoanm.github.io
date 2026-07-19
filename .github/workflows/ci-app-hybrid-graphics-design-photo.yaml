@@ -1,0 +1,32 @@
+name: CI - App - Hybrid - Graphics & Design - Photo
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/graphics-design/photo/**'
+      - '.github/workflows/ci-app-hybrid-graphics-design-photo.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-hybrid-graphics-design-photo-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/graphics-design/photo
+      filter: '@hieudoanm.github.io/photo'
+      releaseName: app-hybrid-graphics-design-photo-latest
+      releaseTitle: App - Hybrid - Graphics & Design - Photo (latest)
+      artifactPrefix: graphics-design-photo

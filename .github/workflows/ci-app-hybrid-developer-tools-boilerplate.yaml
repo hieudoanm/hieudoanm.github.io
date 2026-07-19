@@ -1,0 +1,32 @@
+name: CI - App - Hybrid - Developer Tools - Boilerplate
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/developer-tools/boilerplate/**'
+      - '.github/workflows/ci-app-hybrid-developer-tools-boilerplate.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-hybrid-developer-tools-boilerplate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/developer-tools/boilerplate
+      filter: '@hieudoanm.github.io/boilerplate'
+      releaseName: app-hybrid-developer-tools-boilerplate-latest
+      releaseTitle: App - Hybrid - Developer Tools - Boilerplate (latest)
+      artifactPrefix: developer-tools-boilerplate

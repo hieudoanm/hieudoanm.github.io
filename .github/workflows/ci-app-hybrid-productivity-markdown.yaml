@@ -1,0 +1,32 @@
+name: CI - App - Hybrid - Productivity - Markdown
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/productivity/markdown/**'
+      - '.github/workflows/ci-app-hybrid-productivity-markdown.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-hybrid-productivity-markdown-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/productivity/markdown
+      filter: '@hieudoanm.github.io/markdown'
+      releaseName: app-hybrid-productivity-markdown-latest
+      releaseTitle: App - Hybrid - Productivity - Markdown (latest)
+      artifactPrefix: productivity-markdown

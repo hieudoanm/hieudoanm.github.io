@@ -1,0 +1,32 @@
+name: CI - App - Hybrid - Graphics & Design - Video
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/graphics-design/video/**'
+      - '.github/workflows/ci-app-hybrid-graphics-design-video.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-hybrid-graphics-design-video-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/graphics-design/video
+      filter: '@hieudoanm.github.io/video'
+      releaseName: app-hybrid-graphics-design-video-latest
+      releaseTitle: App - Hybrid - Graphics & Design - Video (latest)
+      artifactPrefix: graphics-design-video

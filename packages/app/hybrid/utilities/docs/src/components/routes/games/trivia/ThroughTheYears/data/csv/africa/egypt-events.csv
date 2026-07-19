@@ -1,0 +1,101 @@
+id,title,year,description,category,region,difficulty,source
+africa-nile-settlement-5000,Early Nile Settlements,-5000,Communities farmed the Nile floodplain.,culture,africa,5,britannica
+africa-naqada-culture-4000,Naqada Culture,-4000,The Naqada culture unified the Nile Valley.,culture,africa,5,britannica
+africa-hieroglyphs-3200,Hieroglyphs Developed,-3200,Early hieroglyphic writing appeared in Egypt.,culture,africa,3,britannica
+africa-narmer-palette-3100,Narmer Palette,-3100,The palette records the unification of Egypt.,culture,africa,4,britannica
+africa-first-dynasty-3100,First Dynasty Begins,-3100,King Narmer founded the first royal dynasty.,politics,africa,4,britannica
+africa-memphis-capital-3100,Memphis Becomes Capital,-3100,Memphis became the seat of Egyptian power.,politics,africa,4,britannica
+africa-imhotep-2670,Imhotep Builds the Step Pyramid,-2670,Imhotep designed the Step Pyramid for Djoser.,science,africa,4,britannica
+africa-step-pyramid-2670,Step Pyramid of Djoser,-2670,The Step Pyramid at Saqqara was Egypt's first pyramid.,technology,africa,3,britannica
+africa-red-pyramid-2580,Red Pyramid Built,-2580,Sneferu built the first true smooth-sided pyramid.,technology,africa,4,britannica
+africa-great-pyramid-2560,Great Pyramid Completed,-2560,Khufu's Great Pyramid rose at Giza.,technology,africa,2,britannica
+africa-sphinx-carved-2500,Great Sphinx Carved,-2500,The Sphinx was carved beside the Giza pyramids.,culture,africa,3,britannica
+africa-sun-temple-2500,Solar Temples Built,-2500,Sun temples honored the god Ra at Abu Gurab.,culture,africa,5,britannica
+africa-first-intermediate-2181,First Intermediate Period,-2181,Central rule collapsed into regional chaos.,politics,africa,4,britannica
+africa-middle-kingdom-2055,Middle Kingdom Begins,-2055,Mentuhotep II reunified Egypt.,politics,africa,3,britannica
+africa-beni-hasan-tombs-2000,Beni Hasan Tombs,-2000,Nomarchs carved painted tombs at Beni Hasan.,culture,africa,5,britannica
+africa-senusret-campaigns-1870,Senusret III Campaigns,-1870,Senusret III extended Egypt's southern border.,war,africa,4,britannica
+africa-hyksos-1650,Hyksos Invade,-1650,The Hyksos ruled northern Egypt with chariots.,war,africa,3,britannica
+africa-chariot-adopted-1550,Chariots Adopted,-1550,Egyptian armies adopted chariot warfare.,technology,africa,4,britannica
+africa-new-kingdom-1550,New Kingdom Begins,-1550,Ahmose expelled the Hyksos and founded a new era.,politics,africa,3,britannica
+africa-hatshepsut-1479,Hatshepsut Becomes Pharaoh,-1479,Hatshepsut ruled as a female pharaoh.,politics,africa,2,britannica
+africa-deir-el-bahari-1470,Deir el-Bahari Built,-1470,Hatshepsut's temple rose at Deir el-Bahari.,culture,africa,4,britannica
+africa-thutmose-iii-1458,Thutmose III Campaigns,-1458,Thutmose III conquered lands across the Levant.,war,africa,3,britannica
+africa-akhenaten-1353,Akhenaten's Religious Reform,-1353,Akhenaten promoted worship of the Aten.,culture,africa,3,britannica
+africa-amarna-1353,Amarna Capital Built,-1353,Akhenaten built a new capital at Amarna.,culture,africa,4,britannica
+africa-tutankhamun-1332,Tutankhamun Restores Order,-1332,Tutankhamun restored the traditional gods.,politics,africa,3,britannica
+africa-ramesses-ii-1279,Ramesses II Reigns,-1279,Ramesses II ruled for over six decades.,politics,africa,3,britannica
+africa-kadesh-1274,Battle of Kadesh,-1274,Ramesses II fought the Hittites at Kadesh.,war,africa,2,britannica
+africa-abu-simbel-1264,Abu Simbel Temples,-1264,Ramesses II built the temples of Abu Simbel.,culture,africa,3,britannica
+africa-kadesh-treaty-1258,First Peace Treaty,-1258,Egypt and the Hittites signed a peace treaty.,politics,africa,3,britannica
+africa-merenptah-stele-1208,Merneptah Stele,-1208,The stele records the first mention of Israel.,culture,africa,5,britannica
+africa-sea-peoples-1200,Sea Peoples Raids,-1200,Ramesses III repelled invasions by the Sea Peoples.,war,africa,4,britannica
+africa-medinet-habu-1186,Medinet Habu Temple,-1186,Ramesses III built his mortuary temple.,culture,africa,5,britannica
+africa-tomb-robberies-1100,Valley of the Kings Robbed,-1100,Grave robbers plundered royal tombs.,culture,africa,4,britannica
+africa-third-intermediate-1069,Third Intermediate Period,-1069,The country split among rival powers.,politics,africa,4,britannica
+africa-libyan-dynasty-945,Libyan Pharaohs Rule,-945,Libyan chiefs founded new dynasties.,politics,africa,5,britannica
+africa-kushite-conquest-747,Kushite Kings Rule,-747,The Kushite dynasty ruled from Nubia.,politics,africa,4,britannica
+africa-assyrian-invasion-671,Assyrians Invade,-671,Assyrian armies conquered Egypt.,war,africa,4,britannica
+africa-saite-dynasty-664,Saite Dynasty,-664,The Saite kings restored Egyptian independence.,politics,africa,4,britannica
+africa-persian-conquest-525,Persians Conquer Egypt,-525,The Persian empire seized Egypt.,war,africa,3,britannica
+africa-alexander-egypt-332,Alexander Takes Egypt,-332,Alexander the Great was welcomed as liberator.,war,africa,2,britannica
+africa-alexandria-founded-331,Alexandria Founded,-331,Alexander founded the city of Alexandria.,culture,africa,3,britannica
+africa-ptolemy-rules-305,Ptolemy Rules Egypt,-305,Ptolemy I founded the Ptolemaic dynasty.,politics,africa,3,britannica
+africa-library-alexandria-283,Library of Alexandria Flourishes,-283,Scholars gathered the ancient world's knowledge.,science,africa,4,britannica
+africa-pharos-lighthouse-280,Lighthouse of Alexandria,-280,The Pharos lighthouse guided ships for centuries.,technology,africa,4,britannica
+africa-septuagint-250,Septuagint Translated,-250,Hebrew scriptures were translated into Greek.,culture,africa,5,britannica
+africa-eratosthenes-circumference-240,Eratosthenes Measures the Earth,-240,Eratosthenes calculated Earth's circumference.,science,africa,5,britannica
+africa-cleopatra-51,Cleopatra VII Takes Throne,-51,Cleopatra became the last active pharaoh.,politics,africa,2,britannica
+africa-actium-31,Battle of Actium,-31,Octavian defeated Antony and Cleopatra.,war,africa,3,britannica
+africa-roman-annexation-30,Rome Annexes Egypt,-30,Octavian made Egypt a Roman province.,politics,africa,3,britannica
+africa-antinoopolis-founded-130,Antinoopolis Founded,130,Hadrian founded a city at Antinoopolis.,culture,africa,5,britannica
+africa-coptic-church-200,Coptic Church Emerges,200,Christianity spread among Egyptian believers.,culture,africa,4,britannica
+africa-saint-antonys-270,Anthony the Hermit,270,Anthony lived as an ascetic in the desert.,culture,africa,5,britannica
+africa-council-nicaea-325,Council of Nicaea,325,Church leaders met at Nicaea to settle doctrine.,politics,africa,5,britannica
+africa-arab-conquest-641,Arab Conquest of Egypt,641,Amr ibn al-As brought Egypt under Muslim rule.,war,africa,3,britannica
+africa-fustat-founded-641,Fustat Founded,641,Fustat became the first Arab capital.,culture,africa,4,britannica
+africa-ahmad-ibn-tulun-868,Ibn Tulun Rules,868,The Tulunid governor ruled Egypt independently.,politics,africa,5,britannica
+africa-ibn-tulun-mosque-879,Ibn Tulun Mosque Built,879,The grand mosque still stands in Cairo.,culture,africa,4,britannica
+africa-cairo-founded-969,Cairo Founded,969,The Fatimids founded the city of Cairo.,culture,africa,3,britannica
+africa-al-azhar-970,Al-Azhar Founded,970,Al-Azhar opened as a mosque and university.,science,africa,4,britannica
+africa-ayyubid-1171,Ayyubid Dynasty Begins,1171,Saladin founded the Ayyubid dynasty.,politics,africa,3,britannica
+africa-saladin-cairo-1174,Saladin Rules from Cairo,1174,Saladin united Egypt and Syria.,politics,africa,4,britannica
+africa-mamluk-rule-1250,Mamluks Take Power,1250,Slave soldiers seized control of Egypt.,politics,africa,4,britannica
+africa-ain-jalut-1260,Battle of Ain Jalut,1260,Mamluks halted the Mongol advance.,war,africa,3,britannica
+africa-baibars-1260,Baibars Becomes Sultan,1260,Baibars defeated the Crusaders and Mongols.,war,africa,4,britannica
+africa-ottoman-conquest-1517,Ottoomans Conquer Egypt,1517,The Ottomans ended the Mamluk sultanate.,war,africa,3,britannica
+africa-napoleon-1798,Napoleon Invades Egypt,1798,Napoleon's fleet arrived at Alexandria.,war,africa,3,britannica
+africa-rosetta-stone-1799,Rosetta Stone Found,1799,French soldiers unearthed the Rosetta Stone.,culture,africa,3,britannica
+africa-muhammad-ali-1805,Muhammad Ali Takes Power,1805,Muhammad Ali became ruler of Egypt.,politics,africa,3,britannica
+africa-sudan-campaign-1820,Muhammad Ali Invades Sudan,1820,Muhammad Ali's armies marched south.,war,africa,5,britannica
+africa-cotton-industry-1822,Cotton Industry Grows,1822,Egypt's cotton trade boomed.,culture,africa,5,britannica
+africa-suez-canal-1869,Suez Canal Opens,1869,The canal linked the Mediterranean and Red Sea.,technology,africa,2,britannica
+africa-ahram-newspaper-1876,Al-Ahram Founded,1876,The leading newspaper began publication.,culture,africa,5,britannica
+africa-urabi-revolt-1879,Urabi Revolt,1879,Colonel Ahmed Urabi led a nationalist revolt.,politics,africa,4,britannica
+africa-british-occupation-1882,Britain Occupies Egypt,1882,British troops seized control of Egypt.,war,africa,3,britannica
+africa-egyptian-museum-1902,Egyptian Museum Opens,1902,The museum opened in downtown Cairo.,culture,africa,4,britannica
+africa-dinshawai-incident-1906,Dinshaway Incident,1906,An incident fueled Egyptian nationalism.,politics,africa,5,britannica
+africa-egyptair-1932,EgyptAir Founded,1932,Egypt's national airline was established.,technology,africa,5,britannica
+africa-king-farouk-1936,Farouk Becomes King,1936,Farouk ascended the throne at age sixteen.,politics,africa,5,britannica
+africa-el-alamein-1942,Battle of El Alamein,1942,Allied forces halted the Axis advance.,war,africa,3,britannica
+africa-arab-league-1945,League of Arab States Founded,1945,Cairo hosted the founding of the Arab League.,politics,africa,4,britannica
+africa-free-officers-1952,Free Officers Coup,1952,Officers overthrew King Farouk.,politics,africa,3,britannica
+africa-nasser-1954,Nasser Takes Power,1954,Gamal Abdel Nasser became president.,politics,africa,3,britannica
+africa-suez-crisis-1956,Suez Crisis,1956,Nasser nationalized the Suez Canal.,war,africa,2,britannica
+africa-uar-1958,United Arab Republic Formed,1958,Egypt and Syria merged briefly.,politics,africa,4,britannica
+africa-aswan-dam-1960,Aswan High Dam Built,1960,Work began on the Aswan High Dam.,technology,africa,3,britannica
+africa-abu-simbel-move-1968,Abu Simbel Relocated,1968,Engineers moved the temples above the flood zone.,culture,africa,3,britannica
+africa-aswan-dam-complete-1970,Aswan Dam Completed,1970,The dam began providing power and water.,technology,africa,4,britannica
+africa-sadat-president-1970,Sadat Becomes President,1970,Anwar Sadat succeeded Nasser.,politics,africa,3,britannica
+africa-october-war-1973,October War,1973,Egypt crossed the Suez Canal into Sinai.,war,africa,2,britannica
+africa-camp-david-1978,Camp David Accords,1978,Egypt and Israel agreed to peace at Camp David.,politics,africa,3,britannica
+africa-peace-treaty-1979,Egypt-Israel Treaty Signed,1979,The two nations signed a formal peace.,politics,africa,3,britannica
+africa-sadat-assassinated-1981,Sadat Assassinated,1981,Sadat was killed at a military parade.,politics,africa,3,britannica
+africa-mubarak-1981,Mubarak Takes Office,1981,Hosni Mubarak became president.,politics,africa,4,britannica
+africa-cairo-earthquake-1992,Cairo Earthquake,1992,A deadly quake struck Cairo.,culture,africa,5,britannica
+africa-bibliotheca-alexandrina-2002,Bibliotheca Alexandrina Opens,2002,The new Alexandria library opened.,culture,africa,4,britannica
+africa-egyptian-revolution-2011,January 25 Revolution,2011,Protests forced Mubarak from power.,politics,africa,3,britannica
+africa-morsi-elected-2012,Morsi Elected President,2012,Mohamed Morsi became the first elected president.,politics,africa,4,britannica
+africa-sisis-coup-2013,2013 Military Takeover,2013,The military removed President Morsi.,politics,africa,4,britannica
+africa-sisi-president-2014,Sisi Becomes President,2014,Abdel Fattah el-Sisi took office.,politics,africa,4,britannica
+africa-new-admin-capital-2015,New Capital Announced,2015,Egypt announced plans for a new capital.,technology,africa,5,britannica

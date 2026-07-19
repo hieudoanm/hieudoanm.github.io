@@ -1,0 +1,482 @@
+[
+  {
+    "id": "bored",
+    "label": "Bored",
+    "items": [
+      {
+        "label": "Research",
+        "description": "Knowledge Explorer",
+        "icon": "PiMagnifyingGlass",
+        "toolId": "research"
+      },
+      {
+        "label": "Develop",
+        "description": "Skill Builder",
+        "icon": "PiNotebook",
+        "toolId": "develop"
+      },
+      {
+        "label": "Build",
+        "description": "Product Creator",
+        "icon": "PiWrench",
+        "toolId": "build"
+      },
+      {
+        "label": "Ship",
+        "description": "Infographic Publisher",
+        "icon": "PiRocketLaunch",
+        "toolId": "ship"
+      },
+      {
+        "label": "VibeSlotCode",
+        "description": "Stack + Idea Generator",
+        "icon": "PiSparkle",
+        "toolId": "vibe-slot-code"
+      },
+      {
+        "label": "WeirdSearch",
+        "description": "Weird Query Roller",
+        "icon": "PiSmileyMelting",
+        "toolId": "weird-search"
+      }
+    ]
+  },
+  {
+    "id": "calculator",
+    "label": "Calculator",
+    "items": [
+      {
+        "label": "Calculator",
+        "description": "Arithmetic + Unit Converter",
+        "icon": "PiDivide",
+        "toolId": "calculator"
+      },
+      {
+        "label": "Inflation",
+        "description": "Calculator",
+        "icon": "PiMoney",
+        "toolId": "inflation"
+      },
+      {
+        "label": "Split Bill",
+        "description": "Calculator",
+        "icon": "PiCurrencyDollar",
+        "toolId": "split-bill"
+      },
+      {
+        "label": "Tax",
+        "description": "Vietnam PIT",
+        "icon": "PiFlag",
+        "toolId": "tax"
+      }
+    ]
+  },
+  {
+    "id": "clocks",
+    "label": "Clocks",
+    "items": [
+      {
+        "label": "Countdown",
+        "description": "Timer",
+        "icon": "PiHourglass",
+        "toolId": "countdown"
+      },
+      {
+        "label": "Cron",
+        "description": "Expression Builder",
+        "icon": "PiClockAfternoon",
+        "toolId": "cron"
+      },
+      {
+        "label": "Days Count",
+        "description": "Date Difference",
+        "icon": "PiCalendar",
+        "toolId": "days-count"
+      },
+      {
+        "label": "Epoch Convert",
+        "description": "Timestamp",
+        "icon": "PiClock",
+        "toolId": "epoch-convert"
+      },
+      {
+        "label": "Pomodoro",
+        "description": "Timer",
+        "icon": "PiTimer",
+        "toolId": "pomodoro"
+      },
+      {
+        "label": "Watchface",
+        "description": "Garmin",
+        "icon": "PiWatch",
+        "toolId": "watchface"
+      }
+    ]
+  },
+  {
+    "id": "data-excel",
+    "label": "Data - Excel",
+    "items": [
+      {
+        "label": "Excel to PDF",
+        "description": "Excel → PDF",
+        "icon": "PiFileText",
+        "toolId": "excel-to-pdf"
+      },
+      {
+        "label": "Excel to XML",
+        "description": "Excel → XML",
+        "icon": "PiArrowsClockwise",
+        "toolId": "excel-to-xml"
+      },
+      {
+        "label": "Split Excel",
+        "description": "Split large files",
+        "icon": "PiScissors",
+        "toolId": "split-excel"
+      }
+    ]
+  },
+  {
+    "id": "data-xml",
+    "label": "Data - XML",
+    "items": [
+      {
+        "label": "JSON to XML",
+        "description": "JSON → XML",
+        "icon": "PiArrowsClockwise",
+        "toolId": "json-to-xml"
+      },
+      {
+        "label": "XML to Excel",
+        "description": "XML → Excel",
+        "icon": "PiArrowsClockwise",
+        "toolId": "xml-to-excel"
+      },
+      {
+        "label": "XML to JSON",
+        "description": "XML → JSON",
+        "icon": "PiArrowsClockwise",
+        "toolId": "xml-to-json"
+      }
+    ]
+  },
+  {
+    "id": "developer",
+    "label": "Developer",
+    "items": [
+      {
+        "label": "Diff",
+        "description": "Text Comparison",
+        "icon": "PiNotePencil",
+        "toolId": "text-diff"
+      },
+      {
+        "label": "Figlet",
+        "description": "Text art",
+        "icon": "PiNotePencil",
+        "toolId": "figlet"
+      },
+      {
+        "label": "IP",
+        "description": "Inspector",
+        "icon": "PiGlobe",
+        "toolId": "ip"
+      },
+      {
+        "label": "OpenAPI",
+        "description": "to Postman",
+        "icon": "PiArrowsClockwise",
+        "toolId": "openapi"
+      },
+      {
+        "label": "Proxy",
+        "description": "CORS Proxy",
+        "icon": "PiLink",
+        "toolId": "proxy"
+      },
+      {
+        "label": "Shopify Detect",
+        "description": "Detect Shopify",
+        "icon": "PiMagnifyingGlass",
+        "toolId": "shopify-detect"
+      },
+      {
+        "label": "URL Tracer",
+        "description": "Redirect Tracker",
+        "icon": "PiLink",
+        "toolId": "text-url-tracer"
+      },
+      {
+        "label": "UUID",
+        "description": "Generator",
+        "icon": "PiKey",
+        "toolId": "uuid"
+      }
+    ]
+  },
+  {
+    "id": "editors",
+    "label": "Editors",
+    "items": [
+      {
+        "label": "JSON Schema",
+        "description": "Validator",
+        "icon": "PiFileText",
+        "toolId": "json-schema"
+      },
+      {
+        "label": "Manifest",
+        "description": "JSON Editor",
+        "icon": "PiFileText",
+        "toolId": "manifest"
+      },
+      {
+        "label": "Regex",
+        "description": "Pattern Generator",
+        "icon": "PiMagnifyingGlass",
+        "toolId": "regex"
+      },
+      {
+        "label": "Slides",
+        "description": "Pitch Deck",
+        "icon": "PiPresentation",
+        "toolId": "slides"
+      },
+      {
+        "label": "Word Counter",
+        "description": "Word Count",
+        "icon": "PiNotePencil",
+        "toolId": "word-counter"
+      }
+    ]
+  },
+  {
+    "id": "education",
+    "label": "Education",
+    "items": [
+      {
+        "label": "DOI",
+        "description": "Cite",
+        "icon": "PiFileText",
+        "toolId": "doi"
+      },
+      {
+        "label": "English",
+        "description": "Dictionary",
+        "icon": "PiBooks",
+        "toolId": "english"
+      },
+      {
+        "label": "Flashcards",
+        "description": "Words",
+        "icon": "PiNotebook",
+        "toolId": "flashcards"
+      },
+      {
+        "label": "Periodic Table",
+        "description": "Elements",
+        "icon": "PiChartBar",
+        "toolId": "periodic-table"
+      },
+      {
+        "label": "Pitch",
+        "description": "Training",
+        "icon": "PiPianoKeys",
+        "toolId": "pitch"
+      },
+      {
+        "label": "Sign Language",
+        "description": "Detection",
+        "icon": "PiHandPeace",
+        "toolId": "sign"
+      }
+    ]
+  },
+  {
+    "id": "health-vision",
+    "label": "Health - Vision",
+    "items": [
+      {
+        "label": "LogMAR Chart",
+        "description": "LogMAR Chart",
+        "icon": "PiEyes",
+        "toolId": "logmar"
+      },
+      {
+        "label": "Snellen Chart",
+        "description": "Snellen Chart",
+        "icon": "PiEyes",
+        "toolId": "snellen"
+      },
+      {
+        "label": "Tumbling E Chart",
+        "description": "Tumbling E Chart",
+        "icon": "PiEyes",
+        "toolId": "tumbling-e"
+      }
+    ]
+  },
+  {
+    "id": "psychology",
+    "label": "Psychology",
+    "items": [
+      {
+        "label": "RCI",
+        "description": "Relationship closeness",
+        "icon": "PiHeart",
+        "toolId": "relationship-closeness-inventory"
+      },
+      {
+        "label": "ECR",
+        "description": "Attachment styles",
+        "icon": "PiHeartStraight",
+        "toolId": "experiences-in-close-relationships"
+      },
+      {
+        "label": "SWLS",
+        "description": "Life satisfaction",
+        "icon": "PiSmileyMelting",
+        "toolId": "satisfaction-with-life"
+      },
+      {
+        "label": "DAS",
+        "description": "Relationship adjustment",
+        "icon": "PiGauge",
+        "toolId": "dyadic-adjustment-scale"
+      },
+      {
+        "label": "BDI",
+        "description": "Depression severity",
+        "icon": "PiLifebuoy",
+        "toolId": "beck-depression-inventory"
+      },
+      {
+        "label": "GAD-7",
+        "description": "Anxiety severity",
+        "icon": "PiSmileyNervous",
+        "toolId": "generalized-anxiety-disorder"
+      },
+      {
+        "label": "PHQ-9",
+        "description": "Depression screening",
+        "icon": "PiFirstAidKit",
+        "toolId": "patient-health-questionnaire"
+      },
+      {
+        "label": "BFI",
+        "description": "Personality traits",
+        "icon": "PiBrain",
+        "toolId": "big-five-inventory"
+      }
+    ]
+  },
+  {
+    "id": "text-convert",
+    "label": "Text - Convert",
+    "items": [
+      {
+        "label": "Braille",
+        "description": "Text to Braille",
+        "icon": "PiDotsNine",
+        "toolId": "braille"
+      },
+      {
+        "label": "Case",
+        "description": "Converter",
+        "icon": "PiFileText",
+        "toolId": "text-case"
+      },
+      {
+        "label": "Leet Speak",
+        "description": "Text to Leet",
+        "icon": "PiTextAa",
+        "toolId": "leetspeak"
+      },
+      {
+        "label": "Morse",
+        "description": "Text to Morse Code",
+        "icon": "PiWaveSine",
+        "toolId": "morse"
+      }
+    ]
+  },
+  {
+    "id": "utilities",
+    "label": "Utilities",
+    "items": [
+      {
+        "label": "Clipboard",
+        "description": "Clipboard",
+        "icon": "PiClipboard",
+        "toolId": "clipboard"
+      },
+      {
+        "label": "Create ZIP",
+        "description": "Zip Files",
+        "icon": "PiFileText",
+        "toolId": "create-zip"
+      },
+      {
+        "label": "Emojis",
+        "description": "Explorer",
+        "icon": "PiSmiley",
+        "toolId": "emojis"
+      },
+      {
+        "label": "Kaprekar",
+        "description": "Routine",
+        "icon": "PiChartBar",
+        "toolId": "kaprekar"
+      },
+      {
+        "label": "Lorem Ipsum",
+        "description": "Dummy text",
+        "icon": "PiNotePencil",
+        "toolId": "lorem-ipsum"
+      },
+      {
+        "label": "No Sleep",
+        "description": "Timer",
+        "icon": "PiMoon",
+        "toolId": "no-sleep"
+      },
+      {
+        "label": "Screen Recorder",
+        "description": "Record & Download",
+        "icon": "PiFilmStrip",
+        "toolId": "screen-recorder"
+      }
+    ]
+  },
+  {
+    "id": "visualization",
+    "label": "Visualization",
+    "items": [
+      {
+        "label": "Attractors",
+        "description": "Strange Attractors",
+        "icon": "PiSpiral",
+        "toolId": "attractors"
+      },
+      {
+        "label": "Calendar Tracker",
+        "description": "Activities",
+        "icon": "PiCalendar",
+        "toolId": "calendar-tracker"
+      },
+      {
+        "label": "Football",
+        "description": "Tournaments & data",
+        "icon": "PiSoccerBall",
+        "toolId": "football"
+      },
+      {
+        "label": "Legislation",
+        "description": "Visualization",
+        "icon": "PiBuildings",
+        "toolId": "legislation"
+      }
+    ]
+  }
+]

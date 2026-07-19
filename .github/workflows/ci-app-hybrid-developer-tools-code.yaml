@@ -1,0 +1,32 @@
+name: CI - App - Hybrid - Developer Tools - Code
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/developer-tools/code/**'
+      - '.github/workflows/ci-app-hybrid-developer-tools-code.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-hybrid-developer-tools-code-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/developer-tools/code
+      filter: '@hieudoanm.github.io/code'
+      releaseName: app-hybrid-developer-tools-code-latest
+      releaseTitle: App - Hybrid - Developer Tools - Code (latest)
+      artifactPrefix: developer-tools-code

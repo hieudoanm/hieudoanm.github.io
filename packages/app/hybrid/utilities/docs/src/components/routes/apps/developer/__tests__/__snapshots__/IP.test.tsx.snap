@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`IP should render and fetch IP info on mount 1`] = `
+<div>
+  <div
+    class="flex items-center gap-3"
+  >
+    <button
+      class="btn btn-ghost btn-xs ml-auto"
+      disabled=""
+    >
+      <span
+        class="loading loading-spinner loading-xs"
+      />
+    </button>
+  </div>
+  <div
+    class="tabs tabs-bordered"
+  >
+    <button
+      class="tab tab-bordered capitalize tab-active"
+    >
+      network
+    </button>
+    <button
+      class="tab tab-bordered capitalize "
+    >
+      location
+    </button>
+    <button
+      class="tab tab-bordered capitalize "
+    >
+      dns
+    </button>
+  </div>
+  <div
+    class="flex flex-col gap-2"
+  >
+    <div
+      class="flex justify-center py-8"
+    >
+      <span
+        class="loading loading-spinner loading-md"
+      />
+    </div>
+  </div>
+</div>
+`;

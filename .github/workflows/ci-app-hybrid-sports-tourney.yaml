@@ -1,0 +1,32 @@
+name: CI - App - Hybrid - Sports - Tourney
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/sports/tourney/**'
+      - '.github/workflows/ci-app-hybrid-sports-tourney.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-hybrid-sports-tourney-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/sports/tourney
+      filter: '@hieudoanm.github.io/tourney'
+      releaseName: app-hybrid-sports-tourney-latest
+      releaseTitle: App - Hybrid - Sports - Tourney (latest)
+      artifactPrefix: sports-tourney

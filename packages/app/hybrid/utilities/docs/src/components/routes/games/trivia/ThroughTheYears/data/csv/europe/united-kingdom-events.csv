@@ -1,0 +1,101 @@
+id,title,year,description,category,region,difficulty,source
+europe-roman-conquest-43,Roman Conquest of Britain,43,The Roman Empire began its invasion of Britain under Emperor Claudius.,war,europe,2,britannica
+europe-boudica-revolt-60,Boudica's Revolt,60,Queen Boudica led a rebellion against Roman rule in Britain.,war,europe,3,britannica
+europe-hadrians-wall-122,Hadrian's Wall Built,122,The Romans built a defensive wall across northern England.,culture,europe,3,britannica
+europe-romans-leave-britain-410,Romans Leave Britain,410,The last Roman legions withdrew from Britain.,war,europe,3,britannica
+europe-lindisfarne-raid-793,Viking Raid on Lindisfarne,793,Viking raiders attacked the monastery at Lindisfarne.,war,europe,2,britannica
+europe-alfred-the-great-871,Alfred the Great Becomes King,871,Alfred became King of Wessex and fought the Viking invaders.,politics,europe,3,britannica
+europe-battle-of-hastings-1066,Battle of Hastings,1066,William the Conqueror defeated King Harold II at Hastings.,war,europe,2,britannica
+europe-domesday-book-1086,Domesday Book Completed,1086,William the Conqueror ordered a survey of all land and property.,politics,europe,3,britannica
+europe-oxford-teaching-1096,University of Oxford Teaching Begins,1096,Teaching at Oxford began in the late eleventh century.,science,europe,4,britannica
+europe-magna-carta-1215,Magna Carta Signed,1215,King John sealed the Magna Carta limiting royal power.,politics,europe,2,britannica
+europe-cambridge-university-1209,University of Cambridge Founded,1209,Scholars left Oxford to found a new university at Cambridge.,science,europe,4,britannica
+europe-first-parliament-1265,Simon de Montfort's Parliament,1265,Simon de Montfort summoned a parliament with elected representatives.,politics,europe,3,britannica
+europe-peasants-revolt-1381,Peasants' Revolt,1381,English peasants rebelled against the poll tax and feudal oppression.,politics,europe,3,britannica
+europe-wars-of-the-roses-1455,Wars of the Roses Begin,1455,The houses of York and Lancaster fought for the English throne.,war,europe,3,britannica
+europe-bosworth-field-1485,Battle of Bosworth Field,1485,Henry Tudor defeated Richard III ending the Wars of the Roses.,war,europe,3,britannica
+europe-tudor-dynasty-1485,Tudor Dynasty Begins,1485,Henry VII became the first Tudor king of England.,politics,europe,3,britannica
+europe-act-of-supremacy-1534,Church of England Established,1534,Henry VIII broke with Rome and created the Church of England.,politics,europe,3,britannica
+europe-dissolution-monasteries-1536,Dissolution of the Monasteries,1536,Henry VIII closed England's monasteries and seized their wealth.,politics,europe,4,britannica
+europe-mary-rose-sinks-1545,Mary Rose Sinks,1545,The warship Mary Rose sank in the Solent during battle.,war,europe,4,britannica
+europe-elizabeth-i-crowned-1558,Elizabeth I Crowned,1558,Elizabeth I became Queen of England at age 25.,politics,europe,2,britannica
+europe-drake-circumnavigates-1580,Drake Circumnavigates the Globe,1580,Sir Francis Drake completed the first English voyage around the world.,culture,europe,3,britannica
+europe-spanish-armada-1588,Spanish Armada Defeated,1588,The English fleet defeated the Spanish Armada sent to invade.,war,europe,2,britannica
+europe-globe-theatre-1599,Globe Theatre Opens,1599,Shakespeare's company opened the Globe Theatre on the Thames.,culture,europe,3,britannica
+europe-east-india-company-1600,East India Company Founded,1600,English merchants founded a company to trade with the East Indies.,culture,europe,4,britannica
+europe-union-of-crowns-1603,Union of the Crowns,1603,James VI of Scotland became James I of England.,politics,europe,4,britannica
+europe-gunpowder-plot-1605,Gunpowder Plot Foiled,1605,Catholics plotted to blow up Parliament in the Gunpowder Plot.,politics,europe,3,britannica
+europe-first-folio-1623,Shakespeare's First Folio,1623,Thirty-six of Shakespeare's plays were published together.,culture,europe,4,britannica
+europe-english-civil-war-1642,English Civil War Begins,1642,Parliament and King Charles I went to war.,war,europe,3,britannica
+europe-charles-i-executed-1649,Charles I Executed,1649,King Charles I was executed after being convicted of treason.,politics,europe,3,britannica
+europe-cromwell-protector-1653,Cromwell Becomes Lord Protector,1653,Oliver Cromwell took power as Lord Protector of the Commonwealth.,politics,europe,4,britannica
+europe-restoration-1660,Monarchy Restored,1660,Charles II returned from exile and restored the monarchy.,politics,europe,3,britannica
+europe-great-fire-london-1666,Great Fire of London,1666,A fire destroyed much of the City of London.,culture,europe,3,britannica
+europe-principia-published-1687,Newton Publishes Principia,1687,Isaac Newton published his laws of motion and gravity.,science,europe,3,britannica
+europe-glorious-revolution-1688,Glorious Revolution,1688,William of Orange replaced James II as king.,politics,europe,3,britannica
+europe-bill-of-rights-1689,Bill of Rights Passed,1689,Parliament passed the Bill of Rights limiting royal power.,politics,europe,4,britannica
+europe-bank-of-england-1694,Bank of England Founded,1694,The Bank of England was established to manage government finances.,culture,europe,4,britannica
+europe-act-of-union-1707,Act of Union Creates Great Britain,1707,England and Scotland united into the Kingdom of Great Britain.,politics,europe,3,britannica
+europe-battle-of-culloden-1746,Battle of Culloden,1746,Government forces crushed the Jacobite rebellion at Culloden.,war,europe,4,britannica
+europe-british-museum-1753,British Museum Opens,1753,The British Museum opened as the first national public museum.,culture,europe,3,britannica
+europe-spinning-jenny-1764,Spinning Jenny Invented,1764,James Hargreaves invented the spinning jenny for weaving.,technology,europe,4,britannica
+europe-watt-steam-engine-1769,Watt Patents the Steam Engine,1769,James Watt patented an improved steam engine.,technology,europe,3,britannica
+europe-first-fleet-1788,First Fleet Sails to Australia,1788,The First Fleet carried convicts to establish a colony in Australia.,culture,europe,3,britannica
+europe-battle-of-trafalgar-1805,Battle of Trafalgar,1805,Nelson defeated the French and Spanish fleets at Trafalgar.,war,europe,2,britannica
+europe-slave-trade-act-1807,Slave Trade Act,1807,Britain abolished the transatlantic slave trade.,politics,europe,3,britannica
+europe-battle-of-waterloo-1815,Battle of Waterloo,1815,British and allied forces defeated Napoleon at Waterloo.,war,europe,2,britannica
+europe-peterloo-massacre-1819,Peterloo Massacre,1819,Cavalry charged a reform rally in Manchester killing several people.,politics,europe,4,britannica
+europe-stockton-darlington-1825,First Public Railway Opens,1825,The Stockton and Darlington Railway opened as the first public railway.,technology,europe,3,britannica
+europe-metropolitan-police-1829,Metropolitan Police Founded,1829,Sir Robert Peel founded the Metropolitan Police in London.,politics,europe,4,britannica
+europe-great-reform-act-1832,Great Reform Act,1832,The Reform Act extended the vote to more men.,politics,europe,4,britannica
+europe-slavery-abolition-act-1833,Slavery Abolition Act,1833,Britain abolished slavery throughout most of its empire.,politics,europe,3,britannica
+europe-victoria-crowned-1837,Queen Victoria Crowned,1837,Victoria became Queen of the United Kingdom.,politics,europe,3,britannica
+europe-peoples-charter-1838,People's Charter Published,1838,Chartists published demands for universal male suffrage.,politics,europe,4,britannica
+europe-penny-black-1840,Penny Black Stamp Issued,1840,The Penny Black became the world's first adhesive postage stamp.,technology,europe,4,britannica
+europe-great-famine-1845,Great Famine Begins in Ireland,1845,Potato blight triggered mass starvation in Ireland.,culture,europe,3,britannica
+europe-public-health-act-1848,Public Health Act,1848,The first Public Health Act addressed sanitation in British cities.,medicine,europe,4,britannica
+europe-great-exhibition-1851,Great Exhibition Opens,1851,The Great Exhibition showcased industry at the Crystal Palace.,culture,europe,3,britannica
+europe-crimean-war-1854,Crimean War Begins,1854,Britain and France fought Russia in the Crimea.,war,europe,3,britannica
+europe-nightingale-scutari-1854,Nightingale Serves at Scutari,1854,Florence Nightingale improved hospital care during the Crimean War.,medicine,europe,4,britannica
+europe-origin-of-species-1859,Origin of Species Published,1859,Charles Darwin published his theory of evolution.,science,europe,3,britannica
+europe-london-underground-1863,London Underground Opens,1863,The Metropolitan Railway opened as the world's first underground railway.,technology,europe,3,britannica
+europe-football-association-1863,Football Association Founded,1863,The Football Association was founded in London.,sports,europe,4,britannica
+europe-second-reform-act-1867,Second Reform Act,1867,The vote was extended to more working-class men.,politics,europe,4,britannica
+europe-first-wimbledon-1877,First Wimbledon Championship,1877,The first Wimbledon tennis tournament was held.,sports,europe,4,britannica
+europe-tower-bridge-1894,Tower Bridge Opens,1894,Tower Bridge across the Thames was opened by the Prince of Wales.,technology,europe,4,britannica
+europe-wspu-founded-1903,Suffragette Movement Founded,1903,Emmeline Pankhurst founded the Women's Social and Political Union.,politics,europe,3,britannica
+europe-entente-cordiale-1904,Entente Cordiale Signed,1904,Britain and France settled colonial disputes with an agreement.,politics,europe,4,britannica
+europe-dreadnought-launched-1906,HMS Dreadnought Launched,1906,The revolutionary battleship HMS Dreadnought was launched.,war,europe,4,britannica
+europe-old-age-pensions-1908,Old Age Pensions Introduced,1908,The government began paying pensions to the over-70s.,politics,europe,4,britannica
+europe-scott-south-pole-1912,Scott Reaches the South Pole,1912,Robert Falcon Scott reached the South Pole on a doomed expedition.,science,europe,4,britannica
+europe-britain-enters-ww1-1914,Britain Enters World War I,1914,Britain declared war on Germany after the invasion of Belgium.,war,europe,2,britannica
+europe-battle-of-somme-1916,Battle of the Somme,1916,The Somme offensive caused huge British casualties.,war,europe,3,britannica
+europe-votes-for-women-1918,Women Win the Vote,1918,The Representation of the People Act gave women the vote.,politics,europe,3,britannica
+europe-ww1-armistice-1918,World War I Ends,1918,The armistice ended fighting on the Western Front.,war,europe,2,britannica
+europe-bbc-founded-1922,BBC Founded,1922,The British Broadcasting Company was founded in London.,technology,europe,4,britannica
+europe-general-strike-1926,General Strike,1926,Millions of workers struck over miners' pay and conditions.,politics,europe,4,britannica
+europe-penicillin-discovered-1928,Penicillin Discovered,1928,Alexander Fleming discovered penicillin's antibiotic properties.,medicine,europe,3,britannica
+europe-bbc-tv-1936,BBC Begins Television Broadcasts,1936,The BBC launched the world's first regular television service.,technology,europe,4,britannica
+europe-jarrow-march-1936,Jarrow March,1936,Unemployed workers marched from Jarrow to London.,politics,europe,4,britannica
+europe-dunkirk-1940,Dunkirk Evacuation,1940,Allied troops were evacuated from the beaches of Dunkirk.,war,europe,3,britannica
+europe-battle-of-britain-1940,Battle of Britain,1940,The RAF defeated the Luftwaffe in the skies over Britain.,war,europe,3,britannica
+europe-the-blitz-1940,The Blitz Begins,1940,German bombers launched sustained attacks on British cities.,war,europe,3,britannica
+europe-beveridge-report-1942,Beveridge Report Published,1942,The Beveridge Report proposed a welfare state after the war.,politics,europe,4,britannica
+europe-d-day-1944,D-Day Landings,1944,British and Allied forces landed on the beaches of Normandy.,war,europe,2,britannica
+europe-nhs-founded-1948,National Health Service Founded,1948,The NHS began providing free healthcare to all.,medicine,europe,3,britannica
+europe-windrush-1948,Empire Windrush Arrives,1948,The Empire Windrush brought Caribbean migrants to London.,culture,europe,4,britannica
+europe-festival-of-britain-1951,Festival of Britain,1951,The Festival of Britain celebrated national recovery.,culture,europe,4,britannica
+europe-everest-summit-1953,Everest Summit,1953,Hillary and Tenzing became the first to reach the summit of Everest.,culture,europe,4,britannica
+europe-coronation-1953,Coronation of Elizabeth II,1953,Elizabeth II was crowned at Westminster Abbey.,culture,europe,3,britannica
+europe-england-world-cup-1966,England Win the World Cup,1966,England won the FIFA World Cup at Wembley.,sports,europe,3,britannica
+europe-decimal-day-1971,Decimal Day,1971,Britain switched to a decimal currency.,culture,europe,4,britannica
+europe-bloody-sunday-1972,Bloody Sunday,1972,British soldiers shot protesters in Derry Northern Ireland.,politics,europe,4,britannica
+europe-sex-discrimination-act-1975,Sex Discrimination Act,1975,The Act made sex discrimination in employment unlawful.,politics,europe,4,britannica
+europe-test-tube-baby-1978,First Test-Tube Baby Born,1978,Louise Brown became the first baby born through IVF.,medicine,europe,3,britannica
+europe-falklands-war-1982,Falklands War,1982,Britain fought Argentina over the Falkland Islands.,war,europe,3,britannica
+europe-miners-strike-1984,Miners' Strike,1984,British miners struck against planned pit closures.,politics,europe,4,britannica
+europe-channel-tunnel-1994,Channel Tunnel Opens,1994,The Channel Tunnel linked Britain and France by rail.,technology,europe,3,britannica
+europe-scottish-parliament-1999,Scottish Parliament Reconvened,1999,Devolution created a new Scottish Parliament in Edinburgh.,politics,europe,3,britannica
+europe-london-olympics-2012,London Hosts the Olympics,2012,London staged the 2012 Summer Olympics.,sports,europe,3,britannica
+europe-scottish-referendum-2014,Scottish Independence Referendum,2014,Scotland voted to remain part of the United Kingdom.,politics,europe,3,britannica
+europe-brexit-referendum-2016,Brexit Referendum,2016,The UK voted to leave the European Union.,politics,europe,2,britannica

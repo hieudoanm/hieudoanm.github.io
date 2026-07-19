@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`VersionTemplate to match snapshot 1`] = `
+<div>
+  <div
+    class="flex min-h-screen flex-col items-center justify-center px-6 py-24"
+    style="background-color: rgb(0, 0, 0); color: rgb(245, 245, 245);"
+  >
+    <p
+      class="mb-6 text-xs tracking-[0.2em] uppercase"
+      style="color: rgb(138, 138, 138);"
+    >
+      Current deployment
+    </p>
+    <h1
+      class="mb-3 text-4xl font-light tracking-tight"
+      style="font-family: monospace;"
+    >
+      App Version
+    </h1>
+    <p
+      class="mb-10 max-w-sm text-center text-sm"
+      style="color: rgb(138, 138, 138);"
+    >
+      Build version of the current deployment
+    </p>
+    <div
+      class="mb-8 w-full max-w-lg rounded-2xl border p-6"
+      style="background-color: rgb(10, 10, 10); border-color: rgb(31, 31, 31);"
+    >
+      <div
+        class="flex items-center justify-center gap-0"
+      >
+        <div
+          class="flex flex-col items-center px-4"
+        >
+          <span
+            class="font-mono text-2xl font-bold"
+            style="color: rgb(255, 0, 48);"
+          >
+            0
+          </span>
+          <span
+            class="mt-1 text-[10px] tracking-widest uppercase"
+            style="color: rgb(138, 138, 138);"
+          >
+            Year
+          </span>
+        </div>
+        <span
+          class="font-mono text-xl"
+          style="color: rgb(138, 138, 138);"
+        >
+          .
+        </span>
+        <div
+          class="flex flex-col items-center px-4"
+        >
+          <span
+            class="font-mono text-2xl font-bold"
+            style="color: rgb(245, 245, 245);"
+          >
+            0
+          </span>
+          <span
+            class="mt-1 text-[10px] tracking-widest uppercase"
+            style="color: rgb(138, 138, 138);"
+          >
+            Month
+          </span>
+        </div>
+        <span
+          class="font-mono text-xl"
+          style="color: rgb(138, 138, 138);"
+        >
+          .
+        </span>
+        <div
+          class="flex flex-col items-center px-4"
+        >
+          <span
+            class="font-mono text-2xl font-bold"
+            style="color: rgb(245, 245, 245);"
+          >
+            0
+          </span>
+          <span
+            class="mt-1 text-[10px] tracking-widest uppercase"
+            style="color: rgb(138, 138, 138);"
+          >
+            Day
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="mb-8 flex flex-wrap justify-center gap-3"
+    >
+      <button
+        class="rounded-full px-6 py-2 text-sm font-medium transition-colors"
+        style="background-color: rgb(255, 0, 48); color: rgb(245, 245, 245);"
+      >
+        Copy version
+      </button>
+      <button
+        class="rounded-full px-6 py-2 text-sm font-medium transition-colors"
+        style="background-color: rgb(31, 31, 31); color: rgb(245, 245, 245);"
+      >
+        0.0.0
+      </button>
+    </div>
+    <div
+      class="flex flex-wrap justify-center gap-3"
+    >
+      <span
+        class="rounded-full border px-3 py-1 text-xs"
+        style="border-color: rgb(31, 31, 31); color: rgb(138, 138, 138);"
+      >
+        Format: YYYY.MM.DD.hh.mm.ss
+      </span>
+      <span
+        class="rounded-full px-3 py-1 text-xs"
+        style="background-color: rgb(31, 31, 31); color: rgb(245, 245, 245);"
+      >
+        Stable
+      </span>
+    </div>
+  </div>
+</div>
+`;

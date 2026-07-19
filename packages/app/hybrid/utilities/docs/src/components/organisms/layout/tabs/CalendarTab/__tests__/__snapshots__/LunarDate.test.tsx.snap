@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`LunarDate should render solar date and lunar date 1`] = `
+<div>
+  <div>
+    <p
+      class="text-base-content/40 mb-2 text-[10px] font-normal tracking-widest uppercase"
+    >
+      Lunar Date
+    </p>
+    <p
+      class="text-base-content/70 text-xs"
+    >
+      Monday
+      , 
+      June
+       
+      15
+      , 
+      2026
+    </p>
+    <p
+      class="text-primary mt-1 font-mono text-sm font-normal"
+    >
+      1
+      /
+      5
+      /
+      2026
+    </p>
+  </div>
+</div>
+`;
+
+exports[`LunarDate should show unavailable when lunar data is null 1`] = `
+<div>
+  <div>
+    <p
+      class="text-base-content/40 mb-2 text-[10px] font-normal tracking-widest uppercase"
+    >
+      Lunar Date
+    </p>
+    <p
+      class="text-base-content/70 text-xs"
+    >
+      Monday
+      , 
+      June
+       
+      15
+      , 
+      2026
+    </p>
+    <p
+      class="text-base-content/30 mt-1 text-xs"
+    >
+      Unavailable
+    </p>
+  </div>
+</div>
+`;

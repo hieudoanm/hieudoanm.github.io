@@ -1,0 +1,101 @@
+id,title,year,description,category,region,difficulty,source
+world-printing-press-1450,Printing Press,1450,"Gutenberg invented the movable-type printing press in Europe, revolutionising information sharing.",technology,europe,2,britannica
+world-columbus-1492,Columbus Reaches Americas,1492,"Christopher Columbus landed in the Bahamas, initiating European exploration of the Americas.",culture,americas,1,britannica
+world-magna-carta-1215,Magna Carta Signed,1215,"King John sealed the Magna Carta at Runnymede, limiting royal power and establishing legal principles.",politics,europe,2,britannica
+world-fall-rome-476,Fall of Western Rome,476,The Western Roman Empire fell when Germanic leader Odoacer deposed Emperor Romulus Augustulus.,war,europe,2,britannica
+world-battle-hastings-1066,Battle of Hastings,1066,"William the Conqueror defeated King Harold II, changing the course of English history.",war,europe,2,britannica
+world-declaration-1776,Declaration of Independence,1776,"The thirteen American colonies declared independence from Britain, forming the United States.",politics,americas,1,britannica
+world-french-revolution-1789,French Revolution Begins,1789,The storming of the Bastille ignited a decade of radical social and political upheaval in France.,politics,europe,2,britannica
+world-moon-landing-1969,Apollo 11 Moon Landing,1969,Neil Armstrong and Buzz Aldrin became the first humans to walk on the lunar surface.,space,americas,1,nasa
+world-ww1-begins-1914,World War I Begins,1914,The assassination of Archduke Franz Ferdinand triggered a global conflict involving major world powers.,war,europe,1,britannica
+world-ww2-ends-1945,World War II Ends,1945,"Germany and Japan surrendered, ending the deadliest conflict in human history.",war,world,1,britannica
+world-sputnik-1957,Sputnik Launched,1957,"The Soviet Union launched the first artificial satellite, sparking the space race.",space,europe,1,nasa
+world-penicillin-1928,Penicillin Discovered,1928,"Alexander Fleming discovered the antibiotic properties of penicillin, revolutionising medicine.",medicine,europe,2,britannica
+world-dna-1953,DNA Structure Discovered,1953,"Watson and Crick revealed the double helix structure of DNA, transforming biology.",science,europe,2,britannica
+world-first-flight-1903,First Airplane Flight,1903,"The Wright brothers achieved the first powered, sustained, and controlled airplane flight.",technology,americas,1,britannica
+world-einstein-relativity-1905,Theory of Relativity,1905,"Albert Einstein published his special theory of relativity, fundamentally changing physics.",science,europe,2,britannica
+world-fall-berlin-wall-1989,Fall of Berlin Wall,1989,"The Berlin Wall fell, symbolising the end of the Cold War and division of Europe.",politics,europe,1,britannica
+world-first-olympics-1896,First Modern Olympics,1896,"The first modern Olympic Games were held in Athens, reviving the ancient tradition.",sports,europe,2,olympic
+world-titanic-sinks-1912,Titanic Sinks,1912,"The RMS Titanic struck an iceberg and sank on its maiden voyage, killing over 1,500 people.",culture,world,1,britannica
+world-first-iphone-2007,First iPhone Released,2007,"Apple introduced the iPhone, revolutionising the smartphone industry and mobile computing.",technology,americas,1,apple
+world-einstein-relativity-1915,General Relativity,1915,"Einstein completed his general theory of relativity, describing gravity as spacetime curvature.",science,europe,3,britannica
+world-great-depression-1929,Great Depression Begins,1929,The Wall Street Crash triggered a worldwide economic depression lasting through the 1930s.,culture,americas,2,britannica
+world-womens-suffrage-1920,Womens Suffrage in US,1920,The 19th Amendment granted American women the constitutional right to vote.,politics,americas,2,britannica
+world-first-heart-transplant-1967,First Heart Transplant,1967,Dr. Christiaan Barnard performed the first human-to-human heart transplant in South Africa.,medicine,africa,3,britannica
+world-woodstock-1969,Woodstock Festival,1969,"The iconic music festival drew over 400,000 people to a dairy farm in New York.",music,americas,2,britannica
+world-first-star-wars-1977,Star Wars Released,1977,George Lucas launched one of the most successful film franchises in cinema history.,film,americas,1,imdb
+world-world-wide-web-1991,World Wide Web Launched,1991,"Tim Berners-Lee introduced the World Wide Web to the public, transforming global communication.",technology,europe,1,webfoundation
+world-human-genome-1990,Human Genome Project Begins,1990,"An international effort to map all human genes launched, revolutionising genetics and medicine.",science,world,3,genome
+world-dolly-sheep-1996,Dolly the Sheep Cloned,1996,"Dolly became the first mammal cloned from an adult somatic cell, a breakthrough in genetics.",science,europe,3,britannica
+world-civil-rights-act-1964,Civil Rights Act Passed,1964,"The landmark US law outlawed discrimination based on race, colour, religion, sex, or national origin.",politics,americas,2,britannica
+world-first-mars-rover-1997,First Mars Rover Landing,1997,"NASAs Pathfinder mission delivered Sojourner, the first successful Mars rover.",space,americas,3,nasa
+world-eiffel-tower-1889,Eiffel Tower Completed,1889,Gustave Eiffels iconic tower opened as the centrepiece of the 1889 Worlds Fair in Paris.,culture,europe,1,britannica
+world-first-grammy-1959,First Grammy Awards,1959,The inaugural Grammy Awards ceremony honoured musical achievements from 1958.,music,americas,3,grammy
+world-beatles-ed-sullivan-1964,Beatles on Ed Sullivan,1964,"The Beatles made their legendary US television debut, marking the British Invasion.",music,americas,2,britannica
+world-first-academy-awards-1929,First Academy Awards,1929,The first Oscars ceremony honoured films from 1927 and 1928 in a 15-minute event.,film,americas,3,oscars
+world-first-super-bowl-1967,First Super Bowl,1967,"The Green Bay Packers won the first AFL-NFL World Championship Game, later called the Super Bowl.",sports,americas,2,nfl
+world-touring-bicycle-1885,First Modern Bicycle,1885,"John Kemp Starley unveiled the Rover Safety Bicycle, the first modern bicycle design.",technology,europe,4,britannica
+world-berlin-wall-built-1961,Berlin Wall Built,1961,"East Germany began constructing the Berlin Wall, dividing the city and symbolising Cold War tensions.",politics,europe,2,britannica
+world-first-test-tube-baby-1978,First Test-Tube Baby,1978,"Louise Brown, the first baby conceived through IVF, was born in England.",medicine,europe,3,britannica
+world-first-transistor-1947,First Transistor Invented,1947,"Bardeen, Brattain, and Shockley invented the transistor at Bell Labs, founding modern electronics.",technology,americas,3,britannica
+world-first-woman-space-1963,First Woman in Space,1963,Valentina Tereshkova became the first woman to fly in space aboard Vostok 6.,space,europe,2,nasa
+world-us-constitution-1787,US Constitution Signed,1787,"The Philadelphia Convention signed the US Constitution, establishing the framework of American government.",politics,americas,2,britannica
+world-smallpox-vaccine-1796,Smallpox Vaccine Developed,1796,"Edward Jenner developed the first successful vaccine, using cowpox to prevent smallpox.",medicine,europe,3,britannica
+world-first-subway-1863,First Subway Opens,1863,The London Underground opened as the worlds first underground railway system.,technology,europe,3,britannica
+world-marconi-radio-1895,First Radio Transmission,1895,"Guglielmo Marconi transmitted the first wireless radio signal, pioneering long-distance communication.",technology,europe,3,britannica
+world-xrays-discovered-1895,X-Rays Discovered,1895,"Wilhelm Röntgen discovered X-rays, revolutionising medical imaging and diagnosis.",medicine,europe,3,britannica
+world-pluto-reclassified-2006,Pluto Reclassified,2006,"The IAU reclassified Pluto as a dwarf planet, changing the definition of a planet.",space,world,2,nasa
+world-cold-war-ends-1991,Soviet Union Dissolved,1991,"The Soviet Union officially dissolved, ending the Cold War and creating 15 independent republics.",politics,europe,2,britannica
+world-jesse-owens-1936,Jesse Owens Wins Gold,1936,"Jesse Owens won four gold medals at the Berlin Olympics, disproving Nazi racial ideology.",sports,europe,2,olympic
+world-live-aid-1985,Live Aid Concert,1985,Bob Geldof organised simultaneous concerts in London and Philadelphia to raise funds for Ethiopian famine relief.,music,world,2,britannica
+world-nirvana-nevermind-1991,Nevermind Released,1991,"Nirvana released Nevermind, bringing grunge and alternative rock into the mainstream.",music,americas,3,britannica
+world-first-telephone-1876,Telephone Patented,1876,"Alexander Graham Bell patented the telephone, revolutionising voice communication.",technology,americas,2,britannica
+world-first-motion-picture-1895,First Motion Picture,1895,The Lumière brothers held the first public screening of a motion picture in Paris.,film,europe,3,britannica
+world-eniac-1945,ENIAC Computer Built,1945,"The first general-purpose electronic digital computer, ENIAC, was completed in the United States.",technology,americas,3,britannica
+world-south-africa-democracy-1994,South Africa First Free Election,1994,Nelson Mandela became the first black president after apartheid-era elections.,politics,africa,2,britannica
+world-hubble-launched-1990,Hubble Telescope Launched,1990,"The Hubble Space Telescope was launched, providing unprecedented views of the universe.",space,americas,2,nasa
+world-first-mcdonalds-1940,First McDonald Opens,1940,"Richard and Maurice McDonald opened the first McDonald's restaurant in San Bernardino, California.",culture,americas,3,mcdonalds
+world-michael-jackson-thriller-1982,Thriller Released,1982,"Michael Jackson released Thriller, which became the best-selling album of all time.",music,americas,2,britannica
+world-first-space-shuttle-1981,First Space Shuttle Flight,1981,"Space Shuttle Columbia launched on STS-1, the first orbital flight of the Space Shuttle program.",space,americas,3,nasa
+world-us-civil-war-ends-1865,US Civil War Ends,1865,"Confederate General Robert E. Lee surrendered to Union General Ulysses S. Grant, ending the Civil War.",war,americas,2,britannica
+world-first-microprocessor-1971,First Microprocessor,1971,"Intels 4004 became the first commercially available microprocessor, ushering in the computing age.",technology,americas,3,intel
+world-waterloo-1815,Battle of Waterloo,1815,"Napoleon Bonaparte was defeated by a coalition of European armies, ending his rule.",war,europe,2,britannica
+world-first-automobile-1886,First Automobile,1886,"Karl Benz patented the first gasoline-powered automobile, the Benz Patent-Motorwagen.",technology,europe,3,britannica
+world-mtv-launches-1981,MTV Launches,1981,"MTV began broadcasting, transforming the music industry with the concept of music videos.",music,americas,3,britannica
+world-first-color-film-1939,Gone With the Wind Released,1939,The epic historical romance became one of the highest-grossing and most iconic films in cinema.,film,americas,2,imdb
+world-iss-begins-1998,International Space Station Begins,1998,"The first module of the ISS was launched, beginning the largest international space collaboration.",space,world,3,nasa
+world-first-womens-world-cup-1991,First Womens World Cup,1991,"The first FIFA Womens World Cup was held in China, won by the United States.",sports,world,3,fifa
+world-coronavirus-pandemic-2020,COVID-19 Pandemic Declared,2020,"The WHO declared COVID-19 a global pandemic, leading to worldwide lockdowns and health crises.",medicine,world,1,who
+world-light-bulb-1879,Light Bulb Patented,1879,"Thomas Edison patented a practical incandescent light bulb, illuminating the modern world.",technology,americas,2,britannica
+world-first-television-1927,First Television Demonstrated,1927,Philo Farnsworth successfully demonstrated the first fully electronic television system.,technology,americas,3,britannica
+world-barcelona-olympics-1992,Barcelona Olympics,1992,The Summer Olympics in Barcelona were the first without a boycott since 1972.,sports,europe,3,olympic
+world-pepsi-cola-1898,Pepsi-Cola Created,1898,"Caleb Bradham created Pepsi-Cola in New Bern, North Carolina, as a digestive aid.",culture,americas,4,pepsi
+world-hamlet-1600,Hamlet Published,1600,"William Shakespeare wrote Hamlet, one of the most influential works in English literature.",culture,europe,3,britannica
+world-first-blood-transfusion-1818,First Blood Transfusion,1818,British obstetrician James Blundell performed the first successful human blood transfusion.,medicine,europe,4,britannica
+world-insulin-discovered-1921,Insulin Discovered,1921,"Banting and Best isolated insulin at the University of Toronto, transforming diabetes treatment.",medicine,americas,3,britannica
+world-first-spacewalk-1965,First Spacewalk,1965,"Alexei Leonov became the first person to conduct a spacewalk, lasting 12 minutes.",space,europe,3,nasa
+world-beethoven-5th-1808,Beethovens 5th Premieres,1808,"Beethovens Symphony No. 5 premiered in Vienna, becoming one of the most recognisable pieces in classical music.",music,europe,3,britannica
+world-first-tour-de-france-1903,First Tour de France,1903,"The first Tour de France cycling race was held, covering six stages over 2,428 kilometres.",sports,europe,3,britannica
+world-emancipation-1863,Emancipation Proclamation,1863,"President Lincoln declared slaves in Confederate states free, shifting the Civil War aims.",politics,americas,2,britannica
+world-snow-white-1937,Snow White Released,1937,Disneys Snow White became the first full-length cel-animated feature film in history.,film,americas,2,disney
+world-jurassic-park-1993,Jurassic Park Released,1993,Steven Spielbergs dinosaur blockbuster revolutionised visual effects with CGI creatures.,film,americas,2,imdb
+world-first-scuba-1943,First Scuba Gear,1943,"Jacques Cousteau and Émile Gagnan developed the Aqua-Lung, the first modern scuba diving equipment.",technology,europe,4,britannica
+world-taj-mahal-1653,Taj Mahal Completed,1653,"The Taj Mahal was completed in Agra, built by Emperor Shah Jahan as a mausoleum for his wife.",culture,asia,2,britannica
+world-first-nobel-1901,First Nobel Prizes,1901,"The first Nobel Prizes were awarded in Stockholm in physics, chemistry, medicine, literature, and peace.",culture,europe,3,nobel
+world-panama-canal-1914,Panama Canal Opens,1914,"The Panama Canal opened, connecting the Atlantic and Pacific Oceans and transforming global trade.",technology,americas,2,britannica
+world-first-balloon-flight-1783,First Hot Air Balloon Flight,1783,The Montgolfier brothers launched the first manned hot air balloon flight in Paris.,science,europe,4,britannica
+world-first-computer-mouse-1964,First Computer Mouse,1964,"Douglas Engelbart invented the first computer mouse, a wooden shell with two metal wheels.",technology,americas,4,britannica
+world-first-photograph-1826,First Photograph Taken,1826,Joseph Nicéphore Niépce captured the earliest known permanent photograph using a camera obscura.,technology,europe,4,britannica
+world-marie-curie-radium-1898,Radium Discovered,1898,"Marie and Pierre Curie discovered radium, advancing the understanding of radioactivity.",science,europe,3,britannica
+world-polo-vaccine-1955,Polio Vaccine Announced,1955,"Dr. Jonas Salk announced the successful polio vaccine, nearly eradicating the disease worldwide.",medicine,americas,3,britannica
+world-first-canada-1867,Canadian Confederation,1867,The British North America Act united three colonies into the Dominion of Canada.,politics,americas,3,britannica
+world-avatar-2009,Avatar Released,2009,James Camerons Avatar became the highest-grossing film of all time using groundbreaking 3D technology.,film,americas,2,imdb
+world-usain-bolt-2008,Usain Bolt Triple Gold,2008,Usain Bolt won three gold medals at the Beijing Olympics with world records in all three events.,sports,asia,2,olympic
+world-phelps-8-golds-2008,Phelps Eight Golds,2008,"Michael Phelps won eight gold medals at the Beijing Olympics, the most by any athlete in a single Games.",sports,asia,3,olympic
+world-google-founded-1998,Google Founded,1998,"Larry Page and Sergey Brin founded Google in a garage, revolutionising internet search.",technology,americas,1,google
+world-facebook-launched-2004,Facebook Launched,2004,"Mark Zuckerberg launched Facebook from his Harvard dormitory, creating the largest social network.",technology,americas,2,britannica
+world-youtube-founded-2005,YouTube Founded,2005,"Three former PayPal employees founded YouTube, transforming video sharing and online content.",technology,americas,2,britannica
+world-citizen-kane-1941,Citizen Kane Released,1941,"Orson Welles released Citizen Kane, widely regarded as one of the greatest films ever made.",film,americas,3,britannica
+world-first-vaccine-1796,First Vaccine Created,1796,"Edward Jenner administered the first smallpox vaccine, founding the science of immunology.",medicine,europe,3,britannica
+world-elvis-first-record-1954,Elvis First Record,1954,"Elvis Presley released That All Right, marking the dawn of rock and roll music.",music,americas,3,britannica
+world-first-video-game-1972,First Video Game Console,1972,"Magnavox released the Odyssey, the first home video game console, featuring table tennis.",technology,americas,4,britannica

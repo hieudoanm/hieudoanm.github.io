@@ -1,0 +1,101 @@
+id,title,year,description,category,region,difficulty,source
+europe-lascaux-paintings-17000,Lascaux Cave Paintings,-17000,Prehistoric artists painted vivid scenes at Lascaux.,culture,europe,4,britannica
+europe-massalia-founded-600,Massalia Founded,-600,Greek colonists founded Massalia or modern Marseille.,culture,europe,4,britannica
+europe-alesia-52,Battle of Alesia,-52,Vercingetorix surrendered to Julius Caesar.,war,europe,3,britannica
+europe-clovis-franks-486,Clovis Unites the Franks,486,Clovis founded the Frankish kingdom.,war,europe,4,britannica
+europe-clovis-baptised-496,Clovis Baptised,496,Clovis converted to Catholic Christianity.,culture,europe,4,britannica
+europe-battle-of-tours-732,Battle of Tours,732,Charles Martel halted the Muslim advance.,war,europe,3,britannica
+europe-pepin-crowned-751,Pepin the Short Crowned,751,Pepin became the first Carolingian king.,politics,europe,4,britannica
+europe-charlemagne-emperor-800,Charlemagne Crowned Emperor,800,Charlemagne was crowned Roman emperor.,politics,europe,3,britannica
+europe-treaty-verdun-843,Treaty of Verdun,843,Charlemagne's empire was split into three.,politics,europe,4,britannica
+europe-hugh-capet-987,Hugh Capet Crowned,987,Hugh Capet founded the Capetian dynasty.,politics,europe,4,britannica
+europe-norman-conquest-1066,Norman Conquest of England,1066,William of Normandy conquered England.,war,europe,3,britannica
+europe-first-crusade-1096,First Crusade Departs,1096,French knights joined the First Crusade.,war,europe,4,britannica
+europe-notre-dame-1163,Notre-Dame Construction Begins,1163,Work began on Notre-Dame de Paris.,culture,europe,4,britannica
+europe-albigensian-crusade-1209,Albigensian Crusade,1209,Papal forces fought heretics in the south.,war,europe,5,britannica
+europe-bouvines-1214,Battle of Bouvines,1214,Philip Augustus defeated an allied coalition.,war,europe,4,britannica
+europe-sainte-chapelle-1248,Sainte-Chapelle Consecrated,1248,The royal chapel rose with its stained glass.,culture,europe,5,britannica
+europe-estates-general-1302,Estates General Meets,1302,France's first assembly met in Paris.,politics,europe,5,britannica
+europe-templars-arrested-1307,Knights Templar Arrested,1307,Philip IV moved to crush the Templars.,politics,europe,5,britannica
+europe-avignon-papacy-1309,Avignon Papacy Begins,1309,The popes moved to Avignon.,politics,europe,5,britannica
+europe-hundred-years-war-1337,Hundred Years' War Begins,1337,England and France clashed over the crown.,war,europe,3,britannica
+europe-black-death-1348,Black Death Strikes,1348,The plague devastated France.,medicine,europe,3,britannica
+europe-agincourt-1415,Battle of Agincourt,1415,English archers routed the French knights.,war,europe,3,britannica
+europe-joan-orleans-1429,Joan of Arc Relieves Orléans,1429,Joan of Arc lifted the siege of Orléans.,war,europe,3,britannica
+europe-joan-burned-1431,Joan of Arc Burned,1431,Joan was executed at Rouen.,war,europe,4,britannica
+europe-hundred-years-war-ends-1453,Hundred Years' War Ends,1453,The French expelled the English.,war,europe,4,britannica
+europe-italian-wars-1494,Italian Wars Begin,1494,France invaded Italy.,war,europe,4,britannica
+europe-marignano-1515,Battle of Marignano,1515,Francis I won a famous victory in Italy.,war,europe,5,britannica
+europe-cartier-canada-1534,Cartier Reaches Canada,1534,Jacques Cartier explored the St. Lawrence.,culture,europe,4,britannica
+europe-wars-of-religion-1562,Wars of Religion Begin,1562,Catholic and Protestant forces went to war.,war,europe,4,britannica
+europe-bartholomew-massacre-1572,St Bartholomew's Day Massacre,1572,Catholics massacred Huguenots in Paris.,war,europe,4,britannica
+europe-edict-nantes-1598,Edict of Nantes,1598,Henry IV granted Huguenots religious freedom.,politics,europe,3,britannica
+europe-richelieu-1624,Richelieu Becomes Minister,1624,Richelieu guided royal policy.,politics,europe,4,britannica
+europe-french-academy-1635,French Academy Founded,1635,Richelieu created the Académie française.,culture,europe,5,britannica
+europe-louis-xiv-1643,Louis XIV Becomes King,1643,The Sun King began his long reign.,politics,europe,4,britannica
+europe-westphalia-1648,Peace of Westphalia,1648,The Thirty Years' War ended in Europe.,politics,europe,4,britannica
+europe-versailles-1661,Versailles Expansion Begins,1661,Louis XIV rebuilt the palace at Versailles.,culture,europe,4,britannica
+europe-nantes-revoked-1685,Edict of Nantes Revoked,1685,Louis XIV revoked religious toleration.,politics,europe,4,britannica
+europe-louis-xiv-dies-1715,Louis XIV Dies,1715,The Sun King died after seventy-two years.,politics,europe,4,britannica
+europe-mississippi-bubble-1720,Mississippi Bubble Bursts,1720,John Law's financial scheme collapsed.,culture,europe,5,britannica
+europe-encyclopedie-1751,Encyclopédie Published,1751,Diderot's Encyclopédie began publication.,science,europe,4,britannica
+europe-seven-years-war-1756,Seven Years' War Begins,1756,France fought Britain for empire.,war,europe,4,britannica
+europe-louis-xvi-1774,Louis XVI Becomes King,1774,Louis XVI took the French throne.,politics,europe,4,britannica
+europe-france-backs-us-1778,France Backs the US,1778,France allied with the American rebels.,politics,europe,4,britannica
+europe-montgolfier-1783,Montgolfier Balloon Flight,1783,The Montgolfiers launched a hot-air balloon.,technology,europe,3,britannica
+europe-bastille-1789,Storming of the Bastille,1789,Parisians stormed the royal fortress.,politics,europe,2,britannica
+europe-declaration-rights-1789,Declaration of the Rights of Man,1789,The assembly proclaimed the Declaration of the Rights of Man.,politics,europe,3,britannica
+europe-republic-1792,Republic Proclaimed,1792,France abolished the monarchy.,politics,europe,3,britannica
+europe-louis-xvi-executed-1793,Louis XVI Executed,1793,Louis XVI was guillotined.,politics,europe,3,britannica
+europe-robespierre-1794,Robespierre Falls,1794,The Reign of Terror ended with his arrest.,politics,europe,4,britannica
+europe-napoleon-coup-1799,Napoleon Seizes Power,1799,Napoleon overthrew the Directory.,politics,europe,3,britannica
+europe-napoleon-emperor-1804,Napoleon Crowned Emperor,1804,Napoleon crowned himself emperor.,politics,europe,3,britannica
+europe-austerlitz-1805,Battle of Austerlitz,1805,Napoleon crushed the Russian and Austrian armies.,war,europe,3,britannica
+europe-trafalgar-1805,Battle of Trafalgar,1805,Nelson destroyed the French fleet.,war,europe,4,britannica
+europe-russian-campaign-1812,Russian Campaign Fails,1812,Napoleon's army was destroyed in Russia.,war,europe,3,britannica
+europe-napoleon-abdicates-1814,Napoleon Abdicates,1814,Napoleon was forced from power.,politics,europe,4,britannica
+europe-waterloo-1815,Battle of Waterloo,1815,Wellington and Blücher defeated Napoleon.,war,europe,2,britannica
+europe-july-revolution-1830,July Revolution,1830,Parisians toppled Charles X.,politics,europe,4,britannica
+europe-revolution-1848,Revolution of 1848,1848,Revolts toppled the July Monarchy.,politics,europe,4,britannica
+europe-second-empire-1852,Second Empire Declared,1852,Louis-Napoleon became Emperor Napoleon III.,politics,europe,5,britannica
+europe-solferino-1859,Battle of Solferino,1859,The battle inspired the founding of the Red Cross.,war,europe,5,britannica
+europe-franco-prussian-war-1870,Franco-Prussian War,1870,Prussia defeated France.,war,europe,3,britannica
+europe-paris-commune-1871,Paris Commune,1871,Radicals briefly ruled Paris.,politics,europe,4,britannica
+europe-third-republic-1875,Third Republic Declared,1875,France settled into a republican regime.,politics,europe,4,britannica
+europe-pasteur-rabies-1885,Pasteur Rabies Vaccine,1885,Louis Pasteur tested a rabies vaccine.,medicine,europe,3,britannica
+europe-eiffel-tower-1889,Eiffel Tower Opens,1889,The tower rose for the world exposition.,technology,europe,2,britannica
+europe-dreyfus-affair-1894,Dreyfus Affair Begins,1894,A Jewish officer was wrongly convicted.,politics,europe,3,britannica
+europe-lumiere-cinematographe-1895,Lumière Cinématographe,1895,The Lumière brothers screened moving pictures.,film,europe,3,britannica
+europe-radium-1898,Radium Discovered,1898,The Curies identified radium in Paris.,science,europe,3,britannica
+europe-paris-metro-1900,Paris Métro Opens,1900,Paris opened its underground railway.,technology,europe,4,britannica
+europe-tour-de-france-1903,First Tour de France,1903,The great cycling race was first held.,sports,europe,4,britannica
+europe-church-state-1905,Church-State Separation,1905,France separated church and state.,politics,europe,4,britannica
+europe-battle-of-marne-1914,Battle of the Marne,1914,The French halted the German advance.,war,europe,3,britannica
+europe-battle-of-verdun-1916,Battle of Verdun,1916,The longest battle of World War I raged.,war,europe,3,britannica
+europe-versailles-treaty-1919,Versailles Treaty Signed,1919,The treaty ended World War I.,politics,europe,2,britannica
+europe-world-cup-1938,World Cup Hosted,1938,France hosted the FIFA World Cup.,sports,europe,5,britannica
+europe-fall-of-france-1940,Fall of France,1940,Germany conquered France.,war,europe,2,britannica
+europe-d-day-1944,D-Day Landings,1944,Allies landed on the Normandy beaches.,war,europe,2,britannica
+europe-paris-liberated-1944,Paris Liberated,1944,Allied troops freed the capital.,war,europe,3,britannica
+europe-fourth-republic-1946,Fourth Republic Begins,1946,France adopted a new constitution.,politics,europe,5,britannica
+europe-dien-bien-phu-1954,Battle of Dien Bien Phu,1954,The French lost the battle in Vietnam.,war,europe,4,britannica
+europe-fifth-republic-1958,Fifth Republic Founded,1958,De Gaulle created the Fifth Republic.,politics,europe,3,britannica
+europe-new-wave-1959,French New Wave Begins,1959,Truffaut's films launched the New Wave.,film,europe,4,britannica
+europe-algeria-1962,Algeria Gains Independence,1962,France recognised Algerian independence.,politics,europe,3,britannica
+europe-ye-ye-1962,Ye-Ye Music Boom,1962,Françoise Hardy and ye-ye pop ruled the charts.,music,europe,5,britannica
+europe-asterix-satellite-1965,Asterix Satellite Launched,1965,France orbited its first satellite.,space,europe,4,britannica
+europe-may-68-1968,May 68 Protests,1968,Students and workers revolted across France.,politics,europe,4,britannica
+europe-ariane-1979,Ariane Rocket Flies,1979,Europe's Ariane rocket launched.,space,europe,4,britannica
+europe-tgv-1981,TGV High-Speed Train,1981,The TGV began regular high-speed service.,technology,europe,3,britannica
+europe-mitterrand-1981,Mitterrand Becomes President,1981,François Mitterrand was elected president.,politics,europe,4,britannica
+europe-maastricht-1992,Maastricht Treaty Signed,1992,The treaty created the European Union.,politics,europe,4,britannica
+europe-daft-punk-1993,Daft Punk Forms,1993,The electronic duo formed in Paris.,music,europe,5,britannica
+europe-world-cup-1998,World Cup Won,1998,France won the FIFA World Cup.,sports,europe,3,britannica
+europe-euro-2002,Euro Adopted,2002,France adopted the euro currency.,politics,europe,4,britannica
+europe-urban-riots-2005,Urban Riots,2005,Banlieue unrest spread across France.,politics,europe,5,britannica
+europe-the-artist-2011,The Artist Wins Oscar,2011,The silent film won the Best Picture Oscar.,film,europe,4,britannica
+europe-charlie-hebdo-2015,Charlie Hebdo Attack,2015,Gunmen attacked the satirical newspaper.,politics,europe,4,britannica
+europe-macron-2017,Macron Becomes President,2017,Emmanuel Macron took office.,politics,europe,4,britannica
+europe-notre-dame-fire-2019,Notre-Dame Fire,2019,A fire gutted the cathedral's roof.,culture,europe,3,britannica
+europe-covid-lockdown-2020,COVID-19 Lockdown,2020,France imposed a nationwide lockdown.,medicine,europe,4,britannica
+europe-paris-olympics-2024,Paris Olympics,2024,France hosted the Summer Olympics.,sports,europe,3,britannica

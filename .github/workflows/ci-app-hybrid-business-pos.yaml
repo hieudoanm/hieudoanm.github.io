@@ -1,0 +1,32 @@
+name: CI - App - Hybrid - Business - POS
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/business/pos/**'
+      - '.github/workflows/ci-app-hybrid-business-pos.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-hybrid-business-pos-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/business/pos
+      filter: '@hieudoanm.github.io/pos'
+      releaseName: app-hybrid-business-pos-latest
+      releaseTitle: App - Hybrid - Business - POS (latest)
+      artifactPrefix: business-pos

@@ -1,0 +1,101 @@
+id,title,year,description,category,region,difficulty,source
+europe-teutoburg-9,Battle of Teutoburg Forest,9,Germanic tribes ambushed three Roman legions.,war,europe,3,britannica
+europe-tacitus-germania-98,Germania Described,98,Tacitus described the Germanic peoples.,culture,europe,5,britannica
+europe-east-francia-843,East Francia Formed,843,The eastern Frankish realm became Germany.,politics,europe,4,britannica
+europe-lechfeld-955,Battle of Lechfeld,955,Otto I defeated the Hungarian raiders.,war,europe,5,britannica
+europe-otto-emperor-962,Otto Crowned Emperor,962,Otto I revived the imperial title.,politics,europe,4,britannica
+europe-barbarossa-1152,Barbarossa Becomes King,1152,Frederick Barbarossa took the throne.,politics,europe,4,britannica
+europe-munich-founded-1158,Munich Founded,1158,The city of Munich was first documented.,culture,europe,4,britannica
+europe-golden-bull-1356,Golden Bull Issued,1356,The decree fixed imperial election rules.,politics,europe,5,britannica
+europe-gutenberg-press-1455,Gutenberg Printing Press,1455,Gutenberg printed the Bible with movable type.,technology,europe,2,britannica
+europe-luther-theses-1517,Luther Posts the 95 Theses,1517,Martin Luther sparked the Reformation.,culture,europe,2,britannica
+europe-diet-of-worms-1521,Diet of Worms,1521,Luther refused to recant before the emperor.,politics,europe,4,britannica
+europe-peasants-war-1524,Peasants' War,1524,Peasants revolted against feudal lords.,war,europe,4,britannica
+europe-copernicus-1543,Copernicus's System Published,1543,Copernicus's heliocentric model appeared.,science,europe,4,britannica
+europe-augsburg-1555,Peace of Augsburg,1555,The settlement allowed princes to choose a faith.,politics,europe,4,britannica
+europe-kepler-laws-1609,Kepler's Laws Published,1609,Kepler described planetary motion.,science,europe,5,britannica
+europe-thirty-years-war-1618,Thirty Years' War Begins,1618,War engulfed the Holy Roman Empire.,war,europe,3,britannica
+europe-westphalia-empire-1648,Peace of Westphalia,1648,The great war ended in 1648.,politics,europe,3,britannica
+europe-leibniz-calculus-1684,Leibniz Publishes Calculus,1684,Leibniz published his calculus.,science,europe,5,britannica
+europe-bach-born-1685,Bach Born,1685,Johann Sebastian Bach was born in Eisenach.,music,europe,4,britannica
+europe-prussia-kingdom-1701,Kingdom of Prussia,1701,Frederick I crowned himself king.,politics,europe,4,britannica
+europe-frederick-great-1740,Frederick the Great Rules,1740,Frederick II made Prussia a great power.,politics,europe,4,britannica
+europe-beethoven-born-1770,Beethoven Born,1770,Ludwig van Beethoven was born in Bonn.,music,europe,3,britannica
+europe-kant-critique-1781,Kant's Critique Published,1781,Kant's Critique of Pure Reason appeared.,science,europe,5,britannica
+europe-hre-dissolved-1806,Holy Roman Empire Dissolved,1806,Napoleon ended the old empire.,politics,europe,3,britannica
+europe-jena-1806,Battle of Jena,1806,Napoleon crushed the Prussian army.,war,europe,4,britannica
+europe-faust-1808,Faust Published,1808,Goethe published Faust Part One.,culture,europe,4,britannica
+europe-humboldt-university-1810,University of Berlin Founded,1810,Humboldt founded the University of Berlin.,science,europe,4,britannica
+europe-grimm-tales-1812,Grimm's Fairy Tales Published,1812,The brothers Grimm published folk tales.,culture,europe,3,britannica
+europe-leipzig-1813,Battle of Leipzig,1813,Allies defeated Napoleon at Leipzig.,war,europe,3,britannica
+europe-german-confederation-1815,German Confederation Created,1815,German states formed a loose confederation.,politics,europe,4,britannica
+europe-hambach-1832,Hambach Festival,1832,Liberals rallied for a united Germany.,politics,europe,5,britannica
+europe-first-railway-1835,First German Railway,1835,The railway opened between Nuremberg and Fürth.,technology,europe,4,britannica
+europe-zeiss-founded-1846,Zeiss Founded,1846,The optics company began in Jena.,technology,europe,5,britannica
+europe-siemens-founded-1847,Siemens Founded,1847,Werner von Siemens founded his company.,technology,europe,5,britannica
+europe-revolution-1848,Revolution of 1848,1848,Germans demanded national unity and rights.,politics,europe,3,britannica
+europe-frankfurt-parliament-1848,Frankfurt Parliament,1848,The assembly offered the crown to Prussia.,politics,europe,4,britannica
+europe-marx-manifesto-1848,Communist Manifesto Published,1848,Marx and Engels issued the manifesto.,culture,europe,3,britannica
+europe-bismarck-1862,Bismarck Becomes Minister,1862,Bismarck took charge of Prussia.,politics,europe,3,britannica
+europe-austro-prussian-1866,Austro-Prussian War,1866,Prussia defeated Austria.,war,europe,4,britannica
+europe-franco-prussian-1870,Franco-Prussian War,1870,Prussia defeated France.,war,europe,3,britannica
+europe-german-empire-1871,German Empire Proclaimed,1871,Bismarck unified Germany under the Kaiser.,politics,europe,2,britannica
+europe-bayreuth-1876,Bayreuth Festival Opens,1876,Wagner's festival theatre opened.,music,europe,5,britannica
+europe-koch-tb-1882,Koch Finds TB Bacillus,1882,Robert Koch identified the tuberculosis bacterium.,medicine,europe,4,britannica
+europe-benz-car-1885,Benz Patent-Motorwagen,1885,Karl Benz built the first automobile.,technology,europe,2,britannica
+europe-wilhelm-ii-1888,Wilhelm II Becomes Kaiser,1888,Wilhelm II took the German throne.,politics,europe,4,britannica
+europe-bismarck-dismissed-1890,Bismarck Dismissed,1890,Wilhelm II forced Bismarck to resign.,politics,europe,4,britannica
+europe-x-rays-1895,X-Rays Discovered,1895,Wilhelm Röntgen discovered X-rays.,medicine,europe,3,britannica
+europe-diesel-engine-1897,Diesel Engine Built,1897,Rudolf Diesel demonstrated his engine.,technology,europe,5,britannica
+europe-planck-quantum-1900,Quantum Theory Born,1900,Max Planck proposed energy quanta.,science,europe,3,britannica
+europe-wwi-begins-1914,World War I Begins,1914,Germany entered the First World War.,war,europe,2,britannica
+europe-junkers-j1-1915,Junkers J1 Flies,1915,The first all-metal aircraft flew.,technology,europe,5,britannica
+europe-november-revolution-1918,November Revolution,1918,The Kaiser abdicated and the war ended.,politics,europe,3,britannica
+europe-weimar-republic-1919,Weimar Republic Founded,1919,Germany adopted a new democratic constitution.,politics,europe,3,britannica
+europe-versailles-treaty-1919,Versailles Treaty Signed,1919,Germany accepted the peace terms.,politics,europe,3,britannica
+europe-bauhaus-1919,Bauhaus Founded,1919,The design school opened in Weimar.,culture,europe,4,britannica
+europe-nosferatu-1922,Nosferatu Released,1922,The vampire film became a classic.,film,europe,5,britannica
+europe-hyperinflation-1923,Hyperinflation,1923,German money collapsed in value.,politics,europe,3,britannica
+europe-beer-hall-putsch-1923,Beer Hall Putsch,1923,Hitler's coup attempt failed in Munich.,politics,europe,4,britannica
+europe-locarno-1925,Locarno Treaties,1925,Germany accepted its western borders.,politics,europe,4,britannica
+europe-heisenberg-1925,Heisenberg Founds Quantum Mechanics,1925,Heisenberg developed matrix mechanics.,science,europe,4,britannica
+europe-league-of-nations-1926,Germany Joins the League,1926,Germany entered the League of Nations.,politics,europe,5,britannica
+europe-metropolis-1927,Metropolis Released,1927,Fritz Lang's sci-fi epic premiered.,film,europe,4,britannica
+europe-hitler-chancellor-1933,Hitler Becomes Chancellor,1933,Hitler took power as chancellor.,politics,europe,2,britannica
+europe-reichstag-fire-1933,Reichstag Fire,1933,The burning of parliament helped Hitler.,politics,europe,4,britannica
+europe-nuremberg-laws-1935,Nuremberg Laws,1935,The laws stripped Jews of citizenship.,politics,europe,3,britannica
+europe-berlin-olympics-1936,Berlin Olympics,1936,The Games were staged under the Nazis.,sports,europe,3,britannica
+europe-rhineland-1936,Rhineland Remilitarised,1936,German troops entered the Rhineland.,war,europe,4,britannica
+europe-anschluss-1938,Anschluss with Austria,1938,Germany annexed Austria.,war,europe,3,britannica
+europe-kristallnacht-1938,Kristallnacht,1938,Nazis attacked Jewish communities.,politics,europe,3,britannica
+europe-munich-agreement-1938,Munich Agreement,1938,The powers allowed Hitler to take the Sudetenland.,politics,europe,3,britannica
+europe-fission-1938,Nuclear Fission Discovered,1938,Hahn and Strassmann split the atom in Berlin.,science,europe,4,britannica
+europe-poland-invaded-1939,Invasion of Poland,1939,Germany sparked World War II.,war,europe,1,britannica
+europe-battle-of-britain-1940,Battle of Britain,1940,The Luftwaffe failed to break Britain.,war,europe,3,britannica
+europe-barbarossa-1941,Operation Barbarossa,1941,Germany invaded the Soviet Union.,war,europe,3,britannica
+europe-wannsee-1942,Wannsee Conference,1942,Nazis planned the Final Solution.,politics,europe,3,britannica
+europe-v2-rocket-1942,V-2 Rocket Tested,1942,Germany tested the first ballistic missile.,space,europe,4,britannica
+europe-berlin-battle-1945,Battle of Berlin,1945,Soviet troops took Berlin.,war,europe,3,britannica
+europe-germany-surrenders-1945,Germany Surrenders,1945,Nazi Germany capitulated.,war,europe,2,britannica
+europe-nuremberg-trials-1946,Nuremberg Trials,1946,Nazi leaders were tried for war crimes.,politics,europe,3,britannica
+europe-berlin-blockade-1948,Berlin Blockade,1948,The Soviets cut off West Berlin.,war,europe,3,britannica
+europe-berlin-airlift-1949,Berlin Airlift,1949,The airlift saved West Berlin.,war,europe,3,britannica
+europe-frg-founded-1949,Federal Republic Founded,1949,West Germany was created.,politics,europe,3,britannica
+europe-gdr-founded-1949,East Germany Founded,1949,The German Democratic Republic was created.,politics,europe,3,britannica
+europe-1953-uprising-1953,East German Uprising,1953,Workers revolted against the communist regime.,politics,europe,4,britannica
+europe-miracle-of-bern-1954,Miracle of Bern,1954,West Germany won the World Cup.,sports,europe,4,britannica
+europe-berlin-wall-1961,Berlin Wall Built,1961,East Germany sealed the border.,politics,europe,2,britannica
+europe-kennedy-berlin-1963,Kennedy in Berlin,1963,Kennedy declared solidarity with West Berlin.,politics,europe,4,britannica
+europe-bundesliga-1963,Bundesliga Founded,1963,Germany's top football league began.,sports,europe,5,britannica
+europe-brandt-chancellor-1969,Brandt Becomes Chancellor,1969,Willy Brandt launched Ostpolitik.,politics,europe,4,britannica
+europe-munich-massacre-1972,Munich Olympics Massacre,1972,Terrorists killed Israeli athletes.,politics,europe,3,britannica
+europe-kraftwerk-1974,Kraftwerk's Autobahn,1974,The album made electronic music mainstream.,music,europe,5,britannica
+europe-world-cup-1974,World Cup Won,1974,West Germany won the World Cup.,sports,europe,4,britannica
+europe-kohl-chancellor-1982,Kohl Becomes Chancellor,1982,Helmut Kohl took office.,politics,europe,5,britannica
+europe-berlin-wall-falls-1989,Berlin Wall Falls,1989,East Germans streamed into the West.,politics,europe,1,britannica
+europe-reunification-1990,German Reunification,1990,East and West Germany united.,politics,europe,2,britannica
+europe-berlin-capital-1991,Berlin Becomes Capital,1991,The Bundestag chose Berlin.,politics,europe,4,britannica
+europe-euro-2002,Euro Adopted,2002,Germany adopted the euro.,politics,europe,4,britannica
+europe-merkel-2005,Merkel Becomes Chancellor,2005,Angela Merkel took office.,politics,europe,3,britannica
+europe-world-cup-2006,World Cup Hosted,2006,Germany hosted the World Cup.,sports,europe,3,britannica
+europe-refugee-policy-2015,Refugee Policy,2015,Germany opened its doors to refugees.,politics,europe,4,britannica

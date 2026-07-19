@@ -1,0 +1,32 @@
+name: CI - App - Hybrid - Productivity - Projects
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/productivity/projects/**'
+      - '.github/workflows/ci-app-hybrid-productivity-projects.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-hybrid-productivity-projects-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/productivity/projects
+      filter: '@hieudoanm.github.io/projects'
+      releaseName: app-hybrid-productivity-projects-latest
+      releaseTitle: App - Hybrid - Productivity - Projects (latest)
+      artifactPrefix: productivity-projects

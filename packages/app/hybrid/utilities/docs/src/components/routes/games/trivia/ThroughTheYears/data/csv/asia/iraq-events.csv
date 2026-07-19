@@ -1,0 +1,101 @@
+id,title,year,description,category,region,difficulty,source
+asia-eridu-5000,Eridu Founded,-5000,Mesopotamia's earliest city grew near the Euphrates.,culture,asia,5,britannica
+asia-sumer-cities-4500,First Sumerian Cities,-4500,Sumerian city-states emerged in the south.,culture,asia,4,britannica
+asia-cuneiform-3500,Cuneiform Writing Develops,-3500,Scribes pressed wedge marks into clay.,culture,asia,3,britannica
+asia-wheel-3500,Wheel Invented,-3500,Mesopotamians developed wheeled transport.,technology,asia,4,britannica
+asia-uruk-city-3200,Uruk Becomes a Great City,-3200,Uruk grew into the world's first metropolis.,culture,asia,3,britannica
+asia-ziggurats-3100,Ziggurats Built,-3100,Temple towers rose toward the gods.,technology,asia,4,britannica
+asia-sumerian-king-list-2700,Sumerian King List Compiled,-2700,Scribes recorded dynasties of the south.,culture,asia,5,britannica
+asia-gilgamesh-2600,Epic of Gilgamesh,-2600,The epic was written down in Sumer.,culture,asia,4,britannica
+asia-lagash-umma-2450,Lagash and Umma Fight,-2450,Rival city-states warred over water and land.,war,asia,5,britannica
+asia-akkad-2334,Sargon Founds Akkad,-2334,Sargon united Mesopotamia under one empire.,politics,asia,3,britannica
+asia-naram-sin-2254,Naram-Sin Expands Akkad,-2254,Akkadian armies campaigned to the sea.,war,asia,5,britannica
+asia-ur-third-dynasty-2112,Third Dynasty of Ur,-2112,Ur ruled a revived Sumerian state.,politics,asia,4,britannica
+asia-ur-nammu-code-2100,Ur-Nammu's Law Code,-2100,The earliest known laws were written.,culture,asia,4,britannica
+asia-amorites-1900,Amorites Settle Babylon,-1900,Amorite tribes entered the Euphrates valley.,culture,asia,5,britannica
+asia-enuma-elish-1800,Enuma Elish Written,-1800,Babylon's creation epic was composed.,culture,asia,5,britannica
+asia-hammurabi-1792,Hammurabi Rules Babylon,-1792,Hammurabi built Babylon into a great power.,politics,asia,3,britannica
+asia-code-hammurabi-1754,Code of Hammurabi,-1754,Hammurabi issued his famous legal code.,culture,asia,2,britannica
+asia-kassites-1600,Kassites Rule Babylon,-1600,Kassite kings governed Babylon for centuries.,politics,asia,5,britannica
+asia-hittite-sack-1595,Hittites Sack Babylon,-1595,Hittite raiders toppled the old dynasty.,war,asia,4,britannica
+asia-middle-assyria-1365,Middle Assyrian Kingdom,-1365,Assyria grew powerful in the north.,politics,asia,5,britannica
+asia-elamites-1155,Elamites Seize Babylon,-1155,Elamite armies carried off Babylonian treasures.,war,asia,5,britannica
+asia-neo-assyria-911,Neo-Assyrian Empire Rises,-911,Assyria built the largest empire yet seen.,politics,asia,4,britannica
+asia-tiglath-pileser-745,Tiglath-pileser III Rules,-745,Tiglath-pileser reformed the Assyrian army.,politics,asia,5,britannica
+asia-samaria-722,Assyria Conquers Samaria,-722,Assyria destroyed the northern kingdom of Israel.,war,asia,4,britannica
+asia-sargon-ii-722,Sargon II Rules Assyria,-722,Sargon II ruled from his new capital Dur-Sharrukin.,politics,asia,5,britannica
+asia-lachish-701,Sennacherib Sieges Lachish,-701,Assyrian siege engines stormed Lachish.,war,asia,4,britannica
+asia-babylon-destroyed-689,Sennacherib Destroys Babylon,-689,Sennacherib leveled the rebellious city.,war,asia,4,britannica
+asia-ashurbanipal-library-668,Ashurbanipal's Library,-668,Nineveh gathered cuneiform tablets.,culture,asia,4,britannica
+asia-neo-babylon-626,Neo-Babylonian Dynasty,-626,Nabopolassar freed Babylon from Assyria.,politics,asia,4,britannica
+asia-nineveh-falls-612,Nineveh Falls,-612,Babylonians and Medes destroyed the Assyrian capital.,war,asia,3,britannica
+asia-carchemish-605,Battle of Carchemish,-605,Nebuchadnezzar crushed the Egyptians.,war,asia,5,britannica
+asia-jerusalem-586,Babylon Captures Jerusalem,-586,Nebuchadnezzar destroyed the Temple.,war,asia,3,britannica
+asia-ishtar-gate-575,Ishtar Gate Built,-575,Glazed bricks decorated Babylon's gate.,technology,asia,4,britannica
+asia-nabonidus-556,Nabonidus Rules Babylon,-556,Babylon's last native king took the throne.,politics,asia,5,britannica
+asia-cyrus-babylon-539,Cyrus Enters Babylon,-539,Persia absorbed Babylon without a battle.,war,asia,4,britannica
+asia-alexander-babylon-331,Alexander Enters Babylon,-331,Alexander the Great was welcomed into Babylon.,war,asia,3,britannica
+asia-seleucia-312,Seleucia Founded,-312,Seleucus built a Greek capital on the Tigris.,politics,asia,5,britannica
+asia-parthians-140,Parthians Take Mesopotamia,-140,Parthian armies conquered the Tigris valley.,war,asia,4,britannica
+asia-carrhae-53,Battle of Carrhae,-53,Parthian cavalry destroyed a Roman army.,war,asia,4,britannica
+asia-trajan-116,Trajan Conquers Mesopotamia,116,Trajan briefly made it a Roman province.,war,asia,4,britannica
+asia-sassanid-224,Sassanid Empire Founded,224,Ardashir founded a new Persian dynasty.,politics,asia,4,britannica
+asia-shapur-260,Shapur I Defeats Rome,260,Shapur captured a Roman emperor in battle.,war,asia,4,britannica
+asia-julian-363,Julian Dies in Mesopotamia,363,The emperor died during his Persian campaign.,war,asia,5,britannica
+asia-school-nisibis-440,School of Nisibis,440,Scholars studied theology and medicine.,science,asia,5,britannica
+asia-qadisiyyah-637,Battle of al-Qadisiyyah,637,Arab armies conquered the Sasanian heartland.,war,asia,3,britannica
+asia-kufa-basra-638,Kufa and Basra Founded,638,Garrison cities anchored Arab rule.,culture,asia,4,britannica
+asia-abbasid-750,Abbasid Revolution,750,The Abbasids overthrew the Umayyads.,politics,asia,3,britannica
+asia-baghdad-762,Baghdad Founded,762,Al-Mansur built a round city on the Tigris.,culture,asia,2,britannica
+asia-harun-786,Harun al-Rashid Rules,786,Baghdad flourished under the caliph.,politics,asia,3,britannica
+asia-al-mamun-813,Al-Ma'mun Rules,813,The caliph championed Greek learning.,politics,asia,4,britannica
+asia-house-wisdom-830,House of Wisdom,830,Baghdad scholars translated the classics.,science,asia,3,britannica
+asia-samarra-836,Samarra Becomes Capital,836,The Abbasids built a vast palace city.,culture,asia,4,britannica
+asia-al-khwarizmi-850,Al-Khwarizmi Writes Algebra,850,His algebra text shaped mathematics.,science,asia,3,britannica
+asia-samarra-mosque-851,Great Mosque of Samarra,851,Its spiral minaret rose over the city.,technology,asia,4,britannica
+asia-al-battani-858,Al-Battani Born,858,The astronomer measured the solar year.,science,asia,5,britannica
+asia-al-razi-865,Al-Razi Born,865,The physician wrote about smallpox and measles.,medicine,asia,4,britannica
+asia-buyids-945,Buyids Rule Baghdad,945,Persian dynasts controlled the Abbasid capital.,politics,asia,5,britannica
+asia-ibn-al-haytham-965,Ibn al-Haytham Born,965,The Basra-born scholar pioneered optics.,science,asia,3,britannica
+asia-ibn-sina-980,Ibn Sina Born,980,Ibn Sina wrote the Canon of Medicine.,medicine,asia,3,britannica
+asia-seljuks-1055,Seljuks Enter Baghdad,1055,Turkish warlords took the caliph under control.,politics,asia,4,britannica
+asia-nizamiyya-1065,Nizamiyya Madrasa Founded,1065,The first great college opened in Baghdad.,science,asia,4,britannica
+asia-baghdad-sacked-1258,Mongols Sack Baghdad,1258,Hulagu's army ended the Abbasid caliphate.,war,asia,2,britannica
+asia-ilkhanate-1258,Ilkhanate Rules Iraq,1258,Mongol khans governed from the region.,politics,asia,5,britannica
+asia-jalayirids-1340,Jalayirids Rule Baghdad,1340,A Mongol successor dynasty held Baghdad.,politics,asia,5,britannica
+asia-timur-baghdad-1401,Timur Sacks Baghdad,1401,Timur devastated the ancient city.,war,asia,4,britannica
+asia-kara-koyunlu-1411,Kara Koyunlu Take Baghdad,1411,The Black Sheep Turkomans ruled Iraq.,politics,asia,5,britannica
+asia-aq-qoyunlu-1469,Aq Qoyunlu Rule Iraq,1469,The White Sheep Turkomans took Baghdad.,politics,asia,5,britannica
+asia-safavids-1508,Safavids Take Baghdad,1508,Persian armies captured Baghdad.,war,asia,4,britannica
+asia-ottoman-baghdad-1534,Ottomans Take Baghdad,1534,Suleiman the Magnificent entered the city.,war,asia,3,britannica
+asia-safavids-1623,Safavids Retake Baghdad,1623,Persian forces recaptured the city.,war,asia,5,britannica
+asia-ottoman-1638,Ottomans Retake Baghdad,1638,The Ottomans won Baghdad back for good.,war,asia,4,britannica
+asia-mamluks-1747,Mamluk Governors Rule,1747,Mamluk governors ran Baghdad for decades.,politics,asia,5,britannica
+asia-midhat-1869,Midhat Pasha Reforms,1869,The governor modernized Baghdad and Basra.,politics,asia,4,britannica
+asia-basra-1914,British Occupy Basra,1914,British forces seized the southern port.,war,asia,4,britannica
+asia-baghdad-1917,British Enter Baghdad,1917,British troops captured the city.,war,asia,3,britannica
+asia-iraq-revolt-1920,Iraqi Revolt,1920,Tribes rebelled against British rule.,war,asia,4,britannica
+asia-kingdom-1921,Kingdom of Iraq,1921,Faisal I became king under British mandate.,politics,asia,4,britannica
+asia-kirkuk-oil-1927,Oil Discovered at Kirkuk,1927,A huge field was struck at Baba Gurgur.,technology,asia,4,britannica
+asia-independence-1932,Iraq Gains Independence,1932,Iraq joined the League of Nations.,politics,asia,3,britannica
+asia-coupe-1941,Rashid Ali Coup,1941,A nationalist coup brought war with Britain.,war,asia,5,britannica
+asia-republic-1958,Republic Declared,1958,The monarchy was overthrown.,politics,asia,4,britannica
+asia-kurdish-rebellion-1961,Kurdish Rebellion Begins,1961,Kurds rose against Baghdad.,war,asia,4,britannica
+asia-baath-1963,Baath Party Takes Power,1963,The Baathists staged a coup.,politics,asia,4,britannica
+asia-baath-1968,Baathists Return to Power,1968,A second coup brought Saddam's faction to rule.,politics,asia,4,britannica
+asia-oil-1972,Oil Nationalized,1972,Iraq took control of its oil industry.,politics,asia,4,britannica
+asia-algiers-agreement-1975,Algiers Agreement,1975,Iraq and Iran settled the Shatt al-Arab.,politics,asia,5,britannica
+asia-saddam-1979,Saddam Hussein Becomes President,1979,Saddam took full power.,politics,asia,3,britannica
+asia-iran-iraq-war-1980,Iran-Iraq War Begins,1980,A devastating war lasted eight years.,war,asia,3,britannica
+asia-halabja-1988,Halabja Attack,1988,Poison gas killed thousands in a Kurdish town.,war,asia,4,britannica
+asia-kuwait-1990,Iraq Invades Kuwait,1990,Iraq occupied its small neighbor.,war,asia,2,britannica
+asia-sanctions-1990,UN Sanctions Imposed,1990,Sanctions followed the invasion.,politics,asia,4,britannica
+asia-gulf-war-1991,Gulf War,1991,A coalition drove Iraq from Kuwait.,war,asia,2,britannica
+asia-oil-for-food-1995,Oil-for-Food Programme,1995,Iraq traded oil for humanitarian aid.,politics,asia,4,britannica
+asia-iraq-war-2003,Invasion of Iraq,2003,A US-led coalition toppled Saddam.,war,asia,2,britannica
+asia-constitution-2005,Iraq Adopts a Constitution,2005,Iraqis approved a new constitution.,politics,asia,3,britannica
+asia-saddam-executed-2006,Saddam Hussein Executed,2006,The former president was hanged.,politics,asia,3,britannica
+asia-troops-out-2011,US Troops Withdraw,2011,American forces left Iraq.,war,asia,3,britannica
+asia-isis-2014,ISIS Seizes Mosul,2014,Militants overran Iraq's second city.,war,asia,3,britannica
+asia-mosul-2017,Mosul Liberated,2017,Iraqi forces retook the city.,war,asia,4,britannica
+asia-protests-2019,October Protests,2019,Mass protests demanded reform.,politics,asia,4,britannica

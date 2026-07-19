@@ -1,0 +1,31 @@
+name: CI - App - Native - Block
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/native/block/android/**'
+      - '.github/workflows/ci-app-native-block.yaml'
+      - '.github/workflows/ci-app-native-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-native-block-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-native-template.yaml
+    with:
+      package: packages/app/native/block/android
+      releaseName: app-native-block-latest
+      releaseTitle: App - Native - Block (latest)
+      artifactPrefix: block

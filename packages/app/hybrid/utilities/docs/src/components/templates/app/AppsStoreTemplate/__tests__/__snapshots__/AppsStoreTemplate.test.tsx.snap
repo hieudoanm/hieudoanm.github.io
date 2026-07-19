@@ -1,0 +1,188 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`AppsStoreTemplate to match snapshot 1`] = `
+<div>
+  <div
+    class="flex flex-col overflow-hidden"
+  >
+    <main
+      class="flex flex-col items-center overflow-y-auto px-8 py-12"
+    >
+      <p
+        class="text-base-content/30 mb-2 font-mono text-xs tracking-widest uppercase"
+      >
+        Friday, July 31, 2026
+      </p>
+      <h1
+        class="mb-6 text-3xl font-thin tracking-tight"
+      >
+        Apps
+      </h1>
+      <div
+        class="mb-6 w-full max-w-3xl"
+      >
+        <div
+          class="join w-full"
+        >
+          <input
+            class="input input-bordered join-item focus:border-primary focus:outline-primary w-full"
+            placeholder="Search or filter…"
+            type="text"
+            value=""
+          />
+          <button
+            aria-label="Search with Google"
+            class="btn join-item btn-primary"
+          >
+            <svg
+              fill="currentColor"
+              height="16"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 256 256"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <section
+        aria-label="Utilities"
+        class="w-full max-w-3xl pt-6"
+      >
+        <div
+          class="border-base-300 collapse-arrow collapse rounded-none border-b bg-transparent"
+        >
+          <input
+            checked=""
+            class="peer"
+            type="checkbox"
+          />
+          <div
+            class="text-base-content/70 collapse-title flex min-h-0 items-center justify-center gap-2 px-5 py-4 font-mono text-xs tracking-widest uppercase"
+          >
+            Utilities
+            <span
+              class="bg-primary/20 text-primary border-primary/30 badge badge-xs font-mono tracking-normal normal-case"
+            >
+              2
+            </span>
+          </div>
+          <div
+            class="collapse-content px-5 pb-6"
+          >
+            <div
+              class="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+            >
+              <div>
+                <a
+                  class="card bg-base-200 border-base-300 hover:bg-base-300 group relative w-full border text-left transition-all duration-300 hover:scale-[1.03] hover:shadow-lg"
+                  href="/apps/utilities/calculator"
+                >
+                  <div
+                    class="card-body flex-col items-center justify-center gap-2 p-4 text-center"
+                  >
+                    <div
+                      class="bg-primary/20 border-primary/30 flex h-10 w-10 items-center justify-center rounded-full text-xl shadow-inner transition-transform duration-300 group-hover:scale-110"
+                    >
+                      <svg
+                        class="text-xl"
+                        fill="currentColor"
+                        height="24"
+                        stroke="currentColor"
+                        stroke-width="0"
+                        viewBox="0 0 256 256"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M229.5,113,166.06,89.94,143,26.5a16,16,0,0,0-30,0L89.94,89.94,26.5,113a16,16,0,0,0,0,30l63.44,23.07L113,229.5a16,16,0,0,0,30,0l23.07-63.44L229.5,143a16,16,0,0,0,0-30ZM157.08,152.3a8,8,0,0,0-4.78,4.78L128,223.9l-24.3-66.82a8,8,0,0,0-4.78-4.78L32.1,128l66.82-24.3a8,8,0,0,0,4.78-4.78L128,32.1l24.3,66.82a8,8,0,0,0,4.78,4.78L223.9,128Z"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="w-full text-center"
+                    >
+                      <div
+                        class="truncate text-sm font-normal tracking-tight"
+                      >
+                        Calculator
+                      </div>
+                      <div
+                        class="text-base-content/40 mt-0.5 truncate text-[10px] tracking-widest uppercase"
+                      >
+                        Arithmetic
+                      </div>
+                    </div>
+                    <button
+                      aria-label="Open Calculator in new tab"
+                      class="btn btn-primary btn-xs w-full no-underline transition-all"
+                      type="button"
+                    >
+                      Open in new tab
+                    </button>
+                  </div>
+                </a>
+              </div>
+              <div>
+                <a
+                  class="card bg-base-200 border-base-300 hover:bg-base-300 group relative w-full border text-left transition-all duration-300 hover:scale-[1.03] hover:shadow-lg"
+                  href="/apps/clocks/pomodoro"
+                >
+                  <div
+                    class="card-body flex-col items-center justify-center gap-2 p-4 text-center"
+                  >
+                    <div
+                      class="bg-primary/20 border-primary/30 flex h-10 w-10 items-center justify-center rounded-full text-xl shadow-inner transition-transform duration-300 group-hover:scale-110"
+                    >
+                      <svg
+                        class="text-xl"
+                        fill="currentColor"
+                        height="24"
+                        stroke="currentColor"
+                        stroke-width="0"
+                        viewBox="0 0 256 256"
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M229.5,113,166.06,89.94,143,26.5a16,16,0,0,0-30,0L89.94,89.94,26.5,113a16,16,0,0,0,0,30l63.44,23.07L113,229.5a16,16,0,0,0,30,0l23.07-63.44L229.5,143a16,16,0,0,0,0-30ZM157.08,152.3a8,8,0,0,0-4.78,4.78L128,223.9l-24.3-66.82a8,8,0,0,0-4.78-4.78L32.1,128l66.82-24.3a8,8,0,0,0,4.78-4.78L128,32.1l24.3,66.82a8,8,0,0,0,4.78,4.78L223.9,128Z"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="w-full text-center"
+                    >
+                      <div
+                        class="truncate text-sm font-normal tracking-tight"
+                      >
+                        Pomodoro
+                      </div>
+                      <div
+                        class="text-base-content/40 mt-0.5 truncate text-[10px] tracking-widest uppercase"
+                      >
+                        Timer
+                      </div>
+                    </div>
+                    <button
+                      aria-label="Open Pomodoro in new tab"
+                      class="btn btn-primary btn-xs w-full no-underline transition-all"
+                      type="button"
+                    >
+                      Open in new tab
+                    </button>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+`;
