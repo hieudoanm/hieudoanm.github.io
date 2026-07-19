@@ -7,7 +7,7 @@ require (
 	github.com/gorilla/websocket v1.5.3
 	github.com/robfig/cron/v3 v3.0.1
 	golang.org/x/crypto v0.52.0
-	golang.org/x/image v0.38.0
+	golang.org/x/image v0.41.0
 	modernc.org/sqlite v1.51.0
 )
 
