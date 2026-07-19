@@ -33,9 +33,9 @@
   },
   "dependencies": {
     "@api/ts": "workspace:*",
-    "@capacitor/android": "8.4.1",
-    "@capacitor/core": "8.4.1",
-    "@capacitor/ios": "8.4.1",
+    "@capacitor/android": "8.4.2",
+    "@capacitor/core": "8.4.2",
+    "@capacitor/ios": "8.4.2",
     "@chess/ts": "workspace:*",
     "@codemirror/basic-setup": "0.20.0",
     "@codemirror/commands": "6.10.4",
@@ -106,7 +106,7 @@
     "zod": "4.4.3"
   },
   "devDependencies": {
-    "@capacitor/cli": "8.4.1",
+    "@capacitor/cli": "8.4.2",
     "@playwright/test": "1.61.1",
     "@tailwindcss/postcss": "4.3.2",
     "@tauri-apps/cli": "2.11.4",
