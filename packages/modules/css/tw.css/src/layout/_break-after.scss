@@ -1,0 +1,18 @@
+// Break after utilities — Tailwind v3 default scale
+
+$break-afters: (
+  ('auto', auto),
+  ('avoid', avoid),
+  ('all', all),
+  ('avoid-page', avoid-page),
+  ('page', page),
+  ('left', left),
+  ('right', right),
+  ('column', column)
+);
+
+@each $name, $value in $break-afters {
+  .break-after-#{$name} {
+    break-after: $value;
+  }
+}

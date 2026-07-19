@@ -1,0 +1,13 @@
+// Visibility utilities — Tailwind v3 default scale
+
+$visibilities: (
+  ('visible', visible),
+  ('invisible', hidden),
+  ('collapse', collapse)
+);
+
+@each $name, $value in $visibilities {
+  .#{$name} {
+    visibility: $value;
+  }
+}

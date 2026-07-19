@@ -1,0 +1,422 @@
+year,stage,group,type,match_date,home,home_id,home_score,home_pens,away,away_id,away_score,away_pens,extra_time,stadium,city,host,result
+1956,Group,,Round 1,1956-09-01,Hong Kong,HKG,2,,Israel,ISR,3,,,,So Kon Po,Hong Kong,away
+1956,Group,,Round 1,1956-09-06,Hong Kong,HKG,2,,South Korea,KOR,2,,,,So Kon Po,Hong Kong,draw
+1956,Group,,Round 1,1956-09-08,Israel,ISR,1,,South Korea,KOR,2,,,,So Kon Po,Hong Kong,away
+1956,Group,,Round 1,1956-09-09,Hong Kong,HKG,2,,Vietnam Republic,VSO,2,,,,So Kon Po,Hong Kong,draw
+1956,Group,,Round 1,1956-09-12,Israel,ISR,2,,Vietnam Republic,VSO,1,,,,So Kon Po,Hong Kong,home
+1956,Group,,Round 1,1956-09-15,South Korea,KOR,5,,Vietnam Republic,VSO,3,,,,So Kon Po,Hong Kong,home
+1960,Group,,Round 1,1960-10-14,South Korea,KOR,5,,Vietnam Republic,VSO,1,,,,Seoul,South Korea,home
+1960,Group,,Round 1,1960-10-16,Taiwan,TPE,2,,Vietnam Republic,VSO,0,,,,Seoul,South Korea,home
+1960,Group,,Round 1,1960-10-17,South Korea,KOR,3,,Israel,ISR,0,,,,Seoul,South Korea,home
+1960,Group,,Round 1,1960-10-19,Israel,ISR,5,,Vietnam Republic,VSO,1,,,,Seoul,South Korea,home
+1960,Group,,Round 1,1960-10-21,South Korea,KOR,1,,Taiwan,TPE,0,,,,Seoul,South Korea,home
+1960,Group,,Round 1,1960-10-23,Israel,ISR,1,,Taiwan,TPE,0,,,,Seoul,South Korea,home
+1964,Group,,Round 1,1964-05-26,Israel,ISR,1,,Hong Kong,HKG,0,,,,Ramat Gan,Israel,home
+1964,Group,,Round 1,1964-05-27,India,IND,2,,South Korea,KOR,0,,,,Haifa,Israel,home
+1964,Group,,Round 1,1964-05-29,Israel,ISR,2,,India,IND,0,,,,Jaffa,Israel,home
+1964,Group,,Round 1,1964-05-30,Hong Kong,HKG,0,,South Korea,KOR,1,,,,Jerusalem,Israel,away
+1964,Group,,Round 1,1964-06-02,Hong Kong,HKG,1,,India,IND,3,,,,Jaffa,Israel,away
+1964,Group,,Round 1,1964-06-03,Israel,ISR,2,,South Korea,KOR,1,,,,Ramat Gan,Israel,home
+1968,Group,,Round 1,1968-05-10,Iran,IRN,2,,Hong Kong,HKG,0,,,,Tehran,Iran,home
+1968,Group,,Round 1,1968-05-11,Burma,BUR,1,,Taiwan,TPE,1,,,,Tehran,Iran,draw
+1968,Group,,Round 1,1968-05-12,Hong Kong,HKG,1,,Israel,ISR,6,,,,Tehran,Iran,away
+1968,Group,,Round 1,1968-05-13,Iran,IRN,4,,Taiwan,TPE,0,,,,Tehran,Iran,home
+1968,Group,,Round 1,1968-05-14,Burma,BUR,1,,Israel,ISR,0,,,,Tehran,Iran,home
+1968,Group,,Round 1,1968-05-15,Hong Kong,HKG,1,,Taiwan,TPE,1,,,,Tehran,Iran,draw
+1968,Group,,Round 1,1968-05-16,Iran,IRN,3,,Burma,BUR,1,,,,Tehran,Iran,home
+1968,Group,,Round 1,1968-05-17,Israel,ISR,4,,Taiwan,TPE,1,,,,Tehran,Iran,home
+1968,Group,,Round 1,1968-05-18,Burma,BUR,2,,Hong Kong,HKG,0,,,,Tehran,Iran,home
+1968,Group,,Round 1,1968-05-19,Iran,IRN,2,,Israel,ISR,1,,,,Tehran,Iran,home
+1972,Group,A,Round 1,1972-05-09,Iran,IRN,3,,Iraq,IRQ,0,,,,Bangkok,Thailand,home
+1972,Group,A,Round 1,1972-05-11,Thailand,THA,1,,Iraq,IRQ,1,,,,Bangkok,Thailand,draw
+1972,Group,A,Round 1,1972-05-13,Thailand,THA,2,,Iran,IRN,3,,,,Bangkok,Thailand,away
+1972,Group,B,Round 1,1972-05-10,Cambodia,CAM,1,,South Korea,KOR,4,,,,Bangkok,Thailand,away
+1972,Group,B,Round 1,1972-05-12,South Korea,KOR,1,,Kuwait,KUW,2,,,,Bangkok,Thailand,away
+1972,Group,B,Round 1,1972-05-14,Cambodia,CAM,4,,Kuwait,KUW,0,,,,Bangkok,Thailand,home
+1972,Group,ALLOCATION MATCH,Round 1,1972-05-07,Iran,IRN,2,,Cambodia,CAM,0,,,,Bangkok,Thailand,home
+1972,Group,ALLOCATION MATCH,Round 1,1972-05-07,South Korea,KOR,0,0,Iraq,IRQ,0,1,1,,Bangkok,Thailand,draw
+1972,Group,ALLOCATION MATCH,Round 1,1972-05-08,Thailand,THA,0,,Kuwait,KUW,2,,,,Bangkok,Thailand,away
+1972,Knock Out,,Semi Final,1972-05-16,Iran,IRN,2,,Cambodia,CAM,1,,,,Bangkok,Thailand,home
+1972,Knock Out,,Semi Final,1972-05-17,Thailand,THA,1,0,South Korea,KOR,1,1,1,,Bangkok,Thailand,draw
+1972,Knock Out,,Final,1972-05-19,Iran,IRN,2,,South Korea,KOR,1,,,,Bangkok,Thailand,home
+1972,Knock Out,,Third Place,1972-05-19,Thailand,THA,2,1,Cambodia,CAM,2,0,1,,Bangkok,Thailand,draw
+1976,Group,A,Round 1,1976-06-03,Kuwait,KUW,2,,Malaysia,MAS,0,,,,Tehran,Iran,home
+1976,Group,A,Round 1,1976-06-05,China PR,CHP,1,,Malaysia,MAS,1,,,,Tehran,Iran,draw
+1976,Group,A,Round 1,1976-06-07,China PR,CHP,0,,Kuwait,KUW,1,,,,Tehran,Iran,away
+1976,Group,B,Round 1,1976-06-04,Iran,IRN,2,,Iraq,IRQ,0,,,,Tehran,Iran,home
+1976,Group,B,Round 1,1976-06-06,Iraq,IRQ,1,,Yemen DPR,YED,0,,,,Tehran,Iran,home
+1976,Group,B,Round 1,1976-06-08,Iran,IRN,8,,Yemen DPR,YED,0,,,,Tehran,Iran,home
+1976,Knock Out,,Semi Final,1976-06-11,Iran,IRN,2,,China PR,CHP,0,,,,Tehran,Iran,home
+1976,Knock Out,,Semi Final,1976-06-11,Iraq,IRQ,2,,Kuwait,KUW,3,,,,Tehran,Iran,away
+1976,Knock Out,,Third Place,1976-06-13,China PR,CHP,1,,Iraq,IRQ,0,,,,Tehran,Iran,home
+1976,Knock Out,,Final,1976-06-13,Iran,IRN,1,,Kuwait,KUW,0,,,,Tehran,Iran,home
+1980,Group,A,Round 1,1980-09-16,North Korea,PRK,3,,Bangladesh,BAN,2,,,,Kuwait City,Kuwait,home
+1980,Group,A,Round 1,1980-09-17,Iran,IRN,0,,Syria,SYR,0,,,,Kuwait City,Kuwait,draw
+1980,Group,A,Round 1,1980-09-18,North Korea,PRK,2,,China PR,CHP,1,,,,Kuwait City,Kuwait,home
+1980,Group,A,Round 1,1980-09-19,Bangladesh,BAN,0,,Syria,SYR,1,,,,Kuwait City,Kuwait,away
+1980,Group,A,Round 1,1980-09-20,China PR,CHP,2,,Iran,IRN,2,,,,Kuwait City,Kuwait,draw
+1980,Group,A,Round 1,1980-09-22,Bangladesh,BAN,0,,Iran,IRN,7,,,,Kuwait City,Kuwait,away
+1980,Group,A,Round 1,1980-09-23,Syria,SYR,1,,China PR,CHP,0,,,,Kuwait City,Kuwait,home
+1980,Group,A,Round 1,1980-09-24,Iran,IRN,3,,North Korea,PRK,2,,,,Kuwait City,Kuwait,home
+1980,Group,A,Round 1,1980-09-25,China PR,CHP,6,,Bangladesh,BAN,0,,,,Kuwait City,Kuwait,home
+1980,Group,A,Round 1,1980-09-26,Syria,SYR,1,,North Korea,PRK,2,,,,Kuwait City,Kuwait,away
+1980,Group,B,Round 1,1980-09-15,Kuwait,KUW,1,,United Arab Emirates,UAE,1,,,,Kuwait City,Kuwait,draw
+1980,Group,B,Round 1,1980-09-16,Malaysia,MAS,1,,South Korea,KOR,1,,,,Kuwait City,Kuwait,draw
+1980,Group,B,Round 1,1980-09-17,Qatar,QAT,2,,United Arab Emirates,UAE,1,,,,Kuwait City,Kuwait,home
+1980,Group,B,Round 1,1980-09-18,Kuwait,KUW,3,,Malaysia,MAS,1,,,,Kuwait City,Kuwait,home
+1980,Group,B,Round 1,1980-09-19,Qatar,QAT,0,,South Korea,KOR,2,,,,Kuwait City,Kuwait,away
+1980,Group,B,Round 1,1980-09-20,United Arab Emirates,UAE,0,,Malaysia,MAS,2,,,,Kuwait City,Kuwait,away
+1980,Group,B,Round 1,1980-09-21,Kuwait,KUW,0,,South Korea,KOR,3,,,,Kuwait City,Kuwait,away
+1980,Group,B,Round 1,1980-09-23,Malaysia,MAS,1,,Qatar,QAT,1,,,,Kuwait City,Kuwait,draw
+1980,Group,B,Round 1,1980-09-24,South Korea,KOR,4,,United Arab Emirates,UAE,1,,,,Kuwait City,Kuwait,home
+1980,Group,B,Round 1,1980-09-25,Kuwait,KUW,4,,Qatar,QAT,0,,,,Kuwait City,Kuwait,home
+1980,Knock Out,,Semi Final,1980-09-28,South Korea,KOR,2,,North Korea,PRK,1,,,,Kuwait City,Kuwait,home
+1980,Knock Out,,Semi Final,1980-09-28,Kuwait,KUW,2,,Iran,IRN,1,,,,Kuwait City,Kuwait,home
+1980,Knock Out,,Third Place,1980-09-29,Iran,IRN,3,,North Korea,PRK,0,,,,Kuwait City,Kuwait,home
+1980,Knock Out,,Final,1980-09-30,Kuwait,KUW,3,,South Korea,KOR,0,,,,Kuwait City,Kuwait,home
+1984,Group,A,Round 1,1984-12-01,Qatar,QAT,1,,Syria,SYR,1,,,,Kallang,Singapore,draw
+1984,Group,A,Round 1,1984-12-02,Saudi Arabia,KSA,1,,South Korea,KOR,1,,,,Kallang,Singapore,draw
+1984,Group,A,Round 1,1984-12-03,Kuwait,KUW,1,,Qatar,QAT,0,,,,Kallang,Singapore,home
+1984,Group,A,Round 1,1984-12-04,Syria,SYR,0,,Saudi Arabia,KSA,1,,,,Kallang,Singapore,away
+1984,Group,A,Round 1,1984-12-05,South Korea,KOR,0,,Kuwait,KUW,0,,,,Kallang,Singapore,draw
+1984,Group,A,Round 1,1984-12-07,Syria,SYR,1,,South Korea,KOR,0,,,,Kallang,Singapore,home
+1984,Group,A,Round 1,1984-12-08,Qatar,QAT,1,,Saudi Arabia,KSA,1,,,,Kallang,Singapore,draw
+1984,Group,A,Round 1,1984-12-09,Kuwait,KUW,3,,Syria,SYR,1,,,,Kallang,Singapore,home
+1984,Group,A,Round 1,1984-12-10,South Korea,KOR,0,,Qatar,QAT,1,,,,Kallang,Singapore,away
+1984,Group,A,Round 1,1984-12-11,Saudi Arabia,KSA,1,,Kuwait,KUW,0,,,,Kallang,Singapore,home
+1984,Group,B,Round 1,1984-12-01,Iran,IRN,3,,United Arab Emirates,UAE,0,,,,Kallang,Singapore,home
+1984,Group,B,Round 1,1984-12-02,Singapore,SIN,2,,India,IND,0,,,,Kallang,Singapore,home
+1984,Group,B,Round 1,1984-12-03,China PR,CHP,0,,Iran,IRN,2,,,,Kallang,Singapore,away
+1984,Group,B,Round 1,1984-12-04,United Arab Emirates,UAE,2,,India,IND,0,,,,Kallang,Singapore,home
+1984,Group,B,Round 1,1984-12-05,Singapore,SIN,0,,China PR,CHP,2,,,,Kallang,Singapore,away
+1984,Group,B,Round 1,1984-12-07,Iran,IRN,0,,India,IND,0,,,,Kallang,Singapore,draw
+1984,Group,B,Round 1,1984-12-08,Singapore,SIN,0,,United Arab Emirates,UAE,1,,,,Kallang,Singapore,away
+1984,Group,B,Round 1,1984-12-09,India,IND,0,,China PR,CHP,3,,,,Kallang,Singapore,away
+1984,Group,B,Round 1,1984-12-10,Singapore,SIN,1,,Iran,IRN,1,,,,Kallang,Singapore,draw
+1984,Group,B,Round 1,1984-12-11,China PR,CHP,5,,United Arab Emirates,UAE,0,,,,Kallang,Singapore,home
+1984,Knock Out,,Semi Final,1984-12-13,Saudi Arabia,KSA,1,1,Iran,IRN,1,0,1,,Kallang,Singapore,draw
+1984,Knock Out,,Semi Final,1984-12-14,Kuwait,KUW,0,,China PR,CHP,1,,,,Kallang,Singapore,away
+1984,Knock Out,,Third Place,1984-12-16,Iran,IRN,1,0,Kuwait,KUW,1,1,1,,Kallang,Singapore,draw
+1984,Knock Out,,Final,1984-12-16,Saudi Arabia,KSA,2,,China PR,CHP,0,,,,Kallang,Singapore,home
+1988,Group,A,Round 1,1988-12-02,Qatar,QAT,0,,Iran,IRN,2,,,,Doha,Qatar,away
+1988,Group,A,Round 1,1988-12-03,United Arab Emirates,UAE,0,,South Korea,KOR,1,,,,Doha,Qatar,away
+1988,Group,A,Round 1,1988-12-04,Japan,JPN,0,,Iran,IRN,0,,,,Doha,Qatar,draw
+1988,Group,A,Round 1,1988-12-05,Qatar,QAT,2,,United Arab Emirates,UAE,1,,,,Doha,Qatar,home
+1988,Group,A,Round 1,1988-12-06,South Korea,KOR,2,,Japan,JPN,0,,,,Doha,Qatar,home
+1988,Group,A,Round 1,1988-12-08,Iran,IRN,1,,United Arab Emirates,UAE,0,,,,Doha,Qatar,home
+1988,Group,A,Round 1,1988-12-09,Qatar,QAT,2,,South Korea,KOR,3,,,,Doha,Qatar,away
+1988,Group,A,Round 1,1988-12-10,United Arab Emirates,UAE,1,,Japan,JPN,0,,,,Doha,Qatar,home
+1988,Group,A,Round 1,1988-12-11,South Korea,KOR,3,,Iran,IRN,0,,,,Doha,Qatar,home
+1988,Group,A,Round 1,1988-12-12,Qatar,QAT,3,,Japan,JPN,0,,,,Doha,Qatar,home
+1988,Group,B,Round 1,1988-12-02,Syria,SYR,0,,Saudi Arabia,KSA,2,,,,Doha,Qatar,away
+1988,Group,B,Round 1,1988-12-03,Kuwait,KUW,0,,Bahrain,BAH,0,,,,Doha,Qatar,draw
+1988,Group,B,Round 1,1988-12-04,China PR,CHP,3,,Syria,SYR,0,,,,Doha,Qatar,home
+1988,Group,B,Round 1,1988-12-05,Saudi Arabia,KSA,0,,Kuwait,KUW,0,,,,Doha,Qatar,draw
+1988,Group,B,Round 1,1988-12-06,Bahrain,BAH,0,,China PR,CHP,1,,,,Doha,Qatar,away
+1988,Group,B,Round 1,1988-12-08,Syria,SYR,1,,Kuwait,KUW,0,,,,Doha,Qatar,home
+1988,Group,B,Round 1,1988-12-09,Saudi Arabia,KSA,1,,Bahrain,BAH,1,,,,Doha,Qatar,draw
+1988,Group,B,Round 1,1988-12-10,Kuwait,KUW,2,,China PR,CHP,2,,,,Doha,Qatar,draw
+1988,Group,B,Round 1,1988-12-11,Bahrain,BAH,0,,Syria,SYR,1,,,,Doha,Qatar,away
+1988,Group,B,Round 1,1988-12-12,China PR,CHP,0,,Saudi Arabia,KSA,1,,,,Doha,Qatar,away
+1988,Knock Out,,Semi Final,1988-12-14,South Korea,KOR,2,,China PR,CHP,1,,,,Doha,Qatar,home
+1988,Knock Out,,Semi Final,1988-12-15,Saudi Arabia,KSA,1,,Iran,IRN,0,,,,Doha,Qatar,home
+1988,Knock Out,,Third Place,1988-12-17,China PR,CHP,0,0,Iran,IRN,0,1,1,,Doha,Qatar,draw
+1988,Knock Out,,Final,1988-12-18,South Korea,KOR,0,0,Saudi Arabia,KSA,0,1,1,,Doha,Qatar,draw
+1992,Group,A,Round 1,1992-10-30,Japan,JPN,0,,United Arab Emirates,UAE,0,,,,Onomichi,Japan,draw
+1992,Group,A,Round 1,1992-10-30,North Korea,PRK,0,,Iran,IRN,2,,,,Onomichi,Japan,away
+1992,Group,A,Round 1,1992-11-01,United Arab Emirates,UAE,0,,Iran,IRN,0,,,,Hiroshima,Japan,draw
+1992,Group,A,Round 1,1992-11-01,Japan,JPN,1,,North Korea,PRK,1,,,,Hiroshima,Japan,draw
+1992,Group,A,Round 1,1992-11-03,Japan,JPN,1,,Iran,IRN,0,,,,Hiroshima,Japan,home
+1992,Group,A,Round 1,1992-11-03,United Arab Emirates,UAE,2,,North Korea,PRK,1,,,,Hiroshima,Japan,home
+1992,Group,B,Round 1,1992-10-29,Qatar,QAT,1,,Thailand,THA,1,,,,Hiroshima,Japan,draw
+1992,Group,B,Round 1,1992-10-29,Saudi Arabia,KSA,1,,China PR,CHP,1,,,,Hiroshima,Japan,draw
+1992,Group,B,Round 1,1992-10-31,China PR,CHP,0,,Thailand,THA,0,,,,Hiroshima,Japan,draw
+1992,Group,B,Round 1,1992-10-31,Saudi Arabia,KSA,1,,Qatar,QAT,1,,,,Hiroshima,Japan,draw
+1992,Group,B,Round 1,1992-11-02,Saudi Arabia,KSA,4,,Thailand,THA,0,,,,Onomichi,Japan,home
+1992,Group,B,Round 1,1992-11-02,China PR,CHP,2,,Qatar,QAT,1,,,,Onomichi,Japan,home
+1992,Knock Out,,Semi Final,1992-11-06,Japan,JPN,3,,China PR,CHP,2,,,,Hiroshima,Japan,home
+1992,Knock Out,,Semi Final,1992-11-06,Saudi Arabia,KSA,2,,United Arab Emirates,UAE,0,,,,Hiroshima,Japan,home
+1992,Knock Out,,Third Place,1992-11-08,China PR,CHP,1,1,United Arab Emirates,UAE,1,0,1,,Hiroshima,Japan,draw
+1992,Knock Out,,Final,1992-11-08,Japan,JPN,1,,Saudi Arabia,KSA,0,,,,Hiroshima,Japan,home
+1996,Group,A,Round 1,1996-12-04,United Arab Emirates,UAE,1,,South Korea,KOR,1,,,,Abu Dhabi,United Arab Emirates,draw
+1996,Group,A,Round 1,1996-12-04,Indonesia,IDN,2,,Kuwait,KUW,2,,,,Abu Dhabi,United Arab Emirates,draw
+1996,Group,A,Round 1,1996-12-07,United Arab Emirates,UAE,3,,Kuwait,KUW,2,,,,Abu Dhabi,United Arab Emirates,home
+1996,Group,A,Round 1,1996-12-07,South Korea,KOR,4,,Indonesia,IDN,2,,,,Abu Dhabi,United Arab Emirates,home
+1996,Group,A,Round 1,1996-12-10,Kuwait,KUW,2,,South Korea,KOR,0,,,,Abu Dhabi,United Arab Emirates,home
+1996,Group,A,Round 1,1996-12-10,United Arab Emirates,UAE,2,,Indonesia,IDN,0,,,,Abu Dhabi,United Arab Emirates,home
+1996,Group,B,Round 1,1996-12-05,Iran,IRN,1,,Iraq,IRQ,2,,,,Dubai,United Arab Emirates,away
+1996,Group,B,Round 1,1996-12-05,Saudi Arabia,KSA,6,,Thailand,THA,0,,,,Dubai,United Arab Emirates,home
+1996,Group,B,Round 1,1996-12-08,Thailand,THA,1,,Iran,IRN,3,,,,Dubai,United Arab Emirates,away
+1996,Group,B,Round 1,1996-12-08,Saudi Arabia,KSA,1,,Iraq,IRQ,0,,,,Dubai,United Arab Emirates,home
+1996,Group,B,Round 1,1996-12-11,Iraq,IRQ,4,,Thailand,THA,1,,,,Dubai,United Arab Emirates,home
+1996,Group,B,Round 1,1996-12-11,Saudi Arabia,KSA,0,,Iran,IRN,3,,,,Dubai,United Arab Emirates,away
+1996,Group,C,Round 1,1996-12-06,Japan,JPN,2,,Syria,SYR,1,,,,Al Ain,United Arab Emirates,home
+1996,Group,C,Round 1,1996-12-06,China PR,CHP,0,,Uzbekistan,UZB,2,,,,Al Ain,United Arab Emirates,away
+1996,Group,C,Round 1,1996-12-09,Syria,SYR,0,,China PR,CHP,3,,,,Al Ain,United Arab Emirates,away
+1996,Group,C,Round 1,1996-12-09,Japan,JPN,4,,Uzbekistan,UZB,0,,,,Al Ain,United Arab Emirates,home
+1996,Group,C,Round 1,1996-12-12,Japan,JPN,1,,China PR,CHP,0,,,,Al Ain,United Arab Emirates,home
+1996,Group,C,Round 1,1996-12-12,Uzbekistan,UZB,1,,Syria,SYR,2,,,,Al Ain,United Arab Emirates,away
+1996,Knock Out,,Quarter Final,1996-12-15,Kuwait,KUW,2,,Japan,JPN,0,,,,Al Ain,United Arab Emirates,home
+1996,Knock Out,,Quarter Final,1996-12-15,United Arab Emirates,UAE,1,,Iraq,IRQ,0,,,,Abu Dhabi,United Arab Emirates,home
+1996,Knock Out,,Quarter Final,1996-12-16,South Korea,KOR,2,,Iran,IRN,6,,,,Dubai,United Arab Emirates,away
+1996,Knock Out,,Quarter Final,1996-12-16,Saudi Arabia,KSA,4,,China PR,CHP,3,,,,Abu Dhabi,United Arab Emirates,home
+1996,Knock Out,,Semi Final,1996-12-19,Iran,IRN,0,0,Saudi Arabia,KSA,0,1,1,,Abu Dhabi,United Arab Emirates,draw
+1996,Knock Out,,Semi Final,1996-12-19,United Arab Emirates,UAE,1,,Kuwait,KUW,0,,,,Abu Dhabi,United Arab Emirates,home
+1996,Knock Out,,Third Place,1996-12-21,Iran,IRN,1,1,Kuwait,KUW,1,0,1,,Abu Dhabi,United Arab Emirates,draw
+1996,Knock Out,,Final,1996-12-21,United Arab Emirates,UAE,0,0,Saudi Arabia,KSA,0,1,1,,Abu Dhabi,United Arab Emirates,draw
+2000,Group,A,Round 1,2000-10-12,Lebanon,LBN,0,,Iran,IRN,4,,,,Beirut,Lebanon,away
+2000,Group,A,Round 1,2000-10-12,Iraq,IRQ,2,,Thailand,THA,0,,,,Tripoli,Lebanon,home
+2000,Group,A,Round 1,2000-10-15,Lebanon,LBN,2,,Iraq,IRQ,2,,,,Beirut,Lebanon,draw
+2000,Group,A,Round 1,2000-10-15,Iran,IRN,1,,Thailand,THA,1,,,,Beirut,Lebanon,draw
+2000,Group,A,Round 1,2000-10-18,Iran,IRN,1,,Iraq,IRQ,0,,,,Sidon,Lebanon,home
+2000,Group,A,Round 1,2000-10-18,Lebanon,LBN,1,,Thailand,THA,1,,,,Beirut,Lebanon,draw
+2000,Group,B,Round 1,2000-10-13,South Korea,KOR,2,,China PR,CHP,2,,,,Tripoli,Lebanon,draw
+2000,Group,B,Round 1,2000-10-13,Kuwait,KUW,0,,Indonesia,IDN,0,,,,Tripoli,Lebanon,draw
+2000,Group,B,Round 1,2000-10-16,South Korea,KOR,0,,Kuwait,KUW,1,,,,Tripoli,Lebanon,away
+2000,Group,B,Round 1,2000-10-16,China PR,CHP,4,,Indonesia,IDN,0,,,,Tripoli,Lebanon,home
+2000,Group,B,Round 1,2000-10-19,China PR,CHP,0,,Kuwait,KUW,0,,,,Tripoli,Lebanon,draw
+2000,Group,B,Round 1,2000-10-19,South Korea,KOR,3,,Indonesia,IDN,0,,,,Beirut,Lebanon,home
+2000,Group,C,Round 1,2000-10-14,Saudi Arabia,KSA,1,,Japan,JPN,4,,,,Sidon,Lebanon,away
+2000,Group,C,Round 1,2000-10-14,Qatar,QAT,1,,Uzbekistan,UZB,1,,,,Sidon,Lebanon,draw
+2000,Group,C,Round 1,2000-10-17,Saudi Arabia,KSA,0,,Qatar,QAT,0,,,,Sidon,Lebanon,draw
+2000,Group,C,Round 1,2000-10-17,Japan,JPN,8,,Uzbekistan,UZB,1,,,,Sidon,Lebanon,home
+2000,Group,C,Round 1,2000-10-20,Japan,JPN,1,,Qatar,QAT,1,,,,Beirut,Lebanon,draw
+2000,Group,C,Round 1,2000-10-20,Saudi Arabia,KSA,5,,Uzbekistan,UZB,0,,,,Sidon,Lebanon,home
+2000,Knock Out,,Quarter Final,2000-10-23,China PR,CHP,3,,Qatar,QAT,1,,,,Sidon,Lebanon,home
+2000,Knock Out,,Quarter Final,2000-10-23,Iran,IRN,1,,South Korea,KOR,2,,,,Tripoli,Lebanon,away
+2000,Knock Out,,Quarter Final,2000-10-24,Japan,JPN,4,,Iraq,IRQ,1,,,,Beirut,Lebanon,home
+2000,Knock Out,,Quarter Final,2000-10-24,Kuwait,KUW,2,,Saudi Arabia,KSA,3,,,,Beirut,Lebanon,away
+2000,Knock Out,,Semi Final,2000-10-26,China PR,CHP,2,,Japan,JPN,3,,,,Beirut,Lebanon,away
+2000,Knock Out,,Semi Final,2000-10-26,South Korea,KOR,1,,Saudi Arabia,KSA,2,,,,Beirut,Lebanon,away
+2000,Knock Out,,Third Place,2000-10-29,China PR,CHP,0,,South Korea,KOR,1,,,,Beirut,Lebanon,away
+2000,Knock Out,,Final,2000-10-29,Japan,JPN,1,,Saudi Arabia,KSA,0,,,,Beirut,Lebanon,home
+2004,Group,A,Round 1,2004-07-17,China PR,CHP,2,,Bahrain,BAH,2,,,,Beijing,China PR,draw
+2004,Group,A,Round 1,2004-07-18,Qatar,QAT,1,,Indonesia,IDN,2,,,,Beijing,China PR,away
+2004,Group,A,Round 1,2004-07-21,China PR,CHP,5,,Indonesia,IDN,0,,,,Beijing,China PR,home
+2004,Group,A,Round 1,2004-07-21,Bahrain,BAH,1,,Qatar,QAT,1,,,,Beijing,China PR,draw
+2004,Group,A,Round 1,2004-07-25,Bahrain,BAH,3,,Indonesia,IDN,1,,,,Jinan,China PR,home
+2004,Group,A,Round 1,2004-07-25,China PR,CHP,1,,Qatar,QAT,0,,,,Beijing,China PR,home
+2004,Group,B,Round 1,2004-07-19,Kuwait,KUW,3,,United Arab Emirates,UAE,1,,,,Jinan,China PR,home
+2004,Group,B,Round 1,2004-07-19,South Korea,KOR,0,,Jordan,JOR,0,,,,Jinan,China PR,draw
+2004,Group,B,Round 1,2004-07-23,United Arab Emirates,UAE,0,,South Korea,KOR,2,,,,Jinan,China PR,away
+2004,Group,B,Round 1,2004-07-23,Jordan,JOR,2,,Kuwait,KUW,0,,,,Jinan,China PR,home
+2004,Group,B,Round 1,2004-07-27,South Korea,KOR,4,,Kuwait,KUW,0,,,,Jinan,China PR,home
+2004,Group,B,Round 1,2004-07-27,Jordan,JOR,0,,United Arab Emirates,UAE,0,,,,Beijing,China PR,draw
+2004,Group,C,Round 1,2004-07-18,Saudi Arabia,KSA,2,,Turkmenistan,TKM,2,,,,Chengdu,China PR,draw
+2004,Group,C,Round 1,2004-07-18,Iraq,IRQ,0,,Uzbekistan,UZB,1,,,,Chengdu,China PR,away
+2004,Group,C,Round 1,2004-07-22,Turkmenistan,TKM,2,,Iraq,IRQ,3,,,,Chengdu,China PR,away
+2004,Group,C,Round 1,2004-07-22,Uzbekistan,UZB,1,,Saudi Arabia,KSA,0,,,,Chengdu,China PR,home
+2004,Group,C,Round 1,2004-07-26,Turkmenistan,TKM,0,,Uzbekistan,UZB,1,,,,Chongqing,China PR,away
+2004,Group,C,Round 1,2004-07-26,Saudi Arabia,KSA,1,,Iraq,IRQ,2,,,,Chengdu,China PR,away
+2004,Group,D,Round 1,2004-07-20,Japan,JPN,1,,Oman,OMA,0,,,,Chongqing,China PR,home
+2004,Group,D,Round 1,2004-07-20,Iran,IRN,3,,Thailand,THA,0,,,,Chongqing,China PR,home
+2004,Group,D,Round 1,2004-07-24,Oman,OMA,2,,Iran,IRN,2,,,,Chongqing,China PR,draw
+2004,Group,D,Round 1,2004-07-24,Thailand,THA,1,,Japan,JPN,4,,,,Chongqing,China PR,away
+2004,Group,D,Round 1,2004-07-28,Oman,OMA,2,,Thailand,THA,0,,,,Chengdu,China PR,home
+2004,Group,D,Round 1,2004-07-28,Japan,JPN,0,,Iran,IRN,0,,,,Chongqing,China PR,draw
+2004,Knock Out,,Quarter Final,2004-07-30,China PR,CHP,3,,Iraq,IRQ,0,,,,Beijing,China PR,home
+2004,Knock Out,,Quarter Final,2004-07-30,Uzbekistan,UZB,2,0,Bahrain,BAH,2,1,1,,Chengdu,China PR,draw
+2004,Knock Out,,Quarter Final,2004-07-31,Japan,JPN,1,1,Jordan,JOR,1,0,1,,Chongqing,China PR,draw
+2004,Knock Out,,Quarter Final,2004-07-31,South Korea,KOR,3,,Iran,IRN,4,,,,Jinan,China PR,away
+2004,Knock Out,,Semi Final,2004-08-03,Bahrain,BAH,3,,Japan,JPN,4,,,,Jinan,China PR,away
+2004,Knock Out,,Semi Final,2004-08-03,China PR,CHP,1,1,Iran,IRN,1,0,1,,Beijing,China PR,draw
+2004,Knock Out,,Third Place,2004-08-06,Iran,IRN,4,,Bahrain,BAH,2,,,,Beijing,China PR,home
+2004,Knock Out,,Final,2004-08-07,China PR,CHP,1,,Japan,JPN,3,,,,Beijing,China PR,away
+2007,Group,A,Round 1,2007-07-07,Thailand,THA,1,,Iraq,IRQ,1,,,,Bangkok,Thailand,draw
+2007,Group,A,Round 1,2007-07-08,Australia,AUS,1,,Oman,OMA,1,,,,Bangkok,Thailand,draw
+2007,Group,A,Round 1,2007-07-12,Thailand,THA,2,,Oman,OMA,0,,,,Bangkok,Thailand,home
+2007,Group,A,Round 1,2007-07-13,Iraq,IRQ,3,,Australia,AUS,1,,,,Bangkok,Thailand,home
+2007,Group,A,Round 1,2007-07-16,Oman,OMA,0,,Iraq,IRQ,0,,,,Bangkok,Thailand,draw
+2007,Group,A,Round 1,2007-07-16,Thailand,THA,0,,Australia,AUS,4,,,,Bangkok,Thailand,away
+2007,Group,B,Round 1,2007-07-08,Vietnam,VIE,2,,United Arab Emirates,UAE,0,,,,Hanoi,Vietnam,home
+2007,Group,B,Round 1,2007-07-09,Japan,JPN,1,,Qatar,QAT,1,,,,Hanoi,Vietnam,draw
+2007,Group,B,Round 1,2007-07-12,Vietnam,VIE,1,,Qatar,QAT,1,,,,Hanoi,Vietnam,draw
+2007,Group,B,Round 1,2007-07-13,United Arab Emirates,UAE,1,,Japan,JPN,3,,,,Hanoi,Vietnam,away
+2007,Group,B,Round 1,2007-07-16,Qatar,QAT,1,,United Arab Emirates,UAE,2,,,,Ho Chi Minh City,Vietnam,away
+2007,Group,B,Round 1,2007-07-16,Vietnam,VIE,1,,Japan,JPN,4,,,,Hanoi,Vietnam,away
+2007,Group,C,Round 1,2007-07-10,Malaysia,MAS,1,,China PR,CHP,5,,,,Kuala Lumpur,Malaysia,away
+2007,Group,C,Round 1,2007-07-11,Iran,IRN,2,,Uzbekistan,UZB,1,,,,Kuala Lumpur,Malaysia,home
+2007,Group,C,Round 1,2007-07-14,Malaysia,MAS,0,,Uzbekistan,UZB,5,,,,Kuala Lumpur,Malaysia,away
+2007,Group,C,Round 1,2007-07-15,China PR,CHP,2,,Iran,IRN,2,,,,Kuala Lumpur,Malaysia,draw
+2007,Group,C,Round 1,2007-07-18,Malaysia,MAS,0,,Iran,IRN,2,,,,Kuala Lumpur,Malaysia,away
+2007,Group,C,Round 1,2007-07-18,Uzbekistan,UZB,3,,China PR,CHP,0,,,,Shah Alam,Malaysia,home
+2007,Group,D,Round 1,2007-07-10,Indonesia,IDN,2,,Bahrain,BAH,1,,,,Jakarta,Indonesia,home
+2007,Group,D,Round 1,2007-07-11,South Korea,KOR,1,,Saudi Arabia,KSA,1,,,,Jakarta,Indonesia,draw
+2007,Group,D,Round 1,2007-07-14,Indonesia,IDN,1,,Saudi Arabia,KSA,2,,,,Jakarta,Indonesia,away
+2007,Group,D,Round 1,2007-07-15,Bahrain,BAH,2,,South Korea,KOR,1,,,,Jakarta,Indonesia,home
+2007,Group,D,Round 1,2007-07-18,Indonesia,IDN,0,,South Korea,KOR,1,,,,Jakarta,Indonesia,away
+2007,Group,D,Round 1,2007-07-18,Saudi Arabia,KSA,4,,Bahrain,BAH,0,,,,Palembang,Indonesia,home
+2007,Knock Out,,Quarter Final,2007-07-21,Iraq,IRQ,2,,Vietnam,VIE,0,,,,Bangkok,Thailand,home
+2007,Knock Out,,Quarter Final,2007-07-21,Japan,JPN,1,1,Australia,AUS,1,0,1,,Hanoi,Vietnam,draw
+2007,Knock Out,,Quarter Final,2007-07-22,Iran,IRN,0,0,South Korea,KOR,0,1,1,,Kuala Lumpur,Malaysia,draw
+2007,Knock Out,,Quarter Final,2007-07-22,Saudi Arabia,KSA,2,,Uzbekistan,UZB,1,,,,Jakarta,Indonesia,home
+2007,Knock Out,,Semi Final,2007-07-25,Iraq,IRQ,0,1,South Korea,KOR,0,0,1,,Kuala Lumpur,Malaysia,draw
+2007,Knock Out,,Semi Final,2007-07-25,Japan,JPN,2,,Saudi Arabia,KSA,3,,,,Hanoi,Vietnam,away
+2007,Knock Out,,Third Place,2007-07-28,South Korea,KOR,0,1,Japan,JPN,0,0,1,,Palembang,Indonesia,draw
+2007,Knock Out,,Final,2007-07-29,Iraq,IRQ,1,,Saudi Arabia,KSA,0,,,,Jakarta,Indonesia,home
+2011,Group,A,Round 1,2011-01-07,Qatar,QAT,0,,Uzbekistan,UZB,2,,,,Doha,Qatar,away
+2011,Group,A,Round 1,2011-01-08,Kuwait,KUW,0,,China PR,CHP,2,,,,Doha,Qatar,away
+2011,Group,A,Round 1,2011-01-12,Uzbekistan,UZB,2,,Kuwait,KUW,1,,,,Doha,Qatar,home
+2011,Group,A,Round 1,2011-01-12,Qatar,QAT,2,,China PR,CHP,0,,,,Doha,Qatar,home
+2011,Group,A,Round 1,2011-01-16,China PR,CHP,2,,Uzbekistan,UZB,2,,,,Doha,Qatar,draw
+2011,Group,A,Round 1,2011-01-16,Qatar,QAT,3,,Kuwait,KUW,0,,,,Doha,Qatar,home
+2011,Group,B,Round 1,2011-01-09,Japan,JPN,1,,Jordan,JOR,1,,,,Doha,Qatar,draw
+2011,Group,B,Round 1,2011-01-09,Saudi Arabia,KSA,1,,Syria,SYR,2,,,,Al Rayyan,Qatar,away
+2011,Group,B,Round 1,2011-01-13,Jordan,JOR,1,,Saudi Arabia,KSA,0,,,,Al Rayyan,Qatar,home
+2011,Group,B,Round 1,2011-01-13,Syria,SYR,1,,Japan,JPN,2,,,,Doha,Qatar,away
+2011,Group,B,Round 1,2011-01-17,Jordan,JOR,2,,Syria,SYR,1,,,,Doha,Qatar,home
+2011,Group,B,Round 1,2011-01-17,Saudi Arabia,KSA,0,,Japan,JPN,5,,,,Al Rayyan,Qatar,away
+2011,Group,C,Round 1,2011-01-10,South Korea,KOR,2,,Bahrain,BAH,1,,,,Doha,Qatar,home
+2011,Group,C,Round 1,2011-01-10,India,IND,0,,Australia,AUS,4,,,,Doha,Qatar,away
+2011,Group,C,Round 1,2011-01-14,Australia,AUS,1,,South Korea,KOR,1,,,,Doha,Qatar,draw
+2011,Group,C,Round 1,2011-01-14,Bahrain,BAH,5,,India,IND,2,,,,Doha,Qatar,home
+2011,Group,C,Round 1,2011-01-18,Australia,AUS,1,,Bahrain,BAH,0,,,,Doha,Qatar,home
+2011,Group,C,Round 1,2011-01-18,South Korea,KOR,4,,India,IND,1,,,,Doha,Qatar,home
+2011,Group,D,Round 1,2011-01-11,North Korea,PRK,0,,United Arab Emirates,UAE,0,,,,Doha,Qatar,draw
+2011,Group,D,Round 1,2011-01-11,Iraq,IRQ,1,,Iran,IRN,2,,,,Al Rayyan,Qatar,away
+2011,Group,D,Round 1,2011-01-15,Iran,IRN,1,,North Korea,PRK,0,,,,Doha,Qatar,home
+2011,Group,D,Round 1,2011-01-15,United Arab Emirates,UAE,0,,Iraq,IRQ,1,,,,Al Rayyan,Qatar,away
+2011,Group,D,Round 1,2011-01-19,United Arab Emirates,UAE,0,,Iran,IRN,3,,,,Doha,Qatar,away
+2011,Group,D,Round 1,2011-01-19,Iraq,IRQ,1,,North Korea,PRK,0,,,,Al Rayyan,Qatar,home
+2011,Knock Out,,Quarter Final,2011-01-21,Qatar,QAT,2,,Japan,JPN,3,,,,Doha,Qatar,away
+2011,Knock Out,,Quarter Final,2011-01-21,Uzbekistan,UZB,2,,Jordan,JOR,1,,,,Doha,Qatar,home
+2011,Knock Out,,Quarter Final,2011-01-22,Australia,AUS,1,,Iraq,IRQ,0,,,,Doha,Qatar,home
+2011,Knock Out,,Quarter Final,2011-01-22,Iran,IRN,0,,South Korea,KOR,1,,,,Doha,Qatar,away
+2011,Knock Out,,Semi Final,2011-01-25,Japan,JPN,2,1,South Korea,KOR,2,0,1,,Doha,Qatar,draw
+2011,Knock Out,,Semi Final,2011-01-25,Uzbekistan,UZB,0,,Australia,AUS,6,,,,Doha,Qatar,away
+2011,Knock Out,,Third Place,2011-01-28,Uzbekistan,UZB,2,,South Korea,KOR,3,,,,Doha,Qatar,away
+2011,Knock Out,,Final,2011-01-29,Australia,AUS,0,,Japan,JPN,1,,,,Doha,Qatar,away
+2015,Group,A,Round 1,2015-01-09,Australia,AUS,4,,Kuwait,KUW,1,,,,Melbourne,Australia,home
+2015,Group,A,Round 1,2015-01-10,South Korea,KOR,1,,Oman,OMA,0,,,,Canberra,Australia,home
+2015,Group,A,Round 1,2015-01-13,Kuwait,KUW,0,,South Korea,KOR,1,,,,Canberra,Australia,away
+2015,Group,A,Round 1,2015-01-13,Australia,AUS,4,,Oman,OMA,0,,,,Sydney,Australia,home
+2015,Group,A,Round 1,2015-01-17,Australia,AUS,0,,South Korea,KOR,1,,,,Brisbane,Australia,away
+2015,Group,A,Round 1,2015-01-17,Oman,OMA,1,,Kuwait,KUW,0,,,,Newcastle,Australia,home
+2015,Group,B,Round 1,2015-01-10,Saudi Arabia,KSA,0,,China PR,CHP,1,,,,Brisbane,Australia,away
+2015,Group,B,Round 1,2015-01-10,Uzbekistan,UZB,1,,North Korea,PRK,0,,,,Sydney,Australia,home
+2015,Group,B,Round 1,2015-01-14,China PR,CHP,2,,Uzbekistan,UZB,1,,,,Brisbane,Australia,home
+2015,Group,B,Round 1,2015-01-14,North Korea,PRK,1,,Saudi Arabia,KSA,4,,,,Melbourne,Australia,away
+2015,Group,B,Round 1,2015-01-18,China PR,CHP,2,,North Korea,PRK,1,,,,Canberra,Australia,home
+2015,Group,B,Round 1,2015-01-18,Uzbekistan,UZB,3,,Saudi Arabia,KSA,1,,,,Melbourne,Australia,home
+2015,Group,C,Round 1,2015-01-11,United Arab Emirates,UAE,4,,Qatar,QAT,1,,,,Canberra,Australia,home
+2015,Group,C,Round 1,2015-01-11,Iran,IRN,2,,Bahrain,BAH,0,,,,Melbourne,Australia,home
+2015,Group,C,Round 1,2015-01-15,Bahrain,BAH,1,,United Arab Emirates,UAE,2,,,,Canberra,Australia,away
+2015,Group,C,Round 1,2015-01-15,Qatar,QAT,0,,Iran,IRN,1,,,,Sydney,Australia,away
+2015,Group,C,Round 1,2015-01-19,Iran,IRN,1,,United Arab Emirates,UAE,0,,,,Brisbane,Australia,home
+2015,Group,C,Round 1,2015-01-19,Qatar,QAT,1,,Bahrain,BAH,2,,,,Sydney,Australia,away
+2015,Group,D,Round 1,2015-01-12,Jordan,JOR,0,,Iraq,IRQ,1,,,,Brisbane,Australia,away
+2015,Group,D,Round 1,2015-01-12,Japan,JPN,4,,Palestine,PLE,0,,,,Newcastle,Australia,home
+2015,Group,D,Round 1,2015-01-16,Iraq,IRQ,0,,Japan,JPN,1,,,,Brisbane,Australia,away
+2015,Group,D,Round 1,2015-01-16,Palestine,PLE,1,,Jordan,JOR,5,,,,Melbourne,Australia,away
+2015,Group,D,Round 1,2015-01-20,Japan,JPN,2,,Jordan,JOR,0,,,,Melbourne,Australia,home
+2015,Group,D,Round 1,2015-01-20,Iraq,IRQ,2,,Palestine,PLE,0,,,,Canberra,Australia,home
+2015,Knock Out,,Quarter Final,2015-01-22,Australia,AUS,2,,China PR,CHP,0,,,,Brisbane,Australia,home
+2015,Knock Out,,Quarter Final,2015-01-22,South Korea,KOR,2,,Uzbekistan,UZB,0,,,,Melbourne,Australia,home
+2015,Knock Out,,Quarter Final,2015-01-23,Iran,IRN,3,0,Iraq,IRQ,3,1,1,,Canberra,Australia,draw
+2015,Knock Out,,Quarter Final,2015-01-23,Japan,JPN,1,0,United Arab Emirates,UAE,1,1,1,,Sydney,Australia,draw
+2015,Knock Out,,Semi Final,2015-01-26,South Korea,KOR,2,,Iraq,IRQ,0,,,,Sydney,Australia,home
+2015,Knock Out,,Semi Final,2015-01-27,Australia,AUS,2,,United Arab Emirates,UAE,0,,,,Newcastle,Australia,home
+2015,Knock Out,,Third Place,2015-01-30,Iraq,IRQ,2,,United Arab Emirates,UAE,3,,,,Newcastle,Australia,away
+2015,Knock Out,,Final,2015-01-31,Australia,AUS,2,,South Korea,KOR,1,,,,Sydney,Australia,home
+2019,Group,A,Round 1,2019-01-05,United Arab Emirates,UAE,1,,Bahrain,BAH,1,,,,Abu Dhabi,United Arab Emirates,draw
+2019,Group,A,Round 1,2019-01-06,Thailand,THA,1,,India,IND,4,,,,Abu Dhabi,United Arab Emirates,away
+2019,Group,A,Round 1,2019-01-10,United Arab Emirates,UAE,2,,India,IND,0,,,,Abu Dhabi,United Arab Emirates,home
+2019,Group,A,Round 1,2019-01-10,Bahrain,BAH,0,,Thailand,THA,1,,,,Dubai,United Arab Emirates,away
+2019,Group,A,Round 1,2019-01-14,India,IND,0,,Bahrain,BAH,1,,,,Sharjah,United Arab Emirates,away
+2019,Group,A,Round 1,2019-01-14,United Arab Emirates,UAE,1,,Thailand,THA,1,,,,Al Ain,United Arab Emirates,draw
+2019,Group,B,Round 1,2019-01-06,Australia,AUS,0,,Jordan,JOR,1,,,,Al Ain,United Arab Emirates,away
+2019,Group,B,Round 1,2019-01-06,Syria,SYR,0,,Palestine,PLE,0,,,,Sharjah,United Arab Emirates,draw
+2019,Group,B,Round 1,2019-01-10,Jordan,JOR,2,,Syria,SYR,0,,,,Al Ain,United Arab Emirates,home
+2019,Group,B,Round 1,2019-01-11,Palestine,PLE,0,,Australia,AUS,3,,,,Dubai,United Arab Emirates,away
+2019,Group,B,Round 1,2019-01-15,Australia,AUS,3,,Syria,SYR,2,,,,Al Ain,United Arab Emirates,home
+2019,Group,B,Round 1,2019-01-15,Palestine,PLE,0,,Jordan,JOR,0,,,,Abu Dhabi,United Arab Emirates,draw
+2019,Group,C,Round 1,2019-01-07,South Korea,KOR,1,,Philippines,PHI,0,,,,Dubai,United Arab Emirates,home
+2019,Group,C,Round 1,2019-01-07,China PR,CHP,2,,Kyrgyzstan,KYR,1,,,,Al Ain,United Arab Emirates,home
+2019,Group,C,Round 1,2019-01-11,Philippines,PHI,0,,China PR,CHP,3,,,,Abu Dhabi,United Arab Emirates,away
+2019,Group,C,Round 1,2019-01-11,Kyrgyzstan,KYR,0,,South Korea,KOR,1,,,,Al Ain,United Arab Emirates,away
+2019,Group,C,Round 1,2019-01-16,Kyrgyzstan,KYR,3,,Philippines,PHI,1,,,,Dubai,United Arab Emirates,home
+2019,Group,C,Round 1,2019-01-16,South Korea,KOR,2,,China PR,CHP,0,,,,Abu Dhabi,United Arab Emirates,home
+2019,Group,D,Round 1,2019-01-07,Iran,IRN,5,,Yemen,YEM,0,,,,Abu Dhabi,United Arab Emirates,home
+2019,Group,D,Round 1,2019-01-08,Iraq,IRQ,3,,Vietnam,VIE,2,,,,Abu Dhabi,United Arab Emirates,home
+2019,Group,D,Round 1,2019-01-12,Vietnam,VIE,0,,Iran,IRN,2,,,,Abu Dhabi,United Arab Emirates,away
+2019,Group,D,Round 1,2019-01-12,Yemen,YEM,0,,Iraq,IRQ,3,,,,Sharjah,United Arab Emirates,away
+2019,Group,D,Round 1,2019-01-16,Iran,IRN,0,,Iraq,IRQ,0,,,,Dubai,United Arab Emirates,draw
+2019,Group,D,Round 1,2019-01-16,Vietnam,VIE,2,,Yemen,YEM,0,,,,Al Ain,United Arab Emirates,home
+2019,Group,E,Round 1,2019-01-08,Saudi Arabia,KSA,4,,North Korea,PRK,0,,,,Dubai,United Arab Emirates,home
+2019,Group,E,Round 1,2019-01-09,Qatar,QAT,2,,Lebanon,LBN,0,,,,Al Ain,United Arab Emirates,home
+2019,Group,E,Round 1,2019-01-12,Lebanon,LBN,0,,Saudi Arabia,KSA,2,,,,Dubai,United Arab Emirates,away
+2019,Group,E,Round 1,2019-01-13,North Korea,PRK,0,,Qatar,QAT,6,,,,Al Ain,United Arab Emirates,away
+2019,Group,E,Round 1,2019-01-17,Saudi Arabia,KSA,0,,Qatar,QAT,2,,,,Abu Dhabi,United Arab Emirates,away
+2019,Group,E,Round 1,2019-01-17,Lebanon,LBN,4,,North Korea,PRK,1,,,,Sharjah,United Arab Emirates,home
+2019,Group,F,Round 1,2019-01-09,Japan,JPN,3,,Turkmenistan,TKM,2,,,,Abu Dhabi,United Arab Emirates,home
+2019,Group,F,Round 1,2019-01-09,Uzbekistan,UZB,2,,Oman,OMA,1,,,,Sharjah,United Arab Emirates,home
+2019,Group,F,Round 1,2019-01-13,Oman,OMA,0,,Japan,JPN,1,,,,Abu Dhabi,United Arab Emirates,away
+2019,Group,F,Round 1,2019-01-13,Turkmenistan,TKM,0,,Uzbekistan,UZB,4,,,,Dubai,United Arab Emirates,away
+2019,Group,F,Round 1,2019-01-17,Japan,JPN,2,,Uzbekistan,UZB,1,,,,Al Ain,United Arab Emirates,home
+2019,Group,F,Round 1,2019-01-17,Oman,OMA,3,,Turkmenistan,TKM,1,,,,Abu Dhabi,United Arab Emirates,home
+2019,Knock Out,,Round of 16,2019-01-20,Iran,IRN,2,,Oman,OMA,0,,,,Abu Dhabi,United Arab Emirates,home
+2019,Knock Out,,Round of 16,2019-01-20,Jordan,JOR,1,0,Vietnam,VIE,1,1,1,,Dubai,United Arab Emirates,draw
+2019,Knock Out,,Round of 16,2019-01-20,Thailand,THA,1,,China PR,CHP,2,,,,Al Ain,United Arab Emirates,away
+2019,Knock Out,,Round of 16,2019-01-21,Australia,AUS,0,1,Uzbekistan,UZB,0,0,1,,Al Ain,United Arab Emirates,draw
+2019,Knock Out,,Round of 16,2019-01-21,Japan,JPN,1,,Saudi Arabia,KSA,0,,,,Sharjah,United Arab Emirates,home
+2019,Knock Out,,Round of 16,2019-01-21,United Arab Emirates,UAE,3,,Kyrgyzstan,KYR,2,,,,Abu Dhabi,United Arab Emirates,home
+2019,Knock Out,,Round of 16,2019-01-22,South Korea,KOR,2,,Bahrain,BAH,1,,,,Dubai,United Arab Emirates,home
+2019,Knock Out,,Round of 16,2019-01-22,Qatar,QAT,1,,Iraq,IRQ,0,,,,Abu Dhabi,United Arab Emirates,home
+2019,Knock Out,,Quarter Final,2019-01-24,China PR,CHP,0,,Iran,IRN,3,,,,Abu Dhabi,United Arab Emirates,away
+2019,Knock Out,,Quarter Final,2019-01-24,Vietnam,VIE,0,,Japan,JPN,1,,,,Dubai,United Arab Emirates,away
+2019,Knock Out,,Quarter Final,2019-01-25,South Korea,KOR,0,,Qatar,QAT,1,,,,Abu Dhabi,United Arab Emirates,away
+2019,Knock Out,,Quarter Final,2019-01-25,United Arab Emirates,UAE,1,,Australia,AUS,0,,,,Al Ain,United Arab Emirates,home
+2019,Knock Out,,Semi Final,2019-01-28,Iran,IRN,0,,Japan,JPN,3,,,,Al Ain,United Arab Emirates,away
+2019,Knock Out,,Semi Final,2019-01-29,United Arab Emirates,UAE,0,,Qatar,QAT,4,,,,Abu Dhabi,United Arab Emirates,away
+2019,Knock Out,,Final,2019-02-01,Japan,JPN,1,,Qatar,QAT,3,,,,Abu Dhabi,United Arab Emirates,away
+2024,Group,A,Round 1,2024-01-12,Qatar,QAT,3,,Lebanon,LBN,0,,,,Lusail,Qatar,home
+2024,Group,A,Round 1,2024-01-13,China PR,CHP,0,,Tajikistan,TJK,0,,,,Doha,Qatar,draw
+2024,Group,A,Round 1,2024-01-17,Qatar,QAT,1,,Tajikistan,TJK,0,,,,Al Khor,Qatar,home
+2024,Group,A,Round 1,2024-01-17,Lebanon,LBN,0,,China PR,CHP,0,,,,Doha,Qatar,draw
+2024,Group,A,Round 1,2024-01-22,Qatar,QAT,1,,China PR,CHP,0,,,,Al Rayyan,Qatar,home
+2024,Group,A,Round 1,2024-01-22,Tajikistan,TJK,2,,Lebanon,LBN,1,,,,Doha,Qatar,home
+2024,Group,B,Round 1,2024-01-13,Australia,AUS,2,,India,IND,0,,,,Al Rayyan,Qatar,home
+2024,Group,B,Round 1,2024-01-13,Uzbekistan,UZB,0,,Syria,SYR,0,,,,Doha,Qatar,draw
+2024,Group,B,Round 1,2024-01-18,Syria,SYR,0,,Australia,AUS,1,,,,Doha,Qatar,away
+2024,Group,B,Round 1,2024-01-18,India,IND,0,,Uzbekistan,UZB,3,,,,Al Rayyan,Qatar,away
+2024,Group,B,Round 1,2024-01-23,Australia,AUS,1,,Uzbekistan,UZB,1,,,,Al Wakrah,Qatar,draw
+2024,Group,B,Round 1,2024-01-23,Syria,SYR,1,,India,IND,0,,,,Al Khor,Qatar,home
+2024,Group,C,Round 1,2024-01-14,Iran,IRN,4,,Palestine,PLE,1,,,,Al Rayyan,Qatar,home
+2024,Group,C,Round 1,2024-01-14,United Arab Emirates,UAE,3,,Hong Kong,HKG,1,,,,Al Rayyan,Qatar,home
+2024,Group,C,Round 1,2024-01-18,Palestine,PLE,1,,United Arab Emirates,UAE,1,,,,Al Wakrah,Qatar,draw
+2024,Group,C,Round 1,2024-01-19,Hong Kong,HKG,0,,Iran,IRN,1,,,,Al Rayyan,Qatar,away
+2024,Group,C,Round 1,2024-01-23,Iran,IRN,2,,United Arab Emirates,UAE,1,,,,Al Rayyan,Qatar,home
+2024,Group,C,Round 1,2024-01-23,Hong Kong,HKG,0,,Palestine,PLE,3,,,,Doha,Qatar,away
+2024,Group,D,Round 1,2024-01-14,Japan,JPN,4,,Vietnam,VIE,2,,,,Doha,Qatar,home
+2024,Group,D,Round 1,2024-01-15,Indonesia,IDN,1,,Iraq,IRQ,3,,,,Doha,Qatar,away
+2024,Group,D,Round 1,2024-01-19,Iraq,IRQ,2,,Japan,JPN,1,,,,Al Rayyan,Qatar,home
+2024,Group,D,Round 1,2024-01-19,Vietnam,VIE,0,,Indonesia,IDN,1,,,,Doha,Qatar,away
+2024,Group,D,Round 1,2024-01-24,Iraq,IRQ,3,,Vietnam,VIE,2,,,,Doha,Qatar,home
+2024,Group,D,Round 1,2024-01-24,Japan,JPN,3,,Indonesia,IDN,1,,,,Doha,Qatar,home
+2024,Group,E,Round 1,2024-01-15,South Korea,KOR,3,,Bahrain,BAH,1,,,,Doha,Qatar,home
+2024,Group,E,Round 1,2024-01-15,Malaysia,MAS,0,,Jordan,JOR,4,,,,Al Wakrah,Qatar,away
+2024,Group,E,Round 1,2024-01-20,Bahrain,BAH,1,,Malaysia,MAS,0,,,,Doha,Qatar,home
+2024,Group,E,Round 1,2024-01-20,Jordan,JOR,2,,South Korea,KOR,2,,,,Doha,Qatar,draw
+2024,Group,E,Round 1,2024-01-25,South Korea,KOR,3,,Malaysia,MAS,3,,,,Al Wakrah,Qatar,draw
+2024,Group,E,Round 1,2024-01-25,Jordan,JOR,0,,Bahrain,BAH,1,,,,Al Rayyan,Qatar,away
+2024,Group,F,Round 1,2024-01-16,Thailand,THA,2,,Kyrgyzstan,KYR,0,,,,Doha,Qatar,home
+2024,Group,F,Round 1,2024-01-16,Saudi Arabia,KSA,2,,Oman,OMA,1,,,,Al Rayyan,Qatar,home
+2024,Group,F,Round 1,2024-01-21,Oman,OMA,0,,Thailand,THA,0,,,,Doha,Qatar,draw
+2024,Group,F,Round 1,2024-01-21,Kyrgyzstan,KYR,0,,Saudi Arabia,KSA,2,,,,Al Rayyan,Qatar,away
+2024,Group,F,Round 1,2024-01-25,Kyrgyzstan,KYR,1,,Oman,OMA,1,,,,Doha,Qatar,draw
+2024,Group,F,Round 1,2024-01-25,Saudi Arabia,KSA,0,,Thailand,THA,0,,,,Al Rayyan,Qatar,draw
+2024,Knock Out,,Round of 16,2024-01-28,Australia,AUS,4,,Indonesia,IDN,0,,,,Doha,Qatar,home
+2024,Knock Out,,Round of 16,2024-01-28,Tajikistan,TJK,1,1,United Arab Emirates,UAE,1,0,1,,Al Rayyan,Qatar,draw
+2024,Knock Out,,Round of 16,2024-01-29,Iraq,IRQ,2,,Jordan,JOR,3,,,,Al Rayyan,Qatar,away
+2024,Knock Out,,Round of 16,2024-01-29,Qatar,QAT,2,,Palestine,PLE,1,,,,Al Khor,Qatar,home
+2024,Knock Out,,Round of 16,2024-01-30,Saudi Arabia,KSA,1,0,South Korea,KOR,1,1,1,,Al Rayyan,Qatar,draw
+2024,Knock Out,,Round of 16,2024-01-30,Uzbekistan,UZB,2,,Thailand,THA,1,,,,Al Wakrah,Qatar,home
+2024,Knock Out,,Round of 16,2024-01-31,Bahrain,BAH,1,,Japan,JPN,3,,,,Doha,Qatar,away
+2024,Knock Out,,Round of 16,2024-01-31,Iran,IRN,1,1,Syria,SYR,1,0,1,,Doha,Qatar,draw
+2024,Knock Out,,Quarter Final,2024-02-02,Australia,AUS,1,,South Korea,KOR,2,,,,Al Wakrah,Qatar,away
+2024,Knock Out,,Quarter Final,2024-02-02,Tajikistan,TJK,0,,Jordan,JOR,1,,,,Al Rayyan,Qatar,away
+2024,Knock Out,,Quarter Final,2024-02-03,Iran,IRN,2,,Japan,JPN,1,,,,Al Rayyan,Qatar,home
+2024,Knock Out,,Quarter Final,2024-02-03,Qatar,QAT,1,1,Uzbekistan,UZB,1,0,1,,Al Khor,Qatar,draw
+2024,Knock Out,,Semi Final,2024-02-06,Jordan,JOR,2,,South Korea,KOR,0,,,,Al Rayyan,Qatar,home
+2024,Knock Out,,Semi Final,2024-02-07,Qatar,QAT,3,,Iran,IRN,2,,,,Doha,Qatar,home
+2024,Knock Out,,Final,2024-02-10,Qatar,QAT,3,,Jordan,JOR,1,,,,Lusail,Qatar,home

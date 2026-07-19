@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 344.29 394.40" width="344.29" height="394.40" role="img" aria-labelledby="trinidad-and-tobago-title trinidad-and-tobago-desc">
+  <title id="trinidad-and-tobago-title">Trinidad and Tobago hex map</title>
+  <desc id="trinidad-and-tobago-desc">Hexagon map with 16 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.89; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 14.28 10.20; }
+    .label { fill: #52525b; font: 600 11.56px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="WTO">
+    <title>Western Tobago</title>
+    <polygon class="tile inset" points="304.65,61.20 334.09,78.20 334.09,112.20 304.65,129.20 275.20,112.20 275.20,78.20" aria-label="Western Tobago"/>
+    <text class="label" x="304.65" y="95.20">WTO</text>
+  </g>
+  <g class="state" data-state="SGE">
+    <title>Sangre Grande</title>
+    <polygon class="tile" points="245.76,163.20 275.20,180.20 275.20,214.20 245.76,231.20 216.31,214.20 216.31,180.20" aria-label="Sangre Grande"/>
+    <text class="label" x="245.76" y="197.20">SGE</text>
+  </g>
+  <g class="state" data-state="RCM">
+    <title>Rio Claro-Mayaro</title>
+    <polygon class="tile" points="245.76,265.20 275.20,282.20 275.20,316.20 245.76,333.20 216.31,316.20 216.31,282.20" aria-label="Rio Claro-Mayaro"/>
+    <text class="label" x="245.76" y="299.20">RCM</text>
+  </g>
+  <g class="state" data-state="PRT">
+    <title>Princes Town</title>
+    <polygon class="tile" points="216.31,316.20 245.76,333.20 245.76,367.20 216.31,384.20 186.87,367.20 186.87,333.20" aria-label="Princes Town"/>
+    <text class="label" x="216.31" y="350.20">PRT</text>
+  </g>
+  <g class="state" data-state="ETO">
+    <title>Eastern Tobago</title>
+    <polygon class="tile inset" points="216.31,10.20 245.76,27.20 245.76,61.20 216.31,78.20 186.87,61.20 186.87,27.20" aria-label="Eastern Tobago"/>
+    <text class="label" x="216.31" y="44.20">ETO</text>
+  </g>
+  <g class="state" data-state="TUP">
+    <title>Tunapuna/Piarco</title>
+    <polygon class="tile" points="186.87,163.20 216.31,180.20 216.31,214.20 186.87,231.20 157.42,214.20 157.42,180.20" aria-label="Tunapuna/Piarco"/>
+    <text class="label" x="186.87" y="197.20">TUP</text>
+  </g>
+  <g class="state" data-state="CTT">
+    <title>Couva-Tabaquite-Talparo</title>
+    <polygon class="tile" points="186.87,265.20 216.31,282.20 216.31,316.20 186.87,333.20 157.42,316.20 157.42,282.20" aria-label="Couva-Tabaquite-Talparo"/>
+    <text class="label" x="186.87" y="299.20">CTT</text>
+  </g>
+  <g class="state" data-state="ARI">
+    <title>Arima</title>
+    <polygon class="tile" points="157.42,112.20 186.87,129.20 186.87,163.20 157.42,180.20 127.98,163.20 127.98,129.20" aria-label="Arima"/>
+    <text class="label" x="157.42" y="146.20">ARI</text>
+  </g>
+  <g class="state" data-state="CHA">
+    <title>Chaguanas</title>
+    <polygon class="tile" points="157.42,214.20 186.87,231.20 186.87,265.20 157.42,282.20 127.98,265.20 127.98,231.20" aria-label="Chaguanas"/>
+    <text class="label" x="157.42" y="248.20">CHA</text>
+  </g>
+  <g class="state" data-state="PED">
+    <title>Penal-Debe</title>
+    <polygon class="tile" points="157.42,316.20 186.87,333.20 186.87,367.20 157.42,384.20 127.98,367.20 127.98,333.20" aria-label="Penal-Debe"/>
+    <text class="label" x="157.42" y="350.20">PED</text>
+  </g>
+  <g class="state" data-state="SJL">
+    <title>San Juan-Laventille</title>
+    <polygon class="tile" points="127.98,163.20 157.42,180.20 157.42,214.20 127.98,231.20 98.53,214.20 98.53,180.20" aria-label="San Juan-Laventille"/>
+    <text class="label" x="127.98" y="197.20">SJL</text>
+  </g>
+  <g class="state" data-state="SFO">
+    <title>San Fernando</title>
+    <polygon class="tile" points="127.98,265.20 157.42,282.20 157.42,316.20 127.98,333.20 98.53,316.20 98.53,282.20" aria-label="San Fernando"/>
+    <text class="label" x="127.98" y="299.20">SFO</text>
+  </g>
+  <g class="state" data-state="DMN">
+    <title>Diego Martin</title>
+    <polygon class="tile" points="98.53,112.20 127.98,129.20 127.98,163.20 98.53,180.20 69.09,163.20 69.09,129.20" aria-label="Diego Martin"/>
+    <text class="label" x="98.53" y="146.20">DMN</text>
+  </g>
+  <g class="state" data-state="SIP">
+    <title>Siparia</title>
+    <polygon class="tile" points="98.53,316.20 127.98,333.20 127.98,367.20 98.53,384.20 69.09,367.20 69.09,333.20" aria-label="Siparia"/>
+    <text class="label" x="98.53" y="350.20">SIP</text>
+  </g>
+  <g class="state" data-state="POS">
+    <title>Port of Spain</title>
+    <polygon class="tile" points="69.09,163.20 98.53,180.20 98.53,214.20 69.09,231.20 39.64,214.20 39.64,180.20" aria-label="Port of Spain"/>
+    <text class="label" x="69.09" y="197.20">POS</text>
+  </g>
+  <g class="state" data-state="PTF">
+    <title>Point Fortin</title>
+    <polygon class="tile" points="39.64,316.20 69.09,333.20 69.09,367.20 39.64,384.20 10.20,367.20 10.20,333.20" aria-label="Point Fortin"/>
+    <text class="label" x="39.64" y="350.20">PTF</text>
+  </g>
+</svg>

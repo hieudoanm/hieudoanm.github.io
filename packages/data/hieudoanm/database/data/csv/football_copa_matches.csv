@@ -1,0 +1,870 @@
+year,stage,group,type,match_date,home,home_id,home_score,home_pens,away,away_id,away_score,away_pens,extra_time,stadium,city,host,result
+1916,Group,,Round 1,1916-07-02,Chile,CHI,0,,Uruguay,URU,4,,,,Buenos Aires,Argentina,away
+1916,Group,,Round 1,1916-07-06,Argentina,ARG,6,,Chile,CHI,1,,,,Buenos Aires,Argentina,home
+1916,Group,,Round 1,1916-07-08,Brazil,BRA,1,,Chile,CHI,1,,,,Buenos Aires,Argentina,draw
+1916,Group,,Round 1,1916-07-10,Argentina,ARG,1,,Brazil,BRA,1,,,,Buenos Aires,Argentina,draw
+1916,Group,,Round 1,1916-07-12,Brazil,BRA,1,,Uruguay,URU,2,,,,Buenos Aires,Argentina,away
+1916,Group,,Round 1,1916-07-17,Argentina,ARG,0,,Uruguay,URU,0,,,,Avellaneda,Argentina,draw
+1917,Group,,Round 1,1917-09-30,Uruguay,URU,4,,Chile,CHI,0,,,,Montevideo,Uruguay,home
+1917,Group,,Round 1,1917-10-03,Argentina,ARG,4,,Brazil,BRA,2,,,,Montevideo,Uruguay,home
+1917,Group,,Round 1,1917-10-06,Argentina,ARG,1,,Chile,CHI,0,,,,Montevideo,Uruguay,home
+1917,Group,,Round 1,1917-10-07,Uruguay,URU,4,,Brazil,BRA,0,,,,Montevideo,Uruguay,home
+1917,Group,,Round 1,1917-10-12,Brazil,BRA,5,,Chile,CHI,0,,,,Montevideo,Uruguay,home
+1917,Group,,Round 1,1917-10-14,Uruguay,URU,1,,Argentina,ARG,0,,,,Montevideo,Uruguay,home
+1919,Group,,Round 1,1919-05-11,Brazil,BRA,6,,Chile,CHI,0,,,,Rio de Janeiro,Brazil,home
+1919,Group,,Round 1,1919-05-13,Argentina,ARG,2,,Uruguay,URU,3,,,,Rio de Janeiro,Brazil,away
+1919,Group,,Round 1,1919-05-17,Chile,CHI,0,,Uruguay,URU,2,,,,Rio de Janeiro,Brazil,away
+1919,Group,,Round 1,1919-05-18,Brazil,BRA,3,,Argentina,ARG,1,,,,Rio de Janeiro,Brazil,home
+1919,Group,,Round 1,1919-05-22,Argentina,ARG,4,,Chile,CHI,1,,,,Rio de Janeiro,Brazil,home
+1919,Group,,Round 1,1919-05-26,Brazil,BRA,2,,Uruguay,URU,2,,,,Rio de Janeiro,Brazil,draw
+1919,Group,,Round 1,1919-05-29,Brazil,BRA,1,,Uruguay,URU,0,,,,Rio de Janeiro,Brazil,home
+1920,Group,,Round 1,1920-09-11,Chile,CHI,0,,Brazil,BRA,1,,,,Viña del Mar,Chile,away
+1920,Group,,Round 1,1920-09-12,Uruguay,URU,1,,Argentina,ARG,1,,,,Viña del Mar,Chile,draw
+1920,Group,,Round 1,1920-09-18,Brazil,BRA,0,,Uruguay,URU,6,,,,Viña del Mar,Chile,away
+1920,Group,,Round 1,1920-09-20,Chile,CHI,1,,Argentina,ARG,1,,,,Viña del Mar,Chile,draw
+1920,Group,,Round 1,1920-09-25,Argentina,ARG,2,,Brazil,BRA,0,,,,Viña del Mar,Chile,home
+1920,Group,,Round 1,1920-10-03,Chile,CHI,1,,Uruguay,URU,2,,,,Viña del Mar,Chile,away
+1921,Group,,Round 1,1921-10-02,Argentina,ARG,1,,Brazil,BRA,0,,,,Buenos Aires,Argentina,home
+1921,Group,,Round 1,1921-10-09,Paraguay,PAR,2,,Uruguay,URU,1,,,,Buenos Aires,Argentina,home
+1921,Group,,Round 1,1921-10-12,Brazil,BRA,3,,Paraguay,PAR,0,,,,Buenos Aires,Argentina,home
+1921,Group,,Round 1,1921-10-16,Argentina,ARG,3,,Paraguay,PAR,0,,,,Buenos Aires,Argentina,home
+1921,Group,,Round 1,1921-10-23,Brazil,BRA,1,,Uruguay,URU,2,,,,Buenos Aires,Argentina,away
+1921,Group,,Round 1,1921-10-30,Argentina,ARG,1,,Uruguay,URU,0,,,,Buenos Aires,Argentina,home
+1922,Group,,Round 1,1922-09-17,Brazil,BRA,1,,Chile,CHI,1,,,,Rio de Janeiro,Brazil,draw
+1922,Group,,Round 1,1922-09-23,Chile,CHI,0,,Uruguay,URU,2,,,,Rio de Janeiro,Brazil,away
+1922,Group,,Round 1,1922-09-24,Brazil,BRA,1,,Paraguay,PAR,1,,,,Rio de Janeiro,Brazil,draw
+1922,Group,,Round 1,1922-09-28,Argentina,ARG,4,,Chile,CHI,0,,,,Rio de Janeiro,Brazil,home
+1922,Group,,Round 1,1922-10-01,Brazil,BRA,0,,Uruguay,URU,0,,,,Rio de Janeiro,Brazil,draw
+1922,Group,,Round 1,1922-10-05,Chile,CHI,0,,Paraguay,PAR,3,,,,Rio de Janeiro,Brazil,away
+1922,Group,,Round 1,1922-10-08,Argentina,ARG,0,,Uruguay,URU,1,,,,Rio de Janeiro,Brazil,away
+1922,Group,,Round 1,1922-10-12,Paraguay,PAR,1,,Uruguay,URU,0,,,,Rio de Janeiro,Brazil,home
+1922,Group,,Round 1,1922-10-15,Brazil,BRA,2,,Argentina,ARG,0,,,,Rio de Janeiro,Brazil,home
+1922,Group,,Round 1,1922-10-18,Argentina,ARG,2,,Paraguay,PAR,0,,,,Rio de Janeiro,Brazil,home
+1922,Group,,Round 1,1922-11-06,Brazil,BRA,3,,Paraguay,PAR,0,,,,Rio de Janeiro,Brazil,home
+1923,Group,,Round 1,1923-10-29,Argentina,ARG,4,,Paraguay,PAR,3,,,,Montevideo,Uruguay,home
+1923,Group,,Round 1,1923-11-04,Uruguay,URU,2,,Paraguay,PAR,0,,,,Montevideo,Uruguay,home
+1923,Group,,Round 1,1923-11-11,Brazil,BRA,0,,Paraguay,PAR,1,,,,Montevideo,Uruguay,away
+1923,Group,,Round 1,1923-11-18,Argentina,ARG,2,,Brazil,BRA,1,,,,Montevideo,Uruguay,home
+1923,Group,,Round 1,1923-11-25,Uruguay,URU,2,,Brazil,BRA,1,,,,Montevideo,Uruguay,home
+1923,Group,,Round 1,1923-12-02,Uruguay,URU,2,,Argentina,ARG,0,,,,Montevideo,Uruguay,home
+1924,Group,,Round 1,1924-10-12,Argentina,ARG,0,,Paraguay,PAR,0,,,,Montevideo,Uruguay,draw
+1924,Group,,Round 1,1924-10-19,Uruguay,URU,5,,Chile,CHI,0,,,,Montevideo,Uruguay,home
+1924,Group,,Round 1,1924-10-25,Argentina,ARG,2,,Chile,CHI,0,,,,Montevideo,Uruguay,home
+1924,Group,,Round 1,1924-10-26,Uruguay,URU,3,,Paraguay,PAR,1,,,,Montevideo,Uruguay,home
+1924,Group,,Round 1,1924-11-01,Chile,CHI,1,,Paraguay,PAR,3,,,,Montevideo,Uruguay,away
+1924,Group,,Round 1,1924-11-02,Uruguay,URU,0,,Argentina,ARG,0,,,,Montevideo,Uruguay,draw
+1925,Group,,Round 1,1925-11-29,Argentina,ARG,2,,Paraguay,PAR,0,,,,Buenos Aires,Argentina,home
+1925,Group,,Round 1,1925-12-06,Brazil,BRA,5,,Paraguay,PAR,2,,,,Buenos Aires,Argentina,home
+1925,Group,,Round 1,1925-12-13,Argentina,ARG,4,,Brazil,BRA,1,,,,Buenos Aires,Argentina,home
+1925,Group,,Round 1,1925-12-17,Brazil,BRA,3,,Paraguay,PAR,1,,,,Buenos Aires,Argentina,home
+1925,Group,,Round 1,1925-12-20,Argentina,ARG,3,,Paraguay,PAR,1,,,,Buenos Aires,Argentina,home
+1925,Group,,Round 1,1925-12-25,Argentina,ARG,2,,Brazil,BRA,2,,,,Buenos Aires,Argentina,draw
+1926,Group,,Round 1,1926-10-12,Chile,CHI,7,,Bolivia,BOL,1,,,,Santiago,Chile,home
+1926,Group,,Round 1,1926-10-16,Argentina,ARG,5,,Bolivia,BOL,0,,,,Santiago,Chile,home
+1926,Group,,Round 1,1926-10-17,Chile,CHI,1,,Uruguay,URU,3,,,,Santiago,Chile,away
+1926,Group,,Round 1,1926-10-20,Argentina,ARG,8,,Paraguay,PAR,0,,,,Santiago,Chile,home
+1926,Group,,Round 1,1926-10-23,Bolivia,BOL,1,,Paraguay,PAR,6,,,,Santiago,Chile,away
+1926,Group,,Round 1,1926-10-24,Argentina,ARG,0,,Uruguay,URU,2,,,,Santiago,Chile,away
+1926,Group,,Round 1,1926-10-28,Bolivia,BOL,0,,Uruguay,URU,6,,,,Santiago,Chile,away
+1926,Group,,Round 1,1926-10-31,Chile,CHI,1,,Argentina,ARG,1,,,,Santiago,Chile,draw
+1926,Group,,Round 1,1926-11-01,Paraguay,PAR,1,,Uruguay,URU,6,,,,Santiago,Chile,away
+1926,Group,,Round 1,1926-11-03,Chile,CHI,5,,Paraguay,PAR,1,,,,Santiago,Chile,home
+1927,Group,,Round 1,1927-10-30,Argentina,ARG,7,,Bolivia,BOL,1,,,,Lima,Peru,home
+1927,Group,,Round 1,1927-11-01,Peru,PER,0,,Uruguay,URU,4,,,,Lima,Peru,away
+1927,Group,,Round 1,1927-11-06,Bolivia,BOL,0,,Uruguay,URU,9,,,,Lima,Peru,away
+1927,Group,,Round 1,1927-11-13,Peru,PER,3,,Bolivia,BOL,2,,,,Lima,Peru,home
+1927,Group,,Round 1,1927-11-20,Argentina,ARG,3,,Uruguay,URU,2,,,,Lima,Peru,home
+1927,Group,,Round 1,1927-11-27,Peru,PER,1,,Argentina,ARG,5,,,,Lima,Peru,away
+1929,Group,,Round 1,1929-11-01,Paraguay,PAR,3,,Uruguay,URU,0,,,,Buenos Aires,Argentina,home
+1929,Group,,Round 1,1929-11-03,Argentina,ARG,3,,Peru,PER,0,,,,Buenos Aires,Argentina,home
+1929,Group,,Round 1,1929-11-10,Argentina,ARG,4,,Paraguay,PAR,1,,,,Buenos Aires,Argentina,home
+1929,Group,,Round 1,1929-11-11,Peru,PER,1,,Uruguay,URU,4,,,,Buenos Aires,Argentina,away
+1929,Group,,Round 1,1929-11-16,Paraguay,PAR,5,,Peru,PER,0,,,,Avellaneda,Argentina,home
+1929,Group,,Round 1,1929-11-17,Argentina,ARG,2,,Uruguay,URU,0,,,,Buenos Aires,Argentina,home
+1935,Group,,Round 1,1935-01-06,Argentina,ARG,4,,Chile,CHI,1,,,,Lima,Peru,home
+1935,Group,,Round 1,1935-01-13,Peru,PER,0,,Uruguay,URU,1,,,,Lima,Peru,away
+1935,Group,,Round 1,1935-01-18,Chile,CHI,1,,Uruguay,URU,2,,,,Lima,Peru,away
+1935,Group,,Round 1,1935-01-20,Peru,PER,1,,Argentina,ARG,4,,,,Lima,Peru,away
+1935,Group,,Round 1,1935-01-26,Peru,PER,1,,Chile,CHI,0,,,,Lima,Peru,home
+1935,Group,,Round 1,1935-01-27,Argentina,ARG,0,,Uruguay,URU,3,,,,Lima,Peru,away
+1936,Group,,Round 1,1936-12-27,Brazil,BRA,3,,Peru,PER,2,,,,Buenos Aires,Argentina,home
+1936,Group,,Round 1,1936-12-30,Argentina,ARG,2,,Chile,CHI,1,,,,Buenos Aires,Argentina,home
+1937,Group,,Round 1,1937-01-02,Paraguay,PAR,4,,Uruguay,URU,2,,,,Buenos Aires,Argentina,home
+1937,Group,,Round 1,1937-01-03,Brazil,BRA,6,,Chile,CHI,4,,,,Buenos Aires,Argentina,home
+1937,Group,,Round 1,1937-01-06,Peru,PER,2,,Uruguay,URU,4,,,,Buenos Aires,Argentina,away
+1937,Group,,Round 1,1937-01-09,Argentina,ARG,6,,Paraguay,PAR,1,,,,Buenos Aires,Argentina,home
+1937,Group,,Round 1,1937-01-10,Chile,CHI,3,,Uruguay,URU,0,,,,Buenos Aires,Argentina,home
+1937,Group,,Round 1,1937-01-13,Brazil,BRA,5,,Paraguay,PAR,0,,,,Buenos Aires,Argentina,home
+1937,Group,,Round 1,1937-01-16,Argentina,ARG,1,,Peru,PER,0,,,,Buenos Aires,Argentina,home
+1937,Group,,Round 1,1937-01-17,Chile,CHI,2,,Paraguay,PAR,3,,,,Buenos Aires,Argentina,away
+1937,Group,,Round 1,1937-01-19,Brazil,BRA,3,,Uruguay,URU,2,,,,Buenos Aires,Argentina,home
+1937,Group,,Round 1,1937-01-21,Chile,CHI,2,,Peru,PER,2,,,,Buenos Aires,Argentina,draw
+1937,Group,,Round 1,1937-01-23,Argentina,ARG,2,,Uruguay,URU,3,,,,Buenos Aires,Argentina,away
+1937,Group,,Round 1,1937-01-24,Paraguay,PAR,0,,Peru,PER,1,,,,Buenos Aires,Argentina,away
+1937,Group,,Round 1,1937-01-30,Argentina,ARG,1,,Brazil,BRA,0,,,,Buenos Aires,Argentina,home
+1937,Group,,Round 1,1937-02-01,Argentina,ARG,2,,Brazil,BRA,0,,,,Buenos Aires,Argentina,home
+1939,Group,,Round 1,1939-01-15,Chile,CHI,1,,Paraguay,PAR,5,,,,Lima,Peru,away
+1939,Group,,Round 1,1939-01-15,Peru,PER,5,,Ecuador,ECU,2,,,,Lima,Peru,home
+1939,Group,,Round 1,1939-01-22,Ecuador,ECU,0,,Uruguay,URU,6,,,,Lima,Peru,away
+1939,Group,,Round 1,1939-01-22,Peru,PER,3,,Chile,CHI,1,,,,Lima,Peru,home
+1939,Group,,Round 1,1939-01-29,Chile,CHI,2,,Uruguay,URU,3,,,,Lima,Peru,away
+1939,Group,,Round 1,1939-01-29,Peru,PER,3,,Paraguay,PAR,0,,,,Lima,Peru,home
+1939,Group,,Round 1,1939-02-05,Chile,CHI,4,,Ecuador,ECU,1,,,,Lima,Peru,home
+1939,Group,,Round 1,1939-02-05,Paraguay,PAR,1,,Uruguay,URU,3,,,,Lima,Peru,away
+1939,Group,,Round 1,1939-02-12,Ecuador,ECU,1,,Paraguay,PAR,3,,,,Lima,Peru,away
+1939,Group,,Round 1,1939-02-12,Peru,PER,2,,Uruguay,URU,1,,,,Lima,Peru,home
+1941,Group,,Round 1,1941-02-02,Chile,CHI,5,,Ecuador,ECU,0,,,,Santiago,Chile,home
+1941,Group,,Round 1,1941-02-09,Chile,CHI,1,,Peru,PER,0,,,,Santiago,Chile,home
+1941,Group,,Round 1,1941-02-09,Ecuador,ECU,0,,Uruguay,URU,6,,,,Santiago,Chile,away
+1941,Group,,Round 1,1941-02-12,Argentina,ARG,2,,Peru,PER,1,,,,Santiago,Chile,home
+1941,Group,,Round 1,1941-02-16,Argentina,ARG,6,,Ecuador,ECU,1,,,,Santiago,Chile,home
+1941,Group,,Round 1,1941-02-16,Chile,CHI,0,,Uruguay,URU,2,,,,Santiago,Chile,away
+1941,Group,,Round 1,1941-02-23,Argentina,ARG,1,,Uruguay,URU,0,,,,Santiago,Chile,home
+1941,Group,,Round 1,1941-02-23,Ecuador,ECU,0,,Peru,PER,4,,,,Santiago,Chile,away
+1941,Group,,Round 1,1941-02-26,Peru,PER,0,,Uruguay,URU,2,,,,Santiago,Chile,away
+1941,Group,,Round 1,1941-03-04,Chile,CHI,0,,Argentina,ARG,1,,,,Santiago,Chile,away
+1942,Group,,Round 1,1942-01-10,Uruguay,URU,6,,Chile,CHI,1,,,,Montevideo,Uruguay,home
+1942,Group,,Round 1,1942-01-11,Argentina,ARG,4,,Paraguay,PAR,3,,,,Montevideo,Uruguay,home
+1942,Group,,Round 1,1942-01-14,Brazil,BRA,6,,Chile,CHI,1,,,,Montevideo,Uruguay,home
+1942,Group,,Round 1,1942-01-17,Argentina,ARG,2,,Brazil,BRA,1,,,,Montevideo,Uruguay,home
+1942,Group,,Round 1,1942-01-18,Paraguay,PAR,1,,Peru,PER,1,,,,Montevideo,Uruguay,draw
+1942,Group,,Round 1,1942-01-18,Uruguay,URU,7,,Ecuador,ECU,0,,,,Montevideo,Uruguay,home
+1942,Group,,Round 1,1942-01-21,Brazil,BRA,2,,Peru,PER,1,,,,Montevideo,Uruguay,home
+1942,Group,,Round 1,1942-01-22,Argentina,ARG,12,,Ecuador,ECU,0,,,,Montevideo,Uruguay,home
+1942,Group,,Round 1,1942-01-22,Chile,CHI,0,,Paraguay,PAR,2,,,,Montevideo,Uruguay,away
+1942,Group,,Round 1,1942-01-24,Uruguay,URU,1,,Brazil,BRA,0,,,,Montevideo,Uruguay,home
+1942,Group,,Round 1,1942-01-25,Argentina,ARG,3,,Peru,PER,1,,,,Montevideo,Uruguay,home
+1942,Group,,Round 1,1942-01-25,Ecuador,ECU,1,,Paraguay,PAR,3,,,,Montevideo,Uruguay,away
+1942,Group,,Round 1,1942-01-28,Ecuador,ECU,1,,Peru,PER,2,,,,Montevideo,Uruguay,away
+1942,Group,,Round 1,1942-01-28,Uruguay,URU,3,,Paraguay,PAR,1,,,,Montevideo,Uruguay,home
+1942,Group,,Round 1,1942-01-31,Argentina,ARG,0,,Chile,CHI,0,,,,Montevideo,Uruguay,draw
+1942,Group,,Round 1,1942-01-31,Brazil,BRA,5,,Ecuador,ECU,1,,,,Montevideo,Uruguay,home
+1942,Group,,Round 1,1942-02-01,Uruguay,URU,3,,Peru,PER,0,,,,Montevideo,Uruguay,home
+1942,Group,,Round 1,1942-02-05,Brazil,BRA,1,,Paraguay,PAR,1,,,,Montevideo,Uruguay,draw
+1942,Group,,Round 1,1942-02-05,Chile,CHI,2,,Ecuador,ECU,1,,,,Montevideo,Uruguay,home
+1942,Group,,Round 1,1942-02-07,Chile,CHI,0,,Peru,PER,0,,,,Montevideo,Uruguay,draw
+1942,Group,,Round 1,1942-02-07,Uruguay,URU,1,,Argentina,ARG,0,,,,Montevideo,Uruguay,home
+1945,Group,,Round 1,1945-01-14,Chile,CHI,6,,Ecuador,ECU,3,,,,Santiago,Chile,home
+1945,Group,,Round 1,1945-01-18,Argentina,ARG,4,,Bolivia,BOL,0,,,,Santiago,Chile,home
+1945,Group,,Round 1,1945-01-21,Brazil,BRA,3,,Colombia,COL,0,,,,Santiago,Chile,home
+1945,Group,,Round 1,1945-01-24,Chile,CHI,5,,Bolivia,BOL,0,,,,Santiago,Chile,home
+1945,Group,,Round 1,1945-01-24,Ecuador,ECU,1,,Uruguay,URU,5,,,,Santiago,Chile,away
+1945,Group,,Round 1,1945-01-28,Bolivia,BOL,0,,Brazil,BRA,2,,,,Santiago,Chile,away
+1945,Group,,Round 1,1945-01-28,Colombia,COL,0,,Uruguay,URU,7,,,,Santiago,Chile,away
+1945,Group,,Round 1,1945-01-31,Argentina,ARG,4,,Ecuador,ECU,2,,,,Santiago,Chile,home
+1945,Group,,Round 1,1945-01-31,Chile,CHI,2,,Colombia,COL,0,,,,Santiago,Chile,home
+1945,Group,,Round 1,1945-02-07,Argentina,ARG,9,,Colombia,COL,1,,,,Santiago,Chile,home
+1945,Group,,Round 1,1945-02-07,Brazil,BRA,3,,Uruguay,URU,0,,,,Santiago,Chile,home
+1945,Group,,Round 1,1945-02-11,Bolivia,BOL,0,,Ecuador,ECU,0,,,,Santiago,Chile,draw
+1945,Group,,Round 1,1945-02-11,Chile,CHI,1,,Argentina,ARG,1,,,,Santiago,Chile,draw
+1945,Group,,Round 1,1945-02-15,Argentina,ARG,3,,Brazil,BRA,1,,,,Santiago,Chile,home
+1945,Group,,Round 1,1945-02-15,Bolivia,BOL,0,,Uruguay,URU,2,,,,Santiago,Chile,away
+1945,Group,,Round 1,1945-02-18,Chile,CHI,1,,Uruguay,URU,0,,,,Santiago,Chile,home
+1945,Group,,Round 1,1945-02-18,Colombia,COL,3,,Ecuador,ECU,1,,,,Santiago,Chile,home
+1945,Group,,Round 1,1945-02-21,Bolivia,BOL,3,,Colombia,COL,3,,,,Santiago,Chile,draw
+1945,Group,,Round 1,1945-02-21,Brazil,BRA,9,,Ecuador,ECU,2,,,,Santiago,Chile,home
+1945,Group,,Round 1,1945-02-25,Argentina,ARG,1,,Uruguay,URU,0,,,,Santiago,Chile,home
+1945,Group,,Round 1,1945-02-28,Chile,CHI,0,,Brazil,BRA,1,,,,Santiago,Chile,away
+1946,Group,,Round 1,1946-01-12,Argentina,ARG,2,,Paraguay,PAR,0,,,,Buenos Aires,Argentina,home
+1946,Group,,Round 1,1946-01-16,Bolivia,BOL,0,,Brazil,BRA,3,,,,Buenos Aires,Argentina,away
+1946,Group,,Round 1,1946-01-16,Chile,CHI,0,,Uruguay,URU,1,,,,Buenos Aires,Argentina,away
+1946,Group,,Round 1,1946-01-19,Argentina,ARG,7,,Bolivia,BOL,1,,,,Buenos Aires,Argentina,home
+1946,Group,,Round 1,1946-01-19,Chile,CHI,2,,Paraguay,PAR,1,,,,Buenos Aires,Argentina,home
+1946,Group,,Round 1,1946-01-23,Brazil,BRA,4,,Uruguay,URU,3,,,,Buenos Aires,Argentina,home
+1946,Group,,Round 1,1946-01-26,Argentina,ARG,3,,Chile,CHI,1,,,,Buenos Aires,Argentina,home
+1946,Group,,Round 1,1946-01-26,Bolivia,BOL,2,,Paraguay,PAR,4,,,,Buenos Aires,Argentina,away
+1946,Group,,Round 1,1946-01-29,Bolivia,BOL,0,,Uruguay,URU,5,,,,Avellaneda,Argentina,away
+1946,Group,,Round 1,1946-01-29,Brazil,BRA,1,,Paraguay,PAR,1,,,,Avellaneda,Argentina,draw
+1946,Group,,Round 1,1946-02-02,Argentina,ARG,3,,Uruguay,URU,1,,,,Buenos Aires,Argentina,home
+1946,Group,,Round 1,1946-02-03,Brazil,BRA,5,,Chile,CHI,1,,,,Buenos Aires,Argentina,home
+1946,Group,,Round 1,1946-02-08,Bolivia,BOL,1,,Chile,CHI,4,,,,Buenos Aires,Argentina,away
+1946,Group,,Round 1,1946-02-08,Paraguay,PAR,2,,Uruguay,URU,1,,,,Buenos Aires,Argentina,home
+1946,Group,,Round 1,1946-02-10,Argentina,ARG,2,,Brazil,BRA,0,,,,Buenos Aires,Argentina,home
+1947,Group,,Round 1,1947-11-30,Ecuador,ECU,2,,Bolivia,BOL,2,,,,Guayaquil,Ecuador,draw
+1947,Group,,Round 1,1947-12-02,Argentina,ARG,6,,Paraguay,PAR,0,,,,Guayaquil,Ecuador,home
+1947,Group,,Round 1,1947-12-02,Colombia,COL,0,,Uruguay,URU,2,,,,Guayaquil,Ecuador,away
+1947,Group,,Round 1,1947-12-04,Argentina,ARG,7,,Bolivia,BOL,0,,,,Guayaquil,Ecuador,home
+1947,Group,,Round 1,1947-12-04,Ecuador,ECU,0,,Colombia,COL,0,,,,Guayaquil,Ecuador,draw
+1947,Group,,Round 1,1947-12-06,Chile,CHI,0,,Uruguay,URU,6,,,,Guayaquil,Ecuador,away
+1947,Group,,Round 1,1947-12-06,Paraguay,PAR,2,,Peru,PER,2,,,,Guayaquil,Ecuador,draw
+1947,Group,,Round 1,1947-12-09,Bolivia,BOL,0,,Uruguay,URU,3,,,,Guayaquil,Ecuador,away
+1947,Group,,Round 1,1947-12-09,Chile,CHI,2,,Peru,PER,1,,,,Guayaquil,Ecuador,home
+1947,Group,,Round 1,1947-12-11,Argentina,ARG,3,,Peru,PER,2,,,,Guayaquil,Ecuador,home
+1947,Group,,Round 1,1947-12-11,Ecuador,ECU,0,,Chile,CHI,3,,,,Guayaquil,Ecuador,away
+1947,Group,,Round 1,1947-12-13,Bolivia,BOL,0,,Colombia,COL,0,,,,Guayaquil,Ecuador,draw
+1947,Group,,Round 1,1947-12-13,Paraguay,PAR,4,,Uruguay,URU,2,,,,Guayaquil,Ecuador,home
+1947,Group,,Round 1,1947-12-16,Argentina,ARG,1,,Chile,CHI,1,,,,Guayaquil,Ecuador,draw
+1947,Group,,Round 1,1947-12-16,Ecuador,ECU,1,,Uruguay,URU,6,,,,Guayaquil,Ecuador,away
+1947,Group,,Round 1,1947-12-18,Argentina,ARG,6,,Colombia,COL,0,,,,Guayaquil,Ecuador,home
+1947,Group,,Round 1,1947-12-18,Bolivia,BOL,1,,Paraguay,PAR,3,,,,Guayaquil,Ecuador,away
+1947,Group,,Round 1,1947-12-20,Colombia,COL,0,,Paraguay,PAR,2,,,,Guayaquil,Ecuador,away
+1947,Group,,Round 1,1947-12-20,Ecuador,ECU,0,,Peru,PER,0,,,,Guayaquil,Ecuador,draw
+1947,Group,,Round 1,1947-12-23,Chile,CHI,0,,Paraguay,PAR,1,,,,Guayaquil,Ecuador,away
+1947,Group,,Round 1,1947-12-23,Colombia,COL,1,,Peru,PER,5,,,,Guayaquil,Ecuador,away
+1947,Group,,Round 1,1947-12-25,Ecuador,ECU,0,,Argentina,ARG,2,,,,Guayaquil,Ecuador,away
+1947,Group,,Round 1,1947-12-25,Peru,PER,0,,Uruguay,URU,1,,,,Guayaquil,Ecuador,away
+1947,Group,,Round 1,1947-12-27,Bolivia,BOL,0,,Peru,PER,2,,,,Guayaquil,Ecuador,away
+1947,Group,,Round 1,1947-12-28,Argentina,ARG,3,,Uruguay,URU,1,,,,Guayaquil,Ecuador,home
+1947,Group,,Round 1,1947-12-29,Chile,CHI,4,,Colombia,COL,1,,,,Guayaquil,Ecuador,home
+1947,Group,,Round 1,1947-12-29,Ecuador,ECU,0,,Paraguay,PAR,4,,,,Guayaquil,Ecuador,away
+1947,Group,,Round 1,1947-12-31,Bolivia,BOL,3,,Chile,CHI,4,,,,Guayaquil,Ecuador,away
+1949,Group,,Round 1,1949-04-03,Brazil,BRA,9,,Ecuador,ECU,1,,,,Rio de Janeiro,Brazil,home
+1949,Group,,Round 1,1949-04-06,Bolivia,BOL,3,,Chile,CHI,2,,,,São Paulo,Brazil,home
+1949,Group,,Round 1,1949-04-06,Colombia,COL,0,,Paraguay,PAR,3,,,,São Paulo,Brazil,away
+1949,Group,,Round 1,1949-04-10,Brazil,BRA,10,,Bolivia,BOL,1,,,,São Paulo,Brazil,home
+1949,Group,,Round 1,1949-04-10,Colombia,COL,0,,Peru,PER,4,,,,Rio de Janeiro,Brazil,away
+1949,Group,,Round 1,1949-04-10,Ecuador,ECU,0,,Paraguay,PAR,1,,,,Rio de Janeiro,Brazil,away
+1949,Group,,Round 1,1949-04-13,Brazil,BRA,2,,Chile,CHI,1,,,,São Paulo,Brazil,home
+1949,Group,,Round 1,1949-04-13,Ecuador,ECU,2,,Uruguay,URU,3,,,,Rio de Janeiro,Brazil,away
+1949,Group,,Round 1,1949-04-13,Paraguay,PAR,3,,Peru,PER,1,,,,Rio de Janeiro,Brazil,home
+1949,Group,,Round 1,1949-04-17,Bolivia,BOL,3,,Uruguay,URU,2,,,,Rio de Janeiro,Brazil,home
+1949,Group,,Round 1,1949-04-17,Brazil,BRA,5,,Colombia,COL,0,,,,São Paulo,Brazil,home
+1949,Group,,Round 1,1949-04-17,Chile,CHI,1,,Ecuador,ECU,0,,,,São Paulo,Brazil,home
+1949,Group,,Round 1,1949-04-20,Chile,CHI,1,,Colombia,COL,1,,,,Rio de Janeiro,Brazil,draw
+1949,Group,,Round 1,1949-04-20,Ecuador,ECU,0,,Peru,PER,4,,,,Rio de Janeiro,Brazil,away
+1949,Group,,Round 1,1949-04-20,Paraguay,PAR,1,,Uruguay,URU,2,,,,São Paulo,Brazil,away
+1949,Group,,Round 1,1949-04-24,Brazil,BRA,7,,Peru,PER,1,,,,Rio de Janeiro,Brazil,home
+1949,Group,,Round 1,1949-04-25,Bolivia,BOL,2,,Ecuador,ECU,0,,,,São Paulo,Brazil,home
+1949,Group,,Round 1,1949-04-25,Uruguay,URU,2,,Colombia,COL,2,,,,São Paulo,Brazil,draw
+1949,Group,,Round 1,1949-04-27,Bolivia,BOL,0,,Peru,PER,3,,,,Santos,Brazil,away
+1949,Group,,Round 1,1949-04-27,Chile,CHI,2,,Paraguay,PAR,4,,,,São Paulo,Brazil,away
+1949,Group,,Round 1,1949-04-30,Bolivia,BOL,0,,Paraguay,PAR,7,,,,Rio de Janeiro,Brazil,away
+1949,Group,,Round 1,1949-04-30,Brazil,BRA,5,,Uruguay,URU,1,,,,Rio de Janeiro,Brazil,home
+1949,Group,,Round 1,1949-04-30,Chile,CHI,0,,Peru,PER,3,,,,São Paulo,Brazil,away
+1949,Group,,Round 1,1949-05-03,Colombia,COL,1,,Ecuador,ECU,4,,,,Rio de Janeiro,Brazil,away
+1949,Group,,Round 1,1949-05-04,Peru,PER,4,,Uruguay,URU,3,,,,Rio de Janeiro,Brazil,home
+1949,Group,,Round 1,1949-05-06,Bolivia,BOL,4,,Colombia,COL,0,,,,Rio de Janeiro,Brazil,home
+1949,Group,,Round 1,1949-05-08,Brazil,BRA,1,,Paraguay,PAR,2,,,,Rio de Janeiro,Brazil,away
+1949,Group,,Round 1,1949-05-08,Chile,CHI,3,,Uruguay,URU,1,,,,Belo Horizonte,Brazil,home
+1949,Group,,Round 1,1949-05-11,Brazil,BRA,7,,Paraguay,PAR,0,,,,Rio de Janeiro,Brazil,home
+1953,Group,,Round 1,1953-02-22,Peru,PER,0,,Bolivia,BOL,1,,,,Lima,Peru,away
+1953,Group,,Round 1,1953-02-25,Bolivia,BOL,0,,Uruguay,URU,2,,,,Lima,Peru,away
+1953,Group,,Round 1,1953-02-25,Chile,CHI,0,,Paraguay,PAR,3,,,,Lima,Peru,away
+1953,Group,,Round 1,1953-02-28,Peru,PER,1,,Ecuador,ECU,0,,,,Lima,Peru,home
+1953,Group,,Round 1,1953-03-01,Bolivia,BOL,1,,Brazil,BRA,8,,,,Lima,Peru,away
+1953,Group,,Round 1,1953-03-01,Chile,CHI,3,,Uruguay,URU,2,,,,Lima,Peru,home
+1953,Group,,Round 1,1953-03-04,Ecuador,ECU,0,,Paraguay,PAR,0,,,,Lima,Peru,draw
+1953,Group,,Round 1,1953-03-04,Peru,PER,0,,Chile,CHI,0,,,,Lima,Peru,draw
+1953,Group,,Round 1,1953-03-08,Bolivia,BOL,1,,Ecuador,ECU,1,,,,Lima,Peru,draw
+1953,Group,,Round 1,1953-03-08,Peru,PER,2,,Paraguay,PAR,2,,,,Lima,Peru,draw
+1953,Group,,Round 1,1953-03-12,Brazil,BRA,2,,Ecuador,ECU,0,,,,Lima,Peru,home
+1953,Group,,Round 1,1953-03-12,Paraguay,PAR,2,,Uruguay,URU,2,,,,Lima,Peru,draw
+1953,Group,,Round 1,1953-03-15,Brazil,BRA,1,,Uruguay,URU,0,,,,Lima,Peru,home
+1953,Group,,Round 1,1953-03-16,Bolivia,BOL,1,,Paraguay,PAR,2,,,,Lima,Peru,away
+1953,Group,,Round 1,1953-03-19,Chile,CHI,3,,Ecuador,ECU,0,,,,Lima,Peru,home
+1953,Group,,Round 1,1953-03-19,Peru,PER,1,,Brazil,BRA,0,,,,Lima,Peru,home
+1953,Group,,Round 1,1953-03-23,Brazil,BRA,3,,Chile,CHI,2,,,,Lima,Peru,home
+1953,Group,,Round 1,1953-03-23,Ecuador,ECU,0,,Uruguay,URU,6,,,,Lima,Peru,away
+1953,Group,,Round 1,1953-03-27,Brazil,BRA,1,,Paraguay,PAR,2,,,,Lima,Peru,away
+1953,Group,,Round 1,1953-03-28,Bolivia,BOL,2,,Chile,CHI,2,,,,Lima,Peru,draw
+1953,Group,,Round 1,1953-03-28,Peru,PER,0,,Uruguay,URU,3,,,,Lima,Peru,away
+1953,Group,,Round 1,1953-04-01,Brazil,BRA,2,,Paraguay,PAR,3,,,,Lima,Peru,away
+1955,Group,,Round 1,1955-02-27,Chile,CHI,7,,Ecuador,ECU,1,,,,Santiago,Chile,home
+1955,Group,,Round 1,1955-03-02,Argentina,ARG,5,,Paraguay,PAR,3,,,,Santiago,Chile,home
+1955,Group,,Round 1,1955-03-06,Chile,CHI,5,,Peru,PER,4,,,,Santiago,Chile,home
+1955,Group,,Round 1,1955-03-09,Argentina,ARG,4,,Ecuador,ECU,0,,,,Santiago,Chile,home
+1955,Group,,Round 1,1955-03-09,Paraguay,PAR,1,,Uruguay,URU,3,,,,Santiago,Chile,away
+1955,Group,,Round 1,1955-03-13,Chile,CHI,2,,Uruguay,URU,2,,,,Santiago,Chile,draw
+1955,Group,,Round 1,1955-03-13,Ecuador,ECU,2,,Peru,PER,4,,,,Santiago,Chile,away
+1955,Group,,Round 1,1955-03-16,Argentina,ARG,2,,Peru,PER,2,,,,Santiago,Chile,draw
+1955,Group,,Round 1,1955-03-16,Ecuador,ECU,0,,Paraguay,PAR,2,,,,Santiago,Chile,away
+1955,Group,,Round 1,1955-03-20,Chile,CHI,5,,Paraguay,PAR,0,,,,Santiago,Chile,home
+1955,Group,,Round 1,1955-03-23,Ecuador,ECU,1,,Uruguay,URU,5,,,,Santiago,Chile,away
+1955,Group,,Round 1,1955-03-23,Paraguay,PAR,1,,Peru,PER,1,,,,Santiago,Chile,draw
+1955,Group,,Round 1,1955-03-27,Argentina,ARG,6,,Uruguay,URU,1,,,,Santiago,Chile,home
+1955,Group,,Round 1,1955-03-30,Chile,CHI,0,,Argentina,ARG,1,,,,Santiago,Chile,away
+1955,Group,,Round 1,1955-03-30,Peru,PER,2,,Uruguay,URU,1,,,,Santiago,Chile,home
+1956,Group,,Round 1,1956-01-21,Uruguay,URU,4,,Paraguay,PAR,2,,,,Montevideo,Uruguay,home
+1956,Group,,Round 1,1956-01-22,Argentina,ARG,2,,Peru,PER,1,,,,Montevideo,Uruguay,home
+1956,Group,,Round 1,1956-01-24,Brazil,BRA,1,,Chile,CHI,4,,,,Montevideo,Uruguay,away
+1956,Group,,Round 1,1956-01-28,Uruguay,URU,2,,Peru,PER,0,,,,Montevideo,Uruguay,home
+1956,Group,,Round 1,1956-01-29,Argentina,ARG,2,,Chile,CHI,0,,,,Montevideo,Uruguay,home
+1956,Group,,Round 1,1956-01-29,Brazil,BRA,0,,Paraguay,PAR,0,,,,Montevideo,Uruguay,draw
+1956,Group,,Round 1,1956-02-01,Argentina,ARG,1,,Paraguay,PAR,0,,,,Montevideo,Uruguay,home
+1956,Group,,Round 1,1956-02-01,Brazil,BRA,2,,Peru,PER,1,,,,Montevideo,Uruguay,home
+1956,Group,,Round 1,1956-02-05,Argentina,ARG,0,,Brazil,BRA,1,,,,Montevideo,Uruguay,away
+1956,Group,,Round 1,1956-02-05,Paraguay,PAR,1,,Peru,PER,1,,,,Montevideo,Uruguay,draw
+1956,Group,,Round 1,1956-02-06,Uruguay,URU,2,,Chile,CHI,1,,,,Montevideo,Uruguay,home
+1956,Group,,Round 1,1956-02-09,Chile,CHI,4,,Peru,PER,3,,,,Montevideo,Uruguay,home
+1956,Group,,Round 1,1956-02-10,Uruguay,URU,0,,Brazil,BRA,0,,,,Montevideo,Uruguay,draw
+1956,Group,,Round 1,1956-02-12,Chile,CHI,2,,Paraguay,PAR,0,,,,Montevideo,Uruguay,home
+1956,Group,,Round 1,1956-02-15,Uruguay,URU,1,,Argentina,ARG,0,,,,Montevideo,Uruguay,home
+1957,Group,,Round 1,1957-03-07,Ecuador,ECU,2,,Uruguay,URU,5,,,,Lima,Peru,away
+1957,Group,,Round 1,1957-03-10,Peru,PER,2,,Ecuador,ECU,1,,,,Lima,Peru,home
+1957,Group,,Round 1,1957-03-13,Argentina,ARG,8,,Colombia,COL,2,,,,Lima,Peru,home
+1957,Group,,Round 1,1957-03-13,Brazil,BRA,4,,Chile,CHI,2,,,,Lima,Peru,home
+1957,Group,,Round 1,1957-03-16,Peru,PER,1,,Chile,CHI,0,,,,Lima,Peru,home
+1957,Group,,Round 1,1957-03-17,Argentina,ARG,3,,Ecuador,ECU,0,,,,Lima,Peru,home
+1957,Group,,Round 1,1957-03-17,Colombia,COL,1,,Uruguay,URU,0,,,,Lima,Peru,home
+1957,Group,,Round 1,1957-03-20,Argentina,ARG,4,,Uruguay,URU,0,,,,Lima,Peru,home
+1957,Group,,Round 1,1957-03-21,Brazil,BRA,7,,Ecuador,ECU,1,,,,Lima,Peru,home
+1957,Group,,Round 1,1957-03-21,Chile,CHI,3,,Colombia,COL,2,,,,Lima,Peru,home
+1957,Group,,Round 1,1957-03-23,Peru,PER,3,,Uruguay,URU,5,,,,Lima,Peru,away
+1957,Group,,Round 1,1957-03-24,Brazil,BRA,9,,Colombia,COL,0,,,,Lima,Peru,home
+1957,Group,,Round 1,1957-03-24,Chile,CHI,2,,Ecuador,ECU,2,,,,Lima,Peru,draw
+1957,Group,,Round 1,1957-03-27,Peru,PER,4,,Colombia,COL,1,,,,Lima,Peru,home
+1957,Group,,Round 1,1957-03-28,Argentina,ARG,6,,Chile,CHI,2,,,,Lima,Peru,home
+1957,Group,,Round 1,1957-03-28,Brazil,BRA,2,,Uruguay,URU,3,,,,Lima,Peru,away
+1957,Group,,Round 1,1957-03-31,Peru,PER,0,,Brazil,BRA,1,,,,Lima,Peru,away
+1957,Group,,Round 1,1957-04-01,Chile,CHI,0,,Uruguay,URU,2,,,,Lima,Peru,away
+1957,Group,,Round 1,1957-04-01,Colombia,COL,4,,Ecuador,ECU,1,,,,Lima,Peru,home
+1957,Group,,Round 1,1957-04-03,Argentina,ARG,3,,Brazil,BRA,0,,,,Lima,Peru,home
+1957,Group,,Round 1,1957-04-06,Peru,PER,2,,Argentina,ARG,1,,,,Lima,Peru,home
+1959,Group,,Round 1,1959-03-07,Argentina,ARG,6,,Chile,CHI,1,,,,Buenos Aires,Argentina,home
+1959,Group,,Round 1,1959-03-08,Bolivia,BOL,0,,Uruguay,URU,7,,,,Buenos Aires,Argentina,away
+1959,Group,,Round 1,1959-03-10,Brazil,BRA,2,,Peru,PER,2,,,,Buenos Aires,Argentina,draw
+1959,Group,,Round 1,1959-03-11,Argentina,ARG,2,,Bolivia,BOL,0,,,,Buenos Aires,Argentina,home
+1959,Group,,Round 1,1959-03-11,Chile,CHI,1,,Paraguay,PAR,2,,,,Buenos Aires,Argentina,away
+1959,Group,,Round 1,1959-03-14,Peru,PER,5,,Uruguay,URU,3,,,,Buenos Aires,Argentina,home
+1959,Group,,Round 1,1959-03-15,Bolivia,BOL,0,,Paraguay,PAR,5,,,,Buenos Aires,Argentina,away
+1959,Group,,Round 1,1959-03-15,Brazil,BRA,3,,Chile,CHI,0,,,,Buenos Aires,Argentina,home
+1959,Group,,Round 1,1959-03-18,Argentina,ARG,3,,Peru,PER,1,,,,Buenos Aires,Argentina,home
+1959,Group,,Round 1,1959-03-18,Paraguay,PAR,1,,Uruguay,URU,3,,,,Buenos Aires,Argentina,away
+1959,Group,,Round 1,1959-03-21,Bolivia,BOL,2,,Brazil,BRA,4,,,,Buenos Aires,Argentina,away
+1959,Group,,Round 1,1959-03-21,Chile,CHI,1,,Peru,PER,1,,,,Buenos Aires,Argentina,draw
+1959,Group,,Round 1,1959-03-22,Argentina,ARG,3,,Paraguay,PAR,1,,,,Buenos Aires,Argentina,home
+1959,Group,,Round 1,1959-03-26,Bolivia,BOL,2,,Chile,CHI,5,,,,Buenos Aires,Argentina,away
+1959,Group,,Round 1,1959-03-26,Brazil,BRA,3,,Uruguay,URU,1,,,,Buenos Aires,Argentina,home
+1959,Group,,Round 1,1959-03-29,Bolivia,BOL,0,,Peru,PER,0,,,,Buenos Aires,Argentina,draw
+1959,Group,,Round 1,1959-03-29,Brazil,BRA,4,,Paraguay,PAR,1,,,,Buenos Aires,Argentina,home
+1959,Group,,Round 1,1959-03-30,Argentina,ARG,4,,Uruguay,URU,1,,,,Buenos Aires,Argentina,home
+1959,Group,,Round 1,1959-04-02,Chile,CHI,1,,Uruguay,URU,0,,,,Buenos Aires,Argentina,home
+1959,Group,,Round 1,1959-04-02,Paraguay,PAR,2,,Peru,PER,1,,,,Buenos Aires,Argentina,home
+1959,Group,,Round 1,1959-04-04,Argentina,ARG,1,,Brazil,BRA,1,,,,Buenos Aires,Argentina,draw
+1959,Group,,Round 1,1959-12-05,Brazil,BRA,3,,Paraguay,PAR,2,,,,Guayaquil,Ecuador,home
+1959,Group,,Round 1,1959-12-06,Ecuador,ECU,0,,Uruguay,URU,4,,,,Guayaquil,Ecuador,away
+1959,Group,,Round 1,1959-12-09,Argentina,ARG,4,,Paraguay,PAR,2,,,,Guayaquil,Ecuador,home
+1959,Group,,Round 1,1959-12-12,Brazil,BRA,0,,Uruguay,URU,3,,,,Guayaquil,Ecuador,away
+1959,Group,,Round 1,1959-12-12,Ecuador,ECU,1,,Argentina,ARG,1,,,,Guayaquil,Ecuador,draw
+1959,Group,,Round 1,1959-12-16,Argentina,ARG,0,,Uruguay,URU,5,,,,Guayaquil,Ecuador,away
+1959,Group,,Round 1,1959-12-19,Ecuador,ECU,1,,Brazil,BRA,3,,,,Guayaquil,Ecuador,away
+1959,Group,,Round 1,1959-12-22,Argentina,ARG,4,,Brazil,BRA,1,,,,Guayaquil,Ecuador,home
+1959,Group,,Round 1,1959-12-22,Paraguay,PAR,1,,Uruguay,URU,1,,,,Guayaquil,Ecuador,draw
+1959,Group,,Round 1,1959-12-25,Ecuador,ECU,3,,Paraguay,PAR,1,,,,Guayaquil,Ecuador,home
+1963,Group,,Round 1,1963-03-10,Argentina,ARG,4,,Colombia,COL,2,,,,Cochabamba,Bolivia,home
+1963,Group,,Round 1,1963-03-10,Bolivia,BOL,4,,Ecuador,ECU,4,,,,La Paz,Bolivia,draw
+1963,Group,,Round 1,1963-03-10,Brazil,BRA,1,,Peru,PER,0,,,,Cochabamba,Bolivia,home
+1963,Group,,Round 1,1963-03-13,Argentina,ARG,1,,Peru,PER,2,,,,Cochabamba,Bolivia,away
+1963,Group,,Round 1,1963-03-14,Brazil,BRA,5,,Colombia,COL,1,,,,La Paz,Bolivia,home
+1963,Group,,Round 1,1963-03-14,Ecuador,ECU,1,,Paraguay,PAR,3,,,,La Paz,Bolivia,away
+1963,Group,,Round 1,1963-03-17,Bolivia,BOL,2,,Colombia,COL,1,,,,Cochabamba,Bolivia,home
+1963,Group,,Round 1,1963-03-17,Brazil,BRA,0,,Paraguay,PAR,2,,,,La Paz,Bolivia,away
+1963,Group,,Round 1,1963-03-17,Ecuador,ECU,1,,Peru,PER,2,,,,La Paz,Bolivia,away
+1963,Group,,Round 1,1963-03-20,Argentina,ARG,4,,Ecuador,ECU,2,,,,Cochabamba,Bolivia,home
+1963,Group,,Round 1,1963-03-20,Colombia,COL,2,,Paraguay,PAR,3,,,,Cochabamba,Bolivia,away
+1963,Group,,Round 1,1963-03-21,Bolivia,BOL,3,,Peru,PER,2,,,,La Paz,Bolivia,home
+1963,Group,,Round 1,1963-03-24,Argentina,ARG,3,,Brazil,BRA,0,,,,La Paz,Bolivia,home
+1963,Group,,Round 1,1963-03-24,Bolivia,BOL,2,,Paraguay,PAR,0,,,,Cochabamba,Bolivia,home
+1963,Group,,Round 1,1963-03-24,Colombia,COL,1,,Peru,PER,1,,,,La Paz,Bolivia,draw
+1963,Group,,Round 1,1963-03-27,Brazil,BRA,2,,Ecuador,ECU,2,,,,Cochabamba,Bolivia,draw
+1963,Group,,Round 1,1963-03-27,Paraguay,PAR,4,,Peru,PER,1,,,,Cochabamba,Bolivia,home
+1963,Group,,Round 1,1963-03-28,Bolivia,BOL,3,,Argentina,ARG,2,,,,La Paz,Bolivia,home
+1963,Group,,Round 1,1963-03-31,Argentina,ARG,1,,Paraguay,PAR,1,,,,La Paz,Bolivia,draw
+1963,Group,,Round 1,1963-03-31,Bolivia,BOL,5,,Brazil,BRA,4,,,,Cochabamba,Bolivia,home
+1963,Group,,Round 1,1963-03-31,Colombia,COL,3,,Ecuador,ECU,4,,,,La Paz,Bolivia,away
+1967,Group,,Round 1,1967-01-17,Uruguay,URU,4,,Bolivia,BOL,0,,,,Montevideo,Uruguay,home
+1967,Group,,Round 1,1967-01-18,Argentina,ARG,4,,Paraguay,PAR,1,,,,Montevideo,Uruguay,home
+1967,Group,,Round 1,1967-01-18,Chile,CHI,2,,Venezuela,VEN,0,,,,Montevideo,Uruguay,home
+1967,Group,,Round 1,1967-01-21,Uruguay,URU,4,,Venezuela,VEN,0,,,,Montevideo,Uruguay,home
+1967,Group,,Round 1,1967-01-22,Bolivia,BOL,0,,Argentina,ARG,1,,,,Montevideo,Uruguay,away
+1967,Group,,Round 1,1967-01-22,Chile,CHI,4,,Paraguay,PAR,2,,,,Montevideo,Uruguay,home
+1967,Group,,Round 1,1967-01-25,Argentina,ARG,5,,Venezuela,VEN,1,,,,Montevideo,Uruguay,home
+1967,Group,,Round 1,1967-01-25,Paraguay,PAR,1,,Bolivia,BOL,0,,,,Montevideo,Uruguay,home
+1967,Group,,Round 1,1967-01-26,Uruguay,URU,2,,Chile,CHI,2,,,,Montevideo,Uruguay,draw
+1967,Group,,Round 1,1967-01-28,Argentina,ARG,2,,Chile,CHI,0,,,,Montevideo,Uruguay,home
+1967,Group,,Round 1,1967-01-28,Bolivia,BOL,0,,Venezuela,VEN,3,,,,Montevideo,Uruguay,away
+1967,Group,,Round 1,1967-01-29,Uruguay,URU,2,,Paraguay,PAR,0,,,,Montevideo,Uruguay,home
+1967,Group,,Round 1,1967-02-01,Bolivia,BOL,0,,Chile,CHI,0,,,,Montevideo,Uruguay,draw
+1967,Group,,Round 1,1967-02-01,Venezuela,VEN,3,,Paraguay,PAR,5,,,,Montevideo,Uruguay,away
+1967,Group,,Round 1,1967-02-02,Uruguay,URU,1,,Argentina,ARG,0,,,,Montevideo,Uruguay,home
+1975,Group,A,Round 1,1975-07-31,Venezuela,VEN,0,,Brazil,BRA,4,,,,Caracas,Venezuela,away
+1975,Group,A,Round 1,1975-08-03,Venezuela,VEN,1,,Argentina,ARG,5,,,,Caracas,Venezuela,away
+1975,Group,A,Round 1,1975-08-06,Brazil,BRA,2,,Argentina,ARG,1,,,,Belo Horizonte,Brazil,home
+1975,Group,A,Round 1,1975-08-10,Argentina,ARG,11,,Venezuela,VEN,0,,,,Rosario,Argentina,home
+1975,Group,A,Round 1,1975-08-13,Brazil,BRA,6,,Venezuela,VEN,0,,,,Belo Horizonte,Brazil,home
+1975,Group,A,Round 1,1975-08-16,Argentina,ARG,0,,Brazil,BRA,1,,,,Rosario,Argentina,away
+1975,Group,B,Round 1,1975-07-17,Chile,CHI,1,,Peru,PER,1,,,,Santiago,Chile,draw
+1975,Group,B,Round 1,1975-07-20,Bolivia,BOL,2,,Chile,CHI,1,,,,Oruro,Bolivia,home
+1975,Group,B,Round 1,1975-07-27,Bolivia,BOL,0,,Peru,PER,1,,,,Oruro,Bolivia,away
+1975,Group,B,Round 1,1975-08-07,Peru,PER,3,,Bolivia,BOL,1,,,,Lima,Peru,home
+1975,Group,B,Round 1,1975-08-13,Chile,CHI,4,,Bolivia,BOL,0,,,,Santiago,Chile,home
+1975,Group,B,Round 1,1975-08-20,Peru,PER,3,,Chile,CHI,1,,,,Lima,Peru,home
+1975,Group,C,Round 1,1975-07-20,Colombia,COL,1,,Paraguay,PAR,0,,,,Bogotá,Colombia,home
+1975,Group,C,Round 1,1975-07-24,Ecuador,ECU,2,,Paraguay,PAR,2,,,,Guayaquil,Ecuador,draw
+1975,Group,C,Round 1,1975-07-27,Ecuador,ECU,1,,Colombia,COL,3,,,,Quito,Ecuador,away
+1975,Group,C,Round 1,1975-07-30,Paraguay,PAR,0,,Colombia,COL,1,,,,Asunción,Paraguay,away
+1975,Group,C,Round 1,1975-08-07,Colombia,COL,2,,Ecuador,ECU,0,,,,Bogotá,Colombia,home
+1975,Group,C,Round 1,1975-08-10,Paraguay,PAR,3,,Ecuador,ECU,1,,,,Asunción,Paraguay,home
+1975,Knock Out,,Semi Final,1975-09-21,Colombia,COL,3,,Uruguay,URU,0,,,,Bogotá,Colombia,home
+1975,Knock Out,,Semi Final,1975-09-30,Brazil,BRA,1,,Peru,PER,3,,,,Belo Horizonte,Brazil,away
+1975,Knock Out,,Semi Final,1975-10-01,Uruguay,URU,1,,Colombia,COL,0,,,,Montevideo,Uruguay,home
+1975,Knock Out,,Semi Final,1975-10-04,Peru,PER,0,,Brazil,BRA,2,,,,Lima,Peru,away
+1975,Knock Out,,Final,1975-10-16,Colombia,COL,1,,Peru,PER,0,,,,Bogotá,Colombia,home
+1975,Knock Out,,Final,1975-10-22,Peru,PER,2,,Colombia,COL,0,,,,Lima,Peru,home
+1975,Knock Out,,Final,1975-10-28,Colombia,COL,0,,Peru,PER,1,,,,Caracas,Venezuela,away
+1979,Group,A,Round 1,1979-08-01,Venezuela,VEN,0,,Colombia,COL,0,,,,San Cristóbal,Venezuela,draw
+1979,Group,A,Round 1,1979-08-08,Venezuela,VEN,1,,Chile,CHI,1,,,,San Cristóbal,Venezuela,draw
+1979,Group,A,Round 1,1979-08-15,Colombia,COL,1,,Chile,CHI,0,,,,Bogotá,Colombia,home
+1979,Group,A,Round 1,1979-08-22,Colombia,COL,4,,Venezuela,VEN,0,,,,Bogotá,Colombia,home
+1979,Group,A,Round 1,1979-08-29,Chile,CHI,7,,Venezuela,VEN,0,,,,Santiago,Chile,home
+1979,Group,A,Round 1,1979-09-05,Chile,CHI,2,,Colombia,COL,0,,,,Santiago,Chile,home
+1979,Group,B,Round 1,1979-07-18,Bolivia,BOL,2,,Argentina,ARG,1,,,,La Paz,Bolivia,home
+1979,Group,B,Round 1,1979-07-26,Bolivia,BOL,2,,Brazil,BRA,1,,,,La Paz,Bolivia,home
+1979,Group,B,Round 1,1979-08-02,Brazil,BRA,2,,Argentina,ARG,1,,,,Rio de Janeiro,Brazil,home
+1979,Group,B,Round 1,1979-08-08,Argentina,ARG,3,,Bolivia,BOL,0,,,,Buenos Aires,Argentina,home
+1979,Group,B,Round 1,1979-08-16,Brazil,BRA,2,,Bolivia,BOL,0,,,,São Paulo,Brazil,home
+1979,Group,B,Round 1,1979-08-23,Argentina,ARG,2,,Brazil,BRA,2,,,,Buenos Aires,Argentina,draw
+1979,Group,C,Round 1,1979-08-29,Ecuador,ECU,1,,Paraguay,PAR,2,,,,Quito,Ecuador,away
+1979,Group,C,Round 1,1979-09-05,Ecuador,ECU,2,,Uruguay,URU,1,,,,Quito,Ecuador,home
+1979,Group,C,Round 1,1979-09-13,Paraguay,PAR,2,,Ecuador,ECU,0,,,,Asunción,Paraguay,home
+1979,Group,C,Round 1,1979-09-16,Uruguay,URU,2,,Ecuador,ECU,1,,,,Montevideo,Uruguay,home
+1979,Group,C,Round 1,1979-09-20,Paraguay,PAR,0,,Uruguay,URU,0,,,,Asunción,Paraguay,draw
+1979,Group,C,Round 1,1979-09-26,Uruguay,URU,2,,Paraguay,PAR,2,,,,Montevideo,Uruguay,draw
+1979,Knock Out,,Semi Final,1979-10-17,Peru,PER,1,,Chile,CHI,2,,,,Lima,Peru,away
+1979,Knock Out,,Semi Final,1979-10-24,Chile,CHI,0,,Peru,PER,0,,,,Santiago,Chile,draw
+1979,Knock Out,,Semi Final,1979-10-24,Paraguay,PAR,2,,Brazil,BRA,1,,,,Asunción,Paraguay,home
+1979,Knock Out,,Semi Final,1979-10-31,Brazil,BRA,2,,Paraguay,PAR,2,,,,Rio de Janeiro,Brazil,draw
+1979,Knock Out,,Final,1979-11-28,Paraguay,PAR,3,,Chile,CHI,0,,,,Asunción,Paraguay,home
+1979,Knock Out,,Final,1979-12-05,Chile,CHI,1,,Paraguay,PAR,0,,,,Santiago,Chile,home
+1979,Knock Out,,Final,1979-12-11,Chile,CHI,0,,Paraguay,PAR,0,,,,Buenos Aires,Argentina,draw
+1983,Group,A,Round 1,1983-09-01,Uruguay,URU,2,,Chile,CHI,1,,,,Montevideo,Uruguay,home
+1983,Group,A,Round 1,1983-09-04,Uruguay,URU,3,,Venezuela,VEN,0,,,,Montevideo,Uruguay,home
+1983,Group,A,Round 1,1983-09-08,Chile,CHI,5,,Venezuela,VEN,0,,,,Santiago,Chile,home
+1983,Group,A,Round 1,1983-09-11,Chile,CHI,2,,Uruguay,URU,0,,,,Santiago,Chile,home
+1983,Group,A,Round 1,1983-09-18,Venezuela,VEN,1,,Uruguay,URU,2,,,,Caracas,Venezuela,away
+1983,Group,A,Round 1,1983-09-21,Venezuela,VEN,0,,Chile,CHI,0,,,,Caracas,Venezuela,draw
+1983,Group,B,Round 1,1983-08-10,Ecuador,ECU,2,,Argentina,ARG,2,,,,Quito,Ecuador,draw
+1983,Group,B,Round 1,1983-08-17,Ecuador,ECU,0,,Brazil,BRA,1,,,,Quito,Ecuador,away
+1983,Group,B,Round 1,1983-08-24,Argentina,ARG,1,,Brazil,BRA,0,,,,Buenos Aires,Argentina,home
+1983,Group,B,Round 1,1983-09-01,Brazil,BRA,5,,Ecuador,ECU,0,,,,Goiânia,Brazil,home
+1983,Group,B,Round 1,1983-09-07,Argentina,ARG,2,,Ecuador,ECU,2,,,,Buenos Aires,Argentina,draw
+1983,Group,B,Round 1,1983-09-14,Brazil,BRA,0,,Argentina,ARG,0,,,,Rio de Janeiro,Brazil,draw
+1983,Group,C,Round 1,1983-08-14,Bolivia,BOL,0,,Colombia,COL,1,,,,La Paz,Bolivia,away
+1983,Group,C,Round 1,1983-08-17,Peru,PER,1,,Colombia,COL,0,,,,Lima,Peru,home
+1983,Group,C,Round 1,1983-08-21,Bolivia,BOL,1,,Peru,PER,1,,,,La Paz,Bolivia,draw
+1983,Group,C,Round 1,1983-08-28,Colombia,COL,2,,Peru,PER,2,,,,Bogotá,Colombia,draw
+1983,Group,C,Round 1,1983-08-31,Colombia,COL,2,,Bolivia,BOL,2,,,,Bogotá,Colombia,draw
+1983,Group,C,Round 1,1983-09-04,Peru,PER,2,,Bolivia,BOL,1,,,,Lima,Peru,home
+1983,Knock Out,,Semi Final,1983-10-13,Paraguay,PAR,1,,Brazil,BRA,1,,,,Asunción,Paraguay,draw
+1983,Knock Out,,Semi Final,1983-10-13,Peru,PER,0,,Uruguay,URU,1,,,,Lima,Peru,away
+1983,Knock Out,,Semi Final,1983-10-20,Brazil,BRA,0,,Paraguay,PAR,0,,,,Uberlândia,Brazil,draw
+1983,Knock Out,,Semi Final,1983-10-20,Uruguay,URU,1,,Peru,PER,1,,,,Montevideo,Uruguay,draw
+1983,Knock Out,,Final,1983-10-27,Uruguay,URU,2,,Brazil,BRA,0,,,,Montevideo,Uruguay,home
+1983,Knock Out,,Final,1983-11-04,Brazil,BRA,1,,Uruguay,URU,1,,,,Salvador,Brazil,draw
+1987,Group,A,Round 1,1987-06-27,Argentina,ARG,1,,Peru,PER,1,,,,Buenos Aires,Argentina,draw
+1987,Group,A,Round 1,1987-07-02,Argentina,ARG,3,,Ecuador,ECU,0,,,,Buenos Aires,Argentina,home
+1987,Group,A,Round 1,1987-07-04,Peru,PER,1,,Ecuador,ECU,1,,,,Buenos Aires,Argentina,draw
+1987,Group,B,Round 1,1987-06-28,Brazil,BRA,5,,Venezuela,VEN,0,,,,Córdoba,Argentina,home
+1987,Group,B,Round 1,1987-06-30,Venezuela,VEN,1,,Chile,CHI,3,,,,Córdoba,Argentina,away
+1987,Group,B,Round 1,1987-07-03,Chile,CHI,4,,Brazil,BRA,0,,,,Córdoba,Argentina,home
+1987,Group,C,Round 1,1987-06-28,Paraguay,PAR,0,,Bolivia,BOL,0,,,,Rosario,Argentina,draw
+1987,Group,C,Round 1,1987-07-01,Bolivia,BOL,0,,Colombia,COL,2,,,,Rosario,Argentina,away
+1987,Group,C,Round 1,1987-07-05,Colombia,COL,3,,Paraguay,PAR,0,,,,Rosario,Argentina,home
+1987,Knock Out,,Semi Final,1987-07-08,Chile,CHI,2,,Colombia,COL,1,,,,Córdoba,Argentina,home
+1987,Knock Out,,Semi Final,1987-07-09,Argentina,ARG,0,,Uruguay,URU,1,,,,Buenos Aires,Argentina,away
+1987,Knock Out,,Third Place,1987-07-11,Argentina,ARG,1,,Colombia,COL,2,,,,Buenos Aires,Argentina,away
+1987,Knock Out,,Final,1987-07-12,Chile,CHI,0,,Uruguay,URU,1,,,,Buenos Aires,Argentina,away
+1989,Group,A,Round 1,1989-07-01,Paraguay,PAR,5,,Peru,PER,2,,,,Salvador,Brazil,home
+1989,Group,A,Round 1,1989-07-01,Brazil,BRA,3,,Venezuela,VEN,1,,,,Salvador,Brazil,home
+1989,Group,A,Round 1,1989-07-03,Brazil,BRA,0,,Peru,PER,0,,,,Salvador,Brazil,draw
+1989,Group,A,Round 1,1989-07-03,Venezuela,VEN,2,,Colombia,COL,4,,,,Salvador,Brazil,away
+1989,Group,A,Round 1,1989-07-05,Peru,PER,1,,Venezuela,VEN,1,,,,Salvador,Brazil,draw
+1989,Group,A,Round 1,1989-07-05,Colombia,COL,0,,Paraguay,PAR,1,,,,Salvador,Brazil,away
+1989,Group,A,Round 1,1989-07-07,Brazil,BRA,0,,Colombia,COL,0,,,,Salvador,Brazil,draw
+1989,Group,A,Round 1,1989-07-07,Paraguay,PAR,3,,Venezuela,VEN,0,,,,Salvador,Brazil,home
+1989,Group,A,Round 1,1989-07-09,Brazil,BRA,2,,Paraguay,PAR,0,,,,Recife,Brazil,home
+1989,Group,A,Round 1,1989-07-09,Colombia,COL,1,,Peru,PER,1,,,,Recife,Brazil,draw
+1989,Group,B,Round 1,1989-07-02,Uruguay,URU,0,,Ecuador,ECU,1,,,,Goiânia,Brazil,away
+1989,Group,B,Round 1,1989-07-02,Argentina,ARG,1,,Chile,CHI,0,,,,Goiânia,Brazil,home
+1989,Group,B,Round 1,1989-07-04,Uruguay,URU,3,,Bolivia,BOL,0,,,,Goiânia,Brazil,home
+1989,Group,B,Round 1,1989-07-04,Argentina,ARG,0,,Ecuador,ECU,0,,,,Goiânia,Brazil,draw
+1989,Group,B,Round 1,1989-07-06,Ecuador,ECU,0,,Bolivia,BOL,0,,,,Goiânia,Brazil,draw
+1989,Group,B,Round 1,1989-07-06,Chile,CHI,0,,Uruguay,URU,3,,,,Goiânia,Brazil,away
+1989,Group,B,Round 1,1989-07-08,Uruguay,URU,0,,Argentina,ARG,1,,,,Goiânia,Brazil,away
+1989,Group,B,Round 1,1989-07-08,Bolivia,BOL,0,,Chile,CHI,5,,,,Goiânia,Brazil,away
+1989,Group,B,Round 1,1989-07-10,Chile,CHI,2,,Ecuador,ECU,1,,,,Goiânia,Brazil,home
+1989,Group,B,Round 1,1989-07-10,Argentina,ARG,0,,Bolivia,BOL,0,,,,Goiânia,Brazil,draw
+1989,Group,,Round 1,1989-07-12,Brazil,BRA,2,,Argentina,ARG,0,,,,Rio de Janeiro,Brazil,home
+1989,Group,,Round 1,1989-07-12,Paraguay,PAR,0,,Uruguay,URU,3,,,,Rio de Janeiro,Brazil,away
+1989,Group,,Round 1,1989-07-14,Argentina,ARG,0,,Uruguay,URU,2,,,,Rio de Janeiro,Brazil,away
+1989,Group,,Round 1,1989-07-14,Brazil,BRA,3,,Paraguay,PAR,0,,,,Rio de Janeiro,Brazil,home
+1989,Group,,Round 1,1989-07-16,Brazil,BRA,1,,Uruguay,URU,0,,,,Rio de Janeiro,Brazil,home
+1989,Group,,Round 1,1989-07-16,Paraguay,PAR,0,,Argentina,ARG,0,,,,Rio de Janeiro,Brazil,draw
+1991,Group,A,Round 1,1991-07-06,Paraguay,PAR,1,,Peru,PER,0,,,,Santiago,Chile,home
+1991,Group,A,Round 1,1991-07-06,Chile,CHI,2,,Venezuela,VEN,0,,,,Santiago,Chile,home
+1991,Group,A,Round 1,1991-07-08,Argentina,ARG,3,,Venezuela,VEN,0,,,,Santiago,Chile,home
+1991,Group,A,Round 1,1991-07-08,Chile,CHI,4,,Peru,PER,2,,,,Concepción,Chile,home
+1991,Group,A,Round 1,1991-07-10,Paraguay,PAR,5,,Venezuela,VEN,0,,,,Santiago,Chile,home
+1991,Group,A,Round 1,1991-07-10,Chile,CHI,0,,Argentina,ARG,1,,,,Santiago,Chile,away
+1991,Group,A,Round 1,1991-07-12,Argentina,ARG,4,,Paraguay,PAR,1,,,,Concepción,Chile,home
+1991,Group,A,Round 1,1991-07-12,Peru,PER,5,,Venezuela,VEN,1,,,,Santiago,Chile,home
+1991,Group,A,Round 1,1991-07-14,Argentina,ARG,3,,Peru,PER,2,,,,Santiago,Chile,home
+1991,Group,A,Round 1,1991-07-14,Chile,CHI,4,,Paraguay,PAR,0,,,,Santiago,Chile,home
+1991,Group,B,Round 1,1991-07-07,Colombia,COL,1,,Ecuador,ECU,0,,,,Valparaíso,Chile,home
+1991,Group,B,Round 1,1991-07-07,Bolivia,BOL,1,,Uruguay,URU,1,,,,Valparaíso,Chile,draw
+1991,Group,B,Round 1,1991-07-09,Ecuador,ECU,1,,Uruguay,URU,1,,,,Viña del Mar,Chile,draw
+1991,Group,B,Round 1,1991-07-09,Bolivia,BOL,1,,Brazil,BRA,2,,,,Viña del Mar,Chile,away
+1991,Group,B,Round 1,1991-07-11,Brazil,BRA,1,,Uruguay,URU,1,,,,Viña del Mar,Chile,draw
+1991,Group,B,Round 1,1991-07-11,Bolivia,BOL,0,,Colombia,COL,0,,,,Viña del Mar,Chile,draw
+1991,Group,B,Round 1,1991-07-13,Brazil,BRA,0,,Colombia,COL,2,,,,Viña del Mar,Chile,away
+1991,Group,B,Round 1,1991-07-13,Bolivia,BOL,0,,Ecuador,ECU,4,,,,Viña del Mar,Chile,away
+1991,Group,B,Round 1,1991-07-15,Colombia,COL,0,,Uruguay,URU,1,,,,Viña del Mar,Chile,away
+1991,Group,B,Round 1,1991-07-15,Brazil,BRA,3,,Ecuador,ECU,1,,,,Viña del Mar,Chile,home
+1991,Group,,Round 1,1991-07-17,Argentina,ARG,3,,Brazil,BRA,2,,,,Santiago,Chile,home
+1991,Group,,Round 1,1991-07-17,Chile,CHI,1,,Colombia,COL,1,,,,Santiago,Chile,draw
+1991,Group,,Round 1,1991-07-19,Brazil,BRA,2,,Colombia,COL,0,,,,Santiago,Chile,home
+1991,Group,,Round 1,1991-07-19,Chile,CHI,0,,Argentina,ARG,0,,,,Santiago,Chile,draw
+1991,Group,,Round 1,1991-07-21,Argentina,ARG,2,,Colombia,COL,1,,,,Santiago,Chile,home
+1991,Group,,Round 1,1991-07-21,Chile,CHI,0,,Brazil,BRA,2,,,,Santiago,Chile,away
+1993,Group,A,Round 1,1993-06-15,Ecuador,ECU,6,,Venezuela,VEN,1,,,,Quito,Ecuador,home
+1993,Group,A,Round 1,1993-06-16,Uruguay,URU,1,,United States,USA,0,,,,Ambato,Ecuador,home
+1993,Group,A,Round 1,1993-06-19,Uruguay,URU,2,,Venezuela,VEN,2,,,,Ambato,Ecuador,draw
+1993,Group,A,Round 1,1993-06-19,Ecuador,ECU,2,,United States,USA,0,,,,Quito,Ecuador,home
+1993,Group,A,Round 1,1993-06-22,Ecuador,ECU,2,,Uruguay,URU,1,,,,Quito,Ecuador,home
+1993,Group,A,Round 1,1993-06-22,United States,USA,3,,Venezuela,VEN,3,,,,Quito,Ecuador,draw
+1993,Group,B,Round 1,1993-06-18,Brazil,BRA,0,,Peru,PER,0,,,,Cuenca,Ecuador,draw
+1993,Group,B,Round 1,1993-06-18,Paraguay,PAR,1,,Chile,CHI,0,,,,Cuenca,Ecuador,home
+1993,Group,B,Round 1,1993-06-21,Brazil,BRA,2,,Chile,CHI,3,,,,Cuenca,Ecuador,away
+1993,Group,B,Round 1,1993-06-21,Paraguay,PAR,1,,Peru,PER,1,,,,Cuenca,Ecuador,draw
+1993,Group,B,Round 1,1993-06-24,Brazil,BRA,3,,Paraguay,PAR,0,,,,Cuenca,Ecuador,home
+1993,Group,B,Round 1,1993-06-24,Chile,CHI,0,,Peru,PER,1,,,,Cuenca,Ecuador,away
+1993,Group,C,Round 1,1993-06-16,Colombia,COL,2,,Mexico,MEX,1,,,,Machala,Ecuador,home
+1993,Group,C,Round 1,1993-06-17,Argentina,ARG,1,,Bolivia,BOL,0,,,,Guayaquil,Ecuador,home
+1993,Group,C,Round 1,1993-06-20,Colombia,COL,1,,Bolivia,BOL,1,,,,Machala,Ecuador,draw
+1993,Group,C,Round 1,1993-06-20,Argentina,ARG,1,,Mexico,MEX,1,,,,Guayaquil,Ecuador,draw
+1993,Group,C,Round 1,1993-06-23,Mexico,MEX,0,,Bolivia,BOL,0,,,,Portoviejo,Ecuador,draw
+1993,Group,C,Round 1,1993-06-23,Argentina,ARG,1,,Colombia,COL,1,,,,Guayaquil,Ecuador,draw
+1993,Knock Out,,Quarter Final,1993-06-26,Colombia,COL,1,1,Uruguay,URU,1,0,1,,Guayaquil,Ecuador,draw
+1993,Knock Out,,Quarter Final,1993-06-26,Ecuador,ECU,3,,Paraguay,PAR,0,,,,Quito,Ecuador,home
+1993,Knock Out,,Quarter Final,1993-06-27,Brazil,BRA,1,0,Argentina,ARG,1,1,1,,Guayaquil,Ecuador,draw
+1993,Knock Out,,Quarter Final,1993-06-27,Peru,PER,2,,Mexico,MEX,4,,,,Quito,Ecuador,away
+1993,Knock Out,,Semi Final,1993-06-30,Ecuador,ECU,0,,Mexico,MEX,2,,,,Quito,Ecuador,away
+1993,Knock Out,,Semi Final,1993-07-01,Colombia,COL,0,0,Argentina,ARG,0,1,1,,Guayaquil,Ecuador,draw
+1993,Knock Out,,Third Place,1993-07-03,Ecuador,ECU,0,,Colombia,COL,1,,,,Portoviejo,Ecuador,away
+1993,Knock Out,,Final,1993-07-04,Argentina,ARG,2,,Mexico,MEX,1,,,,Guayaquil,Ecuador,home
+1995,Group,A,Round 1,1995-07-05,Uruguay,URU,4,,Venezuela,VEN,1,,,,Montevideo,Uruguay,home
+1995,Group,A,Round 1,1995-07-06,Mexico,MEX,1,,Paraguay,PAR,2,,,,Maldonado,Uruguay,away
+1995,Group,A,Round 1,1995-07-09,Uruguay,URU,1,,Paraguay,PAR,0,,,,Montevideo,Uruguay,home
+1995,Group,A,Round 1,1995-07-09,Mexico,MEX,3,,Venezuela,VEN,1,,,,Maldonado,Uruguay,home
+1995,Group,A,Round 1,1995-07-12,Paraguay,PAR,3,,Venezuela,VEN,2,,,,Maldonado,Uruguay,home
+1995,Group,A,Round 1,1995-07-13,Uruguay,URU,1,,Mexico,MEX,1,,,,Montevideo,Uruguay,draw
+1995,Group,B,Round 1,1995-07-07,Brazil,BRA,1,,Ecuador,ECU,0,,,,Rivera,Uruguay,home
+1995,Group,B,Round 1,1995-07-07,Colombia,COL,1,,Peru,PER,1,,,,Rivera,Uruguay,draw
+1995,Group,B,Round 1,1995-07-10,Colombia,COL,1,,Ecuador,ECU,0,,,,Rivera,Uruguay,home
+1995,Group,B,Round 1,1995-07-10,Brazil,BRA,2,,Peru,PER,0,,,,Rivera,Uruguay,home
+1995,Group,B,Round 1,1995-07-13,Brazil,BRA,3,,Colombia,COL,0,,,,Rivera,Uruguay,home
+1995,Group,B,Round 1,1995-07-13,Peru,PER,1,,Ecuador,ECU,2,,,,Rivera,Uruguay,away
+1995,Group,C,Round 1,1995-07-08,United States,USA,2,,Chile,CHI,1,,,,Paysandú,Uruguay,home
+1995,Group,C,Round 1,1995-07-08,Argentina,ARG,2,,Bolivia,BOL,1,,,,Paysandú,Uruguay,home
+1995,Group,C,Round 1,1995-07-11,Argentina,ARG,4,,Chile,CHI,0,,,,Paysandú,Uruguay,home
+1995,Group,C,Round 1,1995-07-11,United States,USA,0,,Bolivia,BOL,1,,,,Paysandú,Uruguay,away
+1995,Group,C,Round 1,1995-07-14,Chile,CHI,2,,Bolivia,BOL,2,,,,Paysandú,Uruguay,draw
+1995,Group,C,Round 1,1995-07-14,Argentina,ARG,0,,United States,USA,3,,,,Paysandú,Uruguay,away
+1995,Knock Out,,Quarter Final,1995-07-16,Paraguay,PAR,1,0,Colombia,COL,1,1,1,,Montevideo,Uruguay,draw
+1995,Knock Out,,Quarter Final,1995-07-16,Uruguay,URU,2,,Bolivia,BOL,1,,,,Montevideo,Uruguay,home
+1995,Knock Out,,Quarter Final,1995-07-17,Brazil,BRA,2,1,Argentina,ARG,2,0,1,,Rivera,Uruguay,draw
+1995,Knock Out,,Quarter Final,1995-07-17,United States,USA,0,1,Mexico,MEX,0,0,1,,Paysandú,Uruguay,draw
+1995,Knock Out,,Semi Final,1995-07-19,Uruguay,URU,2,,Colombia,COL,0,,,,Montevideo,Uruguay,home
+1995,Knock Out,,Semi Final,1995-07-20,United States,USA,0,,Brazil,BRA,1,,,,Maldonado,Uruguay,away
+1995,Knock Out,,Third Place,1995-07-22,Colombia,COL,4,,United States,USA,1,,,,Maldonado,Uruguay,home
+1995,Knock Out,,Final,1995-07-23,Uruguay,URU,1,1,Brazil,BRA,1,0,1,,Montevideo,Uruguay,draw
+1997,Group,A,Round 1,1997-06-11,Chile,CHI,0,,Paraguay,PAR,1,,,,Cochabamba,Bolivia,away
+1997,Group,A,Round 1,1997-06-11,Argentina,ARG,0,,Ecuador,ECU,0,,,,Cochabamba,Bolivia,draw
+1997,Group,A,Round 1,1997-06-14,Paraguay,PAR,0,,Ecuador,ECU,2,,,,Cochabamba,Bolivia,away
+1997,Group,A,Round 1,1997-06-14,Argentina,ARG,2,,Chile,CHI,0,,,,Cochabamba,Bolivia,home
+1997,Group,A,Round 1,1997-06-17,Argentina,ARG,1,,Paraguay,PAR,1,,,,Cochabamba,Bolivia,draw
+1997,Group,A,Round 1,1997-06-17,Chile,CHI,1,,Ecuador,ECU,2,,,,Cochabamba,Bolivia,away
+1997,Group,B,Round 1,1997-06-12,Bolivia,BOL,1,,Venezuela,VEN,0,,,,La Paz,Bolivia,home
+1997,Group,B,Round 1,1997-06-12,Peru,PER,1,,Uruguay,URU,0,,,,Sucre,Bolivia,home
+1997,Group,B,Round 1,1997-06-15,Uruguay,URU,2,,Venezuela,VEN,0,,,,Sucre,Bolivia,home
+1997,Group,B,Round 1,1997-06-15,Bolivia,BOL,2,,Peru,PER,0,,,,La Paz,Bolivia,home
+1997,Group,B,Round 1,1997-06-18,Bolivia,BOL,1,,Uruguay,URU,0,,,,La Paz,Bolivia,home
+1997,Group,B,Round 1,1997-06-18,Peru,PER,2,,Venezuela,VEN,0,,,,Sucre,Bolivia,home
+1997,Group,C,Round 1,1997-06-13,Mexico,MEX,2,,Colombia,COL,1,,,,Santa Cruz,Bolivia,home
+1997,Group,C,Round 1,1997-06-13,Brazil,BRA,5,,Costa Rica,CRC,0,,,,Santa Cruz,Bolivia,home
+1997,Group,C,Round 1,1997-06-16,Colombia,COL,4,,Costa Rica,CRC,1,,,,Santa Cruz,Bolivia,home
+1997,Group,C,Round 1,1997-06-16,Brazil,BRA,3,,Mexico,MEX,2,,,,Santa Cruz,Bolivia,home
+1997,Group,C,Round 1,1997-06-19,Brazil,BRA,2,,Colombia,COL,0,,,,Santa Cruz,Bolivia,home
+1997,Group,C,Round 1,1997-06-19,Mexico,MEX,1,,Costa Rica,CRC,1,,,,Santa Cruz,Bolivia,draw
+1997,Knock Out,,Quarter Final,1997-06-21,Bolivia,BOL,2,,Colombia,COL,1,,,,La Paz,Bolivia,home
+1997,Knock Out,,Quarter Final,1997-06-21,Peru,PER,2,,Argentina,ARG,1,,,,Sucre,Bolivia,home
+1997,Knock Out,,Quarter Final,1997-06-22,Brazil,BRA,2,,Paraguay,PAR,0,,,,Santa Cruz,Bolivia,home
+1997,Knock Out,,Quarter Final,1997-06-22,Ecuador,ECU,1,0,Mexico,MEX,1,1,1,,Cochabamba,Bolivia,draw
+1997,Knock Out,,Semi Final,1997-06-25,Bolivia,BOL,3,,Mexico,MEX,1,,,,La Paz,Bolivia,home
+1997,Knock Out,,Semi Final,1997-06-26,Brazil,BRA,7,,Peru,PER,0,,,,Santa Cruz,Bolivia,home
+1997,Knock Out,,Third Place,1997-06-28,Mexico,MEX,1,,Peru,PER,0,,,,Oruro,Bolivia,home
+1997,Knock Out,,Final,1997-06-29,Bolivia,BOL,1,,Brazil,BRA,3,,,,La Paz,Bolivia,away
+1999,Group,A,Round 1,1999-06-29,Peru,PER,3,,Japan,JPN,2,,,,Asunción,Paraguay,home
+1999,Group,A,Round 1,1999-06-29,Paraguay,PAR,0,,Bolivia,BOL,0,,,,Asunción,Paraguay,draw
+1999,Group,A,Round 1,1999-07-02,Peru,PER,1,,Bolivia,BOL,0,,,,Asunción,Paraguay,home
+1999,Group,A,Round 1,1999-07-02,Paraguay,PAR,4,,Japan,JPN,0,,,,Asunción,Paraguay,home
+1999,Group,A,Round 1,1999-07-05,Bolivia,BOL,1,,Japan,JPN,1,,,,Pedro Juan Caballero,Paraguay,draw
+1999,Group,A,Round 1,1999-07-05,Paraguay,PAR,1,,Peru,PER,0,,,,Pedro Juan Caballero,Paraguay,home
+1999,Group,B,Round 1,1999-06-30,Brazil,BRA,7,,Venezuela,VEN,0,,,,Ciudad del Este,Paraguay,home
+1999,Group,B,Round 1,1999-06-30,Chile,CHI,0,,Mexico,MEX,1,,,,Ciudad del Este,Paraguay,away
+1999,Group,B,Round 1,1999-07-03,Chile,CHI,3,,Venezuela,VEN,0,,,,Ciudad del Este,Paraguay,home
+1999,Group,B,Round 1,1999-07-03,Brazil,BRA,2,,Mexico,MEX,1,,,,Ciudad del Este,Paraguay,home
+1999,Group,B,Round 1,1999-07-06,Brazil,BRA,1,,Chile,CHI,0,,,,Ciudad del Este,Paraguay,home
+1999,Group,B,Round 1,1999-07-06,Mexico,MEX,3,,Venezuela,VEN,1,,,,Ciudad del Este,Paraguay,home
+1999,Group,C,Round 1,1999-07-01,Uruguay,URU,0,,Colombia,COL,1,,,,Asunción,Paraguay,away
+1999,Group,C,Round 1,1999-07-01,Argentina,ARG,3,,Ecuador,ECU,1,,,,Luque,Paraguay,home
+1999,Group,C,Round 1,1999-07-04,Uruguay,URU,2,,Ecuador,ECU,1,,,,Luque,Paraguay,home
+1999,Group,C,Round 1,1999-07-04,Argentina,ARG,0,,Colombia,COL,3,,,,Luque,Paraguay,away
+1999,Group,C,Round 1,1999-07-07,Colombia,COL,2,,Ecuador,ECU,1,,,,Luque,Paraguay,home
+1999,Group,C,Round 1,1999-07-07,Uruguay,URU,0,,Argentina,ARG,2,,,,Luque,Paraguay,away
+1999,Knock Out,,Quarter Final,1999-07-10,Mexico,MEX,3,1,Peru,PER,3,0,1,,Asunción,Paraguay,draw
+1999,Knock Out,,Quarter Final,1999-07-10,Paraguay,PAR,1,0,Uruguay,URU,1,1,1,,Asunción,Paraguay,draw
+1999,Knock Out,,Quarter Final,1999-07-11,Brazil,BRA,2,,Argentina,ARG,1,,,,Ciudad del Este,Paraguay,home
+1999,Knock Out,,Quarter Final,1999-07-11,Chile,CHI,3,,Colombia,COL,2,,,,Luque,Paraguay,home
+1999,Knock Out,,Semi Final,1999-07-13,Uruguay,URU,1,1,Chile,CHI,1,0,1,,Asunción,Paraguay,draw
+1999,Knock Out,,Semi Final,1999-07-14,Mexico,MEX,0,,Brazil,BRA,2,,,,Ciudad del Este,Paraguay,away
+1999,Knock Out,,Third Place,1999-07-17,Chile,CHI,1,,Mexico,MEX,2,,,,Asunción,Paraguay,away
+1999,Knock Out,,Final,1999-07-18,Brazil,BRA,3,,Uruguay,URU,0,,,,Asunción,Paraguay,home
+2001,Group,A,Round 1,2001-07-11,Ecuador,ECU,1,,Chile,CHI,4,,,,Barranquilla,Colombia,away
+2001,Group,A,Round 1,2001-07-11,Colombia,COL,2,,Venezuela,VEN,0,,,,Barranquilla,Colombia,home
+2001,Group,A,Round 1,2001-07-14,Colombia,COL,1,,Ecuador,ECU,0,,,,Barranquilla,Colombia,home
+2001,Group,A,Round 1,2001-07-14,Chile,CHI,1,,Venezuela,VEN,0,,,,Barranquilla,Colombia,home
+2001,Group,A,Round 1,2001-07-17,Colombia,COL,2,,Chile,CHI,0,,,,Barranquilla,Colombia,home
+2001,Group,A,Round 1,2001-07-17,Ecuador,ECU,4,,Venezuela,VEN,0,,,,Barranquilla,Colombia,home
+2001,Group,B,Round 1,2001-07-12,Brazil,BRA,0,,Mexico,MEX,1,,,,Cali,Colombia,away
+2001,Group,B,Round 1,2001-07-12,Peru,PER,3,,Paraguay,PAR,3,,,,Cali,Colombia,draw
+2001,Group,B,Round 1,2001-07-15,Paraguay,PAR,0,,Mexico,MEX,0,,,,Cali,Colombia,draw
+2001,Group,B,Round 1,2001-07-15,Brazil,BRA,2,,Peru,PER,0,,,,Cali,Colombia,home
+2001,Group,B,Round 1,2001-07-18,Brazil,BRA,3,,Paraguay,PAR,1,,,,Cali,Colombia,home
+2001,Group,B,Round 1,2001-07-18,Peru,PER,1,,Mexico,MEX,0,,,,Cali,Colombia,home
+2001,Group,C,Round 1,2001-07-13,Honduras,HON,0,,Costa Rica,CRC,1,,,,Medellín,Colombia,away
+2001,Group,C,Round 1,2001-07-13,Bolivia,BOL,0,,Uruguay,URU,1,,,,Medellín,Colombia,away
+2001,Group,C,Round 1,2001-07-16,Uruguay,URU,1,,Costa Rica,CRC,1,,,,Medellín,Colombia,draw
+2001,Group,C,Round 1,2001-07-16,Honduras,HON,2,,Bolivia,BOL,0,,,,Medellín,Colombia,home
+2001,Group,C,Round 1,2001-07-19,Bolivia,BOL,0,,Costa Rica,CRC,4,,,,Medellín,Colombia,away
+2001,Group,C,Round 1,2001-07-19,Honduras,HON,1,,Uruguay,URU,0,,,,Medellín,Colombia,home
+2001,Knock Out,,Quarter Final,2001-07-22,Chile,CHI,0,,Mexico,MEX,2,,,,Pereira,Colombia,away
+2001,Knock Out,,Quarter Final,2001-07-22,Uruguay,URU,2,,Costa Rica,CRC,1,,,,Armenia,Colombia,home
+2001,Knock Out,,Quarter Final,2001-07-23,Brazil,BRA,0,,Honduras,HON,2,,,,Manizales,Colombia,away
+2001,Knock Out,,Quarter Final,2001-07-23,Colombia,COL,3,,Peru,PER,0,,,,Armenia,Colombia,home
+2001,Knock Out,,Semi Final,2001-07-25,Mexico,MEX,2,,Uruguay,URU,1,,,,Pereira,Colombia,home
+2001,Knock Out,,Semi Final,2001-07-26,Colombia,COL,2,,Honduras,HON,0,,,,Manizales,Colombia,home
+2001,Knock Out,,Third Place,2001-07-29,Uruguay,URU,2,0,Honduras,HON,2,1,1,,Bogotá,Colombia,draw
+2001,Knock Out,,Final,2001-07-29,Colombia,COL,1,,Mexico,MEX,0,,,,Bogotá,Colombia,home
+2004,Group,A,Round 1,2004-07-06,Venezuela,VEN,0,,Colombia,COL,1,,,,Lima,Peru,away
+2004,Group,A,Round 1,2004-07-06,Peru,PER,2,,Bolivia,BOL,2,,,,Lima,Peru,draw
+2004,Group,A,Round 1,2004-07-09,Peru,PER,3,,Venezuela,VEN,1,,,,Lima,Peru,home
+2004,Group,A,Round 1,2004-07-09,Colombia,COL,1,,Bolivia,BOL,0,,,,Lima,Peru,home
+2004,Group,A,Round 1,2004-07-12,Peru,PER,2,,Colombia,COL,2,,,,Trujillo,Peru,draw
+2004,Group,A,Round 1,2004-07-12,Venezuela,VEN,1,,Bolivia,BOL,1,,,,Trujillo,Peru,draw
+2004,Group,B,Round 1,2004-07-07,Argentina,ARG,6,,Ecuador,ECU,1,,,,Chiclayo,Peru,home
+2004,Group,B,Round 1,2004-07-07,Mexico,MEX,2,,Uruguay,URU,2,,,,Chiclayo,Peru,draw
+2004,Group,B,Round 1,2004-07-10,Uruguay,URU,2,,Ecuador,ECU,1,,,,Chiclayo,Peru,home
+2004,Group,B,Round 1,2004-07-10,Argentina,ARG,0,,Mexico,MEX,1,,,,Chiclayo,Peru,away
+2004,Group,B,Round 1,2004-07-13,Argentina,ARG,4,,Uruguay,URU,2,,,,Piura,Peru,home
+2004,Group,B,Round 1,2004-07-13,Mexico,MEX,2,,Ecuador,ECU,1,,,,Piura,Peru,home
+2004,Group,C,Round 1,2004-07-08,Costa Rica,CRC,0,,Paraguay,PAR,1,,,,Arequipa,Peru,away
+2004,Group,C,Round 1,2004-07-08,Brazil,BRA,1,,Chile,CHI,0,,,,Arequipa,Peru,home
+2004,Group,C,Round 1,2004-07-11,Paraguay,PAR,1,,Chile,CHI,1,,,,Arequipa,Peru,draw
+2004,Group,C,Round 1,2004-07-11,Brazil,BRA,4,,Costa Rica,CRC,1,,,,Arequipa,Peru,home
+2004,Group,C,Round 1,2004-07-14,Brazil,BRA,1,,Paraguay,PAR,2,,,,Arequipa,Peru,away
+2004,Group,C,Round 1,2004-07-14,Costa Rica,CRC,2,,Chile,CHI,1,,,,Tacna,Peru,home
+2004,Knock Out,,Quarter Final,2004-07-17,Colombia,COL,2,,Costa Rica,CRC,0,,,,Trujillo,Peru,home
+2004,Knock Out,,Quarter Final,2004-07-17,Peru,PER,0,,Argentina,ARG,1,,,,Chiclayo,Peru,away
+2004,Knock Out,,Quarter Final,2004-07-18,Mexico,MEX,0,,Brazil,BRA,4,,,,Piura,Peru,away
+2004,Knock Out,,Quarter Final,2004-07-18,Paraguay,PAR,1,,Uruguay,URU,3,,,,Tacna,Peru,away
+2004,Knock Out,,Semi Final,2004-07-20,Argentina,ARG,3,,Colombia,COL,0,,,,Lima,Peru,home
+2004,Knock Out,,Semi Final,2004-07-21,Uruguay,URU,1,0,Brazil,BRA,1,1,1,,Lima,Peru,draw
+2004,Knock Out,,Third Place,2004-07-24,Colombia,COL,1,,Uruguay,URU,2,,,,Cusco,Peru,away
+2004,Knock Out,,Final,2004-07-25,Argentina,ARG,2,0,Brazil,BRA,2,1,1,,Lima,Peru,draw
+2007,Group,A,Round 1,2007-06-26,Venezuela,VEN,2,,Bolivia,BOL,2,,,,San Cristóbal,Venezuela,draw
+2007,Group,A,Round 1,2007-06-26,Uruguay,URU,0,,Peru,PER,3,,,,Mérida,Venezuela,away
+2007,Group,A,Round 1,2007-06-30,Venezuela,VEN,2,,Peru,PER,0,,,,San Cristóbal,Venezuela,home
+2007,Group,A,Round 1,2007-06-30,Bolivia,BOL,0,,Uruguay,URU,1,,,,San Cristóbal,Venezuela,away
+2007,Group,A,Round 1,2007-07-03,Peru,PER,2,,Bolivia,BOL,2,,,,Mérida,Venezuela,draw
+2007,Group,A,Round 1,2007-07-03,Venezuela,VEN,0,,Uruguay,URU,0,,,,Mérida,Venezuela,draw
+2007,Group,B,Round 1,2007-06-27,Brazil,BRA,0,,Mexico,MEX,2,,,,Puerto Ordaz,Venezuela,away
+2007,Group,B,Round 1,2007-06-27,Ecuador,ECU,2,,Chile,CHI,3,,,,Puerto Ordaz,Venezuela,away
+2007,Group,B,Round 1,2007-07-01,Mexico,MEX,2,,Ecuador,ECU,1,,,,Maturín,Venezuela,home
+2007,Group,B,Round 1,2007-07-01,Brazil,BRA,3,,Chile,CHI,0,,,,Maturín,Venezuela,home
+2007,Group,B,Round 1,2007-07-04,Brazil,BRA,1,,Ecuador,ECU,0,,,,Puerto la Cruz,Venezuela,home
+2007,Group,B,Round 1,2007-07-04,Mexico,MEX,0,,Chile,CHI,0,,,,Puerto la Cruz,Venezuela,draw
+2007,Group,C,Round 1,2007-06-28,Paraguay,PAR,5,,Colombia,COL,0,,,,Barinas,Venezuela,home
+2007,Group,C,Round 1,2007-06-28,Argentina,ARG,4,,United States,USA,1,,,,Maracaibo,Venezuela,home
+2007,Group,C,Round 1,2007-07-02,United States,USA,1,,Paraguay,PAR,3,,,,Barinas,Venezuela,away
+2007,Group,C,Round 1,2007-07-02,Argentina,ARG,4,,Colombia,COL,2,,,,Maracaibo,Venezuela,home
+2007,Group,C,Round 1,2007-07-05,Argentina,ARG,1,,Paraguay,PAR,0,,,,Barquisimeto,Venezuela,home
+2007,Group,C,Round 1,2007-07-05,Colombia,COL,1,,United States,USA,0,,,,Barquisimeto,Venezuela,home
+2007,Knock Out,,Quarter Final,2007-07-07,Chile,CHI,1,,Brazil,BRA,6,,,,Puerto la Cruz,Venezuela,away
+2007,Knock Out,,Quarter Final,2007-07-07,Venezuela,VEN,1,,Uruguay,URU,4,,,,San Cristóbal,Venezuela,away
+2007,Knock Out,,Quarter Final,2007-07-08,Argentina,ARG,4,,Peru,PER,0,,,,Barquisimeto,Venezuela,home
+2007,Knock Out,,Quarter Final,2007-07-08,Mexico,MEX,6,,Paraguay,PAR,0,,,,Maturín,Venezuela,home
+2007,Knock Out,,Semi Final,2007-07-10,Uruguay,URU,2,0,Brazil,BRA,2,1,1,,Maracaibo,Venezuela,draw
+2007,Knock Out,,Semi Final,2007-07-11,Mexico,MEX,0,,Argentina,ARG,3,,,,Puerto Ordaz,Venezuela,away
+2007,Knock Out,,Third Place,2007-07-14,Mexico,MEX,3,,Uruguay,URU,1,,,,Caracas,Venezuela,home
+2007,Knock Out,,Final,2007-07-15,Brazil,BRA,3,,Argentina,ARG,0,,,,Maracaibo,Venezuela,home
+2011,Group,A,Round 1,2011-07-01,Argentina,ARG,1,,Bolivia,BOL,1,,,,La Plata,Argentina,draw
+2011,Group,A,Round 1,2011-07-02,Colombia,COL,1,,Costa Rica,CRC,0,,,,San Salvador de Jujuy,Argentina,home
+2011,Group,A,Round 1,2011-07-06,Argentina,ARG,0,,Colombia,COL,0,,,,Santa Fe,Argentina,draw
+2011,Group,A,Round 1,2011-07-07,Bolivia,BOL,0,,Costa Rica,CRC,2,,,,San Salvador de Jujuy,Argentina,away
+2011,Group,A,Round 1,2011-07-10,Colombia,COL,2,,Bolivia,BOL,0,,,,Santa Fe,Argentina,home
+2011,Group,A,Round 1,2011-07-11,Argentina,ARG,3,,Costa Rica,CRC,0,,,,Córdoba,Argentina,home
+2011,Group,B,Round 1,2011-07-03,Brazil,BRA,0,,Venezuela,VEN,0,,,,La Plata,Argentina,draw
+2011,Group,B,Round 1,2011-07-03,Paraguay,PAR,0,,Ecuador,ECU,0,,,,Santa Fe,Argentina,draw
+2011,Group,B,Round 1,2011-07-09,Brazil,BRA,2,,Paraguay,PAR,2,,,,Córdoba,Argentina,draw
+2011,Group,B,Round 1,2011-07-09,Venezuela,VEN,1,,Ecuador,ECU,0,,,,Salta,Argentina,home
+2011,Group,B,Round 1,2011-07-13,Paraguay,PAR,3,,Venezuela,VEN,3,,,,Salta,Argentina,draw
+2011,Group,B,Round 1,2011-07-13,Brazil,BRA,4,,Ecuador,ECU,2,,,,Córdoba,Argentina,home
+2011,Group,C,Round 1,2011-07-04,Uruguay,URU,1,,Peru,PER,1,,,,San Juan,Argentina,draw
+2011,Group,C,Round 1,2011-07-04,Chile,CHI,2,,Mexico,MEX,1,,,,San Juan,Argentina,home
+2011,Group,C,Round 1,2011-07-08,Uruguay,URU,1,,Chile,CHI,1,,,,Mendoza,Argentina,draw
+2011,Group,C,Round 1,2011-07-08,Peru,PER,1,,Mexico,MEX,0,,,,Mendoza,Argentina,home
+2011,Group,C,Round 1,2011-07-12,Uruguay,URU,1,,Mexico,MEX,0,,,,La Plata,Argentina,home
+2011,Group,C,Round 1,2011-07-12,Chile,CHI,1,,Peru,PER,0,,,,Mendoza,Argentina,home
+2011,Knock Out,,Quarter Final,2011-07-16,Argentina,ARG,1,0,Uruguay,URU,1,1,1,,Santa Fe,Argentina,draw
+2011,Knock Out,,Quarter Final,2011-07-16,Colombia,COL,0,,Peru,PER,2,,,,Córdoba,Argentina,away
+2011,Knock Out,,Quarter Final,2011-07-17,Brazil,BRA,0,0,Paraguay,PAR,0,1,1,,La Plata,Argentina,draw
+2011,Knock Out,,Quarter Final,2011-07-17,Chile,CHI,1,,Venezuela,VEN,2,,,,San Juan,Argentina,away
+2011,Knock Out,,Semi Final,2011-07-19,Peru,PER,0,,Uruguay,URU,2,,,,La Plata,Argentina,away
+2011,Knock Out,,Semi Final,2011-07-20,Paraguay,PAR,0,1,Venezuela,VEN,0,0,1,,Mendoza,Argentina,draw
+2011,Knock Out,,Third Place,2011-07-23,Peru,PER,4,,Venezuela,VEN,1,,,,La Plata,Argentina,home
+2011,Knock Out,,Final,2011-07-24,Uruguay,URU,3,,Paraguay,PAR,0,,,,Buenos Aires,Argentina,home
+2015,Group,A,Round 1,2015-06-11,Chile,CHI,2,,Ecuador,ECU,0,,,,Santiago,Chile,home
+2015,Group,A,Round 1,2015-06-12,Mexico,MEX,0,,Bolivia,BOL,0,,,,Viña del Mar,Chile,draw
+2015,Group,A,Round 1,2015-06-15,Ecuador,ECU,2,,Bolivia,BOL,3,,,,Valparaíso,Chile,away
+2015,Group,A,Round 1,2015-06-15,Chile,CHI,3,,Mexico,MEX,3,,,,Santiago,Chile,draw
+2015,Group,A,Round 1,2015-06-19,Chile,CHI,5,,Bolivia,BOL,0,,,,Santiago,Chile,home
+2015,Group,A,Round 1,2015-06-19,Mexico,MEX,1,,Ecuador,ECU,2,,,,Rancagua,Chile,away
+2015,Group,B,Round 1,2015-06-13,Argentina,ARG,2,,Paraguay,PAR,2,,,,La Serena,Chile,draw
+2015,Group,B,Round 1,2015-06-13,Uruguay,URU,1,,Jamaica,JAM,0,,,,Antofagasta,Chile,home
+2015,Group,B,Round 1,2015-06-16,Paraguay,PAR,1,,Jamaica,JAM,0,,,,Antofagasta,Chile,home
+2015,Group,B,Round 1,2015-06-16,Argentina,ARG,1,,Uruguay,URU,0,,,,La Serena,Chile,home
+2015,Group,B,Round 1,2015-06-20,Argentina,ARG,1,,Jamaica,JAM,0,,,,Viña del Mar,Chile,home
+2015,Group,B,Round 1,2015-06-20,Uruguay,URU,1,,Paraguay,PAR,1,,,,La Serena,Chile,draw
+2015,Group,C,Round 1,2015-06-14,Colombia,COL,0,,Venezuela,VEN,1,,,,Rancagua,Chile,away
+2015,Group,C,Round 1,2015-06-14,Brazil,BRA,2,,Peru,PER,1,,,,Temuco,Chile,home
+2015,Group,C,Round 1,2015-06-17,Brazil,BRA,0,,Colombia,COL,1,,,,Santiago,Chile,away
+2015,Group,C,Round 1,2015-06-18,Peru,PER,1,,Venezuela,VEN,0,,,,Valparaíso,Chile,home
+2015,Group,C,Round 1,2015-06-21,Brazil,BRA,2,,Venezuela,VEN,1,,,,Santiago,Chile,home
+2015,Group,C,Round 1,2015-06-21,Colombia,COL,0,,Peru,PER,0,,,,Temuco,Chile,draw
+2015,Knock Out,,Quarter Final,2015-06-24,Chile,CHI,1,,Uruguay,URU,0,,,,Santiago,Chile,home
+2015,Knock Out,,Quarter Final,2015-06-25,Bolivia,BOL,1,,Peru,PER,3,,,,Temuco,Chile,away
+2015,Knock Out,,Quarter Final,2015-06-26,Argentina,ARG,0,1,Colombia,COL,0,0,1,,Viña del Mar,Chile,draw
+2015,Knock Out,,Quarter Final,2015-06-27,Brazil,BRA,1,0,Paraguay,PAR,1,1,1,,Concepción,Chile,draw
+2015,Knock Out,,Semi Final,2015-06-29,Chile,CHI,2,,Peru,PER,1,,,,Santiago,Chile,home
+2015,Knock Out,,Semi Final,2015-06-30,Argentina,ARG,6,,Paraguay,PAR,1,,,,Concepción,Chile,home
+2015,Knock Out,,Third Place,2015-07-03,Peru,PER,2,,Paraguay,PAR,0,,,,Concepción,Chile,home
+2015,Knock Out,,Final,2015-07-04,Chile,CHI,0,1,Argentina,ARG,0,0,1,,Santiago,Chile,draw
+2016,Group,A,Round 1,2016-06-03,United States,USA,0,,Colombia,COL,2,,,,Santa Clara,United States,away
+2016,Group,A,Round 1,2016-06-04,Costa Rica,CRC,0,,Paraguay,PAR,0,,,,Orlando,United States,draw
+2016,Group,A,Round 1,2016-06-07,United States,USA,4,,Costa Rica,CRC,0,,,,Chicago,United States,home
+2016,Group,A,Round 1,2016-06-07,Colombia,COL,2,,Paraguay,PAR,1,,,,Pasadena,United States,home
+2016,Group,A,Round 1,2016-06-11,Colombia,COL,2,,Costa Rica,CRC,3,,,,Houston,United States,away
+2016,Group,A,Round 1,2016-06-11,United States,USA,1,,Paraguay,PAR,0,,,,Philadelphia,United States,home
+2016,Group,B,Round 1,2016-06-04,Brazil,BRA,0,,Ecuador,ECU,0,,,,Pasadena,United States,draw
+2016,Group,B,Round 1,2016-06-04,Haiti,HAI,0,,Peru,PER,1,,,,Seattle,United States,away
+2016,Group,B,Round 1,2016-06-08,Brazil,BRA,7,,Haiti,HAI,1,,,,Orlando,United States,home
+2016,Group,B,Round 1,2016-06-08,Ecuador,ECU,2,,Peru,PER,2,,,,Glendale,United States,draw
+2016,Group,B,Round 1,2016-06-12,Brazil,BRA,0,,Peru,PER,1,,,,Foxborough,United States,away
+2016,Group,B,Round 1,2016-06-12,Ecuador,ECU,4,,Haiti,HAI,0,,,,East Rutherford,United States,home
+2016,Group,C,Round 1,2016-06-05,Mexico,MEX,3,,Uruguay,URU,1,,,,Glendale,United States,home
+2016,Group,C,Round 1,2016-06-05,Jamaica,JAM,0,,Venezuela,VEN,1,,,,Chicago,United States,away
+2016,Group,C,Round 1,2016-06-09,Mexico,MEX,2,,Jamaica,JAM,0,,,,Pasadena,United States,home
+2016,Group,C,Round 1,2016-06-09,Uruguay,URU,0,,Venezuela,VEN,1,,,,Philadelphia,United States,away
+2016,Group,C,Round 1,2016-06-13,Mexico,MEX,1,,Venezuela,VEN,1,,,,Houston,United States,draw
+2016,Group,C,Round 1,2016-06-13,Uruguay,URU,3,,Jamaica,JAM,0,,,,Santa Clara,United States,home
+2016,Group,D,Round 1,2016-06-06,Panama,PAN,2,,Bolivia,BOL,1,,,,Orlando,United States,home
+2016,Group,D,Round 1,2016-06-06,Argentina,ARG,2,,Chile,CHI,1,,,,Santa Clara,United States,home
+2016,Group,D,Round 1,2016-06-10,Argentina,ARG,5,,Panama,PAN,0,,,,Chicago,United States,home
+2016,Group,D,Round 1,2016-06-10,Chile,CHI,2,,Bolivia,BOL,1,,,,Foxborough,United States,home
+2016,Group,D,Round 1,2016-06-14,Chile,CHI,4,,Panama,PAN,2,,,,Philadelphia,United States,home
+2016,Group,D,Round 1,2016-06-14,Argentina,ARG,3,,Bolivia,BOL,0,,,,Seattle,United States,home
+2016,Knock Out,,Quarter Final,2016-06-16,United States,USA,2,,Ecuador,ECU,1,,,,Seattle,United States,home
+2016,Knock Out,,Quarter Final,2016-06-17,Peru,PER,0,0,Colombia,COL,0,1,1,,East Rutherford,United States,draw
+2016,Knock Out,,Quarter Final,2016-06-18,Argentina,ARG,4,,Venezuela,VEN,1,,,,Foxborough,United States,home
+2016,Knock Out,,Quarter Final,2016-06-18,Mexico,MEX,0,,Chile,CHI,7,,,,Santa Clara,United States,away
+2016,Knock Out,,Semi Final,2016-06-21,United States,USA,0,,Argentina,ARG,4,,,,Houston,United States,away
+2016,Knock Out,,Semi Final,2016-06-22,Colombia,COL,0,,Chile,CHI,2,,,,Chicago,United States,away
+2016,Knock Out,,Third Place,2016-06-25,United States,USA,0,,Colombia,COL,1,,,,Glendale,United States,away
+2016,Knock Out,,Final,2016-06-26,Argentina,ARG,0,0,Chile,CHI,0,1,1,,East Rutherford,United States,draw
+2019,Group,A,Round 1,2019-06-14,Brazil,BRA,3,,Bolivia,BOL,0,,,,São Paulo,Brazil,home
+2019,Group,A,Round 1,2019-06-15,Venezuela,VEN,0,,Peru,PER,0,,,,Porto Alegre,Brazil,draw
+2019,Group,A,Round 1,2019-06-18,Brazil,BRA,0,,Venezuela,VEN,0,,,,Salvador,Brazil,draw
+2019,Group,A,Round 1,2019-06-18,Bolivia,BOL,1,,Peru,PER,3,,,,Rio de Janeiro,Brazil,away
+2019,Group,A,Round 1,2019-06-22,Bolivia,BOL,1,,Venezuela,VEN,3,,,,Belo Horizonte,Brazil,away
+2019,Group,A,Round 1,2019-06-22,Brazil,BRA,5,,Peru,PER,0,,,,São Paulo,Brazil,home
+2019,Group,B,Round 1,2019-06-15,Argentina,ARG,0,,Colombia,COL,2,,,,Salvador,Brazil,away
+2019,Group,B,Round 1,2019-06-16,Paraguay,PAR,2,,Qatar,QAT,2,,,,Rio de Janeiro,Brazil,draw
+2019,Group,B,Round 1,2019-06-19,Argentina,ARG,1,,Paraguay,PAR,1,,,,Belo Horizonte,Brazil,draw
+2019,Group,B,Round 1,2019-06-19,Colombia,COL,1,,Qatar,QAT,0,,,,São Paulo,Brazil,home
+2019,Group,B,Round 1,2019-06-23,Colombia,COL,1,,Paraguay,PAR,0,,,,Salvador,Brazil,home
+2019,Group,B,Round 1,2019-06-23,Qatar,QAT,0,,Argentina,ARG,2,,,,Porto Alegre,Brazil,away
+2019,Group,C,Round 1,2019-06-16,Uruguay,URU,4,,Ecuador,ECU,0,,,,Belo Horizonte,Brazil,home
+2019,Group,C,Round 1,2019-06-17,Japan,JPN,0,,Chile,CHI,4,,,,São Paulo,Brazil,away
+2019,Group,C,Round 1,2019-06-20,Uruguay,URU,2,,Japan,JPN,2,,,,Porto Alegre,Brazil,draw
+2019,Group,C,Round 1,2019-06-21,Ecuador,ECU,1,,Chile,CHI,2,,,,Salvador,Brazil,away
+2019,Group,C,Round 1,2019-06-24,Chile,CHI,0,,Uruguay,URU,1,,,,Rio de Janeiro,Brazil,away
+2019,Group,C,Round 1,2019-06-24,Ecuador,ECU,1,,Japan,JPN,1,,,,Belo Horizonte,Brazil,draw
+2019,Knock Out,,Quarter Final,2019-06-27,Brazil,BRA,0,1,Paraguay,PAR,0,0,1,,Porto Alegre,Brazil,draw
+2019,Knock Out,,Quarter Final,2019-06-28,Colombia,COL,0,0,Chile,CHI,0,1,1,,São Paulo,Brazil,draw
+2019,Knock Out,,Quarter Final,2019-06-28,Venezuela,VEN,0,,Argentina,ARG,2,,,,Rio de Janeiro,Brazil,away
+2019,Knock Out,,Quarter Final,2019-06-29,Uruguay,URU,0,0,Peru,PER,0,1,1,,Salvador,Brazil,draw
+2019,Knock Out,,Semi Final,2019-07-02,Brazil,BRA,2,,Argentina,ARG,0,,,,Belo Horizonte,Brazil,home
+2019,Knock Out,,Semi Final,2019-07-03,Chile,CHI,0,,Peru,PER,3,,,,Porto Alegre,Brazil,away
+2019,Knock Out,,Third Place,2019-07-06,Argentina,ARG,2,,Chile,CHI,1,,,,São Paulo,Brazil,home
+2019,Knock Out,,Final,2019-07-07,Brazil,BRA,3,,Peru,PER,1,,,,Rio de Janeiro,Brazil,home
+2021,Group,,Round 1,2021-06-13,Colombia,COL,1,,Ecuador,ECU,0,,,,Cuiabá,Brazil,home
+2021,Group,,Round 1,2021-06-13,Brazil,BRA,3,,Venezuela,VEN,0,,,,Brasília,Brazil,home
+2021,Group,,Round 1,2021-06-14,Paraguay,PAR,3,,Bolivia,BOL,1,,,,Goiânia,Brazil,home
+2021,Group,,Round 1,2021-06-14,Argentina,ARG,1,,Chile,CHI,1,,,,Rio de Janeiro,Brazil,draw
+2021,Group,,Round 1,2021-06-17,Brazil,BRA,4,,Peru,PER,0,,,,Rio de Janeiro,Brazil,home
+2021,Group,,Round 1,2021-06-17,Colombia,COL,0,,Venezuela,VEN,0,,,,Goiânia,Brazil,draw
+2021,Group,,Round 1,2021-06-18,Chile,CHI,1,,Bolivia,BOL,0,,,,Cuiabá,Brazil,home
+2021,Group,,Round 1,2021-06-18,Argentina,ARG,1,,Uruguay,URU,0,,,,Brasília,Brazil,home
+2021,Group,,Round 1,2021-06-20,Colombia,COL,1,,Peru,PER,2,,,,Goiânia,Brazil,away
+2021,Group,,Round 1,2021-06-20,Venezuela,VEN,2,,Ecuador,ECU,2,,,,Rio de Janeiro,Brazil,draw
+2021,Group,,Round 1,2021-06-21,Argentina,ARG,1,,Paraguay,PAR,0,,,,Brasília,Brazil,home
+2021,Group,,Round 1,2021-06-21,Uruguay,URU,1,,Chile,CHI,1,,,,Cuiabá,Brazil,draw
+2021,Group,,Round 1,2021-06-23,Brazil,BRA,2,,Colombia,COL,1,,,,Rio de Janeiro,Brazil,home
+2021,Group,,Round 1,2021-06-23,Ecuador,ECU,2,,Peru,PER,2,,,,Goiânia,Brazil,draw
+2021,Group,,Round 1,2021-06-24,Bolivia,BOL,0,,Uruguay,URU,2,,,,Cuiabá,Brazil,away
+2021,Group,,Round 1,2021-06-24,Chile,CHI,0,,Paraguay,PAR,2,,,,Brasília,Brazil,away
+2021,Group,,Round 1,2021-06-27,Venezuela,VEN,0,,Peru,PER,1,,,,Brasília,Brazil,away
+2021,Group,,Round 1,2021-06-27,Brazil,BRA,1,,Ecuador,ECU,1,,,,Goiânia,Brazil,draw
+2021,Group,,Round 1,2021-06-28,Uruguay,URU,1,,Paraguay,PAR,0,,,,Rio de Janeiro,Brazil,home
+2021,Group,,Round 1,2021-06-28,Argentina,ARG,4,,Bolivia,BOL,1,,,,Cuiabá,Brazil,home
+2021,Knock Out,,Quarter Final,2021-07-02,Peru,PER,3,1,Paraguay,PAR,3,0,1,,Goiânia,Brazil,draw
+2021,Knock Out,,Quarter Final,2021-07-02,Brazil,BRA,1,,Chile,CHI,0,,,,Rio de Janeiro,Brazil,home
+2021,Knock Out,,Quarter Final,2021-07-03,Uruguay,URU,0,0,Colombia,COL,0,1,1,,Brasília,Brazil,draw
+2021,Knock Out,,Quarter Final,2021-07-03,Argentina,ARG,3,,Ecuador,ECU,0,,,,Goiânia,Brazil,home
+2021,Knock Out,,Semi Final,2021-07-05,Brazil,BRA,1,,Peru,PER,0,,,,Rio de Janeiro,Brazil,home
+2021,Knock Out,,Semi Final,2021-07-06,Argentina,ARG,1,1,Colombia,COL,1,0,1,,Brasília,Brazil,draw
+2021,Knock Out,,Third Place,2021-07-09,Peru,PER,2,,Colombia,COL,3,,,,Brasília,Brazil,away
+2021,Knock Out,,Final,2021-07-10,Brazil,BRA,0,,Argentina,ARG,1,,,,Rio de Janeiro,Brazil,away
+2024,Group,A,Round 1,2024-06-20,Argentina,ARG,2,,Canada,CAN,0,,,,Atlanta,United States,home
+2024,Group,A,Round 1,2024-06-21,Peru,PER,0,,Chile,CHI,0,,,,Arlington,United States,draw
+2024,Group,A,Round 1,2024-06-25,Chile,CHI,0,,Argentina,ARG,1,,,,East Rutherford,United States,away
+2024,Group,A,Round 1,2024-06-25,Peru,PER,0,,Canada,CAN,1,,,,Kansas City,United States,away
+2024,Group,A,Round 1,2024-06-29,Argentina,ARG,2,,Peru,PER,0,,,,Miami Gardens,United States,home
+2024,Group,A,Round 1,2024-06-29,Canada,CAN,0,,Chile,CHI,0,,,,Orlando,United States,draw
+2024,Group,B,Round 1,2024-06-22,Ecuador,ECU,1,,Venezuela,VEN,2,,,,Santa Clara,United States,away
+2024,Group,B,Round 1,2024-06-22,Mexico,MEX,1,,Jamaica,JAM,0,,,,Houston,United States,home
+2024,Group,B,Round 1,2024-06-26,Ecuador,ECU,3,,Jamaica,JAM,1,,,,Las Vegas,United States,home
+2024,Group,B,Round 1,2024-06-26,Venezuela,VEN,1,,Mexico,MEX,0,,,,Inglewood,United States,home
+2024,Group,B,Round 1,2024-06-30,Mexico,MEX,0,,Ecuador,ECU,0,,,,Glendale,United States,draw
+2024,Group,B,Round 1,2024-06-30,Jamaica,JAM,0,,Venezuela,VEN,3,,,,Austin,United States,away
+2024,Group,C,Round 1,2024-06-23,Uruguay,URU,3,,Panama,PAN,1,,,,Miami Gardens,United States,home
+2024,Group,C,Round 1,2024-06-23,United States,USA,2,,Bolivia,BOL,0,,,,Arlington,United States,home
+2024,Group,C,Round 1,2024-06-27,United States,USA,1,,Panama,PAN,2,,,,Atlanta,United States,away
+2024,Group,C,Round 1,2024-06-27,Uruguay,URU,5,,Bolivia,BOL,0,,,,East Rutherford,United States,home
+2024,Group,C,Round 1,2024-07-01,United States,USA,0,,Uruguay,URU,1,,,,Kansas City,United States,away
+2024,Group,C,Round 1,2024-07-01,Bolivia,BOL,1,,Panama,PAN,3,,,,Orlando,United States,away
+2024,Group,D,Round 1,2024-06-24,Brazil,BRA,0,,Costa Rica,CRC,0,,,,Inglewood,United States,draw
+2024,Group,D,Round 1,2024-06-24,Colombia,COL,2,,Paraguay,PAR,1,,,,Houston,United States,home
+2024,Group,D,Round 1,2024-06-28,Colombia,COL,3,,Costa Rica,CRC,0,,,,Glendale,United States,home
+2024,Group,D,Round 1,2024-06-28,Paraguay,PAR,1,,Brazil,BRA,4,,,,Las Vegas,United States,away
+2024,Group,D,Round 1,2024-07-02,Costa Rica,CRC,2,,Paraguay,PAR,1,,,,Austin,United States,home
+2024,Group,D,Round 1,2024-07-02,Brazil,BRA,1,,Colombia,COL,1,,,,Santa Clara,United States,draw
+2024,Knock Out,,Quarter Final,2024-07-04,Argentina,ARG,1,1,Ecuador,ECU,1,0,1,,Houston,United States,draw
+2024,Knock Out,,Quarter Final,2024-07-05,Venezuela,VEN,1,0,Canada,CAN,1,1,1,,Arlington,United States,draw
+2024,Knock Out,,Quarter Final,2024-07-06,Uruguay,URU,0,1,Brazil,BRA,0,0,1,,Las Vegas,United States,draw
+2024,Knock Out,,Quarter Final,2024-07-06,Colombia,COL,5,,Panama,PAN,0,,,,Glendale,United States,home
+2024,Knock Out,,Semi Final,2024-07-09,Argentina,ARG,2,,Canada,CAN,0,,,,East Rutherford,United States,home
+2024,Knock Out,,Semi Final,2024-07-10,Uruguay,URU,0,,Colombia,COL,1,,,,Charlotte,United States,away
+2024,Knock Out,,Third Place,2024-07-13,Canada,CAN,2,0,Uruguay,URU,2,1,1,,Charlotte,United States,draw
+2024,Knock Out,,Final,2024-07-14,Argentina,ARG,1,,Colombia,COL,0,,,,Miami Gardens,United States,home

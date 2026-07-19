@@ -1,0 +1,25 @@
+# Okta Best Practices: Quick-Start Checklist
+
+## Scenario
+
+A project is working on **quick-start checklist** for Okta Best Practices. The team needs to apply this guidance without losing the constraints that make the skill relevant.
+
+## Worked example
+
+Use the following source guidance as a short decision checklist:
+
+- [ ] OIDC/SAML chosen to match IdP + app needs; audiences configured per API
+- [ ] Tokens validated locally (RS256 + JWKS) — `iss`/`aud`/`exp` checked
+- [ ] Authorization via group claims; no client-supplied authorization headers
+- [ ] PKCE for public clients; client_credentials for M2M
+- [ ] MFA/adaptive policies enabled; brute-force protection on
+- [ ] SCIM/lifecycle integration configured; deactivation semantics honored
+- [ ] JWKS cached; key rotation handled; SSO outages rehearsed
+
+1. Apply the guidance to the concrete project and record any assumptions.
+2. Check the result against the section's intended outcome and the surrounding skill guidance.
+3. Validate relevant edge cases with project-specific tests or review.
+
+## Source
+
+Based on the **Quick-Start Checklist** section of [SKILL.md](../SKILL.md).

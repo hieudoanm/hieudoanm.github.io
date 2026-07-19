@@ -1,0 +1,36 @@
+name: CI - App - Headless - CV
+
+on:
+  push:
+    branches:
+      - "master"
+      - "develop"
+      - "hotfix/**"
+      - "feature/**"
+      - "renovate/**"
+      - "dependabot/**"
+    paths:
+      - "packages/app/headless/cv/languages/go/**"
+      - ".github/workflows/ci-app-headless-cv.yaml"
+      - ".github/workflows/ci-app-headless-template.yaml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-headless-cv-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-headless-template.yaml
+    with:
+      package: packages/app/headless/cv/languages/go
+      rustPackage: ""
+      releaseName: app-headless-cv-latest
+      releaseTitle: App - Headless - CV (latest)
+      artifactName: app-headless-cv
+      artifactPath: packages/app/headless/cv/languages/go/bin/*
+      rustArtifactPath: ""
+      installZig: false
+      installRustDeps: false

@@ -1,0 +1,91 @@
+{
+  "name": "@hieudoanm.github.io/lingo",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Lingo",
+  "keywords": [
+    "lingo",
+    "education",
+    "languages",
+    "dictionary",
+    "sign-language"
+  ],
+  "homepage": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-education-lingo-latest",
+  "bugs": {
+    "url": "https://github.com/hieudoanm/hieudoanm.github.io/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/hieudoanm/hieudoanm.github.io.git"
+  },
+  "license": "GPL-3.0",
+  "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
+  "packageManager": "pnpm@12.18.0",
+  "engines": {
+    "node": "26.13.1"
+  },
+  "scripts": {
+    "lint": "eslint . --fix",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --cache --write .",
+    "test": "jest --passWithNoTests",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "predev": "rimraf .next && kill-port 3000",
+    "dev": "next dev --turbopack",
+    "prebuild": "rimraf .next out",
+    "build": "next build",
+    "prestart": "kill-port 3000",
+    "start": "next start",
+    "tauri": "tauri"
+  },
+  "dependencies": {
+    "@mediapipe/camera_utils": "0.3.1675466862",
+    "@mediapipe/drawing_utils": "0.3.1675466124",
+    "@mediapipe/hands": "0.4.1675469240",
+    "@tanstack/react-query": "5.107.1",
+    "@tauri-apps/api": "2.12.4",
+    "@tauri-apps/plugin-dialog": "2.8.4",
+    "@tauri-apps/plugin-notification": "2.8.1",
+    "@tauri-apps/plugin-updater": "2.14.1",
+    "idb": "8.0.4",
+    "marked": "18.2.0",
+    "next": "16.4.6",
+    "onnxruntime-web": "1.31.1",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "react-icons": "5.7.0",
+    "three": "0.187.0",
+    "zustand": "5.1.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.0",
+    "@tailwindcss/postcss": "4.3.5",
+    "@tauri-apps/cli": "2.12.4",
+    "@testing-library/jest-dom": "7.0.1",
+    "@testing-library/react": "16.3.3",
+    "@testing-library/user-event": "14.6.10",
+    "@types/jest": "30.0.0",
+    "@types/node": "26.6.6",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/three": "0.187.0",
+    "daisyui": "5.8.0",
+    "eslint": "10.14.0",
+    "eslint-config-next": "16.4.6",
+    "fake-indexeddb": "6.2.8",
+    "jest": "30.5.2",
+    "jest-environment-jsdom": "30.5.2",
+    "json5": "2.2.3",
+    "kill-port": "2.0.1",
+    "prettier": "3.10.1",
+    "prettier-plugin-tailwindcss": "0.8.1",
+    "raw-loader": "4.0.2",
+    "rimraf": "6.1.4",
+    "tailwindcss": "4.3.5",
+    "ts-jest": "29.4.15",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.72.2",
+    "yaml": "2.9.1"
+  }
+}

@@ -1,0 +1,16 @@
+// Text align utilities — Tailwind v3 default scale
+
+$text-aligns: (
+  ('left', left),
+  ('center', center),
+  ('right', right),
+  ('justify', justify),
+  ('start', start),
+  ('end', end)
+);
+
+@each $name, $value in $text-aligns {
+  .text-#{$name} {
+    text-align: $value;
+  }
+}

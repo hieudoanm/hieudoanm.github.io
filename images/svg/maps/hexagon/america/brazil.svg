@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 358.71 305.52" width="358.71" height="305.52" role="img" aria-labelledby="brazil-title brazil-desc">
+  <title id="brazil-title">Brazil hex map</title>
+  <desc id="brazil-desc">Hexagon map with 27 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.57; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 12.70 9.07; }
+    .label { fill: #52525b; font: 600 10.28px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="AL">
+    <title>Alagoas</title>
+    <polygon class="tile" points="323.44,54.45 349.64,69.57 349.64,99.82 323.44,114.95 297.24,99.82 297.24,69.57" aria-label="Alagoas"/>
+    <text class="label" x="323.44" y="84.70">AL</text>
+  </g>
+  <g class="state" data-state="PB">
+    <title>Paraíba</title>
+    <polygon class="tile" points="297.24,9.07 323.44,24.20 323.44,54.45 297.24,69.57 271.05,54.45 271.05,24.20" aria-label="Paraíba"/>
+    <text class="label" x="297.24" y="39.32">PB</text>
+  </g>
+  <g class="state" data-state="SE">
+    <title>Sergipe</title>
+    <polygon class="tile" points="297.24,99.82 323.44,114.95 323.44,145.20 297.24,160.32 271.05,145.20 271.05,114.95" aria-label="Sergipe"/>
+    <text class="label" x="297.24" y="130.07">SE</text>
+  </g>
+  <g class="state" data-state="PE">
+    <title>Pernambuco</title>
+    <polygon class="tile" points="271.05,54.45 297.24,69.57 297.24,99.82 271.05,114.95 244.85,99.82 244.85,69.57" aria-label="Pernambuco"/>
+    <text class="label" x="271.05" y="84.70">PE</text>
+  </g>
+  <g class="state" data-state="ES">
+    <title>Espírito Santo</title>
+    <polygon class="tile" points="271.05,145.20 297.24,160.32 297.24,190.57 271.05,205.70 244.85,190.57 244.85,160.32" aria-label="Espírito Santo"/>
+    <text class="label" x="271.05" y="175.45">ES</text>
+  </g>
+  <g class="state" data-state="CE">
+    <title>Ceará</title>
+    <polygon class="tile" points="244.85,9.07 271.05,24.20 271.05,54.45 244.85,69.57 218.65,54.45 218.65,24.20" aria-label="Ceará"/>
+    <text class="label" x="244.85" y="39.32">CE</text>
+  </g>
+  <g class="state" data-state="BA">
+    <title>Bahia</title>
+    <polygon class="tile" points="244.85,99.82 271.05,114.95 271.05,145.20 244.85,160.32 218.65,145.20 218.65,114.95" aria-label="Bahia"/>
+    <text class="label" x="244.85" y="130.07">BA</text>
+  </g>
+  <g class="state" data-state="RJ">
+    <title>Rio de Janeiro</title>
+    <polygon class="tile" points="244.85,190.57 271.05,205.70 271.05,235.95 244.85,251.07 218.65,235.95 218.65,205.70" aria-label="Rio de Janeiro"/>
+    <text class="label" x="244.85" y="220.82">RJ</text>
+  </g>
+  <g class="state" data-state="PI">
+    <title>Piauí</title>
+    <polygon class="tile" points="218.65,54.45 244.85,69.57 244.85,99.82 218.65,114.95 192.46,99.82 192.46,69.57" aria-label="Piauí"/>
+    <text class="label" x="218.65" y="84.70">PI</text>
+  </g>
+  <g class="state" data-state="MG">
+    <title>Minas Gerais</title>
+    <polygon class="tile" points="218.65,145.20 244.85,160.32 244.85,190.57 218.65,205.70 192.46,190.57 192.46,160.32" aria-label="Minas Gerais"/>
+    <text class="label" x="218.65" y="175.45">MG</text>
+  </g>
+  <g class="state" data-state="RS">
+    <title>Rio Grande do Sul</title>
+    <polygon class="tile" points="218.65,235.95 244.85,251.07 244.85,281.32 218.65,296.45 192.46,281.32 192.46,251.07" aria-label="Rio Grande do Sul"/>
+    <text class="label" x="218.65" y="266.20">RS</text>
+  </g>
+  <g class="state" data-state="RN">
+    <title>Rio Grande do Norte</title>
+    <polygon class="tile" points="192.46,9.07 218.65,24.20 218.65,54.45 192.46,69.57 166.26,54.45 166.26,24.20" aria-label="Rio Grande do Norte"/>
+    <text class="label" x="192.46" y="39.32">RN</text>
+  </g>
+  <g class="state" data-state="TO">
+    <title>Tocantins</title>
+    <polygon class="tile" points="192.46,99.82 218.65,114.95 218.65,145.20 192.46,160.32 166.26,145.20 166.26,114.95" aria-label="Tocantins"/>
+    <text class="label" x="192.46" y="130.07">TO</text>
+  </g>
+  <g class="state" data-state="SP">
+    <title>São Paulo</title>
+    <polygon class="tile" points="192.46,190.57 218.65,205.70 218.65,235.95 192.46,251.07 166.26,235.95 166.26,205.70" aria-label="São Paulo"/>
+    <text class="label" x="192.46" y="220.82">SP</text>
+  </g>
+  <g class="state" data-state="MA">
+    <title>Maranhão</title>
+    <polygon class="tile" points="166.26,54.45 192.46,69.57 192.46,99.82 166.26,114.95 140.06,99.82 140.06,69.57" aria-label="Maranhão"/>
+    <text class="label" x="166.26" y="84.70">MA</text>
+  </g>
+  <g class="state" data-state="MS">
+    <title>Mato Grosso do Sul</title>
+    <polygon class="tile" points="166.26,145.20 192.46,160.32 192.46,190.57 166.26,205.70 140.06,190.57 140.06,160.32" aria-label="Mato Grosso do Sul"/>
+    <text class="label" x="166.26" y="175.45">MS</text>
+  </g>
+  <g class="state" data-state="SC">
+    <title>Santa Catarina</title>
+    <polygon class="tile" points="166.26,235.95 192.46,251.07 192.46,281.32 166.26,296.45 140.06,281.32 140.06,251.07" aria-label="Santa Catarina"/>
+    <text class="label" x="166.26" y="266.20">SC</text>
+  </g>
+  <g class="state" data-state="AP">
+    <title>Amapá</title>
+    <polygon class="tile" points="140.06,9.07 166.26,24.20 166.26,54.45 140.06,69.57 113.86,54.45 113.86,24.20" aria-label="Amapá"/>
+    <text class="label" x="140.06" y="39.32">AP</text>
+  </g>
+  <g class="state" data-state="MT">
+    <title>Mato Grosso</title>
+    <polygon class="tile" points="140.06,99.82 166.26,114.95 166.26,145.20 140.06,160.32 113.86,145.20 113.86,114.95" aria-label="Mato Grosso"/>
+    <text class="label" x="140.06" y="130.07">MT</text>
+  </g>
+  <g class="state" data-state="PR">
+    <title>Paraná</title>
+    <polygon class="tile" points="140.06,190.57 166.26,205.70 166.26,235.95 140.06,251.07 113.86,235.95 113.86,205.70" aria-label="Paraná"/>
+    <text class="label" x="140.06" y="220.82">PR</text>
+  </g>
+  <g class="state" data-state="PA">
+    <title>Pará</title>
+    <polygon class="tile" points="113.86,54.45 140.06,69.57 140.06,99.82 113.86,114.95 87.67,99.82 87.67,69.57" aria-label="Pará"/>
+    <text class="label" x="113.86" y="84.70">PA</text>
+  </g>
+  <g class="state" data-state="GO">
+    <title>Goiás</title>
+    <polygon class="tile" points="113.86,145.20 140.06,160.32 140.06,190.57 113.86,205.70 87.67,190.57 87.67,160.32" aria-label="Goiás"/>
+    <text class="label" x="113.86" y="175.45">GO</text>
+  </g>
+  <g class="state" data-state="RR">
+    <title>Roraima</title>
+    <polygon class="tile" points="87.67,9.07 113.86,24.20 113.86,54.45 87.67,69.57 61.47,54.45 61.47,24.20" aria-label="Roraima"/>
+    <text class="label" x="87.67" y="39.32">RR</text>
+  </g>
+  <g class="state" data-state="RO">
+    <title>Rondônia</title>
+    <polygon class="tile" points="87.67,99.82 113.86,114.95 113.86,145.20 87.67,160.32 61.47,145.20 61.47,114.95" aria-label="Rondônia"/>
+    <text class="label" x="87.67" y="130.07">RO</text>
+  </g>
+  <g class="state" data-state="AM">
+    <title>Amazonas</title>
+    <polygon class="tile" points="61.47,54.45 87.67,69.57 87.67,99.82 61.47,114.95 35.27,99.82 35.27,69.57" aria-label="Amazonas"/>
+    <text class="label" x="61.47" y="84.70">AM</text>
+  </g>
+  <g class="state" data-state="DF">
+    <title>Distrito Federal</title>
+    <polygon class="tile" points="61.47,145.20 87.67,160.32 87.67,190.57 61.47,205.70 35.27,190.57 35.27,160.32" aria-label="Distrito Federal"/>
+    <text class="label" x="61.47" y="175.45">DF</text>
+  </g>
+  <g class="state" data-state="AC">
+    <title>Acre</title>
+    <polygon class="tile" points="35.27,99.82 61.47,114.95 61.47,145.20 35.27,160.32 9.07,145.20 9.07,114.95" aria-label="Acre"/>
+    <text class="label" x="35.27" y="130.07">AC</text>
+  </g>
+</svg>

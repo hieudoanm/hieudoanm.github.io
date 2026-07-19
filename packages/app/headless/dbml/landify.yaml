@@ -1,0 +1,94 @@
+# landify.yaml for DBML
+type: product
+
+theme:
+  base: '#f7f8fa'
+  primary: '#7c3aed'
+  secondary: '#0ea5e9'
+  neutral: '#555f6e'
+  info: '#2563eb'
+  warning: '#d97706'
+  success: '#16a34a'
+  error: '#dc2626'
+  radius: '10px'
+
+site:
+  name: DBML
+  mark: '📊'
+  description: >-
+    A Go CLI and HTTP server to convert DBML into SQL schemas, Mermaid ER diagrams, and SVG visualizations.
+  nav:
+    - label: Features
+      href: '#features'
+    - label: Get started
+      href: '#cta'
+
+  og:
+    title: DBML - Database Markup Language Converter
+    description: >-
+      Convert DBML to SQL, Mermaid ER diagrams, and SVG with CLI and REST API.
+    image: 'https://hieudoanm.github.io/packages/app/headless/dbml/public/og/og.png'
+    image_alt: 'DBML — Database Markup Language Converter'
+    url: 'https://hieudoanm.github.io/packages/app/headless/dbml/public/'
+    kicker: 'CLI + HTTP API'
+    tags:
+      - 'Database schemas'
+      - 'SQL generation'
+      - 'ER diagrams'
+
+hero:
+  badge: '⚡ Fast & Simple'
+  headline: Convert DBML to SQL, Diagrams & More
+  subheadline: >-
+    Write DBML. Run one command. Get SQL schemas, Mermaid ER diagrams, and SVG visualizations.
+    Available as CLI and HTTP API.
+  primary:
+    label: Get started
+    href: '#cta'
+  secondary:
+    label: View examples
+    href: 'https://github.com/hieudoanm/hieudoanm.github.io/tree/main/packages/app/headless/dbml/examples'
+  image:
+    src: 'demo/demo.png'
+    alt: DBML schema conversion
+
+features:
+  heading: Features
+  sub: Everything you need to work with DBML schemas.
+  items:
+    - icon: '⚡'
+      title: Zero dependencies
+      body: >-
+        Single binary with no runtime dependencies; SVG generated directly in Go.
+    - icon: '🔧'
+      title: CLI & HTTP API
+      body: >-
+        Use as a command-line tool or expose as a REST API server for programmatic conversion.
+    - icon: '📄'
+      title: Multiple formats
+      body: >-
+        Generate PostgreSQL-compatible SQL, Mermaid ER diagrams, and SVG visualizations.
+
+demo: # a video walkthrough, also at 1280 × 720 (16:9)
+  heading: Demo
+  sub: A short video walkthrough of your product.
+  video:
+    src: 'demo/demo.mp4' #   [required] MP4 video path or URL
+    poster: 'demo/poster.png' #   [optional] poster frame shown before playback
+
+cta: # the closing call to action
+  icon: '🚀' # [optional] emoji above the heading
+  heading: Ready to convert your DBML schemas?
+  body: >- # [required]
+    Build the CLI in seconds and start converting DBML files to your desired formats.
+  button:
+    label: Get Started
+    href: 'https://github.com/hieudoanm/hieudoanm.github.io/tree/main/packages/app/headless/dbml'
+
+footer:
+  copyright: '© 2026 DBML. Built with Landify.'
+  links:
+    - label: Features
+      href: '#features'
+    - label: Get started
+      href: '#cta'

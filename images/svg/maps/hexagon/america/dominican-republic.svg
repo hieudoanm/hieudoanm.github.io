@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360.35 228.03" width="360.35" height="228.03" role="img" aria-labelledby="dominican-republic-title dominican-republic-desc">
+  <title id="dominican-republic-title">Dominican Republic hex map</title>
+  <desc id="dominican-republic-desc">Hexagon map with 32 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.25; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 11.14 7.95; }
+    .label { fill: #52525b; font: 600 9.02px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="AL">
+    <title>La Altagracia</title>
+    <polygon class="tile" points="329.44,127.27 352.40,140.53 352.40,167.05 329.44,180.30 306.47,167.05 306.47,140.53" aria-label="La Altagracia"/>
+    <text class="label" x="329.44" y="153.79">AL</text>
+  </g>
+  <g class="state" data-state="SE">
+    <title>El Seybo</title>
+    <polygon class="tile" points="306.47,87.50 329.44,100.76 329.44,127.27 306.47,140.53 283.51,127.27 283.51,100.76" aria-label="El Seybo"/>
+    <text class="label" x="306.47" y="114.02">SE</text>
+  </g>
+  <g class="state" data-state="RO">
+    <title>La Romana</title>
+    <polygon class="tile" points="306.47,167.05 329.44,180.30 329.44,206.82 306.47,220.08 283.51,206.82 283.51,180.30" aria-label="La Romana"/>
+    <text class="label" x="306.47" y="193.56">RO</text>
+  </g>
+  <g class="state" data-state="SM">
+    <title>Samaná</title>
+    <polygon class="tile" points="283.51,47.73 306.47,60.99 306.47,87.50 283.51,100.76 260.55,87.50 260.55,60.99" aria-label="Samaná"/>
+    <text class="label" x="283.51" y="74.24">SM</text>
+  </g>
+  <g class="state" data-state="PM">
+    <title>San Pedro de Macorís</title>
+    <polygon class="tile" points="283.51,127.27 306.47,140.53 306.47,167.05 283.51,180.30 260.55,167.05 260.55,140.53" aria-label="San Pedro de Macorís"/>
+    <text class="label" x="283.51" y="153.79">PM</text>
+  </g>
+  <g class="state" data-state="MT">
+    <title>María Trinidad Sánchez</title>
+    <polygon class="tile" points="260.55,7.95 283.51,21.21 283.51,47.73 260.55,60.99 237.58,47.73 237.58,21.21" aria-label="María Trinidad Sánchez"/>
+    <text class="label" x="260.55" y="34.47">MT</text>
+  </g>
+  <g class="state" data-state="HM">
+    <title>Hato Mayor</title>
+    <polygon class="tile" points="260.55,87.50 283.51,100.76 283.51,127.27 260.55,140.53 237.58,127.27 237.58,100.76" aria-label="Hato Mayor"/>
+    <text class="label" x="260.55" y="114.02">HM</text>
+  </g>
+  <g class="state" data-state="SD">
+    <title>Santo Domingo</title>
+    <polygon class="tile" points="260.55,167.05 283.51,180.30 283.51,206.82 260.55,220.08 237.58,206.82 237.58,180.30" aria-label="Santo Domingo"/>
+    <text class="label" x="260.55" y="193.56">SD</text>
+  </g>
+  <g class="state" data-state="DU">
+    <title>Duarte</title>
+    <polygon class="tile" points="237.58,47.73 260.55,60.99 260.55,87.50 237.58,100.76 214.62,87.50 214.62,60.99" aria-label="Duarte"/>
+    <text class="label" x="237.58" y="74.24">DU</text>
+  </g>
+  <g class="state" data-state="MP">
+    <title>Monte Plata</title>
+    <polygon class="tile" points="237.58,127.27 260.55,140.53 260.55,167.05 237.58,180.30 214.62,167.05 214.62,140.53" aria-label="Monte Plata"/>
+    <text class="label" x="237.58" y="153.79">MP</text>
+  </g>
+  <g class="state" data-state="ES">
+    <title>Espaillat</title>
+    <polygon class="tile" points="214.62,7.95 237.58,21.21 237.58,47.73 214.62,60.99 191.66,47.73 191.66,21.21" aria-label="Espaillat"/>
+    <text class="label" x="214.62" y="34.47">ES</text>
+  </g>
+  <g class="state" data-state="SZ">
+    <title>Sánchez Ramírez</title>
+    <polygon class="tile" points="214.62,87.50 237.58,100.76 237.58,127.27 214.62,140.53 191.66,127.27 191.66,100.76" aria-label="Sánchez Ramírez"/>
+    <text class="label" x="214.62" y="114.02">SZ</text>
+  </g>
+  <g class="state" data-state="NC">
+    <title>Distrito Nacional</title>
+    <polygon class="tile" points="214.62,167.05 237.58,180.30 237.58,206.82 214.62,220.08 191.66,206.82 191.66,180.30" aria-label="Distrito Nacional"/>
+    <text class="label" x="214.62" y="193.56">NC</text>
+  </g>
+  <g class="state" data-state="HER">
+    <title>Hermanas</title>
+    <polygon class="tile" points="191.66,47.73 214.62,60.99 214.62,87.50 191.66,100.76 168.70,87.50 168.70,60.99" aria-label="Hermanas"/>
+    <text class="label" x="191.66" y="74.24">HER</text>
+  </g>
+  <g class="state" data-state="CR">
+    <title>San Cristóbal</title>
+    <polygon class="tile" points="191.66,127.27 214.62,140.53 214.62,167.05 191.66,180.30 168.70,167.05 168.70,140.53" aria-label="San Cristóbal"/>
+    <text class="label" x="191.66" y="153.79">CR</text>
+  </g>
+  <g class="state" data-state="PP">
+    <title>Puerto Plata</title>
+    <polygon class="tile" points="168.70,7.95 191.66,21.21 191.66,47.73 168.70,60.99 145.73,47.73 145.73,21.21" aria-label="Puerto Plata"/>
+    <text class="label" x="168.70" y="34.47">PP</text>
+  </g>
+  <g class="state" data-state="MN">
+    <title>Monseñor Nouel</title>
+    <polygon class="tile" points="168.70,87.50 191.66,100.76 191.66,127.27 168.70,140.53 145.73,127.27 145.73,100.76" aria-label="Monseñor Nouel"/>
+    <text class="label" x="168.70" y="114.02">MN</text>
+  </g>
+  <g class="state" data-state="PV">
+    <title>Peravia</title>
+    <polygon class="tile" points="168.70,167.05 191.66,180.30 191.66,206.82 168.70,220.08 145.73,206.82 145.73,180.30" aria-label="Peravia"/>
+    <text class="label" x="168.70" y="193.56">PV</text>
+  </g>
+  <g class="state" data-state="ST">
+    <title>Santiago</title>
+    <polygon class="tile" points="145.73,47.73 168.70,60.99 168.70,87.50 145.73,100.76 122.77,87.50 122.77,60.99" aria-label="Santiago"/>
+    <text class="label" x="145.73" y="74.24">ST</text>
+  </g>
+  <g class="state" data-state="JO">
+    <title>San José de Ocoa</title>
+    <polygon class="tile" points="145.73,127.27 168.70,140.53 168.70,167.05 145.73,180.30 122.77,167.05 122.77,140.53" aria-label="San José de Ocoa"/>
+    <text class="label" x="145.73" y="153.79">JO</text>
+  </g>
+  <g class="state" data-state="VA">
+    <title>Valverde</title>
+    <polygon class="tile" points="122.77,7.95 145.73,21.21 145.73,47.73 122.77,60.99 99.81,47.73 99.81,21.21" aria-label="Valverde"/>
+    <text class="label" x="122.77" y="34.47">VA</text>
+  </g>
+  <g class="state" data-state="VE">
+    <title>La Vega</title>
+    <polygon class="tile" points="122.77,87.50 145.73,100.76 145.73,127.27 122.77,140.53 99.81,127.27 99.81,100.76" aria-label="La Vega"/>
+    <text class="label" x="122.77" y="114.02">VE</text>
+  </g>
+  <g class="state" data-state="AZ">
+    <title>Azua</title>
+    <polygon class="tile" points="122.77,167.05 145.73,180.30 145.73,206.82 122.77,220.08 99.81,206.82 99.81,180.30" aria-label="Azua"/>
+    <text class="label" x="122.77" y="193.56">AZ</text>
+  </g>
+  <g class="state" data-state="SR">
+    <title>Santiago Rodríguez</title>
+    <polygon class="tile" points="99.81,47.73 122.77,60.99 122.77,87.50 99.81,100.76 76.84,87.50 76.84,60.99" aria-label="Santiago Rodríguez"/>
+    <text class="label" x="99.81" y="74.24">SR</text>
+  </g>
+  <g class="state" data-state="BR">
+    <title>Bahoruco</title>
+    <polygon class="tile" points="99.81,127.27 122.77,140.53 122.77,167.05 99.81,180.30 76.84,167.05 76.84,140.53" aria-label="Bahoruco"/>
+    <text class="label" x="99.81" y="153.79">BR</text>
+  </g>
+  <g class="state" data-state="MC">
+    <title>Monte Cristi</title>
+    <polygon class="tile" points="76.84,7.95 99.81,21.21 99.81,47.73 76.84,60.99 53.88,47.73 53.88,21.21" aria-label="Monte Cristi"/>
+    <text class="label" x="76.84" y="34.47">MC</text>
+  </g>
+  <g class="state" data-state="JU">
+    <title>San Juan</title>
+    <polygon class="tile" points="76.84,87.50 99.81,100.76 99.81,127.27 76.84,140.53 53.88,127.27 53.88,100.76" aria-label="San Juan"/>
+    <text class="label" x="76.84" y="114.02">JU</text>
+  </g>
+  <g class="state" data-state="BH">
+    <title>Barahona</title>
+    <polygon class="tile" points="76.84,167.05 99.81,180.30 99.81,206.82 76.84,220.08 53.88,206.82 53.88,180.30" aria-label="Barahona"/>
+    <text class="label" x="76.84" y="193.56">BH</text>
+  </g>
+  <g class="state" data-state="DA">
+    <title>Dajabón</title>
+    <polygon class="tile" points="53.88,47.73 76.84,60.99 76.84,87.50 53.88,100.76 30.92,87.50 30.92,60.99" aria-label="Dajabón"/>
+    <text class="label" x="53.88" y="74.24">DA</text>
+  </g>
+  <g class="state" data-state="IN">
+    <title>Independencia</title>
+    <polygon class="tile" points="53.88,127.27 76.84,140.53 76.84,167.05 53.88,180.30 30.92,167.05 30.92,140.53" aria-label="Independencia"/>
+    <text class="label" x="53.88" y="153.79">IN</text>
+  </g>
+  <g class="state" data-state="EP">
+    <title>La Estrelleta</title>
+    <polygon class="tile" points="30.92,87.50 53.88,100.76 53.88,127.27 30.92,140.53 7.95,127.27 7.95,100.76" aria-label="La Estrelleta"/>
+    <text class="label" x="30.92" y="114.02">EP</text>
+  </g>
+  <g class="state" data-state="PN">
+    <title>Pedernales</title>
+    <polygon class="tile" points="30.92,167.05 53.88,180.30 53.88,206.82 30.92,220.08 7.95,206.82 7.95,180.30" aria-label="Pedernales"/>
+    <text class="label" x="30.92" y="193.56">PN</text>
+  </g>
+</svg>

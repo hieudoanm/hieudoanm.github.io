@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 344.29 394.40" width="344.29" height="394.40" role="img" aria-labelledby="portugal-title portugal-desc">
+  <title id="portugal-title">Portugal hex map</title>
+  <desc id="portugal-desc">Hexagon map with 20 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.89; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 14.28 10.20; }
+    .label { fill: #52525b; font: 600 11.56px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="GU">
+    <title>Guarda</title>
+    <polygon class="tile" points="304.65,112.20 334.09,129.20 334.09,163.20 304.65,180.20 275.20,163.20 275.20,129.20" aria-label="Guarda"/>
+    <text class="label" x="304.65" y="146.20">GU</text>
+  </g>
+  <g class="state" data-state="BA">
+    <title>Bragança</title>
+    <polygon class="tile" points="275.20,61.20 304.65,78.20 304.65,112.20 275.20,129.20 245.76,112.20 245.76,78.20" aria-label="Bragança"/>
+    <text class="label" x="275.20" y="95.20">BA</text>
+  </g>
+  <g class="state" data-state="CB">
+    <title>Castelo Branco</title>
+    <polygon class="tile" points="275.20,163.20 304.65,180.20 304.65,214.20 275.20,231.20 245.76,214.20 245.76,180.20" aria-label="Castelo Branco"/>
+    <text class="label" x="275.20" y="197.20">CB</text>
+  </g>
+  <g class="state" data-state="VC">
+    <title>Viana do Castelo</title>
+    <polygon class="tile" points="245.76,10.20 275.20,27.20 275.20,61.20 245.76,78.20 216.31,61.20 216.31,27.20" aria-label="Viana do Castelo"/>
+    <text class="label" x="245.76" y="44.20">VC</text>
+  </g>
+  <g class="state" data-state="VI">
+    <title>Viseu</title>
+    <polygon class="tile" points="245.76,112.20 275.20,129.20 275.20,163.20 245.76,180.20 216.31,163.20 216.31,129.20" aria-label="Viseu"/>
+    <text class="label" x="245.76" y="146.20">VI</text>
+  </g>
+  <g class="state" data-state="PA">
+    <title>Portalegre</title>
+    <polygon class="tile" points="245.76,214.20 275.20,231.20 275.20,265.20 245.76,282.20 216.31,265.20 216.31,231.20" aria-label="Portalegre"/>
+    <text class="label" x="245.76" y="248.20">PA</text>
+  </g>
+  <g class="state" data-state="FA">
+    <title>Faro</title>
+    <polygon class="tile" points="245.76,316.20 275.20,333.20 275.20,367.20 245.76,384.20 216.31,367.20 216.31,333.20" aria-label="Faro"/>
+    <text class="label" x="245.76" y="350.20">FA</text>
+  </g>
+  <g class="state" data-state="VR">
+    <title>Vila Real</title>
+    <polygon class="tile" points="216.31,61.20 245.76,78.20 245.76,112.20 216.31,129.20 186.87,112.20 186.87,78.20" aria-label="Vila Real"/>
+    <text class="label" x="216.31" y="95.20">VR</text>
+  </g>
+  <g class="state" data-state="CO">
+    <title>Coimbra</title>
+    <polygon class="tile" points="216.31,163.20 245.76,180.20 245.76,214.20 216.31,231.20 186.87,214.20 186.87,180.20" aria-label="Coimbra"/>
+    <text class="label" x="216.31" y="197.20">CO</text>
+  </g>
+  <g class="state" data-state="EV">
+    <title>Évora</title>
+    <polygon class="tile" points="216.31,265.20 245.76,282.20 245.76,316.20 216.31,333.20 186.87,316.20 186.87,282.20" aria-label="Évora"/>
+    <text class="label" x="216.31" y="299.20">EV</text>
+  </g>
+  <g class="state" data-state="BR">
+    <title>Braga</title>
+    <polygon class="tile" points="186.87,10.20 216.31,27.20 216.31,61.20 186.87,78.20 157.42,61.20 157.42,27.20" aria-label="Braga"/>
+    <text class="label" x="186.87" y="44.20">BR</text>
+  </g>
+  <g class="state" data-state="AV">
+    <title>Aveiro</title>
+    <polygon class="tile" points="186.87,112.20 216.31,129.20 216.31,163.20 186.87,180.20 157.42,163.20 157.42,129.20" aria-label="Aveiro"/>
+    <text class="label" x="186.87" y="146.20">AV</text>
+  </g>
+  <g class="state" data-state="SA">
+    <title>Santarém</title>
+    <polygon class="tile" points="186.87,214.20 216.31,231.20 216.31,265.20 186.87,282.20 157.42,265.20 157.42,231.20" aria-label="Santarém"/>
+    <text class="label" x="186.87" y="248.20">SA</text>
+  </g>
+  <g class="state" data-state="BE">
+    <title>Beja</title>
+    <polygon class="tile" points="186.87,316.20 216.31,333.20 216.31,367.20 186.87,384.20 157.42,367.20 157.42,333.20" aria-label="Beja"/>
+    <text class="label" x="186.87" y="350.20">BE</text>
+  </g>
+  <g class="state" data-state="PO">
+    <title>Porto</title>
+    <polygon class="tile" points="157.42,61.20 186.87,78.20 186.87,112.20 157.42,129.20 127.98,112.20 127.98,78.20" aria-label="Porto"/>
+    <text class="label" x="157.42" y="95.20">PO</text>
+  </g>
+  <g class="state" data-state="LE">
+    <title>Leiria</title>
+    <polygon class="tile" points="157.42,163.20 186.87,180.20 186.87,214.20 157.42,231.20 127.98,214.20 127.98,180.20" aria-label="Leiria"/>
+    <text class="label" x="157.42" y="197.20">LE</text>
+  </g>
+  <g class="state" data-state="SE">
+    <title>Setúbal</title>
+    <polygon class="tile" points="157.42,265.20 186.87,282.20 186.87,316.20 157.42,333.20 127.98,316.20 127.98,282.20" aria-label="Setúbal"/>
+    <text class="label" x="157.42" y="299.20">SE</text>
+  </g>
+  <g class="state" data-state="LI">
+    <title>Lisboa</title>
+    <polygon class="tile" points="127.98,214.20 157.42,231.20 157.42,265.20 127.98,282.20 98.53,265.20 98.53,231.20" aria-label="Lisboa"/>
+    <text class="label" x="127.98" y="248.20">LI</text>
+  </g>
+  <g class="state" data-state="MA">
+    <title>Madeira</title>
+    <polygon class="tile inset" points="69.09,316.20 98.53,333.20 98.53,367.20 69.09,384.20 39.64,367.20 39.64,333.20" aria-label="Madeira"/>
+    <text class="label" x="69.09" y="350.20">MA</text>
+  </g>
+  <g class="state" data-state="AC">
+    <title>Azores</title>
+    <polygon class="tile inset" points="39.64,163.20 69.09,180.20 69.09,214.20 39.64,231.20 10.20,214.20 10.20,180.20" aria-label="Azores"/>
+    <text class="label" x="39.64" y="197.20">AC</text>
+  </g>
+</svg>

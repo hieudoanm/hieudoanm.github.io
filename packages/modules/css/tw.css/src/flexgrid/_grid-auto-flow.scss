@@ -1,0 +1,15 @@
+// Grid auto flow utilities — Tailwind v3 default scale
+
+$grid-auto-flows: (
+  ('row', row),
+  ('col', column),
+  ('dense', dense),
+  ('row-dense', 'row dense'),
+  ('col-dense', 'column dense')
+);
+
+@each $name, $value in $grid-auto-flows {
+  .grid-flow-#{$name} {
+    grid-auto-flow: #{$value};
+  }
+}

@@ -1,0 +1,9 @@
+// Box sizing utilities — Tailwind v3 default scale
+
+$box-sizings: (('border', border-box), ('content', content-box));
+
+@each $name, $value in $box-sizings {
+  .box-#{$name} {
+    box-sizing: $value;
+  }
+}

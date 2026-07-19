@@ -1,0 +1,43 @@
+{
+  "name": "@hieudoanm.github.io/workspace",
+  "version": "0.0.1",
+  "private": true,
+  "description": "hieudoanm",
+  "keywords": [
+    "hieudoanm"
+  ],
+  "homepage": "https://hieudoanm.github.io",
+  "bugs": {
+    "url": "https://github.com/hieudoanm/hieudoanm.github.io/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hieudoanm/hieudoanm.github.io.git"
+  },
+  "license": "GPL-3.0",
+  "author": {
+    "name": "Hieu Doan",
+    "email": "hieu.doan.professional@gmail.com",
+    "url": "https://hieudoanm.github.io"
+  },
+  "packageManager": "pnpm@12.18.0",
+  "engines": {
+    "node": "26.13.1"
+  },
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "test": "turbo run test --concurrency=1",
+    "typecheck": "turbo run typecheck",
+    "format": "turbo run format",
+    "prepare": "husky || true"
+  },
+  "devDependencies": {
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "docsify": "5.1.0",
+    "husky": "9.1.7",
+    "turbo": "2.11.11"
+  }
+}

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 197.07 292.40" width="197.07" height="292.40" role="img" aria-labelledby="benin-title benin-desc">
+  <title id="benin-title">Benin hex map</title>
+  <desc id="benin-desc">Hexagon map with 12 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.89; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 14.28 10.20; }
+    .label { fill: #52525b; font: 600 11.56px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="BO">
+    <title>Borgou</title>
+    <polygon class="tile" points="157.42,61.20 186.87,78.20 186.87,112.20 157.42,129.20 127.98,112.20 127.98,78.20" aria-label="Borgou"/>
+    <text class="label" x="157.42" y="95.20">BO</text>
+  </g>
+  <g class="state" data-state="OU">
+    <title>Ouémé</title>
+    <polygon class="tile" points="157.42,163.20 186.87,180.20 186.87,214.20 157.42,231.20 127.98,214.20 127.98,180.20" aria-label="Ouémé"/>
+    <text class="label" x="157.42" y="197.20">OU</text>
+  </g>
+  <g class="state" data-state="AL">
+    <title>Alibori</title>
+    <polygon class="tile" points="127.98,10.20 157.42,27.20 157.42,61.20 127.98,78.20 98.53,61.20 98.53,27.20" aria-label="Alibori"/>
+    <text class="label" x="127.98" y="44.20">AL</text>
+  </g>
+  <g class="state" data-state="PL">
+    <title>Plateau</title>
+    <polygon class="tile" points="127.98,112.20 157.42,129.20 157.42,163.20 127.98,180.20 98.53,163.20 98.53,129.20" aria-label="Plateau"/>
+    <text class="label" x="127.98" y="146.20">PL</text>
+  </g>
+  <g class="state" data-state="LI">
+    <title>Littoral</title>
+    <polygon class="tile" points="127.98,214.20 157.42,231.20 157.42,265.20 127.98,282.20 98.53,265.20 98.53,231.20" aria-label="Littoral"/>
+    <text class="label" x="127.98" y="248.20">LI</text>
+  </g>
+  <g class="state" data-state="CO">
+    <title>Collines</title>
+    <polygon class="tile" points="98.53,61.20 127.98,78.20 127.98,112.20 98.53,129.20 69.09,112.20 69.09,78.20" aria-label="Collines"/>
+    <text class="label" x="98.53" y="95.20">CO</text>
+  </g>
+  <g class="state" data-state="AQ">
+    <title>Atlantique</title>
+    <polygon class="tile" points="98.53,163.20 127.98,180.20 127.98,214.20 98.53,231.20 69.09,214.20 69.09,180.20" aria-label="Atlantique"/>
+    <text class="label" x="98.53" y="197.20">AQ</text>
+  </g>
+  <g class="state" data-state="AK">
+    <title>Atakora</title>
+    <polygon class="tile" points="69.09,10.20 98.53,27.20 98.53,61.20 69.09,78.20 39.64,61.20 39.64,27.20" aria-label="Atakora"/>
+    <text class="label" x="69.09" y="44.20">AK</text>
+  </g>
+  <g class="state" data-state="ZO">
+    <title>Zou</title>
+    <polygon class="tile" points="69.09,112.20 98.53,129.20 98.53,163.20 69.09,180.20 39.64,163.20 39.64,129.20" aria-label="Zou"/>
+    <text class="label" x="69.09" y="146.20">ZO</text>
+  </g>
+  <g class="state" data-state="MO">
+    <title>Mono</title>
+    <polygon class="tile" points="69.09,214.20 98.53,231.20 98.53,265.20 69.09,282.20 39.64,265.20 39.64,231.20" aria-label="Mono"/>
+    <text class="label" x="69.09" y="248.20">MO</text>
+  </g>
+  <g class="state" data-state="DO">
+    <title>Donga</title>
+    <polygon class="tile" points="39.64,61.20 69.09,78.20 69.09,112.20 39.64,129.20 10.20,112.20 10.20,78.20" aria-label="Donga"/>
+    <text class="label" x="39.64" y="95.20">DO</text>
+  </g>
+  <g class="state" data-state="KO">
+    <title>Kouffo</title>
+    <polygon class="tile" points="39.64,163.20 69.09,180.20 69.09,214.20 39.64,231.20 10.20,214.20 10.20,180.20" aria-label="Kouffo"/>
+    <text class="label" x="39.64" y="197.20">KO</text>
+  </g>
+</svg>

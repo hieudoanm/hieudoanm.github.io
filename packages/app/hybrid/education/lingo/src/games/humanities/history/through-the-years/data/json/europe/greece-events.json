@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "europe-minoan-civilization-3000",
+    "title": "Minoan Civilization Flourishes",
+    "year": -3000,
+    "description": "Europe's first advanced civilization rose on Crete.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-minoan-palaces-2000",
+    "title": "Minoan Palaces Built",
+    "year": -2000,
+    "description": "Palaces like Knossos became centers of Minoan life.",
+    "category": "technology",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-phaistos-disc-1700",
+    "title": "Phaistos Disc Created",
+    "year": -1700,
+    "description": "The disc bears an undeciphered script.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-mycenaean-rise-1600",
+    "title": "Mycenaean Civilization Rises",
+    "year": -1600,
+    "description": "Warrior kingdoms grew across mainland Greece.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-knossos-destroyed-1450",
+    "title": "Knossos Destroyed",
+    "year": -1450,
+    "description": "The great Minoan palace was burned.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-linear-b-1450",
+    "title": "Linear B Script Used",
+    "year": -1450,
+    "description": "Mycenaean scribes wrote early Greek.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-trojan-war-1250",
+    "title": "Trojan War",
+    "year": -1250,
+    "description": "Greek armies besieged the city of Troy.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-greek-dark-ages-1100",
+    "title": "Greek Dark Ages Begin",
+    "year": -1100,
+    "description": "Writing declined after the palace systems fell.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-homer-epics-800",
+    "title": "Homer Composes the Epics",
+    "year": -800,
+    "description": "The Iliad and Odyssey were written down.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-olympic-games-776",
+    "title": "First Olympic Games",
+    "year": -776,
+    "description": "Athletes competed at Olympia for Zeus.",
+    "category": "sports",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-greek-alphabet-750",
+    "title": "Greek Alphabet Adopted",
+    "year": -750,
+    "description": "Greeks adapted the Phoenician alphabet.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-greek-colonies-750",
+    "title": "Greek Colonization Spreads",
+    "year": -750,
+    "description": "City-states founded colonies around the Mediterranean.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-hesiod-works-700",
+    "title": "Hesiod Writes Works and Days",
+    "year": -700,
+    "description": "Hesiod chronicled farming and myth.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-sparta-militarism-700",
+    "title": "Sparta Militarizes",
+    "year": -700,
+    "description": "Sparta built a warrior society.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-cypselus-corinth-657",
+    "title": "Cypselus Rules Corinth",
+    "year": -657,
+    "description": "Cypselus made Corinth a trading power.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-draco-laws-621",
+    "title": "Draco's Laws",
+    "year": -621,
+    "description": "Athens recorded its first written laws.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-sappho-600",
+    "title": "Sappho Writes Lyric Poetry",
+    "year": -600,
+    "description": "Sappho composed poems on the island of Lesbos.",
+    "category": "music",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-solon-reforms-594",
+    "title": "Solon Reforms Athens",
+    "year": -594,
+    "description": "Solon eased debt and broadened citizenship.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-pythagoras-570",
+    "title": "Pythagoras Founds a School",
+    "year": -570,
+    "description": "Pythagoras taught mathematics and philosophy.",
+    "category": "science",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-temple-artemis-550",
+    "title": "Temple of Artemis Built",
+    "year": -550,
+    "description": "The temple at Ephesus became a wonder.",
+    "category": "technology",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-peisistratus-546",
+    "title": "Peisistratus Rules Athens",
+    "year": -546,
+    "description": "A tyrant brought prosperity to Athens.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-aeschylus-born-525",
+    "title": "Aeschylus Born",
+    "year": -525,
+    "description": "Aeschylus became the father of tragedy.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-cleisthenes-democracy-508",
+    "title": "Democracy Established",
+    "year": -508,
+    "description": "Cleisthenes gave Athens a democratic constitution.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-sophocles-born-497",
+    "title": "Sophocles Born",
+    "year": -497,
+    "description": "Sophocles wrote Oedipus Rex.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-marathon-battle-490",
+    "title": "Battle of Marathon",
+    "year": -490,
+    "description": "Athenians repelled a Persian invasion.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-thermopylae-480",
+    "title": "Battle of Thermopylae",
+    "year": -480,
+    "description": "Spartans held the pass against Persia.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-salamis-480",
+    "title": "Battle of Salamis",
+    "year": -480,
+    "description": "The Greek fleet crushed the Persians at sea.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-delian-league-478",
+    "title": "Delian League Founded",
+    "year": -478,
+    "description": "Athens led a naval alliance against Persia.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-pericles-461",
+    "title": "Pericles Leads Athens",
+    "year": -461,
+    "description": "Pericles guided Athens through its golden age.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-parthenon-447",
+    "title": "Parthenon Completed",
+    "year": -447,
+    "description": "The Parthenon rose above Athens.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-peloponnesian-war-431",
+    "title": "Peloponnesian War Begins",
+    "year": -431,
+    "description": "Athens and Sparta fought for supremacy.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-athens-plague-430",
+    "title": "Plague of Athens",
+    "year": -430,
+    "description": "Disease killed thousands inside Athens.",
+    "category": "medicine",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-thucydides-history-424",
+    "title": "Thucydides Writes History",
+    "year": -424,
+    "description": "Thucydides recorded the Peloponnesian War.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-peace-nicias-421",
+    "title": "Peace of Nicias",
+    "year": -421,
+    "description": "Athens and Sparta agreed to a truce.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-sicilian-expedition-415",
+    "title": "Sicilian Expedition",
+    "year": -415,
+    "description": "Athens launched a failed invasion of Sicily.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-aegospotami-405",
+    "title": "Battle of Aegospotami",
+    "year": -405,
+    "description": "Sparta destroyed the Athenian fleet.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-athens-surrender-404",
+    "title": "Athens Surrenders",
+    "year": -404,
+    "description": "The Peloponnesian War ended in defeat.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-socrates-executed-399",
+    "title": "Socrates Executed",
+    "year": -399,
+    "description": "Athens put its philosopher to death.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-plato-academy-387",
+    "title": "Plato Founds the Academy",
+    "year": -387,
+    "description": "Plato opened a school in Athens.",
+    "category": "science",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-leuctra-battle-371",
+    "title": "Battle of Leuctra",
+    "year": -371,
+    "description": "Thebes ended Spartan military dominance.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-philip-ii-359",
+    "title": "Philip II Rules Macedon",
+    "year": -359,
+    "description": "Philip built Macedon into a great power.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-chaeronea-338",
+    "title": "Battle of Chaeronea",
+    "year": -338,
+    "description": "Philip defeated the Greek city-states.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-alexander-336",
+    "title": "Alexander the Great Takes Throne",
+    "year": -336,
+    "description": "Alexander became king of Macedon.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-issus-battle-333",
+    "title": "Battle of Issus",
+    "year": -333,
+    "description": "Alexander defeated Darius III.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-gordian-knot-333",
+    "title": "Alexander Cuts the Gordian Knot",
+    "year": -333,
+    "description": "Alexander untied the legendary knot.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-gaugamela-331",
+    "title": "Battle of Gaugamela",
+    "year": -331,
+    "description": "Alexander crushed the Persian army.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-hydaspes-326",
+    "title": "Battle of the Hydaspes",
+    "year": -326,
+    "description": "Alexander won his last great battle.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-alexander-dies-323",
+    "title": "Alexander Dies",
+    "year": -323,
+    "description": "The conqueror died in Babylon at thirty-two.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-diadochi-wars-323",
+    "title": "Wars of the Successors",
+    "year": -323,
+    "description": "Generals carved up Alexander's empire.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-epicurus-garden-307",
+    "title": "Epicurus Opens the Garden",
+    "year": -307,
+    "description": "Epicurus taught a philosophy of pleasure.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-hellenistic-kingdoms-301",
+    "title": "Hellenistic Kingdoms Form",
+    "year": -301,
+    "description": "Rival dynasties ruled the Greek world.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-colossus-rhodes-280",
+    "title": "Colossus of Rhodes Built",
+    "year": -280,
+    "description": "A giant statue guarded the harbor.",
+    "category": "technology",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-pyrrhus-280",
+    "title": "Pyrrhus Invades Italy",
+    "year": -280,
+    "description": "Pyrrhus fought Rome in costly victories.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-achaean-league-280",
+    "title": "Achaean League Forms",
+    "year": -280,
+    "description": "Greek cities united in a federal league.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-rhodes-earthquake-226",
+    "title": "Rhodes Earthquake",
+    "year": -226,
+    "description": "The Colossus toppled in an earthquake.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-macedonian-wars-215",
+    "title": "Macedonian Wars Begin",
+    "year": -215,
+    "description": "Rome fought Macedon for control of Greece.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-cynoscephalae-197",
+    "title": "Battle of Cynoscephalae",
+    "year": -197,
+    "description": "Rome defeated Philip V of Macedon.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-pydna-168",
+    "title": "Battle of Pydna",
+    "year": -168,
+    "description": "Rome crushed the Macedonian phalanx.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-corinth-destroyed-146",
+    "title": "Romans Destroy Corinth",
+    "year": -146,
+    "description": "Rome sacked the last Greek city-state.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-achaea-province-146",
+    "title": "Achaea Becomes a Province",
+    "year": -146,
+    "description": "Rome annexed southern Greece.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-sulla-sacks-athens-86",
+    "title": "Sulla Sacks Athens",
+    "year": -86,
+    "description": "Roman troops plundered Athens.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-pausanias-guide-160",
+    "title": "Pausanias Writes a Guide",
+    "year": 160,
+    "description": "Pausanias described the monuments of Greece.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-herulians-athens-267",
+    "title": "Herulians Sack Athens",
+    "year": 267,
+    "description": "Germanic raiders burned Athens.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-olympics-banned-393",
+    "title": "Olympics Abolished",
+    "year": 393,
+    "description": "Theodosius banned the ancient games.",
+    "category": "sports",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-christian-greece-400",
+    "title": "Christianity Spreads in Greece",
+    "year": 400,
+    "description": "Christian churches replaced pagan temples.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-slavic-migrations-580",
+    "title": "Slavic Migrations",
+    "year": 580,
+    "description": "Slavic peoples settled the Balkans.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-byzantine-bulgaria-810",
+    "title": "Byzantine-Bulgarian Wars",
+    "year": 810,
+    "description": "Byzantium fought the Bulgarian empire.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-fourth-crusade-1204",
+    "title": "Fourth Crusade Sacks Constantinople",
+    "year": 1204,
+    "description": "Crusaders divided the Byzantine lands.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-achaea-principality-1205",
+    "title": "Principality of Achaea",
+    "year": 1205,
+    "description": "Crusaders founded states in Greece.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-venice-crete-1210",
+    "title": "Venice Takes Crete",
+    "year": 1210,
+    "description": "Venice ruled Crete for centuries.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-byzantine-scholars-1453",
+    "title": "Byzantine Scholars Flee",
+    "year": 1453,
+    "description": "Scholars carried Greek learning to Italy.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-ottoman-athens-1458",
+    "title": "Ottomans Conquer Athens",
+    "year": 1458,
+    "description": "Ottoman rule reached the Greek lands.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-ottoman-morea-1460",
+    "title": "Ottomans Take the Morea",
+    "year": 1460,
+    "description": "The Peloponnese fell to the Ottomans.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-greek-printing-1476",
+    "title": "First Greek Printing Press",
+    "year": 1476,
+    "description": "Greek books were printed for the first time.",
+    "category": "technology",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-ottoman-crete-1669",
+    "title": "Ottomans Take Crete",
+    "year": 1669,
+    "description": "Crete fell after a long siege.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-morean-war-1685",
+    "title": "Morean War",
+    "year": 1685,
+    "description": "Venice briefly won the Peloponnese.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-greek-enlightenment-1700",
+    "title": "Greek Enlightenment",
+    "year": 1700,
+    "description": "Greek scholars revived classical learning.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-rigas-executed-1797",
+    "title": "Rigas Feraios Executed",
+    "year": 1797,
+    "description": "An early independence martyr was hanged.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-greek-independence-1821",
+    "title": "Greek War of Independence",
+    "year": 1821,
+    "description": "Greeks rose against Ottoman rule.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-missolonghi-1826",
+    "title": "Siege of Missolonghi",
+    "year": 1826,
+    "description": "A desperate Greek garrison fell to the Ottomans.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-navarino-1827",
+    "title": "Battle of Navarino",
+    "year": 1827,
+    "description": "Allied fleets destroyed the Ottoman navy.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-constantinople-treaty-1832",
+    "title": "Treaty of Constantinople",
+    "year": 1832,
+    "description": "The powers recognized Greek independence.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-otho-king-1833",
+    "title": "Otto Becomes King",
+    "year": 1833,
+    "description": "A Bavarian prince ruled the new state.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-athens-capital-1834",
+    "title": "Athens Becomes Capital",
+    "year": 1834,
+    "description": "Athens replaced Nafplio as the capital.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-modern-olympics-1896",
+    "title": "First Modern Olympics",
+    "year": 1896,
+    "description": "Athens hosted the revived games.",
+    "category": "sports",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-balkan-wars-1912",
+    "title": "Balkan Wars",
+    "year": 1912,
+    "description": "Greece won new territory in the Balkans.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-crete-union-1913",
+    "title": "Crete Unites with Greece",
+    "year": 1913,
+    "description": "Crete joined the Greek state.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-greece-ww1-1917",
+    "title": "Greece Enters World War I",
+    "year": 1917,
+    "description": "Greece joined the Allies.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-greco-turkish-war-1919",
+    "title": "Greco-Turkish War",
+    "year": 1919,
+    "description": "Greece fought Turkey over Anatolia.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-asia-minor-1922",
+    "title": "Asia Minor Catastrophe",
+    "year": 1922,
+    "description": "Greek forces fled Anatolia as refugees.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-metaxas-1936",
+    "title": "Metaxas Takes Power",
+    "year": 1936,
+    "description": "A dictatorship ruled Greece.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-ohi-day-1940",
+    "title": "Ohi Day",
+    "year": 1940,
+    "description": "Greece rejected Mussolini's ultimatum.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-battle-crete-1941",
+    "title": "Battle of Crete",
+    "year": 1941,
+    "description": "German paratroopers seized Crete.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-greek-civil-war-1946",
+    "title": "Greek Civil War",
+    "year": 1946,
+    "description": "Royalists fought communist rebels.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-greece-nato-1952",
+    "title": "Greece Joins NATO",
+    "year": 1952,
+    "description": "Greece joined the Western alliance.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-military-junta-1967",
+    "title": "Military Junta",
+    "year": 1967,
+    "description": "Colonels seized control of Greece.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-junta-falls-1974",
+    "title": "Junta Falls",
+    "year": 1974,
+    "description": "Democracy returned to Greece.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-greece-eec-1981",
+    "title": "Greece Joins the EEC",
+    "year": 1981,
+    "description": "Greece entered the European Community.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-athens-olympics-2004",
+    "title": "Athens Hosts the Olympics",
+    "year": 2004,
+    "description": "The games returned to their birthplace.",
+    "category": "sports",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-debt-crisis-2009",
+    "title": "Greek Debt Crisis",
+    "year": 2009,
+    "description": "Greece's debt crisis shook the eurozone.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  }
+]

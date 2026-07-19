@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 359.59 285.42" width="359.59" height="285.42" role="img" aria-labelledby="ecuador-title ecuador-desc">
+  <title id="ecuador-title">Ecuador hex map</title>
+  <desc id="ecuador-desc">Hexagon map with 24 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.40; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 11.87 8.48; }
+    .label { fill: #52525b; font: 600 9.61px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="NA">
+    <title>Orellana</title>
+    <polygon class="tile" points="326.64,93.26 351.11,107.39 351.11,135.65 326.64,149.78 302.16,135.65 302.16,107.39" aria-label="Orellana"/>
+    <text class="label" x="326.64" y="121.52">NA</text>
+  </g>
+  <g class="state" data-state="SU">
+    <title>Sucumbios</title>
+    <polygon class="tile" points="302.16,50.87 326.64,65.00 326.64,93.26 302.16,107.39 277.69,93.26 277.69,65.00" aria-label="Sucumbios"/>
+    <text class="label" x="302.16" y="79.13">SU</text>
+  </g>
+  <g class="state" data-state="PA">
+    <title>Pastaza</title>
+    <polygon class="tile" points="302.16,135.65 326.64,149.78 326.64,178.04 302.16,192.17 277.69,178.04 277.69,149.78" aria-label="Pastaza"/>
+    <text class="label" x="302.16" y="163.91">PA</text>
+  </g>
+  <g class="state" data-state="CR">
+    <title>Carchi</title>
+    <polygon class="tile" points="277.69,8.48 302.16,22.61 302.16,50.87 277.69,65.00 253.21,50.87 253.21,22.61" aria-label="Carchi"/>
+    <text class="label" x="277.69" y="36.74">CR</text>
+  </g>
+  <g class="state" data-state="TU">
+    <title>Tungurahua</title>
+    <polygon class="tile" points="277.69,93.26 302.16,107.39 302.16,135.65 277.69,149.78 253.21,135.65 253.21,107.39" aria-label="Tungurahua"/>
+    <text class="label" x="277.69" y="121.52">TU</text>
+  </g>
+  <g class="state" data-state="MS">
+    <title>Morona Santiago</title>
+    <polygon class="tile" points="277.69,178.04 302.16,192.17 302.16,220.43 277.69,234.56 253.21,220.43 253.21,192.17" aria-label="Morona Santiago"/>
+    <text class="label" x="277.69" y="206.30">MS</text>
+  </g>
+  <g class="state" data-state="PI">
+    <title>Pichincha</title>
+    <polygon class="tile" points="253.21,50.87 277.69,65.00 277.69,93.26 253.21,107.39 228.74,93.26 228.74,65.00" aria-label="Pichincha"/>
+    <text class="label" x="253.21" y="79.13">PI</text>
+  </g>
+  <g class="state" data-state="NAP">
+    <title>Napo</title>
+    <polygon class="tile" points="253.21,135.65 277.69,149.78 277.69,178.04 253.21,192.17 228.74,178.04 228.74,149.78" aria-label="Napo"/>
+    <text class="label" x="253.21" y="163.91">NAP</text>
+  </g>
+  <g class="state" data-state="CB">
+    <title>Chimborazo</title>
+    <polygon class="tile" points="253.21,220.43 277.69,234.56 277.69,262.82 253.21,276.95 228.74,262.82 228.74,234.56" aria-label="Chimborazo"/>
+    <text class="label" x="253.21" y="248.69">CB</text>
+  </g>
+  <g class="state" data-state="IM">
+    <title>Imbabura</title>
+    <polygon class="tile" points="228.74,8.48 253.21,22.61 253.21,50.87 228.74,65.00 204.27,50.87 204.27,22.61" aria-label="Imbabura"/>
+    <text class="label" x="228.74" y="36.74">IM</text>
+  </g>
+  <g class="state" data-state="CT">
+    <title>Cotopaxi</title>
+    <polygon class="tile" points="228.74,93.26 253.21,107.39 253.21,135.65 228.74,149.78 204.27,135.65 204.27,107.39" aria-label="Cotopaxi"/>
+    <text class="label" x="228.74" y="121.52">CT</text>
+  </g>
+  <g class="state" data-state="CN">
+    <title>Cañar</title>
+    <polygon class="tile" points="228.74,178.04 253.21,192.17 253.21,220.43 228.74,234.56 204.27,220.43 204.27,192.17" aria-label="Cañar"/>
+    <text class="label" x="228.74" y="206.30">CN</text>
+  </g>
+  <g class="state" data-state="SD">
+    <title>Santo Domingo de los Tsáchilas</title>
+    <polygon class="tile" points="204.27,50.87 228.74,65.00 228.74,93.26 204.27,107.39 179.79,93.26 179.79,65.00" aria-label="Santo Domingo de los Tsáchilas"/>
+    <text class="label" x="204.27" y="79.13">SD</text>
+  </g>
+  <g class="state" data-state="BO">
+    <title>Bolivar</title>
+    <polygon class="tile" points="204.27,135.65 228.74,149.78 228.74,178.04 204.27,192.17 179.79,178.04 179.79,149.78" aria-label="Bolivar"/>
+    <text class="label" x="204.27" y="163.91">BO</text>
+  </g>
+  <g class="state" data-state="ZC">
+    <title>Zamora Chinchipe</title>
+    <polygon class="tile" points="204.27,220.43 228.74,234.56 228.74,262.82 204.27,276.95 179.79,262.82 179.79,234.56" aria-label="Zamora Chinchipe"/>
+    <text class="label" x="204.27" y="248.69">ZC</text>
+  </g>
+  <g class="state" data-state="ES">
+    <title>Esmeraldas</title>
+    <polygon class="tile" points="179.79,8.48 204.27,22.61 204.27,50.87 179.79,65.00 155.32,50.87 155.32,22.61" aria-label="Esmeraldas"/>
+    <text class="label" x="179.79" y="36.74">ES</text>
+  </g>
+  <g class="state" data-state="LR">
+    <title>Los Rios</title>
+    <polygon class="tile" points="179.79,93.26 204.27,107.39 204.27,135.65 179.79,149.78 155.32,135.65 155.32,107.39" aria-label="Los Rios"/>
+    <text class="label" x="179.79" y="121.52">LR</text>
+  </g>
+  <g class="state" data-state="AZ">
+    <title>Azuay</title>
+    <polygon class="tile" points="179.79,178.04 204.27,192.17 204.27,220.43 179.79,234.56 155.32,220.43 155.32,192.17" aria-label="Azuay"/>
+    <text class="label" x="179.79" y="206.30">AZ</text>
+  </g>
+  <g class="state" data-state="MN">
+    <title>Manabi</title>
+    <polygon class="tile" points="155.32,50.87 179.79,65.00 179.79,93.26 155.32,107.39 130.85,93.26 130.85,65.00" aria-label="Manabi"/>
+    <text class="label" x="155.32" y="79.13">MN</text>
+  </g>
+  <g class="state" data-state="GU">
+    <title>Guayas</title>
+    <polygon class="tile" points="155.32,135.65 179.79,149.78 179.79,178.04 155.32,192.17 130.85,178.04 130.85,149.78" aria-label="Guayas"/>
+    <text class="label" x="155.32" y="163.91">GU</text>
+  </g>
+  <g class="state" data-state="LJ">
+    <title>Loja</title>
+    <polygon class="tile" points="155.32,220.43 179.79,234.56 179.79,262.82 155.32,276.95 130.85,262.82 130.85,234.56" aria-label="Loja"/>
+    <text class="label" x="155.32" y="248.69">LJ</text>
+  </g>
+  <g class="state" data-state="SE">
+    <title>Santa Elena</title>
+    <polygon class="tile" points="130.85,93.26 155.32,107.39 155.32,135.65 130.85,149.78 106.37,135.65 106.37,107.39" aria-label="Santa Elena"/>
+    <text class="label" x="130.85" y="121.52">SE</text>
+  </g>
+  <g class="state" data-state="EO">
+    <title>El Oro</title>
+    <polygon class="tile" points="130.85,178.04 155.32,192.17 155.32,220.43 130.85,234.56 106.37,220.43 106.37,192.17" aria-label="El Oro"/>
+    <text class="label" x="130.85" y="206.30">EO</text>
+  </g>
+  <g class="state" data-state="GA">
+    <title>Galápagos</title>
+    <polygon class="tile inset" points="32.95,93.26 57.43,107.39 57.43,135.65 32.95,149.78 8.48,135.65 8.48,107.39" aria-label="Galápagos"/>
+    <text class="label" x="32.95" y="121.52">GA</text>
+  </g>
+</svg>

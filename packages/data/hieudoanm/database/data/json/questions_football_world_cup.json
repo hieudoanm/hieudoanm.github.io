@@ -1,0 +1,178 @@
+[
+  {
+    "question": "Who won the 1930 FIFA World Cup?",
+    "red": "Brazil",
+    "blue": "Argentina",
+    "green": "Uruguay",
+    "yellow": "Italy",
+    "correct": "green"
+  },
+  {
+    "question": "Who won the 1934 FIFA World Cup?",
+    "red": "Italy",
+    "blue": "Czechoslovakia",
+    "green": "Germany",
+    "yellow": "Argentina",
+    "correct": "red"
+  },
+  {
+    "question": "Who won the 1938 FIFA World Cup?",
+    "red": "Hungary",
+    "blue": "Brazil",
+    "green": "Italy",
+    "yellow": "France",
+    "correct": "green"
+  },
+  {
+    "question": "Who won the 1950 FIFA World Cup?",
+    "red": "Brazil",
+    "blue": "Uruguay",
+    "green": "Spain",
+    "yellow": "Italy",
+    "correct": "yellow"
+  },
+  {
+    "question": "Who won the 1954 FIFA World Cup?",
+    "red": "Hungary",
+    "blue": "Germany",
+    "green": "Brazil",
+    "yellow": "Uruguay",
+    "correct": "blue"
+  },
+  {
+    "question": "Who won the 1958 FIFA World Cup?",
+    "red": "Brazil",
+    "blue": "Sweden",
+    "green": "France",
+    "yellow": "Germany",
+    "correct": "red"
+  },
+  {
+    "question": "Who won the 1962 FIFA World Cup?",
+    "red": "Chile",
+    "blue": "Brazil",
+    "green": "Yugoslavia",
+    "yellow": "Czechoslovakia",
+    "correct": "blue"
+  },
+  {
+    "question": "Who won the 1966 FIFA World Cup?",
+    "red": "Germany",
+    "blue": "Portugal",
+    "green": "Italy",
+    "yellow": "England",
+    "correct": "yellow"
+  },
+  {
+    "question": "Who won the 1970 FIFA World Cup?",
+    "red": "Italy",
+    "blue": "West Germany",
+    "green": "Brazil",
+    "yellow": "Uruguay",
+    "correct": "green"
+  },
+  {
+    "question": "Who won the 1974 FIFA World Cup?",
+    "red": "Brazil",
+    "blue": "Netherlands",
+    "green": "Italy",
+    "yellow": "West Germany",
+    "correct": "yellow"
+  },
+  {
+    "question": "Who won the 1978 FIFA World Cup?",
+    "red": "Netherlands",
+    "blue": "Italy",
+    "green": "Brazil",
+    "yellow": "Argentina",
+    "correct": "yellow"
+  },
+  {
+    "question": "Who won the 1982 FIFA World Cup?",
+    "red": "Germany",
+    "blue": "Italy",
+    "green": "Brazil",
+    "yellow": "France",
+    "correct": "blue"
+  },
+  {
+    "question": "Who won the 1986 FIFA World Cup?",
+    "red": "Brazil",
+    "blue": "Argentina",
+    "green": "Germany",
+    "yellow": "France",
+    "correct": "blue"
+  },
+  {
+    "question": "Who won the 1990 FIFA World Cup?",
+    "red": "Argentina",
+    "blue": "Italy",
+    "green": "West Germany",
+    "yellow": "Brazil",
+    "correct": "green"
+  },
+  {
+    "question": "Who won the 1994 FIFA World Cup?",
+    "red": "Italy",
+    "blue": "Brazil",
+    "green": "Germany",
+    "yellow": "Sweden",
+    "correct": "blue"
+  },
+  {
+    "question": "Who won the 1998 FIFA World Cup?",
+    "red": "Brazil",
+    "blue": "Croatia",
+    "green": "France",
+    "yellow": "Italy",
+    "correct": "green"
+  },
+  {
+    "question": "Who won the 2002 FIFA World Cup?",
+    "red": "Germany",
+    "blue": "Turkey",
+    "green": "South Korea",
+    "yellow": "Brazil",
+    "correct": "yellow"
+  },
+  {
+    "question": "Who won the 2006 FIFA World Cup?",
+    "red": "France",
+    "blue": "Portugal",
+    "green": "Germany",
+    "yellow": "Italy",
+    "correct": "yellow"
+  },
+  {
+    "question": "Who won the 2010 FIFA World Cup?",
+    "red": "Netherlands",
+    "blue": "Germany",
+    "green": "Spain",
+    "yellow": "Uruguay",
+    "correct": "green"
+  },
+  {
+    "question": "Who won the 2014 FIFA World Cup?",
+    "red": "Brazil",
+    "blue": "Argentina",
+    "green": "Germany",
+    "yellow": "Netherlands",
+    "correct": "green"
+  },
+  {
+    "question": "Who won the 2018 FIFA World Cup?",
+    "red": "Croatia",
+    "blue": "Belgium",
+    "green": "France",
+    "yellow": "England",
+    "correct": "green"
+  },
+  {
+    "question": "Who won the 2022 FIFA World Cup?",
+    "red": "France",
+    "blue": "Croatia",
+    "green": "Argentina",
+    "yellow": "Morocco",
+    "correct": "green"
+  }
+]

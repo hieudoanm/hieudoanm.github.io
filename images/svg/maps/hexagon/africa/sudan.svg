@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 344.29 241.40" width="344.29" height="241.40" role="img" aria-labelledby="sudan-title sudan-desc">
+  <title id="sudan-title">Sudan hex map</title>
+  <desc id="sudan-desc">Hexagon map with 17 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.89; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 14.28 10.20; }
+    .label { fill: #52525b; font: 600 11.56px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="GD">
+    <title>Gedarif</title>
+    <polygon class="tile" points="304.65,112.20 334.09,129.20 334.09,163.20 304.65,180.20 275.20,163.20 275.20,129.20" aria-label="Gedarif"/>
+    <text class="label" x="304.65" y="146.20">GD</text>
+  </g>
+  <g class="state" data-state="KA">
+    <title>Kassala</title>
+    <polygon class="tile" points="275.20,61.20 304.65,78.20 304.65,112.20 275.20,129.20 245.76,112.20 245.76,78.20" aria-label="Kassala"/>
+    <text class="label" x="275.20" y="95.20">KA</text>
+  </g>
+  <g class="state" data-state="SI">
+    <title>Sennar</title>
+    <polygon class="tile" points="275.20,163.20 304.65,180.20 304.65,214.20 275.20,231.20 245.76,214.20 245.76,180.20" aria-label="Sennar"/>
+    <text class="label" x="275.20" y="197.20">SI</text>
+  </g>
+  <g class="state" data-state="RS">
+    <title>Red Sea</title>
+    <polygon class="tile" points="245.76,10.20 275.20,27.20 275.20,61.20 245.76,78.20 216.31,61.20 216.31,27.20" aria-label="Red Sea"/>
+    <text class="label" x="245.76" y="44.20">RS</text>
+  </g>
+  <g class="state" data-state="GZ">
+    <title>Gezira</title>
+    <polygon class="tile" points="245.76,112.20 275.20,129.20 275.20,163.20 245.76,180.20 216.31,163.20 216.31,129.20" aria-label="Gezira"/>
+    <text class="label" x="245.76" y="146.20">GZ</text>
+  </g>
+  <g class="state" data-state="KH">
+    <title>Khartoum</title>
+    <polygon class="tile" points="216.31,61.20 245.76,78.20 245.76,112.20 216.31,129.20 186.87,112.20 186.87,78.20" aria-label="Khartoum"/>
+    <text class="label" x="216.31" y="95.20">KH</text>
+  </g>
+  <g class="state" data-state="NB">
+    <title>Blue Nile</title>
+    <polygon class="tile" points="216.31,163.20 245.76,180.20 245.76,214.20 216.31,231.20 186.87,214.20 186.87,180.20" aria-label="Blue Nile"/>
+    <text class="label" x="216.31" y="197.20">NB</text>
+  </g>
+  <g class="state" data-state="NR">
+    <title>River Nile</title>
+    <polygon class="tile" points="186.87,10.20 216.31,27.20 216.31,61.20 186.87,78.20 157.42,61.20 157.42,27.20" aria-label="River Nile"/>
+    <text class="label" x="186.87" y="44.20">NR</text>
+  </g>
+  <g class="state" data-state="NW">
+    <title>White Nile</title>
+    <polygon class="tile" points="186.87,112.20 216.31,129.20 216.31,163.20 186.87,180.20 157.42,163.20 157.42,129.20" aria-label="White Nile"/>
+    <text class="label" x="186.87" y="146.20">NW</text>
+  </g>
+  <g class="state" data-state="KN">
+    <title>North Kordufan</title>
+    <polygon class="tile" points="157.42,61.20 186.87,78.20 186.87,112.20 157.42,129.20 127.98,112.20 127.98,78.20" aria-label="North Kordufan"/>
+    <text class="label" x="157.42" y="95.20">KN</text>
+  </g>
+  <g class="state" data-state="KS">
+    <title>South Kordufan</title>
+    <polygon class="tile" points="157.42,163.20 186.87,180.20 186.87,214.20 157.42,231.20 127.98,214.20 127.98,180.20" aria-label="South Kordufan"/>
+    <text class="label" x="157.42" y="197.20">KS</text>
+  </g>
+  <g class="state" data-state="NO">
+    <title>Northern</title>
+    <polygon class="tile" points="127.98,10.20 157.42,27.20 157.42,61.20 127.98,78.20 98.53,61.20 98.53,27.20" aria-label="Northern"/>
+    <text class="label" x="127.98" y="44.20">NO</text>
+  </g>
+  <g class="state" data-state="SD">
+    <title>Eastern Darfur</title>
+    <polygon class="tile" points="127.98,112.20 157.42,129.20 157.42,163.20 127.98,180.20 98.53,163.20 98.53,129.20" aria-label="Eastern Darfur"/>
+    <text class="label" x="127.98" y="146.20">SD</text>
+  </g>
+  <g class="state" data-state="DN">
+    <title>North Darfur</title>
+    <polygon class="tile" points="98.53,61.20 127.98,78.20 127.98,112.20 98.53,129.20 69.09,112.20 69.09,78.20" aria-label="North Darfur"/>
+    <text class="label" x="98.53" y="95.20">DN</text>
+  </g>
+  <g class="state" data-state="DS">
+    <title>Southern Darfur</title>
+    <polygon class="tile" points="98.53,163.20 127.98,180.20 127.98,214.20 98.53,231.20 69.09,214.20 69.09,180.20" aria-label="Southern Darfur"/>
+    <text class="label" x="98.53" y="197.20">DS</text>
+  </g>
+  <g class="state" data-state="DW">
+    <title>Western Darfur</title>
+    <polygon class="tile" points="69.09,112.20 98.53,129.20 98.53,163.20 69.09,180.20 39.64,163.20 39.64,129.20" aria-label="Western Darfur"/>
+    <text class="label" x="69.09" y="146.20">DW</text>
+  </g>
+  <g class="state" data-state="DE">
+    <title>Central Darfur</title>
+    <polygon class="tile" points="39.64,163.20 69.09,180.20 69.09,214.20 39.64,231.20 10.20,214.20 10.20,180.20" aria-label="Central Darfur"/>
+    <text class="label" x="39.64" y="197.20">DE</text>
+  </g>
+</svg>

@@ -1,0 +1,606 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 366.64 196.47" width="366.64" height="196.47" role="img" aria-labelledby="latvia-title latvia-desc">
+  <title id="latvia-title">Latvia hex map</title>
+  <desc id="latvia-desc">Hexagon map with 119 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 1.04; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 5.13 3.66; }
+    .label { fill: #52525b; font: 600 4.15px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="CIB">
+    <title>Ciblas</title>
+    <polygon class="tile" points="352.41,113.49 362.98,119.59 362.98,131.79 352.41,137.89 341.84,131.79 341.84,119.59" aria-label="Ciblas"/>
+    <text class="label" x="352.41" y="125.69">CIB</text>
+  </g>
+  <g class="state" data-state="ZIL">
+    <title>Zilupes</title>
+    <polygon class="tile" points="352.41,150.10 362.98,156.20 362.98,168.40 352.41,174.50 341.84,168.40 341.84,156.20" aria-label="Zilupes"/>
+    <text class="label" x="352.41" y="162.30">ZIL</text>
+  </g>
+  <g class="state" data-state="KAR">
+    <title>Karsavas</title>
+    <polygon class="tile" points="341.84,95.18 352.41,101.29 352.41,113.49 341.84,119.59 331.27,113.49 331.27,101.29" aria-label="Karsavas"/>
+    <text class="label" x="341.84" y="107.39">KAR</text>
+  </g>
+  <g class="state" data-state="LU">
+    <title>Ludzas</title>
+    <polygon class="tile" points="341.84,131.79 352.41,137.89 352.41,150.10 341.84,156.20 331.27,150.10 331.27,137.89" aria-label="Ludzas"/>
+    <text class="label" x="341.84" y="144.00">LU</text>
+  </g>
+  <g class="state" data-state="BAL">
+    <title>Baltinavas</title>
+    <polygon class="tile" points="331.27,76.88 341.84,82.98 341.84,95.18 331.27,101.29 320.71,95.18 320.71,82.98" aria-label="Baltinavas"/>
+    <text class="label" x="331.27" y="89.08">BAL</text>
+  </g>
+  <g class="state" data-state="RK">
+    <title>Rezekne</title>
+    <polygon class="tile" points="331.27,113.49 341.84,119.59 341.84,131.79 331.27,137.89 320.71,131.79 320.71,119.59" aria-label="Rezekne"/>
+    <text class="label" x="331.27" y="125.69">RK</text>
+  </g>
+  <g class="state" data-state="DAG">
+    <title>Dagdas</title>
+    <polygon class="tile" points="331.27,150.10 341.84,156.20 341.84,168.40 331.27,174.50 320.71,168.40 320.71,156.20" aria-label="Dagdas"/>
+    <text class="label" x="331.27" y="162.30">DAG</text>
+  </g>
+  <g class="state" data-state="BL">
+    <title>Vilakas</title>
+    <polygon class="tile" points="320.71,58.57 331.27,64.68 331.27,76.88 320.71,82.98 310.14,76.88 310.14,64.68" aria-label="Vilakas"/>
+    <text class="label" x="320.71" y="70.78">BL</text>
+  </g>
+  <g class="state" data-state="RUG">
+    <title>Rugaju</title>
+    <polygon class="tile" points="320.71,95.18 331.27,101.29 331.27,113.49 320.71,119.59 310.14,113.49 310.14,101.29" aria-label="Rugaju"/>
+    <text class="label" x="320.71" y="107.39">RUG</text>
+  </g>
+  <g class="state" data-state="REZ">
+    <title>Rezeknes</title>
+    <polygon class="tile" points="320.71,131.79 331.27,137.89 331.27,150.10 320.71,156.20 310.14,150.10 310.14,137.89" aria-label="Rezeknes"/>
+    <text class="label" x="320.71" y="144.00">REZ</text>
+  </g>
+  <g class="state" data-state="KR">
+    <title>Kraslavas</title>
+    <polygon class="tile" points="320.71,168.40 331.27,174.50 331.27,186.71 320.71,192.81 310.14,186.71 310.14,174.50" aria-label="Kraslavas"/>
+    <text class="label" x="320.71" y="180.61">KR</text>
+  </g>
+  <g class="state" data-state="CE">
+    <title>Cesu</title>
+    <polygon class="tile" points="310.14,40.27 320.71,46.37 320.71,58.57 310.14,64.68 299.57,58.57 299.57,46.37" aria-label="Cesu"/>
+    <text class="label" x="310.14" y="52.47">CE</text>
+  </g>
+  <g class="state" data-state="BALA">
+    <title>Balvu</title>
+    <polygon class="tile" points="310.14,76.88 320.71,82.98 320.71,95.18 310.14,101.29 299.57,95.18 299.57,82.98" aria-label="Balvu"/>
+    <text class="label" x="310.14" y="89.08">BALA</text>
+  </g>
+  <g class="state" data-state="VIL">
+    <title>Vilanu</title>
+    <polygon class="tile" points="310.14,113.49 320.71,119.59 320.71,131.79 310.14,137.89 299.57,131.79 299.57,119.59" aria-label="Vilanu"/>
+    <text class="label" x="310.14" y="125.69">VIL</text>
+  </g>
+  <g class="state" data-state="AGL">
+    <title>Aglonas</title>
+    <polygon class="tile" points="310.14,150.10 320.71,156.20 320.71,168.40 310.14,174.50 299.57,168.40 299.57,156.20" aria-label="Aglonas"/>
+    <text class="label" x="310.14" y="162.30">AGL</text>
+  </g>
+  <g class="state" data-state="AL">
+    <title>Aluksne</title>
+    <polygon class="tile" points="299.57,58.57 310.14,64.68 310.14,76.88 299.57,82.98 289.00,76.88 289.00,64.68" aria-label="Aluksne"/>
+    <text class="label" x="299.57" y="70.78">AL</text>
+  </g>
+  <g class="state" data-state="LUB">
+    <title>Lubanas</title>
+    <polygon class="tile" points="299.57,95.18 310.14,101.29 310.14,113.49 299.57,119.59 289.00,113.49 289.00,101.29" aria-label="Lubanas"/>
+    <text class="label" x="299.57" y="107.39">LUB</text>
+  </g>
+  <g class="state" data-state="RIE">
+    <title>Riebinu</title>
+    <polygon class="tile" points="299.57,131.79 310.14,137.89 310.14,150.10 299.57,156.20 289.00,150.10 289.00,137.89" aria-label="Riebinu"/>
+    <text class="label" x="299.57" y="144.00">RIE</text>
+  </g>
+  <g class="state" data-state="DGV">
+    <title>Daugavpils</title>
+    <polygon class="tile" points="299.57,168.40 310.14,174.50 310.14,186.71 299.57,192.81 289.00,186.71 289.00,174.50" aria-label="Daugavpils"/>
+    <text class="label" x="299.57" y="180.61">DGV</text>
+  </g>
+  <g class="state" data-state="APE">
+    <title>Apes</title>
+    <polygon class="tile" points="289.00,40.27 299.57,46.37 299.57,58.57 289.00,64.68 278.43,58.57 278.43,46.37" aria-label="Apes"/>
+    <text class="label" x="289.00" y="52.47">APE</text>
+  </g>
+  <g class="state" data-state="CES">
+    <title>Cesvaines</title>
+    <polygon class="tile" points="289.00,76.88 299.57,82.98 299.57,95.18 289.00,101.29 278.43,95.18 278.43,82.98" aria-label="Cesvaines"/>
+    <text class="label" x="289.00" y="89.08">CES</text>
+  </g>
+  <g class="state" data-state="VAR">
+    <title>Varaklanu</title>
+    <polygon class="tile" points="289.00,113.49 299.57,119.59 299.57,131.79 289.00,137.89 278.43,131.79 278.43,119.59" aria-label="Varaklanu"/>
+    <text class="label" x="289.00" y="125.69">VAR</text>
+  </g>
+  <g class="state" data-state="PR">
+    <title>Preilu</title>
+    <polygon class="tile" points="289.00,150.10 299.57,156.20 299.57,168.40 289.00,174.50 278.43,168.40 278.43,156.20" aria-label="Preilu"/>
+    <text class="label" x="289.00" y="162.30">PR</text>
+  </g>
+  <g class="state" data-state="VG">
+    <title>Valkas</title>
+    <polygon class="tile" points="278.43,21.97 289.00,28.07 289.00,40.27 278.43,46.37 267.87,40.27 267.87,28.07" aria-label="Valkas"/>
+    <text class="label" x="278.43" y="34.17">VG</text>
+  </g>
+  <g class="state" data-state="GU">
+    <title>Gulbene</title>
+    <polygon class="tile" points="278.43,58.57 289.00,64.68 289.00,76.88 278.43,82.98 267.87,76.88 267.87,64.68" aria-label="Gulbene"/>
+    <text class="label" x="278.43" y="70.78">GU</text>
+  </g>
+  <g class="state" data-state="MA">
+    <title>Madona</title>
+    <polygon class="tile" points="278.43,95.18 289.00,101.29 289.00,113.49 278.43,119.59 267.87,113.49 267.87,101.29" aria-label="Madona"/>
+    <text class="label" x="278.43" y="107.39">MA</text>
+  </g>
+  <g class="state" data-state="LIV">
+    <title>Livanu</title>
+    <polygon class="tile" points="278.43,131.79 289.00,137.89 289.00,150.10 278.43,156.20 267.87,150.10 267.87,137.89" aria-label="Livanu"/>
+    <text class="label" x="278.43" y="144.00">LIV</text>
+  </g>
+  <g class="state" data-state="DV">
+    <title>Daugavpils</title>
+    <polygon class="tile" points="278.43,168.40 289.00,174.50 289.00,186.71 278.43,192.81 267.87,186.71 267.87,174.50" aria-label="Daugavpils"/>
+    <text class="label" x="278.43" y="180.61">DV</text>
+  </g>
+  <g class="state" data-state="SMI">
+    <title>Smiltenes</title>
+    <polygon class="tile" points="267.87,40.27 278.43,46.37 278.43,58.57 267.87,64.68 257.30,58.57 257.30,46.37" aria-label="Smiltenes"/>
+    <text class="label" x="267.87" y="52.47">SMI</text>
+  </g>
+  <g class="state" data-state="JAU">
+    <title>Jaunpiebalgas</title>
+    <polygon class="tile" points="267.87,76.88 278.43,82.98 278.43,95.18 267.87,101.29 257.30,95.18 257.30,82.98" aria-label="Jaunpiebalgas"/>
+    <text class="label" x="267.87" y="89.08">JAU</text>
+  </g>
+  <g class="state" data-state="KRU">
+    <title>Krustpils</title>
+    <polygon class="tile" points="267.87,113.49 278.43,119.59 278.43,131.79 267.87,137.89 257.30,131.79 257.30,119.59" aria-label="Krustpils"/>
+    <text class="label" x="267.87" y="125.69">KRU</text>
+  </g>
+  <g class="state" data-state="VARA">
+    <title>Varkavas</title>
+    <polygon class="tile" points="267.87,150.10 278.43,156.20 278.43,168.40 267.87,174.50 257.30,168.40 257.30,156.20" aria-label="Varkavas"/>
+    <text class="label" x="267.87" y="162.30">VARA</text>
+  </g>
+  <g class="state" data-state="STR">
+    <title>Strencu</title>
+    <polygon class="tile" points="257.30,21.97 267.87,28.07 267.87,40.27 257.30,46.37 246.73,40.27 246.73,28.07" aria-label="Strencu"/>
+    <text class="label" x="257.30" y="34.17">STR</text>
+  </g>
+  <g class="state" data-state="RAU">
+    <title>Raunas</title>
+    <polygon class="tile" points="257.30,58.57 267.87,64.68 267.87,76.88 257.30,82.98 246.73,76.88 246.73,64.68" aria-label="Raunas"/>
+    <text class="label" x="257.30" y="70.78">RAU</text>
+  </g>
+  <g class="state" data-state="ERG">
+    <title>Erglu</title>
+    <polygon class="tile" points="257.30,95.18 267.87,101.29 267.87,113.49 257.30,119.59 246.73,113.49 246.73,101.29" aria-label="Erglu"/>
+    <text class="label" x="257.30" y="107.39">ERG</text>
+  </g>
+  <g class="state" data-state="JEK">
+    <title>Jekabpils</title>
+    <polygon class="tile" points="257.30,131.79 267.87,137.89 267.87,150.10 257.30,156.20 246.73,150.10 246.73,137.89" aria-label="Jekabpils"/>
+    <text class="label" x="257.30" y="144.00">JEK</text>
+  </g>
+  <g class="state" data-state="ILU">
+    <title>Ilukstes</title>
+    <polygon class="tile" points="257.30,168.40 267.87,174.50 267.87,186.71 257.30,192.81 246.73,186.71 246.73,174.50" aria-label="Ilukstes"/>
+    <text class="label" x="257.30" y="180.61">ILU</text>
+  </g>
+  <g class="state" data-state="NAU">
+    <title>Nauksenu</title>
+    <polygon class="tile" points="246.73,3.66 257.30,9.76 257.30,21.97 246.73,28.07 236.16,21.97 236.16,9.76" aria-label="Nauksenu"/>
+    <text class="label" x="246.73" y="15.86">NAU</text>
+  </g>
+  <g class="state" data-state="BEV">
+    <title>Beverinas</title>
+    <polygon class="tile" points="246.73,40.27 257.30,46.37 257.30,58.57 246.73,64.68 236.16,58.57 236.16,46.37" aria-label="Beverinas"/>
+    <text class="label" x="246.73" y="52.47">BEV</text>
+  </g>
+  <g class="state" data-state="VECA">
+    <title>Vecpiebalgas</title>
+    <polygon class="tile" points="246.73,76.88 257.30,82.98 257.30,95.18 246.73,101.29 236.16,95.18 236.16,82.98" aria-label="Vecpiebalgas"/>
+    <text class="label" x="246.73" y="89.08">VECA</text>
+  </g>
+  <g class="state" data-state="PLA">
+    <title>Plavinu</title>
+    <polygon class="tile" points="246.73,113.49 257.30,119.59 257.30,131.79 246.73,137.89 236.16,131.79 236.16,119.59" aria-label="Plavinu"/>
+    <text class="label" x="246.73" y="125.69">PLA</text>
+  </g>
+  <g class="state" data-state="JKB">
+    <title>Jekabpils</title>
+    <polygon class="tile" points="246.73,150.10 257.30,156.20 257.30,168.40 246.73,174.50 236.16,168.40 236.16,156.20" aria-label="Jekabpils"/>
+    <text class="label" x="246.73" y="162.30">JKB</text>
+  </g>
+  <g class="state" data-state="BUR">
+    <title>Burtnieku</title>
+    <polygon class="tile" points="236.16,21.97 246.73,28.07 246.73,40.27 236.16,46.37 225.59,40.27 225.59,28.07" aria-label="Burtnieku"/>
+    <text class="label" x="236.16" y="34.17">BUR</text>
+  </g>
+  <g class="state" data-state="PRIA">
+    <title>Priekulu</title>
+    <polygon class="tile" points="236.16,58.57 246.73,64.68 246.73,76.88 236.16,82.98 225.59,76.88 225.59,64.68" aria-label="Priekulu"/>
+    <text class="label" x="236.16" y="70.78">PRIA</text>
+  </g>
+  <g class="state" data-state="KOK">
+    <title>Kokneses</title>
+    <polygon class="tile" points="236.16,95.18 246.73,101.29 246.73,113.49 236.16,119.59 225.59,113.49 225.59,101.29" aria-label="Kokneses"/>
+    <text class="label" x="236.16" y="107.39">KOK</text>
+  </g>
+  <g class="state" data-state="SALB">
+    <title>Salas</title>
+    <polygon class="tile" points="236.16,131.79 246.73,137.89 246.73,150.10 236.16,156.20 225.59,150.10 225.59,137.89" aria-label="Salas"/>
+    <text class="label" x="236.16" y="144.00">SALB</text>
+  </g>
+  <g class="state" data-state="AKN">
+    <title>Aknistes</title>
+    <polygon class="tile" points="236.16,168.40 246.73,174.50 246.73,186.71 236.16,192.81 225.59,186.71 225.59,174.50" aria-label="Aknistes"/>
+    <text class="label" x="236.16" y="180.61">AKN</text>
+  </g>
+  <g class="state" data-state="VM">
+    <title>Rujienas</title>
+    <polygon class="tile" points="225.59,3.66 236.16,9.76 236.16,21.97 225.59,28.07 215.02,21.97 215.02,9.76" aria-label="Rujienas"/>
+    <text class="label" x="225.59" y="15.86">VM</text>
+  </g>
+  <g class="state" data-state="VMR">
+    <title>Valmiera</title>
+    <polygon class="tile" points="225.59,40.27 236.16,46.37 236.16,58.57 225.59,64.68 215.02,58.57 215.02,46.37" aria-label="Valmiera"/>
+    <text class="label" x="225.59" y="52.47">VMR</text>
+  </g>
+  <g class="state" data-state="AMA">
+    <title>Amatas</title>
+    <polygon class="tile" points="225.59,76.88 236.16,82.98 236.16,95.18 225.59,101.29 215.02,95.18 215.02,82.98" aria-label="Amatas"/>
+    <text class="label" x="225.59" y="89.08">AMA</text>
+  </g>
+  <g class="state" data-state="AIZ">
+    <title>Aizkraukles</title>
+    <polygon class="tile" points="225.59,113.49 236.16,119.59 236.16,131.79 225.59,137.89 215.02,131.79 215.02,119.59" aria-label="Aizkraukles"/>
+    <text class="label" x="225.59" y="125.69">AIZ</text>
+  </g>
+  <g class="state" data-state="JK">
+    <title>Viesites</title>
+    <polygon class="tile" points="225.59,150.10 236.16,156.20 236.16,168.40 225.59,174.50 215.02,168.40 215.02,156.20" aria-label="Viesites"/>
+    <text class="label" x="225.59" y="162.30">JK</text>
+  </g>
+  <g class="state" data-state="KOC">
+    <title>Kocenu</title>
+    <polygon class="tile" points="215.02,21.97 225.59,28.07 225.59,40.27 215.02,46.37 204.46,40.27 204.46,28.07" aria-label="Kocenu"/>
+    <text class="label" x="215.02" y="34.17">KOC</text>
+  </g>
+  <g class="state" data-state="LIG">
+    <title>Ligatnes</title>
+    <polygon class="tile" points="215.02,58.57 225.59,64.68 225.59,76.88 215.02,82.98 204.46,76.88 204.46,64.68" aria-label="Ligatnes"/>
+    <text class="label" x="215.02" y="70.78">LIG</text>
+  </g>
+  <g class="state" data-state="OG">
+    <title>Ogre</title>
+    <polygon class="tile" points="215.02,95.18 225.59,101.29 225.59,113.49 215.02,119.59 204.46,113.49 204.46,101.29" aria-label="Ogre"/>
+    <text class="label" x="215.02" y="107.39">OG</text>
+  </g>
+  <g class="state" data-state="JAUA">
+    <title>Jaunjelgavas</title>
+    <polygon class="tile" points="215.02,131.79 225.59,137.89 225.59,150.10 215.02,156.20 204.46,150.10 204.46,137.89" aria-label="Jaunjelgavas"/>
+    <text class="label" x="215.02" y="144.00">JAUA</text>
+  </g>
+  <g class="state" data-state="MAZ">
+    <title>Mazsalacas</title>
+    <polygon class="tile" points="204.46,3.66 215.02,9.76 215.02,21.97 204.46,28.07 193.89,21.97 193.89,9.76" aria-label="Mazsalacas"/>
+    <text class="label" x="204.46" y="15.86">MAZ</text>
+  </g>
+  <g class="state" data-state="PAR">
+    <title>Pargaujas</title>
+    <polygon class="tile" points="204.46,40.27 215.02,46.37 215.02,58.57 204.46,64.68 193.89,58.57 193.89,46.37" aria-label="Pargaujas"/>
+    <text class="label" x="204.46" y="52.47">PAR</text>
+  </g>
+  <g class="state" data-state="SIG">
+    <title>Siguldas</title>
+    <polygon class="tile" points="204.46,76.88 215.02,82.98 215.02,95.18 204.46,101.29 193.89,95.18 193.89,82.98" aria-label="Siguldas"/>
+    <text class="label" x="204.46" y="89.08">SIG</text>
+  </g>
+  <g class="state" data-state="SKR">
+    <title>Skriveru</title>
+    <polygon class="tile" points="204.46,113.49 215.02,119.59 215.02,131.79 204.46,137.89 193.89,131.79 193.89,119.59" aria-label="Skriveru"/>
+    <text class="label" x="204.46" y="125.69">SKR</text>
+  </g>
+  <g class="state" data-state="NER">
+    <title>Neretas</title>
+    <polygon class="tile" points="204.46,150.10 215.02,156.20 215.02,168.40 204.46,174.50 193.89,168.40 193.89,156.20" aria-label="Neretas"/>
+    <text class="label" x="204.46" y="162.30">NER</text>
+  </g>
+  <g class="state" data-state="LM">
+    <title>Limbaži</title>
+    <polygon class="tile" points="193.89,21.97 204.46,28.07 204.46,40.27 193.89,46.37 183.32,40.27 183.32,28.07" aria-label="Limbaži"/>
+    <text class="label" x="193.89" y="34.17">LM</text>
+  </g>
+  <g class="state" data-state="KRI">
+    <title>Krimuldas</title>
+    <polygon class="tile" points="193.89,58.57 204.46,64.68 204.46,76.88 193.89,82.98 183.32,76.88 183.32,64.68" aria-label="Krimuldas"/>
+    <text class="label" x="193.89" y="70.78">KRI</text>
+  </g>
+  <g class="state" data-state="MAL">
+    <title>Malpils</title>
+    <polygon class="tile" points="193.89,95.18 204.46,101.29 204.46,113.49 193.89,119.59 183.32,113.49 183.32,101.29" aria-label="Malpils"/>
+    <text class="label" x="193.89" y="107.39">MAL</text>
+  </g>
+  <g class="state" data-state="KEG">
+    <title>Keguma</title>
+    <polygon class="tile" points="193.89,131.79 204.46,137.89 204.46,150.10 193.89,156.20 183.32,150.10 183.32,137.89" aria-label="Keguma"/>
+    <text class="label" x="193.89" y="144.00">KEG</text>
+  </g>
+  <g class="state" data-state="ALO">
+    <title>Alojas</title>
+    <polygon class="tile" points="183.32,3.66 193.89,9.76 193.89,21.97 183.32,28.07 172.75,21.97 172.75,9.76" aria-label="Alojas"/>
+    <text class="label" x="183.32" y="15.86">ALO</text>
+  </g>
+  <g class="state" data-state="SEJ">
+    <title>Sejas</title>
+    <polygon class="tile" points="183.32,40.27 193.89,46.37 193.89,58.57 183.32,64.68 172.75,58.57 172.75,46.37" aria-label="Sejas"/>
+    <text class="label" x="183.32" y="52.47">SEJ</text>
+  </g>
+  <g class="state" data-state="ROP">
+    <title>Ropazu</title>
+    <polygon class="tile" points="183.32,76.88 193.89,82.98 193.89,95.18 183.32,101.29 172.75,95.18 172.75,82.98" aria-label="Ropazu"/>
+    <text class="label" x="183.32" y="89.08">ROP</text>
+  </g>
+  <g class="state" data-state="LIE">
+    <title>Lielvardes</title>
+    <polygon class="tile" points="183.32,113.49 193.89,119.59 193.89,131.79 183.32,137.89 172.75,131.79 172.75,119.59" aria-label="Lielvardes"/>
+    <text class="label" x="183.32" y="125.69">LIE</text>
+  </g>
+  <g class="state" data-state="VEC">
+    <title>Vecumnieku</title>
+    <polygon class="tile" points="183.32,150.10 193.89,156.20 193.89,168.40 183.32,174.50 172.75,168.40 172.75,156.20" aria-label="Vecumnieku"/>
+    <text class="label" x="183.32" y="162.30">VEC</text>
+  </g>
+  <g class="state" data-state="SAL">
+    <title>Salacgrivas</title>
+    <polygon class="tile" points="172.75,21.97 183.32,28.07 183.32,40.27 172.75,46.37 162.18,40.27 162.18,28.07" aria-label="Salacgrivas"/>
+    <text class="label" x="172.75" y="34.17">SAL</text>
+  </g>
+  <g class="state" data-state="INC">
+    <title>Incukalna</title>
+    <polygon class="tile" points="172.75,58.57 183.32,64.68 183.32,76.88 172.75,82.98 162.18,76.88 162.18,64.68" aria-label="Incukalna"/>
+    <text class="label" x="172.75" y="70.78">INC</text>
+  </g>
+  <g class="state" data-state="SALA">
+    <title>Salaspils</title>
+    <polygon class="tile" points="172.75,95.18 183.32,101.29 183.32,113.49 172.75,119.59 162.18,113.49 162.18,101.29" aria-label="Salaspils"/>
+    <text class="label" x="172.75" y="107.39">SALA</text>
+  </g>
+  <g class="state" data-state="IEC">
+    <title>Iecavas</title>
+    <polygon class="tile" points="172.75,131.79 183.32,137.89 183.32,150.10 172.75,156.20 162.18,150.10 162.18,137.89" aria-label="Iecavas"/>
+    <text class="label" x="172.75" y="144.00">IEC</text>
+  </g>
+  <g class="state" data-state="STO">
+    <title>Stopinu</title>
+    <polygon class="tile" points="162.18,76.88 172.75,82.98 172.75,95.18 162.18,101.29 151.62,95.18 151.62,82.98" aria-label="Stopinu"/>
+    <text class="label" x="162.18" y="89.08">STO</text>
+  </g>
+  <g class="state" data-state="IKS">
+    <title>Ikskiles</title>
+    <polygon class="tile" points="162.18,113.49 172.75,119.59 172.75,131.79 162.18,137.89 151.62,131.79 151.62,119.59" aria-label="Ikskiles"/>
+    <text class="label" x="162.18" y="125.69">IKS</text>
+  </g>
+  <g class="state" data-state="BU">
+    <title>Bauska</title>
+    <polygon class="tile" points="162.18,150.10 172.75,156.20 172.75,168.40 162.18,174.50 151.62,168.40 151.62,156.20" aria-label="Bauska"/>
+    <text class="label" x="162.18" y="162.30">BU</text>
+  </g>
+  <g class="state" data-state="GAR">
+    <title>Garkalnes</title>
+    <polygon class="tile" points="151.62,58.57 162.18,64.68 162.18,76.88 151.62,82.98 141.05,76.88 141.05,64.68" aria-label="Garkalnes"/>
+    <text class="label" x="151.62" y="70.78">GAR</text>
+  </g>
+  <g class="state" data-state="KEK">
+    <title>Kekavas</title>
+    <polygon class="tile" points="151.62,95.18 162.18,101.29 162.18,113.49 151.62,119.59 141.05,113.49 141.05,101.29" aria-label="Kekavas"/>
+    <text class="label" x="151.62" y="107.39">KEK</text>
+  </g>
+  <g class="state" data-state="OZO">
+    <title>Ozolnieku</title>
+    <polygon class="tile" points="151.62,131.79 162.18,137.89 162.18,150.10 151.62,156.20 141.05,150.10 141.05,137.89" aria-label="Ozolnieku"/>
+    <text class="label" x="151.62" y="144.00">OZO</text>
+  </g>
+  <g class="state" data-state="RIX">
+    <title>Riga</title>
+    <polygon class="tile" points="141.05,76.88 151.62,82.98 151.62,95.18 141.05,101.29 130.48,95.18 130.48,82.98" aria-label="Riga"/>
+    <text class="label" x="141.05" y="89.08">RIX</text>
+  </g>
+  <g class="state" data-state="BALB">
+    <title>Baldones</title>
+    <polygon class="tile" points="141.05,113.49 151.62,119.59 151.62,131.79 141.05,137.89 130.48,131.79 130.48,119.59" aria-label="Baldones"/>
+    <text class="label" x="141.05" y="125.69">BALB</text>
+  </g>
+  <g class="state" data-state="RUN">
+    <title>Rundales</title>
+    <polygon class="tile" points="141.05,150.10 151.62,156.20 151.62,168.40 141.05,174.50 130.48,168.40 130.48,156.20" aria-label="Rundales"/>
+    <text class="label" x="141.05" y="162.30">RUN</text>
+  </g>
+  <g class="state" data-state="CAR">
+    <title>Carnikavas</title>
+    <polygon class="tile" points="130.48,58.57 141.05,64.68 141.05,76.88 130.48,82.98 119.91,76.88 119.91,64.68" aria-label="Carnikavas"/>
+    <text class="label" x="130.48" y="70.78">CAR</text>
+  </g>
+  <g class="state" data-state="MAR">
+    <title>Marupes</title>
+    <polygon class="tile" points="130.48,95.18 141.05,101.29 141.05,113.49 130.48,119.59 119.91,113.49 119.91,101.29" aria-label="Marupes"/>
+    <text class="label" x="130.48" y="107.39">MAR</text>
+  </g>
+  <g class="state" data-state="JEL">
+    <title>Jelgava</title>
+    <polygon class="tile" points="130.48,131.79 141.05,137.89 141.05,150.10 130.48,156.20 119.91,150.10 119.91,137.89" aria-label="Jelgava"/>
+    <text class="label" x="130.48" y="144.00">JEL</text>
+  </g>
+  <g class="state" data-state="DAI">
+    <title>Ādaži</title>
+    <polygon class="tile" points="119.91,40.27 130.48,46.37 130.48,58.57 119.91,64.68 109.34,58.57 109.34,46.37" aria-label="Ādaži"/>
+    <text class="label" x="119.91" y="52.47">DAI</text>
+  </g>
+  <g class="state" data-state="JUR">
+    <title>Jurmala</title>
+    <polygon class="tile" points="119.91,76.88 130.48,82.98 130.48,95.18 119.91,101.29 109.34,95.18 109.34,82.98" aria-label="Jurmala"/>
+    <text class="label" x="119.91" y="89.08">JUR</text>
+  </g>
+  <g class="state" data-state="OLA">
+    <title>Olaines</title>
+    <polygon class="tile" points="119.91,113.49 130.48,119.59 130.48,131.79 119.91,137.89 109.34,131.79 109.34,119.59" aria-label="Olaines"/>
+    <text class="label" x="119.91" y="125.69">OLA</text>
+  </g>
+  <g class="state" data-state="JE">
+    <title>Jelgava</title>
+    <polygon class="tile" points="119.91,150.10 130.48,156.20 130.48,168.40 119.91,174.50 109.34,168.40 109.34,156.20" aria-label="Jelgava"/>
+    <text class="label" x="119.91" y="162.30">JE</text>
+  </g>
+  <g class="state" data-state="ENG">
+    <title>Engures</title>
+    <polygon class="tile" points="109.34,58.57 119.91,64.68 119.91,76.88 109.34,82.98 98.77,76.88 98.77,64.68" aria-label="Engures"/>
+    <text class="label" x="109.34" y="70.78">ENG</text>
+  </g>
+  <g class="state" data-state="BAB">
+    <title>Babites</title>
+    <polygon class="tile" points="109.34,95.18 119.91,101.29 119.91,113.49 109.34,119.59 98.77,113.49 98.77,101.29" aria-label="Babites"/>
+    <text class="label" x="109.34" y="107.39">BAB</text>
+  </g>
+  <g class="state" data-state="DO">
+    <title>Dobele</title>
+    <polygon class="tile" points="109.34,131.79 119.91,137.89 119.91,150.10 109.34,156.20 98.77,150.10 98.77,137.89" aria-label="Dobele"/>
+    <text class="label" x="109.34" y="144.00">DO</text>
+  </g>
+  <g class="state" data-state="SAU">
+    <title>Saulkrastu</title>
+    <polygon class="tile" points="98.77,40.27 109.34,46.37 109.34,58.57 98.77,64.68 88.21,58.57 88.21,46.37" aria-label="Saulkrastu"/>
+    <text class="label" x="98.77" y="52.47">SAU</text>
+  </g>
+  <g class="state" data-state="TU">
+    <title>Tukums</title>
+    <polygon class="tile" points="98.77,76.88 109.34,82.98 109.34,95.18 98.77,101.29 88.21,95.18 88.21,82.98" aria-label="Tukums"/>
+    <text class="label" x="98.77" y="89.08">TU</text>
+  </g>
+  <g class="state" data-state="BRO">
+    <title>Brocenu</title>
+    <polygon class="tile" points="98.77,113.49 109.34,119.59 109.34,131.79 98.77,137.89 88.21,131.79 88.21,119.59" aria-label="Brocenu"/>
+    <text class="label" x="98.77" y="125.69">BRO</text>
+  </g>
+  <g class="state" data-state="TER">
+    <title>Tervetes</title>
+    <polygon class="tile" points="98.77,150.10 109.34,156.20 109.34,168.40 98.77,174.50 88.21,168.40 88.21,156.20" aria-label="Tervetes"/>
+    <text class="label" x="98.77" y="162.30">TER</text>
+  </g>
+  <g class="state" data-state="MER">
+    <title>Mersraga</title>
+    <polygon class="tile" points="88.21,58.57 98.77,64.68 98.77,76.88 88.21,82.98 77.64,76.88 77.64,64.68" aria-label="Mersraga"/>
+    <text class="label" x="88.21" y="70.78">MER</text>
+  </g>
+  <g class="state" data-state="JAUB">
+    <title>Jaunpils</title>
+    <polygon class="tile" points="88.21,95.18 98.77,101.29 98.77,113.49 88.21,119.59 77.64,113.49 77.64,101.29" aria-label="Jaunpils"/>
+    <text class="label" x="88.21" y="107.39">JAUB</text>
+  </g>
+  <g class="state" data-state="AUC">
+    <title>Auces</title>
+    <polygon class="tile" points="88.21,131.79 98.77,137.89 98.77,150.10 88.21,156.20 77.64,150.10 77.64,137.89" aria-label="Auces"/>
+    <text class="label" x="88.21" y="144.00">AUC</text>
+  </g>
+  <g class="state" data-state="ROJ">
+    <title>Rojas</title>
+    <polygon class="tile" points="77.64,40.27 88.21,46.37 88.21,58.57 77.64,64.68 67.07,58.57 67.07,46.37" aria-label="Rojas"/>
+    <text class="label" x="77.64" y="52.47">ROJ</text>
+  </g>
+  <g class="state" data-state="KAN">
+    <title>Kandavas</title>
+    <polygon class="tile" points="77.64,76.88 88.21,82.98 88.21,95.18 77.64,101.29 67.07,95.18 67.07,82.98" aria-label="Kandavas"/>
+    <text class="label" x="77.64" y="89.08">KAN</text>
+  </g>
+  <g class="state" data-state="SA">
+    <title>Saldus</title>
+    <polygon class="tile" points="77.64,113.49 88.21,119.59 88.21,131.79 77.64,137.89 67.07,131.79 67.07,119.59" aria-label="Saldus"/>
+    <text class="label" x="77.64" y="125.69">SA</text>
+  </g>
+  <g class="state" data-state="TAL">
+    <title>Talsi</title>
+    <polygon class="tile" points="67.07,58.57 77.64,64.68 77.64,76.88 67.07,82.98 56.50,76.88 56.50,64.68" aria-label="Talsi"/>
+    <text class="label" x="67.07" y="70.78">TAL</text>
+  </g>
+  <g class="state" data-state="SKRA">
+    <title>Skrundas</title>
+    <polygon class="tile" points="67.07,95.18 77.64,101.29 77.64,113.49 67.07,119.59 56.50,113.49 56.50,101.29" aria-label="Skrundas"/>
+    <text class="label" x="67.07" y="107.39">SKRA</text>
+  </g>
+  <g class="state" data-state="VAI">
+    <title>Vainodes</title>
+    <polygon class="tile" points="67.07,131.79 77.64,137.89 77.64,150.10 67.07,156.20 56.50,150.10 56.50,137.89" aria-label="Vainodes"/>
+    <text class="label" x="67.07" y="144.00">VAI</text>
+  </g>
+  <g class="state" data-state="TA">
+    <title>Dundagas</title>
+    <polygon class="tile" points="56.50,40.27 67.07,46.37 67.07,58.57 56.50,64.68 45.93,58.57 45.93,46.37" aria-label="Dundagas"/>
+    <text class="label" x="56.50" y="52.47">TA</text>
+  </g>
+  <g class="state" data-state="KUL">
+    <title>Kuldigas</title>
+    <polygon class="tile" points="56.50,76.88 67.07,82.98 67.07,95.18 56.50,101.29 45.93,95.18 45.93,82.98" aria-label="Kuldigas"/>
+    <text class="label" x="56.50" y="89.08">KUL</text>
+  </g>
+  <g class="state" data-state="PRI">
+    <title>Priekules</title>
+    <polygon class="tile" points="56.50,113.49 67.07,119.59 67.07,131.79 56.50,137.89 45.93,131.79 45.93,119.59" aria-label="Priekules"/>
+    <text class="label" x="56.50" y="125.69">PRI</text>
+  </g>
+  <g class="state" data-state="VEN">
+    <title>Ventspils</title>
+    <polygon class="tile" points="45.93,58.57 56.50,64.68 56.50,76.88 45.93,82.98 35.37,76.88 35.37,64.68" aria-label="Ventspils"/>
+    <text class="label" x="45.93" y="70.78">VEN</text>
+  </g>
+  <g class="state" data-state="AIZA">
+    <title>Aizputes</title>
+    <polygon class="tile" points="45.93,95.18 56.50,101.29 56.50,113.49 45.93,119.59 35.37,113.49 35.37,101.29" aria-label="Aizputes"/>
+    <text class="label" x="45.93" y="107.39">AIZA</text>
+  </g>
+  <g class="state" data-state="RUC">
+    <title>Rucavas</title>
+    <polygon class="tile" points="45.93,131.79 56.50,137.89 56.50,150.10 45.93,156.20 35.37,150.10 35.37,137.89" aria-label="Rucavas"/>
+    <text class="label" x="45.93" y="144.00">RUC</text>
+  </g>
+  <g class="state" data-state="VS">
+    <title>Ventspils</title>
+    <polygon class="tile" points="35.37,40.27 45.93,46.37 45.93,58.57 35.37,64.68 24.80,58.57 24.80,46.37" aria-label="Ventspils"/>
+    <text class="label" x="35.37" y="52.47">VS</text>
+  </g>
+  <g class="state" data-state="PAV">
+    <title>Pavilostas</title>
+    <polygon class="tile" points="35.37,76.88 45.93,82.98 45.93,95.18 35.37,101.29 24.80,95.18 24.80,82.98" aria-label="Pavilostas"/>
+    <text class="label" x="35.37" y="89.08">PAV</text>
+  </g>
+  <g class="state" data-state="GRO">
+    <title>Grobinas</title>
+    <polygon class="tile" points="35.37,113.49 45.93,119.59 45.93,131.79 35.37,137.89 24.80,131.79 24.80,119.59" aria-label="Grobinas"/>
+    <text class="label" x="35.37" y="125.69">GRO</text>
+  </g>
+  <g class="state" data-state="ALS">
+    <title>Alsungas</title>
+    <polygon class="tile" points="24.80,58.57 35.37,64.68 35.37,76.88 24.80,82.98 14.23,76.88 14.23,64.68" aria-label="Alsungas"/>
+    <text class="label" x="24.80" y="70.78">ALS</text>
+  </g>
+  <g class="state" data-state="LP">
+    <title>Durbes</title>
+    <polygon class="tile" points="24.80,95.18 35.37,101.29 35.37,113.49 24.80,119.59 14.23,113.49 14.23,101.29" aria-label="Durbes"/>
+    <text class="label" x="24.80" y="107.39">LP</text>
+  </g>
+  <g class="state" data-state="NIC">
+    <title>Nicas</title>
+    <polygon class="tile" points="24.80,131.79 35.37,137.89 35.37,150.10 24.80,156.20 14.23,150.10 14.23,137.89" aria-label="Nicas"/>
+    <text class="label" x="24.80" y="144.00">NIC</text>
+  </g>
+  <g class="state" data-state="LPX">
+    <title>Liepāja</title>
+    <polygon class="tile" points="14.23,113.49 24.80,119.59 24.80,131.79 14.23,137.89 3.66,131.79 3.66,119.59" aria-label="Liepāja"/>
+    <text class="label" x="14.23" y="125.69">LPX</text>
+  </g>
+</svg>

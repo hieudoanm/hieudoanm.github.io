@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 358.71 214.77" width="358.71" height="214.77" role="img" aria-labelledby="guatemala-title guatemala-desc">
+  <title id="guatemala-title">Guatemala hex map</title>
+  <desc id="guatemala-desc">Hexagon map with 22 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.57; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 12.70 9.07; }
+    .label { fill: #52525b; font: 600 10.28px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="IZ">
+    <title>Izabal</title>
+    <polygon class="tile" points="323.44,9.07 349.64,24.20 349.64,54.45 323.44,69.57 297.24,54.45 297.24,24.20" aria-label="Izabal"/>
+    <text class="label" x="323.44" y="39.32">IZ</text>
+  </g>
+  <g class="state" data-state="CQ">
+    <title>Chiquimula</title>
+    <polygon class="tile" points="323.44,99.82 349.64,114.95 349.64,145.20 323.44,160.32 297.24,145.20 297.24,114.95" aria-label="Chiquimula"/>
+    <text class="label" x="323.44" y="130.07">CQ</text>
+  </g>
+  <g class="state" data-state="ZA">
+    <title>Zacapa</title>
+    <polygon class="tile" points="297.24,54.45 323.44,69.57 323.44,99.82 297.24,114.95 271.05,99.82 271.05,69.57" aria-label="Zacapa"/>
+    <text class="label" x="297.24" y="84.70">ZA</text>
+  </g>
+  <g class="state" data-state="PE">
+    <title>Petén</title>
+    <polygon class="tile" points="271.05,9.07 297.24,24.20 297.24,54.45 271.05,69.57 244.85,54.45 244.85,24.20" aria-label="Petén"/>
+    <text class="label" x="271.05" y="39.32">PE</text>
+  </g>
+  <g class="state" data-state="JA">
+    <title>Jalapa</title>
+    <polygon class="tile" points="271.05,99.82 297.24,114.95 297.24,145.20 271.05,160.32 244.85,145.20 244.85,114.95" aria-label="Jalapa"/>
+    <text class="label" x="271.05" y="130.07">JA</text>
+  </g>
+  <g class="state" data-state="PR">
+    <title>El Progreso</title>
+    <polygon class="tile" points="244.85,54.45 271.05,69.57 271.05,99.82 244.85,114.95 218.65,99.82 218.65,69.57" aria-label="El Progreso"/>
+    <text class="label" x="244.85" y="84.70">PR</text>
+  </g>
+  <g class="state" data-state="JU">
+    <title>Jutiapa</title>
+    <polygon class="tile" points="244.85,145.20 271.05,160.32 271.05,190.57 244.85,205.70 218.65,190.57 218.65,160.32" aria-label="Jutiapa"/>
+    <text class="label" x="244.85" y="175.45">JU</text>
+  </g>
+  <g class="state" data-state="AV">
+    <title>Alta Verapaz</title>
+    <polygon class="tile" points="218.65,9.07 244.85,24.20 244.85,54.45 218.65,69.57 192.46,54.45 192.46,24.20" aria-label="Alta Verapaz"/>
+    <text class="label" x="218.65" y="39.32">AV</text>
+  </g>
+  <g class="state" data-state="GU">
+    <title>Guatemala</title>
+    <polygon class="tile" points="218.65,99.82 244.85,114.95 244.85,145.20 218.65,160.32 192.46,145.20 192.46,114.95" aria-label="Guatemala"/>
+    <text class="label" x="218.65" y="130.07">GU</text>
+  </g>
+  <g class="state" data-state="BV">
+    <title>Baja Verapaz</title>
+    <polygon class="tile" points="192.46,54.45 218.65,69.57 218.65,99.82 192.46,114.95 166.26,99.82 166.26,69.57" aria-label="Baja Verapaz"/>
+    <text class="label" x="192.46" y="84.70">BV</text>
+  </g>
+  <g class="state" data-state="SR">
+    <title>Santa Rosa</title>
+    <polygon class="tile" points="192.46,145.20 218.65,160.32 218.65,190.57 192.46,205.70 166.26,190.57 166.26,160.32" aria-label="Santa Rosa"/>
+    <text class="label" x="192.46" y="175.45">SR</text>
+  </g>
+  <g class="state" data-state="QC">
+    <title>Quiché</title>
+    <polygon class="tile" points="166.26,9.07 192.46,24.20 192.46,54.45 166.26,69.57 140.06,54.45 140.06,24.20" aria-label="Quiché"/>
+    <text class="label" x="166.26" y="39.32">QC</text>
+  </g>
+  <g class="state" data-state="SA">
+    <title>Sacatepéquez</title>
+    <polygon class="tile" points="166.26,99.82 192.46,114.95 192.46,145.20 166.26,160.32 140.06,145.20 140.06,114.95" aria-label="Sacatepéquez"/>
+    <text class="label" x="166.26" y="130.07">SA</text>
+  </g>
+  <g class="state" data-state="SO">
+    <title>Sololá</title>
+    <polygon class="tile" points="140.06,54.45 166.26,69.57 166.26,99.82 140.06,114.95 113.86,99.82 113.86,69.57" aria-label="Sololá"/>
+    <text class="label" x="140.06" y="84.70">SO</text>
+  </g>
+  <g class="state" data-state="ES">
+    <title>Escuintla</title>
+    <polygon class="tile" points="140.06,145.20 166.26,160.32 166.26,190.57 140.06,205.70 113.86,190.57 113.86,160.32" aria-label="Escuintla"/>
+    <text class="label" x="140.06" y="175.45">ES</text>
+  </g>
+  <g class="state" data-state="TO">
+    <title>Totonicapán</title>
+    <polygon class="tile" points="113.86,9.07 140.06,24.20 140.06,54.45 113.86,69.57 87.67,54.45 87.67,24.20" aria-label="Totonicapán"/>
+    <text class="label" x="113.86" y="39.32">TO</text>
+  </g>
+  <g class="state" data-state="CM">
+    <title>Chimaltenango</title>
+    <polygon class="tile" points="113.86,99.82 140.06,114.95 140.06,145.20 113.86,160.32 87.67,145.20 87.67,114.95" aria-label="Chimaltenango"/>
+    <text class="label" x="113.86" y="130.07">CM</text>
+  </g>
+  <g class="state" data-state="QZ">
+    <title>Quezaltenango</title>
+    <polygon class="tile" points="87.67,54.45 113.86,69.57 113.86,99.82 87.67,114.95 61.47,99.82 61.47,69.57" aria-label="Quezaltenango"/>
+    <text class="label" x="87.67" y="84.70">QZ</text>
+  </g>
+  <g class="state" data-state="SU">
+    <title>Suchitepéquez</title>
+    <polygon class="tile" points="87.67,145.20 113.86,160.32 113.86,190.57 87.67,205.70 61.47,190.57 61.47,160.32" aria-label="Suchitepéquez"/>
+    <text class="label" x="87.67" y="175.45">SU</text>
+  </g>
+  <g class="state" data-state="HU">
+    <title>Huehuetenango</title>
+    <polygon class="tile" points="61.47,9.07 87.67,24.20 87.67,54.45 61.47,69.57 35.27,54.45 35.27,24.20" aria-label="Huehuetenango"/>
+    <text class="label" x="61.47" y="39.32">HU</text>
+  </g>
+  <g class="state" data-state="RE">
+    <title>Retalhuleu</title>
+    <polygon class="tile" points="61.47,99.82 87.67,114.95 87.67,145.20 61.47,160.32 35.27,145.20 35.27,114.95" aria-label="Retalhuleu"/>
+    <text class="label" x="61.47" y="130.07">RE</text>
+  </g>
+  <g class="state" data-state="SM">
+    <title>San Marcos</title>
+    <polygon class="tile" points="35.27,54.45 61.47,69.57 61.47,99.82 35.27,114.95 9.07,99.82 9.07,69.57" aria-label="San Marcos"/>
+    <text class="label" x="35.27" y="84.70">SM</text>
+  </g>
+</svg>

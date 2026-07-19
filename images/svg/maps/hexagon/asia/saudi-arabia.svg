@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 255.96 292.40" width="255.96" height="292.40" role="img" aria-labelledby="saudi-arabia-title saudi-arabia-desc">
+  <title id="saudi-arabia-title">Saudi Arabia hex map</title>
+  <desc id="saudi-arabia-desc">Hexagon map with 13 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.89; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 14.28 10.20; }
+    .label { fill: #52525b; font: 600 11.56px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="SH">
+    <title>Ash Sharqiyah</title>
+    <polygon class="tile" points="216.31,163.20 245.76,180.20 245.76,214.20 216.31,231.20 186.87,214.20 186.87,180.20" aria-label="Ash Sharqiyah"/>
+    <text class="label" x="216.31" y="197.20">SH</text>
+  </g>
+  <g class="state" data-state="RI">
+    <title>Ar Riyad</title>
+    <polygon class="tile" points="186.87,112.20 216.31,129.20 216.31,163.20 186.87,180.20 157.42,163.20 157.42,129.20" aria-label="Ar Riyad"/>
+    <text class="label" x="186.87" y="146.20">RI</text>
+  </g>
+  <g class="state" data-state="NJ">
+    <title>Najran</title>
+    <polygon class="tile" points="186.87,214.20 216.31,231.20 216.31,265.20 186.87,282.20 157.42,265.20 157.42,231.20" aria-label="Najran"/>
+    <text class="label" x="186.87" y="248.20">NJ</text>
+  </g>
+  <g class="state" data-state="QS">
+    <title>Al Quassim</title>
+    <polygon class="tile" points="157.42,61.20 186.87,78.20 186.87,112.20 157.42,129.20 127.98,112.20 127.98,78.20" aria-label="Al Quassim"/>
+    <text class="label" x="157.42" y="95.20">QS</text>
+  </g>
+  <g class="state" data-state="AS">
+    <title>`Asir</title>
+    <polygon class="tile" points="157.42,163.20 186.87,180.20 186.87,214.20 157.42,231.20 127.98,214.20 127.98,180.20" aria-label="`Asir"/>
+    <text class="label" x="157.42" y="197.20">AS</text>
+  </g>
+  <g class="state" data-state="HS">
+    <title>Al Hudud ash Shamaliyah</title>
+    <polygon class="tile" points="127.98,10.20 157.42,27.20 157.42,61.20 127.98,78.20 98.53,61.20 98.53,27.20" aria-label="Al Hudud ash Shamaliyah"/>
+    <text class="label" x="127.98" y="44.20">HS</text>
+  </g>
+  <g class="state" data-state="MK">
+    <title>Makkah</title>
+    <polygon class="tile" points="127.98,112.20 157.42,129.20 157.42,163.20 127.98,180.20 98.53,163.20 98.53,129.20" aria-label="Makkah"/>
+    <text class="label" x="127.98" y="146.20">MK</text>
+  </g>
+  <g class="state" data-state="JZ">
+    <title>Jizan</title>
+    <polygon class="tile" points="127.98,214.20 157.42,231.20 157.42,265.20 127.98,282.20 98.53,265.20 98.53,231.20" aria-label="Jizan"/>
+    <text class="label" x="127.98" y="248.20">JZ</text>
+  </g>
+  <g class="state" data-state="HA">
+    <title>Ha'il</title>
+    <polygon class="tile" points="98.53,61.20 127.98,78.20 127.98,112.20 98.53,129.20 69.09,112.20 69.09,78.20" aria-label="Ha'il"/>
+    <text class="label" x="98.53" y="95.20">HA</text>
+  </g>
+  <g class="state" data-state="BA">
+    <title>Al Bahah</title>
+    <polygon class="tile" points="98.53,163.20 127.98,180.20 127.98,214.20 98.53,231.20 69.09,214.20 69.09,180.20" aria-label="Al Bahah"/>
+    <text class="label" x="98.53" y="197.20">BA</text>
+  </g>
+  <g class="state" data-state="JF">
+    <title>Al Jawf</title>
+    <polygon class="tile" points="69.09,10.20 98.53,27.20 98.53,61.20 69.09,78.20 39.64,61.20 39.64,27.20" aria-label="Al Jawf"/>
+    <text class="label" x="69.09" y="44.20">JF</text>
+  </g>
+  <g class="state" data-state="MD">
+    <title>Al Madinah</title>
+    <polygon class="tile" points="69.09,112.20 98.53,129.20 98.53,163.20 69.09,180.20 39.64,163.20 39.64,129.20" aria-label="Al Madinah"/>
+    <text class="label" x="69.09" y="146.20">MD</text>
+  </g>
+  <g class="state" data-state="TB">
+    <title>Tabuk</title>
+    <polygon class="tile" points="39.64,61.20 69.09,78.20 69.09,112.20 39.64,129.20 10.20,112.20 10.20,78.20" aria-label="Tabuk"/>
+    <text class="label" x="39.64" y="95.20">TB</text>
+  </g>
+</svg>

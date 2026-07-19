@@ -1,0 +1,46 @@
+WEBVTT
+
+NOTE Animated terminal (1280x720, dark slate) showing the CV CLI
+workflow. Cues are timed to the line animations in demo.svg.
+
+00:00.900 --> 00:01.700
+Command: cv init
+
+00:01.700 --> 00:02.400
+Output: Created cv.yaml with default structure
+
+00:02.400 --> 00:03.100
+Command: cv pdf cv.yaml -o cv.pdf
+
+00:03.100 --> 00:03.800
+Output: Generated cv.pdf using template classic/classic
+
+00:03.800 --> 00:04.500
+Command: cv pdf cv.yaml --template minimal/minimal -o cv-minimal.pdf
+
+00:04.500 --> 00:05.200
+Output: Generated cv-minimal.pdf
+
+00:05.200 --> 00:05.900
+Command: cv pdf cv.yaml --template sidebar/modern -o cv-sidebar.pdf
+
+00:05.900 --> 00:06.600
+Output: Generated cv-sidebar.pdf
+
+00:06.600 --> 00:07.300
+Command: cv validate cv.yaml
+
+00:07.300 --> 00:08.000
+Output: ✓ cv.yaml is valid
+
+00:08.000 --> 00:08.700
+Command: cv serve --port 8080
+
+00:08.700 --> 00:09.400
+Output: HTTP server listening on http://localhost:8080
+
+00:09.400 --> 00:10.100
+Output: Ctrl+C to stop
+
+00:10.100 --> 00:13.000
+Blank prompt

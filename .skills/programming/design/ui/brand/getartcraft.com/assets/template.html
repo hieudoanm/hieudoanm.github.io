@@ -1,0 +1,748 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0b0c" />
+    <title>ArtCraft Style Template</title>
+    <style>
+      /* ---- tokens (keep in sync with references/tokens.css) ---- */
+      :root {
+        --bg: #0b0b0c;
+        --surface: #121214;
+        --surface-2: #17171a;
+        --border: rgba(255, 255, 255, 0.08);
+        --border-strong: rgba(255, 255, 255, 0.16);
+        --text: #f4f4f5;
+        --text-muted: #a1a1aa;
+        --text-faint: #6b6b73;
+        --primary: #f4f4f5;
+        --primary-text: #0b0b0c;
+        --font-sans:
+          'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI',
+          sans-serif;
+        --font-mono:
+          ui-monospace, 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace;
+        --radius-md: 14px;
+        --radius-lg: 22px;
+        --radius-pill: 999px;
+        --container: 1200px;
+        --gutter: clamp(1rem, 4vw, 2rem);
+        --header-h: 64px;
+        --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+        --marquee-speed: 40s;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      html {
+        color-scheme: dark;
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: var(--font-sans);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+      h1,
+      h2,
+      h3 {
+        line-height: 1.05;
+        letter-spacing: -0.03em;
+        font-weight: 600;
+      }
+      .container {
+        width: 100%;
+        max-width: var(--container);
+        margin-inline: auto;
+        padding-inline: var(--gutter);
+      }
+      .section {
+        padding-block: clamp(3.5rem, 8vw, 6rem);
+      }
+      .eyebrow {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        color: var(--text-faint);
+      }
+      .lead {
+        color: var(--text-muted);
+        font-size: clamp(1.05rem, 1.2vw + 0.8rem, 1.25rem);
+        max-width: 56ch;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.8rem 1.4rem;
+        border-radius: var(--radius-pill);
+        border: 1px solid var(--border-strong);
+        font-weight: 500;
+        font-size: 0.95rem;
+        transition:
+          background 0.15s var(--ease),
+          transform 0.15s var(--ease);
+      }
+      .btn:hover {
+        transform: translateY(-1px);
+      }
+      .btn--primary {
+        background: var(--primary);
+        color: var(--primary-text);
+        border-color: var(--primary);
+      }
+      .btn--ghost:hover {
+        background: var(--surface-2);
+      }
+      a:focus-visible,
+      button:focus-visible {
+        outline: 2px solid var(--text);
+        outline-offset: 3px;
+      }
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+        padding: 2rem;
+      }
+      .frame {
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        background: linear-gradient(135deg, #17171a, #0f0f11);
+        aspect-ratio: 16/9;
+        display: grid;
+        place-items: center;
+        color: var(--text-faint);
+        font-family: var(--font-mono);
+        font-size: 0.8rem;
+      }
+      .frame > video,
+      .frame > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* ---- header ---- */
+      .header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        height: var(--header-h);
+        background: rgba(11, 11, 12, 0.85);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--border);
+      }
+      .header .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+      }
+      .brand__mark {
+        width: 26px;
+        height: 26px;
+        border-radius: 8px;
+        border: 1px solid var(--border-strong);
+        display: grid;
+        place-items: center;
+        font-size: 0.8rem;
+      }
+      .nav {
+        display: flex;
+        gap: 1.5rem;
+        color: var(--text-muted);
+        font-size: 0.92rem;
+      }
+      .nav a:hover {
+        color: var(--text);
+      }
+      .header__right {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+        font-size: 0.92rem;
+        color: var(--text-muted);
+      }
+      @media (max-width: 768px) {
+        .nav {
+          display: none;
+        }
+      }
+
+      /* ---- hero ---- */
+      .hero {
+        padding-block: clamp(4rem, 10vw, 8rem) 3rem;
+        overflow: hidden;
+      }
+      .hero__word {
+        font-size: clamp(4rem, 22vw, 18rem);
+        font-weight: 700;
+        letter-spacing: -0.06em;
+        line-height: 0.8;
+        color: rgba(255, 255, 255, 0.06);
+        white-space: nowrap;
+        margin-bottom: -0.15em;
+        user-select: none;
+      }
+      .hero h1 {
+        font-size: clamp(2.75rem, 7vw + 0.5rem, 6rem);
+        margin-bottom: 1.25rem;
+      }
+      .hero__actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.75rem;
+        margin-top: 2rem;
+      }
+      .hero__link {
+        color: var(--text-muted);
+        margin-left: 0.5rem;
+      }
+      .hero__link:hover {
+        color: var(--text);
+      }
+      .hero__meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+      }
+
+      /* ---- ticker ---- */
+      .ticker {
+        border-block: 1px solid var(--border);
+        overflow: hidden;
+        padding-block: 1rem;
+        font-family: var(--font-mono);
+        font-size: 0.85rem;
+        color: var(--text-muted);
+      }
+      .ticker__track {
+        display: flex;
+        width: max-content;
+        animation: scroll var(--marquee-speed) linear infinite;
+      }
+      .ticker__list {
+        display: flex;
+        gap: 2.5rem;
+        padding-right: 2.5rem;
+        margin: 0;
+        list-style: none;
+        padding-left: 0;
+      }
+      .ticker__list li::before {
+        content: '▪';
+        margin-right: 0.6rem;
+        color: var(--text-faint);
+      }
+      @keyframes scroll {
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      /* ---- section header ---- */
+      .sec-head {
+        display: grid;
+        gap: 1rem;
+        margin-bottom: clamp(2rem, 5vw, 4rem);
+      }
+      .sec-head h2 {
+        font-size: clamp(2rem, 4vw + 0.5rem, 3.5rem);
+        max-width: 18ch;
+      }
+
+      /* ---- features ---- */
+      .feature {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: clamp(1.5rem, 4vw, 4rem);
+        align-items: center;
+        padding-block: 2.5rem;
+        border-top: 1px solid var(--border);
+      }
+      .feature__meta {
+        display: flex;
+        gap: 1rem;
+        align-items: baseline;
+        margin-bottom: 1rem;
+      }
+      .feature h3 {
+        font-size: clamp(1.25rem, 1vw + 1rem, 1.6rem);
+        margin-bottom: 0.75rem;
+      }
+      .feature p {
+        color: var(--text-muted);
+        max-width: 44ch;
+      }
+      @media (max-width: 768px) {
+        .feature {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .strip {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        gap: 1.5rem;
+        align-items: center;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+        padding: 1.5rem 2rem;
+        margin-top: 2rem;
+        transition: background 0.15s var(--ease);
+      }
+      .strip:hover {
+        background: var(--surface);
+      }
+      .strip strong {
+        display: block;
+        font-size: 1.25rem;
+        letter-spacing: -0.02em;
+      }
+      .strip span.d {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+      }
+      @media (max-width: 768px) {
+        .strip {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* ---- ownership ---- */
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+      }
+      .card__badge {
+        display: inline-grid;
+        place-items: center;
+        width: 32px;
+        height: 32px;
+        border: 1px solid var(--border-strong);
+        border-radius: 8px;
+        font-family: var(--font-mono);
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        margin-bottom: 1.5rem;
+      }
+      .card h3 {
+        font-size: 1.35rem;
+        margin-bottom: 0.6rem;
+      }
+      .card p {
+        color: var(--text-muted);
+      }
+      .card a.more {
+        display: inline-block;
+        margin-top: 1rem;
+        color: var(--text);
+      }
+      @media (max-width: 768px) {
+        .grid-3 {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* ---- proof ---- */
+      .tile {
+        position: relative;
+      }
+      .tile .frame {
+        aspect-ratio: 16/9;
+      }
+      .tile__play {
+        position: absolute;
+        inset: auto auto 1rem 1rem;
+        padding: 0.35rem 0.9rem;
+        border-radius: var(--radius-pill);
+        background: rgba(244, 244, 245, 0.92);
+        color: #0b0b0c;
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+      .tile__cap {
+        display: flex;
+        gap: 0.75rem;
+        margin-top: 0.75rem;
+        font-size: 0.9rem;
+        color: var(--text-muted);
+      }
+      .tile__cap em {
+        font-style: italic;
+      }
+
+      /* ---- cta ---- */
+      .cta {
+        text-align: center;
+        display: grid;
+        justify-items: center;
+        gap: 1.25rem;
+      }
+      .cta h2 {
+        font-size: clamp(2.5rem, 6vw, 4.5rem);
+      }
+      .cta .hero__actions {
+        justify-content: center;
+      }
+
+      /* ---- footer ---- */
+      .footer {
+        border-top: 1px solid var(--border);
+        padding-block: 4rem 2rem;
+        color: var(--text-muted);
+        font-size: 0.92rem;
+      }
+      .footer__top {
+        display: grid;
+        grid-template-columns: 1.4fr repeat(4, 1fr);
+        gap: 2rem;
+      }
+      .footer h4 {
+        margin: 0 0 0.9rem;
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        color: var(--text-faint);
+        font-weight: 500;
+      }
+      .footer ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 0.5rem;
+      }
+      .footer a:hover {
+        color: var(--text);
+      }
+      .footer__bottom {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-top: 3rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--border);
+        color: var(--text-faint);
+      }
+      @media (max-width: 900px) {
+        .footer__top {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation: none !important;
+          transition: none !important;
+          scroll-behavior: auto !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a class="brand" href="#"><span class="brand__mark">A</span>ArtCraft</a>
+        <nav class="nav" aria-label="Primary">
+          <a href="#">Home</a><a href="#">Image</a><a href="#">Video</a
+          ><a href="#">Resources</a>
+        </nav>
+        <div class="header__right">
+          <a href="#">Pricing</a><a href="#">Discord</a>
+          <a class="btn btn--primary" href="#">Launch App</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero__word" aria-hidden="true">ARTCRAFT</div>
+          <h1>Capable tools<br />for artists.</h1>
+          <p class="lead">
+            Your product builds open source tools for artists. We pride
+            ourselves on freedom of control and expression.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#">Download free</a>
+            <a class="btn btn--ghost" href="#">Use on web</a>
+            <a class="hero__link" href="#">Open source on GitHub ↗</a>
+          </div>
+          <div class="hero__meta">
+            <span class="eyebrow">macOS · Windows · Web</span>
+            <span class="eyebrow">No subscription required</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker__track">
+          <ul class="ticker__list">
+            <li>Seedance 2.5</li>
+            <li>Nano Banana 2</li>
+            <li>Image to Location</li>
+            <li>3D Compositing</li>
+            <li>Character Posing</li>
+            <li>Image to 3D Mesh</li>
+            <li>Background Removal</li>
+            <li>2D Compositing</li>
+            <li>Mixed Assets</li>
+          </ul>
+          <ul class="ticker__list">
+            <li>Seedance 2.5</li>
+            <li>Nano Banana 2</li>
+            <li>Image to Location</li>
+            <li>3D Compositing</li>
+            <li>Character Posing</li>
+            <li>Image to 3D Mesh</li>
+            <li>Background Removal</li>
+            <li>2D Compositing</li>
+            <li>Mixed Assets</li>
+          </ul>
+        </div>
+      </div>
+
+      <section class="section">
+        <div class="container">
+          <div class="sec-head">
+            <p class="eyebrow">01 / Crafting features</p>
+            <h2>The control that mere words cannot buy.</h2>
+            <p class="lead">
+              Text prompting is neat, but artists crave control. Compose the
+              shot yourself — then let the model render it.
+            </p>
+          </div>
+
+          <article class="feature">
+            <div>
+              <div class="feature__meta">
+                <span class="eyebrow">Worlds</span
+                ><span class="eyebrow">01</span>
+              </div>
+              <h3>Image to Location</h3>
+              <p>
+                Place virtual actors into physical environments. Establish
+                single-location consistency and film multiple shots in a room.
+              </p>
+            </div>
+            <div class="frame">
+              <!-- <video src="demo.webm" autoplay muted loop playsinline></video> -->video
+              demo
+            </div>
+          </article>
+
+          <article class="feature">
+            <div>
+              <div class="feature__meta">
+                <span class="eyebrow">3D Compositing</span
+                ><span class="eyebrow">02</span>
+              </div>
+              <h3>Build scenes with depth</h3>
+              <p>
+                Use images, backdrops, foreground elements, and props in scenes
+                with real depth.
+              </p>
+            </div>
+            <div class="frame">video demo</div>
+          </article>
+
+          <article class="feature">
+            <div>
+              <div class="feature__meta">
+                <span class="eyebrow">2D Compositing</span
+                ><span class="eyebrow">03</span>
+              </div>
+              <h3>Precise layered control</h3>
+              <p>
+                Combine images, background removal, layers, and simple drawing
+                tools to compose a scene exactly as imagined.
+              </p>
+            </div>
+            <div class="frame">video demo</div>
+          </article>
+
+          <a class="strip" href="#">
+            <span class="eyebrow">04 · More in the app</span>
+            <span
+              ><strong>Launch the studio</strong
+              ><span class="d"
+                >Generate, edit, and compose with every model — right in your
+                browser, no install needed.</span
+              ></span
+            >
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="sec-head">
+            <p class="eyebrow">02 / Ownership</p>
+            <h2>Stop renting from websites.</h2>
+            <p class="lead">
+              Yours to own and keep, forever. No subscriptions needed, no
+              aggregator middleman, no rent payments.
+            </p>
+          </div>
+          <div class="grid-3">
+            <div class="card">
+              <span class="card__badge">A</span>
+              <h3>Open source</h3>
+              <p>
+                The whole studio is on GitHub. Read it, fork it, make it yours.
+              </p>
+              <a class="more" href="#">View source ↗</a>
+            </div>
+            <div class="card">
+              <span class="card__badge">B</span>
+              <h3>Yours forever</h3>
+              <p>Own it and keep it, forever. No rent payments.</p>
+            </div>
+            <div class="card">
+              <span class="card__badge">C</span>
+              <h3>No middleman</h3>
+              <p>
+                No aggregator between you and the models. Your work stays yours.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="sec-head">
+            <p class="eyebrow">03 / Proof</p>
+            <h2>Made with the studio.</h2>
+          </div>
+          <div class="grid-3">
+            <div class="tile">
+              <div class="frame">thumbnail</div>
+              <span class="tile__play">Play</span>
+              <div class="tile__cap">
+                <span>01</span><em>Community film</em>
+              </div>
+            </div>
+            <div class="tile">
+              <div class="frame">thumbnail</div>
+              <span class="tile__play">Play</span>
+              <div class="tile__cap">
+                <span>02</span><em>Community film</em>
+              </div>
+            </div>
+            <div class="tile">
+              <div class="frame">thumbnail</div>
+              <span class="tile__play">Play</span>
+              <div class="tile__cap">
+                <span>03</span><em>Community film</em>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container cta">
+          <p class="eyebrow">Free to start · No subscription</p>
+          <h2>Start crafting.</h2>
+          <p class="lead">
+            Download the studio, or run it in your browser. Your first renders
+            are minutes away.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#">Download for desktop</a>
+            <a class="btn btn--ghost" href="#">Launch in browser</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div>
+            <a class="brand" href="#"
+              ><span class="brand__mark">A</span>ArtCraft</a
+            >
+            <p style="margin-top: 1rem; max-width: 30ch">
+              The open-source studio for controllable AI image and video.
+            </p>
+            <p style="margin-top: 0.75rem">hello@example.com</p>
+          </div>
+          <div>
+            <h4>Product</h4>
+            <ul>
+              <li><a href="#">Download</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Launch App</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Craft Apps</h4>
+            <ul>
+              <li><a href="#">All Craft Apps</a></li>
+              <li><a href="#">PhotoCraft</a></li>
+              <li><a href="#">VectorCraft</a></li>
+              <li><a href="#">FilmCraft</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="#">Tutorials</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Support</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Community</h4>
+            <ul>
+              <li><a href="#">Discord</a></li>
+              <li><a href="#">GitHub</a></li>
+              <li><a href="#">YouTube</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>© 2026 Your Product</span
+          ><span>Made by artists, for artists</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

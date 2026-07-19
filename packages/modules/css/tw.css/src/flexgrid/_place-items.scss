@@ -1,0 +1,15 @@
+// Place items utilities — Tailwind v3 default scale
+
+$place-items: (
+  ('start', start),
+  ('end', end),
+  ('center', center),
+  ('baseline', baseline),
+  ('stretch', stretch)
+);
+
+@each $name, $value in $place-items {
+  .place-items-#{$name} {
+    place-items: $value;
+  }
+}

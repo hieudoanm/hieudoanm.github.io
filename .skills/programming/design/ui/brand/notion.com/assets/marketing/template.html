@@ -1,0 +1,726 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Notion Style, Marketing Template</title>
+    <style>
+      /* tokens: keep in sync with references/tokens.css */
+      :root {
+        --m-brand: #0075de;
+        --m-brand-hover: #005bab;
+        --m-brand-soft: #e6f3fe;
+        --m-canvas: #fff;
+        --m-surface-soft: #f9f9f8;
+        --m-surface: #f6f5f4;
+        --m-surface-strong: #eeede8;
+        --m-dark-band: #191918;
+        --m-text: rgba(0, 0, 0, 0.9);
+        --m-text-display: #000;
+        --m-text-muted: rgba(0, 0, 0, 0.54);
+        --m-border: rgba(0, 0, 0, 0.1);
+        --m-border-input: rgba(0, 0, 0, 0.2);
+        --m-tint-peach: #ffe8d4;
+        --m-tint-rose: #fde0ec;
+        --m-tint-mint: #d9f3e1;
+        --m-tint-lavender: #e6e0f5;
+        --m-tint-sky: #dcecfa;
+        --m-tint-yellow: #fef7d6;
+        --m-font:
+          'NotionInter', Inter, -apple-system, system-ui, 'Segoe UI', Helvetica,
+          Arial, sans-serif;
+        --m-font-serif: 'Lyon Text', Georgia, 'Times New Roman', serif;
+        --m-font-mono:
+          'iA Writer Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+        --m-radius-btn: 8px;
+        --m-radius-card: 12px;
+        --m-radius-xl: 16px;
+        --m-radius-hero: 20px;
+        --m-shadow-mockup: rgba(15, 15, 15, 0.2) 0 24px 48px -8px;
+        --m-container: 1200px;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      html {
+        -webkit-font-smoothing: antialiased;
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: var(--m-canvas);
+        color: var(--m-text);
+        font-family: var(--m-font);
+        font-size: 1rem;
+        line-height: 1.55;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+      h1,
+      h2,
+      h3 {
+        color: var(--m-text-display);
+        font-weight: 700;
+        line-height: 1.1;
+      }
+      .wrap {
+        max-width: var(--m-container);
+        margin-inline: auto;
+        padding-inline: clamp(1rem, 4vw, 2rem);
+      }
+      .section {
+        padding-block: clamp(4rem, 9vw, 7rem);
+      }
+      .label {
+        font-family: var(--m-font-mono);
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        font-weight: 500;
+        color: var(--m-text-muted);
+      }
+      .lead {
+        font-size: 1.125rem;
+        color: var(--m-text-muted);
+        max-width: 52ch;
+      }
+      a:focus-visible,
+      button:focus-visible {
+        outline: 2px solid var(--m-brand);
+        outline-offset: 3px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 12px 20px;
+        border-radius: var(--m-radius-btn);
+        border: 1px solid transparent;
+        font: 500 1rem/1.2 var(--m-font);
+        cursor: pointer;
+        transition:
+          background 0.15s ease,
+          transform 0.15s ease;
+      }
+      .btn:hover {
+        transform: translateY(-1px);
+      }
+      .btn--primary {
+        background: var(--m-brand);
+        color: #fff;
+      }
+      .btn--primary:hover {
+        background: var(--m-brand-hover);
+      }
+      .btn--ghost {
+        background: var(--m-brand-soft);
+        color: var(--m-brand);
+      }
+      .btn--outline {
+        background: transparent;
+        color: var(--m-text);
+        border-color: var(--m-border-input);
+      }
+      .btn--sm {
+        padding: 8px 14px;
+        font-size: 0.9rem;
+      }
+
+      /* nav */
+      .nav {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--m-border);
+      }
+      .nav .wrap {
+        height: 64px;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+      }
+      .brand {
+        font-weight: 700;
+        font-size: 1.25rem;
+        color: var(--m-text-display);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .brand i {
+        font-style: normal;
+        display: inline-grid;
+        place-items: center;
+        width: 28px;
+        height: 28px;
+        border: 2px solid var(--m-text-display);
+        border-radius: 6px;
+        font-size: 0.9rem;
+      }
+      .links {
+        display: flex;
+        gap: 1.5rem;
+        font-size: 0.95rem;
+        margin-right: auto;
+      }
+      .links a:hover {
+        color: var(--m-text-display);
+      }
+      .nav__r {
+        display: flex;
+        gap: 0.75rem;
+        align-items: center;
+        font-size: 0.95rem;
+      }
+      @media (max-width: 900px) {
+        .links,
+        .nav__r a:not(.btn--primary) {
+          display: none;
+        }
+      }
+
+      /* hero */
+      .hero {
+        padding-block: clamp(4rem, 10vw, 8rem) 2rem;
+        text-align: center;
+      }
+      .hero h1 {
+        font-size: clamp(2.75rem, 7vw, 5rem);
+        letter-spacing: -0.04em;
+        line-height: 1.05;
+        max-width: 16ch;
+        margin-inline: auto;
+      }
+      .hero .lead {
+        margin: 1.5rem auto 2rem;
+      }
+      .cta {
+        display: flex;
+        gap: 0.75rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .pile {
+        position: relative;
+        margin-top: 4rem;
+        height: clamp(240px, 40vw, 460px);
+        display: grid;
+        place-items: center;
+      }
+      .mock {
+        background: #fff;
+        border: 1px solid var(--m-border);
+        border-radius: var(--m-radius-card);
+        box-shadow: var(--m-shadow-mockup);
+        overflow: hidden;
+      }
+      .mock--a {
+        width: min(720px, 88%);
+        height: 100%;
+        position: relative;
+        z-index: 1;
+      }
+      .mock--b {
+        position: absolute;
+        width: 34%;
+        height: 46%;
+        right: 2%;
+        bottom: -6%;
+        z-index: 2;
+        transform: rotate(2deg);
+      }
+      .mock--c {
+        position: absolute;
+        width: 30%;
+        height: 40%;
+        left: 2%;
+        top: 6%;
+        z-index: 2;
+        transform: rotate(-2deg);
+      }
+      .mock .bar {
+        height: 32px;
+        border-bottom: 1px solid var(--m-border);
+        background: var(--m-surface-soft);
+      }
+      .mock .body {
+        padding: 20px;
+        display: grid;
+        gap: 10px;
+      }
+      .mock .ln {
+        height: 10px;
+        border-radius: 3px;
+        background: var(--m-surface-strong);
+      }
+      .mock .ln:nth-child(2) {
+        width: 80%;
+      }
+      .mock .ln:nth-child(3) {
+        width: 60%;
+      }
+      .mock .ln:nth-child(1) {
+        width: 40%;
+        height: 16px;
+        background: var(--m-surface-strong);
+      }
+
+      /* logos */
+      .logos {
+        padding-block: 3rem;
+        border-block: 1px solid var(--m-border);
+        text-align: center;
+      }
+      .logos .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem 3rem;
+        margin-top: 1.5rem;
+        font-weight: 700;
+        font-size: 1.25rem;
+        color: rgba(0, 0, 0, 0.4);
+      }
+
+      /* features */
+      .feature {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: clamp(2rem, 5vw, 5rem);
+        align-items: center;
+      }
+      .feature + .feature {
+        margin-top: clamp(4rem, 8vw, 7rem);
+      }
+      .feature:nth-child(even) .copy {
+        order: 2;
+      }
+      .feature h2 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        letter-spacing: -0.022em;
+        margin: 0.75rem 0 1rem;
+      }
+      .feature .mock {
+        aspect-ratio: 4/3;
+      }
+      @media (max-width: 900px) {
+        .feature {
+          grid-template-columns: 1fr;
+        }
+        .feature:nth-child(even) .copy {
+          order: 0;
+        }
+      }
+
+      /* use-cases */
+      .head {
+        margin-bottom: 2.5rem;
+      }
+      .head h2 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        letter-spacing: -0.022em;
+      }
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+      }
+      .uc {
+        border-radius: var(--m-radius-xl);
+        padding: 28px;
+        min-height: 220px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 2rem;
+      }
+      .uc h3 {
+        font-size: 1.5rem;
+        letter-spacing: -0.01em;
+        font-weight: 600;
+      }
+      .uc p {
+        color: rgba(0, 0, 0, 0.6);
+      }
+      @media (max-width: 900px) {
+        .cards {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* testimonials */
+      .quotes {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+      }
+      .q {
+        background: var(--m-surface);
+        border: 1px solid var(--m-border);
+        border-radius: var(--m-radius-card);
+        padding: 28px;
+      }
+      .q blockquote {
+        margin: 0 0 1.5rem;
+        font-family: var(--m-font-serif);
+        font-size: 1.375rem;
+        line-height: 1.35;
+        color: var(--m-text-display);
+      }
+      .q cite {
+        font-style: normal;
+        font-size: 0.9rem;
+        color: var(--m-text-muted);
+      }
+      @media (max-width: 900px) {
+        .quotes {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* stats */
+      .stats {
+        background: var(--m-dark-band);
+        color: #fff;
+      }
+      .stats .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+      }
+      .stats .n {
+        font-size: clamp(2.25rem, 4vw, 3.5rem);
+        font-weight: 700;
+        letter-spacing: -0.025em;
+        line-height: 1;
+      }
+      .stats .l {
+        margin-top: 0.5rem;
+        color: rgba(255, 255, 255, 0.62);
+      }
+      @media (max-width: 900px) {
+        .stats .grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      /* pull quote */
+      .pull {
+        text-align: center;
+      }
+      .pull p {
+        font-family: var(--m-font-serif);
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        line-height: 1.3;
+        max-width: 28ch;
+        margin-inline: auto;
+        color: var(--m-text-display);
+      }
+      .pull cite {
+        display: block;
+        margin-top: 1rem;
+        font-style: normal;
+      }
+
+      /* footer */
+      .footer {
+        border-top: 1px solid var(--m-border);
+        padding-block: 4rem 2rem;
+        font-size: 0.9rem;
+        color: var(--m-text-muted);
+      }
+      .cols {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+      }
+      .footer h4 {
+        margin: 0 0 0.75rem;
+        font-size: 0.9rem;
+        color: var(--m-text-display);
+        font-weight: 600;
+      }
+      .footer ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 0.5rem;
+      }
+      .footer a:hover {
+        color: var(--m-text);
+      }
+      .bottom {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-top: 3rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--m-border);
+      }
+      @media (max-width: 900px) {
+        .cols {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          transition: none !important;
+          animation: none !important;
+          scroll-behavior: auto !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="nav">
+      <div class="wrap">
+        <a class="brand" href="#"><i aria-hidden="true">N</i>Yourbrand</a>
+        <nav class="links" aria-label="Primary">
+          <a href="#">Product</a><a href="#">Resources</a
+          ><a href="#">Pricing</a>
+        </nav>
+        <div class="nav__r">
+          <a href="#">Request a demo</a><a href="#">Log in</a
+          ><a class="btn btn--primary btn--sm" href="#">Get started free</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero wrap">
+        <h1>Where teams and agents think together</h1>
+        <p class="lead">
+          Capture context, find answers, and automate the busywork, all in one
+          workspace.
+        </p>
+        <div class="cta">
+          <a class="btn btn--primary" href="#">Get started free</a
+          ><a class="btn btn--outline" href="#">Request a demo</a>
+        </div>
+        <div class="pile" aria-hidden="true">
+          <div class="mock mock--c">
+            <div class="bar"></div>
+            <div class="body">
+              <div class="ln"></div>
+              <div class="ln"></div>
+            </div>
+          </div>
+          <div class="mock mock--a">
+            <div class="bar"></div>
+            <div class="body">
+              <div class="ln"></div>
+              <div class="ln"></div>
+              <div class="ln"></div>
+            </div>
+          </div>
+          <div class="mock mock--b">
+            <div class="bar"></div>
+            <div class="body">
+              <div class="ln"></div>
+              <div class="ln"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="logos">
+        <div class="wrap">
+          <p class="label">The most ambitious companies run on us</p>
+          <div class="row">
+            <span>Acme</span><span>Globex</span><span>Initech</span
+            ><span>Umbrella</span><span>Hooli</span><span>Stark</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="feature">
+            <div class="copy">
+              <span class="label">Capture</span>
+              <h2>Bring everything into one system of record</h2>
+              <p class="lead">
+                Docs, projects and knowledge live together, so nothing gets lost
+                between tools.
+              </p>
+            </div>
+            <div class="mock" aria-hidden="true">
+              <div class="bar"></div>
+              <div class="body">
+                <div class="ln"></div>
+                <div class="ln"></div>
+                <div class="ln"></div>
+              </div>
+            </div>
+          </div>
+          <div class="feature">
+            <div class="copy">
+              <span class="label">Find</span>
+              <h2>Get answers with citations</h2>
+              <p class="lead">
+                Ask in plain language and see exactly where each answer came
+                from.
+              </p>
+            </div>
+            <div class="mock" aria-hidden="true">
+              <div class="bar"></div>
+              <div class="body">
+                <div class="ln"></div>
+                <div class="ln"></div>
+                <div class="ln"></div>
+              </div>
+            </div>
+          </div>
+          <div class="feature">
+            <div class="copy">
+              <span class="label">Automate</span>
+              <h2>Keep work moving with agents</h2>
+              <p class="lead">
+                Hand off the repetitive steps and review the results when you're
+                ready.
+              </p>
+            </div>
+            <div class="mock" aria-hidden="true">
+              <div class="bar"></div>
+              <div class="body">
+                <div class="ln"></div>
+                <div class="ln"></div>
+                <div class="ln"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 0">
+        <div class="wrap">
+          <div class="head"><h2>See what it can do</h2></div>
+          <div class="cards">
+            <article class="uc" style="background: var(--m-tint-peach)">
+              <h3>Triage product feedback</h3>
+              <p>Sort requests by theme and urgency automatically.</p>
+            </article>
+            <article class="uc" style="background: var(--m-tint-sky)">
+              <h3>Resolve support tickets</h3>
+              <p>Draft replies from your own docs.</p>
+            </article>
+            <article class="uc" style="background: var(--m-tint-mint)">
+              <h3>Automate weekly reporting</h3>
+              <p>Pull the numbers and write the summary.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 0">
+        <div class="wrap">
+          <div class="head"><h2>Trusted by teams that ship</h2></div>
+          <div class="quotes">
+            <figure class="q" style="margin: 0">
+              <blockquote>
+                A short, specific line about what changed for the team.
+              </blockquote>
+              <cite>Name, Company</cite>
+            </figure>
+            <figure class="q" style="margin: 0">
+              <blockquote>
+                A short, specific line about what changed for the team.
+              </blockquote>
+              <cite>Name, Company</cite>
+            </figure>
+            <figure class="q" style="margin: 0">
+              <blockquote>
+                A short, specific line about what changed for the team.
+              </blockquote>
+              <cite>Name, Company</cite>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section stats">
+        <div class="wrap grid">
+          <div>
+            <div class="n">100M</div>
+            <div class="l">users</div>
+          </div>
+          <div>
+            <div class="n">50+</div>
+            <div class="l">countries</div>
+          </div>
+          <div>
+            <div class="n">1.4M</div>
+            <div class="l">community members</div>
+          </div>
+          <div>
+            <div class="n">62%</div>
+            <div class="l">of the Fortune 100</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section pull wrap">
+        <p>We shape our tools, and thereafter our tools shape us.</p>
+        <cite class="label">Marshall McLuhan</cite>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap">
+        <div class="cols">
+          <div>
+            <h4>Product</h4>
+            <ul>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Download</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="#">Help center</a></li>
+              <li><a href="#">Guides</a></li>
+              <li><a href="#">Community</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Security</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Use it for</h4>
+            <ul>
+              <li><a href="#">Enterprise</a></li>
+              <li><a href="#">Startups</a></li>
+              <li><a href="#">Developers</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom">
+          <span>© 2026 Your Company</span><span>English · Cookie settings</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+@use '../colors/colors' as colors;
+
+// Text color utilities — Tailwind v3 default scale
+
+$text-color-default: #111827;
+
+@each $name, $value in colors.$palette {
+  .text-#{$name} {
+    color: $value;
+  }
+}
+
+.text {
+  color: $text-color-default;
+}

@@ -1,0 +1,601 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 366.93 376.43" width="366.93" height="376.43" role="img" aria-labelledby="philippines-title philippines-desc">
+  <title id="philippines-title">Philippines hex map</title>
+  <desc id="philippines-desc">Hexagon map with 118 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 0.98; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 4.85 3.46; }
+    .label { fill: #52525b; font: 600 3.93px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="COM">
+    <title>Compostela Valley</title>
+    <polygon class="tile inset" points="353.46,245.95 363.46,251.72 363.46,263.27 353.46,269.05 343.46,263.27 343.46,251.72" aria-label="Compostela Valley"/>
+    <text class="label" x="353.46" y="257.50">COM</text>
+  </g>
+  <g class="state" data-state="SC">
+    <title>South Cotabato</title>
+    <polygon class="tile inset" points="353.46,280.59 363.46,286.37 363.46,297.91 353.46,303.69 343.46,297.91 343.46,286.37" aria-label="South Cotabato"/>
+    <text class="label" x="353.46" y="292.14">SC</text>
+  </g>
+  <g class="state" data-state="SCO">
+    <title>General Santos</title>
+    <polygon class="tile inset" points="353.46,211.31 363.46,217.08 363.46,228.63 353.46,234.40 343.46,228.63 343.46,217.08" aria-label="General Santos"/>
+    <text class="label" x="353.46" y="222.86">SCO</text>
+  </g>
+  <g class="state" data-state="DAS">
+    <title>Davao del Sur</title>
+    <polygon class="tile inset" points="333.46,315.23 343.46,321.01 343.46,332.55 333.46,338.33 323.46,332.55 323.46,321.01" aria-label="Davao del Sur"/>
+    <text class="label" x="333.46" y="326.78">DAS</text>
+  </g>
+  <g class="state" data-state="LAP">
+    <title>Lapu-Lapu</title>
+    <polygon class="tile inset" points="323.46,263.27 333.46,269.05 333.46,280.59 323.46,286.37 313.46,280.59 313.46,269.05" aria-label="Lapu-Lapu"/>
+    <text class="label" x="323.46" y="274.82">LAP</text>
+  </g>
+  <g class="state" data-state="NER">
+    <title>Negros Oriental</title>
+    <polygon class="tile inset" points="323.46,228.63 333.46,234.40 333.46,245.95 323.46,251.72 313.46,245.95 313.46,234.40" aria-label="Negros Oriental"/>
+    <text class="label" x="323.46" y="240.18">NER</text>
+  </g>
+  <g class="state" data-state="LAS">
+    <title>Lanao del Sur</title>
+    <polygon class="tile inset" points="313.46,142.03 323.46,147.80 323.46,159.35 313.46,165.12 303.46,159.35 303.46,147.80" aria-label="Lanao del Sur"/>
+    <text class="label" x="313.46" y="153.58">LAS</text>
+  </g>
+  <g class="state" data-state="SLE">
+    <title>Southern Leyte</title>
+    <polygon class="tile inset" points="303.46,297.91 313.46,303.69 313.46,315.23 303.46,321.01 293.46,315.23 293.46,303.69" aria-label="Southern Leyte"/>
+    <text class="label" x="303.46" y="309.46">SLE</text>
+  </g>
+  <g class="state" data-state="SUN">
+    <title>Surigao del Norte</title>
+    <polygon class="tile inset" points="303.46,193.99 313.46,199.76 313.46,211.31 303.46,217.08 293.46,211.31 293.46,199.76" aria-label="Surigao del Norte"/>
+    <text class="label" x="303.46" y="205.54">SUN</text>
+  </g>
+  <g class="state" data-state="MN">
+    <title>Cagayan de Oro</title>
+    <polygon class="tile inset" points="303.46,332.55 313.46,338.33 313.46,349.87 303.46,355.65 293.46,349.87 293.46,338.33" aria-label="Cagayan de Oro"/>
+    <text class="label" x="303.46" y="344.10">MN</text>
+  </g>
+  <g class="state" data-state="CAT">
+    <title>Catanduanes</title>
+    <polygon class="tile inset" points="293.46,245.95 303.46,251.72 303.46,263.27 293.46,269.05 283.46,263.27 283.46,251.72" aria-label="Catanduanes"/>
+    <text class="label" x="293.46" y="257.50">CAT</text>
+  </g>
+  <g class="state" data-state="SIG">
+    <title>Siquijor</title>
+    <polygon class="tile inset" points="283.46,159.35 293.46,165.12 293.46,176.67 283.46,182.44 273.46,176.67 273.46,165.12" aria-label="Siquijor"/>
+    <text class="label" x="283.46" y="170.90">SIG</text>
+  </g>
+  <g class="state" data-state="SUR">
+    <title>Surigao del Sur</title>
+    <polygon class="tile inset" points="283.46,124.71 293.46,130.48 293.46,142.03 283.46,147.80 273.46,142.03 273.46,130.48" aria-label="Surigao del Sur"/>
+    <text class="label" x="283.46" y="136.25">SUR</text>
+  </g>
+  <g class="state" data-state="NSA">
+    <title>Northern Samar</title>
+    <polygon class="tile inset" points="273.46,280.59 283.46,286.37 283.46,297.91 273.46,303.69 263.46,297.91 263.46,286.37" aria-label="Northern Samar"/>
+    <text class="label" x="273.46" y="292.14">NSA</text>
+  </g>
+  <g class="state" data-state="WSA">
+    <title>Samar</title>
+    <polygon class="tile inset" points="273.46,211.31 283.46,217.08 283.46,228.63 273.46,234.40 263.46,228.63 263.46,217.08" aria-label="Samar"/>
+    <text class="label" x="273.46" y="222.86">WSA</text>
+  </g>
+  <g class="state" data-state="BOH">
+    <title>Bohol</title>
+    <polygon class="tile inset" points="273.46,315.23 283.46,321.01 283.46,332.55 273.46,338.33 263.46,332.55 263.46,321.01" aria-label="Bohol"/>
+    <text class="label" x="273.46" y="326.78">BOH</text>
+  </g>
+  <g class="state" data-state="NCO">
+    <title>Cotabato</title>
+    <polygon class="tile inset" points="273.46,349.87 283.46,355.65 283.46,367.19 273.46,372.97 263.46,367.19 263.46,355.65" aria-label="Cotabato"/>
+    <text class="label" x="273.46" y="361.42">NCO</text>
+  </g>
+  <g class="state" data-state="AGN">
+    <title>Agusan del Norte</title>
+    <polygon class="tile inset" points="263.46,90.07 273.46,95.84 273.46,107.39 263.46,113.16 253.46,107.39 253.46,95.84" aria-label="Agusan del Norte"/>
+    <text class="label" x="263.46" y="101.61">AGN</text>
+  </g>
+  <g class="state" data-state="ALB">
+    <title>Albay</title>
+    <polygon class="tile" points="253.46,245.95 263.46,251.72 263.46,263.27 253.46,269.05 243.46,263.27 243.46,251.72" aria-label="Albay"/>
+    <text class="label" x="253.46" y="257.50">ALB</text>
+  </g>
+  <g class="state" data-state="MAS">
+    <title>Masbate</title>
+    <polygon class="tile inset" points="253.46,176.67 263.46,182.44 263.46,193.99 253.46,199.76 243.46,193.99 243.46,182.44" aria-label="Masbate"/>
+    <text class="label" x="253.46" y="188.22">MAS</text>
+  </g>
+  <g class="state" data-state="EAS">
+    <title>Eastern Samar</title>
+    <polygon class="tile inset" points="253.46,142.03 263.46,147.80 263.46,159.35 253.46,165.12 243.46,159.35 243.46,147.80" aria-label="Eastern Samar"/>
+    <text class="label" x="253.46" y="153.58">EAS</text>
+  </g>
+  <g class="state" data-state="CAS">
+    <title>Camarines Sur</title>
+    <polygon class="tile" points="243.46,228.63 253.46,234.40 253.46,245.95 243.46,251.72 233.46,245.95 233.46,234.40" aria-label="Camarines Sur"/>
+    <text class="label" x="243.46" y="240.18">CAS</text>
+  </g>
+  <g class="state" data-state="BCD">
+    <title>Bacolod</title>
+    <polygon class="tile inset" points="243.46,297.91 253.46,303.69 253.46,315.23 243.46,321.01 233.46,315.23 233.46,303.69" aria-label="Bacolod"/>
+    <text class="label" x="243.46" y="309.46">BCD</text>
+  </g>
+  <g class="state" data-state="CAM">
+    <title>Camiguin</title>
+    <polygon class="tile inset" points="243.46,55.43 253.46,61.20 253.46,72.75 243.46,78.52 233.46,72.75 233.46,61.20" aria-label="Camiguin"/>
+    <text class="label" x="243.46" y="66.97">CAM</text>
+  </g>
+  <g class="state" data-state="LAN">
+    <title>Iligan</title>
+    <polygon class="tile inset" points="243.46,332.55 253.46,338.33 253.46,349.87 243.46,355.65 233.46,349.87 233.46,338.33" aria-label="Iligan"/>
+    <text class="label" x="243.46" y="344.10">LAN</text>
+  </g>
+  <g class="state" data-state="DS">
+    <title>Davao</title>
+    <polygon class="tile inset" points="243.46,20.78 253.46,26.56 253.46,38.11 243.46,43.88 233.46,38.11 233.46,26.56" aria-label="Davao"/>
+    <text class="label" x="243.46" y="32.33">DS</text>
+  </g>
+  <g class="state" data-state="CAN">
+    <title>Camarines Norte</title>
+    <polygon class="tile" points="233.46,211.31 243.46,217.08 243.46,228.63 233.46,234.40 223.46,228.63 223.46,217.08" aria-label="Camarines Norte"/>
+    <text class="label" x="233.46" y="222.86">CAN</text>
+  </g>
+  <g class="state" data-state="SOR">
+    <title>Sorsogon</title>
+    <polygon class="tile" points="233.46,245.95 243.46,251.72 243.46,263.27 233.46,269.05 223.46,263.27 223.46,251.72" aria-label="Sorsogon"/>
+    <text class="label" x="233.46" y="257.50">SOR</text>
+  </g>
+  <g class="state" data-state="BIL">
+    <title>Biliran</title>
+    <polygon class="tile inset" points="233.46,107.39 243.46,113.16 243.46,124.71 233.46,130.48 223.46,124.71 223.46,113.16" aria-label="Biliran"/>
+    <text class="label" x="233.46" y="118.93">BIL</text>
+  </g>
+  <g class="state" data-state="MAK">
+    <title>Makati</title>
+    <polygon class="tile" points="223.46,193.99 233.46,199.76 233.46,211.31 223.46,217.08 213.46,211.31 213.46,199.76" aria-label="Makati"/>
+    <text class="label" x="223.46" y="205.54">MAK</text>
+  </g>
+  <g class="state" data-state="QUE">
+    <title>Quezon</title>
+    <polygon class="tile" points="223.46,228.63 233.46,234.40 233.46,245.95 223.46,251.72 213.46,245.95 213.46,234.40" aria-label="Quezon"/>
+    <text class="label" x="223.46" y="240.18">QUE</text>
+  </g>
+  <g class="state" data-state="BG">
+    <title>Baguio</title>
+    <polygon class="tile" points="213.46,142.03 223.46,147.80 223.46,159.35 213.46,165.12 203.46,159.35 203.46,147.80" aria-label="Baguio"/>
+    <text class="label" x="213.46" y="153.58">BG</text>
+  </g>
+  <g class="state" data-state="MC">
+    <title>Mandaluyong City</title>
+    <polygon class="tile" points="213.46,176.67 223.46,182.44 223.46,193.99 213.46,199.76 203.46,193.99 203.46,182.44" aria-label="Mandaluyong City"/>
+    <text class="label" x="213.46" y="188.22">MC</text>
+  </g>
+  <g class="state" data-state="PAT">
+    <title>Pateros</title>
+    <polygon class="tile" points="213.46,211.31 223.46,217.08 223.46,228.63 213.46,234.40 203.46,228.63 203.46,217.08" aria-label="Pateros"/>
+    <text class="label" x="213.46" y="222.86">PAT</text>
+  </g>
+  <g class="state" data-state="QZ">
+    <title>Lucena</title>
+    <polygon class="tile" points="213.46,245.95 223.46,251.72 223.46,263.27 213.46,269.05 203.46,263.27 203.46,251.72" aria-label="Lucena"/>
+    <text class="label" x="213.46" y="257.50">QZ</text>
+  </g>
+  <g class="state" data-state="ROM">
+    <title>Romblon</title>
+    <polygon class="tile inset" points="213.46,280.59 223.46,286.37 223.46,297.91 213.46,303.69 203.46,297.91 203.46,286.37" aria-label="Romblon"/>
+    <text class="label" x="213.46" y="292.14">ROM</text>
+  </g>
+  <g class="state" data-state="LE">
+    <title>Tacloban</title>
+    <polygon class="tile inset" points="213.46,72.75 223.46,78.52 223.46,90.07 213.46,95.84 203.46,90.07 203.46,78.52" aria-label="Tacloban"/>
+    <text class="label" x="213.46" y="84.29">LE</text>
+  </g>
+  <g class="state" data-state="BTN">
+    <title>Batanes</title>
+    <polygon class="tile inset" points="213.46,38.11 223.46,43.88 223.46,55.43 213.46,61.20 203.46,55.43 203.46,43.88" aria-label="Batanes"/>
+    <text class="label" x="213.46" y="49.65">BTN</text>
+  </g>
+  <g class="state" data-state="CB">
+    <title>Cebu</title>
+    <polygon class="tile inset" points="213.46,315.23 223.46,321.01 223.46,332.55 213.46,338.33 203.46,332.55 203.46,321.01" aria-label="Cebu"/>
+    <text class="label" x="213.46" y="326.78">CB</text>
+  </g>
+  <g class="state" data-state="NC">
+    <title>Cotabato</title>
+    <polygon class="tile inset" points="213.46,3.46 223.46,9.24 223.46,20.78 213.46,26.56 203.46,20.78 203.46,9.24" aria-label="Cotabato"/>
+    <text class="label" x="213.46" y="15.01">NC</text>
+  </g>
+  <g class="state" data-state="IB">
+    <title>Santiago</title>
+    <polygon class="tile" points="203.46,124.71 213.46,130.48 213.46,142.03 203.46,147.80 193.46,142.03 193.46,130.48" aria-label="Santiago"/>
+    <text class="label" x="203.46" y="136.25">IB</text>
+  </g>
+  <g class="state" data-state="SJ">
+    <title>San Juan</title>
+    <polygon class="tile" points="203.46,159.35 213.46,165.12 213.46,176.67 203.46,182.44 193.46,176.67 193.46,165.12" aria-label="San Juan"/>
+    <text class="label" x="203.46" y="170.90">SJ</text>
+  </g>
+  <g class="state" data-state="PASA">
+    <title>Pasig</title>
+    <polygon class="tile" points="203.46,193.99 213.46,199.76 213.46,211.31 203.46,217.08 193.46,211.31 193.46,199.76" aria-label="Pasig"/>
+    <text class="label" x="203.46" y="205.54">PASA</text>
+  </g>
+  <g class="state" data-state="PAS">
+    <title>Pasay</title>
+    <polygon class="tile" points="203.46,228.63 213.46,234.40 213.46,245.95 203.46,251.72 193.46,245.95 193.46,234.40" aria-label="Pasay"/>
+    <text class="label" x="203.46" y="240.18">PAS</text>
+  </g>
+  <g class="state" data-state="IFU">
+    <title>Ifugao</title>
+    <polygon class="tile" points="193.46,107.39 203.46,113.16 203.46,124.71 193.46,130.48 183.46,124.71 183.46,113.16" aria-label="Ifugao"/>
+    <text class="label" x="193.46" y="118.93">IFU</text>
+  </g>
+  <g class="state" data-state="QUI">
+    <title>Quirino</title>
+    <polygon class="tile" points="193.46,142.03 203.46,147.80 203.46,159.35 193.46,165.12 183.46,159.35 183.46,147.80" aria-label="Quirino"/>
+    <text class="label" x="193.46" y="153.58">QUI</text>
+  </g>
+  <g class="state" data-state="QC">
+    <title>Quezon City</title>
+    <polygon class="tile" points="193.46,176.67 203.46,182.44 203.46,193.99 193.46,199.76 183.46,193.99 183.46,182.44" aria-label="Quezon City"/>
+    <text class="label" x="193.46" y="188.22">QC</text>
+  </g>
+  <g class="state" data-state="TAG">
+    <title>Taguig</title>
+    <polygon class="tile" points="193.46,211.31 203.46,217.08 203.46,228.63 193.46,234.40 183.46,228.63 183.46,217.08" aria-label="Taguig"/>
+    <text class="label" x="193.46" y="222.86">TAG</text>
+  </g>
+  <g class="state" data-state="CS">
+    <title>Naga</title>
+    <polygon class="tile" points="193.46,245.95 203.46,251.72 203.46,263.27 193.46,269.05 183.46,263.27 183.46,251.72" aria-label="Naga"/>
+    <text class="label" x="193.46" y="257.50">CS</text>
+  </g>
+  <g class="state" data-state="ZS">
+    <title>Zamboanga</title>
+    <polygon class="tile inset" points="193.46,349.87 203.46,355.65 203.46,367.19 193.46,372.97 183.46,367.19 183.46,355.65" aria-label="Zamboanga"/>
+    <text class="label" x="193.46" y="361.42">ZS</text>
+  </g>
+  <g class="state" data-state="CAG">
+    <title>Cagayan</title>
+    <polygon class="tile" points="183.46,90.07 193.46,95.84 193.46,107.39 183.46,113.16 173.46,107.39 173.46,95.84" aria-label="Cagayan"/>
+    <text class="label" x="183.46" y="101.61">CAG</text>
+  </g>
+  <g class="state" data-state="ISA">
+    <title>Isabela</title>
+    <polygon class="tile" points="183.46,124.71 193.46,130.48 193.46,142.03 183.46,147.80 173.46,142.03 173.46,130.48" aria-label="Isabela"/>
+    <text class="label" x="183.46" y="136.25">ISA</text>
+  </g>
+  <g class="state" data-state="BUL">
+    <title>Bulacan</title>
+    <polygon class="tile" points="183.46,159.35 193.46,165.12 193.46,176.67 183.46,182.44 173.46,176.67 173.46,165.12" aria-label="Bulacan"/>
+    <text class="label" x="183.46" y="170.90">BUL</text>
+  </g>
+  <g class="state" data-state="RIZ">
+    <title>Rizal</title>
+    <polygon class="tile" points="183.46,193.99 193.46,199.76 193.46,211.31 183.46,217.08 173.46,211.31 173.46,199.76" aria-label="Rizal"/>
+    <text class="label" x="183.46" y="205.54">RIZ</text>
+  </g>
+  <g class="state" data-state="MM">
+    <title>Paranaque</title>
+    <polygon class="tile" points="183.46,228.63 193.46,234.40 193.46,245.95 183.46,251.72 173.46,245.95 173.46,234.40" aria-label="Paranaque"/>
+    <text class="label" x="183.46" y="240.18">MM</text>
+  </g>
+  <g class="state" data-state="LEY">
+    <title>Leyte</title>
+    <polygon class="tile inset" points="183.46,55.43 193.46,61.20 193.46,72.75 183.46,78.52 173.46,72.75 173.46,61.20" aria-label="Leyte"/>
+    <text class="label" x="183.46" y="66.97">LEY</text>
+  </g>
+  <g class="state" data-state="AGS">
+    <title>Agusan del Sur</title>
+    <polygon class="tile inset" points="183.46,20.78 193.46,26.56 193.46,38.11 183.46,43.88 173.46,38.11 173.46,26.56" aria-label="Agusan del Sur"/>
+    <text class="label" x="183.46" y="32.33">AGS</text>
+  </g>
+  <g class="state" data-state="KAL">
+    <title>Kalinga</title>
+    <polygon class="tile" points="173.46,107.39 183.46,113.16 183.46,124.71 173.46,130.48 163.46,124.71 163.46,113.16" aria-label="Kalinga"/>
+    <text class="label" x="173.46" y="118.93">KAL</text>
+  </g>
+  <g class="state" data-state="AUR">
+    <title>Aurora</title>
+    <polygon class="tile" points="173.46,142.03 183.46,147.80 183.46,159.35 173.46,165.12 163.46,159.35 163.46,147.80" aria-label="Aurora"/>
+    <text class="label" x="173.46" y="153.58">AUR</text>
+  </g>
+  <g class="state" data-state="VAL">
+    <title>Valenzuela</title>
+    <polygon class="tile" points="173.46,176.67 183.46,182.44 183.46,193.99 173.46,199.76 163.46,193.99 163.46,182.44" aria-label="Valenzuela"/>
+    <text class="label" x="173.46" y="188.22">VAL</text>
+  </g>
+  <g class="state" data-state="LAG">
+    <title>Laguna</title>
+    <polygon class="tile" points="173.46,211.31 183.46,217.08 183.46,228.63 173.46,234.40 163.46,228.63 163.46,217.08" aria-label="Laguna"/>
+    <text class="label" x="173.46" y="222.86">LAG</text>
+  </g>
+  <g class="state" data-state="MUN">
+    <title>Muntinlupa</title>
+    <polygon class="tile" points="173.46,245.95 183.46,251.72 183.46,263.27 173.46,269.05 163.46,263.27 163.46,251.72" aria-label="Muntinlupa"/>
+    <text class="label" x="173.46" y="257.50">MUN</text>
+  </g>
+  <g class="state" data-state="MDR">
+    <title>Mindoro Oriental</title>
+    <polygon class="tile inset" points="173.46,280.59 183.46,286.37 183.46,297.91 173.46,303.69 163.46,297.91 163.46,286.37" aria-label="Mindoro Oriental"/>
+    <text class="label" x="173.46" y="292.14">MDR</text>
+  </g>
+  <g class="state" data-state="CEB">
+    <title>Cebu</title>
+    <polygon class="tile inset" points="173.46,315.23 183.46,321.01 183.46,332.55 173.46,338.33 163.46,332.55 163.46,321.01" aria-label="Cebu"/>
+    <text class="label" x="173.46" y="326.78">CEB</text>
+  </g>
+  <g class="state" data-state="APA">
+    <title>Apayao</title>
+    <polygon class="tile" points="163.46,90.07 173.46,95.84 173.46,107.39 163.46,113.16 153.46,107.39 153.46,95.84" aria-label="Apayao"/>
+    <text class="label" x="163.46" y="101.61">APA</text>
+  </g>
+  <g class="state" data-state="MOU">
+    <title>Mountain Province</title>
+    <polygon class="tile" points="163.46,124.71 173.46,130.48 173.46,142.03 163.46,147.80 153.46,142.03 153.46,130.48" aria-label="Mountain Province"/>
+    <text class="label" x="163.46" y="136.25">MOU</text>
+  </g>
+  <g class="state" data-state="NUE">
+    <title>Nueva Ecija</title>
+    <polygon class="tile" points="163.46,159.35 173.46,165.12 173.46,176.67 163.46,182.44 153.46,176.67 153.46,165.12" aria-label="Nueva Ecija"/>
+    <text class="label" x="163.46" y="170.90">NUE</text>
+  </g>
+  <g class="state" data-state="CAL">
+    <title>Caloocan</title>
+    <polygon class="tile" points="163.46,193.99 173.46,199.76 173.46,211.31 163.46,217.08 153.46,211.31 153.46,199.76" aria-label="Caloocan"/>
+    <text class="label" x="163.46" y="205.54">CAL</text>
+  </g>
+  <g class="state" data-state="CAV">
+    <title>Cavite</title>
+    <polygon class="tile" points="163.46,228.63 173.46,234.40 173.46,245.95 163.46,251.72 153.46,245.95 153.46,234.40" aria-label="Cavite"/>
+    <text class="label" x="163.46" y="240.18">CAV</text>
+  </g>
+  <g class="state" data-state="ABR">
+    <title>Abra</title>
+    <polygon class="tile" points="153.46,107.39 163.46,113.16 163.46,124.71 153.46,130.48 143.46,124.71 143.46,113.16" aria-label="Abra"/>
+    <text class="label" x="153.46" y="118.93">ABR</text>
+  </g>
+  <g class="state" data-state="NUV">
+    <title>Nueva Vizcaya</title>
+    <polygon class="tile" points="153.46,142.03 163.46,147.80 163.46,159.35 153.46,165.12 143.46,159.35 143.46,147.80" aria-label="Nueva Vizcaya"/>
+    <text class="label" x="153.46" y="153.58">NUV</text>
+  </g>
+  <g class="state" data-state="MAL">
+    <title>Malabon</title>
+    <polygon class="tile" points="153.46,176.67 163.46,182.44 163.46,193.99 153.46,199.76 143.46,193.99 143.46,182.44" aria-label="Malabon"/>
+    <text class="label" x="153.46" y="188.22">MAL</text>
+  </g>
+  <g class="state" data-state="BTG">
+    <title>Batangas</title>
+    <polygon class="tile" points="153.46,211.31 163.46,217.08 163.46,228.63 153.46,234.40 143.46,228.63 143.46,217.08" aria-label="Batangas"/>
+    <text class="label" x="153.46" y="222.86">BTG</text>
+  </g>
+  <g class="state" data-state="MNL">
+    <title>Las Pinas</title>
+    <polygon class="tile" points="153.46,245.95 163.46,251.72 163.46,263.27 153.46,269.05 143.46,263.27 143.46,251.72" aria-label="Las Pinas"/>
+    <text class="label" x="153.46" y="257.50">MNL</text>
+  </g>
+  <g class="state" data-state="SUK">
+    <title>Sultan Kudarat</title>
+    <polygon class="tile inset" points="153.46,349.87 163.46,355.65 163.46,367.19 153.46,372.97 143.46,367.19 143.46,355.65" aria-label="Sultan Kudarat"/>
+    <text class="label" x="153.46" y="361.42">SUK</text>
+  </g>
+  <g class="state" data-state="ILN">
+    <title>Ilocos Norte</title>
+    <polygon class="tile" points="143.46,90.07 153.46,95.84 153.46,107.39 143.46,113.16 133.46,107.39 133.46,95.84" aria-label="Ilocos Norte"/>
+    <text class="label" x="143.46" y="101.61">ILN</text>
+  </g>
+  <g class="state" data-state="BEN">
+    <title>Benguet</title>
+    <polygon class="tile" points="143.46,124.71 153.46,130.48 153.46,142.03 143.46,147.80 133.46,142.03 133.46,130.48" aria-label="Benguet"/>
+    <text class="label" x="143.46" y="136.25">BEN</text>
+  </g>
+  <g class="state" data-state="TAR">
+    <title>Tarlac</title>
+    <polygon class="tile" points="143.46,159.35 153.46,165.12 153.46,176.67 143.46,182.44 133.46,176.67 133.46,165.12" aria-label="Tarlac"/>
+    <text class="label" x="143.46" y="170.90">TAR</text>
+  </g>
+  <g class="state" data-state="NAV">
+    <title>Navotas</title>
+    <polygon class="tile" points="143.46,193.99 153.46,199.76 153.46,211.31 143.46,217.08 133.46,211.31 133.46,199.76" aria-label="Navotas"/>
+    <text class="label" x="143.46" y="205.54">NAV</text>
+  </g>
+  <g class="state" data-state="MAR">
+    <title>Marikina</title>
+    <polygon class="tile" points="143.46,228.63 153.46,234.40 153.46,245.95 143.46,251.72 133.46,245.95 133.46,234.40" aria-label="Marikina"/>
+    <text class="label" x="143.46" y="240.18">MAR</text>
+  </g>
+  <g class="state" data-state="ORM">
+    <title>Ormoc</title>
+    <polygon class="tile inset" points="143.46,55.43 153.46,61.20 153.46,72.75 143.46,78.52 133.46,72.75 133.46,61.20" aria-label="Ormoc"/>
+    <text class="label" x="143.46" y="66.97">ORM</text>
+  </g>
+  <g class="state" data-state="MSC">
+    <title>Misamis Occidental</title>
+    <polygon class="tile inset" points="143.46,20.78 153.46,26.56 153.46,38.11 143.46,43.88 133.46,38.11 133.46,26.56" aria-label="Misamis Occidental"/>
+    <text class="label" x="143.46" y="32.33">MSC</text>
+  </g>
+  <g class="state" data-state="ILS">
+    <title>Ilocos Sur</title>
+    <polygon class="tile" points="133.46,107.39 143.46,113.16 143.46,124.71 133.46,130.48 123.46,124.71 123.46,113.16" aria-label="Ilocos Sur"/>
+    <text class="label" x="133.46" y="118.93">ILS</text>
+  </g>
+  <g class="state" data-state="PAN">
+    <title>Pangasinan</title>
+    <polygon class="tile" points="133.46,142.03 143.46,147.80 143.46,159.35 133.46,165.12 123.46,159.35 123.46,147.80" aria-label="Pangasinan"/>
+    <text class="label" x="133.46" y="153.58">PAN</text>
+  </g>
+  <g class="state" data-state="PAM">
+    <title>Pampanga</title>
+    <polygon class="tile" points="133.46,176.67 143.46,182.44 143.46,193.99 133.46,199.76 123.46,193.99 123.46,182.44" aria-label="Pampanga"/>
+    <text class="label" x="133.46" y="188.22">PAM</text>
+  </g>
+  <g class="state" data-state="MAN">
+    <title>Manila</title>
+    <polygon class="tile" points="133.46,211.31 143.46,217.08 143.46,228.63 133.46,234.40 123.46,228.63 123.46,217.08" aria-label="Manila"/>
+    <text class="label" x="133.46" y="222.86">MAN</text>
+  </g>
+  <g class="state" data-state="MDC">
+    <title>Mindoro Occidental</title>
+    <polygon class="tile inset" points="133.46,280.59 143.46,286.37 143.46,297.91 133.46,303.69 123.46,297.91 123.46,286.37" aria-label="Mindoro Occidental"/>
+    <text class="label" x="133.46" y="292.14">MDC</text>
+  </g>
+  <g class="state" data-state="MDE">
+    <title>Mandaue</title>
+    <polygon class="tile inset" points="133.46,315.23 143.46,321.01 143.46,332.55 133.46,338.33 123.46,332.55 123.46,321.01" aria-label="Mandaue"/>
+    <text class="label" x="133.46" y="326.78">MDE</text>
+  </g>
+  <g class="state" data-state="LUN">
+    <title>La Union</title>
+    <polygon class="tile" points="123.46,124.71 133.46,130.48 133.46,142.03 123.46,147.80 113.46,142.03 113.46,130.48" aria-label="La Union"/>
+    <text class="label" x="123.46" y="136.25">LUN</text>
+  </g>
+  <g class="state" data-state="ZM">
+    <title>Zambales</title>
+    <polygon class="tile" points="123.46,159.35 133.46,165.12 133.46,176.67 123.46,182.44 113.46,176.67 113.46,165.12" aria-label="Zambales"/>
+    <text class="label" x="123.46" y="170.90">ZM</text>
+  </g>
+  <g class="state" data-state="PM">
+    <title>Angeles</title>
+    <polygon class="tile" points="123.46,193.99 133.46,199.76 133.46,211.31 123.46,217.08 113.46,211.31 113.46,199.76" aria-label="Angeles"/>
+    <text class="label" x="123.46" y="205.54">PM</text>
+  </g>
+  <g class="state" data-state="PN">
+    <title>Dagupan</title>
+    <polygon class="tile" points="113.46,142.03 123.46,147.80 123.46,159.35 113.46,165.12 103.46,159.35 103.46,147.80" aria-label="Dagupan"/>
+    <text class="label" x="113.46" y="153.58">PN</text>
+  </g>
+  <g class="state" data-state="BAN">
+    <title>Bataan</title>
+    <polygon class="tile" points="113.46,176.67 123.46,182.44 123.46,193.99 113.46,199.76 103.46,193.99 103.46,182.44" aria-label="Bataan"/>
+    <text class="label" x="113.46" y="188.22">BAN</text>
+  </g>
+  <g class="state" data-state="MAD">
+    <title>Marinduque</title>
+    <polygon class="tile inset" points="113.46,245.95 123.46,251.72 123.46,263.27 113.46,269.05 103.46,263.27 103.46,251.72" aria-label="Marinduque"/>
+    <text class="label" x="113.46" y="257.50">MAD</text>
+  </g>
+  <g class="state" data-state="GUI">
+    <title>Guimaras</title>
+    <polygon class="tile inset" points="113.46,72.75 123.46,78.52 123.46,90.07 113.46,95.84 103.46,90.07 103.46,78.52" aria-label="Guimaras"/>
+    <text class="label" x="113.46" y="84.29">GUI</text>
+  </g>
+  <g class="state" data-state="NEC">
+    <title>Negros Occidental</title>
+    <polygon class="tile inset" points="113.46,38.11 123.46,43.88 123.46,55.43 113.46,61.20 103.46,55.43 103.46,43.88" aria-label="Negros Occidental"/>
+    <text class="label" x="113.46" y="49.65">NEC</text>
+  </g>
+  <g class="state" data-state="DAO">
+    <title>Davao Oriental</title>
+    <polygon class="tile inset" points="113.46,3.46 123.46,9.24 123.46,20.78 113.46,26.56 103.46,20.78 103.46,9.24" aria-label="Davao Oriental"/>
+    <text class="label" x="113.46" y="15.01">DAO</text>
+  </g>
+  <g class="state" data-state="ZMB">
+    <title>Olongapo</title>
+    <polygon class="tile" points="103.46,159.35 113.46,165.12 113.46,176.67 103.46,182.44 93.46,176.67 93.46,165.12" aria-label="Olongapo"/>
+    <text class="label" x="103.46" y="170.90">ZMB</text>
+  </g>
+  <g class="state" data-state="PLW">
+    <title>Palawan</title>
+    <polygon class="tile inset" points="103.46,297.91 113.46,303.69 113.46,315.23 103.46,321.01 93.46,315.23 93.46,303.69" aria-label="Palawan"/>
+    <text class="label" x="103.46" y="309.46">PLW</text>
+  </g>
+  <g class="state" data-state="ZAS">
+    <title>Zamboanga del Sur</title>
+    <polygon class="tile inset" points="103.46,332.55 113.46,338.33 113.46,349.87 103.46,355.65 93.46,349.87 93.46,338.33" aria-label="Zamboanga del Sur"/>
+    <text class="label" x="103.46" y="344.10">ZAS</text>
+  </g>
+  <g class="state" data-state="CAP">
+    <title>Capiz</title>
+    <polygon class="tile inset" points="93.46,211.31 103.46,217.08 103.46,228.63 93.46,234.40 83.46,228.63 83.46,217.08" aria-label="Capiz"/>
+    <text class="label" x="93.46" y="222.86">CAP</text>
+  </g>
+  <g class="state" data-state="ILI">
+    <title>Iloilo</title>
+    <polygon class="tile inset" points="93.46,107.39 103.46,113.16 103.46,124.71 93.46,130.48 83.46,124.71 83.46,113.16" aria-label="Iloilo"/>
+    <text class="label" x="93.46" y="118.93">ILI</text>
+  </g>
+  <g class="state" data-state="PL">
+    <title>Puerto Princesa</title>
+    <polygon class="tile inset" points="83.46,263.27 93.46,269.05 93.46,280.59 83.46,286.37 73.46,280.59 73.46,269.05" aria-label="Puerto Princesa"/>
+    <text class="label" x="83.46" y="274.82">PL</text>
+  </g>
+  <g class="state" data-state="LN">
+    <title>Lanao del Norte</title>
+    <polygon class="tile inset" points="83.46,55.43 93.46,61.20 93.46,72.75 83.46,78.52 73.46,72.75 73.46,61.20" aria-label="Lanao del Norte"/>
+    <text class="label" x="83.46" y="66.97">LN</text>
+  </g>
+  <g class="state" data-state="MAG">
+    <title>Maguindanao</title>
+    <polygon class="tile inset" points="83.46,20.78 93.46,26.56 93.46,38.11 83.46,43.88 73.46,38.11 73.46,26.56" aria-label="Maguindanao"/>
+    <text class="label" x="83.46" y="32.33">MAG</text>
+  </g>
+  <g class="state" data-state="ANT">
+    <title>Antique</title>
+    <polygon class="tile inset" points="73.46,176.67 83.46,182.44 83.46,193.99 73.46,199.76 63.46,193.99 63.46,182.44" aria-label="Antique"/>
+    <text class="label" x="73.46" y="188.22">ANT</text>
+  </g>
+  <g class="state" data-state="AKL">
+    <title>Aklan</title>
+    <polygon class="tile inset" points="73.46,142.03 83.46,147.80 83.46,159.35 73.46,165.12 63.46,159.35 63.46,147.80" aria-label="Aklan"/>
+    <text class="label" x="73.46" y="153.58">AKL</text>
+  </g>
+  <g class="state" data-state="SAR">
+    <title>Sarangani</title>
+    <polygon class="tile inset" points="73.46,315.23 83.46,321.01 83.46,332.55 73.46,338.33 63.46,332.55 63.46,321.01" aria-label="Sarangani"/>
+    <text class="label" x="73.46" y="326.78">SAR</text>
+  </g>
+  <g class="state" data-state="MSR">
+    <title>Misamis Oriental</title>
+    <polygon class="tile inset" points="63.46,228.63 73.46,234.40 73.46,245.95 63.46,251.72 53.46,245.95 53.46,234.40" aria-label="Misamis Oriental"/>
+    <text class="label" x="63.46" y="240.18">MSR</text>
+  </g>
+  <g class="state" data-state="ZAN">
+    <title>Zamboanga del Norte</title>
+    <polygon class="tile inset" points="63.46,90.07 73.46,95.84 73.46,107.39 63.46,113.16 53.46,107.39 53.46,95.84" aria-label="Zamboanga del Norte"/>
+    <text class="label" x="63.46" y="101.61">ZAN</text>
+  </g>
+  <g class="state" data-state="BAS">
+    <title>Basilan</title>
+    <polygon class="tile inset" points="53.46,280.59 63.46,286.37 63.46,297.91 53.46,303.69 43.46,297.91 43.46,286.37" aria-label="Basilan"/>
+    <text class="label" x="53.46" y="292.14">BAS</text>
+  </g>
+  <g class="state" data-state="II">
+    <title>Iloilo</title>
+    <polygon class="tile inset" points="43.46,159.35 53.46,165.12 53.46,176.67 43.46,182.44 33.46,176.67 33.46,165.12" aria-label="Iloilo"/>
+    <text class="label" x="43.46" y="170.90">II</text>
+  </g>
+  <g class="state" data-state="AN">
+    <title>Butuan</title>
+    <polygon class="tile inset" points="43.46,193.99 53.46,199.76 53.46,211.31 43.46,217.08 33.46,211.31 33.46,199.76" aria-label="Butuan"/>
+    <text class="label" x="43.46" y="205.54">AN</text>
+  </g>
+  <g class="state" data-state="BUK">
+    <title>Bukidnon</title>
+    <polygon class="tile inset" points="43.46,124.71 53.46,130.48 53.46,142.03 43.46,147.80 33.46,142.03 33.46,130.48" aria-label="Bukidnon"/>
+    <text class="label" x="43.46" y="136.25">BUK</text>
+  </g>
+  <g class="state" data-state="SLU">
+    <title>Sulu</title>
+    <polygon class="tile inset" points="33.46,245.95 43.46,251.72 43.46,263.27 33.46,269.05 23.46,263.27 23.46,251.72" aria-label="Sulu"/>
+    <text class="label" x="33.46" y="257.50">SLU</text>
+  </g>
+  <g class="state" data-state="DAV">
+    <title>Davao del Norte</title>
+    <polygon class="tile inset" points="13.46,176.67 23.46,182.44 23.46,193.99 13.46,199.76 3.46,193.99 3.46,182.44" aria-label="Davao del Norte"/>
+    <text class="label" x="13.46" y="188.22">DAV</text>
+  </g>
+  <g class="state" data-state="ZSI">
+    <title>Zamboanga Sibugay</title>
+    <polygon class="tile inset" points="13.46,142.03 23.46,147.80 23.46,159.35 13.46,165.12 3.46,159.35 3.46,147.80" aria-label="Zamboanga Sibugay"/>
+    <text class="label" x="13.46" y="153.58">ZSI</text>
+  </g>
+  <g class="state" data-state="TAW">
+    <title>Tawi-Tawi</title>
+    <polygon class="tile inset" points="13.46,211.31 23.46,217.08 23.46,228.63 13.46,234.40 3.46,228.63 3.46,217.08" aria-label="Tawi-Tawi"/>
+    <text class="label" x="13.46" y="222.86">TAW</text>
+  </g>
+</svg>

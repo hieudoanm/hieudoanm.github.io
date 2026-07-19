@@ -1,0 +1,436 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 367.83 167.26" width="367.83" height="167.26" role="img" aria-labelledby="russia-title russia-desc">
+  <title id="russia-title">Russia hex map</title>
+  <desc id="russia-desc">Hexagon map with 85 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 0.81; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 3.99 2.85; }
+    .label { fill: #52525b; font: 600 3.23px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="SAK">
+    <title>Sakhalin</title>
+    <polygon class="tile inset" points="356.74,88.38 364.97,93.13 364.97,102.64 356.74,107.39 348.51,102.64 348.51,93.13" aria-label="Sakhalin"/>
+    <text class="label" x="356.74" y="97.88">SAK</text>
+  </g>
+  <g class="state" data-state="KAM">
+    <title>Kamchatka</title>
+    <polygon class="tile" points="323.82,88.38 332.05,93.13 332.05,102.64 323.82,107.39 315.59,102.64 315.59,93.13" aria-label="Kamchatka"/>
+    <text class="label" x="323.82" y="97.88">KAM</text>
+  </g>
+  <g class="state" data-state="PRI">
+    <title>Primor'ye</title>
+    <polygon class="tile" points="315.59,74.13 323.82,78.88 323.82,88.38 315.59,93.13 307.36,88.38 307.36,78.88" aria-label="Primor'ye"/>
+    <text class="label" x="315.59" y="83.63">PRI</text>
+  </g>
+  <g class="state" data-state="CHU">
+    <title>Chukchi Autonomous Okrug</title>
+    <polygon class="tile" points="315.59,102.64 323.82,107.39 323.82,116.89 315.59,121.64 307.36,116.89 307.36,107.39" aria-label="Chukchi Autonomous Okrug"/>
+    <text class="label" x="315.59" y="112.14">CHU</text>
+  </g>
+  <g class="state" data-state="MAG">
+    <title>Maga Buryatdan</title>
+    <polygon class="tile" points="307.36,88.38 315.59,93.13 315.59,102.64 307.36,107.39 299.13,102.64 299.13,93.13" aria-label="Maga Buryatdan"/>
+    <text class="label" x="307.36" y="97.88">MAG</text>
+  </g>
+  <g class="state" data-state="KHA">
+    <title>Khabarovsk</title>
+    <polygon class="tile" points="299.13,74.13 307.36,78.88 307.36,88.38 299.13,93.13 290.90,88.38 290.90,78.88" aria-label="Khabarovsk"/>
+    <text class="label" x="299.13" y="83.63">KHA</text>
+  </g>
+  <g class="state" data-state="YEV">
+    <title>Yevrey</title>
+    <polygon class="tile" points="282.67,74.13 290.90,78.88 290.90,88.38 282.67,93.13 274.44,88.38 274.44,78.88" aria-label="Yevrey"/>
+    <text class="label" x="282.67" y="83.63">YEV</text>
+  </g>
+  <g class="state" data-state="AMU">
+    <title>Amur</title>
+    <polygon class="tile" points="274.44,59.87 282.67,64.62 282.67,74.13 274.44,78.88 266.21,74.13 266.21,64.62" aria-label="Amur"/>
+    <text class="label" x="274.44" y="69.37">AMU</text>
+  </g>
+  <g class="state" data-state="ZAB">
+    <title>Chita</title>
+    <polygon class="tile" points="266.21,74.13 274.44,78.88 274.44,88.38 266.21,93.13 257.98,88.38 257.98,78.88" aria-label="Chita"/>
+    <text class="label" x="266.21" y="83.63">ZAB</text>
+  </g>
+  <g class="state" data-state="SA">
+    <title>Sakha (Yakutia)</title>
+    <polygon class="tile" points="257.98,59.87 266.21,64.62 266.21,74.13 257.98,78.88 249.75,74.13 249.75,64.62" aria-label="Sakha (Yakutia)"/>
+    <text class="label" x="257.98" y="69.37">SA</text>
+  </g>
+  <g class="state" data-state="KYA">
+    <title>Krasnoyarsk</title>
+    <polygon class="tile" points="249.75,45.62 257.98,50.37 257.98,59.87 249.75,64.62 241.52,59.87 241.52,50.37" aria-label="Krasnoyarsk"/>
+    <text class="label" x="249.75" y="55.12">KYA</text>
+  </g>
+  <g class="state" data-state="BU">
+    <title>Buryat</title>
+    <polygon class="tile" points="249.75,74.13 257.98,78.88 257.98,88.38 249.75,93.13 241.52,88.38 241.52,78.88" aria-label="Buryat"/>
+    <text class="label" x="249.75" y="83.63">BU</text>
+  </g>
+  <g class="state" data-state="IRK">
+    <title>Irkutsk</title>
+    <polygon class="tile" points="241.52,59.87 249.75,64.62 249.75,74.13 241.52,78.88 233.29,74.13 233.29,64.62" aria-label="Irkutsk"/>
+    <text class="label" x="241.52" y="69.37">IRK</text>
+  </g>
+  <g class="state" data-state="TY">
+    <title>Tuva</title>
+    <polygon class="tile" points="233.29,74.13 241.52,78.88 241.52,88.38 233.29,93.13 225.06,88.38 225.06,78.88" aria-label="Tuva"/>
+    <text class="label" x="233.29" y="83.63">TY</text>
+  </g>
+  <g class="state" data-state="KK">
+    <title>Khakass</title>
+    <polygon class="tile" points="225.06,88.38 233.29,93.13 233.29,102.64 225.06,107.39 216.83,102.64 216.83,93.13" aria-label="Khakass"/>
+    <text class="label" x="225.06" y="97.88">KK</text>
+  </g>
+  <g class="state" data-state="AL">
+    <title>Gorno-Altay</title>
+    <polygon class="tile" points="216.83,74.13 225.06,78.88 225.06,88.38 216.83,93.13 208.60,88.38 208.60,78.88" aria-label="Gorno-Altay"/>
+    <text class="label" x="216.83" y="83.63">AL</text>
+  </g>
+  <g class="state" data-state="KEM">
+    <title>Kemerovo</title>
+    <polygon class="tile" points="208.60,59.87 216.83,64.62 216.83,74.13 208.60,78.88 200.37,74.13 200.37,64.62" aria-label="Kemerovo"/>
+    <text class="label" x="208.60" y="69.37">KEM</text>
+  </g>
+  <g class="state" data-state="IN">
+    <title>Ingush</title>
+    <polygon class="tile" points="208.60,88.38 216.83,93.13 216.83,102.64 208.60,107.39 200.37,102.64 200.37,93.13" aria-label="Ingush"/>
+    <text class="label" x="208.60" y="97.88">IN</text>
+  </g>
+  <g class="state" data-state="TOM">
+    <title>Tomsk</title>
+    <polygon class="tile" points="200.37,45.62 208.60,50.37 208.60,59.87 200.37,64.62 192.14,59.87 192.14,50.37" aria-label="Tomsk"/>
+    <text class="label" x="200.37" y="55.12">TOM</text>
+  </g>
+  <g class="state" data-state="ALT">
+    <title>Altay</title>
+    <polygon class="tile" points="200.37,74.13 208.60,78.88 208.60,88.38 200.37,93.13 192.14,88.38 192.14,78.88" aria-label="Altay"/>
+    <text class="label" x="200.37" y="83.63">ALT</text>
+  </g>
+  <g class="state" data-state="NVS">
+    <title>Novosibirsk</title>
+    <polygon class="tile" points="192.14,59.87 200.37,64.62 200.37,74.13 192.14,78.88 183.91,74.13 183.91,64.62" aria-label="Novosibirsk"/>
+    <text class="label" x="192.14" y="69.37">NVS</text>
+  </g>
+  <g class="state" data-state="SE">
+    <title>North Ossetia</title>
+    <polygon class="tile" points="192.14,88.38 200.37,93.13 200.37,102.64 192.14,107.39 183.91,102.64 183.91,93.13" aria-label="North Ossetia"/>
+    <text class="label" x="192.14" y="97.88">SE</text>
+  </g>
+  <g class="state" data-state="KHM">
+    <title>Khanty-Mansiy</title>
+    <polygon class="tile" points="183.91,45.62 192.14,50.37 192.14,59.87 183.91,64.62 175.68,59.87 175.68,50.37" aria-label="Khanty-Mansiy"/>
+    <text class="label" x="183.91" y="55.12">KHM</text>
+  </g>
+  <g class="state" data-state="KB">
+    <title>Kabardin-Balkar</title>
+    <polygon class="tile" points="183.91,74.13 192.14,78.88 192.14,88.38 183.91,93.13 175.68,88.38 175.68,78.88" aria-label="Kabardin-Balkar"/>
+    <text class="label" x="183.91" y="83.63">KB</text>
+  </g>
+  <g class="state" data-state="VLA">
+    <title>Vladimir</title>
+    <polygon class="tile" points="175.68,2.85 183.91,7.60 183.91,17.11 175.68,21.86 167.45,17.11 167.45,7.60" aria-label="Vladimir"/>
+    <text class="label" x="175.68" y="12.35">VLA</text>
+  </g>
+  <g class="state" data-state="OMS">
+    <title>Omsk</title>
+    <polygon class="tile" points="175.68,59.87 183.91,64.62 183.91,74.13 175.68,78.88 167.45,74.13 167.45,64.62" aria-label="Omsk"/>
+    <text class="label" x="175.68" y="69.37">OMS</text>
+  </g>
+  <g class="state" data-state="PNZ">
+    <title>Penza</title>
+    <polygon class="tile" points="167.45,17.11 175.68,21.86 175.68,31.36 167.45,36.11 159.22,31.36 159.22,21.86" aria-label="Penza"/>
+    <text class="label" x="167.45" y="26.61">PNZ</text>
+  </g>
+  <g class="state" data-state="TYU">
+    <title>Tyumen'</title>
+    <polygon class="tile" points="167.45,45.62 175.68,50.37 175.68,59.87 167.45,64.62 159.22,59.87 159.22,50.37" aria-label="Tyumen'"/>
+    <text class="label" x="167.45" y="55.12">TYU</text>
+  </g>
+  <g class="state" data-state="KC">
+    <title>Karachay-Cherkess</title>
+    <polygon class="tile" points="167.45,74.13 175.68,78.88 175.68,88.38 167.45,93.13 159.22,88.38 159.22,78.88" aria-label="Karachay-Cherkess"/>
+    <text class="label" x="167.45" y="83.63">KC</text>
+  </g>
+  <g class="state" data-state="NIZ">
+    <title>Nizhegorod</title>
+    <polygon class="tile" points="159.22,2.85 167.45,7.60 167.45,17.11 159.22,21.86 150.99,17.11 150.99,7.60" aria-label="Nizhegorod"/>
+    <text class="label" x="159.22" y="12.35">NIZ</text>
+  </g>
+  <g class="state" data-state="KGN">
+    <title>Kurgan</title>
+    <polygon class="tile" points="159.22,31.36 167.45,36.11 167.45,45.62 159.22,50.37 150.99,45.62 150.99,36.11" aria-label="Kurgan"/>
+    <text class="label" x="159.22" y="40.86">KGN</text>
+  </g>
+  <g class="state" data-state="CHE">
+    <title>Chelyabinsk</title>
+    <polygon class="tile" points="159.22,59.87 167.45,64.62 167.45,74.13 159.22,78.88 150.99,74.13 150.99,64.62" aria-label="Chelyabinsk"/>
+    <text class="label" x="159.22" y="69.37">CHE</text>
+  </g>
+  <g class="state" data-state="MO">
+    <title>Mordovia</title>
+    <polygon class="tile" points="150.99,17.11 159.22,21.86 159.22,31.36 150.99,36.11 142.76,31.36 142.76,21.86" aria-label="Mordovia"/>
+    <text class="label" x="150.99" y="26.61">MO</text>
+  </g>
+  <g class="state" data-state="SVE">
+    <title>Sverdlovsk</title>
+    <polygon class="tile" points="150.99,45.62 159.22,50.37 159.22,59.87 150.99,64.62 142.76,59.87 142.76,50.37" aria-label="Sverdlovsk"/>
+    <text class="label" x="150.99" y="55.12">SVE</text>
+  </g>
+  <g class="state" data-state="ORE">
+    <title>Orenburg</title>
+    <polygon class="tile" points="150.99,74.13 159.22,78.88 159.22,88.38 150.99,93.13 142.76,88.38 142.76,78.88" aria-label="Orenburg"/>
+    <text class="label" x="150.99" y="83.63">ORE</text>
+  </g>
+  <g class="state" data-state="CU">
+    <title>Chuvash</title>
+    <polygon class="tile" points="142.76,31.36 150.99,36.11 150.99,45.62 142.76,50.37 134.53,45.62 134.53,36.11" aria-label="Chuvash"/>
+    <text class="label" x="142.76" y="40.86">CU</text>
+  </g>
+  <g class="state" data-state="BA">
+    <title>Bashkortostan</title>
+    <polygon class="tile" points="142.76,59.87 150.99,64.62 150.99,74.13 142.76,78.88 134.53,74.13 134.53,64.62" aria-label="Bashkortostan"/>
+    <text class="label" x="142.76" y="69.37">BA</text>
+  </g>
+  <g class="state" data-state="TA">
+    <title>Tatarstan</title>
+    <polygon class="tile" points="134.53,45.62 142.76,50.37 142.76,59.87 134.53,64.62 126.30,59.87 126.30,50.37" aria-label="Tatarstan"/>
+    <text class="label" x="134.53" y="55.12">TA</text>
+  </g>
+  <g class="state" data-state="SAM">
+    <title>Samara</title>
+    <polygon class="tile" points="134.53,74.13 142.76,78.88 142.76,88.38 134.53,93.13 126.30,88.38 126.30,78.88" aria-label="Samara"/>
+    <text class="label" x="134.53" y="83.63">SAM</text>
+  </g>
+  <g class="state" data-state="YAN">
+    <title>Yamal-Nenets</title>
+    <polygon class="tile" points="126.30,2.85 134.53,7.60 134.53,17.11 126.30,21.86 118.07,17.11 118.07,7.60" aria-label="Yamal-Nenets"/>
+    <text class="label" x="126.30" y="12.35">YAN</text>
+  </g>
+  <g class="state" data-state="ME">
+    <title>Mariy-El</title>
+    <polygon class="tile" points="126.30,31.36 134.53,36.11 134.53,45.62 126.30,50.37 118.07,45.62 118.07,36.11" aria-label="Mariy-El"/>
+    <text class="label" x="126.30" y="40.86">ME</text>
+  </g>
+  <g class="state" data-state="ULY">
+    <title>Ul'yanovsk</title>
+    <polygon class="tile" points="126.30,59.87 134.53,64.62 134.53,74.13 126.30,78.88 118.07,74.13 118.07,64.62" aria-label="Ul'yanovsk"/>
+    <text class="label" x="126.30" y="69.37">ULY</text>
+  </g>
+  <g class="state" data-state="AST">
+    <title>Astrakhan'</title>
+    <polygon class="tile" points="126.30,88.38 134.53,93.13 134.53,102.64 126.30,107.39 118.07,102.64 118.07,93.13" aria-label="Astrakhan'"/>
+    <text class="label" x="126.30" y="97.88">AST</text>
+  </g>
+  <g class="state" data-state="KO">
+    <title>Komi</title>
+    <polygon class="tile" points="118.07,17.11 126.30,21.86 126.30,31.36 118.07,36.11 109.84,31.36 109.84,21.86" aria-label="Komi"/>
+    <text class="label" x="118.07" y="26.61">KO</text>
+  </g>
+  <g class="state" data-state="UD">
+    <title>Udmurt</title>
+    <polygon class="tile" points="118.07,45.62 126.30,50.37 126.30,59.87 118.07,64.62 109.84,59.87 109.84,50.37" aria-label="Udmurt"/>
+    <text class="label" x="118.07" y="55.12">UD</text>
+  </g>
+  <g class="state" data-state="SAR">
+    <title>Saratov</title>
+    <polygon class="tile" points="118.07,74.13 126.30,78.88 126.30,88.38 118.07,93.13 109.84,88.38 109.84,78.88" aria-label="Saratov"/>
+    <text class="label" x="118.07" y="83.63">SAR</text>
+  </g>
+  <g class="state" data-state="NEN">
+    <title>Nenets</title>
+    <polygon class="tile" points="109.84,2.85 118.07,7.60 118.07,17.11 109.84,21.86 101.61,17.11 101.61,7.60" aria-label="Nenets"/>
+    <text class="label" x="109.84" y="12.35">NEN</text>
+  </g>
+  <g class="state" data-state="KIR">
+    <title>Kirov</title>
+    <polygon class="tile" points="109.84,31.36 118.07,36.11 118.07,45.62 109.84,50.37 101.61,45.62 101.61,36.11" aria-label="Kirov"/>
+    <text class="label" x="109.84" y="40.86">KIR</text>
+  </g>
+  <g class="state" data-state="TAM">
+    <title>Tambov</title>
+    <polygon class="tile" points="109.84,59.87 118.07,64.62 118.07,74.13 109.84,78.88 101.61,74.13 101.61,64.62" aria-label="Tambov"/>
+    <text class="label" x="109.84" y="69.37">TAM</text>
+  </g>
+  <g class="state" data-state="VGG">
+    <title>Volgograd</title>
+    <polygon class="tile" points="109.84,88.38 118.07,93.13 118.07,102.64 109.84,107.39 101.61,102.64 101.61,93.13" aria-label="Volgograd"/>
+    <text class="label" x="109.84" y="97.88">VGG</text>
+  </g>
+  <g class="state" data-state="AD">
+    <title>Adygey</title>
+    <polygon class="tile" points="109.84,116.89 118.07,121.64 118.07,131.15 109.84,135.90 101.61,131.15 101.61,121.64" aria-label="Adygey"/>
+    <text class="label" x="109.84" y="126.39">AD</text>
+  </g>
+  <g class="state" data-state="KOS">
+    <title>Kostroma</title>
+    <polygon class="tile" points="101.61,17.11 109.84,21.86 109.84,31.36 101.61,36.11 93.38,31.36 93.38,21.86" aria-label="Kostroma"/>
+    <text class="label" x="101.61" y="26.61">KOS</text>
+  </g>
+  <g class="state" data-state="PER">
+    <title>Perm'</title>
+    <polygon class="tile" points="101.61,45.62 109.84,50.37 109.84,59.87 101.61,64.62 93.38,59.87 93.38,50.37" aria-label="Perm'"/>
+    <text class="label" x="101.61" y="55.12">PER</text>
+  </g>
+  <g class="state" data-state="VOR">
+    <title>Voronezh</title>
+    <polygon class="tile" points="101.61,74.13 109.84,78.88 109.84,88.38 101.61,93.13 93.38,88.38 93.38,78.88" aria-label="Voronezh"/>
+    <text class="label" x="101.61" y="83.63">VOR</text>
+  </g>
+  <g class="state" data-state="KL">
+    <title>Kalmyk</title>
+    <polygon class="tile" points="101.61,102.64 109.84,107.39 109.84,116.89 101.61,121.64 93.38,116.89 93.38,107.39" aria-label="Kalmyk"/>
+    <text class="label" x="101.61" y="112.14">KL</text>
+  </g>
+  <g class="state" data-state="ARK">
+    <title>Arkhangel'sk</title>
+    <polygon class="tile" points="93.38,2.85 101.61,7.60 101.61,17.11 93.38,21.86 85.15,17.11 85.15,7.60" aria-label="Arkhangel'sk"/>
+    <text class="label" x="93.38" y="12.35">ARK</text>
+  </g>
+  <g class="state" data-state="IVA">
+    <title>Ivanovo</title>
+    <polygon class="tile" points="93.38,31.36 101.61,36.11 101.61,45.62 93.38,50.37 85.15,45.62 85.15,36.11" aria-label="Ivanovo"/>
+    <text class="label" x="93.38" y="40.86">IVA</text>
+  </g>
+  <g class="state" data-state="RYA">
+    <title>Ryazan'</title>
+    <polygon class="tile" points="93.38,59.87 101.61,64.62 101.61,74.13 93.38,78.88 85.15,74.13 85.15,64.62" aria-label="Ryazan'"/>
+    <text class="label" x="93.38" y="69.37">RYA</text>
+  </g>
+  <g class="state" data-state="ROS">
+    <title>Rostov</title>
+    <polygon class="tile" points="93.38,88.38 101.61,93.13 101.61,102.64 93.38,107.39 85.15,102.64 85.15,93.13" aria-label="Rostov"/>
+    <text class="label" x="93.38" y="97.88">ROS</text>
+  </g>
+  <g class="state" data-state="DA">
+    <title>Dagestan</title>
+    <polygon class="tile" points="93.38,116.89 101.61,121.64 101.61,131.15 93.38,135.90 85.15,131.15 85.15,121.64" aria-label="Dagestan"/>
+    <text class="label" x="93.38" y="126.39">DA</text>
+  </g>
+  <g class="state" data-state="VLG">
+    <title>Vologda</title>
+    <polygon class="tile" points="85.15,17.11 93.38,21.86 93.38,31.36 85.15,36.11 76.92,31.36 76.92,21.86" aria-label="Vologda"/>
+    <text class="label" x="85.15" y="26.61">VLG</text>
+  </g>
+  <g class="state" data-state="MOW">
+    <title>Moskovskaya</title>
+    <polygon class="tile" points="85.15,45.62 93.38,50.37 93.38,59.87 85.15,64.62 76.92,59.87 76.92,50.37" aria-label="Moskovskaya"/>
+    <text class="label" x="85.15" y="55.12">MOW</text>
+  </g>
+  <g class="state" data-state="LIP">
+    <title>Lipetsk</title>
+    <polygon class="tile" points="85.15,74.13 93.38,78.88 93.38,88.38 85.15,93.13 76.92,88.38 76.92,78.88" aria-label="Lipetsk"/>
+    <text class="label" x="85.15" y="83.63">LIP</text>
+  </g>
+  <g class="state" data-state="STA">
+    <title>Stavropol'</title>
+    <polygon class="tile" points="85.15,102.64 93.38,107.39 93.38,116.89 85.15,121.64 76.92,116.89 76.92,107.39" aria-label="Stavropol'"/>
+    <text class="label" x="85.15" y="112.14">STA</text>
+  </g>
+  <g class="state" data-state="KR">
+    <title>Karelia</title>
+    <polygon class="tile" points="76.92,2.85 85.15,7.60 85.15,17.11 76.92,21.86 68.69,17.11 68.69,7.60" aria-label="Karelia"/>
+    <text class="label" x="76.92" y="12.35">KR</text>
+  </g>
+  <g class="state" data-state="YAR">
+    <title>Yaroslavl'</title>
+    <polygon class="tile" points="76.92,31.36 85.15,36.11 85.15,45.62 76.92,50.37 68.69,45.62 68.69,36.11" aria-label="Yaroslavl'"/>
+    <text class="label" x="76.92" y="40.86">YAR</text>
+  </g>
+  <g class="state" data-state="TUL">
+    <title>Tula</title>
+    <polygon class="tile" points="76.92,59.87 85.15,64.62 85.15,74.13 76.92,78.88 68.69,74.13 68.69,64.62" aria-label="Tula"/>
+    <text class="label" x="76.92" y="69.37">TUL</text>
+  </g>
+  <g class="state" data-state="KDA">
+    <title>Krasnodar</title>
+    <polygon class="tile" points="76.92,88.38 85.15,93.13 85.15,102.64 76.92,107.39 68.69,102.64 68.69,93.13" aria-label="Krasnodar"/>
+    <text class="label" x="76.92" y="97.88">KDA</text>
+  </g>
+  <g class="state" data-state="CE">
+    <title>Chechnya</title>
+    <polygon class="tile" points="76.92,116.89 85.15,121.64 85.15,131.15 76.92,135.90 68.69,131.15 68.69,121.64" aria-label="Chechnya"/>
+    <text class="label" x="76.92" y="126.39">CE</text>
+  </g>
+  <g class="state" data-state="LEN">
+    <title>Leningrad</title>
+    <polygon class="tile" points="68.69,17.11 76.92,21.86 76.92,31.36 68.69,36.11 60.46,31.36 60.46,21.86" aria-label="Leningrad"/>
+    <text class="label" x="68.69" y="26.61">LEN</text>
+  </g>
+  <g class="state" data-state="TVE">
+    <title>Tver'</title>
+    <polygon class="tile" points="68.69,45.62 76.92,50.37 76.92,59.87 68.69,64.62 60.46,59.87 60.46,50.37" aria-label="Tver'"/>
+    <text class="label" x="68.69" y="55.12">TVE</text>
+  </g>
+  <g class="state" data-state="ORL">
+    <title>Orel</title>
+    <polygon class="tile" points="68.69,74.13 76.92,78.88 76.92,88.38 68.69,93.13 60.46,88.38 60.46,78.88" aria-label="Orel"/>
+    <text class="label" x="68.69" y="83.63">ORL</text>
+  </g>
+  <g class="state" data-state="BEL">
+    <title>Belgorod</title>
+    <polygon class="tile" points="68.69,102.64 76.92,107.39 76.92,116.89 68.69,121.64 60.46,116.89 60.46,107.39" aria-label="Belgorod"/>
+    <text class="label" x="68.69" y="112.14">BEL</text>
+  </g>
+  <g class="state" data-state="MUR">
+    <title>Murmansk</title>
+    <polygon class="tile" points="60.46,2.85 68.69,7.60 68.69,17.11 60.46,21.86 52.23,17.11 52.23,7.60" aria-label="Murmansk"/>
+    <text class="label" x="60.46" y="12.35">MUR</text>
+  </g>
+  <g class="state" data-state="NGR">
+    <title>Novgorod</title>
+    <polygon class="tile" points="60.46,31.36 68.69,36.11 68.69,45.62 60.46,50.37 52.23,45.62 52.23,36.11" aria-label="Novgorod"/>
+    <text class="label" x="60.46" y="40.86">NGR</text>
+  </g>
+  <g class="state" data-state="KLU">
+    <title>Kaluga</title>
+    <polygon class="tile" points="60.46,59.87 68.69,64.62 68.69,74.13 60.46,78.88 52.23,74.13 52.23,64.62" aria-label="Kaluga"/>
+    <text class="label" x="60.46" y="69.37">KLU</text>
+  </g>
+  <g class="state" data-state="KRS">
+    <title>Kursk</title>
+    <polygon class="tile" points="60.46,88.38 68.69,93.13 68.69,102.64 60.46,107.39 52.23,102.64 52.23,93.13" aria-label="Kursk"/>
+    <text class="label" x="60.46" y="97.88">KRS</text>
+  </g>
+  <g class="state" data-state="SC">
+    <title>Sevastopol</title>
+    <polygon class="tile inset" points="60.46,145.40 68.69,150.15 68.69,159.66 60.46,164.41 52.23,159.66 52.23,150.15" aria-label="Sevastopol"/>
+    <text class="label" x="60.46" y="154.90">SC</text>
+  </g>
+  <g class="state" data-state="PSK">
+    <title>Pskov</title>
+    <polygon class="tile" points="52.23,17.11 60.46,21.86 60.46,31.36 52.23,36.11 44.00,31.36 44.00,21.86" aria-label="Pskov"/>
+    <text class="label" x="52.23" y="26.61">PSK</text>
+  </g>
+  <g class="state" data-state="MOS">
+    <title>Moskva</title>
+    <polygon class="tile" points="52.23,45.62 60.46,50.37 60.46,59.87 52.23,64.62 44.00,59.87 44.00,50.37" aria-label="Moskva"/>
+    <text class="label" x="52.23" y="55.12">MOS</text>
+  </g>
+  <g class="state" data-state="BRY">
+    <title>Bryansk</title>
+    <polygon class="tile" points="52.23,74.13 60.46,78.88 60.46,88.38 52.23,93.13 44.00,88.38 44.00,78.88" aria-label="Bryansk"/>
+    <text class="label" x="52.23" y="83.63">BRY</text>
+  </g>
+  <g class="state" data-state="SPE">
+    <title>City of St. Petersburg</title>
+    <polygon class="tile" points="44.00,31.36 52.23,36.11 52.23,45.62 44.00,50.37 35.77,45.62 35.77,36.11" aria-label="City of St. Petersburg"/>
+    <text class="label" x="44.00" y="40.86">SPE</text>
+  </g>
+  <g class="state" data-state="SMO">
+    <title>Smolensk</title>
+    <polygon class="tile" points="44.00,59.87 52.23,64.62 52.23,74.13 44.00,78.88 35.77,74.13 35.77,64.62" aria-label="Smolensk"/>
+    <text class="label" x="44.00" y="69.37">SMO</text>
+  </g>
+  <g class="state" data-state="CRI">
+    <title>Crimea</title>
+    <polygon class="tile inset" points="44.00,116.89 52.23,121.64 52.23,131.15 44.00,135.90 35.77,131.15 35.77,121.64" aria-label="Crimea"/>
+    <text class="label" x="44.00" y="126.39">CRI</text>
+  </g>
+  <g class="state" data-state="KGD">
+    <title>Kaliningrad</title>
+    <polygon class="tile inset" points="11.08,59.87 19.31,64.62 19.31,74.13 11.08,78.88 2.85,74.13 2.85,64.62" aria-label="Kaliningrad"/>
+    <text class="label" x="11.08" y="69.37">KGD</text>
+  </g>
+</svg>
