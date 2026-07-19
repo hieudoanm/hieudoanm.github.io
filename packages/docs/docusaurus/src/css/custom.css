@@ -1,0 +1,59 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* Light mode (Tailwind red palette) */
+:root {
+  --ifm-color-primary: #ef4444; /* red-500 */
+  --ifm-color-primary-dark: #dc2626; /* red-600 */
+  --ifm-color-primary-darker: #b91c1c; /* red-700 */
+  --ifm-color-primary-darkest: #991b1b; /* red-800 */
+  --ifm-color-primary-light: #f87171; /* red-400 */
+  --ifm-color-primary-lighter: #fca5a5; /* red-300 */
+  --ifm-color-primary-lightest: #fecaca; /* red-200 */
+
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode (lighter palette for readability) */
+[data-theme='dark'] {
+  --ifm-color-primary: #f87171; /* red-400 */
+  --ifm-color-primary-dark: #ef4444; /* red-500 */
+  --ifm-color-primary-darker: #dc2626; /* red-600 */
+  --ifm-color-primary-darkest: #b91c1c; /* red-700 */
+  --ifm-color-primary-light: #fca5a5; /* red-300 */
+  --ifm-color-primary-lighter: #fecaca; /* red-200 */
+  --ifm-color-primary-lightest: #fee2e2; /* red-100 */
+
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+.typewriter {
+  display: inline-flex;
+  align-items: center;
+  /* font-family: monospace; */
+  font-size: 1.5rem;
+}
+
+.cursor-block {
+  margin-left: 4px;
+  width: 0.45em;
+  height: 1.2em;
+  background: currentColor;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}

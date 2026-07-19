@@ -1,0 +1,9 @@
+services:
+  memcached:
+    image: memcached:1.6-alpine
+    container_name: memcached
+    restart: always
+    ports:
+      - "11211:11211"
+    # Optional: Set memory limit (in MB) and other flags
+    # command: ["-m", "64", "-v"]

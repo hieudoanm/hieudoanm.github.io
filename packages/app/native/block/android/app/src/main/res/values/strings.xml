@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Focus Blocker</string>
+    <string name="blocked_title">Stay Focused</string>
+    <string name="blocked_message">%s is blocked.</string>
+    <string name="go_home">Go Home</string>
+    <string name="search_apps">Search apps…</string>
+    <string name="blocking_enabled">Blocking Enabled</string>
+    <string name="blocking_disabled">Blocking Disabled</string>
+    <string name="accessibility_enabled">Accessibility Enabled</string>
+    <string name="accessibility_disabled">Accessibility Disabled</string>
+    <string name="apps_selected">%d apps selected</string>
+    <string name="today_saved">Today: %d minutes saved</string>
+    <string name="enable_blocker">Enable Blocker</string>
+    <string name="launch_on_boot">Launch on Boot</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="ignore_system_apps">Ignore System Apps</string>
+    <string name="temporary_disable">Temporary Disable</string>
+    <string name="settings">Settings</string>
+    <string name="home">Home</string>
+    <string name="blocked_apps">Blocked Apps</string>
+    <string name="statistics">Statistics</string>
+    <string name="about">About</string>
+</resources>

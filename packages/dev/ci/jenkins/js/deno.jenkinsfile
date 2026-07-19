@@ -1,0 +1,29 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Lint') {
+            steps {
+                sh 'deno lint'
+            }
+        }
+
+        stage('Format Check') {
+            steps {
+                sh 'deno fmt --check'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                sh 'deno test -A'
+            }
+        }
+    }
+}

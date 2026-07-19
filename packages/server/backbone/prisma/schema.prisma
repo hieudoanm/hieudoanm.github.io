@@ -1,0 +1,194 @@
+datasource db {
+  provider = "sqlite"
+}
+
+generator dbml {
+  provider = "prisma-dbml-generator"
+}
+
+generator jsonSchema {
+  provider = "prisma-json-schema-generator"
+}
+
+model Collection {
+  name      String @id
+  schema    String @default("{}")
+  createdAt String @map("created_at")
+  updatedAt String @map("updated_at")
+
+  @@map("_collections")
+}
+
+model User {
+  id        String @id
+  email     String @unique
+  password  String
+  createdAt String @map("created_at")
+  updatedAt String @map("updated_at")
+
+  @@map("_users")
+}
+
+model Bucket {
+  name      String  @id
+  isPublic  Boolean @map("is_public")
+  createdAt String  @map("created_at")
+  updatedAt String  @map("updated_at")
+
+  @@map("_buckets")
+}
+
+model FileRecord {
+  id        String @id
+  bucket    String
+  filename  String
+  mimeType  String @default("application/octet-stream") @map("mime_type")
+  size      Int    @default(0)
+  createdAt String @map("created_at")
+  updatedAt String @map("updated_at")
+
+  @@map("_files")
+}
+
+model Webhook {
+  id        String  @id
+  name      String
+  url       String
+  events    String  @default("[]")
+  secret    String  @default("")
+  isActive  Boolean @default(true) @map("is_active")
+  createdAt String  @map("created_at")
+  updatedAt String  @map("updated_at")
+
+  @@map("_webhooks")
+}
+
+model WebhookLog {
+  id             String @id
+  webhookId      String @map("webhook_id")
+  event          String
+  url            String
+  requestBody    String @default("") @map("request_body")
+  responseStatus Int?   @map("response_status")
+  responseBody   String @default("") @map("response_body")
+  error          String @default("")
+  status         String @default("pending")
+  createdAt      String @map("created_at")
+
+  @@map("_webhook_logs")
+}
+
+model Secret {
+  id        String @id
+  name      String
+  value     String
+  scope     String @default("general")
+  createdAt String @map("created_at")
+  updatedAt String @map("updated_at")
+
+  @@map("_secrets")
+}
+
+model CronJob {
+  id            String  @id
+  name          String
+  schedule      String
+  command       String
+  method        String  @default("GET")
+  headers       String  @default("")
+  body          String  @default("")
+  isActive      Boolean @default(true) @map("is_active")
+  lastRunAt     String  @default("") @map("last_run_at")
+  lastRunStatus String  @default("") @map("last_run_status")
+  createdAt     String  @map("created_at")
+  updatedAt     String  @map("updated_at")
+
+  @@map("_cronjobs")
+}
+
+model CronJobLog {
+  id         String @id
+  cronjobId  String @map("cronjob_id")
+  startedAt  String @map("started_at")
+  finishedAt String @map("finished_at")
+  durationMs Int    @default(0) @map("duration_ms")
+  status     String @default("")
+  output     String @default("")
+  error      String @default("")
+
+  @@map("_cronjob_logs")
+}
+
+model WSConnection {
+  id             String  @id
+  remoteAddr     String  @map("remote_addr")
+  path           String  @default("/")
+  userAgent      String  @default("") @map("user_agent")
+  connectedAt    String  @map("connected_at")
+  disconnectedAt String  @default("") @map("disconnected_at")
+  isActive       Boolean @default(true) @map("is_active")
+  createdAt      String  @map("created_at")
+
+  @@map("_ws_connections")
+}
+
+model WSMessage {
+  id           String  @id
+  connectionId String? @map("connection_id")
+  direction    String
+  content      String
+  createdAt    String  @map("created_at")
+
+  @@map("_ws_messages")
+}
+
+model CacheEntry {
+  key       String @id
+  value     String
+  ttl       Int    @default(0)
+  expiresAt String @default("") @map("expires_at")
+  createdAt String @map("created_at")
+  updatedAt String @map("updated_at")
+
+  @@map("_cache")
+}
+
+model Notification {
+  id        String  @id
+  title     String
+  body      String  @default("")
+  type      String  @default("info")
+  isRead    Boolean @default(false) @map("is_read")
+  createdAt String  @map("created_at")
+
+  @@map("_notifications")
+}
+
+model LogEntry {
+  id        String @id
+  level     String @default("info")
+  message   String
+  meta      String @default("{}")
+  createdAt String @map("created_at")
+
+  @@map("_logs")
+}
+
+model PubSubTopic {
+  id             String          @id
+  name           String          @unique
+  createdAt      String          @map("created_at")
+  pubSubMessages PubSubMessage[]
+
+  @@map("_pubsub_topics")
+}
+
+model PubSubMessage {
+  id        String      @id
+  topicId   String      @map("topic_id")
+  body      String
+  createdAt String      @map("created_at")
+  topic     PubSubTopic @relation(fields: [topicId], references: [id], onDelete: Cascade)
+
+  @@map("_pubsub_messages")
+}

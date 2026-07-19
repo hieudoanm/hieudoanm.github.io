@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`WorldClock should filter cities by query 1`] = `
+<div>
+  <div
+    class="flex min-h-0 flex-col gap-2"
+  >
+    <div
+      class="flex flex-col gap-2"
+    >
+      <div
+        data-testid="city-card"
+      >
+        London
+      </div>
+    </div>
+    <p
+      class="text-base-content/20 pt-3 text-center font-mono text-[10px] tracking-widest uppercase"
+    >
+      Weather via Open-Meteo · 10 min
+    </p>
+  </div>
+</div>
+`;
+
+exports[`WorldClock should render favorite and non-favorite cities 1`] = `
+<div>
+  <div
+    class="flex min-h-0 flex-col gap-2"
+  >
+    <div
+      class="flex flex-col gap-2"
+    >
+      <div
+        data-testid="city-card"
+      >
+        Tokyo
+      </div>
+      <div
+        class="border-base-300 border-t"
+      />
+      <div
+        data-testid="city-card"
+      >
+        London
+      </div>
+    </div>
+    <p
+      class="text-base-content/20 pt-3 text-center font-mono text-[10px] tracking-widest uppercase"
+    >
+      Weather via Open-Meteo · 10 min
+    </p>
+  </div>
+</div>
+`;
+
+exports[`WorldClock should show empty state when no cities match 1`] = `
+<div>
+  <div
+    class="flex min-h-0 flex-col gap-2"
+  >
+    <div
+      class="flex flex-col gap-2"
+    />
+    <p
+      class="text-base-content/30 py-8 text-center text-xs"
+    >
+      No cities match "
+      xyz
+      "
+    </p>
+    <p
+      class="text-base-content/20 pt-3 text-center font-mono text-[10px] tracking-widest uppercase"
+    >
+      Weather via Open-Meteo · 10 min
+    </p>
+  </div>
+</div>
+`;

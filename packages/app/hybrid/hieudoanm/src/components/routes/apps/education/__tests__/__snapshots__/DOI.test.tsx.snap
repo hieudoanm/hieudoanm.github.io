@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`DOI should render 1`] = `
+<div>
+  <form
+    class="flex gap-3"
+  >
+    <input
+      class="input input-bordered grow font-mono text-sm"
+      placeholder="https://doi.org/10.xxxx/..."
+      required=""
+      value="https://doi.org/10.1016/j.smrv.2009.04.001"
+    />
+    <button
+      class="btn btn-primary min-w-[80px]"
+      type="submit"
+    >
+      Fetch
+    </button>
+  </form>
+  <p
+    class="text-base-content/30 py-6 text-center text-sm"
+  >
+    No references yet — enter a DOI above to get started.
+  </p>
+</div>
+`;

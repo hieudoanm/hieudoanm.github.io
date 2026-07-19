@@ -1,0 +1,26 @@
+[package]
+name = "api_rs"
+version = "0.0.1"
+edition = "2024"
+description = "API Clients"
+repository = "https://github.com/hieudoanm/hieudoanm.github.io"
+license = "GPL-3.0"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+anyhow = "=1.0.102"
+reqwest = { version = "=0.12.28", features = ["json"] }
+serde = { version = "=1.0.228", features = ["derive"] }
+serde_json = "=1.0.150"
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+wasm-bindgen = "=0.2.122"
+js-sys = "=0.3.99"
+wasm-bindgen-futures = "=0.4.72"
+serde-wasm-bindgen = "=0.6.5"
+
+[dev-dependencies]
+tokio = { version = "=1.52.3", features = ["full"] }
+wiremock = "=0.6.5"

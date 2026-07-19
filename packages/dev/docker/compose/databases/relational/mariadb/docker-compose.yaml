@@ -1,0 +1,36 @@
+services:
+  mariadb:
+    image: mariadb:12.2 # Pin to a stable version
+    container_name: mariadb
+    hostname: mariadb
+    restart: unless-stopped
+    networks:
+      - backend # Use a generic backend network for multi-service setups
+    ports:
+      - "3306:3306" # Only expose if needed externally
+    environment:
+      MYSQL_ROOT_PASSWORD: StrongPassword123! # Use a strong password in production
+      MYSQL_DATABASE: mydatabase
+      MYSQL_USER: appuser # Optional: create a non-root user
+      MYSQL_PASSWORD: AnotherStrongPassword! # Password for non-root user
+    volumes:
+      - mariadb_data:/var/lib/mysql
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+        reservations:
+          memory: 512M
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+volumes:
+  mariadb_data:
+    driver: local
+
+networks:
+  backend:
+    driver: bridge

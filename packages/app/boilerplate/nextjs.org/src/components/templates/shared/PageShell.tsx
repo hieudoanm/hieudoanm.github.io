@@ -1,0 +1,53 @@
+import { FC, ReactNode } from 'react';
+import { Header } from '@/components/organisms/Header';
+import { Navbar } from '@/components/organisms/Navbar';
+
+interface NavItem {
+  label: string;
+  href: string;
+  icon?: ReactNode;
+}
+
+interface PageShellProps {
+  title: string;
+  subtitle?: string;
+  backHref?: string;
+  headerAction?: ReactNode;
+  headerBadges?: ReactNode;
+  navItems?: NavItem[];
+  maxWidth?: string;
+  gap?: string;
+  children: ReactNode;
+  className?: string;
+}
+
+export const PageShell: FC<PageShellProps> = ({
+  title,
+  subtitle,
+  backHref,
+  headerAction,
+  headerBadges,
+  navItems,
+  maxWidth = 'max-w-2xl',
+  gap = 'gap-6',
+  children,
+  className = '',
+}) => (
+  <div
+    className={`flex min-h-dvh flex-col${navItems ? 'pb-20' : ''} ${className}`}>
+    <Header
+      title={title}
+      subtitle={subtitle}
+      backHref={backHref}
+      action={headerAction}
+      badges={headerBadges}
+    />
+    <main
+      className={`mx-auto flex w-full ${maxWidth} flex-1 flex-col ${gap} p-6`}>
+      {children}
+    </main>
+    {navItems && <Navbar items={navItems} />}
+  </div>
+);
+
+PageShell.displayName = 'PageShell';

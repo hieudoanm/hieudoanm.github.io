@@ -1,0 +1,8 @@
+{
+  "label": "🖥️ Auth",
+  "position": 1,
+  "link": {
+    "slug": "/engineering/software/services/auth",
+    "type": "generated-index"
+  }
+}

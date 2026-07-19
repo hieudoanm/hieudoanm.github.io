@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002Fapps\u002Fvisualization\u002Ffootball\u002F[tournament]","\u002Fapps\u002Fvisualization\u002Ffootball\u002F[tournament]\u002F[year]","\u002Fapps\u002Fvisualization\u002Ffootball\u002F[tournament]\u002F[year]\u002Fknock-out","\u002Fmd","\u002Fmd\u002F[slug]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
