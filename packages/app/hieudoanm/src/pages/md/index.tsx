@@ -8,19 +8,41 @@ interface Props {
 }
 
 const MarkdownIndex: NextPage<Props> = ({ files }) => (
-  <div className="p-8">
-    <h1 className="mb-6 text-2xl font-bold">Markdown Files</h1>
-    <ul className="space-y-2">
-      {files.map((file) => (
-        <li key={file}>
-          <Link
-            href={`/md/${file}`}
-            className="text-blue-500 underline hover:text-blue-700">
-            {file}
-          </Link>
-        </li>
-      ))}
-    </ul>
+  <div className="mx-auto w-full max-w-xl p-8">
+    <h1 className="mb-6 text-center text-2xl font-bold">Markdown Files</h1>
+    <div className="border-base-300 rounded-xl border">
+      <table className="table-compact table-bordered table">
+        <thead>
+          <tr>
+            <th className="px-4 py-2 text-left">Name</th>
+            <th className="px-4 py-2 text-right">Raw</th>
+          </tr>
+        </thead>
+        <tbody>
+          {files.map((file: string) => {
+            const slug = file.replace(/\.md$/, '');
+            return (
+              <tr key={file}>
+                <td className="px-4 py-2">
+                  <Link
+                    href={`/md/${slug}`}
+                    className="text-blue-500 underline hover:text-blue-700">
+                    {slug}
+                  </Link>
+                </td>
+                <td className="px-4 py-2 text-right">
+                  <Link
+                    href={`/md/${file}`}
+                    className="text-blue-500 underline hover:text-blue-700">
+                    {file}
+                  </Link>
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
   </div>
 );
 

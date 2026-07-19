@@ -1,6 +1,7 @@
 import { HeadTemplate } from '@hieudoanm.github.io/components/templates/shared/HeadTemplate';
 import '@hieudoanm.github.io/styles/globals.css';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import 'github-markdown-css/github-markdown.css';
 import type { AppProps } from 'next/app';
 import { Be_Vietnam_Pro } from 'next/font/google';
 import { FC } from 'react';
