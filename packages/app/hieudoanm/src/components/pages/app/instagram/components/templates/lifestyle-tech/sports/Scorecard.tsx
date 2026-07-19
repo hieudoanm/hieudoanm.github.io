@@ -47,11 +47,17 @@ export const Scorecard: FC<TemplateProps> = ({ data }) => {
           </span>
         </div>
         <div className="flex items-baseline gap-2">
-          <span className="text-base-content text-3xl font-black">
+          <span
+            className={`text-3xl font-black ${
+              homeScore > awayScore ? 'text-primary' : 'text-base-content'
+            }`}>
             {homeScore}
           </span>
           <span className="text-neutral text-base">-</span>
-          <span className="text-base-content text-3xl font-black">
+          <span
+            className={`text-3xl font-black ${
+              awayScore > homeScore ? 'text-primary' : 'text-base-content'
+            }`}>
             {awayScore}
           </span>
         </div>
