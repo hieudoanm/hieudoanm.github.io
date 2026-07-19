@@ -9,7 +9,7 @@ interface GridBtn {
   span?: number;
 }
 
-export const CalculatorModal: FC<{ onClose: () => void }> = ({ onClose }) => {
+export const Calculator: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [expression, setExpression] = useState('');
   const [category, setCategory] = useState('length');
   const [fromUnit, setFromUnit] = useState(
@@ -314,7 +314,7 @@ export const CalculatorModal: FC<{ onClose: () => void }> = ({ onClose }) => {
   );
 };
 
-CalculatorModal.displayName = 'CalculatorModal';
+Calculator.displayName = 'Calculator';
 
 function formatNumber(n: number): string {
   if (!isFinite(n)) return String(n);

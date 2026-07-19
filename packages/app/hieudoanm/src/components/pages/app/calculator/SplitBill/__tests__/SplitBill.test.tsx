@@ -9,11 +9,11 @@ jest.mock('html2canvas-pro', () => ({
 }));
 
 import { fireEvent, render, screen } from '@testing-library/react';
-import { SplitBillModal } from '../index';
+import { SplitBill } from '../index';
 
-describe('SplitBillModal', () => {
+describe('SplitBill', () => {
   it('renders equal split tab by default', () => {
-    render(<SplitBillModal onClose={jest.fn()} />);
+    render(<SplitBill onClose={jest.fn()} />);
     expect(screen.getByText('Split Bill')).toBeInTheDocument();
     expect(
       screen.getByText('Equal Split').classList.contains('text-primary')
@@ -21,7 +21,7 @@ describe('SplitBillModal', () => {
   });
 
   it('switches to settle tab', () => {
-    render(<SplitBillModal onClose={jest.fn()} />);
+    render(<SplitBill onClose={jest.fn()} />);
     fireEvent.click(screen.getByText('Who Owes Who'));
     expect(
       screen.getByText('Who Owes Who').classList.contains('text-primary')
@@ -29,7 +29,7 @@ describe('SplitBillModal', () => {
   });
 
   it('computes settlements', () => {
-    render(<SplitBillModal onClose={jest.fn()} />);
+    render(<SplitBill onClose={jest.fn()} />);
     fireEvent.click(screen.getByText('Who Owes Who'));
     const settleButton = screen.getAllByText('Settle Up')[0];
     fireEvent.click(settleButton);
@@ -37,7 +37,7 @@ describe('SplitBillModal', () => {
   });
 
   it('adds a person', () => {
-    render(<SplitBillModal onClose={jest.fn()} />);
+    render(<SplitBill onClose={jest.fn()} />);
     fireEvent.click(screen.getByText('Who Owes Who'));
     fireEvent.click(screen.getByText('+ Add Person'));
     const nameInputs = screen.getAllByPlaceholderText('Name');
@@ -45,7 +45,7 @@ describe('SplitBillModal', () => {
   });
 
   it('removes a person', () => {
-    render(<SplitBillModal onClose={jest.fn()} />);
+    render(<SplitBill onClose={jest.fn()} />);
     fireEvent.click(screen.getByText('Who Owes Who'));
     const removeButtons = screen.getAllByText('✕');
     fireEvent.click(removeButtons[removeButtons.length - 1]);
@@ -54,7 +54,7 @@ describe('SplitBillModal', () => {
   });
 
   it('shows all settled when no debts remain', () => {
-    render(<SplitBillModal onClose={jest.fn()} />);
+    render(<SplitBill onClose={jest.fn()} />);
     fireEvent.click(screen.getByText('Who Owes Who'));
     const nameInputs = screen.getAllByPlaceholderText('Name');
     const paidInputs = screen.getAllByPlaceholderText('Paid');
@@ -70,42 +70,42 @@ describe('SplitBillModal', () => {
   });
 
   it('updates bill amount', () => {
-    render(<SplitBillModal onClose={jest.fn()} />);
+    render(<SplitBill onClose={jest.fn()} />);
     const billInput = screen.getByDisplayValue('100');
     fireEvent.change(billInput, { target: { value: '200' } });
     expect(screen.getByDisplayValue('200')).toBeInTheDocument();
   });
 
   it('updates number of people', () => {
-    render(<SplitBillModal onClose={jest.fn()} />);
+    render(<SplitBill onClose={jest.fn()} />);
     const peopleInput = screen.getByDisplayValue('2');
     fireEvent.change(peopleInput, { target: { value: '5' } });
     expect(screen.getByDisplayValue('5')).toBeInTheDocument();
   });
 
   it('does not set people below 1', () => {
-    render(<SplitBillModal onClose={jest.fn()} />);
+    render(<SplitBill onClose={jest.fn()} />);
     const peopleInput = screen.getByDisplayValue('2');
     fireEvent.change(peopleInput, { target: { value: '0' } });
     expect(screen.getByDisplayValue('1')).toBeInTheDocument();
   });
 
   it('updates tip percentage', () => {
-    render(<SplitBillModal onClose={jest.fn()} />);
+    render(<SplitBill onClose={jest.fn()} />);
     const tipInput = screen.getByDisplayValue('10');
     fireEvent.change(tipInput, { target: { value: '15' } });
     expect(screen.getByDisplayValue('15')).toBeInTheDocument();
   });
 
   it('updates tax percentage', () => {
-    render(<SplitBillModal onClose={jest.fn()} />);
+    render(<SplitBill onClose={jest.fn()} />);
     const taxInput = screen.getByDisplayValue('0');
     fireEvent.change(taxInput, { target: { value: '8' } });
     expect(screen.getByDisplayValue('8')).toBeInTheDocument();
   });
 
   it('updates person name in settle tab', () => {
-    render(<SplitBillModal onClose={jest.fn()} />);
+    render(<SplitBill onClose={jest.fn()} />);
     fireEvent.click(screen.getByText('Who Owes Who'));
     const nameInput = screen.getByDisplayValue('Alice');
     fireEvent.change(nameInput, { target: { value: 'Alicia' } });
@@ -113,7 +113,7 @@ describe('SplitBillModal', () => {
   });
 
   it('updates person paid amount', () => {
-    render(<SplitBillModal onClose={jest.fn()} />);
+    render(<SplitBill onClose={jest.fn()} />);
     fireEvent.click(screen.getByText('Who Owes Who'));
     const paidInputs = screen.getAllByPlaceholderText('Paid');
     fireEvent.change(paidInputs[0], { target: { value: '150' } });
@@ -121,7 +121,7 @@ describe('SplitBillModal', () => {
   });
 
   it('toggles split equally checkbox', () => {
-    render(<SplitBillModal onClose={jest.fn()} />);
+    render(<SplitBill onClose={jest.fn()} />);
     fireEvent.click(screen.getByText('Who Owes Who'));
     const checkbox = screen.getByRole('checkbox');
     expect(checkbox).toBeChecked();
@@ -130,7 +130,7 @@ describe('SplitBillModal', () => {
   });
 
   it('changes currency', () => {
-    render(<SplitBillModal onClose={jest.fn()} />);
+    render(<SplitBill onClose={jest.fn()} />);
     const currencySelect = screen.getByDisplayValue('VND');
     fireEvent.change(currencySelect, { target: { value: 'USD' } });
     expect(screen.getByDisplayValue('USD')).toBeInTheDocument();
@@ -138,14 +138,14 @@ describe('SplitBillModal', () => {
 
   it('calls onClose when close button is clicked', () => {
     const onClose = jest.fn();
-    render(<SplitBillModal onClose={onClose} />);
+    render(<SplitBill onClose={onClose} />);
     const closeButtons = screen.getAllByText('✕');
     fireEvent.click(closeButtons[0]);
     expect(onClose).toHaveBeenCalledTimes(1);
   });
 
   it('shows owes input when split equally is unchecked', () => {
-    render(<SplitBillModal onClose={jest.fn()} />);
+    render(<SplitBill onClose={jest.fn()} />);
     fireEvent.click(screen.getByText('Who Owes Who'));
     const checkbox = screen.getByRole('checkbox');
     fireEvent.click(checkbox);
@@ -154,7 +154,7 @@ describe('SplitBillModal', () => {
   });
 
   it('updates owes value when split equally is off', () => {
-    render(<SplitBillModal onClose={jest.fn()} />);
+    render(<SplitBill onClose={jest.fn()} />);
     fireEvent.click(screen.getByText('Who Owes Who'));
     const checkbox = screen.getByRole('checkbox');
     fireEvent.click(checkbox);
@@ -164,13 +164,13 @@ describe('SplitBillModal', () => {
   });
 
   it('clicks download PNG button', () => {
-    render(<SplitBillModal onClose={jest.fn()} />);
+    render(<SplitBill onClose={jest.fn()} />);
     const downloadBtn = screen.getByText('⬇ PNG');
     fireEvent.click(downloadBtn);
   });
 
   it('clicks copy button', () => {
-    render(<SplitBillModal onClose={jest.fn()} />);
+    render(<SplitBill onClose={jest.fn()} />);
     const copyBtn = screen.getByText('📋 Copy');
     fireEvent.click(copyBtn);
   });

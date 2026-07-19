@@ -7,7 +7,7 @@ import { PersonRow, Settlement } from './types';
 import { CURRENCIES } from './constants';
 import { calculateSettlements } from './utils/calculate';
 
-export const SplitBillModal: FC<{ onClose: () => void }> = ({ onClose }) => {
+export const SplitBill: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [tab, setTab] = useState<'equal' | 'settle'>('equal');
   const [bill, setBill] = useState(100);
   const [people, setPeople] = useState(2);
@@ -403,4 +403,4 @@ export const SplitBillModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </FullScreen>
   );
 };
-SplitBillModal.displayName = 'SplitBillModal';
+SplitBill.displayName = 'SplitBill';

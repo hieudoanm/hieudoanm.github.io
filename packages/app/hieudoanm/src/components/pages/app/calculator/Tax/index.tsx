@@ -16,7 +16,7 @@ import {
   DEPENDENT_DEDUCTION,
 } from './constants';
 
-export const TaxModal: FC<{ onClose: () => void }> = ({ onClose }) => {
+export const Tax: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [activeTab, setActiveTab] = useState<'input' | 'results'>('input');
   const [income, setIncome] = useState(20_000_000);
   const [dependents, setDependents] = useState(0);
@@ -238,4 +238,4 @@ export const TaxModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </FullScreen>
   );
 };
-TaxModal.displayName = 'TaxModal';
+Tax.displayName = 'Tax';

@@ -1,8 +1,8 @@
 'use client';
 
-import { CalculatorModal } from '@hieudoanm.github.io/components/pages/app/calculator/CalculatorModal';
+import { Calculator } from '@hieudoanm.github.io/components/pages/app/calculator/Calculator';
 import { ToolPage } from '../../_shared/ToolPage';
 
-const ToolCalculatorCalculator = () => <ToolPage Component={CalculatorModal} />;
+const ToolCalculatorCalculator = () => <ToolPage Component={Calculator} />;
 
 export default ToolCalculatorCalculator;

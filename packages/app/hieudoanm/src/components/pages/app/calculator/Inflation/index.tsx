@@ -10,7 +10,7 @@ import { calculateInflation } from './utils/calculate';
 
 const allCountries = Object.values(history) as Country[];
 
-export const InflationModal: FC<{ onClose: () => void }> = ({ onClose }) => {
+export const Inflation: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [tab, setTab] = useState<Tab>('options');
   const [selectedCountry, setSelectedCountry] = useState<Country | null>(
     () =>
@@ -246,4 +246,4 @@ export const InflationModal: FC<{ onClose: () => void }> = ({ onClose }) => {
     </FullScreen>
   );
 };
-InflationModal.displayName = 'InflationModal';
+Inflation.displayName = 'Inflation';

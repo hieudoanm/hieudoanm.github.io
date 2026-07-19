@@ -22,8 +22,8 @@ loaders['braille'] = () =>
   );
 
 loaders['calculator'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/calculator/CalculatorModal').then(
-    (m) => ({ default: m.CalculatorModal })
+  import('@hieudoanm.github.io/components/pages/app/calculator/Calculator').then(
+    (m) => ({ default: m.Calculator })
   );
 
 loaders['calendar-tracker'] = () =>
@@ -192,8 +192,8 @@ loaders['graph'] = () =>
   );
 
 loaders['inflation'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/calculator/InflationModal').then(
-    (m) => ({ default: m.InflationModal })
+  import('@hieudoanm.github.io/components/pages/app/calculator/Inflation').then(
+    (m) => ({ default: m.Inflation })
   );
 
 loaders['ip'] = () =>
@@ -402,8 +402,8 @@ loaders['snellen'] = () =>
   );
 
 loaders['split-bill'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/calculator/SplitBillModal').then(
-    (m) => ({ default: m.SplitBillModal })
+  import('@hieudoanm.github.io/components/pages/app/calculator/SplitBill').then(
+    (m) => ({ default: m.SplitBill })
   );
 
 loaders['split-csv'] = () =>
@@ -437,8 +437,8 @@ loaders['tai-baccarat'] = () =>
   );
 
 loaders['tax'] = () =>
-  import('@hieudoanm.github.io/components/pages/app/calculator/TaxModal').then(
-    (m) => ({ default: m.TaxModal })
+  import('@hieudoanm.github.io/components/pages/app/calculator/Tax').then(
+    (m) => ({ default: m.Tax })
   );
 
 loaders['text-case'] = () =>

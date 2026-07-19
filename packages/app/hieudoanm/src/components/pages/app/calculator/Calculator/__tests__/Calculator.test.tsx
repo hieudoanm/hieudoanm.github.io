@@ -1,5 +1,5 @@
 import { render, fireEvent, screen } from '@testing-library/react';
-import { CalculatorModal } from '..';
+import { Calculator } from '..';
 
 jest.mock('@lodashx/ts', () => ({
   convertBase: (num: number) => ({
@@ -70,7 +70,7 @@ jest.mock('@lodashx/ts', () => ({
   formatCurrency: jest.fn(),
 }));
 
-describe('CalculatorModal', () => {
+describe('Calculator', () => {
   const onClose = jest.fn();
 
   beforeEach(() => {
@@ -78,7 +78,7 @@ describe('CalculatorModal', () => {
   });
 
   const renderCalculator = () => {
-    const view = render(<CalculatorModal onClose={onClose} />);
+    const view = render(<Calculator onClose={onClose} />);
     const container = view.container.querySelector(
       '[tabindex="0"]'
     )! as HTMLElement;
@@ -86,12 +86,12 @@ describe('CalculatorModal', () => {
   };
 
   it('renders modal title', () => {
-    render(<CalculatorModal onClose={onClose} />);
+    render(<Calculator onClose={onClose} />);
     expect(screen.getByText('Calculator')).toBeInTheDocument();
   });
 
   it('renders basic buttons', () => {
-    render(<CalculatorModal onClose={onClose} />);
+    render(<Calculator onClose={onClose} />);
     expect(screen.getByText('1')).toBeInTheDocument();
     expect(screen.getByText('+')).toBeInTheDocument();
     expect(screen.getByText('=')).toBeInTheDocument();
@@ -99,7 +99,7 @@ describe('CalculatorModal', () => {
   });
 
   it('clicking number appends to expression', () => {
-    render(<CalculatorModal onClose={onClose} />);
+    render(<Calculator onClose={onClose} />);
     fireEvent.click(screen.getByText('1'));
     fireEvent.click(screen.getByText('2'));
     fireEvent.click(screen.getByText('3'));
@@ -108,7 +108,7 @@ describe('CalculatorModal', () => {
   });
 
   it('clicking operator appends to expression', () => {
-    render(<CalculatorModal onClose={onClose} />);
+    render(<Calculator onClose={onClose} />);
     fireEvent.click(screen.getByText('5'));
     fireEvent.click(screen.getByText('+'));
     fireEvent.click(screen.getByText('3'));
@@ -117,7 +117,7 @@ describe('CalculatorModal', () => {
   });
 
   it('calculates result on = click', () => {
-    render(<CalculatorModal onClose={onClose} />);
+    render(<Calculator onClose={onClose} />);
     fireEvent.click(screen.getByText('1'));
     fireEvent.click(screen.getByText('+'));
     fireEvent.click(screen.getByText('2'));
@@ -127,7 +127,7 @@ describe('CalculatorModal', () => {
   });
 
   it('clears expression on C click', () => {
-    render(<CalculatorModal onClose={onClose} />);
+    render(<Calculator onClose={onClose} />);
     fireEvent.click(screen.getByText('5'));
     fireEvent.click(screen.getByText('+'));
     fireEvent.click(screen.getByText('3'));
@@ -137,7 +137,7 @@ describe('CalculatorModal', () => {
   });
 
   it('deletes last character on ⌫ click', () => {
-    render(<CalculatorModal onClose={onClose} />);
+    render(<Calculator onClose={onClose} />);
     fireEvent.click(screen.getByText('4'));
     fireEvent.click(screen.getByText('2'));
     fireEvent.click(screen.getByText('⌫'));
@@ -146,7 +146,7 @@ describe('CalculatorModal', () => {
   });
 
   it('shows Error for invalid expression', () => {
-    render(<CalculatorModal onClose={onClose} />);
+    render(<Calculator onClose={onClose} />);
     fireEvent.click(screen.getByText('÷'));
     fireEvent.click(screen.getByRole('button', { name: '0' }));
     fireEvent.click(screen.getByText('='));
@@ -155,28 +155,28 @@ describe('CalculatorModal', () => {
   });
 
   it('shows scientific buttons by default', () => {
-    render(<CalculatorModal onClose={onClose} />);
+    render(<Calculator onClose={onClose} />);
     expect(screen.getByText('sin(')).toBeInTheDocument();
     expect(screen.getByText('cos(')).toBeInTheDocument();
     expect(screen.getByText('tan(')).toBeInTheDocument();
   });
 
   it('uses scientific button', () => {
-    render(<CalculatorModal onClose={onClose} />);
+    render(<Calculator onClose={onClose} />);
     fireEvent.click(screen.getByText('π'));
     const input = screen.getByRole('textbox') as HTMLInputElement;
     expect(input.value).toBe('π');
   });
 
   it('x² button appends ^2', () => {
-    render(<CalculatorModal onClose={onClose} />);
+    render(<Calculator onClose={onClose} />);
     fireEvent.click(screen.getByText('x²'));
     const input = screen.getByRole('textbox') as HTMLInputElement;
     expect(input.value).toBe('^2');
   });
 
   it('switches between converter categories', () => {
-    render(<CalculatorModal onClose={onClose} />);
+    render(<Calculator onClose={onClose} />);
     fireEvent.click(screen.getByText('Temperature'));
     expect(screen.getByText('Celsius')).toBeInTheDocument();
   });
