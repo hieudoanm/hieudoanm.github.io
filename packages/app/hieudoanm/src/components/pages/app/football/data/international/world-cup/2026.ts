@@ -172,7 +172,7 @@ const PREDETERMINED: Record<string, string> = {
   esp_fra: 'esp',
   arg_eng: 'arg',
   // Final
-  arg_esp: '',
+  arg_esp: 'esp',
 };
 
 const BRACKET_RAW: BracketRaw = [

@@ -31,81 +31,86 @@ export const Scorecard: FC<TemplateProps> = ({ data }) => {
   ];
 
   const citation = (data.citation as string) ?? '';
+
+  const homeScorers = scorers.filter((s) => s.team === 'home');
+  const awayScorers = scorers.filter((s) => s.team === 'away');
+
   return (
     <Background>
-      <div className="mb-4 text-center">
-        <h2 className="text-neutral text-xs font-semibold tracking-widest uppercase">
-          {title}
-        </h2>
-        {text && <p className="text-neutral mt-1 text-xs">{text}</p>}
-      </div>
+      <div className="grid grid-cols-3 gap-y-2">
+        {/* Title */}
+        <div className="col-span-3 mb-2 text-center">
+          <h2 className="text-neutral text-xs font-semibold tracking-widest uppercase">
+            {title}
+          </h2>
+          {text && <p className="text-neutral mt-1 text-xs">{text}</p>}
+        </div>
 
-      <div className="flex items-center justify-center gap-6 py-4">
-        <div className="flex flex-1 flex-col items-end">
-          <span className="text-base-content text-base font-bold">
+        {/* Team names + scores */}
+        {/* Team names + scores */}
+        <div className="col-span-3 grid grid-cols-3 items-center py-4">
+          <span className="text-base-content text-right text-base font-bold">
             {homeTeam}
           </span>
-        </div>
-        <div className="flex items-baseline gap-2">
-          <span
-            className={`text-3xl font-black ${
-              homeScore > awayScore ? 'text-primary' : 'text-base-content'
-            }`}>
-            {homeScore}
-          </span>
-          <span className="text-neutral text-base">-</span>
-          <span
-            className={`text-3xl font-black ${
-              awayScore > homeScore ? 'text-primary' : 'text-base-content'
-            }`}>
-            {awayScore}
-          </span>
-        </div>
-        <div className="flex flex-1 flex-col items-start">
-          <span className="text-base-content text-base font-bold">
+          <div className="flex items-center justify-center gap-2">
+            <span
+              className={`text-3xl font-black ${
+                homeScore > awayScore ? 'text-primary' : 'text-base-content'
+              }`}>
+              {homeScore}
+            </span>
+            <span className="text-neutral text-base">-</span>
+            <span
+              className={`text-3xl font-black ${
+                awayScore > homeScore ? 'text-primary' : 'text-base-content'
+              }`}>
+              {awayScore}
+            </span>
+          </div>
+          <span className="text-base-content text-left text-base font-bold">
             {awayTeam}
           </span>
         </div>
-      </div>
 
-      {(date || venue) && (
-        <div className="text-neutral mb-4 text-center text-xs">
-          {date}
-          {date && venue ? ' · ' : ''}
-          {venue}
-        </div>
-      )}
+        {/* Date / venue */}
+        {(date || venue) && (
+          <div className="text-neutral col-span-3 my-2 text-center text-xs">
+            {date}
+            {date && venue ? ' · ' : ''}
+            {venue}
+          </div>
+        )}
 
-      {scorers.length > 0 && (
-        <div className="mb-4 grid grid-cols-2 gap-4">
-          <ul className="flex flex-col items-end gap-1">
-            {scorers
-              .filter((s) => s.team === 'home')
-              .map((s, i) => (
+        {/* Scorers */}
+        {scorers.length > 0 && (
+          <>
+            <ul className="flex flex-col items-end gap-1">
+              {homeScorers.map((s, i) => (
                 <li key={i} className="text-base-content text-xs">
                   {s.name} {s.minute}&apos;
                 </li>
               ))}
-          </ul>
-          <ul className="flex flex-col items-start gap-1">
-            {scorers
-              .filter((s) => s.team === 'away')
-              .map((s, i) => (
+            </ul>
+            <span />
+            <ul className="flex flex-col items-start gap-1">
+              {awayScorers.map((s, i) => (
                 <li key={i} className="text-base-content text-xs">
                   {s.name} {s.minute}&apos;
                 </li>
               ))}
-          </ul>
-        </div>
-      )}
+            </ul>
+          </>
+        )}
 
-      <ul className="flex flex-1 flex-col justify-center gap-2">
+        {/* Stats */}
         {stats.map((s, i) => (
-          <li key={i} className="flex items-center gap-3">
+          <div
+            key={i}
+            className="col-span-3 grid grid-cols-[auto_1fr_auto_1fr_auto] items-center gap-3">
             <span className="text-base-content w-10 text-right text-xs font-semibold">
               {s.home}
             </span>
-            <div className="bg-neutral/20 h-1.5 flex-1 overflow-hidden rounded-full">
+            <div className="bg-neutral/20 h-1.5 overflow-hidden rounded-full">
               <div
                 className="bg-accent h-full rounded-full"
                 style={{ width: '60%' }}
@@ -114,7 +119,7 @@ export const Scorecard: FC<TemplateProps> = ({ data }) => {
             <span className="text-neutral w-20 text-center text-xs">
               {s.label}
             </span>
-            <div className="bg-neutral/20 h-1.5 flex-1 overflow-hidden rounded-full">
+            <div className="bg-neutral/20 h-1.5 overflow-hidden rounded-full">
               <div
                 className="bg-primary h-full rounded-full"
                 style={{ width: '40%' }}
@@ -123,10 +128,14 @@ export const Scorecard: FC<TemplateProps> = ({ data }) => {
             <span className="text-base-content w-10 text-left text-xs font-semibold">
               {s.away}
             </span>
-          </li>
+          </div>
         ))}
-      </ul>
-      <Footer citation={citation} />
+
+        {/* Footer */}
+        <div className="col-span-3">
+          <Footer citation={citation} />
+        </div>
+      </div>
     </Background>
   );
 };

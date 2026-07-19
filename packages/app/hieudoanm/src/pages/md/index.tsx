@@ -8,7 +8,10 @@ interface Props {
 }
 
 const MarkdownIndex: NextPage<Props> = ({ files }) => (
-  <div className="mx-auto w-full max-w-xl p-8">
+  <div className="mx-auto flex w-full max-w-xl flex-col gap-4 p-8 md:gap-8">
+    <p className="text-center">
+      <Link href="/">Back to Home</Link>
+    </p>
     <h1 className="mb-6 text-center text-2xl font-bold">Markdown Files</h1>
     <div className="border-base-300 rounded-xl border">
       <table className="table-compact table-bordered table">
