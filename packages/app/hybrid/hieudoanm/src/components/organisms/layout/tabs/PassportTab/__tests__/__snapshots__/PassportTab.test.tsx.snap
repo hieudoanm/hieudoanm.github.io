@@ -1,0 +1,5888 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`PassportTab should render 1`] = `
+<div>
+  <div
+    class="flex flex-col gap-3 p-3"
+  >
+    <input
+      class="input input-bordered input-xs w-full"
+      placeholder="Search country, CCA2, CCA3…"
+      value=""
+    />
+    <div
+      class="flex flex-wrap gap-1"
+    >
+      <button
+        class="btn btn-xs btn-primary"
+      >
+        All
+      </button>
+      <button
+        class="btn btn-xs btn-ghost border-base-300 border"
+      >
+        Africa
+      </button>
+      <button
+        class="btn btn-xs btn-ghost border-base-300 border"
+      >
+        Americas
+      </button>
+      <button
+        class="btn btn-xs btn-ghost border-base-300 border"
+      >
+        Asia
+      </button>
+      <button
+        class="btn btn-xs btn-ghost border-base-300 border"
+      >
+        Europe
+      </button>
+      <button
+        class="btn btn-xs btn-ghost border-base-300 border"
+      >
+        Oceania
+      </button>
+    </div>
+    <p
+      class="text-base-content/40 text-[10px] font-normal tracking-widest uppercase"
+    >
+      188
+       countr
+      ies
+    </p>
+    <div
+      class="divide-base-300 flex flex-col divide-y"
+    >
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          1
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇦🇪
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            United Arab Emirates
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            AE
+             · 
+            Western Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          2
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇪🇸
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Spain
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            ES
+             · 
+            Southern Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          2
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇸🇬
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Singapore
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            SG
+             · 
+            South-Eastern Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          3
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇧🇪
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Belgium
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            BE
+             · 
+            Western Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          3
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇵🇹
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Portugal
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            PT
+             · 
+            Southern Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          3
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇩🇰
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Denmark
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            DK
+             · 
+            Northern Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          3
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇲🇾
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Malaysia
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            MY
+             · 
+            South-Eastern Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          3
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇩🇪
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Germany
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            DE
+             · 
+            Western Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          3
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇬🇷
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Greece
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            GR
+             · 
+            Southern Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          3
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇳🇱
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Netherlands
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            NL
+             · 
+            Western Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          3
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇮🇹
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Italy
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            IT
+             · 
+            Southern Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          3
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇳🇴
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Norway
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            NO
+             · 
+            Northern Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          3
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇱🇺
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Luxembourg
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            LU
+             · 
+            Western Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          3
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇫🇮
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Finland
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            FI
+             · 
+            Northern Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          3
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇨🇭
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Switzerland
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            CH
+             · 
+            Western Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          3
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇦🇹
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Austria
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            AT
+             · 
+            Central Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          3
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇸🇪
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Sweden
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            SE
+             · 
+            Northern Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          3
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇫🇷
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            France
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            FR
+             · 
+            Western Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          4
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇲🇹
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Malta
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            MT
+             · 
+            Southern Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          4
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇮🇪
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Ireland
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            IE
+             · 
+            Northern Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          4
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇰🇷
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            South Korea
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            KR
+             · 
+            Eastern Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          4
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇭🇺
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Hungary
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            HU
+             · 
+            Central Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          4
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇯🇵
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Japan
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            JP
+             · 
+            Eastern Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          4
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇱🇻
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Latvia
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            LV
+             · 
+            Northern Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          4
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇵🇱
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Poland
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            PL
+             · 
+            Central Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          5
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇸🇮
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Slovenia
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            SI
+             · 
+            Central Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          5
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇷🇴
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Romania
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            RO
+             · 
+            Southeast Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          5
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇧🇬
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Bulgaria
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            BG
+             · 
+            Southeast Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          5
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇸🇰
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Slovakia
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            SK
+             · 
+            Central Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          5
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇭🇷
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Croatia
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            HR
+             · 
+            Southeast Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          5
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇪🇪
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Estonia
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            EE
+             · 
+            Northern Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          6
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇨🇾
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Cyprus
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            CY
+             · 
+            Southern Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          6
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇱🇹
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Lithuania
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            LT
+             · 
+            Northern Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          7
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇱🇮
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Liechtenstein
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            LI
+             · 
+            Western Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          7
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇳🇿
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            New Zealand
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            NZ
+             · 
+            Australia and New Zealand
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          8
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇬🇧
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            United Kingdom
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            GB
+             · 
+            Northern Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          8
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇦🇺
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Australia
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            AU
+             · 
+            Australia and New Zealand
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          8
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇮🇸
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Iceland
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            IS
+             · 
+            Northern Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          8
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇨🇦
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Canada
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            CA
+             · 
+            North America
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          9
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇲🇨
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Monaco
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            MC
+             · 
+            Western Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          10
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇭🇰
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Hong Kong
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            HK
+             · 
+            Eastern Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          11
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇧🇷
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Brazil
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            BR
+             · 
+            South America
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          12
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇦🇷
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Argentina
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            AR
+             · 
+            South America
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          13
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇨🇱
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Chile
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            CL
+             · 
+            South America
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          13
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇦🇩
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Andorra
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            AD
+             · 
+            Southern Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          14
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇸🇲
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            San Marino
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            SM
+             · 
+            Southern Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          15
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇧🇧
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Barbados
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            BB
+             · 
+            Caribbean
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          16
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇧🇳
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Brunei
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            BN
+             · 
+            South-Eastern Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          17
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇧🇸
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Bahamas
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            BS
+             · 
+            Caribbean
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          17
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇮🇱
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Israel
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            IL
+             · 
+            Western Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          18
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇺🇾
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Uruguay
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            UY
+             · 
+            South America
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          19
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇲🇽
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Mexico
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            MX
+             · 
+            North America
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          19
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇻🇦
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Vatican City
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            VA
+             · 
+            Southern Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          20
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇸🇨
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Seychelles
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            SC
+             · 
+            Eastern Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          20
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇰🇳
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Saint Kitts and Nevis
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            KN
+             · 
+            Caribbean
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          20
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇵🇪
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Peru
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            PE
+             · 
+            South America
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          22
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇦🇬
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Antigua and Barbuda
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            AG
+             · 
+            Caribbean
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          23
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇨🇷
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Costa Rica
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            CR
+             · 
+            Central America
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          23
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇺🇦
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Ukraine
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            UA
+             · 
+            Eastern Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          24
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇵🇾
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Paraguay
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            PY
+             · 
+            South America
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          25
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇹🇹
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Trinidad and Tobago
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            TT
+             · 
+            Caribbean
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          26
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇲🇺
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Mauritius
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            MU
+             · 
+            Eastern Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          26
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇬🇩
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Grenada
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            GD
+             · 
+            Caribbean
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          27
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇱🇨
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Saint Lucia
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            LC
+             · 
+            Caribbean
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          27
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇵🇦
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Panama
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            PA
+             · 
+            Central America
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          28
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇸🇧
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Solomon Islands
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            SB
+             · 
+            Melanesia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          29
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇩🇲
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Dominica
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            DM
+             · 
+            Caribbean
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          30
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇨🇴
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Colombia
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            CO
+             · 
+            South America
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          31
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇷🇸
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Serbia
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            RS
+             · 
+            Southeast Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          32
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇸🇻
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            El Salvador
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            SV
+             · 
+            Central America
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          32
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇬🇹
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Guatemala
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            GT
+             · 
+            Central America
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          32
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇬🇪
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Georgia
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            GE
+             · 
+            Western Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          32
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇲🇰
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            North Macedonia
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            MK
+             · 
+            Southeast Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          33
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇲🇪
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Montenegro
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            ME
+             · 
+            Southeast Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          34
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇼🇸
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Samoa
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            WS
+             · 
+            Polynesia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          34
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇭🇳
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Honduras
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            HN
+             · 
+            Central America
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          35
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇰🇮
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Kiribati
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            KI
+             · 
+            Micronesia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          36
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇲🇭
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Marshall Islands
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            MH
+             · 
+            Micronesia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          36
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇹🇻
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Tuvalu
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            TV
+             · 
+            Polynesia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          36
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇹🇼
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Taiwan
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            TW
+             · 
+            Eastern Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          37
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇹🇴
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Tonga
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            TO
+             · 
+            Polynesia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          38
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇦🇱
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Albania
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            AL
+             · 
+            Southeast Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          38
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇲🇩
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Moldova
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            MD
+             · 
+            Eastern Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          38
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇳🇮
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Nicaragua
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            NI
+             · 
+            Central America
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          38
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇻🇪
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Venezuela
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            VE
+             · 
+            South America
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          38
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇧🇦
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Bosnia and Herzegovina
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            BA
+             · 
+            Southeast Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          39
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇫🇲
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Micronesia
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            FM
+             · 
+            Micronesia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          39
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇵🇼
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Palau
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            PW
+             · 
+            Micronesia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          40
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇶🇦
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Qatar
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            QA
+             · 
+            Western Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          41
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇰🇼
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Kuwait
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            KW
+             · 
+            Western Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          42
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇿🇦
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            South Africa
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            ZA
+             · 
+            Southern Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          43
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇹🇱
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Timor-Leste
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            TL
+             · 
+            South-Eastern Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          44
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇲🇻
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Maldives
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            MV
+             · 
+            Southern Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          44
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇧🇿
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Belize
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            BZ
+             · 
+            Central America
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          45
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇪🇨
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Ecuador
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            EC
+             · 
+            South America
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          45
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇸🇦
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Saudi Arabia
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            SA
+             · 
+            Western Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          46
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇧🇭
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Bahrain
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            BH
+             · 
+            Western Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          47
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇫🇯
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Fiji
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            FJ
+             · 
+            Melanesia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          47
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇯🇲
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Jamaica
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            JM
+             · 
+            Caribbean
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          48
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇬🇾
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Guyana
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            GY
+             · 
+            South America
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          49
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇹🇭
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Thailand
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            TH
+             · 
+            South-Eastern Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          50
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇴🇲
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Oman
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            OM
+             · 
+            Western Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          50
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇻🇺
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Vanuatu
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            VU
+             · 
+            Melanesia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          51
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇽🇰
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Kosovo
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            XK
+             · 
+            Southeast Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          51
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇨🇳
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            China
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            CN
+             · 
+            Eastern Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          52
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇧🇾
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Belarus
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            BY
+             · 
+            Eastern Europe
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          53
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇰🇿
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Kazakhstan
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            KZ
+             · 
+            Central Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          54
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇮🇩
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Indonesia
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            ID
+             · 
+            South-Eastern Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          54
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇧🇴
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Bolivia
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            BO
+             · 
+            South America
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          55
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇵🇬
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Papua New Guinea
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            PG
+             · 
+            Melanesia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          55
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇳🇷
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Nauru
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            NR
+             · 
+            Micronesia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          56
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇸🇷
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Suriname
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            SR
+             · 
+            South America
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          57
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇧🇼
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Botswana
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            BW
+             · 
+            Southern Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          57
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇲🇦
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Morocco
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            MA
+             · 
+            Northern Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          58
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇩🇴
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Dominican Republic
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            DO
+             · 
+            Caribbean
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          58
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇦🇿
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Azerbaijan
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            AZ
+             · 
+            Western Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          59
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇱🇸
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Lesotho
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            LS
+             · 
+            Southern Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          59
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇦🇲
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Armenia
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            AM
+             · 
+            Western Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          60
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇳🇦
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Namibia
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            NA
+             · 
+            Southern Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          60
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇲🇳
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Mongolia
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            MN
+             · 
+            Eastern Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          60
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇸🇿
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Eswatini
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            SZ
+             · 
+            Southern Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          61
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇵🇭
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Philippines
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            PH
+             · 
+            South-Eastern Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          62
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇰🇪
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Kenya
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            KE
+             · 
+            Eastern Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          62
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇲🇼
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Malawi
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            MW
+             · 
+            Eastern Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          63
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇹🇳
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Tunisia
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            TN
+             · 
+            Northern Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          63
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇨🇻
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Cape Verde
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            CV
+             · 
+            Western Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          63
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇹🇿
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Tanzania
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            TZ
+             · 
+            Eastern Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          64
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇿🇲
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Zambia
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            ZM
+             · 
+            Eastern Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          64
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇬🇭
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Ghana
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            GH
+             · 
+            Western Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          65
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇨🇺
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Cuba
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            CU
+             · 
+            Caribbean
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          65
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇬🇲
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Gambia
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            GM
+             · 
+            Western Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          65
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇮🇳
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            India
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            IN
+             · 
+            Southern Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          65
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇷🇼
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Rwanda
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            RW
+             · 
+            Eastern Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          65
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇰🇬
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Kyrgyzstan
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            KG
+             · 
+            Central Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          66
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇺🇬
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Uganda
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            UG
+             · 
+            Eastern Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          66
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇺🇿
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Uzbekistan
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            UZ
+             · 
+            Central Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          67
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇿🇼
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Zimbabwe
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            ZW
+             · 
+            Southern Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          67
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇻🇳
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Vietnam
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            VN
+             · 
+            South-Eastern Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          68
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇲🇿
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Mozambique
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            MZ
+             · 
+            Eastern Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          68
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇬🇦
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Gabon
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            GA
+             · 
+            Middle Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          68
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇧🇯
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Benin
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            BJ
+             · 
+            Western Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          68
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇲🇬
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Madagascar
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            MG
+             · 
+            Eastern Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          69
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇸🇱
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Sierra Leone
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            SL
+             · 
+            Western Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          69
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇹🇯
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Tajikistan
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            TJ
+             · 
+            Central Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          70
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇩🇿
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Algeria
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            DZ
+             · 
+            Northern Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          70
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇰🇭
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Cambodia
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            KH
+             · 
+            South-Eastern Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          71
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇸🇳
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Senegal
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            SN
+             · 
+            Western Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          71
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇧🇫
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Burkina Faso
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            BF
+             · 
+            Western Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          71
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇬🇶
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Equatorial Guinea
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            GQ
+             · 
+            Middle Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          72
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇹🇬
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Togo
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            TG
+             · 
+            Western Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          72
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇦🇴
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Angola
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            AO
+             · 
+            Middle Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          73
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇳🇪
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Niger
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            NE
+             · 
+            Western Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          73
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇲🇷
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Mauritania
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            MR
+             · 
+            Western Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          73
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇧🇹
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Bhutan
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            BT
+             · 
+            Southern Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          74
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇯🇴
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Jordan
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            JO
+             · 
+            Western Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          74
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇱🇦
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Laos
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            LA
+             · 
+            South-Eastern Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          75
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇪🇬
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Egypt
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            EG
+             · 
+            Northern Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          75
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇲🇱
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Mali
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            ML
+             · 
+            Western Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          75
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇬🇳
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Guinea
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            GN
+             · 
+            Western Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          75
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇰🇲
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Comoros
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            KM
+             · 
+            Eastern Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          76
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇹🇲
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Turkmenistan
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            TM
+             · 
+            Central Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          76
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇭🇹
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Haiti
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            HT
+             · 
+            Caribbean
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          77
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇩🇯
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Djibouti
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            DJ
+             · 
+            Eastern Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          77
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇨🇫
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Central African Republic
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            CF
+             · 
+            Middle Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          78
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇬🇼
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Guinea-Bissau
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            GW
+             · 
+            Western Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          78
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇱🇷
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Liberia
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            LR
+             · 
+            Western Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          78
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇹🇩
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Chad
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            TD
+             · 
+            Middle Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          79
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇨🇲
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Cameroon
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            CM
+             · 
+            Middle Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          79
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇧🇮
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Burundi
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            BI
+             · 
+            Eastern Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          80
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇱🇰
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Sri Lanka
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            LK
+             · 
+            Southern Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          80
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇲🇲
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Myanmar
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            MM
+             · 
+            South-Eastern Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          80
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇱🇧
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Lebanon
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            LB
+             · 
+            Western Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          81
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇳🇵
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Nepal
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            NP
+             · 
+            Southern Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          82
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇳🇬
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Nigeria
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            NG
+             · 
+            Western Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          82
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇪🇹
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Ethiopia
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            ET
+             · 
+            Eastern Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          83
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇮🇷
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Iran
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            IR
+             · 
+            Southern Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          83
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇱🇾
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Libya
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            LY
+             · 
+            Northern Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          83
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇸🇩
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Sudan
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            SD
+             · 
+            Northern Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          84
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇸🇸
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            South Sudan
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            SS
+             · 
+            Middle Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          84
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇪🇷
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Eritrea
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            ER
+             · 
+            Eastern Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          85
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇰🇵
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            North Korea
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            KP
+             · 
+            Eastern Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          86
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇧🇩
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Bangladesh
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            BD
+             · 
+            Southern Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          87
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇾🇪
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Yemen
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            YE
+             · 
+            Western Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          88
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇸🇴
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Somalia
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            SO
+             · 
+            Eastern Africa
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          89
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇵🇰
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Pakistan
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            PK
+             · 
+            Southern Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          90
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇮🇶
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Iraq
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            IQ
+             · 
+            Western Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          91
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇸🇾
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Syria
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            SY
+             · 
+            Western Asia
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex items-center gap-2 py-2"
+      >
+        <span
+          class="text-base-content/30 w-7 shrink-0 text-right font-mono text-[10px]"
+        >
+          #
+          92
+        </span>
+        <span
+          class="text-lg leading-none"
+        >
+          🇦🇫
+        </span>
+        <div
+          class="min-w-0 flex-1"
+        >
+          <p
+            class="truncate text-xs font-normal"
+          >
+            Afghanistan
+          </p>
+          <p
+            class="text-base-content/40 text-[10px]"
+          >
+            AF
+             · 
+            Southern Asia
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

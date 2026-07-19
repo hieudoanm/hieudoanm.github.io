@@ -1,0 +1,10 @@
+export { AboutTemplate } from './AboutTemplate';
+export { ErrorTemplate } from './ErrorTemplate';
+export { NotFoundTemplate } from './NotFoundTemplate';
+export { MaintenanceTemplate } from './MaintenanceTemplate';
+export { ComingSoonTemplate } from './ComingSoonTemplate';
+export { CookieConsentTemplate } from './CookieConsentTemplate';
+export { SearchTemplate } from './SearchTemplate';
+export { GlobalErrorTemplate } from './GlobalErrorTemplate';
+export { OnboardingTemplate } from './OnboardingTemplate';
+export { PageShell } from './PageShell';

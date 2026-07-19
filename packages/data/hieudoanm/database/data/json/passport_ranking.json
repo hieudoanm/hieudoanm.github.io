@@ -1,0 +1,798 @@
+[
+  {
+    "rank": "1",
+    "country": "UNITED ARAB EMIRATES"
+  },
+  {
+    "rank": "2",
+    "country": "SINGAPORE"
+  },
+  {
+    "rank": "2",
+    "country": "SPAIN"
+  },
+  {
+    "rank": "3",
+    "country": "BELGIUM"
+  },
+  {
+    "rank": "3",
+    "country": "LUXEMBOURG"
+  },
+  {
+    "rank": "3",
+    "country": "FRANCE"
+  },
+  {
+    "rank": "3",
+    "country": "DENMARK"
+  },
+  {
+    "rank": "3",
+    "country": "GERMANY"
+  },
+  {
+    "rank": "3",
+    "country": "SWEDEN"
+  },
+  {
+    "rank": "3",
+    "country": "NETHERLANDS"
+  },
+  {
+    "rank": "3",
+    "country": "FINLAND"
+  },
+  {
+    "rank": "3",
+    "country": "ITALY"
+  },
+  {
+    "rank": "3",
+    "country": "SWITZERLAND"
+  },
+  {
+    "rank": "3",
+    "country": "GREECE"
+  },
+  {
+    "rank": "3",
+    "country": "PORTUGAL"
+  },
+  {
+    "rank": "3",
+    "country": "AUSTRIA"
+  },
+  {
+    "rank": "3",
+    "country": "MALAYSIA"
+  },
+  {
+    "rank": "3",
+    "country": "NORWAY"
+  },
+  {
+    "rank": "4",
+    "country": "MALTA"
+  },
+  {
+    "rank": "4",
+    "country": "POLAND"
+  },
+  {
+    "rank": "4",
+    "country": "HUNGARY"
+  },
+  {
+    "rank": "4",
+    "country": "LATVIA"
+  },
+  {
+    "rank": "4",
+    "country": "IRELAND"
+  },
+  {
+    "rank": "4",
+    "country": "SOUTH KOREA"
+  },
+  {
+    "rank": "4",
+    "country": "JAPAN"
+  },
+  {
+    "rank": "5",
+    "country": "ROMANIA"
+  },
+  {
+    "rank": "5",
+    "country": "SLOVENIA"
+  },
+  {
+    "rank": "5",
+    "country": "CZECH REPUBLIC"
+  },
+  {
+    "rank": "5",
+    "country": "CROATIA"
+  },
+  {
+    "rank": "5",
+    "country": "SLOVAKIA"
+  },
+  {
+    "rank": "5",
+    "country": "BULGARIA"
+  },
+  {
+    "rank": "5",
+    "country": "ESTONIA"
+  },
+  {
+    "rank": "6",
+    "country": "CYPRUS"
+  },
+  {
+    "rank": "6",
+    "country": "LITHUANIA"
+  },
+  {
+    "rank": "7",
+    "country": "LIECHTENSTEIN"
+  },
+  {
+    "rank": "7",
+    "country": "NEW ZEALAND"
+  },
+  {
+    "rank": "8",
+    "country": "UNITED KINGDOM"
+  },
+  {
+    "rank": "8",
+    "country": "CANADA"
+  },
+  {
+    "rank": "8",
+    "country": "ICELAND"
+  },
+  {
+    "rank": "8",
+    "country": "AUSTRALIA"
+  },
+  {
+    "rank": "9",
+    "country": "UNITED STATES OF AMERICA"
+  },
+  {
+    "rank": "9",
+    "country": "MONACO"
+  },
+  {
+    "rank": "10",
+    "country": "HONG KONG"
+  },
+  {
+    "rank": "11",
+    "country": "BRAZIL"
+  },
+  {
+    "rank": "12",
+    "country": "ARGENTINA"
+  },
+  {
+    "rank": "13",
+    "country": "CHILE"
+  },
+  {
+    "rank": "13",
+    "country": "ANDORRA"
+  },
+  {
+    "rank": "14",
+    "country": "SAN MARINO"
+  },
+  {
+    "rank": "15",
+    "country": "BARBADOS"
+  },
+  {
+    "rank": "16",
+    "country": "BRUNEI"
+  },
+  {
+    "rank": "17",
+    "country": "ISRAEL"
+  },
+  {
+    "rank": "17",
+    "country": "BAHAMAS"
+  },
+  {
+    "rank": "18",
+    "country": "URUGUAY"
+  },
+  {
+    "rank": "19",
+    "country": "MEXICO"
+  },
+  {
+    "rank": "19",
+    "country": "VATICAN CITY"
+  },
+  {
+    "rank": "20",
+    "country": "SAINT KITTS AND NEVIS"
+  },
+  {
+    "rank": "20",
+    "country": "SEYCHELLES"
+  },
+  {
+    "rank": "20",
+    "country": "PERU"
+  },
+  {
+    "rank": "21",
+    "country": "ST. VINCENT AND THE GRENADINES"
+  },
+  {
+    "rank": "22",
+    "country": "ANTIGUA AND BARBUDA"
+  },
+  {
+    "rank": "23",
+    "country": "COSTA RICA"
+  },
+  {
+    "rank": "23",
+    "country": "UKRAINE"
+  },
+  {
+    "rank": "24",
+    "country": "MACAO"
+  },
+  {
+    "rank": "24",
+    "country": "PARAGUAY"
+  },
+  {
+    "rank": "25",
+    "country": "TRINIDAD AND TOBAGO"
+  },
+  {
+    "rank": "26",
+    "country": "MAURITIUS"
+  },
+  {
+    "rank": "26",
+    "country": "GRENADA"
+  },
+  {
+    "rank": "27",
+    "country": "SAINT LUCIA"
+  },
+  {
+    "rank": "27",
+    "country": "PANAMA"
+  },
+  {
+    "rank": "28",
+    "country": "SOLOMON ISLANDS"
+  },
+  {
+    "rank": "29",
+    "country": "DOMINICA"
+  },
+  {
+    "rank": "30",
+    "country": "COLOMBIA"
+  },
+  {
+    "rank": "31",
+    "country": "SERBIA"
+  },
+  {
+    "rank": "32",
+    "country": "EL SALVADOR"
+  },
+  {
+    "rank": "32",
+    "country": "GUATEMALA"
+  },
+  {
+    "rank": "32",
+    "country": "NORTH MACEDONIA"
+  },
+  {
+    "rank": "32",
+    "country": "GEORGIA"
+  },
+  {
+    "rank": "33",
+    "country": "MONTENEGRO"
+  },
+  {
+    "rank": "34",
+    "country": "SAMOA"
+  },
+  {
+    "rank": "34",
+    "country": "HONDURAS"
+  },
+  {
+    "rank": "35",
+    "country": "KIRIBATI"
+  },
+  {
+    "rank": "36",
+    "country": "TUVALU"
+  },
+  {
+    "rank": "36",
+    "country": "TAIWAN"
+  },
+  {
+    "rank": "36",
+    "country": "MARSHALL ISLANDS"
+  },
+  {
+    "rank": "37",
+    "country": "TONGA"
+  },
+  {
+    "rank": "38",
+    "country": "RUSSIAN FEDERATION"
+  },
+  {
+    "rank": "38",
+    "country": "ALBANIA"
+  },
+  {
+    "rank": "38",
+    "country": "BOSNIA AND HERZEGOVINA"
+  },
+  {
+    "rank": "38",
+    "country": "MOLDOVA"
+  },
+  {
+    "rank": "38",
+    "country": "NICARAGUA"
+  },
+  {
+    "rank": "38",
+    "country": "VENEZUELA"
+  },
+  {
+    "rank": "39",
+    "country": "TÜRKIYE"
+  },
+  {
+    "rank": "39",
+    "country": "MICRONESIA"
+  },
+  {
+    "rank": "39",
+    "country": "PALAU"
+  },
+  {
+    "rank": "40",
+    "country": "QATAR"
+  },
+  {
+    "rank": "41",
+    "country": "KUWAIT"
+  },
+  {
+    "rank": "42",
+    "country": "SOUTH AFRICA"
+  },
+  {
+    "rank": "43",
+    "country": "TIMOR-LESTE"
+  },
+  {
+    "rank": "44",
+    "country": "BELIZE"
+  },
+  {
+    "rank": "44",
+    "country": "MALDIVES"
+  },
+  {
+    "rank": "45",
+    "country": "SAUDI ARABIA"
+  },
+  {
+    "rank": "45",
+    "country": "ECUADOR"
+  },
+  {
+    "rank": "46",
+    "country": "BAHRAIN"
+  },
+  {
+    "rank": "47",
+    "country": "JAMAICA"
+  },
+  {
+    "rank": "47",
+    "country": "FIJI"
+  },
+  {
+    "rank": "48",
+    "country": "GUYANA"
+  },
+  {
+    "rank": "49",
+    "country": "THAILAND"
+  },
+  {
+    "rank": "50",
+    "country": "OMAN"
+  },
+  {
+    "rank": "50",
+    "country": "VANUATU"
+  },
+  {
+    "rank": "51",
+    "country": "KOSOVO"
+  },
+  {
+    "rank": "51",
+    "country": "CHINA"
+  },
+  {
+    "rank": "52",
+    "country": "BELARUS"
+  },
+  {
+    "rank": "53",
+    "country": "KAZAKHSTAN"
+  },
+  {
+    "rank": "54",
+    "country": "INDONESIA"
+  },
+  {
+    "rank": "54",
+    "country": "BOLIVIA"
+  },
+  {
+    "rank": "55",
+    "country": "NAURU"
+  },
+  {
+    "rank": "55",
+    "country": "PAPUA NEW GUINEA"
+  },
+  {
+    "rank": "56",
+    "country": "SURINAME"
+  },
+  {
+    "rank": "57",
+    "country": "BOTSWANA"
+  },
+  {
+    "rank": "57",
+    "country": "MOROCCO"
+  },
+  {
+    "rank": "58",
+    "country": "AZERBAIJAN"
+  },
+  {
+    "rank": "58",
+    "country": "DOMINICAN REPUBLIC"
+  },
+  {
+    "rank": "59",
+    "country": "LESOTHO"
+  },
+  {
+    "rank": "59",
+    "country": "ARMENIA"
+  },
+  {
+    "rank": "60",
+    "country": "ESWATINI"
+  },
+  {
+    "rank": "60",
+    "country": "NAMIBIA"
+  },
+  {
+    "rank": "60",
+    "country": "MONGOLIA"
+  },
+  {
+    "rank": "61",
+    "country": "PHILIPPINES"
+  },
+  {
+    "rank": "62",
+    "country": "MALAWI"
+  },
+  {
+    "rank": "62",
+    "country": "KENYA"
+  },
+  {
+    "rank": "63",
+    "country": "TANZANIA"
+  },
+  {
+    "rank": "63",
+    "country": "CAPE VERDE"
+  },
+  {
+    "rank": "63",
+    "country": "TUNISIA"
+  },
+  {
+    "rank": "64",
+    "country": "GHANA"
+  },
+  {
+    "rank": "64",
+    "country": "ZAMBIA"
+  },
+  {
+    "rank": "65",
+    "country": "GAMBIA"
+  },
+  {
+    "rank": "65",
+    "country": "RWANDA"
+  },
+  {
+    "rank": "65",
+    "country": "CUBA"
+  },
+  {
+    "rank": "65",
+    "country": "KYRGYZSTAN"
+  },
+  {
+    "rank": "65",
+    "country": "INDIA"
+  },
+  {
+    "rank": "66",
+    "country": "UGANDA"
+  },
+  {
+    "rank": "66",
+    "country": "UZBEKISTAN"
+  },
+  {
+    "rank": "66",
+    "country": "SAO TOME AND PRINCIPE"
+  },
+  {
+    "rank": "67",
+    "country": "ZIMBABWE"
+  },
+  {
+    "rank": "67",
+    "country": "VIET NAM"
+  },
+  {
+    "rank": "68",
+    "country": "BENIN"
+  },
+  {
+    "rank": "68",
+    "country": "MOZAMBIQUE"
+  },
+  {
+    "rank": "68",
+    "country": "GABON"
+  },
+  {
+    "rank": "68",
+    "country": "MADAGASCAR"
+  },
+  {
+    "rank": "69",
+    "country": "SIERRA LEONE"
+  },
+  {
+    "rank": "69",
+    "country": "TAJIKISTAN"
+  },
+  {
+    "rank": "70",
+    "country": "ALGERIA"
+  },
+  {
+    "rank": "70",
+    "country": "CAMBODIA"
+  },
+  {
+    "rank": "71",
+    "country": "SENEGAL"
+  },
+  {
+    "rank": "71",
+    "country": "BURKINA FASO"
+  },
+  {
+    "rank": "71",
+    "country": "EQUATORIAL GUINEA"
+  },
+  {
+    "rank": "72",
+    "country": "TOGO"
+  },
+  {
+    "rank": "72",
+    "country": "COTE D'IVOIRE (IVORY COAST)"
+  },
+  {
+    "rank": "72",
+    "country": "ANGOLA"
+  },
+  {
+    "rank": "73",
+    "country": "NIGER"
+  },
+  {
+    "rank": "73",
+    "country": "MAURITANIA"
+  },
+  {
+    "rank": "73",
+    "country": "BHUTAN"
+  },
+  {
+    "rank": "74",
+    "country": "LAOS"
+  },
+  {
+    "rank": "74",
+    "country": "JORDAN"
+  },
+  {
+    "rank": "75",
+    "country": "MALI"
+  },
+  {
+    "rank": "75",
+    "country": "GUINEA"
+  },
+  {
+    "rank": "75",
+    "country": "EGYPT"
+  },
+  {
+    "rank": "75",
+    "country": "COMOROS"
+  },
+  {
+    "rank": "76",
+    "country": "HAITI"
+  },
+  {
+    "rank": "76",
+    "country": "TURKMENISTAN"
+  },
+  {
+    "rank": "77",
+    "country": "CENTRAL AFRICAN REPUBLIC"
+  },
+  {
+    "rank": "77",
+    "country": "DJIBOUTI"
+  },
+  {
+    "rank": "78",
+    "country": "GUINEA-BISSAU"
+  },
+  {
+    "rank": "78",
+    "country": "LIBERIA"
+  },
+  {
+    "rank": "78",
+    "country": "CHAD"
+  },
+  {
+    "rank": "79",
+    "country": "CONGO"
+  },
+  {
+    "rank": "79",
+    "country": "CAMEROON"
+  },
+  {
+    "rank": "79",
+    "country": "BURUNDI"
+  },
+  {
+    "rank": "80",
+    "country": "SRI LANKA"
+  },
+  {
+    "rank": "80",
+    "country": "LEBANON"
+  },
+  {
+    "rank": "80",
+    "country": "MYANMAR"
+  },
+  {
+    "rank": "81",
+    "country": "CONGO (DEM. REP.)"
+  },
+  {
+    "rank": "81",
+    "country": "NEPAL"
+  },
+  {
+    "rank": "82",
+    "country": "NIGERIA"
+  },
+  {
+    "rank": "82",
+    "country": "ETHIOPIA"
+  },
+  {
+    "rank": "83",
+    "country": "LIBYA"
+  },
+  {
+    "rank": "83",
+    "country": "IRAN"
+  },
+  {
+    "rank": "83",
+    "country": "SUDAN"
+  },
+  {
+    "rank": "84",
+    "country": "SOUTH SUDAN"
+  },
+  {
+    "rank": "84",
+    "country": "ERITREA"
+  },
+  {
+    "rank": "85",
+    "country": "NORTH KOREA"
+  },
+  {
+    "rank": "86",
+    "country": "BANGLADESH"
+  },
+  {
+    "rank": "86",
+    "country": "PALESTINIAN TERRITORIES"
+  },
+  {
+    "rank": "87",
+    "country": "YEMEN"
+  },
+  {
+    "rank": "88",
+    "country": "SOMALIA"
+  },
+  {
+    "rank": "89",
+    "country": "PAKISTAN"
+  },
+  {
+    "rank": "90",
+    "country": "IRAQ"
+  },
+  {
+    "rank": "91",
+    "country": "SYRIA"
+  },
+  {
+    "rank": "92",
+    "country": "AFGHANISTAN"
+  }
+]

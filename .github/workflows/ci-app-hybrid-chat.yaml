@@ -1,0 +1,32 @@
+name: CI - App - Hybrid - Chat
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/chat/**'
+      - '.github/workflows/ci-app-hybrid-chat.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-app-hybrid-chat-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/chat
+      filter: '@hieudoanm.github.io/chat'
+      releaseName: app-hybrid-chat-latest
+      releaseTitle: App - Hybrid - Chat (latest)
+      artifactPrefix: chat

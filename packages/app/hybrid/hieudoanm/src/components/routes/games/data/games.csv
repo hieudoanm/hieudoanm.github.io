@@ -1,0 +1,44 @@
+section,sectionId,label,description,icon,toolId
+Arcade,arcade,Dino Run,Infinite runner,PiGameController,dino-run
+Arcade,arcade,RPS,Rock Paper Scissors,PiScissors,rps
+Arcade,arcade,Snake,"12×12 grid",PiBugDroid,snake
+Arcade,arcade,T3,Tic-Tac-Toe,PiX,t3
+Casino,casino,Baccarat,Card game,PiBank,tai-baccarat
+Casino,casino,Blackjack,Cards Counter,PiCards,blackjack
+Casino,casino,Poker,Odds Calculator,PiCards,poker
+Casino,casino,Dice Game,Over/Under 7,PiDiceOne,dice-game
+Casino,casino,Slot Machine,3 reels,PiCoin,slot-machine
+Chess,chess,Board,"Chess board with analysis, engine, and openings browser",PiGameController,chess-board
+Chess,chess,Insights,"Player distribution by title and rating with percentile comparisons",PiGameController,chess-stats
+Chess,chess,Chess Clock,Chess Timer,PiGameController,chess-clock
+Chess,chess,Elo,Calculator,PiGameController,chess-elo
+Countries,countries,Border,Guess the neighbor,PiMapTrifold,countries-border
+Countries,countries,Connection,Group countries by category,PiGridFour,countries-connection
+Countries,countries,Continents Sort,Drag countries into continents,PiSortAscending,countries-continents-sort
+Countries,countries,Emoji Guesser,Pick the flag,PiSmiley,emoji-guesser
+Countries,countries,Flag Guesser,Name the country,PiGlobe,flag-guesser
+Countries,countries,Higher or Lower,Compare populations,PiArrowsDownUp,countries-higher-lower
+Nikoli,nikoli,Fillomino,Fill with matching regions,PiSquaresFour,fillomino
+Nikoli,nikoli,Heyawake,Shade rooms by rules,PiGraph,heyawake
+Nikoli,nikoli,Masyu,Loop through pearls,PiCircleDashed,masyu
+Nikoli,nikoli,Norinori,Shade domino halves,PiTarget,norinori
+Nikoli,nikoli,Nurikabe,Paint islands black,PiPaintBrushBroad,nurikabe
+Nikoli,nikoli,Shikaku,Divide into rectangles,PiGridFour,shikaku
+Nikoli,nikoli,Sudoku,"4×4 & 9×9",PiPuzzlePiece,sudoku
+Memory,memory,Memory Match,Find matching pairs,PiGameController,memory-match
+Memory,memory,N-Back,Working memory,PiNumberSquareOne,n-back
+Memory,memory,PI,Memorization,PiPi,pi
+Memory,memory,Quizify,Quiz,PiQuestion,quizify
+Memory,memory,Recall,Memorization,PiGameController,recall
+Puzzle,puzzle,2048,Merge tiles,PiNumberSquareOne,game2048
+Puzzle,puzzle,Lights Out,Toggle all lights off,PiLamp,lights-out
+Puzzle,puzzle,Maze,Gen & solve,PiHurricane,maze
+Puzzle,puzzle,Sliding Puzzle,Upload & slide tiles,PiSnowflake,sliding-puzzle
+Puzzle,puzzle,Towers,Towers of Hanoi,PiBuilding,towers
+Trivia,trivia,PD,,PiScales,pd
+Trivia,trivia,Pokedex,Pokemon,PiBook,pokedex
+Trivia,trivia,Through the Years,Timeline history game,PiSortAscending,through-the-years
+Trivia,trivia,Myth Versus Fact,Spot the false claim,PiCheckCircle,myth-versus-fact
+Word,word,Palindrome,Palindrome,PiRepeat,palindrome
+Word,word,Typoglycemia,Scrambled text,PiShuffle,typoglycemia
+Word,word,Wordle,Guess the word,PiSquare,wordle

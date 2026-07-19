@@ -1,0 +1,32 @@
+name: CI - App - Hybrid - SVG
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/svg/**'
+      - '.github/workflows/ci-app-hybrid-svg.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-app-hybrid-svg-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/svg
+      filter: '@hieudoanm.github.io/svg'
+      releaseName: app-hybrid-svg-latest
+      releaseTitle: App - Hybrid - SVG (latest)
+      artifactPrefix: svg

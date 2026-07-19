@@ -1,0 +1,32 @@
+name: CI - App - Hybrid - API
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/api/**'
+      - '.github/workflows/ci-app-hybrid-api.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-app-hybrid-api-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/api
+      filter: '@hieudoanm.github.io/api'
+      releaseName: app-hybrid-api-latest
+      releaseTitle: App - Hybrid - API (latest)
+      artifactPrefix: api

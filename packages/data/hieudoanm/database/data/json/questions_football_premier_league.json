@@ -1,0 +1,250 @@
+[
+  {
+    "question": "Who won the Premier League in the 1992-93 season?",
+    "red": "Manchester United",
+    "blue": "Arsenal",
+    "green": "Chelsea",
+    "yellow": "Blackburn Rovers",
+    "correct": "red"
+  },
+  {
+    "question": "Who won the Premier League in the 1993-94 season?",
+    "red": "Manchester United",
+    "blue": "Newcastle United",
+    "green": "Arsenal",
+    "yellow": "Blackburn Rovers",
+    "correct": "red"
+  },
+  {
+    "question": "Who won the Premier League in the 1994-95 season?",
+    "red": "Manchester United",
+    "blue": "Arsenal",
+    "green": "Blackburn Rovers",
+    "yellow": "Chelsea",
+    "correct": "green"
+  },
+  {
+    "question": "Who won the Premier League in the 1995-96 season?",
+    "red": "Manchester United",
+    "blue": "Newcastle United",
+    "green": "Arsenal",
+    "yellow": "Liverpool",
+    "correct": "red"
+  },
+  {
+    "question": "Who won the Premier League in the 1996-97 season?",
+    "red": "Manchester United",
+    "blue": "Arsenal",
+    "green": "Newcastle United",
+    "yellow": "Chelsea",
+    "correct": "red"
+  },
+  {
+    "question": "Who won the Premier League in the 1997-98 season?",
+    "red": "Manchester United",
+    "blue": "Arsenal",
+    "green": "Chelsea",
+    "yellow": "Liverpool",
+    "correct": "blue"
+  },
+  {
+    "question": "Who won the Premier League in the 1998-99 season?",
+    "red": "Manchester United",
+    "blue": "Arsenal",
+    "green": "Chelsea",
+    "yellow": "Aston Villa",
+    "correct": "red"
+  },
+  {
+    "question": "Who won the Premier League in the 1999-2000 season?",
+    "red": "Manchester United",
+    "blue": "Arsenal",
+    "green": "Leeds United",
+    "yellow": "Chelsea",
+    "correct": "red"
+  },
+  {
+    "question": "Who won the Premier League in the 2000-01 season?",
+    "red": "Manchester United",
+    "blue": "Arsenal",
+    "green": "Liverpool",
+    "yellow": "Chelsea",
+    "correct": "red"
+  },
+  {
+    "question": "Who won the Premier League in the 2001-02 season?",
+    "red": "Manchester United",
+    "blue": "Arsenal",
+    "green": "Liverpool",
+    "yellow": "Newcastle United",
+    "correct": "blue"
+  },
+  {
+    "question": "Who won the Premier League in the 2002-03 season?",
+    "red": "Manchester United",
+    "blue": "Arsenal",
+    "green": "Chelsea",
+    "yellow": "Newcastle United",
+    "correct": "red"
+  },
+  {
+    "question": "Who won the Premier League in the 2003-04 season?",
+    "red": "Manchester United",
+    "blue": "Arsenal",
+    "green": "Chelsea",
+    "yellow": "Liverpool",
+    "correct": "blue"
+  },
+  {
+    "question": "Who won the Premier League in the 2004-05 season?",
+    "red": "Chelsea",
+    "blue": "Arsenal",
+    "green": "Manchester United",
+    "yellow": "Liverpool",
+    "correct": "red"
+  },
+  {
+    "question": "Who won the Premier League in the 2005-06 season?",
+    "red": "Chelsea",
+    "blue": "Manchester United",
+    "green": "Arsenal",
+    "yellow": "Liverpool",
+    "correct": "red"
+  },
+  {
+    "question": "Who won the Premier League in the 2006-07 season?",
+    "red": "Manchester United",
+    "blue": "Chelsea",
+    "green": "Arsenal",
+    "yellow": "Liverpool",
+    "correct": "red"
+  },
+  {
+    "question": "Who won the Premier League in the 2007-08 season?",
+    "red": "Manchester United",
+    "blue": "Chelsea",
+    "green": "Arsenal",
+    "yellow": "Liverpool",
+    "correct": "red"
+  },
+  {
+    "question": "Who won the Premier League in the 2008-09 season?",
+    "red": "Manchester United",
+    "blue": "Chelsea",
+    "green": "Liverpool",
+    "yellow": "Arsenal",
+    "correct": "red"
+  },
+  {
+    "question": "Who won the Premier League in the 2009-10 season?",
+    "red": "Chelsea",
+    "blue": "Manchester United",
+    "green": "Arsenal",
+    "yellow": "Manchester City",
+    "correct": "red"
+  },
+  {
+    "question": "Who won the Premier League in the 2010-11 season?",
+    "red": "Manchester United",
+    "blue": "Chelsea",
+    "green": "Manchester City",
+    "yellow": "Arsenal",
+    "correct": "red"
+  },
+  {
+    "question": "Who won the Premier League in the 2011-12 season?",
+    "red": "Manchester City",
+    "blue": "Manchester United",
+    "green": "Chelsea",
+    "yellow": "Arsenal",
+    "correct": "red"
+  },
+  {
+    "question": "Who won the Premier League in the 2012-13 season?",
+    "red": "Manchester United",
+    "blue": "Manchester City",
+    "green": "Chelsea",
+    "yellow": "Arsenal",
+    "correct": "red"
+  },
+  {
+    "question": "Who won the Premier League in the 2013-14 season?",
+    "red": "Manchester City",
+    "blue": "Liverpool",
+    "green": "Chelsea",
+    "yellow": "Arsenal",
+    "correct": "red"
+  },
+  {
+    "question": "Who won the Premier League in the 2014-15 season?",
+    "red": "Chelsea",
+    "blue": "Manchester City",
+    "green": "Arsenal",
+    "yellow": "Manchester United",
+    "correct": "red"
+  },
+  {
+    "question": "Who won the Premier League in the 2015-16 season?",
+    "red": "Leicester City",
+    "blue": "Arsenal",
+    "green": "Tottenham Hotspur",
+    "yellow": "Chelsea",
+    "correct": "red"
+  },
+  {
+    "question": "Who won the Premier League in the 2016-17 season?",
+    "red": "Chelsea",
+    "blue": "Tottenham Hotspur",
+    "green": "Manchester City",
+    "yellow": "Arsenal",
+    "correct": "red"
+  },
+  {
+    "question": "Who won the Premier League in the 2017-18 season?",
+    "red": "Manchester City",
+    "blue": "Manchester United",
+    "green": "Liverpool",
+    "yellow": "Chelsea",
+    "correct": "red"
+  },
+  {
+    "question": "Who won the Premier League in the 2018-19 season?",
+    "red": "Manchester City",
+    "blue": "Liverpool",
+    "green": "Chelsea",
+    "yellow": "Tottenham Hotspur",
+    "correct": "red"
+  },
+  {
+    "question": "Who won the Premier League in the 2019-20 season?",
+    "red": "Liverpool",
+    "blue": "Manchester City",
+    "green": "Chelsea",
+    "yellow": "Manchester United",
+    "correct": "red"
+  },
+  {
+    "question": "Who won the Premier League in the 2020-21 season?",
+    "red": "Manchester City",
+    "blue": "Manchester United",
+    "green": "Chelsea",
+    "yellow": "Liverpool",
+    "correct": "red"
+  },
+  {
+    "question": "Who won the Premier League in the 2021-22 season?",
+    "red": "Manchester City",
+    "blue": "Liverpool",
+    "green": "Chelsea",
+    "yellow": "Tottenham Hotspur",
+    "correct": "red"
+  },
+  {
+    "question": "Who won the Premier League in the 2022-23 season?",
+    "red": "Manchester City",
+    "blue": "Arsenal",
+    "green": "Manchester United",
+    "yellow": "Newcastle United",
+    "correct": "red"
+  }
+]

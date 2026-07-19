@@ -1,0 +1,1 @@
+# [clang-format](https://clang.llvm.org/docs/ClangFormat.html)

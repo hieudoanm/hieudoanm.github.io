@@ -1,0 +1,32 @@
+name: CI - App - Hybrid - Projects
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/projects/**'
+      - '.github/workflows/ci-app-hybrid-projects.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-app-hybrid-projects-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/projects
+      filter: '@hieudoanm.github.io/projects'
+      releaseName: app-hybrid-projects-latest
+      releaseTitle: App - Hybrid - Projects (latest)
+      artifactPrefix: projects

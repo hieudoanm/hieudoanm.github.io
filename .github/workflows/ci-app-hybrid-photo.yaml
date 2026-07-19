@@ -1,0 +1,32 @@
+name: CI - App - Hybrid - Photo
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/photo/**'
+      - '.github/workflows/ci-app-hybrid-photo.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-app-hybrid-photo-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/photo
+      filter: '@hieudoanm.github.io/photo'
+      releaseName: app-hybrid-photo-latest
+      releaseTitle: App - Hybrid - Photo (latest)
+      artifactPrefix: photo

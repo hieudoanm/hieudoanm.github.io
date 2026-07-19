@@ -1,0 +1,33 @@
+name: CI - App - Hybrid - Hieu Doan
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/hieudoanm/**'
+      - '.github/workflows/ci-app-hybrid-hieudoanm.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-app-hybrid-hieudoanm-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/hieudoanm
+      filter: '@hieudoanm.github.io/app'
+      releaseName: app-hybrid-hieudoanm-latest
+      releaseTitle: App - Hybrid - Hieu Doan (latest)
+      artifactPrefix: hieudoanm
+      needsEnv: true

@@ -1,0 +1,101 @@
+id,title,year,description,category,region,difficulty,source
+americas-olmec-1500,Olmec Civilization Emerges,-1500,The Olmec built the region's first great civilization.,culture,americas,3,britannica
+americas-san-lorenzo-1200,San Lorenzo Flourishes,-1200,The Olmec centre of San Lorenzo rose on the Gulf Coast.,culture,americas,4,britannica
+americas-la-venta-900,La Venta Colossal Heads,-900,The Olmec carved giant stone heads at La Venta.,culture,americas,4,britannica
+americas-zapotec-500,Zapotecs Build Monte Albán,-500,The Zapotecs founded the hilltop city of Monte Albán.,culture,americas,4,britannica
+americas-teotihuacan-founded-300,Teotihuacan Founded,-300,The great city of Teotihuacan began to grow.,culture,americas,3,britannica
+americas-maya-writing-250,Maya Writing Flourishes,-250,The Maya developed a full writing system.,culture,americas,4,britannica
+americas-teotihuacan-peak-300,Teotihuacan Reaches Its Peak,300,Teotihuacan became one of the world's largest cities.,culture,americas,4,britannica
+americas-cacaxtla-600,Cacaxtla Murals Painted,600,Warriors and deities cover the murals at Cacaxtla.,culture,americas,5,britannica
+americas-teotihuacan-falls-650,Teotihuacan Declines,650,The great city was burned and abandoned.,war,americas,4,britannica
+americas-toltec-tula-900,Toltecs Found Tula,900,The Toltecs built their capital at Tula.,culture,americas,4,britannica
+americas-chichen-itza-987,Chichén Itzá Rises,987,Toltec warriors made Chichén Itzá a regional power.,culture,americas,4,britannica
+americas-aztecs-arrive-1250,Aztecs Arrive in the Valley,1250,The Mexica migrated into the Valley of Mexico.,culture,americas,4,britannica
+americas-tenochtitlan-1325,Tenochtitlan Founded,1325,The Aztecs built their capital on an island.,culture,americas,2,britannica
+americas-triple-alliance-1428,Aztec Triple Alliance,1428,Itzcoatl forged the Aztec Triple Alliance.,politics,americas,3,britannica
+americas-moctezuma-i-1440,Moctezuma I Rules,1440,Moctezuma I expanded the Aztec empire.,politics,americas,4,britannica
+americas-great-famine-1454,Great Famine,1454,A famine struck the Aztec capital.,culture,americas,5,britannica
+americas-templo-mayor-1487,Templo Mayor Dedicated,1487,The Aztecs enlarged the great temple at Tenochtitlan.,culture,americas,4,britannica
+americas-moctezuma-ii-1502,Moctezuma II Takes Power,1502,Moctezuma II became emperor of the Aztecs.,politics,americas,3,britannica
+americas-cortes-arrives-1519,Cortés Lands in Mexico,1519,Hernán Cortés landed on the Gulf coast.,war,americas,2,britannica
+americas-noche-triste-1520,La Noche Triste,1520,Aztec warriors drove the Spanish from Tenochtitlan.,war,americas,3,britannica
+americas-tenochtitlan-falls-1521,Tenochtitlan Falls,1521,Cortés conquered the Aztec capital.,war,americas,2,britannica
+americas-cortes-governor-1522,Cortés Named Governor,1522,Cortés received title to the conquered lands.,politics,americas,5,britannica
+americas-guadalupe-1531,Virgin of Guadalupe Appears,1531,The Virgin reportedly appeared to Juan Diego.,culture,americas,3,britannica
+americas-new-spain-1535,Viceroyalty of New Spain,1535,Spain organised Mexico as a viceroyalty.,politics,americas,3,britannica
+americas-unam-founded-1551,UNAM Founded,1551,The Royal and Pontifical University opened in Mexico City.,science,americas,4,britannica
+americas-inquisition-1571,Inquisition Reaches Mexico,1571,The Holy Office began operations in New Spain.,culture,americas,5,britannica
+americas-mexico-city-flood-1629,Mexico City Floods,1629,A great flood drowned much of the capital.,culture,americas,5,britannica
+americas-corn-riot-1692,Mexico City Corn Riot,1692,Hungry crowds rioted in the capital.,politics,americas,5,britannica
+americas-calendar-stone-1790,Aztec Calendar Stone Found,1790,Workers unearthed the great Sun Stone in Mexico City.,culture,americas,3,britannica
+americas-grito-de-dolores-1810,Grito de Dolores,1810,Hidalgo launched the war for independence.,war,americas,2,britannica
+americas-hidalgo-executed-1811,Hidalgo Executed,1811,Rebel priest Miguel Hidalgo was captured and shot.,war,americas,4,britannica
+americas-morelos-congress-1813,Morelos Holds Congress,1813,José María Morelos convened the Congress of Chilpancingo.,politics,americas,4,britannica
+americas-morelos-executed-1815,Morelos Executed,1815,Rebel leader José María Morelos was shot.,war,americas,4,britannica
+americas-independence-1821,Mexican Independence,1821,Iturbide entered Mexico City to end Spanish rule.,politics,americas,2,britannica
+americas-iturbide-emperor-1822,Iturbide Becomes Emperor,1822,Agustín de Iturbide ruled Mexico as emperor.,politics,americas,4,britannica
+americas-federal-republic-1824,Federal Republic Declared,1824,Mexico adopted a federal constitution.,politics,americas,4,britannica
+americas-guadalupe-victoria-1824,Guadalupe Victoria Elected,1824,Guadalupe Victoria became the first president.,politics,americas,4,britannica
+americas-spanish-reconquest-1829,Spain Tries to Reconquer,1829,Spain sent a force to reclaim Mexico.,war,americas,5,britannica
+americas-santa-anna-1833,Santa Anna Takes Power,1833,Antonio López de Santa Anna dominated Mexican politics.,politics,americas,4,britannica
+americas-alamo-1836,Battle of the Alamo,1836,Mexican troops stormed the Alamo in Texas.,war,americas,2,britannica
+americas-san-jacinto-1836,San Jacinto Battle,1836,Texans defeated Santa Anna and won independence.,war,americas,3,britannica
+americas-texas-annexed-1845,Texas Annexed by the US,1845,The United States annexed the Republic of Texas.,politics,americas,3,britannica
+americas-mexican-american-war-1846,Mexican-American War Begins,1846,The United States invaded Mexico.,war,americas,2,britannica
+americas-chapultepec-1847,Battle of Chapultepec,1847,US forces stormed the castle at Chapultepec.,war,americas,4,britannica
+americas-guadalupe-hidalgo-1848,Treaty of Guadalupe Hidalgo,1848,Mexico lost half its territory to the United States.,politics,americas,2,britannica
+americas-plan-de-ayutla-1854,Plan de Ayutla,1854,Liberals revolted against Santa Anna's dictatorship.,politics,americas,4,britannica
+americas-1857-constitution-1857,Constitution of 1857,1857,Mexico adopted a liberal constitution.,politics,americas,4,britannica
+americas-la-reforma-1858,War of Reform Begins,1858,Liberals and conservatives fought the Reform War.,war,americas,4,britannica
+americas-reform-laws-1859,Reform Laws Issued,1859,Juárez issued laws separating church and state.,politics,americas,4,britannica
+americas-juarez-president-1861,Juárez Becomes President,1861,Benito Juárez took office as president.,politics,americas,3,britannica
+americas-puebla-1862,Battle of Puebla,1862,Mexicans defeated the French at Puebla.,war,americas,2,britannica
+americas-french-mexico-city-1863,French Take Mexico City,1863,French forces occupied Mexico City.,war,americas,4,britannica
+americas-french-empire-1864,Maximilian Becomes Emperor,1864,France placed Maximilian on the Mexican throne.,politics,americas,4,britannica
+americas-maximilian-executed-1867,Maximilian Executed,1867,Republican forces shot Emperor Maximilian.,war,americas,3,britannica
+americas-porfiriato-1876,Porfirio Díaz Takes Power,1876,Porfirio Díaz seized control of Mexico.,politics,americas,3,britannica
+americas-cananea-strike-1906,Cananea Strike,1906,Miners at Cananea demanded better conditions.,politics,americas,5,britannica
+americas-revolution-1910,Mexican Revolution Begins,1910,Madero called for revolt against Díaz.,war,americas,2,britannica
+americas-diaz-reelection-1910,Díaz Re-Elected,1910,The long-time ruler won a rigged election.,politics,americas,5,britannica
+americas-corridos-1910,Corridos Spread in the Revolution,1910,Revolutionary corridos told stories in song.,music,americas,5,britannica
+americas-madero-president-1911,Madero Becomes President,1911,Francisco Madero replaced the dictator Díaz.,politics,americas,3,britannica
+americas-decena-tragica-1913,Decena Trágica,1913,Ten bloody days toppled President Madero.,war,americas,4,britannica
+americas-veracruz-1914,US Occupies Veracruz,1914,American troops seized the port of Veracruz.,war,americas,4,britannica
+americas-constitution-1917,Constitution of 1917,1917,The revolution produced a new constitution.,politics,americas,3,britannica
+americas-zapata-killed-1919,Zapata Assassinated,1919,Revolutionary leader Emiliano Zapata was killed.,war,americas,3,britannica
+americas-obregon-president-1920,Obregón Becomes President,1920,Álvaro Obregón took the presidency.,politics,americas,4,britannica
+americas-villa-killed-1923,Villa Assassinated,1923,Pancho Villa was murdered in Chihuahua.,war,americas,4,britannica
+americas-cristero-war-1926,Cristero War Begins,1926,Catholics rebelled against anti-church laws.,war,americas,4,britannica
+americas-pnr-founded-1929,PNR Party Founded,1929,The ruling party was founded as the PNR.,politics,americas,4,britannica
+americas-mariachi-music-1930,Mariachi Music Booms,1930,Mariachi bands gained a mass audience.,music,americas,5,britannica
+americas-cardenas-president-1934,Cárdenas Becomes President,1934,Lázaro Cárdenas led a social reform agenda.,politics,americas,4,britannica
+americas-oil-expropriation-1938,Oil Expropriation,1938,Cárdenas nationalised the foreign oil industry.,politics,americas,2,britannica
+americas-wwii-entry-1942,Mexico Enters WWII,1942,Mexico declared war on the Axis powers.,war,americas,4,britannica
+americas-pri-founded-1946,PRI Party Formed,1946,The ruling party became the PRI.,politics,americas,4,britannica
+americas-maria-candelaria-1946,María Candelaria Wins at Cannes,1946,The film took the top prize at Cannes.,film,americas,5,britannica
+americas-tepexpan-man-1947,Tepexpan Man Found,1947,Archaeologists uncovered an ancient skeleton near Mexico City.,science,americas,5,britannica
+americas-pill-developed-1951,Contraceptive Pill Developed,1951,Chemists in Mexico City synthesised the pill.,medicine,americas,4,britannica
+americas-tlatelolco-massacre-1968,Tlatelolco Massacre,1968,Troops fired on students at Tlatelolco.,politics,americas,3,britannica
+americas-1968-olympics-1968,Mexico City Olympics,1968,Mexico hosted the Summer Olympic Games.,sports,americas,3,britannica
+americas-1970-world-cup-1970,World Cup Hosted,1970,Mexico hosted the FIFA World Cup.,sports,americas,3,britannica
+americas-corpus-christi-1971,Corpus Christi Massacre,1971,Paramilitaries attacked student marchers.,politics,americas,5,britannica
+americas-oil-boom-1978,Oil Boom,1978,Huge oil reserves boosted the economy.,technology,americas,5,britannica
+americas-debt-crisis-1982,Debt Crisis,1982,Mexico defaulted on its foreign debt.,politics,americas,3,britannica
+americas-1985-earthquake-1985,Mexico City Earthquake,1985,A huge quake devastated the capital.,culture,americas,3,britannica
+americas-neri-vela-1985,Neri Vela Flies to Space,1985,Rodolfo Neri Vela became Mexico's first astronaut.,space,americas,4,britannica
+americas-1986-world-cup-1986,World Cup Hosted Again,1986,Mexico hosted the 1986 FIFA World Cup.,sports,americas,4,britannica
+americas-1988-election-1988,Contested 1988 Election,1988,Allegations of fraud marred the presidential vote.,politics,americas,4,britannica
+americas-nafta-1994,NAFTA Takes Effect,1994,Mexico joined the North American Free Trade Agreement.,politics,americas,3,britannica
+americas-zapatista-1994,Zapatista Uprising,1994,Rebels rose up in Chiapas on New Year's Day.,war,americas,3,britannica
+americas-colosio-killed-1994,Colosio Assassinated,1994,Presidential candidate Luis Donaldo Colosio was shot.,politics,americas,4,britannica
+americas-peso-crisis-1995,Peso Crisis,1995,The peso collapsed after the December devaluation.,politics,americas,4,britannica
+americas-fox-president-2000,Fox Wins the Presidency,2000,Vicente Fox ended seventy-one years of PRI rule.,politics,americas,2,britannica
+americas-drug-war-2006,Drug War Intensifies,2006,President Calderón deployed troops against cartels.,war,americas,3,britannica
+americas-swine-flu-2009,Swine Flu Outbreak,2009,Mexico City became the epicentre of the H1N1 outbreak.,medicine,americas,4,britannica
+americas-pena-nieto-2012,Peña Nieto Becomes President,2012,Enrique Peña Nieto returned the PRI to power.,politics,americas,4,britannica
+americas-ayotzinapa-2014,Ayotzinapa Disappearances,2014,Forty-three students vanished in Iguala.,politics,americas,4,britannica
+americas-2017-earthquake-2017,2017 Earthquake,2017,A powerful quake struck central Mexico.,culture,americas,4,britannica
+americas-amlo-president-2018,AMLO Becomes President,2018,Andrés Manuel López Obrador took office.,politics,americas,4,britannica
+americas-roma-oscars-2019,Roma Wins Three Oscars,2019,Alfonso Cuarón's Roma earned three Academy Awards.,film,americas,3,britannica
+americas-covid-pandemic-2020,COVID-19 Pandemic,2020,Mexico faced severe coronavirus outbreaks.,medicine,americas,4,britannica
+americas-sheinbaum-president-2024,Sheinbaum Becomes President,2024,Claudia Sheinbaum became the first female president.,politics,americas,3,britannica

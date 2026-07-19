@@ -1,0 +1,101 @@
+id,title,year,description,category,region,difficulty,source
+asia-jomon-pottery-14000,Jomon Pottery Made,-14000,Jomon people made some of the world's earliest pottery.,culture,asia,4,britannica
+asia-yayoi-rice-300,Yayoi Rice Farming Begins,-300,Yayoi farmers introduced wet-rice cultivation.,technology,asia,4,britannica
+asia-kofun-tombs-250,Kofun Burial Mounds Built,250,Rulers raised giant keyhole burial mounds.,culture,asia,4,britannica
+asia-yamato-state-400,Yamato State Rises,400,The Yamato court unified much of Japan.,politics,asia,4,britannica
+asia-buddhism-japan-538,Buddhism Reaches Japan,538,Buddhist teachers arrived from Korea.,culture,asia,3,britannica
+asia-shotoku-constitution-604,Seventeen Article Constitution,604,Prince Shōtoku issued a moral code of government.,politics,asia,4,britannica
+asia-taika-reform-645,Taika Reform,645,The court centralised land and power.,politics,asia,4,britannica
+asia-nara-capital-710,Nara Becomes Capital,710,Japan's first permanent capital rose at Nara.,culture,asia,4,britannica
+asia-kojiki-712,Kojiki Completed,712,The chronicle recorded Japan's myths and history.,culture,asia,5,britannica
+asia-great-buddha-752,Great Buddha Dedicated,752,Tōdai-ji's giant bronze Buddha was dedicated.,culture,asia,4,britannica
+asia-heian-capital-794,Heian Becomes Capital,794,The capital moved to Heian-kyō or modern Kyoto.,culture,asia,3,britannica
+asia-fujiwara-regents-858,Fujiwara Regents Rule,858,The Fujiwara clan dominated the throne.,politics,asia,4,britannica
+asia-kokin-wakashu-905,Kokin Wakashu Compiled,905,The imperial poetry anthology was completed.,culture,asia,5,britannica
+asia-genji-monogatari-1000,Tale of Genji Written,1000,Murasaki Shikibu wrote the Tale of Genji.,culture,asia,3,britannica
+asia-hogen-disturbance-1156,Hōgen Disturbance,1156,Court factions clashed in Kyoto.,war,asia,5,britannica
+asia-genpei-war-1180,Genpei War Begins,1180,The Taira and Minamoto clans fought for power.,war,asia,4,britannica
+asia-dan-no-ura-1185,Battle of Dan-no-ura,1185,The Minamoto destroyed the Taira at sea.,war,asia,4,britannica
+asia-kamakura-shogunate-1192,Kamakura Shogunate Begins,1192,Minamoto no Yoritomo became shogun.,politics,asia,3,britannica
+asia-zen-flourishes-1200,Zen Flourishes,1200,Zen Buddhism spread among the samurai.,culture,asia,5,britannica
+asia-mongol-invasion-1274,First Mongol Invasion,1274,Kublai Khan's fleet attacked Kyushu.,war,asia,3,britannica
+asia-second-mongol-invasion-1281,Second Mongol Invasion,1281,A typhoon scattered the Mongol fleet.,war,asia,3,britannica
+asia-kamakura-falls-1333,Kamakura Shogunate Falls,1333,Emperor Go-Daigo restored imperial rule.,politics,asia,4,britannica
+asia-ashikaga-shogunate-1336,Ashikaga Shogunate Founded,1336,Ashikaga Takauji founded a new shogunate.,politics,asia,4,britannica
+asia-kinkakuji-1397,Kinkaku-ji Built,1397,The Golden Pavilion rose in Kyoto.,culture,asia,4,britannica
+asia-onin-war-1467,Ōnin War Begins,1467,Civil war plunged Japan into chaos.,war,asia,4,britannica
+asia-firearms-1543,Firearms Reach Japan,1543,Portuguese traders brought guns to Tanegashima.,technology,asia,3,britannica
+asia-xavier-1549,Xavier Arrives in Japan,1549,Francis Xavier began Christian missions.,culture,asia,4,britannica
+asia-nobunaga-1568,Oda Nobunaga Enters Kyoto,1568,Oda Nobunaga began to reunify Japan.,war,asia,3,britannica
+asia-honnoji-1582,Honnō-ji Incident,1582,Nobunaga was betrayed and killed.,war,asia,4,britannica
+asia-hideyoshi-unifies-1590,Hideyoshi Unifies Japan,1590,Toyotomi Hideyoshi completed reunification.,politics,asia,3,britannica
+asia-korea-invasions-1592,Invasions of Korea Begin,1592,Hideyoshi invaded the Korean peninsula.,war,asia,4,britannica
+asia-sekigahara-1600,Battle of Sekigahara,1600,Tokugawa Ieyasu won the decisive battle.,war,asia,3,britannica
+asia-tokugawa-shogunate-1603,Tokugawa Shogunate Begins,1603,Tokugawa Ieyasu became shogun.,politics,asia,2,britannica
+asia-osaka-siege-1615,Siege of Osaka Ends,1615,The Tokugawa crushed the last Toyotomi resistance.,war,asia,4,britannica
+asia-sakoku-1635,Sakoku Isolation Begins,1635,Japan closed itself to the outside world.,politics,asia,3,britannica
+asia-shimabara-rebellion-1637,Shimabara Rebellion,1637,Peasants and Christians rose against the shogunate.,war,asia,4,britannica
+asia-genroku-1688,Genroku Era Begins,1688,Arts and culture flourished in the Genroku era.,culture,asia,4,britannica
+asia-47-ronin-1703,Forty-Seven Ronin Revenge,1703,Loyal samurai avenged their lord in Edo.,culture,asia,4,britannica
+asia-tenmei-famine-1782,Tenmei Famine,1782,A terrible famine swept northern Japan.,culture,asia,5,britannica
+asia-hokusai-prints-1830,Hokusai's Great Wave,1830,Hokusai printed The Great Wave off Kanagawa.,culture,asia,3,britannica
+asia-perry-arrives-1853,Perry Arrives in Japan,1853,Commodore Perry's warships opened Japan.,politics,asia,2,britannica
+asia-kanagawa-treaty-1854,Treaty of Kanagawa,1854,Japan ended its policy of isolation.,politics,asia,3,britannica
+asia-harris-treaty-1858,Harris Treaty Signed,1858,The United States gained trading rights.,politics,asia,5,britannica
+asia-meiji-restoration-1868,Meiji Restoration,1868,The emperor was restored to power.,politics,asia,2,britannica
+asia-boshin-war-1868,Boshin War,1868,Imperial forces crushed the shogunate's army.,war,asia,4,britannica
+asia-tokyo-capital-1869,Tokyo Becomes Capital,1869,The emperor moved the capital to Edo.,politics,asia,4,britannica
+asia-domains-abolished-1871,Feudal Domains Abolished,1871,The daimyo domains were replaced by prefectures.,politics,asia,4,britannica
+asia-first-railway-1872,First Railway Opens,1872,A steam railway linked Tokyo and Yokohama.,technology,asia,3,britannica
+asia-conscription-1873,Conscription Introduced,1873,Japan created a modern national army.,war,asia,5,britannica
+asia-swords-banned-1876,Samurai Swords Banned,1876,The new government outlawed wearing swords.,culture,asia,5,britannica
+asia-meiji-constitution-1889,Meiji Constitution,1889,Japan adopted a modern constitution.,politics,asia,3,britannica
+asia-first-diet-1890,First Diet Convenes,1890,Japan's parliament met for the first time.,politics,asia,5,britannica
+asia-sino-japanese-war-1894,First Sino-Japanese War,1894,Japan defeated Qing China over Korea.,war,asia,3,britannica
+asia-shimonoseki-treaty-1895,Treaty of Shimonoseki,1895,China ceded Taiwan to Japan.,politics,asia,4,britannica
+asia-anglo-japanese-1902,Anglo-Japanese Alliance,1902,Britain and Japan signed a treaty.,politics,asia,5,britannica
+asia-russo-japanese-war-1904,Russo-Japanese War,1904,Japan fought Russia for influence in Manchuria.,war,asia,3,britannica
+asia-tsushima-1905,Battle of Tsushima,1905,Japan's navy destroyed the Russian fleet.,war,asia,3,britannica
+asia-korea-annexed-1910,Korea Annexed,1910,Japan formally annexed Korea.,politics,asia,3,britannica
+asia-meiji-dies-1912,Emperor Meiji Dies,1912,The Meiji era ended with his death.,politics,asia,4,britannica
+asia-wwi-entry-1914,Japan Enters WWI,1914,Japan joined the Allies in World War I.,war,asia,4,britannica
+asia-rice-riots-1918,Rice Riots,1918,Nationwide protests followed soaring rice prices.,politics,asia,4,britannica
+asia-kanto-earthquake-1923,Great Kantō Earthquake,1923,A massive quake destroyed Tokyo and Yokohama.,culture,asia,3,britannica
+asia-universal-suffrage-1925,Universal Male Suffrage,1925,All adult men won the right to vote.,politics,asia,5,britannica
+asia-hirohito-1926,Hirohito Becomes Emperor,1926,Shōwa era began with Emperor Hirohito.,politics,asia,4,britannica
+asia-manchurian-incident-1931,Manchurian Incident,1931,Japanese troops occupied Manchuria.,war,asia,3,britannica
+asia-february-incident-1936,February 26 Incident,1936,Young officers attempted a coup in Tokyo.,politics,asia,4,britannica
+asia-sino-japanese-war-ii-1937,Second Sino-Japanese War,1937,Japan invaded China in full scale.,war,asia,2,britannica
+asia-pearl-harbor-1941,Attack on Pearl Harbor,1941,Japan struck the US Pacific Fleet.,war,asia,1,britannica
+asia-hiroshima-1945,Hiroshima Bombed,1945,An atomic bomb devastated Hiroshima.,war,asia,2,britannica
+asia-japan-surrender-1945,Japan Surrenders,1945,Japan ended World War II.,war,asia,2,britannica
+asia-postwar-constitution-1947,Postwar Constitution,1947,Japan renounced war in its new constitution.,politics,asia,3,britannica
+asia-tokyo-war-crimes-1948,War Crimes Trials End,1948,The Tokyo Tribunal sentenced leading figures.,politics,asia,5,britannica
+asia-rashomon-1950,Rashomon Released,1950,Kurosawa's Rashomon won international acclaim.,film,asia,4,britannica
+asia-san-francisco-treaty-1951,San Francisco Treaty,1951,Japan regained full sovereignty.,politics,asia,4,britannica
+asia-godzilla-1954,Godzilla Released,1954,The monster film became a global phenomenon.,film,asia,3,britannica
+asia-sdf-founded-1954,Self-Defense Forces Formed,1954,Japan rebuilt its armed forces for defence.,war,asia,4,britannica
+asia-un-membership-1956,Japan Joins the UN,1956,Japan was admitted to the United Nations.,politics,asia,4,britannica
+asia-ampo-protests-1960,Ampo Protests,1960,Mass demonstrations opposed the US-Japan treaty.,politics,asia,4,britannica
+asia-sukiyaki-1963,Sukiyaki Tops US Charts,1963,Kyu Sakamoto's song became a US number one.,music,asia,5,britannica
+asia-tokyo-olympics-1964,Tokyo Olympics,1964,Japan hosted the Summer Olympics.,sports,asia,2,britannica
+asia-shinkansen-1964,Shinkansen Opens,1964,The bullet train linked Tokyo and Osaka.,technology,asia,2,britannica
+asia-osaka-expo-1970,Osaka Expo,1970,Japan hosted a world exposition.,culture,asia,4,britannica
+asia-ohsumi-1970,Ohsumi Satellite Launched,1970,Japan became the fourth spacefaring nation.,space,asia,4,britannica
+asia-okinawa-reversion-1972,Okinawa Returns,1972,The United States returned Okinawa to Japan.,politics,asia,4,britannica
+asia-walkman-1979,Walkman Debuts,1979,Sony's Walkman transformed portable music.,technology,asia,3,britannica
+asia-heisei-begins-1989,Heisei Era Begins,1989,Emperor Akihito took the throne.,politics,asia,4,britannica
+asia-bubble-bursts-1991,Economic Bubble Bursts,1991,Japan's asset bubble collapsed.,politics,asia,3,britannica
+asia-kobe-earthquake-1995,Kobe Earthquake,1995,A deadly quake struck the port city of Kobe.,culture,asia,3,britannica
+asia-aum-attack-1995,Aum Sarin Attack,1995,A cult released sarin gas in Tokyo's subway.,medicine,asia,4,britannica
+asia-nagano-olympics-1998,Nagano Winter Olympics,1998,Japan hosted the Winter Games.,sports,asia,3,britannica
+asia-neutrino-oscillation-1998,Neutrino Mass Found,1998,Scientists at Super-Kamiokande proved neutrinos have mass.,science,asia,4,britannica
+asia-spirited-away-2001,Spirited Away Released,2001,Miyazaki's film won an Oscar.,film,asia,3,britannica
+asia-world-cup-2002,FIFA World Cup Hosted,2002,Japan co-hosted the World Cup with South Korea.,sports,asia,3,britannica
+asia-hayabusa-2003,Hayabusa Launches,2003,Japan's probe flew to an asteroid.,space,asia,4,britannica
+asia-ips-cells-2006,iPS Cells Created,2006,Shinya Yamanaka created induced stem cells.,medicine,asia,4,britannica
+asia-tohoku-2011,Tōhoku Earthquake,2011,A quake and tsunami struck northern Japan.,culture,asia,2,britannica
+asia-fukushima-2011,Fukushima Nuclear Disaster,2011,The tsunami caused a nuclear meltdown.,technology,asia,2,britannica
+asia-reiwa-begins-2019,Reiwa Era Begins,2019,Emperor Naruhito ascended the throne.,politics,asia,4,britannica
+asia-hayabusa2-2020,Hayabusa2 Returns,2020,The probe delivered asteroid samples to Earth.,space,asia,4,britannica
+asia-tokyo-2020-2021,Tokyo Olympics Held,2021,The Games were postponed by the pandemic.,sports,asia,4,britannica
