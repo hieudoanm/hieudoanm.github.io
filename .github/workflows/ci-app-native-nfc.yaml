@@ -1,0 +1,115 @@
+name: CI - App - Native - NFC
+
+concurrency:
+  group: ci-app-native-nfc-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/native/nfc/android/**'
+      - '.github/workflows/ci-app-native-nfc.yaml'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: packages/app/native/nfc/android
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6.0.3
+      - name: Install Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+      - name: Install Android SDK
+        uses: android-actions/setup-android@v3
+      - name: Cache Gradle
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('packages/app/native/nfc/android/**/*.gradle.kts') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+      - name: Make Gradle Executable
+        run: chmod +x gradlew
+      - name: Lint
+        run: ./gradlew lint
+      - name: Test
+        run: ./gradlew test
+      - name: Create Keystore
+        run: |
+          keytool -genkey -v -keystore release.keystore \
+            -alias release -keyalg RSA -keysize 2048 -validity 10000 \
+            -storepass android -keypass android \
+            -dname "CN=, OU=, O=, L=, S=, C="
+      - name: Build APK
+        run: ./gradlew assembleRelease
+        env:
+          RELEASE_STORE_FILE: ${{ github.workspace }}/packages/app/native/nfc/android/release.keystore
+          RELEASE_STORE_PASSWORD: android
+          RELEASE_KEY_ALIAS: release
+          RELEASE_KEY_PASSWORD: android
+      - name: Build AAB
+        run: ./gradlew bundleRelease
+        env:
+          RELEASE_STORE_FILE: ${{ github.workspace }}/packages/app/native/nfc/android/release.keystore
+          RELEASE_STORE_PASSWORD: android
+          RELEASE_KEY_ALIAS: release
+          RELEASE_KEY_PASSWORD: android
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: nfc-apk
+          path: packages/app/native/nfc/android/app/build/outputs/apk/release/
+      - name: Upload AAB
+        uses: actions/upload-artifact@v4
+        with:
+          name: nfc-aab
+          path: packages/app/native/nfc/android/app/build/outputs/bundle/release/
+
+  publish:
+    name: Publish to GitHub Release
+    needs: [build]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6.0.3
+        with:
+          fetch-depth: 0
+      - name: Download APK
+        uses: actions/download-artifact@v4
+        with:
+          name: nfc-apk
+          path: artifacts/apk
+      - name: Download AAB
+        uses: actions/download-artifact@v4
+        with:
+          name: nfc-aab
+          path: artifacts/aab
+      - name: Publish Release
+        run: |
+          gh release delete app-native-nfc-latest --yes --cleanup-tag 2>/dev/null || true
+          gh release create app-native-nfc-latest \
+            --title "App - Native - NFC (latest)" \
+            --notes "Auto-built from commit ${{ github.sha }}" \
+            artifacts/apk/*.apk artifacts/aab/*.aab
+        env:
+          GH_TOKEN: ${{ github.token }}

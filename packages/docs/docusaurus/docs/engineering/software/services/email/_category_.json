@@ -1,0 +1,8 @@
+{
+  "label": "🖥️ Email",
+  "position": 1,
+  "link": {
+    "slug": "/engineering/software/services/email",
+    "type": "generated-index"
+  }
+}

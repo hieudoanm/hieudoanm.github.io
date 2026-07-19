@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`DemoDrawer to match snapshot 1`] = `
+<div>
+  <div
+    class="drawer drawer-end"
+  >
+    <input
+      class="drawer-toggle"
+      id="demo-drawer"
+      type="checkbox"
+    />
+    <div
+      class="drawer-side z-50"
+    >
+      <label
+        class="drawer-overlay"
+        for="demo-drawer"
+      />
+      <div
+        class="bg-base-200 border-base-300 min-h-full w-96 border-l p-8"
+      >
+        <div
+          class="mb-7 flex items-center justify-between"
+        >
+          <h3
+            class="font-serif text-xl font-bold"
+          >
+            Drawer panel
+          </h3>
+          <label
+            class="btn btn-ghost btn-sm btn-square text-base-content/50"
+            for="demo-drawer"
+          >
+            ✕
+          </label>
+        </div>
+        <p
+          class="text-base-content/50 mb-6 text-sm leading-relaxed"
+        >
+          Drawers slide in from the edge of the screen. Ideal for settings panels, detail views, and secondary navigation. Focus is trapped within the drawer while it's open.
+        </p>
+        <div
+          class="form-control mb-4"
+        >
+          <label
+            class="label"
+          >
+            <span
+              class="label-text text-base-content/50 text-xs"
+            >
+              Theme
+            </span>
+          </label>
+          <select
+            class="select select-bordered w-full"
+          >
+            <option>
+              Dark (Obsidian)
+            </option>
+            <option>
+              Light (Chalk)
+            </option>
+            <option>
+              Auto (system)
+            </option>
+          </select>
+        </div>
+        <div
+          class="form-control mb-6"
+        >
+          <label
+            class="label"
+          >
+            <span
+              class="label-text text-base-content/50 text-xs"
+            >
+              Accent color
+            </span>
+          </label>
+          <select
+            class="select select-bordered w-full"
+          >
+            <option>
+              Gold
+            </option>
+            <option>
+              Teal
+            </option>
+            <option>
+              Coral
+            </option>
+          </select>
+        </div>
+        <button
+          class="btn btn-primary w-full"
+        >
+          Save settings
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

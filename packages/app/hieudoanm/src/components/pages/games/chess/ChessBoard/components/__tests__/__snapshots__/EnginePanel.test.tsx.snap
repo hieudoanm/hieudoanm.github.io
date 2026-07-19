@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`EnginePanel to match snapshot 1`] = `
+<div>
+  <div
+    class="flex flex-col gap-3"
+  >
+    <div
+      class="flex items-center justify-between"
+    >
+      <span
+        class="text-base-content/60 text-xs font-semibold tracking-widest uppercase"
+      >
+        Stockfish 18
+      </span>
+      <span
+        class="badge badge-sm badge-ghost"
+      >
+        Off
+      </span>
+    </div>
+    <div
+      class="bg-base-100 flex flex-col items-center gap-1 rounded-xl p-4"
+    >
+      <span
+        class="text-base-content/40 text-xs"
+      >
+        Evaluation
+      </span>
+      <span
+        class="font-mono text-3xl font-black"
+      >
+        —
+      </span>
+      <div
+        class="bg-base-300 mt-2 h-3 w-full overflow-hidden rounded-full"
+      >
+        <div
+          class="h-full rounded-full bg-white transition-all duration-300"
+          style="width: 50%;"
+        />
+      </div>
+      <div
+        class="text-base-content/40 mt-0.5 flex w-full justify-between text-[10px]"
+      >
+        <span>
+          Black
+        </span>
+        <span>
+          White
+        </span>
+      </div>
+    </div>
+    <button
+      class="btn btn-sm w-full btn-primary"
+    >
+      🤖
+      Start Engine
+    </button>
+  </div>
+</div>
+`;

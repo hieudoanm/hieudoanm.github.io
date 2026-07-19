@@ -1,0 +1,354 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`PrimitivesSection to match snapshot 1`] = `
+<div>
+  <section
+    class="mx-auto max-w-5xl px-12 py-24"
+    id="primitives"
+  >
+    <p
+      class="text-primary mb-3 text-xs font-medium tracking-[0.14em] uppercase"
+    >
+      Primitives
+    </p>
+    <h2
+      class="mb-4 font-serif text-4xl leading-snug font-bold "
+    >
+      Everything you need
+    </h2>
+    <p
+      class="text-base-content/60 mb-12 max-w-xl text-base leading-relaxed "
+    >
+      Atomic components built from design tokens. Every variant, every state, every size — composable by default.
+    </p>
+    <div
+      class="mb-10"
+    >
+      <p
+        class="text-base-content/50 mb-4 text-sm"
+      >
+        Buttons
+      </p>
+      <div
+        class="mb-4 flex flex-wrap items-center gap-3"
+      >
+        <button
+          class="btn btn-primary"
+        >
+          Primary action
+        </button>
+        <button
+          class="btn btn-ghost"
+        >
+          Ghost
+        </button>
+        <button
+          class="btn btn-error"
+        >
+          Destructive
+        </button>
+        <button
+          class="btn btn-primary btn-sm"
+        >
+          Small
+        </button>
+        <button
+          class="btn btn-ghost btn-sm cursor-not-allowed opacity-40"
+          disabled=""
+        >
+          Disabled
+        </button>
+        <button
+          class="btn btn-primary"
+        >
+          <span
+            class="loading loading-spinner loading-xs"
+          />
+          Loading…
+        </button>
+      </div>
+      <div
+        class="flex flex-wrap items-center gap-3"
+      >
+        <button
+          class="btn btn-square btn-ghost border-base-300 text-base-content/50 border"
+        >
+          ⊕
+        </button>
+        <button
+          class="btn btn-square btn-ghost border-base-300 text-base-content/50 border"
+        >
+          ✎
+        </button>
+        <button
+          class="btn btn-square btn-ghost border-base-300 text-base-content/50 border"
+        >
+          ⋯
+        </button>
+        <span
+          class="badge badge-ghost border-base-300 text-base-content/50 rounded-full border px-3 py-1 text-xs"
+        >
+          v2.4.0
+        </span>
+        <span
+          class="badge badge-ghost border-base-300 text-base-content/50 rounded-full border px-3 py-1 text-xs"
+        >
+          MIT
+        </span>
+        <div
+          class="tooltip tooltip-top"
+          data-tip="This is a tooltip"
+        >
+          <button
+            class="btn btn-ghost btn-sm"
+          >
+            Hover me
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="mb-10 grid grid-cols-2 gap-10"
+    >
+      <div>
+        <p
+          class="text-base-content/50 mb-4 text-sm"
+        >
+          Avatars
+        </p>
+        <div
+          class="mb-4 flex gap-3"
+        >
+          <div
+            class="avatar placeholder"
+          >
+            <div
+              class="w-10 rounded-full bg-primary/20 text-primary"
+            >
+              <span
+                class="text-sm font-medium"
+              >
+                JD
+              </span>
+            </div>
+          </div>
+          <div
+            class="avatar placeholder"
+          >
+            <div
+              class="w-10 rounded-full bg-success/20 text-success"
+            >
+              <span
+                class="text-sm font-medium"
+              >
+                AL
+              </span>
+            </div>
+          </div>
+          <div
+            class="avatar placeholder"
+          >
+            <div
+              class="w-10 rounded-full bg-info/20 text-info"
+            >
+              <span
+                class="text-sm font-medium"
+              >
+                MK
+              </span>
+            </div>
+          </div>
+          <div
+            class="avatar placeholder"
+          >
+            <div
+              class="w-10 rounded-full bg-error/20 text-error"
+            >
+              <span
+                class="text-sm font-medium"
+              >
+                PR
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="avatar-group -space-x-3"
+        >
+          <div
+            class="avatar placeholder"
+          >
+            <div
+              class="ring-base-100 w-10 rounded-full ring-2 bg-primary/20 text-primary"
+            >
+              <span
+                class="text-xs font-medium"
+              >
+                JD
+              </span>
+            </div>
+          </div>
+          <div
+            class="avatar placeholder"
+          >
+            <div
+              class="ring-base-100 w-10 rounded-full ring-2 bg-success/20 text-success"
+            >
+              <span
+                class="text-xs font-medium"
+              >
+                AL
+              </span>
+            </div>
+          </div>
+          <div
+            class="avatar placeholder"
+          >
+            <div
+              class="ring-base-100 w-10 rounded-full ring-2 bg-info/20 text-info"
+            >
+              <span
+                class="text-xs font-medium"
+              >
+                MK
+              </span>
+            </div>
+          </div>
+          <div
+            class="avatar placeholder"
+          >
+            <div
+              class="ring-base-100 w-10 rounded-full ring-2 bg-base-300 text-base-content/50"
+            >
+              <span
+                class="text-xs font-medium"
+              >
+                +9
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p
+          class="text-base-content/50 mb-4 text-sm"
+        >
+          Badges & tags
+        </p>
+        <div
+          class="flex flex-wrap gap-3"
+        >
+          <span
+            class="badge badge-success"
+          >
+            ● Active
+          </span>
+          <span
+            class="badge badge-error"
+          >
+            ● Offline
+          </span>
+          <span
+            class="badge badge-warning"
+          >
+            ● Pending
+          </span>
+          <span
+            class="badge badge-info"
+          >
+            New
+          </span>
+          <span
+            class="badge badge-warning text-warning-content"
+          >
+            Premium
+          </span>
+          <span
+            class="badge badge-neutral"
+          >
+            Draft
+          </span>
+        </div>
+      </div>
+    </div>
+    <p
+      class="text-base-content/50 mb-4 text-sm"
+    >
+      Cards
+    </p>
+    <div
+      class="grid grid-cols-3 gap-5"
+    >
+      <div
+        class="card bg-base-200 border-base-300 hover:border-primary/40 border transition-colors"
+      >
+        <div
+          class="card-body p-7"
+        >
+          <div
+            class="bg-primary/10 mb-4 flex h-10 w-10 items-center justify-center rounded-lg text-lg"
+          >
+            ⬡
+          </div>
+          <h3
+            class="card-title text-sm font-medium"
+          >
+            Design tokens
+          </h3>
+          <p
+            class="text-base-content/50 text-sm leading-relaxed"
+          >
+            Color, spacing, and typography exported as CSS variables and JS constants.
+          </p>
+        </div>
+      </div>
+      <div
+        class="card bg-base-200 border-base-300 hover:border-primary/40 border transition-colors"
+      >
+        <div
+          class="card-body p-7"
+        >
+          <div
+            class="bg-primary/10 mb-4 flex h-10 w-10 items-center justify-center rounded-lg text-lg"
+          >
+            ◈
+          </div>
+          <h3
+            class="card-title text-sm font-medium"
+          >
+            Composable API
+          </h3>
+          <p
+            class="text-base-content/50 text-sm leading-relaxed"
+          >
+            Every component is headless-first. Bring your own styles or use our presets.
+          </p>
+        </div>
+      </div>
+      <div
+        class="card bg-base-200 border-base-300 hover:border-primary/40 border transition-colors"
+      >
+        <div
+          class="card-body p-7"
+        >
+          <div
+            class="bg-primary/10 mb-4 flex h-10 w-10 items-center justify-center rounded-lg text-lg"
+          >
+            ◉
+          </div>
+          <h3
+            class="card-title text-sm font-medium"
+          >
+            Accessible by default
+          </h3>
+          <p
+            class="text-base-content/50 text-sm leading-relaxed"
+          >
+            ARIA patterns, keyboard navigation, and focus management built in from day one.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

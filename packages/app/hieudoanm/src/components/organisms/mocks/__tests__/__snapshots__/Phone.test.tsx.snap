@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Phone to match snapshot 1`] = `
+<div>
+  <div
+    class="mockup-phone border-gray-400 "
+  >
+    <div
+      class="mockup-phone-camera"
+    />
+    <div
+      class="mockup-phone-display bg-neutral-900 text-white"
+    />
+  </div>
+</div>
+`;

@@ -1,0 +1,109 @@
+{
+  "name": "hieudoanm Extension",
+  "version": "1.0.0",
+  "description": "Block ads, block sites, track Claude usage, detect Shopify stores, hide chess.com ratings, capture tab snapshots, redirect new tab, and enhance GitHub browsing.",
+  "author": "Hieu Doan",
+  "icons": {
+    "128": "icons/128x128.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "hieudoanm-extension@hieudoanm.github.io"
+    }
+  },
+  "homepage_url": "https://hieudoanm.github.io",
+  "offline_enabled": true,
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "downloads",
+    "storage",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "hieudoanm Extension",
+    "default_icon": {
+      "128": "icons/128x128.png"
+    }
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_block",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "*://github.com/*"
+      ],
+      "js": [
+        "github.js"
+      ]
+    },
+    {
+      "matches": [
+        "*://*.chess.com/*"
+      ],
+      "js": [
+        "chess.js"
+      ]
+    },
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "shopify.js"
+      ]
+    },
+    {
+      "matches": [
+        "*://*.claude.ai/*"
+      ],
+      "js": [
+        "claude.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://www.instagram.com/*"
+      ],
+      "js": [
+        "instagram.js"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "*://www.youtube.com/watch*"
+      ],
+      "js": [
+        "youtube.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "manifest_version": 3
+}

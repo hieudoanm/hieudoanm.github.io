@@ -1,0 +1,389 @@
+year,stage,group,type,match_date,home,home_id,home_score,home_pens,away,away_id,away_score,away_pens,extra_time,stadium,city,host,result
+1960,Semi-finals,,Semi-finals,1960-07-06,Czechoslovakia,TCH,0,,Russia,RUS,3,,0,,Marseille,France,away
+1960,Semi-finals,,Semi-finals,1960-07-06,France,FRA,4,,Yugoslavia,YUG,5,,0,,Paris,France,away
+1960,Third place,,Third place,1960-07-09,France,FRA,0,,Czechoslovakia,TCH,2,,0,,Marseille,France,away
+1960,Final,,Final,1960-07-10,Russia,RUS,2,,Yugoslavia,YUG,1,,1,,Paris,France,home
+1964,Semi-finals,,Semi-finals,1964-06-17,Denmark,DEN,0,,Russia,RUS,3,,0,,Barcelona,Spain,away
+1964,Semi-finals,,Semi-finals,1964-06-17,Spain,ESP,2,,Hungary,HUN,1,,1,,Madrid,Spain,home
+1964,Third place,,Third place,1964-06-20,Hungary,HUN,3,,Denmark,DEN,1,,1,,Barcelona,Spain,home
+1964,Final,,Final,1964-06-21,Spain,ESP,2,,Russia,RUS,1,,0,,Madrid,Spain,home
+1968,Semi-finals,,Semi-finals,1968-06-05,England,ENG,0,,Yugoslavia,YUG,1,,0,,Florence,Italy,away
+1968,Semi-finals,,Semi-finals,1968-06-05,Italy,ITA,0,,Russia,RUS,0,,1,,Naples,Italy,draw
+1968,Third place,,Third place,1968-06-08,England,ENG,2,,Russia,RUS,0,,0,,Rome,Italy,home
+1968,Final,,Final,1968-06-08,Italy,ITA,1,,Yugoslavia,YUG,1,,1,,Rome,Italy,draw
+1968,Final,,Final,1968-06-10,Italy,ITA,2,,Yugoslavia,YUG,0,,0,,Rome,Italy,home
+1972,Semi-finals,,Semi-finals,1972-06-14,Belgium,BEL,1,,Germany,GER,2,,0,,Antwerp,Belgium,away
+1972,Semi-finals,,Semi-finals,1972-06-14,Hungary,HUN,0,,Russia,RUS,1,,0,,Brussels,Belgium,away
+1972,Third place,,Third place,1972-06-17,Belgium,BEL,2,,Hungary,HUN,1,,0,,Liège,Belgium,home
+1972,Final,,Final,1972-06-18,Germany,GER,3,,Russia,RUS,0,,0,,Brussels,Belgium,home
+1976,Semi-finals,,Semi-finals,1976-06-16,Czechoslovakia,TCH,3,,Netherlands,NED,1,,1,,Zagreb,Yugoslavia,home
+1976,Semi-finals,,Semi-finals,1976-06-17,Yugoslavia,YUG,2,,Germany,GER,4,,1,,Belgrade,Yugoslavia,away
+1976,Third place,,Third place,1976-06-19,Yugoslavia,YUG,2,,Netherlands,NED,3,,1,,Zagreb,Yugoslavia,away
+1976,Final,,Final,1976-06-20,Czechoslovakia,TCH,2,5,Germany,GER,2,3,1,,Belgrade,Yugoslavia,draw
+1980,Group,1,Group,1980-06-11,Czechoslovakia,TCH,0,,Germany,GER,1,,0,,Rome,Italy,away
+1980,Group,1,Group,1980-06-11,Netherlands,NED,1,,Greece,GRE,0,,0,,Naples,Italy,home
+1980,Group,2,Group,1980-06-12,Belgium,BEL,1,,England,ENG,1,,0,,Turin,Italy,draw
+1980,Group,2,Group,1980-06-12,Italy,ITA,0,,Spain,ESP,0,,0,,Milan,Italy,draw
+1980,Group,1,Group,1980-06-14,Germany,GER,3,,Netherlands,NED,2,,0,,Naples,Italy,home
+1980,Group,1,Group,1980-06-14,Greece,GRE,1,,Czechoslovakia,TCH,3,,0,,Rome,Italy,away
+1980,Group,2,Group,1980-06-15,Belgium,BEL,2,,Spain,ESP,1,,0,,Milan,Italy,home
+1980,Group,2,Group,1980-06-15,Italy,ITA,1,,England,ENG,0,,0,,Turin,Italy,home
+1980,Group,1,Group,1980-06-17,Greece,GRE,0,,Germany,GER,0,,0,,Turin,Italy,draw
+1980,Group,1,Group,1980-06-17,Netherlands,NED,1,,Czechoslovakia,TCH,1,,0,,Milan,Italy,draw
+1980,Group,2,Group,1980-06-18,Italy,ITA,0,,Belgium,BEL,0,,0,,Rome,Italy,draw
+1980,Group,2,Group,1980-06-18,Spain,ESP,1,,England,ENG,2,,0,,Naples,Italy,away
+1980,Third place,,Third place,1980-06-21,Italy,ITA,1,8,Czechoslovakia,TCH,1,9,0,,Naples,Italy,draw
+1980,Final,,Final,1980-06-22,Belgium,BEL,1,,Germany,GER,2,,0,,Rome,Italy,away
+1984,Group,1,Group,1984-06-12,France,FRA,1,,Denmark,DEN,0,,0,,Paris,France,home
+1984,Group,1,Group,1984-06-13,Belgium,BEL,2,,Yugoslavia,YUG,0,,0,,Lens,France,home
+1984,Group,2,Group,1984-06-14,Germany,GER,0,,Portugal,POR,0,,0,,Strasbourg,France,draw
+1984,Group,2,Group,1984-06-14,Romania,ROU,1,,Spain,ESP,1,,0,,Saint-Étienne,France,draw
+1984,Group,1,Group,1984-06-16,Denmark,DEN,5,,Yugoslavia,YUG,0,,0,,Lyon,France,home
+1984,Group,1,Group,1984-06-16,France,FRA,5,,Belgium,BEL,0,,0,,Nantes,France,home
+1984,Group,2,Group,1984-06-17,Germany,GER,2,,Romania,ROU,1,,0,,Lens,France,home
+1984,Group,2,Group,1984-06-17,Portugal,POR,1,,Spain,ESP,1,,0,,Marseille,France,draw
+1984,Group,1,Group,1984-06-19,Denmark,DEN,3,,Belgium,BEL,2,,0,,Strasbourg,France,home
+1984,Group,1,Group,1984-06-19,France,FRA,3,,Yugoslavia,YUG,2,,0,,Saint-Étienne,France,home
+1984,Group,2,Group,1984-06-20,Germany,GER,0,,Spain,ESP,1,,0,,Paris,France,away
+1984,Group,2,Group,1984-06-20,Portugal,POR,1,,Romania,ROU,0,,0,,Nantes,France,home
+1984,Semi-finals,,Semi-finals,1984-06-23,France,FRA,3,,Portugal,POR,2,,1,,Marseille,France,home
+1984,Semi-finals,,Semi-finals,1984-06-24,Denmark,DEN,1,4,Spain,ESP,1,5,1,,Lyon,France,draw
+1984,Final,,Final,1984-06-27,France,FRA,2,,Spain,ESP,0,,0,,Paris,France,home
+1988,Group,1,Group,1988-06-10,Germany,GER,1,,Italy,ITA,1,,0,,Düsseldorf,West Germany,draw
+1988,Group,1,Group,1988-06-11,Denmark,DEN,2,,Spain,ESP,3,,0,,Hanover,West Germany,away
+1988,Group,2,Group,1988-06-12,England,ENG,0,,Republic of Ireland,IRL,1,,0,,Stuttgart,West Germany,away
+1988,Group,2,Group,1988-06-12,Netherlands,NED,0,,Russia,RUS,1,,0,,Cologne,West Germany,away
+1988,Group,1,Group,1988-06-14,Germany,GER,2,,Denmark,DEN,0,,0,,Gelsenkirchen,West Germany,home
+1988,Group,1,Group,1988-06-14,Italy,ITA,1,,Spain,ESP,0,,0,,Frankfurt,West Germany,home
+1988,Group,2,Group,1988-06-15,England,ENG,1,,Netherlands,NED,3,,0,,Düsseldorf,West Germany,away
+1988,Group,2,Group,1988-06-15,Republic of Ireland,IRL,1,,Russia,RUS,1,,0,,Hanover,West Germany,draw
+1988,Group,1,Group,1988-06-17,Germany,GER,2,,Spain,ESP,0,,0,,Munich,West Germany,home
+1988,Group,1,Group,1988-06-17,Italy,ITA,2,,Denmark,DEN,0,,0,,Cologne,West Germany,home
+1988,Group,2,Group,1988-06-18,England,ENG,1,,Russia,RUS,3,,0,,Frankfurt,West Germany,away
+1988,Group,2,Group,1988-06-18,Republic of Ireland,IRL,0,,Netherlands,NED,1,,0,,Gelsenkirchen,West Germany,away
+1988,Semi-finals,,Semi-finals,1988-06-21,Germany,GER,1,,Netherlands,NED,2,,0,,Hamburg,West Germany,away
+1988,Semi-finals,,Semi-finals,1988-06-22,Russia,RUS,2,,Italy,ITA,0,,0,,Stuttgart,West Germany,home
+1988,Final,,Final,1988-06-25,Russia,RUS,0,,Netherlands,NED,2,,0,,Munich,West Germany,away
+1992,Group,1,Group,1992-06-10,Sweden,SWE,1,,France,FRA,1,,0,,Solna,Sweden,draw
+1992,Group,1,Group,1992-06-11,Denmark,DEN,0,,England,ENG,0,,0,,Malmö,Sweden,draw
+1992,Group,2,Group,1992-06-12,Netherlands,NED,1,,Scotland,SCO,0,,0,,Gothenburg,Sweden,home
+1992,Group,2,Group,1992-06-12,Russia,RUS,1,,Germany,GER,1,,0,,Norrköping,Sweden,draw
+1992,Group,1,Group,1992-06-14,France,FRA,0,,England,ENG,0,,0,,Malmö,Sweden,draw
+1992,Group,1,Group,1992-06-14,Sweden,SWE,1,,Denmark,DEN,0,,0,,Solna,Sweden,home
+1992,Group,2,Group,1992-06-15,Netherlands,NED,0,,Russia,RUS,0,,0,,Gothenburg,Sweden,draw
+1992,Group,2,Group,1992-06-15,Scotland,SCO,0,,Germany,GER,2,,0,,Norrköping,Sweden,away
+1992,Group,1,Group,1992-06-17,France,FRA,1,,Denmark,DEN,2,,0,,Malmö,Sweden,away
+1992,Group,1,Group,1992-06-17,Sweden,SWE,2,,England,ENG,1,,0,,Solna,Sweden,home
+1992,Group,2,Group,1992-06-18,Netherlands,NED,3,,Germany,GER,1,,0,,Gothenburg,Sweden,home
+1992,Group,2,Group,1992-06-18,Scotland,SCO,3,,Russia,RUS,0,,0,,Norrköping,Sweden,home
+1992,Semi-finals,,Semi-finals,1992-06-21,Sweden,SWE,2,,Germany,GER,3,,0,,Solna,Sweden,away
+1992,Semi-finals,,Semi-finals,1992-06-22,Netherlands,NED,2,4,Denmark,DEN,2,5,1,,Gothenburg,Sweden,draw
+1992,Final,,Final,1992-06-26,Denmark,DEN,2,,Germany,GER,0,,0,,Gothenburg,Sweden,home
+1996,Group,A,Group,1996-06-08,England,ENG,1,,Switzerland,SUI,1,,0,,London,England,draw
+1996,Group,D,Group,1996-06-09,Denmark,DEN,1,,Portugal,POR,1,,0,,Sheffield,England,draw
+1996,Group,C,Group,1996-06-09,Germany,GER,2,,Czech Republic,CZE,0,,0,,Manchester,England,home
+1996,Group,B,Group,1996-06-09,Spain,ESP,1,,Bulgaria,BUL,1,,0,,Leeds,England,draw
+1996,Group,A,Group,1996-06-10,Netherlands,NED,0,,Scotland,SCO,0,,0,,Birmingham,England,draw
+1996,Group,B,Group,1996-06-10,Romania,ROU,0,,France,FRA,1,,0,,Newcastle,England,away
+1996,Group,C,Group,1996-06-11,Italy,ITA,2,,Russia,RUS,1,,0,,Liverpool,England,home
+1996,Group,D,Group,1996-06-11,Turkey,TUR,0,,Croatia,CRO,1,,0,,Nottingham,England,away
+1996,Group,B,Group,1996-06-13,Bulgaria,BUL,1,,Romania,ROU,0,,0,,Newcastle,England,home
+1996,Group,A,Group,1996-06-13,Switzerland,SUI,0,,Netherlands,NED,2,,0,,Birmingham,England,away
+1996,Group,C,Group,1996-06-14,Czech Republic,CZE,2,,Italy,ITA,1,,0,,Liverpool,England,home
+1996,Group,D,Group,1996-06-14,Portugal,POR,1,,Turkey,TUR,0,,0,,Nottingham,England,home
+1996,Group,A,Group,1996-06-15,England,ENG,2,,Scotland,SCO,0,,0,,London,England,home
+1996,Group,B,Group,1996-06-15,France,FRA,1,,Spain,ESP,1,,0,,Leeds,England,draw
+1996,Group,D,Group,1996-06-16,Croatia,CRO,3,,Denmark,DEN,0,,0,,Sheffield,England,home
+1996,Group,C,Group,1996-06-16,Russia,RUS,0,,Germany,GER,3,,0,,Manchester,England,away
+1996,Group,A,Group,1996-06-18,England,ENG,4,,Netherlands,NED,1,,0,,London,England,home
+1996,Group,B,Group,1996-06-18,France,FRA,3,,Bulgaria,BUL,1,,0,,Newcastle,England,home
+1996,Group,B,Group,1996-06-18,Romania,ROU,1,,Spain,ESP,2,,0,,Leeds,England,away
+1996,Group,A,Group,1996-06-18,Scotland,SCO,1,,Switzerland,SUI,0,,0,,Birmingham,England,home
+1996,Group,D,Group,1996-06-19,Croatia,CRO,0,,Portugal,POR,3,,0,,Nottingham,England,away
+1996,Group,C,Group,1996-06-19,Italy,ITA,0,,Germany,GER,0,,0,,Manchester,England,draw
+1996,Group,C,Group,1996-06-19,Russia,RUS,3,,Czech Republic,CZE,3,,0,,Liverpool,England,draw
+1996,Group,D,Group,1996-06-19,Turkey,TUR,0,,Denmark,DEN,3,,0,,Sheffield,England,away
+1996,Quarter-finals,,Quarter-finals,1996-06-22,England,ENG,0,4,Spain,ESP,0,2,1,,London,England,draw
+1996,Quarter-finals,,Quarter-finals,1996-06-22,France,FRA,0,5,Netherlands,NED,0,4,1,,Liverpool,England,draw
+1996,Quarter-finals,,Quarter-finals,1996-06-23,Czech Republic,CZE,1,,Portugal,POR,0,,0,,Birmingham,England,home
+1996,Quarter-finals,,Quarter-finals,1996-06-23,Germany,GER,2,,Croatia,CRO,1,,0,,Manchester,England,home
+1996,Semi-finals,,Semi-finals,1996-06-26,England,ENG,1,5,Germany,GER,1,6,1,,London,England,draw
+1996,Semi-finals,,Semi-finals,1996-06-26,France,FRA,0,5,Czech Republic,CZE,0,6,1,,Manchester,England,draw
+1996,Final,,Final,1996-06-30,Czech Republic,CZE,1,,Germany,GER,2,,1,,London,England,away
+2000,Group,B,Group,2000-06-10,Belgium,BEL,2,,Sweden,SWE,1,,0,,Brussels,Belgium,home
+2000,Group,D,Group,2000-06-11,France,FRA,3,,Denmark,DEN,0,,0,,Bruges,Belgium,home
+2000,Group,D,Group,2000-06-11,Netherlands,NED,1,,Czech Republic,CZE,0,,0,,Amsterdam,Belgium,home
+2000,Group,B,Group,2000-06-11,Turkey,TUR,1,,Italy,ITA,2,,0,,Arnhem,Belgium,away
+2000,Group,A,Group,2000-06-12,Germany,GER,1,,Romania,ROU,1,,0,,Liège,Belgium,draw
+2000,Group,A,Group,2000-06-12,Portugal,POR,3,,England,ENG,2,,0,,Eindhoven,Belgium,home
+2000,Group,C,Group,2000-06-13,Serbia,SRB,3,,Slovenia,SVN,3,,0,,Charleroi,Belgium,draw
+2000,Group,C,Group,2000-06-13,Spain,ESP,0,,Norway,NOR,1,,0,,Rotterdam,Belgium,away
+2000,Group,B,Group,2000-06-14,Belgium,BEL,0,,Italy,ITA,2,,0,,Brussels,Belgium,away
+2000,Group,B,Group,2000-06-15,Sweden,SWE,0,,Turkey,TUR,0,,0,,Eindhoven,Belgium,draw
+2000,Group,D,Group,2000-06-16,Czech Republic,CZE,1,,France,FRA,2,,0,,Bruges,Belgium,away
+2000,Group,D,Group,2000-06-16,Netherlands,NED,3,,Denmark,DEN,0,,0,,Rotterdam,Belgium,home
+2000,Group,A,Group,2000-06-17,England,ENG,1,,Germany,GER,0,,0,,Charleroi,Belgium,home
+2000,Group,A,Group,2000-06-17,Romania,ROU,0,,Portugal,POR,1,,0,,Arnhem,Belgium,away
+2000,Group,C,Group,2000-06-18,Norway,NOR,0,,Serbia,SRB,1,,0,,Liège,Belgium,away
+2000,Group,C,Group,2000-06-18,Slovenia,SVN,1,,Spain,ESP,2,,0,,Amsterdam,Belgium,away
+2000,Group,B,Group,2000-06-19,Belgium,BEL,0,,Turkey,TUR,2,,0,,Brussels,Belgium,away
+2000,Group,B,Group,2000-06-19,Italy,ITA,2,,Sweden,SWE,1,,0,,Eindhoven,Belgium,home
+2000,Group,A,Group,2000-06-20,England,ENG,2,,Romania,ROU,3,,0,,Charleroi,Belgium,away
+2000,Group,A,Group,2000-06-20,Portugal,POR,3,,Germany,GER,0,,0,,Rotterdam,Belgium,home
+2000,Group,D,Group,2000-06-21,Denmark,DEN,0,,Czech Republic,CZE,2,,0,,Liège,Belgium,away
+2000,Group,D,Group,2000-06-21,Netherlands,NED,3,,France,FRA,2,,0,,Amsterdam,Belgium,home
+2000,Group,C,Group,2000-06-21,Serbia,SRB,3,,Spain,ESP,4,,0,,Bruges,Belgium,away
+2000,Group,C,Group,2000-06-21,Slovenia,SVN,0,,Norway,NOR,0,,0,,Arnhem,Belgium,draw
+2000,Quarter-finals,,Quarter-finals,2000-06-24,Italy,ITA,2,,Romania,ROU,0,,0,,Brussels,Belgium,home
+2000,Quarter-finals,,Quarter-finals,2000-06-24,Turkey,TUR,0,,Portugal,POR,2,,0,,Amsterdam,Belgium,away
+2000,Quarter-finals,,Quarter-finals,2000-06-25,Netherlands,NED,6,,Serbia,SRB,1,,0,,Rotterdam,Belgium,home
+2000,Quarter-finals,,Quarter-finals,2000-06-25,Spain,ESP,1,,France,FRA,2,,0,,Bruges,Belgium,away
+2000,Semi-finals,,Semi-finals,2000-06-28,France,FRA,2,,Portugal,POR,1,,1,,Brussels,Belgium,home
+2000,Semi-finals,,Semi-finals,2000-06-29,Netherlands,NED,0,1,Italy,ITA,0,3,1,,Amsterdam,Belgium,draw
+2000,Final,,Final,2000-07-02,France,FRA,2,,Italy,ITA,1,,1,,Rotterdam,Belgium,home
+2004,Group,A,Group,2004-06-12,Portugal,POR,1,,Greece,GRE,2,,0,,Porto,Portugal,away
+2004,Group,A,Group,2004-06-12,Spain,ESP,1,,Russia,RUS,0,,0,,Faro,Portugal,home
+2004,Group,B,Group,2004-06-13,France,FRA,2,,England,ENG,1,,0,,Lisbon,Portugal,home
+2004,Group,B,Group,2004-06-13,Switzerland,SUI,0,,Croatia,CRO,0,,0,,Leiria,Portugal,draw
+2004,Group,C,Group,2004-06-14,Denmark,DEN,0,,Italy,ITA,0,,0,,Guimarães,Portugal,draw
+2004,Group,C,Group,2004-06-14,Sweden,SWE,5,,Bulgaria,BUL,0,,0,,Lisbon,Portugal,home
+2004,Group,D,Group,2004-06-15,Czech Republic,CZE,2,,Latvia,LVA,1,,0,,Aveiro,Portugal,home
+2004,Group,D,Group,2004-06-15,Germany,GER,1,,Netherlands,NED,1,,0,,Porto,Portugal,draw
+2004,Group,A,Group,2004-06-16,Greece,GRE,1,,Spain,ESP,1,,0,,Porto,Portugal,draw
+2004,Group,A,Group,2004-06-16,Portugal,POR,2,,Russia,RUS,0,,0,,Lisbon,Portugal,home
+2004,Group,B,Group,2004-06-17,Croatia,CRO,2,,France,FRA,2,,0,,Leiria,Portugal,draw
+2004,Group,B,Group,2004-06-17,England,ENG,3,,Switzerland,SUI,0,,0,,Coimbra,Portugal,home
+2004,Group,C,Group,2004-06-18,Bulgaria,BUL,0,,Denmark,DEN,2,,0,,Braga,Portugal,away
+2004,Group,C,Group,2004-06-18,Italy,ITA,1,,Sweden,SWE,1,,0,,Porto,Portugal,draw
+2004,Group,D,Group,2004-06-19,Latvia,LVA,0,,Germany,GER,0,,0,,Porto,Portugal,draw
+2004,Group,D,Group,2004-06-19,Netherlands,NED,2,,Czech Republic,CZE,3,,0,,Aveiro,Portugal,away
+2004,Group,A,Group,2004-06-20,Portugal,POR,1,,Spain,ESP,0,,0,,Lisbon,Portugal,home
+2004,Group,A,Group,2004-06-20,Russia,RUS,2,,Greece,GRE,1,,0,,Faro,Portugal,home
+2004,Group,B,Group,2004-06-21,Croatia,CRO,2,,England,ENG,4,,0,,Lisbon,Portugal,away
+2004,Group,B,Group,2004-06-21,Switzerland,SUI,1,,France,FRA,3,,0,,Coimbra,Portugal,away
+2004,Group,C,Group,2004-06-22,Denmark,DEN,2,,Sweden,SWE,2,,0,,Porto,Portugal,draw
+2004,Group,C,Group,2004-06-22,Italy,ITA,2,,Bulgaria,BUL,1,,0,,Guimarães,Portugal,home
+2004,Group,D,Group,2004-06-23,Germany,GER,1,,Czech Republic,CZE,2,,0,,Lisbon,Portugal,away
+2004,Group,D,Group,2004-06-23,Netherlands,NED,3,,Latvia,LVA,0,,0,,Braga,Portugal,home
+2004,Quarter-finals,,Quarter-finals,2004-06-24,Portugal,POR,2,6,England,ENG,2,5,1,,Lisbon,Portugal,draw
+2004,Quarter-finals,,Quarter-finals,2004-06-25,France,FRA,0,,Greece,GRE,1,,0,,Lisbon,Portugal,away
+2004,Quarter-finals,,Quarter-finals,2004-06-26,Sweden,SWE,0,4,Netherlands,NED,0,5,1,,Faro,Portugal,draw
+2004,Quarter-finals,,Quarter-finals,2004-06-27,Czech Republic,CZE,3,,Denmark,DEN,0,,0,,Porto,Portugal,home
+2004,Semi-finals,,Semi-finals,2004-06-30,Portugal,POR,2,,Netherlands,NED,1,,0,,Lisbon,Portugal,home
+2004,Semi-finals,,Semi-finals,2004-07-01,Greece,GRE,1,,Czech Republic,CZE,0,,1,,Porto,Portugal,home
+2004,Final,,Final,2004-07-04,Portugal,POR,0,,Greece,GRE,1,,0,,Lisbon,Portugal,away
+2008,Group,A,Group,2008-06-07,Portugal,POR,2,,Turkey,TUR,0,,0,,Geneva,Austria,home
+2008,Group,A,Group,2008-06-07,Switzerland,SUI,0,,Czech Republic,CZE,1,,0,,Basel,Austria,away
+2008,Group,B,Group,2008-06-08,Austria,AUT,0,,Croatia,CRO,1,,0,,Vienna,Austria,away
+2008,Group,B,Group,2008-06-08,Germany,GER,2,,Poland,POL,0,,0,,Klagenfurt,Austria,home
+2008,Group,C,Group,2008-06-09,Netherlands,NED,3,,Italy,ITA,0,,0,,Bern,Austria,home
+2008,Group,C,Group,2008-06-09,Romania,ROU,0,,France,FRA,0,,0,,Zürich,Austria,draw
+2008,Group,D,Group,2008-06-10,Greece,GRE,0,,Sweden,SWE,2,,0,,Salzburg,Austria,away
+2008,Group,D,Group,2008-06-10,Spain,ESP,4,,Russia,RUS,1,,0,,Innsbruck,Austria,home
+2008,Group,A,Group,2008-06-11,Czech Republic,CZE,1,,Portugal,POR,3,,0,,Geneva,Austria,away
+2008,Group,A,Group,2008-06-11,Switzerland,SUI,1,,Turkey,TUR,2,,0,,Basel,Austria,away
+2008,Group,B,Group,2008-06-12,Austria,AUT,1,,Poland,POL,1,,0,,Vienna,Austria,draw
+2008,Group,B,Group,2008-06-12,Croatia,CRO,2,,Germany,GER,1,,0,,Klagenfurt,Austria,home
+2008,Group,C,Group,2008-06-13,Italy,ITA,1,,Romania,ROU,1,,0,,Zürich,Austria,draw
+2008,Group,C,Group,2008-06-13,Netherlands,NED,4,,France,FRA,1,,0,,Bern,Austria,home
+2008,Group,D,Group,2008-06-14,Greece,GRE,0,,Russia,RUS,1,,0,,Salzburg,Austria,away
+2008,Group,D,Group,2008-06-14,Sweden,SWE,1,,Spain,ESP,2,,0,,Innsbruck,Austria,away
+2008,Group,A,Group,2008-06-15,Switzerland,SUI,2,,Portugal,POR,0,,0,,Basel,Austria,home
+2008,Group,A,Group,2008-06-15,Turkey,TUR,3,,Czech Republic,CZE,2,,0,,Geneva,Austria,home
+2008,Group,B,Group,2008-06-16,Austria,AUT,0,,Germany,GER,1,,0,,Vienna,Austria,away
+2008,Group,B,Group,2008-06-16,Poland,POL,0,,Croatia,CRO,1,,0,,Klagenfurt,Austria,away
+2008,Group,C,Group,2008-06-17,France,FRA,0,,Italy,ITA,2,,0,,Zürich,Austria,away
+2008,Group,C,Group,2008-06-17,Netherlands,NED,2,,Romania,ROU,0,,0,,Bern,Austria,home
+2008,Group,D,Group,2008-06-18,Greece,GRE,1,,Spain,ESP,2,,0,,Salzburg,Austria,away
+2008,Group,D,Group,2008-06-18,Russia,RUS,2,,Sweden,SWE,0,,0,,Innsbruck,Austria,home
+2008,Quarter-finals,,Quarter-finals,2008-06-19,Portugal,POR,2,,Germany,GER,3,,0,,Basel,Austria,away
+2008,Quarter-finals,,Quarter-finals,2008-06-20,Croatia,CRO,1,1,Turkey,TUR,1,3,1,,Vienna,Austria,draw
+2008,Quarter-finals,,Quarter-finals,2008-06-21,Netherlands,NED,1,,Russia,RUS,3,,1,,Basel,Austria,away
+2008,Quarter-finals,,Quarter-finals,2008-06-22,Spain,ESP,0,4,Italy,ITA,0,2,1,,Vienna,Austria,draw
+2008,Semi-finals,,Semi-finals,2008-06-25,Germany,GER,3,,Turkey,TUR,2,,0,,Basel,Austria,home
+2008,Semi-finals,,Semi-finals,2008-06-26,Russia,RUS,0,,Spain,ESP,3,,0,,Vienna,Austria,away
+2008,Final,,Final,2008-06-29,Germany,GER,0,,Spain,ESP,1,,0,,Vienna,Austria,away
+2012,Group,A,Group,2012-06-08,Poland,POL,1,,Greece,GRE,1,,0,,Warsaw,Poland,draw
+2012,Group,A,Group,2012-06-08,Russia,RUS,4,,Czech Republic,CZE,1,,0,,Wrocław,Poland,home
+2012,Group,B,Group,2012-06-09,Germany,GER,1,,Portugal,POR,0,,0,,Lviv,Poland,home
+2012,Group,B,Group,2012-06-09,Netherlands,NED,0,,Denmark,DEN,1,,0,,Kharkiv,Poland,away
+2012,Group,C,Group,2012-06-10,Republic of Ireland,IRL,1,,Croatia,CRO,3,,0,,Poznań,Poland,away
+2012,Group,C,Group,2012-06-10,Spain,ESP,1,,Italy,ITA,1,,0,,Gdańsk,Poland,draw
+2012,Group,D,Group,2012-06-11,France,FRA,1,,England,ENG,1,,0,,Donetsk,Poland,draw
+2012,Group,D,Group,2012-06-11,Ukraine,UKR,2,,Sweden,SWE,1,,0,,Kyiv,Poland,home
+2012,Group,A,Group,2012-06-12,Greece,GRE,1,,Czech Republic,CZE,2,,0,,Wrocław,Poland,away
+2012,Group,A,Group,2012-06-12,Poland,POL,1,,Russia,RUS,1,,0,,Warsaw,Poland,draw
+2012,Group,B,Group,2012-06-13,Denmark,DEN,2,,Portugal,POR,3,,0,,Lviv,Poland,away
+2012,Group,B,Group,2012-06-13,Netherlands,NED,1,,Germany,GER,2,,0,,Kharkiv,Poland,away
+2012,Group,C,Group,2012-06-14,Italy,ITA,1,,Croatia,CRO,1,,0,,Poznań,Poland,draw
+2012,Group,C,Group,2012-06-14,Spain,ESP,4,,Republic of Ireland,IRL,0,,0,,Gdańsk,Poland,home
+2012,Group,D,Group,2012-06-15,Sweden,SWE,2,,England,ENG,3,,0,,Kyiv,Poland,away
+2012,Group,D,Group,2012-06-15,Ukraine,UKR,0,,France,FRA,2,,0,,Donetsk,Poland,away
+2012,Group,A,Group,2012-06-16,Greece,GRE,1,,Russia,RUS,0,,0,,Warsaw,Poland,home
+2012,Group,A,Group,2012-06-16,Poland,POL,0,,Czech Republic,CZE,1,,0,,Wrocław,Poland,away
+2012,Group,B,Group,2012-06-17,Denmark,DEN,1,,Germany,GER,2,,0,,Lviv,Poland,away
+2012,Group,B,Group,2012-06-17,Portugal,POR,2,,Netherlands,NED,1,,0,,Kharkiv,Poland,home
+2012,Group,C,Group,2012-06-18,Croatia,CRO,0,,Spain,ESP,1,,0,,Gdańsk,Poland,away
+2012,Group,C,Group,2012-06-18,Italy,ITA,2,,Republic of Ireland,IRL,0,,0,,Poznań,Poland,home
+2012,Group,D,Group,2012-06-19,Sweden,SWE,2,,France,FRA,0,,0,,Kyiv,Poland,home
+2012,Group,D,Group,2012-06-19,Ukraine,UKR,0,,England,ENG,1,,0,,Donetsk,Poland,away
+2012,Quarter-finals,,Quarter-finals,2012-06-21,Czech Republic,CZE,0,,Portugal,POR,1,,0,,Warsaw,Poland,away
+2012,Quarter-finals,,Quarter-finals,2012-06-22,Germany,GER,4,,Greece,GRE,2,,0,,Gdańsk,Poland,home
+2012,Quarter-finals,,Quarter-finals,2012-06-23,Spain,ESP,2,,France,FRA,0,,0,,Donetsk,Poland,home
+2012,Quarter-finals,,Quarter-finals,2012-06-24,England,ENG,0,2,Italy,ITA,0,4,1,,Kyiv,Poland,draw
+2012,Semi-finals,,Semi-finals,2012-06-27,Portugal,POR,0,2,Spain,ESP,0,4,1,,Donetsk,Poland,draw
+2012,Semi-finals,,Semi-finals,2012-06-28,Germany,GER,1,,Italy,ITA,2,,0,,Warsaw,Poland,away
+2012,Final,,Final,2012-07-01,Spain,ESP,4,,Italy,ITA,0,,0,,Kyiv,Poland,home
+2016,Group,A,Group,2016-06-10,France,FRA,2,,Romania,ROU,1,,0,,Saint-Denis,France,home
+2016,Group,A,Group,2016-06-11,Albania,ALB,0,,Switzerland,SUI,1,,0,,Lens,France,away
+2016,Group,B,Group,2016-06-11,England,ENG,1,,Russia,RUS,1,,0,,Marseille,France,draw
+2016,Group,B,Group,2016-06-11,Wales,WAL,2,,Slovakia,SVK,1,,0,,Bordeaux,France,home
+2016,Group,C,Group,2016-06-12,Germany,GER,2,,Ukraine,UKR,0,,0,,Villeneuve-d'Ascq,France,home
+2016,Group,C,Group,2016-06-12,Poland,POL,1,,Northern Ireland,NIR,0,,0,,Nice,France,home
+2016,Group,D,Group,2016-06-12,Turkey,TUR,0,,Croatia,CRO,1,,0,,Paris,France,away
+2016,Group,E,Group,2016-06-13,Belgium,BEL,0,,Italy,ITA,2,,0,,Lyon,France,away
+2016,Group,E,Group,2016-06-13,Republic of Ireland,IRL,1,,Sweden,SWE,1,,0,,Saint-Denis,France,draw
+2016,Group,D,Group,2016-06-13,Spain,ESP,1,,Czech Republic,CZE,0,,0,,Toulouse,France,home
+2016,Group,F,Group,2016-06-14,Austria,AUT,0,,Hungary,HUN,2,,0,,Bordeaux,France,away
+2016,Group,F,Group,2016-06-14,Portugal,POR,1,,Iceland,ISL,1,,0,,Saint-Étienne,France,draw
+2016,Group,A,Group,2016-06-15,France,FRA,2,,Albania,ALB,0,,0,,Marseille,France,home
+2016,Group,A,Group,2016-06-15,Romania,ROU,1,,Switzerland,SUI,1,,0,,Paris,France,draw
+2016,Group,B,Group,2016-06-15,Russia,RUS,1,,Slovakia,SVK,2,,0,,Villeneuve-d'Ascq,France,away
+2016,Group,B,Group,2016-06-16,England,ENG,2,,Wales,WAL,1,,0,,Lens,France,home
+2016,Group,C,Group,2016-06-16,Germany,GER,0,,Poland,POL,0,,0,,Saint-Denis,France,draw
+2016,Group,C,Group,2016-06-16,Ukraine,UKR,0,,Northern Ireland,NIR,2,,0,,Lyon,France,away
+2016,Group,D,Group,2016-06-17,Czech Republic,CZE,2,,Croatia,CRO,2,,0,,Saint-Étienne,France,draw
+2016,Group,E,Group,2016-06-17,Italy,ITA,1,,Sweden,SWE,0,,0,,Toulouse,France,home
+2016,Group,D,Group,2016-06-17,Spain,ESP,3,,Turkey,TUR,0,,0,,Nice,France,home
+2016,Group,E,Group,2016-06-18,Belgium,BEL,3,,Republic of Ireland,IRL,0,,0,,Bordeaux,France,home
+2016,Group,F,Group,2016-06-18,Iceland,ISL,1,,Hungary,HUN,1,,0,,Marseille,France,draw
+2016,Group,F,Group,2016-06-18,Portugal,POR,0,,Austria,AUT,0,,0,,Lyon,France,draw
+2016,Group,A,Group,2016-06-19,France,FRA,0,,Switzerland,SUI,0,,0,,Villeneuve-d'Ascq,France,draw
+2016,Group,A,Group,2016-06-19,Romania,ROU,0,,Albania,ALB,1,,0,,Lyon,France,away
+2016,Group,B,Group,2016-06-20,Russia,RUS,0,,Wales,WAL,3,,0,,Toulouse,France,away
+2016,Group,B,Group,2016-06-20,Slovakia,SVK,0,,England,ENG,0,,0,,Saint-Étienne,France,draw
+2016,Group,D,Group,2016-06-21,Croatia,CRO,2,,Spain,ESP,1,,0,,Bordeaux,France,home
+2016,Group,D,Group,2016-06-21,Czech Republic,CZE,0,,Turkey,TUR,2,,0,,Lens,France,away
+2016,Group,C,Group,2016-06-21,Northern Ireland,NIR,0,,Germany,GER,1,,0,,Paris,France,away
+2016,Group,C,Group,2016-06-21,Ukraine,UKR,0,,Poland,POL,1,,0,,Marseille,France,away
+2016,Group,F,Group,2016-06-22,Hungary,HUN,3,,Portugal,POR,3,,0,,Lyon,France,draw
+2016,Group,F,Group,2016-06-22,Iceland,ISL,2,,Austria,AUT,1,,0,,Saint-Denis,France,home
+2016,Group,E,Group,2016-06-22,Italy,ITA,0,,Republic of Ireland,IRL,1,,0,,Villeneuve-d'Ascq,France,away
+2016,Group,E,Group,2016-06-22,Sweden,SWE,0,,Belgium,BEL,1,,0,,Nice,France,away
+2016,Round of 16,,Round of 16,2016-06-25,Croatia,CRO,0,,Portugal,POR,1,,1,,Lens,France,away
+2016,Round of 16,,Round of 16,2016-06-25,Switzerland,SUI,1,4,Poland,POL,1,5,1,,Saint-Étienne,France,draw
+2016,Round of 16,,Round of 16,2016-06-25,Wales,WAL,1,,Northern Ireland,NIR,0,,0,,Paris,France,home
+2016,Round of 16,,Round of 16,2016-06-26,France,FRA,2,,Republic of Ireland,IRL,1,,0,,Lyon,France,home
+2016,Round of 16,,Round of 16,2016-06-26,Germany,GER,3,,Slovakia,SVK,0,,0,,Villeneuve-d'Ascq,France,home
+2016,Round of 16,,Round of 16,2016-06-26,Hungary,HUN,0,,Belgium,BEL,4,,0,,Toulouse,France,away
+2016,Round of 16,,Round of 16,2016-06-27,England,ENG,1,,Iceland,ISL,2,,0,,Nice,France,away
+2016,Round of 16,,Round of 16,2016-06-27,Italy,ITA,2,,Spain,ESP,0,,0,,Saint-Denis,France,home
+2016,Quarter-finals,,Quarter-finals,2016-06-30,Poland,POL,1,3,Portugal,POR,1,5,1,,Marseille,France,draw
+2016,Quarter-finals,,Quarter-finals,2016-07-01,Wales,WAL,3,,Belgium,BEL,1,,0,,Villeneuve-d'Ascq,France,home
+2016,Quarter-finals,,Quarter-finals,2016-07-02,Germany,GER,1,6,Italy,ITA,1,5,1,,Bordeaux,France,draw
+2016,Quarter-finals,,Quarter-finals,2016-07-03,France,FRA,5,,Iceland,ISL,2,,0,,Saint-Denis,France,home
+2016,Semi-finals,,Semi-finals,2016-07-06,Portugal,POR,2,,Wales,WAL,0,,0,,Lyon,France,home
+2016,Semi-finals,,Semi-finals,2016-07-07,France,FRA,2,,Germany,GER,0,,0,,Marseille,France,home
+2016,Final,,Final,2016-07-10,France,FRA,0,,Portugal,POR,1,,1,,Saint-Denis,France,away
+2021,Group,A,Group,2021-06-11,Italy,ITA,3,,Turkey,TUR,0,,0,,Rome,Europe,home
+2021,Group,B,Group,2021-06-12,Denmark,DEN,0,,Finland,FIN,1,,0,,Copenhagen,Europe,away
+2021,Group,B,Group,2021-06-12,Russia,RUS,0,,Belgium,BEL,3,,0,,Saint Petersburg,Europe,away
+2021,Group,A,Group,2021-06-12,Wales,WAL,1,,Switzerland,SUI,1,,0,,Cardiff,Europe,draw
+2021,Group,C,Group,2021-06-13,Austria,AUT,3,,North Macedonia,MKD,1,,0,,Bucharest,Europe,home
+2021,Group,D,Group,2021-06-13,England,ENG,1,,Croatia,CRO,0,,0,,London,Europe,home
+2021,Group,C,Group,2021-06-13,Netherlands,NED,3,,Ukraine,UKR,2,,0,,Amsterdam,Europe,home
+2021,Group,E,Group,2021-06-14,Poland,POL,1,,Slovakia,SVK,2,,0,,Saint Petersburg,Europe,away
+2021,Group,D,Group,2021-06-14,Scotland,SCO,0,,Czech Republic,CZE,2,,0,,Glasgow,Europe,away
+2021,Group,E,Group,2021-06-14,Spain,ESP,0,,Sweden,SWE,0,,0,,Seville,Europe,draw
+2021,Group,F,Group,2021-06-15,Germany,GER,0,,France,FRA,1,,0,,Munich,Europe,away
+2021,Group,F,Group,2021-06-15,Hungary,HUN,0,,Portugal,POR,3,,0,,Budapest,Europe,away
+2021,Group,A,Group,2021-06-16,Italy,ITA,3,,Switzerland,SUI,0,,0,,Rome,Europe,home
+2021,Group,B,Group,2021-06-16,Russia,RUS,1,,Finland,FIN,0,,0,,Saint Petersburg,Europe,home
+2021,Group,A,Group,2021-06-16,Turkey,TUR,0,,Wales,WAL,2,,0,,Baku,Europe,away
+2021,Group,B,Group,2021-06-17,Denmark,DEN,1,,Belgium,BEL,2,,0,,Copenhagen,Europe,away
+2021,Group,C,Group,2021-06-17,Netherlands,NED,2,,Austria,AUT,0,,0,,Amsterdam,Europe,home
+2021,Group,C,Group,2021-06-17,Ukraine,UKR,2,,North Macedonia,MKD,1,,0,,Bucharest,Europe,home
+2021,Group,D,Group,2021-06-18,Croatia,CRO,1,,Czech Republic,CZE,1,,0,,Glasgow,Europe,draw
+2021,Group,D,Group,2021-06-18,England,ENG,0,,Scotland,SCO,0,,0,,London,Europe,draw
+2021,Group,E,Group,2021-06-18,Sweden,SWE,1,,Slovakia,SVK,0,,0,,Saint Petersburg,Europe,home
+2021,Group,F,Group,2021-06-19,Germany,GER,4,,Portugal,POR,2,,0,,Munich,Europe,home
+2021,Group,F,Group,2021-06-19,Hungary,HUN,1,,France,FRA,1,,0,,Budapest,Europe,draw
+2021,Group,E,Group,2021-06-19,Spain,ESP,1,,Poland,POL,1,,0,,Seville,Europe,draw
+2021,Group,A,Group,2021-06-20,Italy,ITA,1,,Wales,WAL,0,,0,,Rome,Europe,home
+2021,Group,A,Group,2021-06-20,Switzerland,SUI,3,,Turkey,TUR,1,,0,,Baku,Europe,home
+2021,Group,B,Group,2021-06-21,Denmark,DEN,4,,Russia,RUS,1,,0,,Copenhagen,Europe,home
+2021,Group,B,Group,2021-06-21,Finland,FIN,0,,Belgium,BEL,2,,0,,Saint Petersburg,Europe,away
+2021,Group,C,Group,2021-06-21,Netherlands,NED,3,,North Macedonia,MKD,0,,0,,Amsterdam,Europe,home
+2021,Group,C,Group,2021-06-21,Ukraine,UKR,0,,Austria,AUT,1,,0,,Bucharest,Europe,away
+2021,Group,D,Group,2021-06-22,England,ENG,1,,Czech Republic,CZE,0,,0,,London,Europe,home
+2021,Group,D,Group,2021-06-22,Scotland,SCO,1,,Croatia,CRO,3,,0,,Glasgow,Europe,away
+2021,Group,F,Group,2021-06-23,Germany,GER,2,,Hungary,HUN,2,,0,,Munich,Europe,draw
+2021,Group,F,Group,2021-06-23,Portugal,POR,2,,France,FRA,2,,0,,Budapest,Europe,draw
+2021,Group,E,Group,2021-06-23,Spain,ESP,5,,Slovakia,SVK,0,,0,,Seville,Europe,home
+2021,Group,E,Group,2021-06-23,Sweden,SWE,3,,Poland,POL,2,,0,,Saint Petersburg,Europe,home
+2021,Round of 16,,Round of 16,2021-06-26,Italy,ITA,2,,Austria,AUT,1,,1,,London,Europe,home
+2021,Round of 16,,Round of 16,2021-06-26,Wales,WAL,0,,Denmark,DEN,4,,0,,Amsterdam,Europe,away
+2021,Round of 16,,Round of 16,2021-06-27,Belgium,BEL,1,,Portugal,POR,0,,0,,Seville,Europe,home
+2021,Round of 16,,Round of 16,2021-06-27,Netherlands,NED,0,,Czech Republic,CZE,2,,0,,Budapest,Europe,away
+2021,Round of 16,,Round of 16,2021-06-28,Croatia,CRO,3,,Spain,ESP,5,,1,,Copenhagen,Europe,away
+2021,Round of 16,,Round of 16,2021-06-28,France,FRA,3,4,Switzerland,SUI,3,5,1,,Bucharest,Europe,draw
+2021,Round of 16,,Round of 16,2021-06-29,England,ENG,2,,Germany,GER,0,,0,,London,Europe,home
+2021,Round of 16,,Round of 16,2021-06-29,Sweden,SWE,1,,Ukraine,UKR,2,,1,,Glasgow,Europe,away
+2021,Quarter-finals,,Quarter-finals,2021-07-02,Belgium,BEL,1,,Italy,ITA,2,,0,,Munich,Europe,away
+2021,Quarter-finals,,Quarter-finals,2021-07-02,Switzerland,SUI,1,1,Spain,ESP,1,3,1,,Saint Petersburg,Europe,draw
+2021,Quarter-finals,,Quarter-finals,2021-07-03,Czech Republic,CZE,1,,Denmark,DEN,2,,0,,Baku,Europe,away
+2021,Quarter-finals,,Quarter-finals,2021-07-03,Ukraine,UKR,0,,England,ENG,4,,0,,Rome,Europe,away
+2021,Semi-finals,,Semi-finals,2021-07-06,Italy,ITA,1,4,Spain,ESP,1,2,1,,London,Europe,draw
+2021,Semi-finals,,Semi-finals,2021-07-07,England,ENG,2,,Denmark,DEN,1,,1,,London,Europe,home
+2021,Final,,Final,2021-07-11,England,ENG,1,2,Italy,ITA,1,3,1,,London,Europe,draw
+2024,Group,A,Group,2024-06-14,Germany,GER,5,,Scotland,SCO,1,,0,,Munich,Germany,home
+2024,Group,A,Group,2024-06-15,Hungary,HUN,1,,Switzerland,SUI,3,,0,,Cologne,Germany,away
+2024,Group,B,Group,2024-06-15,Italy,ITA,2,,Albania,ALB,1,,0,,Dortmund,Germany,home
+2024,Group,B,Group,2024-06-15,Spain,ESP,3,,Croatia,CRO,0,,0,,Berlin,Germany,home
+2024,Group,D,Group,2024-06-16,Poland,POL,1,,Netherlands,NED,2,,0,,Hamburg,Germany,away
+2024,Group,C,Group,2024-06-16,Serbia,SRB,0,,England,ENG,1,,0,,Gelsenkirchen,Germany,away
+2024,Group,C,Group,2024-06-16,Slovenia,SVN,1,,Denmark,DEN,1,,0,,Stuttgart,Germany,draw
+2024,Group,D,Group,2024-06-17,Austria,AUT,0,,France,FRA,1,,0,,Düsseldorf,Germany,away
+2024,Group,E,Group,2024-06-17,Belgium,BEL,0,,Slovakia,SVK,1,,0,,Frankfurt,Germany,away
+2024,Group,E,Group,2024-06-17,Romania,ROU,3,,Ukraine,UKR,0,,0,,Munich,Germany,home
+2024,Group,F,Group,2024-06-18,Portugal,POR,2,,Czech Republic,CZE,1,,0,,Leipzig,Germany,home
+2024,Group,F,Group,2024-06-18,Turkey,TUR,3,,Georgia,GEO,1,,0,,Dortmund,Germany,home
+2024,Group,B,Group,2024-06-19,Croatia,CRO,2,,Albania,ALB,2,,0,,Hamburg,Germany,draw
+2024,Group,A,Group,2024-06-19,Germany,GER,2,,Hungary,HUN,0,,0,,Stuttgart,Germany,home
+2024,Group,A,Group,2024-06-19,Scotland,SCO,1,,Switzerland,SUI,1,,0,,Cologne,Germany,draw
+2024,Group,C,Group,2024-06-20,Denmark,DEN,1,,England,ENG,1,,0,,Frankfurt,Germany,draw
+2024,Group,C,Group,2024-06-20,Slovenia,SVN,1,,Serbia,SRB,1,,0,,Munich,Germany,draw
+2024,Group,B,Group,2024-06-20,Spain,ESP,1,,Italy,ITA,0,,0,,Gelsenkirchen,Germany,home
+2024,Group,D,Group,2024-06-21,Netherlands,NED,0,,France,FRA,0,,0,,Leipzig,Germany,draw
+2024,Group,D,Group,2024-06-21,Poland,POL,1,,Austria,AUT,3,,0,,Berlin,Germany,away
+2024,Group,E,Group,2024-06-21,Slovakia,SVK,1,,Ukraine,UKR,2,,0,,Düsseldorf,Germany,away
+2024,Group,E,Group,2024-06-22,Belgium,BEL,2,,Romania,ROU,0,,0,,Cologne,Germany,home
+2024,Group,F,Group,2024-06-22,Georgia,GEO,1,,Czech Republic,CZE,1,,0,,Hamburg,Germany,draw
+2024,Group,F,Group,2024-06-22,Turkey,TUR,0,,Portugal,POR,3,,0,,Dortmund,Germany,away
+2024,Group,A,Group,2024-06-23,Germany,GER,1,,Switzerland,SUI,1,,0,,Frankfurt,Germany,draw
+2024,Group,A,Group,2024-06-23,Scotland,SCO,0,,Hungary,HUN,1,,0,,Stuttgart,Germany,away
+2024,Group,B,Group,2024-06-24,Albania,ALB,0,,Spain,ESP,1,,0,,Düsseldorf,Germany,away
+2024,Group,B,Group,2024-06-24,Croatia,CRO,1,,Italy,ITA,1,,0,,Leipzig,Germany,draw
+2024,Group,C,Group,2024-06-25,Denmark,DEN,0,,Serbia,SRB,0,,0,,Munich,Germany,draw
+2024,Group,C,Group,2024-06-25,England,ENG,0,,Slovenia,SVN,0,,0,,Cologne,Germany,draw
+2024,Group,D,Group,2024-06-25,France,FRA,1,,Poland,POL,1,,0,,Dortmund,Germany,draw
+2024,Group,D,Group,2024-06-25,Netherlands,NED,2,,Austria,AUT,3,,0,,Berlin,Germany,away
+2024,Group,F,Group,2024-06-26,Czech Republic,CZE,1,,Turkey,TUR,2,,0,,Hamburg,Germany,away
+2024,Group,F,Group,2024-06-26,Georgia,GEO,2,,Portugal,POR,0,,0,,Gelsenkirchen,Germany,home
+2024,Group,E,Group,2024-06-26,Slovakia,SVK,1,,Romania,ROU,1,,0,,Frankfurt,Germany,draw
+2024,Group,E,Group,2024-06-26,Ukraine,UKR,0,,Belgium,BEL,0,,0,,Stuttgart,Germany,draw
+2024,Round of 16,,Round of 16,2024-06-29,Germany,GER,2,,Denmark,DEN,0,,0,,Dortmund,Germany,home
+2024,Round of 16,,Round of 16,2024-06-29,Switzerland,SUI,2,,Italy,ITA,0,,0,,Berlin,Germany,home
+2024,Round of 16,,Round of 16,2024-06-30,England,ENG,2,,Slovakia,SVK,1,,0,,Gelsenkirchen,Germany,home
+2024,Round of 16,,Round of 16,2024-06-30,Spain,ESP,4,,Georgia,GEO,1,,0,,Cologne,Germany,home
+2024,Round of 16,,Round of 16,2024-07-01,France,FRA,1,,Belgium,BEL,0,,0,,Düsseldorf,Germany,home
+2024,Round of 16,,Round of 16,2024-07-01,Portugal,POR,0,3,Slovenia,SVN,0,0,1,,Frankfurt,Germany,draw
+2024,Round of 16,,Round of 16,2024-07-02,Austria,AUT,1,,Turkey,TUR,2,,0,,Leipzig,Germany,away
+2024,Round of 16,,Round of 16,2024-07-02,Romania,ROU,0,,Netherlands,NED,3,,0,,Munich,Germany,away
+2024,Quarter-finals,,Quarter-finals,2024-07-05,Germany,GER,1,,Spain,ESP,2,,0,,Stuttgart,Germany,away
+2024,Quarter-finals,,Quarter-finals,2024-07-05,Portugal,POR,0,3,France,FRA,0,5,1,,Hamburg,Germany,draw
+2024,Quarter-finals,,Quarter-finals,2024-07-06,England,ENG,1,5,Switzerland,SUI,1,3,1,,Düsseldorf,Germany,draw
+2024,Quarter-finals,,Quarter-finals,2024-07-06,Netherlands,NED,2,,Turkey,TUR,1,,0,,Berlin,Germany,home
+2024,Semi-finals,,Semi-finals,2024-07-09,Spain,ESP,2,,France,FRA,1,,0,,Munich,Germany,home
+2024,Semi-finals,,Semi-finals,2024-07-10,Netherlands,NED,1,,England,ENG,2,,0,,Dortmund,Germany,away
+2024,Final,,Final,2024-07-14,Spain,ESP,2,,England,ENG,1,,0,,Berlin,Germany,home

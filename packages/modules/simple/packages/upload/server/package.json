@@ -1,0 +1,51 @@
+{
+  "name": "@simple-upload/server",
+  "version": "0.0.1",
+  "description": "Simple Upload for Server",
+  "main": "dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "keywords": [
+    "simple",
+    "upload",
+    "server"
+  ],
+  "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
+  "license": "GPL-3.0",
+  "packageManager": "pnpm@11.13.0",
+  "engines": {
+    "node": "26.5.0"
+  },
+  "scripts": {
+    "format": "prettier --cache --write .",
+    "lint": "eslint . --fix",
+    "prebuild": "rimraf dist",
+    "build": "tsc -p tsconfig.build.json",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "3.1083.0",
+    "@aws-sdk/s3-presigned-post": "3.1083.0",
+    "@aws-sdk/s3-request-presigner": "3.1083.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/jest": "30.0.0",
+    "@types/node": "26.1.1",
+    "eslint": "10.6.0",
+    "globals": "17.7.0",
+    "jest": "30.4.2",
+    "jiti": "2.7.0",
+    "prettier": "3.9.4",
+    "rimraf": "6.1.3",
+    "ts-jest": "29.4.11",
+    "ts-node": "10.9.2",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.63.0"
+  }
+}

@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`BlogSidebar to match snapshot 1`] = `
+<div>
+  <aside
+    class="flex flex-col gap-8"
+  >
+    <div>
+      <p
+        class="text-base-content/50 mb-3 text-xs font-medium tracking-[0.14em] uppercase"
+      >
+        Tags
+      </p>
+      <div
+        class="flex flex-wrap gap-2"
+      >
+        <div
+          class="flex items-center gap-1"
+        >
+          <span
+            class="badge badge-sm badge-ghost border-base-300 text-base-content/60"
+          >
+            react
+          </span>
+          <span
+            class="text-base-content/20 text-xs"
+          >
+            3
+          </span>
+        </div>
+        <div
+          class="flex items-center gap-1"
+        >
+          <span
+            class="badge badge-sm badge-ghost border-base-300 text-base-content/60"
+          >
+            typescript
+          </span>
+          <span
+            class="text-base-content/20 text-xs"
+          >
+            2
+          </span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p
+        class="text-base-content/50 mb-3 text-xs font-medium tracking-[0.14em] uppercase"
+      >
+        Recent posts
+      </p>
+      <div
+        class="flex flex-col gap-3"
+      >
+        <a
+          class="text-base-content/60 hover:text-base-content group text-sm leading-relaxed transition-colors"
+          href="/blog/post-1"
+        >
+          <span
+            class="group-hover:text-primary transition-colors"
+          >
+            Post One
+          </span>
+          <span
+            class="text-base-content/30 ml-2 text-xs"
+          >
+            2024-01-15
+          </span>
+        </a>
+        <a
+          class="text-base-content/60 hover:text-base-content group text-sm leading-relaxed transition-colors"
+          href="/blog/post-2"
+        >
+          <span
+            class="group-hover:text-primary transition-colors"
+          >
+            Post Two
+          </span>
+          <span
+            class="text-base-content/30 ml-2 text-xs"
+          >
+            2024-02-01
+          </span>
+        </a>
+      </div>
+    </div>
+  </aside>
+</div>
+`;

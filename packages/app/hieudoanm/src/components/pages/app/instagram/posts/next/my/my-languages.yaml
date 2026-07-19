@@ -1,0 +1,67 @@
+# Slide 1 (Highlighted Title)
+highlighted-title:
+  headline: My 2026 Programming Languages
+  text: The right language for the right job
+
+---
+# Slide 2 (Icon + Text)
+icon-text:
+  icon: '🌐'
+  headline: TypeScript
+  text:
+    Web development. Type safety across the frontend and backend, catching bugs
+    before runtime.
+
+---
+# Slide 3 (Icon + Text)
+icon-text:
+  icon: '🐍'
+  headline: Python
+  text:
+    Data science. The ecosystem for analysis, notebooks, and machine learning is
+    unmatched.
+
+---
+# Slide 4 (Icon + Text)
+icon-text:
+  icon: '🐹'
+  headline: Go
+  text:
+    CLI tools. Fast compiles, single binaries, and a standard library that just
+    works.
+
+---
+# Slide 5 (Icon + Text)
+icon-text:
+  icon: '🤖'
+  headline: Kotlin
+  text:
+    Android development. Modern syntax, full Java interop, and first-class
+    Jetpack Compose support.
+
+---
+# Slide 6 (Icon + Text)
+icon-text:
+  icon: '☕'
+  headline: Java
+  text:
+    Enterprise software. Mature tooling and rock-solid stability for large-scale
+    systems.
+
+---
+# Slide 7 (Bullet List)
+bullet-list:
+  headline: The Languages, Recap
+  items:
+    - 'TypeScript — web development'
+    - 'Python — data science'
+    - 'Go — CLI tools'
+    - 'Kotlin — Android development'
+    - 'Java — enterprise software'
+
+---
+# Slide 8 (Minimal)
+minimal:
+  headline: What language do you reach for first?
+  text: Curious how others split their stack by use case — drop yours below.
+  imageUrl: ''

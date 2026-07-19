@@ -1,0 +1,76 @@
+{
+  "name": "obsidian-flow",
+  "version": "0.0.1",
+  "displayName": "Obsidian Flow",
+  "description": "Wiki-link navigation and knowledge graph for markdown files",
+  "publisher": "hieudoanm",
+  "license": "GPL-3.0",
+  "engines": {
+    "vscode": "^1.107.0"
+  },
+  "categories": [
+    "Notebooks"
+  ],
+  "activationEvents": [
+    "onLanguage:markdown"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "obsidianFlow.showGraph",
+        "title": "Obsidian Flow: Show Knowledge Graph"
+      },
+      {
+        "command": "obsidianFlow.loadGraphFromFile",
+        "title": "Obsidian Flow: Load Graph from JSON File"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "obsidianFlow.showGraph",
+        "key": "cmd+alt+g",
+        "mac": "cmd+alt+g"
+      }
+    ],
+    "configuration": {
+      "title": "Obsidian Flow",
+      "properties": {
+        "obsidianFlow.excludePatterns": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "**/node_modules/**",
+            "**/.git/**",
+            "**/dist/**",
+            "**/.next/**",
+            "**/vendor/**",
+            "**/__pycache__/**"
+          ],
+          "description": "Glob patterns for directories to exclude when scanning for markdown files"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build": "tsc -p ./",
+    "dev": "tsc -watch -p ./",
+    "lint": "eslint src/",
+    "format": "prettier --write src/",
+    "format:check": "prettier --check src/"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "26.1.1",
+    "@types/vscode": "1.125.0",
+    "@vscode/vsce": "3.9.2",
+    "eslint": "10.6.0",
+    "globals": "17.7.0",
+    "jiti": "2.7.0",
+    "prettier": "3.9.4",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.63.0"
+  }
+}

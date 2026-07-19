@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Blackjack should render correctly 1`] = `
+<div>
+  <div
+    class="flex h-screen flex-col overflow-hidden"
+  >
+    <div
+      class="border-base-300 flex shrink-0 items-center justify-between border-b px-4 py-3"
+    >
+      <h2
+        class="text-sm font-normal tracking-tight"
+      >
+        🃏 Card Counting
+      </h2>
+      <button
+        class="btn btn-ghost btn-xs btn-square text-base opacity-60 hover:opacity-100"
+      >
+        ✕
+      </button>
+    </div>
+    <div
+      class="flex-1 overflow-y-auto p-8"
+    >
+      <div
+        class="outline-none"
+        tabindex="0"
+      >
+        <div
+          class="bg-base-200 mb-4 flex flex-col items-center justify-center rounded-xl py-6"
+        >
+          <span
+            class="text-base-content/40 text-sm"
+          >
+            Deal a card to start
+          </span>
+        </div>
+        <div
+          class="mb-4 flex items-center justify-between text-sm"
+        >
+          <span
+            class="opacity-50"
+          >
+            Cards left: 
+            52
+          </span>
+          <span
+            class="text-xs opacity-30"
+          >
+            Press Space to reveal count
+          </span>
+        </div>
+        <div
+          class="grid grid-cols-3 gap-2"
+        >
+          <button
+            class="btn btn-primary btn-sm"
+          >
+            Deal
+          </button>
+          <button
+            class="btn btn-secondary btn-sm"
+          >
+            Reveal
+          </button>
+          <button
+            class="btn btn-accent btn-sm"
+          >
+            Reset
+          </button>
+        </div>
+        <p
+          class="mt-3 text-center text-xs opacity-40"
+        >
+          <kbd
+            class="kbd kbd-xs"
+          >
+            Tab
+          </kbd>
+           Deal ·
+           
+          <kbd
+            class="kbd kbd-xs"
+          >
+            Space
+          </kbd>
+           reveal ·
+           
+          <kbd
+            class="kbd kbd-xs"
+          >
+            R
+          </kbd>
+           Reset
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
