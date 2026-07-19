@@ -1,0 +1,367 @@
+no,group,subgroup,category,subcategory,type,idea,status
+001,Football,Champions League,2026/2027,Round 1,,Round of 16,TODO
+002,Football,Champions League,2026/2027,Round 2,,Quarter Finals,TODO
+003,Football,Champions League,2026/2027,Round 3,,Semi Finals,TODO
+004,Football,Champions League,2026/2027,Round 4,,Final,TODO
+005,Football,Euro,2028,Round 1,,Round of 16,TODO
+006,Football,Euro,2028,Round 2,,Quarter Finals,TODO
+007,Football,Euro,2028,Round 3,,Semi Finals,TODO
+008,Football,Euro,2028,Round 4,,Final,TODO
+009,Football,World Cup,2026,Round 1,,Round of 32,POSTED
+010,Football,World Cup,2026,Round 2,,Round of 16,POSTED
+011,Football,World Cup,2026,Round 3,,Quarter Finals,TODO
+012,Football,World Cup,2026,Round 4,,Semi Finals,TODO
+013,Football,World Cup,2026,Round 5,,Final,TODO
+014,Football,World Cup,2030,Round 1,,Round of 32,TODO
+015,Football,World Cup,2030,Round 2,,Round of 16,TODO
+016,Football,World Cup,2030,Round 3,,Quarter Finals,TODO
+017,Football,World Cup,2030,Round 4,,Semi Finals,TODO
+018,Football,World Cup,2030,Round 5,,Final,TODO
+019,Psychology,Brain,Cerebral Cortex,Lobes,list,List of Brain Lobes,TODO
+020,Psychology,Brain,Cerebral Cortex,Lobes,,Limbic Lobe,TODO
+021,Psychology,Brain,Cerebral Cortex,Lobes,,Frontal Lobe,TODO
+022,Psychology,Brain,Cerebral Cortex,Lobes,,Insular Lobe,TODO
+023,Psychology,Brain,Cerebral Cortex,Lobes,,Occipital Lobe,TODO
+024,Psychology,Brain,Cerebral Cortex,Lobes,,Parietal Lobe,TODO
+025,Psychology,Brain,Cerebral Cortex,Lobes,,Temporal Lobe,TODO
+026,Psychology,Brain,Major Structures,Cerebrum,,Cerebrum,TODO
+027,Psychology,Brain,Deep Brain Structures,Limbic System,,Hippocampus,TODO
+028,Psychology,Brain,Deep Brain Structures,Limbic System,,Amygdala,TODO
+029,Psychology,Brain,Deep Brain Structures,Diencephalon,,Thalamus,TODO
+030,Psychology,Brain,Deep Brain Structures,Diencephalon,,Hypothalamus,TODO
+031,Psychology,Brain,Deep Brain Structures,Subcortical Nuclei,,Basal Ganglia,TODO
+032,Psychology,Brain,Major Structures,White Matter,,Corpus Callosum,TODO
+033,Psychology,Cognitive,Cognitive Bias,,list,List of Cognitive Bias,TODO
+034,Psychology,Cognitive,Cognitive Bias,,,Anchoring,TODO
+035,Psychology,Cognitive,Cognitive Bias,,,Dunning-Kruger,TODO
+036,Psychology,Cognitive,Cognitive Bias,,,Confirmation Bias,TODO
+037,Psychology,Cognitive,Cognitive Bias,,,Availability Heuristic,TODO
+038,Psychology,Cognitive,Cognitive Bias,,,Sunk Cost Fallacy,TODO
+039,Psychology,Cognitive,Cognitive Bias,,,Framing Effect,TODO
+040,Psychology,Memory,,,,Short-term Memory,TODO
+041,Psychology,Memory,,,,Long-term Memory,TODO
+042,Psychology,Memory,,,,Working Memory,TODO
+043,Psychology,Memory,,,,Ebbinghaus Forgetting Curve,TODO
+044,Psychology,Development,,,,Piaget's Stages,TODO
+045,Psychology,Development,,,,Maslow's Hierarchy,TODO
+046,Psychology,Development,,,,Erikson's Stages,TODO
+047,Psychology,Social,,,,Milgram Experiment,TODO
+048,Psychology,Social,,,,Stanford Prison,TODO
+049,Psychology,Social,,,,Bystander Effect,TODO
+050,Psychology,Social,,,,Conformity,TODO
+051,Psychology,Sleep,,,,The importance of sleep,TODO
+052,Technology,Back-end,,,list,List of Protocol,TODO
+053,Technology,Back-end,Database,0 - Paradigm,list,List of Database Paradigms,TODO
+054,Technology,Back-end,Database,1 - Key-Value,list,List of Key-Value Database,TODO
+055,Technology,Back-end,Database,1 - Key-Value,,Redis,TODO
+056,Technology,Back-end,Database,2 - Wide-Column,,Cassandra,TODO
+057,Technology,Back-end,Database,3 - Documental,list,List of Documental Database,TODO
+058,Technology,Back-end,Database,3 - Documental,,MongoDB,TODO
+059,Technology,Back-end,Database,3 - Documental,,DynamoDB,TODO
+060,Technology,Back-end,Database,3 - Documental,,CouchDB,TODO
+061,Technology,Back-end,Database,4 - Relational,list,List of Relational Database,TODO
+062,Technology,Back-end,Database,4 - Relational,,PostgreSQL,TODO
+063,Technology,Back-end,Database,4 - Relational,,SQLite,TODO
+064,Technology,Back-end,Database,4 - Relational,,MySQL,TODO
+065,Technology,Back-end,Database,5 - Graph,,Neo4j,TODO
+066,Technology,Back-end,Database,6 - Search,,ElasticSearch,TODO
+067,Technology,Back-end,Messages Broker,,list,List of Messages Brokers,TODO
+068,Technology,Back-end,Messages Broker,,,Kafka,TODO
+069,Technology,Back-end,Messages Broker,,,RabbitMQ,TODO
+070,Technology,Developer Tools,IDE,,list,List of IDEs,TODO
+071,Technology,Developer Tools,IDE,,,VSCode,TODO
+072,Technology,Developer Tools,IDE,,,Zed,TODO
+073,Technology,Developer Tools,IDE,,,Cursor,TODO
+074,Technology,Developer Tools,IDE,,,Antigravity IDE,TODO
+075,Technology,Go,CLI,,,Cobra,TODO
+076,Technology,Go,Back-end,,,Gin,TODO
+077,Technology,Go,Back-end,,,Echo,TODO
+078,Technology,Go,Back-end,,,Fiber,TODO
+079,Technology,Go,Back-end,,,Chi,TODO
+080,Technology,JavaScript / TypeScript,Back-end,Framework,list,List of Back-end Framework,TODO
+081,Technology,JavaScript / TypeScript,Back-end,Framework,,Express.js,TODO
+082,Technology,JavaScript / TypeScript,Back-end,Framework,,Nest.js,TODO
+083,Technology,JavaScript / TypeScript,Back-end,Framework,,tRPC,TODO
+084,Technology,JavaScript / TypeScript,Back-end,Framework,,GraphQL,TODO
+085,Technology,JavaScript / TypeScript,Database,ORM,list,List of ORM (JS / TS),TODO
+086,Technology,JavaScript / TypeScript,Database,ORM,,Prisma,TODO
+087,Technology,JavaScript / TypeScript,Database,ORM,,Drizzle,TODO
+088,Technology,JavaScript / TypeScript,Front-end,Client-Side,list,List of Front-end (Client-Side) Framework,TODO
+089,Technology,JavaScript / TypeScript,Front-end,Client-Side,,Angular,TODO
+090,Technology,JavaScript / TypeScript,Front-end,Client-Side,,React,TODO
+091,Technology,JavaScript / TypeScript,Front-end,Client-Side,,Solid.js,TODO
+092,Technology,JavaScript / TypeScript,Front-end,Client-Side,,Svelte,TODO
+093,Technology,JavaScript / TypeScript,Front-end,Client-Side,,Vue,TODO
+094,Technology,JavaScript / TypeScript,Front-end,Server-Side,,List of Front-end (Server-Side) Framework,TODO
+095,Technology,JavaScript / TypeScript,Front-end,Server-Side,,Next.js,TODO
+096,Technology,JavaScript / TypeScript,Front-end,Server-Side,,Nuxt,TODO
+097,Technology,JavaScript / TypeScript,Front-end,Server-Side,,SolidStart,TODO
+098,Technology,JavaScript / TypeScript,Front-end,Server-Side,,SvelteKit,TODO
+099,Technology,JavaScript / TypeScript,Front-end,State Management,list,List of State Managements,TODO
+100,Technology,JavaScript / TypeScript,Front-end,State Management,,Zustand,TODO
+101,Technology,JavaScript / TypeScript,Front-end,State Management,,Jotai,TODO
+102,Technology,JavaScript / TypeScript,Front-end,State Management,,Redux,TODO
+103,Technology,JavaScript / TypeScript,Runtimes,,list,List of Runtimes,POSTED
+104,Technology,JavaScript / TypeScript,Runtimes,,,Node.js,TODO
+105,Technology,JavaScript / TypeScript,Runtimes,,,Bun,TODO
+106,Technology,JavaScript / TypeScript,Runtimes,,,Deno,TODO
+107,Technology,JavaScript / TypeScript,Bundlers,,list,List of Bundlers,TODO
+108,Technology,JavaScript / TypeScript,Bundlers,,,Vite,TODO
+109,Technology,JavaScript / TypeScript,Bundlers,,,Webpack,TODO
+110,Technology,JavaScript / TypeScript,Bundlers,,,Turbopack,TODO
+111,Technology,JavaScript / TypeScript,Testing,Unit Test,,Vitest,TODO
+112,Technology,JavaScript / TypeScript,Testing,Unit Test,,Jest,TODO
+113,Technology,JavaScript / TypeScript,Testing,E2E Test,,Playwright,TODO
+114,Technology,JavaScript / TypeScript,Testing,E2E Test,,Cypress,TODO
+115,Technology,OS,,,,List of Popular Linux Distro,TODO
+116,Technology,Python,,,,Data Analyst Techstack,TODO
+117,Technology,Python,Machine Learning,Libraries,list,List of Machine Learning Libraries,TODO
+118,Technology,Python,Machine Learning,Libraries,,PyTorch,TODO
+119,Technology,Python,Machine Learning,Libraries,,TensorFlow,TODO
+120,Technology,Python,Machine Learning,Libraries,,Keras,TODO
+121,Technology,Python,Machine Learning,Libraries,,scikit-learn,TODO
+122,Technology,Rust,,,,Clap,TODO
+123,,,,,,,TODO
+124,,,,,,,TODO
+125,,,,,,,TODO
+126,,,,,,,TODO
+127,,,,,,,TODO
+128,,,,,,,TODO
+129,,,,,,,TODO
+130,,,,,,,TODO
+131,,,,,,,TODO
+132,,,,,,,TODO
+133,,,,,,,TODO
+134,,,,,,,TODO
+135,,,,,,,TODO
+136,,,,,,,TODO
+137,,,,,,,TODO
+138,,,,,,,TODO
+139,,,,,,,TODO
+140,,,,,,,TODO
+141,,,,,,,TODO
+142,,,,,,,TODO
+143,,,,,,,TODO
+144,,,,,,,TODO
+145,,,,,,,TODO
+146,,,,,,,TODO
+147,,,,,,,TODO
+148,,,,,,,TODO
+149,,,,,,,TODO
+150,,,,,,,TODO
+151,,,,,,,TODO
+152,,,,,,,TODO
+153,,,,,,,TODO
+154,,,,,,,TODO
+155,,,,,,,TODO
+156,,,,,,,TODO
+157,,,,,,,TODO
+158,,,,,,,TODO
+159,,,,,,,TODO
+160,,,,,,,TODO
+161,,,,,,,TODO
+162,,,,,,,TODO
+163,,,,,,,TODO
+164,,,,,,,TODO
+165,,,,,,,TODO
+166,,,,,,,TODO
+167,,,,,,,TODO
+168,,,,,,,TODO
+169,,,,,,,TODO
+170,,,,,,,TODO
+171,,,,,,,TODO
+172,,,,,,,TODO
+173,,,,,,,TODO
+174,,,,,,,TODO
+175,,,,,,,TODO
+176,,,,,,,TODO
+177,,,,,,,TODO
+178,,,,,,,TODO
+179,,,,,,,TODO
+180,,,,,,,TODO
+181,,,,,,,TODO
+182,,,,,,,TODO
+183,,,,,,,TODO
+184,,,,,,,TODO
+185,,,,,,,TODO
+186,,,,,,,TODO
+187,,,,,,,TODO
+188,,,,,,,TODO
+189,,,,,,,TODO
+190,,,,,,,TODO
+191,,,,,,,TODO
+192,,,,,,,TODO
+193,,,,,,,TODO
+194,,,,,,,TODO
+195,,,,,,,TODO
+196,,,,,,,TODO
+197,,,,,,,TODO
+198,,,,,,,TODO
+199,,,,,,,TODO
+200,,,,,,,TODO
+201,,,,,,,TODO
+202,,,,,,,TODO
+203,,,,,,,TODO
+204,,,,,,,TODO
+205,,,,,,,TODO
+206,,,,,,,TODO
+207,,,,,,,TODO
+208,,,,,,,TODO
+209,,,,,,,TODO
+210,,,,,,,TODO
+211,,,,,,,TODO
+212,,,,,,,TODO
+213,,,,,,,TODO
+214,,,,,,,TODO
+215,,,,,,,TODO
+216,,,,,,,TODO
+217,,,,,,,TODO
+218,,,,,,,TODO
+219,,,,,,,TODO
+220,,,,,,,TODO
+221,,,,,,,TODO
+222,,,,,,,TODO
+223,,,,,,,TODO
+224,,,,,,,TODO
+225,,,,,,,TODO
+226,,,,,,,TODO
+227,,,,,,,TODO
+228,,,,,,,TODO
+229,,,,,,,TODO
+230,,,,,,,TODO
+231,,,,,,,TODO
+232,,,,,,,TODO
+233,,,,,,,TODO
+234,,,,,,,TODO
+235,,,,,,,TODO
+236,,,,,,,TODO
+237,,,,,,,TODO
+238,,,,,,,TODO
+239,,,,,,,TODO
+240,,,,,,,TODO
+241,,,,,,,TODO
+242,,,,,,,TODO
+243,,,,,,,TODO
+244,,,,,,,TODO
+245,,,,,,,TODO
+246,,,,,,,TODO
+247,,,,,,,TODO
+248,,,,,,,TODO
+249,,,,,,,TODO
+250,,,,,,,TODO
+251,,,,,,,TODO
+252,,,,,,,TODO
+253,,,,,,,TODO
+254,,,,,,,TODO
+255,,,,,,,TODO
+256,,,,,,,TODO
+257,,,,,,,TODO
+258,,,,,,,TODO
+259,,,,,,,TODO
+260,,,,,,,TODO
+261,,,,,,,TODO
+262,,,,,,,TODO
+263,,,,,,,TODO
+264,,,,,,,TODO
+265,,,,,,,TODO
+266,,,,,,,TODO
+267,,,,,,,TODO
+268,,,,,,,TODO
+269,,,,,,,TODO
+270,,,,,,,TODO
+271,,,,,,,TODO
+272,,,,,,,TODO
+273,,,,,,,TODO
+274,,,,,,,TODO
+275,,,,,,,TODO
+276,,,,,,,TODO
+277,,,,,,,TODO
+278,,,,,,,TODO
+279,,,,,,,TODO
+280,,,,,,,TODO
+281,,,,,,,TODO
+282,,,,,,,TODO
+283,,,,,,,TODO
+284,,,,,,,TODO
+285,,,,,,,TODO
+286,,,,,,,TODO
+287,,,,,,,TODO
+288,,,,,,,TODO
+289,,,,,,,TODO
+290,,,,,,,TODO
+291,,,,,,,TODO
+292,,,,,,,TODO
+293,,,,,,,TODO
+294,,,,,,,TODO
+295,,,,,,,TODO
+296,,,,,,,TODO
+297,,,,,,,TODO
+298,,,,,,,TODO
+299,,,,,,,TODO
+300,,,,,,,TODO
+301,,,,,,,TODO
+302,,,,,,,TODO
+303,,,,,,,TODO
+304,,,,,,,TODO
+305,,,,,,,TODO
+306,,,,,,,TODO
+307,,,,,,,TODO
+308,,,,,,,TODO
+309,,,,,,,TODO
+310,,,,,,,TODO
+311,,,,,,,TODO
+312,,,,,,,TODO
+313,,,,,,,TODO
+314,,,,,,,TODO
+315,,,,,,,TODO
+316,,,,,,,TODO
+317,,,,,,,TODO
+318,,,,,,,TODO
+319,,,,,,,TODO
+320,,,,,,,TODO
+321,,,,,,,TODO
+322,,,,,,,TODO
+323,,,,,,,TODO
+324,,,,,,,TODO
+325,,,,,,,TODO
+326,,,,,,,TODO
+327,,,,,,,TODO
+328,,,,,,,TODO
+329,,,,,,,TODO
+330,,,,,,,TODO
+331,,,,,,,TODO
+332,,,,,,,TODO
+333,,,,,,,TODO
+334,,,,,,,TODO
+335,,,,,,,TODO
+336,,,,,,,TODO
+337,,,,,,,TODO
+338,,,,,,,TODO
+339,,,,,,,TODO
+340,,,,,,,TODO
+341,,,,,,,TODO
+342,,,,,,,TODO
+343,,,,,,,TODO
+344,,,,,,,TODO
+345,,,,,,,TODO
+346,,,,,,,TODO
+347,,,,,,,TODO
+348,,,,,,,TODO
+349,,,,,,,TODO
+350,,,,,,,TODO
+351,,,,,,,TODO
+352,,,,,,,TODO
+353,,,,,,,TODO
+354,,,,,,,TODO
+355,,,,,,,TODO
+356,,,,,,,TODO
+357,,,,,,,TODO
+358,,,,,,,TODO
+359,,,,,,,TODO
+360,,,,,,,TODO
+361,,,,,,,TODO
+362,,,,,,,TODO
+363,,,,,,,TODO
+364,,,,,,,TODO
+365,,,,,,,TODO
+366,,,,,,,TODO

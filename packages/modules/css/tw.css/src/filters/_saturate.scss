@@ -1,0 +1,13 @@
+// Saturate utilities — Tailwind v3 default scale
+
+@use 'sass:math';
+@use 'filter-composite' as *;
+
+$saturations: (('0', 0), ('50', 50), ('100', 100), ('150', 150), ('200', 200));
+
+@each $name, $value in $saturations {
+  .saturate-#{$name} {
+    --tw-saturate: saturate(#{math.div($value, 100)});
+    filter: #{$filter-composite};
+  }
+}

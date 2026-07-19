@@ -1,0 +1,19 @@
+// Perspective origin utilities — named positions only
+
+$perspective-origins: (
+  ('center', center),
+  ('top', top),
+  ('top-right', 'top right'),
+  ('right', right),
+  ('bottom-right', 'bottom right'),
+  ('bottom', bottom),
+  ('bottom-left', 'bottom left'),
+  ('left', left),
+  ('top-left', 'top left')
+);
+
+@each $name, $value in $perspective-origins {
+  .origin-#{$name} {
+    perspective-origin: #{$value};
+  }
+}

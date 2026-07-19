@@ -1,0 +1,33 @@
+name: CI - App - Headless - KeVIn
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/headless/kevin/go/**'
+      - '.github/workflows/ci-app-headless-go-kevin.yaml'
+      - '.github/workflows/ci-app-headless-go-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-headless-kevin-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-headless-go-template.yaml
+    with:
+      package: packages/app/headless/kevin/languages/go
+      installZig: false
+      releaseName: app-headless-kevin-latest
+      releaseTitle: App - Headless - KeVIn (latest)
+      artifactName: app-headless-kevin
+      artifactPath: packages/app/headless/kevin/languages/go/bin/*

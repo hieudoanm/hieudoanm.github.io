@@ -1,0 +1,16 @@
+// Align self utilities — Tailwind v3 default scale
+
+$align-selfs: (
+  ('auto', auto),
+  ('start', flex-start),
+  ('end', flex-end),
+  ('center', center),
+  ('stretch', stretch),
+  ('baseline', baseline)
+);
+
+@each $name, $value in $align-selfs {
+  .self-#{$name} {
+    align-self: $value;
+  }
+}

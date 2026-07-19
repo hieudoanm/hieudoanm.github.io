@@ -1,0 +1,34 @@
+WEBVTT
+
+NOTE Animated terminal (1280x720, dark slate) showing the Block build and
+run workflow. Cues are timed to the line animations in demo.svg.
+
+00:00.900 --> 00:03.400
+Command: ./gradlew assembleDebug
+
+00:01.600 --> 00:02.300
+Output: Building Block...
+
+00:02.300 --> 00:03.400
+Output: block-v0.0.1.apk, 1.5 MiB
+
+00:03.400 --> 00:05.200
+Command: adb install block.apk
+
+00:04.100 --> 00:05.200
+Output: Block installed on device
+
+00:05.200 --> 00:07.200
+Command: adb shell am start -n .MainActivity
+
+00:05.900 --> 00:07.200
+Output: Blocking 12 apps, 45 minutes saved
+
+00:07.200 --> 00:09.200
+Command: adb shell dumpsys accessibility
+
+00:07.900 --> 00:09.200
+Output: FocusAccessibilityService running
+
+00:09.200 --> 00:14.800
+Blank prompt: ~/block $

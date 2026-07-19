@@ -1,0 +1,31 @@
+@import 'tailwindcss';
+@import './themes.css';
+@layer base {
+  html,
+  body {
+    height: 100%;
+  }
+  body {
+    @apply bg-base-100 text-base-content font-sans;
+  }
+  a {
+    @apply text-primary hover:text-primary/80 transition-colors;
+  }
+  input,
+  textarea,
+  select {
+    @apply bg-transparent;
+  }
+}
+
+@media print {
+  html,
+  body {
+    height: auto !important;
+    overflow: visible !important;
+  }
+  .print-grid th,
+  .print-grid td {
+    border-color: #9ca3af !important;
+  }
+}

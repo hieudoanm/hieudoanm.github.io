@@ -1,0 +1,40 @@
+type: faq
+site:
+  name: Landify Help
+  mark: "❓"
+  description: Answers to the most common questions about Landify.
+  nav:
+    - label: Questions
+      href: "#faq"
+    - label: Contact
+      href: "#cta"
+hero:
+  badge: "🙋 FAQ"
+  headline: Questions, answered.
+  subheadline: Straight answers to the questions we hear the most. Still stuck after this list? The button below links to human support.
+faq:
+  heading: Frequently asked
+  sub: Picked from real support conversations.
+  items:
+    - question: Does Landify need a build step?
+      answer: No. Landify emits one flat HTML file with inline CSS. Open it in a browser or drop it on any static host.
+    - question: Where do the colors come from?
+      answer: The theme section lists eight base colors. Every other CSS token the page uses — surfaces, shades, tints, and text-on-accent contrast — is derived from them automatically.
+    - question: Can I switch the page layout later?
+      answer: Yes. Recreate the file with `landify new -t <type>` for the layout you want, then copy your site, theme, and footer blocks across.
+    - question: Does this page need any JavaScript?
+      answer: No. Questions render as native <details> rows, so the accordion works with markup alone.
+cta:
+  icon: "💬"
+  heading: Still curious?
+  body: If your question is not listed here, ask a human — we answer within a day.
+  button:
+    label: Contact support
+    href: mailto:support@example.com
+footer:
+  copyright: "© 2026 Landify Help"
+  links:
+    - label: Questions
+      href: "#faq"
+    - label: Contact
+      href: "#cta"

@@ -1,0 +1,33 @@
+name: CI - App - Hybrid - Developer Tools - Database
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/developer-tools/database/**/*'
+      - '.github/workflows/ci-app-hybrid-developer-tools-database.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-hybrid-developer-tools-database-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/developer-tools/database
+      filter: '@hieudoanm.github.io/database'
+      releaseName: app-hybrid-developer-tools-database-latest
+      releaseTitle: App - Hybrid - Developer Tools - Database (latest)
+      artifactPrefix: developer-tools-database
+      artifactName: database

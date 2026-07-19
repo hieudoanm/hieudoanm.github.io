@@ -1,0 +1,14 @@
+// Will change utilities — Tailwind v3 default scale
+
+$will-changes: (
+  ('auto', auto),
+  ('scroll', scroll-position),
+  ('contents', contents),
+  ('transform', transform)
+);
+
+@each $name, $value in $will-changes {
+  .will-change-#{$name} {
+    will-change: $value;
+  }
+}

@@ -1,0 +1,27 @@
+id,name,number,role,bench
+donnarumma,Gianluigi Donnarumma,99,GK,false
+hakimi,Achraf Hakimi,2,DEF,false
+marquinhos,Marquinhos,5,DEF,false
+pacho,Willian Pacho,51,DEF,false
+mendes,Nuno Mendes,25,DEF,false
+vitinha,Vitinha,17,MID,false
+joaoneves,João Neves,87,MID,false
+fabian,Fabián Ruiz,8,MID,false
+dembele,Ousmane Dembélé,10,FWD,false
+ramos,Gonçalo Ramos,9,FWD,false
+barcola,Bradley Barcola,29,FWD,false
+safonov,Matvey Safonov,39,GK,true
+tenas,Arnau Tenas,80,GK,true
+skriniar,Milan Škriniar,37,DEF,true
+beraldo,Lucas Beraldo,35,DEF,true
+kimpembe,Presnel Kimpembe,3,DEF,true
+zague,Yoram Zague,27,DEF,true
+hernandez,Lucas Hernández,21,DEF,true
+zaire,Warren Zaïre-Emery,33,MID,true
+kangin,Lee Kang-in,19,MID,true
+asensio,Marco Asensio,11,MID,true
+mayulu,Senny Mayulu,24,MID,true
+doue,Désiré Doué,14,FWD,true
+kolo,Randal Kolo Muani,23,FWD,true
+kvara,Khvicha Kvaratskhelia,7,FWD,true
+mbaye,Ibrahim Mbaye,42,FWD,true

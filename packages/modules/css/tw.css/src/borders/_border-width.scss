@@ -1,0 +1,30 @@
+// Border width utilities — Tailwind v3 default scale
+
+$border-width-default: 1px;
+$border-width-names: (('0', 0), ('2', 2px), ('4', 4px), ('8', 8px));
+
+$border-width-sides: (
+  ('', border-width),
+  ('-x', border-left-width border-right-width),
+  ('-y', border-top-width border-bottom-width),
+  ('-t', border-top-width),
+  ('-r', border-right-width),
+  ('-b', border-bottom-width),
+  ('-l', border-left-width)
+);
+
+@each $side, $properties in $border-width-sides {
+  .border#{$side} {
+    @each $property in $properties {
+      #{$property}: $border-width-default;
+    }
+  }
+
+  @each $name, $value in $border-width-names {
+    .border#{$side}-#{$name} {
+      @each $property in $properties {
+        #{$property}: $value;
+      }
+    }
+  }
+}

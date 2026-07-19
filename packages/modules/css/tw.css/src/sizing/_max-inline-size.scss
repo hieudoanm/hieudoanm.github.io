@@ -1,0 +1,72 @@
+// Max inline size utilities — logical max-width scale
+
+$max-inline-size-unit: 0.25rem;
+$max-inline-size-steps: (
+  ('0\\.5', 0.5),
+  ('1', 1),
+  ('1\\.5', 1.5),
+  ('2', 2),
+  ('2\\.5', 2.5),
+  ('3', 3),
+  ('3\\.5', 3.5),
+  ('4', 4),
+  ('5', 5),
+  ('6', 6),
+  ('7', 7),
+  ('8', 8),
+  ('9', 9),
+  ('10', 10),
+  ('11', 11),
+  ('12', 12),
+  ('14', 14),
+  ('16', 16),
+  ('20', 20),
+  ('24', 24),
+  ('28', 28),
+  ('32', 32),
+  ('36', 36),
+  ('40', 40),
+  ('44', 44),
+  ('48', 48),
+  ('52', 52),
+  ('56', 56),
+  ('60', 60),
+  ('64', 64),
+  ('72', 72),
+  ('80', 80),
+  ('96', 96)
+);
+
+.max-inline-size-none {
+  max-inline-size: none;
+}
+
+.max-inline-size-0 {
+  max-inline-size: 0;
+}
+
+.max-inline-size-px {
+  max-inline-size: 1px;
+}
+
+.max-inline-size-full {
+  max-inline-size: 100%;
+}
+
+.max-inline-size-min {
+  max-inline-size: min-content;
+}
+
+.max-inline-size-max {
+  max-inline-size: max-content;
+}
+
+.max-inline-size-fit {
+  max-inline-size: fit-content;
+}
+
+@each $class, $step in $max-inline-size-steps {
+  .max-inline-size-#{$class} {
+    max-inline-size: $step * $max-inline-size-unit;
+  }
+}

@@ -1,0 +1,23 @@
+# Electric Sports
+
+## Table of Contents
+
+- [Electric Sports](#electric-sports)
+  - [Table of Contents](#table-of-contents)
+  - [Games](#games)
+
+## Games
+
+| Type          | Sport                                    | Publisher              |
+| ------------- | ---------------------------------------- | ---------------------- |
+| MOBA          | [[dota]]                                 | Valve Corporation      |
+| MOBA          | [[league-of-legends\|League of Legends]] | Riot Games             |
+| Battle Royale | Fortnite                                 | Epic Games             |
+| Battle Royale | PUBG: Battlegrounds                      | PUBG Studios (Krafton) |
+| Card Game     | Hearthstone                              | Blizzard Entertainment |
+| Football      | EA SPORTS FC                             | EASports               |
+| FPS           | Call of Duty (CoD)                       | Activision             |
+| FPS           | Counter-Strike: Global Offensive (CS:GO) | Valve Corporation      |
+| FPS           | Overwatch                                | Blizzard Entertainment |
+
+- [[game-engines|Game Engines]]

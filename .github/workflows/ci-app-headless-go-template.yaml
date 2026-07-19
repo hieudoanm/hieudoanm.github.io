@@ -1,0 +1,126 @@
+name: CI - App - Headless - Go - Template
+
+on:
+  workflow_call:
+    inputs:
+      package:
+        required: true
+        type: string
+        description: Go module directory, e.g. packages/app/headless/backbone/go
+      releaseName:
+        required: true
+        type: string
+        description: GitHub release tag, e.g. app-headless-backbone-latest
+      releaseTitle:
+        required: true
+        type: string
+        description: GitHub release title, e.g. App - Headless - Backbone (latest)
+      artifactName:
+        required: true
+        type: string
+        description: Artifact name, e.g. app-headless-backbone
+      artifactPath:
+        required: true
+        type: string
+        description: Artifact path glob, e.g. packages/app/headless/backbone/go/bin/*
+      installZig:
+        required: false
+        type: boolean
+        default: false
+        description: Install zig 0.14.0 for cross-compilation (build-all)
+
+permissions:
+  contents: write
+
+jobs:
+  go:
+    name: Go
+    runs-on: macos-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: ${{ inputs.package }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7.0.1
+      - name: Install Go
+        uses: actions/setup-go@v7.0.0
+        with:
+          go-version: '1.27.0'
+          cache-dependency-path: ${{ inputs.package }}/go.sum
+      - name: Install Dependencies
+        run: go mod download
+      - name: Install zig
+        if: inputs.installZig
+        run: |
+          ZIG_VERSION="0.14.0"
+          case "$RUNNER_OS" in
+            Linux)
+              url="https://ziglang.org/download/${ZIG_VERSION}/zig-linux-x86_64-${ZIG_VERSION}.tar.xz"
+              dir="zig-linux-x86_64-${ZIG_VERSION}"
+              ;;
+            macOS)
+              url="https://ziglang.org/download/${ZIG_VERSION}/zig-macos-aarch64-${ZIG_VERSION}.tar.xz"
+              dir="zig-macos-aarch64-${ZIG_VERSION}"
+              ;;
+          esac
+          if [ ! -d "/tmp/$dir" ]; then
+            curl -fsSL "$url" | tar xJ -C /tmp
+          fi
+          echo "/tmp/$dir" >> "$GITHUB_PATH"
+      - name: Lint
+        run: make lint
+      - name: Test
+        run: make test
+      - name: Build
+        run: make build-all
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: ${{ inputs.artifactName }}
+          path: ${{ inputs.artifactPath }}
+          if-no-files-found: error
+
+  publish:
+    name: Publish to GitHub Release
+    needs: [go]
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7.0.1
+      - name: Download Build Artifacts
+        uses: actions/download-artifact@v8.0.1
+        with:
+          name: ${{ inputs.artifactName }}
+          path: artifacts
+      - name: Collect Release Artifacts
+        run: |
+          mkdir -p release
+          for file in artifacts/*; do
+            cp "$file" "release/${{ inputs.artifactName }}-$(basename "$file")"
+          done
+      - name: Publish Release
+        run: |
+          RELEASE_NAME="${{ inputs.releaseName }}"
+          RELEASE_TITLE="${{ inputs.releaseTitle }}"
+          NOTES_FILE="${{ inputs.package }}/docs/DOWNLOADS.md"
+          RELEASE_NOTES="release-notes.md"
+          {
+            echo "Auto-built from commit ${{ github.sha }}"
+            if [[ -f "$NOTES_FILE" ]]; then
+              echo ""
+              echo "---"
+              echo ""
+              cat "$NOTES_FILE"
+            fi
+          } > "$RELEASE_NOTES"
+          gh release delete "$RELEASE_NAME" --yes --cleanup-tag 2>/dev/null || true
+          gh release create "$RELEASE_NAME" \
+            --title "$RELEASE_TITLE" \
+            --notes-file "$RELEASE_NOTES" \
+            release/*
+        env:
+          GH_TOKEN: ${{ github.token }}

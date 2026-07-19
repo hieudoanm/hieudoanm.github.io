@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Everything you need to build flat pages." />
+    <title>Landify Docs</title>
+    <style>
+      :root {
+        --base-100: #f8fafc;
+        --base-200: #fefeff;
+        --base-300: #f1f3f4;
+        --base-content: #181d25;
+        --border: #64748b;
+        --border-soft: #bdc4cf;
+        --error: #ef4444;
+        --info: #0ea5e9;
+        --neutral: #64748b;
+        --neutral-faint: #a7b0be;
+        --primary: #1e293b;
+        --primary-content: #ffffff;
+        --primary-dark: #1a2332;
+        --primary-soft: #dee1e5;
+        --radius: 10px;
+        --secondary: #475569;
+        --secondary-content: #ffffff;
+        --success: #10b981;
+        --warning: #f59e0b;
+      }
+* {
+        box-sizing: border-box;
+      }
+      html {
+        margin: 0;
+        scroll-behavior: smooth;
+        scroll-padding-top: 76px;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background: var(--base-100);
+        color: var(--base-content);
+        font-family:
+          system-ui,
+          -apple-system,
+          'Segoe UI',
+          Roboto,
+          'Helvetica Neue',
+          Arial,
+          sans-serif;
+        line-height: 1.55;
+        -webkit-font-smoothing: antialiased;
+      }
+      a {
+        color: var(--primary);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        padding: 0 24px;
+        height: 60px;
+        background: var(--base-200);
+        border-bottom: 1px solid var(--border-soft);
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--base-content);
+      }
+      .brand:hover {
+        text-decoration: none;
+      }
+      .brand .mark {
+        font-size: 20px;
+        line-height: 1;
+      }
+      nav {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        font-size: 14px;
+      }
+      nav a {
+        color: var(--neutral);
+      }
+      nav a:hover {
+        color: var(--base-content);
+        text-decoration: none;
+      }
+
+      main {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 32px 24px 64px;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 28px;
+        justify-items: center;
+        max-width: 760px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 16px 0 8px;
+      }
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 4px 12px;
+        border-radius: 999px;
+        border: 1px solid var(--border-soft);
+        background: var(--primary-soft);
+        color: var(--primary-dark);
+      }
+      .hero h1 {
+        margin: 14px 0 8px;
+        font-size: 34px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        line-height: 1.15;
+      }
+      .lead {
+        margin: 0 auto;
+        max-width: 58ch;
+        font-size: 16px;
+        color: var(--neutral);
+      }
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 22px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        border: 1px solid transparent;
+        border-radius: var(--radius);
+        padding: 12px 22px;
+        font-size: 15px;
+        font-weight: 600;
+        font-family: inherit;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .btn:hover {
+        text-decoration: none;
+      }
+      .btn-primary {
+        color: var(--primary-content);
+        background: var(--primary);
+        border-color: var(--primary);
+      }
+      .btn-primary:hover {
+        background: var(--primary-dark);
+        border-color: var(--primary-dark);
+      }
+      .btn-ghost {
+        color: var(--base-content);
+        background: var(--base-200);
+        border-color: var(--border);
+      }
+      .btn-ghost:hover {
+        background: var(--base-300);
+      }
+
+       
+      .hero-media,
+      .demo-media {
+        display: block;
+        width: 100%;
+        max-width: 720px;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        margin-inline: auto;
+        background: var(--base-300);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+      }
+
+      section.block {
+        margin-top: 32px;
+      }
+      .block-head {
+        margin: 0 0 18px;
+        text-align: center;
+      }
+      .block-head h2 {
+        margin: 0;
+        font-size: 22px;
+        font-weight: 800;
+        letter-spacing: -0.01em;
+      }
+      .block-head .sub {
+        margin: 6px auto 0;
+        max-width: 60ch;
+        color: var(--neutral);
+        font-size: 14.5px;
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+      .feature {
+        background: var(--base-200);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+        padding: 24px 24px;
+        text-align: center;
+      }
+      .feature .icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        font-size: 22px;
+        border-radius: var(--radius);
+        background: var(--primary-soft);
+        border: 1px solid var(--border-soft);
+      }
+      .feature h3 {
+        margin: 14px 0 8px;
+        font-size: 16px;
+        font-weight: 700;
+      }
+      .feature p {
+        margin: 0;
+        font-size: 13.5px;
+        color: var(--neutral);
+      }
+
+      .cta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 6px;
+        background: var(--base-200);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+        padding: 48px 32px;
+      }
+      .cta .icon {
+        font-size: 34px;
+        line-height: 1;
+      }
+      .cta h2 {
+        margin: 10px 0 6px;
+        font-size: 26px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+      .cta p {
+        margin: 0;
+        max-width: 52ch;
+        color: var(--neutral);
+        font-size: 15px;
+      }
+      .cta .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      footer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 24px;
+        align-items: center;
+        justify-content: center;
+        border-top: 1px solid var(--border-soft);
+        margin-top: 48px;
+        padding: 24px 0 4px;
+        font-size: 13px;
+        color: var(--neutral-faint);
+      }
+      footer a {
+        color: var(--neutral-faint);
+      }
+      footer a:hover {
+        color: var(--base-content);
+      }
+
+      @media (max-width: 900px) {
+        .features {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 560px) {
+        nav {
+          display: none;
+        }
+        .hero h1 {
+          font-size: 26px;
+        }
+      }
+      .docs-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      .doc-card {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        background: var(--base-200);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+        padding: 22px 20px;
+        color: var(--base-content);
+        text-decoration: none;
+      }
+      .doc-card:hover {
+        border-color: var(--primary);
+        color: var(--primary);
+      }
+      .doc-card h3 {
+        font-size: 16px;
+        font-weight: 700;
+        margin: 0;
+      }
+      .doc-card p {
+        margin: 0;
+        font-size: 14px;
+        color: var(--neutral);
+      }
+      .docs-sample {
+        max-width: 640px;
+        margin: 40px auto 0;
+      }
+      .docs-sample pre {
+        margin: 0;
+      }
+      @media (max-width: 900px) {
+        .docs-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="#top">
+        
+        <span>Landify Docs</span>
+      </a>
+      <nav>
+        <a href="#docs">Guides</a><a href="https://example.com/gh">GitHub</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div>
+          <span class="badge">📚 Docs</span>
+          <h1>Build a page in five minutes.</h1>
+          <p class="lead">Everything you need to go from a YAML file to a deployed page.</p>
+          
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#docs">Quickstart</a>
+            <a class="btn btn-ghost" href="https://example.com/gh">GitHub</a>
+          </div>
+          
+        </div>
+      </section>
+
+      <section id="docs" class="block">
+        
+        <div class="block-head">
+          <h2>Start here</h2>
+          <p class="sub">Pick a guide, or jump straight into the reference.</p>
+        </div>
+        
+        <div class="docs-grid">
+          
+          <a class="doc-card" href="https://example.com/quickstart">
+            <span class="icon" aria-hidden="true">⚡</span>
+            <h3>Quickstart</h3>
+            <p>Your first landify.yaml in sixty seconds.</p>
+          </a>
+          
+          <a class="doc-card" href="https://example.com/themes">
+            <span class="icon" aria-hidden="true">🎨</span>
+            <h3>Themes</h3>
+            <p>The sixty-four presets and how to write your own.</p>
+          </a>
+          
+          <a class="doc-card" href="https://example.com/types">
+            <span class="icon" aria-hidden="true">📄</span>
+            <h3>Page types</h3>
+            <p>product, waitlist, event, download, app, pricing, portfolio, docs.</p>
+          </a>
+          
+          <a class="doc-card" href="https://example.com/reference">
+            <span class="icon" aria-hidden="true">🧭</span>
+            <h3>Reference</h3>
+            <p>Every field, section, and validation rule.</p>
+          </a>
+          
+          <a class="doc-card" href="https://example.com/deploy">
+            <span class="icon" aria-hidden="true">🚀</span>
+            <h3>Deploy</h3>
+            <p>Host your flat page anywhere — even a USB stick.</p>
+          </a>
+          
+          <a class="doc-card" href="https://example.com/troubleshoot">
+            <span class="icon" aria-hidden="true">⚠️</span>
+            <h3>Troubleshooting</h3>
+            <p>Common errors and how to read the validator.</p>
+          </a>
+          
+        </div>
+        
+        <div class="docs-sample install-block">
+          <pre><code>type: product
+site:
+  name: My thing
+theme:
+  primary: &#34;#0d9488&#34;
+landify build
+</code></pre>
+        </div>
+        
+      </section>
+
+      
+      <section id="cta" class="block">
+        <div class="cta">
+          <span class="icon" aria-hidden="true">🧭</span>
+          <h2>Still exploring?</h2>
+          <p>See the full reference or open the repository.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://example.com/gh">Open GitHub</a>
+          </div>
+        </div>
+      </section>
+      
+
+      <footer>
+        <span>© 2026 Landify Docs</span>
+        
+      </footer>
+    </main>
+  </body>
+</html>

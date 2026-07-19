@@ -1,0 +1,11 @@
+// Filter base utilities — Tailwind v3 default scale
+
+@use 'filter-composite' as *;
+
+.filter {
+  filter: #{$filter-composite};
+}
+
+.filter-none {
+  filter: none;
+}

@@ -1,0 +1,15 @@
+// Justify self utilities — Tailwind v3 default scale
+
+$justify-selfs: (
+  ('auto', auto),
+  ('start', start),
+  ('end', end),
+  ('center', center),
+  ('stretch', stretch)
+);
+
+@each $name, $value in $justify-selfs {
+  .justify-self-#{$name} {
+    justify-self: $value;
+  }
+}

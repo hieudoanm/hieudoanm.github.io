@@ -1,0 +1,33 @@
+name: CI - Extensions - Browser - BrowserX
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/extensions/browser/browserx/**'
+      - '.github/workflows/ci-extensions-browser-browserx.yaml'
+      - '.github/workflows/ci-extensions-browser-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-extensions-browser-browserx-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-extensions-browser-template.yaml
+    with:
+      package: packages/extensions/browser/browserx
+      filter: '@hieudoanm.github.io/browserx'
+      releaseName: extensions-browser-browserx-latest
+      releaseTitle: Extensions - Browser - BrowserX (latest)
+      artifactPrefix: extensions-browser-browserx
+    secrets: inherit

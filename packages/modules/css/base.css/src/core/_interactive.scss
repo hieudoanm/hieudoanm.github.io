@@ -1,0 +1,25 @@
+// Disclosable content and modal dialogs.
+
+@mixin interactive {
+  details {
+    font-size: 0.875rem;
+  }
+
+  summary {
+    cursor: pointer;
+    font-weight: 500;
+  }
+
+  dialog {
+    background: var(--base-bg);
+    border: 1px solid var(--base-border);
+    border-radius: var(--base-radius);
+    box-shadow: var(--base-shadow);
+    color: var(--base-text);
+    padding: 1.5rem;
+  }
+
+  dialog::backdrop {
+    background: rgba(0, 0, 0, 0.4);
+  }
+}

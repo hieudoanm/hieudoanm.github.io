@@ -1,0 +1,1436 @@
+[
+  {
+    "period": "Asuka",
+    "name": "Taika",
+    "start": "645",
+    "end": "650"
+  },
+  {
+    "period": "Asuka",
+    "name": "Hakuchi",
+    "start": "650",
+    "end": "654"
+  },
+  {
+    "period": "Asuka",
+    "name": "Shuchō",
+    "start": "686",
+    "end": "686"
+  },
+  {
+    "period": "Asuka",
+    "name": "Taihō",
+    "start": "701",
+    "end": "704"
+  },
+  {
+    "period": "Asuka",
+    "name": "Keiun",
+    "start": "704",
+    "end": "708"
+  },
+  {
+    "period": "Asuka",
+    "name": "Wadō",
+    "start": "708",
+    "end": "715"
+  },
+  {
+    "period": "Nara",
+    "name": "Reiki",
+    "start": "715",
+    "end": "717"
+  },
+  {
+    "period": "Nara",
+    "name": "Yōrō",
+    "start": "717",
+    "end": "724"
+  },
+  {
+    "period": "Nara",
+    "name": "Jinki",
+    "start": "724",
+    "end": "729"
+  },
+  {
+    "period": "Nara",
+    "name": "Tenpyō",
+    "start": "729",
+    "end": "749"
+  },
+  {
+    "period": "Nara",
+    "name": "Tenpyō-kanpō",
+    "start": "749",
+    "end": "749"
+  },
+  {
+    "period": "Nara",
+    "name": "Tenpyō-shōhō",
+    "start": "749",
+    "end": "757"
+  },
+  {
+    "period": "Nara",
+    "name": "Tenpyō-hōji",
+    "start": "757",
+    "end": "765"
+  },
+  {
+    "period": "Nara",
+    "name": "Tenpyō-jingo",
+    "start": "765",
+    "end": "767"
+  },
+  {
+    "period": "Nara",
+    "name": "Jingo-keiun",
+    "start": "767",
+    "end": "770"
+  },
+  {
+    "period": "Nara",
+    "name": "Hōki",
+    "start": "770",
+    "end": "781"
+  },
+  {
+    "period": "Nara",
+    "name": "Ten'ō",
+    "start": "781",
+    "end": "782"
+  },
+  {
+    "period": "Nara",
+    "name": "Enryaku",
+    "start": "782",
+    "end": "806"
+  },
+  {
+    "period": "Heian",
+    "name": "Daidō",
+    "start": "806",
+    "end": "810"
+  },
+  {
+    "period": "Heian",
+    "name": "Kōnin",
+    "start": "810",
+    "end": "824"
+  },
+  {
+    "period": "Heian",
+    "name": "Tenchō",
+    "start": "824",
+    "end": "834"
+  },
+  {
+    "period": "Heian",
+    "name": "Jōwa",
+    "start": "834",
+    "end": "848"
+  },
+  {
+    "period": "Heian",
+    "name": "Kashō",
+    "start": "848",
+    "end": "851"
+  },
+  {
+    "period": "Heian",
+    "name": "Ninju",
+    "start": "851",
+    "end": "854"
+  },
+  {
+    "period": "Heian",
+    "name": "Saikō",
+    "start": "854",
+    "end": "857"
+  },
+  {
+    "period": "Heian",
+    "name": "Ten'an",
+    "start": "857",
+    "end": "859"
+  },
+  {
+    "period": "Heian",
+    "name": "Jōgan",
+    "start": "859",
+    "end": "877"
+  },
+  {
+    "period": "Heian",
+    "name": "Gangyō",
+    "start": "877",
+    "end": "885"
+  },
+  {
+    "period": "Heian",
+    "name": "Ninna",
+    "start": "885",
+    "end": "889"
+  },
+  {
+    "period": "Heian",
+    "name": "Kanpyō",
+    "start": "889",
+    "end": "898"
+  },
+  {
+    "period": "Heian",
+    "name": "Shōtai",
+    "start": "898",
+    "end": "901"
+  },
+  {
+    "period": "Heian",
+    "name": "Engi",
+    "start": "901",
+    "end": "923"
+  },
+  {
+    "period": "Heian",
+    "name": "Enchō",
+    "start": "923",
+    "end": "931"
+  },
+  {
+    "period": "Heian",
+    "name": "Jōhei",
+    "start": "931",
+    "end": "938"
+  },
+  {
+    "period": "Heian",
+    "name": "Tengyō",
+    "start": "938",
+    "end": "947"
+  },
+  {
+    "period": "Heian",
+    "name": "Tenryaku",
+    "start": "947",
+    "end": "957"
+  },
+  {
+    "period": "Heian",
+    "name": "Tentoku",
+    "start": "957",
+    "end": "961"
+  },
+  {
+    "period": "Heian",
+    "name": "Ōwa",
+    "start": "961",
+    "end": "964"
+  },
+  {
+    "period": "Heian",
+    "name": "Kōhō",
+    "start": "964",
+    "end": "968"
+  },
+  {
+    "period": "Heian",
+    "name": "Anna",
+    "start": "968",
+    "end": "970"
+  },
+  {
+    "period": "Heian",
+    "name": "Tenroku",
+    "start": "970",
+    "end": "973"
+  },
+  {
+    "period": "Heian",
+    "name": "Ten'en",
+    "start": "973",
+    "end": "976"
+  },
+  {
+    "period": "Heian",
+    "name": "Jōgen",
+    "start": "976",
+    "end": "978"
+  },
+  {
+    "period": "Heian",
+    "name": "Tengen",
+    "start": "978",
+    "end": "983"
+  },
+  {
+    "period": "Heian",
+    "name": "Eikan",
+    "start": "983",
+    "end": "985"
+  },
+  {
+    "period": "Heian",
+    "name": "Kanna",
+    "start": "985",
+    "end": "987"
+  },
+  {
+    "period": "Heian",
+    "name": "Eien",
+    "start": "987",
+    "end": "989"
+  },
+  {
+    "period": "Heian",
+    "name": "Eiso",
+    "start": "989",
+    "end": "990"
+  },
+  {
+    "period": "Heian",
+    "name": "Shōryaku",
+    "start": "990",
+    "end": "995"
+  },
+  {
+    "period": "Heian",
+    "name": "Chōtoku",
+    "start": "995",
+    "end": "999"
+  },
+  {
+    "period": "Heian",
+    "name": "Chōhō",
+    "start": "999",
+    "end": "1004"
+  },
+  {
+    "period": "Heian",
+    "name": "Kankō",
+    "start": "1004",
+    "end": "1012"
+  },
+  {
+    "period": "Heian",
+    "name": "Chōwa",
+    "start": "1012",
+    "end": "1017"
+  },
+  {
+    "period": "Heian",
+    "name": "Kannin",
+    "start": "1017",
+    "end": "1021"
+  },
+  {
+    "period": "Heian",
+    "name": "Jian",
+    "start": "1021",
+    "end": "1024"
+  },
+  {
+    "period": "Heian",
+    "name": "Manju",
+    "start": "1024",
+    "end": "1028"
+  },
+  {
+    "period": "Heian",
+    "name": "Chōgen",
+    "start": "1028",
+    "end": "1037"
+  },
+  {
+    "period": "Heian",
+    "name": "Chōryaku",
+    "start": "1037",
+    "end": "1040"
+  },
+  {
+    "period": "Heian",
+    "name": "Chōkyū",
+    "start": "1040",
+    "end": "1044"
+  },
+  {
+    "period": "Heian",
+    "name": "Kantoku",
+    "start": "1044",
+    "end": "1046"
+  },
+  {
+    "period": "Heian",
+    "name": "Eishō",
+    "start": "1046",
+    "end": "1053"
+  },
+  {
+    "period": "Heian",
+    "name": "Tengi",
+    "start": "1053",
+    "end": "1058"
+  },
+  {
+    "period": "Heian",
+    "name": "Kōhei",
+    "start": "1058",
+    "end": "1065"
+  },
+  {
+    "period": "Heian",
+    "name": "Jiryaku",
+    "start": "1065",
+    "end": "1069"
+  },
+  {
+    "period": "Heian",
+    "name": "Enkyū",
+    "start": "1069",
+    "end": "1074"
+  },
+  {
+    "period": "Heian",
+    "name": "Jōhō",
+    "start": "1074",
+    "end": "1077"
+  },
+  {
+    "period": "Heian",
+    "name": "Jōryaku",
+    "start": "1077",
+    "end": "1081"
+  },
+  {
+    "period": "Heian",
+    "name": "Eihō",
+    "start": "1081",
+    "end": "1084"
+  },
+  {
+    "period": "Heian",
+    "name": "Ōtoku",
+    "start": "1084",
+    "end": "1087"
+  },
+  {
+    "period": "Heian",
+    "name": "Kanji",
+    "start": "1087",
+    "end": "1094"
+  },
+  {
+    "period": "Heian",
+    "name": "Kahō",
+    "start": "1094",
+    "end": "1096"
+  },
+  {
+    "period": "Heian",
+    "name": "Eichō",
+    "start": "1096",
+    "end": "1097"
+  },
+  {
+    "period": "Heian",
+    "name": "Shōtoku",
+    "start": "1097",
+    "end": "1099"
+  },
+  {
+    "period": "Heian",
+    "name": "Kōwa",
+    "start": "1099",
+    "end": "1104"
+  },
+  {
+    "period": "Heian",
+    "name": "Chōji",
+    "start": "1104",
+    "end": "1106"
+  },
+  {
+    "period": "Heian",
+    "name": "Kashō",
+    "start": "1106",
+    "end": "1108"
+  },
+  {
+    "period": "Heian",
+    "name": "Tennin",
+    "start": "1108",
+    "end": "1110"
+  },
+  {
+    "period": "Heian",
+    "name": "Tennei",
+    "start": "1110",
+    "end": "1113"
+  },
+  {
+    "period": "Heian",
+    "name": "Eikyū",
+    "start": "1113",
+    "end": "1118"
+  },
+  {
+    "period": "Heian",
+    "name": "Gen'ei",
+    "start": "1118",
+    "end": "1120"
+  },
+  {
+    "period": "Heian",
+    "name": "Hōan",
+    "start": "1120",
+    "end": "1124"
+  },
+  {
+    "period": "Heian",
+    "name": "Tenji",
+    "start": "1124",
+    "end": "1126"
+  },
+  {
+    "period": "Heian",
+    "name": "Daiji",
+    "start": "1126",
+    "end": "1131"
+  },
+  {
+    "period": "Heian",
+    "name": "Tenshō",
+    "start": "1131",
+    "end": "1132"
+  },
+  {
+    "period": "Heian",
+    "name": "Chōshō",
+    "start": "1132",
+    "end": "1135"
+  },
+  {
+    "period": "Heian",
+    "name": "Hōen",
+    "start": "1135",
+    "end": "1141"
+  },
+  {
+    "period": "Heian",
+    "name": "Eiji",
+    "start": "1141",
+    "end": "1142"
+  },
+  {
+    "period": "Heian",
+    "name": "Kōji",
+    "start": "1142",
+    "end": "1144"
+  },
+  {
+    "period": "Heian",
+    "name": "Tenyō",
+    "start": "1144",
+    "end": "1145"
+  },
+  {
+    "period": "Heian",
+    "name": "Kyūan",
+    "start": "1145",
+    "end": "1151"
+  },
+  {
+    "period": "Heian",
+    "name": "Ninpei",
+    "start": "1151",
+    "end": "1154"
+  },
+  {
+    "period": "Heian",
+    "name": "Kyūju",
+    "start": "1154",
+    "end": "1156"
+  },
+  {
+    "period": "Heian",
+    "name": "Hōgen",
+    "start": "1156",
+    "end": "1159"
+  },
+  {
+    "period": "Heian",
+    "name": "Heiji",
+    "start": "1159",
+    "end": "1160"
+  },
+  {
+    "period": "Heian",
+    "name": "Eiryaku",
+    "start": "1160",
+    "end": "1161"
+  },
+  {
+    "period": "Heian",
+    "name": "Ōhō",
+    "start": "1161",
+    "end": "1163"
+  },
+  {
+    "period": "Heian",
+    "name": "Chōkan",
+    "start": "1163",
+    "end": "1165"
+  },
+  {
+    "period": "Heian",
+    "name": "Eiman",
+    "start": "1165",
+    "end": "1166"
+  },
+  {
+    "period": "Heian",
+    "name": "Nin'an",
+    "start": "1166",
+    "end": "1169"
+  },
+  {
+    "period": "Heian",
+    "name": "Kaō",
+    "start": "1169",
+    "end": "1171"
+  },
+  {
+    "period": "Heian",
+    "name": "Shōan",
+    "start": "1171",
+    "end": "1175"
+  },
+  {
+    "period": "Heian",
+    "name": "Angen",
+    "start": "1175",
+    "end": "1177"
+  },
+  {
+    "period": "Heian",
+    "name": "Jishō",
+    "start": "1177",
+    "end": "1181"
+  },
+  {
+    "period": "Heian",
+    "name": "Yōwa",
+    "start": "1181",
+    "end": "1182"
+  },
+  {
+    "period": "Heian",
+    "name": "Juei",
+    "start": "1182",
+    "end": "1184"
+  },
+  {
+    "period": "Heian",
+    "name": "Genryaku",
+    "start": "1184",
+    "end": "1185"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Bunji",
+    "start": "1185",
+    "end": "1190"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Kenkyū",
+    "start": "1190",
+    "end": "1199"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Shōji",
+    "start": "1199",
+    "end": "1201"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Kennin",
+    "start": "1201",
+    "end": "1204"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Genkyū",
+    "start": "1204",
+    "end": "1206"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Ken'ei",
+    "start": "1206",
+    "end": "1207"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Jōgen",
+    "start": "1207",
+    "end": "1211"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Kenryaku",
+    "start": "1211",
+    "end": "1213"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Kenpō",
+    "start": "1213",
+    "end": "1219"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Shōkyū",
+    "start": "1219",
+    "end": "1222"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Jōō",
+    "start": "1222",
+    "end": "1224"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Gennin",
+    "start": "1224",
+    "end": "1225"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Karoku",
+    "start": "1225",
+    "end": "1227"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Antei",
+    "start": "1227",
+    "end": "1229"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Kanki",
+    "start": "1229",
+    "end": "1232"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Jōei",
+    "start": "1232",
+    "end": "1233"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Tempuku",
+    "start": "1233",
+    "end": "1234"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Bunryaku",
+    "start": "1234",
+    "end": "1235"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Katoku",
+    "start": "1235",
+    "end": "1238"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Ryaku nin",
+    "start": "1238",
+    "end": "1239"
+  },
+  {
+    "period": "Kamakura",
+    "name": "En'ō",
+    "start": "1239",
+    "end": "1240"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Ninji",
+    "start": "1240",
+    "end": "1243"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Kangen",
+    "start": "1243",
+    "end": "1247"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Hōji",
+    "start": "1247",
+    "end": "1249"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Kenchō",
+    "start": "1249",
+    "end": "1256"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Kōgen",
+    "start": "1256",
+    "end": "1257"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Shōka",
+    "start": "1257",
+    "end": "1259"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Shōgen",
+    "start": "1259",
+    "end": "1260"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Bun'ō",
+    "start": "1260",
+    "end": "1261"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Kōchō",
+    "start": "1261",
+    "end": "1264"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Bun'ei",
+    "start": "1264",
+    "end": "1275"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Kenchi",
+    "start": "1275",
+    "end": "1278"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Kōan",
+    "start": "1278",
+    "end": "1288"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Shōō",
+    "start": "1288",
+    "end": "1293"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Einin",
+    "start": "1293",
+    "end": "1299"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Shōan",
+    "start": "1299",
+    "end": "1302"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Kengen",
+    "start": "1302",
+    "end": "1303"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Kagen",
+    "start": "1303",
+    "end": "1306"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Tokuji",
+    "start": "1306",
+    "end": "1308"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Enkyō",
+    "start": "1308",
+    "end": "1311"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Ōchō",
+    "start": "1311",
+    "end": "1312"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Shōwa",
+    "start": "1312",
+    "end": "1317"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Bunpō",
+    "start": "1317",
+    "end": "1319"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Gen'ō",
+    "start": "1319",
+    "end": "1321"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Genkō",
+    "start": "1321",
+    "end": "1324"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Shōchū",
+    "start": "1324",
+    "end": "1326"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Karyaku",
+    "start": "1326",
+    "end": "1329"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Gentoku",
+    "start": "1329",
+    "end": "1331"
+  },
+  {
+    "period": "Kamakura",
+    "name": "Genkō",
+    "start": "1331",
+    "end": "1334"
+  },
+  {
+    "period": "Muromachi",
+    "name": "Kenmu",
+    "start": "1334",
+    "end": "1336"
+  },
+  {
+    "period": "Muromachi",
+    "name": "Ryakuō",
+    "start": "1338",
+    "end": "1342"
+  },
+  {
+    "period": "Muromachi",
+    "name": "Kōei",
+    "start": "1342",
+    "end": "1345"
+  },
+  {
+    "period": "Muromachi",
+    "name": "Jōwa",
+    "start": "1345",
+    "end": "1350"
+  },
+  {
+    "period": "Muromachi",
+    "name": "Kannon",
+    "start": "1350",
+    "end": "1352"
+  },
+  {
+    "period": "Muromachi",
+    "name": "Bunna",
+    "start": "1352",
+    "end": "1356"
+  },
+  {
+    "period": "Muromachi",
+    "name": "Enbun",
+    "start": "1356",
+    "end": "1361"
+  },
+  {
+    "period": "Muromachi",
+    "name": "Kōan",
+    "start": "1361",
+    "end": "1362"
+  },
+  {
+    "period": "Muromachi",
+    "name": "Jōji",
+    "start": "1362",
+    "end": "1368"
+  },
+  {
+    "period": "Muromachi",
+    "name": "Ōan",
+    "start": "1368",
+    "end": "1375"
+  },
+  {
+    "period": "Muromachi",
+    "name": "Eiwa",
+    "start": "1375",
+    "end": "1379"
+  },
+  {
+    "period": "Muromachi",
+    "name": "Kōryaku",
+    "start": "1379",
+    "end": "1381"
+  },
+  {
+    "period": "Muromachi",
+    "name": "Eitoku",
+    "start": "1381",
+    "end": "1384"
+  },
+  {
+    "period": "Muromachi",
+    "name": "Shitoku",
+    "start": "1384",
+    "end": "1387"
+  },
+  {
+    "period": "Muromachi",
+    "name": "Kakei",
+    "start": "1387",
+    "end": "1389"
+  },
+  {
+    "period": "Muromachi",
+    "name": "Kōō",
+    "start": "1389",
+    "end": "1390"
+  },
+  {
+    "period": "Muromachi",
+    "name": "Meitoku",
+    "start": "1390",
+    "end": "1394"
+  },
+  {
+    "period": "Muromachi",
+    "name": "Ōei",
+    "start": "1394",
+    "end": "1428"
+  },
+  {
+    "period": "Muromachi",
+    "name": "Shōchō",
+    "start": "1428",
+    "end": "1429"
+  },
+  {
+    "period": "Muromachi",
+    "name": "Eikyō",
+    "start": "1429",
+    "end": "1441"
+  },
+  {
+    "period": "Muromachi",
+    "name": "Kakitsu",
+    "start": "1441",
+    "end": "1444"
+  },
+  {
+    "period": "Muromachi",
+    "name": "Bun'an",
+    "start": "1444",
+    "end": "1449"
+  },
+  {
+    "period": "Muromachi",
+    "name": "Hōtoku",
+    "start": "1449",
+    "end": "1452"
+  },
+  {
+    "period": "Muromachi",
+    "name": "Kyōtoku",
+    "start": "1452",
+    "end": "1455"
+  },
+  {
+    "period": "Muromachi",
+    "name": "Kōshō",
+    "start": "1455",
+    "end": "1457"
+  },
+  {
+    "period": "Muromachi",
+    "name": "Chōroku",
+    "start": "1457",
+    "end": "1460"
+  },
+  {
+    "period": "Muromachi",
+    "name": "Kanshō",
+    "start": "1460",
+    "end": "1466"
+  },
+  {
+    "period": "Muromachi",
+    "name": "Bunshō",
+    "start": "1466",
+    "end": "1467"
+  },
+  {
+    "period": "Muromachi",
+    "name": "Ōnin",
+    "start": "1467",
+    "end": "1469"
+  },
+  {
+    "period": "Muromachi",
+    "name": "Bunmei",
+    "start": "1469",
+    "end": "1487"
+  },
+  {
+    "period": "Muromachi",
+    "name": "Chōkyō",
+    "start": "1487",
+    "end": "1489"
+  },
+  {
+    "period": "Muromachi",
+    "name": "Entoku",
+    "start": "1489",
+    "end": "1492"
+  },
+  {
+    "period": "Muromachi",
+    "name": "Meiō",
+    "start": "1492",
+    "end": "1501"
+  },
+  {
+    "period": "Muromachi",
+    "name": "Bunki",
+    "start": "1501",
+    "end": "1504"
+  },
+  {
+    "period": "Muromachi",
+    "name": "Eishō",
+    "start": "1504",
+    "end": "1521"
+  },
+  {
+    "period": "Muromachi",
+    "name": "Daiei",
+    "start": "1521",
+    "end": "1528"
+  },
+  {
+    "period": "Muromachi",
+    "name": "Kyōroku",
+    "start": "1528",
+    "end": "1532"
+  },
+  {
+    "period": "Muromachi",
+    "name": "Tenbun",
+    "start": "1532",
+    "end": "1555"
+  },
+  {
+    "period": "Muromachi",
+    "name": "Kōji",
+    "start": "1555",
+    "end": "1558"
+  },
+  {
+    "period": "Muromachi",
+    "name": "Eiroku",
+    "start": "1558",
+    "end": "1570"
+  },
+  {
+    "period": "Azuchi-Momoyama",
+    "name": "Genki",
+    "start": "1570",
+    "end": "1573"
+  },
+  {
+    "period": "Azuchi-Momoyama",
+    "name": "Tenshō",
+    "start": "1573",
+    "end": "1592"
+  },
+  {
+    "period": "Azuchi-Momoyama",
+    "name": "Bunroku",
+    "start": "1592",
+    "end": "1596"
+  },
+  {
+    "period": "Azuchi-Momoyama",
+    "name": "Keichō",
+    "start": "1596",
+    "end": "1615"
+  },
+  {
+    "period": "Edo",
+    "name": "Genna",
+    "start": "1615",
+    "end": "1624"
+  },
+  {
+    "period": "Edo",
+    "name": "Kan'ei",
+    "start": "1624",
+    "end": "1644"
+  },
+  {
+    "period": "Edo",
+    "name": "Shōhō",
+    "start": "1644",
+    "end": "1648"
+  },
+  {
+    "period": "Edo",
+    "name": "Keian",
+    "start": "1648",
+    "end": "1652"
+  },
+  {
+    "period": "Edo",
+    "name": "Jōō",
+    "start": "1652",
+    "end": "1655"
+  },
+  {
+    "period": "Edo",
+    "name": "Meireki",
+    "start": "1655",
+    "end": "1658"
+  },
+  {
+    "period": "Edo",
+    "name": "Manji",
+    "start": "1658",
+    "end": "1661"
+  },
+  {
+    "period": "Edo",
+    "name": "Kanbun",
+    "start": "1661",
+    "end": "1673"
+  },
+  {
+    "period": "Edo",
+    "name": "Enpō",
+    "start": "1673",
+    "end": "1681"
+  },
+  {
+    "period": "Edo",
+    "name": "Tenna",
+    "start": "1681",
+    "end": "1684"
+  },
+  {
+    "period": "Edo",
+    "name": "Jōkyō",
+    "start": "1684",
+    "end": "1688"
+  },
+  {
+    "period": "Edo",
+    "name": "Genroku",
+    "start": "1688",
+    "end": "1704"
+  },
+  {
+    "period": "Edo",
+    "name": "Hōei",
+    "start": "1704",
+    "end": "1711"
+  },
+  {
+    "period": "Edo",
+    "name": "Shōtoku",
+    "start": "1711",
+    "end": "1716"
+  },
+  {
+    "period": "Edo",
+    "name": "Kyōhō",
+    "start": "1716",
+    "end": "1736"
+  },
+  {
+    "period": "Edo",
+    "name": "Genbun",
+    "start": "1736",
+    "end": "1741"
+  },
+  {
+    "period": "Edo",
+    "name": "Kanpō",
+    "start": "1741",
+    "end": "1744"
+  },
+  {
+    "period": "Edo",
+    "name": "Enkyō",
+    "start": "1744",
+    "end": "1748"
+  },
+  {
+    "period": "Edo",
+    "name": "Kan'en",
+    "start": "1748",
+    "end": "1751"
+  },
+  {
+    "period": "Edo",
+    "name": "Hōreki",
+    "start": "1751",
+    "end": "1764"
+  },
+  {
+    "period": "Edo",
+    "name": "Meiwa",
+    "start": "1764",
+    "end": "1772"
+  },
+  {
+    "period": "Edo",
+    "name": "An'ei",
+    "start": "1772",
+    "end": "1781"
+  },
+  {
+    "period": "Edo",
+    "name": "Tenmei",
+    "start": "1781",
+    "end": "1789"
+  },
+  {
+    "period": "Edo",
+    "name": "Kansei",
+    "start": "1789",
+    "end": "1801"
+  },
+  {
+    "period": "Edo",
+    "name": "Kyōwa",
+    "start": "1801",
+    "end": "1804"
+  },
+  {
+    "period": "Edo",
+    "name": "Bunka",
+    "start": "1804",
+    "end": "1818"
+  },
+  {
+    "period": "Edo",
+    "name": "Bunsei",
+    "start": "1818",
+    "end": "1830"
+  },
+  {
+    "period": "Edo",
+    "name": "Tenpō",
+    "start": "1830",
+    "end": "1844"
+  },
+  {
+    "period": "Edo",
+    "name": "Kōka",
+    "start": "1844",
+    "end": "1848"
+  },
+  {
+    "period": "Edo",
+    "name": "Kaei",
+    "start": "1848",
+    "end": "1854"
+  },
+  {
+    "period": "Edo",
+    "name": "Ansei",
+    "start": "1854",
+    "end": "1860"
+  },
+  {
+    "period": "Edo",
+    "name": "Man'en",
+    "start": "1860",
+    "end": "1861"
+  },
+  {
+    "period": "Edo",
+    "name": "Bunkyū",
+    "start": "1861",
+    "end": "1864"
+  },
+  {
+    "period": "Edo",
+    "name": "Genji",
+    "start": "1864",
+    "end": "1865"
+  },
+  {
+    "period": "Edo",
+    "name": "Keiō",
+    "start": "1865",
+    "end": "1868"
+  },
+  {
+    "period": "Modern",
+    "name": "Meiji",
+    "start": "1868",
+    "end": "1912"
+  },
+  {
+    "period": "Modern",
+    "name": "Taishō",
+    "start": "1912",
+    "end": "1926"
+  },
+  {
+    "period": "Modern",
+    "name": "Shōwa",
+    "start": "1926",
+    "end": "1989"
+  },
+  {
+    "period": "Modern",
+    "name": "Heisei",
+    "start": "1989",
+    "end": "2019"
+  },
+  {
+    "period": "Modern",
+    "name": "Reiwa",
+    "start": "2019",
+    "end": "present"
+  }
+]

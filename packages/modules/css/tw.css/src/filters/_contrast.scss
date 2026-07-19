@@ -1,0 +1,21 @@
+// Contrast utilities — Tailwind v3 default scale
+
+@use 'sass:math';
+@use 'filter-composite' as *;
+
+$contrasts: (
+  ('0', 0),
+  ('50', 50),
+  ('75', 75),
+  ('100', 100),
+  ('125', 125),
+  ('150', 150),
+  ('200', 200)
+);
+
+@each $name, $value in $contrasts {
+  .contrast-#{$name} {
+    --tw-contrast: contrast(#{math.div($value, 100)});
+    filter: #{$filter-composite};
+  }
+}

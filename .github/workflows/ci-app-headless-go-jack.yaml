@@ -1,0 +1,33 @@
+name: CI - App - Headless - Jack
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/headless/jack/go/**'
+      - '.github/workflows/ci-app-headless-go-jack.yaml'
+      - '.github/workflows/ci-app-headless-go-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-headless-jack-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-headless-go-template.yaml
+    with:
+      package: packages/app/headless/jack/languages/go
+      installZig: true
+      releaseName: app-headless-jack-latest
+      releaseTitle: App - Headless - Jack (latest)
+      artifactName: app-headless-jack
+      artifactPath: packages/app/headless/jack/languages/go/bin/*

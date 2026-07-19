@@ -1,0 +1,88 @@
+// Table border spacing utilities — Tailwind v3 default scale
+
+$border-spacing-unit: 0.25rem;
+$border-spacing-steps: (
+  ('0\\.5', 0.5),
+  ('1', 1),
+  ('1\\.5', 1.5),
+  ('2', 2),
+  ('2\\.5', 2.5),
+  ('3', 3),
+  ('3\\.5', 3.5),
+  ('4', 4),
+  ('5', 5),
+  ('6', 6),
+  ('7', 7),
+  ('8', 8),
+  ('9', 9),
+  ('10', 10),
+  ('11', 11),
+  ('12', 12),
+  ('14', 14),
+  ('16', 16),
+  ('20', 20),
+  ('24', 24),
+  ('28', 28),
+  ('32', 32),
+  ('36', 36),
+  ('40', 40),
+  ('44', 44),
+  ('48', 48),
+  ('52', 52),
+  ('56', 56),
+  ('60', 60),
+  ('64', 64),
+  ('72', 72),
+  ('80', 80),
+  ('96', 96)
+);
+
+.border-spacing-0 {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+}
+
+.border-spacing-x-0 {
+  --tw-border-spacing-x: 0;
+  border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+}
+
+.border-spacing-y-0 {
+  --tw-border-spacing-y: 0;
+  border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+}
+
+.border-spacing-px {
+  --tw-border-spacing-x: 1px;
+  --tw-border-spacing-y: 1px;
+  border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+}
+
+.border-spacing-x-px {
+  --tw-border-spacing-x: 1px;
+  border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+}
+
+.border-spacing-y-px {
+  --tw-border-spacing-y: 1px;
+  border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+}
+
+@each $class, $step in $border-spacing-steps {
+  .border-spacing-#{$class} {
+    --tw-border-spacing-x: #{$step * $border-spacing-unit};
+    --tw-border-spacing-y: #{$step * $border-spacing-unit};
+    border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+  }
+
+  .border-spacing-x-#{$class} {
+    --tw-border-spacing-x: #{$step * $border-spacing-unit};
+    border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+  }
+
+  .border-spacing-y-#{$class} {
+    --tw-border-spacing-y: #{$step * $border-spacing-unit};
+    border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+  }
+}

@@ -1,0 +1,16 @@
+// Background repeat utilities — Tailwind v3 default scale
+
+$background-repeats: (
+  ('repeat', repeat),
+  ('no-repeat', no-repeat),
+  ('repeat-x', repeat-x),
+  ('repeat-y', repeat-y),
+  ('repeat-round', round),
+  ('repeat-space', space)
+);
+
+@each $name, $value in $background-repeats {
+  .bg-#{$name} {
+    background-repeat: $value;
+  }
+}

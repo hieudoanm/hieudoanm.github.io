@@ -1,0 +1,33 @@
+name: CI - App - Hybrid - Productivity - Keynotes
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/productivity/keynotes/**/*'
+      - '.github/workflows/ci-app-hybrid-productivity-keynotes.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-hybrid-productivity-keynotes-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/productivity/keynotes
+      filter: '@hieudoanm.github.io/keynotes'
+      releaseName: app-hybrid-productivity-keynotes-latest
+      releaseTitle: App - Hybrid - Productivity - Keynotes (latest)
+      artifactPrefix: productivity-keynotes
+      artifactName: keynotes

@@ -1,0 +1,44 @@
+import { render, screen, fireEvent } from '@testing-library/react';
+import { Header } from '../Header';
+
+jest.mock('next/link', () => {
+  return ({ children, href }: { children: React.ReactNode; href: string }) => (
+    <a href={href}>{children}</a>
+  );
+});
+
+describe('Header', () => {
+  beforeEach(() => {
+    document.documentElement.removeAttribute('data-theme');
+    localStorage.clear();
+  });
+
+  it('renders the Tax brand linking home', () => {
+    render(<Header />);
+    const brand = screen.getByRole('link', { name: /tax/i });
+    expect(brand).toBeInTheDocument();
+    expect(brand.getAttribute('href')).toBe('/');
+  });
+
+  it('renders About, Downloads, and Version links', () => {
+    render(<Header />);
+    expect(
+      screen.getAllByRole('link', { name: 'About' }).length
+    ).toBeGreaterThanOrEqual(1);
+    expect(
+      screen.getAllByRole('link', { name: 'Downloads' }).length
+    ).toBeGreaterThanOrEqual(1);
+    expect(
+      screen.getAllByRole('link', { name: 'Version' }).length
+    ).toBeGreaterThanOrEqual(1);
+  });
+
+  it('renders a theme toggle and persists the theme', () => {
+    render(<Header />);
+    const toggle = screen.getByTestId('theme-toggle');
+    expect(toggle).toBeInTheDocument();
+    fireEvent.click(toggle);
+    expect(document.documentElement).toHaveAttribute('data-theme', 'tax-dark');
+    expect(localStorage.getItem('tax-theme')).toBe('tax-dark');
+  });
+});

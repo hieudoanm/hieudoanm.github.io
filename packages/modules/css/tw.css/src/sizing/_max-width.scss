@@ -1,0 +1,63 @@
+// Max width utilities — Tailwind v3 default scale
+
+$max-widths: (
+  ('xs', 20rem),
+  ('sm', 24rem),
+  ('md', 28rem),
+  ('lg', 32rem),
+  ('xl', 36rem),
+  ('2xl', 42rem),
+  ('3xl', 48rem),
+  ('4xl', 56rem),
+  ('5xl', 64rem),
+  ('6xl', 72rem),
+  ('7xl', 80rem)
+);
+
+$max-width-screens: (
+  ('sm', 640px),
+  ('md', 768px),
+  ('lg', 1024px),
+  ('xl', 1280px),
+  ('2xl', 1536px)
+);
+
+.max-w-0 {
+  max-width: 0;
+}
+
+.max-w-none {
+  max-width: none;
+}
+
+.max-w-full {
+  max-width: 100%;
+}
+
+.max-w-min {
+  max-width: min-content;
+}
+
+.max-w-max {
+  max-width: max-content;
+}
+
+.max-w-fit {
+  max-width: fit-content;
+}
+
+.max-w-prose {
+  max-width: 65ch;
+}
+
+@each $name, $width in $max-widths {
+  .max-w-#{$name} {
+    max-width: #{$width};
+  }
+}
+
+@each $name, $width in $max-width-screens {
+  .max-w-screen-#{$name} {
+    max-width: #{$width};
+  }
+}

@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{{.Site.Description}}" />
+    <title>{{.Site.Name}}</title>
+    <style>
+      :root {
+@LANDIFY_THEME@      }
+{{template "base-css" .}}
+      .pricing {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        align-items: stretch;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      .tier {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        background: var(--base-200);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+        padding: 26px 24px;
+      }
+      .tier.featured {
+        border: 2px solid var(--primary);
+        background: var(--primary-soft);
+      }
+      .tier-head {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+      }
+      .tier-name {
+        font-size: 16px;
+        font-weight: 800;
+      }
+      .tier-tag {
+        font-size: 11px;
+        font-weight: 600;
+        color: var(--primary-dark);
+        background: var(--primary);
+        border-radius: 999px;
+        padding: 3px 10px;
+      }
+      .tier-tag {
+        color: var(--primary-content);
+      }
+      .tier-price {
+        font-size: 34px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+      .tier-period {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--neutral);
+      }
+      .perks {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 8px;
+        font-size: 14px;
+        color: var(--base-content);
+        flex: 1;
+      }
+      .perks li {
+        display: flex;
+        gap: 8px;
+        align-items: baseline;
+      }
+      .perks .tick {
+        color: var(--success);
+        font-weight: 700;
+      }
+      .tier-cta .btn {
+        width: 100%;
+        margin-top: 6px;
+      }
+      .pricing-note {
+        margin: 16px auto 0;
+        max-width: 56ch;
+        text-align: center;
+        font-size: 13px;
+        color: var(--neutral);
+      }
+      @media (max-width: 900px) {
+        .pricing {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    {{template "header" .}}
+
+    <main id="top">
+      <section class="hero">
+        <div>
+          {{if .Hero.Badge}}<span class="badge">{{.Hero.Badge}}</span>{{end}}
+          <h1>{{.Hero.Headline}}</h1>
+          <p class="lead">{{.Hero.Subheadline}}</p>
+          {{if or .Hero.Primary.Href .Hero.Secondary.Href}}
+          <div class="hero-actions">
+            {{if .Hero.Primary.Href}}<a class="btn btn-primary" href="{{.Hero.Primary.Href}}">{{.Hero.Primary.Label}}</a>{{end}}
+            {{if .Hero.Secondary.Href}}<a class="btn btn-ghost" href="{{.Hero.Secondary.Href}}">{{.Hero.Secondary.Label}}</a>{{end}}
+          </div>
+          {{end}}
+        </div>
+      </section>
+
+      {{if .Pricing.Heading}}
+      <section id="pricing" class="block">
+        <div class="block-head">
+          <h2>{{.Pricing.Heading}}</h2>
+          {{if .Pricing.Sub}}<p class="sub">{{.Pricing.Sub}}</p>{{end}}
+        </div>
+        <div class="pricing">
+          {{range .Pricing.Tiers}}
+          <div class="tier{{if .Tag}} featured{{end}}">
+            <div class="tier-head">
+              <span class="tier-name">{{.Name}}</span>
+              {{if .Tag}}<span class="tier-tag">{{.Tag}}</span>{{end}}
+            </div>
+            <div class="tier-price">{{.Price}}<span class="tier-period">{{if .Period}} / {{.Period}}{{end}}</span></div>
+            <ul class="perks">
+              {{range .Perks}}<li><span class="tick" aria-hidden="true">✓</span> {{.}}</li>{{end}}
+            </ul>
+            <div class="tier-cta">
+              <a class="btn btn-primary" href="{{.CTA.Href}}">{{.CTA.Label}}</a>
+            </div>
+          </div>
+          {{end}}
+        </div>
+        {{if .Pricing.Note}}<p class="pricing-note">{{.Pricing.Note}}</p>{{end}}
+      </section>
+      {{end}}
+
+      {{if .CTA.Heading}}
+      <section id="cta" class="block">
+        <div class="cta">
+          <span class="icon" aria-hidden="true">{{.CTA.Icon}}</span>
+          <h2>{{.CTA.Heading}}</h2>
+          <p>{{.CTA.Body}}</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="{{.CTA.Button.Href}}">{{.CTA.Button.Label}}</a>
+          </div>
+        </div>
+      </section>
+      {{end}}
+
+      {{template "footer" .}}
+    </main>
+  </body>
+</html>

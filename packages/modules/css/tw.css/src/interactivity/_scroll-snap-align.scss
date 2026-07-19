@@ -1,0 +1,14 @@
+// Scroll snap align utilities — Tailwind v3 default scale
+
+$scroll-snap-aligns: (
+  ('start', start),
+  ('end', end),
+  ('center', center),
+  ('align-none', none)
+);
+
+@each $name, $value in $scroll-snap-aligns {
+  .snap-#{$name} {
+    scroll-snap-align: $value;
+  }
+}

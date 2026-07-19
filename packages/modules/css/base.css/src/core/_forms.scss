@@ -1,0 +1,71 @@
+// Interactive form controls.
+
+@mixin forms {
+  label {
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  input,
+  select,
+  textarea {
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    line-height: inherit;
+  }
+
+  button {
+    background: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+    line-height: inherit;
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  input[type='checkbox'],
+  input[type='radio'] {
+    accent-color: var(--base-primary);
+  }
+
+  fieldset {
+    border: 1px solid var(--base-border);
+    border-radius: var(--base-radius);
+    margin: 0;
+    min-width: 0;
+    padding: 1rem;
+  }
+
+  legend {
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0 0.5rem;
+  }
+
+  optgroup {
+    font-style: normal;
+  }
+
+  option {
+    color: var(--base-text);
+  }
+
+  output {
+    display: inline-block;
+  }
+
+  progress,
+  meter {
+    vertical-align: baseline;
+  }
+
+  ::placeholder {
+    color: var(--base-text-muted);
+    opacity: 1;
+  }
+}

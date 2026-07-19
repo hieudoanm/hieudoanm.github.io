@@ -1,0 +1,32 @@
+// Backdrop blur utilities — Tailwind v3 default scale
+
+@use 'filter-composite' as *;
+
+$backdrop-blurs: (
+  ('none', 'blur(0)'),
+  ('sm', 'blur(4px)'),
+  ('DEFAULT', 'blur(8px)'),
+  ('md', 'blur(12px)'),
+  ('lg', 'blur(16px)'),
+  ('xl', 'blur(24px)'),
+  ('2xl', 'blur(40px)'),
+  ('3xl', 'blur(64px)')
+);
+
+@each $name, $value in $backdrop-blurs {
+  .backdrop-blur {
+    --tw-backdrop-blur: #{$value};
+    -webkit-backdrop-filter: #{$backdrop-filter-composite};
+    backdrop-filter: #{$backdrop-filter-composite};
+  }
+}
+
+@each $name, $value in $backdrop-blurs {
+  @if $name != 'DEFAULT' {
+    .backdrop-blur-#{$name} {
+      --tw-backdrop-blur: #{$value};
+      -webkit-backdrop-filter: #{$backdrop-filter-composite};
+      backdrop-filter: #{$backdrop-filter-composite};
+    }
+  }
+}

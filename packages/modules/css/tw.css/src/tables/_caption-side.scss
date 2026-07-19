@@ -1,0 +1,9 @@
+// Caption side utilities — Tailwind v3 default scale
+
+$caption-sides: (('top', top), ('bottom', bottom));
+
+@each $name, $value in $caption-sides {
+  .caption-#{$name} {
+    caption-side: $value;
+  }
+}

@@ -1,0 +1,15 @@
+// Backdrop invert utilities — Tailwind v3 default scale
+
+@use 'filter-composite' as *;
+
+.backdrop-invert-0 {
+  --tw-backdrop-invert: invert(0);
+  -webkit-backdrop-filter: #{$backdrop-filter-composite};
+  backdrop-filter: #{$backdrop-filter-composite};
+}
+
+.backdrop-invert {
+  --tw-backdrop-invert: invert(100%);
+  -webkit-backdrop-filter: #{$backdrop-filter-composite};
+  backdrop-filter: #{$backdrop-filter-composite};
+}

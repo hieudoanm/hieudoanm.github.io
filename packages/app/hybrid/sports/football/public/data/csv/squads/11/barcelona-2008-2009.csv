@@ -1,0 +1,27 @@
+id,name,number,role,bench
+victor,Víctor Valdés,1,GK,false
+dani,Dani Alves,20,DEF,false
+puyol,Carles Puyol,5,DEF,false
+pique,Gerard Piqué,3,DEF,false
+abidal,Éric Abidal,22,DEF,false
+xavi,Xavi,6,MID,false
+sergio,Sergio Busquets,16,MID,false
+andres,Andrés Iniesta,8,MID,false
+leo,Lionel Messi,10,FWD,false
+samuel,Samuel Eto'o,9,FWD,false
+thierry,Thierry Henry,14,FWD,false
+pinto,José Manuel Pinto,13,GK,true
+jorquera,Albert Jorquera,25,GK,true
+marquez,Rafael Márquez,4,DEF,true
+milito,Gabriel Milito,18,DEF,true
+caceres,Martín Cáceres,2,DEF,true
+sylvinho,Sylvinho,17,DEF,true
+abella,Damià Abella,12,DEF,true
+toure,Yaya Touré,24,MID,true
+keita,Seydou Keita,15,MID,true
+hleb,Aleksandr Hleb,21,MID,true
+vsanchez,Víctor Sánchez,28,MID,true
+gudjohnsen,Eidur Gudjohnsen,7,FWD,true
+bojan,Bojan Krkić,11,FWD,true
+pedro,Pedro Rodríguez,27,FWD,true
+assulin,Gai Assulin,30,FWD,true

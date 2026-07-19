@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "africa-khoisan-hunters-20000",
+    "title": "Khoisan Hunter-Gatherers",
+    "year": -20000,
+    "description": "San peoples roamed southern Africa as hunter-gatherers.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-san-rock-art-1000",
+    "title": "San Rock Art Created",
+    "year": -1000,
+    "description": "San artists painted scenes across the Drakensberg.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-khoikhoi-herders-200",
+    "title": "Khoikhoi Herders Emerge",
+    "year": 200,
+    "description": "Khoikhoi herders grazed cattle and sheep in the southwest.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-bantu-migration-300",
+    "title": "Bantu Farmers Migrate South",
+    "year": 300,
+    "description": "Bantu-speaking farmers moved into the region.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-mapungubwe-1050",
+    "title": "Kingdom of Mapungubwe",
+    "year": 1050,
+    "description": "A wealthy trading kingdom rose along the Limpopo.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-great-zimbabwe-1200",
+    "title": "Great Zimbabwe Flourishes",
+    "year": 1200,
+    "description": "Stone-built Great Zimbabwe became a trading hub.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-venda-kingdom-1300",
+    "title": "Venda Kingdom Rises",
+    "year": 1300,
+    "description": "Venda kingdoms developed in the far north.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-dias-cape-1488",
+    "title": "Dias Rounds the Cape",
+    "year": 1488,
+    "description": "Bartolomeu Dias became the first European to round the Cape.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-vasco-da-gama-1497",
+    "title": "Vasco da Gama Sails East",
+    "year": 1497,
+    "description": "Vasco da Gama rounded the Cape on the way to India.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-cape-colony-1652",
+    "title": "Cape Colony Founded",
+    "year": 1652,
+    "description": "Jan van Riebeeck set up a supply station at the Cape.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-cape-slaves-1658",
+    "title": "Cape Slaves Arrive",
+    "year": 1658,
+    "description": "The Dutch brought the first enslaved people to the Cape.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-castle-good-hope-1666",
+    "title": "Castle of Good Hope Built",
+    "year": 1666,
+    "description": "The Dutch built a fortress at Cape Town.",
+    "category": "technology",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-stellenbosch-1679",
+    "title": "Stellenbosch Founded",
+    "year": 1679,
+    "description": "The Dutch founded the town of Stellenbosch.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-british-occupy-cape-1806",
+    "title": "Britain Occupies the Cape",
+    "year": 1806,
+    "description": "British forces captured the Cape from the Dutch.",
+    "category": "war",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-griqua-state-1813",
+    "title": "Griqua State Formed",
+    "year": 1813,
+    "description": "Griqua communities built states north of the Cape.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-shaka-zulu-1816",
+    "title": "Shaka Becomes Zulu King",
+    "year": 1816,
+    "description": "Shaka built the Zulu nation into a military power.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-mfecane-1818",
+    "title": "Mfecane Wars",
+    "year": 1818,
+    "description": "Violent upheavals reshaped southern Africa.",
+    "category": "war",
+    "region": "africa",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-british-settlers-1820",
+    "title": "British Settlers Arrive",
+    "year": 1820,
+    "description": "Thousands of British settlers landed at Algoa Bay.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-shaka-killed-1828",
+    "title": "Shaka Assassinated",
+    "year": 1828,
+    "description": "Shaka was killed by his half-brothers.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-cape-slavery-abolished-1834",
+    "title": "Slavery Abolished at the Cape",
+    "year": 1834,
+    "description": "Britain freed enslaved people at the Cape.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-great-trek-1836",
+    "title": "Great Trek Begins",
+    "year": 1836,
+    "description": "Boers moved inland to escape British rule.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-blood-river-1838",
+    "title": "Battle of Blood River",
+    "year": 1838,
+    "description": "Voortrekkers defeated a Zulu army at Blood River.",
+    "category": "war",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-natal-annexed-1843",
+    "title": "Natal Annexed by Britain",
+    "year": 1843,
+    "description": "Britain took control of Natal.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-transvaal-republic-1852",
+    "title": "Transvaal Republic Formed",
+    "year": 1852,
+    "description": "Boers established the South African Republic.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-orange-free-state-1854",
+    "title": "Orange Free State Founded",
+    "year": 1854,
+    "description": "Boers created the Orange Free State.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-cape-parliament-1854",
+    "title": "Cape Parliament Opened",
+    "year": 1854,
+    "description": "The Cape won a representative parliament.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-indian-labourers-1860",
+    "title": "Indian Indentured Labourers Arrive",
+    "year": 1860,
+    "description": "Indians arrived to work on Natal's sugar plantations.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-first-telegraph-1860",
+    "title": "First Telegraph Line",
+    "year": 1860,
+    "description": "The first telegraph linked Cape Town and Simon's Town.",
+    "category": "technology",
+    "region": "africa",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-diamonds-found-1867",
+    "title": "Diamonds Found at Hopetown",
+    "year": 1867,
+    "description": "Diamonds were discovered along the Vaal River.",
+    "category": "technology",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-kimberley-rush-1871",
+    "title": "Kimberley Diamond Rush",
+    "year": 1871,
+    "description": "Miners flocked to the diamond fields at Kimberley.",
+    "category": "technology",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-anglo-zulu-war-1879",
+    "title": "Anglo-Zulu War Begins",
+    "year": 1879,
+    "description": "Britain invaded the Zulu kingdom.",
+    "category": "war",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-isandlwana-1879",
+    "title": "Battle of Isandlwana",
+    "year": 1879,
+    "description": "Zulu warriors destroyed a British column.",
+    "category": "war",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-rorkes-drift-1879",
+    "title": "Rorke's Drift Defended",
+    "year": 1879,
+    "description": "British troops held off a Zulu attack.",
+    "category": "war",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-first-boer-war-1880",
+    "title": "First Boer War Begins",
+    "year": 1880,
+    "description": "Transvaal Boers revolted against British annexation.",
+    "category": "war",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-majuba-1881",
+    "title": "Battle of Majuba Hill",
+    "year": 1881,
+    "description": "Boers defeated the British at Majuba Hill.",
+    "category": "war",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-cape-railways-1885",
+    "title": "Railways Reach Kimberley",
+    "year": 1885,
+    "description": "Railways connected the Cape to the diamond fields.",
+    "category": "technology",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-witwatersrand-gold-1886",
+    "title": "Gold Found on the Witwatersrand",
+    "year": 1886,
+    "description": "Gold discoveries triggered a mining boom.",
+    "category": "technology",
+    "region": "africa",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-zululand-annexed-1887",
+    "title": "Zululand Annexed",
+    "year": 1887,
+    "description": "Britain absorbed Zululand into Natal.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-second-boer-war-1899",
+    "title": "Second Boer War Begins",
+    "year": 1899,
+    "description": "Britain and the Boer republics went to war.",
+    "category": "war",
+    "region": "africa",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-mafeking-relieved-1900",
+    "title": "Siege of Mafeking Lifted",
+    "year": 1900,
+    "description": "British troops relieved the besieged town of Mafeking.",
+    "category": "war",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-vereeniging-treaty-1902",
+    "title": "Treaty of Vereeniging Signed",
+    "year": 1902,
+    "description": "The Boer War ended with the Treaty of Vereeniging.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-bambatha-rebellion-1906",
+    "title": "Bambatha Rebellion",
+    "year": 1906,
+    "description": "Chief Bambatha led an uprising against the poll tax.",
+    "category": "war",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-walker-olympics-1908",
+    "title": "Walker Wins Olympic Gold",
+    "year": 1908,
+    "description": "Reggie Walker became the first South African Olympic champion.",
+    "category": "sports",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-union-south-africa-1910",
+    "title": "Union of South Africa Formed",
+    "year": 1910,
+    "description": "The Cape, Natal, Transvaal and Orange joined as one dominion.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-anc-founded-1912",
+    "title": "ANC Founded",
+    "year": 1912,
+    "description": "The African National Congress fought for black rights.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-natives-land-act-1913",
+    "title": "Natives Land Act Passed",
+    "year": 1913,
+    "description": "The act restricted black land ownership.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-swa-campaign-1915",
+    "title": "South West Africa Captured",
+    "year": 1915,
+    "description": "South African troops took German South West Africa.",
+    "category": "war",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-spanish-flu-1918",
+    "title": "Spanish Flu Strikes",
+    "year": 1918,
+    "description": "The influenza pandemic killed tens of thousands.",
+    "category": "medicine",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-comrades-marathon-1921",
+    "title": "Comrades Marathon Founded",
+    "year": 1921,
+    "description": "The Comrades ultramarathon began near Durban.",
+    "category": "sports",
+    "region": "africa",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-rand-rebellion-1922",
+    "title": "Rand Rebellion",
+    "year": 1922,
+    "description": "White miners struck against wage cuts.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-taung-child-1925",
+    "title": "Taung Child Announced",
+    "year": 1925,
+    "description": "Raymond Dart revealed a new early hominin fossil.",
+    "category": "science",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-statute-westminster-1931",
+    "title": "Statute of Westminster",
+    "year": 1931,
+    "description": "The act confirmed South African self-government.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-coelacanth-1938",
+    "title": "Coelacanth Rediscovered",
+    "year": 1938,
+    "description": "A living coelacanth was caught near East London.",
+    "category": "science",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-sa-enters-wwii-1939",
+    "title": "South Africa Enters WWII",
+    "year": 1939,
+    "description": "The country joined the Allies against Germany.",
+    "category": "war",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-jazz-flourishes-1940",
+    "title": "Township Jazz Flourishes",
+    "year": 1940,
+    "description": "Marabi and jazz thrived in the townships.",
+    "category": "music",
+    "region": "africa",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-apartheid-1948",
+    "title": "Apartheid Introduced",
+    "year": 1948,
+    "description": "The National Party won power and began apartheid.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-mixed-marriages-act-1949",
+    "title": "Mixed Marriages Act",
+    "year": 1949,
+    "description": "The act banned marriages between races.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-group-areas-act-1950",
+    "title": "Group Areas Act",
+    "year": 1950,
+    "description": "The act segregated neighbourhoods by race.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-population-registration-1950",
+    "title": "Population Registration Act",
+    "year": 1950,
+    "description": "South Africans were classified by race.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-kwela-music-1950",
+    "title": "Kwela Music Popular",
+    "year": 1950,
+    "description": "Kwela tunes brought penny-whistle music to the world.",
+    "category": "music",
+    "region": "africa",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-defiance-campaign-1952",
+    "title": "Defiance Campaign",
+    "year": 1952,
+    "description": "The ANC launched nonviolent protests against unjust laws.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-bantu-education-1953",
+    "title": "Bantu Education Act",
+    "year": 1953,
+    "description": "The act created segregated schooling.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-makeba-debuts-1954",
+    "title": "Miriam Makeba Debuts",
+    "year": 1954,
+    "description": "Miriam Makeba rose to fame singing African jazz.",
+    "category": "music",
+    "region": "africa",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-freedom-charter-1955",
+    "title": "Freedom Charter Adopted",
+    "year": 1955,
+    "description": "The Congress of the People adopted the Freedom Charter.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-sophiatown-1955",
+    "title": "Sophiatown Torn Down",
+    "year": 1955,
+    "description": "Authorities demolished the cultural hub of Sophiatown.",
+    "category": "culture",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-womens-march-1956",
+    "title": "Women's March on Pretoria",
+    "year": 1956,
+    "description": "Thousands of women protested pass laws.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-pac-founded-1959",
+    "title": "Pan-African Congress Founded",
+    "year": 1959,
+    "description": "The PAC split from the ANC.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-sharpeville-1960",
+    "title": "Sharpeville Massacre",
+    "year": 1960,
+    "description": "Police killed protesters at Sharpeville.",
+    "category": "war",
+    "region": "africa",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-republic-declared-1961",
+    "title": "Republic Declared",
+    "year": 1961,
+    "description": "South Africa left the Commonwealth and became a republic.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-umkhonto-sizwe-1961",
+    "title": "Umkhonto we Sizwe Founded",
+    "year": 1961,
+    "description": "The ANC formed its armed wing.",
+    "category": "war",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-mandela-arrested-1962",
+    "title": "Mandela Arrested",
+    "year": 1962,
+    "description": "Nelson Mandela was arrested near Howick.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-mandela-sentenced-1964",
+    "title": "Mandela Sentenced to Life",
+    "year": 1964,
+    "description": "Mandela was jailed for life at the Rivonia Trial.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-heart-transplant-1967",
+    "title": "First Heart Transplant",
+    "year": 1967,
+    "description": "Christiaan Barnard performed the world's first heart transplant.",
+    "category": "medicine",
+    "region": "africa",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-soweto-uprising-1976",
+    "title": "Soweto Uprising",
+    "year": 1976,
+    "description": "Students protested the teaching of Afrikaans.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-biko-dies-1977",
+    "title": "Steve Biko Dies",
+    "year": 1977,
+    "description": "Black Consciousness leader Steve Biko died in custody.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-gods-must-be-crazy-1980",
+    "title": "The Gods Must Be Crazy Released",
+    "year": 1980,
+    "description": "The comedy film found an international audience.",
+    "category": "film",
+    "region": "africa",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-tricameral-1983",
+    "title": "Tricameral Parliament Created",
+    "year": 1983,
+    "description": "A new constitution gave limited voice to some races.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-state-emergency-1985",
+    "title": "State of Emergency Declared",
+    "year": 1985,
+    "description": "The government cracked down on anti-apartheid protests.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-graceland-1986",
+    "title": "Graceland Album Released",
+    "year": 1986,
+    "description": "Paul Simon's album featured Ladysmith Black Mambazo.",
+    "category": "music",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-de-klerk-president-1989",
+    "title": "de Klerk Becomes President",
+    "year": 1989,
+    "description": "F.W. de Klerk began to dismantle apartheid.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-mandela-released-1990",
+    "title": "Mandela Released",
+    "year": 1990,
+    "description": "Nelson Mandela walked free after 27 years.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 1,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-nobel-peace-1993",
+    "title": "Nobel Peace Prize Awarded",
+    "year": 1993,
+    "description": "Mandela and de Klerk shared the Nobel Peace Prize.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-first-election-1994",
+    "title": "First Democratic Election",
+    "year": 1994,
+    "description": "South Africans voted in their first free election.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 1,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-mandela-president-1994",
+    "title": "Mandela Becomes President",
+    "year": 1994,
+    "description": "Nelson Mandela became the first black president.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 1,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-rugby-world-cup-1995",
+    "title": "Rugby World Cup Won",
+    "year": 1995,
+    "description": "South Africa hosted and won the Rugby World Cup.",
+    "category": "sports",
+    "region": "africa",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-truth-commission-1996",
+    "title": "Truth Commission Begins",
+    "year": 1996,
+    "description": "The Truth and Reconciliation Commission heard testimony.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-mbeki-president-1999",
+    "title": "Mbeki Becomes President",
+    "year": 1999,
+    "description": "Thabo Mbeki succeeded Mandela.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-salt-telescope-2002",
+    "title": "SALT Telescope Opens",
+    "year": 2002,
+    "description": "The Southern African Large Telescope began operations.",
+    "category": "space",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-cricket-world-cup-2003",
+    "title": "Cricket World Cup Hosted",
+    "year": 2003,
+    "description": "South Africa co-hosted the Cricket World Cup.",
+    "category": "sports",
+    "region": "africa",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-antiretrovirals-2004",
+    "title": "HIV Treatment Rollout",
+    "year": 2004,
+    "description": "The state began providing free HIV treatment.",
+    "category": "medicine",
+    "region": "africa",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-tsotsi-oscar-2006",
+    "title": "Tsotsi Wins Oscar",
+    "year": 2006,
+    "description": "Tsotsi won the Best Foreign Film Oscar.",
+    "category": "film",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-district-9-2009",
+    "title": "District 9 Released",
+    "year": 2009,
+    "description": "The South African film became a global hit.",
+    "category": "film",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-zuma-president-2009",
+    "title": "Zuma Becomes President",
+    "year": 2009,
+    "description": "Jacob Zuma took office as president.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-fifa-world-cup-2010",
+    "title": "FIFA World Cup Hosted",
+    "year": 2010,
+    "description": "South Africa hosted the first World Cup in Africa.",
+    "category": "sports",
+    "region": "africa",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-mandela-dies-2013",
+    "title": "Mandela Dies",
+    "year": 2013,
+    "description": "Nelson Mandela died at age ninety-five.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 1,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-ramaphosa-president-2018",
+    "title": "Ramaphosa Becomes President",
+    "year": 2018,
+    "description": "Cyril Ramaphosa replaced Jacob Zuma.",
+    "category": "politics",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-meerkat-2019",
+    "title": "MeerKAT Begins Science",
+    "year": 2019,
+    "description": "The MeerKAT radio telescope started operations.",
+    "category": "space",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-springboks-2019",
+    "title": "Springboks Win World Cup",
+    "year": 2019,
+    "description": "The Springboks won a third Rugby World Cup.",
+    "category": "sports",
+    "region": "africa",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-covid-lockdown-2020",
+    "title": "COVID-19 Lockdown",
+    "year": 2020,
+    "description": "South Africa imposed strict coronavirus lockdowns.",
+    "category": "medicine",
+    "region": "africa",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "africa-july-unrest-2021",
+    "title": "July Unrest",
+    "year": 2021,
+    "description": "Rioting followed former President Zuma's arrest.",
+    "category": "war",
+    "region": "africa",
+    "difficulty": 5,
+    "source": "britannica"
+  }
+]

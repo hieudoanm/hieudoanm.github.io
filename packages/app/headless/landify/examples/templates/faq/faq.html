@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Answers to the most common questions about Landify." />
+    <title>Landify Help</title>
+    <style>
+      :root {
+        --base-100: #f8fafc;
+        --base-200: #fefeff;
+        --base-300: #f1f3f4;
+        --base-content: #181d25;
+        --border: #64748b;
+        --border-soft: #bdc4cf;
+        --error: #ef4444;
+        --info: #0ea5e9;
+        --neutral: #64748b;
+        --neutral-faint: #a7b0be;
+        --primary: #1e293b;
+        --primary-content: #ffffff;
+        --primary-dark: #1a2332;
+        --primary-soft: #dee1e5;
+        --radius: 10px;
+        --secondary: #475569;
+        --secondary-content: #ffffff;
+        --success: #10b981;
+        --warning: #f59e0b;
+      }
+* {
+        box-sizing: border-box;
+      }
+      html {
+        margin: 0;
+        scroll-behavior: smooth;
+        scroll-padding-top: 76px;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background: var(--base-100);
+        color: var(--base-content);
+        font-family:
+          system-ui,
+          -apple-system,
+          'Segoe UI',
+          Roboto,
+          'Helvetica Neue',
+          Arial,
+          sans-serif;
+        line-height: 1.55;
+        -webkit-font-smoothing: antialiased;
+      }
+      a {
+        color: var(--primary);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        padding: 0 24px;
+        height: 60px;
+        background: var(--base-200);
+        border-bottom: 1px solid var(--border-soft);
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--base-content);
+      }
+      .brand:hover {
+        text-decoration: none;
+      }
+      .brand .mark {
+        font-size: 20px;
+        line-height: 1;
+      }
+      nav {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        font-size: 14px;
+      }
+      nav a {
+        color: var(--neutral);
+      }
+      nav a:hover {
+        color: var(--base-content);
+        text-decoration: none;
+      }
+
+      main {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 32px 24px 64px;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 28px;
+        justify-items: center;
+        max-width: 760px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 16px 0 8px;
+      }
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 4px 12px;
+        border-radius: 999px;
+        border: 1px solid var(--border-soft);
+        background: var(--primary-soft);
+        color: var(--primary-dark);
+      }
+      .hero h1 {
+        margin: 14px 0 8px;
+        font-size: 34px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        line-height: 1.15;
+      }
+      .lead {
+        margin: 0 auto;
+        max-width: 58ch;
+        font-size: 16px;
+        color: var(--neutral);
+      }
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 22px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        border: 1px solid transparent;
+        border-radius: var(--radius);
+        padding: 12px 22px;
+        font-size: 15px;
+        font-weight: 600;
+        font-family: inherit;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .btn:hover {
+        text-decoration: none;
+      }
+      .btn-primary {
+        color: var(--primary-content);
+        background: var(--primary);
+        border-color: var(--primary);
+      }
+      .btn-primary:hover {
+        background: var(--primary-dark);
+        border-color: var(--primary-dark);
+      }
+      .btn-ghost {
+        color: var(--base-content);
+        background: var(--base-200);
+        border-color: var(--border);
+      }
+      .btn-ghost:hover {
+        background: var(--base-300);
+      }
+
+       
+      .hero-media,
+      .demo-media {
+        display: block;
+        width: 100%;
+        max-width: 720px;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        margin-inline: auto;
+        background: var(--base-300);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+      }
+
+      section.block {
+        margin-top: 32px;
+      }
+      .block-head {
+        margin: 0 0 18px;
+        text-align: center;
+      }
+      .block-head h2 {
+        margin: 0;
+        font-size: 22px;
+        font-weight: 800;
+        letter-spacing: -0.01em;
+      }
+      .block-head .sub {
+        margin: 6px auto 0;
+        max-width: 60ch;
+        color: var(--neutral);
+        font-size: 14.5px;
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+      .feature {
+        background: var(--base-200);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+        padding: 24px 24px;
+        text-align: center;
+      }
+      .feature .icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        font-size: 22px;
+        border-radius: var(--radius);
+        background: var(--primary-soft);
+        border: 1px solid var(--border-soft);
+      }
+      .feature h3 {
+        margin: 14px 0 8px;
+        font-size: 16px;
+        font-weight: 700;
+      }
+      .feature p {
+        margin: 0;
+        font-size: 13.5px;
+        color: var(--neutral);
+      }
+
+      .cta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 6px;
+        background: var(--base-200);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+        padding: 48px 32px;
+      }
+      .cta .icon {
+        font-size: 34px;
+        line-height: 1;
+      }
+      .cta h2 {
+        margin: 10px 0 6px;
+        font-size: 26px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+      .cta p {
+        margin: 0;
+        max-width: 52ch;
+        color: var(--neutral);
+        font-size: 15px;
+      }
+      .cta .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      footer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 24px;
+        align-items: center;
+        justify-content: center;
+        border-top: 1px solid var(--border-soft);
+        margin-top: 48px;
+        padding: 24px 0 4px;
+        font-size: 13px;
+        color: var(--neutral-faint);
+      }
+      footer a {
+        color: var(--neutral-faint);
+      }
+      footer a:hover {
+        color: var(--base-content);
+      }
+
+      @media (max-width: 900px) {
+        .features {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 560px) {
+        nav {
+          display: none;
+        }
+        .hero h1 {
+          font-size: 26px;
+        }
+      }
+      .faq {
+        max-width: 760px;
+        margin: 0 auto;
+      }
+      .faq details {
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+        background: var(--base-200);
+        padding: 18px 22px;
+      }
+      .faq details + details {
+        margin-top: 12px;
+      }
+      .faq summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        cursor: pointer;
+        list-style: none;
+        font-size: 16px;
+        font-weight: 700;
+      }
+      .faq summary::-webkit-details-marker {
+        display: none;
+      }
+      .faq summary::after {
+        content: "+";
+        font-size: 20px;
+        line-height: 1;
+        color: var(--primary);
+      }
+      .faq details[open] summary::after {
+        content: "–";
+      }
+      .faq details p {
+        margin: 12px 0 0;
+        font-size: 14.5px;
+        color: var(--neutral);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="#top">
+        <span class="mark">❓</span>
+        <span>Landify Help</span>
+      </a>
+      <nav>
+        <a href="#faq">Questions</a><a href="#cta">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div>
+          <span class="badge">🙋 FAQ</span>
+          <h1>Questions, answered.</h1>
+          <p class="lead">Straight answers to the questions we hear the most. Still stuck after this list? The button below links to human support.</p>
+        </div>
+      </section>
+
+      <section id="faq" class="block">
+        
+        <div class="block-head">
+          <h2>Frequently asked</h2>
+          <p class="sub">Picked from real support conversations.</p>
+        </div>
+        
+        <div class="faq">
+          
+          <details class="faq-item">
+            <summary>Does Landify need a build step?</summary>
+            <p>No. Landify emits one flat HTML file with inline CSS. Open it in a browser or drop it on any static host.</p>
+          </details>
+          
+          <details class="faq-item">
+            <summary>Where do the colors come from?</summary>
+            <p>The theme section lists eight base colors. Every other CSS token the page uses — surfaces, shades, tints, and text-on-accent contrast — is derived from them automatically.</p>
+          </details>
+          
+          <details class="faq-item">
+            <summary>Can I switch the page layout later?</summary>
+            <p>Yes. Recreate the file with `landify new -t &lt;type&gt;` for the layout you want, then copy your site, theme, and footer blocks across.</p>
+          </details>
+          
+          <details class="faq-item">
+            <summary>Does this page need any JavaScript?</summary>
+            <p>No. Questions render as native &lt;details&gt; rows, so the accordion works with markup alone.</p>
+          </details>
+          
+        </div>
+      </section>
+
+      
+      <section id="cta" class="block">
+        <div class="cta">
+          <span class="icon" aria-hidden="true">💬</span>
+          <h2>Still curious?</h2>
+          <p>If your question is not listed here, ask a human — we answer within a day.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="mailto:support@example.com">Contact support</a>
+          </div>
+        </div>
+      </section>
+      
+
+      <footer>
+        <span>© 2026 Landify Help</span>
+        <a href="#faq">Questions</a><a href="#cta">Contact</a>
+      </footer>
+    </main>
+  </body>
+</html>

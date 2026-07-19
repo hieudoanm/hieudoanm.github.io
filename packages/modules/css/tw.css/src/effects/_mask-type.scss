@@ -1,0 +1,9 @@
+// Mask type utilities — SVG <mask> element values
+
+$mask-types: (('alpha', alpha), ('luminance', luminance));
+
+@each $name, $value in $mask-types {
+  .mask-type-#{$name} {
+    mask-type: $value;
+  }
+}

@@ -1,0 +1,9 @@
+// Transform style utilities — Tailwind v3 default scale
+
+$transform-styles: (('3d', preserve-3d), ('flat', flat));
+
+@each $name, $value in $transform-styles {
+  .transform-#{$name} {
+    transform-style: $value;
+  }
+}

@@ -1,0 +1,100 @@
+// Translate utilities — Tailwind v3 default scale
+
+@use 'transform-composite' as *;
+
+$translate-unit: 0.25rem;
+$translate-steps: (
+  ('0\\.5', 0.5),
+  ('1', 1),
+  ('1\\.5', 1.5),
+  ('2', 2),
+  ('2\\.5', 2.5),
+  ('3', 3),
+  ('3\\.5', 3.5),
+  ('4', 4),
+  ('5', 5),
+  ('6', 6),
+  ('7', 7),
+  ('8', 8),
+  ('9', 9),
+  ('10', 10),
+  ('11', 11),
+  ('12', 12),
+  ('14', 14),
+  ('16', 16),
+  ('20', 20),
+  ('24', 24),
+  ('28', 28),
+  ('32', 32),
+  ('36', 36),
+  ('40', 40),
+  ('44', 44),
+  ('48', 48),
+  ('52', 52),
+  ('56', 56),
+  ('60', 60),
+  ('64', 64),
+  ('72', 72),
+  ('80', 80),
+  ('96', 96)
+);
+
+$translate-fractions: (
+  ('1\\/2', 1, 2),
+  ('1\\/3', 1, 3),
+  ('2\\/3', 2, 3),
+  ('1\\/4', 1, 4),
+  ('2\\/4', 1, 2),
+  ('3\\/4', 3, 4)
+);
+
+$translate-axes: (
+  ('x', '--tw-translate-x', 'translate-x-', '-translate-x-'),
+  ('y', '--tw-translate-y', 'translate-y-', '-translate-y-')
+);
+
+@each $axis, $property, $positive, $negative in $translate-axes {
+  .#{$positive}0 {
+    #{$property}: 0;
+    transform: #{$transform-composite};
+  }
+
+  .#{$positive}px {
+    #{$property}: 1px;
+    transform: #{$transform-composite};
+  }
+
+  .#{$positive}full {
+    #{$property}: 100%;
+    transform: #{$transform-composite};
+  }
+
+  .#{$negative}full {
+    #{$property}: -100%;
+    transform: #{$transform-composite};
+  }
+
+  @each $class, $step in $translate-steps {
+    .#{$positive}#{$class} {
+      #{$property}: #{$step * $translate-unit};
+      transform: #{$transform-composite};
+    }
+
+    .#{$negative}#{$class} {
+      #{$property}: #{$step * -1 * $translate-unit};
+      transform: #{$transform-composite};
+    }
+  }
+
+  @each $class, $num, $den in $translate-fractions {
+    .#{$positive}#{$class} {
+      #{$property}: calc(#{$num}/#{$den} * 100%);
+      transform: #{$transform-composite};
+    }
+
+    .#{$negative}#{$class} {
+      #{$property}: calc(-#{$num}/#{$den} * 100%);
+      transform: #{$transform-composite};
+    }
+  }
+}

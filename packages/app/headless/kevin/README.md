@@ -1,0 +1,38 @@
+# KeVIN (Key/Value In-Memory Database)
+
+## Table of Contents
+
+- [KeVIN (Key/Value In-Memory Database)](#kevin-keyvalue-in-memory-database)
+  - [Table of Contents](#table-of-contents)
+  - [Languages](#languages)
+  - [API](#api)
+  - [LICENSE](#license)
+
+## Languages
+
+1. [C](https://www.iso.org/standard/82075.html)
+2. [C++](https://isocpp.org/)
+3. [Go](https://go.dev/)
+
+## API
+
+```bash
+PING
+PONG
+
+SET key VALUE
+OK
+
+GET key
+VALUE
+
+KEYS
+key
+
+DEL key
+1
+```
+
+## LICENSE
+
+[GPL-3.0](./c/LICENSE)

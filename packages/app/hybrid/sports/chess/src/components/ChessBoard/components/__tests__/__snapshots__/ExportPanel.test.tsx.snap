@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`ExportPanel to match snapshot 1`] = `
+<div>
+  <div
+    class="flex flex-col gap-3"
+  >
+    <span
+      class="text-base-content/60 text-xs font-semibold tracking-widest uppercase"
+    >
+      Export
+    </span>
+    <div
+      class="bg-base-100 flex flex-col gap-2 rounded-xl p-4"
+    >
+      <div
+        class="flex items-center gap-2"
+      >
+        <span
+          class="text-lg"
+        >
+          🔲
+        </span>
+        <div>
+          <p
+            class="text-sm font-bold"
+          >
+            FEN → PNG
+          </p>
+          <p
+            class="text-base-content/50 text-xs"
+          >
+            Snapshot current board position
+          </p>
+        </div>
+      </div>
+      <button
+        class="btn btn-primary btn-sm w-full"
+      >
+        ⬇️ Download PNG
+      </button>
+    </div>
+    <div
+      class="bg-base-100 flex flex-col gap-2 rounded-xl p-4"
+    >
+      <div
+        class="flex items-center gap-2"
+      >
+        <span
+          class="text-lg"
+        >
+          🎞️
+        </span>
+        <div>
+          <p
+            class="text-sm font-bold"
+          >
+            PGN → GIF
+          </p>
+          <p
+            class="text-base-content/50 text-xs"
+          >
+            Animate the game from PGN
+          </p>
+        </div>
+      </div>
+      <p
+        class="text-base-content/40 text-xs"
+      >
+        Paste PGN in the Position tab first
+      </p>
+      <button
+        class="btn btn-primary btn-sm w-full"
+        disabled=""
+      >
+        ⬇️ Download GIF
+      </button>
+    </div>
+  </div>
+</div>
+`;

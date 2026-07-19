@@ -1,0 +1,15 @@
+@use '../colors/colors' as colors;
+
+// Text decoration color utilities — Tailwind v3 default scale
+
+$text-decoration-color-default: currentColor;
+
+@each $name, $value in colors.$palette {
+  .decoration-#{$name} {
+    text-decoration-color: $value;
+  }
+}
+
+.decoration {
+  text-decoration-color: $text-decoration-color-default;
+}

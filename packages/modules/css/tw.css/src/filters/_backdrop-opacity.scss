@@ -1,0 +1,19 @@
+// Backdrop opacity utilities — Tailwind v3 default scale
+
+@use 'sass:math';
+@use 'filter-composite' as *;
+
+$backdrop-opacity-step: 5;
+$backdrop-opacity-max: 100;
+
+@for $value from 0 through $backdrop-opacity-max {
+  @if $value % $backdrop-opacity-step == 0 {
+    .backdrop-opacity-#{$value} {
+      --tw-backdrop-opacity: opacity(
+        #{math.div($value, $backdrop-opacity-max)}
+      );
+      -webkit-backdrop-filter: #{$backdrop-filter-composite};
+      backdrop-filter: #{$backdrop-filter-composite};
+    }
+  }
+}

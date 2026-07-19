@@ -1,0 +1,9 @@
+// Color scheme utilities — Tailwind v3 default scale
+
+$color-schemes: (('normal', normal), ('dark', dark), ('light', light));
+
+@each $name, $value in $color-schemes {
+  .scheme-#{$name} {
+    color-scheme: $value;
+  }
+}

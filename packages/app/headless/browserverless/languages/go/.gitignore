@@ -1,0 +1,5 @@
+bin/
+
+# Tests
+coverage/
+*.out

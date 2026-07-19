@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{{.Site.Description}}" />
+    <title>{{.Site.Name}}</title>
+    <style>
+      :root {
+@LANDIFY_THEME@      }
+{{template "base-css" .}}
+      .event-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 18px;
+      }
+      .event-meta span {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--base-content);
+        background: var(--base-200);
+        border: 1px solid var(--border-soft);
+        border-radius: 999px;
+        padding: 6px 14px;
+      }
+      .agenda {
+        list-style: none;
+        margin: 0 auto;
+        padding: 0;
+        max-width: 760px;
+        display: grid;
+        gap: 12px;
+      }
+      .agenda li {
+        display: grid;
+        grid-template-columns: 96px 1fr;
+        gap: 14px;
+        align-items: start;
+        background: var(--base-200);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+        padding: 18px 20px;
+      }
+      .agenda .time {
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--primary-dark);
+        background: var(--primary-soft);
+        border: 1px solid var(--border-soft);
+        border-radius: 999px;
+        padding: 6px 0;
+        text-align: center;
+      }
+      .agenda h3 {
+        margin: 0 0 6px;
+        font-size: 16px;
+        font-weight: 700;
+      }
+      .agenda .who {
+        margin: 0 0 6px;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--primary);
+      }
+      .agenda p {
+        margin: 0;
+        font-size: 13.5px;
+        color: var(--neutral);
+      }
+      .speakers {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+      .speaker {
+        background: var(--base-200);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+        padding: 24px;
+        text-align: center;
+      }
+      .speaker .avatar {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 56px;
+        height: 56px;
+        font-size: 28px;
+        border-radius: 999px;
+        background: var(--primary-soft);
+        border: 1px solid var(--border-soft);
+      }
+      .speaker h3 {
+        margin: 12px 0 4px;
+        font-size: 16px;
+        font-weight: 700;
+      }
+      .speaker .role {
+        margin: 0;
+        font-size: 13px;
+        color: var(--neutral);
+      }
+      @media (max-width: 900px) {
+        .speakers {
+          grid-template-columns: 1fr;
+        }
+        .agenda li {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    {{template "header" .}}
+
+    <main id="top">
+      <section class="hero">
+        <div>
+          {{if .Hero.Badge}}<span class="badge">{{.Hero.Badge}}</span>{{end}}
+          <h1>{{.Hero.Headline}}</h1>
+          <p class="lead">{{.Hero.Subheadline}}</p>
+          <div class="event-meta">
+            <span>📅 {{.Event.Date}}</span>
+            {{if .Event.Time}}<span>🕒 {{.Event.Time}}</span>{{end}}
+            <span>📍 {{.Event.Venue.Name}}{{if .Event.Venue.City}}, {{.Event.Venue.City}}{{end}}</span>
+          </div>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="{{.Event.Primary.Href}}">{{.Event.Primary.Label}}</a>
+            {{if .Hero.Secondary.Href}}<a class="btn btn-ghost" href="{{.Hero.Secondary.Href}}">{{.Hero.Secondary.Label}}</a>{{end}}
+          </div>
+        </div>
+      </section>
+
+      <section id="agenda" class="block">
+        <div class="block-head">
+          <h2>{{.Features.Heading}}</h2>
+          <p class="sub">{{.Features.Sub}}</p>
+        </div>
+        <ul class="agenda">
+          {{range .Event.Agenda}}
+          <li>
+            <span class="time">{{.Time}}</span>
+            <div>
+              <h3>{{.Title}}</h3>
+              {{if .Speaker}}<p class="who">{{.Speaker}}</p>{{end}}
+              {{if .Body}}<p>{{.Body}}</p>{{end}}
+            </div>
+          </li>
+          {{end}}
+        </ul>
+      </section>
+
+      {{if .Event.SpeakersHeading}}
+      <section id="speakers" class="block">
+        <div class="block-head">
+          <h2>{{.Event.SpeakersHeading}}</h2>
+          {{if .Event.SpeakersSub}}<p class="sub">{{.Event.SpeakersSub}}</p>{{end}}
+        </div>
+        <div class="speakers">
+          {{range .Event.Speakers}}
+          <div class="speaker">
+            {{if .Avatar}}<span class="avatar">{{.Avatar}}</span>{{end}}
+            <h3>{{.Name}}</h3>
+            <p class="role">{{.Role}}</p>
+          </div>
+          {{end}}
+        </div>
+      </section>
+      {{end}}
+
+      {{if .CTA.Heading}}
+      <section id="cta" class="block">
+        <div class="cta">
+          <span class="icon" aria-hidden="true">{{.CTA.Icon}}</span>
+          <h2>{{.CTA.Heading}}</h2>
+          <p>{{.CTA.Body}}</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="{{.CTA.Button.Href}}">{{.CTA.Button.Label}}</a>
+          </div>
+        </div>
+      </section>
+      {{end}}
+
+      {{template "footer" .}}
+    </main>
+  </body>
+</html>

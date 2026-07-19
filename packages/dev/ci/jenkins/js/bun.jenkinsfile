@@ -1,0 +1,35 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                sh 'bun install --frozen-lockfile'
+            }
+        }
+
+        stage('Lint') {
+            steps {
+                sh 'bun run lint'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh 'bun run build'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                sh 'bun run test'
+            }
+        }
+    }
+}

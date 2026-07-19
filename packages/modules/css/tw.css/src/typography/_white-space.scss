@@ -1,0 +1,16 @@
+// White space utilities — Tailwind v3 default scale
+
+$white-spaces: (
+  ('normal', normal),
+  ('nowrap', nowrap),
+  ('pre', pre),
+  ('pre-line', pre-line),
+  ('pre-wrap', pre-wrap),
+  ('break-spaces', break-spaces)
+);
+
+@each $name, $value in $white-spaces {
+  .whitespace-#{$name} {
+    white-space: $value;
+  }
+}

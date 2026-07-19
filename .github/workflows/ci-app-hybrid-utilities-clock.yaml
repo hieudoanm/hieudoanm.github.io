@@ -1,0 +1,33 @@
+name: CI - App - Hybrid - Utilities - Clock
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/utilities/clock/**/*'
+      - '.github/workflows/ci-app-hybrid-utilities-clock.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-hybrid-utilities-clock-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/utilities/clock
+      filter: '@hieudoanm.github.io/clock'
+      releaseName: app-hybrid-utilities-clock-latest
+      releaseTitle: App - Hybrid - Utilities - Clock (latest)
+      artifactPrefix: utilities-clock
+      artifactName: clock

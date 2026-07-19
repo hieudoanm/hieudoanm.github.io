@@ -1,0 +1,1636 @@
+[
+  {
+    "id": "extensions",
+    "label": "Extensions",
+    "items": [
+      {
+        "label": "BrowserX",
+        "primaryCategory": "Extensions",
+        "secondaryCategory": "Utilities",
+        "icon": "PiTabs",
+        "href": "https://hieudoanm.github.io/free/browserx",
+        "version": "latest",
+        "lastUpdated": "2026-09-09",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": "v2.crx",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-browserx-latest/browserx-v2.crx"
+          },
+          {
+            "label": "v2.xpi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-browserx-latest/browserx-v2.xpi"
+          },
+          {
+            "label": "v2.zip",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-browserx-latest/browserx-v2.zip"
+          },
+          {
+            "label": "v3.crx",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-browserx-latest/browserx-v3.crx"
+          },
+          {
+            "label": "v3.xpi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-browserx-latest/browserx-v3.xpi"
+          },
+          {
+            "label": "v3.zip",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-browserx-latest/browserx-v3.zip"
+          }
+        ]
+      },
+      {
+        "label": "AndroidX",
+        "primaryCategory": "Extensions",
+        "secondaryCategory": "Utilities",
+        "icon": "PiAndroidLogo",
+        "href": "https://hieudoanm.github.io/free/androidx",
+        "version": "latest",
+        "lastUpdated": "2026-09-15",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-android-androidx-latest/app-release.apk"
+          }
+        ]
+      },
+      {
+        "label": "MacOSX",
+        "primaryCategory": "Extensions",
+        "secondaryCategory": "Utilities",
+        "icon": "PiGauge",
+        "href": "https://hieudoanm.github.io/free/macosx",
+        "version": "latest",
+        "lastUpdated": "2026-08-29",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-macos-macosx-latest/MacOSX-0.0.1.dmg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hybrid",
+    "label": "Hybrid",
+    "items": [
+      {
+        "label": "Menu",
+        "primaryCategory": "Business",
+        "secondaryCategory": "Food & Drink",
+        "icon": "PiHamburger",
+        "href": "https://hieudoanm.github.io/free/menu",
+        "version": "latest",
+        "lastUpdated": "2025-01-01",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-business-menu-latest/menu.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-business-menu-latest/menu.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-business-menu-latest/menu.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-business-menu-latest/menu.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-business-menu-latest/menu.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-business-menu-latest/menu.rpm"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-business-menu-latest/menu.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-business-menu-latest/menu.exe"
+          }
+        ]
+      },
+      {
+        "label": "POS",
+        "primaryCategory": "Business",
+        "secondaryCategory": "Finance",
+        "icon": "PiShoppingCart",
+        "href": "https://hieudoanm.github.io/free/pos",
+        "version": "latest",
+        "lastUpdated": "2025-01-01",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-business-pos-latest/pos.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-business-pos-latest/pos.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-business-pos-latest/pos.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-business-pos-latest/pos.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-business-pos-latest/pos.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-business-pos-latest/pos.rpm"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-business-pos-latest/pos.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-business-pos-latest/pos.exe"
+          }
+        ]
+      },
+      {
+        "label": "API",
+        "primaryCategory": "Developer Tools",
+        "secondaryCategory": "Productivity",
+        "icon": "PiGlobe",
+        "href": "https://hieudoanm.github.io/free/api",
+        "version": "latest",
+        "lastUpdated": "2025-01-01",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-api-latest/api.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-api-latest/api.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-api-latest/api.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-api-latest/api.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-api-latest/api.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-api-latest/api.rpm"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-api-latest/api.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-api-latest/api.exe"
+          }
+        ]
+      },
+      {
+        "label": "Boilerplate",
+        "primaryCategory": "Developer Tools",
+        "secondaryCategory": "Productivity",
+        "icon": "PiFrameCorners",
+        "href": "https://hieudoanm.github.io/free/boilerplate",
+        "version": "latest",
+        "lastUpdated": "2025-01-01",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-boilerplate-latest/boilerplate.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-boilerplate-latest/boilerplate.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-boilerplate-latest/boilerplate.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-boilerplate-latest/boilerplate.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-boilerplate-latest/boilerplate.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-boilerplate-latest/boilerplate.rpm"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-boilerplate-latest/boilerplate.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-boilerplate-latest/boilerplate.exe"
+          }
+        ]
+      },
+      {
+        "label": "Code",
+        "primaryCategory": "Developer Tools",
+        "secondaryCategory": "Productivity",
+        "icon": "PiCodeSimple",
+        "href": "https://hieudoanm.github.io/free/code",
+        "version": "latest",
+        "lastUpdated": "2025-01-01",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-code-latest/code.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-code-latest/code.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-code-latest/code.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-code-latest/code.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-code-latest/code.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-code-latest/code.rpm"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-code-latest/code.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-code-latest/code.exe"
+          }
+        ]
+      },
+      {
+        "label": "Database",
+        "primaryCategory": "Developer Tools",
+        "secondaryCategory": "Business",
+        "icon": "PiDatabase",
+        "href": "https://hieudoanm.github.io/free/database",
+        "version": "latest",
+        "lastUpdated": "2025-01-01",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-database-latest/database.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-database-latest/database.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-database-latest/database.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-database-latest/database.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-database-latest/database.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-database-latest/database.rpm"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-database-latest/database.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-database-latest/database.exe"
+          }
+        ]
+      },
+      {
+        "label": "Diagram",
+        "primaryCategory": "Developer Tools",
+        "secondaryCategory": "Graphics & Design",
+        "icon": "PiPaintBrush",
+        "href": "https://hieudoanm.github.io/free/diagram",
+        "version": "latest",
+        "lastUpdated": "2025-01-01",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-diagram-latest/diagram.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-diagram-latest/diagram.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-diagram-latest/diagram.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-diagram-latest/diagram.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-diagram-latest/diagram.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-diagram-latest/diagram.rpm"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-diagram-latest/diagram.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-diagram-latest/diagram.exe"
+          }
+        ]
+      },
+      {
+        "label": "Lingo",
+        "primaryCategory": "Education",
+        "secondaryCategory": "Games",
+        "icon": "PiGraduationCap",
+        "href": "https://hieudoanm.github.io/free/lingo",
+        "version": "latest",
+        "lastUpdated": "2025-01-01",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-lingo-latest/lingo.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-lingo-latest/lingo.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-lingo-latest/lingo.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-lingo-latest/lingo.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-lingo-latest/lingo.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-lingo-latest/lingo.rpm"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-lingo-latest/lingo.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-lingo-latest/lingo.exe"
+          }
+        ]
+      },
+      {
+        "label": "DOI",
+        "primaryCategory": "Education",
+        "secondaryCategory": "Games",
+        "icon": "PiNetwork",
+        "href": "https://hieudoanm.github.io/free/doi",
+        "version": "latest",
+        "lastUpdated": "2026-09-08",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-doi-latest/doi.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-doi-latest/doi.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-doi-latest/doi.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-doi-latest/doi.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-doi-latest/doi.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-doi-latest/doi.rpm"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-doi-latest/doi.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-doi-latest/doi.exe"
+          }
+        ]
+      },
+      {
+        "label": "Tax",
+        "primaryCategory": "Finance",
+        "secondaryCategory": "Business",
+        "icon": "PiReceipt",
+        "href": "https://hieudoanm.github.io/free/tax",
+        "version": "latest",
+        "lastUpdated": "2026-08-27",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-finance-tax-latest/tax.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-finance-tax-latest/tax.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-finance-tax-latest/tax.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-finance-tax-latest/tax.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-finance-tax-latest/tax.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-finance-tax-latest/tax.rpm"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-finance-tax-latest/tax.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-finance-tax-latest/tax.exe"
+          }
+        ]
+      },
+      {
+        "label": "Wallet",
+        "primaryCategory": "Finance",
+        "secondaryCategory": "Business",
+        "icon": "PiWallet",
+        "href": "https://hieudoanm.github.io/free/wallet",
+        "version": "latest",
+        "lastUpdated": "2025-01-01",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-finance-wallet-latest/wallet.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-finance-wallet-latest/wallet.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-finance-wallet-latest/wallet.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-finance-wallet-latest/wallet.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-finance-wallet-latest/wallet.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-finance-wallet-latest/wallet.rpm"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-finance-wallet-latest/wallet.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-finance-wallet-latest/wallet.exe"
+          }
+        ]
+      },
+      {
+        "label": "Foody",
+        "primaryCategory": "Food & Drink",
+        "secondaryCategory": "Health & Fitness",
+        "icon": "PiHamburger",
+        "href": "https://hieudoanm.github.io/free/foody",
+        "version": "latest",
+        "lastUpdated": "2025-01-01",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-food-drink-foody-latest/foody.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-food-drink-foody-latest/foody.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-food-drink-foody-latest/foody.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-food-drink-foody-latest/foody.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-food-drink-foody-latest/foody.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-food-drink-foody-latest/foody.rpm"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-food-drink-foody-latest/foody.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-food-drink-foody-latest/foody.exe"
+          }
+        ]
+      },
+      {
+        "label": "Memory",
+        "primaryCategory": "Games",
+        "secondaryCategory": "Entertainment",
+        "icon": "PiMemory",
+        "href": "https://hieudoanm.github.io/free/memory",
+        "version": "latest",
+        "lastUpdated": "2025-01-01",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-memory-latest/memory.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-memory-latest/memory.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-memory-latest/memory.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-memory-latest/memory.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-memory-latest/memory.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-memory-latest/memory.rpm"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-memory-latest/memory.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-memory-latest/memory.exe"
+          }
+        ]
+      },
+      {
+        "label": "Photo",
+        "primaryCategory": "Graphics & Design",
+        "secondaryCategory": "Photo & Video",
+        "icon": "PiImage",
+        "href": "https://hieudoanm.github.io/free/photo",
+        "version": "latest",
+        "lastUpdated": "2025-01-01",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-photo-latest/photo.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-photo-latest/photo.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-photo-latest/photo.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-photo-latest/photo.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-photo-latest/photo.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-photo-latest/photo.rpm"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-photo-latest/photo.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-photo-latest/photo.exe"
+          }
+        ]
+      },
+      {
+        "label": "SVG",
+        "primaryCategory": "Graphics & Design",
+        "secondaryCategory": "Photo & Video",
+        "icon": "PiPath",
+        "href": "https://hieudoanm.github.io/free/svg",
+        "version": "latest",
+        "lastUpdated": "2025-01-01",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-svg-latest/svg.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-svg-latest/svg.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-svg-latest/svg.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-svg-latest/svg.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-svg-latest/svg.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-svg-latest/svg.rpm"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-svg-latest/svg.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-svg-latest/svg.exe"
+          }
+        ]
+      },
+      {
+        "label": "Video",
+        "primaryCategory": "Graphics & Design",
+        "secondaryCategory": "Photo & Video",
+        "icon": "PiVideoCamera",
+        "href": "https://hieudoanm.github.io/free/video",
+        "version": "latest",
+        "lastUpdated": "2025-01-01",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-video-latest/video.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-video-latest/video.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-video-latest/video.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-video-latest/video.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-video-latest/video.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-video-latest/video.rpm"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-video-latest/video.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-video-latest/video.exe"
+          }
+        ]
+      },
+      {
+        "label": "Brainbow",
+        "primaryCategory": "Medical",
+        "secondaryCategory": "Health & Fitness",
+        "icon": "PiMicroscope",
+        "href": "https://hieudoanm.github.io/free/brainbow",
+        "version": "latest",
+        "lastUpdated": "2025-01-01",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-brainbow-latest/brainbow.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-brainbow-latest/brainbow.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-brainbow-latest/brainbow.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-brainbow-latest/brainbow.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-brainbow-latest/brainbow.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-brainbow-latest/brainbow.rpm"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-brainbow-latest/brainbow.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-brainbow-latest/brainbow.exe"
+          }
+        ]
+      },
+      {
+        "label": "MRI",
+        "primaryCategory": "Medical",
+        "secondaryCategory": "Health & Fitness",
+        "icon": "PiScan",
+        "href": "https://hieudoanm.github.io/free/mri",
+        "version": "latest",
+        "lastUpdated": "2025-01-01",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-mri-latest/mri.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-mri-latest/mri.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-mri-latest/mri.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-mri-latest/mri.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-mri-latest/mri.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-mri-latest/mri.rpm"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-mri-latest/mri.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-mri-latest/mri.exe"
+          }
+        ]
+      },
+      {
+        "label": "Office",
+        "primaryCategory": "Productivity",
+        "secondaryCategory": "Business",
+        "icon": "PiCalendarBlank",
+        "href": "https://hieudoanm.github.io/free/office",
+        "version": "latest",
+        "lastUpdated": "2026-08-26",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-office-latest/office.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-office-latest/office.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-office-latest/office.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-office-latest/office.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-office-latest/office.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-office-latest/office.rpm"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-office-latest/office.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-office-latest/office.exe"
+          }
+        ]
+      },
+      {
+        "label": "Keynotes",
+        "primaryCategory": "Productivity",
+        "secondaryCategory": "Education",
+        "icon": "PiPresentation",
+        "href": "https://hieudoanm.github.io/free/keynotes",
+        "version": "latest",
+        "lastUpdated": "2025-01-01",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-keynotes-latest/keynotes.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-keynotes-latest/keynotes.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-keynotes-latest/keynotes.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-keynotes-latest/keynotes.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-keynotes-latest/keynotes.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-keynotes-latest/keynotes.rpm"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-keynotes-latest/keynotes.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-keynotes-latest/keynotes.exe"
+          }
+        ]
+      },
+      {
+        "label": "PDF",
+        "primaryCategory": "Productivity",
+        "secondaryCategory": "Business",
+        "icon": "PiFilePdf",
+        "href": "https://hieudoanm.github.io/free/pdf",
+        "version": "latest",
+        "lastUpdated": "2025-01-01",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-pdf-latest/pdf.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-pdf-latest/pdf.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-pdf-latest/pdf.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-pdf-latest/pdf.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-pdf-latest/pdf.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-pdf-latest/pdf.rpm"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-pdf-latest/pdf.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-pdf-latest/pdf.exe"
+          }
+        ]
+      },
+      {
+        "label": "Projects",
+        "primaryCategory": "Productivity",
+        "secondaryCategory": "Business",
+        "icon": "PiFolder",
+        "href": "https://hieudoanm.github.io/free/projects",
+        "version": "latest",
+        "lastUpdated": "2025-01-01",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-projects-latest/projects.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-projects-latest/projects.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-projects-latest/projects.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-projects-latest/projects.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-projects-latest/projects.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-projects-latest/projects.rpm"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-projects-latest/projects.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-projects-latest/projects.exe"
+          }
+        ]
+      },
+      {
+        "label": "Resume",
+        "primaryCategory": "Productivity",
+        "secondaryCategory": "Business",
+        "icon": "PiFilePdf",
+        "href": "https://hieudoanm.github.io/free/resume",
+        "version": "latest",
+        "lastUpdated": "2025-01-01",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-resume-latest/resume.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-resume-latest/resume.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-resume-latest/resume.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-resume-latest/resume.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-resume-latest/resume.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-resume-latest/resume.rpm"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-resume-latest/resume.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-resume-latest/resume.exe"
+          }
+        ]
+      },
+      {
+        "label": "Store",
+        "primaryCategory": "Shopping",
+        "secondaryCategory": "Business",
+        "icon": "PiShoppingBag",
+        "href": "https://hieudoanm.github.io/free/store",
+        "version": "latest",
+        "lastUpdated": "2025-01-01",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-shopping-store-latest/store.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-shopping-store-latest/store.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-shopping-store-latest/store.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-shopping-store-latest/store.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-shopping-store-latest/store.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-shopping-store-latest/store.rpm"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-shopping-store-latest/store.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-shopping-store-latest/store.exe"
+          }
+        ]
+      },
+      {
+        "label": "Chat",
+        "primaryCategory": "Social Networking",
+        "secondaryCategory": "Business",
+        "icon": "PiChat",
+        "href": "https://hieudoanm.github.io/free/chat",
+        "version": "latest",
+        "lastUpdated": "2025-01-01",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-social-networking-chat-latest/chat.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-social-networking-chat-latest/chat.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-social-networking-chat-latest/chat.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-social-networking-chat-latest/chat.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-social-networking-chat-latest/chat.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-social-networking-chat-latest/chat.rpm"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-social-networking-chat-latest/chat.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-social-networking-chat-latest/chat.exe"
+          }
+        ]
+      },
+      {
+        "label": "Messaging",
+        "primaryCategory": "Social Networking",
+        "secondaryCategory": "Business",
+        "icon": "PiPaperPlaneTilt",
+        "href": "https://hieudoanm.github.io/free/messaging",
+        "version": "latest",
+        "lastUpdated": "2025-01-01",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-social-networking-messaging-latest/messaging.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-social-networking-messaging-latest/messaging.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-social-networking-messaging-latest/messaging.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-social-networking-messaging-latest/messaging.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-social-networking-messaging-latest/messaging.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-social-networking-messaging-latest/messaging.rpm"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-social-networking-messaging-latest/messaging.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-social-networking-messaging-latest/messaging.exe"
+          }
+        ]
+      },
+      {
+        "label": "Chess",
+        "primaryCategory": "Sports",
+        "secondaryCategory": "Games",
+        "icon": "PiGameController",
+        "href": "https://hieudoanm.github.io/free/chess",
+        "version": "latest",
+        "lastUpdated": "2025-01-01",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-chess-latest/chess.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-chess-latest/chess.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-chess-latest/chess.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-chess-latest/chess.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-chess-latest/chess.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-chess-latest/chess.rpm"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-chess-latest/chess.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-chess-latest/chess.exe"
+          }
+        ]
+      },
+      {
+        "label": "Football",
+        "primaryCategory": "Sports",
+        "secondaryCategory": "Games",
+        "icon": "PiSoccerBall",
+        "href": "https://hieudoanm.github.io/free/football",
+        "version": "latest",
+        "lastUpdated": "2025-01-01",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-football-latest/football.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-football-latest/football.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-football-latest/football.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-football-latest/football.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-football-latest/football.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-football-latest/football.rpm"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-football-latest/football.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-football-latest/football.exe"
+          }
+        ]
+      },
+      {
+        "label": "Tourney",
+        "primaryCategory": "Sports",
+        "secondaryCategory": "Games",
+        "icon": "PiTrophy",
+        "href": "https://hieudoanm.github.io/free/tourney",
+        "version": "latest",
+        "lastUpdated": "2025-01-01",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-tourney-latest/tourney.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-tourney-latest/tourney.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-tourney-latest/tourney.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-tourney-latest/tourney.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-tourney-latest/tourney.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-tourney-latest/tourney.rpm"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-tourney-latest/tourney.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-tourney-latest/tourney.exe"
+          }
+        ]
+      },
+      {
+        "label": "Clock",
+        "primaryCategory": "Utilities",
+        "secondaryCategory": "Productivity",
+        "icon": "PiClock",
+        "href": "https://hieudoanm.github.io/free/clock",
+        "version": "latest",
+        "lastUpdated": "2026-08-27",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-clock-latest/clock.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-clock-latest/clock.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-clock-latest/clock.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-clock-latest/clock.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-clock-latest/clock.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-clock-latest/clock.rpm"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-clock-latest/clock.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-clock-latest/clock.exe"
+          }
+        ]
+      },
+      {
+        "label": "Docs",
+        "primaryCategory": "Utilities",
+        "secondaryCategory": "Productivity",
+        "icon": "PiGear",
+        "href": "https://hieudoanm.github.io",
+        "version": "latest",
+        "lastUpdated": "2025-01-01",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-docs-latest/hieudoanm_next.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-docs-latest/hieudoanm_next.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-docs-latest/hieudoanm_next.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-docs-latest/hieudoanm_next.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-docs-latest/hieudoanm_next.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-docs-latest/hieudoanm_next.rpm"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-docs-latest/hieudoanm_next.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-docs-latest/hieudoanm_next.exe"
+          }
+        ]
+      },
+      {
+        "label": "Password",
+        "primaryCategory": "Utilities",
+        "secondaryCategory": "Productivity",
+        "icon": "PiPassword",
+        "href": "https://hieudoanm.github.io/free/password",
+        "version": "latest",
+        "lastUpdated": "2025-01-01",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-password-latest/password.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-password-latest/password.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-password-latest/password.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-password-latest/password.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-password-latest/password.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-password-latest/password.rpm"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-password-latest/password.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-password-latest/password.exe"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "headless",
+    "label": "Headless",
+    "items": [
+      {
+        "label": "Backbone",
+        "primaryCategory": "Developer Tools",
+        "secondaryCategory": "",
+        "icon": "PiPlugs",
+        "href": "https://hieudoanm.github.io/free/backbone/",
+        "version": "latest",
+        "lastUpdated": "2025-01-01",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": "macOS (Intel)",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-backbone-latest/app-headless-backbone-backbone-darwin-amd64"
+          },
+          {
+            "label": "macOS (Apple Silicon)",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-backbone-latest/app-headless-backbone-backbone-darwin-arm64"
+          },
+          {
+            "label": "Linux x64",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-backbone-latest/app-headless-backbone-backbone-linux-amd64"
+          },
+          {
+            "label": "Linux ARM64",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-backbone-latest/app-headless-backbone-backbone-linux-arm64"
+          }
+        ]
+      },
+      {
+        "label": "Browserverless",
+        "primaryCategory": "Developer Tools",
+        "secondaryCategory": "",
+        "icon": "PiBrowser",
+        "href": "https://hieudoanm.github.io/free/browserverless/",
+        "version": "latest",
+        "lastUpdated": "2026-08-29",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": "macOS (Intel)",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-browserverless-latest/app-headless-browserverless-browserverless-darwin-amd64"
+          },
+          {
+            "label": "macOS (Apple Silicon)",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-browserverless-latest/app-headless-browserverless-browserverless-darwin-arm64"
+          },
+          {
+            "label": "Linux x64",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-browserverless-latest/app-headless-browserverless-browserverless-linux-amd64"
+          },
+          {
+            "label": "Linux ARM64",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-browserverless-latest/app-headless-browserverless-browserverless-linux-arm64"
+          }
+        ]
+      },
+      {
+        "label": "J.A.C.K.",
+        "primaryCategory": "Developer Tools",
+        "secondaryCategory": "",
+        "icon": "PiTerminalWindow",
+        "href": "https://hieudoanm.github.io/free/jack/",
+        "version": "latest",
+        "lastUpdated": "2026-09-06",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": "macOS (Intel)",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-jack-latest/app-headless-jack-jack-darwin-amd64"
+          },
+          {
+            "label": "macOS (Apple Silicon)",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-jack-latest/app-headless-jack-jack-darwin-arm64"
+          },
+          {
+            "label": "Linux x64",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-jack-latest/app-headless-jack-jack-linux-amd64"
+          },
+          {
+            "label": "Linux ARM64",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-jack-latest/app-headless-jack-jack-linux-arm64"
+          }
+        ]
+      },
+      {
+        "label": "KeVIN",
+        "primaryCategory": "Developer Tools",
+        "secondaryCategory": "",
+        "icon": "PiDatabase",
+        "href": "https://hieudoanm.github.io/free/kevin/",
+        "version": "latest",
+        "lastUpdated": "2026-09-06",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": "macOS (Intel)",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-kevin-latest/app-headless-kevin-kevin-darwin-amd64"
+          },
+          {
+            "label": "macOS (Apple Silicon)",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-kevin-latest/app-headless-kevin-kevin-darwin-arm64"
+          },
+          {
+            "label": "Linux x64",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-kevin-latest/app-headless-kevin-kevin-linux-amd64"
+          },
+          {
+            "label": "Linux ARM64",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-kevin-latest/app-headless-kevin-kevin-linux-arm64"
+          }
+        ]
+      },
+      {
+        "label": "Landify",
+        "primaryCategory": "Developer Tools",
+        "secondaryCategory": "",
+        "icon": "PiFileCode",
+        "href": "https://hieudoanm.github.io/free/landify/",
+        "version": "latest",
+        "lastUpdated": "2026-09-07",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": "macOS (Intel)",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-landify-latest/app-headless-landify-landify-darwin-amd64"
+          },
+          {
+            "label": "macOS (Apple Silicon)",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-landify-latest/app-headless-landify-landify-darwin-arm64"
+          },
+          {
+            "label": "Linux x64",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-landify-latest/app-headless-landify-landify-linux-amd64"
+          },
+          {
+            "label": "Linux ARM64",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-landify-latest/app-headless-landify-landify-linux-arm64"
+          }
+        ]
+      }
+    ]
+  }
+]

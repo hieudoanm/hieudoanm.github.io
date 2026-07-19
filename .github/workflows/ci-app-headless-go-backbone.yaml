@@ -1,0 +1,33 @@
+name: CI - App - Headless - Backbone
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/headless/backbone/go/**'
+      - '.github/workflows/ci-app-headless-go-backbone.yaml'
+      - '.github/workflows/ci-app-headless-go-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-headless-backbone-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-headless-go-template.yaml
+    with:
+      package: packages/app/headless/backbone/languages/go
+      installZig: false
+      releaseName: app-headless-backbone-latest
+      releaseTitle: App - Headless - Backbone (latest)
+      artifactName: app-headless-backbone
+      artifactPath: packages/app/headless/backbone/languages/go/bin/*

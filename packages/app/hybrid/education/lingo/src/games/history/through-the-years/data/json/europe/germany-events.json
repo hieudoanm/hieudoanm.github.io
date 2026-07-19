@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "europe-teutoburg-9",
+    "title": "Battle of Teutoburg Forest",
+    "year": 9,
+    "description": "Germanic tribes ambushed three Roman legions.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-tacitus-germania-98",
+    "title": "Germania Described",
+    "year": 98,
+    "description": "Tacitus described the Germanic peoples.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-east-francia-843",
+    "title": "East Francia Formed",
+    "year": 843,
+    "description": "The eastern Frankish realm became Germany.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-lechfeld-955",
+    "title": "Battle of Lechfeld",
+    "year": 955,
+    "description": "Otto I defeated the Hungarian raiders.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-otto-emperor-962",
+    "title": "Otto Crowned Emperor",
+    "year": 962,
+    "description": "Otto I revived the imperial title.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-barbarossa-1152",
+    "title": "Barbarossa Becomes King",
+    "year": 1152,
+    "description": "Frederick Barbarossa took the throne.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-munich-founded-1158",
+    "title": "Munich Founded",
+    "year": 1158,
+    "description": "The city of Munich was first documented.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-golden-bull-1356",
+    "title": "Golden Bull Issued",
+    "year": 1356,
+    "description": "The decree fixed imperial election rules.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-gutenberg-press-1455",
+    "title": "Gutenberg Printing Press",
+    "year": 1455,
+    "description": "Gutenberg printed the Bible with movable type.",
+    "category": "technology",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-luther-theses-1517",
+    "title": "Luther Posts the 95 Theses",
+    "year": 1517,
+    "description": "Martin Luther sparked the Reformation.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-diet-of-worms-1521",
+    "title": "Diet of Worms",
+    "year": 1521,
+    "description": "Luther refused to recant before the emperor.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-peasants-war-1524",
+    "title": "Peasants' War",
+    "year": 1524,
+    "description": "Peasants revolted against feudal lords.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-copernicus-1543",
+    "title": "Copernicus's System Published",
+    "year": 1543,
+    "description": "Copernicus's heliocentric model appeared.",
+    "category": "science",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-augsburg-1555",
+    "title": "Peace of Augsburg",
+    "year": 1555,
+    "description": "The settlement allowed princes to choose a faith.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-kepler-laws-1609",
+    "title": "Kepler's Laws Published",
+    "year": 1609,
+    "description": "Kepler described planetary motion.",
+    "category": "science",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-thirty-years-war-1618",
+    "title": "Thirty Years' War Begins",
+    "year": 1618,
+    "description": "War engulfed the Holy Roman Empire.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-westphalia-empire-1648",
+    "title": "Peace of Westphalia",
+    "year": 1648,
+    "description": "The great war ended in 1648.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-leibniz-calculus-1684",
+    "title": "Leibniz Publishes Calculus",
+    "year": 1684,
+    "description": "Leibniz published his calculus.",
+    "category": "science",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-bach-born-1685",
+    "title": "Bach Born",
+    "year": 1685,
+    "description": "Johann Sebastian Bach was born in Eisenach.",
+    "category": "music",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-prussia-kingdom-1701",
+    "title": "Kingdom of Prussia",
+    "year": 1701,
+    "description": "Frederick I crowned himself king.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-frederick-great-1740",
+    "title": "Frederick the Great Rules",
+    "year": 1740,
+    "description": "Frederick II made Prussia a great power.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-beethoven-born-1770",
+    "title": "Beethoven Born",
+    "year": 1770,
+    "description": "Ludwig van Beethoven was born in Bonn.",
+    "category": "music",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-kant-critique-1781",
+    "title": "Kant's Critique Published",
+    "year": 1781,
+    "description": "Kant's Critique of Pure Reason appeared.",
+    "category": "science",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-hre-dissolved-1806",
+    "title": "Holy Roman Empire Dissolved",
+    "year": 1806,
+    "description": "Napoleon ended the old empire.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-jena-1806",
+    "title": "Battle of Jena",
+    "year": 1806,
+    "description": "Napoleon crushed the Prussian army.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-faust-1808",
+    "title": "Faust Published",
+    "year": 1808,
+    "description": "Goethe published Faust Part One.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-humboldt-university-1810",
+    "title": "University of Berlin Founded",
+    "year": 1810,
+    "description": "Humboldt founded the University of Berlin.",
+    "category": "science",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-grimm-tales-1812",
+    "title": "Grimm's Fairy Tales Published",
+    "year": 1812,
+    "description": "The brothers Grimm published folk tales.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-leipzig-1813",
+    "title": "Battle of Leipzig",
+    "year": 1813,
+    "description": "Allies defeated Napoleon at Leipzig.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-german-confederation-1815",
+    "title": "German Confederation Created",
+    "year": 1815,
+    "description": "German states formed a loose confederation.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-hambach-1832",
+    "title": "Hambach Festival",
+    "year": 1832,
+    "description": "Liberals rallied for a united Germany.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-first-railway-1835",
+    "title": "First German Railway",
+    "year": 1835,
+    "description": "The railway opened between Nuremberg and Fürth.",
+    "category": "technology",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-zeiss-founded-1846",
+    "title": "Zeiss Founded",
+    "year": 1846,
+    "description": "The optics company began in Jena.",
+    "category": "technology",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-siemens-founded-1847",
+    "title": "Siemens Founded",
+    "year": 1847,
+    "description": "Werner von Siemens founded his company.",
+    "category": "technology",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-revolution-1848",
+    "title": "Revolution of 1848",
+    "year": 1848,
+    "description": "Germans demanded national unity and rights.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-frankfurt-parliament-1848",
+    "title": "Frankfurt Parliament",
+    "year": 1848,
+    "description": "The assembly offered the crown to Prussia.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-marx-manifesto-1848",
+    "title": "Communist Manifesto Published",
+    "year": 1848,
+    "description": "Marx and Engels issued the manifesto.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-bismarck-1862",
+    "title": "Bismarck Becomes Minister",
+    "year": 1862,
+    "description": "Bismarck took charge of Prussia.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-austro-prussian-1866",
+    "title": "Austro-Prussian War",
+    "year": 1866,
+    "description": "Prussia defeated Austria.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-franco-prussian-1870",
+    "title": "Franco-Prussian War",
+    "year": 1870,
+    "description": "Prussia defeated France.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-german-empire-1871",
+    "title": "German Empire Proclaimed",
+    "year": 1871,
+    "description": "Bismarck unified Germany under the Kaiser.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-bayreuth-1876",
+    "title": "Bayreuth Festival Opens",
+    "year": 1876,
+    "description": "Wagner's festival theatre opened.",
+    "category": "music",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-koch-tb-1882",
+    "title": "Koch Finds TB Bacillus",
+    "year": 1882,
+    "description": "Robert Koch identified the tuberculosis bacterium.",
+    "category": "medicine",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-benz-car-1885",
+    "title": "Benz Patent-Motorwagen",
+    "year": 1885,
+    "description": "Karl Benz built the first automobile.",
+    "category": "technology",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-wilhelm-ii-1888",
+    "title": "Wilhelm II Becomes Kaiser",
+    "year": 1888,
+    "description": "Wilhelm II took the German throne.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-bismarck-dismissed-1890",
+    "title": "Bismarck Dismissed",
+    "year": 1890,
+    "description": "Wilhelm II forced Bismarck to resign.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-x-rays-1895",
+    "title": "X-Rays Discovered",
+    "year": 1895,
+    "description": "Wilhelm Röntgen discovered X-rays.",
+    "category": "medicine",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-diesel-engine-1897",
+    "title": "Diesel Engine Built",
+    "year": 1897,
+    "description": "Rudolf Diesel demonstrated his engine.",
+    "category": "technology",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-planck-quantum-1900",
+    "title": "Quantum Theory Born",
+    "year": 1900,
+    "description": "Max Planck proposed energy quanta.",
+    "category": "science",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-wwi-begins-1914",
+    "title": "World War I Begins",
+    "year": 1914,
+    "description": "Germany entered the First World War.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-junkers-j1-1915",
+    "title": "Junkers J1 Flies",
+    "year": 1915,
+    "description": "The first all-metal aircraft flew.",
+    "category": "technology",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-november-revolution-1918",
+    "title": "November Revolution",
+    "year": 1918,
+    "description": "The Kaiser abdicated and the war ended.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-weimar-republic-1919",
+    "title": "Weimar Republic Founded",
+    "year": 1919,
+    "description": "Germany adopted a new democratic constitution.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-versailles-treaty-1919",
+    "title": "Versailles Treaty Signed",
+    "year": 1919,
+    "description": "Germany accepted the peace terms.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-bauhaus-1919",
+    "title": "Bauhaus Founded",
+    "year": 1919,
+    "description": "The design school opened in Weimar.",
+    "category": "culture",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-nosferatu-1922",
+    "title": "Nosferatu Released",
+    "year": 1922,
+    "description": "The vampire film became a classic.",
+    "category": "film",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-hyperinflation-1923",
+    "title": "Hyperinflation",
+    "year": 1923,
+    "description": "German money collapsed in value.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-beer-hall-putsch-1923",
+    "title": "Beer Hall Putsch",
+    "year": 1923,
+    "description": "Hitler's coup attempt failed in Munich.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-locarno-1925",
+    "title": "Locarno Treaties",
+    "year": 1925,
+    "description": "Germany accepted its western borders.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-heisenberg-1925",
+    "title": "Heisenberg Founds Quantum Mechanics",
+    "year": 1925,
+    "description": "Heisenberg developed matrix mechanics.",
+    "category": "science",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-league-of-nations-1926",
+    "title": "Germany Joins the League",
+    "year": 1926,
+    "description": "Germany entered the League of Nations.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-metropolis-1927",
+    "title": "Metropolis Released",
+    "year": 1927,
+    "description": "Fritz Lang's sci-fi epic premiered.",
+    "category": "film",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-hitler-chancellor-1933",
+    "title": "Hitler Becomes Chancellor",
+    "year": 1933,
+    "description": "Hitler took power as chancellor.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-reichstag-fire-1933",
+    "title": "Reichstag Fire",
+    "year": 1933,
+    "description": "The burning of parliament helped Hitler.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-nuremberg-laws-1935",
+    "title": "Nuremberg Laws",
+    "year": 1935,
+    "description": "The laws stripped Jews of citizenship.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-berlin-olympics-1936",
+    "title": "Berlin Olympics",
+    "year": 1936,
+    "description": "The Games were staged under the Nazis.",
+    "category": "sports",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-rhineland-1936",
+    "title": "Rhineland Remilitarised",
+    "year": 1936,
+    "description": "German troops entered the Rhineland.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-anschluss-1938",
+    "title": "Anschluss with Austria",
+    "year": 1938,
+    "description": "Germany annexed Austria.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-kristallnacht-1938",
+    "title": "Kristallnacht",
+    "year": 1938,
+    "description": "Nazis attacked Jewish communities.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-munich-agreement-1938",
+    "title": "Munich Agreement",
+    "year": 1938,
+    "description": "The powers allowed Hitler to take the Sudetenland.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-fission-1938",
+    "title": "Nuclear Fission Discovered",
+    "year": 1938,
+    "description": "Hahn and Strassmann split the atom in Berlin.",
+    "category": "science",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-poland-invaded-1939",
+    "title": "Invasion of Poland",
+    "year": 1939,
+    "description": "Germany sparked World War II.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 1,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-battle-of-britain-1940",
+    "title": "Battle of Britain",
+    "year": 1940,
+    "description": "The Luftwaffe failed to break Britain.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-barbarossa-1941",
+    "title": "Operation Barbarossa",
+    "year": 1941,
+    "description": "Germany invaded the Soviet Union.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-wannsee-1942",
+    "title": "Wannsee Conference",
+    "year": 1942,
+    "description": "Nazis planned the Final Solution.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-v2-rocket-1942",
+    "title": "V-2 Rocket Tested",
+    "year": 1942,
+    "description": "Germany tested the first ballistic missile.",
+    "category": "space",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-berlin-battle-1945",
+    "title": "Battle of Berlin",
+    "year": 1945,
+    "description": "Soviet troops took Berlin.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-germany-surrenders-1945",
+    "title": "Germany Surrenders",
+    "year": 1945,
+    "description": "Nazi Germany capitulated.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-nuremberg-trials-1946",
+    "title": "Nuremberg Trials",
+    "year": 1946,
+    "description": "Nazi leaders were tried for war crimes.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-berlin-blockade-1948",
+    "title": "Berlin Blockade",
+    "year": 1948,
+    "description": "The Soviets cut off West Berlin.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-berlin-airlift-1949",
+    "title": "Berlin Airlift",
+    "year": 1949,
+    "description": "The airlift saved West Berlin.",
+    "category": "war",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-frg-founded-1949",
+    "title": "Federal Republic Founded",
+    "year": 1949,
+    "description": "West Germany was created.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-gdr-founded-1949",
+    "title": "East Germany Founded",
+    "year": 1949,
+    "description": "The German Democratic Republic was created.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-1953-uprising-1953",
+    "title": "East German Uprising",
+    "year": 1953,
+    "description": "Workers revolted against the communist regime.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-miracle-of-bern-1954",
+    "title": "Miracle of Bern",
+    "year": 1954,
+    "description": "West Germany won the World Cup.",
+    "category": "sports",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-berlin-wall-1961",
+    "title": "Berlin Wall Built",
+    "year": 1961,
+    "description": "East Germany sealed the border.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-kennedy-berlin-1963",
+    "title": "Kennedy in Berlin",
+    "year": 1963,
+    "description": "Kennedy declared solidarity with West Berlin.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-bundesliga-1963",
+    "title": "Bundesliga Founded",
+    "year": 1963,
+    "description": "Germany's top football league began.",
+    "category": "sports",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-brandt-chancellor-1969",
+    "title": "Brandt Becomes Chancellor",
+    "year": 1969,
+    "description": "Willy Brandt launched Ostpolitik.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-munich-massacre-1972",
+    "title": "Munich Olympics Massacre",
+    "year": 1972,
+    "description": "Terrorists killed Israeli athletes.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-kraftwerk-1974",
+    "title": "Kraftwerk's Autobahn",
+    "year": 1974,
+    "description": "The album made electronic music mainstream.",
+    "category": "music",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-world-cup-1974",
+    "title": "World Cup Won",
+    "year": 1974,
+    "description": "West Germany won the World Cup.",
+    "category": "sports",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-kohl-chancellor-1982",
+    "title": "Kohl Becomes Chancellor",
+    "year": 1982,
+    "description": "Helmut Kohl took office.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-berlin-wall-falls-1989",
+    "title": "Berlin Wall Falls",
+    "year": 1989,
+    "description": "East Germans streamed into the West.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 1,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-reunification-1990",
+    "title": "German Reunification",
+    "year": 1990,
+    "description": "East and West Germany united.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-berlin-capital-1991",
+    "title": "Berlin Becomes Capital",
+    "year": 1991,
+    "description": "The Bundestag chose Berlin.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-euro-2002",
+    "title": "Euro Adopted",
+    "year": 2002,
+    "description": "Germany adopted the euro.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-merkel-2005",
+    "title": "Merkel Becomes Chancellor",
+    "year": 2005,
+    "description": "Angela Merkel took office.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-world-cup-2006",
+    "title": "World Cup Hosted",
+    "year": 2006,
+    "description": "Germany hosted the World Cup.",
+    "category": "sports",
+    "region": "europe",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "europe-refugee-policy-2015",
+    "title": "Refugee Policy",
+    "year": 2015,
+    "description": "Germany opened its doors to refugees.",
+    "category": "politics",
+    "region": "europe",
+    "difficulty": 4,
+    "source": "britannica"
+  }
+]

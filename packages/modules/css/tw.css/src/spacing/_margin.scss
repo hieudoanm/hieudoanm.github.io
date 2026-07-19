@@ -1,0 +1,88 @@
+// Margin utilities — Tailwind v3 default scale
+
+$margin-unit: 0.25rem;
+$margin-steps: (
+  ('0\\.5', 0.5),
+  ('1', 1),
+  ('1\\.5', 1.5),
+  ('2', 2),
+  ('2\\.5', 2.5),
+  ('3', 3),
+  ('3\\.5', 3.5),
+  ('4', 4),
+  ('5', 5),
+  ('6', 6),
+  ('7', 7),
+  ('8', 8),
+  ('9', 9),
+  ('10', 10),
+  ('11', 11),
+  ('12', 12),
+  ('14', 14),
+  ('16', 16),
+  ('20', 20),
+  ('24', 24),
+  ('28', 28),
+  ('32', 32),
+  ('36', 36),
+  ('40', 40),
+  ('44', 44),
+  ('48', 48),
+  ('52', 52),
+  ('56', 56),
+  ('60', 60),
+  ('64', 64),
+  ('72', 72),
+  ('80', 80),
+  ('96', 96)
+);
+
+$margin-axes: (
+  ('', margin),
+  ('x', margin-left margin-right),
+  ('y', margin-top margin-bottom),
+  ('t', margin-top),
+  ('r', margin-right),
+  ('b', margin-bottom),
+  ('l', margin-left)
+);
+
+@each $axis, $properties in $margin-axes {
+  .m#{$axis}-0 {
+    @each $property in $properties {
+      #{$property}: 0;
+    }
+  }
+
+  .m#{$axis}-px {
+    @each $property in $properties {
+      #{$property}: 1px;
+    }
+  }
+
+  .-m#{$axis}-px {
+    @each $property in $properties {
+      #{$property}: -1px;
+    }
+  }
+
+  @each $class, $step in $margin-steps {
+    .m#{$axis}-#{$class} {
+      @each $property in $properties {
+        #{$property}: $step * $margin-unit;
+      }
+    }
+
+    .-m#{$axis}-#{$class} {
+      @each $property in $properties {
+        #{$property}: -1 * $step * $margin-unit;
+      }
+    }
+  }
+
+  .m#{$axis}-auto {
+    @each $property in $properties {
+      #{$property}: auto;
+    }
+  }
+}

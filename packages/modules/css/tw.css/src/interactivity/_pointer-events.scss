@@ -1,0 +1,9 @@
+// Pointer events utilities — Tailwind v3 default scale
+
+$pointer-events: (('none', none), ('auto', auto));
+
+@each $name, $value in $pointer-events {
+  .pointer-events-#{$name} {
+    pointer-events: $value;
+  }
+}

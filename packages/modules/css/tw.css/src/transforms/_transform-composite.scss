@@ -1,0 +1,7 @@
+// Shared transform composite property — Tailwind v3 default
+// Every transform component utility repeats this declaration so that
+// combining utilities (translate + rotate + scale) always evaluates all
+// custom properties with safe fallbacks for the absent siblings.
+
+$transform-composite: 'translate(var(--tw-translate-x, 0rem), var(--tw-translate-y, 0rem)) rotate(var(--tw-rotate, 0deg)) skewX(var(--tw-skew-x, 0deg)) skewY(var(--tw-skew-y, 0deg)) scaleX(var(--tw-scale-x, 1)) scaleY(var(--tw-scale-y, 1))';
+$transform-composite-gpu: 'translate3d(var(--tw-translate-x, 0rem), var(--tw-translate-y, 0rem), 0) rotate(var(--tw-rotate, 0deg)) skewX(var(--tw-skew-x, 0deg)) skewY(var(--tw-skew-y, 0deg)) scaleX(var(--tw-scale-x, 1)) scaleY(var(--tw-scale-y, 1))';

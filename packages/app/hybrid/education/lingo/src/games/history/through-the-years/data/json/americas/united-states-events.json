@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "americas-jamestown-founded-1607",
+    "title": "Jamestown Founded",
+    "year": 1607,
+    "description": "The English founded Jamestown the first permanent colony in America.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-mayflower-1620",
+    "title": "Mayflower Compact Signed",
+    "year": 1620,
+    "description": "The Pilgrims signed the Mayflower Compact aboard ship.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-harvard-founded-1636",
+    "title": "Harvard University Founded",
+    "year": 1636,
+    "description": "Harvard became the first college in the American colonies.",
+    "category": "science",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-salem-trials-1692",
+    "title": "Salem Witch Trials",
+    "year": 1692,
+    "description": "Witch trials in Salem Massachusetts led to mass executions.",
+    "category": "culture",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-french-indian-war-1754",
+    "title": "French and Indian War Begins",
+    "year": 1754,
+    "description": "Britain and France fought for control of North America.",
+    "category": "war",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-stamp-act-1765",
+    "title": "Stamp Act Passed",
+    "year": 1765,
+    "description": "Parliament taxed the American colonies with the Stamp Act.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-boston-massacre-1770",
+    "title": "Boston Massacre",
+    "year": 1770,
+    "description": "British soldiers fired on a crowd in Boston killing five people.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-boston-tea-party-1773",
+    "title": "Boston Tea Party",
+    "year": 1773,
+    "description": "Colonists dumped British tea into Boston Harbor.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-intolerable-acts-1774",
+    "title": "Intolerable Acts Passed",
+    "year": 1774,
+    "description": "Parliament punished Boston with the Coercive Acts.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-lexington-concord-1775",
+    "title": "Shots Heard Round the World",
+    "year": 1775,
+    "description": "Fighting broke out at Lexington and Concord starting the Revolution.",
+    "category": "war",
+    "region": "americas",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-declaration-independence-1776",
+    "title": "Declaration of Independence",
+    "year": 1776,
+    "description": "The colonies declared independence from Britain on July 4.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 1,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-valley-forge-1777",
+    "title": "Winter at Valley Forge",
+    "year": 1777,
+    "description": "Washington's army endured a brutal winter at Valley Forge.",
+    "category": "war",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-treaty-paris-1783",
+    "title": "Treaty of Paris Signed",
+    "year": 1783,
+    "description": "Britain recognized American independence.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-constitution-1787",
+    "title": "US Constitution Adopted",
+    "year": 1787,
+    "description": "Delegates in Philadelphia approved the Constitution.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-bill-of-rights-1791",
+    "title": "Bill of Rights Ratified",
+    "year": 1791,
+    "description": "The first ten amendments were added to the Constitution.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-whiskey-rebellion-1794",
+    "title": "Whiskey Rebellion",
+    "year": 1794,
+    "description": "Farmers in Pennsylvania rebelled against a whiskey tax.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-louisiana-purchase-1803",
+    "title": "Louisiana Purchase",
+    "year": 1803,
+    "description": "The United States bought Louisiana from France doubling its size.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-lewis-clark-1804",
+    "title": "Lewis and Clark Expedition",
+    "year": 1804,
+    "description": "The Corps of Discovery set out to explore the American West.",
+    "category": "culture",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-steamboat-clermont-1807",
+    "title": "Steamboat Clermont Sails",
+    "year": 1807,
+    "description": "Robert Fulton's steamboat steamed up the Hudson River.",
+    "category": "technology",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-erie-canal-1825",
+    "title": "Erie Canal Opens",
+    "year": 1825,
+    "description": "The Erie Canal linked the Great Lakes to the Hudson River.",
+    "category": "technology",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-trail-of-tears-1830",
+    "title": "Indian Removal Act Passed",
+    "year": 1830,
+    "description": "The Act forced Native American tribes to leave their lands.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-mccormick-reaper-1834",
+    "title": "McCormick Reaper Patented",
+    "year": 1834,
+    "description": "Cyrus McCormick patented a mechanical reaper for wheat.",
+    "category": "technology",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-texas-independence-1836",
+    "title": "Texas Declares Independence",
+    "year": 1836,
+    "description": "Texas declared independence from Mexico at the Alamo.",
+    "category": "war",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-trail-of-tears-1838",
+    "title": "Trail of Tears",
+    "year": 1838,
+    "description": "Cherokee people were forced to march west in deadly conditions.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-gold-rush-1848",
+    "title": "California Gold Rush",
+    "year": 1848,
+    "description": "Gold was discovered at Sutter's Mill in California.",
+    "category": "culture",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-seneca-falls-1848",
+    "title": "Seneca Falls Convention",
+    "year": 1848,
+    "description": "Reformers demanded women's rights at Seneca Falls.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-compromise-1850",
+    "title": "Compromise of 1850",
+    "year": 1850,
+    "description": "New laws tried to settle the slavery debate after the Mexican War.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-uncle-toms-cabin-1852",
+    "title": "Uncle Tom's Cabin Published",
+    "year": 1852,
+    "description": "Harriet Beecher Stowe's novel fueled the anti-slavery movement.",
+    "category": "culture",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-fugitive-slave-act-1850",
+    "title": "Fugitive Slave Act Passed",
+    "year": 1850,
+    "description": "The Act required the return of escaped enslaved people.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-kansas-nebraska-1854",
+    "title": "Kansas-Nebraska Act",
+    "year": 1854,
+    "description": "The Act reopened the slavery question in western territories.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-dred-scott-1857",
+    "title": "Dred Scott Decision",
+    "year": 1857,
+    "description": "The Supreme Court ruled against Dred Scott's freedom.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-lincoln-elected-1860",
+    "title": "Lincoln Elected President",
+    "year": 1860,
+    "description": "Abraham Lincoln won the presidency without southern support.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-civil-war-begins-1861",
+    "title": "Civil War Begins",
+    "year": 1861,
+    "description": "Confederate forces attacked Fort Sumter starting the Civil War.",
+    "category": "war",
+    "region": "americas",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-emancipation-1863",
+    "title": "Emancipation Proclamation",
+    "year": 1863,
+    "description": "Lincoln freed enslaved people in the Confederacy.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-gettysburg-1863",
+    "title": "Battle of Gettysburg",
+    "year": 1863,
+    "description": "The largest battle of the Civil War was fought at Gettysburg.",
+    "category": "war",
+    "region": "americas",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-gettysburg-address-1863",
+    "title": "Gettysburg Address",
+    "year": 1863,
+    "description": "Lincoln delivered his famous address at Gettysburg.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-civil-war-ends-1865",
+    "title": "Civil War Ends",
+    "year": 1865,
+    "description": "Robert E. Lee surrendered at Appomattox.",
+    "category": "war",
+    "region": "americas",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-lincoln-assassinated-1865",
+    "title": "Lincoln Assassinated",
+    "year": 1865,
+    "description": "John Wilkes Booth shot President Lincoln.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-13th-amendment-1865",
+    "title": "Thirteenth Amendment Ratified",
+    "year": 1865,
+    "description": "The Amendment abolished slavery in the United States.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-transcontinental-railroad-1869",
+    "title": "Transcontinental Railroad Completed",
+    "year": 1869,
+    "description": "The golden spike joined the nation's first transcontinental railroad.",
+    "category": "technology",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-bell-telephone-1876",
+    "title": "Alexander Graham Bell Patents Telephone",
+    "year": 1876,
+    "description": "Bell patented the telephone in 1876.",
+    "category": "technology",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-edison-light-bulb-1879",
+    "title": "Edison Demos Light Bulb",
+    "year": 1879,
+    "description": "Thomas Edison demonstrated a practical incandescent lamp.",
+    "category": "technology",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-haymarket-riot-1886",
+    "title": "Haymarket Riot",
+    "year": 1886,
+    "description": "A labor rally in Chicago turned violent.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-statue-of-liberty-1886",
+    "title": "Statue of Liberty Dedicated",
+    "year": 1886,
+    "description": "The Statue of Liberty was dedicated in New York Harbor.",
+    "category": "culture",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-wounded-knee-1890",
+    "title": "Wounded Knee Massacre",
+    "year": 1890,
+    "description": "US troops killed Lakota people at Wounded Knee.",
+    "category": "war",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-wright-brothers-1903",
+    "title": "First Powered Flight",
+    "year": 1903,
+    "description": "The Wright brothers flew at Kitty Hawk on December 17.",
+    "category": "technology",
+    "region": "americas",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-ford-model-t-1908",
+    "title": "Model T Introduced",
+    "year": 1908,
+    "description": "Ford launched the Model T automobile.",
+    "category": "technology",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-naacp-founded-1909",
+    "title": "NAACP Founded",
+    "year": 1909,
+    "description": "Activists founded the NAACP to fight racial injustice.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-titanic-sinks-1912",
+    "title": "Titanic Sinks",
+    "year": 1912,
+    "description": "The Titanic struck an iceberg and sank in the Atlantic.",
+    "category": "culture",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-federal-reserve-1913",
+    "title": "Federal Reserve Created",
+    "year": 1913,
+    "description": "Congress created the Federal Reserve System.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-zimmermann-telegram-1917",
+    "title": "Zimmermann Telegram Intercepted",
+    "year": 1917,
+    "description": "The telegram helped push the United States into World War I.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-us-enters-ww1-1917",
+    "title": "United States Enters World War I",
+    "year": 1917,
+    "description": "Congress declared war on Germany.",
+    "category": "war",
+    "region": "americas",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-18th-amendment-1919",
+    "title": "Prohibition Enacted",
+    "year": 1919,
+    "description": "The Eighteenth Amendment banned alcohol nationwide.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-19th-amendment-1920",
+    "title": "Woman Suffrage Amendment",
+    "year": 1920,
+    "description": "Women won the right to vote with the Nineteenth Amendment.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-scopes-trial-1925",
+    "title": "Scopes Monkey Trial",
+    "year": 1925,
+    "description": "John Scopes was tried for teaching evolution.",
+    "category": "science",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-stock-market-crash-1929",
+    "title": "Stock Market Crash",
+    "year": 1929,
+    "description": "Wall Street crashed starting the Great Depression.",
+    "category": "culture",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-dust-bowl-1934",
+    "title": "Dust Bowl",
+    "year": 1934,
+    "description": "Huge dust storms devastated the Great Plains.",
+    "category": "culture",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-social-security-1935",
+    "title": "Social Security Act",
+    "year": 1935,
+    "description": "The Act created old-age benefits and unemployment insurance.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-golden-gate-1937",
+    "title": "Golden Gate Bridge Opens",
+    "year": 1937,
+    "description": "The Golden Gate Bridge opened in San Francisco.",
+    "category": "technology",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-nylon-1938",
+    "title": "Nylon Introduced",
+    "year": 1938,
+    "description": "DuPont unveiled nylon at the World's Fair.",
+    "category": "technology",
+    "region": "americas",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-pearl-harbor-1941",
+    "title": "Pearl Harbor Attack",
+    "year": 1941,
+    "description": "Japan attacked Pearl Harbor bringing America into World War II.",
+    "category": "war",
+    "region": "americas",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-internment-1942",
+    "title": "Japanese Internment Begins",
+    "year": 1942,
+    "description": "The government imprisoned Japanese Americans in camps.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-manhattan-project-1945",
+    "title": "Manhattan Project Test",
+    "year": 1945,
+    "description": "The first atomic bomb was tested at Trinity site.",
+    "category": "war",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-us-joins-un-1945",
+    "title": "United States Joins the UN",
+    "year": 1945,
+    "description": "The UN Charter was ratified in San Francisco.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-amelia-earhart-1937",
+    "title": "Amelia Earhart Disappears",
+    "year": 1937,
+    "description": "Earhart vanished over the Pacific on a round-the-world flight.",
+    "category": "culture",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-rosie-riveter-1942",
+    "title": "Rosie the Riveter Campaign",
+    "year": 1942,
+    "description": "Women entered factories to support the war effort.",
+    "category": "culture",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-jackie-robinson-1947",
+    "title": "Jackie Robinson Breaks Barrier",
+    "year": 1947,
+    "description": "Robinson became the first Black player in modern Major League Baseball.",
+    "category": "sports",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-polaroid-camera-1948",
+    "title": "Polaroid Camera Launched",
+    "year": 1948,
+    "description": "Edwin Land sold the first instant camera.",
+    "category": "technology",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-rock-n-roll-era-1950",
+    "title": "Rock and Roll Emerges",
+    "year": 1950,
+    "description": "Rock and roll music exploded across America.",
+    "category": "music",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-supreme-court-brown-1954",
+    "title": "Brown v. Board of Education",
+    "year": 1954,
+    "description": "The Supreme Court banned school segregation.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-polio-vaccine-1955",
+    "title": "Polio Vaccine Approved",
+    "year": 1955,
+    "description": "Jonas Salk's vaccine was declared safe and effective.",
+    "category": "medicine",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-interstate-system-1956",
+    "title": "Interstate Highway Act",
+    "year": 1956,
+    "description": "Eisenhower signed the Interstate Highway Act.",
+    "category": "technology",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-nasa-founded-1958",
+    "title": "NASA Founded",
+    "year": 1958,
+    "description": "NASA began operations as the civilian space agency.",
+    "category": "space",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-greensboro-sit-ins-1960",
+    "title": "Greensboro Sit-Ins",
+    "year": 1960,
+    "description": "Students staged sit-ins at a segregated Woolworth lunch counter.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-mercury-lauder-1961",
+    "title": "Alan Shepard Flies to Space",
+    "year": 1961,
+    "description": "Shepard became the first American in space.",
+    "category": "space",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-march-washington-1963",
+    "title": "March on Washington",
+    "year": 1963,
+    "description": "Martin Luther King Jr. delivered his I Have a Dream speech.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-kennedy-assassinated-1963",
+    "title": "Kennedy Assassinated",
+    "year": 1963,
+    "description": "President Kennedy was shot in Dallas.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-civil-rights-act-1964",
+    "title": "Civil Rights Act",
+    "year": 1964,
+    "description": "The Act outlawed segregation and discrimination.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-voting-rights-act-1965",
+    "title": "Voting Rights Act",
+    "year": 1965,
+    "description": "The Act protected the right to vote for Black Americans.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-first-spacewalk-1965",
+    "title": "First American Spacewalk",
+    "year": 1965,
+    "description": "Ed White walked in space during Gemini 4.",
+    "category": "space",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-super-bowl-1967",
+    "title": "First Super Bowl",
+    "year": 1967,
+    "description": "The Packers beat the Chiefs in the first Super Bowl.",
+    "category": "sports",
+    "region": "americas",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-mlk-assassinated-1968",
+    "title": "Martin Luther King Jr. Assassinated",
+    "year": 1968,
+    "description": "King was killed in Memphis.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-apollo-11-1969",
+    "title": "Apollo 11 Moon Landing",
+    "year": 1969,
+    "description": "Neil Armstrong walked on the Moon.",
+    "category": "space",
+    "region": "americas",
+    "difficulty": 1,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-earth-day-1970",
+    "title": "First Earth Day",
+    "year": 1970,
+    "description": "Millions took part in the first Earth Day.",
+    "category": "culture",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-watergate-1972",
+    "title": "Watergate Break-In",
+    "year": 1972,
+    "description": "Burglars were caught at the Watergate complex.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-roe-wade-1973",
+    "title": "Roe v. Wade Decided",
+    "year": 1973,
+    "description": "The Supreme Court recognized a right to abortion.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-sony-walkman-1979",
+    "title": "Sony Walkman Released",
+    "year": 1979,
+    "description": "Sony introduced the personal cassette player.",
+    "category": "technology",
+    "region": "americas",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-mtv-launched-1981",
+    "title": "MTV Launches",
+    "year": 1981,
+    "description": "MTV went on the air with music videos.",
+    "category": "culture",
+    "region": "americas",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-challenger-disaster-1986",
+    "title": "Challenger Disaster",
+    "year": 1986,
+    "description": "The space shuttle Challenger broke apart after launch.",
+    "category": "space",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-berlin-wall-speech-1987",
+    "title": "Reagan at the Berlin Wall",
+    "year": 1987,
+    "description": "Reagan told Gorbachev to tear down the Berlin Wall.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-world-wide-web-1991",
+    "title": "World Wide Web Goes Public",
+    "year": 1991,
+    "description": "Tim Berners-Lee shared the web with the public.",
+    "category": "technology",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-los-angeles-riots-1992",
+    "title": "Los Angeles Riots",
+    "year": 1992,
+    "description": "Riots erupted after the Rodney King verdict.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-dot-com-bubble-2000",
+    "title": "Dot-Com Bubble Peak",
+    "year": 2000,
+    "description": "Technology stocks peaked before a market crash.",
+    "category": "culture",
+    "region": "americas",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-september-11-2001",
+    "title": "September 11 Attacks",
+    "year": 2001,
+    "description": "Terrorists attacked the World Trade Center and the Pentagon.",
+    "category": "war",
+    "region": "americas",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-facebook-launches-2004",
+    "title": "Facebook Launches",
+    "year": 2004,
+    "description": "Facebook started at Harvard University.",
+    "category": "technology",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-hurricane-katrina-2005",
+    "title": "Hurricane Katrina",
+    "year": 2005,
+    "description": "The hurricane devastated New Orleans.",
+    "category": "culture",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-obama-elected-2008",
+    "title": "Obama Elected President",
+    "year": 2008,
+    "description": "Barack Obama became the first Black president.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-affordable-care-2010",
+    "title": "Affordable Care Act",
+    "year": 2010,
+    "description": "Obama signed the healthcare reform law.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-osama-bin-laden-2011",
+    "title": "Osama bin Laden Killed",
+    "year": 2011,
+    "description": "US forces killed bin Laden in Pakistan.",
+    "category": "war",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "americas-supreme-court-gay-marriage-2015",
+    "title": "Same-Sex Marriage Legalized",
+    "year": 2015,
+    "description": "The Supreme Court recognized same-sex marriage nationwide.",
+    "category": "politics",
+    "region": "americas",
+    "difficulty": 4,
+    "source": "britannica"
+  }
+]

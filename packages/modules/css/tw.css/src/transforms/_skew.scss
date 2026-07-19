@@ -1,0 +1,27 @@
+// Skew utilities — Tailwind v3 default scale
+
+@use 'transform-composite' as *;
+
+$skew-unit: 1deg;
+$skews: (('0', 0), ('1', 1), ('2', 2), ('3', 3), ('6', 6), ('12', 12));
+
+$skew-axes: (
+  ('x', '--tw-skew-x', 'skew-x-', '-skew-x-'),
+  ('y', '--tw-skew-y', 'skew-y-', '-skew-y-')
+);
+
+@each $axis, $property, $positive, $negative in $skew-axes {
+  @each $name, $value in $skews {
+    .#{$positive}#{$name} {
+      #{$property}: #{$value * $skew-unit};
+      transform: #{$transform-composite};
+    }
+
+    @if $name != '0' {
+      .#{$negative}#{$name} {
+        #{$property}: #{$value * -1 * $skew-unit};
+        transform: #{$transform-composite};
+      }
+    }
+  }
+}

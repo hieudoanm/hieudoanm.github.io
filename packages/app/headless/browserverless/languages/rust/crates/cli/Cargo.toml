@@ -1,0 +1,25 @@
+[package]
+name = "browserverless-cli"
+version = "0.0.1"
+edition = "2021"
+description = "Lightweight browser CLI powered by Servo"
+
+[[bin]]
+name = "browserverless"
+path = "src/main.rs"
+
+[dependencies]
+browserverless = { path = "../browserverless" }
+headless = { path = "../headless" }
+clap = { workspace = true }
+thiserror = { workspace = true }
+url = { workspace = true }
+log = { workspace = true }
+image = { workspace = true }
+servo = { workspace = true }
+winit = { workspace = true }
+dpi = { workspace = true }
+tracing = { workspace = true }
+euclid = "0.22"
+libc = "0.2"
+tiny_http = { workspace = true }

@@ -1,0 +1,28 @@
+[package]
+name = "resume"
+version = "0.0.1"
+description = "Resume - Free Resume Builder"
+authors = ["hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)"]
+license = "GPL-3.0"
+repository = "git+ssh://git@github.com/hieudoanm/hieudoanm.github.io.git"
+edition = "2021"
+rust-version = "1.77.2"
+
+[lib]
+name = "app_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "=2.6.3", features = [] }
+
+[dependencies]
+tauri = { version = "=2.11.5", features = [] }
+tauri-plugin-dialog = "=2.7.2"
+tauri-plugin-fs = "=2.5.1"
+serde = { version = "=1.0.229", features = ["derive"] }
+serde_json = "=1.0.151"
+
+[features]
+default = ["custom-protocol"]
+custom-protocol = ["tauri/custom-protocol"]
+mobile = []

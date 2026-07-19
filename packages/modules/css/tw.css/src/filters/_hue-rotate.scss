@@ -1,0 +1,19 @@
+// Hue rotate utilities — Tailwind v3 default scale
+
+@use 'filter-composite' as *;
+
+$hue-rotations: (
+  ('0', 0),
+  ('15', 15),
+  ('30', 30),
+  ('60', 60),
+  ('90', 90),
+  ('180', 180)
+);
+
+@each $name, $value in $hue-rotations {
+  .hue-rotate-#{$name} {
+    --tw-hue-rotate: hue-rotate(#{$value}deg);
+    filter: #{$filter-composite};
+  }
+}

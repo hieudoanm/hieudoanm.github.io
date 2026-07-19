@@ -1,0 +1,11 @@
+{{- define "header" -}}
+    <header>
+      <a class="brand" href="#top">
+        {{if .Site.Mark}}<span class="mark">{{.Site.Mark}}</span>{{end}}
+        <span>{{.Site.Name}}</span>
+      </a>
+      <nav>
+        {{range .Site.Nav}}<a href="{{.Href}}">{{.Label}}</a>{{end}}
+      </nav>
+    </header>
+{{- end -}}

@@ -1,0 +1,55 @@
+// Design tokens and document scaffolding.
+
+@mixin root {
+  :root {
+    --base-font-sans:
+      system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+      sans-serif;
+    --base-font-serif: Georgia, Cambria, 'Times New Roman', Times, serif;
+    --base-font-mono:
+      ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono',
+      monospace;
+    --base-text: #1b1b1f;
+    --base-text-muted: #6d7175;
+    --base-bg: #ffffff;
+    --base-border: #e2e2e6;
+    --base-primary: #2563eb;
+    --base-mark-bg: rgba(217, 119, 6, 0.3);
+    --base-focus-ring: var(--base-primary);
+    --base-radius-xs: 0.25rem;
+    --base-radius-sm: 0.5rem;
+    --base-radius: 0.75rem;
+    --base-shadow:
+      0 1px 2px 0 rgba(0, 0, 0, 0.05), 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --base-text: #e5e5e8;
+      --base-text-muted: #a3a3ab;
+      --base-bg: #1b1b1f;
+      --base-border: #44444b;
+      --base-primary: #60a5fa;
+      --base-mark-bg: rgba(251, 191, 36, 0.3);
+    }
+  }
+
+  html {
+    height: 100%;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    min-height: 100%;
+    background: var(--base-bg);
+    color: var(--base-text);
+    font-family: var(--base-font-sans);
+    font-size: 1rem;
+    line-height: 1.625;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+}

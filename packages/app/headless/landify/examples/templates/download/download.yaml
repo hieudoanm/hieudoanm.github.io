@@ -1,0 +1,53 @@
+type: download
+site:
+  name: landify
+  description: A static-site generator that ships flat.
+  nav:
+    - label: Features
+      href: "#features"
+    - label: Source
+      href: "https://github.com/hieudoanm/hieudoanm.github.io"
+hero:
+  badge: "📦 Release"
+  headline: Ship a landing page in minutes.
+  subheadline: One YAML file in, one flat HTML page out.
+  secondary:
+    label: Changelog
+    href: "https://example.com/changelog"
+download:
+  version: "0.4.2"
+  license: MIT
+  repo: "https://github.com/hieudoanm/hieudoanm.github.io"
+  install: "brew install landify"
+  platforms:
+    - name: macOS
+      icon: "🍎"
+      href: "https://example.com/landify.dmg"
+    - name: Linux
+      icon: "🐧"
+      href: "https://example.com/landify-linux.tar.gz"
+    - name: Windows
+      icon: "🪟"
+      href: "https://example.com/landify.exe"
+features:
+  heading: Why landify
+  sub: The smallest possible footprint, fully offline.
+  items:
+    - icon: "📄"
+      title: One flat file
+      body: HTML and CSS only, ready to drop anywhere.
+    - icon: "⚡"
+      title: Instant build
+      body: No network, no dependencies, no build step.
+    - icon: "🎨"
+      title: Eight page types
+      body: Product, waitlist, event, download, app, pricing, portfolio, docs.
+cta:
+  icon: "🚀"
+  heading: Get started.
+  body: Download and build your first page.
+  button:
+    label: Download now
+    href: "https://example.com/landify.dmg"
+footer:
+  copyright: "© 2026 Landify"

@@ -1,0 +1,14 @@
+// Flex direction utilities — Tailwind v3 default scale
+
+$flex-directions: (
+  ('row', row),
+  ('row-reverse', row-reverse),
+  ('col', column),
+  ('col-reverse', column-reverse)
+);
+
+@each $name, $value in $flex-directions {
+  .flex-#{$name} {
+    flex-direction: $value;
+  }
+}

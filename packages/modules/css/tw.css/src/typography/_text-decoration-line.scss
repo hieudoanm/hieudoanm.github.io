@@ -1,0 +1,14 @@
+// Text decoration line utilities — Tailwind v3 default scale
+
+$text-decoration-lines: (
+  ('underline', underline),
+  ('overline', overline),
+  ('line-through', line-through),
+  ('no-underline', none)
+);
+
+@each $name, $value in $text-decoration-lines {
+  .#{$name} {
+    text-decoration-line: $value;
+  }
+}

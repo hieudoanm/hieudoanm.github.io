@@ -1,0 +1,14 @@
+// Opacity utilities — Tailwind v3 default scale
+
+@use 'sass:math';
+
+$opacity-step: 5;
+$opacity-max: 100;
+
+@for $value from 0 through $opacity-max {
+  @if $value % $opacity-step == 0 {
+    .opacity-#{$value} {
+      opacity: math.div($value, $opacity-max);
+    }
+  }
+}

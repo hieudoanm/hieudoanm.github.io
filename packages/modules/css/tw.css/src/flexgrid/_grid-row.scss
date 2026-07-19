@@ -1,0 +1,64 @@
+// Grid row utilities — Tailwind v3 default scale
+
+$grid-row-spans: (
+  ('1', 1),
+  ('2', 2),
+  ('3', 3),
+  ('4', 4),
+  ('5', 5),
+  ('6', 6),
+  ('7', 7),
+  ('8', 8),
+  ('9', 9),
+  ('10', 10),
+  ('11', 11),
+  ('12', 12)
+);
+
+$grid-row-lines: (
+  ('1', 1),
+  ('2', 2),
+  ('3', 3),
+  ('4', 4),
+  ('5', 5),
+  ('6', 6),
+  ('7', 7),
+  ('8', 8),
+  ('9', 9),
+  ('10', 10),
+  ('11', 11),
+  ('12', 12),
+  ('13', 13)
+);
+
+.row-auto {
+  grid-row: auto;
+}
+
+.row-span-full {
+  grid-row: 1 / -1;
+}
+
+@each $name, $count in $grid-row-spans {
+  .row-span-#{$name} {
+    grid-row: span #{$count} / span #{$count};
+  }
+}
+
+@each $name, $line in $grid-row-lines {
+  .row-start-#{$name} {
+    grid-row-start: $line;
+  }
+
+  .row-end-#{$name} {
+    grid-row-end: $line;
+  }
+}
+
+.row-start-auto {
+  grid-row-start: auto;
+}
+
+.row-end-auto {
+  grid-row-end: auto;
+}

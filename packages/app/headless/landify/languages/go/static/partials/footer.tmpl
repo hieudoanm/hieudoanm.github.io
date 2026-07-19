@@ -1,0 +1,6 @@
+{{- define "footer" -}}
+      <footer>
+        <span>{{.Footer.Copyright}}</span>
+        {{range .Footer.Links}}<a href="{{.Href}}">{{.Label}}</a>{{end}}
+      </footer>
+{{- end -}}

@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "asia-van-lang-2879",
+    "title": "Văn Lang State",
+    "year": -2879,
+    "description": "Legend says the Hùng kings founded the early state of Văn Lang.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-dong-son-culture-700",
+    "title": "Đông Sơn Bronze Culture",
+    "year": -700,
+    "description": "The Đông Sơn culture flourished producing ornate bronze drums.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-au-lac-257",
+    "title": "Âu Lạc Founded",
+    "year": -257,
+    "description": "King An Dương Vương founded the kingdom of Âu Lạc.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-co-loa-citadel-257",
+    "title": "Cổ Loa Citadel Built",
+    "year": -257,
+    "description": "The spiral citadel of Cổ Loa was built near modern Hanoi.",
+    "category": "technology",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-trieu-da-207",
+    "title": "Triệu Đà Conquers Âu Lạc",
+    "year": -207,
+    "description": "Zhao Tuo ended Âu Lạc and ruled the region as Nam Việt.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-han-conquest-111",
+    "title": "First Chinese Domination",
+    "year": -111,
+    "description": "The Han dynasty annexed the region beginning a millennium of rule.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-hai-ba-trung-40",
+    "title": "Trưng Sisters Revolt",
+    "year": 40,
+    "description": "The Trưng sisters led a rebellion against Han rule.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-ma-vien-43",
+    "title": "Han Reassert Control",
+    "year": 43,
+    "description": "Han general Ma Yuan crushed the Trưng rebellion.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-luy-lau-192",
+    "title": "Luy Lâu Buddhist Center",
+    "year": 192,
+    "description": "Luy Lâu in Giao Châu became an early center of Buddhism.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-lady-trieu-248",
+    "title": "Lady Triệu's Revolt",
+    "year": 248,
+    "description": "The warrior Lady Triệu led an uprising against Wu rule.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-ly-nam-de-544",
+    "title": "Vạn Xuân Founded",
+    "year": 544,
+    "description": "Lý Bí founded the kingdom of Vạn Xuân after defeating Liang forces.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-ly-bon-emperor-544",
+    "title": "Lý Bí Becomes Emperor",
+    "year": 544,
+    "description": "Lý Bí proclaimed himself emperor taking the name Lý Nam Đế.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-trieu-quang-phuc-548",
+    "title": "Triệu Quang Phục Leads Vạn Xuân",
+    "year": 548,
+    "description": "Triệu Quang Phục continued the resistance after Lý Nam Đế's death.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-khuc-thua-du-905",
+    "title": "Khúc Family Autonomy",
+    "year": 905,
+    "description": "Khúc Thừa Dụ seized power ending direct Tang rule.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-ngo-quyen-938",
+    "title": "Ngô Quyền Defeats the South Han",
+    "year": 938,
+    "description": "Ngô Quyền won the Battle of Bạch Đằng and founded the Ngô dynasty.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-bach-dang-stakes-938",
+    "title": "Bạch Đằng River Stakes",
+    "year": 938,
+    "description": "Ngô Quyền used wooden stakes in the river to trap enemy ships.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-dinh-bo-linh-968",
+    "title": "Đinh Bộ Lĩnh Unifies Vietnam",
+    "year": 968,
+    "description": "Đinh Bộ Lĩnh united the country and founded Đại Cồ Việt.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-dai-co-viet-968",
+    "title": "Đại Cồ Việt Established",
+    "year": 968,
+    "description": "The kingdom was renamed Đại Cồ Việt with its capital at Hoa Lư.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-hoa-lu-capital-968",
+    "title": "Hoa Lư Becomes Capital",
+    "year": 968,
+    "description": "Hoa Lư in Ninh Bình became the imperial capital.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-le-hoan-980",
+    "title": "Lê Hoàn Repels Song Invasion",
+    "year": 980,
+    "description": "Lê Hoàn defeated a Song dynasty invasion of the young state.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-ly-cong-uan-1009",
+    "title": "Lý Công Uẩn Founds the Lý Dynasty",
+    "year": 1009,
+    "description": "Lý Công Uẩn established the Lý dynasty after a coup.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-thang-long-1010",
+    "title": "Thăng Long Becomes Capital",
+    "year": 1010,
+    "description": "Lý Công Uẩn moved the capital to Thăng Long.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-one-pillar-pagoda-1049",
+    "title": "One Pillar Pagoda Built",
+    "year": 1049,
+    "description": "Emperor Lý Thái Tông built the One Pillar Pagoda in Hanoi.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-ly-thanh-tong-1054",
+    "title": "Đại Việt Renamed",
+    "year": 1054,
+    "description": "Lý Thánh Tông renamed the kingdom Đại Việt.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-temple-of-literature-1070",
+    "title": "Temple of Literature Founded",
+    "year": 1070,
+    "description": "Lý Thánh Tông founded the Temple of Literature in Hanoi.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-quoc-tu-giam-1076",
+    "title": "Imperial Academy Founded",
+    "year": 1076,
+    "description": "Quốc Tử Giám opened as Vietnam's first university.",
+    "category": "science",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-nhu-nguyet-1077",
+    "title": "Battle of Như Nguyệt River",
+    "year": 1077,
+    "description": "Lý Thường Kiệt stopped a Song invasion at the Như Nguyệt River.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-nam-quoc-son-ha-1077",
+    "title": "First Declaration of Independence",
+    "year": 1077,
+    "description": "Lý Thường Kiệt's poem Nam Quốc Sơn Hà affirmed Vietnamese sovereignty.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-tran-dynasty-1226",
+    "title": "Trần Dynasty Founded",
+    "year": 1226,
+    "description": "Trần Cảnh founded the Trần dynasty after a palace takeover.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-tran-thai-tong-1225",
+    "title": "Trần Thái Tông Becomes Emperor",
+    "year": 1225,
+    "description": "Trần Cảnh became emperor at age eight.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-mongol-invasion-1258",
+    "title": "First Mongol Invasion Repelled",
+    "year": 1258,
+    "description": "Trần troops drove out the first Mongol invasion.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-mongol-invasion-1285",
+    "title": "Second Mongol Invasion Repelled",
+    "year": 1285,
+    "description": "Kublai Khan's second invasion was defeated by the Trần army.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-bach-dang-1288",
+    "title": "Battle of Bạch Đằng",
+    "year": 1288,
+    "description": "Trần Hưng Đạo crushed the Mongol fleet at Bạch Đằng.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-hung-dao-1288",
+    "title": "Trần Hưng Đạo's Victory",
+    "year": 1288,
+    "description": "The decisive victory ended Mongol ambitions against Đại Việt.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-ho-quy-ly-1400",
+    "title": "Hồ Dynasty Founded",
+    "year": 1400,
+    "description": "Hồ Quý Ly overthrew the Trần dynasty and founded the Hồ dynasty.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-ming-occupation-1407",
+    "title": "Ming Occupation Begins",
+    "year": 1407,
+    "description": "Ming forces conquered Đại Việt ending the Hồ dynasty.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-lam-son-1418",
+    "title": "Lam Sơn Uprising Begins",
+    "year": 1418,
+    "description": "Lê Lợi launched the Lam Sơn uprising against Ming rule.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-nguyen-trai-1427",
+    "title": "Nguyễn Trãi Advises Lê Lợi",
+    "year": 1427,
+    "description": "Nguyễn Trãi wrote strategy and poetry for the resistance.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-chi-lang-1427",
+    "title": "Battle of Chi Lăng",
+    "year": 1427,
+    "description": "Lê Lợi's forces defeated the Ming at Chi Lăng.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-le-dynasty-1428",
+    "title": "Lê Dynasty Founded",
+    "year": 1428,
+    "description": "Lê Lợi became emperor founding the Lê dynasty.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-binh-ngo-dai-cao-1428",
+    "title": "Bình Ngô Đại Cáo",
+    "year": 1428,
+    "description": "Nguyễn Trãi proclaimed independence in the Bình Ngô Đại Cáo.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-le-thanh-tong-1460",
+    "title": "Lê Thánh Tông Rules",
+    "year": 1460,
+    "description": "Lê Thánh Tông began a golden age of reform.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-hong-duc-code-1483",
+    "title": "Hồng Đức Code Issued",
+    "year": 1483,
+    "description": "The Hồng Đức code was Vietnam's greatest legal code.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-mack-dynasty-1527",
+    "title": "Mạc Dynasty Founded",
+    "year": 1527,
+    "description": "Mạc Đăng Dung seized the throne founding the Mạc dynasty.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-trinh-nguyen-war-1627",
+    "title": "Trịnh–Nguyễn War Begins",
+    "year": 1627,
+    "description": "The Trịnh and Nguyễn lords began a long civil war.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-nguyen-lords-1558",
+    "title": "Nguyễn Lords Move South",
+    "year": 1558,
+    "description": "Nguyễn Hoàng was sent south founding the Nguyễn lords.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-gia-dinh-1698",
+    "title": "Gia Định Establishes Saigon",
+    "year": 1698,
+    "description": "Gia Định was organized as a district around Saigon.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-tay-son-uprising-1771",
+    "title": "Tây Sơn Uprising Begins",
+    "year": 1771,
+    "description": "The Tây Sơn brothers rose up against the Nguyễn lords.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-tay-son-phu-xuan-1776",
+    "title": "Tây Sơn Take Phú Xuân",
+    "year": 1776,
+    "description": "Tây Sơn forces captured the Nguyễn capital Phú Xuân.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-quang-trung-1788",
+    "title": "Quang Trung Becomes Emperor",
+    "year": 1788,
+    "description": "Nguyễn Huệ proclaimed himself Emperor Quang Trung.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-dong-da-1789",
+    "title": "Battle of Đống Đa",
+    "year": 1789,
+    "description": "Quang Trung defeated a Qing invasion at Đống Đa.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-nguyen-dynasty-1802",
+    "title": "Nguyễn Dynasty Founded",
+    "year": 1802,
+    "description": "Gia Long founded the Nguyễn dynasty unifying Vietnam.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-gia-long-unify-1802",
+    "title": "Gia Long Unifies Vietnam",
+    "year": 1802,
+    "description": "Gia Long ended the Tây Sơn era and united the country.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-hue-citadel-1804",
+    "title": "Huế Citadel Built",
+    "year": 1804,
+    "description": "Gia Long built the imperial citadel of Huế.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-viet-nam-name-1804",
+    "title": "Vietnam Named Việt Nam",
+    "year": 1804,
+    "description": "Gia Long adopted the name Việt Nam for the country.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-gia-long-code-1815",
+    "title": "Gia Long Code Issued",
+    "year": 1815,
+    "description": "The Gia Long legal code was promulgated.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-da-nang-attack-1858",
+    "title": "French Attack Đà Nẵng",
+    "year": 1858,
+    "description": "French forces bombarded Đà Nẵng starting the colonial conquest.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-treaty-saigon-1862",
+    "title": "Treaty of Saigon Signed",
+    "year": 1862,
+    "description": "Vietnam ceded three southern provinces to France.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-cochinchina-1867",
+    "title": "Cochinchina Annexed",
+    "year": 1867,
+    "description": "France completed its annexation of southern Vietnam.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-hanoi-citadel-1882",
+    "title": "French Take Hanoi Citadel",
+    "year": 1882,
+    "description": "French troops captured the Hanoi citadel.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-protectorate-1883",
+    "title": "Protectorates Established",
+    "year": 1883,
+    "description": "Tonkin and Annam became French protectorates.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-can-vuong-1885",
+    "title": "Cần Vương Movement",
+    "year": 1885,
+    "description": "Imperial loyalists fought the French in the Cần Vương rebellion.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-duy-tan-hoi-1904",
+    "title": "Duy Tân Hội Founded",
+    "year": 1904,
+    "description": "Phan Bội Châu founded the Duy Tân Hội reform society.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-phan-chu-trinh-1906",
+    "title": "Phan Châu Trinh Campaigns",
+    "year": 1906,
+    "description": "Phan Châu Trinh advocated reforms and modern education.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-ho-chi-minh-1911",
+    "title": "Nguyễn Tất Thành Goes Abroad",
+    "year": 1911,
+    "description": "Nguyễn Tất Thành left Vietnam on a French ship.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-communist-party-1930",
+    "title": "Communist Party Founded",
+    "year": 1930,
+    "description": "Hồ Chí Minh founded the Communist Party of Vietnam.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-nghe-tinh-soviets-1930",
+    "title": "Nghệ Tĩnh Soviets",
+    "year": 1930,
+    "description": "Peasant soviets rose up in Nghệ An and Hà Tĩnh.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-viet-minh-1941",
+    "title": "Viet Minh Founded",
+    "year": 1941,
+    "description": "Hồ Chí Minh created the Viet Minh front.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-japanese-coup-1945",
+    "title": "Japan Ends French Rule",
+    "year": 1945,
+    "description": "Japan overthrew the French administration in Vietnam.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-august-revolution-1945",
+    "title": "August Revolution",
+    "year": 1945,
+    "description": "The Viet Minh seized power across Vietnam.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-independence-declaration-1945",
+    "title": "Independence Declared",
+    "year": 1945,
+    "description": "Hồ Chí Minh proclaimed independence in Ba Đình Square.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-national-assembly-1946",
+    "title": "First National Assembly",
+    "year": 1946,
+    "description": "The first National Assembly convened the Democratic Republic government.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-first-indochina-war-1946",
+    "title": "First Indochina War Begins",
+    "year": 1946,
+    "description": "War broke out between the Viet Minh and France.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-dien-bien-phu-1954",
+    "title": "Battle of Điện Biên Phủ",
+    "year": 1954,
+    "description": "Vietnamese forces defeated the French at Điện Biên Phủ.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-geneva-accords-1954",
+    "title": "Geneva Accords Signed",
+    "year": 1954,
+    "description": "Vietnam was temporarily divided at the 17th parallel.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-hanoi-liberated-1954",
+    "title": "Hanoi Liberated",
+    "year": 1954,
+    "description": "Viet Minh forces entered Hanoi after the French withdrew.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-vietnam-war-1955",
+    "title": "Vietnam War Begins",
+    "year": 1955,
+    "description": "Conflict intensified between North and South Vietnam.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-ho-chi-minh-trail-1959",
+    "title": "Ho Chi Minh Trail Opens",
+    "year": 1959,
+    "description": "Supply routes through Laos carried troops and arms south.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-nlf-founded-1960",
+    "title": "National Liberation Front Founded",
+    "year": 1960,
+    "description": "The NLF was formed to fight the South Vietnamese government.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-agent-orange-1961",
+    "title": "Agent Orange Used",
+    "year": 1961,
+    "description": "US forces began spraying chemical defoliants in the South.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-gulf-of-tonkin-1964",
+    "title": "Gulf of Tonkin Incident",
+    "year": 1964,
+    "description": "Reported attacks led to broader US involvement.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-rolling-thunder-1965",
+    "title": "Operation Rolling Thunder",
+    "year": 1965,
+    "description": "US aircraft began sustained bombing of the North.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-us-combat-troops-1965",
+    "title": "US Combat Troops Arrive",
+    "year": 1965,
+    "description": "American ground troops deployed in force.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-tet-offensive-1968",
+    "title": "Tết Offensive",
+    "year": 1968,
+    "description": "North Vietnamese forces attacked cities across the South.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-khe-sanh-1968",
+    "title": "Siege of Khe Sanh",
+    "year": 1968,
+    "description": "Marines withstood a prolonged siege at Khe Sanh.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-my-lai-1968",
+    "title": "Mỹ Lai Massacre",
+    "year": 1968,
+    "description": "US soldiers killed hundreds of civilians at Mỹ Lai.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-paris-accords-1973",
+    "title": "Paris Peace Accords Signed",
+    "year": 1973,
+    "description": "The accords ended direct US military involvement.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-fall-of-saigon-1975",
+    "title": "South Vietnam Falls",
+    "year": 1975,
+    "description": "North Vietnamese forces captured Saigon on April 30.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-reunification-1976",
+    "title": "Vietnam Reunified",
+    "year": 1976,
+    "description": "Vietnam was formally reunified as a socialist state.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-cambodia-invasion-1978",
+    "title": "Invasion of Cambodia",
+    "year": 1978,
+    "description": "Vietnamese forces toppled the Khmer Rouge regime.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-boat-people-1978",
+    "title": "Boat People Crisis",
+    "year": 1978,
+    "description": "Thousands fled Vietnam by sea as refugees.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-doi-moi-1986",
+    "title": "Đổi Mới Reforms",
+    "year": 1986,
+    "description": "The party launched market reforms known as Đổi Mới.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-us-embargo-lifted-1994",
+    "title": "US Embargo Lifted",
+    "year": 1994,
+    "description": "The United States ended its trade embargo against Vietnam.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-asean-1995",
+    "title": "Vietnam Joins ASEAN",
+    "year": 1995,
+    "description": "Vietnam became a member of ASEAN.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "asean"
+  },
+  {
+    "id": "asia-internet-vietnam-1997",
+    "title": "Vietnam Connects to Internet",
+    "year": 1997,
+    "description": "Vietnam gained full internet access.",
+    "category": "technology",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-wto-2007",
+    "title": "Vietnam Joins WTO",
+    "year": 2007,
+    "description": "Vietnam joined the World Trade Organization.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "wto"
+  },
+  {
+    "id": "asia-u23-asian-cup-2018",
+    "title": "Vietnam U23 Reach Final",
+    "year": 2018,
+    "description": "Vietnam's under-23 team reached the Asian Cup final.",
+    "category": "sports",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-covid-vaccination-2021",
+    "title": "Covid-19 Vaccination Drive",
+    "year": 2021,
+    "description": "Vietnam launched a mass vaccination campaign.",
+    "category": "medicine",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-seagames-31-2022",
+    "title": "Vietnam Hosts SEA Games",
+    "year": 2022,
+    "description": "Hanoi hosted the 31st SEA Games.",
+    "category": "sports",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-vinfast-2017",
+    "title": "VinFast Founded",
+    "year": 2017,
+    "description": "VinFast became Vietnam's first major car manufacturer.",
+    "category": "technology",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  }
+]

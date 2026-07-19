@@ -1,0 +1,15 @@
+// Justify items utilities — Tailwind v3 default scale
+
+$justify-items: (
+  ('start', start),
+  ('end', end),
+  ('center', center),
+  ('stretch', stretch),
+  ('normal', normal)
+);
+
+@each $name, $value in $justify-items {
+  .justify-items-#{$name} {
+    justify-items: $value;
+  }
+}

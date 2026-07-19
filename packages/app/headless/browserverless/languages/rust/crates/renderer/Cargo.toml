@@ -1,0 +1,13 @@
+[package]
+name = "renderer"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+paint = { path = "../paint" }
+layout = { path = "../layout" }
+css = { path = "../css" }
+image = { workspace = true }
+thiserror = { workspace = true }
+
+[dev-dependencies]

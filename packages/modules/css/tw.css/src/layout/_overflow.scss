@@ -1,0 +1,19 @@
+// Overflow utilities — Tailwind v3 default scale
+
+$overflow-values: (
+  ('auto', auto),
+  ('hidden', hidden),
+  ('clip', clip),
+  ('visible', visible),
+  ('scroll', scroll)
+);
+
+$overflow-axes: (('', overflow), ('-x', overflow-x), ('-y', overflow-y));
+
+@each $axis, $property in $overflow-axes {
+  @each $name, $value in $overflow-values {
+    .overflow#{$axis}-#{$name} {
+      #{$property}: $value;
+    }
+  }
+}

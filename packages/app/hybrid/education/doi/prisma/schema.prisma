@@ -1,0 +1,36 @@
+datasource db {
+  provider = "sqlite"
+}
+
+generator dbml {
+  provider = "prisma-dbml-generator"
+}
+
+generator jsonSchema {
+  provider = "prisma-json-schema-generator"
+}
+
+model Work {
+  doi          String      @id @map("doi")
+  title        String      @default("") @map("title")
+  author       String      @default("") @map("author")
+  year         String      @default("") @map("year")
+  abstract     String      @default("") @map("abstract")
+  type         String      @default("") @map("type")
+  references   Reference[] @relation("references")
+  referencedBy Reference[] @relation("referencedBy")
+
+  @@index([doi])
+  @@map("works")
+}
+
+model Reference {
+  workId       String
+  referencedId String
+  work         Work   @relation("references", fields: [workId], references: [doi], onDelete: Cascade)
+  referenced   Work   @relation("referencedBy", fields: [referencedId], references: [doi], onDelete: Restrict)
+
+  @@id([workId, referencedId])
+  @@index([workId, referencedId])
+  @@map("references")
+}

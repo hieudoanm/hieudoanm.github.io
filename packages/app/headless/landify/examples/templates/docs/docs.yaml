@@ -1,0 +1,63 @@
+type: docs
+site:
+  name: Landify Docs
+  description: Everything you need to build flat pages.
+  nav:
+    - label: Guides
+      href: "#docs"
+    - label: GitHub
+      href: "https://example.com/gh"
+hero:
+  badge: "📚 Docs"
+  headline: Build a page in five minutes.
+  subheadline: Everything you need to go from a YAML file to a deployed page.
+  primary:
+    label: Quickstart
+    href: "#docs"
+  secondary:
+    label: GitHub
+    href: "https://example.com/gh"
+docs:
+  heading: Start here
+  sub: Pick a guide, or jump straight into the reference.
+  packages:
+    - icon: "⚡"
+      title: Quickstart
+      body: Your first landify.yaml in sixty seconds.
+      href: "https://example.com/quickstart"
+    - icon: "🎨"
+      title: Themes
+      body: The sixty-four presets and how to write your own.
+      href: "https://example.com/themes"
+    - icon: "📄"
+      title: Page types
+      body: product, waitlist, event, download, app, pricing, portfolio, docs.
+      href: "https://example.com/types"
+    - icon: "🧭"
+      title: Reference
+      body: Every field, section, and validation rule.
+      href: "https://example.com/reference"
+    - icon: "🚀"
+      title: Deploy
+      body: Host your flat page anywhere — even a USB stick.
+      href: "https://example.com/deploy"
+    - icon: "⚠️"
+      title: Troubleshooting
+      body: Common errors and how to read the validator.
+      href: "https://example.com/troubleshoot"
+  sample: |
+    type: product
+    site:
+      name: My thing
+    theme:
+      primary: "#0d9488"
+    landify build
+cta:
+  icon: "🧭"
+  heading: Still exploring?
+  body: See the full reference or open the repository.
+  button:
+    label: Open GitHub
+    href: "https://example.com/gh"
+footer:
+  copyright: "© 2026 Landify Docs"

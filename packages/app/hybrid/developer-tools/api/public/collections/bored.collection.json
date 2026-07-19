@@ -1,0 +1,144 @@
+{
+  "id": "bored-api",
+  "name": "Bored API",
+  "groups": [
+    {
+      "id": "activities",
+      "name": "Activities",
+      "entries": [
+        {
+          "id": "get-random",
+          "name": "Get a random activity",
+          "request": {
+            "method": "GET",
+            "url": "https://bored-api.appbrewery.com/random",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        },
+        {
+          "id": "get-filter",
+          "name": "Filter activities",
+          "request": {
+            "method": "GET",
+            "url": "https://bored-api.appbrewery.com/filter",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        },
+        {
+          "id": "get-activity-key",
+          "name": "Get activity by key",
+          "request": {
+            "method": "GET",
+            "url": "https://bored-api.appbrewery.com/activity/3943506",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        }
+      ]
+    }
+  ]
+}

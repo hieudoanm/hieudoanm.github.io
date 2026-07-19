@@ -1,0 +1,9 @@
+// Scroll snap stop utilities — Tailwind v3 default scale
+
+$scroll-snap-stops: (('normal', normal), ('always', always));
+
+@each $name, $value in $scroll-snap-stops {
+  .snap-#{$name} {
+    scroll-snap-stop: $value;
+  }
+}

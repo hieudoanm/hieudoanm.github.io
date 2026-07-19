@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "asia-eridu-5000",
+    "title": "Eridu Founded",
+    "year": -5000,
+    "description": "Mesopotamia's earliest city grew near the Euphrates.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-sumer-cities-4500",
+    "title": "First Sumerian Cities",
+    "year": -4500,
+    "description": "Sumerian city-states emerged in the south.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-cuneiform-3500",
+    "title": "Cuneiform Writing Develops",
+    "year": -3500,
+    "description": "Scribes pressed wedge marks into clay.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-wheel-3500",
+    "title": "Wheel Invented",
+    "year": -3500,
+    "description": "Mesopotamians developed wheeled transport.",
+    "category": "technology",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-uruk-city-3200",
+    "title": "Uruk Becomes a Great City",
+    "year": -3200,
+    "description": "Uruk grew into the world's first metropolis.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-ziggurats-3100",
+    "title": "Ziggurats Built",
+    "year": -3100,
+    "description": "Temple towers rose toward the gods.",
+    "category": "technology",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-sumerian-king-list-2700",
+    "title": "Sumerian King List Compiled",
+    "year": -2700,
+    "description": "Scribes recorded dynasties of the south.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-gilgamesh-2600",
+    "title": "Epic of Gilgamesh",
+    "year": -2600,
+    "description": "The epic was written down in Sumer.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-lagash-umma-2450",
+    "title": "Lagash and Umma Fight",
+    "year": -2450,
+    "description": "Rival city-states warred over water and land.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-akkad-2334",
+    "title": "Sargon Founds Akkad",
+    "year": -2334,
+    "description": "Sargon united Mesopotamia under one empire.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-naram-sin-2254",
+    "title": "Naram-Sin Expands Akkad",
+    "year": -2254,
+    "description": "Akkadian armies campaigned to the sea.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-ur-third-dynasty-2112",
+    "title": "Third Dynasty of Ur",
+    "year": -2112,
+    "description": "Ur ruled a revived Sumerian state.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-ur-nammu-code-2100",
+    "title": "Ur-Nammu's Law Code",
+    "year": -2100,
+    "description": "The earliest known laws were written.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-amorites-1900",
+    "title": "Amorites Settle Babylon",
+    "year": -1900,
+    "description": "Amorite tribes entered the Euphrates valley.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-enuma-elish-1800",
+    "title": "Enuma Elish Written",
+    "year": -1800,
+    "description": "Babylon's creation epic was composed.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-hammurabi-1792",
+    "title": "Hammurabi Rules Babylon",
+    "year": -1792,
+    "description": "Hammurabi built Babylon into a great power.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-code-hammurabi-1754",
+    "title": "Code of Hammurabi",
+    "year": -1754,
+    "description": "Hammurabi issued his famous legal code.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-kassites-1600",
+    "title": "Kassites Rule Babylon",
+    "year": -1600,
+    "description": "Kassite kings governed Babylon for centuries.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-hittite-sack-1595",
+    "title": "Hittites Sack Babylon",
+    "year": -1595,
+    "description": "Hittite raiders toppled the old dynasty.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-middle-assyria-1365",
+    "title": "Middle Assyrian Kingdom",
+    "year": -1365,
+    "description": "Assyria grew powerful in the north.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-elamites-1155",
+    "title": "Elamites Seize Babylon",
+    "year": -1155,
+    "description": "Elamite armies carried off Babylonian treasures.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-neo-assyria-911",
+    "title": "Neo-Assyrian Empire Rises",
+    "year": -911,
+    "description": "Assyria built the largest empire yet seen.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-tiglath-pileser-745",
+    "title": "Tiglath-pileser III Rules",
+    "year": -745,
+    "description": "Tiglath-pileser reformed the Assyrian army.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-samaria-722",
+    "title": "Assyria Conquers Samaria",
+    "year": -722,
+    "description": "Assyria destroyed the northern kingdom of Israel.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-sargon-ii-722",
+    "title": "Sargon II Rules Assyria",
+    "year": -722,
+    "description": "Sargon II ruled from his new capital Dur-Sharrukin.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-lachish-701",
+    "title": "Sennacherib Sieges Lachish",
+    "year": -701,
+    "description": "Assyrian siege engines stormed Lachish.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-babylon-destroyed-689",
+    "title": "Sennacherib Destroys Babylon",
+    "year": -689,
+    "description": "Sennacherib leveled the rebellious city.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-ashurbanipal-library-668",
+    "title": "Ashurbanipal's Library",
+    "year": -668,
+    "description": "Nineveh gathered cuneiform tablets.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-neo-babylon-626",
+    "title": "Neo-Babylonian Dynasty",
+    "year": -626,
+    "description": "Nabopolassar freed Babylon from Assyria.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-nineveh-falls-612",
+    "title": "Nineveh Falls",
+    "year": -612,
+    "description": "Babylonians and Medes destroyed the Assyrian capital.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-carchemish-605",
+    "title": "Battle of Carchemish",
+    "year": -605,
+    "description": "Nebuchadnezzar crushed the Egyptians.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-jerusalem-586",
+    "title": "Babylon Captures Jerusalem",
+    "year": -586,
+    "description": "Nebuchadnezzar destroyed the Temple.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-ishtar-gate-575",
+    "title": "Ishtar Gate Built",
+    "year": -575,
+    "description": "Glazed bricks decorated Babylon's gate.",
+    "category": "technology",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-nabonidus-556",
+    "title": "Nabonidus Rules Babylon",
+    "year": -556,
+    "description": "Babylon's last native king took the throne.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-cyrus-babylon-539",
+    "title": "Cyrus Enters Babylon",
+    "year": -539,
+    "description": "Persia absorbed Babylon without a battle.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-alexander-babylon-331",
+    "title": "Alexander Enters Babylon",
+    "year": -331,
+    "description": "Alexander the Great was welcomed into Babylon.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-seleucia-312",
+    "title": "Seleucia Founded",
+    "year": -312,
+    "description": "Seleucus built a Greek capital on the Tigris.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-parthians-140",
+    "title": "Parthians Take Mesopotamia",
+    "year": -140,
+    "description": "Parthian armies conquered the Tigris valley.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-carrhae-53",
+    "title": "Battle of Carrhae",
+    "year": -53,
+    "description": "Parthian cavalry destroyed a Roman army.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-trajan-116",
+    "title": "Trajan Conquers Mesopotamia",
+    "year": 116,
+    "description": "Trajan briefly made it a Roman province.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-sassanid-224",
+    "title": "Sassanid Empire Founded",
+    "year": 224,
+    "description": "Ardashir founded a new Persian dynasty.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-shapur-260",
+    "title": "Shapur I Defeats Rome",
+    "year": 260,
+    "description": "Shapur captured a Roman emperor in battle.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-julian-363",
+    "title": "Julian Dies in Mesopotamia",
+    "year": 363,
+    "description": "The emperor died during his Persian campaign.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-school-nisibis-440",
+    "title": "School of Nisibis",
+    "year": 440,
+    "description": "Scholars studied theology and medicine.",
+    "category": "science",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-qadisiyyah-637",
+    "title": "Battle of al-Qadisiyyah",
+    "year": 637,
+    "description": "Arab armies conquered the Sasanian heartland.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-kufa-basra-638",
+    "title": "Kufa and Basra Founded",
+    "year": 638,
+    "description": "Garrison cities anchored Arab rule.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-abbasid-750",
+    "title": "Abbasid Revolution",
+    "year": 750,
+    "description": "The Abbasids overthrew the Umayyads.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-baghdad-762",
+    "title": "Baghdad Founded",
+    "year": 762,
+    "description": "Al-Mansur built a round city on the Tigris.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-harun-786",
+    "title": "Harun al-Rashid Rules",
+    "year": 786,
+    "description": "Baghdad flourished under the caliph.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-al-mamun-813",
+    "title": "Al-Ma'mun Rules",
+    "year": 813,
+    "description": "The caliph championed Greek learning.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-house-wisdom-830",
+    "title": "House of Wisdom",
+    "year": 830,
+    "description": "Baghdad scholars translated the classics.",
+    "category": "science",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-samarra-836",
+    "title": "Samarra Becomes Capital",
+    "year": 836,
+    "description": "The Abbasids built a vast palace city.",
+    "category": "culture",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-al-khwarizmi-850",
+    "title": "Al-Khwarizmi Writes Algebra",
+    "year": 850,
+    "description": "His algebra text shaped mathematics.",
+    "category": "science",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-samarra-mosque-851",
+    "title": "Great Mosque of Samarra",
+    "year": 851,
+    "description": "Its spiral minaret rose over the city.",
+    "category": "technology",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-al-battani-858",
+    "title": "Al-Battani Born",
+    "year": 858,
+    "description": "The astronomer measured the solar year.",
+    "category": "science",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-al-razi-865",
+    "title": "Al-Razi Born",
+    "year": 865,
+    "description": "The physician wrote about smallpox and measles.",
+    "category": "medicine",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-buyids-945",
+    "title": "Buyids Rule Baghdad",
+    "year": 945,
+    "description": "Persian dynasts controlled the Abbasid capital.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-ibn-al-haytham-965",
+    "title": "Ibn al-Haytham Born",
+    "year": 965,
+    "description": "The Basra-born scholar pioneered optics.",
+    "category": "science",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-ibn-sina-980",
+    "title": "Ibn Sina Born",
+    "year": 980,
+    "description": "Ibn Sina wrote the Canon of Medicine.",
+    "category": "medicine",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-seljuks-1055",
+    "title": "Seljuks Enter Baghdad",
+    "year": 1055,
+    "description": "Turkish warlords took the caliph under control.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-nizamiyya-1065",
+    "title": "Nizamiyya Madrasa Founded",
+    "year": 1065,
+    "description": "The first great college opened in Baghdad.",
+    "category": "science",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-baghdad-sacked-1258",
+    "title": "Mongols Sack Baghdad",
+    "year": 1258,
+    "description": "Hulagu's army ended the Abbasid caliphate.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-ilkhanate-1258",
+    "title": "Ilkhanate Rules Iraq",
+    "year": 1258,
+    "description": "Mongol khans governed from the region.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-jalayirids-1340",
+    "title": "Jalayirids Rule Baghdad",
+    "year": 1340,
+    "description": "A Mongol successor dynasty held Baghdad.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-timur-baghdad-1401",
+    "title": "Timur Sacks Baghdad",
+    "year": 1401,
+    "description": "Timur devastated the ancient city.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-kara-koyunlu-1411",
+    "title": "Kara Koyunlu Take Baghdad",
+    "year": 1411,
+    "description": "The Black Sheep Turkomans ruled Iraq.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-aq-qoyunlu-1469",
+    "title": "Aq Qoyunlu Rule Iraq",
+    "year": 1469,
+    "description": "The White Sheep Turkomans took Baghdad.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-safavids-1508",
+    "title": "Safavids Take Baghdad",
+    "year": 1508,
+    "description": "Persian armies captured Baghdad.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-ottoman-baghdad-1534",
+    "title": "Ottomans Take Baghdad",
+    "year": 1534,
+    "description": "Suleiman the Magnificent entered the city.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-safavids-1623",
+    "title": "Safavids Retake Baghdad",
+    "year": 1623,
+    "description": "Persian forces recaptured the city.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-ottoman-1638",
+    "title": "Ottomans Retake Baghdad",
+    "year": 1638,
+    "description": "The Ottomans won Baghdad back for good.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-mamluks-1747",
+    "title": "Mamluk Governors Rule",
+    "year": 1747,
+    "description": "Mamluk governors ran Baghdad for decades.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-midhat-1869",
+    "title": "Midhat Pasha Reforms",
+    "year": 1869,
+    "description": "The governor modernized Baghdad and Basra.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-basra-1914",
+    "title": "British Occupy Basra",
+    "year": 1914,
+    "description": "British forces seized the southern port.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-baghdad-1917",
+    "title": "British Enter Baghdad",
+    "year": 1917,
+    "description": "British troops captured the city.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-iraq-revolt-1920",
+    "title": "Iraqi Revolt",
+    "year": 1920,
+    "description": "Tribes rebelled against British rule.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-kingdom-1921",
+    "title": "Kingdom of Iraq",
+    "year": 1921,
+    "description": "Faisal I became king under British mandate.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-kirkuk-oil-1927",
+    "title": "Oil Discovered at Kirkuk",
+    "year": 1927,
+    "description": "A huge field was struck at Baba Gurgur.",
+    "category": "technology",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-independence-1932",
+    "title": "Iraq Gains Independence",
+    "year": 1932,
+    "description": "Iraq joined the League of Nations.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-coupe-1941",
+    "title": "Rashid Ali Coup",
+    "year": 1941,
+    "description": "A nationalist coup brought war with Britain.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-republic-1958",
+    "title": "Republic Declared",
+    "year": 1958,
+    "description": "The monarchy was overthrown.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-kurdish-rebellion-1961",
+    "title": "Kurdish Rebellion Begins",
+    "year": 1961,
+    "description": "Kurds rose against Baghdad.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-baath-1963",
+    "title": "Baath Party Takes Power",
+    "year": 1963,
+    "description": "The Baathists staged a coup.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-baath-1968",
+    "title": "Baathists Return to Power",
+    "year": 1968,
+    "description": "A second coup brought Saddam's faction to rule.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-oil-1972",
+    "title": "Oil Nationalized",
+    "year": 1972,
+    "description": "Iraq took control of its oil industry.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-algiers-agreement-1975",
+    "title": "Algiers Agreement",
+    "year": 1975,
+    "description": "Iraq and Iran settled the Shatt al-Arab.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 5,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-saddam-1979",
+    "title": "Saddam Hussein Becomes President",
+    "year": 1979,
+    "description": "Saddam took full power.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-iran-iraq-war-1980",
+    "title": "Iran-Iraq War Begins",
+    "year": 1980,
+    "description": "A devastating war lasted eight years.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-halabja-1988",
+    "title": "Halabja Attack",
+    "year": 1988,
+    "description": "Poison gas killed thousands in a Kurdish town.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-kuwait-1990",
+    "title": "Iraq Invades Kuwait",
+    "year": 1990,
+    "description": "Iraq occupied its small neighbor.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-sanctions-1990",
+    "title": "UN Sanctions Imposed",
+    "year": 1990,
+    "description": "Sanctions followed the invasion.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-gulf-war-1991",
+    "title": "Gulf War",
+    "year": 1991,
+    "description": "A coalition drove Iraq from Kuwait.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-oil-for-food-1995",
+    "title": "Oil-for-Food Programme",
+    "year": 1995,
+    "description": "Iraq traded oil for humanitarian aid.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-iraq-war-2003",
+    "title": "Invasion of Iraq",
+    "year": 2003,
+    "description": "A US-led coalition toppled Saddam.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 2,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-constitution-2005",
+    "title": "Iraq Adopts a Constitution",
+    "year": 2005,
+    "description": "Iraqis approved a new constitution.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-saddam-executed-2006",
+    "title": "Saddam Hussein Executed",
+    "year": 2006,
+    "description": "The former president was hanged.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-troops-out-2011",
+    "title": "US Troops Withdraw",
+    "year": 2011,
+    "description": "American forces left Iraq.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-isis-2014",
+    "title": "ISIS Seizes Mosul",
+    "year": 2014,
+    "description": "Militants overran Iraq's second city.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 3,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-mosul-2017",
+    "title": "Mosul Liberated",
+    "year": 2017,
+    "description": "Iraqi forces retook the city.",
+    "category": "war",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  },
+  {
+    "id": "asia-protests-2019",
+    "title": "October Protests",
+    "year": 2019,
+    "description": "Mass protests demanded reform.",
+    "category": "politics",
+    "region": "asia",
+    "difficulty": 4,
+    "source": "britannica"
+  }
+]

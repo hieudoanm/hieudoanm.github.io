@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`PositionPanel to match snapshot 1`] = `
+<div>
+  <div
+    class="flex flex-col gap-3"
+  >
+    <label
+      class="text-base-content/60 text-xs font-semibold tracking-widest uppercase"
+    >
+      FEN String
+    </label>
+    <input
+      class="input input-bordered input-sm w-full font-mono text-xs"
+      spellcheck="false"
+      type="text"
+      value="rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
+    />
+    <label
+      class="text-base-content/60 text-xs font-semibold tracking-widest uppercase"
+    >
+      PGN
+    </label>
+    <textarea
+      class="textarea textarea-bordered w-full font-mono text-xs"
+      placeholder="Paste PGN here…"
+      rows="6"
+      spellcheck="false"
+    />
+    <div
+      class="flex gap-2"
+    >
+      <button
+        class="btn btn-outline btn-sm flex-1"
+      >
+        🔄 Reset
+      </button>
+      <button
+        class="btn btn-outline btn-sm flex-1"
+      >
+        🔀 Random 960
+      </button>
+    </div>
+  </div>
+</div>
+`;

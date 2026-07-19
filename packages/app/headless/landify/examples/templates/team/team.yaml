@@ -1,0 +1,63 @@
+type: team
+site:
+  name: Landify Studio
+  mark: "🦊"
+  description: The people behind Landify, a tiny landing-page generator.
+  nav:
+    - label: Values
+      href: "#values"
+    - label: Team
+      href: "#team"
+    - label: Join us
+      href: "#cta"
+hero:
+  badge: "🦊 The crew"
+  headline: Small team, big pages.
+  subheadline: Four people, one YAML file, and an unreasonable fondness for flat web pages.
+features:
+  heading: What we stand for
+  sub: The principles behind every page we ship.
+team:
+  heading: Meet the team
+  sub: Spread across three time zones.
+  values:
+    - icon: "🧪"
+      title: Experiment
+      body: Try the cheap prototype first; polish after it survives contact.
+    - icon: "📐"
+      title: Design rigorously
+      body: Eight colors become a full design system through derivation, nothing more.
+    - icon: "♻️"
+      title: Reuse everything
+      body: Shared partials and presets mean the same look across every page.
+  members:
+    - name: Ana Ruiz
+      role: Design engineer
+      bio: Leads the generator and writes too many YAML validator tests.
+      avatar: "🦊"
+    - name: Sam Lee
+      role: Product designer
+      bio: Turns support questions into annotated placeholder examples.
+      avatar: "🐨"
+    - name: Mila Aoki
+      role: Frontend engineer
+      bio: Owns the CSS token pipeline and the 64-theme gallery.
+      avatar: "🐼"
+    - name: Theo Brooks
+      role: Docs & community
+      bio: Keeps the README honest and the examples runnable.
+      avatar: "🦉"
+cta:
+  icon: "💌"
+  heading: Want to build with us?
+  body: We are hiring a second design engineer. Show us something flat.
+  button:
+    label: See open roles
+    href: https://example.com/jobs
+footer:
+  copyright: "© 2026 Landify Studio"
+  links:
+    - label: Team
+      href: "#team"
+    - label: Join us
+      href: "#cta"

@@ -1,0 +1,14 @@
+// Flex utilities — Tailwind v3 default scale
+
+$flexes: (
+  ('1', '1 1 0%'),
+  ('auto', '1 1 auto'),
+  ('initial', '0 1 auto'),
+  ('none', none)
+);
+
+@each $name, $value in $flexes {
+  .flex-#{$name} {
+    flex: #{$value};
+  }
+}

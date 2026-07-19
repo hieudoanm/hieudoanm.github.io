@@ -1,0 +1,32 @@
+// Rotate utilities — Tailwind v3 default scale
+
+@use 'transform-composite' as *;
+
+$rotate-unit: 1deg;
+$rotates: (
+  ('0', 0),
+  ('1', 1),
+  ('2', 2),
+  ('3', 3),
+  ('6', 6),
+  ('12', 12),
+  ('45', 45),
+  ('90', 90),
+  ('180', 180)
+);
+
+@each $name, $value in $rotates {
+  .rotate-#{$name} {
+    --tw-rotate: #{$value * $rotate-unit};
+    transform: #{$transform-composite};
+  }
+}
+
+@each $name, $value in $rotates {
+  @if $name != '0' {
+    .-rotate-#{$name} {
+      --tw-rotate: #{$value * -1 * $rotate-unit};
+      transform: #{$transform-composite};
+    }
+  }
+}
