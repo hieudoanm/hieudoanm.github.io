@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{{.Site.Description}}" />
+    <title>{{.Site.Name}}</title>
+    <style>
+      :root {
+@LANDIFY_THEME@      }
+{{template "base-css" .}}
+      .pfolio {
+        text-align: center;
+        max-width: 760px;
+        margin: 0 auto;
+        padding-top: 12px;
+      }
+      .avatar-lg {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 96px;
+        height: 96px;
+        border-radius: 50%;
+        border: 2px solid var(--primary);
+        background: var(--primary-soft);
+        font-size: 44px;
+        line-height: 1;
+      }
+      .pfolio h1 {
+        margin: 16px 0 8px;
+        font-size: 34px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+      .pfolio .role {
+        font-size: 17px;
+        color: var(--neutral);
+      }
+      .pfolio .loc {
+        display: inline-block;
+        margin-top: 12px;
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--neutral);
+        border: 1px solid var(--border-soft);
+        border-radius: 999px;
+        padding: 5px 14px;
+      }
+      .pfolio .about {
+        margin: 18px auto 0;
+        font-size: 15px;
+        color: var(--base-content);
+      }
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 20px;
+      }
+      .skill {
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--primary-dark);
+        background: var(--secondary-soft);
+        border-radius: 999px;
+        padding: 6px 14px;
+      }
+      .projects {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        max-width: 760px;
+        margin: 0 auto;
+      }
+      .project {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        background: var(--base-200);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+        padding: 22px 20px;
+        color: var(--base-content);
+        text-decoration: none;
+      }
+      .project:hover {
+        border-color: var(--primary);
+        color: var(--primary);
+      }
+      .project h3 {
+        font-size: 16px;
+        font-weight: 700;
+        margin: 0;
+      }
+      .project p {
+        margin: 0;
+        font-size: 14px;
+        color: var(--neutral);
+      }
+      @media (max-width: 720px) {
+        .projects {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    {{template "header" .}}
+
+    <main id="top">
+      <section class="pfolio">
+        {{if .Portfolio.Avatar}}<span class="avatar-lg" aria-hidden="true">{{.Portfolio.Avatar}}</span>{{end}}
+        <h1>{{.Portfolio.Name}}</h1>
+        <p class="role">{{.Portfolio.Role}}</p>
+        {{if .Portfolio.Location}}<span class="loc">📍 {{.Portfolio.Location}}</span>{{end}}
+        <p class="about">{{.Portfolio.About}}</p>
+        {{if .Portfolio.Skills}}
+        <div class="skills">
+          {{range .Portfolio.Skills}}<span class="skill">{{.}}</span>{{end}}
+        </div>
+        {{end}}
+      </section>
+
+      <section id="work" class="block">
+        {{if or .Features.Heading .Features.Sub}}
+        <div class="block-head">
+          <h2>{{.Features.Heading}}</h2>
+          {{if .Features.Sub}}<p class="sub">{{.Features.Sub}}</p>{{end}}
+        </div>
+        {{end}}
+        <div class="projects">
+          {{range .Portfolio.Projects}}
+          <a class="project" href="{{.Href}}">
+            <span class="icon" aria-hidden="true">{{.Icon}}</span>
+            <h3>{{.Title}}</h3>
+            <p>{{.Body}}</p>
+          </a>
+          {{end}}
+        </div>
+      </section>
+
+      {{if .CTA.Heading}}
+      <section id="cta" class="block">
+        <div class="cta">
+          <span class="icon" aria-hidden="true">{{.CTA.Icon}}</span>
+          <h2>{{.CTA.Heading}}</h2>
+          <p>{{.CTA.Body}}</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="{{.CTA.Button.Href}}">{{.CTA.Button.Label}}</a>
+          </div>
+        </div>
+      </section>
+      {{end}}
+
+      {{template "footer" .}}
+    </main>
+  </body>
+</html>

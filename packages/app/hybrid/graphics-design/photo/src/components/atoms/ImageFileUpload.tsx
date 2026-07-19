@@ -1,0 +1,71 @@
+'use client';
+
+import { type FC, useCallback, useRef, useState, type DragEvent } from 'react';
+import { FiUpload } from 'react-icons/fi';
+
+interface ImageFileUploadProps {
+  accept?: string;
+  multiple?: boolean;
+  onFile: (file: File) => void;
+}
+
+export const ImageFileUpload: FC<ImageFileUploadProps> = ({
+  accept = 'image/*',
+  multiple = false,
+  onFile,
+}) => {
+  const inputRef = useRef<HTMLInputElement>(null);
+  const [dragging, setDragging] = useState(false);
+
+  const handleDrop = useCallback(
+    (e: DragEvent<HTMLDivElement>) => {
+      e.preventDefault();
+      setDragging(false);
+      const files = e.dataTransfer.files;
+      for (let i = 0; i < files.length; i++) onFile(files[i]);
+    },
+    [onFile]
+  );
+
+  const handleChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      const files = e.target.files;
+      if (files) for (let i = 0; i < files.length; i++) onFile(files[i]);
+    },
+    [onFile]
+  );
+
+  return (
+    <div
+      className={`rounded-box border-base-300 flex cursor-pointer flex-col items-center gap-2 border-2 border-dashed p-6 text-center transition-colors ${
+        dragging
+          ? 'border-primary bg-primary/5'
+          : 'hover:border-base-content/30'
+      }`}
+      onDragOver={(e) => {
+        e.preventDefault();
+        setDragging(true);
+      }}
+      onDragLeave={() => setDragging(false)}
+      onDrop={handleDrop}
+      onClick={() => inputRef.current?.click()}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') inputRef.current?.click();
+      }}>
+      <FiUpload className="size-6 opacity-50" />
+      <p className="text-base-content/60 text-xs">
+        Drop a file here or click to browse
+      </p>
+      <input
+        ref={inputRef}
+        type="file"
+        accept={accept}
+        multiple={multiple}
+        className="hidden"
+        onChange={handleChange}
+      />
+    </div>
+  );
+};

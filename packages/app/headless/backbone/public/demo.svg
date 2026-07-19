@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+  <title>Backbone terminal: init, serve, job, notify</title>
+  <desc>Animated terminal window showing backbone init, backbone serve, backbone job, and backbone notify with their output.</desc>
+
+  <style>
+    .line { opacity: 0; }
+    .line.init { animation: rise 0.4s ease-out 0.9s forwards; }
+    .line.ready { animation: rise 0.4s ease-out 1.7s forwards; }
+    .line.schema { animation: rise 0.4s ease-out 2.4s forwards; }
+    .line.serve { animation: rise 0.4s ease-out 3.6s forwards; }
+    .line.listening { animation: rise 0.4s ease-out 4.4s forwards; }
+    .line.job { animation: rise 0.4s ease-out 5.6s forwards; }
+    .line.scheduled { animation: rise 0.4s ease-out 6.4s forwards; }
+    .line.notify { animation: rise 0.4s ease-out 7.6s forwards; }
+    .line.webhook { animation: rise 0.4s ease-out 8.4s forwards; }
+    .line.token { animation: rise 0.4s ease-out 9.4s forwards; }
+    .line.prompt { animation: rise 0.4s ease-out 11.0s forwards; }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+
+  <rect x="0" y="0" width="1280" height="720" fill="#0f172a"/>
+  <rect x="0" y="0" width="1280" height="48" fill="#1e293b"/>
+  <line x1="0" y1="48" x2="1280" y2="48" stroke="#334155" stroke-width="1"/>
+
+  <circle cx="32" cy="24" r="8" fill="#ef4444"/>
+  <circle cx="58" cy="24" r="8" fill="#f59e0b"/>
+  <circle cx="84" cy="24" r="8" fill="#22c55e"/>
+
+  <text x="640" y="32" font-size="20" fill="#94a3b8" text-anchor="middle">backbone — zsh</text>
+
+  <g font-size="27" transform-origin="48 108">
+    <g class="line init" transform-origin="48 108">
+      <text x="48" y="108">
+        <tspan fill="#475569">~/backbone </tspan><tspan fill="#e2e8f0">$ </tspan><tspan fill="#14b8a6">backbone </tspan><tspan fill="#e2e8f0">init</tspan>
+      </text>
+    </g>
+    <g class="line ready" transform-origin="48 148">
+      <text x="48" y="148" fill="#94a3b8">✅ project ready · database at </text>
+    </g>
+    <g class="line schema" transform-origin="48 188">
+      <text x="48" y="188" fill="#34d399">🗃️ sqlite schema applied</text>
+    </g>
+
+    <g class="line serve" transform-origin="48 296">
+      <text x="48" y="296">
+        <tspan fill="#475569">~/backbone </tspan><tspan fill="#e2e8f0">$ </tspan><tspan fill="#14b8a6">backbone </tspan><tspan fill="#e2e8f0">serve --host 0.0.0.0:8080</tspan>
+      </text>
+    </g>
+    <g class="line listening" transform-origin="48 336">
+      <text x="48" y="336" fill="#34d399">🚀 listening on 0.0.0.0:8080</text>
+    </g>
+
+    <g class="line job" transform-origin="48 404">
+      <text x="48" y="404">
+        <tspan fill="#475569">~/backbone </tspan><tspan fill="#e2e8f0">$ </tspan><tspan fill="#14b8a6">backbone </tspan><tspan fill="#e2e8f0">job add nightly-report</tspan>
+      </text>
+    </g>
+    <g class="line scheduled" transform-origin="48 444">
+      <text x="48" y="444" fill="#34d399">⏰ ok scheduled · next run every day 00:00</text>
+    </g>
+
+    <g class="line notify" transform-origin="48 512">
+      <text x="48" y="512">
+        <tspan fill="#475569">~/backbone </tspan><tspan fill="#e2e8f0">$ </tspan><tspan fill="#14b8a6">backbone </tspan><tspan fill="#e2e8f0">notify send --to slack</tspan>
+      </text>
+    </g>
+    <g class="line webhook" transform-origin="48 552">
+      <text x="48" y="552" fill="#34d399">🔔 ok webhook delivered (200)</text>
+    </g>
+    <g class="line token" transform-origin="48 592">
+      <text x="48" y="592" fill="#94a3b8">🔐 auth token signed · expires in 1h</text>
+    </g>
+
+    <g class="line prompt" transform-origin="48 648">
+      <text x="48" y="648">
+        <tspan fill="#475569">~/backbone </tspan><tspan fill="#e2e8f0">$ </tspan>
+      </text>
+    </g>
+  </g>
+</svg>

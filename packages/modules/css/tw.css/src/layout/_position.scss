@@ -1,0 +1,15 @@
+// Position utilities — Tailwind v3 default scale
+
+$positions: (
+  ('static', static),
+  ('fixed', fixed),
+  ('absolute', absolute),
+  ('relative', relative),
+  ('sticky', sticky)
+);
+
+@each $name, $value in $positions {
+  .#{$name} {
+    position: $value;
+  }
+}

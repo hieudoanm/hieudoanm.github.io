@@ -1,0 +1,36 @@
+name: Deno CI
+
+on:
+  push:
+    branches:
+      - master
+      - develop
+      - 'feature/**'
+  pull_request:
+    branches:
+      - master
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    name: Lint & Build & Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Install Deno
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+
+      - name: Lint
+        run: deno lint
+
+      - name: Format Check
+        run: deno fmt --check
+
+      - name: Test
+        run: deno test -A

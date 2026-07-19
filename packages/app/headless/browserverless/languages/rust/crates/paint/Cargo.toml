@@ -1,0 +1,13 @@
+[package]
+name = "paint"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+layout = { path = "../layout" }
+dom = { path = "../dom" }
+css = { path = "../css" }
+style = { path = "../style" }
+thiserror = { workspace = true }
+
+[dev-dependencies]

@@ -1,0 +1,15 @@
+// Text decoration style utilities — Tailwind v3 default scale
+
+$text-decoration-styles: (
+  ('solid', solid),
+  ('double', double),
+  ('dotted', dotted),
+  ('dashed', dashed),
+  ('wavy', wavy)
+);
+
+@each $name, $value in $text-decoration-styles {
+  .decoration-#{$name} {
+    text-decoration-style: $value;
+  }
+}

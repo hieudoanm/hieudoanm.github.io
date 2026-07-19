@@ -1,0 +1,16 @@
+// Clear utilities — Tailwind v3 default scale
+
+$clears: (
+  ('left', left),
+  ('right', right),
+  ('both', both),
+  ('none', none),
+  ('start', start),
+  ('end', end)
+);
+
+@each $name, $value in $clears {
+  .clear-#{$name} {
+    clear: $value;
+  }
+}

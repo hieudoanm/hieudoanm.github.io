@@ -1,0 +1,100 @@
+type: product # product | download | waitlist | event | app | pricing | portfolio | docs | faq | team | status | linktree
+
+site: # used in the navbar, <title>, and meta description
+  name: MacOSX
+  description: >-
+    Live system stats, network throughput, local ports, running apps,
+    workspace layout, and clipboard history right in your menu bar.
+  nav:
+    - label: Features
+      href: '#features'
+    - label: Demo
+      href: '#demo'
+    - label: Source
+      href: 'https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/app/native/macosx'
+
+hero:
+  badge: '🍎 macOS 13+ · v0.0.1'
+  headline: One app to rule your Mac.
+  subheadline: >-
+    Live system stats, network throughput, local ports, running apps,
+    workspace layouts, and clipboard history right in your menu bar — all
+    local-first, with nothing ever leaving your machine.
+  primary:
+    label: Download for macOS
+    href: 'https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-macos-macosx-latest/MacOSX-0.0.1.dmg'
+  secondary:
+    label: View source
+    href: 'https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/app/native/macosx'
+  image:
+    src: demo.png
+    alt: MacOSX terminal preview of build, workspace save, and workspace restore
+
+features:
+  heading: Why MacOSX
+  sub: Everything a developer needs, right in the menu bar.
+  items:
+    - icon: '⚡'
+      title: Menu bar live view
+      body: >-
+        CPU and disk usage update continuously in the menu bar icon itself —
+        glance without clicking.
+    - icon: '📊'
+      title: Popover overview
+      body: >-
+        CPU, memory, storage, and swap at a glance, each with progress and
+        thresholds.
+    - icon: '🔌'
+      title: Port monitoring
+      body: >-
+        See what is using a local port, copy the address or PID, and kill or
+        force-kill the owning process from a dedicated Ports view.
+    - icon: '🌐'
+      title: Network monitoring
+      body: >-
+        Live download and upload speeds, total traffic this session, and
+        per-interface status with Wi-Fi and Ethernet detection.
+    - icon: '📋'
+      title: Clipboard history
+      body: >-
+        Nothing you copy is ever lost. Search, re-copy, pin, or delete past
+        clips — stored locally, syncing nothing anywhere.
+    - icon: '🖥️'
+      title: Running apps
+      body: >-
+        See every open app with its on-screen windows and bring any of them
+        to the front in one click.
+    - icon: '💍'
+      title: Workspace layouts
+      body: >-
+        Save the apps and window positions you use and restore the whole
+        layout after a boot — missing apps launch automatically.
+
+demo:
+  heading: See it in action
+  sub: >-
+    Build, launch, and save or restore your entire workspace from one place.
+  video:
+    src: demo.mp4
+    poster: demo.png
+    track: demo-en-descriptions.vtt
+
+cta:
+  icon: '💍'
+  heading: One app to rule them all.
+  body: >-
+    Download MacOSX, grant Accessibility once, and restore your entire
+    workspace with a single click.
+  button:
+    label: Download for macOS
+    href: 'https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-macos-macosx-latest/MacOSX-0.0.1.dmg'
+
+footer:
+  copyright: '© 2026 Hieu Doan'
+  links:
+    - label: Features
+      href: '#features'
+    - label: Demo
+      href: '#demo'
+    - label: Source
+      href: 'https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/app/native/macosx'

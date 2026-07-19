@@ -1,0 +1,24 @@
+// Transition delay utilities — Tailwind v3 default scale
+
+$transition-delay-default: 0s;
+$transition-delays: (
+  ('0', 0s),
+  ('75', 75ms),
+  ('100', 100ms),
+  ('150', 150ms),
+  ('200', 200ms),
+  ('300', 300ms),
+  ('500', 500ms),
+  ('700', 700ms),
+  ('1000', 1000ms)
+);
+
+.delay {
+  transition-delay: $transition-delay-default;
+}
+
+@each $name, $value in $transition-delays {
+  .delay-#{$name} {
+    transition-delay: $value;
+  }
+}

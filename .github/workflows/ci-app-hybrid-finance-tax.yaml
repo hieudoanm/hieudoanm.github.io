@@ -1,0 +1,33 @@
+name: CI - App - Hybrid - Finance - Tax
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/finance/tax/**/*'
+      - '.github/workflows/ci-app-hybrid-finance-tax.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-hybrid-finance-tax-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/finance/tax
+      filter: '@hieudoanm.github.io/tax'
+      releaseName: app-hybrid-finance-tax-latest
+      releaseTitle: App - Hybrid - Finance - Tax (latest)
+      artifactPrefix: finance-tax
+      artifactName: tax

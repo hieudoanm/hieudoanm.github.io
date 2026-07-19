@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{{.Site.Description}}" />
+    <title>{{.Site.Name}}</title>
+    <style>
+      :root {
+@LANDIFY_THEME@      }
+{{template "base-css" .}}
+      .dl-badges {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 18px;
+      }
+      .dl-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 4px 12px;
+        border-radius: 999px;
+        border: 1px solid var(--border-soft);
+        background: var(--primary-soft);
+        color: var(--primary-dark);
+      }
+      .dl-platforms {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 22px;
+      }
+      .dl-platform {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 20px;
+        border-radius: var(--radius);
+        border: 1px solid var(--border-soft);
+        background: var(--base-200);
+        color: var(--base-content);
+        font-weight: 600;
+        font-size: 14px;
+      }
+      .dl-platform:hover {
+        background: var(--base-300);
+        text-decoration: none;
+      }
+      .install-block {
+        max-width: 560px;
+        margin: 22px auto 0;
+        text-align: left;
+        background: var(--base-200);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+        padding: 14px 18px;
+        overflow-x: auto;
+      }
+      .install-block pre {
+        margin: 0;
+        font-size: 13.5px;
+        line-height: 1.55;
+        color: var(--base-content);
+        font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+      }
+    </style>
+  </head>
+  <body>
+    {{template "header" .}}
+
+    <main id="top">
+      <section class="hero">
+        <div>
+          {{if .Hero.Badge}}<span class="badge">{{.Hero.Badge}}</span>{{end}}
+          <h1>{{.Hero.Headline}}</h1>
+          <p class="lead">{{.Hero.Subheadline}}</p>
+          <div class="dl-badges">
+            {{if .Download.Version}}<span class="dl-badge">⛁ v{{.Download.Version}}</span>{{end}}
+            {{if .Download.License}}<span class="dl-badge">🪪 {{.Download.License}}</span>{{end}}
+          </div>
+          <div class="dl-platforms">
+            {{range .Download.Platforms}}<a class="dl-platform" href="{{.Href}}">{{if .Icon}}{{.Icon}} {{end}}{{.Name}}</a>{{end}}
+          </div>
+          {{if .Download.Install}}
+          <div class="install-block">
+            <pre><code>{{.Download.Install}}</code></pre>
+          </div>
+          {{end}}
+          <div class="hero-actions">
+            {{if .Download.Repo}}<a class="btn btn-ghost" href="{{.Download.Repo}}">⭐ View source</a>{{end}}
+            {{if .Hero.Secondary.Href}}<a class="btn btn-ghost" href="{{.Hero.Secondary.Href}}">{{.Hero.Secondary.Label}}</a>{{end}}
+          </div>
+        </div>
+        {{if .Hero.Image.Src}}<img class="hero-media" src="{{.Hero.Image.Src}}" alt="{{.Hero.Image.Alt}}" />{{end}}
+      </section>
+
+      <section id="features" class="block">
+        <div class="block-head">
+          <h2>{{.Features.Heading}}</h2>
+          <p class="sub">{{.Features.Sub}}</p>
+        </div>
+        <div class="features">
+          {{range .Features.Items}}
+          <div class="feature">
+            <span class="icon">{{.Icon}}</span>
+            <h3>{{.Title}}</h3>
+            <p>{{.Body}}</p>
+          </div>
+          {{end}}
+        </div>
+      </section>
+
+      <section id="cta" class="block">
+        <div class="cta">
+          <span class="icon" aria-hidden="true">{{.CTA.Icon}}</span>
+          <h2>{{.CTA.Heading}}</h2>
+          <p>{{.CTA.Body}}</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="{{.CTA.Button.Href}}">{{.CTA.Button.Label}}</a>
+          </div>
+        </div>
+      </section>
+
+      {{template "footer" .}}
+    </main>
+  </body>
+</html>

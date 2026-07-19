@@ -1,0 +1,14 @@
+// Grid auto columns utilities — Tailwind v3 default scale
+
+$grid-auto-columns: (
+  ('auto', auto),
+  ('min', min-content),
+  ('max', max-content),
+  ('fr', minmax(0, 1fr))
+);
+
+@each $name, $value in $grid-auto-columns {
+  .auto-cols-#{$name} {
+    grid-auto-columns: #{$value};
+  }
+}

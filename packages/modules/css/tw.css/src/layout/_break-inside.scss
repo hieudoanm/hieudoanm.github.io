@@ -1,0 +1,18 @@
+// Break inside utilities — Tailwind v3 default scale
+
+$break-insides: (
+  ('auto', auto),
+  ('avoid', avoid),
+  ('avoid-page', avoid-page),
+  ('avoid-column', avoid-column)
+);
+
+@each $name, $value in $break-insides {
+  .break-inside-#{$name} {
+    break-inside: $value;
+  }
+}
+
+.break-inside-auto {
+  break-inside: auto;
+}

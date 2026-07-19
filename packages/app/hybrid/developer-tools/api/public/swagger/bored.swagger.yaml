@@ -1,0 +1,197 @@
+openapi: 3.0.3
+info:
+  title: Bored API
+  description: |
+    The Bored API by the App Brewery returns activities to try when you are
+    bored. This is a teaching tool for students of the App Brewery. Requests
+    are rate limited to 100 requests every 15 minutes per IP address.
+
+    Endpoints:
+      - `GET /random` returns a randomly selected activity.
+      - `GET /filter` returns activities filtered by type and/or participants.
+      - `GET /activity/{key}` returns a specific activity by its key.
+  version: 1.0.0
+servers:
+  - url: https://bored-api.appbrewery.com
+tags:
+  - name: Activities
+    description: Endpoints that expose activity data
+paths:
+  /random:
+    get:
+      tags:
+        - Activities
+      summary: Get a random activity
+      description: |
+        Returns a randomly selected activity from the available activities.
+      operationId: getRandomActivity
+      responses:
+        '200':
+          description: A randomly selected activity
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Activity'
+              example:
+                activity: Learn Express.js
+                availability: 0.25
+                type: education
+                participants: 1
+                price: 0.1
+                accessibility: Few to no challenges
+                duration: hours
+                kidFriendly: true
+                link: https://expressjs.com/
+                key: '3943506'
+  /filter:
+    get:
+      tags:
+        - Activities
+      summary: Filter activities
+      description: |
+        Returns a list of activities filtered by type and/or participants.
+      operationId: filterActivities
+      parameters:
+        - name: type
+          in: query
+          description: The type of activity to filter by
+          required: false
+          schema:
+            type: string
+            enum:
+              - education
+              - recreational
+              - social
+              - charity
+              - cooking
+              - relaxation
+              - busywork
+        - name: participants
+          in: query
+          description: The number of participants to filter by
+          required: false
+          schema:
+            type: integer
+            enum: [1, 2, 3, 4, 5, 6, 8]
+      responses:
+        '200':
+          description: A list of activities matching the filters
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Activity'
+              example:
+                - activity: Learn Express.js
+                  availability: 0.25
+                  type: education
+                  participants: 1
+                  price: 0.1
+                  accessibility: Few to no challenges
+                  duration: hours
+                  kidFriendly: true
+                  link: https://expressjs.com/
+                  key: '3943506'
+                - activity: Learn React.js
+                  availability: 0.5
+                  type: education
+                  participants: 1
+                  price: 0.2
+                  accessibility: Some challenges
+                  duration: hours
+                  kidFriendly: true
+                  link: https://reactjs.org/
+                  key: '7890123'
+  /activity/{key}:
+    get:
+      tags:
+        - Activities
+      summary: Get activity by key
+      description: Returns the activity with the specified key.
+      operationId: getActivityByKey
+      parameters:
+        - name: key
+          in: path
+          description: The unique key of the activity
+          required: true
+          schema:
+            type: string
+          example: '3943506'
+      responses:
+        '200':
+          description: The activity matching the key
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Activity'
+              example:
+                activity: Learn Express.js
+                availability: 0.25
+                type: education
+                participants: 1
+                price: 0.1
+                accessibility: Few to no challenges
+                duration: hours
+                kidFriendly: true
+                link: https://expressjs.com/
+                key: '3943506'
+        '404':
+          description: No activity exists for the given key
+components:
+  schemas:
+    Activity:
+      type: object
+      title: Activity
+      required:
+        - activity
+        - availability
+        - type
+        - participants
+        - price
+        - accessibility
+        - duration
+        - kidFriendly
+        - link
+        - key
+      properties:
+        activity:
+          type: string
+          description: The name of the activity
+        availability:
+          type: number
+          format: float
+          description: How available the activity is, from 0 (hard) to 1 (easy)
+        type:
+          type: string
+          description: The category of the activity
+          enum:
+            - education
+            - recreational
+            - social
+            - charity
+            - cooking
+            - relaxation
+            - busywork
+        participants:
+          type: integer
+          description: The number of people this activity requires
+        price:
+          type: number
+          format: float
+          description: A score from 0 (free) to 1 (expensive)
+        accessibility:
+          type: string
+          description: A human readable level of accessibility challenge
+        duration:
+          type: string
+          description: An approximate time span, e.g. minutes or hours
+        kidFriendly:
+          type: boolean
+          description: Whether the activity is suitable for kids
+        link:
+          type: string
+          description: A URL with more information about the activity
+        key:
+          type: string
+          description: The unique key of the activity

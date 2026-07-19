@@ -1,0 +1,50 @@
+type: status
+site:
+  name: Landify Status
+  mark: "📊"
+  description: Live status, uptime figures, and the incident log for Landify.
+  nav:
+    - label: Status
+      href: "#status"
+    - label: Subscribe
+      href: "#cta"
+hero:
+  badge: "⚡ Live"
+  headline: All systems normal.
+  subheadline: Status of the Landify website and API, updated whenever something changes.
+status:
+  state: operational
+  updated: "September 7, 2026 09:00 UTC"
+  announcement: No scheduled maintenance this week. Builds and the theme gallery are green.
+  stats:
+    - label: Uptime (30d)
+      value: 99.99%
+    - label: API latency
+      value: 42 ms
+    - label: Open incidents
+      value: "0"
+  heading: Recent incidents
+  sub: Newest first.
+  incidents:
+    - date: August 14
+      title: Elevated API latency
+      state: resolved
+      body: Transient slowdown during a platform update, now back to normal.
+    - date: July 2
+      title: Scheduled maintenance
+      state: resolved
+      body: The gallery rebuild took the site briefly read-only overnight.
+cta:
+  icon: "🔔"
+  heading: Want updates?
+  body: Subscribe and we will email you whenever the status changes.
+  button:
+    label: Subscribe
+    href: https://forms.example.com/status
+footer:
+  copyright: "© 2026 Landify Status"
+  links:
+    - label: Status
+      href: "#status"
+    - label: Subscribe
+      href: "#cta"

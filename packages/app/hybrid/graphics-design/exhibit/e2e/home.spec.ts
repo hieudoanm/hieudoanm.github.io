@@ -1,0 +1,43 @@
+import { test, expect } from '@playwright/test';
+import path from 'path';
+
+test.describe('Home page', () => {
+  test('renders the app title', async ({ page }) => {
+    await page.goto('/');
+    await expect(page.getByRole('heading', { name: 'POS' })).toBeVisible();
+  });
+
+  test('renders navigation links', async ({ page }) => {
+    await page.goto('/');
+    await expect(page.getByRole('link', { name: 'About' })).toBeVisible();
+    await expect(page.getByRole('link', { name: 'Downloads' })).toBeVisible();
+    await expect(page.getByRole('link', { name: 'Version' })).toBeVisible();
+  });
+
+  test('navigates to about page', async ({ page }) => {
+    await page.goto('/');
+    await page.getByRole('link', { name: 'About' }).click();
+    await expect(page).toHaveURL('/about/');
+  });
+
+  test('navigates to downloads page', async ({ page }) => {
+    await page.goto('/');
+    await page.getByRole('link', { name: 'Downloads' }).click();
+    await expect(page).toHaveURL('/downloads/');
+  });
+
+  test('navigates to version page', async ({ page }) => {
+    await page.goto('/');
+    await page.getByRole('link', { name: 'Version' }).click();
+    await expect(page).toHaveURL('/version/');
+  });
+});
+
+test('captures marketing screenshot (1280x720)', async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 720 });
+  await page.goto('/');
+  await expect(page.locator('h1').first()).toBeVisible();
+  await page.screenshot({
+    path: path.join(__dirname, 'screenshots', 'home.png'),
+  });
+});

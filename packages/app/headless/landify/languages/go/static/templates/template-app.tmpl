@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{{.Site.Description}}" />
+    <title>{{.Site.Name}}</title>
+    <style>
+      :root {
+@LANDIFY_THEME@      }
+{{template "base-css" .}}
+      .app-stores {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 22px;
+      }
+      .store-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 18px;
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+        background: var(--base-200);
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--base-content);
+        text-decoration: none;
+      }
+      .store-badge:hover {
+        border-color: var(--primary);
+        color: var(--primary);
+      }
+      .rating {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin-top: 16px;
+        font-size: 14px;
+        color: var(--neutral);
+      }
+      .rating .stars {
+        letter-spacing: 2px;
+        color: var(--warning);
+      }
+      .shots {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 16px;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      .shot {
+        margin: 0;
+        text-align: center;
+      }
+      .shot img {
+        width: 100%;
+        aspect-ratio: 9 / 16;
+        object-fit: cover;
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+        background: var(--base-300);
+      }
+      .shot figcaption {
+        margin-top: 8px;
+        font-size: 13px;
+        color: var(--neutral);
+      }
+    </style>
+  </head>
+  <body>
+    {{template "header" .}}
+
+    <main id="top">
+      <section class="hero">
+        <div>
+          {{if .Hero.Badge}}<span class="badge">{{.Hero.Badge}}</span>{{end}}
+          <h1>{{.Hero.Headline}}</h1>
+          <p class="lead">{{.Hero.Subheadline}}</p>
+          <div class="app-stores">
+            {{range .App.Stores}}<a class="store-badge" href="{{.Href}}">{{if .Icon}}<span aria-hidden="true">{{.Icon}}</span> {{end}}{{.Name}}</a>{{end}}
+          </div>
+          {{if or .App.Ratings .App.Reviews}}
+          <p class="rating">
+            <span class="stars" aria-hidden="true">★★★★★</span>
+            {{.App.Ratings}}{{if and .App.Ratings .App.Reviews}} · {{end}}{{.App.Reviews}}
+          </p>
+          {{end}}
+          {{if .Hero.Image.Src}}<img class="hero-media" src="{{.Hero.Image.Src}}" alt="{{.Hero.Image.Alt}}" />{{end}}
+        </div>
+      </section>
+
+      {{if .App.Shots}}
+      <section id="screenshots" class="block">
+        {{if or .Features.Heading .Features.Sub}}
+        <div class="block-head">
+          <h2>{{.Features.Heading}}</h2>
+          {{if .Features.Sub}}<p class="sub">{{.Features.Sub}}</p>{{end}}
+        </div>
+        {{end}}
+        <div class="shots">
+          {{range .App.Shots}}
+          <figure class="shot">
+            <img src="{{.Src}}" alt="{{.Title}}" />
+            {{if .Title}}<figcaption>{{.Title}}</figcaption>{{end}}
+          </figure>
+          {{end}}
+        </div>
+      </section>
+      {{end}}
+
+      {{if .Features.Items}}
+      <section id="features" class="block">
+        <div class="block-head">
+          <h2>{{.Features.Heading}}</h2>
+          {{if .Features.Sub}}<p class="sub">{{.Features.Sub}}</p>{{end}}
+        </div>
+        <div class="features">
+          {{range .Features.Items}}
+          <div class="feature">
+            <span class="icon" aria-hidden="true">{{.Icon}}</span>
+            <h3>{{.Title}}</h3>
+            <p>{{.Body}}</p>
+          </div>
+          {{end}}
+        </div>
+      </section>
+      {{end}}
+
+      {{if .CTA.Heading}}
+      <section id="cta" class="block">
+        <div class="cta">
+          <span class="icon" aria-hidden="true">{{.CTA.Icon}}</span>
+          <h2>{{.CTA.Heading}}</h2>
+          <p>{{.CTA.Body}}</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="{{.CTA.Button.Href}}">{{.CTA.Button.Label}}</a>
+          </div>
+        </div>
+      </section>
+      {{end}}
+
+      {{template "footer" .}}
+    </main>
+  </body>
+</html>

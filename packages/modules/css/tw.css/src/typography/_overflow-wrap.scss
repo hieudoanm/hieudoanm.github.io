@@ -1,0 +1,13 @@
+// Overflow wrap utilities — Tailwind v3 default scale
+
+$overflow-wraps: (
+  ('normal', normal),
+  ('break-word', break-word),
+  ('anywhere', anywhere)
+);
+
+@each $name, $value in $overflow-wraps {
+  .wrap-#{$name} {
+    overflow-wrap: $value;
+  }
+}

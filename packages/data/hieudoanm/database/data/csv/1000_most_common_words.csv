@@ -1,0 +1,1001 @@
+number,category,subcategory,english,germany,korean
+1,Core Function Words,Pronouns,I,ich,나/저
+2,Core Function Words,Pronouns,you,du/sie,너/당신
+3,Core Function Words,Pronouns,he,er,그
+4,Core Function Words,Pronouns,she,sie,그녀
+5,Core Function Words,Pronouns,it,es,그것
+6,Core Function Words,Pronouns,we,wir,우리
+7,Core Function Words,Pronouns,they,sie,그들
+8,Core Function Words,Pronouns,me,mich/mir,나를/나에게
+9,Core Function Words,Pronouns,him,ihn/ihm,그를/그에게
+10,Core Function Words,Pronouns,her,sie/ihr,그녀를/그녀에게
+11,Core Function Words,Possessives,my,mein,나의
+12,Core Function Words,Possessives,your,dein/ihr,너의/당신의
+13,Core Function Words,Possessives,his,sein,그의
+14,Core Function Words,Possessives,her,ihr,그녀의
+15,Core Function Words,Possessives,its,sein/ihr,그것의
+16,Core Function Words,Possessives,our,unser,우리의
+17,Core Function Words,Possessives,their,ihr,그들의
+18,Core Function Words,Possessives,mine,meins,나의 것
+19,Core Function Words,Possessives,yours,deins/ihres,너의 것/당신의 것
+20,Core Function Words,Possessives,hers,ihres,그녀의 것
+21,Core Function Words,Articles,a,ein,하나의
+22,Core Function Words,Articles,an,ein,하나의
+23,Core Function Words,Articles,the,der/die/das,그
+24,Core Function Words,Articles,this,dieser,이
+25,Core Function Words,Articles,that,jener,저
+26,Core Function Words,Articles,these,diese,이것들
+27,Core Function Words,Articles,those,jene,저것들
+28,Core Function Words,Articles,each,jeder,각각
+29,Core Function Words,Articles,every,jeder,모든
+30,Core Function Words,Articles,all,alle,모든
+31,Core Function Words,Prepositions (basic),in,in,안에
+32,Core Function Words,Prepositions (basic),on,auf,위에
+33,Core Function Words,Prepositions (basic),at,an/bei,에
+34,Core Function Words,Prepositions (basic),by,bei/von,옆에/에 의해
+35,Core Function Words,Prepositions (basic),for,für,위해
+36,Core Function Words,Prepositions (basic),with,mit,함께
+37,Core Function Words,Prepositions (basic),about,über,대해
+38,Core Function Words,Prepositions (basic),above,über,보다 위에
+39,Core Function Words,Prepositions (basic),under,unter,아래에
+40,Core Function Words,Prepositions (basic),between,zwischen,사이에
+41,Core Function Words,Prepositions (movement),to,zu/nach,로
+42,Core Function Words,Prepositions (movement),from,von/aus,부터
+43,Core Function Words,Prepositions (movement),into,in,안으로
+44,Core Function Words,Prepositions (movement),onto,auf,위로
+45,Core Function Words,Prepositions (movement),out,aus,밖으로
+46,Core Function Words,Prepositions (movement),through,durch,통해
+47,Core Function Words,Prepositions (movement),across,über,가로질러
+48,Core Function Words,Prepositions (movement),along,entlang,따라
+49,Core Function Words,Prepositions (movement),past,vorbei,지나
+50,Core Function Words,Prepositions (movement),towards,zu,향해
+51,Core Function Words,Conjunctions,and,und,그리고
+52,Core Function Words,Conjunctions,but,aber,하지만
+53,Core Function Words,Conjunctions,or,oder,또는
+54,Core Function Words,Conjunctions,so,so/daher,그래서
+55,Core Function Words,Conjunctions,because,weil,때문에
+56,Core Function Words,Conjunctions,if,wenn/falls,만약
+57,Core Function Words,Conjunctions,when,wenn/als,언제/때
+58,Core Function Words,Conjunctions,while,während,동안
+59,Core Function Words,Conjunctions,though,obwohl,에도 불구하고
+60,Core Function Words,Conjunctions,since,seit/da,이래로/때문에
+61,Core Function Words,Auxiliary verbs,be,sein,이다/있다
+62,Core Function Words,Auxiliary verbs,do,tun/machen,하다
+63,Core Function Words,Auxiliary verbs,have,haben,가지다
+64,Core Function Words,Auxiliary verbs,am,bin,이다
+65,Core Function Words,Auxiliary verbs,is,ist,이다
+66,Core Function Words,Auxiliary verbs,are,sind,이다
+67,Core Function Words,Auxiliary verbs,was,war,이었다
+68,Core Function Words,Auxiliary verbs,were,waren,이었다
+69,Core Function Words,Auxiliary verbs,been,gewesen,었다
+70,Core Function Words,Auxiliary verbs,being,seiend,존재
+71,Core Function Words,Modals,can,kann,할 수 있다
+72,Core Function Words,Modals,could,könnte,할 수 있었다
+73,Core Function Words,Modals,will,wird,할 것이다
+74,Core Function Words,Modals,would,würde,할 것이다
+75,Core Function Words,Modals,shall,soll,해야 한다
+76,Core Function Words,Modals,should,sollte,해야 한다
+77,Core Function Words,Modals,may,darf,해도 된다
+78,Core Function Words,Modals,might,könnte,할지도 모른다
+79,Core Function Words,Modals,must,muss,해야만 한다
+80,Core Function Words,Modals,ought,sollte,해야 한다
+81,Core Function Words,Quantifiers,some,einige,약간의
+82,Core Function Words,Quantifiers,many,viele,많은
+83,Core Function Words,Quantifiers,few,wenige,적은
+84,Core Function Words,Quantifiers,much,viel,많은
+85,Core Function Words,Quantifiers,little,wenig,작은/적은
+86,Core Function Words,Quantifiers,most,die meisten,대부분의
+87,Core Function Words,Quantifiers,several,mehrere,여러
+88,Core Function Words,Quantifiers,no,kein,없는
+89,Core Function Words,Quantifiers,any,irgendwelche,어떤
+90,Core Function Words,Quantifiers,both,beide,둘 다
+91,Core Function Words,Particles / fillers,just,nur/gerade,그냥
+92,Core Function Words,Particles / fillers,even,sogar,심지어
+93,Core Function Words,Particles / fillers,already,bereits,이미
+94,Core Function Words,Particles / fillers,still,noch,여전히
+95,Core Function Words,Particles / fillers,well,gut/nun,잘/음
+96,Core Function Words,Particles / fillers,now,jetzt,지금
+97,Core Function Words,Particles / fillers,then,dann,그때
+98,Core Function Words,Particles / fillers,very,sehr,매우
+99,Core Function Words,Particles / fillers,too,zu/auch,너무/또한
+100,Core Function Words,Particles / fillers,also,auch,또한
+101,Common Verbs,Basic actions,eat,essen,먹다
+102,Common Verbs,Basic actions,drink,trinken,마시다
+103,Common Verbs,Basic actions,go,gehen,가다
+104,Common Verbs,Basic actions,come,kommen,오다
+105,Common Verbs,Basic actions,do,tun,하다
+106,Common Verbs,Basic actions,make,machen,만들다
+107,Common Verbs,Basic actions,get,bekommen,얻다
+108,Common Verbs,Basic actions,take,nehmen,가지다
+109,Common Verbs,Basic actions,give,geben,주다
+110,Common Verbs,Basic actions,keep,behalten,유지하다
+111,Common Verbs,Movement,walk,gehen/laufen,걷다
+112,Common Verbs,Movement,run,rennen,달리다
+113,Common Verbs,Movement,travel,reisen,여행하다
+114,Common Verbs,Movement,fly,fliegen,날다
+115,Common Verbs,Movement,drive,fahren,운전하다
+116,Common Verbs,Movement,ride,reiten/fahren,타다
+117,Common Verbs,Movement,swim,schwimmen,수영하다
+118,Common Verbs,Movement,jump,springen,뛰다
+119,Common Verbs,Movement,climb,klettern,오르다
+120,Common Verbs,Movement,shake,schütteln,흔들다
+121,Common Verbs,Communication,say,sagen,말하다
+122,Common Verbs,Communication,tell,erzählen,말해주다
+123,Common Verbs,Communication,ask,fragen,묻다
+124,Common Verbs,Communication,speak,sprechen,말하다
+125,Common Verbs,Communication,talk,reden,이야기하다
+126,Common Verbs,Communication,shout,schreien,외치다
+127,Common Verbs,Communication,whisper,flüstern,속삭이다
+128,Common Verbs,Communication,call,rufen/anrufen,부르다/전화하다
+129,Common Verbs,Communication,write,schreiben,쓰다
+130,Common Verbs,Communication,read,lesen,읽다
+131,Common Verbs,Thinking,think,denken,생각하다
+132,Common Verbs,Thinking,know,wissen,알다
+133,Common Verbs,Thinking,believe,glauben,믿다
+134,Common Verbs,Thinking,understand,verstehen,이해하다
+135,Common Verbs,Thinking,remember,erinnern,기억하다
+136,Common Verbs,Thinking,forget,vergessen,잊다
+137,Common Verbs,Thinking,mean,bedeuten,의미하다
+138,Common Verbs,Thinking,suppose,vermuten,가정하다
+139,Common Verbs,Thinking,guess,raten,추측하다
+140,Common Verbs,Thinking,wonder,wundern,궁금해하다
+141,Common Verbs,Emotion,love,lieben,사랑하다
+142,Common Verbs,Emotion,hate,hassen,미워하다
+143,Common Verbs,Emotion,like,mögen,좋아하다
+144,Common Verbs,Emotion,want,wollen,원하다
+145,Common Verbs,Emotion,hope,hoffen,바라다
+146,Common Verbs,Emotion,fear,fürchten,두려워하다
+147,Common Verbs,Emotion,enjoy,genießen,즐기다
+148,Common Verbs,Emotion,prefer,bevorzugen,선호하다
+149,Common Verbs,Emotion,miss,vermissen,그리워하다
+150,Common Verbs,Emotion,worry,sorgen,걱정하다
+151,Common Verbs,Daily routine,wake,aufwachen,깨다
+152,Common Verbs,Daily routine,sleep,schlafen,자다
+153,Common Verbs,Daily routine,work,arbeiten,일하다
+154,Common Verbs,Daily routine,play,spielen,놀다
+155,Common Verbs,Daily routine,wash,waschen,씻다
+156,Common Verbs,Daily routine,clean,putzen,청소하다
+157,Common Verbs,Daily routine,cook,kochen,요리하다
+158,Common Verbs,Daily routine,brush,bürsten,닦다
+159,Common Verbs,Daily routine,dress,anziehen,옷을 입다
+160,Common Verbs,Daily routine,relax,entspannen,쉬다
+161,Common Verbs,Work/study,learn,lernen,배우다
+162,Common Verbs,Work/study,write,schreiben,쓰다
+163,Common Verbs,Work/study,read,lesen,읽다
+164,Common Verbs,Work/study,study,studieren,공부하다
+165,Common Verbs,Work/study,teach,lehren,가르치다
+166,Common Verbs,Work/study,test,prüfen,시험하다
+167,Common Verbs,Work/study,check,prüfen,확인하다
+168,Common Verbs,Work/study,point,zeigen,가리키다
+169,Common Verbs,Work/study,finish,beenden,끝내다
+170,Common Verbs,Work/study,start,beginnen,시작하다
+171,Common Verbs,Social,meet,treffen,만나다
+172,Common Verbs,Social,call,anrufen,전화하다
+173,Common Verbs,Social,invite,einladen,초대하다
+174,Common Verbs,Social,help,helfen,돕다
+175,Common Verbs,Social,visit,besuchen,방문하다
+176,Common Verbs,Social,share,teilen,공유하다
+177,Common Verbs,Social,agree,zustimmen,동의하다
+178,Common Verbs,Social,allow,erlauben,허용하다
+179,Common Verbs,Social,promise,versprechen,약속하다
+180,Common Verbs,Social,thank,danken,감사하다
+181,Common Verbs,Change,start,beginnen,시작하다
+182,Common Verbs,Change,stop,stoppen,멈추다
+183,Common Verbs,Change,build,bauen,짓다
+184,Common Verbs,Change,break,brechen,부수다
+185,Common Verbs,Change,change,ändern,변화하다
+186,Common Verbs,Change,grow,wachsen,성장하다
+187,Common Verbs,Change,become,werden,되다
+188,Common Verbs,Change,happen,geschehen,일어나다
+189,Common Verbs,Change,create,erschaffen,창조하다
+190,Common Verbs,Change,fix,reparieren,고치다
+191,Common Verbs,Helper phrases,try,versuchen,시도하다
+192,Common Verbs,Helper phrases,plan,planen,계획하다
+193,Common Verbs,Helper phrases,decide,entscheiden,결정하다
+194,Common Verbs,Helper phrases,choose,wählen,선택하다
+195,Common Verbs,Helper phrases,need,brauchen,필요하다
+196,Common Verbs,Helper phrases,seem,scheinen,보이다
+197,Common Verbs,Helper phrases,look,schauen,보다
+198,Common Verbs,Helper phrases,sound,klingen,들리다
+199,Common Verbs,Helper phrases,feel,fühlen,느끼다
+200,Common Verbs,Helper phrases,appear,erscheinen,나타나다
+201,Everyday Nouns – People & Life,Family,mother,Mutter,어머니
+202,Everyday Nouns – People & Life,Family,father,Vater,아버지
+203,Everyday Nouns – People & Life,Family,parent,Elternteil,부모
+204,Everyday Nouns – People & Life,Family,brother,Bruder,형제
+205,Everyday Nouns – People & Life,Family,sister,Schwester,자매
+206,Everyday Nouns – People & Life,Family,son,Sohn,아들
+207,Everyday Nouns – People & Life,Family,daughter,Tochter,딸
+208,Everyday Nouns – People & Life,Family,baby,Baby,아기
+209,Everyday Nouns – People & Life,Family,grandfather,Großvater,할아버지
+210,Everyday Nouns – People & Life,Family,grandmother,Großmutter,할머니
+211,Everyday Nouns – People & Life,Relationships,friend,Freund,친구
+212,Everyday Nouns – People & Life,Relationships,partner,Partner,동반자
+213,Everyday Nouns – People & Life,Relationships,wife,Ehefrau,아내
+214,Everyday Nouns – People & Life,Relationships,husband,Ehemann,남편
+215,Everyday Nouns – People & Life,Relationships,neighbor,Nachbar,이웃
+216,Everyday Nouns – People & Life,Relationships,enemy,Feind,적
+217,Everyday Nouns – People & Life,Relationships,couple,Paar,커플
+218,Everyday Nouns – People & Life,Relationships,group,Gruppe,그룹
+219,Everyday Nouns – People & Life,Relationships,community,Gemeinschaft,지역사회
+220,Everyday Nouns – People & Life,Relationships,team,Team,팀
+221,Everyday Nouns – People & Life,Jobs,teacher,Lehrer,선생님
+222,Everyday Nouns – People & Life,Jobs,doctor,Arzt,의사
+223,Everyday Nouns – People & Life,Jobs,nurse,Krankenschwester,간호사
+224,Everyday Nouns – People & Life,Jobs,pilot,Pilot,조종사
+225,Everyday Nouns – People & Life,Jobs,driver,Fahrer,운전사
+226,Everyday Nouns – People & Life,Jobs,engineer,Ingenieur,엔지니어
+227,Everyday Nouns – People & Life,Jobs,worker,Arbeiter,노동자
+228,Everyday Nouns – People & Life,Jobs,artist,Künstler,예술가
+229,Everyday Nouns – People & Life,Jobs,farmer,Bauer,농부
+230,Everyday Nouns – People & Life,Jobs,cook,Koch,요리사
+231,Everyday Nouns – People & Life,Roles,boss,Chef,상사
+232,Everyday Nouns – People & Life,Roles,student,Student/Schüler,학생
+233,Everyday Nouns – People & Life,Roles,leader,Anführer,지도자
+234,Everyday Nouns – People & Life,Roles,captain,Kapitän,선장
+235,Everyday Nouns – People & Life,Roles,member,Mitglied,회원
+236,Everyday Nouns – People & Life,Roles,guest,Gast,손님
+237,Everyday Nouns – People & Life,Roles,client,Klient,고객
+238,Everyday Nouns – People & Life,Roles,player,Spieler,선수
+239,Everyday Nouns – People & Life,Roles,expert,Experte,전문가
+240,Everyday Nouns – People & Life,Roles,beginner,Anfänger,초보자
+241,Everyday Nouns – People & Life,Body parts,hand,Hand,손
+242,Everyday Nouns – People & Life,Body parts,head,Kopf,머리
+243,Everyday Nouns – People & Life,Body parts,eye,Auge,눈
+244,Everyday Nouns – People & Life,Body parts,ear,Ohr,귀
+245,Everyday Nouns – People & Life,Body parts,nose,Nase,코
+246,Everyday Nouns – People & Life,Body parts,mouth,Mund,입
+247,Everyday Nouns – People & Life,Body parts,arm,Arm,팔
+248,Everyday Nouns – People & Life,Body parts,leg,Bein,다리
+249,Everyday Nouns – People & Life,Body parts,foot,Fuß,발
+250,Everyday Nouns – People & Life,Body parts,body,Körper,몸
+251,Everyday Nouns – People & Life,Health,pain,Schmerz,통증
+252,Everyday Nouns – People & Life,Health,fever,Fieber,열
+253,Everyday Nouns – People & Life,Health,cold,Erkältung,감기
+254,Everyday Nouns – People & Life,Health,medicine,Medizin,약
+255,Everyday Nouns – People & Life,Health,hospital,Krankenhaus,병원
+256,Everyday Nouns – People & Life,Health,clinic,Klinik,진료소
+257,Everyday Nouns – People & Life,Health,health,Gesundheit,건강
+258,Everyday Nouns – People & Life,Health,doctor,Arzt,의사
+259,Everyday Nouns – People & Life,Health,pill,Pille,알약
+260,Everyday Nouns – People & Life,Health,rest,Ruhe,휴식
+261,Everyday Nouns – People & Life,Life stages,child,Kind,아이
+262,Everyday Nouns – People & Life,Life stages,adult,Erwachsener,성인
+263,Everyday Nouns – People & Life,Life stages,young,jung,어린
+264,Everyday Nouns – People & Life,Life stages,old,alt,나이 든
+265,Everyday Nouns – People & Life,Life stages,teenager,Teenager,십대
+266,Everyday Nouns – People & Life,Life stages,senior,Senior,어르신
+267,Everyday Nouns – People & Life,Life stages,birth,Geburt,탄생
+268,Everyday Nouns – People & Life,Life stages,death,Tod,죽음
+269,Everyday Nouns – People & Life,Life stages,life,Leben,삶
+270,Everyday Nouns – People & Life,Life stages,future,Zukunft,미래
+271,Everyday Nouns – People & Life,Personality,hero,Held,영웅
+272,Everyday Nouns – People & Life,Personality,leader,Anführer,지도자
+273,Everyday Nouns – People & Life,Personality,brave,mutig,용감한
+274,Everyday Nouns – People & Life,Personality,kind,nett,친절한
+275,Everyday Nouns – People & Life,Personality,smart,intelligent,똑똑한
+276,Everyday Nouns – People & Life,Personality,funny,lustig,재미있는
+277,Everyday Nouns – People & Life,Personality,honest,ehrlich,정직한
+278,Everyday Nouns – People & Life,Personality,strong,stark,강한
+279,Everyday Nouns – People & Life,Personality,weak,schwach,약한
+280,Everyday Nouns – People & Life,Personality,calm,ruhig,차분한
+281,Everyday Nouns – People & Life,Social,neighbor,Nachbar,이웃
+282,Everyday Nouns – People & Life,Social,guest,Gast,손님
+283,Everyday Nouns – People & Life,Social,crowd,Menge,군중
+284,Everyday Nouns – People & Life,Social,person,Person,사람
+285,Everyday Nouns – People & Life,Social,human,Mensch,인간
+286,Everyday Nouns – People & Life,Social,people,Leute,사람들
+287,Everyday Nouns – People & Life,Social,man,Mann,남자
+288,Everyday Nouns – People & Life,Social,woman,Frau,여자
+289,Everyday Nouns – People & Life,Social,boy,Junge,소년
+290,Everyday Nouns – People & Life,Social,girl,Mädchen,소녀
+291,Everyday Nouns – People & Life,Abstract people,someone,jemand,누군가
+292,Everyday Nouns – People & Life,Abstract people,nobody,niemand,아무도
+293,Everyday Nouns – People & Life,Abstract people,everyone,jeder,모든 사람
+294,Everyday Nouns – People & Life,Abstract people,anyone,jemand,누구든지
+295,Everyday Nouns – People & Life,Abstract people,anybody,jemand,누구든지
+296,Everyday Nouns – People & Life,Abstract people,somebody,jemand,누군가
+297,Everyday Nouns – People & Life,Abstract people,no one,niemand,아무도 없음
+298,Everyday Nouns – People & Life,Abstract people,everybody,alle,모두
+299,Everyday Nouns – People & Life,Abstract people,them,sie,그들
+300,Everyday Nouns – People & Life,Abstract people,us,uns,우리
+301,Everyday Nouns – Objects & Places,Home,bed,Bett,침대
+302,Everyday Nouns – Objects & Places,Home,table,Tisch,테이블
+303,Everyday Nouns – Objects & Places,Home,chair,Stuhl,의자
+304,Everyday Nouns – Objects & Places,Home,door,Tür,문
+305,Everyday Nouns – Objects & Places,Home,window,Fenster,창문
+306,Everyday Nouns – Objects & Places,Home,floor,Boden,바닥
+307,Everyday Nouns – Objects & Places,Home,wall,Wand,벽
+308,Everyday Nouns – Objects & Places,Home,room,Zimmer,방
+309,Everyday Nouns – Objects & Places,Home,house,Haus,집
+310,Everyday Nouns – Objects & Places,Home,light,Licht,빛/전등
+311,Everyday Nouns – Objects & Places,Kitchen,spoon,Löffel,스푼
+312,Everyday Nouns – Objects & Places,Kitchen,plate,Teller,접시
+313,Everyday Nouns – Objects & Places,Kitchen,fork,Gabel,포크
+314,Everyday Nouns – Objects & Places,Kitchen,knife,Messer,칼
+315,Everyday Nouns – Objects & Places,Kitchen,cup,Tasse,컵
+316,Everyday Nouns – Objects & Places,Kitchen,bowl,Schüssel,그릇
+317,Everyday Nouns – Objects & Places,Kitchen,stove,Herd,가스레인지
+318,Everyday Nouns – Objects & Places,Kitchen,fridge,Kühlschrank,냉장고
+319,Everyday Nouns – Objects & Places,Kitchen,pot,Topf,냄비
+320,Everyday Nouns – Objects & Places,Kitchen,pan,Pfanne,팬
+321,Everyday Nouns – Objects & Places,Technology,phone,Telefon,전화기
+322,Everyday Nouns – Objects & Places,Technology,laptop,Laptop,노트북
+323,Everyday Nouns – Objects & Places,Technology,computer,Computer,컴퓨터
+324,Everyday Nouns – Objects & Places,Technology,internet,Internet,인터넷
+325,Everyday Nouns – Objects & Places,Technology,screen,Bildschirm,화면
+326,Everyday Nouns – Objects & Places,Technology,keyboard,Tastatur,키보드
+327,Everyday Nouns – Objects & Places,Technology,mouse,Maus,마우스
+328,Everyday Nouns – Objects & Places,Technology,charger,Ladegerät,충전기
+329,Everyday Nouns – Objects & Places,Technology,battery,Batterie,배터리
+330,Everyday Nouns – Objects & Places,Technology,camera,Kamera,카메라
+331,Everyday Nouns – Objects & Places,School,book,Buch,책
+332,Everyday Nouns – Objects & Places,School,pen,Stift,펜
+333,Everyday Nouns – Objects & Places,School,pencil,Bleistift,연필
+334,Everyday Nouns – Objects & Places,School,paper,Papier,종이
+335,Everyday Nouns – Objects & Places,School,notebook,Notizbuch,노트
+336,Everyday Nouns – Objects & Places,School,classroom,Klassenzimmer,교실
+337,Everyday Nouns – Objects & Places,School,student,Student,학생
+338,Everyday Nouns – Objects & Places,School,teacher,Lehrer,선생님
+339,Everyday Nouns – Objects & Places,School,desk,Schreibtisch,책상
+340,Everyday Nouns – Objects & Places,School,blackboard,Tafel,칠판
+341,Everyday Nouns – Objects & Places,Office,desk,Schreibtisch,책상
+342,Everyday Nouns – Objects & Places,Office,file,Datei,파일
+343,Everyday Nouns – Objects & Places,Office,folder,Ordner,폴더
+344,Everyday Nouns – Objects & Places,Office,email,E-Mail,이메일
+345,Everyday Nouns – Objects & Places,Office,meeting,Meeting,회의
+346,Everyday Nouns – Objects & Places,Office,project,Projekt,프로젝트
+347,Everyday Nouns – Objects & Places,Office,report,Bericht,보고서
+348,Everyday Nouns – Objects & Places,Office,printer,Drucker,프린터
+349,Everyday Nouns – Objects & Places,Office,paperclip,Büroklammer,클립
+350,Everyday Nouns – Objects & Places,Office,stapler,Hefter,스테이플러
+351,Everyday Nouns – Objects & Places,Buildings,house,Haus,집
+352,Everyday Nouns – Objects & Places,Buildings,store,Laden,가게
+353,Everyday Nouns – Objects & Places,Buildings,shop,Geschäft,상점
+354,Everyday Nouns – Objects & Places,Buildings,office,Büro,사무실
+355,Everyday Nouns – Objects & Places,Buildings,bank,Bank,은행
+356,Everyday Nouns – Objects & Places,Buildings,library,Bibliothek,도서관
+357,Everyday Nouns – Objects & Places,Buildings,museum,Museum,박물관
+358,Everyday Nouns – Objects & Places,Buildings,hotel,Hotel,호텔
+359,Everyday Nouns – Objects & Places,Buildings,restaurant,Restaurant,레스토랑
+360,Everyday Nouns – Objects & Places,Buildings,station,Bahnhof,역
+361,Everyday Nouns – Objects & Places,City,road,Straße,도로
+362,Everyday Nouns – Objects & Places,City,park,Park,공원
+363,Everyday Nouns – Objects & Places,City,street,Straße,거리
+364,Everyday Nouns – Objects & Places,City,bridge,Brücke,다리
+365,Everyday Nouns – Objects & Places,City,river,Fluss,강
+366,Everyday Nouns – Objects & Places,City,center,Zentrum,중심
+367,Everyday Nouns – Objects & Places,City,square,Platz,광장
+368,Everyday Nouns – Objects & Places,City,garden,Garten,정원
+369,Everyday Nouns – Objects & Places,City,market,Markt,시장
+370,Everyday Nouns – Objects & Places,City,area,Bereich,지역
+371,Everyday Nouns – Objects & Places,Transport,bus,Bus,버스
+372,Everyday Nouns – Objects & Places,Transport,train,Zug,기차
+373,Everyday Nouns – Objects & Places,Transport,car,Auto,자동차
+374,Everyday Nouns – Objects & Places,Transport,bicycle,Fahrrad,자전거
+375,Everyday Nouns – Objects & Places,Transport,plane,Flugzeug,비행기
+376,Everyday Nouns – Objects & Places,Transport,boat,Boot,보트
+377,Everyday Nouns – Objects & Places,Transport,ship,Schiff,배
+378,Everyday Nouns – Objects & Places,Transport,taxi,Taxi,택시
+379,Everyday Nouns – Objects & Places,Transport,ticket,Ticket,티켓
+380,Everyday Nouns – Objects & Places,Transport,station,Station,정류장/역
+381,Everyday Nouns – Objects & Places,Nature,tree,Baum,나무
+382,Everyday Nouns – Objects & Places,Nature,river,Fluss,강
+383,Everyday Nouns – Objects & Places,Nature,mountain,Berg,산
+384,Everyday Nouns – Objects & Places,Nature,sea,Meer,바다
+385,Everyday Nouns – Objects & Places,Nature,ocean,Ozean,대양
+386,Everyday Nouns – Objects & Places,Nature,flower,Blume,꽃
+387,Everyday Nouns – Objects & Places,Nature,sun,Sonne,태양
+388,Everyday Nouns – Objects & Places,Nature,moon,Mond,달
+389,Everyday Nouns – Objects & Places,Nature,star,Stern,별
+390,Everyday Nouns – Objects & Places,Nature,earth,Erde,지구
+391,Everyday Nouns – Objects & Places,Misc objects,box,Box,상자
+392,Everyday Nouns – Objects & Places,Misc objects,key,Schlüssel,열쇠
+393,Everyday Nouns – Objects & Places,Misc objects,bag,Tasche,가방
+394,Everyday Nouns – Objects & Places,Misc objects,clock,Uhr,시계
+395,Everyday Nouns – Objects & Places,Misc objects,watch,Armbanduhr,손목시계
+396,Everyday Nouns – Objects & Places,Misc objects,mirror,Spiegel,거울
+397,Everyday Nouns – Objects & Places,Misc objects,wallet,Brieftasche,지갑
+398,Everyday Nouns – Objects & Places,Misc objects,card,Karte,카드
+399,Everyday Nouns – Objects & Places,Misc objects,coin,Münze,동전
+400,Everyday Nouns – Objects & Places,Misc objects,brush,Bürste,브러시
+401,Adjectives,Size,big,groß,큰
+402,Adjectives,Size,small,klein,작은
+403,Adjectives,Size,large,groß,거대한/큰
+404,Adjectives,Size,tiny,winzig,아주 작은
+405,Adjectives,Size,huge,riesig,거대한
+406,Adjectives,Size,wide,weit,넓은
+407,Adjectives,Size,narrow,eng,좁은
+408,Adjectives,Size,tall,hoch/groß,키가 큰
+409,Adjectives,Size,short,kurz/klein,짧은/키가 작은
+410,Adjectives,Size,long,lang,긴
+411,Adjectives,Quality,good,gut,좋은
+412,Adjectives,Quality,bad,schlecht,나쁜
+413,Adjectives,Quality,great,großartig,대단한
+414,Adjectives,Quality,nice,nett,멋진/친절한
+415,Adjectives,Quality,terrible,schrecklich,끔찍한
+416,Adjectives,Quality,excellent,ausgezeichnet,뛰어난
+417,Adjectives,Quality,poor,arm/schlecht,가난한/형편없는
+418,Adjectives,Quality,perfect,perfekt,완벽한
+419,Adjectives,Quality,okay,okay,괜찮은
+420,Adjectives,Quality,fine,gut/fein,좋은/미세한
+421,Adjectives,Speed,fast,schnell,빠른
+422,Adjectives,Speed,slow,langsam,느린
+423,Adjectives,Speed,quick,schnell,신속한
+424,Adjectives,Speed,rapid,schnell,급속한
+425,Adjectives,Speed,steady,stetig,꾸준한
+426,Adjectives,Speed,sudden,plötzlich,갑작스러운
+427,Adjectives,Speed,immediate,sofortig,즉각적인
+428,Adjectives,Speed,brief,kurz,잠깐의
+429,Adjectives,Speed,long,lang,긴
+430,Adjectives,Speed,short,kurz,짧은
+431,Adjectives,Emotion,happy,glücklich,행복한
+432,Adjectives,Emotion,sad,traurig,슬픈
+433,Adjectives,Emotion,angry,wütend,화난
+434,Adjectives,Emotion,scared,verängstigt,무서워하는
+435,Adjectives,Emotion,excited,aufgeregt,신난
+436,Adjectives,Emotion,bored,gelangweilt,지루한
+437,Adjectives,Emotion,calm,ruhig,차분한
+438,Adjectives,Emotion,nervous,nervös,긴장한
+439,Adjectives,Emotion,tired,müde,피곤한
+440,Adjectives,Emotion,surprised,überrascht,놀란
+441,Adjectives,Physical,hot,heiß,뜨거운
+442,Adjectives,Physical,cold,kalt,추운
+443,Adjectives,Physical,warm,warm,따뜻한
+444,Adjectives,Physical,cool,kühl,시원한
+445,Adjectives,Physical,dry,trocken,건조한
+446,Adjectives,Physical,wet,nass,젖은
+447,Adjectives,Physical,soft,weich,부드러운
+448,Adjectives,Physical,hard,hart,딱딱한
+449,Adjectives,Physical,smooth,glatt,매끄러운
+450,Adjectives,Physical,rough,rau,거친
+451,Adjectives,Difficulty,easy,einfach,쉬운
+452,Adjectives,Difficulty,hard,schwer,어려운
+453,Adjectives,Difficulty,difficult,schwierig,어려운
+454,Adjectives,Difficulty,simple,einfach,단순한
+455,Adjectives,Difficulty,complex,komplex,복잡한
+456,Adjectives,Difficulty,clear,klar,명확한
+457,Adjectives,Difficulty,tough,zäh/hart,힘든
+458,Adjectives,Difficulty,heavy,schwer,무거운
+459,Adjectives,Difficulty,light,leicht,가벼운
+460,Adjectives,Difficulty,possible,möglich,가능한
+461,Adjectives,Appearance,beautiful,schön,아름다운
+462,Adjectives,Appearance,ugly,hässlich,못생긴
+463,Adjectives,Appearance,clean,sauber,깨끗한
+464,Adjectives,Appearance,dirty,schmutzig,더러운
+465,Adjectives,Appearance,straight,gerade,직선의/똑바른
+466,Adjectives,Appearance,curly,lockig,곱슬거리는
+467,Adjectives,Appearance,bright,hell,밝은
+468,Adjectives,Appearance,dark,dunkel,어두운
+469,Adjectives,Appearance,colorful,bunt,다채로운
+470,Adjectives,Appearance,pale,blass,창백한
+471,Adjectives,Age,new,neu,새로운
+472,Adjectives,Age,old,alt,오래된/나이 든
+473,Adjectives,Age,young,jung,어린
+474,Adjectives,Age,recent,kürzlich,최근의
+475,Adjectives,Age,modern,modern,현대적인
+476,Adjectives,Age,ancient,alt/antik,고대의
+477,Adjectives,Age,early,früh,이른
+478,Adjectives,Age,late,spät,늦은
+479,Adjectives,Age,past,vergangen,과거의
+480,Adjectives,Age,future,zukünftig,미래의
+481,Adjectives,Importance,important,wichtig,중요한
+482,Adjectives,Importance,trivial,trivial,사소한
+483,Adjectives,Importance,main,Haupt-,주요한
+484,Adjectives,Importance,major,groß/wichtig,중대한
+485,Adjectives,Importance,minor,klein/unwichtig,사소한/부차적인
+486,Adjectives,Importance,special,speziell,특별한
+487,Adjectives,Importance,normal,normal,일반적인
+488,Adjectives,Importance,common,häufig/gemeinsam,흔한
+489,Adjectives,Importance,rare,selten,희귀한
+490,Adjectives,Importance,necessary,notwendig,필요한
+491,Adjectives,Quantity,full,voll,가득 찬
+492,Adjectives,Quantity,empty,leer,비어 있는
+493,Adjectives,Quantity,whole,ganz,전체의
+494,Adjectives,Quantity,part,Teil,부분적인
+495,Adjectives,Quantity,half,halb,절반의
+496,Adjectives,Quantity,double,doppelt,이중의
+497,Adjectives,Quantity,single,einzeln,단일의
+498,Adjectives,Quantity,extra,zusätzlich,추가의
+499,Adjectives,Quantity,enough,genug,충분한
+500,Adjectives,Quantity,too many,zu viele,너무 많은
+501,Time & Numbers,Numbers 1-10,one,eins,일(하나)
+502,Time & Numbers,Numbers 1-10,two,zwei,이(둘)
+503,Time & Numbers,Numbers 1-10,three,drei,삼(셋)
+504,Time & Numbers,Numbers 1-10,four,vier,사(넷)
+505,Time & Numbers,Numbers 1-10,five,fünf,오(다섯)
+506,Time & Numbers,Numbers 1-10,six,sechs,육(여섯)
+507,Time & Numbers,Numbers 1-10,seven,sieben,칠(일곱)
+508,Time & Numbers,Numbers 1-10,eight,acht,팔(여덟)
+509,Time & Numbers,Numbers 1-10,nine,neun,구(아홉)
+510,Time & Numbers,Numbers 1-10,ten,zehn,십(열)
+511,Time & Numbers,Numbers 11-20,eleven,elf,십일
+512,Time & Numbers,Numbers 11-20,twelve,zwölf,십이
+513,Time & Numbers,Numbers 11-20,thirteen,dreizehn,십삼
+514,Time & Numbers,Numbers 11-20,fourteen,vierzehn,십사
+515,Time & Numbers,Numbers 11-20,fifteen,fünfzehn,십오
+516,Time & Numbers,Numbers 11-20,sixteen,sechzehn,십육
+517,Time & Numbers,Numbers 11-20,seventeen,siebzehn,십칠
+518,Time & Numbers,Numbers 11-20,eighteen,achtzehn,십팔
+519,Time & Numbers,Numbers 11-20,nineteen,neunzehn,십구
+520,Time & Numbers,Numbers 11-20,twenty,zwanzig,이십
+521,Time & Numbers,Tens,thirty,dreißig,삼십
+522,Time & Numbers,Tens,forty,vierzig,사십
+523,Time & Numbers,Tens,fifty,fünfzig,오십
+524,Time & Numbers,Tens,sixty,sechzig,육십
+525,Time & Numbers,Tens,seventy,siebzig,칠십
+526,Time & Numbers,Tens,eighty,achtzig,팔십
+527,Time & Numbers,Tens,ninety,neunzig,구십
+528,Time & Numbers,Tens,hundred,hundert,백
+529,Time & Numbers,Tens,thousand,tausend,천
+530,Time & Numbers,Tens,million,Million,백만
+531,Time & Numbers,Large numbers,hundred,hundert,백
+532,Time & Numbers,Large numbers,thousand,tausend,천
+533,Time & Numbers,Large numbers,million,Million,백만
+534,Time & Numbers,Large numbers,billion,Milliarde,십억
+535,Time & Numbers,Large numbers,trillion,Billion,일조
+536,Time & Numbers,Large numbers,many,viele,많은
+537,Time & Numbers,Large numbers,countless,unzählig,셀 수 없는
+538,Time & Numbers,Large numbers,huge,riesig,거대한
+539,Time & Numbers,Large numbers,large,groß,큰
+540,Time & Numbers,Large numbers,infinite,unendlich,무한한
+541,Time & Numbers,Days,Monday,Montag,월요일
+542,Time & Numbers,Days,Tuesday,Dienstag,화요일
+543,Time & Numbers,Days,Wednesday,Mittwoch,수요일
+544,Time & Numbers,Days,Thursday,Donnerstag,목요일
+545,Time & Numbers,Days,Friday,Freitag,금요일
+546,Time & Numbers,Days,Saturday,Samstag,토요일
+547,Time & Numbers,Days,Sunday,Sonntag,일요일
+548,Time & Numbers,Days,today,heute,오늘
+549,Time & Numbers,Days,tomorrow,morgen,내일
+550,Time & Numbers,Days,yesterday,gestern,어제
+551,Time & Numbers,Months,January,Januar,일월
+552,Time & Numbers,Months,February,Februar,이월
+553,Time & Numbers,Months,March,März,삼월
+554,Time & Numbers,Months,April,April,사월
+555,Time & Numbers,Months,May,Mai,오월
+556,Time & Numbers,Months,June,Juni,유월
+557,Time & Numbers,Months,July,Juli,칠월
+558,Time & Numbers,Months,August,August,팔월
+559,Time & Numbers,Months,September,September,구월
+560,Time & Numbers,Months,October,Oktober,시월
+561,Time & Numbers,Time,hour,Stunde,시간
+562,Time & Numbers,Time,minute,Minute,분
+563,Time & Numbers,Time,second,Sekunde,초
+564,Time & Numbers,Time,moment,Moment,순간
+565,Time & Numbers,Time,clock,Uhr,시계
+566,Time & Numbers,Time,watch,Armbanduhr,손목시계
+567,Time & Numbers,Time,time,Zeit,시간/때
+568,Time & Numbers,Time,date,Datum,날짜
+569,Time & Numbers,Time,year,Jahr,년
+570,Time & Numbers,Time,week,Woche,주
+571,Time & Numbers,Frequency,always,immer,항상
+572,Time & Numbers,Frequency,often,oft,자주
+573,Time & Numbers,Frequency,usually,normalerweise,보통
+574,Time & Numbers,Frequency,sometimes,manchmal,때때로
+575,Time & Numbers,Frequency,rarely,selten,드물게
+576,Time & Numbers,Frequency,never,nie,결코 ~않다
+577,Time & Numbers,Frequency,daily,täglich,매일
+578,Time & Numbers,Frequency,weekly,wöchentlich,매주
+579,Time & Numbers,Frequency,monthly,monatlich,매달
+580,Time & Numbers,Frequency,yearly,jährlich,매년
+581,Time & Numbers,Sequence,first,erstes,첫 번째
+582,Time & Numbers,Sequence,next,nächstes,다음
+583,Time & Numbers,Sequence,last,letztes,마지막
+584,Time & Numbers,Sequence,finally,schließlich,마침내
+585,Time & Numbers,Sequence,second,zweites,두 번째
+586,Time & Numbers,Sequence,third,drittes,세 번째
+587,Time & Numbers,Sequence,then,dann,그때/그다음
+588,Time & Numbers,Sequence,after,nach,후에
+589,Time & Numbers,Sequence,before,vor,전에
+590,Time & Numbers,Sequence,step,Schritt,단계/걸음
+591,Time & Numbers,Duration,long,lang,긴
+592,Time & Numbers,Duration,short,kurz,짧은
+593,Time & Numbers,Duration,forever,ewig,영원히
+594,Time & Numbers,Duration,temporary,vorübergehend,임시의
+595,Time & Numbers,Duration,brief,kurz,잠깐의
+596,Time & Numbers,Duration,while,während,동안
+597,Time & Numbers,Duration,period,Zeitraum,기간
+598,Time & Numbers,Duration,instant,sofort,즉각적인
+599,Time & Numbers,Duration,decade,Jahrzehnt,십 년
+600,Time & Numbers,Duration,century,Jahrhundert,세기
+601,Question & Conversation Words,Question words,what,was,무엇
+602,Question & Conversation Words,Question words,why,warum,왜
+603,Question & Conversation Words,Question words,who,wer,누구
+604,Question & Conversation Words,Question words,where,wo,어디
+605,Question & Conversation Words,Question words,when,wann,언제
+606,Question & Conversation Words,Question words,how,wie,어떻게
+607,Question & Conversation Words,Question words,which,welches,어느 것
+608,Question & Conversation Words,Question words,whose,wessen,누구의
+609,Question & Conversation Words,Question words,whom,wen/wem,누구를
+610,Question & Conversation Words,Question words,whether,ob,~인지 아닌지
+611,Question & Conversation Words,Asking help,help,Hilfe,도움
+612,Question & Conversation Words,Asking help,please,bitte,부디/제발
+613,Question & Conversation Words,Asking help,can you,kannst du,할 수 있나요
+614,Question & Conversation Words,Asking help,could you,könntest du,해줄 수 있나요
+615,Question & Conversation Words,Asking help,would you,würdest du,해주시겠어요
+616,Question & Conversation Words,Asking help,may I,darf ich,해도 될까요
+617,Question & Conversation Words,Asking help,excuse me,Entschuldigung,실례합니다
+618,Question & Conversation Words,Asking help,assist,unterstützen,돕다
+619,Question & Conversation Words,Asking help,guide,führen,안내하다
+620,Question & Conversation Words,Asking help,show,zeigen,보여주다
+621,Question & Conversation Words,Clarification,repeat,wiederholen,반복하다
+622,Question & Conversation Words,Clarification,explain,erklären,설명하다
+623,Question & Conversation Words,Clarification,understand,verstehen,이해하다
+624,Question & Conversation Words,Clarification,clarify,klären,명확히 하다
+625,Question & Conversation Words,Clarification,mean,meinen,의미하다
+626,Question & Conversation Words,Clarification,say again,nochmal sagen,다시 말하다
+627,Question & Conversation Words,Clarification,slow,langsam,느린/천천히
+628,Question & Conversation Words,Clarification,simple,einfach,단순한
+629,Question & Conversation Words,Clarification,clear,klar,명확한
+630,Question & Conversation Words,Clarification,check,prüfen,확인하다
+631,Question & Conversation Words,Agreement,yes,ja,예
+632,Question & Conversation Words,Agreement,okay,okay,오케이
+633,Question & Conversation Words,Agreement,true,wahr,진실인
+634,Question & Conversation Words,Agreement,correct,richtig,옳은
+635,Question & Conversation Words,Agreement,agree,zustimmen,동의하다
+636,Question & Conversation Words,Agreement,sure,sicher,확실한
+637,Question & Conversation Words,Agreement,fine,gut,좋은/괜찮은
+638,Question & Conversation Words,Agreement,right,richtig,맞는
+639,Question & Conversation Words,Agreement,good,gut,좋은
+640,Question & Conversation Words,Agreement,absolutely,absolut,절대적으로
+641,Question & Conversation Words,Disagreement,no,nein,아니오
+642,Question & Conversation Words,Disagreement,not,nicht,않다
+643,Question & Conversation Words,Disagreement,false,falsch,거짓인
+644,Question & Conversation Words,Disagreement,wrong,falsch,틀린
+645,Question & Conversation Words,Disagreement,disagree,nicht zustimmen,반의하다
+646,Question & Conversation Words,Disagreement,refuse,ablehnen,거절하다
+647,Question & Conversation Words,Disagreement,impossible,unmöglich,불가능한
+648,Question & Conversation Words,Disagreement,deny,leugnen,부인하다
+649,Question & Conversation Words,Disagreement,untrue,unwahr,사실이 아닌
+650,Question & Conversation Words,Disagreement,never,nie,절대 ~않다
+651,Question & Conversation Words,Politeness,please,bitte,부디
+652,Question & Conversation Words,Politeness,thank you,danke,감사합니다
+653,Question & Conversation Words,Politeness,thanks,danke,고마워
+654,Question & Conversation Words,Politeness,welcome,bitte,천만에요/환영
+655,Question & Conversation Words,Politeness,gladly,gerne,기꺼이
+656,Question & Conversation Words,Politeness,pleasure,Vergnügen,기쁨
+657,Question & Conversation Words,Politeness,kind,nett,친절한
+658,Question & Conversation Words,Politeness,polite,höflich,공손한
+659,Question & Conversation Words,Politeness,courtesy,Höflichkeit,예의
+660,Question & Conversation Words,Politeness,respect,Respekt,존경
+661,Question & Conversation Words,Apologies,sorry,Entschuldigung,미안한
+662,Question & Conversation Words,Apologies,excuse me,Entschuldigen Sie mich,실례합니다
+663,Question & Conversation Words,Apologies,pardon,Verzeihung,용서
+664,Question & Conversation Words,Apologies,apologize,entschuldigen,사과하다
+665,Question & Conversation Words,Apologies,forgive,vergeben,용서하다
+666,Question & Conversation Words,Apologies,mistake,Fehler,실수
+667,Question & Conversation Words,Apologies,regret,bedauern,후회하다
+668,Question & Conversation Words,Apologies,fault,Schuld,잘못/책임
+669,Question & Conversation Words,Apologies,guilt,Schuld,죄책감
+670,Question & Conversation Words,Apologies,shame,Schande,부끄러움
+671,Question & Conversation Words,Opinions,think,denken,생각하다
+672,Question & Conversation Words,Opinions,feel,fühlen,느끼다
+673,Question & Conversation Words,Opinions,believe,glauben,믿다
+674,Question & Conversation Words,Opinions,opinion,Meinung,의견
+675,Question & Conversation Words,Opinions,view,Sicht,관점
+676,Question & Conversation Words,Opinions,thought,Gedanke,생각
+677,Question & Conversation Words,Opinions,mind,Geist,마음
+678,Question & Conversation Words,Opinions,idea,Idee,아이디어
+679,Question & Conversation Words,Opinions,guess,vermuten,추측
+680,Question & Conversation Words,Opinions,sure,sicher,확실한
+681,Question & Conversation Words,Reactions,wow,wow,와
+682,Question & Conversation Words,Reactions,really,wirklich,정말
+683,Question & Conversation Words,Reactions,great,toll,대단한
+684,Question & Conversation Words,Reactions,nice,nett,멋진
+685,Question & Conversation Words,Reactions,cool,cool,멋진/시원한
+686,Question & Conversation Words,Reactions,oh,oh,오
+687,Question & Conversation Words,Reactions,ah,ah,아
+688,Question & Conversation Words,Reactions,amazing,erstaunlich,놀라운
+689,Question & Conversation Words,Reactions,surprising,überraschend,놀라운
+690,Question & Conversation Words,Reactions,strange,seltsam,이상한
+691,Question & Conversation Words,Fillers,um,ähm,음
+692,Question & Conversation Words,Fillers,well,nun,음/글쎄
+693,Question & Conversation Words,Fillers,like,wie,~처럼
+694,Question & Conversation Words,Fillers,so,also,그래서
+695,Question & Conversation Words,Fillers,basically,im Grunde,기본적으로
+696,Question & Conversation Words,Fillers,actually,eigentlich,사실은
+697,Question & Conversation Words,Fillers,honestly,ehrlich gesagt,정직하게
+698,Question & Conversation Words,Fillers,meanwhile,währenddessen,그 동안에
+699,Question & Conversation Words,Fillers,anyway,jedenfalls,어쨌든
+700,Question & Conversation Words,Fillers,perhaps,vielleicht,어쩌면
+701,Food & Daily Life,Food basics,rice,Reis,쌀
+702,Food & Daily Life,Food basics,bread,Brot,빵
+703,Food & Daily Life,Food basics,meat,Fleisch,고기
+704,Food & Daily Life,Food basics,fish,Fisch,생선
+705,Food & Daily Life,Food basics,egg,Ei,계란
+706,Food & Daily Life,Food basics,milk,Milch,우유
+707,Food & Daily Life,Food basics,cheese,Käse,치즈
+708,Food & Daily Life,Food basics,butter,Butter,버터
+709,Food & Daily Life,Food basics,sugar,Zucker,설탕
+710,Food & Daily Life,Food basics,salt,Salz,소금
+711,Food & Daily Life,Drinks,water,Wasser,물
+712,Food & Daily Life,Drinks,coffee,Kaffee,커피
+713,Food & Daily Life,Drinks,tea,Tee,차
+714,Food & Daily Life,Drinks,juice,Saft,주스
+715,Food & Daily Life,Drinks,milk,Milch,우유
+716,Food & Daily Life,Drinks,beer,Bier,맥주
+717,Food & Daily Life,Drinks,wine,Wein,와인
+718,Food & Daily Life,Drinks,soda,Limo,탄산음료
+719,Food & Daily Life,Drinks,drink,Getränk,음료
+720,Food & Daily Life,Drinks,cup,Tasse,컵
+721,Food & Daily Life,Fruits,apple,Apfel,사과
+722,Food & Daily Life,Fruits,banana,Banane,바나나
+723,Food & Daily Life,Fruits,orange,Orange,오렌지
+724,Food & Daily Life,Fruits,grape,Traube,포도
+725,Food & Daily Life,Fruits,lemon,Zitrone,레몬
+726,Food & Daily Life,Fruits,strawberry,Erdbeere,딸기
+727,Food & Daily Life,Fruits,mango,Mango,망고
+728,Food & Daily Life,Fruits,berry,Beere,베리
+729,Food & Daily Life,Fruits,melon,Melone,멜론
+730,Food & Daily Life,Fruits,peach,Pfirsich,복숭아
+731,Food & Daily Life,Vegetables,carrot,Karotte,당근
+732,Food & Daily Life,Vegetables,onion,Zwiebel,양파
+733,Food & Daily Life,Vegetables,potato,Kartoffel,감자
+734,Food & Daily Life,Vegetables,tomato,Tomate,토마토
+735,Food & Daily Life,Vegetables,salad,Salat,샐러드
+736,Food & Daily Life,Vegetables,pepper,Pfeffer/Paprika,고추/피망
+737,Food & Daily Life,Vegetables,cabbage,Kohl,양배추
+738,Food & Daily Life,Vegetables,corn,Mais,옥수수
+739,Food & Daily Life,Vegetables,bean,Bohne,콩
+740,Food & Daily Life,Vegetables,garlic,Knoblauch,마늘
+741,Food & Daily Life,Meals,breakfast,Frühstück,아침 식사
+742,Food & Daily Life,Meals,lunch,Mittagessen,점심 식사
+743,Food & Daily Life,Meals,dinner,Abendessen,저녁 식사
+744,Food & Daily Life,Meals,snack,Snack,간식
+745,Food & Daily Life,Meals,meal,Mahlzeit,식사
+746,Food & Daily Life,Meals,food,Essen,음식
+747,Food & Daily Life,Meals,eat,essen,먹다
+748,Food & Daily Life,Meals,cook,kochen,요리하다
+749,Food & Daily Life,Meals,kitchen,Küche,주방
+750,Food & Daily Life,Meals,restaurant,Restaurant,레스토랑
+751,Food & Daily Life,Cooking,cook,kochen,요리하다
+752,Food & Daily Life,Cooking,boil,kochen/sieden,끓이다
+753,Food & Daily Life,Cooking,fry,braten,튀기다/볶다
+754,Food & Daily Life,Cooking,bake,backen,굽다
+755,Food & Daily Life,Cooking,grill,grillen,그릴에 굽다
+756,Food & Daily Life,Cooking,mix,mischen,섞다
+757,Food & Daily Life,Cooking,cut,schneiden,자르다
+758,Food & Daily Life,Cooking,wash,waschen,씻다
+759,Food & Daily Life,Cooking,prepare,vorbereiten,준비하다
+760,Food & Daily Life,Cooking,heat,erhitzen,가열하다
+761,Food & Daily Life,Taste,sweet,süß,달콤한
+762,Food & Daily Life,Taste,salty,salzig,짠
+763,Food & Daily Life,Taste,sour,sauer,신
+764,Food & Daily Life,Taste,bitter,bitter,쓴
+765,Food & Daily Life,Taste,spicy,scharf,매운
+766,Food & Daily Life,Taste,hot,heiß/scharf,뜨거운/매운
+767,Food & Daily Life,Taste,cold,kalt,차가운
+768,Food & Daily Life,Taste,fresh,frisch,신선한
+769,Food & Daily Life,Taste,delicious,lecker,맛있는
+770,Food & Daily Life,Taste,tasty,schmackhaft,맛있는
+771,Food & Daily Life,Shopping food,buy,kaufen,사다
+772,Food & Daily Life,Shopping food,price,Preis,가격
+773,Food & Daily Life,Shopping food,market,Markt,시장
+774,Food & Daily Life,Shopping food,store,Laden,가게
+775,Food & Daily Life,Shopping food,shop,Geschäft,상점
+776,Food & Daily Life,Shopping food,pay,bezahlen,지불하다
+777,Food & Daily Life,Shopping food,cost,kosten,비용
+778,Food & Daily Life,Shopping food,bill,Rechnung,계산서
+779,Food & Daily Life,Shopping food,list,Liste,목록
+780,Food & Daily Life,Shopping food,fresh,frisch,신선한
+781,Food & Daily Life,Eating out,menu,Speisekarte,메뉴
+782,Food & Daily Life,Eating out,bill,Rechnung,계산서
+783,Food & Daily Life,Eating out,table,Tisch,테이블
+784,Food & Daily Life,Eating out,waiter,Kellner,웨이터
+785,Food & Daily Life,Eating out,order,bestellen,주문하다
+786,Food & Daily Life,Eating out,tip,Trinkgeld,팁
+787,Food & Daily Life,Eating out,restaurant,Restaurant,레스토랑
+788,Food & Daily Life,Eating out,cafe,Café,카페
+789,Food & Daily Life,Eating out,food,Essen,음식
+790,Food & Daily Life,Eating out,drink,Getränk,음료
+791,Food & Daily Life,Health food,diet,Diät,식단
+792,Food & Daily Life,Health food,healthy,gesund,건강한
+793,Food & Daily Life,Health food,vitamin,Vitamin,비타민
+794,Food & Daily Life,Health food,fruit,Frucht,과일
+795,Food & Daily Life,Health food,green,grün,초록색/채소
+796,Food & Daily Life,Health food,natural,natürlich,자연의
+797,Food & Daily Life,Health food,organic,Bio,유기농
+798,Food & Daily Life,Health food,fresh,frisch,신선한
+799,Food & Daily Life,Health food,water,Wasser,물
+800,Food & Daily Life,Health food,sugar-free,zuckerfrei,무설탕
+801,Travel & Directions,Directions,left,links,왼쪽
+802,Travel & Directions,Directions,right,rechts,오른쪽
+803,Travel & Directions,Directions,straight,geradeaus,똑바로
+804,Travel & Directions,Directions,back,zurück,뒤로
+805,Travel & Directions,Directions,up,hoch,위로
+806,Travel & Directions,Directions,down,runter,아래로
+807,Travel & Directions,Directions,north,Norden,북쪽
+808,Travel & Directions,Directions,south,Süden,남쪽
+809,Travel & Directions,Directions,east,Osten,동쪽
+810,Travel & Directions,Directions,west,Westen,서쪽
+811,Travel & Directions,Places,hotel,Hotel,호텔
+812,Travel & Directions,Places,airport,Flughafen,공항
+813,Travel & Directions,Places,station,Bahnhof,역
+814,Travel & Directions,Places,bridge,Brücke,다리
+815,Travel & Directions,Places,city,Stadt,도시
+816,Travel & Directions,Places,country,Land,나라
+817,Travel & Directions,Places,beach,Strand,해변
+818,Travel & Directions,Places,island,Insel,섬
+819,Travel & Directions,Places,forest,Wald,숲
+820,Travel & Directions,Places,field,Feld,들판
+821,Travel & Directions,Transport verbs,drive,fahren,운전하다
+822,Travel & Directions,Transport verbs,fly,fliegen,날다
+823,Travel & Directions,Transport verbs,ride,fahren,타다
+824,Travel & Directions,Transport verbs,walk,gehen,걷다
+825,Travel & Directions,Transport verbs,travel,reisen,여행하다
+826,Travel & Directions,Transport verbs,sail,segeln,항해하다
+827,Travel & Directions,Transport verbs,cross,überqueren,건너다
+828,Travel & Directions,Transport verbs,reach,erreichen,도착하다
+829,Travel & Directions,Transport verbs,leave,verlassen,떠나다
+830,Travel & Directions,Transport verbs,arrive,ankommen,도착하다
+831,Travel & Directions,Tickets,ticket,Ticket,티켓
+832,Travel & Directions,Tickets,seat,Sitz,좌석
+833,Travel & Directions,Tickets,flight,Flug,비행편
+834,Travel & Directions,Tickets,boarding,Boarding,탑승
+835,Travel & Directions,Tickets,pass,Pass/Ausweis,패스/통과
+836,Travel & Directions,Tickets,class,Klasse,등급/클래스
+837,Travel & Directions,Tickets,gate,Gate,게이트
+838,Travel & Directions,Tickets,price,Preis,가격
+839,Travel & Directions,Tickets,book,buchen,예약하다
+840,Travel & Directions,Tickets,cancel,stornieren,취소하다
+841,Travel & Directions,Navigation,map,Karte,지도
+842,Travel & Directions,Navigation,location,Standort,위치
+843,Travel & Directions,Navigation,compass,Kompass,나침반
+844,Travel & Directions,Navigation,route,Route,경로
+845,Travel & Directions,Navigation,way,Weg,길
+846,Travel & Directions,Navigation,road,Straße,도로
+847,Travel & Directions,Navigation,path,Pfad,경로/오솔길
+848,Travel & Directions,Navigation,sign,Schild,표지판
+849,Travel & Directions,Navigation,guide,Führer,안내원/가이드
+850,Travel & Directions,Navigation,GPS,GPS,GPS
+851,Travel & Directions,Distance,near,nah,가까운
+852,Travel & Directions,Distance,far,fern,먼
+853,Travel & Directions,Distance,close,nah,가까운
+854,Travel & Directions,Distance,distant,entfernt,먼
+855,Travel & Directions,Distance,mile,Meile,마일
+856,Travel & Directions,Distance,kilometer,Kilometer,킬로미터
+857,Travel & Directions,Distance,meter,Meter,미터
+858,Travel & Directions,Distance,long,lang,긴
+859,Travel & Directions,Distance,short,kurz,짧은
+860,Travel & Directions,Distance,around,um/herum,주변에
+861,Travel & Directions,Accommodation,room,Zimmer,방
+862,Travel & Directions,Accommodation,key,Schlüssel,열쇠
+863,Travel & Directions,Accommodation,bed,Bett,침대
+864,Travel & Directions,Accommodation,check-in,Check-in,체크인
+865,Travel & Directions,Accommodation,check-out,Check-out,체크아웃
+866,Travel & Directions,Accommodation,stay,Stay/Bleiben,머물다
+867,Travel & Directions,Accommodation,guest,Gast,손님
+868,Travel & Directions,Accommodation,reception,Rezeption,리셉션
+869,Travel & Directions,Accommodation,service,Service,서비스
+870,Travel & Directions,Accommodation,lobby,Lobby,로비
+871,Travel & Directions,Problems,lost,verloren,잃어버린/길을 잃은
+872,Travel & Directions,Problems,late,spät,늦은
+873,Travel & Directions,Problems,delayed,verspätet,지연된
+874,Travel & Directions,Problems,cancel,storniert,취소된
+875,Travel & Directions,Problems,broken,gebrochen/kaputt,부서진/고장 난
+876,Travel & Directions,Problems,stolen,gestohlen,도난당한
+877,Travel & Directions,Problems,missed,verpasst,놓친
+878,Travel & Directions,Problems,wrong,falsch,틀린
+879,Travel & Directions,Problems,danger,Gefahr,위험
+880,Travel & Directions,Problems,help,Hilfe,도움
+881,Travel & Directions,Safety,police,Polizei,경찰
+882,Travel & Directions,Safety,help,Hilfe,도움
+883,Travel & Directions,Safety,safe,sicher,안전한
+884,Travel & Directions,Safety,secure,sicher,보안된
+885,Travel & Directions,Safety,caution,Vorsicht,주의
+886,Travel & Directions,Safety,emergency,Notfall,비상사태
+887,Travel & Directions,Safety,exit,Ausgang,출구
+888,Travel & Directions,Safety,danger,Gefahr,위험
+889,Travel & Directions,Safety,guard,Wache,경비원
+890,Travel & Directions,Safety,protection,Schutz,보호
+891,Travel & Directions,Travel phrases,check-in,Check-in,체크인
+892,Travel & Directions,Travel phrases,departure,Abfahrt/Abflug,출발
+893,Travel & Directions,Travel phrases,arrival,Ankunft,도착
+894,Travel & Directions,Travel phrases,passport,Reisepass,여권
+895,Travel & Directions,Travel phrases,visa,Visum,비자
+896,Travel & Directions,Travel phrases,luggage,Gepäck,수하물
+897,Travel & Directions,Travel phrases,pack,packen,짐을 싸다
+898,Travel & Directions,Travel phrases,trip,Reise,여행
+899,Travel & Directions,Travel phrases,tour,Tour,투어
+900,Travel & Directions,Travel phrases,guide,Führer,안내
+901,"Work, Study & Social Life",Work,job,Beruf,직업
+902,"Work, Study & Social Life",Work,salary,Gehalt,연봉/급여
+903,"Work, Study & Social Life",Work,office,Büro,사무실
+904,"Work, Study & Social Life",Work,manager,Manager,매니저
+905,"Work, Study & Social Life",Work,meeting,Meeting,회의
+906,"Work, Study & Social Life",Work,company,Firma,회사
+907,"Work, Study & Social Life",Work,career,Karriere,경력
+908,"Work, Study & Social Life",Work,boss,Chef,상사
+909,"Work, Study & Social Life",Work,work,Arbeit,일/업무
+910,"Work, Study & Social Life",Work,staff,Personal,직원
+911,"Work, Study & Social Life",Office actions,send,senden,보내다
+912,"Work, Study & Social Life",Office actions,meet,treffen,만나다
+913,"Work, Study & Social Life",Office actions,call,anrufen,전화하다
+914,"Work, Study & Social Life",Office actions,write,schreiben,쓰다
+915,"Work, Study & Social Life",Office actions,print,drucken,인쇄하다
+916,"Work, Study & Social Life",Office actions,copy,kopieren,복사하다
+917,"Work, Study & Social Life",Office actions,save,speichern,저장하다
+918,"Work, Study & Social Life",Office actions,organize,organisieren,조직하다
+919,"Work, Study & Social Life",Office actions,plan,planen,계획하다
+920,"Work, Study & Social Life",Office actions,finish,beenden,끝내다
+921,"Work, Study & Social Life",School,class,Klasse,수업/반
+922,"Work, Study & Social Life",School,exam,Prüfung,시험
+923,"Work, Study & Social Life",School,lesson,Lektion,레슨/공과
+924,"Work, Study & Social Life",School,grade,Note,성적/학년
+925,"Work, Study & Social Life",School,score,Punktzahl,점수
+926,"Work, Study & Social Life",School,homework,Hausaufgabe,숙제
+927,"Work, Study & Social Life",School,student,Student,학생
+928,"Work, Study & Social Life",School,teacher,Lehrer,선생님
+929,"Work, Study & Social Life",School,subject,Fach,과목
+930,"Work, Study & Social Life",School,term,Semester/Begriff,학기/용어
+931,"Work, Study & Social Life",Learning,study,studieren,공부하다
+932,"Work, Study & Social Life",Learning,practice,üben,연습하다
+933,"Work, Study & Social Life",Learning,learn,lernen,배우다
+934,"Work, Study & Social Life",Learning,improve,verbessern,개선하다
+935,"Work, Study & Social Life",Learning,test,Test,시험/테스트
+936,"Work, Study & Social Life",Learning,quiz,Quiz,퀴즈
+937,"Work, Study & Social Life",Learning,result,Ergebnis,결과
+938,"Work, Study & Social Life",Learning,skill,Fähigkeit,기술/숙련도
+939,"Work, Study & Social Life",Learning,progress,Fortschritt,진행/발전
+940,"Work, Study & Social Life",Learning,goal,Ziel,목표
+941,"Work, Study & Social Life",Communication,email,E-Mail,이메일
+942,"Work, Study & Social Life",Communication,message,Nachricht,메시지
+943,"Work, Study & Social Life",Communication,call,Anruf,전화
+944,"Work, Study & Social Life",Communication,chat,Chatten,채팅
+945,"Work, Study & Social Life",Communication,speak,sprechen,말하다
+946,"Work, Study & Social Life",Communication,talk,reden,이야기하다
+947,"Work, Study & Social Life",Communication,discuss,diskutieren,토론하다
+948,"Work, Study & Social Life",Communication,answer,antworten,대답
+949,"Work, Study & Social Life",Communication,question,Frage,질문
+950,"Work, Study & Social Life",Communication,share,teilen,공유
+951,"Work, Study & Social Life",Social media,post,Beitrag,포스트/게시물
+952,"Work, Study & Social Life",Social media,comment,Kommentar,댓글
+953,"Work, Study & Social Life",Social media,like,Like/Gefällt mir,좋아요
+954,"Work, Study & Social Life",Social media,share,teilen,공유
+955,"Work, Study & Social Life",Social media,follow,folgen,팔로우
+956,"Work, Study & Social Life",Social media,profile,Profil,프로필
+957,"Work, Study & Social Life",Social media,account,Konto,계정
+958,"Work, Study & Social Life",Social media,online,online,온라인
+959,"Work, Study & Social Life",Social media,web,Web,웹
+960,"Work, Study & Social Life",Social media,app,App,앱
+961,"Work, Study & Social Life",Events,party,Party,파티
+962,"Work, Study & Social Life",Events,meeting,Meeting,미팅/회의
+963,"Work, Study & Social Life",Events,wedding,Hochzeit,결혼식
+964,"Work, Study & Social Life",Events,concert,Konzert,콘서트
+965,"Work, Study & Social Life",Events,sport,Sport,스포츠
+966,"Work, Study & Social Life",Events,game,Spiel,게임
+967,"Work, Study & Social Life",Events,show,Show,쇼
+968,"Work, Study & Social Life",Events,event,Ereignis,행사/이벤트
+969,"Work, Study & Social Life",Events,celebration,Feier,축하
+970,"Work, Study & Social Life",Events,holiday,Feiertag,휴일
+971,"Work, Study & Social Life",Hobbies,game,Spiel,게임
+972,"Work, Study & Social Life",Hobbies,music,Musik,음악
+973,"Work, Study & Social Life",Hobbies,movie,Film,영화
+974,"Work, Study & Social Life",Hobbies,book,Buch,책
+975,"Work, Study & Social Life",Hobbies,sport,Sport,스포츠
+976,"Work, Study & Social Life",Hobbies,art,Kunst,예술
+977,"Work, Study & Social Life",Hobbies,dance,Tanz,춤
+978,"Work, Study & Social Life",Hobbies,read,lesen,읽기
+979,"Work, Study & Social Life",Hobbies,paint,malen,페인트/그림 그리기
+980,"Work, Study & Social Life",Hobbies,draw,zeichnen,그리기
+981,"Work, Study & Social Life",Goals,plan,Plan,계획
+982,"Work, Study & Social Life",Goals,success,Erfolg,성공
+983,"Work, Study & Social Life",Goals,future,Zukunft,미래
+984,"Work, Study & Social Life",Goals,dream,Traum,꿈
+985,"Work, Study & Social Life",Goals,target,Ziel,타겟/대상
+986,"Work, Study & Social Life",Goals,win,Sieg/Gewinnen,승리
+987,"Work, Study & Social Life",Goals,achieve,erreichen,성취하다
+988,"Work, Study & Social Life",Goals,hope,Hoffnung,희망
+989,"Work, Study & Social Life",Goals,wish,Wunsch,소원
+990,"Work, Study & Social Life",Goals,try,Versuch,시도
+991,"Work, Study & Social Life",Daily routine,wake,aufwachen,깨다
+992,"Work, Study & Social Life",Daily routine,commute,pendeln,통근하다
+993,"Work, Study & Social Life",Daily routine,start,beginnen,시작하다
+994,"Work, Study & Social Life",Daily routine,lunch,Mittagessen,점심
+995,"Work, Study & Social Life",Daily routine,finish,beenden,끝내다
+996,"Work, Study & Social Life",Daily routine,home,Zuhause,집
+997,"Work, Study & Social Life",Daily routine,sleep,schlafen,자다
+998,"Work, Study & Social Life",Daily routine,shower,duschen,샤워
+999,"Work, Study & Social Life",Daily routine,dress,anziehen,옷 입기
+1000,"Work, Study & Social Life",Daily routine,eat,essen,먹다

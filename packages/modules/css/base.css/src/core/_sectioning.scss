@@ -1,0 +1,30 @@
+// Document outline and layout sections.
+
+@mixin sectioning {
+  address,
+  article,
+  aside,
+  div,
+  footer,
+  header,
+  hgroup,
+  main,
+  nav,
+  section {
+    display: block;
+  }
+
+  article,
+  aside,
+  footer,
+  header,
+  main,
+  nav,
+  section {
+    width: 100%;
+  }
+
+  address {
+    font-style: normal;
+  }
+}

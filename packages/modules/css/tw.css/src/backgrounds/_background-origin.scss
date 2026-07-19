@@ -1,0 +1,13 @@
+// Background origin utilities — Tailwind v3 default scale
+
+$background-origins: (
+  ('border', border-box),
+  ('padding', padding-box),
+  ('content', content-box)
+);
+
+@each $name, $value in $background-origins {
+  .bg-origin-#{$name} {
+    background-origin: $value;
+  }
+}

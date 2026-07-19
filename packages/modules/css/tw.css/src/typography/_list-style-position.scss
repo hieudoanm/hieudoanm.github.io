@@ -1,0 +1,9 @@
+// List style position utilities — Tailwind v3 default scale
+
+$list-style-positions: (('inside', inside), ('outside', outside));
+
+@each $name, $value in $list-style-positions {
+  .list-#{$name} {
+    list-style-position: $value;
+  }
+}

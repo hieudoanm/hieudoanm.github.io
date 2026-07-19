@@ -1,0 +1,1009 @@
+year,stage,group,type,match_date,home,home_id,home_score,home_pens,away,away_id,away_score,away_pens,extra_time,stadium,city,host,result
+1930,Group,1,Round 1,1930-07-13,France,FRA,4,,Mexico,MEX,1,,0,Estadio Pocitos,Montevideo,Uruguay,home
+1930,Group,4,Round 1,1930-07-13,United States,USA,3,,Belgium,BEL,0,,0,Estadio Gran Parque Central,Montevideo,Uruguay,home
+1930,Group,2,Round 1,1930-07-14,Yugoslavia,YUG,2,,Brazil,BRA,1,,0,Estadio Gran Parque Central,Montevideo,Uruguay,home
+1930,Group,3,Round 1,1930-07-14,Romania,ROU,3,,Peru,PER,1,,0,Estadio Pocitos,Montevideo,Uruguay,home
+1930,Group,1,Round 1,1930-07-15,Argentina,ARG,1,,France,FRA,0,,0,Estadio Gran Parque Central,Montevideo,Uruguay,home
+1930,Group,1,Round 1,1930-07-16,Chile,CHL,3,,Mexico,MEX,0,,0,Estadio Gran Parque Central,Montevideo,Uruguay,home
+1930,Group,2,Round 1,1930-07-17,Yugoslavia,YUG,4,,Bolivia,BOL,0,,0,Estadio Gran Parque Central,Montevideo,Uruguay,home
+1930,Group,4,Round 1,1930-07-17,United States,USA,3,,Paraguay,PRY,0,,0,Estadio Gran Parque Central,Montevideo,Uruguay,home
+1930,Group,3,Round 1,1930-07-18,Uruguay,URY,1,,Peru,PER,0,,0,Estadio Centenario,Montevideo,Uruguay,home
+1930,Group,1,Round 1,1930-07-19,Chile,CHL,1,,France,FRA,0,,0,Estadio Centenario,Montevideo,Uruguay,home
+1930,Group,1,Round 1,1930-07-19,Argentina,ARG,6,,Mexico,MEX,3,,0,Estadio Centenario,Montevideo,Uruguay,home
+1930,Group,2,Round 1,1930-07-20,Brazil,BRA,4,,Bolivia,BOL,0,,0,Estadio Centenario,Montevideo,Uruguay,home
+1930,Group,4,Round 1,1930-07-20,Paraguay,PRY,1,,Belgium,BEL,0,,0,Estadio Centenario,Montevideo,Uruguay,home
+1930,Group,3,Round 1,1930-07-21,Uruguay,URY,4,,Romania,ROU,0,,0,Estadio Centenario,Montevideo,Uruguay,home
+1930,Group,1,Round 1,1930-07-22,Argentina,ARG,3,,Chile,CHL,1,,0,Estadio Centenario,Montevideo,Uruguay,home
+1930,Knock Out,,Semi Final,1930-07-26,Argentina,ARG,6,,United States,USA,1,,0,Estadio Centenario,Montevideo,Uruguay,home
+1930,Knock Out,,Semi Final,1930-07-27,Uruguay,URY,6,,Yugoslavia,YUG,1,,0,Estadio Centenario,Montevideo,Uruguay,home
+1930,Knock Out,,Final,1930-07-30,Uruguay,URY,4,,Argentina,ARG,2,,0,Estadio Centenario,Montevideo,Uruguay,home
+1934,Knock Out,,Round of 16,1934-05-27,Austria,AUT,3,,France,FRA,2,,1,Stadio Benito Mussolini,Turin,Italy,home
+1934,Knock Out,,Round of 16,1934-05-27,Czechoslovakia,CSK,2,,Romania,ROU,1,,0,Stadio Littorio,Trieste,Italy,home
+1934,Knock Out,,Round of 16,1934-05-27,Germany,DEU,5,,Belgium,BEL,2,,0,Stadio Giovanni Berta,Florence,Italy,home
+1934,Knock Out,,Round of 16,1934-05-27,Hungary,HUN,4,,Egypt,EGY,2,,0,Stadio Giorgio Ascarelli,Naples,Italy,home
+1934,Knock Out,,Round of 16,1934-05-27,Italy,ITA,7,,United States,USA,1,,0,Stadio Nazionale PNF,Rome,Italy,home
+1934,Knock Out,,Round of 16,1934-05-27,Spain,ESP,3,,Brazil,BRA,1,,0,Stadio Luigi Ferraris,Genoa,Italy,home
+1934,Knock Out,,Round of 16,1934-05-27,Sweden,SWE,3,,Argentina,ARG,2,,0,Stadio Renato Dall'Ara,Bologna,Italy,home
+1934,Knock Out,,Round of 16,1934-05-27,Switzerland,CHE,3,,Netherlands,NLD,2,,0,San Siro,Milan,Italy,home
+1934,Knock Out,,Quarter Final,1934-05-31,Austria,AUT,2,,Hungary,HUN,1,,0,Stadio Renato Dall'Ara,Bologna,Italy,home
+1934,Knock Out,,Quarter Final,1934-05-31,Czechoslovakia,CSK,3,,Switzerland,CHE,2,,0,Stadio Benito Mussolini,Turin,Italy,home
+1934,Knock Out,,Quarter Final,1934-05-31,Germany,DEU,2,,Sweden,SWE,1,,0,San Siro,Milan,Italy,home
+1934,Knock Out,,Quarter Final,1934-05-31,Italy,ITA,1,,Spain,ESP,1,,1,Stadio Giovanni Berta,Florence,Italy,draw
+1934,Knock Out,,Quarter Final,1934-06-01,Italy,ITA,1,,Spain,ESP,0,,0,Stadio Giovanni Berta,Florence,Italy,home
+1934,Knock Out,,Semi Final,1934-06-03,Czechoslovakia,CSK,3,,Germany,DEU,1,,0,Stadio Nazionale PNF,Rome,Italy,home
+1934,Knock Out,,Semi Final,1934-06-03,Italy,ITA,1,,Austria,AUT,0,,0,San Siro,Milan,Italy,home
+1934,Knock Out,,Third Place,1934-06-07,Germany,DEU,3,,Austria,AUT,2,,0,Stadio Giorgio Ascarelli,Naples,Italy,home
+1934,Knock Out,,Final,1934-06-10,Italy,ITA,2,,Czechoslovakia,CSK,1,,1,Stadio Nazionale PNF,Rome,Italy,home
+1938,Knock Out,,Round of 16,1938-06-04,Switzerland,CHE,1,,Germany,DEU,1,,1,Parc des Princes,Paris,France,draw
+1938,Knock Out,,Round of 16,1938-06-05,Cuba,CUB,3,,Romania,ROU,3,,1,Stade du T.O.E.C.,Toulouse,France,draw
+1938,Knock Out,,Round of 16,1938-06-05,France,FRA,3,,Belgium,BEL,1,,0,Stade Olympique de Colombes,Paris,France,home
+1938,Knock Out,,Round of 16,1938-06-05,Hungary,HUN,6,,Dutch East Indies,IDN,0,,0,Vélodrome Municipal,Reims,France,home
+1938,Knock Out,,Round of 16,1938-06-05,Italy,ITA,2,,Norway,NOR,1,,1,Stade Vélodrome,Marseille,France,home
+1938,Knock Out,,Round of 16,1938-06-05,Brazil,BRA,6,,Poland,POL,5,,1,Stade de la Meinau,Strasbourg,France,home
+1938,Knock Out,,Round of 16,1938-06-05,Czechoslovakia,CSK,3,,Netherlands,NLD,0,,1,Stade Jules Deschaseaux,Le Havre,France,home
+1938,Knock Out,,Round of 16,1938-06-09,Cuba,CUB,2,,Romania,ROU,1,,0,Stade du T.O.E.C.,Toulouse,France,home
+1938,Knock Out,,Round of 16,1938-06-09,Switzerland,CHE,4,,Germany,DEU,2,,0,Parc des Princes,Paris,France,home
+1938,Knock Out,,Quarter Final,1938-06-12,Brazil,BRA,1,,Czechoslovakia,CSK,1,,1,Stade du Parc Lescure,Bordeaux,France,draw
+1938,Knock Out,,Quarter Final,1938-06-12,Hungary,HUN,2,,Switzerland,CHE,0,,0,Stade Victor Boucquey,Lille,France,home
+1938,Knock Out,,Quarter Final,1938-06-12,Italy,ITA,3,,France,FRA,1,,0,Stade Olympique de Colombes,Paris,France,home
+1938,Knock Out,,Quarter Final,1938-06-12,Sweden,SWE,8,,Cuba,CUB,0,,0,Stade du Fort Carré,Antibes,France,home
+1938,Knock Out,,Quarter Final,1938-06-14,Brazil,BRA,2,,Czechoslovakia,CSK,1,,0,Stade du Parc Lescure,Bordeaux,France,home
+1938,Knock Out,,Semi Final,1938-06-16,Hungary,HUN,5,,Sweden,SWE,1,,0,Parc des Princes,Paris,France,home
+1938,Knock Out,,Semi Final,1938-06-16,Italy,ITA,2,,Brazil,BRA,1,,0,Stade Vélodrome,Marseille,France,home
+1938,Knock Out,,Third Place,1938-06-19,Brazil,BRA,4,,Sweden,SWE,2,,0,Stade du Parc Lescure,Bordeaux,France,home
+1938,Knock Out,,Final,1938-06-19,Italy,ITA,4,,Hungary,HUN,2,,0,Stade Olympique de Colombes,Paris,France,home
+1950,Group,1,Round 1,1950-06-24,Brazil,BRA,4,,Mexico,MEX,0,,0,Estádio do Maracanã,Rio de Janeiro,Brazil,home
+1950,Group,1,Round 1,1950-06-25,Yugoslavia,YUG,3,,Switzerland,CHE,0,,0,Estádio Independência,Belo Horizonte,Brazil,home
+1950,Group,2,Round 1,1950-06-25,England,ENG,2,,Chile,CHL,0,,0,Estádio do Maracanã,Rio de Janeiro,Brazil,home
+1950,Group,2,Round 1,1950-06-25,Spain,ESP,3,,United States,USA,1,,0,Estádio Vila Capanema,Curitiba,Brazil,home
+1950,Group,3,Round 1,1950-06-25,Sweden,SWE,3,,Italy,ITA,2,,0,Estádio do Pacaembu,São Paulo,Brazil,home
+1950,Group,1,Round 1,1950-06-28,Brazil,BRA,2,,Switzerland,CHE,2,,0,Estádio do Pacaembu,São Paulo,Brazil,draw
+1950,Group,1,Round 1,1950-06-28,Yugoslavia,YUG,4,,Mexico,MEX,1,,0,Estádio dos Eucaliptos,Porto Alegre,Brazil,home
+1950,Group,2,Round 1,1950-06-29,Spain,ESP,2,,Chile,CHL,0,,0,Estádio do Maracanã,Rio de Janeiro,Brazil,home
+1950,Group,2,Round 1,1950-06-29,United States,USA,1,,England,ENG,0,,0,Estádio Independência,Belo Horizonte,Brazil,home
+1950,Group,3,Round 1,1950-06-29,Sweden,SWE,2,,Paraguay,PRY,2,,0,Estádio Vila Capanema,Curitiba,Brazil,draw
+1950,Group,1,Round 1,1950-07-01,Brazil,BRA,2,,Yugoslavia,YUG,0,,0,Estádio do Maracanã,Rio de Janeiro,Brazil,home
+1950,Group,2,Round 1,1950-07-02,Chile,CHL,5,,United States,USA,2,,0,Estádio Ilha do Retiro,Recife,Brazil,home
+1950,Group,2,Round 1,1950-07-02,Spain,ESP,1,,England,ENG,0,,0,Estádio do Maracanã,Rio de Janeiro,Brazil,home
+1950,Group,3,Round 1,1950-07-02,Italy,ITA,2,,Paraguay,PRY,0,,0,Estádio do Pacaembu,São Paulo,Brazil,home
+1950,Group,4,Round 1,1950-07-02,Uruguay,URY,8,,Bolivia,BOL,0,,0,Estádio Independência,Belo Horizonte,Brazil,home
+1950,Group,1,Round 1,1950-07-02,Switzerland,CHE,2,,Mexico,MEX,1,,0,Estádio dos Eucaliptos,Porto Alegre,Brazil,home
+1950,Knock Out,,Final Round,1950-07-09,Brazil,BRA,7,,Sweden,SWE,1,,0,Estádio do Maracanã,Rio de Janeiro,Brazil,home
+1950,Knock Out,,Final Round,1950-07-09,Uruguay,URY,2,,Spain,ESP,2,,0,Estádio do Pacaembu,São Paulo,Brazil,draw
+1950,Knock Out,,Final Round,1950-07-13,Brazil,BRA,6,,Spain,ESP,1,,0,Estádio do Maracanã,Rio de Janeiro,Brazil,home
+1950,Knock Out,,Final Round,1950-07-13,Uruguay,URY,3,,Sweden,SWE,2,,0,Estádio do Pacaembu,São Paulo,Brazil,home
+1950,Knock Out,,Final Round,1950-07-16,Sweden,SWE,3,,Spain,ESP,1,,0,Estádio do Pacaembu,São Paulo,Brazil,home
+1950,Knock Out,,Final Round,1950-07-16,Uruguay,URY,2,,Brazil,BRA,1,,0,Estádio do Maracanã,Rio de Janeiro,Brazil,home
+1954,Group,1,Round 1,1954-06-16,Brazil,BRA,5,,Mexico,MEX,0,,0,Charmilles Stadium,Geneva,Switzerland,home
+1954,Group,1,Round 1,1954-06-16,Yugoslavia,YUG,1,,France,FRA,0,,0,Stade Olympique de la Pontaise,Lausanne,Switzerland,home
+1954,Group,3,Round 1,1954-06-16,Austria,AUT,1,,Scotland,SCO,0,,0,Hardturm Stadium,Zürich,Switzerland,home
+1954,Group,3,Round 1,1954-06-16,Uruguay,URY,2,,Czechoslovakia,CSK,0,,0,Wankdorf Stadium,Bern,Switzerland,home
+1954,Group,4,Round 1,1954-06-17,Switzerland,CHE,2,,Italy,ITA,1,,0,Stade Olympique de la Pontaise,Lausanne,Switzerland,home
+1954,Group,2,Round 1,1954-06-17,Hungary,HUN,9,,South Korea,KOR,0,,0,Hardturm Stadium,Zürich,Switzerland,home
+1954,Group,2,Round 1,1954-06-17,West Germany,DEU,4,,Turkey,TUR,1,,0,Wankdorf Stadium,Bern,Switzerland,home
+1954,Group,4,Round 1,1954-06-17,England,ENG,4,,Belgium,BEL,4,,1,St. Jakob Stadium,Basel,Switzerland,draw
+1954,Group,3,Round 1,1954-06-19,Uruguay,URY,7,,Scotland,SCO,0,,0,St. Jakob Stadium,Basel,Switzerland,home
+1954,Group,1,Round 1,1954-06-19,Brazil,BRA,1,,Yugoslavia,YUG,1,,1,Stade Olympique de la Pontaise,Lausanne,Switzerland,draw
+1954,Group,3,Round 1,1954-06-19,Austria,AUT,5,,Czechoslovakia,CSK,0,,0,Hardturm Stadium,Zürich,Switzerland,home
+1954,Group,1,Round 1,1954-06-19,France,FRA,3,,Mexico,MEX,2,,0,Charmilles Stadium,Geneva,Switzerland,home
+1954,Group,2,Round 1,1954-06-20,Hungary,HUN,8,,West Germany,DEU,3,,0,St. Jakob Stadium,Basel,Switzerland,home
+1954,Group,2,Round 1,1954-06-20,Turkey,TUR,7,,South Korea,KOR,0,,0,Charmilles Stadium,Geneva,Switzerland,home
+1954,Group,4,Round 1,1954-06-20,Italy,ITA,4,,Belgium,BEL,1,,0,Cornaredo Stadium,Lugano,Switzerland,home
+1954,Group,4,Round 1,1954-06-20,England,ENG,2,,Switzerland,CHE,0,,0,Wankdorf Stadium,Bern,Switzerland,home
+1954,Group,2,Round 1,1954-06-23,West Germany,DEU,7,,Turkey,TUR,2,,0,Hardturm Stadium,Zürich,Switzerland,home
+1954,Group,4,Round 1,1954-06-23,Switzerland,CHE,4,,Italy,ITA,1,,0,St. Jakob Stadium,Basel,Switzerland,home
+1954,Knock Out,,Quarter Final,1954-06-26,Austria,AUT,7,,Switzerland,CHE,5,,0,Stade Olympique de la Pontaise,Lausanne,Switzerland,home
+1954,Knock Out,,Quarter Final,1954-06-26,Uruguay,URY,4,,England,ENG,2,,0,St. Jakob Stadium,Basel,Switzerland,home
+1954,Knock Out,,Quarter Final,1954-06-27,Hungary,HUN,4,,Brazil,BRA,2,,0,Wankdorf Stadium,Bern,Switzerland,home
+1954,Knock Out,,Quarter Final,1954-06-27,West Germany,DEU,2,,Yugoslavia,YUG,0,,0,Charmilles Stadium,Geneva,Switzerland,home
+1954,Knock Out,,Semi Final,1954-06-30,Hungary,HUN,4,,Uruguay,URY,2,,1,Stade Olympique de la Pontaise,Lausanne,Switzerland,home
+1954,Knock Out,,Semi Final,1954-06-30,West Germany,DEU,6,,Austria,AUT,1,,0,St. Jakob Stadium,Basel,Switzerland,home
+1954,Knock Out,,Third Place,1954-07-03,Austria,AUT,3,,Uruguay,URY,1,,0,Hardturm Stadium,Zürich,Switzerland,home
+1954,Knock Out,,Final,1954-07-04,West Germany,DEU,3,,Hungary,HUN,2,,0,Wankdorf Stadium,Bern,Switzerland,home
+1958,Group,3,Round 1,1958-06-08,Sweden,SWE,3,,Mexico,MEX,0,,0,Råsunda Stadium,Solna,Sweden,home
+1958,Group,1,Round 1,1958-06-08,Argentina,ARG,1,,West Germany,DEU,3,,0,Malmö Stadion,Malmö,Sweden,away
+1958,Group,1,Round 1,1958-06-08,Northern Ireland,NIR,1,,Czechoslovakia,CSK,0,,0,Örjans Vall,Halmstad,Sweden,home
+1958,Group,2,Round 1,1958-06-08,France,FRA,7,,Paraguay,PRY,3,,0,Idrottsparken,Norrköping,Sweden,home
+1958,Group,2,Round 1,1958-06-08,Yugoslavia,YUG,1,,Scotland,SCO,1,,0,Arosvallen,Västerås,Sweden,draw
+1958,Group,3,Round 1,1958-06-08,Hungary,HUN,1,,Wales,WAL,1,,0,Jernvallen,Sandviken,Sweden,draw
+1958,Group,4,Round 1,1958-06-08,Brazil,BRA,3,,Austria,AUT,0,,0,Rimnersvallen,Uddevalla,Sweden,home
+1958,Group,4,Round 1,1958-06-08,Soviet Union,SUN,2,,England,ENG,2,,0,Ullevi,Gothenburg,Sweden,draw
+1958,Group,1,Round 1,1958-06-11,Argentina,ARG,3,,Northern Ireland,NIR,1,,0,Örjans Vall,Halmstad,Sweden,home
+1958,Group,1,Round 1,1958-06-11,West Germany,DEU,2,,Czechoslovakia,CSK,2,,0,Olympia,Helsingborg,Sweden,draw
+1958,Group,2,Round 1,1958-06-11,Paraguay,PRY,3,,Scotland,SCO,2,,0,Idrottsparken,Norrköping,Sweden,home
+1958,Group,2,Round 1,1958-06-11,Yugoslavia,YUG,3,,France,FRA,2,,0,Arosvallen,Västerås,Sweden,home
+1958,Group,3,Round 1,1958-06-11,Mexico,MEX,1,,Wales,WAL,1,,0,Råsunda Stadium,Solna,Sweden,draw
+1958,Group,4,Round 1,1958-06-11,Brazil,BRA,0,,England,ENG,0,,0,Ullevi,Gothenburg,Sweden,draw
+1958,Group,4,Round 1,1958-06-11,Soviet Union,SUN,2,,Austria,AUT,0,,0,Ryavallen,Borås,Sweden,home
+1958,Group,3,Round 1,1958-06-12,Sweden,SWE,2,,Hungary,HUN,1,,0,Råsunda Stadium,Solna,Sweden,home
+1958,Group,3,Round 1,1958-06-15,Sweden,SWE,0,,Wales,WAL,0,,0,Råsunda Stadium,Solna,Sweden,draw
+1958,Group,1,Round 1,1958-06-15,Czechoslovakia,CSK,6,,Argentina,ARG,1,,0,Olympia,Helsingborg,Sweden,home
+1958,Group,1,Round 1,1958-06-15,West Germany,DEU,2,,Northern Ireland,NIR,2,,0,Malmö Stadion,Malmö,Sweden,draw
+1958,Group,2,Round 1,1958-06-15,France,FRA,2,,Scotland,SCO,1,,0,Eyravallen,Örebro,Sweden,home
+1958,Group,2,Round 1,1958-06-15,Paraguay,PRY,3,,Yugoslavia,YUG,3,,0,Tunavallen,Eskilstuna,Sweden,draw
+1958,Group,3,Round 1,1958-06-15,Hungary,HUN,4,,Mexico,MEX,0,,0,Jernvallen,Sandviken,Sweden,home
+1958,Group,4,Round 1,1958-06-15,Brazil,BRA,2,,Soviet Union,SUN,0,,0,Ullevi,Gothenburg,Sweden,home
+1958,Group,4,Round 1,1958-06-15,England,ENG,2,,Austria,AUT,2,,0,Ryavallen,Borås,Sweden,draw
+1958,Group,1,Round 1,1958-06-17,Northern Ireland,NIR,2,,Czechoslovakia,CSK,1,,1,Malmö Stadion,Malmö,Sweden,home
+1958,Group,3,Round 1,1958-06-17,Wales,WAL,2,,Hungary,HUN,1,,0,Råsunda Stadium,Solna,Sweden,home
+1958,Group,4,Round 1,1958-06-17,Soviet Union,SUN,1,,England,ENG,0,,0,Ullevi,Gothenburg,Sweden,home
+1958,Knock Out,,Quarter Final,1958-06-19,Brazil,BRA,1,,Wales,WAL,0,,0,Ullevi,Gothenburg,Sweden,home
+1958,Knock Out,,Quarter Final,1958-06-19,France,FRA,4,,Northern Ireland,NIR,0,,0,Idrottsparken,Norrköping,Sweden,home
+1958,Knock Out,,Quarter Final,1958-06-19,Sweden,SWE,2,,Soviet Union,SUN,0,,0,Råsunda Stadium,Solna,Sweden,home
+1958,Knock Out,,Quarter Final,1958-06-19,West Germany,DEU,1,,Yugoslavia,YUG,0,,0,Malmö Stadion,Malmö,Sweden,home
+1958,Knock Out,,Semi Final,1958-06-24,Brazil,BRA,5,,France,FRA,2,,0,Råsunda Stadium,Solna,Sweden,home
+1958,Knock Out,,Semi Final,1958-06-24,Sweden,SWE,3,,West Germany,DEU,1,,0,Ullevi,Gothenburg,Sweden,home
+1958,Knock Out,,Third Place,1958-06-28,France,FRA,6,,West Germany,DEU,3,,0,Ullevi,Gothenburg,Sweden,home
+1958,Knock Out,,Final,1958-06-29,Brazil,BRA,5,,Sweden,SWE,2,,0,Råsunda Stadium,Solna,Sweden,home
+1962,Group,1,Round 1,1962-05-30,Uruguay,URY,2,,Colombia,COL,1,,0,Estadio Carlos Dittborn,Arica,Chile,home
+1962,Group,2,Round 1,1962-05-30,Chile,CHL,3,,Switzerland,CHE,1,,0,Estadio Nacional,Santiago,Chile,home
+1962,Group,3,Round 1,1962-05-30,Brazil,BRA,2,,Mexico,MEX,0,,0,Estadio Sausalito,Viña del Mar,Chile,home
+1962,Group,4,Round 1,1962-05-30,Argentina,ARG,1,,Bulgaria,BGR,0,,0,Estadio El Teniente,Rancagua,Chile,home
+1962,Group,1,Round 1,1962-05-31,Soviet Union,SUN,2,,Yugoslavia,YUG,0,,0,Estadio Carlos Dittborn,Arica,Chile,home
+1962,Group,2,Round 1,1962-05-31,West Germany,DEU,0,,Italy,ITA,0,,0,Estadio Nacional,Santiago,Chile,draw
+1962,Group,3,Round 1,1962-05-31,Czechoslovakia,CSK,1,,Spain,ESP,0,,0,Estadio Sausalito,Viña del Mar,Chile,home
+1962,Group,4,Round 1,1962-05-31,Hungary,HUN,2,,England,ENG,1,,0,Estadio El Teniente,Rancagua,Chile,home
+1962,Group,1,Round 1,1962-06-02,Yugoslavia,YUG,3,,Uruguay,URY,1,,0,Estadio Carlos Dittborn,Arica,Chile,home
+1962,Group,2,Round 1,1962-06-02,Chile,CHL,2,,Italy,ITA,0,,0,Estadio Nacional,Santiago,Chile,home
+1962,Group,3,Round 1,1962-06-02,Brazil,BRA,0,,Czechoslovakia,CSK,0,,0,Estadio Sausalito,Viña del Mar,Chile,draw
+1962,Group,4,Round 1,1962-06-02,England,ENG,3,,Argentina,ARG,1,,0,Estadio El Teniente,Rancagua,Chile,home
+1962,Group,1,Round 1,1962-06-03,Soviet Union,SUN,4,,Colombia,COL,4,,0,Estadio Carlos Dittborn,Arica,Chile,draw
+1962,Group,2,Round 1,1962-06-03,West Germany,DEU,2,,Switzerland,CHE,1,,0,Estadio Nacional,Santiago,Chile,home
+1962,Group,3,Round 1,1962-06-03,Spain,ESP,1,,Mexico,MEX,0,,0,Estadio Sausalito,Viña del Mar,Chile,home
+1962,Group,4,Round 1,1962-06-03,Hungary,HUN,6,,Bulgaria,BGR,1,,0,Estadio El Teniente,Rancagua,Chile,home
+1962,Group,1,Round 1,1962-06-06,Soviet Union,SUN,2,,Uruguay,URY,1,,0,Estadio Carlos Dittborn,Arica,Chile,home
+1962,Group,2,Round 1,1962-06-06,West Germany,DEU,2,,Chile,CHL,0,,0,Estadio Nacional,Santiago,Chile,home
+1962,Group,3,Round 1,1962-06-06,Brazil,BRA,2,,Spain,ESP,1,,0,Estadio Sausalito,Viña del Mar,Chile,home
+1962,Group,4,Round 1,1962-06-06,Hungary,HUN,0,,Argentina,ARG,0,,0,Estadio El Teniente,Rancagua,Chile,draw
+1962,Group,1,Round 1,1962-06-07,Yugoslavia,YUG,5,,Colombia,COL,0,,0,Estadio Carlos Dittborn,Arica,Chile,home
+1962,Group,2,Round 1,1962-06-07,Italy,ITA,3,,Switzerland,CHE,0,,0,Estadio Nacional,Santiago,Chile,home
+1962,Group,3,Round 1,1962-06-07,Mexico,MEX,3,,Czechoslovakia,CSK,1,,0,Estadio Sausalito,Viña del Mar,Chile,home
+1962,Group,4,Round 1,1962-06-07,England,ENG,0,,Bulgaria,BGR,0,,0,Estadio El Teniente,Rancagua,Chile,draw
+1962,Knock Out,,Quarter Final,1962-06-10,Brazil,BRA,3,,England,ENG,1,,0,Estadio Sausalito,Viña del Mar,Chile,home
+1962,Knock Out,,Quarter Final,1962-06-10,Chile,CHL,2,,Soviet Union,SUN,1,,0,Estadio Carlos Dittborn,Arica,Chile,home
+1962,Knock Out,,Quarter Final,1962-06-10,Czechoslovakia,CSK,1,,Hungary,HUN,0,,0,Estadio El Teniente,Rancagua,Chile,home
+1962,Knock Out,,Quarter Final,1962-06-10,Yugoslavia,YUG,1,,West Germany,DEU,0,,0,Estadio Nacional,Santiago,Chile,home
+1962,Knock Out,,Semi Final,1962-06-13,Brazil,BRA,4,,Chile,CHL,2,,0,Estadio Nacional,Santiago,Chile,home
+1962,Knock Out,,Semi Final,1962-06-13,Czechoslovakia,CSK,3,,Yugoslavia,YUG,1,,0,Estadio Sausalito,Viña del Mar,Chile,home
+1962,Knock Out,,Third Place,1962-06-16,Chile,CHL,1,,Yugoslavia,YUG,0,,0,Estadio Nacional,Santiago,Chile,home
+1962,Knock Out,,Final,1962-06-17,Brazil,BRA,3,,Czechoslovakia,CSK,1,,0,Estadio Nacional,Santiago,Chile,home
+1966,Group,1,Round 1,1966-07-11,England,ENG,0,,Uruguay,URY,0,,0,Wembley Stadium,London,England,draw
+1966,Group,2,Round 1,1966-07-12,West Germany,DEU,5,,Switzerland,CHE,0,,0,Hillsborough Stadium,Sheffield,England,home
+1966,Group,3,Round 1,1966-07-12,Brazil,BRA,2,,Bulgaria,BGR,0,,0,Goodison Park,Liverpool,England,home
+1966,Group,4,Round 1,1966-07-12,Soviet Union,SUN,3,,North Korea,PRK,0,,0,Ayresome Park,Middlesbrough,England,home
+1966,Group,1,Round 1,1966-07-13,France,FRA,1,,Mexico,MEX,1,,0,Wembley Stadium,London,England,draw
+1966,Group,2,Round 1,1966-07-13,Argentina,ARG,2,,Spain,ESP,1,,0,Villa Park,Birmingham,England,home
+1966,Group,3,Round 1,1966-07-13,Portugal,PRT,3,,Hungary,HUN,1,,0,Old Trafford,Manchester,England,home
+1966,Group,4,Round 1,1966-07-13,Italy,ITA,2,,Chile,CHL,0,,0,Roker Park,Sunderland,England,home
+1966,Group,1,Round 1,1966-07-15,Uruguay,URY,2,,France,FRA,1,,0,White City Stadium,London,England,home
+1966,Group,2,Round 1,1966-07-15,Spain,ESP,2,,Switzerland,CHE,1,,0,Hillsborough Stadium,Sheffield,England,home
+1966,Group,3,Round 1,1966-07-15,Hungary,HUN,3,,Brazil,BRA,1,,0,Goodison Park,Liverpool,England,home
+1966,Group,4,Round 1,1966-07-15,Chile,CHL,1,,North Korea,PRK,1,,0,Ayresome Park,Middlesbrough,England,draw
+1966,Group,2,Round 1,1966-07-16,Argentina,ARG,0,,West Germany,DEU,0,,0,Villa Park,Birmingham,England,draw
+1966,Group,3,Round 1,1966-07-16,Portugal,PRT,3,,Bulgaria,BGR,0,,0,Old Trafford,Manchester,England,home
+1966,Group,4,Round 1,1966-07-16,Soviet Union,SUN,1,,Italy,ITA,0,,0,Roker Park,Sunderland,England,home
+1966,Group,1,Round 1,1966-07-16,England,ENG,2,,Mexico,MEX,0,,0,Wembley Stadium,London,England,home
+1966,Group,1,Round 1,1966-07-19,Mexico,MEX,0,,Uruguay,URY,0,,0,Wembley Stadium,London,England,draw
+1966,Group,2,Round 1,1966-07-19,Argentina,ARG,2,,Switzerland,CHE,0,,0,Hillsborough Stadium,Sheffield,England,home
+1966,Group,3,Round 1,1966-07-19,Portugal,PRT,3,,Brazil,BRA,1,,0,Goodison Park,Liverpool,England,home
+1966,Group,4,Round 1,1966-07-19,North Korea,PRK,1,,Italy,ITA,0,,0,Ayresome Park,Middlesbrough,England,home
+1966,Group,1,Round 1,1966-07-20,England,ENG,2,,France,FRA,0,,0,Wembley Stadium,London,England,home
+1966,Group,2,Round 1,1966-07-20,West Germany,DEU,2,,Spain,ESP,1,,0,Villa Park,Birmingham,England,home
+1966,Group,3,Round 1,1966-07-20,Hungary,HUN,3,,Bulgaria,BGR,1,,0,Old Trafford,Manchester,England,home
+1966,Group,4,Round 1,1966-07-20,Soviet Union,SUN,2,,Chile,CHL,1,,0,Roker Park,Sunderland,England,home
+1966,Knock Out,,Quarter Final,1966-07-23,England,ENG,1,,Argentina,ARG,0,,0,Wembley Stadium,London,England,home
+1966,Knock Out,,Quarter Final,1966-07-23,Portugal,PRT,5,,North Korea,PRK,3,,0,Goodison Park,Liverpool,England,home
+1966,Knock Out,,Quarter Final,1966-07-23,Soviet Union,SUN,2,,Hungary,HUN,1,,0,Roker Park,Sunderland,England,home
+1966,Knock Out,,Quarter Final,1966-07-23,West Germany,DEU,4,,Uruguay,URY,0,,0,Hillsborough Stadium,Sheffield,England,home
+1966,Knock Out,,Semi Final,1966-07-25,West Germany,DEU,2,,Soviet Union,SUN,1,,0,Goodison Park,Liverpool,England,home
+1966,Knock Out,,Semi Final,1966-07-26,England,ENG,2,,Portugal,PRT,1,,0,Wembley Stadium,London,England,home
+1966,Knock Out,,Third Place,1966-07-28,Portugal,PRT,2,,Soviet Union,SUN,1,,0,Wembley Stadium,London,England,home
+1966,Knock Out,,Final,1966-07-30,England,ENG,4,,West Germany,DEU,2,,1,Wembley Stadium,London,England,home
+1970,Group,1,Round 1,1970-05-31,Mexico,MEX,0,,Soviet Union,SUN,0,,0,Estadio Azteca,Mexico City,Mexico,draw
+1970,Group,2,Round 1,1970-06-02,Uruguay,URY,2,,Israel,ISR,0,,0,Estadio Cuauhtémoc,Puebla,Mexico,home
+1970,Group,3,Round 1,1970-06-02,England,ENG,1,,Romania,ROU,0,,0,Estadio Jalisco,Guadalajara,Mexico,home
+1970,Group,4,Round 1,1970-06-02,Peru,PER,3,,Bulgaria,BGR,2,,0,Estadio Nou Camp,León,Mexico,home
+1970,Group,1,Round 1,1970-06-03,Belgium,BEL,3,,El Salvador,SLV,0,,0,Estadio Azteca,Mexico City,Mexico,home
+1970,Group,2,Round 1,1970-06-03,Italy,ITA,1,,Sweden,SWE,0,,0,La Bombonera,Toluca,Mexico,home
+1970,Group,3,Round 1,1970-06-03,Brazil,BRA,4,,Czechoslovakia,CSK,1,,0,Estadio Jalisco,Guadalajara,Mexico,home
+1970,Group,4,Round 1,1970-06-03,West Germany,DEU,2,,Morocco,MAR,1,,0,Estadio Nou Camp,León,Mexico,home
+1970,Group,1,Round 1,1970-06-06,Soviet Union,SUN,4,,Belgium,BEL,1,,0,Estadio Azteca,Mexico City,Mexico,home
+1970,Group,2,Round 1,1970-06-06,Uruguay,URY,0,,Italy,ITA,0,,0,Estadio Cuauhtémoc,Puebla,Mexico,draw
+1970,Group,3,Round 1,1970-06-06,Romania,ROU,2,,Czechoslovakia,CSK,1,,0,Estadio Jalisco,Guadalajara,Mexico,home
+1970,Group,4,Round 1,1970-06-06,Peru,PER,3,,Morocco,MAR,0,,0,Estadio Nou Camp,León,Mexico,home
+1970,Group,1,Round 1,1970-06-07,Mexico,MEX,4,,El Salvador,SLV,0,,0,Estadio Azteca,Mexico City,Mexico,home
+1970,Group,2,Round 1,1970-06-07,Sweden,SWE,1,,Israel,ISR,1,,0,La Bombonera,Toluca,Mexico,draw
+1970,Group,3,Round 1,1970-06-07,Brazil,BRA,1,,England,ENG,0,,0,Estadio Jalisco,Guadalajara,Mexico,home
+1970,Group,4,Round 1,1970-06-07,West Germany,DEU,5,,Bulgaria,BGR,2,,0,Estadio Nou Camp,León,Mexico,home
+1970,Group,1,Round 1,1970-06-10,Soviet Union,SUN,2,,El Salvador,SLV,0,,0,Estadio Azteca,Mexico City,Mexico,home
+1970,Group,2,Round 1,1970-06-10,Sweden,SWE,1,,Uruguay,URY,0,,0,Estadio Cuauhtémoc,Puebla,Mexico,home
+1970,Group,3,Round 1,1970-06-10,Brazil,BRA,3,,Romania,ROU,2,,0,Estadio Jalisco,Guadalajara,Mexico,home
+1970,Group,4,Round 1,1970-06-10,West Germany,DEU,3,,Peru,PER,1,,0,Estadio Nou Camp,León,Mexico,home
+1970,Group,1,Round 1,1970-06-11,Mexico,MEX,1,,Belgium,BEL,0,,0,Estadio Azteca,Mexico City,Mexico,home
+1970,Group,2,Round 1,1970-06-11,Italy,ITA,0,,Israel,ISR,0,,0,La Bombonera,Toluca,Mexico,draw
+1970,Group,3,Round 1,1970-06-11,England,ENG,1,,Czechoslovakia,CSK,0,,0,Estadio Jalisco,Guadalajara,Mexico,home
+1970,Group,4,Round 1,1970-06-11,Bulgaria,BGR,1,,Morocco,MAR,1,,0,Estadio Nou Camp,León,Mexico,draw
+1970,Knock Out,,Quarter Final,1970-06-14,Brazil,BRA,4,,Peru,PER,2,,0,Estadio Jalisco,Guadalajara,Mexico,home
+1970,Knock Out,,Quarter Final,1970-06-14,Italy,ITA,4,,Mexico,MEX,1,,0,La Bombonera,Toluca,Mexico,home
+1970,Knock Out,,Quarter Final,1970-06-14,Soviet Union,SUN,0,,Uruguay,URY,1,,1,Estadio Azteca,Mexico City,Mexico,away
+1970,Knock Out,,Quarter Final,1970-06-14,West Germany,DEU,3,,England,ENG,2,,1,Estadio Nou Camp,León,Mexico,home
+1970,Knock Out,,Semi Final,1970-06-17,Brazil,BRA,3,,Uruguay,URY,1,,0,Estadio Jalisco,Guadalajara,Mexico,home
+1970,Knock Out,,Semi Final,1970-06-17,Italy,ITA,4,,West Germany,DEU,3,,1,Estadio Azteca,Mexico City,Mexico,home
+1970,Knock Out,,Third Place,1970-06-20,West Germany,DEU,1,,Uruguay,URY,0,,0,Estadio Azteca,Mexico City,Mexico,home
+1970,Knock Out,,Final,1970-06-21,Brazil,BRA,4,,Italy,ITA,1,,0,Estadio Azteca,Mexico City,Mexico,home
+1974,Group,2,Round 1,1974-06-13,Brazil,BRA,0,,Yugoslavia,YUG,0,,0,Waldstadion,Frankfurt,Germany,draw
+1974,Group,1,Round 1,1974-06-14,West Germany,DEU,1,,Chile,CHL,0,,0,Olympiastadion,Berlin,Germany,home
+1974,Group,1,Round 1,1974-06-14,East Germany,DDR,2,,Australia,AUS,0,,0,Volksparkstadion,Hamburg,Germany,home
+1974,Group,2,Round 1,1974-06-14,Zaire,COD,0,,Scotland,SCO,2,,0,Westfalenstadion,Dortmund,Germany,away
+1974,Group,3,Round 1,1974-06-15,Sweden,SWE,0,,Bulgaria,BGR,0,,0,Rheinstadion,Düsseldorf,Germany,draw
+1974,Group,3,Round 1,1974-06-15,Uruguay,URY,0,,Netherlands,NLD,2,,0,Niedersachsenstadion,Hanover,Germany,away
+1974,Group,4,Round 1,1974-06-15,Italy,ITA,3,,Haiti,HTI,1,,0,Olympiastadion,Munich,Germany,home
+1974,Group,4,Round 1,1974-06-15,Poland,POL,3,,Argentina,ARG,2,,0,Neckarstadion,Stuttgart,Germany,home
+1974,Group,1,Round 1,1974-06-18,Australia,AUS,0,,West Germany,DEU,3,,0,Volksparkstadion,Hamburg,Germany,away
+1974,Group,1,Round 1,1974-06-18,Chile,CHL,1,,East Germany,DDR,1,,0,Olympiastadion,Berlin,Germany,draw
+1974,Group,2,Round 1,1974-06-18,Scotland,SCO,0,,Brazil,BRA,0,,0,Waldstadion,Frankfurt,Germany,draw
+1974,Group,2,Round 1,1974-06-18,Yugoslavia,YUG,9,,Zaire,COD,0,,0,Parkstadion,Gelsenkirchen,Germany,home
+1974,Group,3,Round 1,1974-06-19,Bulgaria,BGR,1,,Uruguay,URY,1,,0,Niedersachsenstadion,Hanover,Germany,draw
+1974,Group,3,Round 1,1974-06-19,Netherlands,NLD,0,,Sweden,SWE,0,,0,Westfalenstadion,Dortmund,Germany,draw
+1974,Group,4,Round 1,1974-06-19,Argentina,ARG,1,,Italy,ITA,1,,0,Neckarstadion,Stuttgart,Germany,draw
+1974,Group,4,Round 1,1974-06-19,Haiti,HTI,0,,Poland,POL,7,,0,Olympiastadion,Munich,Germany,away
+1974,Group,1,Round 1,1974-06-22,Australia,AUS,0,,Chile,CHL,0,,0,Olympiastadion,Berlin,Germany,draw
+1974,Group,2,Round 1,1974-06-22,Scotland,SCO,1,,Yugoslavia,YUG,1,,0,Waldstadion,Frankfurt,Germany,draw
+1974,Group,2,Round 1,1974-06-22,Zaire,COD,0,,Brazil,BRA,3,,0,Parkstadion,Gelsenkirchen,Germany,away
+1974,Group,1,Round 1,1974-06-22,East Germany,DDR,1,,West Germany,DEU,0,,0,Volksparkstadion,Hamburg,Germany,home
+1974,Group,3,Round 1,1974-06-23,Bulgaria,BGR,1,,Netherlands,NLD,4,,0,Westfalenstadion,Dortmund,Germany,away
+1974,Group,3,Round 1,1974-06-23,Sweden,SWE,3,,Uruguay,URY,0,,0,Rheinstadion,Düsseldorf,Germany,home
+1974,Group,4,Round 1,1974-06-23,Argentina,ARG,4,,Haiti,HTI,1,,0,Olympiastadion,Munich,Germany,home
+1974,Group,4,Round 1,1974-06-23,Poland,POL,2,,Italy,ITA,1,,0,Neckarstadion,Stuttgart,Germany,home
+1974,Knock Out,,Third Place,1974-07-06,Brazil,BRA,0,,Poland,POL,1,,0,Olympiastadion,Munich,Germany,away
+1974,Knock Out,,Final,1974-07-07,Netherlands,NLD,1,,West Germany,DEU,2,,0,Olympiastadion,Munich,Germany,away
+1978,Group,2,Round 1,1978-06-01,West Germany,DEU,0,,Poland,POL,0,,0,Estadio Monumental,Buenos Aires,Argentina,draw
+1978,Group,1,Round 1,1978-06-02,Italy,ITA,2,,France,FRA,1,,0,Estadio José María Minella,Mar del Plata,Argentina,home
+1978,Group,2,Round 1,1978-06-02,Tunisia,TUN,3,,Mexico,MEX,1,,0,Estadio Gigante de Arroyito,Rosario,Argentina,home
+1978,Group,1,Round 1,1978-06-02,Argentina,ARG,2,,Hungary,HUN,1,,0,Estadio Monumental,Buenos Aires,Argentina,home
+1978,Group,3,Round 1,1978-06-03,Austria,AUT,2,,Spain,ESP,1,,0,Estadio José Amalfitani,Buenos Aires,Argentina,home
+1978,Group,3,Round 1,1978-06-03,Brazil,BRA,1,,Sweden,SWE,1,,0,Estadio José María Minella,Mar del Plata,Argentina,draw
+1978,Group,4,Round 1,1978-06-03,Netherlands,NLD,3,,Iran,IRN,0,,0,Estadio Ciudad de Mendoza,Mendoza,Argentina,home
+1978,Group,4,Round 1,1978-06-03,Peru,PER,3,,Scotland,SCO,1,,0,Estadio Chateau Carreras,Córdoba,Argentina,home
+1978,Group,1,Round 1,1978-06-06,Italy,ITA,3,,Hungary,HUN,1,,0,Estadio José María Minella,Mar del Plata,Argentina,home
+1978,Group,2,Round 1,1978-06-06,Poland,POL,1,,Tunisia,TUN,0,,0,Estadio Gigante de Arroyito,Rosario,Argentina,home
+1978,Group,2,Round 1,1978-06-06,West Germany,DEU,6,,Mexico,MEX,0,,0,Estadio Chateau Carreras,Córdoba,Argentina,home
+1978,Group,1,Round 1,1978-06-06,Argentina,ARG,2,,France,FRA,1,,0,Estadio Monumental,Buenos Aires,Argentina,home
+1978,Group,3,Round 1,1978-06-07,Austria,AUT,1,,Sweden,SWE,0,,0,Estadio José Amalfitani,Buenos Aires,Argentina,home
+1978,Group,3,Round 1,1978-06-07,Brazil,BRA,0,,Spain,ESP,0,,0,Estadio José María Minella,Mar del Plata,Argentina,draw
+1978,Group,4,Round 1,1978-06-07,Netherlands,NLD,0,,Peru,PER,0,,0,Estadio Ciudad de Mendoza,Mendoza,Argentina,draw
+1978,Group,4,Round 1,1978-06-07,Scotland,SCO,1,,Iran,IRN,1,,0,Estadio Chateau Carreras,Córdoba,Argentina,draw
+1978,Group,1,Round 1,1978-06-10,France,FRA,3,,Hungary,HUN,1,,0,Estadio José María Minella,Mar del Plata,Argentina,home
+1978,Group,2,Round 1,1978-06-10,Poland,POL,3,,Mexico,MEX,1,,0,Estadio Gigante de Arroyito,Rosario,Argentina,home
+1978,Group,2,Round 1,1978-06-10,West Germany,DEU,0,,Tunisia,TUN,0,,0,Estadio Chateau Carreras,Córdoba,Argentina,draw
+1978,Group,1,Round 1,1978-06-10,Argentina,ARG,0,,Italy,ITA,1,,0,Estadio Monumental,Buenos Aires,Argentina,away
+1978,Group,3,Round 1,1978-06-11,Brazil,BRA,1,,Austria,AUT,0,,0,Estadio José María Minella,Mar del Plata,Argentina,home
+1978,Group,3,Round 1,1978-06-11,Spain,ESP,1,,Sweden,SWE,0,,0,Estadio José Amalfitani,Buenos Aires,Argentina,home
+1978,Group,4,Round 1,1978-06-11,Peru,PER,4,,Iran,IRN,1,,0,Estadio Chateau Carreras,Córdoba,Argentina,home
+1978,Group,4,Round 1,1978-06-11,Scotland,SCO,3,,Netherlands,NLD,2,,0,Estadio Ciudad de Mendoza,Mendoza,Argentina,home
+1978,Knock Out,,Third Place,1978-06-24,Brazil,BRA,2,,Italy,ITA,1,,0,Estadio Monumental,Buenos Aires,Argentina,home
+1978,Knock Out,,Final,1978-06-25,Argentina,ARG,3,,Netherlands,NLD,1,,1,Estadio Monumental,Buenos Aires,Argentina,home
+1982,Group,3,Round 1,1982-06-13,Argentina,ARG,0,,Belgium,BEL,1,,0,Camp Nou,Barcelona,Spain,away
+1982,Group,1,Round 1,1982-06-14,Italy,ITA,0,,Poland,POL,0,,0,Balaídos,Vigo,Spain,draw
+1982,Group,6,Round 1,1982-06-14,Brazil,BRA,2,,Soviet Union,SUN,1,,0,Estadio Ramón Sánchez Pizjuán,Seville,Spain,home
+1982,Group,1,Round 1,1982-06-15,Peru,PER,0,,Cameroon,CMR,0,,0,Estadio Riazor,A Coruña,Spain,draw
+1982,Group,3,Round 1,1982-06-15,Hungary,HUN,10,,El Salvador,SLV,1,,0,Nuevo Estadio,Elche,Spain,home
+1982,Group,6,Round 1,1982-06-15,Scotland,SCO,5,,New Zealand,NZL,2,,0,Estadio La Rosaleda,Málaga,Spain,home
+1982,Group,2,Round 1,1982-06-16,West Germany,DEU,1,,Algeria,DZA,2,,0,Estadio El Molinón,Gijón,Spain,away
+1982,Group,4,Round 1,1982-06-16,England,ENG,3,,France,FRA,1,,0,Estadio San Mamés,Bilbao,Spain,home
+1982,Group,5,Round 1,1982-06-16,Spain,ESP,1,,Honduras,HND,1,,0,Estadio Luis Casanova,Valencia,Spain,draw
+1982,Group,2,Round 1,1982-06-17,Chile,CHL,0,,Austria,AUT,1,,0,Estadio Carlos Tartiere,Oviedo,Spain,away
+1982,Group,4,Round 1,1982-06-17,Czechoslovakia,CSK,1,,Kuwait,KWT,1,,0,Estadio José Zorrilla,Valladolid,Spain,draw
+1982,Group,5,Round 1,1982-06-17,Yugoslavia,YUG,0,,Northern Ireland,NIR,0,,0,Estadio La Romareda,Zaragoza,Spain,draw
+1982,Group,1,Round 1,1982-06-18,Italy,ITA,1,,Peru,PER,1,,0,Balaídos,Vigo,Spain,draw
+1982,Group,3,Round 1,1982-06-18,Argentina,ARG,4,,Hungary,HUN,1,,0,Estadio José Rico Pérez,Alicante,Spain,home
+1982,Group,6,Round 1,1982-06-18,Brazil,BRA,4,,Scotland,SCO,1,,0,Estadio Benito Villamarín,Seville,Spain,home
+1982,Group,1,Round 1,1982-06-19,Poland,POL,0,,Cameroon,CMR,0,,0,Estadio Riazor,A Coruña,Spain,draw
+1982,Group,3,Round 1,1982-06-19,Belgium,BEL,1,,El Salvador,SLV,0,,0,Nuevo Estadio,Elche,Spain,home
+1982,Group,6,Round 1,1982-06-19,Soviet Union,SUN,3,,New Zealand,NZL,0,,0,Estadio La Rosaleda,Málaga,Spain,home
+1982,Group,2,Round 1,1982-06-20,West Germany,DEU,4,,Chile,CHL,1,,0,Estadio El Molinón,Gijón,Spain,home
+1982,Group,4,Round 1,1982-06-20,England,ENG,2,,Czechoslovakia,CSK,0,,0,Estadio San Mamés,Bilbao,Spain,home
+1982,Group,5,Round 1,1982-06-20,Spain,ESP,2,,Yugoslavia,YUG,1,,0,Estadio Luis Casanova,Valencia,Spain,home
+1982,Group,2,Round 1,1982-06-21,Algeria,DZA,0,,Austria,AUT,2,,0,Estadio Carlos Tartiere,Oviedo,Spain,away
+1982,Group,4,Round 1,1982-06-21,France,FRA,4,,Kuwait,KWT,1,,0,Estadio José Zorrilla,Valladolid,Spain,home
+1982,Group,5,Round 1,1982-06-21,Honduras,HND,1,,Northern Ireland,NIR,1,,0,Estadio La Romareda,Zaragoza,Spain,draw
+1982,Group,1,Round 1,1982-06-22,Poland,POL,5,,Peru,PER,1,,0,Estadio Riazor,A Coruña,Spain,home
+1982,Group,3,Round 1,1982-06-22,Belgium,BEL,1,,Hungary,HUN,1,,0,Nuevo Estadio,Elche,Spain,draw
+1982,Group,6,Round 1,1982-06-22,Soviet Union,SUN,2,,Scotland,SCO,2,,0,Estadio La Rosaleda,Málaga,Spain,draw
+1982,Group,1,Round 1,1982-06-23,Italy,ITA,1,,Cameroon,CMR,1,,0,Balaídos,Vigo,Spain,draw
+1982,Group,3,Round 1,1982-06-23,Argentina,ARG,2,,El Salvador,SLV,0,,0,Estadio José Rico Pérez,Alicante,Spain,home
+1982,Group,6,Round 1,1982-06-23,Brazil,BRA,4,,New Zealand,NZL,0,,0,Estadio Benito Villamarín,Seville,Spain,home
+1982,Group,2,Round 1,1982-06-24,Algeria,DZA,3,,Chile,CHL,2,,0,Estadio Carlos Tartiere,Oviedo,Spain,home
+1982,Group,4,Round 1,1982-06-24,France,FRA,1,,Czechoslovakia,CSK,1,,0,Estadio José Zorrilla,Valladolid,Spain,draw
+1982,Group,5,Round 1,1982-06-24,Honduras,HND,0,,Yugoslavia,YUG,1,,0,Estadio La Romareda,Zaragoza,Spain,away
+1982,Group,2,Round 1,1982-06-25,West Germany,DEU,1,,Austria,AUT,0,,0,Estadio El Molinón,Gijón,Spain,home
+1982,Group,4,Round 1,1982-06-25,England,ENG,1,,Kuwait,KWT,0,,0,Estadio San Mamés,Bilbao,Spain,home
+1982,Group,5,Round 1,1982-06-25,Spain,ESP,0,,Northern Ireland,NIR,1,,0,Estadio Luis Casanova,Valencia,Spain,away
+1982,Knock Out,,Semi Final,1982-07-08,Poland,POL,0,,Italy,ITA,2,,0,Camp Nou,Barcelona,Spain,away
+1982,Knock Out,,Semi Final,1982-07-08,West Germany,DEU,3,5,France,FRA,3,4,1,Estadio Ramón Sánchez Pizjuán,Seville,Spain,home
+1982,Knock Out,,Third Place,1982-07-10,Poland,POL,3,,France,FRA,2,,0,Estadio José Rico Pérez,Alicante,Spain,home
+1982,Knock Out,,Final,1982-07-11,Italy,ITA,3,,West Germany,DEU,1,,0,Estadio Santiago Bernabéu,Madrid,Spain,home
+1986,Group,A,Round 1,1986-05-31,Bulgaria,BGR,1,,Italy,ITA,1,,0,Estadio Azteca,Mexico City,Mexico,draw
+1986,Group,D,Round 1,1986-06-01,Spain,ESP,0,,Brazil,BRA,1,,0,Estadio Jalisco,Guadalajara,Mexico,away
+1986,Group,C,Round 1,1986-06-01,Canada,CAN,0,,France,FRA,1,,0,Estadio Nou Camp,León,Mexico,away
+1986,Group,A,Round 1,1986-06-02,Argentina,ARG,3,,South Korea,KOR,1,,0,Estadio Olímpico Universitario,Mexico City,Mexico,home
+1986,Group,C,Round 1,1986-06-02,Soviet Union,SUN,6,,Hungary,HUN,0,,0,Estadio Sergio León Chavez,Irapuato,Mexico,home
+1986,Group,F,Round 1,1986-06-02,Morocco,MAR,0,,Poland,POL,0,,0,Estadio Universitario,Monterrey,Mexico,draw
+1986,Group,B,Round 1,1986-06-03,Belgium,BEL,1,,Mexico,MEX,2,,0,Estadio Azteca,Mexico City,Mexico,away
+1986,Group,D,Round 1,1986-06-03,Algeria,DZA,1,,Northern Ireland,NIR,1,,0,Estadio Tres de Marzo,Guadalajara,Mexico,draw
+1986,Group,F,Round 1,1986-06-03,Portugal,PRT,1,,England,ENG,0,,0,Estadio Tecnológico,Monterrey,Mexico,home
+1986,Group,B,Round 1,1986-06-04,Paraguay,PRY,1,,Iraq,IRQ,0,,0,La Bombonera,Toluca,Mexico,home
+1986,Group,E,Round 1,1986-06-04,Uruguay,URY,1,,West Germany,DEU,1,,0,Estadio La Corregidora,Querétaro,Mexico,draw
+1986,Group,E,Round 1,1986-06-04,Scotland,SCO,0,,Denmark,DNK,1,,0,Estadio Neza 86,Nezahualcóyotl,Mexico,away
+1986,Group,A,Round 1,1986-06-05,Italy,ITA,1,,Argentina,ARG,1,,0,Estadio Cuauhtémoc,Puebla,Mexico,draw
+1986,Group,C,Round 1,1986-06-05,France,FRA,1,,Soviet Union,SUN,1,,0,Estadio Nou Camp,León,Mexico,draw
+1986,Group,A,Round 1,1986-06-05,South Korea,KOR,1,,Bulgaria,BGR,1,,0,Estadio Olímpico Universitario,Mexico City,Mexico,draw
+1986,Group,C,Round 1,1986-06-06,Hungary,HUN,2,,Canada,CAN,0,,0,Estadio Sergio León Chavez,Irapuato,Mexico,home
+1986,Group,D,Round 1,1986-06-06,Brazil,BRA,1,,Algeria,DZA,0,,0,Estadio Jalisco,Guadalajara,Mexico,home
+1986,Group,F,Round 1,1986-06-06,England,ENG,0,,Morocco,MAR,0,,0,Estadio Tecnológico,Monterrey,Mexico,draw
+1986,Group,B,Round 1,1986-06-07,Mexico,MEX,1,,Paraguay,PRY,1,,0,Estadio Azteca,Mexico City,Mexico,draw
+1986,Group,D,Round 1,1986-06-07,Northern Ireland,NIR,1,,Spain,ESP,2,,0,Estadio Tres de Marzo,Guadalajara,Mexico,away
+1986,Group,F,Round 1,1986-06-07,Poland,POL,1,,Portugal,PRT,0,,0,Estadio Universitario,Monterrey,Mexico,home
+1986,Group,B,Round 1,1986-06-08,Iraq,IRQ,1,,Belgium,BEL,2,,0,La Bombonera,Toluca,Mexico,away
+1986,Group,E,Round 1,1986-06-08,West Germany,DEU,2,,Scotland,SCO,1,,0,Estadio La Corregidora,Querétaro,Mexico,home
+1986,Group,E,Round 1,1986-06-08,Denmark,DNK,6,,Uruguay,URY,1,,0,Estadio Neza 86,Nezahualcóyotl,Mexico,home
+1986,Group,C,Round 1,1986-06-09,Hungary,HUN,0,,France,FRA,3,,0,Estadio Nou Camp,León,Mexico,away
+1986,Group,C,Round 1,1986-06-09,Soviet Union,SUN,2,,Canada,CAN,0,,0,Estadio Sergio León Chavez,Irapuato,Mexico,home
+1986,Group,A,Round 1,1986-06-10,Argentina,ARG,2,,Bulgaria,BGR,0,,0,Estadio Olímpico Universitario,Mexico City,Mexico,home
+1986,Group,A,Round 1,1986-06-10,South Korea,KOR,2,,Italy,ITA,3,,0,Estadio Cuauhtémoc,Puebla,Mexico,away
+1986,Group,B,Round 1,1986-06-11,Iraq,IRQ,0,,Mexico,MEX,1,,0,Estadio Azteca,Mexico City,Mexico,away
+1986,Group,B,Round 1,1986-06-11,Paraguay,PRY,2,,Belgium,BEL,2,,0,La Bombonera,Toluca,Mexico,draw
+1986,Group,F,Round 1,1986-06-11,England,ENG,3,,Poland,POL,0,,0,Estadio Universitario,Monterrey,Mexico,home
+1986,Group,F,Round 1,1986-06-11,Portugal,PRT,1,,Morocco,MAR,3,,0,Estadio Tres de Marzo,Guadalajara,Mexico,away
+1986,Group,D,Round 1,1986-06-12,Algeria,DZA,0,,Spain,ESP,3,,0,Estadio Tecnológico,Monterrey,Mexico,away
+1986,Group,D,Round 1,1986-06-12,Northern Ireland,NIR,0,,Brazil,BRA,3,,0,Estadio Jalisco,Guadalajara,Mexico,away
+1986,Group,E,Round 1,1986-06-13,Denmark,DNK,2,,West Germany,DEU,0,,0,Estadio La Corregidora,Querétaro,Mexico,home
+1986,Group,E,Round 1,1986-06-13,Scotland,SCO,0,,Uruguay,URY,0,,0,Estadio Neza 86,Nezahualcóyotl,Mexico,draw
+1986,Knock Out,,Round of 16,1986-06-15,Mexico,MEX,2,,Bulgaria,BGR,0,,0,Estadio Azteca,Mexico City,Mexico,home
+1986,Knock Out,,Round of 16,1986-06-15,Soviet Union,SUN,3,,Belgium,BEL,4,,1,Estadio Nou Camp,León,Mexico,away
+1986,Knock Out,,Round of 16,1986-06-16,Brazil,BRA,4,,Poland,POL,0,,0,Estadio Jalisco,Guadalajara,Mexico,home
+1986,Knock Out,,Round of 16,1986-06-16,Argentina,ARG,1,,Uruguay,URY,0,,0,Estadio Cuauhtémoc,Puebla,Mexico,home
+1986,Knock Out,,Round of 16,1986-06-17,Italy,ITA,0,,France,FRA,2,,0,Estadio Olímpico Universitario,Mexico City,Mexico,away
+1986,Knock Out,,Round of 16,1986-06-17,Morocco,MAR,0,,West Germany,DEU,1,,0,Estadio Universitario,Monterrey,Mexico,away
+1986,Knock Out,,Round of 16,1986-06-18,England,ENG,3,,Paraguay,PRY,0,,0,Estadio Azteca,Mexico City,Mexico,home
+1986,Knock Out,,Round of 16,1986-06-18,Denmark,DNK,1,,Spain,ESP,5,,0,Estadio La Corregidora,Querétaro,Mexico,away
+1986,Knock Out,,Quarter Final,1986-06-21,Brazil,BRA,1,3,France,FRA,1,4,1,Estadio Jalisco,Guadalajara,Mexico,away
+1986,Knock Out,,Quarter Final,1986-06-21,West Germany,DEU,0,4,Mexico,MEX,0,1,1,Estadio Universitario,Monterrey,Mexico,home
+1986,Knock Out,,Quarter Final,1986-06-22,Argentina,ARG,2,,England,ENG,1,,0,Estadio Azteca,Mexico City,Mexico,home
+1986,Knock Out,,Quarter Final,1986-06-22,Spain,ESP,1,4,Belgium,BEL,1,5,1,Estadio Cuauhtémoc,Puebla,Mexico,away
+1986,Knock Out,,Semi Final,1986-06-25,France,FRA,0,,West Germany,DEU,2,,0,Estadio Jalisco,Guadalajara,Mexico,away
+1986,Knock Out,,Semi Final,1986-06-25,Argentina,ARG,2,,Belgium,BEL,0,,0,Estadio Azteca,Mexico City,Mexico,home
+1986,Knock Out,,Third Place,1986-06-28,Belgium,BEL,2,,France,FRA,4,,1,Estadio Cuauhtémoc,Puebla,Mexico,away
+1986,Knock Out,,Final,1986-06-29,Argentina,ARG,3,,West Germany,DEU,2,,0,Estadio Azteca,Mexico City,Mexico,home
+1990,Group,B,Round 1,1990-06-08,Argentina,ARG,0,,Cameroon,CMR,1,,0,San Siro,Milan,Italy,away
+1990,Group,B,Round 1,1990-06-09,Soviet Union,SUN,0,,Romania,ROU,2,,0,Stadio San Nicola,Bari,Italy,away
+1990,Group,D,Round 1,1990-06-09,United Arab Emirates,ARE,0,,Colombia,COL,2,,0,Stadio Renato Dall'Ara,Bologna,Italy,away
+1990,Group,A,Round 1,1990-06-09,Italy,ITA,1,,Austria,AUT,0,,0,Stadio Olimpico,Rome,Italy,home
+1990,Group,A,Round 1,1990-06-10,United States,USA,1,,Czechoslovakia,CSK,5,,0,Stadio Comunale,Florence,Italy,away
+1990,Group,C,Round 1,1990-06-10,Brazil,BRA,2,,Sweden,SWE,1,,0,Stadio delle Alpi,Turin,Italy,home
+1990,Group,D,Round 1,1990-06-10,West Germany,DEU,4,,Yugoslavia,YUG,1,,0,San Siro,Milan,Italy,home
+1990,Group,C,Round 1,1990-06-11,Costa Rica,CRI,1,,Scotland,SCO,0,,0,Stadio Luigi Ferraris,Genoa,Italy,home
+1990,Group,F,Round 1,1990-06-11,England,ENG,1,,Republic of Ireland,IRL,1,,0,Stadio Sant'Elia,Cagliari,Italy,draw
+1990,Group,E,Round 1,1990-06-12,Belgium,BEL,2,,South Korea,KOR,0,,0,Stadio Marc'Antonio Bentegodi,Verona,Italy,home
+1990,Group,F,Round 1,1990-06-12,Netherlands,NLD,1,,Egypt,EGY,1,,0,Stadio La Favorita,Palermo,Italy,draw
+1990,Group,E,Round 1,1990-06-13,Uruguay,URY,0,,Spain,ESP,0,,0,Stadio Friuli,Udine,Italy,draw
+1990,Group,B,Round 1,1990-06-13,Argentina,ARG,2,,Soviet Union,SUN,0,,0,Stadio San Paolo,Naples,Italy,home
+1990,Group,B,Round 1,1990-06-14,Cameroon,CMR,2,,Romania,ROU,1,,0,Stadio San Nicola,Bari,Italy,home
+1990,Group,D,Round 1,1990-06-14,Yugoslavia,YUG,1,,Colombia,COL,0,,0,Stadio Renato Dall'Ara,Bologna,Italy,home
+1990,Group,A,Round 1,1990-06-14,Italy,ITA,1,,United States,USA,0,,0,Stadio Olimpico,Rome,Italy,home
+1990,Group,A,Round 1,1990-06-15,Austria,AUT,0,,Czechoslovakia,CSK,1,,0,Stadio Comunale,Florence,Italy,away
+1990,Group,D,Round 1,1990-06-15,West Germany,DEU,5,,United Arab Emirates,ARE,1,,0,San Siro,Milan,Italy,home
+1990,Group,C,Round 1,1990-06-16,Brazil,BRA,1,,Costa Rica,CRI,0,,0,Stadio delle Alpi,Turin,Italy,home
+1990,Group,C,Round 1,1990-06-16,Sweden,SWE,1,,Scotland,SCO,2,,0,Stadio Luigi Ferraris,Genoa,Italy,away
+1990,Group,F,Round 1,1990-06-16,England,ENG,0,,Netherlands,NLD,0,,0,Stadio Sant'Elia,Cagliari,Italy,draw
+1990,Group,F,Round 1,1990-06-17,Republic of Ireland,IRL,0,,Egypt,EGY,0,,0,Stadio La Favorita,Palermo,Italy,draw
+1990,Group,E,Round 1,1990-06-17,Belgium,BEL,3,,Uruguay,URY,1,,0,Stadio Marc'Antonio Bentegodi,Verona,Italy,home
+1990,Group,E,Round 1,1990-06-17,South Korea,KOR,1,,Spain,ESP,3,,0,Stadio Friuli,Udine,Italy,away
+1990,Group,B,Round 1,1990-06-18,Argentina,ARG,1,,Romania,ROU,1,,0,Stadio San Paolo,Naples,Italy,draw
+1990,Group,B,Round 1,1990-06-18,Cameroon,CMR,0,,Soviet Union,SUN,4,,0,Stadio San Nicola,Bari,Italy,away
+1990,Group,D,Round 1,1990-06-19,West Germany,DEU,1,,Colombia,COL,1,,0,San Siro,Milan,Italy,draw
+1990,Group,D,Round 1,1990-06-19,Yugoslavia,YUG,4,,United Arab Emirates,ARE,1,,0,Stadio Renato Dall'Ara,Bologna,Italy,home
+1990,Group,A,Round 1,1990-06-19,Austria,AUT,2,,United States,USA,1,,0,Stadio Comunale,Florence,Italy,home
+1990,Group,A,Round 1,1990-06-19,Italy,ITA,2,,Czechoslovakia,CSK,0,,0,Stadio Olimpico,Rome,Italy,home
+1990,Group,C,Round 1,1990-06-20,Brazil,BRA,1,,Scotland,SCO,0,,0,Stadio delle Alpi,Turin,Italy,home
+1990,Group,C,Round 1,1990-06-20,Sweden,SWE,1,,Costa Rica,CRI,2,,0,Stadio Luigi Ferraris,Genoa,Italy,away
+1990,Group,E,Round 1,1990-06-21,Belgium,BEL,1,,Spain,ESP,2,,0,Stadio Marc'Antonio Bentegodi,Verona,Italy,away
+1990,Group,E,Round 1,1990-06-21,South Korea,KOR,0,,Uruguay,URY,1,,0,Stadio Friuli,Udine,Italy,away
+1990,Group,F,Round 1,1990-06-21,England,ENG,1,,Egypt,EGY,0,,0,Stadio Sant'Elia,Cagliari,Italy,home
+1990,Group,F,Round 1,1990-06-21,Republic of Ireland,IRL,1,,Netherlands,NLD,1,,0,Stadio La Favorita,Palermo,Italy,draw
+1990,Knock Out,,Round of 16,1990-06-23,Cameroon,CMR,2,,Colombia,COL,1,,1,Stadio San Paolo,Naples,Italy,home
+1990,Knock Out,,Round of 16,1990-06-23,Czechoslovakia,CSK,4,,Costa Rica,CRI,1,,0,Stadio San Nicola,Bari,Italy,home
+1990,Knock Out,,Round of 16,1990-06-24,Brazil,BRA,0,,Argentina,ARG,1,,0,Stadio delle Alpi,Turin,Italy,away
+1990,Knock Out,,Round of 16,1990-06-24,West Germany,DEU,2,,Netherlands,NLD,1,,0,San Siro,Milan,Italy,home
+1990,Knock Out,,Round of 16,1990-06-25,Republic of Ireland,IRL,0,5,Romania,ROU,0,4,1,Stadio Luigi Ferraris,Genoa,Italy,home
+1990,Knock Out,,Round of 16,1990-06-25,Italy,ITA,2,,Uruguay,URY,0,,0,Stadio Olimpico,Rome,Italy,home
+1990,Knock Out,,Round of 16,1990-06-26,Spain,ESP,1,,Yugoslavia,YUG,2,,1,Stadio Marc'Antonio Bentegodi,Verona,Italy,away
+1990,Knock Out,,Round of 16,1990-06-26,England,ENG,1,,Belgium,BEL,0,,1,Stadio Renato Dall'Ara,Bologna,Italy,home
+1990,Knock Out,,Quarter Final,1990-06-30,Argentina,ARG,0,3,Yugoslavia,YUG,0,2,1,Stadio Comunale,Florence,Italy,home
+1990,Knock Out,,Quarter Final,1990-06-30,Republic of Ireland,IRL,0,,Italy,ITA,1,,0,Stadio Olimpico,Rome,Italy,away
+1990,Knock Out,,Quarter Final,1990-07-01,Czechoslovakia,CSK,0,,West Germany,DEU,1,,0,San Siro,Milan,Italy,away
+1990,Knock Out,,Quarter Final,1990-07-01,Cameroon,CMR,2,,England,ENG,3,,1,Stadio San Paolo,Naples,Italy,away
+1990,Knock Out,,Semi Final,1990-07-03,Argentina,ARG,1,4,Italy,ITA,1,3,1,Stadio San Paolo,Naples,Italy,home
+1990,Knock Out,,Semi Final,1990-07-04,West Germany,DEU,1,4,England,ENG,1,3,1,Stadio delle Alpi,Turin,Italy,home
+1990,Knock Out,,Third Place,1990-07-07,Italy,ITA,2,,England,ENG,1,,0,Stadio San Nicola,Bari,Italy,home
+1990,Knock Out,,Final,1990-07-08,West Germany,DEU,1,,Argentina,ARG,0,,0,Stadio Olimpico,Rome,Italy,home
+1994,Group,C,Round 1,1994-06-17,Germany,DEU,1,,Bolivia,BOL,0,,0,Soldier Field,Chicago,United States,home
+1994,Group,C,Round 1,1994-06-17,Spain,ESP,2,,South Korea,KOR,2,,0,Cotton Bowl,Dallas,United States,draw
+1994,Group,A,Round 1,1994-06-18,United States,USA,1,,Switzerland,CHE,1,,0,Pontiac Silverdome,Pontiac,United States,draw
+1994,Group,E,Round 1,1994-06-18,Italy,ITA,0,,Republic of Ireland,IRL,1,,0,Giants Stadium,East Rutherford,United States,away
+1994,Group,A,Round 1,1994-06-18,Colombia,COL,1,,Romania,ROU,3,,0,Rose Bowl,Pasadena,United States,away
+1994,Group,F,Round 1,1994-06-19,Belgium,BEL,1,,Morocco,MAR,0,,0,Citrus Bowl,Orlando,United States,home
+1994,Group,E,Round 1,1994-06-19,Norway,NOR,1,,Mexico,MEX,0,,0,RFK Stadium,"Washington, D.C.",United States,home
+1994,Group,B,Round 1,1994-06-19,Cameroon,CMR,2,,Sweden,SWE,2,,0,Rose Bowl,Pasadena,United States,draw
+1994,Group,B,Round 1,1994-06-20,Brazil,BRA,2,,Russia,RUS,0,,0,Stanford Stadium,Stanford,United States,home
+1994,Group,F,Round 1,1994-06-20,Netherlands,NLD,2,,Saudi Arabia,SAU,1,,0,RFK Stadium,"Washington, D.C.",United States,home
+1994,Group,D,Round 1,1994-06-21,Argentina,ARG,4,,Greece,GRC,0,,0,Foxboro Stadium,Foxborough,United States,home
+1994,Group,C,Round 1,1994-06-21,Germany,DEU,1,,Spain,ESP,1,,0,Soldier Field,Chicago,United States,draw
+1994,Group,D,Round 1,1994-06-21,Nigeria,NGA,3,,Bulgaria,BGR,0,,0,Cotton Bowl,Dallas,United States,home
+1994,Group,A,Round 1,1994-06-22,Romania,ROU,1,,Switzerland,CHE,4,,0,Pontiac Silverdome,Pontiac,United States,away
+1994,Group,A,Round 1,1994-06-22,United States,USA,2,,Colombia,COL,1,,0,Rose Bowl,Pasadena,United States,home
+1994,Group,E,Round 1,1994-06-23,Italy,ITA,1,,Norway,NOR,0,,0,Giants Stadium,East Rutherford,United States,home
+1994,Group,C,Round 1,1994-06-23,South Korea,KOR,0,,Bolivia,BOL,0,,0,Foxboro Stadium,Foxborough,United States,draw
+1994,Group,E,Round 1,1994-06-24,Mexico,MEX,2,,Republic of Ireland,IRL,1,,0,Citrus Bowl,Orlando,United States,home
+1994,Group,B,Round 1,1994-06-24,Brazil,BRA,3,,Cameroon,CMR,0,,0,Stanford Stadium,Stanford,United States,home
+1994,Group,B,Round 1,1994-06-24,Sweden,SWE,3,,Russia,RUS,1,,0,Pontiac Silverdome,Pontiac,United States,home
+1994,Group,F,Round 1,1994-06-25,Belgium,BEL,1,,Netherlands,NLD,0,,0,Citrus Bowl,Orlando,United States,home
+1994,Group,F,Round 1,1994-06-25,Saudi Arabia,SAU,2,,Morocco,MAR,1,,0,Giants Stadium,East Rutherford,United States,home
+1994,Group,D,Round 1,1994-06-25,Argentina,ARG,2,,Nigeria,NGA,1,,0,Foxboro Stadium,Foxborough,United States,home
+1994,Group,D,Round 1,1994-06-26,Bulgaria,BGR,4,,Greece,GRC,0,,0,Soldier Field,Chicago,United States,home
+1994,Group,A,Round 1,1994-06-26,Switzerland,CHE,0,,Colombia,COL,2,,0,Stanford Stadium,Stanford,United States,away
+1994,Group,A,Round 1,1994-06-26,United States,USA,0,,Romania,ROU,1,,0,Rose Bowl,Pasadena,United States,away
+1994,Group,C,Round 1,1994-06-27,Bolivia,BOL,1,,Spain,ESP,3,,0,Soldier Field,Chicago,United States,away
+1994,Group,C,Round 1,1994-06-27,Germany,DEU,3,,South Korea,KOR,2,,0,Cotton Bowl,Dallas,United States,home
+1994,Group,E,Round 1,1994-06-28,Italy,ITA,1,,Mexico,MEX,1,,0,RFK Stadium,"Washington, D.C.",United States,draw
+1994,Group,E,Round 1,1994-06-28,Republic of Ireland,IRL,0,,Norway,NOR,0,,0,Giants Stadium,East Rutherford,United States,draw
+1994,Group,B,Round 1,1994-06-28,Russia,RUS,6,,Cameroon,CMR,1,,0,Stanford Stadium,Stanford,United States,home
+1994,Group,B,Round 1,1994-06-28,Brazil,BRA,1,,Sweden,SWE,1,,0,Pontiac Silverdome,Pontiac,United States,draw
+1994,Group,F,Round 1,1994-06-29,Belgium,BEL,0,,Saudi Arabia,SAU,1,,0,RFK Stadium,"Washington, D.C.",United States,away
+1994,Group,F,Round 1,1994-06-29,Morocco,MAR,1,,Netherlands,NLD,2,,0,Citrus Bowl,Orlando,United States,away
+1994,Group,D,Round 1,1994-06-30,Argentina,ARG,0,,Bulgaria,BGR,2,,0,Cotton Bowl,Dallas,United States,away
+1994,Group,D,Round 1,1994-06-30,Greece,GRC,0,,Nigeria,NGA,2,,0,Foxboro Stadium,Foxborough,United States,away
+1994,Knock Out,,Round of 16,1994-07-02,Germany,DEU,3,,Belgium,BEL,2,,0,Soldier Field,Chicago,United States,home
+1994,Knock Out,,Round of 16,1994-07-02,Spain,ESP,3,,Switzerland,CHE,0,,0,RFK Stadium,"Washington, D.C.",United States,home
+1994,Knock Out,,Round of 16,1994-07-03,Saudi Arabia,SAU,1,,Sweden,SWE,3,,0,Cotton Bowl,Dallas,United States,away
+1994,Knock Out,,Round of 16,1994-07-03,Romania,ROU,3,,Argentina,ARG,2,,0,Rose Bowl,Pasadena,United States,home
+1994,Knock Out,,Round of 16,1994-07-04,Netherlands,NLD,2,,Republic of Ireland,IRL,0,,0,Citrus Bowl,Orlando,United States,home
+1994,Knock Out,,Round of 16,1994-07-04,Brazil,BRA,1,,United States,USA,0,,0,Stanford Stadium,Stanford,United States,home
+1994,Knock Out,,Round of 16,1994-07-05,Nigeria,NGA,1,,Italy,ITA,2,,1,Foxboro Stadium,Foxborough,United States,away
+1994,Knock Out,,Round of 16,1994-07-05,Mexico,MEX,1,1,Bulgaria,BGR,1,3,1,Giants Stadium,East Rutherford,United States,away
+1994,Knock Out,,Quarter Final,1994-07-09,Italy,ITA,2,,Spain,ESP,1,,0,Foxboro Stadium,Foxborough,United States,home
+1994,Knock Out,,Quarter Final,1994-07-09,Netherlands,NLD,2,,Brazil,BRA,3,,0,Cotton Bowl,Dallas,United States,away
+1994,Knock Out,,Quarter Final,1994-07-10,Bulgaria,BGR,2,,Germany,DEU,1,,0,Giants Stadium,East Rutherford,United States,home
+1994,Knock Out,,Quarter Final,1994-07-10,Romania,ROU,2,4,Sweden,SWE,2,5,1,Stanford Stadium,Stanford,United States,away
+1994,Knock Out,,Semi Final,1994-07-13,Bulgaria,BGR,1,,Italy,ITA,2,,0,Giants Stadium,East Rutherford,United States,away
+1994,Knock Out,,Semi Final,1994-07-13,Sweden,SWE,0,,Brazil,BRA,1,,0,Rose Bowl,Pasadena,United States,away
+1994,Knock Out,,Third Place,1994-07-16,Sweden,SWE,4,,Bulgaria,BGR,0,,0,Rose Bowl,Pasadena,United States,home
+1994,Knock Out,,Final,1994-07-17,Brazil,BRA,0,3,Italy,ITA,0,2,1,Rose Bowl,Pasadena,United States,home
+1998,Group,A,Round 1,1998-06-10,Brazil,BRA,2,,Scotland,SCO,1,,0,Stade de France,Saint-Denis,France,home
+1998,Group,A,Round 1,1998-06-10,Morocco,MAR,2,,Norway,NOR,2,,0,Stade de la Mosson,Montpellier,France,draw
+1998,Group,B,Round 1,1998-06-11,Italy,ITA,2,,Chile,CHL,2,,0,Stade du Parc Lescure,Bordeaux,France,draw
+1998,Group,B,Round 1,1998-06-11,Cameroon,CMR,1,,Austria,AUT,1,,0,Stade de Toulouse,Toulouse,France,draw
+1998,Group,D,Round 1,1998-06-12,Paraguay,PRY,0,,Bulgaria,BGR,0,,0,Stade de la Mosson,Montpellier,France,draw
+1998,Group,C,Round 1,1998-06-12,Saudi Arabia,SAU,0,,Denmark,DNK,1,,0,Stade Félix-Bollaert,Lens,France,away
+1998,Group,C,Round 1,1998-06-12,France,FRA,3,,South Africa,ZAF,0,,0,Stade Vélodrome,Marseille,France,home
+1998,Group,D,Round 1,1998-06-13,Spain,ESP,2,,Nigeria,NGA,3,,0,Stade de la Beaujoire,Nantes,France,away
+1998,Group,E,Round 1,1998-06-13,South Korea,KOR,1,,Mexico,MEX,3,,0,Stade de Gerland,Lyon,France,away
+1998,Group,E,Round 1,1998-06-13,Netherlands,NLD,0,,Belgium,BEL,0,,0,Stade de France,Saint-Denis,France,draw
+1998,Group,H,Round 1,1998-06-14,Argentina,ARG,1,,Japan,JPN,0,,0,Stade de Toulouse,Toulouse,France,home
+1998,Group,F,Round 1,1998-06-14,Yugoslavia,YUG,1,,Iran,IRN,0,,0,Stade Geoffroy-Guichard,Saint-Étienne,France,home
+1998,Group,H,Round 1,1998-06-14,Jamaica,JAM,1,,Croatia,HRV,3,,0,Stade Félix-Bollaert,Lens,France,away
+1998,Group,G,Round 1,1998-06-15,England,ENG,2,,Tunisia,TUN,0,,0,Stade Vélodrome,Marseille,France,home
+1998,Group,G,Round 1,1998-06-15,Romania,ROU,1,,Colombia,COL,0,,0,Stade de Gerland,Lyon,France,home
+1998,Group,F,Round 1,1998-06-15,Germany,DEU,2,,United States,USA,0,,0,Parc des Princes,Paris,France,home
+1998,Group,A,Round 1,1998-06-16,Scotland,SCO,1,,Norway,NOR,1,,0,Stade du Parc Lescure,Bordeaux,France,draw
+1998,Group,A,Round 1,1998-06-16,Brazil,BRA,3,,Morocco,MAR,0,,0,Stade de la Beaujoire,Nantes,France,home
+1998,Group,B,Round 1,1998-06-17,Chile,CHL,1,,Austria,AUT,1,,0,Stade Geoffroy-Guichard,Saint-Étienne,France,draw
+1998,Group,B,Round 1,1998-06-17,Italy,ITA,3,,Cameroon,CMR,0,,0,Stade de la Mosson,Montpellier,France,home
+1998,Group,C,Round 1,1998-06-18,South Africa,ZAF,1,,Denmark,DNK,1,,0,Stade de Toulouse,Toulouse,France,draw
+1998,Group,C,Round 1,1998-06-18,France,FRA,4,,Saudi Arabia,SAU,0,,0,Stade de France,Saint-Denis,France,home
+1998,Group,D,Round 1,1998-06-19,Nigeria,NGA,1,,Bulgaria,BGR,0,,0,Parc des Princes,Paris,France,home
+1998,Group,D,Round 1,1998-06-19,Spain,ESP,0,,Paraguay,PRY,0,,0,Stade Geoffroy-Guichard,Saint-Étienne,France,draw
+1998,Group,H,Round 1,1998-06-20,Japan,JPN,0,,Croatia,HRV,1,,0,Stade de la Beaujoire,Nantes,France,away
+1998,Group,E,Round 1,1998-06-20,Belgium,BEL,2,,Mexico,MEX,2,,0,Stade du Parc Lescure,Bordeaux,France,draw
+1998,Group,E,Round 1,1998-06-20,Netherlands,NLD,5,,South Korea,KOR,0,,0,Stade Vélodrome,Marseille,France,home
+1998,Group,F,Round 1,1998-06-21,Germany,DEU,2,,Yugoslavia,YUG,2,,0,Stade Félix-Bollaert,Lens,France,draw
+1998,Group,H,Round 1,1998-06-21,Argentina,ARG,5,,Jamaica,JAM,0,,0,Parc des Princes,Paris,France,home
+1998,Group,F,Round 1,1998-06-21,United States,USA,1,,Iran,IRN,2,,0,Stade de Gerland,Lyon,France,away
+1998,Group,G,Round 1,1998-06-22,Colombia,COL,1,,Tunisia,TUN,0,,0,Stade de la Mosson,Montpellier,France,home
+1998,Group,G,Round 1,1998-06-22,Romania,ROU,2,,England,ENG,1,,0,Stade de Toulouse,Toulouse,France,home
+1998,Group,B,Round 1,1998-06-23,Chile,CHL,1,,Cameroon,CMR,1,,0,Stade de la Beaujoire,Nantes,France,draw
+1998,Group,B,Round 1,1998-06-23,Italy,ITA,2,,Austria,AUT,1,,0,Stade de France,Saint-Denis,France,home
+1998,Group,A,Round 1,1998-06-23,Brazil,BRA,1,,Norway,NOR,2,,0,Stade Vélodrome,Marseille,France,away
+1998,Group,A,Round 1,1998-06-23,Scotland,SCO,0,,Morocco,MAR,3,,0,Stade Geoffroy-Guichard,Saint-Étienne,France,away
+1998,Group,C,Round 1,1998-06-24,France,FRA,2,,Denmark,DNK,1,,0,Stade de Gerland,Lyon,France,home
+1998,Group,C,Round 1,1998-06-24,South Africa,ZAF,2,,Saudi Arabia,SAU,2,,0,Stade du Parc Lescure,Bordeaux,France,draw
+1998,Group,D,Round 1,1998-06-24,Nigeria,NGA,1,,Paraguay,PRY,3,,0,Stade de Toulouse,Toulouse,France,away
+1998,Group,D,Round 1,1998-06-24,Spain,ESP,6,,Bulgaria,BGR,1,,0,Stade Félix-Bollaert,Lens,France,home
+1998,Group,E,Round 1,1998-06-25,Belgium,BEL,1,,South Korea,KOR,1,,0,Parc des Princes,Paris,France,draw
+1998,Group,E,Round 1,1998-06-25,Netherlands,NLD,2,,Mexico,MEX,2,,0,Stade Geoffroy-Guichard,Saint-Étienne,France,draw
+1998,Group,F,Round 1,1998-06-25,Germany,DEU,2,,Iran,IRN,0,,0,Stade de la Mosson,Montpellier,France,home
+1998,Group,F,Round 1,1998-06-25,United States,USA,0,,Yugoslavia,YUG,1,,0,Stade de la Beaujoire,Nantes,France,away
+1998,Group,H,Round 1,1998-06-26,Argentina,ARG,1,,Croatia,HRV,0,,0,Stade du Parc Lescure,Bordeaux,France,home
+1998,Group,H,Round 1,1998-06-26,Japan,JPN,1,,Jamaica,JAM,2,,0,Stade de Gerland,Lyon,France,away
+1998,Group,G,Round 1,1998-06-26,Colombia,COL,0,,England,ENG,2,,0,Stade Félix-Bollaert,Lens,France,away
+1998,Group,G,Round 1,1998-06-26,Romania,ROU,1,,Tunisia,TUN,1,,0,Stade de France,Saint-Denis,France,draw
+1998,Knock Out,,Round of 16,1998-06-27,Italy,ITA,1,,Norway,NOR,0,,0,Stade Vélodrome,Marseille,France,home
+1998,Knock Out,,Round of 16,1998-06-27,Brazil,BRA,4,,Chile,CHL,1,,0,Parc des Princes,Paris,France,home
+1998,Knock Out,,Round of 16,1998-06-28,France,FRA,1,,Paraguay,PRY,0,,1,Stade Félix-Bollaert,Lens,France,home
+1998,Knock Out,,Round of 16,1998-06-28,Nigeria,NGA,1,,Denmark,DNK,4,,0,Stade de France,Saint-Denis,France,away
+1998,Knock Out,,Round of 16,1998-06-29,Germany,DEU,2,,Mexico,MEX,1,,0,Stade de la Mosson,Montpellier,France,home
+1998,Knock Out,,Round of 16,1998-06-29,Netherlands,NLD,2,,Yugoslavia,YUG,1,,0,Stade de Toulouse,Toulouse,France,home
+1998,Knock Out,,Round of 16,1998-06-30,Romania,ROU,0,,Croatia,HRV,1,,0,Stade du Parc Lescure,Bordeaux,France,away
+1998,Knock Out,,Round of 16,1998-06-30,Argentina,ARG,2,4,England,ENG,2,3,1,Stade Geoffroy-Guichard,Saint-Étienne,France,home
+1998,Knock Out,,Quarter Final,1998-07-03,Italy,ITA,0,3,France,FRA,0,4,1,Stade de France,Saint-Denis,France,away
+1998,Knock Out,,Quarter Final,1998-07-03,Brazil,BRA,3,,Denmark,DNK,2,,0,Stade de la Beaujoire,Nantes,France,home
+1998,Knock Out,,Quarter Final,1998-07-04,Netherlands,NLD,2,,Argentina,ARG,1,,0,Stade Vélodrome,Marseille,France,home
+1998,Knock Out,,Quarter Final,1998-07-04,Germany,DEU,0,,Croatia,HRV,3,,0,Stade de Gerland,Lyon,France,away
+1998,Knock Out,,Semi Final,1998-07-07,Brazil,BRA,1,4,Netherlands,NLD,1,2,1,Stade Vélodrome,Marseille,France,home
+1998,Knock Out,,Semi Final,1998-07-08,France,FRA,2,,Croatia,HRV,1,,0,Stade de France,Saint-Denis,France,home
+1998,Knock Out,,Third Place,1998-07-11,Netherlands,NLD,1,,Croatia,HRV,2,,0,Parc des Princes,Paris,France,away
+1998,Knock Out,,Final,1998-07-12,Brazil,BRA,0,,France,FRA,3,,0,Stade de France,Saint-Denis,France,away
+2002,Group,A,Round 1,2002-05-31,France,FRA,0,,Senegal,SEN,1,,0,Seoul World Cup Stadium,Seoul,South Korea,away
+2002,Group,E,Round 1,2002-06-01,Republic of Ireland,IRL,1,,Cameroon,CMR,1,,0,Niigata Stadium,Niigata,Japan,draw
+2002,Group,A,Round 1,2002-06-01,Uruguay,URY,1,,Denmark,DNK,2,,0,Ulsan Munsu Football Stadium,Ulsan,South Korea,away
+2002,Group,E,Round 1,2002-06-01,Germany,DEU,8,,Saudi Arabia,SAU,0,,0,Sapporo Dome,Sapporo,Japan,home
+2002,Group,F,Round 1,2002-06-02,Argentina,ARG,1,,Nigeria,NGA,0,,0,Kashima Stadium,Ibaraki,Japan,home
+2002,Group,B,Round 1,2002-06-02,Paraguay,PRY,2,,South Africa,ZAF,2,,0,Busan Asiad Stadium,Busan,South Korea,draw
+2002,Group,F,Round 1,2002-06-02,England,ENG,1,,Sweden,SWE,1,,0,Saitama Stadium,Saitama,Japan,draw
+2002,Group,B,Round 1,2002-06-02,Spain,ESP,3,,Slovenia,SVN,1,,0,Gwangju World Cup Stadium,Gwangju,South Korea,home
+2002,Group,G,Round 1,2002-06-03,Croatia,HRV,0,,Mexico,MEX,1,,0,Niigata Stadium,Niigata,Japan,away
+2002,Group,C,Round 1,2002-06-03,Brazil,BRA,2,,Turkey,TUR,1,,0,Ulsan Munsu Football Stadium,Ulsan,South Korea,home
+2002,Group,G,Round 1,2002-06-03,Italy,ITA,2,,Ecuador,ECU,0,,0,Sapporo Dome,Sapporo,Japan,home
+2002,Group,C,Round 1,2002-06-04,China,CHN,0,,Costa Rica,CRI,2,,0,Gwangju World Cup Stadium,Gwangju,South Korea,away
+2002,Group,H,Round 1,2002-06-04,Japan,JPN,2,,Belgium,BEL,2,,0,Saitama Stadium,Saitama,Japan,draw
+2002,Group,D,Round 1,2002-06-04,South Korea,KOR,2,,Poland,POL,0,,0,Busan Asiad Stadium,Busan,South Korea,home
+2002,Group,H,Round 1,2002-06-05,Russia,RUS,2,,Tunisia,TUN,0,,0,Kobe Wing Stadium,Kobe,Japan,home
+2002,Group,D,Round 1,2002-06-05,United States,USA,3,,Portugal,PRT,2,,0,Suwon World Cup Stadium,Suwon,South Korea,home
+2002,Group,E,Round 1,2002-06-05,Germany,DEU,1,,Republic of Ireland,IRL,1,,0,Kashima Stadium,Ibaraki,Japan,draw
+2002,Group,A,Round 1,2002-06-06,Denmark,DNK,1,,Senegal,SEN,1,,0,Daegu World Cup Stadium,Daegu,South Korea,draw
+2002,Group,E,Round 1,2002-06-06,Cameroon,CMR,1,,Saudi Arabia,SAU,0,,0,Saitama Stadium,Saitama,Japan,home
+2002,Group,A,Round 1,2002-06-06,France,FRA,0,,Uruguay,URY,0,,0,Busan Asiad Stadium,Busan,South Korea,draw
+2002,Group,F,Round 1,2002-06-07,Sweden,SWE,2,,Nigeria,NGA,1,,0,Kobe Wing Stadium,Kobe,Japan,home
+2002,Group,B,Round 1,2002-06-07,Spain,ESP,3,,Paraguay,PRY,1,,0,Jeonju World Cup Stadium,Jeonju,South Korea,home
+2002,Group,F,Round 1,2002-06-07,Argentina,ARG,0,,England,ENG,1,,0,Sapporo Dome,Sapporo,Japan,away
+2002,Group,B,Round 1,2002-06-08,South Africa,ZAF,1,,Slovenia,SVN,0,,0,Daegu World Cup Stadium,Daegu,South Korea,home
+2002,Group,G,Round 1,2002-06-08,Italy,ITA,1,,Croatia,HRV,2,,0,Kashima Stadium,Ibaraki,Japan,away
+2002,Group,C,Round 1,2002-06-08,Brazil,BRA,4,,China,CHN,0,,0,Jeju World Cup Stadium,Seogwipo,South Korea,home
+2002,Group,G,Round 1,2002-06-09,Mexico,MEX,2,,Ecuador,ECU,1,,0,Miyagi Stadium,Miyagi,Japan,home
+2002,Group,C,Round 1,2002-06-09,Costa Rica,CRI,1,,Turkey,TUR,1,,0,Incheon Munhak Stadium,Incheon,South Korea,draw
+2002,Group,H,Round 1,2002-06-09,Japan,JPN,1,,Russia,RUS,0,,0,International Stadium Yokohama,Yokohama,Japan,home
+2002,Group,D,Round 1,2002-06-10,South Korea,KOR,1,,United States,USA,1,,0,Daegu World Cup Stadium,Daegu,South Korea,draw
+2002,Group,H,Round 1,2002-06-10,Tunisia,TUN,1,,Belgium,BEL,1,,0,Ōita Stadium,Ōita,Japan,draw
+2002,Group,D,Round 1,2002-06-10,Portugal,PRT,4,,Poland,POL,0,,0,Jeonju World Cup Stadium,Jeonju,South Korea,home
+2002,Group,A,Round 1,2002-06-11,Denmark,DNK,2,,France,FRA,0,,0,Incheon Munhak Stadium,Incheon,South Korea,home
+2002,Group,A,Round 1,2002-06-11,Senegal,SEN,3,,Uruguay,URY,3,,0,Suwon World Cup Stadium,Suwon,South Korea,draw
+2002,Group,E,Round 1,2002-06-11,Cameroon,CMR,0,,Germany,DEU,2,,0,Shizuoka Stadium ECOPA,Shizuoka,Japan,away
+2002,Group,E,Round 1,2002-06-11,Saudi Arabia,SAU,0,,Republic of Ireland,IRL,3,,0,International Stadium Yokohama,Yokohama,Japan,away
+2002,Group,F,Round 1,2002-06-12,Nigeria,NGA,0,,England,ENG,0,,0,Nagai Stadium,Osaka,Japan,draw
+2002,Group,F,Round 1,2002-06-12,Sweden,SWE,1,,Argentina,ARG,1,,0,Miyagi Stadium,Miyagi,Japan,draw
+2002,Group,B,Round 1,2002-06-12,Slovenia,SVN,1,,Paraguay,PRY,3,,0,Jeju World Cup Stadium,Seogwipo,South Korea,away
+2002,Group,B,Round 1,2002-06-12,South Africa,ZAF,2,,Spain,ESP,3,,0,Daejeon World Cup Stadium,Daejeon,South Korea,away
+2002,Group,C,Round 1,2002-06-13,Costa Rica,CRI,2,,Brazil,BRA,5,,0,Suwon World Cup Stadium,Suwon,South Korea,away
+2002,Group,C,Round 1,2002-06-13,Turkey,TUR,3,,China,CHN,0,,0,Seoul World Cup Stadium,Seoul,South Korea,home
+2002,Group,G,Round 1,2002-06-13,Ecuador,ECU,1,,Croatia,HRV,0,,0,International Stadium Yokohama,Yokohama,Japan,home
+2002,Group,G,Round 1,2002-06-13,Mexico,MEX,1,,Italy,ITA,1,,0,Ōita Stadium,Ōita,Japan,draw
+2002,Group,H,Round 1,2002-06-14,Belgium,BEL,3,,Russia,RUS,2,,0,Shizuoka Stadium ECOPA,Shizuoka,Japan,home
+2002,Group,H,Round 1,2002-06-14,Tunisia,TUN,0,,Japan,JPN,2,,0,Nagai Stadium,Osaka,Japan,away
+2002,Group,D,Round 1,2002-06-14,Poland,POL,3,,United States,USA,1,,0,Daejeon World Cup Stadium,Daejeon,South Korea,home
+2002,Group,D,Round 1,2002-06-14,Portugal,PRT,0,,South Korea,KOR,1,,0,Incheon Munhak Stadium,Incheon,South Korea,away
+2002,Knock Out,,Round of 16,2002-06-15,Germany,DEU,1,,Paraguay,PRY,0,,0,Jeju World Cup Stadium,Seogwipo,South Korea,home
+2002,Knock Out,,Round of 16,2002-06-15,Denmark,DNK,0,,England,ENG,3,,0,Niigata Stadium,Niigata,Japan,away
+2002,Knock Out,,Round of 16,2002-06-16,Sweden,SWE,1,,Senegal,SEN,2,,1,Ōita Stadium,Ōita,Japan,away
+2002,Knock Out,,Round of 16,2002-06-16,Spain,ESP,1,3,Republic of Ireland,IRL,1,2,1,Suwon World Cup Stadium,Suwon,South Korea,home
+2002,Knock Out,,Round of 16,2002-06-17,Mexico,MEX,0,,United States,USA,2,,0,Jeonju World Cup Stadium,Jeonju,South Korea,away
+2002,Knock Out,,Round of 16,2002-06-17,Brazil,BRA,2,,Belgium,BEL,0,,0,Kobe Wing Stadium,Kobe,Japan,home
+2002,Knock Out,,Round of 16,2002-06-18,Japan,JPN,0,,Turkey,TUR,1,,0,Miyagi Stadium,Miyagi,Japan,away
+2002,Knock Out,,Round of 16,2002-06-18,South Korea,KOR,2,,Italy,ITA,1,,1,Daejeon World Cup Stadium,Daejeon,South Korea,home
+2002,Knock Out,,Quarter Final,2002-06-21,England,ENG,1,,Brazil,BRA,2,,0,Shizuoka Stadium ECOPA,Shizuoka,Japan,away
+2002,Knock Out,,Quarter Final,2002-06-21,Germany,DEU,1,,United States,USA,0,,0,Ulsan Munsu Football Stadium,Ulsan,South Korea,home
+2002,Knock Out,,Quarter Final,2002-06-22,Spain,ESP,0,3,South Korea,KOR,0,5,1,Gwangju World Cup Stadium,Gwangju,South Korea,away
+2002,Knock Out,,Quarter Final,2002-06-22,Senegal,SEN,0,,Turkey,TUR,1,,1,Nagai Stadium,Osaka,Japan,away
+2002,Knock Out,,Semi Final,2002-06-25,Germany,DEU,1,,South Korea,KOR,0,,0,Seoul World Cup Stadium,Seoul,South Korea,home
+2002,Knock Out,,Semi Final,2002-06-26,Brazil,BRA,1,,Turkey,TUR,0,,0,Saitama Stadium,Saitama,Japan,home
+2002,Knock Out,,Third Place,2002-06-29,South Korea,KOR,2,,Turkey,TUR,3,,0,Daegu World Cup Stadium,Daegu,South Korea,away
+2002,Knock Out,,Final,2002-06-30,Germany,DEU,0,,Brazil,BRA,2,,0,International Stadium Yokohama,Yokohama,Japan,away
+2006,Group,A,Round 1,2006-06-09,Germany,DEU,4,,Costa Rica,CRI,2,,0,Allianz Arena,Munich,Germany,home
+2006,Group,A,Round 1,2006-06-09,Poland,POL,0,,Ecuador,ECU,2,,0,Arena AufShalke,Gelsenkirchen,Germany,away
+2006,Group,B,Round 1,2006-06-10,England,ENG,1,,Paraguay,PRY,0,,0,Waldstadion,Frankfurt,Germany,home
+2006,Group,B,Round 1,2006-06-10,Trinidad and Tobago,TTO,0,,Sweden,SWE,0,,0,Westfalenstadion,Dortmund,Germany,draw
+2006,Group,C,Round 1,2006-06-10,Argentina,ARG,2,,Ivory Coast,CIV,1,,0,Volksparkstadion,Hamburg,Germany,home
+2006,Group,C,Round 1,2006-06-11,Serbia and Montenegro,SCG,0,,Netherlands,NLD,1,,0,Zentralstadion,Leipzig,Germany,away
+2006,Group,D,Round 1,2006-06-11,Mexico,MEX,3,,Iran,IRN,1,,0,Frankenstadion,Nuremberg,Germany,home
+2006,Group,D,Round 1,2006-06-11,Angola,AGO,0,,Portugal,PRT,1,,0,RheinEnergieStadion,Cologne,Germany,away
+2006,Group,F,Round 1,2006-06-12,Australia,AUS,3,,Japan,JPN,1,,0,Fritz-Walter-Stadion,Kaiserslautern,Germany,home
+2006,Group,E,Round 1,2006-06-12,United States,USA,0,,Czech Republic,CZE,3,,0,Arena AufShalke,Gelsenkirchen,Germany,away
+2006,Group,E,Round 1,2006-06-12,Italy,ITA,2,,Ghana,GHA,0,,0,Niedersachsenstadion,Hanover,Germany,home
+2006,Group,G,Round 1,2006-06-13,South Korea,KOR,2,,Togo,TGO,1,,0,Waldstadion,Frankfurt,Germany,home
+2006,Group,G,Round 1,2006-06-13,France,FRA,0,,Switzerland,CHE,0,,0,Neckarstadion,Stuttgart,Germany,draw
+2006,Group,F,Round 1,2006-06-13,Brazil,BRA,1,,Croatia,HRV,0,,0,Olympiastadion,Berlin,Germany,home
+2006,Group,H,Round 1,2006-06-14,Spain,ESP,4,,Ukraine,UKR,0,,0,Zentralstadion,Leipzig,Germany,home
+2006,Group,H,Round 1,2006-06-14,Tunisia,TUN,2,,Saudi Arabia,SAU,2,,0,Allianz Arena,Munich,Germany,draw
+2006,Group,A,Round 1,2006-06-14,Germany,DEU,1,,Poland,POL,0,,0,Westfalenstadion,Dortmund,Germany,home
+2006,Group,A,Round 1,2006-06-15,Ecuador,ECU,3,,Costa Rica,CRI,0,,0,Volksparkstadion,Hamburg,Germany,home
+2006,Group,B,Round 1,2006-06-15,England,ENG,2,,Trinidad and Tobago,TTO,0,,0,Frankenstadion,Nuremberg,Germany,home
+2006,Group,B,Round 1,2006-06-15,Sweden,SWE,1,,Paraguay,PRY,0,,0,Olympiastadion,Berlin,Germany,home
+2006,Group,C,Round 1,2006-06-16,Argentina,ARG,6,,Serbia and Montenegro,SCG,0,,0,Arena AufShalke,Gelsenkirchen,Germany,home
+2006,Group,C,Round 1,2006-06-16,Netherlands,NLD,2,,Ivory Coast,CIV,1,,0,Neckarstadion,Stuttgart,Germany,home
+2006,Group,D,Round 1,2006-06-16,Mexico,MEX,0,,Angola,AGO,0,,0,Niedersachsenstadion,Hanover,Germany,draw
+2006,Group,D,Round 1,2006-06-17,Portugal,PRT,2,,Iran,IRN,0,,0,Waldstadion,Frankfurt,Germany,home
+2006,Group,E,Round 1,2006-06-17,Czech Republic,CZE,0,,Ghana,GHA,2,,0,RheinEnergieStadion,Cologne,Germany,away
+2006,Group,E,Round 1,2006-06-17,Italy,ITA,1,,United States,USA,1,,0,Fritz-Walter-Stadion,Kaiserslautern,Germany,draw
+2006,Group,F,Round 1,2006-06-18,Japan,JPN,0,,Croatia,HRV,0,,0,Frankenstadion,Nuremberg,Germany,draw
+2006,Group,F,Round 1,2006-06-18,Brazil,BRA,2,,Australia,AUS,0,,0,Allianz Arena,Munich,Germany,home
+2006,Group,G,Round 1,2006-06-18,France,FRA,1,,South Korea,KOR,1,,0,Zentralstadion,Leipzig,Germany,draw
+2006,Group,G,Round 1,2006-06-19,Togo,TGO,0,,Switzerland,CHE,2,,0,Westfalenstadion,Dortmund,Germany,away
+2006,Group,H,Round 1,2006-06-19,Saudi Arabia,SAU,0,,Ukraine,UKR,4,,0,Volksparkstadion,Hamburg,Germany,away
+2006,Group,H,Round 1,2006-06-19,Spain,ESP,3,,Tunisia,TUN,1,,0,Neckarstadion,Stuttgart,Germany,home
+2006,Group,A,Round 1,2006-06-20,Costa Rica,CRI,1,,Poland,POL,2,,0,Niedersachsenstadion,Hanover,Germany,away
+2006,Group,A,Round 1,2006-06-20,Ecuador,ECU,0,,Germany,DEU,3,,0,Olympiastadion,Berlin,Germany,away
+2006,Group,B,Round 1,2006-06-20,Paraguay,PRY,2,,Trinidad and Tobago,TTO,0,,0,Fritz-Walter-Stadion,Kaiserslautern,Germany,home
+2006,Group,B,Round 1,2006-06-20,Sweden,SWE,2,,England,ENG,2,,0,RheinEnergieStadion,Cologne,Germany,draw
+2006,Group,D,Round 1,2006-06-21,Iran,IRN,1,,Angola,AGO,1,,0,Zentralstadion,Leipzig,Germany,draw
+2006,Group,D,Round 1,2006-06-21,Portugal,PRT,2,,Mexico,MEX,1,,0,Arena AufShalke,Gelsenkirchen,Germany,home
+2006,Group,C,Round 1,2006-06-21,Ivory Coast,CIV,3,,Serbia and Montenegro,SCG,2,,0,Allianz Arena,Munich,Germany,home
+2006,Group,C,Round 1,2006-06-21,Netherlands,NLD,0,,Argentina,ARG,0,,0,Waldstadion,Frankfurt,Germany,draw
+2006,Group,E,Round 1,2006-06-22,Czech Republic,CZE,0,,Italy,ITA,2,,0,Volksparkstadion,Hamburg,Germany,away
+2006,Group,E,Round 1,2006-06-22,Ghana,GHA,2,,United States,USA,1,,0,Frankenstadion,Nuremberg,Germany,home
+2006,Group,F,Round 1,2006-06-22,Croatia,HRV,2,,Australia,AUS,2,,0,Neckarstadion,Stuttgart,Germany,draw
+2006,Group,F,Round 1,2006-06-22,Japan,JPN,1,,Brazil,BRA,4,,0,Westfalenstadion,Dortmund,Germany,away
+2006,Group,H,Round 1,2006-06-23,Saudi Arabia,SAU,0,,Spain,ESP,1,,0,Fritz-Walter-Stadion,Kaiserslautern,Germany,away
+2006,Group,H,Round 1,2006-06-23,Ukraine,UKR,1,,Tunisia,TUN,0,,0,Olympiastadion,Berlin,Germany,home
+2006,Group,G,Round 1,2006-06-23,Switzerland,CHE,2,,South Korea,KOR,0,,0,Niedersachsenstadion,Hanover,Germany,home
+2006,Group,G,Round 1,2006-06-23,Togo,TGO,0,,France,FRA,2,,0,RheinEnergieStadion,Cologne,Germany,away
+2006,Knock Out,,Round of 16,2006-06-24,Germany,DEU,2,,Sweden,SWE,0,,0,Allianz Arena,Munich,Germany,home
+2006,Knock Out,,Round of 16,2006-06-24,Argentina,ARG,2,,Mexico,MEX,1,,1,Zentralstadion,Leipzig,Germany,home
+2006,Knock Out,,Round of 16,2006-06-25,England,ENG,1,,Ecuador,ECU,0,,0,Neckarstadion,Stuttgart,Germany,home
+2006,Knock Out,,Round of 16,2006-06-25,Portugal,PRT,1,,Netherlands,NLD,0,,0,Frankenstadion,Nuremberg,Germany,home
+2006,Knock Out,,Round of 16,2006-06-26,Italy,ITA,1,,Australia,AUS,0,,0,Fritz-Walter-Stadion,Kaiserslautern,Germany,home
+2006,Knock Out,,Round of 16,2006-06-26,Switzerland,CHE,0,0,Ukraine,UKR,0,3,1,RheinEnergieStadion,Cologne,Germany,away
+2006,Knock Out,,Round of 16,2006-06-27,Brazil,BRA,3,,Ghana,GHA,0,,0,Westfalenstadion,Dortmund,Germany,home
+2006,Knock Out,,Round of 16,2006-06-27,Spain,ESP,1,,France,FRA,3,,0,Niedersachsenstadion,Hanover,Germany,away
+2006,Knock Out,,Quarter Final,2006-06-30,Germany,DEU,1,4,Argentina,ARG,1,2,1,Olympiastadion,Berlin,Germany,home
+2006,Knock Out,,Quarter Final,2006-06-30,Italy,ITA,3,,Ukraine,UKR,0,,0,Volksparkstadion,Hamburg,Germany,home
+2006,Knock Out,,Quarter Final,2006-07-01,England,ENG,0,1,Portugal,PRT,0,3,1,Arena AufShalke,Gelsenkirchen,Germany,away
+2006,Knock Out,,Quarter Final,2006-07-01,Brazil,BRA,0,,France,FRA,1,,0,Waldstadion,Frankfurt,Germany,away
+2006,Knock Out,,Semi Final,2006-07-04,Germany,DEU,0,,Italy,ITA,2,,1,Westfalenstadion,Dortmund,Germany,away
+2006,Knock Out,,Semi Final,2006-07-05,Portugal,PRT,0,,France,FRA,1,,0,Allianz Arena,Munich,Germany,away
+2006,Knock Out,,Third Place,2006-07-08,Germany,DEU,3,,Portugal,PRT,1,,0,Neckarstadion,Stuttgart,Germany,home
+2006,Knock Out,,Final,2006-07-09,Italy,ITA,1,5,France,FRA,1,3,1,Olympiastadion,Berlin,Germany,home
+2010,Group,A,Round 1,2010-06-11,South Africa,ZAF,1,,Mexico,MEX,1,,0,Soccer City,Johannesburg,South Africa,draw
+2010,Group,A,Round 1,2010-06-11,Uruguay,URY,0,,France,FRA,0,,0,Cape Town Stadium,Cape Town,South Africa,draw
+2010,Group,B,Round 1,2010-06-12,South Korea,KOR,2,,Greece,GRC,0,,0,Nelson Mandela Bay Stadium,Port Elizabeth,South Africa,home
+2010,Group,B,Round 1,2010-06-12,Argentina,ARG,1,,Nigeria,NGA,0,,0,Ellis Park Stadium,Johannesburg,South Africa,home
+2010,Group,C,Round 1,2010-06-12,England,ENG,1,,United States,USA,1,,0,Royal Bafokeng Stadium,Rustenburg,South Africa,draw
+2010,Group,C,Round 1,2010-06-13,Algeria,DZA,0,,Slovenia,SVN,1,,0,Peter Mokaba Stadium,Polokwane,South Africa,away
+2010,Group,D,Round 1,2010-06-13,Serbia,SRB,0,,Ghana,GHA,1,,0,Loftus Versfeld Stadium,Pretoria,South Africa,away
+2010,Group,D,Round 1,2010-06-13,Germany,DEU,4,,Australia,AUS,0,,0,Moses Mabhida Stadium,Durban,South Africa,home
+2010,Group,E,Round 1,2010-06-14,Netherlands,NLD,2,,Denmark,DNK,0,,0,Soccer City,Johannesburg,South Africa,home
+2010,Group,E,Round 1,2010-06-14,Japan,JPN,1,,Cameroon,CMR,0,,0,Free State Stadium,Bloemfontein,South Africa,home
+2010,Group,F,Round 1,2010-06-14,Italy,ITA,1,,Paraguay,PRY,1,,0,Cape Town Stadium,Cape Town,South Africa,draw
+2010,Group,F,Round 1,2010-06-15,New Zealand,NZL,1,,Slovakia,SVK,1,,0,Royal Bafokeng Stadium,Rustenburg,South Africa,draw
+2010,Group,G,Round 1,2010-06-15,Ivory Coast,CIV,0,,Portugal,PRT,0,,0,Nelson Mandela Bay Stadium,Port Elizabeth,South Africa,draw
+2010,Group,G,Round 1,2010-06-15,Brazil,BRA,2,,North Korea,PRK,1,,0,Ellis Park Stadium,Johannesburg,South Africa,home
+2010,Group,H,Round 1,2010-06-16,Honduras,HND,0,,Chile,CHL,1,,0,Mbombela Stadium,Nelspruit,South Africa,away
+2010,Group,H,Round 1,2010-06-16,Spain,ESP,0,,Switzerland,CHE,1,,0,Moses Mabhida Stadium,Durban,South Africa,away
+2010,Group,A,Round 1,2010-06-16,South Africa,ZAF,0,,Uruguay,URY,3,,0,Loftus Versfeld Stadium,Pretoria,South Africa,away
+2010,Group,B,Round 1,2010-06-17,Argentina,ARG,4,,South Korea,KOR,1,,0,Soccer City,Johannesburg,South Africa,home
+2010,Group,B,Round 1,2010-06-17,Greece,GRC,2,,Nigeria,NGA,1,,0,Free State Stadium,Bloemfontein,South Africa,home
+2010,Group,A,Round 1,2010-06-17,France,FRA,0,,Mexico,MEX,2,,0,Peter Mokaba Stadium,Polokwane,South Africa,away
+2010,Group,D,Round 1,2010-06-18,Germany,DEU,0,,Serbia,SRB,1,,0,Nelson Mandela Bay Stadium,Port Elizabeth,South Africa,away
+2010,Group,C,Round 1,2010-06-18,Slovenia,SVN,2,,United States,USA,2,,0,Ellis Park Stadium,Johannesburg,South Africa,draw
+2010,Group,C,Round 1,2010-06-18,England,ENG,0,,Algeria,DZA,0,,0,Cape Town Stadium,Cape Town,South Africa,draw
+2010,Group,E,Round 1,2010-06-19,Netherlands,NLD,1,,Japan,JPN,0,,0,Moses Mabhida Stadium,Durban,South Africa,home
+2010,Group,D,Round 1,2010-06-19,Ghana,GHA,1,,Australia,AUS,1,,0,Royal Bafokeng Stadium,Rustenburg,South Africa,draw
+2010,Group,E,Round 1,2010-06-19,Cameroon,CMR,1,,Denmark,DNK,2,,0,Loftus Versfeld Stadium,Pretoria,South Africa,away
+2010,Group,F,Round 1,2010-06-20,Slovakia,SVK,0,,Paraguay,PRY,2,,0,Free State Stadium,Bloemfontein,South Africa,away
+2010,Group,F,Round 1,2010-06-20,Italy,ITA,1,,New Zealand,NZL,1,,0,Mbombela Stadium,Nelspruit,South Africa,draw
+2010,Group,G,Round 1,2010-06-20,Brazil,BRA,3,,Ivory Coast,CIV,1,,0,Soccer City,Johannesburg,South Africa,home
+2010,Group,G,Round 1,2010-06-21,Portugal,PRT,7,,North Korea,PRK,0,,0,Cape Town Stadium,Cape Town,South Africa,home
+2010,Group,H,Round 1,2010-06-21,Chile,CHL,1,,Switzerland,CHE,0,,0,Nelson Mandela Bay Stadium,Port Elizabeth,South Africa,home
+2010,Group,H,Round 1,2010-06-21,Spain,ESP,2,,Honduras,HND,0,,0,Ellis Park Stadium,Johannesburg,South Africa,home
+2010,Group,A,Round 1,2010-06-22,France,FRA,1,,South Africa,ZAF,2,,0,Free State Stadium,Bloemfontein,South Africa,away
+2010,Group,A,Round 1,2010-06-22,Mexico,MEX,0,,Uruguay,URY,1,,0,Royal Bafokeng Stadium,Rustenburg,South Africa,away
+2010,Group,B,Round 1,2010-06-22,Greece,GRC,0,,Argentina,ARG,2,,0,Peter Mokaba Stadium,Polokwane,South Africa,away
+2010,Group,B,Round 1,2010-06-22,Nigeria,NGA,2,,South Korea,KOR,2,,0,Moses Mabhida Stadium,Durban,South Africa,draw
+2010,Group,C,Round 1,2010-06-23,Slovenia,SVN,0,,England,ENG,1,,0,Nelson Mandela Bay Stadium,Port Elizabeth,South Africa,away
+2010,Group,C,Round 1,2010-06-23,United States,USA,1,,Algeria,DZA,0,,0,Loftus Versfeld Stadium,Pretoria,South Africa,home
+2010,Group,D,Round 1,2010-06-23,Australia,AUS,2,,Serbia,SRB,1,,0,Mbombela Stadium,Nelspruit,South Africa,home
+2010,Group,D,Round 1,2010-06-23,Ghana,GHA,0,,Germany,DEU,1,,0,Soccer City,Johannesburg,South Africa,away
+2010,Group,F,Round 1,2010-06-24,Paraguay,PRY,0,,New Zealand,NZL,0,,0,Peter Mokaba Stadium,Polokwane,South Africa,draw
+2010,Group,F,Round 1,2010-06-24,Slovakia,SVK,3,,Italy,ITA,2,,0,Ellis Park Stadium,Johannesburg,South Africa,home
+2010,Group,E,Round 1,2010-06-24,Cameroon,CMR,1,,Netherlands,NLD,2,,0,Cape Town Stadium,Cape Town,South Africa,away
+2010,Group,E,Round 1,2010-06-24,Denmark,DNK,1,,Japan,JPN,3,,0,Royal Bafokeng Stadium,Rustenburg,South Africa,away
+2010,Group,G,Round 1,2010-06-25,North Korea,PRK,0,,Ivory Coast,CIV,3,,0,Mbombela Stadium,Nelspruit,South Africa,away
+2010,Group,G,Round 1,2010-06-25,Portugal,PRT,0,,Brazil,BRA,0,,0,Moses Mabhida Stadium,Durban,South Africa,draw
+2010,Group,H,Round 1,2010-06-25,Chile,CHL,1,,Spain,ESP,2,,0,Loftus Versfeld Stadium,Pretoria,South Africa,away
+2010,Group,H,Round 1,2010-06-25,Switzerland,CHE,0,,Honduras,HND,0,,0,Free State Stadium,Bloemfontein,South Africa,draw
+2010,Knock Out,,Round of 16,2010-06-26,Uruguay,URY,2,,South Korea,KOR,1,,0,Nelson Mandela Bay Stadium,Port Elizabeth,South Africa,home
+2010,Knock Out,,Round of 16,2010-06-26,United States,USA,1,,Ghana,GHA,2,,1,Royal Bafokeng Stadium,Rustenburg,South Africa,away
+2010,Knock Out,,Round of 16,2010-06-27,Germany,DEU,4,,England,ENG,1,,0,Free State Stadium,Bloemfontein,South Africa,home
+2010,Knock Out,,Round of 16,2010-06-27,Argentina,ARG,3,,Mexico,MEX,1,,0,Soccer City,Johannesburg,South Africa,home
+2010,Knock Out,,Round of 16,2010-06-28,Netherlands,NLD,2,,Slovakia,SVK,1,,0,Moses Mabhida Stadium,Durban,South Africa,home
+2010,Knock Out,,Round of 16,2010-06-28,Brazil,BRA,3,,Chile,CHL,0,,0,Ellis Park Stadium,Johannesburg,South Africa,home
+2010,Knock Out,,Round of 16,2010-06-29,Paraguay,PRY,0,5,Japan,JPN,0,3,1,Loftus Versfeld Stadium,Pretoria,South Africa,home
+2010,Knock Out,,Round of 16,2010-06-29,Spain,ESP,1,,Portugal,PRT,0,,0,Cape Town Stadium,Cape Town,South Africa,home
+2010,Knock Out,,Quarter Final,2010-07-02,Netherlands,NLD,2,,Brazil,BRA,1,,0,Nelson Mandela Bay Stadium,Port Elizabeth,South Africa,home
+2010,Knock Out,,Quarter Final,2010-07-02,Uruguay,URY,1,4,Ghana,GHA,1,2,1,Soccer City,Johannesburg,South Africa,home
+2010,Knock Out,,Quarter Final,2010-07-03,Argentina,ARG,0,,Germany,DEU,4,,0,Cape Town Stadium,Cape Town,South Africa,away
+2010,Knock Out,,Quarter Final,2010-07-03,Paraguay,PRY,0,,Spain,ESP,1,,0,Ellis Park Stadium,Johannesburg,South Africa,away
+2010,Knock Out,,Semi Final,2010-07-06,Uruguay,URY,2,,Netherlands,NLD,3,,0,Cape Town Stadium,Cape Town,South Africa,away
+2010,Knock Out,,Semi Final,2010-07-07,Germany,DEU,0,,Spain,ESP,1,,0,Moses Mabhida Stadium,Durban,South Africa,away
+2010,Knock Out,,Third Place,2010-07-10,Uruguay,URY,2,,Germany,DEU,3,,0,Nelson Mandela Bay Stadium,Port Elizabeth,South Africa,away
+2010,Knock Out,,Final,2010-07-11,Netherlands,NLD,0,,Spain,ESP,1,,1,Soccer City,Johannesburg,South Africa,away
+2014,Group,A,Round 1,2014-06-12,Brazil,BRA,3,,Croatia,HRV,1,,0,Arena Corinthians,São Paulo,Brazil,home
+2014,Group,A,Round 1,2014-06-13,Mexico,MEX,1,,Cameroon,CMR,0,,0,Arena das Dunas,Natal,Brazil,home
+2014,Group,B,Round 1,2014-06-13,Spain,ESP,1,,Netherlands,NLD,5,,0,Arena Fonte Nova,Salvador,Brazil,away
+2014,Group,B,Round 1,2014-06-13,Chile,CHL,3,,Australia,AUS,1,,0,Arena Pantanal,Cuiabá,Brazil,home
+2014,Group,C,Round 1,2014-06-14,Colombia,COL,3,,Greece,GRC,0,,0,Estádio Mineirão,Belo Horizonte,Brazil,home
+2014,Group,D,Round 1,2014-06-14,Uruguay,URY,1,,Costa Rica,CRI,3,,0,Estádio Castelão,Fortaleza,Brazil,away
+2014,Group,D,Round 1,2014-06-14,England,ENG,1,,Italy,ITA,2,,0,Arena da Amazônia,Manaus,Brazil,away
+2014,Group,C,Round 1,2014-06-14,Ivory Coast,CIV,2,,Japan,JPN,1,,0,Arena Pernambuco,Recife,Brazil,home
+2014,Group,E,Round 1,2014-06-15,Switzerland,CHE,2,,Ecuador,ECU,1,,0,Estádio Nacional,Brasília,Brazil,home
+2014,Group,E,Round 1,2014-06-15,France,FRA,3,,Honduras,HND,0,,0,Estádio Beira-Rio,Porto Alegre,Brazil,home
+2014,Group,F,Round 1,2014-06-15,Argentina,ARG,2,,Bosnia and Herzegovina,BIH,1,,0,Estádio do Maracanã,Rio de Janeiro,Brazil,home
+2014,Group,G,Round 1,2014-06-16,Germany,DEU,4,,Portugal,PRT,0,,0,Arena Fonte Nova,Salvador,Brazil,home
+2014,Group,F,Round 1,2014-06-16,Iran,IRN,0,,Nigeria,NGA,0,,0,Arena da Baixada,Curitiba,Brazil,draw
+2014,Group,G,Round 1,2014-06-16,Ghana,GHA,1,,United States,USA,2,,0,Arena das Dunas,Natal,Brazil,away
+2014,Group,H,Round 1,2014-06-17,Belgium,BEL,2,,Algeria,DZA,1,,0,Estádio Mineirão,Belo Horizonte,Brazil,home
+2014,Group,A,Round 1,2014-06-17,Brazil,BRA,0,,Mexico,MEX,0,,0,Estádio Castelão,Fortaleza,Brazil,draw
+2014,Group,H,Round 1,2014-06-17,Russia,RUS,1,,South Korea,KOR,1,,0,Arena Pantanal,Cuiabá,Brazil,draw
+2014,Group,B,Round 1,2014-06-18,Australia,AUS,2,,Netherlands,NLD,3,,0,Estádio Beira-Rio,Porto Alegre,Brazil,away
+2014,Group,B,Round 1,2014-06-18,Spain,ESP,0,,Chile,CHL,2,,0,Estádio do Maracanã,Rio de Janeiro,Brazil,away
+2014,Group,A,Round 1,2014-06-18,Cameroon,CMR,0,,Croatia,HRV,4,,0,Arena da Amazônia,Manaus,Brazil,away
+2014,Group,C,Round 1,2014-06-19,Colombia,COL,2,,Ivory Coast,CIV,1,,0,Estádio Nacional,Brasília,Brazil,home
+2014,Group,D,Round 1,2014-06-19,Uruguay,URY,2,,England,ENG,1,,0,Arena Corinthians,São Paulo,Brazil,home
+2014,Group,C,Round 1,2014-06-19,Japan,JPN,0,,Greece,GRC,0,,0,Arena das Dunas,Natal,Brazil,draw
+2014,Group,D,Round 1,2014-06-20,Italy,ITA,0,,Costa Rica,CRI,1,,0,Arena Pernambuco,Recife,Brazil,away
+2014,Group,E,Round 1,2014-06-20,Switzerland,CHE,2,,France,FRA,5,,0,Arena Fonte Nova,Salvador,Brazil,away
+2014,Group,E,Round 1,2014-06-20,Honduras,HND,1,,Ecuador,ECU,2,,0,Arena da Baixada,Curitiba,Brazil,away
+2014,Group,F,Round 1,2014-06-21,Argentina,ARG,1,,Iran,IRN,0,,0,Estádio Mineirão,Belo Horizonte,Brazil,home
+2014,Group,G,Round 1,2014-06-21,Germany,DEU,2,,Ghana,GHA,2,,0,Estádio Castelão,Fortaleza,Brazil,draw
+2014,Group,F,Round 1,2014-06-21,Nigeria,NGA,1,,Bosnia and Herzegovina,BIH,0,,0,Arena Pantanal,Cuiabá,Brazil,home
+2014,Group,H,Round 1,2014-06-22,Belgium,BEL,1,,Russia,RUS,0,,0,Estádio do Maracanã,Rio de Janeiro,Brazil,home
+2014,Group,H,Round 1,2014-06-22,South Korea,KOR,2,,Algeria,DZA,4,,0,Estádio Beira-Rio,Porto Alegre,Brazil,away
+2014,Group,G,Round 1,2014-06-22,United States,USA,2,,Portugal,PRT,2,,0,Arena da Amazônia,Manaus,Brazil,draw
+2014,Group,B,Round 1,2014-06-23,Australia,AUS,0,,Spain,ESP,3,,0,Arena da Baixada,Curitiba,Brazil,away
+2014,Group,B,Round 1,2014-06-23,Netherlands,NLD,2,,Chile,CHL,0,,0,Arena Corinthians,São Paulo,Brazil,home
+2014,Group,A,Round 1,2014-06-23,Cameroon,CMR,1,,Brazil,BRA,4,,0,Estádio Nacional,Brasília,Brazil,away
+2014,Group,A,Round 1,2014-06-23,Croatia,HRV,1,,Mexico,MEX,3,,0,Arena Pernambuco,Recife,Brazil,away
+2014,Group,D,Round 1,2014-06-24,Costa Rica,CRI,0,,England,ENG,0,,0,Estádio Mineirão,Belo Horizonte,Brazil,draw
+2014,Group,D,Round 1,2014-06-24,Italy,ITA,0,,Uruguay,URY,1,,0,Arena das Dunas,Natal,Brazil,away
+2014,Group,C,Round 1,2014-06-24,Japan,JPN,1,,Colombia,COL,4,,0,Arena Pantanal,Cuiabá,Brazil,away
+2014,Group,C,Round 1,2014-06-24,Greece,GRC,2,,Ivory Coast,CIV,1,,0,Estádio Castelão,Fortaleza,Brazil,home
+2014,Group,F,Round 1,2014-06-25,Bosnia and Herzegovina,BIH,3,,Iran,IRN,1,,0,Arena Fonte Nova,Salvador,Brazil,home
+2014,Group,F,Round 1,2014-06-25,Nigeria,NGA,2,,Argentina,ARG,3,,0,Estádio Beira-Rio,Porto Alegre,Brazil,away
+2014,Group,E,Round 1,2014-06-25,Honduras,HND,0,,Switzerland,CHE,3,,0,Arena da Amazônia,Manaus,Brazil,away
+2014,Group,E,Round 1,2014-06-25,Ecuador,ECU,0,,France,FRA,0,,0,Estádio do Maracanã,Rio de Janeiro,Brazil,draw
+2014,Group,G,Round 1,2014-06-26,Portugal,PRT,2,,Ghana,GHA,1,,0,Estádio Nacional,Brasília,Brazil,home
+2014,Group,G,Round 1,2014-06-26,United States,USA,0,,Germany,DEU,1,,0,Arena Pernambuco,Recife,Brazil,away
+2014,Group,H,Round 1,2014-06-26,Algeria,DZA,1,,Russia,RUS,1,,0,Arena da Baixada,Curitiba,Brazil,draw
+2014,Group,H,Round 1,2014-06-26,South Korea,KOR,0,,Belgium,BEL,1,,0,Arena Corinthians,São Paulo,Brazil,away
+2014,Knock Out,,Round of 16,2014-06-28,Brazil,BRA,1,3,Chile,CHL,1,2,1,Estádio Mineirão,Belo Horizonte,Brazil,home
+2014,Knock Out,,Round of 16,2014-06-28,Colombia,COL,2,,Uruguay,URY,0,,0,Estádio do Maracanã,Rio de Janeiro,Brazil,home
+2014,Knock Out,,Round of 16,2014-06-29,Netherlands,NLD,2,,Mexico,MEX,1,,0,Estádio Castelão,Fortaleza,Brazil,home
+2014,Knock Out,,Round of 16,2014-06-29,Costa Rica,CRI,1,5,Greece,GRC,1,3,1,Arena Pernambuco,Recife,Brazil,home
+2014,Knock Out,,Round of 16,2014-06-30,France,FRA,2,,Nigeria,NGA,0,,0,Estádio Nacional,Brasília,Brazil,home
+2014,Knock Out,,Round of 16,2014-06-30,Germany,DEU,2,,Algeria,DZA,1,,1,Estádio Beira-Rio,Porto Alegre,Brazil,home
+2014,Knock Out,,Round of 16,2014-07-01,Argentina,ARG,1,,Switzerland,CHE,0,,1,Arena Corinthians,São Paulo,Brazil,home
+2014,Knock Out,,Round of 16,2014-07-01,Belgium,BEL,2,,United States,USA,1,,1,Arena Fonte Nova,Salvador,Brazil,home
+2014,Knock Out,,Quarter Final,2014-07-04,France,FRA,0,,Germany,DEU,1,,0,Estádio do Maracanã,Rio de Janeiro,Brazil,away
+2014,Knock Out,,Quarter Final,2014-07-04,Brazil,BRA,2,,Colombia,COL,1,,0,Estádio Castelão,Fortaleza,Brazil,home
+2014,Knock Out,,Quarter Final,2014-07-05,Argentina,ARG,1,,Belgium,BEL,0,,0,Estádio Nacional,Brasília,Brazil,home
+2014,Knock Out,,Quarter Final,2014-07-05,Netherlands,NLD,0,4,Costa Rica,CRI,0,3,1,Arena Fonte Nova,Salvador,Brazil,home
+2014,Knock Out,,Semi Final,2014-07-08,Brazil,BRA,1,,Germany,DEU,7,,0,Estádio Mineirão,Belo Horizonte,Brazil,away
+2014,Knock Out,,Semi Final,2014-07-09,Netherlands,NLD,0,2,Argentina,ARG,0,4,1,Arena Corinthians,São Paulo,Brazil,away
+2014,Knock Out,,Third Place,2014-07-12,Brazil,BRA,0,,Netherlands,NLD,3,,0,Estádio Nacional,Brasília,Brazil,away
+2014,Knock Out,,Final,2014-07-13,Germany,DEU,1,,Argentina,ARG,0,,1,Estádio do Maracanã,Rio de Janeiro,Brazil,home
+2018,Group,A,Round 1,2018-06-14,Russia,RUS,5,,Saudi Arabia,SAU,0,,0,Luzhniki Stadium,Moscow,Russia,home
+2018,Group,A,Round 1,2018-06-15,Egypt,EGY,0,,Uruguay,URY,1,,0,Central Stadium,Yekaterinburg,Russia,away
+2018,Group,B,Round 1,2018-06-15,Morocco,MAR,0,,Iran,IRN,1,,0,Krestovsky Stadium,Saint Petersburg,Russia,away
+2018,Group,B,Round 1,2018-06-15,Portugal,PRT,3,,Spain,ESP,3,,0,Fisht Olympic Stadium,Sochi,Russia,draw
+2018,Group,C,Round 1,2018-06-16,France,FRA,2,,Australia,AUS,1,,0,Kazan Arena,Kazan,Russia,home
+2018,Group,D,Round 1,2018-06-16,Argentina,ARG,1,,Iceland,ISL,1,,0,Otkritie Arena,Moscow,Russia,draw
+2018,Group,C,Round 1,2018-06-16,Peru,PER,0,,Denmark,DNK,1,,0,Mordovia Arena,Saransk,Russia,away
+2018,Group,D,Round 1,2018-06-16,Croatia,HRV,2,,Nigeria,NGA,0,,0,Kaliningrad Stadium,Kaliningrad,Russia,home
+2018,Group,E,Round 1,2018-06-17,Costa Rica,CRI,0,,Serbia,SRB,1,,0,Samara Arena,Samara,Russia,away
+2018,Group,F,Round 1,2018-06-17,Germany,DEU,0,,Mexico,MEX,1,,0,Luzhniki Stadium,Moscow,Russia,away
+2018,Group,E,Round 1,2018-06-17,Brazil,BRA,1,,Switzerland,CHE,1,,0,Rostov Arena,Rostov-on-Don,Russia,draw
+2018,Group,F,Round 1,2018-06-18,Sweden,SWE,1,,South Korea,KOR,0,,0,Nizhny Novgorod Stadium,Nizhny Novgorod,Russia,home
+2018,Group,G,Round 1,2018-06-18,Belgium,BEL,3,,Panama,PAN,0,,0,Fisht Olympic Stadium,Sochi,Russia,home
+2018,Group,G,Round 1,2018-06-18,Tunisia,TUN,1,,England,ENG,2,,0,Volgograd Arena,Volgograd,Russia,away
+2018,Group,H,Round 1,2018-06-19,Colombia,COL,1,,Japan,JPN,2,,0,Mordovia Arena,Saransk,Russia,away
+2018,Group,H,Round 1,2018-06-19,Poland,POL,1,,Senegal,SEN,2,,0,Otkritie Arena,Moscow,Russia,away
+2018,Group,A,Round 1,2018-06-19,Russia,RUS,3,,Egypt,EGY,1,,0,Krestovsky Stadium,Saint Petersburg,Russia,home
+2018,Group,B,Round 1,2018-06-20,Portugal,PRT,1,,Morocco,MAR,0,,0,Luzhniki Stadium,Moscow,Russia,home
+2018,Group,A,Round 1,2018-06-20,Uruguay,URY,1,,Saudi Arabia,SAU,0,,0,Rostov Arena,Rostov-on-Don,Russia,home
+2018,Group,B,Round 1,2018-06-20,Iran,IRN,0,,Spain,ESP,1,,0,Kazan Arena,Kazan,Russia,away
+2018,Group,C,Round 1,2018-06-21,Denmark,DNK,1,,Australia,AUS,1,,0,Samara Arena,Samara,Russia,draw
+2018,Group,C,Round 1,2018-06-21,France,FRA,1,,Peru,PER,0,,0,Central Stadium,Yekaterinburg,Russia,home
+2018,Group,D,Round 1,2018-06-21,Argentina,ARG,0,,Croatia,HRV,3,,0,Nizhny Novgorod Stadium,Nizhny Novgorod,Russia,away
+2018,Group,E,Round 1,2018-06-22,Brazil,BRA,2,,Costa Rica,CRI,0,,0,Krestovsky Stadium,Saint Petersburg,Russia,home
+2018,Group,D,Round 1,2018-06-22,Nigeria,NGA,2,,Iceland,ISL,0,,0,Volgograd Arena,Volgograd,Russia,home
+2018,Group,E,Round 1,2018-06-22,Serbia,SRB,1,,Switzerland,CHE,2,,0,Kaliningrad Stadium,Kaliningrad,Russia,away
+2018,Group,G,Round 1,2018-06-23,Belgium,BEL,5,,Tunisia,TUN,2,,0,Otkritie Arena,Moscow,Russia,home
+2018,Group,F,Round 1,2018-06-23,South Korea,KOR,1,,Mexico,MEX,2,,0,Rostov Arena,Rostov-on-Don,Russia,away
+2018,Group,F,Round 1,2018-06-23,Germany,DEU,2,,Sweden,SWE,1,,0,Fisht Olympic Stadium,Sochi,Russia,home
+2018,Group,G,Round 1,2018-06-24,England,ENG,6,,Panama,PAN,1,,0,Nizhny Novgorod Stadium,Nizhny Novgorod,Russia,home
+2018,Group,H,Round 1,2018-06-24,Japan,JPN,2,,Senegal,SEN,2,,0,Central Stadium,Yekaterinburg,Russia,draw
+2018,Group,H,Round 1,2018-06-24,Poland,POL,0,,Colombia,COL,3,,0,Kazan Arena,Kazan,Russia,away
+2018,Group,A,Round 1,2018-06-25,Saudi Arabia,SAU,2,,Egypt,EGY,1,,0,Volgograd Arena,Volgograd,Russia,home
+2018,Group,A,Round 1,2018-06-25,Uruguay,URY,3,,Russia,RUS,0,,0,Samara Arena,Samara,Russia,home
+2018,Group,B,Round 1,2018-06-25,Spain,ESP,2,,Morocco,MAR,2,,0,Kaliningrad Stadium,Kaliningrad,Russia,draw
+2018,Group,B,Round 1,2018-06-25,Iran,IRN,1,,Portugal,PRT,1,,0,Mordovia Arena,Saransk,Russia,draw
+2018,Group,C,Round 1,2018-06-26,Australia,AUS,0,,Peru,PER,2,,0,Fisht Olympic Stadium,Sochi,Russia,away
+2018,Group,C,Round 1,2018-06-26,Denmark,DNK,0,,France,FRA,0,,0,Luzhniki Stadium,Moscow,Russia,draw
+2018,Group,D,Round 1,2018-06-26,Iceland,ISL,1,,Croatia,HRV,2,,0,Rostov Arena,Rostov-on-Don,Russia,away
+2018,Group,D,Round 1,2018-06-26,Nigeria,NGA,1,,Argentina,ARG,2,,0,Krestovsky Stadium,Saint Petersburg,Russia,away
+2018,Group,F,Round 1,2018-06-27,South Korea,KOR,2,,Germany,DEU,0,,0,Kazan Arena,Kazan,Russia,home
+2018,Group,F,Round 1,2018-06-27,Mexico,MEX,0,,Sweden,SWE,3,,0,Central Stadium,Yekaterinburg,Russia,away
+2018,Group,E,Round 1,2018-06-27,Serbia,SRB,0,,Brazil,BRA,2,,0,Otkritie Arena,Moscow,Russia,away
+2018,Group,E,Round 1,2018-06-27,Switzerland,CHE,2,,Costa Rica,CRI,2,,0,Nizhny Novgorod Stadium,Nizhny Novgorod,Russia,draw
+2018,Group,H,Round 1,2018-06-28,Japan,JPN,0,,Poland,POL,1,,0,Volgograd Arena,Volgograd,Russia,away
+2018,Group,H,Round 1,2018-06-28,Senegal,SEN,0,,Colombia,COL,1,,0,Samara Arena,Samara,Russia,away
+2018,Group,G,Round 1,2018-06-28,England,ENG,0,,Belgium,BEL,1,,0,Kaliningrad Stadium,Kaliningrad,Russia,away
+2018,Group,G,Round 1,2018-06-28,Panama,PAN,1,,Tunisia,TUN,2,,0,Mordovia Arena,Saransk,Russia,away
+2018,Knock Out,,Round of 16,2018-06-30,France,FRA,4,,Argentina,ARG,3,,0,Kazan Arena,Kazan,Russia,home
+2018,Knock Out,,Round of 16,2018-06-30,Uruguay,URY,2,,Portugal,PRT,1,,0,Fisht Olympic Stadium,Sochi,Russia,home
+2018,Knock Out,,Round of 16,2018-07-01,Spain,ESP,1,3,Russia,RUS,1,4,1,Luzhniki Stadium,Moscow,Russia,away
+2018,Knock Out,,Round of 16,2018-07-01,Croatia,HRV,1,3,Denmark,DNK,1,2,1,Nizhny Novgorod Stadium,Nizhny Novgorod,Russia,home
+2018,Knock Out,,Round of 16,2018-07-02,Brazil,BRA,2,,Mexico,MEX,0,,0,Samara Arena,Samara,Russia,home
+2018,Knock Out,,Round of 16,2018-07-02,Belgium,BEL,3,,Japan,JPN,2,,0,Rostov Arena,Rostov-on-Don,Russia,home
+2018,Knock Out,,Round of 16,2018-07-03,Sweden,SWE,1,,Switzerland,CHE,0,,0,Krestovsky Stadium,Saint Petersburg,Russia,home
+2018,Knock Out,,Round of 16,2018-07-03,Colombia,COL,1,3,England,ENG,1,4,1,Otkritie Arena,Moscow,Russia,away
+2018,Knock Out,,Quarter Final,2018-07-06,Uruguay,URY,0,,France,FRA,2,,0,Nizhny Novgorod Stadium,Nizhny Novgorod,Russia,away
+2018,Knock Out,,Quarter Final,2018-07-06,Brazil,BRA,1,,Belgium,BEL,2,,0,Kazan Arena,Kazan,Russia,away
+2018,Knock Out,,Quarter Final,2018-07-07,Sweden,SWE,0,,England,ENG,2,,0,Samara Arena,Samara,Russia,away
+2018,Knock Out,,Quarter Final,2018-07-07,Russia,RUS,2,3,Croatia,HRV,2,4,1,Fisht Olympic Stadium,Sochi,Russia,away
+2018,Knock Out,,Semi Final,2018-07-10,France,FRA,1,,Belgium,BEL,0,,0,Krestovsky Stadium,Saint Petersburg,Russia,home
+2018,Knock Out,,Semi Final,2018-07-11,Croatia,HRV,2,,England,ENG,1,,1,Luzhniki Stadium,Moscow,Russia,home
+2018,Knock Out,,Third Place,2018-07-14,Belgium,BEL,2,,England,ENG,0,,0,Krestovsky Stadium,Saint Petersburg,Russia,home
+2018,Knock Out,,Final,2018-07-15,France,FRA,4,,Croatia,HRV,2,,0,Luzhniki Stadium,Moscow,Russia,home
+2022,Group,A,Round 1,2022-11-20,Qatar,QAT,0,,Ecuador,ECU,2,,0,Al Bayt Stadium,Al Khor,Qatar,away
+2022,Group,B,Round 1,2022-11-21,England,ENG,6,,Iran,IRN,2,,0,Khalifa International Stadium,Al Rayyan,Qatar,home
+2022,Group,A,Round 1,2022-11-21,Senegal,SEN,0,,Netherlands,NLD,2,,0,Al Thumama Stadium,Doha,Qatar,away
+2022,Group,B,Round 1,2022-11-21,United States,USA,1,,Wales,WAL,1,,0,Ahmad bin Ali Stadium,Al Rayyan,Qatar,draw
+2022,Group,C,Round 1,2022-11-22,Argentina,ARG,1,,Saudi Arabia,SAU,2,,0,Lusail Stadium,Lusail,Qatar,away
+2022,Group,D,Round 1,2022-11-22,Denmark,DNK,0,,Tunisia,TUN,0,,0,Education City Stadium,Al Rayyan,Qatar,draw
+2022,Group,C,Round 1,2022-11-22,Mexico,MEX,0,,Poland,POL,0,,0,Stadium 974,Doha,Qatar,draw
+2022,Group,D,Round 1,2022-11-22,France,FRA,4,,Australia,AUS,1,,0,Al Janoub Stadium,Al Wakrah,Qatar,home
+2022,Group,F,Round 1,2022-11-23,Morocco,MAR,0,,Croatia,HRV,0,,0,Al Bayt Stadium,Al Khor,Qatar,draw
+2022,Group,E,Round 1,2022-11-23,Germany,DEU,1,,Japan,JPN,2,,0,Khalifa International Stadium,Al Rayyan,Qatar,away
+2022,Group,E,Round 1,2022-11-23,Spain,ESP,7,,Costa Rica,CRI,0,,0,Al Thumama Stadium,Doha,Qatar,home
+2022,Group,F,Round 1,2022-11-23,Belgium,BEL,1,,Canada,CAN,0,,0,Ahmad bin Ali Stadium,Al Rayyan,Qatar,home
+2022,Group,G,Round 1,2022-11-24,Switzerland,CHE,1,,Cameroon,CMR,0,,0,Al Janoub Stadium,Al Wakrah,Qatar,home
+2022,Group,H,Round 1,2022-11-24,Uruguay,URY,0,,South Korea,KOR,0,,0,Education City Stadium,Al Rayyan,Qatar,draw
+2022,Group,H,Round 1,2022-11-24,Portugal,PRT,3,,Ghana,GHA,2,,0,Stadium 974,Doha,Qatar,home
+2022,Group,G,Round 1,2022-11-24,Brazil,BRA,2,,Serbia,SRB,0,,0,Lusail Stadium,Lusail,Qatar,home
+2022,Group,B,Round 1,2022-11-25,Wales,WAL,0,,Iran,IRN,2,,0,Ahmad bin Ali Stadium,Al Rayyan,Qatar,away
+2022,Group,A,Round 1,2022-11-25,Qatar,QAT,1,,Senegal,SEN,3,,0,Al Thumama Stadium,Doha,Qatar,away
+2022,Group,A,Round 1,2022-11-25,Netherlands,NLD,1,,Ecuador,ECU,1,,0,Khalifa International Stadium,Al Rayyan,Qatar,draw
+2022,Group,B,Round 1,2022-11-25,England,ENG,0,,United States,USA,0,,0,Al Bayt Stadium,Al Khor,Qatar,draw
+2022,Group,D,Round 1,2022-11-26,Tunisia,TUN,0,,Australia,AUS,1,,0,Al Janoub Stadium,Al Wakrah,Qatar,away
+2022,Group,C,Round 1,2022-11-26,Poland,POL,2,,Saudi Arabia,SAU,0,,0,Education City Stadium,Al Rayyan,Qatar,home
+2022,Group,D,Round 1,2022-11-26,France,FRA,2,,Denmark,DNK,1,,0,Stadium 974,Doha,Qatar,home
+2022,Group,C,Round 1,2022-11-26,Argentina,ARG,2,,Mexico,MEX,0,,0,Lusail Stadium,Lusail,Qatar,home
+2022,Group,E,Round 1,2022-11-27,Japan,JPN,0,,Costa Rica,CRI,1,,0,Ahmad bin Ali Stadium,Al Rayyan,Qatar,away
+2022,Group,F,Round 1,2022-11-27,Belgium,BEL,0,,Morocco,MAR,2,,0,Al Thumama Stadium,Doha,Qatar,away
+2022,Group,F,Round 1,2022-11-27,Croatia,HRV,4,,Canada,CAN,1,,0,Khalifa International Stadium,Al Rayyan,Qatar,home
+2022,Group,E,Round 1,2022-11-27,Spain,ESP,1,,Germany,DEU,1,,0,Al Bayt Stadium,Al Khor,Qatar,draw
+2022,Group,G,Round 1,2022-11-28,Cameroon,CMR,3,,Serbia,SRB,3,,0,Al Janoub Stadium,Al Wakrah,Qatar,draw
+2022,Group,H,Round 1,2022-11-28,South Korea,KOR,2,,Ghana,GHA,3,,0,Education City Stadium,Al Rayyan,Qatar,away
+2022,Group,G,Round 1,2022-11-28,Brazil,BRA,1,,Switzerland,CHE,0,,0,Stadium 974,Doha,Qatar,home
+2022,Group,H,Round 1,2022-11-28,Portugal,PRT,2,,Uruguay,URY,0,,0,Lusail Stadium,Lusail,Qatar,home
+2022,Group,A,Round 1,2022-11-29,Ecuador,ECU,1,,Senegal,SEN,2,,0,Khalifa International Stadium,Al Rayyan,Qatar,away
+2022,Group,A,Round 1,2022-11-29,Netherlands,NLD,2,,Qatar,QAT,0,,0,Al Bayt Stadium,Al Khor,Qatar,home
+2022,Group,B,Round 1,2022-11-29,Iran,IRN,0,,United States,USA,1,,0,Al Thumama Stadium,Doha,Qatar,away
+2022,Group,B,Round 1,2022-11-29,Wales,WAL,0,,England,ENG,3,,0,Ahmad bin Ali Stadium,Al Rayyan,Qatar,away
+2022,Group,D,Round 1,2022-11-30,Australia,AUS,1,,Denmark,DNK,0,,0,Al Janoub Stadium,Al Wakrah,Qatar,home
+2022,Group,D,Round 1,2022-11-30,Tunisia,TUN,1,,France,FRA,0,,0,Education City Stadium,Al Rayyan,Qatar,home
+2022,Group,C,Round 1,2022-11-30,Poland,POL,0,,Argentina,ARG,2,,0,Stadium 974,Doha,Qatar,away
+2022,Group,C,Round 1,2022-11-30,Saudi Arabia,SAU,1,,Mexico,MEX,2,,0,Lusail Stadium,Lusail,Qatar,away
+2022,Group,F,Round 1,2022-12-01,Canada,CAN,1,,Morocco,MAR,2,,0,Al Thumama Stadium,Doha,Qatar,away
+2022,Group,F,Round 1,2022-12-01,Croatia,HRV,0,,Belgium,BEL,0,,0,Ahmad bin Ali Stadium,Al Rayyan,Qatar,draw
+2022,Group,E,Round 1,2022-12-01,Costa Rica,CRI,2,,Germany,DEU,4,,0,Al Bayt Stadium,Al Khor,Qatar,away
+2022,Group,E,Round 1,2022-12-01,Japan,JPN,2,,Spain,ESP,1,,0,Khalifa International Stadium,Al Rayyan,Qatar,home
+2022,Group,H,Round 1,2022-12-02,Ghana,GHA,0,,Uruguay,URY,2,,0,Al Janoub Stadium,Al Wakrah,Qatar,away
+2022,Group,H,Round 1,2022-12-02,South Korea,KOR,2,,Portugal,PRT,1,,0,Education City Stadium,Al Rayyan,Qatar,home
+2022,Group,G,Round 1,2022-12-02,Cameroon,CMR,1,,Brazil,BRA,0,,0,Lusail Stadium,Lusail,Qatar,home
+2022,Group,G,Round 1,2022-12-02,Serbia,SRB,2,,Switzerland,CHE,3,,0,Stadium 974,Doha,Qatar,away
+2022,Knock Out,,Round of 16,2022-12-03,Netherlands,NLD,3,,United States,USA,1,,0,Khalifa International Stadium,Al Rayyan,Qatar,home
+2022,Knock Out,,Round of 16,2022-12-03,Argentina,ARG,2,,Australia,AUS,1,,0,Ahmad bin Ali Stadium,Al Rayyan,Qatar,home
+2022,Knock Out,,Round of 16,2022-12-04,France,FRA,3,,Poland,POL,1,,0,Al Thumama Stadium,Doha,Qatar,home
+2022,Knock Out,,Round of 16,2022-12-04,England,ENG,3,,Senegal,SEN,0,,0,Al Bayt Stadium,Al Khor,Qatar,home
+2022,Knock Out,,Round of 16,2022-12-05,Japan,JPN,1,1,Croatia,HRV,1,3,1,Al Janoub Stadium,Al Wakrah,Qatar,away
+2022,Knock Out,,Round of 16,2022-12-05,Brazil,BRA,4,,South Korea,KOR,1,,0,Stadium 974,Doha,Qatar,home
+2022,Knock Out,,Round of 16,2022-12-06,Morocco,MAR,0,3,Spain,ESP,0,0,1,Education City Stadium,Al Rayyan,Qatar,home
+2022,Knock Out,,Round of 16,2022-12-06,Portugal,PRT,6,,Switzerland,CHE,1,,0,Lusail Stadium,Lusail,Qatar,home
+2022,Knock Out,,Quarter Final,2022-12-09,Croatia,HRV,1,4,Brazil,BRA,1,2,1,Education City Stadium,Al Rayyan,Qatar,home
+2022,Knock Out,,Quarter Final,2022-12-09,Netherlands,NLD,2,3,Argentina,ARG,2,4,1,Lusail Stadium,Lusail,Qatar,away
+2022,Knock Out,,Quarter Final,2022-12-10,Morocco,MAR,1,,Portugal,PRT,0,,0,Al Thumama Stadium,Doha,Qatar,home
+2022,Knock Out,,Quarter Final,2022-12-10,England,ENG,1,,France,FRA,2,,0,Al Bayt Stadium,Al Khor,Qatar,away
+2022,Knock Out,,Semi Final,2022-12-13,Argentina,ARG,3,,Croatia,HRV,0,,0,Lusail Stadium,Lusail,Qatar,home
+2022,Knock Out,,Semi Final,2022-12-14,France,FRA,2,,Morocco,MAR,0,,0,Al Bayt Stadium,Al Khor,Qatar,home
+2022,Knock Out,,Third Place,2022-12-17,Croatia,HRV,2,,Morocco,MAR,1,,0,Khalifa International Stadium,Al Rayyan,Qatar,home
+2022,Knock Out,,Final,2022-12-18,Argentina,ARG,3,4,France,FRA,3,2,1,Lusail Stadium,Lusail,Qatar,home
+2026,Group,A,Round 1,,Argentina,ARG,,,Croatia,CRO,,,0,,,USA/Mexico/Canada,
+2026,Group,A,Round 1,,Norway,NOR,,,Cape Verde,CPV,,,0,,,USA/Mexico/Canada,
+2026,Group,A,Round 2,,Argentina,ARG,,,Norway,NOR,,,0,,,USA/Mexico/Canada,
+2026,Group,A,Round 2,,Croatia,CRO,,,Cape Verde,CPV,,,0,,,USA/Mexico/Canada,
+2026,Group,A,Round 3,,Argentina,ARG,,,Cape Verde,CPV,,,0,,,USA/Mexico/Canada,
+2026,Group,A,Round 3,,Croatia,CRO,,,Norway,NOR,,,0,,,USA/Mexico/Canada,
+2026,Group,B,Round 1,,Brazil,BRA,,,Switzerland,SUI,,,0,,,USA/Mexico/Canada,
+2026,Group,B,Round 1,,Ghana,GHA,,,Australia,AUS,,,0,,,USA/Mexico/Canada,
+2026,Group,B,Round 2,,Brazil,BRA,,,Ghana,GHA,,,0,,,USA/Mexico/Canada,
+2026,Group,B,Round 2,,Switzerland,SUI,,,Australia,AUS,,,0,,,USA/Mexico/Canada,
+2026,Group,B,Round 3,,Brazil,BRA,,,Australia,AUS,,,0,,,USA/Mexico/Canada,
+2026,Group,B,Round 3,,Switzerland,SUI,,,Ghana,GHA,,,0,,,USA/Mexico/Canada,
+2026,Group,C,Round 1,,England,ENG,,,Colombia,COL,,,0,,,USA/Mexico/Canada,
+2026,Group,C,Round 1,,Egypt,EGY,,,DR Congo,COD,,,0,,,USA/Mexico/Canada,
+2026,Group,C,Round 2,,England,ENG,,,Egypt,EGY,,,0,,,USA/Mexico/Canada,
+2026,Group,C,Round 2,,Colombia,COL,,,DR Congo,COD,,,0,,,USA/Mexico/Canada,
+2026,Group,C,Round 3,,England,ENG,,,DR Congo,COD,,,0,,,USA/Mexico/Canada,
+2026,Group,C,Round 3,,Colombia,COL,,,Egypt,EGY,,,0,,,USA/Mexico/Canada,
+2026,Group,D,Round 1,,France,FRA,,,Senegal,SEN,,,0,,,USA/Mexico/Canada,
+2026,Group,D,Round 1,,Austria,AUT,,,Bosnia & H.,BIH,,,0,,,USA/Mexico/Canada,
+2026,Group,D,Round 2,,France,FRA,,,Austria,AUT,,,0,,,USA/Mexico/Canada,
+2026,Group,D,Round 2,,Senegal,SEN,,,Bosnia & H.,BIH,,,0,,,USA/Mexico/Canada,
+2026,Group,D,Round 3,,France,FRA,,,Bosnia & H.,BIH,,,0,,,USA/Mexico/Canada,
+2026,Group,D,Round 3,,Senegal,SEN,,,Austria,AUT,,,0,,,USA/Mexico/Canada,
+2026,Group,E,Round 1,,Germany,GER,,,Spain,ESP,,,0,,,USA/Mexico/Canada,
+2026,Group,E,Round 1,,Paraguay,PAR,,,Japan,JPN,,,0,,,USA/Mexico/Canada,
+2026,Group,E,Round 2,,Germany,GER,,,Paraguay,PAR,,,0,,,USA/Mexico/Canada,
+2026,Group,E,Round 2,,Spain,ESP,,,Japan,JPN,,,0,,,USA/Mexico/Canada,
+2026,Group,E,Round 3,,Germany,GER,,,Japan,JPN,,,0,,,USA/Mexico/Canada,
+2026,Group,E,Round 3,,Spain,ESP,,,Paraguay,PAR,,,0,,,USA/Mexico/Canada,
+2026,Group,F,Round 1,,Netherlands,NED,,,Belgium,BEL,,,0,,,USA/Mexico/Canada,
+2026,Group,F,Round 1,,Ecuador,ECU,,,Morocco,MAR,,,0,,,USA/Mexico/Canada,
+2026,Group,F,Round 2,,Netherlands,NED,,,Ecuador,ECU,,,0,,,USA/Mexico/Canada,
+2026,Group,F,Round 2,,Belgium,BEL,,,Morocco,MAR,,,0,,,USA/Mexico/Canada,
+2026,Group,F,Round 3,,Netherlands,NED,,,Morocco,MAR,,,0,,,USA/Mexico/Canada,
+2026,Group,F,Round 3,,Belgium,BEL,,,Ecuador,ECU,,,0,,,USA/Mexico/Canada,
+2026,Group,G,Round 1,,Portugal,POR,,,Sweden,SWE,,,0,,,USA/Mexico/Canada,
+2026,Group,G,Round 1,,South Africa,RSA,,,Algeria,ALG,,,0,,,USA/Mexico/Canada,
+2026,Group,G,Round 2,,Portugal,POR,,,South Africa,RSA,,,0,,,USA/Mexico/Canada,
+2026,Group,G,Round 2,,Sweden,SWE,,,Algeria,ALG,,,0,,,USA/Mexico/Canada,
+2026,Group,G,Round 3,,Portugal,POR,,,Algeria,ALG,,,0,,,USA/Mexico/Canada,
+2026,Group,G,Round 3,,Sweden,SWE,,,South Africa,RSA,,,0,,,USA/Mexico/Canada,
+2026,Group,H,Round 1,,USA,USA,,,Mexico,MEX,,,0,,,USA/Mexico/Canada,
+2026,Group,H,Round 1,,Canada,CAN,,,Côte d'Ivoire,CIV,,,0,,,USA/Mexico/Canada,
+2026,Group,H,Round 2,,USA,USA,,,Canada,CAN,,,0,,,USA/Mexico/Canada,
+2026,Group,H,Round 2,,Mexico,MEX,,,Côte d'Ivoire,CIV,,,0,,,USA/Mexico/Canada,
+2026,Group,H,Round 3,,USA,USA,,,Côte d'Ivoire,CIV,,,0,,,USA/Mexico/Canada,
+2026,Group,H,Round 3,,Mexico,MEX,,,Canada,CAN,,,0,,,USA/Mexico/Canada,
+2026,Knock Out,,Round of 32,,Germany,GER,,,Paraguay,PAR,,,0,,,USA/Mexico/Canada,
+2026,Knock Out,,Round of 32,,France,FRA,,,Sweden,SWE,,,0,,,USA/Mexico/Canada,
+2026,Knock Out,,Round of 32,,South Africa,RSA,,,Canada,CAN,,,0,,,USA/Mexico/Canada,
+2026,Knock Out,,Round of 32,,Netherlands,NED,,,Morocco,MAR,,,0,,,USA/Mexico/Canada,
+2026,Knock Out,,Round of 32,,Portugal,POR,,,Croatia,CRO,,,0,,,USA/Mexico/Canada,
+2026,Knock Out,,Round of 32,,Spain,ESP,,,Austria,AUT,,,0,,,USA/Mexico/Canada,
+2026,Knock Out,,Round of 32,,USA,USA,,,Bosnia & H.,BIH,,,0,,,USA/Mexico/Canada,
+2026,Knock Out,,Round of 32,,Belgium,BEL,,,Senegal,SEN,,,0,,,USA/Mexico/Canada,
+2026,Knock Out,,Round of 32,,Brazil,BRA,,,Japan,JPN,,,0,,,USA/Mexico/Canada,
+2026,Knock Out,,Round of 32,,Côte d'Ivoire,CIV,,,Norway,NOR,,,0,,,USA/Mexico/Canada,
+2026,Knock Out,,Round of 32,,Mexico,MEX,,,Ecuador,ECU,,,0,,,USA/Mexico/Canada,
+2026,Knock Out,,Round of 32,,England,ENG,,,DR Congo,COD,,,0,,,USA/Mexico/Canada,
+2026,Knock Out,,Round of 32,,Argentina,ARG,,,Cape Verde,CPV,,,0,,,USA/Mexico/Canada,
+2026,Knock Out,,Round of 32,,Australia,AUS,,,Egypt,EGY,,,0,,,USA/Mexico/Canada,
+2026,Knock Out,,Round of 32,,Switzerland,SUI,,,Algeria,ALG,,,0,,,USA/Mexico/Canada,
+2026,Knock Out,,Round of 32,,Colombia,COL,,,Ghana,GHA,,,0,,,USA/Mexico/Canada,
+2026,Knock Out,,Round of 16,,,,,,,,,,0,,,USA/Mexico/Canada,
+2026,Knock Out,,Round of 16,,,,,,,,,,0,,,USA/Mexico/Canada,
+2026,Knock Out,,Round of 16,,,,,,,,,,0,,,USA/Mexico/Canada,
+2026,Knock Out,,Round of 16,,,,,,,,,,0,,,USA/Mexico/Canada,
+2026,Knock Out,,Round of 16,,,,,,,,,,0,,,USA/Mexico/Canada,
+2026,Knock Out,,Round of 16,,,,,,,,,,0,,,USA/Mexico/Canada,
+2026,Knock Out,,Round of 16,,,,,,,,,,0,,,USA/Mexico/Canada,
+2026,Knock Out,,Round of 16,,,,,,,,,,0,,,USA/Mexico/Canada,
+2026,Knock Out,,Quarter Final,,,,,,,,,,0,,,USA/Mexico/Canada,
+2026,Knock Out,,Quarter Final,,,,,,,,,,0,,,USA/Mexico/Canada,
+2026,Knock Out,,Quarter Final,,,,,,,,,,0,,,USA/Mexico/Canada,
+2026,Knock Out,,Quarter Final,,,,,,,,,,0,,,USA/Mexico/Canada,
+2026,Knock Out,,Semi Final,,,,,,,,,,0,,,USA/Mexico/Canada,
+2026,Knock Out,,Semi Final,,,,,,,,,,0,,,USA/Mexico/Canada,
+2026,Knock Out,,Third Place,,,,,,,,,,0,,,USA/Mexico/Canada,
+2026,Knock Out,,Final,,,,,,,,,,0,,,USA/Mexico/Canada,

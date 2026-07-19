@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{{.Site.Description}}" />
+    <title>{{.Site.Name}}</title>
+    <style>
+      :root {
+@LANDIFY_THEME@      }
+{{template "base-css" .}}
+      .status-banner {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 20px 24px;
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+        background: var(--base-200);
+      }
+      .status-dot {
+        flex: none;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: var(--success);
+      }
+      .status-banner strong {
+        text-transform: capitalize;
+        font-size: 17px;
+      }
+      .status-updated {
+        display: block;
+        font-size: 13px;
+        color: var(--neutral);
+      }
+      .status-banner.st-degraded .status-dot,
+      .status-banner.st-maintenance .status-dot {
+        background: var(--warning);
+      }
+      .status-banner.st-outage .status-dot {
+        background: var(--error);
+      }
+      .status-announcement {
+        max-width: 760px;
+        margin: 16px auto 0;
+        padding: 14px 18px;
+        font-size: 14px;
+        color: var(--primary-dark);
+        background: var(--primary-soft);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+        text-align: center;
+      }
+      .status-stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 16px;
+        max-width: 760px;
+        margin: 32px auto 0;
+      }
+      .stat {
+        background: var(--base-200);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+        padding: 18px;
+        text-align: center;
+      }
+      .stat-value {
+        display: block;
+        font-size: 24px;
+        font-weight: 800;
+        color: var(--primary);
+      }
+      .stat-label {
+        display: block;
+        margin-top: 2px;
+        font-size: 12.5px;
+        color: var(--neutral);
+      }
+      .incidents {
+        max-width: 760px;
+        margin: 0 auto;
+      }
+      .incident {
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+        background: var(--base-200);
+        padding: 16px 20px;
+      }
+      .incident + .incident {
+        margin-top: 12px;
+      }
+      .incident-head {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 10px;
+      }
+      .incident-date {
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--neutral);
+      }
+      .incident-title {
+        font-size: 15px;
+        font-weight: 700;
+      }
+      .inc-pill {
+        margin-left: auto;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: capitalize;
+        padding: 3px 10px;
+        border-radius: 999px;
+        color: var(--info);
+        background: var(--base-300);
+      }
+      .inc-investigating {
+        color: var(--warning);
+      }
+      .inc-monitoring {
+        color: var(--info);
+      }
+      .inc-resolved {
+        color: var(--success);
+      }
+      .incident p {
+        margin: 8px 0 0;
+        font-size: 13.5px;
+        color: var(--neutral);
+      }
+    </style>
+  </head>
+  <body>
+    {{template "header" .}}
+
+    <main id="top">
+      <section class="hero">
+        <div>
+          {{if .Hero.Badge}}<span class="badge">{{.Hero.Badge}}</span>{{end}}
+          <h1>{{.Hero.Headline}}</h1>
+          <p class="lead">{{.Hero.Subheadline}}</p>
+        </div>
+      </section>
+
+      <section id="status" class="block">
+        <div class="status-banner st-{{.Status.State}}">
+          <span class="status-dot" aria-hidden="true"></span>
+          <div>
+            <strong>{{.Status.State}}</strong>
+            {{if .Status.Updated}}<span class="status-updated">Updated {{.Status.Updated}}</span>{{end}}
+          </div>
+        </div>
+
+        {{if .Status.Announcement}}
+        <div class="status-announcement">{{.Status.Announcement}}</div>
+        {{end}}
+
+        {{if .Status.Stats}}
+        <div class="status-stats">
+          {{range .Status.Stats}}
+          <div class="stat">
+            <span class="stat-value">{{.Value}}</span>
+            <span class="stat-label">{{.Label}}</span>
+          </div>
+          {{end}}
+        </div>
+        {{end}}
+
+        {{if .Status.Incidents}}
+        <div class="block-head" style="margin-top: 32px;">
+          <h2>{{.Status.Heading}}</h2>
+          {{if .Status.Sub}}<p class="sub">{{.Status.Sub}}</p>{{end}}
+        </div>
+        <div class="incidents">
+          {{range .Status.Incidents}}
+          <div class="incident">
+            <div class="incident-head">
+              <span class="incident-date">{{.Date}}</span>
+              <span class="incident-title">{{.Title}}</span>
+              {{if .State}}<span class="inc-pill inc-{{.State}}">{{.State}}</span>{{end}}
+            </div>
+            {{if .Body}}<p>{{.Body}}</p>{{end}}
+          </div>
+          {{end}}
+        </div>
+        {{end}}
+      </section>
+
+      {{if .CTA.Heading}}
+      <section id="cta" class="block">
+        <div class="cta">
+          <span class="icon" aria-hidden="true">{{.CTA.Icon}}</span>
+          <h2>{{.CTA.Heading}}</h2>
+          <p>{{.CTA.Body}}</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="{{.CTA.Button.Href}}">{{.CTA.Button.Label}}</a>
+          </div>
+        </div>
+      </section>
+      {{end}}
+
+      {{template "footer" .}}
+    </main>
+  </body>
+</html>

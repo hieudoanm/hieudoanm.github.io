@@ -1,0 +1,13 @@
+// Flex wrap utilities — Tailwind v3 default scale
+
+$flex-wraps: (
+  ('wrap', wrap),
+  ('wrap-reverse', wrap-reverse),
+  ('nowrap', nowrap)
+);
+
+@each $name, $value in $flex-wraps {
+  .flex-#{$name} {
+    flex-wrap: $value;
+  }
+}

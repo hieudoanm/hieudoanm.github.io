@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 314.85 190.40" width="314.85" height="190.40" role="img" aria-labelledby="georgia-title georgia-desc">
+  <title id="georgia-title">Georgia hex map</title>
+  <desc id="georgia-desc">Hexagon map with 12 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.89; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 14.28 10.20; }
+    .label { fill: #52525b; font: 600 11.56px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="KA">
+    <title>Kakheti</title>
+    <polygon class="tile" points="275.20,112.20 304.65,129.20 304.65,163.20 275.20,180.20 245.76,163.20 245.76,129.20" aria-label="Kakheti"/>
+    <text class="label" x="275.20" y="146.20">KA</text>
+  </g>
+  <g class="state" data-state="MM">
+    <title>Mtskheta-Mtianeti</title>
+    <polygon class="tile" points="245.76,61.20 275.20,78.20 275.20,112.20 245.76,129.20 216.31,112.20 216.31,78.20" aria-label="Mtskheta-Mtianeti"/>
+    <text class="label" x="245.76" y="95.20">MM</text>
+  </g>
+  <g class="state" data-state="TB">
+    <title>Tbilisi</title>
+    <polygon class="tile" points="216.31,10.20 245.76,27.20 245.76,61.20 216.31,78.20 186.87,61.20 186.87,27.20" aria-label="Tbilisi"/>
+    <text class="label" x="216.31" y="44.20">TB</text>
+  </g>
+  <g class="state" data-state="KK">
+    <title>Kvemo Kartli</title>
+    <polygon class="tile" points="216.31,112.20 245.76,129.20 245.76,163.20 216.31,180.20 186.87,163.20 186.87,129.20" aria-label="Kvemo Kartli"/>
+    <text class="label" x="216.31" y="146.20">KK</text>
+  </g>
+  <g class="state" data-state="SK">
+    <title>Shida Kartli</title>
+    <polygon class="tile" points="186.87,61.20 216.31,78.20 216.31,112.20 186.87,129.20 157.42,112.20 157.42,78.20" aria-label="Shida Kartli"/>
+    <text class="label" x="186.87" y="95.20">SK</text>
+  </g>
+  <g class="state" data-state="RL">
+    <title>Racha-Lechkhumi-Kvemo Svaneti</title>
+    <polygon class="tile" points="157.42,10.20 186.87,27.20 186.87,61.20 157.42,78.20 127.98,61.20 127.98,27.20" aria-label="Racha-Lechkhumi-Kvemo Svaneti"/>
+    <text class="label" x="157.42" y="44.20">RL</text>
+  </g>
+  <g class="state" data-state="SJ">
+    <title>Samtskhe-Javakheti</title>
+    <polygon class="tile" points="157.42,112.20 186.87,129.20 186.87,163.20 157.42,180.20 127.98,163.20 127.98,129.20" aria-label="Samtskhe-Javakheti"/>
+    <text class="label" x="157.42" y="146.20">SJ</text>
+  </g>
+  <g class="state" data-state="IM">
+    <title>Imereti</title>
+    <polygon class="tile" points="127.98,61.20 157.42,78.20 157.42,112.20 127.98,129.20 98.53,112.20 98.53,78.20" aria-label="Imereti"/>
+    <text class="label" x="127.98" y="95.20">IM</text>
+  </g>
+  <g class="state" data-state="SZ">
+    <title>Samegrelo-Zemo Svaneti</title>
+    <polygon class="tile" points="98.53,10.20 127.98,27.20 127.98,61.20 98.53,78.20 69.09,61.20 69.09,27.20" aria-label="Samegrelo-Zemo Svaneti"/>
+    <text class="label" x="98.53" y="44.20">SZ</text>
+  </g>
+  <g class="state" data-state="AJ">
+    <title>Ajaria</title>
+    <polygon class="tile" points="98.53,112.20 127.98,129.20 127.98,163.20 98.53,180.20 69.09,163.20 69.09,129.20" aria-label="Ajaria"/>
+    <text class="label" x="98.53" y="146.20">AJ</text>
+  </g>
+  <g class="state" data-state="GU">
+    <title>Guria</title>
+    <polygon class="tile" points="69.09,61.20 98.53,78.20 98.53,112.20 69.09,129.20 39.64,112.20 39.64,78.20" aria-label="Guria"/>
+    <text class="label" x="69.09" y="95.20">GU</text>
+  </g>
+  <g class="state" data-state="AB">
+    <title>Abkhazia</title>
+    <polygon class="tile" points="39.64,10.20 69.09,27.20 69.09,61.20 39.64,78.20 10.20,61.20 10.20,27.20" aria-label="Abkhazia"/>
+    <text class="label" x="39.64" y="44.20">AB</text>
+  </g>
+</svg>

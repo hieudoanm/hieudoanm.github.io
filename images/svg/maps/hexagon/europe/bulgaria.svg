@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360.35 228.03" width="360.35" height="228.03" role="img" aria-labelledby="bulgaria-title bulgaria-desc">
+  <title id="bulgaria-title">Bulgaria hex map</title>
+  <desc id="bulgaria-desc">Hexagon map with 28 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.25; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 11.14 7.95; }
+    .label { fill: #52525b; font: 600 9.02px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="DO">
+    <title>Dobrich</title>
+    <polygon class="tile" points="329.44,7.95 352.40,21.21 352.40,47.73 329.44,60.99 306.47,47.73 306.47,21.21" aria-label="Dobrich"/>
+    <text class="label" x="329.44" y="34.47">DO</text>
+  </g>
+  <g class="state" data-state="VN">
+    <title>Varna</title>
+    <polygon class="tile" points="306.47,47.73 329.44,60.99 329.44,87.50 306.47,100.76 283.51,87.50 283.51,60.99" aria-label="Varna"/>
+    <text class="label" x="306.47" y="74.24">VN</text>
+  </g>
+  <g class="state" data-state="SI">
+    <title>Silistra</title>
+    <polygon class="tile" points="283.51,7.95 306.47,21.21 306.47,47.73 283.51,60.99 260.55,47.73 260.55,21.21" aria-label="Silistra"/>
+    <text class="label" x="283.51" y="34.47">SI</text>
+  </g>
+  <g class="state" data-state="BR">
+    <title>Burgas</title>
+    <polygon class="tile" points="283.51,87.50 306.47,100.76 306.47,127.27 283.51,140.53 260.55,127.27 260.55,100.76" aria-label="Burgas"/>
+    <text class="label" x="283.51" y="114.02">BR</text>
+  </g>
+  <g class="state" data-state="SH">
+    <title>Shumen</title>
+    <polygon class="tile" points="260.55,47.73 283.51,60.99 283.51,87.50 260.55,100.76 237.58,87.50 237.58,60.99" aria-label="Shumen"/>
+    <text class="label" x="260.55" y="74.24">SH</text>
+  </g>
+  <g class="state" data-state="YA">
+    <title>Yambol</title>
+    <polygon class="tile" points="260.55,127.27 283.51,140.53 283.51,167.05 260.55,180.30 237.58,167.05 237.58,140.53" aria-label="Yambol"/>
+    <text class="label" x="260.55" y="153.79">YA</text>
+  </g>
+  <g class="state" data-state="RG">
+    <title>Razgrad</title>
+    <polygon class="tile" points="237.58,7.95 260.55,21.21 260.55,47.73 237.58,60.99 214.62,47.73 214.62,21.21" aria-label="Razgrad"/>
+    <text class="label" x="237.58" y="34.47">RG</text>
+  </g>
+  <g class="state" data-state="SL">
+    <title>Sliven</title>
+    <polygon class="tile" points="237.58,87.50 260.55,100.76 260.55,127.27 237.58,140.53 214.62,127.27 214.62,100.76" aria-label="Sliven"/>
+    <text class="label" x="237.58" y="114.02">SL</text>
+  </g>
+  <g class="state" data-state="TU">
+    <title>Targovishte</title>
+    <polygon class="tile" points="214.62,47.73 237.58,60.99 237.58,87.50 214.62,100.76 191.66,87.50 191.66,60.99" aria-label="Targovishte"/>
+    <text class="label" x="214.62" y="74.24">TU</text>
+  </g>
+  <g class="state" data-state="KK">
+    <title>Haskovo</title>
+    <polygon class="tile" points="214.62,127.27 237.58,140.53 237.58,167.05 214.62,180.30 191.66,167.05 191.66,140.53" aria-label="Haskovo"/>
+    <text class="label" x="214.62" y="153.79">KK</text>
+  </g>
+  <g class="state" data-state="RS">
+    <title>Ruse</title>
+    <polygon class="tile" points="191.66,7.95 214.62,21.21 214.62,47.73 191.66,60.99 168.70,47.73 168.70,21.21" aria-label="Ruse"/>
+    <text class="label" x="191.66" y="34.47">RS</text>
+  </g>
+  <g class="state" data-state="SZ">
+    <title>Stara Zagora</title>
+    <polygon class="tile" points="191.66,87.50 214.62,100.76 214.62,127.27 191.66,140.53 168.70,127.27 168.70,100.76" aria-label="Stara Zagora"/>
+    <text class="label" x="191.66" y="114.02">SZ</text>
+  </g>
+  <g class="state" data-state="KZ">
+    <title>Kardzhali</title>
+    <polygon class="tile" points="191.66,167.05 214.62,180.30 214.62,206.82 191.66,220.08 168.70,206.82 168.70,180.30" aria-label="Kardzhali"/>
+    <text class="label" x="191.66" y="193.56">KZ</text>
+  </g>
+  <g class="state" data-state="VT">
+    <title>Veliko Tarnovo</title>
+    <polygon class="tile" points="168.70,47.73 191.66,60.99 191.66,87.50 168.70,100.76 145.73,87.50 145.73,60.99" aria-label="Veliko Tarnovo"/>
+    <text class="label" x="168.70" y="74.24">VT</text>
+  </g>
+  <g class="state" data-state="PD">
+    <title>Plovdiv</title>
+    <polygon class="tile" points="168.70,127.27 191.66,140.53 191.66,167.05 168.70,180.30 145.73,167.05 145.73,140.53" aria-label="Plovdiv"/>
+    <text class="label" x="168.70" y="153.79">PD</text>
+  </g>
+  <g class="state" data-state="PV">
+    <title>Pleven</title>
+    <polygon class="tile" points="145.73,7.95 168.70,21.21 168.70,47.73 145.73,60.99 122.77,47.73 122.77,21.21" aria-label="Pleven"/>
+    <text class="label" x="145.73" y="34.47">PV</text>
+  </g>
+  <g class="state" data-state="GB">
+    <title>Gabrovo</title>
+    <polygon class="tile" points="145.73,87.50 168.70,100.76 168.70,127.27 145.73,140.53 122.77,127.27 122.77,100.76" aria-label="Gabrovo"/>
+    <text class="label" x="145.73" y="114.02">GB</text>
+  </g>
+  <g class="state" data-state="SM">
+    <title>Smolyan</title>
+    <polygon class="tile" points="145.73,167.05 168.70,180.30 168.70,206.82 145.73,220.08 122.77,206.82 122.77,180.30" aria-label="Smolyan"/>
+    <text class="label" x="145.73" y="193.56">SM</text>
+  </g>
+  <g class="state" data-state="LV">
+    <title>Lovech</title>
+    <polygon class="tile" points="122.77,47.73 145.73,60.99 145.73,87.50 122.77,100.76 99.81,87.50 99.81,60.99" aria-label="Lovech"/>
+    <text class="label" x="122.77" y="74.24">LV</text>
+  </g>
+  <g class="state" data-state="PZ">
+    <title>Pazardzhik</title>
+    <polygon class="tile" points="122.77,127.27 145.73,140.53 145.73,167.05 122.77,180.30 99.81,167.05 99.81,140.53" aria-label="Pazardzhik"/>
+    <text class="label" x="122.77" y="153.79">PZ</text>
+  </g>
+  <g class="state" data-state="VR">
+    <title>Vratsa</title>
+    <polygon class="tile" points="99.81,7.95 122.77,21.21 122.77,47.73 99.81,60.99 76.84,47.73 76.84,21.21" aria-label="Vratsa"/>
+    <text class="label" x="99.81" y="34.47">VR</text>
+  </g>
+  <g class="state" data-state="SF">
+    <title>Sofia</title>
+    <polygon class="tile" points="99.81,87.50 122.77,100.76 122.77,127.27 99.81,140.53 76.84,127.27 76.84,100.76" aria-label="Sofia"/>
+    <text class="label" x="99.81" y="114.02">SF</text>
+  </g>
+  <g class="state" data-state="MT">
+    <title>Montana</title>
+    <polygon class="tile" points="76.84,47.73 99.81,60.99 99.81,87.50 76.84,100.76 53.88,87.50 53.88,60.99" aria-label="Montana"/>
+    <text class="label" x="76.84" y="74.24">MT</text>
+  </g>
+  <g class="state" data-state="SG">
+    <title>Grad Sofiya</title>
+    <polygon class="tile" points="76.84,127.27 99.81,140.53 99.81,167.05 76.84,180.30 53.88,167.05 53.88,140.53" aria-label="Grad Sofiya"/>
+    <text class="label" x="76.84" y="153.79">SG</text>
+  </g>
+  <g class="state" data-state="VD">
+    <title>Vidin</title>
+    <polygon class="tile" points="53.88,7.95 76.84,21.21 76.84,47.73 53.88,60.99 30.92,47.73 30.92,21.21" aria-label="Vidin"/>
+    <text class="label" x="53.88" y="34.47">VD</text>
+  </g>
+  <g class="state" data-state="PN">
+    <title>Pernik</title>
+    <polygon class="tile" points="53.88,87.50 76.84,100.76 76.84,127.27 53.88,140.53 30.92,127.27 30.92,100.76" aria-label="Pernik"/>
+    <text class="label" x="53.88" y="114.02">PN</text>
+  </g>
+  <g class="state" data-state="BL">
+    <title>Blagoevgrad</title>
+    <polygon class="tile" points="53.88,167.05 76.84,180.30 76.84,206.82 53.88,220.08 30.92,206.82 30.92,180.30" aria-label="Blagoevgrad"/>
+    <text class="label" x="53.88" y="193.56">BL</text>
+  </g>
+  <g class="state" data-state="KY">
+    <title>Kyustendil</title>
+    <polygon class="tile" points="30.92,127.27 53.88,140.53 53.88,167.05 30.92,180.30 7.95,167.05 7.95,140.53" aria-label="Kyustendil"/>
+    <text class="label" x="30.92" y="153.79">KY</text>
+  </g>
+</svg>

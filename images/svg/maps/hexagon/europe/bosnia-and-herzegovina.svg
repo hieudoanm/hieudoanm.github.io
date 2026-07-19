@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 285.40 292.40" width="285.40" height="292.40" role="img" aria-labelledby="bosnia-and-herzegovina-title bosnia-and-herzegovina-desc">
+  <title id="bosnia-and-herzegovina-title">Bosnia and Herzegovina hex map</title>
+  <desc id="bosnia-and-herzegovina-desc">Hexagon map with 18 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.89; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 14.28 10.20; }
+    .label { fill: #52525b; font: 600 11.56px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="BIJ">
+    <title>Bijeljina</title>
+    <polygon class="tile" points="245.76,61.20 275.20,78.20 275.20,112.20 245.76,129.20 216.31,112.20 216.31,78.20" aria-label="Bijeljina"/>
+    <text class="label" x="245.76" y="95.20">BIJ</text>
+  </g>
+  <g class="state" data-state="BP">
+    <title>Bosnian Podrinje</title>
+    <polygon class="tile" points="245.76,163.20 275.20,180.20 275.20,214.20 245.76,231.20 216.31,214.20 216.31,180.20" aria-label="Bosnian Podrinje"/>
+    <text class="label" x="245.76" y="197.20">BP</text>
+  </g>
+  <g class="state" data-state="BRC">
+    <title>Brčko Distrikt</title>
+    <polygon class="tile" points="216.31,10.20 245.76,27.20 245.76,61.20 216.31,78.20 186.87,61.20 186.87,27.20" aria-label="Brčko Distrikt"/>
+    <text class="label" x="216.31" y="44.20">BRC</text>
+  </g>
+  <g class="state" data-state="VLA">
+    <title>Vlasenica</title>
+    <polygon class="tile" points="216.31,112.20 245.76,129.20 245.76,163.20 216.31,180.20 186.87,163.20 186.87,129.20" aria-label="Vlasenica"/>
+    <text class="label" x="216.31" y="146.20">VLA</text>
+  </g>
+  <g class="state" data-state="FOA">
+    <title>Foča</title>
+    <polygon class="tile" points="216.31,214.20 245.76,231.20 245.76,265.20 216.31,282.20 186.87,265.20 186.87,231.20" aria-label="Foča"/>
+    <text class="label" x="216.31" y="248.20">FOA</text>
+  </g>
+  <g class="state" data-state="TUZ">
+    <title>Tuzla</title>
+    <polygon class="tile" points="186.87,61.20 216.31,78.20 216.31,112.20 186.87,129.20 157.42,112.20 157.42,78.20" aria-label="Tuzla"/>
+    <text class="label" x="186.87" y="95.20">TUZ</text>
+  </g>
+  <g class="state" data-state="SR">
+    <title>Sarajevo-romanija</title>
+    <polygon class="tile" points="186.87,163.20 216.31,180.20 216.31,214.20 186.87,231.20 157.42,214.20 157.42,180.20" aria-label="Sarajevo-romanija"/>
+    <text class="label" x="186.87" y="197.20">SR</text>
+  </g>
+  <g class="state" data-state="SRP">
+    <title>Posavina</title>
+    <polygon class="tile" points="157.42,10.20 186.87,27.20 186.87,61.20 157.42,78.20 127.98,61.20 127.98,27.20" aria-label="Posavina"/>
+    <text class="label" x="157.42" y="44.20">SRP</text>
+  </g>
+  <g class="state" data-state="ZD">
+    <title>Zenica-Doboj</title>
+    <polygon class="tile" points="157.42,112.20 186.87,129.20 186.87,163.20 157.42,180.20 127.98,163.20 127.98,129.20" aria-label="Zenica-Doboj"/>
+    <text class="label" x="157.42" y="146.20">ZD</text>
+  </g>
+  <g class="state" data-state="TRE">
+    <title>Trebinje</title>
+    <polygon class="tile" points="157.42,214.20 186.87,231.20 186.87,265.20 157.42,282.20 127.98,265.20 127.98,231.20" aria-label="Trebinje"/>
+    <text class="label" x="157.42" y="248.20">TRE</text>
+  </g>
+  <g class="state" data-state="DOB">
+    <title>Doboj</title>
+    <polygon class="tile" points="127.98,61.20 157.42,78.20 157.42,112.20 127.98,129.20 98.53,112.20 98.53,78.20" aria-label="Doboj"/>
+    <text class="label" x="127.98" y="95.20">DOB</text>
+  </g>
+  <g class="state" data-state="SAR">
+    <title>Sarajevo</title>
+    <polygon class="tile" points="127.98,163.20 157.42,180.20 157.42,214.20 127.98,231.20 98.53,214.20 98.53,180.20" aria-label="Sarajevo"/>
+    <text class="label" x="127.98" y="197.20">SAR</text>
+  </g>
+  <g class="state" data-state="BF">
+    <title>Una-Sana</title>
+    <polygon class="tile" points="98.53,10.20 127.98,27.20 127.98,61.20 98.53,78.20 69.09,61.20 69.09,27.20" aria-label="Una-Sana"/>
+    <text class="label" x="98.53" y="44.20">BF</text>
+  </g>
+  <g class="state" data-state="CB">
+    <title>Central Bosnia</title>
+    <polygon class="tile" points="98.53,112.20 127.98,129.20 127.98,163.20 98.53,180.20 69.09,163.20 69.09,129.20" aria-label="Central Bosnia"/>
+    <text class="label" x="98.53" y="146.20">CB</text>
+  </g>
+  <g class="state" data-state="BIH">
+    <title>Herzegovina-Neretva</title>
+    <polygon class="tile" points="98.53,214.20 127.98,231.20 127.98,265.20 98.53,282.20 69.09,265.20 69.09,231.20" aria-label="Herzegovina-Neretva"/>
+    <text class="label" x="98.53" y="248.20">BIH</text>
+  </g>
+  <g class="state" data-state="BL">
+    <title>Banja Luka</title>
+    <polygon class="tile" points="69.09,61.20 98.53,78.20 98.53,112.20 69.09,129.20 39.64,112.20 39.64,78.20" aria-label="Banja Luka"/>
+    <text class="label" x="69.09" y="95.20">BL</text>
+  </g>
+  <g class="state" data-state="WH">
+    <title>West Herzegovina</title>
+    <polygon class="tile" points="69.09,163.20 98.53,180.20 98.53,214.20 69.09,231.20 39.64,214.20 39.64,180.20" aria-label="West Herzegovina"/>
+    <text class="label" x="69.09" y="197.20">WH</text>
+  </g>
+  <g class="state" data-state="WB">
+    <title>West Bosnia</title>
+    <polygon class="tile" points="39.64,112.20 69.09,129.20 69.09,163.20 39.64,180.20 10.20,163.20 10.20,129.20" aria-label="West Bosnia"/>
+    <text class="label" x="39.64" y="146.20">WB</text>
+  </g>
+</svg>

@@ -1,0 +1,61 @@
+type: pricing
+site:
+  name: Landify Pro
+  description: Simple pricing for flat pages.
+  nav:
+    - label: Pricing
+      href: "#pricing"
+    - label: Sign in
+      href: "https://example.com/sign-in"
+hero:
+  badge: "💳 Simple pricing"
+  headline: Pay for what you build.
+  subheadline: Three plans, no surprises, cancel anytime.
+  primary:
+    label: Compare plans
+    href: "#pricing"
+pricing:
+  heading: Pick a plan
+  sub: Every plan includes all eight page types and the gallery of 64 themes.
+  note: Prices in USD. Cancel anytime. No credit card for the free plan.
+  tiers:
+    - name: Starter
+      price: "$0"
+      period: forever
+      perks:
+        - One flat page
+        - All 64 themes
+        - The product page type
+      cta:
+        label: Start free
+        href: "https://example.com/start"
+    - name: Pro
+      price: "$12"
+      period: month
+      tag: Most popular
+      perks:
+        - Eight page types
+        - Unlimited rebuilds
+        - Priority build
+      cta:
+        label: Go Pro
+        href: "https://example.com/pro"
+    - name: Studio
+      price: "$29"
+      period: month
+      perks:
+        - Unlimited pages
+        - Team seats
+        - Premium support
+      cta:
+        label: Contact us
+        href: "https://example.com/studio"
+cta:
+  icon: "🚀"
+  heading: Ready to build?
+  body: Start free, switch plans anytime.
+  button:
+    label: Start free
+    href: "https://example.com/start"
+footer:
+  copyright: "© 2026 Landify Pro"

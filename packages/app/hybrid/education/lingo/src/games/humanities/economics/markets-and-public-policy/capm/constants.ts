@@ -1,0 +1,16 @@
+export const STOCK_RETURN = 0.12;
+export const STOCK_SIGMA = 0.2;
+export const BOND_RETURN = 0.04;
+export const BOND_SIGMA = 0.08;
+export const CORRELATION = 0.2;
+export const RISK_FREE = 0.03;
+export const MARKET_RETURN = 0.1;
+export const MIN_WEIGHT = -0.5;
+export const MAX_WEIGHT = 1.5;
+export const WEIGHT_STEP = 0.01;
+export const TARGET_SIGMAS: number[] = [0.1, 0.12, 0.16, 0.09, 0.14];
+export const BETA_ROUNDS: number[] = [0.5, 1.5, 2.2, 0.0];
+export const BETA_ROUNDS_PICKED = 2;
+export const PORTFOLIO_ROUNDS = TARGET_SIGMAS.length;
+export const TOTAL_ROUNDS = PORTFOLIO_ROUNDS + BETA_ROUNDS_PICKED;
+export const SIGMA_TOLERANCE = 0.005;

@@ -1,0 +1,27 @@
+id,name,number,role,bench
+alisson,Alisson,1,GK,false
+trent,Trent Alexander-Arnold,66,DEF,false
+virgil,Virgil van Dijk,4,DEF,false
+joe,Joe Gomez,12,DEF,false
+andy,Andy Robertson,26,DEF,false
+jordan,Jordan Henderson,14,MID,false
+fabinho,Fabinho,3,MID,false
+georginio,Georginio Wijnaldum,5,MID,false
+mohamed,Mohamed Salah,11,FWD,false
+roberto,Roberto Firmino,9,FWD,false
+sadio,Sadio Mané,10,FWD,false
+adrian,Adrián,13,GK,true
+kelleher,Caoimhín Kelleher,62,GK,true
+lovren,Dejan Lovren,6,DEF,true
+matip,Joel Matip,32,DEF,true
+neco,Neco Williams,76,DEF,true
+milner,James Milner,7,MID,true
+naby,Naby Keïta,8,MID,true
+oxlade,Alex Oxlade-Chamberlain,15,MID,true
+curtis,Curtis Jones,17,MID,true
+lallana,Adam Lallana,20,MID,true
+shaqiri,Xherdan Shaqiri,23,MID,true
+origi,Divock Origi,27,FWD,true
+minamino,Takumi Minamino,18,FWD,true
+elliott,Harvey Elliott,67,FWD,true
+brewster,Rhian Brewster,24,FWD,true

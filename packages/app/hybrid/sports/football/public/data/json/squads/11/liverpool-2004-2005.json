@@ -1,0 +1,135 @@
+{
+  "name": "Liverpool 2004-2005",
+  "formationId": "433",
+  "players": [
+    { "id": "jerzy", "name": "Jerzy Dudek", "number": 1, "role": "GK" },
+    { "id": "steve", "name": "Steve Finnan", "number": 3, "role": "DEF" },
+    { "id": "jamie", "name": "Jamie Carragher", "number": 23, "role": "DEF" },
+    { "id": "sami", "name": "Sami Hyypiä", "number": 4, "role": "DEF" },
+    { "id": "djimi", "name": "Djimi Traoré", "number": 21, "role": "DEF" },
+    { "id": "dietmar", "name": "Dietmar Hamann", "number": 16, "role": "MID" },
+    { "id": "xabi", "name": "Xabi Alonso", "number": 14, "role": "MID" },
+    { "id": "steven", "name": "Steven Gerrard", "number": 8, "role": "MID" },
+    { "id": "luis", "name": "Luis García", "number": 10, "role": "FWD" },
+    { "id": "djibril", "name": "Djibril Cissé", "number": 9, "role": "FWD" },
+    { "id": "john", "name": "John Arne Riise", "number": 6, "role": "FWD" },
+    {
+      "id": "kirkland",
+      "name": "Chris Kirkland",
+      "number": 22,
+      "role": "GK",
+      "bench": true
+    },
+    {
+      "id": "carson",
+      "name": "Scott Carson",
+      "number": 26,
+      "role": "GK",
+      "bench": true
+    },
+    {
+      "id": "biscan",
+      "name": "Igor Bišćan",
+      "number": 25,
+      "role": "DEF",
+      "bench": true
+    },
+    {
+      "id": "warnock",
+      "name": "Stephen Warnock",
+      "number": 18,
+      "role": "DEF",
+      "bench": true
+    },
+    {
+      "id": "josemi",
+      "name": "Josemi",
+      "number": 17,
+      "role": "DEF",
+      "bench": true
+    },
+    {
+      "id": "pellegrino",
+      "name": "Mauricio Pellegrino",
+      "number": 29,
+      "role": "DEF",
+      "bench": true
+    },
+    {
+      "id": "smicer",
+      "name": "Vladimír Šmicer",
+      "number": 11,
+      "role": "MID",
+      "bench": true
+    },
+    {
+      "id": "diao",
+      "name": "Salif Diao",
+      "number": 15,
+      "role": "MID",
+      "bench": true
+    },
+    {
+      "id": "potter",
+      "name": "Darren Potter",
+      "number": 35,
+      "role": "MID",
+      "bench": true
+    },
+    {
+      "id": "nunez",
+      "name": "Antonio Núñez",
+      "number": 30,
+      "role": "MID",
+      "bench": true
+    },
+    {
+      "id": "kewell",
+      "name": "Harry Kewell",
+      "number": 7,
+      "role": "FWD",
+      "bench": true
+    },
+    {
+      "id": "baros",
+      "name": "Milan Baroš",
+      "number": 5,
+      "role": "FWD",
+      "bench": true
+    },
+    {
+      "id": "sinama",
+      "name": "Florent Sinama-Pongolle",
+      "number": 24,
+      "role": "FWD",
+      "bench": true
+    },
+    {
+      "id": "letallec",
+      "name": "Anthony Le Tallec",
+      "number": 12,
+      "role": "FWD",
+      "bench": true
+    },
+    {
+      "id": "mellor",
+      "name": "Neil Mellor",
+      "number": 33,
+      "role": "FWD",
+      "bench": true
+    }
+  ],
+  "assignments": {
+    "433-0-0": ["jerzy"],
+    "433-1-1": ["steve"],
+    "433-1-2": ["jamie"],
+    "433-1-3": ["sami"],
+    "433-1-4": ["djimi"],
+    "433-2-5": ["dietmar"],
+    "433-2-6": ["xabi"],
+    "433-2-7": ["steven"],
+    "433-3-8": ["luis"],
+    "433-3-9": ["djibril"],
+    "433-3-10": ["john"]
+  }
+}

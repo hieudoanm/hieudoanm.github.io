@@ -1,0 +1,11 @@
+// Pull-quote styling.
+
+@mixin blockquote {
+  blockquote {
+    border-left: 4px solid color-mix(in srgb, var(--base-text) 20%, transparent);
+    color: color-mix(in srgb, var(--base-text) 70%, transparent);
+    font-style: italic;
+    line-height: 1.625;
+    padding-left: 1rem;
+  }
+}

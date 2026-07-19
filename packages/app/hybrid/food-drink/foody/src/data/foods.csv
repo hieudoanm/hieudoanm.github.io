@@ -1,0 +1,65 @@
+emoji,value,label,category
+🍕,margherita-pizza,Margherita Pizza,italian
+🍝,spaghetti-carbonara,Spaghetti Carbonara,italian
+🥘,lasagna,Lasagna,italian
+🍚,risotto,Risotto,italian
+🍰,tiramisu,Tiramisu,italian
+🥖,bruschetta,Bruschetta,italian
+🫓,focaccia,Focaccia,italian
+🍨,gelato,Gelato,italian
+🍲,bibimbap,Bibimbap,korean
+🍡,tteokbokki,Tteokbokki,korean
+🥩,bulgogi,Bulgogi,korean
+🍛,kimchi-fried-rice,Kimchi Fried Rice,korean
+🥓,samgyeopsal,Samgyeopsal,korean
+🥟,mandu,Mandu,korean
+🍜,jjajangmyeon,Jjajangmyeon,korean
+🍲,sundubu-jjigae,Sundubu-jjigae,korean
+🍣,sushi,Sushi,japanese
+🍜,ramen,Ramen,japanese
+🍤,tempura,Tempura,japanese
+🍥,udon,Udon,japanese
+🐙,takoyaki,Takoyaki,japanese
+🍙,onigiri,Onigiri,japanese
+🍱,bento-box,Bento Box,japanese
+🍢,yakitori,Yakitori,japanese
+🥜,pad-thai,Pad Thai,thai
+🦐,tom-yum-goong,Tom Yum Goong,thai
+🥘,green-curry,Green Curry,thai
+🥭,mango-sticky-rice,Mango Sticky Rice,thai
+🌶️,som-tam,Som Tam,thai
+🍛,massaman-curry,Massaman Curry,thai
+🍛,pad-kra-pao,Pad Kra Pao,thai
+🍗,gai-yang,Gai Yang,thai
+🍜,pho,Pho,vietnamese
+🥖,banh-mi,Banh Mi,vietnamese
+🍖,bun-cha,Bun Cha,vietnamese
+🥗,goi-cuon,Goi Cuon,vietnamese
+🍳,banh-xeo,Banh Xeo,vietnamese
+🍚,com-tam,Com Tam,vietnamese
+🍜,bun-bo-hue,Bun Bo Hue,vietnamese
+🥘,ca-kho-to,Ca Kho To,vietnamese
+🌮,tacos-al-pastor,Tacos al Pastor,mexican
+🧀,quesadilla,Quesadilla,mexican
+🌽,elote,Elote,mexican
+🫕,enchiladas,Enchiladas,mexican
+🥨,churros,Churros,mexican
+🥑,guacamole,Guacamole,mexican
+🫔,tamales,Tamales,mexican
+🍲,pozole,Pozole,mexican
+🍔,cheeseburger,Cheeseburger,american
+🌭,hot-dog,Hot Dog,american
+🍗,fried-chicken,Fried Chicken,american
+🧀,mac-and-cheese,Mac and Cheese,american
+🍗,buffalo-wings,Buffalo Wings,american
+🥗,caesar-salad,Caesar Salad,american
+🍖,bbq-ribs,BBQ Ribs,american
+🥧,apple-pie,Apple Pie,american
+🥟,dumpling,Dumpling,chinese
+🦆,peking-duck,Peking Duck,chinese
+🍚,yangzhou-fried-rice,Yangzhou Fried Rice,chinese
+🥠,spring-roll,Spring Roll,chinese
+🍜,dan-dan-noodles,Dan Dan Noodles,chinese
+🥘,kung-pao-chicken,Kung Pao Chicken,chinese
+🍜,chow-mein,Chow Mein,chinese
+🥟,xiao-long-bao,Xiao Long Bao,chinese

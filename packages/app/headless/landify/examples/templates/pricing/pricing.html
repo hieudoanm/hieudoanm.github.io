@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Simple pricing for flat pages." />
+    <title>Landify Pro</title>
+    <style>
+      :root {
+        --base-100: #f8fafc;
+        --base-200: #fefeff;
+        --base-300: #f1f3f4;
+        --base-content: #181d25;
+        --border: #64748b;
+        --border-soft: #bdc4cf;
+        --error: #ef4444;
+        --info: #0ea5e9;
+        --neutral: #64748b;
+        --neutral-faint: #a7b0be;
+        --primary: #1e293b;
+        --primary-content: #ffffff;
+        --primary-dark: #1a2332;
+        --primary-soft: #dee1e5;
+        --radius: 10px;
+        --secondary: #475569;
+        --secondary-content: #ffffff;
+        --success: #10b981;
+        --warning: #f59e0b;
+      }
+* {
+        box-sizing: border-box;
+      }
+      html {
+        margin: 0;
+        scroll-behavior: smooth;
+        scroll-padding-top: 76px;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background: var(--base-100);
+        color: var(--base-content);
+        font-family:
+          system-ui,
+          -apple-system,
+          'Segoe UI',
+          Roboto,
+          'Helvetica Neue',
+          Arial,
+          sans-serif;
+        line-height: 1.55;
+        -webkit-font-smoothing: antialiased;
+      }
+      a {
+        color: var(--primary);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        padding: 0 24px;
+        height: 60px;
+        background: var(--base-200);
+        border-bottom: 1px solid var(--border-soft);
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--base-content);
+      }
+      .brand:hover {
+        text-decoration: none;
+      }
+      .brand .mark {
+        font-size: 20px;
+        line-height: 1;
+      }
+      nav {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        font-size: 14px;
+      }
+      nav a {
+        color: var(--neutral);
+      }
+      nav a:hover {
+        color: var(--base-content);
+        text-decoration: none;
+      }
+
+      main {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 32px 24px 64px;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 28px;
+        justify-items: center;
+        max-width: 760px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 16px 0 8px;
+      }
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 4px 12px;
+        border-radius: 999px;
+        border: 1px solid var(--border-soft);
+        background: var(--primary-soft);
+        color: var(--primary-dark);
+      }
+      .hero h1 {
+        margin: 14px 0 8px;
+        font-size: 34px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        line-height: 1.15;
+      }
+      .lead {
+        margin: 0 auto;
+        max-width: 58ch;
+        font-size: 16px;
+        color: var(--neutral);
+      }
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 22px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        border: 1px solid transparent;
+        border-radius: var(--radius);
+        padding: 12px 22px;
+        font-size: 15px;
+        font-weight: 600;
+        font-family: inherit;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .btn:hover {
+        text-decoration: none;
+      }
+      .btn-primary {
+        color: var(--primary-content);
+        background: var(--primary);
+        border-color: var(--primary);
+      }
+      .btn-primary:hover {
+        background: var(--primary-dark);
+        border-color: var(--primary-dark);
+      }
+      .btn-ghost {
+        color: var(--base-content);
+        background: var(--base-200);
+        border-color: var(--border);
+      }
+      .btn-ghost:hover {
+        background: var(--base-300);
+      }
+
+       
+      .hero-media,
+      .demo-media {
+        display: block;
+        width: 100%;
+        max-width: 720px;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        margin-inline: auto;
+        background: var(--base-300);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+      }
+
+      section.block {
+        margin-top: 32px;
+      }
+      .block-head {
+        margin: 0 0 18px;
+        text-align: center;
+      }
+      .block-head h2 {
+        margin: 0;
+        font-size: 22px;
+        font-weight: 800;
+        letter-spacing: -0.01em;
+      }
+      .block-head .sub {
+        margin: 6px auto 0;
+        max-width: 60ch;
+        color: var(--neutral);
+        font-size: 14.5px;
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+      .feature {
+        background: var(--base-200);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+        padding: 24px 24px;
+        text-align: center;
+      }
+      .feature .icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        font-size: 22px;
+        border-radius: var(--radius);
+        background: var(--primary-soft);
+        border: 1px solid var(--border-soft);
+      }
+      .feature h3 {
+        margin: 14px 0 8px;
+        font-size: 16px;
+        font-weight: 700;
+      }
+      .feature p {
+        margin: 0;
+        font-size: 13.5px;
+        color: var(--neutral);
+      }
+
+      .cta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 6px;
+        background: var(--base-200);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+        padding: 48px 32px;
+      }
+      .cta .icon {
+        font-size: 34px;
+        line-height: 1;
+      }
+      .cta h2 {
+        margin: 10px 0 6px;
+        font-size: 26px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+      .cta p {
+        margin: 0;
+        max-width: 52ch;
+        color: var(--neutral);
+        font-size: 15px;
+      }
+      .cta .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      footer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 24px;
+        align-items: center;
+        justify-content: center;
+        border-top: 1px solid var(--border-soft);
+        margin-top: 48px;
+        padding: 24px 0 4px;
+        font-size: 13px;
+        color: var(--neutral-faint);
+      }
+      footer a {
+        color: var(--neutral-faint);
+      }
+      footer a:hover {
+        color: var(--base-content);
+      }
+
+      @media (max-width: 900px) {
+        .features {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 560px) {
+        nav {
+          display: none;
+        }
+        .hero h1 {
+          font-size: 26px;
+        }
+      }
+      .pricing {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        align-items: stretch;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      .tier {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        background: var(--base-200);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+        padding: 26px 24px;
+      }
+      .tier.featured {
+        border: 2px solid var(--primary);
+        background: var(--primary-soft);
+      }
+      .tier-head {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+      }
+      .tier-name {
+        font-size: 16px;
+        font-weight: 800;
+      }
+      .tier-tag {
+        font-size: 11px;
+        font-weight: 600;
+        color: var(--primary-dark);
+        background: var(--primary);
+        border-radius: 999px;
+        padding: 3px 10px;
+      }
+      .tier-tag {
+        color: var(--primary-content);
+      }
+      .tier-price {
+        font-size: 34px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+      .tier-period {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--neutral);
+      }
+      .perks {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 8px;
+        font-size: 14px;
+        color: var(--base-content);
+        flex: 1;
+      }
+      .perks li {
+        display: flex;
+        gap: 8px;
+        align-items: baseline;
+      }
+      .perks .tick {
+        color: var(--success);
+        font-weight: 700;
+      }
+      .tier-cta .btn {
+        width: 100%;
+        margin-top: 6px;
+      }
+      .pricing-note {
+        margin: 16px auto 0;
+        max-width: 56ch;
+        text-align: center;
+        font-size: 13px;
+        color: var(--neutral);
+      }
+      @media (max-width: 900px) {
+        .pricing {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="#top">
+        
+        <span>Landify Pro</span>
+      </a>
+      <nav>
+        <a href="#pricing">Pricing</a><a href="https://example.com/sign-in">Sign in</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div>
+          <span class="badge">💳 Simple pricing</span>
+          <h1>Pay for what you build.</h1>
+          <p class="lead">Three plans, no surprises, cancel anytime.</p>
+          
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#pricing">Compare plans</a>
+            
+          </div>
+          
+        </div>
+      </section>
+
+      
+      <section id="pricing" class="block">
+        <div class="block-head">
+          <h2>Pick a plan</h2>
+          <p class="sub">Every plan includes all eight page types and the gallery of 64 themes.</p>
+        </div>
+        <div class="pricing">
+          
+          <div class="tier">
+            <div class="tier-head">
+              <span class="tier-name">Starter</span>
+              
+            </div>
+            <div class="tier-price">$0<span class="tier-period"> / forever</span></div>
+            <ul class="perks">
+              <li><span class="tick" aria-hidden="true">✓</span> One flat page</li><li><span class="tick" aria-hidden="true">✓</span> All 64 themes</li><li><span class="tick" aria-hidden="true">✓</span> The product page type</li>
+            </ul>
+            <div class="tier-cta">
+              <a class="btn btn-primary" href="https://example.com/start">Start free</a>
+            </div>
+          </div>
+          
+          <div class="tier featured">
+            <div class="tier-head">
+              <span class="tier-name">Pro</span>
+              <span class="tier-tag">Most popular</span>
+            </div>
+            <div class="tier-price">$12<span class="tier-period"> / month</span></div>
+            <ul class="perks">
+              <li><span class="tick" aria-hidden="true">✓</span> Eight page types</li><li><span class="tick" aria-hidden="true">✓</span> Unlimited rebuilds</li><li><span class="tick" aria-hidden="true">✓</span> Priority build</li>
+            </ul>
+            <div class="tier-cta">
+              <a class="btn btn-primary" href="https://example.com/pro">Go Pro</a>
+            </div>
+          </div>
+          
+          <div class="tier">
+            <div class="tier-head">
+              <span class="tier-name">Studio</span>
+              
+            </div>
+            <div class="tier-price">$29<span class="tier-period"> / month</span></div>
+            <ul class="perks">
+              <li><span class="tick" aria-hidden="true">✓</span> Unlimited pages</li><li><span class="tick" aria-hidden="true">✓</span> Team seats</li><li><span class="tick" aria-hidden="true">✓</span> Premium support</li>
+            </ul>
+            <div class="tier-cta">
+              <a class="btn btn-primary" href="https://example.com/studio">Contact us</a>
+            </div>
+          </div>
+          
+        </div>
+        <p class="pricing-note">Prices in USD. Cancel anytime. No credit card for the free plan.</p>
+      </section>
+      
+
+      
+      <section id="cta" class="block">
+        <div class="cta">
+          <span class="icon" aria-hidden="true">🚀</span>
+          <h2>Ready to build?</h2>
+          <p>Start free, switch plans anytime.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://example.com/start">Start free</a>
+          </div>
+        </div>
+      </section>
+      
+
+      <footer>
+        <span>© 2026 Landify Pro</span>
+        
+      </footer>
+    </main>
+  </body>
+</html>

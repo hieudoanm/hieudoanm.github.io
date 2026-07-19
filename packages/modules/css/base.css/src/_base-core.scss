@@ -1,0 +1,35 @@
+// Assembles every element rule into a single `@layer base` so consumers can
+// layer component/utility styles on top with normal specificity. Each
+// fragment is a plain `@mixin`; nothing is emitted until included below.
+
+@use 'core/root';
+@use 'core/reset';
+@use 'core/sectioning';
+@use 'core/headings';
+@use 'core/text';
+@use 'core/lists';
+@use 'core/blockquote';
+@use 'core/code';
+@use 'core/embedded';
+@use 'core/tables';
+@use 'core/forms';
+@use 'core/interactive';
+@use 'core/misc';
+
+@mixin base-core {
+  @layer base {
+    @include root.root;
+    @include reset.reset;
+    @include sectioning.sectioning;
+    @include headings.headings;
+    @include text.text;
+    @include lists.lists;
+    @include blockquote.blockquote;
+    @include code.code;
+    @include embedded.embedded;
+    @include tables.tables;
+    @include forms.forms;
+    @include interactive.interactive;
+    @include misc.misc;
+  }
+}

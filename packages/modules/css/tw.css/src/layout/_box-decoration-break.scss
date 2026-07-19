@@ -1,0 +1,10 @@
+// Box decoration break utilities — Tailwind v3 default scale
+
+$box-decoration-breaks: (('slice', slice), ('clone', clone));
+
+@each $name, $value in $box-decoration-breaks {
+  .box-decoration-#{$name} {
+    -webkit-box-decoration-break: $value;
+    box-decoration-break: $value;
+  }
+}

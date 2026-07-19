@@ -1,0 +1,1686 @@
+openapi: 3.0.3
+info:
+  title: Chess.com Published-Data API
+  description: |
+    Public (no authentication required), mostly read-only, JSON REST API for accessing
+    Chess.com data, served from `https://api.chess.com/pub/…`.
+
+    All dates/timestamps are in Unix time (seconds). All responses follow the JSON-LD
+    conventions: `@id` is the self-referencing location of a profile, and results may
+    be fetched as JSONP by appending `?callback=functionName`. Responses are safe to
+    cache without a `Cache-Control` header (historical data is immutable).
+
+    Source: https://www.chess.com/news/view/published-data-api
+  version: 1.0.0
+  contact:
+    name: Chess.com
+    url: https://www.chess.com
+servers:
+  - url: https://api.chess.com
+    description: Chess.com Published-Data API base URL
+tags:
+  - name: Player
+    description: Player profiles, stats, games and activity
+  - name: Titled Players
+    description: Lists of titled-player usernames
+  - name: Clubs
+    description: Club profiles, members and matches
+  - name: Tournaments
+    description: Tournament details, rounds and groups
+  - name: Team Matches
+    description: Daily and live team matches and their boards
+  - name: Countries
+    description: Country profiles, players and clubs
+  - name: Puzzles
+    description: Daily puzzles
+  - name: Leaderboards
+    description: Top 50 players for daily, live, tactics and lessons
+  - name: Streamers
+    description: Chess.com streamers
+paths:
+  /pub/player/{username}:
+    get:
+      tags: [Player]
+      summary: Player Profile
+      description: Get additional details about a player.
+      parameters:
+        - $ref: '#/components/parameters/username'
+      responses:
+        '200':
+          description: Player profile
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PlayerProfile'
+  /pub/titled/{titleAbbrev}:
+    get:
+      tags: [Titled Players]
+      summary: Titled Players
+      description: List of titled-player usernames.
+      parameters:
+        - $ref: '#/components/parameters/titleAbbrev'
+      responses:
+        '200':
+          description: Array of usernames for players with this title
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  players:
+                    type: array
+                    description: Array of usernames for players with this title
+                    items:
+                      type: string
+  /pub/player/{username}/stats:
+    get:
+      tags: [Player]
+      summary: Player Stats
+      description: |
+        Get ratings, win/loss, and other stats about a player's game play, tactics,
+        lessons and Puzzle Rush score. Each top-level key is named by the ratings-type
+        from the game, composed of the rules code, an underscore and the time-class
+        code (e.g. `chess_daily`, `chess960_daily`, `chess_blitz`, `chess_rapid`,
+        `chess_bullet`) or one of `tactics`, `lessons`, `puzzle_rush`. If a person has
+        not played a particular game type, no stats object will be present for it.
+      parameters:
+        - $ref: '#/components/parameters/username'
+      responses:
+        '200':
+          description: Ratings, win/loss and other stats by game type
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PlayerStats'
+  /pub/player/{username}/is-online:
+    get:
+      tags: [Player]
+      summary: Player online status
+      description: Tells if a user has been online in the last five minutes.
+      parameters:
+        - $ref: '#/components/parameters/username'
+      responses:
+        '200':
+          description: Online status for the player
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  online:
+                    type: boolean
+                    description:
+                      Whether the user has been online in the last five minutes
+  /pub/player/{username}/games:
+    get:
+      tags: [Player]
+      summary: Current Daily Chess
+      description:
+        Array of Daily Chess games that a player is currently playing.
+      parameters:
+        - $ref: '#/components/parameters/username'
+      responses:
+        '200':
+          description: Array of currently-playing Daily Chess games
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GamesList'
+  /pub/player/{username}/games/to-move:
+    get:
+      tags: [Player]
+      summary: To-Move Daily Chess
+      description: |
+        Array of Daily Chess games where it is the player's turn to act. This list will
+        at times include some games where it is not the player's turn, if a draw offer
+        has been made; in those cases the `move_by` value is 0 and the game is sorted
+        to the top.
+      parameters:
+        - $ref: '#/components/parameters/username'
+      responses:
+        '200':
+          description: Array of games where it is the player's turn to act
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GamesList'
+  /pub/player/{username}/games/archives:
+    get:
+      tags: [Player]
+      summary: List of Monthly Archives
+      description: Array of monthly archives available for this player.
+      parameters:
+        - $ref: '#/components/parameters/username'
+      responses:
+        '200':
+          description:
+            Array of URLs for monthly archives in ascending chronological order
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Archives'
+  /pub/player/{username}/games/{year}/{month}:
+    get:
+      tags: [Player]
+      summary: Complete Monthly Archives
+      description: |
+        Array of Live and Daily Chess games that a player has finished. If no games were
+        played that period, this is an empty array. `year` is the four digit year of the
+        game-end, `month` is the two-digit month.
+      parameters:
+        - $ref: '#/components/parameters/username'
+        - $ref: '#/components/parameters/year'
+        - $ref: '#/components/parameters/month'
+      responses:
+        '200':
+          description: Array of finished games for the requested month
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GamesList'
+  /pub/player/{username}/games/live/{baseTime}/{increment}:
+    get:
+      tags: [Player]
+      summary: Complete Live Archive by Time Control
+      description: |
+        Array of Live Chess games that a player has finished by time control.
+        `baseTime` is the base time control in seconds, `increment` is the increment in
+        seconds.
+      parameters:
+        - $ref: '#/components/parameters/username'
+        - $ref: '#/components/parameters/baseTime'
+        - $ref: '#/components/parameters/increment'
+      responses:
+        '200':
+          description:
+            Array of finished Live Chess games for the requested time control
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GamesList'
+  /pub/player/{username}/games/{year}/{month}/pgn:
+    get:
+      tags: [Player]
+      summary: Multi-Game PGN Download
+      description: |
+        Standard multi-game format PGN containing all games for a month. The response
+        is not JSON-encoded, and follows the PGN standard. Special response headers:
+        `Content-Type: application/x-chess-pgn` and
+        `Content-Disposition: attachment; filename="ChessCom_{username}_{YYYYMM}.pgn"`.
+      parameters:
+        - $ref: '#/components/parameters/username'
+        - $ref: '#/components/parameters/year'
+        - $ref: '#/components/parameters/month'
+      responses:
+        '200':
+          description: Multi-game PGN containing all games for the month
+          content:
+            application/x-chess-pgn:
+              schema:
+                type: string
+                description: Multi-game PGN, following the PGN standard
+  /pub/player/{username}/clubs:
+    get:
+      tags: [Player]
+      summary: Player's Clubs
+      description:
+        List of clubs the player is a member of, with joined date and last
+        activity date.
+      parameters:
+        - $ref: '#/components/parameters/username'
+      responses:
+        '200':
+          description: Clubs the player is a member of
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PlayerClubs'
+  /pub/player/{username}/matches:
+    get:
+      tags: [Player]
+      summary: Player Matches
+      description:
+        List of team matches the player has attended, is participating in or is
+        currently registered for.
+      parameters:
+        - $ref: '#/components/parameters/username'
+      responses:
+        '200':
+          description: Team matches grouped by status
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PlayerMatches'
+  /pub/player/{username}/tournaments:
+    get:
+      tags: [Player]
+      summary: Player's Tournaments
+      description:
+        List of tournaments the player is registered for, is attending or has
+        attended in the past.
+      parameters:
+        - $ref: '#/components/parameters/username'
+      responses:
+        '200':
+          description: Tournaments grouped by status
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PlayerTournaments'
+  /pub/club/{clubUrlId}:
+    get:
+      tags: [Clubs]
+      summary: Club Profile
+      description: Get additional details about a club.
+      parameters:
+        - $ref: '#/components/parameters/clubUrlId'
+      responses:
+        '200':
+          description: Club profile
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ClubProfile'
+  /pub/club/{clubUrlId}/members:
+    get:
+      tags: [Clubs]
+      summary: Club Members
+      description: |
+        List of club members (usernames and joined date timestamp), grouped by
+        club-activity frequency: `weekly`, `monthly` and `all_time`. Playing a club game
+        is not counted as a club-activity. This endpoint refreshes at most once every 12
+        hours.
+      parameters:
+        - $ref: '#/components/parameters/clubUrlId'
+      responses:
+        '200':
+          description: Club members grouped by activity frequency
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ClubMembers'
+  /pub/club/{clubUrlId}/matches:
+    get:
+      tags: [Clubs]
+      summary: Club Matches
+      description:
+        List of daily and club matches, grouped by status (registered, in
+        progress, finished).
+      parameters:
+        - $ref: '#/components/parameters/clubUrlId'
+      responses:
+        '200':
+          description: Club matches grouped by status
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ClubMatches'
+  /pub/tournament/{tournamentUrlId}:
+    get:
+      tags: [Tournaments]
+      summary: Tournament
+      description: Get details about a daily, live and arena tournament.
+      parameters:
+        - $ref: '#/components/parameters/tournamentUrlId'
+      responses:
+        '200':
+          description: Tournament details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Tournament'
+  /pub/tournament/{tournamentUrlId}/{round}:
+    get:
+      tags: [Tournaments]
+      summary: Tournament's round
+      description: Get details about a tournament's round.
+      parameters:
+        - $ref: '#/components/parameters/tournamentUrlId'
+        - $ref: '#/components/parameters/round'
+      responses:
+        '200':
+          description: Tournament round details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TournamentRound'
+  /pub/tournament/{tournamentUrlId}/{round}/{group}:
+    get:
+      tags: [Tournaments]
+      summary: Tournament's round group
+      description: Get details about a tournament's round group.
+      parameters:
+        - $ref: '#/components/parameters/tournamentUrlId'
+        - $ref: '#/components/parameters/round'
+        - $ref: '#/components/parameters/group'
+      responses:
+        '200':
+          description: Tournament round group details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TournamentRoundGroup'
+  /pub/match/{matchId}:
+    get:
+      tags: [Team Matches]
+      summary: Team Match
+      description: |
+        Get details about a team match and the players playing that match. After the
+        match is finished there will be a link to each player's stats endpoint. The
+        match ID is the same as found in the URL for the team match web page on
+        `www.chess.com` (e.g. `12803`).
+      parameters:
+        - $ref: '#/components/parameters/matchId'
+      responses:
+        '200':
+          description:
+            Team match details (registration, in-progress or finished phase)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TeamMatch'
+  /pub/match/{matchId}/{board}:
+    get:
+      tags: [Team Matches]
+      summary: Daily Team match board
+      description: |
+        Get details about a team match board. Only in-progress or finished games will be
+        included, so there may be one or two games in this list.
+      parameters:
+        - $ref: '#/components/parameters/matchId'
+        - $ref: '#/components/parameters/board'
+      responses:
+        '200':
+          description: Details of the games on this team match board
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MatchBoard'
+  /pub/match/live/{matchId}:
+    get:
+      tags: [Team Matches]
+      summary: Live Team Match
+      description: |
+        Get details about a team match and the players playing that match. After the
+        match is finished there will be a link to each player's stats endpoint. The
+        match ID is the same as found in the URL for the live team match web page on
+        `www.chess.com` (e.g. `5833`).
+      parameters:
+        - $ref: '#/components/parameters/matchId'
+      responses:
+        '200':
+          description: Live team match details (scheduled or finished phase)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LiveTeamMatch'
+  /pub/match/live/{matchId}/{board}:
+    get:
+      tags: [Team Matches]
+      summary: Live Team match board
+      description: |
+        Get details about a team match board. Only in-progress or finished games will be
+        included, so there may be one or two games in this list.
+      parameters:
+        - $ref: '#/components/parameters/matchId'
+        - $ref: '#/components/parameters/board'
+      responses:
+        '200':
+          description: Details of the games on this live team match board
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MatchBoard'
+  /pub/country/{iso}:
+    get:
+      tags: [Countries]
+      summary: Country Profile
+      description: Get additional details about a country.
+      parameters:
+        - $ref: '#/components/parameters/iso'
+      responses:
+        '200':
+          description: Country profile
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CountryProfile'
+  /pub/country/{iso}/players:
+    get:
+      tags: [Countries]
+      summary: Country Players
+      description: |
+        List of usernames for players who identify themselves as being in this country.
+        Complete lists of all players are not available to download. This endpoint
+        refreshes at most once every 12 hours.
+      parameters:
+        - $ref: '#/components/parameters/iso'
+      responses:
+        '200':
+          description: Recently active players in this country
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  players:
+                    type: array
+                    description:
+                      Array of usernames for recently active players in this
+                      country
+                    items:
+                      type: string
+  /pub/country/{iso}/clubs:
+    get:
+      tags: [Countries]
+      summary: Country Clubs
+      description:
+        List of URLs for clubs identified as being in or associated with this
+        country.
+      parameters:
+        - $ref: '#/components/parameters/iso'
+      responses:
+        '200':
+          description: Club profile URLs in this country
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  clubs:
+                    type: array
+                    description: Array of profile URLs for clubs in this country
+                    items:
+                      type: string
+                      format: uri
+  /pub/puzzle:
+    get:
+      tags: [Puzzles]
+      summary: Daily puzzle
+      description: |
+        Information about the daily puzzle found on www.chess.com. If you are going to
+        publish the Daily Puzzle somewhere please remember to give credit to Chess.com
+        by means of a clearly visible text link that points to the URL of the puzzle
+        page.
+      responses:
+        '200':
+          description: The daily puzzle
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DailyPuzzle'
+  /pub/puzzle/random:
+    get:
+      tags: [Puzzles]
+      summary: Random daily puzzle
+      description: |
+        Information about a randomly picked daily puzzle. The puzzle does not change on
+        every request but has some caching latency (around 15 seconds).
+      responses:
+        '200':
+          description: A randomly picked daily puzzle
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DailyPuzzle'
+  /pub/streamers:
+    get:
+      tags: [Streamers]
+      summary: Streamers
+      description:
+        Information about Chess.com streamers. The endpoint refreshes every 5
+        minutes.
+      responses:
+        '200':
+          description: Chess.com streamers
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Streamers'
+  /pub/leaderboards:
+    get:
+      tags: [Leaderboards]
+      summary: Leaderboards
+      description: |
+        Displays information about the top 50 players for daily and live games, tactics
+        and lessons. The endpoint refreshes when one of the leaderboards is updated. The
+        `rank` is in the range [1..50].
+      responses:
+        '200':
+          description: Top 50 players for each game type
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Leaderboards'
+components:
+  parameters:
+    username:
+      name: username
+      in: path
+      required: true
+      description: Player's username
+      schema:
+        type: string
+        pattern: '^[\w-]+$'
+    titleAbbrev:
+      name: titleAbbrev
+      in: path
+      required: true
+      description: Abbreviation of the chess title
+      schema:
+        type: string
+        enum: [GM, WGM, IM, WIM, FM, WFM, NM, WNM, CM, WCM]
+    year:
+      name: year
+      in: path
+      required: true
+      description: Four digit year of the game-end
+      schema:
+        type: integer
+        format: int32
+        minimum: 1995
+        maximum: 9999
+    month:
+      name: month
+      in: path
+      required: true
+      description: Two-digit month of the game-end
+      schema:
+        type: integer
+        minimum: 1
+        maximum: 12
+    baseTime:
+      name: baseTime
+      in: path
+      required: true
+      description: Base time control in seconds
+      schema:
+        type: integer
+        minimum: 0
+    increment:
+      name: increment
+      in: path
+      required: true
+      description: Increment in seconds
+      schema:
+        type: integer
+        minimum: 0
+    clubUrlId:
+      name: clubUrlId
+      in: path
+      required: true
+      description:
+        The club's URL ID, as found in the URL for the club's web page on
+        www.chess.com (e.g. `chess-com-developer-community`)
+      schema:
+        type: string
+        minLength: 1
+    tournamentUrlId:
+      name: tournamentUrlId
+      in: path
+      required: true
+      description:
+        The tournament's URL ID, as found in the URL for the tournament's web
+        page on www.chess.com (e.g. `-33rd-chesscom-quick-knockouts-1401-1600`)
+      schema:
+        type: string
+        minLength: 1
+    round:
+      name: round
+      in: path
+      required: true
+      description: Tournament round number
+      schema:
+        type: integer
+        minimum: 1
+    group:
+      name: group
+      in: path
+      required: true
+      description: Tournament round group number
+      schema:
+        type: integer
+        minimum: 1
+    matchId:
+      name: matchId
+      in: path
+      required: true
+      description:
+        Team match ID, as found in the URL for the team match web page on
+        www.chess.com (e.g. `12803`)
+      schema:
+        type: integer
+        minimum: 1
+    board:
+      name: board
+      in: path
+      required: true
+      description: Board number
+      schema:
+        type: integer
+        minimum: 1
+    iso:
+      name: iso
+      in: path
+      required: true
+      description: |
+        2-character ISO 3166 code (capitalized) of the country. Chess.com uses additional
+        user-assigned codes: `XA` (Canary Islands), `XB` (Basque Country), `XC`
+        (Catalonia), `XE` (England), `XG` (Galicia), `XK` (Kosovo), `XP` (Palestine),
+        `XS` (Scotland), `XW` (Wales), `XX` (International).
+      schema:
+        type: string
+        pattern: '^[A-Z]{2}$'
+  schemas:
+    GameResult:
+      type: string
+      description: Codes returned by game-related endpoints
+      enum:
+        - win
+        - checkmated
+        - agreed
+        - repetition
+        - timeout
+        - resigned
+        - stalemate
+        - lose
+        - insufficient
+        - '50move'
+        - abandoned
+        - kingofthehill
+        - threecheck
+        - timevsinsufficient
+        - bughousepartnerlose
+    Rules:
+      type: string
+      description: Game variant information
+      enum: [chess, chess960, bughouse, kingofthehill, threecheck, crazyhouse]
+    TimeClass:
+      type: string
+      description: Time-per-move grouping, used for ratings
+      enum: [daily, rapid, blitz, bullet]
+    Timestamp:
+      type: integer
+      format: int64
+      description: Unix timestamp (seconds)
+    PlayerProfile:
+      type: object
+      properties:
+        '@id':
+          type: string
+          format: uri
+          description: The location of this profile (always self-referencing)
+        url:
+          type: string
+          format: uri
+          description: The chess.com user's profile page
+        username:
+          type: string
+          description: The username of this player
+        player_id:
+          type: integer
+          format: int64
+          description: The non-changing Chess.com ID of this player
+        title:
+          type: string
+          description: (optional) Abbreviation of chess title, if any
+        status:
+          type: string
+          description:
+            'Account status: closed, closed:fair_play_violations, basic,
+            premium, mod, staff'
+        name:
+          type: string
+          description: (optional) The personal first and last name
+        avatar:
+          type: string
+          format: uri
+          description: (optional) URL of a 200x200 image
+        location:
+          type: string
+          description: (optional) The city or location
+        country:
+          type: string
+          format: uri
+          description: API location of this player's country's profile
+        joined:
+          $ref: '#/components/schemas/Timestamp'
+        last_online:
+          $ref: '#/components/schemas/Timestamp'
+        followers:
+          type: integer
+          description: The number of players tracking this player's activity
+        is_streamer:
+          type: boolean
+          description: Whether the member is a Chess.com streamer
+        twitch_url:
+          type: string
+          format: uri
+          description: Twitch.tv URL
+        fide:
+          type: integer
+          description: FIDE rating
+    PlayerStats:
+      type: object
+      description: |
+        Map of stats objects, each keyed by the ratings-type of the game (e.g.
+        `chess_daily`, `chess960_daily`, `chess_blitz`, `chess_rapid`, `chess_bullet`)
+        or by `tactics`, `lessons`, `puzzle_rush`. Only collected, non-default stats are
+        present.
+      additionalProperties: true
+      properties:
+        chess_daily:
+          $ref: '#/components/schemas/StatsObject'
+        chess960_daily:
+          $ref: '#/components/schemas/StatsObject'
+        chess_rapid:
+          $ref: '#/components/schemas/StatsObject'
+        chess_blitz:
+          $ref: '#/components/schemas/StatsObject'
+        chess_bullet:
+          $ref: '#/components/schemas/StatsObject'
+        tactics:
+          $ref: '#/components/schemas/StatsClimb'
+        lessons:
+          $ref: '#/components/schemas/StatsClimb'
+        puzzle_rush:
+          $ref: '#/components/schemas/PuzzleRushStats'
+    StatsObject:
+      type: object
+      description: Stats for a single game type
+      properties:
+        last:
+          type: object
+          description: The current stats
+          properties:
+            date:
+              $ref: '#/components/schemas/Timestamp'
+            rating:
+              type: integer
+              description: Most-recent rating
+            rd:
+              type: integer
+              description: The Glicko RD value used to calculate rating changes
+        best:
+          type: object
+          description: The best rating achieved by a win
+          properties:
+            date:
+              $ref: '#/components/schemas/Timestamp'
+            rating:
+              type: integer
+              description: Highest rating achieved
+            game:
+              type: string
+              format: uri
+              description: URL of the best-win game
+        record:
+          type: object
+          description: Summary of all games played
+          properties:
+            win:
+              type: integer
+              description: Number of games won
+            loss:
+              type: integer
+              description: Number of games lost
+            draw:
+              type: integer
+              description: Number of games drawn
+            time_per_move:
+              type: integer
+              description: Integer number of seconds per average move
+            timeout_percent:
+              type: number
+              format: float
+              description: Timeout percentage in the last 90 days
+        tournament:
+          type: object
+          description: Summary of tournaments participated in
+          properties:
+            count:
+              type: integer
+              description: Number of tournaments joined
+            withdraw:
+              type: integer
+              description: Number of tournaments withdrawn from
+            points:
+              type: integer
+              description: Total number of points earned in tournaments
+            highest_finish:
+              type: integer
+              description: Best tournament place
+    StatsClimb:
+      type: object
+      description: Stats for tactics and lessons
+      properties:
+        highest:
+          type: object
+          properties:
+            rating:
+              type: integer
+            date:
+              $ref: '#/components/schemas/Timestamp'
+        lowest:
+          type: object
+          properties:
+            rating:
+              type: integer
+            date:
+              $ref: '#/components/schemas/Timestamp'
+    PuzzleRushStats:
+      type: object
+      description: Puzzle Rush scores
+      properties:
+        daily:
+          type: object
+          properties:
+            total_attempts:
+              type: integer
+            score:
+              type: integer
+        best:
+          type: object
+          properties:
+            total_attempts:
+              type: integer
+            score:
+              type: integer
+    Archives:
+      type: object
+      properties:
+        archives:
+          type: array
+          description:
+            Array of URLs for monthly archives in ascending chronological order
+          items:
+            type: string
+            format: uri
+    GamesList:
+      type: object
+      description: |
+        Wrapping data format used by the current, to-move, monthly archive and live
+        archive endpoints. Array of Game objects in ascending game-end-time order. If no
+        games were played that period, the array is empty.
+      properties:
+        games:
+          type: array
+          items:
+            $ref: '#/components/schemas/Game'
+    Game:
+      type: object
+      description:
+        A chess game. Fields vary by endpoint (current, to-move, monthly
+        archive, live archive, team match board).
+      properties:
+        white:
+          description:
+            Details of the white-piece player (URL string in current/tournament
+            group games, otherwise an object)
+          oneOf:
+            - type: string
+              format: uri
+            - $ref: '#/components/schemas/GamePlayer'
+        black:
+          description:
+            Details of the black-piece player (URL string in current/tournament
+            group games, otherwise an object)
+          oneOf:
+            - type: string
+              format: uri
+            - $ref: '#/components/schemas/GamePlayer'
+        accuracies:
+          type: object
+          description: Player's accuracies, if they were previously calculated
+          properties:
+            white:
+              type: number
+              format: float
+            black:
+              type: number
+              format: float
+        url:
+          type: string
+          format: uri
+          description: URL of this game
+        fen:
+          type: string
+          description: Current or final FEN
+        pgn:
+          type: string
+          description: Current or final PGN
+        turn:
+          type: string
+          description: Player to move
+          enum: [white, black]
+        move_by:
+          $ref: '#/components/schemas/Timestamp'
+        draw_offer:
+          description:
+            Player who has made a draw offer (or that the player has received a
+            draw offer)
+          oneOf:
+            - type: string
+            - type: boolean
+        last_activity:
+          $ref: '#/components/schemas/Timestamp'
+        start_time:
+          $ref: '#/components/schemas/Timestamp'
+        end_time:
+          $ref: '#/components/schemas/Timestamp'
+        time_control:
+          type: string
+          description: PGN-compliant time control
+        time_class:
+          $ref: '#/components/schemas/TimeClass'
+        rated:
+          type: boolean
+          description: Whether the game was rated (live archive)
+        rules:
+          $ref: '#/components/schemas/Rules'
+        eco:
+          type: string
+          format: uri
+          description: URL pointing to the ECO opening, if available
+        tournament:
+          type: string
+          format: uri
+          description: URL pointing to the tournament, if available
+        match:
+          type: string
+          format: uri
+          description: URL pointing to the team match, if available
+        uuid:
+          type: string
+          description: Member unique ID (live archive)
+    GamePlayer:
+      type: object
+      description: Details of a player on one side of a game
+      properties:
+        username:
+          type: string
+          description: The username
+        rating:
+          type: integer
+          description: The player's rating after the game finished
+        result:
+          $ref: '#/components/schemas/GameResult'
+        '@id':
+          type: string
+          format: uri
+          description: URL of this player's profile
+        uuid:
+          type: string
+          description: Member unique ID
+    ToMoveGame:
+      type: object
+      description: A game in the to-move list
+      properties:
+        url:
+          type: string
+          format: uri
+          description: URL of this game
+        move_by:
+          $ref: '#/components/schemas/Timestamp'
+        draw_offer:
+          type: boolean
+          description: (optional) This player has received a draw offer
+        last_activity:
+          $ref: '#/components/schemas/Timestamp'
+    PlayerClubs:
+      type: object
+      properties:
+        clubs:
+          type: array
+          description: Clubs the player is a member of
+          items:
+            type: object
+            properties:
+              '@id':
+                type: string
+                format: uri
+                description: URL of the Club endpoint
+              name:
+                type: string
+                description: Club's name
+              last_activity:
+                $ref: '#/components/schemas/Timestamp'
+              icon:
+                type: string
+                format: uri
+                description: Club's icon URL
+              url:
+                type: string
+                format: uri
+                description: Club's URL
+              joined:
+                $ref: '#/components/schemas/Timestamp'
+    PlayerMatch:
+      type: object
+      description:
+        A team match a player attended, is participating in or is registered for
+      properties:
+        name:
+          type: string
+          description: Name of the match
+        url:
+          type: string
+          format: uri
+          description: URL of the match on the website
+        '@id':
+          type: string
+          format: uri
+          description: URL of the PubAPI match endpoint
+        club:
+          type: string
+          format: uri
+          description: URL of the player's club endpoint
+        results:
+          type: object
+          description: (finished matches) Results of the player's games
+          properties:
+            played_as_white:
+              $ref: '#/components/schemas/GameResult'
+            played_as_black:
+              $ref: '#/components/schemas/GameResult'
+        board:
+          type: string
+          format: uri
+          description: URL of the PubAPI match board endpoint
+    PlayerMatches:
+      type: object
+      properties:
+        finished:
+          type: array
+          items:
+            $ref: '#/components/schemas/PlayerMatch'
+        in_progress:
+          type: array
+          items:
+            $ref: '#/components/schemas/PlayerMatch'
+        registered:
+          type: array
+          items:
+            $ref: '#/components/schemas/PlayerMatch'
+    PlayerTournaments:
+      type: object
+      properties:
+        finished:
+          type: array
+          description: Finished tournaments
+          items:
+            type: object
+            properties:
+              url:
+                type: string
+                format: uri
+                description: Link to the PubAPI URL of the tournament
+              '@id':
+                type: string
+                format: uri
+                description: Link to the Web URL of the tournament
+              wins:
+                type: integer
+              losses:
+                type: integer
+              draws:
+                type: integer
+              points_awarded:
+                type: number
+                description: Points awarded
+              placement:
+                type: integer
+              status:
+                type: string
+                description:
+                  'Final status of the player: winner, eliminated, withdrew,
+                  removed'
+              total_players:
+                type: integer
+        in_progress:
+          type: array
+          description: Tournaments in progress
+          items:
+            type: object
+            properties:
+              url:
+                type: string
+                format: uri
+              '@id':
+                type: string
+                format: uri
+              status:
+                type: string
+                description:
+                  'Status of the player: winner, eliminated, withdrew, removed'
+        registered:
+          type: array
+          description: Tournaments the player is registered for
+          items:
+            type: object
+            properties:
+              url:
+                type: string
+                format: uri
+              '@id':
+                type: string
+                format: uri
+              status:
+                type: string
+                description: 'Status of the user: invited, registered'
+    ClubProfile:
+      type: object
+      properties:
+        '@id':
+          type: string
+          format: uri
+          description: The location of this profile (always self-referencing)
+        name:
+          type: string
+          description: The human-readable name of this club
+        club_id:
+          type: integer
+          format: int64
+          description: The non-changing Chess.com ID of this club
+        icon:
+          type: string
+          format: uri
+          description: (optional) URL of a 200x200 image
+        country:
+          type: string
+          format: uri
+          description: Location of this club's country profile
+        average_daily_rating:
+          type: integer
+          description: Average daily rating
+        members_count:
+          type: integer
+          description: Total members count
+        created:
+          $ref: '#/components/schemas/Timestamp'
+        last_activity:
+          $ref: '#/components/schemas/Timestamp'
+        visibility:
+          type: string
+          description: Whether the club is public or private
+          enum: [public, private]
+        join_request:
+          type: string
+          format: uri
+          description: Location to submit a request to join this club
+        admin:
+          type: array
+          description:
+            Array of URLs to the player profiles for the admins of this club
+          items:
+            type: string
+            format: uri
+        description:
+          type: string
+          description: Text description of the club
+    ClubMember:
+      type: object
+      properties:
+        username:
+          type: string
+        joined:
+          $ref: '#/components/schemas/Timestamp'
+    ClubMembers:
+      type: object
+      description: Club members grouped by club-activity frequency
+      properties:
+        weekly:
+          type: array
+          items:
+            $ref: '#/components/schemas/ClubMember'
+        monthly:
+          type: array
+          items:
+            $ref: '#/components/schemas/ClubMember'
+        all_time:
+          type: array
+          items:
+            $ref: '#/components/schemas/ClubMember'
+    ClubMatch:
+      type: object
+      description: A daily or club match
+      properties:
+        name:
+          type: string
+          description: The team match name
+        '@id':
+          type: string
+          format: uri
+          description: URL pointing to the team match endpoint
+        opponent:
+          type: string
+          format: uri
+          description: URL pointing to the opponent club endpoint
+        result:
+          $ref: '#/components/schemas/GameResult'
+        start_time:
+          $ref: '#/components/schemas/Timestamp'
+        time_class:
+          $ref: '#/components/schemas/TimeClass'
+    ClubMatches:
+      type: object
+      properties:
+        finished:
+          type: array
+          items:
+            $ref: '#/components/schemas/ClubMatch'
+        in_progress:
+          type: array
+          items:
+            $ref: '#/components/schemas/ClubMatch'
+        registered:
+          type: array
+          items:
+            $ref: '#/components/schemas/ClubMatch'
+    Tournament:
+      type: object
+      properties:
+        name:
+          type: string
+        url:
+          type: string
+          format: uri
+          description: URL to the Web tournament's URL
+        description:
+          type: string
+        creator:
+          type: string
+          description: Username of the creator
+        status:
+          type: string
+          description:
+            'Status of the tournament: finished, in_progress, registration'
+        finish_time:
+          $ref: '#/components/schemas/Timestamp'
+        settings:
+          type: object
+          properties:
+            type:
+              type: string
+              description: e.g. round_robin
+            rules:
+              $ref: '#/components/schemas/Rules'
+            time_class:
+              $ref: '#/components/schemas/TimeClass'
+            time_control:
+              type: string
+              description: PGN-compliant time control
+            is_rated:
+              type: boolean
+            is_official:
+              type: boolean
+            is_invite_only:
+              type: boolean
+            initial_group_size:
+              type: integer
+            user_advance_count:
+              type: integer
+            use_tiebreak:
+              type: boolean
+            allow_vacation:
+              type: boolean
+            winner_places:
+              type: integer
+            registered_user_count:
+              type: integer
+            games_per_opponent:
+              type: integer
+            total_rounds:
+              type: integer
+            concurrent_games_per_opponent:
+              type: integer
+        players:
+          type: array
+          description: List of tournament players
+          items:
+            type: object
+            properties:
+              username:
+                type: string
+              status:
+                type: string
+                description: Status of the user
+        rounds:
+          type: array
+          description: List of tournament's rounds URLs
+          items:
+            type: string
+            format: uri
+    TournamentRound:
+      type: object
+      properties:
+        groups:
+          type: array
+          description: List of tournament's round groups
+          items:
+            type: string
+            format: uri
+        players:
+          type: array
+          description: List of tournament's round players
+          items:
+            type: object
+            properties:
+              username:
+                type: string
+              is_advancing:
+                type: boolean
+                description:
+                  'true or false, only if this tournament is completed'
+    TournamentRoundGroup:
+      type: object
+      properties:
+        fair_play_removals:
+          type: array
+          description:
+            List of usernames of accounts closed for fair play violation
+          items:
+            type: string
+        games:
+          type: array
+          description: List of group's games
+          items:
+            $ref: '#/components/schemas/Game'
+        players:
+          type: array
+          description: List of group's players
+          items:
+            type: object
+            properties:
+              username:
+                type: string
+              points:
+                type: number
+                description:
+                  Points earned by player in this group (adjusted in case of
+                  fair play recalculations)
+              tie_break:
+                type: number
+                description: Tie-break points earned by player in this group
+              is_advancing:
+                type: boolean
+    TeamMatch:
+      type: object
+      description: |
+        A daily team match. The data format differs between the registration phase and
+        the other phases (in progress, finished). Chess.com does not keep snapshots of
+        user statistics changes during matches, so after the registration phase you can
+        get up-to-date statistics via each player's stats link.
+      properties:
+        name:
+          type: string
+        url:
+          type: string
+          format: uri
+          description: The URL of the match on the website
+        description:
+          type: string
+        start_time:
+          $ref: '#/components/schemas/Timestamp'
+        settings:
+          type: object
+          description: Match settings
+          properties:
+            time_class:
+              $ref: '#/components/schemas/TimeClass'
+            time_control:
+              type: string
+            initial_setup:
+              type: string
+            rules:
+              $ref: '#/components/schemas/Rules'
+            min_team_players:
+              type: integer
+              description: Minimum number of players per team
+            max_team_players:
+              type: integer
+              description: Maximum number of players per team
+            min_required_games:
+              type: integer
+              description: Minimum number of required games
+            min_rating:
+              type: integer
+              description: Minimum rating of players admitted to this match
+            max_rating:
+              type: integer
+              description: Maximum rating of players admitted to this match
+            autostart:
+              type: boolean
+              description: Whether the match is set to automatically start
+        status:
+          type: string
+          description: 'Match status: registration, in_progress, finished'
+        boards:
+          type: integer
+          description: Number of boards
+        teams:
+          type: object
+          properties:
+            team1:
+              $ref: '#/components/schemas/TeamMatchTeam'
+            team2:
+              $ref: '#/components/schemas/TeamMatchTeam'
+    TeamMatchTeam:
+      type: object
+      description: One side of a team match
+      properties:
+        '@id':
+          type: string
+          format: uri
+          description: API URL for the club profile
+        url:
+          type: string
+          format: uri
+          description: Web URL for the club profile
+        name:
+          type: string
+          description: Club name
+        score:
+          type: number
+          description: Team score (adjusted in case of fair play recalculations)
+        result:
+          $ref: '#/components/schemas/GameResult'
+        players:
+          type: array
+          description: Players on this team (fields vary by match phase)
+          items:
+            type: object
+            properties:
+              username:
+                type: string
+              board:
+                type: string
+                format: uri
+                description: URL of the board
+              rating:
+                type: integer
+                description: Rating of the player
+              rd:
+                type: number
+                description: Glicko RD
+              timeout_percent:
+                type: number
+                format: float
+                description: Timeout percentage in the last 90 days
+              status:
+                type: string
+                description: Status of the user
+              stats:
+                type: string
+                format: uri
+                description: URL to the player's stats
+              played_as_white:
+                $ref: '#/components/schemas/GameResult'
+              played_as_black:
+                $ref: '#/components/schemas/GameResult'
+        fair_play_removals:
+          type: array
+          description: List of usernames that were closed during the match
+          items:
+            type: string
+    LiveTeamMatch:
+      type: object
+      description: |
+        A live team match, with the same structure as a Team Match. In its scheduled
+        phase the values may be partial (e.g. `boards: 0`, empty player lists). The
+        `status` is one of `scheduled`, `in_progress`, `finished`. The header `@id`
+        points to the PubAPI match endpoint.
+      allOf:
+        - $ref: '#/components/schemas/TeamMatch'
+        - type: object
+          properties:
+            end_time:
+              $ref: '#/components/schemas/Timestamp'
+    MatchBoard:
+      type: object
+      description: |
+        Details about a team match board. Only in-progress or finished games will be
+        included, so there may be one or two games in this list.
+      properties:
+        board_scores:
+          type: object
+          description:
+            Per-user scores (adjusted in case of fair play recalculations)
+          additionalProperties:
+            type: number
+            format: float
+        games:
+          type: array
+          items:
+            $ref: '#/components/schemas/Game'
+    CountryProfile:
+      type: object
+      properties:
+        '@id':
+          type: string
+          format: uri
+          description: The location of this profile (always self-referencing)
+        name:
+          type: string
+          description: The human-readable name of this country
+        code:
+          type: string
+          description: The ISO-3166-1 2-character code
+    DailyPuzzle:
+      type: object
+      properties:
+        title:
+          type: string
+          description: The title of the daily puzzle
+        url:
+          type: string
+          format: uri
+          description: URL to the daily puzzle on chess.com
+        publish_time:
+          $ref: '#/components/schemas/Timestamp'
+        fen:
+          type: string
+          description: The FEN of the published puzzle
+        pgn:
+          type: string
+          description: The PGN of the published puzzle
+        image:
+          type: string
+          format: uri
+          description: Link to the image
+    Streamers:
+      type: object
+      properties:
+        streamers:
+          type: array
+          items:
+            type: object
+            properties:
+              username:
+                type: string
+              avatar:
+                type: string
+                format: uri
+              twitch_url:
+                type: string
+                format: uri
+                description: Twitch.tv URL
+              url:
+                type: string
+                format: uri
+                description: Member URL
+    LeaderboardEntry:
+      type: object
+      properties:
+        player_id:
+          type: integer
+          format: int64
+        '@id':
+          type: string
+          format: uri
+        url:
+          type: string
+          format: uri
+        username:
+          type: string
+        score:
+          type: integer
+        rank:
+          type: integer
+          minimum: 1
+          maximum: 50
+          description: Rank in the range [1..50]
+    Leaderboards:
+      type: object
+      description:
+        Top 50 players for daily and live games, tactics and lessons. Each key
+        maps to an array of leaderboard entries.
+      properties:
+        daily:
+          type: array
+          items:
+            $ref: '#/components/schemas/LeaderboardEntry'
+        daily960:
+          type: array
+          items:
+            $ref: '#/components/schemas/LeaderboardEntry'
+        live_rapid:
+          type: array
+          items:
+            $ref: '#/components/schemas/LeaderboardEntry'
+        live_blitz:
+          type: array
+          items:
+            $ref: '#/components/schemas/LeaderboardEntry'
+        live_bullet:
+          type: array
+          items:
+            $ref: '#/components/schemas/LeaderboardEntry'
+        live_bughouse:
+          type: array
+          items:
+            $ref: '#/components/schemas/LeaderboardEntry'
+        live_blitz960:
+          type: array
+          items:
+            $ref: '#/components/schemas/LeaderboardEntry'
+        live_threecheck:
+          type: array
+          items:
+            $ref: '#/components/schemas/LeaderboardEntry'
+        live_crazyhouse:
+          type: array
+          items:
+            $ref: '#/components/schemas/LeaderboardEntry'
+        live_kingofthehill:
+          type: array
+          items:
+            $ref: '#/components/schemas/LeaderboardEntry'
+        lessons:
+          type: array
+          items:
+            $ref: '#/components/schemas/LeaderboardEntry'
+        tactics:
+          type: array
+          items:
+            $ref: '#/components/schemas/LeaderboardEntry'

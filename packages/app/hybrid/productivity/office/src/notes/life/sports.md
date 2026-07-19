@@ -1,0 +1,24 @@
+# Sports
+
+- American Football
+- Badminton
+- Baseball
+- Basketball
+- Bicycling
+- Checker
+- Chess
+- Cricket
+- F1
+- Football
+- Futsal
+- Marathon
+- Motorcycle
+- Netball
+- Pickleball
+- Rugby
+- Shogi
+- Squash
+- Swimming
+- Table Tennis
+- Tennis
+- Xiangqi

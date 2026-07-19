@@ -1,0 +1,26 @@
+// Grid template columns utilities — Tailwind v3 default scale
+
+$grid-template-columns: (
+  ('1', 1),
+  ('2', 2),
+  ('3', 3),
+  ('4', 4),
+  ('5', 5),
+  ('6', 6),
+  ('7', 7),
+  ('8', 8),
+  ('9', 9),
+  ('10', 10),
+  ('11', 11),
+  ('12', 12)
+);
+
+.grid-cols-none {
+  grid-template-columns: none;
+}
+
+@each $name, $count in $grid-template-columns {
+  .grid-cols-#{$name} {
+    grid-template-columns: repeat(#{$count}, minmax(0, 1fr));
+  }
+}

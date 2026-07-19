@@ -1,0 +1,318 @@
+year,stage,group,type,match_date,home,home_id,home_score,home_pens,away,away_id,away_score,away_pens,extra_time,stadium,city,host,result
+1996,Group,A,Round 1,1996-09-01,Singapore,SGP,1,,Malaysia,MAS,1,,0,,Singapore,Singapore,draw
+1996,Group,B,Round 1,1996-09-02,Cambodia,KHM,1,,Vietnam,VIE,3,,0,,Singapore,Singapore,away
+1996,Group,B,Round 1,1996-09-02,Laos,LAO,1,,Indonesia,IDN,5,,0,,Singapore,Singapore,away
+1996,Group,A,Round 1,1996-09-02,Philippines,PHL,0,,Thailand,THA,5,,0,,Singapore,Singapore,away
+1996,Group,A,Round 1,1996-09-04,Malaysia,MAS,7,,Philippines,PHL,0,,0,,Singapore,Singapore,home
+1996,Group,A,Round 1,1996-09-04,Singapore,SGP,3,,Brunei,BRN,0,,0,,Singapore,Singapore,home
+1996,Group,B,Round 1,1996-09-05,Myanmar,MMR,5,,Cambodia,KHM,0,,0,,Singapore,Singapore,home
+1996,Group,B,Round 1,1996-09-05,Laos,LAO,1,,Vietnam,VIE,1,,0,,Singapore,Singapore,draw
+1996,Group,A,Round 1,1996-09-06,Singapore,SGP,3,,Philippines,PHL,0,,0,,Singapore,Singapore,home
+1996,Group,A,Round 1,1996-09-06,Thailand,THA,6,,Brunei,BRN,0,,0,,Singapore,Singapore,home
+1996,Group,B,Round 1,1996-09-07,Myanmar,MMR,1,,Vietnam,VIE,4,,0,,Singapore,Singapore,away
+1996,Group,B,Round 1,1996-09-07,Indonesia,IDN,3,,Cambodia,KHM,0,,0,,Singapore,Singapore,home
+1996,Group,A,Round 1,1996-09-08,Brunei,BRN,1,,Philippines,PHL,0,,0,,Singapore,Singapore,home
+1996,Group,A,Round 1,1996-09-08,Thailand,THA,1,,Malaysia,MAS,1,,0,,Singapore,Singapore,draw
+1996,Group,B,Round 1,1996-09-09,Indonesia,IDN,6,,Myanmar,MMR,1,,0,,Singapore,Singapore,home
+1996,Group,B,Round 1,1996-09-09,Laos,LAO,1,,Cambodia,KHM,0,,0,,Singapore,Singapore,home
+1996,Group,A,Round 1,1996-09-10,Brunei,BRN,0,,Malaysia,MAS,6,,0,,Singapore,Singapore,away
+1996,Group,A,Round 1,1996-09-10,Singapore,SGP,0,,Thailand,THA,1,,0,,Singapore,Singapore,away
+1996,Group,B,Round 1,1996-09-11,Laos,LAO,2,,Myanmar,MMR,4,,0,,Singapore,Singapore,away
+1996,Group,B,Round 1,1996-09-11,Vietnam,VIE,1,,Indonesia,IDN,1,,0,,Singapore,Singapore,draw
+1996,Knock Out,,Semi Final,1996-09-13,Malaysia,MAS,3,,Indonesia,IDN,1,,0,,Singapore,Singapore,home
+1996,Knock Out,,Semi Final,1996-09-13,Thailand,THA,4,,Vietnam,VIE,2,,0,,Singapore,Singapore,home
+1996,Knock Out,,Third Place,1996-09-15,Indonesia,IDN,2,,Vietnam,VIE,3,,0,,Singapore,Singapore,away
+1996,Knock Out,,Final,1996-09-15,Thailand,THA,1,,Malaysia,MAS,0,,0,,Singapore,Singapore,home
+1998,Group,A,Round 1,1998-08-26,Malaysia,MAS,0,,Singapore,SGP,2,,0,,Hanoi,Vietnam,away
+1998,Group,A,Round 1,1998-08-26,Vietnam,VIE,4,,Laos,LAO,1,,0,,Hanoi,Vietnam,home
+1998,Group,B,Round 1,1998-08-27,Indonesia,IDN,3,,Philippines,PHL,0,,0,,Ho Chi Minh City,Vietnam,home
+1998,Group,B,Round 1,1998-08-27,Thailand,THA,1,,Myanmar,MMR,1,,0,,Ho Chi Minh City,Vietnam,draw
+1998,Group,A,Round 1,1998-08-28,Malaysia,MAS,0,,Laos,LAO,0,,0,,Hanoi,Vietnam,draw
+1998,Group,A,Round 1,1998-08-28,Vietnam,VIE,0,,Singapore,SGP,0,,0,,Hanoi,Vietnam,draw
+1998,Group,B,Round 1,1998-08-29,Indonesia,IDN,6,,Myanmar,MMR,2,,0,,Ho Chi Minh City,Vietnam,home
+1998,Group,B,Round 1,1998-08-29,Thailand,THA,3,,Philippines,PHL,1,,0,,Ho Chi Minh City,Vietnam,home
+1998,Group,A,Round 1,1998-08-30,Singapore,SGP,4,,Laos,LAO,1,,0,,Hanoi,Vietnam,home
+1998,Group,A,Round 1,1998-08-30,Vietnam,VIE,1,,Malaysia,MAS,0,,0,,Hanoi,Vietnam,home
+1998,Group,B,Round 1,1998-08-31,Myanmar,MMR,5,,Philippines,PHL,2,,0,,Ho Chi Minh City,Vietnam,home
+1998,Group,B,Round 1,1998-08-31,Thailand,THA,3,,Indonesia,IDN,2,,0,,Ho Chi Minh City,Vietnam,home
+1998,Knock Out,,Semi Final,1998-09-02,Singapore,SGP,2,,Indonesia,IDN,1,,0,,Ho Chi Minh City,Vietnam,home
+1998,Knock Out,,Semi Final,1998-09-03,Vietnam,VIE,3,,Thailand,THA,0,,0,,Hanoi,Vietnam,home
+1998,Knock Out,,Third Place,1998-09-05,Indonesia,IDN,3,,Thailand,THA,3,,1,,Ho Chi Minh City,Vietnam,draw
+1998,Knock Out,,Final,1998-09-05,Vietnam,VIE,0,,Singapore,SGP,1,,0,,Hanoi,Vietnam,away
+2000,Group,A,Round 1,2000-11-05,Singapore,SGP,1,,Cambodia,KHM,0,,0,,Songkhla,Thailand,home
+2000,Group,A,Round 1,2000-11-05,Vietnam,VIE,0,,Malaysia,MAS,0,,0,,Songkhla,Thailand,draw
+2000,Group,B,Round 1,2000-11-06,Indonesia,IDN,3,,Philippines,PHL,0,,0,,Chiang Mai,Thailand,home
+2000,Group,B,Round 1,2000-11-06,Thailand,THA,3,,Myanmar,MMR,1,,0,,Chiang Mai,Thailand,home
+2000,Group,A,Round 1,2000-11-07,Cambodia,KHM,0,,Vietnam,VIE,6,,0,,Songkhla,Thailand,away
+2000,Group,A,Round 1,2000-11-07,Laos,LAO,0,,Malaysia,MAS,5,,0,,Songkhla,Thailand,away
+2000,Group,B,Round 1,2000-11-08,Myanmar,MMR,3,,Philippines,PHL,0,,0,,Chiang Mai,Thailand,home
+2000,Group,A,Round 1,2000-11-09,Malaysia,MAS,3,,Cambodia,KHM,2,,0,,Songkhla,Thailand,home
+2000,Group,A,Round 1,2000-11-09,Singapore,SGP,3,,Laos,LAO,0,,0,,Songkhla,Thailand,home
+2000,Group,B,Round 1,2000-11-10,Thailand,THA,4,,Indonesia,IDN,1,,0,,Chiang Mai,Thailand,home
+2000,Group,A,Round 1,2000-11-11,Cambodia,KHM,3,,Laos,LAO,0,,0,,Songkhla,Thailand,home
+2000,Group,A,Round 1,2000-11-11,Vietnam,VIE,1,,Singapore,SGP,0,,0,,Songkhla,Thailand,home
+2000,Group,B,Round 1,2000-11-12,Myanmar,MMR,0,,Indonesia,IDN,5,,0,,Chiang Mai,Thailand,away
+2000,Group,B,Round 1,2000-11-12,Thailand,THA,2,,Philippines,PHL,0,,0,,Chiang Mai,Thailand,home
+2000,Group,A,Round 1,2000-11-13,Laos,LAO,0,,Vietnam,VIE,5,,0,,Songkhla,Thailand,away
+2000,Group,A,Round 1,2000-11-13,Malaysia,MAS,1,,Singapore,SGP,0,,0,,Songkhla,Thailand,home
+2000,Knock Out,,Semi Final,2000-11-16,Thailand,THA,2,,Malaysia,MAS,0,,0,,Bangkok,Thailand,home
+2000,Knock Out,,Semi Final,2000-11-16,Vietnam,VIE,2,,Indonesia,IDN,3,,0,,Bangkok,Thailand,away
+2000,Knock Out,,Third Place,2000-11-18,Thailand,THA,4,,Indonesia,IDN,1,,0,,Bangkok,Thailand,home
+2000,Knock Out,,Final,2000-11-18,Vietnam,VIE,0,,Malaysia,MAS,3,,0,,Bangkok,Thailand,away
+2002,Group,A,Round 1,2002-12-15,Indonesia,IDN,0,,Myanmar,MMR,0,,0,,Jakarta,Indonesia,draw
+2002,Group,A,Round 1,2002-12-15,Vietnam,VIE,9,,Cambodia,KHM,2,,0,,Jakarta,Indonesia,home
+2002,Group,A,Round 1,2002-12-17,Indonesia,IDN,4,,Cambodia,KHM,2,,0,,Jakarta,Indonesia,home
+2002,Group,A,Round 1,2002-12-17,Philippines,PHL,1,,Myanmar,MMR,6,,0,,Jakarta,Indonesia,away
+2002,Group,B,Round 1,2002-12-18,Singapore,SGP,0,,Malaysia,MAS,4,,0,,Singapore,Singapore,away
+2002,Group,B,Round 1,2002-12-18,Thailand,THA,5,,Laos,LAO,1,,0,,Singapore,Singapore,home
+2002,Group,A,Round 1,2002-12-19,Myanmar,MMR,5,,Cambodia,KHM,0,,0,,Jakarta,Indonesia,home
+2002,Group,A,Round 1,2002-12-19,Vietnam,VIE,4,,Philippines,PHL,1,,0,,Jakarta,Indonesia,home
+2002,Group,B,Round 1,2002-12-20,Singapore,SGP,2,,Laos,LAO,1,,0,,Singapore,Singapore,home
+2002,Group,B,Round 1,2002-12-20,Thailand,THA,1,,Malaysia,MAS,3,,0,,Singapore,Singapore,away
+2002,Group,A,Round 1,2002-12-21,Cambodia,KHM,1,,Philippines,PHL,0,,0,,Jakarta,Indonesia,home
+2002,Group,A,Round 1,2002-12-21,Indonesia,IDN,2,,Vietnam,VIE,2,,0,,Jakarta,Indonesia,draw
+2002,Group,B,Round 1,2002-12-22,Malaysia,MAS,1,,Laos,LAO,1,,0,,Singapore,Singapore,draw
+2002,Group,B,Round 1,2002-12-22,Singapore,SGP,1,,Thailand,THA,1,,0,,Singapore,Singapore,draw
+2002,Group,A,Round 1,2002-12-23,Myanmar,MMR,2,,Vietnam,VIE,4,,0,,Jakarta,Indonesia,away
+2002,Group,A,Round 1,2002-12-23,Indonesia,IDN,13,,Philippines,PHL,1,,0,,Jakarta,Indonesia,home
+2002,Knock Out,,Semi Final,2002-12-27,Indonesia,IDN,1,,Malaysia,MAS,0,,0,,Jakarta,Indonesia,home
+2002,Knock Out,,Semi Final,2002-12-27,Vietnam,VIE,0,,Thailand,THA,4,,0,,Jakarta,Indonesia,away
+2002,Knock Out,,Third Place,2002-12-29,Indonesia,IDN,2,,Thailand,THA,2,,0,,Jakarta,Indonesia,draw
+2002,Knock Out,,Final,2002-12-29,Vietnam,VIE,2,,Malaysia,MAS,1,,0,,Jakarta,Indonesia,home
+2004,Group,A,Round 1,2004-12-07,Laos,LAO,0,,Indonesia,IDN,6,,0,,Ho Chi Minh City,Vietnam,away
+2004,Group,A,Round 1,2004-12-07,Vietnam,VIE,1,,Singapore,SGP,1,,0,,Ho Chi Minh City,Vietnam,draw
+2004,Group,B,Round 1,2004-12-08,Malaysia,MAS,5,,Timor-Leste,TLS,0,,0,,Kuala Lumpur,Malaysia,home
+2004,Group,B,Round 1,2004-12-08,Philippines,PHL,0,,Myanmar,MMR,1,,0,,Kuala Lumpur,Malaysia,away
+2004,Group,A,Round 1,2004-12-09,Indonesia,IDN,0,,Singapore,SGP,0,,0,,Ho Chi Minh City,Vietnam,draw
+2004,Group,A,Round 1,2004-12-09,Vietnam,VIE,9,,Cambodia,KHM,1,,0,,Ho Chi Minh City,Vietnam,home
+2004,Group,B,Round 1,2004-12-10,Malaysia,MAS,4,,Philippines,PHL,1,,0,,Kuala Lumpur,Malaysia,home
+2004,Group,B,Round 1,2004-12-10,Thailand,THA,1,,Myanmar,MMR,1,,0,,Kuala Lumpur,Malaysia,draw
+2004,Group,A,Round 1,2004-12-11,Laos,LAO,2,,Cambodia,KHM,1,,0,,Hanoi,Vietnam,home
+2004,Group,A,Round 1,2004-12-11,Vietnam,VIE,0,,Indonesia,IDN,3,,0,,Hanoi,Vietnam,away
+2004,Group,B,Round 1,2004-12-12,Timor-Leste,TLS,0,,Thailand,THA,8,,0,,Kuala Lumpur,Malaysia,away
+2004,Group,B,Round 1,2004-12-12,Malaysia,MAS,0,,Myanmar,MMR,1,,0,,Kuala Lumpur,Malaysia,away
+2004,Group,A,Round 1,2004-12-13,Indonesia,IDN,8,,Cambodia,KHM,0,,0,,Hanoi,Vietnam,home
+2004,Group,A,Round 1,2004-12-13,Singapore,SGP,6,,Laos,LAO,2,,0,,Hanoi,Vietnam,home
+2004,Group,B,Round 1,2004-12-14,Malaysia,MAS,2,,Thailand,THA,1,,0,,Kuala Lumpur,Malaysia,home
+2004,Group,B,Round 1,2004-12-14,Philippines,PHL,2,,Timor-Leste,TLS,1,,0,,Kuala Lumpur,Malaysia,home
+2004,Group,A,Round 1,2004-12-15,Cambodia,KHM,0,,Singapore,SGP,3,,0,,Haiphong,Vietnam,away
+2004,Group,A,Round 1,2004-12-15,Vietnam,VIE,3,,Laos,LAO,0,,0,,Hanoi,Vietnam,home
+2004,Group,B,Round 1,2004-12-16,Myanmar,MMR,3,,Timor-Leste,TLS,1,,0,,Kuala Lumpur,Malaysia,home
+2004,Group,B,Round 1,2004-12-16,Thailand,THA,3,,Philippines,PHL,1,,0,,Kuala Lumpur,Malaysia,home
+2004,Knock Out,,Semi Final,2004-12-28,Indonesia,IDN,1,,Malaysia,MAS,2,,0,,Jakarta,Indonesia,away
+2004,Knock Out,,Semi Final,2004-12-29,Myanmar,MMR,3,,Singapore,SGP,4,,0,,Kuala Lumpur,Malaysia,away
+2005,Knock Out,,Semi Final,2005-01-02,Singapore,SGP,4,,Myanmar,MMR,2,,0,,Singapore,Singapore,home
+2005,Knock Out,,Semi Final,2005-01-03,Malaysia,MAS,1,,Indonesia,IDN,4,,0,,Kuala Lumpur,Malaysia,away
+2005,Knock Out,,Third Place,2005-01-08,Indonesia,IDN,1,,Singapore,SGP,3,,0,,Jakarta,Indonesia,away
+2005,Knock Out,,Final,2005-01-15,Malaysia,MAS,2,,Myanmar,MMR,1,,0,,Singapore,Singapore,home
+2005,Knock Out,,Final,2005-01-16,Singapore,SGP,2,,Indonesia,IDN,1,,0,,Singapore,Singapore,home
+2007,Group,A,Round 1,2007-01-12,Malaysia,MAS,4,,Philippines,PHL,0,,0,,Bangkok,Thailand,home
+2007,Group,A,Round 1,2007-01-12,Thailand,THA,1,,Myanmar,MMR,1,,0,,Bangkok,Thailand,draw
+2007,Group,B,Round 1,2007-01-13,Indonesia,IDN,3,,Laos,LAO,1,,0,,Singapore,Singapore,home
+2007,Group,B,Round 1,2007-01-13,Singapore,SGP,0,,Vietnam,VIE,0,,0,,Singapore,Singapore,draw
+2007,Group,A,Round 1,2007-01-14,Malaysia,MAS,0,,Myanmar,MMR,0,,0,,Bangkok,Thailand,draw
+2007,Group,A,Round 1,2007-01-14,Thailand,THA,4,,Philippines,PHL,0,,0,,Bangkok,Thailand,home
+2007,Group,B,Round 1,2007-01-15,Singapore,SGP,11,,Laos,LAO,0,,0,,Singapore,Singapore,home
+2007,Group,B,Round 1,2007-01-15,Vietnam,VIE,1,,Indonesia,IDN,1,,0,,Singapore,Singapore,draw
+2007,Group,A,Round 1,2007-01-16,Myanmar,MMR,0,,Philippines,PHL,0,,0,,Bangkok,Thailand,draw
+2007,Group,A,Round 1,2007-01-16,Thailand,THA,1,,Malaysia,MAS,0,,0,,Bangkok,Thailand,home
+2007,Group,B,Round 1,2007-01-17,Singapore,SGP,2,,Indonesia,IDN,2,,0,,Singapore,Singapore,draw
+2007,Group,B,Round 1,2007-01-17,Vietnam,VIE,9,,Laos,LAO,0,,0,,Singapore,Singapore,home
+2007,Knock Out,,Semi Final,2007-01-23,Malaysia,MAS,1,,Singapore,SGP,1,,0,,Shah Alam,Malaysia,draw
+2007,Knock Out,,Semi Final,2007-01-24,Vietnam,VIE,0,,Thailand,THA,2,,0,,Hanoi,Vietnam,away
+2007,Knock Out,,Semi Final,2007-01-27,Singapore,SGP,1,,Malaysia,MAS,1,,0,,Singapore,Singapore,draw
+2007,Knock Out,,Semi Final,2007-01-28,Thailand,THA,0,,Vietnam,VIE,0,,0,,Bangkok,Thailand,draw
+2007,Knock Out,,Final,2007-01-31,Singapore,SGP,2,,Thailand,THA,1,,0,,Singapore,Singapore,home
+2007,Knock Out,,Final,2007-02-04,Thailand,THA,1,,Singapore,SGP,1,,0,,Bangkok,Thailand,draw
+2008,Group,A,Round 1,2008-12-05,Indonesia,IDN,3,,Myanmar,MMR,0,,0,,Jakarta,Indonesia,home
+2008,Group,A,Round 1,2008-12-05,Singapore,SGP,5,,Cambodia,KHM,0,,0,,Jakarta,Indonesia,home
+2008,Group,B,Round 1,2008-12-06,Malaysia,MAS,3,,Laos,LAO,0,,0,,Phuket,Thailand,home
+2008,Group,B,Round 1,2008-12-06,Thailand,THA,2,,Vietnam,VIE,0,,0,,Phuket,Thailand,home
+2008,Group,A,Round 1,2008-12-07,Indonesia,IDN,4,,Cambodia,KHM,0,,0,,Jakarta,Indonesia,home
+2008,Group,A,Round 1,2008-12-07,Singapore,SGP,3,,Myanmar,MMR,1,,0,,Jakarta,Indonesia,home
+2008,Group,B,Round 1,2008-12-08,Malaysia,MAS,2,,Vietnam,VIE,3,,0,,Phuket,Thailand,away
+2008,Group,B,Round 1,2008-12-08,Thailand,THA,6,,Laos,LAO,0,,0,,Phuket,Thailand,home
+2008,Group,A,Round 1,2008-12-09,Myanmar,MMR,3,,Cambodia,KHM,2,,0,,Bandung,Indonesia,home
+2008,Group,A,Round 1,2008-12-09,Indonesia,IDN,0,,Singapore,SGP,2,,0,,Jakarta,Indonesia,away
+2008,Group,B,Round 1,2008-12-10,Thailand,THA,3,,Malaysia,MAS,0,,0,,Phuket,Thailand,home
+2008,Group,B,Round 1,2008-12-10,Vietnam,VIE,4,,Laos,LAO,0,,0,,Phuket,Thailand,home
+2008,Knock Out,,Semi Final,2008-12-16,Indonesia,IDN,0,,Thailand,THA,1,,0,,Jakarta,Indonesia,away
+2008,Knock Out,,Semi Final,2008-12-17,Vietnam,VIE,0,,Singapore,SGP,0,,0,,Hanoi,Vietnam,draw
+2008,Knock Out,,Final,2008-12-24,Thailand,THA,1,,Vietnam,VIE,2,,0,,Bangkok,Thailand,away
+2008,Knock Out,,Final,2008-12-28,Vietnam,VIE,1,,Thailand,THA,1,,0,,Hanoi,Vietnam,draw
+2010,Group,A,Round 1,2010-12-01,Indonesia,IDN,5,,Malaysia,MAS,1,,0,,Jakarta,Indonesia,home
+2010,Group,A,Round 1,2010-12-01,Thailand,THA,2,,Laos,LAO,2,,0,,Jakarta,Indonesia,draw
+2010,Group,B,Round 1,2010-12-02,Singapore,SGP,1,,Philippines,PHL,1,,0,,Hanoi,Vietnam,draw
+2010,Group,B,Round 1,2010-12-02,Vietnam,VIE,7,,Myanmar,MMR,1,,0,,Hanoi,Vietnam,home
+2010,Group,A,Round 1,2010-12-04,Indonesia,IDN,6,,Laos,LAO,0,,0,,Jakarta,Indonesia,home
+2010,Group,A,Round 1,2010-12-04,Thailand,THA,0,,Malaysia,MAS,0,,0,,Jakarta,Indonesia,draw
+2010,Group,B,Round 1,2010-12-05,Singapore,SGP,2,,Myanmar,MMR,1,,0,,Hanoi,Vietnam,home
+2010,Group,B,Round 1,2010-12-05,Vietnam,VIE,0,,Philippines,PHL,2,,0,,Hanoi,Vietnam,away
+2010,Group,A,Round 1,2010-12-07,Indonesia,IDN,2,,Thailand,THA,1,,0,,Jakarta,Indonesia,home
+2010,Group,A,Round 1,2010-12-07,Malaysia,MAS,5,,Laos,LAO,1,,0,,Palembang,Indonesia,home
+2010,Group,B,Round 1,2010-12-08,Myanmar,MMR,0,,Philippines,PHL,0,,0,,Nam Định,Vietnam,draw
+2010,Group,B,Round 1,2010-12-08,Vietnam,VIE,1,,Singapore,SGP,0,,0,,Hanoi,Vietnam,home
+2010,Knock Out,,Semi Final,2010-12-15,Malaysia,MAS,2,,Vietnam,VIE,0,,0,,Kuala Lumpur,Malaysia,home
+2010,Knock Out,,Semi Final,2010-12-16,Indonesia,IDN,1,,Philippines,PHL,0,,0,,Jakarta,Indonesia,home
+2010,Knock Out,,Semi Final,2010-12-18,Vietnam,VIE,0,,Malaysia,MAS,0,,0,,Hanoi,Vietnam,draw
+2010,Knock Out,,Semi Final,2010-12-19,Indonesia,IDN,1,,Philippines,PHL,0,,0,,Jakarta,Indonesia,home
+2010,Knock Out,,Final,2010-12-26,Malaysia,MAS,3,,Indonesia,IDN,0,,0,,Kuala Lumpur,Malaysia,home
+2010,Knock Out,,Final,2010-12-29,Indonesia,IDN,2,,Malaysia,MAS,1,,0,,Jakarta,Indonesia,home
+2012,Group,A,Round 1,2012-11-24,Thailand,THA,2,,Philippines,PHL,1,,0,,Bangkok,Thailand,home
+2012,Group,A,Round 1,2012-11-24,Vietnam,VIE,1,,Myanmar,MMR,1,,0,,Bangkok,Thailand,draw
+2012,Group,B,Round 1,2012-11-25,Indonesia,IDN,2,,Laos,LAO,2,,0,,Kuala Lumpur,Malaysia,draw
+2012,Group,B,Round 1,2012-11-25,Malaysia,MAS,0,,Singapore,SGP,3,,0,,Kuala Lumpur,Malaysia,away
+2012,Group,A,Round 1,2012-11-27,Thailand,THA,4,,Myanmar,MMR,0,,0,,Bangkok,Thailand,home
+2012,Group,A,Round 1,2012-11-27,Vietnam,VIE,0,,Philippines,PHL,1,,0,,Bangkok,Thailand,away
+2012,Group,B,Round 1,2012-11-28,Indonesia,IDN,1,,Singapore,SGP,0,,0,,Kuala Lumpur,Malaysia,home
+2012,Group,B,Round 1,2012-11-28,Malaysia,MAS,4,,Laos,LAO,1,,0,,Kuala Lumpur,Malaysia,home
+2012,Group,A,Round 1,2012-11-30,Philippines,PHL,2,,Myanmar,MMR,0,,0,,Bangkok,Thailand,home
+2012,Group,A,Round 1,2012-11-30,Thailand,THA,3,,Vietnam,VIE,1,,0,,Bangkok,Thailand,home
+2012,Group,B,Round 1,2012-12-01,Malaysia,MAS,2,,Indonesia,IDN,0,,0,,Kuala Lumpur,Malaysia,home
+2012,Group,B,Round 1,2012-12-01,Singapore,SGP,4,,Laos,LAO,3,,0,,Shah Alam,Malaysia,home
+2012,Knock Out,,Semi Final,2012-12-08,Philippines,PHL,0,,Singapore,SGP,0,,0,,Manila,Philippines,draw
+2012,Knock Out,,Semi Final,2012-12-09,Malaysia,MAS,1,,Thailand,THA,1,,0,,Kuala Lumpur,Malaysia,draw
+2012,Knock Out,,Semi Final,2012-12-12,Singapore,SGP,1,,Philippines,PHL,0,,0,,Singapore,Singapore,home
+2012,Knock Out,,Semi Final,2012-12-13,Thailand,THA,2,,Malaysia,MAS,0,,0,,Bangkok,Thailand,home
+2012,Knock Out,,Final,2012-12-19,Singapore,SGP,3,,Thailand,THA,1,,0,,Singapore,Singapore,home
+2012,Knock Out,,Final,2012-12-22,Thailand,THA,1,,Singapore,SGP,0,,0,,Bangkok,Thailand,home
+2014,Group,A,Round 1,2014-11-22,Philippines,PHL,4,,Laos,LAO,1,,0,,Hanoi,Vietnam,home
+2014,Group,A,Round 1,2014-11-22,Vietnam,VIE,2,,Indonesia,IDN,2,,0,,Hanoi,Vietnam,draw
+2014,Group,B,Round 1,2014-11-23,Malaysia,MAS,0,,Myanmar,MMR,0,,0,,Kallang,Singapore,draw
+2014,Group,B,Round 1,2014-11-23,Singapore,SGP,1,,Thailand,THA,2,,0,,Kallang,Singapore,away
+2014,Group,A,Round 1,2014-11-25,Philippines,PHL,4,,Indonesia,IDN,0,,0,,Hanoi,Vietnam,home
+2014,Group,A,Round 1,2014-11-25,Vietnam,VIE,3,,Laos,LAO,0,,0,,Hanoi,Vietnam,home
+2014,Group,B,Round 1,2014-11-26,Malaysia,MAS,2,,Thailand,THA,3,,0,,Kallang,Singapore,away
+2014,Group,B,Round 1,2014-11-26,Singapore,SGP,4,,Myanmar,MMR,2,,0,,Kallang,Singapore,home
+2014,Group,A,Round 1,2014-11-28,Indonesia,IDN,5,,Laos,LAO,1,,0,,Hanoi,Vietnam,home
+2014,Group,A,Round 1,2014-11-28,Vietnam,VIE,3,,Philippines,PHL,1,,0,,Hanoi,Vietnam,home
+2014,Group,B,Round 1,2014-11-29,Singapore,SGP,1,,Malaysia,MAS,3,,0,,Kallang,Singapore,away
+2014,Group,B,Round 1,2014-11-29,Thailand,THA,2,,Myanmar,MMR,0,,0,,Kallang,Singapore,home
+2014,Knock Out,,Semi Final,2014-12-06,Philippines,PHL,0,,Thailand,THA,0,,0,,Manila,Philippines,draw
+2014,Knock Out,,Semi Final,2014-12-07,Malaysia,MAS,1,,Vietnam,VIE,2,,0,,Shah Alam,Malaysia,away
+2014,Knock Out,,Semi Final,2014-12-10,Thailand,THA,3,,Philippines,PHL,0,,0,,Bangkok,Thailand,home
+2014,Knock Out,,Semi Final,2014-12-11,Vietnam,VIE,2,,Malaysia,MAS,4,,0,,Hanoi,Vietnam,away
+2014,Knock Out,,Final,2014-12-17,Thailand,THA,2,,Malaysia,MAS,0,,0,,Bangkok,Thailand,home
+2014,Knock Out,,Final,2014-12-20,Malaysia,MAS,3,,Thailand,THA,2,,0,,Shah Alam,Malaysia,home
+2016,Group,A,Round 1,2016-11-19,Philippines,PHL,0,,Singapore,SGP,0,,0,,Bocaue,Philippines,draw
+2016,Group,A,Round 1,2016-11-19,Thailand,THA,4,,Indonesia,IDN,2,,0,,Bocaue,Philippines,home
+2016,Group,B,Round 1,2016-11-20,Myanmar,MMR,1,,Vietnam,VIE,2,,0,,Yangon,Myanmar,away
+2016,Group,B,Round 1,2016-11-20,Malaysia,MAS,3,,Cambodia,KHM,2,,0,,Yangon,Myanmar,home
+2016,Group,A,Round 1,2016-11-22,Philippines,PHL,2,,Indonesia,IDN,2,,0,,Bocaue,Philippines,draw
+2016,Group,A,Round 1,2016-11-22,Thailand,THA,1,,Singapore,SGP,0,,0,,Bocaue,Philippines,home
+2016,Group,B,Round 1,2016-11-23,Myanmar,MMR,3,,Cambodia,KHM,1,,0,,Yangon,Myanmar,home
+2016,Group,B,Round 1,2016-11-23,Malaysia,MAS,0,,Vietnam,VIE,1,,0,,Yangon,Myanmar,away
+2016,Group,A,Round 1,2016-11-25,Philippines,PHL,0,,Thailand,THA,1,,0,,Bocaue,Philippines,away
+2016,Group,A,Round 1,2016-11-25,Singapore,SGP,1,,Indonesia,IDN,2,,0,,Manila,Philippines,away
+2016,Group,B,Round 1,2016-11-26,Myanmar,MMR,1,,Malaysia,MAS,0,,0,,Yangon,Myanmar,home
+2016,Group,B,Round 1,2016-11-26,Vietnam,VIE,2,,Cambodia,KHM,1,,0,,Naypyidaw,Myanmar,home
+2016,Knock Out,,Semi Final,2016-12-03,Indonesia,IDN,2,,Vietnam,VIE,1,,0,,Bogor,Indonesia,home
+2016,Knock Out,,Semi Final,2016-12-04,Myanmar,MMR,0,,Thailand,THA,2,,0,,Yangon,Myanmar,away
+2016,Knock Out,,Semi Final,2016-12-07,Vietnam,VIE,2,,Indonesia,IDN,2,,0,,Hanoi,Vietnam,draw
+2016,Knock Out,,Semi Final,2016-12-08,Thailand,THA,4,,Myanmar,MMR,0,,0,,Bangkok,Thailand,home
+2016,Knock Out,,Final,2016-12-14,Indonesia,IDN,2,,Thailand,THA,1,,0,,Bogor,Indonesia,home
+2016,Knock Out,,Final,2016-12-17,Thailand,THA,2,,Indonesia,IDN,0,,0,,Bangkok,Thailand,home
+2018,Group,A,Round 1,2018-11-08,Cambodia,KHM,0,,Malaysia,MAS,1,,0,,Phnom Penh,Cambodia,away
+2018,Group,A,Round 1,2018-11-08,Laos,LAO,0,,Vietnam,VIE,3,,0,,Vientiane,Laos,away
+2018,Group,B,Round 1,2018-11-09,Singapore,SGP,1,,Indonesia,IDN,0,,0,,Kallang,Singapore,home
+2018,Group,B,Round 1,2018-11-09,Thailand,THA,7,,Timor-Leste,TLS,0,,0,,Bangkok,Thailand,home
+2018,Group,A,Round 1,2018-11-12,Myanmar,MMR,4,,Cambodia,KHM,1,,0,,Mandalay,Myanmar,home
+2018,Group,A,Round 1,2018-11-12,Malaysia,MAS,3,,Laos,LAO,1,,0,,Kuala Lumpur,Malaysia,home
+2018,Group,B,Round 1,2018-11-13,Indonesia,IDN,3,,Timor-Leste,TLS,1,,0,,Jakarta,Indonesia,home
+2018,Group,B,Round 1,2018-11-13,Philippines,PHL,1,,Singapore,SGP,0,,0,,Bacolod,Philippines,home
+2018,Group,A,Round 1,2018-11-16,Laos,LAO,1,,Myanmar,MMR,3,,0,,Vientiane,Laos,away
+2018,Group,A,Round 1,2018-11-16,Vietnam,VIE,2,,Malaysia,MAS,0,,0,,Hanoi,Vietnam,home
+2018,Group,B,Round 1,2018-11-17,Thailand,THA,4,,Indonesia,IDN,2,,0,,Bangkok,Thailand,home
+2018,Group,B,Round 1,2018-11-17,Timor-Leste,TLS,2,,Philippines,PHL,3,,0,,Kuala Lumpur,Malaysia,away
+2018,Group,A,Round 1,2018-11-20,Myanmar,MMR,0,,Vietnam,VIE,0,,0,,Yangon,Myanmar,draw
+2018,Group,A,Round 1,2018-11-20,Cambodia,KHM,3,,Laos,LAO,1,,0,,Phnom Penh,Cambodia,home
+2018,Group,B,Round 1,2018-11-21,Philippines,PHL,1,,Thailand,THA,1,,0,,Bacolod,Philippines,draw
+2018,Group,B,Round 1,2018-11-21,Singapore,SGP,6,,Timor-Leste,TLS,1,,0,,Kallang,Singapore,home
+2018,Group,A,Round 1,2018-11-24,Vietnam,VIE,3,,Cambodia,KHM,0,,0,,Hanoi,Vietnam,home
+2018,Group,A,Round 1,2018-11-24,Malaysia,MAS,3,,Myanmar,MMR,0,,0,,Kuala Lumpur,Malaysia,home
+2018,Group,B,Round 1,2018-11-25,Indonesia,IDN,0,,Philippines,PHL,0,,0,,Jakarta,Indonesia,draw
+2018,Group,B,Round 1,2018-11-25,Thailand,THA,3,,Singapore,SGP,0,,0,,Bangkok,Thailand,home
+2018,Knock Out,,Semi Final,2018-12-01,Malaysia,MAS,0,,Thailand,THA,0,,0,,Kuala Lumpur,Malaysia,draw
+2018,Knock Out,,Semi Final,2018-12-02,Philippines,PHL,1,,Vietnam,VIE,2,,0,,Bacolod,Philippines,away
+2018,Knock Out,,Semi Final,2018-12-05,Thailand,THA,2,,Malaysia,MAS,2,,0,,Bangkok,Thailand,draw
+2018,Knock Out,,Semi Final,2018-12-06,Vietnam,VIE,2,,Philippines,PHL,1,,0,,Hanoi,Vietnam,home
+2018,Knock Out,,Final,2018-12-11,Malaysia,MAS,2,,Vietnam,VIE,2,,0,,Kuala Lumpur,Malaysia,draw
+2018,Knock Out,,Final,2018-12-15,Vietnam,VIE,1,,Malaysia,MAS,0,,0,,Hanoi,Vietnam,home
+2021,Group,A,Round 1,2021-12-05,Timor-Leste,TLS,0,,Thailand,THA,2,,0,,Kallang,Singapore,away
+2021,Group,A,Round 1,2021-12-05,Singapore,SGP,3,,Myanmar,MMR,0,,0,,Kallang,Singapore,home
+2021,Group,B,Round 1,2021-12-06,Cambodia,KHM,1,,Malaysia,MAS,3,,0,,Bishan,Singapore,away
+2021,Group,B,Round 1,2021-12-06,Laos,LAO,0,,Vietnam,VIE,2,,0,,Bishan,Singapore,away
+2021,Group,A,Round 1,2021-12-08,Myanmar,MMR,2,,Timor-Leste,TLS,0,,0,,Kallang,Singapore,home
+2021,Group,A,Round 1,2021-12-08,Singapore,SGP,2,,Philippines,PHL,1,,0,,Kallang,Singapore,home
+2021,Group,B,Round 1,2021-12-09,Malaysia,MAS,4,,Laos,LAO,0,,0,,Bishan,Singapore,home
+2021,Group,B,Round 1,2021-12-09,Indonesia,IDN,4,,Cambodia,KHM,2,,0,,Bishan,Singapore,home
+2021,Group,A,Round 1,2021-12-11,Timor-Leste,TLS,0,,Philippines,PHL,7,,0,,Kallang,Singapore,away
+2021,Group,A,Round 1,2021-12-11,Thailand,THA,4,,Myanmar,MMR,0,,0,,Kallang,Singapore,home
+2021,Group,B,Round 1,2021-12-12,Laos,LAO,1,,Indonesia,IDN,5,,0,,Bishan,Singapore,away
+2021,Group,B,Round 1,2021-12-12,Vietnam,VIE,3,,Malaysia,MAS,0,,0,,Bishan,Singapore,home
+2021,Group,A,Round 1,2021-12-14,Philippines,PHL,1,,Thailand,THA,2,,0,,Kallang,Singapore,away
+2021,Group,A,Round 1,2021-12-14,Singapore,SGP,2,,Timor-Leste,TLS,0,,0,,Kallang,Singapore,home
+2021,Group,B,Round 1,2021-12-15,Cambodia,KHM,3,,Laos,LAO,0,,0,,Bishan,Singapore,home
+2021,Group,B,Round 1,2021-12-15,Indonesia,IDN,0,,Vietnam,VIE,0,,0,,Bishan,Singapore,draw
+2021,Group,A,Round 1,2021-12-18,Singapore,SGP,0,,Thailand,THA,2,,0,,Kallang,Singapore,away
+2021,Group,A,Round 1,2021-12-18,Myanmar,MMR,2,,Philippines,PHL,3,,0,,Bishan,Singapore,away
+2021,Group,B,Round 1,2021-12-19,Vietnam,VIE,4,,Cambodia,KHM,0,,0,,Bishan,Singapore,home
+2021,Group,B,Round 1,2021-12-19,Malaysia,MAS,1,,Indonesia,IDN,4,,0,,Kallang,Singapore,away
+2021,Knock Out,,Semi Final,2021-12-22,Singapore,SGP,1,,Indonesia,IDN,1,,0,,Kallang,Singapore,draw
+2021,Knock Out,,Semi Final,2021-12-23,Vietnam,VIE,0,,Thailand,THA,2,,0,,Kallang,Singapore,away
+2021,Knock Out,,Semi Final,2021-12-25,Singapore,SGP,2,,Indonesia,IDN,4,,0,,Kallang,Singapore,away
+2021,Knock Out,,Semi Final,2021-12-26,Thailand,THA,0,,Vietnam,VIE,0,,0,,Kallang,Singapore,draw
+2021,Knock Out,,Final,2021-12-29,Indonesia,IDN,0,,Thailand,THA,4,,0,,Kallang,Singapore,away
+2022,Group,A,Round 1,2022-01-01,Thailand,THA,2,,Indonesia,IDN,2,,0,,Kallang,Singapore,draw
+2022,Group,A,Round 1,2022-12-20,Cambodia,KHM,3,,Philippines,PHL,2,,0,,Phnom Penh,Cambodia,home
+2022,Group,A,Round 1,2022-12-20,Brunei,BRN,0,,Thailand,THA,5,,0,,Kuala Lumpur,Malaysia,away
+2022,Group,B,Round 1,2022-12-21,Myanmar,MMR,0,,Malaysia,MAS,1,,0,,Yangon,Myanmar,away
+2022,Group,B,Round 1,2022-12-21,Laos,LAO,0,,Vietnam,VIE,6,,0,,Vientiane,Laos,away
+2022,Group,A,Round 1,2022-12-23,Philippines,PHL,5,,Brunei,BRN,1,,0,,Manila,Philippines,home
+2022,Group,A,Round 1,2022-12-23,Indonesia,IDN,2,,Cambodia,KHM,1,,0,,Jakarta,Indonesia,home
+2022,Group,B,Round 1,2022-12-24,Singapore,SGP,3,,Myanmar,MMR,2,,0,,Singapore,Singapore,home
+2022,Group,B,Round 1,2022-12-24,Malaysia,MAS,5,,Laos,LAO,0,,0,,Kuala Lumpur,Malaysia,home
+2022,Group,A,Round 1,2022-12-26,Brunei,BRN,0,,Indonesia,IDN,7,,0,,Kuala Lumpur,Malaysia,away
+2022,Group,A,Round 1,2022-12-26,Thailand,THA,4,,Philippines,PHL,0,,0,,Pathum Thani,Thailand,home
+2022,Group,B,Round 1,2022-12-27,Laos,LAO,0,,Singapore,SGP,2,,0,,Vientiane,Laos,away
+2022,Group,B,Round 1,2022-12-27,Vietnam,VIE,3,,Malaysia,MAS,0,,0,,Hanoi,Vietnam,home
+2022,Group,A,Round 1,2022-12-29,Cambodia,KHM,5,,Brunei,BRN,1,,0,,Phnom Penh,Cambodia,home
+2022,Group,A,Round 1,2022-12-29,Indonesia,IDN,1,,Thailand,THA,1,,0,,Jakarta,Indonesia,draw
+2022,Group,B,Round 1,2022-12-30,Myanmar,MMR,2,,Laos,LAO,2,,0,,Yangon,Myanmar,draw
+2022,Group,B,Round 1,2022-12-30,Singapore,SGP,0,,Vietnam,VIE,0,,0,,Singapore,Singapore,draw
+2023,Knock Out,,Quarter Final,2023-01-02,Thailand,THA,3,,Cambodia,KHM,1,,0,,Pathum Thani,Thailand,home
+2023,Knock Out,,Quarter Final,2023-01-02,Philippines,PHL,1,,Indonesia,IDN,2,,0,,Manila,Philippines,away
+2023,Knock Out,,Quarter Final,2023-01-03,Vietnam,VIE,3,,Myanmar,MMR,0,,0,,Hanoi,Vietnam,home
+2023,Knock Out,,Quarter Final,2023-01-03,Malaysia,MAS,4,,Singapore,SGP,1,,0,,Kuala Lumpur,Malaysia,home
+2023,Knock Out,,Semi Final,2023-01-06,Indonesia,IDN,0,,Vietnam,VIE,0,,0,,Jakarta,Indonesia,draw
+2023,Knock Out,,Semi Final,2023-01-07,Malaysia,MAS,1,,Thailand,THA,0,,0,,Kuala Lumpur,Malaysia,home
+2023,Knock Out,,Semi Final,2023-01-09,Vietnam,VIE,2,,Indonesia,IDN,0,,0,,Hanoi,Vietnam,home
+2023,Knock Out,,Semi Final,2023-01-10,Thailand,THA,3,,Malaysia,MAS,0,,0,,Pathum Thani,Thailand,home
+2023,Knock Out,,Final,2023-01-13,Vietnam,VIE,2,,Thailand,THA,2,,0,,Hanoi,Vietnam,draw
+2023,Knock Out,,Final,2023-01-16,Thailand,THA,1,,Vietnam,VIE,0,,0,,Pathum Thani,Thailand,home
+2024,Group,A,Round 1,2024-12-08,Cambodia,KHM,2,,Malaysia,MAS,2,,0,,Phnom Penh,Cambodia,draw
+2024,Group,A,Round 1,2024-12-08,Timor-Leste,TLS,0,,Thailand,THA,10,,0,,Hanoi,Vietnam,away
+2024,Group,B,Round 1,2024-12-09,Myanmar,MMR,0,,Indonesia,IDN,1,,0,,Yangon,Myanmar,away
+2024,Group,B,Round 1,2024-12-09,Laos,LAO,1,,Vietnam,VIE,4,,0,,Vientiane,Laos,away
+2024,Group,A,Round 1,2024-12-11,Singapore,SGP,2,,Cambodia,KHM,1,,0,,Singapore,Singapore,home
+2024,Group,A,Round 1,2024-12-11,Malaysia,MAS,3,,Timor-Leste,TLS,2,,0,,Kuala Lumpur,Malaysia,home
+2024,Group,B,Round 1,2024-12-12,Philippines,PHL,1,,Myanmar,MMR,1,,0,,Manila,Philippines,draw
+2024,Group,B,Round 1,2024-12-12,Indonesia,IDN,3,,Laos,LAO,3,,0,,Surakarta,Indonesia,draw
+2024,Group,A,Round 1,2024-12-14,Timor-Leste,TLS,0,,Singapore,SGP,3,,0,,Hanoi,Vietnam,away
+2024,Group,A,Round 1,2024-12-14,Thailand,THA,1,,Malaysia,MAS,0,,0,,Bangkok,Thailand,home
+2024,Group,B,Round 1,2024-12-15,Laos,LAO,1,,Philippines,PHL,1,,0,,Vientiane,Laos,draw
+2024,Group,B,Round 1,2024-12-15,Vietnam,VIE,1,,Indonesia,IDN,0,,0,,Việt Trì,Vietnam,home
+2024,Group,A,Round 1,2024-12-17,Cambodia,KHM,2,,Timor-Leste,TLS,1,,0,,Phnom Penh,Cambodia,home
+2024,Group,A,Round 1,2024-12-17,Singapore,SGP,2,,Thailand,THA,4,,0,,Singapore,Singapore,away
+2024,Group,B,Round 1,2024-12-18,Myanmar,MMR,3,,Laos,LAO,2,,0,,Yangon,Myanmar,home
+2024,Group,B,Round 1,2024-12-18,Philippines,PHL,1,,Vietnam,VIE,1,,0,,Manila,Philippines,draw
+2024,Group,A,Round 1,2024-12-20,Thailand,THA,3,,Cambodia,KHM,2,,0,,Bangkok,Thailand,home
+2024,Group,A,Round 1,2024-12-20,Malaysia,MAS,0,,Singapore,SGP,0,,0,,Kuala Lumpur,Malaysia,draw
+2024,Group,B,Round 1,2024-12-21,Vietnam,VIE,5,,Myanmar,MMR,0,,0,,Việt Trì,Vietnam,home
+2024,Group,B,Round 1,2024-12-21,Indonesia,IDN,0,,Philippines,PHL,1,,0,,Surakarta,Indonesia,away
+2024,Knock Out,,Semi Final,2024-12-26,Singapore,SGP,0,,Vietnam,VIE,2,,0,,Singapore,Singapore,away
+2024,Knock Out,,Semi Final,2024-12-27,Philippines,PHL,2,,Thailand,THA,1,,0,,Manila,Philippines,home
+2024,Knock Out,,Final,2024-12-29,Vietnam,VIE,3,,Singapore,SGP,1,,0,,Việt Trì,Vietnam,home
+2024,Knock Out,,Final,2024-12-30,Thailand,THA,3,,Philippines,PHL,1,,0,,Bangkok,Thailand,home
+2025,Knock Out,,Final,2025-01-02,Vietnam,VIE,2,,Thailand,THA,1,,0,,Việt Trì,Vietnam,home
+2025,Knock Out,,Final,2025-01-05,Thailand,THA,2,,Vietnam,VIE,3,,0,,Bangkok,Thailand,away

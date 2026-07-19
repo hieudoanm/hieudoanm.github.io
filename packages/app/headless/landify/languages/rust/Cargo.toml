@@ -1,0 +1,58 @@
+[package]
+name = "landify"
+version = "0.0.1"
+edition = "2021"
+description = "Build a flat landing page from a single YAML file, behaviour-identical to the Go implementation"
+license = "GPL-3.0"
+
+[[bin]]
+name = "landify"
+path = "src/main.rs"
+
+[lib]
+name = "landify"
+path = "src/lib.rs"
+
+[features]
+default = []
+# Material-design slint desktop editor (studio subcommand). Build with:
+# cargo build --features gui
+gui = ["dep:slint", "dep:arboard"]
+
+[dependencies]
+anyhow = "=1.0.104"
+arboard = { version = "=3.6.1", optional = true }
+clap = { version = "=4.6.7", features = ["derive"] }
+crossterm = "=0.29.0"
+minijinja = "=2.24.0"
+ratatui = "=0.30.2"
+serde = { version = "=1.0.229", features = ["derive"] }
+serde_json = "=1.0.151"
+serde_yaml = "=0.9.34"
+signal-hook = "=0.4.4"
+slint = { version = "=1.18.1", optional = true }
+
+[build-dependencies]
+slint-build = "=1.18.1"
+
+[dev-dependencies]
+tempfile = "=3.27.0"
+
+[[test]]
+name = "mcp"
+path = "tests/mcp.rs"
+
+[[test]]
+name = "mcp_workspace"
+path = "tests/mcp_workspace.rs"
+
+[[test]]
+name = "parity"
+path = "tests/parity.rs"
+
+[[test]]
+name = "serve"
+path = "tests/serve.rs"
+
+[profile.release]
+lto = true

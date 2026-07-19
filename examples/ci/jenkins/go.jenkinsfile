@@ -1,0 +1,33 @@
+pipeline {
+    agent any
+
+    tools {
+        go '1.26'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                sh 'go mod download'
+            }
+        }
+
+        stage('Lint') {
+            steps {
+                sh 'go vet ./...'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                sh 'go test -v -race -count=1 ./...'
+            }
+        }
+    }
+}

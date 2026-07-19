@@ -1,0 +1,95 @@
+type: product
+
+theme:
+  base: "#f8fafc"
+  primary: "#4f378b"
+  secondary: "#7c3aed"
+  neutral: "#475569"
+  info: "#0ea5e9"
+  warning: "#f59e0b"
+  success: "#10b981"
+  error: "#ef4444"
+  radius: "10px"
+
+site:
+  name: AndroidX
+  mark: "🤖"
+  description: >-
+    Two Android apps in one — Focus Blocker and NFC Toolkit.
+  nav:
+    - label: Apps
+      href: "#features"
+    - label: Demo
+      href: "#demo"
+    - label: Source
+      href: "https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/app/native/androidx"
+
+hero:
+  badge: "🤖 Android · GPL-3.0"
+  headline: Two apps. One home screen.
+  subheadline: >-
+    AndroidX bundles Focus Blocker and NFC Toolkit behind a single launcher
+    icon. Open the hub, pick an app, and it runs in the same process — all
+    data stays on your device.
+  primary:
+    label: Download for Android
+    href: "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-android-androidx-latest"
+  secondary:
+    label: View source
+    href: "https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/app/native/androidx"
+  image:
+    src: demo.png
+    alt: AndroidX terminal preview of build, install, and run
+
+features:
+  heading: The two apps
+  sub: The hub lists both apps — tap a card to open one.
+  items:
+    - icon: "🚫"
+      title: Focus Blocker
+      body: >-
+        Pick the apps that waste your time and intercept them the moment they
+        open with a full-screen, stay-on-task reminder.
+    - icon: "🛰️"
+      title: NFC Toolkit
+      body: >-
+        Read, scan, and emulate NFC tags — includes host card emulation, tag
+        history, and a Home screen with quick actions.
+    - icon: "🏠"
+      title: One launcher icon
+      body: >-
+        A single application installs both apps; the hub is the first screen,
+        and each feature opens in the same process.
+    - icon: "🔒"
+      title: Local-first
+      body: >-
+        Room databases and DataStore preferences keep everything on device —
+        no accounts, no cloud sync.
+
+demo:
+  heading: See it in action
+  sub: Build, install, and run — the AndroidX workflow end to end.
+  video:
+    src: demo.mp4
+    poster: demo.png
+    track: demo-en-descriptions.vtt
+
+cta:
+  icon: "🤖"
+  heading: Put two apps in your pocket.
+  body: >-
+    Block distractions with Focus Blocker and play with NFC with NFC Toolkit —
+    delivered as one download.
+  button:
+    label: Download for Android
+    href: "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-android-androidx-latest"
+
+footer:
+  copyright: "© 2026 Hieu Doan"
+  links:
+    - label: Apps
+      href: "#features"
+    - label: Demo
+      href: "#demo"
+    - label: Source
+      href: "https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/app/native/androidx"

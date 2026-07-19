@@ -1,0 +1,9 @@
+// List style type utilities — Tailwind v3 default scale
+
+$list-style-types: (('none', none), ('disc', disc), ('decimal', decimal));
+
+@each $name, $value in $list-style-types {
+  .list-#{$name} {
+    list-style-type: $value;
+  }
+}

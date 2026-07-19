@@ -1,0 +1,17 @@
+// Rules with no natural group, plus the tags that keep their defaults.
+
+@mixin misc {
+  hr {
+    border: 0;
+    border-top: 1px solid var(--base-border);
+    margin: 2rem 0;
+  }
+
+  template {
+    display: none;
+  }
+
+  // Full tag coverage — the following render no styleable content and keep
+  // their defaults: head, title, base, link, meta, style, script, noscript,
+  // br, wbr, map, area, param, source, track, col, colgroup.
+}

@@ -1,0 +1,10 @@
+// User select utilities — Tailwind v3 default scale
+
+$user-selects: (('none', none), ('text', text), ('all', all), ('auto', auto));
+
+@each $name, $value in $user-selects {
+  .select-#{$name} {
+    -webkit-user-select: $value;
+    user-select: $value;
+  }
+}

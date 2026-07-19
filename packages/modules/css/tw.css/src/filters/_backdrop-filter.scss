@@ -1,0 +1,13 @@
+// Backdrop filter base utilities — Tailwind v3 default scale
+
+@use 'filter-composite' as *;
+
+.backdrop-filter {
+  -webkit-backdrop-filter: #{$backdrop-filter-composite};
+  backdrop-filter: #{$backdrop-filter-composite};
+}
+
+.backdrop-filter-none {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
