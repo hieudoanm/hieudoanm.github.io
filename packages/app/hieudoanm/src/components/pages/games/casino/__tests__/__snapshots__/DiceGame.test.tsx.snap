@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`DiceGame should render correctly 1`] = `
+<div>
+  <div
+    class="flex h-screen flex-col overflow-hidden"
+  >
+    <div
+      class="border-base-300 flex shrink-0 items-center justify-between border-b px-4 py-3"
+    >
+      <h2
+        class="text-sm font-normal tracking-tight"
+      >
+        Dice Game
+      </h2>
+      <button
+        class="btn btn-ghost btn-xs btn-square text-base opacity-60 hover:opacity-100"
+      >
+        ✕
+      </button>
+    </div>
+    <div
+      class="flex-1 overflow-y-auto p-8"
+    >
+      <div
+        class="flex flex-col gap-4 outline-none"
+      >
+        <div
+          class="flex items-center justify-between text-sm"
+        >
+          <span>
+            Credits: 
+            <strong
+              class="text-success"
+            >
+              200
+            </strong>
+          </span>
+          <span
+            class="opacity-60"
+          >
+            Bet: 
+            10
+          </span>
+        </div>
+        <div
+          class="flex flex-col gap-2"
+        >
+          <p
+            class="text-xs opacity-50"
+          >
+            Place your bet:
+          </p>
+          <div
+            class="flex gap-2"
+          >
+            <button
+              class="btn btn-sm flex-1 btn-ghost"
+            >
+              <span
+                class="flex flex-col items-center gap-0.5"
+              >
+                <span>
+                  Under 7
+                </span>
+                <span
+                  class="text-[10px] opacity-60"
+                >
+                  2:1
+                </span>
+              </span>
+            </button>
+            <button
+              class="btn btn-sm flex-1 btn-ghost"
+            >
+              <span
+                class="flex flex-col items-center gap-0.5"
+              >
+                <span>
+                  7
+                </span>
+                <span
+                  class="text-[10px] opacity-60"
+                >
+                  5:1
+                </span>
+              </span>
+            </button>
+            <button
+              class="btn btn-sm flex-1 btn-ghost"
+            >
+              <span
+                class="flex flex-col items-center gap-0.5"
+              >
+                <span>
+                  Over 7
+                </span>
+                <span
+                  class="text-[10px] opacity-60"
+                >
+                  2:1
+                </span>
+              </span>
+            </button>
+          </div>
+          <button
+            class="btn btn-primary btn-sm mt-2"
+            disabled=""
+          >
+            Roll Dice
+          </button>
+        </div>
+        <p
+          class="text-center text-xs opacity-40"
+        >
+          Two dice · Bet on under 7, exactly 7, or over 7
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

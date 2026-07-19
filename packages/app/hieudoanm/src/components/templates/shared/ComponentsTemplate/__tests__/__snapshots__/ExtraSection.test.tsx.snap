@@ -1,0 +1,304 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`ExtraSection to match snapshot 1`] = `
+<div>
+  <section
+    class="mx-auto max-w-5xl px-12 py-24"
+    id="extra"
+  >
+    <p
+      class="text-primary mb-3 text-xs font-medium tracking-[0.14em] uppercase"
+    >
+      Extra
+    </p>
+    <h2
+      class="mb-4 font-serif text-4xl leading-snug font-bold "
+    >
+      More building blocks
+    </h2>
+    <p
+      class="text-base-content/60 mb-12 max-w-xl text-base leading-relaxed "
+    >
+      Chat, carousel, dividers, indicators — finishing touches that make interfaces feel complete.
+    </p>
+    <div
+      class="mb-10 grid grid-cols-2 gap-10"
+    >
+      <div>
+        <p
+          class="text-base-content/50 mb-4 text-sm"
+        >
+          Chat
+        </p>
+        <div
+          class="flex flex-col gap-2"
+        >
+          <div
+            class="chat chat-start"
+          >
+            <div
+              class="chat-image avatar"
+            >
+              <div
+                class="w-10 rounded-full"
+              >
+                <img
+                  alt="Avatar"
+                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                />
+              </div>
+            </div>
+            <div
+              class="chat-header"
+            >
+              Obi-Wan Kenobi
+               
+              <time
+                class="text-base-content/60 text-xs"
+              >
+                12:45
+              </time>
+            </div>
+            <div
+              class="chat-bubble"
+            >
+              It's over Anakin.
+            </div>
+          </div>
+          <div
+            class="chat chat-start"
+          >
+            <div
+              class="chat-image avatar"
+            >
+              <div
+                class="w-10 rounded-full"
+              >
+                <img
+                  alt="Avatar"
+                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                />
+              </div>
+            </div>
+            <div
+              class="chat-header"
+            >
+              Obi-Wan Kenobi
+               
+              <time
+                class="text-base-content/60 text-xs"
+              >
+                12:45
+              </time>
+            </div>
+            <div
+              class="chat-bubble"
+            >
+              I have the high ground.
+            </div>
+            <div
+              class="chat-footer opacity-50"
+            >
+              Delivered
+            </div>
+          </div>
+          <div
+            class="chat chat-end"
+          >
+            <div
+              class="chat-image avatar"
+            >
+              <div
+                class="w-10 rounded-full"
+              >
+                <img
+                  alt="Avatar"
+                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                />
+              </div>
+            </div>
+            <div
+              class="chat-header"
+            >
+              Anakin
+               
+              <time
+                class="text-base-content/60 text-xs"
+              >
+                12:46
+              </time>
+            </div>
+            <div
+              class="chat-bubble"
+            >
+              You underestimate my power!
+            </div>
+            <div
+              class="chat-footer text-base-content/60"
+            >
+              Seen at 12:46
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p
+          class="text-base-content/50 mb-4 text-sm"
+        >
+          Divider
+        </p>
+        <div
+          class="flex flex-col gap-2"
+        >
+          <div
+            class="divider"
+          >
+            OR
+          </div>
+          <div
+            class="divider divider-neutral"
+          >
+            Neutral
+          </div>
+          <div
+            class="divider divider-primary"
+          >
+            Primary
+          </div>
+          <div
+            class="divider divider-secondary"
+          >
+            Secondary
+          </div>
+          <div
+            class="divider divider-accent"
+          >
+            Accent
+          </div>
+          <div
+            class="divider divider-success"
+          >
+            Success
+          </div>
+          <div
+            class="divider divider-warning"
+          >
+            Warning
+          </div>
+          <div
+            class="divider divider-error"
+          >
+            Error
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="mb-10 grid grid-cols-2 gap-10"
+    >
+      <div>
+        <p
+          class="text-base-content/50 mb-4 text-sm"
+        >
+          Carousel
+        </p>
+        <div
+          class="carousel rounded-box w-full"
+        >
+          <div
+            class="carousel-item w-full"
+            id="slide1"
+          >
+            <img
+              alt="Slide 1"
+              class="w-full"
+              src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
+            />
+          </div>
+          <div
+            class="carousel-item w-full"
+            id="slide2"
+          >
+            <img
+              alt="Slide 2"
+              class="w-full"
+              src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
+            />
+          </div>
+          <div
+            class="carousel-item w-full"
+            id="slide3"
+          >
+            <img
+              alt="Slide 3"
+              class="w-full"
+              src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
+            />
+          </div>
+        </div>
+        <div
+          class="flex w-full justify-center gap-2 py-2"
+        >
+          <a
+            class="btn btn-xs"
+            href="#slide1"
+          >
+            1
+          </a>
+          <a
+            class="btn btn-xs"
+            href="#slide2"
+          >
+            2
+          </a>
+          <a
+            class="btn btn-xs"
+            href="#slide3"
+          >
+            3
+          </a>
+        </div>
+      </div>
+      <div>
+        <p
+          class="text-base-content/50 mb-4 text-sm"
+        >
+          Indicator
+        </p>
+        <div
+          class="flex flex-wrap gap-4"
+        >
+          <div
+            class="indicator"
+          >
+            <span
+              class="indicator-item badge badge-primary"
+            >
+              3
+            </span>
+            <button
+              class="btn"
+            >
+              Notifications
+            </button>
+          </div>
+          <div
+            class="indicator"
+          >
+            <span
+              class="indicator-item indicator-start badge badge-secondary"
+            >
+              !
+            </span>
+            <button
+              class="btn"
+            >
+              Alerts
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

@@ -1,0 +1,217 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`CardsSection to match snapshot 1`] = `
+<div>
+  <section
+    class="mx-auto max-w-5xl px-12 py-24"
+    id="cards"
+  >
+    <p
+      class="text-primary mb-3 text-xs font-medium tracking-[0.14em] uppercase"
+    >
+      Cards & stats
+    </p>
+    <h2
+      class="mb-4 font-serif text-4xl leading-snug font-bold "
+    >
+      Surface what matters
+    </h2>
+    <p
+      class="text-base-content/60 mb-12 max-w-xl text-base leading-relaxed "
+    >
+      Cards, stats, and pricing tiles — structured surfaces that organize information at a glance.
+    </p>
+    <div
+      class="mb-10 grid grid-cols-3 gap-5"
+    >
+      <div
+        class="card bg-base-200 border-base-300 border"
+      >
+        <figure>
+          <img
+            alt="Shoes"
+            class="h-48 w-full object-cover"
+            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+          />
+        </figure>
+        <div
+          class="card-body"
+        >
+          <h2
+            class="card-title"
+          >
+            Nike Shoes
+          </h2>
+          <p
+            class="text-base-content/50 text-sm leading-relaxed"
+          >
+            Premium sneakers with breathable mesh and responsive cushioning.
+          </p>
+          <div
+            class="card-actions justify-end"
+          >
+            <button
+              class="btn btn-primary btn-sm"
+            >
+              Buy Now
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="card bg-base-200 border-base-300 border"
+      >
+        <div
+          class="card-body items-center text-center"
+        >
+          <h2
+            class="card-title"
+          >
+            Starter
+          </h2>
+          <p
+            class="font-serif text-4xl font-bold"
+          >
+            $29
+          </p>
+          <p
+            class="text-base-content/60 text-sm"
+          >
+            /month
+          </p>
+          <ul
+            class="text-base-content/50 text-left text-sm"
+          >
+            <li
+              class="before:text-primary before:content-['✓_']"
+            >
+              10 projects
+            </li>
+            <li
+              class="before:text-primary before:content-['✓_']"
+            >
+              5GB storage
+            </li>
+            <li
+              class="before:text-primary before:content-['✓_']"
+            >
+              Email support
+            </li>
+          </ul>
+          <div
+            class="card-actions"
+          >
+            <button
+              class="btn btn-primary btn-sm btn-block"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="card bg-base-200 border-base-300 border"
+      >
+        <div
+          class="card-body"
+        >
+          <div
+            class="flex items-center gap-3"
+          >
+            <div
+              class="avatar"
+            >
+              <div
+                class="w-12 rounded-full"
+              >
+                <img
+                  alt="Avatar"
+                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                />
+              </div>
+            </div>
+            <div>
+              <h3
+                class="font-semibold"
+              >
+                Jane Doe
+              </h3>
+              <p
+                class="text-base-content/60 text-sm"
+              >
+                Product Designer
+              </p>
+            </div>
+          </div>
+          <p
+            class="text-base-content/50 mt-3 text-sm leading-relaxed"
+          >
+            “This tool transformed our workflow. Highly recommended!”
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="stats stats-vertical lg:stats-horizontal w-full shadow"
+    >
+      <div
+        class="stat"
+      >
+        <div
+          class="stat-title"
+        >
+          Revenue
+        </div>
+        <div
+          class="stat-value"
+        >
+          $12,450
+        </div>
+        <div
+          class="stat-desc"
+        >
+          ↑ 15% from last month
+        </div>
+      </div>
+      <div
+        class="stat"
+      >
+        <div
+          class="stat-title"
+        >
+          Users
+        </div>
+        <div
+          class="stat-value"
+        >
+          2,340
+        </div>
+        <div
+          class="stat-desc"
+        >
+          ↗︎ 120 new this week
+        </div>
+      </div>
+      <div
+        class="stat"
+      >
+        <div
+          class="stat-title"
+        >
+          Page Score
+        </div>
+        <div
+          class="stat-value"
+        >
+          91
+        </div>
+        <div
+          class="stat-desc"
+        >
+          ↘︎ 2 points behind target
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Typoglycemia should render correctly 1`] = `
+<div>
+  <div
+    class="flex h-screen flex-col overflow-hidden"
+  >
+    <div
+      class="border-base-300 flex shrink-0 items-center justify-between border-b px-4 py-3"
+    >
+      <h2
+        class="text-sm font-normal tracking-tight"
+      >
+        Typoglycemia
+      </h2>
+      <button
+        class="btn btn-ghost btn-xs btn-square text-base opacity-60 hover:opacity-100"
+      >
+        ✕
+      </button>
+    </div>
+    <div
+      class="flex-1 overflow-y-auto p-8"
+    >
+      <div
+        class="border-base-300 flex items-center justify-between border-b px-4 py-3"
+      >
+        <div
+          class="tabs tabs-boxed"
+        >
+          <a
+            class="tab tab-sm capitalize tab-active"
+            role="tab"
+          >
+            Editor
+          </a>
+          <a
+            class="tab tab-sm capitalize "
+            role="tab"
+          >
+            View
+          </a>
+        </div>
+      </div>
+      <div
+        class="min-h-0 flex-1 overflow-hidden"
+      >
+        <div
+          class="flex h-full flex-col"
+        >
+          <textarea
+            class="w-full grow resize-none p-4 font-mono text-sm focus:outline-none"
+            placeholder="Type or paste markdown here…"
+          >
+            # Typoglycemia
+
+Typoglycemia is a made-up word that comes from typo and hypoglycemia. It describes a popular idea about how people read text. The idea says that readers can understand words even when the letters in the middle are mixed up, as long as the first and last letters stay the same. Many examples of this are shared online to show how "easy" it is to read scrambled text.
+
+However, this idea is often exaggerated. Reading mixed-up words works best when the words are familiar and the sentence gives clear context. If too many letters are changed, or the text is complex, reading becomes much harder. Because of this, typoglycemia is considered an Internet myth rather than proven science.
+
+          </textarea>
+          <div
+            class="border-base-300 flex items-center justify-between border-t px-4 py-2 text-xs"
+          >
+            <span
+              class="opacity-50"
+            >
+              120
+               words
+            </span>
+            <div
+              class="flex gap-2"
+            >
+              <button
+                class="btn btn-ghost btn-xs"
+                type="button"
+              >
+                Copy
+              </button>
+              <button
+                class="btn btn-ghost btn-xs"
+                type="button"
+              >
+                Paste
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

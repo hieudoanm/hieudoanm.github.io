@@ -1,0 +1,35 @@
+{
+  "name": "@hieudoanm.github.io/workspace",
+  "version": "0.0.1",
+  "description": "hieudoanm",
+  "keywords": [
+    "hieudoanm"
+  ],
+  "homepage": "https://hieudoanm.github.io/hieudoanm",
+  "bugs": {
+    "url": "https://github.com/hieudoanm/hieudoanm/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hieudoanm/hieudoanm.git"
+  },
+  "license": "GPL-3.0",
+  "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
+  "packageManager": "pnpm@11.13.0",
+  "engines": {
+    "node": "26.5.0"
+  },
+  "scripts": {
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "build": "turbo run build",
+    "postbuild": "turbo run build --graph=images/svg/graph.svg",
+    "format": "turbo run format",
+    "prepare": "husky || true"
+  },
+  "devDependencies": {
+    "husky": "9.1.7",
+    "turbo": "2.10.4"
+  }
+}

@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Section to match snapshot 1`] = `
+<div>
+  <section
+    class="mx-auto max-w-5xl px-12 py-24"
+    id="snap"
+  >
+    <p
+      class="text-primary mb-3 text-xs font-medium tracking-[0.14em] uppercase"
+    >
+      SnapLabel
+    </p>
+    <h2
+      class="mb-4 font-serif text-4xl leading-snug font-bold "
+    >
+      SnapTitle
+    </h2>
+    <p
+      class="text-base-content/60 mb-12 max-w-xl text-base leading-relaxed "
+    >
+      SnapSub
+    </p>
+    <button>
+      action
+    </button>
+  </section>
+</div>
+`;
