@@ -1,5 +1,5 @@
 import { Tool } from '@hieudoanm.github.io/components/pages/start/components/cards/ToolCard';
-import { ModalId } from '../../../../types';
+import { ModalId } from '@hieudoanm.github.io/components/pages/start/types';
 
 import {
   PiArrowsClockwise,

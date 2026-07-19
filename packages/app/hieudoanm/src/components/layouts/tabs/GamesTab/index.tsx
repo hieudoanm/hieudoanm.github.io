@@ -2,7 +2,7 @@ import { useRouter } from 'next/navigation';
 import { FC, useDeferredValue, useMemo, useState } from 'react';
 import { PiGameController, PiMagnifyingGlass } from 'react-icons/pi';
 
-import { matchTool } from '../../../../constants';
+import { matchTool } from '@hieudoanm.github.io/components/pages/start/constants';
 import { GAME_SECTIONS, GameSection } from './data';
 import { Game, GameCard } from './GameCard';
 

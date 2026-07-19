@@ -8,6 +8,7 @@ import {
   PiCalendarBlank,
   PiIdentificationCard,
   PiGlobeHemisphereWest,
+  PiBooks,
   PiHouse,
   PiInfo,
   PiPackage,
@@ -15,7 +16,7 @@ import {
   PiGameController,
 } from 'react-icons/pi';
 
-import type { SidebarTab } from '../../types';
+import type { SidebarTab } from '@hieudoanm.github.io/components/pages/start/types';
 
 interface ActivityBarProps {
   activeTab: SidebarTab | null;
@@ -56,6 +57,12 @@ export const ActivityBar: FC<ActivityBarProps> = ({ activeTab, onToggle }) => (
       className="btn btn-ghost btn-square btn-sm text-base-content/60"
       title="Home">
       <PiHouse className="h-5 w-5" />
+    </Link>
+    <Link
+      href="/md"
+      className="btn btn-ghost btn-square btn-sm text-base-content/60"
+      title="Markdown">
+      <PiBooks className="h-5 w-5" />
     </Link>
     <Link
       href="/version"

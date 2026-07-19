@@ -4,75 +4,75 @@ import { FC, useCallback, useEffect, useState } from 'react';
 
 import { Tool } from '@hieudoanm.github.io/components/pages/start/components/cards/ToolCard';
 
-import { SidebarTab } from '../../types';
+import { SidebarTab } from '@hieudoanm.github.io/components/pages/start/types';
 import { ActivityBar } from './ActivityBar';
 
 const StatusTab = dynamic(
   () =>
-    import('@hieudoanm.github.io/components/pages/start/components/sidebars/tabs/StatusTab').then(
+    import('@hieudoanm.github.io/components/layouts/tabs/StatusTab').then(
       (m) => m.StatusTab
     ),
   { ssr: false }
 );
 const TasksTab = dynamic(
   () =>
-    import('@hieudoanm.github.io/components/pages/start/components/sidebars/tabs/TasksTab').then(
+    import('@hieudoanm.github.io/components/layouts/tabs/TasksTab').then(
       (m) => m.TasksTab
     ),
   { ssr: false }
 );
 const TimeTab = dynamic(
   () =>
-    import('@hieudoanm.github.io/components/pages/start/components/sidebars/tabs/TimeTab').then(
+    import('@hieudoanm.github.io/components/layouts/tabs/TimeTab').then(
       (m) => m.TimeTab
     ),
   { ssr: false }
 );
 const CurrencyTab = dynamic(
   () =>
-    import('@hieudoanm.github.io/components/pages/start/components/sidebars/tabs/CurrencyTab').then(
+    import('@hieudoanm.github.io/components/layouts/tabs/CurrencyTab').then(
       (m) => m.CurrencyTab
     ),
   { ssr: false }
 );
 const CalendarTab = dynamic(
   () =>
-    import('@hieudoanm.github.io/components/pages/start/components/sidebars/tabs/CalendarTab').then(
+    import('@hieudoanm.github.io/components/layouts/tabs/CalendarTab').then(
       (m) => m.CalendarTab
     ),
   { ssr: false }
 );
 const PassportTab = dynamic(
   () =>
-    import('@hieudoanm.github.io/components/pages/start/components/sidebars/tabs/PassportTab').then(
+    import('@hieudoanm.github.io/components/layouts/tabs/PassportTab').then(
       (m) => m.PassportTab
     ),
   { ssr: false }
 );
 const AppsTab = dynamic(
   () =>
-    import('@hieudoanm.github.io/components/pages/start/components/sidebars/tabs/AppsTab').then(
+    import('@hieudoanm.github.io/components/layouts/tabs/AppsTab').then(
       (m) => m.AppsTab
     ),
   { ssr: false }
 );
 const GamesTab = dynamic(
   () =>
-    import('@hieudoanm.github.io/components/pages/start/components/sidebars/tabs/GamesTab').then(
+    import('@hieudoanm.github.io/components/layouts/tabs/GamesTab').then(
       (m) => m.GamesTab
     ),
   { ssr: false }
 );
 const DownloadsTab = dynamic(
   () =>
-    import('@hieudoanm.github.io/components/pages/start/components/sidebars/tabs/DownloadsTab').then(
+    import('@hieudoanm.github.io/components/layouts/tabs/DownloadsTab').then(
       (m) => m.DownloadsTab
     ),
   { ssr: false }
 );
 const ClockTab = dynamic(
   () =>
-    import('@hieudoanm.github.io/components/pages/start/components/sidebars/tabs/ClockTab').then(
+    import('@hieudoanm.github.io/components/layouts/tabs/ClockTab').then(
       (m) => m.ClockTab
     ),
   { ssr: false }

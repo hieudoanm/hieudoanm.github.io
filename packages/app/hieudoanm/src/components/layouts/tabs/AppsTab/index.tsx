@@ -2,8 +2,8 @@ import { App, AppCard } from './AppCard';
 import { FC, useDeferredValue, useMemo, useState } from 'react';
 import { PiMagnifyingGlass, PiWrench } from 'react-icons/pi';
 
-import { matchTool } from '../../../../constants';
-import { getToolSectionDefs } from '../../../../sections';
+import { matchTool } from '@hieudoanm.github.io/components/pages/start/constants';
+import { getToolSectionDefs } from '@hieudoanm.github.io/components/pages/start/sections';
 
 export const AppsTab: FC<{ toolSections: Record<string, App[]> }> = ({
   toolSections,

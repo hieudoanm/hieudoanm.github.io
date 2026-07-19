@@ -1,7 +1,7 @@
 'use client';
 
 import '@hieudoanm.github.io/styles/globals.css';
-import { DesktopSidebar } from '@hieudoanm.github.io/components/pages/start/components/sidebars/DesktopSidebar';
+import { DesktopSidebar } from '@hieudoanm.github.io/components/layouts/DesktopSidebar';
 import {
   SidebarProvider,
   useSidebar,

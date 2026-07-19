@@ -12,7 +12,7 @@ import { useRouter } from 'next/navigation';
 import { PiSoccerBall, PiInstagramLogo } from 'react-icons/pi';
 
 import { Tool } from '@hieudoanm.github.io/components/pages/start/components/cards/ToolCard';
-import { makeTools } from '@hieudoanm.github.io/components/pages/start/components/sidebars/tabs/AppsTab/makeTools';
+import { makeTools } from '@hieudoanm.github.io/components/layouts/tabs/AppsTab/makeTools';
 import type {
   ModalId,
   SidebarTab,

@@ -3,7 +3,7 @@ import { PiMagnifyingGlass, PiPackage } from 'react-icons/pi';
 import { DownloadCard } from './DownloadCard';
 import { clis, extensions, packages } from './data';
 
-import { match } from '../../../../constants';
+import { match } from '@hieudoanm.github.io/components/pages/start/constants';
 
 const downloadSections = [
   { label: 'CLIs', items: clis },

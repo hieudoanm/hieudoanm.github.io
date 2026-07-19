@@ -15,7 +15,7 @@ export interface Word {
 export const getWord = async (word: string): Promise<Word> => {
   try {
     const base: string =
-      'https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/data/english/words';
+      'https://raw.githubusercontent.com/hieudoanm/hieudoanm/refs/heads/master/drive/english/words';
     const url: string = `${base}/${encodeURI(word)}.json`;
     const response = await fetch(url);
     const data: Word = await response.json();
