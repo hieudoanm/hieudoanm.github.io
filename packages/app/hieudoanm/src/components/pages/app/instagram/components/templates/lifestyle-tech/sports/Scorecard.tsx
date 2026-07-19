@@ -77,7 +77,7 @@ export const Scorecard: FC<TemplateProps> = ({ data }) => {
       )}
 
       {scorers.length > 0 && (
-        <div className="mb-4 flex justify-center gap-8">
+        <div className="mb-4 grid grid-cols-2 gap-4">
           <ul className="flex flex-col items-end gap-1">
             {scorers
               .filter((s) => s.team === 'home')
