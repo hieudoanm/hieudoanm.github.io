@@ -140,7 +140,7 @@ export const Connection: FC<{ onClose: () => void }> = ({ onClose }) => {
           if (e.key === 'Escape') onClose();
           if (e.key === 'Enter' && selected.size === 4) submit();
         }}
-        className="flex flex-1 flex-col gap-3 overflow-y-auto p-4 outline-none">
+        className="mx-auto flex w-80 flex-1 flex-col gap-3 overflow-y-auto p-4 outline-none">
         <p className="text-center text-xs opacity-60">
           Group the countries into four sets of four.
         </p>

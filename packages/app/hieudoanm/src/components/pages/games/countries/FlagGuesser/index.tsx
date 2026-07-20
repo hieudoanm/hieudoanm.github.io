@@ -87,7 +87,7 @@ export const FlagGuesser: FC<{ onClose: () => void }> = ({ onClose }) => {
       <div
         tabIndex={0}
         onKeyDown={onKeyDown}
-        className="flex flex-col gap-4 outline-none">
+        className="mx-auto flex w-80 flex-col gap-4 outline-none">
         <div className="flex items-center justify-between text-sm">
           <span>
             Score: <strong>{score}</strong>

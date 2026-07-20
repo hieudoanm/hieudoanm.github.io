@@ -152,7 +152,7 @@ export const ContinentsSort: FC<{ onClose: () => void }> = ({ onClose }) => {
       <div
         tabIndex={0}
         onKeyDown={(e) => e.key === 'Escape' && onClose()}
-        className="flex flex-1 flex-col gap-3 overflow-y-auto p-4 outline-none">
+        className="mx-auto flex w-80 flex-1 flex-col gap-3 overflow-y-auto p-4 outline-none">
         <div className="flex items-center justify-between text-sm">
           <span>
             Placed:{' '}

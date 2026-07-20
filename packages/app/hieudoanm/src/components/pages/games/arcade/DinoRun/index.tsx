@@ -8,16 +8,29 @@ import {
   CANVAS_WIDTH,
   CANVAS_HEIGHT,
 } from './constants';
-import { Dino, Obstacle, Phase } from './types';
-import { checkCollision, createDino, draw, jump, tick } from './game';
+import { Cloud, Dino, Obstacle, Phase, Star } from './types';
+import {
+  checkCollision,
+  createCloud,
+  createDino,
+  createStar,
+  draw,
+  jump,
+  tick,
+} from './game';
 
 export const DinoRun: FC<{ onClose: () => void }> = ({ onClose }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const dinoRef = useRef<Dino>(createDino());
   const obstaclesRef = useRef<Obstacle[]>([]);
+  const cloudsRef = useRef<Cloud[]>([createCloud(), createCloud()]);
+  const starsRef = useRef<Star[]>(
+    Array.from({ length: 8 }, () => createStar())
+  );
   const speedRef = useRef(BASE_SPEED);
   const gapRef = useRef(0);
   const scoreRef = useRef(0);
+  const frameRef = useRef(0);
   const [phase, setPhase] = useState<Phase>('idle');
   const [score, setScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
@@ -30,15 +43,20 @@ export const DinoRun: FC<{ onClose: () => void }> = ({ onClose }) => {
     const result = tick(
       dinoRef.current,
       obstaclesRef.current,
+      cloudsRef.current,
+      starsRef.current,
       speedRef.current,
       gapRef.current
     );
     dinoRef.current = result.dino;
     obstaclesRef.current = result.obstacles;
+    cloudsRef.current = result.clouds;
+    starsRef.current = result.stars;
     gapRef.current = result.gapCounter;
 
     if (speedRef.current < MAX_SPEED) speedRef.current += SPEED_INCREMENT;
     scoreRef.current += 1;
+    frameRef.current += 1;
     setScore(Math.floor(scoreRef.current / 10));
 
     if (checkCollision(dinoRef.current, obstaclesRef.current)) {
@@ -47,16 +65,26 @@ export const DinoRun: FC<{ onClose: () => void }> = ({ onClose }) => {
       return;
     }
 
-    draw(ctx, dinoRef.current, obstaclesRef.current);
+    draw(
+      ctx,
+      dinoRef.current,
+      obstaclesRef.current,
+      cloudsRef.current,
+      starsRef.current,
+      frameRef.current
+    );
     rafRef.current = requestAnimationFrame(loop);
   }, []);
 
   const startGame = useCallback(() => {
     dinoRef.current = createDino();
     obstaclesRef.current = [];
+    cloudsRef.current = [createCloud(), createCloud()];
+    starsRef.current = Array.from({ length: 8 }, () => createStar());
     speedRef.current = BASE_SPEED;
     gapRef.current = 0;
     scoreRef.current = 0;
+    frameRef.current = 0;
     setScore(0);
     setPhase('running');
     rafRef.current = requestAnimationFrame(loop);
@@ -90,7 +118,14 @@ export const DinoRun: FC<{ onClose: () => void }> = ({ onClose }) => {
   useEffect(() => {
     const ctx = canvasRef.current?.getContext('2d');
     if (ctx && phase === 'idle') {
-      draw(ctx, dinoRef.current, obstaclesRef.current);
+      draw(
+        ctx,
+        dinoRef.current,
+        obstaclesRef.current,
+        cloudsRef.current,
+        starsRef.current,
+        0
+      );
     }
   }, [phase]);
 
@@ -103,8 +138,8 @@ export const DinoRun: FC<{ onClose: () => void }> = ({ onClose }) => {
       <div
         tabIndex={0}
         onKeyDown={onKeyDown}
-        className="flex flex-col gap-3 outline-none">
-        <div className="flex items-center justify-between text-sm">
+        className="flex flex-col items-center gap-3 outline-none">
+        <div className="flex w-80 items-center justify-between text-sm">
           <span>
             Score: <strong>{score}</strong>
           </span>
@@ -115,7 +150,7 @@ export const DinoRun: FC<{ onClose: () => void }> = ({ onClose }) => {
           ref={canvasRef}
           width={CANVAS_WIDTH}
           height={CANVAS_HEIGHT}
-          className="bg-base-200 w-full cursor-pointer rounded-lg"
+          className="border-base-300 h-80 w-80 cursor-pointer rounded-lg border"
           onClick={handleJump}
         />
 
