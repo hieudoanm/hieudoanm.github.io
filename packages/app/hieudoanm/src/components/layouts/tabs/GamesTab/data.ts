@@ -80,6 +80,18 @@ export const GAME_SECTIONS: GameSection[] = [
     slug: 'tic-tac-toe',
     items: [
       {
+        label: 'Classic',
+        description: 'Traditional rules',
+        icon: PiX,
+        toolId: 'classic',
+      },
+      {
+        label: 'Duck',
+        description: 'Place mark, move duck',
+        icon: PiX,
+        toolId: 'duck',
+      },
+      {
         label: 'Notakto',
         description: 'X only, 3 in a row loses',
         icon: PiX,
@@ -93,9 +105,16 @@ export const GAME_SECTIONS: GameSection[] = [
       },
       {
         label: 'T3',
-        description: 'Classic with max 3 marks',
+        description: 'Max 3 marks each',
         icon: PiX,
         toolId: 't3',
+      },
+
+      {
+        label: 'Wild',
+        description: 'Choose X or O each turn',
+        icon: PiX,
+        toolId: 'wild',
       },
     ],
   },

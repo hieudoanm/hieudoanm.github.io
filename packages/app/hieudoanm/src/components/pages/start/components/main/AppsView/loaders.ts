@@ -441,6 +441,21 @@ loaders['notakto'] = () =>
     (m) => ({ default: m.Notakto })
   );
 
+loaders['classic'] = () =>
+  import('@hieudoanm.github.io/components/pages/games/tic-tac-toe/Classic').then(
+    (m) => ({ default: m.Classic })
+  );
+
+loaders['wild'] = () =>
+  import('@hieudoanm.github.io/components/pages/games/tic-tac-toe/Wild').then(
+    (m) => ({ default: m.Wild })
+  );
+
+loaders['duck'] = () =>
+  import('@hieudoanm.github.io/components/pages/games/tic-tac-toe/Duck').then(
+    (m) => ({ default: m.Duck })
+  );
+
 loaders['tai-baccarat'] = () =>
   import('@hieudoanm.github.io/components/pages/games/casino/Baccarat').then(
     (m) => ({ default: m.Baccarat })
