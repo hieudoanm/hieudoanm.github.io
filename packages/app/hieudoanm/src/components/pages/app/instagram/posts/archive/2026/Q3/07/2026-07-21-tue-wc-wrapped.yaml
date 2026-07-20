@@ -23,12 +23,12 @@ leaderboard:
       name: England 🏴󠁧󠁢󠁥󠁮󠁧󠁿
       score: Third Place
       medal: 🥉
-  citation: ESPN Final, 2026
+  citation: FIFA, 2026
 
 ---
 # Post 3 (Data Table)
 data-table:
-  title: 'Golden Boot: Mbappé'
+  title: 'Golden Boot: Kylian Mbappé'
   columns:
     - Match
     - Stage
@@ -64,7 +64,7 @@ data-table:
       - '0'
       - '0'
     - - vs England
-      - 3rd Place
+      - Third Place
       - '2'
       - '1'
     - - Total
@@ -75,19 +75,80 @@ data-table:
   citation: World Cup Pass, 2026
 
 ---
-# Post 4 (Data/Stats)
+# Post 4 (Data Stats)
 data-stats:
   stat: '22'
   title: All-Time Top Scorer
-  text:
+  text: >
     Mbappé passed Messi (21) and Klose (16) to become the outright leading
-    scorer in men's World Cup history — his second straight Golden Boot after
-    2022.
+    scorer in men's World Cup history. He also won his second consecutive World
+    Cup Golden Boot after claiming the award in 2022.
   imageUrl: ''
-  citation: ESPN Stats, 2026
+  citation: FIFA, 2026
 
 ---
-# Post 5 (Player Stats)
+# Post 5 (Data Table)
+data-table:
+  title: 'Assist King: Michael Olise'
+  columns:
+    - Match
+    - Stage
+    - Goals
+    - Assists
+  rows:
+    - - vs Senegal
+      - Group
+      - '0'
+      - '2'
+    - - vs Iraq
+      - Group
+      - '1'
+      - '1'
+    - - vs Norway
+      - Group
+      - '0'
+      - '2'
+    - - vs Sweden
+      - Round of 32
+      - '0'
+      - '0'
+    - - vs Paraguay
+      - Round of 16
+      - '1'
+      - '1'
+    - - vs Morocco
+      - Quarterfinal
+      - '0'
+      - '1'
+    - - vs Spain
+      - Semifinal
+      - '0'
+      - '0'
+    - - vs England
+      - Third Place
+      - '1'
+      - '0'
+    - - Total
+      - 8 matches
+      - '3'
+      - '7'
+  text: Add up the Assists column yourself — it lands on 7.
+  citation: FOX Sports, 2026
+
+---
+# Post 6 (Data Stats)
+data-stats:
+  stat: '12'
+  title: All-Time Assist Leader
+  text: >
+    Messi's four assists in 2026 pushed his career total to 12, breaking Didi's
+    long-standing record of 9 to become the greatest assist provider in men's
+    World Cup history.
+  imageUrl: ''
+  citation: Planet Football, 2026
+
+---
+# Post 7 (Player Stats)
 player-stats:
   name: 'Golden Glove: Unai Simón'
   team: Spain
@@ -100,11 +161,11 @@ player-stats:
     - label: Goals Conceded
       value: '1'
     - label: Save %
-      value: 90.9%
+      value: '90.9%'
   citation: FIFA, 2026
 
 ---
-# Post 6 (Leaderboard)
+# Post 8 (Leaderboard)
 leaderboard:
   title: 'Golden Ball: Top 3'
   entries:
@@ -123,18 +184,17 @@ leaderboard:
   citation: FIFA, 2026
 
 ---
-# Post 7 (Achievement Unlocked)
+# Post 9 (Achievement Unlocked)
 achievement-unlocked:
   title: Pau Cubarsí
   game: FIFA World Cup 2026
-  description: Collect all trophies
+  subtitle: 19 years old and already Spain's defensive rock
   rarity: Best Young Player
   dateUnlocked: 19 Jul 2026
   citation: FIFA, 2026
-  subtitle: 19 years old and already Spain's defensive rock
 
 ---
-# Post 8 (References)
+# Post 10 (References)
 references:
   title: References
   items:
@@ -146,24 +206,13 @@ references:
       title: 'Kylian Mbappé World Cup 2026: Stats, Records, Goals & Assists'
       year: '2026'
       url: https://worldcuppass.com/kylian-mbappe-world-cup-2026/
-    - author: ESPN Stats
-      title: 'FIFA World Cup 2026 stats: Mbappé tops Messi with 22'
+    - author: FOX Sports
+      title:
+        'Michael Olise Breaks All-Time Record for Assists in a Single World Cup'
       year: '2026'
-      url: https://www.espn.com
-    - author: ESPN Final
-      title: Spain edge Argentina after extra time to win 2nd World Cup title
+      url: https://www.foxsports.com/stories/soccer/michael-olise-ties-world-cup-assist-record-france-advances-semifinals
+    - author: Planet Football
+      title: 'World Cup 2026 assist leaders & all-time assist makers'
       year: '2026'
-      url: https://www.espn.com
+      url: https://www.planetfootball.com/stats-tables/top-world-cup-assist-makers-all-time-messi-pele-maradona
   citation: ''
-
----
-# Post 9 (Share CTA)
-share-cta:
-  title: ¡Campeones! 🏆
-  text:
-    Congratulations to Spain on their second World Cup title — a tournament
-    defined by a stingy defense, midfield control, and a golden generation
-    coming through.
-  buttonLabel: Share the Celebration
-  hashtag: '#VamosEspaña'
-  citation: FIFA, 2026
