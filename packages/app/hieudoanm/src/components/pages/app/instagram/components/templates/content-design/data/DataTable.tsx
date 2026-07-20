@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
-import { Background, Footer } from '../../_shared';
+import { Background, Footer, Header } from '../../_shared';
 
 export const DataTable: FC<TemplateProps> = ({ data }) => {
   const title = (data.title as string) ?? 'Data Overview';
@@ -19,38 +19,38 @@ export const DataTable: FC<TemplateProps> = ({ data }) => {
   const citation = (data.citation as string) ?? '';
   return (
     <Background>
-      <h2 className="text-base-content mb-2 text-center text-sm font-bold">
-        {title}
-      </h2>
-      <div className="border-base-300 flex-1 overflow-hidden rounded border">
-        <table className="w-full text-left text-[10px]">
-          <thead>
-            <tr className="bg-primary/10">
-              {columns.map((col, i) => (
-                <th key={i} className="text-primary px-3 py-2 font-bold">
-                  {col}
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {rows.map((row, i) => (
-              <tr
-                key={i}
-                className={`border-base-300 border-t ${
-                  i % 2 === 0 ? 'bg-base-200/50' : ''
-                }`}>
-                {row.map((cell, j) => (
-                  <td key={j} className="text-base-content px-3 py-2">
-                    {cell}
-                  </td>
+      <div className="flex w-full flex-col gap-4">
+        <Header title={title} />
+        <div className="border-base-300 flex-1 overflow-hidden rounded border">
+          <table className="w-full text-left text-[10px]">
+            <thead>
+              <tr className="bg-primary/10">
+                {columns.map((col, i) => (
+                  <th key={i} className="text-primary px-3 py-2 font-bold">
+                    {col}
+                  </th>
                 ))}
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {rows.map((row, i) => (
+                <tr
+                  key={i}
+                  className={`border-base-300 border-t ${
+                    i % 2 === 0 ? 'bg-base-200/50' : ''
+                  }`}>
+                  {row.map((cell, j) => (
+                    <td key={j} className="text-base-content px-3 py-2">
+                      {cell}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <Footer citation={citation} />
       </div>
-      <Footer citation={citation} />
     </Background>
   );
 };

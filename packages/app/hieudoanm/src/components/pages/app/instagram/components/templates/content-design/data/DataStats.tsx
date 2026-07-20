@@ -12,28 +12,23 @@ export const DataStats: FC<TemplateProps> = ({ data }) => {
 
   const citation = (data.citation as string) ?? '';
   return (
-    <Background className="relative">
-      {imageUrl && (
-        <img
-          src={imageUrl}
-          alt=""
-          className="absolute inset-0 object-cover opacity-10"
-        />
-      )}
-      <div className="relative z-10">
-        <div className="text-primary mb-1 text-4xl font-black tracking-tight">
-          {stat}
+    <Background>
+      <div className="flex flex-col gap-4">
+        <div className="relative z-10">
+          <div className="text-primary mb-1 text-4xl font-black tracking-tight">
+            {stat}
+          </div>
+          {suffix && <p className="text-neutral mb-2 text-sm">{suffix}</p>}
+          <h1 className="text-base-content mb-2 text-xl font-bold tracking-tight">
+            {title}
+          </h1>
+          <p className="text-neutral mx-auto max-w-sm text-base leading-relaxed">
+            {text}
+          </p>
+          {source && <p className="text-neutral mt-2 text-xs">— {source}</p>}
         </div>
-        {suffix && <p className="text-neutral mb-2 text-sm">{suffix}</p>}
-        <h1 className="text-base-content mb-2 text-xl font-bold tracking-tight">
-          {title}
-        </h1>
-        <p className="text-neutral mx-auto max-w-sm text-base leading-relaxed">
-          {text}
-        </p>
-        {source && <p className="text-neutral mt-2 text-xs">— {source}</p>}
+        <Footer citation={citation} />
       </div>
-      <Footer citation={citation} />
     </Background>
   );
 };

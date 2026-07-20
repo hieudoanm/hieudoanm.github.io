@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
-import { Background, Footer } from '../../_shared';
+import { Background, Footer, Header } from '../../_shared';
 
 interface Entry {
   rank: number;
@@ -24,37 +24,38 @@ export const Leaderboard: FC<TemplateProps> = ({ data }) => {
 
   return (
     <Background>
-      <h2 className="text-base-content mb-4 text-center text-sm font-bold">
-        {title}
-      </h2>
-      <ol className="flex flex-1 flex-col gap-2">
-        {entries.map((entry, i) => {
-          const medal =
-            entry.medal ??
-            (entry.rank <= 3 ? DEFAULT_MEDALS[entry.rank - 1] : undefined);
-          const citation = (data.citation as string) ?? '';
+      <div className="flex w-full flex-col gap-4">
+        <Header title={title} />
+        <div className="overflow-x-auto">
+          <table className="table-zebra table">
+            <tbody>
+              {entries.map((entry) => {
+                const medal =
+                  entry.medal ??
+                  (entry.rank <= 3
+                    ? DEFAULT_MEDALS[entry.rank - 1]
+                    : undefined);
 
-          return (
-            <li
-              key={i}
-              className={`flex items-center gap-4 rounded-2xl px-4 py-2 ${
-                i % 2 === 0 ? 'bg-base-200/50' : ''
-              }`}>
-              <span className="text-neutral w-6 text-right text-sm font-bold">
-                {entry.rank}
-              </span>
-              {medal && <span className="text-sm">{medal}</span>}
-              <span className="text-base-content flex-1 text-sm font-bold">
-                {entry.name}
-              </span>
-              <span className="text-primary text-sm font-bold">
-                {entry.score}
-              </span>
-            </li>
-          );
-        })}
-      </ol>
-      <Footer citation={citation} />
+                return (
+                  <tr key={entry.rank}>
+                    <td className="text-neutral w-6 text-right text-sm font-bold">
+                      {entry.rank}
+                    </td>
+                    {medal && <td className="text-sm">{medal}</td>}
+                    <td className="text-base-content text-sm font-bold">
+                      {entry.name}
+                    </td>
+                    <td className="text-primary text-sm font-bold">
+                      {entry.score}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+        <Footer citation={citation} />
+      </div>
     </Background>
   );
 };
