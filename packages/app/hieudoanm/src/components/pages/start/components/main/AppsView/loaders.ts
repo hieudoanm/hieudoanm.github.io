@@ -427,9 +427,19 @@ loaders['svg'] = () =>
   );
 
 loaders['t3'] = () =>
-  import('@hieudoanm.github.io/components/pages/games/arcade/T3').then((m) => ({
-    default: m.T3,
-  }));
+  import('@hieudoanm.github.io/components/pages/games/tic-tac-toe/T3').then(
+    (m) => ({ default: m.TicTacToe })
+  );
+
+loaders['reverse'] = () =>
+  import('@hieudoanm.github.io/components/pages/games/tic-tac-toe/Reverse').then(
+    (m) => ({ default: m.Reverse })
+  );
+
+loaders['notakto'] = () =>
+  import('@hieudoanm.github.io/components/pages/games/tic-tac-toe/Notakto').then(
+    (m) => ({ default: m.Notakto })
+  );
 
 loaders['tai-baccarat'] = () =>
   import('@hieudoanm.github.io/components/pages/games/casino/Baccarat').then(

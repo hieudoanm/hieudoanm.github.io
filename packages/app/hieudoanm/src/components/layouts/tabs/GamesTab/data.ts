@@ -73,7 +73,30 @@ export const GAME_SECTIONS: GameSection[] = [
         icon: PiBugDroid,
         toolId: 'snake',
       },
-      { label: 'T3', description: 'Tic-Tac-Toe', icon: PiX, toolId: 't3' },
+    ],
+  },
+  {
+    label: 'Tic-Tac-Toe',
+    slug: 'tic-tac-toe',
+    items: [
+      {
+        label: 'Notakto',
+        description: 'X only, 3 in a row loses',
+        icon: PiX,
+        toolId: 'notakto',
+      },
+      {
+        label: 'Reverse',
+        description: '3 in a row loses',
+        icon: PiX,
+        toolId: 'reverse',
+      },
+      {
+        label: 'T3',
+        description: 'Classic with max 3 marks',
+        icon: PiX,
+        toolId: 't3',
+      },
     ],
   },
   {
