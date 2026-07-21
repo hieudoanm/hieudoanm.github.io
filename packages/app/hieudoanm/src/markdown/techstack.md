@@ -10,6 +10,10 @@
       - [Code Editors](#code-editors)
       - [JetBrains](#jetbrains)
     - [API Clients](#api-clients)
+    - [Runtime Management](#runtime-management)
+    - [Package Security](#package-security)
+    - [Package Updates](#package-updates)
+    - [Git Hooks](#git-hooks)
   - [Software Development](#software-development)
     - [Runtimes](#runtimes)
     - [Back-end Development](#back-end-development)
@@ -97,6 +101,38 @@
 1. [Bruno][bruno]
 2. [Insomnia][insomnia]
 3. [Postman][postman]
+
+[Back to Table of Contents](#table-of-contents)
+
+---
+
+### Runtime Management
+
+- [NVM (Node Version Management)](https://github.com/nvm-sh/nvm)
+
+[Back to Table of Contents](#table-of-contents)
+
+---
+
+### Package Security
+
+- [Snyk](https://snyk.io)
+
+[Back to Table of Contents](#table-of-contents)
+
+---
+
+### Package Updates
+
+- [Renovate](https://renovatebot.com)
+
+[Back to Table of Contents](#table-of-contents)
+
+---
+
+### Git Hooks
+
+- [Husky](https://typicode.github.io/husky)
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -241,6 +277,7 @@
 [hapi.js]: https://hapi.dev/
 [hono]: https://hono.dev/
 [hugging-face]: https://huggingface.co/
+[husky]: https://typicode.github.io/husky
 [hyper]: https://hyper.rs/
 [insomnia]: https://insomnia.rest/
 [intillij-idea]: https://www.jetbrains.com/idea/
@@ -258,6 +295,7 @@
 [nest.js]: https://nestjs.com/
 [node.js]: https://nodejs.org/
 [numpy]: https://numpy.org/
+[nvm]: https://github.com/nvm-sh/nvm
 [pandas]: https://pandas.pydata.org/
 [php]: https://www.php.net/
 [php-storm]: https://www.jetbrains.com/phpstorm/
@@ -268,6 +306,7 @@
 [python]: https://python.org
 [pytorch]: https://pytorch.org/
 [r]: https://www.r-project.org/
+[renovate]: https://renovatebot.com
 [Rider]: https://www.jetbrains.com/rider/
 [rocket]: https://rocket.rs/
 [ruby]: https://www.ruby-lang.org/
@@ -277,6 +316,7 @@
 [rust-rover]: https://www.jetbrains.com/rust/
 [scala]: https://www.scala-lang.org/
 [scikit-learn]: https://scikit-learn.org/
+[snyk]: https://snyk.io
 [statsmodels]: https://www.statsmodels.org/
 [sublime-text]: https://www.sublimetext.com/
 [swift]: https://www.swift.org/

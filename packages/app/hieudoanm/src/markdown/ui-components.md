@@ -176,6 +176,36 @@
 3. [MUI](https://mui.com/components)
 4. [shadcn/ui](https://ui.shadcn.com/components)
 
+## Form Components
+
+| Group                                    | Component |
+| ---------------------------------------- | --------- |
+| [Form](https://tanstack.com/form/latest) | Button    |
+| [Form](https://tanstack.com/form/latest) | Input     |
+| [Form](https://tanstack.com/form/latest) | Textarea  |
+| [Form](https://tanstack.com/form/latest) | Select    |
+| [Form](https://tanstack.com/form/latest) | Checkbox  |
+| [Form](https://tanstack.com/form/latest) | Radio     |
+| [Form](https://tanstack.com/form/latest) | Toggle    |
+| [Form](https://tanstack.com/form/latest) | Label     |
+
+## Typography
+
+- h1
+- h2
+- h3
+- h4
+- h5
+- h6
+- p
+
+## Charts
+
+- [TanStack Charts](https://react-charts.tanstack.com/)
+- [TanStack Ranger](https://tanstack.com/ranger/latest)
+- [TanStack Table](https://tanstack.com/table/latest)
+- [TanStack Virtual](https://tanstack.com/virtual/latest)
+
 [daisyui]: https://daisyui.com/
 [shadcn]: https://ui.shadcn.com/
 [mui]: https://mui.com/
