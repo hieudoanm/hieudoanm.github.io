@@ -17,6 +17,8 @@ import { PreviewPane } from './components/preview/PreviewPane';
 import { TemplateSidebar } from './components/sidebar/TemplateSidebar';
 import { TEMPLATE_MAP } from './components/templates';
 import { Toolbar } from './components/toolbar/Toolbar';
+import { DEFAULT_FONT, FONTS } from './components/toolbar/FontSelect';
+import type { FontName } from './components/toolbar/FontSelect';
 import { DEFAULT_CONTENT_MAP, TEMPLATES } from './data/templates-schema';
 import type { PostItem } from './types';
 
@@ -80,16 +82,6 @@ const migrateOldStorage = (): PostItem[] | null => {
 const toYaml = (id: string, content: Record<string, unknown>) =>
   stringify({ [id]: content });
 
-const injectFont = (family: string) => {
-  const id = `gf-${family.replace(/\s+/g, '-')}`;
-  if (document.getElementById(id)) return;
-  const link = document.createElement('link');
-  link.id = id;
-  link.rel = 'stylesheet';
-  link.href = `https://fonts.googleapis.com/css2?family=${family.replace(/\s+/g, '+')}:wght@300;400;600;700;900&display=swap`;
-  document.head.appendChild(link);
-};
-
 const templateLabel = (id: string) =>
   TEMPLATES.find((t) => t.id === id)?.label ?? id;
 
@@ -111,7 +103,9 @@ export const InstagramPage: FC = () => {
   const initialActive = loadFromStorage(LS_KEY_ACTIVE, () => 0);
   const clampedActive = Math.min(initialActive, initialPosts.length - 1);
 
-  const initialFont = loadFromStorage(LS_KEY_FONT, () => 'Inter');
+  const initialFont = loadFromStorage(LS_KEY_FONT, () => DEFAULT_FONT);
+  const validFont: FontName =
+    initialFont in FONTS ? (initialFont as FontName) : DEFAULT_FONT;
   const initialInstagram = loadFromStorage(
     LS_KEY_INSTAGRAM,
     () => 'hieudoanm.github.io'
@@ -119,7 +113,7 @@ export const InstagramPage: FC = () => {
 
   const [posts, setPosts] = useState<PostItem[]>(initialPosts);
   const [activeIndex, setActiveIndex] = useState<number>(clampedActive);
-  const [fontFamily, setFontFamily] = useState<string>(initialFont);
+  const [fontFamily, setFontFamily] = useState<FontName>(validFont);
   const [instagramUsername, setInstagramUsername] =
     useState<string>(initialInstagram);
   const initialFileName = loadFromStorage(LS_KEY_FILE_NAME, () => {
@@ -177,7 +171,6 @@ export const InstagramPage: FC = () => {
   }, [allYaml]);
 
   useEffect(() => {
-    injectFont(fontFamily);
     localStorage.setItem(LS_KEY_FONT, fontFamily);
   }, [fontFamily]);
 
@@ -565,7 +558,7 @@ export const InstagramPage: FC = () => {
               onDownloadAll={handleDownloadAll}
               onCopy={handleCopy}
               ratio={ratio}
-              fontFamily={fontFamily}
+              fontName={fontFamily}
               totalPosts={posts.length}
               activeIndex={activeIndex}
               onPrev={handlePrev}

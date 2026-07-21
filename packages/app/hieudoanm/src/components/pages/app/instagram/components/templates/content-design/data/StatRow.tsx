@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
-import { Background, Footer } from '../../_shared';
+import { Background, Footer, Header } from '../../_shared';
 
 interface StatItem {
   value: string;
@@ -24,15 +24,8 @@ export const StatRow: FC<TemplateProps> = ({ data }) => {
   return (
     <Background>
       <div className="flex flex-col gap-y-4">
-        <div className="flex flex-col gap-y-2">
-          <h1 className="text-base-content text-center text-4xl font-bold tracking-tight">
-            {title}
-          </h1>
-          {text && (
-            <p className="text-base-content/60 text-center text-sm">{text}</p>
-          )}
-        </div>
-        <ul className="flex flex-1 items-center justify-center gap-2">
+        <Header title={title} subtitle={text || undefined} />
+        <ul className="flex flex-1 items-start justify-center gap-2">
           {items.slice(0, 3).map((s, i) => (
             <li
               key={i}

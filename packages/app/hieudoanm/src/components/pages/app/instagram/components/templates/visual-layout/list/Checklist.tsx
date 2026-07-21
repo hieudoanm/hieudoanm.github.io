@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
-import { Background, Footer } from '../../_shared';
+import { Background, Footer, Header } from '../../_shared';
 
 export const Checklist: FC<TemplateProps> = ({ data }) => {
   const title = (data.title as string) ?? '';
@@ -15,17 +15,12 @@ export const Checklist: FC<TemplateProps> = ({ data }) => {
   return (
     <Background>
       <div className="flex flex-col gap-y-4">
-        <div className="flex flex-col gap-y-2">
-          <h1 className="text-base-content mb-1 text-4xl font-bold tracking-tight">
-            {title}
-          </h1>
-          {text && <p className="text-neutral mb-1 text-xs">{text}</p>}
-        </div>
-        <ul className="flex min-h-0 flex-1 flex-col gap-1">
-          {list.map((item, i) => (
+        <Header title={title} subtitle={text || undefined} />
+        <ul className="flex min-h-0 flex-1 flex-col gap-1 text-left">
+          {list.map((item: string, i) => (
             <li
-              key={i}
-              className="rounded-box bg-accent/5 flex items-center gap-1 px-2 py-1">
+              key={item}
+              className="rounded-box bg-accent/5 flex items-center gap-x-3 gap-y-1 py-2 pr-2">
               <div className="bg-primary/20 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full">
                 <svg
                   className="text-primary h-4 w-4"

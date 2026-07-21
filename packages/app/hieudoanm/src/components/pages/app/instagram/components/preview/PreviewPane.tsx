@@ -1,5 +1,8 @@
 import type { FC, RefObject } from 'react';
 
+import { FONTS } from '../toolbar/FontSelect';
+import type { FontName } from '../toolbar/FontSelect';
+
 import { InstagramBadge } from './InstagramBadge';
 import { NavButton } from './NavButton';
 import { PostDots } from './PostDots';
@@ -26,7 +29,7 @@ export const PreviewPane: FC<{
   onDownloadAll: () => void;
   onCopy: () => void;
   ratio: string;
-  fontFamily: string;
+  fontName: FontName;
   totalPosts: number;
   activeIndex: number;
   onPrev: () => void;
@@ -40,7 +43,7 @@ export const PreviewPane: FC<{
   onDownloadAll,
   onCopy,
   ratio,
-  fontFamily,
+  fontName,
   totalPosts,
   activeIndex,
   onPrev,
@@ -52,6 +55,7 @@ export const PreviewPane: FC<{
   const multi = totalPosts > 1;
   const aspectMultiplier = ASPECT_RATIO[ratio] ?? 1;
   const canvasHeight = CANVAS_SIZE * aspectMultiplier;
+  const fontClassName = FONTS[fontName]?.className ?? '';
 
   return (
     <div className="flex-1">
@@ -75,11 +79,10 @@ export const PreviewPane: FC<{
         <div
           ref={captureRef}
           style={{
-            fontFamily,
             width: CANVAS_SIZE,
             height: canvasHeight,
           }}
-          className="border-base-300 mx-auto overflow-hidden border shadow-2xl">
+          className={`border-base-300 mx-auto overflow-hidden border shadow-2xl ${fontClassName}`}>
           <div className="relative size-full">
             {children}
             {instagramUsername && (

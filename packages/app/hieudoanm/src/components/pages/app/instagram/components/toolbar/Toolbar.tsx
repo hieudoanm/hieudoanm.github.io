@@ -3,13 +3,14 @@ import type { FC } from 'react';
 import { AspectRatioSelect } from './AspectRatioSelect';
 import { FileNameInput } from './FileNameInput';
 import { FontSelect } from './FontSelect';
+import type { FontName } from './FontSelect';
 import { InstagramInput } from './InstagramInput';
 
 export const Toolbar: FC<{
   ratio: string;
   onRatioChange: (v: string) => void;
-  fontFamily: string;
-  onFontChange: (v: string) => void;
+  fontFamily: FontName;
+  onFontChange: (v: FontName) => void;
   instagramUsername: string;
   onInstagramUsernameChange: (v: string) => void;
   fileName: string;
