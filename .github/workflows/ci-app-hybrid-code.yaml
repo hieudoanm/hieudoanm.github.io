@@ -197,8 +197,8 @@ jobs:
           done
       - name: Publish Release
         run: |
-          gh release delete app-code-hybrid-latest --yes --cleanup-tag 2>/dev/null || true
-          gh release create app-code-hybrid-latest \
+          gh release delete app-hybrid-code-latest --yes --cleanup-tag 2>/dev/null || true
+          gh release create app-hybrid-code-latest \
             --title "App - Hybrid - Code (latest)" \
             --notes "Auto-built from commit ${{ github.sha }}" \
             $(find release -type f | sort)
