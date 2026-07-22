@@ -199,7 +199,7 @@ jobs:
         run: |
           gh release delete app-wallet-hybrid-latest --yes --cleanup-tag 2>/dev/null || true
           gh release create app-wallet-hybrid-latest \
-            --title "App - Hybrid - wallet (latest)" \
+            --title "App - Hybrid - Wallet (latest)" \
             --notes "Auto-built from commit ${{ github.sha }}" \
             $(find release -type f | sort)
         env:

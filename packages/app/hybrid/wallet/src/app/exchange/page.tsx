@@ -3,12 +3,23 @@
 import { useState } from 'react';
 import { DashboardTemplate } from '@/components/templates';
 import { CurrencyConverter, RateList } from '@/components/molecules';
-import { currencyRates } from '@/data/mock';
+import { useData } from '@/providers/DataProvider';
 
 export default function ExchangePage() {
+  const { currencyRates, loading } = useData();
   const [amount, setAmount] = useState('1000');
   const [from, setFrom] = useState('USD');
   const [to, setTo] = useState('EUR');
+
+  if (loading) {
+    return (
+      <DashboardTemplate>
+        <div className="flex h-full items-center justify-center">
+          <span className="loading loading-spinner loading-lg" />
+        </div>
+      </DashboardTemplate>
+    );
+  }
 
   const fromRate = currencyRates.find((r) => r.code === from);
   const toRate = currencyRates.find((r) => r.code === to);

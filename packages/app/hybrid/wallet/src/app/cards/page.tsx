@@ -3,11 +3,24 @@
 import { useState } from 'react';
 import { DashboardTemplate } from '@/components/templates';
 import { CardItem, CardDetail } from '@/components/atoms';
-import { cards } from '@/data/mock';
+import { useData } from '@/providers/DataProvider';
 
 export default function CardsPage() {
-  const [selectedCard, setSelectedCard] = useState(cards[0].id);
-  const activeCard = cards.find((c) => c.id === selectedCard);
+  const { cards, loading } = useData();
+  const [selectedCard, setSelectedCard] = useState('');
+
+  if (loading) {
+    return (
+      <DashboardTemplate>
+        <div className="flex h-full items-center justify-center">
+          <span className="loading loading-spinner loading-lg" />
+        </div>
+      </DashboardTemplate>
+    );
+  }
+
+  const activeId = selectedCard || cards[0]?.id;
+  const activeCard = cards.find((c) => c.id === activeId);
 
   return (
     <DashboardTemplate>
@@ -22,7 +35,7 @@ export default function CardsPage() {
             <CardItem
               key={card.id}
               card={card}
-              selected={selectedCard === card.id}
+              selected={activeId === card.id}
               onSelect={setSelectedCard}
             />
           ))}

@@ -4,11 +4,22 @@ import { useState } from 'react';
 import { DashboardTemplate } from '@/components/templates';
 import { TransactionItem } from '@/components/atoms';
 import { TransactionFilters } from '@/components/molecules';
-import { transactions } from '@/data/mock';
+import { useData } from '@/providers/DataProvider';
 
 export default function TransactionsPage() {
+  const { transactions, loading } = useData();
   const [search, setSearch] = useState('');
   const [filter, setFilter] = useState<'all' | 'income' | 'expense'>('all');
+
+  if (loading) {
+    return (
+      <DashboardTemplate>
+        <div className="flex h-full items-center justify-center">
+          <span className="loading loading-spinner loading-lg" />
+        </div>
+      </DashboardTemplate>
+    );
+  }
 
   const filtered = transactions.filter((tx) => {
     const matchesSearch = tx.title.toLowerCase().includes(search.toLowerCase());

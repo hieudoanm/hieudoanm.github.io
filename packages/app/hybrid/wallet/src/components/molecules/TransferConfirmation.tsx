@@ -43,7 +43,7 @@ const TransferConfirmation: FC<TransferConfirmationProps> = ({
         </div>
 
         <div className="card-actions mt-4 w-full">
-          <button className="btn btn-outline flex-1" onClick={onCancel}>
+          <button className="btn flex-1" onClick={onCancel}>
             Cancel
           </button>
           <button className="btn btn-primary flex-1" onClick={onConfirm}>

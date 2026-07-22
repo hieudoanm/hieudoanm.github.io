@@ -20,13 +20,13 @@ const Header: FC = () => {
         <div className="flex items-center gap-2">
           <Link
             href="/notifications"
-            className="btn btn-ghost btn-sm btn-circle"
+            className="btn btn-sm btn-circle"
             aria-label="Notifications">
             <FiBell />
           </Link>
 
           <button
-            className="btn btn-ghost btn-sm btn-circle"
+            className="btn btn-sm btn-circle"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={menuOpen}>

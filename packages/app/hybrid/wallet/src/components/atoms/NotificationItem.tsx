@@ -28,14 +28,18 @@ const typeIcon = (type: string) => {
   }
 };
 
-const typeColor = (type: string) => {
+const typeBadge = (type: string) => {
   switch (type) {
     case 'alert':
-      return 'alert alert-warning';
+      return 'badge badge-warning badge-outline';
     case 'transaction':
-      return 'alert alert-info';
+      return 'badge badge-info badge-outline';
+    case 'promotion':
+      return 'badge badge-success badge-outline';
+    case 'system':
+      return 'badge badge-ghost badge-outline';
     default:
-      return '';
+      return 'badge badge-ghost';
   }
 };
 
@@ -44,11 +48,14 @@ const NotificationItem: FC<NotificationItemProps> = ({ notification }) => {
     <div
       className={`bg-base-200 flex items-start gap-3 rounded-xl p-4 ${
         !notification.read ? 'ring-primary ring-1' : ''
-      } ${typeColor(notification.type)}`}>
+      }`}>
       <span className="text-2xl">{typeIcon(notification.type)}</span>
       <div className="flex-1">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center gap-2">
           <p className="font-medium">{notification.title}</p>
+          <span className={typeBadge(notification.type)}>
+            {notification.type}
+          </span>
           {!notification.read && (
             <span className="badge badge-primary badge-sm">New</span>
           )}

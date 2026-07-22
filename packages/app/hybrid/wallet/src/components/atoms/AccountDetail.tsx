@@ -29,10 +29,8 @@ const AccountDetail: FC<AccountDetailProps> = ({ account }) => {
 
         <div className="flex gap-2">
           <button className="btn btn-primary btn-sm flex-1">Send</button>
-          <button className="btn btn-outline btn-sm flex-1">Receive</button>
-          <button
-            className="btn btn-ghost btn-sm btn-circle"
-            aria-label="More options">
+          <button className="btn btn-sm flex-1">Receive</button>
+          <button className="btn btn-sm btn-circle" aria-label="More options">
             <FiMoreVertical />
           </button>
         </div>

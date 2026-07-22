@@ -2,9 +2,21 @@
 
 import { DashboardTemplate } from '@/components/templates';
 import { NotificationItem } from '@/components/atoms';
-import { notifications } from '@/data/mock';
+import { useData } from '@/providers/DataProvider';
 
 export default function NotificationsPage() {
+  const { notifications, loading } = useData();
+
+  if (loading) {
+    return (
+      <DashboardTemplate>
+        <div className="flex h-full items-center justify-center">
+          <span className="loading loading-spinner loading-lg" />
+        </div>
+      </DashboardTemplate>
+    );
+  }
+
   return (
     <DashboardTemplate>
       <div className="flex flex-col gap-6">
@@ -15,8 +27,8 @@ export default function NotificationsPage() {
 
         <div className="flex gap-2">
           <button className="btn btn-primary btn-sm">All</button>
-          <button className="btn btn-outline btn-sm">Unread</button>
-          <button className="btn btn-outline btn-sm">Alerts</button>
+          <button className="btn btn-sm">Unread</button>
+          <button className="btn btn-sm">Alerts</button>
         </div>
 
         <div className="flex flex-col gap-2">

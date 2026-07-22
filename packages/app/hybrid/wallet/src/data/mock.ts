@@ -13,6 +13,9 @@ export const user: User = {
   id: '1',
   name: 'Alex Johnson',
   email: 'alex@example.com',
+  phone: '+1 (555) 123-4567',
+  country: 'United States',
+  timezone: 'America/New_York (EST)',
   avatar: '',
 };
 

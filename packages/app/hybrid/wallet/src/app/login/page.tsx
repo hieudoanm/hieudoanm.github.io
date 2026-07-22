@@ -72,12 +72,8 @@ export default function LoginPage() {
           <div className="divider">OR</div>
 
           <div className="flex flex-col gap-2">
-            <button className="btn btn-outline w-full">
-              Continue with Google
-            </button>
-            <button className="btn btn-outline w-full">
-              Continue with Apple
-            </button>
+            <button className="btn w-full">Continue with Google</button>
+            <button className="btn w-full">Continue with Apple</button>
           </div>
 
           <p className="text-center text-sm">

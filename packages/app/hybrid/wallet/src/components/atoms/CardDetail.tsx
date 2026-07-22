@@ -43,12 +43,8 @@ const CardDetail: FC<CardDetailProps> = ({ card }) => {
           <button className="btn btn-primary btn-sm flex-1">
             {card.frozen ? 'Unfreeze' : 'Freeze'}
           </button>
-          <button className="btn btn-outline btn-sm flex-1">
-            PIN Settings
-          </button>
-          <button
-            className="btn btn-ghost btn-sm btn-circle"
-            aria-label="More options">
+          <button className="btn btn-sm flex-1">PIN Settings</button>
+          <button className="btn btn-sm btn-circle" aria-label="More options">
             <FiMoreVertical />
           </button>
         </div>

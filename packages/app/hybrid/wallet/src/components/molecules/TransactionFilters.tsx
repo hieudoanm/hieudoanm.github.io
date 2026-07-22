@@ -31,7 +31,7 @@ const TransactionFilters: FC<TransactionFiltersProps> = ({
         {(['all', 'income', 'expense'] as const).map((f) => (
           <button
             key={f}
-            className={`btn btn-sm ${filter === f ? 'btn-primary' : 'btn-outline'}`}
+            className={`btn btn-sm ${filter === f ? 'btn-primary' : 'btn'}`}
             onClick={() => onFilterChange(f)}>
             {f.charAt(0).toUpperCase() + f.slice(1)}
           </button>

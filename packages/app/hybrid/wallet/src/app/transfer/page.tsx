@@ -3,21 +3,46 @@
 import { useState } from 'react';
 import { DashboardTemplate } from '@/components/templates';
 import { TransferForm, TransferConfirmation } from '@/components/molecules';
-import { accounts } from '@/data/mock';
+import { useData } from '@/providers/DataProvider';
 
 export default function TransferPage() {
-  const [fromAccount, setFromAccount] = useState(accounts[0].id);
+  const { accounts, addTransaction, loading } = useData();
+  const [fromAccount, setFromAccount] = useState('');
   const [recipient, setRecipient] = useState('');
   const [amount, setAmount] = useState('');
   const [note, setNote] = useState('');
   const [confirmed, setConfirmed] = useState(false);
+
+  if (loading) {
+    return (
+      <DashboardTemplate>
+        <div className="flex h-full items-center justify-center">
+          <span className="loading loading-spinner loading-lg" />
+        </div>
+      </DashboardTemplate>
+    );
+  }
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setConfirmed(true);
   };
 
-  const handleConfirm = () => {
+  const handleConfirm = async () => {
+    const now = new Date().toISOString();
+    const txId = String(Date.now());
+
+    await addTransaction({
+      id: txId,
+      accountId: fromAccount || accounts[0]?.id || '1',
+      title: `Transfer to ${recipient}`,
+      category: 'Transfer',
+      amount: -Math.abs(Number(amount)),
+      currency: 'USD',
+      date: now,
+      type: 'transfer',
+    });
+
     alert('Transfer successful!');
     setConfirmed(false);
     setRecipient('');
@@ -52,7 +77,7 @@ export default function TransferPage() {
 
           <TransferForm
             accounts={accounts}
-            fromAccount={fromAccount}
+            fromAccount={fromAccount || accounts[0]?.id}
             recipient={recipient}
             amount={amount}
             note={note}

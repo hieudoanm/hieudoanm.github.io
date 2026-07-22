@@ -3,9 +3,21 @@
 import { DashboardTemplate } from '@/components/templates';
 import { BudgetCategoryCard } from '@/components/atoms';
 import { BudgetSummary } from '@/components/molecules';
-import { budgetCategories } from '@/data/mock';
+import { useData } from '@/providers/DataProvider';
 
 export default function BudgetPage() {
+  const { budgetCategories, loading } = useData();
+
+  if (loading) {
+    return (
+      <DashboardTemplate>
+        <div className="flex h-full items-center justify-center">
+          <span className="loading loading-spinner loading-lg" />
+        </div>
+      </DashboardTemplate>
+    );
+  }
+
   const totalSpent = budgetCategories.reduce((sum, cat) => sum + cat.spent, 0);
   const totalLimit = budgetCategories.reduce((sum, cat) => sum + cat.limit, 0);
 

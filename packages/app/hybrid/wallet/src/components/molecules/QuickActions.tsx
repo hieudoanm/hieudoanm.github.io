@@ -12,16 +12,16 @@ import {
 const QuickActions: FC = () => {
   return (
     <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-      <Link href="/transfer" className="btn btn-primary btn-outline gap-2">
+      <Link href="/transfer" className="btn btn-primary gap-2">
         <FiSend /> Transfer
       </Link>
-      <Link href="/pay" className="btn btn-secondary btn-outline gap-2">
+      <Link href="/pay" className="btn btn-secondary gap-2">
         <FiSmartphone /> Pay
       </Link>
-      <Link href="/cards" className="btn btn-accent btn-outline gap-2">
+      <Link href="/cards" className="btn btn-accent gap-2">
         <FiCreditCard /> Cards
       </Link>
-      <Link href="/budget" className="btn btn-info btn-outline gap-2">
+      <Link href="/budget" className="btn btn-info gap-2">
         <FiBarChart2 /> Budget
       </Link>
     </div>

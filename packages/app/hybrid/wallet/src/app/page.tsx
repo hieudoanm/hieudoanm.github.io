@@ -3,9 +3,21 @@
 import { DashboardTemplate } from '@/components/templates';
 import { BalanceCard, AccountCard, TransactionItem } from '@/components/atoms';
 import { QuickActions } from '@/components/molecules';
-import { accounts, transactions } from '@/data/mock';
+import { useData } from '@/providers/DataProvider';
 
 export default function HomePage() {
+  const { accounts, transactions, loading } = useData();
+
+  if (loading) {
+    return (
+      <DashboardTemplate>
+        <div className="flex h-full items-center justify-center">
+          <span className="loading loading-spinner loading-lg" />
+        </div>
+      </DashboardTemplate>
+    );
+  }
+
   const totalBalance = accounts.reduce((sum, acc) => sum + acc.balance, 0);
   const recentTransactions = transactions.slice(0, 5);
 

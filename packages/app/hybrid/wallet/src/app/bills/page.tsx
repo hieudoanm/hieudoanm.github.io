@@ -2,11 +2,23 @@
 
 import { DashboardTemplate } from '@/components/templates';
 import { BillItem } from '@/components/atoms';
-import { recurringBills } from '@/data/mock';
+import { useData } from '@/providers/DataProvider';
 import { formatCurrency } from '@/utils/format';
 import { FiPlus } from 'react-icons/fi';
 
 export default function BillsPage() {
+  const { recurringBills, loading } = useData();
+
+  if (loading) {
+    return (
+      <DashboardTemplate>
+        <div className="flex h-full items-center justify-center">
+          <span className="loading loading-spinner loading-lg" />
+        </div>
+      </DashboardTemplate>
+    );
+  }
+
   const totalDue = recurringBills
     .filter((b) => !b.paid)
     .reduce((sum, b) => sum + b.amount, 0);
@@ -32,7 +44,7 @@ export default function BillsPage() {
           ))}
         </div>
 
-        <button className="btn btn-outline btn-primary mx-auto gap-2">
+        <button className="btn btn-primary mx-auto gap-2">
           <FiPlus /> Add Bill
         </button>
       </div>

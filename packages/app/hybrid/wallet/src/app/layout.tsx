@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import '@/styles/globals.css';
+import { Providers } from '@/providers/Providers';
 
 export const metadata: Metadata = {
   title: 'Wallet',
@@ -13,7 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" data-theme="night">
-      <body className="bg-base-300 h-screen overflow-hidden">{children}</body>
+      <body className="bg-base-300 h-screen overflow-hidden">
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
