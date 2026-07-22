@@ -17,8 +17,16 @@ const BottomNav: FC = () => {
           <li key={item.href}>
             <Link
               href={item.href}
-              className={pathname === item.href ? 'active' : ''}
-              aria-current={pathname === item.href ? 'page' : undefined}>
+              className={
+                pathname === item.href || pathname === item.href + '/'
+                  ? 'active'
+                  : ''
+              }
+              aria-current={
+                pathname === item.href || pathname === item.href + '/'
+                  ? 'page'
+                  : undefined
+              }>
               <item.icon />
               <span className="text-xs">{item.label}</span>
             </Link>
