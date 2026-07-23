@@ -2,6 +2,7 @@
 
 ```text
 ├── e2e/
+│   ├── [auth-guard.spec.ts](./e2e/auth-guard.spec.ts)
 │   ├── [auth.spec.ts](./e2e/auth.spec.ts)
 │   ├── [cards.spec.ts](./e2e/cards.spec.ts)
 │   ├── [exchange.spec.ts](./e2e/exchange.spec.ts)
@@ -128,8 +129,14 @@
 │   │   ├── [useMediaQuery.ts](./src/hooks/useMediaQuery.ts)
 │   │   └── [useTheme.ts](./src/hooks/useTheme.ts)
 │   ├── lib/
+│   │   ├── __tests__/
+│   │   │   └── [db.test.ts](./src/lib/__tests__/db.test.ts)
 │   │   └── [db.ts](./src/lib/db.ts)
 │   ├── providers/
+│   │   ├── __tests__/
+│   │   │   ├── [DataProvider.loading.test.tsx](./src/providers/__tests__/DataProvider.loading.test.tsx)
+│   │   │   ├── [DataProvider.test.tsx](./src/providers/__tests__/DataProvider.test.tsx)
+│   │   │   └── [ToastProvider.test.tsx](./src/providers/__tests__/ToastProvider.test.tsx)
 │   │   ├── [DataProvider.tsx](./src/providers/DataProvider.tsx)
 │   │   ├── [Providers.tsx](./src/providers/Providers.tsx)
 │   │   └── [ToastProvider.tsx](./src/providers/ToastProvider.tsx)
@@ -184,4 +191,4 @@
 └── [tsconfig.json](./tsconfig.json)
 ```
 
-41 directories, 140 files
+43 directories, 145 files

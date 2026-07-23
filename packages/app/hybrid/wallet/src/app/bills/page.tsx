@@ -3,11 +3,13 @@
 import { DashboardTemplate } from '@/components/templates';
 import { BillItem } from '@/components/atoms';
 import { useData } from '@/providers/DataProvider';
+import { useToast } from '@/providers/ToastProvider';
 import { formatCurrency } from '@/utils/format';
 import { FiPlus } from 'react-icons/fi';
 
 export default function BillsPage() {
-  const { recurringBills, loading } = useData();
+  const { recurringBills, updateRecurringBill, loading } = useData();
+  const { showToast } = useToast();
 
   if (loading) {
     return (
@@ -40,7 +42,14 @@ export default function BillsPage() {
 
         <div className="flex flex-col gap-3">
           {recurringBills.map((bill) => (
-            <BillItem key={bill.id} bill={bill} />
+            <BillItem
+              key={bill.id}
+              bill={bill}
+              onPay={async () => {
+                await updateRecurringBill({ ...bill, paid: true });
+                showToast(`${bill.name} marked as paid`, 'success');
+              }}
+            />
           ))}
         </div>
 

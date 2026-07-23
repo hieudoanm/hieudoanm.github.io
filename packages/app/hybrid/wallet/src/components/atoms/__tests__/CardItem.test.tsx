@@ -19,9 +19,9 @@ describe('CardItem', () => {
     expect(screen.getByText('Main Card')).toBeInTheDocument();
   });
 
-  it('renders card number', () => {
+  it('renders masked card number', () => {
     render(<CardItem card={mockCard} selected={false} onSelect={jest.fn()} />);
-    expect(screen.getByText('4532 1234 5678 1234')).toBeInTheDocument();
+    expect(screen.getByText('•••• •••• •••• 1234')).toBeInTheDocument();
   });
 
   it('renders expiry date', () => {

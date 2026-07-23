@@ -4,9 +4,11 @@ import { useState } from 'react';
 import { DashboardTemplate } from '@/components/templates';
 import { CardItem, CardDetail } from '@/components/atoms';
 import { useData } from '@/providers/DataProvider';
+import { useToast } from '@/providers/ToastProvider';
 
 export default function CardsPage() {
-  const { cards, loading } = useData();
+  const { cards, updateCard, loading } = useData();
+  const { showToast } = useToast();
   const [selectedCard, setSelectedCard] = useState('');
 
   if (loading) {
@@ -41,7 +43,18 @@ export default function CardsPage() {
           ))}
         </div>
 
-        {activeCard && <CardDetail card={activeCard} />}
+        {activeCard && (
+          <CardDetail
+            card={activeCard}
+            onToggleFreeze={async () => {
+              await updateCard({ ...activeCard, frozen: !activeCard.frozen });
+              showToast(
+                `${activeCard.name} ${activeCard.frozen ? 'unfrozen' : 'frozen'}`,
+                'success'
+              );
+            }}
+          />
+        )}
       </div>
     </DashboardTemplate>
   );

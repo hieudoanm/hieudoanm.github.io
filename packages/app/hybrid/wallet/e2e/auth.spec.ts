@@ -17,7 +17,7 @@ test.describe('Login page', () => {
     await page.getByPlaceholder('Password').fill('password123');
     await page.getByRole('button', { name: 'Sign In' }).click();
     await expect(page).toHaveURL('/');
-    await expect(page.getByText('Good morning, Alex')).toBeVisible();
+    await expect(page.getByText(/, Alex$/)).toBeVisible();
   });
 
   test('sign up link navigates to register', async ({ page }) => {
@@ -76,7 +76,7 @@ test.describe('Register page', () => {
     await page.getByRole('checkbox').check();
     await page.getByRole('button', { name: 'Create Account' }).click();
     await expect(page).toHaveURL('/');
-    await expect(page.getByText('Good morning, Alex')).toBeVisible();
+    await expect(page.getByText(/, Alex$/)).toBeVisible();
   });
 
   test('sign in link navigates to login', async ({ page }) => {

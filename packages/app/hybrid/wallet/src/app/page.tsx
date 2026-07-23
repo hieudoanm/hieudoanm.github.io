@@ -6,7 +6,7 @@ import { QuickActions } from '@/components/molecules';
 import { useData } from '@/providers/DataProvider';
 
 export default function HomePage() {
-  const { accounts, transactions, loading } = useData();
+  const { user, accounts, transactions, loading } = useData();
 
   if (loading) {
     return (
@@ -21,11 +21,18 @@ export default function HomePage() {
   const totalBalance = accounts.reduce((sum, acc) => sum + acc.balance, 0);
   const recentTransactions = transactions.slice(0, 5);
 
+  const hour = new Date().getHours();
+  const greeting =
+    hour < 12 ? 'Good morning' : hour < 18 ? 'Good afternoon' : 'Good evening';
+  const firstName = user?.name.split(' ')[0] ?? 'there';
+
   return (
     <DashboardTemplate>
       <div className="flex flex-col gap-6">
         <div>
-          <h1 className="text-2xl font-bold">Good morning, Alex</h1>
+          <h1 className="text-2xl font-bold">
+            {greeting}, {firstName}
+          </h1>
           <p className="text-base-content/60">
             Here&apos;s your financial overview
           </p>

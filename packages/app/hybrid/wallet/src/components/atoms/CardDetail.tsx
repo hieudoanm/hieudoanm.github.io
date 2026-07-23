@@ -5,9 +5,10 @@ import { FiLock, FiUnlock, FiCreditCard, FiMoreVertical } from 'react-icons/fi';
 
 interface CardDetailProps {
   card: Card;
+  onToggleFreeze?: () => void;
 }
 
-const CardDetail: FC<CardDetailProps> = ({ card }) => {
+const CardDetail: FC<CardDetailProps> = ({ card, onToggleFreeze }) => {
   return (
     <div className="card bg-base-200 shadow-md">
       <div className="card-body">
@@ -40,7 +41,9 @@ const CardDetail: FC<CardDetailProps> = ({ card }) => {
         <div className="divider" />
 
         <div className="flex gap-2">
-          <button className="btn btn-primary btn-sm flex-1">
+          <button
+            className="btn btn-primary btn-sm flex-1"
+            onClick={onToggleFreeze}>
             {card.frozen ? 'Unfreeze' : 'Freeze'}
           </button>
           <button className="btn btn-sm flex-1">PIN Settings</button>

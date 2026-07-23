@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import type { Card } from '@/types';
+import { maskCardNumber } from '@/utils/format';
 import { FiCreditCard } from 'react-icons/fi';
 
 const cardColorStyles: Record<string, string> = {
@@ -27,7 +28,7 @@ const CardItem: FC<CardItemProps> = ({ card, selected, onSelect }) => {
           <p className="text-sm font-medium">{card.name}</p>
           <FiCreditCard className="text-xl" />
         </div>
-        <p className="text-lg tracking-wider">{card.number}</p>
+        <p className="text-lg tracking-wider">{maskCardNumber(card.number)}</p>
         <div className="flex items-end justify-between">
           <div>
             <p className="text-xs opacity-60">Expires</p>

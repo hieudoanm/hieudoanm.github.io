@@ -4,9 +4,11 @@ import { useState } from 'react';
 import { DashboardTemplate } from '@/components/templates';
 import { CurrencyConverter, RateList } from '@/components/molecules';
 import { useData } from '@/providers/DataProvider';
+import { useToast } from '@/providers/ToastProvider';
 
 export default function ExchangePage() {
   const { currencyRates, loading } = useData();
+  const { showToast } = useToast();
   const [amount, setAmount] = useState('1000');
   const [from, setFrom] = useState('USD');
   const [to, setTo] = useState('EUR');
@@ -52,7 +54,12 @@ export default function ExchangePage() {
           onFromChange={setFrom}
           onToChange={setTo}
           onSwap={handleSwap}
-          onConvert={() => {}}
+          onConvert={() =>
+            showToast(
+              `Converted ${Number(amount).toLocaleString()} ${from} to ${converted.toLocaleString(undefined, { maximumFractionDigits: 2 })} ${to}`,
+              'success'
+            )
+          }
         />
 
         <RateList rates={currencyRates} />

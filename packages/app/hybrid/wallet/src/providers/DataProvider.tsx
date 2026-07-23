@@ -79,6 +79,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const sync = async () => {
+      setLoading(true);
       try {
         const seed = await db.needsSeed();
 
@@ -115,6 +116,8 @@ export function DataProvider({ children }: { children: ReactNode }) {
         if (rates.length) setCurrencyRates(rates);
       } catch {
         // IndexedDB unavailable — use seed data as-is
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -180,16 +183,22 @@ export function DataProvider({ children }: { children: ReactNode }) {
     }
   }, []);
 
-  const markNotificationRead = useCallback(async (id: string) => {
-    setNotifications((prev) => {
-      const updated = prev.map((n) => (n.id === id ? { ...n, read: true } : n));
-      const target = updated.find((n) => n.id === id);
-      if (target) {
-        db.put(db.STORES.notifications, target).catch(() => {});
+  const markNotificationRead = useCallback(
+    async (id: string) => {
+      setNotifications((prev) =>
+        prev.map((n) => (n.id === id ? { ...n, read: true } : n))
+      );
+      try {
+        const updated = notifications.find((n) => n.id === id);
+        if (updated) {
+          await db.put(db.STORES.notifications, { ...updated, read: true });
+        }
+      } catch {
+        // silent
       }
-      return updated;
-    });
-  }, []);
+    },
+    [notifications]
+  );
 
   const updateBudgetCategory = useCallback(async (updated: BudgetCategory) => {
     setBudgetCategories((prev) =>

@@ -7,6 +7,7 @@ import { UserCard } from '@/components/atoms';
 import { ThemePicker } from '@/components/molecules';
 import { useTheme } from '@/hooks/useTheme';
 import { useData } from '@/providers/DataProvider';
+import { useToast } from '@/providers/ToastProvider';
 import {
   FiMoon,
   FiSun,
@@ -68,11 +69,11 @@ const timezones = [
 export default function ProfilePage() {
   const { isDark, toggleTheme } = useTheme();
   const { user, updateUser, logout, loading } = useData();
+  const { showToast } = useToast();
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [country, setCountry] = useState('');
   const [timezone, setTimezone] = useState('');
-  const [saved, setSaved] = useState(false);
 
   useEffect(() => {
     if (user) {
@@ -101,8 +102,7 @@ export default function ProfilePage() {
 
   const handleSave = async () => {
     await updateUser({ ...user, phone, email, country, timezone });
-    setSaved(true);
-    setTimeout(() => setSaved(false), 2000);
+    showToast('Changes saved successfully!', 'success');
   };
 
   return (
@@ -179,11 +179,6 @@ export default function ProfilePage() {
                 onClick={handleSave}>
                 <FiSave /> Save Changes
               </button>
-              {saved && (
-                <span className="text-success text-sm font-medium">
-                  Changes saved successfully!
-                </span>
-              )}
             </div>
           </div>
         </div>

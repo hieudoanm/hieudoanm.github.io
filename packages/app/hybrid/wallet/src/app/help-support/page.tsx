@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     q: 'How do I change the app theme?',
-    a: 'Go to Profile and use the Theme Picker to choose from 59 available themes.',
+    a: 'Go to Profile and use the Theme Picker to choose from 32 available themes.',
   },
   {
     q: 'Is my financial data secure?',

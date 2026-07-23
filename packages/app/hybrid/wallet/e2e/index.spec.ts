@@ -8,7 +8,7 @@ test.describe('Homepage', () => {
 
   test('loads successfully', async ({ page }) => {
     await waitForData(page);
-    await expect(page.getByText('Good morning, Alex')).toBeVisible();
+    await expect(page.getByText(/, Alex$/)).toBeVisible();
   });
 
   test('has correct title', async ({ page }) => {
