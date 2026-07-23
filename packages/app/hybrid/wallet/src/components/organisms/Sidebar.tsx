@@ -5,9 +5,11 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FiCreditCard, FiUser } from 'react-icons/fi';
 import { navItems } from '@/data/nav';
+import { useData } from '@/providers/DataProvider';
 
 const Sidebar: FC = () => {
   const pathname = usePathname();
+  const { user } = useData();
 
   return (
     <aside className="bg-base-200 border-base-300 hidden h-screen w-64 flex-col border-r md:flex">
@@ -49,8 +51,8 @@ const Sidebar: FC = () => {
             </div>
           </div>
           <div>
-            <p className="text-sm font-medium">Alex Johnson</p>
-            <p className="text-base-content/60 text-xs">alex@example.com</p>
+            <p className="text-sm font-medium">{user?.name ?? 'Guest'}</p>
+            <p className="text-base-content/60 text-xs">{user?.email ?? ''}</p>
           </div>
         </div>
       </div>

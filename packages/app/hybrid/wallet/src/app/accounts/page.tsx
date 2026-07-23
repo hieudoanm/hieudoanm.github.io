@@ -1,10 +1,11 @@
 'use client';
 
+import { useState } from 'react';
 import { DashboardTemplate } from '@/components/templates';
 import { AccountDetail } from '@/components/atoms';
+import AddAccountModal from '@/components/molecules/AddAccountModal';
 import { useData } from '@/providers/DataProvider';
 import { FiPlus } from 'react-icons/fi';
-import { useState } from 'react';
 
 type AccountType = 'all' | 'checking' | 'savings' | 'credit';
 
@@ -18,6 +19,7 @@ const filters: { label: string; value: AccountType }[] = [
 export default function AccountsPage() {
   const { accounts, loading } = useData();
   const [filter, setFilter] = useState<AccountType>('all');
+  const [showAdd, setShowAdd] = useState(false);
 
   if (loading) {
     return (
@@ -63,10 +65,13 @@ export default function AccountsPage() {
           </div>
         )}
 
-        <button className="btn btn-primary mx-auto gap-2">
+        <button
+          className="btn btn-primary mx-auto gap-2"
+          onClick={() => setShowAdd(true)}>
           <FiPlus /> Add Account
         </button>
       </div>
+      <AddAccountModal open={showAdd} onClose={() => setShowAdd(false)} />
     </DashboardTemplate>
   );
 }

@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { useData } from '@/providers/DataProvider';
 
 interface QRCodeModalProps {
   open: boolean;
@@ -6,6 +7,7 @@ interface QRCodeModalProps {
 }
 
 const QRCodeModal: FC<QRCodeModalProps> = ({ open, onClose }) => {
+  const { user } = useData();
   if (!open) return null;
 
   return (
@@ -25,7 +27,7 @@ const QRCodeModal: FC<QRCodeModalProps> = ({ open, onClose }) => {
           </div>
         </div>
         <p className="text-base-content/60 text-center text-sm">
-          Scan this code to pay Alex Johnson
+          Scan this code to pay {user?.name ?? 'User'}
         </p>
         <div className="modal-action">
           <button

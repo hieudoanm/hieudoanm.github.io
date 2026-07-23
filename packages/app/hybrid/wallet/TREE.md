@@ -4,6 +4,7 @@
 ├── e2e/
 │   ├── [auth-guard.spec.ts](./e2e/auth-guard.spec.ts)
 │   ├── [auth.spec.ts](./e2e/auth.spec.ts)
+│   ├── [budget-notifications.spec.ts](./e2e/budget-notifications.spec.ts)
 │   ├── [cards.spec.ts](./e2e/cards.spec.ts)
 │   ├── [exchange.spec.ts](./e2e/exchange.spec.ts)
 │   ├── [helpers.ts](./e2e/helpers.ts)
@@ -17,6 +18,11 @@
 │   └── [favicon.ico](./public/favicon.ico)
 ├── src/
 │   ├── app/
+│   │   ├── __tests__/
+│   │   │   ├── [cards.test.tsx](./src/app/__tests__/cards.test.tsx)
+│   │   │   ├── [dashboard.test.tsx](./src/app/__tests__/dashboard.test.tsx)
+│   │   │   ├── [login.test.tsx](./src/app/__tests__/login.test.tsx)
+│   │   │   └── [transfer.test.tsx](./src/app/__tests__/transfer.test.tsx)
 │   │   ├── accounts/
 │   │   │   └── [page.tsx](./src/app/accounts/page.tsx)
 │   │   ├── bills/
@@ -52,6 +58,8 @@
 │   │   ├── [not-found.tsx](./src/app/not-found.tsx)
 │   │   └── [page.tsx](./src/app/page.tsx)
 │   ├── components/
+│   │   ├── __tests__/
+│   │   │   └── [RouteGuard.test.tsx](./src/components/__tests__/RouteGuard.test.tsx)
 │   │   ├── atoms/
 │   │   │   ├── __tests__/
 │   │   │   │   ├── [AccountCard.test.tsx](./src/components/atoms/__tests__/AccountCard.test.tsx)
@@ -90,6 +98,8 @@
 │   │   │   │   ├── [TransactionFilters.test.tsx](./src/components/molecules/__tests__/TransactionFilters.test.tsx)
 │   │   │   │   ├── [TransferConfirmation.test.tsx](./src/components/molecules/__tests__/TransferConfirmation.test.tsx)
 │   │   │   │   └── [TransferForm.test.tsx](./src/components/molecules/__tests__/TransferForm.test.tsx)
+│   │   │   ├── [AddAccountModal.tsx](./src/components/molecules/AddAccountModal.tsx)
+│   │   │   ├── [AddBillModal.tsx](./src/components/molecules/AddBillModal.tsx)
 │   │   │   ├── [BudgetSummary.tsx](./src/components/molecules/BudgetSummary.tsx)
 │   │   │   ├── [CurrencyConverter.tsx](./src/components/molecules/CurrencyConverter.tsx)
 │   │   │   ├── [QRCodeActions.tsx](./src/components/molecules/QRCodeActions.tsx)
@@ -109,6 +119,8 @@
 │   │   │   │   └── [Sidebar.test.tsx](./src/components/organisms/__tests__/Sidebar.test.tsx)
 │   │   │   ├── [BottomNav.tsx](./src/components/organisms/BottomNav.tsx)
 │   │   │   ├── [Header.tsx](./src/components/organisms/Header.tsx)
+│   │   │   ├── [ProfileForm.tsx](./src/components/organisms/ProfileForm.tsx)
+│   │   │   ├── [SettingsSection.tsx](./src/components/organisms/SettingsSection.tsx)
 │   │   │   ├── [Sidebar.tsx](./src/components/organisms/Sidebar.tsx)
 │   │   │   └── [index.ts](./src/components/organisms/index.ts)
 │   │   ├── templates/
@@ -134,6 +146,7 @@
 │   │   └── [db.ts](./src/lib/db.ts)
 │   ├── providers/
 │   │   ├── __tests__/
+│   │   │   ├── [DataProvider.crud.test.tsx](./src/providers/__tests__/DataProvider.crud.test.tsx)
 │   │   │   ├── [DataProvider.loading.test.tsx](./src/providers/__tests__/DataProvider.loading.test.tsx)
 │   │   │   ├── [DataProvider.test.tsx](./src/providers/__tests__/DataProvider.test.tsx)
 │   │   │   └── [ToastProvider.test.tsx](./src/providers/__tests__/ToastProvider.test.tsx)
@@ -191,4 +204,4 @@
 └── [tsconfig.json](./tsconfig.json)
 ```
 
-43 directories, 145 files
+45 directories, 156 files

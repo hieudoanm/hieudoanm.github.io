@@ -8,7 +8,7 @@ import { useData } from '@/providers/DataProvider';
 type Filter = 'all' | 'unread' | 'alerts';
 
 export default function NotificationsPage() {
-  const { notifications, loading } = useData();
+  const { notifications, markNotificationRead, loading } = useData();
   const [filter, setFilter] = useState<Filter>('all');
 
   if (loading) {
@@ -59,7 +59,11 @@ export default function NotificationsPage() {
             </p>
           ) : (
             filtered.map((n) => (
-              <NotificationItem key={n.id} notification={n} />
+              <NotificationItem
+                key={n.id}
+                notification={n}
+                onRead={markNotificationRead}
+              />
             ))
           )}
         </div>

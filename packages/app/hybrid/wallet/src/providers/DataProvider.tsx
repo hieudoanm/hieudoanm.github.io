@@ -46,8 +46,10 @@ interface DataContextValue {
   logout: () => void;
   updateUser: (user: User) => Promise<void>;
   updateAccount: (account: Account) => Promise<void>;
+  addAccount: (account: Account) => Promise<void>;
   addTransaction: (transaction: Transaction) => Promise<void>;
   updateCard: (card: Card) => Promise<void>;
+  addRecurringBill: (bill: RecurringBill) => Promise<void>;
   updateRecurringBill: (bill: RecurringBill) => Promise<void>;
   markNotificationRead: (id: string) => Promise<void>;
   updateBudgetCategory: (category: BudgetCategory) => Promise<void>;
@@ -154,6 +156,15 @@ export function DataProvider({ children }: { children: ReactNode }) {
     }
   }, []);
 
+  const addAccount = useCallback(async (account: Account) => {
+    setAccounts((prev) => [...prev, account]);
+    try {
+      await db.put(db.STORES.accounts, account);
+    } catch {
+      // silent
+    }
+  }, []);
+
   const addTransaction = useCallback(async (tx: Transaction) => {
     setTransactions((prev) => [tx, ...prev]);
     try {
@@ -178,6 +189,15 @@ export function DataProvider({ children }: { children: ReactNode }) {
     );
     try {
       await db.put(db.STORES.recurringBills, updated);
+    } catch {
+      // silent
+    }
+  }, []);
+
+  const addRecurringBill = useCallback(async (bill: RecurringBill) => {
+    setRecurringBills((prev) => [...prev, bill]);
+    try {
+      await db.put(db.STORES.recurringBills, bill);
     } catch {
       // silent
     }
@@ -228,8 +248,10 @@ export function DataProvider({ children }: { children: ReactNode }) {
         logout,
         updateUser,
         updateAccount,
+        addAccount,
         addTransaction,
         updateCard,
+        addRecurringBill,
         updateRecurringBill,
         markNotificationRead,
         updateBudgetCategory,

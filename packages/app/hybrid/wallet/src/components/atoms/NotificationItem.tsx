@@ -11,6 +11,7 @@ import {
 
 interface NotificationItemProps {
   notification: Notification;
+  onRead?: (id: string) => void;
 }
 
 const typeIcon = (type: string) => {
@@ -43,12 +44,20 @@ const typeBadge = (type: string) => {
   }
 };
 
-const NotificationItem: FC<NotificationItemProps> = ({ notification }) => {
+const NotificationItem: FC<NotificationItemProps> = ({
+  notification,
+  onRead,
+}) => {
   return (
     <div
       className={`bg-base-200 flex items-start gap-3 rounded-xl p-4 ${
         !notification.read ? 'ring-primary ring-1' : ''
-      }`}>
+      }`}
+      onClick={() => {
+        if (!notification.read && onRead) onRead(notification.id);
+      }}
+      role="button"
+      tabIndex={0}>
       <span className="text-2xl">{typeIcon(notification.type)}</span>
       <div className="flex-1">
         <div className="flex items-center gap-2">

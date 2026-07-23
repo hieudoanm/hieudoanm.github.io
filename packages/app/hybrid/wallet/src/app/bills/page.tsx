@@ -1,7 +1,9 @@
 'use client';
 
+import { useState } from 'react';
 import { DashboardTemplate } from '@/components/templates';
 import { BillItem } from '@/components/atoms';
+import AddBillModal from '@/components/molecules/AddBillModal';
 import { useData } from '@/providers/DataProvider';
 import { useToast } from '@/providers/ToastProvider';
 import { formatCurrency } from '@/utils/format';
@@ -10,6 +12,7 @@ import { FiPlus } from 'react-icons/fi';
 export default function BillsPage() {
   const { recurringBills, updateRecurringBill, loading } = useData();
   const { showToast } = useToast();
+  const [showAdd, setShowAdd] = useState(false);
 
   if (loading) {
     return (
@@ -53,10 +56,13 @@ export default function BillsPage() {
           ))}
         </div>
 
-        <button className="btn btn-primary mx-auto gap-2">
+        <button
+          className="btn btn-primary mx-auto gap-2"
+          onClick={() => setShowAdd(true)}>
           <FiPlus /> Add Bill
         </button>
       </div>
+      <AddBillModal open={showAdd} onClose={() => setShowAdd(false)} />
     </DashboardTemplate>
   );
 }
