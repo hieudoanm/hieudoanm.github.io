@@ -67,7 +67,7 @@ const timezones = [
 
 export default function ProfilePage() {
   const { isDark, toggleTheme } = useTheme();
-  const { user, updateUser, loading } = useData();
+  const { user, updateUser, logout, loading } = useData();
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [country, setCountry] = useState('');
@@ -273,7 +273,9 @@ export default function ProfilePage() {
           </div>
         </div>
 
-        <button className="btn btn-error w-full">Sign Out</button>
+        <button className="btn btn-error w-full" onClick={logout}>
+          Sign Out
+        </button>
       </div>
     </DashboardTemplate>
   );

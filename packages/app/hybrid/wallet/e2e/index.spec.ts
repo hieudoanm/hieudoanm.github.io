@@ -1,26 +1,26 @@
 import { test, expect } from '@playwright/test';
-import { waitForData } from './helpers';
+import { login, waitForData } from './helpers';
 
 test.describe('Homepage', () => {
+  test.beforeEach(async ({ page }) => {
+    await login(page);
+  });
+
   test('loads successfully', async ({ page }) => {
-    await page.goto('/');
     await waitForData(page);
     await expect(page.getByText('Good morning, Alex')).toBeVisible();
   });
 
   test('has correct title', async ({ page }) => {
-    await page.goto('/');
     await expect(page).toHaveTitle('Wallet');
   });
 
   test('displays total balance', async ({ page }) => {
-    await page.goto('/');
     await waitForData(page);
     await expect(page.getByText('$44,830.88')).toBeVisible();
   });
 
   test('displays all account cards', async ({ page }) => {
-    await page.goto('/');
     await waitForData(page);
     await expect(page.getByText('Main Checking')).toBeVisible();
     await expect(page.getByText('Savings', { exact: true })).toBeVisible();
@@ -28,14 +28,12 @@ test.describe('Homepage', () => {
   });
 
   test('shows recent transactions', async ({ page }) => {
-    await page.goto('/');
     await waitForData(page);
     await expect(page.getByText('Grocery Store')).toBeVisible();
     await expect(page.getByText('Salary Deposit')).toBeVisible();
   });
 
   test('view all link navigates to transactions', async ({ page }) => {
-    await page.goto('/');
     await waitForData(page);
     await page.getByRole('link', { name: 'View all' }).click();
     await expect(page).toHaveURL(/\/transactions/);

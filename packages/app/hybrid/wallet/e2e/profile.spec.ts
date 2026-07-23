@@ -1,10 +1,14 @@
 import { test, expect } from '@playwright/test';
-import { waitForData } from './helpers';
+import { login, waitForData } from './helpers';
 
 test.describe('Profile page', () => {
-  test('renders user info', async ({ page }) => {
+  test.beforeEach(async ({ page }) => {
+    await login(page);
     await page.goto('/profile');
     await waitForData(page);
+  });
+
+  test('renders user info', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Profile' })).toBeVisible();
     await expect(
       page.getByRole('heading', { name: 'Alex Johnson' })
@@ -15,8 +19,6 @@ test.describe('Profile page', () => {
   });
 
   test('dark mode toggle switches theme', async ({ page }) => {
-    await page.goto('/profile');
-    await waitForData(page);
     const html = page.locator('html');
     const initialTheme = await html.getAttribute('data-theme');
 
@@ -28,8 +30,6 @@ test.describe('Profile page', () => {
   });
 
   test('theme picker changes theme', async ({ page }) => {
-    await page.goto('/profile');
-    await waitForData(page);
     const html = page.locator('html');
 
     const themeButton = page.locator('button[data-theme="dark"]');
@@ -40,8 +40,6 @@ test.describe('Profile page', () => {
   });
 
   test('sign out button is visible', async ({ page }) => {
-    await page.goto('/profile');
-    await waitForData(page);
     await expect(page.getByRole('button', { name: 'Sign Out' })).toBeVisible();
   });
 });

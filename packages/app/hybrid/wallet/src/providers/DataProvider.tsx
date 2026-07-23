@@ -40,7 +40,10 @@ interface DataContextValue {
   budgetCategories: BudgetCategory[];
   currencyRates: CurrencyRate[];
   loading: boolean;
+  isAuthenticated: boolean;
 
+  login: (email: string, password: string) => Promise<boolean>;
+  logout: () => void;
   updateUser: (user: User) => Promise<void>;
   updateAccount: (account: Account) => Promise<void>;
   addTransaction: (transaction: Transaction) => Promise<void>;
@@ -67,6 +70,12 @@ export function DataProvider({ children }: { children: ReactNode }) {
   const [currencyRates, setCurrencyRates] =
     useState<CurrencyRate[]>(seedCurrencyRates);
   const [loading, setLoading] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  useEffect(() => {
+    const stored = localStorage.getItem('wallet-auth');
+    if (stored === 'true') setIsAuthenticated(true);
+  }, []);
 
   useEffect(() => {
     const sync = async () => {
@@ -110,6 +119,18 @@ export function DataProvider({ children }: { children: ReactNode }) {
     };
 
     sync();
+  }, []);
+
+  const login = useCallback(async (email: string, _password: string) => {
+    if (!email) return false;
+    localStorage.setItem('wallet-auth', 'true');
+    setIsAuthenticated(true);
+    return true;
+  }, []);
+
+  const logout = useCallback(() => {
+    localStorage.removeItem('wallet-auth');
+    setIsAuthenticated(false);
   }, []);
 
   const updateUser = useCallback(async (updated: User) => {
@@ -193,6 +214,9 @@ export function DataProvider({ children }: { children: ReactNode }) {
         budgetCategories,
         currencyRates,
         loading,
+        isAuthenticated,
+        login,
+        logout,
         updateUser,
         updateAccount,
         addTransaction,

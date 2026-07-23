@@ -7,8 +7,10 @@ import {
   QuickPayForm,
   QRCodeModal,
 } from '@/components/molecules';
+import { useToast } from '@/providers/ToastProvider';
 
 export default function PayPage() {
+  const { showToast } = useToast();
   const [amount, setAmount] = useState('');
   const [showQR, setShowQR] = useState(false);
 
@@ -25,7 +27,7 @@ export default function PayPage() {
         <QuickPayForm
           amount={amount}
           onAmountChange={setAmount}
-          onSubmit={() => alert('Payment sent!')}
+          onSubmit={() => showToast('Payment sent!', 'success')}
         />
 
         <QRCodeModal open={showQR} onClose={() => setShowQR(false)} />

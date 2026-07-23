@@ -4,9 +4,11 @@ import { useState } from 'react';
 import { DashboardTemplate } from '@/components/templates';
 import { TransferForm, TransferConfirmation } from '@/components/molecules';
 import { useData } from '@/providers/DataProvider';
+import { useToast } from '@/providers/ToastProvider';
 
 export default function TransferPage() {
   const { accounts, addTransaction, loading } = useData();
+  const { showToast } = useToast();
   const [fromAccount, setFromAccount] = useState('');
   const [recipient, setRecipient] = useState('');
   const [amount, setAmount] = useState('');
@@ -43,7 +45,7 @@ export default function TransferPage() {
       type: 'transfer',
     });
 
-    alert('Transfer successful!');
+    showToast('Transfer successful!', 'success');
     setConfirmed(false);
     setRecipient('');
     setAmount('');

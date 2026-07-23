@@ -1,77 +1,81 @@
-# 🏦 Wallet — Banking App UI
+# Wallet — Banking App UI
+
+## Table of Contents
+
+- [Wallet — Banking App UI](#wallet--banking-app-ui)
+  - [Table of Contents](#table-of-contents)
+  - [Tech Stack](#tech-stack)
+  - [Pages](#pages)
+  - [Features](#features)
+  - [File Structure](#file-structure)
+  - [Key Conventions](#key-conventions)
 
 ## Tech Stack
 
-- **Next.js 16** (Pages Router, static export)
-- **TypeScript 6** (strict mode)
-- **Tailwind CSS 4** + **DaisyUI 5** (dark/light themes)
-- **Mock data only** (no backend)
+1. **pnpm**
+2. **ESLint**
+3. **Prettier**
+4. **Jest**
+5. **Playwright**
+6. **Next.js 16** (App Router, static export)
+7. **TypeScript 6** (strict mode)
+8. **Tailwind CSS 4** + **DaisyUI 5** (32 themes, dark default)
+9. **Tauri 2** (desktop shell)
+10. **Mock data** with IndexedDB persistence
 
 ## Pages
 
-| #   | Route            | Page                | Key Features                                                     |
-| --- | ---------------- | ------------------- | ---------------------------------------------------------------- |
-| 1   | `/login`         | Login               | Email/password form, social login buttons                        |
-| 2   | `/register`      | Register            | Sign up form, terms checkbox                                     |
-| 3   | `/`              | Dashboard           | Total balance, account cards, quick actions, recent transactions |
-| 4   | `/accounts`      | Accounts            | List of accounts (checking, savings, credit), tap to detail      |
-| 5   | `/transactions`  | Transactions        | Filterable transaction list, search, date range                  |
-| 6   | `/transfer`      | Transfer            | Send money form, recipient selection, amount input, confirmation |
-| 7   | `/cards`         | Cards               | Card carousel, freeze/unfreeze, card details                     |
-| 8   | `/budget`        | Budget / Analytics  | Spending by category, charts, monthly summary                    |
-| 9   | `/pay`           | Pay / QR            | QR code display/scanner, NFC-style payment                       |
-| 10  | `/bills`         | Bills / Recurring   | Bill reminders, recurring payment setup                          |
-| 11  | `/exchange`      | Currency / Exchange | Multi-currency balances, exchange rate converter                 |
-| 12  | `/notifications` | Notifications       | Alerts, transaction notifications, messages                      |
-| 13  | `/profile`       | Profile             | User info, settings, theme toggle, logout                        |
+| #   | Route               | Page             | Key Features                                                     |
+| --- | ------------------- | ---------------- | ---------------------------------------------------------------- |
+| 1   | `/login`            | Login            | Email/password form, social login buttons                        |
+| 2   | `/register`         | Register         | Sign up form, terms checkbox                                     |
+| 3   | `/`                 | Dashboard        | Total balance, account cards, quick actions, recent transactions |
+| 4   | `/accounts`         | Accounts         | List of accounts (checking, savings, credit), filter by type     |
+| 5   | `/transactions`     | Transactions     | Filterable transaction list, search, income/expense filter       |
+| 6   | `/transfer`         | Transfer         | Send money form, recipient selection, amount input, confirmation |
+| 7   | `/cards`            | Cards            | Card carousel, freeze/unfreeze, card details                     |
+| 8   | `/budget`           | Budget           | Spending by category, budget summary                             |
+| 9   | `/pay`              | Pay / QR         | QR code display/scanner, quick pay form                          |
+| 10  | `/bills`            | Bills            | Recurring bill list, total due summary                           |
+| 11  | `/exchange`         | Exchange         | Multi-currency converter, exchange rate list                     |
+| 12  | `/notifications`    | Notifications    | Filterable alerts (All/Unread/Alerts)                            |
+| 13  | `/profile`          | Profile          | User info, settings, theme picker, sign out                      |
+| 14  | `/help-support`     | Help & Support   | Contact options, FAQ, resources                                  |
+| 15  | `/terms-of-service` | Terms of Service | Legal text                                                       |
+| 16  | `/privacy-policy`   | Privacy Policy   | Legal text                                                       |
 
-## Responsive Layout
+## Features
 
-- **Mobile (< 768px):** Bottom tab nav (5 icons), stacked cards, full-width
-  forms
-- **Desktop (>= 768px):** Left sidebar nav, grid layouts, split panels
+- **Auth**: localStorage-based route protection; unauthenticated users redirect
+  to `/login`
+- **Toast notifications**: In-app toast system replaces `alert()` for user
+  feedback
+- **Theme**: 32 DaisyUI themes with dark/light toggle, persisted to localStorage
+- **Responsive**: Bottom tab nav (mobile), sidebar nav (desktop)
+- **Persistence**: IndexedDB for all data; seeded on first load
+- **Testing**: Jest (unit) + Playwright (E2E)
 
 ## File Structure
 
-```
+```terminal
 src/
+  app/                # Next.js App Router pages (17 routes)
   components/
-    layout/         # Sidebar, BottomNav, Header, AuthLayout
-    ui/             # Button, Input, Card, Modal, Badge
-    dashboard/      # BalanceCard, QuickActions, RecentTransactions
-    accounts/       # AccountCard, AccountDetail
-    transactions/   # TransactionItem, TransactionFilters
-    transfer/       # TransferForm, RecipientPicker, TransferConfirmation
-    cards/          # CardCarousel, CardActions
-    budget/         # SpendingChart, CategoryBreakdown
-    pay/            # QRCode, PaymentButton
-    bills/          # BillItem, RecurringSetup
-    exchange/       # CurrencyConverter, RateDisplay
-    notifications/  # NotificationItem, NotificationList
-    profile/        # ProfileForm, ThemeToggle
-  pages/            # 13 page files
-  styles/           # globals.css
-  types/            # TypeScript interfaces
-  data/             # Mock accounts, transactions, cards, etc.
-  hooks/            # useMediaQuery, useTheme, etc.
-  utils/            # Formatters (currency, date), helpers
+    atoms/            # BalanceCard, AccountCard, TransactionItem, etc.
+    molecules/        # QuickActions, TransferForm, CurrencyConverter, etc.
+    organisms/        # Sidebar, Header, BottomNav
+    templates/        # DashboardTemplate, AuthTemplate
+    RouteGuard.tsx    # Auth route protection
+  data/               # Mock data, navigation config
+  hooks/              # useMediaQuery, useTheme
+  lib/                # IndexedDB wrapper (db.ts)
+  providers/          # DataProvider, Providers, ToastProvider
+  styles/             # globals.css (Tailwind + DaisyUI)
+  types/              # TypeScript interfaces
+  utils/              # formatCurrency, formatDate, iconMap
+src-tauri/            # Tauri desktop (Rust)
+e2e/                  # Playwright E2E tests
 ```
-
-## Implementation Order
-
-1. Project setup (copy boilerplate, add dependencies)
-2. Layout + navigation (responsive sidebar/bottom nav)
-3. Login/Register (auth screens)
-4. Dashboard (home page)
-5. Accounts + Transactions
-6. Transfer
-7. Cards
-8. Budget/Analytics
-9. Pay/QR
-10. Bills/Recurring
-11. Currency/Exchange
-12. Notifications
-13. Profile + theme toggle
 
 ## Key Conventions
 
@@ -80,3 +84,4 @@ src/
 - DaisyUI component classes (`btn`, `card`, `input`, etc.)
 - Dark theme as default
 - `prettier-plugin-tailwindcss` for class sorting
+- Atomic design: atoms → molecules → organisms → templates

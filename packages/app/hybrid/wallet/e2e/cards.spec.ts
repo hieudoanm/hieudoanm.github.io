@@ -1,10 +1,14 @@
 import { test, expect } from '@playwright/test';
-import { waitForData } from './helpers';
+import { login, waitForData } from './helpers';
 
 test.describe('Cards page', () => {
-  test('renders all cards', async ({ page }) => {
+  test.beforeEach(async ({ page }) => {
+    await login(page);
     await page.goto('/cards');
     await waitForData(page);
+  });
+
+  test('renders all cards', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Cards' })).toBeVisible();
     await expect(page.getByText('Main Card').first()).toBeVisible();
     await expect(page.getByText('Business Card').first()).toBeVisible();
@@ -12,8 +16,6 @@ test.describe('Cards page', () => {
   });
 
   test('clicking card selects it and shows detail', async ({ page }) => {
-    await page.goto('/cards');
-    await waitForData(page);
     await page.getByText('Business Card').first().click();
     await expect(
       page.getByRole('heading', { name: 'Business Card' })
@@ -22,8 +24,6 @@ test.describe('Cards page', () => {
   });
 
   test('frozen card shows frozen badge', async ({ page }) => {
-    await page.goto('/cards');
-    await waitForData(page);
     await page.getByText('Travel Card').first().click();
     await expect(
       page

@@ -1,21 +1,21 @@
 'use client';
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { AuthTemplate } from '@/components/templates';
+import { useData } from '@/providers/DataProvider';
 import { FiUser, FiMail, FiLock } from 'react-icons/fi';
 
 export default function RegisterPage() {
-  const router = useRouter();
+  const { login } = useData();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [agreed, setAgreed] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    router.push('/');
+    await login(email, password);
   };
 
   return (

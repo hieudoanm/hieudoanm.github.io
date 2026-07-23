@@ -1,19 +1,19 @@
 'use client';
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { AuthTemplate } from '@/components/templates';
+import { useData } from '@/providers/DataProvider';
 import { FiMail, FiLock } from 'react-icons/fi';
 
 export default function LoginPage() {
-  const router = useRouter();
+  const { login } = useData();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    router.push('/');
+    await login(email, password);
   };
 
   return (

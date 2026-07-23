@@ -1,8 +1,13 @@
 import { test, expect } from '@playwright/test';
+import { login } from './helpers';
 
 test.describe('Transfer page', () => {
-  test('renders transfer form', async ({ page }) => {
+  test.beforeEach(async ({ page }) => {
+    await login(page);
     await page.goto('/transfer');
+  });
+
+  test('renders transfer form', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Transfer' })).toBeVisible();
     await expect(page.getByText('From Account')).toBeVisible();
     await expect(
@@ -13,7 +18,6 @@ test.describe('Transfer page', () => {
   });
 
   test('submitting form shows confirmation screen', async ({ page }) => {
-    await page.goto('/transfer');
     await page.getByPlaceholder('Recipient name or account').fill('John');
     await page.getByPlaceholder('0.00').fill('100');
     await page.getByRole('button', { name: /Continue/ }).click();
@@ -23,7 +27,6 @@ test.describe('Transfer page', () => {
   });
 
   test('cancel returns to form', async ({ page }) => {
-    await page.goto('/transfer');
     await page.getByPlaceholder('Recipient name or account').fill('John');
     await page.getByPlaceholder('0.00').fill('100');
     await page.getByRole('button', { name: /Continue/ }).click();
@@ -36,18 +39,13 @@ test.describe('Transfer page', () => {
     ).toBeVisible();
   });
 
-  test('confirm triggers alert and resets form', async ({ page }) => {
-    page.on('dialog', async (dialog) => {
-      expect(dialog.message()).toBe('Transfer successful!');
-      await dialog.accept();
-    });
-
-    await page.goto('/transfer');
+  test('confirm shows toast and resets form', async ({ page }) => {
     await page.getByPlaceholder('Recipient name or account').fill('John');
     await page.getByPlaceholder('0.00').fill('100');
     await page.getByRole('button', { name: /Continue/ }).click();
     await page.getByRole('button', { name: 'Confirm' }).click();
 
+    await expect(page.getByText('Transfer successful!')).toBeVisible();
     await expect(page.getByRole('heading', { name: 'Transfer' })).toBeVisible();
     await expect(
       page.getByPlaceholder('Recipient name or account')
@@ -55,7 +53,6 @@ test.describe('Transfer page', () => {
   });
 
   test('confirmation shows note when provided', async ({ page }) => {
-    await page.goto('/transfer');
     await page.getByPlaceholder('Recipient name or account').fill('John');
     await page.getByPlaceholder('0.00').fill('100');
     await page.getByPlaceholder("What's this for?").fill('Lunch');

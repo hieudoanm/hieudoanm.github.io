@@ -1,10 +1,14 @@
 import { test, expect } from '@playwright/test';
+import { login } from './helpers';
 
 test.describe('Sidebar navigation (desktop)', () => {
   test.use({ viewport: { width: 1280, height: 720 } });
 
+  test.beforeEach(async ({ page }) => {
+    await login(page);
+  });
+
   test('renders all navigation links', async ({ page }) => {
-    await page.goto('/');
     const sidebar = page.locator('aside');
     await expect(sidebar.getByText('Dashboard')).toBeVisible();
     await expect(sidebar.getByText('Accounts')).toBeVisible();
@@ -20,7 +24,6 @@ test.describe('Sidebar navigation (desktop)', () => {
   });
 
   test('sidebar links navigate to correct pages', async ({ page }) => {
-    await page.goto('/');
     const sidebar = page.locator('aside');
 
     await sidebar.getByText('Accounts').click();
@@ -44,7 +47,6 @@ test.describe('Sidebar navigation (desktop)', () => {
   });
 
   test('sidebar displays user info', async ({ page }) => {
-    await page.goto('/');
     const sidebar = page.locator('aside');
     await expect(sidebar.getByText('Alex Johnson')).toBeVisible();
     await expect(sidebar.getByText('alex@example.com')).toBeVisible();
@@ -54,8 +56,11 @@ test.describe('Sidebar navigation (desktop)', () => {
 test.describe('Bottom navigation (mobile)', () => {
   test.use({ viewport: { width: 375, height: 812 } });
 
+  test.beforeEach(async ({ page }) => {
+    await login(page);
+  });
+
   test('renders bottom nav items', async ({ page }) => {
-    await page.goto('/');
     const bottomNav = page.getByLabel('Bottom navigation');
     await expect(bottomNav.getByText('Home')).toBeVisible();
     await expect(bottomNav.getByText('Accounts')).toBeVisible();
@@ -65,7 +70,6 @@ test.describe('Bottom navigation (mobile)', () => {
   });
 
   test('bottom nav links navigate correctly', async ({ page }) => {
-    await page.goto('/');
     const bottomNav = page.getByLabel('Bottom navigation');
 
     await bottomNav.getByText('Pay').click();
@@ -86,8 +90,11 @@ test.describe('Bottom navigation (mobile)', () => {
 test.describe('Header (mobile)', () => {
   test.use({ viewport: { width: 375, height: 812 } });
 
+  test.beforeEach(async ({ page }) => {
+    await login(page);
+  });
+
   test('hamburger opens and closes menu', async ({ page }) => {
-    await page.goto('/');
     const menuButton = page.getByLabel('Open menu');
     await menuButton.click();
     await expect(page.getByLabel('Close menu')).toBeVisible();
@@ -100,14 +107,12 @@ test.describe('Header (mobile)', () => {
   });
 
   test('header menu items navigate correctly', async ({ page }) => {
-    await page.goto('/');
     await page.getByLabel('Open menu').click();
     await page.getByRole('menuitem', { name: 'Profile' }).click();
     await expect(page).toHaveURL(/\/profile/);
   });
 
   test('notifications bell navigates to notifications', async ({ page }) => {
-    await page.goto('/');
     await page.getByLabel('Notifications').click();
     await expect(page).toHaveURL(/\/notifications/);
   });
