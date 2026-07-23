@@ -9,3 +9,9 @@ export { default as BillItem } from './BillItem';
 export { default as NotificationItem } from './NotificationItem';
 export { default as UserCard } from './UserCard';
 export { default as RateItem } from './RateItem';
+export {
+  default as Skeleton,
+  SkeletonText,
+  SkeletonCircle,
+  SkeletonCard,
+} from './Skeleton';

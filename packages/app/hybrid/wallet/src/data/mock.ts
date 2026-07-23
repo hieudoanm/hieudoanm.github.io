@@ -17,6 +17,7 @@ export const user: User = {
   country: 'United States',
   timezone: 'America/New_York (EST)',
   avatar: '',
+  currency: 'USD',
 };
 
 export const accounts: Account[] = [

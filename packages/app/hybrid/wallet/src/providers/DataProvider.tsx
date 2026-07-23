@@ -44,6 +44,8 @@ interface DataContextValue {
 
   login: (email: string, password: string) => Promise<boolean>;
   logout: () => void;
+  forgotPassword: (email: string) => Promise<boolean>;
+  resetPassword: (token: string, newPassword: string) => Promise<boolean>;
   updateUser: (user: User) => Promise<void>;
   updateAccount: (account: Account) => Promise<void>;
   addAccount: (account: Account) => Promise<void>;
@@ -155,6 +157,21 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
     localStorage.removeItem('wallet-auth');
     setIsAuthenticated(false);
   }, []);
+
+  const forgotPassword = useCallback(async (email: string) => {
+    console.log('[DataProvider] forgotPassword', { email });
+    if (!email) return false;
+    return true;
+  }, []);
+
+  const resetPassword = useCallback(
+    async (token: string, _newPassword: string) => {
+      console.log('[DataProvider] resetPassword', { token });
+      if (!token) return false;
+      return true;
+    },
+    []
+  );
 
   const updateUser = useCallback(async (updated: User) => {
     console.log('[DataProvider] updateUser', updated.id);
@@ -271,6 +288,8 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
         isAuthenticated,
         login,
         logout,
+        forgotPassword,
+        resetPassword,
         updateUser,
         updateAccount,
         addAccount,

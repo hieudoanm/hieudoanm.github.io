@@ -52,12 +52,13 @@ const timezones = [
 ];
 
 const ProfileForm: FC = () => {
-  const { user, updateUser } = useData();
+  const { user, updateUser, currencyRates } = useData();
   const { showToast } = useToast();
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [country, setCountry] = useState('');
   const [timezone, setTimezone] = useState('');
+  const [currency, setCurrency] = useState('');
 
   useEffect(() => {
     if (user) {
@@ -65,6 +66,7 @@ const ProfileForm: FC = () => {
       setEmail(user.email);
       setCountry(user.country);
       setTimezone(user.timezone);
+      setCurrency(user.currency);
     }
   }, [user]);
 
@@ -74,10 +76,11 @@ const ProfileForm: FC = () => {
     phone !== user.phone ||
     email !== user.email ||
     country !== user.country ||
-    timezone !== user.timezone;
+    timezone !== user.timezone ||
+    currency !== user.currency;
 
   const handleSave = async () => {
-    await updateUser({ ...user, phone, email, country, timezone });
+    await updateUser({ ...user, phone, email, country, timezone, currency });
     showToast('Changes saved successfully!', 'success');
   };
 
@@ -133,6 +136,20 @@ const ProfileForm: FC = () => {
               {timezones.map((tz) => (
                 <option key={tz} value={tz}>
                   {tz}
+                </option>
+              ))}
+            </select>
+          </label>
+
+          <label className="floating-label">
+            <span>Default Currency</span>
+            <select
+              className="select select-bordered w-full"
+              value={currency}
+              onChange={(e) => setCurrency(e.target.value)}>
+              {currencyRates.map((r) => (
+                <option key={r.code} value={r.code}>
+                  {r.code} — {r.name} ({r.symbol})
                 </option>
               ))}
             </select>

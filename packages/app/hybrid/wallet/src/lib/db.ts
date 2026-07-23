@@ -1,5 +1,6 @@
 const DB_NAME = 'wallet-db';
 const DB_VERSION = 1;
+const MOCK_DELAY = Number(process.env.NEXT_PUBLIC_MOCK_DELAY ?? '800');
 
 const STORES = {
   accounts: 'accounts',
@@ -15,6 +16,9 @@ const STORES = {
 type StoreName = (typeof STORES)[keyof typeof STORES];
 
 let dbInstance: IDBDatabase | null = null;
+
+const delay = (ms: number): Promise<void> =>
+  new Promise((resolve) => setTimeout(resolve, ms));
 
 const openDB = (): Promise<IDBDatabase> => {
   console.log('[db] openDB', { DB_NAME, DB_VERSION });
@@ -48,6 +52,7 @@ const openDB = (): Promise<IDBDatabase> => {
 
 const getAll = async <T>(storeName: StoreName): Promise<T[]> => {
   console.log('[db] getAll', storeName);
+  await delay(MOCK_DELAY);
   const db = await openDB();
   return new Promise((resolve, reject) => {
     const tx = db.transaction(storeName, 'readonly');
@@ -66,6 +71,7 @@ const getAll = async <T>(storeName: StoreName): Promise<T[]> => {
 
 const put = async <T>(storeName: StoreName, data: T): Promise<void> => {
   console.log('[db] put', storeName, data);
+  await delay(MOCK_DELAY);
   const db = await openDB();
   return new Promise((resolve, reject) => {
     const tx = db.transaction(storeName, 'readwrite');
@@ -81,6 +87,7 @@ const put = async <T>(storeName: StoreName, data: T): Promise<void> => {
 
 const putAll = async <T>(storeName: StoreName, data: T[]): Promise<void> => {
   console.log('[db] putAll', storeName, data.length);
+  await delay(MOCK_DELAY);
   const db = await openDB();
   return new Promise((resolve, reject) => {
     const tx = db.transaction(storeName, 'readwrite');
@@ -96,6 +103,7 @@ const putAll = async <T>(storeName: StoreName, data: T[]): Promise<void> => {
 
 const count = async (storeName: StoreName): Promise<number> => {
   console.log('[db] count', storeName);
+  await delay(MOCK_DELAY);
   const db = await openDB();
   return new Promise((resolve, reject) => {
     const tx = db.transaction(storeName, 'readonly');

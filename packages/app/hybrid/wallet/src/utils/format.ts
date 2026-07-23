@@ -30,6 +30,24 @@ export const formatRelativeDate = (dateString: string): string => {
   return formatDate(dateString);
 };
 
+export const formatDateTime = (dateString: string): string => {
+  const date = new Date(dateString);
+  return new Intl.DateTimeFormat('en-US', {
+    month: 'short',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit',
+    hour12: true,
+  }).format(date);
+};
+
+export const toDateString = (date: Date): string => {
+  const y = date.getFullYear();
+  const m = String(date.getMonth() + 1).padStart(2, '0');
+  const d = String(date.getDate()).padStart(2, '0');
+  return `${y}-${m}-${d}`;
+};
+
 export const maskCardNumber = (number: string): string => {
   const cleaned = number.replace(/\s/g, '');
   return `•••• •••• •••• ${cleaned.slice(-4)}`;

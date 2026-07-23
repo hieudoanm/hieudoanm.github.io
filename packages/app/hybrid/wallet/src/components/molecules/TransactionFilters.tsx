@@ -1,19 +1,30 @@
-import { FC } from 'react';
-import { FiSearch } from 'react-icons/fi';
+import { FC, useState } from 'react';
+import { FiSearch, FiCalendar, FiX } from 'react-icons/fi';
 
 interface TransactionFiltersProps {
   search: string;
   filter: 'all' | 'income' | 'expense';
+  dateFrom: string;
+  dateTo: string;
   onSearchChange: (value: string) => void;
   onFilterChange: (value: 'all' | 'income' | 'expense') => void;
+  onDateFromChange: (value: string) => void;
+  onDateToChange: (value: string) => void;
 }
 
 const TransactionFilters: FC<TransactionFiltersProps> = ({
   search,
   filter,
+  dateFrom,
+  dateTo,
   onSearchChange,
   onFilterChange,
+  onDateFromChange,
+  onDateToChange,
 }) => {
+  const [showDateFilter, setShowDateFilter] = useState(false);
+  const hasDateFilter = dateFrom || dateTo;
+
   return (
     <>
       <div className="relative">
@@ -27,7 +38,7 @@ const TransactionFilters: FC<TransactionFiltersProps> = ({
         />
       </div>
 
-      <div className="flex gap-2">
+      <div className="flex flex-wrap gap-2">
         {(['all', 'income', 'expense'] as const).map((f) => (
           <button
             key={f}
@@ -36,7 +47,47 @@ const TransactionFilters: FC<TransactionFiltersProps> = ({
             {f.charAt(0).toUpperCase() + f.slice(1)}
           </button>
         ))}
+
+        <button
+          className={`btn btn-sm gap-1 ${hasDateFilter ? 'btn-primary' : 'btn'}`}
+          onClick={() => setShowDateFilter(!showDateFilter)}>
+          <FiCalendar className="text-sm" />
+          Date
+          {hasDateFilter && (
+            <FiX
+              className="ml-1 text-xs"
+              onClick={(e) => {
+                e.stopPropagation();
+                onDateFromChange('');
+                onDateToChange('');
+              }}
+            />
+          )}
+        </button>
       </div>
+
+      {showDateFilter && (
+        <div className="bg-base-200 flex flex-wrap items-center gap-3 rounded-lg p-3">
+          <label className="floating-label">
+            <span>From</span>
+            <input
+              type="date"
+              className="input input-bordered input-sm"
+              value={dateFrom}
+              onChange={(e) => onDateFromChange(e.target.value)}
+            />
+          </label>
+          <label className="floating-label">
+            <span>To</span>
+            <input
+              type="date"
+              className="input input-bordered input-sm"
+              value={dateTo}
+              onChange={(e) => onDateToChange(e.target.value)}
+            />
+          </label>
+        </div>
+      )}
     </>
   );
 };

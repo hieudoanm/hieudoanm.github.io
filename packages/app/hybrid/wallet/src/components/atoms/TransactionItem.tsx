@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import type { Transaction } from '@/types';
-import { formatCurrency, formatRelativeDate } from '@/utils/format';
+import { formatCurrency, formatDateTime } from '@/utils/format';
 import { getTransactionIcon } from '@/utils/iconMap';
 
 interface TransactionItemProps {
@@ -10,7 +10,7 @@ interface TransactionItemProps {
 
 const TransactionItem: FC<TransactionItemProps> = ({
   transaction: tx,
-  showDate = false,
+  showDate = true,
 }) => {
   const Icon = getTransactionIcon(tx.category);
 
@@ -22,7 +22,7 @@ const TransactionItem: FC<TransactionItemProps> = ({
           <p className="font-medium">{tx.title}</p>
           <p className="text-base-content/60 text-xs">
             {tx.category}
-            {showDate && ` · ${formatRelativeDate(tx.date)}`}
+            {showDate && ` · ${formatDateTime(tx.date)}`}
           </p>
         </div>
       </div>
@@ -34,11 +34,6 @@ const TransactionItem: FC<TransactionItemProps> = ({
           {tx.amount >= 0 ? '+' : ''}
           {formatCurrency(tx.amount)}
         </p>
-        {showDate && (
-          <p className="text-base-content/60 text-xs">
-            {formatRelativeDate(tx.date)}
-          </p>
-        )}
       </div>
     </div>
   );

@@ -6,6 +6,7 @@ export interface User {
   country: string;
   timezone: string;
   avatar: string;
+  currency: string;
 }
 
 export interface Account {

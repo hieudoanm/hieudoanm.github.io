@@ -4,7 +4,12 @@ import { useEffect } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import { useData } from '@/providers/DataProvider';
 
-const PUBLIC_ROUTES = ['/login', '/register'];
+const PUBLIC_ROUTES = [
+  '/login',
+  '/register',
+  '/forgot-password',
+  '/reset-password',
+];
 
 export const RouteGuard = ({ children }: { children: React.ReactNode }) => {
   const { isAuthenticated } = useData();
