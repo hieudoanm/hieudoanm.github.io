@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { AuthTemplate } from '@/components/templates';
 import { useData } from '@/providers/DataProvider';
 import { useToast } from '@/providers/ToastProvider';
@@ -10,6 +11,7 @@ import { FiUser, FiMail, FiLock } from 'react-icons/fi';
 const RegisterPage = () => {
   const { login, updateUser, user } = useData();
   const { showToast } = useToast();
+  const router = useRouter();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -18,11 +20,12 @@ const RegisterPage = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     console.log('[RegisterPage] submit', { name, email });
-    await login(email, password);
-    if (user) {
+    const ok = await login(email, password);
+    if (ok && user) {
       await updateUser({ ...user, name: name.trim(), email });
     }
     showToast('Account created successfully!', 'success');
+    router.replace('/');
   };
 
   return (

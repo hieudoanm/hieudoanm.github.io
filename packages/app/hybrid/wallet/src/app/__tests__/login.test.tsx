@@ -1,13 +1,14 @@
 import { render, screen } from '@testing-library/react';
 import { DataProvider } from '@/providers/DataProvider';
 import { ToastProvider } from '@/providers/ToastProvider';
-import LoginPage from '@/app/login/page';
+import LoginPage from '@/app/(auth)/login/page';
 
 jest.mock('next/navigation', () => ({
   useRouter: () => ({
     replace: jest.fn(),
     push: jest.fn(),
   }),
+  usePathname: jest.fn().mockReturnValue('/login'),
 }));
 
 jest.mock('next/link', () => {

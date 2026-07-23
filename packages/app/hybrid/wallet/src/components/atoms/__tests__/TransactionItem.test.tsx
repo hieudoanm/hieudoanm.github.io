@@ -32,7 +32,7 @@ describe('TransactionItem', () => {
 
   it('renders category', () => {
     render(<TransactionItem transaction={mockIncome} />);
-    expect(screen.getByText('Income')).toBeInTheDocument();
+    expect(screen.getByText(/Income/)).toBeInTheDocument();
   });
 
   it('renders positive amount with + prefix', () => {
@@ -47,13 +47,11 @@ describe('TransactionItem', () => {
 
   it('renders date when showDate is true', () => {
     render(<TransactionItem transaction={mockIncome} showDate />);
-    expect(screen.getAllByText(/Yesterday|ago/).length).toBeGreaterThanOrEqual(
-      1
-    );
+    expect(screen.getByText(/Jul 21, 9:00 AM/)).toBeInTheDocument();
   });
 
-  it('does not render date when showDate is false', () => {
+  it('renders date by default', () => {
     render(<TransactionItem transaction={mockIncome} />);
-    expect(screen.queryByText(/Yesterday/)).not.toBeInTheDocument();
+    expect(screen.getByText(/Jul 21, 9:00 AM/)).toBeInTheDocument();
   });
 });

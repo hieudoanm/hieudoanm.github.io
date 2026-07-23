@@ -11,18 +11,38 @@
   - [Development](#development)
     - [Key Conventions](#key-conventions)
     - [Features](#features)
-      - [Authentication \& Security](#authentication--security)
-      - [Data \& Persistence](#data--persistence)
-      - [UI \& Theming](#ui--theming)
-      - [Navigation \& Routing](#navigation--routing)
-      - [Transactions](#transactions)
-      - [Cards](#cards)
-      - [Budget \& Bills](#budget--bills)
-      - [Exchange](#exchange)
-      - [Pay \& QR](#pay--qr)
-      - [Notifications](#notifications)
-      - [Profile \& Settings](#profile--settings)
-      - [Code Quality](#code-quality)
+      - [Business Features](#business-features)
+        - [Authentication \& Security](#authentication--security)
+        - [Transactions](#transactions)
+        - [Reports](#reports)
+        - [Cards](#cards)
+        - [Card Rewards](#card-rewards)
+        - [Budget \& Bills](#budget--bills)
+        - [Exchange](#exchange)
+        - [Pay \& QR](#pay--qr)
+        - [Notifications](#notifications)
+        - [Contacts](#contacts)
+        - [Payment Requests](#payment-requests)
+        - [Split Bill](#split-bill)
+        - [Recurring Transfers](#recurring-transfers)
+        - [Currency Alerts](#currency-alerts)
+        - [Loans](#loans)
+        - [Fixed Deposits](#fixed-deposits)
+        - [Recurring Deposits](#recurring-deposits)
+        - [Savings Goals](#savings-goals)
+        - [Insurance](#insurance)
+        - [Profile \& Settings](#profile--settings)
+      - [Technical Features](#technical-features)
+        - [Data \& Persistence](#data--persistence)
+        - [UI \& Theming](#ui--theming)
+        - [Navigation \& Routing](#navigation--routing)
+        - [Code Quality](#code-quality)
+        - [Haptic Feedback](#haptic-feedback)
+        - [Pull-to-Refresh](#pull-to-refresh)
+        - [Infinite Scroll](#infinite-scroll)
+        - [Page Transitions](#page-transitions)
+        - [Offline Support](#offline-support)
+        - [Accessibility](#accessibility)
   - [Design](#design)
     - [UX for Mobile](#ux-for-mobile)
       - [Layout](#layout)
@@ -37,10 +57,11 @@
     - [Product Roadmap](#product-roadmap)
       - [Phase 1 — Core UI ✅](#phase-1--core-ui-)
       - [Phase 2 — Enhanced UX](#phase-2--enhanced-ux)
-      - [Phase 3 — Data \& Analytics](#phase-3--data--analytics)
-      - [Phase 4 — Social \& Payments](#phase-4--social--payments)
-      - [Phase 5 — Security \& Compliance](#phase-5--security--compliance)
-      - [Phase 6 — Platform \& Integration](#phase-6--platform--integration)
+      - [Phase 3 — Data \& Analytics ✅](#phase-3--data--analytics-)
+      - [Phase 4 — Social \& Payments ✅](#phase-4--social--payments-)
+      - [Phase 5 — Bank Products](#phase-5--bank-products)
+      - [Phase 6 — Security \& Compliance](#phase-6--security--compliance)
+      - [Phase 7 — Platform \& Integration](#phase-7--platform--integration)
 
 ---
 
@@ -48,11 +69,11 @@
 
 ### Tech Stack
 
-1. **pnpm**
-2. **ESLint**
-3. **Prettier**
-4. **Jest**
-5. **Playwright**
+1. **pnpm** (always pin dependencies version)
+2. **ESLint** (with next)
+3. **Prettier** (with tailwindcss)
+4. **Jest** (coverage >= 80%)
+5. **Playwright** (coverage all page level)
 6. **Next.js 16** (App Router, static export)
 7. **TypeScript 6** (strict mode)
 8. **Tailwind CSS 4** + **DaisyUI 5** (32 themes, dark default)
@@ -61,24 +82,36 @@
 
 ### Pages
 
-| #   | Route               | Page             | Key Features                                                     |
-| --- | ------------------- | ---------------- | ---------------------------------------------------------------- |
-| 1   | `/login`            | Login            | Email/password form, social login buttons                        |
-| 2   | `/register`         | Register         | Sign up form, terms checkbox                                     |
-| 3   | `/`                 | Dashboard        | Total balance, account cards, quick actions, recent transactions |
-| 4   | `/accounts`         | Accounts         | List of accounts (checking, savings, credit), filter by type     |
-| 5   | `/transactions`     | Transactions     | Filterable transaction list, search, income/expense filter       |
-| 6   | `/transfer`         | Transfer         | Send money form, recipient selection, amount input, confirmation |
-| 7   | `/cards`            | Cards            | Card carousel, freeze/unfreeze, card details                     |
-| 8   | `/budget`           | Budget           | Spending by category, budget summary                             |
-| 9   | `/pay`              | Pay / QR         | QR code display/scanner, quick pay form                          |
-| 10  | `/bills`            | Bills            | Recurring bill list, total due summary                           |
-| 11  | `/exchange`         | Exchange         | Multi-currency converter, exchange rate list                     |
-| 12  | `/notifications`    | Notifications    | Filterable alerts (All/Unread/Alerts)                            |
-| 13  | `/profile`          | Profile          | User info, settings, theme picker, sign out                      |
-| 14  | `/help-support`     | Help & Support   | Contact options, FAQ, resources                                  |
-| 15  | `/terms-of-service` | Terms of Service | Legal text                                                       |
-| 16  | `/privacy-policy`   | Privacy Policy   | Legal text                                                       |
+| #   | Route                 | Page               | Key Features                                                     |
+| --- | --------------------- | ------------------ | ---------------------------------------------------------------- |
+| 1   | `/login`              | Login              | Email/password form, social login buttons                        |
+| 2   | `/register`           | Register           | Sign up form, terms checkbox                                     |
+| 3   | `/`                   | Dashboard          | Total balance, account cards, quick actions, recent transactions |
+| 4   | `/accounts`           | Accounts           | List of accounts (checking, savings, credit), filter by type     |
+| 5   | `/transactions`       | Transactions       | Filterable transaction list, search, income/expense filter       |
+| 6   | `/reports`            | Reports            | Spending charts, income/expense comparison, export (CSV/PDF)     |
+| 7   | `/transfer`           | Transfer           | Send money form, recipient selection, amount input, confirmation |
+| 8   | `/contacts`           | Contacts           | Contact list, add/edit contacts, send money                      |
+| 9   | `/payment-requests`   | Payment Requests   | Incoming/outgoing requests, status tracking                      |
+| 10  | `/split-bill`         | Split Bill         | Equal or custom split with contacts                              |
+| 11  | `/cards`              | Cards              | Card carousel, spending limits, freeze/unfreeze, card actions    |
+| 12  | `/pay`                | Pay / QR           | QR code display/scanner, quick pay form                          |
+| 13  | `/budget`             | Budget             | Spending by category, budget summary                             |
+| 14  | `/bills`              | Bills              | Recurring bill list, total due summary                           |
+| 15  | `/recurring`          | Recurring          | Auto-pay setup, pause/resume, frequency control                  |
+| 16  | `/currency-alerts`    | Currency Alerts    | Rate threshold alerts, above/below triggers                      |
+| 17  | `/exchange`           | Exchange           | Multi-currency converter, exchange rate list                     |
+| 18  | `/notifications`      | Notifications      | Filterable alerts (All/Unread/Alerts)                            |
+| 19  | `/profile`            | Profile            | User info, settings, theme picker, sign out                      |
+| 20  | `/help-support`       | Help & Support     | Contact options, FAQ, resources                                  |
+| 21  | `/terms-of-service`   | Terms of Service   | Legal text                                                       |
+| 22  | `/privacy-policy`     | Privacy Policy     | Legal text                                                       |
+| 23  | `/loans`              | Loans              | Loan products, apply flow, EMI calculator, repayment schedule    |
+| 24  | `/loans/apply`        | Loan Application   | Multi-step form: personal → financial → review → submit          |
+| 25  | `/fixed-deposits`     | Fixed Deposits     | FD products, interest calculator, maturity tracking              |
+| 26  | `/recurring-deposits` | Recurring Deposits | RD products, monthly deposit tracker, maturity forecast          |
+| 27  | `/savings-goals`      | Savings Goals      | Goal-based saving, progress tracking, target amounts             |
+| 28  | `/insurance`          | Insurance          | Insurance products, coverage summary, claim status               |
 
 ### File Structure
 
@@ -122,7 +155,9 @@ e2e/                  # Playwright E2E tests
 
 ### Features
 
-#### Authentication & Security
+#### Business Features
+
+##### Authentication & Security
 
 - **Email/password auth**: Mock authentication via localStorage; any non-empty
   email passes in development
@@ -135,7 +170,193 @@ e2e/                  # Playwright E2E tests
 - **Biometric toggle**: UI toggle on Settings page (mock — persists preference
   to localStorage)
 
-#### Data & Persistence
+##### Transactions
+
+- **Search**: Real-time text filter across transaction titles
+- **Type filter**: All / Income / Expense chip toggles
+- **Date range filter**: Expandable From/To date pickers; clears via `FiX` on
+  filter button
+- **Category filter**: Dropdown to filter by transaction category
+- **Amount range filter**: Min/max amount inputs for precise filtering
+- **DateTime display**: Each transaction shows category + formatted date/time
+  (e.g., "Jul 22, 10:30 AM")
+- **Export**: CSV download and PDF print for filtered transaction lists
+
+##### Reports
+
+- **Spending by category**: Donut chart (recharts PieChart) showing spending
+  distribution across budget categories
+- **Spending over time**: Line chart showing daily income vs expense trends
+- **Income vs expense**: Bar chart comparing total income and expenses
+- **Category breakdown**: Sorted list with progress bars and percentages
+- **Income sources**: Detailed list of all income transactions
+- **Daily summary**: Table with per-day income, expense, and net amounts
+- **Overview tab**: Summary cards (income, expenses, net) with charts
+
+##### Cards
+
+- **Card carousel**: Horizontal scroll with `overflow-x-auto` for card
+  thumbnails; each card shows spending progress bar inline
+- **Card type badge**: Visa / Mastercard / Amex labels on each card
+- **Spending tracker**: Per-card progress bar with spent/limit, percentage,
+  remaining amount; warning at ≥80% usage
+- **Freeze/unfreeze**: Toggle card frozen state with toast confirmation; frozen
+  badge on card thumbnail
+- **Card detail view**: Cardholder name, expiry, status indicator, available
+  balance
+- **Card actions**: Expandable panel — Freeze/Unfreeze, Change PIN, Report
+  Lost/Stolen, Replace Card
+- **Summary stats**: Total cards, total spent, total limit, remaining credit
+  across all cards
+- **Recent transactions**: Last 5 expense transactions shown alongside card
+  detail
+
+##### Card Rewards
+
+- **Cashback tracking**: Per-card cashback earned this month and YTD
+- **Reward points**: Points balance, earn rate per card, redemption value
+- **Tier status**: Card tier (Standard, Gold, Platinum, Black) with benefits
+- **Reward catalog**: Browse and redeem points for gift cards, travel, or
+  statement credits
+
+##### Budget & Bills
+
+- **Budget summary**: Total spent vs. total limit progress bar
+- **Category cards**: Individual spending tracking per category with progress
+- **Bill management**: Recurring bill list with paid/unpaid status; mark as
+  paid; add new bill modal
+- **Total due**: Warning card showing aggregate unpaid amount
+
+##### Exchange
+
+- **Currency calculator**: Convert between 58 currencies with live rate
+  calculation; swap button for quick reversal
+- **Rate list**: Full list of all currency rates with code, name, symbol
+
+##### Pay & QR
+
+- **QR code generation**: `qrcode.react` library; theme-aware (`currentColor`)
+  for dark/light mode compatibility
+- **Camera scanning**: `getUserMedia` API for real camera access;
+  tap-to-simulate fallback; stream cleanup on unmount
+- **Quick pay form**: Amount input with instant submit
+
+##### Notifications
+
+- **Filter tabs**: All / Unread / Alerts with unread count badge
+- **Mark as read**: Click to mark individual notifications; persisted to DB
+
+##### Contacts
+
+- **Contact list**: Avatar, name, email with frequently-used star indicator
+- **Add contact**: Modal form with name, email, optional phone
+- **Quick send**: Direct link to transfer page with pre-filled recipient
+
+##### Payment Requests
+
+- **Incoming requests**: Requests from contacts with accept/pending status
+- **Outgoing requests**: Requests you've sent to contacts
+- **Status tracking**: Pending, completed, failed with visual indicators
+
+##### Split Bill
+
+- **Equal split**: Divide total equally among selected contacts
+- **Custom amounts**: Assign specific amounts per contact
+- **Your share**: Real-time calculation of your portion
+- **Contact selection**: Toggle contacts with visual checkmarks
+
+##### Recurring Transfers
+
+- **Auto-pay setup**: Weekly, monthly, or yearly frequency
+- **Pause/resume**: Toggle active state without deleting
+- **Next due date**: Display upcoming payment dates
+- **Account selection**: Choose source account for transfers
+
+##### Currency Alerts
+
+- **Rate threshold alerts**: Get notified when rates cross targets
+- **Above/below direction**: Trigger on rate increase or decrease
+- **Current rate display**: Show live rate alongside alert target
+- **Toggle active**: Pause/resume alerts without deleting
+
+##### Loans
+
+- **Loan products**: Personal loan, auto loan, home loan, education loan
+- **EMI calculator**: Slider-based — loan amount, interest rate, tenure; shows
+  monthly EMI, total interest, total cost
+- **Apply flow**: Multi-step form — personal info → employment details → loan
+  specifics → document upload → review & submit
+- **Loan status dashboard**: Active loans with outstanding balance, EMI due
+  date, next payment amount
+- **Repayment schedule**: Month-by-month amortization table with principal,
+  interest, and balance breakdown
+- **Prepayment calculator**: Show savings from prepaying lump sum; partial vs
+  full prepayment comparison
+- **Loan comparison**: Side-by-side comparison of available loan products with
+  rates, tenure, and processing fees
+
+##### Fixed Deposits
+
+- **FD products**: List of available FD schemes with tenure and interest rates
+  (e.g., 6 months, 1 year, 3 years, 5 years)
+- **Interest calculator**: Deposit amount + tenure → maturity amount, total
+  interest earned, effective annual rate
+- **FD management**: Active deposits with maturity date, interest earned,
+  auto-renewal toggle
+- **Maturity tracking**: Timeline view of upcoming maturities with reinvest or
+  withdraw options
+- **FD vs RD comparison**: Side-by-side tool comparing fixed vs recurring
+  deposit returns for same amount/tenure
+
+##### Recurring Deposits
+
+- **RD products**: Monthly deposit schemes with interest rates
+- **Deposit tracker**: Monthly deposit history with paid/upcoming/missed status
+  indicators
+- **Maturity forecast**: Projected maturity amount based on current deposit rate
+  and remaining months
+- **Auto-debit setup**: Link RD to checking account for automatic monthly
+  deductions
+- **Missed deposit alert**: Notification when a monthly deposit is missed with
+  option to catch up
+
+##### Savings Goals
+
+- **Goal creation**: Name, target amount, target date, category (vacation,
+  emergency fund, education, wedding, custom)
+- **Progress tracking**: Circular progress indicator per goal with percentage
+  and remaining amount
+- **Auto-save rules**: Set up automatic transfers (weekly, monthly) to goals
+  from checking account
+- **Milestone celebrations**: Visual feedback at 25%, 50%, 75%, 100% completion
+- **Goal priority**: Rank goals by priority; smart allocation suggests how to
+  split savings
+- **Withdraw from goal**: Move funds back to checking with reason tracking
+
+##### Insurance
+
+- **Product catalog**: Life, health, auto, home insurance with coverage amounts
+  and monthly premiums
+- **Coverage summary**: Total insured amount, active policies, next premium due
+  dates
+- **Claim status**: Filed claims with status tracking (submitted, under review,
+  approved, denied)
+- **Premium payments**: Pay insurance premiums from wallet balance; auto-pay
+  setup
+- **Policy renewal**: Upcoming renewals with renewal amount and one-tap renewal
+- **Beneficiary management**: Add/edit beneficiaries for life insurance policies
+
+##### Profile & Settings
+
+- **User info**: Avatar, name, email display via `UserCard`
+- **Profile form**: Edit phone, email, country, timezone, default currency (58
+  currencies from rate data)
+- **Settings page**: Dark mode, push notifications, biometric, language
+  selector, theme picker, help/legal links
+
+#### Technical Features
+
+##### Data & Persistence
 
 - **IndexedDB storage**: All entities (users, accounts, transactions, cards,
   bills, budgets, notifications, rates) stored in `wallet-db`
@@ -148,7 +369,7 @@ e2e/                  # Playwright E2E tests
 - **CRUD operations**: Full create/read/update for accounts, transactions,
   cards, bills, budget categories; mark-as-read for notifications
 
-#### UI & Theming
+##### UI & Theming
 
 - **32 DaisyUI themes**: Dark/light toggle with visual theme picker; persisted
   to `data-theme` attribute and localStorage
@@ -159,7 +380,7 @@ e2e/                  # Playwright E2E tests
 - **Responsive layout**: Bottom tab nav (5 items, icon-above-text) on mobile;
   grouped sidebar nav on desktop; breakpoints at `md:` (768px)
 
-#### Navigation & Routing
+##### Navigation & Routing
 
 - **Route groups**: Pages organized into `(dashboard)`, `(auth)`, `(profile)`,
   `(settings)` — URLs unaffected, code logically grouped
@@ -171,58 +392,7 @@ e2e/                  # Playwright E2E tests
 - **Back navigation**: Consistent `FiArrowLeft` +
   `btn-neutral btn-sm btn-circle` on all sub-pages
 
-#### Transactions
-
-- **Search**: Real-time text filter across transaction titles
-- **Type filter**: All / Income / Expense chip toggles
-- **Date range filter**: Expandable From/To date pickers; clears via `FiX` on
-  filter button
-- **DateTime display**: Each transaction shows category + formatted date/time
-  (e.g., "Jul 22, 10:30 AM")
-
-#### Cards
-
-- **Card carousel**: Horizontal scroll with `overflow-x-auto` for card
-  thumbnails
-- **Freeze/unfreeze**: Toggle card frozen state with toast confirmation
-- **Card details**: Masked card number, expiry, type badge
-
-#### Budget & Bills
-
-- **Budget summary**: Total spent vs. total limit progress bar
-- **Category cards**: Individual spending tracking per category with progress
-- **Bill management**: Recurring bill list with paid/unpaid status; mark as
-  paid; add new bill modal
-- **Total due**: Warning card showing aggregate unpaid amount
-
-#### Exchange
-
-- **Currency calculator**: Convert between 58 currencies with live rate
-  calculation; swap button for quick reversal
-- **Rate list**: Full list of all currency rates with code, name, symbol
-
-#### Pay & QR
-
-- **QR code generation**: `qrcode.react` library; theme-aware (`currentColor`)
-  for dark/light mode compatibility
-- **Camera scanning**: `getUserMedia` API for real camera access;
-  tap-to-simulate fallback; stream cleanup on unmount
-- **Quick pay form**: Amount input with instant submit
-
-#### Notifications
-
-- **Filter tabs**: All / Unread / Alerts with unread count badge
-- **Mark as read**: Click to mark individual notifications; persisted to DB
-
-#### Profile & Settings
-
-- **User info**: Avatar, name, email display via `UserCard`
-- **Profile form**: Edit phone, email, country, timezone, default currency (58
-  currencies from rate data)
-- **Settings page**: Dark mode, push notifications, biometric, language
-  selector, theme picker, help/legal links
-
-#### Code Quality
+##### Code Quality
 
 - **Arrow functions**: All function declarations and component exports use arrow
   syntax; test files excluded
@@ -230,6 +400,57 @@ e2e/                  # Playwright E2E tests
   stripped from production via `compiler.removeConsole`
 - **Testing**: Jest (unit) + Playwright (E2E) framework ready
 - **Atomic design**: atoms → molecules → organisms → templates hierarchy
+
+##### Haptic Feedback
+
+- **`useHaptic()` hook**: Wraps `navigator.vibrate()` with named patterns: light
+  (10ms), medium (20ms), heavy (40ms), success (two pulses), error (long burst)
+- **Transfer confirmation**: Success vibration on completed transfer
+- **Payment sent**: Success vibration on QR scan and quick pay submit
+- **Swipe actions**: Light vibration on swipe reveal of delete/archive buttons
+
+##### Pull-to-Refresh
+
+- **`usePullToRefresh()` hook**: Touch event handlers tracking vertical drag
+  distance; configurable threshold (default 80px)
+- **Visual indicator**: Rotating `FiLoader` icon with opacity fade-in
+- **Transaction list**: Pull down triggers reload, resets visible count, shows
+  "Transactions refreshed" toast
+
+##### Infinite Scroll
+
+- **IntersectionObserver sentinel**: 200px root margin triggers load before user
+  reaches bottom
+- **Batch loading**: 10 items per page (`PAGE_SIZE`), appended to visible list
+- **Loading indicator**: Spinner below visible items during fetch
+- **End state**: "All transactions loaded" message when all filtered items shown
+
+##### Page Transitions
+
+- **`PageTransition` component**: Framer Motion wrapper with fade + slide-up
+  variants (opacity 0→1, y 12→0, 200ms ease-out)
+- **Applied via `DashboardTemplate`**: All authenticated pages receive smooth
+  transitions on route change
+
+##### Offline Support
+
+- **`OfflineBanner`**: Fixed top banner using `AnimatePresence` for enter/exit
+  transitions; listens to `online`/`offline` events
+- **Service worker**: Cache-first strategy for static assets; stale-while-
+  revalidate for navigation; `CACHE_NAME` versioned for cache busting
+- **PWA manifest**: Standalone display, portrait orientation, dark background,
+  installable to home screen
+
+##### Accessibility
+
+- **Focus-visible**: Global `focus-visible:outline-primary` on buttons, links,
+  inputs, selects, textareas
+- **Skip to content**: Hidden link appears on Tab focus; jumps to
+  `#main-content` landmark
+- **ARIA labels**: BottomNav, Sidebar, Header menu, notification bell, QR modal
+  all have `aria-label` or `aria-current`
+- **Screen reader toasts**: `aria-live="assertive"` region announces toast
+  messages to assistive technology
 
 ---
 
@@ -288,7 +509,9 @@ e2e/                  # Playwright E2E tests
 - **Transaction/item lists** use `flex flex-col gap-2` for consistent spacing
 - **Card carousels** (Cards page) use `overflow-x-auto` with snap scrolling
 - **Filter chips** (Transactions, Notifications) horizontal scroll on mobile
-- **Pull-to-refresh** not implemented — data refreshes on page mount
+- **Pull-to-refresh** via touch gesture on transaction list with loading spinner
+- **Infinite scroll** via IntersectionObserver sentinel at bottom of transaction
+  list; loads 10 items per batch
 
 #### Modals
 
@@ -333,44 +556,72 @@ e2e/                  # Playwright E2E tests
 
 > Polish: animations, accessibility, offline support
 
-- [ ] Page transition animations (Framer Motion)
-- [ ] Pull-to-refresh on mobile
-- [ ] Infinite scroll / pagination for transaction list
-- [ ] Swipe gestures on transaction items (delete, archive)
-- [ ] Haptic feedback on key actions (transfer confirm, payment sent)
-- [ ] Keyboard navigation and ARIA labels audit
-- [ ] Screen reader announcements for toasts
-- [ ] Offline indicator banner
-- [ ] Service worker for static asset caching
-- [ ] PWA manifest with install prompt
+- [x] Page transition animations (Framer Motion)
+- [x] Pull-to-refresh on mobile
+- [x] Infinite scroll / pagination for transaction list
+- [x] Swipe gestures on transaction items (delete, archive)
+- [x] Haptic feedback on key actions (transfer confirm, payment sent)
+- [x] Keyboard navigation and ARIA labels audit
+- [x] Screen reader announcements for toasts
+- [x] Offline indicator banner
+- [x] Service worker for static asset caching
+- [x] PWA manifest with install prompt
 
-#### Phase 3 — Data & Analytics
+#### Phase 3 — Data & Analytics ✅
 
 > Insights: charts, reports, smart categorization
 
-- [ ] Spending charts (pie chart by category, line chart over time)
-- [ ] Monthly/yearly spending reports
-- [ ] Income vs. expense comparison
-- [ ] Budget forecasting based on historical data
-- [ ] Transaction export (CSV, PDF)
-- [ ] Recurring transaction detection
-- [ ] Smart categorization with category suggestions
-- [ ] Search with filters (date range, amount range, category)
+- [x] Spending charts (pie chart by category, line chart over time)
+- [x] Monthly/yearly spending reports
+- [x] Income vs. expense comparison
+- [x] Budget forecasting based on historical data
+- [x] Transaction export (CSV, PDF)
+- [x] Recurring transaction detection
+- [x] Smart categorization with category suggestions
+- [x] Search with filters (date range, amount range, category)
 
-#### Phase 4 — Social & Payments
+#### Phase 4 — Social & Payments ✅
 
 > Peer-to-peer: contacts, splits, payment requests
 
-- [ ] Contact list with frequent recipients
-- [ ] Payment requests (send/receive)
-- [ ] Split bill feature (equal or custom splits)
-- [ ] Payment history with status (pending, completed, failed)
-- [ ] Recurring transfers (auto-pay setup)
-- [ ] International transfer with fee calculator
-- [ ] Multi-currency wallet balances
-- [ ] Currency alert notifications (rate thresholds)
+- [x] Contact list with frequent recipients
+- [x] Payment requests (send/receive)
+- [x] Split bill feature (equal or custom splits)
+- [x] Payment history with status (pending, completed, failed)
+- [x] Recurring transfers (auto-pay setup)
+- [x] International transfer with fee calculator
+- [x] Multi-currency wallet balances
+- [x] Currency alert notifications (rate thresholds)
 
-#### Phase 5 — Security & Compliance
+#### Phase 5 — Bank Products
+
+> Full banking: lending, deposits, insurance, financial planning
+
+- [ ] Loan product catalog (personal, auto, home, education)
+- [ ] EMI calculator with slider inputs
+- [ ] Loan application multi-step form
+- [ ] Loan dashboard with active loans and repayment schedules
+- [ ] Amortization table per loan
+- [ ] Prepayment calculator (savings comparison)
+- [ ] Fixed deposit product catalog with interest rates
+- [ ] FD interest calculator
+- [ ] FD management (active deposits, maturity tracking)
+- [ ] Recurring deposit product catalog
+- [ ] RD deposit tracker (paid/upcoming/missed)
+- [ ] RD maturity forecast
+- [ ] Savings goal creation and management
+- [ ] Goal progress tracking with milestones
+- [ ] Auto-save rules for goals
+- [ ] Insurance product catalog (life, health, auto, home)
+- [ ] Coverage summary dashboard
+- [ ] Insurance claim status tracking
+- [ ] Premium payment from wallet
+- [ ] Card rewards: cashback tracking, reward points, tier status
+- [ ] Reward catalog (redeem points)
+- [ ] Loan vs FD vs RD comparison tool
+- [ ] Financial health score dashboard
+
+#### Phase 6 — Security & Compliance
 
 > Production-ready: 2FA, KYC, audit logging
 
@@ -383,7 +634,7 @@ e2e/                  # Playwright E2E tests
 - [ ] Audit log for all account actions
 - [ ] Data encryption at rest (IndexedDB encryption)
 
-#### Phase 6 — Platform & Integration
+#### Phase 7 — Platform & Integration
 
 > Ecosystem: native apps, APIs, third-party services
 

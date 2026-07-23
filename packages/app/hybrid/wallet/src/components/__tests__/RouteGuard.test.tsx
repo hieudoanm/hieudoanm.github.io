@@ -1,6 +1,6 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import { RouteGuard } from '../RouteGuard';
-import { DataProvider } from '@/providers/DataProvider';
+import { AuthProvider } from '@/providers/auth/AuthProvider';
 
 jest.mock('next/navigation', () => ({
   useRouter: () => ({
@@ -16,11 +16,11 @@ function renderGuard(pathname: string, authed = false) {
   if (authed) localStorage.setItem('wallet-auth', 'true');
 
   return render(
-    <DataProvider>
+    <AuthProvider>
       <RouteGuard>
         <div data-testid="child">Protected</div>
       </RouteGuard>
-    </DataProvider>
+    </AuthProvider>
   );
 }
 
@@ -30,33 +30,45 @@ describe('RouteGuard', () => {
     jest.clearAllMocks();
   });
 
-  it('renders children on public route when unauthenticated', () => {
+  it('renders children on public route when unauthenticated', async () => {
     renderGuard('/login');
-    expect(screen.getByTestId('child')).toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.getByTestId('child')).toBeInTheDocument();
+    });
   });
 
-  it('renders children on protected route when authenticated', () => {
+  it('renders children on protected route when authenticated', async () => {
     renderGuard('/dashboard', true);
-    expect(screen.getByTestId('child')).toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.getByTestId('child')).toBeInTheDocument();
+    });
   });
 
-  it('hides children on protected route when unauthenticated', () => {
+  it('hides children on protected route when unauthenticated', async () => {
     renderGuard('/dashboard');
-    expect(screen.queryByTestId('child')).not.toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.queryByTestId('child')).not.toBeInTheDocument();
+    });
   });
 
-  it('hides children on public route when authenticated', () => {
+  it('hides children on public route when authenticated', async () => {
     renderGuard('/login', true);
-    expect(screen.queryByTestId('child')).not.toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.queryByTestId('child')).not.toBeInTheDocument();
+    });
   });
 
-  it('treats /register as a public route', () => {
+  it('treats /register as a public route', async () => {
     renderGuard('/register');
-    expect(screen.getByTestId('child')).toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.getByTestId('child')).toBeInTheDocument();
+    });
   });
 
-  it('hides children on /register when authenticated', () => {
+  it('hides children on /register when authenticated', async () => {
     renderGuard('/register', true);
-    expect(screen.queryByTestId('child')).not.toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.queryByTestId('child')).not.toBeInTheDocument();
+    });
   });
 });

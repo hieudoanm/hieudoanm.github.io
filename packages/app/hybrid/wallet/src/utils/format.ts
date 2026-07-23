@@ -2,6 +2,8 @@ export const formatCurrency = (
   amount: number,
   currency: string = 'USD'
 ): string => {
+  if (amount == null || Number.isNaN(amount)) amount = 0;
+  if (!currency) currency = 'USD';
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency,

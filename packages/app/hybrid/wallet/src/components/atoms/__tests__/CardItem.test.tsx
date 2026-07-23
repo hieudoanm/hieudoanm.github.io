@@ -11,6 +11,10 @@ const mockCard: Card = {
   type: 'visa',
   color: 'primary',
   frozen: false,
+  cardholderName: 'Alex Johnson',
+  spendingLimit: 5000,
+  spentThisMonth: 2340.5,
+  currency: 'USD',
 };
 
 describe('CardItem', () => {
@@ -47,5 +51,15 @@ describe('CardItem', () => {
     render(<CardItem card={mockCard} selected={false} onSelect={onSelect} />);
     await userEvent.click(screen.getByText('Main Card'));
     expect(onSelect).toHaveBeenCalledWith('1');
+  });
+
+  it('renders card type label', () => {
+    render(<CardItem card={mockCard} selected={false} onSelect={jest.fn()} />);
+    expect(screen.getByText('Visa')).toBeInTheDocument();
+  });
+
+  it('renders spending progress bar', () => {
+    render(<CardItem card={mockCard} selected={false} onSelect={jest.fn()} />);
+    expect(screen.getByText(/Spent/)).toBeInTheDocument();
   });
 });

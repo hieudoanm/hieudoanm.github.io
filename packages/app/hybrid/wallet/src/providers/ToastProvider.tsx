@@ -5,6 +5,7 @@ import {
   useCallback,
   useContext,
   useState,
+  useRef,
   type ReactNode,
 } from 'react';
 
@@ -27,19 +28,37 @@ let nextId = 0;
 export const ToastProvider = ({ children }: { children: ReactNode }) => {
   console.log('[ToastProvider] render');
   const [toasts, setToasts] = useState<Toast[]>([]);
+  const liveRegionRef = useRef<HTMLDivElement>(null);
 
-  const showToast = useCallback((message: string, type: ToastType = 'info') => {
-    const id = nextId++;
-    console.log('[ToastProvider] showToast', { id, message, type });
-    setToasts((prev) => [...prev, { id, message, type }]);
-    setTimeout(() => {
-      setToasts((prev) => prev.filter((t) => t.id !== id));
-    }, 3000);
+  const announce = useCallback((message: string) => {
+    if (liveRegionRef.current) {
+      liveRegionRef.current.textContent = '';
+      requestAnimationFrame(() => {
+        if (liveRegionRef.current) {
+          liveRegionRef.current.textContent = message;
+        }
+      });
+    }
   }, []);
+
+  const showToast = useCallback(
+    (message: string, type: ToastType = 'info') => {
+      const id = nextId++;
+      console.log('[ToastProvider] showToast', { id, message, type });
+      setToasts((prev) => [...prev, { id, message, type }]);
+      announce(message);
+      setTimeout(() => {
+        setToasts((prev) => prev.filter((t) => t.id !== id));
+        if (liveRegionRef.current) liveRegionRef.current.textContent = '';
+      }, 3000);
+    },
+    [announce]
+  );
 
   const removeToast = useCallback((id: number) => {
     console.log('[ToastProvider] removeToast', id);
     setToasts((prev) => prev.filter((t) => t.id !== id));
+    if (liveRegionRef.current) liveRegionRef.current.textContent = '';
   }, []);
 
   const alertClass: Record<ToastType, string> = {
@@ -52,6 +71,17 @@ export const ToastProvider = ({ children }: { children: ReactNode }) => {
   return (
     <ToastContext.Provider value={{ showToast }}>
       {children}
+
+      {/* Screen reader live region */}
+      <div
+        ref={liveRegionRef}
+        aria-live="assertive"
+        aria-atomic="true"
+        className="sr-only"
+        role="status"
+      />
+
+      {/* Visual toasts */}
       <div className="toast toast-end toast-bottom z-50">
         {toasts.map((toast) => (
           <div

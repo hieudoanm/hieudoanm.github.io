@@ -9,3 +9,6 @@ export { default as BudgetSummary } from './BudgetSummary';
 export { default as QRCodeModal } from './QRCodeModal';
 export { default as QuickActions } from './QuickActions';
 export { default as ThemePicker } from './ThemePicker';
+export { default as ContactList } from './ContactList';
+export { default as SplitBill } from './SplitBill';
+export { default as CurrencyAlerts } from './CurrencyAlerts';

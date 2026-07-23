@@ -1,5 +1,5 @@
 const DB_NAME = 'wallet-db';
-const DB_VERSION = 1;
+const DB_VERSION = 2;
 const MOCK_DELAY = Number(process.env.NEXT_PUBLIC_MOCK_DELAY ?? '800');
 
 const STORES = {
@@ -11,6 +11,16 @@ const STORES = {
   budgetCategories: 'budgetCategories',
   currencyRates: 'currencyRates',
   user: 'user',
+  contacts: 'contacts',
+  paymentRequests: 'paymentRequests',
+  recurringTransfers: 'recurringTransfers',
+  currencyAlerts: 'currencyAlerts',
+  loans: 'loans',
+  fixedDeposits: 'fixedDeposits',
+  recurringDeposits: 'recurringDeposits',
+  savingsGoals: 'savingsGoals',
+  insurance: 'insurance',
+  cardRewards: 'cardRewards',
 } as const;
 
 type StoreName = (typeof STORES)[keyof typeof STORES];
@@ -53,9 +63,9 @@ const openDB = (): Promise<IDBDatabase> => {
 const getAll = async <T>(storeName: StoreName): Promise<T[]> => {
   console.log('[db] getAll', storeName);
   await delay(MOCK_DELAY);
-  const db = await openDB();
+  const database = await openDB();
   return new Promise((resolve, reject) => {
-    const tx = db.transaction(storeName, 'readonly');
+    const tx = database.transaction(storeName, 'readonly');
     const store = tx.objectStore(storeName);
     const request = store.getAll();
     request.onsuccess = () => {
@@ -72,9 +82,9 @@ const getAll = async <T>(storeName: StoreName): Promise<T[]> => {
 const put = async <T>(storeName: StoreName, data: T): Promise<void> => {
   console.log('[db] put', storeName, data);
   await delay(MOCK_DELAY);
-  const db = await openDB();
+  const database = await openDB();
   return new Promise((resolve, reject) => {
-    const tx = db.transaction(storeName, 'readwrite');
+    const tx = database.transaction(storeName, 'readwrite');
     const store = tx.objectStore(storeName);
     const request = store.put(data);
     request.onsuccess = () => resolve();
@@ -85,14 +95,28 @@ const put = async <T>(storeName: StoreName, data: T): Promise<void> => {
   });
 };
 
-const putAll = async <T>(storeName: StoreName, data: T[]): Promise<void> => {
+const putAll = async (storeName: StoreName, data: object[]): Promise<void> => {
   console.log('[db] putAll', storeName, data.length);
   await delay(MOCK_DELAY);
-  const db = await openDB();
+  const database = await openDB();
+  const valid = data.filter((item) => {
+    if (item == null || (item as Record<string, unknown>).id == null) {
+      console.warn('[db] putAll skipping item without id', storeName, item);
+      return false;
+    }
+    return true;
+  });
+  if (valid.length === 0) return;
   return new Promise((resolve, reject) => {
-    const tx = db.transaction(storeName, 'readwrite');
+    const tx = database.transaction(storeName, 'readwrite');
     const store = tx.objectStore(storeName);
-    data.forEach((item) => store.put(item));
+    valid.forEach((item) => {
+      try {
+        store.put(item);
+      } catch (err) {
+        console.warn('[db] putAll item failed', storeName, item, err);
+      }
+    });
     tx.oncomplete = () => resolve();
     tx.onerror = () => {
       console.error('[db] putAll error', storeName, tx.error);
@@ -104,9 +128,9 @@ const putAll = async <T>(storeName: StoreName, data: T[]): Promise<void> => {
 const count = async (storeName: StoreName): Promise<number> => {
   console.log('[db] count', storeName);
   await delay(MOCK_DELAY);
-  const db = await openDB();
+  const database = await openDB();
   return new Promise((resolve, reject) => {
-    const tx = db.transaction(storeName, 'readonly');
+    const tx = database.transaction(storeName, 'readonly');
     const store = tx.objectStore(storeName);
     const request = store.count();
     request.onsuccess = () => {
@@ -128,11 +152,28 @@ const needsSeed = async (): Promise<boolean> => {
   return needs;
 };
 
+const remove = async (storeName: StoreName, id: string): Promise<void> => {
+  console.log('[db] remove', storeName, id);
+  await delay(MOCK_DELAY);
+  const database = await openDB();
+  return new Promise((resolve, reject) => {
+    const tx = database.transaction(storeName, 'readwrite');
+    const store = tx.objectStore(storeName);
+    const request = store.delete(id);
+    request.onsuccess = () => resolve();
+    request.onerror = () => {
+      console.error('[db] remove error', storeName, request.error);
+      reject(request.error);
+    };
+  });
+};
+
 export const db = {
   open: openDB,
   getAll,
   put,
   putAll,
+  remove,
   count,
   needsSeed,
   STORES,

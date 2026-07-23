@@ -8,9 +8,11 @@ import {
   QRCodeModal,
 } from '@/components/molecules';
 import { useToast } from '@/providers/ToastProvider';
+import { useHaptic } from '@/hooks/useHaptic';
 
 const PayPage = () => {
   const { showToast } = useToast();
+  const { vibrate } = useHaptic();
   const [amount, setAmount] = useState('');
   const [showQR, setShowQR] = useState(false);
 
@@ -28,6 +30,7 @@ const PayPage = () => {
           onShowQR={() => setShowQR(true)}
           onScan={(result) => {
             console.log('[PayPage] scanned', { result });
+            vibrate('success');
             showToast('QR code scanned successfully!', 'success');
           }}
         />
@@ -37,6 +40,7 @@ const PayPage = () => {
           onAmountChange={setAmount}
           onSubmit={() => {
             console.log('[PayPage] quickPay', { amount });
+            vibrate('success');
             showToast('Payment sent!', 'success');
           }}
         />

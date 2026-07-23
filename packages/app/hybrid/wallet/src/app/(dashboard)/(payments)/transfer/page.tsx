@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { DashboardTemplate } from '@/components/templates';
 import { useData } from '@/providers/DataProvider';
 import { useToast } from '@/providers/ToastProvider';
+import { useHaptic } from '@/hooks/useHaptic';
 import { formatCurrency } from '@/utils/format';
 import Skeleton, {
   SkeletonText,
@@ -26,6 +27,7 @@ const stepIndex = (step: Step): number => STEPS.indexOf(step);
 const TransferPage = () => {
   const { accounts, addTransaction, loading } = useData();
   const { showToast } = useToast();
+  const { vibrate } = useHaptic();
 
   const [step, setStep] = useState<Step>('Recipient');
   const [fromAccount, setFromAccount] = useState('');
@@ -66,6 +68,7 @@ const TransferPage = () => {
     });
 
     showToast('Transfer successful!', 'success');
+    vibrate('success');
     setSuccess(true);
   };
 

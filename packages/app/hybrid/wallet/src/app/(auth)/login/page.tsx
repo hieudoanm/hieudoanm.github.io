@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { AuthTemplate } from '@/components/templates';
 import { useData } from '@/providers/DataProvider';
 import { FiMail, FiLock } from 'react-icons/fi';
@@ -9,6 +10,7 @@ import { NextPage } from 'next';
 
 const LoginPage: NextPage = () => {
   const { login } = useData();
+  const router = useRouter();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -17,7 +19,11 @@ const LoginPage: NextPage = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     console.log('[LoginPage] submit', { email });
-    await login(email, password);
+    const ok = await login(email, password);
+    if (ok) {
+      console.log('[LoginPage] login ok, redirecting to /');
+      router.replace('/');
+    }
   };
 
   return (
