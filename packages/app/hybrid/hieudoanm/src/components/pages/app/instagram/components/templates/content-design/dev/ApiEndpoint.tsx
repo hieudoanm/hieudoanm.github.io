@@ -50,7 +50,7 @@ export const ApiEndpoint: FC<TemplateProps> = ({ data }) => {
           </p>
         )}
         {params.length > 0 && (
-          <div className="mb-2">
+          <div className="mb-2 text-left">
             <h3 className="text-neutral mb-1 text-[9px] font-bold tracking-wider uppercase">
               Parameters
             </h3>
@@ -70,7 +70,7 @@ export const ApiEndpoint: FC<TemplateProps> = ({ data }) => {
           </div>
         )}
         {responseExample && (
-          <div>
+          <div className="text-left">
             <h3 className="text-neutral mb-1 text-[9px] font-bold tracking-wider uppercase">
               Response
             </h3>

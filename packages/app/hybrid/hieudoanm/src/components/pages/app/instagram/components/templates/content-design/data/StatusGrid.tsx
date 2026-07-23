@@ -22,16 +22,18 @@ export const StatusGrid: FC<TemplateProps> = ({ data }) => {
     <Background>
       <h1 className="text-base-content mb-3 text-4xl font-bold">{title}</h1>
       <ul className="grid flex-1 grid-cols-2 gap-2">
-        {services.map((s, i) => (
+        {services.map((service) => (
           <li
-            key={i}
-            className="bg-base-200 flex items-center gap-2 rounded-xl px-2 py-2">
+            key={service.name}
+            className="bg-base-200 flex items-center justify-center gap-2 rounded-xl px-2 py-2">
             <span
-              className={`h-2.5 w-2.5 rounded-full ${dotColor(s.status)}`}
+              className={`h-2.5 w-2.5 rounded-full ${dotColor(service.status)}`}
             />
-            <div>
-              <p className="text-base-content text-sm font-bold">{s.name}</p>
-              <p className="text-neutral text-xs">{s.status}</p>
+            <div className="text-left">
+              <p className="text-base-content text-sm font-bold">
+                {service.name}
+              </p>
+              <p className="text-neutral text-xs">{service.status}</p>
             </div>
           </li>
         ))}

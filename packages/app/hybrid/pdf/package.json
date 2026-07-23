@@ -2,6 +2,11 @@
   "name": "@hieudoanm.github.io/pdf",
   "version": "0.0.1",
   "private": true,
+  "description": "PDF",
+  "keywords": [
+    "pdf"
+  ],
+  "homepage": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-pdf-latest",
   "bugs": {
     "url": "https://github.com/hieudoanm/hieudoanm.github.io/issues"
   },
@@ -16,13 +21,18 @@
     "node": "26.5.0"
   },
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
     "lint": "eslint . --fix",
     "format": "prettier --cache --write .",
-    "test": "jest --passWithNoTests",
+    "test": "jest",
     "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "analyze": "next experimental-analyze",
+    "predev": "rimraf .next && kill-port 3000",
+    "dev": "next dev --turbopack",
+    "prebuild": "rimraf .next",
+    "build": "next build",
+    "prestart": "kill-port 3000",
+    "start": "next start",
     "tauri": "tauri"
   },
   "dependencies": {

@@ -25,18 +25,18 @@ export const Terminal: FC<TemplateProps> = ({ data }) => {
           </div>
         </div>
         <div className="flex flex-col gap-2 bg-[#0d1117] px-4 py-4 font-mono text-xs leading-relaxed">
-          <div>
+          <div className="text-left">
             <span className="text-[#50c878]">$ </span>
             <span className="text-[#c9d1d9]">{command}</span>
           </div>
           {output && (
-            <div className="text-[#8b949e]">
+            <div className="text-left text-[#8b949e]">
               <span className="text-[#79c0ff]">&gt; </span>
               {output}
             </div>
           )}
           {syntax && (
-            <pre className="mt-1 whitespace-pre-wrap text-[#c9d1d9]">
+            <pre className="mt-1 text-left whitespace-pre-wrap text-[#c9d1d9]">
               {syntax}
             </pre>
           )}

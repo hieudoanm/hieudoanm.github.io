@@ -39,11 +39,11 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
       - name: Lint
-        run: pnpm run lint --filter=@hieudoanm.github.io/hieudoanm
+        run: pnpm run lint --filter=@hieudoanm.github.io/app
       - name: Build
-        run: pnpm run build --filter=@hieudoanm.github.io/hieudoanm
+        run: pnpm run build --filter=@hieudoanm.github.io/app
       - name: Test
-        run: pnpm run test --filter=@hieudoanm.github.io/hieudoanm || echo 'No tests configured'
+        run: pnpm run test --filter=@hieudoanm.github.io/app || echo 'No tests configured'
       - name: Upload Build Output
         uses: actions/upload-artifact@v4
         with:

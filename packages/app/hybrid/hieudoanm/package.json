@@ -20,16 +20,17 @@
   "scripts": {
     "lint": "eslint . --fix",
     "format": "prettier --cache --write .",
-    "predev": "rimraf .next && kill-port 3000",
-    "dev": "next dev --turbopack",
     "test": "jest",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
     "analyze": "next experimental-analyze",
+    "predev": "rimraf .next && kill-port 3000",
+    "dev": "next dev --turbopack",
     "prebuild": "rimraf .next",
     "build": "next build --turbopack",
     "prestart": "kill-port 3000",
-    "start": "next start"
+    "start": "next start",
+    "tauri": "tauri"
   },
   "dependencies": {
     "@api/ts": "workspace:*",
