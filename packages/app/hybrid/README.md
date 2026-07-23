@@ -5,34 +5,35 @@
 - [Hybrid](#hybrid)
   - [Table of Contents](#table-of-contents)
   - [Applications](#applications)
-  - [Platform](#platform)
+  - [Techstack](#techstack)
 
 ## Applications
 
-| No  | App           | Description                        |
-| --- | ------------- | ---------------------------------- |
-| 01  | Chat          | Minimal Chat like ChatGPT / Claude |
-| 02  | Code (Editor) | Minimal VSCode                     |
-| 03  | Database      | Minimal pgAdmin for SQLite only    |
-| 04  | Hieu Doan     | Minimal TinyWow                    |
-| 05  | Password      | Minimal BitWarden / 1Password      |
-| 06  | PDF           | Minimal Adobe Acrobat PDF          |
-| 07  | Photo         | Minimal Adobe Photoshop            |
-| 08  | Projects      | Minimal Atlassian Trello / Kanban  |
-| 09  | SVG           | Minimal Adobe Illustrator          |
-| 10  | Wallet        | Minimal Momo / Techcombank         |
+| No  | ID        | App                          | Description                        |
+| --- | --------- | ---------------------------- | ---------------------------------- |
+| 01  | chat      | Chat                         | Minimal Chat like ChatGPT / Claude |
+| 02  | code      | Code (Editor)                | Minimal VSCode                     |
+| 03  | database  | Database (Editor)            | Minimal pgAdmin for SQLite only    |
+| 04  | hieudoanm | Hieu Doan                    | Minimal TinyWow                    |
+| 05  | password  | Password Manager             | Minimal BitWarden / 1Password      |
+| 06  | pdf       | PDF (Editor)                 | Minimal Adobe Acrobat PDF          |
+| 07  | photo     | Photo (Editor)               | Minimal Adobe Photoshop            |
+| 08  | projects  | Projects Management          | Minimal Atlassian Trello / Kanban  |
+| 09  | svg       | SVG (Editor)                 | Minimal Adobe Illustrator          |
+| 10  | wallet    | Wallet (Banking and Trading) | Minimal Momo / Techcombank         |
 
-## Platform
+## Techstack
 
-| No  | Language     | Styling   | Operating System |
-| --- | ------------ | --------- | ---------------- |
-| 01  | [TypeScript] | [DaisyUI] | [Hybrid]         |
-| 02  | [Kotlin]     | [Jetpack] | [Android]        |
-| 03  | [Swift]      | [SwiftUI] | [iOS]            |
-
-[kotlin]: https://kotlinlang.org
-[jetpack]: https://developer.android.com/jetpack
-[android]: https://developer.android.com
-[swift]: https://www.swift.org
-[swiftui]: https://developer.apple.com/xcode/swiftui/
-[ios]: https://developer.apple.com/ios
+| No  | Category   | Name          |
+| --- | ---------- | ------------- |
+| 01  | Language   | [TypeScript]  |
+| 02  | Linter     | [ESLint]      |
+| 03  | Formatter  | [Prettier]    |
+| 04  | Unit Tests | [Jest]        |
+| 05  | E2E Tests  | [Playwright]  |
+| 06  | Styling    | [TailwindCSS] |
+| 07  | Components | [DaisyUI]     |
+| 08  | Hybrid     | [Tauri]       |
+| 09  | Desktop    | [Linux]       |
+| 10  | Desktop    | [macOS]       |
+| 11  | Mobile     | [Android]     |
