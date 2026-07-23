@@ -134,9 +134,10 @@ e2e/                  # Playwright E2E tests
   connected; sorted by most recent
 - **Add connection**: Modal form — name, file path (mock), read-only toggle
 - **Edit connection**: Inline edit or modal with pre-filled fields
-- **Delete connection**: Confirmation modal; does not delete actual database file
-- **Test connection**: "Test" button on add/edit form; shows success/failure with
-  latency; mock always succeeds
+- **Delete connection**: Confirmation modal; does not delete actual database
+  file
+- **Test connection**: "Test" button on add/edit form; shows success/failure
+  with latency; mock always succeeds
 - **Recent connections**: Quick-access list at top, persisted in localStorage
 
 ##### Schema Browser
@@ -160,8 +161,8 @@ e2e/                  # Playwright E2E tests
 - **Result display**: Table below editor showing query results
 - **Error display**: Styled error card with line number and message on invalid
   SQL
-- **Multiple queries**: Execute selected text only if selection exists; otherwise
-  entire content
+- **Multiple queries**: Execute selected text only if selection exists;
+  otherwise entire content
 - **Prettify SQL**: Auto-format query with consistent indentation
 - **Query templates**: Pre-built queries (SELECT \* FROM, SHOW TABLES, DESCRIBE)
   in dropdown
@@ -175,8 +176,8 @@ e2e/                  # Playwright E2E tests
 - **Export JSON**: Download result set as `.json` file
 - **Copy cell**: Click cell to copy value; toast confirmation
 - **NULL display**: Gray italic "NULL" for null values
-- **Truncated text**: Long text shows first 50 chars with "..." tooltip for
-  full value
+- **Truncated text**: Long text shows first 50 chars with "..." tooltip for full
+  value
 - **Virtual scrolling**: Windowed rendering for result sets > 1000 rows
 
 ##### Table Designer
@@ -193,8 +194,8 @@ e2e/                  # Playwright E2E tests
 ##### Data Viewer
 
 - **Browse data**: Paginated table showing all rows in selected table
-- **Inline edit**: Double-click cell to edit value; Enter to confirm, Escape
-  to cancel
+- **Inline edit**: Double-click cell to edit value; Enter to confirm, Escape to
+  cancel
 - **Add row**: "Insert Row" button; opens form with column names as fields
 - **Delete row**: Select row → Delete button with confirmation
 - **Filter**: Column-level filter inputs (equals, contains, greater than, etc.)
@@ -243,8 +244,8 @@ e2e/                  # Playwright E2E tests
 
 ##### Data & Persistence
 
-- **IndexedDB storage**: Connections, query history, bookmarks, settings,
-  mock database schemas stored in `database-db`
+- **IndexedDB storage**: Connections, query history, bookmarks, settings, mock
+  database schemas stored in `database-db`
 - **Seed on first load**: Demo databases with pre-populated tables (users,
   orders, products) and sample data
 - **Mock network delay**: `NEXT_PUBLIC_MOCK_DELAY` (default 800ms) applied
@@ -281,9 +282,10 @@ e2e/                  # Playwright E2E tests
 
 - **Route groups**: Pages organized into `(database)`, `(settings)` — URLs
   unaffected, code logically grouped
-- **Dynamic routes**: `/db/[id]` for database views, `/db/[id]/table/[name]`
-  for table detail
-- **Back navigation**: Consistent `FiArrowLeft` + `btn-neutral btn-sm btn-circle`
+- **Dynamic routes**: `/db/[id]` for database views, `/db/[id]/table/[name]` for
+  table detail
+- **Back navigation**: Consistent `FiArrowLeft` +
+  `btn-neutral btn-sm btn-circle`
 
 ##### Code Quality
 
@@ -308,8 +310,8 @@ e2e/                  # Playwright E2E tests
 
 - **Resizable panels**: Drag borders between sidebar, editor, and results
 - **Collapse sidebar**: Toggle button to hide schema browser
-- **Mobile**: Tabbed interface — Schema | Query | Results tabs instead of
-  split panels
+- **Mobile**: Tabbed interface — Schema | Query | Results tabs instead of split
+  panels
 - **Breakpoints**: Sidebar collapses below `lg:` (1024px)
 
 ##### Page Transitions

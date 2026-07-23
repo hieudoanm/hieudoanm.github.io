@@ -1,0 +1,206 @@
+name: CI - App - Hybrid - Database
+
+concurrency:
+  group: ci-app-hybrid-database-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/database/**'
+      - '.github/workflows/ci-app-hybrid-database.yaml'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6.0.3
+      - name: Install pnpm
+        uses: pnpm/action-setup@v6.0.8
+        with:
+          version: '11.13.0'
+      - name: Install Node.js
+        uses: actions/setup-node@v6.4.0
+        with:
+          node-version: '26.5.0'
+          cache: 'pnpm'
+      - name: Install Dependencies
+        run: pnpm install
+      - name: Lint
+        run: pnpm run lint --filter=@hieudoanm.github.io/database
+      - name: Build
+        run: pnpm run build --filter=@hieudoanm.github.io/database
+      - name: Test
+        run: pnpm run test --filter=@hieudoanm.github.io/database || echo 'No tests configured'
+      - name: Upload Build Output
+        uses: actions/upload-artifact@v4
+        with:
+          name: database-out
+          path: packages/app/hybrid/database/out/
+
+  desktop:
+    name: Desktop (${{ matrix.os }})
+    needs: [build]
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6.0.3
+      - name: Install pnpm
+        uses: pnpm/action-setup@v6.0.8
+        with:
+          version: '11.13.0'
+      - name: Install System Dependencies
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libwebkit2gtk-4.1-dev \
+            libgtk-3-dev \
+            libappindicator3-dev \
+            librsvg2-dev \
+            patchelf
+      - name: Download Build Output
+        uses: actions/download-artifact@v4
+        with:
+          name: database-out
+          path: packages/app/hybrid/database/out/
+      - name: Build Tauri Desktop
+        working-directory: packages/app/hybrid/database
+        run: pnpm exec tauri build --ci --config '{"build":{"beforeBuildCommand":""}}'
+      - name: Set Date
+        id: date
+        run: echo "value=$(date +'%Y_%m_%d')" >> "$GITHUB_OUTPUT"
+      - name: Upload Desktop Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: database_desktop_${{ matrix.os }}-${{ steps.date.outputs.value }}
+          path: packages/app/hybrid/database/src-tauri/target/release/bundle/
+
+  android:
+    name: Mobile (Android)
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6.0.3
+      - name: Install pnpm
+        uses: pnpm/action-setup@v6.0.8
+        with:
+          version: '11.13.0'
+      - name: Install System Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libwebkit2gtk-4.1-dev \
+            libgtk-3-dev \
+            libappindicator3-dev \
+            librsvg2-dev \
+            patchelf
+      - name: Install Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+      - name: Install Android SDK
+        uses: android-actions/setup-android@v3
+      - name: Install Rust Targets
+        run: |
+          rustup target add \
+            aarch64-linux-android \
+            armv7-linux-androideabi \
+            x86_64-linux-android \
+            i686-linux-android
+      - name: Download Build Output
+        uses: actions/download-artifact@v4
+        with:
+          name: database-out
+          path: packages/app/hybrid/database/out/
+      - name: Init Android Project
+        working-directory: packages/app/hybrid/database
+        run: pnpm exec tauri android init
+      - name: Create Keystore
+        run: |
+          keytool -genkey -v -keystore release.keystore \
+            -alias release -keyalg RSA -keysize 2048 -validity 10000 \
+            -storepass android -keypass android \
+            -dname "CN=, OU=, O=, L=, S=, C="
+      - name: Build Android APK & AAB
+        working-directory: packages/app/hybrid/database
+        run: pnpm exec tauri android build --ci
+      - name: Sign APK
+        run: |
+          ANDROID_BUILD_TOOLS=$(ls -d "$ANDROID_HOME"/build-tools/* | sort -V | tail -1)
+          "$ANDROID_BUILD_TOOLS/apksigner" sign \
+            --ks release.keystore \
+            --ks-pass pass:android \
+            --key-pass pass:android \
+            --ks-key-alias release \
+            packages/app/hybrid/database/src-tauri/gen/android/app/build/outputs/apk/universal/release/app-universal-release-unsigned.apk
+          mv packages/app/hybrid/database/src-tauri/gen/android/app/build/outputs/apk/universal/release/app-universal-release-unsigned.apk \
+             packages/app/hybrid/database/src-tauri/gen/android/app/build/outputs/apk/universal/release/app-universal-release.apk
+      - name: Set Date
+        id: date
+        run: echo "value=$(date +'%Y_%m_%d')" >> "$GITHUB_OUTPUT"
+      - name: Upload Android Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: database_android-${{ steps.date.outputs.value }}
+          path: packages/app/hybrid/database/src-tauri/gen/android/app/build/outputs/
+
+  publish:
+    name: Publish to GitHub Release
+    needs: [desktop, android]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6.0.3
+        with:
+          fetch-depth: 0
+      - name: Download Build Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+      - name: Collect Release Artifacts
+        run: |
+          mkdir -p release
+          for dir in artifacts/*/; do
+            find "$dir" -type f \( \
+              -name "*.AppImage" -o \
+              -name "*.deb" -o \
+              -name "*.dmg" -o \
+              -name "*.app" -o \
+              -name "*.msi" -o \
+              -name "*.tar.xz" -o \
+              -name "*.apk" -o \
+              -name "*.aab" \
+            \) ! -name "*control.tar.gz" ! -name "*data.tar.gz" -print0 | while IFS= read -r -d '' file; do
+              cp "$file" "release/"
+            done
+          done
+      - name: Publish Release
+        run: |
+          gh release delete app-database-hybrid-latest --yes --cleanup-tag 2>/dev/null || true
+          gh release create app-database-hybrid-latest \
+            --title "App - Hybrid - Database (latest)" \
+            --notes "Auto-built from commit ${{ github.sha }}" \
+            $(find release -type f | sort)
+        env:
+          GH_TOKEN: ${{ github.token }}

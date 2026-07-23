@@ -132,8 +132,8 @@ e2e/                  # Playwright E2E tests
 
 ##### Lists
 
-- **Kanban columns**: Horizontally scrollable lists (To Do, In Progress,
-  Review, Done)
+- **Kanban columns**: Horizontally scrollable lists (To Do, In Progress, Review,
+  Done)
 - **Create list**: Plus button at end of lists with inline name input
 - **Rename list**: Double-click list title to edit
 - **Delete list**: Menu option with confirmation; cards move to archive
@@ -145,10 +145,10 @@ e2e/                  # Playwright E2E tests
 
 ##### Cards
 
-- **Card item**: Title, label badges, due date badge, member avatars,
-  checklist progress bar, attachment count
-- **Create card**: Plus button at bottom of list; inline title input; Enter
-  to create and open detail
+- **Card item**: Title, label badges, due date badge, member avatars, checklist
+  progress bar, attachment count
+- **Create card**: Plus button at bottom of list; inline title input; Enter to
+  create and open detail
 - **Drag-and-drop**: Drag card between lists; visual placeholder at target;
   haptic feedback on drop
 - **Quick edit**: Pencil icon on card opens inline title edit
@@ -164,8 +164,8 @@ e2e/                  # Playwright E2E tests
 - **Labels**: Add/remove colored labels; click to toggle
 - **Checklists**: Add checklists with items; progress bar; check/uncheck;
   add/delete items
-- **Due date**: Date picker; overdue (red), due soon (yellow), completed
-  (green) indicators
+- **Due date**: Date picker; overdue (red), due soon (yellow), completed (green)
+  indicators
 - **Members**: Assign mock team members; avatar list
 - **Attachments**: Attach files (mock: icon, name, size)
 - **Activity**: Chronological feed of all changes
@@ -273,8 +273,8 @@ e2e/                  # Playwright E2E tests
 
 ##### Page Transitions
 
-- **Framer Motion**: Fade + slide-up variants (opacity 0 to 1, y 12 to 0,
-  200ms ease-out)
+- **Framer Motion**: Fade + slide-up variants (opacity 0 to 1, y 12 to 0, 200ms
+  ease-out)
 
 ##### Offline Support
 

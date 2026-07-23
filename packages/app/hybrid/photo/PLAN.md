@@ -293,19 +293,19 @@ e2e/                  # Playwright E2E tests
 
 ##### Image Processing
 
-- **CSS filter chain**: Brightness, contrast, saturate, hue-rotate, blur,
-  sepia, grayscale as CSS filters for real-time preview
+- **CSS filter chain**: Brightness, contrast, saturate, hue-rotate, blur, sepia,
+  grayscale as CSS filters for real-time preview
 - **Mock processing**: Adjustments simulated via CSS filter properties rather
   than pixel-level manipulation
 - **Preset filters**: Predefined CSS filter combinations for one-click effects
-- **Export simulation**: Mock export generates colored placeholder with
-  metadata
+- **Export simulation**: Mock export generates colored placeholder with metadata
 
 ##### Navigation & Routing
 
 - **Route groups**: Pages organized into `(editor)`, `(library)`, `(settings)`
 - **Dynamic routes**: `/edit/[id]` for canvas editor
-- **Back navigation**: Consistent `FiArrowLeft` + `btn-neutral btn-sm btn-circle`
+- **Back navigation**: Consistent `FiArrowLeft` +
+  `btn-neutral btn-sm btn-circle`
 
 ##### Code Quality
 

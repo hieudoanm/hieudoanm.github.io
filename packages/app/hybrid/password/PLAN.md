@@ -127,8 +127,8 @@ e2e/                  # Playwright E2E tests
 
 ##### Vault Items
 
-- **Item types**: Logins, Cards, Identities, Secure Notes, SSH Keys — each
-  with distinct icon and form fields
+- **Item types**: Logins, Cards, Identities, Secure Notes, SSH Keys — each with
+  distinct icon and form fields
 - **Item card**: Shows title, username/last4, category icon, favorite star,
   most-used badge
 - **Item detail**: Full field display with show/hide toggles for sensitive data
@@ -154,7 +154,8 @@ e2e/                  # Playwright E2E tests
 ##### Password Generator
 
 - **Length slider**: 8–64 characters with real-time preview
-- **Character toggles**: Uppercase, lowercase, numbers, symbols — each toggleable
+- **Character toggles**: Uppercase, lowercase, numbers, symbols — each
+  toggleable
 - **Exclude ambiguous**: Toggle to exclude similar characters (0/O, 1/l/I)
 - **Memorable mode**: Generates passphrase (4-6 dictionary words separated by
   hyphens) instead of random string
@@ -171,8 +172,8 @@ e2e/                  # Playwright E2E tests
 - **Identity fields**: Title, first/last name, email, phone, address, company,
   SSN (masked), notes
 - **Secure notes**: Freeform rich text with monospace code block support
-- **SSH keys**: Title, key type (RSA/ED25519), public key, private key
-  (masked), passphrase (masked), notes
+- **SSH keys**: Title, key type (RSA/ED25519), public key, private key (masked),
+  passphrase (masked), notes
 - **Custom fields**: Add arbitrary key-value pairs to any item
 - **Show/hide toggle**: Eye icon on password/CVV/key fields; click to reveal
   briefly (30s auto-hide)
@@ -202,8 +203,8 @@ e2e/                  # Playwright E2E tests
 
 - **Master password lock**: App-level lock screen; any non-empty password
   accepted in mock; persisted to localStorage as `vault-unlocked`
-- **Auto-lock timeout**: Configurable — 1min, 5min, 15min, 1hr, never; locks
-  on timeout and browser close
+- **Auto-lock timeout**: Configurable — 1min, 5min, 15min, 1hr, never; locks on
+  timeout and browser close
 - **Clipboard auto-clear**: Clear clipboard after 10s, 30s, 60s, or never
 - **Two-factor authentication**: TOTP setup with QR code display; 6-digit code
   with circular countdown timer
@@ -247,8 +248,8 @@ e2e/                  # Playwright E2E tests
 ##### Master Password Lock
 
 - **Lock screen**: Full-screen overlay with master password input and app logo
-- **Unlock**: Any non-empty password accepted in mock; sets `vault-unlocked`
-  in localStorage
+- **Unlock**: Any non-empty password accepted in mock; sets `vault-unlocked` in
+  localStorage
 - **Lock on close**: Automatically locks when browser tab/window closes
 - **Lock on timeout**: Configurable inactivity timer triggers lock
 - **Lock button**: Manual lock button in header and settings
@@ -273,7 +274,8 @@ e2e/                  # Playwright E2E tests
 - **Route groups**: Pages organized into `(vault)`, `(settings)` — URLs
   unaffected, code logically grouped
 - **Dynamic routes**: `/item/[id]` for item detail
-- **Back navigation**: Consistent `FiArrowLeft` + `btn-neutral btn-sm btn-circle`
+- **Back navigation**: Consistent `FiArrowLeft` +
+  `btn-neutral btn-sm btn-circle`
 
 ##### Code Quality
 

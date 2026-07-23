@@ -136,14 +136,14 @@ e2e/                  # Playwright E2E tests
 - **Recent documents**: Top section showing last 5 opened PDFs
 - **Search**: Filter documents by title or filename
 - **Delete**: Confirmation modal before removing from library
-- **Document info**: Properties panel showing title, author, creation date,
-  page count, file size
+- **Document info**: Properties panel showing title, author, creation date, page
+  count, file size
 - **Rename**: Inline edit on document title
 
 ##### PDF Viewing
 
-- **Page rendering**: Mock canvas-based page display with text blocks and
-  images representing PDF content
+- **Page rendering**: Mock canvas-based page display with text blocks and images
+  representing PDF content
 - **Zoom controls**: Slider (25%-400%), preset buttons (50%, 100%, 150%, 200%),
   fit-to-width, fit-to-page, actual size
 - **Page navigation**: Thumbnail sidebar, page number input, keyboard arrows,
@@ -164,8 +164,8 @@ e2e/                  # Playwright E2E tests
   color-coded by importance
 - **Freehand drawing**: Pen tool with color and thickness selector; draw
   anywhere on page
-- **Shapes**: Rectangle, circle, arrow, line — click-drag to place with
-  resize handles
+- **Shapes**: Rectangle, circle, arrow, line — click-drag to place with resize
+  handles
 - **Annotation list**: Sidebar panel listing all annotations by page; click to
   navigate; delete per annotation
 - **Annotation colors**: Palette of 8 colors for each annotation type
@@ -193,8 +193,8 @@ e2e/                  # Playwright E2E tests
 
 ##### Merge & Split
 
-- **Merge PDFs**: Select multiple documents → preview → combine in order;
-  drag to reorder
+- **Merge PDFs**: Select multiple documents → preview → combine in order; drag
+  to reorder
 - **Split by range**: Enter page ranges (e.g., "1-5, 8, 12-15") to extract
 - **Split by size**: Split into files of max size (mock: 1MB, 5MB, 10MB)
 - **Split at bookmark**: Divide at bookmark/chapter boundaries (mock)
@@ -217,8 +217,8 @@ e2e/                  # Playwright E2E tests
 - **Text watermark**: Custom text with font size, color, opacity, rotation;
   apply to all pages or range
 - **Image watermark**: Company logo or custom image with opacity control
-- **Stamp presets**: Approved, Rejected, Draft, Confidential, Final — each
-  with distinct color and style
+- **Stamp presets**: Approved, Rejected, Draft, Confidential, Final — each with
+  distinct color and style
 - **Custom stamp**: Create stamp from text with custom border and color
 - **Stamp placement**: Click to place stamp; drag to reposition; resize handles
 - **Watermark position**: Center, diagonal, top, bottom — configurable
@@ -244,10 +244,10 @@ e2e/                  # Playwright E2E tests
 
 ##### Data & Persistence
 
-- **IndexedDB storage**: Documents, annotations, bookmarks, settings, form
-  data stored in `pdf-db`
-- **Seed on first load**: Demo PDFs with mock pages (5-20 pages each with
-  text blocks, images, and pre-existing annotations)
+- **IndexedDB storage**: Documents, annotations, bookmarks, settings, form data
+  stored in `pdf-db`
+- **Seed on first load**: Demo PDFs with mock pages (5-20 pages each with text
+  blocks, images, and pre-existing annotations)
 - **Mock network delay**: `NEXT_PUBLIC_MOCK_DELAY` (default 800ms) applied
   before every DB operation
 - **Optimistic UI**: Annotations and edits apply immediately; persist in
@@ -286,7 +286,8 @@ e2e/                  # Playwright E2E tests
 - **Route groups**: Pages organized into `(pdf)`, `(settings)` — URLs
   unaffected, code logically grouped
 - **Dynamic routes**: `/pdf/[id]` for viewer, `/pdf/[id]/edit` for editor
-- **Back navigation**: Consistent `FiArrowLeft` + `btn-neutral btn-sm btn-circle`
+- **Back navigation**: Consistent `FiArrowLeft` +
+  `btn-neutral btn-sm btn-circle`
 
 ##### Code Quality
 

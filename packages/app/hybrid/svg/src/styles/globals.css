@@ -1,0 +1,47 @@
+@import 'tailwindcss';
+@plugin 'daisyui' {
+  themes:
+    night --default,
+    dark,
+    light,
+    cupcake,
+    emerald,
+    corporate,
+    synthwave,
+    retro,
+    cyberpunk,
+    valentine,
+    halloween,
+    garden,
+    forest,
+    aqua,
+    lofi,
+    pastel,
+    fantasy,
+    wireframe,
+    black,
+    luxury,
+    dracula,
+    cmyk,
+    autumn,
+    business,
+    acid,
+    lemonade,
+    coffee,
+    winter,
+    dim,
+    nord,
+    sunset;
+}
+
+@layer base {
+  .canvas-cursor-crosshair {
+    cursor: crosshair;
+  }
+  .canvas-cursor-grab {
+    cursor: grab;
+  }
+  .canvas-cursor-grabbing {
+    cursor: grabbing;
+  }
+}

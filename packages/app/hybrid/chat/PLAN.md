@@ -126,8 +126,8 @@ e2e/                  # Playwright E2E tests
 
 ##### Conversations
 
-- **Create new chat**: Single-click button opens blank conversation; auto-generates
-  ID and timestamped title
+- **Create new chat**: Single-click button opens blank conversation;
+  auto-generates ID and timestamped title
 - **Conversation list**: Sidebar shows all conversations with title, preview
   text, timestamp, model badge; sorted by last message date
 - **Search**: Real-time text filter across conversation titles and messages
@@ -156,9 +156,10 @@ e2e/                  # Playwright E2E tests
 
 - **Model selector**: Dropdown in chat header with available models; persists
   per conversation
-- **Mock models**: GPT-4o, Claude 3.5, Gemini Pro, Llama 3 — each with
-  distinct response style and badge color
-- **Model info**: Tooltip showing model description, context window, capabilities
+- **Mock models**: GPT-4o, Claude 3.5, Gemini Pro, Llama 3 — each with distinct
+  response style and badge color
+- **Model info**: Tooltip showing model description, context window,
+  capabilities
 - **Switch model mid-conversation**: Changes model for next message; visual
   indicator that model changed
 
@@ -204,7 +205,8 @@ e2e/                  # Playwright E2E tests
 - **Export as JSON**: Structured export with messages, metadata, timestamps
 - **Chat history sidebar**: Chronological list of all conversations across
   sessions
-- **Search across all**: Global search across every message in every conversation
+- **Search across all**: Global search across every message in every
+  conversation
 
 ##### Custom Instructions
 
@@ -224,8 +226,8 @@ e2e/                  # Playwright E2E tests
   different model responses
 - **Mock network delay**: `NEXT_PUBLIC_MOCK_DELAY` (default 800ms) applied
   before every DB operation to simulate real API latency
-- **Optimistic UI**: Message appears instantly in UI; persists to IndexedDB
-  in background
+- **Optimistic UI**: Message appears instantly in UI; persists to IndexedDB in
+  background
 - **CRUD operations**: Full create/read/update/delete for conversations and
   messages
 
@@ -268,7 +270,8 @@ e2e/                  # Playwright E2E tests
 - **Route groups**: Pages organized into `(chat)`, `(settings)` — URLs
   unaffected, code logically grouped
 - **Dynamic routes**: `/chat/[id]` for conversation threads
-- **Back navigation**: Consistent `FiArrowLeft` + `btn-neutral btn-sm btn-circle`
+- **Back navigation**: Consistent `FiArrowLeft` +
+  `btn-neutral btn-sm btn-circle`
 
 ##### Code Quality
 

@@ -193,8 +193,8 @@ e2e/                  # Playwright E2E tests
 - **Stroke style**: Solid, dashed, dotted with configurable dash array
 - **Stroke cap**: Butt, round, square
 - **Stroke join**: Miter, round, bevel
-- **Gradient fill**: Linear and radial gradient editor with stops; drag
-  gradient handles on canvas
+- **Gradient fill**: Linear and radial gradient editor with stops; drag gradient
+  handles on canvas
 - **Opacity**: Per-object opacity slider (0-100%)
 - **Color palette**: Recent colors, saved swatches, HSL/RGB/Hex inputs
 - **Eyedropper**: Click on canvas to sample color
@@ -214,8 +214,8 @@ e2e/                  # Playwright E2E tests
 
 ##### Alignment & Distribution
 
-- **Align**: Left, center, right, top, middle, bottom — align to selection
-  or artboard
+- **Align**: Left, center, right, top, middle, bottom — align to selection or
+  artboard
 - **Distribute**: Horizontal or vertical equal spacing
 - **Smart guides**: Pink alignment guides showing center/edge alignment with
   nearby objects
@@ -243,8 +243,7 @@ e2e/                  # Playwright E2E tests
 
 ##### Data & Persistence
 
-- **IndexedDB storage**: SVG documents, symbols, settings, history in
-  `svg-db`
+- **IndexedDB storage**: SVG documents, symbols, settings, history in `svg-db`
 - **Seed on first load**: Demo SVGs (logo, icon set, illustration) with
   pre-built shapes
 - **Mock network delay**: `NEXT_PUBLIC_MOCK_DELAY` (default 800ms)
