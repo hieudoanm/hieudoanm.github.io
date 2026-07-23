@@ -2,6 +2,16 @@
   "name": "@hieudoanm.github.io/wallet",
   "version": "0.0.1",
   "private": true,
+  "bugs": {
+    "url": "https://github.com/hieudoanm/hieudoanm.github.io/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/hieudoanm/hieudoanm.github.io.git"
+  },
+  "license": "GPL-3.0",
+  "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
+  "packageManager": "pnpm@11.13.0",
   "engines": {
     "node": "26.5.0"
   },
@@ -18,7 +28,7 @@
   "dependencies": {
     "@tauri-apps/api": "2.11.1",
     "framer-motion": "12.42.2",
-    "next": "16.2.10",
+    "next": "16.2.11",
     "qrcode.react": "4.2.0",
     "react": "19.2.7",
     "react-dom": "19.2.7",
@@ -38,7 +48,7 @@
     "@types/react-dom": "19.2.3",
     "daisyui": "5.6.16",
     "eslint": "10.6.0",
-    "eslint-config-next": "16.2.10",
+    "eslint-config-next": "16.2.11",
     "jest": "30.4.2",
     "jest-environment-jsdom": "30.4.1",
     "kill-port": "2.0.1",
