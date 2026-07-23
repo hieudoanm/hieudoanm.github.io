@@ -6,7 +6,7 @@ import { TransferForm, TransferConfirmation } from '@/components/molecules';
 import { useData } from '@/providers/DataProvider';
 import { useToast } from '@/providers/ToastProvider';
 
-export default function TransferPage() {
+const TransferPage = () => {
   const { accounts, addTransaction, loading } = useData();
   const { showToast } = useToast();
   const [fromAccount, setFromAccount] = useState('');
@@ -14,6 +14,8 @@ export default function TransferPage() {
   const [amount, setAmount] = useState('');
   const [note, setNote] = useState('');
   const [confirmed, setConfirmed] = useState(false);
+
+  console.log('[TransferPage] render', { loading, confirmed });
 
   if (loading) {
     return (
@@ -27,12 +29,15 @@ export default function TransferPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    console.log('[TransferPage] submit', { fromAccount, recipient, amount });
     setConfirmed(true);
   };
 
   const handleConfirm = async () => {
     const now = new Date().toISOString();
     const txId = String(Date.now());
+
+    console.log('[TransferPage] confirm', { txId, recipient, amount });
 
     await addTransaction({
       id: txId,
@@ -93,4 +98,6 @@ export default function TransferPage() {
       </div>
     </DashboardTemplate>
   );
-}
+};
+
+export default TransferPage;

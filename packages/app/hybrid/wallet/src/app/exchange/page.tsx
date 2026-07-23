@@ -6,12 +6,17 @@ import { CurrencyConverter, RateList } from '@/components/molecules';
 import { useData } from '@/providers/DataProvider';
 import { useToast } from '@/providers/ToastProvider';
 
-export default function ExchangePage() {
+const ExchangePage = () => {
   const { currencyRates, loading } = useData();
   const { showToast } = useToast();
   const [amount, setAmount] = useState('1000');
   const [from, setFrom] = useState('USD');
   const [to, setTo] = useState('EUR');
+
+  console.log('[ExchangePage] render', {
+    loading,
+    rates: currencyRates.length,
+  });
 
   if (loading) {
     return (
@@ -31,6 +36,7 @@ export default function ExchangePage() {
   const rate = fromRate && toRate ? toRate.rate / fromRate.rate : 0;
 
   const handleSwap = () => {
+    console.log('[ExchangePage] swap', { from, to });
     setFrom(to);
     setTo(from);
   };
@@ -54,16 +60,24 @@ export default function ExchangePage() {
           onFromChange={setFrom}
           onToChange={setTo}
           onSwap={handleSwap}
-          onConvert={() =>
+          onConvert={() => {
+            console.log('[ExchangePage] convert', {
+              amount,
+              from,
+              to,
+              converted,
+            });
             showToast(
               `Converted ${Number(amount).toLocaleString()} ${from} to ${converted.toLocaleString(undefined, { maximumFractionDigits: 2 })} ${to}`,
               'success'
-            )
-          }
+            );
+          }}
         />
 
         <RateList rates={currencyRates} />
       </div>
     </DashboardTemplate>
   );
-}
+};
+
+export default ExchangePage;

@@ -7,11 +7,8 @@ export const metadata: Metadata = {
   description: 'Banking app',
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+const RootLayout = ({ children }: { children: React.ReactNode }) => {
+  console.log('[RootLayout] render');
   return (
     <html lang="en" data-theme="night">
       <body className="bg-base-300 h-screen overflow-hidden">
@@ -19,4 +16,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

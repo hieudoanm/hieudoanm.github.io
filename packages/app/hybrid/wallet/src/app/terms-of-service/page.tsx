@@ -4,7 +4,8 @@ import Link from 'next/link';
 import { DashboardTemplate } from '@/components/templates';
 import { FiArrowLeft } from 'react-icons/fi';
 
-export default function TermsOfServicePage() {
+const TermsOfServicePage = () => {
+  console.log('[TermsOfServicePage] render');
   return (
     <DashboardTemplate>
       <div className="mx-auto max-w-3xl">
@@ -111,4 +112,6 @@ export default function TermsOfServicePage() {
       </div>
     </DashboardTemplate>
   );
-}
+};
+
+export default TermsOfServicePage;

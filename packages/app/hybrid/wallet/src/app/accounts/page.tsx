@@ -16,10 +16,16 @@ const filters: { label: string; value: AccountType }[] = [
   { label: 'Credit', value: 'credit' },
 ];
 
-export default function AccountsPage() {
+const AccountsPage = () => {
   const { accounts, loading } = useData();
   const [filter, setFilter] = useState<AccountType>('all');
   const [showAdd, setShowAdd] = useState(false);
+
+  console.log('[AccountsPage] render', {
+    loading,
+    count: accounts.length,
+    filter,
+  });
 
   if (loading) {
     return (
@@ -74,4 +80,6 @@ export default function AccountsPage() {
       <AddAccountModal open={showAdd} onClose={() => setShowAdd(false)} />
     </DashboardTemplate>
   );
-}
+};
+
+export default AccountsPage;

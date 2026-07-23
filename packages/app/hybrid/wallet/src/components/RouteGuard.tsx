@@ -6,17 +6,25 @@ import { useData } from '@/providers/DataProvider';
 
 const PUBLIC_ROUTES = ['/login', '/register'];
 
-export function RouteGuard({ children }: { children: React.ReactNode }) {
+export const RouteGuard = ({ children }: { children: React.ReactNode }) => {
   const { isAuthenticated } = useData();
   const router = useRouter();
   const pathname = usePathname();
 
   const isPublicRoute = PUBLIC_ROUTES.includes(pathname);
 
+  console.log('[RouteGuard] render', {
+    pathname,
+    isAuthenticated,
+    isPublicRoute,
+  });
+
   useEffect(() => {
     if (!isAuthenticated && !isPublicRoute) {
+      console.log('[RouteGuard] redirecting to /login');
       router.replace('/login');
     } else if (isAuthenticated && isPublicRoute) {
+      console.log('[RouteGuard] redirecting to /');
       router.replace('/');
     }
   }, [isAuthenticated, isPublicRoute, router, pathname]);
@@ -30,4 +38,4 @@ export function RouteGuard({ children }: { children: React.ReactNode }) {
   }
 
   return <>{children}</>;
-}
+};

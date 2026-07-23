@@ -35,10 +35,10 @@ const AddAccountModal: FC<AddAccountModalProps> = ({ open, onClose }) => {
       accountNumber: accountNumber.trim(),
       color:
         type === 'checking'
-          ? '#3B82F6'
+          ? 'primary'
           : type === 'savings'
-            ? '#10B981'
-            : '#8B5CF6',
+            ? 'secondary'
+            : 'accent',
     });
 
     showToast('Account added successfully', 'success');
@@ -112,7 +112,7 @@ const AddAccountModal: FC<AddAccountModalProps> = ({ open, onClose }) => {
             />
           </label>
           <div className="modal-action">
-            <button type="button" className="btn" onClick={onClose}>
+            <button type="button" className="btn btn-neutral" onClick={onClose}>
               Cancel
             </button>
             <button type="submit" className="btn btn-primary">

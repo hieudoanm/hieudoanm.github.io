@@ -36,7 +36,7 @@ const QuickPayForm: FC<QuickPayFormProps> = ({
           {presets.map((preset) => (
             <button
               key={preset}
-              className="btn btn-sm"
+              className="btn btn-neutral btn-sm"
               onClick={() => onAmountChange(preset)}>
               ${preset}
             </button>

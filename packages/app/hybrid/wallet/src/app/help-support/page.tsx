@@ -55,7 +55,8 @@ const contactOptions = [
   },
 ];
 
-export default function HelpSupportPage() {
+const HelpSupportPage = () => {
+  console.log('[HelpSupportPage] render');
   return (
     <DashboardTemplate>
       <div className="mx-auto max-w-3xl">
@@ -139,4 +140,6 @@ export default function HelpSupportPage() {
       </div>
     </DashboardTemplate>
   );
-}
+};
+
+export default HelpSupportPage;

@@ -1,6 +1,7 @@
 'use client';
 
-export default function Error() {
+const Error = () => {
+  console.log('[Error] render');
   return (
     <main
       className="flex h-screen w-screen flex-col items-center justify-center gap-4"
@@ -14,4 +15,6 @@ export default function Error() {
       </button>
     </main>
   );
-}
+};
+
+export default Error;

@@ -62,7 +62,7 @@ const CurrencyConverter: FC<CurrencyConverterProps> = ({
           </label>
 
           <button
-            className="btn btn-circle"
+            className="btn btn-neutral btn-circle"
             aria-label="Swap currencies"
             onClick={onSwap}>
             <FiRepeat />

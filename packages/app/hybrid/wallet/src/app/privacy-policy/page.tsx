@@ -4,7 +4,8 @@ import Link from 'next/link';
 import { DashboardTemplate } from '@/components/templates';
 import { FiArrowLeft } from 'react-icons/fi';
 
-export default function PrivacyPolicyPage() {
+const PrivacyPolicyPage = () => {
+  console.log('[PrivacyPolicyPage] render');
   return (
     <DashboardTemplate>
       <div className="mx-auto max-w-3xl">
@@ -109,4 +110,6 @@ export default function PrivacyPolicyPage() {
       </div>
     </DashboardTemplate>
   );
-}
+};
+
+export default PrivacyPolicyPage;

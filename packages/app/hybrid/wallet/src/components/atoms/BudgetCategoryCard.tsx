@@ -13,7 +13,9 @@ const BudgetCategoryCard: FC<BudgetCategoryCardProps> = ({ category }) => {
   const Icon = getBudgetIcon(category.name);
 
   return (
-    <div className="card bg-base-200 shadow-md">
+    <div
+      className="card bg-base-200 shadow-md"
+      data-testid={`budget-${category.name.toLowerCase().replace(/\s+/g, '-')}`}>
       <div className="card-body gap-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">

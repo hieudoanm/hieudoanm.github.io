@@ -6,10 +6,15 @@ import { TransactionItem } from '@/components/atoms';
 import { TransactionFilters } from '@/components/molecules';
 import { useData } from '@/providers/DataProvider';
 
-export default function TransactionsPage() {
+const TransactionsPage = () => {
   const { transactions, loading } = useData();
   const [search, setSearch] = useState('');
   const [filter, setFilter] = useState<'all' | 'income' | 'expense'>('all');
+
+  console.log('[TransactionsPage] render', {
+    loading,
+    count: transactions.length,
+  });
 
   if (loading) {
     return (
@@ -56,4 +61,6 @@ export default function TransactionsPage() {
       </div>
     </DashboardTemplate>
   );
-}
+};
+
+export default TransactionsPage;

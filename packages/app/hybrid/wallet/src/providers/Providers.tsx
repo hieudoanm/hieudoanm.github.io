@@ -5,7 +5,8 @@ import { DataProvider } from '@/providers/DataProvider';
 import { RouteGuard } from '@/components/RouteGuard';
 import { ToastProvider } from '@/providers/ToastProvider';
 
-export function Providers({ children }: { children: ReactNode }) {
+export const Providers = ({ children }: { children: ReactNode }) => {
+  console.log('[Providers] render');
   return (
     <ToastProvider>
       <DataProvider>
@@ -13,4 +14,4 @@ export function Providers({ children }: { children: ReactNode }) {
       </DataProvider>
     </ToastProvider>
   );
-}
+};

@@ -7,9 +7,14 @@ import { useData } from '@/providers/DataProvider';
 
 type Filter = 'all' | 'unread' | 'alerts';
 
-export default function NotificationsPage() {
+const NotificationsPage = () => {
   const { notifications, markNotificationRead, loading } = useData();
   const [filter, setFilter] = useState<Filter>('all');
+
+  console.log('[NotificationsPage] render', {
+    loading,
+    count: notifications.length,
+  });
 
   if (loading) {
     return (
@@ -70,4 +75,6 @@ export default function NotificationsPage() {
       </div>
     </DashboardTemplate>
   );
-}
+};
+
+export default NotificationsPage;

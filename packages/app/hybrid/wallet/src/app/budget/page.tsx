@@ -5,8 +5,13 @@ import { BudgetCategoryCard } from '@/components/atoms';
 import { BudgetSummary } from '@/components/molecules';
 import { useData } from '@/providers/DataProvider';
 
-export default function BudgetPage() {
+const BudgetPage = () => {
   const { budgetCategories, loading } = useData();
+
+  console.log('[BudgetPage] render', {
+    loading,
+    count: budgetCategories.length,
+  });
 
   if (loading) {
     return (
@@ -39,4 +44,6 @@ export default function BudgetPage() {
       </div>
     </DashboardTemplate>
   );
-}
+};
+
+export default BudgetPage;

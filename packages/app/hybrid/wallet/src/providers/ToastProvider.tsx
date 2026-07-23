@@ -24,11 +24,13 @@ const ToastContext = createContext<ToastContextValue | null>(null);
 
 let nextId = 0;
 
-export function ToastProvider({ children }: { children: ReactNode }) {
+export const ToastProvider = ({ children }: { children: ReactNode }) => {
+  console.log('[ToastProvider] render');
   const [toasts, setToasts] = useState<Toast[]>([]);
 
   const showToast = useCallback((message: string, type: ToastType = 'info') => {
     const id = nextId++;
+    console.log('[ToastProvider] showToast', { id, message, type });
     setToasts((prev) => [...prev, { id, message, type }]);
     setTimeout(() => {
       setToasts((prev) => prev.filter((t) => t.id !== id));
@@ -36,6 +38,7 @@ export function ToastProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const removeToast = useCallback((id: number) => {
+    console.log('[ToastProvider] removeToast', id);
     setToasts((prev) => prev.filter((t) => t.id !== id));
   }, []);
 
@@ -61,10 +64,10 @@ export function ToastProvider({ children }: { children: ReactNode }) {
       </div>
     </ToastContext.Provider>
   );
-}
+};
 
-export function useToast(): ToastContextValue {
+export const useToast = (): ToastContextValue => {
   const ctx = useContext(ToastContext);
   if (!ctx) throw new Error('useToast must be used within ToastProvider');
   return ctx;
-}
+};

@@ -57,7 +57,8 @@ interface DataContextValue {
 
 const DataContext = createContext<DataContextValue | null>(null);
 
-export function DataProvider({ children }: { children: ReactNode }) {
+export const DataProvider = ({ children }: { children: ReactNode }) => {
+  console.log('[DataProvider] render');
   const [user, setUser] = useState<User | null>(seedUser);
   const [accounts, setAccounts] = useState<Account[]>(seedAccounts);
   const [transactions, setTransactions] =
@@ -76,16 +77,19 @@ export function DataProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const stored = localStorage.getItem('wallet-auth');
+    console.log('[DataProvider] auth check', { stored });
     if (stored === 'true') setIsAuthenticated(true);
   }, []);
 
   useEffect(() => {
     const sync = async () => {
+      console.log('[DataProvider] sync start');
       setLoading(true);
       try {
         const seed = await db.needsSeed();
 
         if (seed) {
+          console.log('[DataProvider] seeding database');
           await db.put(db.STORES.user, seedUser);
           await db.putAll(db.STORES.accounts, seedAccounts);
           await db.putAll(db.STORES.transactions, seedTransactions);
@@ -108,6 +112,17 @@ export function DataProvider({ children }: { children: ReactNode }) {
             db.getAll<CurrencyRate>(db.STORES.currencyRates),
           ]);
 
+        console.log('[DataProvider] sync loaded', {
+          user: u.length,
+          accounts: accs.length,
+          transactions: txs.length,
+          cards: crds.length,
+          bills: bills.length,
+          notifications: notifs.length,
+          categories: cats.length,
+          rates: rates.length,
+        });
+
         if (u[0]) setUser(u[0]);
         if (accs.length) setAccounts(accs);
         if (txs.length) setTransactions(txs);
@@ -116,10 +131,11 @@ export function DataProvider({ children }: { children: ReactNode }) {
         if (notifs.length) setNotifications(notifs);
         if (cats.length) setBudgetCategories(cats);
         if (rates.length) setCurrencyRates(rates);
-      } catch {
-        // IndexedDB unavailable — use seed data as-is
+      } catch (err) {
+        console.warn('[DataProvider] sync failed, using seed data', err);
       } finally {
         setLoading(false);
+        console.log('[DataProvider] sync complete');
       }
     };
 
@@ -127,6 +143,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const login = useCallback(async (email: string, _password: string) => {
+    console.log('[DataProvider] login', { email });
     if (!email) return false;
     localStorage.setItem('wallet-auth', 'true');
     setIsAuthenticated(true);
@@ -134,100 +151,108 @@ export function DataProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const logout = useCallback(() => {
+    console.log('[DataProvider] logout');
     localStorage.removeItem('wallet-auth');
     setIsAuthenticated(false);
   }, []);
 
   const updateUser = useCallback(async (updated: User) => {
+    console.log('[DataProvider] updateUser', updated.id);
     setUser(updated);
     try {
       await db.put(db.STORES.user, updated);
-    } catch {
-      // silent
+    } catch (err) {
+      console.warn('[DataProvider] updateUser failed', err);
     }
   }, []);
 
   const updateAccount = useCallback(async (updated: Account) => {
+    console.log('[DataProvider] updateAccount', updated.id);
     setAccounts((prev) => prev.map((a) => (a.id === updated.id ? updated : a)));
     try {
       await db.put(db.STORES.accounts, updated);
-    } catch {
-      // silent
+    } catch (err) {
+      console.warn('[DataProvider] updateAccount failed', err);
     }
   }, []);
 
   const addAccount = useCallback(async (account: Account) => {
+    console.log('[DataProvider] addAccount', account.id);
     setAccounts((prev) => [...prev, account]);
     try {
       await db.put(db.STORES.accounts, account);
-    } catch {
-      // silent
+    } catch (err) {
+      console.warn('[DataProvider] addAccount failed', err);
     }
   }, []);
 
   const addTransaction = useCallback(async (tx: Transaction) => {
+    console.log('[DataProvider] addTransaction', tx.id);
     setTransactions((prev) => [tx, ...prev]);
     try {
       await db.put(db.STORES.transactions, tx);
-    } catch {
-      // silent
+    } catch (err) {
+      console.warn('[DataProvider] addTransaction failed', err);
     }
   }, []);
 
   const updateCard = useCallback(async (updated: Card) => {
+    console.log('[DataProvider] updateCard', updated.id);
     setCards((prev) => prev.map((c) => (c.id === updated.id ? updated : c)));
     try {
       await db.put(db.STORES.cards, updated);
-    } catch {
-      // silent
+    } catch (err) {
+      console.warn('[DataProvider] updateCard failed', err);
     }
   }, []);
 
   const updateRecurringBill = useCallback(async (updated: RecurringBill) => {
+    console.log('[DataProvider] updateRecurringBill', updated.id);
     setRecurringBills((prev) =>
       prev.map((b) => (b.id === updated.id ? updated : b))
     );
     try {
       await db.put(db.STORES.recurringBills, updated);
-    } catch {
-      // silent
+    } catch (err) {
+      console.warn('[DataProvider] updateRecurringBill failed', err);
     }
   }, []);
 
   const addRecurringBill = useCallback(async (bill: RecurringBill) => {
+    console.log('[DataProvider] addRecurringBill', bill.id);
     setRecurringBills((prev) => [...prev, bill]);
     try {
       await db.put(db.STORES.recurringBills, bill);
-    } catch {
-      // silent
+    } catch (err) {
+      console.warn('[DataProvider] addRecurringBill failed', err);
     }
   }, []);
 
-  const markNotificationRead = useCallback(
-    async (id: string) => {
-      setNotifications((prev) =>
-        prev.map((n) => (n.id === id ? { ...n, read: true } : n))
-      );
-      try {
-        const updated = notifications.find((n) => n.id === id);
-        if (updated) {
-          await db.put(db.STORES.notifications, { ...updated, read: true });
-        }
-      } catch {
-        // silent
+  const markNotificationRead = useCallback(async (id: string) => {
+    console.log('[DataProvider] markNotificationRead', id);
+    let updated: Notification | undefined;
+    setNotifications((prev) => {
+      updated = prev.find((n) => n.id === id);
+      return prev.map((n) => (n.id === id ? { ...n, read: true } : n));
+    });
+    try {
+      if (updated) {
+        await db.put(db.STORES.notifications, { ...updated, read: true });
       }
-    },
-    [notifications]
-  );
+    } catch (err) {
+      console.warn('[DataProvider] markNotificationRead failed', err);
+    }
+  }, []);
 
   const updateBudgetCategory = useCallback(async (updated: BudgetCategory) => {
+    console.log('[DataProvider] updateBudgetCategory', updated.id);
     setBudgetCategories((prev) =>
       prev.map((c) => (c.id === updated.id ? updated : c))
     );
     try {
       await db.put(db.STORES.budgetCategories, updated);
-    } catch {
-      // silent
+    } catch (err) {
+      console.warn('[DataProvider] updateBudgetCategory failed', err);
     }
   }, []);
 
@@ -259,10 +284,10 @@ export function DataProvider({ children }: { children: ReactNode }) {
       {children}
     </DataContext.Provider>
   );
-}
+};
 
-export function useData(): DataContextValue {
+export const useData = (): DataContextValue => {
   const ctx = useContext(DataContext);
   if (!ctx) throw new Error('useData must be used within DataProvider');
   return ctx;
-}
+};

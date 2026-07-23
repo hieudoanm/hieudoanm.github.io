@@ -5,14 +5,18 @@ import Link from 'next/link';
 import { AuthTemplate } from '@/components/templates';
 import { useData } from '@/providers/DataProvider';
 import { FiMail, FiLock } from 'react-icons/fi';
+import { NextPage } from 'next';
 
-export default function LoginPage() {
+const LoginPage: NextPage = () => {
   const { login } = useData();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  console.log('[LoginPage] render');
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    console.log('[LoginPage] submit', { email });
     await login(email, password);
   };
 
@@ -26,7 +30,7 @@ export default function LoginPage() {
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
             <label className="floating-label">
               <span>Email</span>
-              <div className="relative">
+              <div className="relative w-full">
                 <FiMail className="text-base-content/40 absolute top-1/2 left-3 -translate-y-1/2" />
                 <input
                   type="email"
@@ -41,7 +45,7 @@ export default function LoginPage() {
 
             <label className="floating-label">
               <span>Password</span>
-              <div className="relative">
+              <div className="relative w-full">
                 <FiLock className="text-base-content/40 absolute top-1/2 left-3 -translate-y-1/2" />
                 <input
                   type="password"
@@ -72,8 +76,12 @@ export default function LoginPage() {
           <div className="divider">OR</div>
 
           <div className="flex flex-col gap-2">
-            <button className="btn w-full">Continue with Google</button>
-            <button className="btn w-full">Continue with Apple</button>
+            <button className="btn btn-neutral w-full">
+              Continue with Google
+            </button>
+            <button className="btn btn-neutral w-full">
+              Continue with Apple
+            </button>
           </div>
 
           <p className="text-center text-sm">
@@ -86,4 +94,6 @@ export default function LoginPage() {
       </div>
     </AuthTemplate>
   );
-}
+};
+
+export default LoginPage;

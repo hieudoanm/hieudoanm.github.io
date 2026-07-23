@@ -6,8 +6,10 @@ import ProfileForm from '@/components/organisms/ProfileForm';
 import SettingsSection from '@/components/organisms/SettingsSection';
 import { useData } from '@/providers/DataProvider';
 
-export default function ProfilePage() {
+const ProfilePage = () => {
   const { user, logout, loading } = useData();
+
+  console.log('[ProfilePage] render', { loading, userId: user?.id });
 
   if (loading || !user) {
     return (
@@ -37,4 +39,6 @@ export default function ProfilePage() {
       </div>
     </DashboardTemplate>
   );
-}
+};
+
+export default ProfilePage;

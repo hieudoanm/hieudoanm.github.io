@@ -9,10 +9,12 @@ import {
 } from '@/components/molecules';
 import { useToast } from '@/providers/ToastProvider';
 
-export default function PayPage() {
+const PayPage = () => {
   const { showToast } = useToast();
   const [amount, setAmount] = useState('');
   const [showQR, setShowQR] = useState(false);
+
+  console.log('[PayPage] render');
 
   return (
     <DashboardTemplate>
@@ -27,11 +29,16 @@ export default function PayPage() {
         <QuickPayForm
           amount={amount}
           onAmountChange={setAmount}
-          onSubmit={() => showToast('Payment sent!', 'success')}
+          onSubmit={() => {
+            console.log('[PayPage] quickPay', { amount });
+            showToast('Payment sent!', 'success');
+          }}
         />
 
         <QRCodeModal open={showQR} onClose={() => setShowQR(false)} />
       </div>
     </DashboardTemplate>
   );
-}
+};
+
+export default PayPage;

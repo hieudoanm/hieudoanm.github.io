@@ -6,10 +6,12 @@ import { CardItem, CardDetail } from '@/components/atoms';
 import { useData } from '@/providers/DataProvider';
 import { useToast } from '@/providers/ToastProvider';
 
-export default function CardsPage() {
+const CardsPage = () => {
   const { cards, updateCard, loading } = useData();
   const { showToast } = useToast();
   const [selectedCard, setSelectedCard] = useState('');
+
+  console.log('[CardsPage] render', { loading, count: cards.length });
 
   if (loading) {
     return (
@@ -47,9 +49,14 @@ export default function CardsPage() {
           <CardDetail
             card={activeCard}
             onToggleFreeze={async () => {
-              await updateCard({ ...activeCard, frozen: !activeCard.frozen });
+              const willFreeze = !activeCard.frozen;
+              console.log('[CardsPage] toggleFreeze', {
+                id: activeCard.id,
+                willFreeze,
+              });
+              await updateCard({ ...activeCard, frozen: willFreeze });
               showToast(
-                `${activeCard.name} ${activeCard.frozen ? 'unfrozen' : 'frozen'}`,
+                `${activeCard.name} ${willFreeze ? 'frozen' : 'unfrozen'}`,
                 'success'
               );
             }}
@@ -58,4 +65,6 @@ export default function CardsPage() {
       </div>
     </DashboardTemplate>
   );
-}
+};
+
+export default CardsPage;

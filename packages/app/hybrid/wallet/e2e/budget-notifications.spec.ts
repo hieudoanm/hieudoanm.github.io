@@ -15,6 +15,7 @@ test.describe('Budget page', () => {
   test('shows budget categories', async ({ page }) => {
     const categories = page.locator('[data-testid^="budget-"]');
     await expect(categories.first()).toBeVisible({ timeout: 5000 });
+    expect(await categories.count()).toBeGreaterThan(0);
   });
 
   test('shows total budget summary', async ({ page }) => {

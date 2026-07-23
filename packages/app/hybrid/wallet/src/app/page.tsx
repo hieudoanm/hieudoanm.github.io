@@ -5,8 +5,9 @@ import { BalanceCard, AccountCard, TransactionItem } from '@/components/atoms';
 import { QuickActions } from '@/components/molecules';
 import { useData } from '@/providers/DataProvider';
 
-export default function HomePage() {
+const HomePage = () => {
   const { user, accounts, transactions, loading } = useData();
+  console.log('[HomePage] render', { loading, accounts: accounts.length });
 
   if (loading) {
     return (
@@ -67,4 +68,6 @@ export default function HomePage() {
       </div>
     </DashboardTemplate>
   );
-}
+};
+
+export default HomePage;

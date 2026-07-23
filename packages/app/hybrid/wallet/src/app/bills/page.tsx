@@ -9,10 +9,12 @@ import { useToast } from '@/providers/ToastProvider';
 import { formatCurrency } from '@/utils/format';
 import { FiPlus } from 'react-icons/fi';
 
-export default function BillsPage() {
+const BillsPage = () => {
   const { recurringBills, updateRecurringBill, loading } = useData();
   const { showToast } = useToast();
   const [showAdd, setShowAdd] = useState(false);
+
+  console.log('[BillsPage] render', { loading, count: recurringBills.length });
 
   if (loading) {
     return (
@@ -49,6 +51,7 @@ export default function BillsPage() {
               key={bill.id}
               bill={bill}
               onPay={async () => {
+                console.log('[BillsPage] markPaid', bill.id);
                 await updateRecurringBill({ ...bill, paid: true });
                 showToast(`${bill.name} marked as paid`, 'success');
               }}
@@ -65,4 +68,6 @@ export default function BillsPage() {
       <AddBillModal open={showAdd} onClose={() => setShowAdd(false)} />
     </DashboardTemplate>
   );
-}
+};
+
+export default BillsPage;

@@ -4,10 +4,12 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { AuthTemplate } from '@/components/templates';
 import { useData } from '@/providers/DataProvider';
+import { useToast } from '@/providers/ToastProvider';
 import { FiUser, FiMail, FiLock } from 'react-icons/fi';
 
-export default function RegisterPage() {
-  const { login } = useData();
+const RegisterPage = () => {
+  const { login, updateUser, user } = useData();
+  const { showToast } = useToast();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -15,7 +17,12 @@ export default function RegisterPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    console.log('[RegisterPage] submit', { name, email });
     await login(email, password);
+    if (user) {
+      await updateUser({ ...user, name: name.trim(), email });
+    }
+    showToast('Account created successfully!', 'success');
   };
 
   return (
@@ -113,4 +120,6 @@ export default function RegisterPage() {
       </div>
     </AuthTemplate>
   );
-}
+};
+
+export default RegisterPage;

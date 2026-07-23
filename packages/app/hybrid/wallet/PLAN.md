@@ -54,6 +54,8 @@
 - **Responsive**: Bottom tab nav (mobile), sidebar nav (desktop)
 - **Persistence**: IndexedDB for all data; seeded on first load
 - **Testing**: Jest (unit) + Playwright (E2E)
+- **Debugging**: `console.*` statements throughout source for development;
+  stripped from production builds via `next.config.ts` `compiler.removeConsole`
 
 ## File Structure
 
@@ -79,9 +81,12 @@ e2e/                  # Playwright E2E tests
 
 ## Key Conventions
 
-- Arrow functions, `FC` type for components
+- Arrow functions for all function declarations and component exports
+- `FC` type for components
 - `@/*` path aliases
-- DaisyUI component classes (`btn`, `card`, `input`, etc.)
+- DaisyUI component classes (`btn` + `btn-*`, `card`, `input`, etc.)
 - Dark theme as default
 - `prettier-plugin-tailwindcss` for class sorting
 - Atomic design: atoms → molecules → organisms → templates
+- `console.*` with `[Module]` prefix for structured debug logging
+- `console.*` stripped in production via `compiler.removeConsole`

@@ -108,7 +108,7 @@ const AddBillModal: FC<AddBillModalProps> = ({ open, onClose }) => {
             />
           </label>
           <div className="modal-action">
-            <button type="button" className="btn" onClick={onClose}>
+            <button type="button" className="btn btn-neutral" onClick={onClose}>
               Cancel
             </button>
             <button type="submit" className="btn btn-primary">

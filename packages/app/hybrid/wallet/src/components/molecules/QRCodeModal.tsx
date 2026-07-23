@@ -31,7 +31,7 @@ const QRCodeModal: FC<QRCodeModalProps> = ({ open, onClose }) => {
         </p>
         <div className="modal-action">
           <button
-            className="btn"
+            className="btn btn-neutral"
             onClick={onClose}
             aria-label="Close QR code modal">
             Close
