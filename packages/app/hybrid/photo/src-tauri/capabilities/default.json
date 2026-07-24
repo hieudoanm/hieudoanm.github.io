@@ -9,14 +9,6 @@
     "shell:allow-execute",
     "shell:allow-spawn",
     "shell:allow-kill",
-    "shell:allow-rename",
-    "shell:allow-write-file",
-    "shell:allow-read-file",
-    "shell:allow-read-dir",
-    "shell:allow-cwd",
-    "shell:allow-env",
-    "shell:allow-stdin-write",
-    "shell:allow-stdout-read",
-    "shell:allow-stderr-read"
+    "shell:allow-stdin-write"
   ]
 }

@@ -1,5 +1,5 @@
 [package]
-name = "hieudoanm_next"
+name = "hieudoanm"
 version = "0.0.1"
 description = "Hieu Doan"
 authors = ["hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)"]
