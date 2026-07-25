@@ -40,10 +40,10 @@ jobs:
         run: pnpm install
       - name: Lint
         run: pnpm run lint --filter=@hieudoanm.github.io/app
+      - name: Set up Environment
+        run: echo 'EXPORT=true' >> packages/app/hybrid/hieudoanm/.env
       - name: Build
         run: pnpm run build --filter=@hieudoanm.github.io/app
-        env:
-          EXPORT: true
       - name: Test
         run: pnpm run test --filter=@hieudoanm.github.io/app || echo 'No tests configured'
       - name: Upload Build Output

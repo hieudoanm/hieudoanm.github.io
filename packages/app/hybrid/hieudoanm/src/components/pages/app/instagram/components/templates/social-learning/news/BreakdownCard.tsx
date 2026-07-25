@@ -31,7 +31,7 @@ export const BreakdownCard: FC<TemplateProps> = ({ data }) => {
         {summary}
       </p>
       <div className="bg-base-200 rounded-box mt-6 flex-1 p-4">
-        <ul className="flex flex-col gap-3">
+        <ul className="flex flex-col gap-3 text-left">
           {points.map((point, i) => (
             <li key={i} className="flex gap-4">
               <span className="bg-primary text-primary-content flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-[10px] font-bold">

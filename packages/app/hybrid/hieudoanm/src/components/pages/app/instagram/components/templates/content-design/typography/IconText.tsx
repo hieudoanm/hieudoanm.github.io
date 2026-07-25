@@ -18,8 +18,8 @@ export const IconText: FC<TemplateProps> = ({ data }) => {
         {text && (
           <p className="text-neutral mt-2 text-base leading-relaxed">{text}</p>
         )}
+        <Footer citation={citation} />
       </div>
-      <Footer citation={citation} />
     </Background>
   );
 };

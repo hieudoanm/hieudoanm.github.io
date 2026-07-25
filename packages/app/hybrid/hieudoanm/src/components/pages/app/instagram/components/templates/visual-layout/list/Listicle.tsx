@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import type { TemplateProps } from '../../common';
-import { Background, Footer } from '../../_shared';
+import { Background, Footer, Header } from '../../_shared';
 
 export const Listicle: FC<TemplateProps> = ({ data }) => {
   const title = (data.title as string) ?? '';
@@ -29,32 +29,31 @@ export const Listicle: FC<TemplateProps> = ({ data }) => {
   const citation = (data.citation as string) ?? '';
   return (
     <Background>
-      <h1 className="text-base-content mb-1 text-4xl font-bold tracking-tight">
-        {title}
-      </h1>
-      <p className="text-neutral mb-1 text-xs">{text}</p>
-      <ol className={`flex flex-1 flex-col ${gap}`}>
-        {list.map((item, i) => (
-          <li
-            key={i}
-            className="rounded-box bg-accent/5 flex items-center gap-2 px-1 py-1">
-            <span className="bg-primary text-primary-content flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full text-xs font-bold">
-              {i + 1}
-            </span>
-            <span className="text-base-content text-xs leading-tight font-medium">
-              {item}
-            </span>
-          </li>
-        ))}
-      </ol>
-      {imageUrl && (
-        <img
-          src={imageUrl}
-          alt=""
-          className="rounded-box mt-2 h-8 w-full flex-shrink-0 object-cover"
-        />
-      )}
-      <Footer citation={citation} />
+      <div>
+        <Header title={title} subtitle={text} />
+        <ol className={`flex flex-1 flex-col ${gap}`}>
+          {list.map((item, i) => (
+            <li
+              key={i}
+              className="rounded-box bg-accent/5 flex items-center gap-2 px-1 py-1">
+              <span className="bg-primary text-primary-content flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full text-xs font-bold">
+                {i + 1}
+              </span>
+              <span className="text-base-content text-xs leading-tight font-medium">
+                {item}
+              </span>
+            </li>
+          ))}
+        </ol>
+        {imageUrl && (
+          <img
+            src={imageUrl}
+            alt=""
+            className="rounded-box mt-2 h-8 w-full flex-shrink-0 object-cover"
+          />
+        )}
+        <Footer citation={citation} />
+      </div>
     </Background>
   );
 };
