@@ -41,9 +41,7 @@ jobs:
       - name: Lint
         run: pnpm run lint --filter=@hieudoanm.github.io/app
       - name: Build
-        run: pnpm run build --filter=@hieudoanm.github.io/app
-        env:
-          EXPORT: true
+        run: EXPORT=true pnpm run build --filter=@hieudoanm.github.io/app
       - name: Test
         run: pnpm run test --filter=@hieudoanm.github.io/app || echo 'No tests configured'
       - name: Upload Build Output
