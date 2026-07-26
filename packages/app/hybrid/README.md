@@ -9,18 +9,19 @@
 
 ## Applications
 
-| No  | ID        | App                          | Description                        | Back-end |
-| --- | --------- | ---------------------------- | ---------------------------------- | -------- |
-| 01  | chat      | Chat                         | Minimal Chat like ChatGPT / Claude | Required |
-| 02  | code      | Code (Editor)                | Minimal VSCode                     |          |
-| 03  | database  | Database (Editor)            | Minimal pgAdmin for SQLite only    |          |
-| 04  | hieudoanm | Hieu Doan                    | Minimal TinyWow                    |          |
-| 05  | password  | Password Manager             | Minimal BitWarden / 1Password      | Required |
-| 06  | pdf       | PDF (Editor)                 | Minimal Adobe Acrobat PDF          |          |
-| 07  | photo     | Photo (Editor)               | Minimal Adobe Photoshop            |          |
-| 08  | projects  | Projects Management          | Minimal Atlassian Trello / Kanban  | Required |
-| 09  | svg       | SVG (Editor)                 | Minimal Adobe Illustrator          |          |
-| 10  | wallet    | Wallet (Banking and Trading) | Minimal Momo / Techcombank         | Required |
+| No  | ID        | App        | Type       | Description                        | Back-end |
+| --- | --------- | ---------- | ---------- | ---------------------------------- | -------- |
+| 00  | hieudoanm | Hieu Doan  |            | Minimal TinyWow                    |          |
+| 01  | chat      | Chat       |            | Minimal Chat like ChatGPT / Claude | Required |
+| 02  | code      | Code       | Editor     | Minimal VSCode                     |          |
+| 03  | database  | Database   | Editor     | Minimal pgAdmin for SQLite only    |          |
+| 04  | password  | Password   | Management | Minimal BitWarden / 1Password      | Required |
+| 05  | pdf       | PDF        | Editor     | Minimal Adobe Acrobat PDF          |          |
+| 06  | photo     | Photo      | Editor     | Minimal Adobe Photoshop            |          |
+| 07  | projects  | Projects   | Management | Minimal Atlassian Trello / Kanban  | Required |
+| 08  | svg       | SVG ()     | Editor     | Minimal Adobe Illustrator          |          |
+| 09  | tourney   | Touraments | Management |                                    |          |
+| 10  | wallet    | Wallet     | Management | Minimal Momo / Techcombank         | Required |
 
 ## Techstack
 

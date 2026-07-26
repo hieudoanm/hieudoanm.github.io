@@ -9,6 +9,7 @@ import {
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Be_Vietnam_Pro } from 'next/font/google';
 import { FC, ReactNode, useState } from 'react';
+import { SWRegister } from '@hieudoanm.github.io/components/SWRegister';
 
 const beVietnamPro = Be_Vietnam_Pro({
   weight: ['300', '400', '500', '600', '700', '800', '900'],
@@ -43,6 +44,7 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
             <LayoutContent>{children}</LayoutContent>
           </SidebarProvider>
         </QueryClientProvider>
+        <SWRegister />
       </body>
     </html>
   );

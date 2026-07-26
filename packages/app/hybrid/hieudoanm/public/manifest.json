@@ -1,19 +1,24 @@
 {
-  "id": "/",
-  "name": "",
-  "short_name": "",
-  "description": "",
+  "name": "Hieu Doan - App",
+  "short_name": "Hieu Doan",
+  "description": "App",
   "start_url": "/",
-  "scope": "/",
   "display": "standalone",
-  "orientation": "portrait",
-  "background_color": "#000000",
-  "theme_color": "#000000",
-  "lang": "en",
-  "dir": "auto",
-  "prefer_related_applications": false,
-  "categories": [],
-  "launch_handler": {
-    "client_mode": "focus-existing"
-  }
+  "background_color": "#0f172a",
+  "theme_color": "#8b5cf6",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
 }

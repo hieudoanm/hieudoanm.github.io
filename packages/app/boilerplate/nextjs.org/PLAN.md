@@ -1,23 +1,42 @@
 # Plan
 
 - [Plan](#plan)
-  - [Tecstack](#tecstack)
+  - [Techstack](#techstack)
+    - [01. TypeScript](#01-typescript)
+    - [02. pnpm](#02-pnpm)
+    - [03. ESLint](#03-eslint)
+    - [04. Prettier](#04-prettier)
+    - [05. Jest](#05-jest)
+    - [06. Playwright](#06-playwright)
+    - [07. Next.js](#07-nextjs)
+    - [08. Tailwindcss](#08-tailwindcss)
+    - [09. Daisyui](#09-daisyui)
+    - [10. Tauri](#10-tauri)
   - [Pages](#pages)
   - [Styling](#styling)
     - [Base HTML](#base-html)
 
-## Tecstack
+## Techstack
 
-1. **typescript**
-2. **pnpm**
-3. **eslint**
-4. **prettier**
-5. **jest**
-6. **playwright**
-7. **next.js**
-8. **tailwindcss**
-9. **daisyui**
-10. **tauri**
+### 01. TypeScript
+
+### 02. pnpm
+
+### 03. ESLint
+
+### 04. Prettier
+
+### 05. Jest
+
+### 06. Playwright
+
+### 07. Next.js
+
+### 08. Tailwindcss
+
+### 09. Daisyui
+
+### 10. Tauri
 
 ## Pages
 
