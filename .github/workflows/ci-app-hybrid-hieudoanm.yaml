@@ -30,7 +30,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v6.0.8
         with:
-          version: '11.13.0'
+          version: '11.17.0'
       - name: Install Node.js
         uses: actions/setup-node@v6.4.0
         with:
@@ -66,7 +66,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v6.0.8
         with:
-          version: '11.13.0'
+          version: '11.17.0'
       - name: Install System Dependencies
         if: runner.os == 'Linux'
         run: |
@@ -104,7 +104,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v6.0.8
         with:
-          version: '11.13.0'
+          version: '11.17.0'
       - name: Install System Dependencies
         run: |
           sudo apt-get update
@@ -144,7 +144,7 @@ jobs:
             -dname "CN=, OU=, O=, L=, S=, C="
       - name: Build Android APK & AAB
         working-directory: packages/app/hybrid/hieudoanm
-        run: pnpm exec tauri android build --ci
+        run: pnpm exec tauri android build --ci --config '{"build":{"beforeBuildCommand":""}}'
       - name: Sign APK
         run: |
           ANDROID_BUILD_TOOLS=$(ls -d "$ANDROID_HOME"/build-tools/* | sort -V | tail -1)
