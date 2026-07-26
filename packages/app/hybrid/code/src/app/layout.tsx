@@ -8,7 +8,9 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html lang="en" data-theme="dim">
-    <body className="bg-base-300 h-screen overflow-hidden">{children}</body>
+    <body className="bg-base-100 text-base-content h-screen overflow-hidden">
+      {children}
+    </body>
   </html>
 );
 

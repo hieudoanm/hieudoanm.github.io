@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 };
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html lang="en" data-theme="night">
-    <body>{children}</body>
+    <body className="bg-base-100 text-base-content">{children}</body>
   </html>
 );
 export default RootLayout;

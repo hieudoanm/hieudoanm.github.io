@@ -25,7 +25,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   console.log('[RootLayout] render');
   return (
     <html lang="en" data-theme="night">
-      <body className="bg-base-300 h-screen overflow-hidden">
+      <body className="bg-base-100 text-base-content h-screen overflow-hidden">
         <Providers>{children}</Providers>
         <SWRegister />
       </body>

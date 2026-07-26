@@ -112,6 +112,7 @@
 | 26  | `/recurring-deposits` | Recurring Deposits | RD products, monthly deposit tracker, maturity forecast          |
 | 27  | `/savings-goals`      | Savings Goals      | Goal-based saving, progress tracking, target amounts             |
 | 28  | `/insurance`          | Insurance          | Insurance products, coverage summary, claim status               |
+| 29  | `/version`            | Version            | Build version display, copy to clipboard                         |
 
 ### File Structure
 
@@ -379,6 +380,24 @@ e2e/                  # Playwright E2E tests
   with success/error/info variants; positioned above bottom nav
 - **Responsive layout**: Bottom tab nav (5 items, icon-above-text) on mobile;
   grouped sidebar nav on desktop; breakpoints at `md:` (768px)
+
+##### Base HTML
+
+- Base styles applied via `@layer base` in `globals.css` for consistent
+  typography and element styling across all pages
+- **Headings**: `font-mono`, light weight, tight tracking — h1 through h6
+- **Text**: `p`, `strong`, `em`, `small`, `sub`, `sup`, `mark`, `blockquote`
+- **Links**: Primary color, underline with offset, hover transition
+- **Lists**: `ul` (disc), `ol` (decimal), `li` with relaxed leading
+- **Code**: Mono font, subtle background, `pre` with rounded corners, `kbd` with
+  border and shadow
+- **Tables**: Full width, border-bottom on `thead`, divided `tbody`, padded
+  cells
+- **Forms**: Transparent backgrounds, medium font labels, rounded fieldsets
+- **Media**: Responsive images/video, flex figure, muted figcaption
+- **Semantic**: Full-width `header`, `footer`, `nav`, `main`, `section`,
+  `article`, `aside`
+- **Misc**: Themed `hr`, interactive `details`/`summary`, shadowed `dialog`
 
 ##### Navigation & Routing
 

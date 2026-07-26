@@ -82,6 +82,7 @@
 | 5   | `/albums`           | Albums           | Album list with covers, create/edit/delete             |
 | 6   | `/settings`         | Settings         | Theme, default export format, canvas preferences       |
 | 7   | `/profile`          | Profile          | User info                                              |
+| 8   | `/version`          | Version          | Build version display, copy to clipboard               |
 
 ### File Structure
 
@@ -282,6 +283,24 @@ e2e/                  # Playwright E2E tests
 - **Skeleton loading**: Canvas and library skeletons during load
 - **Toast notifications**: In-app toast system via `ToastProvider`; auto-dismiss
 - **Responsive layout**: Full workspace on desktop; collapsed panels on mobile
+
+##### Base HTML
+
+- Base styles applied via `@layer base` in `globals.css` for consistent
+  typography and element styling across all pages
+- **Headings**: `font-mono`, light weight, tight tracking — h1 through h6
+- **Text**: `p`, `strong`, `em`, `small`, `sub`, `sup`, `mark`, `blockquote`
+- **Links**: Primary color, underline with offset, hover transition
+- **Lists**: `ul` (disc), `ol` (decimal), `li` with relaxed leading
+- **Code**: Mono font, subtle background, `pre` with rounded corners, `kbd` with
+  border and shadow
+- **Tables**: Full width, border-bottom on `thead`, divided `tbody`, padded
+  cells
+- **Forms**: Transparent backgrounds, medium font labels, rounded fieldsets
+- **Media**: Responsive images/video, flex figure, muted figcaption
+- **Semantic**: Full-width `header`, `footer`, `nav`, `main`, `section`,
+  `article`, `aside`
+- **Misc**: Themed `hr`, interactive `details`/`summary`, shadowed `dialog`
 
 ##### Canvas Rendering
 
