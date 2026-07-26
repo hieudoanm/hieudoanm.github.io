@@ -144,7 +144,7 @@ jobs:
             -dname "CN=, OU=, O=, L=, S=, C="
       - name: Build Android APK & AAB
         working-directory: packages/app/hybrid/hieudoanm
-        run: pnpm exec tauri android build --ci
+        run: pnpm exec tauri android build --ci --config '{"build":{"beforeBuildCommand":""}}'
       - name: Sign APK
         run: |
           ANDROID_BUILD_TOOLS=$(ls -d "$ANDROID_HOME"/build-tools/* | sort -V | tail -1)
