@@ -10,11 +10,17 @@
 │   ├── [helpers.ts](./e2e/helpers.ts)
 │   ├── [index.spec.ts](./e2e/index.spec.ts)
 │   ├── [navigation.spec.ts](./e2e/navigation.spec.ts)
+│   ├── [pages.spec.ts](./e2e/pages.spec.ts)
 │   ├── [pay.spec.ts](./e2e/pay.spec.ts)
 │   ├── [profile.spec.ts](./e2e/profile.spec.ts)
 │   ├── [transactions.spec.ts](./e2e/transactions.spec.ts)
 │   └── [transfer.spec.ts](./e2e/transfer.spec.ts)
+├── images/
 ├── public/
+│   ├── icons/
+│   │   ├── [icon-192x192.png](./public/icons/icon-192x192.png)
+│   │   ├── [icon-512x512.png](./public/icons/icon-512x512.png)
+│   │   └── [icon.svg](./public/icons/icon.svg)
 │   ├── [favicon.ico](./public/favicon.ico)
 │   ├── [manifest.json](./public/manifest.json)
 │   └── [sw.js](./public/sw.js)
@@ -104,6 +110,10 @@
 │   │   │   ├── [dashboard.test.tsx](./src/app/__tests__/dashboard.test.tsx)
 │   │   │   ├── [login.test.tsx](./src/app/__tests__/login.test.tsx)
 │   │   │   └── [transfer.test.tsx](./src/app/__tests__/transfer.test.tsx)
+│   │   ├── about/
+│   │   │   └── [page.tsx](./src/app/about/page.tsx)
+│   │   ├── version/
+│   │   │   └── [page.tsx](./src/app/version/page.tsx)
 │   │   ├── [error.tsx](./src/app/error.tsx)
 │   │   ├── [layout.tsx](./src/app/layout.tsx)
 │   │   └── [not-found.tsx](./src/app/not-found.tsx)
@@ -187,13 +197,15 @@
 │   │   │   ├── __tests__/
 │   │   │   │   ├── [AuthTemplate.test.tsx](./src/components/templates/__tests__/AuthTemplate.test.tsx)
 │   │   │   │   └── [DashboardTemplate.test.tsx](./src/components/templates/__tests__/DashboardTemplate.test.tsx)
+│   │   │   ├── [AboutTemplate.tsx](./src/components/templates/AboutTemplate.tsx)
 │   │   │   ├── [AuthTemplate.tsx](./src/components/templates/AuthTemplate.tsx)
 │   │   │   ├── [DashboardTemplate.tsx](./src/components/templates/DashboardTemplate.tsx)
+│   │   │   ├── [ErrorTemplate.tsx](./src/components/templates/ErrorTemplate.tsx)
+│   │   │   ├── [VersionTemplate.tsx](./src/components/templates/VersionTemplate.tsx)
 │   │   │   └── [index.ts](./src/components/templates/index.ts)
 │   │   ├── [OfflineBanner.tsx](./src/components/OfflineBanner.tsx)
 │   │   ├── [PageTransition.tsx](./src/components/PageTransition.tsx)
 │   │   ├── [RouteGuard.tsx](./src/components/RouteGuard.tsx)
-│   │   ├── [SWRegister.tsx](./src/components/SWRegister.tsx)
 │   │   └── [SkipToContent.tsx](./src/components/SkipToContent.tsx)
 │   ├── data/
 │   │   ├── [mock.ts](./src/data/mock.ts)
@@ -206,6 +218,7 @@
 │   │   ├── [useHaptic.ts](./src/hooks/useHaptic.ts)
 │   │   ├── [useMediaQuery.ts](./src/hooks/useMediaQuery.ts)
 │   │   ├── [usePullToRefresh.ts](./src/hooks/usePullToRefresh.ts)
+│   │   ├── [useSWRegister.ts](./src/hooks/useSWRegister.ts)
 │   │   └── [useTheme.ts](./src/hooks/useTheme.ts)
 │   ├── lib/
 │   │   ├── __tests__/
@@ -241,6 +254,7 @@
 │   │   │   └── [UserProvider.tsx](./src/providers/entities/UserProvider.tsx)
 │   │   ├── [DataProvider.tsx](./src/providers/DataProvider.tsx)
 │   │   ├── [Providers.tsx](./src/providers/Providers.tsx)
+│   │   ├── [SWProvider.tsx](./src/providers/SWProvider.tsx)
 │   │   └── [ToastProvider.tsx](./src/providers/ToastProvider.tsx)
 │   ├── styles/
 │   │   └── [globals.css](./src/styles/globals.css)
@@ -257,6 +271,7 @@
 ├── src-tauri/
 │   ├── capabilities/
 │   │   └── [default.json](./src-tauri/capabilities/default.json)
+│   ├── gen/
 │   ├── icons/
 │   │   ├── [128x128.png](./src-tauri/icons/128x128.png)
 │   │   ├── [128x128@2x.png](./src-tauri/icons/128x128@2x.png)
@@ -277,11 +292,12 @@
 │   ├── src/
 │   │   ├── [lib.rs](./src-tauri/src/lib.rs)
 │   │   └── [main.rs](./src-tauri/src/main.rs)
+│   ├── [Cargo.lock](./src-tauri/Cargo.lock)
 │   ├── [Cargo.toml](./src-tauri/Cargo.toml)
 │   ├── [build.rs](./src-tauri/build.rs)
 │   └── [tauri.conf.json](./src-tauri/tauri.conf.json)
+├── [AGENTS.md](./AGENTS.md)
 ├── [LICENSE](./LICENSE)
-├── [PLAN.md](./PLAN.md)
 ├── [README.md](./README.md)
 ├── [TREE.md](./TREE.md)
 ├── [eslint.config.mts](./eslint.config.mts)
@@ -294,4 +310,4 @@
 └── [tsconfig.json](./tsconfig.json)
 ```
 
-76 directories, 215 files
+81 directories, 226 files

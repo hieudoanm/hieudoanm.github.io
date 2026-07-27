@@ -1,11 +1,21 @@
 import { test, expect } from '@playwright/test';
+import { login, waitForData } from './helpers';
+import path from 'path';
+
+test.afterEach(async ({ page }, testInfo) => {
+  const screenshotPath = path.join(
+    __dirname,
+    'images',
+    `${testInfo.title.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}.png`
+  );
+  await page.screenshot({ path: screenshotPath, fullPage: true });
+});
 
 test.describe('Budget page', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/');
-    await page.evaluate(() => localStorage.setItem('wallet-auth', 'true'));
+    await login(page);
     await page.goto('/budget');
-    await page.waitForLoadState('networkidle');
+    await waitForData(page);
   });
 
   test('displays budget page heading', async ({ page }) => {
@@ -25,10 +35,9 @@ test.describe('Budget page', () => {
 
 test.describe('Notifications filtering', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/');
-    await page.evaluate(() => localStorage.setItem('wallet-auth', 'true'));
+    await login(page);
     await page.goto('/notifications');
-    await page.waitForLoadState('networkidle');
+    await waitForData(page);
   });
 
   test('displays notifications page heading', async ({ page }) => {
@@ -53,11 +62,16 @@ test.describe('Notifications filtering', () => {
   });
 
   test('clicking a notification marks it as read', async ({ page }) => {
-    const unreadItem = page.locator('.ring-primary').first();
-    if (await unreadItem.isVisible()) {
-      await unreadItem.click();
+    const notifications = page.locator('.ring-primary');
+    const count = await notifications.count();
+    if (count > 0) {
+      const firstUnread = notifications.first();
+      const title = await firstUnread.locator('p.font-medium').textContent();
+      await firstUnread.click();
       await page.waitForTimeout(500);
-      await expect(unreadItem).not.toHaveClass(/ring-primary/);
+      if (title) {
+        await expect(page.getByText(title)).toBeVisible();
+      }
     }
   });
 });

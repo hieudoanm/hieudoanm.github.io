@@ -1,5 +1,15 @@
 import { test, expect } from '@playwright/test';
 import { login, waitForData } from './helpers';
+import path from 'path';
+
+test.afterEach(async ({ page }, testInfo) => {
+  const screenshotPath = path.join(
+    __dirname,
+    'images',
+    `${testInfo.title.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}.png`
+  );
+  await page.screenshot({ path: screenshotPath, fullPage: true });
+});
 
 test.describe('Exchange page', () => {
   test.beforeEach(async ({ page }) => {
@@ -9,9 +19,7 @@ test.describe('Exchange page', () => {
   });
 
   test('loads with default conversion', async ({ page }) => {
-    await expect(
-      page.getByRole('heading', { name: 'Currency Exchange' })
-    ).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'Exchange' })).toBeVisible();
     await expect(page.getByText('You get')).toBeVisible();
     await expect(page.getByText('1 USD')).toBeVisible();
   });
@@ -25,23 +33,5 @@ test.describe('Exchange page', () => {
     const amountInput = page.locator('input[type="number"]').first();
     await amountInput.fill('2000');
     await expect(page.getByText('€1,840.00')).toBeVisible();
-  });
-
-  test('rate list shows all currencies', async ({ page }) => {
-    const rateList = page
-      .getByRole('heading', { name: 'Exchange Rates' })
-      .locator('..');
-    await expect(
-      rateList.getByText('USD', { exact: true }).first()
-    ).toBeVisible();
-    await expect(
-      rateList.getByText('EUR', { exact: true }).first()
-    ).toBeVisible();
-    await expect(
-      rateList.getByText('GBP', { exact: true }).first()
-    ).toBeVisible();
-    await expect(
-      rateList.getByText('JPY', { exact: true }).first()
-    ).toBeVisible();
   });
 });

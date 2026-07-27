@@ -31,14 +31,15 @@ export const ToastProvider = ({ children }: { children: ReactNode }) => {
   const addToast = useCallback((message: string, type: ToastType = 'info') => {
     const id = `toast-${Date.now()}`;
     setToasts((p) => [...p, { id, message, type }]);
-    useEffect(() => {
-      const t = setTimeout(
-        () => setToasts((p) => p.filter((x) => x.id !== id)),
-        3000
-      );
-      return () => clearTimeout(t);
-    }, [id]);
   }, []);
+  useEffect(() => {
+    if (toasts.length === 0) return;
+    const latest = toasts[toasts.length - 1];
+    const t = setTimeout(() => {
+      setToasts((p) => p.filter((x) => x.id !== latest.id));
+    }, 3000);
+    return () => clearTimeout(t);
+  }, [toasts]);
   return (
     <ToastContext.Provider value={{ addToast }}>
       {children}

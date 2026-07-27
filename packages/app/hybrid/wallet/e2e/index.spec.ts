@@ -1,5 +1,15 @@
 import { test, expect } from '@playwright/test';
 import { login, waitForData } from './helpers';
+import path from 'path';
+
+test.afterEach(async ({ page }, testInfo) => {
+  const screenshotPath = path.join(
+    __dirname,
+    'images',
+    `${testInfo.title.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}.png`
+  );
+  await page.screenshot({ path: screenshotPath, fullPage: true });
+});
 
 test.describe('Homepage', () => {
   test.beforeEach(async ({ page }) => {
@@ -37,11 +47,14 @@ test.describe('Homepage', () => {
     await waitForData(page);
     await page.getByRole('link', { name: 'View all' }).click();
     await expect(page).toHaveURL(/\/transactions/);
-    await expect(page.getByText('Transaction history')).toBeVisible();
+    await expect(
+      page.getByRole('heading', { name: 'Transactions' })
+    ).toBeVisible();
   });
 });
 
 test('404 page for unknown routes', async ({ page }) => {
+  await login(page);
   await page.goto('/nonexistent');
   await expect(page.getByText('404')).toBeVisible();
 });

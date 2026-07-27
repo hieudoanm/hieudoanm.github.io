@@ -1,5 +1,15 @@
 import { test, expect } from '@playwright/test';
 import { login } from './helpers';
+import path from 'path';
+
+test.afterEach(async ({ page }, testInfo) => {
+  const screenshotPath = path.join(
+    __dirname,
+    'images',
+    `${testInfo.title.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}.png`
+  );
+  await page.screenshot({ path: screenshotPath, fullPage: true });
+});
 
 test.describe('Sidebar navigation (desktop)', () => {
   test.use({ viewport: { width: 1280, height: 720 } });
@@ -15,8 +25,10 @@ test.describe('Sidebar navigation (desktop)', () => {
     await expect(sidebar.getByText('Transactions')).toBeVisible();
     await expect(sidebar.getByText('Transfer')).toBeVisible();
     await expect(sidebar.getByText('Cards')).toBeVisible();
-    await expect(sidebar.getByText('Budget')).toBeVisible();
-    await expect(sidebar.getByText('Pay')).toBeVisible();
+    await expect(sidebar.getByRole('link', { name: 'Budget' })).toBeVisible();
+    await expect(
+      sidebar.getByRole('link', { name: 'Pay', exact: true })
+    ).toBeVisible();
     await expect(sidebar.getByText('Bills')).toBeVisible();
     await expect(sidebar.getByText('Exchange')).toBeVisible();
     await expect(sidebar.getByText('Notifications')).toBeVisible();
@@ -30,13 +42,15 @@ test.describe('Sidebar navigation (desktop)', () => {
     await expect(page).toHaveURL(/\/accounts/);
     await expect(page.getByRole('heading', { name: 'Accounts' })).toBeVisible();
 
-    await sidebar.getByText('Budget').click();
+    await sidebar.getByText('Budget', { exact: true }).click();
     await expect(page).toHaveURL(/\/budget/);
     await expect(page.getByRole('heading', { name: 'Budget' })).toBeVisible();
 
     await sidebar.getByText('Cards').click();
     await expect(page).toHaveURL(/\/cards/);
-    await expect(page.getByRole('heading', { name: 'Cards' })).toBeVisible();
+    await expect(
+      page.getByRole('heading', { name: 'Cards', exact: true })
+    ).toBeVisible();
   });
 
   test('sidebar highlights active link', async ({ page }) => {

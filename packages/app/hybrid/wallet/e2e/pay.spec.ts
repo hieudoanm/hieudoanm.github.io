@@ -1,5 +1,15 @@
 import { test, expect } from '@playwright/test';
 import { login } from './helpers';
+import path from 'path';
+
+test.afterEach(async ({ page }, testInfo) => {
+  const screenshotPath = path.join(
+    __dirname,
+    'images',
+    `${testInfo.title.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}.png`
+  );
+  await page.screenshot({ path: screenshotPath, fullPage: true });
+});
 
 test.describe('Pay page', () => {
   test.beforeEach(async ({ page }) => {
@@ -35,6 +45,6 @@ test.describe('Pay page', () => {
   test('quick pay submits and shows toast', async ({ page }) => {
     await page.getByPlaceholder('0.00').fill('50');
     await page.getByRole('button', { name: /Send Payment/ }).click();
-    await expect(page.getByText('Payment sent!')).toBeVisible();
+    await expect(page.getByText('Payment sent!').first()).toBeVisible();
   });
 });

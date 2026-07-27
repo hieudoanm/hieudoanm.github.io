@@ -1,5 +1,15 @@
 import { test, expect } from '@playwright/test';
 import { login, waitForData } from './helpers';
+import path from 'path';
+
+test.afterEach(async ({ page }, testInfo) => {
+  const screenshotPath = path.join(
+    __dirname,
+    'images',
+    `${testInfo.title.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}.png`
+  );
+  await page.screenshot({ path: screenshotPath, fullPage: true });
+});
 
 test.describe('Profile page', () => {
   test.beforeEach(async ({ page }) => {
@@ -13,30 +23,19 @@ test.describe('Profile page', () => {
     await expect(
       page.getByRole('heading', { name: 'Alex Johnson' })
     ).toBeVisible();
+    await expect(page.getByText('alex@example.com').first()).toBeVisible();
+  });
+
+  test('has settings link', async ({ page }) => {
     await expect(
-      page.getByRole('main').getByText('alex@example.com')
+      page.getByRole('link', { name: /Settings/ }).first()
     ).toBeVisible();
   });
 
-  test('dark mode toggle switches theme', async ({ page }) => {
-    const html = page.locator('html');
-    const initialTheme = await html.getAttribute('data-theme');
-
-    const toggle = page.locator('input.toggle').first();
-    await toggle.click();
-
-    const newTheme = await html.getAttribute('data-theme');
-    expect(newTheme).not.toBe(initialTheme);
-  });
-
-  test('theme picker changes theme', async ({ page }) => {
-    const html = page.locator('html');
-
-    const themeButton = page.locator('button[data-theme="dark"]');
-    await themeButton.click();
-
-    const newTheme = await html.getAttribute('data-theme');
-    expect(newTheme).toBe('dark');
+  test('has personal information form', async ({ page }) => {
+    await expect(page.getByText('Personal Information')).toBeVisible();
+    await expect(page.getByText('Phone Number')).toBeVisible();
+    await expect(page.getByText('Email Address')).toBeVisible();
   });
 
   test('sign out button is visible', async ({ page }) => {

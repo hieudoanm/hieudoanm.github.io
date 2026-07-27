@@ -1,10 +1,31 @@
 # TREE
 
 ```text
+├── e2e/
+│   ├── [about.spec.ts](./e2e/about.spec.ts)
+│   ├── [activity-bar.spec.ts](./e2e/activity-bar.spec.ts)
+│   ├── [file-explorer.spec.ts](./e2e/file-explorer.spec.ts)
+│   ├── [global-search.spec.ts](./e2e/global-search.spec.ts)
+│   ├── [home.spec.ts](./e2e/home.spec.ts)
+│   ├── [navigation.spec.ts](./e2e/navigation.spec.ts)
+│   ├── [responsive.spec.ts](./e2e/responsive.spec.ts)
+│   ├── [status-bar.spec.ts](./e2e/status-bar.spec.ts)
+│   └── [version.spec.ts](./e2e/version.spec.ts)
+├── images/
 ├── public/
-│   └── [favicon.ico](./public/favicon.ico)
+│   ├── icons/
+│   │   ├── [icon-192x192.png](./public/icons/icon-192x192.png)
+│   │   ├── [icon-512x512.png](./public/icons/icon-512x512.png)
+│   │   └── [icon.svg](./public/icons/icon.svg)
+│   ├── [favicon.ico](./public/favicon.ico)
+│   ├── [manifest.json](./public/manifest.json)
+│   └── [sw.js](./public/sw.js)
 ├── src/
 │   ├── app/
+│   │   ├── about/
+│   │   │   └── [page.tsx](./src/app/about/page.tsx)
+│   │   ├── version/
+│   │   │   └── [page.tsx](./src/app/version/page.tsx)
 │   │   ├── [error.tsx](./src/app/error.tsx)
 │   │   ├── [layout.tsx](./src/app/layout.tsx)
 │   │   ├── [not-found.tsx](./src/app/not-found.tsx)
@@ -29,6 +50,10 @@
 │   │   │   ├── [TabBar.test.tsx](./src/components/__tests__/TabBar.test.tsx)
 │   │   │   ├── [TreeNode.test.tsx](./src/components/__tests__/TreeNode.test.tsx)
 │   │   │   └── [WelcomeScreen.test.tsx](./src/components/__tests__/WelcomeScreen.test.tsx)
+│   │   ├── templates/
+│   │   │   ├── [AboutTemplate.tsx](./src/components/templates/AboutTemplate.tsx)
+│   │   │   ├── [ErrorTemplate.tsx](./src/components/templates/ErrorTemplate.tsx)
+│   │   │   └── [VersionTemplate.tsx](./src/components/templates/VersionTemplate.tsx)
 │   │   ├── [ActivityBar.tsx](./src/components/ActivityBar.tsx)
 │   │   ├── [Breadcrumb.tsx](./src/components/Breadcrumb.tsx)
 │   │   ├── [CodeEditor.tsx](./src/components/CodeEditor.tsx)
@@ -42,6 +67,7 @@
 │   │   ├── [GoToLinePrompt.tsx](./src/components/GoToLinePrompt.tsx)
 │   │   ├── [InputPrompt.tsx](./src/components/InputPrompt.tsx)
 │   │   ├── [QuickOpen.tsx](./src/components/QuickOpen.tsx)
+│   │   ├── [SWProvider.tsx](./src/components/SWProvider.tsx)
 │   │   ├── [ShortcutsModal.tsx](./src/components/ShortcutsModal.tsx)
 │   │   ├── [StatusBar.tsx](./src/components/StatusBar.tsx)
 │   │   ├── [TabBar.tsx](./src/components/TabBar.tsx)
@@ -52,7 +78,8 @@
 │   │   │   ├── [useCodePage.test.ts](./src/hooks/__tests__/useCodePage.test.ts)
 │   │   │   └── [useErrorModal.test.ts](./src/hooks/__tests__/useErrorModal.test.ts)
 │   │   ├── [useCodePage.ts](./src/hooks/useCodePage.ts)
-│   │   └── [useErrorModal.ts](./src/hooks/useErrorModal.ts)
+│   │   ├── [useErrorModal.ts](./src/hooks/useErrorModal.ts)
+│   │   └── [useSWRegister.ts](./src/hooks/useSWRegister.ts)
 │   ├── routes/
 │   │   ├── __tests__/
 │   │   │   ├── [CodePage.test.tsx](./src/routes/__tests__/CodePage.test.tsx)
@@ -96,6 +123,7 @@
 │   ├── [Cargo.toml](./src-tauri/Cargo.toml)
 │   ├── [build.rs](./src-tauri/build.rs)
 │   └── [tauri.conf.json](./src-tauri/tauri.conf.json)
+├── [AGENTS.md](./AGENTS.md)
 ├── [LICENSE](./LICENSE)
 ├── [README.md](./README.md)
 ├── [TREE.md](./TREE.md)
@@ -104,8 +132,9 @@
 ├── [jest.setup.ts](./jest.setup.ts)
 ├── [next.config.ts](./next.config.ts)
 ├── [package.json](./package.json)
+├── [playwright.config.ts](./playwright.config.ts)
 ├── [postcss.config.mjs](./postcss.config.mjs)
 └── [tsconfig.json](./tsconfig.json)
 ```
 
-16 directories, 89 files
+22 directories, 112 files

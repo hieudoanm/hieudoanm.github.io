@@ -2,15 +2,39 @@
 
 ```text
 ├── e2e/
+│   ├── [about.spec.ts](./e2e/about.spec.ts)
+│   ├── [chat-header.spec.ts](./e2e/chat-header.spec.ts)
+│   ├── [chat-thread.spec.ts](./e2e/chat-thread.spec.ts)
+│   ├── [home.spec.ts](./e2e/home.spec.ts)
+│   ├── [navigation.spec.ts](./e2e/navigation.spec.ts)
+│   ├── [profile.spec.ts](./e2e/profile.spec.ts)
+│   ├── [responsive.spec.ts](./e2e/responsive.spec.ts)
+│   ├── [settings.spec.ts](./e2e/settings.spec.ts)
+│   ├── [sidebar.spec.ts](./e2e/sidebar.spec.ts)
+│   └── [version.spec.ts](./e2e/version.spec.ts)
+├── images/
 ├── public/
+│   ├── icons/
+│   │   ├── [icon-192x192.png](./public/icons/icon-192x192.png)
+│   │   ├── [icon-512x512.png](./public/icons/icon-512x512.png)
+│   │   └── [icon.svg](./public/icons/icon.svg)
+│   ├── [manifest.json](./public/manifest.json)
+│   └── [sw.js](./public/sw.js)
 ├── src/
 │   ├── app/
+│   │   ├── about/
+│   │   │   └── [page.tsx](./src/app/about/page.tsx)
 │   │   ├── chat/
-│   │   │   └── [id]/
-│   │   │       └── [page.tsx](./src/app/chat/[id]/page.tsx)
+│   │   │   └── [page.tsx](./src/app/chat/page.tsx)
+│   │   ├── profile/
+│   │   │   └── [page.tsx](./src/app/profile/page.tsx)
 │   │   ├── settings/
 │   │   │   └── [page.tsx](./src/app/settings/page.tsx)
+│   │   ├── version/
+│   │   │   └── [page.tsx](./src/app/version/page.tsx)
+│   │   ├── [error.tsx](./src/app/error.tsx)
 │   │   ├── [layout.tsx](./src/app/layout.tsx)
+│   │   ├── [not-found.tsx](./src/app/not-found.tsx)
 │   │   └── [page.tsx](./src/app/page.tsx)
 │   ├── components/
 │   │   ├── atoms/
@@ -21,15 +45,21 @@
 │   │   │   └── [ConversationCard.tsx](./src/components/molecules/ConversationCard.tsx)
 │   │   ├── organisms/
 │   │   │   ├── [ChatHeader.tsx](./src/components/organisms/ChatHeader.tsx)
+│   │   │   ├── [OfflineBanner.tsx](./src/components/organisms/OfflineBanner.tsx)
 │   │   │   ├── [Sidebar.tsx](./src/components/organisms/Sidebar.tsx)
 │   │   │   └── [ToastContainer.tsx](./src/components/organisms/ToastContainer.tsx)
-│   │   └── templates/
-│   │       └── [PageTransition.tsx](./src/components/templates/PageTransition.tsx)
+│   │   ├── templates/
+│   │   │   ├── [AboutTemplate.tsx](./src/components/templates/AboutTemplate.tsx)
+│   │   │   ├── [ErrorTemplate.tsx](./src/components/templates/ErrorTemplate.tsx)
+│   │   │   ├── [PageTransition.tsx](./src/components/templates/PageTransition.tsx)
+│   │   │   └── [VersionTemplate.tsx](./src/components/templates/VersionTemplate.tsx)
+│   │   └── [SWProvider.tsx](./src/components/SWProvider.tsx)
 │   ├── data/
 │   │   ├── [models.ts](./src/data/models.ts)
 │   │   └── [seed.ts](./src/data/seed.ts)
 │   ├── hooks/
 │   │   ├── [useKeyboard.ts](./src/hooks/useKeyboard.ts)
+│   │   ├── [useSWRegister.ts](./src/hooks/useSWRegister.ts)
 │   │   └── [useStreaming.ts](./src/hooks/useStreaming.ts)
 │   ├── lib/
 │   │   └── [db.ts](./src/lib/db.ts)
@@ -44,8 +74,35 @@
 │   └── utils/
 │       └── [format.ts](./src/utils/format.ts)
 ├── src-tauri/
+│   ├── capabilities/
+│   │   └── [default.json](./src-tauri/capabilities/default.json)
+│   ├── icons/
+│   │   ├── [128x128.png](./src-tauri/icons/128x128.png)
+│   │   ├── [128x128@2x.png](./src-tauri/icons/128x128@2x.png)
+│   │   ├── [32x32.png](./src-tauri/icons/32x32.png)
+│   │   ├── [Square107x107Logo.png](./src-tauri/icons/Square107x107Logo.png)
+│   │   ├── [Square142x142Logo.png](./src-tauri/icons/Square142x142Logo.png)
+│   │   ├── [Square150x150Logo.png](./src-tauri/icons/Square150x150Logo.png)
+│   │   ├── [Square284x284Logo.png](./src-tauri/icons/Square284x284Logo.png)
+│   │   ├── [Square30x30Logo.png](./src-tauri/icons/Square30x30Logo.png)
+│   │   ├── [Square310x310Logo.png](./src-tauri/icons/Square310x310Logo.png)
+│   │   ├── [Square44x44Logo.png](./src-tauri/icons/Square44x44Logo.png)
+│   │   ├── [Square71x71Logo.png](./src-tauri/icons/Square71x71Logo.png)
+│   │   ├── [Square89x89Logo.png](./src-tauri/icons/Square89x89Logo.png)
+│   │   ├── [StoreLogo.png](./src-tauri/icons/StoreLogo.png)
+│   │   ├── [icon.icns](./src-tauri/icons/icon.icns)
+│   │   ├── [icon.ico](./src-tauri/icons/icon.ico)
+│   │   └── [icon.png](./src-tauri/icons/icon.png)
+│   ├── src/
+│   │   ├── [lib.rs](./src-tauri/src/lib.rs)
+│   │   └── [main.rs](./src-tauri/src/main.rs)
+│   ├── [Cargo.lock](./src-tauri/Cargo.lock)
+│   ├── [Cargo.toml](./src-tauri/Cargo.toml)
+│   ├── [build.rs](./src-tauri/build.rs)
+│   └── [tauri.conf.json](./src-tauri/tauri.conf.json)
+├── [AGENTS.md](./AGENTS.md)
 ├── [LICENSE](./LICENSE)
-├── [PLAN.md](./PLAN.md)
+├── [README.md](./README.md)
 ├── [TREE.md](./TREE.md)
 ├── [eslint.config.mts](./eslint.config.mts)
 ├── [jest.config.ts](./jest.config.ts)
@@ -57,4 +114,4 @@
 └── [tsconfig.json](./tsconfig.json)
 ```
 
-20 directories, 34 files
+27 directories, 84 files

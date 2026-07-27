@@ -1,0 +1,51 @@
+import { test, expect } from '@playwright/test';
+import path from 'path';
+
+test.afterEach(async ({ page }, testInfo) => {
+  const screenshotPath = path.join(
+    __dirname,
+    'images',
+    `${testInfo.title.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}.png`
+  );
+  await page.screenshot({ path: screenshotPath, fullPage: true });
+});
+
+test('loads successfully', async ({ page }) => {
+  await page.goto('/');
+  await expect(page).toHaveTitle(/Password/);
+});
+
+test('displays vault heading', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.locator('h1:has-text("Password Vault")')).toBeVisible();
+});
+
+test('has search input', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.locator('input[placeholder*="Search"]')).toBeVisible();
+});
+
+test('has filter buttons for all types', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.locator('button:has-text("All")')).toBeVisible();
+  await expect(page.locator('button:has-text("Login")')).toBeVisible();
+  await expect(page.locator('button:has-text("Card")')).toBeVisible();
+  await expect(page.locator('button:has-text("Identity")')).toBeVisible();
+  await expect(page.locator('button:has-text("Note")')).toBeVisible();
+  await expect(page.locator('button:has-text("Ssh")')).toBeVisible();
+});
+
+test('has New button', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.locator('button:has-text("New")')).toBeVisible();
+});
+
+test('has Generator link', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.locator('a:has-text("Generator")')).toBeVisible();
+});
+
+test('has Health link', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.locator('a:has-text("Health")')).toBeVisible();
+});

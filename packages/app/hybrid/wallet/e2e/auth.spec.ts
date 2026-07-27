@@ -1,4 +1,15 @@
 import { test, expect } from '@playwright/test';
+import { waitForData } from './helpers';
+import path from 'path';
+
+test.afterEach(async ({ page }, testInfo) => {
+  const screenshotPath = path.join(
+    __dirname,
+    'images',
+    `${testInfo.title.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}.png`
+  );
+  await page.screenshot({ path: screenshotPath, fullPage: true });
+});
 
 test.describe('Login page', () => {
   test('renders login form', async ({ page }) => {
@@ -17,7 +28,7 @@ test.describe('Login page', () => {
     await page.getByPlaceholder('Password').fill('password123');
     await page.getByRole('button', { name: 'Sign In' }).click();
     await expect(page).toHaveURL('/');
-    await expect(page.getByText(/, Alex$/)).toBeVisible();
+    await expect(page.getByRole('heading', { name: /Alex/ })).toBeVisible();
   });
 
   test('sign up link navigates to register', async ({ page }) => {
@@ -76,7 +87,9 @@ test.describe('Register page', () => {
     await page.getByRole('checkbox').check();
     await page.getByRole('button', { name: 'Create Account' }).click();
     await expect(page).toHaveURL('/');
-    await expect(page.getByText(/, Alex$/)).toBeVisible();
+    await expect(
+      page.getByRole('heading', { name: /Good (morning|afternoon|evening)/ })
+    ).toBeVisible({ timeout: 15000 });
   });
 
   test('sign in link navigates to login', async ({ page }) => {
