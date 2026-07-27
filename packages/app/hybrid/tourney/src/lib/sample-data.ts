@@ -25,6 +25,7 @@ const makeTournament = (
   updatedAt: now - daysAgo * DAY,
   startDate: now - daysAgo * DAY,
   endDate: status === 'completed' ? now - (daysAgo - 3) * DAY : undefined,
+  isSample: true,
 });
 
 const makeParticipant = (

@@ -20,7 +20,7 @@
 | 06  | photo     | Photo      | Editor     | Minimal Adobe Photoshop            |          |
 | 07  | projects  | Projects   | Management | Minimal Atlassian Trello / Kanban  | Required |
 | 08  | svg       | SVG        | Editor     | Minimal Adobe Illustrator          |          |
-| 09  | tourney   | Touraments | Management |                                    |          |
+| 09  | tourney   | Touraments | Management | Minimal Swiss Manager              |          |
 | 10  | wallet    | Wallet     | Management | Minimal Momo / Techcombank         | Required |
 
 ## Techstack

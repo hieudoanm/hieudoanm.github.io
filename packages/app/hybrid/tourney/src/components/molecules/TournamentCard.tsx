@@ -115,12 +115,16 @@ export const TournamentCard = ({
 
   const contextItems: ContextMenuItem[] = [
     { label: 'Clone', icon: <FiCopy />, onClick: handleClone },
-    {
-      label: 'Delete',
-      icon: <FiTrash2 />,
-      destructive: true,
-      onClick: handleDelete,
-    },
+    ...(!tournament.isSample
+      ? [
+          {
+            label: 'Delete',
+            icon: <FiTrash2 />,
+            destructive: true,
+            onClick: handleDelete,
+          },
+        ]
+      : []),
   ];
 
   return (

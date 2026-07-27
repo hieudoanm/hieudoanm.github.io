@@ -68,7 +68,7 @@ export const SettingsTemplate: FC<SettingsTemplateProps> = ({
       Customize your experience
     </p>
 
-    <div className="flex w-full max-w-lg flex-col gap-6">
+    <div className="container mx-auto flex flex-col gap-6">
       <SettingSection title="Language">
         <SettingRow
           label="Language"

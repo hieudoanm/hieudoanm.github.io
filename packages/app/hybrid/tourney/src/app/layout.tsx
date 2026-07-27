@@ -1,11 +1,10 @@
-import type { Metadata, Viewport } from 'next';
 import '@/styles/globals.css';
-import { Providers } from './providers';
-import { SWProvider } from '@/components/SWProvider';
+import type { Metadata, Viewport } from 'next';
 import { FC } from 'react';
+import { Providers } from './providers';
 
 export const metadata: Metadata = {
-  title: 'Tourney - Tournament Manager',
+  title: 'Tourney - Tournaments Manager',
   description: 'Create and manage tournaments across multiple formats',
   manifest: '/manifest.json',
   appleWebApp: {

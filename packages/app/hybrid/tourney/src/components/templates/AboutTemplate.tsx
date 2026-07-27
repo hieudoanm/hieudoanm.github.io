@@ -22,7 +22,7 @@ export const AboutTemplate: FC<{
       {description}
     </p>
 
-    <div className="border-base-content/10 bg-base-200 mb-8 w-full max-w-lg rounded-2xl border p-6">
+    <div className="border-base-content/10 bg-base-200 container mx-auto mb-8 w-full rounded-2xl border p-6">
       <div className="flex flex-col gap-4">
         {items.map(({ label, value }) => (
           <div key={label} className="flex items-center justify-between">

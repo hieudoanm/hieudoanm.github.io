@@ -17,8 +17,8 @@ export const Header: FC<HeaderProps> = ({
   action,
   backHref,
 }) => (
-  <header className="border-base-300 bg-base-100 sticky top-0 z-10 border-b px-6 py-4">
-    <div className="flex items-center justify-between">
+  <header className="border-base-300 bg-base-100 sticky top-0 z-10 border-b">
+    <div className="container mx-auto flex items-center justify-between px-6 py-4">
       <div className="flex flex-col gap-1">
         <div className="flex items-center gap-2">
           {backHref && (

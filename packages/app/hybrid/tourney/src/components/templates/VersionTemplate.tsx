@@ -25,7 +25,7 @@ export const VersionTemplate: FC<{ version: string }> = ({ version }) => {
         Build version of the current deployment
       </p>
 
-      <div className="border-base-content/10 bg-base-200 mb-8 w-full max-w-lg rounded-2xl border p-6">
+      <div className="border-base-content/10 bg-base-200 container mx-auto mb-8 w-full rounded-2xl border p-6">
         {hasSegments ? (
           <div className="flex items-center justify-center gap-0">
             <Segment value={year} label="Year" primary />

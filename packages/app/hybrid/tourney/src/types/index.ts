@@ -22,6 +22,7 @@ export interface Tournament {
   updatedAt: number;
   startDate?: number;
   endDate?: number;
+  isSample?: boolean;
 }
 
 export interface Participant {
