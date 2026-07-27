@@ -1,3 +1,5 @@
+import Link from 'next/link';
+import { IoArrowBack } from 'react-icons/io5';
 import type { FC, ReactNode } from 'react';
 
 interface HeaderProps {
@@ -5,6 +7,7 @@ interface HeaderProps {
   subtitle?: string;
   badges?: ReactNode;
   action?: ReactNode;
+  backHref?: string;
 }
 
 export const Header: FC<HeaderProps> = ({
@@ -12,11 +15,17 @@ export const Header: FC<HeaderProps> = ({
   subtitle,
   badges,
   action,
+  backHref,
 }) => (
   <header className="border-base-300 bg-base-100 sticky top-0 z-10 border-b px-6 py-4">
     <div className="flex items-center justify-between">
       <div className="flex flex-col gap-1">
         <div className="flex items-center gap-2">
+          {backHref && (
+            <Link href={backHref} className="btn btn-ghost btn-sm">
+              <IoArrowBack className="text-lg" />
+            </Link>
+          )}
           <h1 className="text-lg">{title}</h1>
           {badges}
         </div>

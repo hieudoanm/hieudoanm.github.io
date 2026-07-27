@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import type { FC, ReactNode } from 'react';
+import { FiHome, FiPlus, FiUser } from 'react-icons/fi';
 
 interface NavbarItem {
   label: string;
@@ -11,9 +12,9 @@ interface NavbarItem {
 }
 
 export const NAV_ITEMS: NavbarItem[] = [
-  { label: 'Dashboard', href: '/' },
-  { label: 'Create', href: '/create' },
-  { label: 'Profile', href: '/profile' },
+  { label: 'Dashboard', href: '/', icon: <FiHome /> },
+  { label: 'Create', href: '/create', icon: <FiPlus /> },
+  { label: 'Profile', href: '/profile', icon: <FiUser /> },
 ];
 
 interface NavbarProps {

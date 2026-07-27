@@ -10,7 +10,7 @@ import {
 
 export interface ContextMenuItem {
   label: string;
-  icon?: string;
+  icon?: ReactNode;
   destructive?: boolean;
   onClick: () => void;
 }
@@ -113,7 +113,7 @@ export const ContextMenu = ({ items, children }: ContextMenuProps) => {
                   ? 'text-error hover:bg-error/10'
                   : 'hover:bg-base-200'
               }`}>
-              {item.icon && <span>{item.icon}</span>}
+              {item.icon}
               {item.label}
             </button>
           ))}

@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import Link from 'next/link';
+import { FiAward } from 'react-icons/fi';
 import { TournamentCard } from '@/components/molecules/TournamentCard';
 import { EmptyState } from '@/components/atoms/EmptyState';
 import type { Tournament } from '@/types';
@@ -26,7 +27,7 @@ export const TournamentList: FC<TournamentListProps> = ({
   if (tournaments.length === 0) {
     return (
       <EmptyState
-        icon="🏆"
+        icon={<FiAward className="text-base-content/30" />}
         title="No tournaments yet"
         description="Create your first tournament to get started"
         action={

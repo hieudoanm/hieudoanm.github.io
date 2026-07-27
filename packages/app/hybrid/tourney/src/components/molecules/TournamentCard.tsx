@@ -5,6 +5,7 @@ import { useData } from '@/providers/DataProvider';
 import type { Tournament } from '@/types';
 import Link from 'next/link';
 import { useCallback } from 'react';
+import { FiCopy, FiTrash2 } from 'react-icons/fi';
 import {
   ContextMenu,
   type ContextMenuItem,
@@ -113,8 +114,13 @@ export const TournamentCard = ({
   }, [tournament, deleteTournament]);
 
   const contextItems: ContextMenuItem[] = [
-    { label: 'Clone', icon: '📋', onClick: handleClone },
-    { label: 'Delete', icon: '🗑️', destructive: true, onClick: handleDelete },
+    { label: 'Clone', icon: <FiCopy />, onClick: handleClone },
+    {
+      label: 'Delete',
+      icon: <FiTrash2 />,
+      destructive: true,
+      onClick: handleDelete,
+    },
   ];
 
   return (

@@ -1,6 +1,7 @@
 'use client';
 
 import { useMemo, useState } from 'react';
+import { FiX } from 'react-icons/fi';
 import { useData } from '@/providers/DataProvider';
 import { useToast } from '@/providers/ToastProvider';
 import {
@@ -84,7 +85,7 @@ export const ShareModal = ({
         <div className="mb-4 flex items-center justify-between">
           <h2 className="card-title">Share Tournament</h2>
           <button className="btn btn-ghost btn-sm btn-square" onClick={onClose}>
-            ✕
+            <FiX />
           </button>
         </div>
 
