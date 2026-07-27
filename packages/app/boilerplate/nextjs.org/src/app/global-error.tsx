@@ -14,8 +14,6 @@ const GlobalErrorPage = ({
           Error
         </p>
 
-        <h1 className="mb-3">Error</h1>
-
         <p className="text-base-content/50 mb-10 max-w-sm text-center text-sm">
           Something went wrong.
         </p>

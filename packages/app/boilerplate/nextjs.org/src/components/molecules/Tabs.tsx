@@ -20,9 +20,7 @@ export const Tabs: FC<TabsProps> = ({ tabs, value, onChange }) => (
         <button
           key={tab.value}
           onClick={() => onChange(tab.value)}
-          className={`btn btn-sm btn-ghost rounded-b-none ${
-            value === tab.value ? 'text-primary border-primary border-b-2' : ''
-          }`}>
+          className={`btn btn-sm btn-ghost rounded-b-none ${value === tab.value ? 'text-primary border-primary border-b-2' : ''}`}>
           {tab.label}
         </button>
       ))}

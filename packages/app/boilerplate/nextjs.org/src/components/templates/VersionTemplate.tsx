@@ -1,5 +1,18 @@
+'use client';
+
 import type { FC } from 'react';
 import { useState } from 'react';
+import { FiCheck, FiCopy } from 'react-icons/fi';
+import { Header } from '@/components/organisms/Header';
+import { Navbar } from '@/components/organisms/Navbar';
+import { FiHome, FiSettings, FiInfo, FiClock } from 'react-icons/fi';
+
+const NAV_ITEMS = [
+  { label: 'Home', href: '/', icon: <FiHome /> },
+  { label: 'About', href: '/about', icon: <FiInfo /> },
+  { label: 'Settings', href: '/settings', icon: <FiSettings /> },
+  { label: 'Version', href: '/version', icon: <FiClock /> },
+];
 
 export const VersionTemplate: FC<{ version: string }> = ({ version }) => {
   const [copied, setCopied] = useState(false);
@@ -14,68 +27,71 @@ export const VersionTemplate: FC<{ version: string }> = ({ version }) => {
   const hasSegments = year && month && day;
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center px-6 py-24">
-      <p className="text-base-content/50 mb-6 text-xs tracking-[0.2em] uppercase">
-        Current deployment
-      </p>
+    <div className="flex min-h-dvh flex-col pb-20">
+      <Header title="Version" backHref="/" />
 
-      <h1 className="mb-3">App Version</h1>
+      <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col items-center gap-6 p-6">
+        <p className="text-base-content/50 text-xs tracking-[0.2em] uppercase">
+          Current deployment
+        </p>
 
-      <p className="text-base-content/50 mb-10 max-w-sm text-center text-sm">
-        Build version of the current deployment
-      </p>
+        <div className="border-base-content/10 bg-base-200 mb-8 w-full max-w-lg rounded-2xl border p-6">
+          {hasSegments ? (
+            <div className="flex items-center justify-center gap-0">
+              <Segment value={year} label="Year" primary />
+              <Dot />
+              <Segment value={month} label="Month" />
+              <Dot />
+              <Segment value={day} label="Day" />
+              {hh && (
+                <>
+                  <Dot />
+                  <Segment value={hh} label="Hour" />
+                </>
+              )}
+              {mm && (
+                <>
+                  <Dot />
+                  <Segment value={mm} label="Min" />
+                </>
+              )}
+              {ss && (
+                <>
+                  <Dot />
+                  <Segment value={ss} label="Sec" />
+                </>
+              )}
+            </div>
+          ) : (
+            <p className="text-error font-mono text-xl font-bold break-all">
+              {version}
+            </p>
+          )}
+        </div>
 
-      <div className="border-base-content/10 bg-base-200 mb-8 w-full max-w-lg rounded-2xl border p-6">
-        {hasSegments ? (
-          <div className="flex items-center justify-center gap-0">
-            <Segment value={year} label="Year" primary />
-            <Dot />
-            <Segment value={month} label="Month" />
-            <Dot />
-            <Segment value={day} label="Day" />
-            {hh && (
-              <>
-                <Dot />
-                <Segment value={hh} label="Hour" />
-              </>
-            )}
-            {mm && (
-              <>
-                <Dot />
-                <Segment value={mm} label="Min" />
-              </>
-            )}
-            {ss && (
-              <>
-                <Dot />
-                <Segment value={ss} label="Sec" />
-              </>
-            )}
-          </div>
-        ) : (
-          <p className="text-error font-mono text-xl font-bold break-all">
+        <div className="mb-8 flex flex-wrap justify-center gap-3">
+          <button
+            onClick={copy}
+            className={`btn btn-sm rounded-full ${copied ? 'btn-success' : 'btn-primary'}`}>
+            {copied ? <FiCheck /> : <FiCopy />}
+            {copied ? 'Copied' : 'Copy version'}
+          </button>
+          <button
+            className="btn btn-neutral btn-sm rounded-full"
+            onClick={copy}>
             {version}
-          </p>
-        )}
-      </div>
+          </button>
+        </div>
 
-      <div className="mb-8 flex flex-wrap justify-center gap-3">
-        <button
-          onClick={copy}
-          className={`btn btn-sm rounded-full ${copied ? 'btn-success' : 'btn-primary'}`}>
-          {copied ? 'Copied' : 'Copy version'}
-        </button>
-        <button className="btn btn-neutral btn-sm rounded-full" onClick={copy}>
-          {version}
-        </button>
-      </div>
+        <div className="flex flex-wrap justify-center gap-3">
+          <span className="border-base-content/20 text-base-content/50 rounded-full border px-3 py-1 text-xs">
+            Format: YYYY.MM.DD.hh.mm.ss
+          </span>
+          <span className="badge badge-neutral rounded-full">Stable</span>
+        </div>
+      </main>
 
-      <div className="flex flex-wrap justify-center gap-3">
-        <span className="border-base-content/20 text-base-content/50 rounded-full border px-3 py-1 text-xs">
-          Format: YYYY.MM.DD.hh.mm.ss
-        </span>
-        <span className="badge badge-neutral rounded-full">Stable</span>
-      </div>
+      <Navbar items={NAV_ITEMS} />
     </div>
   );
 };

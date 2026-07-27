@@ -1,6 +1,16 @@
 'use client';
 
+import Link from 'next/link';
 import { useState } from 'react';
+import {
+  FiEdit2,
+  FiCopy,
+  FiTrash2,
+  FiInbox,
+  FiInfo,
+  FiSettings,
+  FiClock,
+} from 'react-icons/fi';
 import { Spinner } from '@/components/atoms/Spinner';
 import { Badge } from '@/components/atoms/Badge';
 import { Avatar } from '@/components/atoms/Avatar';
@@ -14,11 +24,19 @@ import { EmptyState } from '@/components/molecules/EmptyState';
 import { Tabs } from '@/components/molecules/Tabs';
 import { Dropdown } from '@/components/molecules/Dropdown';
 import { Header } from '@/components/organisms/Header';
+import { Navbar } from '@/components/organisms/Navbar';
 
 const tabs = [
   { label: 'One', value: 'one' },
   { label: 'Two', value: 'two' },
   { label: 'Three', value: 'three' },
+];
+
+const NAV_ITEMS = [
+  { label: 'Home', href: '/', icon: <FiInbox /> },
+  { label: 'About', href: '/about', icon: <FiInfo /> },
+  { label: 'Settings', href: '/settings', icon: <FiSettings /> },
+  { label: 'Version', href: '/version', icon: <FiClock /> },
 ];
 
 const HomePage = () => {
@@ -32,9 +50,9 @@ const HomePage = () => {
       <Header
         title="Boilerplate"
         action={
-          <a href="/about" className="btn btn-ghost btn-sm">
+          <Link href="/about" className="btn btn-ghost btn-sm">
             About
-          </a>
+          </Link>
         }
       />
 
@@ -128,7 +146,7 @@ const HomePage = () => {
         <section className="flex flex-col gap-4">
           <h3>EmptyState</h3>
           <EmptyState
-            icon="📭"
+            icon={<FiInbox className="text-base-content/30" />}
             title="No items found"
             description="Create something to get started"
             action={<button className="btn btn-primary btn-sm">Create</button>}
@@ -152,11 +170,20 @@ const HomePage = () => {
           <Dropdown
             trigger={<button className="btn btn-sm">Menu</button>}
             items={[
-              { label: 'Edit', onClick: () => setToast('Edit clicked') },
-              { label: 'Duplicate', onClick: () => setToast('Duplicated') },
+              {
+                label: 'Edit',
+                onClick: () => setToast('Edit clicked'),
+                icon: <FiEdit2 />,
+              },
+              {
+                label: 'Duplicate',
+                onClick: () => setToast('Duplicated'),
+                icon: <FiCopy />,
+              },
               {
                 label: 'Delete',
                 onClick: () => setToast('Deleted'),
+                icon: <FiTrash2 />,
                 danger: true,
               },
             ]}
@@ -251,6 +278,8 @@ const HomePage = () => {
           onClose={() => setToast(null)}
         />
       )}
+
+      <Navbar items={NAV_ITEMS} />
     </div>
   );
 };

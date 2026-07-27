@@ -1,6 +1,17 @@
 'use client';
 
 import type { FC, ReactNode } from 'react';
+import { useEffect } from 'react';
+import { Header } from '@/components/organisms/Header';
+import { Navbar } from '@/components/organisms/Navbar';
+import { FiHome, FiSettings, FiInfo, FiClock } from 'react-icons/fi';
+
+const NAV_ITEMS = [
+  { label: 'Home', href: '/', icon: <FiHome /> },
+  { label: 'About', href: '/about', icon: <FiInfo /> },
+  { label: 'Settings', href: '/settings', icon: <FiSettings /> },
+  { label: 'Version', href: '/version', icon: <FiClock /> },
+];
 
 interface SettingRowProps {
   label: string;
@@ -56,87 +67,87 @@ export const SettingsTemplate: FC<SettingsTemplateProps> = ({
   onThemeChange,
   onDateTimeFormatChange,
   onTimezoneChange,
-}) => (
-  <div className="flex min-h-screen flex-col items-center justify-center px-6 py-24">
-    <p className="text-base-content/50 mb-6 text-xs tracking-[0.2em] uppercase">
-      Settings
-    </p>
+}) => {
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
 
-    <h1 className="mb-3">Settings</h1>
+  return (
+    <div className="flex min-h-dvh flex-col pb-20">
+      <Header title="Settings" backHref="/" />
 
-    <p className="text-base-content/50 mb-10 max-w-sm text-center text-sm">
-      Customize your experience
-    </p>
+      <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col gap-6 p-6">
+        <SettingSection title="Language">
+          <SettingRow
+            label="Language"
+            description="Select your preferred language">
+            <select
+              className="select select-bordered select-sm w-40"
+              value={language}
+              onChange={(e) => onLanguageChange(e.target.value)}>
+              <option value="en">English</option>
+              <option value="vi">Tieng Viet</option>
+              <option value="ja">Japanese</option>
+              <option value="ko">Korean</option>
+              <option value="zh">Chinese</option>
+            </select>
+          </SettingRow>
+        </SettingSection>
 
-    <div className="flex w-full max-w-lg flex-col gap-6">
-      <SettingSection title="Language">
-        <SettingRow
-          label="Language"
-          description="Select your preferred language">
-          <select
-            className="select select-bordered select-sm w-40"
-            value={language}
-            onChange={(e) => onLanguageChange(e.target.value)}>
-            <option value="en">English</option>
-            <option value="vi">Tieng Viet</option>
-            <option value="ja">Japanese</option>
-            <option value="ko">Korean</option>
-            <option value="zh">Chinese</option>
-          </select>
-        </SettingRow>
-      </SettingSection>
+        <SettingSection title="Appearance">
+          <SettingRow label="Theme" description="Choose your color theme">
+            <select
+              className="select select-bordered select-sm w-40"
+              value={theme}
+              onChange={(e) => onThemeChange(e.target.value)}>
+              <option value="dark">Dark</option>
+              <option value="light">Light</option>
+              <option value="night">Night</option>
+              <option value="dim">Dim</option>
+              <option value="dracula">Dracula</option>
+              <option value="nord">Nord</option>
+            </select>
+          </SettingRow>
+        </SettingSection>
 
-      <SettingSection title="Appearance">
-        <SettingRow label="Theme" description="Choose your color theme">
-          <select
-            className="select select-bordered select-sm w-40"
-            value={theme}
-            onChange={(e) => onThemeChange(e.target.value)}>
-            <option value="dark">Dark</option>
-            <option value="light">Light</option>
-            <option value="night">Night</option>
-            <option value="dim">Dim</option>
-            <option value="dracula">Dracula</option>
-            <option value="nord">Nord</option>
-          </select>
-        </SettingRow>
-      </SettingSection>
+        <SettingSection title="Date & Time">
+          <SettingRow
+            label="Date/Time Format"
+            description="How dates and times are displayed">
+            <select
+              className="select select-bordered select-sm w-40"
+              value={dateTimeFormat}
+              onChange={(e) => onDateTimeFormatChange(e.target.value)}>
+              <option value="12h">12-hour (AM/PM)</option>
+              <option value="24h">24-hour</option>
+              <option value="iso">ISO 8601</option>
+              <option value="relative">Relative</option>
+            </select>
+          </SettingRow>
 
-      <SettingSection title="Date & Time">
-        <SettingRow
-          label="Date/Time Format"
-          description="How dates and times are displayed">
-          <select
-            className="select select-bordered select-sm w-40"
-            value={dateTimeFormat}
-            onChange={(e) => onDateTimeFormatChange(e.target.value)}>
-            <option value="12h">12-hour (AM/PM)</option>
-            <option value="24h">24-hour</option>
-            <option value="iso">ISO 8601</option>
-            <option value="relative">Relative</option>
-          </select>
-        </SettingRow>
+          <SettingRow label="Timezone" description="Your local timezone">
+            <select
+              className="select select-bordered select-sm w-40"
+              value={timezone}
+              onChange={(e) => onTimezoneChange(e.target.value)}>
+              <option value="UTC">UTC</option>
+              <option value="America/New_York">Eastern (ET)</option>
+              <option value="America/Chicago">Central (CT)</option>
+              <option value="America/Denver">Mountain (MT)</option>
+              <option value="America/Los_Angeles">Pacific (PT)</option>
+              <option value="Asia/Tokyo">Tokyo (JST)</option>
+              <option value="Asia/Seoul">Seoul (KST)</option>
+              <option value="Asia/Shanghai">Shanghai (CST)</option>
+              <option value="Asia/Ho_Chi_Minh">Ho Chi Minh (ICT)</option>
+              <option value="Europe/London">London (GMT)</option>
+            </select>
+          </SettingRow>
+        </SettingSection>
+      </main>
 
-        <SettingRow label="Timezone" description="Your local timezone">
-          <select
-            className="select select-bordered select-sm w-40"
-            value={timezone}
-            onChange={(e) => onTimezoneChange(e.target.value)}>
-            <option value="UTC">UTC</option>
-            <option value="America/New_York">Eastern (ET)</option>
-            <option value="America/Chicago">Central (CT)</option>
-            <option value="America/Denver">Mountain (MT)</option>
-            <option value="America/Los_Angeles">Pacific (PT)</option>
-            <option value="Asia/Tokyo">Tokyo (JST)</option>
-            <option value="Asia/Seoul">Seoul (KST)</option>
-            <option value="Asia/Shanghai">Shanghai (CST)</option>
-            <option value="Asia/Ho_Chi_Minh">Ho Chi Minh (ICT)</option>
-            <option value="Europe/London">London (GMT)</option>
-          </select>
-        </SettingRow>
-      </SettingSection>
+      <Navbar items={NAV_ITEMS} />
     </div>
-  </div>
-);
+  );
+};
 
 SettingsTemplate.displayName = 'SettingsTemplate';

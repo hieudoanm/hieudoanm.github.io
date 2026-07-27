@@ -1,5 +1,3 @@
-'use client';
-
 import { AboutTemplate } from '@/components/templates/AboutTemplate';
 import { NextPage } from 'next';
 
@@ -9,11 +7,13 @@ const AboutPage: NextPage = () => (
     description="Next.js boilerplate with App Router, TypeScript, Tailwind CSS, and DaisyUI"
     version="v0.0.1"
     items={[
-      { label: 'Framework', value: 'Next.js 16' },
       { label: 'Language', value: 'TypeScript 6' },
-      { label: 'Styling', value: 'Tailwind CSS 4 + DaisyUI 5' },
-      { label: 'Desktop', value: 'Tauri 2' },
+      { label: 'Framework', value: 'Next.js 16' },
       { label: 'Router', value: 'App Router' },
+      { label: 'Styling', value: 'Tailwind CSS 4' },
+      { label: 'Components', value: 'DaisyUI 5' },
+      { label: 'Icons', value: 'React Icons' },
+      { label: 'Desktop', value: 'Tauri 2' },
     ]}
   />
 );

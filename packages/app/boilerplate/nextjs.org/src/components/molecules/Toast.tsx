@@ -2,6 +2,7 @@
 
 import type { FC } from 'react';
 import { useEffect, useState } from 'react';
+import { FiX } from 'react-icons/fi';
 
 type ToastVariant = 'info' | 'success' | 'warning' | 'error';
 
@@ -41,6 +42,14 @@ export const Toast: FC<ToastProps> = ({
     <div className="toast toast-end">
       <div className={`alert ${variantClass[variant]}`}>
         <span>{message}</span>
+        <button
+          onClick={() => {
+            setVisible(false);
+            onClose?.();
+          }}
+          className="btn btn-ghost btn-xs">
+          <FiX />
+        </button>
       </div>
     </div>
   );

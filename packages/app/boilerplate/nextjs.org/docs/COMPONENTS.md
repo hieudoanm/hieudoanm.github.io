@@ -39,7 +39,7 @@ src/components/
 | Type     | Purpose                         | Example            |
 | -------- | ------------------------------- | ------------------ |
 | Atom     | Indivisible UI primitive        | `Spinner`, `Badge` |
-| Molecule | 组合 atoms into UI patterns     | `Toast`, `Modal`   |
+| Molecule | Compose atoms into UI patterns  | `Toast`, `Modal`   |
 | Organism | Complex, self-contained section | `Header`, `Navbar` |
 | Template | Page-level layout with slots    | `ErrorTemplate`    |
 
@@ -53,15 +53,13 @@ src/components/
 
 ## Composition
 
-```tsx
-// Prefer composition over configuration
-<Card>
-  <Card.Title>Title</Card.Title>
-  <Card.Body>Content</Card.Body>
-</Card>
+Use props for configuration. Prefer simple prop interfaces over compound
+components:
 
-// Over prop-heavy alternatives
-<Card title="Title" content="Content" />
+```tsx
+<Card title="Title" description="Description" action={<button>Action</button>}>
+  <p>Body content</p>
+</Card>
 ```
 
 ## Props
@@ -81,6 +79,28 @@ export const Spinner: FC<SpinnerProps> = ({ size = 'md' }) => (
 );
 ```
 
+## Icons
+
+Use `react-icons` (Feather set) for all icons:
+
+```tsx
+import { FiAlertTriangle, FiInbox } from 'react-icons/fi';
+
+<EmptyState
+  icon={<FiAlertTriangle className="text-warning" />}
+  title="No data available"
+/>
+
+<EmptyState
+  icon={<FiInbox className="text-base-content/30" />}
+  title="No items found"
+/>
+```
+
+- Accept `ReactNode` for icon props — not `string`
+- Use `className` for sizing — `text-lg`, `text-2xl`, etc.
+- Prefer Feather icons (`Fi` set) for consistency
+
 ## Variants
 
 Use DaisyUI variant classes for visual differences:
@@ -95,6 +115,7 @@ Use DaisyUI variant classes for visual differences:
 - All interactive elements must have visible focus rings
 - Icons paired with text labels — never icon-only without `aria-label`
 - Modal triggers must manage focus on open/close
+- Dropdown: use `role="menu"`, `role="menuitem"`, Escape to close
 
 ## Loading States
 

@@ -15,6 +15,7 @@
 | Framework   | Next.js 16 (App Router, Turbopack) |
 | Language    | TypeScript 6 (strict)              |
 | Styling     | Tailwind CSS 4 + DaisyUI 5         |
+| Icons       | react-icons (Fi set)               |
 | Desktop     | Tauri 2                            |
 | Testing     | Jest + Playwright                  |
 | Linting     | ESLint 10 + Prettier               |
@@ -30,7 +31,7 @@ src/
 │   ├── molecules/    # Combinations of atoms (Toast, Modal, Card, etc.)
 │   ├── organisms/    # Complex UI sections (Header, Navbar)
 │   └── templates/    # Page-level layouts (AboutTemplate, ErrorTemplate, etc.)
-├── hooks/            # Custom React hooks
+├── hooks/            # Custom React hooks (useSWRegister)
 ├── providers/        # Context providers (SWProvider)
 └── styles/           # Global CSS (Tailwind base layer)
 ```
@@ -59,15 +60,15 @@ src/
 
 Flat routes only — no dynamic `[id]` or `[slug]` segments.
 
-| Route       | Page                | Client | Description               |
-| ----------- | ------------------- | ------ | ------------------------- |
-| `/`         | `page.tsx`          | No     | Home page                 |
-| `/about`    | `about/page.tsx`    | Yes    | App info and tech stack   |
-| `/settings` | `settings/page.tsx` | Yes    | Language, theme, timezone |
-| `/version`  | `version/page.tsx`  | Yes    | Build version display     |
-| `*`         | `not-found.tsx`     | No     | 404 page                  |
-| `*`         | `error.tsx`         | Yes    | Runtime error boundary    |
-| `*`         | `global-error.tsx`  | Yes    | Root-level error boundary |
+| Route       | Page                | Client | Description                    |
+| ----------- | ------------------- | ------ | ------------------------------ |
+| `/`         | `page.tsx`          | Yes    | Home page (component showcase) |
+| `/about`    | `about/page.tsx`    | No     | App info and tech stack        |
+| `/settings` | `settings/page.tsx` | Yes    | Language, theme, timezone      |
+| `/version`  | `version/page.tsx`  | Yes    | Build version display          |
+| `*`         | `not-found.tsx`     | No     | 404 page                       |
+| `*`         | `error.tsx`         | Yes    | Runtime error boundary         |
+| `*`         | `global-error.tsx`  | Yes    | Root-level error boundary      |
 
 Pass entity IDs via `useSearchParams()` — e.g. `/detail?id=123` — not dynamic
 segments.
@@ -78,7 +79,7 @@ segments.
   rendered at build time
 - **Server Components** by default — no `"use client"` unless the component
   needs interactivity, browser APIs, or hooks
-- **Client Components** marked with `"use client"` — settings, about, version
+- **Client Components** marked with `"use client"` — settings, version, home
   pages
 - No server actions, no API routes — pure static
 
@@ -102,6 +103,15 @@ segments.
 - **Global base styles** in `src/styles/globals.css` — headings, links, code,
   tables, forms
 - **Font**: `font-mono` set on `<body>` for monospace throughout
+
+## Icons
+
+- **react-icons** with Feather icons (`Fi` set) for consistency
+- Import from `react-icons/fi` — e.g. `FiHome`, `FiSettings`, `FiArrowLeft`
+- Icons accept `className` for sizing — e.g.
+  `<FiArrowLeft className="text-lg" />`
+- Used in: Navbar, Header (back button), EmptyState, Dropdown, Toast (close),
+  VersionTemplate (copy/check)
 
 ## Performance
 

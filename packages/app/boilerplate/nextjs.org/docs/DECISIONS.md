@@ -22,8 +22,8 @@ static export support.
 - Turbopack for fast dev builds
 - Strong ecosystem and community
 
-* Heavier than Vite for pure SPA use cases
-* Static export limits server-side features
+- Heavier than Vite for pure SPA use cases
+- Static export limits server-side features
 
 ---
 
@@ -44,8 +44,8 @@ static export support.
 - Layout nesting via directory structure
 - Streaming and Suspense support
 
-* Newer, smaller ecosystem than Pages Router
-* Some third-party libraries still Pages Router-first
+- Newer, smaller ecosystem than Pages Router
+- Some third-party libraries still Pages Router-first
 
 ---
 
@@ -65,8 +65,8 @@ static export support.
 - Better IDE support and refactoring
 - Self-documenting interfaces
 
-* Build step required
-* Learning curve for type system
+- Build step required
+- Learning curve for type system
 
 ---
 
@@ -87,8 +87,30 @@ static export support.
 - Small production bundle
 - Works with static export
 
-* Utility classes can be verbose in JSX
-* Limited design customisation without overriding DaisyUI theme
+- Utility classes can be verbose in JSX
+- Limited design customisation without overriding DaisyUI theme
+
+---
+
+## Use react-icons
+
+**Status:** Accepted
+
+**Context:** Need a consistent icon library across all components.
+
+**Options:** react-icons, heroicons, lucide-react, SVG sprite
+
+**Chosen:** react-icons (Feather set)
+
+**Consequences:**
+
+- Single import source for all icons
+- Tree-shakeable — only imported icons in bundle
+- Feather icons are clean and consistent
+- `className` prop for sizing integrates with Tailwind
+
+- Large dependency if multiple icon sets are imported
+- No custom icon support without SVG
 
 ---
 
@@ -109,8 +131,8 @@ static export support.
 - Shared web codebase across platforms
 - Supports Android and iOS
 
-* Rust learning curve for native features
-* Smaller ecosystem than Electron
+- Rust learning curve for native features
+- Smaller ecosystem than Electron
 
 ---
 
@@ -130,9 +152,9 @@ static export support.
 - Offline-first with service worker
 - Fast page loads from CDN
 
-* No server-side data fetching
-* No API routes
-* No middleware
+- No server-side data fetching
+- No API routes
+- No middleware
 
 ---
 
@@ -153,8 +175,8 @@ structure and file location.
 - Refactor-safe — renaming files doesn't break URLs
 - Simpler navigation patterns
 
-* URLs are slightly longer (`/detail?id=123` vs `/detail/123`)
-* No SEO benefits from clean URLs (acceptable for app, not for marketing sites)
+- URLs are slightly longer (`/detail?id=123` vs `/detail/123`)
+- No SEO benefits from clean URLs (acceptable for app, not for marketing sites)
 
 ---
 
@@ -175,7 +197,7 @@ structure and file location.
 - Workspace support for monorepos
 - Smaller disk footprint via content-addressable store
 
-* Some packages have compatibility issues with pnpm's strict mode
+- Some packages have compatibility issues with pnpm's strict mode
 
 ---
 
@@ -196,5 +218,5 @@ structure and file location.
 - Playwright's auto-waiting reduces flaky tests
 - `@testing-library/react` for component tests
 
-* Two test runners to maintain
-* Playwright requires browser binaries
+- Two test runners to maintain
+- Playwright requires browser binaries
