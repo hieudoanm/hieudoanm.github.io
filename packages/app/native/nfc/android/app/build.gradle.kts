@@ -102,5 +102,5 @@ dependencies {
     testImplementation("androidx.test:core-ktx:1.6.1")
     testImplementation("org.robolectric:robolectric:4.14.1")
     testImplementation("androidx.compose.ui:ui-test-junit4")
-    testImplementation("androidx.navigation:navigation-testing:2.8.5")
+    testImplementation("androidx.navigation:navigation-testing:2.9.8")
 }
