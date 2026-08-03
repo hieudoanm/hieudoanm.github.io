@@ -1,6 +1,6 @@
 section,sectionId,label,description,icon,href,actionLabel,actionUrl
 CLIs,clis,bash,Aliases,PiTerminal,https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/cli/bash,Download bash,https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/cli/bash/download/bash/dist
-CLIs,clis,hieudoanm,CLI,PiCodeSimple,https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/cli-latest,Download bin,https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/cli-latest
+CLIs,clis,jack,Just Another Command-Line Kit,PiCodeSimple,https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/cli-jack-latest,Download bin,https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/cli-jack-latest
 Extensions,extensions,@hieudoanm/ext,Hieu Doan,PiProhibit,https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/extensions-browser-latest,Download EXT,https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/extensions-browser-latest
 Apps (Desktop),apps-desktop,API,API Client,PiGlobe,https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-api-latest,Download App,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-api-latest
 Apps (Desktop),apps-desktop,Chat,AI Chat Interface,PiChat,https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-chat-latest,Download App,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-chat-latest
