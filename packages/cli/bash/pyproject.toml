@@ -3,7 +3,7 @@ name = "bash"
 version = "0.0.1"
 description = "bash shortcuts"
 readme = "README.md"
-requires-python = "==3.14.5"
+requires-python = "==3.14.6"
 dependencies = [
     "ruff==0.15.13",
 ]
