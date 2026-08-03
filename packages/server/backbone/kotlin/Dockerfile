@@ -1,4 +1,4 @@
-FROM eclipse-temurin:21-jdk-alpine AS builder
+FROM eclipse-temurin:25-jdk-alpine AS builder
 WORKDIR /app
 COPY gradlew gradlew.bat settings.gradle.kts build.gradle.kts gradle.properties ./
 COPY gradle ./gradle
@@ -6,7 +6,7 @@ COPY src ./src
 COPY public ./public
 RUN ./gradlew build --no-daemon -x test
 
-FROM eclipse-temurin:21-jre-alpine
+FROM eclipse-temurin:25-jre-alpine
 RUN apk add --no-cache ca-certificates
 WORKDIR /app
 COPY --from=builder /app/build/libs/backbone-*.jar /app/backbone.jar

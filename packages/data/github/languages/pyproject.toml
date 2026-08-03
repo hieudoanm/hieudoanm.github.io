@@ -3,9 +3,9 @@ name = "languages"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = "==3.14.5"
+requires-python = "==3.14.6"
 dependencies = [
-    "pandas==3.0.3",
+    "pandas==3.0.5",
     "pyyaml==6.0.3",
     "requests==2.34.2",
 ]

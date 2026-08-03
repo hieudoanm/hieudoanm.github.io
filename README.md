@@ -160,22 +160,21 @@ go install github.com/spf13/cobra-cli@latest
 
 #### ⚛️ 5.5.1 Front-end
 
-| No  | Group            | Technology                  | GitHub                   |
-| --- | ---------------- | --------------------------- | ------------------------ |
-| 1   | Runtime          | [Node.js][node.js]          | [GitHub][gh-node]        |
-| 2   | Packages Manager | [pnpm][pnpm]                | [GitHub][gh-pnpm]        |
-| 3   | Linter           | [ESLint][eslint]            | [GitHub][gh-eslint]      |
-| 4   | Formatter        | [Prettier][prettier]        | [GitHub][gh-prettier]    |
-| 5   | Testing          | [Jest][jest]                | [GitHub][gh-jest]        |
-| 6   | Framework        | [Next.js][nextjs]           | [GitHub][gh-nextjs]      |
-| 7   | Styling          | [Tailwind CSS][tailwindcss] | [GitHub][gh-tailwindcss] |
-| 8   | UI               | [DaisyUI][daisyui]          | [GitHub][gh-daisyui]     |
-| 9   | Mobile           | [Capacitor.js][capacitorjs] | [GitHub][gh-capacitorjs] |
-| 10  | Desktop          | [Tauri][tauri]              | [GitHub][gh-tauri]       |
-| 11  | Static Hosting   | [GitHub Pages][githubpages] | [GitHub][gh-githubpages] |
-| 12  | Dynamic Hosting  | [Vercel][vercel]            | [GitHub][gh-vercel]      |
+| No  | Group                     | Technology                  | GitHub                   |
+| --- | ------------------------- | --------------------------- | ------------------------ |
+| 01  | Runtime                   | [Node.js][node.js]          | [GitHub][gh-node]        |
+| 02  | Packages Manager          | [pnpm][pnpm]                | [GitHub][gh-pnpm]        |
+| 03  | Linter                    | [ESLint][eslint]            | [GitHub][gh-eslint]      |
+| 04  | Formatter                 | [Prettier][prettier]        | [GitHub][gh-prettier]    |
+| 05  | Unit Tests                | [Jest][jest]                | [GitHub][gh-jest]        |
+| 06  | E2E Tests                 | Playwright                  | GitHub                   |
+| 07  | Framework                 | [Next.js][nextjs]           | [GitHub][gh-nextjs]      |
+| 08  | Styling                   | [Tailwind CSS][tailwindcss] | [GitHub][gh-tailwindcss] |
+| 09  | UI                        | [DaisyUI][daisyui]          | [GitHub][gh-daisyui]     |
+| 10  | Hybrid (Desktop & Mobile) | [Tauri][tauri]              | [GitHub][gh-tauri]       |
+| 11  | Static Hosting            | [GitHub Pages][githubpages] | [GitHub][gh-githubpages] |
+| 12  | Dynamic Hosting           | [Vercel][vercel]            | [GitHub][gh-vercel]      |
 
-[capacitorjs]: https://capacitorjs.com/
 [tauri]: https://v2.tauri.app/
 [githubpages]: https://pages.github.com/
 [vercel]: https://vercel.com/
@@ -183,7 +182,6 @@ go install github.com/spf13/cobra-cli@latest
 <!-- GitHub -->
 
 [gh-nextjs]: https://github.com/vercel/next.js
-[gh-capacitorjs]: https://github.com/ionic-team/capacitor
 [gh-tauri]: https://github.com/tauri-apps/tauri
 [gh-githubpages]: https://github.com/github/pages-gemini
 [gh-vercel]: https://github.com/vercel/vercel
@@ -205,9 +203,6 @@ pnpm install --save-dev --save-exact @tailwindcss/postcss tailwindcss daisyui
 # 7. Tauri
 pnpm install --save-exact @tauri-apps/api
 pnpm install --save-dev --save-exact @tauri-apps/cli
-# 8. Capacitor
-pnpm install --save-exact @capacitor/core @capacitor/android @capacitor/ios
-pnpm install --save-dev --save-exact @capacitor/cli
 ```
 
 #### 📡 5.5.2 Back-end

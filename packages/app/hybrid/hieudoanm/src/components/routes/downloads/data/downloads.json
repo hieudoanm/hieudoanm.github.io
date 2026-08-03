@@ -16,14 +16,14 @@
         ]
       },
       {
-        "label": "hieudoanm",
-        "description": "CLI",
+        "label": "jack",
+        "description": "Just Another Command-Line Kit",
         "icon": "PiCodeSimple",
-        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/cli-latest",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/cli-jack-latest",
         "actions": [
           {
             "label": "Download bin",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/cli-latest"
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/cli-jack-latest"
           }
         ]
       }

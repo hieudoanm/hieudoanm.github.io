@@ -9,13 +9,13 @@ edition = "2021"
 
 [dependencies]
 # HTTP client
-reqwest = { version = "=0.12.28", default-features = false, features = ["rustls-tls", "cookies"] }
+reqwest = { version = "=0.13.4", default-features = false, features = ["rustls-tls", "cookies"] }
 
 # Async runtime
-tokio = { version = "=1.52.3", features = ["rt", "rt-multi-thread", "macros", "time"] }
+tokio = { version = "=1.53.1", features = ["rt", "rt-multi-thread", "macros", "time"] }
 
 # CLI
-clap = { version = "=4.6.4", features = ["derive"] }
+clap = { version = "=4.6.5", features = ["derive"] }
 
 # HTML parsing & serialization
 html5ever = "=0.39.0"

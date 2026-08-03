@@ -22,26 +22,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v6.0.3
+        uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 0
       - name: Install pnpm
-        uses: pnpm/action-setup@v6.0.8
+        uses: pnpm/action-setup@v6.0.10
         with:
-          version: '11.18.0'
+          version: '11.20.0'
       - name: Install Node.js
-        uses: actions/setup-node@v6.4.0
+        uses: actions/setup-node@v7.0.0
         with:
           node-version: '26.5.1'
           cache: 'pnpm'
       - name: Setup Chrome
-        uses: browser-actions/setup-chrome@v1.7.3
+        uses: browser-actions/setup-chrome@v2.1.2
       - name: Install Dependencies
         run: pnpm install
       - name: Build
         run: pnpm run build --filter=@hieudoanm.github.io/extension
       - name: Upload Build Artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: hieudoanm-extension
           path: packages/extensions/browser/hieudoanm/ts/download/
@@ -54,11 +54,11 @@ jobs:
       contents: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v6.0.3
+        uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 0
       - name: Download Build Artifacts
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           path: artifacts
       - name: Collect Release Artifacts
