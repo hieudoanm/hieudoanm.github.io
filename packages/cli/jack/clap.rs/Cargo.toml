@@ -35,11 +35,11 @@ qrcode = "=0.14.1"
 rusqlite = { version = "=0.32.1", features = ["bundled"] }
 base64 = "=0.22.1"
 url = "=2.5.8"
-log = "=0.4.30"
+log = "=0.4.33"
 env_logger = "=0.11.11"
 dirs = "=5.0.1"
 deunicode = "=1.6.2"
-html-escape = "=0.2.13"
+html-escape = "=0.2.15"
 scraper = "=0.22.0"
 quick-xml = { version = "=0.37.5", features = ["serialize"] }
 lazy_static = "=1.5.0"
