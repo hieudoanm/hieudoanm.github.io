@@ -36,7 +36,7 @@ rusqlite = { version = "=0.32.1", features = ["bundled"] }
 base64 = "=0.22.1"
 url = "=2.5.8"
 log = "=0.4.33"
-env_logger = "=0.11.10"
+env_logger = "=0.11.11"
 dirs = "=5.0.1"
 deunicode = "=1.6.2"
 html-escape = "=0.2.15"
