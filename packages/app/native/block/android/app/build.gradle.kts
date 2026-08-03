@@ -67,7 +67,7 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
-    val activityComposeVersion = "1.9.3"
+    val activityComposeVersion = "1.13.0"
     implementation("androidx.activity:activity-compose:$activityComposeVersion")
 
     val lifecycleVersion = "2.8.7"
