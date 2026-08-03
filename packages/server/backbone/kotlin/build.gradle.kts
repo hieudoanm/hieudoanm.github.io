@@ -30,7 +30,7 @@ dependencies {
 
     // Database
     implementation("com.zaxxer:HikariCP:6.3.3")
-    implementation("org.xerial:sqlite-jdbc:3.47.1.0")
+    implementation("org.xerial:sqlite-jdbc:3.53.2.1")
 
     // Auth
     implementation("at.favre.lib:bcrypt:0.10.2")
