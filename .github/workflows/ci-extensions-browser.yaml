@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v6.1.0
+        uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 0
       - name: Install pnpm
@@ -35,7 +35,7 @@ jobs:
           node-version: '26.5.1'
           cache: 'pnpm'
       - name: Setup Chrome
-        uses: browser-actions/setup-chrome@v1.7.3
+        uses: browser-actions/setup-chrome@v2.1.2
       - name: Install Dependencies
         run: pnpm install
       - name: Build
@@ -54,7 +54,7 @@ jobs:
       contents: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v6.1.0
+        uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 0
       - name: Download Build Artifacts
