@@ -40,7 +40,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v6.0.9
         with:
-          version: '11.18.0'
+          version: '11.20.0'
       - name: Install Node.js
         uses: actions/setup-node@v7.0.0
         with:
@@ -79,7 +79,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v6.0.9
         with:
-          version: '11.18.0'
+          version: '11.20.0'
       - name: Install System Dependencies
         if: runner.os == 'Linux'
         run: |
@@ -118,7 +118,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v6.0.9
         with:
-          version: '11.18.0'
+          version: '11.20.0'
       - name: Install System Dependencies
         run: |
           sudo apt-get update
