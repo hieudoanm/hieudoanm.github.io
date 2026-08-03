@@ -1,4 +1,4 @@
-FROM alpine:3.23.4
+FROM alpine:3.24.1
 
 ARG PB_VERSION=0.23.12
 
