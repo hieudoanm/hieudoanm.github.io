@@ -1,6 +1,6 @@
 plugins {
-    kotlin("jvm") version "2.0.21"
-    kotlin("plugin.serialization") version "2.0.21"
+    kotlin("jvm") version "2.4.10"
+    kotlin("plugin.serialization") version "2.4.10"
     application
 }
 
@@ -43,8 +43,8 @@ dependencies {
 
     // Testing
     testImplementation("io.ktor:ktor-server-test-host:$ktorVersion")
-    testImplementation("org.jetbrains.kotlin:kotlin-test:2.0.21")
-    testImplementation("org.jetbrains.kotlin:kotlin-test-junit5:2.0.21")
+    testImplementation("org.jetbrains.kotlin:kotlin-test:2.4.10")
+    testImplementation("org.jetbrains.kotlin:kotlin-test-junit5:2.4.10")
 }
 
 application {
