@@ -98,7 +98,7 @@ dependencies {
     testImplementation("app.cash.turbine:turbine:1.2.1")
     testImplementation("io.mockk:mockk:1.13.14")
     testImplementation("androidx.arch.core:core-testing:2.2.0")
-    testImplementation("androidx.room:room-testing:2.6.1")
+    testImplementation("androidx.room:room-testing:2.8.4")
     testImplementation("androidx.test:core-ktx:1.6.1")
     testImplementation("org.robolectric:robolectric:4.14.1")
     testImplementation("androidx.compose.ui:ui-test-junit4")
