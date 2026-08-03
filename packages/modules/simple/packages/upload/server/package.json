@@ -29,16 +29,16 @@
     "test": "jest"
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "3.1096.0",
-    "@aws-sdk/s3-presigned-post": "3.1096.0",
-    "@aws-sdk/s3-request-presigner": "3.1096.0"
+    "@aws-sdk/client-s3": "3.1101.0",
+    "@aws-sdk/s3-presigned-post": "3.1101.0",
+    "@aws-sdk/s3-request-presigner": "3.1101.0"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
     "@types/jest": "30.0.0",
     "@types/node": "26.1.2",
     "eslint": "9.39.5",
-    "globals": "17.8.0",
+    "globals": "17.9.0",
     "jest": "30.4.2",
     "jiti": "2.7.0",
     "prettier": "3.9.6",
