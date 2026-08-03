@@ -74,12 +74,12 @@ jobs:
           RELEASE_KEY_ALIAS: release
           RELEASE_KEY_PASSWORD: android
       - name: Upload APK
-        uses: actions/upload-artifact@v4.6.2
+        uses: actions/upload-artifact@v7.0.1
         with:
           name: ${{ inputs.artifactPrefix }}-apk
           path: ${{ inputs.package }}/app/build/outputs/apk/release/
       - name: Upload AAB
-        uses: actions/upload-artifact@v4.6.2
+        uses: actions/upload-artifact@v7.0.1
         with:
           name: ${{ inputs.artifactPrefix }}-aab
           path: ${{ inputs.package }}/app/build/outputs/bundle/release/
@@ -98,12 +98,12 @@ jobs:
         with:
           fetch-depth: 0
       - name: Download APK
-        uses: actions/download-artifact@v4.3.0
+        uses: actions/download-artifact@v8.0.1
         with:
           name: ${{ inputs.artifactPrefix }}-apk
           path: artifacts/apk
       - name: Download AAB
-        uses: actions/download-artifact@v4.3.0
+        uses: actions/download-artifact@v8.0.1
         with:
           name: ${{ inputs.artifactPrefix }}-aab
           path: artifacts/aab
