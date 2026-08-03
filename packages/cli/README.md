@@ -1,12 +1,12 @@
 # CLI
 
-| No  | Language         | CLI                                |
-| --- | ---------------- | ---------------------------------- |
-| 01  | [Bash][bash]     | [hieudoanm.bash][hieudoanm-bash]   |
-| 02  | [Go][go]         | [hieudoanm.go][hieudoanm-go]       |
-| 03  | [Rust][rust]     | [hieudoanm.rs][hieudoanm-rs]       |
-| 04  | [Swift][swift]   | [hieudoanm.swift][hieudoanm-swift] |
-| 05  | [Kotlin][kotlin] | [hieudoanm.kt][hieudoanm-kt]       |
+| No  | Language         | CLI                      |
+| --- | ---------------- | ------------------------ |
+| 01  | [Bash][bash]     | [jack.bash][jack-bash]   |
+| 02  | [Go][go]         | [jack.go][jack-go]       |
+| 03  | [Rust][rust]     | [jack.rs][jack-rs]       |
+| 04  | [Swift][swift]   | [jack.swift][jack-swift] |
+| 05  | [Kotlin][kotlin] | [jack.kt][jack-kt]       |
 
 [bash]: https://www.gnu.org/software/bash/
 [go]: https://go.dev
@@ -16,8 +16,8 @@
 
 <!-- CLI -->
 
-[hieudoanm-bash]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/cli/bash
-[hieudoanm-go]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/cli/hieudoanm/cobra.go
-[hieudoanm-rs]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/cli/hieudoanm/clap.rs
-[hieudoanm-swift]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/cli/hieudoanm/swift
-[hieudoanm-kt]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/cli/hieudoanm/cli.kt
+[jack-bash]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/cli/bash
+[jack-go]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/cli/jack/cobra.go
+[jack-rs]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/cli/jack/clap.rs
+[jack-swift]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/cli/jack/swift
+[jack-kt]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/cli/jack/cli.kt
