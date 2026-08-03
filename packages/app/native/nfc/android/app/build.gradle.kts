@@ -100,7 +100,7 @@ dependencies {
     testImplementation("androidx.arch.core:core-testing:2.2.0")
     testImplementation("androidx.room:room-testing:2.8.4")
     testImplementation("androidx.test:core-ktx:1.7.0")
-    testImplementation("org.robolectric:robolectric:4.14.1")
+    testImplementation("org.robolectric:robolectric:4.16.1")
     testImplementation("androidx.compose.ui:ui-test-junit4")
     testImplementation("androidx.navigation:navigation-testing:2.9.8")
 }
