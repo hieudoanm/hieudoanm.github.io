@@ -29,7 +29,7 @@ dependencies {
     implementation("io.ktor:ktor-client-okhttp:$ktorVersion")
 
     // Database
-    implementation("com.zaxxer:HikariCP:6.3.3")
+    implementation("com.zaxxer:HikariCP:7.1.0")
     implementation("org.xerial:sqlite-jdbc:3.53.2.1")
 
     // Auth
