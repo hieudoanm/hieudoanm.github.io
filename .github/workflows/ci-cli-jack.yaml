@@ -69,7 +69,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6.1.0
       - name: Install Go
-        uses: actions/setup-go@v6.5.0
+        uses: actions/setup-go@v7.0.0
         with:
           go-version: '1.26.5'
           cache-dependency-path: packages/cli/jack/cobra.go/go.sum
