@@ -272,7 +272,7 @@ dependencies = [
  "jsonwebtoken",
  "mime_guess",
  "multer",
- "rand 0.8.6",
+ "rand 0.10.2",
  "reqwest",
  "rusqlite",
  "rust-embed",
