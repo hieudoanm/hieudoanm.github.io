@@ -1,6 +1,6 @@
 services:
   opensearch:
-    image: opensearchproject/opensearch:2.19.5
+    image: opensearchproject/opensearch:2.19.6
     container_name: opensearch
     restart: always
     environment:
