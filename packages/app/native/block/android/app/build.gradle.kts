@@ -85,7 +85,7 @@ dependencies {
     val datastoreVersion = "1.2.1"
     implementation("androidx.datastore:datastore-preferences:$datastoreVersion")
 
-    val hiltVersion = "2.53.1"
+    val hiltVersion = "2.60.1"
     implementation("com.google.dagger:hilt-android:$hiltVersion")
     ksp("com.google.dagger:hilt-compiler:$hiltVersion")
     implementation("androidx.hilt:hilt-navigation-compose:1.4.0")
