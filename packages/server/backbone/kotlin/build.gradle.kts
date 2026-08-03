@@ -29,17 +29,17 @@ dependencies {
     implementation("io.ktor:ktor-client-okhttp:$ktorVersion")
 
     // Database
-    implementation("com.zaxxer:HikariCP:6.2.1")
+    implementation("com.zaxxer:HikariCP:6.3.3")
     implementation("org.xerial:sqlite-jdbc:3.47.1.0")
 
     // Auth
     implementation("at.favre.lib:bcrypt:0.10.2")
-    implementation("io.jsonwebtoken:jjwt-api:0.12.6")
-    runtimeOnly("io.jsonwebtoken:jjwt-impl:0.12.6")
-    runtimeOnly("io.jsonwebtoken:jjwt-jackson:0.12.6")
+    implementation("io.jsonwebtoken:jjwt-api:0.13.0")
+    runtimeOnly("io.jsonwebtoken:jjwt-impl:0.13.0")
+    runtimeOnly("io.jsonwebtoken:jjwt-jackson:0.13.0")
 
     // Logging
-    implementation("ch.qos.logback:logback-classic:1.5.38")
+    implementation("ch.qos.logback:logback-classic:1.6.1")
 
     // Testing
     testImplementation("io.ktor:ktor-server-test-host:$ktorVersion")
