@@ -15,7 +15,7 @@ reqwest = { version = "=0.12.28", default-features = false, features = ["rustls-
 tokio = { version = "=1.52.3", features = ["rt", "rt-multi-thread", "macros", "time"] }
 
 # CLI
-clap = { version = "=4.6.4", features = ["derive"] }
+clap = { version = "=4.6.5", features = ["derive"] }
 
 # HTML parsing & serialization
 html5ever = "=0.39.0"
