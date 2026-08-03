@@ -1,5 +1,5 @@
 # Stage 1: Build the binary
-FROM rust:1.80-alpine AS builder
+FROM rust:1.97-alpine AS builder
 
 # Install build dependencies for static linking
 RUN apk add --no-cache musl-dev
