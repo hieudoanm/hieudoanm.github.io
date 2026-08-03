@@ -1,5 +1,5 @@
 # Use an official Python runtime as a parent image
-FROM python:3.14.4
+FROM python:3.14.6
 
 WORKDIR /app
 
