@@ -19,7 +19,7 @@ require (
 	github.com/pdfcpu/pdfcpu v0.13.0
 	github.com/shirou/gopsutil/v4 v4.26.7
 	github.com/spf13/cobra v1.10.2
-	golang.org/x/text v0.37.0
+	golang.org/x/text v0.40.0
 	gopkg.in/yaml.v3 v3.0.1
 )
 
@@ -82,9 +82,9 @@ require (
 	github.com/ysmood/gson v0.7.3 // indirect
 	github.com/ysmood/leakless v0.9.0 // indirect
 	github.com/yusufpapurcu/wmi v1.2.4 // indirect
-	golang.org/x/image v0.41.0
+	golang.org/x/image v0.44.0
 	golang.org/x/net v0.55.0
-	golang.org/x/sync v0.21.0 // indirect
+	golang.org/x/sync v0.22.0 // indirect
 	golang.org/x/sys v0.46.0 // indirect
 	rsc.io/qr v0.2.0
 )
