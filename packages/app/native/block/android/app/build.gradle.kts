@@ -74,7 +74,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-compose:$lifecycleVersion")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycleVersion")
 
-    val navigationComposeVersion = "2.8.5"
+    val navigationComposeVersion = "2.9.8"
     implementation("androidx.navigation:navigation-compose:$navigationComposeVersion")
 
     val roomVersion = "2.6.1"
