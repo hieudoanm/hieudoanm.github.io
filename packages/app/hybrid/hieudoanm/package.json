@@ -102,7 +102,7 @@
     "@types/three": "0.185.3",
     "@types/web-bluetooth": "0.0.21",
     "babel-plugin-react-compiler": "1.0.0",
-    "daisyui": "5.7.14",
+    "daisyui": "5.7.15",
     "eslint": "10.8.0",
     "eslint-config-next": "16.2.12",
     "jest": "30.4.2",
