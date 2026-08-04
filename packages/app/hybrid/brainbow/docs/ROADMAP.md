@@ -54,7 +54,7 @@ mobile app (Tauri Mobile).
 - [x] Basic color histogram / channel intensity readout
 - [x] Local project files: create/open/save project bundles (implemented as a
       portable JSON `.brainbow` bundle; SQLite + asset folder deferred)
-- [ ] File-system access via Tauri (desktop) vs. browser File API (web fallback)
+- [x] File-system access via Tauri (desktop) vs. browser File API (web fallback)
 
 ---
 
@@ -85,14 +85,14 @@ mobile app (Tauri Mobile).
 
 ## Phase 4 — Desktop/Mobile Parity & Native Features
 
-- [ ] Native file dialogs, drag-and-drop import (desktop)
-- [ ] Camera/gallery import on mobile (microscope-adjacent field capture, or QA
+- [x] Native file dialogs, drag-and-drop import (desktop)
+- [x] Camera/gallery import on mobile (microscope-adjacent field capture, or QA
       snapshots)
-- [ ] Background batch jobs with progress notifications (desktop)
-- [ ] Offline-first behavior confirmed on both mobile and desktop
-- [ ] Auto-update channel for desktop (Tauri updater)
-- [ ] App store packaging checklist (macOS notarization, Windows signing,
-      Android/iOS store builds)
+- [x] Background batch jobs with progress notifications (desktop)
+- [x] Offline-first behavior confirmed on both mobile and desktop
+- [x] Auto-update channel for desktop (Tauri updater)
+- [x] App store packaging checklist (macOS notarization, Windows signing,
+      Android/iOS store builds) — see `docs/PACKAGING.md`
 
 ---
 

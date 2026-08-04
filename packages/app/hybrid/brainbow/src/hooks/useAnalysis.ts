@@ -62,7 +62,7 @@ export const useAnalysis = () => {
   );
 
   const analyzeImages = useCallback(
-    async (rasters: ImageRaster[]) => {
+    async (rasters: ImageRaster[], onDone?: (batch: BatchResult) => void) => {
       setState((current) => ({
         ...current,
         status: 'running',
@@ -86,6 +86,7 @@ export const useAnalysis = () => {
           batch,
           result: null,
         }));
+        onDone?.(batch);
       } catch (error) {
         setState((current) => ({
           ...current,

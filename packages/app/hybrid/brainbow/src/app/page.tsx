@@ -4,7 +4,8 @@ import { useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { HomeTemplate } from '@/components/templates/HomeTemplate';
 import { SAMPLE_NAME, createSampleRaster } from '@/data/sample';
-import { loadImageFiles } from '@/lib/image/load';
+import { loadImageFiles, loadNativeImages } from '@/lib/image/load';
+import { nativePickImages } from '@/lib/native';
 import { viewerStore } from '@/lib/store/viewerStore';
 
 const HomePage = () => {
@@ -26,7 +27,23 @@ const HomePage = () => {
     [router]
   );
 
-  return <HomeTemplate onOpenDemo={openDemo} onImportFiles={importFiles} />;
+  const importNative = useCallback(async () => {
+    const payloads = await nativePickImages();
+    if (payloads.length === 0) return;
+    const loaded = await loadNativeImages(payloads);
+    if (loaded.length > 0) {
+      viewerStore.set(loaded[0], payloads[0].name);
+      router.push('/viewer');
+    }
+  }, [router]);
+
+  return (
+    <HomeTemplate
+      onOpenDemo={openDemo}
+      onImportFiles={importFiles}
+      onNativeImport={importNative}
+    />
+  );
 };
 
 export default HomePage;

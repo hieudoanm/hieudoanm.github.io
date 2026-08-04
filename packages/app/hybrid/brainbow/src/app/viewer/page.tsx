@@ -14,6 +14,7 @@ import { downloadBlob, downloadText } from '@/lib/io/dom';
 import { toCsv } from '@/lib/export/csv';
 import { flattenAnnotations, rasterToBlob } from '@/lib/export/raster';
 import { buildReportHtml } from '@/lib/analysis/report';
+import { nativeNotify } from '@/lib/native';
 import type { ImageAnalysis } from '@/lib/analysis/analyze';
 import type { ImageRaster } from '@/types/image';
 
@@ -77,7 +78,12 @@ const ViewerPage = () => {
       const loaded = await loadImageFiles(files);
       if (loaded.length === 0) return;
       rastersRef.current = loaded;
-      await analysis.analyzeImages(loaded);
+      await analysis.analyzeImages(loaded, (batch) => {
+        void nativeNotify(
+          'Batch analysis complete',
+          `Analyzed ${batch.aggregate.imageCount} images`
+        );
+      });
     },
     [analysis.analyzeImages]
   );

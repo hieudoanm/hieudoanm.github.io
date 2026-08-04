@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { HomeTemplate } from '@/components/templates/HomeTemplate';
 import { ErrorTemplate } from '@/components/templates/ErrorTemplate';
@@ -22,6 +22,45 @@ describe('HomeTemplate', () => {
     );
     const input = screen.getByTestId('file-input');
     const file = new File(['x'], 'scan.png', { type: 'image/png' });
+    await user.upload(input, file);
+    expect(onImportFiles).toHaveBeenCalledWith([file]);
+  });
+
+  it('imports dropped files', async () => {
+    const user = userEvent.setup();
+    const onImportFiles = jest.fn();
+    render(
+      <HomeTemplate onOpenDemo={jest.fn()} onImportFiles={onImportFiles} />
+    );
+    const zone = screen.getByTestId('drop-zone');
+    const file = new File(['x'], 'scan.png', { type: 'image/png' });
+    await user.hover(zone);
+    fireEvent.drop(zone, { dataTransfer: { files: [file] } });
+    expect(onImportFiles).toHaveBeenCalledWith([file]);
+  });
+
+  it('uses the native picker when provided', async () => {
+    const user = userEvent.setup();
+    const onNativeImport = jest.fn();
+    render(
+      <HomeTemplate
+        onOpenDemo={jest.fn()}
+        onImportFiles={jest.fn()}
+        onNativeImport={onNativeImport}
+      />
+    );
+    await user.click(screen.getByRole('button', { name: 'Import image' }));
+    expect(onNativeImport).toHaveBeenCalledTimes(1);
+  });
+
+  it('captures an image from the camera input', async () => {
+    const user = userEvent.setup();
+    const onImportFiles = jest.fn();
+    render(
+      <HomeTemplate onOpenDemo={jest.fn()} onImportFiles={onImportFiles} />
+    );
+    const input = screen.getByTestId('camera-input');
+    const file = new File(['x'], 'capture.jpg', { type: 'image/jpeg' });
     await user.upload(input, file);
     expect(onImportFiles).toHaveBeenCalledWith([file]);
   });

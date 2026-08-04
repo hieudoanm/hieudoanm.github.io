@@ -1,20 +1,35 @@
 'use client';
 
-import { useRef, type ChangeEvent, type FC } from 'react';
-import { FiImage, FiUpload } from 'react-icons/fi';
+import {
+  useRef,
+  useState,
+  type ChangeEvent,
+  type DragEvent,
+  type FC,
+} from 'react';
+import { FiCamera, FiImage, FiUpload } from 'react-icons/fi';
 import { Button } from '@/components/atoms/Button';
 import { Badge } from '@/components/atoms/Badge';
 
 export interface HomeTemplateProps {
   onOpenDemo: () => void;
   onImportFiles: (files: File[]) => void;
+  onNativeImport?: () => void;
 }
+
+const SUPPORTED_IMAGE_ACCEPT = 'image/png,image/jpeg,image/webp';
+
+const filesFromTransfer = (event: DragEvent<HTMLDivElement>): File[] =>
+  Array.from(event.dataTransfer.files);
 
 export const HomeTemplate: FC<HomeTemplateProps> = ({
   onOpenDemo,
   onImportFiles,
+  onNativeImport,
 }) => {
   const inputRef = useRef<HTMLInputElement>(null);
+  const cameraRef = useRef<HTMLInputElement>(null);
+  const [dragging, setDragging] = useState(false);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
     const files = Array.from(event.target.files ?? []);
@@ -24,8 +39,40 @@ export const HomeTemplate: FC<HomeTemplateProps> = ({
     event.target.value = '';
   };
 
+  const handleImport = (): void => {
+    if (onNativeImport) {
+      onNativeImport();
+    } else {
+      inputRef.current?.click();
+    }
+  };
+
+  const handleDragOver = (event: DragEvent<HTMLDivElement>): void => {
+    event.preventDefault();
+    setDragging(true);
+  };
+
+  const handleDragLeave = (event: DragEvent<HTMLDivElement>): void => {
+    event.preventDefault();
+    setDragging(false);
+  };
+
+  const handleDrop = (event: DragEvent<HTMLDivElement>): void => {
+    event.preventDefault();
+    setDragging(false);
+    const files = filesFromTransfer(event);
+    if (files.length > 0) {
+      onImportFiles(files);
+    }
+  };
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center gap-8 p-8">
+    <main
+      data-testid="drop-zone"
+      className="flex min-h-screen flex-col items-center justify-center gap-8 p-8"
+      onDragOver={handleDragOver}
+      onDragLeave={handleDragLeave}
+      onDrop={handleDrop}>
       <div className="flex flex-col items-center gap-4 text-center">
         <div className="flex items-center gap-2">
           <FiImage className="text-primary text-5xl" />
@@ -46,23 +93,44 @@ export const HomeTemplate: FC<HomeTemplateProps> = ({
         <Button variant="primary" size="lg" onClick={onOpenDemo}>
           Open demo dataset
         </Button>
-        <Button
-          variant="outline"
-          size="lg"
-          onClick={() => inputRef.current?.click()}>
+        <Button variant="outline" size="lg" onClick={handleImport}>
           <FiUpload className="mr-2" />
           Import image
         </Button>
+        <div className="md:hidden">
+          <Button
+            variant="outline"
+            size="lg"
+            onClick={() => cameraRef.current?.click()}>
+            <FiCamera className="mr-2" />
+            Capture
+          </Button>
+        </div>
         <input
           ref={inputRef}
           type="file"
-          accept="image/png,image/jpeg,image/webp"
+          accept={SUPPORTED_IMAGE_ACCEPT}
           multiple
           className="hidden"
           data-testid="file-input"
           onChange={handleChange}
         />
+        <input
+          ref={cameraRef}
+          type="file"
+          accept="image/*"
+          capture="environment"
+          className="hidden"
+          data-testid="camera-input"
+          onChange={handleChange}
+        />
       </div>
+
+      {dragging ? (
+        <p className="text-primary" data-testid="drop-hint">
+          Drop images to import
+        </p>
+      ) : null}
     </main>
   );
 };

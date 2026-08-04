@@ -1,3 +1,5 @@
+import { base64ToBytes } from '@/lib/io/base64';
+import type { NativeImagePayload } from '@/lib/native';
 import type { ImageRaster } from '@/types/image';
 
 export class ImageLoadError extends Error {
@@ -63,6 +65,21 @@ export const loadImageFromBytes = async (
 
 export const loadImageFiles = async (files: File[]): Promise<ImageRaster[]> => {
   const results = await Promise.allSettled(files.map(loadImageFile));
+  return results.flatMap((result) =>
+    result.status === 'fulfilled' ? [result.value] : []
+  );
+};
+
+export const loadNativeImages = async (
+  images: NativeImagePayload[]
+): Promise<ImageRaster[]> => {
+  const results = await Promise.allSettled(
+    images.map(async (image) =>
+      rasterFromBitmap(
+        await decodeBitmap(new Blob([toBlobPart(base64ToBytes(image.data))]))
+      )
+    )
+  );
   return results.flatMap((result) =>
     result.status === 'fulfilled' ? [result.value] : []
   );
