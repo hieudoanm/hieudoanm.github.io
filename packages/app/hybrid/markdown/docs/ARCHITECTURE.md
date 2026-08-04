@@ -66,14 +66,14 @@ src/
 
 ## Routing
 
-The app is a single-page vault — all content management happens in one view with
-no dynamic route segments.
+The app is a single-page vault — all content management happens in one view
+with no dynamic route segments.
 
-| Route | Page      | Client | Description                      |
-| ----- | --------- | ------ | -------------------------------- |
-| `/`   | Vault     | Yes    | Vault sidebar + editor + preview |
-| `*`   | not-found | No     | 404 page                         |
-| `*`   | error     | Yes    | Runtime error boundary           |
+| Route  | Page       | Client | Description                            |
+| ------ | ---------- | ------ | -------------------------------------- |
+| `/`    | Vault      | Yes    | Vault sidebar + editor + preview       |
+| `*`    | not-found  | No     | 404 page                               |
+| `*`    | error      | Yes    | Runtime error boundary                 |
 
 ## Rendering Strategy
 

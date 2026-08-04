@@ -11,18 +11,18 @@
 
 ## Tech Stack
 
-| Layer       | Technology                             |
-| ----------- | -------------------------------------- |
+| Layer       | Technology                         |
+| ----------- | ---------------------------------- |
 | Framework   | Next.js 16 (App Router, static export) |
-| Language    | TypeScript 6 (strict)                  |
-| Styling     | Tailwind CSS 4 + DaisyUI 5             |
-| Icons       | react-icons (Fi set)                   |
-| Desktop     | Tauri 2                                |
-| Storage     | IndexedDB (`pdf-db`)                   |
-| Rendering   | HTML Canvas (mock PDF engine)          |
-| Testing     | Jest + Playwright                      |
-| Linting     | ESLint + Prettier                      |
-| Package Mgr | pnpm                                   |
+| Language    | TypeScript 6 (strict)              |
+| Styling     | Tailwind CSS 4 + DaisyUI 5         |
+| Icons       | react-icons (Fi set)               |
+| Desktop     | Tauri 2                            |
+| Storage     | IndexedDB (`pdf-db`)               |
+| Rendering   | HTML Canvas (mock PDF engine)      |
+| Testing     | Jest + Playwright                  |
+| Linting     | ESLint + Prettier                  |
+| Package Mgr | pnpm                               |
 
 ## Directory Structure
 
@@ -66,16 +66,16 @@ src/
 
 ## Routing
 
-| Route               | Page          | Client | Description                          |
-| ------------------- | ------------- | ------ | ------------------------------------ |
-| `/`                 | Documents     | Yes    | Recent PDFs, upload, grid/list view  |
-| `/pdf/[id]`         | PDF Viewer    | Yes    | Page render, zoom, annotation tools  |
-| `/pdf/[id]/edit`    | PDF Editor    | Yes    | Text edit, images, watermark         |
-| `/pdf/[id]/merge`   | Merge / Split | Yes    | Combine PDFs, extract pages, reorder |
-| `/pdf/[id]/compare` | Compare       | Yes    | Side-by-side diff of two PDFs        |
-| `/settings`         | Settings      | Yes    | Theme, default zoom, layout          |
-| `/profile`          | Profile       | Yes    | User info                            |
-| `/version`          | Version       | Yes    | Build version, copy to clipboard     |
+| Route              | Page          | Client | Description                          |
+| ------------------ | ------------- | ------ | ------------------------------------ |
+| `/`                | Documents     | Yes    | Recent PDFs, upload, grid/list view  |
+| `/pdf/[id]`        | PDF Viewer    | Yes    | Page render, zoom, annotation tools  |
+| `/pdf/[id]/edit`   | PDF Editor    | Yes    | Text edit, images, watermark         |
+| `/pdf/[id]/merge`  | Merge / Split | Yes    | Combine PDFs, extract pages, reorder |
+| `/pdf/[id]/compare`| Compare       | Yes    | Side-by-side diff of two PDFs        |
+| `/settings`        | Settings      | Yes    | Theme, default zoom, layout          |
+| `/profile`         | Profile       | Yes    | User info                            |
+| `/version`         | Version       | Yes    | Build version, copy to clipboard     |
 
 Dynamic routes `/pdf/[id]` and `/pdf/[id]/edit` for the viewer and editor.
 
@@ -85,8 +85,8 @@ Dynamic routes `/pdf/[id]` and `/pdf/[id]/edit` for the viewer and editor.
 - **Client Components** for viewer, editor, and merge flows
 - **Mock canvas rendering**: text blocks, images, and shapes drawn on HTML
   canvas elements; an invisible text layer overlays for selection and search
-- **Virtual scrolling**: only render visible pages plus a one-page buffer; page
-  heights are cached for scroll-position math
+- **Virtual scrolling**: only render visible pages plus a one-page buffer;
+  page heights are cached for scroll-position math
 
 ## State Management
 

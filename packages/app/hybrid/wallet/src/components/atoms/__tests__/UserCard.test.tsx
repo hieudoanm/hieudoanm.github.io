@@ -6,7 +6,11 @@ const mockUser: User = {
   id: '1',
   name: 'Alex Johnson',
   email: 'alex@example.com',
-  avatar: '',
+  avatar: 'http://example.com/avatar.jpg',
+  phone: '1234567890',
+  country: 'USA',
+  timezone: 'UTC-5',
+  currency: 'USD',
 };
 
 describe('UserCard', () => {

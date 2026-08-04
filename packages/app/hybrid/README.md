@@ -14,19 +14,20 @@
 | --- | ----------- | ----------- | ---------- | ----------------------------------------- | -------- | ------ |
 | 00  | boilerplate | Boilerplate |            | Nextjs + Tauri (Foundation)               | Optional | DONE   |
 | 01  | api         | API         | DevTools   | Minimal Postman / Insomnia / Bruno        | Optional | DONE   |
-| 02  | chat        | Chat        | DevTools   | Minimal Chat like Codex / Claude          | Required | DONE   |
-| 03  | code        | Code        | Editor     | Minimal VSCode / Zed                      | No       | DONE   |
-| 04  | database    | Database    | Editor     | Minimal pgAdmin / DBeaver for SQLite only | No       | DONE   |
-| 05  | hieudoanm   | Hieu Doan   | DevTools   | Minimal TinyWow                           | No       | DONE   |
-| 06  | markdown    | Markdown    | Editor     | Minimal Obsidian                          | No       | DONE   |
-| 07  | password    | Password    | Management | Minimal BitWarden / 1Password             | Required | DONE   |
-| 08  | pdf         | PDF         | Editor     | Minimal Adobe Acrobat PDF                 | No       | DONE   |
-| 09  | photo       | Photo       | Editor     | Minimal Adobe Photoshop                   | No       | DONE   |
-| 10  | projects    | Projects    | Management | Minimal Atlassian Trello / Kanban         | Required | DONE   |
-| 11  | svg         | SVG         | Editor     | Minimal Adobe Illustrator                 | No       | DONE   |
-| 12  | tourney     | Touraments  | Management | Minimal Swiss Manager                     | No       | DONE   |
-| 13  | video       | Video       | Editor     | Minimal CapCut                            | No       | DONE   |
-| 14  | wallet      | Wallet      | Management | Minimal Momo / Techcombank                | Required | DONE   |
+| 02  | brainbow    | Brainbow    |            | All-in-one Brainbow Software              | No       | DONE   |
+| 03  | chat        | Chat        | DevTools   | Minimal Chat like Codex / Claude          | Required | DONE   |
+| 04  | code        | Code        | Editor     | Minimal VSCode / Zed                      | No       | DONE   |
+| 05  | database    | Database    | Editor     | Minimal pgAdmin / DBeaver for SQLite only | No       | DONE   |
+| 06  | hieudoanm   | Hieu Doan   | DevTools   | Minimal TinyWow                           | No       | DONE   |
+| 07  | markdown    | Markdown    | Editor     | Minimal Obsidian                          | No       | DONE   |
+| 08  | password    | Password    | Management | Minimal BitWarden / 1Password             | Required | DONE   |
+| 09  | pdf         | PDF         | Editor     | Minimal Adobe Acrobat PDF                 | No       | DONE   |
+| 10  | photo       | Photo       | Editor     | Minimal Adobe Photoshop                   | No       | DONE   |
+| 11  | projects    | Projects    | Management | Minimal Atlassian Trello / Kanban         | Required | DONE   |
+| 12  | svg         | SVG         | Editor     | Minimal Adobe Illustrator                 | No       | DONE   |
+| 13  | tourney     | Touraments  | Management | Minimal Swiss Manager                     | No       | DONE   |
+| 14  | video       | Video       | Editor     | Minimal CapCut                            | No       | DONE   |
+| 15  | wallet      | Wallet      | Management | Minimal Momo / Techcombank                | Required | DONE   |
 
 ## Techstack
 

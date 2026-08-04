@@ -8,8 +8,18 @@ describe('TransactionFilters', () => {
       <TransactionFilters
         search=""
         filter="all"
+        dateFrom=""
+        dateTo=""
+        category="All"
+        amountMin=""
+        amountMax=""
         onSearchChange={() => {}}
         onFilterChange={() => {}}
+        onDateFromChange={() => {}}
+        onDateToChange={() => {}}
+        onCategoryChange={() => {}}
+        onAmountMinChange={() => {}}
+        onAmountMaxChange={() => {}}
       />
     );
     expect(
@@ -22,8 +32,18 @@ describe('TransactionFilters', () => {
       <TransactionFilters
         search=""
         filter="all"
+        dateFrom=""
+        dateTo=""
+        category="All"
+        amountMin=""
+        amountMax=""
         onSearchChange={() => {}}
         onFilterChange={() => {}}
+        onDateFromChange={() => {}}
+        onDateToChange={() => {}}
+        onCategoryChange={() => {}}
+        onAmountMinChange={() => {}}
+        onAmountMaxChange={() => {}}
       />
     );
     expect(screen.getByText('All')).toBeInTheDocument();
@@ -37,8 +57,18 @@ describe('TransactionFilters', () => {
       <TransactionFilters
         search=""
         filter="all"
+        dateFrom=""
+        dateTo=""
+        category="All"
+        amountMin=""
+        amountMax=""
         onSearchChange={onSearchChange}
         onFilterChange={() => {}}
+        onDateFromChange={() => {}}
+        onDateToChange={() => {}}
+        onCategoryChange={() => {}}
+        onAmountMinChange={() => {}}
+        onAmountMaxChange={() => {}}
       />
     );
     await userEvent.type(
@@ -54,8 +84,18 @@ describe('TransactionFilters', () => {
       <TransactionFilters
         search=""
         filter="all"
+        dateFrom=""
+        dateTo=""
+        category="All"
+        amountMin=""
+        amountMax=""
         onSearchChange={() => {}}
         onFilterChange={onFilterChange}
+        onDateFromChange={() => {}}
+        onDateToChange={() => {}}
+        onCategoryChange={() => {}}
+        onAmountMinChange={() => {}}
+        onAmountMaxChange={() => {}}
       />
     );
     await userEvent.click(screen.getByText('Income'));

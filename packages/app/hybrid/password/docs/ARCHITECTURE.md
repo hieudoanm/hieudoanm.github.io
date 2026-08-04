@@ -11,17 +11,17 @@
 
 ## Tech Stack
 
-| Layer       | Technology                             |
-| ----------- | -------------------------------------- |
+| Layer       | Technology                         |
+| ----------- | ---------------------------------- |
 | Framework   | Next.js 16 (App Router, static export) |
-| Language    | TypeScript 6 (strict)                  |
-| Styling     | Tailwind CSS 4 + DaisyUI 5             |
-| Icons       | react-icons (Fi set)                   |
-| Desktop     | Tauri 2                                |
-| Storage     | IndexedDB (`password-db`)              |
-| Testing     | Jest + Playwright                      |
-| Linting     | ESLint + Prettier                      |
-| Package Mgr | pnpm                                   |
+| Language    | TypeScript 6 (strict)              |
+| Styling     | Tailwind CSS 4 + DaisyUI 5         |
+| Icons       | react-icons (Fi set)               |
+| Desktop     | Tauri 2                            |
+| Storage     | IndexedDB (`password-db`)          |
+| Testing     | Jest + Playwright                  |
+| Linting     | ESLint + Prettier                  |
+| Package Mgr | pnpm                               |
 
 ## Directory Structure
 
@@ -65,8 +65,8 @@ src/
 
 ## Routing
 
-| Route        | Page               | Client | Description                           |
-| ------------ | ------------------ | ------ | ------------------------------------- |
+| Route        | Page               | Client | Description                          |
+| ------------ | ------------------ | ------ | ------------------------------------ |
 | `/`          | Vault              | Yes    | All items, search, filters, favorites |
 | `/item/[id]` | Item Detail        | Yes    | Credentials, notes, TOTP, sharing     |
 | `/generator` | Password Generator | Yes    | Length slider, complexity, passphrase |

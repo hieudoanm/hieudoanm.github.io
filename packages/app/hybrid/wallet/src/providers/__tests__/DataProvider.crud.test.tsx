@@ -73,10 +73,10 @@ describe('DataProvider CRUD operations', () => {
         accountId: apiRef.accounts[0].id,
         type: 'expense',
         amount: 42,
-        description: 'Test',
+        title: 'Test',
         category: 'Food',
+        currency: 'USD',
         date: '2026-01-01',
-        status: 'completed',
       });
     });
     expect(apiRef.transactions.length).toBe(prevCount + 1);

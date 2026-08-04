@@ -56,7 +56,7 @@ jobs:
       - name: Build
         run: pnpm run build --filter=${{ inputs.filter }}
       - name: Test
-        run: pnpm run test --if-present --filter=${{ inputs.filter }}
+        run: pnpm run test --filter=${{ inputs.filter }}
       - name: Upload Build Output
         uses: actions/upload-artifact@v7.0.1
         with:
