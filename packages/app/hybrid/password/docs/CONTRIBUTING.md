@@ -20,33 +20,33 @@ Thanks for contributing to **Password**, a hybrid app that ships as a web app
 
 ## Development Commands
 
-| Task       | Command                                              |
-| ---------- | ---------------------------------------------------- |
-| Dev server | `pnpm dev --filter=@hieudoanm.github.io/password`    |
-| Build      | `pnpm build --filter=@hieudoanm.github.io/password`  |
-| Lint       | `pnpm lint --filter=@hieudoanm.github.io/password`   |
-| Format     | `pnpm format --filter=@hieudoanm.github.io/password` |
-| Unit tests | `pnpm test --filter=@hieudoanm.github.io/password`   |
+| Task       | Command                                                |
+| ---------- | ------------------------------------------------------ |
+| Dev server | `pnpm dev --filter=@hieudoanm.github.io/password`      |
+| Build      | `pnpm build --filter=@hieudoanm.github.io/password`    |
+| Lint       | `pnpm lint --filter=@hieudoanm.github.io/password`     |
+| Format     | `pnpm format --filter=@hieudoanm.github.io/password`   |
+| Unit tests | `pnpm test --filter=@hieudoanm.github.io/password`     |
 | E2E tests  | `pnpm test:e2e --filter=@hieudoanm.github.io/password` |
 
-Run `lint`, `format`, `test`, and `test:e2e` before pushing — CI enforces all
-of them.
+Run `lint`, `format`, `test`, and `test:e2e` before pushing — CI enforces all of
+them.
 
 ## Coding Conventions
 
-The conventions below come from the repository-wide `AGENTS.md`. Follow them
-for every change.
+The conventions below come from the repository-wide `AGENTS.md`. Follow them for
+every change.
 
 ### General
 
-1. **Explicit types over implicit** — annotate function signatures and
-   exported symbols. A signature tells the reader more than a body.
+1. **Explicit types over implicit** — annotate function signatures and exported
+   symbols. A signature tells the reader more than a body.
 2. **Flat over deeply nested** — short functions, minimal indentation, guard
    clauses (`if (!value) return`).
 3. **Self-documenting identifiers** — `getUserById(id)` needs no comment;
    `processData(x)` does.
-4. **DRY** — when a pattern repeats, centralize it. Duplication is how bugs
-   get missed.
+4. **DRY** — when a pattern repeats, centralize it. Duplication is how bugs get
+   missed.
 5. **Small, focused files** — functions ≤ 30 lines, files ≤ 200 lines.
 6. **Explicit error handling** — check errors and fail loudly; never let
    failures silently propagate.
@@ -73,8 +73,8 @@ for every change.
 
 ### React
 
-1. Prefer function components with hooks; never nest hooks inside
-   conditionals or loops.
+1. Prefer function components with hooks; never nest hooks inside conditionals
+   or loops.
 2. Extract custom hooks (`useX`) for reusable logic.
 3. Use `useReducer` for complex state; colocate state with its consumers.
 4. Use a stable `key` prop in lists — never array indices.

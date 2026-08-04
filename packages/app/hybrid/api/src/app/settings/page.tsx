@@ -6,6 +6,7 @@ import { FiArrowLeft, FiMoon, FiSun } from 'react-icons/fi';
 import { useRouter } from 'next/navigation';
 
 const THEMES: readonly string[] = [
+  'nothing',
   'night',
   'dark',
   'light',
@@ -45,7 +46,7 @@ const DRAFT_KEY = 'api-client:draft';
 
 const SettingsPage: FC = () => {
   const router = useRouter();
-  const [theme, setTheme] = useState('night');
+  const [theme, setTheme] = useState('nothing');
 
   useEffect(() => {
     const stored = localStorage.getItem(THEME_KEY);

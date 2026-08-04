@@ -143,7 +143,7 @@ export const db = {
       await delay();
       const s = await (await getDB()).get('settings', 'settings');
       return (
-        s ?? { theme: 'night', defaultView: 'kanban', notifications: true }
+        s ?? { theme: 'nothing', defaultView: 'kanban', notifications: true }
       );
     },
     put: async (s: ProjectsSettings): Promise<void> => {

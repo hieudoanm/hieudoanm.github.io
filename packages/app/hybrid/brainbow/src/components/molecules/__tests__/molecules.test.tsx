@@ -1,0 +1,92 @@
+import { fireEvent, render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import { ChannelControl } from '@/components/molecules/ChannelControl';
+import { ImageToolbar } from '@/components/molecules/ImageToolbar';
+import { EmptyState } from '@/components/molecules/EmptyState';
+
+describe('ChannelControl', () => {
+  it('renders the channel name and toggles visibility', async () => {
+    const user = userEvent.setup();
+    const onToggle = jest.fn();
+    render(
+      <ChannelControl
+        name="Red"
+        color="#ff0030"
+        visible
+        opacity={1}
+        onToggle={onToggle}
+        onOpacityChange={jest.fn()}
+      />
+    );
+    await user.click(screen.getByRole('checkbox', { name: 'Red channel' }));
+    expect(onToggle).toHaveBeenCalledWith(false);
+  });
+
+  it('reports opacity changes as a 0-1 value', () => {
+    const onOpacityChange = jest.fn();
+    render(
+      <ChannelControl
+        name="Green"
+        color="#00c853"
+        visible
+        opacity={1}
+        onToggle={jest.fn()}
+        onOpacityChange={onOpacityChange}
+      />
+    );
+    const slider = screen.getByRole('slider', { name: 'Green opacity' });
+    fireEvent.change(slider, { target: { value: '25' } });
+    expect(onOpacityChange).toHaveBeenCalledWith(0.25);
+  });
+});
+
+describe('ImageToolbar', () => {
+  it('shows the current zoom percentage', () => {
+    render(
+      <ImageToolbar
+        zoom={1.5}
+        onZoomIn={jest.fn()}
+        onZoomOut={jest.fn()}
+        onFit={jest.fn()}
+      />
+    );
+    expect(screen.getByText('150%')).toBeInTheDocument();
+  });
+
+  it('wires zoom and fit actions', async () => {
+    const user = userEvent.setup();
+    const onZoomIn = jest.fn();
+    const onZoomOut = jest.fn();
+    const onFit = jest.fn();
+    render(
+      <ImageToolbar
+        zoom={1}
+        onZoomIn={onZoomIn}
+        onZoomOut={onZoomOut}
+        onFit={onFit}
+      />
+    );
+    await user.click(screen.getByRole('button', { name: 'Zoom in' }));
+    await user.click(screen.getByRole('button', { name: 'Zoom out' }));
+    await user.click(screen.getByRole('button', { name: 'Fit' }));
+    expect(onZoomIn).toHaveBeenCalledTimes(1);
+    expect(onZoomOut).toHaveBeenCalledTimes(1);
+    expect(onFit).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe('EmptyState', () => {
+  it('renders title, description, and action', () => {
+    render(
+      <EmptyState
+        icon={<span>icon</span>}
+        title="Nothing here"
+        description="Load an image to begin."
+        action={<button type="button">Go</button>}
+      />
+    );
+    expect(screen.getByText('Nothing here')).toBeInTheDocument();
+    expect(screen.getByText('Load an image to begin.')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Go' })).toBeInTheDocument();
+  });
+});

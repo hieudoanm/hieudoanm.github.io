@@ -40,7 +40,7 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
   const [items, setItems] = useState<VaultItem[]>([]);
   const [folders, setFolders] = useState<Folder[]>([]);
   const [settings, setSettings] = useState<Settings>({
-    theme: 'night',
+    theme: 'nothing',
     autoLockTimeout: 5,
     clipboardClear: 30,
   });

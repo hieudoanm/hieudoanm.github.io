@@ -17,10 +17,13 @@
   "license": "GPL-3.0",
   "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
   "packageManager": "pnpm@11.20.0",
+  "engines": {
+    "node": "26.6.0"
+  },
   "scripts": {
     "lint": "eslint . --fix",
     "format": "prettier --cache --write .",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
     "analyze": "next experimental-analyze",

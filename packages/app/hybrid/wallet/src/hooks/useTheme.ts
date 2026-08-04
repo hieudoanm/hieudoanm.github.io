@@ -3,9 +3,10 @@ import type { Theme } from '@/types';
 import { themes } from '@/types';
 
 const STORAGE_KEY = 'wallet-theme';
-const DARK_DEFAULT = 'night';
+const DARK_DEFAULT = 'nothing';
 const LIGHT_DEFAULT = 'winter';
 const DARK_THEMES = [
+  'nothing',
   'dark',
   'synthwave',
   'cyberpunk',

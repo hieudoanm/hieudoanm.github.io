@@ -121,7 +121,7 @@ export const db = {
       return (
         settings ?? {
           id: 'default',
-          theme: 'night',
+          theme: 'nothing',
           defaultModel: 'gpt-4o',
           systemPrompt: '',
           mockDelay: 800,

@@ -10,7 +10,7 @@ interface GlobalErrorTemplateProps {
 export const GlobalErrorTemplate: FC<GlobalErrorTemplateProps> = ({
   reset,
 }) => (
-  <html lang="en" data-theme="night">
+  <html lang="en" data-theme="nothing">
     <body className="bg-base-100 text-base-content h-screen overflow-y-auto">
       <div className="flex min-h-screen flex-col items-center justify-center px-6">
         <p className="text-base-content/50 mb-6 text-xs tracking-[0.2em] uppercase">

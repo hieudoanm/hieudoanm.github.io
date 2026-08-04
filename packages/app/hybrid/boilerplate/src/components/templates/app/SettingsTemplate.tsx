@@ -96,6 +96,7 @@ export const SettingsTemplate: FC<SettingsTemplateProps> = ({
             className="select select-bordered select-sm w-40"
             value={theme}
             onChange={(e) => onThemeChange(e.target.value)}>
+            <option value="nothing">Nothing</option>
             <optgroup label="Light">
               <option value="light">Light</option>
               <option value="cupcake">Cupcake</option>

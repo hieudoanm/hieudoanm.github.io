@@ -130,7 +130,7 @@ export const db = {
       const s = await (await getDB()).get('settings', 'settings');
       return (
         s ?? {
-          theme: 'night',
+          theme: 'nothing',
           defaultExportFormat: 'png',
           canvasBackground: 'checkerboard',
           defaultQuality: 85,

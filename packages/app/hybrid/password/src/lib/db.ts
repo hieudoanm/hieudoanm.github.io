@@ -63,7 +63,7 @@ export const db = {
       return (
         s ?? {
           id: 'default',
-          theme: 'night',
+          theme: 'nothing',
           autoLockTimeout: 5,
           clipboardClear: 30,
         }

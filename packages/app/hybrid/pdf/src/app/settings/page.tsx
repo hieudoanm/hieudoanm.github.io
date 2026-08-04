@@ -8,6 +8,7 @@ import { useData } from '@/providers/DataProvider';
 import { useToast } from '@/providers/ToastProvider';
 
 const THEMES = [
+  'nothing',
   'night',
   'dark',
   'light',

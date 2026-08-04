@@ -12,19 +12,13 @@ export const metadata: Metadata = {
     statusBarStyle: 'black-translucent',
     title: 'Wallet',
   },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
-    userScalable: false,
-  },
 };
 
 const RootLayout: FC<{ children: ReactNode }> = ({ children }) => {
   console.log('[RootLayout] render');
 
   return (
-    <html lang="en" data-theme="night">
+    <html lang="en" data-theme="nothing">
       <body className="bg-base-100 text-base-content h-screen overflow-hidden">
         <Providers>{children}</Providers>
       </body>

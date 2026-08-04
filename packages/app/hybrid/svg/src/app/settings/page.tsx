@@ -56,6 +56,7 @@ const SettingsContent: FC = () => {
               value={theme}
               onChange={(e) => setTheme(e.target.value)}
               className="select select-bordered w-full">
+              <option value="nothing">Nothing</option>
               <option value="night">Night (Dark)</option>
               <option value="dark">Dark</option>
               <option value="light">Light</option>

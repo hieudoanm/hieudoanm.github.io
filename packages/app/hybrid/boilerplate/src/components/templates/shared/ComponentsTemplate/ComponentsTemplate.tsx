@@ -11,7 +11,7 @@ import { PreviewTabs } from './demo/PreviewTabs';
 import { ComponentsDemo } from './demo/components/ComponentsDemo';
 
 export const ComponentsTemplate: FC = () => {
-  const [selectedTheme, setSelectedTheme] = useState('night');
+  const [selectedTheme, setSelectedTheme] = useState('nothing');
   const [config, setConfig] = useState<ThemeConfig>(DEFAULT_CONFIG);
 
   useEffect(() => {

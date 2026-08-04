@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 };
 
 const RootLayout: FC<{ children: ReactNode }> = ({ children }) => (
-  <html lang="en" data-theme="night">
+  <html lang="en" data-theme="nothing">
     <head>
       <link rel="apple-touch-icon" href="/icons/icon-192.png" />
     </head>

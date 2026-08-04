@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 const SettingsPage: NextPage = () => {
   const [language, setLanguage] = useState('en');
-  const [theme, setTheme] = useState('night');
+  const [theme, setTheme] = useState('nothing');
   const [dateTimeFormat, setDateTimeFormat] = useState('24h');
   const [timezone, setTimezone] = useState('UTC');
 

@@ -25,7 +25,7 @@
   "scripts": {
     "lint": "eslint . --fix",
     "format": "prettier --cache --write .",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
     "predev": "rimraf .next && kill-port 3000",

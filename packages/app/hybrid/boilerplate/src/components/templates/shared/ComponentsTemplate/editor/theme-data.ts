@@ -34,6 +34,7 @@ export const THEME_GROUPS: ThemeGroup[] = [
   {
     label: 'Dark',
     themes: [
+      { value: 'nothing', label: 'Nothing' },
       { value: 'dark', label: 'Dark' },
       { value: 'night', label: 'Night' },
       { value: 'dim', label: 'Dim' },

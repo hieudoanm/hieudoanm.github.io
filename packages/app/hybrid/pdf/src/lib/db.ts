@@ -189,7 +189,7 @@ export const db = {
       return (
         settings ?? {
           id: 'default',
-          theme: 'night',
+          theme: 'nothing',
           defaultZoom: 100,
           pageLayout: 'continuous',
           annotationDefaults: { color: '#facc15', strokeWidth: 2 },

@@ -9,9 +9,9 @@ beforeEach(() => {
 });
 
 describe('useTheme', () => {
-  it('defaults to night theme', () => {
+  it('defaults to nothing theme', () => {
     const { result } = renderHook(() => useTheme());
-    expect(result.current.theme).toBe('night');
+    expect(result.current.theme).toBe('nothing');
     expect(result.current.isDark).toBe(true);
   });
 
@@ -45,7 +45,7 @@ describe('useTheme', () => {
     act(() => {
       result.current.toggleTheme();
     });
-    expect(result.current.theme).toBe('night');
+    expect(result.current.theme).toBe('nothing');
     expect(result.current.isDark).toBe(true);
   });
 });

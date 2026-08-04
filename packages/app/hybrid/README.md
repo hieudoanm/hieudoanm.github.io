@@ -14,7 +14,7 @@
 | --- | ----------- | ----------- | ---------- | ----------------------------------------- | -------- | ------ |
 | 00  | boilerplate | Boilerplate |            | Nextjs + Tauri (Foundation)               | Optional | DONE   |
 | 01  | api         | API         | DevTools   | Minimal Postman / Insomnia / Bruno        | Optional | DONE   |
-| 02  | brainbow    | Brainbow    |            | All-in-one Brainbow Software              | No       | DONE   |
+| 02  | brainbow    | Brainbow    | DevTools   | All-in-one Brainbow Software              | No       | DONE   |
 | 03  | chat        | Chat        | DevTools   | Minimal Chat like Codex / Claude          | Required | DONE   |
 | 04  | code        | Code        | Editor     | Minimal VSCode / Zed                      | No       | DONE   |
 | 05  | database    | Database    | Editor     | Minimal pgAdmin / DBeaver for SQLite only | No       | DONE   |

@@ -9,7 +9,7 @@ import type { TournamentFormat } from '@/types';
 
 export const SettingsPage: FC = () => {
   const [language, setLanguage] = useState('en');
-  const [theme, setTheme] = useState('night');
+  const [theme, setTheme] = useState('nothing');
   const [dateTimeFormat, setDateTimeFormat] = useState('24h');
   const [timezone, setTimezone] = useState('UTC');
   const [defaultFormat, setDefaultFormat] =
@@ -53,6 +53,7 @@ export const SettingsPage: FC = () => {
               className="select select-bordered select-sm w-40"
               value={theme}
               onChange={(e) => setTheme(e.target.value)}>
+              <option value="nothing">Nothing</option>
               <option value="dark">Dark</option>
               <option value="light">Light</option>
               <option value="night">Night</option>

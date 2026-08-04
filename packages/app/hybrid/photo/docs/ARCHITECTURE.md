@@ -11,18 +11,18 @@
 
 ## Tech Stack
 
-| Layer       | Technology                         |
-| ----------- | ---------------------------------- |
+| Layer       | Technology                             |
+| ----------- | -------------------------------------- |
 | Framework   | Next.js 16 (App Router, static export) |
-| Language    | TypeScript 6 (strict)              |
-| Styling     | Tailwind CSS 4 + DaisyUI 5         |
-| Icons       | react-icons (Fi set)               |
-| Desktop     | Tauri 2                            |
-| Storage     | IndexedDB (`photo-db`)             |
-| Rendering   | HTML Canvas 2D + CSS filters       |
-| Testing     | Jest + Playwright                  |
-| Linting     | ESLint + Prettier                  |
-| Package Mgr | pnpm                               |
+| Language    | TypeScript 6 (strict)                  |
+| Styling     | Tailwind CSS 4 + DaisyUI 5             |
+| Icons       | react-icons (Fi set)                   |
+| Desktop     | Tauri 2                                |
+| Storage     | IndexedDB (`photo-db`)                 |
+| Rendering   | HTML Canvas 2D + CSS filters           |
+| Testing     | Jest + Playwright                      |
+| Linting     | ESLint + Prettier                      |
+| Package Mgr | pnpm                                   |
 
 ## Directory Structure
 
@@ -66,16 +66,16 @@ src/
 
 ## Routing
 
-| Route                 | Page             | Client | Description                          |
-| --------------------- | ---------------- | ------ | ------------------------------------ |
-| `/`                   | Library          | Yes    | Image grid, upload, albums, search   |
-| `/edit/[id]`          | Canvas Editor    | Yes    | Full editing workspace with tools    |
-| `/edit/[id]/crop`     | Crop & Transform | Yes    | Crop, rotate, flip, perspective      |
-| `/edit/[id]/layers`   | Layer Manager    | Yes    | Layer list, blend modes, opacity     |
-| `/albums`             | Albums           | Yes    | Album list with covers, CRUD         |
-| `/settings`           | Settings         | Yes    | Theme, default export format         |
-| `/profile`            | Profile          | Yes    | User info                            |
-| `/version`            | Version          | Yes    | Build version, copy to clipboard     |
+| Route               | Page             | Client | Description                        |
+| ------------------- | ---------------- | ------ | ---------------------------------- |
+| `/`                 | Library          | Yes    | Image grid, upload, albums, search |
+| `/edit/[id]`        | Canvas Editor    | Yes    | Full editing workspace with tools  |
+| `/edit/[id]/crop`   | Crop & Transform | Yes    | Crop, rotate, flip, perspective    |
+| `/edit/[id]/layers` | Layer Manager    | Yes    | Layer list, blend modes, opacity   |
+| `/albums`           | Albums           | Yes    | Album list with covers, CRUD       |
+| `/settings`         | Settings         | Yes    | Theme, default export format       |
+| `/profile`          | Profile          | Yes    | User info                          |
+| `/version`          | Version          | Yes    | Build version, copy to clipboard   |
 
 Dynamic routes under `/edit/[id]` for the canvas editor workspace.
 
@@ -88,8 +88,8 @@ Dynamic routes under `/edit/[id]` for the canvas editor workspace.
 
 ## Image Processing
 
-- **CSS filter chain**: brightness, contrast, saturate, hue-rotate, blur,
-  sepia, grayscale applied as CSS filters for real-time preview
+- **CSS filter chain**: brightness, contrast, saturate, hue-rotate, blur, sepia,
+  grayscale applied as CSS filters for real-time preview
 - **Mock processing**: adjustments simulated via CSS filter properties rather
   than pixel-level manipulation
 - **Preset filters**: predefined CSS filter combinations for one-click effects
@@ -106,8 +106,8 @@ Dynamic routes under `/edit/[id]` for the canvas editor workspace.
 
 - **IndexedDB** (`photo-db`) stores images (base64/blob), albums, presets,
   settings, and edit history
-- **Seed on first load**: 8–10 demo placeholder images with different
-  dimensions and sample albums
+- **Seed on first load**: 8–10 demo placeholder images with different dimensions
+  and sample albums
 - **Mock network delay**: `NEXT_PUBLIC_MOCK_DELAY` (default `800`ms) applied
   before every DB operation
 - Full CRUD for images, albums, and presets
@@ -124,8 +124,8 @@ Dynamic routes under `/edit/[id]` for the canvas editor workspace.
 
 - **Tailwind CSS 4** + **DaisyUI 5** (dark default via `data-theme="night"`)
 - **Canvas** always shows the image with a checkerboard transparency pattern
-- **Responsive workspace**: full layout on desktop; collapsed panels below
-  `lg:` (1024px); full-screen canvas with bottom toolbar on mobile
+- **Responsive workspace**: full layout on desktop; collapsed panels below `lg:`
+  (1024px); full-screen canvas with bottom toolbar on mobile
 
 ## Performance
 

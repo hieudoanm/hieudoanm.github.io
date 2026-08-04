@@ -96,7 +96,7 @@ export const DataProvider = ({ children }: DataProviderProps) => {
   const [documents, setDocuments] = useState<SVGDocument[]>([]);
   const [symbols, setSymbols] = useState<SVGSymbol[]>([]);
   const [settings, setSettings] = useState<SVGSettings>({
-    theme: 'night',
+    theme: 'nothing',
     gridSize: 20,
     snapToGrid: true,
     showGrid: true,

@@ -64,6 +64,18 @@
         ]
       },
       {
+        "label": "Brainbow",
+        "description": "Brainbow Microscopy Viewer",
+        "icon": "PiMicroscope",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-brainbow-latest",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-brainbow-latest"
+          }
+        ]
+      },
+      {
         "label": "Chat",
         "description": "AI Chat Interface",
         "icon": "PiChat",

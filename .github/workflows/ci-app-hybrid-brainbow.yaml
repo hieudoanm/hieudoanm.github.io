@@ -1,0 +1,32 @@
+name: CI - App - Hybrid - Brainbow
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/brainbow/**'
+      - '.github/workflows/ci-app-hybrid-brainbow.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-hybrid-brainbow-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/brainbow
+      filter: '@hieudoanm.github.io/brainbow'
+      releaseName: app-hybrid-brainbow-latest
+      releaseTitle: App - Hybrid - Brainbow (latest)
+      artifactPrefix: brainbow

@@ -1,4 +1,5 @@
 export const themes = [
+  { name: 'Nothing', value: 'nothing' },
   { name: 'Dark', value: 'dark' },
   { name: 'Light', value: 'light' },
   { name: 'Cupcake', value: 'cupcake' },
