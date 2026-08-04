@@ -31,6 +31,27 @@ describe('ChannelList', () => {
     await user.click(screen.getByRole('checkbox', { name: 'Blue channel' }));
     expect(onToggle).toHaveBeenCalledWith('b', false);
   });
+
+  it('renders a histogram for channels with analyses', () => {
+    render(
+      <ChannelList
+        channels={DEFAULT_CHANNEL_STATES}
+        analyses={[
+          {
+            id: 'r',
+            color: '#ff0030',
+            histogram: [0, 1],
+            stats: { min: 1, max: 1, mean: 1, count: 1 },
+          },
+        ]}
+        onToggle={jest.fn()}
+        onOpacityChange={jest.fn()}
+      />
+    );
+    expect(
+      screen.getByRole('img', { name: 'Channel intensity histogram' })
+    ).toBeInTheDocument();
+  });
 });
 
 describe('ViewerCanvas', () => {

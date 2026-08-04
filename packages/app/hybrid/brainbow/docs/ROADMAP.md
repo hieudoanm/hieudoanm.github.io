@@ -51,35 +51,35 @@ mobile app (Tauri Mobile).
 - [x] Import Brainbow microscopy images (PNG/JPEG/WebP; TIFF pending)
 - [x] Pan/zoom canvas viewer (Canvas2D)
 - [x] Channel toggling (R/G/B) with per-channel opacity
-- [ ] Basic color histogram / channel intensity readout
-- [ ] Local project files: create/open/save project bundles (SQLite + asset
-      folder)
+- [x] Basic color histogram / channel intensity readout
+- [x] Local project files: create/open/save project bundles (implemented as a
+      portable JSON `.brainbow` bundle; SQLite + asset folder deferred)
 - [ ] File-system access via Tauri (desktop) vs. browser File API (web fallback)
 
 ---
 
 ## Phase 2 — Annotation & Segmentation
 
-- [ ] Manual neuron tracing/labeling tool (polygon/freehand)
-- [ ] Color-based clustering to suggest distinct neuron "hues" (k-means or
-      similar, in Rust/WASM)
-- [ ] Cell/neuron counting with per-color tally
-- [ ] Annotation layers: show/hide, color-code, export as overlay
-- [ ] Undo/redo history for annotation edits
-- [ ] Keyboard shortcuts for common tools
+- [x] Manual neuron tracing/labeling tool (polygon/freehand)
+- [x] Color-based clustering to suggest distinct neuron "hues" (k-means, TS
+      implementation in `src/lib/image/segmentation.ts`)
+- [x] Cell/neuron counting with per-color tally (connected components per
+      cluster in `src/lib/image/regions.ts`)
+- [x] Annotation layers: show/hide, color-code, export as overlay
+- [x] Undo/redo history for annotation edits
+- [x] Keyboard shortcuts for common tools
 
 ---
 
 ## Phase 3 — Analysis & Reporting
 
-- [ ] Quantitative summary panel: neuron counts, color diversity index, area
+- [x] Quantitative summary panel: neuron counts, color diversity index, area
       coverage
-- [ ] Batch processing: run segmentation/count across a folder of images
-- [ ] Export results as CSV/JSON
-- [ ] Export annotated image as PNG/SVG-free overlay (flattened raster, per
-      style prefs)
-- [ ] Report generation (PDF) summarizing a session/dataset
-- [ ] Citation-ready methods snippet (for research write-ups)
+- [x] Batch processing: run segmentation/count across a folder of images
+- [x] Export results as CSV/JSON
+- [x] Export annotated image as PNG (flattened raster)
+- [x] Report generation (HTML report rendered in-app with Print → PDF)
+- [x] Citation-ready methods snippet (for research write-ups)
 
 ---
 
@@ -98,7 +98,7 @@ mobile app (Tauri Mobile).
 
 ## Phase 5 — Collaboration & Sync (Optional/Stretch)
 
-- [ ] Project export/import as portable `.brainbow` bundle
+- [x] Project export/import as portable `.brainbow` bundle
 - [ ] Optional cloud sync (self-hosted or lightweight backend) for cross-device
       projects
 - [ ] Shareable read-only viewer link (web export mode)

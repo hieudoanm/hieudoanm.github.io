@@ -3,34 +3,20 @@
 import type { FC } from 'react';
 import { FiArrowLeft, FiImage } from 'react-icons/fi';
 import Link from 'next/link';
-import { ViewerCanvas } from '@/components/organisms/ViewerCanvas';
-import { ChannelList } from '@/components/organisms/ChannelList';
+import { AnnotatorCanvas } from '@/components/organisms/AnnotatorCanvas';
+import { ViewerSidebar } from '@/components/organisms/ViewerSidebar';
+import { ToolPalette } from '@/components/molecules/ToolPalette';
 import { ImageToolbar } from '@/components/molecules/ImageToolbar';
 import { EmptyState } from '@/components/molecules/EmptyState';
+import { ReportModal } from '@/components/molecules/ReportModal';
 import { Button } from '@/components/atoms/Button';
-import type { ChannelState, ImageRaster, ViewTransform } from '@/types/image';
-import type { ViewerSize } from '@/hooks/useImageViewer';
-
-export interface ViewerTemplateProps {
-  raster: ImageRaster | null;
-  name: string | null;
-  channels: ChannelState[];
-  transform: ViewTransform;
-  size: ViewerSize;
-  onOpenDemo: () => void;
-  onSetSize: (size: ViewerSize) => void;
-  onFitView: () => void;
-  onZoomIn: () => void;
-  onZoomOut: () => void;
-  onTransformChange: (transform: ViewTransform) => void;
-  onToggleChannel: (id: string, visible: boolean) => void;
-  onSetChannelOpacity: (id: string, opacity: number) => void;
-}
+import type { ViewerTemplateProps } from '@/components/templates/ViewerTemplateProps';
 
 export const ViewerTemplate: FC<ViewerTemplateProps> = ({
   raster,
   name,
   channels,
+  analyses,
   transform,
   size,
   onOpenDemo,
@@ -41,6 +27,36 @@ export const ViewerTemplate: FC<ViewerTemplateProps> = ({
   onTransformChange,
   onToggleChannel,
   onSetChannelOpacity,
+  onSaveProject,
+  layers,
+  activeLayer,
+  tool,
+  onToolChange,
+  onAddLayer,
+  onRemoveLayer,
+  onToggleLayerVisibility,
+  onSetLayerColor,
+  onSetActiveLayer,
+  onAddAnnotation,
+  onUndo,
+  onRedo,
+  analysisStatus,
+  analysisProgress,
+  analysisError,
+  k,
+  analysisResult,
+  batchResult,
+  onSetK,
+  onRunSingle,
+  onBatchFiles,
+  onExportCsv,
+  onExportJson,
+  onExportPng,
+  onOpenReport,
+  reportOpen,
+  reportTitle,
+  reportHtml,
+  onCloseReport,
 }) => (
   <div className="flex h-screen flex-col">
     <header className="border-base-300 bg-base-200 z-10 flex items-center gap-4 border-b px-4 py-3">
@@ -48,22 +64,35 @@ export const ViewerTemplate: FC<ViewerTemplateProps> = ({
         <FiArrowLeft className="text-lg" />
       </Link>
       <h2 className="flex-1 truncate text-lg">{name ?? 'No image loaded'}</h2>
+      <ToolPalette tool={tool} onToolChange={onToolChange} />
       <ImageToolbar
         zoom={transform.scale}
         onZoomIn={onZoomIn}
         onZoomOut={onZoomOut}
         onFit={onFitView}
       />
+      <Button
+        variant="outline"
+        size="sm"
+        disabled={!raster}
+        aria-label="Save project"
+        onClick={onSaveProject}>
+        Save project
+      </Button>
     </header>
 
     <div className="flex min-h-0 flex-1">
       <div className="min-w-0 flex-1">
         {raster ? (
-          <ViewerCanvas
+          <AnnotatorCanvas
             raster={raster}
             transform={transform}
+            layers={layers}
+            activeLayer={activeLayer}
+            tool={tool}
             onTransformChange={onTransformChange}
             onSizeChange={onSetSize}
+            onAddAnnotation={onAddAnnotation}
           />
         ) : (
           <div className="flex h-full items-center justify-center">
@@ -81,23 +110,45 @@ export const ViewerTemplate: FC<ViewerTemplateProps> = ({
         )}
       </div>
 
-      <aside className="border-base-300 bg-base-200 w-72 overflow-y-auto border-l p-4">
-        <h3 className="mb-3">Channels</h3>
-        {raster ? (
-          <ChannelList
-            channels={channels}
-            onToggle={onToggleChannel}
-            onOpacityChange={onSetChannelOpacity}
-          />
-        ) : (
-          <p className="text-base-content/60 text-sm">
-            Load an image to adjust channels.
-          </p>
-        )}
-        <p className="text-base-content/50 mt-4 text-xs">
-          Size: {size.width}×{size.height} — drag to pan, scroll to zoom.
-        </p>
-      </aside>
+      <ViewerSidebar
+        channels={channels}
+        channelAnalyses={analyses}
+        onToggleChannel={onToggleChannel}
+        onSetChannelOpacity={onSetChannelOpacity}
+        layers={layers}
+        activeLayerId={activeLayer?.id ?? ''}
+        onSelectLayer={onSetActiveLayer}
+        onToggleLayerVisibility={onToggleLayerVisibility}
+        onSetLayerColor={onSetLayerColor}
+        onAddLayer={onAddLayer}
+        onRemoveLayer={onRemoveLayer}
+        analysisStatus={analysisStatus}
+        analysisProgress={analysisProgress}
+        analysisError={analysisError}
+        k={k}
+        analysisResult={analysisResult}
+        batchResult={batchResult}
+        hasRaster={Boolean(raster)}
+        onSetK={onSetK}
+        onRunSingle={onRunSingle}
+        onBatchFiles={onBatchFiles}
+        onExportCsv={onExportCsv}
+        onExportJson={onExportJson}
+        onExportPng={onExportPng}
+        onOpenReport={onOpenReport}
+      />
     </div>
+
+    <p className="sr-only" aria-live="polite">
+      Size: {size.width}×{size.height}
+    </p>
+
+    {reportOpen ? (
+      <ReportModal
+        title={reportTitle}
+        html={reportHtml}
+        onClose={onCloseReport}
+      />
+    ) : null}
   </div>
 );

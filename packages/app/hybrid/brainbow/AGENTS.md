@@ -261,18 +261,24 @@
 
 ### Molecules
 
-| Component        | File                           | Props                                                      | Description             |
-| ---------------- | ------------------------------ | ---------------------------------------------------------- | ----------------------- |
-| `ChannelControl` | `molecules/ChannelControl.tsx` | `name, color, visible, opacity, onToggle, onOpacityChange` | Channel toggle + slider |
-| `ImageToolbar`   | `molecules/ImageToolbar.tsx`   | `zoom, onZoomIn, onZoomOut, onReset, onFit`                | Viewer zoom controls    |
-| `EmptyState`     | `molecules/EmptyState.tsx`     | `icon, title, description?, action?`                       | No-data placeholder     |
+| Component        | File                           | Props                                                                              | Description                          |
+| ---------------- | ------------------------------ | ---------------------------------------------------------------------------------- | ------------------------------------ |
+| `ChannelControl` | `molecules/ChannelControl.tsx` | `name, color, visible, opacity, onToggle, onOpacityChange`                         | Channel toggle + slider              |
+| `ImageToolbar`   | `molecules/ImageToolbar.tsx`   | `zoom, onZoomIn, onZoomOut, onReset, onFit`                                        | Viewer zoom controls                 |
+| `EmptyState`     | `molecules/EmptyState.tsx`     | `icon, title, description?, action?`                                               | No-data placeholder                  |
+| `ToolPalette`    | `molecules/ToolPalette.tsx`    | `tool, onToolChange`                                                               | Tool switcher (pan/polygon/freehand) |
+| `LayerPanel`     | `molecules/LayerPanel.tsx`     | `layers, activeLayerId, onSelect, onToggleVisible, onChangeColor, onAdd, onRemove` | Per-layer annotation panel           |
+| `AnalysisPanel`  | `molecules/AnalysisPanel.tsx`  | `status, progress, error, k, result, batch, ...`                                   | Segmentation controls + results      |
+| `ReportModal`    | `molecules/ReportModal.tsx`    | `title, html, onClose`                                                             | Print-ready analysis report          |
 
 ### Organisms
 
-| Component      | File                         | Props                         | Description       |
-| -------------- | ---------------------------- | ----------------------------- | ----------------- |
-| `ViewerCanvas` | `organisms/ViewerCanvas.tsx` | `raster, channels, transform` | Canvas renderer   |
-| `ChannelList`  | `organisms/ChannelList.tsx`  | `channels, onChange`          | Per-channel panel |
+| Component         | File                            | Props                                               | Description                        |
+| ----------------- | ------------------------------- | --------------------------------------------------- | ---------------------------------- |
+| `ViewerCanvas`    | `organisms/ViewerCanvas.tsx`    | `raster, channels, transform`                       | Canvas renderer                    |
+| `ChannelList`     | `organisms/ChannelList.tsx`     | `channels, onChange`                                | Per-channel panel                  |
+| `AnnotatorCanvas` | `organisms/AnnotatorCanvas.tsx` | `raster, transform, layers, activeLayer, tool, ...` | Interactive annotation canvas      |
+| `ViewerSidebar`   | `organisms/ViewerSidebar.tsx`   | `channels, layers, analysis, ...`                   | Tabs: Channels / Layers / Analysis |
 
 ## Pages
 

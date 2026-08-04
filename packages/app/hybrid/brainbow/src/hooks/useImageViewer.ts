@@ -4,6 +4,7 @@ import { useCallback, useMemo, useReducer } from 'react';
 import { SAMPLE_NAME, createSampleRaster } from '@/data/sample';
 import { DEFAULT_CHANNEL_STATES } from '@/data/channels';
 import { compositeChannels } from '@/lib/image/channels';
+import { analyzeChannels } from '@/lib/image/histogram';
 import { loadImageFiles } from '@/lib/image/load';
 import { fitTransform, panBy, zoomAt } from '@/lib/geometry/viewport';
 import type { ChannelState, ImageRaster, ViewTransform } from '@/types/image';
@@ -22,7 +23,12 @@ interface ViewerState {
 }
 
 type ViewerAction =
-  | { type: 'setRaster'; raster: ImageRaster; name: string }
+  | {
+      type: 'setRaster';
+      raster: ImageRaster;
+      name: string;
+      channels?: ChannelState[];
+    }
   | { type: 'setTransform'; transform: ViewTransform }
   | { type: 'setSize'; size: ViewerSize }
   | { type: 'toggleChannel'; id: string; visible: boolean }
@@ -41,7 +47,7 @@ const reducer = (state: ViewerState, action: ViewerAction): ViewerState => {
         ...state,
         raster: action.raster,
         name: action.name,
-        channels: DEFAULT_CHANNEL_STATES,
+        channels: action.channels ?? DEFAULT_CHANNEL_STATES,
         transform: fitFor({ ...state, raster: action.raster }),
       };
       return next;
@@ -93,6 +99,11 @@ export const useImageViewer = () => {
     [state.raster, state.channels]
   );
 
+  const analyses = useMemo(
+    () => (state.raster ? analyzeChannels(state.raster, state.channels) : null),
+    [state.raster, state.channels]
+  );
+
   const openDemo = useCallback(() => {
     dispatch({
       type: 'setRaster',
@@ -108,9 +119,12 @@ export const useImageViewer = () => {
     }
   }, []);
 
-  const loadRaster = useCallback((raster: ImageRaster, name: string) => {
-    dispatch({ type: 'setRaster', raster, name });
-  }, []);
+  const loadRaster = useCallback(
+    (raster: ImageRaster, name: string, channels?: ChannelState[]) => {
+      dispatch({ type: 'setRaster', raster, name, channels });
+    },
+    []
+  );
 
   const setSize = useCallback((size: ViewerSize) => {
     dispatch({ type: 'setSize', size });
@@ -166,8 +180,10 @@ export const useImageViewer = () => {
 
   return {
     raster: composited,
+    source: state.raster,
     name: state.name,
     channels: state.channels,
+    analyses,
     transform: state.transform,
     size: state.size,
     openDemo,

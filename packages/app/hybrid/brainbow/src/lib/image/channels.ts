@@ -2,7 +2,7 @@ import type { ChannelState, ImageRaster, Plane, RgbTuple } from '@/types/image';
 
 export const PLANE_INDEX: Record<Plane, number> = { r: 0, g: 1, b: 2 };
 
-const hexToRgb = (hex: string): RgbTuple => {
+export const hexToRgb = (hex: string): RgbTuple => {
   const value = hex.replace('#', '');
   const parsed = Number.parseInt(value, 16);
   return {

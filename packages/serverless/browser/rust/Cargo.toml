@@ -9,7 +9,7 @@ edition = "2021"
 
 [dependencies]
 # HTTP client
-reqwest = { version = "=0.13.4", default-features = false, features = ["rustls-tls", "cookies"] }
+reqwest = { version = "=0.13.4", default-features = false, features = ["rustls", "cookies"] }
 
 # Async runtime
 tokio = { version = "=1.53.1", features = ["rt", "rt-multi-thread", "macros", "time"] }

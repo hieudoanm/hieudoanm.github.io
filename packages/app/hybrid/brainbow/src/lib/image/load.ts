@@ -25,34 +25,41 @@ const drawBitmapToRaster = (
   return { width, height, data: imageData.data };
 };
 
-const bitmapSize = (
-  bitmap: ImageBitmap
-): { width: number; height: number } => ({
-  width: bitmap.width,
-  height: bitmap.height,
-});
+const decodeBitmap = async (source: Blob): Promise<ImageBitmap> => {
+  if (typeof window.createImageBitmap !== 'function') {
+    throw new ImageLoadError('createImageBitmap is not supported');
+  }
+  return createImageBitmap(source);
+};
+
+const rasterFromBitmap = async (bitmap: ImageBitmap): Promise<ImageRaster> => {
+  const { width, height } = { width: bitmap.width, height: bitmap.height };
+  if (width <= 0 || height <= 0) {
+    bitmap.close();
+    throw new ImageLoadError('Image has invalid dimensions');
+  }
+  const raster = drawBitmapToRaster(bitmap, width, height);
+  bitmap.close();
+  return raster;
+};
 
 export const loadImageFile = async (file: File): Promise<ImageRaster> => {
   if (!SUPPORTED_TYPES.includes(file.type)) {
     throw new ImageLoadError(`Unsupported file type: ${file.type}`);
   }
-
-  if (typeof window.createImageBitmap !== 'function') {
-    throw new ImageLoadError('createImageBitmap is not supported');
-  }
-
-  const bitmap = await createImageBitmap(file);
-  const { width, height } = bitmapSize(bitmap);
-
-  if (width <= 0 || height <= 0) {
-    bitmap.close();
-    throw new ImageLoadError('Image has invalid dimensions');
-  }
-
-  const raster = drawBitmapToRaster(bitmap, width, height);
-  bitmap.close();
-  return raster;
+  return rasterFromBitmap(await decodeBitmap(file));
 };
+
+const toBlobPart = (bytes: Uint8Array): ArrayBuffer =>
+  bytes.buffer.slice(
+    bytes.byteOffset,
+    bytes.byteOffset + bytes.byteLength
+  ) as ArrayBuffer;
+
+export const loadImageFromBytes = async (
+  bytes: Uint8Array
+): Promise<ImageRaster> =>
+  rasterFromBitmap(await decodeBitmap(new Blob([toBlobPart(bytes)])));
 
 export const loadImageFiles = async (files: File[]): Promise<ImageRaster[]> => {
   const results = await Promise.allSettled(files.map(loadImageFile));
