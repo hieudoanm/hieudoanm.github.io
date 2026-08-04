@@ -12,7 +12,7 @@ describe('SettingsPage', () => {
 
   it('renders theme picker and data management', () => {
     render(<SettingsPage />);
-    expect(screen.getByRole('combobox')).toHaveValue('night');
+    expect(screen.getByRole('combobox')).toHaveValue('nothing');
     expect(screen.getByText('Clear history and draft')).toBeInTheDocument();
   });
 

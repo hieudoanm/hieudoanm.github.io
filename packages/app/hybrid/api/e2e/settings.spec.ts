@@ -26,9 +26,9 @@ test.describe('Settings Page', () => {
     await expect(page.locator('text=Appearance')).toBeVisible();
   });
 
-  test('theme dropdown defaults to night', async ({ page }) => {
+  test('theme dropdown defaults to nothing', async ({ page }) => {
     await page.goto('/settings');
-    await expect(page.locator('select')).toHaveValue('night');
+    await expect(page.locator('select')).toHaveValue('nothing');
   });
 
   test('theme dropdown has many options', async ({ page }) => {

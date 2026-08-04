@@ -3,7 +3,7 @@ import { BlogFooter } from '../BlogFooter';
 
 describe('BlogFooter', () => {
   it('to match snapshot', () => {
-    const { container } = render(<BlogFooter />);
+    const { container } = render(<BlogFooter year={2026} />);
     expect(container).toMatchSnapshot();
   });
 

@@ -24,10 +24,16 @@ const sections = [
 
 describe('AppsStoreTemplate', () => {
   it('to match snapshot', () => {
-    const { container } = render(
-      <AppsStoreTemplate title="Apps" sections={sections} />
-    );
-    expect(container).toMatchSnapshot();
+    jest.useFakeTimers();
+    jest.setSystemTime(new Date('2026-07-31T12:00:00.000Z'));
+    try {
+      const { container } = render(
+        <AppsStoreTemplate title="Apps" sections={sections} />
+      );
+      expect(container).toMatchSnapshot();
+    } finally {
+      jest.useRealTimers();
+    }
   });
 
   it('renders the title', () => {

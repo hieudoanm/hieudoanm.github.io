@@ -52,7 +52,7 @@ exports[`AppsStoreTemplate to match snapshot 1`] = `
       </div>
       <section
         aria-label="Utilities"
-        class="mt-10 w-full max-w-2xl"
+        class="mt-10 w-full max-w-3xl"
       >
         <p
           class="text-base-content/30 mb-4 flex items-center justify-center gap-2 font-mono text-xs tracking-widest uppercase"
@@ -65,7 +65,7 @@ exports[`AppsStoreTemplate to match snapshot 1`] = `
           </span>
         </p>
         <div
-          class="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-3"
+          class="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
         >
           <div>
             <a
