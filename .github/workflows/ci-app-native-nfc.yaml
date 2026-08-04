@@ -15,7 +15,7 @@ on:
       - '.github/workflows/ci-app-native-template.yaml'
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: ci-app-native-nfc-${{ github.ref }}
