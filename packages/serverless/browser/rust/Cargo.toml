@@ -26,7 +26,7 @@ boa_engine = "=0.21.1"
 
 # URL handling
 url = "=2.5.8"
-base64 = "=0.23.0"
+base64 = "=0.23.1"
 
 # Error handling
 anyhow = "=1.0.104"
