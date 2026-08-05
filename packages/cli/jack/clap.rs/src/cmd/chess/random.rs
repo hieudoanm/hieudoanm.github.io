@@ -1,5 +1,5 @@
 use crate::cmd::chess::service;
-use rand::Rng;
+use rand::RngExt;
 
 #[derive(clap::Args)]
 pub struct Args;
@@ -9,9 +9,9 @@ pub fn command() -> clap::Command {
 }
 
 pub async fn run(_matches: &Args) -> anyhow::Result<()> {
-    let mut rng = rand::thread_rng();
+    let mut rng = rand::rng();
     let n = service::POSITIONS.len();
-    let idx = rng.gen_range(0..n);
+    let idx = rng.random_range(0..n);
     let position = service::POSITIONS[idx];
     println!("Position {}: {}", idx + 1, position);
 

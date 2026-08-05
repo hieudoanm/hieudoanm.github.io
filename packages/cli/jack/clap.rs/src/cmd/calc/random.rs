@@ -1,6 +1,6 @@
 use std::io::Write;
 
-use rand::Rng;
+use rand::RngExt;
 
 #[derive(clap::Args)]
 pub struct Args {
@@ -57,10 +57,10 @@ pub async fn run_write(matches: &Args, write: &mut impl Write) -> anyhow::Result
     let json = matches.json;
 
     let count = count.max(1);
-    let mut rng = rand::thread_rng();
+    let mut rng = rand::rng();
 
     let nums: Vec<f64> = (0..count)
-        .map(|_| min + rng.gen::<f64>() * (max - min))
+        .map(|_| min + rng.random::<f64>() * (max - min))
         .collect();
 
     if json {

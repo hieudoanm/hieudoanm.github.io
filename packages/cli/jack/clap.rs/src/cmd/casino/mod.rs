@@ -127,7 +127,7 @@ pub fn new_shuffled_deck() -> Vec<Card> {
             deck.push(Card { rank, suit });
         }
     }
-    let mut rng = rand::thread_rng();
+    let mut rng = rand::rng();
     deck.shuffle(&mut rng);
     deck
 }

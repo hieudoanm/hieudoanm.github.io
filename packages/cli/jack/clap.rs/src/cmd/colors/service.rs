@@ -1,4 +1,4 @@
-use rand::Rng;
+use rand::RngExt;
 use regex::Regex;
 use std::fmt;
 
@@ -54,12 +54,12 @@ pub fn hex_to_cmyk(hex: &str) -> Result<(f64, f64, f64, f64), String> {
 }
 
 pub fn generate_random_hex_color() -> String {
-    let mut rng = rand::thread_rng();
+    let mut rng = rand::rng();
     format!(
         "#{:02X}{:02X}{:02X}",
-        rng.gen_range(0..=255),
-        rng.gen_range(0..=255),
-        rng.gen_range(0..=255)
+        rng.random_range(0..=255),
+        rng.random_range(0..=255),
+        rng.random_range(0..=255)
     )
 }
 

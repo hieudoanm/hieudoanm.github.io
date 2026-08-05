@@ -29,7 +29,7 @@ thiserror = "=2.0.19"
 colored = "=3.1.1"
 chrono = { version = "=0.4.45", features = ["serde"] }
 regex = "=1.13.1"
-rand = "=0.8.6"
+rand = "=0.10.2"
 uuid = { version = "=1.24.0", features = ["v1", "v4", "v7"] }
 qrcode = "=0.14.1"
 rusqlite = { version = "=0.40.1", features = ["bundled"] }
