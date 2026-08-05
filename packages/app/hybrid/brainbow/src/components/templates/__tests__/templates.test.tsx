@@ -64,6 +64,24 @@ describe('HomeTemplate', () => {
     await user.upload(input, file);
     expect(onImportFiles).toHaveBeenCalledWith([file]);
   });
+
+  it('opens a brainbow project file', async () => {
+    const user = userEvent.setup();
+    const onOpenProjectFiles = jest.fn();
+    render(
+      <HomeTemplate
+        onOpenDemo={jest.fn()}
+        onImportFiles={jest.fn()}
+        onOpenProjectFiles={onOpenProjectFiles}
+      />
+    );
+    const input = screen.getByTestId('project-input');
+    const file = new File(['{}'], 'scan.brainbow', {
+      type: 'application/json',
+    });
+    await user.upload(input, file);
+    expect(onOpenProjectFiles).toHaveBeenCalledWith([file]);
+  });
 });
 
 describe('ErrorTemplate', () => {
@@ -83,6 +101,11 @@ describe('ViewerTemplate', () => {
     },
     name: 'scan.png',
     channels: DEFAULT_CHANNEL_STATES,
+    planes: [
+      { id: 'r', name: 'Red', data: new Uint8ClampedArray(0) },
+      { id: 'g', name: 'Green', data: new Uint8ClampedArray(0) },
+      { id: 'b', name: 'Blue', data: new Uint8ClampedArray(0) },
+    ],
     analyses: null,
     transform: { scale: 1, offsetX: 0, offsetY: 0 },
     size: { width: 800, height: 600 },
@@ -91,9 +114,17 @@ describe('ViewerTemplate', () => {
     onFitView: jest.fn(),
     onZoomIn: jest.fn(),
     onZoomOut: jest.fn(),
+    onRotateCW: jest.fn(),
+    onRotateCCW: jest.fn(),
+    onFlipX: jest.fn(),
+    onFlipY: jest.fn(),
     onTransformChange: jest.fn(),
     onToggleChannel: jest.fn(),
     onSetChannelOpacity: jest.fn(),
+    onSetChannelSourcePlane: jest.fn(),
+    onAddChannel: jest.fn(),
+    calibration: { pixelsPerMicron: null },
+    onCalibrationChange: jest.fn(),
     onSaveProject: jest.fn(),
     layers: [],
     activeLayer: null,
@@ -103,35 +134,83 @@ describe('ViewerTemplate', () => {
     onToolChange: jest.fn(),
     onAddLayer: jest.fn(),
     onRemoveLayer: jest.fn(),
+    onExportRoiZip: jest.fn(),
+    onExportGeoJson: jest.fn(),
+    onExportAnnotationsCsv: jest.fn(),
+    onExportSvg: jest.fn(),
+    onExportWebViewer: jest.fn(),
     onToggleLayerVisibility: jest.fn(),
     onSetLayerColor: jest.fn(),
     onSetActiveLayer: jest.fn(),
     onAddAnnotation: jest.fn(),
+    onRemoveAnnotations: jest.fn(),
     onUndo: jest.fn(),
     onRedo: jest.fn(),
+    snapEnabled: false,
+    gridVisible: false,
+    onToggleSnap: jest.fn(),
+    onToggleGrid: jest.fn(),
+    compareRaster: null,
+    compareMode: 'off' as const,
+    compareDivider: 0.5,
+    onCompareModeChange: jest.fn(),
+    onCompareDividerChange: jest.fn(),
+    onLoadCompareFiles: jest.fn(),
+    onClearCompare: jest.fn(),
+    historyOpen: false,
+    onOpenHistory: jest.fn(),
+    onCloseHistory: jest.fn(),
+    historySnapshots: [],
+    onHistoryCommit: jest.fn(),
+    onHistoryRestore: jest.fn(),
+    onHistoryRemove: jest.fn(),
     analysisStatus: 'idle' as const,
     analysisProgress: 0,
     analysisError: null,
     k: 5,
     analysisResult: null,
     batchResult: null,
+    presets: [
+      {
+        id: 'p1',
+        name: 'Fast',
+        options: { k: 3, iterations: 5, stride: 8, minRegionSize: 8 },
+      },
+    ],
+    onApplyPreset: jest.fn(),
+    onSavePreset: jest.fn(),
+    onDeletePreset: jest.fn(),
+    densityOverlay: null,
+    showDensity: false,
+    densityRadius: 24,
+    onToggleDensity: jest.fn(),
+    onDensityRadiusChange: jest.fn(),
     onSetK: jest.fn(),
     onRunSingle: jest.fn(),
     onBatchFiles: jest.fn(),
     onExportCsv: jest.fn(),
     onExportJson: jest.fn(),
+    onExportRegionsCsv: jest.fn(),
     onExportPng: jest.fn(),
     onOpenReport: jest.fn(),
+    onShareExport: jest.fn(),
+    onShareReport: jest.fn(),
     reportOpen: false,
     reportTitle: '',
     reportHtml: '',
     onCloseReport: jest.fn(),
+    stackSliceCount: 0,
+    stackIndex: 0,
+    onStackIndexChange: jest.fn(),
+    onAnalyzeStack: jest.fn(),
   };
 
   it('shows the image name and channel controls', () => {
     render(<ViewerTemplate {...props} />);
     expect(screen.getByText('scan.png')).toBeInTheDocument();
-    expect(screen.getByText('Red')).toBeInTheDocument();
+    expect(
+      screen.getByRole('checkbox', { name: 'Red channel' })
+    ).toBeInTheDocument();
     expect(screen.getByText('Channels')).toBeInTheDocument();
   });
 
@@ -160,5 +239,69 @@ describe('ViewerTemplate', () => {
       screen.getByRole('img', { name: 'Channel intensity histogram' })
     ).toBeInTheDocument();
     expect(screen.getByText('Mean')).toBeInTheDocument();
+  });
+
+  it('shows the slice navigator when a stack is loaded', () => {
+    const onStackIndexChange = jest.fn();
+    render(
+      <ViewerTemplate
+        {...props}
+        stackSliceCount={4}
+        stackIndex={1}
+        onStackIndexChange={onStackIndexChange}
+      />
+    );
+    expect(screen.getByText('Slice 2 / 4')).toBeInTheDocument();
+    fireEvent.change(screen.getByLabelText('Slice index'), {
+      target: { value: '3' },
+    });
+    expect(onStackIndexChange).toHaveBeenCalledWith(3);
+  });
+
+  it('hides the slice navigator without a stack', () => {
+    render(<ViewerTemplate {...props} />);
+    expect(screen.queryByLabelText('Slice index')).not.toBeInTheDocument();
+  });
+
+  it('shows the zoom minimap while an image is loaded', () => {
+    render(<ViewerTemplate {...props} />);
+    expect(screen.getByTestId('minimap')).toBeInTheDocument();
+  });
+
+  it('shows a side-by-side compare pane in side mode', () => {
+    render(
+      <ViewerTemplate
+        {...props}
+        compareRaster={{
+          width: 2,
+          height: 2,
+          data: new Uint8ClampedArray(16),
+        }}
+        compareMode="side"
+      />
+    );
+    expect(screen.getByTestId('compare-pane')).toBeInTheDocument();
+  });
+
+  it('hides the minimap in side-by-side compare mode', () => {
+    render(
+      <ViewerTemplate
+        {...props}
+        compareRaster={{
+          width: 2,
+          height: 2,
+          data: new Uint8ClampedArray(16),
+        }}
+        compareMode="side"
+      />
+    );
+    expect(screen.queryByTestId('minimap')).not.toBeInTheDocument();
+  });
+
+  it('shows compare controls', () => {
+    render(<ViewerTemplate {...props} />);
+    expect(
+      screen.getByRole('button', { name: 'Load compare image' })
+    ).toBeInTheDocument();
   });
 });

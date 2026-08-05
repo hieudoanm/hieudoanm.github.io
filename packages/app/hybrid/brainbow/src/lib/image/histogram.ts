@@ -1,4 +1,4 @@
-import type { ChannelState, ImageRaster } from '@/types/image';
+import type { ChannelRaster, ChannelState } from '@/types/image';
 import { computeHistogram } from './channels';
 
 export interface ChannelStats {
@@ -51,7 +51,7 @@ export const normalizeHistogram = (
 };
 
 export const analyzeChannels = (
-  raster: ImageRaster,
+  raster: ChannelRaster,
   channels: ChannelState[]
 ): ChannelAnalysis[] =>
   channels.map((channel) => {

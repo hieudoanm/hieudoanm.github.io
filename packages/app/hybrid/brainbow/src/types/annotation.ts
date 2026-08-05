@@ -5,6 +5,8 @@ export interface Point {
 
 export type ShapeKind = 'polygon' | 'freehand';
 
+export type MeasureKind = 'distance' | 'angle' | 'area';
+
 export interface Annotation {
   id: string;
   kind: ShapeKind;
@@ -19,4 +21,12 @@ export interface AnnotationLayer {
   annotations: Annotation[];
 }
 
-export type ViewTool = 'pan' | 'polygon' | 'freehand';
+export type ViewTool =
+  | 'pan'
+  | 'polygon'
+  | 'freehand'
+  | 'measureDistance'
+  | 'measureAngle'
+  | 'measureArea'
+  | 'erase'
+  | 'lassoSubtract';

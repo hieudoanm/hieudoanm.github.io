@@ -17,8 +17,10 @@ code-signing, Android/iOS store builds, and the Tauri updater pipeline.
 - [ ] Signing key pair is generated with `pnpm tauri signer generate`
 - [ ] Public key is set under `plugins.updater.pubkey` in `tauri.conf.json`
       (already configured; the private key is **not** in the repo)
-- [ ] `createUpdaterArtifacts` is `true` so `.sig` + updater bundles are
-      produced by `tauri build`
+- [ ] `createUpdaterArtifacts` is `true` for release builds so `.sig` + updater
+      bundles are produced — it defaults to `false` so plain local/CI builds do
+      not require a key; enable it per-build with
+      `pnpm tauri build --config '{"bundle":{"createUpdaterArtifacts":true}}'`
 - [ ] Publish the updater JSON + artifacts to
       `https://github.com/hieudoanm/hieudoanm.github.io/releases/latest/download/latest.json`
       (the endpoint already configured in `tauri.conf.json`)

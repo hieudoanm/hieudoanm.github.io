@@ -1,5 +1,14 @@
 import type { FC } from 'react';
-import { FiMove, FiPenTool, FiTriangle } from 'react-icons/fi';
+import {
+  FiActivity,
+  FiArrowRight,
+  FiDelete,
+  FiMaximize,
+  FiMove,
+  FiPenTool,
+  FiScissors,
+  FiTriangle,
+} from 'react-icons/fi';
 import type { ViewTool } from '@/types/annotation';
 
 export interface ToolPaletteProps {
@@ -11,6 +20,22 @@ const TOOL_ICONS: Record<ViewTool, FC<{ className?: string }>> = {
   pan: FiMove,
   polygon: FiTriangle,
   freehand: FiPenTool,
+  measureDistance: FiArrowRight,
+  measureAngle: FiActivity,
+  measureArea: FiMaximize,
+  erase: FiDelete,
+  lassoSubtract: FiScissors,
+};
+
+const TOOL_LABELS: Record<ViewTool, string> = {
+  pan: 'Pan',
+  polygon: 'Polygon',
+  freehand: 'Freehand',
+  measureDistance: 'Measure distance',
+  measureAngle: 'Measure angle',
+  measureArea: 'Measure area',
+  erase: 'Erase',
+  lassoSubtract: 'Lasso subtract',
 };
 
 export const ToolPalette: FC<ToolPaletteProps> = ({ tool, onToolChange }) => (
@@ -23,10 +48,10 @@ export const ToolPalette: FC<ToolPaletteProps> = ({ tool, onToolChange }) => (
           key={id}
           type="button"
           aria-pressed={active}
-          aria-label={`${id} tool`}
-          className={`btn btn-square btn-sm ${active ? 'btn-primary' : 'btn-ghost'}`}
+          aria-label={`${TOOL_LABELS[id]} tool`}
+          className={`btn btn-square min-h-11 min-w-11 ${active ? 'btn-primary' : 'btn-ghost'}`}
           onClick={() => onToolChange(id)}>
-          <Icon className="text-base" />
+          <Icon className="text-lg" />
         </button>
       );
     })}

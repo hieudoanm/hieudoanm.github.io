@@ -4,20 +4,22 @@ import {
   histogramPeak,
   normalizeHistogram,
 } from '@/lib/image/histogram';
-import type { ChannelState, ImageRaster } from '@/types/image';
+import type { ChannelRaster, ChannelState } from '@/types/image';
 
-const makeRaster = (
-  pixels: [number, number, number, number][]
-): ImageRaster => {
-  const data = new Uint8ClampedArray(pixels.length * 4);
-  pixels.forEach(([r, g, b, a], index) => {
-    const offset = index * 4;
-    data[offset] = r;
-    data[offset + 1] = g;
-    data[offset + 2] = b;
-    data[offset + 3] = a;
-  });
-  return { width: pixels.length, height: 1, data };
+const makeChannelRaster = (
+  pixels: [number, number, number][]
+): ChannelRaster => {
+  const planeData = (index: number): Uint8ClampedArray =>
+    new Uint8ClampedArray(pixels.map((pixel) => pixel[index]));
+  return {
+    width: pixels.length,
+    height: 1,
+    planes: [
+      { id: 'r', name: 'Red', data: planeData(0) },
+      { id: 'g', name: 'Green', data: planeData(1) },
+      { id: 'b', name: 'Blue', data: planeData(2) },
+    ],
+  };
 };
 
 const redChannel: ChannelState = {
@@ -70,9 +72,9 @@ describe('histogram math', () => {
 
   describe('analyzeChannels', () => {
     it('analyzes each channel from its source plane', () => {
-      const raster = makeRaster([
-        [255, 10, 0, 255],
-        [0, 10, 200, 255],
+      const raster = makeChannelRaster([
+        [255, 10, 0],
+        [0, 10, 200],
       ]);
       const analyses = analyzeChannels(raster, [redChannel]);
       expect(analyses).toHaveLength(1);
@@ -89,8 +91,15 @@ describe('histogram math', () => {
     });
 
     it('returns an empty array for no channels', () => {
-      const raster = makeRaster([[255, 0, 0, 255]]);
+      const raster = makeChannelRaster([[255, 0, 0]]);
       expect(analyzeChannels(raster, [])).toEqual([]);
+    });
+
+    it('supports analysis of non-RGB source planes', () => {
+      const raster = makeChannelRaster([[120, 0, 0]]);
+      const farRed = { ...redChannel, sourcePlane: 'far-red' };
+      const [analysis] = analyzeChannels(raster, [farRed]);
+      expect(analysis.stats.count).toBe(0);
     });
   });
 });

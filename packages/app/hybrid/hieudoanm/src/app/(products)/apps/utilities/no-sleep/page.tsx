@@ -1,8 +1,8 @@
 'use client';
 
-import { Suspense } from 'react';
-import { useRouter } from 'next/navigation';
 import { NoSleep } from '@hieudoanm.github.io/components/routes/apps/utilities/NoSleep';
+import { useRouter } from 'next/navigation';
+import { Suspense } from 'react';
 
 const ToolUtilitiesNoSleep = () => {
   const router = useRouter();

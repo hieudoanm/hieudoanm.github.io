@@ -6,7 +6,11 @@ import {
   samplePixels,
   type KMeansResult,
 } from '@/lib/image/segmentation';
-import { countRegions } from '@/lib/image/regions';
+import {
+  countRegions,
+  regionStats,
+  type RegionStat,
+} from '@/lib/image/regions';
 import { summarize, type AnalysisSummary } from '@/lib/analysis/summary';
 
 export interface AnalyzeOptions {
@@ -23,6 +27,7 @@ export interface ImageAnalysis {
   classified: Uint8Array;
   counts: number[];
   regions: number[];
+  regionStats: RegionStat[];
   summary: AnalysisSummary;
 }
 
@@ -52,6 +57,7 @@ export const analyzeRaster = (
       classified: new Uint8Array(0),
       counts: [],
       regions: [],
+      regionStats: [],
       summary: { totalPixels: 0, clusters: [], diversity: 0 },
     };
   }
@@ -64,6 +70,7 @@ export const analyzeRaster = (
     kmeans.centers.length,
     resolved.minRegionSize
   );
+  const stats = regionStats(classified, raster, resolved.minRegionSize);
   const summary = summarize(
     kmeans.centers,
     counts,
@@ -76,6 +83,7 @@ export const analyzeRaster = (
     classified,
     counts,
     regions,
+    regionStats: stats,
     summary,
   };
 };

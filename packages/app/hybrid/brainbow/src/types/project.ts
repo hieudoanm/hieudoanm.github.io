@@ -1,5 +1,5 @@
 import type { AnnotationLayer } from './annotation';
-import type { ChannelState } from './image';
+import type { Calibration, ChannelState } from './image';
 
 export interface ProjectImage {
   id: string;
@@ -7,6 +7,7 @@ export interface ProjectImage {
   width: number;
   height: number;
   data: string;
+  calibration?: Calibration | null;
 }
 
 export interface Project {

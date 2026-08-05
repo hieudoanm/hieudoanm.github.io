@@ -261,15 +261,15 @@
 
 ### Molecules
 
-| Component        | File                           | Props                                                                              | Description                          |
-| ---------------- | ------------------------------ | ---------------------------------------------------------------------------------- | ------------------------------------ |
-| `ChannelControl` | `molecules/ChannelControl.tsx` | `name, color, visible, opacity, onToggle, onOpacityChange`                         | Channel toggle + slider              |
-| `ImageToolbar`   | `molecules/ImageToolbar.tsx`   | `zoom, onZoomIn, onZoomOut, onReset, onFit`                                        | Viewer zoom controls                 |
-| `EmptyState`     | `molecules/EmptyState.tsx`     | `icon, title, description?, action?`                                               | No-data placeholder                  |
-| `ToolPalette`    | `molecules/ToolPalette.tsx`    | `tool, onToolChange`                                                               | Tool switcher (pan/polygon/freehand) |
-| `LayerPanel`     | `molecules/LayerPanel.tsx`     | `layers, activeLayerId, onSelect, onToggleVisible, onChangeColor, onAdd, onRemove` | Per-layer annotation panel           |
-| `AnalysisPanel`  | `molecules/AnalysisPanel.tsx`  | `status, progress, error, k, result, batch, ...`                                   | Segmentation controls + results      |
-| `ReportModal`    | `molecules/ReportModal.tsx`    | `title, html, onClose`                                                             | Print-ready analysis report          |
+| Component        | File                           | Props                                                                                                                                       | Description                          |
+| ---------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
+| `ChannelControl` | `molecules/ChannelControl.tsx` | `name, color, visible, opacity, onToggle, onOpacityChange`                                                                                  | Channel toggle + slider              |
+| `ImageToolbar`   | `molecules/ImageToolbar.tsx`   | `zoom, onZoomIn, onZoomOut, onReset, onFit`                                                                                                 | Viewer zoom controls                 |
+| `EmptyState`     | `molecules/EmptyState.tsx`     | `icon, title, description?, action?`                                                                                                        | No-data placeholder                  |
+| `ToolPalette`    | `molecules/ToolPalette.tsx`    | `tool, onToolChange`                                                                                                                        | Tool switcher (pan/polygon/freehand) |
+| `LayerPanel`     | `molecules/LayerPanel.tsx`     | `layers, activeLayerId, onSelect, onToggleVisible, onChangeColor, onAdd, onRemove, onExportRoiZip, onExportGeoJson, onExportAnnotationsCsv` | Per-layer annotation panel           |
+| `AnalysisPanel`  | `molecules/AnalysisPanel.tsx`  | `status, progress, error, k, result, batch, ...`                                                                                            | Segmentation controls + results      |
+| `ReportModal`    | `molecules/ReportModal.tsx`    | `title, html, onClose`                                                                                                                      | Print-ready analysis report          |
 
 ### Organisms
 
@@ -284,34 +284,30 @@
 
 ### Route Structure
 
-| Route     | File               | Template         | Client | Description                       |
-| --------- | ------------------ | ---------------- | ------ | --------------------------------- |
-| `/`       | `page.tsx`         | `HomeTemplate`   | Yes    | Import a dataset or open the demo |
-| `/viewer` | `viewer/page.tsx`  | `ViewerTemplate` | Yes    | Full-screen image viewer          |
-| `*`       | `not-found.tsx`    | `ErrorTemplate`  | No     | 404 page with "Go home" action    |
-| `*`       | `error.tsx`        | `ErrorTemplate`  | Yes    | 500 page with "Try again" action  |
-| `*`       | `global-error.tsx` | —                | Yes    | Root-level error boundary         |
+| Route | File               | Template         | Client | Description                                                  |
+| ----- | ------------------ | ---------------- | ------ | ------------------------------------------------------------ |
+| `/`   | `page.tsx`         | `ViewerTemplate` | Yes    | Full-screen image viewer (root; auto-loads the demo dataset) |
+| `*`   | `not-found.tsx`    | `ErrorTemplate`  | No     | 404 page with "Go home" action                               |
+| `*`   | `error.tsx`        | `ErrorTemplate`  | Yes    | 500 page with "Try again" action                             |
+| `*`   | `global-error.tsx` | —                | Yes    | Root-level error boundary                                    |
 
 ### Pages Details
 
-1. **`/` — Home**
-   - Centred layout with app title and short description
-   - "Open demo dataset" button and a file picker for importing images
-   - Uses `HomeTemplate` component
-
-2. **`/viewer` — Viewer**
+1. **`/` — Viewer**
+   - Root route; users land here and start working immediately
+   - Auto-loads the demo dataset when no project/import is pending
    - Full-screen canvas viewer with a channel sidebar
    - Pan/zoom/rotate canvas viewer (Canvas2D)
    - Channel toggling with per-channel opacity
    - Uses `ViewerTemplate` component
 
-3. **`not-found` — 404**
+2. **`not-found` — 404**
    - Error code: `404`
    - Description: "The page you are looking for does not exist."
    - Action: "Go home" link to `/`
    - Uses `ErrorTemplate` component
 
-4. **`error` — 500**
+3. **`error` — 500**
    - Error code: `500`
    - Description: "Something went wrong."
    - Action: "Try again" button calls `reset()`

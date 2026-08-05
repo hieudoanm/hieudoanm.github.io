@@ -35,6 +35,25 @@ describe('imageToProjectImage / projectImageToRaster', () => {
     expect(restored.height).toBe(1);
     expect(Array.from(restored.data)).toEqual(Array.from(raster.data));
   });
+
+  it('stores the calibration alongside the raster', () => {
+    const raster = makeRaster();
+    const image = imageToProjectImage(raster, 'scan.png', {
+      pixelsPerMicron: 4.5,
+    });
+    const restored = deserializeProject(
+      serializeProject(createProject('demo', [image], [], []))
+    );
+    expect(restored.images[0].calibration).toEqual({
+      pixelsPerMicron: 4.5,
+    });
+  });
+
+  it('omits calibration when none is provided', () => {
+    const raster = makeRaster();
+    const image = imageToProjectImage(raster, 'scan.png');
+    expect(image.calibration).toBeNull();
+  });
 });
 
 describe('serializeProject / deserializeProject', () => {

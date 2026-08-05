@@ -3,6 +3,38 @@ export interface TimeUnit {
   label: string;
 }
 
+export type WakeLockStatus =
+  'checking' | 'active' | 'inactive' | 'unsupported' | 'denied';
+
+interface WakeLockStatusMeta {
+  label: string;
+  description: string;
+}
+
+export const WAKE_LOCK_STATUS: Record<WakeLockStatus, WakeLockStatusMeta> = {
+  checking: {
+    label: 'Requesting',
+    description: 'Requesting the wake lock…',
+  },
+  active: {
+    label: 'Active',
+    description: 'The screen is being kept awake.',
+  },
+  inactive: {
+    label: 'Released',
+    description:
+      'The wake lock was released — likely because the tab was hidden.',
+  },
+  unsupported: {
+    label: 'Unsupported',
+    description: 'The Wake Lock API is not available in this browser.',
+  },
+  denied: {
+    label: 'Denied',
+    description: 'The wake lock request was denied — the screen may sleep.',
+  },
+};
+
 export const getElapsed = (startTime: number): TimeUnit[] => {
   let totalSeconds = Math.floor((Date.now() - startTime) / 1000);
 

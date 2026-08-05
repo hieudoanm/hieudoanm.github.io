@@ -1,10 +1,9 @@
 import { FC, useEffect, useState } from 'react';
 import {
-  KAPREKAR_CONSTANT_3,
-  KAPREKAR_CONSTANT_4,
   IGNORE_NUMBERS_3,
   IGNORE_NUMBERS_4,
-  Routine,
+  KAPREKAR_CONSTANT_3,
+  KAPREKAR_CONSTANT_4,
   kaprekarRoutine,
 } from './utils';
 
@@ -15,7 +14,6 @@ export const Kaprekar: FC<{ onClose: () => void }> = ({ onClose }) => {
     count: 0,
     length: number.toString().length,
   });
-  Kaprekar.displayName = 'Kaprekar';
   const isIgnored =
     IGNORE_NUMBERS_3.has(number) || IGNORE_NUMBERS_4.has(number);
   const isOutOfRange = number < 100 || number > 9999;
@@ -41,7 +39,7 @@ export const Kaprekar: FC<{ onClose: () => void }> = ({ onClose }) => {
   }, []);
 
   return (
-    <>
+    <div className="flex h-full w-full flex-col items-center justify-center gap-4 p-8">
       <div className="-mt-2 mb-1 flex justify-end">
         <button
           onClick={() => setNumber(KAPREKAR_CONSTANT_4)}
@@ -131,6 +129,8 @@ export const Kaprekar: FC<{ onClose: () => void }> = ({ onClose }) => {
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 };
+
+Kaprekar.displayName = 'Kaprekar';

@@ -6,20 +6,57 @@ export interface ImageRaster {
   data: Uint8ClampedArray;
 }
 
+export interface ChannelPlane {
+  id: string;
+  name: string;
+  data: Uint8ClampedArray;
+}
+
+export interface ChannelRaster {
+  width: number;
+  height: number;
+  planes: ChannelPlane[];
+}
+
+export interface StackSlice {
+  id: string;
+  z: number | null;
+  frame: number | null;
+  planes: ChannelPlane[];
+}
+
+export interface StackRaster {
+  width: number;
+  height: number;
+  slices: StackSlice[];
+}
+
 export interface ChannelConfig {
   id: string;
   name: string;
-  sourcePlane: Plane;
+  sourcePlane: string;
   displayColor: string;
 }
 
 export interface ChannelState {
   id: string;
   name: string;
-  sourcePlane: Plane;
+  sourcePlane: string;
   color: string;
   visible: boolean;
   opacity: number;
+}
+
+export type Rotation = 0 | 90 | 180 | 270;
+
+export interface Orientation {
+  rotation: Rotation;
+  flipX: boolean;
+  flipY: boolean;
+}
+
+export interface Calibration {
+  pixelsPerMicron: number | null;
 }
 
 export interface ViewTransform {

@@ -70,9 +70,42 @@ export const WORDS = [
   'laborum',
 ];
 
-export const sentence = (wordCount: number): string => {
+export type LoremUnit = 'paragraphs' | 'words' | 'bytes' | 'lists';
+
+export interface UnitConfig {
+  singular: string;
+  plural: string;
+  min: number;
+  max: number;
+  step: number;
+}
+
+export const UNIT_CONFIG: Record<LoremUnit, UnitConfig> = {
+  paragraphs: {
+    singular: 'paragraph',
+    plural: 'paragraphs',
+    min: 1,
+    max: 20,
+    step: 1,
+  },
+  words: { singular: 'word', plural: 'words', min: 10, max: 200, step: 1 },
+  bytes: { singular: 'byte', plural: 'bytes', min: 100, max: 5000, step: 100 },
+  lists: {
+    singular: 'list item',
+    plural: 'list items',
+    min: 1,
+    max: 20,
+    step: 1,
+  },
+};
+
+const sentenceWords = (wordCount: number): string[] => {
   const start = Math.floor(Math.random() * (WORDS.length - wordCount));
-  const words = WORDS.slice(start, start + wordCount);
+  return WORDS.slice(start, start + wordCount);
+};
+
+export const sentence = (wordCount: number): string => {
+  const words = sentenceWords(wordCount);
   const line = words.join(' ');
   return line.charAt(0).toUpperCase() + line.slice(1) + '.';
 };
@@ -82,7 +115,48 @@ export const paragraph = (sentences: number): string =>
     sentence(8 + Math.floor(Math.random() * 6))
   ).join(' ');
 
-export const generate = (paragraphs: number): string =>
-  Array.from({ length: paragraphs }, () =>
-    paragraph(3 + Math.floor(Math.random() * 4))
-  ).join('\n\n');
+const paragraphText = (): string =>
+  paragraph(3 + Math.floor(Math.random() * 4));
+
+export const generateParagraphs = (count: number): string =>
+  Array.from({ length: count }, () => paragraphText()).join('\n\n');
+
+export const generateWords = (count: number): string => {
+  const words: string[] = [];
+  while (words.length < count) {
+    sentenceWords(8 + Math.floor(Math.random() * 6)).forEach((w) =>
+      words.push(w)
+    );
+  }
+  return words.slice(0, count).join(' ');
+};
+
+const byteLength = (text: string): number =>
+  new TextEncoder().encode(text).length;
+
+export const generateBytes = (count: number): string => {
+  let text = '';
+  while (byteLength(text) < count) {
+    text = text ? `${text} ${paragraphText()}` : paragraphText();
+  }
+  return text.slice(0, count);
+};
+
+export const generateLists = (count: number): string =>
+  Array.from(
+    { length: count },
+    () => `• ${sentence(8 + Math.floor(Math.random() * 6))}`
+  ).join('\n');
+
+export const generate = (count: number, unit: LoremUnit): string => {
+  switch (unit) {
+    case 'words':
+      return generateWords(count);
+    case 'bytes':
+      return generateBytes(count);
+    case 'lists':
+      return generateLists(count);
+    default:
+      return generateParagraphs(count);
+  }
+};

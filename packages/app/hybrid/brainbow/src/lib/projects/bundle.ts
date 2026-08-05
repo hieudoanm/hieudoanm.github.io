@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import type { ImageRaster } from '@/types/image';
+import type { Calibration, ImageRaster } from '@/types/image';
 import type { Project, ProjectImage } from '@/types/project';
 
 export const PROJECT_FORMAT = 'brainbow-project';
@@ -25,11 +25,15 @@ const layerSchema = z.object({
 const channelSchema = z.object({
   id: z.string(),
   name: z.string(),
-  sourcePlane: z.enum(['r', 'g', 'b']),
+  sourcePlane: z.string(),
   color: z.string(),
   visible: z.boolean(),
   opacity: z.number(),
 });
+
+const calibrationSchema = z
+  .object({ pixelsPerMicron: z.number().nullable() })
+  .nullish();
 
 const projectImageSchema = z.object({
   id: z.string(),
@@ -37,6 +41,7 @@ const projectImageSchema = z.object({
   width: z.number().positive(),
   height: z.number().positive(),
   data: z.string(),
+  calibration: calibrationSchema,
 });
 
 export const projectSchema = z.object({
@@ -71,13 +76,15 @@ export const base64ToBytes = (base64: string): Uint8ClampedArray => {
 
 export const imageToProjectImage = (
   raster: ImageRaster,
-  name: string
+  name: string,
+  calibration: Calibration | null | undefined = null
 ): ProjectImage => ({
   id: `img-${Date.now()}`,
   name,
   width: raster.width,
   height: raster.height,
   data: bytesToBase64(raster.data),
+  calibration,
 });
 
 export const projectImageToRaster = (image: ProjectImage): ImageRaster => ({

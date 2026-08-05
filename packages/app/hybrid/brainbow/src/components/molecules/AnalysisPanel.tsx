@@ -1,9 +1,25 @@
-import type { ChangeEvent, FC, RefObject } from 'react';
-import { FiDownload, FiFile, FiPlay, FiSearch } from 'react-icons/fi';
+import {
+  useRef,
+  useState,
+  type ChangeEvent,
+  type FC,
+  type RefObject,
+} from 'react';
+import {
+  FiBookmark,
+  FiDownload,
+  FiFile,
+  FiPlay,
+  FiSearch,
+  FiShare,
+  FiTrash2,
+} from 'react-icons/fi';
 import { Button } from '@/components/atoms/Button';
+import { Toggle } from '@/components/atoms/Toggle';
 import type { AnalysisStatus } from '@/hooks/useAnalysis';
 import type { BatchResult } from '@/lib/analysis/batch';
 import type { ImageAnalysis } from '@/lib/analysis/analyze';
+import type { AnalysisPreset } from '@/lib/analysis/presets';
 
 export interface AnalysisPanelProps {
   status: AnalysisStatus;
@@ -12,6 +28,14 @@ export interface AnalysisPanelProps {
   k: number;
   result: ImageAnalysis | null;
   batch: BatchResult | null;
+  presets: AnalysisPreset[];
+  onApplyPreset: (preset: AnalysisPreset) => void;
+  onSavePreset: (name: string) => void;
+  onDeletePreset: (id: string) => void;
+  showDensity: boolean;
+  densityRadius: number;
+  onToggleDensity: (show: boolean) => void;
+  onDensityRadiusChange: (radius: number) => void;
   hasRaster: boolean;
   fileInputRef: RefObject<HTMLInputElement | null>;
   onSetK: (k: number) => void;
@@ -19,8 +43,10 @@ export interface AnalysisPanelProps {
   onBatchFiles: (files: File[]) => void;
   onExportCsv: () => void;
   onExportJson: () => void;
+  onExportRegionsCsv: () => void;
   onExportPng: () => void;
   onOpenReport: () => void;
+  onShareExport: () => void;
 }
 
 const hex = (color: { r: number; g: number; b: number }): string =>
@@ -33,6 +59,14 @@ export const AnalysisPanel: FC<AnalysisPanelProps> = ({
   k,
   result,
   batch,
+  presets,
+  onApplyPreset,
+  onSavePreset,
+  onDeletePreset,
+  showDensity,
+  densityRadius,
+  onToggleDensity,
+  onDensityRadiusChange,
   hasRaster,
   fileInputRef,
   onSetK,
@@ -40,13 +74,19 @@ export const AnalysisPanel: FC<AnalysisPanelProps> = ({
   onBatchFiles,
   onExportCsv,
   onExportJson,
+  onExportRegionsCsv,
   onExportPng,
   onOpenReport,
+  onShareExport,
 }) => {
   const running = status === 'running';
   const done = status === 'done';
   const hasResult = Boolean(result);
   const hasBatch = Boolean(batch);
+  const presetNameRef = useRef<HTMLInputElement>(null);
+  const [selectedPresetId, setSelectedPresetId] = useState(
+    presets[0]?.id ?? ''
+  );
 
   const onFileChange = (event: ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(event.target.files ?? []);
@@ -73,6 +113,72 @@ export const AnalysisPanel: FC<AnalysisPanelProps> = ({
           ))}
         </select>
       </div>
+
+      <section aria-label="Analysis presets" className="flex flex-col gap-2">
+        <div className="flex items-center gap-2">
+          <select
+            aria-label="Analysis preset"
+            className="select select-bordered select-sm flex-1"
+            value={selectedPresetId}
+            disabled={running}
+            onChange={(event) => setSelectedPresetId(event.target.value)}>
+            {presets.map((preset) => (
+              <option key={preset.id} value={preset.id}>
+                {preset.name}
+              </option>
+            ))}
+          </select>
+          <Button
+            variant="outline"
+            size="sm"
+            disabled={running}
+            aria-label="Apply selected preset"
+            onClick={() => {
+              const preset = presets.find(
+                (item) => item.id === selectedPresetId
+              );
+              if (preset) onApplyPreset(preset);
+            }}>
+            <FiPlay />
+          </Button>
+          <Button
+            variant="outline"
+            size="sm"
+            disabled={running}
+            aria-label="Delete selected preset"
+            onClick={() => {
+              onDeletePreset(selectedPresetId);
+              setSelectedPresetId(presets[0]?.id ?? '');
+            }}>
+            <FiTrash2 />
+          </Button>
+        </div>
+        <div className="flex items-center gap-2">
+          <input
+            ref={presetNameRef}
+            type="text"
+            aria-label="Preset name"
+            className="input input-bordered input-sm flex-1"
+            placeholder="Preset name"
+          />
+          <Button
+            variant="outline"
+            size="sm"
+            aria-label="Save current parameters as preset"
+            onClick={() => {
+              const name = presetNameRef.current?.value.trim();
+              if (name) {
+                onSavePreset(name);
+                if (presetNameRef.current) {
+                  presetNameRef.current.value = '';
+                }
+              }
+            }}>
+            <FiBookmark />
+            Save
+          </Button>
+        </div>
+      </section>
 
       <div className="flex flex-col gap-2">
         <Button
@@ -152,6 +258,76 @@ export const AnalysisPanel: FC<AnalysisPanelProps> = ({
         </section>
       ) : null}
 
+      {done && hasResult && result ? (
+        <section
+          aria-label="Density heatmap overlay"
+          className="flex flex-col gap-2">
+          <div className="flex items-center justify-between gap-2">
+            <Toggle
+              checked={showDensity}
+              label="Density heatmap overlay"
+              showLabel={false}
+              onChange={onToggleDensity}
+            />
+            <span className="text-sm">Density heatmap</span>
+          </div>
+          <div className="flex items-center justify-between gap-2">
+            <label htmlFor="density-radius" className="text-xs">
+              Neighborhood radius
+            </label>
+            <select
+              id="density-radius"
+              aria-label="Density radius"
+              className="select select-bordered select-sm"
+              value={densityRadius}
+              onChange={(event) =>
+                onDensityRadiusChange(Number(event.target.value))
+              }>
+              {[8, 16, 24, 48, 96].map((value) => (
+                <option key={value} value={value}>
+                  {value}px
+                </option>
+              ))}
+            </select>
+          </div>
+        </section>
+      ) : null}
+
+      {done && hasResult && result && result.regionStats.length > 0 ? (
+        <section aria-label="Region statistics" className="flex flex-col gap-1">
+          <h4>Regions</h4>
+          <div className="max-h-48 overflow-y-auto">
+            <table className="table-compact w-full">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Cluster</th>
+                  <th>Area</th>
+                  <th>Mean</th>
+                  <th>X</th>
+                  <th>Y</th>
+                </tr>
+              </thead>
+              <tbody>
+                {result.regionStats.map((region) => (
+                  <tr key={region.id}>
+                    <td>{region.id + 1}</td>
+                    <td>{region.cluster + 1}</td>
+                    <td>{region.area}</td>
+                    <td>{region.meanIntensity.toFixed(1)}</td>
+                    <td>{region.centroidX.toFixed(1)}</td>
+                    <td>{region.centroidY.toFixed(1)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-base-content/50 text-xs">
+            {result.regionStats.length} regions detected
+          </p>
+        </section>
+      ) : null}
+
       {done && hasBatch && batch ? (
         <section aria-label="Batch summary" className="flex flex-col gap-1">
           <p className="text-sm">
@@ -188,6 +364,14 @@ export const AnalysisPanel: FC<AnalysisPanelProps> = ({
           <Button
             variant="outline"
             size="sm"
+            aria-label="Export regions CSV"
+            onClick={onExportRegionsCsv}>
+            <FiDownload />
+            Regions CSV
+          </Button>
+          <Button
+            variant="outline"
+            size="sm"
             aria-label="Export PNG"
             onClick={onExportPng}>
             <FiDownload />
@@ -200,6 +384,14 @@ export const AnalysisPanel: FC<AnalysisPanelProps> = ({
             onClick={onOpenReport}>
             <FiDownload />
             Report
+          </Button>
+          <Button
+            variant="outline"
+            size="sm"
+            aria-label="Share exports"
+            onClick={onShareExport}>
+            <FiShare />
+            Share
           </Button>
         </div>
       ) : null}

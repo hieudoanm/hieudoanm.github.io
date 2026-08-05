@@ -41,6 +41,12 @@ export const nativeSaveProject = async (
   });
 };
 
+export const readLaunchProject =
+  async (): Promise<NativeProjectPayload | null> => {
+    if (!isTauri()) return null;
+    return invoke<NativeProjectPayload | null>('read_launch_project');
+  };
+
 export const nativeNotify = async (
   title: string,
   body: string

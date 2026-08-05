@@ -4,8 +4,35 @@ import { ChannelControl } from '@/components/molecules/ChannelControl';
 import { ChannelHistogram } from '@/components/molecules/ChannelHistogram';
 import { ImageToolbar } from '@/components/molecules/ImageToolbar';
 import { EmptyState } from '@/components/molecules/EmptyState';
+import { CalibrationInput } from '@/components/molecules/CalibrationInput';
+
+describe('CalibrationInput', () => {
+  it('emits the parsed pixels-per-micron value', () => {
+    const onChange = jest.fn();
+    render(<CalibrationInput value={null} onChange={onChange} />);
+    fireEvent.change(screen.getByRole('spinbutton'), {
+      target: { value: '4.5' },
+    });
+    expect(onChange).toHaveBeenCalledWith(4.5);
+  });
+
+  it('emits null when cleared or invalid', () => {
+    const onChange = jest.fn();
+    render(<CalibrationInput value={4.5} onChange={onChange} />);
+    fireEvent.change(screen.getByRole('spinbutton'), {
+      target: { value: '' },
+    });
+    expect(onChange).toHaveBeenCalledWith(null);
+  });
+});
 
 describe('ChannelControl', () => {
+  const planes = [
+    { id: 'r', name: 'Red', data: new Uint8ClampedArray(0) },
+    { id: 'g', name: 'Green', data: new Uint8ClampedArray(0) },
+    { id: 'fr', name: 'Far-red', data: new Uint8ClampedArray(0) },
+  ];
+
   it('renders the channel name and toggles visibility', async () => {
     const user = userEvent.setup();
     const onToggle = jest.fn();
@@ -13,9 +40,12 @@ describe('ChannelControl', () => {
       <ChannelControl
         name="Red"
         color="#ff0030"
+        sourcePlane="r"
+        planes={planes}
         visible
         opacity={1}
         onToggle={onToggle}
+        onSourcePlaneChange={jest.fn()}
         onOpacityChange={jest.fn()}
       />
     );
@@ -29,15 +59,39 @@ describe('ChannelControl', () => {
       <ChannelControl
         name="Green"
         color="#00c853"
+        sourcePlane="g"
+        planes={planes}
         visible
         opacity={1}
         onToggle={jest.fn()}
+        onSourcePlaneChange={jest.fn()}
         onOpacityChange={onOpacityChange}
       />
     );
     const slider = screen.getByRole('slider', { name: 'Green opacity' });
     fireEvent.change(slider, { target: { value: '25' } });
     expect(onOpacityChange).toHaveBeenCalledWith(0.25);
+  });
+
+  it('reports plane selections', () => {
+    const onSourcePlaneChange = jest.fn();
+    render(
+      <ChannelControl
+        name="Red"
+        color="#ff0030"
+        sourcePlane="r"
+        planes={planes}
+        visible
+        opacity={1}
+        onToggle={jest.fn()}
+        onSourcePlaneChange={onSourcePlaneChange}
+        onOpacityChange={jest.fn()}
+      />
+    );
+    fireEvent.change(screen.getByRole('combobox', { name: 'Red plane' }), {
+      target: { value: 'fr' },
+    });
+    expect(onSourcePlaneChange).toHaveBeenCalledWith('fr');
   });
 });
 
@@ -49,6 +103,10 @@ describe('ImageToolbar', () => {
         onZoomIn={jest.fn()}
         onZoomOut={jest.fn()}
         onFit={jest.fn()}
+        onRotateCW={jest.fn()}
+        onRotateCCW={jest.fn()}
+        onFlipX={jest.fn()}
+        onFlipY={jest.fn()}
       />
     );
     expect(screen.getByText('150%')).toBeInTheDocument();
@@ -65,6 +123,10 @@ describe('ImageToolbar', () => {
         onZoomIn={onZoomIn}
         onZoomOut={onZoomOut}
         onFit={onFit}
+        onRotateCW={jest.fn()}
+        onRotateCCW={jest.fn()}
+        onFlipX={jest.fn()}
+        onFlipY={jest.fn()}
       />
     );
     await user.click(screen.getByRole('button', { name: 'Zoom in' }));

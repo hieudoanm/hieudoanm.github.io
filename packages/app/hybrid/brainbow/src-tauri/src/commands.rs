@@ -21,12 +21,30 @@ const PROJECT_TITLE: &str = "Brainbow project";
 const PROJECT_FILTER: &str = "Brainbow project";
 const PROJECT_EXTENSIONS: &[&str] = &["brainbow", "json"];
 
+#[derive(Default)]
+pub struct LaunchProject(pub Option<String>);
+
 fn read_name(path: &std::path::Path, fallback: &str) -> String {
   path
     .file_stem()
     .and_then(|value| value.to_str())
     .unwrap_or(fallback)
     .to_string()
+}
+
+#[tauri::command]
+pub async fn read_launch_project(
+  state: tauri::State<'_, LaunchProject>,
+) -> Result<Option<ProjectPayload>, String> {
+  let Some(path_str) = state.0.clone() else {
+    return Ok(None);
+  };
+  let path = std::path::PathBuf::from(&path_str);
+  let content = std::fs::read_to_string(&path).map_err(|error| error.to_string())?;
+  Ok(Some(ProjectPayload {
+    name: read_name(&path, "project"),
+    content,
+  }))
 }
 
 #[tauri::command]
@@ -56,7 +74,7 @@ pub async fn pick_image_files(app: AppHandle) -> Result<Vec<ImagePayload>, Strin
     .dialog()
     .file()
     .set_title("Select images")
-    .add_filter("Images", &["png", "jpg", "jpeg", "webp"])
+    .add_filter("Images", &["png", "jpg", "jpeg", "webp", "tif", "tiff"])
     .blocking_pick_files()
   else {
     return Ok(Vec::new());
