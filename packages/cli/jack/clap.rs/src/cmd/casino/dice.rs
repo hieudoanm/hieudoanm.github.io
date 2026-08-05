@@ -1,4 +1,4 @@
-use rand::Rng;
+use rand::RngExt;
 
 #[derive(clap::Args)]
 pub struct Args {
@@ -45,12 +45,12 @@ pub async fn run(matches: &Args) -> anyhow::Result<()> {
         .map(|s| s.parse().unwrap_or(1))
         .unwrap_or(1);
 
-    let mut rng = rand::thread_rng();
+    let mut rng = rand::rng();
     let mut results = Vec::with_capacity(count);
     let mut total = 0u32;
 
     for _ in 0..count {
-        let r = rng.gen_range(1..=sides);
+        let r = rng.random_range(1..=sides);
         total += r;
         results.push(r);
     }

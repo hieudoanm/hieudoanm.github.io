@@ -1,4 +1,4 @@
-use rand::Rng;
+use rand::RngExt;
 
 const WHEEL: &[u32] = &[
     0, 32, 15, 19, 4, 21, 2, 25, 17, 34, 6, 27, 13, 36, 11, 30, 8, 23, 10, 5, 24, 16, 33, 1, 20,
@@ -77,10 +77,10 @@ pub async fn run(matches: &Args) -> anyhow::Result<()> {
         .map(|s| s.parse().unwrap_or(1))
         .unwrap_or(1);
 
-    let mut rng = rand::thread_rng();
+    let mut rng = rand::rng();
 
     for i in 0..spins {
-        let n = wheel_number_at(rng.gen_range(0..WHEEL.len()));
+        let n = wheel_number_at(rng.random_range(0..WHEEL.len()));
 
         if spins == 1 {
             println!("{}", format_spin_result(n));

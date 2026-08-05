@@ -1,4 +1,4 @@
-use rand::Rng;
+use rand::RngExt;
 
 const LOWERCASE: &[u8] = b"abcdefghijklmnopqrstuvwxyz";
 const UPPERCASE: &[u8] = b"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -152,11 +152,11 @@ mod tests {
 }
 
 fn generate_pronounceable(length: usize) -> String {
-    let mut rng = rand::thread_rng();
+    let mut rng = rand::rng();
     let mut s = String::with_capacity(length);
     while s.len() < length {
-        s.push(CONSONANTS[rng.gen_range(0..CONSONANTS.len())] as char);
-        s.push(VOWELS[rng.gen_range(0..VOWELS.len())] as char);
+        s.push(CONSONANTS[rng.random_range(0..CONSONANTS.len())] as char);
+        s.push(VOWELS[rng.random_range(0..VOWELS.len())] as char);
     }
     s.truncate(length);
     s
@@ -173,13 +173,13 @@ pub async fn run(matches: &Args) -> anyhow::Result<()> {
     let pronounceable = matches.pronounceable;
     let json = matches.json;
 
-    let mut rng = rand::thread_rng();
+    let mut rng = rand::rng();
     let mut passwords = Vec::with_capacity(count);
 
     for _ in 0..count {
         let pw = if pin {
             (0..length)
-                .map(|_| DIGITS[rng.gen_range(0..DIGITS.len())] as char)
+                .map(|_| DIGITS[rng.random_range(0..DIGITS.len())] as char)
                 .collect()
         } else if pronounceable {
             generate_pronounceable(length)
@@ -195,7 +195,7 @@ pub async fn run(matches: &Args) -> anyhow::Result<()> {
                 charset.extend_from_slice(SYMBOLS);
             }
             (0..length)
-                .map(|_| charset[rng.gen_range(0..charset.len())] as char)
+                .map(|_| charset[rng.random_range(0..charset.len())] as char)
                 .collect()
         };
         passwords.push(pw);

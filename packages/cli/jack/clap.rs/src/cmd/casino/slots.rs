@@ -1,4 +1,4 @@
-use rand::Rng;
+use rand::RngExt;
 
 const SYMBOLS: &[&str] = &["Cherry", "Lemon", "Bell", "Diamond", "7", "BAR"];
 const PAYOUTS: &[u32] = &[2, 3, 5, 10, 20, 50];
@@ -57,11 +57,11 @@ pub async fn run(matches: &Args) -> anyhow::Result<()> {
         .map(|s| s.parse().unwrap_or(25))
         .unwrap_or(25);
 
-    let mut rng = rand::thread_rng();
+    let mut rng = rand::rng();
     let reels: [usize; 3] = [
-        rng.gen_range(0..SYMBOLS.len()),
-        rng.gen_range(0..SYMBOLS.len()),
-        rng.gen_range(0..SYMBOLS.len()),
+        rng.random_range(0..SYMBOLS.len()),
+        rng.random_range(0..SYMBOLS.len()),
+        rng.random_range(0..SYMBOLS.len()),
     ];
 
     println!("{}", format_reels(&reels));

@@ -335,7 +335,7 @@ async fn count_cards() -> anyhow::Result<()> {
         "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K",
     ];
     let mut deck: Vec<&str> = ranks.to_vec();
-    let mut rng = rand::thread_rng();
+    let mut rng = rand::rng();
     deck.shuffle(&mut rng);
     let mut count = 0i32;
 

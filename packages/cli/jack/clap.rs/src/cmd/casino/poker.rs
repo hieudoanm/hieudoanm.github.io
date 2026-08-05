@@ -395,7 +395,7 @@ fn calculate_odds(
     let mut wins = 0usize;
     let mut ties = 0usize;
 
-    let mut rng = rand::thread_rng();
+    let mut rng = rand::rng();
 
     for _ in 0..simulations {
         deck.shuffle(&mut rng);

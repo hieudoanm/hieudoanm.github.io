@@ -1,4 +1,4 @@
-use rand::Rng;
+use rand::RngExt;
 
 #[derive(clap::Args)]
 pub struct Args {
@@ -26,13 +26,13 @@ pub async fn run(matches: &Args) -> anyhow::Result<()> {
         .map(|s| s.parse().unwrap_or(1))
         .unwrap_or(1);
 
-    let mut rng = rand::thread_rng();
+    let mut rng = rand::rng();
     let mut results = Vec::with_capacity(count);
     let mut heads = 0usize;
     let mut tails = 0usize;
 
     for _ in 0..count {
-        if rng.gen_bool(0.5) {
+        if rng.random_bool(0.5) {
             results.push("Heads");
             heads += 1;
         } else {
