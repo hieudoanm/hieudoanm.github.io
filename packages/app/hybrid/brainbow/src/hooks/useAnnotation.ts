@@ -20,6 +20,7 @@ type AnnotationAction =
   | { type: 'setActiveLayer'; id: string }
   | { type: 'addAnnotation'; annotation: Annotation }
   | { type: 'removeAnnotation'; id: string }
+  | { type: 'removeAnnotations'; ids: string[] }
   | { type: 'replaceLayers'; layers: AnnotationLayer[] }
   | { type: 'undo' }
   | { type: 'redo' };
@@ -34,9 +35,12 @@ const initialState: AnnotationState = {
   future: [],
 };
 
-const pushHistory = (state: AnnotationState): AnnotationState => ({
-  ...state,
-  past: [...state.past, state.layers],
+const withHistory = (
+  before: AnnotationState,
+  after: AnnotationState
+): AnnotationState => ({
+  ...after,
+  past: [...before.past, before.layers],
   future: [],
 });
 
@@ -57,7 +61,7 @@ const reducer = (
 ): AnnotationState => {
   switch (action.type) {
     case 'addLayer':
-      return pushHistory({
+      return withHistory(state, {
         ...state,
         layers: [...state.layers, action.layer],
         activeLayerId: action.layer.id,
@@ -67,17 +71,19 @@ const reducer = (
       if (layers.length === 0) return state;
       const activeLayerId =
         state.activeLayerId === action.id ? layers[0].id : state.activeLayerId;
-      return pushHistory({ ...state, layers, activeLayerId });
+      return withHistory(state, { ...state, layers, activeLayerId });
     }
     case 'toggleLayerVisibility':
-      return pushHistory(
+      return withHistory(
+        state,
         withLayer(state, action.id, (layer) => ({
           ...layer,
           visible: action.visible,
         }))
       );
     case 'setLayerColor':
-      return pushHistory(
+      return withHistory(
+        state,
         withLayer(state, action.id, (layer) => ({
           ...layer,
           color: action.color,
@@ -90,7 +96,8 @@ const reducer = (
         (layer) => layer.id === state.activeLayerId
       );
       if (!target) return state;
-      return pushHistory(
+      return withHistory(
+        state,
         withLayer(state, target.id, (layer) => ({
           ...layer,
           annotations: [...layer.annotations, action.annotation],
@@ -102,12 +109,31 @@ const reducer = (
         (layer) => layer.id === state.activeLayerId
       );
       if (!target) return state;
-      return pushHistory(
+      return withHistory(
+        state,
         withLayer(state, target.id, (layer) => ({
           ...layer,
           annotations: layer.annotations.filter(
             (annotation) => annotation.id !== action.id
           ),
+        }))
+      );
+    }
+    case 'removeAnnotations': {
+      const target = state.layers.find(
+        (layer) => layer.id === state.activeLayerId
+      );
+      if (!target || action.ids.length === 0) return state;
+      const removed = new Set(action.ids);
+      const remaining = target.annotations.filter(
+        (annotation) => !removed.has(annotation.id)
+      );
+      if (remaining.length === target.annotations.length) return state;
+      return withHistory(
+        state,
+        withLayer(state, target.id, (layer) => ({
+          ...layer,
+          annotations: remaining,
         }))
       );
     }
@@ -188,6 +214,10 @@ export const useAnnotation = () => {
     dispatch({ type: 'removeAnnotation', id });
   }, []);
 
+  const removeAnnotations = useCallback((ids: string[]) => {
+    dispatch({ type: 'removeAnnotations', ids });
+  }, []);
+
   const replaceLayers = useCallback((layers: AnnotationLayer[]) => {
     dispatch({ type: 'replaceLayers', layers });
   }, []);
@@ -215,6 +245,7 @@ export const useAnnotation = () => {
     setActiveLayer,
     addAnnotation,
     removeAnnotation,
+    removeAnnotations,
     replaceLayers,
     undo,
     redo,

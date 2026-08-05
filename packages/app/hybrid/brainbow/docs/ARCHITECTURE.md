@@ -70,13 +70,11 @@ src/
 
 Flat routes only — no dynamic `[id]` or `[slug]` segments.
 
-| Route     | Page              | Client | Description                         |
-| --------- | ----------------- | ------ | ----------------------------------- |
-| `/`       | `page.tsx`        | Yes    | Home: import a dataset or open demo |
-| `/viewer` | `viewer/page.tsx` | Yes    | Full-screen image viewer            |
+| Route | Page       | Client | Description                                |
+| ----- | ---------- | ------ | ------------------------------------------ |
+| `/`   | `page.tsx` | Yes    | Viewer (root): auto-loads the demo dataset |
 
-Pass entity IDs via `useSearchParams()` — e.g. `/viewer?dataset=demo` — not
-dynamic segments.
+Pass entity IDs via `useSearchParams()` — not dynamic segments.
 
 ## Rendering Strategy
 

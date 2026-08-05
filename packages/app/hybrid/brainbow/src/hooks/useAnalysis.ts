@@ -3,6 +3,14 @@
 import { useCallback, useState } from 'react';
 import { analyzeRaster, type ImageAnalysis } from '@/lib/analysis/analyze';
 import { analyzeBatch, type BatchResult } from '@/lib/analysis/batch';
+import {
+  createPreset,
+  loadPresets,
+  removePreset,
+  savePreset,
+  type AnalysisParameters,
+  type AnalysisPreset,
+} from '@/lib/analysis/presets';
 import type { ImageRaster } from '@/types/image';
 
 export type AnalysisStatus = 'idle' | 'running' | 'done' | 'error';
@@ -11,25 +19,59 @@ export interface AnalysisState {
   status: AnalysisStatus;
   progress: number;
   error: string | null;
-  k: number;
+  options: AnalysisParameters;
   result: ImageAnalysis | null;
   batch: BatchResult | null;
+  presets: AnalysisPreset[];
 }
 
 const INITIAL_STATE: AnalysisState = {
   status: 'idle',
   progress: 0,
   error: null,
-  k: 5,
+  options: { k: 5, iterations: 10, stride: 4, minRegionSize: 4 },
   result: null,
   batch: null,
+  presets: loadPresets(),
 };
 
 export const useAnalysis = () => {
   const [state, setState] = useState<AnalysisState>(INITIAL_STATE);
 
   const setK = useCallback((k: number) => {
-    setState((current) => ({ ...current, k }));
+    setState((current) => ({
+      ...current,
+      options: { ...current.options, k },
+    }));
+  }, []);
+
+  const setOptions = useCallback((patch: Partial<AnalysisParameters>) => {
+    setState((current) => ({
+      ...current,
+      options: { ...current.options, ...patch },
+    }));
+  }, []);
+
+  const applyPreset = useCallback((preset: AnalysisPreset) => {
+    setState((current) => ({
+      ...current,
+      options: { ...preset.options },
+    }));
+  }, []);
+
+  const saveCurrentPreset = useCallback(
+    (name: string) => {
+      const preset = createPreset(name, state.options);
+      const presets = savePreset(preset);
+      setState((current) => ({ ...current, presets }));
+      return preset;
+    },
+    [state.options]
+  );
+
+  const deletePreset = useCallback((id: string) => {
+    const presets = removePreset(id);
+    setState((current) => ({ ...current, presets }));
   }, []);
 
   const analyzeSingle = useCallback(
@@ -42,7 +84,7 @@ export const useAnalysis = () => {
       }));
       await new Promise((resolve) => setTimeout(resolve, 0));
       try {
-        const result = analyzeRaster(raster, { k: state.k });
+        const result = analyzeRaster(raster, state.options);
         setState((current) => ({
           ...current,
           status: 'done',
@@ -58,7 +100,7 @@ export const useAnalysis = () => {
         }));
       }
     },
-    [state.k]
+    [state.options]
   );
 
   const analyzeImages = useCallback(
@@ -72,7 +114,7 @@ export const useAnalysis = () => {
       try {
         const batch = await analyzeBatch(
           rasters,
-          { k: state.k },
+          state.options,
           (completed, total) =>
             setState((current) => ({
               ...current,
@@ -95,7 +137,7 @@ export const useAnalysis = () => {
         }));
       }
     },
-    [state.k]
+    [state.options]
   );
 
   const reset = useCallback(() => {
@@ -109,7 +151,18 @@ export const useAnalysis = () => {
     }));
   }, []);
 
-  return { ...state, setK, analyzeSingle, analyzeImages, reset };
+  return {
+    ...state,
+    k: state.options.k,
+    setK,
+    setOptions,
+    applyPreset,
+    saveCurrentPreset,
+    deletePreset,
+    analyzeSingle,
+    analyzeImages,
+    reset,
+  };
 };
 
 export type UseAnalysisReturn = ReturnType<typeof useAnalysis>;

@@ -1,4 +1,5 @@
 import type { FC } from 'react';
+import { FiRotateCcw, FiRotateCw } from 'react-icons/fi';
 import { Toolbar } from '@/components/atoms/Toolbar';
 import { Button } from '@/components/atoms/Button';
 
@@ -7,6 +8,10 @@ export interface ImageToolbarProps {
   onZoomIn: () => void;
   onZoomOut: () => void;
   onFit: () => void;
+  onRotateCW: () => void;
+  onRotateCCW: () => void;
+  onFlipX: () => void;
+  onFlipY: () => void;
 }
 
 export const ImageToolbar: FC<ImageToolbarProps> = ({
@@ -14,6 +19,10 @@ export const ImageToolbar: FC<ImageToolbarProps> = ({
   onZoomIn,
   onZoomOut,
   onFit,
+  onRotateCW,
+  onRotateCCW,
+  onFlipX,
+  onFlipY,
 }) => (
   <div className="flex items-center gap-2">
     <Toolbar>
@@ -36,6 +45,37 @@ export const ImageToolbar: FC<ImageToolbarProps> = ({
       </Button>
       <Button variant="ghost" size="sm" onClick={onFit}>
         Fit
+      </Button>
+    </Toolbar>
+    <span className="border-base-content/20 h-5 w-px border-l" />
+    <Toolbar>
+      <Button
+        variant="outline"
+        size="sm"
+        aria-label="Rotate counterclockwise"
+        onClick={onRotateCCW}>
+        <FiRotateCcw />
+      </Button>
+      <Button
+        variant="outline"
+        size="sm"
+        aria-label="Rotate clockwise"
+        onClick={onRotateCW}>
+        <FiRotateCw />
+      </Button>
+      <Button
+        variant="outline"
+        size="sm"
+        aria-label="Flip horizontally"
+        onClick={onFlipX}>
+        Flip H
+      </Button>
+      <Button
+        variant="outline"
+        size="sm"
+        aria-label="Flip vertically"
+        onClick={onFlipY}>
+        Flip V
       </Button>
     </Toolbar>
   </div>

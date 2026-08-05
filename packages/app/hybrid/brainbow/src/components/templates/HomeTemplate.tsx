@@ -7,17 +7,21 @@ import {
   type DragEvent,
   type FC,
 } from 'react';
-import { FiCamera, FiImage, FiUpload } from 'react-icons/fi';
+import { FiCamera, FiFile, FiImage, FiUpload } from 'react-icons/fi';
 import { Button } from '@/components/atoms/Button';
 import { Badge } from '@/components/atoms/Badge';
+import { isTauri } from '@/lib/native';
 
 export interface HomeTemplateProps {
   onOpenDemo: () => void;
   onImportFiles: (files: File[]) => void;
   onNativeImport?: () => void;
+  onOpenProject?: () => void;
+  onOpenProjectFiles?: (files: File[]) => void;
 }
 
-const SUPPORTED_IMAGE_ACCEPT = 'image/png,image/jpeg,image/webp';
+const SUPPORTED_IMAGE_ACCEPT =
+  'image/png,image/jpeg,image/webp,image/tiff,image/tif,.tif,.tiff';
 
 const filesFromTransfer = (event: DragEvent<HTMLDivElement>): File[] =>
   Array.from(event.dataTransfer.files);
@@ -26,9 +30,12 @@ export const HomeTemplate: FC<HomeTemplateProps> = ({
   onOpenDemo,
   onImportFiles,
   onNativeImport,
+  onOpenProject,
+  onOpenProjectFiles,
 }) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const cameraRef = useRef<HTMLInputElement>(null);
+  const projectInputRef = useRef<HTMLInputElement>(null);
   const [dragging, setDragging] = useState(false);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
@@ -39,11 +46,27 @@ export const HomeTemplate: FC<HomeTemplateProps> = ({
     event.target.value = '';
   };
 
+  const handleProjectChange = (event: ChangeEvent<HTMLInputElement>): void => {
+    const files = Array.from(event.target.files ?? []);
+    if (files.length > 0) {
+      onOpenProjectFiles?.(files);
+    }
+    event.target.value = '';
+  };
+
   const handleImport = (): void => {
     if (onNativeImport) {
       onNativeImport();
     } else {
       inputRef.current?.click();
+    }
+  };
+
+  const handleOpenProject = (): void => {
+    if (onOpenProject && isTauri()) {
+      onOpenProject();
+    } else {
+      projectInputRef.current?.click();
     }
   };
 
@@ -97,6 +120,10 @@ export const HomeTemplate: FC<HomeTemplateProps> = ({
           <FiUpload className="mr-2" />
           Import image
         </Button>
+        <Button variant="outline" size="lg" onClick={handleOpenProject}>
+          <FiFile className="mr-2" />
+          Open project
+        </Button>
         <div className="md:hidden">
           <Button
             variant="outline"
@@ -123,6 +150,14 @@ export const HomeTemplate: FC<HomeTemplateProps> = ({
           className="hidden"
           data-testid="camera-input"
           onChange={handleChange}
+        />
+        <input
+          ref={projectInputRef}
+          type="file"
+          accept=".brainbow,application/json"
+          className="hidden"
+          data-testid="project-input"
+          onChange={handleProjectChange}
         />
       </div>
 

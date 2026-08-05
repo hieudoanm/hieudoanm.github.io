@@ -1,15 +1,25 @@
 import type { ChannelAnalysis } from '@/lib/image/histogram';
-import type { ChannelState, ImageRaster, ViewTransform } from '@/types/image';
+import type {
+  Calibration,
+  ChannelPlane,
+  ChannelState,
+  ImageRaster,
+  ViewTransform,
+} from '@/types/image';
 import type { ViewerSize } from '@/hooks/useImageViewer';
 import type { Annotation, AnnotationLayer, ViewTool } from '@/types/annotation';
+import type { CompareMode } from '@/types/compare';
 import type { AnalysisStatus } from '@/hooks/useAnalysis';
 import type { ImageAnalysis } from '@/lib/analysis/analyze';
 import type { BatchResult } from '@/lib/analysis/batch';
+import type { AnalysisPreset } from '@/lib/analysis/presets';
+import type { ProjectSnapshot } from '@/lib/history/history';
 
 export interface ViewerTemplateProps {
   raster: ImageRaster | null;
   name: string | null;
   channels: ChannelState[];
+  planes: ChannelPlane[];
   analyses: ChannelAnalysis[] | null;
   transform: ViewTransform;
   size: ViewerSize;
@@ -18,9 +28,17 @@ export interface ViewerTemplateProps {
   onFitView: () => void;
   onZoomIn: () => void;
   onZoomOut: () => void;
+  onRotateCW: () => void;
+  onRotateCCW: () => void;
+  onFlipX: () => void;
+  onFlipY: () => void;
   onTransformChange: (transform: ViewTransform) => void;
   onToggleChannel: (id: string, visible: boolean) => void;
   onSetChannelOpacity: (id: string, opacity: number) => void;
+  onSetChannelSourcePlane: (id: string, sourcePlane: string) => void;
+  onAddChannel: () => void;
+  calibration: Calibration;
+  onCalibrationChange: (calibration: Calibration) => void;
   onSaveProject: () => void;
   layers: AnnotationLayer[];
   activeLayer: AnnotationLayer | null;
@@ -30,27 +48,67 @@ export interface ViewerTemplateProps {
   onToolChange: (tool: ViewTool) => void;
   onAddLayer: () => void;
   onRemoveLayer: (id: string) => void;
+  onExportRoiZip: () => void;
+  onExportGeoJson: () => void;
+  onExportAnnotationsCsv: () => void;
+  onExportSvg: () => void;
+  onExportWebViewer: () => void;
   onToggleLayerVisibility: (id: string, visible: boolean) => void;
   onSetLayerColor: (id: string, color: string) => void;
   onSetActiveLayer: (id: string) => void;
   onAddAnnotation: (annotation: Annotation) => void;
+  onRemoveAnnotations: (ids: string[]) => void;
   onUndo: () => void;
   onRedo: () => void;
+  snapEnabled: boolean;
+  gridVisible: boolean;
+  onToggleSnap: (enabled: boolean) => void;
+  onToggleGrid: (visible: boolean) => void;
+  compareRaster: ImageRaster | null;
+  compareMode: CompareMode;
+  compareDivider: number;
+  onCompareModeChange: (mode: CompareMode) => void;
+  onCompareDividerChange: (position: number) => void;
+  onLoadCompareFiles: (files: File[]) => void;
+  onClearCompare: () => void;
   analysisStatus: AnalysisStatus;
   analysisProgress: number;
   analysisError: string | null;
   k: number;
   analysisResult: ImageAnalysis | null;
   batchResult: BatchResult | null;
+  presets: AnalysisPreset[];
+  onApplyPreset: (preset: AnalysisPreset) => void;
+  onSavePreset: (name: string) => void;
+  onDeletePreset: (id: string) => void;
+  densityOverlay: ImageRaster | null;
+  showDensity: boolean;
+  densityRadius: number;
+  onToggleDensity: (show: boolean) => void;
+  onDensityRadiusChange: (radius: number) => void;
   onSetK: (k: number) => void;
   onRunSingle: () => void;
   onBatchFiles: (files: File[]) => void;
   onExportCsv: () => void;
   onExportJson: () => void;
+  onExportRegionsCsv: () => void;
   onExportPng: () => void;
   onOpenReport: () => void;
+  onShareExport: () => void;
+  onShareReport: () => void;
   reportOpen: boolean;
   reportTitle: string;
   reportHtml: string;
   onCloseReport: () => void;
+  stackSliceCount: number;
+  stackIndex: number;
+  onStackIndexChange: (index: number) => void;
+  onAnalyzeStack: () => void;
+  historyOpen: boolean;
+  onOpenHistory: () => void;
+  onCloseHistory: () => void;
+  historySnapshots: ProjectSnapshot[];
+  onHistoryCommit: (message: string) => void;
+  onHistoryRestore: (id: string) => void;
+  onHistoryRemove: (id: string) => void;
 }

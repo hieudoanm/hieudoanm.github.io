@@ -1,9 +1,12 @@
 import { test, expect } from '@playwright/test';
 
-test('homepage loads', async ({ page }) => {
+test('app opens directly into the viewer', async ({ page }) => {
   await page.goto('/');
 
-  await expect(page.getByRole('heading', { name: 'Brainbow' })).toBeVisible();
+  await expect(page.getByText('demo-brainbow.tif')).toBeVisible();
+  await expect(
+    page.getByRole('button', { name: 'Open version history' })
+  ).toBeVisible();
 });
 
 test('page has correct title', async ({ page }) => {

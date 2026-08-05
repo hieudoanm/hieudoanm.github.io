@@ -48,6 +48,18 @@ export const panBy = (
   offsetY: transform.offsetY + deltaY,
 });
 
+export const centerView = (
+  imageX: number,
+  imageY: number,
+  scale: number,
+  viewWidth: number,
+  viewHeight: number
+): ViewTransform => ({
+  scale,
+  offsetX: viewWidth / 2 - imageX * scale,
+  offsetY: viewHeight / 2 - imageY * scale,
+});
+
 export const imageToView = (
   transform: ViewTransform,
   imageX: number,

@@ -13,8 +13,8 @@ pnpm lint         # ESLint
 
 ```text
 NoSleep/
-  index.tsx            # Entry component — wake-lock acquisition + elapsed timer
-  utils.ts             # getElapsed — TimeUnit breakdown (pure)
+  index.tsx            # Entry component — wake-lock acquisition + status badge
+  utils.ts             # getElapsed — TimeUnit breakdown; WAKE_LOCK_STATUS meta (pure)
 ```
 
 ## Overview
@@ -24,9 +24,17 @@ browser has been "awake" as a live-updating elapsed timer.
 
 ## Logic
 
-- On mount, `useEffect` acquires `navigator.wakeLock.request('screen')` (silent
-  failure if unsupported or denied) and re-acquires it on `visibilitychange`;
-  the lock is released on unmount
+- `wakeLockStatus` drives a status badge (`checking` → `active` → `released`,
+  `unsupported`, or `denied`): on mount `acquire()` requests
+  `navigator.wakeLock.request('screen')`, sets `active` on success, `denied`
+  with the error name when the request throws, and `unsupported` when the API is
+  absent; a `release` listener on the sentinel sets `released` (guarded so a
+  stale sentinel's event can't override a newer active lock)
+- Re-acquires on `visibilitychange` to `visible` (setting `checking` first) and
+  releases the current sentinel on unmount
+- The badge renders `WAKE_LOCK_STATUS[wakeLockStatus]` label/description from
+  `utils.ts`; a `data-status` attribute and an `role="alert"` error line expose
+  the raw state for debugging
 - A 1-second `setInterval` recomputes `getElapsed(startTimeRef.current)`, which
   breaks the elapsed time into years/months/days/hours/minutes/seconds
 - Only non-zero `TimeUnit` values render, each zero-padded to two digits, with

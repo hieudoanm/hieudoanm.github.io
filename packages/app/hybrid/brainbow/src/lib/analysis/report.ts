@@ -24,6 +24,8 @@ export const buildMethodsSnippet = (
 const hex = (color: { r: number; g: number; b: number }): string =>
   `#${[color.r, color.g, color.b].map((value) => value.toString(16).padStart(2, '0')).join('')}`;
 
+const REGION_ROWS_CAP = 500;
+
 const analysisToTable = (analysis: ImageAnalysis): string => {
   const rows = analysis.summary.clusters
     .map(
@@ -34,11 +36,34 @@ const analysisToTable = (analysis: ImageAnalysis): string => {
         `<td>${cluster.regionCount}</td></tr>`
     )
     .join('');
+  const regionCount = analysis.regionStats.length;
+  const regionRows = analysis.regionStats
+    .slice(0, REGION_ROWS_CAP)
+    .map(
+      (region) =>
+        `<tr><td>${region.id + 1}</td><td>${region.cluster + 1}</td>` +
+        `<td>${region.area.toLocaleString()}</td>` +
+        `<td>${region.meanIntensity.toFixed(1)}</td>` +
+        `<td>${region.centroidX.toFixed(1)}, ${region.centroidY.toFixed(1)}</td></tr>`
+    )
+    .join('');
+  const regionTable =
+    regionCount === 0
+      ? ''
+      : `<h3>Regions (${regionCount}${
+          regionCount > REGION_ROWS_CAP
+            ? `, showing first ${REGION_ROWS_CAP}`
+            : ''
+        })</h3>` +
+        `<table><thead><tr><th>#</th><th>Cluster</th><th>Area</th>` +
+        `<th>Mean intensity</th><th>Centroid</th></tr></thead>` +
+        `<tbody>${regionRows}</tbody></table>`;
   return (
     `<h3>Clusters</h3>` +
     `<table><thead><tr><th>Cluster</th><th>Color</th><th>Pixels</th>` +
     `<th>Coverage</th><th>Regions</th></tr></thead><tbody>${rows}</tbody></table>` +
-    `<p>Shannon diversity index: ${analysis.summary.diversity.toFixed(3)}</p>`
+    `<p>Shannon diversity index: ${analysis.summary.diversity.toFixed(3)}</p>` +
+    regionTable
   );
 };
 

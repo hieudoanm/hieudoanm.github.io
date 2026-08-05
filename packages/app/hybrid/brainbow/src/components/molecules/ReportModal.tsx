@@ -1,14 +1,20 @@
 import type { FC } from 'react';
-import { FiX } from 'react-icons/fi';
+import { FiShare, FiX } from 'react-icons/fi';
 import { Button } from '@/components/atoms/Button';
 
 export interface ReportModalProps {
   title: string;
   html: string;
   onClose: () => void;
+  onShare?: () => void;
 }
 
-export const ReportModal: FC<ReportModalProps> = ({ title, html, onClose }) => (
+export const ReportModal: FC<ReportModalProps> = ({
+  title,
+  html,
+  onClose,
+  onShare,
+}) => (
   <div
     className="bg-base-300/50 fixed inset-0 z-50 flex items-center justify-center p-4"
     role="dialog"
@@ -18,6 +24,16 @@ export const ReportModal: FC<ReportModalProps> = ({ title, html, onClose }) => (
       <div className="flex items-center justify-between border-b p-3">
         <h2 className="text-base">{title}</h2>
         <div className="flex items-center gap-2">
+          {onShare ? (
+            <Button
+              variant="outline"
+              size="sm"
+              aria-label="Share report"
+              onClick={onShare}>
+              <FiShare />
+              Share
+            </Button>
+          ) : null}
           <Button variant="outline" size="sm" onClick={() => window.print()}>
             Print
           </Button>

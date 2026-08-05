@@ -41,6 +41,32 @@ describe('analyzeRaster', () => {
     expect(result.regions).toHaveLength(2);
   });
 
+  it('computes per-region statistics consistent with region counts', () => {
+    const result = analyzeRaster(makeHalfSplit(), {
+      k: 2,
+      iterations: 10,
+      stride: 1,
+      minRegionSize: 1,
+      random: seededRandom(3),
+    });
+    const perCluster = new Map<number, number>();
+    for (const region of result.regionStats) {
+      perCluster.set(region.cluster, (perCluster.get(region.cluster) ?? 0) + 1);
+    }
+    result.regions.forEach((count, cluster) => {
+      expect(perCluster.get(cluster) ?? 0).toBe(count);
+    });
+    const totalArea = result.regionStats.reduce(
+      (sum, region) => sum + region.area,
+      0
+    );
+    expect(totalArea).toBe(result.summary.totalPixels);
+    for (const region of result.regionStats) {
+      expect(region.meanIntensity).toBeGreaterThanOrEqual(0);
+      expect(region.meanIntensity).toBeLessThanOrEqual(255);
+    }
+  });
+
   it('handles an empty raster', () => {
     const result = analyzeRaster({
       width: 0,
