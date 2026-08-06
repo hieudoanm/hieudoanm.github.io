@@ -1,8 +1,10 @@
 import {
   formatCurrency,
   formatDate,
+  formatDateTime,
   formatRelativeDate,
   maskCardNumber,
+  toDateString,
 } from '../format';
 
 describe('formatCurrency', () => {
@@ -21,6 +23,18 @@ describe('formatCurrency', () => {
   it('formats with different currency', () => {
     expect(formatCurrency(100, 'EUR')).toMatch(/100/);
   });
+
+  it('coerces null amounts to zero', () => {
+    expect(formatCurrency(null as unknown as number)).toBe('$0.00');
+  });
+
+  it('coerces NaN amounts to zero', () => {
+    expect(formatCurrency(Number.NaN)).toBe('$0.00');
+  });
+
+  it('falls back to USD for an empty currency', () => {
+    expect(formatCurrency(10, '')).toBe('$10.00');
+  });
 });
 
 describe('formatDate', () => {
@@ -29,6 +43,15 @@ describe('formatDate', () => {
     expect(result).toContain('Jul');
     expect(result).toContain('22');
     expect(result).toContain('2026');
+  });
+});
+
+describe('formatDateTime', () => {
+  it('formats date and time', () => {
+    const result = formatDateTime('2026-07-22T10:30:00');
+    expect(result).toContain('Jul');
+    expect(result).toContain('22');
+    expect(result).toMatch(/10|AM/);
   });
 });
 
@@ -48,6 +71,24 @@ describe('formatRelativeDate', () => {
     const date = new Date();
     date.setDate(date.getDate() - 3);
     expect(formatRelativeDate(date.toISOString())).toBe('3 days ago');
+  });
+
+  it('returns the formatted date for older dates', () => {
+    const date = new Date();
+    date.setDate(date.getDate() - 30);
+    expect(formatRelativeDate(date.toISOString())).toContain(
+      String(date.getFullYear())
+    );
+  });
+});
+
+describe('toDateString', () => {
+  it('formats a date as YYYY-MM-DD', () => {
+    expect(toDateString(new Date(2026, 6, 22))).toBe('2026-07-22');
+  });
+
+  it('pads month and day with zeros', () => {
+    expect(toDateString(new Date(2026, 0, 5))).toBe('2026-01-05');
   });
 });
 

@@ -132,9 +132,64 @@ describe('PdfToFormatTool', () => {
       expect(screen.getByRole('textbox')).toHaveValue('Could not extract text.')
     );
   });
+
+  it('falls back to txt output and plain text mime type', async () => {
+    const download = jest.fn();
+    downloadBlob.mockImplementation(download);
+    render(
+      <PdfToFormatTool
+        config={{
+          id: 't',
+          title: 'T',
+          emoji: 'x',
+          description: 'Convert a PDF',
+          category: 'convert',
+        }}
+      />
+    );
+    await upload();
+    await waitFor(() =>
+      expect(screen.getByRole('textbox')).toHaveValue(
+        'Hello World\nSecond line'
+      )
+    );
+    fireEvent.click(screen.getByRole('button', { name: 'Download' }));
+    expect(download).toHaveBeenCalledWith(expect.any(Blob), 'a.txt');
+  });
 });
 
 describe('EbookConvertTool', () => {
+  const minimalConfig: PdfToolConfig = {
+    id: 'e',
+    title: 'E',
+    emoji: 'x',
+    description: 'Conv',
+    category: 'ebook',
+  };
+
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
+  it('uses default extensions and ignores download without a file', () => {
+    render(<EbookConvertTool config={minimalConfig} />);
+    expect(
+      screen.getByRole('button', { name: 'Download EPUB' })
+    ).toBeDisabled();
+    fireEvent.click(screen.getByRole('button', { name: 'Download EPUB' }));
+    expect(downloadBlob).not.toHaveBeenCalled();
+  });
+
+  it('downloads with the default epub extension after selecting a file', async () => {
+    render(<EbookConvertTool config={minimalConfig} />);
+    await upload();
+    fireEvent.change(screen.getByRole('combobox'), {
+      target: { value: 'high' },
+    });
+    fireEvent.click(screen.getByRole('button', { name: 'Download EPUB' }));
+    expect(downloadBlob).toHaveBeenCalled();
+  });
+
   it('shows file info and downloads with the target extension', async () => {
     const config: PdfToolConfig = {
       ...baseConfig,
@@ -201,6 +256,19 @@ describe('CreateTextToPdfTool', () => {
     render(<CreateTextToPdfTool />);
     fireEvent.change(screen.getByRole('textbox'), { target: { value: '  ' } });
     expect(screen.getByRole('button', { name: 'Create PDF' })).toBeDisabled();
+  });
+
+  it('paginates long text and draws a blank line for a bare heading marker', async () => {
+    const longText =
+      Array.from({ length: 45 }, (_, i) => `line ${i}`).join('\n') + '\n#';
+    render(<CreateTextToPdfTool />);
+    fireEvent.change(screen.getByRole('textbox'), {
+      target: { value: longText },
+    });
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', { name: 'Create PDF' }));
+    });
+    expect(URL.createObjectURL).toHaveBeenCalled();
   });
 });
 
@@ -336,6 +404,25 @@ describe('CreateUrlToPdfTool', () => {
       fireEvent.click(screen.getByRole('button', { name: 'Fetch' }));
     });
     expect(await screen.findByText(/network down/)).toBeInTheDocument();
+  });
+
+  it('does nothing when the print window cannot be opened', async () => {
+    fetchMock.mockResolvedValue({
+      ok: true,
+      text: async () => '<p>fetched content</p>',
+    });
+    jest.spyOn(window, 'open').mockReturnValue(null);
+    render(<CreateUrlToPdfTool />);
+    fireEvent.change(screen.getByPlaceholderText('https://example.com'), {
+      target: { value: 'https://example.com' },
+    });
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', { name: 'Fetch' }));
+    });
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', { name: 'Print as PDF' }));
+    });
+    expect(window.open).toHaveBeenCalledWith('', '_blank');
   });
 });
 

@@ -137,6 +137,10 @@ const Consumer = () => {
       <span data-testid="theme">{data.settings.theme}</span>
       <span data-testid="is-loading">{String(data.isLoading)}</span>
       <span data-testid="first-title">{data.documents[0]?.title}</span>
+      <span data-testid="ann-0-content">
+        {data.annotations[0]?.content ?? ''}
+      </span>
+      <span data-testid="ff-0-value">{data.formFields[0]?.value ?? ''}</span>
       <button
         onClick={() =>
           data.getDocument('doc-1').then((d) => setFetched(d?.title ?? 'none'))
@@ -197,6 +201,22 @@ const Consumer = () => {
       </button>
       <button onClick={() => data.deleteBookmark('bm-1')}>
         delete-bookmark
+      </button>
+      <button
+        onClick={() =>
+          data
+            .getAnnotationsByDocument('doc-1')
+            .then((list) => setFetched(`ann:${list.length}`))
+        }>
+        get-annotations
+      </button>
+      <button
+        onClick={() =>
+          data
+            .getBookmarksByDocument('doc-1')
+            .then((list) => setFetched(`bm:${list.length}`))
+        }>
+        get-bookmarks
       </button>
       <button
         onClick={() =>
@@ -371,12 +391,16 @@ describe('DataProvider', () => {
   });
 
   it('no-ops renaming a missing document', async () => {
+    (db.documents.get as jest.Mock).mockResolvedValueOnce(undefined);
     renderProvider();
     await waitFor(() =>
       expect(screen.getByTestId('doc-count').textContent).toBe('2')
     );
     fireEvent.click(screen.getByText('rename-missing'));
-    await waitFor(() => expect(db.documents.put).not.toHaveBeenCalled());
+    await waitFor(() =>
+      expect(db.documents.get).toHaveBeenCalledWith('missing')
+    );
+    expect(db.documents.put).not.toHaveBeenCalled();
   });
 
   it('opens a document and updates lastOpenedAt', async () => {
@@ -396,12 +420,16 @@ describe('DataProvider', () => {
   });
 
   it('no-ops opening a missing document', async () => {
+    (db.documents.get as jest.Mock).mockResolvedValueOnce(undefined);
     renderProvider();
     await waitFor(() =>
       expect(screen.getByTestId('doc-count').textContent).toBe('2')
     );
     fireEvent.click(screen.getByText('open-missing'));
-    await waitFor(() => expect(db.documents.put).not.toHaveBeenCalled());
+    await waitFor(() =>
+      expect(db.documents.get).toHaveBeenCalledWith('missing')
+    );
+    expect(db.documents.put).not.toHaveBeenCalled();
   });
 
   it('adds and persists an annotation', async () => {
@@ -419,15 +447,17 @@ describe('DataProvider', () => {
   });
 
   it('updates an annotation', async () => {
+    db.annotations.getAll.mockResolvedValue([ann('ann-1'), ann('ann-2')]);
     renderProvider();
     await waitFor(() =>
-      expect(screen.getByTestId('ann-count').textContent).toBe('1')
+      expect(screen.getByTestId('ann-count').textContent).toBe('2')
     );
     fireEvent.click(screen.getByText('update-annotation'));
     await waitFor(() =>
-      expect(db.annotations.put).toHaveBeenCalledWith(
-        expect.objectContaining({ id: 'ann-1', content: 'updated' })
-      )
+      expect(screen.getByTestId('ann-0-content').textContent).toBe('updated')
+    );
+    expect(db.annotations.put).toHaveBeenCalledWith(
+      expect.objectContaining({ id: 'ann-1', content: 'updated' })
     );
   });
 
@@ -476,9 +506,10 @@ describe('DataProvider', () => {
     );
     fireEvent.click(screen.getByText('update-form-field'));
     await waitFor(() =>
-      expect(db.formFields.put).toHaveBeenCalledWith(
-        expect.objectContaining({ id: 'ff-1', value: 'x' })
-      )
+      expect(screen.getByTestId('ff-0-value').textContent).toBe('x')
+    );
+    expect(db.formFields.put).toHaveBeenCalledWith(
+      expect.objectContaining({ id: 'ff-1', value: 'x' })
     );
   });
 
@@ -499,6 +530,25 @@ describe('DataProvider', () => {
       expect(screen.getByTestId('stamp-count').textContent).toBe('1')
     );
     expect(db.stamps.delete).toHaveBeenCalledWith('stamp-1');
+  });
+
+  it('gets annotations and bookmarks by document', async () => {
+    db.annotations.getByDocument.mockResolvedValue([ann('ann-1')]);
+    db.bookmarks.getByDocument.mockResolvedValue([bm('bm-1')]);
+    renderProvider();
+    await waitFor(() =>
+      expect(screen.getByTestId('doc-count').textContent).toBe('2')
+    );
+    fireEvent.click(screen.getByText('get-annotations'));
+    await waitFor(() =>
+      expect(screen.getByTestId('fetched').textContent).toBe('ann:1')
+    );
+    expect(db.annotations.getByDocument).toHaveBeenCalledWith('doc-1');
+    fireEvent.click(screen.getByText('get-bookmarks'));
+    await waitFor(() =>
+      expect(screen.getByTestId('fetched').textContent).toBe('bm:1')
+    );
+    expect(db.bookmarks.getByDocument).toHaveBeenCalledWith('doc-1');
   });
 
   it('updates settings', async () => {

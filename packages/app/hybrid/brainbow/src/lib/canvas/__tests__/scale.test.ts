@@ -1,4 +1,4 @@
-import { scaleBarSpec } from '@/lib/canvas/scale';
+import { drawScaleBar, scaleBarSpec } from '@/lib/canvas/scale';
 
 describe('scaleBarSpec', () => {
   it('returns null when calibration is missing', () => {
@@ -36,5 +36,37 @@ describe('scaleBarSpec', () => {
     const spec = scaleBarSpec(1, 1000, 96);
     expect(spec!.lengthMicrons).toBe(0.1);
     expect(spec!.lengthPx).toBeCloseTo(100);
+  });
+});
+
+describe('drawScaleBar', () => {
+  const ctx = {
+    save: jest.fn(),
+    restore: jest.fn(),
+    beginPath: jest.fn(),
+    moveTo: jest.fn(),
+    lineTo: jest.fn(),
+    stroke: jest.fn(),
+    fillText: jest.fn(),
+  } as unknown as CanvasRenderingContext2D;
+
+  it('traces the bar and labels it in microns', () => {
+    drawScaleBar(
+      ctx,
+      { lengthPx: 100, lengthMicrons: 10, label: '10 µm' },
+      200,
+      100
+    );
+    expect(ctx.beginPath).toHaveBeenCalled();
+    expect(ctx.moveTo).toHaveBeenCalledTimes(3);
+    expect(ctx.lineTo).toHaveBeenCalledTimes(3);
+    expect(ctx.stroke).toHaveBeenCalled();
+    expect(ctx.fillText).toHaveBeenCalledWith(
+      '10 µm',
+      expect.any(Number),
+      expect.any(Number)
+    );
+    expect(ctx.save).toHaveBeenCalled();
+    expect(ctx.restore).toHaveBeenCalled();
   });
 });
