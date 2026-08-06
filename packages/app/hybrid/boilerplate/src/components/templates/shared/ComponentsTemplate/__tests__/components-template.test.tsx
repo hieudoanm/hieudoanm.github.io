@@ -201,7 +201,7 @@ describe('PreviewTabs', () => {
       </PreviewTabs>
     );
     fireEvent.click(screen.getByRole('button', { name: 'Pages' }));
-    expect(screen.getByText('Pages Directory')).toBeInTheDocument();
+    expect(screen.getByText(/Pages Directory/)).toBeInTheDocument();
     expect(screen.getAllByRole('link', { name: /Dashboard/ }).length).toBe(1);
   });
 

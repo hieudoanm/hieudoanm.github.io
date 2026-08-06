@@ -5,3 +5,8 @@ export { CheckoutTemplate } from './CheckoutTemplate';
 export { OrderConfirmationTemplate } from './OrderConfirmationTemplate';
 export { OrderHistoryTemplate } from './OrderHistoryTemplate';
 export { StoreLoadingTemplate } from './StoreLoadingTemplate';
+export { WishlistTemplate } from './WishlistTemplate';
+export { CompareTemplate } from './CompareTemplate';
+export { AddressBookTemplate } from './AddressBookTemplate';
+export { PaymentMethodsTemplate } from './PaymentMethodsTemplate';
+export { OrderTrackingTemplate } from './OrderTrackingTemplate';

@@ -2,3 +2,6 @@ export { BlogListTemplate } from './BlogListTemplate';
 export { BlogItemTemplate } from './BlogItemTemplate';
 export type { BlogPostData } from './BlogItemTemplate';
 export { BlogLoadingTemplate } from './BlogLoadingTemplate';
+export { BlogArchiveTemplate } from './BlogArchiveTemplate';
+export { BlogAuthorTemplate } from './BlogAuthorTemplate';
+export { BlogNewsletterTemplate } from './BlogNewsletterTemplate';

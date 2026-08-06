@@ -3,3 +3,7 @@ export { SignUpTemplate } from './SignUpTemplate';
 export { ForgetPassword } from './ForgetPassword';
 export { ResetPassword } from './ResetPassword';
 export { AuthLoadingTemplate } from './AuthLoadingTemplate';
+export { VerifyEmailTemplate } from './VerifyEmailTemplate';
+export { TwoFactorTemplate } from './TwoFactorTemplate';
+export { LockScreenTemplate } from './LockScreenTemplate';
+export { ChangePasswordTemplate } from './ChangePasswordTemplate';

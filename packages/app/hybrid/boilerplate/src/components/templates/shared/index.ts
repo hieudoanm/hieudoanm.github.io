@@ -8,3 +8,8 @@ export { SearchTemplate } from './SearchTemplate';
 export { GlobalErrorTemplate } from './GlobalErrorTemplate';
 export { OnboardingTemplate } from './OnboardingTemplate';
 export { PageShell } from './PageShell';
+export { DataTableTemplate } from './DataTableTemplate';
+export { FormsShowcaseTemplate } from './FormsShowcaseTemplate';
+export { ChartsGalleryTemplate } from './ChartsGalleryTemplate';
+export { ModalsTemplate } from './ModalsTemplate';
+export { ForbiddenTemplate } from './ForbiddenTemplate';
