@@ -6,7 +6,8 @@
   "publisher": "hieudoanm",
   "license": "GPL-3.0",
   "engines": {
-    "vscode": "^1.107.0"
+    "node": "26.6.0",
+    "vscode": "1.999.0"
   },
   "categories": [
     "Notebooks"
