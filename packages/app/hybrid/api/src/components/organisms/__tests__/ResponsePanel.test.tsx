@@ -46,4 +46,12 @@ describe('ResponsePanel', () => {
     expect(screen.getByText('content-type')).toBeInTheDocument();
     expect(screen.getByText('application/json')).toBeInTheDocument();
   });
+
+  it('toggles back to body view', () => {
+    render(<ResponsePanel response={response} loading={false} error={null} />);
+    fireEvent.click(screen.getByText('Headers'));
+    fireEvent.click(screen.getByText('Body'));
+    expect(screen.getByText(/{\s*"name": "Ada"\s*}/)).toBeInTheDocument();
+    expect(screen.queryByText('content-type')).not.toBeInTheDocument();
+  });
 });

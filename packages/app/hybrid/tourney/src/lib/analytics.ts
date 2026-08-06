@@ -76,19 +76,12 @@ export const calculateAnalytics = (
 
     for (const id of [match.participant1Id, match.participant2Id]) {
       if (id === null) continue;
-      if (id === match.winnerId) {
-        const prev = currentStreaks.get(id) ?? 0;
-        currentStreaks.set(id, prev + 1);
-      } else {
-        currentStreaks.set(id, 0);
+      const streak =
+        id === match.winnerId ? (currentStreaks.get(id) ?? 0) + 1 : 0;
+      currentStreaks.set(id, streak);
+      if (streak > (streakMap.get(id) ?? 0)) {
+        streakMap.set(id, streak);
       }
-    }
-  }
-
-  for (const [id, streak] of currentStreaks) {
-    const best = streakMap.get(id) ?? 0;
-    if (streak > best) {
-      streakMap.set(id, streak);
     }
   }
 
@@ -155,8 +148,7 @@ export const predictStandings = (
       m.participant1Id !== null &&
       m.participant2Id !== null &&
       m.participant1Score !== null &&
-      m.participant2Score !== null &&
-      m.winnerId !== null
+      m.participant2Score !== null
   );
   const remaining = tournamentMatches.filter(
     (m) =>

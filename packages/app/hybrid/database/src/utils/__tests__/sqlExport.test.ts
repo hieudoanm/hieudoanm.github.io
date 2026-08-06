@@ -1,4 +1,4 @@
-import type { SqliteCell } from '@/types/sqlite';
+import type { ExportFormat, SqliteCell } from '@/types/sqlite';
 import {
   formatBytes,
   formatNumber,
@@ -109,6 +109,11 @@ describe('convertToSQL', () => {
   it('handles zero rows', () => {
     expect(convertToSQL('t', ['c'], [])).toBe('-- No rows in "t"');
   });
+
+  it('renders null and blob values as NULL', () => {
+    const result = convertToSQL('t', ['c'], [[null], [new Uint8Array([1, 2])]]);
+    expect(result).toContain('VALUES (NULL);');
+  });
 });
 
 describe('getExportContent', () => {
@@ -130,5 +135,11 @@ describe('getExportContent', () => {
 
   it('returns SQL for sql format', () => {
     expect(getExportContent('sql', 't', cols, rows)).toContain('INSERT INTO');
+  });
+
+  it('returns an empty string for an unknown format', () => {
+    expect(
+      getExportContent('unknown' as unknown as ExportFormat, 't', cols, rows)
+    ).toBe('');
   });
 });

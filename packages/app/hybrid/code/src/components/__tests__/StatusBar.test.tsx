@@ -88,4 +88,30 @@ describe('StatusBar', () => {
     render(<StatusBar {...defaultProps} fileSize={2048} />);
     expect(screen.getByText('2.0 KB')).toBeInTheDocument();
   });
+
+  it('renders file size in MB', () => {
+    render(<StatusBar {...defaultProps} fileSize={2 * 1024 * 1024} />);
+    expect(screen.getByText('2.0 MB')).toBeInTheDocument();
+  });
+
+  it('shows TEXT badge for files without an extension', () => {
+    render(<StatusBar {...defaultProps} path="/project/LICENSE" />);
+    expect(screen.getByText('TEXT')).toBeInTheDocument();
+  });
+
+  it('calls onToggleAutoSave when auto-save button is clicked', async () => {
+    const onToggleAutoSave = jest.fn();
+    render(<StatusBar {...defaultProps} onToggleAutoSave={onToggleAutoSave} />);
+    const buttons = screen.getAllByRole('button');
+    await userEvent.click(buttons[1]);
+    expect(onToggleAutoSave).toHaveBeenCalled();
+  });
+
+  it('calls onToggleWordWrap when word wrap button is clicked', async () => {
+    const onToggleWordWrap = jest.fn();
+    render(<StatusBar {...defaultProps} onToggleWordWrap={onToggleWordWrap} />);
+    const buttons = screen.getAllByRole('button');
+    await userEvent.click(buttons[2]);
+    expect(onToggleWordWrap).toHaveBeenCalled();
+  });
 });

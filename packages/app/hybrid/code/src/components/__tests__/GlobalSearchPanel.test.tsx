@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { GlobalSearchPanel } from '../GlobalSearchPanel';
 
@@ -69,5 +69,54 @@ describe('GlobalSearchPanel', () => {
     const buttons = screen.getAllByRole('button');
     await userEvent.click(buttons[buttons.length - 1]);
     expect(onClose).toHaveBeenCalled();
+  });
+
+  describe('search triggers', () => {
+    afterEach(() => {
+      jest.useRealTimers();
+    });
+
+    it('debounces onSearch after typing', () => {
+      jest.useFakeTimers();
+      const onSearch = jest.fn();
+      const onQueryChange = jest.fn();
+      render(<GlobalSearchPanel {...makeProps({ onSearch, onQueryChange })} />);
+      const input = screen.getByPlaceholderText('Search files...');
+      fireEvent.change(input, { target: { value: 'react' } });
+      expect(onQueryChange).toHaveBeenCalledWith('react');
+      expect(onSearch).not.toHaveBeenCalled();
+      jest.advanceTimersByTime(300);
+      expect(onSearch).toHaveBeenCalledWith('react');
+    });
+
+    it('only searches the latest query when typing quickly', () => {
+      jest.useFakeTimers();
+      const onSearch = jest.fn();
+      render(<GlobalSearchPanel {...makeProps({ onSearch })} />);
+      const input = screen.getByPlaceholderText('Search files...');
+      fireEvent.change(input, { target: { value: 'r' } });
+      fireEvent.change(input, { target: { value: 're' } });
+      jest.advanceTimersByTime(300);
+      expect(onSearch).toHaveBeenCalledTimes(1);
+      expect(onSearch).toHaveBeenCalledWith('re');
+    });
+
+    it('calls onSearch immediately on Enter', () => {
+      const onSearch = jest.fn();
+      render(
+        <GlobalSearchPanel {...makeProps({ query: 'hooks', onSearch })} />
+      );
+      const input = screen.getByPlaceholderText('Search files...');
+      fireEvent.keyDown(input, { key: 'Enter' });
+      expect(onSearch).toHaveBeenCalledWith('hooks');
+    });
+
+    it('calls onClose on Escape', () => {
+      const onClose = jest.fn();
+      render(<GlobalSearchPanel {...makeProps({ onClose })} />);
+      const input = screen.getByPlaceholderText('Search files...');
+      fireEvent.keyDown(input, { key: 'Escape' });
+      expect(onClose).toHaveBeenCalled();
+    });
   });
 });

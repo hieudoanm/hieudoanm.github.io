@@ -18,8 +18,8 @@ const config: Config = {
     '/node_modules/(?!\\.pnpm|@codemirror|@lezer|marked|dompurify|d3-force|d3-dispatch|d3-quadtree|d3-timer)/',
   ],
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1',
     '\\.(css|scss|sass|less)$': '<rootDir>/src/test/style-mock.js',
+    '^@/(.*)$': '<rootDir>/src/$1',
   },
   collectCoverage: true,
   coverageDirectory: '<rootDir>/coverage',
@@ -30,6 +30,14 @@ const config: Config = {
     '!src/**/__tests__/**',
     '!src/**/*.test.{ts,tsx}',
   ],
+  coverageThreshold: {
+    global: {
+      statements: 90,
+      branches: 90,
+      functions: 90,
+      lines: 90,
+    },
+  },
 };
 
 export default config;

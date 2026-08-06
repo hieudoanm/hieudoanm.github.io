@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { ContextMenu } from '../ContextMenu';
 
@@ -146,5 +146,34 @@ describe('ContextMenu', () => {
     const menu = container.firstChild as HTMLElement;
     expect(menu.style.left).toBe('50px');
     expect(menu.style.top).toBe('75px');
+  });
+
+  it('copies the full path when path does not start with rootPath', async () => {
+    const writeText = jest.fn();
+    Object.assign(navigator, {
+      clipboard: { writeText },
+    });
+    render(
+      <ContextMenu
+        {...defaultProps}
+        rootPath="/other"
+        path="/project/file.ts"
+      />
+    );
+    await userEvent.click(screen.getByText('Copy relative path'));
+    expect(writeText).toHaveBeenCalledWith('/project/file.ts');
+  });
+
+  it('closes when Escape is pressed', async () => {
+    render(<ContextMenu {...defaultProps} />);
+    expect(screen.getByText('Delete')).toBeInTheDocument();
+    fireEvent.keyDown(document, { key: 'Escape' });
+    expect(defaultProps.onClose).toHaveBeenCalled();
+  });
+
+  it('closes when clicking outside the menu', async () => {
+    render(<ContextMenu {...defaultProps} />);
+    fireEvent.mouseDown(document.body);
+    expect(defaultProps.onClose).toHaveBeenCalled();
   });
 });

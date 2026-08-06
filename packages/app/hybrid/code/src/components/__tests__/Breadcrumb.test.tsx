@@ -36,4 +36,12 @@ describe('Breadcrumb', () => {
     const projects = screen.getAllByText('project');
     expect(projects).toHaveLength(2);
   });
+
+  it('falls back to the full rootPath when it has no folder name', () => {
+    const { container } = render(
+      <Breadcrumb rootPath="/" filePath="/file.txt" />
+    );
+    expect(container.querySelectorAll('span').length).toBeGreaterThan(0);
+    expect(screen.getAllByText('/')).toHaveLength(2);
+  });
 });

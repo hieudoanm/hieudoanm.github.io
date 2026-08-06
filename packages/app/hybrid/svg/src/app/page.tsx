@@ -6,10 +6,9 @@ import { Providers } from '@/providers/Providers';
 import { useData } from '@/providers/DataProvider';
 import { useToast } from '@/providers/ToastProvider';
 import { SVG_TEMPLATES } from '@/data/models';
-import { formatRelativeTime, downloadFile, exportAsSVG } from '@/utils/format';
+import { formatRelativeTime } from '@/utils/format';
 import {
   FiPlus,
-  FiUpload,
   FiTrash2,
   FiEdit3,
   FiFile,
@@ -69,12 +68,6 @@ const HomePageContent: FC = () => {
       setRenameId(null);
       addToast('Renamed successfully', 'success');
     }
-  };
-
-  const handleExport = (doc: { title: string }) => {
-    const svgContent = exportAsSVG(doc as never);
-    downloadFile(svgContent, `${doc.title}.svg`);
-    addToast('Exported as SVG', 'success');
   };
 
   const templateIcons: Record<string, FC<{ className?: string }>> = {

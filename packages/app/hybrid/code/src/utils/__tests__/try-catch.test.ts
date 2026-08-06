@@ -57,6 +57,32 @@ describe('createTryCatch', () => {
       detail: 'sync error',
     });
   });
+
+  it('void returns true when fn succeeds', async () => {
+    const onError = jest.fn();
+    const tryCatch = createTryCatch(onError);
+
+    const ok = await tryCatch.void(() => Promise.resolve(), 'save');
+
+    expect(ok).toBe(true);
+    expect(onError).not.toHaveBeenCalled();
+  });
+
+  it('void returns false and reports when fn fails', async () => {
+    const onError = jest.fn();
+    const tryCatch = createTryCatch(onError);
+
+    const ok = await tryCatch.void(
+      () => Promise.reject(new Error('write failed')),
+      'save'
+    );
+
+    expect(ok).toBe(false);
+    expect(onError).toHaveBeenCalledWith({
+      message: 'Failed to save',
+      detail: 'write failed',
+    });
+  });
 });
 
 describe('formatError', () => {

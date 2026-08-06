@@ -41,4 +41,25 @@ describe('storage', () => {
     );
     expect(loadNotes()).toEqual([customNote]);
   });
+
+  it('seeds when every stored entry is invalid', () => {
+    window.localStorage.setItem(STORAGE_KEY, JSON.stringify([{ nope: true }]));
+    expect(loadNotes()).toEqual(seedNotes());
+  });
+
+  it('warns and keeps the vault when persisting fails', () => {
+    const warn = jest.spyOn(console, 'warn').mockImplementation(() => {});
+    const setItem = jest
+      .spyOn(Storage.prototype, 'setItem')
+      .mockImplementation(() => {
+        throw new Error('quota');
+      });
+    saveNotes([customNote]);
+    expect(warn).toHaveBeenCalledWith(
+      '[Storage] failed to save vault',
+      expect.any(Error)
+    );
+    setItem.mockRestore();
+    warn.mockRestore();
+  });
 });

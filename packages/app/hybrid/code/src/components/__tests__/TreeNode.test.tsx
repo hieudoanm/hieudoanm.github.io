@@ -127,4 +127,37 @@ describe('TreeNode', () => {
     const chevron = container.querySelector('svg');
     expect(chevron).toBeInTheDocument();
   });
+
+  it('expands when expandAllTrigger increases', async () => {
+    const { rerender } = render(
+      <TreeNode {...defaultProps} node={dirNode} expandAllTrigger={0} />
+    );
+    expect(screen.queryByText('app.ts')).not.toBeInTheDocument();
+    rerender(
+      <TreeNode {...defaultProps} node={dirNode} expandAllTrigger={1} />
+    );
+    expect(screen.getByText('app.ts')).toBeInTheDocument();
+  });
+
+  it('collapses when collapseAllTrigger increases', async () => {
+    const { rerender } = render(
+      <TreeNode {...defaultProps} node={dirNode} expandAllTrigger={1} />
+    );
+    expect(screen.getByText('app.ts')).toBeInTheDocument();
+    rerender(
+      <TreeNode
+        {...defaultProps}
+        node={dirNode}
+        expandAllTrigger={1}
+        collapseAllTrigger={1}
+      />
+    );
+    expect(screen.queryByText('app.ts')).not.toBeInTheDocument();
+  });
+
+  it('highlights the active file', () => {
+    render(<TreeNode {...defaultProps} activePath="root/index.ts" />);
+    const row = screen.getByText('index.ts').closest('div');
+    expect(row).toHaveClass('bg-primary/10');
+  });
 });

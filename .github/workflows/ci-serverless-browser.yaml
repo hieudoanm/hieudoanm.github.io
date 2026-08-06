@@ -36,7 +36,7 @@ jobs:
       - name: Build
         run: cargo build --release
       - name: Upload Build Artifacts
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@v7.0.1
         with:
           name: serverless-browser-rust
           path: packages/serverless/browser/rust/target/release/browserverless
@@ -53,7 +53,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Download Build Artifacts
-        uses: actions/download-artifact@v8
+        uses: actions/download-artifact@v8.0.1
         with:
           path: artifacts
       - name: Collect Release Artifacts

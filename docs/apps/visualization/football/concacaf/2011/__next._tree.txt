@@ -1,4 +1,4 @@
-:HL["/_next/static/chunks/0sywfae24nm-t.css","style"]
+:HL["/_next/static/chunks/144o2i-baby5s.css","style"]
 :HL["/_next/static/chunks/3dg5js_4gytle.css","style"]
 :HL["/_next/static/media/00ea0ef410d3b1a3-s.p.375z7oghv30ug.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/3c285486269019b7-s.p.2g-0we2o5_ngd.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
@@ -7,4 +7,4 @@
 :HL["/_next/static/media/8f46d218c8f79e34-s.p.2wu4yy186g04j.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/9d978ba009f47915-s.p.1x4h7xumh6h0q.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/a4f4f75ad654963f-s.p.1hvvd1t-trplq.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-0:{"tree":{"name":"","param":null,"prefetchHints":4180,"slots":{"children":{"name":"(products)","param":null,"prefetchHints":4192,"slots":{"children":{"name":"apps","param":null,"prefetchHints":4192,"slots":{"children":{"name":"visualization","param":null,"prefetchHints":4192,"slots":{"children":{"name":"football","param":null,"prefetchHints":4192,"slots":{"children":{"name":"tournament","param":{"type":"d","key":"concacaf","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"year","param":{"type":"d","key":"2011","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}}}}}}}}}},"staleTime":300,"buildId":"YIrwdrc_N7hCntpqqVNlm"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4180,"slots":{"children":{"name":"(products)","param":null,"prefetchHints":4192,"slots":{"children":{"name":"apps","param":null,"prefetchHints":4192,"slots":{"children":{"name":"visualization","param":null,"prefetchHints":4192,"slots":{"children":{"name":"football","param":null,"prefetchHints":4192,"slots":{"children":{"name":"tournament","param":{"type":"d","key":"concacaf","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"year","param":{"type":"d","key":"2011","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}}}}}}}}}},"staleTime":300,"buildId":"hdFz3ISMQv_u9aePqok3-"}

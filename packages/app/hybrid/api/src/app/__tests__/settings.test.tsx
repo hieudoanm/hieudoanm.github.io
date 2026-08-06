@@ -1,13 +1,18 @@
 import { render, screen, fireEvent } from '@testing-library/react';
+import { useRouter } from 'next/navigation';
 import SettingsPage from '../settings/page';
 
 jest.mock('next/navigation', () => ({
-  useRouter: () => ({ push: jest.fn() }),
+  useRouter: jest.fn(),
 }));
+
+const mockPush = jest.fn();
 
 describe('SettingsPage', () => {
   beforeEach(() => {
     localStorage.clear();
+    mockPush.mockClear();
+    (useRouter as jest.Mock).mockReturnValue({ push: mockPush });
   });
 
   it('renders theme picker and data management', () => {
@@ -38,5 +43,11 @@ describe('SettingsPage', () => {
     fireEvent.click(screen.getByText('Clear history and draft'));
     expect(localStorage.getItem('api-client:history')).toBeNull();
     expect(localStorage.getItem('api-client:draft')).toBeNull();
+  });
+
+  it('navigates back to the client on back button click', () => {
+    render(<SettingsPage />);
+    fireEvent.click(screen.getAllByRole('button')[0]);
+    expect(mockPush).toHaveBeenCalledWith('/');
   });
 });

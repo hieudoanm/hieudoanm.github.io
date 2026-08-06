@@ -33,7 +33,7 @@ export const Badge: FC<BadgeProps> = ({
   children,
 }) => (
   <span
-    className={`badge ${variantClass[variant]}${outline ? 'badge-outline' : ''}`}>
+    className={`badge ${variantClass[variant]} ${outline ? 'badge-outline' : ''}`}>
     {children}
   </span>
 );

@@ -93,6 +93,17 @@ describe('ApiClient', () => {
     expect(await screen.findByText('Failed to fetch')).toBeInTheDocument();
   });
 
+  it('shows a generic error when the failure is not an Error', async () => {
+    global.fetch = jest.fn().mockRejectedValue('boom');
+    render(<ApiClient />);
+    fireEvent.change(screen.getByLabelText('Request URL'), {
+      target: { value: 'https://api.example.com/users' },
+    });
+    fireEvent.click(screen.getByText('Send'));
+
+    expect(await screen.findByText('Request failed')).toBeInTheDocument();
+  });
+
   it('restores a saved draft from localStorage', () => {
     localStorage.setItem(
       'api-client:draft',
@@ -114,5 +125,27 @@ describe('ApiClient', () => {
     expect(screen.getByLabelText('Request URL')).toHaveValue(
       'https://saved.com'
     );
+  });
+
+  it('clears the request history', async () => {
+    render(<ApiClient />);
+    fireEvent.change(screen.getByLabelText('Request URL'), {
+      target: { value: 'https://api.example.com/users' },
+    });
+    fireEvent.click(screen.getByText('Send'));
+    await screen.findByText('https://api.example.com/users');
+
+    fireEvent.click(screen.getByText('Clear'));
+    expect(screen.getByText('No requests yet')).toBeInTheDocument();
+  });
+
+  it('toggles the history list on mobile', () => {
+    render(<ApiClient />);
+    const toggle = screen.getByRole('button', { name: /History/ });
+    expect(screen.getAllByText('No requests yet')).toHaveLength(1);
+    fireEvent.click(toggle);
+    expect(screen.getAllByText('No requests yet')).toHaveLength(2);
+    fireEvent.click(toggle);
+    expect(screen.getAllByText('No requests yet')).toHaveLength(1);
   });
 });

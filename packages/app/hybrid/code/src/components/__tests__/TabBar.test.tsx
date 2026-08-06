@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { TabBar } from '../TabBar';
 
@@ -113,5 +113,94 @@ describe('TabBar', () => {
       />
     );
     expect(screen.getByText('Button.tsx')).toBeInTheDocument();
+  });
+
+  it('opens the context menu on right-click', async () => {
+    render(
+      <TabBar
+        tabs={[{ path: 'a.ts', dirty: false }]}
+        activePath="a.ts"
+        {...defaultProps}
+      />
+    );
+    const tab = screen.getByText('a.ts');
+    fireEvent.contextMenu(tab);
+    expect(screen.getByText('Close Others')).toBeInTheDocument();
+  });
+
+  it('calls onClose when context menu Close is clicked', async () => {
+    const onClose = jest.fn();
+    render(
+      <TabBar
+        tabs={[{ path: 'a.ts', dirty: false }]}
+        activePath="a.ts"
+        {...defaultProps}
+        onClose={onClose}
+      />
+    );
+    fireEvent.contextMenu(screen.getByText('a.ts'));
+    await userEvent.click(screen.getByText('Close'));
+    expect(onClose).toHaveBeenCalledWith('a.ts');
+  });
+
+  it('calls onCloseOthers when context menu Close Others is clicked', async () => {
+    const onCloseOthers = jest.fn();
+    render(
+      <TabBar
+        tabs={[
+          { path: 'a.ts', dirty: false },
+          { path: 'b.ts', dirty: false },
+        ]}
+        activePath="a.ts"
+        {...defaultProps}
+        onCloseOthers={onCloseOthers}
+      />
+    );
+    fireEvent.contextMenu(screen.getByText('b.ts'));
+    await userEvent.click(screen.getByText('Close Others'));
+    expect(onCloseOthers).toHaveBeenCalledWith('b.ts');
+  });
+
+  it('calls onCloseAll when context menu Close All is clicked', async () => {
+    const onCloseAll = jest.fn();
+    render(
+      <TabBar
+        tabs={[{ path: 'a.ts', dirty: false }]}
+        activePath="a.ts"
+        {...defaultProps}
+        onCloseAll={onCloseAll}
+      />
+    );
+    fireEvent.contextMenu(screen.getByText('a.ts'));
+    await userEvent.click(screen.getByText('Close All'));
+    expect(onCloseAll).toHaveBeenCalled();
+  });
+
+  it('closes the context menu on Escape', () => {
+    render(
+      <TabBar
+        tabs={[{ path: 'a.ts', dirty: false }]}
+        activePath="a.ts"
+        {...defaultProps}
+      />
+    );
+    fireEvent.contextMenu(screen.getByText('a.ts'));
+    expect(screen.getByText('Close All')).toBeInTheDocument();
+    fireEvent.keyDown(document, { key: 'Escape' });
+    expect(screen.queryByText('Close All')).not.toBeInTheDocument();
+  });
+
+  it('closes the context menu when clicking outside', () => {
+    render(
+      <TabBar
+        tabs={[{ path: 'a.ts', dirty: false }]}
+        activePath="a.ts"
+        {...defaultProps}
+      />
+    );
+    fireEvent.contextMenu(screen.getByText('a.ts'));
+    expect(screen.getByText('Close All')).toBeInTheDocument();
+    fireEvent.mouseDown(document.body);
+    expect(screen.queryByText('Close All')).not.toBeInTheDocument();
   });
 });

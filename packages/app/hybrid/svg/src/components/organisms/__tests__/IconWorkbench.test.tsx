@@ -14,6 +14,13 @@ jest.mock('@/utils/iconGenerator', () => ({
   downloadIconsZip: jest.fn(),
 }));
 
+const mockAddToast = jest.fn();
+
+jest.mock('@/providers/ToastProvider', () => ({
+  ToastProvider: ({ children }: { children: React.ReactNode }) => children,
+  useToast: () => ({ addToast: mockAddToast }),
+}));
+
 const mockGenerateIcons = generateIcons as jest.MockedFunction<
   typeof generateIcons
 >;
@@ -34,7 +41,10 @@ const renderWorkbench = (value = DEFAULT_SVG) => {
 };
 
 describe('IconWorkbench', () => {
-  beforeEach(() => jest.clearAllMocks());
+  beforeEach(() => {
+    jest.clearAllMocks();
+    mockAddToast.mockReset();
+  });
 
   it('renders editor tab with textarea and presets by default', () => {
     renderWorkbench();
@@ -62,6 +72,30 @@ describe('IconWorkbench', () => {
     renderWorkbench();
     fireEvent.click(screen.getByText('Icons'));
     expect(screen.getByText('Icon Generation Source')).toBeInTheDocument();
+  });
+
+  it('switches back to the editor tab', () => {
+    renderWorkbench();
+    fireEvent.click(screen.getByText('Icons'));
+    fireEvent.click(screen.getByText('Editor'));
+    expect(
+      screen.getByPlaceholderText('Paste your SVG code here...')
+    ).toBeInTheDocument();
+  });
+
+  it('edits the textarea value', () => {
+    const { onChange } = renderWorkbench('<svg></svg>');
+    fireEvent.change(
+      screen.getByPlaceholderText('Paste your SVG code here...'),
+      { target: { value: '<svg><circle/></svg>' } }
+    );
+    expect(onChange).toHaveBeenCalledWith('<svg><circle/></svg>');
+  });
+
+  it('switches the preview background mode', () => {
+    renderWorkbench();
+    fireEvent.click(screen.getByText('W'));
+    expect(screen.getByText('W').className).toContain('btn-primary');
   });
 
   it('applies preset code on preset click', () => {
@@ -124,6 +158,59 @@ describe('IconWorkbench', () => {
 
     fireEvent.click(screen.getByText('Download ZIP (All Sizes)'));
     await waitFor(() => expect(downloadIconsZip).toHaveBeenCalled());
+  });
+
+  it('shows an error toast when the zip download fails', async () => {
+    (downloadIconsZip as jest.Mock).mockRejectedValue(new Error('ZIP failed'));
+    mockGenerateIcons.mockResolvedValue([
+      { size: 72, dataUrl: 'data:image/png;base64,aaa', canvas: mockCanvas() },
+    ]);
+
+    renderWorkbench();
+    fireEvent.click(screen.getByText('Generate Icons'));
+    await waitFor(() =>
+      expect(screen.getByText('Generated Icons')).toBeInTheDocument()
+    );
+
+    fireEvent.click(screen.getByText('Download ZIP (All Sizes)'));
+    await waitFor(() =>
+      expect(mockAddToast).toHaveBeenCalledWith(
+        'Failed to download ZIP',
+        'error'
+      )
+    );
+  });
+
+  it('downloads a single icon', async () => {
+    const clickSpy = jest.fn();
+    const originalCreateElement = document.createElement.bind(document);
+    jest.spyOn(document, 'createElement').mockImplementation((tag: string) => {
+      if (tag === 'a') {
+        return {
+          href: '',
+          download: '',
+          click: clickSpy,
+        } as unknown as HTMLElement;
+      }
+      return originalCreateElement(tag);
+    });
+    mockGenerateIcons.mockResolvedValue([
+      { size: 72, dataUrl: 'data:image/png;base64,aaa', canvas: mockCanvas() },
+    ]);
+
+    renderWorkbench();
+    fireEvent.click(screen.getByText('Generate Icons'));
+    await waitFor(() =>
+      expect(screen.getByText('Generated Icons')).toBeInTheDocument()
+    );
+
+    fireEvent.click(screen.getByText('72px'));
+    expect(clickSpy).toHaveBeenCalled();
+    expect(clickSpy.mock.instances[0]).toMatchObject({
+      href: 'data:image/png;base64,aaa',
+      download: 'icon-72x72.png',
+    });
+    jest.restoreAllMocks();
   });
 
   it('processes valid svg file upload', async () => {

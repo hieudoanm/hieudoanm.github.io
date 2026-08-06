@@ -3,8 +3,8 @@ import { render, fireEvent, screen, waitFor } from '@testing-library/react';
 import DBPage from '@/app/db/page';
 
 jest.mock('next/navigation', () => ({
-  useRouter: () => ({ push: jest.fn(), back: jest.fn() }),
-  useSearchParams: () => new URLSearchParams(''),
+  useRouter: jest.fn(),
+  useSearchParams: jest.fn(),
 }));
 
 jest.mock('@/providers/Providers', () => ({
@@ -48,10 +48,19 @@ jest.mock('@/components/molecules/SheetsToolbar', () => ({
 }));
 
 jest.mock('@/components/molecules/SheetsSidebar', () => ({
-  SheetsSidebar: ({ tables, activeTable, onSelectTable }: any) => (
+  SheetsSidebar: ({
+    tables,
+    activeTable,
+    onSelectTable,
+    onToggleTable,
+    expandedTables,
+  }: any) => (
     <div data-testid="sidebar">
       <span data-testid="sidebar-active">{activeTable}</span>
       <span>Tables: {tables.length}</span>
+      <span data-testid="expanded-count">
+        {Object.keys(expandedTables ?? {}).length}
+      </span>
       {tables.map((t: any) => (
         <button
           key={t.name}
@@ -60,6 +69,9 @@ jest.mock('@/components/molecules/SheetsSidebar', () => ({
           {t.name}
         </button>
       ))}
+      <button data-testid="toggle-users" onClick={() => onToggleTable('users')}>
+        Toggle users
+      </button>
     </div>
   ),
 }));
@@ -131,6 +143,10 @@ jest.mock('@/components/molecules/ExportModal', () => ({
 const { useSqlDatabase } = jest.requireMock('@/hooks/useSqlDatabase');
 const { useData } = jest.requireMock('@/providers/DataProvider');
 const { copyToClipboard } = jest.requireMock('@/utils/format');
+const { useRouter } = jest.requireMock('next/navigation');
+const { useSearchParams } = jest.requireMock('next/navigation');
+
+const mockPush = jest.fn();
 
 const defaultDbState = {
   dbInstance: null,
@@ -172,9 +188,24 @@ const dbLoadedState = {
   status: '"users" · 2 rows · 2 columns',
 };
 
+const dbLoadedConnection = {
+  id: 'db-1',
+  name: 'Production DB',
+  filePath: '/data/production.db',
+  size: 15728640,
+  readOnly: true,
+  lastConnected: Date.now() - 3600000,
+  createdAt: Date.now(),
+};
+
 describe('DB page', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+    (useRouter as jest.Mock).mockReturnValue({
+      push: mockPush,
+      back: jest.fn(),
+    });
+    (useSearchParams as jest.Mock).mockReturnValue(new URLSearchParams(''));
     useSqlDatabase.mockReturnValue(defaultDbState);
     useData.mockReturnValue({
       connections: [],
@@ -324,5 +355,141 @@ describe('DB page', () => {
     render(<DBPage />);
     fireEvent.click(screen.getByRole('button', { name: 'Bookmark query' }));
     expect(addBookmark).toHaveBeenCalled();
+  });
+
+  it('sets the current connection from the id param', async () => {
+    const setCurrentConnection = jest.fn();
+    useData.mockReturnValue({
+      connections: [dbLoadedConnection],
+      currentConnection: null,
+      setCurrentConnection,
+      addBookmark: jest.fn(),
+      isLoading: false,
+    });
+    (useSearchParams as jest.Mock).mockReturnValue(
+      new URLSearchParams('id=db-1')
+    );
+    render(<DBPage />);
+    await waitFor(() =>
+      expect(setCurrentConnection).toHaveBeenCalledWith(dbLoadedConnection)
+    );
+  });
+
+  it('navigates home when the id is not found', async () => {
+    useData.mockReturnValue({
+      connections: [dbLoadedConnection],
+      currentConnection: null,
+      setCurrentConnection: jest.fn(),
+      addBookmark: jest.fn(),
+      isLoading: false,
+    });
+    (useSearchParams as jest.Mock).mockReturnValue(
+      new URLSearchParams('id=missing')
+    );
+    render(<DBPage />);
+    await waitFor(() => expect(mockPush).toHaveBeenCalledWith('/'));
+  });
+
+  it('does not navigate while still loading', async () => {
+    useData.mockReturnValue({
+      connections: [],
+      currentConnection: null,
+      setCurrentConnection: jest.fn(),
+      addBookmark: jest.fn(),
+      isLoading: true,
+    });
+    (useSearchParams as jest.Mock).mockReturnValue(
+      new URLSearchParams('id=missing')
+    );
+    render(<DBPage />);
+    expect(mockPush).not.toHaveBeenCalled();
+  });
+
+  it('toggles table expansion', () => {
+    useSqlDatabase.mockReturnValue(dbLoadedState);
+    render(<DBPage />);
+    expect(screen.getByTestId('expanded-count').textContent).toBe('0');
+    fireEvent.click(screen.getByTestId('toggle-users'));
+    expect(screen.getByTestId('expanded-count').textContent).toBe('1');
+    fireEvent.click(screen.getByTestId('toggle-users'));
+    expect(screen.getByTestId('expanded-count').textContent).toBe('1');
+  });
+
+  it('opens a dropped file', async () => {
+    const openDb = jest.fn();
+    useSqlDatabase.mockReturnValue({ ...defaultDbState, openDb });
+    render(<DBPage />);
+    const container = document.querySelector('[class*="overflow-hidden"]')!;
+    const file = new File([new Uint8Array([1, 2, 3])], 'drop.db');
+    fireEvent.dragOver(container, { dataTransfer: { files: [] } });
+    fireEvent.drop(container, { dataTransfer: { files: [file] } });
+    await waitFor(() => expect(openDb).toHaveBeenCalledTimes(1));
+    expect(openDb.mock.calls[0][1]).toBe('drop.db');
+  });
+
+  it('clears dragging state on drag leave', () => {
+    render(<DBPage />);
+    const container = document.querySelector('[class*="overflow-hidden"]')!;
+    fireEvent.dragOver(container, { dataTransfer: { files: [] } });
+    expect(screen.getByText('Drop .db file')).toBeInTheDocument();
+    fireEvent.dragLeave(container);
+    expect(screen.queryByText('Drop .db file')).not.toBeInTheDocument();
+  });
+
+  it('navigates home from the back button', () => {
+    render(<DBPage />);
+    fireEvent.click(screen.getByRole('button', { name: 'Back' }));
+    expect(mockPush).toHaveBeenCalledWith('/');
+  });
+
+  it('toggles the schema sidebar', () => {
+    useSqlDatabase.mockReturnValue(dbLoadedState);
+    render(<DBPage />);
+    expect(screen.getByTestId('sidebar')).toBeInTheDocument();
+    fireEvent.click(screen.getByText('Schema'));
+    expect(screen.queryByTestId('sidebar')).not.toBeInTheDocument();
+    fireEvent.click(screen.getByText('Schema'));
+    expect(screen.getByTestId('sidebar')).toBeInTheDocument();
+  });
+
+  it('executes the query with Ctrl+Enter', () => {
+    useSqlDatabase.mockReturnValue(dbLoadedState);
+    render(<DBPage />);
+    const textarea = screen.getByPlaceholderText('Enter SQL query...');
+    fireEvent.change(textarea, { target: { value: 'SELECT 1' } });
+    fireEvent.keyDown(textarea, { key: 'Enter', ctrlKey: true });
+    expect(dbLoadedState.runQuery).toHaveBeenCalledWith('SELECT 1');
+  });
+
+  it('ignores plain Enter in the query editor', () => {
+    useSqlDatabase.mockReturnValue(dbLoadedState);
+    render(<DBPage />);
+    const textarea = screen.getByPlaceholderText('Enter SQL query...');
+    fireEvent.change(textarea, { target: { value: 'SELECT 1' } });
+    fireEvent.keyDown(textarea, { key: 'Enter' });
+    expect(dbLoadedState.runQuery).not.toHaveBeenCalled();
+  });
+
+  it('pages forward and clamps at the last page', () => {
+    const manyRows = Array.from({ length: 250 }, (_, i) => [i, `User ${i}`]);
+    useSqlDatabase.mockReturnValue({
+      ...dbLoadedState,
+      queryResult: { columns: ['id', 'name'], rows: manyRows },
+    });
+    render(<DBPage />);
+    expect(screen.getByTestId('dv-totalpages').textContent).toBe('3');
+    fireEvent.click(screen.getByTestId('btn-next'));
+    expect(screen.getByTestId('dv-page').textContent).toBe('1');
+    fireEvent.click(screen.getByTestId('btn-next'));
+    expect(screen.getByTestId('dv-page').textContent).toBe('2');
+    fireEvent.click(screen.getByTestId('btn-next'));
+    expect(screen.getByTestId('dv-page').textContent).toBe('2');
+  });
+
+  it('pages backward and clamps at the first page', () => {
+    useSqlDatabase.mockReturnValue(dbLoadedState);
+    render(<DBPage />);
+    fireEvent.click(screen.getByTestId('btn-prev'));
+    expect(screen.getByTestId('dv-page').textContent).toBe('0');
   });
 });

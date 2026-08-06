@@ -39,4 +39,47 @@ describe('RequestTabs', () => {
     fireEvent.click(screen.getByText('Auth'));
     expect(screen.getByLabelText('Auth type')).toHaveValue('none');
   });
+
+  it('updates params from the params tab', () => {
+    render(<RequestTabs request={emptyRequest()} onChange={onChange} />);
+    fireEvent.change(screen.getByLabelText('Query parameter key'), {
+      target: { value: 'q' },
+    });
+    expect(onChange).toHaveBeenCalledWith(
+      expect.objectContaining({ params: expect.any(Array) })
+    );
+  });
+
+  it('updates headers from the headers tab', () => {
+    render(<RequestTabs request={emptyRequest()} onChange={onChange} />);
+    fireEvent.click(screen.getByText('Headers'));
+    fireEvent.change(screen.getByLabelText('Header key'), {
+      target: { value: 'X-K' },
+    });
+    expect(onChange).toHaveBeenCalledWith(
+      expect.objectContaining({ headers: expect.any(Array) })
+    );
+  });
+
+  it('updates the body from the body tab', () => {
+    render(<RequestTabs request={emptyRequest()} onChange={onChange} />);
+    fireEvent.click(screen.getByText('Body'));
+    fireEvent.change(screen.getByLabelText('Request body'), {
+      target: { value: '{"a":1}' },
+    });
+    expect(onChange).toHaveBeenCalledWith(
+      expect.objectContaining({ body: '{"a":1}' })
+    );
+  });
+
+  it('updates auth from the auth tab', () => {
+    render(<RequestTabs request={emptyRequest()} onChange={onChange} />);
+    fireEvent.click(screen.getByText('Auth'));
+    fireEvent.change(screen.getByLabelText('Auth type'), {
+      target: { value: 'bearer' },
+    });
+    expect(onChange).toHaveBeenCalledWith(
+      expect.objectContaining({ authType: 'bearer' })
+    );
+  });
 });

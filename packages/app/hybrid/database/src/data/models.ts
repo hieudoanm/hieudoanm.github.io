@@ -87,7 +87,7 @@ export const MOCK_SCHEMAS: Record<string, TableSchema[]> = {
   ],
 };
 
-const generateRows = (
+export const generateRows = (
   schema: TableSchema,
   count: number
 ): Record<string, unknown>[] =>

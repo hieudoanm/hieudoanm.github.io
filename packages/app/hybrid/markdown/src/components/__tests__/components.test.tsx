@@ -88,6 +88,30 @@ describe('VaultSidebar', () => {
 
     expect(screen.getByText('No notes found.')).toBeInTheDocument();
   });
+
+  it('reports search input changes and closes from mobile', async () => {
+    const user = userEvent.setup();
+    const onSearchChange = jest.fn();
+    const onClose = jest.fn();
+    render(
+      <VaultSidebar
+        notes={seedNotes()}
+        activeId={null}
+        search=""
+        onSearchChange={onSearchChange}
+        onSelect={() => undefined}
+        onNew={() => undefined}
+        onClose={onClose}
+        mobile
+      />
+    );
+
+    await user.type(screen.getByLabelText('Search notes'), 'abc');
+    expect(onSearchChange).toHaveBeenCalledWith('a');
+
+    await user.click(screen.getByLabelText('Close sidebar'));
+    expect(onClose).toHaveBeenCalled();
+  });
 });
 
 describe('ViewControls', () => {

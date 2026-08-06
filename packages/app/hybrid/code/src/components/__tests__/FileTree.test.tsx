@@ -120,4 +120,29 @@ describe('FileTree', () => {
     await userEvent.click(screen.getByText('src'));
     expect(onToggleDir).not.toHaveBeenCalled();
   });
+
+  it('expands all directories when Expand all is clicked', async () => {
+    render(<FileTree root={mockTree} {...defaultProps} />);
+    expect(screen.queryByText('index.ts')).not.toBeInTheDocument();
+    await userEvent.click(screen.getByTitle('Expand all'));
+    expect(screen.getByText('index.ts')).toBeInTheDocument();
+    expect(screen.getByText('README.md')).toBeInTheDocument();
+  });
+
+  it('collapses all directories when Collapse all is clicked', async () => {
+    render(<FileTree root={mockTree} {...defaultProps} />);
+    await userEvent.click(screen.getByTitle('Expand all'));
+    expect(screen.getByText('index.ts')).toBeInTheDocument();
+    await userEvent.click(screen.getByTitle('Collapse all'));
+    expect(screen.queryByText('index.ts')).not.toBeInTheDocument();
+  });
+
+  it('calls onCloseSidebar when Close sidebar is clicked', async () => {
+    const onCloseSidebar = jest.fn();
+    render(
+      <FileTree root={null} {...defaultProps} onCloseSidebar={onCloseSidebar} />
+    );
+    await userEvent.click(screen.getByTitle('Close sidebar'));
+    expect(onCloseSidebar).toHaveBeenCalled();
+  });
 });

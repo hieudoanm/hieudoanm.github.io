@@ -4,4 +4,6 @@ import { TextDecoder, TextEncoder } from 'util';
 global.TextEncoder = TextEncoder as any;
 global.TextDecoder = TextDecoder as any;
 
-Element.prototype.scrollIntoView = () => {};
+if (typeof Element !== 'undefined') {
+  Element.prototype.scrollIntoView = () => {};
+}

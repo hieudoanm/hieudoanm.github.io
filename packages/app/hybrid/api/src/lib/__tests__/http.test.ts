@@ -76,6 +76,22 @@ describe('buildUrl', () => {
       ])
     ).toBe('https://api.example.com/users?page=2');
   });
+
+  it('appends params to a url already ending in a question mark', () => {
+    expect(
+      buildUrl('https://api.example.com/users?', [
+        { id: '1', key: 'page', value: '2', enabled: true },
+      ])
+    ).toBe('https://api.example.com/users?page=2');
+  });
+
+  it('appends params to a url already ending in an ampersand', () => {
+    expect(
+      buildUrl('https://api.example.com/users?limit=10&', [
+        { id: '1', key: 'page', value: '2', enabled: true },
+      ])
+    ).toBe('https://api.example.com/users?limit=10&page=2');
+  });
 });
 
 describe('buildHeaders', () => {
@@ -187,6 +203,11 @@ describe('history', () => {
 
   it('returns empty array on corrupt storage', () => {
     localStorage.setItem('api-client:history', 'not-json');
+    expect(loadHistory()).toEqual([]);
+  });
+
+  it('returns empty array when stored history is not an array', () => {
+    localStorage.setItem('api-client:history', '{"not":"array"}');
     expect(loadHistory()).toEqual([]);
   });
 });

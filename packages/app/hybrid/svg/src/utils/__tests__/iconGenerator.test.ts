@@ -8,6 +8,17 @@ jest.mock('../svgToCanvas', () => ({
   svgToCanvas: jest.fn(),
 }));
 
+const mockFolder = jest.fn();
+const mockGenerateAsync = jest.fn();
+
+jest.mock('jszip', () => ({
+  __esModule: true,
+  default: jest.fn().mockImplementation(() => ({
+    folder: mockFolder,
+    generateAsync: mockGenerateAsync,
+  })),
+}));
+
 const mockedSvgToCanvas = svgToCanvas as jest.MockedFunction<
   typeof svgToCanvas
 >;
@@ -75,6 +86,10 @@ describe('downloadIconsZip', () => {
   const originalCreateElement = document.createElement.bind(document);
 
   beforeEach(() => {
+    mockFolder.mockReset();
+    mockFolder.mockReturnValue({ file: jest.fn() });
+    mockGenerateAsync.mockReset();
+    mockGenerateAsync.mockResolvedValue(new Blob(['zip']));
     URL.createObjectURL = jest.fn(() => 'blob:url');
     URL.revokeObjectURL = jest.fn();
   });
@@ -83,6 +98,9 @@ describe('downloadIconsZip', () => {
 
   it('creates a zip and triggers a download', async () => {
     const clickSpy = jest.fn();
+    const fileSpy = jest.fn();
+    mockFolder.mockReturnValue({ file: fileSpy });
+    mockGenerateAsync.mockResolvedValue(new Blob(['zip']));
     jest.spyOn(document, 'createElement').mockImplementation((tag: string) => {
       if (tag === 'a') {
         return {
@@ -106,8 +124,15 @@ describe('downloadIconsZip', () => {
 
     await downloadIconsZip(icons, 'custom.zip');
 
+    expect(fileSpy).toHaveBeenCalledWith('icon-16x16.png', expect.any(Blob));
     expect(clickSpy).toHaveBeenCalled();
     expect(URL.createObjectURL).toHaveBeenCalled();
+  });
+
+  it('returns early when the zip folder cannot be created', async () => {
+    mockFolder.mockReturnValue(null);
+    await expect(downloadIconsZip([], 'icons.zip')).resolves.toBeUndefined();
+    expect(mockGenerateAsync).not.toHaveBeenCalled();
   });
 
   it('rejects when canvas toBlob returns null', async () => {

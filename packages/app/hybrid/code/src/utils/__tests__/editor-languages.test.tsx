@@ -71,6 +71,35 @@ describe('getLanguageExtension', () => {
     const result = getLanguageExtension('LICENSE');
     expect(result).toBeNull();
   });
+
+  it('returns JavaScript for js, mjs and cjs files', () => {
+    expect(getLanguageExtension('file.js')).not.toBeNull();
+    expect(getLanguageExtension('file.mjs')).not.toBeNull();
+    expect(getLanguageExtension('file.cjs')).not.toBeNull();
+  });
+
+  it('returns JavaScript for jsx files with a path', () => {
+    expect(getLanguageExtension('src/components/Button.jsx')).not.toBeNull();
+  });
+
+  it('returns shell for mk and makefile extensions', () => {
+    expect(getLanguageExtension('build.mk')).not.toBeNull();
+    expect(getLanguageExtension('Makefile.mk')).not.toBeNull();
+  });
+
+  it('returns XML for htm and svg files', () => {
+    expect(getLanguageExtension('file.htm')).not.toBeNull();
+    expect(getLanguageExtension('file.svg')).not.toBeNull();
+  });
+
+  it('returns shell for BSDmakefile basename', () => {
+    expect(getLanguageExtension('BSDMakefile')).not.toBeNull();
+    expect(getLanguageExtension('gnumakefile')).not.toBeNull();
+  });
+
+  it('handles uppercase extensions', () => {
+    expect(getLanguageExtension('file.TS')).not.toBeNull();
+  });
 });
 
 describe('getFileIcon', () => {
@@ -88,6 +117,8 @@ describe('getFileIcon', () => {
   it('returns an SVG for JavaScript files', () => {
     expect(renderIcon('file.js')).toBeInTheDocument();
     expect(renderIcon('file.jsx')).toBeInTheDocument();
+    expect(renderIcon('file.mjs')).toBeInTheDocument();
+    expect(renderIcon('file.cjs')).toBeInTheDocument();
   });
 
   it('returns an SVG for Python files', () => {
@@ -123,5 +154,15 @@ describe('getFileIcon', () => {
 
   it('returns an SVG for unknown extensions', () => {
     expect(renderIcon('file.xyz')).toBeInTheDocument();
+  });
+
+  it('returns an SVG for mk files', () => {
+    expect(renderIcon('file.mk')).toBeInTheDocument();
+  });
+
+  it('returns an SVG for makefile basenames', () => {
+    expect(renderIcon('Makefile')).toBeInTheDocument();
+    expect(renderIcon('GNUmakefile')).toBeInTheDocument();
+    expect(renderIcon('bsdmakefile')).toBeInTheDocument();
   });
 });

@@ -71,6 +71,19 @@ describe('RequestComposer', () => {
     expect(onSend).toHaveBeenCalled();
   });
 
+  it('does not send on other keys', () => {
+    render(
+      <RequestComposer
+        request={emptyRequest()}
+        loading={false}
+        onChange={onChange}
+        onSend={onSend}
+      />
+    );
+    fireEvent.keyDown(screen.getByLabelText('Request URL'), { key: 'Escape' });
+    expect(onSend).not.toHaveBeenCalled();
+  });
+
   it('sends on button click', () => {
     render(
       <RequestComposer

@@ -74,10 +74,20 @@ describe('format', () => {
         selectionStart: 1,
         selectionEnd: 5,
       });
+      expect(applyFormat('word', 0, 4, 'strikethrough')).toEqual({
+        text: '~~word~~',
+        selectionStart: 2,
+        selectionEnd: 6,
+      });
       expect(applyFormat('word', 0, 4, 'inline-code')).toEqual({
         text: '`word`',
         selectionStart: 1,
         selectionEnd: 5,
+      });
+      expect(applyFormat('word', 0, 4, 'code-block')).toEqual({
+        text: '```\nword\n```',
+        selectionStart: 4,
+        selectionEnd: 8,
       });
       expect(applyFormat('word', 4, 4, 'divider')).toEqual({
         text: 'word\n\n---\n\n',

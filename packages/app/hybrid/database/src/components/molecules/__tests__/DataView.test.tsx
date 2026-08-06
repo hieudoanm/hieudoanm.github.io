@@ -101,6 +101,13 @@ describe('DataView', () => {
     expect(onSearch).toHaveBeenCalledWith('Ali');
   });
 
+  it('clears the search via the clear button', () => {
+    const onSearch = jest.fn();
+    render(<DataView {...defaultProps} search="Ali" onSearch={onSearch} />);
+    fireEvent.click(screen.getByText('×'));
+    expect(onSearch).toHaveBeenCalledWith('');
+  });
+
   it('calls onSort when column header clicked', () => {
     const onSort = jest.fn();
     render(<DataView {...defaultProps} onSort={onSort} />);

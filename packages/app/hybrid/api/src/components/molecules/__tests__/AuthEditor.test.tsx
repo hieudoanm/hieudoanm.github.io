@@ -42,6 +42,23 @@ describe('AuthEditor', () => {
     expect(screen.getByLabelText('Basic username')).toBeInTheDocument();
     expect(screen.getByLabelText('Basic password')).toBeInTheDocument();
   });
+
+  it('updates basic auth credentials', () => {
+    const request = { ...emptyRequest(), authType: 'basic' as const };
+    render(<AuthEditor request={request} onChange={onChange} />);
+    fireEvent.change(screen.getByLabelText('Basic username'), {
+      target: { value: 'user' },
+    });
+    expect(onChange).toHaveBeenCalledWith(
+      expect.objectContaining({ username: 'user' })
+    );
+    fireEvent.change(screen.getByLabelText('Basic password'), {
+      target: { value: 'pass' },
+    });
+    expect(onChange).toHaveBeenCalledWith(
+      expect.objectContaining({ password: 'pass' })
+    );
+  });
 });
 
 describe('BodyEditor', () => {

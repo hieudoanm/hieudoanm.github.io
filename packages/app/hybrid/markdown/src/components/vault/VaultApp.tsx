@@ -45,9 +45,20 @@ export const VaultApp: FC = () => {
   );
   const graph = useMemo(() => buildGraph(notes), [notes]);
 
+  const handleDocChange = useCallback((content: string): void => {
+    const id = activeIdRef.current;
+    if (!id) return;
+    setNotes((prev) =>
+      prev.map((note) =>
+        note.id === id ? { ...note, content, updatedAt: Date.now() } : note
+      )
+    );
+  }, []);
+
   const { view, setDoc } = useCodeMirror({
     containerRef: editorRef,
     initialDoc: notes[0]?.content ?? '',
+    onChange: handleDocChange,
   });
 
   useEffect(() => {
@@ -70,16 +81,6 @@ export const VaultApp: FC = () => {
       if (saveTimerRef.current) window.clearTimeout(saveTimerRef.current);
     };
   }, [notes]);
-
-  const handleDocChange = useCallback((content: string): void => {
-    const id = activeIdRef.current;
-    if (!id) return;
-    setNotes((prev) =>
-      prev.map((note) =>
-        note.id === id ? { ...note, content, updatedAt: Date.now() } : note
-      )
-    );
-  }, []);
 
   useEffect(() => {
     if (!activeNote) return;

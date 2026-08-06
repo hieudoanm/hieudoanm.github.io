@@ -43,6 +43,22 @@ describe('buildTree', () => {
 
     expect(tree.children![0].name).toBe('src');
   });
+
+  it('falls back to root name when rootPath has no folder segment', () => {
+    const tree = buildTree(['/file.txt'], '/');
+
+    expect(tree.name).toBe('root');
+    expect(tree.children).toHaveLength(1);
+  });
+
+  it('keeps the full path when it does not start with the root path', () => {
+    const tree = buildTree(['other/dir/file.txt'], '/root');
+
+    expect(tree.name).toBe('root');
+    expect(tree.children).toHaveLength(1);
+    expect(tree.children![0].name).toBe('other');
+    expect(tree.children![0].children![0].name).toBe('dir');
+  });
 });
 
 describe('sortTree', () => {
@@ -80,6 +96,41 @@ describe('sortTree', () => {
     expect(tree.children![0].name).toBe('a.ts');
     expect(tree.children![1].name).toBe('b.ts');
     expect(tree.children![2].name).toBe('c.ts');
+  });
+
+  it('recursively sorts nested directories', () => {
+    const tree: FileNode = {
+      type: 'dir',
+      name: 'root',
+      path: '/root',
+      children: [
+        {
+          type: 'dir',
+          name: 'src',
+          path: '/root/src',
+          children: [
+            { type: 'dir', name: 'zz', path: '/root/src/zz' },
+            { type: 'file', name: 'aa.ts', path: '/root/src/aa.ts' },
+            { type: 'dir', name: 'aa', path: '/root/src/aa' },
+          ],
+        },
+      ],
+    };
+
+    sortTree(tree);
+
+    const src = tree.children![0];
+    expect(src.children![0].name).toBe('aa');
+    expect(src.children![1].name).toBe('zz');
+    expect(src.children![2].name).toBe('aa.ts');
+  });
+
+  it('leaves nodes without children untouched', () => {
+    const tree: FileNode = { type: 'file', name: 'a.ts', path: '/root/a.ts' };
+
+    sortTree(tree);
+
+    expect(tree.name).toBe('a.ts');
   });
 });
 

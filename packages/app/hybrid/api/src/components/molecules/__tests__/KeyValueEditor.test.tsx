@@ -61,4 +61,21 @@ describe('KeyValueEditor', () => {
       expect.objectContaining({ key: 'X-New' }),
     ]);
   });
+
+  it('updates only the matching row when there are several', () => {
+    const twoRows = [
+      { id: '1', key: 'a', value: '1', enabled: true },
+      { id: '2', key: 'b', value: '2', enabled: true },
+    ];
+    render(
+      <KeyValueEditor rows={twoRows} onChange={onChange} ariaLabel="Header" />
+    );
+    fireEvent.change(screen.getAllByLabelText('Header value')[0], {
+      target: { value: '10' },
+    });
+    expect(onChange).toHaveBeenCalledWith([
+      expect.objectContaining({ id: '1', value: '10' }),
+      expect.objectContaining({ id: '2', value: '2' }),
+    ]);
+  });
 });

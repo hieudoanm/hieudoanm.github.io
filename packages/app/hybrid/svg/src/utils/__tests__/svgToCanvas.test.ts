@@ -82,6 +82,16 @@ describe('svgToCanvas', () => {
     expect(canvas.height).toBe(128);
   });
 
+  it('ignores non-numeric width and height attributes', async () => {
+    mockImage(true);
+    mockCanvasContext();
+    const svg =
+      '<svg width="auto" height="auto" viewBox="0 0 10 20" xmlns="http://www.w3.org/2000/svg"></svg>';
+    const canvas = await svgToCanvas(svg, 128);
+    expect(canvas.width).toBe(128);
+    expect(canvas.height).toBe(128);
+  });
+
   it('rejects when 2d context is unavailable', async () => {
     mockImage(true);
     jest
