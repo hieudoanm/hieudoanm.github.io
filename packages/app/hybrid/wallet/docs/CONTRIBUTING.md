@@ -117,6 +117,9 @@ Structure components as atoms -> molecules -> organisms -> templates:
 3. Keep tests isolated — each test manages its own state.
 4. Cover boundary conditions and error cases alongside happy paths.
 5. Use `it.each` for data-driven tests; colocate tests with source files.
+6. Maintain ≥50% coverage on statements, branches, functions, and lines —
+   enforced by coverageThreshold in jest.config.ts; run
+   `pnpm exec jest --coverageReporters=text` to view per-file coverage.
 
 ### E2E tests (Playwright)
 

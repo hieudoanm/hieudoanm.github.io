@@ -24,6 +24,14 @@ const config = {
     '!src/**/__tests__/**',
     '!src/**/*.test.{ts,tsx}',
   ],
+  coverageThreshold: {
+    global: {
+      statements: 50,
+      branches: 50,
+      functions: 50,
+      lines: 50,
+    },
+  },
 };
 
 export default createJestConfig(config);
