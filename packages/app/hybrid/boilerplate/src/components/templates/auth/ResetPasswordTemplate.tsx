@@ -7,14 +7,14 @@ import Link from 'next/link';
 import { Header } from '@/components/organisms/Header';
 import { Spinner } from '@/components/atoms/Spinner';
 
-interface ResetPasswordProps {
+interface ResetPasswordTemplateProps {
   onSubmit: (password: string) => void | Promise<void>;
   error?: string;
   success?: boolean;
   loading?: boolean;
 }
 
-export const ResetPassword: FC<ResetPasswordProps> = ({
+export const ResetPasswordTemplate: FC<ResetPasswordTemplateProps> = ({
   onSubmit,
   error,
   success = false,
@@ -174,4 +174,4 @@ export const ResetPassword: FC<ResetPasswordProps> = ({
   );
 };
 
-ResetPassword.displayName = 'ResetPassword';
+ResetPasswordTemplate.displayName = 'ResetPasswordTemplate';

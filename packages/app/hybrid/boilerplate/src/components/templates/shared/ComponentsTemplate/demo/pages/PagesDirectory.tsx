@@ -11,9 +11,13 @@ import {
   FiBell,
   FiBook,
   FiBookOpen,
+  FiBriefcase,
   FiCalendar,
   FiCheckCircle,
   FiCheckSquare,
+  FiChevronDown,
+  FiChevronsRight,
+  FiChevronsUp,
   FiColumns,
   FiCreditCard,
   FiClock,
@@ -23,6 +27,7 @@ import {
   FiEdit3,
   FiFileText,
   FiFolder,
+  FiGift,
   FiGrid,
   FiHeart,
   FiHelpCircle,
@@ -34,7 +39,10 @@ import {
   FiLock,
   FiLogIn,
   FiMail,
+  FiMap,
   FiMapPin,
+  FiMessageSquare,
+  FiMonitor,
   FiRefreshCw,
   FiSearch,
   FiSend,
@@ -45,13 +53,19 @@ import {
   FiShoppingCart,
   FiShuffle,
   FiSmartphone,
+  FiStar,
   FiTable,
+  FiTag,
+  FiTarget,
   FiTerminal,
+  FiTrash2,
   FiTruck,
   FiTrendingUp,
+  FiUpload,
   FiUser,
   FiUserPlus,
   FiUsers,
+  FiZap,
 } from 'react-icons/fi';
 
 interface PageEntry {
@@ -196,6 +210,84 @@ const GROUPS: { title: string; pages: PageEntry[] }[] = [
         icon: <FiActivity />,
         description: 'Recent user activity',
       },
+      {
+        label: 'Expenses',
+        href: '/expenses',
+        icon: <FiDollarSign />,
+        description: 'Expense tracker',
+      },
+      {
+        label: 'Timesheets',
+        href: '/timesheets',
+        icon: <FiClock />,
+        description: 'Weekly timesheet entries',
+      },
+      {
+        label: 'Goals',
+        href: '/goals',
+        icon: <FiTarget />,
+        description: 'Objective & progress tracking',
+      },
+      {
+        label: 'Roadmap',
+        href: '/roadmap',
+        icon: <FiMap />,
+        description: 'Product roadmap timeline',
+      },
+      {
+        label: 'Sprints',
+        href: '/sprints',
+        icon: <FiZap />,
+        description: 'Sprint board & velocity',
+      },
+      {
+        label: 'Reports',
+        href: '/reports',
+        icon: <FiFileText />,
+        description: 'Generated report cards',
+      },
+      {
+        label: 'Contacts',
+        href: '/contacts',
+        icon: <FiUsers />,
+        description: 'Contact list & search',
+      },
+      {
+        label: 'Whiteboard',
+        href: '/whiteboard',
+        icon: <FiEdit3 />,
+        description: 'Collaborative whiteboard',
+      },
+      {
+        label: 'Meetings',
+        href: '/meetings',
+        icon: <FiCalendar />,
+        description: 'Scheduled meetings',
+      },
+      {
+        label: 'Shortcuts',
+        href: '/shortcuts',
+        icon: <FiTerminal />,
+        description: 'Keyboard shortcuts',
+      },
+      {
+        label: 'Import',
+        href: '/import',
+        icon: <FiUpload />,
+        description: 'Data import flow',
+      },
+      {
+        label: 'Webhooks',
+        href: '/webhooks',
+        icon: <FiLink />,
+        description: 'Webhook endpoints',
+      },
+      {
+        label: 'Permissions',
+        href: '/permissions',
+        icon: <FiLock />,
+        description: 'Role permissions matrix',
+      },
     ],
   },
   {
@@ -230,6 +322,54 @@ const GROUPS: { title: string; pages: PageEntry[] }[] = [
         href: '/forbidden',
         icon: <FiAlertOctagon />,
         description: '403 access denied page',
+      },
+      {
+        label: 'Accordion',
+        href: '/accordion',
+        icon: <FiChevronDown />,
+        description: 'Collapsible accordion',
+      },
+      {
+        label: 'Alerts',
+        href: '/alerts',
+        icon: <FiAlertCircle />,
+        description: 'Alert banner variants',
+      },
+      {
+        label: 'Tabs',
+        href: '/tabs',
+        icon: <FiLayers />,
+        description: 'Tab navigation examples',
+      },
+      {
+        label: 'Pagination',
+        href: '/pagination',
+        icon: <FiChevronsRight />,
+        description: 'Paginated list',
+      },
+      {
+        label: 'Tooltips',
+        href: '/tooltips',
+        icon: <FiMessageSquare />,
+        description: 'Tooltip examples',
+      },
+      {
+        label: 'Stepper',
+        href: '/stepper',
+        icon: <FiChevronsUp />,
+        description: 'Multi-step stepper',
+      },
+      {
+        label: 'Upload',
+        href: '/upload',
+        icon: <FiUpload />,
+        description: 'File upload dropzone',
+      },
+      {
+        label: 'Empty States',
+        href: '/empty-states',
+        icon: <FiInbox />,
+        description: 'Empty state placeholders',
       },
     ],
   },
@@ -284,6 +424,30 @@ const GROUPS: { title: string; pages: PageEntry[] }[] = [
         icon: <FiRefreshCw />,
         description: 'Update password form',
       },
+      {
+        label: 'Sessions',
+        href: '/sessions',
+        icon: <FiMonitor />,
+        description: 'Active login sessions',
+      },
+      {
+        label: 'Recovery Codes',
+        href: '/recovery-codes',
+        icon: <FiShield />,
+        description: 'Two-factor recovery codes',
+      },
+      {
+        label: 'Delete Account',
+        href: '/delete-account',
+        icon: <FiTrash2 />,
+        description: 'Account deletion flow',
+      },
+      {
+        label: 'Security',
+        href: '/security',
+        icon: <FiLock />,
+        description: 'Security overview',
+      },
     ],
   },
   {
@@ -330,6 +494,36 @@ const GROUPS: { title: string; pages: PageEntry[] }[] = [
         href: '/resume',
         icon: <FiFileText />,
         description: 'Resume template',
+      },
+      {
+        label: 'Pricing',
+        href: '/pricing',
+        icon: <FiCreditCard />,
+        description: 'Pricing plans',
+      },
+      {
+        label: 'Contact',
+        href: '/contact',
+        icon: <FiMail />,
+        description: 'Contact form',
+      },
+      {
+        label: 'Careers',
+        href: '/careers',
+        icon: <FiBriefcase />,
+        description: 'Job listings',
+      },
+      {
+        label: 'Team',
+        href: '/team',
+        icon: <FiUsers />,
+        description: 'Team directory',
+      },
+      {
+        label: 'Changelog',
+        href: '/changelog',
+        icon: <FiClock />,
+        description: 'Release notes',
       },
     ],
   },
@@ -402,6 +596,36 @@ const GROUPS: { title: string; pages: PageEntry[] }[] = [
         icon: <FiTruck />,
         description: 'Shipment timeline',
       },
+      {
+        label: 'Deals',
+        href: '/store/deals',
+        icon: <FiTag />,
+        description: 'Discount deals',
+      },
+      {
+        label: 'Categories',
+        href: '/store/categories',
+        icon: <FiGrid />,
+        description: 'Product categories',
+      },
+      {
+        label: 'Reviews',
+        href: '/store/reviews',
+        icon: <FiStar />,
+        description: 'Customer reviews',
+      },
+      {
+        label: 'Support',
+        href: '/store/support',
+        icon: <FiHelpCircle />,
+        description: 'Customer support',
+      },
+      {
+        label: 'Gift Cards',
+        href: '/store/gift-cards',
+        icon: <FiGift />,
+        description: 'Gift card purchase',
+      },
     ],
   },
   {
@@ -437,6 +661,24 @@ const GROUPS: { title: string; pages: PageEntry[] }[] = [
         icon: <FiSend />,
         description: 'Subscribe form',
       },
+      {
+        label: 'Categories',
+        href: '/blog/categories',
+        icon: <FiFolder />,
+        description: 'Blog category explorer',
+      },
+      {
+        label: 'Tags',
+        href: '/blog/tags',
+        icon: <FiTag />,
+        description: 'Posts grouped by tag',
+      },
+      {
+        label: 'Search',
+        href: '/blog/search',
+        icon: <FiSearch />,
+        description: 'Live post search',
+      },
     ],
   },
 ];
@@ -445,7 +687,7 @@ const PAGE_COUNT = GROUPS.reduce(
   (total, group) => total + group.pages.length,
   0
 );
-const TEMPLATE_COUNT = 62;
+const TEMPLATE_COUNT = 100;
 
 const PagesDirectory: FC = () => (
   <div className="mx-auto max-w-5xl p-5">
@@ -456,7 +698,7 @@ const PagesDirectory: FC = () => (
       {GROUPS.map((group) => (
         <div key={group.title}>
           <h3 className="text-base-content/50 mb-3 text-xs tracking-[0.2em] uppercase">
-            {group.title}
+            {group.title} ({group.pages.length})
           </h3>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {group.pages.map((page) => (

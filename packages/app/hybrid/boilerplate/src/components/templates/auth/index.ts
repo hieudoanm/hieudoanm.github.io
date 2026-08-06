@@ -1,9 +1,13 @@
 export { SignInTemplate } from './SignInTemplate';
 export { SignUpTemplate } from './SignUpTemplate';
-export { ForgetPassword } from './ForgetPassword';
-export { ResetPassword } from './ResetPassword';
+export { ForgotPasswordTemplate } from './ForgotPasswordTemplate';
+export { ResetPasswordTemplate } from './ResetPasswordTemplate';
 export { AuthLoadingTemplate } from './AuthLoadingTemplate';
 export { VerifyEmailTemplate } from './VerifyEmailTemplate';
 export { TwoFactorTemplate } from './TwoFactorTemplate';
 export { LockScreenTemplate } from './LockScreenTemplate';
 export { ChangePasswordTemplate } from './ChangePasswordTemplate';
+export { SessionsTemplate } from './SessionsTemplate';
+export { RecoveryCodesTemplate } from './RecoveryCodesTemplate';
+export { DeleteAccountTemplate } from './DeleteAccountTemplate';
+export { SecurityOverviewTemplate } from './SecurityOverviewTemplate';

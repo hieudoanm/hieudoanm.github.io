@@ -5,3 +5,6 @@ export { BlogLoadingTemplate } from './BlogLoadingTemplate';
 export { BlogArchiveTemplate } from './BlogArchiveTemplate';
 export { BlogAuthorTemplate } from './BlogAuthorTemplate';
 export { BlogNewsletterTemplate } from './BlogNewsletterTemplate';
+export { BlogCategoriesTemplate } from './BlogCategoriesTemplate';
+export { BlogTagsTemplate } from './BlogTagsTemplate';
+export { BlogSearchTemplate } from './BlogSearchTemplate';

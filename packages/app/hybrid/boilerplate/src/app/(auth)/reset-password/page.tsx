@@ -1,6 +1,6 @@
 'use client';
 
-import { ResetPassword } from '@/components/templates/auth';
+import { ResetPasswordTemplate } from '@/components/templates/auth';
 import { useState } from 'react';
 
 const ResetPasswordPage = () => {
@@ -25,7 +25,7 @@ const ResetPasswordPage = () => {
   };
 
   return (
-    <ResetPassword
+    <ResetPasswordTemplate
       onSubmit={handleSubmit}
       error={error}
       success={success}

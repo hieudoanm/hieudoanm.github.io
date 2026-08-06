@@ -10,3 +10,8 @@ export { CompareTemplate } from './CompareTemplate';
 export { AddressBookTemplate } from './AddressBookTemplate';
 export { PaymentMethodsTemplate } from './PaymentMethodsTemplate';
 export { OrderTrackingTemplate } from './OrderTrackingTemplate';
+export { DealsTemplate } from './DealsTemplate';
+export { CategoriesTemplate } from './CategoriesTemplate';
+export { ReviewsTemplate } from './ReviewsTemplate';
+export { SupportTemplate } from './SupportTemplate';
+export { GiftCardsTemplate } from './GiftCardsTemplate';

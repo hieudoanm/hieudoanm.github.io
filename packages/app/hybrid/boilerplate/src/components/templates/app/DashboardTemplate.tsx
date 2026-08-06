@@ -5,7 +5,10 @@ import { useState } from 'react';
 import {
   FiBarChart2,
   FiBell,
+  FiClock,
   FiDollarSign,
+  FiHome,
+  FiInfo,
   FiMenu,
   FiMonitor,
   FiPackage,
@@ -17,17 +20,11 @@ import {
 } from 'react-icons/fi';
 import { Header } from '@/components/organisms/Header';
 import { Navbar } from '@/components/organisms/Navbar';
-import {
-  FiHome,
-  FiSettings as FiSettingsIcon,
-  FiInfo,
-  FiClock,
-} from 'react-icons/fi';
 
 const NAV_ITEMS = [
   { label: 'Home', href: '/', icon: <FiHome /> },
   { label: 'About', href: '/about', icon: <FiInfo /> },
-  { label: 'Settings', href: '/settings', icon: <FiSettingsIcon /> },
+  { label: 'Settings', href: '/settings', icon: <FiSettings /> },
   { label: 'Version', href: '/version', icon: <FiClock /> },
 ];
 

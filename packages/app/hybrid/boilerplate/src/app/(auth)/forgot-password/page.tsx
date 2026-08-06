@@ -1,6 +1,6 @@
 'use client';
 
-import { ForgetPassword } from '@/components/templates/auth';
+import { ForgotPasswordTemplate } from '@/components/templates/auth';
 import { useState } from 'react';
 
 const ForgotPasswordPage = () => {
@@ -25,7 +25,7 @@ const ForgotPasswordPage = () => {
   };
 
   return (
-    <ForgetPassword
+    <ForgotPasswordTemplate
       onSubmit={handleSubmit}
       error={error}
       success={success}

@@ -34,7 +34,7 @@ export const PageShell: FC<PageShellProps> = ({
   className = '',
 }) => (
   <div
-    className={`flex min-h-dvh flex-col${navItems ? 'pb-20' : ''} ${className}`}>
+    className={`flex min-h-dvh flex-col ${navItems ? 'pb-20' : ''} ${className}`}>
     <Header
       title={title}
       subtitle={subtitle}

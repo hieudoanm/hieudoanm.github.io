@@ -8,14 +8,14 @@ import { Header } from '@/components/organisms/Header';
 import { TextField } from '@/components/atoms/TextField';
 import { Spinner } from '@/components/atoms/Spinner';
 
-interface ForgetPasswordProps {
+interface ForgotPasswordTemplateProps {
   onSubmit: (email: string) => void | Promise<void>;
   error?: string;
   success?: boolean;
   loading?: boolean;
 }
 
-export const ForgetPassword: FC<ForgetPasswordProps> = ({
+export const ForgotPasswordTemplate: FC<ForgotPasswordTemplateProps> = ({
   onSubmit,
   error,
   success = false,
@@ -99,4 +99,4 @@ export const ForgetPassword: FC<ForgetPasswordProps> = ({
   );
 };
 
-ForgetPassword.displayName = 'ForgetPassword';
+ForgotPasswordTemplate.displayName = 'ForgotPasswordTemplate';
