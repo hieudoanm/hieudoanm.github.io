@@ -36,7 +36,7 @@
     "@webpack-cli/generators": "3.0.7",
     "copy-webpack-plugin": "14.0.0",
     "css-loader": "7.1.4",
-    "eslint": "10.8.0",
+    "eslint": "10.8.1",
     "globals": "17.9.0",
     "prettier": "3.9.6",
     "rimraf": "6.1.3",
