@@ -16,6 +16,7 @@ import { Checkbox } from '../Checkbox';
 import { Clock } from '../Clock';
 import { CodeBlock } from '../CodeBlock';
 import { Collapse } from '../Collapse';
+import { Container } from '../Container';
 import { CopyButton } from '../CopyButton';
 import { Countdown } from '../Countdown';
 import { Cube } from '../Cube';
@@ -24,6 +25,9 @@ import { Dock } from '../Dock';
 import { EditableText } from '../EditableText';
 import { EmptyPlaceholder } from '../EmptyPlaceholder';
 import { FileInput } from '../FileInput';
+import { Grid } from '../Grid';
+import { Hover3D } from '../Hover3D';
+import { HoverGallery } from '../HoverGallery';
 import { Icon } from '../Icon';
 import { IconButton } from '../IconButton';
 import { Indicator } from '../Indicator';
@@ -31,12 +35,14 @@ import { Kbd } from '../Kbd';
 import { Label } from '../Label';
 import { LetterAvatar } from '../LetterAvatar';
 import { LinkButton } from '../LinkButton';
+import { Loading } from '../Loading';
 import { Mask } from '../Mask';
 import { MiniMap } from '../MiniMap';
 import { NumberField } from '../NumberField';
 import { OTPInput } from '../OTPInput';
 import { PasswordField } from '../PasswordField';
 import { PhoneMockup } from '../PhoneMockup';
+import { Portal } from '../Portal';
 import { Progress } from '../Progress';
 import { ProgressRing } from '../ProgressRing';
 import { Radio } from '../Radio';
@@ -45,6 +51,8 @@ import { Select } from '../Select';
 import { Separator } from '../Separator';
 import { Skeleton } from '../Skeleton';
 import { Slider } from '../Slider';
+import { Slot } from '../Slot';
+import { Spacer } from '../Spacer';
 import { Spinner } from '../Spinner';
 import { Stack } from '../Stack';
 import { StatusDot } from '../StatusDot';
@@ -53,9 +61,13 @@ import { Switch } from '../Switch';
 import { Tag } from '../Tag';
 import { TagCloud } from '../TagCloud';
 import { Text } from '../Text';
+import { TextRotate } from '../TextRotate';
 import { Textarea } from '../Textarea';
 import { TextField } from '../TextField';
+import { ThemeController } from '../ThemeController';
 import { Tooltip } from '../Tooltip';
+import { Validator } from '../Validator';
+import { VisuallyHidden } from '../VisuallyHidden';
 import { WindowMockup } from '../WindowMockup';
 
 jest.mock('next/link', () => {
@@ -1469,5 +1481,266 @@ describe('TagCloud', () => {
     expect(screen.getByText('react').style.fontSize).toBe(
       screen.getByText('next').style.fontSize
     );
+  });
+});
+
+describe('Container', () => {
+  it('renders children within a centered wrapper', () => {
+    render(<Container>Hello</Container>);
+    expect(screen.getByText('Hello')).toHaveClass(
+      'mx-auto',
+      'w-full',
+      'px-4',
+      'max-w-xl'
+    );
+  });
+
+  it('applies the requested size and className', () => {
+    render(
+      <Container size="2xl" className="my-8">
+        Hello
+      </Container>
+    );
+    expect(screen.getByText('Hello')).toHaveClass('max-w-2xl', 'my-8');
+  });
+});
+
+describe('Grid', () => {
+  it('renders children inside a grid with the default columns', () => {
+    render(
+      <Grid>
+        <span>A</span>
+        <span>B</span>
+      </Grid>
+    );
+    expect(screen.getByText('A').parentElement).toHaveClass(
+      'grid',
+      'grid-cols-1',
+      'gap-4'
+    );
+  });
+
+  it('applies responsive column classes', () => {
+    render(
+      <Grid cols={1} smCols={2} lgCols={3} gap="lg">
+        <span>A</span>
+      </Grid>
+    );
+    const grid = screen.getByText('A').parentElement;
+    expect(grid).toHaveClass(
+      'grid-cols-1',
+      'sm:grid-cols-2',
+      'lg:grid-cols-3',
+      'gap-6'
+    );
+  });
+});
+
+describe('Spacer', () => {
+  it('grows horizontally by default', () => {
+    const { container } = render(<Spacer />);
+    const spacer = container.querySelector('[aria-hidden="true"]');
+    expect(spacer).toHaveClass('flex-1');
+  });
+
+  it('uses a fixed size for vertical spacers', () => {
+    const { container } = render(<Spacer axis="vertical" size={24} />);
+    const spacer = container.querySelector('[aria-hidden="true"]');
+    expect(spacer).not.toHaveClass('flex-1');
+    expect(spacer).toHaveStyle({ height: '24px' });
+  });
+
+  it('uses a fixed width for sized horizontal spacers', () => {
+    const { container } = render(<Spacer axis="horizontal" size={8} />);
+    const spacer = container.querySelector('[aria-hidden="true"]');
+    expect(spacer).toHaveStyle({ width: '8px' });
+  });
+});
+
+describe('VisuallyHidden', () => {
+  it('renders content with the sr-only class', () => {
+    render(<VisuallyHidden>Screen reader text</VisuallyHidden>);
+    const el = screen.getByText('Screen reader text');
+    expect(el).toHaveClass('sr-only');
+  });
+});
+
+describe('Portal', () => {
+  it('renders children into document.body', () => {
+    render(<Portal>Ported</Portal>);
+    expect(screen.getByText('Ported')).toBeInTheDocument();
+    expect(document.body.contains(screen.getByText('Ported'))).toBe(true);
+  });
+
+  it('renders children into a custom container', () => {
+    const host = document.createElement('div');
+    document.body.appendChild(host);
+    render(<Portal container={host}>Custom</Portal>);
+    expect(host).toContainElement(screen.getByText('Custom'));
+  });
+});
+
+describe('Slot', () => {
+  it('merges className onto the child', () => {
+    render(
+      <Slot className="extra">
+        <button type="button">Click</button>
+      </Slot>
+    );
+    expect(screen.getByRole('button')).toHaveClass('extra');
+  });
+
+  it('calls both the child and slot onClick handlers', () => {
+    const childHandler = jest.fn();
+    const slotHandler = jest.fn();
+    render(
+      <Slot onClick={slotHandler}>
+        <button type="button" onClick={childHandler}>
+          Click
+        </button>
+      </Slot>
+    );
+    fireEvent.click(screen.getByRole('button'));
+    expect(childHandler).toHaveBeenCalledTimes(1);
+    expect(slotHandler).toHaveBeenCalledTimes(1);
+  });
+
+  it('preserves the child className when merging', () => {
+    render(
+      <Slot className="extra">
+        <button type="button" className="base">
+          Click
+        </button>
+      </Slot>
+    );
+    expect(screen.getByRole('button')).toHaveClass('base', 'extra');
+  });
+});
+
+describe('Loading', () => {
+  it('renders a spinner by default', () => {
+    const { container } = render(<Loading />);
+    const el = container.querySelector('.loading');
+    expect(el).toHaveClass('loading', 'loading-spinner');
+  });
+
+  it('applies variant and size classes', () => {
+    const { container } = render(<Loading variant="dots" size="lg" />);
+    const el = container.querySelector('.loading');
+    expect(el).toHaveClass('loading-dots', 'loading-lg');
+  });
+});
+
+describe('TextRotate', () => {
+  it('renders each word', () => {
+    render(<TextRotate words={['one', 'two']} />);
+    expect(screen.getByText('one')).toBeInTheDocument();
+    expect(screen.getByText('two')).toBeInTheDocument();
+  });
+
+  it('applies the text-rotate class and duration', () => {
+    render(<TextRotate words={['one']} duration={2000} />);
+    const rotate = document.querySelector('.text-rotate');
+    expect(rotate).toBeInTheDocument();
+    expect(rotate).toHaveStyle({ '--duration': '2000ms' });
+  });
+});
+
+describe('Hover3D', () => {
+  it('wraps children in a hover-3d container', () => {
+    render(<Hover3D>Card</Hover3D>);
+    expect(screen.getByText('Card')).toHaveClass('hover-3d');
+  });
+});
+
+describe('HoverGallery', () => {
+  it('renders one image per gallery item', () => {
+    render(
+      <HoverGallery
+        images={[
+          { src: '/a.png', alt: 'A' },
+          { src: '/b.png', alt: 'B' },
+        ]}
+      />
+    );
+    expect(screen.getByRole('img', { name: 'A' })).toHaveAttribute(
+      'src',
+      '/a.png'
+    );
+    expect(screen.getByRole('img', { name: 'B' })).toBeInTheDocument();
+  });
+
+  it('applies the hover-gallery class to the figure', () => {
+    const { container } = render(
+      <HoverGallery images={[{ src: '/a.png', alt: 'A' }]} />
+    );
+    expect(container.querySelector('figure')).toHaveClass('hover-gallery');
+  });
+});
+
+describe('Validator', () => {
+  it('adds the validator class to the child input', () => {
+    render(
+      <Validator hint="Enter a value">
+        <input aria-label="name" />
+      </Validator>
+    );
+    expect(screen.getByLabelText('name')).toHaveClass('validator');
+  });
+
+  it('shows the hint text', () => {
+    render(
+      <Validator hint="Enter a value">
+        <input aria-label="name" />
+      </Validator>
+    );
+    expect(screen.getByText('Enter a value')).toBeInTheDocument();
+  });
+
+  it('flags invalid state when an error is provided', () => {
+    render(
+      <Validator hint="Enter a value" error="Required">
+        <input aria-label="name" />
+      </Validator>
+    );
+    expect(screen.getByLabelText('name')).toHaveAttribute(
+      'aria-invalid',
+      'true'
+    );
+    expect(screen.getByText('Required')).toBeInTheDocument();
+    expect(screen.queryByText('Enter a value')).not.toBeInTheDocument();
+  });
+
+  it('leaves non-input children untouched', () => {
+    render(
+      <Validator hint="Pick one">
+        <textarea aria-label="bio" />
+      </Validator>
+    );
+    expect(screen.getByLabelText('bio')).not.toHaveClass('validator');
+  });
+});
+
+describe('ThemeController', () => {
+  it('renders a checkbox with the theme-controller class and value', () => {
+    render(<ThemeController theme="dark" label="Dark" />);
+    const input = screen.getByLabelText('Dark');
+    expect(input).toHaveClass('theme-controller');
+    expect(input).toHaveAttribute('value', 'dark');
+  });
+
+  it('notifies changes with the checked state and theme', () => {
+    const onChange = jest.fn();
+    render(<ThemeController theme="dark" onChange={onChange} />);
+    const input = document.querySelector(
+      '.theme-controller'
+    ) as HTMLInputElement;
+    fireEvent.click(input);
+    expect(onChange).toHaveBeenCalledWith(true, 'dark');
+  });
+
+  it('respects the checked prop', () => {
+    render(<ThemeController theme="dark" checked />);
+    expect(document.querySelector('.theme-controller')).toBeChecked();
   });
 });

@@ -1,6 +1,7 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import { FiHome, FiUser } from 'react-icons/fi';
 import { ActivityFeed } from '../ActivityFeed';
+import { AccountMenu } from '../AccountMenu';
 import { AnnouncementBar } from '../AnnouncementBar';
 import { AuthForm } from '../AuthForm';
 import { BlogSection } from '../BlogSection';
@@ -18,16 +19,20 @@ import { EventTimeline } from '../EventTimeline';
 import { FAQSection } from '../FAQSection';
 import { FaqAccordion } from '../FaqAccordion';
 import { FeatureGrid } from '../FeatureGrid';
+import { FilterBar } from '../FilterBar';
 import { Footer } from '../Footer';
 import { GalleryGrid } from '../GalleryGrid';
 import { Header } from '../Header';
 import { Hero } from '../Hero';
 import { InfoCards } from '../InfoCards';
 import { IntegrationsSection } from '../IntegrationsSection';
+import { KanbanBoard } from '../KanbanBoard';
 import { LogosSection } from '../LogosSection';
 import { Marquee } from '../Marquee';
 import { Navbar } from '../Navbar';
+import { NavigationMenu } from '../NavigationMenu';
 import { NewsletterSection } from '../NewsletterSection';
+import { NotificationCenter } from '../NotificationCenter';
 import { PageBreadcrumbs } from '../PageBreadcrumbs';
 import { PageHeader } from '../PageHeader';
 import { PageTabs } from '../PageTabs';
@@ -35,8 +40,10 @@ import { PricingCard } from '../PricingCard';
 import { PricingSection } from '../PricingSection';
 import { ProfileCard } from '../ProfileCard';
 import { ProgressStepper } from '../ProgressStepper';
+import { Section } from '../Section';
 import { Sidebar } from '../Sidebar';
 import { StatsGrid } from '../StatsGrid';
+import { TableOfContents } from '../TableOfContents';
 import { TeamSection } from '../TeamSection';
 import { TestimonialCarousel } from '../TestimonialCarousel';
 import { TestimonialSection } from '../TestimonialSection';
@@ -1579,5 +1586,328 @@ describe('PageTabs', () => {
       <PageTabs tabs={tabs} defaultValue="missing" />
     );
     expect(container.querySelector('[role="tabpanel"]')).toBeEmptyDOMElement();
+  });
+});
+
+describe('Section', () => {
+  it('renders title and description', () => {
+    render(<Section title="Features" description="Everything you need" />);
+    expect(
+      screen.getByRole('heading', { name: 'Features' })
+    ).toBeInTheDocument();
+    expect(screen.getByText('Everything you need')).toBeInTheDocument();
+  });
+
+  it('renders eyebrow, action, and children', () => {
+    render(
+      <Section
+        eyebrow="New"
+        title="Features"
+        action={<button type="button">Action</button>}>
+        <p>Body</p>
+      </Section>
+    );
+    expect(screen.getByText('New')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Action' })).toBeInTheDocument();
+    expect(screen.getByText('Body')).toBeInTheDocument();
+  });
+
+  it('aligns content to the center', () => {
+    const { container } = render(<Section title="Features" align="center" />);
+    const header = container.querySelector('section > div') as HTMLElement;
+    expect(header).toHaveClass('items-center', 'text-center');
+  });
+});
+
+describe('NavigationMenu', () => {
+  const items = [
+    { label: 'Docs', children: <div>Docs panel</div> },
+    { label: 'Pricing', href: '/pricing' },
+  ];
+
+  it('renders each item', () => {
+    render(<NavigationMenu items={items} />);
+    expect(screen.getByRole('button', { name: 'Docs' })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Pricing' })).toHaveAttribute(
+      'href',
+      '/pricing'
+    );
+  });
+
+  it('opens the dropdown panel', () => {
+    render(<NavigationMenu items={items} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Docs' }));
+    expect(screen.getByText('Docs panel')).toBeInTheDocument();
+  });
+
+  it('closes the panel when clicking outside', () => {
+    render(
+      <div>
+        <NavigationMenu items={items} />
+        <button type="button">Outside</button>
+      </div>
+    );
+    fireEvent.click(screen.getByRole('button', { name: 'Docs' }));
+    fireEvent.mouseDown(screen.getByRole('button', { name: 'Outside' }));
+    expect(screen.queryByText('Docs panel')).not.toBeInTheDocument();
+  });
+
+  it('closes the panel on Escape', () => {
+    render(<NavigationMenu items={items} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Docs' }));
+    fireEvent.keyDown(screen.getByRole('button', { name: 'Docs' }), {
+      key: 'Escape',
+    });
+    expect(screen.queryByText('Docs panel')).not.toBeInTheDocument();
+  });
+});
+
+describe('TableOfContents', () => {
+  const toc = [
+    { id: 'intro', label: 'Introduction' },
+    {
+      id: 'usage',
+      label: 'Usage',
+      children: [{ id: 'props', label: 'Props' }],
+    },
+  ];
+
+  it('renders the heading and items', () => {
+    render(<TableOfContents items={toc} />);
+    expect(screen.getByText('On this page')).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: 'Introduction' })
+    ).toBeInTheDocument();
+  });
+
+  it('marks the active item', () => {
+    render(<TableOfContents items={toc} activeId="intro" />);
+    expect(
+      screen.getByRole('button', { name: 'Introduction' })
+    ).toHaveAttribute('aria-current', 'location');
+  });
+
+  it('notifies when an item is selected', () => {
+    const onSelect = jest.fn();
+    render(<TableOfContents items={toc} onSelect={onSelect} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Props' }));
+    expect(onSelect).toHaveBeenCalledWith('props');
+  });
+
+  it('notifies when a top-level item is selected', () => {
+    const onSelect = jest.fn();
+    render(<TableOfContents items={toc} onSelect={onSelect} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Introduction' }));
+    expect(onSelect).toHaveBeenCalledWith('intro');
+  });
+
+  it('marks an active nested item', () => {
+    render(<TableOfContents items={toc} activeId="props" />);
+    expect(screen.getByRole('button', { name: 'Props' })).toHaveClass(
+      'text-primary'
+    );
+  });
+});
+
+describe('NotificationCenter', () => {
+  const notifications = [
+    {
+      id: '1',
+      title: 'Deploy complete',
+      description: 'Production is live',
+      time: '2m',
+      unread: true,
+    },
+    { id: '2', title: 'Build failed', unread: false },
+  ];
+
+  it('renders the bell trigger with the unread badge', () => {
+    render(<NotificationCenter notifications={notifications} />);
+    expect(screen.getByLabelText('Notifications')).toBeInTheDocument();
+    expect(screen.getByText('1')).toBeInTheDocument();
+  });
+
+  it('shows notifications when opened', () => {
+    render(<NotificationCenter notifications={notifications} />);
+    fireEvent.click(screen.getByLabelText('Notifications'));
+    expect(screen.getByText('Deploy complete')).toBeInTheDocument();
+    expect(screen.getByText('Build failed')).toBeInTheDocument();
+  });
+
+  it('invokes onOpen when a notification is clicked', () => {
+    const onOpen = jest.fn();
+    render(
+      <NotificationCenter notifications={notifications} onOpen={onOpen} />
+    );
+    fireEvent.click(screen.getByLabelText('Notifications'));
+    fireEvent.click(screen.getByText('Deploy complete'));
+    expect(onOpen).toHaveBeenCalledWith(notifications[0]);
+  });
+
+  it('invokes onMarkAllRead and hides the badge', () => {
+    const onMarkAllRead = jest.fn();
+    render(
+      <NotificationCenter
+        notifications={notifications}
+        onMarkAllRead={onMarkAllRead}
+      />
+    );
+    fireEvent.click(screen.getByLabelText('Notifications'));
+    fireEvent.click(screen.getByRole('button', { name: 'Mark all read' }));
+    expect(onMarkAllRead).toHaveBeenCalledTimes(1);
+  });
+
+  it('uses the provided unread count', () => {
+    render(
+      <NotificationCenter notifications={notifications} unreadCount={5} />
+    );
+    expect(screen.getByText('5')).toBeInTheDocument();
+  });
+
+  it('shows an empty state', () => {
+    render(<NotificationCenter notifications={[]} />);
+    fireEvent.click(screen.getByLabelText('Notifications'));
+    expect(screen.getByText('No notifications')).toBeInTheDocument();
+  });
+
+  it('closes the panel when clicking outside', () => {
+    render(
+      <div>
+        <NotificationCenter notifications={notifications} />
+        <button type="button">Outside</button>
+      </div>
+    );
+    fireEvent.click(screen.getByLabelText('Notifications'));
+    fireEvent.mouseDown(screen.getByRole('button', { name: 'Outside' }));
+    expect(screen.queryByText('Deploy complete')).not.toBeInTheDocument();
+  });
+});
+
+describe('AccountMenu', () => {
+  const items = [
+    { label: 'Profile', onClick: jest.fn() },
+    { label: 'Sign out', danger: true },
+  ];
+
+  it('renders the account trigger', () => {
+    render(<AccountMenu name="Jane" email="jane@example.com" items={items} />);
+    expect(screen.getByText('Jane')).toBeInTheDocument();
+    expect(screen.getByText('jane@example.com')).toBeInTheDocument();
+  });
+
+  it('opens the menu and runs the item onClick', () => {
+    render(<AccountMenu name="Jane" items={items} />);
+    fireEvent.click(screen.getByRole('button', { name: /Jane/ }));
+    fireEvent.click(screen.getByRole('menuitem', { name: 'Profile' }));
+    expect(items[0].onClick).toHaveBeenCalledTimes(1);
+  });
+
+  it('marks danger items', () => {
+    render(<AccountMenu name="Jane" items={items} />);
+    fireEvent.click(screen.getByRole('button', { name: /Jane/ }));
+    expect(screen.getByRole('menuitem', { name: 'Sign out' })).toHaveClass(
+      'text-error'
+    );
+  });
+
+  it('renders without email and avatar', () => {
+    render(<AccountMenu name="Jane" items={items} />);
+    expect(screen.getByRole('button', { name: /Jane/ })).toBeInTheDocument();
+  });
+
+  it('closes the menu when clicking outside', () => {
+    render(
+      <div>
+        <AccountMenu name="Jane" items={items} />
+        <button type="button">Outside</button>
+      </div>
+    );
+    fireEvent.click(screen.getByRole('button', { name: /Jane/ }));
+    fireEvent.mouseDown(screen.getByRole('button', { name: 'Outside' }));
+    expect(screen.queryByRole('menuitem')).not.toBeInTheDocument();
+  });
+});
+
+describe('FilterBar', () => {
+  it('renders the query input with the placeholder', () => {
+    render(
+      <FilterBar query="" onQueryChange={jest.fn()} placeholder="Find…" />
+    );
+    expect(screen.getByLabelText('Search')).toHaveAttribute(
+      'placeholder',
+      'Find…'
+    );
+  });
+
+  it('reflects the controlled query value', () => {
+    render(<FilterBar query="react" onQueryChange={jest.fn()} />);
+    expect(screen.getByLabelText('Search')).toHaveValue('react');
+  });
+
+  it('notifies query changes', () => {
+    const onQueryChange = jest.fn();
+    render(<FilterBar query="" onQueryChange={onQueryChange} />);
+    fireEvent.change(screen.getByLabelText('Search'), {
+      target: { value: 'next' },
+    });
+    expect(onQueryChange).toHaveBeenCalledWith('next');
+  });
+
+  it('renders children as filter controls', () => {
+    render(
+      <FilterBar query="" onQueryChange={jest.fn()}>
+        <button type="button">Advanced</button>
+      </FilterBar>
+    );
+    expect(
+      screen.getByRole('button', { name: 'Advanced' })
+    ).toBeInTheDocument();
+  });
+});
+
+describe('KanbanBoard', () => {
+  const columns = [
+    {
+      id: 'todo',
+      title: 'To do',
+      cards: [
+        {
+          id: '1',
+          title: 'Draft plan',
+          description: 'Write outline',
+          tag: 'info',
+        },
+      ],
+    },
+    { id: 'done', title: 'Done', cards: [] },
+  ];
+
+  it('renders each column with its card count', () => {
+    render(<KanbanBoard columns={columns} />);
+    expect(screen.getByRole('heading', { name: 'To do' })).toBeInTheDocument();
+    expect(screen.getByText('1')).toBeInTheDocument();
+  });
+
+  it('renders card titles and descriptions', () => {
+    render(<KanbanBoard columns={columns} />);
+    expect(screen.getByText('Draft plan')).toBeInTheDocument();
+    expect(screen.getByText('Write outline')).toBeInTheDocument();
+  });
+
+  it('shows an empty state for empty columns', () => {
+    render(<KanbanBoard columns={columns} />);
+    expect(screen.getByText('Empty')).toBeInTheDocument();
+  });
+
+  it('falls back to a neutral tag class for unknown tags', () => {
+    const custom = [
+      {
+        id: 'x',
+        title: 'Column',
+        cards: [{ id: '1', title: 'Card', tag: 'mystery' }],
+      },
+    ];
+    render(<KanbanBoard columns={custom} />);
+    expect(screen.getByText('mystery')).toHaveClass('badge-ghost');
   });
 });

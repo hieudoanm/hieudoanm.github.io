@@ -878,6 +878,211 @@ Sizes tag labels proportionally to their `weight` between `minSize` and
 <TagCloud tags={[{ label: 'React', weight: 9 }]} />
 ```
 
+### Container
+
+File: `src/components/atoms/Container.tsx`
+
+| Prop         | Type                                                       | Default | Description      |
+| ------------ | ---------------------------------------------------------- | ------- | ---------------- |
+| `size?`      | `'sm' \| 'md' \| 'lg' \| 'xl' \| '2xl' \| '3xl' \| 'full'` | `'xl'`  | Max-width step   |
+| `className?` | `string`                                                   | `''`    | Extra classes    |
+| `children`   | `ReactNode`                                                | —       | Centered content |
+
+Centres content with a responsive max-width and horizontal padding.
+
+```tsx
+<Container size="lg">…</Container>
+```
+
+### Grid
+
+File: `src/components/atoms/Grid.tsx`
+
+| Prop         | Type                                             | Default | Description       |
+| ------------ | ------------------------------------------------ | ------- | ----------------- |
+| `cols?`      | `1 \| 2 \| 3 \| 4 \| 5 \| 6`                     | `1`     | Base column count |
+| `smCols?`    | `1 \| 2 \| 3 \| 4 \| 5 \| 6`                     | —       | Columns at `sm`+  |
+| `lgCols?`    | `1 \| 2 \| 3 \| 4 \| 5 \| 6`                     | —       | Columns at `lg`+  |
+| `gap?`       | `'none' \| 'xs' \| 'sm' \| 'md' \| 'lg' \| 'xl'` | `'md'`  | Gap               |     |
+| `className?` | `string`                                         | `''`    | Extra classes     |
+| `children`   | `ReactNode`                                      | —       | Grid cells        |
+
+Tailwind `grid` with optional responsive column overrides.
+
+```tsx
+<Grid cols={2} lgCols={4} gap="lg">
+  …
+</Grid>
+```
+
+### Hover3D
+
+File: `src/components/atoms/Hover3D.tsx`
+
+| Prop         | Type        | Default | Description     |
+| ------------ | ----------- | ------- | --------------- |
+| `children`   | `ReactNode` | —       | Content to tilt |
+| `className?` | `string`    | `''`    | Extra classes   |
+
+DaisyUI `hover-3d` wrapper — content lifts with a 3D perspective on hover.
+
+```tsx
+<Hover3D>
+  <Card>…</Card>
+</Hover3D>
+```
+
+### HoverGallery
+
+File: `src/components/atoms/HoverGallery.tsx`
+
+| Prop         | Type                             | Default | Description     |
+| ------------ | -------------------------------- | ------- | --------------- |
+| `images`     | `{ src: string; alt: string }[]` | —       | Images to stack |
+| `className?` | `string`                         | `''`    | Extra classes   |
+
+DaisyUI `hover-gallery` — stacked images that fan out on hover.
+
+```tsx
+<HoverGallery images={[{ src: '/a.png', alt: 'A' }]} />
+```
+
+### Loading
+
+File: `src/components/atoms/Loading.tsx`
+
+| Prop         | Type                                                              | Default     | Description         |
+| ------------ | ----------------------------------------------------------------- | ----------- | ------------------- |
+| `variant?`   | `'spinner' \| 'dots' \| 'ring' \| 'ball' \| 'bars' \| 'infinity'` | `'spinner'` | DaisyUI `loading-*` |
+| `size?`      | `'xs' \| 'sm' \| 'md' \| 'lg' \| 'xl'`                            | `'md'`      | Size                |
+| `className?` | `string`                                                          | `''`        | Extra classes       |
+
+Standalone DaisyUI `loading` indicator — the raw spinner without Button wiring.
+
+```tsx
+<Loading variant="dots" size="lg" />
+```
+
+### Portal
+
+File: `src/components/atoms/Portal.tsx` — client component.
+
+| Prop         | Type                                  | Default | Description                   |
+| ------------ | ------------------------------------- | ------- | ----------------------------- |
+| `children`   | `ReactNode`                           | —       | Content to portal             |
+| `container?` | `Element \| DocumentFragment \| null` | —       | Target (else `document.body`) |
+
+Renders children into a container via `createPortal`; returns `null` during SSR.
+
+```tsx
+<Portal>…</Portal>
+```
+
+### Slot
+
+File: `src/components/atoms/Slot.tsx` — client component.
+
+| Prop         | Type              | Default | Description                 |
+| ------------ | ----------------- | ------- | --------------------------- |
+| `children`   | `ReactElement`    | —       | Child element to decorate   |
+| `className?` | `string`          | `''`    | Class merged onto child     |
+| `onClick?`   | `(event) => void` | —       | Handler chained after child |
+
+Merges `className` and chains `onClick` onto its single child — the Radix `Slot`
+pattern.
+
+```tsx
+<Slot className="btn btn-primary">
+  <a href="/signup">Sign up</a>
+</Slot>
+```
+
+### Spacer
+
+File: `src/components/atoms/Spacer.tsx`
+
+| Prop         | Type                         | Default        | Description          |
+| ------------ | ---------------------------- | -------------- | -------------------- |
+| `axis?`      | `'horizontal' \| 'vertical'` | `'horizontal'` | Which axis to expand |
+| `size?`      | `number`                     | —              | Fixed size (px)      |
+| `className?` | `string`                     | `''`           | Extra classes        |
+
+Invisible flex filler: grows to fill free space, or reserves a fixed pixel size.
+
+```tsx
+<Spacer />
+<Spacer axis="vertical" size={24} />
+```
+
+### TextRotate
+
+File: `src/components/atoms/TextRotate.tsx`
+
+| Prop         | Type       | Default | Description            |
+| ------------ | ---------- | ------- | ---------------------- |
+| `words`      | `string[]` | —       | Words to cycle through |
+| `duration?`  | `number`   | `3000`  | Cycle duration in ms   |
+| `className?` | `string`   | `''`    | Extra classes          |
+
+DaisyUI `text-rotate` — vertically stacked words that rotate on an interval.
+
+```tsx
+<TextRotate words={['build', 'ship', 'scale']} />
+```
+
+### ThemeController
+
+File: `src/components/atoms/ThemeController.tsx` — client component.
+
+| Prop        | Type                                        | Default | Description            |
+| ----------- | ------------------------------------------- | ------- | ---------------------- |
+| `theme`     | `string`                                    | —       | DaisyUI theme name     |
+| `checked?`  | `boolean`                                   | `false` | Controlled check state |
+| `label?`    | `string`                                    | —       | Optional text label    |
+| `onChange?` | `(checked: boolean, theme: string) => void` | —       | Change callback        |
+
+DaisyUI `theme-controller` checkbox that carries a theme value for the global
+`data-theme` swap.
+
+```tsx
+<ThemeController theme="night" label="Night" />
+```
+
+### Validator
+
+File: `src/components/atoms/Validator.tsx` — client component.
+
+| Prop         | Type        | Default | Description               |
+| ------------ | ----------- | ------- | ------------------------- |
+| `children`   | `ReactNode` | —       | Single form child         |
+| `hint?`      | `string`    | —       | Muted helper text         |
+| `error?`     | `string`    | —       | Error text + `text-error` |
+| `className?` | `string`    | `''`    | Extra classes             |
+
+Adds DaisyUI `validator` / `validator-hint` to a single input child
+(non-textarea) and reflects `error` via `aria-invalid`.
+
+```tsx
+<Validator hint="8+ characters" error={error}>
+  <input type="password" />
+</Validator>
+```
+
+### VisuallyHidden
+
+File: `src/components/atoms/VisuallyHidden.tsx`
+
+| Prop         | Type        | Default | Description        |
+| ------------ | ----------- | ------- | ------------------ |
+| `children`   | `ReactNode` | —       | Screen-reader text |
+| `className?` | `string`    | `''`    | Extra classes      |
+
+`sr-only` wrapper for accessible, invisible text.
+
+```tsx
+<VisuallyHidden>Loading…</VisuallyHidden>
+```
+
 ---
 
 [Back to index](README.md)

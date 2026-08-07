@@ -12,6 +12,7 @@ import {
   Clock,
   CodeBlock,
   Collapse,
+  Container,
   CopyButton,
   Countdown,
   Cube,
@@ -20,6 +21,9 @@ import {
   EditableText,
   EmptyPlaceholder,
   FileInput,
+  Grid,
+  Hover3D,
+  HoverGallery,
   Icon,
   IconButton,
   Indicator,
@@ -27,12 +31,14 @@ import {
   Label,
   LetterAvatar,
   LinkButton,
+  Loading,
   Mask,
   MiniMap,
   NumberField,
   OTPInput,
   PasswordField,
   PhoneMockup,
+  Portal,
   Progress,
   ProgressRing,
   Radio,
@@ -40,6 +46,8 @@ import {
   Select,
   Skeleton,
   Slider,
+  Slot,
+  Spacer,
   Spinner,
   Stack,
   StatusDot,
@@ -48,9 +56,13 @@ import {
   Tag,
   TagCloud,
   Text,
+  TextRotate,
   Textarea,
   TextField,
+  ThemeController,
   Tooltip,
+  Validator,
+  VisuallyHidden,
   WindowMockup,
 } from '../../../../../../atoms';
 
@@ -537,6 +549,98 @@ export const AtomsLevel: FC = () => {
               { label: 'DaisyUI', weight: 1 },
             ]}
           />
+        </div>
+      </AtomTile>
+      <AtomTile title="Container" index={51}>
+        <Container size="md">
+          <p className="text-base-content/60 text-sm">
+            Centered content, max-width md.
+          </p>
+        </Container>
+      </AtomTile>
+      <AtomTile title="Grid" index={52}>
+        <Grid cols={2} smCols={3} gap="sm" className="w-full">
+          {['A', 'B', 'C', 'D'].map((letter) => (
+            <div
+              key={letter}
+              className="card bg-base-100 border-base-content/10 p-2 text-center text-sm">
+              {letter}
+            </div>
+          ))}
+        </Grid>
+      </AtomTile>
+      <AtomTile title="Loading" index={53}>
+        <div className="flex flex-wrap items-center gap-2">
+          <Loading variant="spinner" size="sm" />
+          <Loading variant="dots" />
+          <Loading variant="ring" />
+          <Loading variant="bars" />
+          <Loading variant="ball" />
+          <Loading variant="infinity" />
+        </div>
+      </AtomTile>
+      <AtomTile title="TextRotate" index={54}>
+        <p className="text-sm">
+          Build with{' '}
+          <TextRotate words={['React', 'Next.js', 'DaisyUI']} duration={2000} />
+        </p>
+      </AtomTile>
+      <AtomTile title="Validator" index={55}>
+        <div className="w-full">
+          <Validator hint="Enter a valid email">
+            <input
+              type="email"
+              placeholder="you@x.com"
+              className="input input-bordered w-full"
+              aria-label="Email"
+            />
+          </Validator>
+        </div>
+      </AtomTile>
+      <AtomTile title="Hover3D" index={56}>
+        <Hover3D className="w-full">
+          <div className="card bg-base-100 border-base-content/10 border p-6 text-center text-sm">
+            Hover me for a 3D tilt
+          </div>
+        </Hover3D>
+      </AtomTile>
+      <AtomTile title="HoverGallery" index={57}>
+        <HoverGallery
+          className="w-full"
+          images={[
+            { src: '/avatar.png', alt: 'Photo one' },
+            { src: '/avatar.png', alt: 'Photo two' },
+            { src: '/avatar.png', alt: 'Photo three' },
+          ]}
+        />
+      </AtomTile>
+      <AtomTile title="Slot" index={58}>
+        <Slot className="btn btn-primary btn-sm">
+          <button type="button">Slotted button</button>
+        </Slot>
+      </AtomTile>
+      <AtomTile title="VisuallyHidden" index={59}>
+        <p className="text-sm">
+          <VisuallyHidden>Screen reader only</VisuallyHidden>
+          Visible content.
+        </p>
+      </AtomTile>
+      <AtomTile title="Portal" index={60}>
+        <Portal>
+          <span className="badge badge-primary">Rendered in body</span>
+        </Portal>
+      </AtomTile>
+      <AtomTile title="Spacer" index={61}>
+        <div className="flex w-full items-center gap-2">
+          <span className="badge">Start</span>
+          <Spacer />
+          <span className="badge">End</span>
+        </div>
+      </AtomTile>
+      <AtomTile title="ThemeController" index={62}>
+        <div className="flex flex-col gap-1">
+          <ThemeController theme="dark" label="Dark" checked />
+          <ThemeController theme="light" label="Light" />
         </div>
       </AtomTile>
     </div>

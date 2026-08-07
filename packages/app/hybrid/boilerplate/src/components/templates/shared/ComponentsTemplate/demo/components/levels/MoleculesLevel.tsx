@@ -18,6 +18,7 @@ import {
   Accordion,
   Alert,
   AvatarGroup,
+  Backdrop,
   Banner,
   BottomNavigation,
   Breadcrumbs,
@@ -40,6 +41,7 @@ import {
   EmptyState,
   Fieldset,
   FileUpload,
+  FilterGroup,
   FloatingActionButton,
   FormRow,
   HoverCard,
@@ -50,13 +52,18 @@ import {
   InputStepper,
   KeyValue,
   List,
+  LoadingOverlay,
   Menu,
   MenuGroup,
+  Menubar,
+  Modal,
+  MultiSelect,
   NavItem,
   NumberInput,
   Pagination,
   Popover,
   RadioGroup,
+  Resizable,
   ScrollArea,
   SearchBar,
   Sheet,
@@ -67,8 +74,10 @@ import {
   Tabs,
   TagInput,
   Timeline,
+  TimePicker,
   Toast,
   ToggleGroup,
+  TransferList,
   TreeView,
 } from '../../../../../../molecules';
 import { Button, Progress, Switch } from '../../../../../../atoms';
@@ -113,6 +122,20 @@ export const MoleculesLevel: FC = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
   const [period, setPeriod] = useState('day');
   const [count, setCount] = useState(3);
+  const [backdropOpen, setBackdropOpen] = useState(false);
+  const [overlayOpen, setOverlayOpen] = useState(false);
+  const [transferLeft, setTransferLeft] = useState([
+    { id: 'a', label: 'Alpha' },
+    { id: 'b', label: 'Beta' },
+    { id: 'c', label: 'Gamma' },
+    { id: 'd', label: 'Delta' },
+  ]);
+  const [transferRight, setTransferRight] = useState([
+    { id: 'e', label: 'Epsilon' },
+  ]);
+  const [multi, setMulti] = useState(['react', 'typescript']);
+  const [time, setTime] = useState('09:00');
+  const [filters, setFilters] = useState(['active']);
 
   return (
     <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
@@ -896,6 +919,121 @@ export const MoleculesLevel: FC = () => {
           step={1}
           hint="Between 1 and 20"
         />
+      </MoleculeCard>
+      <MoleculeCard title="Menubar" index={54}>
+        <Menubar
+          items={[
+            {
+              label: 'File',
+              children: (
+                <div className="flex flex-col gap-1 text-sm">
+                  <span>New</span>
+                  <span>Open…</span>
+                  <span>Save</span>
+                </div>
+              ),
+            },
+            {
+              label: 'Edit',
+              children: (
+                <div className="flex flex-col gap-1 text-sm">
+                  <span>Undo</span>
+                  <span>Redo</span>
+                </div>
+              ),
+            },
+            { label: 'View' },
+          ]}
+        />
+      </MoleculeCard>
+      <MoleculeCard title="Backdrop" index={55}>
+        <div className="flex w-full flex-col items-start gap-2">
+          <Button size="sm" onClick={() => setBackdropOpen(true)}>
+            Show backdrop
+          </Button>
+          <span className="text-base-content/50 text-xs">
+            Dims the page behind a layer.
+          </span>
+        </div>
+        <Backdrop open={backdropOpen} onClose={() => setBackdropOpen(false)} />
+      </MoleculeCard>
+      <MoleculeCard title="LoadingOverlay" index={56}>
+        <div className="flex w-full flex-col items-start gap-2">
+          <Button size="sm" onClick={() => setOverlayOpen(true)}>
+            Show overlay
+          </Button>
+          <span className="text-base-content/50 text-xs">
+            Full-screen loading state.
+          </span>
+        </div>
+        <LoadingOverlay
+          open={overlayOpen}
+          label="Saving changes…"
+          onClose={() => setOverlayOpen(false)}
+        />
+      </MoleculeCard>
+      <MoleculeCard title="TransferList" index={57}>
+        <div className="w-full">
+          <TransferList
+            left={transferLeft}
+            right={transferRight}
+            onChange={(left, right) => {
+              setTransferLeft(left);
+              setTransferRight(right);
+            }}
+          />
+        </div>
+      </MoleculeCard>
+      <MoleculeCard title="MultiSelect" index={58}>
+        <div className="w-full">
+          <MultiSelect
+            label="Stack"
+            value={multi}
+            onChange={setMulti}
+            options={[
+              { value: 'react', label: 'React' },
+              { value: 'typescript', label: 'TypeScript' },
+              { value: 'next', label: 'Next.js' },
+              { value: 'tailwind', label: 'Tailwind' },
+            ]}
+          />
+        </div>
+      </MoleculeCard>
+      <MoleculeCard title="TimePicker" index={59}>
+        <div className="w-full">
+          <TimePicker label="Start time" value={time} onChange={setTime} />
+        </div>
+      </MoleculeCard>
+      <MoleculeCard title="Resizable" index={60}>
+        <div className="w-full">
+          <Resizable
+            direction="horizontal"
+            first={
+              <div className="bg-base-300 flex h-24 items-center justify-center rounded-lg text-xs">
+                First pane
+              </div>
+            }
+            second={
+              <div className="bg-base-100 flex h-24 items-center justify-center rounded-lg text-xs">
+                Second pane
+              </div>
+            }
+          />
+        </div>
+      </MoleculeCard>
+      <MoleculeCard title="FilterGroup" index={61}>
+        <div className="flex w-full flex-col gap-2">
+          <FilterGroup
+            name="status"
+            selected={filters}
+            onChange={setFilters}
+            options={[
+              { value: 'active', label: 'Active' },
+              { value: 'archived', label: 'Archived' },
+              { value: 'draft', label: 'Draft' },
+            ]}
+          />
+        </div>
       </MoleculeCard>
     </div>
   );

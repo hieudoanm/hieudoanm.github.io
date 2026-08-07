@@ -731,6 +731,148 @@ content; controlled when `value` is provided.
 />
 ```
 
+### AccountMenu
+
+File: `src/components/organisms/AccountMenu.tsx` — client component.
+
+| Prop      | Type                                    | Default | Description             |
+| --------- | --------------------------------------- | ------- | ----------------------- |
+| `name`    | `string`                                | —       | Display name            |
+| `email?`  | `string`                                | —       | Muted email line        |
+| `avatar?` | `ReactNode`                             | —       | Optional avatar element |
+| `items`   | `{ label, icon?, danger?, onClick? }[]` | —       | Menu entries            |
+
+User menu (`role="menu"`) with danger styling and click-outside dismissal.
+
+```tsx
+<AccountMenu
+  name="Jane"
+  items={[{ label: 'Profile' }, { label: 'Sign out', danger: true }]}
+/>
+```
+
+### FilterBar
+
+File: `src/components/organisms/FilterBar.tsx` — client component.
+
+| Prop            | Type                     | Default     | Description           |
+| --------------- | ------------------------ | ----------- | --------------------- |
+| `query`         | `string`                 | —           | Controlled query      |
+| `onQueryChange` | `(next: string) => void` | —           | Called on input       |
+| `placeholder?`  | `string`                 | `'Search…'` | Input placeholder     |
+| `children?`     | `ReactNode`              | —           | Extra filter controls |
+
+Search input plus a slot for additional filters, laid out responsively.
+
+```tsx
+<FilterBar query={q} onQueryChange={setQ}>
+  <FilterGroup … />
+</FilterBar>
+```
+
+### KanbanBoard
+
+File: `src/components/organisms/KanbanBoard.tsx`
+
+| Prop      | Type                                                          | Default | Description   |
+| --------- | ------------------------------------------------------------- | ------- | ------------- |
+| `columns` | `{ id, title, cards: { id, title, description?, tag? }[] }[]` | —       | Board columns |
+
+Column-based board (`aria-label` per column) with a card count, empty states,
+and tag badges mapped to DaisyUI colors.
+
+```tsx
+<KanbanBoard
+  columns={[
+    {
+      id: 'todo',
+      title: 'To do',
+      cards: [{ id: '1', title: 'Task', tag: 'info' }],
+    },
+  ]}
+/>
+```
+
+### NavigationMenu
+
+File: `src/components/organisms/NavigationMenu.tsx` — client component.
+
+| Prop         | Type                                   | Default     | Description |
+| ------------ | -------------------------------------- | ----------- | ----------- |
+| `items`      | `{ label, href?, icon?, children? }[]` | —           | Nav entries |
+| `ariaLabel?` | `string`                               | `'Primary'` | `nav` label |
+
+Navbar of `button`s (with `children` popovers) and plain links; popovers close
+on click-outside or Escape.
+
+```tsx
+<NavigationMenu
+  items={[
+    { label: 'Docs', children: <Menu>…</Menu> },
+    { label: 'Pricing', href: '/pricing' },
+  ]}
+/>
+```
+
+### NotificationCenter
+
+File: `src/components/organisms/NotificationCenter.tsx` — client component.
+
+| Prop             | Type                                            | Default | Description              |
+| ---------------- | ----------------------------------------------- | ------- | ------------------------ |
+| `notifications`  | `{ id, title, description?, time?, unread? }[]` | —       | Items                    |
+| `onOpen?`        | `(notification) => void`                        | —       | Called when item clicked |
+| `onMarkAllRead?` | `() => void`                                    | —       | Clears badge button      |
+| `unreadCount?`   | `number`                                        | —       | Override badge count     |
+
+Bell trigger (`aria-label="Notifications"`) with unread badge and a `dialog`
+panel; closes on click-outside.
+
+```tsx
+<NotificationCenter notifications={notes} onOpen={openNote} />
+```
+
+### Section
+
+File: `src/components/organisms/Section.tsx`
+
+| Prop           | Type                  | Default   | Description         |
+| -------------- | --------------------- | --------- | ------------------- |
+| `title`        | `string`              | —         | Section heading     |
+| `eyebrow?`     | `string`              | —         | Small primary label |
+| `description?` | `string`              | —         | Muted intro text    |
+| `action?`      | `ReactNode`           | —         | Right-side CTA      |
+| `align?`       | `'start' \| 'center'` | `'start'` | Header alignment    |
+| `children?`    | `ReactNode`           | —         | Body content        |
+| `className?`   | `string`              | `''`      | Extra classes       |
+
+Semantic `<section>` header block (eyebrow + heading + description + action)
+with a content slot — the skeleton for landing-page sections.
+
+```tsx
+<Section eyebrow="Features" title="Do more" align="center">
+  <Grid>…</Grid>
+</Section>
+```
+
+### TableOfContents
+
+File: `src/components/organisms/TableOfContents.tsx` — client component.
+
+| Prop        | Type                         | Default          | Description          |
+| ----------- | ---------------------------- | ---------------- | -------------------- |
+| `items`     | `{ id, label, children? }[]` | —                | Nested TOC tree      |
+| `activeId?` | `string`                     | —                | Highlighted item     |
+| `onSelect?` | `(id: string) => void`       | —                | Called on item click |
+| `title?`    | `string`                     | `'On this page'` | `nav` label          |
+
+Sidebar `nav` of scroll-anchor links; the active item gets `text-primary` and
+`aria-current="location"`.
+
+```tsx
+<TableOfContents items={[{ id: 'intro', label: 'Intro' }]} activeId="intro" />
+```
+
 ---
 
 [Back to index](README.md)

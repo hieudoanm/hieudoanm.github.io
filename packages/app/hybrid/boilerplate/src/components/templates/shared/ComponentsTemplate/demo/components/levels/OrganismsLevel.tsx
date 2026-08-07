@@ -10,6 +10,7 @@ import {
 } from 'react-icons/fi';
 import {
   ActivityFeed,
+  AccountMenu,
   AnnouncementBar,
   AuthForm,
   BlogSection,
@@ -27,16 +28,20 @@ import {
   FAQSection,
   FaqAccordion,
   FeatureGrid,
+  FilterBar,
   Footer,
   GalleryGrid,
   Header,
   Hero,
   InfoCards,
   IntegrationsSection,
+  KanbanBoard,
   LogosSection,
   Marquee,
   Navbar,
+  NavigationMenu,
   NewsletterSection,
+  NotificationCenter,
   PageBreadcrumbs,
   PageHeader,
   PageTabs,
@@ -44,8 +49,10 @@ import {
   PricingSection,
   ProfileCard,
   ProgressStepper,
+  Section,
   Sidebar,
   StatsGrid,
+  TableOfContents,
   TeamSection,
   TestimonialCarousel,
   TestimonialSection,
@@ -142,6 +149,8 @@ export const OrganismsLevel: FC = () => {
   );
   const [activeStep, setActiveStep] = useState(1);
   const [pageTab, setPageTab] = useState('overview');
+  const [filterQuery, setFilterQuery] = useState('');
+  const [activeTocId, setActiveTocId] = useState('intro');
   const [chatMessages, setChatMessages] = useState([
     {
       id: '1',
@@ -796,6 +805,162 @@ export const OrganismsLevel: FC = () => {
           ]}
           value={pageTab}
           onChange={setPageTab}
+        />
+      </OrganismSection>
+      <OrganismSection title="Section" index={41}>
+        <Section
+          eyebrow="Features"
+          title="Everything you need to ship"
+          description="A short paragraph explaining the value of the section."
+          action={<Button size="sm">Learn more</Button>}
+          align="center">
+          <div className="bg-base-200 border-base-content/10 rounded-xl border p-6 text-sm">
+            Section body content.
+          </div>
+        </Section>
+      </OrganismSection>
+      <OrganismSection title="NavigationMenu" index={42}>
+        <NavigationMenu
+          items={[
+            {
+              label: 'Products',
+              children: (
+                <div className="flex flex-col gap-1 text-sm">
+                  <span>Analytics</span>
+                  <span>Realtime</span>
+                  <span>Reports</span>
+                </div>
+              ),
+            },
+            {
+              label: 'Resources',
+              children: (
+                <div className="flex flex-col gap-1 text-sm">
+                  <span>Docs</span>
+                  <span>Blog</span>
+                  <span>Changelog</span>
+                </div>
+              ),
+            },
+            { label: 'Pricing', href: '/pricing' },
+          ]}
+        />
+      </OrganismSection>
+      <OrganismSection title="TableOfContents" index={43}>
+        <div className="flex gap-8">
+          <TableOfContents
+            items={[
+              { id: 'intro', label: 'Introduction' },
+              {
+                id: 'usage',
+                label: 'Usage',
+                children: [{ id: 'props', label: 'Props' }],
+              },
+              { id: 'theming', label: 'Theming' },
+            ]}
+            activeId={activeTocId}
+            onSelect={setActiveTocId}
+          />
+          <div className="bg-base-200 border-base-content/10 flex-1 rounded-xl border p-6 text-sm">
+            Article preview — click a link to update the active item.
+          </div>
+        </div>
+      </OrganismSection>
+      <OrganismSection title="NotificationCenter" index={44}>
+        <div className="flex w-full justify-end">
+          <NotificationCenter
+            notifications={[
+              {
+                id: '1',
+                title: 'Deploy complete',
+                description: 'Production is live',
+                time: '2m',
+                unread: true,
+              },
+              {
+                id: '2',
+                title: 'Build failed',
+                description: 'Integration tests',
+                time: '1h',
+                unread: true,
+              },
+              {
+                id: '3',
+                title: 'New comment',
+                time: '3h',
+              },
+            ]}
+          />
+        </div>
+      </OrganismSection>
+      <OrganismSection title="AccountMenu" index={45}>
+        <div className="flex w-full justify-end">
+          <AccountMenu
+            name="Jane Doe"
+            email="jane@example.com"
+            avatar={
+              <div className="avatar placeholder">
+                <div className="bg-primary text-primary-content w-8 rounded-full">
+                  <span>JD</span>
+                </div>
+              </div>
+            }
+            items={[
+              { label: 'Profile' },
+              { label: 'Settings' },
+              { label: 'Billing' },
+              { label: 'Sign out', danger: true },
+            ]}
+          />
+        </div>
+      </OrganismSection>
+      <OrganismSection title="FilterBar" index={46}>
+        <FilterBar
+          query={filterQuery}
+          onQueryChange={setFilterQuery}
+          placeholder="Search reports…">
+          <Button size="sm" variant="outline">
+            Filter
+          </Button>
+        </FilterBar>
+      </OrganismSection>
+      <OrganismSection title="KanbanBoard" index={47}>
+        <KanbanBoard
+          columns={[
+            {
+              id: 'todo',
+              title: 'To do',
+              cards: [
+                {
+                  id: '1',
+                  title: 'Draft plan',
+                  description: 'Write outline',
+                  tag: 'info',
+                },
+                { id: '2', title: 'Collect feedback' },
+              ],
+            },
+            {
+              id: 'progress',
+              title: 'In progress',
+              cards: [
+                {
+                  id: '3',
+                  title: 'Build demo',
+                  description: 'Wire the components',
+                  tag: 'warning',
+                },
+              ],
+            },
+            {
+              id: 'done',
+              title: 'Done',
+              cards: [
+                { id: '4', title: 'Setup repo', tag: 'success' },
+                { id: '5', title: 'CI pipeline', tag: 'success' },
+              ],
+            },
+          ]}
         />
       </OrganismSection>
     </div>

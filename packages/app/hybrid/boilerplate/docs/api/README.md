@@ -10,15 +10,17 @@ learn the conventions and reuse components without re-reading source files.
   Brad Frost's
   _[Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/)_
 - [CONVENTIONS.md](CONVENTIONS.md) — rules every template and page must follow
+- [REFERENCES.md](REFERENCES.md) — how DaisyUI, MUI, shadcn/ui, Tailwind UI, and
+  Radix UI handle components, styling, and docs
 
 ## Components
 
-- [ATOMS.md](ATOMS.md) — smallest building blocks in `src/components/atoms/` (52
+- [ATOMS.md](ATOMS.md) — smallest building blocks in `src/components/atoms/` (64
   components)
 - [MOLECULES.md](MOLECULES.md) — combinations of atoms in
-  `src/components/molecules/` (56 components)
+  `src/components/molecules/` (64 components)
 - [ORGANISMS.md](ORGANISMS.md) — complex UI sections in
-  `src/components/organisms/` (41 components)
+  `src/components/organisms/` (48 components)
 
 ## Pages
 
@@ -31,7 +33,7 @@ learn the conventions and reuse components without re-reading source files.
 
 ```txt
 ATOMS -> MOLECULES -> ORGANISMS -> TEMPLATES -> PAGES
-  52        56           41          28 routes     29 routes
+  64        64           48          28 routes     29 routes
 ```
 
 Everything lives in `src/`:

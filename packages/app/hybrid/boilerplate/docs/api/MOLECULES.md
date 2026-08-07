@@ -1040,6 +1040,156 @@ out-of-range values via `aria-invalid`.
 <NumberInput label="Seats" value={seats} onChange={setSeats} min={1} max={10} />
 ```
 
+### Backdrop
+
+File: `src/components/molecules/Backdrop.tsx` — client component.
+
+| Prop         | Type         | Default | Description                                |
+| ------------ | ------------ | ------- | ------------------------------------------ |
+| `open`       | `boolean`    | —       | Render condition                           |
+| `onClose?`   | `() => void` | —       | Called when the backdrop itself is clicked |
+| `children?`  | `ReactNode`  | —       | Centered content                           |
+| `className?` | `string`     | `''`    | Extra classes                              |
+| `opaque?`    | `boolean`    | `false` | Solid `bg-base-100` instead of scrim       |
+
+Full-viewport fixed overlay; clicks on the backdrop (not children) fire
+`onClose`.
+
+```tsx
+<Backdrop open={busy} onClose={() => setBusy(false)}>
+  <Card>…</Card>
+</Backdrop>
+```
+
+### FilterGroup
+
+File: `src/components/molecules/FilterGroup.tsx` — client component.
+
+| Prop       | Type                                 | Default | Description                |
+| ---------- | ------------------------------------ | ------- | -------------------------- |
+| `name`     | `string`                             | —       | Shared input `name`        |
+| `options`  | `{ value: string; label: string }[]` | —       | Toggle chips               |
+| `selected` | `string[]`                           | —       | Controlled selected values |
+| `onChange` | `(next: string[]) => void`           | —       | Called on toggle           |
+
+DaisyUI `filter` with a `filter-reset` button shown only when something is
+selected.
+
+```tsx
+<FilterGroup name="status" options={opts} selected={sel} onChange={setSel} />
+```
+
+### LoadingOverlay
+
+File: `src/components/molecules/LoadingOverlay.tsx` — client component.
+
+| Prop           | Type                                                              | Default     | Description            |
+| -------------- | ----------------------------------------------------------------- | ----------- | ---------------------- |
+| `open`         | `boolean`                                                         | —           | Render condition       |
+| `label?`       | `string`                                                          | —           | Text under the spinner |
+| `variant?`     | `'spinner' \| 'dots' \| 'ring' \| 'ball' \| 'bars' \| 'infinity'` | `'spinner'` | `Loading` variant      |
+| `transparent?` | `boolean`                                                         | `false`     | Lighter scrim          |
+| `onClose?`     | `() => void`                                                      | —           | Called when clicked    |
+
+Blocking overlay built on the `Loading` atom, with an optional click-to-dismiss.
+
+```tsx
+<LoadingOverlay open={saving} label="Saving…" />
+```
+
+### Menubar
+
+File: `src/components/molecules/Menubar.tsx` — client component.
+
+| Prop         | Type                            | Default      | Description      |
+| ------------ | ------------------------------- | ------------ | ---------------- |
+| `items`      | `{ label, icon?, children? }[]` | —            | Buttons + panels |
+| `ariaLabel?` | `string`                        | `'Menu bar'` | `nav` label      |
+
+Desktop-style menu bar; each item with `children` opens a popover panel, closed
+by click-outside or Escape.
+
+```tsx
+<Menubar items={[{ label: 'File', children: <Menu>…</Menu> }]} />
+```
+
+### MultiSelect
+
+File: `src/components/molecules/MultiSelect.tsx` — client component.
+
+| Prop           | Type                                 | Default     | Description          |
+| -------------- | ------------------------------------ | ----------- | -------------------- |
+| `options`      | `{ value: string; label: string }[]` | —           | Selectable options   |
+| `value`        | `string[]`                           | —           | Controlled selection |
+| `onChange`     | `(next: string[]) => void`           | —           | Called on toggle     |
+| `label?`       | `string`                             | —           | Field label          |
+| `placeholder?` | `string`                             | `'Select…'` | Empty-state text     |
+
+Trigger button with chip summary and a `listbox` of checkboxes; closes on
+click-outside.
+
+```tsx
+<MultiSelect options={roles} value={sel} onChange={setSel} label="Roles" />
+```
+
+### Resizable
+
+File: `src/components/molecules/Resizable.tsx` — client component.
+
+| Prop            | Type                         | Default        | Description         |
+| --------------- | ---------------------------- | -------------- | ------------------- |
+| `first`         | `ReactNode`                  | —              | Left/top pane       |
+| `second`        | `ReactNode`                  | —              | Right/bottom pane   |
+| `direction?`    | `'horizontal' \| 'vertical'` | `'horizontal'` | Split axis          |
+| `initialRatio?` | `number`                     | `0.5`          | Initial split ratio |
+| `minRatio?`     | `number`                     | `0.2`          | Lower clamp         |
+| `maxRatio?`     | `number`                     | `0.8`          | Upper clamp         |
+| `className?`    | `string`                     | `''`           | Extra classes       |
+
+Pointer-draggable split pane with a `separator` role; ratio is clamped to
+`minRatio`/`maxRatio`.
+
+```tsx
+<Resizable first={<List … />} second={<Detail … />} initialRatio={0.4} />
+```
+
+### TimePicker
+
+File: `src/components/molecules/TimePicker.tsx` — client component.
+
+| Prop           | Type                     | Default | Description                |
+| -------------- | ------------------------ | ------- | -------------------------- |
+| `value`        | `string`                 | —       | `HH:mm` value              |
+| `onChange`     | `(time: string) => void` | —       | Called on select           |
+| `label?`       | `string`                 | —       | Field label                |
+| `stepMinutes?` | `number`                 | `30`    | Minute step (clamped 1–60) |
+| `format?`      | `'12h' \| '24h'`         | `'24h'` | Display format             |
+
+`listbox` of times at a fixed step; 12h format renders `hh:mm AM/PM`.
+
+```tsx
+<TimePicker value="09:30" onChange={setTime} format="12h" stepMinutes={15} />
+```
+
+### TransferList
+
+File: `src/components/molecules/TransferList.tsx` — client component.
+
+| Prop          | Type                              | Default       | Description           |
+| ------------- | --------------------------------- | ------------- | --------------------- |
+| `left`        | `{ id: string; label: string }[]` | —             | Available items       |
+| `right`       | `{ id: string; label: string }[]` | —             | Selected items        |
+| `onChange`    | `(left, right) => void`           | —             | Called after any move |
+| `leftTitle?`  | `string`                          | `'Available'` | Left legend           |
+| `rightTitle?` | `string`                          | `'Selected'`  | Right legend          |
+
+Two checkbox columns with move-left/right and move-all buttons; selection is
+cleared after each move.
+
+```tsx
+<TransferList left={all} right={picked} onChange={(l, r) => setBoth(l, r)} />
+```
+
 ---
 
 [Back to index](README.md)

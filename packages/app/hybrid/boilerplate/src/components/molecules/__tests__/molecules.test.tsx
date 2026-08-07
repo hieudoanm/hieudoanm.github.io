@@ -3,6 +3,7 @@ import { FiTrash, FiUser } from 'react-icons/fi';
 import { Accordion } from '../Accordion';
 import { Alert } from '../Alert';
 import { AvatarGroup } from '../AvatarGroup';
+import { Backdrop } from '../Backdrop';
 import { Banner } from '../Banner';
 import { BottomNavigation } from '../BottomNavigation';
 import { Breadcrumbs } from '../Breadcrumbs';
@@ -25,6 +26,7 @@ import { Dropdown } from '../Dropdown';
 import { EmptyState } from '../EmptyState';
 import { Fieldset } from '../Fieldset';
 import { FileUpload } from '../FileUpload';
+import { FilterGroup } from '../FilterGroup';
 import { FloatingActionButton } from '../FloatingActionButton';
 import { FormRow } from '../FormRow';
 import { HoverCard } from '../HoverCard';
@@ -35,14 +37,18 @@ import { InputGroup } from '../InputGroup';
 import { InputStepper } from '../InputStepper';
 import { KeyValue } from '../KeyValue';
 import { List } from '../List';
+import { LoadingOverlay } from '../LoadingOverlay';
 import { Menu } from '../Menu';
 import { MenuGroup } from '../MenuGroup';
+import { Menubar } from '../Menubar';
 import { Modal } from '../Modal';
+import { MultiSelect } from '../MultiSelect';
 import { NavItem } from '../NavItem';
 import { NumberInput } from '../NumberInput';
 import { Pagination } from '../Pagination';
 import { Popover } from '../Popover';
 import { RadioGroup } from '../RadioGroup';
+import { Resizable } from '../Resizable';
 import { ScrollArea } from '../ScrollArea';
 import { SearchBar } from '../SearchBar';
 import { Sheet } from '../Sheet';
@@ -53,8 +59,10 @@ import { Table } from '../Table';
 import { Tabs } from '../Tabs';
 import { TagInput } from '../TagInput';
 import { Timeline } from '../Timeline';
+import { TimePicker } from '../TimePicker';
 import { Toast } from '../Toast';
 import { ToggleGroup } from '../ToggleGroup';
+import { TransferList } from '../TransferList';
 import { TreeView } from '../TreeView';
 import { Button } from '../../atoms/Button';
 
@@ -2175,5 +2183,447 @@ describe('NumberInput', () => {
       <NumberInput label="Quantity" value={4} onChange={jest.fn()} disabled />
     );
     expect(screen.getByLabelText('Quantity')).toBeDisabled();
+  });
+});
+
+describe('Menubar', () => {
+  const items = [
+    { label: 'File', children: <div>File menu</div> },
+    { label: 'Edit', children: <div>Edit menu</div> },
+    { label: 'Help' },
+  ];
+
+  it('renders each top-level label', () => {
+    render(<Menubar items={items} />);
+    expect(screen.getByRole('button', { name: 'File' })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Edit' })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Help' })).toBeInTheDocument();
+  });
+
+  it('opens the dropdown for an item with children', () => {
+    render(<Menubar items={items} />);
+    fireEvent.click(screen.getByRole('button', { name: 'File' }));
+    expect(screen.getByText('File menu')).toBeInTheDocument();
+  });
+
+  it('toggles the dropdown closed on a second click', () => {
+    render(<Menubar items={items} />);
+    const trigger = screen.getByRole('button', { name: 'File' });
+    fireEvent.click(trigger);
+    fireEvent.click(trigger);
+    expect(screen.queryByText('File menu')).not.toBeInTheDocument();
+  });
+
+  it('closes the dropdown when clicking outside', () => {
+    render(
+      <div>
+        <Menubar items={items} />
+        <button type="button">Outside</button>
+      </div>
+    );
+    fireEvent.click(screen.getByRole('button', { name: 'File' }));
+    fireEvent.mouseDown(screen.getByRole('button', { name: 'Outside' }));
+    expect(screen.queryByText('File menu')).not.toBeInTheDocument();
+  });
+
+  it('closes the dropdown on Escape', () => {
+    render(<Menubar items={items} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Edit' }));
+    fireEvent.keyDown(screen.getByRole('button', { name: 'Edit' }), {
+      key: 'Escape',
+    });
+    expect(screen.queryByText('Edit menu')).not.toBeInTheDocument();
+  });
+});
+
+describe('Backdrop', () => {
+  it('renders nothing when closed', () => {
+    const { container } = render(<Backdrop open={false} />);
+    expect(container).toBeEmptyDOMElement();
+  });
+
+  it('renders an overlay when open', () => {
+    render(<Backdrop open />);
+    const overlay = document.querySelector('.fixed');
+    expect(overlay).toBeInTheDocument();
+  });
+
+  it('calls onClose when the overlay itself is clicked', () => {
+    const onClose = jest.fn();
+    render(
+      <Backdrop open onClose={onClose}>
+        <div>Content</div>
+      </Backdrop>
+    );
+    const overlay = document.querySelector('.fixed') as HTMLElement;
+    fireEvent.click(overlay);
+    expect(onClose).toHaveBeenCalledTimes(1);
+  });
+
+  it('does not close when content is clicked', () => {
+    const onClose = jest.fn();
+    render(
+      <Backdrop open onClose={onClose}>
+        <div>Content</div>
+      </Backdrop>
+    );
+    fireEvent.click(screen.getByText('Content'));
+    expect(onClose).not.toHaveBeenCalled();
+  });
+
+  it('renders an opaque overlay', () => {
+    render(<Backdrop open opaque />);
+    expect(document.querySelector('.bg-base-100')).toBeInTheDocument();
+  });
+
+  it('marks a childless overlay as aria-hidden', () => {
+    const { container } = render(<Backdrop open />);
+    expect(container.firstElementChild).toHaveAttribute('aria-hidden', 'true');
+  });
+});
+
+describe('LoadingOverlay', () => {
+  it('renders nothing when closed', () => {
+    const { container } = render(<LoadingOverlay open={false} />);
+    expect(container).toBeEmptyDOMElement();
+  });
+
+  it('renders a status with the label when open', () => {
+    render(<LoadingOverlay open label="Saving" />);
+    expect(screen.getByRole('status')).toBeInTheDocument();
+    expect(screen.getByText('Saving')).toBeInTheDocument();
+  });
+
+  it('applies the requested variant', () => {
+    const { container } = render(<LoadingOverlay open variant="dots" />);
+    expect(container.querySelector('.loading-dots')).toBeInTheDocument();
+  });
+
+  it('calls onClose when the overlay is clicked', () => {
+    const onClose = jest.fn();
+    render(<LoadingOverlay open label="Saving" onClose={onClose} />);
+    fireEvent.click(screen.getByRole('status'));
+    expect(onClose).toHaveBeenCalledTimes(1);
+  });
+
+  it('applies the transparent style', () => {
+    render(<LoadingOverlay open transparent />);
+    expect(screen.getByRole('status')).toHaveClass('bg-base-content/20');
+  });
+});
+
+describe('TransferList', () => {
+  const left = [
+    { id: 'a', label: 'Alpha' },
+    { id: 'b', label: 'Beta' },
+  ];
+  const right = [{ id: 'c', label: 'Gamma' }];
+
+  it('renders both columns with their titles', () => {
+    render(<TransferList left={left} right={right} onChange={jest.fn()} />);
+    expect(screen.getByText('Available')).toBeInTheDocument();
+    expect(screen.getByText('Selected')).toBeInTheDocument();
+    expect(screen.getByText('Alpha')).toBeInTheDocument();
+    expect(screen.getByText('Gamma')).toBeInTheDocument();
+  });
+
+  it('moves a selected item to the right column', () => {
+    const onChange = jest.fn();
+    render(<TransferList left={left} right={[]} onChange={onChange} />);
+    fireEvent.click(screen.getByLabelText('Alpha'));
+    fireEvent.click(screen.getByText('→'));
+    expect(onChange).toHaveBeenCalledWith(
+      [{ id: 'b', label: 'Beta' }],
+      [{ id: 'a', label: 'Alpha' }]
+    );
+  });
+
+  it('moves all items to the right column', () => {
+    const onChange = jest.fn();
+    render(<TransferList left={left} right={[]} onChange={onChange} />);
+    fireEvent.click(screen.getByText('»'));
+    expect(onChange).toHaveBeenCalledWith([], left);
+  });
+
+  it('moves a selected item to the left column', () => {
+    const onChange = jest.fn();
+    render(<TransferList left={[]} right={right} onChange={onChange} />);
+    fireEvent.click(screen.getByLabelText('Gamma'));
+    fireEvent.click(screen.getByText('←'));
+    expect(onChange).toHaveBeenCalledWith([{ id: 'c', label: 'Gamma' }], []);
+  });
+
+  it('moves all items to the left column', () => {
+    const onChange = jest.fn();
+    render(<TransferList left={[]} right={right} onChange={onChange} />);
+    fireEvent.click(screen.getByText('«'));
+    expect(onChange).toHaveBeenCalledWith([{ id: 'c', label: 'Gamma' }], []);
+  });
+
+  it('disables move buttons when nothing is selected', () => {
+    render(<TransferList left={left} right={right} onChange={jest.fn()} />);
+    expect(screen.getByText('→')).toBeDisabled();
+    expect(screen.getByText('←')).toBeDisabled();
+  });
+
+  it('does not call onChange when moving with no selection', () => {
+    const onChange = jest.fn();
+    render(<TransferList left={left} right={right} onChange={onChange} />);
+    fireEvent.click(screen.getByText('→'));
+    expect(onChange).not.toHaveBeenCalled();
+  });
+
+  it('shows an empty state for empty columns', () => {
+    render(<TransferList left={[]} right={[]} onChange={jest.fn()} />);
+    expect(screen.getAllByText('No items')).toHaveLength(2);
+  });
+});
+
+describe('MultiSelect', () => {
+  const options = [
+    { value: 'js', label: 'JavaScript' },
+    { value: 'ts', label: 'TypeScript' },
+  ];
+
+  it('shows the placeholder when nothing is selected', () => {
+    render(<MultiSelect options={options} value={[]} onChange={jest.fn()} />);
+    expect(screen.getByText('Select…')).toBeInTheDocument();
+  });
+
+  it('shows selected values as chips', () => {
+    render(
+      <MultiSelect options={options} value={['ts']} onChange={jest.fn()} />
+    );
+    expect(screen.getByText('TypeScript')).toBeInTheDocument();
+  });
+
+  it('toggles an option in the dropdown', () => {
+    const onChange = jest.fn();
+    render(<MultiSelect options={options} value={[]} onChange={onChange} />);
+    fireEvent.click(screen.getByRole('button', { name: /Select/ }));
+    fireEvent.click(screen.getByLabelText('JavaScript'));
+    expect(onChange).toHaveBeenCalledWith(['js']);
+  });
+
+  it('removes a selected option', () => {
+    const onChange = jest.fn();
+    render(
+      <MultiSelect options={options} value={['js', 'ts']} onChange={onChange} />
+    );
+    fireEvent.click(screen.getByRole('button', { name: /TypeScript/ }));
+    fireEvent.click(screen.getByLabelText('TypeScript'));
+    expect(onChange).toHaveBeenCalledWith(['js']);
+  });
+
+  it('closes the dropdown when clicking outside', () => {
+    render(
+      <div>
+        <MultiSelect options={options} value={[]} onChange={jest.fn()} />
+        <button type="button">Outside</button>
+      </div>
+    );
+    fireEvent.click(screen.getByRole('button', { name: /Select/ }));
+    fireEvent.mouseDown(screen.getByRole('button', { name: 'Outside' }));
+    expect(screen.queryByLabelText('JavaScript')).not.toBeInTheDocument();
+  });
+});
+
+describe('TimePicker', () => {
+  it('displays the current value', () => {
+    render(<TimePicker value="09:30" onChange={jest.fn()} />);
+    expect(screen.getByRole('button')).toHaveTextContent('09:30');
+  });
+
+  it('formats a 12h value', () => {
+    render(<TimePicker value="14:30" onChange={jest.fn()} format="12h" />);
+    expect(screen.getByRole('button')).toHaveTextContent('02:30 PM');
+  });
+
+  it('formats a 12h midnight value', () => {
+    render(<TimePicker value="00:30" onChange={jest.fn()} format="12h" />);
+    expect(screen.getByRole('button')).toHaveTextContent('12:30 AM');
+  });
+
+  it('selects a new time from the list', () => {
+    const onChange = jest.fn();
+    render(<TimePicker value="09:00" onChange={onChange} />);
+    fireEvent.click(screen.getByRole('button'));
+    expect(screen.getByRole('option', { name: '09:00' })).toHaveAttribute(
+      'aria-selected',
+      'true'
+    );
+    fireEvent.click(screen.getByRole('option', { name: '09:30' }));
+    expect(onChange).toHaveBeenCalledWith('09:30');
+  });
+
+  it('lists times at the requested step', () => {
+    render(<TimePicker value="09:00" onChange={jest.fn()} stepMinutes={15} />);
+    fireEvent.click(screen.getByRole('button'));
+    expect(screen.getByRole('option', { name: '09:15' })).toBeInTheDocument();
+  });
+
+  it('clamps the step to the supported range', () => {
+    render(<TimePicker value="09:00" onChange={jest.fn()} stepMinutes={90} />);
+    fireEvent.click(screen.getByRole('button'));
+    expect(screen.getAllByRole('option')).toHaveLength(24);
+  });
+
+  it('clamps a step below the minimum to 1', () => {
+    render(<TimePicker value="09:00" onChange={jest.fn()} stepMinutes={0} />);
+    fireEvent.click(screen.getByRole('button'));
+    expect(screen.getAllByRole('option')).toHaveLength(1440);
+  });
+});
+
+describe('Resizable', () => {
+  it('renders both panes', () => {
+    render(<Resizable first={<div>First</div>} second={<div>Second</div>} />);
+    expect(screen.getByText('First')).toBeInTheDocument();
+    expect(screen.getByText('Second')).toBeInTheDocument();
+  });
+
+  it('renders a horizontal separator by default', () => {
+    render(<Resizable first={<div>First</div>} second={<div>Second</div>} />);
+    const separator = screen.getByRole('separator');
+    expect(separator).toHaveAttribute('aria-orientation', 'horizontal');
+  });
+
+  it('renders a vertical separator for vertical direction', () => {
+    render(
+      <Resizable
+        direction="vertical"
+        first={<div>First</div>}
+        second={<div>Second</div>}
+      />
+    );
+    expect(screen.getByRole('separator')).toHaveAttribute(
+      'aria-orientation',
+      'vertical'
+    );
+  });
+
+  it('clamps the initial ratio to the allowed range', () => {
+    const { container } = render(
+      <Resizable
+        initialRatio={0.1}
+        minRatio={0.2}
+        first={<div>First</div>}
+        second={<div>Second</div>}
+      />
+    );
+    const firstPane = container.querySelector('.min-w-0') as HTMLElement;
+    expect(firstPane.style.width).toBe('20%');
+  });
+
+  it('resizes the first pane while dragging the separator', () => {
+    const { container } = render(
+      <Resizable first={<div>First</div>} second={<div>Second</div>} />
+    );
+    const root = container.querySelector('.relative') as HTMLElement;
+    const separator = screen.getByRole('separator');
+    jest.spyOn(root, 'getBoundingClientRect').mockReturnValue({
+      width: 200,
+      height: 100,
+      left: 0,
+      top: 0,
+      right: 200,
+      bottom: 100,
+      x: 0,
+      y: 0,
+      toJSON: () => ({}),
+    } as DOMRect);
+
+    fireEvent.pointerDown(separator);
+    fireEvent.pointerMove(separator, { clientX: 100 });
+    const firstPane = container.querySelector('.min-w-0') as HTMLElement;
+    expect(firstPane.style.width).toBe('50%');
+  });
+});
+
+describe('FilterGroup', () => {
+  const options = [
+    { value: 'active', label: 'Active' },
+    { value: 'archived', label: 'Archived' },
+  ];
+
+  it('renders a checkbox per option', () => {
+    render(
+      <FilterGroup
+        name="status"
+        options={options}
+        selected={[]}
+        onChange={jest.fn()}
+      />
+    );
+    expect(screen.getByLabelText('Active')).toBeInTheDocument();
+    expect(screen.getByLabelText('Archived')).toBeInTheDocument();
+  });
+
+  it('checks the selected options', () => {
+    render(
+      <FilterGroup
+        name="status"
+        options={options}
+        selected={['active']}
+        onChange={jest.fn()}
+      />
+    );
+    expect(screen.getByLabelText('Active')).toBeChecked();
+  });
+
+  it('toggles an option', () => {
+    const onChange = jest.fn();
+    render(
+      <FilterGroup
+        name="status"
+        options={options}
+        selected={[]}
+        onChange={onChange}
+      />
+    );
+    fireEvent.click(screen.getByLabelText('Active'));
+    expect(onChange).toHaveBeenCalledWith(['active']);
+  });
+
+  it('toggles an option off', () => {
+    const onChange = jest.fn();
+    render(
+      <FilterGroup
+        name="status"
+        options={options}
+        selected={['active']}
+        onChange={onChange}
+      />
+    );
+    fireEvent.click(screen.getByLabelText('Active'));
+    expect(onChange).toHaveBeenCalledWith([]);
+  });
+
+  it('resets the selection', () => {
+    const onChange = jest.fn();
+    render(
+      <FilterGroup
+        name="status"
+        options={options}
+        selected={['active']}
+        onChange={onChange}
+      />
+    );
+    fireEvent.click(screen.getByRole('button', { name: 'Reset' }));
+    expect(onChange).toHaveBeenCalledWith([]);
+  });
+
+  it('hides the reset button when nothing is selected', () => {
+    render(
+      <FilterGroup
+        name="status"
+        options={options}
+        selected={[]}
+        onChange={jest.fn()}
+      />
+    );
+    expect(
+      screen.queryByRole('button', { name: 'Reset' })
+    ).not.toBeInTheDocument();
   });
 });
