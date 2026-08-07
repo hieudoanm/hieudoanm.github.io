@@ -1190,6 +1190,184 @@ cleared after each move.
 <TransferList left={all} right={picked} onChange={(l, r) => setBoth(l, r)} />
 ```
 
+### Checklist
+
+File: `src/components/molecules/Checklist.tsx`
+
+| Prop         | Type                     | Default | Description      |
+| ------------ | ------------------------ | ------- | ---------------- |
+| `items`      | `{ id, label, done? }[]` | —       | Checklist items  |
+| `onToggle`   | `(id: string) => void`   | —       | Called on toggle |
+| `className?` | `string`                 | `''`    | Extra classes    |
+
+DaisyUI `checkbox` rows; completed items get `line-through`.
+
+```tsx
+<Checklist items={tasks} onToggle={(id) => toggle(id)} />
+```
+
+### FeatureList
+
+File: `src/components/molecules/FeatureList.tsx`
+
+| Prop         | Type                              | Default | Description   |
+| ------------ | --------------------------------- | ------- | ------------- |
+| `items`      | `{ icon, title, description? }[]` | —       | Feature cards |
+| `columns?`   | `1 \| 2`                          | `1`     | Grid columns  |
+| `className?` | `string`                          | `''`    | Extra classes |
+
+Icon + title + optional description cards; two-column mode stacks on small
+screens.
+
+```tsx
+<FeatureList columns={2} items={[{ icon: <FiZap />, title: 'Fast' }]} />
+```
+
+### Gauge
+
+File: `src/components/molecules/Gauge.tsx`
+
+| Prop         | Type        | Default     | Description         |
+| ------------ | ----------- | ----------- | ------------------- |
+| `value`      | `number`    | —           | Current value       |
+| `max?`       | `number`    | `100`       | Maximum (min 1)     |
+| `size?`      | `number`    | `6`         | Diameter in rem     |
+| `thickness?` | `number`    | `0.6`       | Stroke in rem       |
+| `label?`     | `string`    | —           | Caption text        |
+| `showValue?` | `boolean`   | `false`     | Show percent inside |
+| `variant?`   | theme color | `'primary'` | Ring color          |
+| `className?` | `string`    | `''`        | Extra classes       |
+
+DaisyUI `radial-progress` ring; value is clamped to `0..max`.
+
+```tsx
+<Gauge value={72} variant="success" showValue label="Score" />
+```
+
+### JsonViewer
+
+File: `src/components/molecules/JsonViewer.tsx` — client component.
+
+| Prop               | Type      | Default | Description            |
+| ------------------ | --------- | ------- | ---------------------- |
+| `data`             | `unknown` | —       | Value to inspect       |
+| `name?`            | `string`  | —       | Root label             |
+| `defaultExpanded?` | `boolean` | `false` | Expand nodes initially |
+| `className?`       | `string`  | `''`    | Extra classes          |
+
+Recursive `role="tree"` of expandable nodes with type-colored values (`null`,
+numbers/booleans, strings, objects).
+
+```tsx
+<JsonViewer data={payload} name="response" defaultExpanded />
+```
+
+### Masonry
+
+File: `src/components/molecules/Masonry.tsx`
+
+| Prop         | Type                   | Default | Description            |
+| ------------ | ---------------------- | ------- | ---------------------- |
+| `items`      | `ReactNode[]`          | —       | Items to lay out       |
+| `columns?`   | `2 \| 3 \| 4`          | `3`     | CSS multi-column count |
+| `gap?`       | `'sm' \| 'md' \| 'lg'` | `'md'`  | Column gap             |
+| `className?` | `string`               | `''`    | Extra classes          |
+
+CSS `columns-*` masonry with `break-inside-avoid` items.
+
+```tsx
+<Masonry items={cards} columns={4} gap="lg" />
+```
+
+### PasswordStrength
+
+File: `src/components/molecules/PasswordStrength.tsx`
+
+| Prop     | Type     | Default               | Description          |
+| -------- | -------- | --------------------- | -------------------- |
+| `value`  | `string` | —                     | Password to evaluate |
+| `label?` | `string` | `'Password strength'` | Legend text          |
+
+Scores 5 checks (length ≥ 8, lower, upper, number, symbol) into a 0–5 label
+(Very weak…Excellent) with a segmented bar and a check list.
+
+```tsx
+<PasswordStrength value={password} />
+```
+
+### ReviewCard
+
+File: `src/components/molecules/ReviewCard.tsx`
+
+| Prop         | Type     | Default | Description               |
+| ------------ | -------- | ------- | ------------------------- |
+| `quote`      | `string` | —       | Review text               |
+| `author`     | `string` | —       | Author name               |
+| `role?`      | `string` | —       | Author role               |
+| `rating?`    | `number` | —       | 0–5 star rating (clamped) |
+| `initials?`  | `string` | —       | Avatar initials           |
+| `className?` | `string` | `''`    | Extra classes             |
+
+Star rating (`role="img"`), curly-quoted blockquote, and author caption.
+
+```tsx
+<ReviewCard quote="Loved it" author="Ada" rating={5} initials="A" />
+```
+
+### SkillBar
+
+File: `src/components/molecules/SkillBar.tsx`
+
+| Prop         | Type        | Default     | Description     |
+| ------------ | ----------- | ----------- | --------------- |
+| `label`      | `string`    | —           | Skill name      |
+| `value`      | `number`    | —           | Skill level     |
+| `max?`       | `number`    | `100`       | Maximum value   |
+| `variant?`   | theme color | `'primary'` | Bar color       |
+| `showValue?` | `boolean`   | `true`      | Show percentage |
+| `className?` | `string`    | `''`        | Extra classes   |
+
+Thin wrapper around the `Progress` atom (`size="sm"`).
+
+```tsx
+<SkillBar label="TypeScript" value={90} variant="success" />
+```
+
+### SocialLinks
+
+File: `src/components/molecules/SocialLinks.tsx`
+
+| Prop         | Type                           | Default | Description     |
+| ------------ | ------------------------------ | ------- | --------------- |
+| `items`      | `{ platform, href, label? }[]` | —       | Links to render |
+| `size?`      | `'sm' \| 'md' \| 'lg'`         | `'md'`  | Icon size       |
+| `className?` | `string`                       | `''`    | Extra classes   |
+
+`platform` is one of `github`, `twitter`, `linkedin`, `instagram`, `youtube`,
+`facebook`, `globe` (Feather icons) rendered as `btn-circle` links.
+
+```tsx
+<SocialLinks items={[{ platform: 'github', href: '/gh' }]} />
+```
+
+### StatTrend
+
+File: `src/components/molecules/StatTrend.tsx`
+
+| Prop         | Type        | Default | Description       |
+| ------------ | ----------- | ------- | ----------------- |
+| `label`      | `string`    | —       | Statistic label   |
+| `value`      | `string`    | —       | Main value text   |
+| `trend?`     | `number`    | —       | Percentage change |
+| `icon?`      | `ReactNode` | —       | Optional icon     |
+| `className?` | `string`    | `''`    | Extra classes     |
+
+Trend renders `+x%` / `-x%` in success/error with up/down arrows.
+
+```tsx
+<StatTrend label="Revenue" value="$12k" trend={8.5} />
+```
+
 ---
 
 [Back to index](README.md)

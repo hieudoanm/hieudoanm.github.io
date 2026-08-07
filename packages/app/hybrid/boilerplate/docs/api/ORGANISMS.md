@@ -873,6 +873,151 @@ Sidebar `nav` of scroll-anchor links; the active item gets `text-primary` and
 <TableOfContents items={[{ id: 'intro', label: 'Intro' }]} activeId="intro" />
 ```
 
+### ComparisonSection
+
+File: `src/components/organisms/ComparisonSection.tsx`
+
+| Prop           | Type                     | Default | Description      |
+| -------------- | ------------------------ | ------- | ---------------- |
+| `columns`      | `{ title, featured? }[]` | —       | Table columns    |
+| `rows`         | `{ label, values }[]`    | —       | Comparison rows  |
+| `title?`       | `string`                 | —       | Section heading  |
+| `description?` | `string`                 | —       | Muted intro text |
+| `className?`   | `string`                 | `''`    | Extra classes    |
+
+Feature comparison table; `featured` columns get a primary tint.
+
+```tsx
+<ComparisonSection
+  columns={[{ title: 'Free', featured: true }, { title: 'Pro' }]}
+  rows={[{ label: 'Seats', values: ['5', '∞'] }]}
+/>
+```
+
+### Leaderboard
+
+File: `src/components/organisms/Leaderboard.tsx`
+
+| Prop         | Type                             | Default | Description        |
+| ------------ | -------------------------------- | ------- | ------------------ |
+| `entries`    | `{ id, name, score, avatar? }[]` | —       | Entries (unsorted) |
+| `title?`     | `string`                         | —       | Section heading    |
+| `limit?`     | `number`                         | —       | Top-N to show      |
+| `className?` | `string`                         | `''`    | Extra classes      |
+
+Sorts entries by descending score; the top three get 🥇🥈🥉 medals and the
+leader gets a primary ring.
+
+```tsx
+<Leaderboard entries={players} limit={3} title="Top players" />
+```
+
+### ProcessSection
+
+File: `src/components/organisms/ProcessSection.tsx`
+
+| Prop         | Type                            | Default | Description     |
+| ------------ | ------------------------------- | ------- | --------------- |
+| `steps`      | `{ id, title, description? }[]` | —       | Ordered steps   |
+| `current?`   | `string`                        | —       | Active step id  |
+| `title?`     | `string`                        | —       | Section heading |
+| `className?` | `string`                        | `''`    | Extra classes   |
+
+DaisyUI `steps` (vertical on mobile, horizontal on `lg`); steps before `current`
+render `step-primary`.
+
+```tsx
+<ProcessSection steps={steps} current="build" title="How it works" />
+```
+
+### ProductGrid
+
+File: `src/components/organisms/ProductGrid.tsx`
+
+| Prop         | Type                                                            | Default | Description     |
+| ------------ | --------------------------------------------------------------- | ------- | --------------- |
+| `items`      | `{ id, name, price, description?, rating?, badge?, action? }[]` | —       | Product cards   |
+| `title?`     | `string`                                                        | —       | Section heading |
+| `columns?`   | `2 \| 3 \| 4`                                                   | `3`     | Grid columns    |
+| `className?` | `string`                                                        | `''`    | Extra classes   |
+
+Product cards with optional badge, rating, and action slot.
+
+```tsx
+<ProductGrid items={products} columns={4} title="Catalog" />
+```
+
+### QuoteSection
+
+File: `src/components/organisms/QuoteSection.tsx`
+
+| Prop         | Type        | Default | Description        |
+| ------------ | ----------- | ------- | ------------------ |
+| `quote`      | `string`    | —       | Centered quotation |
+| `author`     | `string`    | —       | Attribution name   |
+| `role?`      | `string`    | —       | Author role        |
+| `avatar?`    | `ReactNode` | —       | Avatar element     |
+| `className?` | `string`    | `''`    | Extra classes      |
+
+Large centered testimonial block with a decorative quote mark.
+
+```tsx
+<QuoteSection quote="Ship fast." author="Ada" role="CTO" />
+```
+
+### ShowcaseSection
+
+File: `src/components/organisms/ShowcaseSection.tsx`
+
+| Prop         | Type                                          | Default | Description     |
+| ------------ | --------------------------------------------- | ------- | --------------- |
+| `items`      | `{ id, title, description?, image?, cta? }[]` | —       | Cards to show   |
+| `title?`     | `string`                                      | —       | Section heading |
+| `columns?`   | `2 \| 3`                                      | `3`     | Grid columns    |
+| `className?` | `string`                                      | `''`    | Extra classes   |
+
+Project/showcase cards with an image (or titled placeholder) and optional CTA.
+
+```tsx
+<ShowcaseSection items={projects} columns={2} title="Work" />
+```
+
+### TestimonialGrid
+
+File: `src/components/organisms/TestimonialGrid.tsx`
+
+| Prop           | Type                             | Default | Description      |
+| -------------- | -------------------------------- | ------- | ---------------- |
+| `testimonials` | `{ id, quote, author, role? }[]` | —       | Quotes to render |
+| `title?`       | `string`                         | —       | Section heading  |
+| `columns?`     | `1 \| 2 \| 3`                    | `3`     | Grid columns     |
+| `className?`   | `string`                         | `''`    | Extra classes    |
+
+Grid of quoted testimonials with author attribution.
+
+```tsx
+<TestimonialGrid testimonials={reviews} columns={2} title="Loved by" />
+```
+
+### VideoSection
+
+File: `src/components/organisms/VideoSection.tsx`
+
+| Prop         | Type     | Default | Description            |
+| ------------ | -------- | ------- | ---------------------- |
+| `title?`     | `string` | —       | Heading (also `title`) |
+| `src?`       | `string` | —       | Native video `mp4` URL |
+| `videoId?`   | `string` | —       | YouTube ID (iframe)    |
+| `poster?`    | `string` | —       | Native video poster    |
+| `className?` | `string` | `''`    | Extra classes          |
+
+If `videoId` is set, embeds `youtube-nocookie.com`; else a `<video>` with
+controls when `src` is set; otherwise a fallback message.
+
+```tsx
+<VideoSection videoId="dQw4w9WgXcQ" title="Demo" />
+```
+
 ---
 
 [Back to index](README.md)

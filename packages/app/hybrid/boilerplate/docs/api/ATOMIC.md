@@ -40,9 +40,9 @@ Each level lives in its own directory in `src/components/`:
 
 ```txt
 src/
-├── atoms/        # 64 components
-├── molecules/    # 64 components
-├── organisms/    # 48 components
+├── atoms/        # 74 components
+├── molecules/    # 74 components
+├── organisms/    # 56 components
 └── templates/    # page-level layouts
 ```
 

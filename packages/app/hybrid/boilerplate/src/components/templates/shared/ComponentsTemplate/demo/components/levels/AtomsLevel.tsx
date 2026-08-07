@@ -5,6 +5,7 @@ import {
   AspectRatio,
   Avatar,
   Badge,
+  BentoGrid,
   BrowserMockup,
   Button,
   ButtonLink,
@@ -14,6 +15,7 @@ import {
   Collapse,
   Container,
   CopyButton,
+  CountUp,
   Countdown,
   Cube,
   Divider,
@@ -21,17 +23,21 @@ import {
   EditableText,
   EmptyPlaceholder,
   FileInput,
+  GlowCard,
+  GradientText,
   Grid,
   Hover3D,
   HoverGallery,
   Icon,
   IconButton,
+  ImageComparison,
   Indicator,
   Kbd,
   Label,
   LetterAvatar,
   LinkButton,
   Loading,
+  Magnetic,
   Mask,
   MiniMap,
   NumberField,
@@ -43,13 +49,17 @@ import {
   ProgressRing,
   Radio,
   Rating,
+  ScrollProgress,
   Select,
+  Shimmer,
   Skeleton,
   Slider,
   Slot,
   Spacer,
   Spinner,
+  Spotlight,
   Stack,
+  StarBorder,
   StatusDot,
   Swap,
   Switch,
@@ -641,6 +651,111 @@ export const AtomsLevel: FC = () => {
         <div className="flex flex-col gap-1">
           <ThemeController theme="dark" label="Dark" checked />
           <ThemeController theme="light" label="Light" />
+        </div>
+      </AtomTile>
+      <AtomTile title="GradientText" index={64}>
+        <p className="text-lg font-bold">
+          <GradientText>Gradient headline</GradientText>
+        </p>
+      </AtomTile>
+      <AtomTile title="Shimmer" index={65}>
+        <div className="flex w-full flex-col gap-2">
+          <Shimmer className="h-3 w-full" />
+          <Shimmer className="h-3 w-2/3" />
+          <Shimmer className="h-16 w-full" rounded="rounded-xl" />
+        </div>
+      </AtomTile>
+      <AtomTile title="BentoGrid" index={66}>
+        <div className="w-full">
+          <BentoGrid
+            cells={[
+              {
+                key: 'featured',
+                colSpan: 2,
+                rowSpan: 2,
+                content: (
+                  <div className="card bg-base-100 border-base-content/10 flex h-full min-h-24 items-center justify-center border p-4 text-sm">
+                    Featured
+                  </div>
+                ),
+              },
+              {
+                key: 'a',
+                content: (
+                  <div className="card bg-base-100 border-base-content/10 flex h-24 items-center justify-center border p-4 text-sm">
+                    Cell A
+                  </div>
+                ),
+              },
+              {
+                key: 'b',
+                content: (
+                  <div className="card bg-base-100 border-base-content/10 flex h-24 items-center justify-center border p-4 text-sm">
+                    Cell B
+                  </div>
+                ),
+              },
+              {
+                key: 'c',
+                content: (
+                  <div className="card bg-base-100 border-base-content/10 flex h-24 items-center justify-center border p-4 text-sm">
+                    Cell C
+                  </div>
+                ),
+              },
+            ]}
+          />
+        </div>
+      </AtomTile>
+      <AtomTile title="GlowCard" index={67}>
+        <GlowCard title="Glowing" className="w-full">
+          <p className="text-sm">Hover to see the glow effect.</p>
+        </GlowCard>
+      </AtomTile>
+      <AtomTile title="StarBorder" index={68}>
+        <StarBorder className="w-full">
+          <div className="p-4 text-center text-sm">Gradient border card</div>
+        </StarBorder>
+      </AtomTile>
+      <AtomTile title="ScrollProgress" index={69}>
+        <ScrollProgress color="bg-primary" />
+        <p className="text-base-content/60 w-full text-sm">
+          Scroll the page to see progress at the top.
+        </p>
+      </AtomTile>
+      <AtomTile title="CountUp" index={70}>
+        <div className="flex w-full items-baseline gap-4">
+          <span className="text-2xl font-bold">
+            <CountUp end={1234} prefix="+" />
+          </span>
+          <span className="text-primary text-2xl font-bold">
+            <CountUp end={99} suffix="%" duration={2000} />
+          </span>
+        </div>
+      </AtomTile>
+      <AtomTile title="Magnetic" index={71}>
+        <Magnetic className="w-full">
+          <div className="card bg-base-100 border-base-content/10 w-full p-4 text-center text-sm">
+            Move your pointer over me
+          </div>
+        </Magnetic>
+      </AtomTile>
+      <AtomTile title="Spotlight" index={72}>
+        <Spotlight className="w-full">
+          <div className="card bg-base-200 border-base-content/10 w-full p-6 text-center text-sm">
+            Hover to reveal the spotlight
+          </div>
+        </Spotlight>
+      </AtomTile>
+      <AtomTile title="ImageComparison" index={73}>
+        <div className="w-full">
+          <ImageComparison
+            before="/avatar.png"
+            beforeAlt="Before"
+            after="/avatar.png"
+            afterAlt="After"
+            className="w-full"
+          />
         </div>
       </AtomTile>
     </div>

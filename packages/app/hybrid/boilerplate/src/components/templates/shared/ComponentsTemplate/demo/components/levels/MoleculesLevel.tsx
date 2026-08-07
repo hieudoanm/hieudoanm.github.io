@@ -26,6 +26,7 @@ import {
   Card,
   Carousel,
   ChatBubble,
+  Checklist,
   CheckboxGroup,
   Chip,
   ColorPicker,
@@ -39,20 +40,24 @@ import {
   Drawer,
   Dropdown,
   EmptyState,
+  FeatureList,
   Fieldset,
   FileUpload,
   FilterGroup,
   FloatingActionButton,
   FormRow,
+  Gauge,
   HoverCard,
   ImageGallery,
   InfoList,
   InlineAlert,
   InputGroup,
   InputStepper,
+  JsonViewer,
   KeyValue,
   List,
   LoadingOverlay,
+  Masonry,
   Menu,
   MenuGroup,
   Menubar,
@@ -61,14 +66,19 @@ import {
   NavItem,
   NumberInput,
   Pagination,
+  PasswordStrength,
   Popover,
   RadioGroup,
   Resizable,
+  ReviewCard,
   ScrollArea,
   SearchBar,
   Sheet,
+  SkillBar,
+  SocialLinks,
   SpeedDial,
   Stat,
+  StatTrend,
   Steps,
   Table,
   Tabs,
@@ -136,6 +146,12 @@ export const MoleculesLevel: FC = () => {
   const [multi, setMulti] = useState(['react', 'typescript']);
   const [time, setTime] = useState('09:00');
   const [filters, setFilters] = useState(['active']);
+  const [checklist, setChecklist] = useState([
+    { id: 'design', label: 'Design system', done: true },
+    { id: 'build', label: 'Build UI', done: false },
+    { id: 'test', label: 'Run tests', done: false },
+    { id: 'ship', label: 'Ship release', done: false },
+  ]);
 
   return (
     <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
@@ -1032,6 +1048,148 @@ export const MoleculesLevel: FC = () => {
               { value: 'archived', label: 'Archived' },
               { value: 'draft', label: 'Draft' },
             ]}
+          />
+        </div>
+      </MoleculeCard>
+      <MoleculeCard title="PasswordStrength" index={64}>
+        <div className="flex w-full flex-col gap-2">
+          <PasswordStrength value="P@ssw0rd!" label="Password" />
+          <PasswordStrength value="weak" label="Weak example" />
+        </div>
+      </MoleculeCard>
+      <MoleculeCard title="SkillBar" index={65}>
+        <div className="flex w-full flex-col gap-3">
+          <SkillBar label="TypeScript" value={90} variant="primary" showValue />
+          <SkillBar label="React" value={80} variant="success" showValue />
+          <SkillBar label="Testing" value={60} variant="warning" showValue />
+        </div>
+      </MoleculeCard>
+      <MoleculeCard title="Checklist" index={66}>
+        <Checklist
+          items={checklist}
+          onToggle={(id) =>
+            setChecklist(
+              checklist.map((item) =>
+                item.id === id ? { ...item, done: !item.done } : item
+              )
+            )
+          }
+        />
+      </MoleculeCard>
+      <MoleculeCard title="FeatureList" index={67}>
+        <FeatureList
+          columns={2}
+          items={[
+            {
+              icon: <FiCheck />,
+              title: 'Fast',
+              description: 'Sub-second loads',
+            },
+            {
+              icon: <FiHome />,
+              title: 'Reliable',
+              description: '99.9% uptime',
+            },
+            {
+              icon: <FiUser />,
+              title: 'Secure',
+              description: 'End-to-end encrypted',
+            },
+            {
+              icon: <FiMail />,
+              title: 'Supported',
+              description: '24/7 email help',
+            },
+          ]}
+        />
+      </MoleculeCard>
+      <MoleculeCard title="SocialLinks" index={68}>
+        <SocialLinks
+          items={[
+            { platform: 'github', href: 'https://github.com', label: 'GitHub' },
+            {
+              platform: 'twitter',
+              href: 'https://twitter.com',
+              label: 'Twitter',
+            },
+            {
+              platform: 'linkedin',
+              href: 'https://linkedin.com',
+              label: 'LinkedIn',
+            },
+          ]}
+          size="md"
+        />
+      </MoleculeCard>
+      <MoleculeCard title="Gauge" index={69}>
+        <div className="flex w-full items-center justify-around">
+          <Gauge value={82} label="Health" variant="success" showValue />
+          <Gauge value={45} label="Usage" variant="warning" showValue />
+          <Gauge value={20} label="Battery" variant="error" showValue />
+        </div>
+      </MoleculeCard>
+      <MoleculeCard title="JsonViewer" index={70}>
+        <div className="w-full">
+          <JsonViewer
+            name="profile"
+            defaultExpanded
+            data={{
+              name: 'Ada Lovelace',
+              age: 36,
+              active: true,
+              skills: ['math', 'compilers'],
+              meta: { city: 'London', verified: false },
+            }}
+          />
+        </div>
+      </MoleculeCard>
+      <MoleculeCard title="Masonry" index={71}>
+        <div className="w-full">
+          <Masonry
+            columns={3}
+            gap="sm"
+            items={[
+              <div
+                key="a"
+                className="card bg-base-100 border-base-content/10 border p-3 text-sm">
+                Short card
+              </div>,
+              <div
+                key="b"
+                className="card bg-base-100 border-base-content/10 border p-3 text-sm">
+                A taller card with more content to demonstrate the masonry
+                layout.
+              </div>,
+              <div
+                key="c"
+                className="card bg-base-100 border-base-content/10 border p-3 text-sm">
+                Medium
+              </div>,
+              <div
+                key="d"
+                className="card bg-base-100 border-base-content/10 border p-3 text-sm">
+                Another
+              </div>,
+            ]}
+          />
+        </div>
+      </MoleculeCard>
+      <MoleculeCard title="StatTrend" index={72}>
+        <div className="grid w-full grid-cols-2 gap-3">
+          <StatTrend label="Revenue" value="$48k" trend={12.5} />
+          <StatTrend label="Churn" value="2.1%" trend={-8} />
+          <StatTrend label="Users" value="12k" trend={3.2} />
+          <StatTrend label="Refunds" value="0.4%" trend={-1.5} />
+        </div>
+      </MoleculeCard>
+      <MoleculeCard title="ReviewCard" index={73}>
+        <div className="w-full">
+          <ReviewCard
+            quote="The component library saved our team weeks of work."
+            author="Ada Lovelace"
+            role="Staff Engineer"
+            rating={5}
+            initials="AL"
           />
         </div>
       </MoleculeCard>

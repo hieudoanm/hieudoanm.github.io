@@ -25,7 +25,7 @@ adding new templates/pages:
    use a sticky top header with a "Boilerplate" logo and a footer.
 9. **Pages**: thin `'use client';` wrappers, one per route, default export, e.g.
    `const XPage = () => <XTemplate />; export default XPage;`.
-10. **Tests**: colocated in `__tests__/`, one suite per folder, via
+10. **Tests**: colocated in `__tests__/`, one `*.test.tsx` per component, via
     `@testing-library/react`. The repo gates coverage at 90% for statements,
     branches, functions, and lines.
 

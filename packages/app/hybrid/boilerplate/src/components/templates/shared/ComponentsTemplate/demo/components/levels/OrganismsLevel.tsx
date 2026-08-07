@@ -17,6 +17,7 @@ import {
   Calendar,
   ChatWindow,
   CommandMenu,
+  ComparisonSection,
   ContactSection,
   CookieBanner,
   CTASection,
@@ -36,6 +37,7 @@ import {
   InfoCards,
   IntegrationsSection,
   KanbanBoard,
+  Leaderboard,
   LogosSection,
   Marquee,
   Navbar,
@@ -47,16 +49,22 @@ import {
   PageTabs,
   PricingCard,
   PricingSection,
+  ProcessSection,
+  ProductGrid,
   ProfileCard,
   ProgressStepper,
+  QuoteSection,
   Section,
+  ShowcaseSection,
   Sidebar,
   StatsGrid,
   TableOfContents,
   TeamSection,
   TestimonialCarousel,
+  TestimonialGrid,
   TestimonialSection,
   Toolbar,
+  VideoSection,
 } from '../../../../../../organisms';
 import { Button } from '../../../../../../atoms';
 
@@ -959,6 +967,140 @@ export const OrganismsLevel: FC = () => {
                 { id: '4', title: 'Setup repo', tag: 'success' },
                 { id: '5', title: 'CI pipeline', tag: 'success' },
               ],
+            },
+          ]}
+        />
+      </OrganismSection>
+      <OrganismSection title="ComparisonSection" index={48}>
+        <ComparisonSection
+          title="Compare plans"
+          description="Free versus Pro at a glance."
+          columns={[{ title: 'Free' }, { title: 'Pro', featured: true }]}
+          rows={[
+            { label: 'Projects', values: ['1', 'Unlimited'] },
+            { label: 'Support', values: ['Community', 'Priority'] },
+            { label: 'Analytics', values: ['7 days', 'Unlimited'] },
+          ]}
+        />
+      </OrganismSection>
+      <OrganismSection title="ProcessSection" index={49}>
+        <ProcessSection
+          title="How it works"
+          steps={[
+            { id: 'a', title: 'Plan', description: 'Define the scope' },
+            { id: 'b', title: 'Design', description: 'Prototype the UI' },
+            { id: 'c', title: 'Build', description: 'Implement the screens' },
+            { id: 'd', title: 'Ship', description: 'Deploy to production' },
+          ]}
+          current="b"
+        />
+      </OrganismSection>
+      <OrganismSection title="QuoteSection" index={50}>
+        <QuoteSection
+          quote="The best interface is the one your users never have to think about."
+          author="Ada Lovelace"
+          role="Staff Engineer"
+          avatar={
+            <div className="avatar placeholder">
+              <div className="bg-primary text-primary-content h-8 w-8 rounded-full">
+                <span>AL</span>
+              </div>
+            </div>
+          }
+        />
+      </OrganismSection>
+      <OrganismSection title="ShowcaseSection" index={51}>
+        <ShowcaseSection
+          title="Selected work"
+          items={[
+            {
+              id: 'a',
+              title: 'Admin portal',
+              description: 'Real-time analytics',
+              image: '/gallery-1.png',
+            },
+            {
+              id: 'b',
+              title: 'Mobile app',
+              description: 'Cross-platform experience',
+              image: '/gallery-2.png',
+            },
+            {
+              id: 'c',
+              title: 'Design system',
+              description: 'Scalable components',
+              image: '/gallery-3.png',
+            },
+          ]}
+        />
+      </OrganismSection>
+      <OrganismSection title="VideoSection" index={52}>
+        <div className="mx-auto w-full max-w-2xl">
+          <VideoSection title="Product demo" videoId="dQw4w9WgXcQ" />
+        </div>
+      </OrganismSection>
+      <OrganismSection title="ProductGrid" index={53}>
+        <ProductGrid
+          title="Best sellers"
+          items={[
+            {
+              id: 'a',
+              name: 'T-shirt',
+              price: '$24',
+              description: 'Organic cotton',
+              rating: 4.8,
+              badge: 'Popular',
+            },
+            {
+              id: 'b',
+              name: 'Hoodie',
+              price: '$49',
+              description: 'Fleece lined',
+              rating: 4.6,
+            },
+            {
+              id: 'c',
+              name: 'Cap',
+              price: '$19',
+              description: 'Adjustable',
+              rating: 4.9,
+              badge: 'New',
+            },
+          ]}
+        />
+      </OrganismSection>
+      <OrganismSection title="Leaderboard" index={54}>
+        <Leaderboard
+          title="Top contributors"
+          entries={[
+            { id: 'a', name: 'Ada Lovelace', score: 1280 },
+            { id: 'b', name: 'Grace Hopper', score: 1040 },
+            { id: 'c', name: 'Katherine Johnson', score: 920 },
+            { id: 'd', name: 'Alan Turing', score: 610 },
+          ]}
+        />
+      </OrganismSection>
+      <OrganismSection title="TestimonialGrid" index={55}>
+        <TestimonialGrid
+          title="Loved by teams"
+          testimonials={[
+            {
+              id: 'a',
+              quote: 'Shipped our redesign in two weeks.',
+              author: 'Grace Hopper',
+              role: 'CTO',
+            },
+            {
+              id: 'b',
+              quote: 'The components are beautifully typed.',
+              author: 'Linus Torvalds',
+              role: 'Founder',
+            },
+            {
+              id: 'c',
+              quote: 'Our whole team adopted it in a day.',
+              author: 'Katherine Johnson',
+              role: 'Product lead',
             },
           ]}
         />

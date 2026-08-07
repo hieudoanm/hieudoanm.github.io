@@ -1083,6 +1083,199 @@ File: `src/components/atoms/VisuallyHidden.tsx`
 <VisuallyHidden>Loading…</VisuallyHidden>
 ```
 
+### BentoGrid
+
+File: `src/components/atoms/BentoGrid.tsx`
+
+| Prop         | Type                                     | Default | Description   |
+| ------------ | ---------------------------------------- | ------- | ------------- |
+| `cells`      | `{ key, content, colSpan?, rowSpan? }[]` | —       | Grid cells    |
+| `className?` | `string`                                 | `''`    | Extra classes |
+
+`colSpan` (1–4) and `rowSpan` (1–3) are mapped to Tailwind `col-span-*` /
+`row-span-*` inside a fixed `grid-cols-4` layout.
+
+```tsx
+<BentoGrid
+  cells={[
+    { key: 'a', content: <Hero />, colSpan: 2, rowSpan: 2 },
+    { key: 'b', content: <Stat /> },
+  ]}
+/>
+```
+
+### CountUp
+
+File: `src/components/atoms/CountUp.tsx` — client component.
+
+| Prop         | Type     | Default | Description            |
+| ------------ | -------- | ------- | ---------------------- |
+| `end`        | `number` | —       | Target value           |
+| `duration?`  | `number` | `1000`  | Animation length in ms |
+| `start?`     | `number` | `0`     | Starting value         |
+| `prefix?`    | `string` | `''`    | Text before the value  |
+| `suffix?`    | `string` | `''`    | Text after the value   |
+| `decimals?`  | `number` | `0`     | Decimal places         |
+| `className?` | `string` | `''`    | Extra classes          |
+
+Animates from `start` to `end` with cubic ease-out using a 16 ms interval.
+
+```tsx
+<CountUp end={4200} prefix="+" duration={1500} />
+```
+
+### GlowCard
+
+File: `src/components/atoms/GlowCard.tsx`
+
+| Prop         | Type                                                                        | Default     | Description         |
+| ------------ | --------------------------------------------------------------------------- | ----------- | ------------------- |
+| `children`   | `ReactNode`                                                                 | —           | Card content        |
+| `color?`     | `'primary' \| 'secondary' \| 'accent' \| 'success' \| 'warning' \| 'error'` | `'primary'` | Glow color on hover |
+| `title?`     | `string`                                                                    | —           | Optional heading    |
+| `className?` | `string`                                                                    | `''`        | Extra classes       |
+
+DaisyUI `card` that casts a colored `hover:shadow-*` glow.
+
+```tsx
+<GlowCard color="accent" title="Sparkles">
+  …
+</GlowCard>
+```
+
+### GradientText
+
+File: `src/components/atoms/GradientText.tsx`
+
+| Prop         | Type                                       | Default     | Description          |
+| ------------ | ------------------------------------------ | ----------- | -------------------- |
+| `children`   | `ReactNode`                                | —           | Text to style        |
+| `from?`      | theme color                                | `'primary'` | Gradient start       |
+| `to?`        | theme color                                | `'accent'`  | Gradient end         |
+| `via?`       | theme color                                | —           | Optional middle stop |
+| `direction?` | `'r' \| 'l' \| 't' \| 'b' \| 'tr' \| 'br'` | `'r'`       | Gradient direction   |
+| `className?` | `string`                                   | `''`        | Extra classes        |
+
+Applies `bg-clip-text text-transparent` over a Tailwind gradient.
+
+```tsx
+<GradientText from="primary" to="warning" direction="br">
+  Hello
+</GradientText>
+```
+
+### ImageComparison
+
+File: `src/components/atoms/ImageComparison.tsx` — client component.
+
+| Prop         | Type     | Default | Description           |
+| ------------ | -------- | ------- | --------------------- |
+| `before`     | `string` | —       | Overlay image source  |
+| `beforeAlt`  | `string` | —       | Overlay image alt     |
+| `after`      | `string` | —       | Base image source     |
+| `afterAlt`   | `string` | —       | Base image alt        |
+| `initial?`   | `number` | `50`    | Initial split percent |
+| `className?` | `string` | `''`    | Extra classes         |
+
+Pointer-drag before/after slider; the divider is a `role="slider"` button and
+the split is clamped to 0–100.
+
+```tsx
+<ImageComparison
+  before="/old.png"
+  beforeAlt="Old"
+  after="/new.png"
+  afterAlt="New"
+/>
+```
+
+### Magnetic
+
+File: `src/components/atoms/Magnetic.tsx` — client component.
+
+| Prop         | Type        | Default | Description          |
+| ------------ | ----------- | ------- | -------------------- |
+| `children`   | `ReactNode` | —       | Content to magnetise |
+| `strength?`  | `number`    | `12`    | Max offset in px     |
+| `className?` | `string`    | `''`    | Extra classes        |
+
+Translates the wrapper toward the pointer and resets on leave.
+
+```tsx
+<Magnetic strength={18}>
+  <Button>Hover me</Button>
+</Magnetic>
+```
+
+### ScrollProgress
+
+File: `src/components/atoms/ScrollProgress.tsx` — client component.
+
+| Prop         | Type     | Default        | Description     |
+| ------------ | -------- | -------------- | --------------- |
+| `color?`     | `string` | `'bg-primary'` | Bar color class |
+| `className?` | `string` | `''`           | Extra classes   |
+
+Fixed top bar (`role="progressbar"`) reflecting page scroll on `scroll` and
+`resize`.
+
+```tsx
+<ScrollProgress />
+```
+
+### Shimmer
+
+File: `src/components/atoms/Shimmer.tsx`
+
+| Prop         | Type     | Default        | Description         |
+| ------------ | -------- | -------------- | ------------------- |
+| `rounded?`   | `string` | `'rounded-lg'` | Corner radius class |
+| `className?` | `string` | `''`           | Extra classes       |
+
+Skeleton placeholder with an animated diagonal highlight; injects the
+`hv-shimmer` keyframes once.
+
+```tsx
+<Shimmer className="h-4 w-32" />
+```
+
+### Spotlight
+
+File: `src/components/atoms/Spotlight.tsx` — client component.
+
+| Prop         | Type        | Default | Description      |
+| ------------ | ----------- | ------- | ---------------- |
+| `children`   | `ReactNode` | —       | Spotlight target |
+| `className?` | `string`    | `''`    | Extra classes    |
+
+Tracks the pointer into `--x` / `--y` CSS variables that drive a radial gradient
+overlay (visible on `group-hover`).
+
+```tsx
+<Spotlight>
+  <Card>Bright idea</Card>
+</Spotlight>
+```
+
+### StarBorder
+
+File: `src/components/atoms/StarBorder.tsx`
+
+| Prop         | Type        | Default     | Description    |
+| ------------ | ----------- | ----------- | -------------- |
+| `children`   | `ReactNode` | —           | Inner content  |
+| `from?`      | theme color | `'primary'` | Gradient start |
+| `to?`        | theme color | `'accent'`  | Gradient end   |
+| `className?` | `string`    | `''`        | Extra classes  |
+
+A 1px gradient border frame around a `bg-base-100` inner panel.
+
+```tsx
+<StarBorder from="success" to="warning">
+  Featured
+</StarBorder>
+```
+
 ---
 
 [Back to index](README.md)
