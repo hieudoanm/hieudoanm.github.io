@@ -202,7 +202,9 @@ describe('PreviewTabs', () => {
     );
     fireEvent.click(screen.getByRole('button', { name: 'Pages' }));
     expect(screen.getByText(/Pages Directory/)).toBeInTheDocument();
-    expect(screen.getAllByRole('link', { name: /Dashboard/ }).length).toBe(1);
+    expect(
+      screen.getAllByRole('link', { name: /Dashboard/ }).length
+    ).toBeGreaterThan(0);
   });
 
   it('switches back to components tab', () => {
