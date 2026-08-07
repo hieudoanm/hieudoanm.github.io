@@ -15,20 +15,43 @@ them without re-reading source files.
   - [Atoms](#atoms)
     - [Avatar](#avatar)
     - [Badge](#badge)
+    - [Button](#button)
+    - [Checkbox](#checkbox)
+    - [Icon](#icon)
+    - [Progress](#progress)
+    - [Rating](#rating)
     - [Separator](#separator)
     - [Skeleton](#skeleton)
     - [Spinner](#spinner)
+    - [StatusDot](#statusdot)
+    - [Switch](#switch)
+    - [Textarea](#textarea)
     - [TextField](#textfield)
+    - [Tooltip](#tooltip)
   - [Molecules](#molecules)
+    - [Alert](#alert)
+    - [AvatarGroup](#avatargroup)
+    - [Breadcrumbs](#breadcrumbs)
     - [Card](#card)
     - [Dropdown](#dropdown)
     - [EmptyState](#emptystate)
+    - [Fieldset](#fieldset)
     - [Modal](#modal)
+    - [NavItem](#navitem)
+    - [Pagination](#pagination)
+    - [SearchBar](#searchbar)
+    - [Stat](#stat)
     - [Tabs](#tabs)
     - [Toast](#toast)
   - [Organisms](#organisms)
+    - [DataTable](#datatable)
+    - [FeatureGrid](#featuregrid)
+    - [Footer](#footer)
     - [Header](#header)
     - [Navbar](#navbar)
+    - [PricingSection](#pricingsection)
+    - [Sidebar](#sidebar)
+    - [Toolbar](#toolbar)
     - [Templates](#templates)
     - [shared](#shared)
     - [app](#app)
@@ -163,6 +186,85 @@ File: `src/components/atoms/Badge.tsx`
 <Badge variant="success">Paid</Badge>
 ```
 
+### Button
+
+File: `src/components/atoms/Button.tsx`
+
+| Prop         | Type                                                                     | Default     | Description                |
+| ------------ | ------------------------------------------------------------------------ | ----------- | -------------------------- |
+| `variant?`   | `'primary' \| 'secondary' \| 'accent' \| 'ghost' \| 'outline' \| 'link'` | `'primary'` | DaisyUI button color       |
+| `size?`      | `'sm' \| 'md' \| 'lg'`                                                   | `'md'`      | Button size                |
+| `loading?`   | `boolean`                                                                | `false`     | Renders spinner + disables |
+| `disabled?`  | `boolean`                                                                | `false`     | Disables the button        |
+| `onClick?`   | `() => void`                                                             | —           | Click handler              |
+| `type?`      | `'button' \| 'submit' \| 'reset'`                                        | `'button'`  | Native type                |
+| `className?` | `string`                                                                 | `''`        | Extra classes              |
+| `children`   | `ReactNode`                                                              | —           | Button content             |
+
+```tsx
+<Button variant="outline" size="sm" onClick={save}>
+  Save
+</Button>
+```
+
+### Checkbox
+
+File: `src/components/atoms/Checkbox.tsx`
+
+| Prop        | Type                         | Default | Description              |
+| ----------- | ---------------------------- | ------- | ------------------------ |
+| `label`     | `string`                     | —       | Accessible label text    |
+| `checked`   | `boolean`                    | —       | Controlled checked state |
+| `onChange`  | `(checked: boolean) => void` | —       | Called with next value   |
+| `size?`     | `'sm' \| 'md' \| 'lg'`       | `'md'`  | Checkbox size            |
+| `disabled?` | `boolean`                    | `false` | Disables the input       |
+
+Renders a DaisyUI `checkbox checkbox-primary` with a wrapping `label`.
+
+### Icon
+
+File: `src/components/atoms/Icon.tsx`
+
+| Prop         | Type                                                                                                       | Default | Description            |
+| ------------ | ---------------------------------------------------------------------------------------------------------- | ------- | ---------------------- |
+| `name`       | `'bell' \| 'calendar' \| 'check' \| 'heart' \| 'home' \| 'lock' \| 'mail' \| 'search' \| 'star' \| 'user'` | —       | Feather icon to render |
+| `size?`      | `'xs' \| 'sm' \| 'md' \| 'lg'`                                                                             | `'md'`  | Icon size              |
+| `className?` | `string`                                                                                                   | `''`    | Extra classes          |
+
+Thin wrapper over `react-icons/fi` glyphs so the demo code can reference icons
+by name.
+
+### Progress
+
+File: `src/components/atoms/Progress.tsx`
+
+| Prop         | Type                                                                        | Default     | Description              |
+| ------------ | --------------------------------------------------------------------------- | ----------- | ------------------------ |
+| `value`      | `number`                                                                    | —           | Current value (clamped)  |
+| `max?`       | `number`                                                                    | `100`       | Maximum value            |
+| `size?`      | `'sm' \| 'md' \| 'lg'`                                                      | `'md'`      | Bar height               |
+| `variant?`   | `'primary' \| 'secondary' \| 'accent' \| 'success' \| 'warning' \| 'error'` | `'primary'` | Bar color                |
+| `label?`     | `string`                                                                    | —           | Optional label above bar |
+| `showValue?` | `boolean`                                                                   | `false`     | Renders a `NN%` readout  |
+| `className?` | `string`                                                                    | `''`        | Extra classes            |
+
+```tsx
+<Progress value={72} label="Disk" showValue variant="accent" />
+```
+
+### Rating
+
+File: `src/components/atoms/Rating.tsx`
+
+| Prop        | Type                      | Default | Description                     |
+| ----------- | ------------------------- | ------- | ------------------------------- |
+| `value`     | `number`                  | —       | Number of filled stars          |
+| `max?`      | `number`                  | `5`     | Total star count                |
+| `onChange?` | `(value: number) => void` | —       | When set, renders radio buttons |
+| `size?`     | `'sm' \| 'md' \| 'lg'`    | `'md'`  | Star size                       |
+
+Star shapes use the DaisyUI `mask mask-star-2` mask.
+
 ### Separator
 
 File: `src/components/atoms/Separator.tsx`
@@ -193,6 +295,43 @@ File: `src/components/atoms/Spinner.tsx`
 
 Renders a DaisyUI `loading loading-spinner`.
 
+### StatusDot
+
+File: `src/components/atoms/StatusDot.tsx`
+
+| Prop     | Type                                        | Default | Description         |
+| -------- | ------------------------------------------- | ------- | ------------------- |
+| `status` | `'online' \| 'away' \| 'busy' \| 'offline'` | —       | Dot color           |
+| `label?` | `string`                                    | —       | Optional text label |
+
+Small colored presence dot (`bg-success` / `bg-warning` / `bg-error` /
+`bg-base-content/30`).
+
+### Switch
+
+File: `src/components/atoms/Switch.tsx`
+
+| Prop           | Type                         | Default | Description            |
+| -------------- | ---------------------------- | ------- | ---------------------- |
+| `label`        | `string`                     | —       | Accessible label       |
+| `checked`      | `boolean`                    | —       | Controlled state       |
+| `onChange`     | `(checked: boolean) => void` | —       | Called with next value |
+| `size?`        | `'sm' \| 'md' \| 'lg'`       | `'md'`  | Toggle size            |
+| `disabled?`    | `boolean`                    | `false` | Disables the toggle    |
+| `description?` | `string`                     | —       | Muted helper text      |
+
+Renders a DaisyUI `toggle toggle-primary` with `role="switch"`.
+
+### Textarea
+
+File: `src/components/atoms/Textarea.tsx`
+
+| Prop       | Type                                          | Default | Description                                     |
+| ---------- | --------------------------------------------- | ------- | ----------------------------------------------- |
+| `label`    | `string` (required)                           | —       | Visible label; derives `id` when `id` is absent |
+| `error?`   | `string`                                      | —       | Error text; adds `textarea-error`               |
+| `...props` | `TextareaHTMLAttributes<HTMLTextAreaElement>` | —       | Passed to the `<textarea>`                      |
+
 ### TextField
 
 File: `src/components/atoms/TextField.tsx`
@@ -212,11 +351,69 @@ File: `src/components/atoms/TextField.tsx`
 />
 ```
 
+### Tooltip
+
+File: `src/components/atoms/Tooltip.tsx`
+
+| Prop        | Type                                     | Default | Description      |
+| ----------- | ---------------------------------------- | ------- | ---------------- |
+| `content`   | `string`                                 | —       | Tooltip text     |
+| `children`  | `ReactNode`                              | —       | Hover target     |
+| `position?` | `'top' \| 'bottom' \| 'left' \| 'right'` | `'top'` | Tooltip position |
+
+Renders a DaisyUI `tooltip` wrapper using `data-tip`.
+
 ---
 
 ## Molecules
 
 Composites of atoms in `src/components/molecules/`.
+
+### Alert
+
+File: `src/components/molecules/Alert.tsx`
+
+| Prop           | Type                                          | Default  | Description            |
+| -------------- | --------------------------------------------- | -------- | ---------------------- |
+| `variant?`     | `'info' \| 'success' \| 'warning' \| 'error'` | `'info'` | Alert color            |
+| `title?`       | `string`                                      | —        | Bold title line        |
+| `description?` | `ReactNode`                                   | —        | Muted body             |
+| `dismissible?` | `boolean`                                     | `false`  | Renders a close button |
+| `onClose?`     | `() => void`                                  | —        | Called on dismiss      |
+| `className?`   | `string`                                      | `''`     | Extra classes          |
+| `children?`    | `ReactNode`                                   | —        | Extra body content     |
+
+Renders a DaisyUI `alert alert-*` with `role="alert"`.
+
+### AvatarGroup
+
+File: `src/components/molecules/AvatarGroup.tsx`
+
+| Prop      | Type                                                 | Default | Description                          |
+| --------- | ---------------------------------------------------- | ------- | ------------------------------------ |
+| `avatars` | `{ src?: string; alt: string; fallback?: string }[]` | —       | Avatars to stack                     |
+| `size?`   | `'sm' \| 'md' \| 'lg'`                               | `'md'`  | Avatar size                          |
+| `max?`    | `number`                                             | —       | Cap shown avatars; renders `+N` chip |
+
+Overlapping avatars with a `+N more members` overflow indicator.
+
+### Breadcrumbs
+
+File: `src/components/molecules/Breadcrumbs.tsx`
+
+| Prop    | Type                                 | Default | Description                              |
+| ------- | ------------------------------------ | ------- | ---------------------------------------- |
+| `items` | `{ label: string; href?: string }[]` | —       | Trail; last item renders as current page |
+
+```tsx
+<Breadcrumbs
+  items={[
+    { label: 'Home', href: '/' },
+    { label: 'Settings', href: '/settings' },
+    { label: 'Profile' },
+  ]}
+/>
+```
 
 ### Card
 
@@ -258,6 +455,18 @@ File: `src/components/molecules/EmptyState.tsx`
 | `description?` | `string`    | —       | Muted helper text   |
 | `action?`      | `ReactNode` | —       | Optional CTA below  |
 
+### Fieldset
+
+File: `src/components/molecules/Fieldset.tsx`
+
+| Prop           | Type        | Default | Description              |
+| -------------- | ----------- | ------- | ------------------------ |
+| `legend`       | `string`    | —       | Fieldset title           |
+| `description?` | `string`    | —       | Muted helper text        |
+| `disabled?`    | `boolean`   | `false` | Disables all descendants |
+| `className?`   | `string`    | `''`    | Extra classes            |
+| `children`     | `ReactNode` | —       | Form controls            |
+
 ### Modal
 
 File: `src/components/molecules/Modal.tsx`
@@ -271,6 +480,64 @@ File: `src/components/molecules/Modal.tsx`
 | `action?`  | `ReactNode`  | —       | `modal-action` footer        |
 
 Renders a DaisyUI `dialog.modal.modal-open`.
+
+### NavItem
+
+File: `src/components/molecules/NavItem.tsx`
+
+| Prop       | Type         | Default | Description                               |
+| ---------- | ------------ | ------- | ----------------------------------------- |
+| `label`    | `string`     | —       | Link text                                 |
+| `href`     | `string`     | —       | Destination                               |
+| `icon?`    | `ReactNode`  | —       | Leading icon                              |
+| `badge?`   | `string`     | —       | Small count badge                         |
+| `active?`  | `boolean`    | `false` | Highlights and sets `aria-current="page"` |
+| `onClick?` | `() => void` | —       | Click handler                             |
+
+Single sidebar-style `<li>` link; compose inside a `<ul>`.
+
+### Pagination
+
+File: `src/components/molecules/Pagination.tsx`
+
+| Prop            | Type                     | Default | Description                         |
+| --------------- | ------------------------ | ------- | ----------------------------------- |
+| `current`       | `number`                 | —       | Active page (clamped to range)      |
+| `total`         | `number`                 | —       | Total pages                         |
+| `onChange`      | `(page: number) => void` | —       | Called with the selected page       |
+| `siblingCount?` | `number`                 | `1`     | Pages shown around the current page |
+
+Renders prev/next arrows plus numbered pages with `…` ellipsis for large ranges.
+
+### SearchBar
+
+File: `src/components/molecules/SearchBar.tsx` — client component.
+
+| Prop           | Type                      | Default       | Description              |
+| -------------- | ------------------------- | ------------- | ------------------------ |
+| `value`        | `string`                  | —             | Controlled query         |
+| `onChange`     | `(value: string) => void` | —             | Called on input/clear    |
+| `placeholder?` | `string`                  | `'Search...'` | Placeholder text         |
+| `size?`        | `'sm' \| 'md' \| 'lg'`    | `'md'`        | Input size               |
+| `disabled?`    | `boolean`                 | `false`       | Disables input and clear |
+
+Includes a leading search icon and a `Clear search` button when non-empty.
+
+### Stat
+
+File: `src/components/molecules/Stat.tsx`
+
+| Prop           | Type                                                                        | Default     | Description        |
+| -------------- | --------------------------------------------------------------------------- | ----------- | ------------------ |
+| `label`        | `string`                                                                    | —           | Muted caption      |
+| `value`        | `string`                                                                    | —           | Big value text     |
+| `icon?`        | `ReactNode`                                                                 | —           | `stat-figure` icon |
+| `description?` | `string`                                                                    | —           | Muted `stat-desc`  |
+| `variant?`     | `'primary' \| 'secondary' \| 'accent' \| 'success' \| 'warning' \| 'error'` | `'primary'` | Icon color         |
+
+```tsx
+<Stat label="Revenue" value="$12,480" icon={<FiBell />} variant="success" />
+```
 
 ### Tabs
 
@@ -303,6 +570,46 @@ Fires the timer via `useEffect`; the close button dismisses immediately.
 
 Full sections in `src/components/organisms/`.
 
+### DataTable
+
+File: `src/components/organisms/DataTable.tsx`
+
+| Prop         | Type                                                             | Default               | Description                |
+| ------------ | ---------------------------------------------------------------- | --------------------- | -------------------------- |
+| `columns`    | `{ key: string; header: string; render?: (row) => ReactNode }[]` | —                     | Column definitions         |
+| `rows`       | `Record<string, unknown>[]`                                      | —                     | Data rows                  |
+| `emptyText?` | `string`                                                         | `'No records found.'` | Shown when `rows` is empty |
+
+```tsx
+<DataTable
+  columns={[
+    { key: 'name', header: 'Member' },
+    { key: 'role', header: 'Role' },
+  ]}
+  rows={[{ name: 'Jane Doe', role: 'Admin' }]}
+/>
+```
+
+### FeatureGrid
+
+File: `src/components/organisms/FeatureGrid.tsx`
+
+| Prop       | Type                                                        | Default | Description             |
+| ---------- | ----------------------------------------------------------- | ------- | ----------------------- |
+| `features` | `{ icon: ReactNode; title: string; description: string }[]` | —       | Feature cards           |
+| `columns?` | `1 \| 2 \| 3 \| 4`                                          | `3`     | Responsive grid columns |
+
+### Footer
+
+File: `src/components/organisms/Footer.tsx`
+
+| Prop           | Type                                            | Default | Description       |
+| -------------- | ----------------------------------------------- | ------- | ----------------- |
+| `brand`        | `string`                                        | —       | Brand name        |
+| `description?` | `string`                                        | —       | Brand blurb       |
+| `columns`      | `{ title: string; links: { label, href }[] }[]` | —       | Link columns      |
+| `copyright?`   | `string`                                        | —       | Bottom legal line |
+
 ### Header
 
 File: `src/components/organisms/Header.tsx`
@@ -329,6 +636,40 @@ File: `src/components/organisms/Navbar.tsx` — client component.
 Active link is highlighted via `usePathname()` (`/` matches exactly; other links
 match by `startsWith`).
 
+### PricingSection
+
+File: `src/components/organisms/PricingSection.tsx`
+
+| Prop    | Type                                                                                            | Default | Description   |
+| ------- | ----------------------------------------------------------------------------------------------- | ------- | ------------- |
+| `plans` | `{ name; price; period?; description?; features: string[]; highlighted?; ctaLabel; ctaHref }[]` | —       | Pricing tiers |
+
+Renders a 3-column grid of pricing cards; `highlighted` plans get the primary
+border, tinted background, and a solid `btn-primary` CTA.
+
+### Sidebar
+
+File: `src/components/organisms/Sidebar.tsx` — client component.
+
+| Prop      | Type                               | Default | Description           |
+| --------- | ---------------------------------- | ------- | --------------------- |
+| `title`   | `string`                           | —       | Sidebar heading       |
+| `items`   | `{ label; href; icon?; badge? }[]` | —       | Nav links             |
+| `footer?` | `ReactNode`                        | —       | Pinned footer content |
+
+Active item is highlighted from `usePathname()` (`/` exact; others by prefix).
+
+### Toolbar
+
+File: `src/components/organisms/Toolbar.tsx`
+
+| Prop        | Type          | Default | Description            |
+| ----------- | ------------- | ------- | ---------------------- |
+| `title?`    | `string`      | —       | Section heading        |
+| `subtitle?` | `string`      | —       | Muted helper text      |
+| `actions?`  | `ReactNode[]` | —       | Right-aligned controls |
+| `children?` | `ReactNode`   | —       | Extra row below        |
+
 ---
 
 ## Templates
@@ -343,32 +684,32 @@ exist.
 
 Theme-neutral templates used across route groups.
 
-| Template                | Props                                                                                                         | Description                                                                              |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `AboutTemplate`         | `name: string; description: string; version: string; items: { label, value }[]`                               | App info with PageShell + bottom Navbar                                                  |
-| `AccordionTemplate`     | —                                                                                                             | Collapsible accordion rows                                                               |
-| `AlertsTemplate`        | —                                                                                                             | Alert banner variants                                                                    |
-| `ChartsGalleryTemplate` | —                                                                                                             | Chart gallery                                                                            |
-| `ComingSoonTemplate`    | —                                                                                                             | Launch placeholder                                                                       |
-| `ComponentsTemplate`    | —                                                                                                             | Directory of demos (folder; drives the home page)                                        |
-| `CookieConsentTemplate` | —                                                                                                             | Cookie banner (mounted in root `layout.tsx`)                                             |
-| `DataTableTemplate`     | —                                                                                                             | Sortable data grid                                                                       |
-| `EmptyStatesTemplate`   | —                                                                                                             | Empty-state placeholders                                                                 |
-| `ErrorTemplate`         | `code: string; description?: string; action?: ReactNode`                                                      | 500 error page body                                                                      |
-| `ForbiddenTemplate`     | —                                                                                                             | 403 access-denied page                                                                   |
-| `FormsShowcaseTemplate` | —                                                                                                             | Form control gallery                                                                     |
-| `GlobalErrorTemplate`   | `error: Error & { digest?: string }; reset: () => void`                                                       | Root error boundary body                                                                 |
-| `MaintenanceTemplate`   | —                                                                                                             | Maintenance-mode page                                                                    |
-| `ModalsTemplate`        | —                                                                                                             | Modal/dialog examples                                                                    |
-| `NotFoundTemplate`      | `code?: number; message?: string`                                                                             | 404 page body                                                                            |
-| `OnboardingTemplate`    | —                                                                                                             | Multi-step onboarding flow                                                               |
-| `PaginationTemplate`    | —                                                                                                             | Paginated list                                                                           |
-| `SearchTemplate`        | —                                                                                                             | Global search page                                                                       |
-| `StepperTemplate`       | —                                                                                                             | Multi-step stepper                                                                       |
-| `TabsTemplate`          | —                                                                                                             | Tab navigation examples                                                                  |
-| `TooltipsTemplate`      | —                                                                                                             | Tooltip examples                                                                         |
-| `UploadTemplate`        | —                                                                                                             | File-upload dropzone                                                                     |
-| `PageShell`             | `title, subtitle?, backHref?, headerAction?, headerBadges?, navItems?, maxWidth?, gap?, className?, children` | Wraps `Header` + `main` + optional `Navbar`; used by `AboutTemplate` and blog/info pages |
+| Template                | Props                                                                                                         | Description                                                                                                                                          |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `AboutTemplate`         | `name: string; description: string; version: string; items: { label, value }[]`                               | App info with PageShell + bottom Navbar                                                                                                              |
+| `AccordionTemplate`     | —                                                                                                             | Collapsible accordion rows                                                                                                                           |
+| `AlertsTemplate`        | —                                                                                                             | Alert banner variants                                                                                                                                |
+| `ChartsGalleryTemplate` | —                                                                                                             | Chart gallery                                                                                                                                        |
+| `ComingSoonTemplate`    | —                                                                                                             | Launch placeholder                                                                                                                                   |
+| `ComponentsTemplate`    | —                                                                                                             | Four-level atomic-design demo (Atoms / Molecules / Organisms / Templates) with level tabs that re-arrange the gallery (folder; drives the home page) |
+| `CookieConsentTemplate` | —                                                                                                             | Cookie banner (mounted in root `layout.tsx`)                                                                                                         |
+| `DataTableTemplate`     | —                                                                                                             | Sortable data grid                                                                                                                                   |
+| `EmptyStatesTemplate`   | —                                                                                                             | Empty-state placeholders                                                                                                                             |
+| `ErrorTemplate`         | `code: string; description?: string; action?: ReactNode`                                                      | 500 error page body                                                                                                                                  |
+| `ForbiddenTemplate`     | —                                                                                                             | 403 access-denied page                                                                                                                               |
+| `FormsShowcaseTemplate` | —                                                                                                             | Form control gallery                                                                                                                                 |
+| `GlobalErrorTemplate`   | `error: Error & { digest?: string }; reset: () => void`                                                       | Root error boundary body                                                                                                                             |
+| `MaintenanceTemplate`   | —                                                                                                             | Maintenance-mode page                                                                                                                                |
+| `ModalsTemplate`        | —                                                                                                             | Modal/dialog examples                                                                                                                                |
+| `NotFoundTemplate`      | `code?: number; message?: string`                                                                             | 404 page body                                                                                                                                        |
+| `OnboardingTemplate`    | —                                                                                                             | Multi-step onboarding flow                                                                                                                           |
+| `PaginationTemplate`    | —                                                                                                             | Paginated list                                                                                                                                       |
+| `SearchTemplate`        | —                                                                                                             | Global search page                                                                                                                                   |
+| `StepperTemplate`       | —                                                                                                             | Multi-step stepper                                                                                                                                   |
+| `TabsTemplate`          | —                                                                                                             | Tab navigation examples                                                                                                                              |
+| `TooltipsTemplate`      | —                                                                                                             | Tooltip examples                                                                                                                                     |
+| `UploadTemplate`        | —                                                                                                             | File-upload dropzone                                                                                                                                 |
+| `PageShell`             | `title, subtitle?, backHref?, headerAction?, headerBadges?, navItems?, maxWidth?, gap?, className?, children` | Wraps `Header` + `main` + optional `Navbar`; used by `AboutTemplate` and blog/info pages                                                             |
 
 ### app
 

@@ -4,6 +4,12 @@ import { ThemeEditor } from '../editor/ThemeEditor';
 import { PreviewTabs } from '../demo/PreviewTabs';
 import { ComponentsDemo } from '../demo/components/ComponentsDemo';
 
+jest.mock('next/navigation', () => ({
+  usePathname: jest.fn(),
+}));
+
+const { usePathname } = jest.requireMock('next/navigation');
+
 describe('css-utils', () => {
   it('generates CSS from config', () => {
     const css = generateCSS(DEFAULT_CONFIG);
@@ -220,11 +226,84 @@ describe('PreviewTabs', () => {
 });
 
 describe('ComponentsDemo', () => {
-  it('renders all demo columns', () => {
+  beforeEach(() => {
+    (usePathname as jest.Mock).mockReturnValue('/');
+  });
+
+  it('renders the four component level tabs', () => {
     render(<ComponentsDemo />);
-    expect(screen.getByText('July Revenue')).toBeInTheDocument();
-    expect(screen.getByText('Create new account')).toBeInTheDocument();
-    expect(screen.getByText('Recent orders')).toBeInTheDocument();
-    expect(screen.getByText('Starter Plan')).toBeInTheDocument();
+    expect(screen.getByRole('tab', { name: 'Atoms' })).toBeInTheDocument();
+    expect(screen.getByRole('tab', { name: 'Molecules' })).toBeInTheDocument();
+    expect(screen.getByRole('tab', { name: 'Organisms' })).toBeInTheDocument();
+    expect(screen.getByRole('tab', { name: 'Templates' })).toBeInTheDocument();
+  });
+
+  it('shows atoms level by default', () => {
+    render(<ComponentsDemo />);
+    expect(screen.getByRole('tab', { name: 'Atoms' })).toHaveAttribute(
+      'aria-selected',
+      'true'
+    );
+    expect(screen.getByRole('heading', { name: 'Button' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Badge' })).toBeInTheDocument();
+    expect(
+      screen.queryByRole('heading', { name: 'Card' })
+    ).not.toBeInTheDocument();
+  });
+
+  it('switches to molecules level', () => {
+    render(<ComponentsDemo />);
+    fireEvent.click(screen.getByRole('tab', { name: 'Molecules' }));
+    expect(screen.getByRole('tab', { name: 'Molecules' })).toHaveAttribute(
+      'aria-selected',
+      'true'
+    );
+    expect(screen.getByRole('heading', { name: 'Card' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Alert' })).toBeInTheDocument();
+    expect(
+      screen.queryByRole('heading', { name: 'Button' })
+    ).not.toBeInTheDocument();
+  });
+
+  it('switches to organisms level', () => {
+    render(<ComponentsDemo />);
+    fireEvent.click(screen.getByRole('tab', { name: 'Organisms' }));
+    expect(
+      screen.getByRole('heading', { name: 'Dashboard' })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { name: 'Workspace' })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { name: 'Starter' })
+    ).toBeInTheDocument();
+  });
+
+  it('switches to templates level with real route links', () => {
+    render(<ComponentsDemo />);
+    fireEvent.click(screen.getByRole('tab', { name: 'Templates' }));
+    const dashboardLinks = screen.getAllByRole('link', {
+      name: 'Open Dashboard template',
+    });
+    expect(
+      dashboardLinks.some((link) => link.getAttribute('href') === '/dashboard')
+    ).toBe(true);
+    expect(
+      screen.getByRole('link', { name: 'Open Inbox template' })
+    ).toHaveAttribute('href', '/mail/inbox');
+    expect(
+      screen.getByRole('link', { name: 'Open Pricing template' })
+    ).toHaveAttribute('href', '/pricing');
+  });
+
+  it('switches back to atoms level', () => {
+    render(<ComponentsDemo />);
+    fireEvent.click(screen.getByRole('tab', { name: 'Templates' }));
+    fireEvent.click(screen.getByRole('tab', { name: 'Atoms' }));
+    expect(screen.getByRole('tab', { name: 'Atoms' })).toHaveAttribute(
+      'aria-selected',
+      'true'
+    );
+    expect(screen.getByRole('heading', { name: 'Button' })).toBeInTheDocument();
   });
 });

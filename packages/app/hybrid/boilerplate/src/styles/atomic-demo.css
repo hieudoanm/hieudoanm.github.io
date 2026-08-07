@@ -1,0 +1,17 @@
+@layer utilities {
+  /* Atomic demo: staggered entrance animation when switching component levels */
+  .animate-atomic-in {
+    animation: atomic-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  @keyframes atomic-in {
+    from {
+      opacity: 0;
+      transform: translateY(14px) scale(0.97);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+}

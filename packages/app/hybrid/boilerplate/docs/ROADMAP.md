@@ -30,8 +30,15 @@
 > Reusable: atoms, molecules, organisms
 
 - [x] Spinner, Badge, Avatar, Separator, TextField, Skeleton (atoms)
+- [x] Button, Checkbox, Icon, Progress, Rating, StatusDot, Switch, Textarea,
+      Tooltip (atoms)
 - [x] Toast, Modal, Card, EmptyState, Tabs, Dropdown (molecules)
+- [x] Alert, AvatarGroup, Breadcrumbs, Fieldset, NavItem, Pagination, SearchBar,
+      Stat (molecules)
 - [x] Header, Navbar (organisms)
+- [x] DataTable, FeatureGrid, Footer, PricingSection, Sidebar, Toolbar
+      (organisms)
+- [x] Four-level atomic demo with animated level tabs (ComponentsTemplate)
 - [ ] Additional atom components as needed
 - [ ] Additional molecule components as needed
 

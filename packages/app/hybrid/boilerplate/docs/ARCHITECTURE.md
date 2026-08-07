@@ -27,9 +27,9 @@
 src/
 ├── app/              # App Router pages and layouts
 ├── components/       # Atomic design components
-│   ├── atoms/        # Smallest building blocks (Spinner, Badge, Avatar, etc.)
-│   ├── molecules/    # Combinations of atoms (Toast, Modal, Card, etc.)
-│   ├── organisms/    # Complex UI sections (Header, Navbar)
+│   ├── atoms/        # Smallest building blocks (Button, Badge, Avatar, etc.)
+│   ├── molecules/    # Combinations of atoms (Card, Alert, SearchBar, etc.)
+│   ├── organisms/    # Complex UI sections (Header, Sidebar, DataTable)
 │   └── templates/    # Page-level layouts (AboutTemplate, ErrorTemplate, etc.)
 ├── hooks/            # Custom React hooks (useSWRegister)
 ├── providers/        # Context providers (SWProvider)
@@ -44,11 +44,11 @@ src/
 ├─────────────────────────────────────────┤
 │  Templates (components/templates/)      │  Page-level layout shells
 ├─────────────────────────────────────────┤
-│  Organisms (components/organisms/)      │  Header, Navbar
+│  Organisms (components/organisms/)      │  Header, Sidebar, DataTable, Footer
 ├─────────────────────────────────────────┤
-│  Molecules (components/molecules/)      │  Toast, Modal, Card, Tabs, etc.
+│  Molecules (components/molecules/)      │  Card, Alert, SearchBar, Pagination
 ├─────────────────────────────────────────┤
-│  Atoms (components/atoms/)              │  Spinner, Badge, Avatar, TextField, etc.
+│  Atoms (components/atoms/)              │  Button, Badge, Avatar, Rating, etc.
 ├─────────────────────────────────────────┤
 │  Providers (providers/)                 │  SWProvider (service worker)
 ├─────────────────────────────────────────┤
