@@ -14,4 +14,17 @@
       transform: translateY(0) scale(1);
     }
   }
+
+  .animate-marquee {
+    animation: marquee 24s linear infinite;
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
 }

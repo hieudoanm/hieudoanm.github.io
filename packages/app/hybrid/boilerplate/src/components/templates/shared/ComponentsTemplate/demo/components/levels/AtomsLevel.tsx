@@ -4,21 +4,36 @@ import {
   Avatar,
   Badge,
   Button,
+  ButtonLink,
   Checkbox,
   CodeBlock,
+  Collapse,
+  CopyButton,
+  Countdown,
+  Divider,
   FileInput,
   Icon,
+  IconButton,
+  Indicator,
   Kbd,
+  Mask,
+  NumberField,
+  OTPInput,
+  PasswordField,
   Progress,
+  ProgressRing,
   Radio,
   Rating,
   Select,
   Skeleton,
   Slider,
   Spinner,
+  Stack,
   StatusDot,
+  Swap,
   Switch,
   Tag,
+  Text,
   Textarea,
   TextField,
   Tooltip,
@@ -49,6 +64,11 @@ export const AtomsLevel: FC = () => {
   const [fruit, setFruit] = useState('');
   const [volume, setVolume] = useState(60);
   const [tags, setTags] = useState(['react', 'next']);
+  const [password, setPassword] = useState('s3cret');
+  const [quantity, setQuantity] = useState(2);
+  const [swapOn, setSwapOn] = useState(false);
+  const [otp, setOtp] = useState('');
+  const [collapseOpen, setCollapseOpen] = useState(false);
 
   return (
     <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -220,6 +240,182 @@ export const AtomsLevel: FC = () => {
       <AtomTile title="FileInput" index={20}>
         <div className="w-full">
           <FileInput label="Upload" accept=".pdf" hint="PDF files only" />
+        </div>
+      </AtomTile>
+      <AtomTile title="PasswordField" index={21}>
+        <div className="w-full">
+          <PasswordField
+            label="Password"
+            value={password}
+            onChange={setPassword}
+            placeholder="••••••••"
+          />
+        </div>
+      </AtomTile>
+      <AtomTile title="CopyButton" index={22}>
+        <CopyButton text="pnpm install" label="Copy command" />
+        <CopyButton text="npm i" variant="primary" size="md" />
+      </AtomTile>
+      <AtomTile title="NumberField" index={23}>
+        <div className="w-full">
+          <NumberField
+            label="Quantity"
+            value={quantity}
+            onChange={setQuantity}
+            min={0}
+            max={10}
+          />
+        </div>
+      </AtomTile>
+      <AtomTile title="IconButton" index={24}>
+        <IconButton icon={<Icon name="star" />} label="Favorite" size="sm" />
+        <IconButton
+          icon={<Icon name="bell" />}
+          label="Notify"
+          variant="outline"
+          size="sm"
+        />
+        <IconButton
+          icon={<Icon name="home" />}
+          label="Home"
+          variant="ghost"
+          size="sm"
+        />
+      </AtomTile>
+      <AtomTile title="Divider" index={25}>
+        <div className="flex w-full flex-col gap-3">
+          <Divider label="OR" />
+          <Divider />
+        </div>
+      </AtomTile>
+      <AtomTile title="Indicator" index={26}>
+        <div className="flex gap-6">
+          <Indicator badge="3">
+            <IconButton
+              icon={<Icon name="bell" />}
+              label="Inbox"
+              variant="outline"
+              size="sm"
+            />
+          </Indicator>
+          <Indicator badge="new" position="bottom-end">
+            <IconButton
+              icon={<Icon name="user" />}
+              label="Profile"
+              variant="ghost"
+              size="sm"
+            />
+          </Indicator>
+        </div>
+      </AtomTile>
+      <AtomTile title="Swap" index={27}>
+        <Swap
+          first={<Icon name="star" />}
+          second={<Icon name="bell" />}
+          on={swapOn}
+          onToggle={setSwapOn}
+          ariaLabel="Toggle demo"
+        />
+      </AtomTile>
+      <AtomTile title="Countdown" index={28}>
+        <div className="flex items-end gap-4">
+          <Countdown value={12} />
+          <Countdown value={59} />
+          <Countdown value={7} />
+        </div>
+      </AtomTile>
+      <AtomTile title="Mask" index={29}>
+        <div className="flex gap-3">
+          <Mask
+            src="/avatar.png"
+            alt="Squircle"
+            shape="squircle"
+            className="h-16 w-16"
+          />
+          <Mask
+            src="/avatar.png"
+            alt="Hexagon"
+            shape="hexagon"
+            className="h-16 w-16"
+          />
+          <Mask
+            src="/avatar.png"
+            alt="Star"
+            shape="star"
+            className="h-16 w-16"
+          />
+        </div>
+      </AtomTile>
+      <AtomTile title="Stack" index={30}>
+        <Stack
+          items={[
+            <div
+              key="one"
+              className="card bg-base-100 border-base-content/10 p-4">
+              Card one
+            </div>,
+            <div
+              key="two"
+              className="card bg-base-100 border-base-content/10 p-4">
+              Card two
+            </div>,
+            <div
+              key="three"
+              className="card bg-base-100 border-base-content/10 p-4">
+              Card three
+            </div>,
+          ]}
+        />
+      </AtomTile>
+      <AtomTile title="Text" index={31}>
+        <div className="flex w-full flex-col gap-1">
+          <Text as="h3" size="lg" weight="semibold">
+            Heading text
+          </Text>
+          <Text color="muted">Muted body copy.</Text>
+          <Text as="small" color="primary">
+            Small primary label
+          </Text>
+        </div>
+      </AtomTile>
+      <AtomTile title="ButtonLink" index={32}>
+        <div className="flex gap-2">
+          <ButtonLink href="/about" size="sm">
+            About
+          </ButtonLink>
+          <ButtonLink href="/settings" variant="outline" size="sm">
+            Settings
+          </ButtonLink>
+        </div>
+      </AtomTile>
+      <AtomTile title="OTPInput" index={33}>
+        <div className="w-full">
+          <OTPInput
+            label="One-time code"
+            value={otp}
+            onChange={setOtp}
+            length={6}
+          />
+        </div>
+      </AtomTile>
+      <AtomTile title="Collapse" index={34}>
+        <div className="w-full">
+          <Collapse
+            title="What is this boilerplate?"
+            open={collapseOpen}
+            onChange={setCollapseOpen}>
+            <p>
+              A full-stack starting point with Next.js, Tailwind CSS, DaisyUI,
+              and Tauri.
+            </p>
+          </Collapse>
+        </div>
+      </AtomTile>
+      <AtomTile title="ProgressRing" index={35}>
+        <div className="flex gap-4">
+          <ProgressRing value={35} />
+          <ProgressRing value={75} showValue />
+          <ProgressRing value={100} size={56} showValue />
         </div>
       </AtomTile>
     </div>

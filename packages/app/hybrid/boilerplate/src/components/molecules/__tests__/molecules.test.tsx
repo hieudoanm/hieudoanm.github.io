@@ -4,23 +4,39 @@ import { Accordion } from '../Accordion';
 import { Alert } from '../Alert';
 import { AvatarGroup } from '../AvatarGroup';
 import { Breadcrumbs } from '../Breadcrumbs';
+import { ButtonGroup } from '../ButtonGroup';
 import { Card } from '../Card';
+import { Carousel } from '../Carousel';
 import { ChatBubble } from '../ChatBubble';
+import { CheckboxGroup } from '../CheckboxGroup';
+import { ColorPicker } from '../ColorPicker';
+import { Combobox } from '../Combobox';
+import { ConfirmDialog } from '../ConfirmDialog';
+import { DangerZone } from '../DangerZone';
 import { Dropdown } from '../Dropdown';
 import { EmptyState } from '../EmptyState';
 import { Fieldset } from '../Fieldset';
 import { FormRow } from '../FormRow';
+import { InputGroup } from '../InputGroup';
+import { KeyValue } from '../KeyValue';
+import { List } from '../List';
+import { Menu } from '../Menu';
 import { Modal } from '../Modal';
 import { NavItem } from '../NavItem';
 import { Pagination } from '../Pagination';
+import { Popover } from '../Popover';
+import { RadioGroup } from '../RadioGroup';
 import { SearchBar } from '../SearchBar';
+import { Sheet } from '../Sheet';
 import { Stat } from '../Stat';
 import { Steps } from '../Steps';
+import { Table } from '../Table';
 import { Tabs } from '../Tabs';
 import { TagInput } from '../TagInput';
 import { Timeline } from '../Timeline';
 import { Toast } from '../Toast';
 import { TreeView } from '../TreeView';
+import { Button } from '../../atoms/Button';
 
 describe('Alert', () => {
   it('renders title and description with default info variant', () => {
@@ -678,5 +694,570 @@ describe('TreeView', () => {
     expect(screen.getByText('Leaf')).toBeInTheDocument();
     fireEvent.click(screen.getByText('Root'));
     expect(screen.queryByText('Leaf')).not.toBeInTheDocument();
+  });
+});
+
+describe('ConfirmDialog', () => {
+  it('returns null when closed', () => {
+    const { container } = render(
+      <ConfirmDialog open={false} title="Delete" onConfirm={jest.fn()} />
+    );
+    expect(container).toBeEmptyDOMElement();
+  });
+
+  it('renders title, message, and action buttons', () => {
+    render(
+      <ConfirmDialog
+        open
+        title="Delete account"
+        message="This cannot be undone."
+        onConfirm={jest.fn()}
+      />
+    );
+    expect(screen.getByText('Delete account')).toBeInTheDocument();
+    expect(screen.getByText('This cannot be undone.')).toBeInTheDocument();
+    expect(screen.getByText('Confirm')).toBeInTheDocument();
+    expect(screen.getByText('Cancel')).toBeInTheDocument();
+  });
+
+  it('calls onConfirm and onCancel', () => {
+    const onConfirm = jest.fn();
+    const onCancel = jest.fn();
+    render(
+      <ConfirmDialog
+        open
+        title="Delete"
+        onConfirm={onConfirm}
+        onCancel={onCancel}
+      />
+    );
+    fireEvent.click(screen.getByText('Confirm'));
+    expect(onConfirm).toHaveBeenCalledTimes(1);
+    fireEvent.click(screen.getByText('Cancel'));
+    expect(onCancel).toHaveBeenCalledTimes(1);
+  });
+
+  it('uses danger and loading states', () => {
+    const { rerender } = render(
+      <ConfirmDialog open title="Delete" danger onConfirm={jest.fn()} />
+    );
+    expect(screen.getByText('Confirm')).toHaveClass('btn-error');
+    rerender(
+      <ConfirmDialog open title="Delete" loading onConfirm={jest.fn()} />
+    );
+    expect(screen.getByText('Confirm')).toBeDisabled();
+  });
+});
+
+describe('Menu', () => {
+  const items = [
+    { label: 'Profile', icon: <FiUser />, onClick: jest.fn() },
+    { label: 'Settings', active: true },
+    { label: 'Log out', danger: true, onClick: jest.fn() },
+  ];
+
+  it('renders title and items', () => {
+    render(<Menu items={items} title="Account" />);
+    expect(screen.getByText('Account')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Profile' })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Settings' })).toHaveAttribute(
+      'aria-current',
+      'page'
+    );
+  });
+
+  it('marks danger items and calls onClick', () => {
+    render(<Menu items={items} />);
+    const logout = screen.getByRole('button', { name: 'Log out' });
+    expect(logout).toHaveClass('text-error');
+    fireEvent.click(logout);
+    expect(items[2].onClick).toHaveBeenCalledTimes(1);
+  });
+
+  it('renders item icons', () => {
+    render(<Menu items={items} />);
+    expect(
+      screen.getByRole('button', { name: 'Profile' }).querySelector('svg')
+    ).toBeInTheDocument();
+  });
+});
+
+describe('ButtonGroup', () => {
+  const options = [
+    { label: 'Day', value: 'day' },
+    { label: 'Week', value: 'week' },
+    { label: 'Month', value: 'month' },
+  ];
+
+  it('renders options with active state', () => {
+    render(<ButtonGroup options={options} value="week" onChange={jest.fn()} />);
+    expect(screen.getByRole('button', { name: 'Day' })).toHaveAttribute(
+      'aria-pressed',
+      'false'
+    );
+    expect(screen.getByRole('button', { name: 'Week' })).toHaveAttribute(
+      'aria-pressed',
+      'true'
+    );
+    expect(screen.getByRole('button', { name: 'Week' })).toHaveClass(
+      'btn-primary'
+    );
+  });
+
+  it('calls onChange with selected value', () => {
+    const onChange = jest.fn();
+    render(<ButtonGroup options={options} value="day" onChange={onChange} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Month' }));
+    expect(onChange).toHaveBeenCalledWith('month');
+  });
+
+  it('applies vertical orientation and disables', () => {
+    const { container } = render(
+      <ButtonGroup
+        options={options}
+        value="day"
+        onChange={jest.fn()}
+        orientation="vertical"
+        disabled
+      />
+    );
+    expect(container.querySelector('.join-vertical')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Day' })).toBeDisabled();
+  });
+});
+
+describe('Carousel', () => {
+  const slides = [<div key="1">Slide one</div>, <div key="2">Slide two</div>];
+  const scrollBy = jest.fn();
+
+  beforeEach(() => {
+    Object.defineProperty(HTMLElement.prototype, 'scrollBy', {
+      configurable: true,
+      value: scrollBy,
+    });
+  });
+
+  it('renders slides and controls', () => {
+    render(<Carousel slides={slides} ariaLabel="Highlights" />);
+    expect(screen.getByLabelText('Highlights')).toBeInTheDocument();
+    expect(screen.getByText('Slide one')).toBeInTheDocument();
+    expect(screen.getByText('Slide two')).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: 'Previous slide' })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: 'Next slide' })
+    ).toBeInTheDocument();
+  });
+
+  it('scrolls the track on control clicks', () => {
+    render(<Carousel slides={slides} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Next slide' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Previous slide' }));
+    expect(scrollBy).toHaveBeenCalledTimes(2);
+  });
+});
+
+describe('KeyValue', () => {
+  it('renders title and key/value pairs', () => {
+    render(
+      <KeyValue
+        title="Metadata"
+        items={[
+          { key: 'Version', value: '1.0.0' },
+          { key: 'License', value: 'MIT' },
+        ]}
+      />
+    );
+    expect(screen.getByText('Metadata')).toBeInTheDocument();
+    expect(screen.getByText('Version')).toBeInTheDocument();
+    expect(screen.getByText('1.0.0')).toBeInTheDocument();
+    expect(screen.getByText('License')).toBeInTheDocument();
+    expect(screen.getByText('MIT')).toBeInTheDocument();
+  });
+
+  it('renders ReactNode values', () => {
+    render(
+      <KeyValue
+        items={[
+          {
+            key: 'Status',
+            value: <span className="text-success">Active</span>,
+          },
+        ]}
+      />
+    );
+    expect(screen.getByText('Active')).toHaveClass('text-success');
+  });
+});
+
+describe('List', () => {
+  const items = [
+    {
+      id: '1',
+      title: 'Fix login bug',
+      description: 'High priority',
+      action: <button>Open</button>,
+    },
+    { id: '2', title: 'Write docs' },
+  ];
+
+  it('renders title, items, and descriptions', () => {
+    render(<List items={items} title="Tasks" />);
+    expect(screen.getByText('Tasks')).toBeInTheDocument();
+    expect(screen.getByText('Fix login bug')).toBeInTheDocument();
+    expect(screen.getByText('High priority')).toBeInTheDocument();
+    expect(screen.getByText('Write docs')).toBeInTheDocument();
+  });
+
+  it('renders leading and action nodes', () => {
+    render(<List items={items} />);
+    expect(screen.getByRole('button', { name: 'Open' })).toBeInTheDocument();
+  });
+});
+
+describe('DangerZone', () => {
+  const items = [
+    {
+      id: 'delete',
+      label: 'Delete account',
+      description: 'Permanently remove everything.',
+      action: <button>Delete</button>,
+    },
+  ];
+
+  it('renders title, labels, and descriptions', () => {
+    render(<DangerZone items={items} />);
+    expect(screen.getByText('Danger zone')).toBeInTheDocument();
+    expect(screen.getByText('Delete account')).toBeInTheDocument();
+    expect(
+      screen.getByText('Permanently remove everything.')
+    ).toBeInTheDocument();
+  });
+
+  it('renders custom title and actions', () => {
+    render(<DangerZone items={items} title="Destructive" />);
+    expect(screen.getByText('Destructive')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Delete' })).toBeInTheDocument();
+  });
+});
+
+describe('Sheet', () => {
+  it('returns null when closed', () => {
+    const { container } = render(<Sheet open={false} onClose={jest.fn()} />);
+    expect(container).toBeEmptyDOMElement();
+  });
+
+  it('renders title and children with side panel', () => {
+    render(
+      <Sheet open onClose={jest.fn()} title="Filters" side="left">
+        <p>Content</p>
+      </Sheet>
+    );
+    const dialog = screen.getByRole('dialog', { name: 'Filters' });
+    expect(dialog).toBeInTheDocument();
+    expect(dialog).toHaveClass('left-0');
+    expect(screen.getByText('Content')).toBeInTheDocument();
+  });
+
+  it('calls onClose via close button and backdrop', () => {
+    const onClose = jest.fn();
+    render(
+      <Sheet open onClose={onClose} title="Settings">
+        <p>Body</p>
+      </Sheet>
+    );
+    fireEvent.click(screen.getByRole('button', { name: 'Close sheet' }));
+    expect(onClose).toHaveBeenCalledTimes(1);
+    fireEvent.click(
+      screen.getByRole('button', { name: 'Close sheet backdrop' })
+    );
+    expect(onClose).toHaveBeenCalledTimes(2);
+  });
+
+  it('closes on Escape', () => {
+    const onClose = jest.fn();
+    render(<Sheet open onClose={onClose} title="Settings" />);
+    fireEvent.keyDown(document, { key: 'Escape' });
+    expect(onClose).toHaveBeenCalledTimes(1);
+  });
+
+  it('renders a footer', () => {
+    render(
+      <Sheet
+        open
+        onClose={jest.fn()}
+        title="Settings"
+        footer={<button>Apply</button>}
+      />
+    );
+    expect(screen.getByRole('button', { name: 'Apply' })).toBeInTheDocument();
+  });
+});
+
+describe('Popover', () => {
+  it('opens and closes on trigger click', () => {
+    render(
+      <Popover trigger={<Button size="sm">Actions</Button>}>
+        <p>Popover content</p>
+      </Popover>
+    );
+    expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Actions' }));
+    expect(screen.getByRole('dialog')).toHaveTextContent('Popover content');
+    fireEvent.click(screen.getByRole('button', { name: 'Actions' }));
+    expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
+  });
+
+  it('adds aria-expanded to the trigger', () => {
+    render(
+      <Popover trigger={<button type="button">Menu</button>}>
+        <p>Body</p>
+      </Popover>
+    );
+    fireEvent.click(screen.getByRole('button', { name: 'Menu' }));
+    expect(screen.getByRole('button', { name: 'Menu' })).toHaveAttribute(
+      'aria-expanded',
+      'true'
+    );
+  });
+});
+
+describe('Combobox', () => {
+  const options = [
+    { label: 'Apples', value: 'apples' },
+    { label: 'Bananas', value: 'bananas' },
+    { label: 'Cherries', value: 'cherries' },
+  ];
+
+  it('shows the selected label', () => {
+    render(<Combobox options={options} value="apples" onChange={jest.fn()} />);
+    expect(screen.getByText('Apples')).toBeInTheDocument();
+  });
+
+  it('opens, filters, and selects an option', () => {
+    const onChange = jest.fn();
+    render(<Combobox options={options} value="" onChange={onChange} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Select' }));
+    fireEvent.change(screen.getByRole('textbox', { name: 'Search options' }), {
+      target: { value: 'ban' },
+    });
+    expect(screen.getByText('Bananas')).toBeInTheDocument();
+    expect(screen.queryByText('Apples')).not.toBeInTheDocument();
+    fireEvent.click(screen.getByText('Bananas'));
+    expect(onChange).toHaveBeenCalledWith('bananas');
+  });
+
+  it('shows empty state when nothing matches', () => {
+    render(
+      <Combobox
+        options={options}
+        value=""
+        onChange={jest.fn()}
+        emptyText="Nothing found."
+      />
+    );
+    fireEvent.click(screen.getByRole('button', { name: 'Select' }));
+    fireEvent.change(screen.getByRole('textbox', { name: 'Search options' }), {
+      target: { value: 'zzz' },
+    });
+    expect(screen.getByText('Nothing found.')).toBeInTheDocument();
+  });
+});
+
+describe('ColorPicker', () => {
+  it('renders swatches and the hex input', () => {
+    render(
+      <ColorPicker value="#3b82f6" onChange={jest.fn()} label="Primary" />
+    );
+    expect(
+      screen.getByRole('button', { name: 'Pick #3b82f6' })
+    ).toHaveAttribute('aria-pressed', 'true');
+    expect(
+      screen.getByRole('textbox', { name: 'Primary hex value' })
+    ).toHaveValue('#3b82f6');
+  });
+
+  it('calls onChange when a swatch is picked', () => {
+    const onChange = jest.fn();
+    render(<ColorPicker value="#000000" onChange={onChange} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Pick #10b981' }));
+    expect(onChange).toHaveBeenCalledWith('#10b981');
+  });
+
+  it('commits a valid hex from the input on Enter', () => {
+    const onChange = jest.fn();
+    render(<ColorPicker value="#000000" onChange={onChange} />);
+    const input = screen.getByRole('textbox', { name: 'Color hex value' });
+    fireEvent.change(input, { target: { value: 'FF0000' } });
+    fireEvent.keyDown(input, { key: 'Enter' });
+    expect(onChange).toHaveBeenCalledWith('#ff0000');
+  });
+
+  it('reverts invalid hex on blur', () => {
+    const onChange = jest.fn();
+    render(<ColorPicker value="#000000" onChange={onChange} />);
+    const input = screen.getByRole('textbox', { name: 'Color hex value' });
+    fireEvent.change(input, { target: { value: 'not-a-color' } });
+    fireEvent.blur(input);
+    expect(input).toHaveValue('#000000');
+    expect(onChange).not.toHaveBeenCalled();
+  });
+});
+
+describe('InputGroup', () => {
+  it('renders label, leading, input, and trailing', () => {
+    render(
+      <InputGroup
+        label="Amount"
+        value="100"
+        onChange={jest.fn()}
+        leading={<span>$</span>}
+        trailing={<span>USD</span>}
+      />
+    );
+    const input = screen.getByRole('textbox');
+    expect(input).toHaveValue('100');
+    expect(screen.getByText('$')).toBeInTheDocument();
+    expect(screen.getByText('USD')).toBeInTheDocument();
+    expect(screen.getByText('Amount')).toBeInTheDocument();
+  });
+
+  it('calls onChange on input', () => {
+    const onChange = jest.fn();
+    render(<InputGroup value="" onChange={onChange} />);
+    fireEvent.change(screen.getByRole('textbox'), { target: { value: '42' } });
+    expect(onChange).toHaveBeenCalledWith('42');
+  });
+
+  it('shows error or hint', () => {
+    const { rerender } = render(
+      <InputGroup value="" onChange={jest.fn()} hint="No fees" />
+    );
+    expect(screen.getByText('No fees')).toBeInTheDocument();
+    rerender(<InputGroup value="" onChange={jest.fn()} error="Invalid" />);
+    expect(screen.getByText('Invalid')).toBeInTheDocument();
+    expect(screen.queryByText('No fees')).not.toBeInTheDocument();
+  });
+});
+
+describe('RadioGroup', () => {
+  const options = [
+    { label: 'Light', value: 'light' },
+    { label: 'Dark', value: 'dark', description: 'Easier on the eyes' },
+  ];
+
+  it('renders radios and marks the selected one', () => {
+    render(
+      <RadioGroup
+        name="theme"
+        options={options}
+        value="dark"
+        onChange={jest.fn()}
+      />
+    );
+    expect(screen.getByRole('radio', { name: 'Light' })).not.toBeChecked();
+    expect(screen.getByRole('radio', { name: 'Dark' })).toBeChecked();
+    expect(screen.getByText('Easier on the eyes')).toBeInTheDocument();
+  });
+
+  it('calls onChange with the selected value', () => {
+    const onChange = jest.fn();
+    render(
+      <RadioGroup
+        name="theme"
+        options={options}
+        value="light"
+        onChange={onChange}
+      />
+    );
+    fireEvent.click(screen.getByRole('radio', { name: 'Dark' }));
+    expect(onChange).toHaveBeenCalledWith('dark');
+  });
+
+  it('shows an error', () => {
+    render(
+      <RadioGroup
+        name="theme"
+        options={options}
+        value=""
+        onChange={jest.fn()}
+        error="Required"
+      />
+    );
+    expect(screen.getByText('Required')).toBeInTheDocument();
+  });
+});
+
+describe('CheckboxGroup', () => {
+  const options = [
+    { label: 'Email', value: 'email' },
+    { label: 'SMS', value: 'sms' },
+    { label: 'Push', value: 'push' },
+  ];
+
+  it('checks the selected options', () => {
+    render(
+      <CheckboxGroup options={options} value={['email']} onChange={jest.fn()} />
+    );
+    expect(screen.getByRole('checkbox', { name: 'Email' })).toBeChecked();
+    expect(screen.getByRole('checkbox', { name: 'SMS' })).not.toBeChecked();
+  });
+
+  it('toggles options in and out of the value', () => {
+    const onChange = jest.fn();
+    render(
+      <CheckboxGroup options={options} value={['email']} onChange={onChange} />
+    );
+    fireEvent.click(screen.getByRole('checkbox', { name: 'SMS' }));
+    expect(onChange).toHaveBeenCalledWith(['email', 'sms']);
+    fireEvent.click(screen.getByRole('checkbox', { name: 'Email' }));
+    expect(onChange).toHaveBeenCalledWith([]);
+  });
+
+  it('shows an error', () => {
+    render(
+      <CheckboxGroup
+        options={options}
+        value={[]}
+        onChange={jest.fn()}
+        error="Pick at least one"
+      />
+    );
+    expect(screen.getByText('Pick at least one')).toBeInTheDocument();
+  });
+});
+
+describe('Table', () => {
+  const columns = [
+    { key: 'name', header: 'Name' },
+    { key: 'score', header: 'Score', align: 'right' as const },
+  ];
+  const rows = [
+    { name: 'Ada', score: 98 },
+    { name: 'Grace', score: 95 },
+  ];
+
+  it('renders headers, cells, and caption', () => {
+    render(<Table columns={columns} rows={rows} caption="Leaderboard" />);
+    expect(screen.getByText('Leaderboard')).toBeInTheDocument();
+    expect(screen.getByText('Name')).toBeInTheDocument();
+    expect(screen.getByText('Ada')).toBeInTheDocument();
+    expect(screen.getByText('98')).toBeInTheDocument();
+  });
+
+  it('renders an em dash for missing values', () => {
+    render(<Table columns={columns} rows={[{ name: 'Ada' }]} />);
+    expect(screen.getByText('—')).toBeInTheDocument();
+  });
+
+  it('applies striped and compact classes', () => {
+    const { container } = render(
+      <Table columns={columns} rows={rows} striped compact />
+    );
+    expect(container.querySelector('table')).toHaveClass(
+      'table-zebra',
+      'table-compact'
+    );
   });
 });

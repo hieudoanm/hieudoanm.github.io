@@ -6,17 +6,32 @@ import {
   Alert,
   AvatarGroup,
   Breadcrumbs,
+  ButtonGroup,
   Card,
+  Carousel,
   ChatBubble,
+  CheckboxGroup,
+  ColorPicker,
+  Combobox,
+  ConfirmDialog,
+  DangerZone,
   Dropdown,
   EmptyState,
   Fieldset,
   FormRow,
+  InputGroup,
+  KeyValue,
+  List,
+  Menu,
   NavItem,
   Pagination,
+  Popover,
+  RadioGroup,
   SearchBar,
+  Sheet,
   Stat,
   Steps,
+  Table,
   Tabs,
   TagInput,
   Timeline,
@@ -46,6 +61,14 @@ export const MoleculesLevel: FC = () => {
   const [tab, setTab] = useState('overview');
   const [page, setPage] = useState(1);
   const [tags, setTags] = useState(['typescript', 'next']);
+  const [confirmOpen, setConfirmOpen] = useState(false);
+  const [group, setGroup] = useState('day');
+  const [sheetOpen, setSheetOpen] = useState(false);
+  const [combo, setCombo] = useState('next');
+  const [color, setColor] = useState('#3b82f6');
+  const [amount, setAmount] = useState('');
+  const [plan, setPlan] = useState('pro');
+  const [channels, setChannels] = useState(['email']);
 
   return (
     <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
@@ -258,6 +281,271 @@ export const MoleculesLevel: FC = () => {
               ],
             },
           ]}
+        />
+      </MoleculeCard>
+      <MoleculeCard title="ConfirmDialog" index={19}>
+        <div className="flex flex-col items-start gap-2">
+          <Button size="sm" onClick={() => setConfirmOpen(true)}>
+            Open dialog
+          </Button>
+          <span className="text-base-content/50 text-xs">
+            Dangerous actions need a confirmation step.
+          </span>
+        </div>
+        <ConfirmDialog
+          open={confirmOpen}
+          title="Delete project?"
+          message="This will permanently remove the project and all its files."
+          danger
+          confirmLabel="Delete"
+          onConfirm={() => setConfirmOpen(false)}
+          onCancel={() => setConfirmOpen(false)}
+        />
+      </MoleculeCard>
+      <MoleculeCard title="Menu" index={20}>
+        <div className="w-full">
+          <Menu
+            title="Account"
+            items={[
+              {
+                label: 'Profile',
+                icon: <FiUser />,
+                onClick: () => undefined,
+              },
+              { label: 'Settings', active: true },
+              { label: 'Log out', danger: true, onClick: () => undefined },
+            ]}
+          />
+        </div>
+      </MoleculeCard>
+      <MoleculeCard title="ButtonGroup" index={21}>
+        <div className="flex w-full flex-col gap-3">
+          <ButtonGroup
+            options={[
+              { label: 'Day', value: 'day' },
+              { label: 'Week', value: 'week' },
+              { label: 'Month', value: 'month' },
+            ]}
+            value={group}
+            onChange={setGroup}
+            size="sm"
+          />
+          <ButtonGroup
+            options={[
+              { label: 'Low', value: 'low' },
+              { label: 'High', value: 'high' },
+            ]}
+            value="low"
+            onChange={() => undefined}
+            orientation="vertical"
+            size="sm"
+          />
+        </div>
+      </MoleculeCard>
+      <MoleculeCard title="Carousel" index={22}>
+        <Carousel
+          ariaLabel="Feature slides"
+          slides={[
+            <div
+              key="1"
+              className="bg-base-300 flex h-32 items-center justify-center rounded-xl text-sm">
+              Slide one
+            </div>,
+            <div
+              key="2"
+              className="bg-base-300 flex h-32 items-center justify-center rounded-xl text-sm">
+              Slide two
+            </div>,
+            <div
+              key="3"
+              className="bg-base-300 flex h-32 items-center justify-center rounded-xl text-sm">
+              Slide three
+            </div>,
+          ]}
+        />
+      </MoleculeCard>
+      <MoleculeCard title="KeyValue" index={23}>
+        <KeyValue
+          title="Deployment"
+          items={[
+            { key: 'Version', value: 'v1.2.3' },
+            { key: 'Region', value: 'ap-southeast-1' },
+            {
+              key: 'Status',
+              value: <span className="text-success">Healthy</span>,
+            },
+          ]}
+        />
+      </MoleculeCard>
+      <MoleculeCard title="List" index={24}>
+        <List
+          title="Open tasks"
+          items={[
+            {
+              id: '1',
+              title: 'Fix login bug',
+              description: 'Priority: high',
+              action: (
+                <Button size="sm" variant="ghost">
+                  Open
+                </Button>
+              ),
+            },
+            { id: '2', title: 'Write docs', description: 'In review' },
+          ]}
+        />
+      </MoleculeCard>
+      <MoleculeCard title="DangerZone" index={25}>
+        <DangerZone
+          items={[
+            {
+              id: 'reset',
+              label: 'Reset account',
+              description: 'Restore all defaults.',
+              action: (
+                <Button size="sm" variant="outline">
+                  Reset
+                </Button>
+              ),
+            },
+            {
+              id: 'delete',
+              label: 'Delete account',
+              description: 'Permanently remove everything.',
+              action: (
+                <Button size="sm" variant="ghost" className="text-error">
+                  Delete
+                </Button>
+              ),
+            },
+          ]}
+        />
+      </MoleculeCard>
+      <MoleculeCard title="Sheet" index={26}>
+        <div className="flex flex-col items-start gap-2">
+          <Button size="sm" onClick={() => setSheetOpen(true)}>
+            Open sheet
+          </Button>
+          <span className="text-base-content/50 text-xs">
+            Slides in from any edge.
+          </span>
+        </div>
+        <Sheet
+          open={sheetOpen}
+          onClose={() => setSheetOpen(false)}
+          title="Filters"
+          side="right"
+          footer={
+            <Button size="sm" onClick={() => setSheetOpen(false)}>
+              Apply
+            </Button>
+          }>
+          <div className="flex flex-col gap-2 text-sm">
+            <p>Price range</p>
+            <p>Availability</p>
+            <p>Brand</p>
+          </div>
+        </Sheet>
+      </MoleculeCard>
+      <MoleculeCard title="Popover" index={27}>
+        <Popover
+          trigger={
+            <Button size="sm" variant="outline">
+              Menu
+            </Button>
+          }>
+          <div className="flex flex-col gap-1 text-sm">
+            <span className="font-medium">Quick actions</span>
+            <span>Duplicate</span>
+            <span>Move to…</span>
+            <span>Archive</span>
+          </div>
+        </Popover>
+      </MoleculeCard>
+      <MoleculeCard title="Combobox" index={28}>
+        <div className="w-full">
+          <Combobox
+            label="Framework"
+            value={combo}
+            onChange={setCombo}
+            options={[
+              { label: 'Next.js', value: 'next' },
+              { label: 'Remix', value: 'remix' },
+              { label: 'Astro', value: 'astro' },
+              { label: 'Nuxt', value: 'nuxt' },
+            ]}
+          />
+        </div>
+      </MoleculeCard>
+      <MoleculeCard title="ColorPicker" index={29}>
+        <div className="w-full">
+          <ColorPicker
+            label="Brand color"
+            value={color}
+            onChange={setColor}
+            swatches={[
+              '#3b82f6',
+              '#10b981',
+              '#f59e0b',
+              '#ef4444',
+              '#8b5cf6',
+              '#000000',
+            ]}
+          />
+        </div>
+      </MoleculeCard>
+      <MoleculeCard title="InputGroup" index={30}>
+        <div className="w-full">
+          <InputGroup
+            label="Amount"
+            value={amount}
+            onChange={setAmount}
+            leading={<span>$</span>}
+            trailing={<span>USD</span>}
+            placeholder="0.00"
+            hint="Minimum $10"
+          />
+        </div>
+      </MoleculeCard>
+      <MoleculeCard title="RadioGroup" index={31}>
+        <RadioGroup
+          name="plan"
+          label="Plan"
+          value={plan}
+          onChange={setPlan}
+          options={[
+            { label: 'Free', value: 'free', description: 'For personal use' },
+            { label: 'Pro', value: 'pro', description: 'For teams' },
+            { label: 'Enterprise', value: 'enterprise' },
+          ]}
+        />
+      </MoleculeCard>
+      <MoleculeCard title="CheckboxGroup" index={32}>
+        <CheckboxGroup
+          label="Notifications"
+          value={channels}
+          onChange={setChannels}
+          options={[
+            { label: 'Email', value: 'email' },
+            { label: 'SMS', value: 'sms' },
+            { label: 'Push', value: 'push' },
+          ]}
+        />
+      </MoleculeCard>
+      <MoleculeCard title="Table" index={33}>
+        <Table
+          caption="Team members"
+          columns={[
+            { key: 'name', header: 'Name' },
+            { key: 'role', header: 'Role' },
+            { key: 'hours', header: 'Hours', align: 'right' },
+          ]}
+          rows={[
+            { name: 'Ada', role: 'Engineer', hours: 38 },
+            { name: 'Grace', role: 'Designer', hours: 41 },
+            { name: 'Linus', role: 'Maintainer' },
+          ]}
+          striped
         />
       </MoleculeCard>
     </div>

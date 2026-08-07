@@ -57,8 +57,12 @@ src/
 ```
 
 Organisms compose molecules and atoms into full sections: `StatsGrid` wraps
-`Stat`, `ChatWindow` wraps `ChatBubble`, `FAQSection` wraps `Accordion`, and
-`Hero`/`NewsletterSection` are standalone marketing sections.
+`Stat`, `ChatWindow` wraps `ChatBubble`, `FAQSection` wraps `Accordion`,
+`ContactSection` composes `FormRow` and `Button`, `AuthForm` composes
+`TextField` and `PasswordField`, `RadioGroup`/`CheckboxGroup` wrap the
+`Radio`/`Checkbox` atoms, `ProfileCard` wraps the `Avatar` atom, and
+`Hero`/`CTASection`/`BlogSection`/`TeamSection`/`TestimonialSection`/
+`NewsletterSection` are standalone marketing sections.
 
 ## Routing
 

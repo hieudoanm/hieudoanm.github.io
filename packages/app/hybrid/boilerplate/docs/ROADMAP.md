@@ -33,15 +33,27 @@
 - [x] Button, Checkbox, Icon, Progress, Rating, StatusDot, Switch, Textarea,
       Tooltip (atoms)
 - [x] CodeBlock, FileInput, Kbd, Radio, Select, Slider, Tag (atoms)
+- [x] CopyButton, Divider, IconButton, Indicator, NumberField, PasswordField,
+      Swap (atoms)
 - [x] Toast, Modal, Card, EmptyState, Tabs, Dropdown (molecules)
 - [x] Alert, AvatarGroup, Breadcrumbs, Fieldset, NavItem, Pagination, SearchBar,
       Stat (molecules)
 - [x] Accordion, ChatBubble, FormRow, Steps, TagInput, Timeline, TreeView
       (molecules)
+- [x] ButtonGroup, Carousel, ConfirmDialog, DangerZone, KeyValue, List, Menu
+      (molecules)
 - [x] Header, Navbar (organisms)
 - [x] DataTable, FeatureGrid, Footer, PricingSection, Sidebar, Toolbar
       (organisms)
 - [x] ChatWindow, FAQSection, Hero, NewsletterSection, StatsGrid (organisms)
+- [x] BlogSection, ContactSection, CTASection, TeamSection, TestimonialSection
+      (organisms)
+- [x] ButtonLink, Collapse, Countdown, Mask, OTPInput, ProgressRing, Stack, Text
+      (atoms)
+- [x] CheckboxGroup, ColorPicker, Combobox, InputGroup, Popover, RadioGroup,
+      Sheet, Table (molecules)
+- [x] ActivityFeed, AnnouncementBar, AuthForm, CommandMenu, CookieBanner,
+      LogosSection, Marquee, ProfileCard (organisms)
 - [x] Four-level atomic demo with animated level tabs (ComponentsTemplate)
 - [ ] Additional atom components as needed
 - [ ] Additional molecule components as needed

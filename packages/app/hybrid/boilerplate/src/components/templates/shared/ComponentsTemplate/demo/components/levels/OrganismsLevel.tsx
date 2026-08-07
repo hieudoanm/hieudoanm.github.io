@@ -9,18 +9,31 @@ import {
   FiUser,
 } from 'react-icons/fi';
 import {
+  ActivityFeed,
+  AnnouncementBar,
+  AuthForm,
+  BlogSection,
   ChatWindow,
+  CommandMenu,
+  ContactSection,
+  CookieBanner,
+  CTASection,
   DataTable,
   FAQSection,
   FeatureGrid,
   Footer,
   Header,
   Hero,
+  LogosSection,
+  Marquee,
   Navbar,
   NewsletterSection,
   PricingSection,
+  ProfileCard,
   Sidebar,
   StatsGrid,
+  TeamSection,
+  TestimonialSection,
   Toolbar,
 } from '../../../../../../organisms';
 import { Button } from '../../../../../../atoms';
@@ -108,6 +121,7 @@ const plans = [
 ];
 
 export const OrganismsLevel: FC = () => {
+  const [commandOpen, setCommandOpen] = useState(false);
   const [chatMessages, setChatMessages] = useState([
     {
       id: '1',
@@ -258,6 +272,244 @@ export const OrganismsLevel: FC = () => {
 
       <OrganismSection title="NewsletterSection" index={12}>
         <NewsletterSection />
+      </OrganismSection>
+
+      <OrganismSection title="CTASection" index={13}>
+        <CTASection
+          badge="Limited offer"
+          title="Ready to ship your next idea?"
+          description="Join thousands of developers building faster with our component library."
+          primaryCta={{ label: 'Get started', href: '/signup' }}
+          secondaryCta={{ label: 'Talk to sales', href: '/contact' }}
+        />
+      </OrganismSection>
+
+      <OrganismSection title="TestimonialSection" index={14}>
+        <TestimonialSection
+          title="What our users say"
+          items={[
+            {
+              quote: 'The best component library we have used.',
+              author: 'Ada Lovelace',
+              role: 'Engineer',
+              initials: 'AL',
+            },
+            {
+              quote: 'Typed, accessible, and beautiful out of the box.',
+              author: 'Grace Hopper',
+              role: 'CTO',
+            },
+            {
+              quote: 'We shipped our redesign in two weeks.',
+              author: 'Katherine Johnson',
+              role: 'Product lead',
+            },
+          ]}
+        />
+      </OrganismSection>
+
+      <OrganismSection title="TeamSection" index={15}>
+        <TeamSection
+          title="Meet the team"
+          members={[
+            {
+              name: 'Alan Turing',
+              role: 'Founder',
+              bio: 'Math genius.',
+              initials: 'AT',
+            },
+            {
+              name: 'Katherine Johnson',
+              role: 'CTO',
+              bio: 'Orbits the planet.',
+            },
+            {
+              name: 'Grace Hopper',
+              role: 'Engineer',
+              bio: 'Builds the compiler.',
+            },
+            { name: 'Linus Pauling', role: 'Advisor' },
+          ]}
+        />
+      </OrganismSection>
+
+      <OrganismSection title="BlogSection" index={16}>
+        <BlogSection
+          title="Latest posts"
+          posts={[
+            {
+              id: '1',
+              title: 'Announcing v2.0',
+              excerpt: 'Themes, more components, and a new demo.',
+              date: 'Aug 2026',
+              tag: 'Release',
+            },
+            {
+              id: '2',
+              title: 'Testing atomic components',
+              excerpt: 'How we keep 90% coverage on every batch.',
+              date: 'Jul 2026',
+              tag: 'Engineering',
+            },
+            {
+              id: '3',
+              title: 'Design tokens deep dive',
+              excerpt: 'Tailwind config and DaisyUI themes.',
+              date: 'Jun 2026',
+            },
+          ]}
+        />
+      </OrganismSection>
+
+      <OrganismSection title="ContactSection" index={17}>
+        <ContactSection
+          title="Contact us"
+          description="We usually reply within one business day."
+        />
+      </OrganismSection>
+
+      <OrganismSection title="AnnouncementBar" index={18}>
+        <AnnouncementBar
+          text="Early bird pricing ends this week."
+          link={{ label: 'Claim 20% off', href: '/pricing' }}
+          dismissible
+        />
+      </OrganismSection>
+
+      <OrganismSection title="CookieBanner" index={19}>
+        <CookieBanner onAccept={() => undefined} onDecline={() => undefined} />
+      </OrganismSection>
+
+      <OrganismSection title="CommandMenu" index={20}>
+        <div className="flex flex-col items-start gap-3">
+          <Button size="sm" onClick={() => setCommandOpen(true)}>
+            Open command menu
+          </Button>
+          <span className="text-base-content/50 text-xs">
+            Try typing "settings", "theme", or "deploy".
+          </span>
+        </div>
+        <CommandMenu
+          open={commandOpen}
+          onClose={() => setCommandOpen(false)}
+          items={[
+            {
+              id: 'settings',
+              label: 'Open settings',
+              description: 'App preferences',
+              keywords: ['prefs', 'config'],
+              group: 'Navigation',
+            },
+            {
+              id: 'profile',
+              label: 'Edit profile',
+              description: 'Account details',
+              group: 'Navigation',
+            },
+            {
+              id: 'theme',
+              label: 'Toggle theme',
+              description: 'Dark / light',
+              keywords: ['dark', 'light', 'mode'],
+              group: 'Appearance',
+            },
+            {
+              id: 'deploy',
+              label: 'Deploy site',
+              description: 'Trigger a production build',
+              group: 'Actions',
+            },
+          ]}
+        />
+      </OrganismSection>
+
+      <OrganismSection title="AuthForm" index={21}>
+        <div className="bg-base-200 border-base-content/10 mx-auto w-full max-w-md rounded-xl border p-6">
+          <AuthForm mode="signup" onSubmit={() => undefined} />
+        </div>
+      </OrganismSection>
+
+      <OrganismSection title="Marquee" index={22}>
+        <Marquee
+          title="Powered by"
+          items={[
+            <span key="next">Next.js</span>,
+            <span key="tailwind">Tailwind CSS</span>,
+            <span key="daisy">DaisyUI</span>,
+            <span key="tauri">Tauri</span>,
+            <span key="typescript">TypeScript</span>,
+            <span key="react">React</span>,
+          ]}
+        />
+      </OrganismSection>
+
+      <OrganismSection title="LogosSection" index={23}>
+        <LogosSection
+          title="Trusted by teams at"
+          columns={4}
+          items={[
+            { name: 'Acme' },
+            { name: 'Globex' },
+            { name: 'Initech' },
+            { name: 'Umbrella' },
+            { name: 'Stark' },
+            { name: 'Wayne' },
+          ]}
+        />
+      </OrganismSection>
+
+      <OrganismSection title="ProfileCard" index={24}>
+        <div className="mx-auto w-full max-w-sm">
+          <ProfileCard
+            name="Jane Doe"
+            role="Staff Engineer"
+            bio="Building delightful interfaces with atomic design."
+            avatar={{ src: '/avatar.png', alt: 'Jane Doe', initials: 'JD' }}
+            badges={['Open source', 'Speaker']}
+            stats={[
+              { label: 'Repos', value: '120' },
+              { label: 'Following', value: '340' },
+              { label: 'Followers', value: '2.1k' },
+            ]}
+            actions={<Button size="sm">Follow</Button>}
+          />
+        </div>
+      </OrganismSection>
+
+      <OrganismSection title="ActivityFeed" index={25}>
+        <ActivityFeed
+          title="Recent activity"
+          items={[
+            {
+              id: '1',
+              title: 'Deployed v2.1.0',
+              description: 'Production release',
+              time: '10 min ago',
+              status: 'success',
+            },
+            {
+              id: '2',
+              title: 'Build warning',
+              description: 'Deprecated API in utils.ts',
+              time: '1 hr ago',
+              status: 'warning',
+            },
+            {
+              id: '3',
+              title: 'Pipeline failed',
+              description: 'Integration test on main',
+              time: '3 hr ago',
+              status: 'error',
+            },
+            {
+              id: '4',
+              title: 'New contributor',
+              description: 'Ada opened a pull request',
+              time: 'Yesterday',
+              status: 'neutral',
+            },
+          ]}
+        />
       </OrganismSection>
     </div>
   );
