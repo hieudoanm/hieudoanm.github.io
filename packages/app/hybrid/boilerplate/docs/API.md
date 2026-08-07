@@ -17,40 +17,59 @@ them without re-reading source files.
     - [Badge](#badge)
     - [Button](#button)
     - [Checkbox](#checkbox)
+    - [CodeBlock](#codeblock)
+    - [FileInput](#fileinput)
     - [Icon](#icon)
+    - [Kbd](#kbd)
     - [Progress](#progress)
+    - [Radio](#radio)
     - [Rating](#rating)
+    - [Select](#select)
     - [Separator](#separator)
     - [Skeleton](#skeleton)
+    - [Slider](#slider)
     - [Spinner](#spinner)
     - [StatusDot](#statusdot)
     - [Switch](#switch)
+    - [Tag](#tag)
     - [Textarea](#textarea)
     - [TextField](#textfield)
     - [Tooltip](#tooltip)
   - [Molecules](#molecules)
+    - [Accordion](#accordion)
     - [Alert](#alert)
     - [AvatarGroup](#avatargroup)
     - [Breadcrumbs](#breadcrumbs)
     - [Card](#card)
+    - [ChatBubble](#chatbubble)
     - [Dropdown](#dropdown)
     - [EmptyState](#emptystate)
     - [Fieldset](#fieldset)
+    - [FormRow](#formrow)
     - [Modal](#modal)
     - [NavItem](#navitem)
     - [Pagination](#pagination)
     - [SearchBar](#searchbar)
     - [Stat](#stat)
+    - [Steps](#steps)
     - [Tabs](#tabs)
+    - [TagInput](#taginput)
+    - [Timeline](#timeline)
     - [Toast](#toast)
+    - [TreeView](#treeview)
   - [Organisms](#organisms)
+    - [ChatWindow](#chatwindow)
     - [DataTable](#datatable)
+    - [FAQSection](#faqsection)
     - [FeatureGrid](#featuregrid)
     - [Footer](#footer)
     - [Header](#header)
+    - [Hero](#hero)
     - [Navbar](#navbar)
+    - [NewsletterSection](#newslettersection)
     - [PricingSection](#pricingsection)
     - [Sidebar](#sidebar)
+    - [StatsGrid](#statsgrid)
     - [Toolbar](#toolbar)
     - [Templates](#templates)
     - [shared](#shared)
@@ -221,6 +240,35 @@ File: `src/components/atoms/Checkbox.tsx`
 
 Renders a DaisyUI `checkbox checkbox-primary` with a wrapping `label`.
 
+### CodeBlock
+
+File: `src/components/atoms/CodeBlock.tsx` — client component.
+
+| Prop        | Type      | Default | Description                          |
+| ----------- | --------- | ------- | ------------------------------------ |
+| `code`      | `string`  | —       | Source text to display               |
+| `language?` | `string`  | —       | Shown in the header when no title    |
+| `title?`    | `string`  | —       | Header label; defaults to `language` |
+| `showCopy?` | `boolean` | `true`  | Renders a copy-to-clipboard button   |
+
+```tsx
+<CodeBlock code="const x = 1;" language="tsx" title="App.tsx" />
+```
+
+### FileInput
+
+File: `src/components/atoms/FileInput.tsx`
+
+| Prop        | Type                        | Default | Description                  |
+| ----------- | --------------------------- | ------- | ---------------------------- |
+| `label`     | `string`                    | —       | Visible label + `aria-label` |
+| `onChange?` | `(files: FileList) => void` | —       | Called with selected files   |
+| `accept?`   | `string`                    | —       | Native `accept` attribute    |
+| `multiple?` | `boolean`                   | `false` | Allow multi-file selection   |
+| `hint?`     | `string`                    | —       | Muted helper text            |
+
+Renders a DaisyUI `file-input file-input-bordered`.
+
 ### Icon
 
 File: `src/components/atoms/Icon.tsx`
@@ -233,6 +281,16 @@ File: `src/components/atoms/Icon.tsx`
 
 Thin wrapper over `react-icons/fi` glyphs so the demo code can reference icons
 by name.
+
+### Kbd
+
+File: `src/components/atoms/Kbd.tsx`
+
+| Prop       | Type        | Default | Description     |
+| ---------- | ----------- | ------- | --------------- |
+| `children` | `ReactNode` | —       | Key combination |
+
+Renders a DaisyUI `<kbd>` keycap.
 
 ### Progress
 
@@ -252,6 +310,21 @@ File: `src/components/atoms/Progress.tsx`
 <Progress value={72} label="Disk" showValue variant="accent" />
 ```
 
+### Radio
+
+File: `src/components/atoms/Radio.tsx`
+
+| Prop        | Type                         | Default | Description              |
+| ----------- | ---------------------------- | ------- | ------------------------ |
+| `label`     | `string`                     | —       | Accessible label text    |
+| `name`      | `string`                     | —       | Radio group name         |
+| `checked`   | `boolean`                    | —       | Controlled checked state |
+| `onChange`  | `(checked: boolean) => void` | —       | Called with next value   |
+| `size?`     | `'sm' \| 'md' \| 'lg'`       | `'md'`  | Radio size               |
+| `disabled?` | `boolean`                    | `false` | Disables the input       |
+
+Renders a DaisyUI `radio radio-primary`; group radios by the same `name`.
+
 ### Rating
 
 File: `src/components/atoms/Rating.tsx`
@@ -264,6 +337,22 @@ File: `src/components/atoms/Rating.tsx`
 | `size?`     | `'sm' \| 'md' \| 'lg'`    | `'md'`  | Star size                       |
 
 Star shapes use the DaisyUI `mask mask-star-2` mask.
+
+### Select
+
+File: `src/components/atoms/Select.tsx`
+
+| Prop           | Type                                 | Default | Description               |
+| -------------- | ------------------------------------ | ------- | ------------------------- |
+| `label`        | `string`                             | —       | Visible label             |
+| `value`        | `string`                             | —       | Controlled selected value |
+| `onChange`     | `(value: string) => void`            | —       | Called on change          |
+| `options`      | `{ label: string; value: string }[]` | —       | Options                   |
+| `placeholder?` | `string`                             | —       | Disabled empty option     |
+| `size?`        | `'sm' \| 'md' \| 'lg'`               | `'md'`  | Select size               |
+| `disabled?`    | `boolean`                            | `false` | Disables the select       |
+
+Renders a DaisyUI `select select-bordered`.
 
 ### Separator
 
@@ -284,6 +373,23 @@ File: `src/components/atoms/Skeleton.tsx`
 | `className?` | `string` | `''`    | Size/shape classes (e.g. `h-4 w-24`) |
 
 Renders a DaisyUI `skeleton` loading placeholder.
+
+### Slider
+
+File: `src/components/atoms/Slider.tsx`
+
+| Prop         | Type                      | Default | Description                         |
+| ------------ | ------------------------- | ------- | ----------------------------------- |
+| `label`      | `string`                  | —       | Visible label                       |
+| `value`      | `number`                  | —       | Controlled value                    |
+| `onChange`   | `(value: number) => void` | —       | Called with new value               |
+| `min?`       | `number`                  | `0`     | Range minimum                       |
+| `max?`       | `number`                  | `100`   | Range maximum                       |
+| `step?`      | `number`                  | `1`     | Increment step                      |
+| `showValue?` | `boolean`                 | `false` | Renders the value next to the label |
+| `disabled?`  | `boolean`                 | `false` | Disables the slider                 |
+
+Renders a DaisyUI `range range-primary` range input.
 
 ### Spinner
 
@@ -321,6 +427,18 @@ File: `src/components/atoms/Switch.tsx`
 | `description?` | `string`                     | —       | Muted helper text      |
 
 Renders a DaisyUI `toggle toggle-primary` with `role="switch"`.
+
+### Tag
+
+File: `src/components/atoms/Tag.tsx`
+
+| Prop        | Type                                                                                               | Default     | Description                 |
+| ----------- | -------------------------------------------------------------------------------------------------- | ----------- | --------------------------- |
+| `label`     | `string`                                                                                           | —           | Tag text                    |
+| `variant?`  | `'neutral' \| 'primary' \| 'secondary' \| 'accent' \| 'success' \| 'warning' \| 'error' \| 'info'` | `'neutral'` | Badge color                 |
+| `onRemove?` | `() => void`                                                                                       | —           | Renders a remove (×) button |
+
+Renders a DaisyUI `badge badge-lg`; combine with `TagInput` for editable lists.
 
 ### Textarea
 
@@ -369,6 +487,21 @@ Renders a DaisyUI `tooltip` wrapper using `data-tip`.
 
 Composites of atoms in `src/components/molecules/`.
 
+### Accordion
+
+File: `src/components/molecules/Accordion.tsx` — client component.
+
+| Prop        | Type                                                  | Default | Description              |
+| ----------- | ----------------------------------------------------- | ------- | ------------------------ |
+| `items`     | `{ id: string; title: string; content: ReactNode }[]` | —       | Rows to toggle           |
+| `multiple?` | `boolean`                                             | `false` | Allow more than one open |
+
+```tsx
+<Accordion
+  items={[{ id: 'a', title: 'What is this?', content: 'An accordion.' }]}
+/>
+```
+
 ### Alert
 
 File: `src/components/molecules/Alert.tsx`
@@ -396,6 +529,20 @@ File: `src/components/molecules/AvatarGroup.tsx`
 | `max?`    | `number`                                             | —       | Cap shown avatars; renders `+N` chip |
 
 Overlapping avatars with a `+N more members` overflow indicator.
+
+### ChatBubble
+
+File: `src/components/molecules/ChatBubble.tsx`
+
+| Prop      | Type                    | Default | Description                        |
+| --------- | ----------------------- | ------- | ---------------------------------- |
+| `message` | `string`                | —       | Bubble text                        |
+| `sender`  | `'user' \| 'assistant'` | —       | Aligns end (primary) or start side |
+| `name?`   | `string`                | —       | Header label                       |
+| `time?`   | `string`                | —       | Timestamp in the header            |
+| `avatar?` | `ReactNode`             | —       | Small circle next to the bubble    |
+
+Single message in a DaisyUI `chat` row; compose into a list for a thread.
 
 ### Breadcrumbs
 
@@ -467,6 +614,19 @@ File: `src/components/molecules/Fieldset.tsx`
 | `className?`   | `string`    | `''`    | Extra classes            |
 | `children`     | `ReactNode` | —       | Form controls            |
 
+### FormRow
+
+File: `src/components/molecules/FormRow.tsx`
+
+| Prop        | Type        | Default | Description                         |
+| ----------- | ----------- | ------- | ----------------------------------- |
+| `label`     | `string`    | —       | Label text; `htmlFor` when provided |
+| `htmlFor?`  | `string`    | —       | Associates label with a control     |
+| `hint?`     | `string`    | —       | Muted helper text (hidden on error) |
+| `error?`    | `string`    | —       | Error text in `text-error`          |
+| `required?` | `boolean`   | `false` | Adds a `*` marker after the label   |
+| `children`  | `ReactNode` | —       | Form control                        |
+
 ### Modal
 
 File: `src/components/molecules/Modal.tsx`
@@ -523,6 +683,18 @@ File: `src/components/molecules/SearchBar.tsx` — client component.
 
 Includes a leading search icon and a `Clear search` button when non-empty.
 
+### Steps
+
+File: `src/components/molecules/Steps.tsx`
+
+| Prop      | Type                                        | Default | Description              |
+| --------- | ------------------------------------------- | ------- | ------------------------ |
+| `steps`   | `{ label: string; description?: string }[]` | —       | Steps to render          |
+| `current` | `number`                                    | —       | Index of the active step |
+
+Renders a DaisyUI `steps` progress bar; steps before `current` get
+`step-primary`.
+
 ### Stat
 
 File: `src/components/molecules/Stat.tsx`
@@ -551,6 +723,31 @@ File: `src/components/molecules/Tabs.tsx` — client component.
 
 Underline-style tabs (active tab gets `text-primary border-primary border-b-2`).
 
+### TagInput
+
+File: `src/components/molecules/TagInput.tsx` — client component.
+
+| Prop           | Type                       | Default                  | Description          |
+| -------------- | -------------------------- | ------------------------ | -------------------- |
+| `tags`         | `string[]`                 | —                        | Controlled tag list  |
+| `onChange`     | `(tags: string[]) => void` | —                        | Called on add/remove |
+| `placeholder?` | `string`                   | `'Type and press Enter'` | Input placeholder    |
+| `disabled?`    | `boolean`                  | `false`                  | Disables the input   |
+
+`Enter` adds the draft (ignoring duplicates/whitespace); `Backspace` with an
+empty draft removes the last tag. Renders each tag via the `Tag` atom.
+
+### Timeline
+
+File: `src/components/molecules/Timeline.tsx`
+
+| Prop    | Type                                                                         | Default | Description |
+| ------- | ---------------------------------------------------------------------------- | ------- | ----------- |
+| `items` | `{ title: string; description?: string; time?: string; icon?: ReactNode }[]` | —       | Events      |
+
+Renders a DaisyUI `timeline-vertical`; events alternate start/end and show a
+numbered (or `icon`) marker.
+
 ### Toast
 
 File: `src/components/molecules/Toast.tsx` — client component.
@@ -564,11 +761,45 @@ File: `src/components/molecules/Toast.tsx` — client component.
 
 Fires the timer via `useEffect`; the close button dismisses immediately.
 
+### TreeView
+
+File: `src/components/molecules/TreeView.tsx` — client component.
+
+| Prop    | Type                                                 | Default | Description          |
+| ------- | ---------------------------------------------------- | ------- | -------------------- |
+| `nodes` | `{ id: string; label: string; children?: Node[] }[]` | —       | Root nodes to render |
+
+```tsx
+<TreeView
+  nodes={[
+    { id: 'src', label: 'src', children: [{ id: 'atoms', label: 'atoms' }] },
+  ]}
+/>
+```
+
+Nodes with children toggle on click (`aria-expanded`); indentation is derived
+from depth.
+
 ---
 
 ## Organisms
 
 Full sections in `src/components/organisms/`.
+
+### ChatWindow
+
+File: `src/components/organisms/ChatWindow.tsx` — client component.
+
+| Prop           | Type                                                                          | Default               | Description                    |
+| -------------- | ----------------------------------------------------------------------------- | --------------------- | ------------------------------ |
+| `messages`     | `{ id: string; sender: 'user' \| 'assistant'; text: string; name?; time? }[]` | —                     | Thread history                 |
+| `onSend`       | `(text: string) => void`                                                      | —                     | Called when a message is sent  |
+| `title?`       | `string`                                                                      | —                     | Header heading                 |
+| `placeholder?` | `string`                                                                      | `'Type a message...'` | Input placeholder              |
+| `disabled?`    | `boolean`                                                                     | `false`               | Disables input and send button |
+
+Renders a scrollable `ChatBubble` list with a message input; `Enter` or the send
+button submits non-empty drafts.
 
 ### DataTable
 
@@ -599,6 +830,17 @@ File: `src/components/organisms/FeatureGrid.tsx`
 | `features` | `{ icon: ReactNode; title: string; description: string }[]` | —       | Feature cards           |
 | `columns?` | `1 \| 2 \| 3 \| 4`                                          | `3`     | Responsive grid columns |
 
+### FAQSection
+
+File: `src/components/organisms/FAQSection.tsx`
+
+| Prop     | Type                                     | Default | Description           |
+| -------- | ---------------------------------------- | ------- | --------------------- |
+| `items`  | `{ question: string; answer: string }[]` | —       | Question/answer pairs |
+| `title?` | `string`                                 | `'FAQ'` | Section heading       |
+
+Renders an `Accordion` (multi-open) centered in a `max-w-3xl` column.
+
 ### Footer
 
 File: `src/components/organisms/Footer.tsx`
@@ -624,6 +866,21 @@ File: `src/components/organisms/Header.tsx`
 
 Sticky top bar (`sticky top-0 z-10 border-b px-6 py-4`).
 
+### Hero
+
+File: `src/components/organisms/Hero.tsx`
+
+| Prop            | Type                              | Default | Description                     |
+| --------------- | --------------------------------- | ------- | ------------------------------- |
+| `title`         | `string`                          | —       | `h1` headline                   |
+| `tagline?`      | `string`                          | —       | Uppercase eyebrow text          |
+| `description?`  | `string`                          | —       | Muted supporting paragraph      |
+| `primaryCta?`   | `{ label: string; href: string }` | —       | Solid `Link` button             |
+| `secondaryCta?` | `{ label: string; href: string }` | —       | Outline `Link` button           |
+| `badge?`        | `string`                          | —       | `badge-primary` above the title |
+
+Centered marketing hero (`rounded-2xl border bg-base-200`).
+
 ### Navbar
 
 File: `src/components/organisms/Navbar.tsx` — client component.
@@ -635,6 +892,20 @@ File: `src/components/organisms/Navbar.tsx` — client component.
 
 Active link is highlighted via `usePathname()` (`/` matches exactly; other links
 match by `startsWith`).
+
+### NewsletterSection
+
+File: `src/components/organisms/NewsletterSection.tsx` — client component.
+
+| Prop           | Type                      | Default                                        | Description                       |
+| -------------- | ------------------------- | ---------------------------------------------- | --------------------------------- |
+| `title?`       | `string`                  | `'Stay in the loop'`                           | Section heading                   |
+| `description?` | `string`                  | `'Get product updates and news once a month.'` | Muted blurb                       |
+| `buttonLabel?` | `string`                  | `'Subscribe'`                                  | Submit button text                |
+| `onSubmit?`    | `(email: string) => void` | —                                              | Called after successful subscribe |
+
+Validates the email (regex) and swaps the form for a success `role="status"`
+badge; the form uses `noValidate` so the custom message shows.
 
 ### PricingSection
 
@@ -658,6 +929,17 @@ File: `src/components/organisms/Sidebar.tsx` — client component.
 | `footer?` | `ReactNode`                        | —       | Pinned footer content |
 
 Active item is highlighted from `usePathname()` (`/` exact; others by prefix).
+
+### StatsGrid
+
+File: `src/components/organisms/StatsGrid.tsx`
+
+| Prop       | Type                                                                                                | Default | Description             |
+| ---------- | --------------------------------------------------------------------------------------------------- | ------- | ----------------------- |
+| `stats`    | `{ label: string; value: string; icon?: ReactNode; description?: string; variant?: StatVariant }[]` | —       | Stats to display        |
+| `columns?` | `2 \| 3 \| 4`                                                                                       | `4`     | Responsive grid columns |
+
+Wraps each `Stat` in a bordered card and lays them out in a grid.
 
 ### Toolbar
 

@@ -1,19 +1,26 @@
 import { act, fireEvent, render, screen } from '@testing-library/react';
 import { FiTrash, FiUser } from 'react-icons/fi';
+import { Accordion } from '../Accordion';
 import { Alert } from '../Alert';
 import { AvatarGroup } from '../AvatarGroup';
 import { Breadcrumbs } from '../Breadcrumbs';
 import { Card } from '../Card';
+import { ChatBubble } from '../ChatBubble';
 import { Dropdown } from '../Dropdown';
 import { EmptyState } from '../EmptyState';
 import { Fieldset } from '../Fieldset';
+import { FormRow } from '../FormRow';
 import { Modal } from '../Modal';
 import { NavItem } from '../NavItem';
 import { Pagination } from '../Pagination';
 import { SearchBar } from '../SearchBar';
 import { Stat } from '../Stat';
+import { Steps } from '../Steps';
 import { Tabs } from '../Tabs';
+import { TagInput } from '../TagInput';
+import { Timeline } from '../Timeline';
 import { Toast } from '../Toast';
+import { TreeView } from '../TreeView';
 
 describe('Alert', () => {
   it('renders title and description with default info variant', () => {
@@ -458,5 +465,218 @@ describe('Toast', () => {
     fireEvent.click(screen.getByRole('button'));
     expect(screen.queryByText('Saved')).not.toBeInTheDocument();
     expect(onClose).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe('Accordion', () => {
+  const items = [
+    { id: 'a', title: 'First', content: 'First body' },
+    { id: 'b', title: 'Second', content: 'Second body' },
+  ];
+
+  it('collapses all items initially', () => {
+    render(<Accordion items={items} />);
+    expect(screen.queryByText('First body')).not.toBeInTheDocument();
+    expect(screen.queryByText('Second body')).not.toBeInTheDocument();
+  });
+
+  it('opens an item on title click', () => {
+    render(<Accordion items={items} />);
+    fireEvent.click(screen.getByRole('button', { name: 'First' }));
+    expect(screen.getByText('First body')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'First' })).toHaveAttribute(
+      'aria-expanded',
+      'true'
+    );
+  });
+
+  it('allows only one open item by default', () => {
+    render(<Accordion items={items} />);
+    fireEvent.click(screen.getByRole('button', { name: 'First' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Second' }));
+    expect(screen.queryByText('First body')).not.toBeInTheDocument();
+    expect(screen.getByText('Second body')).toBeInTheDocument();
+  });
+
+  it('allows multiple open items when multiple', () => {
+    render(<Accordion items={items} multiple />);
+    fireEvent.click(screen.getByRole('button', { name: 'First' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Second' }));
+    expect(screen.getByText('First body')).toBeInTheDocument();
+    expect(screen.getByText('Second body')).toBeInTheDocument();
+  });
+});
+
+describe('Steps', () => {
+  const steps = [
+    { label: 'Account', description: 'Create it' },
+    { label: 'Payment', description: 'Pay it' },
+    { label: 'Done' },
+  ];
+
+  it('marks completed and current steps', () => {
+    const { container } = render(<Steps steps={steps} current={1} />);
+    expect(container.querySelector('[aria-current="step"]')).toHaveTextContent(
+      'Payment'
+    );
+    expect(container.querySelectorAll('.step-primary')).toHaveLength(2);
+  });
+
+  it('renders step labels and descriptions', () => {
+    render(<Steps steps={steps} current={0} />);
+    expect(screen.getByText('Account')).toBeInTheDocument();
+    expect(screen.getByText('Create it')).toBeInTheDocument();
+    expect(screen.getByText('Done')).toBeInTheDocument();
+  });
+});
+
+describe('Timeline', () => {
+  const items = [
+    { title: 'Created', time: '09:00', description: 'Ticket opened' },
+    { title: 'Assigned', time: '10:30' },
+  ];
+
+  it('renders item titles and times', () => {
+    render(<Timeline items={items} />);
+    expect(screen.getByText('Created')).toBeInTheDocument();
+    expect(screen.getByText('09:00')).toBeInTheDocument();
+    expect(screen.getByText('Assigned')).toBeInTheDocument();
+    expect(screen.getByText('10:30')).toBeInTheDocument();
+  });
+
+  it('renders descriptions when provided', () => {
+    render(<Timeline items={items} />);
+    expect(screen.getByText('Ticket opened')).toBeInTheDocument();
+  });
+});
+
+describe('ChatBubble', () => {
+  it('renders assistant message on the start side', () => {
+    const { container } = render(
+      <ChatBubble message="Hello" sender="assistant" name="Bot" time="10:00" />
+    );
+    expect(container.querySelector('.chat-start')).toBeInTheDocument();
+    expect(screen.getByText('Hello')).toBeInTheDocument();
+    expect(screen.getByText('Bot')).toBeInTheDocument();
+    expect(screen.getByText('10:00')).toBeInTheDocument();
+  });
+
+  it('renders user message on the end side with primary bubble', () => {
+    const { container } = render(<ChatBubble message="Hi" sender="user" />);
+    expect(container.querySelector('.chat-end')).toBeInTheDocument();
+    expect(container.querySelector('.chat-bubble-primary')).toBeInTheDocument();
+  });
+
+  it('renders avatar when provided', () => {
+    const { container } = render(
+      <ChatBubble message="Hi" sender="assistant" avatar={<span>R</span>} />
+    );
+    expect(container.querySelector('.chat-image')).toBeInTheDocument();
+  });
+});
+
+describe('TagInput', () => {
+  it('renders tags with remove buttons', () => {
+    const onChange = jest.fn();
+    render(<TagInput tags={['react', 'ts']} onChange={onChange} />);
+    expect(screen.getByText('react')).toBeInTheDocument();
+    expect(screen.getAllByRole('button')).toHaveLength(2);
+  });
+
+  it('adds a tag on Enter', () => {
+    const onChange = jest.fn();
+    render(<TagInput tags={[]} onChange={onChange} />);
+    const input = screen.getByRole('textbox', { name: 'Add tag' });
+    fireEvent.change(input, { target: { value: 'next' } });
+    fireEvent.keyDown(input, { key: 'Enter' });
+    expect(onChange).toHaveBeenCalledWith(['next']);
+  });
+
+  it('does not add duplicates or empty tags', () => {
+    const onChange = jest.fn();
+    render(<TagInput tags={['react']} onChange={onChange} />);
+    const input = screen.getByRole('textbox', { name: 'Add tag' });
+    fireEvent.change(input, { target: { value: '  ' } });
+    fireEvent.keyDown(input, { key: 'Enter' });
+    expect(onChange).not.toHaveBeenCalled();
+    fireEvent.change(input, { target: { value: 'react' } });
+    fireEvent.keyDown(input, { key: 'Enter' });
+    expect(onChange).not.toHaveBeenCalled();
+  });
+
+  it('removes the last tag on Backspace with empty draft', () => {
+    const onChange = jest.fn();
+    render(<TagInput tags={['a', 'b']} onChange={onChange} />);
+    const input = screen.getByRole('textbox', { name: 'Add tag' });
+    fireEvent.keyDown(input, { key: 'Backspace' });
+    expect(onChange).toHaveBeenCalledWith(['a']);
+  });
+
+  it('removes a tag via its remove button', () => {
+    const onChange = jest.fn();
+    render(<TagInput tags={['react']} onChange={onChange} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Remove react tag' }));
+    expect(onChange).toHaveBeenCalledWith([]);
+  });
+
+  it('disables input when disabled', () => {
+    render(<TagInput tags={[]} onChange={jest.fn()} disabled />);
+    expect(screen.getByRole('textbox')).toBeDisabled();
+  });
+});
+
+describe('FormRow', () => {
+  it('renders label, hint, and children', () => {
+    render(
+      <FormRow label="Name" hint="First and last" htmlFor="name">
+        <input id="name" aria-label="Name" />
+      </FormRow>
+    );
+    expect(screen.getByText('Name')).toBeInTheDocument();
+    expect(screen.getByText('First and last')).toBeInTheDocument();
+    expect(screen.getByRole('textbox')).toHaveAttribute('id', 'name');
+  });
+
+  it('renders required marker', () => {
+    render(
+      <FormRow label="Name" required>
+        <input aria-label="Name" />
+      </FormRow>
+    );
+    expect(screen.getByText('*')).toBeInTheDocument();
+  });
+
+  it('renders error and hides hint', () => {
+    render(
+      <FormRow label="Name" hint="Optional" error="Required field">
+        <input aria-label="Name" />
+      </FormRow>
+    );
+    expect(screen.getByText('Required field')).toBeInTheDocument();
+    expect(screen.queryByText('Optional')).not.toBeInTheDocument();
+  });
+});
+
+describe('TreeView', () => {
+  const nodes = [
+    {
+      id: 'root',
+      label: 'Root',
+      children: [{ id: 'leaf', label: 'Leaf' }],
+    },
+  ];
+
+  it('renders nodes and collapses children initially', () => {
+    render(<TreeView nodes={nodes} />);
+    expect(screen.getByText('Root')).toBeInTheDocument();
+    expect(screen.queryByText('Leaf')).not.toBeInTheDocument();
+  });
+
+  it('expands and collapses children on click', () => {
+    render(<TreeView nodes={nodes} />);
+    fireEvent.click(screen.getByText('Root'));
+    expect(screen.getByText('Leaf')).toBeInTheDocument();
+    fireEvent.click(screen.getByText('Root'));
+    expect(screen.queryByText('Leaf')).not.toBeInTheDocument();
   });
 });

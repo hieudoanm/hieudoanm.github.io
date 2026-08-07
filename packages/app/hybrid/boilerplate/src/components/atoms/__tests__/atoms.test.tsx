@@ -3,14 +3,21 @@ import { Avatar } from '../Avatar';
 import { Badge } from '../Badge';
 import { Button } from '../Button';
 import { Checkbox } from '../Checkbox';
+import { CodeBlock } from '../CodeBlock';
+import { FileInput } from '../FileInput';
 import { Icon } from '../Icon';
+import { Kbd } from '../Kbd';
 import { Progress } from '../Progress';
+import { Radio } from '../Radio';
 import { Rating } from '../Rating';
+import { Select } from '../Select';
 import { Separator } from '../Separator';
 import { Skeleton } from '../Skeleton';
+import { Slider } from '../Slider';
 import { Spinner } from '../Spinner';
 import { StatusDot } from '../StatusDot';
 import { Switch } from '../Switch';
+import { Tag } from '../Tag';
 import { Textarea } from '../Textarea';
 import { TextField } from '../TextField';
 import { Tooltip } from '../Tooltip';
@@ -395,5 +402,236 @@ describe('Tooltip', () => {
       </Tooltip>
     );
     expect(container.querySelector('.tooltip-right')).toBeInTheDocument();
+  });
+});
+
+describe('Radio', () => {
+  it('renders radio with label and checked state', () => {
+    render(
+      <Radio label="Option A" name="group" checked onChange={jest.fn()} />
+    );
+    const radio = screen.getByRole('radio', { name: 'Option A' });
+    expect(radio).toBeChecked();
+    expect(radio).toHaveClass('radio-primary');
+  });
+
+  it('calls onChange with next value', () => {
+    const onChange = jest.fn();
+    render(
+      <Radio
+        label="Option A"
+        name="group"
+        checked={false}
+        onChange={onChange}
+      />
+    );
+    fireEvent.click(screen.getByRole('radio', { name: 'Option A' }));
+    expect(onChange).toHaveBeenCalledWith(true);
+  });
+
+  it('applies size classes and disables', () => {
+    const { rerender } = render(
+      <Radio label="A" name="g" checked onChange={jest.fn()} size="sm" />
+    );
+    expect(screen.getByRole('radio', { name: 'A' })).toHaveClass('radio-sm');
+    rerender(
+      <Radio
+        label="A"
+        name="g"
+        checked
+        disabled
+        onChange={jest.fn()}
+        size="lg"
+      />
+    );
+    expect(screen.getByRole('radio', { name: 'A' })).toHaveClass('radio-lg');
+    expect(screen.getByRole('radio', { name: 'A' })).toBeDisabled();
+  });
+});
+
+describe('Select', () => {
+  const options = [
+    { label: 'Apples', value: 'apples' },
+    { label: 'Oranges', value: 'oranges' },
+  ];
+
+  it('renders label and options', () => {
+    render(
+      <Select label="Fruit" value="" onChange={jest.fn()} options={options} />
+    );
+    expect(screen.getByLabelText('Fruit')).toBeInTheDocument();
+    expect(screen.getByRole('option', { name: 'Apples' })).toBeInTheDocument();
+    expect(screen.getByRole('option', { name: 'Oranges' })).toBeInTheDocument();
+  });
+
+  it('calls onChange with selected value', () => {
+    const onChange = jest.fn();
+    render(
+      <Select
+        label="Fruit"
+        value="apples"
+        onChange={onChange}
+        options={options}
+      />
+    );
+    fireEvent.change(screen.getByLabelText('Fruit'), {
+      target: { value: 'oranges' },
+    });
+    expect(onChange).toHaveBeenCalledWith('oranges');
+  });
+
+  it('renders placeholder and applies size class', () => {
+    const { rerender } = render(
+      <Select
+        label="Fruit"
+        value=""
+        onChange={jest.fn()}
+        options={options}
+        placeholder="Pick one"
+      />
+    );
+    expect(
+      screen.getByRole('option', { name: 'Pick one' })
+    ).toBeInTheDocument();
+    rerender(
+      <Select
+        label="Fruit"
+        value=""
+        onChange={jest.fn()}
+        options={options}
+        size="sm"
+      />
+    );
+    expect(screen.getByLabelText('Fruit')).toHaveClass('select-sm');
+  });
+
+  it('disables when disabled', () => {
+    render(
+      <Select
+        label="Fruit"
+        value=""
+        onChange={jest.fn()}
+        options={options}
+        disabled
+      />
+    );
+    expect(screen.getByLabelText('Fruit')).toBeDisabled();
+  });
+});
+
+describe('Slider', () => {
+  it('renders a range input with label and defaults', () => {
+    render(<Slider label="Volume" value={50} onChange={jest.fn()} />);
+    const slider = screen.getByRole('slider', { name: 'Volume' });
+    expect(slider).toHaveAttribute('min', '0');
+    expect(slider).toHaveAttribute('max', '100');
+    expect(slider).toHaveAttribute('value', '50');
+  });
+
+  it('calls onChange with numeric value', () => {
+    const onChange = jest.fn();
+    render(<Slider label="Volume" value={50} onChange={onChange} />);
+    fireEvent.change(screen.getByRole('slider'), { target: { value: '80' } });
+    expect(onChange).toHaveBeenCalledWith(80);
+  });
+
+  it('shows value and respects custom bounds', () => {
+    render(
+      <Slider
+        label="Volume"
+        value={5}
+        onChange={jest.fn()}
+        min={0}
+        max={10}
+        step={1}
+        showValue
+      />
+    );
+    expect(screen.getByText('5')).toBeInTheDocument();
+    expect(screen.getByRole('slider')).toHaveAttribute('max', '10');
+  });
+
+  it('disables when disabled', () => {
+    render(<Slider label="Volume" value={50} onChange={jest.fn()} disabled />);
+    expect(screen.getByRole('slider')).toBeDisabled();
+  });
+});
+
+describe('Tag', () => {
+  it('renders label with default variant', () => {
+    render(<Tag label="React" />);
+    expect(screen.getByText('React')).toHaveClass('badge-neutral');
+  });
+
+  it('applies variant class', () => {
+    render(<Tag label="React" variant="primary" />);
+    expect(screen.getByText('React')).toHaveClass('badge-primary');
+  });
+
+  it('renders remove button and calls onRemove', () => {
+    const onRemove = jest.fn();
+    render(<Tag label="React" onRemove={onRemove} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Remove React tag' }));
+    expect(onRemove).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe('Kbd', () => {
+  it('renders keyboard key text', () => {
+    const { container } = render(<Kbd>Ctrl</Kbd>);
+    expect(container.querySelector('kbd')).toHaveTextContent('Ctrl');
+  });
+});
+
+describe('CodeBlock', () => {
+  it('renders code and language title', () => {
+    render(<CodeBlock code="const x = 1;" language="ts" />);
+    expect(screen.getByText('ts')).toBeInTheDocument();
+    expect(screen.getByText('const x = 1;')).toBeInTheDocument();
+  });
+
+  it('renders custom title', () => {
+    render(<CodeBlock code="x" title="Example.ts" />);
+    expect(screen.getByText('Example.ts')).toBeInTheDocument();
+  });
+
+  it('copies code when copy button is clicked', () => {
+    const writeText = jest.fn().mockResolvedValue(undefined);
+    Object.assign(navigator, { clipboard: { writeText } });
+    render(<CodeBlock code="const x = 1;" />);
+    fireEvent.click(screen.getByRole('button', { name: 'Copy code' }));
+    expect(writeText).toHaveBeenCalledWith('const x = 1;');
+  });
+
+  it('hides copy button when showCopy is false', () => {
+    render(<CodeBlock code="x" showCopy={false} />);
+    expect(
+      screen.queryByRole('button', { name: 'Copy code' })
+    ).not.toBeInTheDocument();
+  });
+});
+
+describe('FileInput', () => {
+  it('renders label and file input', () => {
+    render(<FileInput label="Avatar" />);
+    expect(screen.getByLabelText('Avatar')).toBeInTheDocument();
+    expect(screen.getByLabelText('Avatar')).toHaveAttribute('type', 'file');
+  });
+
+  it('calls onChange with files', () => {
+    const onChange = jest.fn();
+    render(<FileInput label="Avatar" onChange={onChange} />);
+    const input = screen.getByLabelText('Avatar');
+    fireEvent.change(input, {
+      target: { files: [new File(['x'], 'x.png')] },
+    });
+    expect(onChange).toHaveBeenCalledTimes(1);
+  });
+
+  it('renders hint and applies multiple/accept', () => {
+    render(<FileInput label="Docs" hint="PDF only" accept=".pdf" multiple />);
+    expect(screen.getByText('PDF only')).toBeInTheDocument();
+    expect(screen.getByLabelText('Docs')).toHaveAttribute('accept', '.pdf');
+    expect(screen.getByLabelText('Docs')).toHaveAttribute('multiple');
   });
 });

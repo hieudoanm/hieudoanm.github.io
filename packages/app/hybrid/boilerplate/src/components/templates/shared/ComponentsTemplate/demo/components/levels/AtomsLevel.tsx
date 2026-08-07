@@ -5,13 +5,20 @@ import {
   Badge,
   Button,
   Checkbox,
+  CodeBlock,
+  FileInput,
   Icon,
+  Kbd,
   Progress,
+  Radio,
   Rating,
+  Select,
   Skeleton,
+  Slider,
   Spinner,
   StatusDot,
   Switch,
+  Tag,
   Textarea,
   TextField,
   Tooltip,
@@ -38,6 +45,10 @@ export const AtomsLevel: FC = () => {
   const [checked, setChecked] = useState(true);
   const [enabled, setEnabled] = useState(true);
   const [rating, setRating] = useState(3);
+  const [radio, setRadio] = useState('one');
+  const [fruit, setFruit] = useState('');
+  const [volume, setVolume] = useState(60);
+  const [tags, setTags] = useState(['react', 'next']);
 
   return (
     <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -128,6 +139,87 @@ export const AtomsLevel: FC = () => {
       <AtomTile title="Textarea" index={13}>
         <div className="w-full">
           <Textarea label="Message" rows={2} placeholder="Type something..." />
+        </div>
+      </AtomTile>
+      <AtomTile title="Radio" index={14}>
+        <div className="flex flex-col gap-1">
+          <Radio
+            label="Option one"
+            name="demo-radio"
+            checked={radio === 'one'}
+            onChange={() => setRadio('one')}
+            size="sm"
+          />
+          <Radio
+            label="Option two"
+            name="demo-radio"
+            checked={radio === 'two'}
+            onChange={() => setRadio('two')}
+            size="sm"
+          />
+        </div>
+      </AtomTile>
+      <AtomTile title="Select" index={15}>
+        <div className="w-full">
+          <Select
+            label="Fruit"
+            value={fruit}
+            onChange={setFruit}
+            placeholder="Pick a fruit"
+            options={[
+              { label: 'Apples', value: 'apples' },
+              { label: 'Oranges', value: 'oranges' },
+              { label: 'Bananas', value: 'bananas' },
+            ]}
+            size="sm"
+          />
+        </div>
+      </AtomTile>
+      <AtomTile title="Slider" index={16}>
+        <div className="w-full">
+          <Slider
+            label="Volume"
+            value={volume}
+            onChange={setVolume}
+            showValue
+          />
+        </div>
+      </AtomTile>
+      <AtomTile title="Tag" index={17}>
+        <div className="flex flex-wrap gap-1">
+          {tags.map((tag) => (
+            <Tag
+              key={tag}
+              label={tag}
+              variant="primary"
+              onRemove={() => setTags(tags.filter((t) => t !== tag))}
+            />
+          ))}
+          <Tag label="neutral" />
+          <Tag label="success" variant="success" />
+          <Tag label="error" variant="error" />
+        </div>
+      </AtomTile>
+      <AtomTile title="Kbd" index={18}>
+        <div className="flex items-center gap-1">
+          <Kbd>Ctrl</Kbd>
+          <span className="text-base-content/50">+</span>
+          <Kbd>K</Kbd>
+          <span className="text-base-content/50">to search</span>
+        </div>
+      </AtomTile>
+      <AtomTile title="CodeBlock" index={19}>
+        <div className="w-full">
+          <CodeBlock
+            code="export const App = () => <h1>Hello</h1>;"
+            language="tsx"
+            title="App.tsx"
+          />
+        </div>
+      </AtomTile>
+      <AtomTile title="FileInput" index={20}>
+        <div className="w-full">
+          <FileInput label="Upload" accept=".pdf" hint="PDF files only" />
         </div>
       </AtomTile>
     </div>

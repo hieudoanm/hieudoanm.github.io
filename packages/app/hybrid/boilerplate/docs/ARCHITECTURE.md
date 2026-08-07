@@ -29,7 +29,7 @@ src/
 ├── components/       # Atomic design components
 │   ├── atoms/        # Smallest building blocks (Button, Badge, Avatar, etc.)
 │   ├── molecules/    # Combinations of atoms (Card, Alert, SearchBar, etc.)
-│   ├── organisms/    # Complex UI sections (Header, Sidebar, DataTable)
+│   ├── organisms/    # Complex UI sections (Header, Hero, StatsGrid, etc.)
 │   └── templates/    # Page-level layouts (AboutTemplate, ErrorTemplate, etc.)
 ├── hooks/            # Custom React hooks (useSWRegister)
 ├── providers/        # Context providers (SWProvider)
@@ -55,6 +55,10 @@ src/
 │  Styles (styles/)                       │  Tailwind base layer, CSS variables
 └─────────────────────────────────────────┘
 ```
+
+Organisms compose molecules and atoms into full sections: `StatsGrid` wraps
+`Stat`, `ChatWindow` wraps `ChatBubble`, `FAQSection` wraps `Accordion`, and
+`Hero`/`NewsletterSection` are standalone marketing sections.
 
 ## Routing
 

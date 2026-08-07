@@ -2,20 +2,27 @@ import type { FC, ReactNode } from 'react';
 import { useState } from 'react';
 import { FiBell, FiUser } from 'react-icons/fi';
 import {
+  Accordion,
   Alert,
   AvatarGroup,
   Breadcrumbs,
   Card,
+  ChatBubble,
   Dropdown,
   EmptyState,
   Fieldset,
+  FormRow,
   NavItem,
   Pagination,
   SearchBar,
   Stat,
+  Steps,
   Tabs,
+  TagInput,
+  Timeline,
+  TreeView,
 } from '../../../../../../molecules';
-import { Badge, Button, Progress, Switch } from '../../../../../../atoms';
+import { Button, Progress, Switch } from '../../../../../../atoms';
 
 const MoleculeCard: FC<{
   title: string;
@@ -38,6 +45,7 @@ export const MoleculesLevel: FC = () => {
   const [query, setQuery] = useState('');
   const [tab, setTab] = useState('overview');
   const [page, setPage] = useState(1);
+  const [tags, setTags] = useState(['typescript', 'next']);
 
   return (
     <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
@@ -165,6 +173,91 @@ export const MoleculesLevel: FC = () => {
           icon={<FiBell />}
           title="No notifications"
           description="You are all caught up."
+        />
+      </MoleculeCard>
+      <MoleculeCard title="Accordion" index={12}>
+        <Accordion
+          items={[
+            { id: 'a', title: 'What is this?', content: 'An accordion.' },
+            { id: 'b', title: 'Is it animated?', content: 'Yes, via DaisyUI.' },
+            {
+              id: 'c',
+              title: 'Can I open many?',
+              content: 'Only with multiple.',
+            },
+          ]}
+        />
+      </MoleculeCard>
+      <MoleculeCard title="Steps" index={13}>
+        <Steps
+          steps={[
+            { label: 'Account', description: 'Create it' },
+            { label: 'Payment', description: 'Add card' },
+            { label: 'Done' },
+          ]}
+          current={1}
+        />
+      </MoleculeCard>
+      <MoleculeCard title="Timeline" index={14}>
+        <Timeline
+          items={[
+            { title: 'Opened', time: '09:00', description: 'Ticket created' },
+            { title: 'Assigned', time: '10:30', description: 'To support' },
+            { title: 'Resolved', time: '14:00' },
+          ]}
+        />
+      </MoleculeCard>
+      <MoleculeCard title="ChatBubble" index={15}>
+        <div className="flex flex-col gap-2">
+          <ChatBubble
+            message="How can I help today?"
+            sender="assistant"
+            name="Support"
+            time="09:00"
+          />
+          <ChatBubble message="Reset my password" sender="user" time="09:01" />
+        </div>
+      </MoleculeCard>
+      <MoleculeCard title="TagInput" index={16}>
+        <TagInput tags={tags} onChange={setTags} />
+      </MoleculeCard>
+      <MoleculeCard title="FormRow" index={17}>
+        <div className="w-full max-w-xs">
+          <FormRow
+            label="Email"
+            hint="Work email preferred"
+            required
+            htmlFor="demo-email">
+            <input
+              id="demo-email"
+              type="email"
+              placeholder="you@x.com"
+              className="input input-bordered w-full"
+              aria-label="Email"
+            />
+          </FormRow>
+        </div>
+      </MoleculeCard>
+      <MoleculeCard title="TreeView" index={18}>
+        <TreeView
+          nodes={[
+            {
+              id: 'src',
+              label: 'src',
+              children: [
+                {
+                  id: 'components',
+                  label: 'components',
+                  children: [
+                    { id: 'atoms', label: 'atoms' },
+                    { id: 'molecules', label: 'molecules' },
+                    { id: 'organisms', label: 'organisms' },
+                  ],
+                },
+                { id: 'styles', label: 'styles' },
+              ],
+            },
+          ]}
         />
       </MoleculeCard>
     </div>

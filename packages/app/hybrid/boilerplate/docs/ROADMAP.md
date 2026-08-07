@@ -32,15 +32,20 @@
 - [x] Spinner, Badge, Avatar, Separator, TextField, Skeleton (atoms)
 - [x] Button, Checkbox, Icon, Progress, Rating, StatusDot, Switch, Textarea,
       Tooltip (atoms)
+- [x] CodeBlock, FileInput, Kbd, Radio, Select, Slider, Tag (atoms)
 - [x] Toast, Modal, Card, EmptyState, Tabs, Dropdown (molecules)
 - [x] Alert, AvatarGroup, Breadcrumbs, Fieldset, NavItem, Pagination, SearchBar,
       Stat (molecules)
+- [x] Accordion, ChatBubble, FormRow, Steps, TagInput, Timeline, TreeView
+      (molecules)
 - [x] Header, Navbar (organisms)
 - [x] DataTable, FeatureGrid, Footer, PricingSection, Sidebar, Toolbar
       (organisms)
+- [x] ChatWindow, FAQSection, Hero, NewsletterSection, StatsGrid (organisms)
 - [x] Four-level atomic demo with animated level tabs (ComponentsTemplate)
 - [ ] Additional atom components as needed
 - [ ] Additional molecule components as needed
+- [ ] Additional organism components as needed
 
 ## Phase 4 — Platform
 
