@@ -422,6 +422,315 @@ Centered card built on the `Avatar` atom; stats render in a 3-column grid.
 <ProfileCard name="Jane Doe" role="Engineer" badges={['Fellow']} />
 ```
 
+### Calendar
+
+File: `src/components/organisms/Calendar.tsx` — client component.
+
+| Prop         | Type                   | Default | Description                 |
+| ------------ | ---------------------- | ------- | --------------------------- |
+| `value?`     | `Date`                 | —       | Selected date               |
+| `onChange?`  | `(date: Date) => void` | —       | Called when a day is chosen |
+| `minDate?`   | `Date`                 | —       | Earliest selectable date    |
+| `maxDate?`   | `Date`                 | —       | Latest selectable date      |
+| `className?` | `string`               | `''`    | Extra classes               |
+
+Full month grid with weekday headers, prev/next month navigation, and disabled
+out-of-range days. Out-of-month cells render muted; month navigation is blocked
+past `minDate`/`maxDate`.
+
+```tsx
+<Calendar value={selected} onChange={setSelected} minDate={new Date()} />
+```
+
+### Diff
+
+File: `src/components/organisms/Diff.tsx`
+
+| Prop           | Type        | Default         | Description      |
+| -------------- | ----------- | --------------- | ---------------- |
+| `before`       | `ReactNode` | —               | Left image/side  |
+| `after`        | `ReactNode` | —               | Right image/side |
+| `aspectClass?` | `string`    | `'aspect-16/9'` | Aspect ratio     |
+| `className?`   | `string`    | `''`            | Extra classes    |
+
+DaisyUI `diff` mockup with a draggable `diff-resizer` handle for before/after
+comparisons.
+
+```tsx
+<Diff before={oldImage} after={newImage} aspectClass="aspect-video" />
+```
+
+### IntegrationsSection
+
+File: `src/components/organisms/IntegrationsSection.tsx`
+
+| Prop           | Type                                      | Default | Description       |
+| -------------- | ----------------------------------------- | ------- | ----------------- |
+| `title?`       | `string`                                  | —       | Centered heading  |
+| `description?` | `string`                                  | —       | Muted subtitle    |
+| `items`        | `{ name: string; description?; icon? }[]` | —       | Integration cards |
+| `columns?`     | `number`                                  | `3`     | Grid column count |
+| `className?`   | `string`                                  | `''`    | Extra classes     |
+
+Marketing grid of integration cards used on landing pages.
+
+```tsx
+<IntegrationsSection title="Integrations" items={integrations} />
+```
+
+### PageHeader
+
+File: `src/components/organisms/PageHeader.tsx`
+
+| Prop           | Type        | Default | Description             |
+| -------------- | ----------- | ------- | ----------------------- |
+| `title`        | `string`    | —       | Page heading            |
+| `description?` | `string`    | —       | Muted subtitle          |
+| `eyebrow?`     | `string`    | —       | Uppercase eyebrow label |
+| `actions?`     | `ReactNode` | —       | Right-aligned actions   |
+| `className?`   | `string`    | `''`    | Extra classes           |
+
+TailwindUI-style page header combining eyebrow, title, description, and an
+actions slot.
+
+```tsx
+<PageHeader
+  title="Settings"
+  eyebrow="Account"
+  actions={<Button>Save</Button>}
+/>
+```
+
+### PricingCard
+
+File: `src/components/organisms/PricingCard.tsx`
+
+| Prop           | Type         | Default | Description                 |
+| -------------- | ------------ | ------- | --------------------------- |
+| `name`         | `string`     | —       | Plan name                   |
+| `price`        | `string`     | —       | Price string                |
+| `period?`      | `string`     | —       | Billing period              |
+| `description?` | `string`     | —       | Muted subtitle              |
+| `features`     | `string[]`   | —       | Feature list                |
+| `ctaLabel`     | `string`     | —       | Call-to-action text         |
+| `ctaHref?`     | `string`     | —       | Link CTA (next/link)        |
+| `onCta?`       | `() => void` | —       | Button CTA fallback         |
+| `highlighted?` | `boolean`    | `false` | Featured plan styling       |
+| `badge?`       | `string`     | —       | Corner badge (e.g. Popular) |
+| `className?`   | `string`     | `''`    | Extra classes               |
+
+Single pricing card (TailwindUI-style) that composes into a
+`PricingSection`-like grid. Use `ctaHref` for a link or `onCta` for a button.
+
+```tsx
+<PricingCard
+  name="Pro"
+  price="$12"
+  features={features}
+  ctaLabel="Start"
+  highlighted
+/>
+```
+
+### ProgressStepper
+
+File: `src/components/organisms/ProgressStepper.tsx`
+
+| Prop           | Type                         | Default        | Description                     |
+| -------------- | ---------------------------- | -------------- | ------------------------------- |
+| `steps`        | `string[]`                   | —              | Step labels                     |
+| `activeStep`   | `number`                     | —              | Index of the current step       |
+| `onStepClick?` | `(index: number) => void`    | —              | Makes reachable steps clickable |
+| `orientation?` | `'horizontal' \| 'vertical'` | `'horizontal'` | Layout direction                |
+| `className?`   | `string`                     | `''`           | Extra classes                   |
+
+MUI `Stepper`-style progress tracker: completed steps show a check, the active
+step gets `aria-current="step"`, and earlier steps can be revisited when
+`onStepClick` is provided.
+
+```tsx
+<ProgressStepper
+  steps={['Cart', 'Shipping', 'Payment']}
+  activeStep={1}
+  onStepClick={goTo}
+/>
+```
+
+### TestimonialCarousel
+
+File: `src/components/organisms/TestimonialCarousel.tsx` — client component.
+
+| Prop         | Type                                                  | Default | Description      |
+| ------------ | ----------------------------------------------------- | ------- | ---------------- |
+| `items`      | `{ quote: string; author: string; role?; avatar? }[]` | —       | Quotes to rotate |
+| `className?` | `string`                                              | `''`    | Extra classes    |
+
+TailwindUI-style rotating quote carousel with prev/next buttons and dot
+navigation; wraps around at either end and returns `null` when empty.
+
+```tsx
+<TestimonialCarousel items={quotes} />
+```
+
+### DashboardHeader
+
+File: `src/components/organisms/DashboardHeader.tsx`
+
+| Prop                 | Type                      | Default     | Description             |
+| -------------------- | ------------------------- | ----------- | ----------------------- |
+| `title`              | `string`                  | —           | Heading text            |
+| `subtitle?`          | `string`                  | —           | Muted subheading        |
+| `actions?`           | `ReactNode`               | —           | Right-aligned actions   |
+| `searchValue?`       | `string`                  | —           | Controlled search value |
+| `onSearchChange?`    | `(value: string) => void` | —           | Shows search when set   |
+| `searchPlaceholder?` | `string`                  | `'Search…'` | Search placeholder      |
+
+Dashboard page header with a title block and a trailing search input + actions
+row. The search box only renders when `onSearchChange` is provided.
+
+```tsx
+<DashboardHeader title="Overview" searchValue={q} onSearchChange={setQ} />
+```
+
+### DataList
+
+File: `src/components/organisms/DataList.tsx`
+
+| Prop       | Type                                              | Default | Description       |
+| ---------- | ------------------------------------------------- | ------- | ----------------- |
+| `sections` | `{ id, title, items: { key, label, value }[] }[]` | —       | Grouped `dl` rows |
+
+Sections each render a bordered `h3` title and a two-column `dl` of key/value
+rows; returns `null` for an empty list.
+
+```tsx
+<DataList
+  sections={[
+    {
+      id: 'srv',
+      title: 'Server',
+      items: [{ key: 'v', label: 'Version', value: '1.0.0' }],
+    },
+  ]}
+/>
+```
+
+### EventTimeline
+
+File: `src/components/organisms/EventTimeline.tsx`
+
+| Prop     | Type                                                  | Default | Description      |
+| -------- | ----------------------------------------------------- | ------- | ---------------- |
+| `items`  | `{ id, title, date, description?, status?, icon? }[]` | —       | Timeline events  |
+| `title?` | `string`                                              | —       | Optional heading |
+
+Vertical `ol` timeline with colour-coded status dots (`neutral` / `success` /
+`warning` / `error`) and optional leading icons.
+
+```tsx
+<EventTimeline
+  items={[{ id: '1', title: 'Deployed', date: '10m', status: 'success' }]}
+/>
+```
+
+### FaqAccordion
+
+File: `src/components/organisms/FaqAccordion.tsx` — client component.
+
+| Prop           | Type                         | Default | Description     |
+| -------------- | ---------------------------- | ------- | --------------- |
+| `items`        | `{ id, question, answer }[]` | —       | Q&A pairs       |
+| `title?`       | `string`                     | —       | Section heading |
+| `description?` | `string`                     | —       | Muted subtitle  |
+
+Single-open accordion (`aria-expanded`) that opens the first item by default and
+numbers each question `01`, `02`, ….
+
+```tsx
+<FaqAccordion items={[{ id: 'a', question: 'How?', answer: 'Like this.' }]} />
+```
+
+### GalleryGrid
+
+File: `src/components/organisms/GalleryGrid.tsx`
+
+| Prop         | Type                       | Default | Description        |
+| ------------ | -------------------------- | ------- | ------------------ |
+| `items`      | `{ src, alt, caption? }[]` | —       | Images to display  |
+| `columns?`   | `2 \| 3 \| 4`              | `3`     | Responsive columns |
+| `className?` | `string`                   | `''`    | Extra classes      |
+
+Responsive image grid with hover zoom and a bottom gradient caption overlay.
+
+```tsx
+<GalleryGrid
+  columns={4}
+  items={[{ src: '/a.png', alt: 'A', caption: 'Shot' }]}
+/>
+```
+
+### InfoCards
+
+File: `src/components/organisms/InfoCards.tsx`
+
+| Prop       | Type                                            | Default | Description        |
+| ---------- | ----------------------------------------------- | ------- | ------------------ |
+| `cards`    | `{ id, title, description?, icon?, accent? }[]` | —       | Feature cards      |
+| `columns?` | `2 \| 3 \| 4`                                   | `3`     | Responsive columns |
+| `title?`   | `string`                                        | —       | Section heading    |
+
+Bordered card grid with an accent-coloured icon; `accent` is
+`'neutral' \| 'primary' \| 'success' \| 'warning' \| 'error'`.
+
+```tsx
+<InfoCards
+  title="Why us"
+  cards={[{ id: 'a', title: 'Fast', accent: 'primary' }]}
+/>
+```
+
+### PageBreadcrumbs
+
+File: `src/components/organisms/PageBreadcrumbs.tsx`
+
+| Prop           | Type                 | Default | Description           |
+| -------------- | -------------------- | ------- | --------------------- |
+| `items`        | `{ label, href? }[]` | —       | Breadcrumb trail      |
+| `title`        | `string`             | —       | Page `h1`             |
+| `description?` | `string`             | —       | Muted subtitle        |
+| `actions?`     | `ReactNode`          | —       | Right-aligned actions |
+
+DaisyUI `breadcrumbs` (last item gets `aria-current="page"` and never links)
+plus a title/description/actions row.
+
+```tsx
+<PageBreadcrumbs
+  items={[{ label: 'Home', href: '/' }, { label: 'Settings' }]}
+  title="Settings"
+/>
+```
+
+### PageTabs
+
+File: `src/components/organisms/PageTabs.tsx` — client component.
+
+| Prop            | Type                              | Default | Description              |
+| --------------- | --------------------------------- | ------- | ------------------------ |
+| `tabs`          | `{ id, label, content, icon? }[]` | —       | Tabs and panels          |
+| `defaultValue?` | `string`                          | —       | Initial tab (else first) |
+| `value?`        | `string`                          | —       | Controlled active tab    |
+| `onChange?`     | `(value: string) => void`         | —       | Called on tab select     |
+
+DaisyUI `tabs-boxed` (`role="tablist"` / `role="tab"`) that swaps the panel
+content; controlled when `value` is provided.
+
+```tsx
+<PageTabs
+  tabs={[{ id: 'a', label: 'A', content: <p>…</p> }]}
+  defaultValue="a"
+/>
+```
+
 ---
 
 [Back to index](README.md)

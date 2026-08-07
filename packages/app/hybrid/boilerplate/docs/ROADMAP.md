@@ -54,6 +54,18 @@
       Sheet, Table (molecules)
 - [x] ActivityFeed, AnnouncementBar, AuthForm, CommandMenu, CookieBanner,
       LogosSection, Marquee, ProfileCard (organisms)
+- [x] AspectRatio, Artboard, BrowserMockup, Label, LetterAvatar, PhoneMockup,
+      WindowMockup (atoms)
+- [x] Banner, BottomNavigation, Chip, ContextMenu, Drawer, FloatingActionButton,
+      HoverCard, ScrollArea, SpeedDial, ToggleGroup (molecules)
+- [x] Calendar, Diff, IntegrationsSection, PageHeader, PricingCard,
+      ProgressStepper, TestimonialCarousel (organisms)
+- [x] Clock, Cube, Dock, EditableText, EmptyPlaceholder, LinkButton, MiniMap,
+      TagCloud (atoms)
+- [x] DatePicker, DateRange, Dialog, FileUpload, ImageGallery, InfoList,
+      InlineAlert, InputStepper, MenuGroup, NumberInput (molecules)
+- [x] DashboardHeader, DataList, EventTimeline, FaqAccordion, GalleryGrid,
+      InfoCards, PageBreadcrumbs, PageTabs (organisms)
 - [x] Four-level atomic demo with animated level tabs (ComponentsTemplate)
 - [ ] Additional atom components as needed
 - [ ] Additional molecule components as needed

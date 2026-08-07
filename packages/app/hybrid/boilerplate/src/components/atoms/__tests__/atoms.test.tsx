@@ -1,23 +1,42 @@
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import {
+  act,
+  fireEvent,
+  render,
+  screen,
+  waitFor,
+} from '@testing-library/react';
+import { Artboard } from '../Artboard';
+import { AspectRatio } from '../AspectRatio';
 import { Avatar } from '../Avatar';
 import { Badge } from '../Badge';
+import { BrowserMockup } from '../BrowserMockup';
 import { Button } from '../Button';
 import { ButtonLink } from '../ButtonLink';
 import { Checkbox } from '../Checkbox';
+import { Clock } from '../Clock';
 import { CodeBlock } from '../CodeBlock';
 import { Collapse } from '../Collapse';
 import { CopyButton } from '../CopyButton';
 import { Countdown } from '../Countdown';
+import { Cube } from '../Cube';
 import { Divider } from '../Divider';
+import { Dock } from '../Dock';
+import { EditableText } from '../EditableText';
+import { EmptyPlaceholder } from '../EmptyPlaceholder';
 import { FileInput } from '../FileInput';
 import { Icon } from '../Icon';
 import { IconButton } from '../IconButton';
 import { Indicator } from '../Indicator';
 import { Kbd } from '../Kbd';
+import { Label } from '../Label';
+import { LetterAvatar } from '../LetterAvatar';
+import { LinkButton } from '../LinkButton';
 import { Mask } from '../Mask';
+import { MiniMap } from '../MiniMap';
 import { NumberField } from '../NumberField';
 import { OTPInput } from '../OTPInput';
 import { PasswordField } from '../PasswordField';
+import { PhoneMockup } from '../PhoneMockup';
 import { Progress } from '../Progress';
 import { ProgressRing } from '../ProgressRing';
 import { Radio } from '../Radio';
@@ -32,10 +51,12 @@ import { StatusDot } from '../StatusDot';
 import { Swap } from '../Swap';
 import { Switch } from '../Switch';
 import { Tag } from '../Tag';
+import { TagCloud } from '../TagCloud';
 import { Text } from '../Text';
 import { Textarea } from '../Textarea';
 import { TextField } from '../TextField';
 import { Tooltip } from '../Tooltip';
+import { WindowMockup } from '../WindowMockup';
 
 jest.mock('next/link', () => {
   return ({
@@ -1046,5 +1067,407 @@ describe('ProgressRing', () => {
   it('shows the percentage when requested', () => {
     render(<ProgressRing value={75} showValue />);
     expect(screen.getByText('75%')).toBeInTheDocument();
+  });
+});
+
+describe('AspectRatio', () => {
+  it('renders children inside a ratio box', () => {
+    const { container } = render(
+      <AspectRatio>
+        <img src="/thumb.png" alt="Thumbnail" />
+      </AspectRatio>
+    );
+    expect(screen.getByAltText('Thumbnail')).toBeInTheDocument();
+    expect(
+      container.querySelector('.relative')?.getAttribute('style')
+    ).toContain('aspect-ratio');
+  });
+
+  it('applies a custom ratio', () => {
+    const { container } = render(<AspectRatio ratio={1}>Square</AspectRatio>);
+    expect(container.firstElementChild?.getAttribute('style')).toContain(
+      'aspect-ratio: 1'
+    );
+  });
+});
+
+describe('Artboard', () => {
+  it('renders a phone artboard with the default size', () => {
+    render(<Artboard>Hello</Artboard>);
+    expect(screen.getByRole('group')).toHaveClass(
+      'artboard',
+      'artboard-demo',
+      'phone-1'
+    );
+    expect(screen.getByText('Hello')).toBeInTheDocument();
+  });
+
+  it('applies a custom size and uses the title as the accessible name', () => {
+    render(
+      <Artboard size="phone-4" title="Frame">
+        Hi
+      </Artboard>
+    );
+    expect(screen.getByRole('group', { name: 'Frame' })).toHaveClass('phone-4');
+  });
+});
+
+describe('BrowserMockup', () => {
+  it('renders children and the address bar URL', () => {
+    const { container } = render(
+      <BrowserMockup url="https://example.com">Page</BrowserMockup>
+    );
+    expect(screen.getByText('https://example.com')).toBeInTheDocument();
+    expect(screen.getByText('Page')).toBeInTheDocument();
+    expect(
+      container.querySelector('.browser-mockup-top-bar')
+    ).toBeInTheDocument();
+  });
+
+  it('renders traffic light dots', () => {
+    const { container } = render(<BrowserMockup />);
+    expect(
+      container.querySelectorAll('.bg-error, .bg-warning, .bg-success').length
+    ).toBe(3);
+  });
+});
+
+describe('Label', () => {
+  it('renders children', () => {
+    render(<Label>Email</Label>);
+    expect(screen.getByText('Email')).toBeInTheDocument();
+  });
+
+  it('passes htmlFor and extra classes', () => {
+    const { container } = render(
+      <Label htmlFor="email" className="font-bold">
+        Email
+      </Label>
+    );
+    expect(container.querySelector('label')).toHaveAttribute('for', 'email');
+    expect(container.querySelector('label')).toHaveClass('font-bold');
+  });
+});
+
+describe('LetterAvatar', () => {
+  it('derives two initials from a full name', () => {
+    render(<LetterAvatar name="Jane Doe" />);
+    expect(screen.getByRole('img', { name: 'Jane Doe' })).toHaveTextContent(
+      'JD'
+    );
+  });
+
+  it('uses the first two characters for a single-word name', () => {
+    render(<LetterAvatar name="Alex" />);
+    expect(screen.getByRole('img', { name: 'Alex' })).toHaveTextContent('AL');
+  });
+
+  it('applies color and size classes', () => {
+    const { container } = render(
+      <LetterAvatar name="Jane Doe" color="accent" size="lg" />
+    );
+    expect(screen.getByRole('img', { name: 'Jane Doe' })).toHaveClass(
+      'bg-accent'
+    );
+    expect(container.querySelector('.text-2xl')).toBeInTheDocument();
+  });
+});
+
+describe('PhoneMockup', () => {
+  it('renders children and a camera by default', () => {
+    const { container } = render(<PhoneMockup>Screen</PhoneMockup>);
+    expect(screen.getByText('Screen')).toBeInTheDocument();
+    expect(container.querySelector('.camera')).toBeInTheDocument();
+  });
+
+  it('hides the camera when disabled', () => {
+    const { container } = render(
+      <PhoneMockup camera={false}>Screen</PhoneMockup>
+    );
+    expect(container.querySelector('.camera')).not.toBeInTheDocument();
+  });
+});
+
+describe('WindowMockup', () => {
+  it('renders title and children', () => {
+    render(<WindowMockup title="Terminal">Output</WindowMockup>);
+    expect(screen.getByText('Terminal')).toBeInTheDocument();
+    expect(screen.getByText('Output')).toBeInTheDocument();
+  });
+
+  it('renders the top bar without a title', () => {
+    const { container } = render(<WindowMockup>Body</WindowMockup>);
+    expect(
+      container.querySelector('.window-mockup-top-bar')
+    ).toBeInTheDocument();
+  });
+});
+
+describe('Clock', () => {
+  beforeEach(() => {
+    jest.useFakeTimers();
+    jest.setSystemTime(new Date(2026, 0, 1, 13, 5, 9));
+  });
+
+  afterEach(() => {
+    jest.useRealTimers();
+  });
+
+  it('renders the time in 24h format with seconds', () => {
+    render(<Clock />);
+    expect(screen.getByText('13:05:09')).toBeInTheDocument();
+  });
+
+  it('hides seconds when disabled', () => {
+    render(<Clock showSeconds={false} />);
+    expect(screen.getByText('13:05')).toBeInTheDocument();
+  });
+
+  it('renders 12h format with AM/PM', () => {
+    render(<Clock format="12h" />);
+    expect(screen.getByText('01:05:09 PM')).toBeInTheDocument();
+  });
+
+  it('updates the displayed time on an interval', () => {
+    render(<Clock />);
+    act(() => {
+      jest.advanceTimersByTime(1000);
+    });
+    expect(screen.getByText('13:05:10')).toBeInTheDocument();
+  });
+});
+
+describe('Cube', () => {
+  it('renders a spinning cube with six faces', () => {
+    const { container } = render(<Cube />);
+    expect(
+      screen.getByRole('img', { name: 'Spinning cube' })
+    ).toBeInTheDocument();
+    expect(container.querySelectorAll('.absolute')).toHaveLength(6);
+  });
+
+  it('applies a custom size', () => {
+    const { container } = render(<Cube size={128} />);
+    const wrapper = container.firstChild as HTMLElement;
+    expect(wrapper.style.width).toBe('128px');
+    expect(wrapper.style.height).toBe('128px');
+  });
+
+  it('applies a custom speed duration', () => {
+    const { container } = render(<Cube speed="slow" />);
+    const spinner = container.querySelector('.animate-spin') as HTMLElement;
+    expect(spinner.style.animationDuration).toBe('8s');
+  });
+});
+
+describe('Dock', () => {
+  const items = [
+    { key: 'home', label: 'Home', icon: '🏠', active: true },
+    { key: 'mail', label: 'Mail', icon: '✉️' },
+  ];
+
+  it('renders items with icons and labels', () => {
+    render(<Dock items={items} />);
+    expect(
+      screen.getByRole('navigation', { name: 'Dock' })
+    ).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Home' })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Mail' })).toBeInTheDocument();
+  });
+
+  it('marks the active item as pressed', () => {
+    render(<Dock items={items} />);
+    expect(screen.getByRole('button', { name: 'Home' })).toHaveAttribute(
+      'aria-pressed',
+      'true'
+    );
+    expect(screen.getByRole('button', { name: 'Mail' })).toHaveAttribute(
+      'aria-pressed',
+      'false'
+    );
+  });
+
+  it('calls onClick for an item', () => {
+    const onClick = jest.fn();
+    render(
+      <Dock items={[{ key: 'home', label: 'Home', icon: '🏠', onClick }]} />
+    );
+    fireEvent.click(screen.getByRole('button', { name: 'Home' }));
+    expect(onClick).toHaveBeenCalledTimes(1);
+  });
+
+  it('renders a custom dock label', () => {
+    render(<Dock items={items} label="App launcher" />);
+    expect(screen.getByText('App launcher')).toBeInTheDocument();
+  });
+});
+
+describe('EditableText', () => {
+  it('renders the value as editable text', () => {
+    render(<EditableText value="Project name" onChange={jest.fn()} />);
+    expect(screen.getByRole('button', { name: 'Edit text' })).toHaveTextContent(
+      'Project name'
+    );
+  });
+
+  it('switches to an input and commits on Enter', () => {
+    const onChange = jest.fn();
+    render(<EditableText value="Old" onChange={onChange} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Edit text' }));
+    const input = screen.getByRole('textbox');
+    fireEvent.change(input, { target: { value: 'New name' } });
+    fireEvent.keyDown(input, { key: 'Enter' });
+    expect(onChange).toHaveBeenCalledWith('New name');
+    expect(
+      screen.getByRole('button', { name: 'Edit text' })
+    ).toBeInTheDocument();
+  });
+
+  it('cancels editing on Escape', () => {
+    const onChange = jest.fn();
+    render(<EditableText value="Old" onChange={onChange} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Edit text' }));
+    const input = screen.getByRole('textbox');
+    fireEvent.change(input, { target: { value: 'New name' } });
+    fireEvent.keyDown(input, { key: 'Escape' });
+    expect(onChange).not.toHaveBeenCalled();
+    expect(screen.getByRole('button', { name: 'Edit text' })).toHaveTextContent(
+      'Old'
+    );
+  });
+
+  it('commits on blur', () => {
+    const onChange = jest.fn();
+    render(<EditableText value="Old" onChange={onChange} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Edit text' }));
+    const input = screen.getByRole('textbox');
+    fireEvent.change(input, { target: { value: 'Blurred' } });
+    fireEvent.blur(input);
+    expect(onChange).toHaveBeenCalledWith('Blurred');
+  });
+
+  it('shows the placeholder when value is empty', () => {
+    render(<EditableText value="" onChange={jest.fn()} />);
+    expect(screen.getByRole('button', { name: 'Edit text' })).toHaveTextContent(
+      'Click to edit'
+    );
+  });
+});
+
+describe('EmptyPlaceholder', () => {
+  it('renders the default title', () => {
+    render(<EmptyPlaceholder />);
+    expect(screen.getByText('Nothing here yet')).toBeInTheDocument();
+  });
+
+  it('renders icon, title, description, and action', () => {
+    render(
+      <EmptyPlaceholder
+        icon="🗂"
+        title="No files"
+        description="Drop files to get started."
+        action={<button>Add</button>}
+      />
+    );
+    expect(screen.getByText('No files')).toBeInTheDocument();
+    expect(screen.getByText('Drop files to get started.')).toBeInTheDocument();
+    expect(screen.getByText('Add')).toBeInTheDocument();
+  });
+});
+
+describe('LinkButton', () => {
+  it('renders a link with the given href', () => {
+    render(<LinkButton href="/about">About</LinkButton>);
+    expect(screen.getByRole('link', { name: 'About' })).toHaveAttribute(
+      'href',
+      '/about'
+    );
+  });
+
+  it('applies variant and size classes', () => {
+    render(
+      <LinkButton href="/about" variant="outline" size="sm">
+        About
+      </LinkButton>
+    );
+    expect(screen.getByRole('link', { name: 'About' })).toHaveClass(
+      'btn',
+      'btn-outline',
+      'btn-sm'
+    );
+  });
+});
+
+describe('MiniMap', () => {
+  const sections = [
+    { id: 'overview', label: 'Overview' },
+    { id: 'settings', label: 'Settings' },
+    { id: 'billing', label: 'Billing' },
+  ];
+
+  it('renders all sections', () => {
+    render(<MiniMap sections={sections} active="settings" />);
+    expect(screen.getByLabelText('Page overview')).toBeInTheDocument();
+    expect(screen.getByText('Overview')).toBeInTheDocument();
+    expect(screen.getByText('Billing')).toBeInTheDocument();
+  });
+
+  it('marks the active section', () => {
+    render(<MiniMap sections={sections} active="settings" />);
+    expect(screen.getByText('Settings')).toHaveAttribute(
+      'aria-current',
+      'location'
+    );
+    expect(screen.getByText('Overview')).not.toHaveAttribute('aria-current');
+  });
+});
+
+describe('TagCloud', () => {
+  it('renders tags with their labels', () => {
+    render(
+      <TagCloud
+        tags={[
+          { label: 'react', weight: 10 },
+          { label: 'typescript', weight: 3 },
+        ]}
+      />
+    );
+    expect(screen.getByText('react')).toBeInTheDocument();
+    expect(screen.getByText('typescript')).toBeInTheDocument();
+  });
+
+  it('scales font size by weight', () => {
+    render(
+      <TagCloud
+        tags={[
+          { label: 'react', weight: 10 },
+          { label: 'typescript', weight: 0 },
+        ]}
+      />
+    );
+    const heavy = screen.getByText('react');
+    const light = screen.getByText('typescript');
+    expect(parseFloat(heavy.style.fontSize)).toBeGreaterThan(
+      parseFloat(light.style.fontSize)
+    );
+  });
+
+  it('returns null when there are no tags', () => {
+    const { container } = render(<TagCloud tags={[]} />);
+    expect(container).toBeEmptyDOMElement();
+  });
+
+  it('handles equal weights without division errors', () => {
+    render(
+      <TagCloud
+        tags={[
+          { label: 'react', weight: 5 },
+          { label: 'next', weight: 5 },
+        ]}
+      />
+    );
+    expect(screen.getByText('react').style.fontSize).toBe(
+      screen.getByText('next').style.fontSize
+    );
   });
 });

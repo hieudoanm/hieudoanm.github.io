@@ -13,12 +13,12 @@ learn the conventions and reuse components without re-reading source files.
 
 ## Components
 
-- [ATOMS.md](ATOMS.md) — smallest building blocks in `src/components/atoms/` (37
+- [ATOMS.md](ATOMS.md) — smallest building blocks in `src/components/atoms/` (52
   components)
 - [MOLECULES.md](MOLECULES.md) — combinations of atoms in
-  `src/components/molecules/` (36 components)
+  `src/components/molecules/` (56 components)
 - [ORGANISMS.md](ORGANISMS.md) — complex UI sections in
-  `src/components/organisms/` (26 components)
+  `src/components/organisms/` (41 components)
 
 ## Pages
 
@@ -31,7 +31,7 @@ learn the conventions and reuse components without re-reading source files.
 
 ```txt
 ATOMS -> MOLECULES -> ORGANISMS -> TEMPLATES -> PAGES
-  37        36           26          28 routes     29 routes
+  52        56           41          28 routes     29 routes
 ```
 
 Everything lives in `src/`:

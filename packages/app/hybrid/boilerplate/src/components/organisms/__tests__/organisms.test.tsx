@@ -1,31 +1,46 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import { FiHome, FiUser } from 'react-icons/fi';
-import { BlogSection } from '../BlogSection';
-import { ChatWindow } from '../ChatWindow';
-import { ContactSection } from '../ContactSection';
-import { CTASection } from '../CTASection';
-import { DataTable } from '../DataTable';
-import { FAQSection } from '../FAQSection';
-import { FeatureGrid } from '../FeatureGrid';
-import { Footer } from '../Footer';
-import { Header } from '../Header';
-import { Hero } from '../Hero';
-import { Navbar } from '../Navbar';
-import { NewsletterSection } from '../NewsletterSection';
-import { PricingSection } from '../PricingSection';
-import { Sidebar } from '../Sidebar';
-import { StatsGrid } from '../StatsGrid';
-import { TeamSection } from '../TeamSection';
-import { TestimonialSection } from '../TestimonialSection';
-import { Toolbar } from '../Toolbar';
 import { ActivityFeed } from '../ActivityFeed';
 import { AnnouncementBar } from '../AnnouncementBar';
 import { AuthForm } from '../AuthForm';
+import { BlogSection } from '../BlogSection';
+import { Calendar } from '../Calendar';
+import { ChatWindow } from '../ChatWindow';
 import { CommandMenu } from '../CommandMenu';
+import { ContactSection } from '../ContactSection';
 import { CookieBanner } from '../CookieBanner';
+import { CTASection } from '../CTASection';
+import { DashboardHeader } from '../DashboardHeader';
+import { DataList } from '../DataList';
+import { DataTable } from '../DataTable';
+import { Diff } from '../Diff';
+import { EventTimeline } from '../EventTimeline';
+import { FAQSection } from '../FAQSection';
+import { FaqAccordion } from '../FaqAccordion';
+import { FeatureGrid } from '../FeatureGrid';
+import { Footer } from '../Footer';
+import { GalleryGrid } from '../GalleryGrid';
+import { Header } from '../Header';
+import { Hero } from '../Hero';
+import { InfoCards } from '../InfoCards';
+import { IntegrationsSection } from '../IntegrationsSection';
 import { LogosSection } from '../LogosSection';
 import { Marquee } from '../Marquee';
+import { Navbar } from '../Navbar';
+import { NewsletterSection } from '../NewsletterSection';
+import { PageBreadcrumbs } from '../PageBreadcrumbs';
+import { PageHeader } from '../PageHeader';
+import { PageTabs } from '../PageTabs';
+import { PricingCard } from '../PricingCard';
+import { PricingSection } from '../PricingSection';
 import { ProfileCard } from '../ProfileCard';
+import { ProgressStepper } from '../ProgressStepper';
+import { Sidebar } from '../Sidebar';
+import { StatsGrid } from '../StatsGrid';
+import { TeamSection } from '../TeamSection';
+import { TestimonialCarousel } from '../TestimonialCarousel';
+import { TestimonialSection } from '../TestimonialSection';
+import { Toolbar } from '../Toolbar';
 
 jest.mock('next/navigation', () => ({
   usePathname: jest.fn(),
@@ -1024,5 +1039,545 @@ describe('ActivityFeed', () => {
     );
     expect(container.querySelector('.bg-success')).not.toBeInTheDocument();
     expect(screen.getByText('Pushed')).toBeInTheDocument();
+  });
+});
+
+describe('Calendar', () => {
+  it('renders the current month label and weekday headers', () => {
+    const label = new Date().toLocaleDateString('en-US', {
+      month: 'long',
+      year: 'numeric',
+    });
+    render(<Calendar />);
+    expect(screen.getByText(label)).toBeInTheDocument();
+    expect(screen.getByText('Sun')).toBeInTheDocument();
+    expect(screen.getByText('Sat')).toBeInTheDocument();
+  });
+
+  it('highlights the selected day', () => {
+    render(<Calendar value={new Date(2026, 7, 15)} />);
+    expect(
+      screen.getByRole('button', { name: 'Sat Aug 15 2026' })
+    ).toHaveAttribute('aria-pressed', 'true');
+  });
+
+  it('calls onChange with the clicked date', () => {
+    const onChange = jest.fn();
+    render(<Calendar value={new Date(2026, 7, 15)} onChange={onChange} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Sat Aug 15 2026' }));
+    expect(onChange).toHaveBeenCalledWith(new Date(2026, 7, 15));
+  });
+
+  it('navigates months with the previous and next buttons', () => {
+    render(<Calendar value={new Date(2026, 7, 15)} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Next month' }));
+    expect(screen.getByText('September 2026')).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Previous month' }));
+    expect(screen.getByText('August 2026')).toBeInTheDocument();
+  });
+
+  it('disables out-of-range navigation', () => {
+    render(
+      <Calendar
+        value={new Date(2026, 7, 15)}
+        minDate={new Date(2026, 7, 1)}
+        maxDate={new Date(2026, 7, 30)}
+      />
+    );
+    expect(
+      screen.getByRole('button', { name: 'Previous month' })
+    ).toBeDisabled();
+    expect(screen.getByRole('button', { name: 'Next month' })).toBeDisabled();
+  });
+});
+
+describe('Diff', () => {
+  it('renders before, after, and a resizer', () => {
+    const { container } = render(
+      <Diff
+        before={<img src="/a.png" alt="Before" />}
+        after={<img src="/b.png" alt="After" />}
+      />
+    );
+    expect(screen.getByAltText('Before')).toBeInTheDocument();
+    expect(screen.getByAltText('After')).toBeInTheDocument();
+    expect(container.querySelector('.diff-resizer')).toBeInTheDocument();
+  });
+
+  it('applies an aspect class', () => {
+    const { container } = render(
+      <Diff before="A" after="B" aspectClass="aspect-square" />
+    );
+    expect(container.querySelector('.diff')).toHaveClass('aspect-square');
+  });
+});
+
+describe('IntegrationsSection', () => {
+  it('renders title, description, and items', () => {
+    render(
+      <IntegrationsSection
+        title="Integrations"
+        description="Connect your stack"
+        items={[{ name: 'GitHub', description: 'Repos' }, { name: 'Slack' }]}
+      />
+    );
+    expect(screen.getByText('Integrations')).toBeInTheDocument();
+    expect(screen.getByText('Connect your stack')).toBeInTheDocument();
+    expect(screen.getByText('GitHub')).toBeInTheDocument();
+    expect(screen.getByText('Repos')).toBeInTheDocument();
+    expect(screen.getByText('Slack')).toBeInTheDocument();
+  });
+
+  it('renders item icons', () => {
+    render(
+      <IntegrationsSection items={[{ name: 'GitHub', icon: <span>G</span> }]} />
+    );
+    expect(screen.getByText('G')).toBeInTheDocument();
+  });
+
+  it('applies the requested column count', () => {
+    const { container } = render(
+      <IntegrationsSection items={[{ name: 'A' }, { name: 'B' }]} columns={2} />
+    );
+    expect(container.querySelector('.grid')?.getAttribute('style')).toContain(
+      'repeat(2, minmax(0, 1fr))'
+    );
+  });
+});
+
+describe('PageHeader', () => {
+  it('renders title, description, and eyebrow', () => {
+    render(
+      <PageHeader
+        title="Settings"
+        description="Manage your account"
+        eyebrow="Account"
+      />
+    );
+    expect(
+      screen.getByRole('heading', { name: 'Settings' })
+    ).toBeInTheDocument();
+    expect(screen.getByText('Manage your account')).toBeInTheDocument();
+    expect(screen.getByText('Account')).toBeInTheDocument();
+  });
+
+  it('renders actions', () => {
+    render(<PageHeader title="Settings" actions={<button>Save</button>} />);
+    expect(screen.getByRole('button', { name: 'Save' })).toBeInTheDocument();
+  });
+});
+
+describe('PricingCard', () => {
+  const features = ['Unlimited projects', 'Priority support'];
+
+  it('renders price, period, features, and badge', () => {
+    render(
+      <PricingCard
+        name="Pro"
+        price="$12"
+        period="/mo"
+        features={features}
+        ctaLabel="Get started"
+        badge="Popular"
+        highlighted
+      />
+    );
+    expect(screen.getByText('Pro')).toBeInTheDocument();
+    expect(screen.getByText('$12')).toBeInTheDocument();
+    expect(screen.getByText('/mo')).toBeInTheDocument();
+    expect(screen.getByText('Unlimited projects')).toBeInTheDocument();
+    expect(screen.getByText('Popular')).toBeInTheDocument();
+  });
+
+  it('renders a link CTA when a href is provided', () => {
+    render(
+      <PricingCard
+        name="Pro"
+        price="$12"
+        features={features}
+        ctaLabel="Start"
+        ctaHref="/pricing"
+      />
+    );
+    expect(screen.getByRole('link', { name: 'Start' })).toHaveAttribute(
+      'href',
+      '/pricing'
+    );
+  });
+
+  it('renders a button CTA that calls onCta', () => {
+    const onCta = jest.fn();
+    render(
+      <PricingCard
+        name="Pro"
+        price="$12"
+        features={features}
+        ctaLabel="Start"
+        onCta={onCta}
+      />
+    );
+    fireEvent.click(screen.getByRole('button', { name: 'Start' }));
+    expect(onCta).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe('ProgressStepper', () => {
+  const steps = ['Cart', 'Shipping', 'Payment'];
+
+  it('renders step labels and numbers', () => {
+    render(<ProgressStepper steps={steps} activeStep={1} />);
+    expect(screen.getByText('Cart')).toBeInTheDocument();
+    expect(screen.getByText('Shipping')).toBeInTheDocument();
+    expect(screen.getByText('Payment')).toBeInTheDocument();
+    expect(screen.getByText('3')).toBeInTheDocument();
+  });
+
+  it('marks completed and active steps', () => {
+    const { container } = render(
+      <ProgressStepper steps={steps} activeStep={1} />
+    );
+    expect(container.querySelectorAll('.bg-primary').length).toBe(1);
+    expect(screen.getByText('Shipping').parentElement).toHaveAttribute(
+      'aria-current',
+      'step'
+    );
+  });
+
+  it('makes only reachable steps clickable when onStepClick is provided', () => {
+    const onStepClick = jest.fn();
+    render(
+      <ProgressStepper steps={steps} activeStep={1} onStepClick={onStepClick} />
+    );
+    fireEvent.click(screen.getByRole('button', { name: /Shipping/ }));
+    expect(onStepClick).toHaveBeenCalledWith(1);
+    expect(
+      screen.queryByRole('button', { name: /Payment/ })
+    ).not.toBeInTheDocument();
+  });
+});
+
+describe('TestimonialCarousel', () => {
+  const items = [
+    { quote: 'Loved it.', author: 'Ada', role: 'Engineer' },
+    { quote: 'Great work.', author: 'Grace' },
+  ];
+
+  it('renders the first testimonial', () => {
+    render(<TestimonialCarousel items={items} />);
+    expect(screen.getByText(/Loved it/)).toBeInTheDocument();
+    expect(screen.getByText('Ada')).toBeInTheDocument();
+    expect(screen.getByText('Engineer')).toBeInTheDocument();
+  });
+
+  it('navigates with the next and previous buttons', () => {
+    render(<TestimonialCarousel items={items} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Next testimonial' }));
+    expect(screen.getByText(/Great work/)).toBeInTheDocument();
+    fireEvent.click(
+      screen.getByRole('button', { name: 'Previous testimonial' })
+    );
+    expect(screen.getByText(/Loved it/)).toBeInTheDocument();
+  });
+
+  it('jumps to a specific testimonial via the dots', () => {
+    render(<TestimonialCarousel items={items} />);
+    fireEvent.click(screen.getByRole('tab', { name: 'Show testimonial 2' }));
+    expect(screen.getByText(/Great work/)).toBeInTheDocument();
+  });
+
+  it('renders an avatar when provided', () => {
+    render(
+      <TestimonialCarousel
+        items={[{ quote: 'Nice.', author: 'Ada', avatar: '/ada.png' }]}
+      />
+    );
+    expect(screen.getByAltText('Ada')).toHaveAttribute('src', '/ada.png');
+  });
+
+  it('returns null when there are no items', () => {
+    const { container } = render(<TestimonialCarousel items={[]} />);
+    expect(container).toBeEmptyDOMElement();
+  });
+});
+
+describe('DashboardHeader', () => {
+  it('renders title and subtitle', () => {
+    render(<DashboardHeader title="Overview" subtitle="Welcome back" />);
+    expect(screen.getByText('Overview')).toBeInTheDocument();
+    expect(screen.getByText('Welcome back')).toBeInTheDocument();
+  });
+
+  it('renders actions', () => {
+    render(<DashboardHeader title="Overview" actions={<button>New</button>} />);
+    expect(screen.getByRole('button', { name: 'New' })).toBeInTheDocument();
+  });
+
+  it('renders a search input and forwards changes', () => {
+    const onSearchChange = jest.fn();
+    render(
+      <DashboardHeader
+        title="Overview"
+        searchValue="needle"
+        onSearchChange={onSearchChange}
+      />
+    );
+    const input = screen.getByRole('searchbox', { name: 'Search' });
+    expect(input).toHaveValue('needle');
+    fireEvent.change(input, { target: { value: 'hay' } });
+    expect(onSearchChange).toHaveBeenCalledWith('hay');
+  });
+
+  it('hides the search input when no handler is provided', () => {
+    render(<DashboardHeader title="Overview" />);
+    expect(screen.queryByRole('searchbox')).not.toBeInTheDocument();
+  });
+});
+
+describe('DataList', () => {
+  const sections = [
+    {
+      id: 'server',
+      title: 'Server',
+      items: [
+        { key: 'region', label: 'Region', value: 'ap-southeast-1' },
+        { key: 'version', label: 'Version', value: 'v1.2.3' },
+      ],
+    },
+    {
+      id: 'limits',
+      title: 'Limits',
+      items: [{ key: 'storage', label: 'Storage', value: '10 GB' }],
+    },
+  ];
+
+  it('renders section titles, labels, and values', () => {
+    render(<DataList sections={sections} />);
+    expect(screen.getByText('Server')).toBeInTheDocument();
+    expect(screen.getByText('Region')).toBeInTheDocument();
+    expect(screen.getByText('ap-southeast-1')).toBeInTheDocument();
+    expect(screen.getByText('Limits')).toBeInTheDocument();
+    expect(screen.getByText('10 GB')).toBeInTheDocument();
+  });
+
+  it('renders nothing when there are no sections', () => {
+    const { container } = render(<DataList sections={[]} />);
+    expect(container).toBeEmptyDOMElement();
+  });
+});
+
+describe('EventTimeline', () => {
+  const items = [
+    {
+      id: '1',
+      title: 'Deployed',
+      date: '10 min ago',
+      description: 'Production release',
+      status: 'success' as const,
+    },
+    {
+      id: '2',
+      title: 'Build warning',
+      date: '1 hr ago',
+      status: 'warning' as const,
+    },
+  ];
+
+  it('renders title, dates, and descriptions', () => {
+    render(<EventTimeline title="Release history" items={items} />);
+    expect(screen.getByText('Release history')).toBeInTheDocument();
+    expect(screen.getByText('Deployed')).toBeInTheDocument();
+    expect(screen.getByText('Production release')).toBeInTheDocument();
+    expect(screen.getByText('10 min ago')).toBeInTheDocument();
+  });
+
+  it('applies the status dot colour', () => {
+    const { container } = render(<EventTimeline items={items} />);
+    expect(container.querySelector('.bg-success')).toBeInTheDocument();
+    expect(container.querySelector('.bg-warning')).toBeInTheDocument();
+  });
+
+  it('renders icons and a neutral dot when provided', () => {
+    const { container } = render(
+      <EventTimeline
+        items={[{ id: '1', title: 'Event', date: 'Now', icon: '🔔' }]}
+      />
+    );
+    expect(screen.getByText('🔔')).toBeInTheDocument();
+    expect(
+      container.querySelector('.bg-base-content\\/30')
+    ).toBeInTheDocument();
+  });
+});
+
+describe('FaqAccordion', () => {
+  const items = [
+    { id: 'a', question: 'How to install?', answer: 'Run pnpm install.' },
+    { id: 'b', question: 'Is it free?', answer: 'Yes, MIT licensed.' },
+  ];
+
+  it('opens the first item by default', () => {
+    render(<FaqAccordion items={items} />);
+    expect(screen.getByText('Run pnpm install.')).toBeInTheDocument();
+  });
+
+  it('switches and closes items on click', () => {
+    render(<FaqAccordion items={items} />);
+    fireEvent.click(screen.getByRole('button', { name: /Is it free/ }));
+    expect(screen.getByText('Yes, MIT licensed.')).toBeInTheDocument();
+    expect(screen.queryByText('Run pnpm install.')).not.toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: /Is it free/ }));
+    expect(screen.queryByText('Yes, MIT licensed.')).not.toBeInTheDocument();
+  });
+
+  it('renders the title, description, and numbered questions', () => {
+    render(
+      <FaqAccordion items={items} title="FAQ" description="Common questions" />
+    );
+    expect(screen.getByText('FAQ')).toBeInTheDocument();
+    expect(screen.getByText('Common questions')).toBeInTheDocument();
+    expect(screen.getByText('01')).toBeInTheDocument();
+    expect(screen.getByText('02')).toBeInTheDocument();
+  });
+
+  it('opens nothing when there are no items', () => {
+    render(<FaqAccordion items={[]} />);
+    expect(screen.queryByText('01')).not.toBeInTheDocument();
+  });
+});
+
+describe('GalleryGrid', () => {
+  const items = [
+    { src: '/a.png', alt: 'Alpha', caption: 'Alpha shot' },
+    { src: '/b.png', alt: 'Beta' },
+  ];
+
+  it('renders images with captions', () => {
+    render(<GalleryGrid items={items} />);
+    expect(screen.getByAltText('Alpha')).toHaveAttribute('src', '/a.png');
+    expect(screen.getByText('Alpha shot')).toBeInTheDocument();
+    expect(screen.getByAltText('Beta')).toHaveAttribute('src', '/b.png');
+  });
+
+  it('omits captions when not provided', () => {
+    render(<GalleryGrid items={items} />);
+    expect(screen.queryByText('Beta')).not.toBeInTheDocument();
+  });
+
+  it('applies the requested column count', () => {
+    const { container } = render(<GalleryGrid items={items} columns={4} />);
+    expect(container.firstChild).toHaveClass('lg:grid-cols-4');
+  });
+});
+
+describe('InfoCards', () => {
+  const cards = [
+    {
+      id: 'fast',
+      title: 'Fast',
+      description: 'Optimised for speed.',
+      icon: '⚡',
+      accent: 'primary' as const,
+    },
+    { id: 'secure', title: 'Secure', description: 'Encrypted.' },
+  ];
+
+  it('renders the title and cards', () => {
+    render(<InfoCards title="Why us" cards={cards} />);
+    expect(screen.getByText('Why us')).toBeInTheDocument();
+    expect(screen.getByText('Fast')).toBeInTheDocument();
+    expect(screen.getByText('Optimised for speed.')).toBeInTheDocument();
+    expect(screen.getByText('Secure')).toBeInTheDocument();
+  });
+
+  it('applies accent classes to icons', () => {
+    render(<InfoCards cards={cards} />);
+    expect(screen.getByText('⚡')).toHaveClass('text-primary');
+  });
+
+  it('applies the requested column count', () => {
+    const { container } = render(<InfoCards cards={cards} columns={4} />);
+    expect(container.querySelector('.grid')).toHaveClass('lg:grid-cols-4');
+  });
+});
+
+describe('PageBreadcrumbs', () => {
+  const items = [
+    { label: 'Home', href: '/' },
+    { label: 'Projects', href: '/projects' },
+    { label: 'Settings' },
+  ];
+
+  it('renders breadcrumbs with links and a current page', () => {
+    render(
+      <PageBreadcrumbs
+        items={items}
+        title="Project settings"
+        description="Manage preferences"
+      />
+    );
+    expect(screen.getByRole('link', { name: 'Home' })).toHaveAttribute(
+      'href',
+      '/'
+    );
+    expect(screen.getByRole('link', { name: 'Projects' })).toHaveAttribute(
+      'href',
+      '/projects'
+    );
+    expect(screen.getByText('Settings')).toHaveAttribute(
+      'aria-current',
+      'page'
+    );
+    expect(screen.getByText('Project settings')).toBeInTheDocument();
+    expect(screen.getByText('Manage preferences')).toBeInTheDocument();
+  });
+
+  it('renders actions', () => {
+    render(
+      <PageBreadcrumbs
+        items={items}
+        title="Settings"
+        actions={<button>Save</button>}
+      />
+    );
+    expect(screen.getByRole('button', { name: 'Save' })).toBeInTheDocument();
+  });
+});
+
+describe('PageTabs', () => {
+  const tabs = [
+    { id: 'overview', label: 'Overview', content: <p>Overview panel</p> },
+    { id: 'activity', label: 'Activity', content: <p>Activity panel</p> },
+  ];
+
+  it('shows the first tab panel by default', () => {
+    render(<PageTabs tabs={tabs} />);
+    expect(screen.getByText('Overview panel')).toBeInTheDocument();
+    expect(screen.queryByText('Activity panel')).not.toBeInTheDocument();
+  });
+
+  it('switches the panel when a tab is clicked', () => {
+    render(<PageTabs tabs={tabs} />);
+    fireEvent.click(screen.getByRole('tab', { name: 'Activity' }));
+    expect(screen.getByText('Activity panel')).toBeInTheDocument();
+    expect(screen.queryByText('Overview panel')).not.toBeInTheDocument();
+  });
+
+  it('respects the controlled value and notifies changes', () => {
+    const onChange = jest.fn();
+    const { rerender } = render(
+      <PageTabs tabs={tabs} value="activity" onChange={onChange} />
+    );
+    expect(screen.getByText('Activity panel')).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('tab', { name: 'Overview' }));
+    expect(onChange).toHaveBeenCalledWith('overview');
+    rerender(<PageTabs tabs={tabs} value="overview" onChange={onChange} />);
+    expect(screen.getByText('Overview panel')).toBeInTheDocument();
+  });
+
+  it('renders an empty panel for an unknown default value', () => {
+    const { container } = render(
+      <PageTabs tabs={tabs} defaultValue="missing" />
+    );
+    expect(container.querySelector('[role="tabpanel"]')).toBeEmptyDOMElement();
   });
 });

@@ -3,31 +3,50 @@ import { FiTrash, FiUser } from 'react-icons/fi';
 import { Accordion } from '../Accordion';
 import { Alert } from '../Alert';
 import { AvatarGroup } from '../AvatarGroup';
+import { Banner } from '../Banner';
+import { BottomNavigation } from '../BottomNavigation';
 import { Breadcrumbs } from '../Breadcrumbs';
 import { ButtonGroup } from '../ButtonGroup';
 import { Card } from '../Card';
 import { Carousel } from '../Carousel';
 import { ChatBubble } from '../ChatBubble';
 import { CheckboxGroup } from '../CheckboxGroup';
+import { Chip } from '../Chip';
 import { ColorPicker } from '../ColorPicker';
 import { Combobox } from '../Combobox';
 import { ConfirmDialog } from '../ConfirmDialog';
+import { ContextMenu } from '../ContextMenu';
 import { DangerZone } from '../DangerZone';
+import { DatePicker } from '../DatePicker';
+import { DateRange } from '../DateRange';
+import { Dialog } from '../Dialog';
+import { Drawer } from '../Drawer';
 import { Dropdown } from '../Dropdown';
 import { EmptyState } from '../EmptyState';
 import { Fieldset } from '../Fieldset';
+import { FileUpload } from '../FileUpload';
+import { FloatingActionButton } from '../FloatingActionButton';
 import { FormRow } from '../FormRow';
+import { HoverCard } from '../HoverCard';
+import { ImageGallery } from '../ImageGallery';
+import { InfoList } from '../InfoList';
+import { InlineAlert } from '../InlineAlert';
 import { InputGroup } from '../InputGroup';
+import { InputStepper } from '../InputStepper';
 import { KeyValue } from '../KeyValue';
 import { List } from '../List';
 import { Menu } from '../Menu';
+import { MenuGroup } from '../MenuGroup';
 import { Modal } from '../Modal';
 import { NavItem } from '../NavItem';
+import { NumberInput } from '../NumberInput';
 import { Pagination } from '../Pagination';
 import { Popover } from '../Popover';
 import { RadioGroup } from '../RadioGroup';
+import { ScrollArea } from '../ScrollArea';
 import { SearchBar } from '../SearchBar';
 import { Sheet } from '../Sheet';
+import { SpeedDial } from '../SpeedDial';
 import { Stat } from '../Stat';
 import { Steps } from '../Steps';
 import { Table } from '../Table';
@@ -35,6 +54,7 @@ import { Tabs } from '../Tabs';
 import { TagInput } from '../TagInput';
 import { Timeline } from '../Timeline';
 import { Toast } from '../Toast';
+import { ToggleGroup } from '../ToggleGroup';
 import { TreeView } from '../TreeView';
 import { Button } from '../../atoms/Button';
 
@@ -1259,5 +1279,901 @@ describe('Table', () => {
       'table-zebra',
       'table-compact'
     );
+  });
+});
+
+describe('Banner', () => {
+  it('renders title, description, action, and children', () => {
+    render(
+      <Banner
+        variant="success"
+        title="Deployed"
+        description="v2 is live"
+        action={<button>View</button>}>
+        <span>Changelog</span>
+      </Banner>
+    );
+    expect(screen.getByText('Deployed')).toBeInTheDocument();
+    expect(screen.getByText('v2 is live')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'View' })).toBeInTheDocument();
+    expect(screen.getByText('Changelog')).toBeInTheDocument();
+  });
+
+  it('applies the variant accent class', () => {
+    render(<Banner variant="error">Failed</Banner>);
+    expect(screen.getByRole('status')).toHaveClass('border-l-error');
+  });
+
+  it('calls onClose when dismissed', () => {
+    const onClose = jest.fn();
+    render(
+      <Banner dismissible onClose={onClose}>
+        Hello
+      </Banner>
+    );
+    fireEvent.click(screen.getByRole('button', { name: 'Dismiss banner' }));
+    expect(onClose).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe('BottomNavigation', () => {
+  const items = [
+    { label: 'Home', value: 'home' },
+    { label: 'Mail', value: 'mail' },
+  ];
+
+  it('renders items and marks the active one', () => {
+    render(
+      <BottomNavigation items={items} value="home" onChange={jest.fn()} />
+    );
+    expect(screen.getByRole('button', { name: 'Home' })).toHaveAttribute(
+      'aria-current',
+      'page'
+    );
+    expect(screen.getByRole('button', { name: 'Home' })).toHaveClass('active');
+    expect(screen.getByRole('button', { name: 'Mail' })).not.toHaveAttribute(
+      'aria-current'
+    );
+  });
+
+  it('calls onChange with the selected value', () => {
+    const onChange = jest.fn();
+    render(<BottomNavigation items={items} value="home" onChange={onChange} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Mail' }));
+    expect(onChange).toHaveBeenCalledWith('mail');
+  });
+});
+
+describe('Chip', () => {
+  it('renders the label with color and outline classes', () => {
+    const { container } = render(
+      <Chip label="React" color="primary" variant="outline" />
+    );
+    expect(screen.getByText('React')).toBeInTheDocument();
+    expect(container.querySelector('.badge')).toHaveClass(
+      'badge-primary',
+      'badge-outline'
+    );
+  });
+
+  it('calls onClick when clicked', () => {
+    const onClick = jest.fn();
+    render(<Chip label="Tag" onClick={onClick} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Tag' }));
+    expect(onClick).toHaveBeenCalledTimes(1);
+  });
+
+  it('calls onDelete without triggering onClick', () => {
+    const onClick = jest.fn();
+    const onDelete = jest.fn();
+    render(<Chip label="Tag" onClick={onClick} onDelete={onDelete} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Remove Tag' }));
+    expect(onDelete).toHaveBeenCalledTimes(1);
+    expect(onClick).not.toHaveBeenCalled();
+  });
+
+  it('renders as a span when not interactive', () => {
+    const { container } = render(<Chip label="Static" />);
+    expect(screen.queryByRole('button')).not.toBeInTheDocument();
+    expect(container.querySelector('span.badge')).toHaveTextContent('Static');
+  });
+});
+
+describe('ContextMenu', () => {
+  const items = [{ label: 'Copy', onClick: jest.fn() }];
+
+  it('opens the menu on right click', () => {
+    render(<ContextMenu trigger={<span>Right-click me</span>} items={items} />);
+    expect(screen.queryByRole('menu')).not.toBeInTheDocument();
+    fireEvent.contextMenu(screen.getByText('Right-click me'));
+    expect(screen.getByRole('menu')).toBeInTheDocument();
+    expect(screen.getByRole('menuitem', { name: 'Copy' })).toBeInTheDocument();
+  });
+
+  it('invokes the item action and closes the menu', () => {
+    const onCopy = jest.fn();
+    render(
+      <ContextMenu
+        trigger={<span>Trigger</span>}
+        items={[{ label: 'Copy', onClick: onCopy }]}
+      />
+    );
+    fireEvent.contextMenu(screen.getByText('Trigger'));
+    fireEvent.click(screen.getByRole('menuitem', { name: 'Copy' }));
+    expect(onCopy).toHaveBeenCalledTimes(1);
+    expect(screen.queryByRole('menu')).not.toBeInTheDocument();
+  });
+
+  it('closes the menu on Escape', () => {
+    render(<ContextMenu trigger={<span>Trigger</span>} items={items} />);
+    fireEvent.contextMenu(screen.getByText('Trigger'));
+    fireEvent.keyDown(document, { key: 'Escape' });
+    expect(screen.queryByRole('menu')).not.toBeInTheDocument();
+  });
+});
+
+describe('Drawer', () => {
+  it('opens and shows title and children', () => {
+    render(
+      <Drawer open title="Filters" onClose={jest.fn()}>
+        Content
+      </Drawer>
+    );
+    expect(screen.getByText('Filters')).toBeInTheDocument();
+    expect(screen.getByText('Content')).toBeInTheDocument();
+    expect(screen.getByRole('checkbox')).toBeChecked();
+  });
+
+  it('renders closed state with an unchecked toggle', () => {
+    render(<Drawer open={false} title="Filters" onClose={jest.fn()} />);
+    expect(screen.getByRole('checkbox')).not.toBeChecked();
+  });
+
+  it('calls onClose from the close button', () => {
+    const onClose = jest.fn();
+    render(<Drawer open title="Filters" onClose={onClose} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Close drawer' }));
+    expect(onClose).toHaveBeenCalledTimes(1);
+  });
+
+  it('calls onClose from the overlay and supports the right side', () => {
+    const onClose = jest.fn();
+    const { container } = render(
+      <Drawer open side="right" onClose={onClose} />
+    );
+    expect(container.querySelector('.drawer-end')).toBeInTheDocument();
+    fireEvent.click(screen.getByLabelText('Close drawer overlay'));
+    expect(onClose).toHaveBeenCalledTimes(1);
+  });
+
+  it('closes on Escape', () => {
+    const onClose = jest.fn();
+    render(<Drawer open onClose={onClose} />);
+    fireEvent.keyDown(document, { key: 'Escape' });
+    expect(onClose).toHaveBeenCalledTimes(1);
+  });
+
+  it('renders a footer', () => {
+    render(<Drawer open onClose={jest.fn()} footer={<button>Apply</button>} />);
+    expect(screen.getByRole('button', { name: 'Apply' })).toBeInTheDocument();
+  });
+});
+
+describe('FloatingActionButton', () => {
+  it('renders a labeled circular button', () => {
+    render(<FloatingActionButton icon={<span>+</span>} label="Add" />);
+    expect(screen.getByRole('button', { name: 'Add' })).toHaveClass(
+      'btn-circle'
+    );
+  });
+
+  it('calls onClick and applies position, size, and variant classes', () => {
+    const onClick = jest.fn();
+    render(
+      <FloatingActionButton
+        icon={<span>+</span>}
+        label="Add"
+        onClick={onClick}
+        position="bottom-left"
+        size="lg"
+        variant="accent"
+      />
+    );
+    const button = screen.getByRole('button', { name: 'Add' });
+    fireEvent.click(button);
+    expect(onClick).toHaveBeenCalledTimes(1);
+    expect(button).toHaveClass(
+      'fixed',
+      'bottom-6',
+      'left-6',
+      'btn-lg',
+      'btn-accent'
+    );
+  });
+
+  it('renders a disabled button', () => {
+    render(<FloatingActionButton icon={<span>+</span>} label="Add" disabled />);
+    expect(screen.getByRole('button', { name: 'Add' })).toBeDisabled();
+  });
+});
+
+describe('HoverCard', () => {
+  it('renders the trigger and content', () => {
+    render(
+      <HoverCard
+        trigger={<button>Hover</button>}
+        content={<span>Details</span>}
+      />
+    );
+    expect(screen.getByRole('button', { name: 'Hover' })).toBeInTheDocument();
+    expect(screen.getByText('Details')).toBeInTheDocument();
+  });
+
+  it('applies the side positioning class', () => {
+    const { container } = render(
+      <HoverCard trigger={<span>T</span>} content={<span>D</span>} side="top" />
+    );
+    expect(container.querySelector('[role="tooltip"]')).toHaveClass(
+      'bottom-full',
+      'mb-2'
+    );
+  });
+});
+
+describe('ScrollArea', () => {
+  it('renders children with a max height', () => {
+    const { container } = render(
+      <ScrollArea maxHeight={300}>
+        <p>Line</p>
+      </ScrollArea>
+    );
+    expect(screen.getByText('Line')).toBeInTheDocument();
+    expect(container.querySelector('.overflow-y-auto')).toHaveStyle(
+      'max-height: 300px'
+    );
+  });
+});
+
+describe('SpeedDial', () => {
+  const actions = [{ label: 'Compose', onClick: jest.fn() }];
+
+  it('toggles the action list', () => {
+    render(<SpeedDial triggerIcon={<span>+</span>} actions={actions} />);
+    expect(screen.queryByRole('menu')).not.toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Open quick actions' }));
+    expect(screen.getByRole('menu')).toBeInTheDocument();
+    expect(
+      screen.getByRole('menuitem', { name: 'Compose' })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: 'Close quick actions' })
+    ).toHaveAttribute('aria-expanded', 'true');
+  });
+
+  it('runs an action and closes the menu', () => {
+    const onCompose = jest.fn();
+    render(
+      <SpeedDial
+        triggerIcon={<span>+</span>}
+        actions={[{ label: 'Compose', onClick: onCompose }]}
+      />
+    );
+    fireEvent.click(screen.getByRole('button', { name: 'Open quick actions' }));
+    fireEvent.click(screen.getByRole('menuitem', { name: 'Compose' }));
+    expect(onCompose).toHaveBeenCalledTimes(1);
+    expect(screen.queryByRole('menu')).not.toBeInTheDocument();
+  });
+});
+
+describe('ToggleGroup', () => {
+  const options = [
+    { label: 'Bold', value: 'bold' },
+    { label: 'Italic', value: 'italic' },
+  ];
+
+  it('selects a single option', () => {
+    const onChange = jest.fn();
+    render(<ToggleGroup options={options} value="bold" onChange={onChange} />);
+    expect(screen.getByRole('button', { name: 'Bold' })).toHaveAttribute(
+      'aria-pressed',
+      'true'
+    );
+    fireEvent.click(screen.getByRole('button', { name: 'Italic' }));
+    expect(onChange).toHaveBeenCalledWith('italic');
+  });
+
+  it('toggles options in multiple mode', () => {
+    const onChange = jest.fn();
+    render(
+      <ToggleGroup
+        options={options}
+        value={['bold']}
+        onChange={onChange}
+        multiple
+      />
+    );
+    fireEvent.click(screen.getByRole('button', { name: 'Italic' }));
+    expect(onChange).toHaveBeenCalledWith(['bold', 'italic']);
+    fireEvent.click(screen.getByRole('button', { name: 'Bold' }));
+    expect(onChange).toHaveBeenCalledWith([]);
+  });
+
+  it('disables the buttons', () => {
+    render(
+      <ToggleGroup
+        options={options}
+        value="bold"
+        onChange={jest.fn()}
+        disabled
+      />
+    );
+    expect(screen.getByRole('button', { name: 'Bold' })).toBeDisabled();
+    expect(screen.getByRole('button', { name: 'Italic' })).toBeDisabled();
+  });
+});
+
+describe('DateRange', () => {
+  it('renders from and to date inputs', () => {
+    render(
+      <DateRange
+        start="2026-08-01"
+        end="2026-08-31"
+        onStartChange={jest.fn()}
+        onEndChange={jest.fn()}
+      />
+    );
+    expect(screen.getByLabelText('Date range start')).toHaveValue('2026-08-01');
+    expect(screen.getByLabelText('Date range end')).toHaveValue('2026-08-31');
+  });
+
+  it('calls handlers on change', () => {
+    const onStartChange = jest.fn();
+    const onEndChange = jest.fn();
+    render(
+      <DateRange
+        start="2026-08-01"
+        end="2026-08-31"
+        onStartChange={onStartChange}
+        onEndChange={onEndChange}
+      />
+    );
+    fireEvent.change(screen.getByLabelText('Date range start'), {
+      target: { value: '2026-08-05' },
+    });
+    fireEvent.change(screen.getByLabelText('Date range end'), {
+      target: { value: '2026-08-20' },
+    });
+    expect(onStartChange).toHaveBeenCalledWith('2026-08-05');
+    expect(onEndChange).toHaveBeenCalledWith('2026-08-20');
+  });
+
+  it('applies min and max bounds to each input', () => {
+    render(
+      <DateRange
+        start="2026-08-01"
+        end="2026-08-31"
+        onStartChange={jest.fn()}
+        onEndChange={jest.fn()}
+        min="2026-01-01"
+        max="2026-12-31"
+      />
+    );
+    expect(screen.getByLabelText('Date range start')).toHaveAttribute(
+      'min',
+      '2026-01-01'
+    );
+    expect(screen.getByLabelText('Date range start')).toHaveAttribute(
+      'max',
+      '2026-08-31'
+    );
+    expect(screen.getByLabelText('Date range end')).toHaveAttribute(
+      'min',
+      '2026-08-01'
+    );
+    expect(screen.getByLabelText('Date range end')).toHaveAttribute(
+      'max',
+      '2026-12-31'
+    );
+  });
+
+  it('renders a custom label', () => {
+    render(
+      <DateRange
+        label="Booking window"
+        start=""
+        end=""
+        onStartChange={jest.fn()}
+        onEndChange={jest.fn()}
+      />
+    );
+    expect(screen.getByLabelText('Booking window start')).toBeInTheDocument();
+  });
+});
+
+describe('DatePicker', () => {
+  it('shows the placeholder when no value is selected', () => {
+    render(<DatePicker onChange={jest.fn()} />);
+    expect(
+      screen.getByRole('button', { name: 'Select date' })
+    ).toBeInTheDocument();
+  });
+
+  it('shows the formatted value when selected', () => {
+    render(<DatePicker value={new Date(2026, 7, 15)} onChange={jest.fn()} />);
+    expect(
+      screen.getByRole('button', { name: /Aug 15, 2026/ })
+    ).toBeInTheDocument();
+  });
+
+  it('opens the calendar and selects a date', () => {
+    const onChange = jest.fn();
+    render(<DatePicker value={new Date(2026, 7, 15)} onChange={onChange} />);
+    fireEvent.click(screen.getByRole('button', { name: /Aug 15, 2026/ }));
+    expect(screen.getByRole('dialog')).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Mon Aug 17 2026' }));
+    expect(onChange).toHaveBeenCalled();
+    expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
+  });
+
+  it('navigates months', () => {
+    render(<DatePicker value={new Date(2026, 7, 15)} onChange={jest.fn()} />);
+    fireEvent.click(screen.getByRole('button', { name: /Aug 15, 2026/ }));
+    fireEvent.click(screen.getByRole('button', { name: 'Next month' }));
+    expect(screen.getByText('September 2026')).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Previous month' }));
+    expect(screen.getByText('August 2026')).toBeInTheDocument();
+  });
+
+  it('disables dates outside the min and max bounds', () => {
+    const onChange = jest.fn();
+    render(
+      <DatePicker
+        value={new Date(2026, 7, 15)}
+        onChange={onChange}
+        minDate={new Date(2026, 7, 20)}
+      />
+    );
+    fireEvent.click(screen.getByRole('button', { name: /Aug 15, 2026/ }));
+    fireEvent.click(screen.getByRole('button', { name: 'Mon Aug 17 2026' }));
+    expect(onChange).not.toHaveBeenCalled();
+  });
+});
+
+describe('Dialog', () => {
+  it('renders nothing when closed', () => {
+    const { container } = render(<Dialog open={false} onClose={jest.fn()} />);
+    expect(container).toBeEmptyDOMElement();
+  });
+
+  it('renders title, description, children, and footer when open', () => {
+    render(
+      <Dialog
+        open
+        onClose={jest.fn()}
+        title="Confirm"
+        description="Are you sure?"
+        footer={<button>OK</button>}>
+        <p>Body content</p>
+      </Dialog>
+    );
+    expect(screen.getByText('Confirm')).toBeInTheDocument();
+    expect(screen.getByText('Are you sure?')).toBeInTheDocument();
+    expect(screen.getByText('Body content')).toBeInTheDocument();
+    expect(screen.getByText('OK')).toBeInTheDocument();
+  });
+
+  it('closes via the close button', () => {
+    const onClose = jest.fn();
+    render(<Dialog open onClose={onClose} title="Confirm" />);
+    fireEvent.click(screen.getByRole('button', { name: 'Close dialog' }));
+    expect(onClose).toHaveBeenCalledTimes(1);
+  });
+
+  it('closes via the backdrop by default', () => {
+    const onClose = jest.fn();
+    render(<Dialog open onClose={onClose} title="Confirm" />);
+    fireEvent.click(
+      screen.getByRole('button', { name: 'Close dialog backdrop' })
+    );
+    expect(onClose).toHaveBeenCalledTimes(1);
+  });
+
+  it('keeps the dialog open on backdrop click when disabled', () => {
+    const onClose = jest.fn();
+    render(
+      <Dialog open onClose={onClose} title="Confirm" closeOnBackdrop={false} />
+    );
+    fireEvent.click(
+      screen.getByRole('button', { name: 'Close dialog backdrop' })
+    );
+    expect(onClose).not.toHaveBeenCalled();
+  });
+
+  it('closes on Escape', () => {
+    const onClose = jest.fn();
+    render(<Dialog open onClose={onClose} title="Confirm" />);
+    fireEvent.keyDown(document, { key: 'Escape' });
+    expect(onClose).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe('FileUpload', () => {
+  it('renders the drop zone with a browse button', () => {
+    render(<FileUpload />);
+    expect(screen.getByText('Upload files')).toBeInTheDocument();
+    expect(screen.getByText('Browse')).toBeInTheDocument();
+  });
+
+  it('adds files from the file input', () => {
+    const onChange = jest.fn();
+    render(<FileUpload onFilesChange={onChange} />);
+    const file = new File(['report'], 'report.pdf', {
+      type: 'application/pdf',
+    });
+    fireEvent.change(screen.getByLabelText('Upload files'), {
+      target: { files: [file] },
+    });
+    expect(screen.getByText('report.pdf')).toBeInTheDocument();
+    expect(onChange).toHaveBeenCalledWith([
+      expect.objectContaining({ name: 'report.pdf' }),
+    ]);
+  });
+
+  it('adds files on drop and highlights while dragging', () => {
+    render(<FileUpload />);
+    const zone = screen.getByText('Upload files').parentElement as HTMLElement;
+    fireEvent.dragOver(zone);
+    expect(zone.className).toContain('border-primary');
+    fireEvent.dragLeave(zone);
+    expect(zone.className).not.toContain('border-primary');
+    const dataTransfer = {
+      files: [new File(['content'], 'notes.txt', { type: 'text/plain' })],
+    } as unknown as DataTransfer;
+    fireEvent.drop(zone, { dataTransfer });
+    expect(screen.getByText('notes.txt')).toBeInTheDocument();
+  });
+
+  it('replaces files in single mode and appends in multiple mode', () => {
+    const onChange = jest.fn();
+    const { rerender } = render(<FileUpload onFilesChange={onChange} />);
+    const input = screen.getByLabelText('Upload files');
+    fireEvent.change(input, {
+      target: { files: [new File(['a'], 'a.txt')] },
+    });
+    fireEvent.change(input, {
+      target: { files: [new File(['b'], 'b.txt')] },
+    });
+    expect(screen.queryByText('a.txt')).not.toBeInTheDocument();
+    expect(screen.getByText('b.txt')).toBeInTheDocument();
+
+    rerender(<FileUpload onFilesChange={onChange} multiple />);
+    fireEvent.change(screen.getByLabelText('Upload files'), {
+      target: { files: [new File(['a'], 'a.txt')] },
+    });
+    fireEvent.change(screen.getByLabelText('Upload files'), {
+      target: { files: [new File(['c'], 'c.txt')] },
+    });
+    expect(screen.getByText('a.txt')).toBeInTheDocument();
+    expect(screen.getByText('c.txt')).toBeInTheDocument();
+  });
+
+  it('filters files over the max size', () => {
+    render(<FileUpload maxSize={10} />);
+    const file = new File(['this is a much larger file'], 'big.txt');
+    fireEvent.change(screen.getByLabelText('Upload files'), {
+      target: { files: [file] },
+    });
+    expect(screen.queryByText('big.txt')).not.toBeInTheDocument();
+  });
+
+  it('removes a file from the list', () => {
+    const onChange = jest.fn();
+    render(<FileUpload onFilesChange={onChange} multiple />);
+    const input = screen.getByLabelText('Upload files');
+    fireEvent.change(input, {
+      target: { files: [new File(['a'], 'a.txt'), new File(['b'], 'b.txt')] },
+    });
+    fireEvent.click(screen.getByRole('button', { name: 'Remove a.txt' }));
+    expect(screen.queryByText('a.txt')).not.toBeInTheDocument();
+    expect(screen.getByText('b.txt')).toBeInTheDocument();
+    expect(onChange).toHaveBeenLastCalledWith([
+      expect.objectContaining({ name: 'b.txt' }),
+    ]);
+  });
+});
+
+describe('ImageGallery', () => {
+  const images = [
+    { src: '/one.png', alt: 'First photo' },
+    { src: '/two.png', alt: 'Second photo' },
+    { src: '/three.png', alt: 'Third photo' },
+  ];
+
+  it('shows the first image by default', () => {
+    render(<ImageGallery images={images} />);
+    expect(screen.getByRole('img', { name: 'First photo' })).toHaveAttribute(
+      'src',
+      '/one.png'
+    );
+  });
+
+  it('switches the active image when a thumbnail is clicked', () => {
+    render(<ImageGallery images={images} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Show Second photo' }));
+    expect(screen.getByRole('img', { name: 'Second photo' })).toHaveAttribute(
+      'src',
+      '/two.png'
+    );
+  });
+
+  it('returns null when there are no images', () => {
+    const { container } = render(<ImageGallery images={[]} />);
+    expect(container).toBeEmptyDOMElement();
+  });
+});
+
+describe('InfoList', () => {
+  const items = [
+    { key: 'name', label: 'Name', value: 'Jane Doe' },
+    { key: 'role', label: 'Role', value: 'Engineer' },
+  ];
+
+  it('renders title, labels, and values', () => {
+    render(<InfoList title="Profile" items={items} />);
+    expect(screen.getByText('Profile')).toBeInTheDocument();
+    expect(screen.getByText('Name')).toBeInTheDocument();
+    expect(screen.getByText('Jane Doe')).toBeInTheDocument();
+    expect(screen.getByText('Engineer')).toBeInTheDocument();
+  });
+
+  it('renders icons', () => {
+    render(<InfoList items={[{ ...items[0], icon: '⭐' }]} />);
+    expect(screen.getByText('⭐')).toBeInTheDocument();
+  });
+
+  it('applies a two-column layout', () => {
+    const { container } = render(<InfoList items={items} columns={2} />);
+    expect(container.querySelector('dl')).toHaveClass('sm:grid-cols-2');
+  });
+});
+
+describe('InlineAlert', () => {
+  it.each(['info', 'success', 'warning', 'error'] as const)(
+    'applies the %s accent',
+    (variant) => {
+      render(<InlineAlert variant={variant}>Heads up</InlineAlert>);
+      expect(screen.getByRole('status')).toHaveClass(`text-${variant}`);
+    }
+  );
+
+  it('renders the message', () => {
+    render(<InlineAlert>Something changed</InlineAlert>);
+    expect(screen.getByText('Something changed')).toBeInTheDocument();
+  });
+
+  it('renders a dismiss button and calls onClose', () => {
+    const onClose = jest.fn();
+    render(<InlineAlert onClose={onClose}>Heads up</InlineAlert>);
+    fireEvent.click(screen.getByRole('button', { name: 'Dismiss alert' }));
+    expect(onClose).toHaveBeenCalledTimes(1);
+  });
+
+  it('does not render a dismiss button by default', () => {
+    render(<InlineAlert>Heads up</InlineAlert>);
+    expect(
+      screen.queryByRole('button', { name: 'Dismiss alert' })
+    ).not.toBeInTheDocument();
+  });
+});
+
+describe('InputStepper', () => {
+  const options = ['Day', 'Week', 'Month'];
+
+  it('shows the current option and its position', () => {
+    render(
+      <InputStepper
+        label="Period"
+        options={options}
+        value="Week"
+        onChange={jest.fn()}
+      />
+    );
+    expect(screen.getByText('Week')).toBeInTheDocument();
+    expect(screen.getByText('2 of 3')).toBeInTheDocument();
+  });
+
+  it('steps forward and backward', () => {
+    const onChange = jest.fn();
+    const { rerender } = render(
+      <InputStepper
+        label="Period"
+        options={options}
+        value="Day"
+        onChange={onChange}
+      />
+    );
+    fireEvent.click(screen.getByRole('button', { name: 'Next Period' }));
+    expect(onChange).toHaveBeenCalledWith('Week');
+    rerender(
+      <InputStepper
+        label="Period"
+        options={options}
+        value="Week"
+        onChange={onChange}
+      />
+    );
+    fireEvent.click(screen.getByRole('button', { name: 'Previous Period' }));
+    expect(onChange).toHaveBeenLastCalledWith('Day');
+  });
+
+  it('disables the previous button at the first step', () => {
+    render(
+      <InputStepper
+        label="Period"
+        options={options}
+        value="Day"
+        onChange={jest.fn()}
+      />
+    );
+    expect(
+      screen.getByRole('button', { name: 'Previous Period' })
+    ).toBeDisabled();
+    expect(screen.getByRole('button', { name: 'Next Period' })).toBeEnabled();
+  });
+
+  it('disables the next button at the last step', () => {
+    render(
+      <InputStepper
+        label="Period"
+        options={options}
+        value="Month"
+        onChange={jest.fn()}
+      />
+    );
+    expect(screen.getByRole('button', { name: 'Next Period' })).toBeDisabled();
+  });
+
+  it('falls back to the first option when the value is unknown', () => {
+    render(
+      <InputStepper
+        label="Period"
+        options={options}
+        value="Year"
+        onChange={jest.fn()}
+      />
+    );
+    expect(screen.getByText('Day')).toBeInTheDocument();
+    expect(screen.getByText('1 of 3')).toBeInTheDocument();
+  });
+});
+
+describe('MenuGroup', () => {
+  const sections = [
+    {
+      id: 'general',
+      title: 'General',
+      items: [
+        { id: 'profile', label: 'Profile', active: true },
+        { id: 'billing', label: 'Billing' },
+      ],
+    },
+    {
+      id: 'account',
+      title: 'Account',
+      items: [{ id: 'logout', label: 'Log out' }],
+    },
+  ];
+
+  it('renders section titles and items', () => {
+    render(<MenuGroup sections={sections} />);
+    expect(screen.getByText('General')).toBeInTheDocument();
+    expect(screen.getByText('Account')).toBeInTheDocument();
+    expect(screen.getByText('Profile')).toBeInTheDocument();
+    expect(screen.getByText('Log out')).toBeInTheDocument();
+  });
+
+  it('marks the active item', () => {
+    render(<MenuGroup sections={sections} />);
+    expect(screen.getByText('Profile')).toHaveAttribute('aria-current', 'page');
+    expect(screen.getByText('Billing')).not.toHaveAttribute('aria-current');
+  });
+
+  it('calls onClick when an item is pressed', () => {
+    const onClick = jest.fn();
+    render(
+      <MenuGroup
+        sections={[
+          {
+            id: 'general',
+            title: 'General',
+            items: [{ id: 'billing', label: 'Billing', onClick }],
+          },
+        ]}
+      />
+    );
+    fireEvent.click(screen.getByRole('button', { name: 'Billing' }));
+    expect(onClick).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe('NumberInput', () => {
+  it('renders the label and value', () => {
+    render(<NumberInput label="Quantity" value={4} onChange={jest.fn()} />);
+    expect(screen.getByLabelText('Quantity')).toHaveValue(4);
+  });
+
+  it('calls onChange with a clamped minimum', () => {
+    const onChange = jest.fn();
+    render(
+      <NumberInput label="Quantity" value={10} min={5} onChange={onChange} />
+    );
+    fireEvent.change(screen.getByLabelText('Quantity'), {
+      target: { value: '3' },
+    });
+    expect(onChange).toHaveBeenCalledWith(5);
+  });
+
+  it('calls onChange with a clamped maximum', () => {
+    const onChange = jest.fn();
+    render(
+      <NumberInput label="Quantity" value={1} max={5} onChange={onChange} />
+    );
+    fireEvent.change(screen.getByLabelText('Quantity'), {
+      target: { value: '9' },
+    });
+    expect(onChange).toHaveBeenCalledWith(5);
+  });
+
+  it('uses the minimum when the field is cleared', () => {
+    const onChange = jest.fn();
+    render(
+      <NumberInput label="Quantity" value={10} min={5} onChange={onChange} />
+    );
+    fireEvent.change(screen.getByLabelText('Quantity'), {
+      target: { value: '' },
+    });
+    expect(onChange).toHaveBeenCalledWith(5);
+  });
+
+  it('shows the hint when there is no message', () => {
+    render(
+      <NumberInput
+        label="Quantity"
+        value={4}
+        onChange={jest.fn()}
+        hint="Whole numbers"
+      />
+    );
+    expect(screen.getByText('Whole numbers')).toBeInTheDocument();
+  });
+
+  it('shows an external error', () => {
+    render(
+      <NumberInput
+        label="Quantity"
+        value={4}
+        onChange={jest.fn()}
+        error="Too low"
+      />
+    );
+    expect(screen.getByText('Too low')).toBeInTheDocument();
+    expect(screen.getByLabelText('Quantity')).toHaveAttribute(
+      'aria-invalid',
+      'true'
+    );
+  });
+
+  it('shows an out-of-range message when no error is provided', () => {
+    render(
+      <NumberInput label="Quantity" value={15} max={10} onChange={jest.fn()} />
+    );
+    expect(screen.getByText('Out of range (any to 10)')).toBeInTheDocument();
+  });
+
+  it('disables the input', () => {
+    render(
+      <NumberInput label="Quantity" value={4} onChange={jest.fn()} disabled />
+    );
+    expect(screen.getByLabelText('Quantity')).toBeDisabled();
   });
 });

@@ -1,40 +1,74 @@
 import type { FC, ReactNode } from 'react';
 import { useState } from 'react';
-import { FiBell, FiUser } from 'react-icons/fi';
+import {
+  FiBell,
+  FiCheck,
+  FiCopy,
+  FiEdit2,
+  FiHome,
+  FiMail,
+  FiPlus,
+  FiSearch,
+  FiShare2,
+  FiTrash,
+  FiUpload,
+  FiUser,
+} from 'react-icons/fi';
 import {
   Accordion,
   Alert,
   AvatarGroup,
+  Banner,
+  BottomNavigation,
   Breadcrumbs,
   ButtonGroup,
   Card,
   Carousel,
   ChatBubble,
   CheckboxGroup,
+  Chip,
   ColorPicker,
   Combobox,
   ConfirmDialog,
+  ContextMenu,
   DangerZone,
+  DatePicker,
+  DateRange,
+  Dialog,
+  Drawer,
   Dropdown,
   EmptyState,
   Fieldset,
+  FileUpload,
+  FloatingActionButton,
   FormRow,
+  HoverCard,
+  ImageGallery,
+  InfoList,
+  InlineAlert,
   InputGroup,
+  InputStepper,
   KeyValue,
   List,
   Menu,
+  MenuGroup,
   NavItem,
+  NumberInput,
   Pagination,
   Popover,
   RadioGroup,
+  ScrollArea,
   SearchBar,
   Sheet,
+  SpeedDial,
   Stat,
   Steps,
   Table,
   Tabs,
   TagInput,
   Timeline,
+  Toast,
+  ToggleGroup,
   TreeView,
 } from '../../../../../../molecules';
 import { Button, Progress, Switch } from '../../../../../../atoms';
@@ -69,6 +103,16 @@ export const MoleculesLevel: FC = () => {
   const [amount, setAmount] = useState('');
   const [plan, setPlan] = useState('pro');
   const [channels, setChannels] = useState(['email']);
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [bottomNav, setBottomNav] = useState('home');
+  const [toggleMode, setToggleMode] = useState('light');
+  const [toggleSet, setToggleSet] = useState(['bold']);
+  const [date, setDate] = useState<Date | undefined>(undefined);
+  const [rangeStart, setRangeStart] = useState('2026-08-01');
+  const [rangeEnd, setRangeEnd] = useState('2026-08-07');
+  const [dialogOpen, setDialogOpen] = useState(false);
+  const [period, setPeriod] = useState('day');
+  const [count, setCount] = useState(3);
 
   return (
     <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
@@ -546,6 +590,311 @@ export const MoleculesLevel: FC = () => {
             { name: 'Linus', role: 'Maintainer' },
           ]}
           striped
+        />
+      </MoleculeCard>
+      <MoleculeCard title="Banner" index={34}>
+        <div className="flex flex-col gap-2">
+          <Banner
+            title="Update available"
+            description="v2.2 is ready to install."
+            action={<Button size="sm">Update</Button>}
+          />
+          <Banner variant="warning" title="Storage almost full" />
+        </div>
+      </MoleculeCard>
+      <MoleculeCard title="BottomNavigation" index={35}>
+        <div className="w-full">
+          <BottomNavigation
+            items={[
+              { label: 'Home', value: 'home', icon: <FiHome /> },
+              { label: 'Mail', value: 'mail', icon: <FiMail /> },
+              { label: 'Search', value: 'search', icon: <FiSearch /> },
+            ]}
+            value={bottomNav}
+            onChange={setBottomNav}
+          />
+        </div>
+      </MoleculeCard>
+      <MoleculeCard title="Chip" index={36}>
+        <div className="flex flex-wrap gap-2">
+          <Chip label="React" color="primary" onDelete={() => undefined} />
+          <Chip label="TypeScript" color="info" variant="outline" />
+          <Chip label="Tailwind" color="success" icon={<FiCheck />} />
+        </div>
+      </MoleculeCard>
+      <MoleculeCard title="ContextMenu" index={37}>
+        <div className="w-full">
+          <ContextMenu
+            trigger={
+              <div className="border-base-content/10 bg-base-200 flex w-full items-center justify-center rounded-xl border border-dashed p-8 text-sm">
+                Right-click this panel
+              </div>
+            }
+            items={[
+              { label: 'Copy', icon: <FiCopy />, onClick: () => undefined },
+              { label: 'Rename', icon: <FiEdit2 />, onClick: () => undefined },
+              {
+                label: 'Delete',
+                icon: <FiTrash />,
+                danger: true,
+                onClick: () => undefined,
+              },
+            ]}
+          />
+        </div>
+      </MoleculeCard>
+      <MoleculeCard title="Drawer" index={38}>
+        <div className="flex w-full flex-col gap-2">
+          <Button size="sm" onClick={() => setDrawerOpen(true)}>
+            Open drawer
+          </Button>
+          <Drawer
+            open={drawerOpen}
+            onClose={() => setDrawerOpen(false)}
+            title="Filters"
+            side="right">
+            <p className="text-sm">Filter panel content.</p>
+          </Drawer>
+        </div>
+      </MoleculeCard>
+      <MoleculeCard title="FloatingActionButton" index={39}>
+        <div className="flex w-full items-center gap-2">
+          <span className="text-base-content/50 text-sm">Action button:</span>
+          <FloatingActionButton
+            icon={<FiPlus />}
+            label="Add"
+            position="bottom-left"
+            size="sm"
+          />
+        </div>
+      </MoleculeCard>
+      <MoleculeCard title="HoverCard" index={40}>
+        <div className="flex w-full justify-center py-4">
+          <HoverCard
+            trigger={
+              <Button size="sm" variant="outline">
+                Hover for details
+              </Button>
+            }
+            content={
+              <div className="flex flex-col gap-1">
+                <span className="font-medium">Jane Doe</span>
+                <span className="text-base-content/50 text-sm">
+                  Staff Engineer
+                </span>
+              </div>
+            }
+          />
+        </div>
+      </MoleculeCard>
+      <MoleculeCard title="ScrollArea" index={41}>
+        <div className="w-full">
+          <ScrollArea maxHeight={120}>
+            <ul className="flex flex-col gap-2">
+              {[
+                'Account',
+                'Billing',
+                'Security',
+                'Notifications',
+                'Appearance',
+                'Privacy',
+                'Sessions',
+              ].map((item) => (
+                <li
+                  key={item}
+                  className="border-base-content/10 bg-base-100 rounded-lg border px-3 py-2 text-sm">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </ScrollArea>
+        </div>
+      </MoleculeCard>
+      <MoleculeCard title="SpeedDial" index={42}>
+        <p className="text-base-content/50 text-sm">
+          Floating trigger sits in the bottom-right corner of this page.
+        </p>
+        <SpeedDial
+          triggerIcon={<FiPlus />}
+          actions={[
+            {
+              label: 'Compose',
+              icon: <FiEdit2 />,
+              onClick: () => undefined,
+            },
+            {
+              label: 'Upload',
+              icon: <FiUpload />,
+              onClick: () => undefined,
+            },
+            {
+              label: 'Share',
+              icon: <FiShare2 />,
+              onClick: () => undefined,
+            },
+          ]}
+        />
+      </MoleculeCard>
+      <MoleculeCard title="ToggleGroup" index={43}>
+        <div className="flex w-full flex-col gap-3">
+          <ToggleGroup
+            options={[
+              { label: 'Light', value: 'light' },
+              { label: 'Dark', value: 'dark' },
+              { label: 'System', value: 'system' },
+            ]}
+            value={toggleMode}
+            onChange={(value) => setToggleMode(value as string)}
+          />
+          <ToggleGroup
+            multiple
+            options={[
+              { label: 'Bold', value: 'bold' },
+              { label: 'Italic', value: 'italic' },
+              { label: 'Underline', value: 'underline' },
+            ]}
+            value={toggleSet}
+            onChange={(value) => setToggleSet(value as string[])}
+          />
+        </div>
+      </MoleculeCard>
+      <MoleculeCard title="DateRange" index={44}>
+        <DateRange
+          label="Campaign window"
+          start={rangeStart}
+          end={rangeEnd}
+          onStartChange={setRangeStart}
+          onEndChange={setRangeEnd}
+          min="2026-01-01"
+          max="2026-12-31"
+        />
+      </MoleculeCard>
+      <MoleculeCard title="DatePicker" index={45}>
+        <DatePicker
+          label="Due date"
+          value={date}
+          onChange={setDate}
+          placeholder="Choose a date"
+        />
+      </MoleculeCard>
+      <MoleculeCard title="Dialog" index={46}>
+        <div className="flex flex-col items-start gap-2">
+          <Button size="sm" onClick={() => setDialogOpen(true)}>
+            Open dialog
+          </Button>
+          <span className="text-base-content/50 text-xs">
+            Closes on backdrop click or Escape.
+          </span>
+        </div>
+        <Dialog
+          open={dialogOpen}
+          onClose={() => setDialogOpen(false)}
+          title="Confirm upgrade"
+          description="You are about to switch to the Pro plan."
+          footer={
+            <>
+              <Button
+                size="sm"
+                variant="ghost"
+                onClick={() => setDialogOpen(false)}>
+                Cancel
+              </Button>
+              <Button size="sm" onClick={() => setDialogOpen(false)}>
+                Upgrade
+              </Button>
+            </>
+          }>
+          <p className="text-sm">No charges until the next billing cycle.</p>
+        </Dialog>
+      </MoleculeCard>
+      <MoleculeCard title="FileUpload" index={47}>
+        <FileUpload
+          label="Project assets"
+          accept="image/*"
+          multiple
+          maxSize={5 * 1024 * 1024}
+          hint="PNG or JPG, up to 5 MB each"
+        />
+      </MoleculeCard>
+      <MoleculeCard title="ImageGallery" index={48}>
+        <ImageGallery
+          images={[
+            { src: '/gallery-1.png', alt: 'Coastal landscape' },
+            { src: '/gallery-2.png', alt: 'Mountain trail' },
+            { src: '/gallery-3.png', alt: 'City skyline' },
+          ]}
+        />
+      </MoleculeCard>
+      <MoleculeCard title="InfoList" index={49}>
+        <InfoList
+          title="Repository"
+          items={[
+            { key: 'owner', label: 'Owner', value: 'hieudoanm' },
+            { key: 'stars', label: 'Stars', value: '1,024' },
+            {
+              key: 'license',
+              label: 'License',
+              value: 'MIT',
+              icon: <FiCheck />,
+            },
+          ]}
+          columns={2}
+        />
+      </MoleculeCard>
+      <MoleculeCard title="InlineAlert" index={50}>
+        <div className="flex flex-col gap-2">
+          <InlineAlert variant="info">
+            Scheduled maintenance at 02:00 UTC.
+          </InlineAlert>
+          <InlineAlert variant="success">Your changes are live.</InlineAlert>
+          <InlineAlert variant="error">
+            The file exceeds the size limit.
+          </InlineAlert>
+        </div>
+      </MoleculeCard>
+      <MoleculeCard title="InputStepper" index={51}>
+        <InputStepper
+          label="Period"
+          options={['Day', 'Week', 'Month', 'Year']}
+          value={period}
+          onChange={setPeriod}
+        />
+      </MoleculeCard>
+      <MoleculeCard title="MenuGroup" index={52}>
+        <MenuGroup
+          sections={[
+            {
+              id: 'workspace',
+              title: 'Workspace',
+              items: [
+                {
+                  id: 'projects',
+                  label: 'Projects',
+                  icon: <FiHome />,
+                },
+                { id: 'reports', label: 'Reports' },
+              ],
+            },
+            {
+              id: 'account',
+              title: 'Account',
+              items: [
+                { id: 'profile', label: 'Profile', icon: <FiUser /> },
+                { id: 'billing', label: 'Billing' },
+              ],
+            },
+          ]}
+        />
+      </MoleculeCard>
+      <MoleculeCard title="NumberInput" index={53}>
+        <NumberInput
+          label="Team size"
+          value={count}
+          onChange={setCount}
+          min={1}
+          max={20}
+          step={1}
+          hint="Between 1 and 20"
         />
       </MoleculeCard>
     </div>

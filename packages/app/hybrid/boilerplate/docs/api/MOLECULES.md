@@ -627,6 +627,419 @@ Renders `table-zebra`/`table-compact` rows; missing cell values render `—`.
 <Table columns={columns} rows={rows} striped />
 ```
 
+### Banner
+
+File: `src/components/molecules/Banner.tsx`
+
+| Prop           | Type                                          | Default  | Description                |
+| -------------- | --------------------------------------------- | -------- | -------------------------- |
+| `title?`       | `string`                                      | —        | Bold headline              |
+| `description?` | `ReactNode`                                   | —        | Supporting text            |
+| `variant?`     | `'info' \| 'success' \| 'warning' \| 'error'` | `'info'` | Colour + default icon      |
+| `icon?`        | `ReactNode`                                   | —        | Overrides the default icon |
+| `action?`      | `ReactNode`                                   | —        | Right-aligned CTA          |
+| `dismissible?` | `boolean`                                     | `false`  | Show the dismiss button    |
+| `onClose?`     | `() => void`                                  | —        | Called on dismiss          |
+| `children?`    | `ReactNode`                                   | —        | Extra body content         |
+| `className?`   | `string`                                      | `''`     | Extra classes              |
+
+MUI-style full-width status strip with a left accent border and icon; renders
+`role="status"`. Unlike `Alert` it flows edge-to-edge and supports an action
+slot.
+
+```tsx
+<Banner
+  variant="warning"
+  title="Storage almost full"
+  action={<Button>Upgrade</Button>}
+/>
+```
+
+### BottomNavigation
+
+File: `src/components/molecules/BottomNavigation.tsx`
+
+| Prop         | Type                                                   | Default    | Description           |
+| ------------ | ------------------------------------------------------ | ---------- | --------------------- |
+| `items`      | `{ label: string; value: string; icon?: ReactNode }[]` | —          | Tabs to render        |
+| `value`      | `string`                                               | —          | Active tab value      |
+| `onChange`   | `(value: string) => void`                              | —          | Called with new value |
+| `position?`  | `'static' \| 'fixed'`                                  | `'static'` | Sticky vs in-flow     |
+| `className?` | `string`                                               | `''`       | Extra classes         |
+
+DaisyUI `btm-nav` bottom tab bar (MUI `BottomNavigation` equivalent). The active
+item gets `active` plus `aria-current="page"`.
+
+```tsx
+<BottomNavigation items={tabs} value={tab} onChange={setTab} position="fixed" />
+```
+
+### Chip
+
+File: `src/components/molecules/Chip.tsx`
+
+| Prop         | Type                                                                                               | Default     | Description             |
+| ------------ | -------------------------------------------------------------------------------------------------- | ----------- | ----------------------- |
+| `label`      | `string`                                                                                           | —           | Chip text               |
+| `color?`     | `'neutral' \| 'primary' \| 'secondary' \| 'accent' \| 'success' \| 'warning' \| 'error' \| 'info'` | `'neutral'` | Badge colour            |
+| `variant?`   | `'filled' \| 'outline'`                                                                            | `'filled'`  | Badge style             |
+| `size?`      | `'sm' \| 'md'`                                                                                     | `'md'`      | Badge size              |
+| `icon?`      | `ReactNode`                                                                                        | —           | Leading icon            |
+| `avatar?`    | `ReactNode`                                                                                        | —           | Leading avatar          |
+| `onClick?`   | `() => void`                                                                                       | —           | Makes the chip a button |
+| `onDelete?`  | `() => void`                                                                                       | —           | Renders a remove button |
+| `disabled?`  | `boolean`                                                                                          | `false`     | Disables interactions   |
+| `className?` | `string`                                                                                           | `''`        | Extra classes           |
+
+MUI-style `Chip` built on the DaisyUI badge; delete clicks call `onDelete`
+without bubbling to `onClick`.
+
+```tsx
+<Chip label="React" color="primary" onDelete={removeTag} />
+```
+
+### ContextMenu
+
+File: `src/components/molecules/ContextMenu.tsx` — client component.
+
+| Prop      | Type                                                       | Default | Description              |
+| --------- | ---------------------------------------------------------- | ------- | ------------------------ |
+| `trigger` | `ReactNode`                                                | —       | Right-click target       |
+| `items`   | `{ label: string; onClick: () => void; icon?; danger? }[]` | —       | Menu items (Radix-style) |
+
+Opens a context menu on `onContextMenu`, positioned at the cursor. Closes on
+outside click, `Escape`, or after invoking an item.
+
+```tsx
+<ContextMenu trigger={<NodeRow />} items={[{ label: 'Copy', onClick: copy }]} />
+```
+
+### Drawer
+
+File: `src/components/molecules/Drawer.tsx` — client component.
+
+| Prop          | Type                | Default  | Description             |
+| ------------- | ------------------- | -------- | ----------------------- |
+| `open`        | `boolean`           | —        | Controlled visibility   |
+| `onClose`     | `() => void`        | —        | Called to dismiss       |
+| `title?`      | `string`            | —        | Header title            |
+| `side?`       | `'left' \| 'right'` | `'left'` | Slide edge              |
+| `overlay?`    | `boolean`           | `true`   | Backdrop click-to-close |
+| `widthClass?` | `string`            | `'w-80'` | Panel width             |
+| `children?`   | `ReactNode`         | —        | Panel body              |
+| `footer?`     | `ReactNode`         | —        | Sticky footer           |
+
+DaisyUI `drawer` powered by a controlled `drawer-toggle` checkbox; closes via
+the close button, overlay, or `Escape`. `side="right"` adds `drawer-end`.
+
+```tsx
+<Drawer open={open} onClose={close} title="Filters" side="right">
+  Body
+</Drawer>
+```
+
+### FloatingActionButton
+
+File: `src/components/molecules/FloatingActionButton.tsx`
+
+| Prop         | Type                                                           | Default          | Description         |
+| ------------ | -------------------------------------------------------------- | ---------------- | ------------------- |
+| `icon`       | `ReactNode`                                                    | —                | Button icon         |
+| `label`      | `string`                                                       | —                | `aria-label`        |
+| `onClick?`   | `() => void`                                                   | —                | Click handler       |
+| `position?`  | `'bottom-right' \| 'bottom-left' \| 'top-right' \| 'top-left'` | `'bottom-right'` | Fixed corner        |
+| `size?`      | `'sm' \| 'md' \| 'lg'`                                         | `'md'`           | Button size         |
+| `variant?`   | `'primary' \| 'secondary' \| 'accent' \| 'neutral'`            | `'primary'`      | Colour variant      |
+| `disabled?`  | `boolean`                                                      | `false`          | Disables the button |
+| `className?` | `string`                                                       | `''`             | Extra classes       |
+
+MUI-style circular `Fab` pinned to a viewport corner.
+
+```tsx
+<FloatingActionButton icon={<FiPlus />} label="Add" onClick={add} />
+```
+
+### HoverCard
+
+File: `src/components/molecules/HoverCard.tsx`
+
+| Prop          | Type                                     | Default    | Description        |
+| ------------- | ---------------------------------------- | ---------- | ------------------ |
+| `trigger`     | `ReactNode`                              | —          | Hover/focus target |
+| `content`     | `ReactNode`                              | —          | Popover content    |
+| `side?`       | `'top' \| 'bottom' \| 'left' \| 'right'` | `'bottom'` | Placement          |
+| `widthClass?` | `string`                                 | `'w-64'`   | Popover width      |
+| `className?`  | `string`                                 | `''`       | Extra classes      |
+
+Radix/shadcn-style `HoverCard` shown on `group-hover` and `group-focus-within`
+(keyboard accessible via the `tabIndex={0}` wrapper).
+
+```tsx
+<HoverCard trigger={<Button>Hover</Button>} content={<p>Details</p>} />
+```
+
+### ScrollArea
+
+File: `src/components/molecules/ScrollArea.tsx`
+
+| Prop              | Type               | Default | Description            |
+| ----------------- | ------------------ | ------- | ---------------------- |
+| `children?`       | `ReactNode`        | —       | Scrollable content     |
+| `maxHeight?`      | `number \| string` | `240`   | Max height (px or CSS) |
+| `className?`      | `string`           | `''`    | Outer classes          |
+| `innerClassName?` | `string`           | `''`    | Inner wrapper classes  |
+
+Radix-style scroll container using `overflow-y-auto` with a configurable max
+height.
+
+```tsx
+<ScrollArea maxHeight={300}>...</ScrollArea>
+```
+
+### SpeedDial
+
+File: `src/components/molecules/SpeedDial.tsx` — client component.
+
+| Prop          | Type                                                           | Default                 | Description      |
+| ------------- | -------------------------------------------------------------- | ----------------------- | ---------------- |
+| `triggerIcon` | `ReactNode`                                                    | —                       | Fab trigger icon |
+| `actions`     | `{ label: string; onClick: () => void; icon?: ReactNode }[]`   | —                       | Expanded actions |
+| `position?`   | `'bottom-right' \| 'bottom-left' \| 'top-right' \| 'top-left'` | `'bottom-right'`        | Fixed corner     |
+| `openLabel?`  | `string`                                                       | `'Open quick actions'`  | Open label       |
+| `closeLabel?` | `string`                                                       | `'Close quick actions'` | Close label      |
+
+MUI-style `SpeedDial`: a floating trigger that expands into a vertical action
+list; runs the action and collapses on selection.
+
+```tsx
+<SpeedDial triggerIcon={<FiPlus />} actions={actions} />
+```
+
+### ToggleGroup
+
+File: `src/components/molecules/ToggleGroup.tsx`
+
+| Prop         | Type                                  | Default | Description                |
+| ------------ | ------------------------------------- | ------- | -------------------------- |
+| `options`    | `{ label: string; value: string }[]`  | —       | Options                    |
+| `value`      | `string[] \| string`                  | —       | Single or multi selection  |
+| `onChange`   | `(value: string[] \| string) => void` | —       | Called with next selection |
+| `multiple?`  | `boolean`                             | `false` | Multi-select mode          |
+| `disabled?`  | `boolean`                             | `false` | Disables all buttons       |
+| `className?` | `string`                              | `''`    | Extra classes              |
+
+Radix `ToggleGroup`-style segmented control built on the DaisyUI `join`; active
+buttons use `btn-primary` and `aria-pressed`.
+
+```tsx
+<ToggleGroup options={modes} value={mode} onChange={setMode} />
+```
+
+### DatePicker
+
+File: `src/components/molecules/DatePicker.tsx` — client component.
+
+| Prop           | Type                   | Default         | Description            |
+| -------------- | ---------------------- | --------------- | ---------------------- |
+| `value?`       | `Date`                 | —               | Selected date          |
+| `onChange`     | `(date: Date) => void` | —               | Called with the pick   |
+| `label?`       | `string`               | `'Pick a date'` | Accessible dialog name |
+| `placeholder?` | `string`               | `'Select date'` | Empty trigger text     |
+| `minDate?`     | `Date`                 | —               | Disables earlier days  |
+| `maxDate?`     | `Date`                 | —               | Disables later days    |
+
+Calendar popover (`aria-haspopup="dialog"`) with month navigation; disabled
+cells are skipped via `isDisabled`.
+
+```tsx
+<DatePicker value={due} onChange={setDue} minDate={new Date()} />
+```
+
+### DateRange
+
+File: `src/components/molecules/DateRange.tsx`
+
+| Prop            | Type                      | Default        | Description              |
+| --------------- | ------------------------- | -------------- | ------------------------ |
+| `start`         | `string`                  | —              | Start value `YYYY-MM-DD` |
+| `end`           | `string`                  | —              | End value                |
+| `onStartChange` | `(value: string) => void` | —              | Start change             |
+| `onEndChange`   | `(value: string) => void` | —              | End change               |
+| `label?`        | `string`                  | `'Date range'` | Group label              |
+| `min?`          | `string`                  | —              | Global minimum           |
+| `max?`          | `string`                  | —              | Global maximum           |
+
+Two native `input type="date"` fields; the start field clamps to `max=end` and
+the end field clamps to `min=start` so ranges never invert.
+
+```tsx
+<DateRange start={from} end={to} onStartChange={setFrom} onEndChange={setTo} />
+```
+
+### Dialog
+
+File: `src/components/molecules/Dialog.tsx` — client component.
+
+| Prop               | Type         | Default | Description             |
+| ------------------ | ------------ | ------- | ----------------------- |
+| `open`             | `boolean`    | —       | Controlled visibility   |
+| `onClose`          | `() => void` | —       | Called to dismiss       |
+| `title?`           | `string`     | —       | Header title            |
+| `description?`     | `string`     | —       | Muted subtitle          |
+| `children?`        | `ReactNode`  | —       | Body content            |
+| `footer?`          | `ReactNode`  | —       | Right-aligned actions   |
+| `closeOnBackdrop?` | `boolean`    | `true`  | Backdrop click-to-close |
+
+Centered modal (`role="dialog"`, `aria-modal="true"`) with a backdrop and close
+button; `Escape` closes whenever `open`.
+
+```tsx
+<Dialog
+  open={open}
+  onClose={close}
+  title="Confirm"
+  footer={<Button>OK</Button>}>
+  Body
+</Dialog>
+```
+
+### FileUpload
+
+File: `src/components/molecules/FileUpload.tsx` — client component.
+
+| Prop             | Type                              | Default          | Description              |
+| ---------------- | --------------------------------- | ---------------- | ------------------------ |
+| `label?`         | `string`                          | `'Upload files'` | Dropzone heading         |
+| `accept?`        | `string`                          | —                | Native `accept`          |
+| `multiple?`      | `boolean`                         | `false`          | Allow several files      |
+| `maxSize?`       | `number`                          | —                | Per-file byte limit      |
+| `onFilesChange?` | `(files: UploadedFile[]) => void` | —                | Emits `{ name, size }[]` |
+| `hint?`          | `string`                          | —                | Muted helper text        |
+
+Drag-and-drop zone that filters files over `maxSize`, lists accepted files with
+formatted sizes and per-file remove buttons.
+
+```tsx
+<FileUpload accept="image/*" multiple maxSize={5 * 1024 * 1024} />
+```
+
+### ImageGallery
+
+File: `src/components/molecules/ImageGallery.tsx` — client component.
+
+| Prop     | Type                             | Default           | Description             |
+| -------- | -------------------------------- | ----------------- | ----------------------- |
+| `images` | `{ src: string; alt: string }[]` | —                 | Images to browse        |
+| `label?` | `string`                         | `'Image gallery'` | `aria-label` on wrapper |
+
+Hero image plus a thumbnail strip (`aria-pressed` for the active thumb); returns
+`null` for an empty list.
+
+```tsx
+<ImageGallery images={[{ src: '/a.png', alt: 'A' }]} />
+```
+
+### InfoList
+
+File: `src/components/molecules/InfoList.tsx`
+
+| Prop       | Type                             | Default | Description      |
+| ---------- | -------------------------------- | ------- | ---------------- |
+| `items`    | `{ key, label, value, icon? }[]` | —       | `dl` rows        |
+| `title?`   | `string`                         | —       | Optional heading |
+| `columns?` | `1 \| 2`                         | `1`     | Column count     |
+
+A `dl` of label/value rows with optional leading icons.
+
+```tsx
+<InfoList
+  items={[{ key: 'v', label: 'Version', value: '1.0.0' }]}
+  columns={2}
+/>
+```
+
+### InlineAlert
+
+File: `src/components/molecules/InlineAlert.tsx`
+
+| Prop       | Type                                          | Default  | Description         |
+| ---------- | --------------------------------------------- | -------- | ------------------- |
+| `variant?` | `'info' \| 'success' \| 'warning' \| 'error'` | `'info'` | Accent colour       |
+| `children` | `ReactNode`                                   | —        | Message text        |
+| `onClose?` | `() => void`                                  | —        | Renders a dismiss × |
+
+Compact status row (`role="status"`) with a leading icon and left accent border.
+
+```tsx
+<InlineAlert variant="success">Saved.</InlineAlert>
+```
+
+### InputStepper
+
+File: `src/components/molecules/InputStepper.tsx` — client component.
+
+| Prop       | Type                      | Default | Description     |
+| ---------- | ------------------------- | ------- | --------------- |
+| `label`    | `string`                  | —       | Field label     |
+| `options`  | `string[]`                | —       | Ordered choices |
+| `value`    | `string`                  | —       | Selected option |
+| `onChange` | `(value: string) => void` | —       | Called on step  |
+
+`−`/`+` stepper over an ordered option list; the previous/next buttons disable
+at the ends and the current position shows as `n of m`.
+
+```tsx
+<InputStepper
+  label="Period"
+  options={['Day', 'Week']}
+  value={period}
+  onChange={setPeriod}
+/>
+```
+
+### MenuGroup
+
+File: `src/components/molecules/MenuGroup.tsx`
+
+| Prop       | Type                                                                | Default | Description   |
+| ---------- | ------------------------------------------------------------------- | ------- | ------------- |
+| `sections` | `{ id, title, items: { id, label, icon?, active?, onClick? }[] }[]` | —       | Menu sections |
+
+DaisyUI `menu` with `menu-title` groups; active items get `menu-active` and
+`aria-current="page"`.
+
+```tsx
+<MenuGroup
+  sections={[
+    { id: 'acct', title: 'Account', items: [{ id: 'p', label: 'Profile' }] },
+  ]}
+/>
+```
+
+### NumberInput
+
+File: `src/components/molecules/NumberInput.tsx`
+
+| Prop           | Type                      | Default | Description                |
+| -------------- | ------------------------- | ------- | -------------------------- |
+| `label`        | `string`                  | —       | Visible label + `id`       |
+| `value`        | `number`                  | —       | Controlled value           |
+| `onChange`     | `(value: number) => void` | —       | Called with next value     |
+| `min?`         | `number`                  | —       | Lower clamp                |
+| `max?`         | `number`                  | —       | Upper clamp                |
+| `step?`        | `number`                  | `1`     | Native step                |
+| `placeholder?` | `string`                  | —       | Placeholder                |
+| `error?`       | `string`                  | —       | Error text + `input-error` |
+| `hint?`        | `string`                  | —       | Muted helper text          |
+| `disabled?`    | `boolean`                 | `false` | Disables the input         |
+
+Native `input type="number"` that clamps changes to `min`/`max` and reports
+out-of-range values via `aria-invalid`.
+
+```tsx
+<NumberInput label="Seats" value={seats} onChange={setSeats} min={1} max={10} />
+```
+
 ---
 
 [Back to index](README.md)

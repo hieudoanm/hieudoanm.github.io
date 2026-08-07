@@ -13,26 +13,41 @@ import {
   AnnouncementBar,
   AuthForm,
   BlogSection,
+  Calendar,
   ChatWindow,
   CommandMenu,
   ContactSection,
   CookieBanner,
   CTASection,
+  DashboardHeader,
+  DataList,
   DataTable,
+  Diff,
+  EventTimeline,
   FAQSection,
+  FaqAccordion,
   FeatureGrid,
   Footer,
+  GalleryGrid,
   Header,
   Hero,
+  InfoCards,
+  IntegrationsSection,
   LogosSection,
   Marquee,
   Navbar,
   NewsletterSection,
+  PageBreadcrumbs,
+  PageHeader,
+  PageTabs,
+  PricingCard,
   PricingSection,
   ProfileCard,
+  ProgressStepper,
   Sidebar,
   StatsGrid,
   TeamSection,
+  TestimonialCarousel,
   TestimonialSection,
   Toolbar,
 } from '../../../../../../organisms';
@@ -122,6 +137,11 @@ const plans = [
 
 export const OrganismsLevel: FC = () => {
   const [commandOpen, setCommandOpen] = useState(false);
+  const [selectedDate, setSelectedDate] = useState<Date | undefined>(
+    new Date(2026, 7, 15)
+  );
+  const [activeStep, setActiveStep] = useState(1);
+  const [pageTab, setPageTab] = useState('overview');
   const [chatMessages, setChatMessages] = useState([
     {
       id: '1',
@@ -509,6 +529,273 @@ export const OrganismsLevel: FC = () => {
               status: 'neutral',
             },
           ]}
+        />
+      </OrganismSection>
+      <OrganismSection title="Calendar" index={26}>
+        <div className="mx-auto w-full max-w-sm">
+          <Calendar
+            value={selectedDate}
+            onChange={setSelectedDate}
+            minDate={new Date(2026, 0, 1)}
+            maxDate={new Date(2026, 11, 31)}
+          />
+        </div>
+      </OrganismSection>
+      <OrganismSection title="Diff" index={27}>
+        <div className="mx-auto w-full max-w-xl">
+          <Diff
+            aspectClass="aspect-16/9"
+            before={
+              <div className="bg-primary/20 flex h-full w-full items-center justify-center">
+                Before
+              </div>
+            }
+            after={
+              <div className="bg-success/20 flex h-full w-full items-center justify-center">
+                After
+              </div>
+            }
+          />
+        </div>
+      </OrganismSection>
+      <OrganismSection title="IntegrationsSection" index={28}>
+        <IntegrationsSection
+          title="Works with your stack"
+          items={[
+            { name: 'GitHub', description: 'Sync repositories' },
+            { name: 'Slack', description: 'Share updates' },
+            { name: 'Notion', description: 'Mirror docs' },
+          ]}
+          columns={3}
+        />
+      </OrganismSection>
+      <OrganismSection title="PageHeader" index={29}>
+        <PageHeader
+          eyebrow="Settings"
+          title="Team preferences"
+          description="Customise how your workspace behaves."
+          actions={<Button size="sm">Save</Button>}
+        />
+      </OrganismSection>
+      <OrganismSection title="PricingCard" index={30}>
+        <div className="mx-auto w-full max-w-sm">
+          <PricingCard
+            name="Pro"
+            price="$12"
+            period="/ month"
+            description="For growing teams"
+            features={[
+              'Unlimited projects',
+              'Priority support',
+              'Advanced analytics',
+            ]}
+            ctaLabel="Get started"
+            highlighted
+            badge="Popular"
+          />
+        </div>
+      </OrganismSection>
+      <OrganismSection title="ProgressStepper" index={31}>
+        <ProgressStepper
+          steps={['Cart', 'Shipping', 'Payment', 'Done']}
+          activeStep={activeStep}
+          onStepClick={setActiveStep}
+        />
+      </OrganismSection>
+      <OrganismSection title="TestimonialCarousel" index={32}>
+        <div className="mx-auto w-full max-w-2xl">
+          <TestimonialCarousel
+            items={[
+              {
+                quote: 'The fastest way we shipped a product.',
+                author: 'Ada Lovelace',
+                role: 'CTO, Analytics Co',
+              },
+              {
+                quote: 'Beautifully crafted components.',
+                author: 'Grace Hopper',
+                role: 'Engineering Lead',
+              },
+              {
+                quote: 'Our team adopted it in a day.',
+                author: 'Linus Torvalds',
+                role: 'Founder',
+              },
+            ]}
+          />
+        </div>
+      </OrganismSection>
+      <OrganismSection title="DashboardHeader" index={33}>
+        <DashboardHeader
+          title="Overview"
+          subtitle="Welcome back, Jane"
+          searchValue=""
+          onSearchChange={() => undefined}
+          searchPlaceholder="Search projects..."
+          actions={<Button size="sm">New report</Button>}
+        />
+      </OrganismSection>
+      <OrganismSection title="DataList" index={34}>
+        <DataList
+          sections={[
+            {
+              id: 'server',
+              title: 'Server',
+              items: [
+                { key: 'region', label: 'Region', value: 'ap-southeast-1' },
+                { key: 'version', label: 'Version', value: 'v1.2.3' },
+                { key: 'node', label: 'Node', value: '22 LTS' },
+              ],
+            },
+            {
+              id: 'limits',
+              title: 'Limits',
+              items: [
+                { key: 'storage', label: 'Storage', value: '10 GB' },
+                { key: 'requests', label: 'Requests', value: '100k / mo' },
+              ],
+            },
+          ]}
+        />
+      </OrganismSection>
+      <OrganismSection title="EventTimeline" index={35}>
+        <EventTimeline
+          title="Release history"
+          items={[
+            {
+              id: '1',
+              title: 'v2.1.0 deployed',
+              date: '10 min ago',
+              description: 'Production release with new components.',
+              status: 'success',
+            },
+            {
+              id: '2',
+              title: 'Build warning',
+              date: '1 hr ago',
+              description: 'Deprecated API in utils.ts',
+              status: 'warning',
+            },
+            {
+              id: '3',
+              title: 'Pipeline queued',
+              date: '3 hr ago',
+              status: 'neutral',
+            },
+          ]}
+        />
+      </OrganismSection>
+      <OrganismSection title="FaqAccordion" index={36}>
+        <FaqAccordion
+          title="Frequently asked questions"
+          description="Everything you need to know before getting started."
+          items={[
+            {
+              id: 'a',
+              question: 'How do I install it?',
+              answer: 'Run pnpm install in your project root.',
+            },
+            {
+              id: 'b',
+              question: 'Is it free?',
+              answer: 'Yes, the library is MIT licensed.',
+            },
+            {
+              id: 'c',
+              question: 'Can I contribute?',
+              answer: 'Open a pull request on GitHub.',
+            },
+          ]}
+        />
+      </OrganismSection>
+      <OrganismSection title="GalleryGrid" index={37}>
+        <GalleryGrid
+          columns={3}
+          items={[
+            {
+              src: '/gallery-1.png',
+              alt: 'Coastal landscape',
+              caption: 'Coastal',
+            },
+            { src: '/gallery-2.png', alt: 'Mountain trail', caption: 'Trails' },
+            { src: '/gallery-3.png', alt: 'City skyline', caption: 'City' },
+          ]}
+        />
+      </OrganismSection>
+      <OrganismSection title="InfoCards" index={38}>
+        <InfoCards
+          title="Why choose us"
+          columns={3}
+          cards={[
+            {
+              id: 'fast',
+              title: 'Fast',
+              description: 'Optimised for speed and small bundles.',
+              icon: <FiBell />,
+              accent: 'primary',
+            },
+            {
+              id: 'secure',
+              title: 'Secure',
+              description: 'End-to-end encrypted by default.',
+              icon: <FiLock />,
+            },
+            {
+              id: 'personal',
+              title: 'Personal',
+              description: 'Adapts to your workflow.',
+              icon: <FiUser />,
+              accent: 'success',
+            },
+          ]}
+        />
+      </OrganismSection>
+      <OrganismSection title="PageBreadcrumbs" index={39}>
+        <PageBreadcrumbs
+          items={[
+            { label: 'Home', href: '/' },
+            { label: 'Projects', href: '/projects' },
+            { label: 'Settings' },
+          ]}
+          title="Project settings"
+          description="Manage your project preferences."
+          actions={<Button size="sm">Save</Button>}
+        />
+      </OrganismSection>
+      <OrganismSection title="PageTabs" index={40}>
+        <PageTabs
+          tabs={[
+            {
+              id: 'overview',
+              label: 'Overview',
+              content: (
+                <div className="bg-base-200 rounded-xl p-6 text-sm">
+                  Overview panel content.
+                </div>
+              ),
+            },
+            {
+              id: 'activity',
+              label: 'Activity',
+              icon: <FiBell />,
+              content: (
+                <div className="bg-base-200 rounded-xl p-6 text-sm">
+                  Activity panel content.
+                </div>
+              ),
+            },
+            {
+              id: 'settings',
+              label: 'Settings',
+              content: (
+                <div className="bg-base-200 rounded-xl p-6 text-sm">
+                  Settings panel content.
+                </div>
+              ),
+            },
+          ]}
+          value={pageTab}
+          onChange={setPageTab}
         />
       </OrganismSection>
     </div>

@@ -1,25 +1,38 @@
 import type { FC, ReactNode } from 'react';
 import { useState } from 'react';
 import {
+  Artboard,
+  AspectRatio,
   Avatar,
   Badge,
+  BrowserMockup,
   Button,
   ButtonLink,
   Checkbox,
+  Clock,
   CodeBlock,
   Collapse,
   CopyButton,
   Countdown,
+  Cube,
   Divider,
+  Dock,
+  EditableText,
+  EmptyPlaceholder,
   FileInput,
   Icon,
   IconButton,
   Indicator,
   Kbd,
+  Label,
+  LetterAvatar,
+  LinkButton,
   Mask,
+  MiniMap,
   NumberField,
   OTPInput,
   PasswordField,
+  PhoneMockup,
   Progress,
   ProgressRing,
   Radio,
@@ -33,10 +46,12 @@ import {
   Swap,
   Switch,
   Tag,
+  TagCloud,
   Text,
   Textarea,
   TextField,
   Tooltip,
+  WindowMockup,
 } from '../../../../../../atoms';
 
 const AtomTile: FC<{ title: string; index: number; children: ReactNode }> = ({
@@ -416,6 +431,112 @@ export const AtomsLevel: FC = () => {
           <ProgressRing value={35} />
           <ProgressRing value={75} showValue />
           <ProgressRing value={100} size={56} showValue />
+        </div>
+      </AtomTile>
+      <AtomTile title="AspectRatio" index={36}>
+        <div className="w-full">
+          <AspectRatio ratio={16 / 9}>
+            <div className="bg-primary/20 flex h-full w-full items-center justify-center">
+              <span className="text-primary">16:9</span>
+            </div>
+          </AspectRatio>
+        </div>
+      </AtomTile>
+      <AtomTile title="Artboard" index={37}>
+        <Artboard title="Mobile preview">Hello</Artboard>
+      </AtomTile>
+      <AtomTile title="BrowserMockup" index={38}>
+        <div className="w-full">
+          <BrowserMockup url="https://example.com">Page</BrowserMockup>
+        </div>
+      </AtomTile>
+      <AtomTile title="Label" index={39}>
+        <Label htmlFor="demo-name">Full name</Label>
+      </AtomTile>
+      <AtomTile title="LetterAvatar" index={40}>
+        <div className="flex gap-2">
+          <LetterAvatar name="Jane Doe" />
+          <LetterAvatar name="Alex Chen" color="accent" size="sm" />
+          <LetterAvatar name="Sam" color="neutral" size="lg" />
+        </div>
+      </AtomTile>
+      <AtomTile title="PhoneMockup" index={41}>
+        <PhoneMockup>Screen</PhoneMockup>
+      </AtomTile>
+      <AtomTile title="WindowMockup" index={42}>
+        <div className="w-full">
+          <WindowMockup title="Terminal">$ pnpm build</WindowMockup>
+        </div>
+      </AtomTile>
+      <AtomTile title="Clock" index={43}>
+        <Clock />
+        <Clock format="24h" showSeconds />
+      </AtomTile>
+      <AtomTile title="Cube" index={44}>
+        <div className="flex items-center gap-4">
+          <Cube size={48} />
+          <Cube />
+          <Cube size={128} speed="slow" />
+        </div>
+      </AtomTile>
+      <AtomTile title="Dock" index={45}>
+        <Dock
+          items={[
+            { key: 'home', label: 'Home', icon: <Icon name="home" /> },
+            { key: 'user', label: 'Profile', icon: <Icon name="user" /> },
+            { key: 'star', label: 'Favorites', icon: <Icon name="star" /> },
+          ]}
+        />
+      </AtomTile>
+      <AtomTile title="EditableText" index={46}>
+        <div className="w-full">
+          <EditableText
+            label="Project name"
+            value="Acme Corp"
+            onChange={() => undefined}
+          />
+        </div>
+      </AtomTile>
+      <AtomTile title="EmptyPlaceholder" index={47}>
+        <div className="w-full">
+          <EmptyPlaceholder
+            icon={<Icon name="bell" />}
+            title="No notifications"
+            description="You are all caught up."
+            action={<Button size="sm">Clear all</Button>}
+          />
+        </div>
+      </AtomTile>
+      <AtomTile title="LinkButton" index={48}>
+        <div className="flex gap-2">
+          <LinkButton href="/about">Get started</LinkButton>
+          <LinkButton href="/settings" variant="outline">
+            Settings
+          </LinkButton>
+        </div>
+      </AtomTile>
+      <AtomTile title="MiniMap" index={49}>
+        <div className="w-full">
+          <MiniMap
+            sections={[
+              { id: 'a', label: 'Intro' },
+              { id: 'b', label: 'Features' },
+              { id: 'c', label: 'Pricing' },
+            ]}
+          />
+        </div>
+      </AtomTile>
+      <AtomTile title="TagCloud" index={50}>
+        <div className="w-full">
+          <TagCloud
+            tags={[
+              { label: 'React', weight: 9 },
+              { label: 'Next.js', weight: 7 },
+              { label: 'TypeScript', weight: 5 },
+              { label: 'Tailwind', weight: 3 },
+              { label: 'DaisyUI', weight: 1 },
+            ]}
+          />
         </div>
       </AtomTile>
     </div>
