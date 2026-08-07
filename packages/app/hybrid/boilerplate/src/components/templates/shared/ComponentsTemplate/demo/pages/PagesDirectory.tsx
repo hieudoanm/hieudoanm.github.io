@@ -681,13 +681,225 @@ const GROUPS: { title: string; pages: PageEntry[] }[] = [
       },
     ],
   },
+  {
+    title: 'Commerce Admin',
+    pages: [
+      {
+        label: 'Products',
+        href: '/admin/products',
+        icon: <FiShoppingBag />,
+        description: 'Product catalog admin',
+      },
+      {
+        label: 'Orders',
+        href: '/admin/orders',
+        icon: <FiShoppingCart />,
+        description: 'Order management',
+      },
+      {
+        label: 'Customers',
+        href: '/admin/customers',
+        icon: <FiUsers />,
+        description: 'Customer directory',
+      },
+      {
+        label: 'Inventory',
+        href: '/admin/inventory',
+        icon: <FiArchive />,
+        description: 'Stock level management',
+      },
+      {
+        label: 'Coupons',
+        href: '/admin/coupons',
+        icon: <FiTag />,
+        description: 'Discount coupon management',
+      },
+      {
+        label: 'Promotions',
+        href: '/admin/promotions',
+        icon: <FiStar />,
+        description: 'Promo campaign builder',
+      },
+      {
+        label: 'Refunds',
+        href: '/admin/refunds',
+        icon: <FiDollarSign />,
+        description: 'Refund requests',
+      },
+      {
+        label: 'Shipments',
+        href: '/admin/shipments',
+        icon: <FiTruck />,
+        description: 'Shipment logistics',
+      },
+    ],
+  },
+  {
+    title: 'Finance',
+    pages: [
+      {
+        label: 'Invoices',
+        href: '/finance/invoices',
+        icon: <FiFileText />,
+        description: 'Client invoice tracking',
+      },
+      {
+        label: 'Budgets',
+        href: '/finance/budgets',
+        icon: <FiBarChart2 />,
+        description: 'Budget spending tracker',
+      },
+      {
+        label: 'Subscriptions',
+        href: '/finance/subscriptions',
+        icon: <FiRefreshCw />,
+        description: 'Recurring subscription plans',
+      },
+      {
+        label: 'Transactions',
+        href: '/finance/transactions',
+        icon: <FiCreditCard />,
+        description: 'Account transactions ledger',
+      },
+      {
+        label: 'Taxes',
+        href: '/finance/taxes',
+        icon: <FiDollarSign />,
+        description: 'Sales tax regions',
+      },
+      {
+        label: 'Payroll',
+        href: '/finance/payroll',
+        icon: <FiBriefcase />,
+        description: 'Employee payroll runs',
+      },
+      {
+        label: 'Statements',
+        href: '/finance/statements',
+        icon: <FiTable />,
+        description: 'Monthly account statements',
+      },
+      {
+        label: 'Accounts',
+        href: '/finance/accounts',
+        icon: <FiShield />,
+        description: 'Linked bank accounts',
+      },
+    ],
+  },
+  {
+    title: 'Developer',
+    pages: [
+      {
+        label: 'API Keys',
+        href: '/developer/api-keys',
+        icon: <FiKey />,
+        description: 'Create and manage access keys',
+      },
+      {
+        label: 'Feature Flags',
+        href: '/developer/feature-flags',
+        icon: <FiZap />,
+        description: 'Toggle features per environment',
+      },
+      {
+        label: 'Environments',
+        href: '/developer/environments',
+        icon: <FiMonitor />,
+        description: 'Monitor deployment environments',
+      },
+      {
+        label: 'Deployments',
+        href: '/developer/deployments',
+        icon: <FiUpload />,
+        description: 'Review deployment history',
+      },
+      {
+        label: 'Logs',
+        href: '/developer/logs',
+        icon: <FiFileText />,
+        description: 'Inspect application log output',
+      },
+      {
+        label: 'Endpoints',
+        href: '/developer/endpoints',
+        icon: <FiLink />,
+        description: 'Explore the public API surface',
+      },
+      {
+        label: 'Monitors',
+        href: '/developer/monitors',
+        icon: <FiActivity />,
+        description: 'Track service availability',
+      },
+      {
+        label: 'Backups',
+        href: '/developer/backups',
+        icon: <FiArchive />,
+        description: 'Manage backup schedules and restores',
+      },
+    ],
+  },
+  {
+    title: 'Social & Media',
+    pages: [
+      {
+        label: 'Feed',
+        href: '/social/feed',
+        icon: <FiMessageSquare />,
+        description: 'Latest updates from your network',
+      },
+      {
+        label: 'Messages',
+        href: '/social/messages',
+        icon: <FiMail />,
+        description: 'Direct messages',
+      },
+      {
+        label: 'Events',
+        href: '/social/events',
+        icon: <FiCalendar />,
+        description: 'Discover community events',
+      },
+      {
+        label: 'Groups',
+        href: '/social/groups',
+        icon: <FiUsers />,
+        description: 'Join communities that share your interests',
+      },
+      {
+        label: 'Followers',
+        href: '/social/followers',
+        icon: <FiUserPlus />,
+        description: 'Manage who you follow',
+      },
+      {
+        label: 'Media Library',
+        href: '/media/library',
+        icon: <FiFolder />,
+        description: 'Browse and manage uploaded assets',
+      },
+      {
+        label: 'Albums',
+        href: '/media/albums',
+        icon: <FiGrid />,
+        description: 'Organize photos into albums',
+      },
+      {
+        label: 'Video Player',
+        href: '/media/video',
+        icon: <FiSmartphone />,
+        description: 'Watch recorded content',
+      },
+    ],
+  },
 ];
 
 const PAGE_COUNT = GROUPS.reduce(
   (total, group) => total + group.pages.length,
   0
 );
-const TEMPLATE_COUNT = 100;
+const TEMPLATE_COUNT = 132;
 
 const PagesDirectory: FC = () => (
   <div className="mx-auto max-w-5xl p-5">
