@@ -5,16 +5,6 @@ import { OrderConfirmationTemplate } from '../OrderConfirmationTemplate';
 import { OrderHistoryTemplate } from '../OrderHistoryTemplate';
 import { StoreFrontTemplate } from '../StoreFrontTemplate';
 import { StoreItemTemplate } from '../StoreItemTemplate';
-import { StoreLoadingTemplate } from '../StoreLoadingTemplate';
-
-describe('StoreLoadingTemplate', () => {
-  it('renders skeleton placeholders', () => {
-    const { container } = render(<StoreLoadingTemplate />);
-    expect(container.querySelectorAll('.animate-pulse').length).toBeGreaterThan(
-      0
-    );
-  });
-});
 
 describe('CartTemplate', () => {
   it('renders items and subtotal', () => {

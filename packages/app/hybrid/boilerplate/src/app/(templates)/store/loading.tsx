@@ -1,5 +1,5 @@
-import { StoreLoadingTemplate } from '@/components/templates/store/StoreLoadingTemplate';
+import { LoadingTemplate } from '@/components/templates/support/LoadingTemplate';
 
-const StoreLoading = () => <StoreLoadingTemplate />;
+const StoreLoading = () => <LoadingTemplate variant="store" />;
 
 export default StoreLoading;

@@ -1,5 +1,5 @@
-import { NotFoundTemplate } from '@/components/templates/shared';
+import { ErrorTemplate } from '@/components/templates/auth';
 
-const NotFoundPage = () => <NotFoundTemplate />;
+const NotFoundPage = () => <ErrorTemplate variant="not-found" />;
 
 export default NotFoundPage;

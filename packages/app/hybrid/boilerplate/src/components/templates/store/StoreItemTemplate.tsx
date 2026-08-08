@@ -104,7 +104,7 @@ export const StoreItemTemplate: FC<StoreItemTemplateProps> = ({
               </span>
             )}
           </button>
-          <Link href="/sign-in" className="btn btn-primary btn-sm ml-1">
+          <Link href="/auth/sign-in" className="btn btn-primary btn-sm ml-1">
             Sign in
           </Link>
         </nav>

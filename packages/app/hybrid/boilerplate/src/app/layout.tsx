@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import '@/styles/globals.css';
 import { SWProvider } from '@/providers/SWProvider';
-import { CookieConsentTemplate } from '@/components/templates/shared';
+import { CookieConsentTemplate } from '@/components/templates/support';
 import { ThemeEditorLayout } from '@/layout';
 import { FC, ReactNode } from 'react';
 

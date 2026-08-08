@@ -3,7 +3,7 @@
 import type { FC } from 'react';
 import { useState } from 'react';
 import { FiKey, FiLock, FiMonitor, FiShield } from 'react-icons/fi';
-import { Header } from '@/components/organisms/Header';
+import { Header } from '@/components/organisms/support/Header';
 
 interface SecurityFeatureProps {
   title: string;

@@ -3,7 +3,7 @@
 import type { FC } from 'react';
 import { useState } from 'react';
 import { FiCheck, FiKey, FiShield } from 'react-icons/fi';
-import { Header } from '@/components/organisms/Header';
+import { Header } from '@/components/organisms/support/Header';
 
 export const TwoFactorTemplate: FC = () => {
   const [code, setCode] = useState('');

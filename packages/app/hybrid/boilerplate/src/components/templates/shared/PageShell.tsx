@@ -1,6 +1,6 @@
 import { FC, ReactNode } from 'react';
-import { Header } from '@/components/organisms/Header';
-import { Navbar } from '@/components/organisms/Navbar';
+import { Header } from '@/components/organisms/support/Header';
+import { Navbar } from '@/components/organisms/landing/Navbar';
 
 interface NavItem {
   label: string;

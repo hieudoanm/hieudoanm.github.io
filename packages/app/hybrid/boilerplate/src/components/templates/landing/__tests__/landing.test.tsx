@@ -1,8 +1,7 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import { FiZap } from 'react-icons/fi';
 import { LandingTemplate } from '../LandingTemplate';
-import { PrivacyTemplate } from '../PrivacyTemplate';
-import { TermsTemplate } from '../TermsTemplate';
+import { LegalTemplate } from '../LegalTemplate';
 
 const props = {
   name: 'Boilerplate',
@@ -14,25 +13,48 @@ const props = {
   ],
 };
 
-describe('PrivacyTemplate', () => {
-  it('renders heading and sections', () => {
-    render(<PrivacyTemplate />);
+describe('LegalTemplate', () => {
+  it('renders heading, sections, and contact', () => {
+    render(
+      <LegalTemplate
+        title="Privacy Policy"
+        sections={[
+          {
+            heading: '1. Information We Collect',
+            body: 'We collect information you provide.',
+          },
+        ]}
+        contact={
+          <>
+            For privacy-related inquiries, contact us at{' '}
+            <span className="text-primary">privacy@boilerplate.com</span>.
+          </>
+        }
+      />
+    );
     expect(
       screen.getByRole('heading', { name: 'Privacy Policy' })
     ).toBeInTheDocument();
     expect(screen.getByText('1. Information We Collect')).toBeInTheDocument();
     expect(screen.getByText('privacy@boilerplate.com')).toBeInTheDocument();
   });
-});
 
-describe('TermsTemplate', () => {
-  it('renders heading and sections', () => {
-    render(<TermsTemplate />);
-    expect(
-      screen.getByRole('heading', { name: 'Terms of Service' })
-    ).toBeInTheDocument();
-    expect(screen.getByText('1. Acceptance of Terms')).toBeInTheDocument();
-    expect(screen.getByText('hello@boilerplate.com')).toBeInTheDocument();
+  it('renders legal links in the footer', () => {
+    render(
+      <LegalTemplate
+        title="Terms of Service"
+        sections={[]}
+        contact={<>Contact us</>}
+      />
+    );
+    expect(screen.getByRole('link', { name: 'Privacy' })).toHaveAttribute(
+      'href',
+      '/landing/privacy'
+    );
+    expect(screen.getByRole('link', { name: 'Terms' })).toHaveAttribute(
+      'href',
+      '/landing/terms'
+    );
   });
 });
 
@@ -48,7 +70,7 @@ describe('LandingTemplate', () => {
     ).toBeGreaterThan(0);
     expect(screen.getByRole('link', { name: 'Learn more' })).toHaveAttribute(
       'href',
-      '/about'
+      '/shared/about'
     );
   });
 

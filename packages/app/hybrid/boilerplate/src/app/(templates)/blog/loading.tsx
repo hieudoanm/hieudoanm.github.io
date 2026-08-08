@@ -1,5 +1,5 @@
-import { BlogLoadingTemplate } from '@/components/templates/blog/BlogLoadingTemplate';
+import { LoadingTemplate } from '@/components/templates/support/LoadingTemplate';
 
-const BlogLoading = () => <BlogLoadingTemplate />;
+const BlogLoading = () => <LoadingTemplate variant="blog" />;
 
 export default BlogLoading;

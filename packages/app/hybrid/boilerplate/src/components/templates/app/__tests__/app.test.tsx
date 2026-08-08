@@ -1,22 +1,12 @@
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
-import { AppLoadingTemplate } from '../AppLoadingTemplate';
 import { DashboardTemplate } from '../DashboardTemplate';
-import { ProfileTemplate } from '../ProfileTemplate';
-import { SettingsTemplate } from '../SettingsTemplate';
-import { VersionTemplate } from '../VersionTemplate';
+import { ProfileTemplate } from '../../social/ProfileTemplate';
+import { SettingsTemplate } from '../../landing/SettingsTemplate';
+import { VersionTemplate } from '../../landing/VersionTemplate';
 
 jest.mock('next/navigation', () => ({
   usePathname: jest.fn(() => '/'),
 }));
-
-describe('AppLoadingTemplate', () => {
-  it('renders skeleton placeholders', () => {
-    const { container } = render(<AppLoadingTemplate />);
-    expect(container.querySelectorAll('.animate-pulse').length).toBeGreaterThan(
-      0
-    );
-  });
-});
 
 describe('DashboardTemplate', () => {
   it('renders header, stats, and user info', () => {

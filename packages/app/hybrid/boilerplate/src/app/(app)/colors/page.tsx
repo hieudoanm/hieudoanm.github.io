@@ -1,5 +1,6 @@
-import { ColorsPage } from '@/components/page/colors';
+import { Colors } from '@/components/pages/colors';
+import { NextPage } from 'next';
 
-const ColorsRoute = () => <ColorsPage />;
+const ColorsPage: NextPage = () => <Colors />;
 
-export default ColorsRoute;
+export default ColorsPage;

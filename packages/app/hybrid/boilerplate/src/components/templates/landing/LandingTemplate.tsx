@@ -182,7 +182,7 @@ const PricingSection: FC<{ tiers: PricingTier[] }> = ({ tiers }) => (
             ))}
           </div>
           <Link
-            href="/sign-up"
+            href="/auth/sign-up"
             className={`btn mt-8 w-full ${tier.popular ? 'btn-primary' : 'btn-ghost border-base-content/10 border'}`}>
             {tier.cta} <FiArrowRight />
           </Link>
@@ -412,10 +412,10 @@ export const LandingTemplate: FC<LandingTemplateProps> = ({
         {name}
       </Link>
       <nav className="flex items-center gap-2">
-        <Link href="/sign-in" className="btn btn-ghost btn-sm">
+        <Link href="/auth/sign-in" className="btn btn-ghost btn-sm">
           Sign in
         </Link>
-        <Link href="/sign-up" className="btn btn-primary btn-sm">
+        <Link href="/auth/sign-up" className="btn btn-primary btn-sm">
           Sign up
         </Link>
       </nav>
@@ -430,7 +430,7 @@ export const LandingTemplate: FC<LandingTemplateProps> = ({
           <Link href={ctaHref} className="btn btn-primary">
             {ctaLabel} <FiArrowRight />
           </Link>
-          <Link href="/about" className="btn btn-ghost">
+          <Link href="/shared/about" className="btn btn-ghost">
             Learn more
           </Link>
         </div>
@@ -476,17 +476,17 @@ export const LandingTemplate: FC<LandingTemplateProps> = ({
         </p>
         <div className="flex gap-4">
           <Link
-            href="/privacy"
+            href="/landing/privacy"
             className="text-base-content/50 hover:text-base-content text-xs transition-colors">
             Privacy
           </Link>
           <Link
-            href="/terms"
+            href="/landing/terms"
             className="text-base-content/50 hover:text-base-content text-xs transition-colors">
             Terms
           </Link>
           <Link
-            href="/contact"
+            href="/landing/contact"
             className="text-base-content/50 hover:text-base-content text-xs transition-colors">
             Contact
           </Link>

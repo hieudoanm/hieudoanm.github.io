@@ -3,7 +3,7 @@
 import type { FC } from 'react';
 import { useState } from 'react';
 import { FiAlertTriangle, FiTrash2 } from 'react-icons/fi';
-import { Header } from '@/components/organisms/Header';
+import { Header } from '@/components/organisms/support/Header';
 
 export const DeleteAccountTemplate: FC = () => {
   const [confirmed, setConfirmed] = useState(false);

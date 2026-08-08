@@ -1,14 +1,14 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import { DataTableTemplate } from '../DataTableTemplate';
-import { FormsShowcaseTemplate } from '../FormsShowcaseTemplate';
-import { ChartsGalleryTemplate } from '../ChartsGalleryTemplate';
-import { ModalsTemplate } from '../ModalsTemplate';
-import { ForbiddenTemplate } from '../ForbiddenTemplate';
-import DataTablePage from '@/app/(templates)/(app)/data-table/page';
-import FormsShowcasePage from '@/app/(templates)/(app)/forms/page';
-import ChartsGalleryPage from '@/app/(templates)/(app)/charts/page';
-import ModalsPage from '@/app/(templates)/(app)/modals/page';
-import ForbiddenPage from '@/app/(templates)/(shared)/forbidden/page';
+import { DataTableTemplate } from '../../hr/DataTableTemplate';
+import { FormsShowcaseTemplate } from '../../hr/FormsShowcaseTemplate';
+import { ChartsGalleryTemplate } from '../../hr/ChartsGalleryTemplate';
+import { ModalsTemplate } from '../../hr/ModalsTemplate';
+import { ForbiddenTemplate } from '../../auth/ForbiddenTemplate';
+import DataTablePage from '@/app/(templates)/hr/data-table/page';
+import FormsShowcasePage from '@/app/(templates)/hr/forms/page';
+import ChartsGalleryPage from '@/app/(templates)/hr/charts/page';
+import ModalsPage from '@/app/(templates)/hr/modals/page';
+import ForbiddenPage from '@/app/(templates)/auth/forbidden/page';
 
 describe('DataTableTemplate', () => {
   it('renders the table with default sorting and pagination', () => {
@@ -388,7 +388,7 @@ describe('ForbiddenTemplate', () => {
     );
     expect(
       screen.getByRole('link', { name: 'Contact support' })
-    ).toHaveAttribute('href', '/about');
+    ).toHaveAttribute('href', '/shared/about');
   });
 });
 

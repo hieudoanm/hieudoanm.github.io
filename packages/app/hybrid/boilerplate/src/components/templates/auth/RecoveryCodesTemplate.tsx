@@ -3,7 +3,7 @@
 import type { FC } from 'react';
 import { useState } from 'react';
 import { FiCheck, FiEye, FiEyeOff, FiKey, FiRefreshCw } from 'react-icons/fi';
-import { Header } from '@/components/organisms/Header';
+import { Header } from '@/components/organisms/support/Header';
 
 const initialCodes: string[] = [
   '7F2K-9QXP-L4MN',

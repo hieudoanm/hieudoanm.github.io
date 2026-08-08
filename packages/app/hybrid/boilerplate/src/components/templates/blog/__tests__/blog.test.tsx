@@ -1,7 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import { BlogItemTemplate } from '../BlogItemTemplate';
 import { BlogListTemplate } from '../BlogListTemplate';
-import { BlogLoadingTemplate } from '../BlogLoadingTemplate';
 
 const posts = [
   {
@@ -25,15 +24,6 @@ const posts = [
     tags: ['rust'],
   },
 ];
-
-describe('BlogLoadingTemplate', () => {
-  it('renders skeleton placeholders', () => {
-    const { container } = render(<BlogLoadingTemplate />);
-    expect(container.querySelectorAll('.animate-pulse').length).toBeGreaterThan(
-      0
-    );
-  });
-});
 
 describe('BlogListTemplate', () => {
   it('renders posts and tags', () => {

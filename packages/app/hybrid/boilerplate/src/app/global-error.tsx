@@ -1,6 +1,6 @@
 'use client';
 
-import { GlobalErrorTemplate } from '@/components/templates/shared/GlobalErrorTemplate';
+import { GlobalErrorTemplate } from '@/components/templates/auth/GlobalErrorTemplate';
 
 const GlobalErrorPage = ({
   error,

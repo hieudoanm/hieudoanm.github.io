@@ -4,9 +4,9 @@ import type { FC } from 'react';
 import { useState } from 'react';
 import { FiUserPlus, FiEye, FiEyeOff } from 'react-icons/fi';
 import Link from 'next/link';
-import { Header } from '@/components/organisms/Header';
-import { TextField } from '@/components/atoms/TextField';
-import { Spinner } from '@/components/atoms/Spinner';
+import { Header } from '@/components/organisms/support/Header';
+import { TextField } from '@/components/atoms/auth/TextField';
+import { Spinner } from '@/components/atoms/support/Spinner';
 
 interface SignUpTemplateProps {
   onSubmit: (data: {
@@ -150,7 +150,7 @@ export const SignUpTemplate: FC<SignUpTemplateProps> = ({
 
         <p className="text-base-content/50 mt-8 text-center text-sm">
           Already have an account?{' '}
-          <Link href="/sign-in" className="text-primary hover:underline">
+          <Link href="/auth/sign-in" className="text-primary hover:underline">
             Sign in
           </Link>
         </p>

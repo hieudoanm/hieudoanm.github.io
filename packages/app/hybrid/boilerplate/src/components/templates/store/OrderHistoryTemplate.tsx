@@ -57,7 +57,7 @@ export const OrderHistoryTemplate: FC = () => (
         <Link href="/store/cart" className="btn btn-ghost btn-sm relative">
           <FiShoppingCart className="h-4 w-4" />
         </Link>
-        <Link href="/sign-in" className="btn btn-primary btn-sm">
+        <Link href="/auth/sign-in" className="btn btn-primary btn-sm">
           Sign in
         </Link>
       </div>

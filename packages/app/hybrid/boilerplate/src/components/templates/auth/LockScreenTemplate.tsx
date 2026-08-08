@@ -3,7 +3,7 @@
 import type { FC } from 'react';
 import { useState } from 'react';
 import { FiEye, FiEyeOff } from 'react-icons/fi';
-import { Avatar } from '@/components/atoms/Avatar';
+import { Avatar } from '@/components/atoms/developer/Avatar';
 
 export const LockScreenTemplate: FC = () => {
   const [password, setPassword] = useState('');
@@ -87,7 +87,7 @@ export const LockScreenTemplate: FC = () => {
               </form>
 
               <a
-                href="/sign-in"
+                href="/auth/sign-in"
                 className="text-base-content/50 mt-6 block text-center text-sm hover:underline">
                 Sign in as a different user
               </a>

@@ -3,7 +3,7 @@
 import type { FC } from 'react';
 import { useState } from 'react';
 import { FiMonitor, FiShield, FiSmartphone } from 'react-icons/fi';
-import { Header } from '@/components/organisms/Header';
+import { Header } from '@/components/organisms/support/Header';
 
 interface ActiveSession {
   id: string;

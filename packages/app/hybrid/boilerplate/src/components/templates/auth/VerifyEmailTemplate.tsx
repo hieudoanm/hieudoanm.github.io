@@ -3,7 +3,7 @@
 import type { FC } from 'react';
 import { useState } from 'react';
 import { FiCheck, FiMail } from 'react-icons/fi';
-import { Header } from '@/components/organisms/Header';
+import { Header } from '@/components/organisms/support/Header';
 
 export const VerifyEmailTemplate: FC = () => {
   const [email, setEmail] = useState('demo@example.com');

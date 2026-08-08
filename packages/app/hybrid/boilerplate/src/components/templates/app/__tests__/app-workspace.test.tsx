@@ -4,15 +4,15 @@ import { CalendarTemplate } from '../CalendarTemplate';
 import { KanbanTemplate } from '../KanbanTemplate';
 import { InboxTemplate } from '../InboxTemplate';
 import { TasksTemplate } from '../TasksTemplate';
-import { NotesTemplate } from '../NotesTemplate';
+import { NotesTemplate } from '../../landing/NotesTemplate';
 import { FilesTemplate } from '../FilesTemplate';
-import AnalyticsPage from '@/app/(templates)/(app)/analytics/page';
-import CalendarPage from '@/app/(templates)/(app)/calendar/page';
-import KanbanPage from '@/app/(templates)/(app)/kanban/page';
-import InboxPage from '@/app/(templates)/(app)/inbox/page';
-import TasksPage from '@/app/(templates)/(app)/tasks/page';
-import NotesPage from '@/app/(templates)/(app)/notes/page';
-import FilesPage from '@/app/(templates)/(app)/files/page';
+import AnalyticsPage from '@/app/(templates)/app/analytics/page';
+import CalendarPage from '@/app/(templates)/app/calendar/page';
+import KanbanPage from '@/app/(templates)/app/kanban/page';
+import InboxPage from '@/app/(templates)/app/inbox/page';
+import TasksPage from '@/app/(templates)/app/tasks/page';
+import NotesPage from '@/app/(templates)/landing/notes/page';
+import FilesPage from '@/app/(templates)/app/files/page';
 
 describe('AnalyticsTemplate', () => {
   it('renders stat cards, bar chart and top pages table', () => {

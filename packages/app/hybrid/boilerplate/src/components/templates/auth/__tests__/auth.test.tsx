@@ -1,19 +1,8 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import { AuthLoadingTemplate } from '../AuthLoadingTemplate';
-import { ForgotPasswordTemplate } from '../ForgotPasswordTemplate';
-import { ResetPasswordTemplate } from '../ResetPasswordTemplate';
+import { PasswordResetTemplate } from '../PasswordResetTemplate';
 
 import { SignInTemplate } from '../SignInTemplate';
 import { SignUpTemplate } from '../SignUpTemplate';
-
-describe('AuthLoadingTemplate', () => {
-  it('renders skeleton placeholders', () => {
-    const { container } = render(<AuthLoadingTemplate />);
-    expect(container.querySelectorAll('.animate-pulse').length).toBeGreaterThan(
-      0
-    );
-  });
-});
 
 describe('SignInTemplate', () => {
   it('renders header and form', () => {
@@ -68,10 +57,10 @@ describe('SignInTemplate', () => {
     render(<SignInTemplate onSubmit={jest.fn()} />);
     expect(
       screen.getByRole('link', { name: 'Forgot password?' })
-    ).toHaveAttribute('href', '/forgot-password');
+    ).toHaveAttribute('href', '/auth/forgot-password');
     expect(screen.getByRole('link', { name: 'Sign up' })).toHaveAttribute(
       'href',
-      '/sign-up'
+      '/auth/sign-up'
     );
   });
 });
@@ -154,15 +143,15 @@ describe('SignUpTemplate', () => {
     render(<SignUpTemplate onSubmit={jest.fn()} />);
     expect(screen.getByRole('link', { name: 'Sign in' })).toHaveAttribute(
       'href',
-      '/sign-in'
+      '/auth/sign-in'
     );
   });
 });
 
-describe('ForgotPasswordTemplate', () => {
+describe('PasswordResetTemplate (request)', () => {
   it('submits email', () => {
     const onSubmit = jest.fn();
-    render(<ForgotPasswordTemplate onSubmit={onSubmit} />);
+    render(<PasswordResetTemplate mode="request" onSubmit={onSubmit} />);
     fireEvent.change(screen.getByPlaceholderText('you@example.com'), {
       target: { value: 'user@test.com' },
     });
@@ -172,7 +161,8 @@ describe('ForgotPasswordTemplate', () => {
 
   it('displays error and loading state', () => {
     render(
-      <ForgotPasswordTemplate
+      <PasswordResetTemplate
+        mode="request"
         onSubmit={jest.fn()}
         error="No account found"
         loading
@@ -184,26 +174,28 @@ describe('ForgotPasswordTemplate', () => {
 
   it('shows success message with email', () => {
     const { rerender } = render(
-      <ForgotPasswordTemplate onSubmit={jest.fn()} />
+      <PasswordResetTemplate mode="request" onSubmit={jest.fn()} />
     );
     fireEvent.change(screen.getByPlaceholderText('you@example.com'), {
       target: { value: 'user@test.com' },
     });
     fireEvent.submit(document.querySelector('form')!);
-    rerender(<ForgotPasswordTemplate onSubmit={jest.fn()} success />);
+    rerender(
+      <PasswordResetTemplate mode="request" onSubmit={jest.fn()} success />
+    );
     expect(screen.getByText('Check your email')).toBeInTheDocument();
     expect(screen.getByText('user@test.com')).toBeInTheDocument();
   });
 
   it('links back to sign in', () => {
-    render(<ForgotPasswordTemplate onSubmit={jest.fn()} />);
+    render(<PasswordResetTemplate mode="request" onSubmit={jest.fn()} />);
     expect(
       screen.getByRole('link', { name: /Back to sign in/ })
-    ).toHaveAttribute('href', '/sign-in');
+    ).toHaveAttribute('href', '/auth/sign-in');
   });
 });
 
-describe('ResetPasswordTemplate', () => {
+describe('PasswordResetTemplate (confirm)', () => {
   const fillForm = () => {
     fireEvent.change(screen.getByPlaceholderText('At least 8 characters'), {
       target: { value: 'Password1' },
@@ -216,14 +208,14 @@ describe('ResetPasswordTemplate', () => {
 
   it('submits valid password', () => {
     const onSubmit = jest.fn();
-    render(<ResetPasswordTemplate onSubmit={onSubmit} />);
+    render(<PasswordResetTemplate mode="confirm" onSubmit={onSubmit} />);
     fillForm();
     expect(onSubmit).toHaveBeenCalledWith('Password1');
   });
 
   it('rejects mismatched passwords', () => {
     const onSubmit = jest.fn();
-    render(<ResetPasswordTemplate onSubmit={onSubmit} />);
+    render(<PasswordResetTemplate mode="confirm" onSubmit={onSubmit} />);
     fireEvent.change(screen.getByPlaceholderText('At least 8 characters'), {
       target: { value: 'Password1' },
     });
@@ -237,7 +229,7 @@ describe('ResetPasswordTemplate', () => {
 
   it('rejects short passwords', () => {
     const onSubmit = jest.fn();
-    render(<ResetPasswordTemplate onSubmit={onSubmit} />);
+    render(<PasswordResetTemplate mode="confirm" onSubmit={onSubmit} />);
     fireEvent.change(screen.getByPlaceholderText('At least 8 characters'), {
       target: { value: 'short' },
     });
@@ -252,29 +244,35 @@ describe('ResetPasswordTemplate', () => {
   });
 
   it('marks requirements as met when password is strong', () => {
-    render(<ResetPasswordTemplate onSubmit={jest.fn()} />);
+    render(<PasswordResetTemplate mode="confirm" onSubmit={jest.fn()} />);
     const input = screen.getByPlaceholderText('At least 8 characters');
     fireEvent.change(input, { target: { value: 'Password1' } });
     expect(screen.getAllByText('✓').length).toBe(4);
   });
 
   it('marks requirements as unmet with empty password', () => {
-    render(<ResetPasswordTemplate onSubmit={jest.fn()} />);
+    render(<PasswordResetTemplate mode="confirm" onSubmit={jest.fn()} />);
     expect(screen.getAllByText('○').length).toBe(4);
   });
 
   it('displays error and success states', () => {
     const { unmount } = render(
-      <ResetPasswordTemplate onSubmit={jest.fn()} error="Invalid token" />
+      <PasswordResetTemplate
+        mode="confirm"
+        onSubmit={jest.fn()}
+        error="Invalid token"
+      />
     );
     expect(screen.getByText('Invalid token')).toBeInTheDocument();
     unmount();
-    render(<ResetPasswordTemplate onSubmit={jest.fn()} success />);
+    render(
+      <PasswordResetTemplate mode="confirm" onSubmit={jest.fn()} success />
+    );
     expect(screen.getByText('Password reset')).toBeInTheDocument();
   });
 
   it('toggles password visibility', () => {
-    render(<ResetPasswordTemplate onSubmit={jest.fn()} />);
+    render(<PasswordResetTemplate mode="confirm" onSubmit={jest.fn()} />);
     const input = screen.getByPlaceholderText('At least 8 characters');
     expect(input).toHaveAttribute('type', 'password');
     fireEvent.click(screen.getByRole('button', { name: '' }));

@@ -67,10 +67,10 @@ export const ChangelogTemplate: FC = () => {
           Boilerplate
         </Link>
         <nav className="flex items-center gap-2">
-          <Link href="/sign-in" className="btn btn-ghost btn-sm">
+          <Link href="/auth/sign-in" className="btn btn-ghost btn-sm">
             Sign in
           </Link>
-          <Link href="/sign-up" className="btn btn-primary btn-sm">
+          <Link href="/auth/sign-up" className="btn btn-primary btn-sm">
             Sign up
           </Link>
         </nav>
@@ -138,17 +138,17 @@ export const ChangelogTemplate: FC = () => {
           </p>
           <div className="flex gap-4">
             <Link
-              href="/privacy"
+              href="/landing/privacy"
               className="text-base-content/50 hover:text-base-content text-xs transition-colors">
               Privacy
             </Link>
             <Link
-              href="/terms"
+              href="/landing/terms"
               className="text-base-content/50 hover:text-base-content text-xs transition-colors">
               Terms
             </Link>
             <Link
-              href="/contact"
+              href="/landing/contact"
               className="text-base-content/50 hover:text-base-content text-xs transition-colors">
               Contact
             </Link>

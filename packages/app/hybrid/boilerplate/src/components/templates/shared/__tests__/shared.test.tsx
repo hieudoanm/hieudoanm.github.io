@@ -1,14 +1,13 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import { AboutTemplate } from '../AboutTemplate';
-import { ComingSoonTemplate } from '../ComingSoonTemplate';
-import { CookieConsentTemplate } from '../CookieConsentTemplate';
-import { ErrorTemplate } from '../ErrorTemplate';
-import { GlobalErrorTemplate } from '../GlobalErrorTemplate';
-import { MaintenanceTemplate } from '../MaintenanceTemplate';
-import { NotFoundTemplate } from '../NotFoundTemplate';
-import { OnboardingTemplate } from '../OnboardingTemplate';
+import { AboutTemplate } from '../../support/AboutTemplate';
+import { CookieConsentTemplate } from '../../support/CookieConsentTemplate';
+import { ErrorTemplate } from '../../auth/ErrorTemplate';
+import { GlobalErrorTemplate } from '../../auth/GlobalErrorTemplate';
+import { LaunchStatusTemplate } from '../../mail/LaunchStatusTemplate';
+import { LoadingTemplate } from '../../support/LoadingTemplate';
+import { OnboardingTemplate } from '../../mail/OnboardingTemplate';
 import { PageShell } from '../PageShell';
-import { SearchTemplate } from '../SearchTemplate';
+import { SearchTemplate } from '../../support/SearchTemplate';
 
 jest.mock('next/navigation', () => ({
   usePathname: jest.fn(() => '/'),
@@ -82,21 +81,21 @@ describe('AboutTemplate', () => {
   });
 });
 
-describe('ComingSoonTemplate', () => {
+describe('LaunchStatusTemplate (coming-soon)', () => {
   it('renders headline and waitlist form', () => {
-    render(<ComingSoonTemplate />);
+    render(<LaunchStatusTemplate variant="coming-soon" />);
     expect(screen.getByText('Something great is coming')).toBeInTheDocument();
     expect(screen.getByPlaceholderText('you@example.com')).toBeInTheDocument();
   });
 
   it('does not subscribe without email', () => {
-    render(<ComingSoonTemplate />);
+    render(<LaunchStatusTemplate variant="coming-soon" />);
     fireEvent.click(screen.getByRole('button', { name: /Notify me/ }));
     expect(screen.queryByText("You're on the list!")).not.toBeInTheDocument();
   });
 
   it('subscribes when email is entered', () => {
-    render(<ComingSoonTemplate />);
+    render(<LaunchStatusTemplate variant="coming-soon" />);
     fireEvent.change(screen.getByPlaceholderText('you@example.com'), {
       target: { value: 'user@test.com' },
     });
@@ -105,10 +104,10 @@ describe('ComingSoonTemplate', () => {
   });
 
   it('links to sign-up for early access', () => {
-    render(<ComingSoonTemplate />);
+    render(<LaunchStatusTemplate variant="coming-soon" />);
     expect(
       screen.getByRole('link', { name: 'Get early access' })
-    ).toHaveAttribute('href', '/sign-up');
+    ).toHaveAttribute('href', '/auth/sign-up');
   });
 });
 
@@ -139,7 +138,7 @@ describe('CookieConsentTemplate', () => {
     render(<CookieConsentTemplate />);
     expect(
       screen.getByRole('link', { name: 'Privacy Policy' })
-    ).toHaveAttribute('href', '/privacy');
+    ).toHaveAttribute('href', '/landing/privacy');
   });
 });
 
@@ -160,6 +159,39 @@ describe('ErrorTemplate', () => {
     expect(screen.getByText('404')).toBeInTheDocument();
     expect(screen.queryByRole('button')).not.toBeInTheDocument();
   });
+
+  it('renders not-found variant with default code and message', () => {
+    render(<ErrorTemplate variant="not-found" />);
+    expect(screen.getByText('404')).toBeInTheDocument();
+    expect(screen.getByText('Page not found')).toBeInTheDocument();
+  });
+
+  it('renders not-found variant with custom code and message', () => {
+    render(
+      <ErrorTemplate
+        variant="not-found"
+        code={418}
+        description="I am a teapot"
+      />
+    );
+    expect(screen.getByText('418')).toBeInTheDocument();
+    expect(screen.getByText('I am a teapot')).toBeInTheDocument();
+  });
+
+  it('navigates back on go back in not-found variant', () => {
+    const back = jest.spyOn(window.history, 'back');
+    render(<ErrorTemplate variant="not-found" />);
+    fireEvent.click(screen.getByRole('button', { name: /Go back/ }));
+    expect(back).toHaveBeenCalledTimes(1);
+  });
+
+  it('links home in not-found variant', () => {
+    render(<ErrorTemplate variant="not-found" />);
+    expect(screen.getByRole('link', { name: /Go home/ })).toHaveAttribute(
+      'href',
+      '/'
+    );
+  });
 });
 
 describe('GlobalErrorTemplate', () => {
@@ -172,15 +204,27 @@ describe('GlobalErrorTemplate', () => {
   });
 });
 
-describe('MaintenanceTemplate', () => {
+describe('LoadingTemplate', () => {
+  it.each(['app', 'auth', 'blog', 'store'] as const)(
+    'renders %s skeleton placeholders',
+    (variant) => {
+      const { container } = render(<LoadingTemplate variant={variant} />);
+      expect(
+        container.querySelectorAll('.animate-pulse').length
+      ).toBeGreaterThan(0);
+    }
+  );
+});
+
+describe('LaunchStatusTemplate (maintenance)', () => {
   it('renders heading and notify form', () => {
-    render(<MaintenanceTemplate />);
+    render(<LaunchStatusTemplate variant="maintenance" />);
     expect(screen.getByText("We'll be back shortly")).toBeInTheDocument();
     expect(screen.getByPlaceholderText('you@example.com')).toBeInTheDocument();
   });
 
   it('shows confirmation after notify', () => {
-    render(<MaintenanceTemplate />);
+    render(<LaunchStatusTemplate variant="maintenance" />);
     fireEvent.click(screen.getByRole('button', { name: /Notify me/ }));
     expect(
       screen.getByText("We'll email you when we're back.")
@@ -188,39 +232,10 @@ describe('MaintenanceTemplate', () => {
   });
 
   it('links to contact support', () => {
-    render(<MaintenanceTemplate />);
+    render(<LaunchStatusTemplate variant="maintenance" />);
     expect(
       screen.getByRole('link', { name: /Contact support/ })
     ).toHaveAttribute('href', '/');
-  });
-});
-
-describe('NotFoundTemplate', () => {
-  it('renders default code and message', () => {
-    render(<NotFoundTemplate />);
-    expect(screen.getByText('404')).toBeInTheDocument();
-    expect(screen.getByText('Page not found')).toBeInTheDocument();
-  });
-
-  it('renders custom code and message', () => {
-    render(<NotFoundTemplate code={418} message="I am a teapot" />);
-    expect(screen.getByText('418')).toBeInTheDocument();
-    expect(screen.getByText('I am a teapot')).toBeInTheDocument();
-  });
-
-  it('navigates back on go back', () => {
-    const back = jest.spyOn(window.history, 'back');
-    render(<NotFoundTemplate />);
-    fireEvent.click(screen.getByRole('button', { name: /Go back/ }));
-    expect(back).toHaveBeenCalledTimes(1);
-  });
-
-  it('links home', () => {
-    render(<NotFoundTemplate />);
-    expect(screen.getByRole('link', { name: /Go home/ })).toHaveAttribute(
-      'href',
-      '/'
-    );
   });
 });
 

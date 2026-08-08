@@ -1,7 +1,8 @@
 'use client';
 
-import { Home } from '@/components/page/home';
+import { Home } from '@/components/pages/home';
+import { NextPage } from 'next';
 
-const HomePage = () => <Home />;
+const HomePage: NextPage = () => <Home />;
 
 export default HomePage;

@@ -3,10 +3,10 @@ import { DeleteAccountTemplate } from '../DeleteAccountTemplate';
 import { RecoveryCodesTemplate } from '../RecoveryCodesTemplate';
 import { SecurityOverviewTemplate } from '../SecurityOverviewTemplate';
 import { SessionsTemplate } from '../SessionsTemplate';
-import DeleteAccountPage from '@/app/(templates)/(auth)/delete-account/page';
-import RecoveryCodesPage from '@/app/(templates)/(auth)/recovery-codes/page';
-import SecurityPage from '@/app/(templates)/(auth)/security/page';
-import SessionsPage from '@/app/(templates)/(auth)/sessions/page';
+import DeleteAccountPage from '@/app/(templates)/auth/delete-account/page';
+import RecoveryCodesPage from '@/app/(templates)/auth/recovery-codes/page';
+import SecurityPage from '@/app/(templates)/auth/security/page';
+import SessionsPage from '@/app/(templates)/auth/sessions/page';
 
 describe('SessionsTemplate', () => {
   it('renders the active session list', () => {

@@ -1,22 +1,20 @@
 import { act, fireEvent, render, screen } from '@testing-library/react';
-import {
-  AccordionTemplate,
-  AlertsTemplate,
-  TabsTemplate,
-  PaginationTemplate,
-  TooltipsTemplate,
-  StepperTemplate,
-  UploadTemplate,
-  EmptyStatesTemplate,
-} from '../';
-import AccordionPage from '@/app/(templates)/(app)/accordion/page';
-import AlertsPage from '@/app/(templates)/(app)/alerts/page';
-import TabsPage from '@/app/(templates)/(app)/tabs/page';
-import PaginationPage from '@/app/(templates)/(app)/pagination/page';
-import TooltipsPage from '@/app/(templates)/(app)/tooltips/page';
-import StepperPage from '@/app/(templates)/(app)/stepper/page';
-import UploadPage from '@/app/(templates)/(app)/upload/page';
-import EmptyStatesPage from '@/app/(templates)/(app)/empty-states/page';
+import { AccordionTemplate } from '../../hr/AccordionTemplate';
+import { AlertsTemplate } from '../../hr/AlertsTemplate';
+import { TabsTemplate } from '../../hr/TabsTemplate';
+import { PaginationTemplate } from '../../support/PaginationTemplate';
+import { TooltipsTemplate } from '../../support/TooltipsTemplate';
+import { StepperTemplate } from '../../support/StepperTemplate';
+import { UploadTemplate } from '../../support/UploadTemplate';
+import { EmptyStatesTemplate } from '../../hr/EmptyStatesTemplate';
+import AccordionPage from '@/app/(templates)/hr/accordion/page';
+import AlertsPage from '@/app/(templates)/hr/alerts/page';
+import TabsPage from '@/app/(templates)/hr/tabs/page';
+import PaginationPage from '@/app/(templates)/support/pagination/page';
+import TooltipsPage from '@/app/(templates)/support/tooltips/page';
+import StepperPage from '@/app/(templates)/support/stepper/page';
+import UploadPage from '@/app/(templates)/support/upload/page';
+import EmptyStatesPage from '@/app/(templates)/hr/empty-states/page';
 
 describe('AccordionTemplate', () => {
   it('renders four accordion items in the closed state', () => {

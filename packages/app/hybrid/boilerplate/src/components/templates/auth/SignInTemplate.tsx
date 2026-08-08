@@ -4,9 +4,9 @@ import type { FC } from 'react';
 import { useState } from 'react';
 import { FiMail, FiLock, FiEye, FiEyeOff } from 'react-icons/fi';
 import Link from 'next/link';
-import { Header } from '@/components/organisms/Header';
-import { TextField } from '@/components/atoms/TextField';
-import { Spinner } from '@/components/atoms/Spinner';
+import { Header } from '@/components/organisms/support/Header';
+import { TextField } from '@/components/atoms/auth/TextField';
+import { Spinner } from '@/components/atoms/support/Spinner';
 
 interface SignInTemplateProps {
   onSubmit: (data: { email: string; password: string }) => void | Promise<void>;
@@ -89,7 +89,7 @@ export const SignInTemplate: FC<SignInTemplateProps> = ({
                 </span>
               </label>
               <Link
-                href="/forgot-password"
+                href="/auth/forgot-password"
                 className="text-primary text-sm hover:underline">
                 Forgot password?
               </Link>
@@ -107,7 +107,7 @@ export const SignInTemplate: FC<SignInTemplateProps> = ({
 
         <p className="text-base-content/50 mt-8 text-center text-sm">
           Don&apos;t have an account?{' '}
-          <Link href="/sign-up" className="text-primary hover:underline">
+          <Link href="/auth/sign-up" className="text-primary hover:underline">
             Sign up
           </Link>
         </p>

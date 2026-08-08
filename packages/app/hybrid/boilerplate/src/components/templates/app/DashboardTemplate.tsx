@@ -18,14 +18,14 @@ import {
   FiTrendingUp,
   FiUsers,
 } from 'react-icons/fi';
-import { Header } from '@/components/organisms/Header';
-import { Navbar } from '@/components/organisms/Navbar';
+import { Header } from '@/components/organisms/support/Header';
+import { Navbar } from '@/components/organisms/landing/Navbar';
 
 const NAV_ITEMS = [
   { label: 'Home', href: '/', icon: <FiHome /> },
-  { label: 'About', href: '/about', icon: <FiInfo /> },
-  { label: 'Settings', href: '/settings', icon: <FiSettings /> },
-  { label: 'Version', href: '/version', icon: <FiClock /> },
+  { label: 'About', href: '/shared/about', icon: <FiInfo /> },
+  { label: 'Settings', href: '/app/settings', icon: <FiSettings /> },
+  { label: 'Version', href: '/app/version', icon: <FiClock /> },
 ];
 
 const SIDEBAR_ITEMS = [
