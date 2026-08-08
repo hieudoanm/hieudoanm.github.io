@@ -40,10 +40,10 @@ Each level lives in its own directory in `src/components/`:
 
 ```txt
 src/
-├── atoms/        # 74 components
-├── molecules/    # 74 components
-├── organisms/    # 56 components
-└── templates/    # page-level layouts
+├── atoms/        # 256 components (16 domains × 16)
+├── molecules/    # 256 components (16 domains × 16)
+├── organisms/    # 256 components (16 domains × 16)
+└── templates/    # 257 page-level layouts (16 domains + shared/)
 ```
 
 ## Atoms
@@ -184,9 +184,10 @@ always consciously.
 - Each level has a dedicated folder and a barrel `index.ts` export.
 - Tests are colocated per component and gated at 90% coverage (Jest), so every
   level is exercised in isolation and in combination.
-- The component demo (`ComponentsTemplate` → `AtomsLevel` / `MoleculesLevel` /
-  `OrganismsLevel`) renders every atom, molecule, and organism with interactive
-  state, making the abstract-to-concrete progression visible in one place.
+- The component demo (`Atomic` on the home page → `AtomsLevel` /
+  `MoleculesLevel` / `OrganismsLevel`) renders every atom, molecule, and
+  organism with interactive state, making the abstract-to-concrete progression
+  visible in one place.
 - [CONVENTIONS.md](CONVENTIONS.md) and [ADDING.md](ADDING.md) codify how new
   pieces are added at each level.
 

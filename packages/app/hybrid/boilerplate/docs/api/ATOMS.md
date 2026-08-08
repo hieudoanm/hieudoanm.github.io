@@ -1,1280 +1,380 @@
 # Atoms
 
-Small, presentational, dependency-free building blocks in
-`src/components/atoms/`.
-
-### Avatar
-
-File: `src/components/atoms/Avatar.tsx`
-
-| Prop        | Type                   | Default | Description                           |
-| ----------- | ---------------------- | ------- | ------------------------------------- |
-| `src?`      | `string`               | —       | Image source; absent renders initials |
-| `alt?`      | `string`               | `''`    | Alt text, also used for initials      |
-| `size?`     | `'sm' \| 'md' \| 'lg'` | `'md'`  | Circle size                           |
-| `fallback?` | `string`               | —       | Explicit initials override            |
-
-Without `src` it renders a DaisyUI `avatar placeholder` circle with up to two
-uppercase initials derived from `alt` (or `fallback`).
-
-```tsx
-<Avatar src="/me.png" alt="Jane Doe" size="lg" />
-<Avatar alt="Alex Chen" size="sm" />
-```
-
-### Badge
-
-File: `src/components/atoms/Badge.tsx`
-
-| Prop       | Type                                                                                               | Default     | Description          |
-| ---------- | -------------------------------------------------------------------------------------------------- | ----------- | -------------------- |
-| `variant?` | `'neutral' \| 'primary' \| 'secondary' \| 'accent' \| 'success' \| 'warning' \| 'error' \| 'info'` | `'neutral'` | DaisyUI badge color  |
-| `outline?` | `boolean`                                                                                          | `false`     | Adds `badge-outline` |
-| `children` | `ReactNode`                                                                                        | —           | Badge content        |
-
-```tsx
-<Badge variant="success">Paid</Badge>
-```
-
-### Button
-
-File: `src/components/atoms/Button.tsx`
-
-| Prop         | Type                                                                     | Default     | Description                |
-| ------------ | ------------------------------------------------------------------------ | ----------- | -------------------------- |
-| `variant?`   | `'primary' \| 'secondary' \| 'accent' \| 'ghost' \| 'outline' \| 'link'` | `'primary'` | DaisyUI button color       |
-| `size?`      | `'sm' \| 'md' \| 'lg'`                                                   | `'md'`      | Button size                |
-| `loading?`   | `boolean`                                                                | `false`     | Renders spinner + disables |
-| `disabled?`  | `boolean`                                                                | `false`     | Disables the button        |
-| `onClick?`   | `() => void`                                                             | —           | Click handler              |
-| `type?`      | `'button' \| 'submit' \| 'reset'`                                        | `'button'`  | Native type                |
-| `className?` | `string`                                                                 | `''`        | Extra classes              |
-| `children`   | `ReactNode`                                                              | —           | Button content             |
-
-```tsx
-<Button variant="outline" size="sm" onClick={save}>
-  Save
-</Button>
-```
-
-### Checkbox
-
-File: `src/components/atoms/Checkbox.tsx`
-
-| Prop        | Type                         | Default | Description              |
-| ----------- | ---------------------------- | ------- | ------------------------ |
-| `label`     | `string`                     | —       | Accessible label text    |
-| `checked`   | `boolean`                    | —       | Controlled checked state |
-| `onChange`  | `(checked: boolean) => void` | —       | Called with next value   |
-| `size?`     | `'sm' \| 'md' \| 'lg'`       | `'md'`  | Checkbox size            |
-| `disabled?` | `boolean`                    | `false` | Disables the input       |
-
-Renders a DaisyUI `checkbox checkbox-primary` with a wrapping `label`.
-
-### CodeBlock
-
-File: `src/components/atoms/CodeBlock.tsx` — client component.
-
-| Prop        | Type      | Default | Description                          |
-| ----------- | --------- | ------- | ------------------------------------ |
-| `code`      | `string`  | —       | Source text to display               |
-| `language?` | `string`  | —       | Shown in the header when no title    |
-| `title?`    | `string`  | —       | Header label; defaults to `language` |
-| `showCopy?` | `boolean` | `true`  | Renders a copy-to-clipboard button   |
-
-```tsx
-<CodeBlock code="const x = 1;" language="tsx" title="App.tsx" />
-```
-
-### CopyButton
-
-File: `src/components/atoms/CopyButton.tsx` — client component.
-
-| Prop       | Type                                               | Default     | Description                            |
-| ---------- | -------------------------------------------------- | ----------- | -------------------------------------- |
-| `text`     | `string`                                           | —           | Text written to the clipboard          |
-| `label?`   | `string`                                           | `'Copy'`    | Accessible label shown when not copied |
-| `variant?` | `'primary' \| 'secondary' \| 'ghost' \| 'outline'` | `'outline'` | Button variant                         |
-| `size?`    | `'sm' \| 'md' \| 'lg'`                             | `'sm'`      | Button size                            |
-| `onCopy?`  | `() => void`                                       | —           | Called after a successful write        |
-
-Writes `text` to `navigator.clipboard` and swaps its label to `Copied` for two
-seconds.
-
-```tsx
-<CopyButton text="pnpm install" label="Copy command" />
-```
-
-### Divider
-
-File: `src/components/atoms/Divider.tsx`
-
-| Prop         | Type     | Default | Description                   |
-| ------------ | -------- | ------- | ----------------------------- |
-| `label?`     | `string` | —       | Centered text inside the rule |
-| `className?` | `string` | `''`    | Extra classes                 |
-
-Thin wrapper over the DaisyUI `divider` class.
-
-```tsx
-<Divider label="OR" />
-```
-
-### FileInput
-
-File: `src/components/atoms/FileInput.tsx`
-
-| Prop        | Type                        | Default | Description                  |
-| ----------- | --------------------------- | ------- | ---------------------------- |
-| `label`     | `string`                    | —       | Visible label + `aria-label` |
-| `onChange?` | `(files: FileList) => void` | —       | Called with selected files   |
-| `accept?`   | `string`                    | —       | Native `accept` attribute    |
-| `multiple?` | `boolean`                   | `false` | Allow multi-file selection   |
-| `hint?`     | `string`                    | —       | Muted helper text            |
-
-Renders a DaisyUI `file-input file-input-bordered`.
-
-### Icon
-
-File: `src/components/atoms/Icon.tsx`
-
-| Prop         | Type                                                                                                       | Default | Description            |
-| ------------ | ---------------------------------------------------------------------------------------------------------- | ------- | ---------------------- |
-| `name`       | `'bell' \| 'calendar' \| 'check' \| 'heart' \| 'home' \| 'lock' \| 'mail' \| 'search' \| 'star' \| 'user'` | —       | Feather icon to render |
-| `size?`      | `'xs' \| 'sm' \| 'md' \| 'lg'`                                                                             | `'md'`  | Icon size              |
-| `className?` | `string`                                                                                                   | `''`    | Extra classes          |
-
-Thin wrapper over `react-icons/fi` glyphs so the demo code can reference icons
-by name.
-
-### IconButton
-
-File: `src/components/atoms/IconButton.tsx`
-
-| Prop        | Type                                                         | Default     | Description         |
-| ----------- | ------------------------------------------------------------ | ----------- | ------------------- |
-| `icon`      | `ReactNode`                                                  | —           | Icon content        |
-| `label`     | `string`                                                     | —           | `aria-label`        |
-| `onClick?`  | `() => void`                                                 | —           | Click handler       |
-| `variant?`  | `'primary' \| 'secondary' \| 'ghost' \| 'outline' \| 'link'` | `'primary'` | Button variant      |
-| `size?`     | `'sm' \| 'md' \| 'lg'`                                       | `'md'`      | Button size         |
-| `disabled?` | `boolean`                                                    | `false`     | Disables the button |
-
-Renders a circular `btn btn-circle` button with an accessible label.
-
-```tsx
-<IconButton icon={<Icon name="star" />} label="Favorite" />
-```
-
-### Indicator
-
-File: `src/components/atoms/Indicator.tsx`
-
-| Prop        | Type                                                         | Default     | Description     |
-| ----------- | ------------------------------------------------------------ | ----------- | --------------- |
-| `badge`     | `ReactNode`                                                  | —           | Badge content   |
-| `children`  | `ReactNode`                                                  | —           | Wrapped content |
-| `position?` | `'top-end' \| 'top-start' \| 'bottom-end' \| 'bottom-start'` | `'top-end'` | Corner position |
-
-Overlays a DaisyUI `indicator-item` badge on its children.
-
-```tsx
-<Indicator badge="3">
-  <IconButton icon={<Icon name="bell" />} label="Inbox" />
-</Indicator>
-```
-
-### Kbd
-
-File: `src/components/atoms/Kbd.tsx`
-
-| Prop       | Type        | Default | Description     |
-| ---------- | ----------- | ------- | --------------- |
-| `children` | `ReactNode` | —       | Key combination |
-
-Renders a DaisyUI `<kbd>` keycap.
-
-### NumberField
-
-File: `src/components/atoms/NumberField.tsx` — client component.
-
-| Prop        | Type                      | Default | Description                |
-| ----------- | ------------------------- | ------- | -------------------------- |
-| `label`     | `string`                  | —       | Visible label              |
-| `value`     | `number`                  | —       | Current value              |
-| `onChange`  | `(value: number) => void` | —       | Called with the next value |
-| `min?`      | `number`                  | —       | Lower clamp                |
-| `max?`      | `number`                  | —       | Upper clamp                |
-| `step?`     | `number`                  | `1`     | Increment amount           |
-| `disabled?` | `boolean`                 | `false` | Disables input and buttons |
-
-Number input with `−`/`+` steppers (DaisyUI `join`). Values are clamped to
-`min`/`max` regardless of how they are entered.
-
-```tsx
-<NumberField
-  label="Quantity"
-  value={2}
-  onChange={setQuantity}
-  min={0}
-  max={10}
-/>
-```
-
-### PasswordField
-
-File: `src/components/atoms/PasswordField.tsx` — client component.
-
-| Prop            | Type                      | Default              | Description                     |
-| --------------- | ------------------------- | -------------------- | ------------------------------- |
-| `label`         | `string`                  | —                    | Visible label                   |
-| `value`         | `string`                  | —                    | Current value                   |
-| `onChange`      | `(value: string) => void` | —                    | Called with the next value      |
-| `error?`        | `string`                  | —                    | Error text + `input-error`      |
-| `placeholder?`  | `string`                  | —                    | Placeholder                     |
-| `disabled?`     | `boolean`                 | `false`              | Disables input and toggle       |
-| `autoComplete?` | `string`                  | `'current-password'` | Native `autocomplete` attribute |
-
-Password input with a show/hide toggle button (`Show Password` /
-`Hide Password`).
-
-```tsx
-<PasswordField label="Password" value={password} onChange={setPassword} />
-```
-
-### Progress
-
-File: `src/components/atoms/Progress.tsx`
-
-| Prop         | Type                                                                        | Default     | Description              |
-| ------------ | --------------------------------------------------------------------------- | ----------- | ------------------------ |
-| `value`      | `number`                                                                    | —           | Current value (clamped)  |
-| `max?`       | `number`                                                                    | `100`       | Maximum value            |
-| `size?`      | `'sm' \| 'md' \| 'lg'`                                                      | `'md'`      | Bar height               |
-| `variant?`   | `'primary' \| 'secondary' \| 'accent' \| 'success' \| 'warning' \| 'error'` | `'primary'` | Bar color                |
-| `label?`     | `string`                                                                    | —           | Optional label above bar |
-| `showValue?` | `boolean`                                                                   | `false`     | Renders a `NN%` readout  |
-| `className?` | `string`                                                                    | `''`        | Extra classes            |
-
-```tsx
-<Progress value={72} label="Disk" showValue variant="accent" />
-```
-
-### Radio
-
-File: `src/components/atoms/Radio.tsx`
-
-| Prop        | Type                         | Default | Description              |
-| ----------- | ---------------------------- | ------- | ------------------------ |
-| `label`     | `string`                     | —       | Accessible label text    |
-| `name`      | `string`                     | —       | Radio group name         |
-| `checked`   | `boolean`                    | —       | Controlled checked state |
-| `onChange`  | `(checked: boolean) => void` | —       | Called with next value   |
-| `size?`     | `'sm' \| 'md' \| 'lg'`       | `'md'`  | Radio size               |
-| `disabled?` | `boolean`                    | `false` | Disables the input       |
-
-Renders a DaisyUI `radio radio-primary`; group radios by the same `name`.
-
-### Rating
-
-File: `src/components/atoms/Rating.tsx`
-
-| Prop        | Type                      | Default | Description                     |
-| ----------- | ------------------------- | ------- | ------------------------------- |
-| `value`     | `number`                  | —       | Number of filled stars          |
-| `max?`      | `number`                  | `5`     | Total star count                |
-| `onChange?` | `(value: number) => void` | —       | When set, renders radio buttons |
-| `size?`     | `'sm' \| 'md' \| 'lg'`    | `'md'`  | Star size                       |
-
-Star shapes use the DaisyUI `mask mask-star-2` mask.
-
-### Select
-
-File: `src/components/atoms/Select.tsx`
-
-| Prop           | Type                                 | Default | Description               |
-| -------------- | ------------------------------------ | ------- | ------------------------- |
-| `label`        | `string`                             | —       | Visible label             |
-| `value`        | `string`                             | —       | Controlled selected value |
-| `onChange`     | `(value: string) => void`            | —       | Called on change          |
-| `options`      | `{ label: string; value: string }[]` | —       | Options                   |
-| `placeholder?` | `string`                             | —       | Disabled empty option     |
-| `size?`        | `'sm' \| 'md' \| 'lg'`               | `'md'`  | Select size               |
-| `disabled?`    | `boolean`                            | `false` | Disables the select       |
-
-Renders a DaisyUI `select select-bordered`.
-
-### Separator
-
-File: `src/components/atoms/Separator.tsx`
-
-| Prop         | Type     | Default | Description   |
-| ------------ | -------- | ------- | ------------- |
-| `className?` | `string` | `''`    | Extra classes |
-
-Renders an `<hr>` with `border-base-content/20 my-4`.
-
-### Skeleton
-
-File: `src/components/atoms/Skeleton.tsx`
-
-| Prop         | Type     | Default | Description                          |
-| ------------ | -------- | ------- | ------------------------------------ |
-| `className?` | `string` | `''`    | Size/shape classes (e.g. `h-4 w-24`) |
-
-Renders a DaisyUI `skeleton` loading placeholder.
-
-### Slider
-
-File: `src/components/atoms/Slider.tsx`
-
-| Prop         | Type                      | Default | Description                         |
-| ------------ | ------------------------- | ------- | ----------------------------------- |
-| `label`      | `string`                  | —       | Visible label                       |
-| `value`      | `number`                  | —       | Controlled value                    |
-| `onChange`   | `(value: number) => void` | —       | Called with new value               |
-| `min?`       | `number`                  | `0`     | Range minimum                       |
-| `max?`       | `number`                  | `100`   | Range maximum                       |
-| `step?`      | `number`                  | `1`     | Increment step                      |
-| `showValue?` | `boolean`                 | `false` | Renders the value next to the label |
-| `disabled?`  | `boolean`                 | `false` | Disables the slider                 |
-
-Renders a DaisyUI `range range-primary` range input.
-
-### Spinner
-
-File: `src/components/atoms/Spinner.tsx`
-
-| Prop    | Type                   | Default | Description          |
-| ------- | ---------------------- | ------- | -------------------- |
-| `size?` | `'sm' \| 'md' \| 'lg'` | `'md'`  | Loading spinner size |
-
-Renders a DaisyUI `loading loading-spinner`.
-
-### StatusDot
-
-File: `src/components/atoms/StatusDot.tsx`
-
-| Prop     | Type                                        | Default | Description         |
-| -------- | ------------------------------------------- | ------- | ------------------- |
-| `status` | `'online' \| 'away' \| 'busy' \| 'offline'` | —       | Dot color           |
-| `label?` | `string`                                    | —       | Optional text label |
-
-Small colored presence dot (`bg-success` / `bg-warning` / `bg-error` /
-`bg-base-content/30`).
-
-### Swap
-
-File: `src/components/atoms/Swap.tsx` — client component.
-
-| Prop         | Type                      | Default    | Description                |
-| ------------ | ------------------------- | ---------- | -------------------------- |
-| `first`      | `ReactNode`               | —          | Shown when `on` is `true`  |
-| `second`     | `ReactNode`               | —          | Shown when `on` is `false` |
-| `on`         | `boolean`                 | —          | Controlled active state    |
-| `onToggle`   | `(next: boolean) => void` | —          | Called with the next state |
-| `ariaLabel?` | `string`                  | `'Toggle'` | Accessible label           |
-
-Animated DaisyUI `swap` toggle between two contents. The active face is
-controlled by `on`.
-
-```tsx
-<Swap
-  first={<Icon name="star" />}
-  second={<Icon name="bell" />}
-  on={on}
-  onToggle={setOn}
-/>
-```
-
-### Switch
-
-File: `src/components/atoms/Switch.tsx`
-
-| Prop           | Type                         | Default | Description            |
-| -------------- | ---------------------------- | ------- | ---------------------- |
-| `label`        | `string`                     | —       | Accessible label       |
-| `checked`      | `boolean`                    | —       | Controlled state       |
-| `onChange`     | `(checked: boolean) => void` | —       | Called with next value |
-| `size?`        | `'sm' \| 'md' \| 'lg'`       | `'md'`  | Toggle size            |
-| `disabled?`    | `boolean`                    | `false` | Disables the toggle    |
-| `description?` | `string`                     | —       | Muted helper text      |
-
-Renders a DaisyUI `toggle toggle-primary` with `role="switch"`.
-
-### Tag
-
-File: `src/components/atoms/Tag.tsx`
-
-| Prop        | Type                                                                                               | Default     | Description                 |
-| ----------- | -------------------------------------------------------------------------------------------------- | ----------- | --------------------------- |
-| `label`     | `string`                                                                                           | —           | Tag text                    |
-| `variant?`  | `'neutral' \| 'primary' \| 'secondary' \| 'accent' \| 'success' \| 'warning' \| 'error' \| 'info'` | `'neutral'` | Badge color                 |
-| `onRemove?` | `() => void`                                                                                       | —           | Renders a remove (×) button |
-
-Renders a DaisyUI `badge badge-lg`; combine with `TagInput` for editable lists.
-
-### Textarea
-
-File: `src/components/atoms/Textarea.tsx`
-
-| Prop       | Type                                          | Default | Description                                     |
-| ---------- | --------------------------------------------- | ------- | ----------------------------------------------- |
-| `label`    | `string` (required)                           | —       | Visible label; derives `id` when `id` is absent |
-| `error?`   | `string`                                      | —       | Error text; adds `textarea-error`               |
-| `...props` | `TextareaHTMLAttributes<HTMLTextAreaElement>` | —       | Passed to the `<textarea>`                      |
-
-### TextField
-
-File: `src/components/atoms/TextField.tsx`
-
-| Prop       | Type                                    | Default | Description                                     |
-| ---------- | --------------------------------------- | ------- | ----------------------------------------------- |
-| `label`    | `string` (required)                     | —       | Visible label; derives `id` when `id` is absent |
-| `error?`   | `string`                                | —       | Error text; adds `input-error`                  |
-| `...props` | `InputHTMLAttributes<HTMLInputElement>` | —       | Passed to the `<input>`                         |
-
-```tsx
-<TextField
-  label="Email"
-  type="email"
-  placeholder="you@example.com"
-  error="Required"
-/>
-```
-
-### Tooltip
-
-File: `src/components/atoms/Tooltip.tsx`
-
-| Prop        | Type                                     | Default | Description      |
-| ----------- | ---------------------------------------- | ------- | ---------------- |
-| `content`   | `string`                                 | —       | Tooltip text     |
-| `children`  | `ReactNode`                              | —       | Hover target     |
-| `position?` | `'top' \| 'bottom' \| 'left' \| 'right'` | `'top'` | Tooltip position |
-
-Renders a DaisyUI `tooltip` wrapper using `data-tip`.
-
-### ButtonLink
-
-File: `src/components/atoms/ButtonLink.tsx`
-
-| Prop         | Type                                                                     | Default     | Description        |
-| ------------ | ------------------------------------------------------------------------ | ----------- | ------------------ |
-| `href`       | `string`                                                                 | —           | `next/link` target |
-| `children`   | `ReactNode`                                                              | —           | Link content       |
-| `variant?`   | `'primary' \| 'secondary' \| 'accent' \| 'ghost' \| 'outline' \| 'link'` | `'primary'` | Button variant     |
-| `size?`      | `'sm' \| 'md' \| 'lg'`                                                   | `'md'`      | Button size        |
-| `className?` | `string`                                                                 | `''`        | Extra classes      |
-
-Renders a `next/link` styled as a DaisyUI `btn`, for client-side navigation.
-
-```tsx
-<ButtonLink href="/signup" variant="outline" size="sm">
-  Sign up
-</ButtonLink>
-```
-
-### Collapse
-
-File: `src/components/atoms/Collapse.tsx` — client component.
-
-| Prop         | Type                      | Default | Description                         |
-| ------------ | ------------------------- | ------- | ----------------------------------- |
-| `title`      | `string`                  | —       | Always-visible header text          |
-| `children`   | `ReactNode`               | —       | Hidden body content                 |
-| `open?`      | `boolean`                 | `false` | Controlled open state               |
-| `onChange?`  | `(open: boolean) => void` | —       | Called when the toggle would change |
-| `className?` | `string`                  | `''`    | Extra classes                       |
-
-DaisyUI `collapse collapse-arrow` driven by a visually-hidden checkbox labelled
-with `title`.
-
-```tsx
-<Collapse title="What is this?">Content</Collapse>
-```
-
-### Countdown
-
-File: `src/components/atoms/Countdown.tsx`
-
-| Prop         | Type     | Default | Description         |
-| ------------ | -------- | ------- | ------------------- |
-| `value`      | `number` | —       | Number to display   |
-| `minDigits?` | `number` | `2`     | Minimum digit count |
-| `className?` | `string` | `''`    | Extra classes       |
-
-DaisyUI `countdown` digits driven by the `--value` CSS variable. Negative values
-clamp to `0`.
-
-```tsx
-<Countdown value={12} />
-```
-
-### Mask
-
-File: `src/components/atoms/Mask.tsx`
-
-| Prop         | Type                                                                                     | Default      | Description        |
-| ------------ | ---------------------------------------------------------------------------------------- | ------------ | ------------------ |
-| `src`        | `string`                                                                                 | —            | Image source       |
-| `alt`        | `string`                                                                                 | —            | Image alt text     |
-| `shape?`     | `'squircle' \| 'heart' \| 'hexagon' \| 'hexagon-2' \| 'decagon' \| 'triangle' \| 'star'` | `'squircle'` | DaisyUI mask shape |
-| `className?` | `string`                                                                                 | `''`         | Extra classes      |
-
-Renders an `<img>` with the DaisyUI `mask mask-<shape>` classes.
-
-```tsx
-<Mask src="/avatar.png" alt="Profile" shape="hexagon" />
-```
-
-### OTPInput
-
-File: `src/components/atoms/OTPInput.tsx` — client component.
-
-| Prop        | Type                      | Default           | Description             |
-| ----------- | ------------------------- | ----------------- | ----------------------- |
-| `value`     | `string`                  | —                 | Current digits          |
-| `onChange`  | `(value: string) => void` | —                 | Called with digits only |
-| `length?`   | `number`                  | `6`               | Number of digit boxes   |
-| `label?`    | `string`                  | `'One-time code'` | Accessible name         |
-| `disabled?` | `boolean`                 | `false`           | Disables the input      |
-
-Renders `length` DaisyUI digit boxes plus an `sr-only` textbox
-(`role="textbox"`) that filters non-digits. Controlled via `value`/`onChange`.
-
-```tsx
-<OTPInput label="One-time code" value={code} onChange={setCode} />
-```
-
-### ProgressRing
-
-File: `src/components/atoms/ProgressRing.tsx`
-
-| Prop           | Type      | Default | Description                 |
-| -------------- | --------- | ------- | --------------------------- |
-| `value`        | `number`  | —       | Progress 0–100 (clamped)    |
-| `size?`        | `number`  | `64`    | Diameter in pixels          |
-| `strokeWidth?` | `number`  | `6`     | Ring thickness in pixels    |
-| `showValue?`   | `boolean` | `false` | Renders `NN%` in the center |
-| `className?`   | `string`  | `''`    | Extra classes               |
-
-SVG progress ring with `role="progressbar"` and `aria-valuenow` clamped to
-0–100. Value over `50` uses the `text-primary` accent colour.
-
-```tsx
-<ProgressRing value={75} showValue />
-```
-
-### Stack
-
-File: `src/components/atoms/Stack.tsx`
-
-| Prop         | Type                         | Default      | Description      |
-| ------------ | ---------------------------- | ------------ | ---------------- |
-| `items`      | `ReactNode[]`                | —            | Cards to overlap |
-| `direction?` | `'vertical' \| 'horizontal'` | `'vertical'` | Stack direction  |
-| `className?` | `string`                     | `''`         | Extra classes    |
-
-DaisyUI `stack` for overlapping cards.
-
-```tsx
-<Stack items={[cardA, cardB]} direction="horizontal" />
-```
-
-### Text
-
-File: `src/components/atoms/Text.tsx`
-
-| Prop         | Type                                                                                               | Default     | Description   |
-| ------------ | -------------------------------------------------------------------------------------------------- | ----------- | ------------- |
-| `as?`        | `'p' \| 'span' \| 'div' \| 'small' \| 'strong' \| 'em' \| 'label' \| 'h1' \| 'h2' \| 'h3' \| 'h4'` | `'p'`       | Tag to render |
-| `size?`      | `'xs' \| 'sm' \| 'md' \| 'lg' \| 'xl' \| '2xl'`                                                    | `'md'`      | Font size     |
-| `weight?`    | `'normal' \| 'medium' \| 'semibold' \| 'bold'`                                                     | `'normal'`  | Font weight   |
-| `color?`     | `'default' \| 'muted' \| 'primary' \| 'error' \| 'success'`                                        | `'default'` | Text colour   |
-| `className?` | `string`                                                                                           | `''`        | Extra classes |
-| `children`   | `ReactNode`                                                                                        | —           | Content       |
-
-Polymorphic text rendered via `createElement` with mapped DaisyUI classes.
-
-```tsx
-<Text as="h3" size="lg" weight="semibold">
-  Heading
-</Text>
-```
-
-### AspectRatio
-
-File: `src/components/atoms/AspectRatio.tsx`
-
-| Prop         | Type        | Default  | Description                |
-| ------------ | ----------- | -------- | -------------------------- |
-| `ratio?`     | `number`    | `16 / 9` | Width-to-height ratio      |
-| `className?` | `string`    | `''`     | Extra classes              |
-| `children?`  | `ReactNode` | —        | Content clipped to the box |
-
-Wraps content in a `position: relative` box with a CSS `aspect-ratio`; children
-fill it via `absolute inset-0`. Clips overflow so media never breaks the ratio.
-
-```tsx
-<AspectRatio ratio={1}>
-  <img src="/thumb.png" alt="Thumbnail" />
-</AspectRatio>
-```
-
-### Artboard
-
-File: `src/components/atoms/Artboard.tsx`
-
-| Prop         | Type                            | Default     | Description            |
-| ------------ | ------------------------------- | ----------- | ---------------------- |
-| `title?`     | `string`                        | —           | Accessible group label |
-| `size?`      | `'phone-1' \| ... \| 'phone-6'` | `'phone-1'` | DaisyUI artboard size  |
-| `className?` | `string`                        | `''`        | Extra classes          |
-| `children?`  | `ReactNode`                     | —           | Artboard content       |
-
-Renders a DaisyUI `artboard artboard-demo` phone frame. `title` is used as the
-`aria-label` of the `role="group"` wrapper.
-
-```tsx
-<Artboard size="phone-4" title="Mobile preview">
-  <p>App content</p>
-</Artboard>
-```
-
-### BrowserMockup
-
-File: `src/components/atoms/BrowserMockup.tsx`
-
-| Prop         | Type        | Default | Description              |
-| ------------ | ----------- | ------- | ------------------------ |
-| `url?`       | `string`    | —       | Address shown in the bar |
-| `className?` | `string`    | `''`    | Extra classes            |
-| `children?`  | `ReactNode` | —       | Page content             |
-
-DaisyUI `browser-mockup` with three traffic-light dots and an optional address
-bar.
-
-```tsx
-<BrowserMockup url="https://example.com">Page</BrowserMockup>
-```
-
-### Label
-
-File: `src/components/atoms/Label.tsx`
-
-| Prop         | Type                  | Default | Description             |
-| ------------ | --------------------- | ------- | ----------------------- |
-| `children`   | `ReactNode`           | —       | Label text              |
-| `htmlFor?`   | `string`              | —       | Associated control id   |
-| `className?` | `string`              | `''`    | Extra classes           |
-| `...`        | `LabelHTMLAttributes` | —       | Native label attributes |
-
-Base label styled with `text-sm font-medium`, mirroring the Radix/shadcn
-`Label`.
-
-```tsx
-<Label htmlFor="email">Email</Label>
-```
-
-### LetterAvatar
-
-File: `src/components/atoms/LetterAvatar.tsx`
-
-| Prop         | Type                                                | Default     | Description            |
-| ------------ | --------------------------------------------------- | ----------- | ---------------------- |
-| `name`       | `string`                                            | —           | Name for initials      |
-| `color?`     | `'neutral' \| 'primary' \| 'secondary' \| 'accent'` | `'primary'` | Placeholder background |
-| `size?`      | `'xs' \| 'sm' \| 'md' \| 'lg'`                      | `'md'`      | Avatar size            |
-| `className?` | `string`                                            | `''`        | Extra classes          |
-
-DaisyUI `avatar-placeholder` circle that derives initials from `name` — two
-initials for multi-word names, the first two letters for single words.
-
-```tsx
-<LetterAvatar name="Jane Doe" color="accent" size="lg" />
-```
-
-### PhoneMockup
-
-File: `src/components/atoms/PhoneMockup.tsx`
-
-| Prop         | Type        | Default | Description           |
-| ------------ | ----------- | ------- | --------------------- |
-| `camera?`    | `boolean`   | `true`  | Show the notch camera |
-| `className?` | `string`    | `''`    | Extra classes         |
-| `children?`  | `ReactNode` | —       | Screen content        |
-
-DaisyUI `phone-mockup` frame with an optional `.camera` notch and `.display`.
-
-```tsx
-<PhoneMockup>Screen</PhoneMockup>
-```
-
-### WindowMockup
-
-File: `src/components/atoms/WindowMockup.tsx`
-
-| Prop         | Type        | Default | Description            |
-| ------------ | ----------- | ------- | ---------------------- |
-| `title?`     | `string`    | —       | Title shown in the bar |
-| `className?` | `string`    | `''`    | Extra classes          |
-| `children?`  | `ReactNode` | —       | Window content         |
-
-DaisyUI `window-mockup` with traffic-light dots and an optional window title.
-
-```tsx
-<WindowMockup title="Terminal">$ pnpm build</WindowMockup>
-```
-
-### Clock
-
-File: `src/components/atoms/Clock.tsx` — client component.
-
-| Prop           | Type             | Default | Description   |
-| -------------- | ---------------- | ------- | ------------- |
-| `format?`      | `'12h' \| '24h'` | `'24h'` | Hour format   |
-| `showSeconds?` | `boolean`        | `true`  | Render `:SS`  |
-| `className?`   | `string`         | `''`    | Extra classes |
-
-Renders a live `<time>` in mono tabular numerals, updating every second.
-
-```tsx
-<Clock format="12h" />
-```
-
-### Cube
-
-File: `src/components/atoms/Cube.tsx`
-
-| Prop         | Type                           | Default    | Description           |
-| ------------ | ------------------------------ | ---------- | --------------------- |
-| `size?`      | `number`                       | `96`       | Edge length in pixels |
-| `speed?`     | `'slow' \| 'normal' \| 'fast'` | `'normal'` | Spin duration         |
-| `className?` | `string`                       | `''`       | Extra classes         |
-
-CSS 3D cube with six shaded `primary` faces, `role="img"` and
-`aria-label="Spinning cube"`.
-
-```tsx
-<Cube size={64} speed="slow" />
-```
-
-### Dock
-
-File: `src/components/atoms/Dock.tsx`
-
-| Prop         | Type                                        | Default  | Description     |
-| ------------ | ------------------------------------------- | -------- | --------------- |
-| `items`      | `{ key, label, icon, active?, onClick? }[]` | —        | Dock entries    |
-| `label?`     | `string`                                    | `'Dock'` | Accessible name |
-| `className?` | `string`                                    | `''`     | Extra classes   |
-
-macOS-style dock of icon buttons; active items get a `primary` fill and hover
-lifts the tile up.
-
-```tsx
-<Dock
-  items={[
-    { key: 'home', label: 'Home', icon: <Icon name="home" />, active: true },
-  ]}
-/>
-```
-
-### EditableText
-
-File: `src/components/atoms/EditableText.tsx` — client component.
-
-| Prop           | Type                      | Default           | Description               |
-| -------------- | ------------------------- | ----------------- | ------------------------- |
-| `value`        | `string`                  | —                 | Current text              |
-| `onChange`     | `(value: string) => void` | —                 | Called on commit          |
-| `label?`       | `string`                  | —                 | Accessible input name     |
-| `placeholder?` | `string`                  | `'Click to edit'` | Empty/editing placeholder |
-| `className?`   | `string`                  | `''`              | Extra classes             |
-
-Inline-editable text: click to turn into an input, `Enter`/blur commits,
-`Escape` cancels.
-
-```tsx
-<EditableText label="Project name" value={name} onChange={setName} />
-```
-
-### EmptyPlaceholder
-
-File: `src/components/atoms/EmptyPlaceholder.tsx`
-
-| Prop           | Type        | Default              | Description   |
-| -------------- | ----------- | -------------------- | ------------- |
-| `icon?`        | `ReactNode` | —                    | Large icon    |
-| `title?`       | `string`    | `'Nothing here yet'` | Heading text  |
-| `description?` | `string`    | —                    | Muted copy    |
-| `action?`      | `ReactNode` | —                    | CTA area      |
-| `className?`   | `string`    | `''`                 | Extra classes |
-
-Dashed-border empty-state box; combine with `EmptyState` for richer variants.
-
-```tsx
-<EmptyPlaceholder
-  icon={<Icon name="bell" />}
-  title="No notifications"
-  action={<Button size="sm">Clear</Button>}
-/>
-```
-
-### LinkButton
-
-File: `src/components/atoms/LinkButton.tsx`
-
-| Prop         | Type                                                                     | Default     | Description        |
-| ------------ | ------------------------------------------------------------------------ | ----------- | ------------------ |
-| `href`       | `string`                                                                 | —           | `next/link` target |
-| `children`   | `ReactNode`                                                              | —           | Link content       |
-| `variant?`   | `'primary' \| 'secondary' \| 'accent' \| 'ghost' \| 'outline' \| 'link'` | `'primary'` | Button variant     |
-| `size?`      | `'sm' \| 'md' \| 'lg'`                                                   | `'md'`      | Button size        |
-| `className?` | `string`                                                                 | `''`        | Extra classes      |
-
-`next/link` styled as a DaisyUI `btn` — the same contract as `ButtonLink` with a
-canonical name.
-
-```tsx
-<LinkButton href="/signup" variant="outline">
-  Sign up
-</LinkButton>
-```
-
-### MiniMap
-
-File: `src/components/atoms/MiniMap.tsx`
-
-| Prop         | Type                              | Default | Description                |
-| ------------ | --------------------------------- | ------- | -------------------------- |
-| `sections`   | `{ id: string; label: string }[]` | —       | Page sections              |
-| `active?`    | `string`                          | —       | Id of the highlighted item |
-| `className?` | `string`                          | `''`    | Extra classes              |
-
-Compact page overview (`aria-label="Page overview"`); the active section gets a
-`primary` fill and `aria-current="location"`.
-
-```tsx
-<MiniMap sections={[{ id: 'intro', label: 'Intro' }]} active="intro" />
-```
-
-### TagCloud
-
-File: `src/components/atoms/TagCloud.tsx`
-
-| Prop         | Type                                  | Default | Description                  |
-| ------------ | ------------------------------------- | ------- | ---------------------------- |
-| `tags`       | `{ label: string; weight: number }[]` | —       | Tags with relative weights   |
-| `minSize?`   | `number`                              | `12`    | Smallest font size in pixels |
-| `maxSize?`   | `number`                              | `28`    | Largest font size in pixels  |
-| `className?` | `string`                              | `''`    | Extra classes                |
-
-Sizes tag labels proportionally to their `weight` between `minSize` and
-`maxSize`; returns `null` for an empty list.
-
-```tsx
-<TagCloud tags={[{ label: 'React', weight: 9 }]} />
-```
-
-### Container
-
-File: `src/components/atoms/Container.tsx`
-
-| Prop         | Type                                                       | Default | Description      |
-| ------------ | ---------------------------------------------------------- | ------- | ---------------- |
-| `size?`      | `'sm' \| 'md' \| 'lg' \| 'xl' \| '2xl' \| '3xl' \| 'full'` | `'xl'`  | Max-width step   |
-| `className?` | `string`                                                   | `''`    | Extra classes    |
-| `children`   | `ReactNode`                                                | —       | Centered content |
-
-Centres content with a responsive max-width and horizontal padding.
-
-```tsx
-<Container size="lg">…</Container>
-```
-
-### Grid
-
-File: `src/components/atoms/Grid.tsx`
-
-| Prop         | Type                                             | Default | Description       |
-| ------------ | ------------------------------------------------ | ------- | ----------------- |
-| `cols?`      | `1 \| 2 \| 3 \| 4 \| 5 \| 6`                     | `1`     | Base column count |
-| `smCols?`    | `1 \| 2 \| 3 \| 4 \| 5 \| 6`                     | —       | Columns at `sm`+  |
-| `lgCols?`    | `1 \| 2 \| 3 \| 4 \| 5 \| 6`                     | —       | Columns at `lg`+  |
-| `gap?`       | `'none' \| 'xs' \| 'sm' \| 'md' \| 'lg' \| 'xl'` | `'md'`  | Gap               |     |
-| `className?` | `string`                                         | `''`    | Extra classes     |
-| `children`   | `ReactNode`                                      | —       | Grid cells        |
-
-Tailwind `grid` with optional responsive column overrides.
-
-```tsx
-<Grid cols={2} lgCols={4} gap="lg">
-  …
-</Grid>
-```
-
-### Hover3D
-
-File: `src/components/atoms/Hover3D.tsx`
-
-| Prop         | Type        | Default | Description     |
-| ------------ | ----------- | ------- | --------------- |
-| `children`   | `ReactNode` | —       | Content to tilt |
-| `className?` | `string`    | `''`    | Extra classes   |
-
-DaisyUI `hover-3d` wrapper — content lifts with a 3D perspective on hover.
-
-```tsx
-<Hover3D>
-  <Card>…</Card>
-</Hover3D>
-```
-
-### HoverGallery
-
-File: `src/components/atoms/HoverGallery.tsx`
-
-| Prop         | Type                             | Default | Description     |
-| ------------ | -------------------------------- | ------- | --------------- |
-| `images`     | `{ src: string; alt: string }[]` | —       | Images to stack |
-| `className?` | `string`                         | `''`    | Extra classes   |
-
-DaisyUI `hover-gallery` — stacked images that fan out on hover.
-
-```tsx
-<HoverGallery images={[{ src: '/a.png', alt: 'A' }]} />
-```
-
-### Loading
-
-File: `src/components/atoms/Loading.tsx`
-
-| Prop         | Type                                                              | Default     | Description         |
-| ------------ | ----------------------------------------------------------------- | ----------- | ------------------- |
-| `variant?`   | `'spinner' \| 'dots' \| 'ring' \| 'ball' \| 'bars' \| 'infinity'` | `'spinner'` | DaisyUI `loading-*` |
-| `size?`      | `'xs' \| 'sm' \| 'md' \| 'lg' \| 'xl'`                            | `'md'`      | Size                |
-| `className?` | `string`                                                          | `''`        | Extra classes       |
-
-Standalone DaisyUI `loading` indicator — the raw spinner without Button wiring.
-
-```tsx
-<Loading variant="dots" size="lg" />
-```
-
-### Portal
-
-File: `src/components/atoms/Portal.tsx` — client component.
-
-| Prop         | Type                                  | Default | Description                   |
-| ------------ | ------------------------------------- | ------- | ----------------------------- |
-| `children`   | `ReactNode`                           | —       | Content to portal             |
-| `container?` | `Element \| DocumentFragment \| null` | —       | Target (else `document.body`) |
-
-Renders children into a container via `createPortal`; returns `null` during SSR.
-
-```tsx
-<Portal>…</Portal>
-```
-
-### Slot
-
-File: `src/components/atoms/Slot.tsx` — client component.
-
-| Prop         | Type              | Default | Description                 |
-| ------------ | ----------------- | ------- | --------------------------- |
-| `children`   | `ReactElement`    | —       | Child element to decorate   |
-| `className?` | `string`          | `''`    | Class merged onto child     |
-| `onClick?`   | `(event) => void` | —       | Handler chained after child |
-
-Merges `className` and chains `onClick` onto its single child — the Radix `Slot`
-pattern.
-
-```tsx
-<Slot className="btn btn-primary">
-  <a href="/signup">Sign up</a>
-</Slot>
-```
-
-### Spacer
-
-File: `src/components/atoms/Spacer.tsx`
-
-| Prop         | Type                         | Default        | Description          |
-| ------------ | ---------------------------- | -------------- | -------------------- |
-| `axis?`      | `'horizontal' \| 'vertical'` | `'horizontal'` | Which axis to expand |
-| `size?`      | `number`                     | —              | Fixed size (px)      |
-| `className?` | `string`                     | `''`           | Extra classes        |
-
-Invisible flex filler: grows to fill free space, or reserves a fixed pixel size.
-
-```tsx
-<Spacer />
-<Spacer axis="vertical" size={24} />
-```
-
-### TextRotate
-
-File: `src/components/atoms/TextRotate.tsx`
-
-| Prop         | Type       | Default | Description            |
-| ------------ | ---------- | ------- | ---------------------- |
-| `words`      | `string[]` | —       | Words to cycle through |
-| `duration?`  | `number`   | `3000`  | Cycle duration in ms   |
-| `className?` | `string`   | `''`    | Extra classes          |
-
-DaisyUI `text-rotate` — vertically stacked words that rotate on an interval.
-
-```tsx
-<TextRotate words={['build', 'ship', 'scale']} />
-```
-
-### ThemeController
-
-File: `src/components/atoms/ThemeController.tsx` — client component.
-
-| Prop        | Type                                        | Default | Description            |
-| ----------- | ------------------------------------------- | ------- | ---------------------- |
-| `theme`     | `string`                                    | —       | DaisyUI theme name     |
-| `checked?`  | `boolean`                                   | `false` | Controlled check state |
-| `label?`    | `string`                                    | —       | Optional text label    |
-| `onChange?` | `(checked: boolean, theme: string) => void` | —       | Change callback        |
-
-DaisyUI `theme-controller` checkbox that carries a theme value for the global
-`data-theme` swap.
-
-```tsx
-<ThemeController theme="night" label="Night" />
-```
-
-### Validator
-
-File: `src/components/atoms/Validator.tsx` — client component.
-
-| Prop         | Type        | Default | Description               |
-| ------------ | ----------- | ------- | ------------------------- |
-| `children`   | `ReactNode` | —       | Single form child         |
-| `hint?`      | `string`    | —       | Muted helper text         |
-| `error?`     | `string`    | —       | Error text + `text-error` |
-| `className?` | `string`    | `''`    | Extra classes             |
-
-Adds DaisyUI `validator` / `validator-hint` to a single input child
-(non-textarea) and reflects `error` via `aria-invalid`.
-
-```tsx
-<Validator hint="8+ characters" error={error}>
-  <input type="password" />
-</Validator>
-```
-
-### VisuallyHidden
-
-File: `src/components/atoms/VisuallyHidden.tsx`
-
-| Prop         | Type        | Default | Description        |
-| ------------ | ----------- | ------- | ------------------ |
-| `children`   | `ReactNode` | —       | Screen-reader text |
-| `className?` | `string`    | `''`    | Extra classes      |
-
-`sr-only` wrapper for accessible, invisible text.
-
-```tsx
-<VisuallyHidden>Loading…</VisuallyHidden>
-```
-
-### BentoGrid
-
-File: `src/components/atoms/BentoGrid.tsx`
-
-| Prop         | Type                                     | Default | Description   |
-| ------------ | ---------------------------------------- | ------- | ------------- |
-| `cells`      | `{ key, content, colSpan?, rowSpan? }[]` | —       | Grid cells    |
-| `className?` | `string`                                 | `''`    | Extra classes |
-
-`colSpan` (1–4) and `rowSpan` (1–3) are mapped to Tailwind `col-span-*` /
-`row-span-*` inside a fixed `grid-cols-4` layout.
-
-```tsx
-<BentoGrid
-  cells={[
-    { key: 'a', content: <Hero />, colSpan: 2, rowSpan: 2 },
-    { key: 'b', content: <Stat /> },
-  ]}
-/>
-```
-
-### CountUp
-
-File: `src/components/atoms/CountUp.tsx` — client component.
-
-| Prop         | Type     | Default | Description            |
-| ------------ | -------- | ------- | ---------------------- |
-| `end`        | `number` | —       | Target value           |
-| `duration?`  | `number` | `1000`  | Animation length in ms |
-| `start?`     | `number` | `0`     | Starting value         |
-| `prefix?`    | `string` | `''`    | Text before the value  |
-| `suffix?`    | `string` | `''`    | Text after the value   |
-| `decimals?`  | `number` | `0`     | Decimal places         |
-| `className?` | `string` | `''`    | Extra classes          |
-
-Animates from `start` to `end` with cubic ease-out using a 16 ms interval.
-
-```tsx
-<CountUp end={4200} prefix="+" duration={1500} />
-```
-
-### GlowCard
-
-File: `src/components/atoms/GlowCard.tsx`
-
-| Prop         | Type                                                                        | Default     | Description         |
-| ------------ | --------------------------------------------------------------------------- | ----------- | ------------------- |
-| `children`   | `ReactNode`                                                                 | —           | Card content        |
-| `color?`     | `'primary' \| 'secondary' \| 'accent' \| 'success' \| 'warning' \| 'error'` | `'primary'` | Glow color on hover |
-| `title?`     | `string`                                                                    | —           | Optional heading    |
-| `className?` | `string`                                                                    | `''`        | Extra classes       |
-
-DaisyUI `card` that casts a colored `hover:shadow-*` glow.
-
-```tsx
-<GlowCard color="accent" title="Sparkles">
-  …
-</GlowCard>
-```
-
-### GradientText
-
-File: `src/components/atoms/GradientText.tsx`
-
-| Prop         | Type                                       | Default     | Description          |
-| ------------ | ------------------------------------------ | ----------- | -------------------- |
-| `children`   | `ReactNode`                                | —           | Text to style        |
-| `from?`      | theme color                                | `'primary'` | Gradient start       |
-| `to?`        | theme color                                | `'accent'`  | Gradient end         |
-| `via?`       | theme color                                | —           | Optional middle stop |
-| `direction?` | `'r' \| 'l' \| 't' \| 'b' \| 'tr' \| 'br'` | `'r'`       | Gradient direction   |
-| `className?` | `string`                                   | `''`        | Extra classes        |
-
-Applies `bg-clip-text text-transparent` over a Tailwind gradient.
-
-```tsx
-<GradientText from="primary" to="warning" direction="br">
-  Hello
-</GradientText>
-```
-
-### ImageComparison
-
-File: `src/components/atoms/ImageComparison.tsx` — client component.
-
-| Prop         | Type     | Default | Description           |
-| ------------ | -------- | ------- | --------------------- |
-| `before`     | `string` | —       | Overlay image source  |
-| `beforeAlt`  | `string` | —       | Overlay image alt     |
-| `after`      | `string` | —       | Base image source     |
-| `afterAlt`   | `string` | —       | Base image alt        |
-| `initial?`   | `number` | `50`    | Initial split percent |
-| `className?` | `string` | `''`    | Extra classes         |
-
-Pointer-drag before/after slider; the divider is a `role="slider"` button and
-the split is clamped to 0–100.
-
-```tsx
-<ImageComparison
-  before="/old.png"
-  beforeAlt="Old"
-  after="/new.png"
-  afterAlt="New"
-/>
-```
-
-### Magnetic
-
-File: `src/components/atoms/Magnetic.tsx` — client component.
-
-| Prop         | Type        | Default | Description          |
-| ------------ | ----------- | ------- | -------------------- |
-| `children`   | `ReactNode` | —       | Content to magnetise |
-| `strength?`  | `number`    | `12`    | Max offset in px     |
-| `className?` | `string`    | `''`    | Extra classes        |
-
-Translates the wrapper toward the pointer and resets on leave.
-
-```tsx
-<Magnetic strength={18}>
-  <Button>Hover me</Button>
-</Magnetic>
-```
-
-### ScrollProgress
-
-File: `src/components/atoms/ScrollProgress.tsx` — client component.
-
-| Prop         | Type     | Default        | Description     |
-| ------------ | -------- | -------------- | --------------- |
-| `color?`     | `string` | `'bg-primary'` | Bar color class |
-| `className?` | `string` | `''`           | Extra classes   |
-
-Fixed top bar (`role="progressbar"`) reflecting page scroll on `scroll` and
-`resize`.
-
-```tsx
-<ScrollProgress />
-```
-
-### Shimmer
-
-File: `src/components/atoms/Shimmer.tsx`
-
-| Prop         | Type     | Default        | Description         |
-| ------------ | -------- | -------------- | ------------------- |
-| `rounded?`   | `string` | `'rounded-lg'` | Corner radius class |
-| `className?` | `string` | `''`           | Extra classes       |
-
-Skeleton placeholder with an animated diagonal highlight; injects the
-`hv-shimmer` keyframes once.
-
-```tsx
-<Shimmer className="h-4 w-32" />
-```
-
-### Spotlight
-
-File: `src/components/atoms/Spotlight.tsx` — client component.
-
-| Prop         | Type        | Default | Description      |
-| ------------ | ----------- | ------- | ---------------- |
-| `children`   | `ReactNode` | —       | Spotlight target |
-| `className?` | `string`    | `''`    | Extra classes    |
-
-Tracks the pointer into `--x` / `--y` CSS variables that drive a radial gradient
-overlay (visible on `group-hover`).
-
-```tsx
-<Spotlight>
-  <Card>Bright idea</Card>
-</Spotlight>
-```
-
-### StarBorder
-
-File: `src/components/atoms/StarBorder.tsx`
-
-| Prop         | Type        | Default     | Description    |
-| ------------ | ----------- | ----------- | -------------- |
-| `children`   | `ReactNode` | —           | Inner content  |
-| `from?`      | theme color | `'primary'` | Gradient start |
-| `to?`        | theme color | `'accent'`  | Gradient end   |
-| `className?` | `string`    | `''`        | Extra classes  |
-
-A 1px gradient border frame around a `bg-base-100` inner panel.
-
-```tsx
-<StarBorder from="success" to="warning">
-  Featured
-</StarBorder>
-```
+Small, presentational, dependency-free building blocks.
+
+**256 components** across 16 domains, one file per component in
+`src/components/atoms/<domain>/<Name>.tsx`. Every component exports
+`export const <Name>: FC<<Name>Props>` with a colocated `interface <Name>Props`;
+props are listed verbatim from the interface. `Client` marks components that
+start with `'use client';`.
+
+## app
+
+Workspace & productivity.
+
+| Component         | File                            | Props                                                                                                                                          | Client |
+| ----------------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| `Clock`           | `atoms/app/Clock.tsx`           | `format?: '12h' \| '24h'; showSeconds?: boolean; className?: string`                                                                           | client |
+| `CountUp`         | `atoms/app/CountUp.tsx`         | `end: number; duration?: number; start?: number; prefix?: string; suffix?: string; decimals?: number; className?: string`                      | client |
+| `Countdown`       | `atoms/app/Countdown.tsx`       | `value: number; minDigits?: number; className?: string`                                                                                        | —      |
+| `GlowCard`        | `atoms/app/GlowCard.tsx`        | `children: ReactNode; color?: GlowColor; title?: string; className?: string`                                                                   | —      |
+| `GradientText`    | `atoms/app/GradientText.tsx`    | `children: ReactNode; from?: ThemeColor; to?: ThemeColor; via?: ThemeColor; direction?: GradientDirection; className?: string`                 | —      |
+| `Magnetic`        | `atoms/app/Magnetic.tsx`        | `children: ReactNode; strength?: number; className?: string`                                                                                   | client |
+| `Progress`        | `atoms/app/Progress.tsx`        | `value: number; max?: number; size?: 'sm' \| 'md' \| 'lg'; variant?: ProgressVariant; label?: string; showValue?: boolean; className?: string` | —      |
+| `ProgressRing`    | `atoms/app/ProgressRing.tsx`    | `value: number; size?: number; strokeWidth?: number; showValue?: boolean; className?: string`                                                  | —      |
+| `Rating`          | `atoms/app/Rating.tsx`          | `value: number; max?: number; onChange?: (value: number) => void; size?: 'sm' \| 'md' \| 'lg'`                                                 | —      |
+| `ScrollProgress`  | `atoms/app/ScrollProgress.tsx`  | `color?: string; className?: string`                                                                                                           | client |
+| `Shimmer`         | `atoms/app/Shimmer.tsx`         | `className?: string; rounded?: string`                                                                                                         | —      |
+| `Spotlight`       | `atoms/app/Spotlight.tsx`       | `children: ReactNode; className?: string`                                                                                                      | client |
+| `StarBorder`      | `atoms/app/StarBorder.tsx`      | `children: ReactNode; from?: ThemeColor; to?: ThemeColor; className?: string`                                                                  | —      |
+| `StatusDot`       | `atoms/app/StatusDot.tsx`       | `status: Status; label?: string`                                                                                                               | —      |
+| `Swap`            | `atoms/app/Swap.tsx`            | `first: ReactNode; second: ReactNode; on: boolean; onToggle: (next: boolean) => void; ariaLabel?: string`                                      | client |
+| `ThemeController` | `atoms/app/ThemeController.tsx` | `theme: string; checked?: boolean; label?: string; onChange?: (checked: boolean, theme: string) => void`                                       | client |
+
+## auth
+
+Auth, security & account.
+
+| Component        | File                            | Props                                                                                                                                                             | Client |
+| ---------------- | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| `Checkbox`       | `atoms/auth/Checkbox.tsx`       | `label: string; checked: boolean; onChange: (checked: boolean) => void; size?: 'sm' \| 'md' \| 'lg'; disabled?: boolean`                                          | —      |
+| `CopyButton`     | `atoms/auth/CopyButton.tsx`     | `text: string; label?: string; variant?: 'primary' \| 'secondary' \| 'ghost' \| 'outline'; size?: 'sm' \| 'md' \| 'lg'; onCopy?: () => void`                      | client |
+| `FileInput`      | `atoms/auth/FileInput.tsx`      | `label: string; onChange?: (files: FileList \| null) => void; accept?: string; multiple?: boolean; hint?: string`                                                 | —      |
+| `Kbd`            | `atoms/auth/Kbd.tsx`            | `children: ReactNode`                                                                                                                                             | —      |
+| `Label`          | `atoms/auth/Label.tsx`          | `extends LabelHTMLAttributes<HTMLLabelElement>; children: ReactNode`                                                                                              | —      |
+| `NumberField`    | `atoms/auth/NumberField.tsx`    | `label: string; value: number; onChange: (value: number) => void; min?: number; max?: number; step?: number; disabled?: boolean`                                  | client |
+| `OTPInput`       | `atoms/auth/OTPInput.tsx`       | `value: string; onChange: (value: string) => void; length?: number; label?: string; disabled?: boolean`                                                           | client |
+| `PasswordField`  | `atoms/auth/PasswordField.tsx`  | `label: string; value: string; onChange: (value: string) => void; error?: string; placeholder?: string; disabled?: boolean; autoComplete?: string`                | client |
+| `Radio`          | `atoms/auth/Radio.tsx`          | `label: string; name: string; checked: boolean; onChange: (checked: boolean) => void; size?: 'sm' \| 'md' \| 'lg'; disabled?: boolean`                            | —      |
+| `Select`         | `atoms/auth/Select.tsx`         | `label: string; value: string; onChange: (value: string) => void; options: SelectOption[]; placeholder?: string; size?: 'sm' \| 'md' \| 'lg'; disabled?: boolean` | —      |
+| `Slider`         | `atoms/auth/Slider.tsx`         | `label: string; value: number; onChange: (value: number) => void; min?: number; max?: number; step?: number; showValue?: boolean; disabled?: boolean`             | —      |
+| `Switch`         | `atoms/auth/Switch.tsx`         | `label: string; checked: boolean; onChange: (checked: boolean) => void; size?: 'sm' \| 'md' \| 'lg'; disabled?: boolean; description?: string`                    | —      |
+| `TextField`      | `atoms/auth/TextField.tsx`      | `extends InputHTMLAttributes<HTMLInputElement>; label: string; error?: string`                                                                                    | —      |
+| `Textarea`       | `atoms/auth/Textarea.tsx`       | `extends TextareaHTMLAttributes<HTMLTextAreaElement>; label: string; error?: string`                                                                              | —      |
+| `Validator`      | `atoms/auth/Validator.tsx`      | `hint?: string; error?: string; className?: string; children: ReactNode`                                                                                          | client |
+| `VisuallyHidden` | `atoms/auth/VisuallyHidden.tsx` | `children: ReactNode; className?: string`                                                                                                                         | —      |
+
+## blog
+
+Blog, course & learning.
+
+| Component      | File                          | Props                                                                                                            | Client |
+| -------------- | ----------------------------- | ---------------------------------------------------------------------------------------------------------------- | ------ |
+| `ArticleBadge` | `atoms/blog/ArticleBadge.tsx` | `children: ReactNode; variant?: BadgeVariant`                                                                    | —      |
+| `AuthorAvatar` | `atoms/blog/AuthorAvatar.tsx` | `name: string; src?: string; size?: AvatarSize`                                                                  | —      |
+| `CategoryTag`  | `atoms/blog/CategoryTag.tsx`  | `label: string; href?: string; variant?: BadgeVariant`                                                           | —      |
+| `DateStamp`    | `atoms/blog/DateStamp.tsx`    | `date: string`                                                                                                   | —      |
+| `ExcerptText`  | `atoms/blog/ExcerptText.tsx`  | `text: string; limit?: number; className?: string`                                                               | —      |
+| `HashtagLabel` | `atoms/blog/HashtagLabel.tsx` | `label: string; href?: string; size?: HashtagSize`                                                               | —      |
+| `HeadingText`  | `atoms/blog/HeadingText.tsx`  | `children: ReactNode; level?: 1 \| 2 \| 3 \| 4 \| 5 \| 6; className?: string`                                    | —      |
+| `KeywordTag`   | `atoms/blog/KeywordTag.tsx`   | `label: string; href?: string`                                                                                   | —      |
+| `MetaLabel`    | `atoms/blog/MetaLabel.tsx`    | `children: ReactNode; className?: string`                                                                        | —      |
+| `ReadingTime`  | `atoms/blog/ReadingTime.tsx`  | `minutes: number; label?: string`                                                                                | —      |
+| `Tag`          | `atoms/blog/Tag.tsx`          | `label: string; variant?: TagVariant; onRemove?: () => void`                                                     | —      |
+| `TagCloud`     | `atoms/blog/TagCloud.tsx`     | `tags: TagCloudTag[]; minSize?: number; maxSize?: number; className?: string`                                    | —      |
+| `Text`         | `atoms/blog/Text.tsx`         | `as?: TextTag; size?: TextSize; weight?: TextWeight; color?: TextColor; className?: string; children: ReactNode` | —      |
+| `TextRotate`   | `atoms/blog/TextRotate.tsx`   | `words: string[]; duration?: number; className?: string`                                                         | —      |
+| `TitleText`    | `atoms/blog/TitleText.tsx`    | `children: ReactNode; level?: 1 \| 2 \| 3 \| 4 \| 5 \| 6; className?: string`                                    | —      |
+| `WordCount`    | `atoms/blog/WordCount.tsx`    | `text?: string; count?: number; label?: string`                                                                  | —      |
+
+## crm
+
+Sales, CRM & commerce ops.
+
+| Component         | File                            | Props                                                                                                          | Client |
+| ----------------- | ------------------------------- | -------------------------------------------------------------------------------------------------------------- | ------ |
+| `AccountIcon`     | `atoms/crm/AccountIcon.tsx`     | `name: string; size?: IconSize`                                                                                | —      |
+| `BentoGrid`       | `atoms/crm/BentoGrid.tsx`       | `cells: BentoCell[]; className?: string`                                                                       | —      |
+| `CompanyIcon`     | `atoms/crm/CompanyIcon.tsx`     | `name: string; src?: string; size?: IconSize`                                                                  | —      |
+| `ContactAvatar`   | `atoms/crm/ContactAvatar.tsx`   | `name: string; src?: string; size?: AvatarSize; color?: AvatarColor`                                           | —      |
+| `ContactInitials` | `atoms/crm/ContactInitials.tsx` | `name: string; size?: AvatarSize; color?: AvatarColor`                                                         | —      |
+| `DealPriority`    | `atoms/crm/DealPriority.tsx`    | `priority: PriorityLevel; label?: string`                                                                      | —      |
+| `Indicator`       | `atoms/crm/Indicator.tsx`       | `badge: ReactNode; children: ReactNode; position?: 'top-end' \| 'top-start' \| 'bottom-end' \| 'bottom-start'` | —      |
+| `LeadStatus`      | `atoms/crm/LeadStatus.tsx`      | `status: LeadStatusValue`                                                                                      | —      |
+| `PhoneIcon`       | `atoms/crm/PhoneIcon.tsx`       | `size?: number; className?: string`                                                                            | —      |
+| `PipelineStage`   | `atoms/crm/PipelineStage.tsx`   | `stage: string; index?: number; variant?: BadgeVariant`                                                        | —      |
+| `RevenueBadge`    | `atoms/crm/RevenueBadge.tsx`    | `value: number; prefix?: string; variant?: BadgeVariant`                                                       | —      |
+| `SalesTrend`      | `atoms/crm/SalesTrend.tsx`      | `value: number; suffix?: string; label?: string`                                                               | —      |
+| `StageCount`      | `atoms/crm/StageCount.tsx`      | `count: number; label?: string`                                                                                | —      |
+| `TeamAvatar`      | `atoms/crm/TeamAvatar.tsx`      | `name: string; src?: string; size?: AvatarSize; color?: AvatarColor; ring?: boolean`                           | —      |
+| `ValueAmount`     | `atoms/crm/ValueAmount.tsx`     | `value: number; currency?: string; decimals?: number; className?: string`                                      | —      |
+| `WinRate`         | `atoms/crm/WinRate.tsx`         | `rate: number; label?: string`                                                                                 | —      |
+
+## developer
+
+Developer platform & IoT.
+
+| Component         | File                                  | Props                                                                                                                                             | Client |
+| ----------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| `Artboard`        | `atoms/developer/Artboard.tsx`        | `title?: string; size?: ArtboardSize; className?: string; children?: ReactNode`                                                                   | —      |
+| `AspectRatio`     | `atoms/developer/AspectRatio.tsx`     | `ratio?: number; className?: string; children?: ReactNode`                                                                                        | —      |
+| `Avatar`          | `atoms/developer/Avatar.tsx`          | `src?: string; alt?: string; size?: 'sm' \| 'md' \| 'lg'; fallback?: string`                                                                      | —      |
+| `BrowserMockup`   | `atoms/developer/BrowserMockup.tsx`   | `url?: string; className?: string; children?: ReactNode`                                                                                          | —      |
+| `CodeBlock`       | `atoms/developer/CodeBlock.tsx`       | `code: string; language?: string; title?: string; showCopy?: boolean`                                                                             | client |
+| `Cube`            | `atoms/developer/Cube.tsx`            | `size?: number; speed?: 'slow' \| 'normal' \| 'fast'; className?: string`                                                                         | —      |
+| `Dock`            | `atoms/developer/Dock.tsx`            | `items: DockItem[]; label?: string; className?: string`                                                                                           | —      |
+| `Hover3D`         | `atoms/developer/Hover3D.tsx`         | `children: ReactNode; className?: string`                                                                                                         | —      |
+| `HoverGallery`    | `atoms/developer/HoverGallery.tsx`    | `images: GalleryImage[]; className?: string`                                                                                                      | —      |
+| `Icon`            | `atoms/developer/Icon.tsx`            | `name: IconName; size?: 'xs' \| 'sm' \| 'md' \| 'lg'; className?: string`                                                                         | —      |
+| `ImageComparison` | `atoms/developer/ImageComparison.tsx` | `before: string; beforeAlt: string; after: string; afterAlt: string; initial?: number; className?: string`                                        | client |
+| `LetterAvatar`    | `atoms/developer/LetterAvatar.tsx`    | `name: string; color?: LetterAvatarColor; size?: LetterAvatarSize; className?: string`                                                            | —      |
+| `Mask`            | `atoms/developer/Mask.tsx`            | `src: string; alt: string; shape?: \| 'squircle' \| 'heart' \| 'hexagon' \| 'hexagon-2' \| 'decagon' \| 'triangle' \| 'star'; className?: string` | —      |
+| `MiniMap`         | `atoms/developer/MiniMap.tsx`         | `sections: MiniMapSection[]; active?: string; className?: string`                                                                                 | —      |
+| `PhoneMockup`     | `atoms/developer/PhoneMockup.tsx`     | `camera?: boolean; className?: string; children?: ReactNode`                                                                                      | —      |
+| `WindowMockup`    | `atoms/developer/WindowMockup.tsx`    | `title?: string; className?: string; children?: ReactNode`                                                                                        | —      |
+
+## finance
+
+Finance & investing.
+
+| Component         | File                                | Props                                                                                                                     | Client |
+| ----------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------ |
+| `AccountBalance`  | `atoms/finance/AccountBalance.tsx`  | `accountName: string; balance: number; currency?: string; variant?: 'default' \| 'credit' \| 'debit'; className?: string` | —      |
+| `AmountText`      | `atoms/finance/AmountText.tsx`      | `amount: number; currency?: string; className?: string`                                                                   | —      |
+| `BalanceLabel`    | `atoms/finance/BalanceLabel.tsx`    | `label: string; balance: number; currency?: string; className?: string`                                                   | —      |
+| `BudgetBar`       | `atoms/finance/BudgetBar.tsx`       | `value: number; max?: number; label?: string; className?: string`                                                         | —      |
+| `CashFlow`        | `atoms/finance/CashFlow.tsx`        | `inflow: number; outflow: number; currency?: string; className?: string`                                                  | —      |
+| `CurrencyTag`     | `atoms/finance/CurrencyTag.tsx`     | `code: string; amount?: number; className?: string`                                                                       | —      |
+| `ExpenseIcon`     | `atoms/finance/ExpenseIcon.tsx`     | `label?: string; size?: 'sm' \| 'md' \| 'lg'; className?: string`                                                         | —      |
+| `IncomeIcon`      | `atoms/finance/IncomeIcon.tsx`      | `label?: string; size?: 'sm' \| 'md' \| 'lg'; className?: string`                                                         | —      |
+| `InterestRate`    | `atoms/finance/InterestRate.tsx`    | `rate: number; period?: string; className?: string`                                                                       | —      |
+| `LimitBadge`      | `atoms/finance/LimitBadge.tsx`      | `limit: number; used?: number; currency?: string; className?: string`                                                     | —      |
+| `MonthlyStat`     | `atoms/finance/MonthlyStat.tsx`     | `label: string; value: string \| number; className?: string`                                                              | —      |
+| `PaymentStatus`   | `atoms/finance/PaymentStatus.tsx`   | `status: PaymentStatusValue; className?: string`                                                                          | —      |
+| `PortfolioValue`  | `atoms/finance/PortfolioValue.tsx`  | `value: number; change: number; currency?: string; className?: string`                                                    | —      |
+| `SavingGoal`      | `atoms/finance/SavingGoal.tsx`      | `current: number; target: number; currency?: string; className?: string`                                                  | —      |
+| `TransactionType` | `atoms/finance/TransactionType.tsx` | `type: TransactionTypeValue; className?: string`                                                                          | —      |
+| `TrendArrow`      | `atoms/finance/TrendArrow.tsx`      | `direction: 'up' \| 'down' \| 'flat'; value?: number; className?: string`                                                 | —      |
+
+## health
+
+Health, fitness & food.
+
+| Component        | File                              | Props                                                                      | Client |
+| ---------------- | --------------------------------- | -------------------------------------------------------------------------- | ------ |
+| `ActiveMinutes`  | `atoms/health/ActiveMinutes.tsx`  | `minutes: number; goal?: number; className?: string`                       | —      |
+| `Badge`          | `atoms/health/Badge.tsx`          | `variant?: BadgeVariant; outline?: boolean; children: ReactNode`           | —      |
+| `BloodPressure`  | `atoms/health/BloodPressure.tsx`  | `systolic: number; diastolic: number; unit?: string; className?: string`   | —      |
+| `CalorieCount`   | `atoms/health/CalorieCount.tsx`   | `calories: number; goal?: number; className?: string`                      | —      |
+| `DistanceValue`  | `atoms/health/DistanceValue.tsx`  | `distance: number; unit?: 'km' \| 'mi'; className?: string`                | —      |
+| `HeartRate`      | `atoms/health/HeartRate.tsx`      | `bpm: number; className?: string`                                          | —      |
+| `HeightLabel`    | `atoms/health/HeightLabel.tsx`    | `height: number; unit?: 'cm' \| 'in'; className?: string`                  | —      |
+| `HydrationLevel` | `atoms/health/HydrationLevel.tsx` | `percent: number; className?: string`                                      | —      |
+| `MetricLabel`    | `atoms/health/MetricLabel.tsx`    | `label: string; value: ReactNode; unit?: string; className?: string`       | —      |
+| `RestingRate`    | `atoms/health/RestingRate.tsx`    | `bpm: number; className?: string`                                          | —      |
+| `SleepHours`     | `atoms/health/SleepHours.tsx`     | `hours: number; goal?: number; className?: string`                         | —      |
+| `StepsCount`     | `atoms/health/StepsCount.tsx`     | `steps: number; goal?: number; className?: string`                         | —      |
+| `TempValue`      | `atoms/health/TempValue.tsx`      | `value: number; unit?: 'C' \| 'F'; className?: string`                     | —      |
+| `WaterIntake`    | `atoms/health/WaterIntake.tsx`    | `amount: number; unit?: 'ml' \| 'cups'; goal?: number; className?: string` | —      |
+| `WeightValue`    | `atoms/health/WeightValue.tsx`    | `weight: number; unit?: 'kg' \| 'lb'; className?: string`                  | —      |
+| `WorkoutSets`    | `atoms/health/WorkoutSets.tsx`    | `sets: number; reps: number; className?: string`                           | —      |
+
+## hr
+
+HR, people & benefits.
+
+| Component        | File                          | Props                                                                                            | Client |
+| ---------------- | ----------------------------- | ------------------------------------------------------------------------------------------------ | ------ |
+| `AttendanceDot`  | `atoms/hr/AttendanceDot.tsx`  | `status: 'present' \| 'late' \| 'absent' \| 'leave'; label?: string; size?: 'sm' \| 'md'`        | —      |
+| `AwardBadge`     | `atoms/hr/AwardBadge.tsx`     | `label: string; icon?: string; variant?: 'gold' \| 'silver' \| 'bronze'`                         | —      |
+| `DepartmentTag`  | `atoms/hr/DepartmentTag.tsx`  | `name: string; className?: string`                                                               | —      |
+| `EmployeeAvatar` | `atoms/hr/EmployeeAvatar.tsx` | `name: string; src?: string; size?: 'sm' \| 'md' \| 'lg'`                                        | —      |
+| `HireDate`       | `atoms/hr/HireDate.tsx`       | `date: string \| Date; format?: Intl.DateTimeFormatOptions; showIcon?: boolean`                  | —      |
+| `JobTitle`       | `atoms/hr/JobTitle.tsx`       | `title: string; className?: string`                                                              | —      |
+| `LeaveStatus`    | `atoms/hr/LeaveStatus.tsx`    | `status: 'approved' \| 'pending' \| 'rejected' \| 'cancelled'; label?: string`                   | —      |
+| `ManagerName`    | `atoms/hr/ManagerName.tsx`    | `name: string; className?: string`                                                               | —      |
+| `OvertimeValue`  | `atoms/hr/OvertimeValue.tsx`  | `hours: number; positive?: boolean`                                                              | —      |
+| `PayrollAmount`  | `atoms/hr/PayrollAmount.tsx`  | `amount: number; currency?: string; period?: 'monthly' \| 'yearly' \| 'hourly'; locale?: string` | —      |
+| `RoleTag`        | `atoms/hr/RoleTag.tsx`        | `role: string; variant?: 'primary' \| 'secondary' \| 'neutral'`                                  | —      |
+| `SkillLevel`     | `atoms/hr/SkillLevel.tsx`     | `skill: string; level: number; max?: number`                                                     | —      |
+| `TeamSize`       | `atoms/hr/TeamSize.tsx`       | `count: number; label?: string`                                                                  | —      |
+| `TenureLabel`    | `atoms/hr/TenureLabel.tsx`    | `years: number; months?: number`                                                                 | —      |
+| `TitleBadge`     | `atoms/hr/TitleBadge.tsx`     | `title: string; variant?: 'primary' \| 'neutral' \| 'ghost'`                                     | —      |
+| `WorkHours`      | `atoms/hr/WorkHours.tsx`      | `start: string; end: string; timezone?: string`                                                  | —      |
+
+## landing
+
+Marketing, landing & careers.
+
+| Component          | File                                 | Props                                                                                                                        | Client |
+| ------------------ | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------- | ------ |
+| `ActionButton`     | `atoms/landing/ActionButton.tsx`     | `label: string; onClick?: () => void; variant?: 'primary' \| 'secondary' \| 'ghost'; disabled?: boolean; className?: string` | client |
+| `ArrowLink`        | `atoms/landing/ArrowLink.tsx`        | `label: string; href: string`                                                                                                | —      |
+| `BulletPoint`      | `atoms/landing/BulletPoint.tsx`      | `text: string; icon?: string`                                                                                                | —      |
+| `CaptionText`      | `atoms/landing/CaptionText.tsx`      | `text: string; className?: string`                                                                                           | —      |
+| `CtaButton`        | `atoms/landing/CtaButton.tsx`        | `label: string; onClick?: () => void; variant?: 'primary' \| 'outline'; disabled?: boolean`                                  | client |
+| `EmptyPlaceholder` | `atoms/landing/EmptyPlaceholder.tsx` | `icon?: ReactNode; title?: string; description?: string; action?: ReactNode; className?: string`                             | —      |
+| `FeatureIcon`      | `atoms/landing/FeatureIcon.tsx`      | `label: string; icon: string; size?: 'sm' \| 'md' \| 'lg'`                                                                   | —      |
+| `HeroBadge`        | `atoms/landing/HeroBadge.tsx`        | `text: string; icon?: string`                                                                                                | —      |
+| `LogoMark`         | `atoms/landing/LogoMark.tsx`         | `name: string; size?: number`                                                                                                | —      |
+| `NavLink`          | `atoms/landing/NavLink.tsx`          | `label: string; href: string; active?: boolean`                                                                              | —      |
+| `PricingTag`       | `atoms/landing/PricingTag.tsx`       | `amount: number; period: string; currency?: string`                                                                          | —      |
+| `SectionLabel`     | `atoms/landing/SectionLabel.tsx`     | `text: string; className?: string`                                                                                           | —      |
+| `StatNumber`       | `atoms/landing/StatNumber.tsx`       | `value: string \| number; label: string`                                                                                     | —      |
+| `StepNumber`       | `atoms/landing/StepNumber.tsx`       | `number: number; title: string; description?: string`                                                                        | —      |
+| `TestimonialMark`  | `atoms/landing/TestimonialMark.tsx`  | `name: string; quote: string; company?: string`                                                                              | —      |
+| `TrustBadge`       | `atoms/landing/TrustBadge.tsx`       | `label: string; icon?: string`                                                                                               | —      |
+
+## mail
+
+Email, inbox & operations.
+
+| Component        | File                            | Props                                                                                                        | Client |
+| ---------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------ | ------ |
+| `AttachmentIcon` | `atoms/mail/AttachmentIcon.tsx` | `className?: string; size?: number`                                                                          | —      |
+| `ComposeIcon`    | `atoms/mail/ComposeIcon.tsx`    | `className?: string; size?: number`                                                                          | —      |
+| `EditableText`   | `atoms/mail/EditableText.tsx`   | `value: string; onChange: (value: string) => void; label?: string; placeholder?: string; className?: string` | client |
+| `EmailCount`     | `atoms/mail/EmailCount.tsx`     | `count: number; label?: string; className?: string`                                                          | —      |
+| `FolderIcon`     | `atoms/mail/FolderIcon.tsx`     | `className?: string; size?: number`                                                                          | —      |
+| `InboxBadge`     | `atoms/mail/InboxBadge.tsx`     | `count: number; label?: string; className?: string`                                                          | —      |
+| `MailAvatar`     | `atoms/mail/MailAvatar.tsx`     | `name: string; src?: string; size?: 'sm' \| 'md' \| 'lg'; className?: string`                                | —      |
+| `PriorityFlag`   | `atoms/mail/PriorityFlag.tsx`   | `priority: 'high' \| 'normal' \| 'low'; className?: string`                                                  | —      |
+| `ReadStatus`     | `atoms/mail/ReadStatus.tsx`     | `read: boolean; className?: string`                                                                          | —      |
+| `ReplyIcon`      | `atoms/mail/ReplyIcon.tsx`      | `className?: string; size?: number`                                                                          | —      |
+| `SenderInitials` | `atoms/mail/SenderInitials.tsx` | `name: string; className?: string`                                                                           | —      |
+| `SentIcon`       | `atoms/mail/SentIcon.tsx`       | `className?: string; size?: number`                                                                          | —      |
+| `SpamIcon`       | `atoms/mail/SpamIcon.tsx`       | `className?: string; size?: number`                                                                          | —      |
+| `StarMail`       | `atoms/mail/StarMail.tsx`       | `starred: boolean; onToggle?: (starred: boolean) => void; className?: string`                                | client |
+| `SubjectLabel`   | `atoms/mail/SubjectLabel.tsx`   | `subject: string; unread?: boolean; className?: string`                                                      | —      |
+| `TrashIcon`      | `atoms/mail/TrashIcon.tsx`      | `className?: string; size?: number`                                                                          | —      |
+
+## media
+
+Music, streaming & media.
+
+| Component        | File                             | Props                                                                                                        | Client |
+| ---------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------ | ------ |
+| `AlbumCover`     | `atoms/media/AlbumCover.tsx`     | `title: string; src?: string; size?: 'sm' \| 'md' \| 'lg'; className?: string`                               | —      |
+| `ArtistInitials` | `atoms/media/ArtistInitials.tsx` | `name: string; className?: string`                                                                           | —      |
+| `Collapse`       | `atoms/media/Collapse.tsx`       | `title: string; children: ReactNode; open?: boolean; onChange?: (open: boolean) => void; className?: string` | client |
+| `DurationText`   | `atoms/media/DurationText.tsx`   | `seconds: number; className?: string`                                                                        | —      |
+| `EpisodeBadge`   | `atoms/media/EpisodeBadge.tsx`   | `episode: number; label?: string; className?: string`                                                        | —      |
+| `GenreTag`       | `atoms/media/GenreTag.tsx`       | `genre: string; className?: string`                                                                          | —      |
+| `LikeCount`      | `atoms/media/LikeCount.tsx`      | `count: number; liked?: boolean; className?: string`                                                         | —      |
+| `PlayCount`      | `atoms/media/PlayCount.tsx`      | `count: number; label?: string; className?: string`                                                          | —      |
+| `PlaylistIcon`   | `atoms/media/PlaylistIcon.tsx`   | `className?: string; size?: number`                                                                          | —      |
+| `QueueNumber`    | `atoms/media/QueueNumber.tsx`    | `number: number; className?: string`                                                                         | —      |
+| `RatingStar`     | `atoms/media/RatingStar.tsx`     | `rating: number; onChange?: (rating: number) => void; max?: number; className?: string`                      | client |
+| `StreamBadge`    | `atoms/media/StreamBadge.tsx`    | `count: number; label?: string; className?: string`                                                          | —      |
+| `TrackNumber`    | `atoms/media/TrackNumber.tsx`    | `number: number; className?: string`                                                                         | —      |
+| `VideoThumb`     | `atoms/media/VideoThumb.tsx`     | `title: string; src?: string; durationSeconds?: number; className?: string`                                  | —      |
+| `VolumeLevel`    | `atoms/media/VolumeLevel.tsx`    | `level: number; className?: string`                                                                          | —      |
+| `WatchTime`      | `atoms/media/WatchTime.tsx`      | `minutes: number; className?: string`                                                                        | —      |
+
+## news
+
+News, magazine & sports.
+
+| Component       | File                           | Props                                                                                               | Client |
+| --------------- | ------------------------------ | --------------------------------------------------------------------------------------------------- | ------ |
+| `ArticleCard`   | `atoms/news/ArticleCard.tsx`   | `title: string; category?: string; author?: string; date?: string; excerpt?: string; href?: string` | —      |
+| `BreakingBadge` | `atoms/news/BreakingBadge.tsx` | `label?: string; pulse?: boolean`                                                                   | —      |
+| `CategoryChip`  | `atoms/news/CategoryChip.tsx`  | `label: string; active?: boolean; onClick?: () => void`                                             | —      |
+| `EditorTag`     | `atoms/news/EditorTag.tsx`     | `name?: string; label?: string`                                                                     | —      |
+| `HeadlineText`  | `atoms/news/HeadlineText.tsx`  | `children: string; size?: 'sm' \| 'md' \| 'lg'; className?: string`                                 | —      |
+| `ImageCaption`  | `atoms/news/ImageCaption.tsx`  | `children: ReactNode; credit?: string`                                                              | —      |
+| `LeadParagraph` | `atoms/news/LeadParagraph.tsx` | `children: ReactNode`                                                                               | —      |
+| `MediaBadge`    | `atoms/news/MediaBadge.tsx`    | `type: MediaType`                                                                                   | —      |
+| `PublishedDate` | `atoms/news/PublishedDate.tsx` | `date: string \| Date; format?: 'full' \| 'short' \| 'iso'`                                         | —      |
+| `ReporterName`  | `atoms/news/ReporterName.tsx`  | `name: string; role?: string`                                                                       | —      |
+| `ScoreLabel`    | `atoms/news/ScoreLabel.tsx`    | `score: number; outOf?: number; label?: string`                                                     | —      |
+| `StoryKicker`   | `atoms/news/StoryKicker.tsx`   | `children: ReactNode`                                                                               | —      |
+| `TagBadge`      | `atoms/news/TagBadge.tsx`      | `label: string; href?: string`                                                                      | —      |
+| `TimeAgo`       | `atoms/news/TimeAgo.tsx`       | `date: string \| Date; now?: string \| Date`                                                        | —      |
+| `TopStory`      | `atoms/news/TopStory.tsx`      | `label?: string; rank?: number`                                                                     | —      |
+| `UpdateBadge`   | `atoms/news/UpdateBadge.tsx`   | `label?: string; time?: string`                                                                     | —      |
+
+## social
+
+Social, community & gaming.
+
+| Component       | File                             | Props                                                                                                   | Client |
+| --------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------- | ------ |
+| `CommentCount`  | `atoms/social/CommentCount.tsx`  | `count: number; label?: string`                                                                         | —      |
+| `ConnectionDot` | `atoms/social/ConnectionDot.tsx` | `status: ConnectionStatus; size?: 'sm' \| 'md' \| 'lg'`                                                 | —      |
+| `FollowButton`  | `atoms/social/FollowButton.tsx`  | `following?: boolean; label?: string; followingLabel?: string; onToggle?: (following: boolean) => void` | client |
+| `FollowerCount` | `atoms/social/FollowerCount.tsx` | `count: number; label?: string`                                                                         | —      |
+| `FriendAvatar`  | `atoms/social/FriendAvatar.tsx`  | `name: string; src?: string; size?: 'sm' \| 'md' \| 'lg'`                                               | —      |
+| `GroupIcon`     | `atoms/social/GroupIcon.tsx`     | `type?: GroupType`                                                                                      | —      |
+| `LikeButton`    | `atoms/social/LikeButton.tsx`    | `liked?: boolean; count?: number; onToggle?: (liked: boolean) => void; ariaLabel?: string`              | client |
+| `MentionTag`    | `atoms/social/MentionTag.tsx`    | `name: string; href?: string`                                                                           | —      |
+| `MessageIcon`   | `atoms/social/MessageIcon.tsx`   | `unread?: boolean; label?: string; onClick?: () => void`                                                | —      |
+| `OnlineBadge`   | `atoms/social/OnlineBadge.tsx`   | `label?: string; name?: string`                                                                         | —      |
+| `PostIcon`      | `atoms/social/PostIcon.tsx`      | `type: PostType`                                                                                        | —      |
+| `ProfileBadge`  | `atoms/social/ProfileBadge.tsx`  | `name: string; src?: string; verified?: boolean; role?: string`                                         | —      |
+| `ShareIcon`     | `atoms/social/ShareIcon.tsx`     | `label?: string; onClick?: () => void`                                                                  | —      |
+| `StoryRing`     | `atoms/social/StoryRing.tsx`     | `name: string; src?: string; viewed?: boolean`                                                          | —      |
+| `UnreadBadge`   | `atoms/social/UnreadBadge.tsx`   | `count: number; label?: string`                                                                         | —      |
+| `UsernameLabel` | `atoms/social/UsernameLabel.tsx` | `username: string; verified?: boolean; displayName?: string`                                            | —      |
+
+## store
+
+Storefront & e-commerce.
+
+| Component         | File                              | Props                                                                                                                          | Client |
+| ----------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ | ------ |
+| `CartBadge`       | `atoms/store/CartBadge.tsx`       | `count: number; label?: string`                                                                                                | —      |
+| `CategoryIcon`    | `atoms/store/CategoryIcon.tsx`    | `label: string; size?: number`                                                                                                 | —      |
+| `CompareIcon`     | `atoms/store/CompareIcon.tsx`     | `size?: number; label?: string`                                                                                                | —      |
+| `DiscountTag`     | `atoms/store/DiscountTag.tsx`     | `discount: number; variant?: 'error' \| 'success' \| 'warning' \| 'accent'`                                                    | —      |
+| `FavoriteHeart`   | `atoms/store/FavoriteHeart.tsx`   | `active?: boolean; size?: number; label?: string; onChange?: (active: boolean) => void`                                        | client |
+| `FreeShipping`    | `atoms/store/FreeShipping.tsx`    | `label?: string`                                                                                                               | —      |
+| `GiftIcon`        | `atoms/store/GiftIcon.tsx`        | `size?: number; label?: string`                                                                                                | —      |
+| `PriceLabel`      | `atoms/store/PriceLabel.tsx`      | `amount: number; currency?: string; strikethrough?: boolean`                                                                   | —      |
+| `ProductBadge`    | `atoms/store/ProductBadge.tsx`    | `label: string; variant?: \| 'primary' \| 'secondary' \| 'accent' \| 'neutral' \| 'info' \| 'success' \| 'warning' \| 'error'` | —      |
+| `QuantityStepper` | `atoms/store/QuantityStepper.tsx` | `value: number; onChange: (next: number) => void; min?: number; max?: number; step?: number; label?: string`                   | client |
+| `RatingCount`     | `atoms/store/RatingCount.tsx`     | `rating: number; count: number`                                                                                                | —      |
+| `ReviewCount`     | `atoms/store/ReviewCount.tsx`     | `count: number`                                                                                                                | —      |
+| `StockStatus`     | `atoms/store/StockStatus.tsx`     | `status: 'in' \| 'low' \| 'out'; count?: number`                                                                               | —      |
+| `StoreLogo`       | `atoms/store/StoreLogo.tsx`       | `name: string; src?: string; size?: number`                                                                                    | —      |
+| `UnitPrice`       | `atoms/store/UnitPrice.tsx`       | `amount: number; currency?: string; per?: string`                                                                              | —      |
+| `WishlistIcon`    | `atoms/store/WishlistIcon.tsx`    | `active?: boolean; size?: number; label?: string; onChange?: (active: boolean) => void`                                        | client |
+
+## support
+
+Support, knowledge & system.
+
+| Component    | File                           | Props                                                                                                                                                                                                | Client |
+| ------------ | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| `Button`     | `atoms/support/Button.tsx`     | `variant?: ButtonVariant; size?: 'sm' \| 'md' \| 'lg'; loading?: boolean; disabled?: boolean; onClick?: () => void; type?: 'button' \| 'submit' \| 'reset'; className?: string; children: ReactNode` | —      |
+| `ButtonLink` | `atoms/support/ButtonLink.tsx` | `href: string; children: ReactNode; variant?: 'primary' \| 'secondary' \| 'accent' \| 'ghost' \| 'outline' \| 'link'; size?: 'sm' \| 'md' \| 'lg'; className?: string`                               | —      |
+| `Container`  | `atoms/support/Container.tsx`  | `size?: ContainerSize; className?: string; children: ReactNode`                                                                                                                                      | —      |
+| `Divider`    | `atoms/support/Divider.tsx`    | `label?: string; className?: string`                                                                                                                                                                 | —      |
+| `Grid`       | `atoms/support/Grid.tsx`       | `cols?: GridCols; smCols?: GridCols; lgCols?: GridCols; gap?: GridGap; className?: string; children: ReactNode`                                                                                      | —      |
+| `Glow`       | `atoms/support/Glow.tsx`       | `children: ReactNode; color?: GlowColor; size?: 'sm' \| 'md' \| 'lg'; className?: string`                                                                                                            | —      |
+| `IconButton` | `atoms/support/IconButton.tsx` | `icon: ReactNode; label: string; onClick?: () => void; variant?: 'primary' \| 'secondary' \| 'ghost' \| 'outline' \| 'link'; size?: 'sm' \| 'md' \| 'lg'; disabled?: boolean`                        | —      |
+| `LinkButton` | `atoms/support/LinkButton.tsx` | `href: string; children: ReactNode; variant?: 'primary' \| 'secondary' \| 'accent' \| 'ghost' \| 'outline' \| 'link'; size?: 'sm' \| 'md' \| 'lg'; className?: string`                               | —      |
+| `Loading`    | `atoms/support/Loading.tsx`    | `variant?: LoadingVariant; size?: LoadingSize; className?: string`                                                                                                                                   | —      |
+| `Separator`  | `atoms/support/Separator.tsx`  | `className?: string`                                                                                                                                                                                 | —      |
+| `Skeleton`   | `atoms/support/Skeleton.tsx`   | `className?: string`                                                                                                                                                                                 | —      |
+| `Slot`       | `atoms/support/Slot.tsx`       | `className?: string; onClick?: (event: MouseEvent) => void; children: ReactElement<{ className?: string; onClick?: (event: MouseEvent) => void; }>`                                                  | client |
+| `Spacer`     | `atoms/support/Spacer.tsx`     | `axis?: 'horizontal' \| 'vertical'; size?: number; className?: string`                                                                                                                               | —      |
+| `Spinner`    | `atoms/support/Spinner.tsx`    | `size?: 'sm' \| 'md' \| 'lg'`                                                                                                                                                                        | —      |
+| `Stack`      | `atoms/support/Stack.tsx`      | `items: ReactNode[]; direction?: 'vertical' \| 'horizontal'; className?: string`                                                                                                                     | —      |
+| `Tooltip`    | `atoms/support/Tooltip.tsx`    | `content: string; children: ReactNode; position?: 'top' \| 'bottom' \| 'left' \| 'right'`                                                                                                            | —      |
+
+## travel
+
+Travel, real estate & property.
+
+| Component        | File                              | Props                                                                                 | Client |
+| ---------------- | --------------------------------- | ------------------------------------------------------------------------------------- | ------ |
+| `ArrivalIcon`    | `atoms/travel/ArrivalIcon.tsx`    | `size?: number; label?: string`                                                       | —      |
+| `DepartureIcon`  | `atoms/travel/DepartureIcon.tsx`  | `size?: number; label?: string`                                                       | —      |
+| `DestinationTag` | `atoms/travel/DestinationTag.tsx` | `name: string; city?: string`                                                         | —      |
+| `DistanceLabel`  | `atoms/travel/DistanceLabel.tsx`  | `value: number; unit?: string`                                                        | —      |
+| `FlightBadge`    | `atoms/travel/FlightBadge.tsx`    | `code: string; status?: 'on-time' \| 'delayed' \| 'boarding' \| 'cancelled'`          | —      |
+| `GuestCount`     | `atoms/travel/GuestCount.tsx`     | `count: number`                                                                       | —      |
+| `HotelStar`      | `atoms/travel/HotelStar.tsx`      | `value: number; max?: number`                                                         | —      |
+| `MapMarker`      | `atoms/travel/MapMarker.tsx`      | `size?: number; label?: string`                                                       | —      |
+| `NightCount`     | `atoms/travel/NightCount.tsx`     | `count: number`                                                                       | —      |
+| `PricePerNight`  | `atoms/travel/PricePerNight.tsx`  | `amount: number; currency?: string`                                                   | —      |
+| `RatingLabel`    | `atoms/travel/RatingLabel.tsx`    | `score: number; label?: string`                                                       | —      |
+| `RoomType`       | `atoms/travel/RoomType.tsx`       | `label: string`                                                                       | —      |
+| `SeatIcon`       | `atoms/travel/SeatIcon.tsx`       | `size?: number; label?: string`                                                       | —      |
+| `TimeZone`       | `atoms/travel/TimeZone.tsx`       | `timezone: string; city?: string`                                                     | —      |
+| `TravelIcon`     | `atoms/travel/TravelIcon.tsx`     | `size?: number; label?: string`                                                       | —      |
+| `WeatherIcon`    | `atoms/travel/WeatherIcon.tsx`    | `condition: 'sunny' \| 'cloudy' \| 'rain' \| 'snow' \| 'storm'; temperature?: number` | —      |
 
 ---
 

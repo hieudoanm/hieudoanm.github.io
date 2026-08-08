@@ -3604,7 +3604,7 @@ export const OrganismsLevel: FC = () => {
       {visible.map((section) => (
         <details
           key={section.cat}
-          className="collapse-arrow border-base-content/10 bg-base-200 collapse border"
+          className="collapse-arrow border-base-300 collapse rounded-none border-b p-0"
           open>
           <summary className="collapse-title text-base-content/60 font-mono text-xs uppercase">
             {section.cat}

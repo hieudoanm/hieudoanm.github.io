@@ -230,11 +230,11 @@ import {
   ButtonLink,
   Container,
   Divider,
+  Glow,
   Grid,
   IconButton,
   LinkButton,
   Loading,
-  Portal,
   Separator,
   Skeleton,
   Slot,
@@ -2910,12 +2910,20 @@ export const AtomsLevel: FC = () => {
           ),
         },
         {
-          title: 'Portal',
+          title: 'Glow',
           node: (
-            <AtomTile title="Portal" index={8}>
-              <Portal>
-                <span className="badge badge-primary">Rendered in body</span>
-              </Portal>
+            <AtomTile title="Glow" index={8}>
+              <div className="flex items-center justify-center gap-4 py-4">
+                <Glow color="primary" size="sm">
+                  <span className="badge">Sm</span>
+                </Glow>
+                <Glow color="accent" size="md">
+                  <span className="badge">Md</span>
+                </Glow>
+                <Glow color="success" size="lg">
+                  <span className="badge">Lg</span>
+                </Glow>
+              </div>
             </AtomTile>
           ),
         },
@@ -3208,7 +3216,7 @@ export const AtomsLevel: FC = () => {
       {visible.map((section) => (
         <details
           key={section.cat}
-          className="collapse-arrow border-base-content/10 bg-base-200 collapse border"
+          className="collapse-arrow border-base-300 collapse rounded-none border-b p-0"
           open>
           <summary className="collapse-title text-base-content/60 font-mono text-xs uppercase">
             {section.cat}

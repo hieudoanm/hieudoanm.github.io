@@ -1,447 +1,393 @@
 # Pages
 
 Thin `'use client';` wrappers in `src/app/`, one per route, default-exporting
-the template (e.g. `const AnalyticsPage = () => <AnalyticsTemplate />;`). There
-is a single root `layout.tsx` (mounts `CookieConsentTemplate`); there are **no**
-per-route layout files.
+the template (e.g. `const CustomersPage = () => <CustomersTemplate />;`). A
+single root `layout.tsx` mounts the shared chrome; there are no per-route layout
+files.
 
-The `PagesDirectory` (shown on `/`) lists every example page and reports the
-live counts (`256 pages, 261 templates` today; the two extra template files
-beyond 261 are the system pages — `NotFoundTemplate`, `ErrorTemplate`,
-`GlobalErrorTemplate` — plus `CookieConsentTemplate`/`PageShell` helpers).
+**265 routes** across `(app)` and the `(templates)` route groups.
 
-### Route structure
+## `/` — `(app)` group
 
-| Segment group                  | Base folder                        | Purpose                   |
-| ------------------------------ | ---------------------------------- | ------------------------- |
-| `/`                            | `src/app/(app)/`                   | Home + Color tools        |
-| `/dashboard` … `/whiteboard`   | `src/app/(templates)/(app)/`       | App Workspace + Data & UI |
-| `/sign-in` … `/security`       | `src/app/(templates)/(auth)/`      | Auth                      |
-| `/landing` … `/changelog`      | `src/app/(templates)/(landing)/`   | Marketing                 |
-| `/about` … `/search`           | `src/app/(templates)/(shared)/`    | Info / shared pages       |
-| `/store` … `/store/gift-cards` | `src/app/(templates)/store/`       | Commerce storefront       |
-| `/blog` … `/blog/search`       | `src/app/(templates)/blog/`        | Blog                      |
-| `/admin/*`                     | `src/app/(templates)/admin/`       | Commerce Admin            |
-| `/finance/*`                   | `src/app/(templates)/finance/`     | Finance                   |
-| `/developer/*`                 | `src/app/(templates)/developer/`   | Developer                 |
-| `/social/*`                    | `src/app/(templates)/social/`      | Social                    |
-| `/media/*`                     | `src/app/(templates)/media/`       | Media                     |
-| `/support/*`                   | `src/app/(templates)/support/`     | Customer Support          |
-| `/mail/*`                      | `src/app/(templates)/mail/`        | Email                     |
-| `/hr/*`                        | `src/app/(templates)/hr/`          | HR                        |
-| `/crm/*`                       | `src/app/(templates)/crm/`         | Sales & CRM               |
-| `/learning/*`                  | `src/app/(templates)/learning/`    | Learning                  |
-| `/news/*`                      | `src/app/(templates)/news/`        | News & Magazine           |
-| `/music/*`                     | `src/app/(templates)/music/`       | Music                     |
-| `/streaming/*`                 | `src/app/(templates)/streaming/`   | Video Streaming           |
-| `/gaming/*`                    | `src/app/(templates)/gaming/`      | Gaming                    |
-| `/sports/*`                    | `src/app/(templates)/sports/`      | Sports                    |
-| `/travel/*`                    | `src/app/(templates)/travel/`      | Travel                    |
-| `/food/*`                      | `src/app/(templates)/food/`        | Food & Dining             |
-| `/health/*`                    | `src/app/(templates)/health/`      | Health & Fitness          |
-| `/real-estate/*`               | `src/app/(templates)/real-estate/` | Real Estate               |
-| `/iot/*`                       | `src/app/(templates)/iot/`         | Smart Home / IoT          |
-| `/portfolio/*`                 | `src/app/(templates)/portfolio/`   | Portfolio                 |
+| Route     | Template |
+| --------- | -------- |
+| `/`       | `Home`   |
+| `/colors` | `Colors` |
 
-### Main
+## `/…/app` — `(templates)/app`
 
-| Label      | Route         | Template                                |
-| ---------- | ------------- | --------------------------------------- |
-| Home       | `/`           | `ComponentsTemplate` (`PagesDirectory`) |
-| Dashboard  | `/dashboard`  | `DashboardTemplate`                     |
-| Profile    | `/profile`    | `ProfileTemplate`                       |
-| Settings   | `/settings`   | `SettingsTemplate`                      |
-| Version    | `/version`    | `VersionTemplate`                       |
-| Chat       | `/chat`       | `ChatTemplate`                          |
-| Onboarding | `/onboarding` | `OnboardingTemplate`                    |
-| Search     | `/search`     | `SearchTemplate`                        |
+Workspace & productivity.
 
-### App Workspace
+| Route                | Template                |
+| -------------------- | ----------------------- |
+| `/app/activity`      | `ActivityLogTemplate`   |
+| `/app/analytics`     | `AnalyticsTemplate`     |
+| `/app/calendar`      | `CalendarTemplate`      |
+| `/app/chat`          | `ChatTemplate`          |
+| `/app/contacts`      | `ContactsTemplate`      |
+| `/app/dashboard`     | `DashboardTemplate`     |
+| `/app/files`         | `FilesTemplate`         |
+| `/app/goals`         | `GoalsTemplate`         |
+| `/app/help`          | `HelpCenterTemplate`    |
+| `/app/inbox`         | `InboxTemplate`         |
+| `/app/integrations`  | `IntegrationsTemplate`  |
+| `/app/kanban`        | `KanbanTemplate`        |
+| `/app/meetings`      | `MeetingsTemplate`      |
+| `/app/members`       | `MembersTemplate`       |
+| `/app/notifications` | `NotificationsTemplate` |
+| `/app/tasks`         | `TasksTemplate`         |
 
-| Route            | Template                |
-| ---------------- | ----------------------- |
-| `/analytics`     | `AnalyticsTemplate`     |
-| `/calendar`      | `CalendarTemplate`      |
-| `/kanban`        | `KanbanTemplate`        |
-| `/inbox`         | `InboxTemplate`         |
-| `/tasks`         | `TasksTemplate`         |
-| `/notes`         | `NotesTemplate`         |
-| `/files`         | `FilesTemplate`         |
-| `/help`          | `HelpCenterTemplate`    |
-| `/members`       | `MembersTemplate`       |
-| `/notifications` | `NotificationsTemplate` |
-| `/billing`       | `BillingTemplate`       |
-| `/integrations`  | `IntegrationsTemplate`  |
-| `/activity`      | `ActivityLogTemplate`   |
-| `/expenses`      | `ExpensesTemplate`      |
-| `/timesheets`    | `TimesheetsTemplate`    |
-| `/goals`         | `GoalsTemplate`         |
-| `/roadmap`       | `RoadmapTemplate`       |
-| `/sprints`       | `SprintsTemplate`       |
-| `/reports`       | `ReportsTemplate`       |
-| `/contacts`      | `ContactsTemplate`      |
-| `/whiteboard`    | `WhiteboardTemplate`    |
-| `/meetings`      | `MeetingsTemplate`      |
-| `/shortcuts`     | `ShortcutsTemplate`     |
-| `/import`        | `ImportTemplate`        |
-| `/webhooks`      | `WebhooksTemplate`      |
-| `/permissions`   | `PermissionsTemplate`   |
+## `/…/auth` — `(templates)/auth`
 
-### Data & UI Showcase
+Auth, security & account.
 
-| Route           | Template                |
-| --------------- | ----------------------- |
-| `/data-table`   | `DataTableTemplate`     |
-| `/forms`        | `FormsShowcaseTemplate` |
-| `/charts`       | `ChartsGalleryTemplate` |
-| `/modals`       | `ModalsTemplate`        |
-| `/forbidden`    | `ForbiddenTemplate`     |
-| `/accordion`    | `AccordionTemplate`     |
-| `/alerts`       | `AlertsTemplate`        |
-| `/tabs`         | `TabsTemplate`          |
-| `/pagination`   | `PaginationTemplate`    |
-| `/tooltips`     | `TooltipsTemplate`      |
-| `/stepper`      | `StepperTemplate`       |
-| `/upload`       | `UploadTemplate`        |
-| `/empty-states` | `EmptyStatesTemplate`   |
+| Route                   | Template                   |
+| ----------------------- | -------------------------- |
+| `/auth/change-password` | `ChangePasswordTemplate`   |
+| `/auth/delete-account`  | `DeleteAccountTemplate`    |
+| `/auth/error`           | `ErrorTemplate`            |
+| `/auth/forbidden`       | `ForbiddenTemplate`        |
+| `/auth/forgot-password` | `PasswordResetTemplate`    |
+| `/auth/global-error`    | `GlobalErrorTemplate`      |
+| `/auth/home-security`   | `SecurityTemplate`         |
+| `/auth/lock-screen`     | `LockScreenTemplate`       |
+| `/auth/not-found`       | `ErrorTemplate`            |
+| `/auth/permissions`     | `PermissionsTemplate`      |
+| `/auth/recovery-codes`  | `RecoveryCodesTemplate`    |
+| `/auth/reset-password`  | `PasswordResetTemplate`    |
+| `/auth/security`        | `SecurityOverviewTemplate` |
+| `/auth/sessions`        | `SessionsTemplate`         |
+| `/auth/sign-in`         | `SignInTemplate`           |
+| `/auth/sign-up`         | `SignUpTemplate`           |
+| `/auth/two-factor`      | `TwoFactorTemplate`        |
+| `/auth/verify-email`    | `VerifyEmailTemplate`      |
 
-### Auth
+## `/…/blog` — `(templates)/blog`
 
-| Route              | Template                   |
-| ------------------ | -------------------------- |
-| `/sign-in`         | `SignInTemplate`           |
-| `/sign-up`         | `SignUpTemplate`           |
-| `/forgot-password` | `ForgotPasswordTemplate`   |
-| `/reset-password`  | `ResetPasswordTemplate`    |
-| `/verify-email`    | `VerifyEmailTemplate`      |
-| `/two-factor`      | `TwoFactorTemplate`        |
-| `/lock-screen`     | `LockScreenTemplate`       |
-| `/change-password` | `ChangePasswordTemplate`   |
-| `/sessions`        | `SessionsTemplate`         |
-| `/recovery-codes`  | `RecoveryCodesTemplate`    |
-| `/delete-account`  | `DeleteAccountTemplate`    |
-| `/security`        | `SecurityOverviewTemplate` |
+Blog, course & learning.
 
-### Marketing
+| Route                | Template                    |
+| -------------------- | --------------------------- |
+| `/blog`              | `BlogListTemplate`          |
+| `/blog/[slug]`       | `BlogItemTemplate`          |
+| `/blog/achievements` | `AchievementsTemplate`      |
+| `/blog/analytics`    | `LearningAnalyticsTemplate` |
+| `/blog/archive`      | `BlogArchiveTemplate`       |
+| `/blog/author`       | `BlogAuthorTemplate`        |
+| `/blog/catalog`      | `CourseCatalogTemplate`     |
+| `/blog/categories`   | `BlogCategoriesTemplate`    |
+| `/blog/course`       | `CourseDetailTemplate`      |
+| `/blog/instructors`  | `InstructorsTemplate`       |
+| `/blog/lesson`       | `LessonPlayerTemplate`      |
+| `/blog/my-courses`   | `MyCoursesTemplate`         |
+| `/blog/newsletter`   | `BlogNewsletterTemplate`    |
+| `/blog/quizzes`      | `QuizzesTemplate`           |
+| `/blog/search`       | `BlogSearchTemplate`        |
+| `/blog/tags`         | `BlogTagsTemplate`          |
 
-| Route          | Template              |
-| -------------- | --------------------- |
-| `/landing`     | `LandingTemplate`     |
-| `/about`       | `AboutTemplate`       |
-| `/terms`       | `TermsTemplate`       |
-| `/privacy`     | `PrivacyTemplate`     |
-| `/coming-soon` | `ComingSoonTemplate`  |
-| `/maintenance` | `MaintenanceTemplate` |
-| `/resume`      | `ResumeTemplate`      |
-| `/pricing`     | `PricingTemplate`     |
-| `/contact`     | `ContactTemplate`     |
-| `/careers`     | `CareersTemplate`     |
-| `/team`        | `TeamTemplate`        |
-| `/changelog`   | `ChangelogTemplate`   |
+## `/…/crm` — `(templates)/crm`
 
-### Store
-
-| Route                       | Template                    |
-| --------------------------- | --------------------------- |
-| `/store`                    | `StoreFrontTemplate`        |
-| `/store/[id]`               | `StoreItemTemplate`         |
-| `/store/cart`               | `CartTemplate`              |
-| `/store/checkout`           | `CheckoutTemplate`          |
-| `/store/order-confirmation` | `OrderConfirmationTemplate` |
-| `/store/order-history`      | `OrderHistoryTemplate`      |
-| `/store/wishlist`           | `WishlistTemplate`          |
-| `/store/compare`            | `CompareTemplate`           |
-| `/store/addresses`          | `AddressBookTemplate`       |
-| `/store/payment-methods`    | `PaymentMethodsTemplate`    |
-| `/store/tracking`           | `OrderTrackingTemplate`     |
-| `/store/deals`              | `DealsTemplate`             |
-| `/store/categories`         | `CategoriesTemplate`        |
-| `/store/reviews`            | `ReviewsTemplate`           |
-| `/store/support`            | `SupportTemplate`           |
-| `/store/gift-cards`         | `GiftCardsTemplate`         |
-
-### Blog
-
-| Route              | Template                 |
-| ------------------ | ------------------------ |
-| `/blog`            | `BlogListTemplate`       |
-| `/blog/[slug]`     | `BlogItemTemplate`       |
-| `/blog/archive`    | `BlogArchiveTemplate`    |
-| `/blog/author`     | `BlogAuthorTemplate`     |
-| `/blog/newsletter` | `BlogNewsletterTemplate` |
-| `/blog/categories` | `BlogCategoriesTemplate` |
-| `/blog/tags`       | `BlogTagsTemplate`       |
-| `/blog/search`     | `BlogSearchTemplate`     |
-
-### Commerce Admin
-
-| Route               | Template             |
-| ------------------- | -------------------- |
-| `/admin/products`   | `ProductsTemplate`   |
-| `/admin/orders`     | `OrdersTemplate`     |
-| `/admin/customers`  | `CustomersTemplate`  |
-| `/admin/inventory`  | `InventoryTemplate`  |
-| `/admin/coupons`    | `CouponsTemplate`    |
-| `/admin/promotions` | `PromotionsTemplate` |
-| `/admin/refunds`    | `RefundsTemplate`    |
-| `/admin/shipments`  | `ShipmentsTemplate`  |
-
-### Finance
-
-| Route                    | Template                |
-| ------------------------ | ----------------------- |
-| `/finance/invoices`      | `InvoicesTemplate`      |
-| `/finance/budgets`       | `BudgetsTemplate`       |
-| `/finance/subscriptions` | `SubscriptionsTemplate` |
-| `/finance/transactions`  | `TransactionsTemplate`  |
-| `/finance/taxes`         | `TaxesTemplate`         |
-| `/finance/payroll`       | `PayrollTemplate`       |
-| `/finance/statements`    | `StatementsTemplate`    |
-| `/finance/accounts`      | `AccountsTemplate`      |
-
-### Developer
-
-| Route                      | Template               |
-| -------------------------- | ---------------------- |
-| `/developer/api-keys`      | `ApiKeysTemplate`      |
-| `/developer/feature-flags` | `FeatureFlagsTemplate` |
-| `/developer/environments`  | `EnvironmentsTemplate` |
-| `/developer/deployments`   | `DeploymentsTemplate`  |
-| `/developer/logs`          | `LogsTemplate`         |
-| `/developer/endpoints`     | `EndpointsTemplate`    |
-| `/developer/monitors`      | `MonitorsTemplate`     |
-| `/developer/backups`       | `BackupsTemplate`      |
-
-### Social & Media
-
-| Route               | Template               |
-| ------------------- | ---------------------- |
-| `/social/feed`      | `FeedTemplate`         |
-| `/social/messages`  | `MessagesTemplate`     |
-| `/social/events`    | `EventsTemplate`       |
-| `/social/groups`    | `GroupsTemplate`       |
-| `/social/followers` | `FollowersTemplate`    |
-| `/media/library`    | `MediaLibraryTemplate` |
-| `/media/albums`     | `AlbumsTemplate`       |
-| `/media/video`      | `VideoPlayerTemplate`  |
-
-### Customer Support
-
-| Route                     | Template                 |
-| ------------------------- | ------------------------ |
-| `/support/tickets`        | `SupportTicketsTemplate` |
-| `/support/ticket-detail`  | `TicketDetailTemplate`   |
-| `/support/live-chat`      | `LiveChatTemplate`       |
-| `/support/knowledge-base` | `KnowledgeBaseTemplate`  |
-| `/support/faqs`           | `FaqTemplate`            |
-| `/support/announcements`  | `AnnouncementsTemplate`  |
-| `/support/status`         | `ServiceStatusTemplate`  |
-| `/support/feedback`       | `FeedbackTemplate`       |
-
-### Email
-
-| Route           | Template             |
-| --------------- | -------------------- |
-| `/mail/inbox`   | `InboxTemplate`      |
-| `/mail/thread`  | `ThreadTemplate`     |
-| `/mail/compose` | `ComposeTemplate`    |
-| `/mail/drafts`  | `DraftsTemplate`     |
-| `/mail/sent`    | `SentTemplate`       |
-| `/mail/spam`    | `SpamTemplate`       |
-| `/mail/labels`  | `LabelsTemplate`     |
-| `/mail/search`  | `MailSearchTemplate` |
-
-### HR
-
-| Route           | Template                     |
-| --------------- | ---------------------------- |
-| `/hr/people`    | `PeopleDirectoryTemplate`    |
-| `/hr/org-chart` | `OrgChartTemplate`           |
-| `/hr/hiring`    | `HiringPipelineTemplate`     |
-| `/hr/policies`  | `PoliciesTemplate`           |
-| `/hr/benefits`  | `BenefitsTemplate`           |
-| `/hr/reviews`   | `PerformanceReviewsTemplate` |
-| `/hr/shifts`    | `ShiftScheduleTemplate`      |
-| `/hr/time-off`  | `TimeOffTemplate`            |
-
-### Sales & CRM
+Sales, CRM & commerce ops.
 
 | Route                | Template               |
 | -------------------- | ---------------------- |
 | `/crm/accounts`      | `AccountsTemplate`     |
-| `/crm/contacts`      | `CrmContactsTemplate`  |
-| `/crm/leads`         | `LeadsTemplate`        |
-| `/crm/deals`         | `DealsTemplate`        |
-| `/crm/pipeline`      | `PipelineTemplate`     |
 | `/crm/campaigns`     | `CampaignsTemplate`    |
+| `/crm/contacts`      | `CrmContactsTemplate`  |
+| `/crm/coupons`       | `CouponsTemplate`      |
+| `/crm/customers`     | `CustomersTemplate`    |
+| `/crm/deals`         | `DealsTemplate`        |
+| `/crm/inventory`     | `InventoryTemplate`    |
+| `/crm/leads`         | `LeadsTemplate`        |
+| `/crm/orders`        | `OrdersTemplate`       |
+| `/crm/pipeline`      | `PipelineTemplate`     |
+| `/crm/products`      | `ProductsTemplate`     |
+| `/crm/promotions`    | `PromotionsTemplate`   |
 | `/crm/quote-builder` | `QuoteBuilderTemplate` |
+| `/crm/refunds`       | `RefundsTemplate`      |
 | `/crm/reports`       | `SalesReportsTemplate` |
+| `/crm/shipments`     | `ShipmentsTemplate`    |
 
-### Learning
+## `/…/developer` — `(templates)/developer`
+
+Developer platform & IoT.
+
+| Route                      | Template                    |
+| -------------------------- | --------------------------- |
+| `/developer/api-keys`      | `ApiKeysTemplate`           |
+| `/developer/automations`   | `AutomationsTemplate`       |
+| `/developer/backups`       | `BackupsTemplate`           |
+| `/developer/dashboard`     | `DeviceDashboardTemplate`   |
+| `/developer/deployments`   | `DeploymentsTemplate`       |
+| `/developer/device`        | `DeviceDetailTemplate`      |
+| `/developer/endpoints`     | `EndpointsTemplate`         |
+| `/developer/energy`        | `EnergyUsageTemplate`       |
+| `/developer/environments`  | `EnvironmentsTemplate`      |
+| `/developer/feature-flags` | `FeatureFlagsTemplate`      |
+| `/developer/logs`          | `LogsTemplate`              |
+| `/developer/monitors`      | `MonitorsTemplate`          |
+| `/developer/scenes`        | `ScenesTemplate`            |
+| `/developer/sensors`       | `SensorDataTemplate`        |
+| `/developer/settings`      | `SmartHomeSettingsTemplate` |
+| `/developer/webhooks`      | `WebhooksTemplate`          |
+
+## `/…/finance` — `(templates)/finance`
+
+Finance & investing.
 
 | Route                    | Template                    |
 | ------------------------ | --------------------------- |
-| `/learning/my-courses`   | `MyCoursesTemplate`         |
-| `/learning/catalog`      | `CourseCatalogTemplate`     |
-| `/learning/course`       | `CourseDetailTemplate`      |
-| `/learning/lesson`       | `LessonPlayerTemplate`      |
-| `/learning/instructors`  | `InstructorsTemplate`       |
-| `/learning/quizzes`      | `QuizzesTemplate`           |
-| `/learning/achievements` | `AchievementsTemplate`      |
-| `/learning/analytics`    | `LearningAnalyticsTemplate` |
+| `/finance/accounts`      | `AccountsTemplate`          |
+| `/finance/alerts`        | `AlertsTemplate`            |
+| `/finance/billing`       | `BillingTemplate`           |
+| `/finance/budgets`       | `BudgetsTemplate`           |
+| `/finance/dividends`     | `DividendIncomeTemplate`    |
+| `/finance/expenses`      | `ExpensesTemplate`          |
+| `/finance/holdings`      | `HoldingsTemplate`          |
+| `/finance/invoices`      | `InvoicesTemplate`          |
+| `/finance/overview`      | `PortfolioOverviewTemplate` |
+| `/finance/payroll`       | `PayrollTemplate`           |
+| `/finance/performance`   | `PerformanceTemplate`       |
+| `/finance/settings`      | `PortfolioSettingsTemplate` |
+| `/finance/statements`    | `StatementsTemplate`        |
+| `/finance/subscriptions` | `SubscriptionsTemplate`     |
+| `/finance/taxes`         | `TaxesTemplate`             |
+| `/finance/transactions`  | `TransactionsTemplate`      |
 
-### News & Magazine
+## `/…/health` — `(templates)/health`
+
+Health, fitness & food.
+
+| Route                  | Template                   |
+| ---------------------- | -------------------------- |
+| `/health/activity`     | `ActivityTrackerTemplate`  |
+| `/health/dashboard`    | `HealthDashboardTemplate`  |
+| `/health/delivery`     | `FoodDeliveryTemplate`     |
+| `/health/goals`        | `GoalsTemplate`            |
+| `/health/menu`         | `MenuTemplate`             |
+| `/health/nutrition`    | `NutritionTrackerTemplate` |
+| `/health/profile`      | `HealthProfileTemplate`    |
+| `/health/recipe`       | `RecipeDetailTemplate`     |
+| `/health/recipes`      | `RecipesTemplate`          |
+| `/health/reservations` | `ReservationsTemplate`     |
+| `/health/restaurant`   | `RestaurantDetailTemplate` |
+| `/health/restaurants`  | `RestaurantListTemplate`   |
+| `/health/sleep`        | `SleepTrackerTemplate`     |
+| `/health/water`        | `WaterIntakeTemplate`      |
+| `/health/wine`         | `WineListTemplate`         |
+| `/health/workout`      | `WorkoutPlannerTemplate`   |
+
+## `/…/hr` — `(templates)/hr`
+
+HR, people & benefits.
+
+| Route              | Template                     |
+| ------------------ | ---------------------------- |
+| `/hr/accordion`    | `AccordionTemplate`          |
+| `/hr/alerts`       | `AlertsTemplate`             |
+| `/hr/benefits`     | `BenefitsTemplate`           |
+| `/hr/charts`       | `ChartsGalleryTemplate`      |
+| `/hr/data-table`   | `DataTableTemplate`          |
+| `/hr/empty-states` | `EmptyStatesTemplate`        |
+| `/hr/forms`        | `FormsShowcaseTemplate`      |
+| `/hr/hiring`       | `HiringPipelineTemplate`     |
+| `/hr/modals`       | `ModalsTemplate`             |
+| `/hr/org-chart`    | `OrgChartTemplate`           |
+| `/hr/people`       | `PeopleDirectoryTemplate`    |
+| `/hr/policies`     | `PoliciesTemplate`           |
+| `/hr/reviews`      | `PerformanceReviewsTemplate` |
+| `/hr/shifts`       | `ShiftScheduleTemplate`      |
+| `/hr/tabs`         | `TabsTemplate`               |
+| `/hr/time-off`     | `TimeOffTemplate`            |
+
+## `/…/landing` — `(templates)/landing`
+
+Marketing, landing & careers.
+
+| Route                 | Template             |
+| --------------------- | -------------------- |
+| `/landing/careers`    | `CareersTemplate`    |
+| `/landing/changelog`  | `ChangelogTemplate`  |
+| `/landing/contact`    | `ContactTemplate`    |
+| `/landing/game`       | `GameDetailTemplate` |
+| `/landing/landing`    | `LandingTemplate`    |
+| `/landing/notes`      | `NotesTemplate`      |
+| `/landing/pricing`    | `PricingTemplate`    |
+| `/landing/privacy`    | `LegalTemplate`      |
+| `/landing/resume`     | `ResumeTemplate`     |
+| `/landing/roadmap`    | `RoadmapTemplate`    |
+| `/landing/settings`   | `SettingsTemplate`   |
+| `/landing/shortcuts`  | `ShortcutsTemplate`  |
+| `/landing/sprints`    | `SprintsTemplate`    |
+| `/landing/team`       | `TeamTemplate`       |
+| `/landing/terms`      | `LegalTemplate`      |
+| `/landing/version`    | `VersionTemplate`    |
+| `/landing/whiteboard` | `WhiteboardTemplate` |
+
+## `/…/mail` — `(templates)/mail`
+
+Email, inbox & operations.
+
+| Route                | Template               |
+| -------------------- | ---------------------- |
+| `/mail/allocation`   | `AllocationTemplate`   |
+| `/mail/catalog`      | `GameCatalogTemplate`  |
+| `/mail/coming-soon`  | `LaunchStatusTemplate` |
+| `/mail/compose`      | `ComposeTemplate`      |
+| `/mail/drafts`       | `DraftsTemplate`       |
+| `/mail/import`       | `ImportTemplate`       |
+| `/mail/inbox`        | `InboxTemplate`        |
+| `/mail/labels`       | `LabelsTemplate`       |
+| `/mail/maintenance`  | `LaunchStatusTemplate` |
+| `/mail/onboarding`   | `OnboardingTemplate`   |
+| `/mail/search`       | `MailSearchTemplate`   |
+| `/mail/sent`         | `SentTemplate`         |
+| `/mail/spam`         | `SpamTemplate`         |
+| `/mail/thread`       | `ThreadTemplate`       |
+| `/mail/timesheets`   | `TimesheetsTemplate`   |
+| `/mail/transactions` | `TransactionsTemplate` |
+| `/mail/watchlist`    | `WatchlistTemplate`    |
+
+## `/…/media` — `(templates)/media`
+
+Music, streaming & media.
+
+| Route                      | Template                   |
+| -------------------------- | -------------------------- |
+| `/media/album`             | `AlbumDetailTemplate`      |
+| `/media/albums`            | `AlbumsTemplate`           |
+| `/media/artists`           | `ArtistsTemplate`          |
+| `/media/charts`            | `ChartsTemplate`           |
+| `/media/continue-watching` | `ContinueWatchingTemplate` |
+| `/media/library`           | `MediaLibraryTemplate`     |
+| `/media/lyrics`            | `LyricsTemplate`           |
+| `/media/movie`             | `MovieDetailTemplate`      |
+| `/media/music-home`        | `MusicHomeTemplate`        |
+| `/media/my-list`           | `MyListTemplate`           |
+| `/media/now-playing`       | `NowPlayingTemplate`       |
+| `/media/playlist`          | `PlaylistTemplate`         |
+| `/media/search`            | `MusicSearchTemplate`      |
+| `/media/series`            | `TvSeriesTemplate`         |
+| `/media/streaming-home`    | `StreamingHomeTemplate`    |
+| `/media/video`             | `VideoPlayerTemplate`      |
+
+## `/…/news` — `(templates)/news`
+
+News, magazine & sports.
 
 | Route              | Template                   |
 | ------------------ | -------------------------- |
 | `/news/article`    | `ArticleTemplate`          |
 | `/news/breaking`   | `BreakingNewsTemplate`     |
-| `/news/editorial`  | `EditorialTemplate`        |
-| `/news/magazine`   | `MagazineGridTemplate`     |
 | `/news/categories` | `NewsCategoriesTemplate`   |
+| `/news/editorial`  | `EditorialTemplate`        |
+| `/news/favorites`  | `FavoriteTeamsTemplate`    |
+| `/news/fixtures`   | `FixturesTemplate`         |
+| `/news/magazine`   | `MagazineGridTemplate`     |
+| `/news/match`      | `MatchDetailTemplate`      |
+| `/news/news`       | `SportsNewsTemplate`       |
 | `/news/newsletter` | `NewsletterSignupTemplate` |
 | `/news/opinion`    | `OpinionTemplate`          |
 | `/news/press`      | `PressReleasesTemplate`    |
+| `/news/roster`     | `TeamRosterTemplate`       |
+| `/news/scores`     | `LiveScoresTemplate`       |
+| `/news/standings`  | `SeasonStandingsTemplate`  |
+| `/news/stats`      | `PlayerStatsTemplate`      |
 
-### Music
+## `/…/social` — `(templates)/social`
 
-| Route                | Template              |
-| -------------------- | --------------------- |
-| `/music/home`        | `MusicHomeTemplate`   |
-| `/music/album`       | `AlbumDetailTemplate` |
-| `/music/artists`     | `ArtistsTemplate`     |
-| `/music/charts`      | `ChartsTemplate`      |
-| `/music/now-playing` | `NowPlayingTemplate`  |
-| `/music/playlist`    | `PlaylistTemplate`    |
-| `/music/lyrics`      | `LyricsTemplate`      |
-| `/music/search`      | `MusicSearchTemplate` |
+Social, community & gaming.
 
-### Video Streaming
+| Route                  | Template                  |
+| ---------------------- | ------------------------- |
+| `/social/challenges`   | `GameChallengesTemplate`  |
+| `/social/events`       | `EventsTemplate`          |
+| `/social/feed`         | `FeedTemplate`            |
+| `/social/followers`    | `FollowersTemplate`       |
+| `/social/groups`       | `GroupsTemplate`          |
+| `/social/history`      | `WatchHistoryTemplate`    |
+| `/social/leaderboards` | `LeaderboardsTemplate`    |
+| `/social/live`         | `LiveChannelsTemplate`    |
+| `/social/matches`      | `LiveMatchesTemplate`     |
+| `/social/messages`     | `MessagesTemplate`        |
+| `/social/news`         | `GameNewsTemplate`        |
+| `/social/players`      | `PlayerProfilesTemplate`  |
+| `/social/profile`      | `ProfileTemplate`         |
+| `/social/reports`      | `ReportsTemplate`         |
+| `/social/search`       | `StreamingSearchTemplate` |
+| `/social/tournaments`  | `TournamentsTemplate`     |
 
-| Route                          | Template                   |
-| ------------------------------ | -------------------------- |
-| `/streaming/home`              | `StreamingHomeTemplate`    |
-| `/streaming/movie`             | `MovieDetailTemplate`      |
-| `/streaming/series`            | `TvSeriesTemplate`         |
-| `/streaming/live`              | `LiveChannelsTemplate`     |
-| `/streaming/continue-watching` | `ContinueWatchingTemplate` |
-| `/streaming/my-list`           | `MyListTemplate`           |
-| `/streaming/history`           | `WatchHistoryTemplate`     |
-| `/streaming/search`            | `StreamingSearchTemplate`  |
+## `/…/store` — `(templates)/store`
 
-### Gaming
+Storefront & e-commerce.
 
-| Route                  | Template                 |
-| ---------------------- | ------------------------ |
-| `/gaming/catalog`      | `GameCatalogTemplate`    |
-| `/gaming/game`         | `GameDetailTemplate`     |
-| `/gaming/challenges`   | `GameChallengesTemplate` |
-| `/gaming/leaderboards` | `LeaderboardsTemplate`   |
-| `/gaming/matches`      | `LiveMatchesTemplate`    |
-| `/gaming/players`      | `PlayerProfilesTemplate` |
-| `/gaming/tournaments`  | `TournamentsTemplate`    |
-| `/gaming/news`         | `GameNewsTemplate`       |
+| Route                       | Template                    |
+| --------------------------- | --------------------------- |
+| `/store`                    | `StoreFrontTemplate`        |
+| `/store/[id]`               | `StoreItemTemplate`         |
+| `/store/addresses`          | `AddressBookTemplate`       |
+| `/store/cart`               | `CartTemplate`              |
+| `/store/categories`         | `CategoriesTemplate`        |
+| `/store/checkout`           | `CheckoutTemplate`          |
+| `/store/compare`            | `CompareTemplate`           |
+| `/store/deals`              | `DealsTemplate`             |
+| `/store/gift-cards`         | `GiftCardsTemplate`         |
+| `/store/order-confirmation` | `OrderConfirmationTemplate` |
+| `/store/order-history`      | `OrderHistoryTemplate`      |
+| `/store/payment-methods`    | `PaymentMethodsTemplate`    |
+| `/store/reviews`            | `ReviewsTemplate`           |
+| `/store/support`            | `SupportTemplate`           |
+| `/store/tracking`           | `OrderTrackingTemplate`     |
+| `/store/wishlist`           | `WishlistTemplate`          |
 
-### Sports
+## `/…/support` — `(templates)/support`
 
-| Route               | Template                  |
-| ------------------- | ------------------------- |
-| `/sports/scores`    | `LiveScoresTemplate`      |
-| `/sports/fixtures`  | `FixturesTemplate`        |
-| `/sports/match`     | `MatchDetailTemplate`     |
-| `/sports/standings` | `SeasonStandingsTemplate` |
-| `/sports/stats`     | `PlayerStatsTemplate`     |
-| `/sports/roster`    | `TeamRosterTemplate`      |
-| `/sports/favorites` | `FavoriteTeamsTemplate`   |
-| `/sports/news`      | `SportsNewsTemplate`      |
+Support, knowledge & system.
 
-### Travel
+| Route                     | Template                |
+| ------------------------- | ----------------------- |
+| `/support/about`          | `AboutTemplate`         |
+| `/support/announcements`  | `AnnouncementsTemplate` |
+| `/support/cookie-consent` | `CookieConsentTemplate` |
+| `/support/faqs`           | `FaqTemplate`           |
+| `/support/feedback`       | `FeedbackTemplate`      |
+| `/support/knowledge-base` | `KnowledgeBaseTemplate` |
+| `/support/live-chat`      | `LiveChatTemplate`      |
+| `/support/loading-app`    | `LoadingTemplate`       |
+| `/support/loading-auth`   | `LoadingTemplate`       |
+| `/support/loading-blog`   | `LoadingTemplate`       |
+| `/support/loading-store`  | `LoadingTemplate`       |
+| `/support/pagination`     | `PaginationTemplate`    |
+| `/support/search`         | `SearchTemplate`        |
+| `/support/status`         | `ServiceStatusTemplate` |
+| `/support/stepper`        | `StepperTemplate`       |
+| `/support/ticket-detail`  | `TicketDetailTemplate`  |
+| `/support/tickets`        | `TicketsTemplate`       |
+| `/support/tooltips`       | `TooltipsTemplate`      |
+| `/support/upload`         | `UploadTemplate`        |
 
-| Route                  | Template                |
-| ---------------------- | ----------------------- |
-| `/travel/bookings`     | `BookingsTemplate`      |
-| `/travel/search`       | `BookingSearchTemplate` |
-| `/travel/hotel`        | `HotelDetailTemplate`   |
-| `/travel/destinations` | `DestinationsTemplate`  |
-| `/travel/guides`       | `TravelGuidesTemplate`  |
-| `/travel/stories`      | `TravelStoriesTemplate` |
-| `/travel/packing`      | `PackingListTemplate`   |
-| `/travel/planner`      | `TripPlannerTemplate`   |
+## `/…/travel` — `(templates)/travel`
 
-### Food & Dining
+Travel, real estate & property.
 
-| Route                | Template                   |
-| -------------------- | -------------------------- |
-| `/food/restaurants`  | `RestaurantListTemplate`   |
-| `/food/restaurant`   | `RestaurantDetailTemplate` |
-| `/food/menu`         | `MenuTemplate`             |
-| `/food/recipes`      | `RecipesTemplate`          |
-| `/food/recipe`       | `RecipeDetailTemplate`     |
-| `/food/reservations` | `ReservationsTemplate`     |
-| `/food/delivery`     | `FoodDeliveryTemplate`     |
-| `/food/wine`         | `WineListTemplate`         |
-
-### Health & Fitness
-
-| Route               | Template                   |
-| ------------------- | -------------------------- |
-| `/health/dashboard` | `HealthDashboardTemplate`  |
-| `/health/activity`  | `ActivityTrackerTemplate`  |
-| `/health/workout`   | `WorkoutPlannerTemplate`   |
-| `/health/nutrition` | `NutritionTrackerTemplate` |
-| `/health/sleep`     | `SleepTrackerTemplate`     |
-| `/health/water`     | `WaterIntakeTemplate`      |
-| `/health/goals`     | `GoalsTemplate`            |
-| `/health/profile`   | `HealthProfileTemplate`    |
-
-### Real Estate
-
-| Route                      | Template                     |
-| -------------------------- | ---------------------------- |
-| `/real-estate/listings`    | `PropertyListingsTemplate`   |
-| `/real-estate/property`    | `PropertyDetailTemplate`     |
-| `/real-estate/search`      | `SearchFiltersTemplate`      |
-| `/real-estate/map`         | `MapViewTemplate`            |
-| `/real-estate/saved`       | `SavedPropertiesTemplate`    |
-| `/real-estate/mortgage`    | `MortgageCalculatorTemplate` |
-| `/real-estate/open-houses` | `OpenHousesTemplate`         |
-| `/real-estate/agents`      | `AgentProfileTemplate`       |
-
-### Smart Home / IoT
-
-| Route              | Template                    |
-| ------------------ | --------------------------- |
-| `/iot/dashboard`   | `DeviceDashboardTemplate`   |
-| `/iot/device`      | `DeviceDetailTemplate`      |
-| `/iot/scenes`      | `ScenesTemplate`            |
-| `/iot/automations` | `AutomationsTemplate`       |
-| `/iot/energy`      | `EnergyUsageTemplate`       |
-| `/iot/security`    | `SecurityTemplate`          |
-| `/iot/sensors`     | `SensorDataTemplate`        |
-| `/iot/settings`    | `SmartHomeSettingsTemplate` |
-
-### Portfolio
-
-| Route                     | Template                    |
-| ------------------------- | --------------------------- |
-| `/portfolio/overview`     | `PortfolioOverviewTemplate` |
-| `/portfolio/holdings`     | `HoldingsTemplate`          |
-| `/portfolio/transactions` | `TransactionsTemplate`      |
-| `/portfolio/performance`  | `PerformanceTemplate`       |
-| `/portfolio/allocation`   | `AllocationTemplate`        |
-| `/portfolio/watchlist`    | `WatchlistTemplate`         |
-| `/portfolio/alerts`       | `AlertsTemplate`            |
-| `/portfolio/dividends`    | `DividendIncomeTemplate`    |
-| `/portfolio/settings`     | `PortfolioSettingsTemplate` |
-
-### System pages
-
-| File                       | Template                | Description                           |
-| -------------------------- | ----------------------- | ------------------------------------- |
-| `src/app/not-found.tsx`    | `NotFoundTemplate`      | 404 page with "Go home" action        |
-| `src/app/error.tsx`        | `ErrorTemplate`         | 500 page with "Try again" (`reset()`) |
-| `src/app/global-error.tsx` | `GlobalErrorTemplate`   | Root error boundary                   |
-| `src/app/layout.tsx`       | `CookieConsentTemplate` | Root layout wrapper                   |
+| Route                     | Template                     |
+| ------------------------- | ---------------------------- |
+| `/travel/agents`          | `AgentProfileTemplate`       |
+| `/travel/bookings`        | `BookingsTemplate`           |
+| `/travel/destinations`    | `DestinationsTemplate`       |
+| `/travel/guides`          | `TravelGuidesTemplate`       |
+| `/travel/hotel`           | `HotelDetailTemplate`        |
+| `/travel/listings`        | `PropertyListingsTemplate`   |
+| `/travel/map`             | `MapViewTemplate`            |
+| `/travel/mortgage`        | `MortgageCalculatorTemplate` |
+| `/travel/open-houses`     | `OpenHousesTemplate`         |
+| `/travel/packing`         | `PackingListTemplate`        |
+| `/travel/planner`         | `TripPlannerTemplate`        |
+| `/travel/property`        | `PropertyDetailTemplate`     |
+| `/travel/property-search` | `SearchFiltersTemplate`      |
+| `/travel/saved`           | `SavedPropertiesTemplate`    |
+| `/travel/search`          | `BookingSearchTemplate`      |
+| `/travel/stories`         | `TravelStoriesTemplate`      |
 
 ---
 

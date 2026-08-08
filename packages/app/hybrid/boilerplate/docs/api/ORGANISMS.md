@@ -1,1022 +1,380 @@
 # Organisms
 
-Full sections in `src/components/organisms/`.
-
-### BlogSection
-
-File: `src/components/organisms/BlogSection.tsx`
-
-| Prop     | Type                                                                             | Default          | Description     |
-| -------- | -------------------------------------------------------------------------------- | ---------------- | --------------- |
-| `posts`  | `{ id: string; title: string; excerpt?: string; date?: string; tag?: string }[]` | —                | Blog post cards |
-| `title?` | `string`                                                                         | `'Latest posts'` | Section heading |
-
-Three-column card grid. Each post shows an optional `badge-ghost` tag, title,
-excerpt, and `time` date.
-
-```tsx
-<BlogSection
-  posts={[
-    {
-      id: '1',
-      title: 'Announcing v2',
-      excerpt: 'Big release.',
-      date: 'Aug 2026',
-      tag: 'Release',
-    },
-  ]}
-/>
-```
-
-### CTASection
-
-File: `src/components/organisms/CTASection.tsx`
-
-| Prop            | Type                              | Default | Description           |
-| --------------- | --------------------------------- | ------- | --------------------- |
-| `title`         | `string`                          | —       | Heading               |
-| `description?`  | `string`                          | —       | Muted subtitle        |
-| `primaryCta?`   | `{ label: string; href: string }` | —       | Primary `Link` button |
-| `secondaryCta?` | `{ label: string; href: string }` | —       | Outline `Link` button |
-| `badge?`        | `string`                          | —       | `badge badge-primary` |
-
-Centered call-to-action panel using `next/link` for both CTAs.
-
-```tsx
-<CTASection
-  title="Ready to ship?"
-  primaryCta={{ label: 'Get started', href: '/signup' }}
-  secondaryCta={{ label: 'Talk to sales', href: '/contact' }}
-/>
-```
-
-### ContactSection
-
-File: `src/components/organisms/ContactSection.tsx` — client component.
-
-| Prop           | Type                                                                  | Default        | Description            |
-| -------------- | --------------------------------------------------------------------- | -------------- | ---------------------- |
-| `title?`       | `string`                                                              | `'Contact us'` | Section heading        |
-| `description?` | `string`                                                              | —              | Muted subtitle         |
-| `onSubmit?`    | `(payload: { name: string; email: string; message: string }) => void` | —              | Called with valid data |
-
-Validates name/email/message, shows a `text-error` message on failure, and
-replaces the form with a `Message sent` status badge on success. Built with
-`FormRow` and `Button`.
-
-```tsx
-<ContactSection title="Get in touch" onSubmit={(data) => sendMessage(data)} />
-```
-
-### ChatWindow
-
-File: `src/components/organisms/ChatWindow.tsx` — client component.
-
-| Prop           | Type                                                                          | Default               | Description                    |
-| -------------- | ----------------------------------------------------------------------------- | --------------------- | ------------------------------ |
-| `messages`     | `{ id: string; sender: 'user' \| 'assistant'; text: string; name?; time? }[]` | —                     | Thread history                 |
-| `onSend`       | `(text: string) => void`                                                      | —                     | Called when a message is sent  |
-| `title?`       | `string`                                                                      | —                     | Header heading                 |
-| `placeholder?` | `string`                                                                      | `'Type a message...'` | Input placeholder              |
-| `disabled?`    | `boolean`                                                                     | `false`               | Disables input and send button |
-
-Renders a scrollable `ChatBubble` list with a message input; `Enter` or the send
-button submits non-empty drafts.
-
-### DataTable
-
-File: `src/components/organisms/DataTable.tsx`
-
-| Prop         | Type                                                             | Default               | Description                |
-| ------------ | ---------------------------------------------------------------- | --------------------- | -------------------------- |
-| `columns`    | `{ key: string; header: string; render?: (row) => ReactNode }[]` | —                     | Column definitions         |
-| `rows`       | `Record<string, unknown>[]`                                      | —                     | Data rows                  |
-| `emptyText?` | `string`                                                         | `'No records found.'` | Shown when `rows` is empty |
-
-```tsx
-<DataTable
-  columns={[
-    { key: 'name', header: 'Member' },
-    { key: 'role', header: 'Role' },
-  ]}
-  rows={[{ name: 'Jane Doe', role: 'Admin' }]}
-/>
-```
-
-### FeatureGrid
-
-File: `src/components/organisms/FeatureGrid.tsx`
-
-| Prop       | Type                                                        | Default | Description             |
-| ---------- | ----------------------------------------------------------- | ------- | ----------------------- |
-| `features` | `{ icon: ReactNode; title: string; description: string }[]` | —       | Feature cards           |
-| `columns?` | `1 \| 2 \| 3 \| 4`                                          | `3`     | Responsive grid columns |
-
-### FAQSection
-
-File: `src/components/organisms/FAQSection.tsx`
-
-| Prop     | Type                                     | Default | Description           |
-| -------- | ---------------------------------------- | ------- | --------------------- |
-| `items`  | `{ question: string; answer: string }[]` | —       | Question/answer pairs |
-| `title?` | `string`                                 | `'FAQ'` | Section heading       |
-
-Renders an `Accordion` (multi-open) centered in a `max-w-3xl` column.
-
-### Footer
-
-File: `src/components/organisms/Footer.tsx`
-
-| Prop           | Type                                            | Default | Description       |
-| -------------- | ----------------------------------------------- | ------- | ----------------- |
-| `brand`        | `string`                                        | —       | Brand name        |
-| `description?` | `string`                                        | —       | Brand blurb       |
-| `columns`      | `{ title: string; links: { label, href }[] }[]` | —       | Link columns      |
-| `copyright?`   | `string`                                        | —       | Bottom legal line |
-
-### Header
-
-File: `src/components/organisms/Header.tsx`
-
-| Prop        | Type        | Default | Description                        |
-| ----------- | ----------- | ------- | ---------------------------------- |
-| `title`     | `string`    | —       | `h1` page title                    |
-| `subtitle?` | `string`    | —       | Muted text under title             |
-| `badges?`   | `ReactNode` | —       | Badges next to the title           |
-| `action?`   | `ReactNode` | —       | Right-aligned action (e.g. button) |
-| `backHref?` | `string`    | —       | Renders a back arrow `Link` to it  |
-
-Sticky top bar (`sticky top-0 z-10 border-b px-6 py-4`).
-
-### Hero
-
-File: `src/components/organisms/Hero.tsx`
-
-| Prop            | Type                              | Default | Description                     |
-| --------------- | --------------------------------- | ------- | ------------------------------- |
-| `title`         | `string`                          | —       | `h1` headline                   |
-| `tagline?`      | `string`                          | —       | Uppercase eyebrow text          |
-| `description?`  | `string`                          | —       | Muted supporting paragraph      |
-| `primaryCta?`   | `{ label: string; href: string }` | —       | Solid `Link` button             |
-| `secondaryCta?` | `{ label: string; href: string }` | —       | Outline `Link` button           |
-| `badge?`        | `string`                          | —       | `badge-primary` above the title |
-
-Centered marketing hero (`rounded-2xl border bg-base-200`).
-
-### Navbar
-
-File: `src/components/organisms/Navbar.tsx` — client component.
-
-| Prop        | Type                                                  | Default    | Description |
-| ----------- | ----------------------------------------------------- | ---------- | ----------- |
-| `items`     | `{ label: string; href: string; icon?: ReactNode }[]` | —          | Nav links   |
-| `position?` | `'bottom' \| 'top'`                                   | `'bottom'` | Fixed edge  |
-
-Active link is highlighted via `usePathname()` (`/` matches exactly; other links
-match by `startsWith`).
-
-### NewsletterSection
-
-File: `src/components/organisms/NewsletterSection.tsx` — client component.
-
-| Prop           | Type                      | Default                                        | Description                       |
-| -------------- | ------------------------- | ---------------------------------------------- | --------------------------------- |
-| `title?`       | `string`                  | `'Stay in the loop'`                           | Section heading                   |
-| `description?` | `string`                  | `'Get product updates and news once a month.'` | Muted blurb                       |
-| `buttonLabel?` | `string`                  | `'Subscribe'`                                  | Submit button text                |
-| `onSubmit?`    | `(email: string) => void` | —                                              | Called after successful subscribe |
-
-Validates the email (regex) and swaps the form for a success `role="status"`
-badge; the form uses `noValidate` so the custom message shows.
-
-### PricingSection
-
-File: `src/components/organisms/PricingSection.tsx`
-
-| Prop    | Type                                                                                            | Default | Description   |
-| ------- | ----------------------------------------------------------------------------------------------- | ------- | ------------- |
-| `plans` | `{ name; price; period?; description?; features: string[]; highlighted?; ctaLabel; ctaHref }[]` | —       | Pricing tiers |
-
-Renders a 3-column grid of pricing cards; `highlighted` plans get the primary
-border, tinted background, and a solid `btn-primary` CTA.
-
-### Sidebar
-
-File: `src/components/organisms/Sidebar.tsx` — client component.
-
-| Prop      | Type                               | Default | Description           |
-| --------- | ---------------------------------- | ------- | --------------------- |
-| `title`   | `string`                           | —       | Sidebar heading       |
-| `items`   | `{ label; href; icon?; badge? }[]` | —       | Nav links             |
-| `footer?` | `ReactNode`                        | —       | Pinned footer content |
-
-Active item is highlighted from `usePathname()` (`/` exact; others by prefix).
-
-### StatsGrid
-
-File: `src/components/organisms/StatsGrid.tsx`
-
-| Prop       | Type                                                                                                | Default | Description             |
-| ---------- | --------------------------------------------------------------------------------------------------- | ------- | ----------------------- |
-| `stats`    | `{ label: string; value: string; icon?: ReactNode; description?: string; variant?: StatVariant }[]` | —       | Stats to display        |
-| `columns?` | `2 \| 3 \| 4`                                                                                       | `4`     | Responsive grid columns |
-
-Wraps each `Stat` in a bordered card and lays them out in a grid.
-
-### TeamSection
-
-File: `src/components/organisms/TeamSection.tsx`
-
-| Prop      | Type                                                                 | Default      | Description       |
-| --------- | -------------------------------------------------------------------- | ------------ | ----------------- |
-| `members` | `{ name: string; role?: string; bio?: string; initials?: string }[]` | —            | Team member cards |
-| `title?`  | `string`                                                             | `'Our team'` | Section heading   |
-
-Centered heading with a responsive avatar grid. Each member gets a circular
-initials avatar (`bg-neutral`), name, role, and optional bio.
-
-```tsx
-<TeamSection
-  members={[
-    { name: 'Alan Turing', role: 'Founder', bio: 'Math genius.' },
-    { name: 'Katherine Johnson', role: 'CTO' },
-  ]}
-/>
-```
-
-### TestimonialSection
-
-File: `src/components/organisms/TestimonialSection.tsx`
-
-| Prop       | Type                                                                    | Default          | Description             |
-| ---------- | ----------------------------------------------------------------------- | ---------------- | ----------------------- |
-| `items`    | `{ quote: string; author: string; role?: string; initials?: string }[]` | —                | Quote cards             |
-| `title?`   | `string`                                                                | `'Testimonials'` | Section heading         |
-| `columns?` | `2 \| 3`                                                                | `3`              | Responsive grid columns |
-
-Card-based quotes with initials avatars; initials fall back to the first two
-letters of the author's name.
-
-```tsx
-<TestimonialSection
-  items={[
-    {
-      quote: 'The best library we have used.',
-      author: 'Ada Lovelace',
-      role: 'Engineer',
-    },
-  ]}
-/>
-```
-
-### Toolbar
-
-File: `src/components/organisms/Toolbar.tsx`
-
-| Prop        | Type          | Default | Description            |
-| ----------- | ------------- | ------- | ---------------------- |
-| `title?`    | `string`      | —       | Section heading        |
-| `subtitle?` | `string`      | —       | Muted helper text      |
-| `actions?`  | `ReactNode[]` | —       | Right-aligned controls |
-| `children?` | `ReactNode`   | —       | Extra row below        |
-
-### ActivityFeed
-
-File: `src/components/organisms/ActivityFeed.tsx`
-
-| Prop     | Type                                                                                                                   | Default | Description  |
-| -------- | ---------------------------------------------------------------------------------------------------------------------- | ------- | ------------ |
-| `items`  | `{ id: string; title: string; description?; time?; icon?; status?: 'neutral' \| 'success' \| 'warning' \| 'error' }[]` | —       | Feed entries |
-| `title?` | `string`                                                                                                               | —       | Heading text |
-
-Vertical feed where each row shows an icon (or a coloured status dot), a title,
-an optional description, and a time.
-
-```tsx
-<ActivityFeed items={items} title="Recent activity" />
-```
-
-### AnnouncementBar
-
-File: `src/components/organisms/AnnouncementBar.tsx` — client component.
-
-| Prop           | Type                                 | Default     | Description              |
-| -------------- | ------------------------------------ | ----------- | ------------------------ |
-| `text`         | `string`                             | —           | Announcement message     |
-| `link?`        | `{ label: string; href: string }`    | —           | Optional `next/link` CTA |
-| `variant?`     | `'primary' \| 'accent' \| 'neutral'` | `'primary'` | Colour variant           |
-| `dismissible?` | `boolean`                            | `false`     | Shows a dismiss button   |
-| `onDismiss?`   | `() => void`                         | —           | Called when dismissed    |
-
-```tsx
-<AnnouncementBar
-  text="Early bird sale"
-  link={{ label: 'Shop', href: '/shop' }}
-/>
-```
-
-### AuthForm
-
-File: `src/components/organisms/AuthForm.tsx` — client component.
-
-| Prop       | Type                                                                    | Default   | Description                   |
-| ---------- | ----------------------------------------------------------------------- | --------- | ----------------------------- |
-| `mode?`    | `'login' \| 'signup'`                                                   | `'login'` | Which fields to show          |
-| `title?`   | `string`                                                                | —         | Overrides the default heading |
-| `onSubmit` | `(payload: { name?: string; email: string; password: string }) => void` | —         | Submit handler                |
-| `loading?` | `boolean`                                                               | `false`   | Renders a loading button      |
-| `error?`   | `string`                                                                | —         | External error text           |
-
-Client-side validation: signup requires a name, the email must match a basic
-pattern, and the password must be at least 6 characters. Uses `TextField` +
-`PasswordField`.
-
-```tsx
-<AuthForm mode="signup" onSubmit={handleSubmit} />
-```
-
-### CommandMenu
-
-File: `src/components/organisms/CommandMenu.tsx` — client component.
-
-| Prop           | Type                                                                 | Default                       | Description         |
-| -------------- | -------------------------------------------------------------------- | ----------------------------- | ------------------- |
-| `open`         | `boolean`                                                            | —                             | Show the menu       |
-| `onClose`      | `() => void`                                                         | —                             | Called to dismiss   |
-| `items`        | `{ id; label; description?; keywords?; icon?; onSelect?; group? }[]` | —                             | Command definitions |
-| `placeholder?` | `string`                                                             | `'Type a command or search…'` | Search placeholder  |
-
-Keyboard-navigable palette: `Escape` closes, `ArrowUp`/`ArrowDown` move the
-active index, `Enter` selects. Filters by label, description, or keywords.
-
-```tsx
-<CommandMenu open={open} onClose={close} items={commands} />
-```
-
-### CookieBanner
-
-File: `src/components/organisms/CookieBanner.tsx` — client component.
-
-| Prop           | Type         | Default                                        | Description             |
-| -------------- | ------------ | ---------------------------------------------- | ----------------------- |
-| `onAccept`     | `() => void` | —                                              | Called on accept        |
-| `onDecline`    | `() => void` | —                                              | Called on decline       |
-| `message?`     | `string`     | `'We use cookies to improve your experience.'` | Banner text             |
-| `policyHref?`  | `string`     | `'/privacy'`                                   | Policy `next/link` href |
-| `policyLabel?` | `string`     | `'Privacy policy'`                             | Policy link label       |
-
-Fixed bottom bar; both actions hide the banner.
-
-```tsx
-<CookieBanner onAccept={accept} onDecline={decline} />
-```
-
-### LogosSection
-
-File: `src/components/organisms/LogosSection.tsx`
-
-| Prop       | Type                                   | Default              | Description             |
-| ---------- | -------------------------------------- | -------------------- | ----------------------- |
-| `items`    | `{ name: string; icon?: ReactNode }[]` | —                    | Logos to display        |
-| `title?`   | `string`                               | `'Trusted by teams'` | Muted heading           |
-| `columns?` | `2 \| 3 \| 4 \| 5 \| 6`                | `6`                  | Responsive grid columns |
-
-```tsx
-<LogosSection items={logos} columns={4} />
-```
-
-### Marquee
-
-File: `src/components/organisms/Marquee.tsx`
-
-| Prop         | Type          | Default | Description      |
-| ------------ | ------------- | ------- | ---------------- |
-| `items`      | `ReactNode[]` | —       | Items to animate |
-| `title?`     | `string`      | —       | Optional heading |
-| `className?` | `string`      | `''`    | Extra classes    |
-
-Duplicates the items and scrolls them via the `animate-marquee` utility (defined
-in `src/styles/atomic-demo.css`).
-
-```tsx
-<Marquee title="Powered by" items={items} />
-```
-
-### ProfileCard
-
-File: `src/components/organisms/ProfileCard.tsx`
-
-| Prop       | Type                                 | Default | Description        |
-| ---------- | ------------------------------------ | ------- | ------------------ |
-| `name`     | `string`                             | —       | Display name       |
-| `role?`    | `string`                             | —       | Primary role       |
-| `bio?`     | `string`                             | —       | Short biography    |
-| `avatar?`  | `{ src?; alt: string; initials? }`   | —       | Avatar atom props  |
-| `badges?`  | `string[]`                           | `[]`    | Badge labels       |
-| `stats?`   | `{ label: string; value: string }[]` | `[]`    | Three-up stats row |
-| `actions?` | `ReactNode`                          | —       | Action buttons     |
-
-Centered card built on the `Avatar` atom; stats render in a 3-column grid.
-
-```tsx
-<ProfileCard name="Jane Doe" role="Engineer" badges={['Fellow']} />
-```
-
-### Calendar
-
-File: `src/components/organisms/Calendar.tsx` — client component.
-
-| Prop         | Type                   | Default | Description                 |
-| ------------ | ---------------------- | ------- | --------------------------- |
-| `value?`     | `Date`                 | —       | Selected date               |
-| `onChange?`  | `(date: Date) => void` | —       | Called when a day is chosen |
-| `minDate?`   | `Date`                 | —       | Earliest selectable date    |
-| `maxDate?`   | `Date`                 | —       | Latest selectable date      |
-| `className?` | `string`               | `''`    | Extra classes               |
-
-Full month grid with weekday headers, prev/next month navigation, and disabled
-out-of-range days. Out-of-month cells render muted; month navigation is blocked
-past `minDate`/`maxDate`.
-
-```tsx
-<Calendar value={selected} onChange={setSelected} minDate={new Date()} />
-```
-
-### Diff
-
-File: `src/components/organisms/Diff.tsx`
-
-| Prop           | Type        | Default         | Description      |
-| -------------- | ----------- | --------------- | ---------------- |
-| `before`       | `ReactNode` | —               | Left image/side  |
-| `after`        | `ReactNode` | —               | Right image/side |
-| `aspectClass?` | `string`    | `'aspect-16/9'` | Aspect ratio     |
-| `className?`   | `string`    | `''`            | Extra classes    |
-
-DaisyUI `diff` mockup with a draggable `diff-resizer` handle for before/after
-comparisons.
-
-```tsx
-<Diff before={oldImage} after={newImage} aspectClass="aspect-video" />
-```
-
-### IntegrationsSection
-
-File: `src/components/organisms/IntegrationsSection.tsx`
-
-| Prop           | Type                                      | Default | Description       |
-| -------------- | ----------------------------------------- | ------- | ----------------- |
-| `title?`       | `string`                                  | —       | Centered heading  |
-| `description?` | `string`                                  | —       | Muted subtitle    |
-| `items`        | `{ name: string; description?; icon? }[]` | —       | Integration cards |
-| `columns?`     | `number`                                  | `3`     | Grid column count |
-| `className?`   | `string`                                  | `''`    | Extra classes     |
-
-Marketing grid of integration cards used on landing pages.
-
-```tsx
-<IntegrationsSection title="Integrations" items={integrations} />
-```
-
-### PageHeader
-
-File: `src/components/organisms/PageHeader.tsx`
-
-| Prop           | Type        | Default | Description             |
-| -------------- | ----------- | ------- | ----------------------- |
-| `title`        | `string`    | —       | Page heading            |
-| `description?` | `string`    | —       | Muted subtitle          |
-| `eyebrow?`     | `string`    | —       | Uppercase eyebrow label |
-| `actions?`     | `ReactNode` | —       | Right-aligned actions   |
-| `className?`   | `string`    | `''`    | Extra classes           |
-
-TailwindUI-style page header combining eyebrow, title, description, and an
-actions slot.
-
-```tsx
-<PageHeader
-  title="Settings"
-  eyebrow="Account"
-  actions={<Button>Save</Button>}
-/>
-```
-
-### PricingCard
-
-File: `src/components/organisms/PricingCard.tsx`
-
-| Prop           | Type         | Default | Description                 |
-| -------------- | ------------ | ------- | --------------------------- |
-| `name`         | `string`     | —       | Plan name                   |
-| `price`        | `string`     | —       | Price string                |
-| `period?`      | `string`     | —       | Billing period              |
-| `description?` | `string`     | —       | Muted subtitle              |
-| `features`     | `string[]`   | —       | Feature list                |
-| `ctaLabel`     | `string`     | —       | Call-to-action text         |
-| `ctaHref?`     | `string`     | —       | Link CTA (next/link)        |
-| `onCta?`       | `() => void` | —       | Button CTA fallback         |
-| `highlighted?` | `boolean`    | `false` | Featured plan styling       |
-| `badge?`       | `string`     | —       | Corner badge (e.g. Popular) |
-| `className?`   | `string`     | `''`    | Extra classes               |
-
-Single pricing card (TailwindUI-style) that composes into a
-`PricingSection`-like grid. Use `ctaHref` for a link or `onCta` for a button.
-
-```tsx
-<PricingCard
-  name="Pro"
-  price="$12"
-  features={features}
-  ctaLabel="Start"
-  highlighted
-/>
-```
-
-### ProgressStepper
-
-File: `src/components/organisms/ProgressStepper.tsx`
-
-| Prop           | Type                         | Default        | Description                     |
-| -------------- | ---------------------------- | -------------- | ------------------------------- |
-| `steps`        | `string[]`                   | —              | Step labels                     |
-| `activeStep`   | `number`                     | —              | Index of the current step       |
-| `onStepClick?` | `(index: number) => void`    | —              | Makes reachable steps clickable |
-| `orientation?` | `'horizontal' \| 'vertical'` | `'horizontal'` | Layout direction                |
-| `className?`   | `string`                     | `''`           | Extra classes                   |
-
-MUI `Stepper`-style progress tracker: completed steps show a check, the active
-step gets `aria-current="step"`, and earlier steps can be revisited when
-`onStepClick` is provided.
-
-```tsx
-<ProgressStepper
-  steps={['Cart', 'Shipping', 'Payment']}
-  activeStep={1}
-  onStepClick={goTo}
-/>
-```
-
-### TestimonialCarousel
-
-File: `src/components/organisms/TestimonialCarousel.tsx` — client component.
-
-| Prop         | Type                                                  | Default | Description      |
-| ------------ | ----------------------------------------------------- | ------- | ---------------- |
-| `items`      | `{ quote: string; author: string; role?; avatar? }[]` | —       | Quotes to rotate |
-| `className?` | `string`                                              | `''`    | Extra classes    |
-
-TailwindUI-style rotating quote carousel with prev/next buttons and dot
-navigation; wraps around at either end and returns `null` when empty.
-
-```tsx
-<TestimonialCarousel items={quotes} />
-```
-
-### DashboardHeader
-
-File: `src/components/organisms/DashboardHeader.tsx`
-
-| Prop                 | Type                      | Default     | Description             |
-| -------------------- | ------------------------- | ----------- | ----------------------- |
-| `title`              | `string`                  | —           | Heading text            |
-| `subtitle?`          | `string`                  | —           | Muted subheading        |
-| `actions?`           | `ReactNode`               | —           | Right-aligned actions   |
-| `searchValue?`       | `string`                  | —           | Controlled search value |
-| `onSearchChange?`    | `(value: string) => void` | —           | Shows search when set   |
-| `searchPlaceholder?` | `string`                  | `'Search…'` | Search placeholder      |
-
-Dashboard page header with a title block and a trailing search input + actions
-row. The search box only renders when `onSearchChange` is provided.
-
-```tsx
-<DashboardHeader title="Overview" searchValue={q} onSearchChange={setQ} />
-```
-
-### DataList
-
-File: `src/components/organisms/DataList.tsx`
-
-| Prop       | Type                                              | Default | Description       |
-| ---------- | ------------------------------------------------- | ------- | ----------------- |
-| `sections` | `{ id, title, items: { key, label, value }[] }[]` | —       | Grouped `dl` rows |
-
-Sections each render a bordered `h3` title and a two-column `dl` of key/value
-rows; returns `null` for an empty list.
-
-```tsx
-<DataList
-  sections={[
-    {
-      id: 'srv',
-      title: 'Server',
-      items: [{ key: 'v', label: 'Version', value: '1.0.0' }],
-    },
-  ]}
-/>
-```
-
-### EventTimeline
-
-File: `src/components/organisms/EventTimeline.tsx`
-
-| Prop     | Type                                                  | Default | Description      |
-| -------- | ----------------------------------------------------- | ------- | ---------------- |
-| `items`  | `{ id, title, date, description?, status?, icon? }[]` | —       | Timeline events  |
-| `title?` | `string`                                              | —       | Optional heading |
-
-Vertical `ol` timeline with colour-coded status dots (`neutral` / `success` /
-`warning` / `error`) and optional leading icons.
-
-```tsx
-<EventTimeline
-  items={[{ id: '1', title: 'Deployed', date: '10m', status: 'success' }]}
-/>
-```
-
-### FaqAccordion
-
-File: `src/components/organisms/FaqAccordion.tsx` — client component.
-
-| Prop           | Type                         | Default | Description     |
-| -------------- | ---------------------------- | ------- | --------------- |
-| `items`        | `{ id, question, answer }[]` | —       | Q&A pairs       |
-| `title?`       | `string`                     | —       | Section heading |
-| `description?` | `string`                     | —       | Muted subtitle  |
-
-Single-open accordion (`aria-expanded`) that opens the first item by default and
-numbers each question `01`, `02`, ….
-
-```tsx
-<FaqAccordion items={[{ id: 'a', question: 'How?', answer: 'Like this.' }]} />
-```
-
-### GalleryGrid
-
-File: `src/components/organisms/GalleryGrid.tsx`
-
-| Prop         | Type                       | Default | Description        |
-| ------------ | -------------------------- | ------- | ------------------ |
-| `items`      | `{ src, alt, caption? }[]` | —       | Images to display  |
-| `columns?`   | `2 \| 3 \| 4`              | `3`     | Responsive columns |
-| `className?` | `string`                   | `''`    | Extra classes      |
-
-Responsive image grid with hover zoom and a bottom gradient caption overlay.
-
-```tsx
-<GalleryGrid
-  columns={4}
-  items={[{ src: '/a.png', alt: 'A', caption: 'Shot' }]}
-/>
-```
-
-### InfoCards
-
-File: `src/components/organisms/InfoCards.tsx`
-
-| Prop       | Type                                            | Default | Description        |
-| ---------- | ----------------------------------------------- | ------- | ------------------ |
-| `cards`    | `{ id, title, description?, icon?, accent? }[]` | —       | Feature cards      |
-| `columns?` | `2 \| 3 \| 4`                                   | `3`     | Responsive columns |
-| `title?`   | `string`                                        | —       | Section heading    |
-
-Bordered card grid with an accent-coloured icon; `accent` is
-`'neutral' \| 'primary' \| 'success' \| 'warning' \| 'error'`.
-
-```tsx
-<InfoCards
-  title="Why us"
-  cards={[{ id: 'a', title: 'Fast', accent: 'primary' }]}
-/>
-```
-
-### PageBreadcrumbs
-
-File: `src/components/organisms/PageBreadcrumbs.tsx`
-
-| Prop           | Type                 | Default | Description           |
-| -------------- | -------------------- | ------- | --------------------- |
-| `items`        | `{ label, href? }[]` | —       | Breadcrumb trail      |
-| `title`        | `string`             | —       | Page `h1`             |
-| `description?` | `string`             | —       | Muted subtitle        |
-| `actions?`     | `ReactNode`          | —       | Right-aligned actions |
-
-DaisyUI `breadcrumbs` (last item gets `aria-current="page"` and never links)
-plus a title/description/actions row.
-
-```tsx
-<PageBreadcrumbs
-  items={[{ label: 'Home', href: '/' }, { label: 'Settings' }]}
-  title="Settings"
-/>
-```
-
-### PageTabs
-
-File: `src/components/organisms/PageTabs.tsx` — client component.
-
-| Prop            | Type                              | Default | Description              |
-| --------------- | --------------------------------- | ------- | ------------------------ |
-| `tabs`          | `{ id, label, content, icon? }[]` | —       | Tabs and panels          |
-| `defaultValue?` | `string`                          | —       | Initial tab (else first) |
-| `value?`        | `string`                          | —       | Controlled active tab    |
-| `onChange?`     | `(value: string) => void`         | —       | Called on tab select     |
-
-DaisyUI `tabs-boxed` (`role="tablist"` / `role="tab"`) that swaps the panel
-content; controlled when `value` is provided.
-
-```tsx
-<PageTabs
-  tabs={[{ id: 'a', label: 'A', content: <p>…</p> }]}
-  defaultValue="a"
-/>
-```
-
-### AccountMenu
-
-File: `src/components/organisms/AccountMenu.tsx` — client component.
-
-| Prop      | Type                                    | Default | Description             |
-| --------- | --------------------------------------- | ------- | ----------------------- |
-| `name`    | `string`                                | —       | Display name            |
-| `email?`  | `string`                                | —       | Muted email line        |
-| `avatar?` | `ReactNode`                             | —       | Optional avatar element |
-| `items`   | `{ label, icon?, danger?, onClick? }[]` | —       | Menu entries            |
-
-User menu (`role="menu"`) with danger styling and click-outside dismissal.
-
-```tsx
-<AccountMenu
-  name="Jane"
-  items={[{ label: 'Profile' }, { label: 'Sign out', danger: true }]}
-/>
-```
-
-### FilterBar
-
-File: `src/components/organisms/FilterBar.tsx` — client component.
-
-| Prop            | Type                     | Default     | Description           |
-| --------------- | ------------------------ | ----------- | --------------------- |
-| `query`         | `string`                 | —           | Controlled query      |
-| `onQueryChange` | `(next: string) => void` | —           | Called on input       |
-| `placeholder?`  | `string`                 | `'Search…'` | Input placeholder     |
-| `children?`     | `ReactNode`              | —           | Extra filter controls |
-
-Search input plus a slot for additional filters, laid out responsively.
-
-```tsx
-<FilterBar query={q} onQueryChange={setQ}>
-  <FilterGroup … />
-</FilterBar>
-```
-
-### KanbanBoard
-
-File: `src/components/organisms/KanbanBoard.tsx`
-
-| Prop      | Type                                                          | Default | Description   |
-| --------- | ------------------------------------------------------------- | ------- | ------------- |
-| `columns` | `{ id, title, cards: { id, title, description?, tag? }[] }[]` | —       | Board columns |
-
-Column-based board (`aria-label` per column) with a card count, empty states,
-and tag badges mapped to DaisyUI colors.
-
-```tsx
-<KanbanBoard
-  columns={[
-    {
-      id: 'todo',
-      title: 'To do',
-      cards: [{ id: '1', title: 'Task', tag: 'info' }],
-    },
-  ]}
-/>
-```
-
-### NavigationMenu
-
-File: `src/components/organisms/NavigationMenu.tsx` — client component.
-
-| Prop         | Type                                   | Default     | Description |
-| ------------ | -------------------------------------- | ----------- | ----------- |
-| `items`      | `{ label, href?, icon?, children? }[]` | —           | Nav entries |
-| `ariaLabel?` | `string`                               | `'Primary'` | `nav` label |
-
-Navbar of `button`s (with `children` popovers) and plain links; popovers close
-on click-outside or Escape.
-
-```tsx
-<NavigationMenu
-  items={[
-    { label: 'Docs', children: <Menu>…</Menu> },
-    { label: 'Pricing', href: '/pricing' },
-  ]}
-/>
-```
-
-### NotificationCenter
-
-File: `src/components/organisms/NotificationCenter.tsx` — client component.
-
-| Prop             | Type                                            | Default | Description              |
-| ---------------- | ----------------------------------------------- | ------- | ------------------------ |
-| `notifications`  | `{ id, title, description?, time?, unread? }[]` | —       | Items                    |
-| `onOpen?`        | `(notification) => void`                        | —       | Called when item clicked |
-| `onMarkAllRead?` | `() => void`                                    | —       | Clears badge button      |
-| `unreadCount?`   | `number`                                        | —       | Override badge count     |
-
-Bell trigger (`aria-label="Notifications"`) with unread badge and a `dialog`
-panel; closes on click-outside.
-
-```tsx
-<NotificationCenter notifications={notes} onOpen={openNote} />
-```
-
-### Section
-
-File: `src/components/organisms/Section.tsx`
-
-| Prop           | Type                  | Default   | Description         |
-| -------------- | --------------------- | --------- | ------------------- |
-| `title`        | `string`              | —         | Section heading     |
-| `eyebrow?`     | `string`              | —         | Small primary label |
-| `description?` | `string`              | —         | Muted intro text    |
-| `action?`      | `ReactNode`           | —         | Right-side CTA      |
-| `align?`       | `'start' \| 'center'` | `'start'` | Header alignment    |
-| `children?`    | `ReactNode`           | —         | Body content        |
-| `className?`   | `string`              | `''`      | Extra classes       |
-
-Semantic `<section>` header block (eyebrow + heading + description + action)
-with a content slot — the skeleton for landing-page sections.
-
-```tsx
-<Section eyebrow="Features" title="Do more" align="center">
-  <Grid>…</Grid>
-</Section>
-```
-
-### TableOfContents
-
-File: `src/components/organisms/TableOfContents.tsx` — client component.
-
-| Prop        | Type                         | Default          | Description          |
-| ----------- | ---------------------------- | ---------------- | -------------------- |
-| `items`     | `{ id, label, children? }[]` | —                | Nested TOC tree      |
-| `activeId?` | `string`                     | —                | Highlighted item     |
-| `onSelect?` | `(id: string) => void`       | —                | Called on item click |
-| `title?`    | `string`                     | `'On this page'` | `nav` label          |
-
-Sidebar `nav` of scroll-anchor links; the active item gets `text-primary` and
-`aria-current="location"`.
-
-```tsx
-<TableOfContents items={[{ id: 'intro', label: 'Intro' }]} activeId="intro" />
-```
-
-### ComparisonSection
-
-File: `src/components/organisms/ComparisonSection.tsx`
-
-| Prop           | Type                     | Default | Description      |
-| -------------- | ------------------------ | ------- | ---------------- |
-| `columns`      | `{ title, featured? }[]` | —       | Table columns    |
-| `rows`         | `{ label, values }[]`    | —       | Comparison rows  |
-| `title?`       | `string`                 | —       | Section heading  |
-| `description?` | `string`                 | —       | Muted intro text |
-| `className?`   | `string`                 | `''`    | Extra classes    |
-
-Feature comparison table; `featured` columns get a primary tint.
-
-```tsx
-<ComparisonSection
-  columns={[{ title: 'Free', featured: true }, { title: 'Pro' }]}
-  rows={[{ label: 'Seats', values: ['5', '∞'] }]}
-/>
-```
-
-### Leaderboard
-
-File: `src/components/organisms/Leaderboard.tsx`
-
-| Prop         | Type                             | Default | Description        |
-| ------------ | -------------------------------- | ------- | ------------------ |
-| `entries`    | `{ id, name, score, avatar? }[]` | —       | Entries (unsorted) |
-| `title?`     | `string`                         | —       | Section heading    |
-| `limit?`     | `number`                         | —       | Top-N to show      |
-| `className?` | `string`                         | `''`    | Extra classes      |
-
-Sorts entries by descending score; the top three get 🥇🥈🥉 medals and the
-leader gets a primary ring.
-
-```tsx
-<Leaderboard entries={players} limit={3} title="Top players" />
-```
-
-### ProcessSection
-
-File: `src/components/organisms/ProcessSection.tsx`
-
-| Prop         | Type                            | Default | Description     |
-| ------------ | ------------------------------- | ------- | --------------- |
-| `steps`      | `{ id, title, description? }[]` | —       | Ordered steps   |
-| `current?`   | `string`                        | —       | Active step id  |
-| `title?`     | `string`                        | —       | Section heading |
-| `className?` | `string`                        | `''`    | Extra classes   |
-
-DaisyUI `steps` (vertical on mobile, horizontal on `lg`); steps before `current`
-render `step-primary`.
-
-```tsx
-<ProcessSection steps={steps} current="build" title="How it works" />
-```
-
-### ProductGrid
-
-File: `src/components/organisms/ProductGrid.tsx`
-
-| Prop         | Type                                                            | Default | Description     |
-| ------------ | --------------------------------------------------------------- | ------- | --------------- |
-| `items`      | `{ id, name, price, description?, rating?, badge?, action? }[]` | —       | Product cards   |
-| `title?`     | `string`                                                        | —       | Section heading |
-| `columns?`   | `2 \| 3 \| 4`                                                   | `3`     | Grid columns    |
-| `className?` | `string`                                                        | `''`    | Extra classes   |
-
-Product cards with optional badge, rating, and action slot.
-
-```tsx
-<ProductGrid items={products} columns={4} title="Catalog" />
-```
-
-### QuoteSection
-
-File: `src/components/organisms/QuoteSection.tsx`
-
-| Prop         | Type        | Default | Description        |
-| ------------ | ----------- | ------- | ------------------ |
-| `quote`      | `string`    | —       | Centered quotation |
-| `author`     | `string`    | —       | Attribution name   |
-| `role?`      | `string`    | —       | Author role        |
-| `avatar?`    | `ReactNode` | —       | Avatar element     |
-| `className?` | `string`    | `''`    | Extra classes      |
-
-Large centered testimonial block with a decorative quote mark.
-
-```tsx
-<QuoteSection quote="Ship fast." author="Ada" role="CTO" />
-```
-
-### ShowcaseSection
-
-File: `src/components/organisms/ShowcaseSection.tsx`
-
-| Prop         | Type                                          | Default | Description     |
-| ------------ | --------------------------------------------- | ------- | --------------- |
-| `items`      | `{ id, title, description?, image?, cta? }[]` | —       | Cards to show   |
-| `title?`     | `string`                                      | —       | Section heading |
-| `columns?`   | `2 \| 3`                                      | `3`     | Grid columns    |
-| `className?` | `string`                                      | `''`    | Extra classes   |
-
-Project/showcase cards with an image (or titled placeholder) and optional CTA.
-
-```tsx
-<ShowcaseSection items={projects} columns={2} title="Work" />
-```
-
-### TestimonialGrid
-
-File: `src/components/organisms/TestimonialGrid.tsx`
-
-| Prop           | Type                             | Default | Description      |
-| -------------- | -------------------------------- | ------- | ---------------- |
-| `testimonials` | `{ id, quote, author, role? }[]` | —       | Quotes to render |
-| `title?`       | `string`                         | —       | Section heading  |
-| `columns?`     | `1 \| 2 \| 3`                    | `3`     | Grid columns     |
-| `className?`   | `string`                         | `''`    | Extra classes    |
-
-Grid of quoted testimonials with author attribution.
-
-```tsx
-<TestimonialGrid testimonials={reviews} columns={2} title="Loved by" />
-```
-
-### VideoSection
-
-File: `src/components/organisms/VideoSection.tsx`
-
-| Prop         | Type     | Default | Description            |
-| ------------ | -------- | ------- | ---------------------- |
-| `title?`     | `string` | —       | Heading (also `title`) |
-| `src?`       | `string` | —       | Native video `mp4` URL |
-| `videoId?`   | `string` | —       | YouTube ID (iframe)    |
-| `poster?`    | `string` | —       | Native video poster    |
-| `className?` | `string` | `''`    | Extra classes          |
-
-If `videoId` is set, embeds `youtube-nocookie.com`; else a `<video>` with
-controls when `src` is set; otherwise a fallback message.
-
-```tsx
-<VideoSection videoId="dQw4w9WgXcQ" title="Demo" />
-```
+Complex UI sections composed of molecules and atoms.
+
+**256 components** across 16 domains, one file per component in
+`src/components/organisms/<domain>/<Name>.tsx`. Every component exports
+`export const <Name>: FC<<Name>Props>` with a colocated `interface <Name>Props`;
+props are listed verbatim from the interface. `Client` marks components that
+start with `'use client';`.
+
+## app
+
+Workspace & productivity.
+
+| Component            | File                                   | Props                                                                                                                                                | Client |
+| -------------------- | -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| `AnnouncementStrip`  | `organisms/app/AnnouncementStrip.tsx`  | `message: string; action?: AnnouncementAction; variant?: 'info' \| 'success' \| 'warning' \| 'error'; dismissible?: boolean; onDismiss?: () => void` | client |
+| `AppShell`           | `organisms/app/AppShell.tsx`           | `title: string; navItems: AppShellNavItem[]; onNavigate?: (label: string) => void; user?: { name: string; initials: string }; children: ReactNode`   | client |
+| `BillingPanel`       | `organisms/app/BillingPanel.tsx`       | `plan: string; price: string; billingCycle?: string; nextPayment?: string; usage?: Usage[]; onManageBilling?: () => void; onUpgrade?: () => void`    | client |
+| `DashboardWidget`    | `organisms/app/DashboardWidget.tsx`    | `title: string; subtitle?: string; action?: ReactNode; className?: string; children: ReactNode`                                                      | —      |
+| `MetricBar`          | `organisms/app/MetricBar.tsx`          | `metrics: Metric[]`                                                                                                                                  | —      |
+| `NotificationDrawer` | `organisms/app/NotificationDrawer.tsx` | `open: boolean; onClose: () => void; notifications: Notification[]; onMarkAllRead?: () => void`                                                      | client |
+| `OnboardingFlow`     | `organisms/app/OnboardingFlow.tsx`     | `steps: OnboardingStep[]; initialStep?: number; onComplete?: (index: number) => void`                                                                | client |
+| `ProjectTimeline`    | `organisms/app/ProjectTimeline.tsx`    | `milestones: Milestone[]`                                                                                                                            | —      |
+| `QuickActions`       | `organisms/app/QuickActions.tsx`       | `actions: QuickAction[]; onAction?: (id: string) => void`                                                                                            | client |
+| `RecentActivity`     | `organisms/app/RecentActivity.tsx`     | `activities: Activity[]; onViewAll?: () => void; emptyText?: string`                                                                                 | client |
+| `SearchOverlay`      | `organisms/app/SearchOverlay.tsx`      | `open: boolean; onClose: () => void; onSearch?: (query: string) => void; results?: SearchResult[]; placeholder?: string`                             | client |
+| `SettingsPanel`      | `organisms/app/SettingsPanel.tsx`      | `sections: SettingsSection[]`                                                                                                                        | —      |
+| `StatusOverview`     | `organisms/app/StatusOverview.tsx`     | `stats: StatusStat[]`                                                                                                                                | —      |
+| `TeamRoster`         | `organisms/app/TeamRoster.tsx`         | `members: Member[]; onInvite?: () => void`                                                                                                           | client |
+| `UserMenu`           | `organisms/app/UserMenu.tsx`           | `username: string; avatarInitials: string; role?: string; onSignOut?: () => void; onProfile?: () => void; onSettings?: () => void`                   | client |
+| `WorkspaceGrid`      | `organisms/app/WorkspaceGrid.tsx`      | `workspaces: Workspace[]; onCreate?: () => void`                                                                                                     | client |
+
+## auth
+
+Auth, security & account.
+
+| Component            | File                                    | Props                                                                                                                                                                  | Client |
+| -------------------- | --------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| `AccountMenu`        | `organisms/auth/AccountMenu.tsx`        | `name: string; email?: string; avatar?: ReactNode; items: AccountMenuItem[]`                                                                                           | client |
+| `AccountRecovery`    | `organisms/auth/AccountRecovery.tsx`    | `onSubmit: (payload: { method: 'email' \| 'phone'; identifier: string; }) => void; loading?: boolean; error?: string`                                                  | client |
+| `AnnouncementBar`    | `organisms/auth/AnnouncementBar.tsx`    | `text: string; link?: { label: string; href: string }; variant?: 'primary' \| 'accent' \| 'neutral'; dismissible?: boolean; onDismiss?: () => void`                    | client |
+| `AuthForm`           | `organisms/auth/AuthForm.tsx`           | `mode?: 'login' \| 'signup'; title?: string; onSubmit: (payload: AuthPayload) => void; loading?: boolean; error?: string`                                              | client |
+| `AuthLayout`         | `organisms/auth/AuthLayout.tsx`         | `title: string; subtitle?: string; children: ReactNode; footer?: ReactNode; brand?: string`                                                                            | —      |
+| `CookieBanner`       | `organisms/auth/CookieBanner.tsx`       | `onAccept: () => void; onDecline: () => void; message?: string; policyHref?: string; policyLabel?: string`                                                             | client |
+| `InviteTeam`         | `organisms/auth/InviteTeam.tsx`         | `onInvite: (payload: { email: string; role: string }) => void; roles?: string[]; loading?: boolean`                                                                    | client |
+| `MfaSetup`           | `organisms/auth/MfaSetup.tsx`           | `secret?: string; onSubmit?: (code: string) => void; loading?: boolean; error?: string`                                                                                | client |
+| `NotificationCenter` | `organisms/auth/NotificationCenter.tsx` | `notifications: Notification[]; onOpen?: (notification: Notification) => void; onMarkAllRead?: () => void; unreadCount?: number`                                       | client |
+| `OtpVerify`          | `organisms/auth/OtpVerify.tsx`          | `digits?: number; onSubmit: (code: string) => void; loading?: boolean; error?: string; onResend?: () => void`                                                          | client |
+| `PasswordResetForm`  | `organisms/auth/PasswordResetForm.tsx`  | `onSubmit: (email: string) => void; loading?: boolean; error?: string; successMessage?: string`                                                                        | client |
+| `PermissionMatrix`   | `organisms/auth/PermissionMatrix.tsx`   | `roles: string[]; permissions: string[]; value: Record<string, string[]>; onChange?: (role: string, permission: string, checked: boolean) => void; readonly?: boolean` | client |
+| `SessionTimeout`     | `organisms/auth/SessionTimeout.tsx`     | `timeoutSeconds?: number; warningThresholdSeconds?: number; onSignOut: () => void; onExtend: () => void`                                                               | client |
+| `SignInForm`         | `organisms/auth/SignInForm.tsx`         | `onSubmit: (payload: { email: string; password: string }) => void; loading?: boolean; error?: string; title?: string; onForgotPassword?: () => void`                   | client |
+| `SignUpForm`         | `organisms/auth/SignUpForm.tsx`         | `onSubmit: (payload: { name: string; email: string; password: string; }) => void; loading?: boolean; error?: string; title?: string`                                   | client |
+| `SocialAuthRow`      | `organisms/auth/SocialAuthRow.tsx`      | `providers: SocialProvider[]; onProvider?: (id: string) => void; dividerText?: string`                                                                                 | client |
+
+## blog
+
+Blog, course & learning.
+
+| Component          | File                                  | Props                                                                                                                                 | Client |
+| ------------------ | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| `ArticleList`      | `organisms/blog/ArticleList.tsx`      | `articles: Article[]; title?: string`                                                                                                 | —      |
+| `AuthorProfile`    | `organisms/blog/AuthorProfile.tsx`    | `name: string; role: string; bio?: string; initials?: string; stats?: { articles?: number; followers?: number; following?: number; }` | —      |
+| `BlogSection`      | `organisms/blog/BlogSection.tsx`      | `posts: BlogPost[]; title?: string`                                                                                                   | —      |
+| `CategorySection`  | `organisms/blog/CategorySection.tsx`  | `categories: Category[]; title?: string`                                                                                              | —      |
+| `CourseLanding`    | `organisms/blog/CourseLanding.tsx`    | `title: string; description?: string; instructor?: string; rating?: number; curriculum: CurriculumItem[]; ctaLabel?: string`          | —      |
+| `EditorialStrip`   | `organisms/blog/EditorialStrip.tsx`   | `items: Editorial[]; title?: string`                                                                                                  | —      |
+| `FAQSection`       | `organisms/blog/FAQSection.tsx`       | `items: FaqItem[]; title?: string`                                                                                                    | —      |
+| `FaqAccordion`     | `organisms/blog/FaqAccordion.tsx`     | `items: FaqAccordionItem[]; title?: string; description?: string`                                                                     | client |
+| `FeaturedStory`    | `organisms/blog/FeaturedStory.tsx`    | `title: string; excerpt?: string; author?: string; date?: string; category?: string; readTime?: string`                               | —      |
+| `GalleryGrid`      | `organisms/blog/GalleryGrid.tsx`      | `items: GalleryGridItem[]; columns?: 2 \| 3 \| 4; className?: string`                                                                 | —      |
+| `LessonNavigation` | `organisms/blog/LessonNavigation.tsx` | `lessons: Lesson[]; activeLesson?: string; onSelect?: (lessonId: string) => void`                                                     | client |
+| `NewsletterBanner` | `organisms/blog/NewsletterBanner.tsx` | `title?: string; description?: string; buttonLabel?: string; onSubscribe?: (email: string) => void`                                   | client |
+| `PinnedPost`       | `organisms/blog/PinnedPost.tsx`       | `title: string; excerpt?: string; author?: string; date?: string; tags?: string[]`                                                    | —      |
+| `QuizSection`      | `organisms/blog/QuizSection.tsx`      | `questions: Question[]; title?: string`                                                                                               | client |
+| `QuoteShowcase`    | `organisms/blog/QuoteShowcase.tsx`    | `quotes: Quote[]; title?: string`                                                                                                     | —      |
+| `RecipeCollection` | `organisms/blog/RecipeCollection.tsx` | `recipes: Recipe[]; title?: string`                                                                                                   | —      |
+
+## crm
+
+Sales, CRM & commerce ops.
+
+| Component             | File                                    | Props                                                                                                                                                                                                       | Client |
+| --------------------- | --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| `ActivityFeed`        | `organisms/crm/ActivityFeed.tsx`        | `items: FeedItem[]; title?: string`                                                                                                                                                                         | —      |
+| `CustomerJourney`     | `organisms/crm/CustomerJourney.tsx`     | `steps: JourneyStep[]; title?: string`                                                                                                                                                                      | —      |
+| `DealRoom`            | `organisms/crm/DealRoom.tsx`            | `dealName: string; company?: string; value?: number; stage?: string; owner?: string; expectedClose?: string; contacts?: DealContact[]; activities?: DealActivity[]`                                         | —      |
+| `InfoCards`           | `organisms/crm/InfoCards.tsx`           | `cards: InfoCard[]; columns?: 2 \| 3 \| 4; title?: string`                                                                                                                                                  | —      |
+| `IntegrationsSection` | `organisms/crm/IntegrationsSection.tsx` | `title?: string; description?: string; items: Integration[]; columns?: number; className?: string`                                                                                                          | —      |
+| `InvoiceSection`      | `organisms/crm/InvoiceSection.tsx`      | `invoices: Invoice[]; title?: string`                                                                                                                                                                       | —      |
+| `KanbanBoard`         | `organisms/crm/KanbanBoard.tsx`         | `columns: KanbanColumn[]`                                                                                                                                                                                   | —      |
+| `LeadCapture`         | `organisms/crm/LeadCapture.tsx`         | `title?: string; onCapture?: (lead: Lead) => void`                                                                                                                                                          | client |
+| `Leaderboard`         | `organisms/crm/Leaderboard.tsx`         | `entries: LeaderboardEntry[]; title?: string; limit?: number; className?: string`                                                                                                                           | —      |
+| `LogosSection`        | `organisms/crm/LogosSection.tsx`        | `items: Logo[]; title?: string; columns?: 2 \| 3 \| 4 \| 5 \| 6`                                                                                                                                            | —      |
+| `OrderHistory`        | `organisms/crm/OrderHistory.tsx`        | `orders: Order[]; title?: string`                                                                                                                                                                           | —      |
+| `PricingCard`         | `organisms/crm/PricingCard.tsx`         | `name: string; price: string; period?: string; description?: string; features: string[]; ctaLabel: string; ctaHref?: string; onCta?: () => void; highlighted?: boolean; badge?: string; className?: string` | —      |
+| `ProductGrid`         | `organisms/crm/ProductGrid.tsx`         | `items: ProductItem[]; title?: string; columns?: 2 \| 3 \| 4; className?: string`                                                                                                                           | —      |
+| `ProfileCard`         | `organisms/crm/ProfileCard.tsx`         | `name: string; role?: string; bio?: string; avatar?: { src?: string; alt: string; initials?: string }; badges?: string[]; stats?: ProfileStat[]; actions?: ReactNode`                                       | —      |
+| `SalesPipeline`       | `organisms/crm/SalesPipeline.tsx`       | `stages: PipelineStage[]; title?: string`                                                                                                                                                                   | —      |
+| `SupportInbox`        | `organisms/crm/SupportInbox.tsx`        | `tickets: Ticket[]; title?: string`                                                                                                                                                                         | —      |
+
+## developer
+
+Developer platform & IoT.
+
+| Component             | File                                          | Props                                                                                                          | Client |
+| --------------------- | --------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ------ |
+| `ApiPlayground`       | `organisms/developer/ApiPlayground.tsx`       | `title?: string; onSend?: (request: { method: string; path: string; body?: string }) => void`                  | client |
+| `BranchManager`       | `organisms/developer/BranchManager.tsx`       | `branches: Branch[]; currentBranch?: string; onCheckout?: (branchId: string) => void`                          | client |
+| `ChangelogFeed`       | `organisms/developer/ChangelogFeed.tsx`       | `entries: ChangelogEntry[]; title?: string`                                                                    | —      |
+| `CodeExplorer`        | `organisms/developer/CodeExplorer.tsx`        | `files: FileNode[]; title?: string`                                                                            | client |
+| `ComparisonSection`   | `organisms/developer/ComparisonSection.tsx`   | `title?: string; description?: string; columns: ComparisonColumn[]; rows: ComparisonRow[]; className?: string` | —      |
+| `DeployPipeline`      | `organisms/developer/DeployPipeline.tsx`      | `steps: PipelineStep[]; title?: string`                                                                        | —      |
+| `DevServerStatus`     | `organisms/developer/DevServerStatus.tsx`     | `services: ServerService[]; title?: string`                                                                    | —      |
+| `DocumentationView`   | `organisms/developer/DocumentationView.tsx`   | `sections: DocSection[]; title?: string`                                                                       | —      |
+| `EnvironmentSelector` | `organisms/developer/EnvironmentSelector.tsx` | `environments: Environment[]; selected?: string; title?: string`                                               | —      |
+| `GitCommitFeed`       | `organisms/developer/GitCommitFeed.tsx`       | `commits: Commit[]; title?: string`                                                                            | —      |
+| `LogViewer`           | `organisms/developer/LogViewer.tsx`           | `entries: LogEntry[]; title?: string`                                                                          | —      |
+| `Marquee`             | `organisms/developer/Marquee.tsx`             | `items: ReactNode[]; title?: string; className?: string`                                                       | client |
+| `MetricsDashboard`    | `organisms/developer/MetricsDashboard.tsx`    | `metrics: Metric[]; title?: string`                                                                            | —      |
+| `PackageManager`      | `organisms/developer/PackageManager.tsx`      | `packages: Package[]; title?: string`                                                                          | client |
+| `TerminalPanel`       | `organisms/developer/TerminalPanel.tsx`       | `initialLines?: TerminalLine[]; onCommand?: (command: string) => void; prompt?: string; title?: string`        | client |
+| `TestRunner`          | `organisms/developer/TestRunner.tsx`          | `results: TestResult[]; title?: string`                                                                        | —      |
+
+## finance
+
+Finance & investing.
+
+| Component             | File                                        | Props                                                                                                                                                        | Client |
+| --------------------- | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------ |
+| `AccountOverview`     | `organisms/finance/AccountOverview.tsx`     | `balance: number; income: number; expenses: number; accountName?: string; currency?: string`                                                                 | —      |
+| `BudgetOverview`      | `organisms/finance/BudgetOverview.tsx`      | `budgets: BudgetItem[]; currency?: string; title?: string`                                                                                                   | —      |
+| `CryptoPortfolio`     | `organisms/finance/CryptoPortfolio.tsx`     | `assets: CryptoAsset[]; currency?: string; title?: string`                                                                                                   | —      |
+| `ExpenseCategories`   | `organisms/finance/ExpenseCategories.tsx`   | `categories: ExpenseCategory[]; currency?: string; title?: string`                                                                                           | —      |
+| `FinancialHealth`     | `organisms/finance/FinancialHealth.tsx`     | `score: number; metrics: HealthMetric[]; title?: string`                                                                                                     | —      |
+| `InvestmentPortfolio` | `organisms/finance/InvestmentPortfolio.tsx` | `holdings: Holding[]; totalValue: number; currency?: string; title?: string`                                                                                 | —      |
+| `InvoiceDashboard`    | `organisms/finance/InvoiceDashboard.tsx`    | `invoices: Invoice[]; currency?: string; title?: string`                                                                                                     | —      |
+| `LoanApplication`     | `organisms/finance/LoanApplication.tsx`     | `onSubmit: (request: LoanRequest) => void; title?: string`                                                                                                   | client |
+| `MarketWatch`         | `organisms/finance/MarketWatch.tsx`         | `quotes: Quote[]; currency?: string; title?: string`                                                                                                         | —      |
+| `PaymentMethods`      | `organisms/finance/PaymentMethods.tsx`      | `methods: PaymentMethod[]; title?: string`                                                                                                                   | —      |
+| `RetirementPlanner`   | `organisms/finance/RetirementPlanner.tsx`   | `currentAge: number; retirementAge: number; currentSavings: number; monthlyContribution: number; expectedReturn?: number; currency?: string; title?: string` | —      |
+| `SavingsGoals`        | `organisms/finance/SavingsGoals.tsx`        | `goals: SavingsGoal[]; currency?: string; title?: string`                                                                                                    | —      |
+| `SpendingTrends`      | `organisms/finance/SpendingTrends.tsx`      | `data: TrendPoint[]; currency?: string; title?: string`                                                                                                      | —      |
+| `SubscriptionManager` | `organisms/finance/SubscriptionManager.tsx` | `subscriptions: Subscription[]; currency?: string; title?: string`                                                                                           | —      |
+| `TaxSummary`          | `organisms/finance/TaxSummary.tsx`          | `grossIncome: number; deductions: number; credits: number; taxPaid: number; currency?: string; title?: string`                                               | —      |
+| `TransactionHistory`  | `organisms/finance/TransactionHistory.tsx`  | `transactions: Transaction[]; currency?: string; title?: string`                                                                                             | —      |
+
+## health
+
+Health, fitness & food.
+
+| Component            | File                                      | Props                                                                                                        | Client |
+| -------------------- | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ------ |
+| `ActivityCalendar`   | `organisms/health/ActivityCalendar.tsx`   | `days: CalendarDay[]; title?: string`                                                                        | —      |
+| `AppointmentBooking` | `organisms/health/AppointmentBooking.tsx` | `doctors: string[]; onSubmit: (request: AppointmentRequest) => void; title?: string`                         | client |
+| `CareTeam`           | `organisms/health/CareTeam.tsx`           | `members: CareMember[]; title?: string`                                                                      | —      |
+| `EmergencyContacts`  | `organisms/health/EmergencyContacts.tsx`  | `contacts: EmergencyContact[]; title?: string`                                                               | —      |
+| `FitnessGoals`       | `organisms/health/FitnessGoals.tsx`       | `goals: FitnessGoal[]; title?: string`                                                                       | —      |
+| `HealthDashboard`    | `organisms/health/HealthDashboard.tsx`    | `name?: string; vitals: Vital[]; steps?: number; stepsGoal?: number; calories?: number; sleepHours?: number` | —      |
+| `HealthHistory`      | `organisms/health/HealthHistory.tsx`      | `records: HealthRecord[]; title?: string`                                                                    | —      |
+| `HydrationTracker`   | `organisms/health/HydrationTracker.tsx`   | `goal?: number; glassSize?: number; initialGlasses?: number; title?: string`                                 | client |
+| `MealPlanner`        | `organisms/health/MealPlanner.tsx`        | `meals: DayMeals[]; title?: string`                                                                          | —      |
+| `MedicationSchedule` | `organisms/health/MedicationSchedule.tsx` | `medications: Medication[]; title?: string`                                                                  | client |
+| `NutritionalSummary` | `organisms/health/NutritionalSummary.tsx` | `nutrition: NutritionData; targetCalories?: number; title?: string`                                          | —      |
+| `SleepInsights`      | `organisms/health/SleepInsights.tsx`      | `nights: SleepNight[]; title?: string`                                                                       | —      |
+| `SymptomTracker`     | `organisms/health/SymptomTracker.tsx`     | `symptoms: Symptom[]; title?: string`                                                                        | —      |
+| `VitalsOverview`     | `organisms/health/VitalsOverview.tsx`     | `vitals: Vital[]; title?: string`                                                                            | —      |
+| `WellnessScore`      | `organisms/health/WellnessScore.tsx`      | `score: number; factors: WellnessFactor[]; title?: string`                                                   | —      |
+| `WorkoutPlan`        | `organisms/health/WorkoutPlan.tsx`        | `workouts: Workout[]; title?: string`                                                                        | —      |
+
+## hr
+
+HR, people & benefits.
+
+| Component             | File                                   | Props                                                            | Client |
+| --------------------- | -------------------------------------- | ---------------------------------------------------------------- | ------ |
+| `AttendanceDashboard` | `organisms/hr/AttendanceDashboard.tsx` | `records: AttendanceRecord[]`                                    | —      |
+| `BenefitsPortal`      | `organisms/hr/BenefitsPortal.tsx`      | `benefits: Benefit[]`                                            | —      |
+| `CandidatePipeline`   | `organisms/hr/CandidatePipeline.tsx`   | `stages: PipelineStage[]`                                        | —      |
+| `CompensationReview`  | `organisms/hr/CompensationReview.tsx`  | `records: CompensationRecord[]`                                  | —      |
+| `EmployeeDirectory`   | `organisms/hr/EmployeeDirectory.tsx`   | `employees: Employee[]; onSelect?: (employee: Employee) => void` | —      |
+| `HiringFunnel`        | `organisms/hr/HiringFunnel.tsx`        | `stages: FunnelStage[]`                                          | —      |
+| `JobBoard`            | `organisms/hr/JobBoard.tsx`            | `jobs: Job[]; onApply?: (job: Job) => void`                      | —      |
+| `LeaveCalendar`       | `organisms/hr/LeaveCalendar.tsx`       | `leaves: Leave[]`                                                | client |
+| `OnboardingProgram`   | `organisms/hr/OnboardingProgram.tsx`   | `steps: OnboardingStep[]; startIndex?: number`                   | client |
+| `OrgStructure`        | `organisms/hr/OrgStructure.tsx`        | `nodes: OrgNode[]`                                               | —      |
+| `PayrollOverview`     | `organisms/hr/PayrollOverview.tsx`     | `payroll: PayrollEntry[]`                                        | —      |
+| `PerformanceReview`   | `organisms/hr/PerformanceReview.tsx`   | `reviews: Review[]`                                              | —      |
+| `PolicyLibrary`       | `organisms/hr/PolicyLibrary.tsx`       | `policies: Policy[]`                                             | —      |
+| `RecognitionFeed`     | `organisms/hr/RecognitionFeed.tsx`     | `items: Recognition[]`                                           | —      |
+| `TimesheetDashboard`  | `organisms/hr/TimesheetDashboard.tsx`  | `entries: TimesheetEntry[]`                                      | —      |
+| `TrainingCatalog`     | `organisms/hr/TrainingCatalog.tsx`     | `courses: Course[]`                                              | —      |
+
+## landing
+
+Marketing, landing & careers.
+
+| Component             | File                                        | Props                                                                                                                 | Client |
+| --------------------- | ------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ------ |
+| `CTASection`          | `organisms/landing/CTASection.tsx`          | `title: string; description?: string; primaryCta?: CtaLink; secondaryCta?: CtaLink; badge?: string`                   | —      |
+| `ContactSection`      | `organisms/landing/ContactSection.tsx`      | `title?: string; description?: string; onSubmit?: (payload: ContactPayload) => void`                                  | client |
+| `Footer`              | `organisms/landing/Footer.tsx`              | `brand: string; description?: string; columns: FooterColumn[]; copyright?: string`                                    | —      |
+| `Hero`                | `organisms/landing/Hero.tsx`                | `title: string; tagline?: string; description?: string; primaryCta?: HeroCta; secondaryCta?: HeroCta; badge?: string` | —      |
+| `Navbar`              | `organisms/landing/Navbar.tsx`              | `items: NavbarItem[]; position?: 'bottom' \| 'top'`                                                                   | client |
+| `NavigationMenu`      | `organisms/landing/NavigationMenu.tsx`      | `items: NavigationMenuItem[]; ariaLabel?: string`                                                                     | client |
+| `NewsletterSection`   | `organisms/landing/NewsletterSection.tsx`   | `title?: string; description?: string; buttonLabel?: string; onSubmit?: (email: string) => void`                      | client |
+| `PricingSection`      | `organisms/landing/PricingSection.tsx`      | `plans: PricingPlan[]`                                                                                                | —      |
+| `ProcessSection`      | `organisms/landing/ProcessSection.tsx`      | `steps: ProcessStep[]; current?: string; title?: string; className?: string`                                          | —      |
+| `QuoteSection`        | `organisms/landing/QuoteSection.tsx`        | `quote: string; author: string; role?: string; avatar?: ReactNode; className?: string`                                | —      |
+| `ShowcaseSection`     | `organisms/landing/ShowcaseSection.tsx`     | `title?: string; items: ShowcaseItem[]; columns?: 2 \| 3; className?: string`                                         | —      |
+| `TeamSection`         | `organisms/landing/TeamSection.tsx`         | `members: TeamMember[]; title?: string`                                                                               | —      |
+| `TestimonialCarousel` | `organisms/landing/TestimonialCarousel.tsx` | `items: Testimonial[]; className?: string`                                                                            | client |
+| `TestimonialGrid`     | `organisms/landing/TestimonialGrid.tsx`     | `testimonials: Testimonial[]; title?: string; columns?: 1 \| 2 \| 3; className?: string`                              | —      |
+| `TestimonialSection`  | `organisms/landing/TestimonialSection.tsx`  | `items: Testimonial[]; title?: string; columns?: 2 \| 3`                                                              | —      |
+| `VideoSection`        | `organisms/landing/VideoSection.tsx`        | `title?: string; src?: string; videoId?: string; poster?: string; className?: string`                                 | —      |
+
+## mail
+
+Email, inbox & operations.
+
+| Component           | File                                   | Props                                                                                                                                                             | Client |
+| ------------------- | -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| `ArchivePanel`      | `organisms/mail/ArchivePanel.tsx`      | `emails: ArchivedEmail[]; onRestore?: (email: ArchivedEmail) => void; onDelete?: (email: ArchivedEmail) => void`                                                  | —      |
+| `AttachmentViewer`  | `organisms/mail/AttachmentViewer.tsx`  | `attachments: Attachment[]; onDownload?: (attachment: Attachment) => void`                                                                                        | —      |
+| `ComposeWindow`     | `organisms/mail/ComposeWindow.tsx`     | `onSend?: (payload: { to: string; cc: string; subject: string; body: string; }) => void; onDiscard?: () => void`                                                  | client |
+| `ConversationList`  | `organisms/mail/ConversationList.tsx`  | `conversations: Conversation[]; onSelect?: (conversation: Conversation) => void`                                                                                  | —      |
+| `DraftList`         | `organisms/mail/DraftList.tsx`         | `drafts: Draft[]; onEdit?: (draft: Draft) => void; onDelete?: (draft: Draft) => void`                                                                             | —      |
+| `EmailReader`       | `organisms/mail/EmailReader.tsx`       | `email: Email; onReply?: () => void; onForward?: () => void`                                                                                                      | —      |
+| `FolderManager`     | `organisms/mail/FolderManager.tsx`     | `folders: Folder[]; onAdd?: (name: string) => void; onRename?: (id: string, name: string) => void; onDelete?: (id: string) => void`                               | client |
+| `InboxView`         | `organisms/mail/InboxView.tsx`         | `emails: EmailSummary[]`                                                                                                                                          | client |
+| `MailFilters`       | `organisms/mail/MailFilters.tsx`       | `filters?: MailFilter[]; onToggle?: (id: string, enabled: boolean) => void; onAdd?: (label: string) => void`                                                      | client |
+| `MailSearchOverlay` | `organisms/mail/MailSearchOverlay.tsx` | `onSearch?: (query: string) => void; onSelect?: (result: SearchResult) => void; results?: SearchResult[]`                                                         | client |
+| `MailSidebar`       | `organisms/mail/MailSidebar.tsx`       | `folders: MailFolder[]; activeId?: string; onSelect?: (folder: MailFolder) => void; onCompose?: () => void`                                                       | —      |
+| `ReplyComposer`     | `organisms/mail/ReplyComposer.tsx`     | `recipient?: string; subject?: string; quoted?: string; onSend?: (payload: { recipient: string; subject: string; body: string; }) => void; onCancel?: () => void` | client |
+| `SendLater`         | `organisms/mail/SendLater.tsx`         | `scheduled: ScheduledSend[]; onCancel?: (item: ScheduledSend) => void; onReschedule?: (item: ScheduledSend) => void`                                              | —      |
+| `SignatureSettings` | `organisms/mail/SignatureSettings.tsx` | `name?: string; title?: string; signature?: string; onChange?: (payload: { name: string; title: string; signature: string; }) => void`                            | client |
+| `SpamFolder`        | `organisms/mail/SpamFolder.tsx`        | `emails: SpamEmail[]; onNotSpam?: (email: SpamEmail) => void; onDelete?: (email: SpamEmail) => void`                                                              | —      |
+| `StarredView`       | `organisms/mail/StarredView.tsx`       | `emails: StarredEmail[]; onUnstar?: (email: StarredEmail) => void`                                                                                                | —      |
+
+## media
+
+Music, streaming & media.
+
+| Component           | File                                    | Props                                                                                                                                 | Client |
+| ------------------- | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| `AlbumPage`         | `organisms/media/AlbumPage.tsx`         | `album: Album; onPlayTrack?: (id: string) => void; onPlayAll?: () => void`                                                            | —      |
+| `ArtistProfile`     | `organisms/media/ArtistProfile.tsx`     | `name: string; genres: string[]; monthlyListeners?: number; topTracks: TopTrack[]; onFollow?: () => void`                             | —      |
+| `BrowseGrid`        | `organisms/media/BrowseGrid.tsx`        | `items: BrowseItem[]; title?: string`                                                                                                 | —      |
+| `DiscoverPage`      | `organisms/media/DiscoverPage.tsx`      | `items: DiscoverItem[]; title?: string; onOpen?: (id: string) => void`                                                                | —      |
+| `DownloadManager`   | `organisms/media/DownloadManager.tsx`   | `downloads: DownloadItem[]; onPause?: (id: string, paused: boolean) => void; onCancel?: (id: string) => void`                         | client |
+| `LiveChannel`       | `organisms/media/LiveChannel.tsx`       | `channel: ChannelInfo; streamTitle?: string; onFollow?: () => void`                                                                   | —      |
+| `LyricsView`        | `organisms/media/LyricsView.tsx`        | `lines: LyricLine[]; activeIndex?: number; onSelect?: (index: number) => void`                                                        | client |
+| `MovieDetail`       | `organisms/media/MovieDetail.tsx`       | `movie: Movie; onPlay?: () => void; onWatchlist?: () => void`                                                                         | —      |
+| `MusicLibrary`      | `organisms/media/MusicLibrary.tsx`      | `songs: LibrarySong[]; title?: string; onPlay?: (id: string) => void`                                                                 | —      |
+| `PlayerSection`     | `organisms/media/PlayerSection.tsx`     | `title: string; artist: string; duration?: number; progress?: number; onToggle?: (isPlaying: boolean) => void`                        | client |
+| `PlaylistView`      | `organisms/media/PlaylistView.tsx`      | `name: string; tracks: PlaylistTrack[]; onPlay?: (id: string) => void; onPlayAll?: () => void`                                        | —      |
+| `PodcastHub`        | `organisms/media/PodcastHub.tsx`        | `podcasts: PodcastItem[]; title?: string; onOpen?: (id: string) => void`                                                              | —      |
+| `QueueManager`      | `organisms/media/QueueManager.tsx`      | `items: QueueItem[]; onRemove?: (id: string) => void; onMove?: (id: string, direction: 'up' \| 'down') => void; onClear?: () => void` | client |
+| `RecommendationRow` | `organisms/media/RecommendationRow.tsx` | `items: Recommendation[]; title?: string; onSelect?: (id: string) => void`                                                            | —      |
+| `TvSeriesPage`      | `organisms/media/TvSeriesPage.tsx`      | `series: TvSeries; onPlay?: (id: string) => void`                                                                                     | —      |
+| `VideoCatalog`      | `organisms/media/VideoCatalog.tsx`      | `videos: VideoItem[]; title?: string; onPlay?: (id: string) => void`                                                                  | —      |
+
+## news
+
+News, magazine & sports.
+
+| Component           | File                                   | Props                                                                                               | Client |
+| ------------------- | -------------------------------------- | --------------------------------------------------------------------------------------------------- | ------ |
+| `BreakingTicker`    | `organisms/news/BreakingTicker.tsx`    | `items: string[]; label?: string; intervalMs?: number`                                              | client |
+| `BusinessNews`      | `organisms/news/BusinessNews.tsx`      | `market: MarketQuote[]; headlines: BusinessHeadline[]; title?: string`                              | —      |
+| `DataViz`           | `organisms/news/DataViz.tsx`           | `data: DataPoint[]; title?: string; unit?: string`                                                  | —      |
+| `EditorialOpinion`  | `organisms/news/EditorialOpinion.tsx`  | `columns: OpinionColumn[]; title?: string`                                                          | —      |
+| `EntertainmentFeed` | `organisms/news/EntertainmentFeed.tsx` | `items: EntertainmentItem[]; title?: string`                                                        | —      |
+| `LiveBlog`          | `organisms/news/LiveBlog.tsx`          | `posts: LivePost[]; title?: string; author?: string`                                                | client |
+| `LocalNews`         | `organisms/news/LocalNews.tsx`         | `items: LocalItem[]; title?: string`                                                                | —      |
+| `NewsletterSignup`  | `organisms/news/NewsletterSignup.tsx`  | `title?: string; description?: string; buttonLabel?: string; onSubscribe?: (email: string) => void` | client |
+| `PhotoGallery`      | `organisms/news/PhotoGallery.tsx`      | `photos: Photo[]; title?: string`                                                                   | client |
+| `PodcastFeed`       | `organisms/news/PodcastFeed.tsx`       | `podcasts: Podcast[]; title?: string`                                                               | —      |
+| `PoliticsSection`   | `organisms/news/PoliticsSection.tsx`   | `lead: PoliticsArticle; articles: PoliticsArticle[]; poll?: PoliticsPoll; title?: string`           | —      |
+| `SportsSection`     | `organisms/news/SportsSection.tsx`     | `matches: SportsMatch[]; title?: string`                                                            | —      |
+| `TechnologySection` | `organisms/news/TechnologySection.tsx` | `articles: TechArticle[]; title?: string`                                                           | —      |
+| `TopStories`        | `organisms/news/TopStories.tsx`        | `stories: TopStory[]; title?: string`                                                               | —      |
+| `WeatherForecast`   | `organisms/news/WeatherForecast.tsx`   | `days: ForecastDay[]; title?: string`                                                               | —      |
+| `WorldNews`         | `organisms/news/WorldNews.tsx`         | `articles: WorldArticle[]; title?: string`                                                          | —      |
+
+## social
+
+Social, community & gaming.
+
+| Component           | File                                     | Props                                                                                                               | Client |
+| ------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------ |
+| `Calendar`          | `organisms/social/Calendar.tsx`          | `value?: Date; onChange?: (date: Date) => void; minDate?: Date; maxDate?: Date; className?: string`                 | client |
+| `ChatWindow`        | `organisms/social/ChatWindow.tsx`        | `messages: ChatMessage[]; onSend: (text: string) => void; title?: string; placeholder?: string; disabled?: boolean` | client |
+| `ConnectionsPage`   | `organisms/social/ConnectionsPage.tsx`   | `connections: Connection[]; onConnect?: (id: string) => void`                                                       | —      |
+| `EventTimeline`     | `organisms/social/EventTimeline.tsx`     | `items: EventTimelineItem[]; title?: string`                                                                        | —      |
+| `EventsSection`     | `organisms/social/EventsSection.tsx`     | `events: EventItem[]; onAttend?: (id: string) => void`                                                              | —      |
+| `ExploreGrid`       | `organisms/social/ExploreGrid.tsx`       | `items: ExploreItem[]; categories?: string[]; onSelect?: (id: string) => void`                                      | —      |
+| `FeatureGrid`       | `organisms/social/FeatureGrid.tsx`       | `features: Feature[]; columns?: 1 \| 2 \| 3 \| 4`                                                                   | —      |
+| `FeedView`          | `organisms/social/FeedView.tsx`          | `posts: Post[]; onLike?: (id: string) => void; onComment?: (id: string) => void`                                    | —      |
+| `GroupsHub`         | `organisms/social/GroupsHub.tsx`         | `groups: Group[]; onJoin?: (id: string) => void`                                                                    | —      |
+| `HashtagPage`       | `organisms/social/HashtagPage.tsx`       | `hashtag: string; stats: HashtagStats; posts: HashtagPost[]`                                                        | —      |
+| `MessengerView`     | `organisms/social/MessengerView.tsx`     | `initialMessages?: ChatMessage[]; contactName?: string; placeholder?: string; onSend?: (text: string) => void`      | client |
+| `NotificationsFeed` | `organisms/social/NotificationsFeed.tsx` | `notifications: Notification[]; onMarkRead?: (id: string) => void`                                                  | —      |
+| `ProfileTimeline`   | `organisms/social/ProfileTimeline.tsx`   | `name: string; handle: string; bio?: string; stats: ProfileStats; activities: Activity[]`                           | —      |
+| `ReelsGrid`         | `organisms/social/ReelsGrid.tsx`         | `reels: Reel[]; onPlay?: (id: string) => void`                                                                      | —      |
+| `StoriesRow`        | `organisms/social/StoriesRow.tsx`        | `stories: Story[]; onOpen?: (id: string) => void; onCreate?: () => void`                                            | —      |
+| `TrendingTopics`    | `organisms/social/TrendingTopics.tsx`    | `topics: Topic[]; onSelect?: (id: string) => void`                                                                  | —      |
+
+## store
+
+Storefront & e-commerce.
+
+| Component          | File                                   | Props                                                                                                                               | Client |
+| ------------------ | -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| `BrandSection`     | `organisms/store/BrandSection.tsx`     | `brands: Brand[]`                                                                                                                   | —      |
+| `CategoryShowcase` | `organisms/store/CategoryShowcase.tsx` | `categories: Category[]; onSelect?: (id: string) => void`                                                                           | —      |
+| `CheckoutFlow`     | `organisms/store/CheckoutFlow.tsx`     | `subtotal?: number; onComplete?: () => void`                                                                                        | client |
+| `DealsSection`     | `organisms/store/DealsSection.tsx`     | `deals: Deal[]`                                                                                                                     | —      |
+| `GiftCardCenter`   | `organisms/store/GiftCardCenter.tsx`   | `cards: GiftCard[]`                                                                                                                 | —      |
+| `LoyaltyProgram`   | `organisms/store/LoyaltyProgram.tsx`   | `points: number; tier: string; pointsToNext?: number; rewards: Reward[]`                                                            | —      |
+| `NewArrivals`      | `organisms/store/NewArrivals.tsx`      | `products: NewProduct[]`                                                                                                            | —      |
+| `OrderTracking`    | `organisms/store/OrderTracking.tsx`    | `orderId: string; status: string; eta?: string; items: OrderItem[]; timeline: TimelineEntry[]`                                      | —      |
+| `ProductList`      | `organisms/store/ProductList.tsx`      | `products: ListedProduct[]; onAddToCart?: (id: string) => void`                                                                     | —      |
+| `ProductShowcase`  | `organisms/store/ProductShowcase.tsx`  | `product: Product; onAddToCart?: () => void`                                                                                        | —      |
+| `ReturnCenter`     | `organisms/store/ReturnCenter.tsx`     | `orders: ReturnOrder[]; onStartReturn?: (id: string) => void`                                                                       | —      |
+| `ShippingTracker`  | `organisms/store/ShippingTracker.tsx`  | `carrier: string; trackingNumber: string; status: string; estimatedDelivery?: string; updates: TrackingUpdate[]`                    | —      |
+| `ShoppingCart`     | `organisms/store/ShoppingCart.tsx`     | `items: CartItem[]; onQuantityChange?: (id: string, qty: number) => void; onRemove?: (id: string) => void; onCheckout?: () => void` | client |
+| `StoreReviews`     | `organisms/store/StoreReviews.tsx`     | `reviews: Review[]`                                                                                                                 | —      |
+| `Storefront`       | `organisms/store/Storefront.tsx`       | `title: string; subtitle?: string; categories: Category[]; products: FeaturedProduct[]`                                             | —      |
+| `WishlistView`     | `organisms/store/WishlistView.tsx`     | `items: WishlistItem[]; onRemove?: (id: string) => void; onAddToCart?: (id: string) => void`                                        | —      |
+
+## support
+
+Support, knowledge & system.
+
+| Component         | File                                    | Props                                                                                                                                               | Client |
+| ----------------- | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| `CommandMenu`     | `organisms/support/CommandMenu.tsx`     | `open: boolean; onClose: () => void; items: CommandItem[]; placeholder?: string`                                                                    | client |
+| `DashboardHeader` | `organisms/support/DashboardHeader.tsx` | `title: string; subtitle?: string; actions?: ReactNode; searchValue?: string; onSearchChange?: (value: string) => void; searchPlaceholder?: string` | —      |
+| `DataList`        | `organisms/support/DataList.tsx`        | `sections: DataListSection[]`                                                                                                                       | —      |
+| `DataTable`       | `organisms/support/DataTable.tsx`       | `columns: DataColumn[]; rows: DataRow[]; emptyText?: string`                                                                                        | —      |
+| `Diff`            | `organisms/support/Diff.tsx`            | `before: ReactNode; after: ReactNode; aspectClass?: string; className?: string`                                                                     | —      |
+| `FilterBar`       | `organisms/support/FilterBar.tsx`       | `query: string; onQueryChange: (next: string) => void; placeholder?: string; children?: ReactNode`                                                  | client |
+| `Header`          | `organisms/support/Header.tsx`          | `title: string; subtitle?: string; badges?: ReactNode; action?: ReactNode; backHref?: string`                                                       | —      |
+| `PageBreadcrumbs` | `organisms/support/PageBreadcrumbs.tsx` | `items: PageBreadcrumbsCrumb[]; title: string; description?: string; actions?: ReactNode`                                                           | —      |
+| `PageHeader`      | `organisms/support/PageHeader.tsx`      | `title: string; description?: string; eyebrow?: string; actions?: ReactNode; className?: string`                                                    | —      |
+| `PageTabs`        | `organisms/support/PageTabs.tsx`        | `tabs: PageTab[]; defaultValue?: string; value?: string; onChange?: (value: string) => void`                                                        | client |
+| `ProgressStepper` | `organisms/support/ProgressStepper.tsx` | `steps: string[]; activeStep: number; onStepClick?: (index: number) => void; orientation?: 'horizontal' \| 'vertical'; className?: string`          | —      |
+| `Section`         | `organisms/support/Section.tsx`         | `eyebrow?: string; title: string; description?: string; action?: ReactNode; align?: 'start' \| 'center'; children?: ReactNode; className?: string`  | —      |
+| `Sidebar`         | `organisms/support/Sidebar.tsx`         | `title: string; items: SidebarItem[]; footer?: ReactNode`                                                                                           | client |
+| `StatsGrid`       | `organisms/support/StatsGrid.tsx`       | `stats: StatItem[]; columns?: 2 \| 3 \| 4`                                                                                                          | —      |
+| `TableOfContents` | `organisms/support/TableOfContents.tsx` | `items: TOCItem[]; activeId?: string; onSelect?: (id: string) => void; title?: string`                                                              | client |
+| `Toolbar`         | `organisms/support/Toolbar.tsx`         | `title?: string; subtitle?: string; actions?: ReactNode[]; children?: ReactNode`                                                                    | —      |
+
+## travel
+
+Travel, real estate & property.
+
+| Component             | File                                       | Props                                                              | Client |
+| --------------------- | ------------------------------------------ | ------------------------------------------------------------------ | ------ |
+| `AdventureSection`    | `organisms/travel/AdventureSection.tsx`    | `activities: Activity[]`                                           | —      |
+| `BookingFlow`         | `organisms/travel/BookingFlow.tsx`         | `onComplete?: () => void`                                          | client |
+| `ChecklistSection`    | `organisms/travel/ChecklistSection.tsx`    | `items: ChecklistItem[]; title?: string`                           | client |
+| `CurrencyConverter`   | `organisms/travel/CurrencyConverter.tsx`   | `initialAmount?: number`                                           | client |
+| `DestinationShowcase` | `organisms/travel/DestinationShowcase.tsx` | `destinations: Destination[]`                                      | —      |
+| `FlightResults`       | `organisms/travel/FlightResults.tsx`       | `flights: Flight[]; onSelect?: (index: number) => void`            | —      |
+| `HotelSearch`         | `organisms/travel/HotelSearch.tsx`         | `hotels: Hotel[]; onSelect?: (id: string) => void`                 | —      |
+| `ItineraryView`       | `organisms/travel/ItineraryView.tsx`       | `title: string; dates: string; days: ItineraryDay[]`               | —      |
+| `LocalGuides`         | `organisms/travel/LocalGuides.tsx`         | `guides: Guide[]`                                                  | —      |
+| `LoyaltyDashboard`    | `organisms/travel/LoyaltyDashboard.tsx`    | `tier: string; points: number; miles: number; benefits: Benefit[]` | —      |
+| `MapExplorer`         | `organisms/travel/MapExplorer.tsx`         | `pins: Pin[]; onSelect?: (id: string) => void`                     | —      |
+| `PhotoJournal`        | `organisms/travel/PhotoJournal.tsx`        | `entries: JournalEntry[]`                                          | —      |
+| `ReviewHub`           | `organisms/travel/ReviewHub.tsx`           | `reviews: TravelReview[]`                                          | —      |
+| `TravelAlerts`        | `organisms/travel/TravelAlerts.tsx`        | `alerts: Alert[]`                                                  | —      |
+| `TravelPackages`      | `organisms/travel/TravelPackages.tsx`      | `packages: Package[]; onSelect?: (id: string) => void`             | —      |
+| `TripPlanner`         | `organisms/travel/TripPlanner.tsx`         | `trip: TripDetails; activities: PlannedActivity[]`                 | —      |
 
 ---
 

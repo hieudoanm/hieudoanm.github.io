@@ -1,1372 +1,380 @@
 # Molecules
 
-Composites of atoms in `src/components/molecules/`.
-
-### Accordion
-
-File: `src/components/molecules/Accordion.tsx` — client component.
-
-| Prop        | Type                                                  | Default | Description              |
-| ----------- | ----------------------------------------------------- | ------- | ------------------------ |
-| `items`     | `{ id: string; title: string; content: ReactNode }[]` | —       | Rows to toggle           |
-| `multiple?` | `boolean`                                             | `false` | Allow more than one open |
-
-```tsx
-<Accordion
-  items={[{ id: 'a', title: 'What is this?', content: 'An accordion.' }]}
-/>
-```
-
-### Alert
-
-File: `src/components/molecules/Alert.tsx`
-
-| Prop           | Type                                          | Default  | Description            |
-| -------------- | --------------------------------------------- | -------- | ---------------------- |
-| `variant?`     | `'info' \| 'success' \| 'warning' \| 'error'` | `'info'` | Alert color            |
-| `title?`       | `string`                                      | —        | Bold title line        |
-| `description?` | `ReactNode`                                   | —        | Muted body             |
-| `dismissible?` | `boolean`                                     | `false`  | Renders a close button |
-| `onClose?`     | `() => void`                                  | —        | Called on dismiss      |
-| `className?`   | `string`                                      | `''`     | Extra classes          |
-| `children?`    | `ReactNode`                                   | —        | Extra body content     |
-
-Renders a DaisyUI `alert alert-*` with `role="alert"`.
-
-### AvatarGroup
-
-File: `src/components/molecules/AvatarGroup.tsx`
-
-| Prop      | Type                                                 | Default | Description                          |
-| --------- | ---------------------------------------------------- | ------- | ------------------------------------ |
-| `avatars` | `{ src?: string; alt: string; fallback?: string }[]` | —       | Avatars to stack                     |
-| `size?`   | `'sm' \| 'md' \| 'lg'`                               | `'md'`  | Avatar size                          |
-| `max?`    | `number`                                             | —       | Cap shown avatars; renders `+N` chip |
-
-Overlapping avatars with a `+N more members` overflow indicator.
-
-### ChatBubble
-
-File: `src/components/molecules/ChatBubble.tsx`
-
-| Prop      | Type                    | Default | Description                        |
-| --------- | ----------------------- | ------- | ---------------------------------- |
-| `message` | `string`                | —       | Bubble text                        |
-| `sender`  | `'user' \| 'assistant'` | —       | Aligns end (primary) or start side |
-| `name?`   | `string`                | —       | Header label                       |
-| `time?`   | `string`                | —       | Timestamp in the header            |
-| `avatar?` | `ReactNode`             | —       | Small circle next to the bubble    |
-
-Single message in a DaisyUI `chat` row; compose into a list for a thread.
-
-### Breadcrumbs
-
-File: `src/components/molecules/Breadcrumbs.tsx`
-
-| Prop    | Type                                 | Default | Description                              |
-| ------- | ------------------------------------ | ------- | ---------------------------------------- |
-| `items` | `{ label: string; href?: string }[]` | —       | Trail; last item renders as current page |
-
-```tsx
-<Breadcrumbs
-  items={[
-    { label: 'Home', href: '/' },
-    { label: 'Settings', href: '/settings' },
-    { label: 'Profile' },
-  ]}
-/>
-```
-
-### Card
-
-File: `src/components/molecules/Card.tsx`
-
-| Prop           | Type        | Default | Description            |
-| -------------- | ----------- | ------- | ---------------------- |
-| `title?`       | `string`    | —       | `card-title`           |
-| `description?` | `string`    | —       | Muted subtitle         |
-| `action?`      | `ReactNode` | —       | Rendered right-aligned |
-| `children`     | `ReactNode` | —       | Card body              |
-
-```tsx
-<Card title="Recent activity" description="Last 30 days" action={<FiPlus />}>
-  ...
-</Card>
-```
-
-### ButtonGroup
-
-File: `src/components/molecules/ButtonGroup.tsx` — client component.
-
-| Prop           | Type                                 | Default        | Description                |
-| -------------- | ------------------------------------ | -------------- | -------------------------- |
-| `options`      | `{ label: string; value: string }[]` | —              | Selectable options         |
-| `value`        | `string`                             | —              | Active option value        |
-| `onChange`     | `(value: string) => void`            | —              | Called with the new value  |
-| `orientation?` | `'horizontal' \| 'vertical'`         | `'horizontal'` | `join-horizontal/vertical` |
-| `size?`        | `'sm' \| 'md' \| 'lg'`               | `'md'`         | Button size                |
-| `disabled?`    | `boolean`                            | `false`        | Disables all buttons       |
-
-DaisyUI `join` button group. The active option is `btn-primary` with
-`aria-pressed="true"`.
-
-```tsx
-<ButtonGroup
-  options={[
-    { label: 'Day', value: 'day' },
-    { label: 'Week', value: 'week' },
-  ]}
-  value={range}
-  onChange={setRange}
-/>
-```
-
-### Carousel
-
-File: `src/components/molecules/Carousel.tsx` — client component.
-
-| Prop         | Type          | Default      | Description                   |
-| ------------ | ------------- | ------------ | ----------------------------- |
-| `slides`     | `ReactNode[]` | —            | Slides rendered one per view  |
-| `ariaLabel?` | `string`      | `'Carousel'` | Accessible label of the track |
-
-Horizontally scrollable DaisyUI `carousel` with `Previous slide` / `Next slide`
-controls that scroll by the track width.
-
-```tsx
-<Carousel slides={[<div key="1">A</div>, <div key="2">B</div>]} />
-```
-
-### ConfirmDialog
-
-File: `src/components/molecules/ConfirmDialog.tsx`
-
-| Prop            | Type         | Default     | Description                  |
-| --------------- | ------------ | ----------- | ---------------------------- |
-| `open`          | `boolean`    | —           | When `false`, renders `null` |
-| `title`         | `string`     | —           | Dialog heading               |
-| `message?`      | `string`     | —           | Warning body with icon       |
-| `confirmLabel?` | `string`     | `'Confirm'` | Confirm button text          |
-| `cancelLabel?`  | `string`     | `'Cancel'`  | Cancel button text           |
-| `danger?`       | `boolean`    | `false`     | Uses `btn-error`             |
-| `loading?`      | `boolean`    | `false`     | Disables confirm + spinner   |
-| `onConfirm`     | `() => void` | —           | Confirm click handler        |
-| `onCancel?`     | `() => void` | —           | Cancel / backdrop handler    |
-
-Wraps `Modal` for destructive confirmations.
-
-```tsx
-<ConfirmDialog
-  open={open}
-  title="Delete project?"
-  danger
-  confirmLabel="Delete"
-  onConfirm={close}
-  onCancel={close}
-/>
-```
-
-### Dropdown
-
-File: `src/components/molecules/Dropdown.tsx` — client component.
-
-| Prop      | Type                                                                           | Default | Description                |
-| --------- | ------------------------------------------------------------------------------ | ------- | -------------------------- |
-| `trigger` | `ReactNode`                                                                    | —       | Button that opens the menu |
-| `items`   | `{ label: string; onClick: () => void; icon?: ReactNode; danger?: boolean }[]` | —       | Menu items                 |
-
-Closes on outside click and `Escape`. Renders `role="menu"`/`role="menuitem"`.
-`danger` items use the error color.
-
-### EmptyState
-
-File: `src/components/molecules/EmptyState.tsx`
-
-| Prop           | Type        | Default | Description         |
-| -------------- | ----------- | ------- | ------------------- |
-| `icon`         | `ReactNode` | —       | Large centered icon |
-| `title`        | `string`    | —       | Heading text        |
-| `description?` | `string`    | —       | Muted helper text   |
-| `action?`      | `ReactNode` | —       | Optional CTA below  |
-
-### Fieldset
-
-File: `src/components/molecules/Fieldset.tsx`
-
-| Prop           | Type        | Default | Description              |
-| -------------- | ----------- | ------- | ------------------------ |
-| `legend`       | `string`    | —       | Fieldset title           |
-| `description?` | `string`    | —       | Muted helper text        |
-| `disabled?`    | `boolean`   | `false` | Disables all descendants |
-| `className?`   | `string`    | `''`    | Extra classes            |
-| `children`     | `ReactNode` | —       | Form controls            |
-
-### FormRow
-
-File: `src/components/molecules/FormRow.tsx`
-
-| Prop        | Type        | Default | Description                         |
-| ----------- | ----------- | ------- | ----------------------------------- |
-| `label`     | `string`    | —       | Label text; `htmlFor` when provided |
-| `htmlFor?`  | `string`    | —       | Associates label with a control     |
-| `hint?`     | `string`    | —       | Muted helper text (hidden on error) |
-| `error?`    | `string`    | —       | Error text in `text-error`          |
-| `required?` | `boolean`   | `false` | Adds a `*` marker after the label   |
-| `children`  | `ReactNode` | —       | Form control                        |
-
-### DangerZone
-
-File: `src/components/molecules/DangerZone.tsx`
-
-| Prop     | Type                                                                       | Default         | Description               |
-| -------- | -------------------------------------------------------------------------- | --------------- | ------------------------- |
-| `items`  | `{ id: string; label: string; description?: string; action: ReactNode }[]` | —               | Destructive settings rows |
-| `title?` | `string`                                                                   | `'Danger zone'` | Section heading           |
-
-Error-styled settings panel for destructive actions, with one action per row.
-
-```tsx
-<DangerZone
-  items={[
-    {
-      id: 'delete',
-      label: 'Delete account',
-      description: 'Permanently remove everything.',
-      action: (
-        <Button variant="ghost" className="text-error">
-          Delete
-        </Button>
-      ),
-    },
-  ]}
-/>
-```
-
-### KeyValue
-
-File: `src/components/molecules/KeyValue.tsx`
-
-| Prop     | Type                                  | Default | Description            |
-| -------- | ------------------------------------- | ------- | ---------------------- |
-| `items`  | `{ key: string; value: ReactNode }[]` | —       | Pairs rendered as `dl` |
-| `title?` | `string`                              | —       | Optional heading       |
-
-Label/value list using `dl`/`dt`/`dd` with `divide-y` separators.
-
-```tsx
-<KeyValue
-  items={[
-    { key: 'Version', value: 'v1.2.3' },
-    { key: 'Status', value: <span className="text-success">Healthy</span> },
-  ]}
-/>
-```
-
-### List
-
-File: `src/components/molecules/List.tsx`
-
-| Prop     | Type                                                                                             | Default | Description          |
-| -------- | ------------------------------------------------------------------------------------------------ | ------- | -------------------- |
-| `items`  | `{ id: string; title: string; description?: string; leading?: ReactNode; action?: ReactNode }[]` | —       | Rows                 |
-| `title?` | `string`                                                                                         | —       | Optional header text |
-
-DaisyUI `list list-row` items with optional leading node and trailing action.
-
-```tsx
-<List
-  items={[
-    {
-      id: '1',
-      title: 'Fix login bug',
-      description: 'High priority',
-      action: <Button size="sm">Open</Button>,
-    },
-  ]}
-/>
-```
-
-### Menu
-
-File: `src/components/molecules/Menu.tsx`
-
-| Prop     | Type                                                                                              | Default | Description         |
-| -------- | ------------------------------------------------------------------------------------------------- | ------- | ------------------- |
-| `items`  | `{ label: string; icon?: ReactNode; active?: boolean; danger?: boolean; onClick?: () => void }[]` | —       | Menu items          |
-| `title?` | `string`                                                                                          | —       | `menu-title` header |
-
-Vertical DaisyUI `menu`. `active` items get `aria-current="page"`, `danger`
-items use the error color.
-
-```tsx
-<Menu
-  title="Account"
-  items={[
-    { label: 'Profile', icon: <FiUser />, onClick: goToProfile },
-    { label: 'Log out', danger: true, onClick: logout },
-  ]}
-/>
-```
-
-### Modal
-
-File: `src/components/molecules/Modal.tsx`
-
-| Prop       | Type         | Default | Description                  |
-| ---------- | ------------ | ------- | ---------------------------- |
-| `open`     | `boolean`    | —       | When `false`, renders `null` |
-| `onClose?` | `() => void` | —       | Clicking the backdrop        |
-| `title?`   | `string`     | —       | Dialog heading               |
-| `children` | `ReactNode`  | —       | Dialog body                  |
-| `action?`  | `ReactNode`  | —       | `modal-action` footer        |
-
-Renders a DaisyUI `dialog.modal.modal-open`.
-
-### NavItem
-
-File: `src/components/molecules/NavItem.tsx`
-
-| Prop       | Type         | Default | Description                               |
-| ---------- | ------------ | ------- | ----------------------------------------- |
-| `label`    | `string`     | —       | Link text                                 |
-| `href`     | `string`     | —       | Destination                               |
-| `icon?`    | `ReactNode`  | —       | Leading icon                              |
-| `badge?`   | `string`     | —       | Small count badge                         |
-| `active?`  | `boolean`    | `false` | Highlights and sets `aria-current="page"` |
-| `onClick?` | `() => void` | —       | Click handler                             |
-
-Single sidebar-style `<li>` link; compose inside a `<ul>`.
-
-### Pagination
-
-File: `src/components/molecules/Pagination.tsx`
-
-| Prop            | Type                     | Default | Description                         |
-| --------------- | ------------------------ | ------- | ----------------------------------- |
-| `current`       | `number`                 | —       | Active page (clamped to range)      |
-| `total`         | `number`                 | —       | Total pages                         |
-| `onChange`      | `(page: number) => void` | —       | Called with the selected page       |
-| `siblingCount?` | `number`                 | `1`     | Pages shown around the current page |
-
-Renders prev/next arrows plus numbered pages with `…` ellipsis for large ranges.
-
-### SearchBar
-
-File: `src/components/molecules/SearchBar.tsx` — client component.
-
-| Prop           | Type                      | Default       | Description              |
-| -------------- | ------------------------- | ------------- | ------------------------ |
-| `value`        | `string`                  | —             | Controlled query         |
-| `onChange`     | `(value: string) => void` | —             | Called on input/clear    |
-| `placeholder?` | `string`                  | `'Search...'` | Placeholder text         |
-| `size?`        | `'sm' \| 'md' \| 'lg'`    | `'md'`        | Input size               |
-| `disabled?`    | `boolean`                 | `false`       | Disables input and clear |
-
-Includes a leading search icon and a `Clear search` button when non-empty.
-
-### Steps
-
-File: `src/components/molecules/Steps.tsx`
-
-| Prop      | Type                                        | Default | Description              |
-| --------- | ------------------------------------------- | ------- | ------------------------ |
-| `steps`   | `{ label: string; description?: string }[]` | —       | Steps to render          |
-| `current` | `number`                                    | —       | Index of the active step |
-
-Renders a DaisyUI `steps` progress bar; steps before `current` get
-`step-primary`.
-
-### Stat
-
-File: `src/components/molecules/Stat.tsx`
-
-| Prop           | Type                                                                        | Default     | Description        |
-| -------------- | --------------------------------------------------------------------------- | ----------- | ------------------ |
-| `label`        | `string`                                                                    | —           | Muted caption      |
-| `value`        | `string`                                                                    | —           | Big value text     |
-| `icon?`        | `ReactNode`                                                                 | —           | `stat-figure` icon |
-| `description?` | `string`                                                                    | —           | Muted `stat-desc`  |
-| `variant?`     | `'primary' \| 'secondary' \| 'accent' \| 'success' \| 'warning' \| 'error'` | `'primary'` | Icon color         |
-
-```tsx
-<Stat label="Revenue" value="$12,480" icon={<FiBell />} variant="success" />
-```
-
-### Tabs
-
-File: `src/components/molecules/Tabs.tsx` — client component.
-
-| Prop       | Type                                 | Default | Description         |
-| ---------- | ------------------------------------ | ------- | ------------------- |
-| `tabs`     | `{ label: string; value: string }[]` | —       | Tab definitions     |
-| `value`    | `string`                             | —       | Active tab `value`  |
-| `onChange` | `(value: string) => void`            | —       | Called on tab click |
-
-Underline-style tabs (active tab gets `text-primary border-primary border-b-2`).
-
-### TagInput
-
-File: `src/components/molecules/TagInput.tsx` — client component.
-
-| Prop           | Type                       | Default                  | Description          |
-| -------------- | -------------------------- | ------------------------ | -------------------- |
-| `tags`         | `string[]`                 | —                        | Controlled tag list  |
-| `onChange`     | `(tags: string[]) => void` | —                        | Called on add/remove |
-| `placeholder?` | `string`                   | `'Type and press Enter'` | Input placeholder    |
-| `disabled?`    | `boolean`                  | `false`                  | Disables the input   |
-
-`Enter` adds the draft (ignoring duplicates/whitespace); `Backspace` with an
-empty draft removes the last tag. Renders each tag via the `Tag` atom.
-
-### Timeline
-
-File: `src/components/molecules/Timeline.tsx`
-
-| Prop    | Type                                                                         | Default | Description |
-| ------- | ---------------------------------------------------------------------------- | ------- | ----------- |
-| `items` | `{ title: string; description?: string; time?: string; icon?: ReactNode }[]` | —       | Events      |
-
-Renders a DaisyUI `timeline-vertical`; events alternate start/end and show a
-numbered (or `icon`) marker.
-
-### Toast
-
-File: `src/components/molecules/Toast.tsx` — client component.
-
-| Prop        | Type                                          | Default  | Description       |
-| ----------- | --------------------------------------------- | -------- | ----------------- |
-| `message`   | `string`                                      | —        | Notification text |
-| `variant?`  | `'info' \| 'success' \| 'warning' \| 'error'` | `'info'` | Alert color       |
-| `duration?` | `number`                                      | `3000`   | Auto-dismiss ms   |
-| `onClose?`  | `() => void`                                  | —        | Called on dismiss |
-
-Fires the timer via `useEffect`; the close button dismisses immediately.
-
-### TreeView
-
-File: `src/components/molecules/TreeView.tsx` — client component.
-
-| Prop    | Type                                                 | Default | Description          |
-| ------- | ---------------------------------------------------- | ------- | -------------------- |
-| `nodes` | `{ id: string; label: string; children?: Node[] }[]` | —       | Root nodes to render |
-
-```tsx
-<TreeView
-  nodes={[
-    { id: 'src', label: 'src', children: [{ id: 'atoms', label: 'atoms' }] },
-  ]}
-/>
-```
-
-Nodes with children toggle on click (`aria-expanded`); indentation is derived
-from depth.
-
-### CheckboxGroup
-
-File: `src/components/molecules/CheckboxGroup.tsx` — client component.
-
-| Prop        | Type                                                       | Default | Description                  |
-| ----------- | ---------------------------------------------------------- | ------- | ---------------------------- |
-| `options`   | `{ label: string; value: string; description?: string }[]` | —       | Checkbox definitions         |
-| `value`     | `string[]`                                                 | —       | Selected values              |
-| `onChange`  | `(value: string[]) => void`                                | —       | Called with the toggled list |
-| `label?`    | `string`                                                   | —       | Group label                  |
-| `error?`    | `string`                                                   | —       | Error text                   |
-| `disabled?` | `boolean`                                                  | `false` | Disables all checkboxes      |
-| `inline?`   | `boolean`                                                  | `false` | Rows items horizontally      |
-
-Wraps the `Checkbox` atom; toggling adds/removes values.
-
-```tsx
-<CheckboxGroup options={options} value={selected} onChange={setSelected} />
-```
-
-### ColorPicker
-
-File: `src/components/molecules/ColorPicker.tsx` — client component.
-
-| Prop        | Type                      | Default               | Description             |
-| ----------- | ------------------------- | --------------------- | ----------------------- |
-| `value`     | `string`                  | —                     | Current hex colour      |
-| `onChange`  | `(value: string) => void` | —                     | Called on pick / commit |
-| `label?`    | `string`                  | `'Color'`             | Accessible label        |
-| `swatches?` | `string[]`                | 8 default hex colours | Selectable palette      |
-| `disabled?` | `boolean`                 | `false`               | Disables the controls   |
-
-Swatches render as `aria-pressed` buttons; the hex `textbox` commits on blur or
-Enter and reverts invalid values.
-
-```tsx
-<ColorPicker label="Brand color" value={color} onChange={setColor} />
-```
-
-### Combobox
-
-File: `src/components/molecules/Combobox.tsx` — client component.
-
-| Prop           | Type                                 | Default              | Description           |
-| -------------- | ------------------------------------ | -------------------- | --------------------- |
-| `options`      | `{ label: string; value: string }[]` | —                    | Selectable options    |
-| `value`        | `string`                             | —                    | Selected option value |
-| `onChange`     | `(value: string) => void`            | —                    | Called on selection   |
-| `label?`       | `string`                             | —                    | Visible label         |
-| `placeholder?` | `string`                             | `'Select an option'` | Trigger button text   |
-| `emptyText?`   | `string`                             | `'No results.'`      | Empty-state message   |
-| `disabled?`    | `boolean`                            | `false`              | Disables the control  |
-
-Searchable combobox with `aria-haspopup="listbox"`, a `role="listbox"` list of
-`role="option"` items, and `aria-selected` state.
-
-```tsx
-<Combobox options={options} value={value} onChange={setValue} />
-```
-
-### InputGroup
-
-File: `src/components/molecules/InputGroup.tsx` — client component.
-
-| Prop           | Type                      | Default  | Description            |
-| -------------- | ------------------------- | -------- | ---------------------- |
-| `value`        | `string`                  | —        | Input value            |
-| `onChange`     | `(value: string) => void` | —        | Called on change       |
-| `label?`       | `string`                  | —        | Visible label          |
-| `leading?`     | `ReactNode`               | —        | Prefixed adornment     |
-| `trailing?`    | `ReactNode`               | —        | Suffixed adornment     |
-| `placeholder?` | `string`                  | —        | Placeholder text       |
-| `type?`        | `string`                  | `'text'` | Native input `type`    |
-| `error?`       | `string`                  | —        | Error text             |
-| `hint?`        | `string`                  | —        | Muted helper text      |
-| `disabled?`    | `boolean`                 | `false`  | Disables the input     |
-| `id?`          | `string`                  | —        | Input id for the label |
-
-DaisyUI `join` grouping a bordered input with leading/trailing adornments.
-
-```tsx
-<InputGroup
-  label="Amount"
-  leading={<span>$</span>}
-  trailing={<span>USD</span>}
-/>
-```
-
-### Popover
-
-File: `src/components/molecules/Popover.tsx` — client component.
-
-| Prop       | Type                                                             | Default   | Description                 |
-| ---------- | ---------------------------------------------------------------- | --------- | --------------------------- |
-| `trigger`  | `ReactElement<{ onClick?; 'aria-haspopup'?; 'aria-expanded'? }>` | —         | Element that opens the menu |
-| `children` | `ReactNode`                                                      | —         | Panel content               |
-| `align?`   | `'start' \| 'center' \| 'end'`                                   | `'start'` | Panel alignment             |
-
-Clones `trigger` to inject `onClick`, `aria-haspopup="dialog"`, and
-`aria-expanded`; closes on outside `mousedown`.
-
-```tsx
-<Popover trigger={<Button>Menu</Button>}>Content</Popover>
-```
-
-### RadioGroup
-
-File: `src/components/molecules/RadioGroup.tsx` — client component.
-
-| Prop        | Type                                                       | Default | Description             |
-| ----------- | ---------------------------------------------------------- | ------- | ----------------------- |
-| `name`      | `string`                                                   | —       | Shared radio `name`     |
-| `options`   | `{ label: string; value: string; description?: string }[]` | —       | Radio definitions       |
-| `value`     | `string`                                                   | —       | Selected value          |
-| `onChange`  | `(value: string) => void`                                  | —       | Called on selection     |
-| `label?`    | `string`                                                   | —       | Group label             |
-| `error?`    | `string`                                                   | —       | Error text              |
-| `disabled?` | `boolean`                                                  | `false` | Disables all radios     |
-| `inline?`   | `boolean`                                                  | `false` | Rows items horizontally |
-
-Wraps the `Radio` atom into a controlled group.
-
-```tsx
-<RadioGroup name="plan" options={options} value={plan} onChange={setPlan} />
-```
-
-### Sheet
-
-File: `src/components/molecules/Sheet.tsx` — client component.
-
-| Prop        | Type                                     | Default   | Description                 |
-| ----------- | ---------------------------------------- | --------- | --------------------------- |
-| `open`      | `boolean`                                | —         | Show the panel              |
-| `onClose`   | `() => void`                             | —         | Called to dismiss           |
-| `title?`    | `string`                                 | —         | Header title + `aria-label` |
-| `side?`     | `'left' \| 'right' \| 'top' \| 'bottom'` | `'right'` | Slide edge                  |
-| `children?` | `ReactNode`                              | —         | Panel body                  |
-| `footer?`   | `ReactNode`                              | —         | Sticky footer area          |
-
-Fixed overlay with `role="dialog"` and `aria-modal="true"`; closes via the close
-button, backdrop, or `Escape`.
-
-```tsx
-<Sheet open={open} onClose={close} title="Filters" side="right">
-  Body
-</Sheet>
-```
-
-### Table
-
-File: `src/components/molecules/Table.tsx`
-
-| Prop       | Type                                                                       | Default | Description             |
-| ---------- | -------------------------------------------------------------------------- | ------- | ----------------------- |
-| `columns`  | `{ key: string; header: string; align?: 'left' \| 'center' \| 'right' }[]` | —       | Column defs             |
-| `rows`     | `Record<string, unknown>[]`                                                | —       | Data rows               |
-| `caption?` | `string`                                                                   | —       | Table caption           |
-| `striped?` | `boolean`                                                                  | `false` | `table-zebra` styling   |
-| `compact?` | `boolean`                                                                  | `false` | `table-compact` styling |
-
-Renders `table-zebra`/`table-compact` rows; missing cell values render `—`.
-
-```tsx
-<Table columns={columns} rows={rows} striped />
-```
-
-### Banner
-
-File: `src/components/molecules/Banner.tsx`
-
-| Prop           | Type                                          | Default  | Description                |
-| -------------- | --------------------------------------------- | -------- | -------------------------- |
-| `title?`       | `string`                                      | —        | Bold headline              |
-| `description?` | `ReactNode`                                   | —        | Supporting text            |
-| `variant?`     | `'info' \| 'success' \| 'warning' \| 'error'` | `'info'` | Colour + default icon      |
-| `icon?`        | `ReactNode`                                   | —        | Overrides the default icon |
-| `action?`      | `ReactNode`                                   | —        | Right-aligned CTA          |
-| `dismissible?` | `boolean`                                     | `false`  | Show the dismiss button    |
-| `onClose?`     | `() => void`                                  | —        | Called on dismiss          |
-| `children?`    | `ReactNode`                                   | —        | Extra body content         |
-| `className?`   | `string`                                      | `''`     | Extra classes              |
-
-MUI-style full-width status strip with a left accent border and icon; renders
-`role="status"`. Unlike `Alert` it flows edge-to-edge and supports an action
-slot.
-
-```tsx
-<Banner
-  variant="warning"
-  title="Storage almost full"
-  action={<Button>Upgrade</Button>}
-/>
-```
-
-### BottomNavigation
-
-File: `src/components/molecules/BottomNavigation.tsx`
-
-| Prop         | Type                                                   | Default    | Description           |
-| ------------ | ------------------------------------------------------ | ---------- | --------------------- |
-| `items`      | `{ label: string; value: string; icon?: ReactNode }[]` | —          | Tabs to render        |
-| `value`      | `string`                                               | —          | Active tab value      |
-| `onChange`   | `(value: string) => void`                              | —          | Called with new value |
-| `position?`  | `'static' \| 'fixed'`                                  | `'static'` | Sticky vs in-flow     |
-| `className?` | `string`                                               | `''`       | Extra classes         |
-
-DaisyUI `btm-nav` bottom tab bar (MUI `BottomNavigation` equivalent). The active
-item gets `active` plus `aria-current="page"`.
-
-```tsx
-<BottomNavigation items={tabs} value={tab} onChange={setTab} position="fixed" />
-```
-
-### Chip
-
-File: `src/components/molecules/Chip.tsx`
-
-| Prop         | Type                                                                                               | Default     | Description             |
-| ------------ | -------------------------------------------------------------------------------------------------- | ----------- | ----------------------- |
-| `label`      | `string`                                                                                           | —           | Chip text               |
-| `color?`     | `'neutral' \| 'primary' \| 'secondary' \| 'accent' \| 'success' \| 'warning' \| 'error' \| 'info'` | `'neutral'` | Badge colour            |
-| `variant?`   | `'filled' \| 'outline'`                                                                            | `'filled'`  | Badge style             |
-| `size?`      | `'sm' \| 'md'`                                                                                     | `'md'`      | Badge size              |
-| `icon?`      | `ReactNode`                                                                                        | —           | Leading icon            |
-| `avatar?`    | `ReactNode`                                                                                        | —           | Leading avatar          |
-| `onClick?`   | `() => void`                                                                                       | —           | Makes the chip a button |
-| `onDelete?`  | `() => void`                                                                                       | —           | Renders a remove button |
-| `disabled?`  | `boolean`                                                                                          | `false`     | Disables interactions   |
-| `className?` | `string`                                                                                           | `''`        | Extra classes           |
-
-MUI-style `Chip` built on the DaisyUI badge; delete clicks call `onDelete`
-without bubbling to `onClick`.
-
-```tsx
-<Chip label="React" color="primary" onDelete={removeTag} />
-```
-
-### ContextMenu
-
-File: `src/components/molecules/ContextMenu.tsx` — client component.
-
-| Prop      | Type                                                       | Default | Description              |
-| --------- | ---------------------------------------------------------- | ------- | ------------------------ |
-| `trigger` | `ReactNode`                                                | —       | Right-click target       |
-| `items`   | `{ label: string; onClick: () => void; icon?; danger? }[]` | —       | Menu items (Radix-style) |
-
-Opens a context menu on `onContextMenu`, positioned at the cursor. Closes on
-outside click, `Escape`, or after invoking an item.
-
-```tsx
-<ContextMenu trigger={<NodeRow />} items={[{ label: 'Copy', onClick: copy }]} />
-```
-
-### Drawer
-
-File: `src/components/molecules/Drawer.tsx` — client component.
-
-| Prop          | Type                | Default  | Description             |
-| ------------- | ------------------- | -------- | ----------------------- |
-| `open`        | `boolean`           | —        | Controlled visibility   |
-| `onClose`     | `() => void`        | —        | Called to dismiss       |
-| `title?`      | `string`            | —        | Header title            |
-| `side?`       | `'left' \| 'right'` | `'left'` | Slide edge              |
-| `overlay?`    | `boolean`           | `true`   | Backdrop click-to-close |
-| `widthClass?` | `string`            | `'w-80'` | Panel width             |
-| `children?`   | `ReactNode`         | —        | Panel body              |
-| `footer?`     | `ReactNode`         | —        | Sticky footer           |
-
-DaisyUI `drawer` powered by a controlled `drawer-toggle` checkbox; closes via
-the close button, overlay, or `Escape`. `side="right"` adds `drawer-end`.
-
-```tsx
-<Drawer open={open} onClose={close} title="Filters" side="right">
-  Body
-</Drawer>
-```
-
-### FloatingActionButton
-
-File: `src/components/molecules/FloatingActionButton.tsx`
-
-| Prop         | Type                                                           | Default          | Description         |
-| ------------ | -------------------------------------------------------------- | ---------------- | ------------------- |
-| `icon`       | `ReactNode`                                                    | —                | Button icon         |
-| `label`      | `string`                                                       | —                | `aria-label`        |
-| `onClick?`   | `() => void`                                                   | —                | Click handler       |
-| `position?`  | `'bottom-right' \| 'bottom-left' \| 'top-right' \| 'top-left'` | `'bottom-right'` | Fixed corner        |
-| `size?`      | `'sm' \| 'md' \| 'lg'`                                         | `'md'`           | Button size         |
-| `variant?`   | `'primary' \| 'secondary' \| 'accent' \| 'neutral'`            | `'primary'`      | Colour variant      |
-| `disabled?`  | `boolean`                                                      | `false`          | Disables the button |
-| `className?` | `string`                                                       | `''`             | Extra classes       |
-
-MUI-style circular `Fab` pinned to a viewport corner.
-
-```tsx
-<FloatingActionButton icon={<FiPlus />} label="Add" onClick={add} />
-```
-
-### HoverCard
-
-File: `src/components/molecules/HoverCard.tsx`
-
-| Prop          | Type                                     | Default    | Description        |
-| ------------- | ---------------------------------------- | ---------- | ------------------ |
-| `trigger`     | `ReactNode`                              | —          | Hover/focus target |
-| `content`     | `ReactNode`                              | —          | Popover content    |
-| `side?`       | `'top' \| 'bottom' \| 'left' \| 'right'` | `'bottom'` | Placement          |
-| `widthClass?` | `string`                                 | `'w-64'`   | Popover width      |
-| `className?`  | `string`                                 | `''`       | Extra classes      |
-
-Radix/shadcn-style `HoverCard` shown on `group-hover` and `group-focus-within`
-(keyboard accessible via the `tabIndex={0}` wrapper).
-
-```tsx
-<HoverCard trigger={<Button>Hover</Button>} content={<p>Details</p>} />
-```
-
-### ScrollArea
-
-File: `src/components/molecules/ScrollArea.tsx`
-
-| Prop              | Type               | Default | Description            |
-| ----------------- | ------------------ | ------- | ---------------------- |
-| `children?`       | `ReactNode`        | —       | Scrollable content     |
-| `maxHeight?`      | `number \| string` | `240`   | Max height (px or CSS) |
-| `className?`      | `string`           | `''`    | Outer classes          |
-| `innerClassName?` | `string`           | `''`    | Inner wrapper classes  |
-
-Radix-style scroll container using `overflow-y-auto` with a configurable max
-height.
-
-```tsx
-<ScrollArea maxHeight={300}>...</ScrollArea>
-```
-
-### SpeedDial
-
-File: `src/components/molecules/SpeedDial.tsx` — client component.
-
-| Prop          | Type                                                           | Default                 | Description      |
-| ------------- | -------------------------------------------------------------- | ----------------------- | ---------------- |
-| `triggerIcon` | `ReactNode`                                                    | —                       | Fab trigger icon |
-| `actions`     | `{ label: string; onClick: () => void; icon?: ReactNode }[]`   | —                       | Expanded actions |
-| `position?`   | `'bottom-right' \| 'bottom-left' \| 'top-right' \| 'top-left'` | `'bottom-right'`        | Fixed corner     |
-| `openLabel?`  | `string`                                                       | `'Open quick actions'`  | Open label       |
-| `closeLabel?` | `string`                                                       | `'Close quick actions'` | Close label      |
-
-MUI-style `SpeedDial`: a floating trigger that expands into a vertical action
-list; runs the action and collapses on selection.
-
-```tsx
-<SpeedDial triggerIcon={<FiPlus />} actions={actions} />
-```
-
-### ToggleGroup
-
-File: `src/components/molecules/ToggleGroup.tsx`
-
-| Prop         | Type                                  | Default | Description                |
-| ------------ | ------------------------------------- | ------- | -------------------------- |
-| `options`    | `{ label: string; value: string }[]`  | —       | Options                    |
-| `value`      | `string[] \| string`                  | —       | Single or multi selection  |
-| `onChange`   | `(value: string[] \| string) => void` | —       | Called with next selection |
-| `multiple?`  | `boolean`                             | `false` | Multi-select mode          |
-| `disabled?`  | `boolean`                             | `false` | Disables all buttons       |
-| `className?` | `string`                              | `''`    | Extra classes              |
-
-Radix `ToggleGroup`-style segmented control built on the DaisyUI `join`; active
-buttons use `btn-primary` and `aria-pressed`.
-
-```tsx
-<ToggleGroup options={modes} value={mode} onChange={setMode} />
-```
-
-### DatePicker
-
-File: `src/components/molecules/DatePicker.tsx` — client component.
-
-| Prop           | Type                   | Default         | Description            |
-| -------------- | ---------------------- | --------------- | ---------------------- |
-| `value?`       | `Date`                 | —               | Selected date          |
-| `onChange`     | `(date: Date) => void` | —               | Called with the pick   |
-| `label?`       | `string`               | `'Pick a date'` | Accessible dialog name |
-| `placeholder?` | `string`               | `'Select date'` | Empty trigger text     |
-| `minDate?`     | `Date`                 | —               | Disables earlier days  |
-| `maxDate?`     | `Date`                 | —               | Disables later days    |
-
-Calendar popover (`aria-haspopup="dialog"`) with month navigation; disabled
-cells are skipped via `isDisabled`.
-
-```tsx
-<DatePicker value={due} onChange={setDue} minDate={new Date()} />
-```
-
-### DateRange
-
-File: `src/components/molecules/DateRange.tsx`
-
-| Prop            | Type                      | Default        | Description              |
-| --------------- | ------------------------- | -------------- | ------------------------ |
-| `start`         | `string`                  | —              | Start value `YYYY-MM-DD` |
-| `end`           | `string`                  | —              | End value                |
-| `onStartChange` | `(value: string) => void` | —              | Start change             |
-| `onEndChange`   | `(value: string) => void` | —              | End change               |
-| `label?`        | `string`                  | `'Date range'` | Group label              |
-| `min?`          | `string`                  | —              | Global minimum           |
-| `max?`          | `string`                  | —              | Global maximum           |
-
-Two native `input type="date"` fields; the start field clamps to `max=end` and
-the end field clamps to `min=start` so ranges never invert.
-
-```tsx
-<DateRange start={from} end={to} onStartChange={setFrom} onEndChange={setTo} />
-```
-
-### Dialog
-
-File: `src/components/molecules/Dialog.tsx` — client component.
-
-| Prop               | Type         | Default | Description             |
-| ------------------ | ------------ | ------- | ----------------------- |
-| `open`             | `boolean`    | —       | Controlled visibility   |
-| `onClose`          | `() => void` | —       | Called to dismiss       |
-| `title?`           | `string`     | —       | Header title            |
-| `description?`     | `string`     | —       | Muted subtitle          |
-| `children?`        | `ReactNode`  | —       | Body content            |
-| `footer?`          | `ReactNode`  | —       | Right-aligned actions   |
-| `closeOnBackdrop?` | `boolean`    | `true`  | Backdrop click-to-close |
-
-Centered modal (`role="dialog"`, `aria-modal="true"`) with a backdrop and close
-button; `Escape` closes whenever `open`.
-
-```tsx
-<Dialog
-  open={open}
-  onClose={close}
-  title="Confirm"
-  footer={<Button>OK</Button>}>
-  Body
-</Dialog>
-```
-
-### FileUpload
-
-File: `src/components/molecules/FileUpload.tsx` — client component.
-
-| Prop             | Type                              | Default          | Description              |
-| ---------------- | --------------------------------- | ---------------- | ------------------------ |
-| `label?`         | `string`                          | `'Upload files'` | Dropzone heading         |
-| `accept?`        | `string`                          | —                | Native `accept`          |
-| `multiple?`      | `boolean`                         | `false`          | Allow several files      |
-| `maxSize?`       | `number`                          | —                | Per-file byte limit      |
-| `onFilesChange?` | `(files: UploadedFile[]) => void` | —                | Emits `{ name, size }[]` |
-| `hint?`          | `string`                          | —                | Muted helper text        |
-
-Drag-and-drop zone that filters files over `maxSize`, lists accepted files with
-formatted sizes and per-file remove buttons.
-
-```tsx
-<FileUpload accept="image/*" multiple maxSize={5 * 1024 * 1024} />
-```
-
-### ImageGallery
-
-File: `src/components/molecules/ImageGallery.tsx` — client component.
-
-| Prop     | Type                             | Default           | Description             |
-| -------- | -------------------------------- | ----------------- | ----------------------- |
-| `images` | `{ src: string; alt: string }[]` | —                 | Images to browse        |
-| `label?` | `string`                         | `'Image gallery'` | `aria-label` on wrapper |
-
-Hero image plus a thumbnail strip (`aria-pressed` for the active thumb); returns
-`null` for an empty list.
-
-```tsx
-<ImageGallery images={[{ src: '/a.png', alt: 'A' }]} />
-```
-
-### InfoList
-
-File: `src/components/molecules/InfoList.tsx`
-
-| Prop       | Type                             | Default | Description      |
-| ---------- | -------------------------------- | ------- | ---------------- |
-| `items`    | `{ key, label, value, icon? }[]` | —       | `dl` rows        |
-| `title?`   | `string`                         | —       | Optional heading |
-| `columns?` | `1 \| 2`                         | `1`     | Column count     |
-
-A `dl` of label/value rows with optional leading icons.
-
-```tsx
-<InfoList
-  items={[{ key: 'v', label: 'Version', value: '1.0.0' }]}
-  columns={2}
-/>
-```
-
-### InlineAlert
-
-File: `src/components/molecules/InlineAlert.tsx`
-
-| Prop       | Type                                          | Default  | Description         |
-| ---------- | --------------------------------------------- | -------- | ------------------- |
-| `variant?` | `'info' \| 'success' \| 'warning' \| 'error'` | `'info'` | Accent colour       |
-| `children` | `ReactNode`                                   | —        | Message text        |
-| `onClose?` | `() => void`                                  | —        | Renders a dismiss × |
-
-Compact status row (`role="status"`) with a leading icon and left accent border.
-
-```tsx
-<InlineAlert variant="success">Saved.</InlineAlert>
-```
-
-### InputStepper
-
-File: `src/components/molecules/InputStepper.tsx` — client component.
-
-| Prop       | Type                      | Default | Description     |
-| ---------- | ------------------------- | ------- | --------------- |
-| `label`    | `string`                  | —       | Field label     |
-| `options`  | `string[]`                | —       | Ordered choices |
-| `value`    | `string`                  | —       | Selected option |
-| `onChange` | `(value: string) => void` | —       | Called on step  |
-
-`−`/`+` stepper over an ordered option list; the previous/next buttons disable
-at the ends and the current position shows as `n of m`.
-
-```tsx
-<InputStepper
-  label="Period"
-  options={['Day', 'Week']}
-  value={period}
-  onChange={setPeriod}
-/>
-```
-
-### MenuGroup
-
-File: `src/components/molecules/MenuGroup.tsx`
-
-| Prop       | Type                                                                | Default | Description   |
-| ---------- | ------------------------------------------------------------------- | ------- | ------------- |
-| `sections` | `{ id, title, items: { id, label, icon?, active?, onClick? }[] }[]` | —       | Menu sections |
-
-DaisyUI `menu` with `menu-title` groups; active items get `menu-active` and
-`aria-current="page"`.
-
-```tsx
-<MenuGroup
-  sections={[
-    { id: 'acct', title: 'Account', items: [{ id: 'p', label: 'Profile' }] },
-  ]}
-/>
-```
-
-### NumberInput
-
-File: `src/components/molecules/NumberInput.tsx`
-
-| Prop           | Type                      | Default | Description                |
-| -------------- | ------------------------- | ------- | -------------------------- |
-| `label`        | `string`                  | —       | Visible label + `id`       |
-| `value`        | `number`                  | —       | Controlled value           |
-| `onChange`     | `(value: number) => void` | —       | Called with next value     |
-| `min?`         | `number`                  | —       | Lower clamp                |
-| `max?`         | `number`                  | —       | Upper clamp                |
-| `step?`        | `number`                  | `1`     | Native step                |
-| `placeholder?` | `string`                  | —       | Placeholder                |
-| `error?`       | `string`                  | —       | Error text + `input-error` |
-| `hint?`        | `string`                  | —       | Muted helper text          |
-| `disabled?`    | `boolean`                 | `false` | Disables the input         |
-
-Native `input type="number"` that clamps changes to `min`/`max` and reports
-out-of-range values via `aria-invalid`.
-
-```tsx
-<NumberInput label="Seats" value={seats} onChange={setSeats} min={1} max={10} />
-```
-
-### Backdrop
-
-File: `src/components/molecules/Backdrop.tsx` — client component.
-
-| Prop         | Type         | Default | Description                                |
-| ------------ | ------------ | ------- | ------------------------------------------ |
-| `open`       | `boolean`    | —       | Render condition                           |
-| `onClose?`   | `() => void` | —       | Called when the backdrop itself is clicked |
-| `children?`  | `ReactNode`  | —       | Centered content                           |
-| `className?` | `string`     | `''`    | Extra classes                              |
-| `opaque?`    | `boolean`    | `false` | Solid `bg-base-100` instead of scrim       |
-
-Full-viewport fixed overlay; clicks on the backdrop (not children) fire
-`onClose`.
-
-```tsx
-<Backdrop open={busy} onClose={() => setBusy(false)}>
-  <Card>…</Card>
-</Backdrop>
-```
-
-### FilterGroup
-
-File: `src/components/molecules/FilterGroup.tsx` — client component.
-
-| Prop       | Type                                 | Default | Description                |
-| ---------- | ------------------------------------ | ------- | -------------------------- |
-| `name`     | `string`                             | —       | Shared input `name`        |
-| `options`  | `{ value: string; label: string }[]` | —       | Toggle chips               |
-| `selected` | `string[]`                           | —       | Controlled selected values |
-| `onChange` | `(next: string[]) => void`           | —       | Called on toggle           |
-
-DaisyUI `filter` with a `filter-reset` button shown only when something is
-selected.
-
-```tsx
-<FilterGroup name="status" options={opts} selected={sel} onChange={setSel} />
-```
-
-### LoadingOverlay
-
-File: `src/components/molecules/LoadingOverlay.tsx` — client component.
-
-| Prop           | Type                                                              | Default     | Description            |
-| -------------- | ----------------------------------------------------------------- | ----------- | ---------------------- |
-| `open`         | `boolean`                                                         | —           | Render condition       |
-| `label?`       | `string`                                                          | —           | Text under the spinner |
-| `variant?`     | `'spinner' \| 'dots' \| 'ring' \| 'ball' \| 'bars' \| 'infinity'` | `'spinner'` | `Loading` variant      |
-| `transparent?` | `boolean`                                                         | `false`     | Lighter scrim          |
-| `onClose?`     | `() => void`                                                      | —           | Called when clicked    |
-
-Blocking overlay built on the `Loading` atom, with an optional click-to-dismiss.
-
-```tsx
-<LoadingOverlay open={saving} label="Saving…" />
-```
-
-### Menubar
-
-File: `src/components/molecules/Menubar.tsx` — client component.
-
-| Prop         | Type                            | Default      | Description      |
-| ------------ | ------------------------------- | ------------ | ---------------- |
-| `items`      | `{ label, icon?, children? }[]` | —            | Buttons + panels |
-| `ariaLabel?` | `string`                        | `'Menu bar'` | `nav` label      |
-
-Desktop-style menu bar; each item with `children` opens a popover panel, closed
-by click-outside or Escape.
-
-```tsx
-<Menubar items={[{ label: 'File', children: <Menu>…</Menu> }]} />
-```
-
-### MultiSelect
-
-File: `src/components/molecules/MultiSelect.tsx` — client component.
-
-| Prop           | Type                                 | Default     | Description          |
-| -------------- | ------------------------------------ | ----------- | -------------------- |
-| `options`      | `{ value: string; label: string }[]` | —           | Selectable options   |
-| `value`        | `string[]`                           | —           | Controlled selection |
-| `onChange`     | `(next: string[]) => void`           | —           | Called on toggle     |
-| `label?`       | `string`                             | —           | Field label          |
-| `placeholder?` | `string`                             | `'Select…'` | Empty-state text     |
-
-Trigger button with chip summary and a `listbox` of checkboxes; closes on
-click-outside.
-
-```tsx
-<MultiSelect options={roles} value={sel} onChange={setSel} label="Roles" />
-```
-
-### Resizable
-
-File: `src/components/molecules/Resizable.tsx` — client component.
-
-| Prop            | Type                         | Default        | Description         |
-| --------------- | ---------------------------- | -------------- | ------------------- |
-| `first`         | `ReactNode`                  | —              | Left/top pane       |
-| `second`        | `ReactNode`                  | —              | Right/bottom pane   |
-| `direction?`    | `'horizontal' \| 'vertical'` | `'horizontal'` | Split axis          |
-| `initialRatio?` | `number`                     | `0.5`          | Initial split ratio |
-| `minRatio?`     | `number`                     | `0.2`          | Lower clamp         |
-| `maxRatio?`     | `number`                     | `0.8`          | Upper clamp         |
-| `className?`    | `string`                     | `''`           | Extra classes       |
-
-Pointer-draggable split pane with a `separator` role; ratio is clamped to
-`minRatio`/`maxRatio`.
-
-```tsx
-<Resizable first={<List … />} second={<Detail … />} initialRatio={0.4} />
-```
-
-### TimePicker
-
-File: `src/components/molecules/TimePicker.tsx` — client component.
-
-| Prop           | Type                     | Default | Description                |
-| -------------- | ------------------------ | ------- | -------------------------- |
-| `value`        | `string`                 | —       | `HH:mm` value              |
-| `onChange`     | `(time: string) => void` | —       | Called on select           |
-| `label?`       | `string`                 | —       | Field label                |
-| `stepMinutes?` | `number`                 | `30`    | Minute step (clamped 1–60) |
-| `format?`      | `'12h' \| '24h'`         | `'24h'` | Display format             |
-
-`listbox` of times at a fixed step; 12h format renders `hh:mm AM/PM`.
-
-```tsx
-<TimePicker value="09:30" onChange={setTime} format="12h" stepMinutes={15} />
-```
-
-### TransferList
-
-File: `src/components/molecules/TransferList.tsx` — client component.
-
-| Prop          | Type                              | Default       | Description           |
-| ------------- | --------------------------------- | ------------- | --------------------- |
-| `left`        | `{ id: string; label: string }[]` | —             | Available items       |
-| `right`       | `{ id: string; label: string }[]` | —             | Selected items        |
-| `onChange`    | `(left, right) => void`           | —             | Called after any move |
-| `leftTitle?`  | `string`                          | `'Available'` | Left legend           |
-| `rightTitle?` | `string`                          | `'Selected'`  | Right legend          |
-
-Two checkbox columns with move-left/right and move-all buttons; selection is
-cleared after each move.
-
-```tsx
-<TransferList left={all} right={picked} onChange={(l, r) => setBoth(l, r)} />
-```
-
-### Checklist
-
-File: `src/components/molecules/Checklist.tsx`
-
-| Prop         | Type                     | Default | Description      |
-| ------------ | ------------------------ | ------- | ---------------- |
-| `items`      | `{ id, label, done? }[]` | —       | Checklist items  |
-| `onToggle`   | `(id: string) => void`   | —       | Called on toggle |
-| `className?` | `string`                 | `''`    | Extra classes    |
-
-DaisyUI `checkbox` rows; completed items get `line-through`.
-
-```tsx
-<Checklist items={tasks} onToggle={(id) => toggle(id)} />
-```
-
-### FeatureList
-
-File: `src/components/molecules/FeatureList.tsx`
-
-| Prop         | Type                              | Default | Description   |
-| ------------ | --------------------------------- | ------- | ------------- |
-| `items`      | `{ icon, title, description? }[]` | —       | Feature cards |
-| `columns?`   | `1 \| 2`                          | `1`     | Grid columns  |
-| `className?` | `string`                          | `''`    | Extra classes |
-
-Icon + title + optional description cards; two-column mode stacks on small
-screens.
-
-```tsx
-<FeatureList columns={2} items={[{ icon: <FiZap />, title: 'Fast' }]} />
-```
-
-### Gauge
-
-File: `src/components/molecules/Gauge.tsx`
-
-| Prop         | Type        | Default     | Description         |
-| ------------ | ----------- | ----------- | ------------------- |
-| `value`      | `number`    | —           | Current value       |
-| `max?`       | `number`    | `100`       | Maximum (min 1)     |
-| `size?`      | `number`    | `6`         | Diameter in rem     |
-| `thickness?` | `number`    | `0.6`       | Stroke in rem       |
-| `label?`     | `string`    | —           | Caption text        |
-| `showValue?` | `boolean`   | `false`     | Show percent inside |
-| `variant?`   | theme color | `'primary'` | Ring color          |
-| `className?` | `string`    | `''`        | Extra classes       |
-
-DaisyUI `radial-progress` ring; value is clamped to `0..max`.
-
-```tsx
-<Gauge value={72} variant="success" showValue label="Score" />
-```
-
-### JsonViewer
-
-File: `src/components/molecules/JsonViewer.tsx` — client component.
-
-| Prop               | Type      | Default | Description            |
-| ------------------ | --------- | ------- | ---------------------- |
-| `data`             | `unknown` | —       | Value to inspect       |
-| `name?`            | `string`  | —       | Root label             |
-| `defaultExpanded?` | `boolean` | `false` | Expand nodes initially |
-| `className?`       | `string`  | `''`    | Extra classes          |
-
-Recursive `role="tree"` of expandable nodes with type-colored values (`null`,
-numbers/booleans, strings, objects).
-
-```tsx
-<JsonViewer data={payload} name="response" defaultExpanded />
-```
-
-### Masonry
-
-File: `src/components/molecules/Masonry.tsx`
-
-| Prop         | Type                   | Default | Description            |
-| ------------ | ---------------------- | ------- | ---------------------- |
-| `items`      | `ReactNode[]`          | —       | Items to lay out       |
-| `columns?`   | `2 \| 3 \| 4`          | `3`     | CSS multi-column count |
-| `gap?`       | `'sm' \| 'md' \| 'lg'` | `'md'`  | Column gap             |
-| `className?` | `string`               | `''`    | Extra classes          |
-
-CSS `columns-*` masonry with `break-inside-avoid` items.
-
-```tsx
-<Masonry items={cards} columns={4} gap="lg" />
-```
-
-### PasswordStrength
-
-File: `src/components/molecules/PasswordStrength.tsx`
-
-| Prop     | Type     | Default               | Description          |
-| -------- | -------- | --------------------- | -------------------- |
-| `value`  | `string` | —                     | Password to evaluate |
-| `label?` | `string` | `'Password strength'` | Legend text          |
-
-Scores 5 checks (length ≥ 8, lower, upper, number, symbol) into a 0–5 label
-(Very weak…Excellent) with a segmented bar and a check list.
-
-```tsx
-<PasswordStrength value={password} />
-```
-
-### ReviewCard
-
-File: `src/components/molecules/ReviewCard.tsx`
-
-| Prop         | Type     | Default | Description               |
-| ------------ | -------- | ------- | ------------------------- |
-| `quote`      | `string` | —       | Review text               |
-| `author`     | `string` | —       | Author name               |
-| `role?`      | `string` | —       | Author role               |
-| `rating?`    | `number` | —       | 0–5 star rating (clamped) |
-| `initials?`  | `string` | —       | Avatar initials           |
-| `className?` | `string` | `''`    | Extra classes             |
-
-Star rating (`role="img"`), curly-quoted blockquote, and author caption.
-
-```tsx
-<ReviewCard quote="Loved it" author="Ada" rating={5} initials="A" />
-```
-
-### SkillBar
-
-File: `src/components/molecules/SkillBar.tsx`
-
-| Prop         | Type        | Default     | Description     |
-| ------------ | ----------- | ----------- | --------------- |
-| `label`      | `string`    | —           | Skill name      |
-| `value`      | `number`    | —           | Skill level     |
-| `max?`       | `number`    | `100`       | Maximum value   |
-| `variant?`   | theme color | `'primary'` | Bar color       |
-| `showValue?` | `boolean`   | `true`      | Show percentage |
-| `className?` | `string`    | `''`        | Extra classes   |
-
-Thin wrapper around the `Progress` atom (`size="sm"`).
-
-```tsx
-<SkillBar label="TypeScript" value={90} variant="success" />
-```
-
-### SocialLinks
-
-File: `src/components/molecules/SocialLinks.tsx`
-
-| Prop         | Type                           | Default | Description     |
-| ------------ | ------------------------------ | ------- | --------------- |
-| `items`      | `{ platform, href, label? }[]` | —       | Links to render |
-| `size?`      | `'sm' \| 'md' \| 'lg'`         | `'md'`  | Icon size       |
-| `className?` | `string`                       | `''`    | Extra classes   |
-
-`platform` is one of `github`, `twitter`, `linkedin`, `instagram`, `youtube`,
-`facebook`, `globe` (Feather icons) rendered as `btn-circle` links.
-
-```tsx
-<SocialLinks items={[{ platform: 'github', href: '/gh' }]} />
-```
-
-### StatTrend
-
-File: `src/components/molecules/StatTrend.tsx`
-
-| Prop         | Type        | Default | Description       |
-| ------------ | ----------- | ------- | ----------------- |
-| `label`      | `string`    | —       | Statistic label   |
-| `value`      | `string`    | —       | Main value text   |
-| `trend?`     | `number`    | —       | Percentage change |
-| `icon?`      | `ReactNode` | —       | Optional icon     |
-| `className?` | `string`    | `''`    | Extra classes     |
-
-Trend renders `+x%` / `-x%` in success/error with up/down arrows.
-
-```tsx
-<StatTrend label="Revenue" value="$12k" trend={8.5} />
-```
+Combinations of two or more atoms that form a single, reusable unit.
+
+**256 components** across 16 domains, one file per component in
+`src/components/molecules/<domain>/<Name>.tsx`. Every component exports
+`export const <Name>: FC<<Name>Props>` with a colocated `interface <Name>Props`;
+props are listed verbatim from the interface. `Client` marks components that
+start with `'use client';`.
+
+## app
+
+Workspace & productivity.
+
+| Component       | File                              | Props                                                                                                                                                                                                              | Client |
+| --------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------ |
+| `ButtonGroup`   | `molecules/app/ButtonGroup.tsx`   | `options: ButtonGroupOption[]; value: string; onChange: (value: string) => void; orientation?: 'horizontal' \| 'vertical'; size?: 'sm' \| 'md' \| 'lg'; disabled?: boolean`                                        | client |
+| `CheckboxGroup` | `molecules/app/CheckboxGroup.tsx` | `options: CheckboxOption[]; value: string[]; onChange: (value: string[]) => void; label?: string; error?: string; disabled?: boolean; inline?: boolean`                                                            | —      |
+| `Combobox`      | `molecules/app/Combobox.tsx`      | `options: ComboboxOption[]; value: string; onChange: (value: string) => void; label?: string; placeholder?: string; emptyText?: string; disabled?: boolean`                                                        | client |
+| `Fieldset`      | `molecules/app/Fieldset.tsx`      | `legend: string; description?: string; disabled?: boolean; className?: string; children: ReactNode`                                                                                                                | —      |
+| `FilterGroup`   | `molecules/app/FilterGroup.tsx`   | `name: string; options: FilterOption[]; selected: string[]; onChange: (next: string[]) => void`                                                                                                                    | client |
+| `FormRow`       | `molecules/app/FormRow.tsx`       | `label: string; htmlFor?: string; hint?: string; error?: string; required?: boolean; children: ReactNode`                                                                                                          | —      |
+| `Gauge`         | `molecules/app/Gauge.tsx`         | `value: number; max?: number; size?: number; thickness?: number; label?: string; showValue?: boolean; variant?: GaugeVariant; className?: string`                                                                  | —      |
+| `InputGroup`    | `molecules/app/InputGroup.tsx`    | `value: string; onChange: (value: string) => void; label?: string; leading?: ReactNode; trailing?: ReactNode; placeholder?: string; type?: string; error?: string; hint?: string; disabled?: boolean; id?: string` | —      |
+| `InputStepper`  | `molecules/app/InputStepper.tsx`  | `label: string; options: string[]; value: string; onChange: (value: string) => void`                                                                                                                               | client |
+| `MultiSelect`   | `molecules/app/MultiSelect.tsx`   | `options: MultiSelectOption[]; value: string[]; onChange: (next: string[]) => void; label?: string; placeholder?: string`                                                                                          | client |
+| `NumberInput`   | `molecules/app/NumberInput.tsx`   | `label: string; value: number; onChange: (value: number) => void; min?: number; max?: number; step?: number; placeholder?: string; error?: string; hint?: string; disabled?: boolean`                              | —      |
+| `RadioGroup`    | `molecules/app/RadioGroup.tsx`    | `name: string; options: RadioOption[]; value: string; onChange: (value: string) => void; label?: string; error?: string; disabled?: boolean; inline?: boolean`                                                     | —      |
+| `Stat`          | `molecules/app/Stat.tsx`          | `label: string; value: string; icon?: ReactNode; description?: string; variant?: 'primary' \| 'secondary' \| 'accent' \| 'success' \| 'warning' \| 'error'`                                                        | —      |
+| `StatTrend`     | `molecules/app/StatTrend.tsx`     | `label: string; value: string; trend?: number; icon?: ReactNode; className?: string`                                                                                                                               | —      |
+| `TagInput`      | `molecules/app/TagInput.tsx`      | `tags: string[]; onChange: (tags: string[]) => void; placeholder?: string; disabled?: boolean`                                                                                                                     | client |
+| `ToggleGroup`   | `molecules/app/ToggleGroup.tsx`   | `options: ToggleOption[]; value: string[] \| string; onChange: (value: string[] \| string) => void; multiple?: boolean; disabled?: boolean; className?: string`                                                    | —      |
+
+## auth
+
+Auth, security & account.
+
+| Component          | File                                  | Props                                                                                                                                                                                                               | Client |
+| ------------------ | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| `Alert`            | `molecules/auth/Alert.tsx`            | `variant?: AlertVariant; title?: string; description?: ReactNode; dismissible?: boolean; onClose?: () => void; className?: string; children?: ReactNode`                                                            | —      |
+| `AvatarGroup`      | `molecules/auth/AvatarGroup.tsx`      | `avatars: GroupAvatar[]; size?: 'sm' \| 'md' \| 'lg'; max?: number`                                                                                                                                                 | —      |
+| `Banner`           | `molecules/auth/Banner.tsx`           | `title?: string; description?: ReactNode; variant?: BannerVariant; icon?: ReactNode; action?: ReactNode; dismissible?: boolean; onClose?: () => void; className?: string; children?: ReactNode`                     | —      |
+| `Checklist`        | `molecules/auth/Checklist.tsx`        | `items: ChecklistItem[]; onToggle: (id: string) => void; className?: string`                                                                                                                                        | —      |
+| `Chip`             | `molecules/auth/Chip.tsx`             | `label: string; color?: ChipColor; variant?: 'filled' \| 'outline'; size?: 'sm' \| 'md'; icon?: ReactNode; avatar?: ReactNode; onClick?: () => void; onDelete?: () => void; disabled?: boolean; className?: string` | —      |
+| `ConfirmDialog`    | `molecules/auth/ConfirmDialog.tsx`    | `open: boolean; title: string; message?: string; confirmLabel?: string; cancelLabel?: string; danger?: boolean; loading?: boolean; onConfirm: () => void; onCancel?: () => void`                                    | —      |
+| `ContextMenu`      | `molecules/auth/ContextMenu.tsx`      | `trigger: ReactNode; items: ContextMenuItem[]`                                                                                                                                                                      | —      |
+| `DangerZone`       | `molecules/auth/DangerZone.tsx`       | `items: DangerZoneItem[]; title?: string`                                                                                                                                                                           | —      |
+| `Dropdown`         | `molecules/auth/Dropdown.tsx`         | `trigger: ReactNode; items: DropdownItem[]`                                                                                                                                                                         | client |
+| `FeatureList`      | `molecules/auth/FeatureList.tsx`      | `items: FeatureListFeature[]; columns?: 1 \| 2; className?: string`                                                                                                                                                 | —      |
+| `InfoList`         | `molecules/auth/InfoList.tsx`         | `items: InfoListItem[]; title?: string; columns?: 1 \| 2`                                                                                                                                                           | —      |
+| `InlineAlert`      | `molecules/auth/InlineAlert.tsx`      | `variant?: 'info' \| 'success' \| 'warning' \| 'error'; children: ReactNode; onClose?: () => void`                                                                                                                  | —      |
+| `KeyValue`         | `molecules/auth/KeyValue.tsx`         | `items: KeyValueItem[]; title?: string`                                                                                                                                                                             | —      |
+| `Menu`             | `molecules/auth/Menu.tsx`             | `items: MenuItem[]; title?: string`                                                                                                                                                                                 | —      |
+| `Menubar`          | `molecules/auth/Menubar.tsx`          | `items: MenubarItem[]; ariaLabel?: string`                                                                                                                                                                          | client |
+| `PasswordStrength` | `molecules/auth/PasswordStrength.tsx` | `value: string; label?: string`                                                                                                                                                                                     | —      |
+
+## blog
+
+Blog, course & learning.
+
+| Component       | File                               | Props                                                                                                                                                                      | Client |
+| --------------- | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| `ArticleCard`   | `molecules/blog/ArticleCard.tsx`   | `title: string; excerpt: string; author: string; readTime: string; date?: string; category?: string; imageSrc?: string; href?: string`                                     | —      |
+| `AuthorBio`     | `molecules/blog/AuthorBio.tsx`     | `name: string; bio: string; avatar?: string; role?: string; socials?: { label: string; href: string }[]`                                                                   | —      |
+| `CategoryList`  | `molecules/blog/CategoryList.tsx`  | `categories: CategoryItem[]; active?: string; onSelect?: (label: string) => void`                                                                                          | client |
+| `ChatBubble`    | `molecules/blog/ChatBubble.tsx`    | `message: string; sender: 'user' \| 'assistant'; name?: string; time?: string; avatar?: ReactNode`                                                                         | —      |
+| `CommentBox`    | `molecules/blog/CommentBox.tsx`    | `onSubmit: (text: string) => void; placeholder?: string; submitLabel?: string; author?: string`                                                                            | client |
+| `FeaturedPost`  | `molecules/blog/FeaturedPost.tsx`  | `title: string; excerpt: string; author: string; readTime: string; imageSrc?: string; href?: string; category?: string`                                                    | —      |
+| `PostHeader`    | `molecules/blog/PostHeader.tsx`    | `title: string; author: string; date: string; readTime: string; category?: string`                                                                                         | —      |
+| `QuoteBlock`    | `molecules/blog/QuoteBlock.tsx`    | `quote: string; author?: string; source?: string`                                                                                                                          | —      |
+| `RelatedPosts`  | `molecules/blog/RelatedPosts.tsx`  | `title?: string; posts: RelatedPost[]`                                                                                                                                     | —      |
+| `ReviewCard`    | `molecules/blog/ReviewCard.tsx`    | `quote: string; author: string; role?: string; rating?: number; initials?: string; className?: string`                                                                     | —      |
+| `ShareButtons`  | `molecules/blog/ShareButtons.tsx`  | `url: string; title?: string; onShare?: (network: string) => void`                                                                                                         | client |
+| `SkillBar`      | `molecules/blog/SkillBar.tsx`      | `label: string; value: number; max?: number; variant?: 'primary' \| 'secondary' \| 'accent' \| 'success' \| 'warning' \| 'error'; showValue?: boolean; className?: string` | —      |
+| `SocialLinks`   | `molecules/blog/SocialLinks.tsx`   | `items: SocialLinkItem[]; size?: 'sm' \| 'md' \| 'lg'; className?: string`                                                                                                 | —      |
+| `SubscribeForm` | `molecules/blog/SubscribeForm.tsx` | `onSubmit: (email: string) => void; title?: string; description?: string; buttonLabel?: string`                                                                            | client |
+| `TagChips`      | `molecules/blog/TagChips.tsx`      | `tags: string[]; title?: string`                                                                                                                                           | —      |
+
+## crm
+
+Sales, CRM & commerce ops.
+
+| Component            | File                                   | Props                                                                                                                                     | Client |
+| -------------------- | -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| `ActivityLog`        | `molecules/crm/ActivityLog.tsx`        | `activities: Activity[]`                                                                                                                  | —      |
+| `ContactCard`        | `molecules/crm/ContactCard.tsx`        | `name: string; email: string; title?: string; company?: string; phone?: string; avatar?: string; status?: string`                         | —      |
+| `CustomerSegment`    | `molecules/crm/CustomerSegment.tsx`    | `name: string; count: number; description?: string; color?: string; avgOrderValue?: number; currency?: string`                            | —      |
+| `CustomerTable`      | `molecules/crm/CustomerTable.tsx`      | `rows: CustomerRow[]`                                                                                                                     | —      |
+| `DealCard`           | `molecules/crm/DealCard.tsx`           | `name: string; company: string; amount: number; stage?: string; probability?: number; owner?: string; currency?: string`                  | —      |
+| `FollowUpTask`       | `molecules/crm/FollowUpTask.tsx`       | `id: string; title: string; dueDate: string; owner: string; completed?: boolean; onChange?: (id: string, completed: boolean) => void`     | client |
+| `InventoryTable`     | `molecules/crm/InventoryTable.tsx`     | `rows: InventoryRow[]`                                                                                                                    | —      |
+| `InvoiceCard`        | `molecules/crm/InvoiceCard.tsx`        | `id: string; customer: string; items: InvoiceItem[]; status: 'Pending' \| 'Paid' \| 'Overdue'; currency?: string`                         | —      |
+| `LeadCard`           | `molecules/crm/LeadCard.tsx`           | `name: string; company?: string; email?: string; source?: string; score?: number; status?: 'New' \| 'Contacted' \| 'Qualified' \| 'Lost'` | —      |
+| `OrderCard`          | `molecules/crm/OrderCard.tsx`          | `id: string; customer: string; date: string; total: number; itemsCount: number; status: string; currency?: string`                        | —      |
+| `PipelineView`       | `molecules/crm/PipelineView.tsx`       | `stages: PipelineStage[]`                                                                                                                 | —      |
+| `ProductCatalogCard` | `molecules/crm/ProductCatalogCard.tsx` | `name: string; price: number; sku: string; category?: string; stock?: number; imageSrc?: string; currency?: string`                       | —      |
+| `SalesFunnel`        | `molecules/crm/SalesFunnel.tsx`        | `stages: FunnelStage[]`                                                                                                                   | —      |
+| `StatsRow`           | `molecules/crm/StatsRow.tsx`           | `stats: StatValue[]`                                                                                                                      | —      |
+| `SupportTicket`      | `molecules/crm/SupportTicket.tsx`      | `id: string; subject: string; customer: string; priority: 'Low' \| 'Medium' \| 'High'; status: string; date: string`                      | —      |
+| `TeamCard`           | `molecules/crm/TeamCard.tsx`           | `name: string; members: TeamMember[]; totalQuota?: number; currency?: string`                                                             | —      |
+
+## developer
+
+Developer platform & IoT.
+
+| Component      | File                                   | Props                                                                                                                                                          | Client |
+| -------------- | -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| `Carousel`     | `molecules/developer/Carousel.tsx`     | `slides: ReactNode[]; ariaLabel?: string`                                                                                                                      | client |
+| `ColorPicker`  | `molecules/developer/ColorPicker.tsx`  | `value: string; onChange: (value: string) => void; label?: string; swatches?: string[]; disabled?: boolean`                                                    | client |
+| `DatePicker`   | `molecules/developer/DatePicker.tsx`   | `value?: Date; onChange: (date: Date) => void; label?: string; placeholder?: string; minDate?: Date; maxDate?: Date`                                           | client |
+| `DateRange`    | `molecules/developer/DateRange.tsx`    | `start: string; end: string; onStartChange: (value: string) => void; onEndChange: (value: string) => void; label?: string; min?: string; max?: string`         | —      |
+| `EmptyState`   | `molecules/developer/EmptyState.tsx`   | `icon: ReactNode; title: string; description?: string; action?: ReactNode`                                                                                     | —      |
+| `FileUpload`   | `molecules/developer/FileUpload.tsx`   | `label?: string; accept?: string; multiple?: boolean; maxSize?: number; onFilesChange?: (files: UploadedFile[]) => void; hint?: string`                        | client |
+| `HoverCard`    | `molecules/developer/HoverCard.tsx`    | `trigger: ReactNode; content: ReactNode; side?: HoverCardSide; widthClass?: string; className?: string`                                                        | —      |
+| `ImageGallery` | `molecules/developer/ImageGallery.tsx` | `images: GalleryImage[]; label?: string`                                                                                                                       | client |
+| `JsonViewer`   | `molecules/developer/JsonViewer.tsx`   | `data: unknown; name?: string; defaultExpanded?: boolean; className?: string`                                                                                  | client |
+| `Pagination`   | `molecules/developer/Pagination.tsx`   | `current: number; total: number; onChange: (page: number) => void; siblingCount?: number`                                                                      | —      |
+| `Resizable`    | `molecules/developer/Resizable.tsx`    | `direction?: 'horizontal' \| 'vertical'; initialRatio?: number; minRatio?: number; maxRatio?: number; first: ReactNode; second: ReactNode; className?: string` | client |
+| `SearchBar`    | `molecules/developer/SearchBar.tsx`    | `value: string; onChange: (value: string) => void; placeholder?: string; size?: 'sm' \| 'md' \| 'lg'; disabled?: boolean`                                      | client |
+| `SpeedDial`    | `molecules/developer/SpeedDial.tsx`    | `triggerIcon: ReactNode; actions: SpeedDialAction[]; position?: SpeedDialPosition; openLabel?: string; closeLabel?: string`                                    | client |
+| `TimePicker`   | `molecules/developer/TimePicker.tsx`   | `value: string; onChange: (time: string) => void; label?: string; stepMinutes?: number; format?: '12h' \| '24h'`                                               | client |
+| `TransferList` | `molecules/developer/TransferList.tsx` | `left: TransferItem[]; right: TransferItem[]; onChange: (left: TransferItem[], right: TransferItem[]) => void; leftTitle?: string; rightTitle?: string`        | client |
+| `TreeView`     | `molecules/developer/TreeView.tsx`     | `nodes: TreeNode[]`                                                                                                                                            | client |
+
+## finance
+
+Finance & investing.
+
+| Component          | File                                     | Props                                                                                                                                    | Client |
+| ------------------ | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| `AccountSummary`   | `molecules/finance/AccountSummary.tsx`   | `accounts: Account[]; currency?: string; showTotal?: boolean`                                                                            | —      |
+| `AlertsCard`       | `molecules/finance/AlertsCard.tsx`       | `alerts: AlertItem[]; title?: string`                                                                                                    | —      |
+| `BalanceCard`      | `molecules/finance/BalanceCard.tsx`      | `title?: string; label?: string; balance: number; currency?: string; trend?: number`                                                     | —      |
+| `BudgetCard`       | `molecules/finance/BudgetCard.tsx`       | `name: string; spent: number; limit: number; currency?: string`                                                                          | —      |
+| `ExchangeCard`     | `molecules/finance/ExchangeCard.tsx`     | `from: string; to: string; amount: number; rate: number; converted?: number; onSwap?: () => void`                                        | —      |
+| `ExpenseList`      | `molecules/finance/ExpenseList.tsx`      | `expenses: ExpenseItem[]; currency?: string; limit?: number`                                                                             | —      |
+| `IncomeList`       | `molecules/finance/IncomeList.tsx`       | `incomes: IncomeItem[]; currency?: string; limit?: number`                                                                               | —      |
+| `InvoiceRow`       | `molecules/finance/InvoiceRow.tsx`       | `id: string; customer: string; amount: number; date: string; status?: InvoiceStatus; currency?: string; onSelect?: (id: string) => void` | —      |
+| `LoanCard`         | `molecules/finance/LoanCard.tsx`         | `lender: string; principal: number; balance: number; rate: number; term?: string; nextPayment?: string; currency?: string`               | —      |
+| `PaymentCard`      | `molecules/finance/PaymentCard.tsx`      | `provider: string; last4: string; holder?: string; expiry?: string; primary?: boolean`                                                   | —      |
+| `PortfolioCard`    | `molecules/finance/PortfolioCard.tsx`    | `title?: string; totalValue: number; change?: number; holdings: Holding[]; currency?: string`                                            | —      |
+| `SavingsGoal`      | `molecules/finance/SavingsGoal.tsx`      | `name: string; current: number; target: number; currency?: string; deadline?: string`                                                    | —      |
+| `StockChart`       | `molecules/finance/StockChart.tsx`       | `points: StockPoint[]; title?: string`                                                                                                   | —      |
+| `TaxCard`          | `molecules/finance/TaxCard.tsx`          | `title: string; amount: number; dueDate: string; status?: TaxStatus; currency?: string`                                                  | —      |
+| `TransactionTable` | `molecules/finance/TransactionTable.tsx` | `transactions: Transaction[]; currency?: string`                                                                                         | —      |
+| `WatchlistRow`     | `molecules/finance/WatchlistRow.tsx`     | `symbol: string; name: string; price: number; change: number; currency?: string; onSelect?: (symbol: string) => void`                    | —      |
+
+## health
+
+Health, fitness & food.
+
+| Component         | File                                   | Props                                                                                                                                 | Client |
+| ----------------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| `ActivityGoal`    | `molecules/health/ActivityGoal.tsx`    | `label: string; current: number; target: number; unit?: string; completed?: boolean; onAdd?: (delta: number) => void`                 | —      |
+| `AppointmentCard` | `molecules/health/AppointmentCard.tsx` | `doctor: string; specialty: string; date: string; time: string; location?: string; status?: AppointmentStatus; onCancel?: () => void` | —      |
+| `CalorieTracker`  | `molecules/health/CalorieTracker.tsx`  | `consumed: number; burned: number; goal: number`                                                                                      | —      |
+| `DoctorCard`      | `molecules/health/DoctorCard.tsx`      | `name: string; specialty: string; rating: number; reviews?: number; availability?: string; onBook?: () => void`                       | —      |
+| `HealthTip`       | `molecules/health/HealthTip.tsx`       | `tip: string; category?: string; source?: string`                                                                                     | —      |
+| `HeartRateChart`  | `molecules/health/HeartRateChart.tsx`  | `points: HeartRatePoint[]; title?: string`                                                                                            | —      |
+| `MealPlan`        | `molecules/health/MealPlan.tsx`        | `meals: Meal[]; title?: string`                                                                                                       | —      |
+| `MedicationCard`  | `molecules/health/MedicationCard.tsx`  | `name: string; dose: string; time: string; frequency?: string; taken?: boolean; onToggle?: (taken: boolean) => void`                  | client |
+| `NutritionCard`   | `molecules/health/NutritionCard.tsx`   | `calories: Nutrient; protein: Nutrient; carbs: Nutrient; fat: Nutrient`                                                               | —      |
+| `SleepChart`      | `molecules/health/SleepChart.tsx`      | `points: SleepPoint[]; title?: string`                                                                                                | —      |
+| `StepsChart`      | `molecules/health/StepsChart.tsx`      | `points: StepsPoint[]; goal?: number`                                                                                                 | —      |
+| `SymptomCard`     | `molecules/health/SymptomCard.tsx`     | `name: string; severity: Severity; duration?: string; note?: string; date?: string`                                                   | —      |
+| `VitalsCard`      | `molecules/health/VitalsCard.tsx`      | `bloodPressure: string; heartRate: number; temperature: number; spo2: number; title?: string`                                         | —      |
+| `WaterTracker`    | `molecules/health/WaterTracker.tsx`    | `glasses: number; target: number; onAdd?: (glasses: number) => void; onRemove?: (glasses: number) => void`                            | client |
+| `WeightChart`     | `molecules/health/WeightChart.tsx`     | `points: WeightPoint[]; unit?: string`                                                                                                | —      |
+| `WorkoutCard`     | `molecules/health/WorkoutCard.tsx`     | `name: string; duration: number; calories: number; type?: string; intensity?: Intensity; date?: string; completed?: boolean`          | —      |
+
+## hr
+
+HR, people & benefits.
+
+| Component         | File                               | Props                                                                                                                                                                                                           | Client |
+| ----------------- | ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| `AttendanceTable` | `molecules/hr/AttendanceTable.tsx` | `rows: AttendanceRow[]; className?: string`                                                                                                                                                                     | —      |
+| `BenefitCard`     | `molecules/hr/BenefitCard.tsx`     | `title: string; description: string; category?: string; icon?: string; className?: string`                                                                                                                      | —      |
+| `CandidateCard`   | `molecules/hr/CandidateCard.tsx`   | `name: string; position: string; stage: string; score?: number; appliedAt?: string; location?: string; className?: string`                                                                                      | —      |
+| `EmployeeCard`    | `molecules/hr/EmployeeCard.tsx`    | `employee: Employee; className?: string`                                                                                                                                                                        | —      |
+| `InterviewCard`   | `molecules/hr/InterviewCard.tsx`   | `candidate: string; role: string; interviewer?: string; date: string; time: string; type: 'onsite' \| 'phone' \| 'video' \| 'technical'; status: 'scheduled' \| 'completed' \| 'cancelled'; className?: string` | —      |
+| `JobPosting`      | `molecules/hr/JobPosting.tsx`      | `title: string; department: string; location: string; type: string; salary?: string; postedAt?: string; deadline?: string; className?: string`                                                                  | —      |
+| `LeaveCard`       | `molecules/hr/LeaveCard.tsx`       | `leave: LeaveRequest; className?: string`                                                                                                                                                                       | —      |
+| `OnboardingTask`  | `molecules/hr/OnboardingTask.tsx`  | `title: string; due: string; status: 'todo' \| 'in-progress' \| 'done'; assignee?: string; category?: string; className?: string`                                                                               | —      |
+| `OrgChart`        | `molecules/hr/OrgChart.tsx`        | `nodes: OrgNode[]; title?: string; className?: string`                                                                                                                                                          | —      |
+| `PayrollSummary`  | `molecules/hr/PayrollSummary.tsx`  | `period: string; gross: number; net: number; deductions?: number; bonus?: number; taxes?: number; currency?: string; className?: string`                                                                        | —      |
+| `PerformanceCard` | `molecules/hr/PerformanceCard.tsx` | `employee: string; period: string; score: number; rating?: string; highlights?: string[]; className?: string`                                                                                                   | —      |
+| `PolicyCard`      | `molecules/hr/PolicyCard.tsx`      | `title: string; summary?: string; version?: string; updatedAt?: string; category?: string; className?: string`                                                                                                  | —      |
+| `RecruitmentCard` | `molecules/hr/RecruitmentCard.tsx` | `title: string; applicants: number; hired: number; openRoles: number; department?: string; deadline?: string; className?: string`                                                                               | —      |
+| `TeamSummary`     | `molecules/hr/TeamSummary.tsx`     | `name: string; size: number; openRoles: number; location?: string; manager?: string; className?: string`                                                                                                        | —      |
+| `TimesheetRow`    | `molecules/hr/TimesheetRow.tsx`    | `day: string; project: string; hours: number; overtime?: number; status: 'pending' \| 'approved' \| 'rejected'; className?: string`                                                                             | —      |
+| `TrainingCard`    | `molecules/hr/TrainingCard.tsx`    | `title: string; provider: string; date: string; duration?: string; status: 'upcoming' \| 'in-progress' \| 'completed'; category?: string; className?: string`                                                   | —      |
+
+## landing
+
+Marketing, landing & careers.
+
+| Component         | File                                    | Props                                                                                                                                      | Client |
+| ----------------- | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | ------ |
+| `AwardCard`       | `molecules/landing/AwardCard.tsx`       | `title: string; organization: string; year: string; description?: string; className?: string`                                              | —      |
+| `BlogTeaser`      | `molecules/landing/BlogTeaser.tsx`      | `title: string; excerpt?: string; date: string; author: string; tags?: string[]; readTime?: string; className?: string`                    | —      |
+| `ClientLogo`      | `molecules/landing/ClientLogo.tsx`      | `name: string; logo?: string; url?: string; className?: string`                                                                            | —      |
+| `ContactForm`     | `molecules/landing/ContactForm.tsx`     | `title?: string; onSubmit?: (data: { name: string; email: string; message: string }) => void; className?: string`                          | client |
+| `CtaBanner`       | `molecules/landing/CtaBanner.tsx`       | `title: string; description?: string; primaryLabel?: string; secondaryLabel?: string; className?: string`                                  | —      |
+| `FAQItem`         | `molecules/landing/FAQItem.tsx`         | `question: string; answer: string; defaultOpen?: boolean`                                                                                  | client |
+| `HeroSection`     | `molecules/landing/HeroSection.tsx`     | `title: string; subtitle?: string; badge?: string; primaryLabel?: string; secondaryLabel?: string; className?: string`                     | —      |
+| `MilestoneCard`   | `molecules/landing/MilestoneCard.tsx`   | `year: string; title: string; description?: string; category?: string; className?: string`                                                 | —      |
+| `PartnersRow`     | `molecules/landing/PartnersRow.tsx`     | `partners: string[]; title?: string; className?: string`                                                                                   | —      |
+| `PlanCard`        | `molecules/landing/PlanCard.tsx`        | `name: string; price: string; period?: string; features: string[]; cta?: string; recommended?: boolean; note?: string; className?: string` | —      |
+| `PricingCard`     | `molecules/landing/PricingCard.tsx`     | `name: string; price: string; period?: string; features: string[]; cta?: string; highlighted?: boolean; className?: string`                | —      |
+| `ProcessStep`     | `molecules/landing/ProcessStep.tsx`     | `step: number; title: string; description: string; icon?: string; className?: string`                                                      | —      |
+| `ServiceCard`     | `molecules/landing/ServiceCard.tsx`     | `title: string; description: string; icon?: string; features?: string[]; className?: string`                                               | —      |
+| `StatHighlight`   | `molecules/landing/StatHighlight.tsx`   | `label: string; value: string; delta?: string; positive?: boolean; icon?: string; className?: string`                                      | —      |
+| `TeamMemberCard`  | `molecules/landing/TeamMemberCard.tsx`  | `name: string; role: string; bio?: string; initials?: string; socials?: SocialLink[]; className?: string`                                  | —      |
+| `TestimonialCard` | `molecules/landing/TestimonialCard.tsx` | `quote: string; author: string; role?: string; company?: string; rating?: number; initials?: string; className?: string`                   | —      |
+
+## mail
+
+Email, inbox & operations.
+
+| Component        | File                                | Props                                                                                                                                                   | Client |
+| ---------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| `AttachmentList` | `molecules/mail/AttachmentList.tsx` | `attachments: Attachment[]; onDownload?: (id: string) => void`                                                                                          | —      |
+| `ComposeForm`    | `molecules/mail/ComposeForm.tsx`    | `defaultTo?: string; defaultSubject?: string; defaultBody?: string; onSubmit?: (values: ComposeFormValues) => void`                                     | client |
+| `DraftItem`      | `molecules/mail/DraftItem.tsx`      | `to: string; subject: string; preview: string; updatedAt: string; onClick?: () => void`                                                                 | —      |
+| `EmailRow`       | `molecules/mail/EmailRow.tsx`       | `from: string; subject: string; preview: string; time: string; unread?: boolean; active?: boolean; onClick?: () => void`                                | —      |
+| `FolderItem`     | `molecules/mail/FolderItem.tsx`     | `label: string; count?: number; icon?: ReactNode; active?: boolean; onClick?: () => void`                                                               | —      |
+| `InboxTable`     | `molecules/mail/InboxTable.tsx`     | `emails: Email[]; onSelect?: (id: string) => void`                                                                                                      | —      |
+| `LabelBadges`    | `molecules/mail/LabelBadges.tsx`    | `labels: string[]; emptyText?: string`                                                                                                                  | —      |
+| `LoadingOverlay` | `molecules/mail/LoadingOverlay.tsx` | `open: boolean; label?: string; variant?: 'spinner' \| 'dots' \| 'ring' \| 'ball' \| 'bars' \| 'infinity'; transparent?: boolean; onClose?: () => void` | client |
+| `MessageThread`  | `molecules/mail/MessageThread.tsx`  | `subject: string; messages: Message[]; onReply?: (messageId: string) => void`                                                                           | client |
+| `NavItem`        | `molecules/mail/NavItem.tsx`        | `label: string; href: string; icon?: ReactNode; badge?: string; active?: boolean; onClick?: () => void`                                                 | —      |
+| `ReplyForm`      | `molecules/mail/ReplyForm.tsx`      | `to: string; subject: string; placeholder?: string; onSend?: (body: string) => void; onCancel?: () => void`                                             | client |
+| `SearchResults`  | `molecules/mail/SearchResults.tsx`  | `query: string; results: Result[]; onSelect?: (id: string) => void`                                                                                     | —      |
+| `SentItem`       | `molecules/mail/SentItem.tsx`       | `to: string; subject: string; preview: string; time: string; status?: 'delivered' \| 'failed'; onClick?: () => void`                                    | —      |
+| `SignatureCard`  | `molecules/mail/SignatureCard.tsx`  | `name: string; role?: string; company?: string; email?: string; phone?: string; website?: string`                                                       | —      |
+| `SpamItem`       | `molecules/mail/SpamItem.tsx`       | `from: string; subject: string; preview: string; time: string; flagged?: boolean; onReport?: () => void; onMoveToInbox?: () => void`                    | —      |
+| `TrashItem`      | `molecules/mail/TrashItem.tsx`      | `from: string; subject: string; preview: string; time: string; onRestore?: () => void; onDeleteForever?: () => void`                                    | —      |
+
+## media
+
+Music, streaming & media.
+
+| Component        | File                                 | Props                                                                                                                                                                     | Client |
+| ---------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| `AlbumCard`      | `molecules/media/AlbumCard.tsx`      | `title: string; artist: string; year?: string; trackCount?: number; coverUrl?: string; onOpen?: () => void`                                                               | —      |
+| `AlbumTracks`    | `molecules/media/AlbumTracks.tsx`    | `album?: string; artist?: string; tracks: Track[]; currentId?: string; onPlay?: (id: string) => void`                                                                     | —      |
+| `ArtistCard`     | `molecules/media/ArtistCard.tsx`     | `name: string; imageUrl?: string; followers?: string; verified?: boolean; onOpen?: () => void`                                                                            | —      |
+| `EpisodeCard`    | `molecules/media/EpisodeCard.tsx`    | `title: string; show: string; duration: string; description?: string; publishedAt?: string; progress?: number; onPlay?: () => void`                                       | —      |
+| `LyricsView`     | `molecules/media/LyricsView.tsx`     | `lines: string[]; activeLine?: number`                                                                                                                                    | —      |
+| `MoodBoard`      | `molecules/media/MoodBoard.tsx`      | `moods: Mood[]; selectedId?: string; onSelect?: (id: string) => void`                                                                                                     | —      |
+| `NowPlayingBar`  | `molecules/media/NowPlayingBar.tsx`  | `title: string; artist: string; albumArt?: string; progress?: number; playing?: boolean; onToggle?: (playing: boolean) => void; onNext?: () => void; onPrev?: () => void` | client |
+| `PlaylistCard`   | `molecules/media/PlaylistCard.tsx`   | `title: string; trackCount: number; author?: string; coverUrl?: string; onOpen?: () => void`                                                                              | —      |
+| `PodcastCard`    | `molecules/media/PodcastCard.tsx`    | `title: string; host?: string; episodes?: number; imageUrl?: string; onOpen?: () => void`                                                                                 | —      |
+| `QueueList`      | `molecules/media/QueueList.tsx`      | `tracks: QueueTrack[]; currentId?: string; onSelect?: (id: string) => void`                                                                                               | —      |
+| `RadioStation`   | `molecules/media/RadioStation.tsx`   | `name: string; genre?: string; frequency?: string; listeners?: number; live?: boolean; onTune?: () => void`                                                               | —      |
+| `RecentlyPlayed` | `molecules/media/RecentlyPlayed.tsx` | `items: Item[]; onSelect?: (id: string) => void`                                                                                                                          | —      |
+| `SimilarArtists` | `molecules/media/SimilarArtists.tsx` | `artists: Artist[]; onSelect?: (id: string) => void`                                                                                                                      | —      |
+| `StreamCard`     | `molecules/media/StreamCard.tsx`     | `title: string; platform: string; status?: 'live' \| 'offline' \| 'scheduled'; viewers?: number; thumbnailUrl?: string; onWatch?: () => void`                             | —      |
+| `TrackRow`       | `molecules/media/TrackRow.tsx`       | `title: string; artist: string; duration: string; index?: number; playing?: boolean; onPlay?: () => void`                                                                 | —      |
+| `VideoCard`      | `molecules/media/VideoCard.tsx`      | `title: string; channel: string; views: string; duration: string; thumbnailUrl?: string; onPlay?: () => void`                                                             | —      |
+
+## news
+
+News, magazine & sports.
+
+| Component         | File                                 | Props                                                                                                                         | Client |
+| ----------------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------- | ------ |
+| `AnalysisCard`    | `molecules/news/AnalysisCard.tsx`    | `title: string; author?: string; time?: string; summary?: string; tags?: string[]; href?: string`                             | —      |
+| `ArticleList`     | `molecules/news/ArticleList.tsx`     | `articles: ArticleListItem[]; title?: string`                                                                                 | —      |
+| `BreakingNews`    | `molecules/news/BreakingNews.tsx`    | `headline: string; tag?: string; href?: string; live?: boolean`                                                               | —      |
+| `CategoryNav`     | `molecules/news/CategoryNav.tsx`     | `categories: string[]; active?: string; onSelect?: (category: string) => void; ariaLabel?: string`                            | client |
+| `CultureCard`     | `molecules/news/CultureCard.tsx`     | `title: string; category?: string; author?: string; date?: string; excerpt?: string; href?: string`                           | —      |
+| `EditorialCard`   | `molecules/news/EditorialCard.tsx`   | `title: string; author?: string; date?: string; excerpt?: string; stance?: 'support' \| 'oppose' \| 'neutral'; href?: string` | —      |
+| `HeadlineRow`     | `molecules/news/HeadlineRow.tsx`     | `title: string; section?: string; time?: string; href?: string; rank?: number`                                                | —      |
+| `LiveUpdate`      | `molecules/news/LiveUpdate.tsx`      | `updates: LiveUpdateItem[]; title?: string; live?: boolean; initialVisible?: number`                                          | client |
+| `MarketIndex`     | `molecules/news/MarketIndex.tsx`     | `name: string; value: number; change: number; changePercent?: number; currency?: string`                                      | —      |
+| `OpinionColumn`   | `molecules/news/OpinionColumn.tsx`   | `columnists: Columnist[]; title?: string`                                                                                     | —      |
+| `PhotoStory`      | `molecules/news/PhotoStory.tsx`      | `title: string; caption?: string; photographer?: string; href?: string`                                                       | —      |
+| `ScoreBoard`      | `molecules/news/ScoreBoard.tsx`      | `home: TeamScore; away: TeamScore; period?: string; status?: string; showLeader?: boolean`                                    | —      |
+| `SportsScoreCard` | `molecules/news/SportsScoreCard.tsx` | `sport: string; home: TeamScore; away: TeamScore; status?: string; period?: string`                                           | —      |
+| `TrendingList`    | `molecules/news/TrendingList.tsx`    | `items: TrendingItem[]; title?: string`                                                                                       | —      |
+| `VideoStory`      | `molecules/news/VideoStory.tsx`      | `title: string; duration: string; channel?: string; views?: string; href?: string; onPlay?: () => void`                       | —      |
+| `WeatherCard`     | `molecules/news/WeatherCard.tsx`     | `city: string; temperature: number; condition: string; unit?: 'C' \| 'F'; high?: number; low?: number; humidity?: number`     | —      |
+
+## social
+
+Social, community & gaming.
+
+| Component              | File                                        | Props                                                                                                                                                                                               | Client |
+| ---------------------- | ------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| `Backdrop`             | `molecules/social/Backdrop.tsx`             | `open: boolean; onClose?: () => void; children?: ReactNode; className?: string; opaque?: boolean`                                                                                                   | client |
+| `BottomNavigation`     | `molecules/social/BottomNavigation.tsx`     | `items: BottomNavigationItem[]; value: string; onChange: (value: string) => void; position?: 'static' \| 'fixed'; className?: string`                                                               | —      |
+| `CommentList`          | `molecules/social/CommentList.tsx`          | `comments: Comment[]; title?: string`                                                                                                                                                               | —      |
+| `EventCard`            | `molecules/social/EventCard.tsx`            | `title: string; date: string; location?: string; attendees?: number; price?: string; month?: string; day?: number`                                                                                  | —      |
+| `FloatingActionButton` | `molecules/social/FloatingActionButton.tsx` | `icon: ReactNode; label: string; onClick?: () => void; position?: FabPosition; size?: FabSize; variant?: 'primary' \| 'secondary' \| 'accent' \| 'neutral'; disabled?: boolean; className?: string` | —      |
+| `FriendRequest`        | `molecules/social/FriendRequest.tsx`        | `name: string; mutual?: number; avatar?: string; onAccept?: () => void; onDecline?: () => void`                                                                                                     | —      |
+| `GroupCard`            | `molecules/social/GroupCard.tsx`            | `name: string; members: number; description?: string; category?: string`                                                                                                                            | —      |
+| `LikeButton`           | `molecules/social/LikeButton.tsx`           | `count?: number; label?: string; active?: boolean; onToggle?: (active: boolean) => void`                                                                                                            | client |
+| `MessagePreview`       | `molecules/social/MessagePreview.tsx`       | `name: string; preview: string; time?: string; unread?: number; avatar?: string`                                                                                                                    | —      |
+| `NotificationItem`     | `molecules/social/NotificationItem.tsx`     | `message: string; time?: string; type?: 'like' \| 'comment' \| 'follow' \| 'mention' \| 'system'; read?: boolean; avatar?: string`                                                                  | —      |
+| `PostCard`             | `molecules/social/PostCard.tsx`             | `author: string; content: string; likes?: number; comments?: number; shares?: number; time?: string; avatar?: string`                                                                               | —      |
+| `ProfileHeader`        | `molecules/social/ProfileHeader.tsx`        | `name: string; handle?: string; bio?: string; followers?: number; following?: number; avatar?: string; isVerified?: boolean`                                                                        | —      |
+| `ReactionPicker`       | `molecules/social/ReactionPicker.tsx`       | `options?: ReactionOption[]; onSelect?: (reaction: string) => void`                                                                                                                                 | client |
+| `ShareRow`             | `molecules/social/ShareRow.tsx`             | `shares?: number; onShare?: () => void; onCopy?: () => void; onMessage?: () => void`                                                                                                                | —      |
+| `StoryStrip`           | `molecules/social/StoryStrip.tsx`           | `stories: Story[]; active?: boolean; onSelect?: (story: Story) => void`                                                                                                                             | —      |
+| `SuggestionCard`       | `molecules/social/SuggestionCard.tsx`       | `name: string; handle?: string; reason?: string; avatar?: string; onFollow?: () => void; onDismiss?: () => void`                                                                                    | —      |
+
+## store
+
+Storefront & e-commerce.
+
+| Component         | File                                  | Props                                                                                                                                                        | Client |
+| ----------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------ |
+| `BundleCard`      | `molecules/store/BundleCard.tsx`      | `title: string; items: string[]; price: number; originalPrice?: number; currency?: string; badge?: string`                                                   | —      |
+| `CartItem`        | `molecules/store/CartItem.tsx`        | `name: string; price: number; quantity: number; onQuantityChange: (quantity: number) => void; onRemove?: () => void; imageLabel?: string; currency?: string` | client |
+| `CategoryCard`    | `molecules/store/CategoryCard.tsx`    | `name: string; productCount?: number; imageLabel?: string`                                                                                                   | —      |
+| `CheckoutSummary` | `molecules/store/CheckoutSummary.tsx` | `subtotal: number; shipping?: number; tax?: number; discount?: number; total: number; itemCount?: number; currency?: string`                                 | —      |
+| `ColorSwatch`     | `molecules/store/ColorSwatch.tsx`     | `colors: Swatch[]; selected?: string; onSelect?: (name: string) => void`                                                                                     | —      |
+| `CompareTable`    | `molecules/store/CompareTable.tsx`    | `products: string[]; rows: CompareColumn[]`                                                                                                                  | —      |
+| `CouponBox`       | `molecules/store/CouponBox.tsx`       | `onApply: (code: string) => void; placeholder?: string`                                                                                                      | client |
+| `OrderSummary`    | `molecules/store/OrderSummary.tsx`    | `orderNumber: string; status: string; placedAt?: string; paymentMethod?: string; itemCount?: number; total: number; currency?: string`                       | —      |
+| `ProductCard`     | `molecules/store/ProductCard.tsx`     | `name: string; price: number; imageLabel?: string; rating?: number; reviews?: number; badge?: string; currency?: string`                                     | —      |
+| `ProductRow`      | `molecules/store/ProductRow.tsx`      | `name: string; price: number; sku?: string; category?: string; inStock?: boolean; currency?: string`                                                         | —      |
+| `ShippingInfo`    | `molecules/store/ShippingInfo.tsx`    | `method: string; eta: string; cost?: number; carrier?: string; currency?: string; free?: boolean`                                                            | —      |
+| `SizePicker`      | `molecules/store/SizePicker.tsx`      | `sizes: string[]; defaultSelected?: string; onSelect?: (size: string) => void; label?: string`                                                               | client |
+| `StockBadge`      | `molecules/store/StockBadge.tsx`      | `status: 'in-stock' \| 'low-stock' \| 'out-of-stock'; quantity?: number`                                                                                     | —      |
+| `StoreCard`       | `molecules/store/StoreCard.tsx`       | `name: string; rating?: number; reviewCount?: number; deliveryTime?: string; category?: string; logoLabel?: string`                                          | —      |
+| `StoreReviewCard` | `molecules/store/StoreReviewCard.tsx` | `author: string; rating: number; comment: string; date?: string; verified?: boolean`                                                                         | —      |
+| `WishlistItem`    | `molecules/store/WishlistItem.tsx`    | `name: string; price: number; addedDate?: string; currency?: string; onAddToCart?: () => void; onRemove?: () => void`                                        | —      |
+
+## support
+
+Support, knowledge & system.
+
+| Component     | File                                | Props                                                                                                                                                              | Client |
+| ------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------ |
+| `Accordion`   | `molecules/support/Accordion.tsx`   | `items: AccordionItem[]; multiple?: boolean`                                                                                                                       | client |
+| `Breadcrumbs` | `molecules/support/Breadcrumbs.tsx` | `items: Crumb[]`                                                                                                                                                   | —      |
+| `Card`        | `molecules/support/Card.tsx`        | `title?: string; description?: string; action?: ReactNode; children: ReactNode`                                                                                    | —      |
+| `Dialog`      | `molecules/support/Dialog.tsx`      | `open: boolean; onClose: () => void; title?: string; description?: string; children?: ReactNode; footer?: ReactNode; closeOnBackdrop?: boolean`                    | client |
+| `Drawer`      | `molecules/support/Drawer.tsx`      | `open: boolean; onClose: () => void; title?: string; side?: 'left' \| 'right'; overlay?: boolean; widthClass?: string; children?: ReactNode; footer?: ReactNode`   | client |
+| `List`        | `molecules/support/List.tsx`        | `items: ListItem[]; title?: string`                                                                                                                                | —      |
+| `Masonry`     | `molecules/support/Masonry.tsx`     | `items: ReactNode[]; columns?: 2 \| 3 \| 4; gap?: 'sm' \| 'md' \| 'lg'; className?: string`                                                                        | —      |
+| `MenuGroup`   | `molecules/support/MenuGroup.tsx`   | `sections: MenuGroupSection[]`                                                                                                                                     | —      |
+| `Modal`       | `molecules/support/Modal.tsx`       | `open: boolean; onClose?: () => void; title?: string; children: ReactNode; action?: ReactNode`                                                                     | —      |
+| `Popover`     | `molecules/support/Popover.tsx`     | `trigger: ReactElement<{ onClick?: () => void; 'aria-haspopup'?: string; 'aria-expanded'?: boolean; }>; children: ReactNode; align?: 'start' \| 'center' \| 'end'` | client |
+| `ScrollArea`  | `molecules/support/ScrollArea.tsx`  | `children?: ReactNode; maxHeight?: number \| string; className?: string; innerClassName?: string`                                                                  | —      |
+| `Sheet`       | `molecules/support/Sheet.tsx`       | `open: boolean; onClose: () => void; title?: string; side?: 'left' \| 'right' \| 'top' \| 'bottom'; children?: ReactNode; footer?: ReactNode`                      | client |
+| `Steps`       | `molecules/support/Steps.tsx`       | `steps: Step[]; current: number`                                                                                                                                   | —      |
+| `Table`       | `molecules/support/Table.tsx`       | `columns: Column[]; rows: Record<string, string \| number \| boolean \| null \| undefined>[]; caption?: string; striped?: boolean; compact?: boolean`              | —      |
+| `Tabs`        | `molecules/support/Tabs.tsx`        | `tabs: Tab[]; value: string; onChange: (value: string) => void`                                                                                                    | client |
+| `Timeline`    | `molecules/support/Timeline.tsx`    | `items: TimelineItem[]`                                                                                                                                            | —      |
+| `Toast`       | `molecules/support/Toast.tsx`       | `message: string; variant?: ToastVariant; duration?: number; onClose?: () => void`                                                                                 | client |
+
+## travel
+
+Travel, real estate & property.
+
+| Component         | File                                   | Props                                                                                                                                                                           | Client |
+| ----------------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| `AmenityList`     | `molecules/travel/AmenityList.tsx`     | `amenities: string[]; title?: string`                                                                                                                                           | —      |
+| `AttractionCard`  | `molecules/travel/AttractionCard.tsx`  | `name: string; location?: string; rating?: number; price?: number; duration?: string; description?: string; currency?: string`                                                  | —      |
+| `BookingCard`     | `molecules/travel/BookingCard.tsx`     | `reference: string; title: string; date: string; status: string; price?: number; guests?: number; currency?: string`                                                            | —      |
+| `ChecklistCard`   | `molecules/travel/ChecklistCard.tsx`   | `items: ChecklistItem[]; title?: string; defaultChecked?: string[]`                                                                                                             | client |
+| `DestinationCard` | `molecules/travel/DestinationCard.tsx` | `name: string; country?: string; price?: number; rating?: number; imageLabel?: string; currency?: string`                                                                       | —      |
+| `FlightCard`      | `molecules/travel/FlightCard.tsx`      | `airline: string; from: string; to: string; departureTime: string; arrivalTime: string; price: number; duration?: string; stops?: number; flightNo?: string; currency?: string` | —      |
+| `HotelCard`       | `molecules/travel/HotelCard.tsx`       | `name: string; location: string; pricePerNight: number; rating?: number; stars?: number; imageLabel?: string; currency?: string`                                                | —      |
+| `ItineraryList`   | `molecules/travel/ItineraryList.tsx`   | `items: ItineraryItem[]`                                                                                                                                                        | —      |
+| `LoyaltyCard`     | `molecules/travel/LoyaltyCard.tsx`     | `tier: string; points: number; pointsToNext?: number; nextTier?: string; program?: string`                                                                                      | —      |
+| `MapPreview`      | `molecules/travel/MapPreview.tsx`      | `placeName: string; address?: string; label?: string`                                                                                                                           | —      |
+| `PriceBreakdown`  | `molecules/travel/PriceBreakdown.tsx`  | `items: PriceBreakdownItem[]; currency?: string; title?: string`                                                                                                                | —      |
+| `ReviewSummary`   | `molecules/travel/ReviewSummary.tsx`   | `average: number; count: number; breakdown?: ReviewBreakdown[]`                                                                                                                 | —      |
+| `SearchFilters`   | `molecules/travel/SearchFilters.tsx`   | `onSearch?: (query: string) => void; sortOptions?: string[]; defaultSort?: string; placeholder?: string`                                                                        | client |
+| `TransportOption` | `molecules/travel/TransportOption.tsx` | `type: TransportType; provider: string; duration: string; price: number; departure?: string; currency?: string`                                                                 | —      |
+| `TripSummary`     | `molecules/travel/TripSummary.tsx`     | `destination: string; duration: string; travelers?: number; budget?: number; startDate?: string; currency?: string`                                                             | —      |
+| `WeatherForecast` | `molecules/travel/WeatherForecast.tsx` | `days: ForecastDay[]`                                                                                                                                                           | —      |
 
 ---
 
