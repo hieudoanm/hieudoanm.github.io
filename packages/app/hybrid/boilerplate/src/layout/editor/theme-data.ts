@@ -61,10 +61,7 @@ export const THEME_GROUPS: ThemeGroup[] = [
   },
 ];
 
-export const ALL_THEMES = [
-  ...THEME_GROUPS.flatMap((g) => g.themes),
-  { value: 'nothing', label: 'Nothing' },
-];
+export const ALL_THEMES = [...THEME_GROUPS.flatMap((g) => g.themes)];
 
 export const PRESET_MAP: Record<string, ThemeConfig> = Object.fromEntries(
   PRESET_LIST.map((p) => [p.name.toLowerCase(), p])

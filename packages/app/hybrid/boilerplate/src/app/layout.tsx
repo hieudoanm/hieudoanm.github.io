@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import '@/styles/globals.css';
 import { SWProvider } from '@/providers/SWProvider';
 import { CookieConsentTemplate } from '@/components/templates/shared';
+import { ThemeEditorLayout } from '@/layout';
 import { FC, ReactNode } from 'react';
 
 export const metadata: Metadata = {
@@ -27,7 +28,9 @@ const RootLayout: FC<{ children: ReactNode }> = ({ children }) => (
       <link rel="apple-touch-icon" href="/icons/icon-192.png" />
     </head>
     <body className="bg-base-100 text-base-content h-screen overflow-y-auto font-mono">
-      <SWProvider>{children}</SWProvider>
+      <ThemeEditorLayout>
+        <SWProvider>{children}</SWProvider>
+      </ThemeEditorLayout>
       <CookieConsentTemplate />
     </body>
   </html>

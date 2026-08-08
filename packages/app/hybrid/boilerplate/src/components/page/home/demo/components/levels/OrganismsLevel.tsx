@@ -65,8 +65,8 @@ import {
   TestimonialSection,
   Toolbar,
   VideoSection,
-} from '../../../../../../organisms';
-import { Button } from '../../../../../../atoms';
+} from '../../../../../organisms';
+import { Button } from '../../../../../atoms';
 
 const OrganismSection: FC<{
   title: string;

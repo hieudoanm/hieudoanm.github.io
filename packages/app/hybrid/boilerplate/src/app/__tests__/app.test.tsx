@@ -4,6 +4,7 @@ import HomePage from '../page';
 import ErrorPage from '../error';
 import GlobalErrorPage from '../global-error';
 import NotFoundPage from '../not-found';
+import { ThemeEditorLayout } from '@/layout';
 
 describe('RootLayout', () => {
   it('renders html with lang and theme attributes', () => {
@@ -27,7 +28,11 @@ describe('RootLayout', () => {
 
 describe('HomePage', () => {
   it('renders the components template', () => {
-    render(<HomePage />);
+    render(
+      <ThemeEditorLayout>
+        <HomePage />
+      </ThemeEditorLayout>
+    );
     expect(screen.getByRole('button', { name: 'Components' })).toHaveClass(
       'tab-active'
     );

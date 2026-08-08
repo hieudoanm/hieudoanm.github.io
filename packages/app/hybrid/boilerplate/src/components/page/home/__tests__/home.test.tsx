@@ -1,6 +1,12 @@
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
-import { DEFAULT_CONFIG, buildThemeStyles, generateCSS } from '../editor';
-import { ThemeEditor } from '../editor/ThemeEditor';
+import {
+  fireEvent,
+  render,
+  screen,
+  waitFor,
+  within,
+} from '@testing-library/react';
+import { DEFAULT_CONFIG, buildThemeStyles, generateCSS } from '@/layout/editor';
+import { ThemeEditor } from '@/layout/editor/ThemeEditor';
 import { PreviewTabs } from '../demo/PreviewTabs';
 import { ComponentsDemo } from '../demo/components/ComponentsDemo';
 
@@ -71,15 +77,12 @@ describe('ThemeEditor', () => {
     return { onChange, onThemeSelect };
   };
 
-  it('renders editor tabs and color pane by default', () => {
+  it('renders editor tabs and theme pane by default', () => {
     setup();
     expect(screen.getByRole('button', { name: 'Presets' })).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: 'Colors' })).toHaveClass(
-      'tab-active'
+    expect(screen.getByRole('button', { name: 'Theme' })).toHaveClass(
+      'btn-active'
     );
-    expect(
-      screen.getByRole('button', { name: 'Settings' })
-    ).toBeInTheDocument();
     expect(screen.getByText('Theme name')).toBeInTheDocument();
     expect(screen.getByDisplayValue('custom')).toBeInTheDocument();
   });
@@ -114,18 +117,18 @@ describe('ThemeEditor', () => {
   it('switches to presets tab and selects a preset', () => {
     const { onChange, onThemeSelect } = setup();
     fireEvent.click(screen.getByRole('button', { name: 'Presets' }));
-    expect(screen.getByText('Light')).toBeInTheDocument();
-    expect(screen.getByText('Synthwave')).toBeInTheDocument();
-    fireEvent.click(screen.getByText('Light'));
+    const daisyuiSection = within(screen.getByTestId('daisyui-themes-section'));
+    const customSection = within(screen.getByTestId('custom-themes-section'));
+    expect(daisyuiSection.getByText('Light')).toBeInTheDocument();
+    expect(daisyuiSection.getByText('Synthwave')).toBeInTheDocument();
+    expect(customSection.getByText('Nothing')).toBeInTheDocument();
+    fireEvent.click(daisyuiSection.getByText('Light'));
     expect(onThemeSelect).toHaveBeenCalledWith('light');
-    expect(onChange).toHaveBeenCalledWith(
-      expect.objectContaining({ name: 'Light' })
-    );
+    expect(onChange).not.toHaveBeenCalled();
   });
 
-  it('switches to settings tab and renders shape controls', () => {
+  it('renders shape controls in the theme pane', () => {
     setup();
-    fireEvent.click(screen.getByRole('button', { name: 'Settings' }));
     expect(screen.getByText('Shape')).toBeInTheDocument();
     expect(screen.getByText('Box border radius')).toBeInTheDocument();
     expect(screen.getByText('Size & Border')).toBeInTheDocument();
@@ -135,7 +138,6 @@ describe('ThemeEditor', () => {
 
   it('updates shape radius from settings', () => {
     const { onChange } = setup();
-    fireEvent.click(screen.getByRole('button', { name: 'Settings' }));
     const radiusButtons = screen.getAllByRole('button', { name: '' });
     fireEvent.click(radiusButtons[1]);
     expect(onChange).toHaveBeenCalledWith({
@@ -146,7 +148,6 @@ describe('ThemeEditor', () => {
 
   it('toggles dark mode and noise', () => {
     const { onChange } = setup();
-    fireEvent.click(screen.getByRole('button', { name: 'Settings' }));
     const checkboxes = screen.getAllByRole('checkbox');
     fireEvent.click(checkboxes[0]);
     expect(onChange).toHaveBeenCalledWith({
@@ -159,7 +160,6 @@ describe('ThemeEditor', () => {
 
   it('updates size via slider', () => {
     const { onChange } = setup();
-    fireEvent.click(screen.getByRole('button', { name: 'Settings' }));
     const sliders = screen.getAllByRole('slider');
     fireEvent.change(sliders[0], { target: { value: '2' } });
     expect(onChange).toHaveBeenCalledWith({
@@ -175,7 +175,6 @@ describe('ThemeEditor', () => {
       configurable: true,
     });
     setup();
-    fireEvent.click(screen.getByRole('button', { name: 'Settings' }));
     const copyButton = screen.getByRole('button', { name: 'Copy CSS' });
     fireEvent.click(copyButton);
     await waitFor(() =>

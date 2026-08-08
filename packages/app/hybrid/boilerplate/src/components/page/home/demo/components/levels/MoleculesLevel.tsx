@@ -89,8 +89,8 @@ import {
   ToggleGroup,
   TransferList,
   TreeView,
-} from '../../../../../../molecules';
-import { Button, Progress, Switch } from '../../../../../../atoms';
+} from '../../../../../molecules';
+import { Button, Progress, Switch } from '../../../../../atoms';
 
 const MoleculeCard: FC<{
   title: string;

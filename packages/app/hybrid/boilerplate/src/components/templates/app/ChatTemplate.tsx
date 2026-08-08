@@ -500,9 +500,7 @@ export const ChatTemplate: FC<ChatTemplateProps> = ({
   );
 
   return (
-    <div
-      className="bg-base-100 text-base-content flex h-screen flex-col font-sans"
-      data-theme="luxury">
+    <div className="bg-base-100 text-base-content flex h-screen flex-col font-sans">
       <ChatHeader
         model={model}
         models={models}

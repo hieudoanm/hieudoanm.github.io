@@ -1,7 +1,7 @@
 'use client';
 
-import { ComponentsTemplate } from '@/components/templates/shared/ComponentsTemplate/index';
+import { Home } from '@/components/page/home';
 
-const HomePage = () => <ComponentsTemplate />;
+const HomePage = () => <Home />;
 
 export default HomePage;

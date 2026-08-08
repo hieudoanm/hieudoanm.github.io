@@ -2,9 +2,9 @@
 
 import { FC } from 'react';
 import { ThemeConfig } from './ThemeConfig';
-import { ColorsPane } from './colors/ColorsPane';
+import { ThemePresets } from './presets/ThemePresets';
 import { ThemeSwatches } from './presets/ThemeSwatches';
-import { SettingsPane } from './settings/SettingsPane';
+import { ThemePane } from './panes/ThemePane';
 
 export const ThemeEditorPane: FC<{
   tab: string;
@@ -32,26 +32,32 @@ export const ThemeEditorPane: FC<{
   if (tab === 'Presets') {
     return (
       <div className="flex-1 overflow-y-auto p-5">
-        <ThemeSwatches
-          selectedTheme={selectedTheme}
-          onThemeSelect={onThemeSelect}
-          onChange={onChange}
-        />
+        <div className="flex flex-col gap-4">
+          <section data-testid="daisyui-themes-section">
+            <h4 className="text-base-content/50 mb-2 font-mono text-xs uppercase">
+              DaisyUI Themes
+            </h4>
+            <ThemeSwatches
+              selectedTheme={selectedTheme}
+              onThemeSelect={onThemeSelect}
+              onChange={onChange}
+            />
+          </section>
+          <section data-testid="custom-themes-section">
+            <h4 className="text-base-content/50 mb-2 font-mono text-xs uppercase">
+              Custom Themes
+            </h4>
+            <ThemePresets onSelect={onChange} />
+          </section>
+        </div>
       </div>
     );
   }
-  if (tab === 'Colors') {
-    return (
-      <ColorsPane
-        config={config}
-        onUpdateColor={onUpdateColor}
-        onUpdateName={(name) => onUpdate({ name })}
-      />
-    );
-  }
   return (
-    <SettingsPane
+    <ThemePane
       config={config}
+      onUpdateColor={onUpdateColor}
+      onUpdateName={(name) => onUpdate({ name })}
       onUpdate={onUpdate}
       onUpdateShape={onUpdateShape}
       cssCopied={cssCopied}

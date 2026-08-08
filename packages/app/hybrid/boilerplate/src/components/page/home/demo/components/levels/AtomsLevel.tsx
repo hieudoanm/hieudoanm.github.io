@@ -74,7 +74,7 @@ import {
   Validator,
   VisuallyHidden,
   WindowMockup,
-} from '../../../../../../atoms';
+} from '../../../../../atoms';
 
 const AtomTile: FC<{ title: string; index: number; children: ReactNode }> = ({
   title,

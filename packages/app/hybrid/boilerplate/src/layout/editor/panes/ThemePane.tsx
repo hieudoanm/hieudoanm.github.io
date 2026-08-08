@@ -1,18 +1,70 @@
 import { FC } from 'react';
 import { ThemeConfig } from '../ThemeConfig';
 import { generateCSS } from '../css-utils';
+import { COLOR_GROUPS } from '../theme-data';
+import { ColorPicker } from './ColorPicker';
 import { RadiusSelector, SizeSlider } from './editor-controls';
 
-export const SettingsPane: FC<{
+export const ThemePane: FC<{
   config: ThemeConfig;
+  onUpdateColor: (key: string, value: string) => void;
+  onUpdateName: (name: string) => void;
   onUpdate: (partial: Partial<ThemeConfig>) => void;
   onUpdateShape: (key: string, value: string) => void;
   cssCopied: boolean;
   onCopyCSS: () => void;
-}> = ({ config, onUpdate, onUpdateShape, cssCopied, onCopyCSS }) => (
+}> = ({
+  config,
+  onUpdateColor,
+  onUpdateName,
+  onUpdate,
+  onUpdateShape,
+  cssCopied,
+  onCopyCSS,
+}) => (
   <div className="flex-1 overflow-y-auto">
-    <div className="border-base-300 border-b p-5">
-      <h3 className="text-base-content mb-4 text-xs font-medium tracking-wider uppercase">
+    <div className="border-base-300 border-b p-3">
+      <label className="text-base-content mb-1 block text-[11px] font-medium">
+        Theme name
+      </label>
+      <input
+        type="text"
+        value={config.name}
+        onChange={(e) => onUpdateName(e.target.value)}
+        className="input input-bordered input-sm w-full"
+      />
+    </div>
+    <div className="border-base-300 border-b p-3">
+      <h3 className="text-base-content mb-2 text-[11px] font-medium tracking-wider uppercase">
+        Colors
+      </h3>
+      <div className="grid grid-cols-4 gap-2">
+        {COLOR_GROUPS.map((group) => (
+          <div
+            key={group.label}
+            className={group.items.length > 2 ? 'col-span-4' : 'col-span-2'}>
+            <div className="text-base-content/50 mb-0.5 text-[9px] font-medium tracking-wider uppercase">
+              {group.label}
+            </div>
+            <div
+              className={`grid gap-1.5 ${
+                group.items.length > 2 ? 'grid-cols-4' : 'grid-cols-2'
+              }`}>
+              {group.items.map(({ key, label }) => (
+                <ColorPicker
+                  key={key}
+                  label={label}
+                  value={config.colors[key]}
+                  onChange={(v) => onUpdateColor(key, v)}
+                />
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+    <div className="border-base-300 border-b p-3">
+      <h3 className="text-base-content mb-2 text-[11px] font-medium tracking-wider uppercase">
         Shape
       </h3>
       <RadiusSelector
@@ -31,8 +83,8 @@ export const SettingsPane: FC<{
         onChange={(v) => onUpdateShape('radiusSelector', v)}
       />
     </div>
-    <div className="border-base-300 border-b p-5">
-      <h3 className="text-base-content mb-4 text-xs font-medium tracking-wider uppercase">
+    <div className="border-base-300 border-b p-3">
+      <h3 className="text-base-content mb-2 text-[11px] font-medium tracking-wider uppercase">
         Size &amp; Border
       </h3>
       <SizeSlider
@@ -54,8 +106,8 @@ export const SettingsPane: FC<{
         onChange={(v) => onUpdate({ border: v })}
       />
     </div>
-    <div className="border-base-300 border-b p-5">
-      <h3 className="text-base-content mb-4 text-xs font-medium tracking-wider uppercase">
+    <div className="border-base-300 border-b p-3">
+      <h3 className="text-base-content mb-2 text-[11px] font-medium tracking-wider uppercase">
         Options
       </h3>
       <label className="flex cursor-pointer items-center gap-3 text-sm">
@@ -77,8 +129,8 @@ export const SettingsPane: FC<{
         Noise texture
       </label>
     </div>
-    <div className="p-5">
-      <h3 className="text-base-content mb-3 text-xs font-medium tracking-wider uppercase">
+    <div className="p-3">
+      <h3 className="text-base-content mb-3 text-[11px] font-medium tracking-wider uppercase">
         CSS Output
       </h3>
       <pre className="bg-base-300 text-base-content/70 max-h-48 overflow-auto rounded-lg p-3 text-[10px] leading-relaxed">
@@ -92,4 +144,4 @@ export const SettingsPane: FC<{
     </div>
   </div>
 );
-SettingsPane.displayName = 'SettingsPane';
+ThemePane.displayName = 'ThemePane';
