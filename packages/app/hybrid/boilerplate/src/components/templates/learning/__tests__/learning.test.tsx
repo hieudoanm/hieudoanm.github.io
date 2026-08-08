@@ -7,14 +7,14 @@ import { LearningAnalyticsTemplate } from '../LearningAnalyticsTemplate';
 import { LessonPlayerTemplate } from '../LessonPlayerTemplate';
 import { MyCoursesTemplate } from '../MyCoursesTemplate';
 import { QuizzesTemplate } from '../QuizzesTemplate';
-import AchievementsPage from '@/app/(main)/learning/achievements/page';
-import AnalyticsPage from '@/app/(main)/learning/analytics/page';
-import CatalogPage from '@/app/(main)/learning/catalog/page';
-import CoursePage from '@/app/(main)/learning/course/page';
-import InstructorsPage from '@/app/(main)/learning/instructors/page';
-import LessonPage from '@/app/(main)/learning/lesson/page';
-import MyCoursesPage from '@/app/(main)/learning/my-courses/page';
-import QuizzesPage from '@/app/(main)/learning/quizzes/page';
+import AchievementsPage from '@/app/(templates)/learning/achievements/page';
+import AnalyticsPage from '@/app/(templates)/learning/analytics/page';
+import CatalogPage from '@/app/(templates)/learning/catalog/page';
+import CoursePage from '@/app/(templates)/learning/course/page';
+import InstructorsPage from '@/app/(templates)/learning/instructors/page';
+import LessonPage from '@/app/(templates)/learning/lesson/page';
+import MyCoursesPage from '@/app/(templates)/learning/my-courses/page';
+import QuizzesPage from '@/app/(templates)/learning/quizzes/page';
 
 describe('CourseCatalogTemplate', () => {
   it('renders the catalog with a count summary and course details', () => {

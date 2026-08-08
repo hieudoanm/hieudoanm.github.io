@@ -4,7 +4,7 @@
    `src/components/templates/<folder>/` folder (create the folder if the domain
    is new).
 2. Create the thin page wrapper at the route path, e.g.
-   `src/app/(main)/<route>/page.tsx`.
+   `src/app/(templates)/<folder>/<route>/page.tsx`.
 3. Add the route to `GROUPS` in
    `src/components/page/home/demo/pages/PagesDirectory.tsx` (a `PageEntry` with
    `label`, `href`, `icon`, `description`) and bump `TEMPLATE_COUNT`.

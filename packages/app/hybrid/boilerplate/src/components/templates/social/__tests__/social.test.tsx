@@ -4,11 +4,11 @@ import { FeedTemplate } from '../FeedTemplate';
 import { FollowersTemplate } from '../FollowersTemplate';
 import { GroupsTemplate } from '../GroupsTemplate';
 import { MessagesTemplate } from '../MessagesTemplate';
-import EventsPage from '@/app/(main)/social/events/page';
-import FeedPage from '@/app/(main)/social/feed/page';
-import FollowersPage from '@/app/(main)/social/followers/page';
-import GroupsPage from '@/app/(main)/social/groups/page';
-import MessagesPage from '@/app/(main)/social/messages/page';
+import EventsPage from '@/app/(templates)/social/events/page';
+import FeedPage from '@/app/(templates)/social/feed/page';
+import FollowersPage from '@/app/(templates)/social/followers/page';
+import GroupsPage from '@/app/(templates)/social/groups/page';
+import MessagesPage from '@/app/(templates)/social/messages/page';
 
 describe('FeedTemplate', () => {
   it('renders posts with authors, text and like counts', () => {

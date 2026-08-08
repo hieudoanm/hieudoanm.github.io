@@ -9,14 +9,14 @@ import {
   UploadTemplate,
   EmptyStatesTemplate,
 } from '../';
-import AccordionPage from '@/app/(main)/(app)/accordion/page';
-import AlertsPage from '@/app/(main)/(app)/alerts/page';
-import TabsPage from '@/app/(main)/(app)/tabs/page';
-import PaginationPage from '@/app/(main)/(app)/pagination/page';
-import TooltipsPage from '@/app/(main)/(app)/tooltips/page';
-import StepperPage from '@/app/(main)/(app)/stepper/page';
-import UploadPage from '@/app/(main)/(app)/upload/page';
-import EmptyStatesPage from '@/app/(main)/(app)/empty-states/page';
+import AccordionPage from '@/app/(templates)/(app)/accordion/page';
+import AlertsPage from '@/app/(templates)/(app)/alerts/page';
+import TabsPage from '@/app/(templates)/(app)/tabs/page';
+import PaginationPage from '@/app/(templates)/(app)/pagination/page';
+import TooltipsPage from '@/app/(templates)/(app)/tooltips/page';
+import StepperPage from '@/app/(templates)/(app)/stepper/page';
+import UploadPage from '@/app/(templates)/(app)/upload/page';
+import EmptyStatesPage from '@/app/(templates)/(app)/empty-states/page';
 
 describe('AccordionTemplate', () => {
   it('renders four accordion items in the closed state', () => {

@@ -2,9 +2,9 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import { BlogArchiveTemplate } from '../BlogArchiveTemplate';
 import { BlogAuthorTemplate } from '../BlogAuthorTemplate';
 import { BlogNewsletterTemplate } from '../BlogNewsletterTemplate';
-import ArchivePage from '@/app/(main)/blog/archive/page';
-import AuthorPage from '@/app/(main)/blog/author/page';
-import NewsletterPage from '@/app/(main)/blog/newsletter/page';
+import ArchivePage from '@/app/(templates)/blog/archive/page';
+import AuthorPage from '@/app/(templates)/blog/author/page';
+import NewsletterPage from '@/app/(templates)/blog/newsletter/page';
 
 describe('BlogArchiveTemplate', () => {
   it('renders featured post, grid, and month archive', () => {

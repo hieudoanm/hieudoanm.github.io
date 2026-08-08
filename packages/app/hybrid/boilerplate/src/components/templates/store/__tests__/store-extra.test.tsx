@@ -4,11 +4,11 @@ import { CompareTemplate } from '../CompareTemplate';
 import { OrderTrackingTemplate } from '../OrderTrackingTemplate';
 import { PaymentMethodsTemplate } from '../PaymentMethodsTemplate';
 import { WishlistTemplate } from '../WishlistTemplate';
-import WishlistPage from '@/app/(main)/store/wishlist/page';
-import ComparePage from '@/app/(main)/store/compare/page';
-import AddressesPage from '@/app/(main)/store/addresses/page';
-import PaymentMethodsPage from '@/app/(main)/store/payment-methods/page';
-import TrackingPage from '@/app/(main)/store/tracking/page';
+import WishlistPage from '@/app/(templates)/store/wishlist/page';
+import ComparePage from '@/app/(templates)/store/compare/page';
+import AddressesPage from '@/app/(templates)/store/addresses/page';
+import PaymentMethodsPage from '@/app/(templates)/store/payment-methods/page';
+import TrackingPage from '@/app/(templates)/store/tracking/page';
 
 describe('WishlistTemplate', () => {
   it('renders wishlist products and count', () => {

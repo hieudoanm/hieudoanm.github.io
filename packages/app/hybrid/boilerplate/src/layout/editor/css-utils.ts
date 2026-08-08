@@ -23,11 +23,14 @@ const CSS_VAR_MAP: Record<string, string> = {
   errorContent: '--color-error-content',
 };
 
+export const cssVarName = (key: string): string =>
+  CSS_VAR_MAP[key] || `--color-${key}`;
+
 export const generateCSS = (config: ThemeConfig): string => {
   const lines = [`@plugin 'daisyui/theme' {`, `  name: '${config.name}';`];
   lines.push(`  color-scheme: '${config.darkMode ? 'dark' : 'light'}';`);
   for (const [key, value] of Object.entries(config.colors)) {
-    lines.push(`  ${CSS_VAR_MAP[key] || `--color-${key}`}: ${value};`);
+    lines.push(`  ${cssVarName(key)}: ${value};`);
   }
   lines.push(`  --radius-box: ${config.shape.radiusBox};`);
   lines.push(`  --radius-field: ${config.shape.radiusField};`);
@@ -45,7 +48,7 @@ export const buildThemeStyles = (
 ): Record<string, string> => {
   const styles: Record<string, string> = {};
   for (const [key, value] of Object.entries(config.colors)) {
-    styles[CSS_VAR_MAP[key] || `--color-${key}`] = value;
+    styles[cssVarName(key)] = value;
   }
   styles['--radius-box'] = config.shape.radiusBox;
   styles['--radius-field'] = config.shape.radiusField;

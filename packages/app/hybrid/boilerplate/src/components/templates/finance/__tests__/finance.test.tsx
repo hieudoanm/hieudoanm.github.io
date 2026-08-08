@@ -7,14 +7,14 @@ import { StatementsTemplate } from '../StatementsTemplate';
 import { SubscriptionsTemplate } from '../SubscriptionsTemplate';
 import { TaxesTemplate } from '../TaxesTemplate';
 import { TransactionsTemplate } from '../TransactionsTemplate';
-import AccountsPage from '@/app/(main)/finance/accounts/page';
-import BudgetsPage from '@/app/(main)/finance/budgets/page';
-import InvoicesPage from '@/app/(main)/finance/invoices/page';
-import PayrollPage from '@/app/(main)/finance/payroll/page';
-import StatementsPage from '@/app/(main)/finance/statements/page';
-import SubscriptionsPage from '@/app/(main)/finance/subscriptions/page';
-import TaxesPage from '@/app/(main)/finance/taxes/page';
-import TransactionsPage from '@/app/(main)/finance/transactions/page';
+import AccountsPage from '@/app/(templates)/finance/accounts/page';
+import BudgetsPage from '@/app/(templates)/finance/budgets/page';
+import InvoicesPage from '@/app/(templates)/finance/invoices/page';
+import PayrollPage from '@/app/(templates)/finance/payroll/page';
+import StatementsPage from '@/app/(templates)/finance/statements/page';
+import SubscriptionsPage from '@/app/(templates)/finance/subscriptions/page';
+import TaxesPage from '@/app/(templates)/finance/taxes/page';
+import TransactionsPage from '@/app/(templates)/finance/transactions/page';
 
 describe('InvoicesTemplate', () => {
   it('renders invoices with amounts, statuses and the summary', () => {

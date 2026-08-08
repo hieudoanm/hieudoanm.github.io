@@ -7,14 +7,14 @@ import { FixturesTemplate } from '../FixturesTemplate';
 import { PlayerStatsTemplate } from '../PlayerStatsTemplate';
 import { SportsNewsTemplate } from '../SportsNewsTemplate';
 import { FavoriteTeamsTemplate } from '../FavoriteTeamsTemplate';
-import ScoresPage from '@/app/(main)/sports/scores/page';
-import MatchPage from '@/app/(main)/sports/match/page';
-import RosterPage from '@/app/(main)/sports/roster/page';
-import StandingsPage from '@/app/(main)/sports/standings/page';
-import FixturesPage from '@/app/(main)/sports/fixtures/page';
-import StatsPage from '@/app/(main)/sports/stats/page';
-import NewsPage from '@/app/(main)/sports/news/page';
-import FavoritesPage from '@/app/(main)/sports/favorites/page';
+import ScoresPage from '@/app/(templates)/sports/scores/page';
+import MatchPage from '@/app/(templates)/sports/match/page';
+import RosterPage from '@/app/(templates)/sports/roster/page';
+import StandingsPage from '@/app/(templates)/sports/standings/page';
+import FixturesPage from '@/app/(templates)/sports/fixtures/page';
+import StatsPage from '@/app/(templates)/sports/stats/page';
+import NewsPage from '@/app/(templates)/sports/news/page';
+import FavoritesPage from '@/app/(templates)/sports/favorites/page';
 
 describe('LiveScoresTemplate', () => {
   it('renders matches with scores and live badges', () => {

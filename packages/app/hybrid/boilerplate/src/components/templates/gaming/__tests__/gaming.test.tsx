@@ -7,14 +7,14 @@ import { LeaderboardsTemplate } from '../LeaderboardsTemplate';
 import { LiveMatchesTemplate } from '../LiveMatchesTemplate';
 import { PlayerProfilesTemplate } from '../PlayerProfilesTemplate';
 import { TournamentsTemplate } from '../TournamentsTemplate';
-import CatalogPage from '@/app/(main)/gaming/catalog/page';
-import ChallengesPage from '@/app/(main)/gaming/challenges/page';
-import GamePage from '@/app/(main)/gaming/game/page';
-import LeaderboardsPage from '@/app/(main)/gaming/leaderboards/page';
-import MatchesPage from '@/app/(main)/gaming/matches/page';
-import NewsPage from '@/app/(main)/gaming/news/page';
-import PlayersPage from '@/app/(main)/gaming/players/page';
-import TournamentsPage from '@/app/(main)/gaming/tournaments/page';
+import CatalogPage from '@/app/(templates)/gaming/catalog/page';
+import ChallengesPage from '@/app/(templates)/gaming/challenges/page';
+import GamePage from '@/app/(templates)/gaming/game/page';
+import LeaderboardsPage from '@/app/(templates)/gaming/leaderboards/page';
+import MatchesPage from '@/app/(templates)/gaming/matches/page';
+import NewsPage from '@/app/(templates)/gaming/news/page';
+import PlayersPage from '@/app/(templates)/gaming/players/page';
+import TournamentsPage from '@/app/(templates)/gaming/tournaments/page';
 
 describe('GameCatalogTemplate', () => {
   it('renders the catalog with a count summary and game details', () => {

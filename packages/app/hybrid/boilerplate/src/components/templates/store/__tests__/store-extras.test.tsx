@@ -4,11 +4,11 @@ import { DealsTemplate } from '../DealsTemplate';
 import { GiftCardsTemplate } from '../GiftCardsTemplate';
 import { ReviewsTemplate } from '../ReviewsTemplate';
 import { SupportTemplate } from '../SupportTemplate';
-import CategoriesPage from '@/app/(main)/store/categories/page';
-import DealsPage from '@/app/(main)/store/deals/page';
-import GiftCardsPage from '@/app/(main)/store/gift-cards/page';
-import ReviewsPage from '@/app/(main)/store/reviews/page';
-import SupportPage from '@/app/(main)/store/support/page';
+import CategoriesPage from '@/app/(templates)/store/categories/page';
+import DealsPage from '@/app/(templates)/store/deals/page';
+import GiftCardsPage from '@/app/(templates)/store/gift-cards/page';
+import ReviewsPage from '@/app/(templates)/store/reviews/page';
+import SupportPage from '@/app/(templates)/store/support/page';
 
 describe('DealsTemplate', () => {
   it('renders deals with discounts and expiry', () => {

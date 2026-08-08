@@ -7,14 +7,14 @@ import { ActivityTrackerTemplate } from '../ActivityTrackerTemplate';
 import { WaterIntakeTemplate } from '../WaterIntakeTemplate';
 import { GoalsTemplate } from '../GoalsTemplate';
 import { HealthProfileTemplate } from '../HealthProfileTemplate';
-import DashboardPage from '@/app/(main)/health/dashboard/page';
-import WorkoutPage from '@/app/(main)/health/workout/page';
-import NutritionPage from '@/app/(main)/health/nutrition/page';
-import SleepPage from '@/app/(main)/health/sleep/page';
-import ActivityPage from '@/app/(main)/health/activity/page';
-import WaterPage from '@/app/(main)/health/water/page';
-import GoalsPage from '@/app/(main)/health/goals/page';
-import ProfilePage from '@/app/(main)/health/profile/page';
+import DashboardPage from '@/app/(templates)/health/dashboard/page';
+import WorkoutPage from '@/app/(templates)/health/workout/page';
+import NutritionPage from '@/app/(templates)/health/nutrition/page';
+import SleepPage from '@/app/(templates)/health/sleep/page';
+import ActivityPage from '@/app/(templates)/health/activity/page';
+import WaterPage from '@/app/(templates)/health/water/page';
+import GoalsPage from '@/app/(templates)/health/goals/page';
+import ProfilePage from '@/app/(templates)/health/profile/page';
 
 describe('HealthDashboardTemplate', () => {
   it('renders summary stats and the weekly activity table', () => {

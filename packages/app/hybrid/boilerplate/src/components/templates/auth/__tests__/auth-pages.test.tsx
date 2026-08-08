@@ -3,10 +3,10 @@ import { ChangePasswordTemplate } from '../ChangePasswordTemplate';
 import { LockScreenTemplate } from '../LockScreenTemplate';
 import { TwoFactorTemplate } from '../TwoFactorTemplate';
 import { VerifyEmailTemplate } from '../VerifyEmailTemplate';
-import ChangePasswordPage from '@/app/(auth)/change-password/page';
-import LockScreenPage from '@/app/(auth)/lock-screen/page';
-import TwoFactorPage from '@/app/(auth)/two-factor/page';
-import VerifyEmailPage from '@/app/(auth)/verify-email/page';
+import ChangePasswordPage from '@/app/(templates)/(auth)/change-password/page';
+import LockScreenPage from '@/app/(templates)/(auth)/lock-screen/page';
+import TwoFactorPage from '@/app/(templates)/(auth)/two-factor/page';
+import VerifyEmailPage from '@/app/(templates)/(auth)/verify-email/page';
 
 describe('VerifyEmailTemplate', () => {
   it('renders the verification panel with the current email', () => {

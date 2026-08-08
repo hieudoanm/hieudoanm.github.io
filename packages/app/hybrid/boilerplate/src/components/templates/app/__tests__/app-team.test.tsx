@@ -5,12 +5,12 @@ import { HelpCenterTemplate } from '../HelpCenterTemplate';
 import { IntegrationsTemplate } from '../IntegrationsTemplate';
 import { MembersTemplate } from '../MembersTemplate';
 import { NotificationsTemplate } from '../NotificationsTemplate';
-import ActivityPage from '@/app/(main)/(app)/activity/page';
-import BillingPage from '@/app/(main)/(app)/billing/page';
-import HelpPage from '@/app/(main)/(app)/help/page';
-import IntegrationsPage from '@/app/(main)/(app)/integrations/page';
-import MembersPage from '@/app/(main)/(app)/members/page';
-import NotificationsPage from '@/app/(main)/(app)/notifications/page';
+import ActivityPage from '@/app/(templates)/(app)/activity/page';
+import BillingPage from '@/app/(templates)/(app)/billing/page';
+import HelpPage from '@/app/(templates)/(app)/help/page';
+import IntegrationsPage from '@/app/(templates)/(app)/integrations/page';
+import MembersPage from '@/app/(templates)/(app)/members/page';
+import NotificationsPage from '@/app/(templates)/(app)/notifications/page';
 
 describe('MembersTemplate', () => {
   it('renders the team member table', () => {

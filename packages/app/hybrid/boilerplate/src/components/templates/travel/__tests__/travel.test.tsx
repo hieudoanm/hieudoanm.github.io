@@ -7,14 +7,14 @@ import { PackingListTemplate } from '../PackingListTemplate';
 import { TravelGuidesTemplate } from '../TravelGuidesTemplate';
 import { TravelStoriesTemplate } from '../TravelStoriesTemplate';
 import { TripPlannerTemplate } from '../TripPlannerTemplate';
-import BookingsPage from '@/app/(main)/travel/bookings/page';
-import DestinationsPage from '@/app/(main)/travel/destinations/page';
-import GuidesPage from '@/app/(main)/travel/guides/page';
-import HotelPage from '@/app/(main)/travel/hotel/page';
-import PackingPage from '@/app/(main)/travel/packing/page';
-import PlannerPage from '@/app/(main)/travel/planner/page';
-import SearchPage from '@/app/(main)/travel/search/page';
-import StoriesPage from '@/app/(main)/travel/stories/page';
+import BookingsPage from '@/app/(templates)/travel/bookings/page';
+import DestinationsPage from '@/app/(templates)/travel/destinations/page';
+import GuidesPage from '@/app/(templates)/travel/guides/page';
+import HotelPage from '@/app/(templates)/travel/hotel/page';
+import PackingPage from '@/app/(templates)/travel/packing/page';
+import PlannerPage from '@/app/(templates)/travel/planner/page';
+import SearchPage from '@/app/(templates)/travel/search/page';
+import StoriesPage from '@/app/(templates)/travel/stories/page';
 
 describe('DestinationsTemplate', () => {
   it('renders destinations with a count summary', () => {

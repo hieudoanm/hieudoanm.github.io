@@ -7,14 +7,14 @@ import { EnvironmentsTemplate } from '../EnvironmentsTemplate';
 import { FeatureFlagsTemplate } from '../FeatureFlagsTemplate';
 import { LogsTemplate } from '../LogsTemplate';
 import { MonitorsTemplate } from '../MonitorsTemplate';
-import ApiKeysPage from '@/app/(main)/developer/api-keys/page';
-import BackupsPage from '@/app/(main)/developer/backups/page';
-import DeploymentsPage from '@/app/(main)/developer/deployments/page';
-import EndpointsPage from '@/app/(main)/developer/endpoints/page';
-import EnvironmentsPage from '@/app/(main)/developer/environments/page';
-import FeatureFlagsPage from '@/app/(main)/developer/feature-flags/page';
-import LogsPage from '@/app/(main)/developer/logs/page';
-import MonitorsPage from '@/app/(main)/developer/monitors/page';
+import ApiKeysPage from '@/app/(templates)/developer/api-keys/page';
+import BackupsPage from '@/app/(templates)/developer/backups/page';
+import DeploymentsPage from '@/app/(templates)/developer/deployments/page';
+import EndpointsPage from '@/app/(templates)/developer/endpoints/page';
+import EnvironmentsPage from '@/app/(templates)/developer/environments/page';
+import FeatureFlagsPage from '@/app/(templates)/developer/feature-flags/page';
+import LogsPage from '@/app/(templates)/developer/logs/page';
+import MonitorsPage from '@/app/(templates)/developer/monitors/page';
 
 describe('ApiKeysTemplate', () => {
   it('renders keys with the active summary and status badges', () => {

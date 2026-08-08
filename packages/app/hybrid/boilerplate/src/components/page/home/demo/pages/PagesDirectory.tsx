@@ -23,6 +23,7 @@ import {
   FiClock,
   FiClock as FiClock2,
   FiDollarSign,
+  FiDroplet,
   FiEdit2,
   FiEdit3,
   FiFileText,
@@ -84,6 +85,12 @@ const GROUPS: { title: string; pages: PageEntry[] }[] = [
         href: '/',
         icon: <FiGrid />,
         description: 'Current page — theme editor & site directory',
+      },
+      {
+        label: 'Colors',
+        href: '/colors',
+        icon: <FiDroplet />,
+        description: 'Color converter, schemes & contrast checker',
       },
       {
         label: 'Dashboard',
@@ -1753,7 +1760,7 @@ const PAGE_COUNT = GROUPS.reduce(
   (total, group) => total + group.pages.length,
   0
 );
-const TEMPLATE_COUNT = 261;
+const TEMPLATE_COUNT = 262;
 
 const PagesDirectory: FC = () => (
   <div className="mx-auto max-w-5xl p-5">

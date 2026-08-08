@@ -2,9 +2,9 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import { BlogCategoriesTemplate } from '../BlogCategoriesTemplate';
 import { BlogTagsTemplate } from '../BlogTagsTemplate';
 import { BlogSearchTemplate } from '../BlogSearchTemplate';
-import CategoriesPage from '@/app/(main)/blog/categories/page';
-import TagsPage from '@/app/(main)/blog/tags/page';
-import SearchPage from '@/app/(main)/blog/search/page';
+import CategoriesPage from '@/app/(templates)/blog/categories/page';
+import TagsPage from '@/app/(templates)/blog/tags/page';
+import SearchPage from '@/app/(templates)/blog/search/page';
 
 describe('BlogCategoriesTemplate', () => {
   it('renders all categories with counts', () => {

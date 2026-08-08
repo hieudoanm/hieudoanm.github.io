@@ -12,35 +12,36 @@ beyond 261 are the system pages — `NotFoundTemplate`, `ErrorTemplate`,
 
 ### Route structure
 
-| Segment group                  | Base folder                       | Purpose                   |
-| ------------------------------ | --------------------------------- | ------------------------- |
-| `/`                            | `src/app/(main)/`                 | Main/global pages         |
-| `/dashboard` … `/whiteboard`   | `src/app/(app)/`                  | App Workspace + Data & UI |
-| `/sign-in` … `/security`       | `src/app/(auth)/`                 | Auth                      |
-| `/landing` … `/changelog`      | `src/app/(marketing)/` + `(info)` | Marketing                 |
-| `/store` … `/store/gift-cards` | `src/app/store/`                  | Commerce storefront       |
-| `/blog` … `/blog/search`       | `src/app/blog/`                   | Blog                      |
-| `/admin/*`                     | `src/app/(main)/admin/`           | Commerce Admin            |
-| `/finance/*`                   | `src/app/(main)/finance/`         | Finance                   |
-| `/developer/*`                 | `src/app/(main)/developer/`       | Developer                 |
-| `/social/*`                    | `src/app/(main)/social/`          | Social                    |
-| `/media/*`                     | `src/app/(main)/media/`           | Media                     |
-| `/support/*`                   | `src/app/(main)/support/`         | Customer Support          |
-| `/mail/*`                      | `src/app/(main)/mail/`            | Email                     |
-| `/hr/*`                        | `src/app/(main)/hr/`              | HR                        |
-| `/crm/*`                       | `src/app/(main)/crm/`             | Sales & CRM               |
-| `/learning/*`                  | `src/app/(main)/learning/`        | Learning                  |
-| `/news/*`                      | `src/app/(main)/news/`            | News & Magazine           |
-| `/music/*`                     | `src/app/(main)/music/`           | Music                     |
-| `/streaming/*`                 | `src/app/(main)/streaming/`       | Video Streaming           |
-| `/gaming/*`                    | `src/app/(main)/gaming/`          | Gaming                    |
-| `/sports/*`                    | `src/app/(main)/sports/`          | Sports                    |
-| `/travel/*`                    | `src/app/(main)/travel/`          | Travel                    |
-| `/food/*`                      | `src/app/(main)/food/`            | Food & Dining             |
-| `/health/*`                    | `src/app/(main)/health/`          | Health & Fitness          |
-| `/real-estate/*`               | `src/app/(main)/real-estate/`     | Real Estate               |
-| `/iot/*`                       | `src/app/(main)/iot/`             | Smart Home / IoT          |
-| `/portfolio/*`                 | `src/app/(main)/portfolio/`       | Portfolio                 |
+| Segment group                  | Base folder                        | Purpose                   |
+| ------------------------------ | ---------------------------------- | ------------------------- |
+| `/`                            | `src/app/(app)/`                   | Home + Color tools        |
+| `/dashboard` … `/whiteboard`   | `src/app/(templates)/(app)/`       | App Workspace + Data & UI |
+| `/sign-in` … `/security`       | `src/app/(templates)/(auth)/`      | Auth                      |
+| `/landing` … `/changelog`      | `src/app/(templates)/(landing)/`   | Marketing                 |
+| `/about` … `/search`           | `src/app/(templates)/(shared)/`    | Info / shared pages       |
+| `/store` … `/store/gift-cards` | `src/app/(templates)/store/`       | Commerce storefront       |
+| `/blog` … `/blog/search`       | `src/app/(templates)/blog/`        | Blog                      |
+| `/admin/*`                     | `src/app/(templates)/admin/`       | Commerce Admin            |
+| `/finance/*`                   | `src/app/(templates)/finance/`     | Finance                   |
+| `/developer/*`                 | `src/app/(templates)/developer/`   | Developer                 |
+| `/social/*`                    | `src/app/(templates)/social/`      | Social                    |
+| `/media/*`                     | `src/app/(templates)/media/`       | Media                     |
+| `/support/*`                   | `src/app/(templates)/support/`     | Customer Support          |
+| `/mail/*`                      | `src/app/(templates)/mail/`        | Email                     |
+| `/hr/*`                        | `src/app/(templates)/hr/`          | HR                        |
+| `/crm/*`                       | `src/app/(templates)/crm/`         | Sales & CRM               |
+| `/learning/*`                  | `src/app/(templates)/learning/`    | Learning                  |
+| `/news/*`                      | `src/app/(templates)/news/`        | News & Magazine           |
+| `/music/*`                     | `src/app/(templates)/music/`       | Music                     |
+| `/streaming/*`                 | `src/app/(templates)/streaming/`   | Video Streaming           |
+| `/gaming/*`                    | `src/app/(templates)/gaming/`      | Gaming                    |
+| `/sports/*`                    | `src/app/(templates)/sports/`      | Sports                    |
+| `/travel/*`                    | `src/app/(templates)/travel/`      | Travel                    |
+| `/food/*`                      | `src/app/(templates)/food/`        | Food & Dining             |
+| `/health/*`                    | `src/app/(templates)/health/`      | Health & Fitness          |
+| `/real-estate/*`               | `src/app/(templates)/real-estate/` | Real Estate               |
+| `/iot/*`                       | `src/app/(templates)/iot/`         | Smart Home / IoT          |
+| `/portfolio/*`                 | `src/app/(templates)/portfolio/`   | Portfolio                 |
 
 ### Main
 

@@ -7,14 +7,14 @@ import { DraftsTemplate } from '../DraftsTemplate';
 import { LabelsTemplate } from '../LabelsTemplate';
 import { MailSearchTemplate } from '../MailSearchTemplate';
 import { SpamTemplate } from '../SpamTemplate';
-import InboxPage from '@/app/(main)/mail/inbox/page';
-import ComposePage from '@/app/(main)/mail/compose/page';
-import ThreadPage from '@/app/(main)/mail/thread/page';
-import SentPage from '@/app/(main)/mail/sent/page';
-import DraftsPage from '@/app/(main)/mail/drafts/page';
-import LabelsPage from '@/app/(main)/mail/labels/page';
-import MailSearchPage from '@/app/(main)/mail/search/page';
-import SpamPage from '@/app/(main)/mail/spam/page';
+import InboxPage from '@/app/(templates)/mail/inbox/page';
+import ComposePage from '@/app/(templates)/mail/compose/page';
+import ThreadPage from '@/app/(templates)/mail/thread/page';
+import SentPage from '@/app/(templates)/mail/sent/page';
+import DraftsPage from '@/app/(templates)/mail/drafts/page';
+import LabelsPage from '@/app/(templates)/mail/labels/page';
+import MailSearchPage from '@/app/(templates)/mail/search/page';
+import SpamPage from '@/app/(templates)/mail/spam/page';
 
 describe('InboxTemplate', () => {
   it('renders all messages with the summary', () => {

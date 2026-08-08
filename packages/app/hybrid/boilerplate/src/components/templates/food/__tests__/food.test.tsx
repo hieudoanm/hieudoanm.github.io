@@ -7,14 +7,14 @@ import { RecipesTemplate } from '../RecipesTemplate';
 import { RecipeDetailTemplate } from '../RecipeDetailTemplate';
 import { FoodDeliveryTemplate } from '../FoodDeliveryTemplate';
 import { WineListTemplate } from '../WineListTemplate';
-import RestaurantListPage from '@/app/(main)/food/restaurants/page';
-import RestaurantDetailPage from '@/app/(main)/food/restaurant/page';
-import MenuPage from '@/app/(main)/food/menu/page';
-import ReservationsPage from '@/app/(main)/food/reservations/page';
-import RecipesPage from '@/app/(main)/food/recipes/page';
-import RecipeDetailPage from '@/app/(main)/food/recipe/page';
-import FoodDeliveryPage from '@/app/(main)/food/delivery/page';
-import WineListPage from '@/app/(main)/food/wine/page';
+import RestaurantListPage from '@/app/(templates)/food/restaurants/page';
+import RestaurantDetailPage from '@/app/(templates)/food/restaurant/page';
+import MenuPage from '@/app/(templates)/food/menu/page';
+import ReservationsPage from '@/app/(templates)/food/reservations/page';
+import RecipesPage from '@/app/(templates)/food/recipes/page';
+import RecipeDetailPage from '@/app/(templates)/food/recipe/page';
+import FoodDeliveryPage from '@/app/(templates)/food/delivery/page';
+import WineListPage from '@/app/(templates)/food/wine/page';
 
 describe('RestaurantListTemplate', () => {
   it('renders restaurant cards with ratings and delivery times', () => {

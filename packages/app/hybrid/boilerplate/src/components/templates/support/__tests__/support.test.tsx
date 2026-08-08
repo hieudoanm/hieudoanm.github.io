@@ -7,14 +7,14 @@ import { FaqTemplate } from '../FaqTemplate';
 import { FeedbackTemplate } from '../FeedbackTemplate';
 import { AnnouncementsTemplate } from '../AnnouncementsTemplate';
 import { ServiceStatusTemplate } from '../ServiceStatusTemplate';
-import TicketsPage from '@/app/(main)/support/tickets/page';
-import TicketDetailPage from '@/app/(main)/support/ticket-detail/page';
-import KnowledgeBasePage from '@/app/(main)/support/knowledge-base/page';
-import LiveChatPage from '@/app/(main)/support/live-chat/page';
-import FaqPage from '@/app/(main)/support/faqs/page';
-import FeedbackPage from '@/app/(main)/support/feedback/page';
-import AnnouncementsPage from '@/app/(main)/support/announcements/page';
-import ServiceStatusPage from '@/app/(main)/support/status/page';
+import TicketsPage from '@/app/(templates)/support/tickets/page';
+import TicketDetailPage from '@/app/(templates)/support/ticket-detail/page';
+import KnowledgeBasePage from '@/app/(templates)/support/knowledge-base/page';
+import LiveChatPage from '@/app/(templates)/support/live-chat/page';
+import FaqPage from '@/app/(templates)/support/faqs/page';
+import FeedbackPage from '@/app/(templates)/support/feedback/page';
+import AnnouncementsPage from '@/app/(templates)/support/announcements/page';
+import ServiceStatusPage from '@/app/(templates)/support/status/page';
 
 describe('TicketsTemplate', () => {
   it('renders tickets with priority and status badges', () => {

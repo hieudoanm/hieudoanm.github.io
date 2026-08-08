@@ -7,14 +7,14 @@ import { EnergyUsageTemplate } from '../EnergyUsageTemplate';
 import { SecurityTemplate } from '../SecurityTemplate';
 import { SensorDataTemplate } from '../SensorDataTemplate';
 import { SmartHomeSettingsTemplate } from '../SmartHomeSettingsTemplate';
-import DeviceDashboardPage from '@/app/(main)/iot/dashboard/page';
-import DeviceDetailPage from '@/app/(main)/iot/device/page';
-import ScenesPage from '@/app/(main)/iot/scenes/page';
-import AutomationsPage from '@/app/(main)/iot/automations/page';
-import EnergyUsagePage from '@/app/(main)/iot/energy/page';
-import SecurityPage from '@/app/(main)/iot/security/page';
-import SensorDataPage from '@/app/(main)/iot/sensors/page';
-import SmartHomeSettingsPage from '@/app/(main)/iot/settings/page';
+import DeviceDashboardPage from '@/app/(templates)/iot/dashboard/page';
+import DeviceDetailPage from '@/app/(templates)/iot/device/page';
+import ScenesPage from '@/app/(templates)/iot/scenes/page';
+import AutomationsPage from '@/app/(templates)/iot/automations/page';
+import EnergyUsagePage from '@/app/(templates)/iot/energy/page';
+import SecurityPage from '@/app/(templates)/iot/security/page';
+import SensorDataPage from '@/app/(templates)/iot/sensors/page';
+import SmartHomeSettingsPage from '@/app/(templates)/iot/settings/page';
 
 describe('DeviceDashboardTemplate', () => {
   it('renders all device cards with status badges', () => {

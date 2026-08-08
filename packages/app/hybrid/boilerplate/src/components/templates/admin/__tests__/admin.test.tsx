@@ -7,14 +7,14 @@ import { ProductsTemplate } from '../ProductsTemplate';
 import { PromotionsTemplate } from '../PromotionsTemplate';
 import { RefundsTemplate } from '../RefundsTemplate';
 import { ShipmentsTemplate } from '../ShipmentsTemplate';
-import CouponsPage from '@/app/(main)/admin/coupons/page';
-import CustomersPage from '@/app/(main)/admin/customers/page';
-import InventoryPage from '@/app/(main)/admin/inventory/page';
-import OrdersPage from '@/app/(main)/admin/orders/page';
-import ProductsPage from '@/app/(main)/admin/products/page';
-import PromotionsPage from '@/app/(main)/admin/promotions/page';
-import RefundsPage from '@/app/(main)/admin/refunds/page';
-import ShipmentsPage from '@/app/(main)/admin/shipments/page';
+import CouponsPage from '@/app/(templates)/admin/coupons/page';
+import CustomersPage from '@/app/(templates)/admin/customers/page';
+import InventoryPage from '@/app/(templates)/admin/inventory/page';
+import OrdersPage from '@/app/(templates)/admin/orders/page';
+import ProductsPage from '@/app/(templates)/admin/products/page';
+import PromotionsPage from '@/app/(templates)/admin/promotions/page';
+import RefundsPage from '@/app/(templates)/admin/refunds/page';
+import ShipmentsPage from '@/app/(templates)/admin/shipments/page';
 
 describe('ProductsTemplate', () => {
   it('renders products with status badges and the active summary', () => {

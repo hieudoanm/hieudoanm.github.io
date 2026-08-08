@@ -12,19 +12,19 @@ import { SprintsTemplate } from '../SprintsTemplate';
 import { TimesheetsTemplate } from '../TimesheetsTemplate';
 import { WebhooksTemplate } from '../WebhooksTemplate';
 import { WhiteboardTemplate } from '../WhiteboardTemplate';
-import ContactsPage from '@/app/(main)/(app)/contacts/page';
-import ExpensesPage from '@/app/(main)/(app)/expenses/page';
-import GoalsPage from '@/app/(main)/(app)/goals/page';
-import ImportPage from '@/app/(main)/(app)/import/page';
-import MeetingsPage from '@/app/(main)/(app)/meetings/page';
-import PermissionsPage from '@/app/(main)/(app)/permissions/page';
-import ReportsPage from '@/app/(main)/(app)/reports/page';
-import RoadmapPage from '@/app/(main)/(app)/roadmap/page';
-import ShortcutsPage from '@/app/(main)/(app)/shortcuts/page';
-import SprintsPage from '@/app/(main)/(app)/sprints/page';
-import TimesheetsPage from '@/app/(main)/(app)/timesheets/page';
-import WebhooksPage from '@/app/(main)/(app)/webhooks/page';
-import WhiteboardPage from '@/app/(main)/(app)/whiteboard/page';
+import ContactsPage from '@/app/(templates)/(app)/contacts/page';
+import ExpensesPage from '@/app/(templates)/(app)/expenses/page';
+import GoalsPage from '@/app/(templates)/(app)/goals/page';
+import ImportPage from '@/app/(templates)/(app)/import/page';
+import MeetingsPage from '@/app/(templates)/(app)/meetings/page';
+import PermissionsPage from '@/app/(templates)/(app)/permissions/page';
+import ReportsPage from '@/app/(templates)/(app)/reports/page';
+import RoadmapPage from '@/app/(templates)/(app)/roadmap/page';
+import ShortcutsPage from '@/app/(templates)/(app)/shortcuts/page';
+import SprintsPage from '@/app/(templates)/(app)/sprints/page';
+import TimesheetsPage from '@/app/(templates)/(app)/timesheets/page';
+import WebhooksPage from '@/app/(templates)/(app)/webhooks/page';
+import WhiteboardPage from '@/app/(templates)/(app)/whiteboard/page';
 
 describe('ExpensesTemplate', () => {
   it('renders expenses with amounts, statuses and the summary line', () => {

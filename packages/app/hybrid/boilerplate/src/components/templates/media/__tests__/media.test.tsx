@@ -2,9 +2,9 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import { AlbumsTemplate } from '../AlbumsTemplate';
 import { MediaLibraryTemplate } from '../MediaLibraryTemplate';
 import { VideoPlayerTemplate } from '../VideoPlayerTemplate';
-import AlbumsPage from '@/app/(main)/media/albums/page';
-import MediaLibraryPage from '@/app/(main)/media/library/page';
-import VideoPlayerPage from '@/app/(main)/media/video/page';
+import AlbumsPage from '@/app/(templates)/media/albums/page';
+import MediaLibraryPage from '@/app/(templates)/media/library/page';
+import VideoPlayerPage from '@/app/(templates)/media/video/page';
 
 describe('MediaLibraryTemplate', () => {
   it('renders assets with type, size and the summary', () => {

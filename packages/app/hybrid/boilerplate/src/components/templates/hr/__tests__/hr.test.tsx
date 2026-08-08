@@ -7,14 +7,14 @@ import { HiringPipelineTemplate } from '../HiringPipelineTemplate';
 import { PoliciesTemplate } from '../PoliciesTemplate';
 import { OrgChartTemplate } from '../OrgChartTemplate';
 import { ShiftScheduleTemplate } from '../ShiftScheduleTemplate';
-import PeopleDirectoryPage from '@/app/(main)/hr/people/page';
-import TimeOffPage from '@/app/(main)/hr/time-off/page';
-import PerformanceReviewsPage from '@/app/(main)/hr/reviews/page';
-import BenefitsPage from '@/app/(main)/hr/benefits/page';
-import HiringPipelinePage from '@/app/(main)/hr/hiring/page';
-import PoliciesPage from '@/app/(main)/hr/policies/page';
-import OrgChartPage from '@/app/(main)/hr/org-chart/page';
-import ShiftSchedulePage from '@/app/(main)/hr/shifts/page';
+import PeopleDirectoryPage from '@/app/(templates)/hr/people/page';
+import TimeOffPage from '@/app/(templates)/hr/time-off/page';
+import PerformanceReviewsPage from '@/app/(templates)/hr/reviews/page';
+import BenefitsPage from '@/app/(templates)/hr/benefits/page';
+import HiringPipelinePage from '@/app/(templates)/hr/hiring/page';
+import PoliciesPage from '@/app/(templates)/hr/policies/page';
+import OrgChartPage from '@/app/(templates)/hr/org-chart/page';
+import ShiftSchedulePage from '@/app/(templates)/hr/shifts/page';
 
 describe('PeopleDirectoryTemplate', () => {
   it('renders all people and the summary', () => {

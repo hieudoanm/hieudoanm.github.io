@@ -7,14 +7,14 @@ import { SavedPropertiesTemplate } from '../SavedPropertiesTemplate';
 import { MortgageCalculatorTemplate } from '../MortgageCalculatorTemplate';
 import { OpenHousesTemplate } from '../OpenHousesTemplate';
 import { AgentProfileTemplate } from '../AgentProfileTemplate';
-import ListingsPage from '@/app/(main)/real-estate/listings/page';
-import PropertyPage from '@/app/(main)/real-estate/property/page';
-import SearchPage from '@/app/(main)/real-estate/search/page';
-import MapPage from '@/app/(main)/real-estate/map/page';
-import SavedPage from '@/app/(main)/real-estate/saved/page';
-import MortgagePage from '@/app/(main)/real-estate/mortgage/page';
-import OpenHousesPage from '@/app/(main)/real-estate/open-houses/page';
-import AgentsPage from '@/app/(main)/real-estate/agents/page';
+import ListingsPage from '@/app/(templates)/real-estate/listings/page';
+import PropertyPage from '@/app/(templates)/real-estate/property/page';
+import SearchPage from '@/app/(templates)/real-estate/search/page';
+import MapPage from '@/app/(templates)/real-estate/map/page';
+import SavedPage from '@/app/(templates)/real-estate/saved/page';
+import MortgagePage from '@/app/(templates)/real-estate/mortgage/page';
+import OpenHousesPage from '@/app/(templates)/real-estate/open-houses/page';
+import AgentsPage from '@/app/(templates)/real-estate/agents/page';
 
 describe('PropertyListingsTemplate', () => {
   it('renders property cards with status badges', () => {

@@ -7,14 +7,14 @@ import { StreamingHomeTemplate } from '../StreamingHomeTemplate';
 import { StreamingSearchTemplate } from '../StreamingSearchTemplate';
 import { TvSeriesTemplate } from '../TvSeriesTemplate';
 import { WatchHistoryTemplate } from '../WatchHistoryTemplate';
-import ContinueWatchingPage from '@/app/(main)/streaming/continue-watching/page';
-import HistoryPage from '@/app/(main)/streaming/history/page';
-import HomePage from '@/app/(main)/streaming/home/page';
-import LivePage from '@/app/(main)/streaming/live/page';
-import MoviePage from '@/app/(main)/streaming/movie/page';
-import MyListPage from '@/app/(main)/streaming/my-list/page';
-import SearchPage from '@/app/(main)/streaming/search/page';
-import SeriesPage from '@/app/(main)/streaming/series/page';
+import ContinueWatchingPage from '@/app/(templates)/streaming/continue-watching/page';
+import HistoryPage from '@/app/(templates)/streaming/history/page';
+import HomePage from '@/app/(templates)/streaming/home/page';
+import LivePage from '@/app/(templates)/streaming/live/page';
+import MoviePage from '@/app/(templates)/streaming/movie/page';
+import MyListPage from '@/app/(templates)/streaming/my-list/page';
+import SearchPage from '@/app/(templates)/streaming/search/page';
+import SeriesPage from '@/app/(templates)/streaming/series/page';
 
 describe('StreamingHomeTemplate', () => {
   it('renders featured titles with type, year and rating', () => {

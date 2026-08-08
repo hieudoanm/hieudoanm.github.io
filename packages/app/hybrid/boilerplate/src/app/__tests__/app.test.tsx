@@ -1,6 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import RootLayout from '../layout';
-import HomePage from '../page';
+import HomePage from '../(app)/page';
 import ErrorPage from '../error';
 import GlobalErrorPage from '../global-error';
 import NotFoundPage from '../not-found';
@@ -36,9 +36,10 @@ describe('HomePage', () => {
     expect(screen.getByRole('button', { name: 'Components' })).toHaveClass(
       'tab-active'
     );
-    expect(
-      screen.getByRole('button', { name: 'Color Palette' })
-    ).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Color Palette' })).toHaveAttribute(
+      'href',
+      '/colors'
+    );
     expect(screen.getByRole('button', { name: 'Pages' })).toBeInTheDocument();
   });
 });

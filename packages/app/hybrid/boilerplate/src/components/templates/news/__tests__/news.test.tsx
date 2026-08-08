@@ -7,14 +7,14 @@ import { NewsletterSignupTemplate } from '../NewsletterSignupTemplate';
 import { PressReleasesTemplate } from '../PressReleasesTemplate';
 import { MagazineGridTemplate } from '../MagazineGridTemplate';
 import { OpinionTemplate } from '../OpinionTemplate';
-import BreakingNewsPage from '@/app/(main)/news/breaking/page';
-import ArticlePage from '@/app/(main)/news/article/page';
-import EditorialPage from '@/app/(main)/news/editorial/page';
-import NewsCategoriesPage from '@/app/(main)/news/categories/page';
-import NewsletterSignupPage from '@/app/(main)/news/newsletter/page';
-import PressReleasesPage from '@/app/(main)/news/press/page';
-import MagazineGridPage from '@/app/(main)/news/magazine/page';
-import OpinionPage from '@/app/(main)/news/opinion/page';
+import BreakingNewsPage from '@/app/(templates)/news/breaking/page';
+import ArticlePage from '@/app/(templates)/news/article/page';
+import EditorialPage from '@/app/(templates)/news/editorial/page';
+import NewsCategoriesPage from '@/app/(templates)/news/categories/page';
+import NewsletterSignupPage from '@/app/(templates)/news/newsletter/page';
+import PressReleasesPage from '@/app/(templates)/news/press/page';
+import MagazineGridPage from '@/app/(templates)/news/magazine/page';
+import OpinionPage from '@/app/(templates)/news/opinion/page';
 
 describe('BreakingNewsTemplate', () => {
   it('renders stories with sources, times, and badges', () => {

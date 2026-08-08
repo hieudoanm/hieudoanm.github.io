@@ -78,7 +78,7 @@ Workspace/productivity templates (route group `(app)`).
 
 ### auth
 
-Authentication flows (route group `(auth)`).
+Authentication flows (route group `(templates)/(auth)`).
 
 | Template                   | Props                                                                               | Description                                  |
 | -------------------------- | ----------------------------------------------------------------------------------- | -------------------------------------------- |

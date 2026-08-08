@@ -7,14 +7,14 @@ import { MusicHomeTemplate } from '../MusicHomeTemplate';
 import { MusicSearchTemplate } from '../MusicSearchTemplate';
 import { NowPlayingTemplate } from '../NowPlayingTemplate';
 import { PlaylistTemplate } from '../PlaylistTemplate';
-import AlbumDetailPage from '@/app/(main)/music/album/page';
-import ArtistsPage from '@/app/(main)/music/artists/page';
-import ChartsPage from '@/app/(main)/music/charts/page';
-import MusicHomePage from '@/app/(main)/music/home/page';
-import LyricsPage from '@/app/(main)/music/lyrics/page';
-import NowPlayingPage from '@/app/(main)/music/now-playing/page';
-import PlaylistPage from '@/app/(main)/music/playlist/page';
-import MusicSearchPage from '@/app/(main)/music/search/page';
+import AlbumDetailPage from '@/app/(templates)/music/album/page';
+import ArtistsPage from '@/app/(templates)/music/artists/page';
+import ChartsPage from '@/app/(templates)/music/charts/page';
+import MusicHomePage from '@/app/(templates)/music/home/page';
+import LyricsPage from '@/app/(templates)/music/lyrics/page';
+import NowPlayingPage from '@/app/(templates)/music/now-playing/page';
+import PlaylistPage from '@/app/(templates)/music/playlist/page';
+import MusicSearchPage from '@/app/(templates)/music/search/page';
 
 describe('MusicHomeTemplate', () => {
   it('renders the home feed with new releases', () => {

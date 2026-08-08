@@ -187,21 +187,22 @@ describe('ThemeEditor', () => {
 });
 
 describe('PreviewTabs', () => {
-  it('shows color palette tab', () => {
+  it('links the color palette tab to the colors page', () => {
     render(
-      <PreviewTabs colors={DEFAULT_CONFIG.colors}>
+      <PreviewTabs>
         <span>demo content</span>
       </PreviewTabs>
     );
     expect(screen.getByText('demo content')).toBeInTheDocument();
-    fireEvent.click(screen.getByRole('button', { name: 'Color Palette' }));
-    expect(screen.getByText('Primary Content')).toBeInTheDocument();
-    expect(screen.getAllByText('#ff0030').length).toBeGreaterThan(0);
+    expect(screen.getByRole('link', { name: 'Color Palette' })).toHaveAttribute(
+      'href',
+      '/colors'
+    );
   });
 
   it('shows pages directory tab', () => {
     render(
-      <PreviewTabs colors={DEFAULT_CONFIG.colors}>
+      <PreviewTabs>
         <span>demo content</span>
       </PreviewTabs>
     );
@@ -214,7 +215,7 @@ describe('PreviewTabs', () => {
 
   it('switches back to components tab', () => {
     render(
-      <PreviewTabs colors={DEFAULT_CONFIG.colors}>
+      <PreviewTabs>
         <span>demo content</span>
       </PreviewTabs>
     );

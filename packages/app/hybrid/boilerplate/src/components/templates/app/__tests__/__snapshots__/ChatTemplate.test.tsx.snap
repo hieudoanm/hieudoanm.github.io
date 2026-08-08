@@ -4,7 +4,6 @@ exports[`ChatTemplate to match snapshot 1`] = `
 <div>
   <div
     class="bg-base-100 text-base-content flex h-screen flex-col font-sans"
-    data-theme="luxury"
   >
     <div
       class="border-base-300 bg-base-100/85 flex min-h-[60px] items-center justify-between border-b px-6 backdrop-blur-xl"

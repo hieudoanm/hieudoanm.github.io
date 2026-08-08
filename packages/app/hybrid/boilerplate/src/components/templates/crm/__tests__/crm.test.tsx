@@ -7,14 +7,14 @@ import { CrmContactsTemplate } from '../CrmContactsTemplate';
 import { CampaignsTemplate } from '../CampaignsTemplate';
 import { SalesReportsTemplate } from '../SalesReportsTemplate';
 import { QuoteBuilderTemplate } from '../QuoteBuilderTemplate';
-import PipelinePage from '@/app/(main)/crm/pipeline/page';
-import LeadsPage from '@/app/(main)/crm/leads/page';
-import DealsPage from '@/app/(main)/crm/deals/page';
-import AccountsPage from '@/app/(main)/crm/accounts/page';
-import CrmContactsPage from '@/app/(main)/crm/contacts/page';
-import CampaignsPage from '@/app/(main)/crm/campaigns/page';
-import SalesReportsPage from '@/app/(main)/crm/reports/page';
-import QuoteBuilderPage from '@/app/(main)/crm/quote-builder/page';
+import PipelinePage from '@/app/(templates)/crm/pipeline/page';
+import LeadsPage from '@/app/(templates)/crm/leads/page';
+import DealsPage from '@/app/(templates)/crm/deals/page';
+import AccountsPage from '@/app/(templates)/crm/accounts/page';
+import CrmContactsPage from '@/app/(templates)/crm/contacts/page';
+import CampaignsPage from '@/app/(templates)/crm/campaigns/page';
+import SalesReportsPage from '@/app/(templates)/crm/reports/page';
+import QuoteBuilderPage from '@/app/(templates)/crm/quote-builder/page';
 
 describe('PipelineTemplate', () => {
   it('renders deals grouped by stage and the summary', () => {

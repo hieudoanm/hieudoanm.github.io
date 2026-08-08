@@ -4,11 +4,11 @@ import { FormsShowcaseTemplate } from '../FormsShowcaseTemplate';
 import { ChartsGalleryTemplate } from '../ChartsGalleryTemplate';
 import { ModalsTemplate } from '../ModalsTemplate';
 import { ForbiddenTemplate } from '../ForbiddenTemplate';
-import DataTablePage from '@/app/(main)/(app)/data-table/page';
-import FormsShowcasePage from '@/app/(main)/(app)/forms/page';
-import ChartsGalleryPage from '@/app/(main)/(app)/charts/page';
-import ModalsPage from '@/app/(main)/(app)/modals/page';
-import ForbiddenPage from '@/app/(main)/(info)/forbidden/page';
+import DataTablePage from '@/app/(templates)/(app)/data-table/page';
+import FormsShowcasePage from '@/app/(templates)/(app)/forms/page';
+import ChartsGalleryPage from '@/app/(templates)/(app)/charts/page';
+import ModalsPage from '@/app/(templates)/(app)/modals/page';
+import ForbiddenPage from '@/app/(templates)/(shared)/forbidden/page';
 
 describe('DataTableTemplate', () => {
   it('renders the table with default sorting and pagination', () => {

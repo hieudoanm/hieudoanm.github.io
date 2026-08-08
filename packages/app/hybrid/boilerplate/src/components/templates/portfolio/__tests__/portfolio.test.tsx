@@ -8,15 +8,15 @@ import { PortfolioOverviewTemplate } from '../PortfolioOverviewTemplate';
 import { PortfolioSettingsTemplate } from '../PortfolioSettingsTemplate';
 import { TransactionsTemplate } from '../TransactionsTemplate';
 import { WatchlistTemplate } from '../WatchlistTemplate';
-import AlertsPage from '@/app/(main)/portfolio/alerts/page';
-import AllocationPage from '@/app/(main)/portfolio/allocation/page';
-import DividendIncomePage from '@/app/(main)/portfolio/dividends/page';
-import HoldingsPage from '@/app/(main)/portfolio/holdings/page';
-import PerformancePage from '@/app/(main)/portfolio/performance/page';
-import PortfolioOverviewPage from '@/app/(main)/portfolio/overview/page';
-import PortfolioSettingsPage from '@/app/(main)/portfolio/settings/page';
-import TransactionsPage from '@/app/(main)/portfolio/transactions/page';
-import WatchlistPage from '@/app/(main)/portfolio/watchlist/page';
+import AlertsPage from '@/app/(templates)/portfolio/alerts/page';
+import AllocationPage from '@/app/(templates)/portfolio/allocation/page';
+import DividendIncomePage from '@/app/(templates)/portfolio/dividends/page';
+import HoldingsPage from '@/app/(templates)/portfolio/holdings/page';
+import PerformancePage from '@/app/(templates)/portfolio/performance/page';
+import PortfolioOverviewPage from '@/app/(templates)/portfolio/overview/page';
+import PortfolioSettingsPage from '@/app/(templates)/portfolio/settings/page';
+import TransactionsPage from '@/app/(templates)/portfolio/transactions/page';
+import WatchlistPage from '@/app/(templates)/portfolio/watchlist/page';
 
 describe('PortfolioOverviewTemplate', () => {
   it('renders summary stat cards and a holdings preview', () => {
