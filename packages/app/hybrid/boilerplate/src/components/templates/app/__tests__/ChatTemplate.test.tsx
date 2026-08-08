@@ -5,7 +5,6 @@ const mockModels = [
   { company: 'Test', label: 'Model A', value: 'model-a' },
   { company: 'Test', label: 'Model B', value: 'model-b' },
 ];
-
 const mockConversations = [
   {
     id: 'conv-1',
