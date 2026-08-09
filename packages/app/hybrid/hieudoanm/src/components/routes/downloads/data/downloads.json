@@ -184,6 +184,18 @@
         ]
       },
       {
+        "label": "Resume",
+        "description": "Resume Editor",
+        "icon": "PiFilePdf",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-resume-latest",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-resume-latest"
+          }
+        ]
+      },
+      {
         "label": "Projects",
         "description": "Projects Manager",
         "icon": "PiFolder",

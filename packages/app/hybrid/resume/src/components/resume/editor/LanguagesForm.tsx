@@ -3,6 +3,7 @@ import type { LanguageItem } from '../../../types/resume';
 import { createId } from '../../../utils/id';
 import { TextField } from './Field';
 import { AddButton, ListItemCard } from './ListItemCard';
+import { SortableList } from './SortableList';
 
 interface LanguagesFormProps {
   value: LanguageItem[];
@@ -27,26 +28,32 @@ export const LanguagesForm: FC<LanguagesFormProps> = ({ value, onChange }) => {
   const addItem = () => onChange([...value, emptyItem()]);
 
   return (
-    <div className="space-y-2">
-      {value.map((item) => (
-        <ListItemCard
-          key={item.id}
-          title={item.name || 'New language'}
-          onRemove={() => removeItem(item.id)}>
-          <TextField
-            label="Language"
-            value={item.name}
-            onChange={(next) => updateItem(item.id, { name: next })}
-          />
-          <TextField
-            label="Proficiency"
-            value={item.proficiency}
-            placeholder="Native, Fluent, Professional"
-            onChange={(next) => updateItem(item.id, { proficiency: next })}
-          />
-        </ListItemCard>
-      ))}
-      <AddButton onClick={addItem} label="Add language" />
+    <div>
+      <SortableList
+        items={value}
+        getKey={(item) => item.id}
+        onReorder={onChange}
+        renderItem={(item) => (
+          <ListItemCard
+            title={item.name || 'New language'}
+            onRemove={() => removeItem(item.id)}>
+            <TextField
+              label="Language"
+              value={item.name}
+              onChange={(next) => updateItem(item.id, { name: next })}
+            />
+            <TextField
+              label="Proficiency"
+              value={item.proficiency}
+              placeholder="Native, Fluent, Professional"
+              onChange={(next) => updateItem(item.id, { proficiency: next })}
+            />
+          </ListItemCard>
+        )}
+      />
+      <div className="mt-2">
+        <AddButton onClick={addItem} label="Add language" />
+      </div>
     </div>
   );
 };

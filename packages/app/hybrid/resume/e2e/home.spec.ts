@@ -19,7 +19,18 @@ test.describe('Home Page', () => {
   test('shows 32 templates in the picker', async ({ page }) => {
     await page.goto('/');
     await page.getByRole('tab', { name: /templates/i }).click();
-    await expect(page.locator('button[aria-pressed]')).toHaveCount(32);
+    await expect(
+      page.getByLabel('Template results').locator('button')
+    ).toHaveCount(32);
+  });
+
+  test('filters templates by search', async ({ page }) => {
+    await page.goto('/');
+    await page.getByRole('tab', { name: /templates/i }).click();
+    await page.getByLabel('Search templates').fill('serif');
+    await expect(page.getByLabel('Template results')).toContainText('Classic');
+    await expect(page.getByLabel('Template results')).toContainText('Elegant');
+    await expect(page.getByLabel('Template results')).not.toContainText('Nova');
   });
 
   test('shows all template names', async ({ page }) => {

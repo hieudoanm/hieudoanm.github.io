@@ -1,21 +1,24 @@
 'use client';
 
 import Link from 'next/link';
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { LuInfo, LuRedo, LuRotateCcw, LuTag, LuUndo } from 'react-icons/lu';
+import { ThemeToggle } from '../components/app/ThemeToggle';
 import { DataPanel } from '../components/resume/data/DataPanel';
 import { EditorPanel } from '../components/resume/editor/EditorPanel';
 import { ProfileSwitcher } from '../components/resume/preview/ProfileSwitcher';
 import { PreviewPanel } from '../components/resume/preview/PreviewPanel';
 import { TemplatePicker } from '../components/resume/preview/TemplatePicker';
 import { RESUME_TEMPLATES } from '../components/resume/templates';
-import { DEFAULT_PAPER_ID } from '../data/paper';
+import { getPaperSize, DEFAULT_PAPER_ID } from '../data/paper';
 import { seedResumeData } from '../data/seed';
 import { useHistory } from '../hooks/useHistory';
+import { useKeyboardShortcuts } from '../hooks/useKeyboardShortcuts';
 import { useLocalStorage } from '../hooks/useLocalStorage';
 import { useResumeProfiles } from '../hooks/useResumeProfiles';
 import { DEFAULT_RESUME_OPTIONS } from '../types/resume';
 import type { ResumeData, ResumeOptions } from '../types/resume';
+import { downloadResumeFile } from '../utils/export';
 
 type SidebarTab = 'editor' | 'templates' | 'data';
 
@@ -56,6 +59,13 @@ const HomePage = () => {
   const mountedRef = useRef(false);
   const syncingRef = useRef(false);
   const lastProfileIdRef = useRef(activeProfile.id);
+  const paper = getPaperSize(paperId);
+
+  const saveResume = useCallback(() => {
+    downloadResumeFile(data, paper);
+  }, [data, paper]);
+
+  useKeyboardShortcuts({ onUndo: undo, onRedo: redo, onSave: saveResume });
 
   useEffect(() => {
     if (activeProfile.id === lastProfileIdRef.current) return;
@@ -112,11 +122,12 @@ const HomePage = () => {
           </button>
           <button
             type="button"
-            className="btn btn-outline btn-sm"
+            className="btn btn-ghost btn-sm"
             onClick={resetData}>
             <LuRotateCcw />
             Reset
           </button>
+          <ThemeToggle />
           <Link href="/version/" className="btn btn-ghost btn-sm">
             <LuTag />
             Version

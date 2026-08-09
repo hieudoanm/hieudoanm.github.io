@@ -292,12 +292,6 @@
         "toolId": "regex"
       },
       {
-        "label": "Resume",
-        "description": "Resume Builder",
-        "icon": "PiFileText",
-        "toolId": "resume"
-      },
-      {
         "label": "Slides",
         "description": "Pitch Deck",
         "icon": "PiPresentation",

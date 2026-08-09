@@ -3,8 +3,9 @@
 import { Suspense } from 'react';
 import { useRouter } from 'next/navigation';
 import { JSONSchema } from '@hieudoanm.github.io/components/routes/apps/editors/JSONSchema';
+import { NextPage } from 'next';
 
-const ToolEditorsJsonSchema = () => {
+const ToolEditorsJsonSchema: NextPage = () => {
   const router = useRouter();
   return (
     <Suspense

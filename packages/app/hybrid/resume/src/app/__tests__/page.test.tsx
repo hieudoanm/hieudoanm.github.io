@@ -1,4 +1,10 @@
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import {
+  fireEvent,
+  render,
+  screen,
+  waitFor,
+  within,
+} from '@testing-library/react';
 import HomePage from '../page';
 
 jest.mock('next/link', () => {
@@ -63,11 +69,15 @@ describe('HomePage', () => {
   it('shows the template picker on the templates tab', () => {
     render(<HomePage />);
     fireEvent.click(screen.getByRole('tab', { name: /templates/i }));
-    const templateButtons = screen
-      .getAllByRole('button')
-      .filter((button) => button.getAttribute('aria-pressed') !== null);
+    const templateButtons = within(
+      screen.getByLabelText('Template results')
+    ).getAllByRole('button');
     expect(templateButtons).toHaveLength(32);
-    expect(screen.getAllByRole('button', { pressed: true })).toHaveLength(1);
+    expect(
+      within(screen.getByLabelText('Template results')).getAllByRole('button', {
+        pressed: true,
+      })
+    ).toHaveLength(1);
   });
 
   it('selects a template from the templates tab', () => {

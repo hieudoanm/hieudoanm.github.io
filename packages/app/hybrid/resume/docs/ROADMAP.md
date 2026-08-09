@@ -13,15 +13,20 @@
 | Editing     | Undo / redo history (debounced, persisted)                                                                           |
 | Editing     | Multiple named profiles with quick switching                                                                         |
 | Editing     | Example resumes to start from                                                                                        |
+| Editing     | Drag-and-drop reordering of list items (native DnD, no library)                                                      |
 | Templates   | 32 offline templates with live thumbnails                                                                            |
+| Templates   | Template search with category filter chips                                                                           |
 | Preview     | Real paper sizes: A3 · A4 · A5 · A6 · B5                                                                             |
 | Preview     | Text density (compact / normal / spacious) and accent color                                                          |
 | Preview     | Fit-to-width zoom, manual zoom, overflow warning                                                                     |
+| Preview     | Word count and one-page-fit assistant                                                                                |
 | Export      | Download as HTML · Print / PDF (`window.print()`)                                                                    |
 | Export      | Download as JSON / YAML · copy JSON / Text / HTML to clipboard                                                       |
 | Import      | Load a JSON or YAML file to replace the resume                                                                       |
-| Persistence | `localStorage` (`resume.data`, `resume.template`, `resume.paper`)                                                    |
+| Persistence | `localStorage` (`resume.data`, `resume.template`, `resume.paper`, `resume.theme`)                                    |
 | Platforms   | Static PWA with service worker + Tauri desktop shell                                                                 |
+| UX          | Dark mode (DaisyUI `night` theme, persisted)                                                                         |
+| UX          | Keyboard shortcuts: `Cmd/Ctrl+Z` undo, `Cmd/Ctrl+Shift+Z` / `Cmd+Y` redo, `Cmd/Ctrl+S` download                      |
 | UX          | Responsive layout, accessible controls                                                                               |
 
 ## Future features
@@ -33,7 +38,6 @@ Status: 🔵 planned · 🟡 in progress · ⚪ idea. All items are **offline-on
 | Status | Feature                                                               | Notes                                                 |
 | ------ | --------------------------------------------------------------------- | ----------------------------------------------------- |
 | 🔵     | Custom sections — add, remove, rename, and reorder top-level sections | Extends `ResumeData`; needs schema + template updates |
-| 🔵     | Drag-and-drop reordering of list items (experience, skills, …)        | No library; hand-rolled pointer handling              |
 | 🔵     | Auto-backup / version snapshots                                       | Rotating snapshots in `localStorage` or IndexedDB     |
 | 🟡     | Photo or avatar upload                                                | Stored as base64/Blob in IndexedDB, printed inline    |
 | ⚪     | JSON Resume (open standard) import & export                           | Pure parsing/mapping, no network                      |
@@ -51,19 +55,16 @@ Status: 🔵 planned · 🟡 in progress · ⚪ idea. All items are **offline-on
 
 ### Quality & ATS
 
-| Status | Feature                               | Notes                                              |
-| ------ | ------------------------------------- | -------------------------------------------------- |
-| ⚪     | ATS / keyword check                   | Local text analysis, no external scoring service   |
-| ⚪     | Word count and one-page-fit assistant | Suggest density / trimming based on sheet overflow |
+| Status | Feature             | Notes                                            |
+| ------ | ------------------- | ------------------------------------------------ |
+| ⚪     | ATS / keyword check | Local text analysis, no external scoring service |
 
 ### App UX
 
-| Status | Feature                                          | Notes                                       |
-| ------ | ------------------------------------------------ | ------------------------------------------- |
-| 🔵     | Dark mode for the app UI                         | DaisyUI theme toggle, persisted locally     |
-| 🔵     | Template search & filter; grow the gallery to 50 | All templates bundled, no remote downloads  |
-| ⚪     | Localized UI (en, …)                             | Bundled translation files                   |
-| ⚪     | Keyboard shortcuts                               | e.g. `Cmd/Ctrl+S` export, `Cmd/Ctrl+Z` undo |
+| Status | Feature                          | Notes                                      |
+| ------ | -------------------------------- | ------------------------------------------ |
+| 🔵     | Grow the gallery to 64 templates | All templates bundled, no remote downloads |
+| ⚪     | Localized UI (en, …)             | Bundled translation files                  |
 
 ### Platform
 

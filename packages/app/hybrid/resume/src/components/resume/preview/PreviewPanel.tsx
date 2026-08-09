@@ -5,8 +5,8 @@ import { getPaperSize, mmToPx } from '../../../data/paper';
 import { useOverflowDetect } from '../../../hooks/useOverflowDetect';
 import { usePreviewScale } from '../../../hooks/usePreviewScale';
 import type { ResumeData, ResumeOptions } from '../../../types/resume';
-import { downloadResumeHtml, printResume } from '../../../utils/export';
-import { dateStamp, resumeFileName } from '../../../utils/io';
+import { countResumeWords } from '../../../utils/count';
+import { downloadResumeFile, printResume } from '../../../utils/export';
 import { PreviewStage } from './PreviewStage';
 import { PreviewToolbar } from './PreviewToolbar';
 import { ResumeSheet } from './ResumeSheet';
@@ -33,16 +33,10 @@ export const PreviewPanel: FC<PreviewPanelProps> = ({
   const pxHeight = mmToPx(paper.heightMm);
   const { containerRef, scale, zoom, setZoom } = usePreviewScale(pxWidth);
   const overflows = useOverflowDetect([data, templateId, paperId, options]);
+  const words = countResumeWords(data);
 
   const handleDownloadHtml = () => {
-    const sheet = document.getElementById('resume-sheet');
-    if (!sheet) return;
-    downloadResumeHtml(
-      sheet,
-      `${resumeFileName(data)}-${dateStamp()}-resume.html`,
-      paper.widthMm,
-      paper.heightMm
-    );
+    downloadResumeFile(data, paper);
   };
 
   const handleDensityChange = (density: ResumeOptions['density']) => {
@@ -62,6 +56,7 @@ export const PreviewPanel: FC<PreviewPanelProps> = ({
         scale={scale}
         zoom={zoom}
         overflows={overflows}
+        words={words}
         onPaperChange={onPaperChange}
         onDensityChange={handleDensityChange}
         onAccentChange={handleAccentChange}

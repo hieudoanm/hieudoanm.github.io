@@ -3,6 +3,7 @@ import type { ProjectItem } from '../../../types/resume';
 import { createId } from '../../../utils/id';
 import { TextAreaField, TextField } from './Field';
 import { AddButton, ListItemCard } from './ListItemCard';
+import { SortableList } from './SortableList';
 
 interface ProjectFormProps {
   value: ProjectItem[];
@@ -29,36 +30,42 @@ export const ProjectForm: FC<ProjectFormProps> = ({ value, onChange }) => {
   const addItem = () => onChange([...value, emptyItem()]);
 
   return (
-    <div className="space-y-2">
-      {value.map((item) => (
-        <ListItemCard
-          key={item.id}
-          title={item.name || 'New project'}
-          onRemove={() => removeItem(item.id)}>
-          <TextField
-            label="Name"
-            value={item.name}
-            onChange={(next) => updateItem(item.id, { name: next })}
-          />
-          <TextField
-            label="Link"
-            value={item.link}
-            onChange={(next) => updateItem(item.id, { link: next })}
-          />
-          <TextField
-            label="Technologies"
-            value={item.technologies}
-            onChange={(next) => updateItem(item.id, { technologies: next })}
-          />
-          <TextAreaField
-            label="Description"
-            value={item.description}
-            rows={2}
-            onChange={(next) => updateItem(item.id, { description: next })}
-          />
-        </ListItemCard>
-      ))}
-      <AddButton onClick={addItem} label="Add project" />
+    <div>
+      <SortableList
+        items={value}
+        getKey={(item) => item.id}
+        onReorder={onChange}
+        renderItem={(item) => (
+          <ListItemCard
+            title={item.name || 'New project'}
+            onRemove={() => removeItem(item.id)}>
+            <TextField
+              label="Name"
+              value={item.name}
+              onChange={(next) => updateItem(item.id, { name: next })}
+            />
+            <TextField
+              label="Link"
+              value={item.link}
+              onChange={(next) => updateItem(item.id, { link: next })}
+            />
+            <TextField
+              label="Technologies"
+              value={item.technologies}
+              onChange={(next) => updateItem(item.id, { technologies: next })}
+            />
+            <TextAreaField
+              label="Description"
+              value={item.description}
+              rows={2}
+              onChange={(next) => updateItem(item.id, { description: next })}
+            />
+          </ListItemCard>
+        )}
+      />
+      <div className="mt-2">
+        <AddButton onClick={addItem} label="Add project" />
+      </div>
     </div>
   );
 };
