@@ -1,5 +1,6 @@
 import { seedResumeData } from '../../data/seed';
 import {
+  collectResumeDataProblems,
   copyToClipboard,
   dateStamp,
   downloadTextFile,
@@ -48,10 +49,47 @@ describe('io utils', () => {
     expect(() => parseResumeData('hello: world')).toThrow('not a valid resume');
   });
 
+  it('lists each problem when the resume is invalid', () => {
+    const invalid = {
+      personal: { fullName: 42 },
+      summary: null,
+      experience: 'nope',
+      education: [],
+      projects: [],
+      skills: [],
+      certifications: [],
+      languages: [],
+      interests: 'Open source',
+    };
+    expect(() => parseResumeData(JSON.stringify(invalid))).toThrow(
+      'The file is not a valid resume:\n- personal.fullName must be a string.\n- summary must be a string.\n- experience must be an array.'
+    );
+  });
+
+  it('reports the exact field that is not a string in an array item', () => {
+    const invalid = {
+      ...seedResumeData,
+      experience: [{ ...seedResumeData.experience[0], company: 123 }],
+    };
+    expect(collectResumeDataProblems(invalid)).toEqual([
+      'experience[0].company must be a string.',
+    ]);
+  });
+
+  it('reports a missing top-level object', () => {
+    expect(collectResumeDataProblems('not an object')).toEqual([
+      'The file must contain a top-level object.',
+    ]);
+  });
+
+  it('reports no problems for well-formed resume data', () => {
+    expect(collectResumeDataProblems(seedResumeData)).toEqual([]);
+  });
+
   it('throws when required arrays are missing', () => {
     const { experience: _experience, ...rest } = seedResumeData;
     expect(() => parseResumeData(JSON.stringify(rest))).toThrow(
-      'not a valid resume'
+      'experience must be an array.'
     );
   });
 

@@ -68,7 +68,15 @@ export const BulletList: FC<BulletListProps> = ({
   bulletStyle,
   itemStyle,
 }) => (
-  <ul style={{ margin: 0, padding: 0, listStyle: 'none', ...style }}>
+  <ul
+    style={{
+      margin: 0,
+      padding: 0,
+      listStyle: 'none',
+      fontSize: 10.5,
+      lineHeight: 1.5,
+      ...style,
+    }}>
     {splitLines(text).map((line) => (
       <li key={line} style={{ display: 'flex', gap: 6, ...itemStyle }}>
         <span style={{ flexShrink: 0, ...bulletStyle }}>•</span>

@@ -3,16 +3,6 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 const LIMIT = 20;
 const DEBOUNCE_MS = 500;
 
-const loadJson = <T>(key: string): T | null => {
-  if (typeof window === 'undefined') return null;
-  try {
-    const stored = window.localStorage.getItem(key);
-    return stored ? (JSON.parse(stored) as T) : null;
-  } catch {
-    return null;
-  }
-};
-
 interface HistoryResult<T> {
   present: T;
   set: (value: T | ((previous: T) => T)) => void;
@@ -24,22 +14,44 @@ interface HistoryResult<T> {
 }
 
 export const useHistory = <T>(initial: T, key: string): HistoryResult<T> => {
-  const [present, setPresent] = useState<T>(() => loadJson<T>(key) ?? initial);
-  const historyRef = useRef<T[]>(loadJson<T[]>(`${key}.history`) ?? []);
+  const [present, setPresent] = useState<T>(initial);
+  const historyRef = useRef<T[]>([]);
   const futureRef = useRef<T[]>([]);
   const pendingRef = useRef<T | null>(null);
   const timerRef = useRef<number | null>(null);
   const previousRef = useRef<T>(present);
   const suppressRef = useRef(false);
+  const [hydrated, setHydrated] = useState(false);
   const [, setVersion] = useState(0);
 
   useEffect(() => {
+    try {
+      const stored = window.localStorage.getItem(key);
+      if (stored) {
+        const parsed = JSON.parse(stored) as T;
+        setPresent(parsed);
+        previousRef.current = parsed;
+      }
+    } catch {
+      // ignore invalid stored value
+    }
+    try {
+      const history = window.localStorage.getItem(`${key}.history`);
+      historyRef.current = history ? (JSON.parse(history) as T[]) : [];
+    } catch {
+      historyRef.current = [];
+    }
+    setHydrated(true);
+  }, [key]);
+
+  useEffect(() => {
+    if (!hydrated) return;
     try {
       window.localStorage.setItem(key, JSON.stringify(present));
     } catch {
       // storage may be unavailable (private mode)
     }
-  }, [key, present]);
+  }, [key, present, hydrated]);
 
   const persistStacks = useCallback(() => {
     try {
@@ -77,6 +89,7 @@ export const useHistory = <T>(initial: T, key: string): HistoryResult<T> => {
   }, [bump, persistStacks]);
 
   useEffect(() => {
+    if (!hydrated) return;
     const previous = previousRef.current;
     previousRef.current = present;
     if (previous === present) return;
@@ -91,7 +104,7 @@ export const useHistory = <T>(initial: T, key: string): HistoryResult<T> => {
     return () => {
       if (timerRef.current !== null) window.clearTimeout(timerRef.current);
     };
-  }, [present, commitPending]);
+  }, [present, commitPending, hydrated]);
 
   const set = useCallback((next: T | ((previous: T) => T)) => {
     setPresent((current) =>

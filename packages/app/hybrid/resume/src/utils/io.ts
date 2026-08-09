@@ -8,12 +8,6 @@ const isRecord = (value: unknown): value is Record<string, unknown> =>
 
 const isString = (value: unknown): value is string => typeof value === 'string';
 
-const isStringRecord = (value: unknown): value is Record<string, string> =>
-  isRecord(value) && Object.values(value).every(isString);
-
-const isRecordArray = (value: unknown): value is Record<string, string>[] =>
-  Array.isArray(value) && value.every(isStringRecord);
-
 const REQUIRED_ARRAY_KEYS = [
   'experience',
   'education',
@@ -23,12 +17,33 @@ const REQUIRED_ARRAY_KEYS = [
   'languages',
 ] as const;
 
-export const isResumeData = (value: unknown): value is ResumeData => {
-  if (!isRecord(value)) return false;
-  if (!isStringRecord(value.personal)) return false;
-  if (!isString(value.summary) || !isString(value.interests)) return false;
-  return REQUIRED_ARRAY_KEYS.every((key) => isRecordArray(value[key]));
+const collectStringRecordProblems = (key: string, value: unknown): string[] => {
+  if (!isRecord(value)) return [`${key} must be an object.`];
+  return Object.entries(value)
+    .filter(([, fieldValue]) => !isString(fieldValue))
+    .map(([field]) => `${key}.${field} must be a string.`);
 };
+
+const collectArrayProblems = (key: string, value: unknown): string[] => {
+  if (!Array.isArray(value)) return [`${key} must be an array.`];
+  return value.flatMap((item, index) =>
+    collectStringRecordProblems(`${key}[${index}]`, item)
+  );
+};
+
+export const collectResumeDataProblems = (value: unknown): string[] => {
+  if (!isRecord(value)) return ['The file must contain a top-level object.'];
+  const problems = collectStringRecordProblems('personal', value.personal);
+  if (!isString(value.summary)) problems.push('summary must be a string.');
+  if (!isString(value.interests)) problems.push('interests must be a string.');
+  for (const key of REQUIRED_ARRAY_KEYS) {
+    problems.push(...collectArrayProblems(key, value[key]));
+  }
+  return problems;
+};
+
+export const isResumeData = (value: unknown): value is ResumeData =>
+  collectResumeDataProblems(value).length === 0;
 
 export const serializeResumeJson = (data: ResumeData): string =>
   JSON.stringify(data, null, 2);
@@ -56,7 +71,12 @@ export const parseResumeData = (input: string): ResumeData => {
     throw new Error('The file is not valid JSON or YAML.');
   }
   if (!isResumeData(parsed)) {
-    throw new Error('The file is not a valid resume.');
+    const problems = collectResumeDataProblems(parsed);
+    throw new Error(
+      `The file is not a valid resume:\n${problems
+        .map((problem) => `- ${problem}`)
+        .join('\n')}`
+    );
   }
   return parsed;
 };

@@ -12,6 +12,7 @@ export interface ResumeProfile {
 const PROFILES_KEY = 'resume.profiles';
 const ACTIVE_KEY = 'resume.activeProfile';
 const LEGACY_DATA_KEY = 'resume.data';
+const SEED_PROFILE_ID = 'seed-profile';
 
 const readJson = <T>(key: string): T | null => {
   if (typeof window === 'undefined') return null;
@@ -23,11 +24,13 @@ const readJson = <T>(key: string): T | null => {
   }
 };
 
-const defaultProfile = (name = 'My Resume'): ResumeProfile => ({
-  id: createId(),
-  name,
-  data: seedResumeData,
-});
+const buildProfile = (
+  name = 'My Resume',
+  id: string = createId()
+): ResumeProfile => ({ id, name, data: seedResumeData });
+
+const seedProfile = (): ResumeProfile =>
+  buildProfile('My Resume', SEED_PROFILE_ID);
 
 interface ResumeProfilesResult {
   profiles: ResumeProfile[];
@@ -41,54 +44,61 @@ interface ResumeProfilesResult {
 }
 
 export const useResumeProfiles = (): ResumeProfilesResult => {
-  const [profiles, setProfiles] = useState<ResumeProfile[]>(() => {
-    const stored = readJson<ResumeProfile[]>(PROFILES_KEY);
-    if (stored && stored.length > 0) return stored;
-    const legacy = readJson<ResumeData>(LEGACY_DATA_KEY);
-    if (legacy) {
-      return [
-        {
-          id: createId(),
-          name: legacy.personal.fullName.trim() || 'My Resume',
-          data: legacy,
-        },
-      ];
-    }
-    return [defaultProfile()];
-  });
-  const [activeId, setActiveId] = useState<string>(() => {
-    const stored = readJson<string>(ACTIVE_KEY);
-    return stored ?? '';
-  });
+  const [profiles, setProfiles] = useState<ResumeProfile[]>(() => [
+    seedProfile(),
+  ]);
+  const [activeId, setActiveId] = useState<string>('');
+  const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
+    const stored = readJson<ResumeProfile[]>(PROFILES_KEY);
+    if (stored && stored.length > 0) {
+      setProfiles(stored);
+      const active = readJson<string>(ACTIVE_KEY);
+      if (active && stored.some((profile) => profile.id === active)) {
+        setActiveId(active);
+      }
+    } else {
+      const legacy = readJson<ResumeData>(LEGACY_DATA_KEY);
+      if (legacy) {
+        setProfiles([
+          buildProfile(legacy.personal.fullName.trim() || 'My Resume'),
+        ]);
+      }
+    }
+    setHydrated(true);
+  }, []);
+
+  useEffect(() => {
+    if (!hydrated) return;
     if (profiles.length === 0) return;
     if (!profiles.some((profile) => profile.id === activeId)) {
       setActiveId(profiles[0].id);
     }
-  }, [profiles, activeId]);
+  }, [profiles, activeId, hydrated]);
 
   useEffect(() => {
+    if (!hydrated) return;
     try {
       window.localStorage.setItem(PROFILES_KEY, JSON.stringify(profiles));
     } catch {
       // storage may be unavailable (private mode)
     }
-  }, [profiles]);
+  }, [profiles, hydrated]);
 
   useEffect(() => {
-    if (!activeId) return;
+    if (!hydrated || !activeId) return;
     try {
       window.localStorage.setItem(ACTIVE_KEY, activeId);
     } catch {
       // storage may be unavailable (private mode)
     }
-  }, [activeId]);
+  }, [activeId, hydrated]);
 
   const activeProfile =
     profiles.find((profile) => profile.id === activeId) ??
     profiles[0] ??
-    defaultProfile();
+    buildProfile();
 
   const selectProfile = useCallback((id: string) => setActiveId(id), []);
 
@@ -101,7 +111,7 @@ export const useResumeProfiles = (): ResumeProfilesResult => {
   }, []);
 
   const createProfile = useCallback(() => {
-    const profile = defaultProfile();
+    const profile = buildProfile();
     setProfiles((items) => [...items, profile]);
     setActiveId(profile.id);
   }, []);
@@ -118,7 +128,7 @@ export const useResumeProfiles = (): ResumeProfilesResult => {
 
   const deleteProfile = useCallback((id: string) => {
     setProfiles((items) => {
-      if (items.length === 1) return [defaultProfile()];
+      if (items.length === 1) return [buildProfile()];
       return items.filter((profile) => profile.id !== id);
     });
   }, []);

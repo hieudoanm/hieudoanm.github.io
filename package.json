@@ -24,7 +24,7 @@
     "lint": "turbo run lint",
     "test": "turbo run test",
     "build": "turbo run build",
-    "postbuild": "./scripts/post-build.sh",
+    "postbuild": "./scripts/post-build.sh --all",
     "format": "turbo run format",
     "prepare": "husky || true"
   },

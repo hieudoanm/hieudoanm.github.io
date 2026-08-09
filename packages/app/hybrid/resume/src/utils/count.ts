@@ -1,7 +1,7 @@
 import type { ResumeData } from '../types/resume';
 
 export const countWords = (value: string): number => {
-  const matches = value.trim().match(/[\p{L}\p{N}]+/gu);
+  const matches = (value ?? '').trim().match(/[\p{L}\p{N}]+/gu);
   return matches ? matches.length : 0;
 };
 
