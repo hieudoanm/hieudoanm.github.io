@@ -15,11 +15,11 @@
 [download-apk]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-svg-latest/app-universal-release.apk
 [download-app-image]:
-  https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-svg-latest/svg.0.1_amd64.AppImage
+  https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-svg-latest/svg_0.0.1_amd64.AppImage
 [download-deb]:
-  https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-svg-latest/svg.0.1_amd64.deb
+  https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-svg-latest/svg_0.0.1_amd64.deb
 [download-dmg]:
-  https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-svg-latest/svg.0.1_arm64.dmg
+  https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-svg-latest/svg_0.0.1_arm64.dmg
 
 ## Requirements
 
