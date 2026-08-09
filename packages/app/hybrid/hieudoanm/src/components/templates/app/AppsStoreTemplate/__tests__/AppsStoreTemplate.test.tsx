@@ -48,6 +48,16 @@ describe('AppsStoreTemplate', () => {
     expect(screen.getAllByText('Pomodoro').length).toBeGreaterThan(0);
   });
 
+  it('collapses and expands a section', () => {
+    render(<AppsStoreTemplate title="Apps" sections={sections} />);
+    const checkbox = screen.getByRole('checkbox');
+    expect(checkbox).toBeChecked();
+    fireEvent.click(checkbox);
+    expect(checkbox).not.toBeChecked();
+    fireEvent.click(checkbox);
+    expect(checkbox).toBeChecked();
+  });
+
   it('filters items by query', () => {
     render(<AppsStoreTemplate title="Apps" sections={sections} />);
     fireEvent.change(screen.getAllByPlaceholderText('Search or filter…')[0], {

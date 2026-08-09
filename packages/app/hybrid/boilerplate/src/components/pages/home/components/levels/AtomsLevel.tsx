@@ -3225,7 +3225,7 @@ export const AtomsLevel: FC = () => {
             </span>
           </summary>
           <div className="collapse-content">
-            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
               {section.tiles.map((tile) => tile.node)}
             </div>
           </div>

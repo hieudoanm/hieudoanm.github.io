@@ -2,7 +2,14 @@
 
 import { Tool, ToolCard } from '@hieudoanm.github.io/components/atoms';
 import { SearchBar, Section } from '@hieudoanm.github.io/components/molecules';
-import { FC, useDeferredValue, useEffect, useMemo, useState } from 'react';
+import {
+  FC,
+  useCallback,
+  useDeferredValue,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react';
 
 const matchesQuery = (tool: Tool, q: string): boolean => {
   const terms = q.toLowerCase().split(/\s+/).filter(Boolean);
@@ -37,11 +44,16 @@ export const AppsStoreTemplate: FC<AppsStoreTemplateProps> = ({
 }) => {
   const [today, setToday] = useState('');
   const [query, setQuery] = useState('');
+  const [openSections, setOpenSections] = useState<Record<string, boolean>>({});
   const deferredQuery = useDeferredValue(query);
   const filtering = deferredQuery.trim().length > 0;
 
   useEffect(() => {
     setToday(formatToday());
+  }, []);
+
+  const toggleSection = useCallback((label: string) => {
+    setOpenSections((prev) => ({ ...prev, [label]: !(prev[label] ?? true) }));
   }, []);
 
   const filteredSections = useMemo(
@@ -72,7 +84,12 @@ export const AppsStoreTemplate: FC<AppsStoreTemplateProps> = ({
 
         {filteredSections.map(({ label, filtered }) =>
           !filtering || filtered.length > 0 ? (
-            <Section key={label} label={label} count={filtered.length}>
+            <Section
+              key={label}
+              label={label}
+              count={filtered.length}
+              open={filtering ? true : (openSections[label] ?? true)}
+              onToggle={() => toggleSection(label)}>
               <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                 {filtered.map((t) => (
                   <div key={t.label}>

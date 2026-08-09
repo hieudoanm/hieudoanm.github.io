@@ -64,6 +64,18 @@
         ]
       },
       {
+        "label": "Boilerplate",
+        "description": "Design Tools",
+        "icon": "PiFrameCorners",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-boilerplate-latest",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-boilerplate-latest"
+          }
+        ]
+      },
+      {
         "label": "Brainbow",
         "description": "Brainbow Microscopy Viewer",
         "icon": "PiMicroscope",
@@ -108,6 +120,18 @@
           {
             "label": "Download App",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-database-latest"
+          }
+        ]
+      },
+      {
+        "label": "Hieu Doan",
+        "description": "Dev Tools",
+        "icon": "PiGear",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-hieudoanm-latest",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-hieudoanm-latest"
           }
         ]
       },
