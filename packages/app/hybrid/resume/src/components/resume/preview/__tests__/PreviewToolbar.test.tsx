@@ -12,6 +12,7 @@ const renderToolbar = (overrides: Partial<ToolbarProps> = {}) => {
     scale: 1,
     zoom: 1,
     overflows: false,
+    words: 320,
     onPaperChange: jest.fn(),
     onDensityChange: jest.fn(),
     onAccentChange: jest.fn(),
@@ -65,13 +66,19 @@ describe('PreviewToolbar', () => {
   });
 
   it('warns when the resume overflows the page', () => {
-    renderToolbar({ overflows: true });
-    expect(screen.getByText('Overflows the page')).toBeInTheDocument();
+    renderToolbar({ overflows: true, words: 750 });
+    expect(
+      screen.getByText(
+        '750 words — overflows the page. Trim content or pick a denser layout.'
+      )
+    ).toBeInTheDocument();
   });
 
-  it('hides the overflow warning when it fits', () => {
-    renderToolbar({ overflows: false });
-    expect(screen.queryByText('Overflows the page')).not.toBeInTheDocument();
+  it('reports the word count when the resume fits', () => {
+    renderToolbar({ overflows: false, words: 320 });
+    expect(
+      screen.getByText('Fits on one page · 320 words')
+    ).toBeInTheDocument();
   });
 
   it('triggers the download and print handlers', () => {

@@ -3,8 +3,9 @@
 import { Suspense } from 'react';
 import { useRouter } from 'next/navigation';
 import { Manifest } from '@hieudoanm.github.io/components/routes/apps/editors/Manifest';
+import { NextPage } from 'next';
 
-const ToolEditorsManifest = () => {
+const ToolEditorsManifest: NextPage = () => {
   const router = useRouter();
   return (
     <Suspense

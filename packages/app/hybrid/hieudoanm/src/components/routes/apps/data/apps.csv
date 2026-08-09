@@ -39,7 +39,6 @@ Developer,developer,UUID,Generator,PiKey,uuid
 Editors,editors,JSON Schema,Validator,PiFileText,json-schema
 Editors,editors,Manifest,JSON Editor,PiFileText,manifest
 Editors,editors,Regex,Pattern Generator,PiMagnifyingGlass,regex
-Editors,editors,Resume,Resume Builder,PiFileText,resume
 Editors,editors,Slides,Pitch Deck,PiPresentation,slides
 Editors,editors,Word Counter,Word Count,PiNotePencil,word-counter
 Education,education,DOI,Cite,PiFileText,doi

@@ -1,3 +1,7 @@
+import type { PaperSize } from '../data/paper';
+import type { ResumeData } from '../types/resume';
+import { dateStamp, resumeFileName } from './io';
+
 const PRINT_STYLE_ID = 'resume-print-style';
 
 export const injectPrintStyles = (widthMm: number, heightMm: number): void => {
@@ -63,4 +67,19 @@ export const downloadResumeHtml = (
   link.click();
   document.body.removeChild(link);
   URL.revokeObjectURL(url);
+};
+
+export const downloadResumeFile = (
+  data: ResumeData,
+  paper: PaperSize
+): boolean => {
+  const sheet = document.getElementById('resume-sheet');
+  if (!sheet) return false;
+  downloadResumeHtml(
+    sheet,
+    `${resumeFileName(data)}-${dateStamp()}-resume.html`,
+    paper.widthMm,
+    paper.heightMm
+  );
+  return true;
 };

@@ -1,4 +1,10 @@
-import { downloadResumeHtml, injectPrintStyles, printResume } from '../export';
+import { seedResumeData } from '../../data/seed';
+import {
+  downloadResumeFile,
+  downloadResumeHtml,
+  injectPrintStyles,
+  printResume,
+} from '../export';
 
 describe('export utils', () => {
   const originalCreateObjectURL = URL.createObjectURL;
@@ -9,6 +15,7 @@ describe('export utils', () => {
     URL.createObjectURL = originalCreateObjectURL;
     URL.revokeObjectURL = originalRevokeObjectURL;
     document.getElementById('resume-print-style')?.remove();
+    document.getElementById('resume-sheet')?.remove();
   });
 
   it('injects a print style element with the page size', () => {
@@ -55,5 +62,43 @@ describe('export utils', () => {
     expect(createObjectURL).toHaveBeenCalled();
     expect(clickSpy).toHaveBeenCalled();
     expect(revokeObjectURL).toHaveBeenCalled();
+  });
+
+  it('downloads the rendered sheet as resume HTML with a dated name', () => {
+    const createObjectURL = jest.fn(() => 'blob:mock');
+    const revokeObjectURL = jest.fn();
+    URL.createObjectURL = createObjectURL as typeof URL.createObjectURL;
+    URL.revokeObjectURL = revokeObjectURL as typeof URL.revokeObjectURL;
+    const clickSpy = jest
+      .spyOn(HTMLAnchorElement.prototype, 'click')
+      .mockImplementation(() => {});
+
+    const sheet = document.createElement('div');
+    sheet.id = 'resume-sheet';
+    sheet.innerHTML = '<p>Rendered</p>';
+    document.body.appendChild(sheet);
+
+    const ok = downloadResumeFile(seedResumeData, {
+      id: 'a4',
+      label: 'A4',
+      widthMm: 210,
+      heightMm: 297,
+    });
+
+    expect(ok).toBe(true);
+    expect(clickSpy).toHaveBeenCalled();
+    expect(createObjectURL).toHaveBeenCalled();
+    expect(revokeObjectURL).toHaveBeenCalled();
+  });
+
+  it('reports failure when the sheet is not rendered yet', () => {
+    expect(
+      downloadResumeFile(seedResumeData, {
+        id: 'a4',
+        label: 'A4',
+        widthMm: 210,
+        heightMm: 297,
+      })
+    ).toBe(false);
   });
 });

@@ -3,8 +3,9 @@
 import { Suspense } from 'react';
 import { useRouter } from 'next/navigation';
 import { Slides } from '@hieudoanm.github.io/components/routes/apps/editors/Slides';
+import { NextPage } from 'next';
 
-const ToolEditorsSlides = () => {
+const ToolEditorsSlides: NextPage = () => {
   const router = useRouter();
   return (
     <Suspense

@@ -3,6 +3,7 @@ import type { ExperienceItem } from '../../../types/resume';
 import { createId } from '../../../utils/id';
 import { FieldRow, TextAreaField, TextField } from './Field';
 import { AddButton, ListItemCard } from './ListItemCard';
+import { SortableList } from './SortableList';
 
 interface ExperienceFormProps {
   value: ExperienceItem[];
@@ -34,50 +35,56 @@ export const ExperienceForm: FC<ExperienceFormProps> = ({
   const addItem = () => onChange([...value, emptyItem()]);
 
   return (
-    <div className="space-y-2">
-      {value.map((item) => (
-        <ListItemCard
-          key={item.id}
-          title={item.role || item.company || 'New experience'}
-          onRemove={() => removeItem(item.id)}>
-          <TextField
-            label="Role"
-            value={item.role}
-            onChange={(next) => updateItem(item.id, { role: next })}
-          />
-          <TextField
-            label="Company"
-            value={item.company}
-            onChange={(next) => updateItem(item.id, { company: next })}
-          />
-          <TextField
-            label="Location"
-            value={item.location}
-            onChange={(next) => updateItem(item.id, { location: next })}
-          />
-          <FieldRow>
+    <div>
+      <SortableList
+        items={value}
+        getKey={(item) => item.id}
+        onReorder={onChange}
+        renderItem={(item) => (
+          <ListItemCard
+            title={item.role || item.company || 'New experience'}
+            onRemove={() => removeItem(item.id)}>
             <TextField
-              label="Start date"
-              value={item.startDate}
-              placeholder="Jan 2022"
-              onChange={(next) => updateItem(item.id, { startDate: next })}
+              label="Role"
+              value={item.role}
+              onChange={(next) => updateItem(item.id, { role: next })}
             />
             <TextField
-              label="End date"
-              value={item.endDate}
-              placeholder="Present"
-              onChange={(next) => updateItem(item.id, { endDate: next })}
+              label="Company"
+              value={item.company}
+              onChange={(next) => updateItem(item.id, { company: next })}
             />
-          </FieldRow>
-          <TextAreaField
-            label="Description (one bullet per line)"
-            value={item.description}
-            rows={4}
-            onChange={(next) => updateItem(item.id, { description: next })}
-          />
-        </ListItemCard>
-      ))}
-      <AddButton onClick={addItem} label="Add experience" />
+            <TextField
+              label="Location"
+              value={item.location}
+              onChange={(next) => updateItem(item.id, { location: next })}
+            />
+            <FieldRow>
+              <TextField
+                label="Start date"
+                value={item.startDate}
+                placeholder="Jan 2022"
+                onChange={(next) => updateItem(item.id, { startDate: next })}
+              />
+              <TextField
+                label="End date"
+                value={item.endDate}
+                placeholder="Present"
+                onChange={(next) => updateItem(item.id, { endDate: next })}
+              />
+            </FieldRow>
+            <TextAreaField
+              label="Description (one bullet per line)"
+              value={item.description}
+              rows={4}
+              onChange={(next) => updateItem(item.id, { description: next })}
+            />
+          </ListItemCard>
+        )}
+      />
+      <div className="mt-2">
+        <AddButton onClick={addItem} label="Add experience" />
+      </div>
     </div>
   );
 };

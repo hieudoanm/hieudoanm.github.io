@@ -3,8 +3,9 @@
 import { Suspense } from 'react';
 import { useRouter } from 'next/navigation';
 import { Regex } from '@hieudoanm.github.io/components/routes/apps/editors/Regex';
+import { NextPage } from 'next';
 
-const ToolEditorsRegex = () => {
+const ToolEditorsRegex: NextPage = () => {
   const router = useRouter();
   return (
     <Suspense
