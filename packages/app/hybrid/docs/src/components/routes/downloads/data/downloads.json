@@ -1,0 +1,302 @@
+[
+  {
+    "id": "clis",
+    "label": "CLIs",
+    "items": [
+      {
+        "label": "bash",
+        "description": "Aliases",
+        "icon": "PiTerminal",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/cli/bash",
+        "actions": [
+          {
+            "label": "Download bash",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/cli/bash/download/bash/dist"
+          }
+        ]
+      },
+      {
+        "label": "jack",
+        "description": "Just Another Command-Line Kit",
+        "icon": "PiCodeSimple",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/cli-jack-latest",
+        "actions": [
+          {
+            "label": "Download bin",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/cli-jack-latest"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "extensions",
+    "label": "Extensions",
+    "items": [
+      {
+        "label": "@hieudoanm/ext",
+        "description": "Hieu Doan",
+        "icon": "PiProhibit",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/extensions-browser-latest",
+        "actions": [
+          {
+            "label": "Download EXT",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/extensions-browser-latest"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "apps-desktop",
+    "label": "Apps (Desktop)",
+    "items": [
+      {
+        "label": "API",
+        "description": "API Client",
+        "icon": "PiGlobe",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-api-latest",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-api-latest"
+          }
+        ]
+      },
+      {
+        "label": "Boilerplate",
+        "description": "Design Tools",
+        "icon": "PiFrameCorners",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-boilerplate-latest",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-boilerplate-latest"
+          }
+        ]
+      },
+      {
+        "label": "Brainbow",
+        "description": "Brainbow Microscopy Viewer",
+        "icon": "PiMicroscope",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-brainbow-latest",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-brainbow-latest"
+          }
+        ]
+      },
+      {
+        "label": "Chat",
+        "description": "AI Chat Interface",
+        "icon": "PiChat",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-chat-latest",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-chat-latest"
+          }
+        ]
+      },
+      {
+        "label": "Code",
+        "description": "Code Editor",
+        "icon": "PiCodeSimple",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-code-latest",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-code-latest"
+          }
+        ]
+      },
+      {
+        "label": "CSV",
+        "description": "CSV Editor",
+        "icon": "PiTable",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-csv-latest",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-csv-latest"
+          }
+        ]
+      },
+      {
+        "label": "Database",
+        "description": "Database Client",
+        "icon": "PiDatabase",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-database-latest",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-database-latest"
+          }
+        ]
+      },
+      {
+        "label": "Docs",
+        "description": "Dev Tools",
+        "icon": "PiGear",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-docs-latest",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-docs-latest"
+          }
+        ]
+      },
+      {
+        "label": "Markdown",
+        "description": "Markdown Editor",
+        "icon": "PiMarkdownLogo",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-markdown-latest",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-markdown-latest"
+          }
+        ]
+      },
+      {
+        "label": "Password",
+        "description": "Password Manager",
+        "icon": "PiPassword",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-password-latest",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-password-latest"
+          }
+        ]
+      },
+      {
+        "label": "PDF",
+        "description": "PDF Viewer",
+        "icon": "PiFilePdf",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-pdf-latest",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-pdf-latest"
+          }
+        ]
+      },
+      {
+        "label": "Photo",
+        "description": "Photo Editor",
+        "icon": "PiImage",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-photo-latest",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-photo-latest"
+          }
+        ]
+      },
+      {
+        "label": "Resume",
+        "description": "Resume Editor",
+        "icon": "PiFilePdf",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-resume-latest",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-resume-latest"
+          }
+        ]
+      },
+      {
+        "label": "Projects",
+        "description": "Projects Manager",
+        "icon": "PiFolder",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-projects-latest",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-projects-latest"
+          }
+        ]
+      },
+      {
+        "label": "SVG",
+        "description": "SVG Editor",
+        "icon": "PiPath",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-svg-latest",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-svg-latest"
+          }
+        ]
+      },
+      {
+        "label": "Tourney",
+        "description": "Tournament Bracket",
+        "icon": "PiTrophy",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-tourney-latest",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-tourney-latest"
+          }
+        ]
+      },
+      {
+        "label": "Video",
+        "description": "Video Editor",
+        "icon": "PiVideoCamera",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-video-latest",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-video-latest"
+          }
+        ]
+      },
+      {
+        "label": "Wallet",
+        "description": "Wallet Manager",
+        "icon": "PiWallet",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-wallet-latest",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-wallet-latest"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "apps-mobile",
+    "label": "Apps (Mobile)",
+    "items": [
+      {
+        "label": "Block",
+        "description": "Apps Blocker",
+        "icon": "PiProhibit",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-block-latest",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-block-latest"
+          }
+        ]
+      },
+      {
+        "label": "NFC",
+        "description": "NFC Tools",
+        "icon": "PiProhibit",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-nfc-latest",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-nfc-latest"
+          }
+        ]
+      }
+    ]
+  }
+]

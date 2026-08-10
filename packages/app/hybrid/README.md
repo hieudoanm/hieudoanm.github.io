@@ -12,24 +12,24 @@
 
 | No  | ID          | App         | Type       | Description                               | Back-end | Status |
 | --- | ----------- | ----------- | ---------- | ----------------------------------------- | -------- | ------ |
-| 00  | boilerplate | Boilerplate | Design     | Nextjs + Tauri (Foundation)               | Optional | DONE   |
 | 01  | api         | API         | DevTools   | Minimal Postman / Insomnia / Bruno        | Optional | DONE   |
-| 02  | brainbow    | Brainbow    | DevTools   | All-in-one Brainbow Software              | No       | DONE   |
-| 03  | chat        | Chat        | DevTools   | Minimal Chat like Codex / Claude          | Required | DONE   |
-| 04  | code        | Code        | Editor     | Minimal VSCode / Zed                      | No       | DONE   |
-| 05  | csv         | CSV         | Editor     | Minimal Excel / Google Sheets             | No       | DONE   |
-| 06  | database    | Database    | Editor     | Minimal pgAdmin / DBeaver for SQLite only | No       | DONE   |
-| 07  | hieudoanm   | Hieu Doan   | DevTools   | Minimal TinyWow                           | No       | DONE   |
-| 08  | markdown    | Markdown    | Editor     | Minimal Obsidian                          | No       | DONE   |
-| 09  | password    | Password    | Management | Minimal BitWarden / 1Password             | Required | DONE   |
-| 10  | pdf         | PDF         | Editor     | Minimal Adobe Acrobat PDF                 | No       | DONE   |
-| 11  | photo       | Photo       | Editor     | Minimal Adobe Photoshop                   | No       | DONE   |
-| 12  | projects    | Projects    | Management | Minimal Atlassian Trello / Kanban         | Required | DONE   |
-| 13  | resume      | Resume      | Editor     | Minimal Resume Builer                     | No       | DONE   |
-| 14  | svg         | SVG         | Editor     | Minimal Adobe Illustrator                 | No       | DONE   |
-| 15  | tourney     | Touraments  | Management | Minimal Swiss Manager                     | No       | DONE   |
-| 16  | video       | Video       | Editor     | Minimal CapCut                            | No       | DONE   |
-| 17  | wallet      | Wallet      | Management | Minimal Momo / Techcombank                | Required | DONE   |
+| 02  | boilerplate | Boilerplate | Design     | Nextjs + Tauri (Foundation)               | Optional | DONE   |
+| 03  | brainbow    | Brainbow    | DevTools   | All-in-one Brainbow Software              | No       | DONE   |
+| 04  | chat        | Chat        | DevTools   | Minimal Chat like Codex / Claude          | Required | DONE   |
+| 05  | code        | Code        | Editor     | Minimal VSCode / Zed                      | No       | DONE   |
+| 06  | csv         | CSV         | Editor     | Minimal Excel / Google Sheets             | No       | DONE   |
+| 07  | database    | Database    | Editor     | Minimal pgAdmin / DBeaver for SQLite only | No       | DONE   |
+| 08  | docs        | Docs        | DevTools   | Minimal TinyWow                           | No       | DONE   |
+| 09  | markdown    | Markdown    | Editor     | Minimal Obsidian                          | No       | DONE   |
+| 10  | password    | Password    | Management | Minimal BitWarden / 1Password             | Required | DONE   |
+| 11  | pdf         | PDF         | Editor     | Minimal Adobe Acrobat PDF                 | No       | DONE   |
+| 12  | photo       | Photo       | Editor     | Minimal Adobe Photoshop                   | No       | DONE   |
+| 13  | projects    | Projects    | Management | Minimal Atlassian Trello / Kanban         | Required | DONE   |
+| 14  | resume      | Resume      | Editor     | Minimal Resume Builer                     | No       | DONE   |
+| 15  | svg         | SVG         | Editor     | Minimal Adobe Illustrator                 | No       | DONE   |
+| 16  | tourney     | Touraments  | Management | Minimal Swiss Manager                     | No       | DONE   |
+| 17  | video       | Video       | Editor     | Minimal CapCut                            | No       | DONE   |
+| 18  | wallet      | Wallet      | Management | Minimal Momo / Techcombank                | Required | DONE   |
 
 ## Techstack
 

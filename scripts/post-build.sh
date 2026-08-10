@@ -10,7 +10,7 @@ fi
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 HYBRID_DIR="$ROOT_DIR/packages/app/hybrid"
 DOCS_DIR="$ROOT_DIR/docs"
-ROOT_APP="hieudoanm"
+ROOT_APP="docs"
 
 require() {
     command -v "$1" >/dev/null 2>&1 || {
@@ -25,13 +25,13 @@ Usage: post-build.sh [options]
 
 Builds hybrid apps and copies their out/ directories into docs/.
 
-The hieudoanm app is copied to docs/ (site root). Every other app in
+The docs app is copied to docs/ (site root). Every other app in
 packages/app/hybrid is built with BASE_PATH=/downloads/<name> and copied to
 docs/downloads/<name>.
 
 Options:
   --all           Build and copy all apps in packages/app/hybrid (default)
-  --app, -a       Only build/copy the hieudoanm app to docs/
+  --app, -a       Only build/copy the docs app to docs/
   --name <app>    Only build/copy a specific app in packages/app/hybrid
   --help, -h      Show this help
 EOF
