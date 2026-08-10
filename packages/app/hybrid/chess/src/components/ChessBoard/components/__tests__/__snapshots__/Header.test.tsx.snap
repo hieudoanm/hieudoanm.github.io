@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Header to match snapshot 1`] = `
+<div>
+  <div
+    class="flex items-center justify-between"
+  >
+    <h1
+      class="text-2xl font-black md:text-3xl"
+    >
+      Chess
+       
+      <select
+        class="appearance-none font-black"
+      >
+        <option
+          value="0"
+        >
+          000
+        </option>
+        <option
+          value="1"
+        >
+          001
+        </option>
+        <option
+          value="2"
+        >
+          002
+        </option>
+      </select>
+    </h1>
+    <div
+      class="flex items-center gap-1"
+    >
+      <button
+        class="btn btn-ghost btn-sm"
+        title="Randomize"
+      >
+        🔀
+      </button>
+      <button
+        class="btn btn-ghost btn-sm"
+        title="Reset"
+      >
+        🔄
+      </button>
+    </div>
+  </div>
+  <div
+    class="tabs tabs-boxed w-full"
+    role="tablist"
+  >
+    <button
+      class="tab flex-1 gap-1 tab-active"
+      role="tab"
+    >
+      👁️ Explore
+    </button>
+    <button
+      class="tab flex-1 gap-1 "
+      role="tab"
+    >
+      🤖 vs Stockfish
+    </button>
+  </div>
+</div>
+`;

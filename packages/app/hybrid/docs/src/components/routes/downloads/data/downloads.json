@@ -55,11 +55,11 @@
         "label": "API",
         "description": "API Client",
         "icon": "PiGlobe",
-        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-api-latest",
+        "href": "https://hieudoanm.github.io/downloads/api",
         "actions": [
           {
             "label": "Download App",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-api-latest"
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-api-latest"
           }
         ]
       },
@@ -67,11 +67,11 @@
         "label": "Boilerplate",
         "description": "Design Tools",
         "icon": "PiFrameCorners",
-        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-boilerplate-latest",
+        "href": "https://hieudoanm.github.io/downloads/boilerplate",
         "actions": [
           {
             "label": "Download App",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-boilerplate-latest"
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-boilerplate-latest"
           }
         ]
       },
@@ -79,11 +79,11 @@
         "label": "Brainbow",
         "description": "Brainbow Microscopy Viewer",
         "icon": "PiMicroscope",
-        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-brainbow-latest",
+        "href": "https://hieudoanm.github.io/downloads/brainbow",
         "actions": [
           {
             "label": "Download App",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-brainbow-latest"
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-brainbow-latest"
           }
         ]
       },
@@ -91,11 +91,23 @@
         "label": "Chat",
         "description": "AI Chat Interface",
         "icon": "PiChat",
-        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-chat-latest",
+        "href": "https://hieudoanm.github.io/downloads/chat",
         "actions": [
           {
             "label": "Download App",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-chat-latest"
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-chat-latest"
+          }
+        ]
+      },
+      {
+        "label": "Chess",
+        "description": "Chess Tools",
+        "icon": "PiGameController",
+        "href": "https://hieudoanm.github.io/downloads/chess",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-chess-latest"
           }
         ]
       },
@@ -103,11 +115,11 @@
         "label": "Code",
         "description": "Code Editor",
         "icon": "PiCodeSimple",
-        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-code-latest",
+        "href": "https://hieudoanm.github.io/downloads/code",
         "actions": [
           {
             "label": "Download App",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-code-latest"
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-code-latest"
           }
         ]
       },
@@ -115,11 +127,11 @@
         "label": "CSV",
         "description": "CSV Editor",
         "icon": "PiTable",
-        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-csv-latest",
+        "href": "https://hieudoanm.github.io/downloads/csv",
         "actions": [
           {
             "label": "Download App",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-csv-latest"
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-csv-latest"
           }
         ]
       },
@@ -127,11 +139,23 @@
         "label": "Database",
         "description": "Database Client",
         "icon": "PiDatabase",
-        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-database-latest",
+        "href": "https://hieudoanm.github.io/downloads/database",
         "actions": [
           {
             "label": "Download App",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-database-latest"
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-database-latest"
+          }
+        ]
+      },
+      {
+        "label": "Diagram",
+        "description": "Diagrams Editor",
+        "icon": "PiPaintBrush",
+        "href": "https://hieudoanm.github.io/downloads/diagram",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-diagram-latest"
           }
         ]
       },
@@ -139,7 +163,7 @@
         "label": "Docs",
         "description": "Dev Tools",
         "icon": "PiGear",
-        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-docs-latest",
+        "href": "https://hieudoanm.github.io",
         "actions": [
           {
             "label": "Download App",
@@ -151,11 +175,11 @@
         "label": "Markdown",
         "description": "Markdown Editor",
         "icon": "PiMarkdownLogo",
-        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-markdown-latest",
+        "href": "https://hieudoanm.github.io/downloads/markdown",
         "actions": [
           {
             "label": "Download App",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-markdown-latest"
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-markdown-latest"
           }
         ]
       },
@@ -163,11 +187,11 @@
         "label": "Password",
         "description": "Password Manager",
         "icon": "PiPassword",
-        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-password-latest",
+        "href": "https://hieudoanm.github.io/downloads/password",
         "actions": [
           {
             "label": "Download App",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-password-latest"
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-password-latest"
           }
         ]
       },
@@ -175,11 +199,11 @@
         "label": "PDF",
         "description": "PDF Viewer",
         "icon": "PiFilePdf",
-        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-pdf-latest",
+        "href": "https://hieudoanm.github.io/downloads/pdf",
         "actions": [
           {
             "label": "Download App",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-pdf-latest"
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-pdf-latest"
           }
         ]
       },
@@ -187,11 +211,11 @@
         "label": "Photo",
         "description": "Photo Editor",
         "icon": "PiImage",
-        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-photo-latest",
+        "href": "https://hieudoanm.github.io/downloads/photo",
         "actions": [
           {
             "label": "Download App",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-photo-latest"
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-photo-latest"
           }
         ]
       },
@@ -199,7 +223,7 @@
         "label": "Resume",
         "description": "Resume Editor",
         "icon": "PiFilePdf",
-        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-resume-latest",
+        "href": "https://hieudoanm.github.io/downloads/resume",
         "actions": [
           {
             "label": "Download App",
@@ -211,11 +235,11 @@
         "label": "Projects",
         "description": "Projects Manager",
         "icon": "PiFolder",
-        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-projects-latest",
+        "href": "https://hieudoanm.github.io/downloads/projects",
         "actions": [
           {
             "label": "Download App",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-projects-latest"
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-projects-latest"
           }
         ]
       },
@@ -223,11 +247,11 @@
         "label": "SVG",
         "description": "SVG Editor",
         "icon": "PiPath",
-        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-svg-latest",
+        "href": "https://hieudoanm.github.io/downloads/svg",
         "actions": [
           {
             "label": "Download App",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-svg-latest"
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-svg-latest"
           }
         ]
       },
@@ -235,11 +259,11 @@
         "label": "Tourney",
         "description": "Tournament Bracket",
         "icon": "PiTrophy",
-        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-tourney-latest",
+        "href": "https://hieudoanm.github.io/downloads/tourney",
         "actions": [
           {
             "label": "Download App",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-tourney-latest"
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-tourney-latest"
           }
         ]
       },
@@ -247,11 +271,11 @@
         "label": "Video",
         "description": "Video Editor",
         "icon": "PiVideoCamera",
-        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-video-latest",
+        "href": "https://hieudoanm.github.io/downloads/video",
         "actions": [
           {
             "label": "Download App",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-video-latest"
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-video-latest"
           }
         ]
       },
@@ -259,11 +283,11 @@
         "label": "Wallet",
         "description": "Wallet Manager",
         "icon": "PiWallet",
-        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-wallet-latest",
+        "href": "https://hieudoanm.github.io/downloads/wallet",
         "actions": [
           {
             "label": "Download App",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-wallet-latest"
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-wallet-latest"
           }
         ]
       }
@@ -281,7 +305,7 @@
         "actions": [
           {
             "label": "Download App",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-block-latest"
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-block-latest"
           }
         ]
       },
@@ -293,7 +317,7 @@
         "actions": [
           {
             "label": "Download App",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-nfc-latest"
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-nfc-latest"
           }
         ]
       }

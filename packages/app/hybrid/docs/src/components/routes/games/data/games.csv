@@ -8,10 +8,6 @@ Casino,casino,Blackjack,Cards Counter,PiCards,blackjack
 Casino,casino,Poker,Odds Calculator,PiCards,poker
 Casino,casino,Dice Game,Over/Under 7,PiDiceOne,dice-game
 Casino,casino,Slot Machine,3 reels,PiCoin,slot-machine
-Chess,chess,Board,"Chess board with analysis, engine, and openings browser",PiGameController,chess-board
-Chess,chess,Insights,"Player distribution by title and rating with percentile comparisons",PiGameController,chess-stats
-Chess,chess,Chess Clock,Chess Timer,PiGameController,chess-clock
-Chess,chess,Elo,Calculator,PiGameController,chess-elo
 Countries,countries,Border,Guess the neighbor,PiMapTrifold,countries-border
 Countries,countries,Connection,Group countries by category,PiGridFour,countries-connection
 Countries,countries,Continents Sort,Drag countries into continents,PiSortAscending,countries-continents-sort

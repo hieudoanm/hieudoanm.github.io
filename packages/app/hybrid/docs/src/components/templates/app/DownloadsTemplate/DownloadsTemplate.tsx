@@ -1,25 +1,25 @@
 'use client';
 
-import { useState, useEffect, type FC } from 'react';
+import { useEffect, useState, type FC } from 'react';
 import {
   PiAppleLogo,
-  PiLinuxLogo,
-  PiWindowsLogo,
-  PiDeviceMobile,
-  PiTerminal,
-  PiCopy,
+  PiArrowRight,
+  PiCaretDown,
   PiCheck,
+  PiCode,
+  PiCopy,
+  PiDeviceMobile,
   PiDownloadSimple,
-  PiStar,
-  PiUsers,
+  PiGear,
   PiGitFork,
   PiGridFour,
   PiLightning,
+  PiLinuxLogo,
   PiShieldCheck,
-  PiCode,
-  PiGear,
-  PiArrowRight,
-  PiCaretDown,
+  PiStar,
+  PiTerminal,
+  PiUsers,
+  PiWindowsLogo,
 } from 'react-icons/pi';
 
 type Tab = 'desktop' | 'mobile' | 'cli';
