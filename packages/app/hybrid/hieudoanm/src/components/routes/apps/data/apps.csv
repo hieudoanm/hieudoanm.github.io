@@ -15,17 +15,10 @@ Clocks,clocks,Days Count,Date Difference,PiCalendar,days-count
 Clocks,clocks,Epoch Convert,Timestamp,PiClock,epoch-convert
 Clocks,clocks,Pomodoro,Timer,PiTimer,pomodoro
 Clocks,clocks,Watchface,Garmin,PiWatch,watchface
-Data - CSV,data-csv,CSV to Excel,"CSV → Excel",PiArrowsClockwise,csv-to-excel
-Data - CSV,data-csv,CSV to JSON,"CSV → JSON",PiArrowsClockwise,csv-to-json
-Data - CSV,data-csv,CSV to XML,"CSV → XML",PiArrowsClockwise,csv-to-xml
-Data - CSV,data-csv,Split CSV,Split large files,PiScissors,split-csv
-Data - Excel,data-excel,Excel to CSV,"Excel → CSV",PiArrowsClockwise,excel-to-csv
 Data - Excel,data-excel,Excel to PDF,"Excel → PDF",PiFileText,excel-to-pdf
 Data - Excel,data-excel,Excel to XML,"Excel → XML",PiArrowsClockwise,excel-to-xml
 Data - Excel,data-excel,Split Excel,Split large files,PiScissors,split-excel
-Data - JSON,data-json,JSON to CSV,"JSON → CSV",PiArrowsClockwise,json-to-csv
-Data - JSON,data-json,JSON to XML,"JSON → XML",PiArrowsClockwise,json-to-xml
-Data - XML,data-xml,XML to CSV,"XML → CSV",PiArrowsClockwise,xml-to-csv
+Data - XML,data-xml,JSON to XML,"JSON → XML",PiArrowsClockwise,json-to-xml
 Data - XML,data-xml,XML to Excel,"XML → Excel",PiArrowsClockwise,xml-to-excel
 Data - XML,data-xml,XML to JSON,"XML → JSON",PiArrowsClockwise,xml-to-json
 Developer,developer,Diff,Text Comparison,PiNotePencil,text-diff

@@ -114,45 +114,9 @@
     ]
   },
   {
-    "id": "data-csv",
-    "label": "Data - CSV",
-    "items": [
-      {
-        "label": "CSV to Excel",
-        "description": "CSV → Excel",
-        "icon": "PiArrowsClockwise",
-        "toolId": "csv-to-excel"
-      },
-      {
-        "label": "CSV to JSON",
-        "description": "CSV → JSON",
-        "icon": "PiArrowsClockwise",
-        "toolId": "csv-to-json"
-      },
-      {
-        "label": "CSV to XML",
-        "description": "CSV → XML",
-        "icon": "PiArrowsClockwise",
-        "toolId": "csv-to-xml"
-      },
-      {
-        "label": "Split CSV",
-        "description": "Split large files",
-        "icon": "PiScissors",
-        "toolId": "split-csv"
-      }
-    ]
-  },
-  {
     "id": "data-excel",
     "label": "Data - Excel",
     "items": [
-      {
-        "label": "Excel to CSV",
-        "description": "Excel → CSV",
-        "icon": "PiArrowsClockwise",
-        "toolId": "excel-to-csv"
-      },
       {
         "label": "Excel to PDF",
         "description": "Excel → PDF",
@@ -174,32 +138,14 @@
     ]
   },
   {
-    "id": "data-json",
-    "label": "Data - JSON",
+    "id": "data-xml",
+    "label": "Data - XML",
     "items": [
-      {
-        "label": "JSON to CSV",
-        "description": "JSON → CSV",
-        "icon": "PiArrowsClockwise",
-        "toolId": "json-to-csv"
-      },
       {
         "label": "JSON to XML",
         "description": "JSON → XML",
         "icon": "PiArrowsClockwise",
         "toolId": "json-to-xml"
-      }
-    ]
-  },
-  {
-    "id": "data-xml",
-    "label": "Data - XML",
-    "items": [
-      {
-        "label": "XML to CSV",
-        "description": "XML → CSV",
-        "icon": "PiArrowsClockwise",
-        "toolId": "xml-to-csv"
       },
       {
         "label": "XML to Excel",

@@ -52,10 +52,10 @@ exports[`AppsStoreTemplate to match snapshot 1`] = `
       </div>
       <section
         aria-label="Utilities"
-        class="w-full max-w-3xl"
+        class="w-full max-w-3xl pt-6"
       >
         <div
-          class="border-base-300 collapse-arrow collapse border-b bg-transparent"
+          class="border-base-300 collapse-arrow collapse rounded-none border-b bg-transparent"
         >
           <input
             checked=""

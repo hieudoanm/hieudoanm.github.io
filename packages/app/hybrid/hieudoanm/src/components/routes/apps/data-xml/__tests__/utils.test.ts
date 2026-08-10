@@ -1,5 +1,5 @@
+import { jsonToXml } from '../JsonToXml/utils';
 import { xmlToJson } from '../XmlToJson/utils';
-import { toCSV } from '../XmlToCsv/utils';
 
 describe('xmlToJson', () => {
   it('converts XML to JSON', () => {
@@ -9,12 +9,15 @@ describe('xmlToJson', () => {
   });
 });
 
-describe('toCSV', () => {
-  it('converts rows to CSV', () => {
-    const result = toCSV([
-      ['a', 'b'],
-      ['1', '2'],
-    ]);
-    expect(result).toBe('a,b\n1,2');
+describe('jsonToXml', () => {
+  it('converts JSON array to XML', () => {
+    const result = jsonToXml('[{"name":"Alice"}]');
+    expect(result).toContain('<name>');
+    expect(result).toContain('Alice');
+    expect(result).toContain('</root>');
+  });
+
+  it('throws on invalid JSON', () => {
+    expect(() => jsonToXml('invalid')).toThrow();
   });
 });
