@@ -9,8 +9,10 @@
 
 ## Applications
 
-1. Block
-2. NFC
+| No  | Application                | Android                              | iOS                          |
+| --- | -------------------------- | ------------------------------------ | ---------------------------- |
+| 01  | [Block](./block/README.md) | [Android](./block/android/README.md) | [iOS](./block/ios/README.md) |
+| 02  | [NFC](./nfc/README.md)     | [Android](./nfc/android/README.md)   | [iOS](./nfc/ios/README.md)   |
 
 ## Platform
 

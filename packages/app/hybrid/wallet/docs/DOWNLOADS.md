@@ -2,13 +2,13 @@
 
 ## Platforms
 
-| Platform       | Download Link                              |
-| -------------- | ------------------------------------------ |
-| Android        | [Download `.aab`][download-aab]            |
-| Android        | [Download `.apk`][download-apk]            |
-| Linux          | [Download `.AppImage`][download-app-image] |
-| Linux (Debian) | [Download `.deb`][download-deb]            |
-| macOS          | [Download `.dmg`][download-dmg]            |
+| Platform       | Requirements   | Download Link                              |
+| -------------- | -------------- | ------------------------------------------ |
+| Android        | 14.+           | [Download `.aab`][download-aab]            |
+| Android        | 14.+           | [Download `.apk`][download-apk]            |
+| Linux          | Ubuntu 22.04.+ | [Download `.AppImage`][download-app-image] |
+| Linux (Debian) | Ubuntu 22.04.+ | [Download `.deb`][download-deb]            |
+| macOS          | 13.+           | [Download `.dmg`][download-dmg]            |
 
 [download-aab]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-wallet-latest/app-universal-release.aab
@@ -20,10 +20,3 @@
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-wallet-latest/wallet_0.0.1_amd64.deb
 [download-dmg]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-wallet-latest/wallet_0.0.1_arm64.dmg
-
-## Requirements
-
-- Android 14.+
-- Linux
-  - Ubuntu 22.04.+
-- macOS 13.+
