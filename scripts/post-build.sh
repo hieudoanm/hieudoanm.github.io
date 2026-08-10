@@ -8,14 +8,9 @@ if [[ "${CI:-}" != "" ]]; then
 fi
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-APP_DIR="$ROOT_DIR/packages/app/hybrid/hieudoanm"
-APP_OUT_DIR="$APP_DIR/out"
+HYBRID_DIR="$ROOT_DIR/packages/app/hybrid"
 DOCS_DIR="$ROOT_DIR/docs"
-
-RESUME_DIR="$ROOT_DIR/packages/app/hybrid/resume"
-RESUME_OUT_DIR="$RESUME_DIR/out"
-RESUME_DEST_DIR="$DOCS_DIR/downloads/resume"
-RESUME_BASE_PATH="/downloads/resume"
+ROOT_APP="hieudoanm"
 
 require() {
     command -v "$1" >/dev/null 2>&1 || {
@@ -28,25 +23,40 @@ usage() {
     cat <<'EOF'
 Usage: post-build.sh [options]
 
-Builds a static app (if needed) and copies its out/ directory into docs/.
+Builds hybrid apps and copies their out/ directories into docs/.
+
+The hieudoanm app is copied to docs/ (site root). Every other app in
+packages/app/hybrid is built with BASE_PATH=/downloads/<name> and copied to
+docs/downloads/<name>.
 
 Options:
-  --app, -a      Build hieudoanm app and copy out/ -> docs/ (default)
-  --resume, -r   Rebuild resume app with BASE_PATH=/downloads/resume and
-                 copy out/ -> docs/downloads/resume
-  --all          Do both --app and --resume
-  --help, -h     Show this help
+  --all           Build and copy all apps in packages/app/hybrid (default)
+  --app, -a       Only build/copy the hieudoanm app to docs/
+  --name <app>    Only build/copy a specific app in packages/app/hybrid
+  --help, -h      Show this help
 EOF
 }
 
-build_and_copy() {
-    local app_dir="$1"
-    local out_dir="$2"
-    local dest_dir="$3"
-    local base_path="${4:-}"
+build_app() {
+    local app_name="$1"
+    local app_dir="$HYBRID_DIR/$app_name"
+
+    if [[ ! -f "$app_dir/package.json" ]] || [[ ! -f "$app_dir/next.config.ts" ]]; then
+        echo "Skipping $app_name: not a Next.js app."
+        return
+    fi
+
+    local out_dir="$app_dir/out"
+    local base_path=""
+    local dest_dir="$DOCS_DIR"
+
+    if [[ "$app_name" != "$ROOT_APP" ]]; then
+        base_path="/downloads/$app_name"
+        dest_dir="$DOCS_DIR/downloads/$app_name"
+    fi
 
     if [[ -n "$base_path" ]]; then
-        echo "Rebuilding in $app_dir with BASE_PATH=$base_path..."
+        echo "Rebuilding $app_name with BASE_PATH=$base_path..."
         (
             cd "$app_dir"
             env BASE_PATH="$base_path" pnpm run build
@@ -67,33 +77,47 @@ build_and_copy() {
     touch "$dest_dir/.nojekyll"
 }
 
+build_all_apps() {
+    for app_dir in "$HYBRID_DIR"/*/; do
+        local app_name="${app_dir%/}"
+        app_name="${app_name##*/}"
+        build_app "$app_name"
+    done
+}
+
 require pnpm
 
-do_app=false
-do_resume=false
+do_all=false
 have_flag=false
+app_names=()
 
-for arg in "$@"; do
-    case "$arg" in
-        --app | -a)
-            do_app=true
-            have_flag=true
-            ;;
-        --resume | -r)
-            do_resume=true
-            have_flag=true
-            ;;
+while [[ $# -gt 0 ]]; do
+    case "$1" in
         --all)
-            do_app=true
-            do_resume=true
+            do_all=true
             have_flag=true
+            shift
+            ;;
+        --app | -a)
+            app_names+=("$ROOT_APP")
+            have_flag=true
+            shift
+            ;;
+        --name)
+            if [[ $# -lt 2 ]]; then
+                echo "Error: --name requires an app name." >&2
+                exit 1
+            fi
+            app_names+=("$2")
+            have_flag=true
+            shift 2
             ;;
         --help | -h)
             usage
             exit 0
             ;;
         *)
-            echo "Unknown option: $arg" >&2
+            echo "Unknown option: $1" >&2
             usage >&2
             exit 1
             ;;
@@ -101,15 +125,15 @@ for arg in "$@"; do
 done
 
 if [[ "$have_flag" == false ]]; then
-    do_app=true
+    do_all=true
 fi
 
-if [[ "$do_app" == true ]]; then
-    build_and_copy "$APP_DIR" "$APP_OUT_DIR" "$DOCS_DIR"
-fi
-
-if [[ "$do_resume" == true ]]; then
-    build_and_copy "$RESUME_DIR" "$RESUME_OUT_DIR" "$RESUME_DEST_DIR" "$RESUME_BASE_PATH"
+if [[ "$do_all" == true ]]; then
+    build_all_apps
+elif [[ ${#app_names[@]} -gt 0 ]]; then
+    for app_name in "${app_names[@]}"; do
+        build_app "$app_name"
+    done
 fi
 
 echo "Done."
