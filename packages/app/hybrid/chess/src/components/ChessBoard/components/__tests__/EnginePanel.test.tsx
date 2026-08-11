@@ -7,7 +7,19 @@ const baseProps = {
   whiteEval: null,
   evalPercent: 50,
   statusLabel: null as string | null,
+  depth: 15,
+  side: 'white' as const,
+  odds: 'none' as const,
+  lines: null,
+  linesBusy: false,
+  graphPoints: null,
+  graphBusy: false,
   onModeSwitch: jest.fn(),
+  onDepthChange: jest.fn(),
+  onSideChange: jest.fn(),
+  onOddsChange: jest.fn(),
+  onAnalyzeLines: jest.fn(),
+  onComputeGraph: jest.fn(),
 };
 
 describe('EnginePanel', () => {
@@ -101,8 +113,8 @@ describe('EnginePanel', () => {
 
   it('renders Black and White labels', () => {
     render(<EnginePanel {...baseProps} />);
-    expect(screen.getByText('Black')).toBeInTheDocument();
-    expect(screen.getByText('White')).toBeInTheDocument();
+    expect(screen.getByText('Black', { selector: 'span' })).toBeInTheDocument();
+    expect(screen.getByText('White', { selector: 'span' })).toBeInTheDocument();
   });
 
   it('to match snapshot', () => {

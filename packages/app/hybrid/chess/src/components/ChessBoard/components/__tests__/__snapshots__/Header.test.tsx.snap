@@ -48,6 +48,67 @@ exports[`Header to match snapshot 1`] = `
     </div>
   </div>
   <div
+    class="flex flex-wrap items-center gap-1"
+  >
+    <button
+      class="btn btn-ghost btn-xs "
+      title="Flip board"
+    >
+      ⇅ Flip
+    </button>
+    <button
+      class="btn btn-ghost btn-xs btn-active"
+      title="Coordinates"
+    >
+      ▦ Coords
+    </button>
+    <select
+      class="select select-xs"
+      title="Board theme"
+    >
+      <option
+        value="dark"
+      >
+        Dark
+      </option>
+      <option
+        value="green"
+      >
+        Green
+      </option>
+      <option
+        value="blue"
+      >
+        Blue
+      </option>
+    </select>
+    <select
+      class="select select-xs"
+      title="Piece set"
+    >
+      <option
+        value="standard"
+      >
+        ♟
+         
+        standard
+      </option>
+      <option
+        value="unicode"
+      >
+        ♜
+         
+        unicode
+      </option>
+    </select>
+    <button
+      class="btn btn-ghost btn-xs"
+      title="Copy link"
+    >
+      🔗 Share
+    </button>
+  </div>
+  <div
     class="tabs tabs-boxed w-full"
     role="tablist"
   >

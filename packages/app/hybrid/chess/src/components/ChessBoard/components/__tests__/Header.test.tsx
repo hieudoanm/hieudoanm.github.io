@@ -15,10 +15,19 @@ const baseProps = {
   panel: 'position' as SidePanel,
   boardMode: 'explore' as BoardMode,
   ecoOpening: undefined,
+  flipped: false,
+  showNotation: true,
+  theme: 'dark' as const,
+  pieceSet: 'standard' as const,
   on960IdChange: jest.fn(),
   onRandomize: jest.fn(),
   onReset: jest.fn(),
   onModeSwitch: jest.fn(),
+  onFlip: jest.fn(),
+  onToggleNotation: jest.fn(),
+  onThemeChange: jest.fn(),
+  onPieceSetChange: jest.fn(),
+  onCopyLink: jest.fn(),
 };
 
 describe('Header', () => {

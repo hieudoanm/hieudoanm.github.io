@@ -11,11 +11,14 @@ const makeDeps = (overrides: Partial<Record<string, unknown>> = {}) => ({
   boardMode: 'explore',
   fen: '',
   thinking: false,
+  depth: 15,
+  humanSide: 'w',
   gameRef: { current: makeGame() },
   dispatch: jest.fn(),
   analyze: jest.fn(),
   bestMove: null,
   evaluation: null,
+  onEngineMove: jest.fn(),
   ...overrides,
 });
 
@@ -141,7 +144,7 @@ describe('useEngineIntegration', () => {
       ],
       [
         { gameRef: { current: makeGame({ turn: 'w' }) }, boardMode: 'play' },
-        'Your turn (White)',
+        'Your turn',
       ],
       [
         { gameRef: { current: makeGame({ turn: 'b' }) }, boardMode: 'play' },

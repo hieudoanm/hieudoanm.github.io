@@ -50,7 +50,18 @@ export const toPgnFromState = (game) => `pgn-${game.turn}`;
 
 export const toSquareFromName = (name) => (name.length === 2 ? name : null);
 
+export const toSquareName = (sq) => (typeof sq === 'number' ? `sq${sq}` : sq);
+
 export const getLegalMoves = () => [{ from: 'e2', to: 'e4' }];
+
+export const toSan = () => 'e4';
+
+export const findBestMove = () => ({
+  move: { from: 'e2', to: 'e4' },
+  score: 0,
+  depth: 1,
+  nodes: 1,
+});
 
 export const calculateRating = () => 1020;
 export const calculatePerformance = () => 1850;

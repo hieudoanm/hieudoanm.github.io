@@ -71,6 +71,29 @@ export type {
   Game,
   PerformanceInput,
 } from './rating/rating';
+export {
+  expectedScore,
+  drawPercent,
+  winProbability,
+  kFactorFide,
+  kFactorUsfc,
+  calculateUsfc,
+  dwzIndex,
+  calculateDwz,
+  glicko2,
+  winPercentFromCentipawns,
+  calculateAccuracy,
+  classifyMove,
+} from './rating/systems';
+export type { Glicko2Game, MoveClass } from './rating/systems';
+export {
+  roundRobinSchedule,
+  swissPair,
+  calculateBuchholz,
+  calculateSonnebornBerger,
+  calculateStandings,
+} from './pairing/pairing';
+export type { PairingPlayer, RoundRobinRound } from './pairing/pairing';
 export { chess960 } from './variants/chess960';
 export { evaluateBoard } from './engine/evaluate';
 export { findBestMove } from './engine/search';

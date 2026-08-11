@@ -2,17 +2,29 @@ import type { ChangeEvent, FC } from 'react';
 import { range } from '@lodash/ts';
 import { padZero } from '@lodashx/ts';
 import type { Opening } from '../../../lib/chess/openings';
-import type { BoardMode, SidePanel } from '../types';
+import { BOARD_THEME_OPTIONS } from '../constants';
+import { PIECE_SET_KEYS } from '../pieceSets';
+import type { PieceSetKey } from '../pieceSets';
+import type { BoardMode, BoardTheme, SidePanel } from '../types';
 
 interface HeaderProps {
   positionId: number;
   panel: SidePanel;
   boardMode: BoardMode;
   ecoOpening: Opening | undefined;
+  flipped: boolean;
+  showNotation: boolean;
+  theme: BoardTheme;
+  pieceSet: PieceSetKey;
   on960IdChange: (e: ChangeEvent<HTMLSelectElement>) => void;
   onRandomize: () => void;
   onReset: () => void;
   onModeSwitch: (mode: BoardMode) => void;
+  onFlip: () => void;
+  onToggleNotation: () => void;
+  onThemeChange: (theme: BoardTheme) => void;
+  onPieceSetChange: (set: PieceSetKey) => void;
+  onCopyLink: () => void;
 }
 
 export const Header: FC<HeaderProps> = ({
@@ -20,10 +32,19 @@ export const Header: FC<HeaderProps> = ({
   panel,
   boardMode,
   ecoOpening,
+  flipped,
+  showNotation,
+  theme,
+  pieceSet,
   on960IdChange,
   onRandomize,
   onReset,
   onModeSwitch,
+  onFlip,
+  onToggleNotation,
+  onThemeChange,
+  onPieceSetChange,
+  onCopyLink,
 }) => {
   return (
     <>
@@ -55,6 +76,48 @@ export const Header: FC<HeaderProps> = ({
             🔄
           </button>
         </div>
+      </div>
+      <div className="flex flex-wrap items-center gap-1">
+        <button
+          className={`btn btn-ghost btn-xs ${flipped ? 'btn-active' : ''}`}
+          title="Flip board"
+          onClick={onFlip}>
+          ⇅ Flip
+        </button>
+        <button
+          className={`btn btn-ghost btn-xs ${showNotation ? 'btn-active' : ''}`}
+          title="Coordinates"
+          onClick={onToggleNotation}>
+          ▦ Coords
+        </button>
+        <select
+          className="select select-xs"
+          title="Board theme"
+          value={theme}
+          onChange={(e) => onThemeChange(e.target.value as BoardTheme)}>
+          {BOARD_THEME_OPTIONS.map((opt) => (
+            <option key={opt.value} value={opt.value}>
+              {opt.label}
+            </option>
+          ))}
+        </select>
+        <select
+          className="select select-xs"
+          title="Piece set"
+          value={pieceSet}
+          onChange={(e) => onPieceSetChange(e.target.value as PieceSetKey)}>
+          {PIECE_SET_KEYS.map((key) => (
+            <option key={key} value={key}>
+              {key === 'standard' ? '♟' : '♜'} {key}
+            </option>
+          ))}
+        </select>
+        <button
+          className="btn btn-ghost btn-xs"
+          title="Copy link"
+          onClick={onCopyLink}>
+          🔗 Share
+        </button>
       </div>
       {panel !== 'openings' && (
         <div role="tablist" className="tabs tabs-boxed w-full">

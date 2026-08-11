@@ -1,13 +1,45 @@
-import type { FC, RefObject } from 'react';
-import type { DraggingPieceDataType, PieceDataType } from 'react-chessboard';
+import type { FC } from 'react';
+import { useMemo } from 'react';
+import type { CSSProperties, RefObject } from 'react';
+import type {
+  DraggingPieceDataType,
+  PieceDataType,
+  SquareHandlerArgs,
+} from 'react-chessboard';
 import { Chessboard } from '../../organisms/chess/ChessBoard';
-import type { BoardMode, SidePanel } from '../types';
+import { BOARD_THEMES } from '../constants';
+import type { BoardMode, BoardTheme, MoveRecord, SidePanel } from '../types';
+import type { PieceSetKey } from '../pieceSets';
+import { MovesPanel } from './MovesPanel';
+
+interface BoardPrefs {
+  flipped: boolean;
+  theme: BoardTheme;
+  pieceSet: PieceSetKey;
+  showNotation: boolean;
+}
+
+interface BoardSelection {
+  selectedSquare: string | null;
+  legalTargets: string[];
+  onSquareClick: (args: SquareHandlerArgs) => void;
+}
+
+interface BoardHistory {
+  moves: MoveRecord[];
+  cursor: number;
+  onUndo: () => void;
+  onRedo: () => void;
+  onJumpTo: (index: number) => void;
+}
 
 interface BoardSectionProps {
   boardRef: RefObject<HTMLDivElement | null>;
   displayFen: string;
   panel: SidePanel;
   boardMode: BoardMode;
+  setupMode: boolean;
+  keyboardBuffer: string;
   evalPercent: number;
   evalLabel: string;
   statusLabel: string | null;
@@ -29,13 +61,24 @@ interface BoardSectionProps {
   onEcoNext: () => void;
   onEcoStart: () => void;
   onEcoEnd: () => void;
+  board: BoardPrefs;
+  selection: BoardSelection;
+  history: BoardHistory;
 }
+
+const squareColor = (square: string, theme: BoardTheme): string => {
+  const colors = BOARD_THEMES[theme];
+  const light = (square.charCodeAt(0) - 97 + Number(square[1])) % 2 === 1;
+  return light ? colors.light : colors.dark;
+};
 
 export const BoardSection: FC<BoardSectionProps> = ({
   boardRef,
   displayFen,
   panel,
   boardMode,
+  setupMode,
+  keyboardBuffer,
   evalPercent,
   evalLabel,
   statusLabel,
@@ -49,16 +92,46 @@ export const BoardSection: FC<BoardSectionProps> = ({
   onEcoNext,
   onEcoStart,
   onEcoEnd,
+  board,
+  selection,
+  history,
 }) => {
+  const squareStyles = useMemo(() => {
+    const styles: Record<string, CSSProperties> = {};
+    if (setupMode) return styles;
+    if (selection.selectedSquare) {
+      styles[selection.selectedSquare] = {
+        boxShadow: 'inset 0 0 0 3px rgba(255, 200, 0, 0.85)',
+      };
+      for (const sq of selection.legalTargets) {
+        styles[sq] = {
+          background: `radial-gradient(circle, rgba(0,0,0,0.3) 24%, transparent 25%), ${squareColor(sq, board.theme)}`,
+        };
+      }
+    }
+    return styles;
+  }, [
+    setupMode,
+    selection.selectedSquare,
+    selection.legalTargets,
+    board.theme,
+  ]);
+
   return (
     <>
       <div className="flex items-stretch gap-2">
         <div className="border-base-content/20 flex-1 overflow-hidden rounded border">
           <Chessboard
-            allowDragging={panel !== 'openings'}
+            allowDragging={panel !== 'openings' && !setupMode}
             position={displayFen}
             onPieceDrop={onPieceDrop}
             canDragPiece={canDragPiece}
+            onSquareClick={selection.onSquareClick}
+            squareStyles={squareStyles}
+            boardOrientation={board.flipped ? 'black' : 'white'}
+            showNotation={board.showNotation}
+            theme={board.theme}
+            pieceSet={board.pieceSet}
           />
         </div>
         <div
@@ -78,6 +151,20 @@ export const BoardSection: FC<BoardSectionProps> = ({
           </div>
         </div>
       </div>
+      {panel !== 'openings' && !setupMode && history.moves.length > 0 && (
+        <MovesPanel
+          moves={history.moves}
+          cursor={history.cursor}
+          onJumpTo={history.onJumpTo}
+          onUndo={history.onUndo}
+          onRedo={history.onRedo}
+        />
+      )}
+      {keyboardBuffer && panel !== 'openings' && (
+        <p className="text-base-content/60 text-center font-mono text-xs">
+          ⌨ {keyboardBuffer}
+        </p>
+      )}
       {panel === 'openings' && ecoTotal > 0 && (
         <div className="flex flex-col gap-2">
           <div className="bg-base-300 h-1.5 w-full overflow-hidden rounded-full">

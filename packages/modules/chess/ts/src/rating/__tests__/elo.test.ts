@@ -162,7 +162,7 @@ describe('Elo calculation', () => {
         lessThan30Games: false,
         overRating2400: false,
         overAge18: true,
-        score: 999 as Score,
+        score: 999 as unknown as Score,
         timeClass: TimeClass.CLASSICAL,
       });
 

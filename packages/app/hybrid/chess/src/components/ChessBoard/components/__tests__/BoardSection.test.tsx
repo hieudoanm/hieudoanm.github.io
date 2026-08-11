@@ -12,6 +12,8 @@ const baseProps = {
   displayFen: 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1',
   panel: 'position' as SidePanel,
   boardMode: 'explore' as BoardMode,
+  setupMode: false,
+  keyboardBuffer: '',
   evalPercent: 50,
   evalLabel: '+0.00',
   statusLabel: null as string | null,
@@ -25,6 +27,24 @@ const baseProps = {
   onEcoNext: jest.fn(),
   onEcoStart: jest.fn(),
   onEcoEnd: jest.fn(),
+  board: {
+    flipped: false,
+    theme: 'dark' as const,
+    pieceSet: 'standard' as const,
+    showNotation: true,
+  },
+  selection: {
+    selectedSquare: null,
+    legalTargets: [],
+    onSquareClick: jest.fn(),
+  },
+  history: {
+    moves: [],
+    cursor: -1,
+    onUndo: jest.fn(),
+    onRedo: jest.fn(),
+    onJumpTo: jest.fn(),
+  },
 };
 
 describe('BoardSection', () => {
