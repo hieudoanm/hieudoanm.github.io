@@ -67,8 +67,8 @@ describe('ChessClock', () => {
       .getAllByRole('button')
       .find((b) => b.innerHTML.includes('svg'));
     if (gear) fireEvent.click(gear);
-    expect(screen.getByText('Minutes:')).toBeInTheDocument();
-    expect(screen.getByText('Increment:')).toBeInTheDocument();
+    expect(screen.getByText('P1 min')).toBeInTheDocument();
+    expect(screen.getByText('Increment')).toBeInTheDocument();
   });
 
   it('applies custom preset via edit mode', () => {
@@ -77,20 +77,17 @@ describe('ChessClock', () => {
       .getAllByRole('button')
       .find((b) => b.innerHTML.includes('svg'));
     if (gear) fireEvent.click(gear);
-    const minuteInput = screen.getByDisplayValue('10');
+    const minuteInput = screen.getAllByDisplayValue('10')[0];
     fireEvent.change(minuteInput, { target: { value: '5' } });
-    const incInputs = screen.getAllByRole('spinbutton');
-    const incInput = incInputs.find((i) => Number(i.getAttribute('min')) === 0);
-    if (incInput) fireEvent.change(incInput, { target: { value: '5' } });
     fireEvent.click(screen.getByText('Set'));
-    expect(screen.queryByText('Minutes:')).not.toBeInTheDocument();
+    expect(screen.queryByText('P1 min')).not.toBeInTheDocument();
   });
 
   it('starts game when a side is pressed in preview mode', () => {
     render(<ChessClock onClose={onClose} />);
     const btn = getSideButton('White');
     if (btn) fireEvent.click(btn);
-    const moves = screen.getAllByText(/moves/);
+    const moves = screen.getAllByText(/· \d+ moves/);
     expect(moves.length).toBe(2);
   });
 

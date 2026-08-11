@@ -21,12 +21,16 @@ export const initClock = (
   delayType: p.delayType,
   delaySeconds: p.delaySeconds,
   increment: p.increment,
+  movesToGo: p.movesToGo,
+  extraTime: p.extraTime,
+  phase2: false,
   ticker: null,
   p1Moves: 0,
   p2Moves: 0,
   p1Delay: 0,
   p2Delay: 0,
   hist: [],
+  movesLog: [],
   startTime: null,
   endTime: null,
   winner: null,
@@ -38,6 +42,19 @@ export const delayFor = (side: ChessClockSide, state: ClockState): number => {
   if (state.delayType === 'delay') return delay;
   if (state.delayType === 'bronstein') return Math.min(delay, state[side]);
   return 0;
+};
+
+export const applyMovesToGo = (state: ClockState): ClockState => {
+  if (state.movesToGo <= 0 || state.phase2) return state;
+  if (state.p1Moves + state.p2Moves < state.movesToGo) return state;
+  const extra = state.extraTime;
+  return {
+    ...state,
+    player1: state.player1 + extra,
+    player2: state.player2 + extra,
+    phase2: true,
+    hist: [...state.hist, `Flag: +${fmt(extra)}`],
+  };
 };
 
 export const formatElapsed = (start: number | null): string =>

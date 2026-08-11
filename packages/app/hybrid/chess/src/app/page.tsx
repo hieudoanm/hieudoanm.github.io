@@ -22,6 +22,26 @@ const tools: { href: string; title: string; description: string }[] = [
     title: 'Chess Stats',
     description: 'Compare Chess.com stats against titled players',
   },
+  {
+    href: '/review',
+    title: 'Game Review',
+    description: 'Analyze a PGN with engine accuracy and missed mates',
+  },
+  {
+    href: '/library',
+    title: 'Game Library',
+    description: 'Store, search and share games, with an opening explorer',
+  },
+  {
+    href: '/trainer',
+    title: 'Trainer',
+    description: 'Tactics, endgames, mates, openings, coordinates and variants',
+  },
+  {
+    href: '/pairing',
+    title: 'Pairing',
+    description: 'Round-robin and Swiss pairings with tiebreaks',
+  },
 ];
 
 const HomePage: FC = () => (

@@ -1,6 +1,6 @@
 import { ONE_SECOND } from '../../constants';
 import { ChessClockSide, ClockState, DelayType } from '../../types';
-import { delayFor, fmt, formatElapsed, initClock, toTime } from '../clock';
+import { applyMovesToGo, delayFor, fmt, formatElapsed, initClock, toTime } from '../clock';
 
 beforeEach(() => {
   jest.spyOn(Date, 'now').mockReturnValue(1000000);
@@ -51,6 +51,8 @@ describe('initClock', () => {
       delayType: 'fischer' as DelayType,
       delaySeconds: 5,
       increment: 3,
+      movesToGo: 40,
+      extraTime: 5 * 60 * ONE_SECOND,
     };
     const side: ChessClockSide = 'player2';
     const state = initClock(preset, side);
@@ -61,13 +63,70 @@ describe('initClock', () => {
     expect(state.delayType).toBe('fischer');
     expect(state.delaySeconds).toBe(5);
     expect(state.increment).toBe(3);
+    expect(state.movesToGo).toBe(40);
+    expect(state.extraTime).toBe(5 * 60 * ONE_SECOND);
+    expect(state.phase2).toBe(false);
     expect(state.ticker).toBeNull();
     expect(state.p1Moves).toBe(0);
     expect(state.p2Moves).toBe(0);
     expect(state.hist).toEqual([]);
+    expect(state.movesLog).toEqual([]);
     expect(state.startTime).toBeNull();
     expect(state.endTime).toBeNull();
     expect(state.winner).toBeNull();
+  });
+});
+
+describe('applyMovesToGo', () => {
+  const base = (over: Partial<ClockState>): ClockState => ({
+    player1: 600000,
+    player2: 600000,
+    turn: 'player1',
+    stage: 'running',
+    delayType: 'none',
+    delaySeconds: 0,
+    increment: 0,
+    movesToGo: 0,
+    extraTime: 0,
+    phase2: false,
+    ticker: null,
+    p1Moves: 0,
+    p2Moves: 0,
+    p1Delay: 0,
+    p2Delay: 0,
+    hist: [],
+    movesLog: [],
+    startTime: null,
+    endTime: null,
+    winner: null,
+    ...over,
+  });
+
+  it('adds extra time once the moves-to-go total is reached', () => {
+    const state = applyMovesToGo(
+      base({ movesToGo: 4, extraTime: 300000, p1Moves: 2, p2Moves: 2 })
+    );
+    expect(state.player1).toBe(900000);
+    expect(state.player2).toBe(900000);
+    expect(state.phase2).toBe(true);
+    expect(state.hist.at(-1)).toContain('Flag');
+  });
+
+  it('does nothing before the threshold', () => {
+    const state = applyMovesToGo(
+      base({ movesToGo: 4, extraTime: 300000, p1Moves: 1, p2Moves: 1 })
+    );
+    expect(state.phase2).toBe(false);
+    expect(state.player1).toBe(600000);
+  });
+
+  it('does nothing when movesToGo is 0 or already applied', () => {
+    const none = applyMovesToGo(base({ movesToGo: 0, extraTime: 300000 }));
+    expect(none.phase2).toBe(false);
+    const done = applyMovesToGo(
+      base({ movesToGo: 2, extraTime: 300000, p1Moves: 1, p2Moves: 1, phase2: true })
+    );
+    expect(done.player1).toBe(600000);
   });
 });
 
@@ -80,12 +139,16 @@ describe('delayFor', () => {
     delayType: 'delay',
     delaySeconds: 5,
     increment: 0,
+    movesToGo: 0,
+    extraTime: 0,
+    phase2: false,
     ticker: null,
     p1Moves: 0,
     p2Moves: 0,
     p1Delay: 0,
     p2Delay: 0,
     hist: [],
+    movesLog: [],
     startTime: null,
     endTime: null,
     winner: null,

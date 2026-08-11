@@ -36,29 +36,29 @@
 - [x] Keyboard move entry and navigation (e.g. `e4`, arrows, Ctrl+Z)
 - [x] Share position / game as a URL (lichess-style link)
 
-## Phase 3 — Game Review
+## Phase 3 — Game Review (Shipped)
 
 > Post-game insight: classify moves, report accuracy, and point out missed
 > opportunities.
 
-- [ ] Standalone analysis of any PGN (both sides, engine on demand)
-- [ ] Move classification: book, best, good, inaccuracy, mistake, blunder
-- [ ] Accuracy % and game summary (best/worst moves)
-- [ ] Missed win / missed mate hints
-- [ ] Hanging-piece and loose-endgame blunder checks
+- [x] Standalone analysis of any PGN (both sides, engine on demand)
+- [x] Move classification: book, best, good, inaccuracy, mistake, blunder
+- [x] Accuracy % and game summary (best/worst moves)
+- [x] Missed win / missed mate hints
+- [x] Hanging-piece and loose-endgame blunder checks
 
-## Phase 4 — Trainers
+## Phase 4 — Trainers (Shipped)
 
 > Practice tools built on `@chess/ts` search + perft and the ECO dataset.
 
-- [ ] Tactics trainer — puzzle queue scaled to the user's rating
-- [ ] Endgame trainer — basic mates (KQ, KR, KBB, KBN vs K), tablebase positions
-- [ ] Checkmate-in-N drills
-- [ ] Opening trainer — spaced repetition over the ECO browser data
-- [ ] Coordinates trainer — find and name squares fast
-- [ ] Perft / move-division validator (already available in `@chess/ts`)
+- [x] Tactics trainer — puzzle queue scaled to the user's rating
+- [x] Endgame trainer — basic mates (KQ, KR, KBB, KBN vs K), tablebase positions
+- [x] Checkmate-in-N drills
+- [x] Opening trainer — spaced repetition over the ECO browser data
+- [x] Coordinates trainer — find and name squares fast
+- [x] Perft / move-division validator (already available in `@chess/ts`)
 - [ ] Play vs computer with adaptive strength (auto-match rating)
-- [ ] Variants — bughouse, crazyhouse, three-check, horde (starter set)
+- [x] Variants — bughouse, crazyhouse, three-check, horde (starter set)
 
 ## Phase 5 — Game Library
 
