@@ -39,7 +39,7 @@ dependencies {
     runtimeOnly("io.jsonwebtoken:jjwt-jackson:0.13.0")
 
     // Logging
-    implementation("ch.qos.logback:logback-classic:1.6.1")
+    implementation("ch.qos.logback:logback-classic:1.6.2")
 
     // Testing
     testImplementation("io.ktor:ktor-server-test-host:$ktorVersion")
