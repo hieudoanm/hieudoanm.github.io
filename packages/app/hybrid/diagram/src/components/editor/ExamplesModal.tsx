@@ -65,7 +65,7 @@ const ExamplesModal: FC<ExamplesModalProps> = ({
         className="card bg-base-200 flex max-h-[90vh] w-full max-w-2xl flex-col shadow-2xl"
         onClick={(event) => event.stopPropagation()}
         role="dialog">
-        <div className="border-base-content/10 flex items-center gap-2 border-b p-3">
+        <div className="border-base-content/10 flex items-center justify-between gap-2 border-b p-3">
           <h2 className="text-lg font-semibold">Example diagrams</h2>
           <button
             className="btn btn-ghost btn-sm"

@@ -3,6 +3,17 @@ import { test, expect } from '@playwright/test';
 const canvas = (page: import('@playwright/test').Page) =>
   page.getByLabel('Diagram canvas');
 
+const fillSource = async (
+  page: import('@playwright/test').Page,
+  text: string
+): Promise<void> => {
+  const editor = page.getByLabel('Diagram source');
+  await expect(async () => {
+    await editor.fill(text);
+    await expect(editor).toHaveValue(text);
+  }).toPass();
+};
+
 test('renders the default diagram', async ({ page }) => {
   await page.goto('/');
 
@@ -15,8 +26,8 @@ test('renders the default diagram', async ({ page }) => {
 test('re-renders the canvas when the source text changes', async ({ page }) => {
   await page.goto('/');
 
-  const editor = page.getByLabel('Diagram source');
-  await editor.fill(
+  await fillSource(
+    page,
     'title: Demo\nnode a: Alpha\nnode b: Beta\nedge a -> b: go'
   );
   await expect(canvas(page).getByText('Demo')).toBeVisible();
@@ -29,7 +40,7 @@ test('re-renders the canvas when the source text changes', async ({ page }) => {
 test('shows parse errors for invalid lines', async ({ page }) => {
   await page.goto('/');
 
-  await page.getByLabel('Diagram source').fill('this is not a diagram line');
+  await fillSource(page, 'this is not a diagram line');
   await expect(page.getByText('Parse errors')).toBeVisible();
   await expect(page.getByLabel('Node count')).toHaveText('0 nodes');
 });
@@ -46,8 +57,8 @@ test('zooms the canvas in and out', async ({ page }) => {
 test('renders node icons on the canvas', async ({ page }) => {
   await page.goto('/');
 
-  const editor = page.getByLabel('Diagram source');
-  await editor.fill(
+  await fillSource(
+    page,
     'node db: PostgreSQL [cylinder, icon=database]\nnode api: API Server [icon=server]'
   );
   const icon = canvas(page).locator('svg[data-icon="database"]');

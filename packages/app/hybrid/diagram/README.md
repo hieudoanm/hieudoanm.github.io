@@ -11,8 +11,8 @@ app (static export / PWA), desktop app (Tauri), and mobile app (Tauri Mobile).
 - Deterministic auto-layout (layered ranking; same text → same diagram)
 - Shapes: rectangle, round, ellipse, diamond, cylinder
 - Tech icons on nodes: `node db: PostgreSQL [cylinder, icon=database]`
-- 8 built-in examples (Uber, Twitter, Netflix, Instagram, WhatsApp, Amazon, URL
-  shortener, Google Docs) with interview questions
+- 128 built-in examples (Uber, Twitter, YouTube, Slack, Stripe, Google Maps, and
+  more) with interview questions
 - Directed edges with labels; back edges (cycles) routed as curves
 - Diagram title support
 - Dark / light theme
@@ -43,8 +43,28 @@ edge api -> db: reads
 edge api -> auth: tokens
 ```
 
-Full reference: [`docs/SYNTAX.md`](./docs/SYNTAX.md). Example diagrams:
-[`docs/examples/`](./docs/examples/).
+Full reference: [`docs/SYNTAX.md`](./docs/SYNTAX.md). Read the example library
+at [`/posts/`](/posts/) or browse the sources in [`src/posts/`](./src/posts/).
+
+## Post library
+
+Each post in [`src/posts/`](./src/posts/) is a markdown file with YAML
+frontmatter:
+
+```yaml
+---
+title: Uber — Ride Hailing
+difficulty: easy # easy | medium | hard
+category: travel # one of the coarse buckets below
+author: Hieu Doan
+tags: delivery, matching, mobile, payments
+---
+```
+
+`difficulty` is derived from answer depth and diagram complexity; `category` is
+one of: `infrastructure`, `storage`, `security`, `search`, `ai`, `social`,
+`communication`, `media`, `productivity`, `ecommerce`, `finance`, `travel`,
+`gaming`.
 
 ## Development Commands
 
@@ -61,7 +81,8 @@ Full reference: [`docs/SYNTAX.md`](./docs/SYNTAX.md). Example diagrams:
 
 - [`docs/ARCHITECTURE.md`](./docs/ARCHITECTURE.md) — pipeline and module layout
 - [`docs/SYNTAX.md`](./docs/SYNTAX.md) — full DSL reference
-- [`docs/examples/`](./docs/examples/) — example diagrams + interview questions
+- [`/posts/`](/posts/) — 128 example interviews with questions, answers, and
+  diagrams (sources live in [`src/posts/`](./src/posts/))
 - [`docs/ROADMAP.md`](./docs/ROADMAP.md) — planned work
 - [`docs/CONTRIBUTING.md`](./docs/CONTRIBUTING.md) — development workflow
 - [`docs/PACKAGING.md`](./docs/PACKAGING.md) — shipping checklist

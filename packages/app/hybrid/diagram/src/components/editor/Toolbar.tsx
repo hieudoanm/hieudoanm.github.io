@@ -2,6 +2,7 @@
 
 import { FC } from 'react';
 import {
+  FiBookOpen,
   FiDownload,
   FiFilePlus,
   FiHelpCircle,
@@ -80,6 +81,12 @@ const Toolbar: FC<ToolbarProps> = ({
       title="Browse example diagrams">
       <FiLayout /> Examples
     </button>
+    <a
+      className={buttonClass}
+      href="/posts/"
+      title="Browse the example library">
+      <FiBookOpen /> Posts
+    </a>
     <span className="bg-base-300 mx-1 h-6 w-px" />
     <button
       className={buttonClass}

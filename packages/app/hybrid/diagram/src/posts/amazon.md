@@ -1,0 +1,126 @@
+---
+title: Amazon — Checkout
+difficulty: easy
+category: ecommerce
+author: Hieu Doan
+tags: ecommerce, payments
+---
+
+# Amazon — Checkout
+
+Product catalog, cart, inventory, orders, payments, idempotency.
+
+## Interview Questions
+
+- Design Amazon / an e-commerce checkout flow
+- How do you keep inventory consistent under high concurrency?
+- Design an order service with idempotent retries
+- How do you design a payment flow with exactly-once semantics?
+- How do you handle cart → order → payment failure recovery?
+
+## Answers
+
+### Q1. Design Amazon / an e-commerce checkout flow
+
+Model checkout as an order state machine rather than one monolithic call. Client
+→ API gateway → order service, which validates the cart, reserves inventory,
+computes totals, and creates an order in a pending state. The payment service
+charges the buyer (via a PSP) and the order moves to confirmed; only then is
+inventory decremented for real. The catalog and search are read paths served
+from cache; cart is a low-consistency, user-scoped store keyed by session/user
+ID. The whole flow is driven by durable, idempotent steps: each transition is
+retried via a workflow (e.g. Step Functions/Temporal style), so a crash between
+"payment charged" and "order confirmed" resumes from the recorded state instead
+of double-charging. Order data is written to an append-only orders store and
+read models (order history, seller views) are derived asynchronously.
+
+### Q2. How do you keep inventory consistent under high concurrency?
+
+The classic failure is overselling when many requests reserve the same SKU.
+Reserve inventory in an atomic store — Redis with a Lua-scripted decrement or a
+SQL `UPDATE ... SET qty = qty - ? WHERE sku = ? AND qty >= ?` guarded update —
+so the check-and-set is a single atomic operation, never read-then-write in app
+code. Treat reservations as short-lived holds with an expiry (e.g. 10 minutes)
+so abandoned checkouts release stock; only a confirmed payment converts a hold
+into a final decrement. For extremely hot SKUs (Flash sales), shard or segment
+the quantity into sub-buckets and later reconcile. Keep two notions separate:
+available-to-promise (reservable) versus on-hand quantity. Log every
+reservation/consumption as an immutable inventory event so you can audit and
+reconcile drift.
+
+### Q3. Design an order service with idempotent retries
+
+Clients retry when they see a timeout, so the order service must tolerate the
+same request arriving twice. Require an idempotency key (a client-generated
+UUID) for order creation and store it alongside the order with a unique
+constraint. On retry, look up the key first: if an order exists for it, return
+that order instead of creating a duplicate. Every downstream call (inventory
+reserve, payment, notifications) is also idempotent and tagged with the
+order/request ID, so retrying any step is safe. Steps should be modeled as a
+workflow with recorded state transitions (created → reserved → paid → confirmed)
+and a deterministic retry with backoff; a step that already succeeded is
+skipped, not re-run. This makes the whole order pipeline recoverable by
+re-drive: replay the state machine from its last committed transition.
+
+### Q4. How do you design a payment flow with exactly-once semantics?
+
+True exactly-once over a network is impossible to guarantee, so you design for
+exactly-once _effect_ by making payments idempotent. The client sends a unique
+`payment_id`; the payment service checks an idempotency store before charging
+the PSP and returns the stored result for repeat calls. The charge itself is
+created once with the PSP's own idempotency key. The money movement is recorded
+as immutable ledger entries (double-entry: debit buyer, credit seller) so a
+replayed event cannot double-credit. Delivery of the result (webhook, receipt)
+is at-least-once with a consumer-side dedupe by event ID. Handle the dangerous
+edge where the PSP returns a timeout after actually charging: reconcile with a
+reconciliation job / webhook that queries the PSP and updates the payment record
+to the true terminal state. Recording state _before_ side effects and making
+each side effect idempotent is what yields exactly-once behavior.
+
+### Q5. How do you handle cart → order → payment failure recovery?
+
+Treat the pipeline as a saga: a sequence of steps with compensating actions for
+each failure. Cart read → order created (pending) → inventory reserved → payment
+attempted → confirm. If payment fails, run the compensation: release the
+inventory hold (or let it expire) and mark the order `payment_failed` so the
+user can retry from a known state — never silently drop the order. If the
+process crashes mid-way, the order's persisted state lets a workflow worker
+resume the right next step: re-attempt payment if it never reached the PSP, or
+reconcile with the PSP if the result was ambiguous. Return a recoverable error
+code to the client (e.g. "payment timed out, retry safe") and keep the
+idempotency key so the retry does not duplicate. Finally, a periodic
+reconciliation job scans orders stuck in intermediate states and either
+completes or compensates them.
+
+## Source
+
+```text
+title: Amazon Checkout
+node client: Client [round, icon=browser]
+node cdn: CDN [ellipse, icon=cloud]
+node api: API Gateway [icon=server]
+node product: Product Service [icon=search]
+node cart: Cart Service [icon=file]
+node inventory: Inventory Service [icon=queue]
+node order: Order Service [icon=compute]
+node payment: Payment Service [icon=shield]
+node notify: Notifications [icon=mail]
+node search: Search Service [icon=search]
+node db: Orders DB [cylinder, icon=database]
+node cache: Catalog Cache [cylinder, icon=cache]
+
+edge client -> api: browse
+edge api -> search: query
+edge api -> product: details
+edge product -> cache: read / write
+edge client -> api: add to cart
+edge api -> cart: save
+edge client -> api: checkout
+edge api -> order: place order
+edge order -> inventory: reserve
+edge inventory -> order: ok / fail
+edge order -> payment: charge
+edge payment -> order: confirmation
+edge order -> db: persist
+edge order -> notify: email
+```

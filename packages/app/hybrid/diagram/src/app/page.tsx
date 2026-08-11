@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import DiagramApp from '@/components/editor/DiagramApp';
+import Editor from '@/components/editor/Editor';
 
-const HomePage: FC = () => <DiagramApp />;
+const HomePage: FC = () => <Editor />;
 
 export default HomePage;

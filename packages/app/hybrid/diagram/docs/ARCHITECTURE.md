@@ -26,7 +26,7 @@
 
 The editor operates on a plain-text description of the diagram:
 
-```
+```txt
 title: Web App Architecture
 node api: API Server [round, icon=server]
 node db: PostgreSQL [cylinder, icon=database]
@@ -45,7 +45,7 @@ See `docs/SYNTAX.md` for the full reference.
 The core is a pure, side-effect-free pipeline so every stage can be unit tested
 and the layout is deterministic:
 
-```
+```txt
 source text
    │  parseDiagram()        → Diagram + ParseError[]
    │
@@ -98,10 +98,11 @@ visually identical.
 
 ### `src/lib/examples.ts`
 
-Eight system-design examples (Uber, Twitter, Netflix, Instagram, WhatsApp,
-Amazon, URL shortener, Google Docs), each with interview questions and a `text`
-source that parses cleanly. Browsed from the searchable **Examples** modal
-(`ExamplesModal.tsx`) opened from the toolbar.
+Sixteen system-design examples (Uber, Twitter/X, Netflix, Instagram, WhatsApp,
+Amazon, URL shortener, Google Docs, Slack, Dropbox, Spotify, DoorDash, Stripe,
+web crawler, Airbnb, API rate limiter), each with interview questions and a
+`text` source that parses cleanly. Browsed from the searchable **Examples**
+modal (`ExamplesModal.tsx`) opened from the toolbar.
 
 ## Storage & State
 

@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import DiagramApp from '@/components/editor/DiagramApp';
+import Editor from '@/components/editor/Editor';
 import ErrorStrip from '@/components/editor/ErrorStrip';
 import HelpModal from '@/components/editor/HelpModal';
 import StatusBar from '@/components/editor/StatusBar';
@@ -55,11 +55,11 @@ describe('HelpModal', () => {
   });
 });
 
-describe('DiagramApp', () => {
+describe('Editor', () => {
   beforeEach(() => window.localStorage.clear());
 
   it('renders the default diagram and renders its nodes on the canvas', () => {
-    render(<DiagramApp />);
+    render(<Editor />);
     const editor = screen.getByLabelText(
       'Diagram source'
     ) as HTMLTextAreaElement;
@@ -70,7 +70,7 @@ describe('DiagramApp', () => {
   });
 
   it('re-renders the canvas as the source text changes', () => {
-    render(<DiagramApp />);
+    render(<Editor />);
     const editor = screen.getByLabelText('Diagram source');
     fireEvent.change(editor, {
       target: { value: 'node x: X\nnode y: Y\nedge x -> y' },
@@ -81,7 +81,7 @@ describe('DiagramApp', () => {
   });
 
   it('shows parse errors for broken lines', () => {
-    render(<DiagramApp />);
+    render(<Editor />);
     const editor = screen.getByLabelText('Diagram source');
     fireEvent.change(editor, { target: { value: 'garbage here' } });
     expect(screen.getByText('Parse errors')).toBeInTheDocument();
@@ -89,7 +89,7 @@ describe('DiagramApp', () => {
   });
 
   it('resets to the default diagram on New', () => {
-    render(<DiagramApp />);
+    render(<Editor />);
     const editor = screen.getByLabelText(
       'Diagram source'
     ) as HTMLTextAreaElement;
@@ -100,7 +100,7 @@ describe('DiagramApp', () => {
   });
 
   it('zooms the canvas in and out', () => {
-    render(<DiagramApp />);
+    render(<Editor />);
     fireEvent.click(screen.getByRole('button', { name: 'Zoom in' }));
     expect(screen.getByText('125%')).toBeInTheDocument();
     fireEvent.click(screen.getByRole('button', { name: 'Zoom out' }));
@@ -108,7 +108,7 @@ describe('DiagramApp', () => {
   });
 
   it('resets zoom with the reset button', () => {
-    render(<DiagramApp />);
+    render(<Editor />);
     fireEvent.click(screen.getByRole('button', { name: 'Zoom in' }));
     fireEvent.click(screen.getByRole('button', { name: 'Zoom in' }));
     expect(screen.getByText('150%')).toBeInTheDocument();
@@ -117,7 +117,7 @@ describe('DiagramApp', () => {
   });
 
   it('saves the diagram source', () => {
-    render(<DiagramApp />);
+    render(<Editor />);
     fireEvent.click(screen.getByRole('button', { name: 'Save' }));
     expect(mockDownloadDiagram).toHaveBeenCalledTimes(1);
     const [text, name] = mockDownloadDiagram.mock.calls[0];
@@ -126,14 +126,14 @@ describe('DiagramApp', () => {
   });
 
   it('exports the diagram as svg', () => {
-    render(<DiagramApp />);
+    render(<Editor />);
     fireEvent.click(screen.getByRole('button', { name: 'Export SVG' }));
     expect(mockDownloadSvg).toHaveBeenCalledTimes(1);
     expect(mockDownloadSvg.mock.calls[0][2]).toBe('Web App Architecture');
   });
 
   it('disables export when the diagram is empty', () => {
-    render(<DiagramApp />);
+    render(<Editor />);
     fireEvent.change(screen.getByLabelText('Diagram source'), {
       target: { value: 'title: Empty' },
     });
@@ -141,7 +141,7 @@ describe('DiagramApp', () => {
   });
 
   it('opens a diagram file into the editor', async () => {
-    render(<DiagramApp />);
+    render(<Editor />);
     const input = screen.getByLabelText(
       'Open diagram file'
     ) as HTMLInputElement;
@@ -155,7 +155,7 @@ describe('DiagramApp', () => {
   });
 
   it('opens and closes the help modal', () => {
-    render(<DiagramApp />);
+    render(<Editor />);
     fireEvent.click(screen.getByRole('button', { name: 'Help' }));
     expect(screen.getByText('Diagram syntax')).toBeInTheDocument();
     fireEvent.click(screen.getByRole('button', { name: 'Close help' }));
@@ -163,7 +163,7 @@ describe('DiagramApp', () => {
   });
 
   it('loads an example diagram from the examples modal', () => {
-    render(<DiagramApp />);
+    render(<Editor />);
     fireEvent.click(screen.getByRole('button', { name: 'Browse examples' }));
     fireEvent.click(screen.getByRole('button', { name: /Uber/ }));
     const editor = screen.getByLabelText(
@@ -179,7 +179,7 @@ describe('DiagramApp', () => {
   });
 
   it('searches and filters examples in the modal', () => {
-    render(<DiagramApp />);
+    render(<Editor />);
     fireEvent.click(screen.getByRole('button', { name: 'Browse examples' }));
     const search = screen.getByLabelText('Search examples');
     fireEvent.change(search, { target: { value: 'netflix' } });
@@ -190,7 +190,7 @@ describe('DiagramApp', () => {
   });
 
   it('closes the examples modal', () => {
-    render(<DiagramApp />);
+    render(<Editor />);
     fireEvent.click(screen.getByRole('button', { name: 'Browse examples' }));
     expect(screen.getByLabelText('Example diagrams')).toBeInTheDocument();
     fireEvent.click(screen.getByRole('button', { name: 'Close examples' }));
@@ -198,7 +198,7 @@ describe('DiagramApp', () => {
   });
 
   it('renders node icons on the canvas for the default diagram', () => {
-    render(<DiagramApp />);
+    render(<Editor />);
     const canvas = screen.getByLabelText('Diagram canvas');
     const svg = canvas.querySelector('svg')!;
     expect(svg.querySelector('svg[data-icon="browser"]')).not.toBeNull();

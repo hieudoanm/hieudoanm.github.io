@@ -5,7 +5,7 @@ jest.mock('next/font/google', () => ({
   JetBrains_Mono: jest.fn(() => ({ variable: '--font-mono' })),
 }));
 
-jest.mock('@/components/editor/DiagramApp', () => ({
+jest.mock('@/components/editor/Editor', () => ({
   __esModule: true,
   default: () => <div>diagram-app-mock</div>,
 }));
