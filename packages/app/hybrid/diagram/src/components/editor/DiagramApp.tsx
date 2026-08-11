@@ -23,7 +23,17 @@ const clampZoom = (zoom: number): number =>
   Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, zoom));
 
 const DiagramApp: FC = () => {
-  const { text, setText, parsed, reset, importText } = useDiagramState();
+  const {
+    text,
+    setText,
+    parsed,
+    reset,
+    importText,
+    undo,
+    redo,
+    canUndo,
+    canRedo,
+  } = useDiagramState();
   const { theme, toggleTheme } = useTheme();
   const fileInput = useRef<HTMLInputElement>(null);
   const [zoom, setZoom] = useState(1);
@@ -70,13 +80,17 @@ const DiagramApp: FC = () => {
     <div className="flex h-screen flex-col">
       <Toolbar
         canExport={canExport}
+        canRedo={canRedo}
+        canUndo={canUndo}
         onExamples={() => setExamplesOpen(true)}
         onExportSvg={handleExportSvg}
         onHelp={() => setHelpOpen(true)}
         onNew={reset}
         onOpen={handleOpen}
+        onRedo={redo}
         onSave={handleSave}
         onToggleTheme={toggleTheme}
+        onUndo={undo}
         onZoomIn={() => setZoom((current) => clampZoom(current + ZOOM_STEP))}
         onZoomOut={() => setZoom((current) => clampZoom(current - ZOOM_STEP))}
         onZoomReset={() => setZoom(1)}
@@ -97,7 +111,13 @@ const DiagramApp: FC = () => {
       {parsed.errors.length > 0 && <ErrorStrip errors={parsed.errors} />}
       <div className="flex min-h-0 flex-1">
         <div className="flex w-[44%] max-w-[52%] min-w-64">
-          <TextPane errors={parsed.errors} onChange={setText} text={text} />
+          <TextPane
+            errors={parsed.errors}
+            onChange={setText}
+            onRedo={redo}
+            onUndo={undo}
+            text={text}
+          />
         </div>
         <Canvas layout={layout} title={parsed.diagram.title} zoom={zoom} />
       </div>

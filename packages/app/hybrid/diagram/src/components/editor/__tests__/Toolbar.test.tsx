@@ -9,6 +9,10 @@ describe('Toolbar', () => {
     onExportSvg: jest.fn(),
     onExamples: jest.fn(),
     canExport: true,
+    canUndo: true,
+    canRedo: true,
+    onUndo: jest.fn(),
+    onRedo: jest.fn(),
     zoom: 1,
     onZoomIn: jest.fn(),
     onZoomOut: jest.fn(),
@@ -45,6 +49,20 @@ describe('Toolbar', () => {
   it('disables export when there is nothing to export', () => {
     render(<Toolbar {...base} canExport={false} />);
     expect(screen.getByRole('button', { name: 'Export SVG' })).toBeDisabled();
+  });
+
+  it('calls the undo and redo handlers', () => {
+    render(<Toolbar {...base} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Undo' }));
+    expect(base.onUndo).toHaveBeenCalled();
+    fireEvent.click(screen.getByRole('button', { name: 'Redo' }));
+    expect(base.onRedo).toHaveBeenCalled();
+  });
+
+  it('disables undo and redo when there is no history', () => {
+    render(<Toolbar {...base} canUndo={false} canRedo={false} />);
+    expect(screen.getByRole('button', { name: 'Undo' })).toBeDisabled();
+    expect(screen.getByRole('button', { name: 'Redo' })).toBeDisabled();
   });
 
   it('shows the current zoom percentage', () => {

@@ -287,4 +287,22 @@ describe('Editor', () => {
       '10 rows x 5 columns'
     );
   });
+
+  it('evaluates formulas and shows the computed result', async () => {
+    const user = userEvent.setup();
+    render(<Editor />);
+    await typeCell(user, 0, 0, '5');
+    await typeCell(user, 1, 0, '10');
+    await typeCell(user, 2, 0, '=SUM(A1:A2)');
+    expect(cellAt(2, 0)).toHaveTextContent('15');
+  });
+
+  it('shows the raw formula text while editing a formula cell', async () => {
+    const user = userEvent.setup();
+    render(<Editor />);
+    await typeCell(user, 0, 0, '=1+1');
+    expect(cellAt(0, 0)).toHaveTextContent('2');
+    await user.dblClick(cellAt(0, 0));
+    expect(screen.getByRole('textbox')).toHaveValue('=1+1');
+  });
 });

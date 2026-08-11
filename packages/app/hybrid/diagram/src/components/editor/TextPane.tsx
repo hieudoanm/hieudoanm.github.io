@@ -8,12 +8,20 @@ interface TextPaneProps {
   text: string;
   onChange: (value: string) => void;
   errors: ParseError[];
+  onUndo: () => void;
+  onRedo: () => void;
 }
 
 const lineClass =
   'flex h-6 items-center justify-end pr-2 text-xs text-base-content/40 select-none';
 
-const TextPane: FC<TextPaneProps> = ({ text, onChange, errors }) => {
+const TextPane: FC<TextPaneProps> = ({
+  text,
+  onChange,
+  errors,
+  onUndo,
+  onRedo,
+}) => {
   const gutterRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const lineCount = useMemo(() => text.split('\n').length, [text]);
@@ -42,6 +50,24 @@ const TextPane: FC<TextPaneProps> = ({ text, onChange, errors }) => {
     }
   };
 
+  const handleKeyDown = (
+    event: React.KeyboardEvent<HTMLTextAreaElement>
+  ): void => {
+    if (!(event.ctrlKey || event.metaKey)) return;
+    const key = event.key.toLowerCase();
+    if (key === 'z') {
+      event.preventDefault();
+      if (event.shiftKey) {
+        onRedo();
+      } else {
+        onUndo();
+      }
+    } else if (key === 'y') {
+      event.preventDefault();
+      onRedo();
+    }
+  };
+
   return (
     <div className="border-base-300 bg-base-100 flex w-full min-w-0 flex-col border-r">
       <div className="border-base-300 bg-base-200 flex items-center gap-2 border-b px-3 py-1.5">
@@ -63,6 +89,7 @@ const TextPane: FC<TextPaneProps> = ({ text, onChange, errors }) => {
           aria-label="Diagram source"
           className="min-h-0 flex-1 resize-none bg-transparent p-3 pt-3 font-mono text-[13px] leading-6 outline-none"
           onChange={(event) => onChange(event.target.value)}
+          onKeyDown={handleKeyDown}
           onScroll={handleScroll}
           spellCheck={false}
           value={text}

@@ -9,6 +9,7 @@ const config = {
   testEnvironment: 'jest-environment-jsdom',
   testPathIgnorePatterns: ['<rootDir>/e2e/'],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+  testTimeout: 30000,
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',

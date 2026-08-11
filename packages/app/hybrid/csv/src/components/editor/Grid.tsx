@@ -5,7 +5,13 @@ import Cell from './Cell';
 import { columnToLabel } from '@/lib/columns';
 import { isInSelection, samePosition } from '@/lib/selection';
 import { columnWidth, rowHeight } from '@/lib/workbook';
-import type { CellPosition, FindResult, Selection, Sheet } from '@/lib/types';
+import type {
+  CellPosition,
+  FindResult,
+  Grid as GridData,
+  Selection,
+  Sheet,
+} from '@/lib/types';
 
 const HEADER_HEIGHT = 28;
 const HEADER_WIDTH = 36;
@@ -14,6 +20,7 @@ const MIN_ROW_HEIGHT = 20;
 
 interface GridProps {
   sheet: Sheet;
+  displayGrid: GridData;
   selection: Selection;
   editing: CellPosition | null;
   editingValue: string;
@@ -42,6 +49,7 @@ const prefixSums = (sizes: number[]): number[] => {
 
 const Grid: FC<GridProps> = ({
   sheet,
+  displayGrid,
   selection,
   editing,
   editingValue,
@@ -270,7 +278,11 @@ const Grid: FC<GridProps> = ({
                   return (
                     <Cell
                       key={col}
-                      value={isEditing ? editingValue : value}
+                      value={
+                        isEditing
+                          ? editingValue
+                          : (displayGrid[row]?.[col] ?? value)
+                      }
                       isSelected={isInSelection(selection, row, col)}
                       isFocus={samePosition(selection.focus, position)}
                       isEditing={isEditing}

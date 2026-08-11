@@ -20,6 +20,7 @@ describe('Grid', () => {
     const sheet = buildSheet();
     return {
       sheet,
+      displayGrid: sheet.grid.map((row) => [...row]),
       selection: { anchor: { row: 0, col: 0 }, focus: { row: 0, col: 0 } },
       editing: null,
       editingValue: '',
@@ -150,5 +151,30 @@ describe('Grid', () => {
     window.dispatchEvent(pointer('pointermove', { clientY: 90 }));
     expect(props.onResizeRow).toHaveBeenCalledWith(0, 68);
     window.dispatchEvent(pointer('pointerup', {}));
+  });
+
+  it('shows the computed display value for formula cells', () => {
+    const sheet = buildSheet();
+    sheet.grid[0][0] = '=1+1';
+    const displayGrid = sheet.grid.map((row) => [...row]);
+    displayGrid[0][0] = '2';
+    render(<Grid {...baseProps({ sheet, displayGrid })} />);
+    expect(screen.getAllByRole('gridcell')[0]).toHaveTextContent('2');
+  });
+
+  it('shows the raw value while editing a formula cell', () => {
+    const sheet = buildSheet();
+    sheet.grid[0][0] = '=1+1';
+    const displayGrid = sheet.grid.map((row) => [...row]);
+    displayGrid[0][0] = '2';
+    render(
+      <Grid
+        {...baseProps({ sheet, displayGrid })}
+        editing={{ row: 0, col: 0 }}
+        editingValue="=1+1"
+      />
+    );
+    const input = screen.getByLabelText('Cell value') as HTMLInputElement;
+    expect(input.value).toBe('=1+1');
   });
 });

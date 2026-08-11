@@ -26,7 +26,7 @@
 - [x] Built-in tech icons on nodes (`[icon=database]`)
 - [x] Built-in example diagrams (Uber, Twitter, Netflix, Instagram, WhatsApp,
       Amazon, URL shortener, Google Docs) with interview questions
-- [ ] Undo / redo history
+- [x] Undo / redo history (toolbar + Ctrl/Cmd+Z, Ctrl/Cmd+Y, Ctrl/Cmd+Shift+Z)
 - [ ] Click-to-select and drag nodes on the canvas
 - [ ] Undirected edges (`--`) and self-loops
 - [ ] Ranked layout hints (`node x: X [rank]`) for fine control

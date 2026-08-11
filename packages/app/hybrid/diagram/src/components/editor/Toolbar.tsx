@@ -11,6 +11,8 @@ import {
   FiMinus,
   FiMoon,
   FiPlus,
+  FiRotateCcw,
+  FiRotateCw,
   FiSun,
   FiUpload,
 } from 'react-icons/fi';
@@ -23,6 +25,10 @@ interface ToolbarProps {
   onExportSvg: () => void;
   onExamples: () => void;
   canExport: boolean;
+  canUndo: boolean;
+  canRedo: boolean;
+  onUndo: () => void;
+  onRedo: () => void;
   zoom: number;
   onZoomIn: () => void;
   onZoomOut: () => void;
@@ -41,6 +47,10 @@ const Toolbar: FC<ToolbarProps> = ({
   onExportSvg,
   onExamples,
   canExport,
+  canUndo,
+  canRedo,
+  onUndo,
+  onRedo,
   zoom,
   onZoomIn,
   onZoomOut,
@@ -69,6 +79,23 @@ const Toolbar: FC<ToolbarProps> = ({
       aria-label="Browse examples"
       title="Browse example diagrams">
       <FiLayout /> Examples
+    </button>
+    <span className="bg-base-300 mx-1 h-6 w-px" />
+    <button
+      className={buttonClass}
+      disabled={!canUndo}
+      onClick={onUndo}
+      aria-label="Undo"
+      title="Undo (Ctrl+Z)">
+      <FiRotateCcw />
+    </button>
+    <button
+      className={buttonClass}
+      disabled={!canRedo}
+      onClick={onRedo}
+      aria-label="Redo"
+      title="Redo (Ctrl+Y)">
+      <FiRotateCw />
     </button>
     <span className="bg-base-300 mx-1 h-6 w-px" />
     <button className={buttonClass} onClick={onZoomOut} aria-label="Zoom out">

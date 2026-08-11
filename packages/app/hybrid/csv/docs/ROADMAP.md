@@ -31,7 +31,8 @@
 
 - [x] Cell ranges and multi-cell selection (drag + Shift+arrows)
 - [x] Copy / paste between cells (clipboard, TSV-delimited)
-- [ ] Formula support (`=SUM(A1:B2)`, `=AVG`, `=COUNT`, ...)
+- [x] Formula support (`=SUM(A1:B2)`, `=AVG`, `=COUNT`, ...) with ranges,
+      cell references, arithmetic, `MIN`/`MAX`, cycle detection
 - [ ] Number formatting and alignment
 - [ ] Auto-fill drag handle
 - [x] Find & replace across the grid (Ctrl+F, match highlighting)

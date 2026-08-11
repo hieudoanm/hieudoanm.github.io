@@ -33,14 +33,12 @@ describe('HomePage', () => {
         <HomePage />
       </ThemeEditorLayout>
     );
-    expect(screen.getByRole('button', { name: 'Components' })).toHaveClass(
+    expect(screen.getByRole('tab', { name: 'Atoms' })).toHaveClass(
       'tab-active'
     );
-    expect(screen.getByRole('link', { name: 'Color Palette' })).toHaveAttribute(
-      'href',
-      '/colors'
-    );
-    expect(screen.getByRole('button', { name: 'Pages' })).toBeInTheDocument();
+    expect(screen.getByRole('tab', { name: 'Molecules' })).toBeInTheDocument();
+    expect(screen.getByRole('tab', { name: 'Organisms' })).toBeInTheDocument();
+    expect(screen.getByRole('tab', { name: 'Templates' })).toBeInTheDocument();
   });
 });
 

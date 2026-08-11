@@ -1,6 +1,6 @@
 'use client';
 
-import { FC } from 'react';
+import { FC, useMemo } from 'react';
 import CommentPopover from './CommentPopover';
 import FilterBar from './FilterBar';
 import FindBar from './FindBar';
@@ -12,6 +12,7 @@ import Toolbar from './Toolbar';
 import { useCsvState } from '@/hooks/useCsvState';
 import { useEditor } from '@/hooks/useEditor';
 import { useTheme } from '@/hooks/useTheme';
+import { computeDisplayGrid } from '@/lib/formula';
 import { getActiveSheet } from '@/lib/workbook';
 
 const Editor: FC = () => {
@@ -21,6 +22,10 @@ const Editor: FC = () => {
   const { theme, toggleTheme } = useTheme();
 
   const activeSheet = getActiveSheet(workbook);
+  const displayGrid = useMemo(
+    () => computeDisplayGrid(activeSheet.grid),
+    [activeSheet.grid]
+  );
   const freezeMode =
     activeSheet.frozenRows > 0 && activeSheet.frozenCols > 0
       ? 'both'
@@ -99,6 +104,7 @@ const Editor: FC = () => {
         onPaste={editor.onPaste}>
         <Grid
           sheet={activeSheet}
+          displayGrid={displayGrid}
           selection={editor.selection}
           editing={editor.editing}
           editingValue={editor.editBuffer}
