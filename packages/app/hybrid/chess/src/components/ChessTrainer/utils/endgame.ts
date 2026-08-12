@@ -1,4 +1,11 @@
-import type { Board, Color, GameState, Move, PieceType, Square } from '@chess/ts';
+import type {
+  Board,
+  Color,
+  GameState,
+  Move,
+  PieceType,
+  Square,
+} from '@chess/ts';
 import {
   createEmptyBoard,
   createGame,

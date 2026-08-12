@@ -1,5 +1,10 @@
 import { createGame } from '@chess/ts';
-import { bestMoveFrom, isBestMove, isClearTactic, moveSanFor } from '../tactics';
+import {
+  bestMoveFrom,
+  isBestMove,
+  isClearTactic,
+  moveSanFor,
+} from '../tactics';
 
 describe('tactics utils', () => {
   it('returns the engine best move with SAN', () => {
@@ -31,6 +36,8 @@ describe('tactics utils', () => {
   });
 
   it('rejects positions without a clear tactic', () => {
-    expect(isClearTactic('rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1')).toBe(false);
+    expect(
+      isClearTactic('rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1')
+    ).toBe(false);
   });
 });

@@ -51,13 +51,29 @@ export const gameFromPgn = (pgn: string): StoredGame | null => {
   const white = headers.White || '?';
   const black = headers.Black || '?';
   const result = headers.Result || games[0].result || '*';
-  const event = headers.Event ? (headers.Event === '?' ? undefined : headers.Event) : undefined;
+  const event = headers.Event
+    ? headers.Event === '?'
+      ? undefined
+      : headers.Event
+    : undefined;
   const eco = headers.ECO || undefined;
   const name = event ?? `${white} vs ${black}`;
-  return { id: uid(), name, savedAt: Date.now(), white, black, result, event, eco, pgn };
+  return {
+    id: uid(),
+    name,
+    savedAt: Date.now(),
+    white,
+    black,
+    result,
+    event,
+    eco,
+    pgn,
+  };
 };
 
-export const importGames = (pgn: string): { games: StoredGame[]; skipped: number } => {
+export const importGames = (
+  pgn: string
+): { games: StoredGame[]; skipped: number } => {
   const games: StoredGame[] = [];
   let skipped = 0;
   for (const chunk of pgn.split(/\n\n(?=\[Event)/)) {
@@ -73,7 +89,10 @@ export const importGames = (pgn: string): { games: StoredGame[]; skipped: number
 export const deleteGame = (games: StoredGame[], id: string): StoredGame[] =>
   games.filter((g) => g.id !== id);
 
-export const filterGames = (games: StoredGame[], query: string): StoredGame[] => {
+export const filterGames = (
+  games: StoredGame[],
+  query: string
+): StoredGame[] => {
   const q = query.trim().toLowerCase();
   if (!q) return games;
   return games.filter((g) =>
@@ -87,7 +106,10 @@ export const encodeShare = (pgn: string): string => {
   const bytes = new TextEncoder().encode(pgn);
   let binary = '';
   for (const byte of bytes) binary += String.fromCharCode(byte);
-  return btoa(binary).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+  return btoa(binary)
+    .replace(/\+/g, '-')
+    .replace(/\//g, '_')
+    .replace(/=+$/, '');
 };
 
 export const decodeShare = (text: string): string | null => {
@@ -113,7 +135,13 @@ export const studyMoves = (pgn: string): StudyMove[] => {
     const mv = moves[i];
     const san = mv.san ?? '';
     const color: Color = mv.color ?? (i % 2 === 0 ? 'w' : 'b');
-    const move = fromSan(san, state.board, state.turn, state.castlingRights, state.enPassant);
+    const move = fromSan(
+      san,
+      state.board,
+      state.turn,
+      state.castlingRights,
+      state.enPassant
+    );
     if (!move) break;
     state = makeMove(state, move);
     out.push({

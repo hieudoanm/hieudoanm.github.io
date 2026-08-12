@@ -1,5 +1,12 @@
 import { FC, useMemo, useState } from 'react';
-import { dueCards, loadSchedule, newSchedule, reviewCard, saveSchedule, selectSampleOpenings } from '../utils/opening';
+import {
+  dueCards,
+  loadSchedule,
+  newSchedule,
+  reviewCard,
+  saveSchedule,
+  selectSampleOpenings,
+} from '../utils/opening';
 import type { OpeningCard, ScheduleEntry } from '../types';
 
 export const OpeningTab: FC = () => {
@@ -12,10 +19,7 @@ export const OpeningTab: FC = () => {
   const [revealed, setRevealed] = useState(false);
   const [done, setDone] = useState(0);
 
-  const due = useMemo(
-    () => dueCards(schedule).map((s) => s.eco),
-    [schedule]
-  );
+  const due = useMemo(() => dueCards(schedule).map((s) => s.eco), [schedule]);
   const current = useMemo(
     () => schedule.find((s) => s.due <= Date.now()),
     [schedule]
@@ -48,7 +52,8 @@ export const OpeningTab: FC = () => {
             Reviewed this session: <span className="font-semibold">{done}</span>
           </p>
           <p className="opacity-70">
-            Total cards: <span className="font-semibold">{schedule.length}</span>
+            Total cards:{' '}
+            <span className="font-semibold">{schedule.length}</span>
           </p>
         </div>
       </div>
@@ -82,17 +87,23 @@ export const OpeningTab: FC = () => {
               </div>
             ) : (
               <div className="mt-4">
-                <p className="rounded bg-base-100 p-3 font-mono text-sm">
+                <p className="bg-base-100 rounded p-3 font-mono text-sm">
                   {card.pgn}
                 </p>
-                <p className="mt-3 text-xs opacity-60">How well did you know it?</p>
+                <p className="mt-3 text-xs opacity-60">
+                  How well did you know it?
+                </p>
                 <div className="mt-2 flex gap-1">
                   {[0, 1, 2, 3, 4, 5].map((q) => (
                     <button
                       key={q}
                       onClick={() => rate(q)}
                       className={`btn btn-xs ${
-                        q < 3 ? 'btn-error' : q < 4 ? 'btn-warning' : 'btn-success'
+                        q < 3
+                          ? 'btn-error'
+                          : q < 4
+                            ? 'btn-warning'
+                            : 'btn-success'
                       }`}>
                       {q}
                     </button>

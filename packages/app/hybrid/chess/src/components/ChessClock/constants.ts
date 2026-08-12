@@ -15,8 +15,20 @@ const BASE: Omit<Preset, 'label' | 'p1' | 'p2'> = {
 
 export const PRESETS: Preset[] = [
   { ...BASE, label: 'Classic', p1: DEFAULT_PLAYER, p2: DEFAULT_PLAYER },
-  { ...BASE, label: 'Rapid', p1: 15 * ONE_MINUTE, p2: 15 * ONE_MINUTE, increment: 10 },
-  { ...BASE, label: 'Blitz', p1: 3 * ONE_MINUTE, p2: 3 * ONE_MINUTE, increment: 2 },
+  {
+    ...BASE,
+    label: 'Rapid',
+    p1: 15 * ONE_MINUTE,
+    p2: 15 * ONE_MINUTE,
+    increment: 10,
+  },
+  {
+    ...BASE,
+    label: 'Blitz',
+    p1: 3 * ONE_MINUTE,
+    p2: 3 * ONE_MINUTE,
+    increment: 2,
+  },
   {
     ...BASE,
     label: 'Fischer',

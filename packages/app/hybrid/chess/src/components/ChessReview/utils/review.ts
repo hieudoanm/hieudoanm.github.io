@@ -12,7 +12,12 @@ import {
   toSquareName,
   winPercentFromCentipawns,
 } from '@chess/ts';
-import type { HangingPiece, ReviewedMove, ReviewResult, ReviewSide } from '../types';
+import type {
+  HangingPiece,
+  ReviewedMove,
+  ReviewResult,
+  ReviewSide,
+} from '../types';
 
 export interface ReviewOptions {
   fen?: string;
@@ -55,7 +60,10 @@ export const findHangingPiece = (
   for (let sq = 0; sq < 64; sq += 1) {
     const piece = board[sq];
     if (!piece || piece.color !== color || piece.type === 'k') continue;
-    if (isSquareAttacked(board, sq, opponent) && !isSquareAttacked(board, sq, color)) {
+    if (
+      isSquareAttacked(board, sq, opponent) &&
+      !isSquareAttacked(board, sq, color)
+    ) {
       result = { square: toSquareName(sq), piece: piece.type, color };
       break;
     }

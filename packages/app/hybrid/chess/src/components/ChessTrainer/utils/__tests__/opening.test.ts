@@ -22,7 +22,12 @@ describe('opening utils', () => {
     const cards = selectSampleOpenings(5);
     const schedule = newSchedule(cards);
     expect(schedule).toHaveLength(5);
-    expect(schedule[0]).toMatchObject({ reps: 0, ease: 2.5, interval: 0, due: 0 });
+    expect(schedule[0]).toMatchObject({
+      reps: 0,
+      ease: 2.5,
+      interval: 0,
+      due: 0,
+    });
   });
 
   it('applies SM-2 intervals for quality >= 3', () => {

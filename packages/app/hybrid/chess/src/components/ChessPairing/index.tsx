@@ -29,26 +29,41 @@ const MatchRow: FC<{
 }> = ({ match, players, onResult }) => {
   const name = (id: string) => players.find((p) => p.id === id)?.name ?? '?';
   return (
-    <li className="flex flex-wrap items-center justify-between gap-2 rounded border border-base-300 bg-base-100 p-2">
+    <li className="border-base-300 bg-base-100 flex flex-wrap items-center justify-between gap-2 rounded border p-2">
       <span className="text-sm">
         <span className="font-semibold">{name(match.white)}</span>
         <span className="opacity-50"> vs </span>
         <span className="font-semibold">{name(match.black)}</span>
       </span>
       <span className="flex gap-1">
-        <ResultButton value="1-0" label="1-0" active={match.result} onPick={(r) => onResult(match.id, r)} />
-        <ResultButton value="½-½" label="½-½" active={match.result} onPick={(r) => onResult(match.id, r)} />
-        <ResultButton value="0-1" label="0-1" active={match.result} onPick={(r) => onResult(match.id, r)} />
+        <ResultButton
+          value="1-0"
+          label="1-0"
+          active={match.result}
+          onPick={(r) => onResult(match.id, r)}
+        />
+        <ResultButton
+          value="½-½"
+          label="½-½"
+          active={match.result}
+          onPick={(r) => onResult(match.id, r)}
+        />
+        <ResultButton
+          value="0-1"
+          label="0-1"
+          active={match.result}
+          onPick={(r) => onResult(match.id, r)}
+        />
       </span>
     </li>
   );
 };
 
-const StandingsTable: FC<{ rounds: Round[]; players: Player[]; mode: PairingMode }> = ({
-  rounds,
-  players,
-  mode,
-}) => {
+const StandingsTable: FC<{
+  rounds: Round[];
+  players: Player[];
+  mode: PairingMode;
+}> = ({ rounds, players, mode }) => {
   const matches = rounds.flatMap((r) => r.matches);
   const rows = sortStandings(computeStandings(players, matches), mode);
   return (
@@ -56,7 +71,9 @@ const StandingsTable: FC<{ rounds: Round[]; players: Player[]; mode: PairingMode
       <h2 className="mb-2 text-sm font-semibold">
         Standings{' '}
         <span className="font-normal opacity-60">
-          {mode === 'rr' ? '(Sonnerborn-Berger tiebreak)' : '(Buchholz then Sonneborn-Berger)'}
+          {mode === 'rr'
+            ? '(Sonnerborn-Berger tiebreak)'
+            : '(Buchholz then Sonneborn-Berger)'}
         </span>
       </h2>
       <table className="w-full text-xs">
@@ -73,18 +90,24 @@ const StandingsTable: FC<{ rounds: Round[]; players: Player[]; mode: PairingMode
         </thead>
         <tbody>
           {rows.map((row, i) => (
-            <tr key={row.player.id} className="border-t border-base-300">
+            <tr key={row.player.id} className="border-base-300 border-t">
               <td className="py-1 pr-2">{i + 1}</td>
               <td className="py-1 pr-2 font-semibold">{row.player.name}</td>
-              <td className="py-1 pr-2 text-right tabular-nums">{row.player.rating}</td>
+              <td className="py-1 pr-2 text-right tabular-nums">
+                {row.player.rating}
+              </td>
               <td className="py-1 pr-2 text-right tabular-nums">
                 {row.wins}-{row.draws}-{row.losses}
               </td>
               <td className="py-1 pr-2 text-right font-bold tabular-nums">
                 {row.points.toFixed(1)}
               </td>
-              <td className="py-1 pr-2 text-right tabular-nums">{row.buchholz.toFixed(1)}</td>
-              <td className="py-1 text-right tabular-nums">{row.sb.toFixed(1)}</td>
+              <td className="py-1 pr-2 text-right tabular-nums">
+                {row.buchholz.toFixed(1)}
+              </td>
+              <td className="py-1 text-right tabular-nums">
+                {row.sb.toFixed(1)}
+              </td>
             </tr>
           ))}
         </tbody>
@@ -107,7 +130,14 @@ export const ChessPairing: FC<{ onClose: () => void }> = ({ onClose }) => {
     if (matches.length === 0) return [];
     const maxRound = Math.max(...matches.map((m) => m.round));
     const current = pairSwiss(players, matches, maxRound + 1);
-    return [{ number: maxRound, matches: matches.filter((m) => m.round === maxRound), byes: [] }, current];
+    return [
+      {
+        number: maxRound,
+        matches: matches.filter((m) => m.round === maxRound),
+        byes: [],
+      },
+      current,
+    ];
   }, [mode, rrRounds, players, matches]);
 
   const addPlayer = () => {
@@ -133,7 +163,9 @@ export const ChessPairing: FC<{ onClose: () => void }> = ({ onClose }) => {
     setRound(1);
   };
 
-  const activeRound = shownRounds.find((r) => r.number === (mode === 'rr' ? round : (matches.at(-1)?.round ?? 0)));
+  const activeRound = shownRounds.find(
+    (r) => r.number === (mode === 'rr' ? round : (matches.at(-1)?.round ?? 0))
+  );
 
   return (
     <div className="mx-auto flex w-full max-w-3xl flex-col gap-4 p-4">
@@ -172,7 +204,9 @@ export const ChessPairing: FC<{ onClose: () => void }> = ({ onClose }) => {
             <li key={p.id} className="badge badge-lg gap-1">
               {p.name} ({p.rating})
               <button
-                onClick={() => setPlayers((prev) => prev.filter((x) => x.id !== p.id))}
+                onClick={() =>
+                  setPlayers((prev) => prev.filter((x) => x.id !== p.id))
+                }
                 className="btn btn-ghost btn-xs px-1"
                 aria-label={`Remove ${p.name}`}>
                 ✕
@@ -203,7 +237,10 @@ export const ChessPairing: FC<{ onClose: () => void }> = ({ onClose }) => {
             </div>
           )}
           {mode === 'swiss' && (
-            <button onClick={pairNextSwiss} disabled={players.length < 2} className="btn btn-sm">
+            <button
+              onClick={pairNextSwiss}
+              disabled={players.length < 2}
+              className="btn btn-sm">
               Pair next round
             </button>
           )}
@@ -211,13 +248,22 @@ export const ChessPairing: FC<{ onClose: () => void }> = ({ onClose }) => {
 
         {shownRounds.map((r) => (
           <div key={`${r.number}-${r.matches.length}`} className="mb-3">
-            <p className="mb-1 text-xs font-semibold opacity-70">Round {r.number}</p>
+            <p className="mb-1 text-xs font-semibold opacity-70">
+              Round {r.number}
+            </p>
             <ul className="space-y-1">
               {r.matches.map((m) => (
-                <MatchRow key={m.id} match={m} players={players} onResult={onResult} />
+                <MatchRow
+                  key={m.id}
+                  match={m}
+                  players={players}
+                  onResult={onResult}
+                />
               ))}
               {r.byes.map((b) => (
-                <li key={b} className="rounded border border-base-300 bg-base-100 p-2 text-xs opacity-60">
+                <li
+                  key={b}
+                  className="border-base-300 bg-base-100 rounded border p-2 text-xs opacity-60">
                   {players.find((p) => p.id === b)?.name ?? '?'} — bye
                 </li>
               ))}

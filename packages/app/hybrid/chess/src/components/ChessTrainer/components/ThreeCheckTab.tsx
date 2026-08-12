@@ -2,11 +2,7 @@ import { FC, useState } from 'react';
 import type { GameState, Move } from '@chess/ts';
 import { createGame, makeMove, toFen } from '@chess/ts';
 import { Chessboard } from '../../organisms/chess/ChessBoard';
-import {
-  applyUserMove,
-  isCheckmate,
-  legalMoveFor,
-} from '../utils/endgame';
+import { applyUserMove, isCheckmate, legalMoveFor } from '../utils/endgame';
 import { bestMoveFrom } from '../utils/tactics';
 import {
   THREE_CHECK_FEN,
@@ -17,7 +13,9 @@ import {
 } from '../utils/variants';
 
 export const ThreeCheckTab: FC = () => {
-  const [game, setGame] = useState<GameState>(() => createGame(THREE_CHECK_FEN));
+  const [game, setGame] = useState<GameState>(() =>
+    createGame(THREE_CHECK_FEN)
+  );
   const [counts, setCounts] = useState<CheckCounts>({ w: 0, b: 0 });
   const [thinking, setThinking] = useState(false);
   const [winner, setWinner] = useState<string | null>(null);
@@ -48,7 +46,10 @@ export const ThreeCheckTab: FC = () => {
     }, 60);
   };
 
-  const handleDrop = (sourceSquare: string, targetSquare: string | null): boolean => {
+  const handleDrop = (
+    sourceSquare: string,
+    targetSquare: string | null
+  ): boolean => {
     if (!targetSquare) return false;
     if (game.turn !== 'w' || thinking || winner) return false;
     const next = applyUserMove(game, sourceSquare, targetSquare);
@@ -92,7 +93,11 @@ export const ThreeCheckTab: FC = () => {
         }
       />
       <div className="mt-3 flex items-center gap-2 text-sm">
-        {winner && <span className="badge badge-success">{winner} wins ({THREE_CHECK_WIN} checks)</span>}
+        {winner && (
+          <span className="badge badge-success">
+            {winner} wins ({THREE_CHECK_WIN} checks)
+          </span>
+        )}
         {thinking && <span className="loading loading-spinner loading-xs" />}
         {!winner && !thinking && (
           <span className="opacity-70">

@@ -1,4 +1,11 @@
-import type { Match, MatchResult, PairingMode, Player, Round, StandingsRow } from '../types';
+import type {
+  Match,
+  MatchResult,
+  PairingMode,
+  Player,
+  Round,
+  StandingsRow,
+} from '../types';
 
 const BYE = '__bye__';
 
@@ -33,7 +40,10 @@ export const setResult = (
 
 export const pairRoundRobin = (players: Player[]): Round[] => {
   if (players.length < 2) return [];
-  const list = players.length % 2 === 1 ? [BYE, ...players.map((p) => p.id)] : players.map((p) => p.id);
+  const list =
+    players.length % 2 === 1
+      ? [BYE, ...players.map((p) => p.id)]
+      : players.map((p) => p.id);
   const size = list.length;
   const rounds: Round[] = [];
   for (let r = 0; r < size - 1; r += 1) {
@@ -57,7 +67,11 @@ export const pairRoundRobin = (players: Player[]): Round[] => {
 
 const playedKey = (a: string, b: string): string => `${a}|${b}`;
 
-export const pairSwiss = (players: Player[], matches: Match[], round: number): Round => {
+export const pairSwiss = (
+  players: Player[],
+  matches: Match[],
+  round: number
+): Round => {
   if (players.length < 2) return { number: round, matches: [], byes: [] };
   const played = new Set<string>();
   for (const m of matches) {
@@ -95,7 +109,10 @@ export const pairSwiss = (players: Player[], matches: Match[], round: number): R
   return { number: round, matches: out, byes };
 };
 
-export const computeStandings = (players: Player[], matches: Match[]): StandingsRow[] => {
+export const computeStandings = (
+  players: Player[],
+  matches: Match[]
+): StandingsRow[] => {
   const scores: Record<string, number> = {};
   const opponents: Record<string, string[]> = {};
   for (const p of players) {
@@ -115,7 +132,8 @@ export const computeStandings = (players: Player[], matches: Match[]): Standings
     for (const opp of opponents[p.id]) {
       const played = matches.filter(
         (m) =>
-          (m.white === p.id && m.black === opp) || (m.black === p.id && m.white === opp)
+          (m.white === p.id && m.black === opp) ||
+          (m.black === p.id && m.white === opp)
       );
       for (const m of played) {
         const s = scoreOf(m, p.id);
@@ -125,11 +143,15 @@ export const computeStandings = (players: Player[], matches: Match[]): Standings
     }
     const points = scores[p.id] ?? 0;
     const played = opponents[p.id].length;
-    const buchholz = opponents[p.id].reduce((sum, opp) => sum + (scores[opp] ?? 0), 0);
+    const buchholz = opponents[p.id].reduce(
+      (sum, opp) => sum + (scores[opp] ?? 0),
+      0
+    );
     const sb = opponents[p.id].reduce((sum, opp) => {
       const played = matches.filter(
         (m) =>
-          (m.white === p.id && m.black === opp) || (m.black === p.id && m.white === opp)
+          (m.white === p.id && m.black === opp) ||
+          (m.black === p.id && m.white === opp)
       );
       let partial = 0;
       for (const m of played) {

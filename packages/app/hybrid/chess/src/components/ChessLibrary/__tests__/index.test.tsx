@@ -25,7 +25,9 @@ describe('ChessLibrary', () => {
     expect(screen.getByRole('button', { name: 'Library' })).toBeInTheDocument();
     fireEvent.click(screen.getByRole('button', { name: 'Explorer' }));
     fireEvent.click(screen.getByText('Alekhine Defense: Balogh Variation'));
-    expect(screen.getByRole('button', { name: /master stats/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: /master stats/i })
+    ).toBeInTheDocument();
   });
 
   it('hydrates a shared game from the URL', () => {
@@ -64,7 +66,9 @@ describe('LibraryTab', () => {
   it('opens a game in the study view', () => {
     const { games } = importGames(SAMPLE);
     const saved = [{ ...games[0], pgn: SAMPLE }];
-    const spy = jest.spyOn(Storage.prototype, 'getItem').mockReturnValue(JSON.stringify(saved));
+    const spy = jest
+      .spyOn(Storage.prototype, 'getItem')
+      .mockReturnValue(JSON.stringify(saved));
     render(<LibraryTab />);
     fireEvent.click(screen.getByRole('button', { name: 'Open' }));
     expect(screen.getByText('Share link')).toBeInTheDocument();
@@ -74,7 +78,9 @@ describe('LibraryTab', () => {
   it('deletes a saved game', () => {
     const { games } = importGames(SAMPLE);
     const saved = [{ ...games[0], pgn: SAMPLE }];
-    const spy = jest.spyOn(Storage.prototype, 'getItem').mockReturnValue(JSON.stringify(saved));
+    const spy = jest
+      .spyOn(Storage.prototype, 'getItem')
+      .mockReturnValue(JSON.stringify(saved));
     render(<LibraryTab />);
     fireEvent.click(screen.getByRole('button', { name: /Delete/ }));
     expect(screen.getByText(/No games yet/)).toBeInTheDocument();
@@ -84,7 +90,9 @@ describe('LibraryTab', () => {
   it('filters the library by player name', () => {
     const { games } = importGames(SAMPLE);
     const saved = [{ ...games[0], pgn: SAMPLE }];
-    const spy = jest.spyOn(Storage.prototype, 'getItem').mockReturnValue(JSON.stringify(saved));
+    const spy = jest
+      .spyOn(Storage.prototype, 'getItem')
+      .mockReturnValue(JSON.stringify(saved));
     render(<LibraryTab />);
     fireEvent.change(screen.getByPlaceholderText(/Search player/), {
       target: { value: 'zoe' },
@@ -100,7 +108,12 @@ describe('StudyView', () => {
 
   it('shows a back button and renders the board', () => {
     render(
-      <StudyView game={game} onBack={jest.fn()} onDelete={jest.fn()} onShare={jest.fn()} />
+      <StudyView
+        game={game}
+        onBack={jest.fn()}
+        onDelete={jest.fn()}
+        onShare={jest.fn()}
+      />
     );
     expect(screen.getByRole('button', { name: 'Back' })).toBeInTheDocument();
     expect(screen.getByTestId('chessboard')).toBeInTheDocument();
@@ -108,7 +121,12 @@ describe('StudyView', () => {
 
   it('navigates through moves and reports positions', () => {
     render(
-      <StudyView game={game} onBack={jest.fn()} onDelete={jest.fn()} onShare={jest.fn()} />
+      <StudyView
+        game={game}
+        onBack={jest.fn()}
+        onDelete={jest.fn()}
+        onShare={jest.fn()}
+      />
     );
     fireEvent.click(screen.getByText('Nf3'));
     expect(screen.getByText('End')).toBeInTheDocument();

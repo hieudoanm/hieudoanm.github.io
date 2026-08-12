@@ -36,7 +36,9 @@ export const LibraryTab: FC = () => {
     if (imported.length) {
       commit([...imported, ...games]);
       setPgnText('');
-      setError(skipped ? `${skipped} chunk${skipped === 1 ? '' : 's'} skipped` : null);
+      setError(
+        skipped ? `${skipped} chunk${skipped === 1 ? '' : 's'} skipped` : null
+      );
     } else {
       setError('No games found — paste a valid PGN.');
     }
@@ -118,12 +120,15 @@ export const LibraryTab: FC = () => {
             placeholder="Username"
             className="input input-bordered input-sm w-40"
           />
-          <button onClick={onFetch} disabled={busy || !username.trim()} className="btn btn-sm">
+          <button
+            onClick={onFetch}
+            disabled={busy || !username.trim()}
+            className="btn btn-sm">
             {busy && <span className="loading loading-spinner loading-xs" />}
             Fetch games
           </button>
         </div>
-        {error && <p className="mt-2 text-sm text-error">{error}</p>}
+        {error && <p className="text-error mt-2 text-sm">{error}</p>}
       </div>
 
       <div className="card bg-base-200 p-3">
@@ -145,11 +150,13 @@ export const LibraryTab: FC = () => {
           {visible.map((game) => (
             <li
               key={game.id}
-              className="flex flex-wrap items-center justify-between gap-2 rounded border border-base-300 bg-base-100 p-2">
+              className="border-base-300 bg-base-100 flex flex-wrap items-center justify-between gap-2 rounded border p-2">
               <button
                 onClick={() => setOpen(game)}
                 className="min-w-0 flex-1 text-left">
-                <span className="block truncate text-sm font-semibold">{game.name}</span>
+                <span className="block truncate text-sm font-semibold">
+                  {game.name}
+                </span>
                 <span className="block text-xs opacity-70">
                   {rowLabel(game)}
                   {game.eco ? ` · ${game.eco}` : ''} ·{' '}

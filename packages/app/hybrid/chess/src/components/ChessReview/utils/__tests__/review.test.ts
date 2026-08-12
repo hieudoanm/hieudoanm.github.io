@@ -19,7 +19,9 @@ describe('reviewPgn', () => {
   it('classifies every move against the best move', () => {
     const result = reviewPgn('1. e4 e5');
     expect(result!.moves.every((m) => m.bestSan)).toBe(true);
-    expect(result!.moves.every((m) => m.accuracy >= 0 && m.accuracy <= 100)).toBe(true);
+    expect(
+      result!.moves.every((m) => m.accuracy >= 0 && m.accuracy <= 100)
+    ).toBe(true);
   });
 
   it('reports per-side accuracy', () => {

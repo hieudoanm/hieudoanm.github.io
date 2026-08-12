@@ -48,9 +48,7 @@ export const roundStats = (
   const avgMs =
     total === 0
       ? 0
-      : Math.round(
-          rounds.reduce((sum, r) => sum + r.timeMs, 0) / total
-        );
+      : Math.round(rounds.reduce((sum, r) => sum + r.timeMs, 0) / total);
   return { total, correct, avgMs };
 };
 
@@ -67,10 +65,7 @@ export const bestScore = (): { score: number; avgMs: number } => {
 
 export const saveBestScore = (score: number, avgMs: number): void => {
   try {
-    localStorage.setItem(
-      'chess-coords-best',
-      JSON.stringify({ score, avgMs })
-    );
+    localStorage.setItem('chess-coords-best', JSON.stringify({ score, avgMs }));
   } catch {
     // ignore storage errors
   }

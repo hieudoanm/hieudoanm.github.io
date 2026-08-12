@@ -9,7 +9,9 @@ describe('OpeningTab', () => {
 
   it('shows a due opening card', () => {
     render(<OpeningTab />);
-    expect(screen.getByText(/Openings \(spaced repetition\)/)).toBeInTheDocument();
+    expect(
+      screen.getByText(/Openings \(spaced repetition\)/)
+    ).toBeInTheDocument();
     expect(screen.getByText('Reveal')).toBeInTheDocument();
   });
 

@@ -48,10 +48,12 @@ export const PerftTab: FC = () => {
         </button>
 
         {result && (
-          <div className="mt-4 rounded bg-base-100 p-3">
+          <div className="bg-base-100 mt-4 rounded p-3">
             <p className="text-sm">
               Nodes at depth {result.depth}:{' '}
-              <span className="text-lg font-bold tabular-nums">{result.nodes.toLocaleString()}</span>
+              <span className="text-lg font-bold tabular-nums">
+                {result.nodes.toLocaleString()}
+              </span>
             </p>
           </div>
         )}

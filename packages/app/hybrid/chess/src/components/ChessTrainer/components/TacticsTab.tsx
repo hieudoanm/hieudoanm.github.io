@@ -7,7 +7,9 @@ import { bestMoveFrom } from '../utils/tactics';
 export const TacticsTab: FC = () => {
   const puzzles = useMemo(
     () =>
-      TACTICS_PUZZLES.filter((p) => bestMoveFrom(createGame(p.fen), 12) !== null),
+      TACTICS_PUZZLES.filter(
+        (p) => bestMoveFrom(createGame(p.fen), 12) !== null
+      ),
     []
   );
   const [index, setIndex] = useState(0);
@@ -25,15 +27,21 @@ export const TacticsTab: FC = () => {
       setScore(scoreRef.current);
     }
     setSolved(correct);
-    window.setTimeout(() => {
-      setSolved(null);
-      setLastMove(null);
-      setRevealed(false);
-      setIndex((i) => i + 1);
-    }, correct ? 900 : 1200);
+    window.setTimeout(
+      () => {
+        setSolved(null);
+        setLastMove(null);
+        setRevealed(false);
+        setIndex((i) => i + 1);
+      },
+      correct ? 900 : 1200
+    );
   };
 
-  const handleDrop = (sourceSquare: string, targetSquare: string | null): boolean => {
+  const handleDrop = (
+    sourceSquare: string,
+    targetSquare: string | null
+  ): boolean => {
     if (!targetSquare) return false;
     if (!puzzle || solved !== null) return false;
     const state = createGame(puzzle.fen);
@@ -75,7 +83,7 @@ export const TacticsTab: FC = () => {
             className="btn btn-outline btn-xs mt-2">
             Reveal hint
           </button>
-          {revealed && <p className="text-xs text-warning">{puzzle.hint}</p>}
+          {revealed && <p className="text-warning text-xs">{puzzle.hint}</p>}
         </div>
         <button
           onClick={() => {
@@ -104,7 +112,9 @@ export const TacticsTab: FC = () => {
             className={`alert mt-3 text-sm ${
               solved ? 'alert-success' : 'alert-error'
             }`}>
-            {solved ? 'Correct!' : 'Not the best move — try again on the next one.'}
+            {solved
+              ? 'Correct!'
+              : 'Not the best move — try again on the next one.'}
           </div>
         )}
         {lastMove && !solved && (

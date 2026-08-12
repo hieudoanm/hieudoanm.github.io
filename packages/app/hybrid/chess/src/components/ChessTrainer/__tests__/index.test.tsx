@@ -8,7 +8,9 @@ jest.mock('react-chessboard', () => ({
 describe('ChessTrainer', () => {
   it('shows the tactics tab by default', () => {
     render(<ChessTrainer onClose={jest.fn()} />);
-    expect(screen.getByRole('heading', { name: 'Tactics' })).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { name: 'Tactics' })
+    ).toBeInTheDocument();
   });
 
   it('switches between trainer tabs', () => {
@@ -18,6 +20,8 @@ describe('ChessTrainer', () => {
     fireEvent.click(screen.getByRole('button', { name: 'Coordinates' }));
     expect(screen.getByText('Board Coordinates')).toBeInTheDocument();
     fireEvent.click(screen.getByRole('button', { name: 'Openings' }));
-    expect(screen.getByText(/Openings \(spaced repetition\)/)).toBeInTheDocument();
+    expect(
+      screen.getByText(/Openings \(spaced repetition\)/)
+    ).toBeInTheDocument();
   });
 });

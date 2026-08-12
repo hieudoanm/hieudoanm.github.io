@@ -1,6 +1,13 @@
 import { ONE_SECOND } from '../../constants';
 import { ChessClockSide, ClockState, DelayType } from '../../types';
-import { applyMovesToGo, delayFor, fmt, formatElapsed, initClock, toTime } from '../clock';
+import {
+  applyMovesToGo,
+  delayFor,
+  fmt,
+  formatElapsed,
+  initClock,
+  toTime,
+} from '../clock';
 
 beforeEach(() => {
   jest.spyOn(Date, 'now').mockReturnValue(1000000);
@@ -124,7 +131,13 @@ describe('applyMovesToGo', () => {
     const none = applyMovesToGo(base({ movesToGo: 0, extraTime: 300000 }));
     expect(none.phase2).toBe(false);
     const done = applyMovesToGo(
-      base({ movesToGo: 2, extraTime: 300000, p1Moves: 1, p2Moves: 1, phase2: true })
+      base({
+        movesToGo: 2,
+        extraTime: 300000,
+        p1Moves: 1,
+        p2Moves: 1,
+        phase2: true,
+      })
     );
     expect(done.player1).toBe(600000);
   });

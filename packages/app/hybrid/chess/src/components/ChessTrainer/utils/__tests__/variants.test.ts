@@ -93,7 +93,9 @@ describe('crazyhouse variant', () => {
       color: 'w',
       type: 'p',
     });
-    expect(collectCapture(state, { ...captureMove, captured: null })).toBeNull();
+    expect(
+      collectCapture(state, { ...captureMove, captured: null })
+    ).toBeNull();
   });
 
   it('lists pocket contents', () => {

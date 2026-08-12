@@ -14,7 +14,10 @@ export const runPerft = (fen: string, depth: number): PerftResult => {
   return { nodes, depth: capped, fen };
 };
 
-export const runDivide = (fen: string, depth: number): Record<string, number> => {
+export const runDivide = (
+  fen: string,
+  depth: number
+): Record<string, number> => {
   const state: GameState = createGame(fen);
   const capped = Math.min(Math.max(1, depth), 4);
   return divide(state, capped);

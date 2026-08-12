@@ -28,7 +28,9 @@ export const MateTab: FC = () => {
   const next = () => {
     setSolved(false);
     setIndex((i) => i + 1);
-    setGame(createGame(puzzles[(index + 1) % Math.max(1, puzzles.length)]?.fen ?? ''));
+    setGame(
+      createGame(puzzles[(index + 1) % Math.max(1, puzzles.length)]?.fen ?? '')
+    );
   };
 
   const engineReply = (state: GameState) => {
@@ -50,7 +52,10 @@ export const MateTab: FC = () => {
     }, 60);
   };
 
-  const handleDrop = (sourceSquare: string, targetSquare: string | null): boolean => {
+  const handleDrop = (
+    sourceSquare: string,
+    targetSquare: string | null
+  ): boolean => {
     if (!targetSquare) return false;
     if (!puzzle || solved || thinking) return false;
     const move = legalMoveFor(game, sourceSquare, targetSquare);
@@ -78,9 +83,10 @@ export const MateTab: FC = () => {
           <span className="badge badge-primary badge-sm">{puzzle.rating}</span>
         </div>
         <p className="mt-2 text-xs opacity-70">
-          Deliver checkmate. {puzzle.id.startsWith('m2') ? 'Mate in 2.' : 'Mate in 1.'}
+          Deliver checkmate.{' '}
+          {puzzle.id.startsWith('m2') ? 'Mate in 2.' : 'Mate in 1.'}
         </p>
-        <p className="mt-2 text-xs text-warning">{puzzle.hint}</p>
+        <p className="text-warning mt-2 text-xs">{puzzle.hint}</p>
         <div className="mt-3 flex gap-2">
           <button onClick={next} className="btn btn-outline btn-sm">
             Skip

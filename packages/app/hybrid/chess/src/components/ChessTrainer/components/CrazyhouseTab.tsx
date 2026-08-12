@@ -47,7 +47,10 @@ export const CrazyhouseTab: FC = () => {
     return true;
   };
 
-  const handleDrop = (sourceSquare: string, targetSquare: string | null): boolean => {
+  const handleDrop = (
+    sourceSquare: string,
+    targetSquare: string | null
+  ): boolean => {
     if (!targetSquare) return false;
     if (selected) return applyDropOn(targetSquare, game.turn);
     const moves = getLegalMoves(

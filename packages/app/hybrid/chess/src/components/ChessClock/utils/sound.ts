@@ -3,7 +3,9 @@ let ctx: AudioContext | null = null;
 export const beep = (freq = 440, ms = 120, volume = 0.04): void => {
   try {
     const AC: typeof AudioContext | undefined =
-      window.AudioContext ?? (window as unknown as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
+      window.AudioContext ??
+      (window as unknown as { webkitAudioContext?: typeof AudioContext })
+        .webkitAudioContext;
     if (!AC) return;
     ctx = ctx ?? new AC();
     if (ctx.state === 'suspended') ctx.resume();

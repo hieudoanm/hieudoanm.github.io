@@ -1,10 +1,11 @@
 import { fetchChessComPgn, fetchLichessPgn } from '../fetchers';
 
-const ok = (body: string) => ({
-  ok: true,
-  status: 200,
-  text: async () => body,
-} as Response);
+const ok = (body: string) =>
+  ({
+    ok: true,
+    status: 200,
+    text: async () => body,
+  }) as Response;
 
 describe('fetchLichessPgn', () => {
   it('requests as_pgn and returns the text', async () => {
@@ -30,11 +31,15 @@ describe('fetchChessComPgn', () => {
   it('fetches recent archives and joins pgns', async () => {
     const jsonMock = jest
       .fn()
-      .mockResolvedValueOnce({ archives: ['https://api.chess.com/pub/a/2026/08'] })
+      .mockResolvedValueOnce({
+        archives: ['https://api.chess.com/pub/a/2026/08'],
+      })
       .mockResolvedValueOnce({
         games: [{ pgn: '[A]\n1.e4' }, { pgn: '[B]\n1.d4' }, {}],
       });
-    const fetchMock = jest.fn().mockResolvedValue({ ok: true, status: 200, json: jsonMock });
+    const fetchMock = jest
+      .fn()
+      .mockResolvedValue({ ok: true, status: 200, json: jsonMock });
     (global as { fetch: typeof fetch }).fetch = fetchMock;
     const result = await fetchChessComPgn('alice', 5);
     expect(result).toContain('1.e4');

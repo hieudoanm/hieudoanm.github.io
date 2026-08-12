@@ -29,20 +29,24 @@ const MoveRow: FC<{
   return (
     <button
       onClick={() => onSelect(index)}
-      className={`grid w-full grid-cols-[2rem_2rem_3rem_1fr_3rem_3rem_1.5rem] items-center gap-1 rounded px-2 py-1 text-left text-xs hover:bg-base-300 ${
+      className={`hover:bg-base-300 grid w-full grid-cols-[2rem_2rem_3rem_1fr_3rem_3rem_1.5rem] items-center gap-1 rounded px-2 py-1 text-left text-xs ${
         selected === index ? 'bg-base-300' : ''
       }`}>
       <span className="opacity-50">{move.moveNumber}.</span>
       <span className="opacity-50">{move.color === 'w' ? 'W' : 'B'}</span>
       <span className="font-semibold">{move.san}</span>
-      <span className={`badge badge-xs ${badge}`}>{move.classification.label}</span>
+      <span className={`badge badge-xs ${badge}`}>
+        {move.classification.label}
+      </span>
       <span className="text-right tabular-nums opacity-70">
         {move.accuracy}
       </span>
       <span className="text-right tabular-nums opacity-70">
         {move.bestSan ?? '—'}
       </span>
-      <span className="text-right">{move.missedMate ? '⚡' : move.hanging ? '!' : ''}</span>
+      <span className="text-right">
+        {move.missedMate ? '⚡' : move.hanging ? '!' : ''}
+      </span>
     </button>
   );
 };
@@ -114,8 +118,14 @@ export const ChessReview: FC<{ onClose: () => void }> = ({ onClose }) => {
       {review && (
         <>
           <div className="flex flex-wrap gap-2">
-            <SummaryCard label="White accuracy" value={`${review.white.accuracy}%`} />
-            <SummaryCard label="Black accuracy" value={`${review.black.accuracy}%`} />
+            <SummaryCard
+              label="White accuracy"
+              value={`${review.white.accuracy}%`}
+            />
+            <SummaryCard
+              label="Black accuracy"
+              value={`${review.black.accuracy}%`}
+            />
             <SummaryCard
               label="Missed mates"
               value={review.white.missedMate + review.black.missedMate}
@@ -145,10 +155,12 @@ export const ChessReview: FC<{ onClose: () => void }> = ({ onClose }) => {
               {selected !== null && review.moves[selected] && (
                 <div className="mt-2 space-y-1 text-xs">
                   <p>
-                    <span className="opacity-60">Played:</span> {review.moves[selected].san}
+                    <span className="opacity-60">Played:</span>{' '}
+                    {review.moves[selected].san}
                   </p>
                   <p>
-                    <span className="opacity-60">Best:</span> {review.moves[selected].bestSan ?? '—'}
+                    <span className="opacity-60">Best:</span>{' '}
+                    {review.moves[selected].bestSan ?? '—'}
                   </p>
                   <p>
                     <span className="opacity-60">Eval lost:</span>{' '}
@@ -159,8 +171,10 @@ export const ChessReview: FC<{ onClose: () => void }> = ({ onClose }) => {
                   )}
                   {review.moves[selected].hanging && (
                     <p className="text-warning">
-                      {review.moves[selected].hanging.color === 'w' ? 'White' : 'Black'} left{' '}
-                      {review.moves[selected].hanging.piece} on{' '}
+                      {review.moves[selected].hanging.color === 'w'
+                        ? 'White'
+                        : 'Black'}{' '}
+                      left {review.moves[selected].hanging.piece} on{' '}
                       {review.moves[selected].hanging.square} hanging
                     </p>
                   )}

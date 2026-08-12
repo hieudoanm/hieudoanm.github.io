@@ -4,7 +4,8 @@ export const FILES = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
 
 export const createEmptyBoard = () => Array.from({ length: 64 }, () => null);
 
-export const cloneBoard = (board) => (Array.isArray(board) ? board.slice() : createEmptyBoard());
+export const cloneBoard = (board) =>
+  Array.isArray(board) ? board.slice() : createEmptyBoard();
 
 export const isSquareValid = (sq) => Number.isInteger(sq) && sq >= 0 && sq < 64;
 

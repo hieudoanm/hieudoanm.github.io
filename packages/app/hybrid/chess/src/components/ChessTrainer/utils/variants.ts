@@ -1,4 +1,12 @@
-import type { Board, Color, GameState, Move, Piece, PieceType, Square } from '@chess/ts';
+import type {
+  Board,
+  Color,
+  GameState,
+  Move,
+  Piece,
+  PieceType,
+  Square,
+} from '@chess/ts';
 import {
   cloneBoard,
   createGame,
@@ -179,20 +187,14 @@ export const emptyPocket = (): Pocket => ({
   b: { q: 0, r: 0, b: 0, n: 0, p: 0, k: 0 },
 });
 
-export const collectCapture = (
-  state: GameState,
-  move: Move
-): Piece | null => {
+export const collectCapture = (state: GameState, move: Move): Piece | null => {
   if (!move.captured) return null;
   const capturer = getPiece(state.board, move.from);
   if (!capturer) return null;
   return { color: capturer.color, type: move.captured.type };
 };
 
-export const addToPocket = (
-  pocket: Pocket,
-  captured: Piece
-): Pocket => {
+export const addToPocket = (pocket: Pocket, captured: Piece): Pocket => {
   const side = captured.color;
   return {
     ...pocket,

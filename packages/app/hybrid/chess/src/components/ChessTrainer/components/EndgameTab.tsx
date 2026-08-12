@@ -44,7 +44,10 @@ export const EndgameTab: FC = () => {
     }, 60);
   };
 
-  const handleDrop = (sourceSquare: string, targetSquare: string | null): boolean => {
+  const handleDrop = (
+    sourceSquare: string,
+    targetSquare: string | null
+  ): boolean => {
     if (!targetSquare) return false;
     if (game.turn !== 'w' || thinking) return false;
     const next = applyUserMove(game, sourceSquare, targetSquare);

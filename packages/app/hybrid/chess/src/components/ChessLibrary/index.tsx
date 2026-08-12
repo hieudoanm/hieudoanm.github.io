@@ -56,12 +56,15 @@ export const ChessLibrary: FC<{ onClose: () => void }> = ({ onClose }) => {
         {tab === 'library' ? (
           shared ? (
             <>
-              <div className="mx-auto mt-4 flex w-full max-w-3xl flex-wrap items-center justify-between gap-2 rounded border border-primary/40 bg-primary/10 p-3">
+              <div className="border-primary/40 bg-primary/10 mx-auto mt-4 flex w-full max-w-3xl flex-wrap items-center justify-between gap-2 rounded border p-3">
                 <p className="text-sm">
                   A shared game is open. {saved ? 'Saved to your library.' : ''}
                 </p>
                 <div className="flex gap-2">
-                  <button onClick={saveShared} disabled={saved} className="btn btn-sm">
+                  <button
+                    onClick={saveShared}
+                    disabled={saved}
+                    className="btn btn-sm">
                     Save to library
                   </button>
                   <button

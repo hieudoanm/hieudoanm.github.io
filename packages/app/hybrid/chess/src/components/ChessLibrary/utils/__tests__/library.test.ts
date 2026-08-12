@@ -42,7 +42,9 @@ describe('gameFromPgn', () => {
 
 describe('importGames', () => {
   it('imports multiple games and counts skipped chunks', () => {
-    const { games, skipped } = importGames(`${SAMPLE}\n\n[Event "Header only"]`);
+    const { games, skipped } = importGames(
+      `${SAMPLE}\n\n[Event "Header only"]`
+    );
     expect(games).toHaveLength(1);
     expect(skipped).toBe(1);
   });

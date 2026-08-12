@@ -53,7 +53,11 @@ export const CoordinatesTab: FC = () => {
 
   const handleSubmit = () => {
     if (mode !== 'name' || flash) return;
-    record(typed.trim().toLowerCase(), 400, typed.trim().toLowerCase() === target);
+    record(
+      typed.trim().toLowerCase(),
+      400,
+      typed.trim().toLowerCase() === target
+    );
     setTyped('');
   };
 
@@ -97,9 +101,13 @@ export const CoordinatesTab: FC = () => {
         {mode === 'click' ? (
           <>
             <div className="mb-3 text-center">
-              <span className="text-2xl font-bold tracking-widest">{target}</span>
+              <span className="text-2xl font-bold tracking-widest">
+                {target}
+              </span>
               {!started && (
-                <p className="mt-1 text-xs opacity-60">Click the square with that name.</p>
+                <p className="mt-1 text-xs opacity-60">
+                  Click the square with that name.
+                </p>
               )}
             </div>
             <Chessboard
@@ -112,7 +120,9 @@ export const CoordinatesTab: FC = () => {
         ) : (
           <>
             <div className="mb-3 text-center">
-              <span className="text-xs opacity-60">Name the highlighted square:</span>
+              <span className="text-xs opacity-60">
+                Name the highlighted square:
+              </span>
             </div>
             <Chessboard
               position="8/8/8/8/8/8/8/8 w - - 0 1"
@@ -137,9 +147,13 @@ export const CoordinatesTab: FC = () => {
             </form>
           </>
         )}
-        {flash === 'ok' && <p className="mt-2 text-sm text-success">Correct!</p>}
+        {flash === 'ok' && (
+          <p className="text-success mt-2 text-sm">Correct!</p>
+        )}
         {flash === 'bad' && (
-          <p className="mt-2 text-sm text-error">Not quite — it was {target}.</p>
+          <p className="text-error mt-2 text-sm">
+            Not quite — it was {target}.
+          </p>
         )}
       </div>
     </div>

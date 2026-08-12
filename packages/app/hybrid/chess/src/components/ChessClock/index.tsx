@@ -1,7 +1,13 @@
 import { FC, useEffect, useRef, useState, useCallback } from 'react';
 
 import { ChessClockSide, ClockState, DelayType, Preset, Stage } from './types';
-import { LOW_TIME_THRESHOLD, ONE_MINUTE, ONE_SECOND, PRESETS, TICK } from './constants';
+import {
+  LOW_TIME_THRESHOLD,
+  ONE_MINUTE,
+  ONE_SECOND,
+  PRESETS,
+  TICK,
+} from './constants';
 import {
   applyMovesToGo,
   delayFor,
@@ -11,14 +17,10 @@ import {
   toTime,
 } from './utils/clock';
 import { playFlagFall, playLowTime, playTick } from './utils/sound';
-import {
-  GearIcon,
-  RotateIcon,
-  UndoIcon,
-  ExpandIcon,
-} from './components/icons';
+import { GearIcon, RotateIcon, UndoIcon, ExpandIcon } from './components/icons';
 
-const toMs = (min: number, sec: number): number => min * 60 * ONE_SECOND + sec * ONE_SECOND;
+const toMs = (min: number, sec: number): number =>
+  min * 60 * ONE_SECOND + sec * ONE_SECOND;
 
 const SideRow: FC<{
   label: string;
@@ -63,7 +65,7 @@ const MoveChart: FC<{ state: ClockState }> = ({ state }) => {
             <span className="w-8 opacity-60">
               {row.side === 'player1' ? 'W' : 'B'}
             </span>
-            <div className="h-2 flex-1 rounded bg-base-100">
+            <div className="bg-base-100 h-2 flex-1 rounded">
               <div
                 className={`h-2 rounded ${row.side === 'player1' ? 'bg-neutral' : 'bg-primary'}`}
                 style={{ width: `${Math.round((row.ms / max) * 100)}%` }}
@@ -108,7 +110,9 @@ export const ChessClock: FC<{ onClose: () => void }> = ({ onClose }) => {
   const [preset, setPreset] = useState<Preset>(PRESETS[0]);
   const [editing, setEditing] = useState(false);
   const [startSide, setStartSide] = useState<ChessClockSide>('player1');
-  const [state, setState] = useState<ClockState>(() => initClock(preset, startSide));
+  const [state, setState] = useState<ClockState>(() =>
+    initClock(preset, startSide)
+  );
   const [soundOn, setSoundOn] = useState(true);
   const [tickOn, setTickOn] = useState(false);
   const [bigMode, setBigMode] = useState(false);
@@ -215,7 +219,8 @@ export const ChessClock: FC<{ onClose: () => void }> = ({ onClose }) => {
         ? Math.min(state.delaySeconds * ONE_SECOND, used)
         : 0;
     setState((prev) => {
-      const inc = prev.delayType === 'fischer' ? prev.increment * ONE_SECOND : 0;
+      const inc =
+        prev.delayType === 'fischer' ? prev.increment * ONE_SECOND : 0;
       const moveCountKey = side === 'player1' ? 'p1Moves' : 'p2Moves';
       const nextRemaining = prev[side] + inc;
       const d = delayFor(side, prev);
@@ -320,17 +325,43 @@ export const ChessClock: FC<{ onClose: () => void }> = ({ onClose }) => {
           </div>
 
           {editing && (
-            <div className="mb-3 rounded border border-base-300 bg-base-200 p-3">
+            <div className="border-base-300 bg-base-200 mb-3 rounded border p-3">
               <div className="flex flex-wrap items-end gap-3">
-                <Field label="P1 min" value={editP1Min} min={0} max={300} onChange={setEditP1Min} />
-                <Field label="P1 sec" value={editP1Sec} min={0} max={59} onChange={setEditP1Sec} />
-                <Field label="P2 min" value={editP2Min} min={0} max={300} onChange={setEditP2Min} />
-                <Field label="P2 sec" value={editP2Sec} min={0} max={59} onChange={setEditP2Sec} />
+                <Field
+                  label="P1 min"
+                  value={editP1Min}
+                  min={0}
+                  max={300}
+                  onChange={setEditP1Min}
+                />
+                <Field
+                  label="P1 sec"
+                  value={editP1Sec}
+                  min={0}
+                  max={59}
+                  onChange={setEditP1Sec}
+                />
+                <Field
+                  label="P2 min"
+                  value={editP2Min}
+                  min={0}
+                  max={300}
+                  onChange={setEditP2Min}
+                />
+                <Field
+                  label="P2 sec"
+                  value={editP2Sec}
+                  min={0}
+                  max={59}
+                  onChange={setEditP2Sec}
+                />
                 <label className="flex flex-col gap-0.5 text-xs">
                   <span className="opacity-60">Delay</span>
                   <select
                     value={editDelayType}
-                    onChange={(e) => setEditDelayType(e.target.value as DelayType)}
+                    onChange={(e) =>
+                      setEditDelayType(e.target.value as DelayType)
+                    }
                     className="select select-bordered select-xs w-28">
                     <option value="none">None</option>
                     <option value="delay">Fixed</option>
@@ -338,11 +369,37 @@ export const ChessClock: FC<{ onClose: () => void }> = ({ onClose }) => {
                     <option value="bronstein">Bronstein</option>
                   </select>
                 </label>
-                <Field label="Delay sec" value={editDelaySec} min={0} max={60} onChange={setEditDelaySec} />
-                <Field label="Increment" value={editInc} min={0} max={60} onChange={setEditInc} />
-                <Field label="Moves to go" value={editMovesToGo} min={0} max={120} onChange={setEditMovesToGo} />
-                <Field label="Extra min" value={editExtraMin} min={0} max={120} onChange={setEditExtraMin} />
-                <button onClick={applyCustom} className="btn btn-xs btn-primary">
+                <Field
+                  label="Delay sec"
+                  value={editDelaySec}
+                  min={0}
+                  max={60}
+                  onChange={setEditDelaySec}
+                />
+                <Field
+                  label="Increment"
+                  value={editInc}
+                  min={0}
+                  max={60}
+                  onChange={setEditInc}
+                />
+                <Field
+                  label="Moves to go"
+                  value={editMovesToGo}
+                  min={0}
+                  max={120}
+                  onChange={setEditMovesToGo}
+                />
+                <Field
+                  label="Extra min"
+                  value={editExtraMin}
+                  min={0}
+                  max={120}
+                  onChange={setEditExtraMin}
+                />
+                <button
+                  onClick={applyCustom}
+                  className="btn btn-xs btn-primary">
                   Set
                 </button>
               </div>
@@ -351,8 +408,18 @@ export const ChessClock: FC<{ onClose: () => void }> = ({ onClose }) => {
 
           {activeLive && (
             <div className="mb-3 grid grid-cols-2 gap-3">
-              <SideRow label="White" side="player1" state={state} onPress={press} />
-              <SideRow label="Black" side="player2" state={state} onPress={press} />
+              <SideRow
+                label="White"
+                side="player1"
+                state={state}
+                onPress={press}
+              />
+              <SideRow
+                label="Black"
+                side="player2"
+                state={state}
+                onPress={press}
+              />
             </div>
           )}
           {state.winner && (
@@ -398,10 +465,22 @@ export const ChessClock: FC<{ onClose: () => void }> = ({ onClose }) => {
       )}
 
       {bigMode && (
-        <div className="fixed inset-0 z-50 flex flex-col bg-base-100">
+        <div className="bg-base-100 fixed inset-0 z-50 flex flex-col">
           <div className="grid flex-1 grid-cols-1 gap-2 p-2 sm:grid-cols-2">
-            <SideRow label="White" side="player1" state={state} big onPress={press} />
-            <SideRow label="Black" side="player2" state={state} big onPress={press} />
+            <SideRow
+              label="White"
+              side="player1"
+              state={state}
+              big
+              onPress={press}
+            />
+            <SideRow
+              label="Black"
+              side="player2"
+              state={state}
+              big
+              onPress={press}
+            />
           </div>
           <div className="flex justify-center gap-2 p-2">
             <button onClick={toggleFullscreen} className="btn btn-sm">

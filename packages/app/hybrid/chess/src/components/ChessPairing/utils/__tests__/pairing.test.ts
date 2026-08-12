@@ -14,14 +14,20 @@ const bob: Player = { id: 'b', name: 'Bob', rating: 2100 };
 const carol: Player = { id: 'c', name: 'Carol', rating: 2000 };
 const dave: Player = { id: 'd', name: 'Dave', rating: 1900 };
 
-const match = (round: number, white: string, black: string, result: Match['result']): Match =>
-  ({ ...makeMatch(round, white, black), result });
+const match = (
+  round: number,
+  white: string,
+  black: string,
+  result: Match['result']
+): Match => ({ ...makeMatch(round, white, black), result });
 
 describe('pairRoundRobin', () => {
   it('pairs an even field so everyone meets everyone once', () => {
     const rounds = pairRoundRobin([alice, bob, carol, dave]);
     expect(rounds).toHaveLength(3);
-    const pairs = rounds.flatMap((r) => r.matches.map((m) => `${m.white}-${m.black}`));
+    const pairs = rounds.flatMap((r) =>
+      r.matches.map((m) => `${m.white}-${m.black}`)
+    );
     expect(new Set(pairs).size).toBe(6);
     const allPairs = new Set(['a-b', 'a-c', 'a-d', 'b-c', 'b-d', 'c-d']);
     for (const p of pairs) {

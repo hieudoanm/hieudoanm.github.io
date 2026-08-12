@@ -11,7 +11,7 @@ export const TACTICS_PUZZLES: TacticsPuzzle[] = [
     id: 't02',
     fen: 'r1bqkb1r/pppp1p1p/2n3p1/4p2Q/2B1P3/8/PPPP1PPP/RNB1K1NR w KQkq - 0 4',
     rating: 1000,
-    hint: 'The scholar\'s mate pattern.',
+    hint: "The scholar's mate pattern.",
   },
   {
     id: 't03',

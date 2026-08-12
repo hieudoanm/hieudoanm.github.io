@@ -11,11 +11,16 @@ interface StudyViewProps {
   onShare: (game: StoredGame) => void;
 }
 
-export const StudyView: FC<StudyViewProps> = ({ game, onBack, onDelete, onShare }) => {
+export const StudyView: FC<StudyViewProps> = ({
+  game,
+  onBack,
+  onDelete,
+  onShare,
+}) => {
   const [selected, setSelected] = useState<number | null>(null);
   const moves = useMemo(() => studyMoves(game.pgn), [game.pgn]);
   const startFen = useMemo(() => toFen(createGame()), []);
-  const fen = selected === null ? startFen : moves[selected]?.fen ?? startFen;
+  const fen = selected === null ? startFen : (moves[selected]?.fen ?? startFen);
 
   return (
     <div className="mx-auto flex w-full max-w-3xl flex-col gap-4 p-4">
@@ -31,10 +36,14 @@ export const StudyView: FC<StudyViewProps> = ({ game, onBack, onDelete, onShare 
           <button onClick={onBack} className="btn btn-sm">
             Back
           </button>
-          <button onClick={() => onShare(game)} className="btn btn-ghost btn-sm">
+          <button
+            onClick={() => onShare(game)}
+            className="btn btn-ghost btn-sm">
             Share link
           </button>
-          <button onClick={() => downloadPgn(game)} className="btn btn-ghost btn-sm">
+          <button
+            onClick={() => downloadPgn(game)}
+            className="btn btn-ghost btn-sm">
             Download .pgn
           </button>
           <button onClick={onDelete} className="btn btn-error btn-ghost btn-sm">
@@ -46,14 +55,16 @@ export const StudyView: FC<StudyViewProps> = ({ game, onBack, onDelete, onShare 
       <div className="grid gap-4 md:grid-cols-[1fr_280px]">
         <div className="card bg-base-200 max-h-[60vh] overflow-y-auto p-3">
           {moves.length === 0 && (
-            <p className="py-4 text-center text-sm opacity-60">No moves in this game.</p>
+            <p className="py-4 text-center text-sm opacity-60">
+              No moves in this game.
+            </p>
           )}
           <div className="grid grid-cols-2 gap-x-3 gap-y-1 text-xs sm:grid-cols-3">
             {moves.map((move) => (
               <button
                 key={move.index}
                 onClick={() => setSelected(move.index)}
-                className={`flex items-center gap-1 rounded px-1.5 py-1 text-left hover:bg-base-300 ${
+                className={`hover:bg-base-300 flex items-center gap-1 rounded px-1.5 py-1 text-left ${
                   selected === move.index ? 'bg-base-300' : ''
                 }`}>
                 <span className="opacity-50">
@@ -93,7 +104,7 @@ export const StudyView: FC<StudyViewProps> = ({ game, onBack, onDelete, onShare 
             </button>
           </div>
           {selected !== null && moves[selected]?.comment && (
-            <p className="mt-2 rounded border border-base-300 bg-base-100 p-2 text-xs">
+            <p className="border-base-300 bg-base-100 mt-2 rounded border p-2 text-xs">
               {moves[selected].comment}
             </p>
           )}

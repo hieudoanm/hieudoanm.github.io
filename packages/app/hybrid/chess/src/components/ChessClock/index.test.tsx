@@ -18,27 +18,41 @@ describe('ChessClock', () => {
   it('toggles sound and tick settings', () => {
     render(<ChessClock onClose={jest.fn()} />);
     fireEvent.click(screen.getByRole('button', { name: /Sound on/i }));
-    expect(screen.getByRole('button', { name: /Sound off/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: /Sound off/i })
+    ).toBeInTheDocument();
     fireEvent.click(screen.getByRole('button', { name: /Tick off/i }));
-    expect(screen.getByRole('button', { name: /Tick on/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: /Tick on/i })
+    ).toBeInTheDocument();
   });
 
   it('enters and exits fullscreen mode', () => {
     render(<ChessClock onClose={jest.fn()} />);
     fireEvent.click(screen.getByRole('button', { name: /Fullscreen/i }));
-    expect(screen.getByRole('button', { name: /Exit fullscreen/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: /Exit fullscreen/i })
+    ).toBeInTheDocument();
     fireEvent.click(screen.getByRole('button', { name: /Exit fullscreen/i }));
-    expect(screen.getByRole('button', { name: /Fullscreen/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: /Fullscreen/i })
+    ).toBeInTheDocument();
   });
 
   it('records move times when switching sides', () => {
     render(<ChessClock onClose={jest.fn()} />);
     const white = screen
       .getAllByRole('button')
-      .find((b) => b.textContent?.includes('White') && !b.textContent?.includes('wins'));
+      .find(
+        (b) =>
+          b.textContent?.includes('White') && !b.textContent?.includes('wins')
+      );
     const black = screen
       .getAllByRole('button')
-      .find((b) => b.textContent?.includes('Black') && !b.textContent?.includes('wins'));
+      .find(
+        (b) =>
+          b.textContent?.includes('Black') && !b.textContent?.includes('wins')
+      );
     if (white) fireEvent.click(white);
     if (black) fireEvent.click(black);
     expect(screen.getByText('Move times')).toBeInTheDocument();

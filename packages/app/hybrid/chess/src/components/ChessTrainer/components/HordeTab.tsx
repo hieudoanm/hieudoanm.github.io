@@ -4,11 +4,7 @@ import { createGame, toFen } from '@chess/ts';
 import { Chessboard } from '../../organisms/chess/ChessBoard';
 import { isCheckmate, legalMoveFor } from '../utils/endgame';
 import { bestMoveFrom } from '../utils/tactics';
-import {
-  applyHordeMove,
-  HORDE_FEN,
-  hordeMoveFor,
-} from '../utils/variants';
+import { applyHordeMove, HORDE_FEN, hordeMoveFor } from '../utils/variants';
 
 export const HordeTab: FC = () => {
   const [game, setGame] = useState<GameState>(() => createGame(HORDE_FEN));
@@ -31,7 +27,10 @@ export const HordeTab: FC = () => {
     }, 60);
   };
 
-  const handleDrop = (sourceSquare: string, targetSquare: string | null): boolean => {
+  const handleDrop = (
+    sourceSquare: string,
+    targetSquare: string | null
+  ): boolean => {
     if (!targetSquare) return false;
     if (game.turn !== 'w' || thinking || winner) return false;
     const move = hordeMoveFor(game, sourceSquare, targetSquare);
