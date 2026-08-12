@@ -8,15 +8,23 @@ app (static export / PWA), desktop app (Tauri), and mobile app (Tauri Mobile).
 
 - Live preview as you type
 - Strict line-level parsing with error highlighting
-- Deterministic auto-layout (layered ranking; same text → same diagram)
-- Shapes: rectangle, round, ellipse, diamond, cylinder
-- Tech icons on nodes: `node db: PostgreSQL [cylinder, icon=database]`
+- Deterministic auto-layout (layered ranking; left-to-right or top-to-bottom)
+- Shapes: rectangle, round, ellipse, diamond, cylinder, hexagon, parallelogram,
+  cloud, note, actor
+- Tech icons on nodes: `node db: PostgreSQL [cylinder, icon=database]` plus
+  custom SVG glyphs: `node x: X [icon=glyph:M 10 20 L 20 5]`
 - 128 built-in examples (Uber, Twitter, YouTube, Slack, Stripe, Google Maps, and
-  more) with interview questions
-- Directed edges with labels; back edges (cycles) routed as curves
+  more) with interview questions, including sequence, state machine, flowchart,
+  and ER diagrams
+- Directed (`->`) and undirected (`--`) edges with labels; self-loops and back
+  edges (cycles) routed as curves
+- Sequence diagrams via `kind: sequence` (lifelines + message arrows)
+- Rank hints (`rank=<n>`) for fine-grained layout control
 - Diagram title support
+- Click-to-select and drag nodes on the canvas
 - Dark / light theme
-- New / Open / Save (`.diagram`) / Export SVG
+- New / Open / Save (`.diagram`) / Export SVG / SVG (A4 print) / PNG
+- Copy as Markdown / Mermaid / PlantUML snippet
 - Persists your work in `localStorage`
 
 ## Getting Started

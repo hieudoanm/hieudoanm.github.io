@@ -44,8 +44,14 @@ const HelpModal: FC<HelpModalProps> = ({ open, onClose }) => {
             <span className="font-mono text-xs">#</span> are comments.
           </p>
           <div>
-            <h3 className="mb-1 font-semibold">Title</h3>
-            <Code>{`title: Web App Architecture`}</Code>
+            <h3 className="mb-1 font-semibold">Title and kind</h3>
+            <Code>{`title: Web App Architecture
+kind: sequence`}</Code>
+            <p className="text-base-content/60 mt-1 text-xs">
+              The kind is <span className="font-mono">flow</span> by default.
+              Use <span className="font-mono">kind: sequence</span> for a
+              sequence diagram with lifelines and message arrows.
+            </p>
           </div>
           <div>
             <h3 className="mb-1 font-semibold">Nodes</h3>
@@ -53,13 +59,17 @@ const HelpModal: FC<HelpModalProps> = ({ open, onClose }) => {
             <p className="text-base-content/60 mt-1 text-xs">
               Shape is optional and defaults to rect. Available shapes:{' '}
               <span className="font-mono">
-                rect, round, ellipse, diamond, cylinder
+                rect, round, ellipse, diamond, cylinder, hexagon, parallelogram,
+                cloud, note, actor
               </span>
               . Icons are optional, e.g.{' '}
               <span className="font-mono">icon=database</span>. Available icons:{' '}
               <span className="font-mono">
-                auth, browser, cache, cloud, compute, database, file, mail,
-                message, queue, search, server, shield, sync, users, worker
+                alert, archive, auth, bell, box, browser, cache, camera, chart,
+                check, clock, cloud, code, compute, credit-card, database, eye,
+                file, globe, heart, key, link, mail, map, message, monitor,
+                music, phone, queue, search, server, settings, shield, star,
+                sync, users, video, worker
               </span>
               .
             </p>
@@ -69,9 +79,16 @@ node db: PostgreSQL [cylinder, icon=database]`}</Code>
           <div>
             <h3 className="mb-1 font-semibold">Edges</h3>
             <Code>{`edge <from> -> <to>: <label>`}</Code>
+            <p className="text-base-content/60 mt-1 text-xs">
+              Use <span className="font-mono">-&gt;</span> for a directed arrow,{' '}
+              <span className="font-mono">--</span> for an undirected line. An
+              edge from a node to itself creates a self-loop.
+            </p>
             <Code className="mt-2">{`edge client -> api: HTTP
 edge api -> db: read
-edge db -> api: rows`}</Code>
+edge db -> api: rows
+edge api -- cdn: static (undirected)
+edge api -> api: retry (self-loop)`}</Code>
           </div>
           <div>
             <h3 className="mb-1 font-semibold">Example</h3>
@@ -87,7 +104,9 @@ edge db -> api: rows`}</Code>{' '}
             Nodes referenced by an edge are created automatically if you have
             not declared them. Ids may contain letters, digits,{' '}
             <span className="font-mono">-</span> and{' '}
-            <span className="font-mono">_</span>.
+            <span className="font-mono">_</span>. Drag nodes on the canvas to
+            arrange them, pick a shape from the toolbar to insert a node, and
+            switch the layout between left-to-right and top-to-bottom.
           </p>
         </div>
       </div>

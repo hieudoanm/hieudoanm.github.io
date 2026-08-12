@@ -48,6 +48,34 @@ edge trip -> db: store
 edge api -> cache: read / write`,
   },
   {
+    id: 'login-flow',
+    name: 'Login Flow — Sequence',
+    description:
+      'OAuth login sequence: client, auth service, session store, database.',
+    questions: [
+      'Design an OAuth2 / OIDC login flow',
+      'How do you keep sessions secure and revocable?',
+      'How do you handle token refresh and expiry?',
+      'How do you scale the session store?',
+      'Design single sign-on across multiple apps',
+    ],
+    text: `kind: sequence
+title: Login Flow
+node client: Client [round, icon=browser]
+node auth: Auth Service [icon=auth]
+node session: Session Service [icon=shield]
+node db: Users DB [cylinder, icon=database]
+
+edge client -> auth: POST /login
+edge auth -> db: verify credentials
+edge db -> auth: user row
+edge auth -> client: set cookie
+edge client -> session: request access token
+edge session -> db: read session
+edge db -> session: session row
+edge session -> client: access token`,
+  },
+  {
     id: 'twitter',
     name: 'Twitter / X — Feed',
     description:
@@ -4650,6 +4678,93 @@ edge worker -> retry: fail
 edge retry -> queue: retry
 edge worker -> monitor: progress
 edge scheduler -> db: state`,
+  },
+  {
+    id: 'order-state-machine',
+    name: 'Order State Machine',
+    description:
+      'Order lifecycle as a state machine: states, transitions, and guards.',
+    questions: [
+      'Design an order lifecycle as a state machine',
+      'Which transitions are allowed from each state?',
+      'How do you persist state and recover from crashes?',
+      'How do you handle concurrent transitions on the same order?',
+    ],
+    text: `title: Order State Machine
+node created: Created [ellipse, icon=clock]
+node pending: Payment Pending [round, icon=credit-card]
+node paid: Paid [round, icon=check]
+node shipped: Shipped [round, icon=box]
+node delivered: Delivered [round, icon=check]
+node cancelled: Cancelled [ellipse, icon=alert]
+node refunded: Refunded [ellipse, icon=archive]
+
+edge created -> pending: place
+edge pending -> paid: pay
+edge pending -> cancelled: cancel
+edge paid -> shipped: fulfill
+edge shipped -> delivered: deliver
+edge shipped -> cancelled: return
+edge cancelled -> refunded: refund
+edge paid -> refunded: refund`,
+  },
+  {
+    id: 'checkout-flowchart',
+    name: 'Checkout Flowchart',
+    description:
+      'Checkout logic as a flowchart: decisions, retries, and side effects.',
+    questions: [
+      'Draw the checkout flow as a flowchart',
+      'Where do you add decision points and retry loops?',
+      'How do you keep the audit trail consistent?',
+      'What happens when the payment is declined?',
+    ],
+    text: `title: Checkout Flowchart
+node start: Start [round, icon=clock]
+node cart: Cart Valid? [diamond, icon=check]
+node stock: In Stock? [diamond, icon=box]
+node pay: Charge Payment [icon=credit-card]
+node fail: Payment Failed [ellipse, icon=alert]
+node ship: Fulfill Order [icon=box]
+node email: Send Receipt [icon=mail]
+node orders: Orders Table [cylinder, icon=database]
+node audit: Audit Log [cylinder, icon=file]
+
+edge start -> cart: begin
+edge cart -> cart: fix
+edge cart -> stock: valid
+edge stock -> cart: out of stock
+edge stock -> pay: in stock
+edge pay -> ship: success
+edge pay -> fail: declined
+edge ship -> email: shipped
+edge ship -> orders: insert
+edge ship -> audit: append`,
+  },
+  {
+    id: 'user-data-model',
+    name: 'User Data Model — ER',
+    description:
+      'Relational schema with tables and relationships using undirected edges.',
+    questions: [
+      'Model a users / accounts / orders relational schema',
+      'Which relationships are one-to-many and many-to-many?',
+      'How do you index foreign keys for join-heavy queries?',
+      'How do you migrate the schema without downtime?',
+    ],
+    text: `title: User Data Model
+node users: Users [cylinder, icon=users]
+node accounts: Accounts [cylinder, icon=key]
+node orders: Orders [cylinder, icon=box]
+node products: Products [cylinder, icon=database]
+node line_items: Line Items [cylinder, icon=file]
+node addresses: Addresses [cylinder, icon=map]
+
+edge users -- accounts: has
+edge users -- orders: places
+edge users -- addresses: lives at
+edge orders -- line_items: contains
+edge products -- line_items: listed in`,
   },
   {
     id: 'app-store',

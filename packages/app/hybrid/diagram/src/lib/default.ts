@@ -2,12 +2,17 @@ export const DEFAULT_DIAGRAM = `# Diagram source file (.diagram)
 # Lines starting with # are comments.
 #
 #   title: <diagram title>
+#   kind: <flow | sequence>
 #   node <id>: <label> [shape, icon=<name>]
-#   edge <from> -> <to>: <label>
+#   edge <from> -> <to>: <label>      (use -- for an undirected line)
 #
-# Shapes: rect, round, ellipse, diamond, cylinder
-# Icons: auth, browser, cache, cloud, compute, database, file, mail,
-#        message, queue, search, server, shield, sync, users, worker
+# Shapes: rect, round, ellipse, diamond, cylinder, hexagon,
+#         parallelogram, cloud, note, actor
+# Icons: alert, archive, auth, bell, box, browser, cache, camera, chart,
+#        check, clock, cloud, code, compute, credit-card, database, eye,
+#        file, globe, heart, key, link, mail, map, message, monitor, music,
+#        phone, queue, search, server, settings, shield, star, sync, users,
+#        video, worker
 
 title: Web App Architecture
 

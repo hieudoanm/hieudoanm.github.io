@@ -3,7 +3,7 @@ import type { IconName } from '@/lib/types';
 
 describe('ICON_NAMES', () => {
   it('exposes the full icon set, sorted for stable docs', () => {
-    expect(ICON_NAMES).toHaveLength(16);
+    expect(ICON_NAMES).toHaveLength(38);
     expect([...ICON_NAMES].sort()).toEqual([...ICON_NAMES]);
   });
 

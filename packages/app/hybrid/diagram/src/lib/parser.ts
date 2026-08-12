@@ -1,13 +1,19 @@
 import type {
   Diagram,
   DiagramEdge,
+  DiagramKind,
   DiagramNode,
   IconName,
   NodeShape,
   ParseError,
   ParseResult,
 } from '@/lib/types';
-import { ICON_NAMES, isIconName } from '@/lib/icons';
+import {
+  GLYPH_PATTERN,
+  GLYPH_PREFIX,
+  ICON_NAMES,
+  isIconName,
+} from '@/lib/icons';
 
 export const SHAPES: readonly NodeShape[] = [
   'rect',
@@ -15,9 +21,17 @@ export const SHAPES: readonly NodeShape[] = [
   'ellipse',
   'diamond',
   'cylinder',
+  'hexagon',
+  'parallelogram',
+  'cloud',
+  'note',
+  'actor',
 ];
 
+export const KINDS: readonly DiagramKind[] = ['flow', 'sequence'];
+
 const NODE_ID_PATTERN = /^[A-Za-z0-9_-]+$/;
+const RANK_PATTERN = /^rank=(\d+)$/;
 
 const normalizeShape = (value: string): NodeShape | null =>
   (SHAPES as readonly string[]).includes(value) ? (value as NodeShape) : null;
@@ -28,6 +42,7 @@ export const parseDiagram = (text: string): ParseResult => {
   const errors: ParseError[] = [];
   const seen: Set<string> = new Set();
   let title = '';
+  let kind: DiagramKind = 'flow';
 
   text.split(/\r?\n/).forEach((raw, index) => {
     const line = index + 1;
@@ -36,6 +51,19 @@ export const parseDiagram = (text: string): ParseResult => {
 
     if (trimmed.startsWith('title:')) {
       title = trimmed.slice('title:'.length).trim();
+      return;
+    }
+
+    if (trimmed.startsWith('kind:')) {
+      const value = trimmed.slice('kind:'.length).trim();
+      if (!(KINDS as readonly string[]).includes(value)) {
+        errors.push({
+          line,
+          message: `Unknown kind "${value}". Valid kinds: ${KINDS.join(', ')}`,
+        });
+        return;
+      }
+      kind = value as DiagramKind;
       return;
     }
 
@@ -83,7 +111,7 @@ export const parseDiagram = (text: string): ParseResult => {
     }
   }
 
-  return { diagram: { title, nodes, edges }, errors };
+  return { diagram: { title, nodes, edges, kind }, errors };
 };
 
 const parseNode = (line: string, lineNumber: number): DiagramNode | Error => {
@@ -103,7 +131,9 @@ const parseNode = (line: string, lineNumber: number): DiagramNode | Error => {
   const shapeMatch = right.match(/^(.*?)\s*\[([^\]]+)\]\s*$/);
   let label = right;
   let shape: NodeShape = 'rect';
-  let icon: IconName | undefined;
+  let icon: IconName | 'glyph' | undefined;
+  let glyph: string | undefined;
+  let rank: number | undefined;
   if (shapeMatch) {
     label = (shapeMatch[1] ?? '').trim();
     const attributes = shapeMatch[2].split(',').map((part) => part.trim());
@@ -111,13 +141,15 @@ const parseNode = (line: string, lineNumber: number): DiagramNode | Error => {
       if (!attribute) continue;
       const iconMatch = attribute.match(/^icon=(.+)$/);
       if (iconMatch) {
-        const name = iconMatch[1].trim();
-        if (!isIconName(name)) {
-          return new Error(
-            `Unknown icon "${name}". Valid icons: ${ICON_NAMES.join(', ')}`
-          );
-        }
-        icon = name;
+        const parsed = parseIcon(iconMatch[1].trim());
+        if (parsed instanceof Error) return parsed;
+        icon = parsed.name;
+        glyph = parsed.glyph;
+        continue;
+      }
+      const rankMatch = attribute.match(RANK_PATTERN);
+      if (rankMatch) {
+        rank = Number(rankMatch[1]);
         continue;
       }
       const parsedShape = normalizeShape(attribute);
@@ -132,7 +164,27 @@ const parseNode = (line: string, lineNumber: number): DiagramNode | Error => {
   if (!label) {
     return new Error(`Node "${id}" needs a label`);
   }
-  return { id, label, shape, icon, line: lineNumber };
+  return { id, label, shape, icon, glyph, rank, line: lineNumber };
+};
+
+const parseIcon = (
+  value: string
+): { name: IconName | 'glyph'; glyph?: string } | Error => {
+  if (value.startsWith(GLYPH_PREFIX)) {
+    const glyph = value.slice(GLYPH_PREFIX.length).trim();
+    if (!glyph || !GLYPH_PATTERN.test(glyph)) {
+      return new Error(
+        `Invalid custom glyph "${glyph}". Use SVG path data, e.g. icon=glyph:M10 20 L20 5`
+      );
+    }
+    return { name: 'glyph', glyph };
+  }
+  if (!isIconName(value)) {
+    return new Error(
+      `Unknown icon "${value}". Valid icons: ${ICON_NAMES.join(', ')}`
+    );
+  }
+  return { name: value };
 };
 
 const parseEdge = (
@@ -143,11 +195,15 @@ const parseEdge = (
   const rest = line.slice('edge'.length).trim();
   const normalized = rest.startsWith(':') ? rest.slice(1).trim() : rest;
   const arrow = normalized.indexOf('->');
-  if (arrow <= 0) {
-    return new Error('Expected "edge <from> -> <to>: <label>"');
+  const dash = normalized.indexOf('--');
+  const useArrow = arrow > 0 && (dash < 0 || arrow < dash);
+  const position = useArrow ? arrow : dash;
+  if (position <= 0) {
+    return new Error('Expected "edge <from> -> <to>: <label>" or "--"');
   }
-  const source = normalized.slice(0, arrow).trim();
-  const targetPart = normalized.slice(arrow + 2).trim();
+  const connector = useArrow ? '->' : '--';
+  const source = normalized.slice(0, position).trim();
+  const targetPart = normalized.slice(position + connector.length).trim();
   const colon = targetPart.indexOf(':');
   let target = targetPart;
   let label = '';
@@ -158,14 +214,12 @@ const parseEdge = (
   if (!source || !target) {
     return new Error('Edge needs both a <from> and a <to>');
   }
-  if (source === target) {
-    return new Error(`Edge cannot point to itself ("${source}")`);
-  }
   return {
-    id: `${source}->${target}#${index}`,
+    id: `${source}${connector}${target}#${index}`,
     source,
     target,
     label,
+    directed: useArrow,
     line: lineNumber,
   };
 };
@@ -176,6 +230,10 @@ export const diagramToText = (diagram: Diagram): string => {
     lines.push(`title: ${diagram.title}`);
     lines.push('');
   }
+  if (diagram.kind === 'sequence') {
+    lines.push('kind: sequence');
+    lines.push('');
+  }
   for (const node of diagram.nodes) {
     lines.push(`node ${node.id}: ${node.label}${nodeSuffix(node)}`);
   }
@@ -183,16 +241,24 @@ export const diagramToText = (diagram: Diagram): string => {
     lines.push('');
   }
   for (const edge of diagram.edges) {
+    const connector = edge.directed ? '->' : '--';
     lines.push(
-      `edge ${edge.source} -> ${edge.target}${edge.label ? `: ${edge.label}` : ''}`
+      `edge ${edge.source} ${connector} ${edge.target}${edge.label ? `: ${edge.label}` : ''}`
     );
   }
   return lines.join('\n');
 };
 
-const nodeSuffix = (node: Pick<DiagramNode, 'shape' | 'icon'>): string => {
+const nodeSuffix = (
+  node: Pick<DiagramNode, 'shape' | 'rank' | 'icon' | 'glyph'>
+): string => {
   const parts: string[] = [];
   if (node.shape !== 'rect') parts.push(node.shape);
-  if (node.icon) parts.push(`icon=${node.icon}`);
+  if (node.rank !== undefined) parts.push(`rank=${node.rank}`);
+  if (node.icon === 'glyph' && node.glyph) {
+    parts.push(`icon=${GLYPH_PREFIX}${node.glyph}`);
+  } else if (node.icon) {
+    parts.push(`icon=${node.icon}`);
+  }
   return parts.length > 0 ? ` [${parts.join(', ')}]` : '';
 };

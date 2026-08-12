@@ -90,19 +90,20 @@ diagram. `downloadDiagram` and `downloadSvg` trigger browser downloads via
 
 ### `src/lib/icons.ts`
 
-A curated set of hand-drawn, stroke-based tech icons (`auth`, `browser`,
-`cache`, `cloud`, `compute`, `database`, `file`, `mail`, `message`, `queue`,
-`search`, `server`, `shield`, `sync`, `users`, `worker`). Each icon is a 24×24
-viewBox body shared by the canvas renderer and the SVG exporter so both stay
-visually identical.
+A curated set of hand-drawn, stroke-based tech icons (`alert`, `auth`,
+`browser`, `cache`, `cloud`, `compute`, `database`, `file`, `mail`, `message`,
+`queue`, `search`, `server`, `shield`, `sync`, `users`, `worker`, and more).
+Each icon is a 24×24 viewBox body shared by the canvas renderer and the SVG
+exporter so both stay visually identical. Nodes can also embed raw SVG path data
+as a custom glyph (`icon=glyph:<path>`).
 
 ### `src/lib/examples.ts`
 
-Sixteen system-design examples (Uber, Twitter/X, Netflix, Instagram, WhatsApp,
-Amazon, URL shortener, Google Docs, Slack, Dropbox, Spotify, DoorDash, Stripe,
-web crawler, Airbnb, API rate limiter), each with interview questions and a
-`text` source that parses cleanly. Browsed from the searchable **Examples**
-modal (`ExamplesModal.tsx`) opened from the toolbar.
+A library of built-in examples — system-design interviews (Uber, Twitter/X,
+Netflix, Instagram, WhatsApp, Amazon, …) plus sequence, state machine,
+flowchart, and ER diagrams — each with interview questions and a `text` source
+that parses cleanly. Browsed from the searchable **Examples** modal
+(`ExamplesModal.tsx`) opened from the toolbar.
 
 ## Storage & State
 

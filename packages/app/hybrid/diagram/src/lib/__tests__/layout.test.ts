@@ -1,9 +1,19 @@
-import { computeLayout, nodeIconCenterX, nodeLabelCenterX } from '@/lib/layout';
+import {
+  applyManualPositions,
+  computeLayout,
+  nodeIconCenterX,
+  nodeLabelCenterX,
+} from '@/lib/layout';
 import { parseDiagram } from '@/lib/parser';
 
 describe('computeLayout', () => {
   it('returns a minimal empty layout for no nodes', () => {
-    const layout = computeLayout({ title: '', nodes: [], edges: [] });
+    const layout = computeLayout({
+      title: '',
+      nodes: [],
+      edges: [],
+      kind: 'flow',
+    });
     expect(layout.nodes).toEqual([]);
     expect(layout.edges).toEqual([]);
     expect(layout.width).toBeGreaterThan(0);
@@ -66,6 +76,7 @@ describe('computeLayout', () => {
           source: 'a',
           target: 'missing',
           label: '',
+          directed: true,
           line: 2,
         },
       ],
@@ -84,6 +95,7 @@ describe('computeLayout', () => {
           source: 'missing',
           target: 'a',
           label: '',
+          directed: true,
           line: 2,
         },
       ],
@@ -137,5 +149,137 @@ describe('computeLayout', () => {
     expect(first.nodes).toEqual(second.nodes);
     expect(first.width).toBe(second.width);
     expect(first.height).toBe(second.height);
+  });
+
+  it('lays a sequence diagram out with headers and lifelines', () => {
+    const diagram = parseDiagram(
+      'kind: sequence\nnode a: Client\nnode b: Server\nedge a -> b: request\nedge b -> a: response'
+    ).diagram;
+    const layout = computeLayout(diagram);
+    expect(layout.kind).toBe('sequence');
+    expect(layout.lifelines).toHaveLength(2);
+    expect(layout.nodes).toHaveLength(2);
+    expect(layout.nodes[0].y).toBe(layout.nodes[1].y);
+    expect(layout.edges).toHaveLength(2);
+  });
+
+  it('swaps rows and columns for a vertical flow layout', () => {
+    const diagram = parseDiagram(
+      'node a: A\nnode b: B\nnode c: C\nedge a -> b\nedge b -> c'
+    ).diagram;
+    const horizontal = computeLayout(diagram, 'horizontal');
+    const vertical = computeLayout(diagram, 'vertical');
+    const hA = horizontal.nodes.find((n) => n.id === 'a')!;
+    const vA = vertical.nodes.find((n) => n.id === 'a')!;
+    const vC = vertical.nodes.find((n) => n.id === 'c')!;
+    expect(horizontal.direction).toBe('horizontal');
+    expect(vertical.direction).toBe('vertical');
+    expect(vC.y).toBeGreaterThan(vA.y);
+    expect(Math.abs(vA.x - vC.x)).toBeLessThan(1);
+  });
+
+  it('gives the new curved and actor shapes the tall height', () => {
+    const diagram = parseDiagram(
+      'node h: H [hexagon]\nnode c: C [cloud]\nnode n: N [note]\nnode a: A [actor]'
+    ).diagram;
+    const layout = computeLayout(diagram);
+    const heights = new Set(layout.nodes.map((node) => node.height));
+    expect(heights.size).toBe(1);
+  });
+
+  it('keeps the parallelogram at the standard height', () => {
+    const diagram = parseDiagram(
+      'node p: P [parallelogram]\nnode r: R'
+    ).diagram;
+    const layout = computeLayout(diagram);
+    const p = layout.nodes.find((n) => n.id === 'p')!;
+    const r = layout.nodes.find((n) => n.id === 'r')!;
+    expect(p.height).toBe(r.height);
+  });
+
+  it('applies manual node positions and re-routes edges', () => {
+    const diagram = parseDiagram(
+      'node a: Alpha\nnode b: Beta\nedge a -> b: step'
+    ).diagram;
+    const layout = computeLayout(diagram);
+    const moved = applyManualPositions(layout, {
+      a: { x: layout.nodes[0].x + 200, y: layout.nodes[0].y },
+    });
+    const node = moved.nodes.find((candidate) => candidate.id === 'a')!;
+    expect(node.x).toBe(layout.nodes[0].x + 200);
+    expect(moved.edges).toHaveLength(1);
+  });
+
+  it('keeps sequence layout when manual positions are applied', () => {
+    const diagram = parseDiagram(
+      'kind: sequence\nnode a: A\nnode b: B\nedge a -> b: ping'
+    ).diagram;
+    const layout = computeLayout(diagram);
+    const moved = applyManualPositions(layout, {
+      a: { x: 999, y: 999 },
+    });
+    expect(moved.nodes.find((n) => n.id === 'a')!.x).not.toBe(999);
+  });
+
+  it('shifts the whole diagram back inside the padding when a node is dragged out', () => {
+    const diagram = parseDiagram('node a: A\nnode b: B\nedge a -> b').diagram;
+    const layout = computeLayout(diagram);
+    const moved = applyManualPositions(layout, {
+      a: { x: -200, y: -200 },
+    });
+    for (const node of moved.nodes) {
+      expect(node.x - node.width / 2).toBeGreaterThanOrEqual(48);
+      expect(node.y - node.height / 2).toBeGreaterThanOrEqual(48);
+    }
+  });
+
+  it('honors rank hints when computing flow ranks', () => {
+    const diagram = parseDiagram(
+      'node a: A [rank=0]\nnode b: B [rank=3]\nedge a -> b: step'
+    ).diagram;
+    const layout = computeLayout(diagram);
+    const a = layout.nodes.find((n) => n.id === 'a')!;
+    const b = layout.nodes.find((n) => n.id === 'b')!;
+    expect(b.x).toBeGreaterThan(a.x);
+    expect(layout.nodes[0].rank).toBe(0);
+  });
+
+  it('lays out an empty sequence diagram', () => {
+    const layout = computeLayout({
+      title: '',
+      nodes: [],
+      edges: [],
+      kind: 'sequence',
+    });
+    expect(layout.kind).toBe('sequence');
+    expect(layout.nodes).toEqual([]);
+    expect(layout.edges).toEqual([]);
+    expect(layout.lifelines).toEqual([]);
+  });
+
+  it('lays out a sequence diagram with no edges', () => {
+    const diagram = parseDiagram(
+      'kind: sequence\nnode a: Client\nnode b: Server'
+    ).diagram;
+    const layout = computeLayout(diagram);
+    expect(layout.edges).toHaveLength(0);
+    expect(layout.lifelines).toHaveLength(2);
+    expect(layout.height).toBeGreaterThan(0);
+  });
+
+  it('routes a sequence self-loop message', () => {
+    const diagram = parseDiagram(
+      'kind: sequence\nnode a: Client\nedge a -> a: retry'
+    ).diagram;
+    const layout = computeLayout(diagram);
+    expect(layout.edges).toHaveLength(1);
+    expect(layout.edges[0].path).toContain('A ');
+  });
+
+  it('routes a vertical self-loop', () => {
+    const diagram = parseDiagram('node a: A\nedge a -> a: retry').diagram;
+    const layout = computeLayout(diagram, 'vertical');
+    expect(layout.edges).toHaveLength(1);
+    expect(layout.edges[0].path).toContain('A ');
   });
 });

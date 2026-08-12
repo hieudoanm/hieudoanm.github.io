@@ -61,7 +61,7 @@ edge a -> b: step`);
   });
 
   it('rejects an unknown shape', () => {
-    const result = parseDiagram('node a: A [hexagon]');
+    const result = parseDiagram('node a: A [star]');
     expect(result.errors).toHaveLength(1);
     expect(result.errors[0].message).toContain('Unknown shape');
   });
@@ -129,9 +129,38 @@ edge a -> b: step`);
     expect(result.errors[0].message).toContain('needs both');
   });
 
-  it('rejects a self edge', () => {
-    const result = parseDiagram('edge a -> a');
-    expect(result.errors[0].message).toContain('cannot point to itself');
+  it('accepts a self-loop edge', () => {
+    const result = parseDiagram('edge a -> a: retry');
+    expect(result.errors).toEqual([]);
+    expect(result.diagram.edges).toHaveLength(1);
+    expect(result.diagram.edges[0]).toMatchObject({
+      source: 'a',
+      target: 'a',
+      label: 'retry',
+      directed: true,
+    });
+  });
+
+  it('parses an undirected edge with --', () => {
+    const result = parseDiagram('edge a -- b: linked');
+    expect(result.errors).toEqual([]);
+    expect(result.diagram.edges[0]).toMatchObject({
+      source: 'a',
+      target: 'b',
+      label: 'linked',
+      directed: false,
+    });
+  });
+
+  it('parses the sequence kind', () => {
+    const result = parseDiagram('kind: sequence\nnode a: A\nedge a -> b: ping');
+    expect(result.errors).toEqual([]);
+    expect(result.diagram.kind).toBe('sequence');
+  });
+
+  it('rejects an unknown kind', () => {
+    const result = parseDiagram('kind: er');
+    expect(result.errors[0].message).toContain('Unknown kind');
   });
 
   it('rejects unknown lines', () => {
@@ -187,5 +216,16 @@ edge a -> b: step`);
   it('omits title and edge label sections when absent', () => {
     const diagram = parseDiagram('node a: A\nnode b: B\nedge a -> b').diagram;
     expect(diagramToText(diagram)).toBe('node a: A\nnode b: B\n\nedge a -> b');
+  });
+
+  it('serializes the sequence kind, undirected edges and self-loops', () => {
+    const diagram = parseDiagram(
+      'kind: sequence\nnode a: A\nedge a -- b: linked\nedge a -> a: retry'
+    ).diagram;
+    const text = diagramToText(diagram);
+    expect(text).toContain('kind: sequence');
+    expect(text).toContain('edge a -- b: linked');
+    expect(text).toContain('edge a -> a: retry');
+    expect(parseDiagram(text).errors).toEqual([]);
   });
 });

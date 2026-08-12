@@ -141,4 +141,11 @@ describe('useDiagramState', () => {
     expect(result.current.text).toBe(DEFAULT_DIAGRAM);
     expect(result.current.parsed.diagram.title).toBe('Web App Architecture');
   });
+
+  it('reset on the default diagram is a no-op', () => {
+    const { result } = renderHook(() => useDiagramState());
+    act(() => result.current.reset());
+    expect(result.current.text).toBe(DEFAULT_DIAGRAM);
+    expect(result.current.canUndo).toBe(false);
+  });
 });

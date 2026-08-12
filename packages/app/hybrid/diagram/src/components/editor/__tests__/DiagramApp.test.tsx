@@ -7,23 +7,45 @@ import StatusBar from '@/components/editor/StatusBar';
 jest.mock('@/lib/export', () => ({
   downloadDiagram: jest.fn(),
   downloadSvg: jest.fn(),
+  downloadPng: jest.fn(),
+  buildSnippet: jest.fn(() => 'snippet'),
 }));
-import { downloadDiagram, downloadSvg } from '@/lib/export';
+import {
+  buildSnippet,
+  downloadDiagram,
+  downloadPng,
+  downloadSvg,
+} from '@/lib/export';
 
 const mockDownloadDiagram = downloadDiagram as jest.Mock;
 const mockDownloadSvg = downloadSvg as jest.Mock;
+const mockDownloadPng = downloadPng as jest.Mock;
+const mockBuildSnippet = buildSnippet as jest.Mock;
+
+beforeEach(() => {
+  mockDownloadDiagram.mockClear();
+  mockDownloadSvg.mockClear();
+  mockDownloadPng.mockClear();
+  mockBuildSnippet.mockClear();
+});
 
 describe('StatusBar', () => {
   it('shows counts and title', () => {
-    render(<StatusBar errors={0} edges={2} nodes={3} title="Flow" />);
+    render(
+      <StatusBar errors={0} edges={2} nodes={3} title="Flow" kind="flow" />
+    );
     expect(screen.getByText('Flow')).toBeInTheDocument();
+    expect(screen.getByText('Flow diagram')).toBeInTheDocument();
     expect(screen.getByLabelText('Node count')).toHaveTextContent('3 nodes');
     expect(screen.getByLabelText('Edge count')).toHaveTextContent('2 edges');
   });
 
   it('shows an error count when present', () => {
-    render(<StatusBar errors={2} edges={0} nodes={0} title="" />);
+    render(
+      <StatusBar errors={2} edges={0} nodes={0} title="" kind="sequence" />
+    );
     expect(screen.getByText('Untitled diagram')).toBeInTheDocument();
+    expect(screen.getByText('Sequence diagram')).toBeInTheDocument();
     expect(screen.getByText('2 error(s)')).toBeInTheDocument();
   });
 });
@@ -203,5 +225,101 @@ describe('Editor', () => {
     const svg = canvas.querySelector('svg')!;
     expect(svg.querySelector('svg[data-icon="browser"]')).not.toBeNull();
     expect(svg.querySelector('svg[data-icon="database"]')).not.toBeNull();
+  });
+
+  it('shows the sequence kind in the status bar for a sequence diagram', () => {
+    render(<Editor />);
+    fireEvent.change(screen.getByLabelText('Diagram source'), {
+      target: {
+        value: 'kind: sequence\nnode a: A\nnode b: B\nedge a -> b: ping',
+      },
+    });
+    expect(screen.getByTestId('status-kind')).toHaveTextContent(
+      'Sequence diagram'
+    );
+    expect(screen.getByText('ping')).toBeInTheDocument();
+  });
+
+  it('inserts a shape node from the toolbar shape menu', () => {
+    render(<Editor />);
+    fireEvent.click(screen.getByRole('button', { name: 'Shape' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Cloud' }));
+    const editor = screen.getByLabelText(
+      'Diagram source'
+    ) as HTMLTextAreaElement;
+    expect(editor.value).toContain('node shape7: Cloud [cloud]');
+    expect(screen.getByText('Cloud')).toBeInTheDocument();
+    expect(screen.getByLabelText('Node count')).toHaveTextContent('7 nodes');
+  });
+
+  it('switches the layout direction to top-to-bottom', () => {
+    render(<Editor />);
+    fireEvent.click(screen.getByRole('button', { name: 'Layout' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Top → Bottom' }));
+    expect(screen.getByText('Top → Bottom')).toBeInTheDocument();
+  });
+
+  it('renders a self-loop edge path on the canvas', () => {
+    render(<Editor />);
+    fireEvent.change(screen.getByLabelText('Diagram source'), {
+      target: { value: 'node a: Alpha\nedge a -> a: retry' },
+    });
+    const canvas = screen.getByLabelText('Diagram canvas');
+    const svg = canvas.querySelector('svg')!;
+    expect(svg.querySelector('path[d*="A "]')).not.toBeNull();
+  });
+
+  it('exports a print-friendly A4 svg', () => {
+    render(<Editor />);
+    fireEvent.click(
+      screen.getByRole('button', { name: 'More export options' })
+    );
+    fireEvent.click(screen.getByRole('button', { name: 'SVG (A4 print)' }));
+    expect(mockDownloadSvg).toHaveBeenCalledTimes(1);
+    expect(mockDownloadSvg.mock.calls[0][3]).toEqual({
+      print: true,
+      page: 'a4-landscape',
+    });
+  });
+
+  it('exports a png', () => {
+    render(<Editor />);
+    fireEvent.click(
+      screen.getByRole('button', { name: 'More export options' })
+    );
+    fireEvent.click(screen.getByRole('button', { name: 'PNG' }));
+    expect(mockDownloadPng).toHaveBeenCalledTimes(1);
+    expect(mockDownloadPng.mock.calls[0][3]).toEqual({ page: 'a4-landscape' });
+  });
+
+  it('copies a markdown snippet', async () => {
+    Object.defineProperty(navigator, 'clipboard', {
+      configurable: true,
+      value: { writeText: jest.fn().mockResolvedValue(undefined) },
+    });
+    render(<Editor />);
+    fireEvent.click(screen.getByRole('button', { name: 'Copy' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Markdown' }));
+    expect(mockBuildSnippet).toHaveBeenCalledWith(
+      expect.objectContaining({ kind: 'flow' }),
+      'markdown'
+    );
+  });
+
+  it('drags a node on the canvas and updates its position', () => {
+    render(<Editor />);
+    const svg = screen.getByLabelText('Diagram canvas').querySelector('svg')!;
+    const group = svg.querySelector('g.cursor-move')!;
+    const rect = group.querySelector('rect')!;
+    const before = Number(rect.getAttribute('x'));
+    fireEvent.pointerDown(group, {
+      pointerId: 1,
+      clientX: 100,
+      clientY: 100,
+    });
+    fireEvent.pointerMove(group, { clientX: 130, clientY: 100 });
+    fireEvent.pointerUp(group);
+    const movedRect = svg.querySelector('g.cursor-move rect')!;
+    expect(Number(movedRect.getAttribute('x'))).toBeGreaterThan(before);
   });
 });

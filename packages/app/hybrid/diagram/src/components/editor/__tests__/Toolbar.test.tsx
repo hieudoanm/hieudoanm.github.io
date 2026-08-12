@@ -7,6 +7,9 @@ describe('Toolbar', () => {
     onOpen: jest.fn(),
     onSave: jest.fn(),
     onExportSvg: jest.fn(),
+    onExportSvgPrint: jest.fn(),
+    onExportPng: jest.fn(),
+    onCopySnippet: jest.fn(),
     onExamples: jest.fn(),
     canExport: true,
     canUndo: true,
@@ -20,6 +23,9 @@ describe('Toolbar', () => {
     theme: 'dark' as const,
     onToggleTheme: jest.fn(),
     onHelp: jest.fn(),
+    direction: 'horizontal' as const,
+    onDirectionChange: jest.fn(),
+    onNewShape: jest.fn(),
   };
 
   it('calls the file and zoom handlers', () => {
@@ -46,9 +52,19 @@ describe('Toolbar', () => {
     expect(base.onHelp).toHaveBeenCalled();
   });
 
+  it('links to the posts library', () => {
+    render(<Toolbar {...base} />);
+    const link = screen.getByRole('link', { name: 'Posts' });
+    expect(link.getAttribute('href')).toBe('/posts/');
+  });
+
   it('disables export when there is nothing to export', () => {
     render(<Toolbar {...base} canExport={false} />);
     expect(screen.getByRole('button', { name: 'Export SVG' })).toBeDisabled();
+    fireEvent.click(
+      screen.getByRole('button', { name: 'More export options' })
+    );
+    expect(screen.getByRole('button', { name: 'PNG' })).toBeDisabled();
   });
 
   it('calls the undo and redo handlers', () => {
@@ -80,5 +96,41 @@ describe('Toolbar', () => {
     expect(
       screen.getByRole('button', { name: 'Toggle theme' }).firstChild
     ).not.toBeNull();
+  });
+
+  it('exports an A4 print svg and png from the export menu', () => {
+    render(<Toolbar {...base} />);
+    fireEvent.click(
+      screen.getByRole('button', { name: 'More export options' })
+    );
+    fireEvent.click(screen.getByRole('button', { name: 'SVG (A4 print)' }));
+    expect(base.onExportSvgPrint).toHaveBeenCalled();
+    fireEvent.click(
+      screen.getByRole('button', { name: 'More export options' })
+    );
+    fireEvent.click(screen.getByRole('button', { name: 'PNG' }));
+    expect(base.onExportPng).toHaveBeenCalled();
+  });
+
+  it('changes the layout direction from the layout menu', () => {
+    render(<Toolbar {...base} direction="vertical" />);
+    expect(screen.getByText('Top → Bottom')).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Layout' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Left → Right' }));
+    expect(base.onDirectionChange).toHaveBeenCalledWith('horizontal');
+  });
+
+  it('inserts a shape from the shape menu', () => {
+    render(<Toolbar {...base} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Shape' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Hexagon' }));
+    expect(base.onNewShape).toHaveBeenCalledWith('hexagon');
+  });
+
+  it('copies a snippet from the copy menu', () => {
+    render(<Toolbar {...base} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Copy' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Mermaid' }));
+    expect(base.onCopySnippet).toHaveBeenCalledWith('mermaid');
   });
 });
