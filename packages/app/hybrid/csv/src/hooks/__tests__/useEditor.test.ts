@@ -480,6 +480,87 @@ describe('useEditor', () => {
     expect(sheet.frozenCols).toBe(0);
   });
 
+  it('reports the format and alignment of the focused cell', () => {
+    const { result, refresh } = renderEditor();
+    expect(result.current.activeFormat).toBe('general');
+    expect(result.current.activeAlignment).toBe('left');
+
+    act(() => result.current.onSelect({ row: 2, col: 1 }));
+    act(() => result.current.onFormatChange('currency'));
+    act(() => result.current.onAlignmentChange('right'));
+    act(() => refresh());
+    expect(result.current.activeFormat).toBe('currency');
+    expect(result.current.activeAlignment).toBe('right');
+  });
+
+  it('continues a numeric row series when filling', () => {
+    const grid = createGrid(5, 5);
+    grid[0][0] = '1';
+    grid[0][1] = '2';
+    const workbook = setActiveSheetGrid(createWorkbook(), grid);
+    const { result, getWorkbook, refresh } = renderEditor(workbook);
+    act(() =>
+      result.current.onAutoFill(
+        { top: 0, left: 0, bottom: 0, right: 1 },
+        { top: 0, left: 0, bottom: 0, right: 4 }
+      )
+    );
+    act(() => refresh());
+    expect(getWorkbook().sheets[0].grid[0]).toEqual(['1', '2', '3', '4', '5']);
+  });
+
+  it('continues a numeric column series when filling down', () => {
+    const grid = createGrid(5, 5);
+    grid[0][0] = '10';
+    grid[1][0] = '20';
+    const workbook = setActiveSheetGrid(createWorkbook(), grid);
+    const { result, getWorkbook, refresh } = renderEditor(workbook);
+    act(() =>
+      result.current.onAutoFill(
+        { top: 0, left: 0, bottom: 1, right: 0 },
+        { top: 0, left: 0, bottom: 4, right: 0 }
+      )
+    );
+    act(() => refresh());
+    const column = getWorkbook().sheets[0].grid.map((row) => row[0]);
+    expect(column).toEqual(['10', '20', '30', '40', '50']);
+  });
+
+  it('copies non-numeric values when filling', () => {
+    const grid = createGrid(5, 5);
+    grid[0][0] = 'x';
+    const workbook = setActiveSheetGrid(createWorkbook(), grid);
+    const { result, getWorkbook, refresh } = renderEditor(workbook);
+    act(() =>
+      result.current.onAutoFill(
+        { top: 0, left: 0, bottom: 0, right: 0 },
+        { top: 0, left: 0, bottom: 0, right: 2 }
+      )
+    );
+    act(() => refresh());
+    expect(getWorkbook().sheets[0].grid[0].slice(0, 3)).toEqual([
+      'x',
+      'x',
+      'x',
+    ]);
+  });
+
+  it('applies a number format and alignment to the selection', () => {
+    const { result, getWorkbook, refresh } = renderEditor();
+    act(() => result.current.onSelect({ row: 0, col: 0 }));
+    act(() =>
+      result.current.onGridKeyDown(gridKey('ArrowRight', { shiftKey: true }))
+    );
+    act(() => result.current.onFormatChange('percent'));
+    act(() => result.current.onAlignmentChange('center'));
+    act(() => refresh());
+    const sheet = getWorkbook().sheets[0];
+    expect(sheet.formats?.['0:0']).toBe('percent');
+    expect(sheet.formats?.['0:1']).toBe('percent');
+    expect(sheet.alignments?.['0:0']).toBe('center');
+    expect(sheet.alignments?.['0:1']).toBe('center');
+  });
+
   it('toggles shortcuts with Ctrl/Cmd+K and the find bar with Ctrl/Cmd+F', () => {
     const { result } = renderEditor();
     act(() => result.current.onGridKeyDown(gridKey('k', { metaKey: true })));

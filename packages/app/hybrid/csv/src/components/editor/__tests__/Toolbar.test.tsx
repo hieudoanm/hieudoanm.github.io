@@ -28,6 +28,10 @@ describe('Toolbar', () => {
     onToggleTheme: jest.fn(),
     onOpenShortcuts: jest.fn(),
     activeCellLabel: 'A1',
+    activeFormat: 'general' as const,
+    activeAlignment: 'left' as const,
+    onFormatChange: jest.fn(),
+    onAlignmentChange: jest.fn(),
   };
 
   beforeEach(() => {
@@ -125,6 +129,37 @@ describe('Toolbar', () => {
       target: { value: 'both' },
     });
     expect(baseProps.onSetFreeze).toHaveBeenCalledWith('both');
+  });
+
+  it('applies a number format from the select', () => {
+    render(<Toolbar {...baseProps} />);
+    fireEvent.change(screen.getByLabelText('Number format'), {
+      target: { value: 'currency' },
+    });
+    expect(baseProps.onFormatChange).toHaveBeenCalledWith('currency');
+  });
+
+  it('reflects the active number format', () => {
+    render(<Toolbar {...baseProps} activeFormat="percent" />);
+    expect(screen.getByLabelText('Number format')).toHaveValue('percent');
+  });
+
+  it('applies an alignment from the button group', () => {
+    render(<Toolbar {...baseProps} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Align center' }));
+    expect(baseProps.onAlignmentChange).toHaveBeenCalledWith('center');
+  });
+
+  it('marks the active alignment button as pressed', () => {
+    render(<Toolbar {...baseProps} activeAlignment="right" />);
+    expect(screen.getByRole('button', { name: 'Align right' })).toHaveAttribute(
+      'aria-pressed',
+      'true'
+    );
+    expect(screen.getByRole('button', { name: 'Align left' })).toHaveAttribute(
+      'aria-pressed',
+      'false'
+    );
   });
 
   it('reflects the current freeze mode', () => {

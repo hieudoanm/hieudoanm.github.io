@@ -1,4 +1,5 @@
 import { mono, sans } from '@/lib/fonts';
+import RegisterServiceWorker from '@/components/RegisterServiceWorker';
 import '@/styles/globals.css';
 import type { Metadata } from 'next';
 import { FC, ReactNode } from 'react';
@@ -20,9 +21,12 @@ const RootLayout: FC<{ children: ReactNode }> = ({ children }) => (
     data-theme="spreadsheet"
     className={`${sans.variable} ${mono.variable}`}>
     <head>
-      <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     </head>
-    <body className="h-screen overflow-hidden">{children}</body>
+    <body className="h-screen overflow-hidden">
+      {children}
+      <RegisterServiceWorker />
+    </body>
   </html>
 );
 

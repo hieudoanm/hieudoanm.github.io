@@ -1,6 +1,7 @@
 'use client';
 
 import { FC } from 'react';
+import type { Alignment } from '@/lib/types';
 
 interface CellProps {
   value: string;
@@ -11,8 +12,11 @@ interface CellProps {
   commentText: string;
   width: number;
   height: number;
+  alignment?: Alignment;
   extraClassName?: string;
   extraStyle?: React.CSSProperties;
+  showFillHandle?: boolean;
+  onFillHandlePointerDown?: (event: React.PointerEvent<HTMLDivElement>) => void;
   cellRow: number;
   cellCol: number;
   onSelect: (event: React.MouseEvent<HTMLTableCellElement>) => void;
@@ -32,8 +36,11 @@ const Cell: FC<CellProps> = ({
   commentText,
   width,
   height,
+  alignment,
   extraClassName = '',
   extraStyle,
+  showFillHandle = false,
+  onFillHandlePointerDown,
   cellRow,
   cellCol,
   onSelect,
@@ -77,7 +84,7 @@ const Cell: FC<CellProps> = ({
       className={`group border-base-300 relative border p-0 ${tone} ${
         isFocus ? 'z-10 shadow-[inset_0_0_0_1px_theme(colors.primary)]' : ''
       } ${extraClassName}`}
-      style={cellStyle}
+      style={{ ...cellStyle, textAlign: alignment }}
       onClick={onSelect}
       onDoubleClick={onStartEdit}
       onPointerDown={onPointerDown}
@@ -96,6 +103,14 @@ const Cell: FC<CellProps> = ({
             {commentText}
           </span>
         </>
+      )}
+      {showFillHandle && (
+        <div
+          aria-label="Fill handle"
+          className="absolute -right-[3px] -bottom-[3px] z-20 h-3 w-3 cursor-crosshair rounded-sm border border-base-100 bg-primary"
+          onPointerDown={onFillHandlePointerDown}
+          role="button"
+        />
       )}
     </td>
   );

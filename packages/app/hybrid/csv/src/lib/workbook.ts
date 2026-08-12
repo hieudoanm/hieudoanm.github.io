@@ -1,5 +1,12 @@
 import { createGrid, setCell } from '@/lib/grid';
-import type { Grid, Sheet, Workbook } from '@/lib/types';
+import type {
+  Alignment,
+  CellPosition,
+  Grid,
+  NumberFormat,
+  Sheet,
+  Workbook,
+} from '@/lib/types';
 
 export const DEFAULT_COL_WIDTH = 128;
 export const DEFAULT_ROW_HEIGHT = 28;
@@ -16,6 +23,8 @@ export const createSheet = (name = 'Sheet 1', rows = 10, cols = 5): Sheet => ({
   frozenRows: 0,
   frozenCols: 0,
   comments: {},
+  formats: {},
+  alignments: {},
 });
 
 export const createWorkbook = (
@@ -159,6 +168,32 @@ export const setActiveCellComment = (
     return { ...sheet, comments };
   });
 
+export const setActiveCellFormats = (
+  workbook: Workbook,
+  cells: CellPosition[],
+  format: NumberFormat
+): Workbook =>
+  updateActiveSheet(workbook, (sheet) => {
+    const formats = { ...(sheet.formats ?? {}) };
+    cells.forEach(({ row, col }) => {
+      formats[`${row}:${col}`] = format;
+    });
+    return { ...sheet, formats };
+  });
+
+export const setActiveCellAlignments = (
+  workbook: Workbook,
+  cells: CellPosition[],
+  alignment: Alignment
+): Workbook =>
+  updateActiveSheet(workbook, (sheet) => {
+    const alignments = { ...(sheet.alignments ?? {}) };
+    cells.forEach(({ row, col }) => {
+      alignments[`${row}:${col}`] = alignment;
+    });
+    return { ...sheet, alignments };
+  });
+
 export const addSheet = (workbook: Workbook): Workbook => {
   const template = workbook.sheets[0]?.grid;
   const sheet = createSheet(
@@ -206,3 +241,15 @@ export const columnWidth = (sheet: Sheet, col: number): number =>
 
 export const rowHeight = (sheet: Sheet, row: number): number =>
   sheet.rowHeights[row] ?? DEFAULT_ROW_HEIGHT;
+
+export const cellFormat = (
+  sheet: Sheet,
+  row: number,
+  col: number
+): NumberFormat => sheet.formats?.[`${row}:${col}`] ?? 'general';
+
+export const cellAlignment = (
+  sheet: Sheet,
+  row: number,
+  col: number
+): Alignment => sheet.alignments?.[`${row}:${col}`] ?? 'left';

@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { act, fireEvent, render, screen } from '@testing-library/react';
 import Grid from '@/components/editor/Grid';
 import { createSheet } from '@/lib/workbook';
 import type { Selection } from '@/lib/types';
@@ -35,6 +35,7 @@ describe('Grid', () => {
       onKeyDown: jest.fn(),
       onResizeColumn: jest.fn(),
       onResizeRow: jest.fn(),
+      onAutoFill: jest.fn(),
       ...overrides,
     };
   };
@@ -176,5 +177,50 @@ describe('Grid', () => {
     );
     const input = screen.getByLabelText('Cell value') as HTMLInputElement;
     expect(input.value).toBe('=1+1');
+  });
+
+  it('renders the fill handle at the selection corner', () => {
+    const selection: Selection = {
+      anchor: { row: 0, col: 0 },
+      focus: { row: 1, col: 1 },
+    };
+    render(<Grid {...baseProps({ selection })} />);
+    const handle = screen.getByLabelText('Fill handle');
+    expect(handle.closest('td')).toBe(screen.getAllByRole('gridcell')[4]);
+  });
+
+  it('hides the fill handle while editing', () => {
+    render(<Grid {...baseProps({ editing: { row: 0, col: 0 } })} />);
+    expect(screen.queryByLabelText('Fill handle')).toBeNull();
+  });
+
+  it('fills a range when dragging the fill handle', () => {
+    const props = baseProps();
+    render(<Grid {...props} />);
+    const cells = screen.getAllByRole('gridcell');
+    const originalElementFromPoint = document.elementFromPoint;
+    document.elementFromPoint = () => cells[5] as unknown as HTMLElement;
+    try {
+      fireEvent.pointerDown(screen.getByLabelText('Fill handle'), {
+        button: 0,
+      });
+      act(() => {
+        window.dispatchEvent(
+          pointer('pointermove', { clientX: 0, clientY: 0 })
+        );
+      });
+      expect(screen.getAllByRole('gridcell')[3].className).toContain(
+        'bg-primary/25'
+      );
+      act(() => {
+        window.dispatchEvent(pointer('pointerup', {}));
+      });
+    } finally {
+      document.elementFromPoint = originalElementFromPoint;
+    }
+    expect(props.onAutoFill).toHaveBeenCalledWith(
+      { top: 0, left: 0, bottom: 0, right: 0 },
+      { top: 0, left: 0, bottom: 1, right: 2 }
+    );
   });
 });

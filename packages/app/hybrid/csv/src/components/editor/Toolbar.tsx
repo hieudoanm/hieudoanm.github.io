@@ -2,6 +2,9 @@
 
 import { FC, useRef } from 'react';
 import {
+  FiAlignCenter,
+  FiAlignLeft,
+  FiAlignRight,
   FiArrowDown,
   FiArrowLeft,
   FiArrowRight,
@@ -19,7 +22,13 @@ import {
   FiTrash2,
   FiUpload,
 } from 'react-icons/fi';
-import type { ExportFormat, FreezeMode } from '@/lib/types';
+import { NUMBER_FORMAT_OPTIONS } from '@/lib/format';
+import type {
+  Alignment,
+  ExportFormat,
+  FreezeMode,
+  NumberFormat,
+} from '@/lib/types';
 
 interface ToolbarProps {
   canUndo: boolean;
@@ -47,6 +56,10 @@ interface ToolbarProps {
   onToggleTheme: () => void;
   onOpenShortcuts: () => void;
   activeCellLabel: string;
+  activeFormat: NumberFormat;
+  activeAlignment: Alignment;
+  onFormatChange: (format: NumberFormat) => void;
+  onAlignmentChange: (alignment: Alignment) => void;
 }
 
 const buttonClass = 'btn btn-ghost btn-sm gap-1 font-normal';
@@ -77,6 +90,10 @@ const Toolbar: FC<ToolbarProps> = ({
   onToggleTheme,
   onOpenShortcuts,
   activeCellLabel,
+  activeFormat,
+  activeAlignment,
+  onFormatChange,
+  onAlignmentChange,
 }) => {
   const fileInput = useRef<HTMLInputElement>(null);
   const exportSelect = useRef<HTMLSelectElement>(null);
@@ -178,6 +195,45 @@ const Toolbar: FC<ToolbarProps> = ({
         onClick={onToggleComment}>
         <FiMessageSquare /> Comment
       </button>
+      <span className="bg-base-300 mx-1 h-6 w-px" />
+      <select
+        aria-label="Number format"
+        className="select select-ghost select-sm w-28 font-normal"
+        value={activeFormat}
+        onChange={(event) =>
+          onFormatChange(event.target.value as NumberFormat)
+        }>
+        {NUMBER_FORMAT_OPTIONS.map((option) => (
+          <option key={option.value} value={option.value}>
+            {option.label}
+          </option>
+        ))}
+      </select>
+      <div
+        aria-label="Alignment"
+        className="flex items-center gap-1"
+        role="group">
+        {(['left', 'center', 'right'] as Alignment[]).map((alignment) => {
+          const Icon =
+            alignment === 'left'
+              ? FiAlignLeft
+              : alignment === 'center'
+                ? FiAlignCenter
+                : FiAlignRight;
+          return (
+            <button
+              key={alignment}
+              aria-label={`Align ${alignment}`}
+              aria-pressed={activeAlignment === alignment}
+              className={`${buttonClass} ${
+                activeAlignment === alignment ? 'btn-active' : ''
+              }`}
+              onClick={() => onAlignmentChange(alignment)}>
+              <Icon />
+            </button>
+          );
+        })}
+      </div>
       <select
         aria-label="Freeze panes"
         className="select select-ghost select-sm w-24 font-normal"

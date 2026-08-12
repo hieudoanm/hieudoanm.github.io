@@ -85,6 +85,30 @@ describe('Cell', () => {
     expect(screen.getByText('a note')).toBeInTheDocument();
   });
 
+  it('applies the alignment as a text alignment style', () => {
+    render(<Cell {...baseProps} alignment="center" />);
+    expect(screen.getByRole('gridcell').style.textAlign).toBe('center');
+  });
+
+  it('renders the fill handle and reports its pointer down', () => {
+    const onFillHandlePointerDown = jest.fn();
+    render(
+      <Cell
+        {...baseProps}
+        showFillHandle
+        onFillHandlePointerDown={onFillHandlePointerDown}
+      />
+    );
+    const handle = screen.getByLabelText('Fill handle');
+    fireEvent.pointerDown(handle, { button: 0 });
+    expect(onFillHandlePointerDown).toHaveBeenCalledTimes(1);
+  });
+
+  it('omits the fill handle by default', () => {
+    render(<Cell {...baseProps} />);
+    expect(screen.queryByLabelText('Fill handle')).toBeNull();
+  });
+
   it('applies extra classes and styles', () => {
     render(
       <Cell

@@ -2,6 +2,8 @@ import {
   addActiveColumn,
   addActiveRow,
   addSheet,
+  cellAlignment,
+  cellFormat,
   columnWidth,
   createSheet,
   createWorkbook,
@@ -12,7 +14,9 @@ import {
   renameSheet,
   rowHeight,
   setActiveCell,
+  setActiveCellAlignments,
   setActiveCellComment,
+  setActiveCellFormats,
   setActiveColumnWidth,
   setActiveFreeze,
   setActiveRowHeight,
@@ -128,6 +132,42 @@ describe('workbook', () => {
     expect(getActiveSheet(workbook).comments['0:0']).toBe('note');
     workbook = setActiveCellComment(workbook, 0, 0, '');
     expect(getActiveSheet(workbook).comments['0:0']).toBeUndefined();
+  });
+
+  it('defaults formats and alignments to general and left', () => {
+    const sheet = getActiveSheet(createWorkbook());
+    expect(cellFormat(sheet, 0, 0)).toBe('general');
+    expect(cellAlignment(sheet, 0, 0)).toBe('left');
+  });
+
+  it('sets number formats across a range of cells', () => {
+    let workbook = setActiveCellFormats(
+      createWorkbook(),
+      [
+        { row: 0, col: 0 },
+        { row: 1, col: 2 },
+      ],
+      'currency'
+    );
+    const sheet = getActiveSheet(workbook);
+    expect(sheet.formats?.['0:0']).toBe('currency');
+    expect(sheet.formats?.['1:2']).toBe('currency');
+    expect(cellFormat(sheet, 0, 1)).toBe('general');
+  });
+
+  it('sets alignments across a range of cells', () => {
+    let workbook = setActiveCellAlignments(
+      createWorkbook(),
+      [
+        { row: 0, col: 0 },
+        { row: 2, col: 2 },
+      ],
+      'center'
+    );
+    const sheet = getActiveSheet(workbook);
+    expect(sheet.alignments?.['0:0']).toBe('center');
+    expect(sheet.alignments?.['2:2']).toBe('center');
+    expect(cellAlignment(sheet, 1, 1)).toBe('left');
   });
 
   it('adds, removes, renames and switches sheets', () => {

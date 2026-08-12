@@ -13,6 +13,7 @@ import { useCsvState } from '@/hooks/useCsvState';
 import { useEditor } from '@/hooks/useEditor';
 import { useTheme } from '@/hooks/useTheme';
 import { computeDisplayGrid } from '@/lib/formula';
+import { applyNumberFormats } from '@/lib/format';
 import { getActiveSheet } from '@/lib/workbook';
 
 const Editor: FC = () => {
@@ -23,8 +24,12 @@ const Editor: FC = () => {
 
   const activeSheet = getActiveSheet(workbook);
   const displayGrid = useMemo(
-    () => computeDisplayGrid(activeSheet.grid),
-    [activeSheet.grid]
+    () =>
+      applyNumberFormats(
+        computeDisplayGrid(activeSheet.grid),
+        activeSheet.formats
+      ),
+    [activeSheet.grid, activeSheet.formats]
   );
   const freezeMode =
     activeSheet.frozenRows > 0 && activeSheet.frozenCols > 0
@@ -63,6 +68,10 @@ const Editor: FC = () => {
         onToggleTheme={toggleTheme}
         onOpenShortcuts={editor.onToggleShortcuts}
         activeCellLabel={editor.activeLabel}
+        activeFormat={editor.activeFormat}
+        activeAlignment={editor.activeAlignment}
+        onFormatChange={editor.onFormatChange}
+        onAlignmentChange={editor.onAlignmentChange}
       />
       {editor.findOpen && (
         <FindBar
@@ -125,6 +134,7 @@ const Editor: FC = () => {
           onKeyDown={editor.onCellKeyDown}
           onResizeColumn={editor.onResizeColumn}
           onResizeRow={editor.onResizeRow}
+          onAutoFill={editor.onAutoFill}
         />
       </div>
       <StatusBar

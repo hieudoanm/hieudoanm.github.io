@@ -14,7 +14,14 @@ export interface Sheet {
   frozenRows: number;
   frozenCols: number;
   comments: Record<string, string>;
+  formats?: Record<string, NumberFormat>;
+  alignments?: Record<string, Alignment>;
 }
+
+export type Alignment = 'left' | 'center' | 'right';
+
+export type NumberFormat =
+  'general' | 'number' | 'number2' | 'currency' | 'percent' | 'scientific';
 
 export interface Workbook {
   sheets: Sheet[];

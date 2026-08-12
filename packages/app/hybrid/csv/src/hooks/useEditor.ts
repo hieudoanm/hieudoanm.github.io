@@ -5,13 +5,17 @@ import {
   addActiveColumn,
   addActiveRow,
   addSheet,
+  cellAlignment,
+  cellFormat,
   deleteActiveColumn,
   deleteActiveRow,
   getActiveSheet,
   removeSheet,
   renameSheet,
   setActiveCell,
+  setActiveCellAlignments,
   setActiveCellComment,
+  setActiveCellFormats,
   setActiveColumnWidth,
   setActiveFreeze,
   setActiveRowHeight,
@@ -20,9 +24,11 @@ import {
   sortActiveSheet,
 } from '@/lib/workbook';
 import { columnToLabel } from '@/lib/columns';
+import { fillRegion } from '@/lib/autofill';
 import { parseDelimited } from '@/lib/csv';
 import { downloadWorkbook } from '@/lib/export';
 import {
+  Bounds,
   clampPosition,
   samePosition,
   selectionBounds,
@@ -31,11 +37,13 @@ import {
 import { createWorkbook } from '@/lib/workbook';
 import { createGrid } from '@/lib/grid';
 import type {
+  Alignment,
   CellPosition,
   ExportFormat,
   FilterState,
   FindResult,
   FreezeMode,
+  NumberFormat,
   Selection,
   Workbook,
 } from '@/lib/types';
@@ -61,6 +69,10 @@ interface EditorApi {
   shortcutsOpen: boolean;
   activeLabel: string;
   rangeLabel: string;
+  activeFormat: NumberFormat;
+  activeAlignment: Alignment;
+  onFormatChange: (format: NumberFormat) => void;
+  onAlignmentChange: (alignment: Alignment) => void;
   onSelect: (position: CellPosition, extend?: boolean) => void;
   onStartEdit: (position: CellPosition) => void;
   onEditBufferChange: (value: string) => void;
@@ -72,6 +84,7 @@ interface EditorApi {
   onPaste: (event: React.ClipboardEvent) => void;
   onResizeColumn: (col: number, width: number) => void;
   onResizeRow: (row: number, height: number) => void;
+  onAutoFill: (source: Bounds, target: Bounds) => void;
   onSort: (direction: 'asc' | 'desc') => void;
   onToggleFilter: () => void;
   onFilterColChange: (col: number) => void;
@@ -378,6 +391,21 @@ export const useEditor = (
     [setWorkbook]
   );
 
+  const onAutoFill = useCallback(
+    (source: Bounds, target: Bounds): void => {
+      setWorkbook((prev) => {
+        let next = prev;
+        fillRegion(getActiveSheet(prev).grid, source, target).forEach(
+          ({ row, col, value }) => {
+            next = setActiveCell(next, row, col, value);
+          }
+        );
+        return next;
+      });
+    },
+    [setWorkbook]
+  );
+
   const onSort = useCallback(
     (direction: 'asc' | 'desc') => {
       setWorkbook((prev) =>
@@ -604,11 +632,39 @@ export const useEditor = (
     setShortcutsOpen((open) => !open);
   }, []);
 
+  const onFormatChange = useCallback(
+    (format: NumberFormat) => {
+      setWorkbook((prev) =>
+        setActiveCellFormats(prev, selectionCells(selection), format)
+      );
+    },
+    [selection, setWorkbook]
+  );
+
+  const onAlignmentChange = useCallback(
+    (alignment: Alignment) => {
+      setWorkbook((prev) =>
+        setActiveCellAlignments(prev, selectionCells(selection), alignment)
+      );
+    },
+    [selection, setWorkbook]
+  );
+
   const bounds = selectionBounds(selection);
   const activeLabel = `${columnToLabel(selection.focus.col)}${selection.focus.row + 1}`;
   const rangeLabel = samePosition(selection.anchor, selection.focus)
     ? activeLabel
     : `${columnToLabel(bounds.left)}${bounds.top + 1}:${columnToLabel(bounds.right)}${bounds.bottom + 1}`;
+  const activeFormat = cellFormat(
+    activeSheet,
+    selection.focus.row,
+    selection.focus.col
+  );
+  const activeAlignment = cellAlignment(
+    activeSheet,
+    selection.focus.row,
+    selection.focus.col
+  );
 
   return {
     containerRef,
@@ -628,6 +684,8 @@ export const useEditor = (
     shortcutsOpen,
     activeLabel,
     rangeLabel,
+    activeFormat,
+    activeAlignment,
     onSelect,
     onStartEdit,
     onEditBufferChange,
@@ -639,6 +697,7 @@ export const useEditor = (
     onPaste,
     onResizeColumn,
     onResizeRow,
+    onAutoFill,
     onSort,
     onToggleFilter,
     onFilterColChange,
@@ -670,5 +729,7 @@ export const useEditor = (
     onSelectSheet,
     onSetFreeze,
     onToggleShortcuts,
+    onFormatChange,
+    onAlignmentChange,
   };
 };

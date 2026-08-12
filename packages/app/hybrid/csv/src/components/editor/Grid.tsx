@@ -1,10 +1,12 @@
 'use client';
 
-import { FC, memo, useEffect, useRef } from 'react';
+import { FC, memo, useEffect, useRef, useState } from 'react';
 import Cell from './Cell';
+import { boundingBox } from '@/lib/autofill';
 import { columnToLabel } from '@/lib/columns';
-import { isInSelection, samePosition } from '@/lib/selection';
-import { columnWidth, rowHeight } from '@/lib/workbook';
+import { isInSelection, samePosition, selectionBounds } from '@/lib/selection';
+import type { Bounds } from '@/lib/selection';
+import { cellAlignment, columnWidth, rowHeight } from '@/lib/workbook';
 import type {
   CellPosition,
   FindResult,
@@ -35,6 +37,7 @@ interface GridProps {
   onKeyDown: (event: React.KeyboardEvent<HTMLInputElement>) => void;
   onResizeColumn: (col: number, width: number) => void;
   onResizeRow: (row: number, height: number) => void;
+  onAutoFill: (source: Bounds, target: Bounds) => void;
 }
 
 const prefixSums = (sizes: number[]): number[] => {
@@ -64,6 +67,7 @@ const Grid: FC<GridProps> = ({
   onKeyDown,
   onResizeColumn,
   onResizeRow,
+  onAutoFill,
 }) => {
   const colCount = sheet.grid[0]?.length ?? 0;
   const colOffsets = prefixSums(
@@ -82,11 +86,15 @@ const Grid: FC<GridProps> = ({
     start: number;
     base: number;
   } | null>(null);
+  const fillRef = useRef<{ source: Bounds; target: Bounds } | null>(null);
+  const [fillPreview, setFillPreview] = useState<Bounds | null>(null);
 
   useEffect(
     () => () => {
       window.removeEventListener('pointermove', handleResizeMove);
       window.removeEventListener('pointerup', handleResizeEnd);
+      window.removeEventListener('pointermove', handleFillMove);
+      window.removeEventListener('pointerup', handleFillEnd);
     },
     []
   );
@@ -108,6 +116,46 @@ const Grid: FC<GridProps> = ({
     resizeRef.current = null;
     window.removeEventListener('pointermove', handleResizeMove);
     window.removeEventListener('pointerup', handleResizeEnd);
+  };
+
+  const handleFillMove = (event: PointerEvent): void => {
+    const fill = fillRef.current;
+    if (!fill) return;
+    const target = document.elementFromPoint(
+      event.clientX,
+      event.clientY
+    ) as HTMLElement | null;
+    const cellEl = target?.closest('[data-cell]') as HTMLElement | null;
+    if (!cellEl) return;
+    const next = boundingBox(
+      { row: fill.source.top, col: fill.source.left },
+      { row: fill.source.bottom, col: fill.source.right },
+      {
+        row: Number(cellEl.dataset.row),
+        col: Number(cellEl.dataset.col),
+      }
+    );
+    fillRef.current = { source: fill.source, target: next };
+    setFillPreview(next);
+  };
+
+  const handleFillEnd = (): void => {
+    const fill = fillRef.current;
+    fillRef.current = null;
+    setFillPreview(null);
+    window.removeEventListener('pointermove', handleFillMove);
+    window.removeEventListener('pointerup', handleFillEnd);
+    if (fill) onAutoFill(fill.source, fill.target);
+  };
+
+  const beginFill = (event: React.PointerEvent<HTMLDivElement>): void => {
+    event.preventDefault();
+    event.stopPropagation();
+    const source = selectionBounds(selection);
+    fillRef.current = { source, target: source };
+    setFillPreview(source);
+    window.addEventListener('pointermove', handleFillMove);
+    window.addEventListener('pointerup', handleFillEnd);
   };
 
   const beginResize =
@@ -180,6 +228,20 @@ const Grid: FC<GridProps> = ({
   const rowIndices = filteredRows ?? sheet.grid.map((_, index) => index);
   const isDraft = (position: CellPosition): boolean =>
     commentDraft?.row === position.row && commentDraft?.col === position.col;
+  const selBounds = selectionBounds(selection);
+  const fillCorner = { row: selBounds.bottom, col: selBounds.right };
+  const inFillRegion = (row: number, col: number): boolean =>
+    fillPreview !== null &&
+    row >= fillPreview.top &&
+    row <= fillPreview.bottom &&
+    col >= fillPreview.left &&
+    col <= fillPreview.right;
+  const inFillSource = (row: number, col: number): boolean =>
+    inFillRegion(row, col) &&
+    row >= selBounds.top &&
+    row <= selBounds.bottom &&
+    col >= selBounds.left &&
+    col <= selBounds.right;
 
   return (
     <div
@@ -266,6 +328,9 @@ const Grid: FC<GridProps> = ({
                   const sticky = cellSticky(row, col);
                   const extraClassName = [
                     sticky.className,
+                    inFillRegion(row, col) && !inFillSource(row, col)
+                      ? 'bg-primary/25'
+                      : '',
                     isCurrentMatch
                       ? 'bg-warning/50'
                       : isMatch
@@ -288,6 +353,7 @@ const Grid: FC<GridProps> = ({
                       isEditing={isEditing}
                       hasComment={Boolean(sheet.comments[`${row}:${col}`])}
                       commentText={sheet.comments[`${row}:${col}`] ?? ''}
+                      alignment={cellAlignment(sheet, row, col)}
                       width={columnWidth(sheet, col)}
                       height={height}
                       extraClassName={extraClassName}
@@ -300,6 +366,10 @@ const Grid: FC<GridProps> = ({
                       onCommit={onCommit}
                       onKeyDown={onKeyDown}
                       onPointerDown={handleCellPointerDown(position)}
+                      showFillHandle={
+                        !editing && samePosition(position, fillCorner)
+                      }
+                      onFillHandlePointerDown={beginFill}
                     />
                   );
                 })}
