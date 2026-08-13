@@ -4,6 +4,7 @@ import {
   formatRelativeTime,
   isJson,
   prettyPrint,
+  previewKind,
   statusColor,
 } from '@/lib/format';
 
@@ -60,5 +61,30 @@ describe('formatRelativeTime', () => {
     expect(formatRelativeTime(Date.now() - 5 * 60000)).toBe('5m ago');
     expect(formatRelativeTime(Date.now() - 3 * 3600000)).toBe('3h ago');
     expect(formatRelativeTime(Date.now() - 2 * 86400000)).toBe('2d ago');
+  });
+});
+
+describe('previewKind', () => {
+  it('detects json content type', () => {
+    expect(previewKind({ 'content-type': 'application/json' })).toBe('json');
+  });
+
+  it('detects html content type', () => {
+    expect(previewKind({ 'content-type': 'text/html; charset=utf-8' })).toBe(
+      'html'
+    );
+  });
+
+  it('detects text content type', () => {
+    expect(previewKind({ 'content-type': 'text/plain' })).toBe('text');
+  });
+
+  it('treats xml as text', () => {
+    expect(previewKind({ 'content-type': 'application/xml' })).toBe('text');
+  });
+
+  it('falls back to raw for other types', () => {
+    expect(previewKind({ 'content-type': 'image/png' })).toBe('raw');
+    expect(previewKind({})).toBe('raw');
   });
 });

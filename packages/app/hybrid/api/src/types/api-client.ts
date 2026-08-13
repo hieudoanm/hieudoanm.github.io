@@ -20,6 +20,8 @@ export interface KeyValue {
 
 export type AuthType = 'none' | 'bearer' | 'basic';
 
+export type RedirectMode = 'follow' | 'manual';
+
 export interface RequestConfig {
   method: HttpMethod;
   url: string;
@@ -30,6 +32,8 @@ export interface RequestConfig {
   token: string;
   username: string;
   password: string;
+  timeoutMs: string;
+  redirect: RedirectMode;
 }
 
 export interface ResponseMeta {
@@ -46,4 +50,43 @@ export interface HistoryEntry {
   id: string;
   timestamp: number;
   request: RequestConfig;
+}
+
+export interface EnvironmentVariable {
+  id: string;
+  key: string;
+  value: string;
+  enabled: boolean;
+}
+
+export interface CollectionEntry {
+  id: string;
+  name: string;
+  request: RequestConfig;
+}
+
+export interface RequestGroup {
+  id: string;
+  name: string;
+  entries: CollectionEntry[];
+}
+
+export interface RequestCollection {
+  id: string;
+  name: string;
+  groups: RequestGroup[];
+}
+
+export interface RequestTab {
+  id: string;
+  request: RequestConfig;
+}
+
+export type CodegenFormat = 'curl' | 'fetch' | 'fetch-ts';
+
+export interface OpenApiOperation {
+  id: string;
+  method: HttpMethod;
+  path: string;
+  summary: string;
 }

@@ -82,4 +82,54 @@ describe('RequestTabs', () => {
       expect.objectContaining({ authType: 'bearer' })
     );
   });
+
+  it('renders the env, config and code tabs', () => {
+    render(<RequestTabs request={emptyRequest()} onChange={onChange} />);
+    expect(screen.getByText('Env')).toBeInTheDocument();
+    expect(screen.getByText('Config')).toBeInTheDocument();
+    expect(screen.getByText('Code')).toBeInTheDocument();
+  });
+
+  it('edits environment variables', () => {
+    const onEnvChange = jest.fn();
+    render(
+      <RequestTabs
+        request={emptyRequest()}
+        onChange={onChange}
+        env={[{ id: '1', key: 'host', value: 'x', enabled: true }]}
+        onEnvChange={onEnvChange}
+      />
+    );
+    fireEvent.click(screen.getByText('Env'));
+    fireEvent.change(screen.getByLabelText('Environment variable key'), {
+      target: { value: 'baseUrl' },
+    });
+    expect(onEnvChange).toHaveBeenCalledWith([
+      expect.objectContaining({ key: 'baseUrl' }),
+    ]);
+  });
+
+  it('edits request config', () => {
+    render(<RequestTabs request={emptyRequest()} onChange={onChange} />);
+    fireEvent.click(screen.getByText('Config'));
+    fireEvent.change(screen.getByLabelText('Request timeout (ms)'), {
+      target: { value: '1000' },
+    });
+    expect(onChange).toHaveBeenCalledWith(
+      expect.objectContaining({ timeoutMs: '1000' })
+    );
+  });
+
+  it('shows the code generator', () => {
+    render(
+      <RequestTabs
+        request={{ ...emptyRequest(), url: 'https://api.example.com/users' }}
+        onChange={onChange}
+      />
+    );
+    fireEvent.click(screen.getByText('Code'));
+    expect(
+      screen.getByText(/curl -X GET 'https:\/\/api.example.com\/users'/)
+    ).toBeInTheDocument();
+  });
 });

@@ -70,4 +70,56 @@ describe('HistoryList', () => {
     fireEvent.click(screen.getByText('Clear'));
     expect(onClear).toHaveBeenCalled();
   });
+
+  it('filters entries by query', () => {
+    const other = {
+      ...entry,
+      id: '2',
+      request: { ...emptyRequest(), url: 'https://api.example.com/posts' },
+    };
+    render(
+      <HistoryList
+        entries={[entry, other]}
+        activeId={null}
+        onSelect={onSelect}
+        onClear={onClear}
+      />
+    );
+    fireEvent.change(screen.getByLabelText('Search history'), {
+      target: { value: 'posts' },
+    });
+    expect(
+      screen.getByText('https://api.example.com/posts')
+    ).toBeInTheDocument();
+    expect(
+      screen.queryByText('https://api.example.com/users')
+    ).not.toBeInTheDocument();
+  });
+
+  it('shows a message when nothing matches', () => {
+    render(
+      <HistoryList
+        entries={[entry]}
+        activeId={null}
+        onSelect={onSelect}
+        onClear={onClear}
+      />
+    );
+    fireEvent.change(screen.getByLabelText('Search history'), {
+      target: { value: 'zzz' },
+    });
+    expect(screen.getByText('No matching requests')).toBeInTheDocument();
+  });
+
+  it('does not show the search box when empty', () => {
+    render(
+      <HistoryList
+        entries={[]}
+        activeId={null}
+        onSelect={onSelect}
+        onClear={onClear}
+      />
+    );
+    expect(screen.queryByLabelText('Search history')).not.toBeInTheDocument();
+  });
 });

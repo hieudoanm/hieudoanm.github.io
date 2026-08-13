@@ -2,8 +2,8 @@
 
 import { HistoryEntryItem } from '@/components/molecules/HistoryEntryItem';
 import { HistoryEntry } from '@/types/api-client';
-import { type FC } from 'react';
-import { FiClock, FiTrash2 } from 'react-icons/fi';
+import { type FC, useState } from 'react';
+import { FiClock, FiSearch, FiTrash2 } from 'react-icons/fi';
 
 interface HistoryListProps {
   entries: HistoryEntry[];
@@ -18,14 +18,16 @@ export const HistoryList: FC<HistoryListProps> = ({
   onSelect,
   onClear,
 }) => {
-  if (entries.length === 0) {
-    return (
-      <div className="text-base-content/40 flex flex-col items-center gap-2 py-8">
-        <FiClock className="size-6" />
-        <p className="text-sm">No requests yet</p>
-      </div>
-    );
-  }
+  const [query, setQuery] = useState('');
+
+  const filtered =
+    query.trim() === ''
+      ? entries
+      : entries.filter((entry) => {
+          const haystack =
+            `${entry.request.method} ${entry.request.url}`.toLowerCase();
+          return haystack.includes(query.trim().toLowerCase());
+        });
 
   return (
     <div className="flex flex-col">
@@ -41,16 +43,41 @@ export const HistoryList: FC<HistoryListProps> = ({
           <span>Clear</span>
         </button>
       </div>
-      <ul className="menu w-full gap-0.5 p-1">
-        {entries.map((entry) => (
-          <HistoryEntryItem
-            key={entry.id}
-            entry={entry}
-            active={activeId === entry.id}
-            onSelect={onSelect}
+      {entries.length > 0 && (
+        <div className="relative mb-1 px-1">
+          <FiSearch className="text-base-content/40 absolute top-1/2 left-3 size-3 -translate-y-1/2" />
+          <input
+            type="text"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Search history"
+            aria-label="Search history"
+            className="input input-bordered input-xs w-full pl-7"
           />
-        ))}
-      </ul>
+        </div>
+      )}
+      {entries.length === 0 ? (
+        <div className="text-base-content/40 flex flex-col items-center gap-2 py-8">
+          <FiClock className="size-6" />
+          <p className="text-sm">No requests yet</p>
+        </div>
+      ) : filtered.length === 0 ? (
+        <div className="text-base-content/40 flex flex-col items-center gap-2 py-8">
+          <FiSearch className="size-6" />
+          <p className="text-sm">No matching requests</p>
+        </div>
+      ) : (
+        <ul className="menu w-full gap-0.5 p-1">
+          {filtered.map((entry) => (
+            <HistoryEntryItem
+              key={entry.id}
+              entry={entry}
+              active={activeId === entry.id}
+              onSelect={onSelect}
+            />
+          ))}
+        </ul>
+      )}
     </div>
   );
 };

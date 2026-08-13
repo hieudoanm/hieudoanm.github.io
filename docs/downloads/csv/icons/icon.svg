@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="96" fill="#0b0f14"/>
+  <g stroke="#1d2731" stroke-width="2">
+    <path d="M96 176h320"/>
+    <path d="M96 256h320"/>
+    <path d="M96 336h320"/>
+    <path d="M176 96v320"/>
+    <path d="M256 96v320"/>
+    <path d="M336 96v320"/>
+  </g>
+  <rect x="176" y="96" width="160" height="80" fill="#22c55e"/>
+  <text x="256" y="182" text-anchor="middle" font-family="Menlo, ui-monospace, monospace" font-size="64" font-weight="700" fill="#0b0f14">C</text>
+</svg>

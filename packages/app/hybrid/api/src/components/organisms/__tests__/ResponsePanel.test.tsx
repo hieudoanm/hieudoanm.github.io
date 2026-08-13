@@ -54,4 +54,59 @@ describe('ResponsePanel', () => {
     expect(screen.getByText(/{\s*"name": "Ada"\s*}/)).toBeInTheDocument();
     expect(screen.queryByText('content-type')).not.toBeInTheDocument();
   });
+
+  it('copies the response body', () => {
+    Object.defineProperty(navigator, 'clipboard', {
+      value: { writeText: jest.fn().mockResolvedValue(undefined) },
+      configurable: true,
+    });
+    render(<ResponsePanel response={response} loading={false} error={null} />);
+    fireEvent.click(screen.getByText('Copy'));
+    expect(navigator.clipboard.writeText).toHaveBeenCalledWith(
+      '{"name":"Ada"}'
+    );
+  });
+
+  it('previews html responses in an iframe', () => {
+    const html = {
+      ...response,
+      headers: { 'content-type': 'text/html' },
+      body: '<h1>Hello</h1>',
+    };
+    render(<ResponsePanel response={html} loading={false} error={null} />);
+    fireEvent.click(screen.getByText('Preview'));
+    const frame = screen.getByTitle('Response preview');
+    expect(frame.tagName).toBe('IFRAME');
+    expect(frame).toHaveAttribute('srcdoc', '<h1>Hello</h1>');
+  });
+
+  it('shows raw body when preview is disabled', () => {
+    const html = {
+      ...response,
+      headers: { 'content-type': 'text/html' },
+      body: '<h1>Hello</h1>',
+    };
+    render(<ResponsePanel response={html} loading={false} error={null} />);
+    expect(screen.getByText('<h1>Hello</h1>')).toBeInTheDocument();
+  });
+
+  it('renders a diff against the previous response', () => {
+    const previous = { ...response, body: '{"name":"Bob"}' };
+    render(
+      <ResponsePanel
+        response={response}
+        loading={false}
+        error={null}
+        compareWith={previous}
+      />
+    );
+    fireEvent.click(screen.getByText('Diff'));
+    expect(screen.getByText(/"Bob"/)).toBeInTheDocument();
+    expect(screen.getByText(/"Ada"/)).toBeInTheDocument();
+  });
+
+  it('does not show the diff button without a previous response', () => {
+    render(<ResponsePanel response={response} loading={false} error={null} />);
+    expect(screen.queryByText('Diff')).not.toBeInTheDocument();
+  });
 });

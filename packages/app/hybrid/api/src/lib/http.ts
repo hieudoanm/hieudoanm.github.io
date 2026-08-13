@@ -1,8 +1,10 @@
 import {
+  EnvironmentVariable,
   HistoryEntry,
   HttpMethod,
   KeyValue,
   RequestConfig,
+  RequestTab,
   ResponseMeta,
 } from '@/types/api-client';
 
@@ -25,6 +27,15 @@ export const emptyRequest = (): RequestConfig => ({
   token: '',
   username: '',
   password: '',
+  timeoutMs: '',
+  redirect: 'follow',
+});
+
+export const newTab = (
+  request: RequestConfig = emptyRequest()
+): RequestTab => ({
+  id: uid(),
+  request,
 });
 
 export const buildUrl = (url: string, params: KeyValue[]): string => {
@@ -77,6 +88,8 @@ export const resolveBody = (config: RequestConfig): string | undefined => {
   return body === '' ? undefined : body;
 };
 
+import { substituteConfig } from '@/lib/variables';
+
 const toHeaderRecord = (headers: Headers): Record<string, string> => {
   const result: Record<string, string> = {};
   headers.forEach((value, key) => {
@@ -86,26 +99,38 @@ const toHeaderRecord = (headers: Headers): Record<string, string> => {
 };
 
 export const executeRequest = async (
-  config: RequestConfig
+  config: RequestConfig,
+  env?: EnvironmentVariable[]
 ): Promise<ResponseMeta> => {
-  const url = buildUrl(config.url, config.params);
-  const startedAt = performance.now();
-  const response = await fetch(url, {
-    method: config.method,
-    headers: buildHeaders(config),
-    body: resolveBody(config),
-  });
-  const timeMs = Math.round(performance.now() - startedAt);
-  const body = await response.text();
-  return {
-    status: response.status,
-    statusText: response.statusText,
-    url: response.url,
-    headers: toHeaderRecord(response.headers),
-    body,
-    timeMs,
-    sizeBytes: new Blob([body]).size,
-  };
+  const resolved = env ? substituteConfig(config, env) : config;
+  const url = buildUrl(resolved.url, resolved.params);
+  const controller = new AbortController();
+  const timeout = Number(resolved.timeoutMs);
+  const timer =
+    timeout > 0 ? setTimeout(() => controller.abort(), timeout) : undefined;
+  try {
+    const startedAt = performance.now();
+    const response = await fetch(url, {
+      method: resolved.method,
+      headers: buildHeaders(resolved),
+      body: resolveBody(resolved),
+      redirect: resolved.redirect,
+      signal: controller.signal,
+    });
+    const timeMs = Math.round(performance.now() - startedAt);
+    const body = await response.text();
+    return {
+      status: response.status,
+      statusText: response.statusText,
+      url: response.url,
+      headers: toHeaderRecord(response.headers),
+      body,
+      timeMs,
+      sizeBytes: new Blob([body]).size,
+    };
+  } finally {
+    if (timer) clearTimeout(timer);
+  }
 };
 
 const HISTORY_KEY = 'api-client:history';
@@ -144,4 +169,67 @@ export const saveHistory = (entries: HistoryEntry[]): void => {
   } catch {
     // storage full or unavailable — ignore
   }
+};
+
+const DRAFT_KEY = 'api-client:draft';
+
+export const loadDraft = (): RequestConfig | null => {
+  try {
+    const raw = localStorage.getItem(DRAFT_KEY);
+    if (!raw) return null;
+    return {
+      ...emptyRequest(),
+      ...(JSON.parse(raw) as Partial<RequestConfig>),
+    };
+  } catch {
+    // corrupt draft — ignore
+    return null;
+  }
+};
+
+export const saveDraft = (request: RequestConfig): void => {
+  try {
+    localStorage.setItem(DRAFT_KEY, JSON.stringify(request));
+  } catch {
+    // storage full or unavailable — ignore
+  }
+};
+
+const TABS_KEY = 'api-client:tabs';
+
+export const loadTabs = (): RequestTab[] => {
+  try {
+    const raw = localStorage.getItem(TABS_KEY);
+    if (!raw) return [];
+    const parsed: unknown = JSON.parse(raw);
+    if (!Array.isArray(parsed)) return [];
+    return parsed
+      .map((tab): RequestTab => {
+        const candidate = tab as Partial<RequestTab>;
+        return {
+          id: typeof candidate.id === 'string' ? candidate.id : uid(),
+          request: candidate.request
+            ? { ...emptyRequest(), ...candidate.request }
+            : emptyRequest(),
+        };
+      })
+      .filter((tab) => tab.request);
+  } catch {
+    return [];
+  }
+};
+
+export const saveTabs = (tabs: RequestTab[]): void => {
+  try {
+    localStorage.setItem(TABS_KEY, JSON.stringify(tabs));
+  } catch {
+    // storage full or unavailable — ignore
+  }
+};
+
+export const initTabs = (): RequestTab[] => {
+  const saved = loadTabs();
+  if (saved.length > 0) return saved;
+  const draft = loadDraft();
+  return [newTab(draft ?? emptyRequest())];
 };

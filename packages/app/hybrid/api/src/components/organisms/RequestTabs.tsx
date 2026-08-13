@@ -2,25 +2,38 @@
 
 import { AuthEditor } from '@/components/molecules/AuthEditor';
 import { BodyEditor } from '@/components/molecules/BodyEditor';
+import { CodegenPanel } from '@/components/molecules/CodegenPanel';
+import { ConfigEditor } from '@/components/molecules/ConfigEditor';
+import { EnvVariablesEditor } from '@/components/molecules/EnvVariablesEditor';
 import { KeyValueEditor } from '@/components/molecules/KeyValueEditor';
-import { RequestConfig } from '@/types/api-client';
+import { EnvironmentVariable, RequestConfig } from '@/types/api-client';
 import { type FC, useState } from 'react';
 
-type TabId = 'params' | 'headers' | 'body' | 'auth';
+type TabId = 'params' | 'headers' | 'body' | 'auth' | 'env' | 'config' | 'code';
 
 const TABS: readonly { id: TabId; label: string }[] = [
   { id: 'params', label: 'Params' },
   { id: 'headers', label: 'Headers' },
   { id: 'body', label: 'Body' },
   { id: 'auth', label: 'Auth' },
+  { id: 'env', label: 'Env' },
+  { id: 'config', label: 'Config' },
+  { id: 'code', label: 'Code' },
 ];
 
 interface RequestTabsProps {
   request: RequestConfig;
   onChange: (next: RequestConfig) => void;
+  env?: EnvironmentVariable[];
+  onEnvChange?: (next: EnvironmentVariable[]) => void;
 }
 
-export const RequestTabs: FC<RequestTabsProps> = ({ request, onChange }) => {
+export const RequestTabs: FC<RequestTabsProps> = ({
+  request,
+  onChange,
+  env = [],
+  onEnvChange = () => undefined,
+}) => {
   const [active, setActive] = useState<TabId>('params');
 
   return (
@@ -64,6 +77,16 @@ export const RequestTabs: FC<RequestTabsProps> = ({ request, onChange }) => {
       {active === 'auth' && (
         <AuthEditor request={request} onChange={onChange} />
       )}
+
+      {active === 'env' && (
+        <EnvVariablesEditor env={env} onChange={onEnvChange} />
+      )}
+
+      {active === 'config' && (
+        <ConfigEditor request={request} onChange={onChange} />
+      )}
+
+      {active === 'code' && <CodegenPanel request={request} env={env} />}
     </div>
   );
 };

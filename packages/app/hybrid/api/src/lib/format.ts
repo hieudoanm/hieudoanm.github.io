@@ -60,3 +60,16 @@ export const formatRelativeTime = (timestamp: number): string => {
   const days = Math.floor(hours / 24);
   return `${days}d ago`;
 };
+
+export type BodyPreviewKind = 'json' | 'html' | 'text' | 'raw';
+
+export const previewKind = (
+  headers: Record<string, string>
+): BodyPreviewKind => {
+  const contentType = (headers['content-type'] ?? '').toLowerCase();
+  if (contentType.includes('application/json')) return 'json';
+  if (contentType.includes('text/html')) return 'html';
+  if (contentType.includes('text/')) return 'text';
+  if (contentType.includes('xml')) return 'text';
+  return 'raw';
+};

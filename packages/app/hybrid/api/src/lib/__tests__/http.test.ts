@@ -4,10 +4,16 @@ import {
   buildUrl,
   emptyRequest,
   executeRequest,
+  initTabs,
+  loadDraft,
   loadHistory,
+  loadTabs,
   newKeyValue,
+  newTab,
   resolveBody,
+  saveDraft,
   saveHistory,
+  saveTabs,
 } from '@/lib/http';
 import { RequestConfig } from '@/types/api-client';
 
@@ -173,6 +179,76 @@ describe('executeRequest', () => {
     expect(result.sizeBytes).toBe('{"ok":true}'.length);
     expect(result.timeMs).toBeGreaterThanOrEqual(0);
   });
+
+  it('passes redirect mode and abort signal to fetch', async () => {
+    mockFetch({ bodyText: '{}' });
+    await executeRequest({
+      ...emptyRequest(),
+      url: 'https://api.example.com/users',
+      redirect: 'manual',
+    });
+
+    expect(fetch).toHaveBeenCalledWith(
+      'https://api.example.com/users',
+      expect.objectContaining({ redirect: 'manual' })
+    );
+    const options = (fetch as jest.Mock).mock.calls[0][1] as RequestInit;
+    expect(options.signal).toBeInstanceOf(AbortSignal);
+  });
+
+  it('aborts the request after the timeout', async () => {
+    jest.useFakeTimers();
+    global.fetch = jest.fn(
+      (_url: RequestInfo | URL, init?: RequestInit) =>
+        new Promise<Response>((_resolve, reject) => {
+          init?.signal?.addEventListener('abort', () => {
+            reject(new DOMException('Aborted', 'AbortError'));
+          });
+        })
+    ) as jest.MockedFunction<typeof fetch>;
+
+    const promise = executeRequest({
+      ...emptyRequest(),
+      url: 'https://api.example.com/slow',
+      timeoutMs: '50',
+    });
+    const assertion = expect(promise).rejects.toMatchObject({
+      name: 'AbortError',
+    });
+    jest.advanceTimersByTime(100);
+    await assertion;
+    jest.useRealTimers();
+  });
+
+  it('substitutes environment variables before fetching', async () => {
+    mockFetch({ bodyText: '{}' });
+    await executeRequest(
+      {
+        ...emptyRequest(),
+        url: 'https://{{host}}/users',
+        headers: [{ id: '1', key: 'X-Api', value: '{{token}}', enabled: true }],
+      },
+      [
+        { id: '1', key: 'host', value: 'api.example.com', enabled: true },
+        { id: '2', key: 'token', value: 'secret', enabled: true },
+      ]
+    );
+
+    expect(fetch).toHaveBeenCalledWith(
+      'https://api.example.com/users',
+      expect.objectContaining({
+        headers: expect.objectContaining({ 'X-Api': 'secret' }),
+      })
+    );
+  });
+
+  it('ignores disabled environment variables', async () => {
+    mockFetch({ bodyText: '{}' });
+    await executeRequest({ ...emptyRequest(), url: 'https://{{host}}/x' }, [
+      { id: '1', key: 'host', value: 'api.example.com', enabled: false },
+    ]);
+    expect(fetch).toHaveBeenCalledWith('https://{{host}}/x', expect.anything());
+  });
 });
 
 describe('history', () => {
@@ -209,5 +285,111 @@ describe('history', () => {
   it('returns empty array when stored history is not an array', () => {
     localStorage.setItem('api-client:history', '{"not":"array"}');
     expect(loadHistory()).toEqual([]);
+  });
+});
+
+describe('draft', () => {
+  beforeEach(() => {
+    localStorage.clear();
+  });
+
+  it('saves and loads the draft', () => {
+    const request: RequestConfig = { ...emptyRequest(), url: 'https://a.com' };
+    saveDraft(request);
+    expect(loadDraft()?.url).toBe('https://a.com');
+  });
+
+  it('merges stored draft with defaults', () => {
+    localStorage.setItem('api-client:draft', '{"url":"https://a.com"}');
+    const draft = loadDraft();
+    expect(draft?.url).toBe('https://a.com');
+    expect(draft?.method).toBe('GET');
+    expect(draft?.timeoutMs).toBe('');
+    expect(draft?.redirect).toBe('follow');
+  });
+
+  it('returns null when no draft exists', () => {
+    expect(loadDraft()).toBeNull();
+  });
+
+  it('returns null on corrupt storage', () => {
+    localStorage.setItem('api-client:draft', 'not-json');
+    expect(loadDraft()).toBeNull();
+  });
+});
+
+describe('tabs', () => {
+  beforeEach(() => {
+    localStorage.clear();
+  });
+
+  it('creates a tab from a request', () => {
+    const request: RequestConfig = { ...emptyRequest(), url: 'https://a.com' };
+    const tab = newTab(request);
+    expect(tab.id).toBeTruthy();
+    expect(tab.request.url).toBe('https://a.com');
+  });
+
+  it('saves and loads tabs', () => {
+    const tabs = [
+      newTab(),
+      newTab({ ...emptyRequest(), url: 'https://b.com' }),
+    ];
+    saveTabs(tabs);
+    expect(loadTabs()).toHaveLength(2);
+    expect(loadTabs()[1].request.url).toBe('https://b.com');
+  });
+
+  it('normalizes tabs missing new fields', () => {
+    localStorage.setItem(
+      'api-client:tabs',
+      JSON.stringify([{ id: 't1', request: { url: 'https://a.com' } }])
+    );
+    const tabs = loadTabs();
+    expect(tabs[0].request.method).toBe('GET');
+    expect(tabs[0].request.redirect).toBe('follow');
+  });
+
+  it('returns empty array on corrupt storage', () => {
+    localStorage.setItem('api-client:tabs', 'not-json');
+    expect(loadTabs()).toEqual([]);
+  });
+
+  it('returns empty array when stored tabs are not an array', () => {
+    localStorage.setItem('api-client:tabs', '{"not":"array"}');
+    expect(loadTabs()).toEqual([]);
+  });
+
+  it('normalizes tab entries missing id or request', () => {
+    localStorage.setItem(
+      'api-client:tabs',
+      JSON.stringify([{ request: { url: 'https://a.com' } }, { id: 't2' }])
+    );
+    const tabs = loadTabs();
+    expect(tabs[0].id).toBeTruthy();
+    expect(tabs[0].request.url).toBe('https://a.com');
+    expect(tabs[1].request.method).toBe('GET');
+  });
+
+  it('initializes from a saved draft when no tabs exist', () => {
+    localStorage.setItem(
+      'api-client:draft',
+      JSON.stringify({ url: 'https://draft.com' })
+    );
+    const tabs = initTabs();
+    expect(tabs).toHaveLength(1);
+    expect(tabs[0].request.url).toBe('https://draft.com');
+  });
+
+  it('prefers saved tabs over the draft', () => {
+    localStorage.setItem(
+      'api-client:tabs',
+      JSON.stringify([{ id: 't1', request: { url: 'https://tab.com' } }])
+    );
+    localStorage.setItem(
+      'api-client:draft',
+      JSON.stringify({ url: 'https://draft.com' })
+    );
+    expect(initTabs()[0].request.url).toBe('https://tab.com');
   });
 });
