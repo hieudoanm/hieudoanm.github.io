@@ -1,6 +1,6 @@
 services:
   cassandra:
-    image: cassandra:5.0
+    image: cassandra:6.0
     container_name: cassandra
     restart: always
     environment:
