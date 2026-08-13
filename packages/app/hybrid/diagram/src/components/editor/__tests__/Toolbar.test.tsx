@@ -133,4 +133,11 @@ describe('Toolbar', () => {
     fireEvent.click(screen.getByRole('button', { name: 'Mermaid' }));
     expect(base.onCopySnippet).toHaveBeenCalledWith('mermaid');
   });
+
+  it('copies a plantuml snippet from the copy menu', () => {
+    render(<Toolbar {...base} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Copy' }));
+    fireEvent.click(screen.getByRole('button', { name: 'PlantUML' }));
+    expect(base.onCopySnippet).toHaveBeenCalledWith('plantuml');
+  });
 });

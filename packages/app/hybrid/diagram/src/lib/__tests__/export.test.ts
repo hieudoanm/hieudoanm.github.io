@@ -231,6 +231,103 @@ edge a -> b: step`).diagram;
     expect(svg).toContain('>request<');
     expect(svg).toContain('rx="10"');
   });
+
+  it('renders subgraph boxes with their labels', () => {
+    const layout = layoutOf(`subgraph web: Web Tier [color=blue]
+node a: API
+node b: Web
+end
+node db: DB
+edge a -> db`);
+    const svg = buildSvg(layout, '');
+    expect(svg).toContain('Web Tier');
+    expect(svg).toContain('rx="12"');
+    expect(svg).toContain('#3b82f6');
+  });
+
+  it('fills nodes with their color attribute', () => {
+    const layout = layoutOf('node a: API [color=green]');
+    const svg = buildSvg(layout, '');
+    expect(svg).toContain('fill="rgba(34,197,94,0.16)"');
+    expect(svg).toContain('stroke="#22c55e"');
+  });
+
+  it('applies dashed, dotted, width and color to edges', () => {
+    const layout = layoutOf(
+      'node a: A\nnode b: B\nnode c: C\nedge a -> b [dashed, color=red]\nedge b -> c [dotted]\nedge a -> c [width=3]'
+    );
+    const svg = buildSvg(layout, '');
+    expect(svg).toContain('stroke-dasharray="6 4"');
+    expect(svg).toContain('stroke-dasharray="2 4"');
+    expect(svg).toContain('stroke-width="3"');
+    expect(svg).toContain('stroke="#ef4444"');
+  });
+
+  it('emits a marker per edge color and omits markers for arrow=no', () => {
+    const layout = layoutOf(
+      'node a: A\nnode b: B\nnode c: C\nedge a -> b [color=red]\nedge b -> c [arrow=no]'
+    );
+    const svg = buildSvg(layout, '');
+    const markerCount = svg.match(/<marker id=/g)?.length ?? 0;
+    const markerEndCount = svg.match(/marker-end=/g)?.length ?? 0;
+    expect(markerCount).toBe(1);
+    expect(markerEndCount).toBe(1);
+  });
+
+  it('keeps undirected edges free of markers', () => {
+    const layout = layoutOf('node a: A\nnode b: B\nedge a -- b [dashed]');
+    const svg = buildSvg(layout, '');
+    expect(svg).toContain('stroke-dasharray="6 4"');
+    expect(svg).not.toContain('marker-end');
+  });
+
+  it('uses a distinct marker id for a colored directed edge', () => {
+    const layout = layoutOf('node a: A\nnode b: B\nedge a -> b [color=blue]');
+    const svg = buildSvg(layout, '');
+    expect(svg).toContain('marker-end="url(#diagram-arrow-0)"');
+    expect(svg).toContain('fill="#3b82f6"');
+  });
+
+  it('renders timeline date columns and bars', () => {
+    const layout = layoutOf(`kind: timeline
+node design: Design [start=2024-01-01, end=2024-01-10]
+node build: Build [start=2024-01-08, end=2024-01-12]`);
+    const svg = buildSvg(layout, '');
+    expect(svg).toContain('>Jan 1<');
+    expect(svg).toContain('>Design<');
+    expect(svg).toContain('>Build<');
+    expect(svg).toContain('rx="4"');
+    expect(svg).toContain('stroke-opacity="0.25"');
+  });
+
+  it('renders venn nodes as circles', () => {
+    const layout = layoutOf('kind: venn\nnode a: Alpha\nnode b: Beta');
+    const svg = buildSvg(layout, '');
+    const circles = svg.match(/<circle /g)?.length ?? 0;
+    expect(circles).toBe(2);
+    expect(svg).toContain('>Alpha<');
+    expect(svg).toContain('>Beta<');
+  });
+
+  it('renders sequence fragments, activations and notes', () => {
+    const layout = layoutOf(`kind: sequence
+node a: Client
+node b: Server
+fragment alt: authorized
+activate b
+edge a -> b: attempt
+divider else: denied
+edge b -> a: reject
+deactivate b
+end
+note over a: timed out`);
+    const svg = buildSvg(layout, '');
+    expect(svg).toContain('stroke-dasharray="5 4"');
+    expect(svg).toContain('>alt authorized<');
+    expect(svg).toContain('>else: denied<');
+    expect(svg).toContain('width="10"');
+    expect(svg).toContain('>timed out<');
+  });
 });
 
 describe('downloadSvg', () => {

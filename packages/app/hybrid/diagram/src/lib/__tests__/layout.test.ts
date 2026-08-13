@@ -13,6 +13,7 @@ describe('computeLayout', () => {
       nodes: [],
       edges: [],
       kind: 'flow',
+      subgraphs: [],
     });
     expect(layout.nodes).toEqual([]);
     expect(layout.edges).toEqual([]);
@@ -250,6 +251,7 @@ describe('computeLayout', () => {
       nodes: [],
       edges: [],
       kind: 'sequence',
+      subgraphs: [],
     });
     expect(layout.kind).toBe('sequence');
     expect(layout.nodes).toEqual([]);
@@ -281,5 +283,187 @@ describe('computeLayout', () => {
     const layout = computeLayout(diagram, 'vertical');
     expect(layout.edges).toHaveLength(1);
     expect(layout.edges[0].path).toContain('A ');
+  });
+
+  it('wraps grouped nodes in a subgraph box', () => {
+    const diagram = parseDiagram(`subgraph web: Web Tier [color=blue]
+node a: API
+node b: Web
+end
+node db: DB
+edge a -> db`).diagram;
+    const layout = computeLayout(diagram);
+    expect(layout.subgraphs).toHaveLength(1);
+    const box = layout.subgraphs![0];
+    expect(box.id).toBe('web');
+    expect(box.color).toBe('blue');
+    const a = layout.nodes.find((n) => n.id === 'a')!;
+    const b = layout.nodes.find((n) => n.id === 'b')!;
+    expect(box.x - box.width / 2).toBeLessThanOrEqual(a.x - a.width / 2);
+    expect(box.x + box.width / 2).toBeGreaterThanOrEqual(b.x + b.width / 2);
+    expect(box.y - box.height / 2).toBeLessThanOrEqual(a.y - a.height / 2);
+    expect(box.y + box.height / 2).toBeGreaterThanOrEqual(b.y + b.height / 2);
+  });
+
+  it('computes nested subgraph boxes around their members', () => {
+    const diagram = parseDiagram(`subgraph cloud: Cloud
+subgraph zone: Zone
+node a: A
+end
+end
+node b: B
+edge a -> b`).diagram;
+    const layout = computeLayout(diagram);
+    expect(layout.subgraphs).toHaveLength(2);
+    const zone = layout.subgraphs!.find((s) => s.id === 'zone')!;
+    const cloud = layout.subgraphs!.find((s) => s.id === 'cloud')!;
+    expect(cloud.width).toBeGreaterThan(zone.width);
+    expect(cloud.height).toBeGreaterThan(zone.height);
+    expect(cloud.x - cloud.width / 2).toBeLessThan(zone.x - zone.width / 2);
+  });
+
+  it('clusters nodes into subgraph columns by longest path', () => {
+    const diagram = parseDiagram(`subgraph s1: One
+node a: A
+end
+subgraph s2: Two
+node b: B
+node c: C
+end
+edge a -> b
+edge a -> c`).diagram;
+    const layout = computeLayout(diagram);
+    const a = layout.nodes.find((n) => n.id === 'a')!;
+    const b = layout.nodes.find((n) => n.id === 'b')!;
+    expect(b.x).toBeGreaterThan(a.x);
+    expect(layout.edges).toHaveLength(2);
+  });
+
+  it('keeps subgraph boxes when nodes are dragged', () => {
+    const diagram = parseDiagram(`subgraph web: Web
+node a: A
+node b: B
+end
+edge a -> b`).diagram;
+    const layout = computeLayout(diagram);
+    const moved = applyManualPositions(layout, {
+      a: { x: layout.nodes[0].x + 100, y: layout.nodes[0].y },
+    });
+    const box = moved.subgraphs!.find((s) => s.id === 'web')!;
+    const a = moved.nodes.find((n) => n.id === 'a')!;
+    expect(box.x - box.width / 2).toBeLessThanOrEqual(a.x);
+  });
+});
+
+describe('computeLayout sequence', () => {
+  it('positions lifelines below their headers and routes messages', () => {
+    const layout = computeLayout(
+      parseDiagram(
+        'kind: sequence\nnode a: Client\nnode b: Server\nedge a -> b: ping'
+      ).diagram
+    );
+    const a = layout.nodes.find((n) => n.id === 'a')!;
+    const b = layout.nodes.find((n) => n.id === 'b')!;
+    expect(layout.lifelines).toHaveLength(2);
+    expect(layout.lifelines![0].x).toBe(a.x);
+    expect(layout.lifelines![0].top).toBeGreaterThan(a.y);
+    expect(layout.edges).toHaveLength(1);
+    expect(layout.edges[0].path).toBe(`M ${a.x} 116 L ${b.x} 116`);
+  });
+
+  it('lays out activations between their open and close edges', () => {
+    const layout = computeLayout(
+      parseDiagram(`kind: sequence
+node a: Client
+node b: Server
+activate b
+edge a -> b: call
+deactivate b`).diagram
+    );
+    const b = layout.nodes.find((n) => n.id === 'b')!;
+    expect(layout.activations).toHaveLength(1);
+    const activation = layout.activations![0];
+    expect(activation.participant).toBe('b');
+    expect(activation.x).toBe(b.x);
+    expect(activation.bottom).toBeGreaterThan(activation.top);
+  });
+
+  it('places a fragment box spanning its message rows with dividers', () => {
+    const layout = computeLayout(
+      parseDiagram(`kind: sequence
+node a: Client
+node b: Server
+fragment alt: authorized
+edge a -> b: attempt
+divider else: denied
+edge b -> a: reject
+end`).diagram
+    );
+    expect(layout.fragments).toHaveLength(1);
+    const fragment = layout.fragments![0];
+    expect(fragment.type).toBe('alt');
+    expect(fragment.dividers).toHaveLength(1);
+    expect(fragment.dividers[0].label).toBe('else: denied');
+    expect(fragment.height).toBeGreaterThan(40);
+  });
+
+  it('places notes at a participant or beside the right edge', () => {
+    const layout = computeLayout(
+      parseDiagram(`kind: sequence
+node a: Client
+node b: Server
+note over a: over client
+note: standalone remark`).diagram
+    );
+    expect(layout.notes).toHaveLength(2);
+    const over = layout.notes!.find((note) => note.text === 'over client')!;
+    const a = layout.nodes.find((n) => n.id === 'a')!;
+    expect(over.x).toBe(a.x);
+    const standalone = layout.notes!.find(
+      (note) => note.text === 'standalone remark'
+    )!;
+    expect(standalone.x).toBeGreaterThan(a.x);
+  });
+});
+
+describe('computeLayout timeline', () => {
+  it('positions date columns and bars across the time span', () => {
+    const layout = computeLayout(
+      parseDiagram(`kind: timeline
+node a: Alpha [start=2024-01-01, end=2024-01-05]
+node b: Beta [start=2024-01-06, end=2024-01-08]`).diagram
+    );
+    expect(layout.kind).toBe('timeline');
+    const timeline = layout.timeline!;
+    expect(timeline.columns.length).toBeGreaterThan(1);
+    expect(timeline.columns[0].label).toBe('Jan 1');
+    const a = layout.nodes.find((n) => n.id === 'a')!;
+    const b = layout.nodes.find((n) => n.id === 'b')!;
+    expect(a.width).toBeGreaterThan(10);
+    expect(b.x).toBeGreaterThan(a.x);
+    expect(b.y).toBeGreaterThan(a.y);
+  });
+
+  it('returns an empty padded layout when there are no nodes', () => {
+    const layout = computeLayout(parseDiagram('kind: timeline').diagram);
+    expect(layout.nodes).toEqual([]);
+    expect(layout.width).toBeGreaterThan(0);
+  });
+});
+
+describe('computeLayout venn', () => {
+  it('places circles around a ring with overlapping centers', () => {
+    const layout = computeLayout(
+      parseDiagram('kind: venn\nnode a: Alpha\nnode b: Beta\nnode c: Gamma')
+        .diagram
+    );
+    expect(layout.kind).toBe('venn');
+    expect(layout.nodes).toHaveLength(3);
+    const centers = new Set(layout.nodes.map((node) => `${node.x},${node.y}`));
+    expect(centers.size).toBe(3);
+    const a = layout.nodes.find((n) => n.id === 'a')!;
+    const b = layout.nodes.find((n) => n.id === 'b')!;
+    const distance = Math.hypot(b.x - a.x, b.y - a.y);
+    expect(distance).toBeLessThan(a.width / 2 + b.width / 2);
   });
 });

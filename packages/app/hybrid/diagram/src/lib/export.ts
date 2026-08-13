@@ -1,4 +1,5 @@
 import { saveAs } from 'file-saver';
+import { colorPair } from '@/lib/colors';
 import { ICON_BODY } from '@/lib/icons';
 import {
   ICON_SIZE,
@@ -12,6 +13,7 @@ import {
 } from '@/lib/layout';
 import type {
   Diagram,
+  DiagramEdge,
   DiagramNode,
   EdgePath,
   Layout,
@@ -30,6 +32,7 @@ const SCREEN = {
   edge: '#3a4550',
   edgeLabel: '#94a3b8',
   title: '#e6edf3',
+  subgraph: '#0e151c',
 };
 
 const PRINT = {
@@ -40,6 +43,7 @@ const PRINT = {
   edge: '#374151',
   edgeLabel: '#6b7280',
   title: '#111827',
+  subgraph: '#f3f4f6',
 };
 
 const FONT = 'Inter, system-ui, sans-serif';
@@ -93,14 +97,18 @@ export const buildSvg = (
       ? ` transform="translate(${offsetX} ${offsetY}) scale(${scale})"`
       : '';
 
+  const markerIds = buildMarkerIds(layout, colors);
+  const markerDefs = [...markerIds.entries()]
+    .map(
+      ([color, id]) =>
+        `    <marker id="${id}" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="${color}"/></marker>`
+    )
+    .join('\n');
+
   const parts: string[] = [
     `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">`,
     `  <rect width="100%" height="100%" fill="${colors.background}"/>`,
-    '  <defs>',
-    `    <marker id="${MARKER_ID}" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">`,
-    `      <path d="M 0 0 L 10 5 L 0 10 z" fill="${colors.edge}"/>`,
-    '    </marker>',
-    '  </defs>',
+    `  <defs>${markerDefs ? `\n${markerDefs}` : ''}\n  </defs>`,
     `<g${transform}>`,
   ];
   if (title) {
@@ -109,21 +117,48 @@ export const buildSvg = (
     );
   }
   if (layout.kind === 'sequence') {
-    pushSequenceContent(parts, layout, colors);
+    pushSequenceContent(parts, layout, colors, markerIds);
+  } else if (layout.kind === 'timeline') {
+    pushTimelineContent(parts, layout, colors);
+  } else if (layout.kind === 'venn') {
+    pushVennContent(parts, layout, colors);
   } else {
-    pushFlowContent(parts, layout, colors);
+    pushFlowContent(parts, layout, colors, markerIds);
   }
   parts.push('  </g>', '</svg>');
   return parts.join('\n');
 };
 
+const edgeStrokeColor = (edge: DiagramEdge, colors: typeof SCREEN): string =>
+  edge.style?.color ? colorPair(edge.style.color).stroke : colors.edge;
+
+const buildMarkerIds = (
+  layout: Layout,
+  colors: typeof SCREEN
+): Map<string, string> => {
+  const byColor = new Map<string, string>();
+  const used = new Set<string>();
+  for (const { edge } of layout.edges) {
+    if (!edge.directed || edge.style?.arrow === false) continue;
+    const color = edgeStrokeColor(edge, colors);
+    if (used.has(color)) continue;
+    used.add(color);
+    byColor.set(color, `${MARKER_ID}-${byColor.size}`);
+  }
+  return byColor;
+};
+
 const pushFlowContent = (
   parts: string[],
   layout: Layout,
-  colors: typeof SCREEN
+  colors: typeof SCREEN,
+  markerIds: Map<string, string>
 ): void => {
+  for (const subgraph of layout.subgraphs ?? []) {
+    parts.push(subgraphShape(subgraph, colors));
+  }
   for (const { path, edge, labelX, labelY } of layout.edges) {
-    pushEdge(parts, { path, edge, labelX, labelY }, colors);
+    pushEdge(parts, { path, edge, labelX, labelY }, colors, markerIds);
   }
   for (const node of layout.nodes) {
     parts.push(nodeShape(node, colors));
@@ -135,20 +170,28 @@ const pushFlowContent = (
 const pushSequenceContent = (
   parts: string[],
   layout: Layout,
-  colors: typeof SCREEN
+  colors: typeof SCREEN,
+  markerIds: Map<string, string>
 ): void => {
+  for (const fragment of layout.fragments ?? []) {
+    parts.push(sequenceFragmentShape(fragment, colors));
+  }
   for (const lifeline of layout.lifelines ?? []) {
     parts.push(
       `  <line x1="${lifeline.x}" y1="${lifeline.top}" x2="${lifeline.x}" y2="${lifeline.bottom}" stroke="${colors.edge}" stroke-width="1" stroke-dasharray="4 4"/>`
     );
   }
+  for (const activation of layout.activations ?? []) {
+    parts.push(activationShape(activation, colors));
+  }
   for (const edgePath of layout.edges) {
-    parts.push(
-      `  <path d="${edgePath.path}" fill="none" stroke="${colors.edge}" stroke-width="1.5" marker-end="url(#${MARKER_ID})"/>`
-    );
+    parts.push(sequenceEdgeShape(edgePath, colors, markerIds));
     if (edgePath.edge.label) {
       parts.push(edgeLabelText(edgePath, colors));
     }
+  }
+  for (const note of layout.notes ?? []) {
+    parts.push(noteShape(note, colors));
   }
   for (const node of layout.nodes) {
     parts.push(headerShape(node, colors));
@@ -157,19 +200,138 @@ const pushSequenceContent = (
   }
 };
 
+const pushTimelineContent = (
+  parts: string[],
+  layout: Layout,
+  colors: typeof SCREEN
+): void => {
+  const timeline = layout.timeline;
+  if (!timeline) return;
+  for (const column of timeline.columns) {
+    parts.push(
+      `  <line x1="${column.x}" y1="${timeline.headerHeight}" x2="${column.x}" y2="${layout.height}" stroke="${colors.edge}" stroke-opacity="0.25" stroke-width="1"/>`,
+      `  <text x="${column.x + timeline.columnWidth / 2}" y="${timeline.headerHeight - 14}" fill="${colors.nodeText}" font-family="${FONT}" font-size="11" text-anchor="middle">${escapeXml(column.label)}</text>`
+    );
+  }
+  for (const node of layout.nodes) {
+    const { fill, stroke } = nodeColors(node, colors);
+    parts.push(
+      `  <rect x="${node.x - node.width / 2}" y="${node.y - node.height / 2}" width="${node.width}" height="${node.height}" rx="4" fill="${fill}" stroke="${stroke}" stroke-width="1.2"/>`,
+      `  <text x="${timeline.labelWidth - 14}" y="${node.y}" fill="${colors.nodeText}" font-family="${FONT}" font-size="12" text-anchor="end" dominant-baseline="middle">${escapeXml(node.label)}</text>`
+    );
+  }
+};
+
+const pushVennContent = (
+  parts: string[],
+  layout: Layout,
+  colors: typeof SCREEN
+): void => {
+  for (const node of layout.nodes) {
+    const { fill, stroke } = nodeColors(node, colors);
+    parts.push(
+      `  <circle cx="${node.x}" cy="${node.y}" r="${node.width / 2}" fill="${fill}" stroke="${stroke}" stroke-width="1.5"/>`,
+      `  <text x="${node.x}" y="${node.y}" fill="${colors.nodeText}" font-family="${FONT}" font-size="13" font-weight="500" text-anchor="middle" dominant-baseline="middle">${escapeXml(node.label)}</text>`
+    );
+  }
+};
+
+const sequenceFragmentShape = (
+  fragment: NonNullable<Layout['fragments']>[number],
+  colors: typeof SCREEN
+): string => {
+  const left = fragment.x - fragment.width / 2;
+  const top = fragment.y - fragment.height / 2;
+  const lines = [
+    `  <rect x="${left}" y="${top}" width="${fragment.width}" height="${fragment.height}" rx="6" fill="none" stroke="${colors.edge}" stroke-width="1.2" stroke-dasharray="5 4"/>`,
+    `  <text x="${left + 8}" y="${top + 14}" fill="${colors.edgeLabel}" font-family="${FONT}" font-size="11" font-weight="500">${escapeXml(`${fragment.type} ${fragment.label}`.trim())}</text>`,
+  ];
+  for (const divider of fragment.dividers) {
+    lines.push(
+      `  <line x1="${left}" y1="${divider.y}" x2="${left + fragment.width}" y2="${divider.y}" stroke="${colors.edge}" stroke-width="1.2" stroke-dasharray="5 4"/>`,
+      `  <text x="${left + 8}" y="${divider.y - 4}" fill="${colors.edgeLabel}" font-family="${FONT}" font-size="11">${escapeXml(divider.label)}</text>`
+    );
+  }
+  return lines.join('\n');
+};
+
+const activationShape = (
+  activation: NonNullable<Layout['activations']>[number],
+  colors: typeof SCREEN
+): string =>
+  `  <rect x="${activation.x - 5}" y="${activation.top}" width="10" height="${Math.max(activation.bottom - activation.top, 2)}" rx="2" fill="${colors.nodeFill}" stroke="${colors.nodeStroke}" stroke-width="1"/>`;
+
+const noteShape = (
+  note: NonNullable<Layout['notes']>[number],
+  colors: typeof SCREEN
+): string => {
+  const left = note.x - note.width / 2;
+  const top = note.y - note.height / 2;
+  const fold = 10;
+  const lines = note.text.split('\n');
+  const tspans = lines
+    .map(
+      (line, index) =>
+        `<tspan dy="${index === 0 ? 0 : 14}" x="${note.x}">${escapeXml(line)}</tspan>`
+    )
+    .join('');
+  return [
+    `  <rect x="${left}" y="${top}" width="${note.width}" height="${note.height}" rx="3" fill="${colors.subgraph}" stroke="${colors.edge}" stroke-width="1.2"/>`,
+    `  <path d="M ${left + note.width - fold} ${top} L ${left + note.width} ${top + fold} L ${left + note.width - fold} ${top + fold} Z" fill="${colors.subgraph}" stroke="${colors.edge}" stroke-width="1.2"/>`,
+    `  <text x="${note.x}" y="${note.y - ((lines.length - 1) * 14) / 2}" fill="${colors.nodeText}" font-family="${FONT}" font-size="12" text-anchor="middle">${tspans}</text>`,
+  ].join('\n');
+};
+
 const pushEdge = (
   parts: string[],
   { path, edge, labelX, labelY }: EdgePath,
-  colors: typeof SCREEN
+  colors: typeof SCREEN,
+  markerIds: Map<string, string>
 ): void => {
-  const marker = edge.directed ? ` marker-end="url(#${MARKER_ID})"` : '';
+  const marker =
+    edge.directed && edge.style?.arrow !== false
+      ? ` marker-end="url(#${markerId(markerIds, edge, colors)})"`
+      : '';
   parts.push(
-    `  <path d="${path}" fill="none" stroke="${colors.edge}" stroke-width="1.5"${marker}/>`
+    `  <path d="${path}" fill="none"${edgeStyleAttrs(edge, colors)}${marker}/>`
   );
   if (edge.label) {
     parts.push(edgeLabelText({ edge, labelX, labelY }, colors));
   }
 };
+
+const sequenceEdgeShape = (
+  { path, edge, labelX, labelY }: EdgePath,
+  colors: typeof SCREEN,
+  markerIds: Map<string, string>
+): string =>
+  `  <path d="${path}" fill="none"${edgeStyleAttrs(edge, colors)} marker-end="url(#${markerId(markerIds, edge, colors)})"/>`;
+
+const markerId = (
+  markerIds: Map<string, string>,
+  edge: DiagramEdge,
+  colors: typeof SCREEN
+): string => markerIds.get(edgeStrokeColor(edge, colors)) ?? MARKER_ID;
+
+const edgeStyleAttrs = (edge: DiagramEdge, colors: typeof SCREEN): string => {
+  const style = edge.style;
+  const stroke = edgeStrokeColor(edge, colors);
+  const width = style?.width ?? 1.5;
+  const dash = style?.dashed
+    ? ' stroke-dasharray="6 4"'
+    : style?.dotted
+      ? ' stroke-dasharray="2 4"'
+      : '';
+  return `stroke="${stroke}" stroke-width="${width}"${dash}`;
+};
+
+const nodeColors = (
+  node: Pick<PositionedNode, 'color'>,
+  colors: typeof SCREEN
+): { fill: string; stroke: string } =>
+  node.color
+    ? colorPair(node.color)
+    : { fill: colors.nodeFill, stroke: colors.nodeStroke };
 
 const edgeLabelText = (
   { labelX, labelY, edge }: Pick<EdgePath, 'edge' | 'labelX' | 'labelY'>,
@@ -179,7 +341,8 @@ const edgeLabelText = (
 
 const headerShape = (node: PositionedNode, colors: typeof SCREEN): string => {
   const { x, y, width, height } = node;
-  return `  <rect x="${x - width / 2}" y="${y - height / 2}" width="${width}" height="${height}" rx="10" fill="${colors.nodeFill}" stroke="${colors.nodeStroke}" stroke-width="1.5"/>`;
+  const { fill, stroke } = nodeColors(node, colors);
+  return `  <rect x="${x - width / 2}" y="${y - height / 2}" width="${width}" height="${height}" rx="10" fill="${fill}" stroke="${stroke}" stroke-width="1.5"/>`;
 };
 
 const nodeLabel = (node: PositionedNode, colors: typeof SCREEN): string =>
@@ -197,36 +360,51 @@ const nodeIcon = (node: PositionedNode, colors: typeof SCREEN): string => {
   return `  <svg aria-hidden="true" data-icon="${node.icon ?? ''}" fill="none" stroke="${colors.nodeStroke}" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24" width="${ICON_SIZE}" height="${ICON_SIZE}" x="${nodeIconCenterX(node) - ICON_SIZE / 2}" y="${node.y - ICON_SIZE / 2}">${body}</svg>`;
 };
 
+const subgraphShape = (
+  subgraph: NonNullable<Layout['subgraphs']>[number],
+  colors: typeof SCREEN
+): string => {
+  const { x, y, width, height } = subgraph;
+  const { fill, stroke } = subgraph.color
+    ? colorPair(subgraph.color)
+    : { fill: colors.subgraph, stroke: colors.edge };
+  return [
+    `  <rect x="${x - width / 2}" y="${y - height / 2}" width="${width}" height="${height}" rx="12" fill="${fill}" stroke="${stroke}" stroke-width="1.5"/>`,
+    `  <text x="${x - width / 2 + 12}" y="${y - height / 2 + 17}" fill="${colors.title}" font-family="${FONT}" font-size="12" font-weight="600">${escapeXml(subgraph.label)}</text>`,
+  ].join('\n');
+};
+
 const nodeShape = (node: PositionedNode, colors: typeof SCREEN): string => {
   const { x, y, width, height, shape } = node;
   const rx = width / 2;
   const ry = height / 2;
-  const fill = `fill="${colors.nodeFill}" stroke="${colors.nodeStroke}" stroke-width="1.5"`;
+  const { fill, stroke } = nodeColors(node, colors);
+  const attrs = `fill="${fill}" stroke="${stroke}" stroke-width="1.5"`;
   switch (shape) {
     case 'round':
-      return `  <rect x="${x - rx}" y="${y - ry}" width="${width}" height="${height}" rx="24" ${fill}/>`;
+      return `  <rect x="${x - rx}" y="${y - ry}" width="${width}" height="${height}" rx="24" ${attrs}/>`;
     case 'ellipse':
-      return `  <ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" ${fill}/>`;
+      return `  <ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" ${attrs}/>`;
     case 'diamond':
-      return `  <polygon points="${x},${y - ry} ${x + rx},${y} ${x},${y + ry} ${x - rx},${y}" ${fill}/>`;
+      return `  <polygon points="${x},${y - ry} ${x + rx},${y} ${x},${y + ry} ${x - rx},${y}" ${attrs}/>`;
     case 'hexagon':
-      return `  <polygon points="${x - rx},${y} ${x - rx * 0.5},${y - ry} ${x + rx * 0.5},${y - ry} ${x + rx},${y} ${x + rx * 0.5},${y + ry} ${x - rx * 0.5},${y + ry}" ${fill}/>`;
+      return `  <polygon points="${x - rx},${y} ${x - rx * 0.5},${y - ry} ${x + rx * 0.5},${y - ry} ${x + rx},${y} ${x + rx * 0.5},${y + ry} ${x - rx * 0.5},${y + ry}" ${attrs}/>`;
     case 'parallelogram':
-      return parallelogram(x, y, rx, ry, fill);
+      return parallelogram(x, y, rx, ry, attrs);
     case 'cloud':
-      return `  <path d="${CLOUD_PATH}" transform="${cloudTransform(node)}" ${fill}/>`;
+      return `  <path d="${CLOUD_PATH}" transform="${cloudTransform(node)}" ${attrs}/>`;
     case 'note':
-      return `  <path d="${NOTE_PATH}" transform="${noteTransform(node)}" ${fill}/>`;
+      return `  <path d="${NOTE_PATH}" transform="${noteTransform(node)}" ${attrs}/>`;
     case 'actor':
-      return actorShape(node, fill);
+      return actorShape(node, attrs);
     case 'cylinder':
       return [
-        `  <rect x="${x - rx}" y="${y - ry + 8}" width="${width}" height="${height - 16}" ${fill}/>`,
-        `  <ellipse cx="${x}" cy="${y - ry + 8}" rx="${rx}" ry="8" fill="${colors.nodeFill}" stroke="${colors.nodeStroke}" stroke-width="1.5"/>`,
-        `  <ellipse cx="${x}" cy="${y + ry - 8}" rx="${rx}" ry="8" fill="none" stroke="${colors.nodeStroke}" stroke-width="1.5"/>`,
+        `  <rect x="${x - rx}" y="${y - ry + 8}" width="${width}" height="${height - 16}" ${attrs}/>`,
+        `  <ellipse cx="${x}" cy="${y - ry + 8}" rx="${rx}" ry="8" fill="${fill}" stroke="${stroke}" stroke-width="1.5"/>`,
+        `  <ellipse cx="${x}" cy="${y + ry - 8}" rx="${rx}" ry="8" fill="none" stroke="${stroke}" stroke-width="1.5"/>`,
       ].join('\n');
     default:
-      return `  <rect x="${x - rx}" y="${y - ry}" width="${width}" height="${height}" rx="6" ${fill}/>`;
+      return `  <rect x="${x - rx}" y="${y - ry}" width="${width}" height="${height}" rx="6" ${attrs}/>`;
   }
 };
 

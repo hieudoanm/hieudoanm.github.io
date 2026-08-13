@@ -87,6 +87,16 @@ describe('PostsBrowser', () => {
     expect(videoTag).toHaveAttribute('aria-pressed', 'true');
   });
 
+  it('deselects a tag when clicked a second time', () => {
+    render(<PostsBrowser posts={posts} />);
+    const cdnTag = screen.getByRole('button', { name: 'cdn' });
+    fireEvent.click(cdnTag);
+    expect(cdnTag).toHaveAttribute('aria-pressed', 'true');
+    fireEvent.click(cdnTag);
+    expect(cdnTag).toHaveAttribute('aria-pressed', 'false');
+    expect(screen.getByText('Stripe — Payments')).toBeInTheDocument();
+  });
+
   it('clears active tag filters', () => {
     render(<PostsBrowser posts={posts} />);
     fireEvent.click(screen.getByRole('button', { name: 'payments' }));

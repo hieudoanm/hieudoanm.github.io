@@ -27,15 +27,28 @@ message arrows. See the `login-flow` example.
 ## Nodes
 
 ```text
-node <id>: <label> [shape, icon=<name>, rank=<n>]
+node <id>: <label> [shape, icon=<name>, rank=<n>, color=<name>]
 ```
 
 - `<id>` — a lowercase identifier (`[a-z0-9_-]+`) used to reference the node in
   edges.
 - `<label>` — the text shown inside the node. Anything after the `:` is kept
   verbatim (commas and special characters are allowed).
-- `[shape, icon=<name>, rank=<n>]` — optional comma-separated attributes; a bare
-  `node x: X` uses the `rect` shape and no icon.
+- `[shape, icon=<name>, rank=<n>, color=<name>]` — optional comma-separated
+  attributes; a bare `node x: X` uses the `rect` shape, no icon, and the theme
+  color.
+
+### Node colors
+
+A `color=<name>` attribute fills the node and its border with a named color:
+
+```text
+node api: Payments API [icon=server, color=blue]
+node db: Ledger [cylinder, icon=database, color=purple]
+```
+
+Valid colors: `red`, `orange`, `amber`, `yellow`, `lime`, `green`, `teal`,
+`cyan`, `sky`, `blue`, `indigo`, `violet`, `purple`, `pink`, `gray`.
 
 ### Shapes
 
@@ -120,6 +133,52 @@ edge <from> -- <to>: <label>
 
 A second line with the same node as source and target (`edge x -> x`) creates a
 self-loop.
+
+### Edge styles
+
+Styles are attached to an edge in square brackets, either right after the target
+or after the label:
+
+```text
+edge a -> b [dashed, color=red, width=2]
+edge a -> b: approve [dotted]
+edge a -> b [arrow=no]
+```
+
+| Attribute   | Effect                                   |
+| ----------- | ---------------------------------------- |
+| `dashed`    | Dashed line                              |
+| `dotted`    | Dotted line                              |
+| `color=<n>` | Stroke color (same palette as nodes)     |
+| `width=<n>` | Stroke width in px (default `1.5`)       |
+| `arrow=no`  | Suppress the arrowhead on directed edges |
+
+Undirected (`--`) edges never draw an arrowhead. Unknown attributes are reported
+as parse errors.
+
+## Subgraphs
+
+Group nodes into a labeled container box — useful for deployment zones, layers,
+or swimlane-style grouping:
+
+```text
+subgraph web: Web Tier [color=blue]
+node api: API
+node web: Web Server
+end
+subgraph data: Data Tier [color=purple]
+node db: PostgreSQL
+end
+edge api -> db: reads
+```
+
+- `subgraph <id>: <label> [color=<name>]` opens a group; `end` closes it.
+- Nodes declared inside a group are contained by its box. Subgraphs may nest
+  (open another `subgraph` before the inner `end`).
+- Every group participates in layout ranking: grouped nodes are laid out
+  together and the whole cluster advances across ranks with its edges.
+- A bare `subgraph <id>:` defaults the label to the id. Unclosed or
+  double-closed groups are reported as parse errors.
 
 ## Example
 

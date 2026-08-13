@@ -1,68 +1,34 @@
+import { ICON_SIZE, ICON_GAP, nodeHeight, nodeWidth } from '@/lib/measure';
+import { layoutSequence } from '@/lib/sequence';
+import layoutForce from '@/lib/force';
+import { layoutTimeline } from '@/lib/timeline';
+import { layoutVenn } from '@/lib/venn';
 import type {
   Diagram,
   DiagramEdge,
   DiagramNode,
+  DiagramSubgraph,
   EdgePath,
   Layout,
   LayoutDirection,
-  Lifeline,
   PositionedNode,
+  PositionedSubgraph,
 } from '@/lib/types';
+
+export {
+  ICON_SIZE,
+  ICON_GAP,
+  nodeIconCenterX,
+  nodeLabelCenterX,
+} from '@/lib/measure';
 
 const PAD = 48;
 const RANK_GAP = 160;
 const COL_GAP = 56;
-const NODE_MIN_WIDTH = 120;
-const NODE_HEIGHT = 52;
-const TALL_NODE_HEIGHT = 68;
 const EDGE_BEND = 40;
 const LOOP_SIZE = 36;
-const SEQUENCE_HEADER_HEIGHT = 44;
-const SEQUENCE_HEADER_Y = 60;
-const SEQUENCE_COL_GAP = 90;
-const SEQUENCE_FIRST_ROW_Y = 116;
-const SEQUENCE_ROW_GAP = 40;
-const SEQUENCE_BOTTOM_PAD = 60;
-export const ICON_SIZE = 18;
-export const ICON_GAP = 8;
-
-const isTallShape = (shape: PositionedNode['shape']): boolean =>
-  shape === 'ellipse' ||
-  shape === 'diamond' ||
-  shape === 'cylinder' ||
-  shape === 'hexagon' ||
-  shape === 'note' ||
-  shape === 'actor' ||
-  shape === 'cloud';
-
-const textWidth = (label: string): number => label.length * 8;
-
-const nodeWidth = (
-  label: string,
-  icon: PositionedNode['icon'] | undefined
-): number =>
-  Math.max(
-    NODE_MIN_WIDTH,
-    textWidth(label) + 44 + (icon ? ICON_SIZE + ICON_GAP : 0)
-  );
-
-const nodeHeight = (node: Pick<PositionedNode, 'shape'>): number =>
-  isTallShape(node.shape) ? TALL_NODE_HEIGHT : NODE_HEIGHT;
-
-const nodeContentWidth = (
-  node: Pick<PositionedNode, 'label' | 'icon'>
-): number => textWidth(node.label) + (node.icon ? ICON_SIZE + ICON_GAP : 0);
-
-const contentLeft = (node: PositionedNode): number =>
-  node.x - nodeContentWidth(node) / 2;
-
-export const nodeIconCenterX = (node: PositionedNode): number =>
-  contentLeft(node) + ICON_SIZE / 2;
-
-export const nodeLabelCenterX = (node: PositionedNode): number =>
-  contentLeft(node) +
-  (node.icon ? ICON_SIZE + ICON_GAP : 0) +
-  textWidth(node.label) / 2;
+const SUBGRAPH_PAD = 18;
+const SUBGRAPH_HEADER = 26;
 
 export const CLOUD_PATH =
   'M 0 -0.9 C -0.35 -0.9, -0.55 -0.55, -0.62 -0.3 C -0.95 -0.25, -1 -0.15, -1 0.05 C -1 0.55, -0.6 0.9, 0 0.9 C 0.6 0.9, 1 0.55, 1 0.05 C 1 -0.15, 0.95 -0.25, 0.62 -0.3 C 0.55 -0.55, 0.35 -0.9, 0 -0.9 Z';
@@ -123,6 +89,10 @@ export const computeLayout = (
   direction: LayoutDirection = 'horizontal'
 ): Layout => {
   if (diagram.kind === 'sequence') return layoutSequence(diagram);
+  if (diagram.kind === 'timeline') return layoutTimeline(diagram);
+  if (diagram.kind === 'venn') return layoutVenn(diagram);
+  if ((diagram.layoutMode ?? 'layered') === 'force')
+    return layoutForce(diagram);
   return layoutFlow(diagram, direction);
 };
 
@@ -135,6 +105,8 @@ const layoutFlow = (diagram: Diagram, direction: LayoutDirection): Layout => {
       edges: [],
       width: PAD * 2,
       height: PAD * 2,
+      subgraphs: [],
+      subgraphDefs: diagram.subgraphs,
     };
   }
 
@@ -146,7 +118,10 @@ const layoutFlow = (diagram: Diagram, direction: LayoutDirection): Layout => {
     height: nodeHeight(node),
   }));
 
-  const ranks = computeRanks(diagram.nodes, diagram.edges);
+  const hasSubgraphs = diagram.subgraphs.length > 0;
+  const ranks = hasSubgraphs
+    ? computeClusterRanks(diagram)
+    : computeRanks(diagram.nodes, diagram.edges);
 
   const rankColumns = new Map<number, PositionedNode[]>();
   for (const node of positioned) {
@@ -190,28 +165,62 @@ const layoutFlow = (diagram: Diagram, direction: LayoutDirection): Layout => {
     }
   }
 
-  const edges: EdgePath[] = diagram.edges
-    .map((edge) => buildEdgePath(edge, positioned, direction))
-    .filter((edge): edge is EdgePath => edge !== null);
+  if (!hasSubgraphs) {
+    const edges: EdgePath[] = diagram.edges
+      .map((edge) => buildEdgePath(edge, positioned, direction))
+      .filter((edge): edge is EdgePath => edge !== null);
 
-  const width = direction === 'vertical' ? maxHeight + PAD * 2 : cursorX + PAD;
-  const height = direction === 'vertical' ? cursorX + PAD : maxHeight + PAD * 2;
+    const width =
+      direction === 'vertical' ? maxHeight + PAD * 2 : cursorX + PAD;
+    const height =
+      direction === 'vertical' ? cursorX + PAD : maxHeight + PAD * 2;
 
-  return { kind: 'flow', direction, nodes: positioned, edges, width, height };
+    return { kind: 'flow', direction, nodes: positioned, edges, width, height };
+  }
+
+  const { nodes, edges, subgraphs, width, height } = finalizeFlow(
+    positioned,
+    diagram,
+    direction
+  );
+  return {
+    kind: 'flow',
+    direction,
+    nodes,
+    edges,
+    subgraphs,
+    subgraphDefs: diagram.subgraphs,
+    width,
+    height,
+  };
 };
 
 const computeRanks = (
   nodes: DiagramNode[],
   edges: DiagramEdge[]
 ): Record<string, number> => {
+  const initial: Record<string, number> = {};
+  for (const node of nodes) initial[node.id] = node.rank ?? 0;
+  return longestPath(
+    nodes.map((node) => node.id),
+    edges,
+    initial
+  );
+};
+
+const longestPath = (
+  ids: string[],
+  edges: DiagramEdge[],
+  initial: Record<string, number> = {}
+): Record<string, number> => {
   const ranks: Record<string, number> = {};
-  for (const node of nodes) ranks[node.id] = node.rank ?? 0;
+  for (const id of ids) ranks[id] = initial[id] ?? 0;
   for (const edge of edges) {
     if (!(edge.source in ranks)) ranks[edge.source] = 0;
     if (!(edge.target in ranks)) ranks[edge.target] = 0;
   }
 
-  for (let pass = 0; pass < nodes.length + edges.length; pass += 1) {
+  for (let pass = 0; pass < ids.length + edges.length; pass += 1) {
     let changed = false;
     for (const edge of edges) {
       if (edge.source === edge.target) continue;
@@ -227,12 +236,77 @@ const computeRanks = (
   return ranks;
 };
 
+const computeClusterRanks = (diagram: Diagram): Record<string, number> => {
+  const subById = new Map(
+    diagram.subgraphs.map((subgraph) => [subgraph.id, subgraph])
+  );
+  const nodeById = new Map(diagram.nodes.map((node) => [node.id, node]));
+
+  const topLevelId = (direct: string | undefined): string | undefined => {
+    let id = direct;
+    if (!id) return id;
+    while (subById.get(id)?.parent !== undefined) {
+      id = subById.get(id)!.parent!;
+    }
+    return id;
+  };
+
+  const groups = new Map<string, string[]>();
+  for (const node of diagram.nodes) {
+    const groupId = topLevelId(node.group) ?? node.id;
+    const list = groups.get(groupId) ?? [];
+    list.push(node.id);
+    groups.set(groupId, list);
+  }
+
+  const groupRanks: Record<string, number> = {};
+  for (const groupId of groups.keys()) groupRanks[groupId] = 0;
+
+  for (let pass = 0; pass < groups.size + diagram.edges.length; pass += 1) {
+    let changed = false;
+    for (const edge of diagram.edges) {
+      const from = topLevelId(nodeById.get(edge.source)?.group) ?? edge.source;
+      const to = topLevelId(nodeById.get(edge.target)?.group) ?? edge.target;
+      if (from === to) continue;
+      if (groupRanks[to] <= groupRanks[from]) {
+        groupRanks[to] = groupRanks[from] + 1;
+        changed = true;
+      }
+    }
+    if (!changed) break;
+  }
+
+  const ranks: Record<string, number> = {};
+  for (const [groupId, ids] of groups) {
+    const base = groupRanks[groupId] ?? 0;
+    const internalEdges = diagram.edges.filter((edge) => {
+      const from = topLevelId(nodeById.get(edge.source)?.group) ?? edge.source;
+      const to = topLevelId(nodeById.get(edge.target)?.group) ?? edge.target;
+      return from === groupId && to === groupId;
+    });
+    const initial: Record<string, number> = {};
+    const hints = ids
+      .map((id) => nodeById.get(id)?.rank ?? 0)
+      .sort((a, b) => a - b);
+    const minHint = hints[0] ?? 0;
+    for (const id of ids) {
+      const hint = nodeById.get(id)?.rank ?? 0;
+      initial[id] = hint - minHint;
+    }
+    const internal = longestPath(ids, internalEdges, initial);
+    for (const id of ids) ranks[id] = base + (internal[id] ?? 0);
+  }
+  return ranks;
+};
+
 export const applyManualPositions = (
   layout: Layout,
   overrides: Record<string, { x: number; y: number }>
 ): Layout => {
   const ids = new Set(Object.keys(overrides));
-  if (layout.kind !== 'flow' || ids.size === 0) return layout;
+  if (layout.kind !== 'flow' || layout.mode === 'force' || ids.size === 0) {
+    return layout;
+  }
 
   const nodes = layout.nodes.map((node) =>
     overrides[node.id]
@@ -240,6 +314,42 @@ export const applyManualPositions = (
       : node
   );
 
+  const {
+    nodes: shifted,
+    edges,
+    subgraphs,
+    width,
+    height,
+  } = finalizeFlow(
+    nodes,
+    {
+      subgraphs: layout.subgraphDefs ?? [],
+      edges: layout.edges.map(({ edge }) => edge),
+    },
+    layout.direction
+  );
+
+  return {
+    ...layout,
+    nodes: shifted,
+    edges,
+    subgraphs,
+    width,
+    height,
+  };
+};
+
+interface Bounds {
+  minX: number;
+  minY: number;
+  maxX: number;
+  maxY: number;
+}
+
+const unionBounds = (
+  nodes: PositionedNode[],
+  boxes: PositionedSubgraph[]
+): Bounds => {
   let minX = Infinity;
   let minY = Infinity;
   let maxX = -Infinity;
@@ -250,102 +360,91 @@ export const applyManualPositions = (
     maxX = Math.max(maxX, node.x + node.width / 2);
     maxY = Math.max(maxY, node.y + node.height / 2);
   }
-
-  const shiftX = minX < PAD ? PAD - minX : 0;
-  const shiftY = minY < PAD ? PAD - minY : 0;
-  const shifted = nodes.map((node) =>
-    shiftX || shiftY
-      ? { ...node, x: node.x + shiftX, y: node.y + shiftY }
-      : node
-  );
-
-  const edges: EdgePath[] = layout.edges
-    .map(({ edge }) => buildEdgePath(edge, shifted, layout.direction))
-    .filter((edge): edge is EdgePath => edge !== null);
-
-  const width = maxX - minX + shiftX + PAD * 2;
-  const height = maxY - minY + shiftY + PAD * 2;
-
-  return { ...layout, nodes: shifted, edges, width, height };
+  for (const box of boxes) {
+    minX = Math.min(minX, box.x - box.width / 2);
+    minY = Math.min(minY, box.y - box.height / 2);
+    maxX = Math.max(maxX, box.x + box.width / 2);
+    maxY = Math.max(maxY, box.y + box.height / 2);
+  }
+  return { minX, minY, maxX, maxY };
 };
 
-const layoutSequence = (diagram: Diagram): Layout => {
-  if (diagram.nodes.length === 0) {
-    return {
-      kind: 'sequence',
-      direction: 'horizontal',
-      nodes: [],
-      edges: [],
-      lifelines: [],
-      width: PAD * 2,
-      height: PAD * 2,
-    };
-  }
-
-  const positioned: PositionedNode[] = [];
-  let cursorX = PAD;
-  for (const node of diagram.nodes) {
-    const width = Math.max(NODE_MIN_WIDTH, nodeWidth(node.label, node.icon));
-    positioned.push({
+const finalizeFlow = (
+  positioned: PositionedNode[],
+  diagram: Pick<Diagram, 'subgraphs' | 'edges'>,
+  direction: LayoutDirection
+): {
+  nodes: PositionedNode[];
+  edges: EdgePath[];
+  subgraphs: PositionedSubgraph[];
+  width: number;
+  height: number;
+} => {
+  let nodes = positioned;
+  let boxes = computeSubgraphBoxes(nodes, diagram.subgraphs);
+  const bounds = unionBounds(nodes, boxes);
+  const shiftX = bounds.minX < PAD ? PAD - bounds.minX : 0;
+  const shiftY = bounds.minY < PAD ? PAD - bounds.minY : 0;
+  if (shiftX || shiftY) {
+    nodes = nodes.map((node) => ({
       ...node,
-      x: cursorX + width / 2,
-      y: SEQUENCE_HEADER_Y,
-      width,
-      height: SEQUENCE_HEADER_HEIGHT,
-    });
-    cursorX += width + SEQUENCE_COL_GAP;
+      x: node.x + shiftX,
+      y: node.y + shiftY,
+    }));
+    boxes = computeSubgraphBoxes(nodes, diagram.subgraphs);
   }
 
   const edges: EdgePath[] = diagram.edges
-    .map((edge, index) => buildSequenceEdge(edge, index, positioned))
+    .map((edge) => buildEdgePath(edge, nodes, direction))
     .filter((edge): edge is EdgePath => edge !== null);
-
-  const lastY =
-    edges.length > 0
-      ? SEQUENCE_FIRST_ROW_Y + (edges.length - 1) * SEQUENCE_ROW_GAP
-      : SEQUENCE_FIRST_ROW_Y - SEQUENCE_ROW_GAP;
-
-  const lifelines: Lifeline[] = positioned.map((node) => ({
-    x: node.x,
-    top: SEQUENCE_HEADER_Y + SEQUENCE_HEADER_HEIGHT / 2 + 8,
-    bottom: lastY + SEQUENCE_ROW_GAP,
-  }));
-
+  const boundsFinal = unionBounds(nodes, boxes);
   return {
-    kind: 'sequence',
-    direction: 'horizontal',
-    nodes: positioned,
+    nodes,
     edges,
-    width: cursorX - SEQUENCE_COL_GAP + PAD,
-    height: lastY + SEQUENCE_ROW_GAP + SEQUENCE_BOTTOM_PAD,
-    lifelines,
+    subgraphs: boxes,
+    width: boundsFinal.maxX + PAD,
+    height: boundsFinal.maxY + PAD,
   };
 };
 
-const buildSequenceEdge = (
-  edge: DiagramEdge,
-  index: number,
-  positioned: PositionedNode[]
-): EdgePath | null => {
-  const source = positioned.find((node) => node.id === edge.source);
-  const target = positioned.find((node) => node.id === edge.target);
-  if (!source || !target) return null;
+export const computeSubgraphBoxes = (
+  nodes: PositionedNode[],
+  subgraphs: DiagramSubgraph[]
+): PositionedSubgraph[] => {
+  const depth = (subgraph: DiagramSubgraph): number =>
+    subgraph.parent === undefined
+      ? 0
+      : 1 +
+        depth(subgraphs.find((candidate) => candidate.id === subgraph.parent)!);
+  const ordered = [...subgraphs].sort((a, b) => depth(b) - depth(a));
 
-  const y = SEQUENCE_FIRST_ROW_Y + index * SEQUENCE_ROW_GAP;
+  const boxes = new Map<string, PositionedSubgraph>();
+  for (const subgraph of ordered) {
+    const members = nodes.filter((node) => node.group === subgraph.id);
+    const childBoxes = subgraphs
+      .filter((candidate) => candidate.parent === subgraph.id)
+      .map((child) => boxes.get(child.id))
+      .filter((box): box is PositionedSubgraph => box !== undefined);
+    if (members.length === 0 && childBoxes.length === 0) continue;
 
-  if (source.id === target.id) {
-    const x0 = source.x + source.width / 2 + 6;
-    const path = `M ${x0} ${y} A 16 16 0 1 1 ${x0} ${y + 0.01}`;
-    return { edge, path, labelX: x0 + 24, labelY: y };
+    const bounds = unionBounds(members, childBoxes);
+    const width = bounds.maxX - bounds.minX + SUBGRAPH_PAD * 2;
+    const height =
+      bounds.maxY - bounds.minY + SUBGRAPH_PAD * 2 + SUBGRAPH_HEADER;
+    boxes.set(subgraph.id, {
+      id: subgraph.id,
+      label: subgraph.label,
+      color: subgraph.color,
+      x: (bounds.minX + bounds.maxX) / 2,
+      y: (bounds.minY + bounds.maxY) / 2 + SUBGRAPH_HEADER / 2,
+      width,
+      height,
+    });
   }
 
-  const path = `M ${source.x} ${y} L ${target.x} ${y}`;
-  return {
-    edge,
-    path,
-    labelX: (source.x + target.x) / 2,
-    labelY: y - 10,
-  };
+  return subgraphs
+    .map((subgraph) => boxes.get(subgraph.id))
+    .filter((box): box is PositionedSubgraph => box !== undefined);
 };
 
 const buildEdgePath = (

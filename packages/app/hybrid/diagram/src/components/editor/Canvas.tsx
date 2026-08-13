@@ -1,6 +1,7 @@
 'use client';
 
 import { FC, PointerEvent as ReactPointerEvent, useRef } from 'react';
+import { colorPair } from '@/lib/colors';
 import { ICON_BODY } from '@/lib/icons';
 import {
   ICON_SIZE,
@@ -12,7 +13,15 @@ import {
   noteTransform,
   NOTE_PATH,
 } from '@/lib/layout';
-import type { Layout, PositionedNode } from '@/lib/types';
+import type {
+  DiagramEdge,
+  Layout,
+  PositionedActivation,
+  PositionedNode,
+  PositionedNote,
+  PositionedSequenceFragment,
+  PositionedSubgraph,
+} from '@/lib/types';
 
 interface CanvasProps {
   layout: Layout;
@@ -31,15 +40,31 @@ const titleFill = 'var(--color-base-content)';
 const halo = 'var(--color-base-100)';
 const iconStroke = 'var(--color-primary)';
 const selectStroke = 'var(--color-secondary)';
+const subgraphFill = 'var(--color-base-200)';
+const subgraphText = 'var(--color-base-content)';
 
-const common = {
-  fill: nodeFill,
-  stroke: nodeStroke,
-  strokeWidth: 1.5,
+const nodeColors = (node: PositionedNode): { fill: string; stroke: string } =>
+  node.color ? colorPair(node.color) : { fill: nodeFill, stroke: nodeStroke };
+
+const edgeStyleAttrs = (
+  edge: DiagramEdge
+): {
+  stroke: string;
+  strokeWidth: number;
+  strokeDasharray: string | undefined;
+} => {
+  const style = edge.style;
+  return {
+    stroke: style?.color ? colorPair(style.color).stroke : edgeStroke,
+    strokeWidth: style?.width ?? 1.5,
+    strokeDasharray: style?.dashed ? '6 4' : style?.dotted ? '2 4' : undefined,
+  };
 };
 
 const ShapeNode: FC<{ node: PositionedNode }> = ({ node }) => {
   const { x, y, width, height, shape } = node;
+  const { fill, stroke } = nodeColors(node);
+  const common = { fill, stroke, strokeWidth: 1.5 };
   const rx = width / 2;
   const ry = height / 2;
   switch (shape) {
@@ -104,7 +129,7 @@ const ShapeNode: FC<{ node: PositionedNode }> = ({ node }) => {
             rx={rx}
             ry={8}
             fill="none"
-            stroke={nodeStroke}
+            stroke={stroke}
             strokeWidth={1.5}
           />
         </>
@@ -125,6 +150,7 @@ const ShapeNode: FC<{ node: PositionedNode }> = ({ node }) => {
 
 const ActorBody: FC<{ node: PositionedNode }> = ({ node }) => {
   const parts = actorParts(node);
+  const stroke = nodeColors(node).stroke;
   return (
     <g>
       <circle
@@ -132,7 +158,7 @@ const ActorBody: FC<{ node: PositionedNode }> = ({ node }) => {
         cy={parts.cy}
         r={parts.r}
         fill="none"
-        stroke={nodeStroke}
+        stroke={stroke}
         strokeWidth={1.5}
       />
       {parts.lines.map((line, index) => (
@@ -143,7 +169,7 @@ const ActorBody: FC<{ node: PositionedNode }> = ({ node }) => {
           x2={line.x2}
           y2={line.y2}
           fill="none"
-          stroke={nodeStroke}
+          stroke={stroke}
           strokeWidth={1.5}
         />
       ))}
@@ -208,6 +234,226 @@ const SelectionRect: FC<{ node: PositionedNode }> = ({ node }) => (
   />
 );
 
+const SubgraphShape: FC<{ subgraph: PositionedSubgraph }> = ({ subgraph }) => (
+  <g pointerEvents="none">
+    <rect
+      height={subgraph.height}
+      rx={12}
+      stroke={subgraph.color ? colorPair(subgraph.color).stroke : edgeStroke}
+      strokeWidth={1.5}
+      width={subgraph.width}
+      x={subgraph.x - subgraph.width / 2}
+      y={subgraph.y - subgraph.height / 2}
+      fill={subgraph.color ? colorPair(subgraph.color).fill : subgraphFill}
+    />
+    <text
+      className="font-sans"
+      fill={subgraphText}
+      fontSize="12"
+      fontWeight="600"
+      x={subgraph.x - subgraph.width / 2 + 12}
+      y={subgraph.y - subgraph.height / 2 + 17}>
+      {subgraph.label}
+    </text>
+  </g>
+);
+
+const SequenceFragmentShape: FC<{
+  fragment: PositionedSequenceFragment;
+}> = ({ fragment }) => {
+  const left = fragment.x - fragment.width / 2;
+  const top = fragment.y - fragment.height / 2;
+  return (
+    <g pointerEvents="none">
+      <rect
+        height={fragment.height}
+        rx={6}
+        stroke={edgeStroke}
+        strokeDasharray="5 4"
+        strokeWidth={1.2}
+        width={fragment.width}
+        x={left}
+        y={top}
+        fill="none"
+      />
+      <text
+        className="font-sans"
+        fill={edgeStroke}
+        fontSize="11"
+        fontWeight="500"
+        x={left + 8}
+        y={top + 14}>
+        {`${fragment.type} ${fragment.label}`.trim()}
+      </text>
+      {fragment.dividers.map((divider) => (
+        <g key={divider.y}>
+          <line
+            x1={left}
+            y1={divider.y}
+            x2={left + fragment.width}
+            y2={divider.y}
+            stroke={edgeStroke}
+            strokeDasharray="5 4"
+            strokeWidth={1.2}
+          />
+          <text
+            className="font-sans"
+            fill={edgeStroke}
+            fontSize="11"
+            x={left + 8}
+            y={divider.y - 4}>
+            {divider.label}
+          </text>
+        </g>
+      ))}
+    </g>
+  );
+};
+
+const ActivationBar: FC<{ activation: PositionedActivation }> = ({
+  activation,
+}) => (
+  <rect
+    fill={nodeFill}
+    height={Math.max(activation.bottom - activation.top, 2)}
+    rx={2}
+    stroke={nodeStroke}
+    strokeWidth={1}
+    width={10}
+    x={activation.x - 5}
+    y={activation.top}
+  />
+);
+
+const NoteShape: FC<{ note: PositionedNote }> = ({ note }) => {
+  const left = note.x - note.width / 2;
+  const top = note.y - note.height / 2;
+  const fold = 10;
+  const lines = note.text.split('\n');
+  return (
+    <g pointerEvents="none">
+      <rect
+        height={note.height}
+        rx={3}
+        stroke={edgeStroke}
+        strokeWidth={1.2}
+        width={note.width}
+        x={left}
+        y={top}
+        fill={subgraphFill}
+      />
+      <path
+        d={`M ${left + note.width - fold} ${top} L ${left + note.width} ${top + fold} L ${left + note.width - fold} ${top + fold} Z`}
+        fill={subgraphFill}
+        stroke={edgeStroke}
+        strokeWidth={1.2}
+      />
+      <text
+        className="font-sans"
+        fill={nodeText}
+        fontSize="12"
+        textAnchor="middle"
+        x={note.x}
+        y={note.y - ((lines.length - 1) * 14) / 2}>
+        {lines.map((line, index) => (
+          <tspan key={index} dy={index === 0 ? 0 : 14} x={note.x}>
+            {line}
+          </tspan>
+        ))}
+      </text>
+    </g>
+  );
+};
+
+const TimelineView: FC<{ layout: Layout }> = ({ layout }) => {
+  const timeline = layout.timeline!;
+  const { columns, columnWidth, headerHeight, labelWidth } = timeline;
+  return (
+    <>
+      {columns.map((column) => (
+        <g key={column.label} pointerEvents="none">
+          <line
+            x1={column.x}
+            y1={headerHeight}
+            x2={column.x}
+            y2={layout.height}
+            stroke={edgeStroke}
+            strokeOpacity={0.25}
+            strokeWidth={1}
+          />
+          <text
+            className="font-sans"
+            fill={nodeText}
+            fontSize="11"
+            textAnchor="middle"
+            x={column.x + columnWidth / 2}
+            y={headerHeight - 14}>
+            {column.label}
+          </text>
+        </g>
+      ))}
+      {layout.nodes.map((node) => {
+        const { fill, stroke } = nodeColors(node);
+        return (
+          <g key={node.id}>
+            <rect
+              height={node.height}
+              rx={4}
+              stroke={stroke}
+              strokeWidth={1.2}
+              width={node.width}
+              x={node.x - node.width / 2}
+              y={node.y - node.height / 2}
+              fill={fill}
+            />
+            <text
+              className="font-sans"
+              dominantBaseline="middle"
+              fill={nodeText}
+              fontSize="12"
+              textAnchor="end"
+              x={labelWidth - 14}
+              y={node.y}>
+              {node.label}
+            </text>
+          </g>
+        );
+      })}
+    </>
+  );
+};
+
+const VennView: FC<{ layout: Layout }> = ({ layout }) => (
+  <>
+    {layout.nodes.map((node) => {
+      const { fill, stroke } = nodeColors(node);
+      return (
+        <g key={node.id} pointerEvents="none">
+          <circle
+            cx={node.x}
+            cy={node.y}
+            fill={fill}
+            r={node.width / 2}
+            stroke={stroke}
+            strokeWidth={1.5}
+          />
+          <text
+            className="font-sans"
+            dominantBaseline="middle"
+            fill={nodeText}
+            fontSize="13"
+            fontWeight="500"
+            textAnchor="middle"
+            x={node.x}
+            y={node.y}>
+            {node.label}
+          </text>
+        </g>
+      );
+    })}
+  </>
+);
+
 const Canvas: FC<CanvasProps> = ({
   layout,
   title,
@@ -221,6 +467,22 @@ const Canvas: FC<CanvasProps> = ({
     null
   );
   const style = { width: `${width * zoom}px`, height: `${height * zoom}px` };
+
+  const markerColors = Array.from(
+    new Set(
+      edges
+        .filter(({ edge }) => edge.directed && edge.style?.arrow !== false)
+        .map(({ edge }) => edgeStyleAttrs(edge).stroke)
+    )
+  );
+  const markerIds = new Map(
+    markerColors.map((color, index) => [color, `diagram-canvas-arrow-${index}`])
+  );
+
+  const markerEnd = (edge: DiagramEdge): string | undefined =>
+    edge.directed && edge.style?.arrow !== false
+      ? `url(#${markerIds.get(edgeStyleAttrs(edge).stroke)})`
+      : undefined;
 
   const handleNodePointerDown = (
     event: ReactPointerEvent<SVGGElement>,
@@ -274,16 +536,19 @@ const Canvas: FC<CanvasProps> = ({
         viewBox={`0 0 ${width} ${height}`}
         xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <marker
-            id="diagram-canvas-arrow"
-            viewBox="0 0 10 10"
-            refX="9"
-            refY="5"
-            markerWidth="7"
-            markerHeight="7"
-            orient="auto-start-reverse">
-            <path d="M 0 0 L 10 5 L 0 10 z" fill={edgeStroke} />
-          </marker>
+          {markerColors.map((color, index) => (
+            <marker
+              id={`diagram-canvas-arrow-${index}`}
+              key={color}
+              viewBox="0 0 10 10"
+              refX="9"
+              refY="5"
+              markerWidth="7"
+              markerHeight="7"
+              orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill={color} />
+            </marker>
+          ))}
         </defs>
         {title && (
           <text
@@ -298,6 +563,9 @@ const Canvas: FC<CanvasProps> = ({
         )}
         {kind === 'sequence' ? (
           <>
+            {(layout.fragments ?? []).map((fragment) => (
+              <SequenceFragmentShape key={fragment.id} fragment={fragment} />
+            ))}
             {(layout.lifelines ?? []).map((lifeline) => (
               <line
                 key={lifeline.x}
@@ -310,53 +578,82 @@ const Canvas: FC<CanvasProps> = ({
                 strokeWidth="1"
               />
             ))}
-            {edges.map(({ path, edge, labelX, labelY }) => (
-              <g key={edge.id}>
-                <path
-                  d={path}
-                  fill="none"
-                  markerEnd="url(#diagram-canvas-arrow)"
-                  stroke={edgeStroke}
-                  strokeWidth="1.5"
-                />
-                {edge.label && (
-                  <EdgeLabel label={edge.label} x={labelX} y={labelY} />
-                )}
-              </g>
+            {(layout.activations ?? []).map((activation) => (
+              <ActivationBar
+                key={`${activation.participant}-${activation.top}`}
+                activation={activation}
+              />
             ))}
-            {nodes.map((node) => (
-              <g key={node.id}>
-                <rect
-                  height={node.height}
-                  rx={10}
-                  width={node.width}
-                  x={node.x - node.width / 2}
-                  y={node.y - node.height / 2}
-                  {...common}
-                />
-                <NodeIcon node={node} />
-                <NodeLabel node={node} />
-              </g>
+            {edges.map(({ path, edge, labelX, labelY }) => {
+              const { stroke, strokeWidth, strokeDasharray } =
+                edgeStyleAttrs(edge);
+              return (
+                <g key={edge.id}>
+                  <path
+                    d={path}
+                    fill="none"
+                    markerEnd={markerEnd(edge)}
+                    stroke={stroke}
+                    strokeDasharray={strokeDasharray}
+                    strokeWidth={strokeWidth}
+                  />
+                  {edge.label && (
+                    <EdgeLabel label={edge.label} x={labelX} y={labelY} />
+                  )}
+                </g>
+              );
+            })}
+            {(layout.notes ?? []).map((note) => (
+              <NoteShape key={note.id} note={note} />
             ))}
+            {nodes.map((node) => {
+              const { fill, stroke } = nodeColors(node);
+              return (
+                <g key={node.id}>
+                  <rect
+                    height={node.height}
+                    rx={10}
+                    width={node.width}
+                    x={node.x - node.width / 2}
+                    y={node.y - node.height / 2}
+                    fill={fill}
+                    stroke={stroke}
+                    strokeWidth={1.5}
+                  />
+                  <NodeIcon node={node} />
+                  <NodeLabel node={node} />
+                </g>
+              );
+            })}
           </>
+        ) : kind === 'timeline' ? (
+          <TimelineView layout={layout} />
+        ) : kind === 'venn' ? (
+          <VennView layout={layout} />
         ) : (
           <>
-            {edges.map(({ path, edge, labelX, labelY }) => (
-              <g key={edge.id}>
-                <path
-                  d={path}
-                  fill="none"
-                  markerEnd={
-                    edge.directed ? 'url(#diagram-canvas-arrow)' : undefined
-                  }
-                  stroke={edgeStroke}
-                  strokeWidth="1.5"
-                />
-                {edge.label && (
-                  <EdgeLabel label={edge.label} x={labelX} y={labelY} />
-                )}
-              </g>
+            {(layout.subgraphs ?? []).map((subgraph) => (
+              <SubgraphShape key={subgraph.id} subgraph={subgraph} />
             ))}
+            {edges.map(({ path, edge, labelX, labelY }) => {
+              const { stroke, strokeWidth, strokeDasharray } =
+                edgeStyleAttrs(edge);
+              return (
+                <g key={edge.id}>
+                  <path
+                    d={path}
+                    fill="none"
+                    markerEnd={markerEnd(edge)}
+                    stroke={stroke}
+                    strokeDasharray={strokeDasharray}
+                    strokeWidth={strokeWidth}
+                  />
+                  {edge.label && (
+                    <EdgeLabel label={edge.label} x={labelX} y={labelY} />
+                  )}
+                </g>
+              );
+            })}
             {nodes.map((node) => (
               <g
                 className={onDragNode ? 'cursor-move' : undefined}

@@ -50,9 +50,36 @@ export type IconName =
   | 'video'
   | 'worker';
 
-export type DiagramKind = 'flow' | 'sequence';
+export type DiagramKind = 'flow' | 'sequence' | 'timeline' | 'venn';
 export type LayoutKind = DiagramKind;
+export type LayoutMode = 'layered' | 'force';
 export type LayoutDirection = 'horizontal' | 'vertical';
+export type SequenceFragmentType = 'alt' | 'opt' | 'loop' | 'par';
+
+export type ColorName =
+  | 'red'
+  | 'orange'
+  | 'amber'
+  | 'yellow'
+  | 'lime'
+  | 'green'
+  | 'teal'
+  | 'cyan'
+  | 'sky'
+  | 'blue'
+  | 'indigo'
+  | 'violet'
+  | 'purple'
+  | 'pink'
+  | 'gray';
+
+export interface EdgeStyle {
+  dashed?: boolean;
+  dotted?: boolean;
+  color?: ColorName;
+  width?: number;
+  arrow?: boolean;
+}
 
 export interface DiagramNode {
   id: string;
@@ -62,6 +89,40 @@ export interface DiagramNode {
   glyph?: string;
   line: number;
   rank?: number;
+  color?: ColorName;
+  group?: string;
+  start?: string;
+  end?: string;
+}
+
+export interface SequenceFragment {
+  id: string;
+  type: SequenceFragmentType;
+  label: string;
+  line: number;
+  edgeStart: number;
+  edgeEnd: number;
+  parent?: string;
+}
+
+export interface SequenceDivider {
+  id: string;
+  fragmentId: string;
+  edgeIndex: number;
+  label: string;
+}
+
+export interface SequenceActivation {
+  participant: string;
+  edgeStart: number;
+  edgeEnd: number;
+}
+
+export interface SequenceNote {
+  id: string;
+  text: string;
+  line: number;
+  over?: string;
 }
 
 export interface DiagramEdge {
@@ -71,6 +132,15 @@ export interface DiagramEdge {
   label: string;
   line: number;
   directed: boolean;
+  style?: EdgeStyle;
+}
+
+export interface DiagramSubgraph {
+  id: string;
+  label: string;
+  line: number;
+  parent?: string;
+  color?: ColorName;
 }
 
 export interface Diagram {
@@ -78,6 +148,12 @@ export interface Diagram {
   nodes: DiagramNode[];
   edges: DiagramEdge[];
   kind: DiagramKind;
+  subgraphs: DiagramSubgraph[];
+  layoutMode?: LayoutMode;
+  fragments?: SequenceFragment[];
+  dividers?: SequenceDivider[];
+  activations?: SequenceActivation[];
+  notes?: SequenceNote[];
 }
 
 export interface ParseError {
@@ -97,6 +173,16 @@ export interface PositionedNode extends DiagramNode {
   height: number;
 }
 
+export interface PositionedSubgraph {
+  id: string;
+  label: string;
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+  color?: ColorName;
+}
+
 export interface EdgePath {
   edge: DiagramEdge;
   path: string;
@@ -110,6 +196,49 @@ export interface Lifeline {
   bottom: number;
 }
 
+export interface PositionedSequenceFragment {
+  id: string;
+  type: SequenceFragmentType;
+  label: string;
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+  dividers: { y: number; label: string }[];
+}
+
+export interface PositionedActivation {
+  participant: string;
+  x: number;
+  top: number;
+  bottom: number;
+}
+
+export interface PositionedNote {
+  id: string;
+  text: string;
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+}
+
+export interface TimelineColumn {
+  label: string;
+  x: number;
+}
+
+export interface TimelineLayout {
+  columns: TimelineColumn[];
+  columnWidth: number;
+  barHeight: number;
+  rowGap: number;
+  headerHeight: number;
+  labelWidth: number;
+  startX: number;
+  startY: number;
+}
+
 export interface Layout {
   kind: LayoutKind;
   direction: LayoutDirection;
@@ -117,7 +246,14 @@ export interface Layout {
   edges: EdgePath[];
   width: number;
   height: number;
+  mode?: LayoutMode;
   lifelines?: Lifeline[];
+  subgraphs?: PositionedSubgraph[];
+  subgraphDefs?: DiagramSubgraph[];
+  fragments?: PositionedSequenceFragment[];
+  activations?: PositionedActivation[];
+  notes?: PositionedNote[];
+  timeline?: TimelineLayout;
 }
 
 export type ExportFormat = 'diagram' | 'svg' | 'png';

@@ -6,11 +6,15 @@ import type { DiagramKind } from '@/lib/types';
 const KIND_LABELS: Record<DiagramKind, string> = {
   flow: 'Flow diagram',
   sequence: 'Sequence diagram',
+  timeline: 'Timeline',
+  venn: 'Venn diagram',
 };
 
 const KIND_COLORS: Record<DiagramKind, string> = {
   flow: 'bg-primary',
   sequence: 'bg-secondary',
+  timeline: 'bg-accent',
+  venn: 'bg-info',
 };
 
 interface StatusBarProps {

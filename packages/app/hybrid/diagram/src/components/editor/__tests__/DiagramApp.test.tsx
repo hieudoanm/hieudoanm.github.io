@@ -176,6 +176,15 @@ describe('Editor', () => {
     expect((await screen.findAllByText('From File')).length).toBeGreaterThan(0);
   });
 
+  it('opens the hidden file picker from the Open button', () => {
+    render(<Editor />);
+    const input = screen.getByLabelText('Open diagram file');
+    const clickSpy = jest.spyOn(input, 'click').mockImplementation(() => {});
+    fireEvent.click(screen.getByRole('button', { name: 'Open' }));
+    expect(clickSpy).toHaveBeenCalled();
+    clickSpy.mockRestore();
+  });
+
   it('opens and closes the help modal', () => {
     render(<Editor />);
     fireEvent.click(screen.getByRole('button', { name: 'Help' }));

@@ -57,3 +57,19 @@
 - [x] Export PNG (via canvas rasterization)
 - [x] More shapes / custom icon glyphs
 - [ ] Localization-ready UI strings
+
+## Phase 5 — More Diagram Types & Rendering
+
+> Expressiveness: diagram types the current renderer cannot draw yet (see
+> `docs/DIAGRAMS.md`)
+
+- [x] Subgraph / cluster grouping (`subgraph`-style containment) for containers,
+      deployment zones, and swimlanes
+- [x] Per-edge styles: dashed / dotted / colored / thickness / arrowheads
+- [x] Node fill colors and categories (`color=` / `style=` attribute)
+- [x] Timeline / Gantt diagram `kind` with date columns and horizontal bars
+- [x] Venn / set diagrams with overlapping regions
+- [x] Full UML sequence rendering: activation bars, combined fragments (`alt` /
+      `opt` / `loop`), notes
+- [x] Force-directed / arbitrary-graph layout option
+- [x] Multi-line and rich node labels (class bodies, notes)
