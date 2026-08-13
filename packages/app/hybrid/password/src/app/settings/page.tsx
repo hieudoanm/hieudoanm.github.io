@@ -6,20 +6,30 @@ import { Providers } from '@/providers/Providers';
 import { useData } from '@/providers/DataProvider';
 import { FiArrowLeft, FiSave } from 'react-icons/fi';
 import { useToast } from '@/providers/ToastProvider';
+import { MasterPasswordCard } from '@/components/organisms/MasterPasswordCard';
+import { SecuritySettingsCard } from '@/components/organisms/SecuritySettingsCard';
+import { EmergencyAccessCard } from '@/components/organisms/EmergencyAccessCard';
+import { TransferCard } from '@/components/organisms/TransferCard';
 
 const SettingsContent: FC = () => {
   const router = useRouter();
-  const { settings, updateSettings } = useData();
+  const { settings, updateSettings, items, importItems } = useData();
   const { addToast } = useToast();
   const [theme, setTheme] = useState(settings.theme);
   const [autoLock, setAutoLock] = useState(settings.autoLockTimeout);
   const [clipClear, setClipClear] = useState(settings.clipboardClear);
+  const [biometric, setBiometric] = useState(
+    Boolean(settings.biometricEnabled)
+  );
+  const [lockOnClose, setLockOnClose] = useState(Boolean(settings.lockOnClose));
 
-  const handleSave = async () => {
+  const handleSave = async (): Promise<void> => {
     await updateSettings({
       theme,
       autoLockTimeout: autoLock,
       clipboardClear: clipClear,
+      biometricEnabled: biometric,
+      lockOnClose: lockOnClose,
     });
     document.documentElement.setAttribute('data-theme', theme);
     addToast('Settings saved', 'success');
@@ -40,6 +50,7 @@ const SettingsContent: FC = () => {
         <div className="card bg-base-200 card-body">
           <h2 className="card-title">Appearance</h2>
           <select
+            aria-label="Theme"
             value={theme}
             onChange={(e) => setTheme(e.target.value)}
             className="select select-bordered w-full">
@@ -77,36 +88,26 @@ const SettingsContent: FC = () => {
             <option value="sunset">Sunset</option>
           </select>
         </div>
-        <div className="card bg-base-200 card-body">
-          <h2 className="card-title">Security</h2>
-          <label className="label">
-            <span className="label-text">
-              Auto-lock timeout: {autoLock} min
-            </span>
-          </label>
-          <input
-            type="range"
-            min={1}
-            max={60}
-            value={autoLock}
-            onChange={(e) => setAutoLock(parseInt(e.target.value))}
-            className="range range-primary"
-          />
-          <label className="label">
-            <span className="label-text">Clipboard clear: {clipClear}s</span>
-          </label>
-          <input
-            type="range"
-            min={10}
-            max={120}
-            value={clipClear}
-            onChange={(e) => setClipClear(parseInt(e.target.value))}
-            className="range range-primary"
-          />
-        </div>
+        <MasterPasswordCard />
+        <SecuritySettingsCard
+          autoLock={autoLock}
+          onAutoLockChange={setAutoLock}
+          clipClear={clipClear}
+          onClipClearChange={setClipClear}
+          biometric={biometric}
+          onBiometricChange={setBiometric}
+          lockOnClose={lockOnClose}
+          onLockOnCloseChange={setLockOnClose}
+        />
+        <EmergencyAccessCard />
+        <TransferCard
+          items={items}
+          onImport={importItems}
+          notify={(message, type) => addToast(message, type)}
+        />
         <button
           type="button"
-          onClick={handleSave}
+          onClick={() => void handleSave()}
           className="btn btn-primary w-full">
           <FiSave className="size-4" /> Save Settings
         </button>

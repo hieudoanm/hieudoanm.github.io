@@ -71,8 +71,8 @@ describe('HomePage', () => {
     await waitFor(() => expect(screen.getByText('GitHub')).toBeInTheDocument());
     expect(screen.getByText('Visa 4242')).toBeInTheDocument();
     expect(screen.getByText('user@gmail.com')).toBeInTheDocument();
-    expect(screen.getByText('dev')).toBeInTheDocument();
-    expect(screen.getByText('finance')).toBeInTheDocument();
+    expect(screen.getAllByText('dev').length).toBeGreaterThan(0);
+    expect(screen.getAllByText('finance').length).toBeGreaterThan(0);
   });
 
   it('shows a skeleton while loading', () => {
@@ -126,6 +126,21 @@ describe('HomePage', () => {
     fireEvent.change(screen.getByPlaceholderText('Title'), {
       target: { value: 'My Site' },
     });
+    fireEvent.change(screen.getByPlaceholderText('https://'), {
+      target: { value: 'https://mysite.com' },
+    });
+    fireEvent.change(screen.getByPlaceholderText('Password'), {
+      target: { value: 'secret' },
+    });
+    fireEvent.click(
+      screen.getByRole('button', { name: 'Toggle password visibility' })
+    );
+    fireEvent.change(screen.getByPlaceholderText('Notes'), {
+      target: { value: 'hello' },
+    });
+    fireEvent.change(screen.getByPlaceholderText('Tags (comma separated)'), {
+      target: { value: 'dev, test' },
+    });
     fireEvent.click(screen.getByRole('button', { name: 'Create' }));
     await waitFor(() =>
       expect(screen.getByText('My Site')).toBeInTheDocument()
@@ -148,7 +163,7 @@ describe('HomePage', () => {
     fireEvent.click(screen.getByRole('button', { name: 'New' }));
     expect(screen.getByPlaceholderText('Username')).toBeInTheDocument();
     expect(screen.getByPlaceholderText('https://')).toBeInTheDocument();
-    fireEvent.change(screen.getByRole('combobox'), {
+    fireEvent.change(screen.getByRole('combobox', { name: 'Item type' }), {
       target: { value: 'card' },
     });
     expect(screen.getByPlaceholderText('Cardholder')).toBeInTheDocument();
@@ -162,7 +177,7 @@ describe('HomePage', () => {
     render(<HomePage />);
     await waitFor(() => expect(screen.getByText('GitHub')).toBeInTheDocument());
     fireEvent.click(screen.getByRole('button', { name: 'New' }));
-    fireEvent.change(screen.getByRole('combobox'), {
+    fireEvent.change(screen.getByRole('combobox', { name: 'Item type' }), {
       target: { value: 'card' },
     });
     fireEvent.change(screen.getByPlaceholderText('Title'), {
@@ -177,6 +192,9 @@ describe('HomePage', () => {
     fireEvent.change(screen.getByPlaceholderText('MM/YY'), {
       target: { value: '11/29' },
     });
+    fireEvent.change(screen.getByPlaceholderText('CVV'), {
+      target: { value: '999' },
+    });
     fireEvent.click(screen.getByRole('button', { name: 'Create' }));
     await waitFor(() =>
       expect(screen.getByText('Visa Gold')).toBeInTheDocument()
@@ -187,6 +205,7 @@ describe('HomePage', () => {
         cardNumber: '4242424242424242',
         cardholder: 'John Doe',
         expiry: '11/29',
+        cvv: '999',
       })
     );
   });

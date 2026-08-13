@@ -29,6 +29,8 @@ export const DEFAULT_SETTINGS: Settings = {
   theme: 'nothing',
   autoLockTimeout: 5,
   clipboardClear: 30,
+  biometricEnabled: false,
+  lockOnClose: false,
 };
 
 export const createFakeDb = (): FakeDb => {

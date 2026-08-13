@@ -1,6 +1,8 @@
 import { test, expect } from '@playwright/test';
 import path from 'path';
 
+test.use({ viewport: { width: 375, height: 667 } });
+
 test.afterEach(async ({ page }, testInfo) => {
   const screenshotPath = path.join(
     __dirname,
@@ -27,12 +29,24 @@ test('has search input', async ({ page }) => {
 
 test('has filter buttons for all types', async ({ page }) => {
   await page.goto('/');
-  await expect(page.locator('button:has-text("All")')).toBeVisible();
-  await expect(page.locator('button:has-text("Login")')).toBeVisible();
-  await expect(page.locator('button:has-text("Card")')).toBeVisible();
-  await expect(page.locator('button:has-text("Identity")')).toBeVisible();
-  await expect(page.locator('button:has-text("Note")')).toBeVisible();
-  await expect(page.locator('button:has-text("Ssh")')).toBeVisible();
+  await expect(
+    page.getByRole('button', { name: 'All', exact: true })
+  ).toBeVisible();
+  await expect(
+    page.getByRole('button', { name: 'Login', exact: true })
+  ).toBeVisible();
+  await expect(
+    page.getByRole('button', { name: 'Card', exact: true })
+  ).toBeVisible();
+  await expect(
+    page.getByRole('button', { name: 'Identity', exact: true })
+  ).toBeVisible();
+  await expect(
+    page.getByRole('button', { name: 'Note', exact: true })
+  ).toBeVisible();
+  await expect(
+    page.getByRole('button', { name: 'Ssh', exact: true })
+  ).toBeVisible();
 });
 
 test('has New button', async ({ page }) => {

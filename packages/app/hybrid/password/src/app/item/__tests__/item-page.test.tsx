@@ -3,6 +3,12 @@ import ItemPage from '@/app/item/page';
 import { mockDb } from '@/test-utils/fakeDb';
 import type { VaultItem } from '@/types';
 
+jest.mock('qrcode', () => ({
+  __esModule: true,
+  default: {
+    toDataURL: jest.fn().mockResolvedValue('data:image/png;base64,QR'),
+  },
+}));
 jest.mock('@/lib/db', () => require('@/test-utils/fakeDb').mockDb);
 jest.mock('@/data/seed', () => ({
   seedDatabase: jest.fn().mockResolvedValue(undefined),
@@ -131,7 +137,7 @@ describe('ItemPage', () => {
     );
   });
 
-  it('deletes the item and navigates home', async () => {
+  it('moves the item to trash and navigates home', async () => {
     render(<ItemPage />);
     await waitFor(() =>
       expect(
@@ -140,10 +146,101 @@ describe('ItemPage', () => {
     );
     fireEvent.click(iconButtons()[2]);
     await waitFor(() =>
-      expect(screen.getByText('Item deleted')).toBeInTheDocument()
+      expect(screen.getByText('Moved to trash')).toBeInTheDocument()
     );
-    expect(mockDb.db.items.delete).toHaveBeenCalledWith('v-1');
+    expect(mockDb.db.items.put).toHaveBeenCalledWith(
+      expect.objectContaining({ id: 'v-1', deletedAt: expect.any(Number) })
+    );
     expect(mockPush).toHaveBeenCalledWith('/');
+  });
+
+  it('duplicates the item and navigates to the copy', async () => {
+    render(<ItemPage />);
+    await waitFor(() =>
+      expect(
+        screen.getByRole('heading', { name: 'GitHub' })
+      ).toBeInTheDocument()
+    );
+    fireEvent.click(screen.getByRole('button', { name: 'Duplicate' }));
+    await waitFor(() =>
+      expect(screen.getByText('Item duplicated')).toBeInTheDocument()
+    );
+    expect(mockDb.db.items.put).toHaveBeenCalledWith(
+      expect.objectContaining({
+        title: 'GitHub (copy)',
+        id: expect.stringMatching(/^v-/),
+      })
+    );
+    expect(mockPush).toHaveBeenCalledWith(
+      expect.stringMatching(/^\/item\?id=/)
+    );
+  });
+
+  it('renders custom fields', async () => {
+    const customItem: VaultItem = {
+      ...loginItem,
+      customFields: [
+        { key: 'PIN', value: '1234' },
+        { key: 'Recovery', value: 'question' },
+      ],
+    };
+    mockDb.reset({ items: [customItem] });
+    render(<ItemPage />);
+    await waitFor(() =>
+      expect(
+        screen.getByRole('heading', { name: 'GitHub' })
+      ).toBeInTheDocument()
+    );
+    expect(screen.getByText('Custom fields')).toBeInTheDocument();
+    expect(screen.getByText('PIN')).toBeInTheDocument();
+    expect(screen.getByText('1234')).toBeInTheDocument();
+    expect(screen.getByText('Recovery')).toBeInTheDocument();
+  });
+
+  it('navigates home via the back button', async () => {
+    render(<ItemPage />);
+    await waitFor(() =>
+      expect(
+        screen.getByRole('heading', { name: 'GitHub' })
+      ).toBeInTheDocument()
+    );
+    fireEvent.click(iconButtons()[0]);
+    expect(mockPush).toHaveBeenCalledWith('/');
+  });
+
+  it('copies the card number for a card item', async () => {
+    mockDb.reset({ items: [cardItem] });
+    mockId = 'v-2';
+    render(<ItemPage />);
+    await waitFor(() =>
+      expect(
+        screen.getByRole('heading', { name: 'Visa 4242' })
+      ).toBeInTheDocument()
+    );
+    fireEvent.click(screen.getByRole('button', { name: 'Copy' }));
+    await waitFor(() =>
+      expect(screen.getByText('Card copied')).toBeInTheDocument()
+    );
+    expect(navigator.clipboard.writeText).toHaveBeenCalledWith(
+      '4242424242424242'
+    );
+  });
+
+  it('cancels the edit modal without saving', async () => {
+    render(<ItemPage />);
+    await waitFor(() =>
+      expect(
+        screen.getByRole('heading', { name: 'GitHub' })
+      ).toBeInTheDocument()
+    );
+    fireEvent.click(screen.getByRole('button', { name: 'Edit' }));
+    expect(
+      screen.getByRole('heading', { name: 'Edit Item' })
+    ).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Cancel' }));
+    expect(
+      screen.queryByRole('heading', { name: 'Edit Item' })
+    ).not.toBeInTheDocument();
   });
 
   it('renders card fields for a card item', async () => {
@@ -203,5 +300,137 @@ describe('ItemPage', () => {
         username: 'updated@email.com',
       })
     );
+  });
+
+  it('renders a TOTP code for items with a secret', async () => {
+    const totpItem: VaultItem = {
+      ...loginItem,
+      totpSecret: 'JBSWY3DPEHPK3PXP',
+    };
+    mockDb.reset({ items: [totpItem] });
+    render(<ItemPage />);
+    await waitFor(() =>
+      expect(screen.getByTestId('totp-code')).toHaveTextContent(/^\d{6}$/)
+    );
+    expect(
+      screen.getByRole('button', { name: 'Show QR code' })
+    ).toBeInTheDocument();
+  });
+
+  it('falls back to the title as TOTP account when no username exists', async () => {
+    const totpItem: VaultItem = {
+      ...loginItem,
+      username: '',
+      totpSecret: 'JBSWY3DPEHPK3PXP',
+    };
+    mockDb.reset({ items: [totpItem] });
+    render(<ItemPage />);
+    await waitFor(() =>
+      expect(screen.getByTestId('totp-code')).toHaveTextContent(/^\d{6}$/)
+    );
+  });
+
+  it('reveals the card number with the show/hide toggle', async () => {
+    mockDb.reset({ items: [cardItem] });
+    mockId = 'v-2';
+    render(<ItemPage />);
+    await waitFor(() =>
+      expect(screen.getByText('•'.repeat(16))).toBeInTheDocument()
+    );
+    fireEvent.click(iconButtons()[3]);
+    expect(screen.getByText('4242424242424242')).toBeInTheDocument();
+    fireEvent.click(iconButtons()[3]);
+    expect(screen.getByText('•'.repeat(16))).toBeInTheDocument();
+  });
+
+  it('copies a TOTP code', async () => {
+    const totpItem: VaultItem = {
+      ...loginItem,
+      totpSecret: 'JBSWY3DPEHPK3PXP',
+    };
+    mockDb.reset({ items: [totpItem] });
+    render(<ItemPage />);
+    await waitFor(() =>
+      expect(screen.getByTestId('totp-code')).toHaveTextContent(/^\d{6}$/)
+    );
+    const code = screen.getByTestId('totp-code').textContent;
+    fireEvent.click(screen.getByRole('button', { name: 'Copy code' }));
+    await waitFor(() =>
+      expect(
+        screen.getByRole('button', { name: 'Copy code' })
+      ).toHaveTextContent('Copied')
+    );
+    expect(navigator.clipboard.writeText).toHaveBeenCalledWith(code);
+  });
+
+  it('shares an item via the share dialog', async () => {
+    render(<ItemPage />);
+    await waitFor(() =>
+      expect(
+        screen.getByRole('heading', { name: 'GitHub' })
+      ).toBeInTheDocument()
+    );
+    fireEvent.click(screen.getByRole('button', { name: 'Share' }));
+    expect(screen.getByText('Share "GitHub"')).toBeInTheDocument();
+    fireEvent.change(screen.getByLabelText('Share with email'), {
+      target: { value: 'team@example.com' },
+    });
+    fireEvent.click(screen.getAllByRole('button', { name: 'Share' })[1]);
+    await waitFor(() =>
+      expect(
+        screen.getByText('Shared with team@example.com')
+      ).toBeInTheDocument()
+    );
+    expect(mockDb.db.items.put).toHaveBeenCalledWith(
+      expect.objectContaining({
+        id: 'v-1',
+        sharedWith: [{ email: 'team@example.com', permission: 'view' }],
+      })
+    );
+  });
+
+  it('revokes a share from the share dialog', async () => {
+    const sharedItem: VaultItem = {
+      ...loginItem,
+      sharedWith: [{ email: 'team@example.com', permission: 'view' }],
+    };
+    mockDb.reset({ items: [sharedItem] });
+    render(<ItemPage />);
+    await waitFor(() =>
+      expect(
+        screen.getByRole('heading', { name: 'GitHub' })
+      ).toBeInTheDocument()
+    );
+    fireEvent.click(screen.getByRole('button', { name: 'Share' }));
+    fireEvent.click(
+      screen.getByRole('button', {
+        name: 'Revoke share for team@example.com',
+      })
+    );
+    await waitFor(() =>
+      expect(
+        screen.getByText('Revoked access for team@example.com')
+      ).toBeInTheDocument()
+    );
+    expect(mockDb.db.items.put).toHaveBeenCalledWith(
+      expect.objectContaining({ id: 'v-1', sharedWith: [] })
+    );
+  });
+
+  it('renders the access log for an item', async () => {
+    const loggedItem: VaultItem = {
+      ...loginItem,
+      accessLog: [
+        { action: 'view', timestamp: 100, detail: 'GitHub' },
+        { action: 'copy', timestamp: 200, detail: 'password' },
+      ],
+    };
+    mockDb.reset({ items: [loggedItem] });
+    render(<ItemPage />);
+    await waitFor(() =>
+      expect(screen.getByText('Access Log')).toBeInTheDocument()
+    );
+    expect(screen.getByText(/Viewed/)).toBeInTheDocument();
+    expect(screen.getByText('Copied password')).toBeInTheDocument();
   });
 });

@@ -16,69 +16,69 @@
 
 ## Phase 2 — Enhanced UX
 
-> Polish: animations, keyboard shortcuts, drag-and-drop
+> Polish: animations, keyboard shortcuts, drag-and-drop — **complete**
 
-- [ ] Keyboard shortcuts (Ctrl+K, Ctrl+N, Ctrl+L)
-- [ ] Swipe-to-delete on mobile
-- [ ] Drag-and-drop items into folders
-- [ ] Page transition animations (Framer Motion)
+- [x] Keyboard shortcuts (Ctrl+K, Ctrl+N, Ctrl+L)
+- [x] Swipe-to-delete on mobile
+- [x] Drag-and-drop items into folders
+- [x] Page transition animations (Framer Motion)
 - [x] Skeleton loading states
-- [ ] Recently used items section
-- [ ] Sort options (name, date, most used)
-- [ ] Bulk select and delete
+- [x] Recently used items section
+- [x] Sort options (name, date, most used)
+- [x] Bulk select and delete
 
 ## Phase 3 — Security
 
-> Safety: master password, auto-lock, generator, TOTP
+> Safety: master password, auto-lock, generator, TOTP — **complete**
 
-- [ ] Master password lock screen
-- [ ] Auto-lock on timeout (configurable — setting stored, no enforcement)
-- [ ] Auto-lock on browser close
-- [x] Password generator (length, complexity; memorable mode pending)
-- [ ] PIN generator
+- [x] Master password lock screen
+- [x] Auto-lock on timeout (configurable — setting stored, no enforcement)
+- [x] Auto-lock on browser close
+- [x] Password generator (length, complexity, memorable mode)
+- [x] PIN generator
 - [x] Password strength meter with criteria checklist
-- [ ] Clipboard auto-clear (setting stored, no enforcement)
-- [ ] TOTP setup with QR code and countdown timer
-- [ ] Biometric toggle (mock)
+- [x] Clipboard auto-clear (setting stored, no enforcement)
+- [x] TOTP setup with QR code and countdown timer
+- [x] Biometric toggle (mock)
 
 ## Phase 4 — Organization
 
-> Structure: folders, tags, trash, advanced search
+> Structure: folders, tags, trash, advanced search — **complete**
 
-- [ ] Folder creation and management (IndexedDB store exists, no UI)
-- [ ] Drag items into folders
-- [ ] Tag system with filter
-- [ ] Trash with restore and 30-day auto-purge
-- [ ] Advanced search (by type, date range, folder, tag)
-- [ ] Sort options (name, date, most used)
-- [ ] Duplicate item
-- [ ] Custom fields on any item type
+- [x] Folder creation and management (IndexedDB store, FolderManager UI)
+- [x] Drag items into folders
+- [x] Tag system with filter
+- [x] Trash with restore and 30-day auto-purge
+- [x] Advanced search (by type, date range, folder, tag)
+- [x] Sort options (name, date, most used)
+- [x] Duplicate item
+- [x] Custom fields on any item type
 
 ## Phase 5 — Password Health
 
-> Audit: weak, reused, breached, old passwords
+> Audit: weak, reused, breached, old passwords — **complete**
 
 - [x] Overall health score (0-100)
 - [x] Weak password detection with threshold
-- [ ] Reused password grouping
-- [ ] Breached password check (mock)
-- [ ] Old password alerts (90+ days)
+- [x] Reused password grouping
+- [x] Breached password check (mock)
+- [x] Old password alerts (90+ days)
 - [x] Strength breakdown chart
-- [ ] Remediation suggestions per item
-- [ ] Health dashboard with trends
+- [x] Remediation suggestions per item
+- [x] Health dashboard with trends
 
 ## Phase 6 — Collaboration
 
 > Sharing: shared items, emergency access, team vaults
 
-- [ ] Item sharing with permission levels (view/edit)
-- [ ] Shared with me filter
-- [ ] Emergency access with delay timer
-- [ ] Access log per item
-- [ ] Team vaults (mock: shared folders)
-- [ ] Import from CSV
-- [ ] Import from JSON
-- [ ] Export vault (encrypted JSON, plain CSV)
+- [x] Item sharing with permission levels (view/edit)
+- [x] Shared with me filter
+- [x] Emergency access with delay timer
+- [x] Access log per item
+- [x] Team vaults (mock: shared folders)
+- [x] Import from CSV
+- [x] Import from JSON
+- [x] Export vault (encrypted JSON, plain CSV)
 
 ## Phase 7 — Platform & Integration
 

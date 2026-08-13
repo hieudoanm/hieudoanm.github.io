@@ -20,5 +20,12 @@ export const copyToClipboard = async (text: string): Promise<boolean> => {
   }
 };
 
+export const clearClipboardAfter = (seconds: number): void => {
+  if (seconds <= 0) return;
+  window.setTimeout(() => {
+    void navigator.clipboard.writeText('');
+  }, seconds * 1000);
+};
+
 export const maskPassword = (pw: string): string =>
   '•'.repeat(Math.min(pw.length, 16));

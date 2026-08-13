@@ -101,6 +101,8 @@ describe('db', () => {
       theme: 'nothing',
       autoLockTimeout: 5,
       clipboardClear: 30,
+      biometricEnabled: false,
+      lockOnClose: false,
     });
   });
 
@@ -147,5 +149,37 @@ describe('db', () => {
     expect(createObjectStore).toHaveBeenCalledWith('settings', {
       keyPath: 'id',
     });
+  });
+
+  it('does not recreate existing object stores during upgrade', async () => {
+    const createObjectStore = jest.fn();
+    mockOpenDB.mockImplementation(
+      (
+        _name: string,
+        _version: number,
+        { upgrade }: { upgrade: (db: unknown) => void }
+      ) => {
+        const instance = {
+          objectStoreNames: { contains: jest.fn(() => true) },
+          createObjectStore,
+          getAll: jest.fn().mockResolvedValue([]),
+          get: jest.fn(),
+          put: jest.fn(),
+          delete: jest.fn(),
+        };
+        upgrade(instance);
+        return Promise.resolve(instance);
+      }
+    );
+    await db.items.getAll();
+    expect(createObjectStore).not.toHaveBeenCalled();
+  });
+
+  it('honors the NEXT_PUBLIC_MOCK_DELAY env var', async () => {
+    const original = process.env.NEXT_PUBLIC_MOCK_DELAY;
+    process.env.NEXT_PUBLIC_MOCK_DELAY = '10';
+    setupDB({ items: [item] });
+    await expect(db.items.getAll()).resolves.toEqual([item]);
+    process.env.NEXT_PUBLIC_MOCK_DELAY = original;
   });
 });

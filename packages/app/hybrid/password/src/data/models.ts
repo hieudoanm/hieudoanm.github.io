@@ -1,7 +1,14 @@
-import type { VaultItem } from '@/types';
+import type { Folder, VaultItem } from '@/types';
 
 const now = Date.now();
 const day = 86400000;
+
+export const MOCK_FOLDERS: Folder[] = [
+  { id: 'f-work', name: 'Work', createdAt: now - day * 90 },
+  { id: 'f-personal', name: 'Personal', createdAt: now - day * 60 },
+  { id: 'f-finance', name: 'Finance', createdAt: now - day * 30 },
+  { id: 'f-team', name: 'Marketing', isTeam: true, createdAt: now - day * 20 },
+];
 
 export const MOCK_ITEMS: VaultItem[] = [
   {
@@ -13,6 +20,8 @@ export const MOCK_ITEMS: VaultItem[] = [
     url: 'https://github.com',
     favorite: true,
     tags: ['dev', 'work'],
+    folderId: 'f-work',
+    totpSecret: 'JBSWY3DPEHPK3PXP',
     createdAt: now - day * 30,
     updatedAt: now - day * 5,
     lastUsed: now - 3600000,
@@ -26,6 +35,7 @@ export const MOCK_ITEMS: VaultItem[] = [
     url: 'https://google.com',
     favorite: true,
     tags: ['personal'],
+    folderId: 'f-personal',
     createdAt: now - day * 60,
     updatedAt: now - day * 10,
     lastUsed: now - 7200000,
@@ -54,6 +64,7 @@ export const MOCK_ITEMS: VaultItem[] = [
     password: '',
     favorite: false,
     tags: ['finance'],
+    folderId: 'f-finance',
     createdAt: now - day * 90,
     updatedAt: now - day * 90,
   },
@@ -103,6 +114,7 @@ export const MOCK_ITEMS: VaultItem[] = [
     url: 'https://aws.amazon.com',
     favorite: false,
     tags: ['work', 'dev'],
+    folderId: 'f-work',
     createdAt: now - day * 10,
     updatedAt: now - day * 1,
     lastUsed: now - 1800000,
@@ -116,6 +128,7 @@ export const MOCK_ITEMS: VaultItem[] = [
     password: 'K3yP@ss!2024',
     favorite: false,
     tags: ['work', 'devops'],
+    folderId: 'f-work',
     createdAt: now - day * 25,
     updatedAt: now - day * 8,
   },
@@ -304,6 +317,92 @@ export const MOCK_ITEMS: VaultItem[] = [
     updatedAt: now - day * 3,
     lastUsed: now - 21600000,
   },
+  {
+    id: 'v-25',
+    type: 'login',
+    title: 'Reddit',
+    username: 'john.doe@email.com',
+    password: 'Sp0t1fy!Music',
+    url: 'https://reddit.com',
+    favorite: false,
+    tags: ['social'],
+    createdAt: now - day * 50,
+    updatedAt: now - day * 7,
+  },
+  {
+    id: 'v-26',
+    type: 'login',
+    title: 'Discord',
+    username: 'john.doe@email.com',
+    password: 'Sp0t1fy!Music',
+    url: 'https://discord.com',
+    favorite: false,
+    tags: ['social'],
+    createdAt: now - day * 44,
+    updatedAt: now - day * 6,
+  },
+  {
+    id: 'v-27',
+    type: 'login',
+    title: 'Old Forum',
+    username: 'john.doe@email.com',
+    password: 'password',
+    url: 'https://forum.example.com',
+    favorite: false,
+    tags: ['personal'],
+    createdAt: now - day * 130,
+    updatedAt: now - day * 130,
+  },
+  {
+    id: 'v-28',
+    type: 'login',
+    title: 'Legacy Mail',
+    username: 'john.doe@email.com',
+    password: 'L3gacy!Mail#2019',
+    url: 'https://legacymail.example.com',
+    favorite: false,
+    tags: ['personal', 'old'],
+    createdAt: now - day * 700,
+    updatedAt: now - day * 400,
+  },
+  {
+    id: 'v-29',
+    type: 'login',
+    title: 'Client Portal',
+    username: 'you@client.com',
+    password: 'Cl!ent#2024',
+    url: 'https://portal.client.com',
+    favorite: false,
+    tags: ['work', 'shared'],
+    sharedBy: 'manager@company.com',
+    sharedWith: [{ email: 'you@example.com', permission: 'view' }],
+    createdAt: now - day * 14,
+    updatedAt: now - day * 2,
+  },
+  {
+    id: 'v-30',
+    type: 'login',
+    title: 'Team Wiki',
+    username: 'wiki@company.com',
+    password: 'W1ki!Team#2024',
+    url: 'https://wiki.company.com',
+    favorite: true,
+    tags: ['work', 'shared'],
+    folderId: 'f-team',
+    sharedWith: [{ email: 'teammate@company.com', permission: 'edit' }],
+    accessLog: [
+      { action: 'copy', timestamp: now - 3600000, detail: 'Password' },
+      { action: 'view', timestamp: now - 7200000 },
+      {
+        action: 'share',
+        timestamp: now - day * 3,
+        detail: 'teammate@company.com',
+      },
+    ],
+    createdAt: now - day * 16,
+    updatedAt: now - day * 1,
+    lastUsed: now - 3600000,
+  },
 ];
 
 export const generatePassword = (
@@ -341,4 +440,64 @@ export const checkStrength = (
   if (/[^A-Za-z0-9]/.test(password)) score++;
   const labels = ['Very Weak', 'Weak', 'Fair', 'Good', 'Strong', 'Very Strong'];
   return { score: Math.min(score, 5), label: labels[Math.min(score, 5)] };
+};
+
+export const generatePin = (length: number): string => {
+  const array = new Uint32Array(length);
+  crypto.getRandomValues(array);
+  let result = '';
+  for (let i = 0; i < length; i++) result += String(array[i] % 10);
+  return result;
+};
+
+export const MEMORABLE_WORDS = [
+  'apple',
+  'banana',
+  'cherry',
+  'dragon',
+  'ember',
+  'falcon',
+  'glacier',
+  'harbor',
+  'island',
+  'jaguar',
+  'kettle',
+  'lagoon',
+  'magnet',
+  'nectar',
+  'ocean',
+  'pebble',
+  'quartz',
+  'river',
+  'summit',
+  'tundra',
+  'umbrella',
+  'valley',
+  'willow',
+  'yonder',
+  'zephyr',
+  'breeze',
+  'crystal',
+  'forest',
+  'garden',
+  'horizon',
+  'lantern',
+  'meadow',
+  'night',
+  'orchid',
+  'pioneer',
+] as const;
+
+export const generateMemorablePassword = (
+  wordCount: number,
+  separator = '-'
+): string => {
+  const count = Math.min(Math.max(wordCount, 3), 10);
+  const array = new Uint32Array(count);
+  crypto.getRandomValues(array);
+  const words: string[] = [];
+  for (let i = 0; i < count; i++) {
+    words.push(MEMORABLE_WORDS[array[i] % MEMORABLE_WORDS.length]);
+  }
+  return words.join(separator);
 };

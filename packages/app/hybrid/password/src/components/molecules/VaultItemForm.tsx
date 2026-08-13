@@ -1,8 +1,8 @@
 'use client';
 
 import { type FC, useState } from 'react';
-import { FiEye, FiEyeOff } from 'react-icons/fi';
-import type { VaultItem, VaultItemType } from '@/types';
+import { FiEye, FiEyeOff, FiPlus, FiX } from 'react-icons/fi';
+import type { CustomField, VaultItem, VaultItemType } from '@/types';
 
 type ItemFormData = Omit<VaultItem, 'id' | 'createdAt' | 'updatedAt'>;
 
@@ -40,12 +40,19 @@ export const VaultItemForm: FC<VaultItemFormProps> = ({
   const [cardNumber, setCardNumber] = useState(initial?.cardNumber ?? '');
   const [expiry, setExpiry] = useState(initial?.expiry ?? '');
   const [cvv, setCvv] = useState(initial?.cvv ?? '');
+  const [totpSecret, setTotpSecret] = useState(initial?.totpSecret ?? '');
   const [notes, setNotes] = useState(initial?.notes ?? '');
   const [tags, setTags] = useState((initial?.tags ?? []).join(', '));
+  const [customFields, setCustomFields] = useState<CustomField[]>(
+    initial?.customFields ?? []
+  );
   const [showPassword, setShowPassword] = useState(false);
 
   const handleSubmit = () => {
     if (!title.trim()) return;
+    const cleanedFields = customFields
+      .filter((f) => f.key.trim())
+      .map((f) => ({ key: f.key.trim(), value: f.value.trim() }));
     const data: ItemFormData = {
       type,
       title: title.trim(),
@@ -55,6 +62,7 @@ export const VaultItemForm: FC<VaultItemFormProps> = ({
         .map((t) => t.trim())
         .filter(Boolean),
     };
+    if (cleanedFields.length > 0) data.customFields = cleanedFields;
     if (username.trim()) data.username = username.trim();
     if (password) data.password = password;
     if (url.trim()) data.url = url.trim();
@@ -62,6 +70,7 @@ export const VaultItemForm: FC<VaultItemFormProps> = ({
     if (cardNumber.trim()) data.cardNumber = cardNumber.trim();
     if (expiry.trim()) data.expiry = expiry.trim();
     if (cvv.trim()) data.cvv = cvv.trim();
+    if (totpSecret.trim()) data.totpSecret = totpSecret.trim().toUpperCase();
     if (notes.trim()) data.notes = notes.trim();
     onSubmit(data);
   };
@@ -80,6 +89,7 @@ export const VaultItemForm: FC<VaultItemFormProps> = ({
           value={type}
           onChange={(e) => setType(e.target.value as VaultItemType)}
           disabled={Boolean(initial)}
+          aria-label="Item type"
           className="select select-bordered w-full">
           {TYPE_OPTIONS.map((opt) => (
             <option key={opt.value} value={opt.value}>
@@ -141,6 +151,21 @@ export const VaultItemForm: FC<VaultItemFormProps> = ({
             onChange={(e) => setUrl(e.target.value)}
             className="input input-bordered w-full"
           />
+        </div>
+      )}
+      {showUrl && (
+        <div>
+          <Label>TOTP Secret</Label>
+          <input
+            type="text"
+            placeholder="Base32 secret (optional)"
+            value={totpSecret}
+            onChange={(e) => setTotpSecret(e.target.value)}
+            className="input input-bordered w-full"
+          />
+          <p className="text-base-content/50 mt-1 text-xs">
+            e.g. JBSWY3DPEHPK3PXP
+          </p>
         </div>
       )}
       {showCard && (
@@ -208,6 +233,60 @@ export const VaultItemForm: FC<VaultItemFormProps> = ({
           onChange={(e) => setTags(e.target.value)}
           className="input input-bordered w-full"
         />
+      </div>
+      <div>
+        <label className="label">
+          <span className="label-text text-xs">Custom fields</span>
+        </label>
+        <div className="space-y-2">
+          {customFields.map((field, idx) => (
+            <div key={idx} className="flex gap-2">
+              <input
+                type="text"
+                placeholder="Key"
+                value={field.key}
+                onChange={(e) =>
+                  setCustomFields((prev) =>
+                    prev.map((f, i) =>
+                      i === idx ? { ...f, key: e.target.value } : f
+                    )
+                  )
+                }
+                className="input input-bordered w-1/3"
+              />
+              <input
+                type="text"
+                placeholder="Value"
+                value={field.value}
+                onChange={(e) =>
+                  setCustomFields((prev) =>
+                    prev.map((f, i) =>
+                      i === idx ? { ...f, value: e.target.value } : f
+                    )
+                  )
+                }
+                className="input input-bordered w-full"
+              />
+              <button
+                type="button"
+                aria-label="Remove custom field"
+                onClick={() =>
+                  setCustomFields((prev) => prev.filter((_, i) => i !== idx))
+                }
+                className="btn btn-ghost btn-sm btn-circle">
+                <FiX className="size-4" />
+              </button>
+            </div>
+          ))}
+          <button
+            type="button"
+            onClick={() =>
+              setCustomFields((prev) => [...prev, { key: '', value: '' }])
+            }
+            className="btn btn-ghost btn-sm">
+            <FiPlus className="size-4" /> Add field
+          </button>
+        </div>
       </div>
       <div className="card-actions justify-end">
         <button type="button" onClick={onCancel} className="btn btn-ghost">

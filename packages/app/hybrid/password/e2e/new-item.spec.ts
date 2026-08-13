@@ -19,7 +19,7 @@ test('opens new item modal', async ({ page }) => {
 test('modal has type selector', async ({ page }) => {
   await page.goto('/');
   await page.locator('button:has-text("New")').click();
-  await expect(page.locator('select').first()).toBeVisible();
+  await expect(page.getByLabel('Item type')).toBeVisible();
 });
 
 test('modal has title input', async ({ page }) => {
@@ -50,7 +50,7 @@ test('cancel closes modal', async ({ page }) => {
 test('can select different types', async ({ page }) => {
   await page.goto('/');
   await page.locator('button:has-text("New")').click();
-  const select = page.locator('select').first();
+  const select = page.getByLabel('Item type');
   await select.selectOption('card');
   await expect(select).toHaveValue('card');
 });
@@ -76,7 +76,7 @@ test('can create a new card item', async ({ page }) => {
   await page.goto('/');
   await expect(page.locator('button:has-text("New")')).toBeVisible();
   await page.locator('button:has-text("New")').click();
-  await page.locator('select').first().selectOption('card');
+  await page.getByLabel('Item type').selectOption('card');
   await page.locator('input[placeholder="Title"]').fill('My Credit Card');
   await page.locator('button:has-text("Create")').click();
   await expect(page.locator('h2:has-text("New Item")')).not.toBeVisible();

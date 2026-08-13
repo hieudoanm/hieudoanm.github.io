@@ -1,6 +1,8 @@
 import { test, expect } from '@playwright/test';
 import path from 'path';
 
+test.use({ viewport: { width: 375, height: 667 } });
+
 test.afterEach(async ({ page }, testInfo) => {
   const screenshotPath = path.join(
     __dirname,
@@ -12,18 +14,18 @@ test.afterEach(async ({ page }, testInfo) => {
 
 test('All filter shows all items', async ({ page }) => {
   await page.goto('/');
-  await page.locator('button:has-text("All")').click();
-  await expect(page.locator('button:has-text("All")')).toHaveClass(
-    /btn-primary/
-  );
+  await page.getByRole('button', { name: 'All', exact: true }).click();
+  await expect(
+    page.getByRole('button', { name: 'All', exact: true })
+  ).toHaveClass(/btn-primary/);
 });
 
 test('Login filter is clickable', async ({ page }) => {
   await page.goto('/');
-  await page.locator('button:has-text("Login")').click();
-  await expect(page.locator('button:has-text("Login")')).toHaveClass(
-    /btn-primary/
-  );
+  await page.getByRole('button', { name: 'Login', exact: true }).click();
+  await expect(
+    page.getByRole('button', { name: 'Login', exact: true })
+  ).toHaveClass(/btn-primary/);
 });
 
 test('search filters items', async ({ page }) => {

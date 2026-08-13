@@ -21,6 +21,12 @@ describe('seedDatabase', () => {
     await seedDatabase();
     expect(mockDb.db.items.put).not.toHaveBeenCalled();
   });
+
+  it('skips seeding folders when folders already exist', async () => {
+    mockDb.reset({ items: [MOCK_ITEMS[0]], folders: [{ id: 'f-1' } as never] });
+    await seedDatabase();
+    expect(mockDb.db.folders.put).not.toHaveBeenCalled();
+  });
 });
 
 describe('generateId', () => {

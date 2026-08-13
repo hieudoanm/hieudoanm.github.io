@@ -1,6 +1,7 @@
 import {
   formatRelativeTime,
   copyToClipboard,
+  clearClipboardAfter,
   maskPassword,
 } from '@/utils/format';
 
@@ -54,6 +55,42 @@ describe('copyToClipboard', () => {
       configurable: true,
     });
     await expect(copyToClipboard('secret')).resolves.toBe(false);
+  });
+});
+
+describe('clearClipboardAfter', () => {
+  const originalClipboard = navigator.clipboard;
+
+  afterEach(() => {
+    Object.defineProperty(navigator, 'clipboard', {
+      value: originalClipboard,
+      configurable: true,
+    });
+    jest.useRealTimers();
+  });
+
+  it('clears the clipboard after the given seconds', () => {
+    jest.useFakeTimers();
+    Object.defineProperty(navigator, 'clipboard', {
+      value: { writeText: jest.fn().mockResolvedValue(undefined) },
+      configurable: true,
+    });
+    clearClipboardAfter(30);
+    expect(navigator.clipboard.writeText).not.toHaveBeenCalled();
+    jest.advanceTimersByTime(30 * 1000);
+    expect(navigator.clipboard.writeText).toHaveBeenCalledWith('');
+  });
+
+  it('does nothing for zero or negative seconds', () => {
+    jest.useFakeTimers();
+    Object.defineProperty(navigator, 'clipboard', {
+      value: { writeText: jest.fn().mockResolvedValue(undefined) },
+      configurable: true,
+    });
+    clearClipboardAfter(0);
+    clearClipboardAfter(-5);
+    jest.advanceTimersByTime(120 * 1000);
+    expect(navigator.clipboard.writeText).not.toHaveBeenCalled();
   });
 });
 

@@ -6,11 +6,11 @@ import { Providers } from '@/providers/Providers';
 import { useData } from '@/providers/DataProvider';
 import {
   copyToClipboard,
+  clearClipboardAfter,
   formatRelativeTime,
   maskPassword,
 } from '@/utils/format';
 import { useToast } from '@/providers/ToastProvider';
-import type { VaultItem } from '@/types';
 import {
   FiArrowLeft,
   FiCopy,
@@ -19,23 +19,48 @@ import {
   FiTrash2,
   FiStar,
   FiEdit2,
+  FiFilePlus,
+  FiShare2,
 } from 'react-icons/fi';
 import { VaultItemForm } from '@/components/molecules/VaultItemForm';
+import { TotpDisplay } from '@/components/organisms/TotpDisplay';
+import { ShareItemModal } from '@/components/molecules/ShareItemModal';
+import { AccessLogCard } from '@/components/molecules/AccessLogCard';
+import type { ShareRecipient, VaultItem } from '@/types';
 
 const ItemContent: FC = () => {
   const searchParams = useSearchParams();
   const router = useRouter();
   const id = searchParams.get('id');
-  const { items, updateItem, deleteItem, toggleFavorite, isLoading } =
-    useData();
+  const {
+    items,
+    updateItem,
+    trashItem,
+    duplicateItem,
+    toggleFavorite,
+    touchItem,
+    settings,
+    isLoading,
+    shareItem,
+    revokeShare,
+    logAccess,
+  } = useData();
   const { addToast } = useToast();
   const item = items.find((i) => i.id === id);
   const [showPassword, setShowPassword] = useState(false);
   const [showEdit, setShowEdit] = useState(false);
+  const [showShare, setShowShare] = useState(false);
 
   useEffect(() => {
     if (!item && !isLoading && items.length > 0) router.push('/');
   }, [item, isLoading, items, router]);
+
+  useEffect(() => {
+    if (item) {
+      void touchItem(item.id);
+      void logAccess(item.id, 'view');
+    }
+  }, [item?.id, touchItem, logAccess]);
 
   if (!item)
     return (
@@ -46,6 +71,8 @@ const ItemContent: FC = () => {
 
   const handleCopy = async (text: string, label: string) => {
     await copyToClipboard(text);
+    clearClipboardAfter(settings.clipboardClear);
+    void logAccess(item.id, 'copy', label);
     addToast(`${label} copied`, 'success');
   };
 
@@ -53,8 +80,19 @@ const ItemContent: FC = () => {
     data: Omit<VaultItem, 'id' | 'createdAt' | 'updatedAt'>
   ) => {
     await updateItem(item.id, data);
+    void logAccess(item.id, 'edit');
     setShowEdit(false);
     addToast('Item updated', 'success');
+  };
+
+  const handleShare = async (recipient: ShareRecipient) => {
+    await shareItem(item.id, recipient);
+    addToast(`Shared with ${recipient.email}`, 'success');
+  };
+
+  const handleRevoke = async (email: string) => {
+    await revokeShare(item.id, email);
+    addToast(`Revoked access for ${email}`, 'info');
   };
 
   return (
@@ -84,10 +122,30 @@ const ItemContent: FC = () => {
         </button>
         <button
           type="button"
+          aria-label="Share"
+          onClick={() => setShowShare(true)}
+          className="btn btn-ghost btn-circle">
+          <FiShare2 className="size-5" />
+        </button>
+        <button
+          type="button"
+          onClick={async () => {
+            const copy = await duplicateItem(item.id);
+            if (copy) {
+              router.push(`/item?id=${copy.id}`);
+              addToast('Item duplicated', 'success');
+            }
+          }}
+          className="btn btn-ghost btn-circle"
+          aria-label="Duplicate">
+          <FiFilePlus className="size-5" />
+        </button>
+        <button
+          type="button"
           onClick={() => {
-            deleteItem(item.id);
+            trashItem(item.id);
             router.push('/');
-            addToast('Item deleted', 'info');
+            addToast('Moved to trash', 'info');
           }}
           className="btn btn-ghost btn-circle text-error">
           <FiTrash2 className="size-5" />
@@ -146,6 +204,13 @@ const ItemContent: FC = () => {
             </a>
           </div>
         )}
+        {item.totpSecret && (
+          <TotpDisplay
+            secret={item.totpSecret}
+            account={item.username ?? item.title}
+            issuer={item.title}
+          />
+        )}
         {item.cardNumber && (
           <div className="card bg-base-200 card-body p-4">
             <label className="text-base-content/50 text-xs">Card Number</label>
@@ -153,6 +218,16 @@ const ItemContent: FC = () => {
               <span className="flex-1 font-mono">
                 {showPassword ? item.cardNumber : maskPassword(item.cardNumber)}
               </span>
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="btn btn-ghost btn-xs">
+                {showPassword ? (
+                  <FiEyeOff className="size-3" />
+                ) : (
+                  <FiEye className="size-3" />
+                )}
+              </button>
               <button
                 type="button"
                 onClick={() => handleCopy(item.cardNumber!, 'Card')}
@@ -176,6 +251,25 @@ const ItemContent: FC = () => {
             </pre>
           </div>
         )}
+        {item.customFields && item.customFields.length > 0 && (
+          <div className="card bg-base-200 card-body p-4">
+            <label className="text-base-content/50 text-xs">
+              Custom fields
+            </label>
+            {item.customFields.map((field, idx) => (
+              <div
+                key={`${field.key}-${idx}`}
+                className="border-base-300 flex items-center justify-between gap-2 border-b py-1 last:border-b-0">
+                <span className="text-base-content/70 text-sm">
+                  {field.key}
+                </span>
+                <span className="flex-1 text-right font-mono text-sm">
+                  {field.value}
+                </span>
+              </div>
+            ))}
+          </div>
+        )}
         <div className="text-base-content/30 text-xs">
           Created {formatRelativeTime(item.createdAt)} · Updated{' '}
           {formatRelativeTime(item.updatedAt)}
@@ -187,7 +281,16 @@ const ItemContent: FC = () => {
             </span>
           ))}
         </div>
+        <AccessLogCard entries={item.accessLog ?? []} />
       </main>
+      {showShare && (
+        <ShareItemModal
+          item={item}
+          onShare={handleShare}
+          onRevoke={handleRevoke}
+          onClose={() => setShowShare(false)}
+        />
+      )}
       {showEdit && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
           <div className="bg-base-100 card max-h-[90vh] w-full max-w-md overflow-y-auto shadow-xl">

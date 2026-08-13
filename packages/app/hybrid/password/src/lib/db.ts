@@ -66,6 +66,8 @@ export const db = {
           theme: 'nothing',
           autoLockTimeout: 5,
           clipboardClear: 30,
+          biometricEnabled: false,
+          lockOnClose: false,
         }
       );
     },

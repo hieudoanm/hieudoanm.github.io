@@ -1,4 +1,11 @@
-import { MOCK_ITEMS, generatePassword, checkStrength } from '@/data/models';
+import {
+  MOCK_ITEMS,
+  generatePassword,
+  generatePin,
+  generateMemorablePassword,
+  MEMORABLE_WORDS,
+  checkStrength,
+} from '@/data/models';
 
 describe('MOCK_ITEMS', () => {
   it('contains seeded demo vault items', () => {
@@ -50,6 +57,31 @@ describe('generatePassword', () => {
       symbols: false,
     });
     expect(pw).toMatch(/^[a-z]+$/);
+  });
+});
+
+describe('generatePin', () => {
+  it('generates a numeric PIN of the requested length', () => {
+    const pin = generatePin(6);
+    expect(pin).toMatch(/^\d{6}$/);
+  });
+
+  it('supports short PINs', () => {
+    expect(generatePin(4)).toMatch(/^\d{4}$/);
+  });
+});
+
+describe('generateMemorablePassword', () => {
+  it('joins random words with dashes', () => {
+    const phrase = generateMemorablePassword(4);
+    const words = phrase.split('-');
+    expect(words).toHaveLength(4);
+    for (const w of words) expect(MEMORABLE_WORDS).toContain(w);
+  });
+
+  it('clamps the word count to a sane range', () => {
+    expect(generateMemorablePassword(2).split('-')).toHaveLength(3);
+    expect(generateMemorablePassword(25).split('-')).toHaveLength(10);
   });
 });
 
