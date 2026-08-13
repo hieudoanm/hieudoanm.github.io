@@ -44,7 +44,7 @@ export const EmptyState: FC<EmptyStateProps> = memo(
               via <span className="text-primary">OPFS</span> — no server needed.
             </p>
           </div>
-          <div className="flex gap-3">
+          <div className="flex flex-wrap justify-center gap-3">
             <button className="btn btn-primary btn-sm gap-2" onClick={onOpen}>
               <FiUpload className="size-3.5" /> Open file
             </button>

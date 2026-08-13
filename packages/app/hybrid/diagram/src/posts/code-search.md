@@ -23,57 +23,72 @@ Repository indexing, code search, ranking, filters.
 ### Q1. Design a code search engine
 
 A code search engine lets developers find symbols, identifiers, and strings
-across a huge corpus of repositories. The core is an offline pipeline: new
-repository content is pushed to an index queue, consumed by an indexer, and
-turned into an inverted index that a query engine reads to answer searches. The
-query path parses the user's input, looks up matches in the index, applies
-filters such as language or repository, and ranks the results before returning
-them to the search UI.
+across a huge corpus of repositories.
 
-The hardest part of code search is scale. The corpus is enormous and grows
-continuously, so indexing must be incremental and distributed. Shards are
-partitioned by repository or by a hash of the file path, and each shard keeps
-its own inverted index plus a document store that maps file identifiers back to
-repository, path, and line information. A search fans out to all shards in
-parallel and merges the ranked results, with a small per-shard timeout so a
-single slow shard cannot stall the whole query.
+- The core is an offline pipeline: new repository content is pushed to an index
+  queue, consumed by an indexer, and turned into an inverted index that a query
+  engine reads to answer searches.
+- The query path parses the user's input, looks up matches in the index, applies
+  filters such as language or repository, and ranks the results before returning
+  them to the search UI.
 
-Precision matters as much as recall. Unlike web search, where ranking dominates,
-developers querying code need exact identifiers and are annoyed by fuzzy misses.
-The engine supports token-level queries, substring matching, symbol matches, and
-operators like `lang:` and `repo:` so a search can be narrowed
-deterministically. The result cache absorbs popular, repeated queries, and the
-ranking service keeps the best matches on top. Instrumentation is part of the
-design: every query records its parse time, shard fan-out, and result count, so
-engineers can tell whether a slow search is a query-shape problem or a capacity
-problem.
+The hardest part of code search is scale.
+
+- The corpus is enormous and grows continuously, so indexing must be incremental
+  and distributed.
+- Shards are partitioned by repository or by a hash of the file path, and each
+  shard keeps its own inverted index plus a document store that maps file
+  identifiers back to repository, path, and line information.
+- A search fans out to all shards in parallel and merges the ranked results,
+  with a small per-shard timeout so a single slow shard cannot stall the whole
+  query.
+
+Precision matters as much as recall.
+
+- Unlike web search, where ranking dominates, developers querying code need
+  exact identifiers and are annoyed by fuzzy misses.
+- The engine supports token-level queries, substring matching, symbol matches,
+  and operators like `lang:` and `repo:` so a search can be narrowed
+  deterministically.
+- The result cache absorbs popular, repeated queries, and the ranking service
+  keeps the best matches on top.
+- Instrumentation is part of the design: every query records its parse time,
+  shard fan-out, and result count, so engineers can tell whether a slow search
+  is a query-shape problem or a capacity problem.
 
 ### Q2. How do you index large codebases?
 
-Indexing starts when a repository is created or updated. The repository store
-emits a change event onto an index queue, and indexer workers pull batches and
-process them independently from search traffic, so index lag never degrades
-query availability. Each file is tokenized according to its language, using a
-lexer that produces both exact identifiers and structural tokens like class and
-function names, which lets the index support symbol-aware queries later.
+Indexing starts when a repository is created or updated.
 
-The inverted index maps tokens to document lists. Each posting stores the
-document ID, the token position, and whether the token is an exact identifier or
-appears in a comment, which later powers ranking and filters. To keep the index
-compact, the engine applies normalization, stopword treatment tuned to code
-rather than prose, and delta-encoded posting lists. Because a popular package
-name can appear in millions of files, the engine uses skip lists and compressed
-bitmaps so large postings stay queryable without loading everything into memory.
+- The repository store emits a change event onto an index queue, and indexer
+  workers pull batches and process them independently from search traffic, so
+  index lag never degrades query availability.
+- Each file is tokenized according to its language, using a lexer that produces
+  both exact identifiers and structural tokens like class and function names,
+  which lets the index support symbol-aware queries later.
 
-Indexing is also about evolution, not just initial load. When a file is deleted
-or edited, the indexer must remove stale postings and add new ones, ideally as a
-document-level replace rather than a full reindex. Shards are rebalanced as
-repositories grow, and a separate verification pass reconciles the index against
-the repository store to catch missed events. Backfills and reindexing are run as
-scheduled jobs with progress tracking, because a silent index gap is worse than
-a temporary lag. The indexer is versioned together with the tokenizer, so a
-change in how identifiers are split produces a new index generation that can be
-rolled out and rolled back independently of the search service.
+The inverted index maps tokens to document lists.
+
+- Each posting stores the document ID, the token position, and whether the token
+  is an exact identifier or appears in a comment, which later powers ranking and
+  filters.
+- To keep the index compact, the engine applies normalization, stopword
+  treatment tuned to code rather than prose, and delta-encoded posting lists.
+- Because a popular package name can appear in millions of files, the engine
+  uses skip lists and compressed bitmaps so large postings stay queryable
+  without loading everything into memory.
+
+Indexing is also about evolution, not just initial load.
+
+- When a file is deleted or edited, the indexer must remove stale postings and
+  add new ones, ideally as a document-level replace rather than a full reindex.
+- Shards are rebalanced as repositories grow, and a separate verification pass
+  reconciles the index against the repository store to catch missed events.
+- Backfills and reindexing are run as scheduled jobs with progress tracking,
+  because a silent index gap is worse than a temporary lag.
+- The indexer is versioned together with the tokenizer, so a change in how
+  identifiers are split produces a new index generation that can be rolled out
+  and rolled back independently of the search service.
 
 ### Q3. How do you search code with high precision?
 

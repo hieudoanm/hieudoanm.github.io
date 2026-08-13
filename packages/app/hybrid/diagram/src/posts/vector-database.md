@@ -24,77 +24,96 @@ Embedding storage, indexing, similarity search.
 
 A vector database stores embeddings — dense numeric vectors produced by machine
 learning models — and answers similarity queries: given a vector, return the
-most similar vectors. The core components are an embedding service that converts
-text, images, or other inputs into vectors using an embedding model; a vector
-index that organizes vectors for fast approximate lookup; an ANN search engine
-that probes the index; a metadata store that holds the structured fields
-attached to each vector; and an ingestion queue that decouples writes from index
-updates. The gateway accepts both queries and upserts, and a re-ranking step
-refines approximate results before returning the top k.
+most similar vectors.
 
-Two things distinguish a vector database from a plain ANN library: it manages
-the full lifecycle of vectors, and it combines vector similarity with metadata
-filtering. Each vector carries an ID and metadata — tenant, type, timestamp,
-labels — and search can constrain candidates by those fields before or after the
-vector search. The service must also keep the index consistent with the metadata
-store, handle deletes and updates without corruption, and serve many tenants
-without one tenant's load or data leaking into another's results. Latency
-targets are strict because vector search sits on the query path of features like
-semantic search, recommendations, and retrieval-augmented generation, so the
-read path must stay sub-second at scale. Operational concerns round out the
-design: observability into index build progress, recall probes that sample query
-results against an exact search, and capacity planning for the memory that
-in-memory indexes require.
+- The core components are an embedding service that converts text, images, or
+  other inputs into vectors using an embedding model; a vector index that
+  organizes vectors for fast approximate lookup; an ANN search engine that
+  probes the index; a metadata store that holds the structured fields attached
+  to each vector; and an ingestion queue that decouples writes from index
+  updates.
+- The gateway accepts both queries and upserts, and a re-ranking step refines
+  approximate results before returning the top k.
+
+Two things distinguish a vector database from a plain ANN library.
+
+- It manages the full lifecycle of vectors.
+- It combines vector similarity with metadata filtering.
+- Each vector carries an ID and metadata — tenant, type, timestamp, labels — and
+  search can constrain candidates by those fields before or after the vector
+  search.
+- The service must also keep the index consistent with the metadata store,
+  handle deletes and updates without corruption, and serve many tenants without
+  one tenant's load or data leaking into another's results.
+- Latency targets are strict because vector search sits on the query path of
+  features like semantic search, recommendations, and retrieval-augmented
+  generation, so the read path must stay sub-second at scale.
+- Operational concerns round out the design: observability into index build
+  progress, recall probes that sample query results against an exact search, and
+  capacity planning for the memory that in-memory indexes require.
 
 ### Q2. How do you index millions of vectors?
 
 Exact nearest-neighbor search is linear per query and does not scale past a few
-million vectors, so the index is approximate by design. The dominant structure
-is HNSW — a hierarchical graph of small-world links where queries start at a
-coarse layer and descend to a fine layer, following edges to neighbors. HNSW
-gives excellent recall and low latency but keeps all vectors in memory, which is
-expensive at very large scale. The alternative is IVF — an inverted-file index
-that clusters vectors at build time and searches only the clusters nearest the
-query — which trades a little recall for much lower memory and works well with
-disk-backed storage. Many systems layer the two: IVF for the on-disk population
-and HNSW for hot partitions.
+million vectors, so the index is approximate by design.
+
+- The dominant structure is HNSW — a hierarchical graph of small-world links
+  where queries start at a coarse layer and descend to a fine layer, following
+  edges to neighbors.
+- HNSW gives excellent recall and low latency but keeps all vectors in memory,
+  which is expensive at very large scale.
+- The alternative is IVF — an inverted-file index that clusters vectors at build
+  time and searches only the clusters nearest the query — which trades a little
+  recall for much lower memory and works well with disk-backed storage.
+- Many systems layer the two: IVF for the on-disk population and HNSW for hot
+  partitions.
 
 Index quality degrades as vectors are inserted, so the database uses a two-tier
-model: new vectors land in a small, freshly built index while the large index
-serves reads, and a background process merges the small index into the large
-one, or rebuilds it incrementally, during quiet periods. This separates the
-write path from the read path. Memory is the scarce resource, so the database
-quantizes vectors — scalar or product quantization — shrinking each vector to a
-fraction of its size with bounded recall loss, and it may keep full-precision
-vectors only for re-ranking. The choice of index and its parameters is exposed
-per collection, because recall, memory, and latency trade off differently for
-different workloads. Per-workload profiles make the choice explicit and
-repeatable.
+model.
+
+- New vectors land in a small, freshly built index while the large index serves
+  reads.
+- A background process merges the small index into the large one, or rebuilds it
+  incrementally, during quiet periods.
+- This separates the write path from the read path.
+- Memory is the scarce resource, so the database quantizes vectors — scalar or
+  product quantization — shrinking each vector to a fraction of its size with
+  bounded recall loss, and it may keep full-precision vectors only for
+  re-ranking.
+- The choice of index and its parameters is exposed per collection, because
+  recall, memory, and latency trade off differently for different workloads.
+- Per-workload profiles make the choice explicit and repeatable.
 
 ### Q3. How do you run approximate nearest neighbor search?
 
 Approximate nearest neighbor search trades a guaranteed exact answer for a much
-faster one. The ANN engine receives a query vector, walks the index — following
-graph edges in HNSW or probing the nearest clusters in IVF — and returns a
-candidate set that is a superset of the best matches. Each candidate is scored
-by exact distance to the query, and the top k by score are returned. The
-tradeoff is controlled by parameters: the number of probes or the graph's search
-effort, which the caller or the service sets per query. Higher effort means
-better recall at higher latency, and production systems expose recall as a
-query-level dial rather than a hidden constant.
+faster one.
 
-The candidate set then flows through the rest of the pipeline. Metadata filters
-prune candidates whose attributes do not match, and a re-ranking stage applies a
-more expensive but more accurate scoring — full-precision distance,
-cross-encoder relevance, or business rank — over the remaining candidates before
-the final top k is returned. This coarse-to-fine structure is what makes the
-system practical: the cheap ANN pass narrows millions of vectors to hundreds,
-and the expensive pass scores only those hundreds. ANN search is also highly
-parallel, so the engine probes many graph layers or clusters concurrently and
-uses SIMD-optimized distance kernels to keep the per-query cost small. The
-engine also bounds worst-case latency: a probe budget caps how many clusters or
-graph edges a query may visit, so even a pathological query returns within the
-service-level objective.
+- The ANN engine receives a query vector, walks the index — following graph
+  edges in HNSW or probing the nearest clusters in IVF — and returns a candidate
+  set that is a superset of the best matches.
+- Each candidate is scored by exact distance to the query, and the top k by
+  score are returned.
+- The tradeoff is controlled by parameters: the number of probes or the graph's
+  search effort, which the caller or the service sets per query.
+- Higher effort means better recall at higher latency, and production systems
+  expose recall as a query-level dial rather than a hidden constant.
+
+The candidate set then flows through the rest of the pipeline.
+
+- Metadata filters prune candidates whose attributes do not match.
+- A re-ranking stage applies a more expensive but more accurate scoring —
+  full-precision distance, cross-encoder relevance, or business rank — over the
+  remaining candidates before the final top k is returned.
+- This coarse-to-fine structure is what makes the system practical: the cheap
+  ANN pass narrows millions of vectors to hundreds, and the expensive pass
+  scores only those hundreds.
+- ANN search is also highly parallel, so the engine probes many graph layers or
+  clusters concurrently and uses SIMD-optimized distance kernels to keep the
+  per-query cost small.
+- The engine also bounds worst-case latency: a probe budget caps how many
+  clusters or graph edges a query may visit, so even a pathological query
+  returns within the service-level objective.
 
 ### Q4. How do you handle hybrid search with filters?
 

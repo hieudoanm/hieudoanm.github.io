@@ -25,3 +25,11 @@ export type SqlJsStatic = Awaited<ReturnType<typeof initSqlJs>>;
 export type SqliteDatabase = InstanceType<SqlJsStatic['Database']>;
 
 export type ExportFormat = 'csv' | 'json' | 'md' | 'sql';
+
+export interface ResultTab {
+  id: string;
+  sql: string;
+  explain?: boolean;
+  columns: string[];
+  rows: SqliteCell[][];
+}

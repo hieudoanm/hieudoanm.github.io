@@ -1,0 +1,262 @@
+1:"$Sreact.fragment"
+2:I[10541,["/downloads/database/_next/static/chunks/3a1k-di4xi-f5.js"],"SWProvider"]
+3:I[93226,["/downloads/database/_next/static/chunks/3a1k-di4xi-f5.js"],"default"]
+4:I[62608,["/downloads/database/_next/static/chunks/3a1k-di4xi-f5.js","/downloads/database/_next/static/chunks/1e2ct4oxook1s.js"],"default"]
+5:I[35875,["/downloads/database/_next/static/chunks/3a1k-di4xi-f5.js","/downloads/database/_next/static/chunks/09e666rl1_vxm.js"],"default"]
+6:I[15750,["/downloads/database/_next/static/chunks/3a1k-di4xi-f5.js"],"default"]
+7:I[83070,["/downloads/database/_next/static/chunks/3a1k-di4xi-f5.js","/downloads/database/_next/static/chunks/3wgkkaxovvvbz.js"],""]
+9:I[17982,["/downloads/database/_next/static/chunks/3a1k-di4xi-f5.js"],"OutletBoundary"]
+a:"$Sreact.suspense"
+d:I[17982,["/downloads/database/_next/static/chunks/3a1k-di4xi-f5.js"],"ViewportBoundary"]
+f:I[17982,["/downloads/database/_next/static/chunks/3a1k-di4xi-f5.js"],"MetadataBoundary"]
+11:I[56193,["/downloads/database/_next/static/chunks/3a1k-di4xi-f5.js"],"default",1]
+:HL["/downloads/database/_next/static/chunks/0aiesmfko-70d.css","style"]
+c:X
+0:{"P":null,"c":["","posts","project-management",""],"q":"","i":false,"f":[[["",{"children":["posts",{"children":[["slug","project-management","d",[]],{"children":["__PAGE__",{},"$undefined","$undefined",4608]},"$undefined","$undefined",4608]},"$undefined","$undefined",4608]},"$undefined","$undefined",4624],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/downloads/database/_next/static/chunks/0aiesmfko-70d.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/downloads/database/_next/static/chunks/3a1k-di4xi-f5.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","data-theme":"dim","children":[["$","head",null,{"children":["$","link",null,{"rel":"apple-touch-icon","href":"/icons/icon-192.png"}]}],["$","body",null,{"className":"bg-base-100 text-base-content h-screen overflow-y-auto font-mono","children":["$","$L2",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","error":"$4","errorStyles":[],"errorScripts":[["$","script","script-0",{"src":"/downloads/database/_next/static/chunks/1e2ct4oxook1s.js","async":true}]],"template":["$","$L5",null,{"children":["$","$L6",null,{}]}],"templateStyles":[],"templateScripts":[["$","script","script-0",{"src":"/downloads/database/_next/static/chunks/09e666rl1_vxm.js","async":true}]],"notFound":[["$","div",null,{"className":"flex min-h-screen flex-col items-center justify-center px-6","children":[["$","p",null,{"className":"text-base-content/50 mb-6 text-xs tracking-[0.2em] uppercase","children":"Error"}],["$","h1",null,{"className":"mb-3","children":"404"}],["$","p",null,{"className":"text-base-content/50 mb-10 max-w-sm text-center text-sm","children":"The page you are looking for does not exist."}],["$","div",null,{"className":"flex flex-wrap justify-center gap-3","children":["$","$L7",null,{"href":"/","className":"btn btn-primary btn-sm","children":"Go home"}]}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L8",[["$","script","script-0",{"src":"/downloads/database/_next/static/chunks/3wgkkaxovvvbz.js","async":true,"nonce":"$undefined"}]],["$","$L9",null,{"children":["$","$a",null,{"name":"Next.MetadataOutlet","children":"$@b"}]}]]}],{},null,false,null]},null,false,"$c"]},null,false,"$c"]},null,false,null],["$","$1","h",{"children":[null,["$","$Ld",null,{"children":"$Le"}],["$","div",null,{"hidden":true,"children":["$","$Lf",null,{"children":["$","$a",null,{"name":"Next.Metadata","children":"$L10"}]}]}],null]}],false]],"m":"$undefined","G":["$11",[["$","link","0",{"rel":"stylesheet","href":"/downloads/database/_next/static/chunks/0aiesmfko-70d.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]]],"S":true,"h":null,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"MpvBJo6soBekxRIf-8jVo"}
+c:C
+12:T1e2c,<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="832" viewBox="0 0 1140 832" font-family="ui-monospace, SFMono-Regular, monospace">
+  <rect width="100%" height="100%" fill="#0f172a"/>
+  <g data-table="ACTIVITY">
+    <rect x="40" y="40" width="220" height="200" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 40 80 L 260 80" stroke="#334155"/>
+    <text x="52" y="66" font-size="13" font-weight="600" fill="#e2e8f0">ACTIVITY</text>
+      <text x="52" y="96" font-size="11" fill="#9ca3af">&#128273; id</text>
+      <text x="52" y="120" font-size="11" fill="#9ca3af">card_id</text>
+      <text x="52" y="144" font-size="11" fill="#9ca3af">user_id</text>
+      <text x="52" y="168" font-size="11" fill="#9ca3af">action</text>
+      <text x="52" y="192" font-size="11" fill="#9ca3af">details</text>
+      <text x="52" y="216" font-size="11" fill="#9ca3af">created_at</text>
+  </g>
+  <g data-table="BOARDS">
+    <rect x="460" y="40" width="220" height="152" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 460 80 L 680 80" stroke="#334155"/>
+    <text x="472" y="66" font-size="13" font-weight="600" fill="#e2e8f0">BOARDS</text>
+      <text x="472" y="96" font-size="11" fill="#9ca3af">&#128273; id</text>
+      <text x="472" y="120" font-size="11" fill="#9ca3af">workspace_id</text>
+      <text x="472" y="144" font-size="11" fill="#9ca3af">title</text>
+      <text x="472" y="168" font-size="11" fill="#9ca3af">background</text>
+  </g>
+  <g data-table="CARD_LABELS">
+    <rect x="880" y="40" width="220" height="104" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 880 80 L 1100 80" stroke="#334155"/>
+    <text x="892" y="66" font-size="13" font-weight="600" fill="#e2e8f0">CARD_LABELS</text>
+      <text x="892" y="96" font-size="11" fill="#9ca3af">&#128273; card_id</text>
+      <text x="892" y="120" font-size="11" fill="#9ca3af">&#128273; label_id</text>
+  </g>
+  <g data-table="CARD_MEMBERS">
+    <rect x="40" y="224" width="220" height="104" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 40 264 L 260 264" stroke="#334155"/>
+    <text x="52" y="250" font-size="13" font-weight="600" fill="#e2e8f0">CARD_MEMBERS</text>
+      <text x="52" y="280" font-size="11" fill="#9ca3af">&#128273; card_id</text>
+      <text x="52" y="304" font-size="11" fill="#9ca3af">&#128273; user_id</text>
+  </g>
+  <g data-table="CARDS">
+    <rect x="460" y="368" width="220" height="248" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 460 408 L 680 408" stroke="#334155"/>
+    <text x="472" y="394" font-size="13" font-weight="600" fill="#e2e8f0">CARDS</text>
+      <text x="472" y="424" font-size="11" fill="#9ca3af">&#128273; id</text>
+      <text x="472" y="448" font-size="11" fill="#9ca3af">list_id</text>
+      <text x="472" y="472" font-size="11" fill="#9ca3af">title</text>
+      <text x="472" y="496" font-size="11" fill="#9ca3af">description</text>
+      <text x="472" y="520" font-size="11" fill="#9ca3af">position</text>
+      <text x="472" y="544" font-size="11" fill="#9ca3af">due_at</text>
+      <text x="472" y="568" font-size="11" fill="#9ca3af">archived</text>
+      <text x="472" y="592" font-size="11" fill="#9ca3af">created_at</text>
+  </g>
+  <g data-table="COMMENTS">
+    <rect x="880" y="296" width="220" height="176" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 880 336 L 1100 336" stroke="#334155"/>
+    <text x="892" y="322" font-size="13" font-weight="600" fill="#e2e8f0">COMMENTS</text>
+      <text x="892" y="352" font-size="11" fill="#9ca3af">&#128273; id</text>
+      <text x="892" y="376" font-size="11" fill="#9ca3af">card_id</text>
+      <text x="892" y="400" font-size="11" fill="#9ca3af">user_id</text>
+      <text x="892" y="424" font-size="11" fill="#9ca3af">body</text>
+      <text x="892" y="448" font-size="11" fill="#9ca3af">created_at</text>
+  </g>
+  <g data-table="LABELS">
+    <rect x="40" y="504" width="220" height="152" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 40 544 L 260 544" stroke="#334155"/>
+    <text x="52" y="530" font-size="13" font-weight="600" fill="#e2e8f0">LABELS</text>
+      <text x="52" y="560" font-size="11" fill="#9ca3af">&#128273; id</text>
+      <text x="52" y="584" font-size="11" fill="#9ca3af">board_id</text>
+      <text x="52" y="608" font-size="11" fill="#9ca3af">name</text>
+      <text x="52" y="632" font-size="11" fill="#9ca3af">color</text>
+  </g>
+  <g data-table="LISTS">
+    <rect x="460" y="504" width="220" height="152" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 460 544 L 680 544" stroke="#334155"/>
+    <text x="472" y="530" font-size="13" font-weight="600" fill="#e2e8f0">LISTS</text>
+      <text x="472" y="560" font-size="11" fill="#9ca3af">&#128273; id</text>
+      <text x="472" y="584" font-size="11" fill="#9ca3af">board_id</text>
+      <text x="472" y="608" font-size="11" fill="#9ca3af">title</text>
+      <text x="472" y="632" font-size="11" fill="#9ca3af">position</text>
+  </g>
+  <g data-table="USERS">
+    <rect x="880" y="456" width="220" height="128" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 880 496 L 1100 496" stroke="#334155"/>
+    <text x="892" y="482" font-size="13" font-weight="600" fill="#e2e8f0">USERS</text>
+      <text x="892" y="512" font-size="11" fill="#9ca3af">&#128273; id</text>
+      <text x="892" y="536" font-size="11" fill="#9ca3af">name</text>
+      <text x="892" y="560" font-size="11" fill="#9ca3af">email</text>
+  </g>
+  <g data-table="WORKSPACES">
+    <rect x="40" y="664" width="220" height="128" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 40 704 L 260 704" stroke="#334155"/>
+    <text x="52" y="690" font-size="13" font-weight="600" fill="#e2e8f0">WORKSPACES</text>
+      <text x="52" y="720" font-size="11" fill="#9ca3af">&#128273; id</text>
+      <text x="52" y="744" font-size="11" fill="#9ca3af">name</text>
+      <text x="52" y="768" font-size="11" fill="#9ca3af">slug</text>
+  </g>
+  <path d="M 260 716 C 360 716, 360 92, 460 92" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="WORKSPACES.BOARDS"/>
+  <path d="M 680 92 C 570 92, 570 556, 460 556" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="BOARDS.LISTS"/>
+  <path d="M 680 556 C 570 556, 570 420, 460 420" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="LISTS.CARDS"/>
+  <path d="M 680 92 C 360 92, 360 556, 40 556" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="BOARDS.LABELS"/>
+  <path d="M 680 420 C 780 420, 780 92, 880 92" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="CARDS.CARD_LABELS"/>
+  <path d="M 260 556 C 570 556, 570 92, 880 92" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="LABELS.CARD_LABELS"/>
+  <path d="M 680 420 C 360 420, 360 276, 40 276" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="CARDS.CARD_MEMBERS"/>
+  <path d="M 1100 508 C 570 508, 570 276, 40 276" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="USERS.CARD_MEMBERS"/>
+  <path d="M 680 420 C 780 420, 780 348, 880 348" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="CARDS.COMMENTS"/>
+  <path d="M 1100 508 C 990 508, 990 348, 880 348" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="USERS.COMMENTS"/>
+  <path d="M 680 420 C 360 420, 360 92, 40 92" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="CARDS.ACTIVITY"/>
+  <path d="M 1100 508 C 570 508, 570 92, 40 92" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="USERS.ACTIVITY"/>
+</svg>8:["$","div",null,{"className":"bg-base-100 min-h-screen","children":[["$","header",null,{"className":"border-base-300 bg-base-100 sticky top-0 z-10 flex items-center justify-between border-b px-6 py-4","children":[["$","h1",null,{"className":"text-xl font-bold","children":"Schema Library"}],["$","$L7",null,{"href":"/posts","className":"btn btn-ghost btn-sm gap-2","children":[["$","svg",null,{"stroke":"currentColor","fill":"none","strokeWidth":"2","viewBox":"0 0 24 24","strokeLinecap":"round","strokeLinejoin":"round","className":"size-3.5","children":["$undefined",[["$","line","0",{"x1":"19","y1":"12","x2":"5","y2":"12","children":[]}],["$","polyline","1",{"points":"12 19 5 12 12 5","children":[]}]]],"style":{"color":"$undefined"},"height":"1em","width":"1em","xmlns":"http://www.w3.org/2000/svg"}]," All schemas"]}]]}],["$","main",null,{"className":"mx-auto max-w-3xl p-6","children":[["$","article",null,{"className":"prose-invert","children":[["$","h1","0",{"className":"mb-2 mt-2 text-2xl font-bold text-slate-50","children":["Project Management (Kanban)"]}],["$","blockquote","1",{"className":"border-l-4 border-indigo-500/60 pl-4 text-slate-400","children":[["$","p","0",{"className":"mb-2 last:mb-0","children":["A Trello/Jira/Asana-style board tool: workspaces, boards, lists, cards,"]}],["$","p","1",{"className":"mb-2 last:mb-0","children":["labels, assignees, comments, and activity. A great demonstration of ordered"]}],["$","p","2",{"className":"mb-2 last:mb-0","children":["lists, many-to-many tagging, and audit trails."]}]]}],["$","h2","2",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["ER Diagram (Mermaid)"]}],["$","div","3",{"className":"overflow-x-auto rounded-xl border border-slate-800","dangerouslySetInnerHTML":{"__html":"$12"}}],"$L13","$L14","$L15","$L16","$L17","$L18","$L19","$L1a","$L1b","$L1c","$L1d","$L1e","$L1f","$L20","$L21","$L22","$L23","$L24","$L25","$L26"]}],"$L27"]}]]}]
+13:["$","h2","4",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["ASCII Diagram"]}]
+14:["$","div","5",{"className":"mb-4","children":["$","pre",null,{"className":"overflow-x-auto rounded-xl border border-slate-800 bg-slate-950 p-4 text-[13px] leading-relaxed text-slate-300","children":["$","code",null,{"children":"  WORKSPACES ---< BOARDS ---< LISTS ---< CARDS ---< COMMENTS\n                 |   ^          ^         |\n                 |   |          |         +---< ACTIVITY\n                 |   |          |\n                 |   +----------+         +---------------+\n                 |                         | CARD_MEMBERS  |\n                 |                         |---------------|\n                 |                         | card_id PK,FK |\n                 |                         | user_id  PK,FK|\n                 |                         +---------------+\n                 |                                   |\n                 v                                   v\n             +--------+   CARD_LABELS          +-----------+\n             | LABELS |---<          >---------|   USERS   |\n             +--------+   (card_id, label_id)  +-----------+"}]}]}]
+15:["$","h2","6",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["Tables"]}]
+16:["$","div","7",{"className":"mb-4","children":["$","div",null,{"className":"overflow-x-auto rounded-xl border border-slate-800","children":["$","table",null,{"className":"w-full text-left text-sm","children":[["$","thead",null,{"children":["$","tr",null,{"className":"border-b border-slate-800 bg-slate-900/60","children":[["$","th","0",{"className":"px-4 py-2 font-semibold text-slate-200","children":["Table"]}],["$","th","1",{"className":"px-4 py-2 font-semibold text-slate-200","children":["PK"]}],["$","th","2",{"className":"px-4 py-2 font-semibold text-slate-200","children":["Key FKs"]}],["$","th","3",{"className":"px-4 py-2 font-semibold text-slate-200","children":["Notes"]}]]}]}],["$","tbody",null,{"children":[["$","tr","0",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Workspaces"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":["—"]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Tenant container"]}]]}],["$","tr","1",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Boards"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"workspace_id → Workspaces"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["—"]}]]}],["$","tr","2",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Lists"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"board_id → Boards"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"position"}]," orders columns"]}]]}],["$","tr","3",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Cards"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"list_id → Lists"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"position"}]," orders within list"]}]]}],["$","tr","4",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Labels"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"id"}]]}],"$L28","$L29"]}],"$L2a","$L2b","$L2c","$L2d","$L2e"]}]]}]}]}]
+17:["$","h2","8",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["Notable Design Patterns"]}]
+18:["$","ul","9",{"className":"mb-4 list-disc space-y-1 pl-5 text-slate-400","children":[["$","li","0",{"children":[["$","strong","0",{"className":"font-semibold text-slate-100","children":"Ordered lists via `position`"}],": both ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Lists"}]," and ",["$","code","4",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Cards"}]," carry an explicit"]}]]}]
+19:["$","p","10",{"className":"mb-4 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"position"}]," integer so drag-and-drop reordering is just an update; the order isn't inferred from IDs."]}]
+1a:["$","ul","11",{"className":"mb-4 list-disc space-y-1 pl-5 text-slate-400","children":[["$","li","0",{"children":[["$","strong","0",{"className":"font-semibold text-slate-100","children":"Board-scoped labels"}],": ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Labels.board_id"}]," keeps the label palette local to a"]}]]}]
+1b:["$","p","12",{"className":"mb-4 text-slate-400","children":["board while the junction table allows re-using one label across many cards."]}]
+1c:["$","ul","13",{"className":"mb-4 list-disc space-y-1 pl-5 text-slate-400","children":[["$","li","0",{"children":[["$","strong","0",{"className":"font-semibold text-slate-100","children":"Two M:N relations to `Users`"}],": ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Card_Members"}]," (assignment) is a classic"]}]]}]
+1d:["$","p","14",{"className":"mb-4 text-slate-400","children":["junction; ",["$","code","1",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Comments"}],"/",["$","code","3",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Activity"}]," are fan-out event rows referencing users."]}]
+1e:["$","ul","15",{"className":"mb-4 list-disc space-y-1 pl-5 text-slate-400","children":[["$","li","0",{"children":[["$","strong","0",{"className":"font-semibold text-slate-100","children":"Immutable audit log"}],": ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Activity"}]," is append-only (",["$","code","4",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"action"}],", ",["$","code","6",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"details"}],","]}]]}]
+1f:["$","p","16",{"className":"mb-4 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"created_at"}],") — never updated in place, so board history is reconstructible."]}]
+20:["$","ul","17",{"className":"mb-4 list-disc space-y-1 pl-5 text-slate-400","children":[["$","li","0",{"children":[["$","strong","0",{"className":"font-semibold text-slate-100","children":"Soft delete via flags"}]," (",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"cards.archived"}],", ",["$","code","4",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"cards.due_at"}]," nullable) instead"]}]]}]
+21:["$","p","18",{"className":"mb-4 text-slate-400","children":["of physically deleting rows."]}]
+22:["$","h2","19",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["Sample Queries"]}]
+2f:T4f3,-- Board swimlane counts
+SELECT l.title AS list, COUNT(c.id) AS cards
+FROM lists l
+LEFT JOIN cards c ON c.list_id = l.id AND NOT c.archived
+WHERE l.board_id = 'board-1'
+GROUP BY l.id
+ORDER BY l.position;
+
+-- Cards in every list of a board, with label colours
+SELECT l.title, c.title AS card,
+       GROUP_CONCAT(lb.name, ', ') AS labels
+FROM lists l
+JOIN cards c        ON c.list_id = l.id AND NOT c.archived
+LEFT JOIN card_labels cl ON cl.card_id = c.id
+LEFT JOIN labels lb ON lb.id = cl.label_id
+WHERE l.board_id = 'board-1'
+GROUP BY c.id
+ORDER BY l.position, c.position;
+
+-- Cards assigned to a user across all boards
+SELECT b.title AS board, l.title AS list, c.title AS card, c.due_at
+FROM card_members cm
+JOIN cards c ON c.id = cm.card_id AND NOT c.archived
+JOIN lists l ON l.id = c.list_id
+JOIN boards b ON b.id = l.board_id
+WHERE cm.user_id = 'user-7'
+ORDER BY c.due_at IS NULL, c.due_at ASC;
+
+-- Overdue cards on a board
+SELECT c.title, c.due_at, u.name AS assignee
+FROM cards c
+LEFT JOIN card_members cm ON cm.card_id = c.id
+LEFT JOIN users u         ON u.id = cm.user_id
+WHERE c.list_id IN (SELECT id FROM lists WHERE board_id = 'board-1')
+  AND c.due_at < date('now')
+  AND NOT c.archived
+  AND c.list_id NOT IN (SELECT id FROM lists WHERE title = 'Done');23:["$","div","20",{"className":"mb-4","children":["$","pre",null,{"className":"overflow-x-auto rounded-xl border border-slate-800 bg-slate-950 p-4 text-[13px] leading-relaxed text-slate-300","children":["$","code",null,{"children":"$2f"}]}]}]
+24:["$","h2","21",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["Recreate the Sample"]}]
+25:["$","p","22",{"className":"mb-4 text-slate-400","children":["Run these statements in order to rebuild the schema."]}]
+30:T697,PRAGMA foreign_keys = ON;
+
+CREATE TABLE workspaces (
+  id   TEXT PRIMARY KEY,
+  name TEXT NOT NULL,
+  slug TEXT
+);
+
+CREATE TABLE boards (
+  id           TEXT PRIMARY KEY,
+  workspace_id TEXT NOT NULL REFERENCES workspaces(id),
+  title        TEXT NOT NULL,
+  background   TEXT
+);
+
+CREATE TABLE lists (
+  id       TEXT PRIMARY KEY,
+  board_id TEXT NOT NULL REFERENCES boards(id),
+  title    TEXT NOT NULL,
+  position INTEGER NOT NULL
+);
+
+CREATE TABLE cards (
+  id          TEXT PRIMARY KEY,
+  list_id     TEXT NOT NULL REFERENCES lists(id),
+  title       TEXT NOT NULL,
+  description TEXT,
+  position    INTEGER NOT NULL,
+  due_at      TEXT,
+  archived    INTEGER NOT NULL DEFAULT 0,
+  created_at  TEXT
+);
+
+CREATE TABLE labels (
+  id       TEXT PRIMARY KEY,
+  board_id TEXT NOT NULL REFERENCES boards(id),
+  name     TEXT NOT NULL,
+  color    TEXT
+);
+
+CREATE TABLE card_labels (
+  card_id  TEXT NOT NULL REFERENCES cards(id),
+  label_id TEXT NOT NULL REFERENCES labels(id),
+  PRIMARY KEY (card_id, label_id)
+);
+
+CREATE TABLE users (
+  id    TEXT PRIMARY KEY,
+  name  TEXT NOT NULL,
+  email TEXT NOT NULL
+);
+
+CREATE TABLE card_members (
+  card_id TEXT NOT NULL REFERENCES cards(id),
+  user_id TEXT NOT NULL REFERENCES users(id),
+  PRIMARY KEY (card_id, user_id)
+);
+
+CREATE TABLE comments (
+  id         TEXT PRIMARY KEY,
+  card_id    TEXT NOT NULL REFERENCES cards(id),
+  user_id    TEXT NOT NULL REFERENCES users(id),
+  body       TEXT NOT NULL,
+  created_at TEXT
+);
+
+CREATE TABLE activity (
+  id         TEXT PRIMARY KEY,
+  card_id    TEXT NOT NULL REFERENCES cards(id),
+  user_id    TEXT NOT NULL REFERENCES users(id),
+  action     TEXT NOT NULL,
+  details    TEXT,
+  created_at TEXT
+);26:["$","div","23",{"className":"mb-4","children":["$","pre",null,{"className":"overflow-x-auto rounded-xl border border-slate-800 bg-slate-950 p-4 text-[13px] leading-relaxed text-slate-300","children":["$","code",null,{"children":"$30"}]}]}]
+27:["$","nav",null,{"className":"border-base-300 mt-12 flex items-center justify-between gap-3 border-t pt-4","children":[["$","$L7",null,{"href":"/posts/northwind","className":"btn btn-ghost btn-sm gap-2","children":[["$","svg",null,{"stroke":"currentColor","fill":"none","strokeWidth":"2","viewBox":"0 0 24 24","strokeLinecap":"round","strokeLinejoin":"round","className":"size-3.5","children":["$undefined",[["$","line","0",{"x1":"19","y1":"12","x2":"5","y2":"12","children":[]}],["$","polyline","1",{"points":"12 19 5 12 12 5","children":[]}]]],"style":{"color":"$undefined"},"height":"1em","width":"1em","xmlns":"http://www.w3.org/2000/svg"}]," ","Northwind Traders"]}],["$","$L7",null,{"href":"/posts/sakila","className":"btn btn-ghost btn-sm gap-2","children":["Sakila — DVD Rental Store"," ",["$","svg",null,{"stroke":"currentColor","fill":"none","strokeWidth":"2","viewBox":"0 0 24 24","strokeLinecap":"round","strokeLinejoin":"round","className":"size-3.5","children":["$undefined",[["$","line","0",{"x1":"5","y1":"12","x2":"19","y2":"12","children":[]}],["$","polyline","1",{"points":"12 5 19 12 12 19","children":[]}]]],"style":{"color":"$undefined"},"height":"1em","width":"1em","xmlns":"http://www.w3.org/2000/svg"}]]}]]}]
+28:["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"board_id → Boards"}]]}]
+29:["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Board-scoped colours"]}]
+2a:["$","tr","5",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Card_Labels"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"card_id"}],"+",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"label_id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":["both FKs"]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["M:N cards ↔ labels"]}]]}]
+2b:["$","tr","6",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Users"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":["—"]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Members"]}]]}]
+2c:["$","tr","7",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Card_Members"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"card_id"}],"+",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"user_id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":["both FKs"]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Assignees (M:N)"]}]]}]
+2d:["$","tr","8",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Comments"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"card_id → Cards"}],", ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"user_id → Users"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Card discussion"]}]]}]
+2e:["$","tr","9",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Activity"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"card_id → Cards"}],", ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"user_id → Users"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Append-only audit trail"]}]]}]
+e:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+b:null
+10:[["$","title","0",{"children":"Project Management (Kanban) · Schema Library"}],["$","meta","1",{"name":"description","content":"A Trello/Jira/Asana-style board tool: workspaces, boards, lists, cards, labels, assignees, comments, and activity. A great demonstration of ordered lists, many-to-many tagging, and audit trails."}],["$","link","2",{"rel":"manifest","href":"/manifest.json","crossOrigin":"$undefined"}],["$","meta","3",{"name":"mobile-web-app-capable","content":"yes"}],["$","meta","4",{"name":"apple-mobile-web-app-title","content":"Database"}],["$","meta","5",{"name":"apple-mobile-web-app-status-bar-style","content":"black-translucent"}]]

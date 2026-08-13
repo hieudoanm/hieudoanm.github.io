@@ -23,92 +23,117 @@ Event streams, windows, aggregation, sinks.
 ### Q1. Design a stream processing system
 
 A stream processing system ingests a continuous flow of events and computes
-results over them in real time, rather than waiting for batch loads. The
-architecture starts with a topic cluster — a durable, partitioned log that holds
-events and is the source of truth for everything downstream. Producers publish
-through the gateway, and consumers subscribe to partitions and process events in
-order. Around consumption sit the operators: windowing buckets events into time
-intervals, aggregations compute running results, joins combine streams on keys,
-and output sinks emit results to downstream systems. The state store holds the
-per-operator state that the computation needs, and the checkpoints database
-records progress so the pipeline can recover.
+results over them in real time, rather than waiting for batch loads.
 
-The design has two defining tensions. The first is statefulness: most useful
-processing is not a stateless map but a stateful aggregate that must remember
-what it has seen, so state is treated as a first-class component with its own
-storage, backup, and recovery. The second is the correctness contract:
-at-least-once is easy, exactly-once is hard, and the system must choose one and
-make it cheap enough to use. The pipeline is also elastic — operators scale
-horizontally by partitioning the keyspace across parallel tasks — and
-recoverable, since consumers can always go back to the topic and replay. The
-result is a system that trades batch's ability to recompute anything for the
-ability to answer a query with sub-second freshness. Operational concerns
-complete the design: monitoring tracks end-to-end latency, lag per partition,
-and state size, so operators can see where a pipeline is slow or a topic is
-falling behind before users notice.
+- The architecture starts with a topic cluster — a durable, partitioned log that
+  holds events and is the source of truth for everything downstream.
+- Producers publish through the gateway, and consumers subscribe to partitions
+  and process events in order.
+- Around consumption sit the operators: windowing buckets events into time
+  intervals, aggregations compute running results, joins combine streams on
+  keys, and output sinks emit results to downstream systems.
+- The state store holds the per-operator state that the computation needs, and
+  the checkpoints database records progress so the pipeline can recover.
+
+The design has two defining tensions.
+
+- The first is statefulness: most useful processing is not a stateless map but a
+  stateful aggregate that must remember what it has seen, so state is treated as
+  a first-class component with its own storage, backup, and recovery.
+- The second is the correctness contract: at-least-once is easy, exactly-once is
+  hard, and the system must choose one and make it cheap enough to use.
+
+The pipeline is also elastic — operators scale horizontally by partitioning the
+keyspace across parallel tasks — and recoverable, since consumers can always go
+back to the topic and replay.
+
+- The result is a system that trades batch's ability to recompute anything for
+  the ability to answer a query with sub-second freshness.
+- Operational concerns complete the design: monitoring tracks end-to-end
+  latency, lag per partition, and state size, so operators can see where a
+  pipeline is slow or a topic is falling behind before users notice.
 
 ### Q2. How do you guarantee exactly-once semantics?
 
 Exactly-once means every event contributes to the result exactly once even when
-the pipeline retries, fails, and restarts. The system combines three mechanisms.
-The source is durable and offset-based: each event has a stable identity in the
-topic, and the consumer commits its read offset only after the event's effects
-are complete, so a restart re-reads from the committed offset and never skips or
-duplicates within a partition. The state store is transactional: updates to
-operator state and the output being emitted are written atomically with the
-checkpoint, so an operator cannot end up in a state where its output went out
-but its state did not advance.
+the pipeline retries, fails, and restarts.
 
-The third mechanism is idempotent sinks and output commits. If the sink — a
-database or message queue — is transaction-capable, the operator writes its
-results and the checkpoint marker in the same transaction, so the sink and the
-pipeline state commit or fail together. Where the sink cannot transact, the
-pipeline writes through a staging topic and a sink writer performs the final
-deduplicated apply, using event IDs to make the apply idempotent. The cost is
-real: transactional checkpointing adds latency and storage, so exactly-once is
-applied per pipeline and per sink, not globally for free. The guarantee is
-end-to-end only if every hop participates — source, processing, sink — and the
-pipeline makes each hop's contract explicit so a chain of exactly-once segments
-yields an exactly-once end-to-end result. The checkpoint cadence is also a
-tunable: frequent checkpoints shorten recovery but add overhead, so the pipeline
-lets operators trade recovery time against checkpoint cost per job.
+The system combines three mechanisms.
+
+- The source is durable and offset-based: each event has a stable identity in
+  the topic, and the consumer commits its read offset only after the event's
+  effects are complete, so a restart re-reads from the committed offset and
+  never skips or duplicates within a partition.
+- The state store is transactional: updates to operator state and the output
+  being emitted are written atomically with the checkpoint, so an operator
+  cannot end up in a state where its output went out but its state did not
+  advance.
+
+The third mechanism is idempotent sinks and output commits.
+
+- If the sink — a database or message queue — is transaction-capable, the
+  operator writes its results and the checkpoint marker in the same transaction,
+  so the sink and the pipeline state commit or fail together.
+- Where the sink cannot transact, the pipeline writes through a staging topic
+  and a sink writer performs the final deduplicated apply, using event IDs to
+  make the apply idempotent.
+
+The cost is real:
+
+- Transactional checkpointing adds latency and storage, so exactly-once is
+  applied per pipeline and per sink, not globally for free.
+- The guarantee is end-to-end only if every hop participates — source,
+  processing, sink — and the pipeline makes each hop's contract explicit so a
+  chain of exactly-once segments yields an exactly-once end-to-end result.
+- The checkpoint cadence is also a tunable: frequent checkpoints shorten
+  recovery but add overhead, so the pipeline lets operators trade recovery time
+  against checkpoint cost per job.
 
 ### Q3. How do you handle windowing and out-of-order events?
 
-Windowing converts an unbounded stream into finite, queryable pieces. The
-operator assigns each event to a window by its event timestamp — tumbling
-windows partition time into fixed non-overlapping intervals, sliding windows
-overlap, and session windows close after a gap of inactivity. The choice depends
-on the query: counting page views wants tumbling, a moving average wants
-sliding, and grouping a user's activity wants sessions. Windows are processed
-with watermark logic: the watermark is the system's estimate of the latest time
-by which all earlier events have arrived, and a window closes when the watermark
-passes its end, so the operator emits a complete result rather than a guess.
+Windowing converts an unbounded stream into finite, queryable pieces.
 
-Out-of-order events are the reason watermarks exist. Network and producer delays
-mean events can arrive minutes after earlier events of the same window, so the
-system buffers a window's events until its watermark passes, then emits and
-discards the state. No estimate is perfect, so the system supports late-data
-handling: late events after a window closed can update the result within a
-bounded late window, be routed to a separate stream for correction, or be
-dropped if the application only needs near-real-time accuracy. The engine also
-tracks event-time lag per partition so operators can see how far behind the
-processing is. The tension is fundamental — holding windows open longer improves
-accuracy but increases state and latency, so the watermark and late-window
-policies are tunable per query rather than baked in. The tuning is exposed
-through the query interface.
+- The operator assigns each event to a window by its event timestamp — tumbling
+  windows partition time into fixed non-overlapping intervals, sliding windows
+  overlap, and session windows close after a gap of inactivity.
+- The choice depends on the query: counting page views wants tumbling, a moving
+  average wants sliding, and grouping a user's activity wants sessions.
+- Windows are processed with watermark logic: the watermark is the system's
+  estimate of the latest time by which all earlier events have arrived, and a
+  window closes when the watermark passes its end, so the operator emits a
+  complete result rather than a guess.
+
+Out-of-order events are the reason watermarks exist.
+
+- Network and producer delays mean events can arrive minutes after earlier
+  events of the same window, so the system buffers a window's events until its
+  watermark passes, then emits and discards the state.
+- No estimate is perfect, so the system supports late-data handling: late events
+  after a window closed can update the result within a bounded late window, be
+  routed to a separate stream for correction, or be dropped if the application
+  only needs near-real-time accuracy.
+- The engine also tracks event-time lag per partition so operators can see how
+  far behind the processing is.
+
+The tension is fundamental — holding windows open longer improves accuracy but
+increases state and latency — so the watermark and late-window policies are
+tunable per query rather than baked in, and the tuning is exposed through the
+query interface.
 
 ### Q4. How do you scale stream operators?
 
 Stream operators scale by partitioning, the same trick that scales the topic.
-Each logical stream is split into parallel partitions, and each operator task
-processes a subset of the partitions independently, so throughput scales
-linearly with the number of tasks. The keyspace distribution decides
-correctness: events that must be aggregated together — all events for a user,
-all clicks for a session — are hashed to the same partition, so the operator
-holds the complete state for its keys without shuffling. A stateless operator,
-like a filter, can process any partition with any task, while a stateful
-operator pins each key to a task because the state lives with the task.
+
+- Each logical stream is split into parallel partitions, and each operator task
+  processes a subset of the partitions independently, so throughput scales
+  linearly with the number of tasks.
+- The keyspace distribution decides correctness: events that must be aggregated
+  together — all events for a user, all clicks for a session — are hashed to the
+  same partition, so the operator holds the complete state for its keys without
+  shuffling.
+- A stateless operator, like a filter, can process any partition with any task,
+  while a stateful operator pins each key to a task because the state lives with
+  the task.
 
 State is what makes scaling hard. When the pipeline adds tasks, keys must
 migrate between tasks, and their state moves with them; the engine performs a

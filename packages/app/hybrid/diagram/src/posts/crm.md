@@ -23,72 +23,88 @@ Leads, contacts, opportunities, pipelines, dashboards.
 ### Q1. Design a customer relationship management system
 
 A CRM platform like Salesforce centralizes how a sales organization captures and
-manages every interaction with prospects and customers. The core object model
-starts with a lead, an unqualified person or company captured from web forms,
-events, or imported lists. When a sales rep qualifies a lead, the system
-converts it into canonical records: a contact for the individual and an account
-for the company, while simultaneously opening an opportunity, the
-revenue-bearing deal. The diagram shows this flow: the Lead Service captures new
-leads, the Contact Service keeps profiles current, the Opportunity Service holds
-the deal record, and the Pipeline Engine moves deals through stages such as
-prospecting, qualification, negotiation, and closed-won.
+manages every interaction with prospects and customers.
 
-Such a system must be multi-tenant and horizontally scalable. The API gateway
-authenticates each request, resolves the tenant, and routes to the right
-microservice. The CRM DB is a sharded relational store keyed by tenant ID, so
-queries for all accounts owned by a given rep stay within one shard and never
-scan the cluster. Read-heavy workloads such as list views and dashboards are
-served from caches and read replicas to keep the hot path off the primary
-database. Because reps open dozens of records per minute, the API tier is
-stateless so any gateway can serve any tenant, and records use optimistic
-locking to prevent lost updates when two reps edit the same account
-concurrently.
+- The core object model starts with a lead, an unqualified person or company
+  captured from web forms, events, or imported lists.
+- When a sales rep qualifies a lead, the system converts it into canonical
+  records: a contact for the individual and an account for the company, while
+  simultaneously opening an opportunity, the revenue-bearing deal.
+- The diagram shows this flow: the Lead Service captures new leads, the Contact
+  Service keeps profiles current, the Opportunity Service holds the deal record,
+  and the Pipeline Engine moves deals through stages such as prospecting,
+  qualification, negotiation, and closed-won.
+
+Such a system must be multi-tenant and horizontally scalable.
+
+- The API gateway authenticates each request, resolves the tenant, and routes to
+  the right microservice.
+- The CRM DB is a sharded relational store keyed by tenant ID, so queries for
+  all accounts owned by a given rep stay within one shard and never scan the
+  cluster.
+- Read-heavy workloads such as list views and dashboards are served from caches
+  and read replicas to keep the hot path off the primary database.
+- Because reps open dozens of records per minute, the API tier is stateless so
+  any gateway can serve any tenant, and records use optimistic locking to
+  prevent lost updates when two reps edit the same account concurrently.
 
 The hard problems are metadata-driven customization, reporting latency, and
-external integration. Enterprises expect to add custom fields and objects
-without a schema migration, which points to an extension table or JSONB layer on
-top of the core tables. Forecasting requires materializing pipeline data into an
-analytics store so executives can slice by team, region, or quarter without
-hammering the operational database. Finally, email sync and notifications are
-asynchronous: an Email Sync worker pulls mailbox messages, links them to the
-right contact, and appends them to the activity timeline, while the notification
-service fans out alerts for mentions, follow-up reminders, and stage changes
-through a queue. That separation keeps the interactive path snappy and makes the
-platform feel real-time to the rep.
+external integration.
+
+- Enterprises expect to add custom fields and objects without a schema
+  migration, which points to an extension table or JSONB layer on top of the
+  core tables.
+- Forecasting requires materializing pipeline data into an analytics store so
+  executives can slice by team, region, or quarter without hammering the
+  operational database.
+- Finally, email sync and notifications are asynchronous: an Email Sync worker
+  pulls mailbox messages, links them to the right contact, and appends them to
+  the activity timeline, while the notification service fans out alerts for
+  mentions, follow-up reminders, and stage changes through a queue.
+- That separation keeps the interactive path snappy and makes the platform feel
+  real-time to the rep.
 
 ### Q2. How do you model leads, contacts, and accounts?
 
-The data model separates intent from identity. A lead is a raw, unqualified
-record carrying minimal information such as name, company, email, and source; it
-is disposable and frequently duplicated, since the same prospect may fill out
-several forms. The moment a rep qualifies a lead, the system converts it into
-canonical records. A contact represents a person, an account represents the
-company that person works for, and a role table links the two so a person can
-move between companies or hold multiple roles. This normalization avoids
-duplication: one account can have many contacts, one contact can belong to many
-accounts through a junction table, and an opportunity always references a
-contact, an account, or both.
+The data model separates intent from identity.
 
-The conversion flow must be idempotent and duplicate-aware. When a lead is
-converted, the system matches it against existing contacts and accounts using
-normalized email and domain keys, then either merges into the existing record or
-creates a new one. In the diagram this is the convert edge from lead to
-opportunity and the associate edge from contact to account. Under the hood it is
-a transaction: the lead is marked converted, the contact and account rows are
-inserted or updated, and the opportunity is created atomically, so a midway
-failure cannot leave the data half-written. Field mappings are configurable
-because companies disagree about what qualifies as a lead versus a prospect, so
-the schema stores source fields and maps them through a template per conversion
-style.
+- A lead is a raw, unqualified record carrying minimal information such as name,
+  company, email, and source; it is disposable and frequently duplicated, since
+  the same prospect may fill out several forms.
+- The moment a rep qualifies a lead, the system converts it into canonical
+  records.
+- A contact represents a person, an account represents the company that person
+  works for, and a role table links the two so a person can move between
+  companies or hold multiple roles.
+- This normalization avoids duplication: one account can have many contacts, one
+  contact can belong to many accounts through a junction table, and an
+  opportunity always references a contact, an account, or both.
 
-Identity is also temporal. Contacts change employers, accounts get renamed, and
-email addresses go stale. The model therefore keeps both a current-state table
-for fast reads and an activity timeline that records every event on the record.
-Deduplication runs at ingest time using deterministic keys such as email and
-phone, and again as a background job that groups likely duplicates by fuzzy
-matching and suggests merges for human approval. The design trades storage for
-correctness: canonical identity tables plus an append-only activity log make
-every record cheap to read and every historical question answerable.
+The conversion flow must be idempotent and duplicate-aware.
+
+- When a lead is converted, the system matches it against existing contacts and
+  accounts using normalized email and domain keys, then either merges into the
+  existing record or creates a new one.
+- In the diagram this is the convert edge from lead to opportunity and the
+  associate edge from contact to account.
+- Under the hood it is a transaction: the lead is marked converted, the contact
+  and account rows are inserted or updated, and the opportunity is created
+  atomically, so a midway failure cannot leave the data half-written.
+- Field mappings are configurable because companies disagree about what
+  qualifies as a lead versus a prospect, so the schema stores source fields and
+  maps them through a template per conversion style.
+
+Identity is also temporal.
+
+- Contacts change employers, accounts get renamed, and email addresses go stale.
+- The model therefore keeps both a current-state table for fast reads and an
+  activity timeline that records every event on the record.
+- Deduplication runs at ingest time using deterministic keys such as email and
+  phone, and again as a background job that groups likely duplicates by fuzzy
+  matching and suggests merges for human approval.
+- The design trades storage for correctness: canonical identity tables plus an
+  append-only activity log make every record cheap to read and every historical
+  question answerable.
 
 ### Q3. How do you track sales pipelines and forecasts?
 

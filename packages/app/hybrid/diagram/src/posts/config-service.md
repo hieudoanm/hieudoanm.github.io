@@ -25,50 +25,62 @@ Config storage, environments, push updates, rollback.
 A distributed configuration service centralizes the settings every service needs
 to run — feature flags, timeouts, resource limits, URLs, and tuning parameters —
 so that operators change one value and every node of every service eventually
-reflects it. The system separates a control plane from a data plane. Operators
-edit config in a portal that writes through an API gateway to a validation
-layer, which checks the change before committing an immutable version to a
-version store. An environment service scopes every value to a specific
-environment, so the same key can hold independent values in development,
-staging, and production, and a promotion flow copies reviewed changes forward
-between environments.
+reflects it.
+
+- The system separates a control plane from a data plane.
+- Operators edit config in a portal that writes through an API gateway to a
+  validation layer, which checks the change before committing an immutable
+  version to a version store.
+- An environment service scopes every value to a specific environment, so the
+  same key can hold independent values in development, staging, and production,
+  and a promotion flow copies reviewed changes forward between environments.
 
 On the data plane, a publisher fans changes out to client SDKs embedded in every
-service instance. Each SDK keeps a local, versioned cache of the config and
-reconciles it against the server so reads are in-memory and cheap. An audit log
-records every edit with actor and timestamp, making the service both a runtime
-dependency and a governance artifact. The hard parts are consistency and
-availability: config is read on hot paths, so the read path must stay off the
-database, but config also changes rarely, so the write path can be slow and
-deliberate. A configuration service that is down must never take down the
-services that depend on it; clients fall back to their last good cached version
-and retry the fetch in the background, so the failure mode is staleness, not
-outage.
+service instance.
+
+- Each SDK keeps a local, versioned cache of the config and reconciles it
+  against the server so reads are in-memory and cheap.
+- An audit log records every edit with actor and timestamp, making the service
+  both a runtime dependency and a governance artifact.
+
+The hard parts are consistency and availability.
+
+- Config is read on hot paths, so the read path must stay off the database, but
+  config also changes rarely, so the write path can be slow and deliberate.
+- A configuration service that is down must never take down the services that
+  depend on it; clients fall back to their last good cached version and retry
+  the fetch in the background, so the failure mode is staleness, not outage.
 
 ### Q2. How do you version and rollback configs?
 
 Every mutation creates a new immutable version rather than overwriting state.
-The version store treats each commit as a snapshot of the full key set for an
-environment, stamped with a monotonically increasing version number, the
-operator identity, and a timestamp. Because versions are append-only, the entire
-history is preserved and any prior state can be reconstructed by reading a
-snapshot or replaying commits. The service also records a short reason or ticket
-reference with each change, which turns debugging from "what was the value
-yesterday" into "why did this value change and who approved it."
 
-Rollback is then cheap and mechanical: pointing the environment at a previous
-version triggers a new commit that restores that snapshot, and the normal
-publish path distributes it to every SDK. Because a rollback is itself a
-versioned commit, it shows up in the audit trail like any other change, and a
-rollback of a rollback is just another revert. The service retains a
-configurable retention window of versions so operators can inspect diffs between
-any two snapshots, and it flags rollbacks for review — a rollback that happens
-minutes after a rollout usually signals a failed deployment, and the audit log
-ties that story together. Versioning doubles as the foundation for rollouts,
-since a percentage-based rollout can be expressed as a version with a
-progressive population gate. Client SDKs echo back the version they are running,
-so operators see in real time how far a change has propagated and which
-instances are still holding an old snapshot.
+- The version store treats each commit as a snapshot of the full key set for an
+  environment, stamped with a monotonically increasing version number, the
+  operator identity, and a timestamp.
+- Because versions are append-only, the entire history is preserved and any
+  prior state can be reconstructed by reading a snapshot or replaying commits.
+- The service also records a short reason or ticket reference with each change,
+  which turns debugging from "what was the value yesterday" into "why did this
+  value change and who approved it."
+
+Rollback is then cheap and mechanical.
+
+- Pointing the environment at a previous version triggers a new commit that
+  restores that snapshot, and the normal publish path distributes it to every
+  SDK.
+- Because a rollback is itself a versioned commit, it shows up in the audit
+  trail like any other change, and a rollback of a rollback is just another
+  revert.
+- The service retains a configurable retention window of versions so operators
+  can inspect diffs between any two snapshots, and it flags rollbacks for review
+  — a rollback that happens minutes after a rollout usually signals a failed
+  deployment, and the audit log ties that story together.
+- Versioning doubles as the foundation for rollouts, since a percentage-based
+  rollout can be expressed as a version with a progressive population gate.
+- Client SDKs echo back the version they are running, so operators see in real
+  time how far a change has propagated and which instances are still holding an
+  old snapshot.
 
 ### Q3. How do you push config changes to clients?
 

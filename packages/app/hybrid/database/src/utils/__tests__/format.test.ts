@@ -72,13 +72,41 @@ describe('copyToClipboard', () => {
 });
 
 describe('formatSQL', () => {
-  it('collapses whitespace and breaks before keywords', () => {
+  it('breaks before clause keywords', () => {
     expect(formatSQL('SELECT a, b FROM t WHERE x = 1')).toBe(
-      'SELECT a, b \nFROM t \nWHERE x = 1'
+      'SELECT a, b\nFROM t\nWHERE x = 1'
     );
   });
 
   it('trims surrounding whitespace', () => {
     expect(formatSQL('  SELECT 1  ')).toBe('SELECT 1');
+  });
+
+  it('uppercases clause keywords', () => {
+    expect(formatSQL('select * from customers limit 10')).toBe(
+      'SELECT *\nFROM customers\nLIMIT 10'
+    );
+  });
+
+  it('preserves string literal contents', () => {
+    expect(formatSQL("SELECT 'a  b' AS v")).toBe("SELECT 'a  b' AS v");
+  });
+
+  it('indents nested parenthesised clauses', () => {
+    expect(
+      formatSQL(
+        'SELECT * FROM orders WHERE customer_id IN (SELECT id FROM customers)'
+      )
+    ).toContain('WHERE customer_id IN (');
+  });
+
+  it('formats INSERT statements', () => {
+    expect(formatSQL('INSERT INTO t (a, b) VALUES (1, 2)')).toBe(
+      'INSERT INTO t (a, b)\nVALUES (1, 2)'
+    );
+  });
+
+  it('returns an empty string for empty input', () => {
+    expect(formatSQL('   ')).toBe('');
   });
 });

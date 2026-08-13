@@ -71,9 +71,12 @@ describe('parsePost', () => {
     expect(post.answers[0].question).toBe(
       'Design Uber / Lyft ride matching and dispatch'
     );
-    expect(post.answers[0].paragraphs).toHaveLength(2);
-    expect(post.answers[0].paragraphs[0]).toContain('geo-index');
-    expect(post.answers[1].paragraphs).toHaveLength(1);
+    expect(post.answers[0].blocks).toHaveLength(2);
+    expect(post.answers[0].blocks[0]).toEqual({
+      type: 'paragraph',
+      text: expect.stringContaining('geo-index'),
+    });
+    expect(post.answers[1].blocks).toHaveLength(1);
     expect(post.diagramText).toContain('node rider: Rider App');
     expect(post.diagramText).not.toContain('```');
   });
@@ -84,6 +87,33 @@ describe('parsePost', () => {
     expect(post.difficulty).toBe('medium');
     expect(post.category).toBe('system-design');
     expect(post.author).toBe('Hieu Doan');
+  });
+
+  it('groups bullet lines into a list block', () => {
+    const post = parsePost(
+      [
+        '## Answers',
+        '',
+        '### Q1. Design a thing',
+        '',
+        'Lead-in sentence.',
+        '',
+        '- First point',
+        '  continued on the next line',
+        '- Second point',
+        '',
+        'Trailing paragraph.',
+      ].join('\n'),
+      'bullets'
+    );
+    expect(post.answers[0].blocks).toEqual([
+      { type: 'paragraph', text: 'Lead-in sentence.' },
+      {
+        type: 'list',
+        items: ['First point continued on the next line', 'Second point'],
+      },
+      { type: 'paragraph', text: 'Trailing paragraph.' },
+    ]);
   });
 
   it('uses the heading as the title when frontmatter has none', () => {

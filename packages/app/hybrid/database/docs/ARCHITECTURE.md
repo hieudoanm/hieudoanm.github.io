@@ -109,7 +109,7 @@ Dynamic routes for database views; flat routes for settings.
 
 - **Tailwind CSS 4** with `@tailwindcss/postcss` plugin
 - **DaisyUI 5** for component classes (`btn`, `card`, `input`, `badge`)
-- **Dark mode** via `data-theme="night"` on `<html>`
+- **Dark mode** via `data-theme="dim"` on `<html>`
 - **32 themes** available, persisted to localStorage
 - **Base HTML styles** in `src/styles/globals.css` — headings, code, tables,
   forms, semantic elements

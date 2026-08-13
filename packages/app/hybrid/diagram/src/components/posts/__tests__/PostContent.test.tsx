@@ -14,14 +14,23 @@ const post: Post = {
   answers: [
     {
       question: 'Design Uber ride matching',
-      paragraphs: [
-        'Riders send requests to the gateway. Drivers report location to a geo-index. Keep driver locations in memory with an idempotency key like `driver_id`.',
-        'Second paragraph of the first answer.',
+      blocks: [
+        {
+          type: 'paragraph',
+          text: 'Riders send requests to the gateway. Drivers report location to a geo-index. Keep driver locations in memory with an idempotency key like `driver_id`.',
+        },
+        { type: 'paragraph', text: 'Second paragraph of the first answer.' },
       ],
     },
     {
       question: 'Design surge pricing',
-      paragraphs: ['Use a demand/supply ratio to set the multiplier.'],
+      blocks: [
+        {
+          type: 'paragraph',
+          text: 'Use a demand/supply ratio to set the multiplier.',
+        },
+        { type: 'list', items: ['Cap surge at 2x', 'Decay with queue length'] },
+      ],
     },
   ],
   diagramText: 'title: Uber Ride Hailing\nnode rider: Rider App',
@@ -40,9 +49,11 @@ describe('PostContent', () => {
       screen.getByRole('heading', { name: 'Interview Questions' })
     ).toBeInTheDocument();
     const items = screen.getAllByRole('listitem');
-    expect(items).toHaveLength(2);
+    expect(items).toHaveLength(4);
     expect(items[0]).toHaveTextContent('Design Uber ride matching');
     expect(items[1]).toHaveTextContent('Design surge pricing');
+    expect(items[2]).toHaveTextContent('Cap surge at 2x');
+    expect(items[3]).toHaveTextContent('Decay with queue length');
   });
 
   it('renders author, difficulty, and category', () => {
@@ -71,6 +82,13 @@ describe('PostContent', () => {
     render(<PostContent post={post} />);
     const code = screen.getByText('driver_id');
     expect(code.tagName).toBe('CODE');
+  });
+
+  it('renders answer bullet points as a list', () => {
+    render(<PostContent post={post} />);
+    expect(screen.getByText('Cap surge at 2x')).toBeInTheDocument();
+    expect(screen.getByText('Decay with queue length')).toBeInTheDocument();
+    expect(screen.getByText('Cap surge at 2x').tagName).toBe('LI');
   });
 
   it('shows the diagram source in a collapsible block', () => {

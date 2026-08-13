@@ -22,37 +22,50 @@ Order matching, order book, settlement, market data.
 
 ### Q1. Design a cryptocurrency exchange
 
-The exchange accepts orders through a low-latency API that authenticates the
-trader, checks account balance and risk limits, then submits the order to a
-Matching Engine. The matching engine maintains the Order Book per trading pair
-in memory, matches incoming limit and market orders against resting orders using
-price-time priority, and emits each trade to the Settlement Service. Settlement
-moves tokens between wallet balances — debit the maker, credit the taker — and
-appends an immutable record to the Ledger DB. Market data (ticker, order book
-snapshots, trade stream) is published as an ordered event stream to a message
-bus and fanned out to clients over WebSockets. The design is event-sourced: the
-order book can be replayed from the persisted log, so a replica can rebuild
-state and the ledger stays the authority for balances. Read paths — balances,
-trade history, open orders — hit a cache backed by the ledger. Scaling centers
-on the single-threaded matching engine per symbol; when volume grows, symbols
-are partitioned across engine instances, and sequence numbers keep all published
-events globally ordered and auditable.
+The exchange accepts orders through a low-latency API.
+
+- The API authenticates the trader, checks account balance and risk limits, then
+  submits the order to a Matching Engine.
+- The matching engine maintains the Order Book per trading pair in memory,
+  matches incoming limit and market orders against resting orders using
+  price-time priority, and emits each trade to the Settlement Service.
+- Settlement moves tokens between wallet balances — debit the maker, credit the
+  taker — and appends an immutable record to the Ledger DB.
+- Market data (ticker, order book snapshots, trade stream) is published as an
+  ordered event stream to a message bus and fanned out to clients over
+  WebSockets.
+
+The design is event-sourced.
+
+- The order book can be replayed from the persisted log, so a replica can
+  rebuild state and the ledger stays the authority for balances.
+- Read paths — balances, trade history, open orders — hit a cache backed by the
+  ledger.
+
+Scaling centers on the single-threaded matching engine per symbol.
+
+- When volume grows, symbols are partitioned across engine instances, and
+  sequence numbers keep all published events globally ordered and auditable.
 
 ### Q2. How do you match buy and sell orders fairly?
 
-Fairness comes from price-time priority and a strict sequence: a resting order
-at a better price always executes before a worse-priced one, and among orders at
-the same price the earliest timestamp wins. Each order gets a monotonically
-increasing sequence number on entry, which is also what the market data stream
-uses, so there is an unambiguous total order of every event. A matching pass
-pops the best-priced order from the opposite side's book, checks it against the
-incoming order, and either fully or partially fills it, then re-checks until the
-incoming order is filled, loses price priority, or is fully cancelled — all in
-one atomic pass with no interleaving. Because the engine is single-threaded per
-symbol, there is no race between two orders arriving simultaneously; the
-sequence assignment itself determines precedence, and trades are timestamped
-from the sequence rather than wall clock. Client order IDs and engine-generated
-IDs are both recorded so every fill is traceable and replayable for audits.
+Fairness comes from price-time priority and a strict sequence.
+
+- A resting order at a better price always executes before a worse-priced one,
+  and among orders at the same price the earliest timestamp wins.
+- Each order gets a monotonically increasing sequence number on entry, which is
+  also what the market data stream uses, so there is an unambiguous total order
+  of every event.
+- A matching pass pops the best-priced order from the opposite side's book,
+  checks it against the incoming order, and either fully or partially fills it,
+  then re-checks until the incoming order is filled, loses price priority, or is
+  fully cancelled — all in one atomic pass with no interleaving.
+- Because the engine is single-threaded per symbol, there is no race between two
+  orders arriving simultaneously; the sequence assignment itself determines
+  precedence, and trades are timestamped from the sequence rather than wall
+  clock.
+- Client order IDs and engine-generated IDs are both recorded so every fill is
+  traceable and replayable for audits.
 
 ### Q3. How do you keep the order book consistent under load?
 

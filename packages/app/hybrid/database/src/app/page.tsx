@@ -1,49 +1,62 @@
 'use client';
 
-import { type FC, useState } from 'react';
+import { type FC, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Providers } from '@/providers/Providers';
 import { useData } from '@/providers/DataProvider';
 import { formatRelativeTime, formatFileSize } from '@/utils/format';
-import { FiPlus, FiDatabase, FiTrash2, FiSearch } from 'react-icons/fi';
+import { ConnectionModal } from '@/components/molecules/ConnectionModal';
+import { listExamples, type ExampleDatabase } from '@/lib/examples';
+import type { DatabaseConnection } from '@/types';
+import {
+  FiPlus,
+  FiDatabase,
+  FiTrash2,
+  FiEdit2,
+  FiSearch,
+  FiBookOpen,
+} from 'react-icons/fi';
 
 const HomeContent: FC = () => {
   const {
     connections,
     createConnection,
+    updateConnection,
     deleteConnection,
     setCurrentConnection,
     isLoading,
   } = useData();
   const [showModal, setShowModal] = useState(false);
-  const [name, setName] = useState('');
-  const [filePath, setFilePath] = useState('');
-  const [readOnly, setReadOnly] = useState(false);
+  const [editing, setEditing] = useState<DatabaseConnection | null>(null);
   const [search, setSearch] = useState('');
+  const [examples, setExamples] = useState<ExampleDatabase[]>([]);
+
+  useEffect(() => {
+    listExamples().then(setExamples);
+  }, []);
 
   const filtered = connections.filter((c) =>
     c.name.toLowerCase().includes(search.toLowerCase())
   );
 
-  const handleCreate = async () => {
-    if (!name.trim() || !filePath.trim()) return;
-    await createConnection(name.trim(), filePath.trim(), readOnly);
-    setName('');
-    setFilePath('');
-    setReadOnly(false);
-    setShowModal(false);
-  };
-
   return (
     <div className="bg-base-100 min-h-screen">
-      <header className="border-base-300 bg-base-100 sticky top-0 z-10 flex items-center justify-between border-b px-6 py-4">
+      <header className="border-base-300 bg-base-100 sticky top-0 z-10 flex flex-wrap items-center justify-between gap-2 border-b px-6 py-4">
         <h1 className="text-xl font-bold">Database Manager</h1>
-        <button
-          type="button"
-          onClick={() => setShowModal(true)}
-          className="btn btn-primary btn-sm">
-          <FiPlus className="size-4" /> New Connection
-        </button>
+        <div className="flex items-center gap-3">
+          <Link href="/posts" className="btn btn-ghost btn-sm gap-2">
+            <FiBookOpen className="size-4" /> Schema Library
+          </Link>
+          <button
+            type="button"
+            onClick={() => {
+              setEditing(null);
+              setShowModal(true);
+            }}
+            className="btn btn-primary btn-sm">
+            <FiPlus className="size-4" /> New Connection
+          </button>
+        </div>
       </header>
       <main className="mx-auto max-w-4xl p-6">
         <div className="mb-6 flex items-center gap-2">
@@ -88,6 +101,18 @@ const HomeContent: FC = () => {
                 </div>
                 <button
                   type="button"
+                  aria-label="Edit connection"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setEditing(conn);
+                    setShowModal(true);
+                  }}
+                  className="btn btn-ghost btn-sm btn-circle">
+                  <FiEdit2 className="size-4" />
+                </button>
+                <button
+                  type="button"
+                  aria-label="Delete connection"
                   onClick={(e) => {
                     e.preventDefault();
                     deleteConnection(conn.id);
@@ -104,52 +129,43 @@ const HomeContent: FC = () => {
             )}
           </div>
         )}
+        {examples.length > 0 && (
+          <section className="my-8">
+            <h2 className="mb-1 text-sm font-semibold tracking-wider uppercase">
+              Example databases
+            </h2>
+            <p className="text-base-content/50 mb-3 text-sm">
+              Sample schemas from the Schema Library — click one to open it
+              instantly.
+            </p>
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {examples.map((example) => (
+                <Link
+                  key={example.slug}
+                  href={`/db?example=${example.slug}`}
+                  className="card bg-base-200 card-body hover:bg-base-300 transition-colors">
+                  <FiBookOpen className="text-primary size-6" />
+                  <h3 className="font-semibold">{example.title}</h3>
+                  <p className="text-base-content/50 line-clamp-2 text-sm">
+                    {example.description}
+                  </p>
+                  <div className="mt-1 flex gap-3 text-xs opacity-60">
+                    <span>{example.tableCount} tables</span>
+                    <span>{formatFileSize(example.size)}</span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
       </main>
       {showModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
-          <div className="bg-base-100 card w-full max-w-md shadow-xl">
-            <div className="card-body">
-              <h2 className="card-title">New Connection</h2>
-              <input
-                type="text"
-                placeholder="Connection name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                className="input input-bordered w-full"
-              />
-              <input
-                type="text"
-                placeholder="File path (e.g., /data/mydb.db)"
-                value={filePath}
-                onChange={(e) => setFilePath(e.target.value)}
-                className="input input-bordered w-full"
-              />
-              <label className="label cursor-pointer">
-                <input
-                  type="checkbox"
-                  className="checkbox checkbox-sm"
-                  checked={readOnly}
-                  onChange={(e) => setReadOnly(e.target.checked)}
-                />
-                <span className="label-text">Read Only</span>
-              </label>
-              <div className="card-actions justify-end">
-                <button
-                  type="button"
-                  onClick={() => setShowModal(false)}
-                  className="btn btn-ghost">
-                  Cancel
-                </button>
-                <button
-                  type="button"
-                  onClick={handleCreate}
-                  className="btn btn-primary">
-                  Create
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+        <ConnectionModal
+          editing={editing}
+          onClose={() => setShowModal(false)}
+          onCreate={createConnection}
+          onUpdate={updateConnection}
+        />
       )}
     </div>
   );

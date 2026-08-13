@@ -1,5 +1,11 @@
-import { memo, type FC } from 'react';
-import { FiDownload, FiSearch } from 'react-icons/fi';
+import { memo, useRef, useState, type FC, type KeyboardEvent } from 'react';
+import {
+  FiDownload,
+  FiMoreHorizontal,
+  FiPlus,
+  FiSearch,
+  FiUpload,
+} from 'react-icons/fi';
 
 import { CellValue } from '@/components/atoms/CellValue';
 import { SortIcon } from '@/components/atoms/SortIcon';
@@ -19,11 +25,26 @@ interface DataViewProps {
   page: number;
   totalPages: number;
   pageRows: SqliteCell[][];
+  pageOriginalIndices?: number[];
+  colFilters?: Record<number, string>;
+  editable?: boolean;
   onSearch: (v: string) => void;
+  onColFilter?: (colIdx: number, value: string) => void;
   onSort: (colIdx: number) => void;
   onExport: () => void;
+  onImport?: () => void;
+  onAddRow?: () => void;
+  onUpdateCell?: (rowIndex: number, colIdx: number, value: SqliteCell) => void;
+  onDeleteRow?: (rowIndex: number) => void;
+  onCopyRow?: (rowIndex: number, format: 'sql' | 'json') => void;
   onPrevPage: () => void;
   onNextPage: () => void;
+}
+
+interface EditingState {
+  row: number;
+  col: number;
+  draft: string;
 }
 
 export const DataView: FC<DataViewProps> = memo(
@@ -38,16 +59,76 @@ export const DataView: FC<DataViewProps> = memo(
     page,
     totalPages,
     pageRows,
+    pageOriginalIndices,
+    colFilters = {},
+    editable = false,
     onSearch,
+    onColFilter,
     onSort,
     onExport,
+    onImport,
+    onAddRow,
+    onUpdateCell,
+    onDeleteRow,
+    onCopyRow,
     onPrevPage,
     onNextPage,
   }) => {
     const hasColumns = queryResult.columns.length > 0;
+    const [editing, setEditing] = useState<EditingState | null>(null);
+    const [menuRow, setMenuRow] = useState<number | null>(null);
+    const draftRef = useRef<HTMLInputElement>(null);
+
+    const originalIndex = (displayRow: number): number =>
+      pageOriginalIndices?.[displayRow] ?? page * PAGE_SIZE + displayRow;
+
+    const startEdit = (displayRow: number, col: number, value: SqliteCell) => {
+      if (!editable || value instanceof Uint8Array) return;
+      setEditing({
+        row: displayRow,
+        col,
+        draft: value === null ? '' : String(value),
+      });
+    };
+
+    const commitEdit = (displayRow: number, col: number) => {
+      if (!editing) return;
+      const old = pageRows[displayRow]?.[col];
+      const text = editing.draft;
+      const parsed: SqliteCell =
+        text === ''
+          ? null
+          : typeof old === 'number' &&
+              text.trim() !== '' &&
+              !Number.isNaN(Number(text))
+            ? Number(text)
+            : text;
+      setEditing(null);
+      if (parsed === old) return;
+      onUpdateCell?.(originalIndex(displayRow), col, parsed);
+    };
+
+    const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
+      if (!editing) return;
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        commitEdit(editing.row, editing.col);
+      } else if (e.key === 'Escape') {
+        e.preventDefault();
+        setEditing(null);
+      }
+    };
+
+    const rowMenu = menuRow !== null && (
+      <div
+        className="fixed inset-0 z-20"
+        onMouseDown={() => setMenuRow(null)}
+      />
+    );
+
     return (
       <>
-        <div className="border-base-300 bg-base-200/50 flex flex-shrink-0 items-center gap-3 border-b px-4 py-2.5">
+        <div className="border-base-300 bg-base-200/50 flex flex-shrink-0 flex-wrap items-center gap-x-3 gap-y-2 border-b px-4 py-2.5">
           {activeTable || hasColumns ? (
             <>
               <span className="text-base-content font-mono text-sm font-normal">
@@ -67,12 +148,22 @@ export const DataView: FC<DataViewProps> = memo(
             {loading && (
               <span className="loading loading-spinner loading-xs text-primary" />
             )}
+            {editable && (
+              <button className="btn btn-ghost btn-sm gap-2" onClick={onAddRow}>
+                <FiPlus className="size-3.5" /> Row
+              </button>
+            )}
             {hasColumns && (
               <button className="btn btn-ghost btn-sm gap-2" onClick={onExport}>
                 <FiDownload className="size-3.5" /> Export table
               </button>
             )}
-            <label className="input input-bordered input-sm bg-base-100 flex w-48 items-center gap-2">
+            {hasColumns && activeTable && (
+              <button className="btn btn-ghost btn-sm gap-2" onClick={onImport}>
+                <FiUpload className="size-3.5" /> Import
+              </button>
+            )}
+            <label className="input input-bordered input-sm bg-base-100 flex w-40 items-center gap-2 sm:w-48">
               <span className="text-base-content/30">
                 <FiSearch className="size-3.5" />
               </span>
@@ -103,19 +194,29 @@ export const DataView: FC<DataViewProps> = memo(
                     #
                   </th>
                   {queryResult.columns.map((col, i) => (
-                    <th
-                      key={col}
-                      className="hover:text-primary group cursor-pointer whitespace-nowrap transition-colors select-none"
-                      onClick={() => onSort(i)}>
-                      <span className="flex items-center gap-1">
+                    <th key={col} className="align-top whitespace-nowrap">
+                      <span
+                        className="hover:text-primary group flex cursor-pointer items-center gap-1 transition-colors select-none"
+                        onClick={() => onSort(i)}>
                         {col}
                         <SortIcon
                           active={sortCol === i}
                           dir={sortCol === i ? sortDir : 0}
                         />
                       </span>
+                      {onColFilter && (
+                        <input
+                          type="text"
+                          placeholder="filter"
+                          value={colFilters[i] ?? ''}
+                          onChange={(e) => onColFilter(i, e.target.value)}
+                          onClick={(e) => e.stopPropagation()}
+                          className="input input-bordered input-xs mt-1 w-full max-w-28 font-mono"
+                        />
+                      )}
                     </th>
                   ))}
+                  {editable && <th className="w-12" />}
                 </tr>
               </thead>
               <tbody>
@@ -127,14 +228,73 @@ export const DataView: FC<DataViewProps> = memo(
                       {page * PAGE_SIZE + ri + 1}
                     </td>
                     {row.map((cell, ci) => (
-                      <td key={ci} className="max-w-[200px] truncate">
-                        <CellValue value={cell} />
+                      <td
+                        key={ci}
+                        className={`max-w-[200px] ${editable && !(cell instanceof Uint8Array) ? 'cursor-cell' : ''}`}
+                        onDoubleClick={() => startEdit(ri, ci, cell)}>
+                        {editing && editing.row === ri && editing.col === ci ? (
+                          <input
+                            ref={draftRef}
+                            autoFocus
+                            value={editing.draft}
+                            onChange={(e) =>
+                              setEditing({ ...editing, draft: e.target.value })
+                            }
+                            onKeyDown={handleKeyDown}
+                            onBlur={() => commitEdit(ri, ci)}
+                            className="input input-bordered input-xs w-full min-w-32 font-mono"
+                          />
+                        ) : (
+                          <CellValue value={cell} />
+                        )}
                       </td>
                     ))}
+                    {editable && (
+                      <td className="relative text-right">
+                        <button
+                          aria-label="Row actions"
+                          className="btn btn-ghost btn-xs text-base-content/30 hover:text-base-content"
+                          onClick={() =>
+                            setMenuRow(menuRow === ri ? null : ri)
+                          }>
+                          <FiMoreHorizontal className="size-4" />
+                        </button>
+                        {menuRow === ri && (
+                          <div className="bg-base-100 border-base-300 absolute top-7 right-0 z-30 w-44 overflow-hidden rounded-xl border shadow-xl">
+                            <button
+                              className="hover:bg-base-200 w-full px-3 py-2 text-left font-mono text-xs"
+                              onClick={() => {
+                                onCopyRow?.(originalIndex(ri), 'sql');
+                                setMenuRow(null);
+                              }}>
+                              Copy SQL INSERT
+                            </button>
+                            <button
+                              className="hover:bg-base-200 w-full px-3 py-2 text-left font-mono text-xs"
+                              onClick={() => {
+                                onCopyRow?.(originalIndex(ri), 'json');
+                                setMenuRow(null);
+                              }}>
+                              Copy JSON
+                            </button>
+                            <div className="bg-base-200 h-px" />
+                            <button
+                              className="hover:bg-error/10 text-error w-full px-3 py-2 text-left font-mono text-xs"
+                              onClick={() => {
+                                onDeleteRow?.(originalIndex(ri));
+                                setMenuRow(null);
+                              }}>
+                              Delete row
+                            </button>
+                          </div>
+                        )}
+                      </td>
+                    )}
                   </tr>
                 ))}
               </tbody>
             </table>
+            {rowMenu}
           </div>
         ) : activeTable ? (
           <div className="text-base-content/30 flex flex-1 items-center justify-center text-sm italic">

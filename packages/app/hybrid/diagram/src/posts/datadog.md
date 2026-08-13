@@ -22,36 +22,44 @@ Metric ingestion, time-series storage, alerting, tracing.
 
 ### Q1. Design a monitoring and observability platform
 
-A `Host Agent` runs on every host and pushes metrics to the `Ingest API`, which
-validates and buffers into a `Metrics Queue` before a `Stream Processor`
-aggregates and writes to the `Metric Store`. The write path is decoupled from
-the read path: dashboards query the `Query API`, which scans the `Metric Store`
-and resolves dimensions through a `Tag Index`. The `Alert Engine` evaluates
-thresholds against the series and pages on-call via `Pager Notifier`. This split
-is deliberate — ingestion must absorb a firehose without dropping points, while
-queries must return in milliseconds even when the store is under heavy write
-load.
+A `Host Agent` runs on every host and pushes metrics to the `Ingest API`.
 
-The platform actually handles two data shapes that deserve separate designs:
-metrics, which are dense, numeric, and write-mostly, and traces, which are
-sparse and high-cardinality. The write path is a fan-in — thousands of agents
-sending millions of points per second — absorbed by a queue that decouples
-bursty hosts from the store and provides at-least-once delivery with dedupe on
-`(metric, tags, timestamp)`. Durability matters: a dropped metric during an
-incident is a blind spot, so the queue must survive a store outage. The key
-trade-off is fidelity versus storage cost. Do not keep every raw point forever;
-aggregate and downsample in the stream before data hits long-term storage, keep
-raw points only for a recent hot window, and derive dashboards from rolled-up
-series.
+- The `Ingest API` validates and buffers into a `Metrics Queue` before a
+  `Stream Processor` aggregates and writes to the `Metric Store`.
+- The write path is decoupled from the read path: dashboards query the
+  `Query API`, which scans the `Metric Store` and resolves dimensions through a
+  `Tag Index`.
+- The `Alert Engine` evaluates thresholds against the series and pages on-call
+  via `Pager Notifier`.
+- This split is deliberate — ingestion must absorb a firehose without dropping
+  points, while queries must return in milliseconds even when the store is under
+  heavy write load.
 
-Operationally, think about failure semantics. The agent is on the critical path
-of nothing, so it should degrade gracefully: give it a heartbeat the platform
-monitors and a local buffer it can fall back to when the ingest path is slow.
-Query correctness depends on consistent tag naming, so define a tag schema
-(service, environment, host) and enforce it at ingest, or dashboards silently
-split into `host` versus `hostname`. Finally, the platform is only useful if it
-observes itself — ingest lag, drop rates, and store latency must be first-class
-metrics with their own alerts.
+The platform actually handles two data shapes that deserve separate designs.
+
+- Metrics are dense, numeric, and write-mostly, while traces are sparse and
+  high-cardinality.
+- The write path is a fan-in — thousands of agents sending millions of points
+  per second — absorbed by a queue that decouples bursty hosts from the store
+  and provides at-least-once delivery with dedupe on
+  `(metric, tags, timestamp)`.
+- Durability matters: a dropped metric during an incident is a blind spot, so
+  the queue must survive a store outage.
+- The key trade-off is fidelity versus storage cost: do not keep every raw point
+  forever; aggregate and downsample in the stream before data hits long-term
+  storage, keep raw points only for a recent hot window, and derive dashboards
+  from rolled-up series.
+
+Operationally, think about failure semantics.
+
+- The agent is on the critical path of nothing, so it should degrade gracefully:
+  give it a heartbeat the platform monitors and a local buffer it can fall back
+  to when the ingest path is slow.
+- Query correctness depends on consistent tag naming, so define a tag schema
+  (service, environment, host) and enforce it at ingest, or dashboards silently
+  split into `host` versus `hostname`.
+- Finally, the platform is only useful if it observes itself — ingest lag, drop
+  rates, and store latency must be first-class metrics with their own alerts.
 
 ### Q2. How do you ingest metrics at high write rates?
 

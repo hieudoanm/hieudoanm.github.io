@@ -23,57 +23,71 @@ Image push, manifest storage, layer dedup, pulls.
 ### Q1. Design a container image registry
 
 A container registry stores container images as a set of content-addressable
-layers plus a manifest that ties them together. The push path uploads the image
-layers, deduplicates them against existing content, records a manifest, and
-triggers a vulnerability scan. The pull path resolves the manifest, determines
-which layers the client already has, and serves the missing ones. Both paths are
-governed by a registry database that holds metadata, while the layer store keeps
-the actual blob content.
+layers plus a manifest that ties them together.
 
-The diagram shows the split clearly. On push, the gateway forwards uploaded
-layers to the push service, which checks layer dedup before storing new blobs
-and writing the manifest. On pull, the gateway hands the fetch request to the
-pull service, which reads the needed layers and serves them, ideally from a blob
-cache. The vulnerability scan inspects pushed images and writes its report to
-the registry database.
+- The push path uploads the image layers, deduplicates them against existing
+  content, records a manifest, and triggers a vulnerability scan.
+- The pull path resolves the manifest, determines which layers the client
+  already has, and serves the missing ones.
+- Both paths are governed by a registry database that holds metadata, while the
+  layer store keeps the actual blob content.
 
-The defining property of container storage is content addressability. Every
-layer is identified by a digest of its bytes, so identical layers are stored
-once and shared across all images that reference them. This makes dedup natural,
-but it also means the registry must treat blobs as immutable, handle garbage
-collection carefully, and make the manifest the single source of truth for what
-an image actually is. The manifest is small but read constantly, so it is served
-from a hot cache with strong consistency guarantees, while large layer blobs are
-cached at the edge, where immutability makes staleness impossible. The API also
-exposes upload and pull progress so clients can show meaningful status instead
-of sitting on a silent transfer.
+The diagram shows the split clearly.
+
+- On push, the gateway forwards uploaded layers to the push service, which
+  checks layer dedup before storing new blobs and writing the manifest.
+- On pull, the gateway hands the fetch request to the pull service, which reads
+  the needed layers and serves them, ideally from a blob cache.
+- The vulnerability scan inspects pushed images and writes its report to the
+  registry database.
+
+The defining property of container storage is content addressability.
+
+- Every layer is identified by a digest of its bytes, so identical layers are
+  stored once and shared across all images that reference them.
+- This makes dedup natural, but it also means the registry must treat blobs as
+  immutable, handle garbage collection carefully, and make the manifest the
+  single source of truth for what an image actually is.
+- The manifest is small but read constantly, so it is served from a hot cache
+  with strong consistency guarantees, while large layer blobs are cached at the
+  edge, where immutability makes staleness impossible.
+- The API also exposes upload and pull progress so clients can show meaningful
+  status instead of sitting on a silent transfer.
 
 ### Q2. How do you store layers with deduplication?
 
 Layers are immutable blobs keyed by their digest, and deduplication is simply
-refusing to store a blob whose digest already exists. On push, the client sends
-the digest of each layer first; the registry checks the layer store, and for
-layers already present it returns an acknowledgment without requiring the
-upload. This saves bandwidth for the common case of pushing an image built on
-top of a base image that the registry already holds.
+refusing to store a blob whose digest already exists.
 
-The layer store separates metadata from content. A blob metadata table tracks
-digest, size, upload state, and which manifests reference the blob, while the
-actual bytes live in a blob store built for large immutable objects, such as an
-object store or a distributed filesystem. Content-addressable storage enables
-transparent peer-to-peer and cross-region replication, because any replica can
-verify it holds the correct bytes by hashing them. Compression and chunking can
-be applied at the blob layer without changing the logical model.
+- On push, the client sends the digest of each layer first; the registry checks
+  the layer store, and for layers already present it returns an acknowledgment
+  without requiring the upload.
+- This saves bandwidth for the common case of pushing an image built on top of a
+  base image that the registry already holds.
 
-Garbage collection is where dedup gets risky. Because blobs are shared, a naive
-delete can break images that still reference a blob. The registry maintains
-reference counts from manifests to blobs and runs garbage collection in two
-phases: mark, which enumerates all reachable blobs from live manifests, and
-sweep, which deletes only unreachable content. Deletions are asynchronous and
-always safe with respect to in-flight pulls, so a pull never races a garbage
-collector into a partial image. Dedup also extends to identical image manifests,
-so pushing a tag that already exists is a no-op that updates only the tag
-reference rather than duplicating stored metadata.
+The layer store separates metadata from content.
+
+- A blob metadata table tracks digest, size, upload state, and which manifests
+  reference the blob, while the actual bytes live in a blob store built for
+  large immutable objects, such as an object store or a distributed filesystem.
+- Content-addressable storage enables transparent peer-to-peer and cross-region
+  replication, because any replica can verify it holds the correct bytes by
+  hashing them.
+- Compression and chunking can be applied at the blob layer without changing the
+  logical model.
+
+Garbage collection is where dedup gets risky.
+
+- Because blobs are shared, a naive delete can break images that still reference
+  a blob.
+- The registry maintains reference counts from manifests to blobs and runs
+  garbage collection in two phases: mark, which enumerates all reachable blobs
+  from live manifests, and sweep, which deletes only unreachable content.
+- Deletions are asynchronous and always safe with respect to in-flight pulls, so
+  a pull never races a garbage collector into a partial image.
+- Dedup also extends to identical image manifests, so pushing a tag that already
+  exists is a no-op that updates only the tag reference rather than duplicating
+  stored metadata.
 
 ### Q3. How do you stream image pulls efficiently?
 

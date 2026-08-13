@@ -41,8 +41,8 @@ export const ExportModal: FC<ExportModalProps> = ({
       <div
         className="bg-base-100 border-base-300 flex max-h-[80vh] w-full max-w-2xl flex-col rounded-2xl border shadow-2xl"
         onClick={(e) => e.stopPropagation()}>
-        <div className="border-base-300 flex flex-shrink-0 items-center justify-between border-b px-5 py-4">
-          <div className="flex items-center gap-3">
+        <div className="border-base-300 flex flex-shrink-0 flex-wrap items-center justify-between gap-2 border-b px-5 py-4">
+          <div className="flex flex-wrap items-center gap-3">
             <span className="text-base-content font-normal tracking-tight">
               Export <span className="text-primary font-mono">{tableName}</span>
             </span>
@@ -54,7 +54,7 @@ export const ExportModal: FC<ExportModalProps> = ({
             <FiX className="size-4" />
           </button>
         </div>
-        <div className="flex flex-shrink-0 gap-1 px-5 pt-4">
+        <div className="flex flex-shrink-0 flex-wrap gap-1 px-5 pt-4">
           {EXPORT_FORMATS.map((f) => (
             <button
               key={f.value}

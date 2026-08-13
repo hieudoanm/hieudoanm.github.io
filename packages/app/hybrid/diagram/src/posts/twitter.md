@@ -22,71 +22,100 @@ Tweet ingestion, fanout, home timeline, media, search, notifications.
 
 ### Q1. Design Twitter / X home timeline
 
-The home timeline shows recent tweets from accounts a user follows. Core flow:
-the Tweet service persists new tweets and emits them to a Fanout Worker; a
-graph/followers service supplies follower lists. Fanout copies each tweet into
-followers' timeline caches (Redis) — a push model. The Timeline service reads
-cached feeds, merges and ranks them, and returns results through the API gateway
-with cursor-based pagination. Cap the cached feed (e.g., 800 tweets) to bound
-memory. Media URLs point at a CDN to offload bytes. Writes are heavy but reads
-dominate by orders of magnitude, so reads must always hit the in-memory cache,
-never the primary tweets DB. Use replicas and read-through caching, plus a
-fanout queue (Kafka) with retry/dead-letter handling to absorb load during
-spikes.
+The home timeline shows recent tweets from accounts a user follows.
+
+- The Tweet service persists new tweets and emits them to a Fanout Worker.
+- A graph/followers service supplies follower lists.
+- Fanout copies each tweet into followers' timeline caches (Redis) — a push
+  model.
+- The Timeline service reads cached feeds, merges and ranks them, and returns
+  results through the API gateway with cursor-based pagination.
+- Cap the cached feed (e.g., 800 tweets) to bound memory.
+- Media URLs point at a CDN to offload bytes.
+- Writes are heavy but reads dominate by orders of magnitude, so reads must
+  always hit the in-memory cache, never the primary tweets DB.
+- Use replicas and read-through caching, plus a fanout queue (Kafka) with
+  retry/dead-letter handling to absorb load during spikes.
 
 ### Q2. Pull-based vs push-based fanout: when do you use which?
 
-Push (fanout-on-write) pre-computes timelines: on publish, write the tweet into
-every follower's cache, giving fast reads at the cost of O(followers) writes and
-duplicate storage. Pull (fanout-on-read) merges on demand: at read time, query
-the followed users' recent tweets, which is cheap to write but expensive and
-slower to read. Real systems use a hybrid: push for normal accounts
-(fanout-limited, e.g., under ~100k followers) and pull for celebrities to avoid
-fanout explosion, or lazily push only to recently-active followers. Additional
-levers: only push to users who logged in recently, and let celebrity tweets be
-merged at read time so their write path stays O(1). The trade-off is write
-amplification and read latency; choose the mode per account tier.
+Push and pull are the two fanout models.
+
+- Push (fanout-on-write) pre-computes timelines: on publish, write the tweet
+  into every follower's cache, giving fast reads at the cost of O(followers)
+  writes and duplicate storage.
+- Pull (fanout-on-read) merges on demand: at read time, query the followed
+  users' recent tweets, which is cheap to write but expensive and slower to
+  read.
+
+Real systems use a hybrid.
+
+- Push for normal accounts (fanout-limited, e.g., under ~100k followers) and
+  pull for celebrities to avoid fanout explosion, or lazily push only to
+  recently-active followers.
+- Additional levers: only push to users who logged in recently, and let
+  celebrity tweets be merged at read time so their write path stays O(1).
+- The trade-off is write amplification and read latency; choose the mode per
+  account tier.
 
 ### Q3. How do you rank or order a news feed?
 
-Ranking scores candidate tweets rather than sorting purely by recency. Features
-include exponential time decay, engagement signals (likes, retweets, replies,
-video views), author quality, the user's interaction history with that author,
-and content type. Candidate generation fetches recent tweets from followed users
-(via the fanout cache), then an online ranking service applies per-user weights
-from a feature store and returns the top K. Real-time signals stream through
-Kafka into feature stores so weights refresh frequently. A common blend is
-recency for hard-followed accounts and engagement/relevance for discovery
-content, so both trending and high-quality items surface. Use predicted
-click/engagement models offline and validate thresholds with A/B testing; ranker
-latency is critical, so score in parallel and cap candidate set size.
+Ranking scores candidate tweets rather than sorting purely by recency.
+
+- Features include exponential time decay, engagement signals (likes, retweets,
+  replies, video views), author quality, the user's interaction history with
+  that author, and content type.
+- Candidate generation fetches recent tweets from followed users (via the fanout
+  cache), then an online ranking service applies per-user weights from a feature
+  store and returns the top K.
+- Real-time signals stream through Kafka into feature stores so weights refresh
+  frequently.
+- A common blend is recency for hard-followed accounts and engagement/relevance
+  for discovery content, so both trending and high-quality items surface.
+- Use predicted click/engagement models offline and validate thresholds with A/B
+  testing.
+- Ranker latency is critical, so score in parallel and cap candidate set size.
 
 ### Q4. Design Twitter search / trending topics
 
-Search is a separate pipeline from the timeline. Tweets flow through Kafka into
-an ingest job that cleans text and indexes into a distributed full-text engine
-(Elasticsearch/Solr) with an inverted index supporting filters on user, time
-range, language, and location. Index in near real time with shards replicated
-for availability. The query path: API to Search service to the index, ranked by
-relevance (BM25) blended with recency and engagement. Trending topics is a
-streaming aggregation over hashtags and normalized keywords: count occurrences
-in rolling windows (e.g., 10 minutes vs 24 hours) with a stream processor
-(Flink/Spark), compare current velocity against baseline to detect spikes,
-dedupe and normalize aliases, and serve the top K from a cache (Redis) with
-regional and language filters.
+Search is a separate pipeline from the timeline.
+
+- Tweets flow through Kafka into an ingest job that cleans text and indexes into
+  a distributed full-text engine (Elasticsearch/Solr) with an inverted index
+  supporting filters on user, time range, language, and location.
+- Index in near real time with shards replicated for availability.
+- The query path: API to Search service to the index, ranked by relevance (BM25)
+  blended with recency and engagement.
+
+Trending topics is a streaming aggregation over hashtags and normalized
+keywords.
+
+- Count occurrences in rolling windows (e.g., 10 minutes vs 24 hours) with a
+  stream processor (Flink/Spark).
+- Compare current velocity against baseline to detect spikes.
+- Dedupe and normalize aliases, and serve the top K from a cache (Redis) with
+  regional and language filters.
 
 ### Q5. How do you support a celebrity (supernode) with millions of followers?
 
 The problem is fanout explosion: pushing one tweet into millions of follower
-caches is too expensive and slow. Solution: hybrid fanout. For celebrity
-accounts, do not push — mark them as pull, and at read time the Timeline service
-fetches the celebrity's recent tweets from a dedicated hot-timeline store and
-merges them into the follower's feed. Combine with lazy fanout: skip followers
-inactive for a long period, pushing only to recently-logged-in users. Other
-techniques: cache follower lists and partition the graph by follower-count tier,
-keep the celebrity's timeline sharded and hot in cache, cap fanout with an LRU
-of active followers, and prioritize ranking the celebrity's tweets correctly at
-merge time. This keeps the write path O(1) while reads stay fast.
+caches is too expensive and slow.
+
+- The solution is hybrid fanout.
+- For celebrity accounts, do not push — mark them as pull, and at read time the
+  Timeline service fetches the celebrity's recent tweets from a dedicated
+  hot-timeline store and merges them into the follower's feed.
+- Combine with lazy fanout: skip followers inactive for a long period, pushing
+  only to recently-logged-in users.
+
+Other techniques:
+
+- Cache follower lists and partition the graph by follower-count tier.
+- Keep the celebrity's timeline sharded and hot in cache.
+- Cap fanout with an LRU of active followers.
+- Prioritize ranking the celebrity's tweets correctly at merge time.
+
+The hybrid keeps the write path O(1) while reads stay fast.
 
 ## Source
 

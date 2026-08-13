@@ -23,89 +23,107 @@ Subreddits, posts, upvoting, hot ranking, comments.
 ### Q1. Design Reddit / a community forum
 
 Reddit is a collection of subreddits — per-topic communities — each hosting
-posts that accrue votes and threaded comments. The API gateway fronts the
-read-heavy workload (browse, list posts, render comment threads) and the write
-path (submit, vote, comment). The Post Service persists submissions to Posts DB
-and streams new posts to the Ranking Worker and Search Service. Votes arrive as
-a firehose of small writes sharded by post id; the Ranking Worker periodically
-consumes vote deltas and recomputes each post's score, writing the top-N into
-the Hot Cache that the browse path reads. Comments are stored adjacent to their
-parent post for cheap tree assembly, and the Moderation Service screens new
-submissions against spam heuristics before they go fully live.
+posts that accrue votes and threaded comments.
+
+- The API gateway fronts the read-heavy workload (browse, list posts, render
+  comment threads) and the write path (submit, vote, comment).
+- The Post Service persists submissions to Posts DB and streams new posts to the
+  Ranking Worker and Search Service.
+- Votes arrive as a firehose of small writes sharded by post id; the Ranking
+  Worker periodically consumes vote deltas and recomputes each post's score,
+  writing the top-N into the Hot Cache that the browse path reads.
+- Comments are stored adjacent to their parent post for cheap tree assembly, and
+  the Moderation Service screens new submissions against spam heuristics before
+  they go fully live.
 
 Scale is dominated by reads: the front page and each subreddit's sorted list are
 precomputed, cached lists refreshed every few minutes, so a single request is a
-cache hit, not a DB scan. Writes — votes above all — are appended to a durable
-log and aggregated asynchronously rather than applied eagerly to the hot path.
-Availability matters more than strict consistency here: a slightly stale hot
-list is acceptable, so the system uses async reconciliation instead of
-transactions. Rough estimates: millions of browse requests per minute, tens of
-thousands of vote writes per second during spikes, and comment volume an order
-of magnitude below that.
+cache hit, not a DB scan.
+
+- Writes — votes above all — are appended to a durable log and aggregated
+  asynchronously rather than applied eagerly to the hot path.
+- Availability matters more than strict consistency here: a slightly stale hot
+  list is acceptable, so the system uses async reconciliation instead of
+  transactions.
+- Rough estimates: millions of browse requests per minute, tens of thousands of
+  vote writes per second during spikes, and comment volume an order of magnitude
+  below that.
 
 ### Q2. How do you model subreddits and posts?
 
 Subreddits are lightweight entities in their own table (id, slug, title,
 privacy/NSFW flags, moderator set), so every post carries a `subreddit_id`
-foreign key and moderation/membership data is read as a separate lookup. Posts
-are the large table: id, author_id, subreddit_id, kind (link/text/image/video),
-title, body, created_at, and denormalized `score` / `hot_score` columns that the
-ranking worker updates in batches rather than on every vote. The hot listing
-path uses a secondary index on `(subreddit_id, created_at)` for pagination and
-cache rebuilds, while the live list is served from a per-subreddit sorted set in
-Redis.
+foreign key and moderation/membership data is read as a separate lookup.
+
+- Posts are the large table: id, author_id, subreddit_id, kind
+  (link/text/image/video), title, body, created_at, and denormalized `score` /
+  `hot_score` columns that the ranking worker updates in batches rather than on
+  every vote.
+- The hot listing path uses a secondary index on `(subreddit_id, created_at)`
+  for pagination and cache rebuilds, while the live list is served from a
+  per-subreddit sorted set in Redis.
 
 Because post bodies can be large, the table is vertically split: a slim OLTP row
 for ids, score, and timestamps, and full text plus rendered HTML in object
-storage or a columnar store. Comments form a tree referencing `post_id` and
-`parent_id`, with a materialized path (an ancestor-id array or `ltree`-style
-string) so "all descendants of X" is a prefix scan, not a recursive CTE.
-Trending needs rolling aggregates of vote deltas, so per-post counters of
-time-bucketed up/down deltas live in Redis or a time-series store, letting the
-ranker recompute scores without scanning the full vote table.
+storage or a columnar store.
+
+- Comments form a tree referencing `post_id` and `parent_id`, with a
+  materialized path (an ancestor-id array or `ltree`-style string) so "all
+  descendants of X" is a prefix scan, not a recursive CTE.
+- Trending needs rolling aggregates of vote deltas, so per-post counters of
+  time-bucketed up/down deltas live in Redis or a time-series store, letting the
+  ranker recompute scores without scanning the full vote table.
 
 ### Q3. How do you rank content (hot / top / new)?
 
-"New" is trivially `created_at DESC` served from the secondary index. "Top" is
+"New" is trivially `created_at DESC` served from the secondary index; "Top" is
 cumulative score over a configurable window — a rolling aggregation of up/down
-vote deltas by time bucket. "Hot" is the classic Reddit formula: the score grows
-logarithmically with votes and decays with age, e.g. a `sign * log10(|score|)`
-term divided by an age penalty that grows with hours since submission, tuned so
-a fresh post with a modest vote count can outrank an old one with many. The key
-architectural insight is that these lists are precomputed, not computed per
-request: the Ranking Worker drains vote deltas from a queue every few minutes,
-recomputes hot/top for affected posts, and writes the sorted top-N into the Hot
-Cache.
+vote deltas by time bucket.
+
+- "Hot" is the classic Reddit formula: the score grows logarithmically with
+  votes and decays with age, e.g. a `sign * log10(|score|)` term divided by an
+  age penalty that grows with hours since submission, tuned so a fresh post with
+  a modest vote count can outrank an old one with many.
+- The key architectural insight is that these lists are precomputed, not
+  computed per request: the Ranking Worker drains vote deltas from a queue every
+  few minutes, recomputes hot/top for affected posts, and writes the sorted
+  top-N into the Hot Cache.
 
 Per-subreddit lists and the global front page are separate cache keys
 (`hot:subreddit:{id}`, `hot:global`); pagination uses cursor offsets over the
-cached list so users don't observe recompute churn mid-scroll. Trade-offs:
-precomputation introduces staleness — a post can reach the front page minutes
-after a vote burst — but it keeps the read path at pure cache speed and makes
-vote manipulation slower to distort ranking. Small/new subreddits fall back to a
-direct DB query over the `(subreddit_id, created_at)` index until their cached
-list warms up.
+cached list so users don't observe recompute churn mid-scroll.
+
+- Trade-offs: precomputation introduces staleness — a post can reach the front
+  page minutes after a vote burst — but it keeps the read path at pure cache
+  speed and makes vote manipulation slower to distort ranking.
+- Small/new subreddits fall back to a direct DB query over the
+  `(subreddit_id, created_at)` index until their cached list warms up.
 
 ### Q4. Design the comment tree at scale
 
 Comments are append-heavy and read-heavy per post; a single popular post can
-accumulate tens of thousands of replies. Model them as a self-referencing table:
-(id, post_id, parent_id, author_id, body, created_at, score). To render a full
-thread without recursive queries, store a materialized path — an array of
-ancestor ids or an `ltree`-style string — so subtree retrieval is a single
-prefix scan. Popular post pages serialize the whole comment tree into a
-versioned cache entry, invalidated by new comments or vote updates, so the first
-render is a cache hit and "load more" fetches collapsed subtrees lazily.
+accumulate tens of thousands of replies.
+
+- Model them as a self-referencing table: (id, post_id, parent_id, author_id,
+  body, created_at, score).
+- To render a full thread without recursive queries, store a materialized path —
+  an array of ancestor ids or an `ltree`-style string — so subtree retrieval is
+  a single prefix scan.
+- Popular post pages serialize the whole comment tree into a versioned cache
+  entry, invalidated by new comments or vote updates, so the first render is a
+  cache hit and "load more" fetches collapsed subtrees lazily.
 
 Sort modes (best, top, new, controversial) are per-node scores recomputed by the
 worker; the default "best" applies a confidence-style correction (e.g. a Wilson
-lower bound) so a 2-vote answer cannot outrank a 1000-vote one. Comment votes
-batch through the same delta pipeline as post votes. Persistence: shard the
-comment table by `post_id` (hash of post id) so a whole thread lives on one
-shard and tree queries stay local; subtree collapse metadata (which replies are
-hidden) lives in cache, not the DB. Failure handling: a thread render falls back
-to the shard's index with a recursive CTE when the cache is cold, trading
-latency for correctness during cache storms.
+lower bound) so a 2-vote answer cannot outrank a 1000-vote one.
+
+- Comment votes batch through the same delta pipeline as post votes.
+- Persistence: shard the comment table by `post_id` (hash of post id) so a whole
+  thread lives on one shard and tree queries stay local; subtree collapse
+  metadata (which replies are hidden) lives in cache, not the DB.
+- Failure handling: a thread render falls back to the shard's index with a
+  recursive CTE when the cache is cold, trading latency for correctness during
+  cache storms.
 
 ### Q5. How do you detect vote fraud and spam?
 

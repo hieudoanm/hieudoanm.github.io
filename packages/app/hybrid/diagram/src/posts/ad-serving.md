@@ -23,129 +23,183 @@ Real-time auction, targeting, budgets, attribution.
 ### Q1. Design an ad serving platform
 
 The platform brokers a real-time auction between publishers who sell impressions
-and advertisers who buy them. When a user opens a publisher site, the page fires
-an ad request to the supply-side platform (SSP), which calls the ad exchange.
-The exchange fans the impression out to demand-side platforms (DSPs); each DSP
-evaluates its advertisers' targeting rules against the user, prices the
-impression, and returns a bid. The exchange selects the highest eligible bidder,
-the SSP renders the winning creative, and a tracking service logs the impression
-and click. Every step runs under a hard latency budget — the whole auction round
-trip must complete in roughly 100ms or the page forfeits the slot.
+and advertisers who buy them.
 
-The data model is centered on a few stores: an ad store holding creative
-metadata (size, destination URL, policy compliance), a user profile store
-holding segments and identifiers for targeting, a budget service tracking spend
-per campaign, and a reporting pipeline that turns raw impression and click
-events into advertiser dashboards. Because the critical path is read-heavy and
-latency-bound, the auction logic runs in memory — profiles are pre-loaded,
-targeting is an inverted index, and no database round trip happens between
-receiving a request and returning a bid. Consent management sits at the edges:
-profile building and sharing honor opt-out and consent signals so targeted
-advertising stays lawful. The platform also plans for failure: if the exchange
-or a DSP times out, a fallback path serves a house ad so the page always has
-something to render, and impression loss is measured so any degradation is
-visible.
+- When a user opens a publisher site, the page fires an ad request to the
+  supply-side platform (SSP), which calls the ad exchange.
+- The exchange fans the impression out to demand-side platforms (DSPs); each DSP
+  evaluates its advertisers' targeting rules against the user, prices the
+  impression, and returns a bid.
+- The exchange selects the highest eligible bidder, and the SSP renders the
+  winning creative.
+- A tracking service logs the impression and click.
+- Every step runs under a hard latency budget — the whole auction round trip
+  must complete in roughly 100ms or the page forfeits the slot.
+
+The data model is centered on a few stores:
+
+- Ad store — creative metadata (size, destination URL, policy compliance).
+- User profile store — segments and identifiers for targeting.
+- Budget service — tracks spend per campaign.
+- Reporting pipeline — turns raw impression and click events into advertiser
+  dashboards.
+
+The critical path is read-heavy and latency-bound, so the auction logic runs in
+memory:
+
+- Profiles are pre-loaded, and targeting is an inverted index.
+- No database round trip happens between receiving a request and returning a
+  bid.
+
+Compliance and failure handling sit at the edges:
+
+- Consent management: profile building and sharing honor opt-out and consent
+  signals so targeted advertising stays lawful.
+- Failure handling: if the exchange or a DSP times out, a fallback path serves a
+  house ad so the page always has something to render.
+- Observability: impression loss is measured so any degradation is visible.
 
 ### Q2. How do you run a real-time auction under latency?
 
-The auction is a fan-out-and-merge. The exchange sends the impression to many
-DSPs in parallel over pre-warmed keep-alive connections, waits for bids up to a
-deadline (commonly 80–100ms from request receipt), and then picks the highest
-eligible bid above the seller's floor price. Nothing on this path may hit a slow
-store: user profiles and segment memberships are resident in RAM, and targeting
-runs as an in-memory lookup, so a DSP answers in single-digit milliseconds. The
-auction per node is single-threaded and event-driven, which lets one exchange
-instance handle tens of thousands of concurrent impressions without lock
-contention.
+The auction is a fan-out-and-merge with a hard deadline.
 
-Timeouts are mandatory. A DSP that misses the deadline is dropped and the
-auction proceeds with the bids that arrived — the page would rather show a
-cheaper ad than wait. Reserve price checks happen first so the exchange
-short-circuits when even the best possible bid cannot clear the floor, and each
-bid is validated for price integrity and creative compliance before winning. If
-no bid clears, a low-CPM house or remnant ad wins the pass. Horizontal scaling
-comes free because exchange nodes are stateless; impressions are hashed across
-nodes by site or user, and the profile data they need is replicated in each
-node's memory, keeping P99 auction latency stable as QPS grows. Load shedding is
-explicit: when a node exceeds its auction budget, it stops accepting new
-requests rather than serving late bids, because a bid returned after the
-deadline is worthless.
+- The exchange sends the impression to many DSPs in parallel over pre-warmed
+  keep-alive connections.
+- It waits for bids up to a deadline (commonly 80–100ms from request receipt),
+  then picks the highest eligible bid above the seller's floor price.
+- Nothing on the path may hit a slow store: user profiles and segment
+  memberships are resident in RAM, and targeting is an in-memory lookup, so a
+  DSP answers in single-digit milliseconds.
+- The auction per node is single-threaded and event-driven, letting one exchange
+  instance handle tens of thousands of concurrent impressions without lock
+  contention.
+
+Timeouts and validation:
+
+- A DSP that misses the deadline is dropped and the auction proceeds with the
+  bids that arrived — the page would rather show a cheaper ad than wait.
+- Reserve price checks happen first, so the exchange short-circuits when even
+  the best possible bid cannot clear the floor.
+- Each bid is validated for price integrity and creative compliance before it
+  can win; if nothing clears, a low-CPM house or remnant ad wins the pass.
+
+Scaling:
+
+- Exchange nodes are stateless, so horizontal scaling comes free.
+- Impressions are hashed across nodes by site or user, and the profile data they
+  need is replicated in each node's memory, keeping P99 auction latency stable
+  as QPS grows.
+- Load shedding is explicit: when a node exceeds its auction budget it stops
+  accepting new requests rather than serving late bids, because a bid returned
+  after the deadline is worthless.
 
 ### Q3. How do you target ads without hurting performance?
 
 Targeting is split into a coarse stage and a fine stage so expensive logic only
-runs on a tiny candidate set. Coarse targeting happens at bid time against
-pre-computed, in-memory segments: user attributes like geo, device, interests,
-and retargeting lists are materialized into segment memberships (bitsets or
-roaring bitmaps) refreshed asynchronously from streaming events. A DSP looks up
-the user's segment IDs and walks an inverted index from segment to eligible
-campaign IDs, yielding a candidate set in microseconds without touching a
-database. Consent and privacy rules gate which segments are usable per user, so
-blocked segments simply never appear in the index for that profile.
+runs on a tiny candidate set.
 
-Fine targeting — budget checks, frequency caps, creative constraints, and bid
-adjustment — then runs only on the handful of candidate ads that passed the
-coarse filter, not on the full campaign table. Profile data is allowed to be
-minutes stale, which is acceptable because targeting accuracy barely moves in
-that window; the freshness trade-off buys a hot path that never reads from disk.
-Because the matching logic lives inside the DSP process and nodes are sharded by
-user ID, targeting capacity scales linearly with the number of DSP instances.
+Coarse targeting happens at bid time against pre-computed, in-memory segments:
+
+- User attributes like geo, device, interests, and retargeting lists are
+  materialized into segment memberships (bitsets or roaring bitmaps), refreshed
+  asynchronously from streaming events.
+- A DSP looks up the user's segment IDs and walks an inverted index from segment
+  to eligible campaign IDs, yielding a candidate set in microseconds without
+  touching a database.
+- Consent and privacy rules gate which segments are usable per user, so blocked
+  segments simply never appear in the index for that profile.
+
+Fine targeting then runs on the handful of candidates that passed the coarse
+filter, not on the full campaign table:
+
+- It applies budget checks, frequency caps, creative constraints, and bid
+  adjustment.
+- Profile data is allowed to be minutes stale, which is acceptable because
+  targeting accuracy barely moves in that window; the freshness trade-off buys a
+  hot path that never reads from disk.
+- Because the matching logic lives inside the DSP process and nodes are sharded
+  by user ID, targeting capacity scales linearly with the number of DSP
+  instances.
+
 This two-stage design is the answer to "target without hurting performance": do
 the broad narrowing in memory, then apply the precise rules to almost nothing.
-A/B benchmarking of targeting rules and index builds runs continuously, so a
-rule change that bloats the index or slows lookup is caught in staging before it
-ships to the real-time path.
+
+- A/B benchmarking of targeting rules and index builds runs continuously, so a
+  rule change that bloats the index or slows lookup is caught in staging before
+  it ships to the real-time path.
 
 ### Q4. How do you enforce budgets and frequency caps?
 
-Spend tracking lives in a distributed counter store such as Redis. On every
-auction win, the budget service atomically increments a per-campaign daily-spend
-counter, and if the increment would cross the budget the campaign is removed
-from the candidate set for subsequent auctions. Because auctions are concurrent
-across many exchange nodes, reservation must be atomic — a Lua script that
-checks the remaining budget and increments in one step prevents overspend races.
-Budget enforcement is optimistic by design: a small overspend is tolerated
-within the auction window and reconciled in daily batch, so the system does not
-serialize every impression on a global lock.
+Spend tracking lives in a distributed counter store such as Redis.
 
-Frequency caps are a separate set of counters keyed by (user, campaign) that
-count impressions over a rolling window and are checked in the fine targeting
-stage; counters expire with the window so cap state stays bounded. Pacing
-smooths delivery across the day: the budget service computes an expected hourly
-spend and lowers the bid multiplier when a campaign is ahead of plan, so a
-campaign neither exhausts its budget at 9am nor trickles out at a constant low
-rate. When the counter store is unavailable the auction fails open — the
-campaign bids without budget enforcement and the event is logged — rather than
-dropping all traffic; the reconciler then corrects the drift once the store
-returns. Budget counters are sharded by campaign so a single campaign's spend
-rate never bottlenecks on one counter, and the reconciler reports over- and
-under-delivery per campaign.
+- On every auction win, the budget service atomically increments a per-campaign
+  daily-spend counter.
+- If the increment would cross the budget, the campaign is removed from the
+  candidate set for subsequent auctions.
+- Because auctions are concurrent across many exchange nodes, reservation must
+  be atomic — a Lua script that checks the remaining budget and increments in
+  one step prevents overspend races.
+- Budget enforcement is optimistic by design: a small overspend is tolerated
+  within the auction window and reconciled in daily batch, so the system does
+  not serialize every impression on a global lock.
+
+Frequency caps are a separate set of counters keyed by (user, campaign):
+
+- They count impressions over a rolling window and are checked in the fine
+  targeting stage; counters expire with the window so cap state stays bounded.
+
+Pacing smooths delivery across the day:
+
+- The budget service computes an expected hourly spend and lowers the bid
+  multiplier when a campaign is ahead of plan.
+- A campaign therefore neither exhausts its budget at 9am nor trickles out at a
+  constant low rate.
+
+Failure handling:
+
+- When the counter store is unavailable the auction fails open — the campaign
+  bids without budget enforcement and the event is logged — rather than dropping
+  all traffic.
+- The reconciler corrects the drift once the store returns.
+- Budget counters are sharded by campaign so a single campaign's spend rate
+  never bottlenecks on one counter, and the reconciler reports over- and
+  under-delivery per campaign.
 
 ### Q5. How do you attribute conversions across touchpoints?
 
 Every served ad embeds a unique click ID, and the tracking pixel carries it
 through to the advertiser's site, so the tracking service receives impression,
-click, and conversion events that share the same lineage. Each event is tagged
-with the click ID, user ID, campaign ID, and timestamp and streamed into a data
-pipeline. Attribution joins conversions back to the click or impression that
-caused them within a configurable attribution window (typically 1–30 days):
-exact joins on the click ID, with cookie and device IDs as fallback keys when a
-conversion happens on a different page or browser. Click-through and
-view-through attribution are tracked separately because they have very different
-base rates.
+click, and conversion events that share the same lineage.
+
+- Each event is tagged with the click ID, user ID, campaign ID, and timestamp,
+  and streamed into a data pipeline.
+- Attribution joins conversions back to the click or impression that caused them
+  within a configurable attribution window (typically 1–30 days).
+- Joins are exact on the click ID, with cookie and device IDs as fallback keys
+  when a conversion happens on a different page or browser.
+- Click-through and view-through attribution are tracked separately because they
+  have very different base rates.
 
 Multi-touch models distribute credit across the ordered sequence of touchpoints
-that preceded a conversion — last-click, first-click, and time-decay all reduce
-to weighted sums over the user's event stream. The join is expensive, so it runs
-as a batched offline job over event logs rather than inline, and the results
-feed both the reporting store and the budget optimizer's return-on-spend model.
-Cross-device attribution is inherently approximate because identifiers differ
-per device, so the system merges through a deterministic identity graph and
-clearly separates attributed from unattributed conversions in the reports. That
-honesty — plus configurable windows and models — is what makes the attribution
-numbers trusted by advertisers. The pipeline is idempotent — duplicate events
-are deduplicated on the (click_id, event_type, timestamp) key — so retries in
-the event collector never double-count a conversion.
+that preceded a conversion:
+
+- Last-click, first-click, and time-decay all reduce to weighted sums over the
+  user's event stream.
+- The join is expensive, so it runs as a batched offline job over event logs
+  rather than inline.
+- The results feed both the reporting store and the budget optimizer's
+  return-on-spend model.
+
+Cross-device attribution is inherently approximate:
+
+- Identifiers differ per device, so the system merges through a deterministic
+  identity graph and clearly separates attributed from unattributed conversions
+  in the reports.
+- That honesty — plus configurable windows and models — is what makes the
+  attribution numbers trusted by advertisers.
+- The pipeline is idempotent — duplicate events are deduplicated on the
+  (click_id, event_type, timestamp) key — so retries in the event collector
+  never double-count a conversion.
 
 ## Source
 

@@ -25,6 +25,8 @@ jest.mock('react-icons/fi', () => ({
   FiDatabase: () => <span data-testid="ico-database" />,
   FiTrash2: () => <span data-testid="ico-trash" />,
   FiSearch: () => <span data-testid="ico-search" />,
+  FiEdit2: () => <span data-testid="ico-edit" />,
+  FiBookOpen: () => <span data-testid="ico-book" />,
 }));
 
 jest.mock('@/providers/Providers', () => ({
@@ -57,6 +59,7 @@ const conn2: DatabaseConnection = {
 
 describe('HomePage', () => {
   const mockCreate = jest.fn().mockResolvedValue(undefined);
+  const mockUpdate = jest.fn().mockResolvedValue(undefined);
   const mockDelete = jest.fn().mockResolvedValue(undefined);
   const mockSetCurrent = jest.fn();
 
@@ -65,6 +68,7 @@ describe('HomePage', () => {
     useData.mockReturnValue({
       connections: [conn, conn2],
       createConnection: mockCreate,
+      updateConnection: mockUpdate,
       deleteConnection: mockDelete,
       setCurrentConnection: mockSetCurrent,
       isLoading: false,
@@ -74,6 +78,12 @@ describe('HomePage', () => {
   it('renders the header', () => {
     render(<HomePage />);
     expect(screen.getByText('Database Manager')).toBeInTheDocument();
+  });
+
+  it('links to the Schema Library', () => {
+    render(<HomePage />);
+    const link = screen.getByRole('link', { name: /Schema Library/ });
+    expect(link).toHaveAttribute('href', '/posts');
   });
 
   it('shows skeletons while loading', () => {
@@ -123,8 +133,28 @@ describe('HomePage', () => {
   it('deletes a connection', () => {
     render(<HomePage />);
     const card = screen.getByRole('link', { name: /Production DB/ });
-    fireEvent.click(within(card).getByRole('button'));
+    fireEvent.click(
+      within(card).getByRole('button', { name: 'Delete connection' })
+    );
     expect(mockDelete).toHaveBeenCalledWith('db-1');
+  });
+
+  it('edits a connection from the modal', () => {
+    render(<HomePage />);
+    const card = screen.getByRole('link', { name: /Production DB/ });
+    fireEvent.click(
+      within(card).getByRole('button', { name: 'Edit connection' })
+    );
+    expect(screen.getAllByText('Edit Connection')).toHaveLength(1);
+    const nameInput = screen.getByPlaceholderText('Connection name');
+    expect(nameInput).toHaveValue('Production DB');
+    fireEvent.change(nameInput, { target: { value: 'Prod DB v2' } });
+    fireEvent.click(screen.getByText('Save'));
+    expect(mockUpdate).toHaveBeenCalledWith('db-1', {
+      name: 'Prod DB v2',
+      filePath: '/data/production.db',
+      readOnly: true,
+    });
   });
 
   it('creates a connection from the modal', () => {

@@ -56,11 +56,25 @@ const PostContent: FC<PostContentProps> = ({ post }) => (
           {post.answers.map((answer) => (
             <div key={answer.question}>
               <h3 className="mb-2 font-semibold">{answer.question}</h3>
-              {answer.paragraphs.map((paragraph) => (
-                <p key={paragraph} className="mb-2 leading-relaxed">
-                  {renderInline(paragraph)}
-                </p>
-              ))}
+              {answer.blocks.map((block, index) =>
+                block.type === 'list' ? (
+                  <ul
+                    key={`list-${index}`}
+                    className="mb-2 list-disc space-y-1 pl-6">
+                    {block.items.map((item) => (
+                      <li key={item} className="leading-relaxed">
+                        {renderInline(item)}
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p
+                    key={`paragraph-${index}`}
+                    className="mb-2 leading-relaxed">
+                    {renderInline(block.text)}
+                  </p>
+                )
+              )}
             </div>
           ))}
         </div>

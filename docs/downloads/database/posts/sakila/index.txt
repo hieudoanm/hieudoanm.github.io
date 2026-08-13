@@ -1,0 +1,318 @@
+1:"$Sreact.fragment"
+2:I[10541,["/downloads/database/_next/static/chunks/3a1k-di4xi-f5.js"],"SWProvider"]
+3:I[93226,["/downloads/database/_next/static/chunks/3a1k-di4xi-f5.js"],"default"]
+4:I[62608,["/downloads/database/_next/static/chunks/3a1k-di4xi-f5.js","/downloads/database/_next/static/chunks/1e2ct4oxook1s.js"],"default"]
+5:I[35875,["/downloads/database/_next/static/chunks/3a1k-di4xi-f5.js","/downloads/database/_next/static/chunks/09e666rl1_vxm.js"],"default"]
+6:I[15750,["/downloads/database/_next/static/chunks/3a1k-di4xi-f5.js"],"default"]
+7:I[83070,["/downloads/database/_next/static/chunks/3a1k-di4xi-f5.js","/downloads/database/_next/static/chunks/3wgkkaxovvvbz.js"],""]
+9:I[17982,["/downloads/database/_next/static/chunks/3a1k-di4xi-f5.js"],"OutletBoundary"]
+a:"$Sreact.suspense"
+d:I[17982,["/downloads/database/_next/static/chunks/3a1k-di4xi-f5.js"],"ViewportBoundary"]
+f:I[17982,["/downloads/database/_next/static/chunks/3a1k-di4xi-f5.js"],"MetadataBoundary"]
+11:I[56193,["/downloads/database/_next/static/chunks/3a1k-di4xi-f5.js"],"default",1]
+:HL["/downloads/database/_next/static/chunks/0aiesmfko-70d.css","style"]
+c:X
+0:{"P":null,"c":["","posts","sakila",""],"q":"","i":false,"f":[[["",{"children":["posts",{"children":[["slug","sakila","d",[]],{"children":["__PAGE__",{},"$undefined","$undefined",4608]},"$undefined","$undefined",4608]},"$undefined","$undefined",4608]},"$undefined","$undefined",4624],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/downloads/database/_next/static/chunks/0aiesmfko-70d.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/downloads/database/_next/static/chunks/3a1k-di4xi-f5.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","data-theme":"dim","children":[["$","head",null,{"children":["$","link",null,{"rel":"apple-touch-icon","href":"/icons/icon-192.png"}]}],["$","body",null,{"className":"bg-base-100 text-base-content h-screen overflow-y-auto font-mono","children":["$","$L2",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","error":"$4","errorStyles":[],"errorScripts":[["$","script","script-0",{"src":"/downloads/database/_next/static/chunks/1e2ct4oxook1s.js","async":true}]],"template":["$","$L5",null,{"children":["$","$L6",null,{}]}],"templateStyles":[],"templateScripts":[["$","script","script-0",{"src":"/downloads/database/_next/static/chunks/09e666rl1_vxm.js","async":true}]],"notFound":[["$","div",null,{"className":"flex min-h-screen flex-col items-center justify-center px-6","children":[["$","p",null,{"className":"text-base-content/50 mb-6 text-xs tracking-[0.2em] uppercase","children":"Error"}],["$","h1",null,{"className":"mb-3","children":"404"}],["$","p",null,{"className":"text-base-content/50 mb-10 max-w-sm text-center text-sm","children":"The page you are looking for does not exist."}],["$","div",null,{"className":"flex flex-wrap justify-center gap-3","children":["$","$L7",null,{"href":"/","className":"btn btn-primary btn-sm","children":"Go home"}]}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L8",[["$","script","script-0",{"src":"/downloads/database/_next/static/chunks/3wgkkaxovvvbz.js","async":true,"nonce":"$undefined"}]],["$","$L9",null,{"children":["$","$a",null,{"name":"Next.MetadataOutlet","children":"$@b"}]}]]}],{},null,false,null]},null,false,"$c"]},null,false,"$c"]},null,false,null],["$","$1","h",{"children":[null,["$","$Ld",null,{"children":"$Le"}],["$","div",null,{"hidden":true,"children":["$","$Lf",null,{"children":["$","$a",null,{"name":"Next.Metadata","children":"$L10"}]}]}],null]}],false]],"m":"$undefined","G":["$11",[["$","link","0",{"rel":"stylesheet","href":"/downloads/database/_next/static/chunks/0aiesmfko-70d.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]]],"S":true,"h":null,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"MpvBJo6soBekxRIf-8jVo"}
+c:C
+12:T2d56,<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="1520" viewBox="0 0 1140 1520" font-family="ui-monospace, SFMono-Regular, monospace">
+  <rect width="100%" height="100%" fill="#0f172a"/>
+  <g data-table="ACTOR">
+    <rect x="40" y="40" width="220" height="128" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 40 80 L 260 80" stroke="#334155"/>
+    <text x="52" y="66" font-size="13" font-weight="600" fill="#e2e8f0">ACTOR</text>
+      <text x="52" y="96" font-size="11" fill="#9ca3af">&#128273; ActorID</text>
+      <text x="52" y="120" font-size="11" fill="#9ca3af">FirstName</text>
+      <text x="52" y="144" font-size="11" fill="#9ca3af">LastName</text>
+  </g>
+  <g data-table="ADDRESS">
+    <rect x="460" y="40" width="220" height="200" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 460 80 L 680 80" stroke="#334155"/>
+    <text x="472" y="66" font-size="13" font-weight="600" fill="#e2e8f0">ADDRESS</text>
+      <text x="472" y="96" font-size="11" fill="#9ca3af">&#128273; AddressID</text>
+      <text x="472" y="120" font-size="11" fill="#9ca3af">Address</text>
+      <text x="472" y="144" font-size="11" fill="#9ca3af">District</text>
+      <text x="472" y="168" font-size="11" fill="#9ca3af">PostalCode</text>
+      <text x="472" y="192" font-size="11" fill="#9ca3af">Phone</text>
+      <text x="472" y="216" font-size="11" fill="#9ca3af">CityID</text>
+  </g>
+  <g data-table="CATEGORY">
+    <rect x="880" y="40" width="220" height="104" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 880 80 L 1100 80" stroke="#334155"/>
+    <text x="892" y="66" font-size="13" font-weight="600" fill="#e2e8f0">CATEGORY</text>
+      <text x="892" y="96" font-size="11" fill="#9ca3af">&#128273; CategoryID</text>
+      <text x="892" y="120" font-size="11" fill="#9ca3af">Name</text>
+  </g>
+  <g data-table="CITY">
+    <rect x="40" y="248" width="220" height="128" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 40 288 L 260 288" stroke="#334155"/>
+    <text x="52" y="274" font-size="13" font-weight="600" fill="#e2e8f0">CITY</text>
+      <text x="52" y="304" font-size="11" fill="#9ca3af">&#128273; CityID</text>
+      <text x="52" y="328" font-size="11" fill="#9ca3af">City</text>
+      <text x="52" y="352" font-size="11" fill="#9ca3af">CountryID</text>
+  </g>
+  <g data-table="COUNTRY">
+    <rect x="460" y="200" width="220" height="80" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 460 240 L 680 240" stroke="#334155"/>
+    <text x="472" y="226" font-size="13" font-weight="600" fill="#e2e8f0">COUNTRY</text>
+      <text x="472" y="256" font-size="11" fill="#9ca3af">&#128273; CountryID</text>
+  </g>
+  <g data-table="CUSTOMER">
+    <rect x="880" y="320" width="220" height="200" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 880 360 L 1100 360" stroke="#334155"/>
+    <text x="892" y="346" font-size="13" font-weight="600" fill="#e2e8f0">CUSTOMER</text>
+      <text x="892" y="376" font-size="11" fill="#9ca3af">&#128273; CustomerID</text>
+      <text x="892" y="400" font-size="11" fill="#9ca3af">FirstName</text>
+      <text x="892" y="424" font-size="11" fill="#9ca3af">LastName</text>
+      <text x="892" y="448" font-size="11" fill="#9ca3af">Email</text>
+      <text x="892" y="472" font-size="11" fill="#9ca3af">StoreID</text>
+      <text x="892" y="496" font-size="11" fill="#9ca3af">AddressID</text>
+  </g>
+  <g data-table="FILM">
+    <rect x="40" y="744" width="220" height="272" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 40 784 L 260 784" stroke="#334155"/>
+    <text x="52" y="770" font-size="13" font-weight="600" fill="#e2e8f0">FILM</text>
+      <text x="52" y="800" font-size="11" fill="#9ca3af">&#128273; FilmID</text>
+      <text x="52" y="824" font-size="11" fill="#9ca3af">Title</text>
+      <text x="52" y="848" font-size="11" fill="#9ca3af">Description</text>
+      <text x="52" y="872" font-size="11" fill="#9ca3af">LanguageID</text>
+      <text x="52" y="896" font-size="11" fill="#9ca3af">RentalDuration</text>
+      <text x="52" y="920" font-size="11" fill="#9ca3af">RentalRate</text>
+      <text x="52" y="944" font-size="11" fill="#9ca3af">Length</text>
+      <text x="52" y="968" font-size="11" fill="#9ca3af">ReplacementCost</text>
+      <text x="52" y="992" font-size="11" fill="#9ca3af">Rating</text>
+  </g>
+  <g data-table="FILM_ACTOR">
+    <rect x="460" y="408" width="220" height="104" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 460 448 L 680 448" stroke="#334155"/>
+    <text x="472" y="434" font-size="13" font-weight="600" fill="#e2e8f0">FILM_ACTOR</text>
+      <text x="472" y="464" font-size="11" fill="#9ca3af">&#128273; ActorID</text>
+      <text x="472" y="488" font-size="11" fill="#9ca3af">&#128273; FilmID</text>
+  </g>
+  <g data-table="FILM_CATEGORY">
+    <rect x="880" y="408" width="220" height="104" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 880 448 L 1100 448" stroke="#334155"/>
+    <text x="892" y="434" font-size="13" font-weight="600" fill="#e2e8f0">FILM_CATEGORY</text>
+      <text x="892" y="464" font-size="11" fill="#9ca3af">&#128273; FilmID</text>
+      <text x="892" y="488" font-size="11" fill="#9ca3af">&#128273; CategoryID</text>
+  </g>
+  <g data-table="INVENTORY">
+    <rect x="40" y="664" width="220" height="128" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 40 704 L 260 704" stroke="#334155"/>
+    <text x="52" y="690" font-size="13" font-weight="600" fill="#e2e8f0">INVENTORY</text>
+      <text x="52" y="720" font-size="11" fill="#9ca3af">&#128273; InventoryID</text>
+      <text x="52" y="744" font-size="11" fill="#9ca3af">FilmID</text>
+      <text x="52" y="768" font-size="11" fill="#9ca3af">StoreID</text>
+  </g>
+  <g data-table="LANGUAGE">
+    <rect x="460" y="592" width="220" height="104" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 460 632 L 680 632" stroke="#334155"/>
+    <text x="472" y="618" font-size="13" font-weight="600" fill="#e2e8f0">LANGUAGE</text>
+      <text x="472" y="648" font-size="11" fill="#9ca3af">&#128273; LanguageID</text>
+      <text x="472" y="672" font-size="11" fill="#9ca3af">Name</text>
+  </g>
+  <g data-table="PAYMENT">
+    <rect x="880" y="880" width="220" height="200" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 880 920 L 1100 920" stroke="#334155"/>
+    <text x="892" y="906" font-size="13" font-weight="600" fill="#e2e8f0">PAYMENT</text>
+      <text x="892" y="936" font-size="11" fill="#9ca3af">&#128273; PaymentID</text>
+      <text x="892" y="960" font-size="11" fill="#9ca3af">Amount</text>
+      <text x="892" y="984" font-size="11" fill="#9ca3af">PaymentDate</text>
+      <text x="892" y="1008" font-size="11" fill="#9ca3af">CustomerID</text>
+      <text x="892" y="1032" font-size="11" fill="#9ca3af">StaffID</text>
+      <text x="892" y="1056" font-size="11" fill="#9ca3af">RentalID</text>
+  </g>
+  <g data-table="RENTAL">
+    <rect x="40" y="1160" width="220" height="200" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 40 1200 L 260 1200" stroke="#334155"/>
+    <text x="52" y="1186" font-size="13" font-weight="600" fill="#e2e8f0">RENTAL</text>
+      <text x="52" y="1216" font-size="11" fill="#9ca3af">&#128273; RentalID</text>
+      <text x="52" y="1240" font-size="11" fill="#9ca3af">RentalDate</text>
+      <text x="52" y="1264" font-size="11" fill="#9ca3af">InventoryID</text>
+      <text x="52" y="1288" font-size="11" fill="#9ca3af">CustomerID</text>
+      <text x="52" y="1312" font-size="11" fill="#9ca3af">StaffID</text>
+      <text x="52" y="1336" font-size="11" fill="#9ca3af">ReturnDate</text>
+  </g>
+  <g data-table="STAFF">
+    <rect x="460" y="1256" width="220" height="224" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 460 1296 L 680 1296" stroke="#334155"/>
+    <text x="472" y="1282" font-size="13" font-weight="600" fill="#e2e8f0">STAFF</text>
+      <text x="472" y="1312" font-size="11" fill="#9ca3af">&#128273; StaffID</text>
+      <text x="472" y="1336" font-size="11" fill="#9ca3af">FirstName</text>
+      <text x="472" y="1360" font-size="11" fill="#9ca3af">LastName</text>
+      <text x="472" y="1384" font-size="11" fill="#9ca3af">Picture</text>
+      <text x="472" y="1408" font-size="11" fill="#9ca3af">Email</text>
+      <text x="472" y="1432" font-size="11" fill="#9ca3af">StoreID</text>
+      <text x="472" y="1456" font-size="11" fill="#9ca3af">AddressID</text>
+  </g>
+  <g data-table="STORE">
+    <rect x="880" y="872" width="220" height="128" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 880 912 L 1100 912" stroke="#334155"/>
+    <text x="892" y="898" font-size="13" font-weight="600" fill="#e2e8f0">STORE</text>
+      <text x="892" y="928" font-size="11" fill="#9ca3af">&#128273; StoreID</text>
+      <text x="892" y="952" font-size="11" fill="#9ca3af">ManagerStaffID</text>
+      <text x="892" y="976" font-size="11" fill="#9ca3af">AddressID</text>
+  </g>
+  <path d="M 680 252 C 360 252, 360 300, 40 300" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="COUNTRY.CITY"/>
+  <path d="M 260 300 C 360 300, 360 92, 460 92" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="CITY.ADDRESS"/>
+  <path d="M 680 92 C 780 92, 780 372, 880 372" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="ADDRESS.CUSTOMER"/>
+  <path d="M 680 92 C 570 92, 570 1308, 460 1308" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="ADDRESS.STAFF"/>
+  <path d="M 680 92 C 780 92, 780 924, 880 924" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="ADDRESS.STORE"/>
+  <path d="M 1100 924 C 780 924, 780 1308, 460 1308" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="STORE.STAFF"/>
+  <path d="M 1100 924 C 570 924, 570 716, 40 716" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="STORE.INVENTORY"/>
+  <path d="M 680 1308 C 360 1308, 360 1212, 40 1212" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="STAFF.RENTAL"/>
+  <path d="M 1100 372 C 570 372, 570 1212, 40 1212" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="CUSTOMER.RENTAL"/>
+  <path d="M 260 716 C 150 716, 150 1212, 40 1212" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="INVENTORY.RENTAL"/>
+  <path d="M 260 1212 C 570 1212, 570 932, 880 932" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="RENTAL.PAYMENT"/>
+  <path d="M 1100 372 C 990 372, 990 932, 880 932" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="CUSTOMER.PAYMENT"/>
+  <path d="M 260 796 C 150 796, 150 716, 40 716" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="FILM.INVENTORY"/>
+  <path d="M 260 796 C 360 796, 360 460, 460 460" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="FILM.FILM_ACTOR"/>
+  <path d="M 260 92 C 360 92, 360 460, 460 460" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="ACTOR.FILM_ACTOR"/>
+  <path d="M 260 796 C 570 796, 570 460, 880 460" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="FILM.FILM_CATEGORY"/>
+  <path d="M 1100 92 C 990 92, 990 460, 880 460" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="CATEGORY.FILM_CATEGORY"/>
+  <path d="M 260 796 C 360 796, 360 644, 460 644" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="FILM.LANGUAGE"/>
+</svg>8:["$","div",null,{"className":"bg-base-100 min-h-screen","children":[["$","header",null,{"className":"border-base-300 bg-base-100 sticky top-0 z-10 flex items-center justify-between border-b px-6 py-4","children":[["$","h1",null,{"className":"text-xl font-bold","children":"Schema Library"}],["$","$L7",null,{"href":"/posts","className":"btn btn-ghost btn-sm gap-2","children":[["$","svg",null,{"stroke":"currentColor","fill":"none","strokeWidth":"2","viewBox":"0 0 24 24","strokeLinecap":"round","strokeLinejoin":"round","className":"size-3.5","children":["$undefined",[["$","line","0",{"x1":"19","y1":"12","x2":"5","y2":"12","children":[]}],["$","polyline","1",{"points":"12 19 5 12 12 5","children":[]}]]],"style":{"color":"$undefined"},"height":"1em","width":"1em","xmlns":"http://www.w3.org/2000/svg"}]," All schemas"]}]]}],["$","main",null,{"className":"mx-auto max-w-3xl p-6","children":[["$","article",null,{"className":"prose-invert","children":[["$","h1","0",{"className":"mb-2 mt-2 text-2xl font-bold text-slate-50","children":["Sakila — DVD Rental Store"]}],["$","blockquote","1",{"className":"border-l-4 border-indigo-500/60 pl-4 text-slate-400","children":[["$","p","0",{"className":"mb-2 last:mb-0","children":["The modern MySQL sample database for a movie rental shop. Sakila replaces the"]}],["$","p","1",{"className":"mb-2 last:mb-0","children":["older \"world\" and \"employees\" samples and is the go-to schema for teaching"]}],["$","p","2",{"className":"mb-2 last:mb-0","children":["joins, actors/films many-to-many relations, and payment reporting."]}]]}],["$","h2","2",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["ER Diagram (Mermaid)"]}],["$","div","3",{"className":"overflow-x-auto rounded-xl border border-slate-800","dangerouslySetInnerHTML":{"__html":"$12"}}],"$L13","$L14","$L15","$L16","$L17","$L18","$L19","$L1a","$L1b","$L1c","$L1d","$L1e","$L1f","$L20","$L21","$L22","$L23","$L24","$L25","$L26"]}],"$L27"]}]]}]
+13:["$","h2","4",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["ASCII Diagram"]}]
+14:["$","div","5",{"className":"mb-4","children":["$","pre",null,{"className":"overflow-x-auto rounded-xl border border-slate-800 bg-slate-950 p-4 text-[13px] leading-relaxed text-slate-300","children":["$","code",null,{"children":"   COUNTRY ---< CITY ---< ADDRESS --< STORE\n                |            |          |\n                |            |          |---< STAFF\n                |            |---< CUSTOMER\n                |\n  LANGUAGE ---< FILM ---< INVENTORY ---< RENTAL >--- PAYMENT\n                  |           ^           ^   ^\n                  |--< FILM_ACTOR >--- ACTOR    |--< CUSTOMER\n                  |--< FILM_CATEGORY >--- CATEGORY   |--< STAFF"}]}]}]
+15:["$","h2","6",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["Tables"]}]
+16:["$","div","7",{"className":"mb-4","children":["$","div",null,{"className":"overflow-x-auto rounded-xl border border-slate-800","children":["$","table",null,{"className":"w-full text-left text-sm","children":[["$","thead",null,{"children":["$","tr",null,{"className":"border-b border-slate-800 bg-slate-900/60","children":[["$","th","0",{"className":"px-4 py-2 font-semibold text-slate-200","children":["Table"]}],["$","th","1",{"className":"px-4 py-2 font-semibold text-slate-200","children":["PK"]}],["$","th","2",{"className":"px-4 py-2 font-semibold text-slate-200","children":["Key FKs"]}],["$","th","3",{"className":"px-4 py-2 font-semibold text-slate-200","children":["Notes"]}]]}]}],["$","tbody",null,{"children":[["$","tr","0",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Country"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"CountryID"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":["—"]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Geographies"]}]]}],["$","tr","1",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"City"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"CityID"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"CountryID → Country"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["—"]}]]}],["$","tr","2",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Address"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"AddressID"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"CityID → City"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Postal/phone detail"]}]]}],["$","tr","3",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Store"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"StoreID"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"ManagerStaffID → Staff"}],", ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"AddressID → Address"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["One store per manager"]}]]}],["$","tr","4",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Staff"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"StaffID"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":"$L28"}],"$L29"]}],"$L2a","$L2b","$L2c","$L2d","$L2e","$L2f","$L30","$L31","$L32","$L33"]}]]}]}]}]
+17:["$","h2","8",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["Notable Design Patterns"]}]
+18:["$","ul","9",{"className":"mb-4 list-disc space-y-1 pl-5 text-slate-400","children":[["$","li","0",{"children":[["$","strong","0",{"className":"font-semibold text-slate-100","children":"Inventory as an entity"}],": ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Film"}]," (title, rating, price) is separated from"]}]]}]
+19:["$","p","10",{"className":"mb-4 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Inventory"}]," (the individual physical copies) — the standard SKU / product / instance split."]}]
+1a:["$","ul","11",{"className":"mb-4 list-disc space-y-1 pl-5 text-slate-400","children":[["$","li","0",{"children":[["$","strong","0",{"className":"font-semibold text-slate-100","children":"Three many-to-many junctions"}],": ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Film_Actor"}],", ",["$","code","4",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Film_Category"}],", and the"]}]]}]
+1b:["$","p","12",{"className":"mb-4 text-slate-400","children":["implicit film↔store relationship via ",["$","code","1",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Inventory"}],". A great study of when to use composite-key junction tables."]}]
+1c:["$","ul","13",{"className":"mb-4 list-disc space-y-1 pl-5 text-slate-400","children":[["$","li","0",{"children":[["$","strong","0",{"className":"font-semibold text-slate-100","children":"Geography dimension"}]," (",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Country → City → Address"}],") is a clean"]}]]}]
+1d:["$","p","14",{"className":"mb-4 text-slate-400","children":["snowflake-style hierarchy reused by stores, staff, and customers."]}]
+1e:["$","ul","15",{"className":"mb-4 list-disc space-y-1 pl-5 text-slate-400","children":[["$","li","0",{"children":[["$","strong","0",{"className":"font-semibold text-slate-100","children":"Two \"ticket\" tables in one flow"}],": ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Rental"}]," captures the loan, ",["$","code","4",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Payment"}]]}]]}]
+1f:["$","p","16",{"className":"mb-4 text-slate-400","children":["captures the money; both reference ",["$","code","1",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Staff"}]," for auditing who processed them."]}]
+20:["$","ul","17",{"className":"mb-4 list-disc space-y-1 pl-5 text-slate-400","children":[["$","li","0",{"children":["Self-references and lookups keep every fact table narrow and join-heavy —"]}]]}]
+21:["$","p","18",{"className":"mb-4 text-slate-400","children":["realistic for teaching ",["$","code","1",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"INNER JOIN"}],", ",["$","code","3",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"GROUP BY"}],", and reporting."]}]
+22:["$","h2","19",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["Sample Queries"]}]
+23:["$","div","20",{"className":"mb-4","children":["$","pre",null,{"className":"overflow-x-auto rounded-xl border border-slate-800 bg-slate-950 p-4 text-[13px] leading-relaxed text-slate-300","children":["$","code",null,{"children":"-- Top 10 rented films of all time\nSELECT f.title, COUNT(r.rental_id) AS times_rented\nFROM film f\nJOIN inventory i ON i.film_id = f.film_id\nJOIN rental r    ON r.inventory_id = i.inventory_id\nGROUP BY f.film_id\nORDER BY times_rented DESC\nLIMIT 10;\n\n-- Revenue per category\nSELECT c.name AS category, SUM(p.amount) AS revenue\nFROM category c\nJOIN film_category fc ON fc.category_id = c.category_id\nJOIN film f           ON f.film_id      = fc.film_id\nJOIN inventory i      ON i.film_id      = f.film_id\nJOIN rental r         ON r.inventory_id = i.inventory_id\nJOIN payment p        ON p.rental_id    = r.rental_id\nGROUP BY c.category_id\nORDER BY revenue DESC;\n\n-- Films whose actors never overlap with a given actor (complex anti-join)\nSELECT f.title\nFROM film f\nWHERE f.film_id NOT IN (\n  SELECT DISTINCT fa.film_id\n  FROM film_actor fa\n  JOIN film_actor ref ON ref.actor_id = 1\n  WHERE fa.actor_id <> 1 AND fa.film_id = ref.film_id\n);"}]}]}]
+24:["$","h2","21",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["Recreate the Sample"]}]
+25:["$","p","22",{"className":"mb-4 text-slate-400","children":["Run these statements in order to rebuild the schema."]}]
+34:Tbb6,PRAGMA foreign_keys = ON;
+
+CREATE TABLE country (
+  country_id INTEGER PRIMARY KEY,
+  country    TEXT NOT NULL
+);
+
+CREATE TABLE city (
+  city_id    INTEGER PRIMARY KEY,
+  city       TEXT NOT NULL,
+  country_id INTEGER NOT NULL REFERENCES country(country_id)
+);
+
+CREATE TABLE address (
+  address_id  INTEGER PRIMARY KEY,
+  address     TEXT NOT NULL,
+  district    TEXT,
+  postal_code TEXT,
+  phone       TEXT,
+  city_id     INTEGER NOT NULL REFERENCES city(city_id)
+);
+
+CREATE TABLE language (
+  language_id INTEGER PRIMARY KEY,
+  name        TEXT NOT NULL
+);
+
+CREATE TABLE category (
+  category_id INTEGER PRIMARY KEY,
+  name        TEXT NOT NULL
+);
+
+CREATE TABLE actor (
+  actor_id   INTEGER PRIMARY KEY,
+  first_name TEXT NOT NULL,
+  last_name  TEXT NOT NULL
+);
+
+CREATE TABLE film (
+  film_id          INTEGER PRIMARY KEY,
+  title            TEXT NOT NULL,
+  description      TEXT,
+  language_id      INTEGER NOT NULL REFERENCES language(language_id),
+  rental_duration  INTEGER NOT NULL,
+  rental_rate      REAL NOT NULL,
+  length           INTEGER,
+  replacement_cost REAL NOT NULL,
+  rating           TEXT
+);
+
+CREATE TABLE film_actor (
+  actor_id INTEGER NOT NULL REFERENCES actor(actor_id),
+  film_id  INTEGER NOT NULL REFERENCES film(film_id),
+  PRIMARY KEY (actor_id, film_id)
+);
+
+CREATE TABLE film_category (
+  film_id     INTEGER NOT NULL REFERENCES film(film_id),
+  category_id INTEGER NOT NULL REFERENCES category(category_id),
+  PRIMARY KEY (film_id, category_id)
+);
+
+CREATE TABLE store (
+  store_id         INTEGER PRIMARY KEY,
+  manager_staff_id INTEGER REFERENCES staff(staff_id),
+  address_id       INTEGER NOT NULL REFERENCES address(address_id)
+);
+
+CREATE TABLE staff (
+  staff_id   INTEGER PRIMARY KEY,
+  first_name TEXT NOT NULL,
+  last_name  TEXT NOT NULL,
+  picture    BLOB,
+  email      TEXT,
+  store_id   INTEGER NOT NULL REFERENCES store(store_id),
+  address_id INTEGER NOT NULL REFERENCES address(address_id)
+);
+
+CREATE TABLE customer (
+  customer_id INTEGER PRIMARY KEY,
+  first_name  TEXT NOT NULL,
+  last_name   TEXT NOT NULL,
+  email       TEXT,
+  store_id    INTEGER NOT NULL REFERENCES store(store_id),
+  address_id  INTEGER NOT NULL REFERENCES address(address_id)
+);
+
+CREATE TABLE inventory (
+  inventory_id INTEGER PRIMARY KEY,
+  film_id      INTEGER NOT NULL REFERENCES film(film_id),
+  store_id     INTEGER NOT NULL REFERENCES store(store_id)
+);
+
+CREATE TABLE rental (
+  rental_id    INTEGER PRIMARY KEY,
+  rental_date  TEXT NOT NULL,
+  inventory_id INTEGER NOT NULL REFERENCES inventory(inventory_id),
+  customer_id  INTEGER NOT NULL REFERENCES customer(customer_id),
+  staff_id     INTEGER NOT NULL REFERENCES staff(staff_id),
+  return_date  TEXT
+);
+
+CREATE TABLE payment (
+  payment_id   INTEGER PRIMARY KEY,
+  amount       REAL NOT NULL,
+  payment_date TEXT NOT NULL,
+  customer_id  INTEGER NOT NULL REFERENCES customer(customer_id),
+  staff_id     INTEGER NOT NULL REFERENCES staff(staff_id),
+  rental_id    INTEGER NOT NULL REFERENCES rental(rental_id)
+);26:["$","div","23",{"className":"mb-4","children":["$","pre",null,{"className":"overflow-x-auto rounded-xl border border-slate-800 bg-slate-950 p-4 text-[13px] leading-relaxed text-slate-300","children":["$","code",null,{"children":"$34"}]}]}]
+27:["$","nav",null,{"className":"border-base-300 mt-12 flex items-center justify-between gap-3 border-t pt-4","children":[["$","$L7",null,{"href":"/posts/project-management","className":"btn btn-ghost btn-sm gap-2","children":[["$","svg",null,{"stroke":"currentColor","fill":"none","strokeWidth":"2","viewBox":"0 0 24 24","strokeLinecap":"round","strokeLinejoin":"round","className":"size-3.5","children":["$undefined",[["$","line","0",{"x1":"19","y1":"12","x2":"5","y2":"12","children":[]}],["$","polyline","1",{"points":"12 19 5 12 12 5","children":[]}]]],"style":{"color":"$undefined"},"height":"1em","width":"1em","xmlns":"http://www.w3.org/2000/svg"}]," ","Project Management (Kanban)"]}],["$","$L7",null,{"href":"/posts/social-media","className":"btn btn-ghost btn-sm gap-2","children":["Social Media Platform"," ",["$","svg",null,{"stroke":"currentColor","fill":"none","strokeWidth":"2","viewBox":"0 0 24 24","strokeLinecap":"round","strokeLinejoin":"round","className":"size-3.5","children":["$undefined",[["$","line","0",{"x1":"5","y1":"12","x2":"19","y2":"12","children":[]}],["$","polyline","1",{"points":"12 5 19 12 12 19","children":[]}]]],"style":{"color":"$undefined"},"height":"1em","width":"1em","xmlns":"http://www.w3.org/2000/svg"}]]}]]}]
+28:[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"StoreID → Store"}],", ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"AddressID → Address"}]]
+29:["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Employees"]}]
+2a:["$","tr","5",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Customer"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"CustomerID"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"StoreID → Store"}],", ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"AddressID → Address"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["—"]}]]}]
+2b:["$","tr","6",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Film"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"FilmID"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"LanguageID → Language"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Attributes in ",["$","code","1",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Film"}]]}]]}]
+2c:["$","tr","7",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Actor"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"ActorID"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":["—"]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["—"]}]]}]
+2d:["$","tr","8",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Film_Actor"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"ActorID"}],"+",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"FilmID"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":["both composite FKs"]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["M:N actors ↔ films"]}]]}]
+2e:["$","tr","9",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Category"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"CategoryID"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":["—"]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Genre lookup"]}]]}]
+2f:["$","tr","10",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Film_Category"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"FilmID"}],"+",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"CategoryID"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":["both composite FKs"]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["M:N films ↔ categories"]}]]}]
+30:["$","tr","11",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Language"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"LanguageID"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":["—"]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Lookup"]}]]}]
+31:["$","tr","12",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Inventory"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"InventoryID"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"FilmID → Film"}],", ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"StoreID → Store"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Physical copy of a film"]}]]}]
+32:["$","tr","13",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Rental"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"RentalID"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"InventoryID"}],", ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"CustomerID"}],", ",["$","code","4",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"StaffID"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Rented copy, returned date"]}]]}]
+33:["$","tr","14",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Payment"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"PaymentID"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"CustomerID"}],", ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"StaffID"}],", ",["$","code","4",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"RentalID → Rental"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Money received"]}]]}]
+e:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+b:null
+10:[["$","title","0",{"children":"Sakila — DVD Rental Store · Schema Library"}],["$","meta","1",{"name":"description","content":"The modern MySQL sample database for a movie rental shop. Sakila replaces the older \"world\" and \"employees\" samples and is the go-to schema for teaching joins, actors/films many-to-many relations, and payment reporting."}],["$","link","2",{"rel":"manifest","href":"/manifest.json","crossOrigin":"$undefined"}],["$","meta","3",{"name":"mobile-web-app-capable","content":"yes"}],["$","meta","4",{"name":"apple-mobile-web-app-title","content":"Database"}],["$","meta","5",{"name":"apple-mobile-web-app-status-bar-style","content":"black-translucent"}]]

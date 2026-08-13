@@ -23,26 +23,34 @@ Mutual exclusion, leases, fencing, fairness, failover.
 ### Q1. Design a distributed lock service
 
 The service coordinates mutually exclusive access to a shared resource across
-many processes. A client calls the lock API to acquire a lock on a named key;
-the API attempts an atomic write in the lock store — typically Redis with
-`SET key token NX PX ttl` — and if the write succeeds, the client holds the
-lock. Every lock carries a lease (TTL), because a crashed holder must not block
-everyone else forever. A lease manager tracks expiry, a heartbeat endpoint lets
-a healthy holder renew its lease while it still works, and a monitor scans for
-expired locks so the store can be reclaimed.
+many processes.
 
-Acquisition, renewal, and release are all token-driven: the store grants a
-unique token per acquisition, and release uses a compare-and-delete so a client
-can only release the lock it actually holds. A wait queue holds contending
-clients fairly instead of letting them race by polling. When the client
-finishes, it deletes the lock; when it crashes, the lease expires and the lock
-is re-issued to the next waiter. An audit log records every acquire, renew, and
-release for debugging contention and deadlocks. The service's core guarantee is
-mutual exclusion under normal operation, with leases bounding how long exclusion
-survives a holder failure and fencing tokens making even stale holders harmless.
-Locks are scoped per resource namespace and environment so production and
-staging never contend, and the API exposes TTL, queue position, and current
-holder so callers can debug contention without guessing.
+- A client calls the lock API to acquire a lock on a named key; the API attempts
+  an atomic write in the lock store — typically Redis with
+  `SET key token NX PX ttl` — and if the write succeeds, the client holds the
+  lock.
+- Every lock carries a lease (TTL), because a crashed holder must not block
+  everyone else forever.
+- A lease manager tracks expiry, a heartbeat endpoint lets a healthy holder
+  renew its lease while it still works, and a monitor scans for expired locks so
+  the store can be reclaimed.
+
+Acquisition, renewal, and release are all token-driven.
+
+- The store grants a unique token per acquisition, and release uses a
+  compare-and-delete so a client can only release the lock it actually holds.
+- A wait queue holds contending clients fairly instead of letting them race by
+  polling.
+- When the client finishes, it deletes the lock; when it crashes, the lease
+  expires and the lock is re-issued to the next waiter.
+- An audit log records every acquire, renew, and release for debugging
+  contention and deadlocks.
+- The service's core guarantee is mutual exclusion under normal operation, with
+  leases bounding how long exclusion survives a holder failure and fencing
+  tokens making even stale holders harmless.
+- Locks are scoped per resource namespace and environment so production and
+  staging never contend, and the API exposes TTL, queue position, and current
+  holder so callers can debug contention without guessing.
 
 ### Q2. How do you guarantee mutual exclusion across nodes?
 

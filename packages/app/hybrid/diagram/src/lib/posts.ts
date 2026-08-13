@@ -1,9 +1,12 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
+export type PostBlock =
+  { type: 'paragraph'; text: string } | { type: 'list'; items: string[] };
+
 export interface PostAnswer {
   question: string;
-  paragraphs: string[];
+  blocks: PostBlock[];
 }
 
 export type PostDifficulty = 'easy' | 'medium' | 'hard';
@@ -94,6 +97,43 @@ const groupParagraphs = (lines: string[]): string[] => {
   return paragraphs.filter(Boolean);
 };
 
+const groupBlocks = (lines: string[]): PostBlock[] => {
+  const blocks: PostBlock[] = [];
+  let paragraph: string[] = [];
+  let list: string[] = [];
+  const flushParagraph = (): void => {
+    const text = paragraph.join(' ').trim();
+    if (text) blocks.push({ type: 'paragraph', text });
+    paragraph = [];
+  };
+  const flushList = (): void => {
+    const items = list.map((item) => item.trim()).filter(Boolean);
+    if (items.length > 0) blocks.push({ type: 'list', items });
+    list = [];
+  };
+  for (const raw of lines) {
+    const trimmed = raw.trim();
+    if (!trimmed) {
+      flushParagraph();
+      flushList();
+      continue;
+    }
+    const bullet = trimmed.match(/^[-*]\s+(.+)$/);
+    if (bullet) {
+      flushParagraph();
+      list.push(bullet[1].trim());
+    } else if (list.length > 0 && raw.startsWith(' ')) {
+      list[list.length - 1] += ` ${trimmed}`;
+    } else {
+      flushList();
+      paragraph.push(trimmed);
+    }
+  }
+  flushParagraph();
+  flushList();
+  return blocks;
+};
+
 const stripQuestionPrefix = (heading: string): string =>
   heading.replace(/^Q\d+\.\s*/, '').trim();
 
@@ -113,7 +153,7 @@ const parseAnswers = (lines: string[]): PostAnswer[] => {
   }
   return blocks.map((block) => ({
     question: block.question,
-    paragraphs: groupParagraphs(block.lines),
+    blocks: groupBlocks(block.lines),
   }));
 };
 

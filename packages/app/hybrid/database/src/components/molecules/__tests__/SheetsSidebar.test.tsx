@@ -6,6 +6,7 @@ import type { SqliteTableMeta } from '@/types/sqlite';
 jest.mock('react-icons/fi', () => ({
   FiTable: () => <span data-testid="ico-table" />,
   FiDatabase: () => <span data-testid="ico-database" />,
+  FiSearch: () => <span data-testid="ico-search" />,
   FiChevronDown: () => <span data-testid="ico-chev-down" />,
   FiChevronRight: () => <span data-testid="ico-chev-right" />,
 }));

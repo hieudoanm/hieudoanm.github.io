@@ -8,6 +8,7 @@ jest.mock('react-icons/fi', () => ({
   FiDatabase: () => <span data-testid="ico-database" />,
   FiSave: () => <span data-testid="ico-save" />,
   FiDownload: () => <span data-testid="ico-download" />,
+  FiCode: () => <span data-testid="ico-code" />,
 }));
 
 describe('SheetsToolbar', () => {
@@ -21,6 +22,7 @@ describe('SheetsToolbar', () => {
     onLoadOpfs: jest.fn(),
     onSave: jest.fn(),
     onExport: jest.fn(),
+    onExportSql: jest.fn(),
   };
 
   it('renders Open .db button', () => {
@@ -57,10 +59,11 @@ describe('SheetsToolbar', () => {
     expect(screen.getByText('New DB').closest('button')).toBeDisabled();
   });
 
-  it('disables Save and Export when no dbInstance', () => {
+  it('disables Save, Export and Export SQL when no dbInstance', () => {
     render(<SheetsToolbar {...defaultProps} />);
     expect(screen.getByText('Save OPFS').closest('button')).toBeDisabled();
     expect(screen.getByText('Export .db').closest('button')).toBeDisabled();
+    expect(screen.getByText('Export SQL').closest('button')).toBeDisabled();
   });
 
   it('shows OPFS dropdown when files exist', () => {
@@ -84,6 +87,19 @@ describe('SheetsToolbar', () => {
     );
     fireEvent.click(screen.getByText('Export .db'));
     expect(onExport).toHaveBeenCalled();
+  });
+
+  it('calls onExportSql when Export SQL button clicked', () => {
+    const onExportSql = jest.fn();
+    render(
+      <SheetsToolbar
+        {...defaultProps}
+        dbInstance={true}
+        onExportSql={onExportSql}
+      />
+    );
+    fireEvent.click(screen.getByText('Export SQL'));
+    expect(onExportSql).toHaveBeenCalled();
   });
 
   it('calls onLoadOpfs when OPFS file item clicked', () => {

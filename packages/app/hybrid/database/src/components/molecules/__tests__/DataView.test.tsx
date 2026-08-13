@@ -12,6 +12,9 @@ jest.mock('@/components/atoms/SortIcon', () => ({
 jest.mock('react-icons/fi', () => ({
   FiDownload: () => <span data-testid="ico-download" />,
   FiSearch: () => <span data-testid="ico-search" />,
+  FiMoreHorizontal: () => <span data-testid="ico-more" />,
+  FiPlus: () => <span data-testid="ico-plus" />,
+  FiUpload: () => <span data-testid="ico-upload" />,
 }));
 
 const baseResult: SqliteQueryResult = {
@@ -136,5 +139,84 @@ describe('DataView', () => {
   it('shows loading spinner when loading', () => {
     const { container } = render(<DataView {...defaultProps} loading={true} />);
     expect(container.querySelector('.loading')).toBeInTheDocument();
+  });
+
+  it('shows add-row button when editable', () => {
+    render(<DataView {...defaultProps} editable={true} onAddRow={jest.fn()} />);
+    expect(screen.getByText('Row')).toBeInTheDocument();
+  });
+
+  it('calls onAddRow when the Row button is clicked', () => {
+    const onAddRow = jest.fn();
+    render(<DataView {...defaultProps} editable={true} onAddRow={onAddRow} />);
+    fireEvent.click(screen.getByText('Row'));
+    expect(onAddRow).toHaveBeenCalled();
+  });
+
+  it('edits a cell and commits on Enter', () => {
+    const onUpdateCell = jest.fn();
+    render(
+      <DataView
+        {...defaultProps}
+        editable={true}
+        onUpdateCell={onUpdateCell}
+        pageOriginalIndices={[10, 11, 12]}
+      />
+    );
+    fireEvent.doubleClick(screen.getByText('Alice'));
+    const input = screen.getByDisplayValue('Alice');
+    fireEvent.change(input, { target: { value: 'Alicia' } });
+    fireEvent.keyDown(input, { key: 'Enter' });
+    expect(onUpdateCell).toHaveBeenCalledWith(10, 1, 'Alicia');
+  });
+
+  it('turns empty edits into NULL', () => {
+    const onUpdateCell = jest.fn();
+    render(
+      <DataView {...defaultProps} editable={true} onUpdateCell={onUpdateCell} />
+    );
+    fireEvent.doubleClick(screen.getByText('Alice'));
+    const input = screen.getByDisplayValue('Alice');
+    fireEvent.change(input, { target: { value: '' } });
+    fireEvent.blur(input);
+    expect(onUpdateCell).toHaveBeenCalledWith(0, 1, null);
+  });
+
+  it('opens the row menu and deletes a row', () => {
+    const onDeleteRow = jest.fn();
+    render(
+      <DataView
+        {...defaultProps}
+        editable={true}
+        onDeleteRow={onDeleteRow}
+        pageOriginalIndices={[10, 11, 12]}
+      />
+    );
+    fireEvent.click(screen.getAllByLabelText('Row actions')[0]);
+    fireEvent.click(screen.getByText('Delete row'));
+    expect(onDeleteRow).toHaveBeenCalledWith(10);
+  });
+
+  it('copies a row as SQL INSERT via the row menu', () => {
+    const onCopyRow = jest.fn();
+    render(
+      <DataView
+        {...defaultProps}
+        editable={true}
+        onCopyRow={onCopyRow}
+        pageOriginalIndices={[0, 1, 2]}
+      />
+    );
+    fireEvent.click(screen.getAllByLabelText('Row actions')[1]);
+    fireEvent.click(screen.getByText('Copy SQL INSERT'));
+    expect(onCopyRow).toHaveBeenCalledWith(1, 'sql');
+  });
+
+  it('calls onColFilter when a column filter input changes', () => {
+    const onColFilter = jest.fn();
+    render(<DataView {...defaultProps} onColFilter={onColFilter} />);
+    const inputs = screen.getAllByPlaceholderText('filter');
+    fireEvent.change(inputs[0], { target: { value: '1' } });
+    expect(onColFilter).toHaveBeenCalledWith(0, '1');
   });
 });

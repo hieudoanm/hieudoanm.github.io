@@ -24,64 +24,80 @@ Tickets, routing, knowledge base, live chat, SLAs.
 
 A customer support platform such as Zendesk turns every customer interaction
 into a ticket, the unit of work an agent can pick up, resolve, and measure.
-Tickets arrive from email, web forms, chat, phone, and social channels, so the
-first job of the system is normalization: every inbound message becomes a ticket
-with a channel, requester, subject, and body, regardless of origin. The Ticket
-Service owns the ticket record, the Routing Engine decides which agent or queue
-it goes to, the Agent Workspace presents a working view, and the SLA Tracker
-watches deadlines. The API gateway is the single entry point for all clients and
-internal services.
 
-The architecture is event-driven from the start. Creating a ticket writes the
-record to the Tickets DB, a relational store partitioned by tenant, and then
-publishes an event so that routing, SLA monitoring, and notifications all react
-asynchronously. This matters because a ticket can trigger many downstream
-actions: an assignment, an auto-reply, a satisfaction survey, a knowledge base
-suggestion, and an SLA clock all start at creation. If those were done
-synchronously the request path would be slow and fragile, so each subscriber
-consumes the event independently and the routing decision can be re-run if an
-agent goes offline.
+- Tickets arrive from email, web forms, chat, phone, and social channels, so the
+  first job of the system is normalization: every inbound message becomes a
+  ticket with a channel, requester, subject, and body, regardless of origin.
+- The Ticket Service owns the ticket record, the Routing Engine decides which
+  agent or queue it goes to, the Agent Workspace presents a working view, and
+  the SLA Tracker watches deadlines.
+- The API gateway is the single entry point for all clients and internal
+  services.
 
-Reads are the other half of the workload. Agents poll for new work, search past
-tickets, and open knowledge base articles while composing a reply. The Ticket
-Service serves current state from the database, while a search index handles
-full-text lookup over ticket content, and a cache serves the most recently
-viewed tickets and agent queues. Multi-tenancy is enforced at every layer
-through tenant-scoped keys, because one noisy tenant must never be able to
-degrade another's queries. The end result is a system where creation is fast,
-assignment is fair, and agents can always see the full picture of a customer's
-history.
+The architecture is event-driven from the start.
+
+- Creating a ticket writes the record to the Tickets DB, a relational store
+  partitioned by tenant, and then publishes an event so that routing, SLA
+  monitoring, and notifications all react asynchronously.
+- This matters because a ticket can trigger many downstream actions: an
+  assignment, an auto-reply, a satisfaction survey, a knowledge base suggestion,
+  and an SLA clock all start at creation.
+- If those were done synchronously the request path would be slow and fragile,
+  so each subscriber consumes the event independently and the routing decision
+  can be re-run if an agent goes offline.
+
+Reads are the other half of the workload.
+
+- Agents poll for new work, search past tickets, and open knowledge base
+  articles while composing a reply.
+- The Ticket Service serves current state from the database, while a search
+  index handles full-text lookup over ticket content, and a cache serves the
+  most recently viewed tickets and agent queues.
+- Multi-tenancy is enforced at every layer through tenant-scoped keys, because
+  one noisy tenant must never be able to degrade another's queries.
+- The end result is a system where creation is fast, assignment is fair, and
+  agents can always see the full picture of a customer's history.
 
 ### Q2. How do you route tickets to the right agent?
 
 Routing is a decision problem with business rules on one side and operational
-state on the other. Every ticket carries attributes: channel, language,
-priority, product area, customer tier, and any skills required to answer it. The
-Routing Engine evaluates a policy that maps these attributes to candidate
-agents, for example language and product-match rules that companies configure in
-the admin UI. The engine then scores the candidates against live state: current
-workload, skills, availability, timezone, and past performance. The
-highest-scoring available agent receives the assignment, or the ticket is placed
-in a queue when no agent qualifies right now.
+state on the other.
 
-The scoring model must balance fairness with efficiency. Routing solely to the
-least-loaded agent can send a ticket to someone unqualified; routing to the most
-skilled agent can overload a handful of experts. Most platforms therefore use
-weighted scoring where skill match dominates, then workload and idle time break
-ties, and round-robin among equal scores prevents bias. Because agent state
-changes constantly, scoring uses a snapshot cache of agent status and queue
-depth with a short TTL, so the engine does not query the database for every
-ticket. Assignments are conditional: the engine reserves an agent for the ticket
-and only commits when the agent accepts, releasing the reservation if it times
-out.
+- Every ticket carries attributes: channel, language, priority, product area,
+  customer tier, and any skills required to answer it.
+- The Routing Engine evaluates a policy that maps these attributes to candidate
+  agents, for example language and product-match rules that companies configure
+  in the admin UI.
+- The engine then scores the candidates against live state: current workload,
+  skills, availability, timezone, and past performance.
+- The highest-scoring available agent receives the assignment, or the ticket is
+  placed in a queue when no agent qualifies right now.
 
-The hard cases are escalations and VIP handling. A ticket whose SLA is about to
-breach must jump the queue and preempt lower-priority work. A customer from an
-enterprise tier expects the same agent who handled their last ticket, so the
-router consults a sticky-assignment table linking repeat customers to their
-prior agents. Finally, routing decisions must be auditable: each assignment logs
-the inputs, the policy version, and the scores, so a manager can see why a
-ticket landed where it did and adjust the rules without touching code.
+The scoring model must balance fairness with efficiency.
+
+- Routing solely to the least-loaded agent can send a ticket to someone
+  unqualified; routing to the most skilled agent can overload a handful of
+  experts.
+- Most platforms therefore use weighted scoring where skill match dominates,
+  then workload and idle time break ties, and round-robin among equal scores
+  prevents bias.
+- Because agent state changes constantly, scoring uses a snapshot cache of agent
+  status and queue depth with a short TTL, so the engine does not query the
+  database for every ticket.
+- Assignments are conditional: the engine reserves an agent for the ticket and
+  only commits when the agent accepts, releasing the reservation if it times
+  out.
+
+The hard cases are escalations and VIP handling.
+
+- A ticket whose SLA is about to breach must jump the queue and preempt
+  lower-priority work.
+- A customer from an enterprise tier expects the same agent who handled their
+  last ticket, so the router consults a sticky-assignment table linking repeat
+  customers to their prior agents.
+- Finally, routing decisions must be auditable: each assignment logs the inputs,
+  the policy version, and the scores, so a manager can see why a ticket landed
+  where it did and adjust the rules without touching code.
 
 ### Q3. How do you build the knowledge base and search?
 

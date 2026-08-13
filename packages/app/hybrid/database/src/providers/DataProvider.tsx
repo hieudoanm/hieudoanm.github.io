@@ -34,9 +34,13 @@ interface DataContextType {
     filePath: string,
     readOnly: boolean
   ) => Promise<DatabaseConnection>;
+  updateConnection: (
+    id: string,
+    patch: Partial<Pick<DatabaseConnection, 'name' | 'filePath' | 'readOnly'>>
+  ) => Promise<void>;
   deleteConnection: (id: string) => Promise<void>;
   runQuery: (sql: string) => void;
-  addBookmark: (name: string, sql: string) => Promise<void>;
+  addBookmark: (name: string, sql: string, folder?: string) => Promise<void>;
   deleteBookmark: (id: string) => Promise<void>;
   updateSettings: (s: Partial<Settings>) => Promise<void>;
   refreshData: () => Promise<void>;
@@ -115,6 +119,21 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
     setConnections((p) => p.filter((c) => c.id !== id));
   }, []);
 
+  const updateConnection = useCallback(
+    async (
+      id: string,
+      patch: Partial<Pick<DatabaseConnection, 'name' | 'filePath' | 'readOnly'>>
+    ) => {
+      const existing = await db.connections.get(id);
+      if (!existing) return;
+      const updated = { ...existing, ...patch };
+      await db.connections.put(updated);
+      setConnections((p) => p.map((c) => (c.id === id ? updated : c)));
+      setCurrentConnection((c) => (c?.id === id ? updated : c));
+    },
+    []
+  );
+
   const runQuery = useCallback(
     (sql: string) => {
       const result = executeQuery(sql);
@@ -135,12 +154,13 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
   );
 
   const addBookmark = useCallback(
-    async (name: string, sql: string) => {
+    async (name: string, sql: string, folder?: string) => {
       const b: Bookmark = {
         id: `bm-${Date.now()}`,
         connectionId: currentConnection?.id ?? '',
         name,
         sql,
+        folder,
         createdAt: Date.now(),
       };
       await db.bookmarks.put(b);
@@ -176,6 +196,7 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
         isLoading,
         setCurrentConnection,
         createConnection,
+        updateConnection,
         deleteConnection,
         runQuery,
         addBookmark,

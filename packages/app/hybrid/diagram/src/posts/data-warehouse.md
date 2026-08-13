@@ -23,30 +23,35 @@ Ingestion, ETL, columnar storage, SQL analytics.
 ### Q1. Design a cloud data warehouse
 
 A cloud data warehouse is a system built to answer analytical SQL at petabyte
-scale over data collected from many operational sources. The architecture splits
-storage from compute: a columnar store holds compressed data on object storage,
-while separate MPP compute clusters execute queries on demand, so you can scale
-query capacity independently of storage cost and even spin compute down when no
-one is querying. Data lands through an ingestion pipeline into a staging area,
-an ETL engine transforms and validates it, and a loader writes clean tables into
-the columnar store. A query engine accepts SQL, parses and optimizes a plan, and
-hands execution to MPP workers that scan only the relevant columns and
-partitions.
+scale over data collected from many operational sources.
 
-The system serves three populations that need different treatment: analysts
-running ad hoc SQL through an analytics UI, engineers loading data, and
-dashboards firing the same queries repeatedly. A metadata database tracks
-schemas, table statistics, partitions, and lineage, and a result cache
-short-circuits repeated queries. Because storage and compute are decoupled, the
-hardest engineering problems are not about raw disk but about coordination:
-consistent metadata, transactional visibility of loaded data, concurrency
-control between readers and writers, and query scheduling across a fleet of
-workers. The design goal is to make the common path — scan a narrow slice of a
-huge table and aggregate it — fast, while making failure recovery cheap by
-recomputing rather than recovering complex state. Elastic scaling also shapes
-pricing and experience: idle clusters scale to zero, and a burst of query
-traffic scales compute out in seconds, making the warehouse cost proportional to
-actual analysis rather than provisioned capacity.
+- The architecture splits storage from compute: a columnar store holds
+  compressed data on object storage, while separate MPP compute clusters execute
+  queries on demand, so you can scale query capacity independently of storage
+  cost and even spin compute down when no one is querying.
+- Data lands through an ingestion pipeline into a staging area, an ETL engine
+  transforms and validates it, and a loader writes clean tables into the
+  columnar store.
+- A query engine accepts SQL, parses and optimizes a plan, and hands execution
+  to MPP workers that scan only the relevant columns and partitions.
+
+The system serves three populations that need different treatment.
+
+- Analysts run ad hoc SQL through an analytics UI, engineers load data, and
+  dashboards fire the same queries repeatedly.
+- A metadata database tracks schemas, table statistics, partitions, and lineage,
+  and a result cache short-circuits repeated queries.
+- Because storage and compute are decoupled, the hardest engineering problems
+  are not about raw disk but about coordination: consistent metadata,
+  transactional visibility of loaded data, concurrency control between readers
+  and writers, and query scheduling across a fleet of workers.
+- The design goal is to make the common path — scan a narrow slice of a huge
+  table and aggregate it — fast, while making failure recovery cheap by
+  recomputing rather than recovering complex state.
+- Elastic scaling also shapes pricing and experience: idle clusters scale to
+  zero, and a burst of query traffic scales compute out in seconds, making the
+  warehouse cost proportional to actual analysis rather than provisioned
+  capacity.
 
 ### Q2. How do you store data for fast analytics?
 

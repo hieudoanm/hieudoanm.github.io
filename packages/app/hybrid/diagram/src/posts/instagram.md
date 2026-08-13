@@ -22,17 +22,22 @@ Media upload pipeline, photo storage, feed, likes/comments, discovery.
 
 ### Q1. Design Instagram
 
-Instagram is a media upload pipeline combined with a social feed. The upload
-flow goes client -> API -> Media Upload service -> Media Processor (transcode,
-thumbnails, moderation) -> object storage plus a metadata DB. A follow graph
-(graph DB) feeds a Feed service that pre-computes cached timelines (Redis) via
-fanout, like a Twitter feed but media-heavy. Likes/comments have their own
-service with counters; notifications push events asynchronously. Serve images
-from a CDN using content-addressed URLs so caching is deterministic and
-duplicates are deduped. Reads dominate, so cache aggressively and make writes
-async through a queue (Kafka). Shard by user_id; keep counters in Redis with
-periodic flush to a durable counter store (Cassandra). Discovery/search and
-reels/stories slot in as separate services off the same graph.
+Instagram is a media upload pipeline combined with a social feed.
+
+- The upload flow goes client -> API -> Media Upload service -> Media Processor
+  (transcode, thumbnails, moderation) -> object storage plus a metadata DB.
+- A follow graph (graph DB) feeds a Feed service that pre-computes cached
+  timelines (Redis) via fanout, like a Twitter feed but media-heavy.
+- Likes/comments have their own service with counters; notifications push events
+  asynchronously.
+- Serve images from a CDN using content-addressed URLs so caching is
+  deterministic and duplicates are deduped.
+- Reads dominate, so cache aggressively and make writes async through a queue
+  (Kafka).
+- Shard by user_id; keep counters in Redis with periodic flush to a durable
+  counter store (Cassandra).
+- Discovery/search and reels/stories slot in as separate services off the same
+  graph.
 
 ### Q2. How do you store and serve billions of photos?
 

@@ -23,60 +23,76 @@ Threads, comments, moderation, nesting, notifications.
 ### Q1. Design a comments system
 
 A comments service is a read-heavy, multi-tenant system where thousands of
-publisher sites share one infrastructure but see only their own data. I would
-build it around a thread service, a comment service, and a tree builder. The
-thread service owns thread metadata and lifecycle, the comment service owns
-individual comments and their relationships, and the tree builder assembles the
-nested structure the widget renders. Moderation runs as a side pipeline, the
-spam filter screens every inbound comment, and a comment cache serves the hot
-read path. A comments database is the system of record.
+publisher sites share one infrastructure but see only their own data.
 
-The write path is asynchronous so the publisher page never blocks. When a user
-posts through the widget, the gateway validates identity, the comment service
-persists the comment in a pending state, and moderation scans it in the
-background. If the spam filter and moderators clear it, the comment transitions
-to published, the thread service attaches it to the thread, and the tree builder
-marks the tree dirty for cache rebuild. The user sees their comment
-optimistically and a moderation notice if it is held. Reads are served from the
-cache, which stores fully built trees, so a popular article with thousands of
-comments loads in one round trip.
+- I would build it around a thread service, a comment service, and a tree
+  builder.
+- The thread service owns thread metadata and lifecycle, the comment service
+  owns individual comments and their relationships, and the tree builder
+  assembles the nested structure the widget renders.
+- Moderation runs as a side pipeline, the spam filter screens every inbound
+  comment, and a comment cache serves the hot read path.
+- A comments database is the system of record.
 
-The tradeoff is between freshness and write cost. Comments appear quickly
-because of optimistic UI and cache invalidation on publish, but moderation
-introduces a short delay for held comments. Tenant isolation is achieved by
-scoping every query with the thread and site id; the database is sharded by
-thread hash so a single article's hot tree lives on one shard. The design
-accepts that the tree builder does the heavy assembly once per invalidation and
-amortizes it across many reads, which is the right balance for a workload
-dominated by page views.
+The write path is asynchronous so the publisher page never blocks.
+
+- When a user posts through the widget, the gateway validates identity, the
+  comment service persists the comment in a pending state, and moderation scans
+  it in the background.
+- If the spam filter and moderators clear it, the comment transitions to
+  published, the thread service attaches it to the thread, and the tree builder
+  marks the tree dirty for cache rebuild.
+- The user sees their comment optimistically and a moderation notice if it is
+  held.
+- Reads are served from the cache, which stores fully built trees, so a popular
+  article with thousands of comments loads in one round trip.
+
+The tradeoff is between freshness and write cost.
+
+- Comments appear quickly because of optimistic UI and cache invalidation on
+  publish, but moderation introduces a short delay for held comments.
+- Tenant isolation is achieved by scoping every query with the thread and site
+  id; the database is sharded by thread hash so a single article's hot tree
+  lives on one shard.
+- The design accepts that the tree builder does the heavy assembly once per
+  invalidation and amortizes it across many reads, which is the right balance
+  for a workload dominated by page views.
 
 ### Q2. How do you model threaded comments?
 
 Threaded comments are best modeled as a tree with a materialized path for
-efficient subtree queries. Each comment stores a unique id, its thread id, its
-parent id, a depth, and a path that encodes the full ancestor chain, such as
-root/12/34/56. The path makes three common operations cheap: fetching all
-descendants of a comment, computing depth for indentation, and ordering
-siblings. Storing the path denormalized means the tree builder does not need
-recursive joins, which become unmanageable when a thread has tens of thousands
-of comments.
+efficient subtree queries.
 
-I would store comments in a relational database sharded by thread id, with an
-index on (thread_id, path) so a whole thread can be read as an ordered scan. The
-parent id is retained for referential integrity and deletion handling. When a
-comment is deleted, I would keep the node but mark it deleted and replace its
-text with a placeholder, so the tree structure and replies remain intact rather
-than reparenting subtrees. A soft-deleted comment preserves the shape of the
-thread, which matters for long, active discussions.
+- Each comment stores a unique id, its thread id, its parent id, a depth, and a
+  path that encodes the full ancestor chain, such as `root/12/34/56`.
+- The path makes three common operations cheap: fetching all descendants of a
+  comment, computing depth for indentation, and ordering siblings.
+- Storing the path denormalized means the tree builder does not need recursive
+  joins, which become unmanageable when a thread has tens of thousands of
+  comments.
 
-Concurrency is handled with version stamps. Two replies to the same comment do
-not conflict because they are independent nodes, so the insert path is simple.
-Editing is an optimistic update that compares version numbers and rejects stale
-writes. The tree builder consumes the flat rows and assembles nested objects,
-which is a single pass over a sorted scan. For very deep threads I would cap the
-nesting depth and flatten deeper replies to the maximum level, because an
-infinite indentation tree is unreadable on a page and unbounded depth
-complicates every downstream consumer.
+I would store comments in a relational database sharded by thread id.
+
+- An index on `(thread_id, path)` lets a whole thread be read as an ordered
+  scan.
+- The parent id is retained for referential integrity and deletion handling.
+- When a comment is deleted, I would keep the node but mark it deleted and
+  replace its text with a placeholder, so the tree structure and replies remain
+  intact rather than reparenting subtrees.
+- A soft-deleted comment preserves the shape of the thread, which matters for
+  long, active discussions.
+
+Concurrency is handled with version stamps.
+
+- Two replies to the same comment do not conflict because they are independent
+  nodes, so the insert path is simple.
+- Editing is an optimistic update that compares version numbers and rejects
+  stale writes.
+- The tree builder consumes the flat rows and assembles nested objects, which is
+  a single pass over a sorted scan.
+- For very deep threads I would cap the nesting depth and flatten deeper replies
+  to the maximum level, because an infinite indentation tree is unreadable on a
+  page and unbounded depth complicates every downstream consumer.
 
 ### Q3. How do you handle moderation at scale?
 

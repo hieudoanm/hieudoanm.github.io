@@ -140,6 +140,17 @@ jest.mock('@/components/molecules/ExportModal', () => ({
   ),
 }));
 
+jest.mock('@/components/organisms/VisualizationModal', () => ({
+  VisualizationModal: ({ dbFileName, onClose }: any) => (
+    <div data-testid="viz-modal">
+      <span data-testid="viz-file">{dbFileName}</span>
+      <button data-testid="close-viz" onClick={onClose}>
+        Close Viz
+      </button>
+    </div>
+  ),
+}));
+
 const { useSqlDatabase } = jest.requireMock('@/hooks/useSqlDatabase');
 const { useData } = jest.requireMock('@/providers/DataProvider');
 const { copyToClipboard } = jest.requireMock('@/utils/format');
@@ -290,6 +301,17 @@ describe('DB page', () => {
     expect(screen.queryByTestId('export-modal')).not.toBeInTheDocument();
   });
 
+  it('opens and closes the visualization modal', () => {
+    useSqlDatabase.mockReturnValue(dbLoadedState);
+    render(<DBPage />);
+    expect(screen.queryByTestId('viz-modal')).not.toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Visualize' }));
+    expect(screen.getByTestId('viz-modal')).toBeInTheDocument();
+    expect(screen.getByTestId('viz-file').textContent).toBe('test.db');
+    fireEvent.click(screen.getByTestId('close-viz'));
+    expect(screen.queryByTestId('viz-modal')).not.toBeInTheDocument();
+  });
+
   it('shows sorting column and direction in DataView', () => {
     useSqlDatabase.mockReturnValue(dbLoadedState);
     render(<DBPage />);
@@ -342,7 +364,7 @@ describe('DB page', () => {
     );
   });
 
-  it('bookmarks the query', () => {
+  it('bookmarks the query', async () => {
     const addBookmark = jest.fn();
     useData.mockReturnValue({
       connections: [],
@@ -354,6 +376,9 @@ describe('DB page', () => {
     useSqlDatabase.mockReturnValue(dbLoadedState);
     render(<DBPage />);
     fireEvent.click(screen.getByRole('button', { name: 'Bookmark query' }));
+    fireEvent.click(
+      await screen.findByRole('button', { name: 'Save bookmark' })
+    );
     expect(addBookmark).toHaveBeenCalled();
   });
 

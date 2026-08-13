@@ -26,11 +26,103 @@ export const copyToClipboard = async (text: string): Promise<boolean> => {
   }
 };
 
-export const formatSQL = (sql: string): string =>
-  sql
-    .replace(/\s+/g, ' ')
-    .replace(
-      /(SELECT|FROM|WHERE|AND|OR|JOIN|ON|GROUP BY|ORDER BY|HAVING|LIMIT)/gi,
-      '\n$1'
-    )
-    .trim();
+const CLAUSE_KEYWORDS: string[] = [
+  'SELECT',
+  'FROM',
+  'WHERE',
+  'GROUP BY',
+  'ORDER BY',
+  'HAVING',
+  'LIMIT',
+  'OFFSET',
+  'INNER JOIN',
+  'LEFT JOIN',
+  'RIGHT JOIN',
+  'FULL JOIN',
+  'CROSS JOIN',
+  'JOIN',
+  'ON',
+  'AND',
+  'OR',
+  'UNION ALL',
+  'UNION',
+  'VALUES',
+  'SET',
+  'INSERT INTO',
+  'UPDATE',
+  'DELETE FROM',
+  'CREATE TABLE',
+  'ALTER TABLE',
+  'DROP TABLE',
+  'BEGIN',
+  'COMMIT',
+  'ROLLBACK',
+  'RETURNING',
+];
+
+const stringPattern = /(['"`])(?:\\.|(?!\1)[^\\\n])*\1/g;
+
+export const maskStringLiterals = (sql: string): string[] => {
+  const strings: string[] = [];
+  sql.replace(stringPattern, (m) => {
+    strings.push(m);
+    return m;
+  });
+  return strings;
+};
+
+const unmask = (code: string, strings: string[]): string =>
+  code.replace(/§(\d+)§/g, (_, d) => strings[Number(d)]);
+
+export const formatSQL = (sql: string): string => {
+  if (!sql.trim()) return '';
+  const strings = maskStringLiterals(sql);
+  const masked = sql.replace(stringPattern, (m) => `§${strings.indexOf(m)}§`);
+  const compact = masked.replace(/\s+/g, ' ').trim();
+  if (!compact) return '';
+
+  const lines: string[] = [];
+  let depth = 0;
+  let buffer = '';
+  let i = 0;
+
+  const flush = () => {
+    const line = buffer.replace(/\s+/g, ' ').trim();
+    if (line) lines.push('  '.repeat(depth) + line);
+    buffer = '';
+  };
+
+  while (i < compact.length) {
+    const ch = compact[i];
+    if (ch === '(') {
+      depth += 1;
+      buffer += ch;
+      i += 1;
+      continue;
+    }
+    if (ch === ')') {
+      depth = Math.max(0, depth - 1);
+      buffer += ch;
+      i += 1;
+      continue;
+    }
+    const rest = compact.slice(i);
+    const keyword = CLAUSE_KEYWORDS.find(
+      (kw) =>
+        rest.slice(0, kw.length).toUpperCase() === kw &&
+        (!rest[kw.length] || /\s|\(|\)|,|;/.test(rest[kw.length])) &&
+        (!i || /\s|\(|\)|,|;/.test(compact[i - 1]))
+    );
+    if (keyword) {
+      flush();
+      buffer = keyword + ' ';
+      i += keyword.length;
+      continue;
+    }
+    buffer += ch;
+    i += 1;
+  }
+  flush();
+
+  return unmask(lines.join('\n'), strings);
+};

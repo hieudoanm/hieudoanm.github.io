@@ -1,5 +1,6 @@
 import { memo, type FC } from 'react';
 import {
+  FiCode,
   FiDatabase,
   FiDownload,
   FiPlus,
@@ -17,6 +18,7 @@ interface SheetsToolbarProps {
   onLoadOpfs: (f: string) => void;
   onSave: () => void;
   onExport: () => void;
+  onExportSql: () => void;
 }
 
 export const SheetsToolbar: FC<SheetsToolbarProps> = memo(
@@ -30,28 +32,34 @@ export const SheetsToolbar: FC<SheetsToolbarProps> = memo(
     onLoadOpfs,
     onSave,
     onExport,
+    onExportSql,
   }) => (
-    <div className="flex items-center gap-2">
+    <div className="flex flex-shrink-0 items-center gap-2">
       <button className="btn btn-primary btn-sm gap-2" onClick={onOpen}>
-        <FiUpload className="size-3.5" /> Open .db
+        <FiUpload className="size-3.5" />
+        <span className="hidden sm:inline">Open .db</span>
       </button>
       <button
         className="btn btn-ghost btn-sm gap-2"
         onClick={onNewDb}
         disabled={loading}>
-        <FiPlus className="size-3.5" /> New DB
+        <FiPlus className="size-3.5" />
+        <span className="hidden sm:inline">New DB</span>
       </button>
       {dbFileName && (
         <div className="badge badge-outline badge-primary gap-2 px-3 py-3 font-mono text-xs">
           <span className="bg-primary inline-block h-2 w-2 animate-pulse rounded-full" />
-          {dbFileName}
+          <span className="max-w-32 truncate">{dbFileName}</span>
         </div>
       )}
       <div className="ml-auto flex items-center gap-2">
         {opfsFiles.length > 0 && (
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-sm gap-2">
-              <FiDatabase className="size-3.5" /> OPFS ({opfsFiles.length})
+              <FiDatabase className="size-3.5" />
+              <span className="hidden sm:inline">
+                OPFS ({opfsFiles.length})
+              </span>
             </label>
             <ul
               tabIndex={0}
@@ -72,13 +80,22 @@ export const SheetsToolbar: FC<SheetsToolbarProps> = memo(
           className="btn btn-ghost btn-sm gap-2"
           onClick={onSave}
           disabled={!dbInstance}>
-          <FiSave className="size-3.5" /> Save OPFS
+          <FiSave className="size-3.5" />
+          <span className="hidden sm:inline">Save OPFS</span>
         </button>
         <button
           className="btn btn-ghost btn-sm gap-2"
           onClick={onExport}
           disabled={!dbInstance}>
-          <FiDownload className="size-3.5" /> Export .db
+          <FiDownload className="size-3.5" />
+          <span className="hidden sm:inline">Export .db</span>
+        </button>
+        <button
+          className="btn btn-ghost btn-sm gap-2"
+          onClick={onExportSql}
+          disabled={!dbInstance}>
+          <FiCode className="size-3.5" />
+          <span className="hidden sm:inline">Export SQL</span>
         </button>
       </div>
     </div>

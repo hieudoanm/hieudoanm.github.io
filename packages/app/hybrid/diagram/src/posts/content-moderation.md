@@ -23,67 +23,83 @@ Image and text screening, policy scoring, human review.
 ### Q1. Design a content moderation system
 
 A content moderation system screens every upload against a content policy and
-decides what is allowed, what is removed, and what needs a human judgment. The
-upload flows from the client through the API Gateway into the Moderation
-Pipeline, which runs automated checks in parallel. The Image Detector and the
-Text Detector each invoke the ML Models tier, a set of specialized models for
-categories such as adult content, violence, hate speech, and spam, and each
-model returns a category and a confidence score. The pipeline combines the
-scores into a single policy verdict. Clear violations are rejected immediately,
-clearly clean content is accepted, and everything in the middle is routed to the
-Human Review queue, where reviewers adjudicate and the decision is recorded in
-the Moderation DB before the user is notified.
+decides what is allowed, what is removed, and what needs a human judgment.
 
-The architecture is organized around the cost of mistakes. A false positive,
-removing content that is fine, is a user trust failure, while a false negative,
-letting a violation through, is a safety failure, and the tiered design lets the
-operator choose the balance for each content type and audience. Latency and
-throughput also pull in opposite directions: the automated path must be fast
-enough to feel synchronous, typically under a second for the verdict, while the
-human path is inherently slower and asynchronous. The design therefore keeps the
-automated verdict path as the scaling core and treats human review as a managed
-backlog with priority classes rather than as part of the request hot path.
+- The upload flows from the client through the API Gateway into the Moderation
+  Pipeline, which runs automated checks in parallel.
+- The Image Detector and the Text Detector each invoke the ML Models tier, a set
+  of specialized models for categories such as adult content, violence, hate
+  speech, and spam, and each model returns a category and a confidence score.
+- The pipeline combines the scores into a single policy verdict.
+- Clear violations are rejected immediately, clearly clean content is accepted,
+  and everything in the middle is routed to the Human Review queue, where
+  reviewers adjudicate and the decision is recorded in the Moderation DB before
+  the user is notified.
 
-Moderation is also a continuously changing problem. Policy changes, new attack
-patterns, and model updates mean the system is never finished. Every automated
-decision is logged with the full feature vector that produced it, so a policy
-change can be replayed over historical decisions without reprocessing the
-original media. The pipeline is versioned as a whole, and shadow runs of a new
-model version are compared against the current one before rollout. This makes
-the moderation system as much a data platform as a classifier.
+The architecture is organized around the cost of mistakes.
+
+- A false positive, removing content that is fine, is a user trust failure,
+  while a false negative, letting a violation through, is a safety failure, and
+  the tiered design lets the operator choose the balance for each content type
+  and audience.
+- Latency and throughput also pull in opposite directions: the automated path
+  must be fast enough to feel synchronous, typically under a second for the
+  verdict, while the human path is inherently slower and asynchronous.
+- The design therefore keeps the automated verdict path as the scaling core and
+  treats human review as a managed backlog with priority classes rather than as
+  part of the request hot path.
+
+Moderation is also a continuously changing problem.
+
+- Policy changes, new attack patterns, and model updates mean the system is
+  never finished.
+- Every automated decision is logged with the full feature vector that produced
+  it, so a policy change can be replayed over historical decisions without
+  reprocessing the original media.
+- The pipeline is versioned as a whole, and shadow runs of a new model version
+  are compared against the current one before rollout.
+- This makes the moderation system as much a data platform as a classifier.
 
 ### Q2. How do you detect violating images and text?
 
 Image and text detection both follow the pattern of running multiple specialized
 models and combining their scores, but the media processing is very different.
-For images, the pipeline first produces compact representations: it downscales
-the image, samples frames for video, extracts perceptual hashes, and generates
-embeddings from a vision model. The perceptual hash enables instant matching
-against a database of known bad content, and the embedding enables similarity
-search against known violating categories. Deep learning classifiers then score
-the image for each policy category, and the scores are combined with a
-category-specific aggregation, so nudity and violence are evaluated with
-separate models and separate thresholds.
 
-Text detection works on the text content plus the context around it. The Text
-Detector scans the visible text, including OCR for text inside images, and also
-the metadata, captions, and comments, because a violation can hide in any of
-them. Rule-based signals catch obvious spam, exact-match blocklists for known
-terms and URLs, while a language model scores the semantic content for
-categories such as hate speech and harassment. Because text is cheap to
-reprocess, the text path runs more models and is more tolerant of adding checks
-than the image path. Both paths emit category, confidence, and a set of
-explaining features that a human reviewer can inspect.
+- For images, the pipeline first produces compact representations: it downscales
+  the image, samples frames for video, extracts perceptual hashes, and generates
+  embeddings from a vision model.
+- The perceptual hash enables instant matching against a database of known bad
+  content, and the embedding enables similarity search against known violating
+  categories.
+- Deep learning classifiers then score the image for each policy category, and
+  the scores are combined with a category-specific aggregation, so nudity and
+  violence are evaluated with separate models and separate thresholds.
 
-Detection must anticipate evasion. Users and attackers adapt, so the system
-combines deterministic checks with learned ones: hashes catch exact reuse,
-similarity search catches near duplicates such as recolored or mirrored images,
-and the learned classifiers catch novel content. Adversarial modifications are
-measured by how often modified content evades the classifiers, and evasion
-samples are fed back as training data. The scoring is calibrated so that
-borderline categories are routed to human review instead of being decided by a
-low-confidence model, which is the design's acknowledgment that automated
-detection will never be perfect and the system must know when it is not certain.
+Text detection works on the text content plus the context around it.
+
+- The Text Detector scans the visible text, including OCR for text inside
+  images, and also the metadata, captions, and comments, because a violation can
+  hide in any of them.
+- Rule-based signals catch obvious spam, exact-match blocklists for known terms
+  and URLs, while a language model scores the semantic content for categories
+  such as hate speech and harassment.
+- Because text is cheap to reprocess, the text path runs more models and is more
+  tolerant of adding checks than the image path.
+- Both paths emit category, confidence, and a set of explaining features that a
+  human reviewer can inspect.
+
+Detection must anticipate evasion.
+
+- Users and attackers adapt, so the system combines deterministic checks with
+  learned ones: hashes catch exact reuse, similarity search catches near
+  duplicates such as recolored or mirrored images, and the learned classifiers
+  catch novel content.
+- Adversarial modifications are measured by how often modified content evades
+  the classifiers, and evasion samples are fed back as training data.
+- The scoring is calibrated so that borderline categories are routed to human
+  review instead of being decided by a low-confidence model, which is the
+  design's acknowledgment that automated detection will never be perfect and the
+  system must know when it is not certain.
 
 ### Q3. How do you combine automated and human review?
 
