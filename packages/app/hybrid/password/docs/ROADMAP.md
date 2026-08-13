@@ -2,17 +2,17 @@
 
 ## Phase 1 — Core UI
 
-> Foundation: vault list, item detail, add/edit, search
+> Foundation: vault list, item detail, add/edit, search — **complete**
 
 - [x] Vault list with item cards (logins, cards, notes, identities)
 - [x] Item detail view with show/hide for sensitive fields
-- [ ] Add/edit item forms per type (add only; per-type forms pending)
+- [x] Add/edit item forms per type
 - [x] Search across all items
 - [x] Category filter chips
 - [x] Favorites with star toggle
 - [x] Copy username/password to clipboard
-- [ ] Demo vault seed data (20+ items — 10 seeded today)
-- [ ] Responsive layout (sidebar + vault)
+- [x] Demo vault seed data (24 items)
+- [x] Responsive layout (sidebar + vault)
 
 ## Phase 2 — Enhanced UX
 

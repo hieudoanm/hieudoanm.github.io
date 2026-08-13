@@ -1,12 +1,14 @@
 'use client';
 
 import { FC, useState } from 'react';
+import { FiMove } from 'react-icons/fi';
 import { PdfFileUpload } from '@/components/atoms/PdfFileUpload';
 import { mergePDFs, downloadBlob } from '@/lib/pdf-tools';
 
 export const PdfMergeTool: FC = () => {
   const [files, setFiles] = useState<File[]>([]);
   const [loading, setLoading] = useState(false);
+  const [dragIndex, setDragIndex] = useState<number | null>(null);
 
   const handleMergeFiles = async () => {
     if (files.length < 2) return;
@@ -30,6 +32,21 @@ export const PdfMergeTool: FC = () => {
     setFiles((prev) => prev.filter((_, i) => i !== idx));
   };
 
+  const startDrag = (index: number) => (e: React.DragEvent<HTMLLIElement>) => {
+    e.dataTransfer.setData('text/plain', String(index));
+    e.dataTransfer.effectAllowed = 'move';
+    setDragIndex(index);
+  };
+
+  const dropOn = (index: number) => (e: React.DragEvent<HTMLLIElement>) => {
+    e.preventDefault();
+    const from = Number(e.dataTransfer.getData('text/plain'));
+    if (Number.isInteger(from) && from >= 0 && from !== index) {
+      moveFile(from, index);
+    }
+    setDragIndex(null);
+  };
+
   return (
     <div className="flex flex-col gap-4">
       <PdfFileUpload
@@ -42,7 +59,13 @@ export const PdfMergeTool: FC = () => {
           {files.map((f, i) => (
             <li
               key={i}
-              className="bg-base-200 flex items-center gap-2 rounded px-3 py-2 text-sm">
+              draggable
+              onDragStart={startDrag(i)}
+              onDragOver={(e) => e.preventDefault()}
+              onDrop={dropOn(i)}
+              onDragEnd={() => setDragIndex(null)}
+              className={`bg-base-200 flex items-center gap-2 rounded px-3 py-2 text-sm ${dragIndex === i ? 'opacity-50' : ''}`}>
+              <FiMove className="text-base-content/40 size-3 cursor-grab" />
               <button
                 className="btn btn-ghost btn-xs"
                 disabled={i === 0}

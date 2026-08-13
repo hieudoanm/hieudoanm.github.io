@@ -8,6 +8,8 @@ export interface PDFPage {
   textBlocks: TextBlock[];
   images: ImageBlock[];
   labels: string;
+  watermark?: Watermark;
+  crop?: { x: number; y: number; width: number; height: number };
 }
 
 export interface TextBlock {
@@ -33,6 +35,8 @@ export interface ImageBlock {
   color: string;
   label: string;
   opacity: number;
+  src?: string;
+  rotation?: number;
 }
 
 export interface PDFDocument {
@@ -60,6 +64,13 @@ export type AnnotationType =
   | 'arrow'
   | 'line';
 
+export interface AnnotationComment {
+  id: string;
+  text: string;
+  author: string;
+  createdAt: number;
+}
+
 export interface Annotation {
   id: string;
   documentId: string;
@@ -72,6 +83,7 @@ export interface Annotation {
   height: number;
   content: string;
   points?: { x: number; y: number }[];
+  comments?: AnnotationComment[];
   createdAt: number;
   updatedAt: number;
 }
@@ -124,6 +136,8 @@ export interface Watermark {
   rotation: number;
   position: 'center' | 'diagonal' | 'top' | 'bottom';
   pageRange: string;
+  image?: string;
+  label?: string;
 }
 
 export interface MergeJob {

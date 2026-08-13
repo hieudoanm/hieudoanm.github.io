@@ -141,6 +141,63 @@ describe('HomePage', () => {
     fireEvent.click(screen.getByRole('button', { name: 'Cancel' }));
     expect(screen.queryByPlaceholderText('Title')).not.toBeInTheDocument();
   });
+
+  it('shows type-specific fields in the new item form', async () => {
+    render(<HomePage />);
+    await waitFor(() => expect(screen.getByText('GitHub')).toBeInTheDocument());
+    fireEvent.click(screen.getByRole('button', { name: 'New' }));
+    expect(screen.getByPlaceholderText('Username')).toBeInTheDocument();
+    expect(screen.getByPlaceholderText('https://')).toBeInTheDocument();
+    fireEvent.change(screen.getByRole('combobox'), {
+      target: { value: 'card' },
+    });
+    expect(screen.getByPlaceholderText('Cardholder')).toBeInTheDocument();
+    expect(screen.getByPlaceholderText('Card Number')).toBeInTheDocument();
+    expect(screen.getByPlaceholderText('MM/YY')).toBeInTheDocument();
+    expect(screen.getByPlaceholderText('CVV')).toBeInTheDocument();
+    expect(screen.queryByPlaceholderText('https://')).not.toBeInTheDocument();
+  });
+
+  it('creates a card item with type-specific fields', async () => {
+    render(<HomePage />);
+    await waitFor(() => expect(screen.getByText('GitHub')).toBeInTheDocument());
+    fireEvent.click(screen.getByRole('button', { name: 'New' }));
+    fireEvent.change(screen.getByRole('combobox'), {
+      target: { value: 'card' },
+    });
+    fireEvent.change(screen.getByPlaceholderText('Title'), {
+      target: { value: 'Visa Gold' },
+    });
+    fireEvent.change(screen.getByPlaceholderText('Cardholder'), {
+      target: { value: 'John Doe' },
+    });
+    fireEvent.change(screen.getByPlaceholderText('Card Number'), {
+      target: { value: '4242424242424242' },
+    });
+    fireEvent.change(screen.getByPlaceholderText('MM/YY'), {
+      target: { value: '11/29' },
+    });
+    fireEvent.click(screen.getByRole('button', { name: 'Create' }));
+    await waitFor(() =>
+      expect(screen.getByText('Visa Gold')).toBeInTheDocument()
+    );
+    expect(mockDb.db.items.put).toHaveBeenCalledWith(
+      expect.objectContaining({
+        type: 'card',
+        cardNumber: '4242424242424242',
+        cardholder: 'John Doe',
+        expiry: '11/29',
+      })
+    );
+  });
+
+  it('filters favorites from the sidebar', async () => {
+    render(<HomePage />);
+    await waitFor(() => expect(screen.getByText('GitHub')).toBeInTheDocument());
+    fireEvent.click(screen.getByRole('button', { name: 'Favorites' }));
+    expect(screen.getByText('GitHub')).toBeInTheDocument();
+    expect(screen.queryByText('Visa 4242')).not.toBeInTheDocument();
+  });
 });
 
 describe('AboutPage', () => {

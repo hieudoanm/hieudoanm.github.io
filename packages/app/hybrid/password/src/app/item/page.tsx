@@ -10,6 +10,7 @@ import {
   maskPassword,
 } from '@/utils/format';
 import { useToast } from '@/providers/ToastProvider';
+import type { VaultItem } from '@/types';
 import {
   FiArrowLeft,
   FiCopy,
@@ -17,7 +18,9 @@ import {
   FiEyeOff,
   FiTrash2,
   FiStar,
+  FiEdit2,
 } from 'react-icons/fi';
+import { VaultItemForm } from '@/components/molecules/VaultItemForm';
 
 const ItemContent: FC = () => {
   const searchParams = useSearchParams();
@@ -28,6 +31,7 @@ const ItemContent: FC = () => {
   const { addToast } = useToast();
   const item = items.find((i) => i.id === id);
   const [showPassword, setShowPassword] = useState(false);
+  const [showEdit, setShowEdit] = useState(false);
 
   useEffect(() => {
     if (!item && !isLoading && items.length > 0) router.push('/');
@@ -43,6 +47,14 @@ const ItemContent: FC = () => {
   const handleCopy = async (text: string, label: string) => {
     await copyToClipboard(text);
     addToast(`${label} copied`, 'success');
+  };
+
+  const handleSaveEdit = async (
+    data: Omit<VaultItem, 'id' | 'createdAt' | 'updatedAt'>
+  ) => {
+    await updateItem(item.id, data);
+    setShowEdit(false);
+    addToast('Item updated', 'success');
   };
 
   return (
@@ -62,6 +74,13 @@ const ItemContent: FC = () => {
           <FiStar
             className={`size-5 ${item.favorite ? 'fill-warning text-warning' : ''}`}
           />
+        </button>
+        <button
+          type="button"
+          onClick={() => setShowEdit(true)}
+          className="btn btn-ghost btn-circle"
+          aria-label="Edit">
+          <FiEdit2 className="size-5" />
         </button>
         <button
           type="button"
@@ -169,6 +188,21 @@ const ItemContent: FC = () => {
           ))}
         </div>
       </main>
+      {showEdit && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
+          <div className="bg-base-100 card max-h-[90vh] w-full max-w-md overflow-y-auto shadow-xl">
+            <div className="card-body">
+              <h2 className="card-title">Edit Item</h2>
+              <VaultItemForm
+                initial={item}
+                submitLabel="Save"
+                onCancel={() => setShowEdit(false)}
+                onSubmit={handleSaveEdit}
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

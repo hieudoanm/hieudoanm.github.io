@@ -38,6 +38,7 @@ const DocumentLibrary: FC = () => {
   const [editingId, setEditingId] = useState<string | null>(null);
   const [editTitle, setEditTitle] = useState('');
   const [deleteConfirmId, setDeleteConfirmId] = useState<string | null>(null);
+  const [isDragging, setIsDragging] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const filteredDocs = documents.filter(
@@ -50,11 +51,9 @@ const DocumentLibrary: FC = () => {
     .sort((a, b) => b.lastOpenedAt - a.lastOpenedAt)
     .slice(0, 5);
 
-  const handleFileUpload = useCallback(
-    async (e: React.ChangeEvent<HTMLInputElement>) => {
-      const files = e.target.files;
-      if (!files) return;
-      for (const file of Array.from(files)) {
+  const handleFiles = useCallback(
+    async (files: File[]) => {
+      for (const file of files) {
         const pages = Array.from(
           { length: Math.floor(Math.random() * 10) + 3 },
           (_, i) => ({
@@ -85,9 +84,44 @@ const DocumentLibrary: FC = () => {
         await createDocument(doc);
         addToast(`Uploaded ${file.name}`, 'success');
       }
-      if (fileInputRef.current) fileInputRef.current.value = '';
     },
     [createDocument, addToast]
+  );
+
+  const handleFileUpload = useCallback(
+    async (e: React.ChangeEvent<HTMLInputElement>) => {
+      const files = e.target.files;
+      if (!files) return;
+      await handleFiles(Array.from(files));
+      if (fileInputRef.current) fileInputRef.current.value = '';
+    },
+    [handleFiles]
+  );
+
+  const handleDragOver = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    setIsDragging(true);
+  }, []);
+
+  const handleDragLeave = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    setIsDragging(false);
+  }, []);
+
+  const handleDrop = useCallback(
+    async (e: React.DragEvent<HTMLDivElement>) => {
+      e.preventDefault();
+      setIsDragging(false);
+      const files = Array.from(e.dataTransfer.files).filter((file) =>
+        file.name.toLowerCase().endsWith('.pdf')
+      );
+      if (files.length === 0) {
+        addToast('Only PDF files are accepted', 'error');
+        return;
+      }
+      await handleFiles(files);
+    },
+    [handleFiles, addToast]
   );
 
   const handleOpen = useCallback(
@@ -125,14 +159,52 @@ const DocumentLibrary: FC = () => {
 
   if (isLoading) {
     return (
-      <div className="flex min-h-screen items-center justify-center">
-        <span className="loading loading-spinner loading-lg" />
+      <div className="bg-base-200 min-h-screen">
+        <div className="container mx-auto max-w-7xl px-4 py-8">
+          <div className="mb-6">
+            <div className="skeleton h-8 w-48" />
+            <div className="skeleton mt-3 h-4 w-64" />
+          </div>
+          <div className="mb-4 flex gap-2">
+            <div className="skeleton h-10 w-full max-w-sm" />
+            <div className="skeleton size-10" />
+            <div className="skeleton size-10" />
+          </div>
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+            {Array.from({ length: 8 }, (_, i) => (
+              <div key={i} className="card bg-base-100 shadow-sm">
+                <div className="skeleton m-3 h-40 rounded-lg" />
+                <div className="space-y-2 p-3">
+                  <div className="skeleton h-3 w-3/4" />
+                  <div className="skeleton h-3 w-1/2" />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     );
   }
 
   return (
-    <div className="bg-base-200 min-h-screen">
+    <div
+      className="bg-base-200 min-h-screen"
+      onDragOver={handleDragOver}
+      onDragLeave={handleDragLeave}
+      onDrop={handleDrop}>
+      {isDragging && (
+        <div className="pointer-events-none fixed inset-0 z-50 flex items-center justify-center bg-black/50">
+          <div className="border-primary bg-base-100 flex flex-col items-center gap-3 rounded-2xl border-4 border-dashed p-12 text-center">
+            <FiUpload className="text-primary size-12" />
+            <p className="text-base-content text-lg font-semibold">
+              Drop PDF files to upload
+            </p>
+            <p className="text-base-content/60 text-sm">
+              Release to add them to your library
+            </p>
+          </div>
+        </div>
+      )}
       <div className="container mx-auto max-w-7xl px-4 py-8">
         <div className="mb-8 flex items-center justify-between">
           <div>

@@ -22,6 +22,13 @@ export const formatFileSize = (bytes: number): string => {
 export const formatPageNumber = (current: number, total: number): string =>
   `Page ${current} of ${total}`;
 
+export const formatDate = (timestamp: number): string =>
+  new Date(timestamp).toLocaleDateString(undefined, {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  });
+
 export const copyToClipboard = async (text: string): Promise<boolean> => {
   try {
     await navigator.clipboard.writeText(text);

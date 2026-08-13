@@ -2,85 +2,85 @@
 
 ## Phase 1 — Core UI
 
-> Foundation: document list, PDF viewer, zoom, page navigation
+> Foundation: document list, PDF viewer, zoom, page navigation — **complete**
 
-- [ ] Document list with grid/list view
-- [ ] PDF upload with drag-and-drop
-- [ ] PDF viewer with page rendering
-- [ ] Zoom controls (slider, presets, fit-to-width, fit-to-page)
-- [ ] Page navigation (thumbnails, page number, arrows)
-- [ ] Continuous scroll mode
-- [ ] Page rotation
-- [ ] Demo PDFs seed data
-- [ ] Responsive layout
+- [x] Document list with grid/list view
+- [x] PDF upload with drag-and-drop
+- [x] PDF viewer with page rendering
+- [x] Zoom controls (slider, presets, fit-to-width, fit-to-page)
+- [x] Page navigation (thumbnails, page number, arrows)
+- [x] Continuous scroll mode
+- [x] Page rotation
+- [x] Demo PDFs seed data
+- [x] Responsive layout
 
 ## Phase 2 — Enhanced UX
 
-> Polish: keyboard shortcuts, search, bookmarks, thumbnails
+> Polish: keyboard shortcuts, search, bookmarks, thumbnails — **complete**
 
-- [ ] Keyboard shortcuts (Ctrl+/-, arrows, Ctrl+F, Ctrl+G)
-- [ ] Text search with match highlighting
-- [ ] Bookmark/TOC sidebar
-- [ ] Page fit modes (fit width, fit page, actual size)
-- [ ] Presentation mode (fullscreen)
-- [ ] Page transition animations (Framer Motion)
-- [ ] Skeleton loading states
-- [ ] Document properties panel
-- [ ] Recent documents section
+- [x] Keyboard shortcuts (Ctrl+/-, arrows, Ctrl+F, Ctrl+G)
+- [x] Text search with match highlighting
+- [x] Bookmark/TOC sidebar
+- [x] Page fit modes (fit width, fit page, actual size)
+- [x] Presentation mode (fullscreen)
+- [x] Page transition animations (Motion)
+- [x] Skeleton loading states
+- [x] Document properties panel
+- [x] Recent documents section
 
 ## Phase 3 — Annotations
 
-> Markup: highlights, notes, shapes, drawing
+> Markup: highlights, notes, shapes, drawing — **complete**
 
-- [ ] Text highlighting with color picker
-- [ ] Underline and strikethrough
-- [ ] Sticky notes with text content
-- [ ] Freehand drawing with pen tool
-- [ ] Shapes (rectangle, circle, arrow, line)
-- [ ] Annotation list sidebar
-- [ ] Annotation colors (8-color palette)
-- [ ] Comment threads on annotations
-- [ ] Undo/redo for annotations
+- [x] Text highlighting with color picker
+- [x] Underline and strikethrough
+- [x] Sticky notes with text content
+- [x] Freehand drawing with pen tool
+- [x] Shapes (rectangle, circle, arrow, line)
+- [x] Annotation list sidebar
+- [x] Annotation colors (8-color palette)
+- [x] Comment threads on annotations
+- [x] Undo/redo for annotations
 
 ## Phase 4 — Editing
 
 > Modification: text edit, images, watermarks
 
-- [ ] Text editing mode (click to edit text blocks)
-- [ ] Font controls (size, bold, italic, color)
-- [ ] Image insertion with resize handles
-- [ ] Image controls (rotate, opacity, delete)
-- [ ] New text box creation
-- [ ] Text watermark with configurable properties
-- [ ] Image watermark with opacity
-- [ ] Stamp presets (Approved, Rejected, Draft, Confidential)
+- [x] Text editing mode (click to edit text blocks)
+- [x] Font controls (size, bold, italic, color)
+- [x] Image insertion with resize handles
+- [x] Image controls (rotate, opacity, delete)
+- [x] New text box creation
+- [x] Text watermark with configurable properties
+- [x] Image watermark with opacity
+- [x] Stamp presets (Approved, Rejected, Draft, Confidential)
 
 ## Phase 5 — Page Management
 
-> Structure: reorder, merge, split, extract
+> Structure: reorder, merge, split, extract — **complete**
 
-- [ ] Drag-and-drop page reorder via thumbnails
-- [ ] Delete pages with confirmation
-- [ ] Rotate individual pages
-- [ ] Extract pages by range
-- [ ] Duplicate page
-- [ ] Merge multiple PDFs with drag-to-reorder
-- [ ] Split by page range
-- [ ] Crop page with visual crop box
-- [ ] Page labels and numbering
+- [x] Drag-and-drop page reorder via thumbnails
+- [x] Delete pages with confirmation
+- [x] Rotate individual pages
+- [x] Extract pages by range
+- [x] Duplicate page
+- [x] Merge multiple PDFs with drag-to-reorder
+- [x] Split by page range
+- [x] Crop page with visual crop box
+- [x] Page labels and numbering
 
 ## Phase 6 — Forms & Signing
 
 > Interactive: form fill, digital signatures
 
-- [ ] Form field detection (text, checkbox, radio, dropdown)
-- [ ] Form filling with tab navigation
-- [ ] Signature drawing on canvas
-- [ ] Typed signature with font selection
-- [ ] Image signature upload
-- [ ] Signature placement and resize
-- [ ] Form export as new PDF
-- [ ] Print dialog with full settings
+- [x] Form field detection (text, checkbox, radio, dropdown)
+- [x] Form filling with tab navigation
+- [x] Signature drawing on canvas
+- [x] Typed signature with font selection
+- [x] Image signature upload
+- [x] Signature placement and resize
+- [x] Form export as new PDF
+- [x] Print dialog with full settings
 
 ## Phase 7 — Platform & Integration
 

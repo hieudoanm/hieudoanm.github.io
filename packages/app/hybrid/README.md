@@ -31,7 +31,7 @@
 | 17  | code        | Code        | Editor     | Minimal VSCode / Zed                      | No       | 23/57 · 40% | DONE   |
 | 18  | password    | Password    | Management | Minimal BitWarden / 1Password             | Required | 13/59 · 22% | DONE   |
 | 19  | video       | Video       | Editor     | Minimal CapCut                            | No       | 4/53 · 8%   | DONE   |
-| 20  | pdf         | PDF         | Editor     | Minimal Adobe Acrobat PDF                 | No       | 0/60 · 0%   | DONE   |
+| 20  | pdf         | PDF         | Editor     | Minimal Adobe Acrobat PDF                 | No       | 52/60 · 87% | DONE   |
 
 ## Techstack
 

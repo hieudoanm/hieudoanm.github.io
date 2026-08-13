@@ -4,12 +4,15 @@
 
 ## Vault
 
-- Vault list with item cards (logins, cards, notes, identities)
+- Vault list with item cards (logins, cards, notes, identities, SSH keys)
 - Item detail view with show/hide for sensitive fields
+- Add/edit item forms with per-type fields (login, card, identity, note, SSH)
 - Search across all items
 - Category filter chips
 - Favorites with star toggle
 - Copy username/password to clipboard
+- Responsive sidebar layout (desktop sidebar, mobile chips)
+- Demo vault seed data (24 items)
 - Skeleton loading states
 
 ## Generator & Strength

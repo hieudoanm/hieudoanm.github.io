@@ -347,6 +347,25 @@ describe('PdfMergeTool', () => {
     expect(downloadBlob).toHaveBeenCalledWith(expect.anything(), 'merged.pdf');
   });
 
+  it('reorders files via drag-and-drop', async () => {
+    render(<PdfMergeTool />);
+    await upload();
+    const row = (name: string) =>
+      screen.getByText(name).closest('li') as HTMLElement;
+    const dataTransfer = {
+      setData: jest.fn(),
+      getData: jest.fn(() => '0'),
+      effectAllowed: 'move',
+    } as unknown as DataTransfer;
+    fireEvent.dragStart(row('a.pdf'), { dataTransfer });
+    fireEvent.drop(row('b.pdf'), { dataTransfer });
+    fireEvent.click(screen.getByRole('button', { name: 'Merge 2 files' }));
+    expect(mergePDFs).toHaveBeenCalledWith([
+      expect.objectContaining({ name: 'b.pdf' }),
+      expect.objectContaining({ name: 'a.pdf' }),
+    ]);
+  });
+
   it('reorders and removes files', async () => {
     render(<PdfMergeTool />);
     await upload();

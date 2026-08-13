@@ -79,7 +79,7 @@ beforeEach(() => {
 });
 
 describe('Home page', () => {
-  it('shows a loading spinner while documents load', () => {
+  it('shows a loading skeleton while documents load', () => {
     useData.mockReturnValue({
       documents: [],
       isLoading: true,
@@ -89,7 +89,7 @@ describe('Home page', () => {
       createDocument,
     });
     render(<Home />);
-    expect(document.querySelector('.loading')).toBeInTheDocument();
+    expect(document.querySelectorAll('.skeleton').length).toBeGreaterThan(0);
   });
 
   it('renders documents in grid mode, filters and toggles list view', async () => {
@@ -308,5 +308,48 @@ describe('Home page', () => {
     });
     expect(openDocument).toHaveBeenCalledWith('doc1');
     expect(push).toHaveBeenCalledWith('/pdf?id=doc1');
+  });
+
+  it('shows a drop overlay while dragging over the window', () => {
+    render(<Home />);
+    const root = document.querySelector('.bg-base-200')!;
+    fireEvent.dragOver(root);
+    expect(screen.getByText('Drop PDF files to upload')).toBeInTheDocument();
+    fireEvent.dragLeave(root);
+    expect(
+      screen.queryByText('Drop PDF files to upload')
+    ).not.toBeInTheDocument();
+  });
+
+  it('uploads dropped PDF files', async () => {
+    render(<Home />);
+    const root = document.querySelector('.bg-base-200')!;
+    const file = new File(['x'], 'dropped.pdf', { type: 'application/pdf' });
+    await act(async () => {
+      fireEvent.drop(root, {
+        dataTransfer: { files: [file] },
+      });
+    });
+    expect(createDocument).toHaveBeenCalledTimes(1);
+    expect(createDocument).toHaveBeenCalledWith(
+      expect.objectContaining({ title: 'dropped', filename: 'dropped.pdf' })
+    );
+    expect(addToast).toHaveBeenCalledWith('Uploaded dropped.pdf', 'success');
+  });
+
+  it('rejects dropped files that are not PDFs', async () => {
+    render(<Home />);
+    const root = document.querySelector('.bg-base-200')!;
+    const file = new File(['x'], 'notes.txt', { type: 'text/plain' });
+    await act(async () => {
+      fireEvent.drop(root, {
+        dataTransfer: { files: [file] },
+      });
+    });
+    expect(createDocument).not.toHaveBeenCalled();
+    expect(addToast).toHaveBeenCalledWith(
+      'Only PDF files are accepted',
+      'error'
+    );
   });
 });

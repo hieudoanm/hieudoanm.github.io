@@ -34,6 +34,11 @@ interface DataContextType {
   deleteDocument: (id: string) => Promise<void>;
   renameDocument: (id: string, title: string) => Promise<void>;
   openDocument: (id: string) => Promise<void>;
+  rotatePage: (
+    id: string,
+    pageNumber: number,
+    delta: number
+  ) => Promise<PDFDocument | undefined>;
 
   getAnnotationsByDocument: (documentId: string) => Promise<Annotation[]>;
   addAnnotation: (
@@ -48,6 +53,8 @@ interface DataContextType {
 
   addFormField: (field: Omit<FormField, 'id'>) => Promise<FormField>;
   updateFormField: (field: FormField) => Promise<void>;
+  getFormFieldsByDocument: (documentId: string) => Promise<FormField[]>;
+  deleteFormField: (id: string) => Promise<void>;
 
   addStamp: (stamp: Omit<Stamp, 'id' | 'createdAt'>) => Promise<Stamp>;
   deleteStamp: (id: string) => Promise<void>;
@@ -146,6 +153,29 @@ export const DataProvider = ({ children }: DataProviderProps) => {
     }
   }, []);
 
+  const rotatePage = useCallback(
+    async (
+      id: string,
+      pageNumber: number,
+      delta: number
+    ): Promise<PDFDocument | undefined> => {
+      const doc = await db.documents.get(id);
+      if (doc) {
+        const pages = doc.pages.map((p) =>
+          p.pageNumber === pageNumber
+            ? { ...p, rotation: (p.rotation + delta + 360) % 360 }
+            : p
+        );
+        const updated = { ...doc, pages, updatedAt: Date.now() };
+        await db.documents.put(updated);
+        setDocuments((prev) => prev.map((d) => (d.id === id ? updated : d)));
+        return updated;
+      }
+      return undefined;
+    },
+    []
+  );
+
   const getAnnotationsByDocument = useCallback(
     async (documentId: string): Promise<Annotation[]> => {
       return db.annotations.getByDocument(documentId);
@@ -222,6 +252,18 @@ export const DataProvider = ({ children }: DataProviderProps) => {
     setFormFields((prev) => prev.map((f) => (f.id === field.id ? field : f)));
   }, []);
 
+  const getFormFieldsByDocument = useCallback(
+    async (documentId: string): Promise<FormField[]> => {
+      return db.formFields.getByDocument(documentId);
+    },
+    []
+  );
+
+  const deleteFormField = useCallback(async (id: string) => {
+    await db.formFields.delete(id);
+    setFormFields((prev) => prev.filter((f) => f.id !== id));
+  }, []);
+
   const addStamp = useCallback(
     async (stamp: Omit<Stamp, 'id' | 'createdAt'>): Promise<Stamp> => {
       const newStamp: Stamp = {
@@ -264,6 +306,7 @@ export const DataProvider = ({ children }: DataProviderProps) => {
         deleteDocument,
         renameDocument,
         openDocument,
+        rotatePage,
         getAnnotationsByDocument,
         addAnnotation,
         updateAnnotation,
@@ -273,6 +316,8 @@ export const DataProvider = ({ children }: DataProviderProps) => {
         deleteBookmark,
         addFormField,
         updateFormField,
+        getFormFieldsByDocument,
+        deleteFormField,
         addStamp,
         deleteStamp,
         updateSettings,

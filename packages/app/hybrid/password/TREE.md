@@ -45,6 +45,8 @@
 │   │   ├── [not-found.tsx](./src/app/not-found.tsx)
 │   │   └── [page.tsx](./src/app/page.tsx)
 │   ├── components/
+│   │   ├── molecules/
+│   │   │   └── [VaultItemForm.tsx](./src/components/molecules/VaultItemForm.tsx)
 │   │   ├── organisms/
 │   │   │   └── [ToastContainer.tsx](./src/components/organisms/ToastContainer.tsx)
 │   │   ├── templates/

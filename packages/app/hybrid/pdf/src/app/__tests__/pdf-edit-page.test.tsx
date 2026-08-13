@@ -25,6 +25,8 @@ jest.mock('@/data/models', () => ({
 
 const { useData } = jest.requireMock('@/providers/DataProvider');
 const { useToast } = jest.requireMock('@/providers/ToastProvider');
+const getSearchParams = jest.requireMock('next/navigation').useSearchParams;
+const { generateId } = jest.requireMock('@/data/models');
 
 const makePage = (n: number) => ({
   id: `page-${n}`,
@@ -80,12 +82,25 @@ const doc = {
 const getDocument = jest.fn().mockResolvedValue(doc);
 const updateDocument = jest.fn().mockResolvedValue(doc);
 const addStamp = jest.fn().mockResolvedValue(undefined);
+const createDocument = jest.fn().mockResolvedValue(undefined);
 const addToast = jest.fn();
 
 beforeEach(() => {
-  jest.clearAllMocks();
+  jest.resetAllMocks();
   get.mockReturnValue('doc1');
-  useData.mockReturnValue({ getDocument, updateDocument, addStamp });
+  getSearchParams.mockReturnValue({ get });
+  generateId.mockReturnValue('gen');
+  getDocument.mockResolvedValue(doc);
+  updateDocument.mockResolvedValue(doc);
+  addStamp.mockResolvedValue(undefined);
+  createDocument.mockResolvedValue(undefined);
+  useData.mockReturnValue({
+    getDocument,
+    updateDocument,
+    addStamp,
+    createDocument,
+    documents: [],
+  });
   useToast.mockReturnValue({ addToast });
 });
 
@@ -105,7 +120,9 @@ describe('PDF editor page', () => {
     await screen.findByRole('heading', { name: 'Annual Report - Editor' });
     fireEvent.click(screen.getByRole('button', { name: 'Image' }));
     expect(screen.getByText('Tool: image')).toBeInTheDocument();
-    expect(screen.getByText('Image insertion panel')).toBeInTheDocument();
+    expect(
+      screen.getByText('Click an image on the page to select and edit it.')
+    ).toBeInTheDocument();
     fireEvent.click(screen.getByRole('button', { name: 'Watermark' }));
     expect(screen.getByText('Tool: watermark')).toBeInTheDocument();
     fireEvent.click(screen.getByRole('button', { name: 'Stamp' }));
@@ -113,6 +130,11 @@ describe('PDF editor page', () => {
     for (const preset of ['Approved', 'Rejected', 'Draft', 'Confidential']) {
       expect(screen.getByRole('button', { name: preset })).toBeInTheDocument();
     }
+    fireEvent.click(screen.getByRole('button', { name: 'Page' }));
+    expect(screen.getByText('Tool: page')).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: 'Delete page 1' })
+    ).toBeInTheDocument();
   });
 
   it('adds a text box with the configured font', async () => {
@@ -269,5 +291,436 @@ describe('PDF editor page', () => {
       fontWeight: 'bold',
       fontStyle: 'italic',
     });
+  });
+
+  it('adds an image block to the current page', async () => {
+    render(<EditPage />);
+    await screen.findByRole('heading', { name: 'Annual Report - Editor' });
+    fireEvent.click(screen.getByRole('button', { name: 'Image' }));
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', { name: 'Add Image' }));
+    });
+    expect(updateDocument).toHaveBeenCalledWith(
+      expect.objectContaining({
+        id: 'doc1',
+        pages: expect.arrayContaining([
+          expect.objectContaining({
+            pageNumber: 1,
+            images: expect.arrayContaining([
+              expect.objectContaining({
+                id: 'image-new-gen',
+                label: 'image-1',
+                width: 160,
+                height: 120,
+              }),
+            ]),
+          }),
+        ]),
+      })
+    );
+    expect(addToast).toHaveBeenCalledWith('Image added', 'success');
+  });
+
+  it('updates image opacity and rotation via the controls', async () => {
+    render(<EditPage />);
+    await screen.findByRole('heading', { name: 'Annual Report - Editor' });
+    fireEvent.click(screen.getByRole('button', { name: 'Image' }));
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', { name: 'Add Image' }));
+    });
+    await act(async () => {
+      fireEvent.change(screen.getByRole('slider', { name: 'Image opacity' }), {
+        target: { value: '0.5' },
+      });
+    });
+    expect(updateDocument).toHaveBeenLastCalledWith(
+      expect.objectContaining({
+        pages: expect.arrayContaining([
+          expect.objectContaining({
+            images: expect.arrayContaining([
+              expect.objectContaining({ id: 'image-new-gen', opacity: 0.5 }),
+            ]),
+          }),
+        ]),
+      })
+    );
+    await act(async () => {
+      fireEvent.change(screen.getByRole('slider', { name: 'Image rotation' }), {
+        target: { value: '30' },
+      });
+    });
+    expect(updateDocument).toHaveBeenLastCalledWith(
+      expect.objectContaining({
+        pages: expect.arrayContaining([
+          expect.objectContaining({
+            images: expect.arrayContaining([
+              expect.objectContaining({ id: 'image-new-gen', rotation: 30 }),
+            ]),
+          }),
+        ]),
+      })
+    );
+  });
+
+  it('deletes a selected image', async () => {
+    render(<EditPage />);
+    await screen.findByRole('heading', { name: 'Annual Report - Editor' });
+    fireEvent.click(screen.getByRole('button', { name: 'Image' }));
+    fireEvent.click(screen.getByText('photo'));
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', { name: 'Delete Image' }));
+    });
+    expect(updateDocument).toHaveBeenCalled();
+    const call = updateDocument.mock.calls.at(-1)![0];
+    const page1 = call.pages.find(
+      (p: { pageNumber: number }) => p.pageNumber === 1
+    );
+    expect(page1.images.map((i: { id: string }) => i.id)).not.toContain(
+      'img-1'
+    );
+    expect(addToast).toHaveBeenCalledWith('Image deleted', 'success');
+  });
+
+  it('resizes a selected image via the drag handle', async () => {
+    render(<EditPage />);
+    await screen.findByRole('heading', { name: 'Annual Report - Editor' });
+    fireEvent.click(screen.getByRole('button', { name: 'Image' }));
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', { name: 'Add Image' }));
+    });
+    const handles = screen.getAllByLabelText('Resize image');
+    await act(async () => {
+      fireEvent.mouseDown(handles[0], { clientX: 0, clientY: 0 });
+    });
+    const canvas = screen.getByText('image-1').closest('div')!.parentElement!;
+    await act(async () => {
+      fireEvent.mouseMove(canvas, { clientX: 60, clientY: 40 });
+    });
+    await act(async () => {
+      fireEvent.mouseUp(canvas, { clientX: 60, clientY: 40 });
+    });
+    expect(updateDocument).toHaveBeenLastCalledWith(
+      expect.objectContaining({
+        pages: expect.arrayContaining([
+          expect.objectContaining({
+            images: expect.arrayContaining([
+              expect.objectContaining({ id: 'image-new-gen', width: 220 }),
+            ]),
+          }),
+        ]),
+      })
+    );
+  });
+
+  it('applies a text watermark to the current page', async () => {
+    render(<EditPage />);
+    await screen.findByRole('heading', { name: 'Annual Report - Editor' });
+    fireEvent.click(screen.getByRole('button', { name: 'Watermark' }));
+    fireEvent.change(screen.getByDisplayValue('CONFIDENTIAL'), {
+      target: { value: 'DRAFT COPY' },
+    });
+    fireEvent.change(screen.getByDisplayValue(0.3), {
+      target: { value: '0.6' },
+    });
+    fireEvent.change(screen.getByDisplayValue(-45), {
+      target: { value: '15' },
+    });
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', { name: 'Apply Watermark' }));
+    });
+    expect(updateDocument).toHaveBeenCalledWith(
+      expect.objectContaining({
+        pages: expect.arrayContaining([
+          expect.objectContaining({
+            pageNumber: 1,
+            watermark: expect.objectContaining({
+              type: 'text',
+              text: 'DRAFT COPY',
+              opacity: 0.6,
+              rotation: 15,
+              pageRange: '1',
+            }),
+          }),
+        ]),
+      })
+    );
+    expect(addToast).toHaveBeenCalledWith('Watermark applied', 'success');
+  });
+
+  it('applies the watermark to all pages when checked', async () => {
+    render(<EditPage />);
+    await screen.findByRole('heading', { name: 'Annual Report - Editor' });
+    fireEvent.click(screen.getByRole('button', { name: 'Watermark' }));
+    fireEvent.click(screen.getByRole('checkbox'));
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', { name: 'Apply Watermark' }));
+    });
+    expect(updateDocument).toHaveBeenCalledWith(
+      expect.objectContaining({
+        pages: expect.arrayContaining([
+          expect.objectContaining({
+            pageNumber: 1,
+            watermark: expect.objectContaining({ pageRange: 'all' }),
+          }),
+          expect.objectContaining({
+            pageNumber: 2,
+            watermark: expect.objectContaining({ pageRange: 'all' }),
+          }),
+          expect.objectContaining({
+            pageNumber: 3,
+            watermark: expect.objectContaining({ pageRange: 'all' }),
+          }),
+        ]),
+      })
+    );
+  });
+
+  it('applies an image watermark', async () => {
+    render(<EditPage />);
+    await screen.findByRole('heading', { name: 'Annual Report - Editor' });
+    fireEvent.click(screen.getByRole('button', { name: 'Watermark' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Image watermark' }));
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', { name: 'Apply Watermark' }));
+    });
+    expect(updateDocument).toHaveBeenCalledWith(
+      expect.objectContaining({
+        pages: expect.arrayContaining([
+          expect.objectContaining({
+            pageNumber: 1,
+            watermark: expect.objectContaining({
+              type: 'image',
+              color: '#3b82f6',
+            }),
+          }),
+        ]),
+      })
+    );
+  });
+
+  it('reorders pages via thumbnail drag-and-drop', async () => {
+    render(<EditPage />);
+    await screen.findByRole('heading', { name: 'Annual Report - Editor' });
+    fireEvent.click(screen.getByRole('button', { name: 'Page' }));
+    const row = (n: number) =>
+      screen
+        .getByRole('button', { name: `Page ${n}` })
+        .closest('li') as HTMLElement;
+    const dataTransfer = {
+      setData: jest.fn(),
+      getData: jest.fn(() => '0'),
+      effectAllowed: 'move',
+    } as unknown as DataTransfer;
+    await act(async () => {
+      fireEvent.dragStart(row(1), { dataTransfer });
+      fireEvent.drop(row(3), { dataTransfer });
+    });
+    const call = updateDocument.mock.calls.at(-1)![0];
+    expect(call.pages.map((p: { id: string }) => p.id)).toEqual([
+      'page-2',
+      'page-3',
+      'page-1',
+    ]);
+    expect(call.pages.map((p: { pageNumber: number }) => p.pageNumber)).toEqual(
+      [1, 2, 3]
+    );
+  });
+
+  it('deletes a page with confirmation', async () => {
+    render(<EditPage />);
+    await screen.findByRole('heading', { name: 'Annual Report - Editor' });
+    fireEvent.click(screen.getByRole('button', { name: 'Page' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Delete page 2' }));
+    expect(screen.getByRole('dialog')).toBeInTheDocument();
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', { name: 'Delete' }));
+    });
+    const call = updateDocument.mock.calls.at(-1)![0];
+    expect(call.pageCount).toBe(2);
+    expect(call.pages.map((p: { id: string }) => p.id)).toEqual([
+      'page-1',
+      'page-3',
+    ]);
+    expect(addToast).toHaveBeenCalledWith('Page deleted', 'success');
+  });
+
+  it('cancels page deletion from the confirmation dialog', async () => {
+    render(<EditPage />);
+    await screen.findByRole('heading', { name: 'Annual Report - Editor' });
+    fireEvent.click(screen.getByRole('button', { name: 'Page' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Delete page 1' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Cancel' }));
+    expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
+    expect(updateDocument).not.toHaveBeenCalled();
+  });
+
+  it('rotates an individual page', async () => {
+    render(<EditPage />);
+    await screen.findByRole('heading', { name: 'Annual Report - Editor' });
+    fireEvent.click(screen.getByRole('button', { name: 'Page' }));
+    await act(async () => {
+      fireEvent.click(
+        screen.getByRole('button', { name: 'Rotate page 1 right' })
+      );
+    });
+    const call = updateDocument.mock.calls.at(-1)![0];
+    expect(call.pages[0].rotation).toBe(90);
+  });
+
+  it('duplicates a page', async () => {
+    render(<EditPage />);
+    await screen.findByRole('heading', { name: 'Annual Report - Editor' });
+    fireEvent.click(screen.getByRole('button', { name: 'Page' }));
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', { name: 'Duplicate page 1' }));
+    });
+    const call = updateDocument.mock.calls.at(-1)![0];
+    expect(call.pageCount).toBe(4);
+    expect(call.pages.map((p: { pageNumber: number }) => p.pageNumber)).toEqual(
+      [1, 2, 3, 4]
+    );
+    expect(call.pages[1].id).toBe('page-gen');
+    expect(addToast).toHaveBeenCalledWith('Page duplicated', 'success');
+  });
+
+  it('extracts pages by range into a new document', async () => {
+    render(<EditPage />);
+    await screen.findByRole('heading', { name: 'Annual Report - Editor' });
+    fireEvent.click(screen.getByRole('button', { name: 'Page' }));
+    fireEvent.change(screen.getByLabelText('Extract page range'), {
+      target: { value: '2-3' },
+    });
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', { name: /^Extract$/ }));
+    });
+    expect(createDocument).toHaveBeenCalledWith(
+      expect.objectContaining({
+        title: 'Annual Report (extracted)',
+        pageCount: 2,
+        pages: expect.arrayContaining([
+          expect.objectContaining({ id: 'page-2', pageNumber: 1 }),
+          expect.objectContaining({ id: 'page-3', pageNumber: 2 }),
+        ]),
+      })
+    );
+    const call = updateDocument.mock.calls.at(-1)![0];
+    expect(call.pageCount).toBe(1);
+    expect(call.pages[0].id).toBe('page-1');
+    expect(addToast).toHaveBeenCalledWith('Extracted 2 page(s)', 'success');
+  });
+
+  it('splits the document into two documents', async () => {
+    render(<EditPage />);
+    await screen.findByRole('heading', { name: 'Annual Report - Editor' });
+    fireEvent.click(screen.getByRole('button', { name: 'Page' }));
+    fireEvent.change(screen.getByLabelText('Split after page'), {
+      target: { value: '2' },
+    });
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', { name: /^Split$/ }));
+    });
+    expect(createDocument).toHaveBeenCalledWith(
+      expect.objectContaining({
+        title: 'Annual Report (part 2)',
+        pageCount: 1,
+        pages: [expect.objectContaining({ id: 'page-3', pageNumber: 1 })],
+      })
+    );
+    const call = updateDocument.mock.calls.at(-1)![0];
+    expect(call.pageCount).toBe(2);
+    expect(call.pages.map((p: { id: string }) => p.id)).toEqual([
+      'page-1',
+      'page-2',
+    ]);
+  });
+
+  it('updates page labels', async () => {
+    render(<EditPage />);
+    await screen.findByRole('heading', { name: 'Annual Report - Editor' });
+    fireEvent.click(screen.getByRole('button', { name: 'Page' }));
+    await act(async () => {
+      fireEvent.change(screen.getByLabelText('Label page 1'), {
+        target: { value: 'Cover' },
+      });
+    });
+    const call = updateDocument.mock.calls.at(-1)![0];
+    expect(call.pages[0].labels).toBe('Cover');
+  });
+
+  it('crops the current page with the visual crop box', async () => {
+    render(<EditPage />);
+    await screen.findByRole('heading', { name: 'Annual Report - Editor' });
+    fireEvent.click(screen.getByRole('button', { name: 'Page' }));
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', { name: /^Crop$/ }));
+    });
+    expect(screen.getByLabelText('Crop box')).toBeInTheDocument();
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', { name: /^Apply$/ }));
+    });
+    const call = updateDocument.mock.calls.at(-1)![0];
+    expect(call.pages[0].crop).toEqual({
+      x: 100,
+      y: 100,
+      width: 300,
+      height: 400,
+    });
+    expect(addToast).toHaveBeenCalledWith('Crop applied', 'success');
+  });
+
+  it('clears a crop from the current page', async () => {
+    const cropped = {
+      ...doc,
+      pages: doc.pages.map((p, i) =>
+        i === 0 ? { ...p, crop: { x: 10, y: 10, width: 200, height: 300 } } : p
+      ),
+    };
+    getDocument.mockResolvedValue(cropped);
+    render(<EditPage />);
+    await screen.findByRole('heading', { name: 'Annual Report - Editor' });
+    fireEvent.click(screen.getByRole('button', { name: 'Page' }));
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', { name: /^Clear$/ }));
+    });
+    const call = updateDocument.mock.calls.at(-1)![0];
+    expect(call.pages[0].crop).toBeUndefined();
+    expect(addToast).toHaveBeenCalledWith('Crop removed', 'success');
+  });
+
+  it('merges pages from another document', async () => {
+    const other = {
+      ...doc,
+      id: 'doc2',
+      title: 'Other Doc',
+      pages: [makePage(10), makePage(11)],
+    };
+    useData.mockReturnValue({
+      getDocument,
+      updateDocument,
+      addStamp,
+      createDocument,
+      documents: [other],
+    });
+    render(<EditPage />);
+    await screen.findByRole('heading', { name: 'Annual Report - Editor' });
+    fireEvent.click(screen.getByRole('button', { name: 'Page' }));
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', { name: 'Add' }));
+    });
+    await act(async () => {
+      fireEvent.click(
+        screen.getByRole('button', { name: 'Apply Merge (5 pages)' })
+      );
+    });
+    const call = updateDocument.mock.calls.at(-1)![0];
+    expect(call.pageCount).toBe(5);
+    expect(call.pages.map((p: { id: string }) => p.id)).toEqual([
+      'page-1',
+      'page-2',
+      'page-3',
+      'page-10',
+      'page-11',
+    ]);
+    expect(addToast).toHaveBeenCalledWith('Pages merged', 'success');
   });
 });

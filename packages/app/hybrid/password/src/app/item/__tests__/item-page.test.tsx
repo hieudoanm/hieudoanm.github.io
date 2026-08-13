@@ -174,4 +174,34 @@ describe('ItemPage', () => {
     render(<ItemPage />);
     await waitFor(() => expect(mockPush).toHaveBeenCalledWith('/'));
   });
+
+  it('edits an item and saves changes', async () => {
+    render(<ItemPage />);
+    await waitFor(() =>
+      expect(
+        screen.getByRole('heading', { name: 'GitHub' })
+      ).toBeInTheDocument()
+    );
+    fireEvent.click(screen.getByRole('button', { name: 'Edit' }));
+    expect(
+      screen.getByRole('heading', { name: 'Edit Item' })
+    ).toBeInTheDocument();
+    fireEvent.change(screen.getByPlaceholderText('Title'), {
+      target: { value: 'GitHub (work)' },
+    });
+    fireEvent.change(screen.getByPlaceholderText('Username'), {
+      target: { value: 'updated@email.com' },
+    });
+    fireEvent.click(screen.getByRole('button', { name: 'Save' }));
+    await waitFor(() =>
+      expect(screen.getByText('Item updated')).toBeInTheDocument()
+    );
+    expect(mockDb.db.items.put).toHaveBeenCalledWith(
+      expect.objectContaining({
+        id: 'v-1',
+        title: 'GitHub (work)',
+        username: 'updated@email.com',
+      })
+    );
+  });
 });

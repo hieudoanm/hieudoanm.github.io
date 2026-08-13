@@ -1,6 +1,13 @@
 # TREE
 
 ```text
+├── docs/
+│   ├── [ARCHITECTURE.md](./docs/ARCHITECTURE.md)
+│   ├── [CONTRIBUTING.md](./docs/CONTRIBUTING.md)
+│   ├── [DOWNLOADS.md](./docs/DOWNLOADS.md)
+│   ├── [FEATURES.md](./docs/FEATURES.md)
+│   ├── [PACKAGING.md](./docs/PACKAGING.md)
+│   └── [ROADMAP.md](./docs/ROADMAP.md)
 ├── e2e/
 │   ├── [about.spec.ts](./e2e/about.spec.ts)
 │   ├── [home.spec.ts](./e2e/home.spec.ts)
@@ -13,7 +20,6 @@
 │   ├── [settings.spec.ts](./e2e/settings.spec.ts)
 │   ├── [version.spec.ts](./e2e/version.spec.ts)
 │   └── [view-mode.spec.ts](./e2e/view-mode.spec.ts)
-├── images/
 ├── public/
 │   ├── icons/
 │   │   ├── [icon-192x192.png](./public/icons/icon-192x192.png)
@@ -27,6 +33,20 @@
 │   └── [sw.js](./public/sw.js)
 ├── src/
 │   ├── app/
+│   │   ├── __tests__/
+│   │   │   ├── [about-page.test.tsx](./src/app/__tests__/about-page.test.tsx)
+│   │   │   ├── [error-page.test.tsx](./src/app/__tests__/error-page.test.tsx)
+│   │   │   ├── [home-page.test.tsx](./src/app/__tests__/home-page.test.tsx)
+│   │   │   ├── [layout.test.tsx](./src/app/__tests__/layout.test.tsx)
+│   │   │   ├── [not-found-page.test.tsx](./src/app/__tests__/not-found-page.test.tsx)
+│   │   │   ├── [pdf-compare-page.test.tsx](./src/app/__tests__/pdf-compare-page.test.tsx)
+│   │   │   ├── [pdf-edit-page.test.tsx](./src/app/__tests__/pdf-edit-page.test.tsx)
+│   │   │   ├── [pdf-merge-page.test.tsx](./src/app/__tests__/pdf-merge-page.test.tsx)
+│   │   │   ├── [pdf-viewer-page.test.tsx](./src/app/__tests__/pdf-viewer-page.test.tsx)
+│   │   │   ├── [profile-page.test.tsx](./src/app/__tests__/profile-page.test.tsx)
+│   │   │   ├── [settings-page.test.tsx](./src/app/__tests__/settings-page.test.tsx)
+│   │   │   ├── [tools-page.test.tsx](./src/app/__tests__/tools-page.test.tsx)
+│   │   │   └── [version-page.test.tsx](./src/app/__tests__/version-page.test.tsx)
 │   │   ├── about/
 │   │   │   └── [page.tsx](./src/app/about/page.tsx)
 │   │   ├── pdf/
@@ -50,8 +70,22 @@
 │   │   ├── [not-found.tsx](./src/app/not-found.tsx)
 │   │   └── [page.tsx](./src/app/page.tsx)
 │   ├── components/
+│   │   ├── __tests__/
+│   │   │   ├── [PdfFileUpload.test.tsx](./src/components/__tests__/PdfFileUpload.test.tsx)
+│   │   │   ├── [SWProvider.test.tsx](./src/components/__tests__/SWProvider.test.tsx)
+│   │   │   └── [templates.test.tsx](./src/components/__tests__/templates.test.tsx)
 │   │   ├── atoms/
+│   │   │   ├── __mocks__/
+│   │   │   │   └── [PdfFileUpload.tsx](./src/components/atoms/__mocks__/PdfFileUpload.tsx)
 │   │   │   └── [PdfFileUpload.tsx](./src/components/atoms/PdfFileUpload.tsx)
+│   │   ├── molecules/
+│   │   │   ├── __tests__/
+│   │   │   │   └── [PageView.test.tsx](./src/components/molecules/__tests__/PageView.test.tsx)
+│   │   │   ├── [FormFieldsLayer.tsx](./src/components/molecules/FormFieldsLayer.tsx)
+│   │   │   ├── [PageOrganizer.tsx](./src/components/molecules/PageOrganizer.tsx)
+│   │   │   ├── [PageView.tsx](./src/components/molecules/PageView.tsx)
+│   │   │   ├── [SignaturePad.tsx](./src/components/molecules/SignaturePad.tsx)
+│   │   │   └── [ViewerSkeleton.tsx](./src/components/molecules/ViewerSkeleton.tsx)
 │   │   ├── organisms/
 │   │   │   └── [ToastContainer.tsx](./src/components/organisms/ToastContainer.tsx)
 │   │   ├── templates/
@@ -59,6 +93,10 @@
 │   │   │   ├── [ErrorTemplate.tsx](./src/components/templates/ErrorTemplate.tsx)
 │   │   │   └── [VersionTemplate.tsx](./src/components/templates/VersionTemplate.tsx)
 │   │   ├── tools/
+│   │   │   ├── __tests__/
+│   │   │   │   ├── [convert-create-tools.test.tsx](./src/components/tools/__tests__/convert-create-tools.test.tsx)
+│   │   │   │   ├── [pdf-canvas-tools.test.tsx](./src/components/tools/__tests__/pdf-canvas-tools.test.tsx)
+│   │   │   │   └── [pdf-operations-tools.test.tsx](./src/components/tools/__tests__/pdf-operations-tools.test.tsx)
 │   │   │   ├── [CreateTextToPdfTool.tsx](./src/components/tools/CreateTextToPdfTool.tsx)
 │   │   │   ├── [CreateUrlToPdfTool.tsx](./src/components/tools/CreateUrlToPdfTool.tsx)
 │   │   │   ├── [EbookConvertTool.tsx](./src/components/tools/EbookConvertTool.tsx)
@@ -89,23 +127,40 @@
 │   │   │   └── [UrlToPdfTool.tsx](./src/components/tools/UrlToPdfTool.tsx)
 │   │   └── [SWProvider.tsx](./src/components/SWProvider.tsx)
 │   ├── data/
+│   │   ├── __tests__/
+│   │   │   ├── [models.test.ts](./src/data/__tests__/models.test.ts)
+│   │   │   ├── [pdf-tools.test.ts](./src/data/__tests__/pdf-tools.test.ts)
+│   │   │   └── [seed.test.ts](./src/data/__tests__/seed.test.ts)
 │   │   ├── [models.ts](./src/data/models.ts)
 │   │   ├── [pdf-tools.ts](./src/data/pdf-tools.ts)
 │   │   └── [seed.ts](./src/data/seed.ts)
 │   ├── hooks/
+│   │   ├── __tests__/
+│   │   │   └── [useSWRegister.test.ts](./src/hooks/__tests__/useSWRegister.test.ts)
 │   │   └── [useSWRegister.ts](./src/hooks/useSWRegister.ts)
 │   ├── lib/
+│   │   ├── __tests__/
+│   │   │   ├── [db.test.ts](./src/lib/__tests__/db.test.ts)
+│   │   │   └── [pdf-tools.test.ts](./src/lib/__tests__/pdf-tools.test.ts)
 │   │   ├── [db.ts](./src/lib/db.ts)
 │   │   └── [pdf-tools.ts](./src/lib/pdf-tools.ts)
 │   ├── providers/
+│   │   ├── __tests__/
+│   │   │   ├── [DataProvider.test.tsx](./src/providers/__tests__/DataProvider.test.tsx)
+│   │   │   ├── [Providers.test.tsx](./src/providers/__tests__/Providers.test.tsx)
+│   │   │   └── [ToastProvider.test.tsx](./src/providers/__tests__/ToastProvider.test.tsx)
 │   │   ├── [DataProvider.tsx](./src/providers/DataProvider.tsx)
 │   │   ├── [Providers.tsx](./src/providers/Providers.tsx)
 │   │   └── [ToastProvider.tsx](./src/providers/ToastProvider.tsx)
 │   ├── styles/
-│   │   └── [globals.css](./src/styles/globals.css)
+│   │   ├── [base.css](./src/styles/base.css)
+│   │   ├── [globals.css](./src/styles/globals.css)
+│   │   └── [themes.css](./src/styles/themes.css)
 │   ├── types/
 │   │   └── [index.ts](./src/types/index.ts)
 │   └── utils/
+│       ├── __tests__/
+│       │   └── [format.test.ts](./src/utils/__tests__/format.test.ts)
 │       └── [format.ts](./src/utils/format.ts)
 ├── src-tauri/
 │   ├── capabilities/
@@ -135,6 +190,7 @@
 │   ├── [build.rs](./src-tauri/build.rs)
 │   └── [tauri.conf.json](./src-tauri/tauri.conf.json)
 ├── [AGENTS.md](./AGENTS.md)
+├── [LICENSE](./LICENSE)
 ├── [README.md](./README.md)
 ├── [TREE.md](./TREE.md)
 ├── [eslint.config.mts](./eslint.config.mts)
@@ -147,4 +203,4 @@
 └── [tsconfig.json](./tsconfig.json)
 ```
 
-31 directories, 113 files
+42 directories, 155 files
