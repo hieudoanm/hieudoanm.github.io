@@ -354,3 +354,53 @@ export const generateBracket = (
       return [];
   }
 };
+
+export const getNextRoundMatches = (
+  matches: Match[],
+  matchId: string
+): Match[] =>
+  matches.filter(
+    (m) => m.participant1Id === matchId || m.participant2Id === matchId
+  );
+
+export const advanceBracketWinners = (matches: Match[]): Match[] => {
+  const winnersByMatch = new Map<string, string>();
+  for (const m of matches) {
+    if (m.status === 'completed' && m.winnerId) {
+      winnersByMatch.set(m.id, m.winnerId);
+    }
+  }
+
+  return matches.map((m) => {
+    const nextP1 = m.participant1Id
+      ? winnersByMatch.get(m.participant1Id)
+      : undefined;
+    const nextP2 = m.participant2Id
+      ? winnersByMatch.get(m.participant2Id)
+      : undefined;
+    if (nextP1 === undefined && nextP2 === undefined) return m;
+    return {
+      ...m,
+      participant1Id: nextP1 !== undefined ? nextP1 : m.participant1Id,
+      participant2Id: nextP2 !== undefined ? nextP2 : m.participant2Id,
+    };
+  });
+};
+
+export const assignGroups = (
+  participantIds: (string | null)[],
+  groupCount: number
+): string[][] => {
+  const ids = participantIds.filter((x): x is string => !!x);
+  const count = Math.max(1, groupCount);
+  const groups: string[][] = Array.from({ length: count }, () => []);
+
+  ids.forEach((id, i) => {
+    const row = Math.floor(i / count);
+    const pos = i % count;
+    const groupIndex = row % 2 === 0 ? pos : count - 1 - pos;
+    groups[groupIndex].push(id);
+  });
+
+  return groups;
+};

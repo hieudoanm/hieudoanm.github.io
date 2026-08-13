@@ -41,6 +41,7 @@ const group = (id: string, tournamentId: string): Group => ({
 const fakeIdb = (): {
   failOpen: boolean;
   failOps: boolean;
+  preExistingStores: string[];
 } => (globalThis as unknown as { indexedDB: unknown }).indexedDB as never;
 
 describe('db', () => {
@@ -51,6 +52,7 @@ describe('db', () => {
   afterEach(() => {
     fakeIdb().failOpen = false;
     fakeIdb().failOps = false;
+    fakeIdb().preExistingStores = [];
   });
 
   it('starts with no tournaments', async () => {
@@ -178,6 +180,27 @@ describe('db', () => {
     fakeIdb().failOpen = true;
     await expect(fresh!.db.getAllTournaments()).rejects.toBeTruthy();
     fakeIdb().failOpen = false;
+  });
+
+  it('keeps existing stores when opening a pre-existing database', async () => {
+    fakeIdb().preExistingStores = [
+      'tournaments',
+      'participants',
+      'matches',
+      'groups',
+    ];
+    let fresh: typeof import('@/lib/db');
+    jest.isolateModules(() => {
+      fresh = require('@/lib/db') as typeof import('@/lib/db');
+    });
+    await fresh!.db.createTournament(tournament('t1'));
+    await expect(fresh!.db.getAllTournaments()).resolves.toHaveLength(1);
+    await fresh!.db.createParticipants([
+      participant('p1', 't1'),
+      participant('p2', 't1'),
+    ]);
+    await expect(fresh!.db.getParticipants('t1')).resolves.toHaveLength(2);
+    fakeIdb().preExistingStores = [];
   });
 
   it('rejects when a read operation fails', async () => {

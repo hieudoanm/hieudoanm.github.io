@@ -141,6 +141,29 @@ describe('calculateStandings', () => {
     expect(standings.every((s) => s.played === 0)).toBe(true);
   });
 
+  it('ignores matches involving participants outside the standings', () => {
+    const standings = calculateStandings(
+      [completed('m1', 'x', 'b', 2, 1, 'x')],
+      ['a', 'b']
+    );
+    expect(standings.find((s) => s.participantId === 'b')!.played).toBe(0);
+  });
+
+  it('awards three points when the second participant wins', () => {
+    const standings = calculateStandings(
+      [completed('m1', 'a', 'b', 1, 2, 'b')],
+      ['a', 'b']
+    );
+    expect(standings.find((s) => s.participantId === 'b')).toMatchObject({
+      played: 1,
+      won: 1,
+      points: 3,
+    });
+    expect(standings.find((s) => s.participantId === 'a')).toMatchObject({
+      lost: 1,
+    });
+  });
+
   it('sorts by points then wins and assigns positions', () => {
     const matches = [
       completed('m1', 'a', 'b', 2, 0, 'a'),

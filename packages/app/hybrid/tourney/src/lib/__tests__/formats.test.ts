@@ -6,6 +6,9 @@ import {
   generateGroupStageKnockout,
   generateLeagueSchedule,
   generateBracket,
+  getNextRoundMatches,
+  advanceBracketWinners,
+  assignGroups,
 } from '@/lib/formats';
 import type { TournamentFormat } from '@/types';
 
@@ -49,6 +52,19 @@ describe('generateSingleEliminationBracket', () => {
     expect(generateSingleEliminationBracket('t1', [])).toHaveLength(0);
     expect(generateSingleEliminationBracket('t1', ['a'])).toHaveLength(0);
   });
+
+  it('creates empty match slots for spare participant slots', () => {
+    const matches = generateSingleEliminationBracket('t1', [
+      'a',
+      'b',
+      'c',
+      'd',
+      'e',
+    ]);
+    expect(matches).toHaveLength(7);
+    expect(matches.some((m) => m.participant1Id === null)).toBe(true);
+    expect(matches.some((m) => m.participant2Id === null)).toBe(true);
+  });
 });
 
 describe('generateDoubleEliminationBracket', () => {
@@ -88,6 +104,28 @@ describe('generateDoubleEliminationBracket', () => {
     ]);
     expect(matches).toHaveLength(5);
     expect(matches.some((m) => m.bracket === 'final')).toBe(true);
+  });
+
+  it('pads non-power-of-two participant counts', () => {
+    const matches = generateDoubleEliminationBracket('t1', [
+      'a',
+      'b',
+      'c',
+      'd',
+      'e',
+      'f',
+    ]);
+    expect(matches.length).toBeGreaterThan(0);
+    expect(
+      matches
+        .filter((m) => m.bracket === 'winners')
+        .some((m) => m.participant1Id === null)
+    ).toBe(true);
+    expect(
+      matches
+        .filter((m) => m.bracket === 'winners')
+        .some((m) => m.participant2Id === null)
+    ).toBe(true);
   });
 });
 
@@ -207,5 +245,88 @@ describe('generateBracket', () => {
     expect(
       generateBracket('unknown' as TournamentFormat, 't1', ['a', 'b'])
     ).toEqual([]);
+  });
+});
+
+const bracketMatch = (
+  id: string,
+  round: number,
+  p1: string | null,
+  p2: string | null,
+  winnerId: string | null = null
+) => ({
+  id,
+  tournamentId: 't1',
+  round,
+  participant1Id: p1,
+  participant2Id: p2,
+  participant1Score: null,
+  participant2Score: null,
+  winnerId,
+  status: winnerId ? ('completed' as const) : ('scheduled' as const),
+});
+
+describe('getNextRoundMatches', () => {
+  it('returns matches referencing the given match id', () => {
+    const matches = [
+      bracketMatch('m1', 1, 'a', 'b'),
+      bracketMatch('m2', 1, 'c', 'd'),
+      bracketMatch('m3', 2, 'm1', 'm2'),
+    ];
+    expect(getNextRoundMatches(matches, 'm1').map((m) => m.id)).toEqual(['m3']);
+    expect(getNextRoundMatches(matches, 'nope')).toEqual([]);
+  });
+});
+
+describe('advanceBracketWinners', () => {
+  it('promotes winners into the next round', () => {
+    const matches = [
+      bracketMatch('m1', 1, 'a', 'b', 'a'),
+      bracketMatch('m2', 1, 'c', 'd', 'c'),
+      bracketMatch('m3', 2, 'm1', 'm2'),
+    ];
+    const advanced = advanceBracketWinners(matches);
+    expect(advanced[2].participant1Id).toBe('a');
+    expect(advanced[2].participant2Id).toBe('c');
+  });
+
+  it('leaves matches unchanged when no winners exist', () => {
+    const matches = [
+      bracketMatch('m1', 1, 'a', 'b'),
+      bracketMatch('m3', 2, 'm1', 'm2'),
+    ];
+    expect(advanceBracketWinners(matches)).toEqual(matches);
+  });
+
+  it('keeps bye slots and does not overwrite null slots', () => {
+    const matches = [
+      bracketMatch('m1', 1, 'a', 'b', 'b'),
+      bracketMatch('m2', 1, 'c', null, 'c'),
+      bracketMatch('m3', 2, 'm1', 'm2'),
+    ];
+    const advanced = advanceBracketWinners(matches);
+    expect(advanced[2].participant1Id).toBe('b');
+    expect(advanced[2].participant2Id).toBe('c');
+  });
+});
+
+describe('assignGroups', () => {
+  it('distributes ids evenly across groups in snake order', () => {
+    const groups = assignGroups(['1', '2', '3', '4'], 2);
+    expect(groups).toEqual([
+      ['1', '4'],
+      ['2', '3'],
+    ]);
+  });
+
+  it('handles more participants than slots per group', () => {
+    const groups = assignGroups(['1', '2', '3', '4', '5', '6'], 2);
+    expect(groups[0]).toEqual(['1', '4', '5']);
+    expect(groups[1]).toEqual(['2', '3', '6']);
+  });
+
+  it('ignores null entries and clamps the group count', () => {
+    expect(assignGroups([null, 'a', 'b', null], 0)).toEqual([['a', 'b']]);
+    expect(assignGroups([], 4)).toEqual([[], [], [], []]);
   });
 });

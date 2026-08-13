@@ -1,6 +1,7 @@
 import type { FC } from 'react';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useData } from '@/providers/DataProvider';
+import { importParticipantsFromCSV, readFileAsText } from '@/lib/import';
 
 interface ParticipantsViewProps {
   tournament: ReturnType<typeof useData>['tournaments'][number];
@@ -13,6 +14,7 @@ export const ParticipantsView: FC<ParticipantsViewProps> = ({
 }) => {
   const { createParticipant, createParticipants, deleteParticipant } =
     useData();
+  const csvInputRef = useRef<HTMLInputElement>(null);
 
   const [newName, setNewName] = useState('');
   const [batchText, setBatchText] = useState('');
@@ -49,6 +51,24 @@ export const ParticipantsView: FC<ParticipantsViewProps> = ({
     await deleteParticipant(id);
   };
 
+  const handleImportCSV = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    const text = await readFileAsText(file);
+    const imported = importParticipantsFromCSV(text);
+    if (imported.length > 0) {
+      await createParticipants(
+        imported.map((p, i) => ({
+          tournamentId: tournament.id,
+          name: p.name,
+          seed: p.seed ?? participants.length + i + 1,
+          rating: p.rating,
+        }))
+      );
+    }
+    if (csvInputRef.current) csvInputRef.current.value = '';
+  };
+
   return (
     <div className="flex flex-col gap-4">
       <div className="border-base-content/10 bg-base-200 flex gap-2 rounded-xl border p-3">
@@ -74,9 +94,19 @@ export const ParticipantsView: FC<ParticipantsViewProps> = ({
           className="btn btn-ghost btn-sm">
           Batch Add
         </button>
-        <button className="btn btn-ghost btn-sm" disabled>
+        <button
+          onClick={() => csvInputRef.current?.click()}
+          className="btn btn-ghost btn-sm">
           Import CSV
         </button>
+        <input
+          ref={csvInputRef}
+          type="file"
+          accept=".csv"
+          onChange={handleImportCSV}
+          className="hidden"
+          aria-label="Import participants CSV"
+        />
       </div>
 
       {showBatch && (

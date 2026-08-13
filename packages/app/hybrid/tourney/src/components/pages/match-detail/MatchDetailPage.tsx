@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { useData } from '@/providers/DataProvider';
 import { Navbar, NAV_ITEMS } from '@/components/organisms/Navbar';
 import { Header } from '@/components/organisms/Header';
+import { advanceBracketWinners } from '@/lib/formats';
 import { MatchParticipants } from './MatchParticipants';
 import { ScoreEditor } from './ScoreEditor';
 import { WinnerSelector } from './WinnerSelector';
@@ -27,6 +28,37 @@ const MatchDetailPageContent: FC = () => {
   const { participants, matches, updateMatch } = useData();
 
   const match = useMemo(() => matches.find((m) => m.id === id), [matches, id]);
+
+  const advanceAndPersist = async (updated: {
+    matchId: string;
+    status: 'completed';
+    winnerId: string | null;
+    participant1Score: number | null;
+    participant2Score: number | null;
+  }): Promise<void> => {
+    if (!match) return;
+    const updatedMatch: typeof match = {
+      ...match,
+      ...updated,
+    };
+    await updateMatch(updatedMatch);
+
+    const merged = matches.map((m) =>
+      m.id === updatedMatch.id ? updatedMatch : m
+    );
+    const advanced = advanceBracketWinners(merged);
+    for (const next of advanced) {
+      const original = merged.find((m) => m.id === next.id);
+      if (
+        next.id !== updatedMatch.id &&
+        original &&
+        (next.participant1Id !== original.participant1Id ||
+          next.participant2Id !== original.participant2Id)
+      ) {
+        await updateMatch(next);
+      }
+    }
+  };
 
   const participant1 = useMemo(
     () =>
@@ -51,21 +83,24 @@ const MatchDetailPageContent: FC = () => {
   const handleSaveScore = async () => {
     if (!match) return;
     setSaving(true);
-    await updateMatch({
-      ...match,
+    await advanceAndPersist({
+      matchId: match.id,
       participant1Score: score1 === '' ? null : Number(score1),
       participant2Score: score2 === '' ? null : Number(score2),
       status: 'completed',
+      winnerId: null,
     });
     setSaving(false);
   };
 
   const handleSetWinner = async (winnerId: string) => {
     if (!match) return;
-    await updateMatch({
-      ...match,
+    await advanceAndPersist({
+      matchId: match.id,
       winnerId,
       status: 'completed',
+      participant1Score: null,
+      participant2Score: null,
     });
   };
 

@@ -9,8 +9,47 @@ import {
   importFromJSON,
 } from '@/lib/export';
 import { exportToSQLite } from '@/lib/sqlite';
-import { importParticipantsFromCSV, readFileAsText } from '@/lib/import';
+import {
+  importParticipantsFromCSV,
+  importTournamentDataFromCSV,
+  readFileAsText,
+} from '@/lib/import';
 import { calculateStandings } from '@/lib/standings';
+import type { TournamentFormat, TournamentStatus, MatchStatus } from '@/types';
+
+const FORMATS: TournamentFormat[] = [
+  'single-elimination',
+  'double-elimination',
+  'round-robin',
+  'swiss',
+  'group-stage',
+  'league',
+];
+
+const STATUSES: TournamentStatus[] = [
+  'draft',
+  'upcoming',
+  'in-progress',
+  'completed',
+  'cancelled',
+];
+
+const MATCH_STATUSES: MatchStatus[] = [
+  'scheduled',
+  'in-progress',
+  'completed',
+  'postponed',
+  'walkover',
+];
+
+const isFormat = (value: string | undefined): value is TournamentFormat =>
+  !!value && FORMATS.includes(value as TournamentFormat);
+
+const isStatus = (value: string | undefined): value is TournamentStatus =>
+  !!value && STATUSES.includes(value as TournamentStatus);
+
+const isMatchStatus = (value: string | undefined): value is MatchStatus =>
+  !!value && MATCH_STATUSES.includes(value as MatchStatus);
 
 type ExportModalProps = {
   isOpen: boolean;
@@ -31,6 +70,7 @@ export const ExportModal = ({
   const [importResult, setImportResult] = useState<string | null>(null);
   const jsonInputRef = useRef<HTMLInputElement>(null);
   const csvInputRef = useRef<HTMLInputElement>(null);
+  const tournamentCsvInputRef = useRef<HTMLInputElement>(null);
 
   const tournaments = tournamentId
     ? data.tournaments.filter((t) => t.id === tournamentId)
@@ -215,6 +255,108 @@ export const ExportModal = ({
     [data, tournamentId]
   );
 
+  const handleImportTournamentCSV = useCallback(
+    async (e: React.ChangeEvent<HTMLInputElement>) => {
+      const file = e.target.files?.[0];
+      if (!file) return;
+
+      setStatus('importing');
+      setStatusMessage('Importing tournament CSV…');
+      setImportResult(null);
+
+      try {
+        const text = await readFileAsText(file);
+        const imported = importTournamentDataFromCSV(text);
+        if (
+          imported.tournaments.length === 0 &&
+          (!tournamentId || imported.participants.length === 0)
+        ) {
+          setStatusMessage('No tournament data found in CSV');
+          setStatus('idle');
+          return;
+        }
+
+        let targetTournamentId = tournamentId;
+        let importedTournament = imported.tournaments[0];
+
+        if (!targetTournamentId) {
+          if (!importedTournament) {
+            setStatusMessage('No tournament found in CSV');
+            setStatus('idle');
+            return;
+          }
+          const created = await data.createTournament({
+            name: importedTournament.name || 'Imported Tournament',
+            description: importedTournament.description ?? '',
+            format: isFormat(importedTournament.format)
+              ? importedTournament.format
+              : 'round-robin',
+            status: isStatus(importedTournament.status)
+              ? importedTournament.status
+              : 'draft',
+            maxParticipants: importedTournament.maxParticipants ?? 16,
+            startDate: importedTournament.startDate,
+            endDate: importedTournament.endDate,
+          });
+          targetTournamentId = created.id;
+        }
+
+        const createdParticipants = await data.createParticipants(
+          imported.participants.map((p) => ({
+            name: p.name,
+            tournamentId: targetTournamentId as string,
+            seed: p.seed,
+            rating: p.rating,
+            groupId: p.groupId,
+          }))
+        );
+
+        const idMap = new Map<string, string>();
+        imported.participants.forEach((p, i) => {
+          idMap.set(p.id, createdParticipants[i]?.id ?? p.id);
+        });
+
+        await data.createMatches(
+          imported.matches.map((m) => ({
+            tournamentId: targetTournamentId as string,
+            round: m.round ?? 1,
+            bracket:
+              m.bracket === 'winners' ||
+              m.bracket === 'losers' ||
+              m.bracket === 'final'
+                ? m.bracket
+                : undefined,
+            participant1Id: m.participant1Id
+              ? (idMap.get(m.participant1Id) ?? m.participant1Id)
+              : null,
+            participant2Id: m.participant2Id
+              ? (idMap.get(m.participant2Id) ?? m.participant2Id)
+              : null,
+            participant1Score: m.participant1Score ?? null,
+            participant2Score: m.participant2Score ?? null,
+            winnerId: m.winnerId ? (idMap.get(m.winnerId) ?? m.winnerId) : null,
+            status: isMatchStatus(m.status) ? m.status : 'scheduled',
+            scheduledAt: m.scheduledAt,
+            venue: m.venue,
+          }))
+        );
+
+        setImportResult(
+          `Imported ${imported.tournaments.length} tournament(s), ${createdParticipants.length} participant(s), ${imported.matches.length} match(es)`
+        );
+        setStatus('idle');
+        setStatusMessage('');
+      } catch {
+        setStatusMessage('Tournament CSV import failed');
+        setStatus('idle');
+      }
+
+      if (tournamentCsvInputRef.current)
+        tournamentCsvInputRef.current.value = '';
+    },
+    [data, tournamentId]
+  );
+
   if (!isOpen) return null;
 
   const isActive = status === 'exporting' || status === 'importing';
@@ -341,6 +483,30 @@ export const ExportModal = ({
                     </div>
                     <div className="text-xs text-gray-500">
                       Add participants from spreadsheet
+                    </div>
+                  </div>
+                  <span className="text-xs text-gray-400">.csv</span>
+                </label>
+              </div>
+
+              <div>
+                <input
+                  ref={tournamentCsvInputRef}
+                  type="file"
+                  accept=".csv"
+                  onChange={handleImportTournamentCSV}
+                  className="hidden"
+                  id="import-tournament-csv"
+                />
+                <label
+                  htmlFor="import-tournament-csv"
+                  className="flex w-full cursor-pointer items-center justify-between rounded-lg bg-gray-50 px-4 py-3 transition-colors hover:bg-gray-100">
+                  <div className="text-left">
+                    <div className="text-sm font-medium text-gray-900">
+                      Import Tournament CSV
+                    </div>
+                    <div className="text-xs text-gray-500">
+                      Restore tournament, participants and matches
                     </div>
                   </div>
                   <span className="text-xs text-gray-400">.csv</span>

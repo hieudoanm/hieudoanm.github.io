@@ -1,13 +1,14 @@
 'use client';
 
 import type { FC } from 'react';
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { useData } from '@/providers/DataProvider';
 import { Navbar, NAV_ITEMS } from '@/components/organisms/Navbar';
 import { Header } from '@/components/organisms/Header';
 import { FormatSelector } from './FormatSelector';
-import type { TournamentFormat } from '@/types';
+import { getTemplates, saveTemplate, deleteTemplate } from '@/lib/templates';
+import type { TournamentFormat, TournamentTemplate } from '@/types';
 
 const maxParticipantOptions = [4, 8, 16, 32, 64];
 
@@ -20,6 +21,15 @@ export const CreatePage: FC = () => {
   const [maxParticipants, setMaxParticipants] = useState(16);
   const [startDate, setStartDate] = useState('');
   const [submitting, setSubmitting] = useState(false);
+  const [templates, setTemplates] = useState<TournamentTemplate[]>([]);
+
+  const reloadTemplates = useCallback(() => {
+    setTemplates(getTemplates());
+  }, []);
+
+  useEffect(() => {
+    reloadTemplates();
+  }, [reloadTemplates]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -34,6 +44,29 @@ export const CreatePage: FC = () => {
       startDate: startDate ? new Date(startDate).getTime() : undefined,
     });
     router.push('/');
+  };
+
+  const handleSaveTemplate = () => {
+    if (!name.trim()) return;
+    saveTemplate({
+      name: name.trim(),
+      description: description.trim(),
+      format,
+      maxParticipants,
+    });
+    reloadTemplates();
+  };
+
+  const handleUseTemplate = (template: TournamentTemplate) => {
+    setName(template.name);
+    setDescription(template.description);
+    setFormat(template.format);
+    setMaxParticipants(template.maxParticipants);
+  };
+
+  const handleDeleteTemplate = (id: string) => {
+    deleteTemplate(id);
+    reloadTemplates();
   };
 
   return (
@@ -102,6 +135,52 @@ export const CreatePage: FC = () => {
                   className="input input-bordered w-full"
                 />
               </div>
+            </div>
+          </fieldset>
+
+          <fieldset className="border-base-content/20 rounded-xl border p-4">
+            <legend className="px-2 text-sm font-medium">Templates</legend>
+            <div className="flex flex-col gap-3">
+              <button
+                type="button"
+                onClick={handleSaveTemplate}
+                className="btn btn-ghost btn-sm w-fit"
+                disabled={!name.trim()}>
+                Save current as Template
+              </button>
+
+              {templates.length > 0 && (
+                <div className="flex flex-col gap-2">
+                  {templates.map((template) => (
+                    <div
+                      key={template.id}
+                      className="border-base-content/10 flex items-center justify-between gap-2 rounded-xl border px-3 py-2">
+                      <div className="min-w-0">
+                        <div className="truncate text-sm font-medium">
+                          {template.name}
+                        </div>
+                        <div className="text-base-content/50 truncate text-xs">
+                          {template.format} · max {template.maxParticipants}
+                        </div>
+                      </div>
+                      <div className="flex flex-shrink-0 gap-1">
+                        <button
+                          type="button"
+                          onClick={() => handleUseTemplate(template)}
+                          className="btn btn-ghost btn-xs">
+                          Use
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => handleDeleteTemplate(template.id)}
+                          className="btn btn-ghost btn-xs text-error">
+                          Delete
+                        </button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           </fieldset>
 

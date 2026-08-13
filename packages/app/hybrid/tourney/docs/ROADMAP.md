@@ -31,8 +31,8 @@
 - [x] Match detail page with score entry
 - [x] Bracket navigation (rounds, matches)
 - [ ] Auto-advance winners
-- [ ] Match scheduling with calendar view
-- [ ] Reschedule matches (drag-and-drop)
+- [x] Match scheduling with calendar view
+- [x] Reschedule matches (drag-and-drop)
 - [ ] Bracket export (PNG, PDF)
 
 ## Phase 4 — Standings & Rankings (Data)
@@ -41,25 +41,25 @@
 - [x] Points calculation per format
 - [x] Tiebreaker rules (head-to-head, goal difference)
 - [x] Live standings updates
-- [ ] Historical standings snapshots
+- [x] Historical standings snapshots
 - [x] Participant stats (wins, losses, draws)
-- [ ] Leaderboard across tournaments
+- [x] Leaderboard across tournaments
 
 ## Phase 5 — Participants & Management (Organization)
 
 - [x] Participant registration flow (no account needed)
-- [ ] Seeding system (manual, rating-based, random)
-- [ ] Group assignment for Group Stage
-- [ ] Team/player profiles
-- [ ] Tournament templates (save/load configurations)
-- [ ] Batch import participants (CSV)
-- [ ] Tournament cloning
+- [x] Seeding system (manual, rating-based, random)
+- [x] Group assignment for Group Stage
+- [x] Team/player profiles
+- [x] Tournament templates (save/load configurations)
+- [x] Batch import participants (CSV)
+- [x] Tournament cloning
 
 ## Phase 6 — Export & Data Portability
 
 - [x] Export tournaments to CSV (participants, matches, standings)
 - [x] Export tournaments to SQLite database
-- [ ] Import from CSV (participants, matches)
+- [x] Import from CSV (participants, matches)
 - [x] Import from SQLite
 - [x] Full backup/restore (all data as JSON)
 - [x] Share tournament as portable file
@@ -75,7 +75,7 @@
 
 ## Phase 8 — Platform & Integration (Ecosystem)
 
-- [ ] Tauri desktop app
+- [x] Tauri desktop app
 - [ ] Android APK
 - [ ] iOS build
 - [ ] Push notifications

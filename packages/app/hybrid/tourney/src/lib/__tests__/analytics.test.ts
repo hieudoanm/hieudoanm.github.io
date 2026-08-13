@@ -184,4 +184,12 @@ describe('predictStandings', () => {
     expect(predictions[0].participantId).toBe('a');
     expect(predictions.map((p) => p.likelyPosition)).toEqual([1, 2]);
   });
+
+  it('awards points when the second participant wins', () => {
+    const matches = [match('m1', 1, 'a', 'b', 1, 2, 'b')];
+    const predictions = predictStandings(matches, ['a', 'b'], 't1');
+    const b = predictions.find((p) => p.participantId === 'b')!;
+    expect(b.currentPoints).toBe(3);
+    expect(b.maxPossiblePoints).toBe(3);
+  });
 });

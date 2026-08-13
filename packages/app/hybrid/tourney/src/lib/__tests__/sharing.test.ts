@@ -129,6 +129,30 @@ describe('generateTextSummary', () => {
     );
     expect(summary).toContain('Unknown: 3 pts');
   });
+
+  it('ignores participants from other tournaments', () => {
+    const foreign: Participant = { ...participant, tournamentId: 't2' };
+    const summary = generateTextSummary(
+      tournament,
+      [foreign],
+      [match('m1', 'p1', 'p2', 3, 1, 'completed')]
+    );
+    expect(summary).toContain('Unknown: 3 pts');
+  });
+
+  it('skips scoring completed matches with missing ids or scores', () => {
+    const summary = generateTextSummary(
+      tournament,
+      [participant],
+      [
+        match('m1', '', 'p2', 3, 1, 'completed'),
+        match('m2', 'p1', 'p2', 2, null, 'completed'),
+      ]
+    );
+    expect(summary).toContain('Matches: 2/2 completed');
+    expect(summary).toContain('Alice: 2 pts');
+    expect(summary).toContain('Unknown: 1 pts');
+  });
 });
 
 describe('copyToClipboard', () => {

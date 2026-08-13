@@ -1,23 +1,27 @@
 'use client';
 
 import type { FC } from 'react';
-import { Suspense, useMemo } from 'react';
+import { Suspense, useMemo, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { useData } from '@/providers/DataProvider';
 import { Navbar, NAV_ITEMS } from '@/components/organisms/Navbar';
 import { Header } from '@/components/organisms/Header';
+import { CalendarView } from '@/components/organisms/CalendarView';
+import { autoSchedule } from '@/lib/scheduling';
 import { MatchListItem } from './MatchListItem';
 
 const MatchesPageContent: FC = () => {
   const searchParams = useSearchParams();
   const id = searchParams.get('id');
+  const [view, setView] = useState<'list' | 'calendar'>('list');
 
   const {
     tournaments,
     participants,
     matches,
     createMatch: addMatch,
+    updateMatch,
   } = useData();
 
   const tournament = useMemo(
@@ -40,6 +44,34 @@ const MatchesPageContent: FC = () => {
     return (
       tournamentParticipants.find((p) => p.id === participantId)?.name ?? 'TBD'
     );
+  };
+
+  const handleReschedule = async (
+    matchId: string,
+    start: number
+  ): Promise<void> => {
+    const match = tournamentMatches.find((m) => m.id === matchId);
+    if (!match) return;
+    await updateMatch({ ...match, scheduledAt: start });
+  };
+
+  const handleAutoSchedule = async (): Promise<void> => {
+    const slots = autoSchedule(
+      tournamentMatches,
+      ['Court 1', 'Court 2'],
+      60,
+      tournament?.startDate ?? Date.now()
+    );
+    for (const slot of slots) {
+      const match = tournamentMatches.find((m) => m.id === slot.matchId);
+      if (match) {
+        await updateMatch({
+          ...match,
+          scheduledAt: slot.start,
+          venue: slot.venue,
+        });
+      }
+    }
   };
 
   if (!id || !tournament) {
@@ -85,34 +117,65 @@ const MatchesPageContent: FC = () => {
       />
 
       <main className="container mx-auto flex flex-1 flex-col p-6">
-        <button
-          onClick={handleAddMatch}
-          className="btn btn-primary btn-sm mb-4 w-fit">
-          Add Match
-        </button>
-
-        <div className="flex flex-col gap-6">
-          {rounds.map((round) => (
-            <div key={round}>
-              <h3 className="mb-2 text-sm font-medium">Round {round}</h3>
-              <div className="flex flex-col gap-2">
-                {tournamentMatches
-                  .filter((m) => m.round === round)
-                  .map((m) => (
-                    <MatchListItem
-                      key={m.id}
-                      id={m.id}
-                      participant1Name={getParticipantName(m.participant1Id)}
-                      participant2Name={getParticipantName(m.participant2Id)}
-                      participant1Score={m.participant1Score}
-                      participant2Score={m.participant2Score}
-                      status={m.status}
-                    />
-                  ))}
-              </div>
-            </div>
-          ))}
+        <div className="mb-4 flex flex-wrap items-center gap-2">
+          <button
+            onClick={handleAddMatch}
+            className="btn btn-primary btn-sm w-fit">
+            Add Match
+          </button>
+          <button
+            onClick={handleAutoSchedule}
+            className="btn btn-ghost btn-sm w-fit">
+            Auto Schedule
+          </button>
+          <div className="join join-horizontal">
+            <button
+              onClick={() => setView('list')}
+              className={`btn btn-sm join-item ${
+                view === 'list' ? 'btn-active' : ''
+              }`}>
+              List
+            </button>
+            <button
+              onClick={() => setView('calendar')}
+              className={`btn btn-sm join-item ${
+                view === 'calendar' ? 'btn-active' : ''
+              }`}>
+              Calendar
+            </button>
+          </div>
         </div>
+
+        {view === 'calendar' ? (
+          <CalendarView
+            matches={tournamentMatches}
+            getParticipantName={getParticipantName}
+            onReschedule={handleReschedule}
+          />
+        ) : (
+          <div className="flex flex-col gap-6">
+            {rounds.map((round) => (
+              <div key={round}>
+                <h3 className="mb-2 text-sm font-medium">Round {round}</h3>
+                <div className="flex flex-col gap-2">
+                  {tournamentMatches
+                    .filter((m) => m.round === round)
+                    .map((m) => (
+                      <MatchListItem
+                        key={m.id}
+                        id={m.id}
+                        participant1Name={getParticipantName(m.participant1Id)}
+                        participant2Name={getParticipantName(m.participant2Id)}
+                        participant1Score={m.participant1Score}
+                        participant2Score={m.participant2Score}
+                        status={m.status}
+                      />
+                    ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
 
         {tournamentMatches.length === 0 && (
           <div className="text-base-content/50 py-8 text-center text-sm">

@@ -7,6 +7,11 @@ import Link from 'next/link';
 import { useData } from '@/providers/DataProvider';
 import { Navbar, NAV_ITEMS } from '@/components/organisms/Navbar';
 import { Header } from '@/components/organisms/Header';
+import {
+  buildBracketExportRows,
+  buildBracketPdf,
+  exportBracketToPNG,
+} from '@/lib/bracket-export';
 import { BracketCard } from './BracketCard';
 
 const BracketPageContent: FC = () => {
@@ -57,6 +62,20 @@ const BracketPageContent: FC = () => {
     new Set(tournamentMatches.map((m) => m.round))
   ).sort((a, b) => a - b);
 
+  const handleExportPng = (): void => {
+    exportBracketToPNG(
+      tournament.name,
+      buildBracketExportRows(tournamentMatches, getName)
+    );
+  };
+
+  const handleExportPdf = (): void => {
+    buildBracketPdf(
+      tournament.name,
+      buildBracketExportRows(tournamentMatches, getName)
+    );
+  };
+
   return (
     <div className="flex min-h-dvh flex-col pb-20">
       <Header
@@ -70,6 +89,18 @@ const BracketPageContent: FC = () => {
       />
 
       <main className="flex-1 overflow-x-auto p-6">
+        <div className="mb-4 flex flex-wrap gap-2">
+          <button
+            onClick={handleExportPng}
+            className="btn btn-ghost btn-sm w-fit">
+            Export PNG
+          </button>
+          <button
+            onClick={handleExportPdf}
+            className="btn btn-ghost btn-sm w-fit">
+            Export PDF
+          </button>
+        </div>
         {isElimination ? (
           <div className="flex gap-6">
             {rounds.map((round) => {

@@ -40,6 +40,21 @@ describe('autoSchedule', () => {
     expect(slots.map((s) => s.matchId)).toEqual(['a', 'b', 'z']);
   });
 
+  it('groups matches with a missing round under round zero', () => {
+    const noRound = {
+      ...match('m1', 1),
+      round: undefined as unknown as number,
+    };
+    const slots = autoSchedule([noRound, match('m2', 1)], [], 30, 0);
+    expect(slots).toHaveLength(2);
+  });
+
+  it('orders same-round matches by ascending id', () => {
+    const matches = [match('z', 1), match('a', 1)];
+    const slots = autoSchedule(matches, [], 30, 0);
+    expect(slots.map((s) => s.matchId)).toEqual(['a', 'z']);
+  });
+
   it('sequentially schedules when no venues exist', () => {
     const matches = [match('m1', 1), match('m2', 1)];
     const slots = autoSchedule(matches, [], 30, 0);

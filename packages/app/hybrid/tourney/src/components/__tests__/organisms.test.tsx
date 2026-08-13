@@ -121,6 +121,41 @@ describe('StandingsTable', () => {
     expect(screen.getByText('Unknown')).toBeInTheDocument();
     expect(screen.getByText('6')).toBeInTheDocument();
   });
+
+  it('renders rows beyond the top three without a medal class', () => {
+    const { container } = render(
+      <StandingsTable
+        standings={[
+          ...standings,
+          {
+            participantId: 'p3',
+            tournamentId: 't1',
+            played: 0,
+            won: 0,
+            drawn: 0,
+            lost: 0,
+            points: 0,
+            position: 3,
+          },
+          {
+            participantId: 'p4',
+            tournamentId: 't1',
+            played: 0,
+            won: 0,
+            drawn: 0,
+            lost: 0,
+            points: 0,
+            position: 4,
+          },
+        ]}
+        participants={[]}
+      />
+    );
+    const rows = container.querySelectorAll('tbody tr');
+    expect(rows).toHaveLength(4);
+    expect(rows[0]).toHaveClass('text-yellow-500');
+    expect(rows[3].getAttribute('class')).toBeNull();
+  });
 });
 
 describe('MatchCard', () => {
@@ -173,6 +208,21 @@ describe('MatchCard', () => {
     );
     fireEvent.click(screen.getByRole('button'));
     expect(onClick).toHaveBeenCalled();
+  });
+
+  it('styles the winner when the second participant wins', () => {
+    const { container } = render(
+      <MatchCard
+        match={{ ...match, winnerId: 'p2' }}
+        participant1={participant('p1', 'Alpha')}
+        participant2={participant('p2', 'Beta')}
+      />
+    );
+    const rows = container.querySelectorAll(
+      'div.flex.items-center.justify-between'
+    );
+    expect(rows[2].className).toContain('text-primary');
+    expect(rows[1].className).not.toContain('text-primary');
   });
 });
 
@@ -245,5 +295,17 @@ describe('BracketView', () => {
     );
     fireEvent.click(screen.getByRole('button'));
     expect(onMatchClick).toHaveBeenCalledWith('m1');
+  });
+
+  it('groups matches without a round under round zero', () => {
+    const { round: _round, ...noRound } = matches[0];
+    render(
+      <BracketView
+        matches={[noRound as unknown as (typeof matches)[0]]}
+        format="group-stage"
+      />
+    );
+    expect(screen.getByText('Round 0')).toBeInTheDocument();
+    expect(screen.getByText('Group Phase')).toBeInTheDocument();
   });
 });

@@ -18,6 +18,7 @@ jest.mock('@/lib/db', () => ({
     createGroup: jest.fn(),
     updateGroup: jest.fn(),
     deleteGroup: jest.fn(),
+    getSnapshots: jest.fn(),
   },
 }));
 
@@ -72,6 +73,7 @@ const seed = (overrides: { p?: unknown; m?: unknown; g?: unknown } = {}) => {
   );
   (db.getMatches as jest.Mock).mockResolvedValue(overrides.m ?? [match('m1')]);
   (db.getGroups as jest.Mock).mockResolvedValue(overrides.g ?? [group('g1')]);
+  (db.getSnapshots as jest.Mock).mockResolvedValue([]);
 };
 
 describe('ParticipantList', () => {
@@ -108,6 +110,18 @@ describe('ParticipantList', () => {
     render(<ParticipantList participants={[]} onAdd={onAdd} />);
     fireEvent.click(screen.getByRole('button', { name: 'Add' }));
     expect(onAdd).not.toHaveBeenCalled();
+  });
+
+  it('adds a participant when the Enter key is pressed', () => {
+    const onAdd = jest.fn();
+    render(<ParticipantList participants={[]} onAdd={onAdd} />);
+    fireEvent.change(screen.getByPlaceholderText('Participant name'), {
+      target: { value: 'Via Enter' },
+    });
+    fireEvent.keyDown(screen.getByPlaceholderText('Participant name'), {
+      key: 'Enter',
+    });
+    expect(onAdd).toHaveBeenCalledWith('Via Enter');
   });
 
   it('shows the empty message when no participants', () => {
@@ -222,5 +236,85 @@ describe('TournamentCard', () => {
     });
     fireEvent.click(screen.getByText('Delete'));
     expect(db.deleteTournament).not.toHaveBeenCalled();
+  });
+
+  it('skips cloning participants and matches when none exist', async () => {
+    (db.createTournament as jest.Mock).mockResolvedValue({
+      ...tournament,
+      id: 't2',
+    });
+    seed({ p: [], m: [] });
+
+    render(
+      <DataProvider>
+        <TournamentCard tournament={tournament} participantCount={0} />
+      </DataProvider>
+    );
+    await waitFor(() =>
+      expect(screen.getByText('Single Elimination')).toBeInTheDocument()
+    );
+    fireEvent.contextMenu(screen.getByText('Cup'), {
+      clientX: 10,
+      clientY: 10,
+    });
+    fireEvent.click(screen.getByText('Clone'));
+
+    await waitFor(() => expect(db.createTournament).toHaveBeenCalled());
+    expect(db.createParticipants).not.toHaveBeenCalled();
+    expect(db.createMatches).not.toHaveBeenCalled();
+    expect(db.createGroup).not.toHaveBeenCalled();
+  });
+
+  it('clones matches that have a missing first participant', async () => {
+    (db.createTournament as jest.Mock).mockResolvedValue({
+      ...tournament,
+      id: 't2',
+    });
+    (db.createParticipants as jest.Mock).mockResolvedValue([
+      { ...participant('p1'), id: 'np1' },
+    ]);
+    seed({
+      m: [{ ...match('m1'), participant1Id: null, participant2Id: null }],
+    });
+
+    render(
+      <DataProvider>
+        <TournamentCard tournament={tournament} participantCount={1} />
+      </DataProvider>
+    );
+    await waitFor(() =>
+      expect(screen.getByText('Single Elimination')).toBeInTheDocument()
+    );
+    fireEvent.contextMenu(screen.getByText('Cup'), {
+      clientX: 10,
+      clientY: 10,
+    });
+    fireEvent.click(screen.getByText('Clone'));
+
+    await waitFor(() => expect(db.createMatches).toHaveBeenCalled());
+    expect(db.createMatches).toHaveBeenCalledWith([
+      expect.objectContaining({ participant1Id: null, participant2Id: null }),
+    ]);
+  });
+
+  it('hides the delete action for sample tournaments', async () => {
+    seed();
+    render(
+      <DataProvider>
+        <TournamentCard
+          tournament={{ ...tournament, isSample: true }}
+          participantCount={0}
+        />
+      </DataProvider>
+    );
+    await waitFor(() =>
+      expect(screen.getByText('Single Elimination')).toBeInTheDocument()
+    );
+    fireEvent.contextMenu(screen.getByText('Cup'), {
+      clientX: 10,
+      clientY: 10,
+    });
+    expect(screen.getByText('Clone')).toBeInTheDocument();
+    expect(screen.queryByText('Delete')).not.toBeInTheDocument();
   });
 });

@@ -38,6 +38,7 @@ const TournamentDetailPageContent: FC = () => {
     updateTournament,
     deleteTournament,
     createMatches,
+    cloneTournament,
   } = useData();
 
   const [activeTab, setActiveTab] = useState<Tab>('overview');
@@ -84,6 +85,12 @@ const TournamentDetailPageContent: FC = () => {
     if (!tournament) return;
     await deleteTournament(tournament.id);
     router.push('/');
+  };
+
+  const handleClone = async () => {
+    if (!tournament) return;
+    const cloned = await cloneTournament(tournament.id);
+    if (cloned) router.push(`/tournament?id=${cloned.id}`);
   };
 
   if (!id) {
@@ -153,6 +160,7 @@ const TournamentDetailPageContent: FC = () => {
             matches={tournamentMatches}
             onStart={handleStart}
             onDelete={() => setShowDeleteConfirm(true)}
+            onClone={handleClone}
           />
         )}
 

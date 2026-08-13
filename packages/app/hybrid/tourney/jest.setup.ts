@@ -150,6 +150,7 @@ class FakeDatabase {
 class FakeIndexedDB {
   failOpen = false;
   failOps = false;
+  preExistingStores: string[] = [];
   lastDb: FakeDatabase | null = null;
 
   open(): FakeRequest {
@@ -157,6 +158,16 @@ class FakeIndexedDB {
     const db = new FakeDatabase(this);
     this.lastDb = db;
     req.result = db;
+
+    for (const name of this.preExistingStores) {
+      const store = db.createObjectStore(name, { keyPath: 'id' });
+      if (name === 'tournaments') {
+        store.createIndex('status', 'status');
+      }
+      if (name !== 'tournaments') {
+        store.createIndex('tournamentId', 'tournamentId');
+      }
+    }
 
     queueMicrotask(() => {
       if (this.failOpen) {

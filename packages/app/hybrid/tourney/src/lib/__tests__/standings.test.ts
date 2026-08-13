@@ -142,4 +142,21 @@ describe('calculateStandings', () => {
     expect(standings[0].participantId).toBe('a');
     expect(standings[1].participantId).toBe('b');
   });
+
+  it('awards three points when the second participant wins', () => {
+    const standings = calculateStandings(
+      [completed('a', 'b', 0, 3, 'b')],
+      ['a', 'b'],
+      't1'
+    );
+    expect(standings.find((s) => s.participantId === 'b')).toMatchObject({
+      played: 1,
+      won: 1,
+      points: 3,
+    });
+    expect(standings.find((s) => s.participantId === 'a')).toMatchObject({
+      lost: 1,
+      points: 0,
+    });
+  });
 });

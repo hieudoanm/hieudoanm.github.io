@@ -66,3 +66,20 @@ export interface Standing {
   points: number;
   position: number;
 }
+
+export interface StandingSnapshot {
+  id: string;
+  tournamentId: string;
+  label: string;
+  createdAt: number;
+  standings: Standing[];
+}
+
+export interface TournamentTemplate {
+  id: string;
+  name: string;
+  description: string;
+  format: TournamentFormat;
+  maxParticipants: number;
+  createdAt: number;
+}

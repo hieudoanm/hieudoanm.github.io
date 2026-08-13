@@ -7,6 +7,7 @@ import { useData } from '@/providers/DataProvider';
 import { Navbar, NAV_ITEMS } from '@/components/organisms/Navbar';
 import { StatsCard } from './StatsCard';
 import { ActivityList } from './ActivityList';
+import { Leaderboard } from './Leaderboard';
 
 export const ProfilePage: FC = () => {
   const { tournaments, matches, participants } = useData();
@@ -91,6 +92,8 @@ export const ProfilePage: FC = () => {
         totalMatches={totalMatches}
         winRate={winRate}
       />
+
+      <Leaderboard matches={matches} participants={participants} />
 
       <ActivityList activities={recentActivity} />
 

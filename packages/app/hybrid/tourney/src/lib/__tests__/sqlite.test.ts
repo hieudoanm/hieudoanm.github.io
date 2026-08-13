@@ -86,4 +86,31 @@ describe('exportToSQLite', () => {
     await exportToSQLite([minimal], [], []);
     expect(DatabaseMock.mock.results[0].value.prepare).toHaveBeenCalled();
   });
+
+  it('uses fallbacks when every optional field is undefined', async () => {
+    const bare = {
+      id: 't3',
+      name: 'Bare',
+      format: 'swiss',
+      status: 'in-progress',
+    } as unknown as Tournament;
+    const bareParticipant = {
+      id: 'p2',
+      tournamentId: 't3',
+      name: 'Bob',
+    } as unknown as Participant;
+    const bareMatch = {
+      id: 'm2',
+      tournamentId: 't3',
+      round: 2,
+      status: 'scheduled',
+    } as unknown as Match;
+
+    await expect(
+      exportToSQLite([bare], [bareParticipant], [bareMatch])
+    ).resolves.toBeInstanceOf(Blob);
+
+    const prepared = DatabaseMock.mock.results[0].value.prepare;
+    expect(prepared).toHaveBeenCalledTimes(3);
+  });
 });

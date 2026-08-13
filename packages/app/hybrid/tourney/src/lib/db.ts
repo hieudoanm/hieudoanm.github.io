@@ -1,4 +1,10 @@
-import type { Tournament, Participant, Match, Group } from '@/types';
+import type {
+  Tournament,
+  Participant,
+  Match,
+  Group,
+  StandingSnapshot,
+} from '@/types';
 
 const DB_NAME = 'tourney-db';
 const DB_VERSION = 1;
@@ -8,6 +14,7 @@ const STORES = {
   participants: 'participants',
   matches: 'matches',
   groups: 'groups',
+  snapshots: 'snapshots',
 } as const;
 
 let dbInstance: IDBDatabase | null = null;
@@ -42,6 +49,11 @@ const openDB = (): Promise<IDBDatabase> => {
 
       if (!db.objectStoreNames.contains(STORES.groups)) {
         const store = db.createObjectStore(STORES.groups, { keyPath: 'id' });
+        store.createIndex('tournamentId', 'tournamentId', { unique: false });
+      }
+
+      if (!db.objectStoreNames.contains(STORES.snapshots)) {
+        const store = db.createObjectStore(STORES.snapshots, { keyPath: 'id' });
         store.createIndex('tournamentId', 'tournamentId', { unique: false });
       }
     };
@@ -199,6 +211,16 @@ export const db = {
   createGroup: (data: Group) => create<Group>(STORES.groups, data),
   updateGroup: (data: Group) => update<Group>(STORES.groups, data),
   deleteGroup: (id: string) => remove(STORES.groups, id),
+
+  getSnapshots: (tournamentId: string) =>
+    getAllByIndex<StandingSnapshot>(
+      STORES.snapshots,
+      'tournamentId',
+      tournamentId
+    ),
+  createSnapshot: (data: StandingSnapshot) =>
+    create<StandingSnapshot>(STORES.snapshots, data),
+  deleteSnapshot: (id: string) => remove(STORES.snapshots, id),
 };
 
 export const clearAll = async (): Promise<void> => {

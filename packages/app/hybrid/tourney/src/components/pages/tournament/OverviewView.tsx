@@ -9,6 +9,7 @@ interface OverviewViewProps {
   matches: ReturnType<typeof useData>['matches'];
   onStart: () => void;
   onDelete: () => void;
+  onClone: () => void;
 }
 
 export const OverviewView: FC<OverviewViewProps> = ({
@@ -17,6 +18,7 @@ export const OverviewView: FC<OverviewViewProps> = ({
   matches,
   onStart,
   onDelete,
+  onClone,
 }) => (
   <div className="flex flex-col gap-6">
     {tournament.description && (
@@ -55,6 +57,12 @@ export const OverviewView: FC<OverviewViewProps> = ({
           Add at least 2 participants to start
         </div>
       )}
+      <button
+        onClick={onClone}
+        className="btn btn-outline w-full"
+        disabled={participants.length === 0}>
+        Clone Tournament
+      </button>
       <button onClick={onDelete} className="btn btn-error btn-outline w-full">
         Delete Tournament
       </button>

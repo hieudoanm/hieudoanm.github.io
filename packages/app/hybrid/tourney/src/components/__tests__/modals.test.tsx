@@ -18,6 +18,7 @@ jest.mock('@/lib/db', () => ({
     createGroup: jest.fn(),
     updateGroup: jest.fn(),
     deleteGroup: jest.fn(),
+    getSnapshots: jest.fn(),
   },
 }));
 
@@ -63,6 +64,7 @@ beforeEach(() => {
   (db.getParticipants as jest.Mock).mockResolvedValue([]);
   (db.getMatches as jest.Mock).mockResolvedValue([]);
   (db.getGroups as jest.Mock).mockResolvedValue([]);
+  (db.getSnapshots as jest.Mock).mockResolvedValue([]);
 });
 
 describe('ShareModal', () => {
@@ -171,5 +173,54 @@ describe('AnalyticsPanel', () => {
     expect(screen.getByText('50%')).toBeInTheDocument();
     expect(screen.getByText('Predicted Standings')).toBeInTheDocument();
     expect(screen.getAllByText('Alpha').length).toBeGreaterThan(0);
+  });
+
+  it('renders highlights and closest matches with fallback names', async () => {
+    (db.getParticipants as jest.Mock).mockResolvedValue([
+      { id: 'p1', tournamentId: 't1', name: 'Alpha', seed: 1 },
+    ]);
+    (db.getMatches as jest.Mock).mockResolvedValue([
+      {
+        id: 'm1',
+        tournamentId: 't1',
+        round: 1,
+        participant1Id: 'p1',
+        participant2Id: 'p2',
+        participant1Score: 1,
+        participant2Score: 2,
+        winnerId: 'p2',
+        status: 'completed',
+      },
+      {
+        id: 'm2',
+        tournamentId: 't1',
+        round: 2,
+        participant1Id: undefined,
+        participant2Id: 'p2',
+        participant1Score: 3,
+        participant2Score: 1,
+        winnerId: 'p2',
+        status: 'completed',
+      },
+      {
+        id: 'm3',
+        tournamentId: 't1',
+        round: 3,
+        participant1Id: 'p1',
+        participant2Id: 'p2',
+        participant1Score: null,
+        participant2Score: null,
+        winnerId: null,
+        status: 'scheduled',
+      },
+    ]);
+
+    render(<AnalyticsPanel tournamentId="t1" />, { wrapper: wrappers });
+    await waitFor(() =>
+      expect(screen.getByText('Top Scorer')).toBeInTheDocument()
+    );
+    expect(screen.getAllByText(/Unknown/).length).toBeGreaterThan(0);
+    expect(screen.getByText('Closest Matches')).toBeInTheDocument();
+    expect(screen.getByText(/TBD vs/)).toBeInTheDocument();
   });
 });

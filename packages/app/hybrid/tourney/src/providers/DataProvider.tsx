@@ -17,13 +17,21 @@ import {
   sampleMatches,
   sampleGroups,
 } from '@/lib/sample-data';
-import type { Tournament, Participant, Match, Group } from '@/types';
+import type {
+  Tournament,
+  Participant,
+  Match,
+  Group,
+  Standing,
+  StandingSnapshot,
+} from '@/types';
 
 interface DataContextValue {
   tournaments: Tournament[];
   participants: Participant[];
   matches: Match[];
   groups: Group[];
+  snapshots: StandingSnapshot[];
   loading: boolean;
 
   createTournament: (
@@ -48,6 +56,15 @@ interface DataContextValue {
   updateGroup: (data: Group) => Promise<Group>;
   deleteGroup: (id: string) => Promise<void>;
 
+  createSnapshot: (
+    tournamentId: string,
+    label: string,
+    standings: Standing[]
+  ) => Promise<StandingSnapshot>;
+  deleteSnapshot: (id: string) => Promise<void>;
+
+  cloneTournament: (id: string) => Promise<Tournament | null>;
+
   refresh: () => Promise<void>;
 }
 
@@ -64,6 +81,7 @@ export const DataProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const [participants, setParticipants] = useState<Participant[]>([]);
   const [matches, setMatches] = useState<Match[]>([]);
   const [groups, setGroups] = useState<Group[]>([]);
+  const [snapshots, setSnapshots] = useState<StandingSnapshot[]>([]);
   const [loading, setLoading] = useState(true);
 
   const refresh = useCallback(async () => {
@@ -92,6 +110,13 @@ export const DataProvider: FC<{ children: ReactNode }> = ({ children }) => {
         return all;
       }),
     ]);
+    const s = await db.getAllTournaments().then(async (ts) => {
+      const all: StandingSnapshot[] = [];
+      for (const tournament of ts) {
+        all.push(...(await db.getSnapshots(tournament.id)));
+      }
+      return all;
+    });
 
     if (t.length === 0) {
       for (const tournament of sampleTournaments) {
@@ -112,6 +137,7 @@ export const DataProvider: FC<{ children: ReactNode }> = ({ children }) => {
     setParticipants(p);
     setMatches(m);
     setGroups(g);
+    setSnapshots(s);
     setLoading(false);
   }, []);
 
@@ -249,6 +275,69 @@ export const DataProvider: FC<{ children: ReactNode }> = ({ children }) => {
     setGroups((prev) => prev.filter((g) => g.id !== id));
   }, []);
 
+  const createSnapshot = useCallback(
+    async (
+      tournamentId: string,
+      label: string,
+      standings: Standing[]
+    ): Promise<StandingSnapshot> => {
+      const snapshot: StandingSnapshot = {
+        id: generateId(),
+        tournamentId,
+        label,
+        createdAt: Date.now(),
+        standings,
+      };
+      await db.createSnapshot(snapshot);
+      setSnapshots((prev) => [...prev, snapshot]);
+      return snapshot;
+    },
+    []
+  );
+
+  const deleteSnapshot = useCallback(async (id: string): Promise<void> => {
+    await db.deleteSnapshot(id);
+    setSnapshots((prev) => prev.filter((s) => s.id !== id));
+  }, []);
+
+  const cloneTournament = useCallback(
+    async (id: string): Promise<Tournament | null> => {
+      const source = tournaments.find((t) => t.id === id);
+      if (!source) return null;
+      const now = Date.now();
+      const cloned: Tournament = {
+        ...source,
+        id: generateId(),
+        name: `${source.name} (Copy)`,
+        status: 'draft',
+        createdAt: now,
+        updatedAt: now,
+        startDate: undefined,
+        endDate: undefined,
+      };
+      await db.createTournament(cloned);
+      setTournaments((prev) => [...prev, cloned]);
+
+      const sourceParticipants = participants.filter(
+        (p) => p.tournamentId === id
+      );
+      if (sourceParticipants.length > 0) {
+        const clonedParticipants: Participant[] = sourceParticipants.map(
+          (p) => ({
+            ...p,
+            id: generateId(),
+            tournamentId: cloned.id,
+            groupId: undefined,
+          })
+        );
+        await db.createParticipants(clonedParticipants);
+        setParticipants((prev) => [...prev, ...clonedParticipants]);
+      }
+      return cloned;
+    },
+    [tournaments, participants]
+  );
+
   return (
     <DataContext.Provider
       value={{
@@ -256,6 +345,7 @@ export const DataProvider: FC<{ children: ReactNode }> = ({ children }) => {
         participants,
         matches,
         groups,
+        snapshots,
         loading,
         createTournament,
         updateTournament,
@@ -271,6 +361,9 @@ export const DataProvider: FC<{ children: ReactNode }> = ({ children }) => {
         createGroup,
         updateGroup,
         deleteGroup,
+        createSnapshot,
+        deleteSnapshot,
+        cloneTournament,
         refresh,
       }}>
       {children}

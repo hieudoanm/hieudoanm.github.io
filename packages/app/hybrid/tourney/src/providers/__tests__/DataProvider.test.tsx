@@ -18,6 +18,9 @@ jest.mock('@/lib/db', () => ({
     createGroup: jest.fn(),
     updateGroup: jest.fn(),
     deleteGroup: jest.fn(),
+    getSnapshots: jest.fn(),
+    createSnapshot: jest.fn(),
+    deleteSnapshot: jest.fn(),
   },
 }));
 
@@ -73,6 +76,7 @@ const emptyDb = (): void => {
   (db.getParticipants as jest.Mock).mockResolvedValue([]);
   (db.getMatches as jest.Mock).mockResolvedValue([]);
   (db.getGroups as jest.Mock).mockResolvedValue([]);
+  (db.getSnapshots as jest.Mock).mockResolvedValue([]);
 };
 
 const seededDb = (): void => {
@@ -80,6 +84,7 @@ const seededDb = (): void => {
   (db.getParticipants as jest.Mock).mockResolvedValue([]);
   (db.getMatches as jest.Mock).mockResolvedValue([]);
   (db.getGroups as jest.Mock).mockResolvedValue([]);
+  (db.getSnapshots as jest.Mock).mockResolvedValue([]);
 };
 
 beforeEach(() => {
@@ -111,6 +116,7 @@ describe('useData', () => {
     ]);
     (db.getMatches as jest.Mock).mockResolvedValue([match('m1', 't1')]);
     (db.getGroups as jest.Mock).mockResolvedValue([group('g1', 't1')]);
+    (db.getSnapshots as jest.Mock).mockResolvedValue([]);
 
     const { result } = renderHook(() => useData(), { wrapper });
     await waitFor(() => expect(result.current.loading).toBe(false));
@@ -288,5 +294,66 @@ describe('useData', () => {
       await result.current.deleteGroup((created as Group).id);
     });
     expect(result.current.groups).toHaveLength(0);
+  });
+
+  it('creates and deletes standings snapshots', async () => {
+    seededDb();
+    const { result } = renderHook(() => useData(), { wrapper });
+    await waitFor(() => expect(result.current.loading).toBe(false));
+
+    let snapshotId = '';
+    await act(async () => {
+      const snapshot = await result.current.createSnapshot(
+        't1',
+        'After round 1',
+        [
+          {
+            participantId: 'p1',
+            tournamentId: 't1',
+            played: 1,
+            won: 1,
+            drawn: 0,
+            lost: 0,
+            points: 3,
+            position: 1,
+          },
+        ]
+      );
+      snapshotId = snapshot.id;
+    });
+
+    expect(result.current.snapshots).toHaveLength(1);
+    expect(result.current.snapshots[0].label).toBe('After round 1');
+    expect(db.createSnapshot).toHaveBeenCalled();
+
+    await act(async () => {
+      await result.current.deleteSnapshot(snapshotId);
+    });
+    expect(result.current.snapshots).toHaveLength(0);
+  });
+
+  it('clones a tournament with its participants', async () => {
+    (db.getAllTournaments as jest.Mock).mockResolvedValue([tournament('t1')]);
+    (db.getParticipants as jest.Mock).mockResolvedValue([
+      participant('p1', 't1'),
+      participant('p2', 't1'),
+    ]);
+    (db.getMatches as jest.Mock).mockResolvedValue([]);
+    (db.getGroups as jest.Mock).mockResolvedValue([]);
+    (db.getSnapshots as jest.Mock).mockResolvedValue([]);
+
+    const { result } = renderHook(() => useData(), { wrapper });
+    await waitFor(() => expect(result.current.loading).toBe(false));
+
+    const cloned = await act(async () => result.current.cloneTournament('t1'));
+
+    expect(cloned).not.toBeNull();
+    expect(cloned?.id).not.toBe('t1');
+    expect(cloned?.name).toBe('Tournament t1 (Copy)');
+    expect(cloned?.status).toBe('draft');
+    expect(result.current.tournaments).toHaveLength(2);
+    expect(result.current.participants).toHaveLength(4);
+    expect(db.createTournament).toHaveBeenCalled();
+    expect(db.createParticipants).toHaveBeenCalled();
   });
 });

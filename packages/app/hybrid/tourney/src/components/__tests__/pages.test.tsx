@@ -1,0 +1,194 @@
+import { fireEvent, render, screen } from '@testing-library/react';
+import { DashboardPage } from '@/components/pages/DashboardPage';
+import { StandingsPage } from '@/components/pages/standings/StandingsPage';
+import { TournamentList } from '@/components/molecules/TournamentList';
+import type { Tournament, Participant, Match, Group } from '@/types';
+
+const tournament = (overrides: Partial<Tournament> = {}): Tournament => ({
+  id: 't1',
+  name: 'Cup',
+  description: '',
+  format: 'single-elimination',
+  status: 'draft',
+  maxParticipants: 8,
+  createdAt: 0,
+  updatedAt: 0,
+  ...overrides,
+});
+
+const participant = (id: string, name?: string): Participant => ({
+  id,
+  tournamentId: 't1',
+  name: name ?? `Player ${id}`,
+  seed: 1,
+});
+
+const completed = (
+  id: string,
+  p1: string,
+  p2: string,
+  s1: number,
+  s2: number,
+  winner: string | null
+): Match => ({
+  id,
+  tournamentId: 't1',
+  round: 1,
+  participant1Id: p1,
+  participant2Id: p2,
+  participant1Score: s1,
+  participant2Score: s2,
+  winnerId: winner,
+  status: 'completed',
+});
+
+let mockPathname = '/';
+let mockSearchParams: Record<string, string | null> = {};
+
+const mockData = {
+  tournaments: [] as Tournament[],
+  participants: [] as Participant[],
+  matches: [] as Match[],
+  groups: [] as Group[],
+  loading: false,
+  refresh: jest.fn(),
+  createTournament: jest.fn(),
+  updateTournament: jest.fn(),
+  deleteTournament: jest.fn(),
+  createParticipant: jest.fn(),
+  createParticipants: jest.fn(),
+  updateParticipant: jest.fn(),
+  deleteParticipant: jest.fn(),
+  createMatch: jest.fn(),
+  createMatches: jest.fn(),
+  updateMatch: jest.fn(),
+  deleteMatch: jest.fn(),
+  createGroup: jest.fn(),
+  updateGroup: jest.fn(),
+  deleteGroup: jest.fn(),
+  snapshots: [] as import('@/types').StandingSnapshot[],
+  createSnapshot: jest.fn(),
+  deleteSnapshot: jest.fn(),
+  cloneTournament: jest.fn(),
+};
+
+jest.mock('@/providers/DataProvider', () => ({
+  useData: () => mockData,
+}));
+
+jest.mock('next/navigation', () => ({
+  usePathname: () => mockPathname,
+  useSearchParams: () => ({
+    get: (key: string) => mockSearchParams[key] ?? null,
+  }),
+}));
+
+describe('DashboardPage', () => {
+  beforeEach(() => {
+    mockPathname = '/';
+    mockData.tournaments = [
+      tournament({ id: 't1', name: 'Alpha Cup', status: 'draft' }),
+      tournament({ id: 't2', name: 'Beta Cup', status: 'completed' }),
+    ];
+    mockData.participants = [participant('p1')];
+    mockData.loading = false;
+  });
+
+  it('renders tournaments and filters by search and status', () => {
+    render(<DashboardPage />);
+    expect(screen.getByText('Alpha Cup')).toBeInTheDocument();
+    expect(screen.getByText('Beta Cup')).toBeInTheDocument();
+    expect(screen.getByText('Dashboard')).toBeInTheDocument();
+
+    fireEvent.change(screen.getByPlaceholderText('Search tournaments...'), {
+      target: { value: 'beta' },
+    });
+    expect(screen.queryByText('Alpha Cup')).not.toBeInTheDocument();
+    expect(screen.getByText('Beta Cup')).toBeInTheDocument();
+
+    fireEvent.change(screen.getByPlaceholderText('Search tournaments...'), {
+      target: { value: '' },
+    });
+    fireEvent.click(screen.getByRole('button', { name: 'Completed' }));
+    expect(screen.queryByText('Alpha Cup')).not.toBeInTheDocument();
+    expect(screen.getByText('Beta Cup')).toBeInTheDocument();
+  });
+
+  it('highlights the create nav item on its route', () => {
+    mockPathname = '/create';
+    render(<DashboardPage />);
+    const create = document.querySelector('a[href="/create"]');
+    expect(create?.className).toContain('btn-primary');
+    const home = document.querySelector('a[href="/"]');
+    expect(home?.className).toContain('btn-ghost');
+  });
+
+  it('counts participants per tournament', () => {
+    render(<DashboardPage />);
+    expect(screen.getByText('1/8')).toBeInTheDocument();
+  });
+});
+
+describe('TournamentList', () => {
+  it('falls back to zero for missing participant counts', () => {
+    mockData.tournaments = [tournament()];
+    mockData.participants = [];
+    render(
+      <TournamentList
+        loading={false}
+        tournaments={mockData.tournaments}
+        participantCounts={{}}
+      />
+    );
+    expect(screen.getByText('0/8')).toBeInTheDocument();
+  });
+});
+
+describe('StandingsPage', () => {
+  beforeEach(() => {
+    mockSearchParams = { id: 't1' };
+    mockData.tournaments = [
+      tournament({ id: 't1', name: 'Cup', status: 'completed' }),
+    ];
+    mockData.participants = ['a', 'b', 'c', 'd'].map((id) =>
+      participant(id, `Team ${id}`)
+    );
+    mockData.matches = [
+      completed('m1', 'a', 'b', 2, 0, 'a'),
+      completed('m2', 'c', 'd', 1, 0, 'c'),
+      completed('m3', 'a', 'c', 1, 1, 'a'),
+    ];
+  });
+
+  it('shows the not-found message when the tournament is missing', () => {
+    mockSearchParams = { id: 'nope' };
+    mockData.tournaments = [];
+    render(<StandingsPage />);
+    expect(screen.getByText('Tournament not found')).toBeInTheDocument();
+  });
+
+  it('shows the not-found message without an id', () => {
+    mockSearchParams = {};
+    render(<StandingsPage />);
+    expect(screen.getByText('Tournament not found')).toBeInTheDocument();
+  });
+
+  it('renders standings with medal positions and names', () => {
+    render(<StandingsPage />);
+    expect(screen.getByText('Team a')).toBeInTheDocument();
+    expect(screen.getByText('🥇')).toBeInTheDocument();
+    expect(screen.getByText('🥈')).toBeInTheDocument();
+    expect(screen.getByText('🥉')).toBeInTheDocument();
+    expect(screen.getByText('#4')).toBeInTheDocument();
+    expect(
+      screen.queryByText(/No standings available/)
+    ).not.toBeInTheDocument();
+  });
+
+  it('shows the empty standings message when there are no participants', () => {
+    mockData.participants = [];
+    mockData.matches = [];
+    render(<StandingsPage />);
+    expect(screen.getByText(/No standings available yet/)).toBeInTheDocument();
+  });
+});
