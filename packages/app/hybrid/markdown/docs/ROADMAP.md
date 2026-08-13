@@ -20,7 +20,7 @@
 - [x] Wikilink resolution and navigation
 - [x] Slug-based note addressing
 - [x] Scroll sync between editor and preview
-- [ ] Full-text search across the vault
+- [x] Full-text search across the vault
 - [ ] Backlinks panel per note
 - [ ] Tag system with filtering
 - [ ] Folder creation and moving notes
@@ -35,15 +35,15 @@
 - [ ] Quick switcher between notes (Ctrl+O)
 - [ ] Daily notes with date-based templates
 - [ ] Keyboard shortcuts for formatting
-- [ ] Outline/collapse support in editor
+- [x] Outline/collapse support in editor
 
 ## Phase 4 — Export & Sync
 
 > Sharing: export, themes, plugins
 
-- [ ] Export notes as PDF, HTML, DOCX (mock)
+- [x] Export notes as PDF, HTML (DOCX pending)
 - [ ] Export whole vault as zip
-- [ ] Custom themes and fonts (lib/fonts)
+- [x] Custom themes and fonts (lib/fonts)
 - [ ] Markdown linting and formatting on save
 - [ ] Template system for new notes
 - [ ] Cloud sync (mock) and version history
@@ -52,7 +52,7 @@
 
 > Ecosystem: native apps, plugins, collaboration
 
-- [ ] Tauri desktop app build and signing
+- [x] Tauri desktop app build (bundling configured; signing not yet)
 - [ ] iOS/Android native shells (Tauri Mobile)
 - [ ] Plugin system (community extensions)
 - [ ] Canvas/whiteboard mode for notes

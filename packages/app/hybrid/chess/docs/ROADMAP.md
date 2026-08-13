@@ -58,34 +58,35 @@
 - [x] Coordinates trainer — find and name squares fast
 - [x] Perft / move-division validator (already available in `@chess/ts`)
 - [ ] Play vs computer with adaptive strength (auto-match rating)
-- [x] Variants — bughouse, crazyhouse, three-check, horde (starter set)
+- [x] Variants — crazyhouse, three-check, horde (bughouse not yet)
 
-## Phase 5 — Game Library
+## Phase 5 — Game Library (Shipped)
 
 > Save, browse, and reuse games.
 
-- [ ] PGN library with local persistence (import/export/delete)
-- [ ] Opening explorer with win-rate stats (local ECO + optional lichess db)
-- [ ] Search games by player, opening, or ECO code
-- [ ] Import from Lichess / Chess.com (archive or PGN download)
-- [ ] Study view — comments and annotation support in PGN
-- [ ] Shareable game links (encoded PGN)
+- [x] PGN library with local persistence (import/export/delete)
+- [x] Opening explorer with win-rate stats (local ECO + lichess db)
+- [x] Search games by player, opening, or ECO code
+- [x] Import from Lichess / Chess.com (archive or PGN download)
+- [x] Study view — comments and annotation support in PGN
+- [x] Shareable game links (encoded PGN)
 
-## Phase 6 — Clock & OTB
+## Phase 6 — Clock & OTB (Shipped)
 
 > Make the clock tournament-ready and pair it with pairing utilities.
 
-- [ ] Custom presets with fixed delay and asymmetric per-side times
-- [ ] Move-count control (moves-to-go flag) for controls like 40/90
-- [ ] Sound alerts — flag fall, low-time warning, tick toggle
-- [ ] Move-time log with time-usage chart
-- [ ] Fullscreen over-the-board clock mode
-- [ ] Pairing tools — round-robin / Swiss pairing and tiebreaks (Buchholz,
+- [x] Custom presets with fixed delay and asymmetric per-side times
+- [x] Move-count control (moves-to-go flag) for controls like 40/90
+- [x] Sound alerts — flag fall, low-time warning, tick toggle
+- [x] Move-time log with time-usage chart
+- [x] Fullscreen over-the-board clock mode
+- [x] Pairing tools — round-robin / Swiss pairing and tiebreaks (Buchholz,
       Sonneborn-Berger)
 
 ## Phase 7 — Ratings & Stats Depth
 
-- [ ] More rating systems — USCF, Glicko-2, DWZ
+- [ ] More rating systems — USCF, Glicko-2, DWZ (lib support in `@chess/ts`, not
+      wired into UI)
 - [ ] Expected score and win probability display in Elo
 - [ ] K-factor presets (FIDE, USCF, age, games)
 - [ ] Rating history chart
@@ -97,7 +98,7 @@
 > Ship it everywhere and make it pleasant to use.
 
 - [ ] Tauri desktop build (bundle, icons, release pipeline)
-- [ ] PWA — offline, installable (manifest already wired)
+- [ ] PWA — offline, installable (manifest + service worker not yet shipped)
 - [ ] Settings persistence (theme, board theme, clock default) in local storage
 - [ ] Sound effects on the board (move, capture, check, game end)
 - [ ] Accessibility — keyboard navigation, ARIA, colorblind-safe board

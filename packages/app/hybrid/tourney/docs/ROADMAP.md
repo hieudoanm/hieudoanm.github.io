@@ -30,10 +30,10 @@
 - [x] Interactive bracket component
 - [x] Match detail page with score entry
 - [x] Bracket navigation (rounds, matches)
-- [ ] Auto-advance winners
+- [x] Auto-advance winners
 - [x] Match scheduling with calendar view
 - [x] Reschedule matches (drag-and-drop)
-- [ ] Bracket export (PNG, PDF)
+- [x] Bracket export (PNG, PDF)
 
 ## Phase 4 — Standings & Rankings (Data)
 
@@ -60,7 +60,7 @@
 - [x] Export tournaments to CSV (participants, matches, standings)
 - [x] Export tournaments to SQLite database
 - [x] Import from CSV (participants, matches)
-- [x] Import from SQLite
+- [ ] Import from SQLite
 - [x] Full backup/restore (all data as JSON)
 - [x] Share tournament as portable file
 
@@ -70,7 +70,7 @@
 - [x] Predictive standings (simulate remaining matches)
 - [x] Tournament analytics (average match duration, upsets)
 - [ ] Notification system (match reminders, results)
-- [x] Share tournament (public link, embed)
+- [ ] Share tournament (public link, embed)
 - [ ] Live score updates (WebSocket simulation)
 
 ## Phase 8 — Platform & Integration (Ecosystem)

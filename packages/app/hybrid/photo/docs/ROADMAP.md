@@ -4,43 +4,43 @@
 
 > Foundation: library, canvas viewer, basic tools
 
-- [ ] Image library with grid/list view
-- [ ] Image upload with drag-and-drop
-- [ ] Canvas editor workspace
-- [ ] Zoom controls (slider, presets, fit-to-screen)
+- [x] Image library with grid/list view
+- [x] Image upload with drag-and-drop
+- [x] Canvas editor workspace
+- [x] Zoom controls (slider, presets, fit-to-screen)
 - [ ] Pan with Space+drag
-- [ ] Canvas info bar (zoom, coordinates, dimensions)
+- [x] Canvas info bar (zoom, coordinates, dimensions)
 - [ ] Undo/redo (Ctrl+Z / Ctrl+Shift+Z)
-- [ ] Demo images seed data
-- [ ] Responsive layout
+- [x] Demo images seed data
+- [x] Responsive layout
 
 ## Phase 2 — Enhanced UX
 
 > Polish: keyboard shortcuts, before/after, history panel
 
 - [ ] Keyboard shortcuts (V, C, B, T for tools)
-- [ ] Before/after comparison (split view or toggle)
+- [x] Before/after comparison (split view or toggle)
 - [ ] History panel with named states
 - [ ] Full-screen editor mode
 - [ ] Image info/metadata panel
 - [ ] Page transition animations (Framer Motion)
-- [ ] Skeleton loading states
+- [x] Skeleton loading states
 - [ ] Multi-select in library
 
 ## Phase 3 — Adjustments & Filters
 
 > Color: brightness, contrast, saturation, presets
 
-- [ ] Brightness, contrast, saturation sliders
-- [ ] Hue and temperature controls
-- [ ] Exposure, highlights, shadows
-- [ ] Clarity, vibrance, sharpness
-- [ ] Noise reduction slider
-- [ ] Vignette effect
+- [x] Brightness, contrast, saturation sliders
+- [x] Hue and temperature controls
+- [x] Exposure, highlights, shadows
+- [x] Clarity, vibrance, sharpness
+- [x] Noise reduction slider
+- [x] Vignette effect
 - [ ] RGB histogram display
-- [ ] 20+ preset filters with intensity slider
+- [x] 20+ preset filters with intensity slider
 - [ ] Custom preset save/load
-- [ ] Reset per adjustment and reset all
+- [x] Reset per adjustment and reset all
 
 ## Phase 4 — Retouching & Selection
 
@@ -60,8 +60,8 @@
 
 > Design: text tool, shape tools, effects
 
-- [ ] Text tool with font selector
-- [ ] Text properties (size, color, bold, italic, alignment)
+- [x] Text tool with font selector
+- [x] Text properties (size, color, bold, italic, alignment)
 - [ ] Text effects (shadow, outline, background)
 - [ ] Shape tools (rectangle, ellipse, line, arrow)
 - [ ] Shape properties (fill, stroke, opacity, corner radius)
@@ -72,27 +72,27 @@
 
 > Advanced: layers, blend modes, masking
 
-- [ ] Layer panel with thumbnails
+- [x] Layer panel with thumbnails
 - [ ] Drag to reorder layers
-- [ ] Per-layer opacity slider
-- [ ] Blend modes (Normal, Multiply, Screen, Overlay, etc.)
-- [ ] Layer visibility toggle and lock
+- [x] Per-layer opacity slider
+- [x] Blend modes (Normal, Multiply, Screen, Overlay, etc.)
+- [x] Layer visibility toggle and lock
 - [ ] Merge down and flatten
-- [ ] New empty layer
-- [ ] Layer naming
-- [ ] Crop and transform tools
+- [x] New empty layer
+- [x] Layer naming
+- [x] Crop and transform tools
 - [ ] Perspective correction
 
 ## Phase 7 — Platform & Integration
 
 > Ecosystem: native, batch, RAW, plugins
 
-- [ ] Tauri desktop app build and signing
+- [x] Tauri desktop app build (bundling configured; signing not yet)
 - [ ] iOS/Android native shells (Capacitor or Tauri Mobile)
 - [ ] Batch processing (resize, filter, export multiple)
 - [ ] RAW image support (mock)
-- [ ] Image resizing and canvas size adjustment
-- [ ] Background removal (mock AI tool)
-- [ ] AI-enhance (mock: auto-levels, auto-color)
+- [x] Image resizing and canvas size adjustment
+- [x] Background removal (mock AI tool)
+- [x] AI-enhance (mock: auto-levels, auto-color)
 - [ ] Plugin system for custom filters
-- [ ] Social media export presets (Instagram, Twitter, Facebook sizes)
+- [x] Social media export presets (Instagram, Twitter, Facebook sizes)

@@ -226,7 +226,8 @@ The final phase: ship it.
 3. [ ] Accessibility pass (contrast, keyboard nav, screen reader labels)
 4. [ ] Performance pass on large multi-channel stacks
 5. [ ] Docs site (usage, file formats, API for `packages/core`)
-6. [ ] Playwright e2e coverage of the import → segment → export critical path
+6. [x] Playwright e2e coverage of the import → segment → export critical path
+       (`e2e/{home,viewer,webviewer,history}.spec.ts`)
 7. [ ] Error-boundary diagnostics: crash reports + opt-in, telemetry-free
        logging
 8. [ ] Auto-update channel for desktop (Tauri updater)

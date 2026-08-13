@@ -13,7 +13,7 @@
 - [ ] Version page
 - [ ] Demo video seed data
 - [ ] Responsive layout
-- [ ] 32 DaisyUI themes with dark default
+- [x] 32 DaisyUI themes with dark default
 
 ## Phase 2 — Enhanced UX
 
@@ -23,7 +23,8 @@
 - [ ] Add/remove videos to playlists
 - [ ] Playlist grid and detail view
 - [ ] Keyboard shortcuts (space, arrow keys, M, F)
-- [ ] Playback speed control (0.5x, 1x, 1.5x, 2x)
+- [x] Playback speed control (0.5x, 1x, 1.5x, 2x) — processing tool, not a
+      player control
 - [ ] Quality selector (mock)
 - [ ] Mini-player on scroll
 - [ ] Page transition animations (Framer Motion)
@@ -68,9 +69,9 @@
 
 > Features: subtitles, picture-in-picture, offline downloads
 
-- [ ] Subtitle/caption support (mock)
+- [ ] Subtitle/caption support (mock — inert form only)
 - [ ] Picture-in-picture mode
-- [ ] Offline download management (mock)
+- [ ] Offline download management (mock — inert form only)
 - [ ] Resume playback from last position
 - [ ] Autoplay next in playlist
 - [ ] Queue management
@@ -80,8 +81,8 @@
 
 > Ecosystem: native apps, notifications, advanced features
 
-- [ ] Tauri desktop app build and signing
-- [ ] iOS/Android native shells (Capacitor or Tauri Mobile)
+- [x] Tauri desktop app build (bundling configured; signing not yet)
+- [x] iOS/Android native shells (Tauri mobile entry point wired)
 - [ ] Push notifications for new uploads
 - [ ] Live stream support (mock)
 - [ ] Content moderation tools (mock)

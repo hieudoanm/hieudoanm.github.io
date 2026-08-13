@@ -11,7 +11,7 @@
 - [x] Edge labels and back-edge (cycle) routing
 - [x] Title support
 - [x] Dark / light theme
-- [x] localStorage persistence (text, zoom, theme)
+- [x] localStorage persistence (text, theme)
 - [x] New / Open / Save (.diagram) / Export SVG
 - [x] Zoom in / out / reset
 - [x] Syntax help modal

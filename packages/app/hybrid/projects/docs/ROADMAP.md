@@ -4,16 +4,16 @@
 
 > Foundation: boards, lists, cards, drag-and-drop
 
-- [ ] Board dashboard with grid of boards
-- [ ] Create/edit/delete boards
-- [ ] Board view with Kanban lists
-- [ ] Add/rename/delete lists
-- [ ] Add/edit/delete cards within lists
-- [ ] Drag-and-drop cards between lists
+- [x] Board dashboard with grid of boards
+- [x] Create/edit/delete boards
+- [x] Board view with Kanban lists
+- [x] Add/rename/delete lists
+- [x] Add/edit/delete cards within lists
+- [x] Drag-and-drop cards between lists
 - [ ] Drag-and-drop to reorder lists
-- [ ] Card labels (colored dots)
-- [ ] Demo boards seed data
-- [ ] Responsive layout
+- [x] Card labels (colored dots)
+- [x] Demo boards seed data
+- [x] Responsive layout
 
 ## Phase 2 — Enhanced UX
 
@@ -23,46 +23,46 @@
 - [ ] Touch drag support (long-press on mobile)
 - [ ] Keyboard shortcuts (N, Q, F)
 - [ ] Search across all card titles
-- [ ] Card count per list badge
-- [ ] Collapse/expand lists
+- [x] Card count per list badge
+- [x] Collapse/expand lists
 - [ ] Page transition animations (Framer Motion)
-- [ ] Skeleton loading states
-- [ ] Board background colors
+- [x] Skeleton loading states
+- [x] Board background colors
 
 ## Phase 3 — Card Management
 
 > Detail: descriptions, checklists, due dates, members
 
-- [ ] Card detail modal with description editor
-- [ ] Checklists with progress bar
-- [ ] Due date picker with indicators
-- [ ] Member assignment with avatars
+- [x] Card detail modal with description editor
+- [x] Checklists with progress bar
+- [ ] Due date picker with indicators (display only, no picker)
+- [x] Member assignment with avatars
 - [ ] Card attachments (mock)
 - [ ] Card comments with timestamps
 - [ ] Card cover images
-- [ ] Card priority levels
-- [ ] Copy and move card actions
+- [x] Card priority levels
+- [x] Copy and move card actions
 
 ## Phase 4 — Organization
 
 > Structure: labels, archive, templates
 
-- [ ] Label management (10 colors)
+- [x] Label management (10 colors)
 - [ ] Filter board by label
 - [ ] Archive cards and lists
 - [ ] Restore from archive
 - [ ] Board templates
 - [ ] Copy list with cards
 - [ ] Sort cards within list
-- [ ] Star/favorite boards
+- [x] Star/favorite boards
 
 ## Phase 5 — Views & Filtering
 
 > Perspectives: list, calendar, timeline, filters
 
-- [ ] List view (compact table with sortable columns)
-- [ ] Calendar view (monthly grid with due dates)
-- [ ] Timeline view (Gantt-style bars)
+- [x] List view (compact table with sortable columns)
+- [x] Calendar view (monthly grid with due dates)
+- [x] Timeline view (Gantt-style bars)
 - [ ] Filter bar (label, member, due date, priority)
 - [ ] Saved filter presets
 - [ ] Board search with highlighted results
@@ -72,7 +72,7 @@
 
 > Team: activity, notifications, comments
 
-- [ ] Activity feed per board
+- [ ] Activity feed per board (store + seed exist, not rendered)
 - [ ] Notifications (mentions, due dates, assignments)
 - [ ] Card comments with timestamps
 - [ ] Member roles (admin, member, viewer)
@@ -84,8 +84,8 @@
 
 > Ecosystem: native, API, automation
 
-- [ ] Tauri desktop app build and signing
-- [ ] iOS/Android native shells (Capacitor or Tauri Mobile)
+- [x] Tauri desktop app build (bundling configured; signing not yet)
+- [x] iOS/Android native shells (Tauri mobile entry point wired)
 - [ ] API for external integrations (mock REST endpoints)
 - [ ] Webhook support (mock: POST on card move)
 - [ ] Email notifications (mock)

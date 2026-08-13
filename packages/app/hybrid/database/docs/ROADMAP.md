@@ -10,7 +10,7 @@
 - [x] SQL query editor with syntax highlighting
 - [x] Results table with sorting and pagination
 - [x] Execute query with loading state
-- [x] Mock database seed data (users, orders, products tables)
+- [x] Mock database seed data (customers, orders, products tables)
 - [x] Responsive layout (collapsible sidebar)
 
 ## Phase 2 — Enhanced
@@ -102,7 +102,8 @@
 
 > Ecosystem: native, multiple DB, collaboration
 
-- [ ] Tauri desktop app build and signing
+- [x] Tauri desktop app build (bundling configured; signing/updater not yet
+      configured)
 - [ ] iOS/Android native shells (Capacitor or Tauri Mobile)
 - [ ] Multiple database support (mock PostgreSQL, MySQL)
 - [ ] Connection SSH tunnel (mock)

@@ -39,12 +39,12 @@
 > Insights: charts, reports, smart categorization
 
 - [x] Spending charts (pie chart by category, line chart over time)
-- [x] Monthly/yearly spending reports
+- [x] Monthly/yearly spending reports (monthly trends; yearly selector pending)
 - [x] Income vs. expense comparison
-- [x] Budget forecasting based on historical data
+- [ ] Budget forecasting based on historical data
 - [x] Transaction export (CSV, PDF)
-- [x] Recurring transaction detection
-- [x] Smart categorization with category suggestions
+- [ ] Recurring transaction detection
+- [ ] Smart categorization with category suggestions
 - [x] Search with filters (date range, amount range, category)
 
 ## Phase 4 — Social & Payments
@@ -56,35 +56,35 @@
 - [x] Split bill feature (equal or custom splits)
 - [x] Payment history with status (pending, completed, failed)
 - [x] Recurring transfers (auto-pay setup)
-- [x] International transfer with fee calculator
-- [x] Multi-currency wallet balances
+- [ ] International transfer with fee calculator
+- [ ] Multi-currency wallet balances (all mock data is USD-only)
 - [x] Currency alert notifications (rate thresholds)
 
 ## Phase 5 — Bank Products
 
 > Full banking: lending, deposits, insurance, financial planning
 
-- [ ] Loan product catalog (personal, auto, home, education)
-- [ ] EMI calculator with slider inputs
+- [x] Loan product catalog (personal, auto, home, education)
+- [x] EMI calculator with slider inputs
 - [ ] Loan application multi-step form
-- [ ] Loan dashboard with active loans and repayment schedules
+- [x] Loan dashboard with active loans and repayment schedules
 - [ ] Amortization table per loan
 - [ ] Prepayment calculator (savings comparison)
 - [ ] Fixed deposit product catalog with interest rates
-- [ ] FD interest calculator
-- [ ] FD management (active deposits, maturity tracking)
+- [x] FD interest calculator
+- [x] FD management (active deposits, maturity tracking)
 - [ ] Recurring deposit product catalog
-- [ ] RD deposit tracker (paid/upcoming/missed)
-- [ ] RD maturity forecast
-- [ ] Savings goal creation and management
+- [x] RD deposit tracker (paid/upcoming/missed)
+- [x] RD maturity forecast
+- [x] Savings goal creation and management
 - [ ] Goal progress tracking with milestones
 - [ ] Auto-save rules for goals
 - [ ] Insurance product catalog (life, health, auto, home)
-- [ ] Coverage summary dashboard
+- [x] Coverage summary dashboard
 - [ ] Insurance claim status tracking
-- [ ] Premium payment from wallet
-- [ ] Card rewards: cashback tracking, reward points, tier status
-- [ ] Reward catalog (redeem points)
+- [x] Premium payment from wallet
+- [x] Card rewards: cashback tracking, reward points, tier status
+- [x] Reward catalog (redeem points)
 - [ ] Loan vs FD vs RD comparison tool
 - [ ] Financial health score dashboard
 
@@ -105,7 +105,7 @@
 
 > Ecosystem: native apps, APIs, third-party services
 
-- [ ] Tauri desktop app build and signing
+- [ ] Tauri desktop app build and signing (shell only, no bundle/signing)
 - [ ] iOS/Android native shells (Capacitor or Tauri Mobile)
 - [ ] Push notifications via FCM/APNs
 - [ ] Open Banking API integration (Plaid, Stripe)

@@ -4,14 +4,14 @@
 
 > Foundation: vault list, item detail, add/edit, search
 
-- [ ] Vault list with item cards (logins, cards, notes, identities)
-- [ ] Item detail view with show/hide for sensitive fields
-- [ ] Add/edit item forms per type
-- [ ] Search across all items
-- [ ] Category filter chips
-- [ ] Favorites with star toggle
-- [ ] Copy username/password to clipboard
-- [ ] Demo vault seed data (20+ items)
+- [x] Vault list with item cards (logins, cards, notes, identities)
+- [x] Item detail view with show/hide for sensitive fields
+- [ ] Add/edit item forms per type (add only; per-type forms pending)
+- [x] Search across all items
+- [x] Category filter chips
+- [x] Favorites with star toggle
+- [x] Copy username/password to clipboard
+- [ ] Demo vault seed data (20+ items — 10 seeded today)
 - [ ] Responsive layout (sidebar + vault)
 
 ## Phase 2 — Enhanced UX
@@ -22,7 +22,7 @@
 - [ ] Swipe-to-delete on mobile
 - [ ] Drag-and-drop items into folders
 - [ ] Page transition animations (Framer Motion)
-- [ ] Skeleton loading states
+- [x] Skeleton loading states
 - [ ] Recently used items section
 - [ ] Sort options (name, date, most used)
 - [ ] Bulk select and delete
@@ -32,12 +32,12 @@
 > Safety: master password, auto-lock, generator, TOTP
 
 - [ ] Master password lock screen
-- [ ] Auto-lock on timeout (configurable)
+- [ ] Auto-lock on timeout (configurable — setting stored, no enforcement)
 - [ ] Auto-lock on browser close
-- [ ] Password generator (length, complexity, memorable mode)
+- [x] Password generator (length, complexity; memorable mode pending)
 - [ ] PIN generator
-- [ ] Password strength meter with criteria checklist
-- [ ] Clipboard auto-clear (configurable timer)
+- [x] Password strength meter with criteria checklist
+- [ ] Clipboard auto-clear (setting stored, no enforcement)
 - [ ] TOTP setup with QR code and countdown timer
 - [ ] Biometric toggle (mock)
 
@@ -45,7 +45,7 @@
 
 > Structure: folders, tags, trash, advanced search
 
-- [ ] Folder creation and management
+- [ ] Folder creation and management (IndexedDB store exists, no UI)
 - [ ] Drag items into folders
 - [ ] Tag system with filter
 - [ ] Trash with restore and 30-day auto-purge
@@ -58,12 +58,12 @@
 
 > Audit: weak, reused, breached, old passwords
 
-- [ ] Overall health score (0-100)
-- [ ] Weak password detection with threshold
+- [x] Overall health score (0-100)
+- [x] Weak password detection with threshold
 - [ ] Reused password grouping
 - [ ] Breached password check (mock)
 - [ ] Old password alerts (90+ days)
-- [ ] Strength breakdown chart
+- [x] Strength breakdown chart
 - [ ] Remediation suggestions per item
 - [ ] Health dashboard with trends
 
@@ -84,7 +84,7 @@
 
 > Ecosystem: native apps, browser extension, CLI
 
-- [ ] Tauri desktop app build and signing
+- [x] Tauri desktop app build (bundling configured; signing not yet)
 - [ ] iOS/Android native shells (Capacitor or Tauri Mobile)
 - [ ] Browser extension mock (autofill popup)
 - [ ] CLI tool mock (list, get, generate commands)

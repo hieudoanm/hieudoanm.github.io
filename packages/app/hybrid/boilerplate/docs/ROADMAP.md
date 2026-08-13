@@ -23,7 +23,7 @@
 - [x] Bottom navbar for mobile navigation
 - [x] Sticky header with back navigation
 - [ ] Page transition animations
-- [ ] Skeleton loading states
+- [x] Skeleton loading states
 
 ## Phase 3 — Components
 
@@ -75,7 +75,7 @@
 
 > Desktop: Tauri build and distribution
 
-- [ ] Tauri desktop app build for macOS
+- [x] Tauri desktop app build for macOS
 - [ ] Tauri desktop app build for Linux
 - [ ] Tauri mobile build for Android
 - [ ] Platform-specific keyboard shortcuts

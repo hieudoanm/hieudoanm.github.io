@@ -1,281 +1,77 @@
-# Features & Design
-
-> Feature catalogue and UX guidelines for Database — SQLite Manager. For the
-> phased build roadmap with progress tracking, see [ROADMAP.md](./ROADMAP.md).
-
-## Business Features
-
-### Connection Management
-
-- **Connection list**: Cards showing database name, file path, size, last
-  connected; sorted by most recent
-- **Add connection**: Modal form — name, file path (mock), read-only toggle
-- **Edit connection**: Inline edit or modal with pre-filled fields
-- **Delete connection**: Confirmation modal; does not delete actual database
-  file
-- **Test connection**: "Test" button on add/edit form; shows success/failure
-  with latency; mock always succeeds
-- **Recent connections**: Quick-access list at top, persisted in localStorage
-
-### Schema Browser
-
-- **Tree view**: Hierarchical — Database → Tables / Views / Indexes / Triggers;
-  expand/collapse per node
-- **Table node**: Expand to show columns with data types, nullable, primary key
-  icon
-- **Column details**: Type, default value, constraints (PK, NOT NULL, UNIQUE,
-  FK)
-- **Context menu**: Right-click on table → View Data, Design, Drop, Copy Name
-- **Search**: Filter schema objects by name across all types
-- **Refresh**: Reload schema from mock database
-
-### Query Editor
-
-- **SQL editor**: Syntax-highlighted textarea with line numbers; multi-line
-  support
-- **Execute**: Ctrl+Enter or button to run query; loading spinner during
-  execution
-- **Result display**: Table below editor showing query results
-- **Error display**: Styled error card with line number and message on invalid
-  SQL
-- **Multiple queries**: Execute selected text only if selection exists;
-  otherwise entire content
-- **Prettify SQL**: Auto-format query with consistent indentation
-- **Query templates**: Pre-built queries (SELECT \* FROM, SHOW TABLES, DESCRIBE)
-  in dropdown
-
-### Results Table
-
-- **Sortable columns**: Click column header to sort ASC/DESC; indicator arrow
-- **Pagination**: Page size selector (25, 50, 100, All); page navigation
-- **Row count**: "Showing X of Y rows" status bar below table
-- **Export CSV**: Download result set as `.csv` file
-- **Export JSON**: Download result set as `.json` file
-- **Copy cell**: Click cell to copy value; toast confirmation
-- **NULL display**: Gray italic "NULL" for null values
-- **Truncated text**: Long text shows first 50 chars with "..." tooltip for full
-  value
-- **Virtual scrolling**: Windowed rendering for result sets > 1000 rows
-
-### Table Designer
-
-- **Column editor**: Add/remove columns; drag to reorder
-- **Column properties**: Name, type (INTEGER, TEXT, REAL, BLOB, NULL), default,
-  NOT NULL, UNIQUE, PRIMARY KEY
-- **Add primary key**: Toggle PK on column; auto-sets NOT NULL
-- **Foreign key editor**: Add FK references with ON DELETE / ON UPDATE actions
-- **Index editor**: Create/edit indexes; select columns; unique toggle
-- **Preview SQL**: Live `CREATE TABLE` statement preview as you design
-- **Apply changes**: Executes DDL (mock); shows resulting table structure
-
-### Data Viewer
-
-- **Browse data**: Paginated table showing all rows in selected table
-- **Inline edit**: Double-click cell to edit value; Enter to confirm, Escape to
-  cancel
-- **Add row**: "Insert Row" button; opens form with column names as fields
-- **Delete row**: Select row → Delete button with confirmation
-- **Filter**: Column-level filter inputs (equals, contains, greater than, etc.)
-- **Sort**: Click column header to sort; multi-column sort with priority
-- **Copy row**: Right-click → Copy as SQL INSERT, JSON, or CSV
-
-### SQL History & Bookmarks
-
-- **History list**: Chronological list of executed queries with timestamp,
-  execution time, row count
-- **Re-run**: Click history item to load into editor
-- **Search history**: Filter by SQL content, date range, or success/failure
-- **Bookmark queries**: Star icon to save query with custom name
-- **Organize bookmarks**: Folder tree for bookmarks (Analytics, Admin,
-  Maintenance, etc.)
-- **Delete history**: Clear all or selective deletion
-
-### Schema Visualization
-
-- **ER diagram**: Visual representation of tables with boxes showing columns
-- **Relationships**: Lines connecting foreign keys to referenced tables with
-  cardinality markers (1:N, N:M)
-- **Zoom/pan**: Mouse wheel zoom, drag to pan; fit-to-screen button
-- **Table boxes**: Show table name, columns with PK/FK icons, color-coded by
-  schema
-- **Highlight**: Hover table to highlight related tables and relationships
-- **Export diagram**: Download as PNG or SVG
-
-### Database Statistics
-
-- **Overview cards**: Total tables, total rows, database size, index count
-- **Table stats**: Per-table row count, avg row size, data size, index size
-- **Index usage**: Hit/miss ratio per index (mock data)
-- **Slow queries**: Mock list of slow queries with execution time
-- **Storage breakdown**: Pie chart of table sizes
-
-### Import / Export
-
-- **Export database**: Download entire database as SQL dump (CREATE + INSERT)
-- **Import CSV**: Wizard — select file, preview data, map columns to table,
-  validate types, execute insert
-- **Import JSON**: Paste JSON array, map to target table, preview insert
-- **Export table**: Individual table as CSV, JSON, or SQL INSERT statements
-
-## Technical Features
-
-### Data & Persistence
-
-- **IndexedDB storage**: Connections, query history, bookmarks, settings, mock
-  database schemas stored in `database-db`
-- **Seed on first load**: Demo databases with pre-populated tables (users,
-  orders, products) and sample data
-- **Mock network delay**: `NEXT_PUBLIC_MOCK_DELAY` (default 800ms) applied
-  before every query execution
-- **Optimistic UI**: Schema changes apply immediately in UI; persist in
-  background
-- **CRUD operations**: Full create/read/update/delete for connections, bookmarks
-
-### UI & Theming
-
-- **32 DaisyUI themes**: Dark/light toggle with visual theme picker; persisted
-  to `data-theme` attribute and localStorage
-- **Skeleton loading**: Schema tree and results table skeletons during load
-- **Toast notifications**: In-app toast system via `ToastProvider`; auto-dismiss
-  with success/error/info variants
-- **Resizable panels**: Draggable dividers between sidebar, editor, and results;
-  persisted proportions
-
-### Base HTML
-
-- Base styles applied via `@layer base` in `globals.css` for consistent
-  typography and element styling across all pages
-- **Headings**: `font-mono`, light weight, tight tracking — h1 through h6
-- **Text**: `p`, `strong`, `em`, `small`, `sub`, `sup`, `mark`, `blockquote`
-- **Links**: Primary color, underline with offset, hover transition
-- **Lists**: `ul` (disc), `ol` (decimal), `li` with relaxed leading
-- **Code**: Mono font, subtle background, `pre` with rounded corners, `kbd` with
-  border and shadow
-- **Tables**: Full width, border-bottom on `thead`, divided `tbody`, padded
-  cells
-- **Forms**: Transparent backgrounds, medium font labels, rounded fieldsets
-- **Media**: Responsive images/video, flex figure, muted figcaption
-- **Semantic**: Full-width `header`, `footer`, `nav`, `main`, `section`,
-  `article`, `aside`
-- **Misc**: Themed `hr`, interactive `details`/`summary`, shadowed `dialog`
-
-### SQL Syntax Highlighting
-
-- **Prism.js SQL grammar**: Keywords (SELECT, FROM, WHERE, JOIN, etc.) in
-  primary color; strings in green; numbers in orange; comments in gray
-- **Keyword auto-complete**: Type-first matching for SQL keywords in editor
-- **Function highlighting**: Aggregate functions (COUNT, SUM, AVG) highlighted
-
-### Virtual Table
-
-- **Windowed rendering**: Only render visible rows in results table; supports
-  10,000+ rows without lag
-- **Fixed header**: Column headers stay visible while scrolling
-- **Row height**: Fixed 36px per row for consistent calculations
-
-### Navigation & Routing
-
-- **Route groups**: Pages organized into `(database)`, `(settings)` — URLs
-  unaffected, code logically grouped
-- **Dynamic routes**: `/db/[id]` for database views, `/db/[id]/table/[name]` for
-  table detail
-- **Back navigation**: Consistent `FiArrowLeft` +
-  `btn-neutral btn-sm btn-circle`
-
-### Code Quality
-
-- **Arrow functions**: All function declarations and component exports use arrow
-  syntax; test files excluded
-- **Debug logging**: `console.*` with `[Module]` prefix throughout source;
-  stripped from production via `compiler.removeConsole`
-- **Testing**: Jest (unit) + Playwright (E2E) framework ready
-- **Atomic design**: atoms → molecules → organisms → templates hierarchy
-
-### Keyboard Shortcuts
-
-- **Ctrl+Enter**: Execute query
-- **Ctrl+S**: Save query to bookmarks
-- **Ctrl+K**: Focus search in schema browser
-- **Ctrl+/**: Show keyboard shortcuts modal
-- **Ctrl+Shift+E**: Prettify/format SQL
-- **Ctrl+L**: Clear query editor
-- **F5**: Refresh schema
-
-### Responsive Layout
-
-- **Resizable panels**: Drag borders between sidebar, editor, and results
-- **Collapse sidebar**: Toggle button to hide schema browser
-- **Mobile**: Tabbed interface — Schema | Query | Results tabs instead of split
-  panels
-- **Breakpoints**: Sidebar collapses below `lg:` (1024px)
-
-### Page Transitions
-
-- **`PageTransition` component**: Framer Motion wrapper with fade + slide-up
-  variants (opacity 0→1, y 12→0, 200ms ease-out)
-
-### Offline Support
-
-- **`OfflineBanner`**: Fixed top banner; listens to `online`/`offline` events
-- **Mock databases**: All data in IndexedDB; fully functional offline
-- **PWA manifest**: Standalone display, portrait orientation
-
-### Accessibility
-
-- **Focus-visible**: Global `focus-visible:outline-primary` on interactive
-  elements
-- **ARIA labels**: Schema tree, results table, query editor, connection cards
-- **Keyboard navigation**: Full schema tree and results table navigable via
-  keyboard
-- **Screen reader**: Query results announced via `aria-live="polite"`
-
-## Design — UX for Mobile
-
-### Layout
-
-- **Tabbed interface** on mobile: Schema | Query | Results tabs replace split
-  panels
-- **Connection list** as full-screen cards on mobile
-- **Header** with database name, connection status indicator, and action menu
-
-### Touch Targets
-
-- Minimum `44px` tap target for all interactive elements
-- **Schema tree items**: Full-width touch targets with expand/collapse arrows
-- **Results table cells**: Tap to copy, double-tap to edit
-
-### Forms
-
-- **Connection form**: Full-width inputs with clear labels
-- **Query editor**: Full-screen textarea with fixed execute button at bottom
-- **Table designer**: Scrollable form with add/remove column buttons
-
-### Navigation Patterns
-
-- **Tab switching**: Bottom tabs for Schema/Query/Results on mobile
-- **Back button**: `FiArrowLeft` on sub-pages
-- **Swipe between tabs**: Horizontal swipe to switch panels
-
-### Feedback
-
-- **Toast notifications**: Query executed, connection saved, error messages
-- **Skeleton loading**: Results table skeleton during query execution
-- **Execution time**: Displayed below results ("Query executed in 42ms")
-
-### Lists & Scrolling
-
-- **Results table**: Virtual scrolling for large datasets
-- **Schema tree**: Scrollable with sticky section headers
-- **History list**: Chronological with pull-to-refresh
-
-### Modals
-
-- **Connection form modal**: Add/edit database connection
-- **Delete confirmation**: Before dropping tables or deleting connections
-- **Import wizard modal**: Step-by-step CSV/JSON import
-
-### Theming
-
-- **Dark mode default** (`data-theme="dim"`) for data-heavy work
-- **Theme picker** on Settings page with visual preview
-- **Syntax highlighting** colors adapted to theme
+# Features
+
+> Database — minimal pgAdmin / DBeaver for SQLite only (sql.js).
+
+## Connections & Schema
+
+- Connection list with add/delete
+- Edit existing connection
+- Schema browser tree view
+- Schema search filter (table filter in sidebar, Ctrl+K to focus)
+- Mock database seed data (customers, orders, products tables)
+
+## Query Editor
+
+- SQL query editor with syntax highlighting
+- Execute query with loading state
+- Keyboard shortcuts (Ctrl+Enter execute, Ctrl+Shift+Enter format, Ctrl+/
+  comment)
+- SQL pretty-print / format (clauses, parens, function calls)
+- SQL keyword auto-complete (Ctrl+Space; keywords + tables + columns)
+- Query history with re-run (IndexedDB persistence)
+- Query bookmarks with folders
+- Selected-text execution (Ctrl+Enter runs the selection when present)
+- Error highlighting with line numbers (gutter marks the failing line red)
+- Query execution time tracking (sql.js path, elapsed ms in status bar)
+- Explain query plan (real `EXPLAIN QUERY PLAN` via sql.js)
+
+## Results
+
+- Results table with sorting and pagination
+- Results export (CSV, JSON, Markdown, SQL INSERT)
+- Data viewer with browse/paginate
+- Inline cell editing (double-click to edit, Enter/blur commits, Esc cancels)
+- Add/delete rows
+- Column-level filtering (per-column filter inputs, combined with global search)
+- Copy row as SQL INSERT / JSON (per-row menu)
+- Multiple result tabs (each query/explain opens a tab)
+
+## Table Designer
+
+- Table designer (add/remove columns, types, PK / NOT NULL constraints)
+- Live CREATE TABLE preview (updates as you type)
+- Foreign key editor (per-column FK table/column selects)
+- Export database as SQL dump
+- Export table as CSV / JSON / SQL INSERT
+
+## Import
+
+- Import CSV wizard (file select, delimiter, column mapping, preview)
+- Import JSON (paste/array, map to table, execute)
+- Batch import with progress indicator (500-row chunks)
+- Import validation and error reporting (per-row warnings)
+
+## Schema Intelligence
+
+- Schema Library (`/posts`: 10 classic schemas with hand-written markdown)
+- ER diagram with tables and relationships (live, from the open database)
+- Zoom/pan on ER diagram (scroll to zoom at cursor, drag to pan, fit / zoom
+  buttons)
+- Highlight related tables on hover
+- Database statistics (table sizes, row counts)
+- Storage breakdown chart (per-table size share stacked bar + list)
+- Index usage statistics (mock)
+- Export ER diagram as PNG/SVG
+
+## UX & Platform
+
+- Responsive layout (collapsible sidebar)
+- Resizable panel dividers (sidebar drag handle, 160–480px)
+- Collapsible sidebar
+- Page transition animations (CSS keyframes via `app/template.tsx`)
+- Skeleton loading states
+- Tauri desktop app build (bundling configured; signing/updater not yet)
+
+---
+
+See [docs/ROADMAP.md](docs/ROADMAP.md) for the full phased roadmap.

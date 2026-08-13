@@ -4,25 +4,25 @@
 
 > Foundation: chat list, message thread, input, mock responses
 
-- [ ] Conversation list with sidebar
-- [ ] New conversation creation
-- [ ] Message input with Enter-to-send
-- [ ] User and assistant message bubbles
-- [ ] Mock AI responses (random templates)
+- [x] Conversation list with sidebar
+- [x] New conversation creation
+- [x] Message input with Enter-to-send
+- [x] User and assistant message bubbles
+- [x] Mock AI responses (random templates)
 - [ ] Conversation rename and delete
-- [ ] Basic search across conversations
-- [ ] Responsive layout (sidebar + chat)
+- [x] Basic search across conversations
+- [x] Responsive layout (sidebar + chat)
 
 ## Phase 2 — Enhanced
 
 > Polish: animations, keyboard shortcuts, search
 
-- [ ] Streaming simulation (typewriter effect)
+- [x] Streaming simulation (typewriter effect)
 - [ ] Stop generation button
-- [ ] Typing indicator animation
-- [ ] Keyboard shortcuts (Ctrl+K, Ctrl+N, Ctrl+Shift+C)
+- [x] Typing indicator animation
+- [x] Keyboard shortcuts (Ctrl+K, Ctrl+N, Ctrl+Shift+C)
 - [ ] Message recall with up arrow
-- [ ] Auto-scroll to bottom on new message
+- [x] Auto-scroll to bottom on new message
 - [ ] Pull-to-refresh on conversation list
 - [ ] Page transition animations (Framer Motion)
 - [ ] Skeleton loading states
@@ -31,15 +31,15 @@
 
 > Content: markdown, code highlighting, attachments
 
-- [ ] Markdown rendering in messages (bold, italic, lists, links)
-- [ ] Code blocks with syntax highlighting
-- [ ] Copy code block button
-- [ ] Inline code styling
-- [ ] Table rendering in messages
+- [x] Markdown rendering in messages (bold, italic, lists, links)
+- [x] Code blocks with syntax highlighting
+- [x] Copy code block button
+- [x] Inline code styling
+- [x] Table rendering in messages
 - [ ] Image paste/drag-drop into chat input
 - [ ] Image display in messages with lightbox
 - [ ] File attachment (mock: filename, size, icon)
-- [ ] Copy message button
+- [x] Copy message button
 
 ## Phase 4 — Organization
 
@@ -52,20 +52,20 @@
 - [ ] Favorite/star individual messages
 - [ ] Conversation grouping by date (Today, Yesterday, Previous 7 Days, etc.)
 - [ ] Bulk delete/select conversations
-- [ ] Sort options (date, name, message count)
+- [x] Sort options (date, name, message count)
 
 ## Phase 5 — Intelligence
 
 > Smart: model selector, custom instructions, summaries
 
-- [ ] Model selector dropdown (GPT-4o, Claude 3.5, Gemini, Llama)
+- [x] Model selector dropdown (GPT-4o, Claude 3.5, Gemini, Llama)
 - [ ] Per-model response styles and badges
-- [ ] System prompt editor (custom instructions)
-- [ ] Prompt templates (Translate, Explain, Write, Summarize)
+- [x] System prompt editor (custom instructions)
+- [x] Prompt templates (Translate, Explain, Write, Summarize)
 - [ ] Per-conversation system prompt overrides
 - [ ] Message reactions (thumbs up/down)
-- [ ] Regenerate last response
-- [ ] Edit user message and re-generate
+- [x] Regenerate last response
+- [x] Edit user message and re-generate
 - [ ] Conversation title auto-generation from first message
 
 ## Phase 6 — Collaboration
@@ -73,8 +73,8 @@
 > Sharing: export, import, shared conversations
 
 - [ ] Export as Markdown
-- [ ] Export as JSON
-- [ ] Import conversations from JSON
+- [x] Export as JSON
+- [x] Import conversations from JSON
 - [ ] Share conversation link (mock: generates shareable URL)
 - [ ] Public conversation view (read-only)
 - [ ] Conversation statistics (message count, word count, model usage)
@@ -84,7 +84,7 @@
 
 > Ecosystem: native apps, API, plugins
 
-- [ ] Tauri desktop app build and signing
+- [x] Tauri desktop app build (bundling configured; signing not yet)
 - [ ] iOS/Android native shells (Capacitor or Tauri Mobile)
 - [ ] API key management for real LLM integration
 - [ ] Plugin system for custom tools

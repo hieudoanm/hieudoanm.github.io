@@ -39,7 +39,7 @@ Status: 🔵 planned · 🟡 in progress · ⚪ idea. All items are **offline-on
 | ------ | --------------------------------------------------------------------- | ----------------------------------------------------- |
 | 🔵     | Custom sections — add, remove, rename, and reorder top-level sections | Extends `ResumeData`; needs schema + template updates |
 | 🔵     | Auto-backup / version snapshots                                       | Rotating snapshots in `localStorage` or IndexedDB     |
-| 🟡     | Photo or avatar upload                                                | Stored as base64/Blob in IndexedDB, printed inline    |
+| 🔵     | Photo or avatar upload                                                | Stored as base64/Blob in IndexedDB, printed inline    |
 | ⚪     | JSON Resume (open standard) import & export                           | Pure parsing/mapping, no network                      |
 | ⚪     | Bundled spell-check dictionary                                        | On-device word list only                              |
 
@@ -48,7 +48,7 @@ Status: 🔵 planned · 🟡 in progress · ⚪ idea. All items are **offline-on
 | Status | Feature                                       | Notes                                                    |
 | ------ | --------------------------------------------- | -------------------------------------------------------- |
 | 🔵     | Custom paper size (width × height in mm)      | Extends `data/paper.ts`                                  |
-| 🟡     | Multi-page print with manual page breaks      | Print CSS + template `page-break` support                |
+| 🔵     | Multi-page print with manual page breaks      | Print CSS + template `page-break` support                |
 | ⚪     | True PDF export without a server              | Pure-JS generator or print stylesheet; no remote service |
 | ⚪     | Font picker from bundled/system fonts         | Must not load web fonts                                  |
 | ⚪     | Resizable side-by-side editor / preview panes | Local layout state only                                  |
