@@ -30,6 +30,8 @@ jest.mock('react-icons/fi', () => ({
   FiCheck: () => <span data-testid="check" />,
   FiCalendar: () => <span data-testid="calendar" />,
   FiTrash2: () => <span data-testid="trash" />,
+  FiPaperclip: () => <span data-testid="paperclip" />,
+  FiArchive: () => <span data-testid="archive" />,
 }));
 
 const baseData = () => ({
@@ -47,8 +49,10 @@ const baseData = () => ({
         { id: 'cl-1', text: 'Login', checked: true },
         { id: 'cl-2', text: 'Logout', checked: false },
       ],
-      commentCount: 0,
+      comments: [],
+      attachments: [],
       coverColor: null,
+      coverImage: null,
       archived: false,
       createdAt: Date.now() - 60000,
       updatedAt: Date.now() - 60000,
@@ -59,6 +63,7 @@ const baseData = () => ({
   members: [{ id: 'mem-1', name: 'A', email: 'a@x.com', avatar: 'A' }],
   updateCard: jest.fn().mockResolvedValue(undefined),
   deleteCard: jest.fn().mockResolvedValue(undefined),
+  archiveCard: jest.fn().mockResolvedValue(undefined),
   toggleChecklistItem: jest.fn().mockResolvedValue(undefined),
   addChecklistItem: jest.fn().mockResolvedValue(undefined),
   isLoading: false,
@@ -109,7 +114,7 @@ describe('CardDetailPage', () => {
       ],
     } as never);
     render(<CardDetailPage />);
-    expect(screen.getByText('None')).toBeInTheDocument();
+    expect(screen.getByLabelText('Due date')).toHaveValue('');
     expect(screen.getByText('low')).toBeInTheDocument();
     expect(screen.queryByText('Login')).not.toBeInTheDocument();
   });
@@ -258,5 +263,243 @@ describe('CardDetailPage', () => {
     } as never);
     render(<CardDetailPage />);
     expect(push).toHaveBeenCalledWith('/');
+  });
+
+  it('does not redirect while still loading', () => {
+    useSearchParams.mockReturnValue('missing');
+    jest.mocked(useData).mockReturnValue({
+      ...baseData(),
+      cards: [{ ...baseData().cards[0], id: 'other' }],
+      isLoading: true,
+    } as never);
+    render(<CardDetailPage />);
+    expect(push).not.toHaveBeenCalled();
+    expect(screen.getByText('Loading...')).toBeInTheDocument();
+  });
+
+  it('does not redirect when the board is empty', () => {
+    useSearchParams.mockReturnValue('missing');
+    jest.mocked(useData).mockReturnValue({
+      ...baseData(),
+      cards: [],
+    } as never);
+    render(<CardDetailPage />);
+    expect(push).not.toHaveBeenCalled();
+    expect(screen.getByText('Loading...')).toBeInTheDocument();
+  });
+
+  it('sets a due date from the picker', () => {
+    useSearchParams.mockReturnValue('card-1');
+    render(<CardDetailPage />);
+    fireEvent.change(screen.getByLabelText('Due date'), {
+      target: { value: '2026-03-15' },
+    });
+    expect(jest.mocked(useData)().updateCard).toHaveBeenCalledWith('card-1', {
+      dueDate: new Date('2026-03-15T00:00:00').getTime(),
+    });
+  });
+
+  it('clears the due date', () => {
+    useSearchParams.mockReturnValue('card-1');
+    render(<CardDetailPage />);
+    fireEvent.change(screen.getByLabelText('Due date'), {
+      target: { value: '' },
+    });
+    expect(jest.mocked(useData)().updateCard).toHaveBeenCalledWith('card-1', {
+      dueDate: null,
+    });
+  });
+
+  it('renders comments with timestamps and authors', () => {
+    useSearchParams.mockReturnValue('card-1');
+    jest.mocked(useData).mockReturnValue({
+      ...baseData(),
+      cards: [
+        {
+          ...baseData().cards[0],
+          comments: [
+            {
+              id: 'cmt-1',
+              text: 'Looks good',
+              author: 'Alice',
+              createdAt: Date.now() - 120000,
+            },
+          ],
+        },
+      ],
+    } as never);
+    render(<CardDetailPage />);
+    expect(screen.getByText('Looks good')).toBeInTheDocument();
+    expect(screen.getByText('Alice')).toBeInTheDocument();
+    expect(screen.getByText('2m ago')).toBeInTheDocument();
+  });
+
+  it('adds a comment via Enter', () => {
+    useSearchParams.mockReturnValue('card-1');
+    render(<CardDetailPage />);
+    fireEvent.change(screen.getByLabelText('New comment'), {
+      target: { value: 'Nice' },
+    });
+    fireEvent.keyDown(screen.getByLabelText('New comment'), {
+      key: 'Enter',
+    });
+    expect(jest.mocked(useData)().updateCard).toHaveBeenCalledWith(
+      'card-1',
+      expect.objectContaining({
+        comments: expect.arrayContaining([
+          expect.objectContaining({ text: 'Nice', author: 'You' }),
+        ]),
+      })
+    );
+  });
+
+  it('adds a comment via the button', () => {
+    useSearchParams.mockReturnValue('card-1');
+    render(<CardDetailPage />);
+    fireEvent.change(screen.getByLabelText('New comment'), {
+      target: { value: 'Nice' },
+    });
+    fireEvent.click(screen.getByRole('button', { name: 'Comment' }));
+    expect(jest.mocked(useData)().updateCard).toHaveBeenCalledWith(
+      'card-1',
+      expect.objectContaining({
+        comments: expect.arrayContaining([
+          expect.objectContaining({ text: 'Nice', author: 'You' }),
+        ]),
+      })
+    );
+  });
+
+  it('does not add an empty comment', () => {
+    useSearchParams.mockReturnValue('card-1');
+    render(<CardDetailPage />);
+    fireEvent.click(screen.getByRole('button', { name: 'Comment' }));
+    expect(jest.mocked(useData)().updateCard).not.toHaveBeenCalled();
+  });
+
+  it('renders attachments and adds a mock attachment', () => {
+    useSearchParams.mockReturnValue('card-1');
+    jest.mocked(useData).mockReturnValue({
+      ...baseData(),
+      cards: [
+        {
+          ...baseData().cards[0],
+          attachments: [{ id: 'att-1', name: 'spec.pdf', size: 245760 }],
+        },
+      ],
+    } as never);
+    render(<CardDetailPage />);
+    expect(screen.getByText('spec.pdf')).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: /Add attachment/ }));
+    expect(jest.mocked(useData)().updateCard).toHaveBeenCalledWith(
+      'card-1',
+      expect.objectContaining({
+        attachments: expect.arrayContaining([
+          expect.objectContaining({ name: 'attachment-2.pdf' }),
+        ]),
+      })
+    );
+  });
+
+  it('removes an attachment', () => {
+    useSearchParams.mockReturnValue('card-1');
+    jest.mocked(useData).mockReturnValue({
+      ...baseData(),
+      cards: [
+        {
+          ...baseData().cards[0],
+          attachments: [{ id: 'att-1', name: 'spec.pdf', size: 245760 }],
+        },
+      ],
+    } as never);
+    render(<CardDetailPage />);
+    fireEvent.click(screen.getByRole('button', { name: 'Remove spec.pdf' }));
+    expect(jest.mocked(useData)().updateCard).toHaveBeenCalledWith('card-1', {
+      attachments: [],
+    });
+  });
+
+  it('sets a cover image', () => {
+    useSearchParams.mockReturnValue('card-1');
+    render(<CardDetailPage />);
+    fireEvent.click(screen.getAllByRole('button', { name: /Set cover/ })[0]);
+    expect(jest.mocked(useData)().updateCard).toHaveBeenCalledWith(
+      'card-1',
+      expect.objectContaining({ coverImage: expect.any(String) })
+    );
+  });
+
+  it('removes the cover image', () => {
+    useSearchParams.mockReturnValue('card-1');
+    jest.mocked(useData).mockReturnValue({
+      ...baseData(),
+      cards: [
+        {
+          ...baseData().cards[0],
+          coverImage: 'https://picsum.photos/seed/cover/400/240',
+        },
+      ],
+    } as never);
+    render(<CardDetailPage />);
+    expect(screen.getByAltText('Card cover')).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Remove cover' }));
+    expect(jest.mocked(useData)().updateCard).toHaveBeenCalledWith('card-1', {
+      coverImage: null,
+    });
+  });
+
+  it('highlights the selected cover image', () => {
+    useSearchParams.mockReturnValue('card-1');
+    jest.mocked(useData).mockReturnValue({
+      ...baseData(),
+      cards: [
+        {
+          ...baseData().cards[0],
+          coverImage: 'https://picsum.photos/seed/project-cover-1/400/240',
+        },
+      ],
+    } as never);
+    render(<CardDetailPage />);
+    expect(screen.getByAltText('Card cover')).toBeInTheDocument();
+  });
+
+  it('adds an unselected label', () => {
+    useSearchParams.mockReturnValue('card-1');
+    jest.mocked(useData).mockReturnValue({
+      ...baseData(),
+      labels: [
+        { id: 'lbl-1', name: 'Bug', color: '#f00' },
+        { id: 'lbl-2', name: 'Feature', color: '#00f' },
+      ],
+    } as never);
+    render(<CardDetailPage />);
+    fireEvent.click(screen.getByText('Feature'));
+    expect(jest.mocked(useData)().updateCard).toHaveBeenCalledWith('card-1', {
+      labels: ['lbl-1', 'lbl-2'],
+    });
+  });
+
+  it('assigns an unselected member', () => {
+    useSearchParams.mockReturnValue('card-1');
+    jest.mocked(useData).mockReturnValue({
+      ...baseData(),
+      members: [
+        { id: 'mem-1', name: 'A', email: 'a@x.com', avatar: 'A' },
+        { id: 'mem-2', name: 'B', email: 'b@x.com', avatar: 'B' },
+      ],
+    } as never);
+    render(<CardDetailPage />);
+    fireEvent.click(screen.getByText('B'));
+    expect(jest.mocked(useData)().updateCard).toHaveBeenCalledWith('card-1', {
+      memberIds: ['mem-1', 'mem-2'],
+    });
+  });
+
+  it('archives the card and navigates back', () => {
+    useSearchParams.mockReturnValue('card-1');
+    render(<CardDetailPage />);
+    fireEvent.click(screen.getByRole('button', { name: 'Archive' }));
+    expect(jest.mocked(useData)().archiveCard).toHaveBeenCalledWith('card-1');
+    expect(back).toHaveBeenCalled();
   });
 });

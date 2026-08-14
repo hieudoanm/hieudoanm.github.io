@@ -147,6 +147,29 @@ describe('HomePage', () => {
     expect(addToast).toHaveBeenCalledWith('Board created', 'success');
   });
 
+  it('creates a board from a template', async () => {
+    const createBoardFromTemplate = jest.fn().mockResolvedValue(undefined);
+    jest.mocked(useData).mockReturnValue({
+      ...baseData(),
+      createBoardFromTemplate,
+    } as never);
+    render(<HomePage />);
+    fireEvent.click(screen.getByRole('button', { name: 'New Board' }));
+    fireEvent.change(screen.getByPlaceholderText('Board name'), {
+      target: { value: 'Roadmap' },
+    });
+    fireEvent.click(screen.getByRole('button', { name: /Product Roadmap/ }));
+    fireEvent.click(screen.getByRole('button', { name: 'Create' }));
+    await waitFor(() =>
+      expect(createBoardFromTemplate).toHaveBeenCalledWith(
+        'Roadmap',
+        '#3b82f6',
+        'tpl-roadmap'
+      )
+    );
+    expect(addToast).toHaveBeenCalledWith('Board created', 'success');
+  });
+
   it('does not create a board with an empty name', () => {
     render(<HomePage />);
     fireEvent.click(screen.getByRole('button', { name: 'New Board' }));
@@ -170,5 +193,20 @@ describe('HomePage', () => {
     fireEvent.click(screen.getByTestId('trash').closest('button')!);
     expect(deleteBoard).toHaveBeenCalledWith('board-2');
     expect(addToast).toHaveBeenCalledWith('Board deleted', 'info');
+  });
+
+  it('opens the create modal with the N shortcut', () => {
+    render(<HomePage />);
+    fireEvent.keyDown(window, { key: 'n' });
+    expect(screen.getByPlaceholderText('Board name')).toBeInTheDocument();
+  });
+
+  it('types into the board name without triggering the shortcut', () => {
+    render(<HomePage />);
+    fireEvent.click(screen.getByRole('button', { name: 'New Board' }));
+    const input = screen.getByPlaceholderText('Board name');
+    fireEvent.change(input, { target: { value: 'n' } });
+    fireEvent.keyDown(input, { key: 'n' });
+    expect(input).toHaveValue('n');
   });
 });

@@ -41,6 +41,7 @@ const list = (id: string): List => ({
   name: `List ${id}`,
   cardIds: [],
   collapsed: false,
+  archived: false,
   createdAt: 1000,
   updatedAt: 1000,
 });
@@ -55,8 +56,10 @@ const card = (id: string): Card => ({
   priority: 'medium',
   memberIds: [],
   checklistItems: [],
-  commentCount: 0,
+  comments: [],
+  attachments: [],
   coverColor: null,
+  coverImage: null,
   archived: false,
   createdAt: 1000,
   updatedAt: 1000,
@@ -158,6 +161,7 @@ describe('db', () => {
       theme: 'nothing',
       defaultView: 'kanban',
       notifications: true,
+      notificationsReadAt: 0,
     });
   });
 

@@ -16,6 +16,7 @@
 - Add/rename/delete lists
 - Add/edit/delete cards within lists
 - Drag-and-drop cards between lists
+- Drag-and-drop to reorder lists
 - Card labels (colored dots)
 - Card count per list badge
 - Collapse/expand lists
@@ -24,9 +25,21 @@
 
 - Card detail modal with description editor
 - Checklists with progress bar
+- Due date picker with indicators
 - Member assignment with avatars
 - Card priority levels
+- Card cover images
+- Card attachments (mock)
+- Card comments with timestamps
+- Mention users in comments (@username)
 - Copy and move card actions
+
+## Filtering & Search
+
+- Filter bar (label, member, due date, priority)
+- Saved filter presets (per board, stored in localStorage)
+- Board search with highlighted results (Q / F shortcuts)
+- Due date drag-to-reschedule in calendar
 
 ## Organization & Views
 
@@ -34,6 +47,14 @@
 - List view (compact table with sortable columns)
 - Calendar view (monthly grid with due dates)
 - Timeline view (Gantt-style bars)
+
+## Collaboration
+
+- Activity feed per board with relative timestamps
+- Activity export (CSV download)
+- Notifications (mentions, due dates, assignments) with unread badge
+- Member roles (admin, member, viewer) — viewers are read-only
+- Board sharing (mock link + copy, edit permission toggle)
 
 ## UX & Platform
 

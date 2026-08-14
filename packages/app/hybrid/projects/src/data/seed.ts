@@ -23,5 +23,6 @@ export const seedDatabase = async () => {
     theme: 'nothing',
     defaultView: 'kanban',
     notifications: true,
+    notificationsReadAt: 0,
   });
 };

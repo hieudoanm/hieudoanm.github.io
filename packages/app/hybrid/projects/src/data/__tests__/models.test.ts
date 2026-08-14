@@ -57,7 +57,7 @@ describe('mockBoards', () => {
 
 describe('mockLists', () => {
   it('provides lists that reference boards', () => {
-    expect(mockLists).toHaveLength(9);
+    expect(mockLists).toHaveLength(10);
     expect(mockLists[0]).toMatchObject({
       id: 'list-1',
       boardId: 'board-1',
@@ -69,7 +69,7 @@ describe('mockLists', () => {
 
 describe('mockCards', () => {
   it('provides cards that reference lists', () => {
-    expect(mockCards).toHaveLength(14);
+    expect(mockCards).toHaveLength(15);
     expect(mockCards[0]).toMatchObject({
       id: 'card-1',
       listId: 'list-1',
@@ -88,8 +88,8 @@ describe('mockCards', () => {
 
 describe('mockActivity', () => {
   it('provides activity entries for board-1', () => {
-    expect(mockActivity).toHaveLength(3);
-    expect(mockActivity.every((a) => a.boardId === 'board-1')).toBe(true);
+    expect(mockActivity).toHaveLength(4);
+    expect(mockActivity.filter((a) => a.boardId === 'board-1')).toHaveLength(3);
     expect(mockActivity[0]).toMatchObject({
       id: 'act-1',
       cardId: 'card-4',

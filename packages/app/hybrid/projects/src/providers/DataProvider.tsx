@@ -20,7 +20,7 @@ import type {
 } from '@/types';
 import { db } from '@/lib/db';
 import { seedDatabase } from '@/data/seed';
-import { generateId } from '@/data/models';
+import { generateId, mockTemplates } from '@/data/models';
 
 interface DataContextType {
   boards: Board[];
@@ -32,12 +32,20 @@ interface DataContextType {
   settings: ProjectsSettings;
   isLoading: boolean;
   createBoard: (name: string, background: string) => Promise<Board>;
+  createBoardFromTemplate: (
+    name: string,
+    background: string,
+    templateId: string
+  ) => Promise<Board>;
   updateBoard: (id: string, updates: Partial<Board>) => Promise<void>;
   deleteBoard: (id: string) => Promise<void>;
   toggleStarBoard: (id: string) => Promise<void>;
   createList: (boardId: string, name: string) => Promise<List>;
   updateList: (id: string, updates: Partial<List>) => Promise<void>;
   deleteList: (id: string) => Promise<void>;
+  archiveList: (id: string) => Promise<void>;
+  restoreList: (id: string) => Promise<void>;
+  copyList: (id: string) => Promise<void>;
   moveList: (
     listId: string,
     boardId: string,
@@ -46,6 +54,8 @@ interface DataContextType {
   createCard: (listId: string, title: string) => Promise<Card>;
   updateCard: (id: string, updates: Partial<Card>) => Promise<void>;
   deleteCard: (id: string) => Promise<void>;
+  archiveCard: (id: string) => Promise<void>;
+  restoreCard: (id: string) => Promise<void>;
   moveCard: (
     cardId: string,
     sourceListId: string,
@@ -117,6 +127,8 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
       background,
       starred: false,
       listIds: [],
+      roles: { 'mem-1': 'admin' },
+      shareEnabled: false,
       createdAt: Date.now(),
       updatedAt: Date.now(),
     };
@@ -124,6 +136,69 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
     setBoards((p) => [...p, board]);
     return board;
   }, []);
+
+  const createBoardFromTemplate = useCallback(
+    async (name: string, background: string, templateId: string) => {
+      const template = mockTemplates.find((t) => t.id === templateId);
+      const board: Board = {
+        id: generateId(),
+        name,
+        background,
+        starred: false,
+        listIds: [],
+        roles: { 'mem-1': 'admin' },
+        shareEnabled: false,
+        createdAt: Date.now(),
+        updatedAt: Date.now(),
+      };
+      await db.boards.put(board);
+      setBoards((p) => [...p, board]);
+      const newLists: List[] = [];
+      const newCards: Card[] = [];
+      for (const tl of template?.lists ?? []) {
+        const listId = generateId();
+        const list: List = {
+          id: listId,
+          boardId: board.id,
+          name: tl.name,
+          cardIds: [],
+          collapsed: false,
+          archived: false,
+          createdAt: Date.now(),
+          updatedAt: Date.now(),
+        };
+        const listCards: Card[] = tl.cards.map((tc) => ({
+          id: generateId(),
+          listId,
+          title: tc.title,
+          description: '',
+          labels: [],
+          dueDate: null,
+          priority: 'medium',
+          memberIds: [],
+          checklistItems: [],
+          comments: [],
+          attachments: [],
+          coverColor: null,
+          coverImage: null,
+          archived: false,
+          createdAt: Date.now(),
+          updatedAt: Date.now(),
+        }));
+        list.cardIds = listCards.map((c) => c.id);
+        newLists.push(list);
+        newCards.push(...listCards);
+        board.listIds.push(listId);
+      }
+      for (const l of newLists) await db.lists.put(l);
+      for (const c of newCards) await db.cards.put(c);
+      await db.boards.put({ ...board, updatedAt: Date.now() });
+      setLists((p) => [...p, ...newLists]);
+      setCards((p) => [...p, ...newCards]);
+      return board;
+    },
+    []
+  );
 
   const updateBoard = useCallback(
     async (id: string, updates: Partial<Board>) => {
@@ -166,6 +241,7 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
         name,
         cardIds: [],
         collapsed: false,
+        archived: false,
         createdAt: Date.now(),
         updatedAt: Date.now(),
       };
@@ -219,6 +295,96 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
     [lists, boards]
   );
 
+  const archiveList = useCallback(
+    async (id: string) => {
+      const list = lists.find((l) => l.id === id);
+      if (list) {
+        const updated = { ...list, archived: true, updatedAt: Date.now() };
+        await db.lists.put(updated);
+        setLists((p) => p.map((l) => (l.id === id ? updated : l)));
+        for (const cid of list.cardIds) {
+          const card = cards.find((c) => c.id === cid);
+          if (card) {
+            const cUpdated = { ...card, archived: true, updatedAt: Date.now() };
+            await db.cards.put(cUpdated);
+            setCards((p) => p.map((c) => (c.id === cid ? cUpdated : c)));
+          }
+        }
+      }
+    },
+    [lists, cards]
+  );
+
+  const restoreList = useCallback(
+    async (id: string) => {
+      const list = lists.find((l) => l.id === id);
+      if (list) {
+        const updated = { ...list, archived: false, updatedAt: Date.now() };
+        await db.lists.put(updated);
+        setLists((p) => p.map((l) => (l.id === id ? updated : l)));
+        for (const cid of list.cardIds) {
+          const card = cards.find((c) => c.id === cid);
+          if (card && card.archived) {
+            const cUpdated = {
+              ...card,
+              archived: false,
+              updatedAt: Date.now(),
+            };
+            await db.cards.put(cUpdated);
+            setCards((p) => p.map((c) => (c.id === cid ? cUpdated : c)));
+          }
+        }
+      }
+    },
+    [lists, cards]
+  );
+
+  const copyList = useCallback(
+    async (id: string) => {
+      const source = lists.find((l) => l.id === id);
+      if (!source) return;
+      const newListId = generateId();
+      const newCards: Card[] = source.cardIds
+        .map((cid) => cards.find((c) => c.id === cid))
+        .filter((c): c is Card => Boolean(c))
+        .map((c) => ({
+          ...c,
+          id: generateId(),
+          listId: newListId,
+          createdAt: Date.now(),
+          updatedAt: Date.now(),
+        }));
+      const newList: List = {
+        ...source,
+        id: newListId,
+        name: `${source.name} (copy)`,
+        cardIds: newCards.map((c) => c.id),
+        collapsed: false,
+        archived: false,
+        createdAt: Date.now(),
+        updatedAt: Date.now(),
+      };
+      await db.lists.put(newList);
+      for (const nc of newCards) await db.cards.put(nc);
+      setLists((p) => [...p, newList]);
+      setCards((p) => [...p, ...newCards]);
+      const board = boards.find((b) => b.id === source.boardId);
+      if (board) {
+        const index = board.listIds.indexOf(id);
+        const newListIds = [...board.listIds];
+        newListIds.splice(index + 1, 0, newListId);
+        const updated = {
+          ...board,
+          listIds: newListIds,
+          updatedAt: Date.now(),
+        };
+        await db.boards.put(updated);
+        setBoards((p) => p.map((b) => (b.id === board.id ? updated : b)));
+      }
+    },
+    [lists, cards, boards]
+  );
+
   const moveList = useCallback(
     async (listId: string, boardId: string, newIndex: number) => {
       const board = boards.find((b) => b.id === boardId);
@@ -247,8 +413,10 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
         priority: 'medium',
         memberIds: [],
         checklistItems: [],
-        commentCount: 0,
+        comments: [],
+        attachments: [],
         coverColor: null,
+        coverImage: null,
         archived: false,
         createdAt: Date.now(),
         updatedAt: Date.now(),
@@ -301,6 +469,30 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
       }
     },
     [cards, lists]
+  );
+
+  const archiveCard = useCallback(
+    async (id: string) => {
+      const card = cards.find((c) => c.id === id);
+      if (card) {
+        const updated = { ...card, archived: true, updatedAt: Date.now() };
+        await db.cards.put(updated);
+        setCards((p) => p.map((c) => (c.id === id ? updated : c)));
+      }
+    },
+    [cards]
+  );
+
+  const restoreCard = useCallback(
+    async (id: string) => {
+      const card = cards.find((c) => c.id === id);
+      if (card) {
+        const updated = { ...card, archived: false, updatedAt: Date.now() };
+        await db.cards.put(updated);
+        setCards((p) => p.map((c) => (c.id === id ? updated : c)));
+      }
+    },
+    [cards]
   );
 
   const moveCard = useCallback(
@@ -421,16 +613,22 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
         settings,
         isLoading,
         createBoard,
+        createBoardFromTemplate,
         updateBoard,
         deleteBoard,
         toggleStarBoard,
         createList,
         updateList,
         deleteList,
+        archiveList,
+        restoreList,
+        copyList,
         moveList,
         createCard,
         updateCard,
         deleteCard,
+        archiveCard,
+        restoreCard,
         moveCard,
         toggleChecklistItem,
         addChecklistItem,

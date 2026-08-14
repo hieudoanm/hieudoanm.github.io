@@ -21,14 +21,24 @@ const CalendarContent: FC = () => {
     );
   }
 
-  const { boards, lists, cards, isLoading } = useData();
+  const { boards, lists, cards, updateCard, isLoading } = useData();
   const board = boards.find((b) => b.id === boardId);
   const allCards = cards.filter((c) => !c.archived && c.dueDate);
   const [month, setMonth] = useState(new Date());
+  const [dragCardId, setDragCardId] = useState<string | null>(null);
+  const [dragOverDay, setDragOverDay] = useState<number | null>(null);
 
   useEffect(() => {
     if (!board && !isLoading && boards.length > 0) router.push('/');
   }, [board, isLoading, boards, router]);
+
+  const handleDrop = (day: number) => {
+    if (dragCardId) {
+      updateCard(dragCardId, { dueDate: new Date(year, m, day).getTime() });
+    }
+    setDragCardId(null);
+    setDragOverDay(null);
+  };
 
   const year = month.getFullYear();
   const m = month.getMonth();
@@ -94,7 +104,16 @@ const CalendarContent: FC = () => {
             return (
               <div
                 key={i}
-                className={`bg-base-100 min-h-[80px] p-1 ${isToday ? 'bg-primary/10' : ''}`}>
+                onDragOver={(e) => {
+                  if (!day) return;
+                  e.preventDefault();
+                  setDragOverDay(day);
+                }}
+                onDragLeave={() => setDragOverDay(null)}
+                onDrop={() => day && handleDrop(day)}
+                className={`bg-base-100 min-h-[80px] p-1 ${
+                  isToday ? 'bg-primary/10' : ''
+                } ${dragOverDay === day ? 'ring-primary ring-2' : ''}`}>
                 {day && (
                   <span
                     className={`text-xs ${isToday ? 'text-primary font-bold' : 'opacity-50'}`}>
@@ -104,6 +123,8 @@ const CalendarContent: FC = () => {
                 {dayCards.map((card) => (
                   <div
                     key={card.id}
+                    draggable
+                    onDragStart={() => setDragCardId(card.id)}
                     className="mt-0.5 truncate rounded px-1 py-0.5 text-[10px]"
                     style={{
                       backgroundColor: card.coverColor ?? '#374151',

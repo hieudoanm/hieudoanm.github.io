@@ -1,4 +1,10 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import {
+  render,
+  screen,
+  fireEvent,
+  waitFor,
+  act,
+} from '@testing-library/react';
 import BoardPage from '@/app/board/page';
 import { useData } from '@/providers/DataProvider';
 
@@ -47,10 +53,27 @@ jest.mock('react-icons/fi', () => {
     'FiTrash2',
     'FiChevronDown',
     'FiChevronRight',
+    'FiSearch',
+    'FiArchive',
+    'FiCopy',
+    'FiRotateCcw',
+    'FiBookmark',
+    'FiActivity',
+    'FiSend',
+    'FiBell',
+    'FiUsers',
+    'FiShare2',
+    'FiDownload',
+    'FiClock',
+    'FiAtSign',
+    'FiUserPlus',
+    'FiCheck',
   ];
-  const map: Record<string, () => React.ReactElement> = {};
+  const map: Record<string, React.FC<Record<string, unknown>>> = {};
   icons.forEach((name) => {
-    map[name] = () => <span data-testid={name} />;
+    map[name] = (props: Record<string, unknown>) => (
+      <span data-testid={name} {...props} />
+    );
   });
   return map;
 });
@@ -74,6 +97,7 @@ const baseData = () => ({
       name: 'To Do',
       cardIds: ['card-1', 'card-2'],
       collapsed: false,
+      archived: false,
       createdAt: 0,
       updatedAt: 0,
     },
@@ -83,6 +107,7 @@ const baseData = () => ({
       name: 'Done',
       cardIds: [],
       collapsed: false,
+      archived: false,
       createdAt: 0,
       updatedAt: 0,
     },
@@ -98,7 +123,10 @@ const baseData = () => ({
       priority: 'high',
       memberIds: ['mem-1'],
       checklistItems: [{ id: 'cl-1', text: 'Login', checked: false }],
-      commentCount: 2,
+      comments: [
+        { id: 'cmt-1', text: 'First', author: 'A', createdAt: 1000 },
+        { id: 'cmt-2', text: 'Second', author: 'A', createdAt: 2000 },
+      ],
       coverColor: null,
       archived: false,
       createdAt: 0,
@@ -114,7 +142,7 @@ const baseData = () => ({
       priority: 'low',
       memberIds: [],
       checklistItems: [],
-      commentCount: 0,
+      comments: [],
       coverColor: '#22c55e',
       archived: false,
       createdAt: 0,
@@ -123,16 +151,54 @@ const baseData = () => ({
   ],
   labels: [{ id: 'lbl-1', name: 'Bug', color: '#f00' }],
   members: [{ id: 'mem-1', name: 'A', email: 'a@x.com', avatar: 'A' }],
-  createList: jest.fn().mockResolvedValue(undefined),
+  activity: [
+    {
+      id: 'act-1',
+      boardId: 'board-1',
+      cardId: 'card-1',
+      message: 'Alice Chen moved "Write tests" to Done',
+      userId: 'mem-1',
+      timestamp: Date.now() - 3600000,
+    },
+    {
+      id: 'act-other',
+      boardId: 'board-2',
+      cardId: null,
+      message: 'Activity on another board',
+      userId: 'mem-1',
+      timestamp: Date.now(),
+    },
+  ],
+  settings: {
+    theme: 'nothing',
+    defaultView: 'kanban',
+    notifications: true,
+    notificationsReadAt: 0,
+  },
+  createList: jest.fn().mockResolvedValue({
+    id: 'list-new',
+    name: 'New list',
+  }),
   updateList: jest.fn().mockResolvedValue(undefined),
-  createCard: jest.fn().mockResolvedValue(undefined),
+  moveList: jest.fn().mockResolvedValue(undefined),
+  createCard: jest.fn().mockResolvedValue({
+    id: 'card-new',
+    title: 'New card',
+  }),
   moveCard: jest.fn().mockResolvedValue(undefined),
   deleteCard: jest.fn().mockResolvedValue(undefined),
   updateCard: jest.fn().mockResolvedValue(undefined),
+  updateBoard: jest.fn().mockResolvedValue(undefined),
   toggleChecklistItem: jest.fn().mockResolvedValue(undefined),
   addChecklistItem: jest.fn().mockResolvedValue(undefined),
   toggleStarBoard: jest.fn().mockResolvedValue(undefined),
   addActivity: jest.fn().mockResolvedValue(undefined),
+  updateSettings: jest.fn().mockResolvedValue(undefined),
+  archiveList: jest.fn().mockResolvedValue(undefined),
+  restoreList: jest.fn().mockResolvedValue(undefined),
+  copyList: jest.fn().mockResolvedValue(undefined),
+  archiveCard: jest.fn().mockResolvedValue(undefined),
+  restoreCard: jest.fn().mockResolvedValue(undefined),
   isLoading: false,
 });
 
@@ -142,10 +208,16 @@ const renderBoard = () => {
 };
 
 describe('BoardPage', () => {
+  beforeAll(() => {
+    document.elementFromPoint =
+      jest.fn() as unknown as typeof document.elementFromPoint;
+  });
+
   beforeEach(() => {
     jest.clearAllMocks();
     push.mockReset();
     useSearchParams.mockReset();
+    localStorage.clear();
     jest.mocked(useData).mockReturnValue(baseData() as never);
   });
 
@@ -162,7 +234,7 @@ describe('BoardPage', () => {
     expect(screen.getByText('Done')).toBeInTheDocument();
     expect(screen.getByText('Write tests')).toBeInTheDocument();
     expect(screen.getByText('Overdue task')).toBeInTheDocument();
-    expect(screen.getByText('Bug')).toBeInTheDocument();
+    expect(screen.getAllByText('Bug').length).toBeGreaterThan(0);
     expect(screen.getByText('2 comments')).toBeInTheDocument();
     expect(
       screen
@@ -170,6 +242,21 @@ describe('BoardPage', () => {
         .closest('[draggable]')!
         .textContent!.includes('0/1')
     ).toBe(true);
+  });
+
+  it('renders a card cover image', () => {
+    useSearchParams.mockReturnValue('board-1');
+    jest.mocked(useData).mockReturnValue({
+      ...baseData(),
+      cards: [
+        {
+          ...baseData().cards[0],
+          coverImage: 'https://picsum.photos/seed/cover/400/240',
+        },
+      ],
+    } as never);
+    renderBoard();
+    expect(screen.getByAltText('Card cover')).toBeInTheDocument();
   });
 
   it('renders due-soon and extra-label badges', () => {
@@ -347,7 +434,7 @@ describe('BoardPage', () => {
     renderBoard();
     const listContainer =
       screen.getByText('To Do').parentElement!.parentElement!;
-    fireEvent.click(listContainer.querySelector('button')!);
+    fireEvent.click(listContainer.querySelectorAll('button')[1]!);
     expect(jest.mocked(useData)().updateList).toHaveBeenCalledWith('list-1', {
       collapsed: true,
     });
@@ -370,6 +457,173 @@ describe('BoardPage', () => {
     );
   });
 
+  it('reorders lists via drag and drop', async () => {
+    renderBoard();
+    const listEl = screen.getByText('To Do').closest('[draggable]')!;
+    const destList = screen.getByText('Done').parentElement!.parentElement!;
+    fireEvent.dragStart(listEl);
+    fireEvent.dragOver(destList);
+    fireEvent.drop(destList);
+    await waitFor(() =>
+      expect(jest.mocked(useData)().moveList).toHaveBeenCalledWith(
+        'list-1',
+        'board-1',
+        1
+      )
+    );
+  });
+
+  it('filters cards by title search', () => {
+    renderBoard();
+    fireEvent.change(screen.getByLabelText('Search cards'), {
+      target: { value: 'overdue' },
+    });
+    const marks = screen
+      .getAllByText('Overdue')
+      .filter((el) => el.tagName === 'MARK');
+    expect(marks).toHaveLength(1);
+    expect(screen.queryByText('Write tests')).not.toBeInTheDocument();
+    expect(screen.getByText('No matches')).toBeInTheDocument();
+  });
+
+  it('shows a drop placeholder when dragging a card over a list', () => {
+    renderBoard();
+    const cardEl = screen.getByText('Write tests').closest('[draggable]')!;
+    const destList = screen.getByText('Done').parentElement!.parentElement!;
+    fireEvent.dragStart(cardEl);
+    fireEvent.dragOver(destList);
+    expect(screen.getByText('Drop here')).toBeInTheDocument();
+  });
+
+  it('focuses search with the Q and F shortcuts', () => {
+    renderBoard();
+    const search = screen.getByLabelText('Search cards');
+    fireEvent.keyDown(window, { key: 'q' });
+    expect(search).toHaveFocus();
+    fireEvent.keyDown(window, { key: 'f' });
+    expect(search).toHaveFocus();
+  });
+
+  it('opens add card with the N shortcut', () => {
+    renderBoard();
+    fireEvent.keyDown(window, { key: 'n' });
+    expect(screen.getByPlaceholderText('Card title')).toBeInTheDocument();
+  });
+
+  it('ignores shortcuts while typing in an input', () => {
+    renderBoard();
+    fireEvent.keyDown(screen.getByLabelText('Search cards'), { key: 'n' });
+    expect(screen.queryByPlaceholderText('Card title')).not.toBeInTheDocument();
+  });
+
+  it('moves a card via long-press touch drag', async () => {
+    jest.useFakeTimers();
+    try {
+      renderBoard();
+      const cardEl = screen.getByText('Write tests').closest('[draggable]')!;
+      const destList = screen.getByText('Done').closest('[data-list-id]')!;
+      const spy = jest
+        .spyOn(document, 'elementFromPoint')
+        .mockReturnValue(destList as unknown as Element);
+      fireEvent.touchStart(cardEl, {
+        touches: [{ clientX: 0, clientY: 0 }],
+      });
+      act(() => {
+        jest.advanceTimersByTime(500);
+      });
+      fireEvent.touchEnd(cardEl, {
+        changedTouches: [{ clientX: 50, clientY: 50 }],
+      });
+      expect(jest.mocked(useData)().moveCard).toHaveBeenCalledWith(
+        'card-1',
+        'list-1',
+        'list-2',
+        0
+      );
+      await act(async () => {
+        await Promise.resolve();
+      });
+      fireEvent.click(cardEl);
+      expect(screen.queryByDisplayValue('Write tests')).not.toBeInTheDocument();
+      spy.mockRestore();
+    } finally {
+      jest.useRealTimers();
+    }
+  });
+
+  it('reorders lists via long-press touch drag', () => {
+    jest.useFakeTimers();
+    try {
+      renderBoard();
+      const listEl = screen.getByText('To Do').closest('[draggable]')!;
+      const destList = screen.getByText('Done').closest('[data-list-id]')!;
+      const spy = jest
+        .spyOn(document, 'elementFromPoint')
+        .mockReturnValue(destList as unknown as Element);
+      fireEvent.touchStart(listEl, {
+        touches: [{ clientX: 0, clientY: 0 }],
+      });
+      act(() => {
+        jest.advanceTimersByTime(500);
+      });
+      fireEvent.touchEnd(listEl, {
+        changedTouches: [{ clientX: 50, clientY: 50 }],
+      });
+      expect(jest.mocked(useData)().moveList).toHaveBeenCalledWith(
+        'list-1',
+        'board-1',
+        1
+      );
+      spy.mockRestore();
+    } finally {
+      jest.useRealTimers();
+    }
+  });
+
+  it('cancels long-press when the finger moves', () => {
+    jest.useFakeTimers();
+    try {
+      renderBoard();
+      const cardEl = screen.getByText('Write tests').closest('[draggable]')!;
+      fireEvent.touchStart(cardEl, {
+        touches: [{ clientX: 0, clientY: 0 }],
+      });
+      fireEvent.touchMove(cardEl, {
+        touches: [{ clientX: 30, clientY: 30 }],
+      });
+      act(() => {
+        jest.advanceTimersByTime(500);
+      });
+      fireEvent.touchEnd(cardEl, {
+        changedTouches: [{ clientX: 30, clientY: 30 }],
+      });
+      expect(jest.mocked(useData)().moveCard).not.toHaveBeenCalled();
+    } finally {
+      jest.useRealTimers();
+    }
+  });
+
+  it('cancels long-press on touch cancel', () => {
+    jest.useFakeTimers();
+    try {
+      renderBoard();
+      const cardEl = screen.getByText('Write tests').closest('[draggable]')!;
+      fireEvent.touchStart(cardEl, {
+        touches: [{ clientX: 0, clientY: 0 }],
+      });
+      act(() => {
+        jest.advanceTimersByTime(500);
+      });
+      fireEvent.touchCancel(cardEl);
+      fireEvent.touchEnd(cardEl, {
+        changedTouches: [{ clientX: 50, clientY: 50 }],
+      });
+      expect(jest.mocked(useData)().moveCard).not.toHaveBeenCalled();
+    } finally {
+      jest.useRealTimers();
+    }
+  });
+
   it('opens a card modal and edits its fields', () => {
     renderBoard();
     fireEvent.click(screen.getByText('Write tests'));
@@ -384,7 +638,7 @@ describe('BoardPage', () => {
     expect(jest.mocked(useData)().updateCard).toHaveBeenCalledWith('card-1', {
       description: 'Updated description',
     });
-    fireEvent.change(screen.getByRole('combobox'), {
+    fireEvent.change(screen.getByRole('combobox', { name: 'Card priority' }), {
       target: { value: 'urgent' },
     });
     expect(jest.mocked(useData)().updateCard).toHaveBeenCalledWith('card-1', {
@@ -430,5 +684,329 @@ describe('BoardPage', () => {
     useSearchParams.mockReturnValue('missing');
     render(<BoardPage />);
     expect(push).toHaveBeenCalledWith('/');
+  });
+
+  it('filters cards by label and clears the filter', () => {
+    renderBoard();
+    fireEvent.click(screen.getAllByText('Bug')[0]);
+    expect(screen.getByText('Write tests')).toBeInTheDocument();
+    expect(screen.queryByText('Overdue task')).not.toBeInTheDocument();
+    expect(screen.getAllByText('No matches').length).toBeGreaterThan(0);
+    fireEvent.click(screen.getByRole('button', { name: 'Clear filters' }));
+    expect(screen.getByText('Overdue task')).toBeInTheDocument();
+  });
+
+  it('filters cards by member', () => {
+    renderBoard();
+    fireEvent.click(screen.getByTitle('A'));
+    expect(screen.getByText('Write tests')).toBeInTheDocument();
+    expect(screen.queryByText('Overdue task')).not.toBeInTheDocument();
+  });
+
+  it('filters cards by due date', () => {
+    renderBoard();
+    fireEvent.change(screen.getByLabelText('Due date filter'), {
+      target: { value: 'overdue' },
+    });
+    expect(screen.queryByText('Write tests')).not.toBeInTheDocument();
+    expect(screen.getByText('Overdue task')).toBeInTheDocument();
+  });
+
+  it('filters cards by priority', () => {
+    renderBoard();
+    fireEvent.change(screen.getByLabelText('Priority filter'), {
+      target: { value: 'high' },
+    });
+    expect(screen.getByText('Write tests')).toBeInTheDocument();
+    expect(screen.queryByText('Overdue task')).not.toBeInTheDocument();
+  });
+
+  it('clears all filters at once', () => {
+    renderBoard();
+    fireEvent.click(screen.getByTitle('A'));
+    fireEvent.change(screen.getByLabelText('Priority filter'), {
+      target: { value: 'low' },
+    });
+    expect(screen.getAllByText('No matches').length).toBeGreaterThan(0);
+    fireEvent.click(screen.getByRole('button', { name: 'Clear filters' }));
+    expect(screen.getByText('Write tests')).toBeInTheDocument();
+    expect(screen.getByText('Overdue task')).toBeInTheDocument();
+  });
+
+  it('saves, applies, and deletes filter presets', () => {
+    renderBoard();
+    fireEvent.change(screen.getByLabelText('Priority filter'), {
+      target: { value: 'high' },
+    });
+    fireEvent.click(screen.getByRole('button', { name: 'Presets' }));
+    fireEvent.click(
+      screen.getByRole('button', { name: 'Save current filters…' })
+    );
+    fireEvent.change(screen.getByLabelText('Preset name'), {
+      target: { value: 'High' },
+    });
+    fireEvent.click(screen.getByRole('button', { name: 'Save' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Presets' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Clear filters' }));
+    expect(screen.getByText('Overdue task')).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Presets' }));
+    fireEvent.click(screen.getByRole('button', { name: 'High' }));
+    expect(screen.getByText('Write tests')).toBeInTheDocument();
+    expect(screen.queryByText('Overdue task')).not.toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Presets' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Delete preset High' }));
+    expect(
+      screen.queryByRole('button', { name: 'High' })
+    ).not.toBeInTheDocument();
+    expect(screen.getByText('No saved presets')).toBeInTheDocument();
+  });
+
+  it('highlights matching search terms', () => {
+    renderBoard();
+    fireEvent.change(screen.getByLabelText('Search cards'), {
+      target: { value: 'Overdue' },
+    });
+    expect(screen.queryByText('Write tests')).not.toBeInTheDocument();
+    const marks = screen
+      .getAllByText('Overdue')
+      .filter((el) => el.tagName === 'MARK');
+    expect(marks).toHaveLength(1);
+    expect(marks[0]).toHaveTextContent('Overdue');
+  });
+
+  it('sorts cards within a list', () => {
+    renderBoard();
+    fireEvent.click(screen.getByLabelText('Menu for To Do'));
+    fireEvent.click(screen.getByRole('button', { name: 'name' }));
+    const container = screen.getByText('To Do').closest('[data-list-id]')!;
+    const titles = [...container.querySelectorAll('[draggable]')].map(
+      (el) => el.textContent ?? ''
+    );
+    expect(titles[1]).toContain('Overdue task');
+    expect(titles[2]).toContain('Write tests');
+    expect(screen.getByText('by name')).toBeInTheDocument();
+  });
+
+  it('sorts cards by due date, priority, and creation time', () => {
+    jest.mocked(useData).mockReturnValue({
+      ...baseData(),
+      cards: [
+        {
+          ...baseData().cards[0],
+          dueDate: Date.now() + 1000,
+          priority: 'low',
+          createdAt: 100,
+        },
+        {
+          ...baseData().cards[1],
+          dueDate: null,
+          priority: 'high',
+          createdAt: 300,
+        },
+      ],
+    } as never);
+    renderBoard();
+    const titles = () =>
+      [
+        ...screen
+          .getByText('To Do')
+          .closest('[data-list-id]')!
+          .querySelectorAll('[draggable]'),
+      ].map((el) => el.textContent ?? '');
+    const sortBy = (mode: string) => {
+      fireEvent.click(screen.getByLabelText('Menu for To Do'));
+      fireEvent.click(screen.getByRole('button', { name: mode }));
+    };
+    sortBy('due');
+    expect(titles()[1]).toContain('Write tests');
+    expect(titles()[2]).toContain('Overdue task');
+    sortBy('priority');
+    expect(titles()[1]).toContain('Overdue task');
+    expect(titles()[2]).toContain('Write tests');
+    sortBy('created');
+    expect(titles()[1]).toContain('Write tests');
+    expect(titles()[2]).toContain('Overdue task');
+  });
+
+  it('shows a filled star for a starred board', () => {
+    jest.mocked(useData).mockReturnValue({
+      ...baseData(),
+      boards: [{ ...baseData().boards[0], starred: true }],
+    } as never);
+    renderBoard();
+    expect(screen.getByTestId('FiStar').className).toContain('fill-warning');
+  });
+
+  it('omits avatars for unknown members', () => {
+    jest.mocked(useData).mockReturnValue({
+      ...baseData(),
+      cards: [{ ...baseData().cards[0], memberIds: ['ghost'] }],
+    } as never);
+    renderBoard();
+    expect(screen.getAllByText('A')).toHaveLength(1);
+  });
+
+  it('copies a list from the list menu', () => {
+    renderBoard();
+    fireEvent.click(screen.getByLabelText('Menu for To Do'));
+    fireEvent.click(screen.getByRole('button', { name: 'Copy list' }));
+    expect(jest.mocked(useData)().copyList).toHaveBeenCalledWith('list-1');
+  });
+
+  it('archives a list from the list menu', () => {
+    renderBoard();
+    fireEvent.click(screen.getByLabelText('Menu for To Do'));
+    fireEvent.click(screen.getByRole('button', { name: 'Archive list' }));
+    expect(jest.mocked(useData)().archiveList).toHaveBeenCalledWith('list-1');
+  });
+
+  it('archives a card from the card modal', () => {
+    renderBoard();
+    fireEvent.click(screen.getByText('Write tests'));
+    fireEvent.click(screen.getByRole('button', { name: 'Archive' }));
+    expect(jest.mocked(useData)().archiveCard).toHaveBeenCalledWith('card-1');
+    expect(screen.queryByDisplayValue('Write tests')).not.toBeInTheDocument();
+  });
+
+  it('shows an empty archive state', () => {
+    renderBoard();
+    fireEvent.click(screen.getByLabelText('Open archive'));
+    expect(screen.getByText('Nothing archived.')).toBeInTheDocument();
+  });
+
+  it('lists and restores archived cards from the archive panel', () => {
+    jest.mocked(useData).mockReturnValue({
+      ...baseData(),
+      cards: [{ ...baseData().cards[0], archived: true }],
+    } as never);
+    renderBoard();
+    expect(screen.queryByText('Write tests')).not.toBeInTheDocument();
+    fireEvent.click(screen.getByLabelText('Open archive'));
+    expect(screen.getByText('Cards')).toBeInTheDocument();
+    expect(screen.getByText('Write tests')).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Restore' }));
+    expect(jest.mocked(useData)().restoreCard).toHaveBeenCalledWith('card-1');
+  });
+
+  it('restores archived lists from the archive panel', () => {
+    jest.mocked(useData).mockReturnValue({
+      ...baseData(),
+      lists: [{ ...baseData().lists[1], archived: true, name: 'Done' }],
+      cards: [{ ...baseData().cards[0], archived: true }],
+    } as never);
+    renderBoard();
+    fireEvent.click(screen.getByLabelText('Open archive'));
+    expect(screen.getByText('Lists')).toBeInTheDocument();
+    fireEvent.click(screen.getAllByRole('button', { name: 'Restore' })[0]);
+    expect(jest.mocked(useData)().restoreList).toHaveBeenCalledWith('list-2');
+  });
+
+  it('deletes an archived card from the archive panel', () => {
+    jest.mocked(useData).mockReturnValue({
+      ...baseData(),
+      cards: [{ ...baseData().cards[0], archived: true }],
+    } as never);
+    renderBoard();
+    fireEvent.click(screen.getByLabelText('Open archive'));
+    fireEvent.click(screen.getByTestId('FiTrash2').closest('button')!);
+    expect(jest.mocked(useData)().deleteCard).toHaveBeenCalledWith('card-1');
+  });
+
+  it('shows the activity feed for the board only', () => {
+    renderBoard();
+    fireEvent.click(screen.getByLabelText('Activity'));
+    expect(
+      screen.getByText('Alice Chen moved "Write tests" to Done')
+    ).toBeInTheDocument();
+    expect(
+      screen.queryByText('Activity on another board')
+    ).not.toBeInTheDocument();
+  });
+
+  it('exports activity as a CSV download', () => {
+    const createObjectURL = jest.fn(() => 'blob:mock');
+    const revokeObjectURL = jest.fn();
+    global.URL.createObjectURL = createObjectURL;
+    global.URL.revokeObjectURL = revokeObjectURL;
+    renderBoard();
+    fireEvent.click(screen.getByLabelText('Activity'));
+    fireEvent.click(screen.getByRole('button', { name: /Export/i }));
+    expect(createObjectURL).toHaveBeenCalledWith(expect.any(Blob));
+    expect(revokeObjectURL).toHaveBeenCalledWith('blob:mock');
+  });
+
+  it('shows a due-date notification for assigned cards', () => {
+    jest.mocked(useData).mockReturnValue({
+      ...baseData(),
+      cards: [{ ...baseData().cards[0], dueDate: Date.now() - 1000 }],
+    } as never);
+    renderBoard();
+    fireEvent.click(screen.getByLabelText('Notifications'));
+    expect(screen.getByText(/"Write tests" is overdue/)).toBeInTheDocument();
+  });
+
+  it('marks notifications as read', () => {
+    renderBoard();
+    fireEvent.click(screen.getByLabelText('Notifications'));
+    fireEvent.click(screen.getByRole('button', { name: 'Mark all read' }));
+    expect(jest.mocked(useData)().updateSettings).toHaveBeenCalledWith({
+      notificationsReadAt: expect.any(Number),
+    });
+  });
+
+  it('adds a comment with a mention to a card', async () => {
+    renderBoard();
+    fireEvent.click(screen.getByText('Write tests'));
+    fireEvent.change(screen.getByLabelText('Add comment'), {
+      target: { value: 'LGTM @A' },
+    });
+    fireEvent.click(screen.getByTestId('FiSend').closest('button')!);
+    const updateCard = jest.mocked(useData)().updateCard;
+    expect(updateCard).toHaveBeenCalledWith('card-1', {
+      comments: expect.arrayContaining([
+        expect.objectContaining({ text: 'LGTM @A', author: 'Alice Chen' }),
+      ]),
+    });
+    await waitFor(() => {
+      expect(jest.mocked(useData)().addActivity).toHaveBeenCalledWith(
+        'board-1',
+        'card-1',
+        expect.stringContaining('commented')
+      );
+    });
+  });
+
+  it('shares the board via a mock link', () => {
+    renderBoard();
+    fireEvent.click(screen.getByLabelText('Share board'));
+    expect(
+      screen.getByDisplayValue('https://projects.example.com/board/board-1')
+    ).toBeInTheDocument();
+  });
+
+  it('changes a member role', () => {
+    renderBoard();
+    fireEvent.click(screen.getByLabelText('Board members'));
+    fireEvent.change(screen.getByLabelText('Role for A'), {
+      target: { value: 'viewer' },
+    });
+    expect(jest.mocked(useData)().updateBoard).toHaveBeenCalledWith('board-1', {
+      roles: { 'mem-1': 'viewer' },
+    });
+  });
+
+  it('hides editing controls for viewers', () => {
+    jest.mocked(useData).mockReturnValue({
+      ...baseData(),
+      boards: [{ ...baseData().boards[0], roles: { 'mem-1': 'viewer' } }],
+    } as never);
+    renderBoard();
+    expect(screen.queryByText('Add card')).not.toBeInTheDocument();
+    expect(screen.queryByText('Add list')).not.toBeInTheDocument();
+    fireEvent.click(screen.getByText('Write tests'));
+    expect(
+      screen.queryByPlaceholderText('Write a comment...')
+    ).not.toBeInTheDocument();
+    expect(screen.queryByText('Archive')).not.toBeInTheDocument();
   });
 });

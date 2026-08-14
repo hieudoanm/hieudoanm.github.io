@@ -48,7 +48,7 @@ const baseData = () => ({
       priority: 'medium',
       memberIds: [],
       checklistItems: [],
-      commentCount: 0,
+      comments: [],
       coverColor: '#22c55e',
       archived: false,
       createdAt: 0,
@@ -64,7 +64,7 @@ const baseData = () => ({
       priority: 'medium',
       memberIds: [],
       checklistItems: [],
-      commentCount: 0,
+      comments: [],
       coverColor: null,
       archived: true,
       createdAt: 0,
@@ -72,6 +72,7 @@ const baseData = () => ({
     },
   ],
   isLoading: false,
+  updateCard: jest.fn().mockResolvedValue(undefined),
 });
 
 describe('CalendarPage', () => {
@@ -130,5 +131,18 @@ describe('CalendarPage', () => {
     } as never);
     render(<CalendarPage />);
     expect(push).toHaveBeenCalledWith('/');
+  });
+
+  it('reschedules a card by dragging it to another day', () => {
+    jest.useFakeTimers().setSystemTime(new Date(2026, 7, 5));
+    useSearchParams.mockReturnValue('board-1');
+    render(<CalendarPage />);
+    fireEvent.dragStart(screen.getByText('Sprint review'));
+    fireEvent.dragOver(screen.getByText('20'));
+    fireEvent.drop(screen.getByText('20'));
+    expect(jest.mocked(useData)().updateCard).toHaveBeenCalledWith('card-1', {
+      dueDate: new Date(2026, 7, 20).getTime(),
+    });
+    jest.useRealTimers();
   });
 });

@@ -1,9 +1,13 @@
+export type BoardRole = 'admin' | 'member' | 'viewer';
+
 export interface Board {
   id: string;
   name: string;
   background: string;
   starred: boolean;
   listIds: string[];
+  roles?: Record<string, BoardRole>;
+  shareEnabled?: boolean;
   createdAt: number;
   updatedAt: number;
 }
@@ -14,6 +18,7 @@ export interface List {
   name: string;
   cardIds: string[];
   collapsed: boolean;
+  archived: boolean;
   createdAt: number;
   updatedAt: number;
 }
@@ -28,8 +33,10 @@ export interface Card {
   priority: 'low' | 'medium' | 'high' | 'urgent';
   memberIds: string[];
   checklistItems: ChecklistItem[];
-  commentCount: number;
+  comments: CardComment[];
+  attachments: CardAttachment[];
   coverColor: string | null;
+  coverImage: string | null;
   archived: boolean;
   createdAt: number;
   updatedAt: number;
@@ -39,6 +46,19 @@ export interface ChecklistItem {
   id: string;
   text: string;
   checked: boolean;
+}
+
+export interface CardComment {
+  id: string;
+  text: string;
+  author: string;
+  createdAt: number;
+}
+
+export interface CardAttachment {
+  id: string;
+  name: string;
+  size: number;
 }
 
 export interface Label {
@@ -54,6 +74,14 @@ export interface Member {
   avatar: string;
 }
 
+export interface BoardTemplate {
+  id: string;
+  name: string;
+  description: string;
+  background: string;
+  lists: { name: string; cards: { title: string }[] }[];
+}
+
 export interface Activity {
   id: string;
   boardId: string;
@@ -67,4 +95,5 @@ export interface ProjectsSettings {
   theme: string;
   defaultView: string;
   notifications: boolean;
+  notificationsReadAt?: number;
 }

@@ -53,6 +53,7 @@ const list = (id: string): List => ({
   name: `List ${id}`,
   cardIds: [],
   collapsed: false,
+  archived: false,
   createdAt: 1000,
   updatedAt: 1000,
 });
@@ -67,8 +68,10 @@ const card = (id: string): Card => ({
   priority: 'medium',
   memberIds: [],
   checklistItems: [],
-  commentCount: 0,
+  comments: [],
+  attachments: [],
   coverColor: null,
+  coverImage: null,
   archived: false,
   createdAt: 1000,
   updatedAt: 1000,
@@ -89,9 +92,11 @@ const Consumer = () => {
       <span data-testid="list-collapsed">
         {String(data.lists[0]?.collapsed)}
       </span>
+      <span data-testid="list-archived">{String(data.lists[0]?.archived)}</span>
       <span data-testid="card-count">{data.cards.length}</span>
       <span data-testid="card-title">{data.cards[0]?.title}</span>
       <span data-testid="card-list">{data.cards[0]?.listId}</span>
+      <span data-testid="card-archived">{String(data.cards[0]?.archived)}</span>
       <span data-testid="item-checked">
         {String(data.cards[0]?.checklistItems[0]?.checked)}
       </span>
@@ -119,6 +124,9 @@ const Consumer = () => {
         update-list
       </button>
       <button onClick={() => data.deleteList('list-1')}>delete-list</button>
+      <button onClick={() => data.archiveList('list-1')}>archive-list</button>
+      <button onClick={() => data.restoreList('list-1')}>restore-list</button>
+      <button onClick={() => data.copyList('list-1')}>copy-list</button>
       <button onClick={() => data.moveList('list-2', 'board-1', 0)}>
         move-list
       </button>
@@ -129,6 +137,20 @@ const Consumer = () => {
         update-card
       </button>
       <button onClick={() => data.deleteCard('card-1')}>delete-card</button>
+      <button onClick={() => data.archiveCard('card-1')}>archive-card</button>
+      <button onClick={() => data.restoreCard('card-1')}>restore-card</button>
+      <button
+        onClick={() =>
+          data.createBoardFromTemplate('New', '#ff0000', 'tpl-task')
+        }>
+        create-board-from-template
+      </button>
+      <button
+        onClick={() =>
+          data.createBoardFromTemplate('New', '#ff0000', 'tpl-unknown')
+        }>
+        create-board-from-unknown-template
+      </button>
       <button onClick={() => data.moveCard('card-1', 'list-1', 'list-2', 0)}>
         move-card
       </button>
@@ -160,6 +182,15 @@ const Consumer = () => {
       <button onClick={() => data.deleteList('missing')}>
         delete-list-missing
       </button>
+      <button onClick={() => data.archiveList('missing')}>
+        archive-list-missing
+      </button>
+      <button onClick={() => data.restoreList('missing')}>
+        restore-list-missing
+      </button>
+      <button onClick={() => data.copyList('missing')}>
+        copy-list-missing
+      </button>
       <button onClick={() => data.moveList('list-2', 'missing', 0)}>
         move-list-missing-board
       </button>
@@ -174,6 +205,12 @@ const Consumer = () => {
       </button>
       <button onClick={() => data.deleteCard('missing')}>
         delete-card-missing
+      </button>
+      <button onClick={() => data.archiveCard('missing')}>
+        archive-card-missing
+      </button>
+      <button onClick={() => data.restoreCard('missing')}>
+        restore-card-missing
       </button>
       <button onClick={() => data.moveCard('missing', 'list-1', 'list-2', 0)}>
         move-card-missing
@@ -208,13 +245,14 @@ const seedStore = () => {
   ]);
   db.lists.getAll.mockResolvedValue([
     { ...list('list-1'), cardIds: ['card-1'] },
-    { ...list('list-2'), cardIds: ['card-1'] },
+    { ...list('list-2'), cardIds: ['card-2'] },
   ]);
   db.cards.getAll.mockResolvedValue([
     {
       ...card('card-1'),
       checklistItems: [{ id: 'cl-1', text: 'Login', checked: false }],
     },
+    { ...card('card-2'), listId: 'list-2' },
   ]);
   db.labels.getAll.mockResolvedValue([
     { id: 'lbl-1', name: 'Bug', color: '#f00' },
@@ -268,7 +306,7 @@ describe('DataProvider', () => {
     );
     expect(seedDatabase).toHaveBeenCalled();
     expect(screen.getByTestId('list-count').textContent).toBe('2');
-    expect(screen.getByTestId('card-count').textContent).toBe('1');
+    expect(screen.getByTestId('card-count').textContent).toBe('2');
     expect(screen.getByTestId('is-loading').textContent).toBe('false');
   });
 
@@ -370,6 +408,105 @@ describe('DataProvider', () => {
     );
   });
 
+  it('archives a list and its cards', async () => {
+    renderProvider();
+    await waitFor(() =>
+      expect(screen.getByTestId('list-count').textContent).toBe('2')
+    );
+    fireEvent.click(screen.getByText('archive-list'));
+    await waitFor(() =>
+      expect(screen.getByTestId('list-archived').textContent).toBe('true')
+    );
+    expect(screen.getByTestId('card-archived').textContent).toBe('true');
+  });
+
+  it('restores an archived list and its cards', async () => {
+    renderProvider();
+    await waitFor(() =>
+      expect(screen.getByTestId('list-count').textContent).toBe('2')
+    );
+    fireEvent.click(screen.getByText('archive-list'));
+    await waitFor(() =>
+      expect(screen.getByTestId('list-archived').textContent).toBe('true')
+    );
+    fireEvent.click(screen.getByText('restore-list'));
+    await waitFor(() =>
+      expect(screen.getByTestId('list-archived').textContent).toBe('false')
+    );
+    expect(screen.getByTestId('card-archived').textContent).toBe('false');
+  });
+
+  it('copies a list with its cards into the board', async () => {
+    renderProvider();
+    await waitFor(() =>
+      expect(screen.getByTestId('list-count').textContent).toBe('2')
+    );
+    fireEvent.click(screen.getByText('copy-list'));
+    await waitFor(() =>
+      expect(screen.getByTestId('list-count').textContent).toBe('3')
+    );
+    expect(screen.getByTestId('card-count').textContent).toBe('3');
+    expect(db.lists.put).toHaveBeenCalledWith(
+      expect.objectContaining({
+        name: 'List list-1 (copy)',
+        cardIds: [expect.any(String)],
+      })
+    );
+    expect(db.boards.put).toHaveBeenCalledWith(
+      expect.objectContaining({
+        listIds: ['list-1', expect.any(String), 'list-2'],
+      })
+    );
+  });
+
+  it('archives and restores a card', async () => {
+    renderProvider();
+    await waitFor(() =>
+      expect(screen.getByTestId('card-count').textContent).toBe('2')
+    );
+    fireEvent.click(screen.getByText('archive-card'));
+    await waitFor(() =>
+      expect(screen.getByTestId('card-archived').textContent).toBe('true')
+    );
+    fireEvent.click(screen.getByText('restore-card'));
+    await waitFor(() =>
+      expect(screen.getByTestId('card-archived').textContent).toBe('false')
+    );
+  });
+
+  it('creates a board from a template with lists and cards', async () => {
+    renderProvider();
+    await waitFor(() =>
+      expect(screen.getByTestId('board-count').textContent).toBe('2')
+    );
+    fireEvent.click(screen.getByText('create-board-from-template'));
+    await waitFor(() =>
+      expect(screen.getByTestId('board-count').textContent).toBe('3')
+    );
+    expect(screen.getByTestId('list-count').textContent).toBe('5');
+    expect(screen.getByTestId('card-count').textContent).toBe('4');
+    expect(db.lists.put).toHaveBeenCalledWith(
+      expect.objectContaining({ name: 'To Do' })
+    );
+    expect(db.cards.put).toHaveBeenCalledWith(
+      expect.objectContaining({ title: 'Task 1' })
+    );
+  });
+
+  it('creates an empty board from an unknown template', async () => {
+    renderProvider();
+    await waitFor(() =>
+      expect(screen.getByTestId('board-count').textContent).toBe('2')
+    );
+    fireEvent.click(screen.getByText('create-board-from-unknown-template'));
+    await waitFor(() =>
+      expect(screen.getByTestId('board-count').textContent).toBe('3')
+    );
+    expect(db.boards.put).toHaveBeenCalledWith(
+      expect.objectContaining({ name: 'New', listIds: [] })
+    );
+  });
+
   it('moves a list to a new index', async () => {
     renderProvider();
     await waitFor(() =>
@@ -389,11 +526,11 @@ describe('DataProvider', () => {
   it('creates a card and appends it to the list', async () => {
     renderProvider();
     await waitFor(() =>
-      expect(screen.getByTestId('card-count').textContent).toBe('1')
+      expect(screen.getByTestId('card-count').textContent).toBe('2')
     );
     fireEvent.click(screen.getByText('create-card'));
     await waitFor(() =>
-      expect(screen.getByTestId('card-count').textContent).toBe('2')
+      expect(screen.getByTestId('card-count').textContent).toBe('3')
     );
     expect(db.lists.put).toHaveBeenCalledWith(
       expect.objectContaining({
@@ -405,7 +542,7 @@ describe('DataProvider', () => {
   it('updates a card', async () => {
     renderProvider();
     await waitFor(() =>
-      expect(screen.getByTestId('card-count').textContent).toBe('1')
+      expect(screen.getByTestId('card-count').textContent).toBe('2')
     );
     fireEvent.click(screen.getByText('update-card'));
     await waitFor(() =>
@@ -419,11 +556,11 @@ describe('DataProvider', () => {
   it('deletes a card and removes it from the list', async () => {
     renderProvider();
     await waitFor(() =>
-      expect(screen.getByTestId('card-count').textContent).toBe('1')
+      expect(screen.getByTestId('card-count').textContent).toBe('2')
     );
     fireEvent.click(screen.getByText('delete-card'));
     await waitFor(() =>
-      expect(screen.getByTestId('card-count').textContent).toBe('0')
+      expect(screen.getByTestId('card-count').textContent).toBe('1')
     );
     expect(db.lists.put).toHaveBeenCalledWith(
       expect.objectContaining({ cardIds: [] })
@@ -433,7 +570,7 @@ describe('DataProvider', () => {
   it('moves a card between lists', async () => {
     renderProvider();
     await waitFor(() =>
-      expect(screen.getByTestId('card-count').textContent).toBe('1')
+      expect(screen.getByTestId('card-count').textContent).toBe('2')
     );
     fireEvent.click(screen.getByText('move-card'));
     await waitFor(() =>
@@ -450,7 +587,7 @@ describe('DataProvider', () => {
   it('toggles a checklist item', async () => {
     renderProvider();
     await waitFor(() =>
-      expect(screen.getByTestId('card-count').textContent).toBe('1')
+      expect(screen.getByTestId('card-count').textContent).toBe('2')
     );
     fireEvent.click(screen.getByText('toggle-item'));
     await waitFor(() =>
@@ -466,7 +603,7 @@ describe('DataProvider', () => {
   it('adds a checklist item', async () => {
     renderProvider();
     await waitFor(() =>
-      expect(screen.getByTestId('card-count').textContent).toBe('1')
+      expect(screen.getByTestId('card-count').textContent).toBe('2')
     );
     fireEvent.click(screen.getByText('add-item'));
     await waitFor(() =>
@@ -536,11 +673,16 @@ describe('DataProvider', () => {
     fireEvent.click(screen.getByText('create-list-missing-board'));
     fireEvent.click(screen.getByText('update-list-missing'));
     fireEvent.click(screen.getByText('delete-list-missing'));
+    fireEvent.click(screen.getByText('archive-list-missing'));
+    fireEvent.click(screen.getByText('restore-list-missing'));
+    fireEvent.click(screen.getByText('copy-list-missing'));
     fireEvent.click(screen.getByText('move-list-missing-board'));
     fireEvent.click(screen.getByText('move-list-missing-id'));
     fireEvent.click(screen.getByText('create-card-missing-list'));
     fireEvent.click(screen.getByText('update-card-missing'));
     fireEvent.click(screen.getByText('delete-card-missing'));
+    fireEvent.click(screen.getByText('archive-card-missing'));
+    fireEvent.click(screen.getByText('restore-card-missing'));
     fireEvent.click(screen.getByText('move-card-missing'));
     fireEvent.click(screen.getByText('move-card-missing-src'));
     fireEvent.click(screen.getByText('move-card-missing-dest'));

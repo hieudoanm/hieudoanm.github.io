@@ -25,15 +25,16 @@ describe('seedDatabase', () => {
     await seedDatabase();
     const { db: mockDb } = jest.requireMock('@/lib/db');
     expect(mockDb.boards.put).toHaveBeenCalledTimes(3);
-    expect(mockDb.lists.put).toHaveBeenCalledTimes(9);
-    expect(mockDb.cards.put).toHaveBeenCalledTimes(14);
+    expect(mockDb.lists.put).toHaveBeenCalledTimes(10);
+    expect(mockDb.cards.put).toHaveBeenCalledTimes(15);
     expect(mockDb.labels.put).toHaveBeenCalledTimes(10);
     expect(mockDb.members.put).toHaveBeenCalledTimes(6);
-    expect(mockDb.activity.put).toHaveBeenCalledTimes(3);
+    expect(mockDb.activity.put).toHaveBeenCalledTimes(4);
     expect(mockDb.settings.put).toHaveBeenCalledWith({
       theme: 'nothing',
       defaultView: 'kanban',
       notifications: true,
+      notificationsReadAt: 0,
     });
   });
 

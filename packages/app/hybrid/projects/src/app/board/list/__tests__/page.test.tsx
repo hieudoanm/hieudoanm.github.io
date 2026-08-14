@@ -68,7 +68,7 @@ const baseData = () => ({
       priority: 'urgent',
       memberIds: ['mem-1'],
       checklistItems: [],
-      commentCount: 0,
+      comments: [],
       coverColor: null,
       archived: false,
       createdAt: 0,

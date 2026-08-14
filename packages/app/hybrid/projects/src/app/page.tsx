@@ -1,12 +1,13 @@
 'use client';
 
-import { type FC, useState } from 'react';
+import { type FC, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Providers } from '@/providers/Providers';
 import { useData } from '@/providers/DataProvider';
 import { formatRelativeTime } from '@/utils/format';
 import { useToast } from '@/providers/ToastProvider';
 import { FiPlus, FiStar, FiTrash2, FiLayout } from 'react-icons/fi';
+import { mockTemplates } from '@/data/models';
 
 const HomeContent: FC = () => {
   const {
@@ -15,6 +16,7 @@ const HomeContent: FC = () => {
     cards,
     isLoading,
     createBoard,
+    createBoardFromTemplate,
     deleteBoard,
     toggleStarBoard,
   } = useData();
@@ -22,6 +24,21 @@ const HomeContent: FC = () => {
   const [showCreate, setShowCreate] = useState(false);
   const [newName, setNewName] = useState('');
   const [newBg, setNewBg] = useState('#3b82f6');
+  const [selectedTemplate, setSelectedTemplate] = useState('blank');
+
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.ctrlKey || e.metaKey || e.altKey) return;
+      const tag = (e.target as HTMLElement | null)?.tagName;
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+      if (e.key.toLowerCase() === 'n') {
+        e.preventDefault();
+        setShowCreate(true);
+      }
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, []);
 
   const colors = [
     '#3b82f6',
@@ -38,8 +55,13 @@ const HomeContent: FC = () => {
 
   const handleCreate = async () => {
     if (!newName.trim()) return;
-    await createBoard(newName.trim(), newBg);
+    if (selectedTemplate === 'blank') {
+      await createBoard(newName.trim(), newBg);
+    } else {
+      await createBoardFromTemplate(newName.trim(), newBg, selectedTemplate);
+    }
     setNewName('');
+    setSelectedTemplate('blank');
     setShowCreate(false);
     addToast('Board created', 'success');
   };
@@ -198,6 +220,36 @@ const HomeContent: FC = () => {
                     style={{ backgroundColor: c }}
                   />
                 ))}
+              </div>
+              <div>
+                <p className="mb-2 text-xs font-semibold opacity-70">
+                  Template
+                </p>
+                <div className="grid grid-cols-2 gap-2">
+                  <button
+                    type="button"
+                    onClick={() => setSelectedTemplate('blank')}
+                    className={`card bg-base-200 p-3 text-left ${selectedTemplate === 'blank' ? 'ring-primary ring-2' : ''}`}>
+                    <span className="flex items-center gap-1 text-sm font-semibold">
+                      <FiLayout className="size-4" /> Blank
+                    </span>
+                    <span className="text-xs opacity-50">
+                      Start from scratch
+                    </span>
+                  </button>
+                  {mockTemplates.map((t) => (
+                    <button
+                      key={t.id}
+                      type="button"
+                      onClick={() => setSelectedTemplate(t.id)}
+                      className={`card bg-base-200 p-3 text-left ${selectedTemplate === t.id ? 'ring-primary ring-2' : ''}`}>
+                      <span className="text-sm font-semibold">{t.name}</span>
+                      <span className="text-xs opacity-50">
+                        {t.description}
+                      </span>
+                    </button>
+                  ))}
+                </div>
               </div>
               <div className="card-actions justify-end">
                 <button

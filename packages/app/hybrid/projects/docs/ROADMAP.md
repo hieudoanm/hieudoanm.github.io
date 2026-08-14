@@ -10,7 +10,7 @@
 - [x] Add/rename/delete lists
 - [x] Add/edit/delete cards within lists
 - [x] Drag-and-drop cards between lists
-- [ ] Drag-and-drop to reorder lists
+- [x] Drag-and-drop to reorder lists
 - [x] Card labels (colored dots)
 - [x] Demo boards seed data
 - [x] Responsive layout
@@ -19,13 +19,13 @@
 
 > Polish: animations, keyboard shortcuts, search
 
-- [ ] Drag-and-drop animations and placeholders
-- [ ] Touch drag support (long-press on mobile)
-- [ ] Keyboard shortcuts (N, Q, F)
-- [ ] Search across all card titles
+- [x] Drag-and-drop animations and placeholders
+- [x] Touch drag support (long-press on mobile)
+- [x] Keyboard shortcuts (N, Q, F)
+- [x] Search across all card titles
 - [x] Card count per list badge
 - [x] Collapse/expand lists
-- [ ] Page transition animations (Framer Motion)
+- [x] Page transition animations (Framer Motion)
 - [x] Skeleton loading states
 - [x] Board background colors
 
@@ -35,11 +35,11 @@
 
 - [x] Card detail modal with description editor
 - [x] Checklists with progress bar
-- [ ] Due date picker with indicators (display only, no picker)
+- [x] Due date picker with indicators
 - [x] Member assignment with avatars
-- [ ] Card attachments (mock)
-- [ ] Card comments with timestamps
-- [ ] Card cover images
+- [x] Card attachments (mock)
+- [x] Card comments with timestamps
+- [x] Card cover images
 - [x] Card priority levels
 - [x] Copy and move card actions
 
@@ -48,12 +48,12 @@
 > Structure: labels, archive, templates
 
 - [x] Label management (10 colors)
-- [ ] Filter board by label
-- [ ] Archive cards and lists
-- [ ] Restore from archive
-- [ ] Board templates
-- [ ] Copy list with cards
-- [ ] Sort cards within list
+- [x] Filter board by label
+- [x] Archive cards and lists
+- [x] Restore from archive
+- [x] Board templates
+- [x] Copy list with cards
+- [x] Sort cards within list
 - [x] Star/favorite boards
 
 ## Phase 5 — Views & Filtering
@@ -63,22 +63,22 @@
 - [x] List view (compact table with sortable columns)
 - [x] Calendar view (monthly grid with due dates)
 - [x] Timeline view (Gantt-style bars)
-- [ ] Filter bar (label, member, due date, priority)
-- [ ] Saved filter presets
-- [ ] Board search with highlighted results
-- [ ] Due date drag-to-reschedule in calendar
+- [x] Filter bar (label, member, due date, priority)
+- [x] Saved filter presets
+- [x] Board search with highlighted results
+- [x] Due date drag-to-reschedule in calendar
 
 ## Phase 6 — Collaboration
 
 > Team: activity, notifications, comments
 
-- [ ] Activity feed per board (store + seed exist, not rendered)
-- [ ] Notifications (mentions, due dates, assignments)
-- [ ] Card comments with timestamps
-- [ ] Member roles (admin, member, viewer)
-- [ ] Board sharing (mock)
-- [ ] Mention users in comments (@username)
-- [ ] Activity export
+- [x] Activity feed per board (store + seed exist, now rendered)
+- [x] Notifications (mentions, due dates, assignments)
+- [x] Card comments with timestamps
+- [x] Member roles (admin, member, viewer)
+- [x] Board sharing (mock)
+- [x] Mention users in comments (@username)
+- [x] Activity export
 
 ## Phase 7 — Platform & Integration
 
