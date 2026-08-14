@@ -184,6 +184,15 @@ describe('db', () => {
     await expect(db.history.getByDocument('other')).resolves.toEqual([]);
   });
 
+  it('history.delete removes a single entry', async () => {
+    await db.history.put(historyEntry('h1'));
+    await db.history.put({ ...historyEntry('h2'), documentId: 'other' });
+    await db.history.delete('h1');
+    await expect(db.history.getAll()).resolves.toEqual([
+      expect.objectContaining({ id: 'h2' }),
+    ]);
+  });
+
   it('history.deleteByDocument removes all entries for a document', async () => {
     await db.history.put(historyEntry('h1'));
     await db.history.put({ ...historyEntry('h2'), documentId: 'other' });

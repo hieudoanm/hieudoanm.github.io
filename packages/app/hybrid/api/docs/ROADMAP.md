@@ -14,8 +14,8 @@
 
 > Polish: authentication, persistence
 
-- [ ] Bearer and Basic auth presets (headers edited manually today)
-- [ ] Draft autosave
+- [x] Bearer and Basic auth presets
+- [x] Draft autosave
 - [x] Keyboard shortcuts (Ctrl+Enter send, Ctrl+L clear)
 - [x] Copy response body button
 - [x] Response preview by content-type
@@ -25,8 +25,8 @@
 > Power: variables, collections, export
 
 - [x] Environment variables (`{{var}}` substitution)
-- [ ] Request collections (saved, named, grouped)
-- [ ] Export/import requests as JSON
+- [x] Request collections (saved, named, grouped)
+- [x] Export/import requests as JSON
 - [x] Request timeout and redirect control
 - [x] Response diffing between requests
 
@@ -35,6 +35,6 @@
 > Scale: tabs, search, codegen
 
 - [x] Multiple request tabs
-- [ ] History search and filtering
-- [ ] Code generation (curl, fetch, fetch-ts)
-- [ ] Schema preview (OpenAPI import)
+- [x] History search and filtering
+- [x] Code generation (curl, fetch, fetch-ts)
+- [x] Schema preview (OpenAPI import)

@@ -70,9 +70,11 @@ interface DataContextType {
   toggleLayerVisibility: (documentId: string, layerId: string) => Promise<void>;
   toggleLayerLock: (documentId: string, layerId: string) => Promise<void>;
   addSymbol: (symbol: SVGSymbol) => Promise<void>;
+  updateSymbol: (symbol: SVGSymbol) => Promise<void>;
   removeSymbol: (id: string) => Promise<void>;
   updateSettings: (settings: Partial<SVGSettings>) => Promise<void>;
   addGradient: (documentId: string, gradient: SVGGradient) => Promise<void>;
+  updateGradient: (documentId: string, gradient: SVGGradient) => Promise<void>;
   removeGradient: (documentId: string, gradientId: string) => Promise<void>;
   saveHistory: (documentId: string, label: string) => Promise<void>;
   undo: (documentId: string) => Promise<void>;
@@ -105,6 +107,9 @@ export const DataProvider = ({ children }: DataProviderProps) => {
     exportScale: 2,
   });
   const [history, setHistory] = useState<HistoryEntry[]>([]);
+  const [redoStack, setRedoStack] = useState<
+    Record<string, { shapes: SVGShape[]; layers: SVGLayer[] }[]>
+  >({});
   const [currentDocument, setCurrentDocument] = useState<SVGDocument | null>(
     null
   );
@@ -155,6 +160,10 @@ export const DataProvider = ({ children }: DataProviderProps) => {
     await db.history.deleteByDocument(id);
     setDocuments((prev) => prev.filter((d) => d.id !== id));
     setHistory((prev) => prev.filter((h) => h.documentId !== id));
+    setRedoStack((prev) => {
+      const { [id]: _removed, ...rest } = prev;
+      return rest;
+    });
   }, []);
 
   const renameDocument = useCallback(async (id: string, title: string) => {
@@ -172,8 +181,26 @@ export const DataProvider = ({ children }: DataProviderProps) => {
     setDocuments((prev) => prev.map((d) => (d.id === doc.id ? updated : d)));
   }, []);
 
+  const saveHistory = useCallback(async (documentId: string, label: string) => {
+    const doc = await db.documents.get(documentId);
+    if (doc) {
+      const entry: HistoryEntry = {
+        id: generateId(),
+        documentId,
+        shapes: JSON.parse(JSON.stringify(doc.shapes)),
+        layers: JSON.parse(JSON.stringify(doc.layers)),
+        timestamp: Date.now(),
+        label,
+      };
+      await db.history.put(entry);
+      setHistory((prev) => [...prev, entry]);
+      setRedoStack((prev) => ({ ...prev, [documentId]: [] }));
+    }
+  }, []);
+
   const addShape = useCallback(
     async (documentId: string, shape: SVGShape) => {
+      await saveHistory(documentId, 'add shape');
       const doc = await db.documents.get(documentId);
       if (doc) {
         const updated = {
@@ -190,11 +217,12 @@ export const DataProvider = ({ children }: DataProviderProps) => {
         }
       }
     },
-    [currentDocument?.id]
+    [saveHistory, currentDocument?.id]
   );
 
   const updateShape = useCallback(
     async (documentId: string, shape: SVGShape) => {
+      await saveHistory(documentId, 'update shape');
       const doc = await db.documents.get(documentId);
       if (doc) {
         const updated = {
@@ -211,11 +239,12 @@ export const DataProvider = ({ children }: DataProviderProps) => {
         }
       }
     },
-    [currentDocument?.id]
+    [saveHistory, currentDocument?.id]
   );
 
   const removeShape = useCallback(
     async (documentId: string, shapeId: string) => {
+      await saveHistory(documentId, 'remove shape');
       const doc = await db.documents.get(documentId);
       if (doc) {
         const updated = {
@@ -236,7 +265,7 @@ export const DataProvider = ({ children }: DataProviderProps) => {
         }
       }
     },
-    [currentDocument?.id]
+    [saveHistory, currentDocument?.id]
   );
 
   const moveShape = useCallback(
@@ -292,6 +321,7 @@ export const DataProvider = ({ children }: DataProviderProps) => {
 
   const duplicateShape = useCallback(
     async (documentId: string, shapeId: string) => {
+      await saveHistory(documentId, 'duplicate shape');
       const doc = await db.documents.get(documentId);
       if (doc) {
         const shape = doc.shapes.find((s) => s.id === shapeId);
@@ -318,11 +348,12 @@ export const DataProvider = ({ children }: DataProviderProps) => {
         }
       }
     },
-    [currentDocument?.id]
+    [saveHistory, currentDocument?.id]
   );
 
   const updateLayers = useCallback(
     async (documentId: string, layers: SVGLayer[]) => {
+      await saveHistory(documentId, 'update layers');
       const doc = await db.documents.get(documentId);
       if (doc) {
         const updated = { ...doc, layers, updatedAt: Date.now() };
@@ -335,11 +366,12 @@ export const DataProvider = ({ children }: DataProviderProps) => {
         }
       }
     },
-    [currentDocument?.id]
+    [saveHistory, currentDocument?.id]
   );
 
   const addLayer = useCallback(
     async (documentId: string, name: string) => {
+      await saveHistory(documentId, 'add layer');
       const doc = await db.documents.get(documentId);
       if (doc) {
         const newLayer: SVGLayer = {
@@ -369,6 +401,7 @@ export const DataProvider = ({ children }: DataProviderProps) => {
 
   const removeLayer = useCallback(
     async (documentId: string, layerId: string) => {
+      await saveHistory(documentId, 'remove layer');
       const doc = await db.documents.get(documentId);
       if (doc) {
         const layer = doc.layers.find((l) => l.id === layerId);
@@ -387,11 +420,12 @@ export const DataProvider = ({ children }: DataProviderProps) => {
         }
       }
     },
-    [currentDocument?.id]
+    [saveHistory, currentDocument?.id]
   );
 
   const renameLayer = useCallback(
     async (documentId: string, layerId: string, name: string) => {
+      await saveHistory(documentId, 'rename layer');
       const doc = await db.documents.get(documentId);
       if (doc) {
         const updated = {
@@ -410,11 +444,12 @@ export const DataProvider = ({ children }: DataProviderProps) => {
         }
       }
     },
-    [currentDocument?.id]
+    [saveHistory, currentDocument?.id]
   );
 
   const toggleLayerVisibility = useCallback(
     async (documentId: string, layerId: string) => {
+      await saveHistory(documentId, 'toggle layer visibility');
       const doc = await db.documents.get(documentId);
       if (doc) {
         const updated = {
@@ -433,11 +468,12 @@ export const DataProvider = ({ children }: DataProviderProps) => {
         }
       }
     },
-    [currentDocument?.id]
+    [saveHistory, currentDocument?.id]
   );
 
   const toggleLayerLock = useCallback(
     async (documentId: string, layerId: string) => {
+      await saveHistory(documentId, 'toggle layer lock');
       const doc = await db.documents.get(documentId);
       if (doc) {
         const updated = {
@@ -456,7 +492,7 @@ export const DataProvider = ({ children }: DataProviderProps) => {
         }
       }
     },
-    [currentDocument?.id]
+    [saveHistory, currentDocument?.id]
   );
 
   const addSymbol = useCallback(async (symbol: SVGSymbol) => {
@@ -467,6 +503,11 @@ export const DataProvider = ({ children }: DataProviderProps) => {
   const removeSymbol = useCallback(async (id: string) => {
     await db.symbols.delete(id);
     setSymbols((prev) => prev.filter((s) => s.id !== id));
+  }, []);
+
+  const updateSymbol = useCallback(async (symbol: SVGSymbol) => {
+    await db.symbols.put(symbol);
+    setSymbols((prev) => prev.map((s) => (s.id === symbol.id ? symbol : s)));
   }, []);
 
   const updateSettings = useCallback(async (partial: Partial<SVGSettings>) => {
@@ -518,44 +559,62 @@ export const DataProvider = ({ children }: DataProviderProps) => {
     [currentDocument?.id]
   );
 
-  const saveHistory = useCallback(async (documentId: string, label: string) => {
-    const doc = await db.documents.get(documentId);
-    if (doc) {
-      const entry: HistoryEntry = {
-        id: generateId(),
-        documentId,
-        shapes: JSON.parse(JSON.stringify(doc.shapes)),
-        layers: JSON.parse(JSON.stringify(doc.layers)),
-        timestamp: Date.now(),
-        label,
-      };
-      await db.history.put(entry);
-      setHistory((prev) => [...prev, entry]);
-    }
-  }, []);
+  const updateGradient = useCallback(
+    async (documentId: string, gradient: SVGGradient) => {
+      await saveHistory(documentId, 'update gradient');
+      const doc = await db.documents.get(documentId);
+      if (doc) {
+        const updated = {
+          ...doc,
+          gradients: doc.gradients.map((g) =>
+            g.id === gradient.id ? gradient : g
+          ),
+          updatedAt: Date.now(),
+        };
+        await db.documents.put(updated);
+        setDocuments((prev) =>
+          prev.map((d) => (d.id === documentId ? updated : d))
+        );
+        if (currentDocument?.id === documentId) {
+          setCurrentDocument(updated);
+        }
+      }
+    },
+    [saveHistory, currentDocument?.id]
+  );
 
   const undo = useCallback(
     async (documentId: string) => {
       const entries = await db.history.getByDocument(documentId);
       const sorted = entries.sort((a, b) => b.timestamp - a.timestamp);
-      if (sorted.length > 0) {
-        const doc = await db.documents.get(documentId);
-        if (doc) {
-          const entry = sorted[0];
-          const updated = {
-            ...doc,
-            shapes: entry.shapes,
-            layers: entry.layers,
-            updatedAt: Date.now(),
-          };
-          await db.documents.put(updated);
-          setDocuments((prev) =>
-            prev.map((d) => (d.id === documentId ? updated : d))
-          );
-          if (currentDocument?.id === documentId) {
-            setCurrentDocument(updated);
-          }
-        }
+      const entry = sorted[0];
+      if (!entry) return;
+      const doc = await db.documents.get(documentId);
+      if (!doc) return;
+      setRedoStack((prev) => ({
+        ...prev,
+        [documentId]: [
+          ...(prev[documentId] ?? []),
+          {
+            shapes: JSON.parse(JSON.stringify(doc.shapes)),
+            layers: JSON.parse(JSON.stringify(doc.layers)),
+          },
+        ],
+      }));
+      await db.history.delete(entry.id);
+      setHistory((prev) => prev.filter((h) => h.id !== entry.id));
+      const updated = {
+        ...doc,
+        shapes: entry.shapes,
+        layers: entry.layers,
+        updatedAt: Date.now(),
+      };
+      await db.documents.put(updated);
+      setDocuments((prev) =>
+        prev.map((d) => (d.id === documentId ? updated : d))
+      );
+      if (currentDocument?.id === documentId) {
+        setCurrentDocument(updated);
       }
     },
     [currentDocument?.id]
@@ -563,29 +622,40 @@ export const DataProvider = ({ children }: DataProviderProps) => {
 
   const redo = useCallback(
     async (documentId: string) => {
-      const entries = await db.history.getByDocument(documentId);
-      const sorted = entries.sort((a, b) => a.timestamp - b.timestamp);
-      if (sorted.length > 0) {
-        const doc = await db.documents.get(documentId);
-        if (doc) {
-          const entry = sorted[sorted.length - 1];
-          const updated = {
-            ...doc,
-            shapes: entry.shapes,
-            layers: entry.layers,
-            updatedAt: Date.now(),
-          };
-          await db.documents.put(updated);
-          setDocuments((prev) =>
-            prev.map((d) => (d.id === documentId ? updated : d))
-          );
-          if (currentDocument?.id === documentId) {
-            setCurrentDocument(updated);
-          }
-        }
+      const stack = redoStack[documentId] ?? [];
+      const next = stack[stack.length - 1];
+      if (!next) return;
+      const doc = await db.documents.get(documentId);
+      if (!doc) return;
+      const entry: HistoryEntry = {
+        id: generateId(),
+        documentId,
+        shapes: JSON.parse(JSON.stringify(doc.shapes)),
+        layers: JSON.parse(JSON.stringify(doc.layers)),
+        timestamp: Date.now(),
+        label: 'redo',
+      };
+      await db.history.put(entry);
+      setHistory((prev) => [...prev, entry]);
+      const updated = {
+        ...doc,
+        shapes: JSON.parse(JSON.stringify(next.shapes)),
+        layers: JSON.parse(JSON.stringify(next.layers)),
+        updatedAt: Date.now(),
+      };
+      await db.documents.put(updated);
+      setDocuments((prev) =>
+        prev.map((d) => (d.id === documentId ? updated : d))
+      );
+      if (currentDocument?.id === documentId) {
+        setCurrentDocument(updated);
       }
+      setRedoStack((prev) => ({
+        ...prev,
+        [documentId]: prev[documentId]?.slice(0, -1) ?? [],
+      }));
     },
-    [currentDocument?.id]
+    [redoStack, currentDocument?.id]
   );
 
   return (
@@ -616,9 +686,11 @@ export const DataProvider = ({ children }: DataProviderProps) => {
         toggleLayerVisibility,
         toggleLayerLock,
         addSymbol,
+        updateSymbol,
         removeSymbol,
         updateSettings,
         addGradient,
+        updateGradient,
         removeGradient,
         saveHistory,
         undo,

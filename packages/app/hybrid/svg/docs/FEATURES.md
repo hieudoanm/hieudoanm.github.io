@@ -38,11 +38,16 @@
 - Create symbol from selection
 - Symbol library panel
 - Instance placement from library
+- Edit master symbol (updates all instances)
+- Detach symbol instance
 - Component library (shared symbols across documents)
 
 ## Export & Platform
 
 - Export as optimized SVG
+- Export as PNG (1x, 2x, 4x)
+- Export as JPEG with quality presets (high / medium / low)
+- Selection-only export
 - Copy SVG to clipboard
 - SVG code editor view
 - Preview mode (hide UI elements)

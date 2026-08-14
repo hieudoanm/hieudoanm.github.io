@@ -125,6 +125,11 @@ export const db = {
       const database = await getDB();
       await database.put('history', entry);
     },
+    delete: async (id: string): Promise<void> => {
+      await delay(getMockDelay());
+      const database = await getDB();
+      await database.delete('history', id);
+    },
     deleteByDocument: async (documentId: string): Promise<void> => {
       await delay(getMockDelay());
       const database = await getDB();

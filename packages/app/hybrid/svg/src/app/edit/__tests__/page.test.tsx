@@ -1,9 +1,22 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import EditorPage from '@/app/edit/page';
 import { useData } from '@/providers/DataProvider';
-import { exportAsSVG, downloadFile, copyToClipboard } from '@/utils/format';
+import {
+  exportAsSVG,
+  downloadFile,
+  downloadBlob,
+  rasterizeSVG,
+  copyToClipboard,
+} from '@/utils/format';
 import type { ReactNode } from 'react';
-import type { SVGDocument, SVGShape, SVGSymbol, SVGSettings } from '@/types';
+import type {
+  SVGDocument,
+  SVGShape,
+  SVGSymbol,
+  SVGSettings,
+  SVGLayer,
+  SVGGradientStop,
+} from '@/types';
 
 const push = jest.fn();
 const searchParamsGet = jest.fn();
@@ -26,6 +39,7 @@ jest.mock('react-icons/fi', () => {
     'FiRotateCw',
     'FiChevronUp',
     'FiChevronDown',
+    'FiCheck',
     'FiLayers',
     'FiSettings',
     'FiCode',
@@ -41,6 +55,9 @@ jest.mock('react-icons/fi', () => {
     'FiMinimize',
     'FiStar',
     'FiX',
+    'FiFolder',
+    'FiFolderPlus',
+    'FiChevronRight',
   ];
   return Object.fromEntries(
     names.map((name) => [name, () => <span data-testid={name} />])
@@ -68,7 +85,9 @@ jest.mock('@/utils/format', () => ({
   ...jest.requireActual('@/utils/format'),
   exportAsSVG: jest.fn(() => '<svg />'),
   downloadFile: jest.fn(),
+  downloadBlob: jest.fn(),
   copyToClipboard: jest.fn().mockResolvedValue(true),
+  rasterizeSVG: jest.fn().mockResolvedValue(new Blob()),
 }));
 
 const shape = (
@@ -258,6 +277,41 @@ const buildDoc = (): SVGDocument => ({
   updatedAt: 2000,
 });
 
+const buildFolderDoc = (): SVGDocument => {
+  const doc = buildDoc();
+  return {
+    ...doc,
+    layers: [
+      {
+        id: 'l1',
+        name: 'Main',
+        visible: true,
+        locked: false,
+        shapeIds: ['s-rect'],
+        blending: 'normal',
+      },
+      {
+        id: 'f1',
+        name: 'Folder',
+        visible: true,
+        locked: false,
+        shapeIds: [],
+        blending: 'normal',
+        isFolder: true,
+      },
+      {
+        id: 'l2',
+        name: 'Inside',
+        visible: true,
+        locked: false,
+        shapeIds: [],
+        blending: 'normal',
+        parentId: 'f1',
+      },
+    ],
+  };
+};
+
 const buildSymbol = (): SVGSymbol => ({
   id: 'sym-1',
   name: 'Star Symbol',
@@ -287,37 +341,51 @@ const settings: SVGSettings = {
   exportScale: 2,
 };
 
-const makeData = (symbols: SVGSymbol[] = [buildSymbol()]) => ({
-  documents: [buildDoc()],
-  symbols,
-  settings,
-  updateDocument: jest.fn().mockResolvedValue(undefined),
-  addShape: jest.fn(),
-  updateShape: jest.fn(),
-  removeShape: jest.fn(),
-  moveShape: jest.fn(),
-  resizeShape: jest.fn(),
-  duplicateShape: jest.fn(),
-  updateLayers: jest.fn(),
-  addLayer: jest.fn(),
-  removeLayer: jest.fn(),
-  renameLayer: jest.fn(),
-  toggleLayerVisibility: jest.fn(),
-  toggleLayerLock: jest.fn(),
-  addSymbol: jest.fn(),
-  removeSymbol: jest.fn(),
-  updateSettings: jest.fn(),
-  addGradient: jest.fn(),
-  removeGradient: jest.fn(),
-  saveHistory: jest.fn(),
-  undo: jest.fn(),
-  redo: jest.fn(),
-});
+let rerenderEditor: (() => void) | null = null;
 
-const renderEditor = (symbols?: SVGSymbol[]) => {
-  const data = makeData(symbols);
+const makeData = (
+  symbols: SVGSymbol[] = [buildSymbol()],
+  doc: SVGDocument = buildDoc()
+) => {
+  const data = {
+    documents: [doc],
+    symbols,
+    settings,
+    updateDocument: jest.fn(async (d: SVGDocument) => {
+      data.documents = [d];
+      rerenderEditor?.();
+    }),
+    addShape: jest.fn(),
+    updateShape: jest.fn(),
+    removeShape: jest.fn(),
+    moveShape: jest.fn(),
+    resizeShape: jest.fn(),
+    duplicateShape: jest.fn(),
+    updateLayers: jest.fn(),
+    addLayer: jest.fn(),
+    removeLayer: jest.fn(),
+    renameLayer: jest.fn(),
+    toggleLayerVisibility: jest.fn(),
+    toggleLayerLock: jest.fn(),
+    addSymbol: jest.fn(),
+    updateSymbol: jest.fn(),
+    removeSymbol: jest.fn(),
+    updateSettings: jest.fn(),
+    addGradient: jest.fn(),
+    updateGradient: jest.fn(),
+    removeGradient: jest.fn(),
+    saveHistory: jest.fn(),
+    undo: jest.fn(),
+    redo: jest.fn(),
+  };
+  return data;
+};
+
+const renderEditor = (symbols?: SVGSymbol[], doc?: SVGDocument) => {
+  const data = makeData(symbols, doc);
   jest.mocked(useData).mockReturnValue(data as never);
-  render(<EditorPage />);
+  const utils = render(<EditorPage />);
+  rerenderEditor = () => utils.rerender(<EditorPage />);
   const svg = document.querySelector('svg');
   return { data, svg: svg!, container: svg?.parentElement as HTMLDivElement };
 };
@@ -470,6 +538,7 @@ describe('EditorPage', () => {
       target: { value: '32' },
     });
     fireEvent.mouseDown(svg, { clientX: 400, clientY: 400 });
+    fireEvent.mouseUp(svg);
     await waitFor(() =>
       expect(data.addShape).toHaveBeenCalledWith(
         'doc-1',
@@ -487,6 +556,7 @@ describe('EditorPage', () => {
     const { data, svg } = renderEditor();
     fireEvent.click(screen.getByTitle('Text (T)'));
     fireEvent.mouseDown(svg, { clientX: 300, clientY: 300 });
+    fireEvent.mouseUp(svg);
     await waitFor(() =>
       expect(data.addShape).toHaveBeenCalledWith(
         'doc-1',
@@ -736,6 +806,208 @@ describe('EditorPage', () => {
     });
   });
 
+  describe('fill and gradient controls', () => {
+    const gradientDoc = (
+      stops: SVGGradientStop[] = [
+        { color: '#3b82f6', offset: 0, opacity: 1 },
+        { color: '#8b5cf6', offset: 1, opacity: 1 },
+      ]
+    ): SVGDocument => {
+      const doc = buildDoc();
+      return {
+        ...doc,
+        shapes: doc.shapes.map((s) =>
+          s.id === 's-rect'
+            ? {
+                ...s,
+                fill: {
+                  type: 'gradient' as const,
+                  color: '',
+                  gradientId: 'g1',
+                  opacity: 1,
+                },
+              }
+            : s
+        ),
+        gradients: doc.gradients.map((g) =>
+          g.id === 'g1' ? { ...g, stops } : g
+        ),
+      };
+    };
+
+    const openProps = async () => {
+      fireEvent.click(screen.getByRole('button', { name: 'Props' }));
+      await waitFor(() =>
+        expect(screen.getByDisplayValue('Rect 1')).toBeInTheDocument()
+      );
+    };
+
+    it('applies a palette swatch to the selection and records a recent color', async () => {
+      const { data } = renderEditor();
+      selectShape(60, 40);
+      await openProps();
+      fireEvent.click(screen.getByTitle('#ef4444'));
+      expect(data.updateShape).toHaveBeenCalledWith(
+        'doc-1',
+        expect.objectContaining({
+          fill: expect.objectContaining({ type: 'solid', color: '#ef4444' }),
+        })
+      );
+      expect(screen.getByTitle('Recent #ef4444')).toBeInTheDocument();
+    });
+
+    it('dedupes recent colors and keeps the newest first', async () => {
+      renderEditor();
+      selectShape(60, 40);
+      await openProps();
+      fireEvent.click(screen.getByTitle('#ef4444'));
+      fireEvent.click(screen.getByTitle('#22c55e'));
+      fireEvent.click(screen.getByTitle('#ef4444'));
+      const recents = screen.getAllByTitle(/^Recent /);
+      expect(recents).toHaveLength(2);
+      expect(recents[0]).toHaveAttribute('title', 'Recent #ef4444');
+    });
+
+    it('switches a solid fill to gradient and creates a shared gradient', async () => {
+      const { data } = renderEditor();
+      selectShape(60, 40);
+      await openProps();
+      fireEvent.click(screen.getByRole('button', { name: 'Gradient' }));
+      expect(data.addGradient).toHaveBeenCalledWith(
+        'doc-1',
+        expect.objectContaining({ type: 'linear' })
+      );
+      const gradientId = data.addGradient.mock.calls[0][1].id;
+      expect(data.updateShape).toHaveBeenCalledWith(
+        'doc-1',
+        expect.objectContaining({
+          fill: expect.objectContaining({ type: 'gradient', gradientId }),
+        })
+      );
+    });
+
+    it('removes a fill entirely', async () => {
+      const { data } = renderEditor();
+      selectShape(60, 40);
+      await openProps();
+      fireEvent.click(screen.getByTitle('No Fill'));
+      expect(data.updateShape).toHaveBeenCalledWith(
+        'doc-1',
+        expect.objectContaining({
+          fill: expect.objectContaining({ type: 'none' }),
+        })
+      );
+    });
+
+    it('edits gradient stop colors and offsets', async () => {
+      const { data } = renderEditor(undefined, gradientDoc());
+      selectShape(60, 40);
+      await openProps();
+      const editor = document.querySelector('.space-y-2')!;
+      const stopColors = editor.querySelectorAll('input[type="color"]');
+      expect(stopColors).toHaveLength(2);
+      fireEvent.change(stopColors[0], { target: { value: '#ff0000' } });
+      expect(data.updateGradient).toHaveBeenCalledWith(
+        'doc-1',
+        expect.objectContaining({
+          id: 'g1',
+          stops: expect.arrayContaining([
+            expect.objectContaining({ color: '#ff0000' }),
+          ]),
+        })
+      );
+      const ranges = editor.querySelectorAll('input[type="range"]');
+      fireEvent.change(ranges[1], { target: { value: '75' } });
+      expect(data.updateGradient).toHaveBeenCalledWith(
+        'doc-1',
+        expect.objectContaining({
+          stops: expect.arrayContaining([
+            expect.objectContaining({ offset: 0.75 }),
+          ]),
+        })
+      );
+    });
+
+    it('adds and removes gradient stops', async () => {
+      const { data } = renderEditor(undefined, gradientDoc());
+      selectShape(60, 40);
+      await openProps();
+      fireEvent.click(screen.getByRole('button', { name: 'Add Stop' }));
+      let last = data.updateGradient.mock.calls.at(-1)!;
+      expect(last[1].stops).toHaveLength(3);
+      expect(last[1].stops[1].color).toBe('#636ff6');
+    });
+
+    it('removes a gradient stop when there are more than two', async () => {
+      const { data } = renderEditor(
+        undefined,
+        gradientDoc([
+          { color: '#3b82f6', offset: 0, opacity: 1 },
+          { color: '#636ff6', offset: 0.5, opacity: 1 },
+          { color: '#8b5cf6', offset: 1, opacity: 1 },
+        ])
+      );
+      selectShape(60, 40);
+      await openProps();
+      fireEvent.click(screen.getByTitle('Remove stop 2'));
+      const last = data.updateGradient.mock.calls.at(-1)!;
+      expect(last[1].stops).toHaveLength(2);
+      expect(
+        last[1].stops.some((s: SVGGradientStop) => s.color === '#636ff6')
+      ).toBe(false);
+    });
+
+    it('switches the active gradient between linear and radial', async () => {
+      const { data } = renderEditor(undefined, gradientDoc());
+      selectShape(60, 40);
+      await openProps();
+      fireEvent.click(screen.getByRole('button', { name: 'Radial' }));
+      expect(data.updateGradient).toHaveBeenCalledWith(
+        'doc-1',
+        expect.objectContaining({ id: 'g1', type: 'radial', r: 0.5 })
+      );
+      fireEvent.click(screen.getByRole('button', { name: 'Linear' }));
+      expect(data.updateGradient).toHaveBeenCalledWith(
+        'doc-1',
+        expect.objectContaining({ id: 'g1', type: 'linear' })
+      );
+    });
+
+    it('renders gradient handles on the canvas and drags them to update the gradient', () => {
+      const { data, svg } = renderEditor(undefined, gradientDoc());
+      selectShape(60, 40);
+      const handles = document.querySelectorAll('circle.cursor-grab');
+      expect(handles).toHaveLength(2);
+      fireEvent.mouseDown(handles[0], { clientX: 20, clientY: 30 });
+      fireEvent.mouseMove(svg, { clientX: 45, clientY: 40 });
+      fireEvent.mouseUp(svg);
+      expect(data.updateGradient).toHaveBeenCalledWith(
+        'doc-1',
+        expect.objectContaining({ id: 'g1', x1: 0.25, y1: 0.2 })
+      );
+    });
+
+    it('samples a color with the eyedropper and applies it to the selection', async () => {
+      const { data } = renderEditor();
+      selectShape(60, 40);
+      fireEvent.click(screen.getByTitle('Eyedropper'));
+      fireEvent.mouseDown(document.querySelector('svg')!, {
+        clientX: 60,
+        clientY: 210,
+      });
+      expect(data.updateShape).toHaveBeenCalledWith(
+        'doc-1',
+        expect.objectContaining({
+          fill: expect.objectContaining({ type: 'solid', color: '#3b82f6' }),
+        })
+      );
+      fireEvent.click(screen.getByRole('button', { name: 'Props' }));
+      await waitFor(() =>
+        expect(screen.getByTitle('Recent #3b82f6')).toBeInTheDocument()
+      );
+    });
+  });
+
   it('toggles a shape out of the selection with shift+click', () => {
     renderEditor();
     selectShape(60, 40);
@@ -863,6 +1135,88 @@ describe('EditorPage', () => {
     expect(data.resizeShape).toHaveBeenCalledWith('doc-1', 's-rect', 110, 65);
   });
 
+  it('drags a selected shape to move it', () => {
+    const { data, svg } = renderEditor();
+    fireEvent.mouseDown(svg, { clientX: 60, clientY: 40 });
+    fireEvent.mouseMove(svg, { clientX: 100, clientY: 70 });
+    fireEvent.mouseMove(svg, { clientX: 100, clientY: 70 });
+    fireEvent.mouseUp(svg);
+    expect(data.saveHistory).toHaveBeenCalledWith('doc-1', 'move shape');
+    expect(data.moveShape).toHaveBeenCalledWith('doc-1', 's-rect', 60, 60);
+  });
+
+  it('snaps to alignment guides while dragging', () => {
+    const { data, svg } = renderEditor();
+    fireEvent.mouseDown(svg, { clientX: 60, clientY: 40 });
+    fireEvent.mouseMove(svg, { clientX: 91, clientY: 300 });
+    fireEvent.mouseMove(svg, { clientX: 91, clientY: 300 });
+    const alignLines = document.querySelectorAll('line[stroke="#3b82f6"]');
+    expect(alignLines).toHaveLength(2);
+    fireEvent.mouseUp(svg);
+    expect(data.moveShape).toHaveBeenCalledWith('doc-1', 's-rect', 50, 287);
+  });
+
+  it('creates a vertical guide by dragging from the top ruler', () => {
+    renderEditor();
+    const ruler = document.querySelector('.cursor-col-resize') as HTMLElement;
+    fireEvent.mouseDown(ruler, { clientX: 10, clientY: 0 });
+    fireEvent.mouseMove(window, { clientX: 200, clientY: 150 });
+    fireEvent.mouseUp(window, { clientX: 200, clientY: 150 });
+    const guides = document.querySelectorAll('line[stroke="#e11d48"]');
+    expect(guides).toHaveLength(1);
+    expect(guides[0].getAttribute('x1')).toBe('200');
+  });
+
+  it('creates a horizontal guide by dragging from the left ruler', () => {
+    renderEditor();
+    const ruler = document.querySelector('.cursor-row-resize') as HTMLElement;
+    fireEvent.mouseDown(ruler, { clientX: 0, clientY: 10 });
+    fireEvent.mouseMove(window, { clientX: 300, clientY: 250 });
+    fireEvent.mouseUp(window, { clientX: 300, clientY: 250 });
+    const guides = document.querySelectorAll('line[stroke="#e11d48"]');
+    expect(guides).toHaveLength(1);
+    expect(guides[0].getAttribute('y1')).toBe('250');
+  });
+
+  it('drops a guide when it is released outside the canvas', () => {
+    renderEditor();
+    const ruler = document.querySelector('.cursor-col-resize') as HTMLElement;
+    fireEvent.mouseDown(ruler, { clientX: 10, clientY: 0 });
+    fireEvent.mouseMove(window, { clientX: 850, clientY: 150 });
+    fireEvent.mouseUp(window, { clientX: 850, clientY: 150 });
+    expect(document.querySelectorAll('line[stroke="#e11d48"]')).toHaveLength(0);
+  });
+
+  it('moves an existing guide by dragging it', () => {
+    renderEditor();
+    const ruler = document.querySelector('.cursor-col-resize') as HTMLElement;
+    fireEvent.mouseDown(ruler, { clientX: 10, clientY: 0 });
+    fireEvent.mouseMove(window, { clientX: 200, clientY: 150 });
+    fireEvent.mouseUp(window, { clientX: 200, clientY: 150 });
+    const guide = document.querySelector(
+      'line[stroke="#e11d48"]'
+    ) as HTMLElement;
+    fireEvent.mouseDown(guide, { clientX: 200, clientY: 150 });
+    fireEvent.mouseMove(window, { clientX: 400, clientY: 150 });
+    fireEvent.mouseUp(window, { clientX: 400, clientY: 150 });
+    const guides = document.querySelectorAll('line[stroke="#e11d48"]');
+    expect(guides).toHaveLength(1);
+    expect(guides[0].getAttribute('x1')).toBe('400');
+  });
+
+  it('removes a guide with double click', () => {
+    renderEditor();
+    const ruler = document.querySelector('.cursor-col-resize') as HTMLElement;
+    fireEvent.mouseDown(ruler, { clientX: 10, clientY: 0 });
+    fireEvent.mouseMove(window, { clientX: 200, clientY: 150 });
+    fireEvent.mouseUp(window, { clientX: 200, clientY: 150 });
+    const guide = document.querySelector(
+      'line[stroke="#e11d48"]'
+    ) as HTMLElement;
+    fireEvent.doubleClick(guide);
+    expect(document.querySelectorAll('line[stroke="#e11d48"]')).toHaveLength(0);
+  });
+
   it('handles keyboard tool shortcuts', async () => {
     const { data, svg } = renderEditor();
     fireEvent.keyDown(window, { key: 'v' });
@@ -986,9 +1340,59 @@ describe('EditorPage', () => {
         'success'
       )
     );
-    fireEvent.click(screen.getByTitle('Export SVG'));
+    fireEvent.click(screen.getByTitle('Export'));
     expect(downloadFile).toHaveBeenCalledWith('<svg />', 'My Artwork.svg');
     expect(addToast).toHaveBeenCalledWith('Exported as SVG', 'success');
+  });
+
+  it('exports PNG at the requested scale from the export menu', async () => {
+    renderEditor();
+    fireEvent.click(screen.getByTitle('Export options'));
+    expect(screen.getByText('Selection only')).toBeInTheDocument();
+    fireEvent.click(screen.getByText('PNG 2x'));
+    await waitFor(() => {
+      expect(rasterizeSVG).toHaveBeenCalledWith(
+        '<svg />',
+        expect.objectContaining({ scale: 2, type: 'image/png' })
+      );
+      expect(downloadBlob).toHaveBeenCalledWith(
+        expect.any(Blob),
+        'My Artwork.png'
+      );
+      expect(addToast).toHaveBeenCalledWith('Exported as PNG 2x', 'success');
+    });
+  });
+
+  it('exports JPEG with the configured quality from the export menu', async () => {
+    renderEditor();
+    fireEvent.click(screen.getByTitle('Export options'));
+    fireEvent.click(screen.getByText('JPEG High'));
+    await waitFor(() => {
+      expect(rasterizeSVG).toHaveBeenCalledWith(
+        '<svg />',
+        expect.objectContaining({ scale: 2, type: 'image/jpeg', quality: 0.92 })
+      );
+      expect(downloadBlob).toHaveBeenCalledWith(
+        expect.any(Blob),
+        'My Artwork.jpeg'
+      );
+      expect(addToast).toHaveBeenCalledWith('Exported as JPEG', 'success');
+    });
+  });
+
+  it('exports only the selected shapes when selection only is on', async () => {
+    renderEditor();
+    selectShape(60, 40);
+    fireEvent.click(screen.getByTitle('Export options'));
+    fireEvent.click(screen.getByText('Selection only'));
+    fireEvent.click(screen.getByText('SVG'));
+    await waitFor(() => {
+      expect(exportAsSVG).toHaveBeenCalledWith(
+        expect.objectContaining({ id: 'doc-1' }),
+        ['s-rect']
+      );
+      expect(downloadFile).toHaveBeenCalledWith('<svg />', 'My Artwork.svg');
+    });
   });
 
   it('navigates back and to the code editor', () => {
@@ -1015,9 +1419,9 @@ describe('EditorPage', () => {
     expect(data.addLayer).toHaveBeenCalledWith('doc-1', 'Layer 3');
     fireEvent.click(screen.getAllByTestId('FiEye')[1].closest('button')!);
     expect(data.toggleLayerVisibility).toHaveBeenCalledWith('doc-1', 'l1');
-    fireEvent.click(screen.getAllByTestId('FiUnlock')[1].closest('button')!);
+    fireEvent.click(screen.getAllByTestId('FiUnlock')[0].closest('button')!);
     expect(data.toggleLayerLock).toHaveBeenCalledWith('doc-1', 'l1');
-    fireEvent.click(screen.getAllByTestId('FiTrash2')[1].closest('button')!);
+    fireEvent.click(screen.getAllByTestId('FiTrash2')[0].closest('button')!);
     expect(data.removeLayer).toHaveBeenCalledWith('doc-1', 'l1');
   });
 
@@ -1063,5 +1467,584 @@ describe('EditorPage', () => {
       'doc-1',
       expect.objectContaining({ symbolId: 'sym-1' })
     );
+  });
+
+  it('enters symbol edit mode and saves the edited symbol', async () => {
+    const { data } = renderEditor();
+    fireEvent.click(screen.getByRole('button', { name: 'Symbols' }));
+    fireEvent.click(screen.getByTitle('Edit Star Symbol'));
+    await waitFor(() => {
+      expect(data.updateDocument).toHaveBeenLastCalledWith(
+        expect.objectContaining({
+          shapes: [
+            expect.objectContaining({ symbolId: 'sym-1' }),
+            expect.objectContaining({ symbolId: 'sym-1' }),
+          ],
+          layers: [expect.objectContaining({ name: 'Star Symbol master' })],
+        })
+      );
+      expect(addToast).toHaveBeenCalledWith('Editing Star Symbol', 'info');
+    });
+    expect(screen.getByTitle('Done Editing')).toBeInTheDocument();
+    fireEvent.click(screen.getByTitle('Done Editing'));
+    await waitFor(() => {
+      expect(data.updateSymbol).toHaveBeenCalledWith(
+        expect.objectContaining({ id: 'sym-1', name: 'Star Symbol' })
+      );
+      expect(data.updateDocument).toHaveBeenLastCalledWith(
+        expect.objectContaining({
+          shapes: expect.arrayContaining([
+            expect.objectContaining({ id: 's-rect' }),
+          ]),
+        })
+      );
+      expect(addToast).toHaveBeenCalledWith('Symbol updated', 'success');
+    });
+  });
+
+  it('expands symbol instances to edited shapes on exit', async () => {
+    const instance = shape({
+      id: 's-instance',
+      type: 'rect',
+      name: 'Instance',
+      x: 10,
+      y: 10,
+      width: 40,
+      height: 40,
+      symbolId: 'sym-1',
+    });
+    const doc = { ...buildDoc(), shapes: [...buildDoc().shapes, instance] };
+    const { data } = renderEditor([buildSymbol()], doc);
+    fireEvent.click(screen.getByRole('button', { name: 'Symbols' }));
+    fireEvent.click(screen.getByTitle('Edit Star Symbol'));
+    await waitFor(() =>
+      expect(screen.getByTitle('Done Editing')).toBeInTheDocument()
+    );
+    fireEvent.click(screen.getByTitle('Done Editing'));
+    await waitFor(() => {
+      expect(data.updateSymbol).toHaveBeenCalledWith(
+        expect.objectContaining({ id: 'sym-1', width: 40, height: 40 })
+      );
+      expect(data.updateDocument).toHaveBeenLastCalledWith(
+        expect.objectContaining({
+          shapes: expect.arrayContaining([
+            expect.objectContaining({ x: 10, y: 10, symbolId: 'sym-1' }),
+            expect.objectContaining({ x: 30, y: 30, symbolId: 'sym-1' }),
+          ]),
+        })
+      );
+    });
+    expect(data.updateDocument).not.toHaveBeenLastCalledWith(
+      expect.objectContaining({
+        shapes: expect.arrayContaining([
+          expect.objectContaining({ id: 's-instance' }),
+        ]),
+      })
+    );
+  });
+
+  it('detaches a selected symbol instance', async () => {
+    const instance = shape({
+      id: 's-instance',
+      type: 'rect',
+      name: 'Instance',
+      x: 10,
+      y: 10,
+      width: 40,
+      height: 40,
+      symbolId: 'sym-1',
+    });
+    const doc = { ...buildDoc(), shapes: [...buildDoc().shapes, instance] };
+    const { data } = renderEditor([buildSymbol()], doc);
+    selectShape(20, 20);
+    fireEvent.click(screen.getByRole('button', { name: 'Props' }));
+    fireEvent.click(screen.getByTitle('Detach Symbol'));
+    await waitFor(() => {
+      expect(data.updateShape).toHaveBeenCalledWith(
+        'doc-1',
+        expect.objectContaining({
+          id: 's-instance',
+          symbolId: undefined,
+          groupId: expect.any(String),
+        })
+      );
+      expect(addToast).toHaveBeenCalledWith(
+        'Symbol instance detached',
+        'success'
+      );
+    });
+  });
+
+  it('creates an area text shape by dragging with the text tool', async () => {
+    const { data, svg } = renderEditor();
+    fireEvent.click(screen.getByTitle('Text (T)'));
+    fireEvent.mouseDown(svg, { clientX: 100, clientY: 100 });
+    fireEvent.mouseMove(svg, { clientX: 260, clientY: 160 });
+    fireEvent.mouseUp(svg);
+    await waitFor(() =>
+      expect(data.addShape).toHaveBeenCalledWith(
+        'doc-1',
+        expect.objectContaining({
+          type: 'text',
+          textArea: true,
+          width: 160,
+          height: 60,
+        })
+      )
+    );
+  });
+
+  it('creates a point text shape on a click without a drag', async () => {
+    const { data, svg } = renderEditor();
+    fireEvent.click(screen.getByTitle('Text (T)'));
+    fireEvent.mouseDown(svg, { clientX: 300, clientY: 300 });
+    fireEvent.mouseUp(svg);
+    await waitFor(() =>
+      expect(data.addShape).toHaveBeenCalledWith(
+        'doc-1',
+        expect.objectContaining({ type: 'text', textArea: false, width: 200 })
+      )
+    );
+  });
+
+  it('edits letter spacing and line height of a text shape', async () => {
+    const { data } = renderEditor();
+    selectShape(100, 310);
+    fireEvent.click(screen.getByRole('button', { name: 'Props' }));
+    await waitFor(() =>
+      expect(screen.getByDisplayValue('Hello')).toBeInTheDocument()
+    );
+    fireEvent.change(screen.getByLabelText('Letter Spacing'), {
+      target: { value: '2' },
+    });
+    fireEvent.change(screen.getByLabelText('Line Height'), {
+      target: { value: '1.5' },
+    });
+    await waitFor(() => {
+      expect(data.updateShape).toHaveBeenCalledWith(
+        'doc-1',
+        expect.objectContaining({ id: 's-text', letterSpacing: 2 })
+      );
+      expect(data.updateShape).toHaveBeenCalledWith(
+        'doc-1',
+        expect.objectContaining({ id: 's-text', lineHeight: 1.5 })
+      );
+    });
+  });
+
+  it('enters path edit mode with double click and shows point handles', () => {
+    renderEditor();
+    const path = document.querySelector(
+      'path[data-shape-id="s-path"]'
+    ) as SVGGraphicsElement;
+    fireEvent.doubleClick(path);
+    expect(document.querySelectorAll('svg circle[r="4"]')).toHaveLength(2);
+    expect(document.querySelectorAll('svg circle[r="2.5"]')).toHaveLength(1);
+  });
+
+  it('drags a path point to reshape the path', () => {
+    const { data } = renderEditor();
+    const path = document.querySelector(
+      'path[data-shape-id="s-path"]'
+    ) as SVGGraphicsElement;
+    fireEvent.doubleClick(path);
+    const vertices = document.querySelectorAll('svg circle[r="4"]');
+    fireEvent.mouseDown(vertices[0], { clientX: 50, clientY: 200 });
+    fireEvent.mouseMove(window, { clientX: 60, clientY: 220 });
+    fireEvent.mouseUp(window);
+    expect(data.updateShape).toHaveBeenCalledWith(
+      'doc-1',
+      expect.objectContaining({ id: 's-path', pathData: 'M10 20 L20 20' })
+    );
+  });
+
+  it('adds a path point by clicking a segment handle', () => {
+    const { data } = renderEditor();
+    const path = document.querySelector(
+      'path[data-shape-id="s-path"]'
+    ) as SVGGraphicsElement;
+    fireEvent.doubleClick(path);
+    const seg = document.querySelector(
+      'svg circle[r="2.5"]'
+    ) as SVGGraphicsElement;
+    fireEvent.click(seg);
+    expect(data.updateShape).toHaveBeenCalledWith(
+      'doc-1',
+      expect.objectContaining({ id: 's-path', pathData: 'M0 0 L10 10 L20 20' })
+    );
+  });
+
+  it('converts a path point between corner and smooth', () => {
+    const { data } = renderEditor();
+    const path = document.querySelector(
+      'path[data-shape-id="s-path"]'
+    ) as SVGGraphicsElement;
+    fireEvent.doubleClick(path);
+    const vertices = document.querySelectorAll('svg circle[r="4"]');
+    fireEvent.doubleClick(vertices[1]);
+    expect(data.updateShape).toHaveBeenCalledWith(
+      'doc-1',
+      expect.objectContaining({
+        id: 's-path',
+        pathData: expect.stringContaining('Q'),
+      })
+    );
+  });
+
+  it('removes a path point with alt+click', () => {
+    const { data } = renderEditor();
+    const path = document.querySelector(
+      'path[data-shape-id="s-path"]'
+    ) as SVGGraphicsElement;
+    fireEvent.doubleClick(path);
+    fireEvent.click(document.querySelector('svg circle[r="2.5"]')!);
+    const vertices = document.querySelectorAll('svg circle[r="4"]');
+    fireEvent.mouseDown(vertices[1], {
+      clientX: 60,
+      clientY: 210,
+      altKey: true,
+    });
+    expect(data.updateShape).toHaveBeenLastCalledWith(
+      'doc-1',
+      expect.objectContaining({ id: 's-path', pathData: 'M0 0 L20 20' })
+    );
+  });
+
+  it('exits path edit mode with Escape', () => {
+    renderEditor();
+    const path = document.querySelector(
+      'path[data-shape-id="s-path"]'
+    ) as SVGGraphicsElement;
+    fireEvent.doubleClick(path);
+    expect(document.querySelectorAll('svg circle[r="4"]')).toHaveLength(2);
+    fireEvent.keyDown(window, { key: 'Escape' });
+    expect(document.querySelectorAll('svg circle[r="4"]')).toHaveLength(0);
+  });
+
+  it('applies a mock boolean union to two selected paths', async () => {
+    const doc = buildDoc();
+    doc.shapes.push(
+      shape({
+        id: 's-path2',
+        type: 'path',
+        name: 'Path 2',
+        x: 200,
+        y: 200,
+        width: 40,
+        height: 40,
+        pathData: 'M0 0 L30 30',
+      })
+    );
+    doc.layers[0].shapeIds.push('s-path2');
+    const { data } = renderEditor(undefined, doc);
+    fireEvent.mouseDown(document.querySelector('svg')!, {
+      clientX: 60,
+      clientY: 210,
+    });
+    fireEvent.mouseDown(document.querySelector('svg')!, {
+      clientX: 210,
+      clientY: 210,
+      shiftKey: true,
+    });
+    fireEvent.click(screen.getByRole('button', { name: 'Props' }));
+    await waitFor(() =>
+      expect(screen.getByText('Path Booleans (mock)')).toBeInTheDocument()
+    );
+    fireEvent.click(screen.getByText('Union'));
+    expect(data.updateShape).toHaveBeenCalledWith(
+      'doc-1',
+      expect.objectContaining({
+        id: 's-path',
+        pathData: 'M0 0 L20 20 M0 0 L30 30',
+      })
+    );
+    expect(data.removeShape).toHaveBeenCalledWith('doc-1', 's-path2');
+    expect(addToast).toHaveBeenCalledWith('Union applied (mock)', 'success');
+  });
+
+  it('shows mock toasts for the subtract and intersect booleans', async () => {
+    const doc = buildDoc();
+    doc.shapes.push(
+      shape({
+        id: 's-path2',
+        type: 'path',
+        x: 200,
+        y: 200,
+        width: 40,
+        height: 40,
+        pathData: 'M0 0 L30 30',
+      })
+    );
+    doc.layers[0].shapeIds.push('s-path2');
+    renderEditor(undefined, doc);
+    fireEvent.mouseDown(document.querySelector('svg')!, {
+      clientX: 60,
+      clientY: 210,
+    });
+    fireEvent.mouseDown(document.querySelector('svg')!, {
+      clientX: 210,
+      clientY: 210,
+      shiftKey: true,
+    });
+    fireEvent.click(screen.getByRole('button', { name: 'Props' }));
+    await waitFor(() =>
+      expect(screen.getByText('Path Booleans (mock)')).toBeInTheDocument()
+    );
+    fireEvent.click(screen.getByText('Subtract'));
+    expect(addToast).toHaveBeenCalledWith(
+      'Subtract (mock) — not implemented',
+      'info'
+    );
+    fireEvent.click(screen.getByText('Intersect'));
+    expect(addToast).toHaveBeenCalledWith(
+      'Intersect (mock) — not implemented',
+      'info'
+    );
+  });
+
+  it('uses letter spacing and line height from the text tool panel', async () => {
+    const { data, svg } = renderEditor();
+    fireEvent.click(screen.getByTitle('Text (T)'));
+    fireEvent.change(screen.getByLabelText('Letter Spacing'), {
+      target: { value: '3' },
+    });
+    fireEvent.change(screen.getByLabelText('Line Height'), {
+      target: { value: '1.6' },
+    });
+    fireEvent.mouseDown(svg, { clientX: 100, clientY: 100 });
+    fireEvent.mouseUp(svg);
+    await waitFor(() =>
+      expect(data.addShape).toHaveBeenCalledWith(
+        'doc-1',
+        expect.objectContaining({
+          type: 'text',
+          letterSpacing: 3,
+          lineHeight: 1.6,
+        })
+      )
+    );
+  });
+
+  describe('organization — grouping, arranging, aligning', () => {
+    const selectShapes = (ids: string[]) => {
+      const svg = document.querySelector('svg') as SVGSVGElement;
+      const coords: Record<string, [number, number]> = {
+        's-rect': [60, 40],
+        's-ellipse': [240, 80],
+        's-line': [350, 65],
+      };
+      ids.forEach((id, i) => {
+        const [x, y] = coords[id];
+        fireEvent.mouseDown(svg, { clientX: x, clientY: y, shiftKey: i > 0 });
+      });
+    };
+
+    const openProps = () =>
+      fireEvent.click(screen.getByRole('button', { name: /Props/ }));
+
+    it('groups selected shapes with Ctrl+G', async () => {
+      const { data } = renderEditor();
+      selectShapes(['s-rect', 's-ellipse']);
+      fireEvent.keyDown(window, { key: 'g', ctrlKey: true });
+      await waitFor(() => expect(data.updateDocument).toHaveBeenCalled());
+      const doc = data.updateDocument.mock.calls[0][0];
+      const grouped = doc.shapes.filter(
+        (s: SVGShape) => s.id === 's-rect' || s.id === 's-ellipse'
+      );
+      expect(grouped[0].groupId).toBeTruthy();
+      expect(grouped[0].groupId).toBe(grouped[1].groupId);
+      expect(
+        doc.shapes.find((s: SVGShape) => s.id === 's-line')?.groupId
+      ).toBeUndefined();
+      expect(addToast).toHaveBeenCalledWith('Grouped 2 shapes', 'success');
+    });
+
+    it('ungroups selected shapes with Ctrl+Shift+G', async () => {
+      const doc = buildDoc();
+      doc.shapes = doc.shapes.map((s, i) =>
+        i === 0 || i === 1 ? { ...s, groupId: 'grp' } : s
+      );
+      const { data } = renderEditor([], doc);
+      selectShapes(['s-rect', 's-ellipse']);
+      fireEvent.keyDown(window, { key: 'g', ctrlKey: true, shiftKey: true });
+      await waitFor(() => expect(data.updateDocument).toHaveBeenCalled());
+      const next = data.updateDocument.mock.calls[0][0];
+      const ungrouped = next.shapes.filter(
+        (s: SVGShape) => s.id === 's-rect' || s.id === 's-ellipse'
+      );
+      expect(ungrouped.every((s: SVGShape) => !s.groupId)).toBe(true);
+      expect(addToast).toHaveBeenCalledWith('Ungrouped shapes', 'success');
+    });
+
+    it('groups and ungroups via the props panel', async () => {
+      const doc = buildDoc();
+      const { data } = renderEditor([], doc);
+      data.updateDocument.mockImplementation(async (next: SVGDocument) => {
+        Object.assign(doc, next);
+      });
+      selectShapes(['s-rect', 's-ellipse']);
+      openProps();
+      fireEvent.click(screen.getByText('Group (Ctrl+G)'));
+      await waitFor(() => expect(data.updateDocument).toHaveBeenCalled());
+      expect(addToast).toHaveBeenCalledWith('Grouped 2 shapes', 'success');
+      fireEvent.click(screen.getByText('Ungroup'));
+      await waitFor(() => expect(data.updateDocument).toHaveBeenCalledTimes(2));
+      expect(addToast).toHaveBeenCalledWith('Ungrouped shapes', 'success');
+    });
+
+    it('brings a shape to front and back via the props panel', async () => {
+      const { data } = renderEditor();
+      selectShapes(['s-rect']);
+      openProps();
+      fireEvent.click(screen.getByText('Bring to Front'));
+      await waitFor(() => expect(data.updateDocument).toHaveBeenCalled());
+      const doc = data.updateDocument.mock.calls[0][0];
+      expect(doc.shapes.map((s: SVGShape) => s.id).at(-1)).toBe('s-rect');
+      fireEvent.click(screen.getByText('Send to Back'));
+      await waitFor(() =>
+        expect(data.updateDocument.mock.calls.length).toBe(2)
+      );
+      const doc2 = data.updateDocument.mock.calls[1][0];
+      expect(doc2.shapes.map((s: SVGShape) => s.id)[0]).toBe('s-rect');
+    });
+
+    it('aligns selected shapes to the left edge', async () => {
+      const { data } = renderEditor();
+      selectShapes(['s-rect', 's-ellipse']);
+      openProps();
+      fireEvent.click(screen.getByText('Left'));
+      await waitFor(() => expect(data.updateDocument).toHaveBeenCalled());
+      const doc = data.updateDocument.mock.calls[0][0];
+      const rect = doc.shapes.find((s: SVGShape) => s.id === 's-rect');
+      const ellipse = doc.shapes.find((s: SVGShape) => s.id === 's-ellipse');
+      expect(rect?.x).toBe(20);
+      expect(ellipse?.x).toBe(20);
+      expect(addToast).toHaveBeenCalledWith('Aligned left', 'success');
+    });
+
+    it('distributes selected shapes horizontally', async () => {
+      const { data } = renderEditor();
+      selectShapes(['s-rect', 's-ellipse', 's-line']);
+      openProps();
+      fireEvent.click(screen.getByText('Horizontal'));
+      await waitFor(() => expect(data.updateDocument).toHaveBeenCalled());
+      const doc = data.updateDocument.mock.calls[0][0];
+      const centers = doc.shapes
+        .filter((s: SVGShape) =>
+          ['s-rect', 's-ellipse', 's-line'].includes(s.id)
+        )
+        .map((s: SVGShape) => s.x + s.width / 2)
+        .sort((a: number, b: number) => a - b);
+      expect(centers[1] - centers[0]).toBeCloseTo(centers[2] - centers[1]);
+      expect(addToast).toHaveBeenCalledWith(
+        'Distributed horizontal',
+        'success'
+      );
+    });
+
+    it('moves all members of a group together when dragging', () => {
+      const doc = buildDoc();
+      doc.shapes = [
+        shape({
+          id: 'ga',
+          type: 'rect',
+          name: 'A',
+          x: 20,
+          y: 30,
+          width: 40,
+          height: 20,
+          groupId: 'grp',
+        }),
+        shape({
+          id: 'gb',
+          type: 'rect',
+          name: 'B',
+          x: 200,
+          y: 50,
+          width: 60,
+          height: 30,
+          groupId: 'grp',
+        }),
+      ];
+      doc.layers[0].shapeIds = ['ga', 'gb'];
+      const { data } = renderEditor([], doc);
+      const svg = document.querySelector('svg') as SVGSVGElement;
+      fireEvent.mouseDown(svg, { clientX: 30, clientY: 30 });
+      fireEvent.mouseMove(svg, { clientX: 40, clientY: 30 });
+      fireEvent.mouseMove(svg, { clientX: 60, clientY: 30 });
+      fireEvent.mouseUp(svg);
+      expect(data.moveShape).toHaveBeenCalledWith('doc-1', 'ga', 50, 30);
+      expect(data.moveShape).toHaveBeenCalledWith('doc-1', 'gb', 230, 50);
+    });
+  });
+
+  describe('organization — layers, folders, reorder, rename', () => {
+    it('reorders layers by dragging a row', () => {
+      const { data } = renderEditor();
+      const main = screen.getByText('Main').closest('[draggable]')!;
+      const hidden = screen.getByText('Hidden Layer').closest('[draggable]')!;
+      fireEvent.dragStart(main);
+      fireEvent.dragOver(hidden);
+      fireEvent.drop(hidden);
+      expect(data.updateLayers).toHaveBeenCalledWith(
+        'doc-1',
+        expect.arrayContaining([
+          expect.objectContaining({ id: 'l2' }),
+          expect.objectContaining({ id: 'l1' }),
+        ])
+      );
+    });
+
+    it('creates a folder from the layers panel', () => {
+      const { data } = renderEditor();
+      fireEvent.click(screen.getByTestId('FiFolderPlus').closest('button')!);
+      expect(data.updateLayers).toHaveBeenCalledWith(
+        'doc-1',
+        expect.arrayContaining([
+          expect.objectContaining({ isFolder: true, shapeIds: [] }),
+        ])
+      );
+    });
+
+    it('drops a layer into a folder', () => {
+      const { data } = renderEditor([], buildFolderDoc());
+      const main = screen.getByText('Main').closest('[draggable]')!;
+      const folder = screen.getByText('Folder').closest('[draggable]')!;
+      fireEvent.dragStart(main);
+      fireEvent.dragOver(folder);
+      fireEvent.drop(folder);
+      expect(data.updateLayers).toHaveBeenCalledWith(
+        'doc-1',
+        expect.arrayContaining([
+          expect.objectContaining({ id: 'l1', parentId: 'f1' }),
+        ])
+      );
+    });
+
+    it('collapses a folder to hide its children', () => {
+      renderEditor([], buildFolderDoc());
+      expect(screen.getByText('Inside')).toBeInTheDocument();
+      fireEvent.click(screen.getByTestId('FiChevronRight').closest('button')!);
+      expect(screen.queryByText('Inside')).not.toBeInTheDocument();
+    });
+
+    it('removes a folder and re-parents its children', () => {
+      const { data } = renderEditor([], buildFolderDoc());
+      fireEvent.click(screen.getAllByTestId('FiTrash2')[1].closest('button')!);
+      const call = data.updateLayers.mock.calls[0];
+      expect(call[0]).toBe('doc-1');
+      const layers = call[1] as SVGLayer[];
+      expect(layers.some((l) => l.id === 'f1')).toBe(false);
+      expect(layers.find((l) => l.id === 'l2')?.parentId).toBeUndefined();
+    });
+
+    it('renames a layer via inline edit', () => {
+      const { data } = renderEditor();
+      fireEvent.doubleClick(screen.getByText('Main'));
+      const input = screen.getByDisplayValue('Main');
+      fireEvent.change(input, { target: { value: 'Renamed' } });
+      fireEvent.keyDown(input, { key: 'Enter' });
+      expect(data.renameLayer).toHaveBeenCalledWith('doc-1', 'l1', 'Renamed');
+    });
   });
 });

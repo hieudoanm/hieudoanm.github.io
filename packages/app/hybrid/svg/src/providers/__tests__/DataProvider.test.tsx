@@ -30,6 +30,7 @@ jest.mock('@/lib/db', () => ({
       getAll: jest.fn(),
       getByDocument: jest.fn(),
       put: jest.fn(),
+      delete: jest.fn(),
       deleteByDocument: jest.fn(),
     },
   },
@@ -157,6 +158,9 @@ const Consumer = () => {
       <span data-testid="gradient-count">
         {data.documents[0]?.gradients.length}
       </span>
+      <span data-testid="gradient-stop">
+        {data.documents[0]?.gradients[0]?.stops[0]?.color}
+      </span>
       <span data-testid="symbol-count">{data.symbols.length}</span>
       <span data-testid="history-count">{data.history.length}</span>
       <span data-testid="theme">{data.settings.theme}</span>
@@ -222,11 +226,26 @@ const Consumer = () => {
         add-symbol
       </button>
       <button onClick={() => data.removeSymbol('sym-1')}>remove-symbol</button>
+      <button
+        onClick={() =>
+          data.updateSymbol({ ...symbol('sym-1'), name: 'Renamed' })
+        }>
+        update-symbol
+      </button>
       <button onClick={() => data.updateSettings({ theme: 'dark' })}>
         update-settings
       </button>
       <button onClick={() => data.addGradient('doc-1', gradient)}>
         add-gradient
+      </button>
+      <button
+        onClick={() =>
+          data.updateGradient('doc-1', {
+            ...gradient,
+            stops: [{ color: '#ff0000', offset: 0, opacity: 1 }],
+          })
+        }>
+        update-gradient
       </button>
       <button onClick={() => data.removeGradient('doc-1', 'g1')}>
         remove-gradient
@@ -599,6 +618,19 @@ describe('DataProvider', () => {
     expect(db.symbols.delete).toHaveBeenCalledWith('sym-1');
   });
 
+  it('updates a symbol', async () => {
+    renderProvider();
+    await waitFor(() =>
+      expect(screen.getByTestId('symbol-count').textContent).toBe('1')
+    );
+    fireEvent.click(screen.getByText('update-symbol'));
+    await waitFor(() =>
+      expect(db.symbols.put).toHaveBeenCalledWith(
+        expect.objectContaining({ id: 'sym-1', name: 'Renamed' })
+      )
+    );
+  });
+
   it('updates settings', async () => {
     renderProvider();
     await waitFor(() =>
@@ -621,6 +653,16 @@ describe('DataProvider', () => {
     fireEvent.click(screen.getByText('add-gradient'));
     await waitFor(() =>
       expect(screen.getByTestId('gradient-count').textContent).toBe('1')
+    );
+    db.documents.get.mockImplementation((id: string) =>
+      Promise.resolve({
+        ...doc('doc-1'),
+        gradients: [{ ...gradient, stops: [] }],
+      })
+    );
+    fireEvent.click(screen.getByText('update-gradient'));
+    await waitFor(() =>
+      expect(screen.getByTestId('gradient-stop').textContent).toBe('#ff0000')
     );
     fireEvent.click(screen.getByText('remove-gradient'));
     await waitFor(() =>
@@ -657,9 +699,10 @@ describe('DataProvider', () => {
         shapes: [expect.objectContaining({ id: 's9' })],
       })
     );
+    expect(db.history.delete).toHaveBeenCalledWith('h1');
     fireEvent.click(screen.getByText('redo'));
     await waitFor(() =>
-      expect(screen.getByTestId('shape-name').textContent).toBe('Shape s9')
+      expect(screen.getByTestId('shape-name').textContent).toBe('Shape s1')
     );
   });
 
@@ -775,7 +818,7 @@ describe('DataProvider', () => {
     });
   });
 
-  it('no-ops on redo when there is no history or document', async () => {
+  it('no-ops on redo when there is no redo stack', async () => {
     renderProvider();
     await waitFor(() =>
       expect(screen.getByTestId('doc-count').textContent).toBe('1')
@@ -784,8 +827,66 @@ describe('DataProvider', () => {
     fireEvent.click(screen.getByText('redo-missing'));
     fireEvent.click(screen.getByText('redo'));
     await waitFor(() => {
-      expect(db.history.getByDocument).toHaveBeenCalledWith('empty');
-      expect(db.history.getByDocument).toHaveBeenCalledWith('missing');
+      expect(db.documents.put).not.toHaveBeenCalled();
+      expect(db.history.put).not.toHaveBeenCalled();
     });
+  });
+
+  it('wires history into mutations: undo removes an added shape and redo restores it', async () => {
+    let stored = doc('doc-1');
+    db.documents.get.mockImplementation(async () => stored);
+    db.documents.put.mockImplementation(async (updated: SVGDocument) => {
+      stored = updated;
+    });
+    const entries: HistoryEntry[] = [];
+    db.history.put.mockImplementation(async (entry: HistoryEntry) => {
+      entries.push(entry);
+    });
+    db.history.getByDocument.mockImplementation((id: string) =>
+      id === 'doc-1' ? [...entries] : []
+    );
+    renderProvider();
+    await waitFor(() =>
+      expect(screen.getByTestId('shape-count').textContent).toBe('1')
+    );
+    fireEvent.click(screen.getByText('add-shape'));
+    await waitFor(() =>
+      expect(screen.getByTestId('shape-count').textContent).toBe('2')
+    );
+    fireEvent.click(screen.getByText('undo'));
+    await waitFor(() =>
+      expect(screen.getByTestId('shape-count').textContent).toBe('1')
+    );
+    fireEvent.click(screen.getByText('redo'));
+    await waitFor(() =>
+      expect(screen.getByTestId('shape-count').textContent).toBe('2')
+    );
+  });
+
+  it('wires history into mutations: undo reverts a layer visibility toggle', async () => {
+    let stored = doc('doc-1');
+    db.documents.get.mockImplementation(async () => stored);
+    db.documents.put.mockImplementation(async (updated: SVGDocument) => {
+      stored = updated;
+    });
+    const entries: HistoryEntry[] = [];
+    db.history.put.mockImplementation(async (entry: HistoryEntry) => {
+      entries.push(entry);
+    });
+    db.history.getByDocument.mockImplementation((id: string) =>
+      id === 'doc-1' ? [...entries] : []
+    );
+    renderProvider();
+    await waitFor(() =>
+      expect(screen.getByTestId('layer-visible').textContent).toBe('true')
+    );
+    fireEvent.click(screen.getByText('toggle-vis'));
+    await waitFor(() =>
+      expect(screen.getByTestId('layer-visible').textContent).toBe('false')
+    );
+    fireEvent.click(screen.getByText('undo'));
+    await waitFor(() =>
+      expect(screen.getByTestId('layer-visible').textContent).toBe('true')
+    );
   });
 });

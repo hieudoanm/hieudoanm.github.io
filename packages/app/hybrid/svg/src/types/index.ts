@@ -62,6 +62,9 @@ export interface SVGShape {
   fontStyle?: string;
   textDecoration?: string;
   textAlign?: string;
+  textArea?: boolean;
+  letterSpacing?: number;
+  lineHeight?: number;
   rx?: number;
   ry?: number;
   sides?: number;
@@ -76,6 +79,8 @@ export interface SVGLayer {
   locked: boolean;
   shapeIds: string[];
   blending: string;
+  isFolder?: boolean;
+  parentId?: string;
 }
 
 export interface SVGSymbol {
