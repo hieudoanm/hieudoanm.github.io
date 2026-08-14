@@ -71,7 +71,7 @@ jobs:
       - name: Install Go
         uses: actions/setup-go@v7.0.0
         with:
-          go-version: '1.26.5'
+          go-version: '1.26.6'
           cache-dependency-path: packages/cli/jack/cobra.go/go.sum
       - name: Install Dependencies
         run: go mod download
