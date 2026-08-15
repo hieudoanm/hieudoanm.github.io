@@ -57,7 +57,7 @@
     "@types/react": "19.2.18",
     "@types/react-dom": "19.2.4",
     "@types/sql.js": "1.4.11",
-    "daisyui": "5.7.16",
+    "daisyui": "5.7.17",
     "eslint": "10.8.1",
     "eslint-config-next": "16.3.1",
     "jest": "30.4.2",
