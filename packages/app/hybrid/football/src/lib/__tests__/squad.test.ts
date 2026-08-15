@@ -1,4 +1,5 @@
 import {
+  DEFAULT_PRIMARY_COLOR,
   addPlayer,
   applyPreferredPosition,
   assignPlayer,
@@ -20,7 +21,9 @@ import {
   samplePlayers,
   saveSquad,
   saveSquadLibrary,
+  setPrimaryColor,
   slotPlayers,
+  starterPlayers,
   substitutePlayer,
   swapSlotPlayers,
   toggleAssignment,
@@ -29,6 +32,7 @@ import {
   unassignPlayer,
   unassignedPlayers,
   updatePlayer,
+  withFormation,
 } from '@/lib/squad';
 import { Player, Squad } from '@/types/football';
 
@@ -49,6 +53,10 @@ const makeSquad = (overrides: Partial<Squad> = {}): Squad => ({
   formationId: '442',
   players: [],
   assignments: {},
+  presets: [],
+  lineups: [],
+  mirrored: false,
+  primaryColor: '#dc2626',
   ...overrides,
 });
 
@@ -76,6 +84,10 @@ describe('squad', () => {
       formationId: '442',
       players: [],
       assignments: {},
+      presets: [],
+      lineups: [],
+      mirrored: false,
+      primaryColor: '#dc2626',
     });
   });
 
@@ -573,5 +585,28 @@ describe('squad', () => {
     const squad = makeSquad({ players: [makePlayer({ id: 'p1' })] });
     const next = updatePlayer(squad, 'p1', { notes: 'Fit for Sunday' });
     expect(next.players[0].notes).toBe('Fit for Sunday');
+  });
+
+  it('sets the primary team colour', () => {
+    const next = setPrimaryColor(makeSquad(), '#2563eb');
+    expect(next.primaryColor).toBe('#2563eb');
+  });
+
+  it('defaults the primary colour when loading older squads', () => {
+    const legacy = { ...makeSquad() } as Omit<Squad, 'primaryColor'>;
+    delete (legacy as Partial<Squad>).primaryColor;
+    const next = withFormation(legacy as Squad);
+    expect(next.primaryColor).toBe(DEFAULT_PRIMARY_COLOR);
+  });
+
+  it('lists starter players as everyone not marked as bench', () => {
+    const squad = makeSquad({
+      players: [
+        makePlayer({ id: 'p1' }),
+        makePlayer({ id: 'p2', bench: true }),
+        makePlayer({ id: 'p3', bench: false }),
+      ],
+    });
+    expect(starterPlayers(squad).map((p) => p.id)).toEqual(['p1', 'p3']);
   });
 });

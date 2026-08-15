@@ -20,7 +20,7 @@ const NAV_ITEMS = [
 const HomePage: NextPage = () => (
   <div className="flex h-screen flex-col">
     <header className="border-base-300 flex items-center justify-between gap-4 border-b px-4 py-2 print:hidden">
-      <h1 className="text-sm font-bold">Football Squad Manager</h1>
+      <h1 className="text-sm font-bold">Football Manager</h1>
       <div className="flex items-center gap-1">
         {NAV_ITEMS.map(({ label, href, icon }) => (
           <Link key={href} href={href} className="btn btn-ghost btn-xs gap-1.5">

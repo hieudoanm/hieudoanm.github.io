@@ -9,7 +9,7 @@ describe('HomePage', () => {
   it('renders the app title and nav links', () => {
     render(<HomePage />);
     expect(
-      screen.getByRole('heading', { name: 'Football Squad Manager' })
+      screen.getByRole('heading', { name: 'Football Manager' })
     ).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'About' })).toHaveAttribute(
       'href',

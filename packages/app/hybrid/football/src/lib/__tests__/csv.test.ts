@@ -1,4 +1,4 @@
-import { exportSquadCsv, importSquadCsv } from '@/lib/csv';
+import { exportSquadCsv, importRosterText, importSquadCsv } from '@/lib/csv';
 import { newPlayer } from '@/lib/squad';
 
 describe('csv', () => {
@@ -84,5 +84,71 @@ describe('csv', () => {
     expect(roundTrip.players.map((p) => p.name)).toEqual(['Ada', 'Bob']);
     expect(roundTrip.players[0].position).toBe('AM');
     expect(roundTrip.players[1].position).toBeUndefined();
+  });
+
+  it('exports only starters when asked', () => {
+    const players = [
+      newPlayer('Ada', 10, 'MID'),
+      { ...newPlayer('Bob', 9, 'FWD'), bench: true as const },
+    ];
+    const csv = exportSquadCsv(players, 'starters');
+    expect(csv).toContain('Ada,10,MID,');
+    expect(csv).not.toContain('Bob');
+  });
+
+  it('exports only bench players when asked', () => {
+    const players = [
+      newPlayer('Ada', 10, 'MID'),
+      { ...newPlayer('Bob', 9, 'FWD'), bench: true as const },
+    ];
+    const csv = exportSquadCsv(players, 'bench');
+    expect(csv).toContain('Bob,9,FWD,');
+    expect(csv).not.toContain('Ada');
+  });
+});
+
+describe('importRosterText', () => {
+  it('parses name, number, role lines', () => {
+    const result = importRosterText('Ada,10,MID\nBob,7,FWD');
+    expect(result.skipped).toBe(0);
+    expect(result.players).toHaveLength(2);
+    expect(result.players[0]).toMatchObject({
+      name: 'Ada',
+      number: 10,
+      role: 'MID',
+    });
+    expect(result.players[1]).toMatchObject({
+      name: 'Bob',
+      number: 7,
+      role: 'FWD',
+    });
+  });
+
+  it('defaults a missing role to FWD and accepts a position column', () => {
+    const result = importRosterText('Cara,1\nDan,11,FWD,ST');
+    expect(result.players[0]).toMatchObject({
+      name: 'Cara',
+      number: 1,
+      role: 'FWD',
+    });
+    expect(result.players[0].position).toBeUndefined();
+    expect(result.players[1]).toMatchObject({
+      name: 'Dan',
+      number: 11,
+      role: 'FWD',
+      position: 'ST',
+    });
+  });
+
+  it('skips a header row and invalid lines', () => {
+    const result = importRosterText(
+      'Name,Number,Role\nAda,10,MID\n,x,FWD\nBob,0,\n'
+    );
+    expect(result.players.map((p) => p.name)).toEqual(['Ada']);
+    expect(result.skipped).toBe(2);
+  });
+
+  it('returns no players for empty input', () => {
+    expect(importRosterText('')).toEqual({ players: [], skipped: 0 });
   });
 });

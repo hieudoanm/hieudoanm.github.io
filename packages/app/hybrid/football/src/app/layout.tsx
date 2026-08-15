@@ -3,13 +3,13 @@ import '@/styles/globals.css';
 import { FC, ReactNode } from 'react';
 
 export const metadata: Metadata = {
-  title: 'Football Squad Manager',
+  title: 'Football Manager',
   description: 'Pick a formation, assign your squad, and manage your team',
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black-translucent',
-    title: 'Football Squad Manager',
+    title: 'Football Manager',
   },
 };
 

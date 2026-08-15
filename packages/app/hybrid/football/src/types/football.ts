@@ -31,12 +31,29 @@ export interface Player {
   viceCaptain?: boolean;
 }
 
+export interface FormationPreset {
+  id: string;
+  name: string;
+  formationId: string;
+}
+
+export interface Lineup {
+  id: string;
+  name: string;
+  formationId: string;
+  assignments: Record<string, string[]>;
+}
+
 export interface Squad {
   id: string;
   name: string;
   formationId: string;
   players: Player[];
   assignments: Record<string, string[]>;
+  presets: FormationPreset[];
+  lineups: Lineup[];
+  mirrored: boolean;
+  primaryColor: string;
 }
 
 export interface SquadLibrary {

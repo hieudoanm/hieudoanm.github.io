@@ -15,6 +15,7 @@ import {
   replacePlayers,
   resetAssignments,
   saveSquadLibrary,
+  setPrimaryColor,
   substitutePlayer,
   swapSlotPlayers,
   toggleAssignment,
@@ -30,14 +31,30 @@ import {
   setActiveSquad,
 } from '@/lib/library';
 import {
+  addFormationPreset,
+  applyLineup,
+  removeFormationPreset,
+  removeLineup,
+  renameLineup,
+  saveLineup,
+  toggleMirrored,
+} from '@/lib/planning';
+import { shiftLine, ShiftDirection } from '@/lib/tactics';
+import {
   CaptainRole,
   ExampleStatus,
   Player,
   Squad,
   SquadLibrary,
 } from '@/types/football';
-import { squadFromUrl } from '@/lib/share';
-import { useCallback, useEffect, useState } from 'react';
+import {
+  addShareHistory,
+  decodeShare,
+  ShareMode,
+  squadFromDeepLink,
+} from '@/lib/share';
+import { isDesktop, onDeepLink, takePendingDeepLinks } from '@/lib/desktop';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 const updateActiveSquad = (
   library: SquadLibrary,
@@ -84,6 +101,15 @@ export interface SquadController {
   resetAssignments: () => void;
   replaceSquad: (squad: Squad) => void;
   loadExample: () => Promise<void>;
+  addPreset: (name: string) => void;
+  removePreset: (presetId: string) => void;
+  saveLineup: (name: string) => void;
+  applyLineup: (lineupId: string) => void;
+  renameLineup: (lineupId: string, name: string) => void;
+  removeLineup: (lineupId: string) => void;
+  toggleMirrored: () => void;
+  shiftLine: (lineIndex: number, direction: ShiftDirection) => void;
+  setPrimaryColor: (color: string) => void;
 }
 
 export const useSquad = (): SquadController => {
@@ -98,21 +124,59 @@ export const useSquad = (): SquadController => {
     saveSquadLibrary(library);
   }, [library]);
 
-  useEffect(() => {
-    const shared = squadFromUrl(window.location.search);
-    if (shared) {
+  const applyShared = useCallback(
+    (shared: { squad: Squad; mode: ShareMode }, url: string) => {
       setLibrary((current) =>
         updateActiveSquad(current, () => ({
-          ...shared,
+          ...shared.squad,
           id: current.activeId,
           name:
             current.squads.find((item) => item.id === current.activeId)?.name ??
-            shared.name,
+            shared.squad.name,
         }))
       );
+      addShareHistory({
+        mode: shared.mode,
+        name: shared.squad.name,
+        url,
+      });
       setSelectedSlotId(null);
+    },
+    []
+  );
+
+  useEffect(() => {
+    const shared = decodeShare(
+      new URLSearchParams(window.location.search).get('squad') ?? ''
+    );
+    if (shared) {
+      applyShared(shared, window.location.href);
     }
-  }, []);
+  }, [applyShared]);
+
+  useEffect(() => {
+    if (!isDesktop()) return;
+    const applied = new Set<string>();
+    let unlisten: (() => void) | undefined;
+    let cancelled = false;
+    const handleUrl = (url: string): void => {
+      if (applied.has(url)) return;
+      applied.add(url);
+      const shared = squadFromDeepLink(url);
+      if (shared) applyShared(shared, url);
+    };
+    void onDeepLink(handleUrl).then((stop) => {
+      if (cancelled) stop();
+      else unlisten = stop;
+    });
+    void takePendingDeepLinks().then((urls) => {
+      for (const url of urls) handleUrl(url);
+    });
+    return () => {
+      cancelled = true;
+      unlisten?.();
+    };
+  }, [applyShared]);
 
   const squad =
     library.squads.find((item) => item.id === library.activeId) ??
@@ -310,6 +374,72 @@ export const useSquad = (): SquadController => {
     []
   );
 
+  const addPresetHandler = useCallback((name: string) => {
+    setLibrary((current) =>
+      updateActiveSquad(current, (active) => addFormationPreset(active, name))
+    );
+  }, []);
+
+  const removePresetHandler = useCallback((presetId: string) => {
+    setLibrary((current) =>
+      updateActiveSquad(current, (active) =>
+        removeFormationPreset(active, presetId)
+      )
+    );
+  }, []);
+
+  const saveLineupHandler = useCallback((name: string) => {
+    setLibrary((current) =>
+      updateActiveSquad(current, (active) => saveLineup(active, name))
+    );
+  }, []);
+
+  const applyLineupHandler = useCallback((lineupId: string) => {
+    setLibrary((current) =>
+      updateActiveSquad(current, (active) => applyLineup(active, lineupId))
+    );
+    setSelectedSlotId(null);
+  }, []);
+
+  const renameLineupHandler = useCallback((lineupId: string, name: string) => {
+    setLibrary((current) =>
+      updateActiveSquad(current, (active) =>
+        renameLineup(active, lineupId, name)
+      )
+    );
+  }, []);
+
+  const removeLineupHandler = useCallback((lineupId: string) => {
+    setLibrary((current) =>
+      updateActiveSquad(current, (active) => removeLineup(active, lineupId))
+    );
+  }, []);
+
+  const toggleMirroredHandler = useCallback(() => {
+    setLibrary((current) =>
+      updateActiveSquad(current, (active) => toggleMirrored(active))
+    );
+  }, []);
+
+  const shiftLineHandler = useCallback(
+    (lineIndex: number, direction: ShiftDirection) => {
+      setLibrary((current) =>
+        updateActiveSquad(current, (active) => {
+          const formation =
+            findFormation(active.formationId) ?? defaultFormationFor(11);
+          return shiftLine(active, formation, lineIndex, direction);
+        })
+      );
+    },
+    []
+  );
+
+  const setPrimaryColorHandler = useCallback((color: string) => {
+    setLibrary((current) =>
+      updateActiveSquad(current, (active) => setPrimaryColor(active, color))
+    );
+  }, []);
+
   const formation = findFormation(squad.formationId) ?? defaultFormationFor(11);
 
   return {
@@ -342,5 +472,14 @@ export const useSquad = (): SquadController => {
     resetAssignments: resetAssignmentsHandler,
     replaceSquad: replaceSquadHandler,
     loadExample,
+    addPreset: addPresetHandler,
+    removePreset: removePresetHandler,
+    saveLineup: saveLineupHandler,
+    applyLineup: applyLineupHandler,
+    renameLineup: renameLineupHandler,
+    removeLineup: removeLineupHandler,
+    toggleMirrored: toggleMirroredHandler,
+    shiftLine: shiftLineHandler,
+    setPrimaryColor: setPrimaryColorHandler,
   };
 };

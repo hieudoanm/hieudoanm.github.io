@@ -11,6 +11,8 @@ import { slotRole } from '@/lib/pitch';
 const STORAGE_KEY = 'football:squad:v1';
 const LIBRARY_KEY = 'football:squad-library:v1';
 
+export const DEFAULT_PRIMARY_COLOR = '#dc2626';
+
 export const uid = (): string => Math.random().toString(36).slice(2, 10);
 
 export const newPlayer = (
@@ -40,18 +42,29 @@ export const defaultSquad = (): Squad => ({
   formationId: defaultFormationFor(11).id,
   players: [],
   assignments: {},
+  presets: [],
+  lineups: [],
+  mirrored: false,
+  primaryColor: DEFAULT_PRIMARY_COLOR,
 });
 
 export const withFormation = (squad: Squad): Squad => {
+  const defaults: Squad = {
+    ...squad,
+    presets: squad.presets ?? [],
+    lineups: squad.lineups ?? [],
+    mirrored: squad.mirrored ?? false,
+    primaryColor: squad.primaryColor ?? DEFAULT_PRIMARY_COLOR,
+  };
   const formation = findFormation(squad.formationId);
   if (!formation) {
     return {
-      ...squad,
+      ...defaults,
       formationId: defaultFormationFor(11).id,
       assignments: {},
     };
   }
-  return squad;
+  return defaults;
 };
 
 export const addPlayer = (
@@ -234,6 +247,14 @@ export const unassignedPlayers = (squad: Squad): Player[] =>
 
 export const benchPlayers = (squad: Squad): Player[] =>
   squad.players.filter((player) => player.bench === true);
+
+export const starterPlayers = (squad: Squad): Player[] =>
+  squad.players.filter((player) => player.bench !== true);
+
+export const setPrimaryColor = (squad: Squad, color: string): Squad => ({
+  ...squad,
+  primaryColor: color,
+});
 
 export const markBench = (squad: Squad, playerId: string): Squad => {
   const player = squad.players.find((item) => item.id === playerId);

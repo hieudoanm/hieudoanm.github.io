@@ -46,7 +46,7 @@ export const EXAMPLE_SQUADS: ExampleSquadMeta[] = [
 ];
 
 export const exampleSquadUrl = (id: string): string =>
-  `/data/json/11/${id}.json`;
+  `/data/json/squads/11/${id}.json`;
 
 export const loadExampleSquad = async (
   id: string = EXAMPLE_SQUADS[0].id

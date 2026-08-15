@@ -14,5 +14,9 @@ export const makeSquad = (overrides: Partial<Squad> = {}): Squad => ({
   formationId: '442',
   players: [],
   assignments: {},
+  presets: [],
+  lineups: [],
+  mirrored: false,
+  primaryColor: '#dc2626',
   ...overrides,
 });

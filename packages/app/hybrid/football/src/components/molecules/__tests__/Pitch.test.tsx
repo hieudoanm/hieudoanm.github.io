@@ -201,6 +201,28 @@ describe('Pitch', () => {
     );
     expect(screen.getByText(/drag a player marker/)).toBeInTheDocument();
   });
+
+  it('applies the team colour to the marker badges', () => {
+    const formation = findFormation('442');
+    if (!formation) throw new Error('missing 442');
+    const { container } = render(
+      <Pitch
+        formation={formation}
+        selectedSlotId={null}
+        onSelectSlot={jest.fn()}
+        getSlotPlayers={() => []}
+        teamColor="#2563eb"
+      />
+    );
+    const badges = container.querySelectorAll('span[aria-hidden="true"]');
+    const coloured = Array.from(badges).find(
+      (badge) => badge.textContent?.trim() === '1'
+    );
+    expect(coloured).toBeDefined();
+    expect((coloured as HTMLElement).style.backgroundColor).toBe(
+      'rgb(37, 99, 235)'
+    );
+  });
 });
 
 const slotPlayersFrom = (squad: ReturnType<typeof makeSquad>, slotId: string) =>

@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import { AboutTemplate } from '@/components/templates/AboutTemplate';
 
 const PROPS = {
-  name: 'Football Squad Manager',
+  name: 'Football Manager',
   description: 'Pick a formation',
   version: 'v0.0.1',
   items: [
@@ -14,9 +14,7 @@ const PROPS = {
 describe('AboutTemplate', () => {
   it('renders name and description', () => {
     render(<AboutTemplate {...PROPS} />);
-    expect(
-      screen.getAllByText('Football Squad Manager').length
-    ).toBeGreaterThan(0);
+    expect(screen.getAllByText('Football Manager').length).toBeGreaterThan(0);
     expect(screen.getByText('Pick a formation')).toBeInTheDocument();
   });
 

@@ -11,21 +11,25 @@ const makeSquad = (overrides: Partial<Squad> = {}): Squad => ({
   formationId: '442',
   players: [],
   assignments: {},
+  presets: [],
+  lineups: [],
+  mirrored: false,
+  primaryColor: '#dc2626',
   ...overrides,
 });
 
 describe('EXAMPLE_SQUADS', () => {
-  it('exposes the example squads in public/data/json/11', () => {
+  it('exposes the example squads in public/data/json/squads/11', () => {
     const ids = EXAMPLE_SQUADS.map((example) => example.id);
     expect(ids).toEqual([
-      'liverpool-2019-2020',
       'barcelona-2008-2009',
       'barcelona-2014-2015',
-      'liverpool-2004-2005',
-      'manchester-city-2022-2023',
       'bayern-munich-2012-2013',
       'bayern-munich-2019-2020',
       'inter-milan-2009-2010',
+      'liverpool-2004-2005',
+      'liverpool-2019-2020',
+      'manchester-city-2022-2023',
       'psg-2024-2025',
     ]);
     for (const example of EXAMPLE_SQUADS) {
@@ -35,7 +39,7 @@ describe('EXAMPLE_SQUADS', () => {
 
   it('derives the data url from an id', () => {
     expect(exampleSquadUrl('barcelona-2008-2009')).toBe(
-      '/data/json/11/barcelona-2008-2009.json'
+      '/data/json/squads/11/barcelona-2008-2009.json'
     );
   });
 });
@@ -71,7 +75,7 @@ describe('loadExampleSquad', () => {
     await loadExampleSquad('barcelona-2008-2009');
     globalThis.fetch = original;
     expect(fetchMock).toHaveBeenCalledWith(
-      '/data/json/11/barcelona-2008-2009.json'
+      '/data/json/squads/11/barcelona-2008-2009.json'
     );
   });
 

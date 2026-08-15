@@ -20,7 +20,7 @@ export const AboutTemplate: FC<{
           <Link href="/" className="btn btn-ghost btn-sm">
             <FiArrowLeft className="text-lg" />
           </Link>
-          <h1 className="text-sm font-bold">Football Squad Manager</h1>
+          <h1 className="text-sm font-bold">Football Manager</h1>
         </div>
       </div>
     </header>

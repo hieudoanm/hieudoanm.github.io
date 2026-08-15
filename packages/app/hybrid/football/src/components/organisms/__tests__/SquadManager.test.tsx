@@ -6,7 +6,7 @@ import {
   within,
 } from '@testing-library/react';
 import { SquadManager } from '@/components/organisms/SquadManager';
-import { encodeSquad } from '@/lib/share';
+import { encodeLineup, encodeSquad } from '@/lib/share';
 import { makePlayer, makeSquad } from '@/test/fixtures';
 import { Squad } from '@/types/football';
 
@@ -19,6 +19,10 @@ const exampleSquad = (): Squad => ({
     makePlayer({ id: 'salah', name: 'Salah', number: 11, role: 'FWD' }),
   ],
   assignments: { '433-0-0': ['alisson'], '433-3-10': ['salah'] },
+  presets: [],
+  lineups: [],
+  mirrored: false,
+  primaryColor: '#dc2626',
 });
 
 const barcelonaSquad = (): Squad => ({
@@ -35,6 +39,10 @@ const barcelonaSquad = (): Squad => ({
     '433-3-8': ['messi'],
     '433-3-9': ['eto'],
   },
+  presets: [],
+  lineups: [],
+  mirrored: false,
+  primaryColor: '#dc2626',
 });
 
 const mockExampleFetch = (): (() => void) => {
@@ -230,7 +238,7 @@ describe('SquadManager', () => {
       )
     ).toBeInTheDocument();
     expect(globalThis.fetch).toHaveBeenCalledWith(
-      '/data/json/11/barcelona-2008-2009.json'
+      '/data/json/squads/11/barcelona-2008-2009.json'
     );
     expect(screen.getByLabelText('Position RW 7')).toHaveTextContent('Messi');
     expect(screen.getByLabelText('Position ST 9')).toHaveTextContent("Eto'o");
@@ -293,7 +301,7 @@ describe('SquadManager', () => {
     render(<SquadManager />);
     openTab('Library');
     fireEvent.click(screen.getByLabelText('Duplicate My Squad'));
-    expect(screen.getByText('My Squad (Copy)')).toBeInTheDocument();
+    expect(screen.getAllByText('My Squad (Copy)').length).toBeGreaterThan(0);
     expect(screen.getByText('Squads · 2')).toBeInTheDocument();
   });
 
@@ -342,5 +350,257 @@ describe('SquadManager', () => {
     });
 
     window.history.replaceState({}, '', originalSearch || '/');
+  });
+
+  it('loads a shared lineup-only URL into the active squad', async () => {
+    const shared = makeSquad({
+      name: 'Shared Lineup',
+      formationId: '433',
+      players: [
+        makePlayer({ id: 'salah', name: 'Salah', number: 11, role: 'FWD' }),
+      ],
+      assignments: { '433-3-8': ['salah'] },
+    });
+    const originalSearch = window.location.search;
+    window.history.replaceState({}, '', `/?squad=${encodeLineup(shared)}`);
+    render(<SquadManager />);
+
+    await waitFor(() => {
+      expect(screen.getByLabelText('Position RW 7')).toHaveTextContent('Salah');
+    });
+
+    window.history.replaceState({}, '', originalSearch || '/');
+  });
+
+  it('mirrors the pitch for the second half', () => {
+    render(<SquadManager />);
+    const mirror = screen.getByRole('button', { name: 'Mirror the pitch' });
+    expect(mirror).toHaveAttribute('aria-pressed', 'false');
+    fireEvent.click(mirror);
+    expect(
+      screen.getByRole('button', { name: 'Mirror the pitch' })
+    ).toHaveAttribute('aria-pressed', 'true');
+  });
+
+  it('shifts a whole line sideways in one move', () => {
+    render(<SquadManager />);
+    openTab('Roster');
+    fireEvent.change(screen.getByLabelText('Player name'), {
+      target: { value: 'Ada' },
+    });
+    fireEvent.change(screen.getByLabelText('Shirt number'), {
+      target: { value: '10' },
+    });
+    fireEvent.change(screen.getByLabelText('Player role'), {
+      target: { value: 'FWD' },
+    });
+    fireEvent.click(screen.getByRole('button', { name: 'Add player' }));
+    expect(screen.getByLabelText('Position ST 9')).toHaveTextContent('Ada');
+
+    fireEvent.click(
+      screen.getByRole('button', { name: 'Shift Attack line left' })
+    );
+    expect(screen.getByLabelText('Position ST 10')).toHaveTextContent('Ada');
+    expect(screen.getByLabelText('Position ST 9')).not.toHaveTextContent('Ada');
+  });
+
+  it('saves and re-applies a lineup as a plan', () => {
+    render(<SquadManager />);
+    openTab('Roster');
+    fireEvent.change(screen.getByLabelText('Player name'), {
+      target: { value: 'Ada' },
+    });
+    fireEvent.change(screen.getByLabelText('Shirt number'), {
+      target: { value: '10' },
+    });
+    fireEvent.change(screen.getByLabelText('Player role'), {
+      target: { value: 'FWD' },
+    });
+    fireEvent.click(screen.getByRole('button', { name: 'Add player' }));
+
+    openTab('Plans');
+    fireEvent.change(screen.getByLabelText('Lineup name'), {
+      target: { value: 'Plan A' },
+    });
+    fireEvent.click(screen.getByRole('button', { name: 'Save lineup' }));
+    expect(screen.getByText('Plan A')).toBeInTheDocument();
+
+    fireEvent.change(screen.getByLabelText('Formation'), {
+      target: { value: '433' },
+    });
+    expect(screen.getByLabelText('Formation')).toHaveValue('433');
+    expect(screen.getByLabelText('Position ST 9')).not.toHaveTextContent('Ada');
+
+    openTab('Plans');
+    fireEvent.click(
+      screen.getByRole('button', { name: 'Apply lineup Plan A' })
+    );
+    expect(screen.getByLabelText('Formation')).toHaveValue('442');
+    expect(screen.getByLabelText('Position ST 9')).toHaveTextContent('Ada');
+  });
+
+  it('renames and removes a saved lineup', () => {
+    render(<SquadManager />);
+    openTab('Plans');
+    fireEvent.change(screen.getByLabelText('Lineup name'), {
+      target: { value: 'Plan A' },
+    });
+    fireEvent.click(screen.getByRole('button', { name: 'Save lineup' }));
+
+    fireEvent.click(
+      screen.getByRole('button', { name: 'Rename lineup Plan A' })
+    );
+    fireEvent.change(screen.getByLabelText('Rename lineup Plan A'), {
+      target: { value: 'Plan B' },
+    });
+    fireEvent.click(screen.getByRole('button', { name: 'Save lineup name' }));
+    expect(screen.getByText('Plan B')).toBeInTheDocument();
+
+    fireEvent.click(
+      screen.getByRole('button', { name: 'Remove lineup Plan B' })
+    );
+    expect(screen.queryByText('Plan B')).not.toBeInTheDocument();
+  });
+
+  it('saves, applies, and removes a formation preset', () => {
+    render(<SquadManager />);
+    openTab('Plans');
+    fireEvent.change(screen.getByLabelText('Preset name'), {
+      target: { value: 'Counter' },
+    });
+    fireEvent.click(
+      screen.getByRole('button', { name: 'Save formation preset' })
+    );
+    expect(screen.getByText('Counter')).toBeInTheDocument();
+
+    fireEvent.change(screen.getByLabelText('Formation'), {
+      target: { value: '433' },
+    });
+    openTab('Plans');
+    fireEvent.click(
+      screen.getByRole('button', { name: 'Apply preset Counter' })
+    );
+    expect(screen.getByLabelText('Formation')).toHaveValue('442');
+
+    fireEvent.click(
+      screen.getByRole('button', { name: 'Remove preset Counter' })
+    );
+    expect(screen.queryByText('Counter')).not.toBeInTheDocument();
+  });
+
+  it('suggests formations that fit the current starters', () => {
+    render(<SquadManager />);
+    openTab('Roster');
+    fireEvent.change(screen.getByLabelText('Player name'), {
+      target: { value: 'Ada' },
+    });
+    fireEvent.change(screen.getByLabelText('Shirt number'), {
+      target: { value: '10' },
+    });
+    fireEvent.change(screen.getByLabelText('Player role'), {
+      target: { value: 'FWD' },
+    });
+    fireEvent.click(screen.getByRole('button', { name: 'Add player' }));
+
+    openTab('Stats');
+    expect(screen.getByText('Formation suggestions')).toBeInTheDocument();
+    expect(
+      screen.getAllByRole('button', { name: /Apply formation/ }).length
+    ).toBeGreaterThan(0);
+  });
+
+  it('scores a goal from the match center', () => {
+    render(<SquadManager />);
+    fireEvent.click(screen.getByRole('button', { name: 'Increase goals for' }));
+    expect(screen.getByLabelText('Goals for')).toHaveTextContent('1');
+    expect(
+      within(screen.getByTestId('match-events')).getByText('Goal')
+    ).toBeInTheDocument();
+  });
+
+  it('records a substitution from the position picker', () => {
+    render(<SquadManager />);
+    openTab('Roster');
+
+    fireEvent.change(screen.getByLabelText('Player name'), {
+      target: { value: 'Ada' },
+    });
+    fireEvent.change(screen.getByLabelText('Shirt number'), {
+      target: { value: '10' },
+    });
+    fireEvent.change(screen.getByLabelText('Player role'), {
+      target: { value: 'FWD' },
+    });
+    fireEvent.click(screen.getByRole('button', { name: 'Add player' }));
+
+    fireEvent.change(screen.getByLabelText('Player name'), {
+      target: { value: 'Bob' },
+    });
+    fireEvent.change(screen.getByLabelText('Shirt number'), {
+      target: { value: '7' },
+    });
+    fireEvent.change(screen.getByLabelText('Player role'), {
+      target: { value: 'FWD' },
+    });
+    fireEvent.click(screen.getByRole('button', { name: 'Add player' }));
+
+    fireEvent.click(screen.getByLabelText('Bench Bob'));
+    fireEvent.click(screen.getByLabelText('Position ST 9'));
+    openTab('Position');
+    fireEvent.click(screen.getByRole('button', { name: 'Bring on Bob' }));
+
+    openTab('Overview');
+    expect(screen.getByLabelText('Substitutions used')).toHaveTextContent(
+      '1/5'
+    );
+    expect(
+      within(screen.getByTestId('match-events')).getByText('Substitution')
+    ).toBeInTheDocument();
+  });
+
+  it('applies the team colour to the pitch markers', () => {
+    const { container } = render(<SquadManager />);
+    openTab('Team');
+    fireEvent.click(screen.getByLabelText('Kit colour blue'));
+    const badges = container.querySelectorAll(
+      '[data-testid="pitch"] [aria-hidden="true"]'
+    );
+    const coloured = Array.from(badges).find(
+      (badge) => badge.textContent?.trim() === '1'
+    );
+    expect((coloured as HTMLElement).style.backgroundColor).toBe(
+      'rgb(37, 99, 235)'
+    );
+  });
+
+  it('imports a roster pasted as name, number, role lines', () => {
+    render(<SquadManager />);
+    openTab('Roster');
+    fireEvent.change(screen.getByLabelText('Roster text'), {
+      target: { value: 'Ada,10,MID\nBob,7,FWD' },
+    });
+    fireEvent.click(screen.getByLabelText('Import roster'));
+    expect(screen.getByText('Imported 2 players.')).toBeInTheDocument();
+    expect(screen.getAllByText('Ada').length).toBeGreaterThan(0);
+    expect(screen.getByLabelText('Position ST 9')).toHaveTextContent('Bob');
+  });
+
+  it('previews the team sheet header with opponent and date', () => {
+    render(<SquadManager />);
+    openTab('Team');
+    fireEvent.change(screen.getByLabelText('Opponent'), {
+      target: { value: 'United' },
+    });
+    fireEvent.change(screen.getByLabelText('Match date'), {
+      target: { value: '2026-08-15' },
+    });
+    expect(screen.getAllByText('vs United').length).toBeGreaterThan(0);
+    expect(screen.getAllByText('2026-08-15').length).toBeGreaterThan(0);
+  });
+
+  it('disables printing the team sheet when there are no players', () => {
+    render(<SquadManager />);
+    openTab('Team');
+    expect(screen.getByLabelText('Print team sheet')).toBeDisabled();
   });
 });

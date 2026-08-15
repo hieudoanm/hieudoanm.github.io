@@ -2,9 +2,16 @@
 
 import { ShirtBadge } from '@/components/atoms/ShirtBadge';
 import { groupSlotsByLine, pitchPosition } from '@/lib/formations';
-import { Formation, Player } from '@/types/football';
+import { slotRole } from '@/lib/pitch';
+import { ShiftDirection } from '@/lib/tactics';
+import { Formation, FormationSlot, Player } from '@/types/football';
 import { DragEvent, FC, RefObject, useState } from 'react';
-import { FiPlus } from 'react-icons/fi';
+import {
+  FiChevronLeft,
+  FiChevronRight,
+  FiPlus,
+  FiRepeat,
+} from 'react-icons/fi';
 
 interface PitchProps {
   formation: Formation;
@@ -12,11 +19,25 @@ interface PitchProps {
   onSelectSlot: (slotId: string) => void;
   getSlotPlayers: (slotId: string) => Player[];
   onSwapSlots?: (fromSlotId: string, toSlotId: string) => void;
+  mirrored?: boolean;
+  onToggleMirrored?: () => void;
+  onShiftLine?: (lineIndex: number, direction: ShiftDirection) => void;
   pitchRef?: RefObject<HTMLDivElement | null>;
+  teamColor?: string;
 }
 
 const badgeNumber = (players: Player[], fallback: number): number =>
   players.length > 0 ? players[0].number : fallback;
+
+const LINE_LABELS: Record<string, string> = {
+  GK: 'Goalkeeper',
+  DEF: 'Defence',
+  MID: 'Midfield',
+  FWD: 'Attack',
+};
+
+const lineLabel = (line: FormationSlot[]): string =>
+  LINE_LABELS[slotRole(line[0]?.label ?? '')] ?? 'Line';
 
 export const Pitch: FC<PitchProps> = ({
   formation,
@@ -24,7 +45,11 @@ export const Pitch: FC<PitchProps> = ({
   onSelectSlot,
   getSlotPlayers,
   onSwapSlots,
+  mirrored = false,
+  onToggleMirrored,
+  onShiftLine,
   pitchRef,
+  teamColor,
 }) => {
   const [dragSlotId, setDragSlotId] = useState<string | null>(null);
   const lines = groupSlotsByLine(formation.slots);
@@ -108,10 +133,24 @@ export const Pitch: FC<PitchProps> = ({
           aria-hidden={true}
           className="absolute top-1/2 left-1/2 size-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/40 md:size-2"
         />
+        {onToggleMirrored && (
+          <button
+            type="button"
+            aria-label="Mirror the pitch"
+            aria-pressed={mirrored}
+            onClick={onToggleMirrored}
+            className="absolute top-2 right-2 z-10 flex items-center gap-1 rounded bg-black/30 p-1.5 text-white/80 print:hidden"
+            title={
+              mirrored ? 'Playing toward the right' : 'Playing toward the left'
+            }>
+            <FiRepeat className="size-3" />
+          </button>
+        )}
 
         {lines.map((line) =>
           line.map((slot) => {
             const { x, y } = pitchPosition(slot, line, lines.length);
+            const left = mirrored ? 100 - x * 100 : x * 100;
             const players = getSlotPlayers(slot.id);
             const selected = selectedSlotId === slot.id;
             return (
@@ -130,13 +169,14 @@ export const Pitch: FC<PitchProps> = ({
                     ? 'ring-base-content ring-2 ring-offset-2'
                     : 'hover:brightness-125'
                 } ${dragSlotId === slot.id ? 'opacity-50' : ''}`}
-                style={{ left: `${x * 100}%`, top: `${y * 100}%` }}>
+                style={{ left: `${left}%`, top: `${y * 100}%` }}>
                 <span className="flex items-center gap-1">
                   <span className="relative">
                     <ShirtBadge
                       number={badgeNumber(players, slot.number)}
                       label={slot.label}
                       size="sm"
+                      color={teamColor}
                     />
                     {players.length > 0 && (
                       <span className="absolute -top-1.5 -right-1.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-red-500 px-1 text-[9px] font-bold text-white">
@@ -167,6 +207,40 @@ export const Pitch: FC<PitchProps> = ({
           })
         )}
       </div>
+
+      {onShiftLine && (
+        <div
+          data-testid="line-shifts"
+          className="rounded-box flex flex-col gap-1 border border-white/10 p-2 print:hidden">
+          {lines.map((line, lineIndex) =>
+            line.length > 1 ? (
+              <div
+                key={line[0].id}
+                className="flex items-center justify-between gap-2">
+                <span className="text-base-content/60 text-[10px] font-bold uppercase">
+                  {lineLabel(line)}
+                </span>
+                <div className="join">
+                  <button
+                    type="button"
+                    aria-label={`Shift ${lineLabel(line)} line left`}
+                    onClick={() => onShiftLine(lineIndex, 'left')}
+                    className="btn btn-xs join-item btn-ghost text-base-content/70">
+                    <FiChevronLeft className="size-3" />
+                  </button>
+                  <button
+                    type="button"
+                    aria-label={`Shift ${lineLabel(line)} line right`}
+                    onClick={() => onShiftLine(lineIndex, 'right')}
+                    className="btn btn-xs join-item btn-ghost text-base-content/70">
+                    <FiChevronRight className="size-3" />
+                  </button>
+                </div>
+              </div>
+            ) : null
+          )}
+        </div>
+      )}
 
       {selectedSlot && (
         <div

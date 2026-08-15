@@ -1,47 +1,22 @@
 'use client';
 
-import {
-  formatMatchTime,
-  fullMatchSeconds,
-  matchPhase,
-  phaseLabel,
-} from '@/lib/clock';
-import { FC, useEffect, useState } from 'react';
+import { formatMatchTime, matchPhase, phaseLabel } from '@/lib/clock';
+import { FC } from 'react';
 import { FiPause, FiPlay, FiRotateCcw, FiClock } from 'react-icons/fi';
 
-export const MatchClock: FC = () => {
-  const [running, setRunning] = useState(false);
-  const [elapsed, setElapsed] = useState(0);
+interface MatchClockProps {
+  running: boolean;
+  elapsed: number;
+  onToggleStart: () => void;
+  onReset: () => void;
+}
 
-  useEffect(() => {
-    if (!running) return;
-    const timer = setInterval(() => {
-      setElapsed((current) => {
-        if (current >= fullMatchSeconds()) return current;
-        return current + 1;
-      });
-    }, 1000);
-    return () => clearInterval(timer);
-  }, [running]);
-
-  useEffect(() => {
-    if (elapsed >= fullMatchSeconds()) setRunning(false);
-  }, [elapsed]);
-
-  const toggle = (): void => {
-    if (elapsed >= fullMatchSeconds()) {
-      setElapsed(0);
-      setRunning(true);
-      return;
-    }
-    setRunning((current) => !current);
-  };
-
-  const reset = (): void => {
-    setRunning(false);
-    setElapsed(0);
-  };
-
+export const MatchClock: FC<MatchClockProps> = ({
+  running,
+  elapsed,
+  onToggleStart,
+  onReset,
+}) => {
   const phase = matchPhase(elapsed);
 
   return (
@@ -66,7 +41,7 @@ export const MatchClock: FC = () => {
         <button
           type="button"
           aria-label={running ? 'Pause match clock' : 'Start match clock'}
-          onClick={toggle}
+          onClick={onToggleStart}
           className="btn btn-primary btn-sm gap-1.5">
           {running ? (
             <FiPause className="size-3.5" />
@@ -78,7 +53,7 @@ export const MatchClock: FC = () => {
         <button
           type="button"
           aria-label="Reset match clock"
-          onClick={reset}
+          onClick={onReset}
           className="btn btn-ghost btn-sm gap-1.5">
           <FiRotateCcw className="size-3.5" />
           Reset

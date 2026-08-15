@@ -12,8 +12,8 @@ test.beforeEach(async ({ page }) => {
 
 test.describe('Squad Manager', () => {
   test('loads with the default formation', async ({ page }) => {
-    await expect(page).toHaveTitle(/Football Squad Manager/);
-    await expect(page.locator('h1')).toHaveText('Football Squad Manager');
+    await expect(page).toHaveTitle(/Football Manager/);
+    await expect(page.locator('h1')).toHaveText('Football Manager');
     await expect(page.getByText('11-a-side · 4-4-2')).toBeVisible();
   });
 
@@ -92,6 +92,9 @@ test.describe('Squad Manager', () => {
 
   test('loads the example squad onto the pitch', async ({ page }) => {
     await openTab(page, 'Roster');
+    await page
+      .getByLabel('Example squad to load')
+      .selectOption('liverpool-2019-2020');
     await page.getByLabel('Load example squad').click();
     await expect(page.getByText('11-a-side · 4-3-3')).toBeVisible();
     await expect(page.getByLabel('Position GK 1')).toContainText('Alisson');
@@ -260,5 +263,28 @@ test.describe('Squad Manager', () => {
 
     await expect(page.getByLabel('Clear Ada captain')).toBeVisible();
     await expect(page.getByLabel('Clear Bob vice-captain')).toBeVisible();
+  });
+
+  test('shares a lineup-only link and reopens it from the history', async ({
+    page,
+  }) => {
+    await openTab(page, 'Roster');
+    await page.getByLabel('Player name').fill('Ada');
+    await page.getByLabel('Shirt number').fill('10');
+    await page.getByLabel('Player role').selectOption('FWD');
+    await page.getByRole('button', { name: 'Add player' }).click();
+
+    await openTab(page, 'Export');
+    await page.getByLabel('Copy lineup link').click();
+
+    const reopen = page.getByLabel('Reopen My Squad');
+    await expect(reopen).toBeVisible();
+    await expect(page.getByText('Lineup', { exact: true })).toBeVisible();
+    const href = await reopen.getAttribute('href');
+    expect(href).toContain('?squad=');
+
+    await page.goto(href!);
+    await expect(page.getByText('11-a-side · 4-4-2')).toBeVisible();
+    await expect(page.getByLabel('Position ST 9')).toContainText('Ada');
   });
 });

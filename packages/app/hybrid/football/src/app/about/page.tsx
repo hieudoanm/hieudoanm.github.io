@@ -3,7 +3,7 @@ import { NextPage } from 'next';
 
 const AboutPage: NextPage = () => (
   <AboutTemplate
-    name="Football Squad Manager"
+    name="Football Manager"
     description="Pick a formation, assign your squad, and manage your team"
     version="v0.0.1"
     items={[

@@ -31,12 +31,22 @@ export const duplicateSquad = (
       .map((playerId) => idMap.get(playerId))
       .filter((playerId): playerId is string => playerId !== undefined);
   }
+  const lineups = squad.lineups.map((lineup) => {
+    const lineupAssignments: Record<string, string[]> = {};
+    for (const [slotId, playerIds] of Object.entries(lineup.assignments)) {
+      lineupAssignments[slotId] = playerIds
+        .map((playerId) => idMap.get(playerId))
+        .filter((playerId): playerId is string => playerId !== undefined);
+    }
+    return { ...lineup, assignments: lineupAssignments };
+  });
   const copy: Squad = {
     ...squad,
     id: uid(),
     name: `${squad.name} (Copy)`,
     players,
     assignments,
+    lineups,
   };
   const index = library.squads.findIndex((item) => item.id === id);
   const squads = [...library.squads];

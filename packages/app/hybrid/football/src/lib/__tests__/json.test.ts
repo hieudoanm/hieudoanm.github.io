@@ -36,4 +36,34 @@ describe('json', () => {
     );
     expect(imported?.formationId).toBe('442');
   });
+
+  it('exports only starters as JSON', () => {
+    const squad = makeSquad({
+      players: [
+        { id: 'p1', name: 'Ada', number: 10, role: 'MID' },
+        { id: 'p2', name: 'Bob', number: 7, role: 'FWD', bench: true },
+      ],
+      assignments: { '442-1-1': ['p1'], '442-3-9': ['p2'] },
+    });
+    const exported = JSON.parse(exportSquadJson(squad, 'starters'));
+    expect(exported.players.map((p: { name: string }) => p.name)).toEqual([
+      'Ada',
+    ]);
+    expect(exported.assignments).toEqual({ '442-1-1': ['p1'] });
+  });
+
+  it('exports only bench players as JSON', () => {
+    const squad = makeSquad({
+      players: [
+        { id: 'p1', name: 'Ada', number: 10, role: 'MID' },
+        { id: 'p2', name: 'Bob', number: 7, role: 'FWD', bench: true },
+      ],
+      assignments: { '442-1-1': ['p1'], '442-3-9': ['p2'] },
+    });
+    const exported = JSON.parse(exportSquadJson(squad, 'bench'));
+    expect(exported.players.map((p: { name: string }) => p.name)).toEqual([
+      'Bob',
+    ]);
+    expect(exported.assignments).toEqual({ '442-3-9': ['p2'] });
+  });
 });

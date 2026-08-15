@@ -3,6 +3,17 @@ import { newPlayer } from '@/lib/squad';
 
 const CSV_HEADERS = ['Name', 'Number', 'Role', 'Position'] as const;
 
+export type ExportScope = 'all' | 'starters' | 'bench';
+
+export const selectPlayers = (
+  players: Player[],
+  scope: ExportScope
+): Player[] => {
+  if (scope === 'starters') return players.filter((p) => p.bench !== true);
+  if (scope === 'bench') return players.filter((p) => p.bench === true);
+  return players;
+};
+
 const escapeCell = (value: string): string => {
   if (/[",\n\r]/.test(value)) {
     return `"${value.replace(/"/g, '""')}"`;
@@ -10,9 +21,13 @@ const escapeCell = (value: string): string => {
   return value;
 };
 
-export const exportSquadCsv = (players: Player[]): string => {
+export const exportSquadCsv = (
+  players: Player[],
+  scope: ExportScope = 'all'
+): string => {
+  const selected = selectPlayers(players, scope);
   const header = CSV_HEADERS.join(',');
-  const rows = players.map((player) =>
+  const rows = selected.map((player) =>
     [player.name, player.number, player.role, player.position ?? '']
       .map((cell) => escapeCell(String(cell)))
       .join(',')
@@ -148,6 +163,37 @@ export const importSquadCsv = (input: string): CsvImportResult => {
       positionIndex === -1
         ? undefined
         : (cells[positionIndex] ?? '').trim() || undefined;
+    players.push(newPlayer(name, number, role ?? 'FWD', position));
+  }
+  return { players, skipped };
+};
+
+export const importRosterText = (input: string): CsvImportResult => {
+  const rows = parseCsvRows(input).filter((cells) =>
+    cells.some((cell) => cell.trim() !== '')
+  );
+  if (rows.length === 0) return { players: [], skipped: 0 };
+  const isHeaderRow = (cells: string[]): boolean =>
+    cells.some(
+      (cell) =>
+        cell.trim().toLowerCase() === 'name' ||
+        cell.trim().toLowerCase() === 'number' ||
+        cell.trim().toLowerCase() === 'role' ||
+        cell.trim().toLowerCase() === 'position'
+    );
+  const dataRows = rows.filter((cells) => !isHeaderRow(cells));
+  const players: Player[] = [];
+  let skipped = 0;
+  for (const cells of dataRows) {
+    const name = (cells[0] ?? '').trim();
+    const number = Number((cells[1] ?? '').trim());
+    if (name === '' || !Number.isInteger(number) || number <= 0) {
+      skipped += 1;
+      continue;
+    }
+    const role = cells[2] ? roleFromLabel(cells[2]) : null;
+    const position =
+      cells[3] === undefined ? undefined : (cells[3] ?? '').trim() || undefined;
     players.push(newPlayer(name, number, role ?? 'FWD', position));
   }
   return { players, skipped };
