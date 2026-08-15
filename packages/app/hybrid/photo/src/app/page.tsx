@@ -20,6 +20,7 @@ import {
   FiImage,
   FiFolder,
   FiUpload,
+  FiDownload,
 } from 'react-icons/fi';
 import type { ViewMode, SortField } from '@/types';
 
@@ -94,6 +95,9 @@ const HomeContent: FC = () => {
         <div className="flex gap-2">
           <Link href="/albums" className="btn btn-ghost btn-sm">
             <FiFolder className="size-4" /> Albums
+          </Link>
+          <Link href="/downloads" className="btn btn-ghost btn-sm gap-1.5">
+            <FiDownload className="size-4" /> Downloads
           </Link>
           <button
             type="button"

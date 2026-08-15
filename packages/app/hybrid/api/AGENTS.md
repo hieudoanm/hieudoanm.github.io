@@ -18,7 +18,7 @@ Reference docs live in `docs/`:
 - `FC` type for components
 - `@/*` path aliases
 - DaisyUI component classes (`btn`, `input`, `select`, `badge`, `tabs`)
-- Dark theme as default (`data-theme="night"`)
+- Dark theme as default (`data-theme="dim"`)
 - `prettier-plugin-tailwindcss` for class sorting
 - `react-icons/fi` (Feather) for icons
 - Small focused files (≤ 200 lines) and short functions (≤ 30 lines)

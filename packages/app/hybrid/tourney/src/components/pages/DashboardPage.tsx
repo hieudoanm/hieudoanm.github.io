@@ -34,9 +34,14 @@ export const DashboardPage: FC = () => {
       <Header
         title="Tourney"
         action={
-          <Link href="/create" className="btn btn-primary btn-sm">
-            Create
-          </Link>
+          <div className="flex items-center gap-2">
+            <Link href="/downloads" className="btn btn-ghost btn-sm">
+              Downloads
+            </Link>
+            <Link href="/create" className="btn btn-primary btn-sm">
+              Create
+            </Link>
+          </div>
         }
       />
 

@@ -1,12 +1,14 @@
 import {
   EnvironmentVariable,
   HistoryEntry,
-  HttpMethod,
   KeyValue,
   RequestConfig,
   RequestTab,
   ResponseMeta,
+  StoredCookie,
 } from '@/types/api-client';
+import { buildRequestBody, contentTypeFor, FormFiles } from '@/lib/body';
+import { buildCookieHeader } from '@/lib/cookies';
 
 export const uid = (): string => Math.random().toString(36).slice(2, 10);
 
@@ -23,12 +25,18 @@ export const emptyRequest = (): RequestConfig => ({
   params: [newKeyValue()],
   headers: [newKeyValue()],
   body: '',
+  bodyType: 'raw',
+  formData: [newKeyValue()],
+  graphqlQuery: '',
+  graphqlVariables: '',
   authType: 'none',
   token: '',
   username: '',
   password: '',
   timeoutMs: '',
   redirect: 'follow',
+  preRequestScript: '',
+  testScript: '',
 });
 
 export const newTab = (
@@ -57,7 +65,10 @@ export const buildUrl = (url: string, params: KeyValue[]): string => {
   return `${base}${separator}${query}`;
 };
 
-export const buildHeaders = (config: RequestConfig): Record<string, string> => {
+export const buildHeaders = (
+  config: RequestConfig,
+  cookies?: StoredCookie[]
+): Record<string, string> => {
   const headers: Record<string, string> = {};
   if (config.authType === 'bearer' && config.token.trim() !== '') {
     headers.Authorization = `Bearer ${config.token.trim()}`;
@@ -73,22 +84,29 @@ export const buildHeaders = (config: RequestConfig): Record<string, string> => {
       headers[key] = header.value;
     }
   }
+  const cookieHeader = buildCookieHeader(cookies ?? [], config.url);
+  if (cookieHeader && !('Cookie' in headers)) {
+    headers.Cookie = cookieHeader;
+  }
   return headers;
 };
 
-const hasBody = (method: HttpMethod): boolean =>
-  method === 'POST' ||
-  method === 'PUT' ||
-  method === 'PATCH' ||
-  method === 'DELETE';
-
 export const resolveBody = (config: RequestConfig): string | undefined => {
-  if (!hasBody(config.method)) return undefined;
-  const body = config.body.trim();
-  return body === '' ? undefined : body;
+  const body = buildRequestBody(config);
+  return typeof body === 'string' ? body : undefined;
 };
 
 import { substituteConfig } from '@/lib/variables';
+import {
+  expandConfigVars,
+  runPreRequestScript,
+  runTestScript,
+} from '@/lib/scripts';
+
+export interface ExecuteOptions {
+  cookies?: StoredCookie[];
+  files?: FormFiles;
+}
 
 const toHeaderRecord = (headers: Headers): Record<string, string> => {
   const result: Record<string, string> = {};
@@ -100,26 +118,36 @@ const toHeaderRecord = (headers: Headers): Record<string, string> => {
 
 export const executeRequest = async (
   config: RequestConfig,
-  env?: EnvironmentVariable[]
+  env?: EnvironmentVariable[],
+  options: ExecuteOptions = {}
 ): Promise<ResponseMeta> => {
-  const resolved = env ? substituteConfig(config, env) : config;
-  const url = buildUrl(resolved.url, resolved.params);
+  const pre = runPreRequestScript(config, env ?? []);
+  const resolvedEnv = pre.envVars;
+  const substituted = env ? substituteConfig(pre.config, env) : pre.config;
+  const finalConfig = expandConfigVars(substituted, resolvedEnv);
+  const url = buildUrl(finalConfig.url, finalConfig.params);
   const controller = new AbortController();
-  const timeout = Number(resolved.timeoutMs);
+  const timeout = Number(finalConfig.timeoutMs);
   const timer =
     timeout > 0 ? setTimeout(() => controller.abort(), timeout) : undefined;
+  const headers = buildHeaders(finalConfig, options.cookies);
+  const contentType = contentTypeFor(finalConfig);
+  if (contentType && !('Content-Type' in headers)) {
+    headers['Content-Type'] = contentType;
+  }
   try {
     const startedAt = performance.now();
     const response = await fetch(url, {
-      method: resolved.method,
-      headers: buildHeaders(resolved),
-      body: resolveBody(resolved),
-      redirect: resolved.redirect,
+      method: finalConfig.method,
+      headers,
+      body: buildRequestBody(finalConfig, options.files) as
+        BodyInit | undefined,
+      redirect: finalConfig.redirect,
       signal: controller.signal,
     });
     const timeMs = Math.round(performance.now() - startedAt);
     const body = await response.text();
-    return {
+    const meta: ResponseMeta = {
       status: response.status,
       statusText: response.statusText,
       url: response.url,
@@ -127,7 +155,15 @@ export const executeRequest = async (
       body,
       timeMs,
       sizeBytes: new Blob([body]).size,
+      scriptLogs: pre.logs,
     };
+    if (config.testScript.trim() !== '') {
+      const tests = runTestScript(config, meta, resolvedEnv);
+      meta.testResults = tests.results;
+      meta.scriptLogs = [...pre.logs, ...tests.logs];
+      meta.testError = tests.error;
+    }
+    return meta;
   } finally {
     if (timer) clearTimeout(timer);
   }

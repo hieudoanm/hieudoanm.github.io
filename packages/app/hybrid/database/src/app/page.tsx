@@ -15,6 +15,7 @@ import {
   FiEdit2,
   FiSearch,
   FiBookOpen,
+  FiDownload,
 } from 'react-icons/fi';
 
 const HomeContent: FC = () => {
@@ -46,6 +47,9 @@ const HomeContent: FC = () => {
         <div className="flex items-center gap-3">
           <Link href="/posts" className="btn btn-ghost btn-sm gap-2">
             <FiBookOpen className="size-4" /> Schema Library
+          </Link>
+          <Link href="/downloads" className="btn btn-ghost btn-sm gap-2">
+            <FiDownload className="size-4" /> Downloads
           </Link>
           <button
             type="button"

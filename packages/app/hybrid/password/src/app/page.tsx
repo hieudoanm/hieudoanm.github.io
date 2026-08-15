@@ -17,7 +17,13 @@ import {
   type SortKey,
   type DateFilter,
 } from '@/components/organisms/VaultToolbar';
-import { FiFolderPlus, FiPlus, FiShare2, FiTrash2 } from 'react-icons/fi';
+import {
+  FiDownload,
+  FiFolderPlus,
+  FiPlus,
+  FiShare2,
+  FiTrash2,
+} from 'react-icons/fi';
 import type { Folder, VaultItem, VaultItemType } from '@/types';
 
 type SidebarFilter = 'all' | 'favorites' | 'shared' | VaultItemType;
@@ -192,6 +198,9 @@ const HomeContent: FC = () => {
           </Link>
           <Link href="/health" className="btn btn-ghost btn-sm">
             Health
+          </Link>
+          <Link href="/downloads" className="btn btn-ghost btn-sm gap-1.5">
+            <FiDownload className="size-4" /> Downloads
           </Link>
           <button
             type="button"

@@ -2,7 +2,14 @@
 
 import Link from 'next/link';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { LuInfo, LuRedo, LuRotateCcw, LuTag, LuUndo } from 'react-icons/lu';
+import {
+  LuDownload,
+  LuInfo,
+  LuRedo,
+  LuRotateCcw,
+  LuTag,
+  LuUndo,
+} from 'react-icons/lu';
 import { ThemeToggle } from '../components/app/ThemeToggle';
 import { DataPanel } from '../components/resume/data/DataPanel';
 import { EditorPanel } from '../components/resume/editor/EditorPanel';
@@ -128,6 +135,10 @@ const HomePage = () => {
             Reset
           </button>
           <ThemeToggle />
+          <Link href="/downloads/" className="btn btn-ghost btn-sm">
+            <LuDownload />
+            Downloads
+          </Link>
           <Link href="/version/" className="btn btn-ghost btn-sm">
             <LuTag />
             Version

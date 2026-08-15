@@ -6,7 +6,7 @@ import { Providers } from '@/providers/Providers';
 import { useData } from '@/providers/DataProvider';
 import { formatRelativeTime } from '@/utils/format';
 import { useToast } from '@/providers/ToastProvider';
-import { FiPlus, FiStar, FiTrash2, FiLayout } from 'react-icons/fi';
+import { FiPlus, FiStar, FiTrash2, FiLayout, FiDownload } from 'react-icons/fi';
 import { mockTemplates } from '@/data/models';
 
 const HomeContent: FC = () => {
@@ -70,12 +70,17 @@ const HomeContent: FC = () => {
     <div className="bg-base-100 min-h-screen">
       <header className="border-base-300 bg-base-100 sticky top-0 z-10 flex items-center justify-between border-b px-6 py-4">
         <h1 className="text-xl font-bold">Projects</h1>
-        <button
-          type="button"
-          onClick={() => setShowCreate(true)}
-          className="btn btn-primary btn-sm">
-          <FiPlus className="size-4" /> New Board
-        </button>
+        <div className="flex gap-2">
+          <Link href="/downloads" className="btn btn-ghost btn-sm gap-1.5">
+            <FiDownload className="size-4" /> Downloads
+          </Link>
+          <button
+            type="button"
+            onClick={() => setShowCreate(true)}
+            className="btn btn-primary btn-sm">
+            <FiPlus className="size-4" /> New Board
+          </button>
+        </div>
       </header>
       <main className="mx-auto max-w-5xl p-6">
         {isLoading ? (

@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { FiDownload } from 'react-icons/fi';
 
 export default function Home() {
   return (
@@ -10,9 +11,14 @@ export default function Home() {
         Browser-based video and audio processing tools — convert, edit, extract,
         download.
       </p>
-      <Link href="/tools" className="btn btn-primary">
-        Open Tools
-      </Link>
+      <div className="flex flex-wrap items-center justify-center gap-3">
+        <Link href="/tools" className="btn btn-primary">
+          Open Tools
+        </Link>
+        <Link href="/downloads" className="btn btn-ghost gap-1.5">
+          <FiDownload className="size-4" /> Downloads
+        </Link>
+      </div>
     </div>
   );
 }

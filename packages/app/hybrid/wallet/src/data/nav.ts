@@ -22,6 +22,7 @@ import {
   FiTarget,
   FiShield,
   FiGift,
+  FiDownload,
 } from 'react-icons/fi';
 
 export interface NavItem {
@@ -98,6 +99,7 @@ export const navGroups: NavGroup[] = [
       { label: 'Notifications', href: '/notifications', icon: FiBell },
       { label: 'Profile', href: '/profile', icon: FiUser },
       { label: 'Settings', href: '/settings', icon: FiSettings },
+      { label: 'Downloads', href: '/downloads', icon: FiDownload },
     ],
   },
 ];

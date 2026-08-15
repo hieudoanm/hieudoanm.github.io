@@ -34,6 +34,42 @@ describe('RequestTabs', () => {
     expect(screen.getByLabelText('Request body')).toBeInTheDocument();
   });
 
+  it('shows the form data editor for form bodies', () => {
+    const request = { ...emptyRequest(), bodyType: 'form' as const };
+    render(<RequestTabs request={request} onChange={onChange} />);
+    fireEvent.click(screen.getByText('Body'));
+    expect(screen.getByText('Add field')).toBeInTheDocument();
+  });
+
+  it('shows the graphql editor for graphql bodies', () => {
+    const request = { ...emptyRequest(), bodyType: 'graphql' as const };
+    render(<RequestTabs request={request} onChange={onChange} />);
+    fireEvent.click(screen.getByText('Body'));
+    expect(screen.getByLabelText('GraphQL query')).toBeInTheDocument();
+  });
+
+  it('passes file changes from the body editor', () => {
+    const onFilesChange = jest.fn();
+    const request = {
+      ...emptyRequest(),
+      bodyType: 'form' as const,
+      formData: [{ id: '1', key: 'f', value: '', enabled: true }],
+    };
+    render(
+      <RequestTabs
+        request={request}
+        onChange={onChange}
+        onFilesChange={onFilesChange}
+      />
+    );
+    fireEvent.click(screen.getByText('Body'));
+    const file = new File(['abc'], 'data.txt', { type: 'text/plain' });
+    fireEvent.change(screen.getAllByLabelText('Attach file')[0], {
+      target: { files: [file] },
+    });
+    expect(onFilesChange).toHaveBeenCalledWith({ '1': file });
+  });
+
   it('switches to auth editor', () => {
     render(<RequestTabs request={emptyRequest()} onChange={onChange} />);
     fireEvent.click(screen.getByText('Auth'));

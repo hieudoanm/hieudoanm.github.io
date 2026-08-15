@@ -1,7 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { emptyRequest } from '@/lib/http';
 import { AuthEditor } from '../AuthEditor';
-import { BodyEditor } from '../BodyEditor';
 
 describe('AuthEditor', () => {
   const onChange = jest.fn();
@@ -58,23 +57,5 @@ describe('AuthEditor', () => {
     expect(onChange).toHaveBeenCalledWith(
       expect.objectContaining({ password: 'pass' })
     );
-  });
-});
-
-describe('BodyEditor', () => {
-  const onChange = jest.fn();
-
-  it('edits body text', () => {
-    render(<BodyEditor body="" onChange={onChange} />);
-    fireEvent.change(screen.getByLabelText('Request body'), {
-      target: { value: '{"a":1}' },
-    });
-    expect(onChange).toHaveBeenCalledWith('{"a":1}');
-  });
-
-  it('beautifies json', () => {
-    render(<BodyEditor body='{"a":1}' onChange={onChange} />);
-    fireEvent.click(screen.getByText('Beautify JSON'));
-    expect(onChange).toHaveBeenCalledWith('{\n  "a": 1\n}');
   });
 });

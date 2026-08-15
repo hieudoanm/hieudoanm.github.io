@@ -1,6 +1,7 @@
 'use client';
 
 import { type FC, useState, useEffect } from 'react';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { Providers } from '@/providers/Providers';
 import { useData } from '@/providers/DataProvider';
@@ -17,6 +18,7 @@ import {
   FiLayout,
   FiStar,
   FiFolder,
+  FiDownload,
 } from 'react-icons/fi';
 
 const HomePageContent: FC = () => {
@@ -85,6 +87,10 @@ const HomePageContent: FC = () => {
           <h1 className="text-xl font-bold">SVG Library</h1>
         </div>
         <div className="flex gap-2">
+          <Link href="/downloads" className="btn btn-outline btn-sm">
+            <FiDownload className="size-4" />
+            Downloads
+          </Link>
           <button
             type="button"
             onClick={() => setShowTemplateModal(true)}

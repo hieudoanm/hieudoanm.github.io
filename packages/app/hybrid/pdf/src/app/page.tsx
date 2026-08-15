@@ -13,6 +13,7 @@ import {
   FiTrash2,
   FiEdit2,
   FiCheck,
+  FiDownload,
   FiX,
 } from 'react-icons/fi';
 import { Providers } from '@/providers/Providers';
@@ -496,6 +497,9 @@ const DocumentLibrary: FC = () => {
           </Link>
           <Link href="/profile" className="btn btn-ghost btn-sm">
             Profile
+          </Link>
+          <Link href="/downloads" className="btn btn-ghost btn-sm gap-1.5">
+            <FiDownload className="size-4" /> Downloads
           </Link>
         </div>
       </div>

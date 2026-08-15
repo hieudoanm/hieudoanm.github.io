@@ -19,7 +19,7 @@ describe('RootLayout', () => {
         <main>hello page</main>
       </RootLayout>
     );
-    expect(document.documentElement).toHaveAttribute('data-theme', 'nothing');
+    expect(document.documentElement).toHaveAttribute('data-theme', 'dim');
     expect(screen.getByText('hello page')).toBeInTheDocument();
   });
 });

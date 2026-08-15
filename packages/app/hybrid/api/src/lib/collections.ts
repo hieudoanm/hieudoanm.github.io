@@ -2,6 +2,7 @@ import {
   CollectionEntry,
   RequestCollection,
   RequestConfig,
+  RequestExample,
   RequestGroup,
 } from '@/types/api-client';
 
@@ -98,3 +99,48 @@ export const saveCollections = (collections: RequestCollection[]): void => {
     // storage full or unavailable — ignore
   }
 };
+
+export const upsertExample = (
+  collection: RequestCollection,
+  entryId: string,
+  example: RequestExample
+): RequestCollection => ({
+  ...collection,
+  groups: collection.groups.map((group) => ({
+    ...group,
+    entries: group.entries.map((entry) =>
+      entry.id === entryId
+        ? {
+            ...entry,
+            examples: [
+              ...(entry.examples ?? []).filter(
+                (item) => item.id !== example.id
+              ),
+              example,
+            ],
+          }
+        : entry
+    ),
+  })),
+});
+
+export const removeExample = (
+  collection: RequestCollection,
+  entryId: string,
+  exampleId: string
+): RequestCollection => ({
+  ...collection,
+  groups: collection.groups.map((group) => ({
+    ...group,
+    entries: group.entries.map((entry) =>
+      entry.id === entryId
+        ? {
+            ...entry,
+            examples: (entry.examples ?? []).filter(
+              (item) => item.id !== exampleId
+            ),
+          }
+        : entry
+    ),
+  })),
+});

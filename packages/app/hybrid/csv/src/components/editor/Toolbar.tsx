@@ -1,6 +1,7 @@
 'use client';
 
 import { FC, useRef } from 'react';
+import Link from 'next/link';
 import {
   FiAlignCenter,
   FiAlignLeft,
@@ -258,6 +259,10 @@ const Toolbar: FC<ToolbarProps> = ({
         aria-label="Keyboard shortcuts">
         <FiHelpCircle />
       </button>
+      <Link href="/downloads" className={buttonClass} aria-label="Downloads">
+        <FiDownload />
+        Downloads
+      </Link>
     </div>
   );
 };

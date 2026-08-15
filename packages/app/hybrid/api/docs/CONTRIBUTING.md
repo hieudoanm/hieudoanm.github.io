@@ -95,7 +95,7 @@ every change.
 
 1. Use Tailwind utility classes; compose, don't write custom CSS.
 2. Use DaisyUI component classes (`btn`, `card`, `badge`, `input`).
-3. Dark theme is the default (`data-theme="night"`).
+3. Dark theme is the default (`data-theme="dim"`).
 4. `prettier-plugin-tailwindcss` sorts classes — keep class order consistent.
 5. Use `react-icons` Feather (`Fi`) set for icons.
 

@@ -263,6 +263,61 @@ describe('ApiClient', () => {
     );
   });
 
+  it('switches between realtime protocol panels', () => {
+    render(<ApiClient />);
+    fireEvent.click(screen.getByRole('button', { name: 'WS' }));
+    expect(screen.getByLabelText('WebSocket URL')).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole('button', { name: 'gRPC' }));
+    expect(screen.getByLabelText('Proto source')).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole('button', { name: 'MQTT' }));
+    expect(screen.getByLabelText('MQTT broker URL')).toBeInTheDocument();
+    expect(screen.getByText('Disconnected')).toBeInTheDocument();
+  });
+
+  it('runs a saved collection from the runner tab', async () => {
+    render(<ApiClient />);
+    fireEvent.change(screen.getByLabelText('Sidebar section'), {
+      target: { value: 'collections' },
+    });
+    fireEvent.change(screen.getByLabelText('Request URL'), {
+      target: { value: 'https://api.example.com/users' },
+    });
+    fireEvent.change(screen.getByLabelText('Collection entry name'), {
+      target: { value: 'List users' },
+    });
+    fireEvent.click(screen.getByText('Save'));
+
+    fireEvent.change(screen.getByLabelText('Sidebar section'), {
+      target: { value: 'runner' },
+    });
+    expect(screen.getByText('My Collection')).toBeInTheDocument();
+    fireEvent.click(screen.getByText('Run'));
+
+    expect(await screen.findByText('1/1 passed')).toBeInTheDocument();
+  });
+
+  it('designs documentation from a saved collection', async () => {
+    render(<ApiClient />);
+    fireEvent.change(screen.getByLabelText('Sidebar section'), {
+      target: { value: 'collections' },
+    });
+    fireEvent.change(screen.getByLabelText('Request URL'), {
+      target: { value: 'https://api.example.com/users' },
+    });
+    fireEvent.change(screen.getByLabelText('Collection entry name'), {
+      target: { value: 'List users' },
+    });
+    fireEvent.click(screen.getByText('Save'));
+
+    fireEvent.change(screen.getByLabelText('Sidebar section'), {
+      target: { value: 'design' },
+    });
+    expect(screen.getByText('Mock server')).toBeInTheDocument();
+    expect(screen.getByTitle('API documentation preview')).toBeInTheDocument();
+  });
+
   it('diffs the response against the previous one', async () => {
     let call = 0;
     global.fetch = jest.fn().mockImplementation(

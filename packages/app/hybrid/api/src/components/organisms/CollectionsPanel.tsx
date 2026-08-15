@@ -4,7 +4,12 @@ import { saveEntry } from '@/lib/collections';
 import { openApiToCollection } from '@/lib/openapi';
 import { METHOD_COLORS } from '@/lib/format';
 import { readTextFile } from '@/lib/request-file';
-import { RequestCollection, RequestConfig } from '@/types/api-client';
+import { ExamplesEditor } from '@/components/molecules/ExamplesEditor';
+import {
+  RequestCollection,
+  RequestConfig,
+  ResponseMeta,
+} from '@/types/api-client';
 import { type ChangeEvent, type FC, useState } from 'react';
 import { FiFolder, FiPlus, FiTrash2, FiUpload } from 'react-icons/fi';
 
@@ -12,6 +17,7 @@ interface CollectionsPanelProps {
   collections: RequestCollection[];
   request: RequestConfig;
   activeEntryId: string | null;
+  response?: ResponseMeta | null;
   onLoad: (request: RequestConfig, entryId: string) => void;
   onUpdate: (next: RequestCollection[]) => void;
 }
@@ -23,6 +29,7 @@ export const CollectionsPanel: FC<CollectionsPanelProps> = ({
   collections,
   request,
   activeEntryId,
+  response,
   onLoad,
   onUpdate,
 }) => {
@@ -286,6 +293,13 @@ export const CollectionsPanel: FC<CollectionsPanelProps> = ({
           </li>
         ))}
       </ul>
+
+      <ExamplesEditor
+        collections={collections}
+        entryId={activeEntryId}
+        response={response ?? null}
+        onUpdate={onUpdate}
+      />
     </div>
   );
 };

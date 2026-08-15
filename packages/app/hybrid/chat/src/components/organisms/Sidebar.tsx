@@ -9,6 +9,7 @@ import {
   FiMessageSquare,
   FiArchive,
   FiFolder,
+  FiDownload,
   FiX,
 } from 'react-icons/fi';
 import { useData } from '@/providers/DataProvider';
@@ -183,6 +184,14 @@ export const Sidebar: FC<SidebarProps> = ({ isOpen, onClose }) => {
               </div>
             ))}
           </div>
+        </div>
+        <div className="border-base-300 border-t p-3">
+          <Link
+            href="/downloads"
+            className="btn btn-ghost btn-sm w-full justify-start gap-1.5">
+            <FiDownload className="size-4" />
+            Downloads
+          </Link>
         </div>
       </aside>
     </>

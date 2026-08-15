@@ -85,8 +85,8 @@
 
 ## Phase 7 — Ratings & Stats Depth
 
-- [ ] More rating systems — USCF, Glicko-2, DWZ (lib support in `@chess/ts`,
-      not wired into UI)
+- [ ] More rating systems — USCF, Glicko-2, DWZ (lib support in `@chess/ts`, not
+      wired into UI)
 - [ ] Expected score and win probability display in Elo
 - [ ] K-factor presets (FIDE, USCF, age, games)
 - [ ] Rating history chart

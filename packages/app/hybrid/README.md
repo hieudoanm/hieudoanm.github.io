@@ -10,28 +10,32 @@
 
 ## Applications
 
-| No  | ID          | App         | Type       | Description                       | Back-end | Roadmap      | Status |
-| --- | ----------- | ----------- | ---------- | --------------------------------- | -------- | ------------ | ------ |
-| 01  | api         | API         | Tools      | Postman / Insomnia / Bruno        | Optional | 19/19 · 100% | DONE   |
-| 02  | diagram     | Diagram     | Editor     | Diagram Editor                    | No       | 39/41 · 95%  | DONE   |
-| 03  | svg         | SVG         | Editor     | Adobe Illustrator / CorelDRAW     | No       | 60/66 · 91%  | DONE   |
-| 04  | projects    | Projects    | Management | Atlassian Trello / Kanban         | Required | 52/59 · 88%  | DONE   |
-| 05  | database    | Database    | Editor     | pgAdmin / DBeaver for SQLite only | No       | 47/54 · 87%  | DONE   |
-| 06  | pdf         | PDF         | Editor     | Adobe Acrobat PDF                 | No       | 52/60 · 87%  | DONE   |
-| 07  | password    | Password    | Management | BitWarden / 1Password             | Required | 51/59 · 86%  | DONE   |
-| 08  | tourney     | Touraments  | Management | Swiss Manager                     | No       | 47/55 · 85%  | DONE   |
-| 09  | boilerplate | Boilerplate | Design     | Nextjs + Tauri (Foundation)       | Optional | 37/46 · 80%  | DONE   |
-| 10  | csv         | CSV         | Editor     | Excel / Google Sheets             | No       | 27/34 · 79%  | DONE   |
-| 11  | chess       | Chess       | Tools      | chess.com / lichess.org           | No       | 42/56 · 75%  | DONE   |
-| 12  | brainbow    | Brainbow    | Tools      | All-in-one Brainbow Software      | No       | 51/84 · 61%  | DONE   |
-| 13  | wallet      | Wallet      | Management | Momo / Techcombank                | Required | 47/80 · 59%  | DONE   |
-| 14  | resume      | Resume      | Editor     | Resume Builer                     | No       | 19/33 · 58%  | DONE   |
-| 15  | photo       | Photo       | Editor     | Adobe Photoshop                   | No       | 31/62 · 50%  | DONE   |
-| 16  | markdown    | Markdown    | Editor     | Obsidian                          | No       | 17/34 · 50%  | DONE   |
-| 17  | chat        | Chat        | Tools      | Chat like Codex / Claude          | Required | 26/59 · 44%  | DONE   |
-| 18  | docs        | Docs        | Tools      | TinyWow                           | No       | 13/31 · 42%  | DONE   |
-| 19  | code        | Code        | Editor     | VSCode / Zed                      | No       | 23/57 · 40%  | DONE   |
-| 20  | video       | Video       | Editor     | CapCut                            | No       | 4/53 · 8%    | DONE   |
+| No  | ID          | App         | Type       | Description                       | Back-end | Roadmap     | Status |
+| --- | ----------- | ----------- | ---------- | --------------------------------- | -------- | ----------- | ------ |
+| 01  | diagram     | Diagram     | Editor     | Diagram Editor                    | No       | 39/41 · 95% | DONE   |
+| 02  | svg         | SVG         | Editor     | Adobe Illustrator / CorelDRAW     | No       | 60/66 · 91% | DONE   |
+| 03  | projects    | Projects    | Management | Atlassian Trello / Kanban         | Required | 52/59 · 88% | DONE   |
+| 04  | database    | Database    | Editor     | pgAdmin / DBeaver for SQLite only | No       | 47/54 · 87% | DONE   |
+| 05  | pdf         | PDF         | Editor     | Adobe Acrobat PDF                 | No       | 52/60 · 87% | DONE   |
+| 06  | password    | Password    | Management | BitWarden / 1Password             | Required | 51/59 · 86% | DONE   |
+| 07  | tourney     | Touraments  | Management | Football Cup / Swiss Manager      | No       | 47/55 · 85% | DONE   |
+| 08  | boilerplate | Boilerplate | Design     | Nextjs + Tauri (Foundation)       | Optional | 37/46 · 80% | DONE   |
+| 09  | csv         | CSV         | Editor     | Excel / Google Sheets             | No       | 27/34 · 79% | DONE   |
+| 10  | chess       | Chess       | Tools      | chess.com / lichess.org           | No       | 42/56 · 75% | DONE   |
+| 11  | brainbow    | Brainbow    | Tools      | All-in-one Brainbow Software      | No       | 51/84 · 61% | DONE   |
+| 12  | wallet      | Wallet      | Management | Momo / Techcombank                | Required | 47/80 · 59% | DONE   |
+| 13  | resume      | Resume      | Editor     | Resume Builer                     | No       | 19/33 · 58% | DONE   |
+| 14  | photo       | Photo       | Editor     | Adobe Photoshop                   | No       | 31/62 · 50% | DONE   |
+| 15  | markdown    | Markdown    | Editor     | Obsidian                          | No       | 17/34 · 50% | DONE   |
+| 16  | chat        | Chat        | Tools      | Chat like Codex / Claude          | Required | 26/59 · 44% | DONE   |
+| 17  | docs        | Docs        | Tools      | TinyWow                           | No       | 13/31 · 42% | DONE   |
+| 18  | code        | Code        | Editor     | VSCode / Zed                      | No       | 23/57 · 40% | DONE   |
+| 19  | api         | API         | Tools      | Postman / Insomnia / Bruno        | Optional | 19/52 · 37% | DONE   |
+| 20  | video       | Video       | Editor     | CapCut                            | No       | 4/53 · 8%   | DONE   |
+| 21  | football    | Football    | Editor     | Football Formation / Analysis     | No       |             | PLAN   |
+| 22  |             |             |            |                                   |          |             | PLAN   |
+| 23  |             |             |            |                                   |          |             | PLAN   |
+| 24  |             |             |            |                                   |          |             | PLAN   |
 
 ## Techstack
 

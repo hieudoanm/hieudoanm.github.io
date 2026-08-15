@@ -14,6 +14,9 @@ const HomePage: NextPage = () => (
           <Link href="/about" className="btn btn-ghost btn-xs">
             About
           </Link>
+          <Link href="/downloads" className="btn btn-ghost btn-xs">
+            Downloads
+          </Link>
           <Link href="/settings" className="btn btn-ghost btn-xs">
             Settings
           </Link>

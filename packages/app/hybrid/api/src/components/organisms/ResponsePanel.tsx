@@ -1,6 +1,7 @@
 'use client';
 
 import { StatusBadge } from '@/components/atoms/StatusBadge';
+import { SchemaCheck } from '@/components/molecules/SchemaCheck';
 import { copyText } from '@/lib/clipboard';
 import { diffLines } from '@/lib/diff';
 import { formatBytes, formatMs, prettyPrint, previewKind } from '@/lib/format';
@@ -190,9 +191,12 @@ export const ResponsePanel: FC<ResponsePanelProps> = ({
           )}
         </div>
       ) : (
-        <pre className="bg-base-200 overflow-x-auto rounded-lg p-3 font-mono text-sm break-all whitespace-pre-wrap">
-          {prettyPrint(response.body)}
-        </pre>
+        <>
+          <pre className="bg-base-200 overflow-x-auto rounded-lg p-3 font-mono text-sm break-all whitespace-pre-wrap">
+            {prettyPrint(response.body)}
+          </pre>
+          {kind === 'json' && <SchemaCheck body={response.body} />}
+        </>
       )}
     </div>
   );

@@ -2,6 +2,7 @@ import { emptyRequest } from '@/lib/http';
 import {
   jsonToRequest,
   readRequestFile,
+  readTextFile,
   requestToJson,
 } from '@/lib/request-file';
 
@@ -53,5 +54,23 @@ describe('readRequestFile', () => {
       type: 'application/json',
     });
     expect(await readRequestFile(file)).toBeNull();
+  });
+
+  it('reads an empty string when the reader result is null', async () => {
+    class MockReader {
+      result: string | null = null;
+      onload: (() => void) | null = null;
+      onerror: (() => void) | null = null;
+      readAsText = (): void => {
+        this.onload?.();
+      };
+    }
+    const original = global.FileReader;
+    global.FileReader = MockReader as unknown as typeof FileReader;
+    try {
+      expect(await readTextFile(new File(['x'], 'x.txt'))).toBe('');
+    } finally {
+      global.FileReader = original;
+    }
   });
 });

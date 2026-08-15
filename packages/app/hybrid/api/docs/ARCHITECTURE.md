@@ -30,11 +30,14 @@ src/
 ├── server/           # REST route registry + handlers
 ├── components/       # Atomic design components
 │   ├── atoms/        # MethodSelect, UrlInput, SendButton, KeyValueRow, StatusBadge
-│   ├── molecules/    # RequestComposer, KeyValueEditor, BodyEditor, AuthEditor
-│   ├── organisms/    # ApiClient, RequestTabs, ResponsePanel, HistoryList
+│   ├── molecules/    # RequestComposer, KeyValueEditor, BodyEditor, AuthEditor,
+│   │                 # FormDataEditor, GraphQlEditor, CookieEditor, ProtocolSwitch
+│   ├── organisms/    # ApiClient, RequestTabs, ResponsePanel, HistoryList,
+│   │                 # WebSocketPanel, GrpcPanel, MqttPanel
 │   └── templates/    # AboutTemplate, VersionTemplate, ErrorTemplate, PageTransition
 ├── hooks/            # Custom React hooks
-├── lib/              # http.ts (execution + history), format.ts (display helpers)
+├── lib/              # http.ts (execution + history), body.ts, cookies.ts, format.ts,
+│                     # graphql.ts, mqtt.ts, proto.ts, websocket.ts
 ├── providers/        # SWProvider (service worker)
 ├── styles/           # Global CSS (Tailwind base layer)
 └── types/            # TypeScript interfaces (api-client.ts)
@@ -48,9 +51,11 @@ src/
 ├─────────────────────────────────────────┤
 │  Templates (components/templates/)      │  Page-level layout shells
 ├─────────────────────────────────────────┤
-│  Organisms (components/organisms/)      │  ApiClient, RequestTabs, ResponsePanel
+│  Organisms (components/organisms/)      │  ApiClient, RequestTabs, ResponsePanel,
+│                                         │  WebSocketPanel, GrpcPanel, MqttPanel
 ├─────────────────────────────────────────┤
-│  Molecules (components/molecules/)      │  RequestComposer, KeyValueEditor, AuthEditor
+│  Molecules (components/molecules/)      │  RequestComposer, KeyValueEditor, AuthEditor,
+│                                         │  FormDataEditor, GraphQlEditor, CookieEditor
 ├─────────────────────────────────────────┤
 │  Atoms (components/atoms/)              │  MethodSelect, UrlInput, SendButton, StatusBadge
 ├─────────────────────────────────────────┤
@@ -109,7 +114,7 @@ Flat routes only — no dynamic `[id]` or `[slug]` segments.
 
 - **Tailwind CSS 4** with `@tailwindcss/postcss` plugin
 - **DaisyUI 5** for component classes (`btn`, `card`, `modal`, `badge`, `tabs`)
-- **Dark mode** via `data-theme="night"` on `<html>`
+- **Dark mode** via `data-theme="dim"` on `<html>`
 - **32 themes** available, persisted to localStorage
 - **Global base styles** in `src/styles/globals.css` — headings, links, code,
   tables, forms

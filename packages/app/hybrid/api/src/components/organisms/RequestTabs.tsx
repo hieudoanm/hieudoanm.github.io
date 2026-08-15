@@ -5,6 +5,7 @@ import { BodyEditor } from '@/components/molecules/BodyEditor';
 import { CodegenPanel } from '@/components/molecules/CodegenPanel';
 import { ConfigEditor } from '@/components/molecules/ConfigEditor';
 import { EnvVariablesEditor } from '@/components/molecules/EnvVariablesEditor';
+import { FormFiles } from '@/lib/body';
 import { KeyValueEditor } from '@/components/molecules/KeyValueEditor';
 import { EnvironmentVariable, RequestConfig } from '@/types/api-client';
 import { type FC, useState } from 'react';
@@ -26,6 +27,8 @@ interface RequestTabsProps {
   onChange: (next: RequestConfig) => void;
   env?: EnvironmentVariable[];
   onEnvChange?: (next: EnvironmentVariable[]) => void;
+  files?: FormFiles;
+  onFilesChange?: (next: FormFiles) => void;
 }
 
 export const RequestTabs: FC<RequestTabsProps> = ({
@@ -33,6 +36,8 @@ export const RequestTabs: FC<RequestTabsProps> = ({
   onChange,
   env = [],
   onEnvChange = () => undefined,
+  files,
+  onFilesChange = () => undefined,
 }) => {
   const [active, setActive] = useState<TabId>('params');
 
@@ -69,8 +74,11 @@ export const RequestTabs: FC<RequestTabsProps> = ({
 
       {active === 'body' && (
         <BodyEditor
-          body={request.body}
-          onChange={(body) => onChange({ ...request, body })}
+          request={request}
+          env={env}
+          files={files}
+          onChange={onChange}
+          onFilesChange={onFilesChange}
         />
       )}
 

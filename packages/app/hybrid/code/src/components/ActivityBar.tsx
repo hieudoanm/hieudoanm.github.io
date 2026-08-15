@@ -1,9 +1,11 @@
 import { type FC } from 'react';
+import Link from 'next/link';
 import {
   LuFolderOpen,
   LuSearch,
   LuPalette,
   LuFolderClosed,
+  LuDownload,
 } from 'react-icons/lu';
 
 type SidebarState = 'closed' | 'explorer' | 'search';
@@ -47,5 +49,11 @@ export const ActivityBar: FC<ActivityBarProps> = ({
       <LuPalette className="h-5 w-5" />
     </button>
     <div className="flex-1" />
+    <Link
+      href="/downloads"
+      className="btn btn-ghost btn-square btn-sm text-base-content/60"
+      title="Downloads">
+      <LuDownload className="h-5 w-5" />
+    </Link>
   </div>
 );

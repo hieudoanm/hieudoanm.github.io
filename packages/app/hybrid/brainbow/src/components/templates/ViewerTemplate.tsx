@@ -1,7 +1,8 @@
 'use client';
 
 import type { FC } from 'react';
-import { FiClock, FiImage } from 'react-icons/fi';
+import Link from 'next/link';
+import { FiClock, FiDownload, FiImage } from 'react-icons/fi';
 import { AnnotatorCanvas } from '@/components/organisms/AnnotatorCanvas';
 import { ViewerSidebar } from '@/components/organisms/ViewerSidebar';
 import { ToolPalette } from '@/components/molecules/ToolPalette';
@@ -193,6 +194,13 @@ export const ViewerTemplate: FC<ViewerTemplateProps> = ({
           <FiClock />
           History
         </Button>
+        <Link
+          href="/downloads"
+          className="btn btn-outline btn-sm"
+          aria-label="Downloads">
+          <FiDownload />
+          Downloads
+        </Link>
       </header>
 
       {stackSliceCount > 1 ? (

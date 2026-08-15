@@ -14,14 +14,25 @@ import {
   saveTabs,
 } from '@/lib/http';
 import { loadCollections, saveCollections } from '@/lib/collections';
+import { tryMock } from '@/lib/mock';
 import { loadEnvironment, saveEnvironment } from '@/lib/variables';
+import {
+  loadCookies,
+  mergeCookies,
+  parseSetCookies,
+  saveCookies,
+  setCookieLines,
+} from '@/lib/cookies';
+import { FormFiles } from '@/lib/body';
 import {
   EnvironmentVariable,
   HistoryEntry,
   RequestCollection,
   RequestConfig,
+  RequestProtocol,
   RequestTab,
   ResponseMeta,
+  StoredCookie,
 } from '@/types/api-client';
 
 export interface UseApiClient {
@@ -31,12 +42,16 @@ export interface UseApiClient {
   history: HistoryEntry[];
   collections: RequestCollection[];
   env: EnvironmentVariable[];
+  cookies: StoredCookie[];
+  protocol: RequestProtocol;
   response: ResponseMeta | null;
   prevResponse: ResponseMeta | null;
   loading: boolean;
   error: string | null;
-  sidebarTab: 'history' | 'collections';
+  files: FormFiles;
+  sidebarTab: 'history' | 'collections' | 'runner' | 'design';
   showSidebar: boolean;
+  mockEnabled: boolean;
   activeEntryId: string | null;
   onRequestChange: (next: RequestConfig) => void;
   onAddTab: () => void;
@@ -46,9 +61,13 @@ export interface UseApiClient {
   onSelectHistory: (entry: HistoryEntry) => void;
   onClearHistory: () => void;
   onEnvChange: (next: EnvironmentVariable[]) => void;
+  onCookieChange: (next: StoredCookie[]) => void;
+  onProtocolChange: (protocol: RequestProtocol) => void;
+  onFilesChange: (files: FormFiles) => void;
   onCollectionsChange: (next: RequestCollection[]) => void;
   onLoadCollectionEntry: (request: RequestConfig, entryId: string) => void;
-  onSidebarTab: (tab: 'history' | 'collections') => void;
+  onSidebarTab: (tab: 'history' | 'collections' | 'runner' | 'design') => void;
+  onMockToggle: () => void;
   onToggleSidebar: () => void;
 }
 
@@ -65,14 +84,19 @@ export const useApiClient = (): UseApiClient => {
   const [collections, setCollections] =
     useState<RequestCollection[]>(loadCollections);
   const [env, setEnv] = useState<EnvironmentVariable[]>(loadEnvironment);
+  const [cookies, setCookies] = useState<StoredCookie[]>(loadCookies);
+  const [protocol, setProtocol] = useState<RequestProtocol>('http');
+  const [files, setFiles] = useState<FormFiles>({});
+  const filesRef = useRef<FormFiles>({});
   const [response, setResponse] = useState<ResponseMeta | null>(null);
   const [prevResponse, setPrevResponse] = useState<ResponseMeta | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [activeEntryId, setActiveEntryId] = useState<string | null>(null);
-  const [sidebarTab, setSidebarTab] = useState<'history' | 'collections'>(
-    'history'
-  );
+  const [sidebarTab, setSidebarTab] = useState<
+    'history' | 'collections' | 'runner' | 'design'
+  >('history');
+  const [mockEnabled, setMockEnabled] = useState(false);
   const [showSidebar, setShowSidebar] = useState(false);
 
   const request =
@@ -97,6 +121,19 @@ export const useApiClient = (): UseApiClient => {
   useEffect(() => {
     saveEnvironment(env);
   }, [env]);
+
+  useEffect(() => {
+    saveCookies(cookies);
+  }, [cookies]);
+
+  useEffect(() => {
+    filesRef.current = files;
+  }, [files]);
+
+  useEffect(() => {
+    setFiles({});
+    filesRef.current = {};
+  }, [activeId]);
 
   const responseRef = useRef<ResponseMeta | null>(null);
   useEffect(() => {
@@ -151,8 +188,29 @@ export const useApiClient = (): UseApiClient => {
     setPrevResponse(responseRef.current);
     setResponse(null);
     try {
-      const result = await executeRequest(request, env);
+      if (mockEnabled) {
+        const mocked = tryMock(collections, request);
+        if (mocked) {
+          setResponse(mocked);
+          setHistory((prev) => {
+            const next = addHistoryEntry(prev, request);
+            saveHistory(next);
+            return next;
+          });
+          return;
+        }
+      }
+      const result = await executeRequest(request, env, {
+        cookies,
+        files: filesRef.current,
+      });
       setResponse(result);
+      const lines = setCookieLines(result.headers);
+      if (lines.length > 0) {
+        setCookies((prev) =>
+          mergeCookies(prev, parseSetCookies(result.url, lines))
+        );
+      }
       setHistory((prev) => {
         const next = addHistoryEntry(prev, request);
         saveHistory(next);
@@ -167,7 +225,7 @@ export const useApiClient = (): UseApiClient => {
     } finally {
       setLoading(false);
     }
-  }, [request, env]);
+  }, [request, env, cookies, mockEnabled, collections]);
 
   useEffect(() => {
     const handler = (e: KeyboardEvent): void => {
@@ -203,6 +261,20 @@ export const useApiClient = (): UseApiClient => {
     setEnv(next);
   }, []);
 
+  const onCookieChange = useCallback((next: StoredCookie[]): void => {
+    setCookies(next);
+  }, []);
+
+  const onProtocolChange = useCallback((next: RequestProtocol): void => {
+    setProtocol(next);
+    setResponse(null);
+    setError(null);
+  }, []);
+
+  const onFilesChange = useCallback((next: FormFiles): void => {
+    setFiles(next);
+  }, []);
+
   const onCollectionsChange = useCallback((next: RequestCollection[]): void => {
     setCollections(next);
   }, []);
@@ -217,8 +289,15 @@ export const useApiClient = (): UseApiClient => {
     [onRequestChange]
   );
 
-  const onSidebarTab = useCallback((tab: 'history' | 'collections'): void => {
-    setSidebarTab(tab);
+  const onSidebarTab = useCallback(
+    (tab: 'history' | 'collections' | 'runner' | 'design'): void => {
+      setSidebarTab(tab);
+    },
+    []
+  );
+
+  const onMockToggle = useCallback((): void => {
+    setMockEnabled((prev) => !prev);
   }, []);
 
   const onToggleSidebar = useCallback((): void => {
@@ -232,12 +311,16 @@ export const useApiClient = (): UseApiClient => {
     history,
     collections,
     env,
+    cookies,
+    protocol,
     response,
     prevResponse,
     loading,
     error,
+    files,
     sidebarTab,
     showSidebar,
+    mockEnabled,
     activeEntryId,
     onRequestChange,
     onAddTab,
@@ -247,9 +330,13 @@ export const useApiClient = (): UseApiClient => {
     onSelectHistory,
     onClearHistory,
     onEnvChange,
+    onCookieChange,
+    onProtocolChange,
+    onFilesChange,
     onCollectionsChange,
     onLoadCollectionEntry,
     onSidebarTab,
+    onMockToggle,
     onToggleSidebar,
   };
 };

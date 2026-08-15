@@ -1,10 +1,11 @@
 'use client';
 
-import { type FC, useState } from 'react';
-import { Providers } from '@/providers/Providers';
 import { Sidebar } from '@/components/organisms/Sidebar';
 import { PageTransition } from '@/components/templates/PageTransition';
-import { FiMenu } from 'react-icons/fi';
+import { Providers } from '@/providers/Providers';
+import Link from 'next/link';
+import { useState, type FC } from 'react';
+import { FiDownload, FiMenu } from 'react-icons/fi';
 
 const HomePage: FC = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -22,6 +23,13 @@ const HomePage: FC = () => {
               <FiMenu className="size-5" />
             </button>
             <span className="ml-2 text-lg font-bold">Chats</span>
+            <Link
+              href="/downloads"
+              className="btn btn-ghost btn-sm ml-auto gap-1.5"
+              aria-label="Downloads">
+              <FiDownload className="size-4" />
+              Downloads
+            </Link>
           </div>
           <PageTransition>
             <div className="flex flex-1 items-center justify-center">

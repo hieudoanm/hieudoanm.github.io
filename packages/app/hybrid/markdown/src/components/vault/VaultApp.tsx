@@ -1,7 +1,8 @@
 'use client';
 
 import { FC, useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { TbHierarchy2, TbMenu2, TbPlus } from 'react-icons/tb';
+import Link from 'next/link';
+import { TbDownload, TbHierarchy2, TbMenu2, TbPlus } from 'react-icons/tb';
 import { useCodeMirror } from '@/hooks/useCodeMirror';
 import { useMarkdownRender } from '@/hooks/useMarkdownRender';
 import { useScrollSync } from '@/hooks/useScrollSync';
@@ -228,6 +229,14 @@ export const VaultApp: FC = () => {
             aria-label="Notes graph">
             <TbHierarchy2 size={18} />
           </button>
+
+          <Link
+            href="/downloads"
+            className="btn btn-ghost btn-sm gap-1.5"
+            aria-label="Downloads">
+            <TbDownload size={18} />
+            Downloads
+          </Link>
         </header>
 
         <div className="flex min-h-0 flex-1">

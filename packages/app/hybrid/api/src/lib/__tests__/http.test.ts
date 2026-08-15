@@ -138,6 +138,46 @@ describe('buildHeaders', () => {
     const headers = buildHeaders(emptyRequest());
     expect(headers.Authorization).toBeUndefined();
   });
+
+  it('adds matching cookies when no Cookie header is set', () => {
+    const headers = buildHeaders(
+      { ...emptyRequest(), url: 'https://api.example.com/x' },
+      [
+        {
+          id: '1',
+          domain: 'api.example.com',
+          name: 'sid',
+          value: 'abc',
+          path: '/',
+          secure: false,
+          enabled: true,
+        },
+      ]
+    );
+    expect(headers.Cookie).toBe('sid=abc');
+  });
+
+  it('keeps an existing Cookie header over the cookie jar', () => {
+    const headers = buildHeaders(
+      {
+        ...emptyRequest(),
+        url: 'https://api.example.com/x',
+        headers: [{ id: '1', key: 'Cookie', value: 'manual=1', enabled: true }],
+      },
+      [
+        {
+          id: '2',
+          domain: 'api.example.com',
+          name: 'sid',
+          value: 'abc',
+          path: '/',
+          secure: false,
+          enabled: true,
+        },
+      ]
+    );
+    expect(headers.Cookie).toBe('manual=1');
+  });
 });
 
 describe('resolveBody', () => {
@@ -180,6 +220,25 @@ describe('executeRequest', () => {
     expect(result.timeMs).toBeGreaterThanOrEqual(0);
   });
 
+  it('adds a content-type header for urlencoded bodies', async () => {
+    mockFetch({ bodyText: '{}' });
+    await executeRequest({
+      ...emptyRequest(),
+      method: 'POST',
+      url: 'https://api.example.com/users',
+      bodyType: 'urlencoded',
+      body: 'a=1',
+    });
+
+    const [, options] = (fetch as jest.Mock).mock.calls[0] as [
+      string,
+      RequestInit,
+    ];
+    expect(options.headers).toMatchObject({
+      'Content-Type': 'application/x-www-form-urlencoded',
+    });
+  });
+
   it('passes redirect mode and abort signal to fetch', async () => {
     mockFetch({ bodyText: '{}' });
     await executeRequest({
@@ -187,7 +246,6 @@ describe('executeRequest', () => {
       url: 'https://api.example.com/users',
       redirect: 'manual',
     });
-
     expect(fetch).toHaveBeenCalledWith(
       'https://api.example.com/users',
       expect.objectContaining({ redirect: 'manual' })
@@ -248,6 +306,63 @@ describe('executeRequest', () => {
       { id: '1', key: 'host', value: 'api.example.com', enabled: false },
     ]);
     expect(fetch).toHaveBeenCalledWith('https://{{host}}/x', expect.anything());
+  });
+});
+
+describe('executeRequest with scripts', () => {
+  it('runs pre-request and test scripts around the request', async () => {
+    mockFetch({ bodyText: '{"ok":true}' });
+    const result = await executeRequest({
+      ...emptyRequest(),
+      url: 'https://api.example.com/${host}',
+      headers: [{ id: '1', key: 'X-Script', value: 'before', enabled: true }],
+      preRequestScript:
+        'pm.request.headers.set("X-Script", "after"); pm.setEnvironmentVariable("host", "users");',
+      testScript:
+        'pm.test("status", () => { pm.expect(pm.response.code).toBe(200); }); pm.test("body", () => { pm.expect(pm.response.json().ok).toBe(true); }); pm.test("fail", () => { pm.expect(1).toBe(2); });',
+    });
+
+    const calledUrl = (fetch as jest.Mock).mock.calls[0][0];
+    expect(calledUrl).toBe('https://api.example.com/users');
+    const options = (fetch as jest.Mock).mock.calls[0][1] as RequestInit;
+    expect(options.headers).toEqual(
+      expect.objectContaining({ 'X-Script': 'after' })
+    );
+    expect(result.testResults).toHaveLength(3);
+    expect(result.testResults?.[0]).toMatchObject({
+      name: 'status',
+      passed: true,
+    });
+    expect(result.testResults?.[1]).toMatchObject({
+      name: 'body',
+      passed: true,
+    });
+    expect(result.testResults?.[2]).toMatchObject({
+      name: 'fail',
+      passed: false,
+    });
+  });
+
+  it('attaches pre-request logs and test logs to the response', async () => {
+    mockFetch({ bodyText: '{}' });
+    const result = await executeRequest({
+      ...emptyRequest(),
+      url: 'https://api.example.com/x',
+      preRequestScript: 'console.log("pre");',
+      testScript: 'console.log("post");',
+    });
+    expect(result.scriptLogs?.map((l) => l.text)).toEqual(['pre', 'post']);
+  });
+
+  it('records a test script runtime error', async () => {
+    mockFetch({ bodyText: '{}' });
+    const result = await executeRequest({
+      ...emptyRequest(),
+      url: 'https://api.example.com/x',
+      testScript: 'const y = pm.response.deep.value;',
+    });
+    expect(result.testError).toBeTruthy();
+    expect(result.testResults).toEqual([]);
   });
 });
 

@@ -40,6 +40,20 @@ export const readTextFile = (file: File): Promise<string> =>
     reader.readAsText(file);
   });
 
+export const downloadFile = (
+  content: string,
+  filename: string,
+  type: string
+): void => {
+  const blob = new Blob([content], { type });
+  const url = URL.createObjectURL(blob);
+  const anchor = document.createElement('a');
+  anchor.href = url;
+  anchor.download = filename;
+  anchor.click();
+  URL.revokeObjectURL(url);
+};
+
 export const readRequestFile = (file: File): Promise<RequestConfig | null> =>
   readTextFile(file)
     .then(jsonToRequest)

@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import Link from 'next/link';
+import { FiDownload } from 'react-icons/fi';
 
 const tools: { href: string; title: string; description: string }[] = [
   {
@@ -46,9 +47,18 @@ const tools: { href: string; title: string; description: string }[] = [
 
 const HomePage: FC = () => (
   <div className="flex min-h-screen flex-col items-center justify-center gap-10 p-6">
-    <div className="text-center">
-      <h1 className="text-3xl font-bold">Chess</h1>
-      <p className="text-base-content/70 mt-2">A minimal chess toolbox</p>
+    <div className="flex w-full max-w-2xl items-center justify-between">
+      <div className="text-center">
+        <h1 className="text-3xl font-bold">Chess</h1>
+        <p className="text-base-content/70 mt-2">A minimal chess toolbox</p>
+      </div>
+      <Link
+        href="/downloads"
+        className="btn btn-ghost btn-sm gap-1.5"
+        aria-label="Downloads">
+        <FiDownload className="size-4" />
+        Downloads
+      </Link>
     </div>
     <nav className="grid w-full max-w-2xl gap-4 sm:grid-cols-2">
       {tools.map(({ href, title, description }) => (

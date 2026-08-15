@@ -1,6 +1,7 @@
 'use client';
 
 import { FC, useState } from 'react';
+import Link from 'next/link';
 import {
   FiBookOpen,
   FiChevronDown,
@@ -291,6 +292,10 @@ const Toolbar: FC<ToolbarProps> = ({
       <button className={buttonClass} onClick={onHelp} aria-label="Help">
         <FiHelpCircle className={iconClass} />
       </button>
+      <Link href="/downloads" className={buttonClass} aria-label="Downloads">
+        <FiDownload className={iconClass} />
+        Downloads
+      </Link>
     </div>
   );
 };
