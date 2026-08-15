@@ -1,4 +1,10 @@
-import type { TournamentFormat, TournamentTemplate } from '@/types';
+import type {
+  BestOf,
+  MatchScoringRule,
+  Tiebreaker,
+  TournamentFormat,
+  TournamentTemplate,
+} from '@/types';
 
 const STORAGE_KEY = 'tourney-templates';
 
@@ -7,6 +13,10 @@ export interface TemplateDraft {
   description: string;
   format: TournamentFormat;
   maxParticipants: number;
+  bestOf?: BestOf;
+  scoringRule?: MatchScoringRule;
+  thirdPlacePlayoff?: boolean;
+  tiebreakers?: Tiebreaker[];
 }
 
 export const generateId = (): string =>

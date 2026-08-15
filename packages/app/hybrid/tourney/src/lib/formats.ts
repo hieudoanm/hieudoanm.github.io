@@ -1,4 +1,13 @@
-import type { Match, TournamentFormat } from '@/types';
+import type {
+  BestOf,
+  Group,
+  Match,
+  MatchScoringRule,
+  Participant,
+  Tiebreaker,
+  TournamentFormat,
+} from '@/types';
+import { calculateStandings } from './standings';
 
 const generateId = (): string =>
   `${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
@@ -13,17 +22,28 @@ const padToPowerOfTwo = (ids: (string | null)[]): (string | null)[] => {
   return [...ids, ...Array(target - ids.length).fill(null)];
 };
 
+export interface BracketOptions {
+  thirdPlacePlayoff?: boolean;
+}
+
+export interface GroupStageOptions extends BracketOptions {
+  groupCount?: number;
+}
+
 export const generateSingleEliminationBracket = (
   tournamentId: string,
-  participantIds: string[]
+  participantIds: string[],
+  options: BracketOptions = {}
 ): Match[] => {
   const matches: Match[] = [];
   const padded = padToPowerOfTwo([...participantIds]);
-  const roundCount = Math.log2(padded.length);
 
+  if (padded.length < 2) return matches;
+
+  const roundCount = Math.log2(padded.length);
   let currentSlots: (string | null)[] = [...padded];
 
-  for (let round = 1; round <= roundCount; round++) {
+  for (let round = 1; round < roundCount; round++) {
     const nextSlots: (string | null)[] = [];
 
     for (let i = 0; i < currentSlots.length; i += 2) {
@@ -42,6 +62,35 @@ export const generateSingleEliminationBracket = (
     }
 
     currentSlots = nextSlots;
+  }
+
+  matches.push(
+    createMatch({
+      tournamentId,
+      round: roundCount,
+      participant1Id: currentSlots[0] ?? null,
+      participant2Id: currentSlots[1] ?? null,
+      participant1Score: null,
+      participant2Score: null,
+      winnerId: null,
+      status: 'scheduled',
+    })
+  );
+
+  if (options.thirdPlacePlayoff && roundCount >= 2) {
+    matches.push(
+      createMatch({
+        tournamentId,
+        round: roundCount,
+        participant1Id: null,
+        participant2Id: null,
+        participant1Score: null,
+        participant2Score: null,
+        winnerId: null,
+        status: 'scheduled',
+        isThirdPlaceMatch: true,
+      })
+    );
   }
 
   return matches;
@@ -238,9 +287,10 @@ export const generateSwissRounds = (
 export const generateGroupStageKnockout = (
   tournamentId: string,
   participantIds: string[],
-  groupCount: number = 4
+  options: GroupStageOptions = {}
 ): Match[] => {
   const matches: Match[] = [];
+  const groupCount = options.groupCount ?? 4;
   const shuffled = [...participantIds].sort(() => Math.random() - 0.5);
   const groupSize = Math.ceil(shuffled.length / groupCount);
 
@@ -307,6 +357,23 @@ export const generateGroupStageKnockout = (
     currentSlots = nextSlots;
   }
 
+  if (options.thirdPlacePlayoff && knockoutRounds >= 2) {
+    matches.push(
+      createMatch({
+        tournamentId,
+        round: knockoutRoundBase + knockoutRounds,
+        bracket: 'final',
+        participant1Id: null,
+        participant2Id: null,
+        participant1Score: null,
+        participant2Score: null,
+        winnerId: null,
+        status: 'scheduled',
+        isThirdPlaceMatch: true,
+      })
+    );
+  }
+
   return matches;
 };
 
@@ -335,11 +402,16 @@ export const generateLeagueSchedule = (
 export const generateBracket = (
   format: TournamentFormat,
   tournamentId: string,
-  participantIds: string[]
+  participantIds: string[],
+  options: GroupStageOptions = {}
 ): Match[] => {
   switch (format) {
     case 'single-elimination':
-      return generateSingleEliminationBracket(tournamentId, participantIds);
+      return generateSingleEliminationBracket(
+        tournamentId,
+        participantIds,
+        options
+      );
     case 'double-elimination':
       return generateDoubleEliminationBracket(tournamentId, participantIds);
     case 'round-robin':
@@ -347,7 +419,7 @@ export const generateBracket = (
     case 'swiss':
       return generateSwissRounds(tournamentId, participantIds);
     case 'group-stage':
-      return generateGroupStageKnockout(tournamentId, participantIds);
+      return generateGroupStageKnockout(tournamentId, participantIds, options);
     case 'league':
       return generateLeagueSchedule(tournamentId, participantIds);
     default:
@@ -363,15 +435,121 @@ export const getNextRoundMatches = (
     (m) => m.participant1Id === matchId || m.participant2Id === matchId
   );
 
-export const advanceBracketWinners = (matches: Match[]): Match[] => {
-  const winnersByMatch = new Map<string, string>();
-  for (const m of matches) {
-    if (m.status === 'completed' && m.winnerId) {
-      winnersByMatch.set(m.id, m.winnerId);
+export interface AdvanceBracketOptions {
+  groups?: Group[];
+  participants?: Participant[];
+  scoringRule?: MatchScoringRule;
+  tiebreakers?: Tiebreaker[];
+  bestOf?: BestOf;
+}
+
+const promoteGroupStage = (
+  matches: Match[],
+  options: AdvanceBracketOptions
+): Match[] => {
+  const { groups = [], participants = [] } = options;
+  if (groups.length === 0 || participants.length === 0) return matches;
+
+  const groupPhaseDone = matches
+    .filter((m) => !m.bracket)
+    .every((m) => m.status === 'completed' || m.status === 'walkover');
+  if (!groupPhaseDone) return matches;
+
+  const groupIds = new Set(groups.map((g) => g.id));
+  const membersByGroup = new Map<string, string[]>();
+  for (const group of groups) membersByGroup.set(group.id, []);
+  for (const p of participants) {
+    if (p.groupId && groupIds.has(p.groupId)) {
+      membersByGroup.get(p.groupId)!.push(p.id);
     }
   }
 
+  const tournamentId = matches.find((m) => m.tournamentId)?.tournamentId ?? '';
+  const qualified: string[] = [];
+
+  for (const group of groups) {
+    const memberIds = membersByGroup.get(group.id) ?? [];
+    if (memberIds.length === 0) continue;
+
+    const groupMatches = matches.filter(
+      (m) =>
+        m.participant1Id !== null &&
+        memberIds.includes(m.participant1Id) &&
+        m.participant2Id !== null &&
+        memberIds.includes(m.participant2Id)
+    );
+    const standings = calculateStandings(
+      groupMatches,
+      memberIds,
+      tournamentId,
+      {
+        scoringRule: options.scoringRule,
+        tiebreakers: options.tiebreakers,
+        bestOf: options.bestOf,
+      }
+    );
+
+    for (let i = 0; i < Math.min(2, standings.length); i++) {
+      qualified.push(standings[i].participantId);
+    }
+  }
+
+  if (qualified.length === 0) return matches;
+
+  const knockoutFirstRound = matches
+    .filter((m) => m.bracket === 'final')
+    .reduce(
+      (min, m) => (m.round < min ? m.round : min),
+      Number.POSITIVE_INFINITY
+    );
+
+  let slotIndex = 0;
   return matches.map((m) => {
+    if (m.round !== knockoutFirstRound || !m.bracket) return m;
+    const nextP1 =
+      m.participant1Id ??
+      (slotIndex < qualified.length ? qualified[slotIndex++] : null);
+    const nextP2 =
+      m.participant2Id ??
+      (slotIndex < qualified.length ? qualified[slotIndex++] : null);
+    if (nextP1 === m.participant1Id && nextP2 === m.participant2Id) return m;
+    return { ...m, participant1Id: nextP1, participant2Id: nextP2 };
+  });
+};
+
+export const advanceBracketWinners = (
+  matches: Match[],
+  options: AdvanceBracketOptions = {}
+): Match[] => {
+  const promoted = promoteGroupStage(matches, options);
+  const winnersByMatch = new Map<string, string>();
+  const losersByMatch = new Map<string, string>();
+
+  for (const m of promoted) {
+    if ((m.status === 'completed' || m.status === 'walkover') && m.winnerId) {
+      winnersByMatch.set(m.id, m.winnerId);
+      const loserId =
+        m.winnerId === m.participant1Id ? m.participant2Id : m.participant1Id;
+      if (loserId) losersByMatch.set(m.id, loserId);
+    }
+  }
+
+  const maxRound = promoted.reduce(
+    (max, m) => (m.round > max ? m.round : max),
+    0
+  );
+
+  return promoted.map((m) => {
+    if (m.isThirdPlaceMatch) {
+      const semiRound = maxRound - 1;
+      const semis = promoted.filter((x) => x.round === semiRound);
+      return {
+        ...m,
+        participant1Id: losersByMatch.get(semis[0]?.id ?? '') ?? null,
+        participant2Id: losersByMatch.get(semis[1]?.id ?? '') ?? null,
+      };
+    }
+
     const nextP1 = m.participant1Id
       ? winnersByMatch.get(m.participant1Id)
       : undefined;

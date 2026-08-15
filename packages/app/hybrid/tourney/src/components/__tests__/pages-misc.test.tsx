@@ -119,6 +119,10 @@ describe('CreatePage', () => {
         status: 'draft',
         maxParticipants: 32,
         startDate: new Date('2025-06-01').getTime(),
+        bestOf: 1,
+        scoringRule: 'standard',
+        thirdPlacePlayoff: false,
+        tiebreakers: ['points', 'wins', 'goal-difference', 'head-to-head'],
       })
     );
     expect(mockRouter.push).toHaveBeenCalledWith('/');

@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import { useData } from '@/providers/DataProvider';
-import { calculateStandings } from '@/data/models';
+import { calculateStandings } from '@/lib/standings';
 
 interface StandingsViewProps {
   standings: ReturnType<typeof calculateStandings>;

@@ -11,6 +11,19 @@ export type TournamentStatus =
 export type MatchStatus =
   'scheduled' | 'in-progress' | 'completed' | 'postponed' | 'walkover';
 
+export type BestOf = 1 | 3 | 5;
+
+export type MatchScoringRule =
+  'standard' | 'sets' | 'penalty-shootout' | 'golden-goal';
+
+export type Tiebreaker =
+  'points' | 'wins' | 'goal-difference' | 'head-to-head' | 'scored';
+
+export interface MatchSet {
+  p1Score: number;
+  p2Score: number;
+}
+
 export interface Tournament {
   id: string;
   name: string;
@@ -23,6 +36,10 @@ export interface Tournament {
   startDate?: number;
   endDate?: number;
   isSample?: boolean;
+  bestOf?: BestOf;
+  scoringRule?: MatchScoringRule;
+  thirdPlacePlayoff?: boolean;
+  tiebreakers?: Tiebreaker[];
 }
 
 export interface Participant {
@@ -47,6 +64,10 @@ export interface Match {
   status: MatchStatus;
   scheduledAt?: number;
   venue?: string;
+  sets?: MatchSet[];
+  penaltyScore1?: number | null;
+  penaltyScore2?: number | null;
+  isThirdPlaceMatch?: boolean;
 }
 
 export interface Group {
@@ -82,4 +103,8 @@ export interface TournamentTemplate {
   format: TournamentFormat;
   maxParticipants: number;
   createdAt: number;
+  bestOf?: BestOf;
+  scoringRule?: MatchScoringRule;
+  thirdPlacePlayoff?: boolean;
+  tiebreakers?: Tiebreaker[];
 }

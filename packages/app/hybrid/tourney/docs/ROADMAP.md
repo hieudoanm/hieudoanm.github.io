@@ -22,6 +22,7 @@
 - [x] Round Robin schedule generation
 - [x] Swiss System pairing algorithm
 - [x] Group Stage + Knockout flow
+- [x] Automatic group-to-knockout advancement (top 2 per group via standings)
 - [x] League standings calculation
 - [x] Format-specific tournament detail views
 
@@ -81,3 +82,48 @@
 - [ ] Push notifications
 - [ ] Calendar integration (Google Calendar, Apple Calendar)
 - [x] PWA support (installable, offline-first)
+
+## Phase 9 — Match depth & rules
+
+- [x] Best-of-N matches (bo3/bo5) with set-by-set score entry
+- [x] Format match scoring rules (2-0/2-1 sets, penalty shootouts)
+- [ ] Golden goal scoring rule
+- [x] Walkover / forfeit handling (advance opponent, blank scores)
+- [x] Third-place play-off toggle (single elimination, group-stage knockout)
+- [ ] Score correction with automatic recalculation of standings/bracket
+- [x] Tiebreaker priority list configurable per tournament
+
+## Phase 10 — Ratings & player stats
+
+- [ ] Elo/Glicko rating updates after each match (seed from initial ratings)
+- [ ] In-match events: scorers, assists, cards, MVP — per-participant stats
+      beyond W/L/D
+- [ ] Player of the tournament / top scorer leaderboards
+- [ ] Head-to-head records between participants
+
+## Phase 11 — Live & venue logistics
+
+- [ ] Spectator live view (auto-refresh via BroadcastChannel, no backend)
+- [ ] Fullscreen presenter mode for projector screens
+- [ ] Venue/table assignment with capacity + floor-plan view
+- [ ] "Now playing / next on table X" live board
+- [ ] Schedule conflict view and auto-assign tables
+
+## Phase 12 — Communication & admin
+
+- [ ] Announcements board per tournament
+- [ ] Participant contact export (email/phone CSV)
+- [ ] Referee/umpire assignment per match
+- [ ] Penalty points and card registry per participant
+- [ ] Audit log of score changes
+- [ ] Admin handoff via local PIN/QR (still no accounts)
+
+## Phase 13 — Formats & UX polish
+
+- [ ] Reseeding between bracket rounds; seed drag-reorder
+- [ ] Custom advancement rules (e.g. top-2-of-4 × 4 groups config)
+- [ ] Home & away aggregate (multi-leg) league fixtures
+- [ ] ICS/calendar file export (cloud calendar sync stays in Phase 8)
+- [ ] Tournament theming (colors, logo) + participant emoji/logo avatars
+- [ ] Undo/redo for score entries; keyboard bracket navigation
+- [ ] Printable tournament program (schedule + venues + participants) PDF

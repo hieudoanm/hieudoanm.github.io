@@ -1,7 +1,7 @@
 'use client';
 
+import { motion } from 'motion/react';
 import { type FC, type ReactNode } from 'react';
-import { motion } from 'framer-motion';
 
 export const PageTransition: FC<{ children: ReactNode }> = ({ children }) => (
   <motion.div

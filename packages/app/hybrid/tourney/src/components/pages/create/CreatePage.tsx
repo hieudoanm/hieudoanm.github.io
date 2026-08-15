@@ -7,10 +7,25 @@ import { useData } from '@/providers/DataProvider';
 import { Navbar, NAV_ITEMS } from '@/components/organisms/Navbar';
 import { Header } from '@/components/organisms/Header';
 import { FormatSelector } from './FormatSelector';
+import { TiebreakerList } from './TiebreakerList';
 import { getTemplates, saveTemplate, deleteTemplate } from '@/lib/templates';
-import type { TournamentFormat, TournamentTemplate } from '@/types';
+import { DEFAULT_TIEBREAKERS, scoringRuleLabel } from '@/lib/match-rules';
+import type {
+  BestOf,
+  MatchScoringRule,
+  Tiebreaker,
+  TournamentFormat,
+  TournamentTemplate,
+} from '@/types';
 
 const maxParticipantOptions = [4, 8, 16, 32, 64];
+const bestOfOptions: BestOf[] = [1, 3, 5];
+const scoringRuleOptions: MatchScoringRule[] = [
+  'standard',
+  'sets',
+  'penalty-shootout',
+  'golden-goal',
+];
 
 export const CreatePage: FC = () => {
   const router = useRouter();
@@ -20,6 +35,11 @@ export const CreatePage: FC = () => {
   const [format, setFormat] = useState<TournamentFormat>('single-elimination');
   const [maxParticipants, setMaxParticipants] = useState(16);
   const [startDate, setStartDate] = useState('');
+  const [bestOf, setBestOf] = useState<BestOf>(1);
+  const [scoringRule, setScoringRule] = useState<MatchScoringRule>('standard');
+  const [thirdPlacePlayoff, setThirdPlacePlayoff] = useState(false);
+  const [tiebreakers, setTiebreakers] =
+    useState<Tiebreaker[]>(DEFAULT_TIEBREAKERS);
   const [submitting, setSubmitting] = useState(false);
   const [templates, setTemplates] = useState<TournamentTemplate[]>([]);
 
@@ -42,6 +62,10 @@ export const CreatePage: FC = () => {
       status: 'draft',
       maxParticipants,
       startDate: startDate ? new Date(startDate).getTime() : undefined,
+      bestOf,
+      scoringRule,
+      thirdPlacePlayoff,
+      tiebreakers,
     });
     router.push('/');
   };
@@ -53,6 +77,10 @@ export const CreatePage: FC = () => {
       description: description.trim(),
       format,
       maxParticipants,
+      bestOf,
+      scoringRule,
+      thirdPlacePlayoff,
+      tiebreakers,
     });
     reloadTemplates();
   };
@@ -62,6 +90,10 @@ export const CreatePage: FC = () => {
     setDescription(template.description);
     setFormat(template.format);
     setMaxParticipants(template.maxParticipants);
+    setBestOf(template.bestOf ?? 1);
+    setScoringRule(template.scoringRule ?? 'standard');
+    setThirdPlacePlayoff(template.thirdPlacePlayoff ?? false);
+    setTiebreakers(template.tiebreakers ?? DEFAULT_TIEBREAKERS);
   };
 
   const handleDeleteTemplate = (id: string) => {
@@ -134,6 +166,76 @@ export const CreatePage: FC = () => {
                   onChange={(e) => setStartDate(e.target.value)}
                   className="input input-bordered w-full"
                 />
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset className="border-base-content/20 rounded-xl border p-4">
+            <legend className="px-2 text-sm font-medium">Match Rules</legend>
+            <div className="flex flex-col gap-4">
+              <div>
+                <label className="text-sm font-medium">Best of</label>
+                <div className="mt-2 flex gap-2">
+                  {bestOfOptions.map((n) => (
+                    <button
+                      key={n}
+                      type="button"
+                      onClick={() => setBestOf(n)}
+                      className={`btn btn-sm rounded-full ${
+                        bestOf === n ? 'btn-primary' : 'btn-ghost'
+                      }`}>
+                      {n === 1 ? 'Single match' : `Best of ${n}`}
+                    </button>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <label className="text-sm font-medium">Scoring</label>
+                <div className="mt-2 grid grid-cols-1 gap-2 md:grid-cols-2">
+                  {scoringRuleOptions.map((rule) => (
+                    <label
+                      key={rule}
+                      className={`border-base-content/20 flex cursor-pointer flex-col rounded-lg border p-2 transition-colors ${
+                        scoringRule === rule
+                          ? 'bg-primary/10 border-primary'
+                          : 'hover:bg-base-200'
+                      }`}>
+                      <input
+                        type="radio"
+                        name="scoringRule"
+                        value={rule}
+                        checked={scoringRule === rule}
+                        onChange={() => setScoringRule(rule)}
+                        className="hidden"
+                      />
+                      <span className="text-sm">{scoringRuleLabel[rule]}</span>
+                    </label>
+                  ))}
+                </div>
+              </div>
+              {format === 'single-elimination' && (
+                <label className="flex cursor-pointer items-center gap-2">
+                  <input
+                    type="checkbox"
+                    checked={thirdPlacePlayoff}
+                    onChange={(e) => setThirdPlacePlayoff(e.target.checked)}
+                    className="checkbox checkbox-sm"
+                  />
+                  <span className="text-sm">
+                    Third-place play-off (bronze match)
+                  </span>
+                </label>
+              )}
+              <div>
+                <label className="text-sm font-medium">
+                  Tiebreakers (priority order)
+                </label>
+                <div className="mt-2">
+                  <TiebreakerList
+                    value={tiebreakers}
+                    onChange={setTiebreakers}
+                  />
+                </div>
               </div>
             </div>
           </fieldset>

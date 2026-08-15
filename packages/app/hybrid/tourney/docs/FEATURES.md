@@ -21,14 +21,20 @@
 - Round Robin schedule generation
 - Swiss System pairing algorithm
 - Group Stage + Knockout flow
+- Automatic group-to-knockout advancement (top 2 per group via standings)
 - League standings calculation
 - Format-specific tournament detail views
 - Interactive bracket component
 - Match detail page with score entry
 - Bracket navigation (rounds, matches)
 - Auto-advance winners
+- Best-of-N matches (bo3/bo5) with set-by-set score entry
+- Sets-based match scoring (2-0 / 2-1) and penalty-shootout decisions
+- Walkover / forfeit handling (advance opponent, blank scores)
+- Third-place play-off (single elimination, group-stage knockout)
 - Points calculation per format
-- Tiebreaker rules (head-to-head, goal difference)
+- Tiebreaker priority list configurable per tournament (points, wins, goal
+  difference, head-to-head, points scored)
 
 ## Scheduling
 

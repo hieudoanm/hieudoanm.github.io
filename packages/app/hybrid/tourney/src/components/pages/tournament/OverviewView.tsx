@@ -1,6 +1,7 @@
 import type { FC } from 'react';
 import { formatDate } from '@/lib/utils';
 import { useData } from '@/providers/DataProvider';
+import { scoringRuleLabel, tiebreakerLabel } from '@/lib/match-rules';
 import { formatLabel } from './constants';
 
 interface OverviewViewProps {
@@ -31,6 +32,26 @@ export const OverviewView: FC<OverviewViewProps> = ({
     <div className="border-base-content/10 bg-base-200 rounded-2xl border p-4">
       <div className="flex flex-col gap-3">
         <InfoRow label="Format" value={formatLabel[tournament.format]} />
+        {(tournament.bestOf ?? 1) > 1 && (
+          <InfoRow label="Best of" value={`Best of ${tournament.bestOf}`} />
+        )}
+        {tournament.scoringRule && tournament.scoringRule !== 'standard' && (
+          <InfoRow
+            label="Scoring"
+            value={scoringRuleLabel[tournament.scoringRule]}
+          />
+        )}
+        {tournament.thirdPlacePlayoff && (
+          <InfoRow label="Third Place" value="Play-off" />
+        )}
+        {tournament.tiebreakers && tournament.tiebreakers.length > 0 && (
+          <InfoRow
+            label="Tiebreakers"
+            value={tournament.tiebreakers
+              .map((tb) => tiebreakerLabel[tb])
+              .join(', ')}
+          />
+        )}
         <InfoRow
           label="Participants"
           value={`${participants.length}/${tournament.maxParticipants}`}

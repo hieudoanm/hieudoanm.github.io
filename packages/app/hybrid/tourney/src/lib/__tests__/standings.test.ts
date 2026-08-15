@@ -159,4 +159,120 @@ describe('calculateStandings', () => {
       points: 0,
     });
   });
+
+  it('counts a walkover as a win for the advancing participant', () => {
+    const matches: Match[] = [
+      {
+        ...completed('a', 'b', 0, 0, 'a'),
+        status: 'walkover',
+        participant1Score: null,
+        participant2Score: null,
+      },
+    ];
+    const standings = calculateStandings(matches, ['a', 'b'], 't1');
+    expect(standings.find((s) => s.participantId === 'a')).toMatchObject({
+      played: 1,
+      won: 1,
+      lost: 0,
+      points: 3,
+    });
+    expect(standings.find((s) => s.participantId === 'b')).toMatchObject({
+      played: 1,
+      won: 0,
+      lost: 1,
+      points: 0,
+    });
+  });
+
+  it('awards three match points for a clean set win', () => {
+    const matches: Match[] = [
+      {
+        ...completed('a', 'b', 2, 0, 'a'),
+        sets: [
+          { p1Score: 11, p2Score: 5 },
+          { p1Score: 11, p2Score: 8 },
+        ],
+      },
+    ];
+    const standings = calculateStandings(matches, ['a', 'b'], 't1', {
+      scoringRule: 'sets',
+    });
+    expect(standings.find((s) => s.participantId === 'a')).toMatchObject({
+      played: 1,
+      won: 1,
+      points: 3,
+    });
+    expect(standings.find((s) => s.participantId === 'b')).toMatchObject({
+      lost: 1,
+      points: 0,
+    });
+  });
+
+  it('awards two match points for a three-set win and one to the loser', () => {
+    const matches: Match[] = [
+      {
+        ...completed('a', 'b', 2, 1, 'a'),
+        sets: [
+          { p1Score: 11, p2Score: 9 },
+          { p1Score: 7, p2Score: 11 },
+          { p1Score: 11, p2Score: 6 },
+        ],
+      },
+    ];
+    const standings = calculateStandings(matches, ['a', 'b'], 't1', {
+      scoringRule: 'sets',
+    });
+    expect(standings.find((s) => s.participantId === 'a')).toMatchObject({
+      points: 2,
+    });
+    expect(standings.find((s) => s.participantId === 'b')).toMatchObject({
+      points: 1,
+    });
+  });
+
+  it('awards a full win for a penalty shootout decision, not a draw', () => {
+    const matches: Match[] = [
+      {
+        ...completed('a', 'b', 1, 1, 'b'),
+        penaltyScore1: 3,
+        penaltyScore2: 4,
+      },
+    ];
+    const standings = calculateStandings(matches, ['a', 'b'], 't1', {
+      scoringRule: 'penalty-shootout',
+    });
+    expect(standings.find((s) => s.participantId === 'b')).toMatchObject({
+      played: 1,
+      won: 1,
+      drawn: 0,
+      points: 3,
+    });
+    expect(standings.find((s) => s.participantId === 'a')).toMatchObject({
+      drawn: 0,
+      lost: 1,
+    });
+  });
+
+  it('respects a custom tiebreaker priority list', () => {
+    const matches = [
+      completed('a', 'b', 5, 0, 'a'),
+      completed('a', 'c', 0, 1, 'c'),
+      completed('b', 'c', 0, 1, 'c'),
+    ];
+    const standings = calculateStandings(matches, ['a', 'b', 'c'], 't1', {
+      tiebreakers: ['points', 'scored', 'wins'],
+    });
+    expect(standings.map((s) => s.participantId)).toEqual(['c', 'a', 'b']);
+  });
+
+  it('sorts by points scored when configured as the first tiebreaker', () => {
+    const matches = [
+      completed('a', 'b', 3, 2, 'a'),
+      completed('c', 'd', 1, 0, 'c'),
+    ];
+    const standings = calculateStandings(matches, ['a', 'b', 'c', 'd'], 't1', {
+      tiebreakers: ['points', 'scored'],
+    });
+    expect(standings.map((s) => s.participantId)).toEqual(['a', 'c', 'b', 'd']);
+  });
 });

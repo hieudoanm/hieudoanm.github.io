@@ -5,7 +5,7 @@ import { Suspense, useMemo, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { useData } from '@/providers/DataProvider';
-import { calculateStandings } from '@/data/models';
+import { calculateStandings } from '@/lib/standings';
 import { generateBracket } from '@/lib/formats';
 import { Navbar, NAV_ITEMS } from '@/components/organisms/Navbar';
 import { Header } from '@/components/organisms/Header';
@@ -63,9 +63,15 @@ const TournamentDetailPageContent: FC = () => {
     () =>
       calculateStandings(
         tournamentMatches,
-        tournamentParticipants.map((p) => p.id)
+        tournamentParticipants.map((p) => p.id),
+        tournament?.id ?? '',
+        {
+          tiebreakers: tournament?.tiebreakers,
+          scoringRule: tournament?.scoringRule,
+          bestOf: tournament?.bestOf,
+        }
       ),
-    [tournamentMatches, tournamentParticipants]
+    [tournamentMatches, tournamentParticipants, tournament]
   );
 
   const handleStart = async () => {
@@ -75,7 +81,8 @@ const TournamentDetailPageContent: FC = () => {
     const bracketMatches = generateBracket(
       tournament.format,
       tournament.id,
-      participantIds
+      participantIds,
+      { thirdPlacePlayoff: tournament.thirdPlacePlayoff }
     );
     await createMatches(bracketMatches);
     await updateTournament({ ...tournament, status: 'in-progress' });

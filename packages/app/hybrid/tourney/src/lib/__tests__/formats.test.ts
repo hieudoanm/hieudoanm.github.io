@@ -197,6 +197,48 @@ describe('generateGroupStageKnockout', () => {
   it('returns no matches when groups cannot form', () => {
     expect(generateGroupStageKnockout('t1', ['a', 'b'])).toHaveLength(0);
   });
+
+  it('respects a custom group count', () => {
+    const ids = ['p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8'];
+    const matches = generateGroupStageKnockout('t1', ids, { groupCount: 2 });
+    expect(matches).toHaveLength(15);
+  });
+
+  it('adds a third-place knockout match when enabled', () => {
+    const ids = [
+      'p1',
+      'p2',
+      'p3',
+      'p4',
+      'p5',
+      'p6',
+      'p7',
+      'p8',
+      'p9',
+      'p10',
+      'p11',
+      'p12',
+    ];
+    const matches = generateGroupStageKnockout('t1', ids, {
+      thirdPlacePlayoff: true,
+    });
+    expect(matches).toHaveLength(20);
+    const bronze = matches.find(
+      (m) => m.isThirdPlaceMatch && m.bracket === 'final'
+    );
+    expect(bronze).toBeDefined();
+    expect(bronze!.participant1Id).toBeNull();
+  });
+
+  it('skips the third-place match when the knockout is a single final', () => {
+    const ids = ['p1', 'p2', 'p3', 'p4'];
+    const matches = generateGroupStageKnockout('t1', ids, {
+      groupCount: 1,
+      thirdPlacePlayoff: true,
+    });
+    expect(matches).toHaveLength(7);
+    expect(matches.some((m) => m.isThirdPlaceMatch)).toBe(false);
+  });
 });
 
 describe('generateLeagueSchedule', () => {
@@ -328,5 +370,242 @@ describe('assignGroups', () => {
   it('ignores null entries and clamps the group count', () => {
     expect(assignGroups([null, 'a', 'b', null], 0)).toEqual([['a', 'b']]);
     expect(assignGroups([], 4)).toEqual([[], [], [], []]);
+  });
+});
+
+describe('generateSingleEliminationBracket with third place', () => {
+  it('adds a bronze match for four participants', () => {
+    const matches = generateSingleEliminationBracket(
+      't1',
+      ['a', 'b', 'c', 'd'],
+      { thirdPlacePlayoff: true }
+    );
+    expect(matches).toHaveLength(4);
+    const bronze = matches.find((m) => m.isThirdPlaceMatch);
+    expect(bronze).toBeDefined();
+    expect(bronze!.round).toBe(2);
+    expect(bronze!.participant1Id).toBeNull();
+    expect(bronze!.participant2Id).toBeNull();
+  });
+
+  it('does not add a bronze match when the toggle is off', () => {
+    const matches = generateSingleEliminationBracket('t1', [
+      'a',
+      'b',
+      'c',
+      'd',
+    ]);
+    expect(matches.some((m) => m.isThirdPlaceMatch)).toBe(false);
+  });
+
+  it('skips the bronze match for two-participant brackets', () => {
+    const matches = generateSingleEliminationBracket('t1', ['a', 'b'], {
+      thirdPlacePlayoff: true,
+    });
+    expect(matches.some((m) => m.isThirdPlaceMatch)).toBe(false);
+  });
+});
+
+describe('advanceBracketWinners with walkovers and third place', () => {
+  it('promotes walkover winners into the next round', () => {
+    const matches = [
+      {
+        ...bracketMatch('m1', 1, 'a', 'b'),
+        status: 'walkover' as const,
+        winnerId: 'a',
+      },
+      {
+        ...bracketMatch('m2', 1, 'c', 'd'),
+        status: 'walkover' as const,
+        winnerId: 'c',
+      },
+      bracketMatch('m3', 2, 'm1', 'm2'),
+    ];
+    const advanced = advanceBracketWinners(matches);
+    expect(advanced[2].participant1Id).toBe('a');
+    expect(advanced[2].participant2Id).toBe('c');
+  });
+
+  it('fills the bronze match with semi-final losers', () => {
+    const matches = [
+      bracketMatch('m1', 1, 'a', 'b', 'a'),
+      bracketMatch('m2', 1, 'c', 'd', 'd'),
+      bracketMatch('m3', 2, 'm1', 'm2'),
+      {
+        ...bracketMatch('m4', 2, null, null),
+        isThirdPlaceMatch: true,
+      },
+    ];
+    const advanced = advanceBracketWinners(matches);
+    const bronze = advanced.find((m) => m.isThirdPlaceMatch)!;
+    expect(bronze.participant1Id).toBe('b');
+    expect(bronze.participant2Id).toBe('c');
+  });
+
+  it('keeps the bronze match empty until a semi-final is decided', () => {
+    const matches = [
+      bracketMatch('m1', 1, 'a', 'b'),
+      bracketMatch('m2', 1, 'c', 'd'),
+      bracketMatch('m3', 2, 'm1', 'm2'),
+      {
+        ...bracketMatch('m4', 2, null, null),
+        isThirdPlaceMatch: true,
+      },
+    ];
+    const advanced = advanceBracketWinners(matches);
+    const bronze = advanced.find((m) => m.isThirdPlaceMatch)!;
+    expect(bronze.participant1Id).toBeNull();
+    expect(bronze.participant2Id).toBeNull();
+  });
+
+  it('fills a bronze slot as soon as the matching semi-final loser is known', () => {
+    const matches = [
+      bracketMatch('m1', 1, 'a', 'b', 'a'),
+      bracketMatch('m2', 1, 'c', 'd'),
+      bracketMatch('m3', 2, 'm1', 'm2'),
+      {
+        ...bracketMatch('m4', 2, null, null),
+        isThirdPlaceMatch: true,
+      },
+    ];
+    const advanced = advanceBracketWinners(matches);
+    const bronze = advanced.find((m) => m.isThirdPlaceMatch)!;
+    expect(bronze.participant1Id).toBe('b');
+    expect(bronze.participant2Id).toBeNull();
+  });
+});
+
+describe('advanceBracketWinners group promotion', () => {
+  const groupMatch = (id: string, round: number, p1: string, p2: string) =>
+    bracketMatch(id, round, p1, p2);
+
+  const knockoutMatch = (id: string, round: number) => ({
+    ...bracketMatch(id, round, null, null),
+    bracket: 'final' as const,
+  });
+
+  const knockoutFinal = (
+    id: string,
+    round: number,
+    p1: string,
+    p2: string
+  ) => ({
+    ...bracketMatch(id, round, p1, p2),
+    bracket: 'final' as const,
+  });
+
+  const groups = [
+    { id: 'gA', tournamentId: 't1', name: 'A', participantIds: ['p1', 'p2'] },
+    { id: 'gB', tournamentId: 't1', name: 'B', participantIds: ['p3', 'p4'] },
+  ];
+
+  const participants = [
+    { id: 'p1', tournamentId: 't1', name: 'P1', groupId: 'gA' },
+    { id: 'p2', tournamentId: 't1', name: 'P2', groupId: 'gA' },
+    { id: 'p3', tournamentId: 't1', name: 'P3', groupId: 'gB' },
+    { id: 'p4', tournamentId: 't1', name: 'P4', groupId: 'gB' },
+  ];
+
+  const knockoutBracket = [
+    knockoutMatch('k1', 3001),
+    knockoutMatch('k2', 3001),
+    knockoutFinal('k3', 3002, 'k1', 'k2'),
+  ];
+
+  it('fills knockout first-round slots with the top two per group', () => {
+    const matches = [
+      {
+        ...groupMatch('g1', 1, 'p1', 'p2'),
+        status: 'completed' as const,
+        participant1Score: 2,
+        participant2Score: 0,
+        winnerId: 'p1',
+      },
+      {
+        ...groupMatch('g2', 1001, 'p3', 'p4'),
+        status: 'completed' as const,
+        participant1Score: 3,
+        participant2Score: 1,
+        winnerId: 'p3',
+      },
+      ...knockoutBracket,
+    ];
+    const advanced = advanceBracketWinners(matches, { groups, participants });
+    const k1 = advanced.find((m) => m.id === 'k1')!;
+    const k2 = advanced.find((m) => m.id === 'k2')!;
+    expect(k1.participant1Id).toBe('p1');
+    expect(k1.participant2Id).toBe('p2');
+    expect(k2.participant1Id).toBe('p3');
+    expect(k2.participant2Id).toBe('p4');
+  });
+
+  it('respects the scoring rule when deciding the group winners', () => {
+    const matches = [
+      {
+        ...groupMatch('g1', 1, 'p1', 'p2'),
+        status: 'completed' as const,
+        participant1Score: 1,
+        participant2Score: 1,
+        penaltyScore1: 3,
+        penaltyScore2: 4,
+        winnerId: 'p2',
+      },
+      {
+        ...groupMatch('g2', 1001, 'p3', 'p4'),
+        status: 'completed' as const,
+        participant1Score: 3,
+        participant2Score: 1,
+        winnerId: 'p3',
+      },
+      ...knockoutBracket,
+    ];
+    const advanced = advanceBracketWinners(matches, {
+      groups,
+      participants,
+      scoringRule: 'penalty-shootout',
+    });
+    const k1 = advanced.find((m) => m.id === 'k1')!;
+    expect(k1.participant1Id).toBe('p2');
+    expect(k1.participant2Id).toBe('p1');
+  });
+
+  it('keeps knockout slots empty until every group match is decided', () => {
+    const matches = [
+      {
+        ...groupMatch('g1', 1, 'p1', 'p2'),
+        status: 'completed' as const,
+        participant1Score: 2,
+        participant2Score: 0,
+        winnerId: 'p1',
+      },
+      groupMatch('g2', 1001, 'p3', 'p4'),
+      ...knockoutBracket,
+    ];
+    const advanced = advanceBracketWinners(matches, { groups, participants });
+    const k1 = advanced.find((m) => m.id === 'k1')!;
+    expect(k1.participant1Id).toBeNull();
+    expect(k1.participant2Id).toBeNull();
+  });
+
+  it('treats walkovers as a decided group phase', () => {
+    const matches = [
+      {
+        ...groupMatch('g1', 1, 'p1', 'p2'),
+        status: 'walkover' as const,
+        winnerId: 'p1',
+      },
+      {
+        ...groupMatch('g2', 1001, 'p3', 'p4'),
+        status: 'completed' as const,
+        participant1Score: 3,
+        participant2Score: 1,
+        winnerId: 'p3',
+      },
+      ...knockoutBracket,
+    ];
+    const advanced = advanceBracketWinners(matches, { groups, participants });
+    const k1 = advanced.find((m) => m.id === 'k1')!;
+    expect(k1.participant1Id).toBe('p1');
+    expect(k1.participant2Id).toBe('p2');
   });
 });
