@@ -105,9 +105,24 @@
 - [x] Tauri desktop app build (bundling configured; signing/updater not yet
       configured)
 - [ ] iOS/Android native shells (Capacitor or Tauri Mobile)
-- [ ] Multiple database support (mock PostgreSQL, MySQL)
+- [ ] Multiple database support (mock PostgreSQL, MySQL; Redis in Phase 8)
 - [ ] Connection SSH tunnel (mock)
 - [ ] Query sharing (mock: generate shareable link)
 - [ ] Scheduled query execution (mock: cron-like)
 - [ ] Database monitoring dashboard (mock: live connections, queries/sec)
 - [ ] Data masking / privacy mode
+
+## Phase 8 — Redis Support
+
+> In-browser mock Redis engine: connections, command line, keyspace browser
+
+- [ ] Mock Redis connection management (host/port, DB index, username/password,
+      TLS toggle, read-only)
+- [ ] Redis command line (raw redis-cli-style commands with syntax highlighting
+      and command autocomplete)
+- [ ] Keyspace browser (pattern filter, key type badges, TTL/expiry, memory
+      estimate)
+- [ ] Data type viewer/editor (string, hash, list, set, sorted set, stream)
+- [ ] Redis monitor & stats (mock: memory used, hit/miss ratio, connected
+      clients, commands/sec)
+- [ ] Redis import/export (JSON dump, RDB-style export)
