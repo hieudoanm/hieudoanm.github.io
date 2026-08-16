@@ -280,6 +280,15 @@ describe('PdfEsignTool', () => {
     expect(ctx2d.clearRect).not.toHaveBeenCalled();
   });
 
+  it('ignores drawing when the context disappears mid-stroke', () => {
+    const { container } = render(<PdfEsignTool />);
+    const canvas = container.querySelector('canvas') as HTMLCanvasElement;
+    fireEvent.mouseDown(canvas, { clientX: 1, clientY: 1 });
+    (HTMLCanvasElement.prototype.getContext as jest.Mock).mockReturnValue(null);
+    fireEvent.mouseMove(canvas, { clientX: 2, clientY: 2 });
+    expect(ctx2d.lineTo).not.toHaveBeenCalled();
+  });
+
   it('draws with mouse and touch input, clears and downloads', async () => {
     const click = jest.fn();
     mockAnchor(click);
@@ -520,5 +529,25 @@ describe('PdfToImagesTool', () => {
     });
     await act(async () => {});
     expect(spy).toHaveBeenCalled();
+  });
+
+  it('skips the download when a page has no blob', async () => {
+    (HTMLCanvasElement.prototype.toBlob as jest.Mock).mockImplementation(
+      (cb: any) => cb(null)
+    );
+    const pdf = {
+      numPages: 1,
+      getPage: jest.fn(async () => ({
+        getViewport: jest.fn(() => ({ width: 300, height: 400 })),
+        render: jest.fn(() => ({ promise: Promise.resolve() })),
+      })),
+    };
+    pdfjs.getDocument.mockReturnValue({ promise: Promise.resolve(pdf) });
+    render(<PdfToImagesTool />);
+    await act(async () => {
+      fireEvent.click(screen.getByText('PdfFileUpload'));
+    });
+    await act(async () => {});
+    expect(URL.createObjectURL).not.toHaveBeenCalled();
   });
 });

@@ -142,6 +142,33 @@ describe('parseSections', () => {
       },
     ]);
   });
+
+  it('parses quoted cells with commas and escaped quotes', () => {
+    const csv = [
+      '# Participants',
+      'id,name',
+      'p1,"Doe, John"',
+      'p2,"O""Brien"',
+    ].join('\n');
+    const sections = parseSections(csv);
+    expect(sections).toEqual([
+      {
+        title: 'Participants',
+        header: ['id', 'name'],
+        rows: [
+          ['p1', 'Doe, John'],
+          ['p2', 'O"Brien'],
+        ],
+      },
+    ]);
+  });
+
+  it('ignores text before any section header', () => {
+    const csv = ['stray line', '', '# Matches', 'id,round', 'm1,1'].join('\n');
+    expect(parseSections(csv)).toEqual([
+      { title: 'Matches', header: ['id', 'round'], rows: [['m1', '1']] },
+    ]);
+  });
 });
 
 describe('importTournamentDataFromCSV', () => {
@@ -230,5 +257,94 @@ describe('importTournamentDataFromCSV', () => {
         status: 'scheduled',
       },
     ]);
+  });
+
+  it('skips sections that lack their required name column', () => {
+    const csv = [
+      '# Tournament',
+      'description',
+      'Knockout',
+      '',
+      '# Participants',
+      'seed,rating',
+      '1,1500',
+    ].join('\n');
+    const result = importTournamentDataFromCSV(csv);
+    expect(result.tournaments).toEqual([]);
+    expect(result.participants).toEqual([]);
+  });
+
+  it('handles rows shorter than their header and missing columns', () => {
+    const csv = [
+      '# Tournament',
+      'seed,name',
+      '1',
+      '',
+      '# Participants',
+      'seed,name,rating',
+      '2',
+      '',
+      '# Matches',
+      'id,round,bracket',
+      'm1,1,',
+    ].join('\n');
+    const result = importTournamentDataFromCSV(csv);
+    expect(result.tournaments).toEqual([{ name: '' }]);
+    expect(result.participants).toEqual([
+      { id: 'imported-0', name: '', seed: 2 },
+    ]);
+    expect(result.matches).toEqual([
+      {
+        id: 'm1',
+        round: 1,
+        bracket: undefined,
+        participant1Id: null,
+        participant2Id: null,
+        participant1Score: null,
+        participant2Score: null,
+        winnerId: null,
+        status: 'scheduled',
+      },
+    ]);
+  });
+
+  it('maps all optional match columns', () => {
+    const csv = [
+      '# Matches',
+      'id,tournamentId,round,bracket,participant1Id,participant2Id,participant1Score,participant2Score,winnerId,status,scheduledAt,venue',
+      'm1,t1,2,winner,p1,p2,3,0,p1,completed,1700000001000,Court 1',
+    ].join('\n');
+    const result = importTournamentDataFromCSV(csv);
+    expect(result.matches).toEqual([
+      {
+        id: 'm1',
+        tournamentId: 't1',
+        round: 2,
+        bracket: 'winner',
+        participant1Id: 'p1',
+        participant2Id: 'p2',
+        participant1Score: 3,
+        participant2Score: 0,
+        winnerId: 'p1',
+        status: 'completed',
+        scheduledAt: 1700000001000,
+        venue: 'Court 1',
+      },
+    ]);
+  });
+
+  it('reads a quoted header and quoted cells in sections', () => {
+    const csv = [
+      '# Participants',
+      '"id","name"',
+      '"p1","Alice"',
+      '',
+      '# Matches',
+      '"participant1Id","participant2Id","status"',
+      '"a","b","completed"',
+    ].join('\n');
+    const result = importTournamentDataFromCSV(csv);
+    expect(result.participants).toEqual([{ id: 'p1', name: 'Alice' }]);
+    expect(result.matches[0].status).toBe('completed');
   });
 });

@@ -10,6 +10,7 @@ import { useData } from '@/providers/DataProvider';
 
 const push = jest.fn();
 const useSearchParams = jest.fn();
+const mockAddToast = jest.fn();
 
 jest.mock('next/navigation', () => ({
   useRouter: () => ({ push }),
@@ -32,7 +33,7 @@ jest.mock('@/providers/Providers', () => ({
 }));
 
 jest.mock('@/providers/ToastProvider', () => ({
-  useToast: () => ({ addToast: jest.fn() }),
+  useToast: () => ({ addToast: mockAddToast }),
 }));
 
 jest.mock('@/providers/DataProvider', () => ({
@@ -1008,5 +1009,88 @@ describe('BoardPage', () => {
       screen.queryByPlaceholderText('Write a comment...')
     ).not.toBeInTheDocument();
     expect(screen.queryByText('Archive')).not.toBeInTheDocument();
+  });
+
+  it('ignores shortcuts when a modifier key is pressed', () => {
+    renderBoard();
+    fireEvent.keyDown(window, { key: 'n', ctrlKey: true });
+    expect(screen.queryByPlaceholderText('Card title')).not.toBeInTheDocument();
+  });
+
+  it('ignores the N shortcut when the board has no lists', () => {
+    jest.mocked(useData).mockReturnValue({
+      ...baseData(),
+      lists: [],
+    } as never);
+    renderBoard();
+    fireEvent.keyDown(window, { key: 'n' });
+    expect(screen.queryByPlaceholderText('Card title')).not.toBeInTheDocument();
+  });
+
+  it('closes the list menu when toggled off', () => {
+    renderBoard();
+    fireEvent.click(screen.getByLabelText('Menu for To Do'));
+    expect(screen.getByText('Sort by')).toBeInTheDocument();
+    fireEvent.click(screen.getByLabelText('Menu for To Do'));
+    expect(screen.queryByText('Sort by')).not.toBeInTheDocument();
+  });
+
+  it('renders the expand icon for a collapsed list', () => {
+    jest.mocked(useData).mockReturnValue({
+      ...baseData(),
+      lists: [{ ...baseData().lists[0], collapsed: true }],
+    } as never);
+    renderBoard();
+    expect(screen.getByTestId('FiChevronRight')).toBeInTheDocument();
+  });
+
+  it('reports a copy failure when the clipboard is unavailable', async () => {
+    renderBoard();
+    fireEvent.click(screen.getByLabelText('Share board'));
+    fireEvent.click(screen.getByText('Copy'));
+    await waitFor(() =>
+      expect(mockAddToast).toHaveBeenCalledWith('Could not copy link', 'error')
+    );
+  });
+
+  it('copies the share link successfully', async () => {
+    Object.defineProperty(navigator, 'clipboard', {
+      value: { writeText: jest.fn().mockResolvedValue(undefined) },
+      configurable: true,
+    });
+    renderBoard();
+    fireEvent.click(screen.getByLabelText('Share board'));
+    fireEvent.click(screen.getByText('Copy'));
+    await waitFor(() =>
+      expect(mockAddToast).toHaveBeenCalledWith('Link copied', 'success')
+    );
+  });
+
+  it('notifies when sharing is enabled', () => {
+    jest.mocked(useData).mockReturnValue({
+      ...baseData(),
+      boards: [{ ...baseData().boards[0], shareEnabled: false }],
+    } as never);
+    renderBoard();
+    fireEvent.click(screen.getByLabelText('Share board'));
+    fireEvent.click(screen.getByLabelText('Anyone with the link can edit'));
+    expect(mockAddToast).toHaveBeenCalledWith('Sharing enabled', 'info');
+    expect(jest.mocked(useData)().updateBoard).toHaveBeenCalledWith('board-1', {
+      shareEnabled: true,
+    });
+  });
+
+  it('notifies when sharing is disabled', () => {
+    jest.mocked(useData).mockReturnValue({
+      ...baseData(),
+      boards: [{ ...baseData().boards[0], shareEnabled: true }],
+    } as never);
+    renderBoard();
+    fireEvent.click(screen.getByLabelText('Share board'));
+    fireEvent.click(screen.getByLabelText('Anyone with the link can edit'));
+    expect(mockAddToast).toHaveBeenCalledWith('Sharing disabled', 'info');
+    expect(jest.mocked(useData)().updateBoard).toHaveBeenCalledWith('board-1', {
+      shareEnabled: false,
+    });
   });
 });

@@ -191,4 +191,88 @@ describe('StandingsPage', () => {
     render(<StandingsPage />);
     expect(screen.getByText(/No standings available yet/)).toBeInTheDocument();
   });
+
+  it('captures a snapshot with a default label when blank', async () => {
+    render(<StandingsPage />);
+    fireEvent.click(screen.getByText('Capture Snapshot'));
+    expect(mockData.createSnapshot).toHaveBeenCalledWith(
+      't1',
+      'Standings snapshot',
+      expect.any(Array)
+    );
+  });
+
+  it('captures a snapshot using the typed label', async () => {
+    render(<StandingsPage />);
+    fireEvent.change(screen.getByPlaceholderText('Snapshot label (optional)'), {
+      target: { value: 'Week 1' },
+    });
+    fireEvent.click(screen.getByText('Capture Snapshot'));
+    expect(mockData.createSnapshot).toHaveBeenCalledWith(
+      't1',
+      'Week 1',
+      expect.any(Array)
+    );
+  });
+
+  it('selects and deselects a snapshot', () => {
+    mockData.snapshots = [
+      {
+        id: 's1',
+        tournamentId: 't1',
+        label: 'Week 1',
+        createdAt: 100,
+        standings: [
+          {
+            participantId: 'a',
+            tournamentId: 't1',
+            position: 1,
+            played: 2,
+            won: 2,
+            drawn: 0,
+            lost: 0,
+            points: 6,
+          },
+        ],
+      },
+    ];
+    render(<StandingsPage />);
+    fireEvent.click(screen.getByText('Week 1'));
+    expect(screen.getByText('← Back to live standings')).toBeInTheDocument();
+    fireEvent.click(screen.getByText('Week 1'));
+    expect(
+      screen.queryByText('← Back to live standings')
+    ).not.toBeInTheDocument();
+  });
+
+  it('clears the selection when the selected snapshot is deleted', () => {
+    mockData.snapshots = [
+      {
+        id: 's1',
+        tournamentId: 't1',
+        label: 'Week 1',
+        createdAt: 100,
+        standings: [
+          {
+            participantId: 'a',
+            tournamentId: 't1',
+            position: 1,
+            played: 2,
+            won: 2,
+            drawn: 0,
+            lost: 0,
+            points: 6,
+          },
+        ],
+      },
+    ];
+    render(<StandingsPage />);
+    fireEvent.click(screen.getByText('Week 1'));
+    expect(screen.getByText('← Back to live standings')).toBeInTheDocument();
+    fireEvent.click(screen.getByText('Delete'));
+    expect(mockData.deleteSnapshot).toHaveBeenCalledWith('s1');
+    expect(
+      screen.queryByText('← Back to live standings')
+    ).not.toBeInTheDocument();
+  });
 });

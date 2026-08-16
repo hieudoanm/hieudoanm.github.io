@@ -71,4 +71,24 @@ describe('PdfFileUpload', () => {
     fireEvent.keyDown(container.firstChild as HTMLElement, { key: 'Enter' });
     expect(click).toHaveBeenCalled();
   });
+
+  it('opens the file input with the Space key', () => {
+    const { container } = render(<PdfFileUpload onFile={jest.fn()} />);
+    const input = document.querySelector(
+      'input[type="file"]'
+    ) as HTMLInputElement;
+    const click = jest.spyOn(input, 'click');
+    fireEvent.keyDown(container.firstChild as HTMLElement, { key: ' ' });
+    expect(click).toHaveBeenCalled();
+  });
+
+  it('does not open the file input with another key', () => {
+    const { container } = render(<PdfFileUpload onFile={jest.fn()} />);
+    const input = document.querySelector(
+      'input[type="file"]'
+    ) as HTMLInputElement;
+    const click = jest.spyOn(input, 'click');
+    fireEvent.keyDown(container.firstChild as HTMLElement, { key: 'a' });
+    expect(click).not.toHaveBeenCalled();
+  });
 });

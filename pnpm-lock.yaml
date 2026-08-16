@@ -2756,6 +2756,9 @@ importers:
       globals:
         specifier: 17.11.0
         version: 17.11.0
+      jest:
+        specifier: 30.4.2
+        version: 30.4.2(@types/node@26.2.0)(supports-color@10.2.2)(ts-node@10.9.2(@swc/core@1.15.46(@swc/helpers@0.5.23))(@types/node@26.2.0)(typescript@6.0.3))
       prettier:
         specifier: 3.9.6
         version: 3.9.6

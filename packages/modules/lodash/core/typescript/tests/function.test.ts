@@ -167,6 +167,8 @@ describe('spread', () => {
 
 describe('unary', () => {
   it('should accept only one arg', () => {
-    expect(unary((a: number) => a)(1, 2, 3)).toBe(1);
+    expect(
+      (unary((a: number) => a) as (...args: number[]) => number)(1, 2, 3)
+    ).toBe(1);
   });
 });

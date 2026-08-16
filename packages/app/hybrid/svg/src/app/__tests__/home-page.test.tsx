@@ -25,6 +25,7 @@ jest.mock('react-icons/fi', () => ({
   FiLayout: () => <span data-testid="layout" />,
   FiStar: () => <span data-testid="star" />,
   FiFolder: () => <span data-testid="folder" />,
+  FiDownload: () => <span data-testid="download" />,
 }));
 
 jest.mock('@/providers/Providers', () => ({

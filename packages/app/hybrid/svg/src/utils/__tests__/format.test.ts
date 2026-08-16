@@ -117,6 +117,10 @@ describe('hexToRgb', () => {
     expect(hexToRgb('nope')).toBeNull();
     expect(hexToRgb('#ff00')).toBeNull();
   });
+
+  it('returns null when a 6-digit hex contains non-hex characters', () => {
+    expect(hexToRgb('#gggggg')).toBeNull();
+  });
 });
 
 describe('rgbToHex', () => {
@@ -136,6 +140,10 @@ describe('mixHexColors', () => {
     expect(mixHexColors('#000000', '#ffffff', 1)).toBe('#ffffff');
     expect(mixHexColors('#000000', '#ffffff', 0.5)).toBe('#808080');
     expect(mixHexColors('#ff0000', '#0000ff', 0.5)).toBe('#800080');
+  });
+
+  it('returns the second color when the first is invalid', () => {
+    expect(mixHexColors('nope', '#ffffff', 0.5)).toBe('#ffffff');
   });
 });
 
@@ -159,6 +167,10 @@ describe('wrapText', () => {
 
   it('returns the whole text when the max width is zero', () => {
     expect(wrapText('hello world', 0, 16, 0, measure)).toEqual(['hello world']);
+  });
+
+  it('uses the default measure and letter spacing', () => {
+    expect(wrapText('hi', 50, 16)).toEqual(['hi']);
   });
 
   it('overflows a single word that exceeds the width', () => {
@@ -211,6 +223,20 @@ describe('parsePath', () => {
 
   it('returns no points for empty data', () => {
     const path = parsePath('');
+    expect(path.points).toEqual([]);
+    expect(path.closed).toBe(false);
+  });
+
+  it('uses the default empty path data', () => {
+    expect(parsePath().points).toEqual([]);
+  });
+
+  it('tolerates a command without arguments', () => {
+    expect(parsePath('M').points).toEqual([]);
+  });
+
+  it('does not treat a short quadratic as smooth', () => {
+    const path = parsePath('Q1 2');
     expect(path.points).toEqual([]);
     expect(path.closed).toBe(false);
   });
@@ -277,6 +303,10 @@ describe('mockBooleanUnion', () => {
       shape({ type: 'path', pathData: 'M0 0 L1 1' }),
     ];
     expect(mockBooleanUnion(shapes)).toBe('M0 0 L1 1');
+  });
+
+  it('omits paths without path data', () => {
+    expect(mockBooleanUnion([shape({ type: 'path' })])).toBe('');
   });
 });
 
@@ -419,6 +449,19 @@ describe('moveLayer', () => {
     expect(moveLayer(layers, 'missing', 'l1')).toBe(layers);
     expect(moveLayer(layers, 'l1', 'l1')).toBe(layers);
   });
+
+  it('drops a layer into a folder with no children', () => {
+    const next = moveLayer(
+      [
+        { ...layers[0] },
+        { ...layers[1] },
+        { ...layers[3], parentId: undefined },
+      ],
+      'l1',
+      'f1'
+    );
+    expect(next.find((l) => l.id === 'l1')?.parentId).toBe('f1');
+  });
 });
 
 describe('getAlignment', () => {
@@ -536,6 +579,15 @@ describe('applyAlignment', () => {
     );
     expect(result).toEqual({ x: 90, y: 100, width: 50, height: 20 });
   });
+
+  it('moves the top edge when it aligns during an n resize', () => {
+    const result = applyAlignment(
+      { x: 100, y: 50, width: 50, height: 30 },
+      { horizontal: { matchedEdge: 'start', position: 40, delta: -10 } },
+      'nw'
+    );
+    expect(result).toEqual({ x: 100, y: 40, width: 50, height: 40 });
+  });
 });
 
 describe('generateShapeSVG', () => {
@@ -591,6 +643,15 @@ describe('generateShapeSVG', () => {
     expect(svg).toContain('font-family="Arial"');
     expect(svg).toContain('font-size="16"');
     expect(svg).toContain('></text>');
+  });
+
+  it('uses defaults when wrapping area text without text or spacing', () => {
+    const svg = generateShapeSVG(
+      shape({ type: 'text', textArea: true, width: 60, height: 20 })
+    );
+    expect(svg).toContain('font-size="16"');
+    expect(svg).not.toContain('letter-spacing');
+    expect(svg).not.toContain('<tspan');
   });
 
   it('renders point text without tspans', () => {
@@ -868,9 +929,61 @@ describe('exportAsSVG with selection', () => {
     expect(svg).toContain('stop-color="#ff0000"');
   });
 
+  it('uses explicit linear gradient coordinates', () => {
+    const svg = exportAsSVG({
+      ...gradientDoc(),
+      gradients: [
+        {
+          ...gradientDoc().gradients[0],
+          x1: 0.25,
+          y1: 0.75,
+          x2: 0.5,
+          y2: 0.5,
+        },
+      ],
+    });
+    expect(svg).toContain('x1="0.25" y1="0.75" x2="0.5" y2="0.5"');
+  });
+
+  it('defaults missing linear gradient coordinates', () => {
+    const svg = exportAsSVG({
+      ...gradientDoc(),
+      gradients: [
+        { id: 'g1', type: 'linear', stops: gradientDoc().gradients[0].stops },
+      ],
+    });
+    expect(svg).toContain('x1="0" y1="0" x2="1" y2="1"');
+  });
+
   it('omits defs when no gradient shapes are exported', () => {
     const svg = exportAsSVG(gradientDoc(), ['s1', 's2']);
     expect(svg).not.toContain('<defs>');
+  });
+
+  it('omits a gradient whose definition is missing', () => {
+    const svg = exportAsSVG({
+      ...gradientDoc(),
+      gradients: [],
+    });
+    expect(svg).toContain('<defs>');
+    expect(svg).not.toContain('linearGradient');
+  });
+
+  it('emits radial gradient defs', () => {
+    const doc: SVGDocument = {
+      ...gradientDoc(),
+      gradients: [
+        {
+          id: 'g1',
+          type: 'radial',
+          stops: [{ color: '#ff0000', offset: 0, opacity: 1 }],
+        },
+      ],
+    };
+    const svg = exportAsSVG(doc);
+    expect(svg).toContain('radialGradient');
+    expect(svg).toContain('cx="0.5"');
+    expect(svg).not.toContain('linearGradient');
   });
 });
 

@@ -1,6 +1,7 @@
 import {
   getGoalDifference,
   getHeadToHead,
+  getPointsScored,
   calculateStandings,
 } from '@/lib/standings';
 import type { Match } from '@/types';
@@ -55,6 +56,31 @@ describe('getGoalDifference', () => {
   });
 });
 
+describe('getPointsScored', () => {
+  it('sums the participant score across completed matches', () => {
+    const matches = [
+      completed('a', 'b', 3, 1, 'a'),
+      completed('a', 'c', 2, 2, null),
+    ];
+    expect(getPointsScored(matches, 'a')).toBe(5);
+    expect(getPointsScored(matches, 'b')).toBe(1);
+  });
+
+  it('ignores non-completed matches, null scores, and unrelated matches', () => {
+    const matches: Match[] = [
+      completed('a', 'b', 3, 1, 'a'),
+      { ...completed('a', 'c', 2, 0, 'a'), status: 'scheduled' },
+      {
+        ...completed('a', 'd', 2, 0, 'a'),
+        participant1Score: null,
+        participant2Score: null,
+      },
+      completed('x', 'y', 5, 0, 'x'),
+    ];
+    expect(getPointsScored(matches, 'a')).toBe(3);
+  });
+});
+
 describe('getHeadToHead', () => {
   it('counts wins, losses, and draws between two participants', () => {
     const matches = [
@@ -69,6 +95,25 @@ describe('getHeadToHead', () => {
     });
   });
 
+  it('counts walkover wins for either side', () => {
+    const walkover = (winner: string): Match => ({
+      ...completed('a', 'b', 0, 0, winner),
+      status: 'walkover',
+      participant1Score: null,
+      participant2Score: null,
+    });
+    expect(getHeadToHead([walkover('a')], 'a', 'b')).toEqual({
+      p1Wins: 1,
+      p2Wins: 0,
+      draws: 0,
+    });
+    expect(getHeadToHead([walkover('b')], 'a', 'b')).toEqual({
+      p1Wins: 0,
+      p2Wins: 1,
+      draws: 0,
+    });
+  });
+
   it('ignores matches not involving both participants', () => {
     const matches = [completed('a', 'c', 2, 1, 'a')];
     expect(getHeadToHead(matches, 'a', 'b')).toEqual({
@@ -78,11 +123,28 @@ describe('getHeadToHead', () => {
     });
   });
 
-  it('ignores non-completed matches', () => {
+  it('ignores non-completed and null-score matches', () => {
     const matches: Match[] = [
       { ...completed('a', 'b', 2, 1, 'a'), status: 'scheduled' },
+      {
+        ...completed('a', 'b', 2, 1, 'a'),
+        participant1Score: null,
+        participant2Score: null,
+      },
     ];
-    expect(getHeadToHead(matches, 'a', 'b').draws).toBe(0);
+    expect(getHeadToHead(matches, 'a', 'b')).toEqual({
+      p1Wins: 0,
+      p2Wins: 0,
+      draws: 0,
+    });
+  });
+
+  it('credits a win for the second participant', () => {
+    expect(getHeadToHead([completed('a', 'b', 0, 3, 'b')], 'a', 'b')).toEqual({
+      p1Wins: 0,
+      p2Wins: 1,
+      draws: 0,
+    });
   });
 });
 
@@ -182,6 +244,53 @@ describe('calculateStandings', () => {
       lost: 1,
       points: 0,
     });
+  });
+
+  it('counts a walkover win for the second participant', () => {
+    const matches: Match[] = [
+      {
+        ...completed('a', 'b', 0, 0, 'b'),
+        status: 'walkover',
+        participant1Score: null,
+        participant2Score: null,
+      },
+    ];
+    const standings = calculateStandings(matches, ['a', 'b'], 't1');
+    expect(standings.find((s) => s.participantId === 'b')).toMatchObject({
+      played: 1,
+      won: 1,
+      points: 3,
+    });
+    expect(standings.find((s) => s.participantId === 'a')).toMatchObject({
+      lost: 1,
+      points: 0,
+    });
+  });
+
+  it('resolves a draw when no winner is recorded', () => {
+    const standings = calculateStandings(
+      [completed('a', 'b', 1, 1, null)],
+      ['a', 'b'],
+      't1'
+    );
+    expect(standings.find((s) => s.participantId === 'a')).toMatchObject({
+      drawn: 1,
+      points: 1,
+    });
+    expect(standings.find((s) => s.participantId === 'b')).toMatchObject({
+      drawn: 1,
+      points: 1,
+    });
+  });
+
+  it('breaks a points, wins, and goal difference tie via head-to-head', () => {
+    const matches = [
+      completed('a', 'c', 1, 0, 'a'),
+      completed('a', 'b', 0, 1, 'b'),
+      completed('c', 'd', 2, 1, 'c'),
+    ];
+    const standings = calculateStandings(matches, ['a', 'b', 'c', 'd'], 't1');
+    expect(standings.map((s) => s.participantId)).toEqual(['b', 'a', 'c', 'd']);
   });
 
   it('awards three match points for a clean set win', () => {

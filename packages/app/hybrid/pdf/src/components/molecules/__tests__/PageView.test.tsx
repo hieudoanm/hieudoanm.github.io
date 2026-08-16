@@ -63,4 +63,95 @@ describe('PageView molecule', () => {
     render(<PageView page={otherPage} zoom={100} annotations={[annotation]} />);
     expect(screen.queryByText('Note text')).toBeNull();
   });
+
+  it('highlights the active search match distinctly', () => {
+    const { container } = render(
+      <PageView
+        page={basePage}
+        zoom={100}
+        searchQuery="Hello"
+        activeMatchId="tb1-m0"
+      />
+    );
+    const marks = container.querySelectorAll('mark');
+    expect(marks.length).toBe(1);
+    expect(marks[0].className).toContain('bg-yellow-400');
+  });
+
+  it('renders non-active search matches in the muted style', () => {
+    const { container } = render(
+      <PageView page={basePage} zoom={100} searchQuery="Hello" />
+    );
+    const marks = container.querySelectorAll('mark');
+    expect(marks[0].className).toContain('bg-yellow-200');
+  });
+
+  it('renders an image watermark with its label', () => {
+    const watermarkedPage = {
+      ...basePage,
+      watermark: {
+        id: 'wm1',
+        documentId: 'doc1',
+        type: 'image' as const,
+        text: '',
+        fontSize: 48,
+        color: '#000000',
+        opacity: 0.5,
+        rotation: 0,
+        position: 'center' as const,
+        pageRange: '1',
+        image: 'data:image/png;base64,iVBORw0KGgo=',
+        label: 'Confidential',
+      },
+    };
+    render(<PageView page={watermarkedPage} zoom={100} />);
+    const img = screen.getByAltText('Confidential');
+    expect(img).toBeInTheDocument();
+    expect(img).toHaveAttribute('src', 'data:image/png;base64,iVBORw0KGgo=');
+  });
+
+  it('renders an image watermark without a label using the default alt text', () => {
+    const watermarkedPage = {
+      ...basePage,
+      watermark: {
+        id: 'wm1',
+        documentId: 'doc1',
+        type: 'image' as const,
+        text: '',
+        fontSize: 48,
+        color: '#000000',
+        opacity: 0.5,
+        rotation: 0,
+        position: 'center' as const,
+        pageRange: '1',
+        image: 'data:image/png;base64,iVBORw0KGgo=',
+      },
+    };
+    render(<PageView page={watermarkedPage} zoom={100} />);
+    expect(screen.getByAltText('Watermark')).toBeInTheDocument();
+  });
+
+  it('renders a colored placeholder when an image watermark has no source', () => {
+    const watermarkedPage = {
+      ...basePage,
+      watermark: {
+        id: 'wm1',
+        documentId: 'doc1',
+        type: 'image' as const,
+        text: '',
+        fontSize: 48,
+        color: '#123456',
+        opacity: 0.5,
+        rotation: 0,
+        position: 'center' as const,
+        pageRange: '1',
+      },
+    };
+    const { container } = render(
+      <PageView page={watermarkedPage} zoom={100} />
+    );
+    const placeholder = container.querySelector('div.h-40');
+    expect(placeholder).toBeInTheDocument();
+    expect(placeholder).toHaveStyle({ backgroundColor: '#123456' });
+  });
 });

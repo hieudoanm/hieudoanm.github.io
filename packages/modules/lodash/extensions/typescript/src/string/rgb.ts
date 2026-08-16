@@ -27,9 +27,9 @@ export const rgb2hsl = ({
   g = 0,
   b = 0,
 }: {
-  r: number;
-  g: number;
-  b: number;
+  r?: number;
+  g?: number;
+  b?: number;
 }): { h: number; s: number; l: number } => {
   r /= 255;
   g /= 255;

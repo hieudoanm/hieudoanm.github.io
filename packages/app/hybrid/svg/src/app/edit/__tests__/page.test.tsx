@@ -16,6 +16,7 @@ import type {
   SVGSettings,
   SVGLayer,
   SVGGradientStop,
+  SVGGradient,
 } from '@/types';
 
 const push = jest.fn();
@@ -2045,6 +2046,362 @@ describe('EditorPage', () => {
       fireEvent.change(input, { target: { value: 'Renamed' } });
       fireEvent.keyDown(input, { key: 'Enter' });
       expect(data.renameLayer).toHaveBeenCalledWith('doc-1', 'l1', 'Renamed');
+    });
+
+    it('cancels a layer rename with Escape', () => {
+      const { data } = renderEditor();
+      fireEvent.doubleClick(screen.getByText('Main'));
+      const input = screen.getByDisplayValue('Main');
+      fireEvent.change(input, { target: { value: 'Cancelled' } });
+      fireEvent.keyDown(input, { key: 'Escape' });
+      expect(data.renameLayer).not.toHaveBeenCalled();
+      expect(screen.getByText('Main')).toBeInTheDocument();
+    });
+
+    it('does not rename a layer to an empty name', () => {
+      const { data } = renderEditor();
+      fireEvent.doubleClick(screen.getByText('Main'));
+      const input = screen.getByDisplayValue('Main');
+      fireEvent.change(input, { target: { value: '   ' } });
+      fireEvent.keyDown(input, { key: 'Enter' });
+      expect(data.renameLayer).not.toHaveBeenCalled();
+    });
+  });
+
+  describe('coverage edge cases', () => {
+    it('samples a gradient color with the eyedropper without a selection', async () => {
+      const { data } = renderEditor();
+      fireEvent.click(screen.getByTitle('Eyedropper'));
+      fireEvent.mouseDown(document.querySelector('svg')!, {
+        clientX: 60,
+        clientY: 210,
+      });
+      await waitFor(() =>
+        expect(screen.getByText(/1 selected/)).toBeInTheDocument()
+      );
+      expect(data.updateShape).not.toHaveBeenCalled();
+    });
+
+    it('samples nothing from a shape without a fill', async () => {
+      const { data } = renderEditor();
+      fireEvent.click(screen.getByTitle('Eyedropper'));
+      fireEvent.mouseDown(document.querySelector('svg')!, {
+        clientX: 240,
+        clientY: 80,
+      });
+      await waitFor(() =>
+        expect(screen.getByText(/1 selected/)).toBeInTheDocument()
+      );
+      expect(data.updateShape).not.toHaveBeenCalled();
+    });
+
+    it('ignores eyedropper clicks on empty canvas', () => {
+      const { data } = renderEditor();
+      fireEvent.click(screen.getByTitle('Eyedropper'));
+      fireEvent.mouseDown(document.querySelector('svg')!, {
+        clientX: 750,
+        clientY: 550,
+      });
+      expect(data.updateShape).not.toHaveBeenCalled();
+      expect(screen.getByText(/No selection/)).toBeInTheDocument();
+    });
+
+    it('moves one guide while another stays in place', () => {
+      renderEditor();
+      const top = document.querySelector('.cursor-col-resize') as HTMLElement;
+      fireEvent.mouseDown(top, { clientX: 10, clientY: 0 });
+      fireEvent.mouseMove(window, { clientX: 200, clientY: 150 });
+      fireEvent.mouseUp(window, { clientX: 200, clientY: 150 });
+      const left = document.querySelector('.cursor-row-resize') as HTMLElement;
+      fireEvent.mouseDown(left, { clientX: 0, clientY: 10 });
+      fireEvent.mouseMove(window, { clientX: 300, clientY: 250 });
+      fireEvent.mouseUp(window, { clientX: 300, clientY: 250 });
+      const vertical = document.querySelector(
+        'line[stroke="#e11d48"][x1="200"]'
+      ) as HTMLElement;
+      fireEvent.mouseDown(vertical, { clientX: 200, clientY: 150 });
+      fireEvent.mouseMove(window, { clientX: 400, clientY: 150 });
+      fireEvent.mouseUp(window, { clientX: 400, clientY: 150 });
+      const guides = document.querySelectorAll('line[stroke="#e11d48"]');
+      expect(guides).toHaveLength(2);
+      expect(
+        document.querySelector('line[stroke="#e11d48"][x1="400"]')
+      ).toBeInTheDocument();
+      expect(
+        document.querySelector('line[stroke="#e11d48"][y1="250"]')
+      ).toBeInTheDocument();
+    });
+
+    it('brings a shape forward and backward via the props panel', async () => {
+      const { data } = renderEditor();
+      selectShape(350, 65);
+      fireEvent.click(screen.getByRole('button', { name: 'Props' }));
+      fireEvent.click(screen.getByText('Bring Forward'));
+      await waitFor(() => expect(data.updateDocument).toHaveBeenCalled());
+      let order = (
+        data.updateDocument.mock.calls[0][0] as SVGDocument
+      ).shapes.map((s) => s.id);
+      expect(order.indexOf('s-line')).toBeGreaterThan(order.indexOf('s-path'));
+      fireEvent.click(screen.getByText('Send Backward'));
+      await waitFor(() =>
+        expect(data.updateDocument.mock.calls.length).toBe(2)
+      );
+      order = (data.updateDocument.mock.calls[1][0] as SVGDocument).shapes.map(
+        (s) => s.id
+      );
+      expect(order.indexOf('s-line')).toBeLessThan(order.indexOf('s-path'));
+    });
+
+    it('expands a collapsed folder to show its children', () => {
+      renderEditor([], buildFolderDoc());
+      fireEvent.click(screen.getByTestId('FiChevronRight').closest('button')!);
+      expect(screen.queryByText('Inside')).not.toBeInTheDocument();
+      fireEvent.click(screen.getByTestId('FiChevronRight').closest('button')!);
+      expect(screen.getByText('Inside')).toBeInTheDocument();
+    });
+
+    it('does not start a drag for tiny mouse movements', () => {
+      const { data } = renderEditor();
+      const svg = document.querySelector('svg') as SVGSVGElement;
+      fireEvent.mouseDown(svg, { clientX: 60, clientY: 40 });
+      fireEvent.mouseMove(svg, { clientX: 61, clientY: 41 });
+      fireEvent.mouseUp(svg);
+      expect(data.saveHistory).not.toHaveBeenCalled();
+      expect(data.moveShape).not.toHaveBeenCalled();
+    });
+
+    it('renders a text shape that relies on default styling', () => {
+      const doc = buildDoc();
+      doc.shapes.push(
+        shape({
+          id: 's-text2',
+          type: 'text',
+          name: 'Text 2',
+          x: 20,
+          y: 500,
+          width: 100,
+          height: 20,
+        })
+      );
+      doc.layers[0].shapeIds.push('s-text2');
+      const { container } = renderEditor([], doc);
+      const texts = container.querySelectorAll('text');
+      expect(texts.length).toBeGreaterThanOrEqual(2);
+      expect([...texts].some((t) => t.getAttribute('font-size') === '16')).toBe(
+        true
+      );
+    });
+
+    it('renders radial gradient handles and drags them', () => {
+      const doc = buildDoc();
+      doc.shapes = doc.shapes.map((s) =>
+        s.id === 's-rect'
+          ? {
+              ...s,
+              fill: {
+                type: 'gradient' as const,
+                color: '',
+                gradientId: 'g2',
+                opacity: 1,
+              },
+            }
+          : s
+      );
+      const { data, svg } = renderEditor([], doc);
+      selectShape(60, 40);
+      const handles = document.querySelectorAll('circle.cursor-grab');
+      expect(handles).toHaveLength(2);
+      fireEvent.mouseDown(handles[0], { clientX: 60, clientY: 40 });
+      fireEvent.mouseMove(svg, { clientX: 85, clientY: 40 });
+      fireEvent.mouseUp(svg);
+      expect(data.updateGradient).toHaveBeenCalledWith(
+        'doc-1',
+        expect.objectContaining({ id: 'g2', cx: 0.75, cy: 0.5 })
+      );
+      const afterCenter = document.querySelectorAll('circle.cursor-grab');
+      fireEvent.mouseDown(afterCenter[1], { clientX: 120, clientY: 55 });
+      fireEvent.mouseMove(svg, { clientX: 140, clientY: 55 });
+      fireEvent.mouseUp(svg);
+      expect(data.updateGradient).toHaveBeenLastCalledWith(
+        'doc-1',
+        expect.objectContaining({ id: 'g2', r: 0.7 })
+      );
+    });
+
+    it('drags the end handle of a linear gradient', () => {
+      const doc = buildDoc();
+      doc.shapes = doc.shapes.map((s) =>
+        s.id === 's-rect'
+          ? {
+              ...s,
+              fill: {
+                type: 'gradient' as const,
+                color: '',
+                gradientId: 'g1',
+                opacity: 1,
+              },
+            }
+          : s
+      );
+      const { data, svg } = renderEditor([], doc);
+      selectShape(60, 40);
+      const handles = document.querySelectorAll('circle.cursor-grab');
+      fireEvent.mouseDown(handles[1], { clientX: 120, clientY: 80 });
+      fireEvent.mouseMove(svg, { clientX: 95, clientY: 55 });
+      fireEvent.mouseUp(svg);
+      expect(data.updateGradient).toHaveBeenCalledWith(
+        'doc-1',
+        expect.objectContaining({ id: 'g1', x1: 0, y1: 0, x2: 0.75, y2: 0.5 })
+      );
+    });
+
+    it('renders gradient definitions with default coordinates', () => {
+      const doc = buildDoc();
+      doc.gradients = doc.gradients.map((g) => {
+        if (g.id === 'g1') {
+          const { x1, y1, x2, y2, ...rest } = g as unknown as Record<
+            string,
+            unknown
+          >;
+          return rest as unknown as SVGGradient;
+        }
+        if (g.id === 'g2') {
+          const { cx, cy, r, ...rest } = g as unknown as Record<
+            string,
+            unknown
+          >;
+          return rest as unknown as SVGGradient;
+        }
+        return g;
+      });
+      renderEditor([], doc);
+      const linear = document.querySelector('linearGradient')!;
+      expect(linear.getAttribute('x1')).toBe('0');
+      expect(linear.getAttribute('x2')).toBe('1');
+      const radial = document.querySelector('radialGradient')!;
+      expect(radial.getAttribute('cx')).toBe('0.5');
+    });
+
+    it('blocks exporting when selection only is enabled without a selection', () => {
+      renderEditor();
+      fireEvent.click(screen.getByTitle('Export options'));
+      fireEvent.click(screen.getByText('Selection only'));
+      fireEvent.click(screen.getByText('SVG'));
+      expect(downloadFile).not.toHaveBeenCalled();
+      expect(addToast).toHaveBeenCalledWith('Select shapes to export', 'error');
+    });
+
+    it('reports a failed export when rasterization returns nothing', async () => {
+      renderEditor();
+      (rasterizeSVG as jest.Mock).mockResolvedValueOnce(null);
+      fireEvent.click(screen.getByTitle('Export options'));
+      fireEvent.click(screen.getByText('PNG 2x'));
+      await waitFor(() =>
+        expect(addToast).toHaveBeenCalledWith('Export failed', 'error')
+      );
+      expect(downloadBlob).not.toHaveBeenCalled();
+    });
+
+    it('shows the singular shape count in the status bar', () => {
+      const doc = buildDoc();
+      doc.shapes = doc.shapes.slice(0, 1);
+      doc.layers[0].shapeIds = ['s-rect'];
+      renderEditor([], doc);
+      expect(screen.getByText(/1 shape/)).toBeInTheDocument();
+    });
+
+    it('shows lock and visibility icons for layers', () => {
+      const doc = buildDoc();
+      doc.layers[1].locked = true;
+      renderEditor([], doc);
+      expect(screen.getByTestId('FiLock')).toBeInTheDocument();
+      expect(screen.getAllByTestId('FiUnlock')).toHaveLength(1);
+      expect(screen.getAllByTestId('FiEye')).toHaveLength(2);
+      expect(screen.getByTestId('FiEyeOff')).toBeInTheDocument();
+    });
+
+    it('renders an area text shape with fallback styling', () => {
+      const doc = buildDoc();
+      doc.shapes = doc.shapes.map((s) =>
+        s.id === 's-text'
+          ? {
+              ...s,
+              textArea: true,
+              text: undefined,
+              fontFamily: undefined,
+              fontSize: undefined,
+              fontWeight: undefined,
+              fontStyle: undefined,
+              textDecoration: undefined,
+              textAlign: undefined,
+              letterSpacing: undefined,
+            }
+          : s
+      );
+      const { container } = renderEditor([], doc);
+      const text = container.querySelector('text') as SVGGraphicsElement;
+      expect(text).toBeInTheDocument();
+      expect(text.getAttribute('font-size')).toBe('16');
+    });
+
+    it('renders a polygon without points harmlessly', () => {
+      const doc = buildDoc();
+      doc.shapes.push(
+        shape({
+          id: 's-poly2',
+          type: 'polygon',
+          name: 'Poly 2',
+          x: 600,
+          y: 500,
+        })
+      );
+      doc.layers[0].shapeIds.push('s-poly2');
+      const { container } = renderEditor([], doc);
+      expect(container.querySelector('polygon')).toBeInTheDocument();
+    });
+
+    it('renders a path without path data with an empty d attribute', () => {
+      const doc = buildDoc();
+      doc.shapes.push(
+        shape({ id: 's-path2', type: 'path', name: 'Path 2', x: 600, y: 200 })
+      );
+      doc.layers[0].shapeIds.push('s-path2');
+      const { container } = renderEditor([], doc);
+      const path = container.querySelector('path[data-shape-id="s-path2"]')!;
+      expect(path.getAttribute('d')).toBe('');
+    });
+
+    it('renders a symbol preview for a path without path data', () => {
+      const sym: SVGSymbol = {
+        id: 'sym-p',
+        name: 'No Data Path',
+        width: 20,
+        height: 20,
+        shapes: [shape({ id: 'sp', type: 'path' })],
+        createdAt: 1000,
+      };
+      renderEditor([sym]);
+      fireEvent.click(screen.getByRole('button', { name: 'Symbols' }));
+      expect(screen.getByText('No Data Path')).toBeInTheDocument();
+    });
+
+    it('quick exports PNG and JPEG based on the saved format', async () => {
+      const orig = settings.exportFormat;
+      try {
+        (settings as SVGSettings).exportFormat = 'png';
+        renderEditor();
+        fireEvent.click(screen.getByTitle('Export'));
+        await waitFor(() =>
+          expect(addToast).toHaveBeenCalledWith('Exported as PNG 2x', 'success')
+        );
+        (settings as SVGSettings).exportFormat = 'jpeg';
+        fireEvent.click(screen.getByTitle('Export'));
+        await waitFor(() =>
+          expect(addToast).toHaveBeenCalledWith('Exported as JPEG', 'success')
+        );
+      } finally {
+        (settings as SVGSettings).exportFormat = orig;
+      }
     });
   });
 });

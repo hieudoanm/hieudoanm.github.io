@@ -4,6 +4,7 @@ import { renderHook } from '@testing-library/react';
 import { DataProvider, useData } from '@/providers/DataProvider';
 import type {
   PDFDocument,
+  PDFPage,
   Annotation,
   Bookmark,
   FormField,
@@ -109,6 +110,18 @@ const ff = (id: string): FormField => ({
   height: 10,
 });
 
+const page = (pageNumber: number): PDFPage => ({
+  id: `page-${pageNumber}`,
+  documentId: 'doc-1',
+  pageNumber,
+  width: 595,
+  height: 842,
+  rotation: 0,
+  textBlocks: [],
+  images: [],
+  labels: `Page ${pageNumber}`,
+});
+
 const stamp = (id: string): Stamp => ({
   id,
   documentId: 'doc-1',
@@ -127,6 +140,7 @@ const stamp = (id: string): Stamp => ({
 const Consumer = () => {
   const data = useData();
   const [fetched, setFetched] = useState('');
+  const [rotated, setRotated] = useState('');
   return (
     <div>
       <span data-testid="doc-count">{data.documents.length}</span>
@@ -259,6 +273,23 @@ const Consumer = () => {
       <button onClick={() => data.updateSettings({ theme: 'dark' })}>
         update-settings
       </button>
+      <button
+        onClick={() =>
+          data
+            .rotatePage('doc-1', 1, 90)
+            .then((d) => setRotated(d ? 'rotated' : 'none'))
+        }>
+        rotate-page
+      </button>
+      <button
+        onClick={() =>
+          data
+            .rotatePage('missing', 1, 90)
+            .then((d) => setRotated(d ? 'rotated' : 'none'))
+        }>
+        rotate-missing
+      </button>
+      <span data-testid="rotated">{rotated}</span>
       <button onClick={() => data.refreshData()}>refresh</button>
     </div>
   );
@@ -579,5 +610,68 @@ describe('DataProvider', () => {
     await waitFor(() =>
       expect(screen.getByTestId('doc-count').textContent).toBe('3')
     );
+  });
+
+  it('rotates a single page and persists the document', async () => {
+    db.documents.get.mockResolvedValueOnce(
+      doc('doc-1', { pages: [page(1), page(2)] })
+    );
+    renderProvider();
+    await waitFor(() =>
+      expect(screen.getByTestId('doc-count').textContent).toBe('2')
+    );
+    fireEvent.click(screen.getByText('rotate-page'));
+    await waitFor(() =>
+      expect(screen.getByTestId('rotated').textContent).toBe('rotated')
+    );
+    expect(db.documents.put).toHaveBeenCalledWith(
+      expect.objectContaining({
+        id: 'doc-1',
+        pages: [
+          expect.objectContaining({ pageNumber: 1, rotation: 90 }),
+          expect.objectContaining({ pageNumber: 2, rotation: 0 }),
+        ],
+      })
+    );
+  });
+
+  it('rotating a page wraps beyond 360 degrees', async () => {
+    db.documents.get.mockResolvedValueOnce(
+      doc('doc-1', {
+        pages: [page(1), page(2)].map((p) => ({
+          ...p,
+          rotation: p.pageNumber === 1 ? 350 : 0,
+        })),
+      })
+    );
+    renderProvider();
+    await waitFor(() =>
+      expect(screen.getByTestId('doc-count').textContent).toBe('2')
+    );
+    fireEvent.click(screen.getByText('rotate-page'));
+    await waitFor(() =>
+      expect(db.documents.put).toHaveBeenCalledWith(
+        expect.objectContaining({
+          id: 'doc-1',
+          pages: [
+            expect.objectContaining({ pageNumber: 1, rotation: 80 }),
+            expect.objectContaining({ pageNumber: 2, rotation: 0 }),
+          ],
+        })
+      )
+    );
+  });
+
+  it('no-ops rotating a missing document', async () => {
+    db.documents.get.mockResolvedValueOnce(undefined);
+    renderProvider();
+    await waitFor(() =>
+      expect(screen.getByTestId('doc-count').textContent).toBe('2')
+    );
+    fireEvent.click(screen.getByText('rotate-missing'));
+    await waitFor(() =>
+      expect(screen.getByTestId('rotated').textContent).toBe('none')
+    );
+    expect(db.documents.put).not.toHaveBeenCalled();
   });
 });

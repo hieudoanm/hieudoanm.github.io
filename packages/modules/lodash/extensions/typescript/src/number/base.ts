@@ -1,4 +1,4 @@
-export const convertBase = (number: number) => {
+export const convertBase = (number: number | string) => {
   return {
     from: (fromBase: number) => {
       const decimal = Number.parseInt(number.toString(), fromBase);

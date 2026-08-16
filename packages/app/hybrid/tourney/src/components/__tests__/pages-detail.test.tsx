@@ -248,6 +248,178 @@ describe('MatchDetailPage', () => {
     expect(screen.queryByText('Set Winner')).not.toBeInTheDocument();
     expect(screen.getByText('TBD')).toBeInTheDocument();
   });
+
+  it('saves sets with parsed scores and propagates to later rounds', async () => {
+    mockSearchParams = { id: 'm1' };
+    mockData.tournaments = [tournament({ bestOf: 3 })];
+    mockData.matches = [
+      match({ id: 'm1' }),
+      match({
+        id: 'm2',
+        round: 2,
+        participant1Id: 'm1',
+        participant2Id: null,
+      }),
+    ];
+    render(<MatchDetailPage />);
+    fireEvent.click(screen.getByRole('button', { name: 'Add Set' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Add Set' }));
+    fireEvent.change(screen.getByLabelText('Set 1 player 1 score'), {
+      target: { value: '3' },
+    });
+    fireEvent.change(screen.getByLabelText('Set 1 player 2 score'), {
+      target: { value: '1' },
+    });
+    fireEvent.change(screen.getByLabelText('Set 2 player 2 score'), {
+      target: { value: '0' },
+    });
+    fireEvent.click(screen.getByRole('button', { name: 'Save' }));
+
+    await waitFor(() =>
+      expect(mockData.updateMatch).toHaveBeenCalledWith(
+        expect.objectContaining({
+          status: 'completed',
+          winnerId: 'p1',
+          sets: [
+            { p1Score: 3, p2Score: 1 },
+            { p1Score: 0, p2Score: 0 },
+          ],
+        })
+      )
+    );
+    expect(mockData.updateMatch).toHaveBeenCalledWith(
+      expect.objectContaining({ id: 'm2', participant1Id: 'p1' })
+    );
+  });
+
+  it('clears sets when saving without set rows', async () => {
+    mockSearchParams = { id: 'm1' };
+    mockData.tournaments = [tournament({ bestOf: 3 })];
+    mockData.matches = [match()];
+    render(<MatchDetailPage />);
+    fireEvent.click(screen.getByRole('button', { name: 'Save' }));
+
+    await waitFor(() =>
+      expect(mockData.updateMatch).toHaveBeenCalledWith(
+        expect.objectContaining({ sets: undefined })
+      )
+    );
+  });
+
+  it('saves penalty shootout scores with a standard score entry', async () => {
+    mockSearchParams = { id: 'm1' };
+    mockData.tournaments = [tournament({ scoringRule: 'penalty-shootout' })];
+    mockData.matches = [match()];
+    render(<MatchDetailPage />);
+    fireEvent.change(screen.getByLabelText('Penalty player 1 score'), {
+      target: { value: '4' },
+    });
+    fireEvent.change(screen.getByLabelText('Penalty player 2 score'), {
+      target: { value: '3' },
+    });
+    const inputs = screen.getAllByRole('spinbutton');
+    fireEvent.change(inputs[0], { target: { value: '1' } });
+    fireEvent.change(inputs[1], { target: { value: '0' } });
+    fireEvent.click(screen.getByRole('button', { name: 'Save' }));
+
+    await waitFor(() =>
+      expect(mockData.updateMatch).toHaveBeenCalledWith(
+        expect.objectContaining({
+          penaltyScore1: 4,
+          penaltyScore2: 3,
+          participant1Score: 1,
+          participant2Score: 0,
+        })
+      )
+    );
+  });
+
+  it('saves penalty shootout scores alongside sets', async () => {
+    mockSearchParams = { id: 'm1' };
+    mockData.tournaments = [
+      tournament({ bestOf: 3, scoringRule: 'penalty-shootout' }),
+    ];
+    mockData.matches = [match()];
+    render(<MatchDetailPage />);
+    fireEvent.click(screen.getByRole('button', { name: 'Add Set' }));
+    fireEvent.change(screen.getByLabelText('Set 1 player 1 score'), {
+      target: { value: '2' },
+    });
+    fireEvent.change(screen.getByLabelText('Set 1 player 2 score'), {
+      target: { value: '1' },
+    });
+    fireEvent.change(screen.getByLabelText('Penalty player 1 score'), {
+      target: { value: '5' },
+    });
+    fireEvent.change(screen.getByLabelText('Penalty player 2 score'), {
+      target: { value: '4' },
+    });
+    fireEvent.click(screen.getByRole('button', { name: 'Save' }));
+
+    await waitFor(() =>
+      expect(mockData.updateMatch).toHaveBeenCalledWith(
+        expect.objectContaining({
+          penaltyScore1: 5,
+          penaltyScore2: 4,
+          sets: [{ p1Score: 2, p2Score: 1 }],
+        })
+      )
+    );
+  });
+
+  it('labels unknown participants as TBD and Player fallbacks', () => {
+    mockSearchParams = { id: 'm1' };
+    mockData.matches = [
+      match({ participant1Id: 'ghost', participant2Id: 'p2' }),
+    ];
+    render(<MatchDetailPage />);
+    expect(screen.getByText('TBD')).toBeInTheDocument();
+    expect(screen.getAllByText('Player 1').length).toBeGreaterThan(0);
+  });
+
+  it('advances knockout slots from group standings', async () => {
+    mockSearchParams = { id: 'm1' };
+    mockData.tournaments = [tournament({ format: 'group-stage' })];
+    mockData.groups = [
+      {
+        id: 'g1',
+        tournamentId: 't1',
+        name: 'Group A',
+        participantIds: ['p1', 'p2'],
+      },
+    ];
+    mockData.participants = [
+      { ...participant('p1', 'Alpha'), groupId: 'g1' },
+      { ...participant('p2', 'Beta'), groupId: 'g1' },
+    ];
+    mockData.matches = [
+      match({
+        id: 'm1',
+        participant1Score: 2,
+        participant2Score: 1,
+        winnerId: 'p1',
+        status: 'completed',
+      }),
+      match({
+        id: 'm2',
+        round: 2,
+        bracket: 'final',
+        participant1Id: null,
+        participant2Id: null,
+      }),
+    ];
+    render(<MatchDetailPage />);
+    const inputs = screen.getAllByRole('spinbutton');
+    fireEvent.change(inputs[0], { target: { value: '3' } });
+    fireEvent.change(inputs[1], { target: { value: '1' } });
+    fireEvent.click(screen.getByRole('button', { name: 'Save' }));
+
+    await waitFor(() =>
+      expect(mockData.updateMatch).toHaveBeenCalledWith(
+        expect.objectContaining({ id: 'm2', participant1Id: 'p1' })
+      )
+    );
+  });
 });
 
 describe('MatchesPage', () => {
@@ -300,6 +472,20 @@ describe('MatchesPage', () => {
       expect(mockData.createMatch).toHaveBeenCalledWith(
         expect.objectContaining({ round: 1 })
       )
+    );
+  });
+
+  it('toggles to the calendar view and labels unknown participants as TBD', () => {
+    mockData.matches = [
+      match({ id: 'm1', participant1Id: 'ghost', participant2Id: 'p2' }),
+      match({ id: 'm2', participant1Id: null, participant2Id: null }),
+    ];
+    const { container } = render(<MatchesPage />);
+    fireEvent.click(screen.getByRole('button', { name: 'Calendar' }));
+    expect(screen.getByText('Unscheduled (2)')).toBeInTheDocument();
+    expect(screen.getAllByText(/TBD/).length).toBeGreaterThan(0);
+    expect(container.querySelector('button.btn-active')).toHaveTextContent(
+      'Calendar'
     );
   });
 });

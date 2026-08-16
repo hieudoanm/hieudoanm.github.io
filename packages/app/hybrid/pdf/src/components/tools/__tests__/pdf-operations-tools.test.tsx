@@ -375,6 +375,44 @@ describe('PdfMergeTool', () => {
     expect(screen.getByText('b.pdf')).toBeInTheDocument();
     expect(screen.queryByText('a.pdf')).not.toBeInTheDocument();
   });
+
+  it('ignores dropping a file onto itself', async () => {
+    render(<PdfMergeTool />);
+    await upload();
+    const row = (name: string) =>
+      screen.getByText(name).closest('li') as HTMLElement;
+    const dataTransfer = {
+      setData: jest.fn(),
+      getData: jest.fn(() => '0'),
+      effectAllowed: 'move',
+    } as unknown as DataTransfer;
+    fireEvent.dragStart(row('a.pdf'), { dataTransfer });
+    fireEvent.drop(row('a.pdf'), { dataTransfer });
+    fireEvent.click(screen.getByRole('button', { name: 'Merge 2 files' }));
+    expect(mergePDFs).toHaveBeenCalledWith([
+      expect.objectContaining({ name: 'a.pdf' }),
+      expect.objectContaining({ name: 'b.pdf' }),
+    ]);
+  });
+
+  it('ignores a drop with an invalid drag index', async () => {
+    render(<PdfMergeTool />);
+    await upload();
+    const row = (name: string) =>
+      screen.getByText(name).closest('li') as HTMLElement;
+    const dataTransfer = {
+      setData: jest.fn(),
+      getData: jest.fn(() => 'abc'),
+      effectAllowed: 'move',
+    } as unknown as DataTransfer;
+    fireEvent.dragStart(row('a.pdf'), { dataTransfer });
+    fireEvent.drop(row('b.pdf'), { dataTransfer });
+    fireEvent.click(screen.getByRole('button', { name: 'Merge 2 files' }));
+    expect(mergePDFs).toHaveBeenCalledWith([
+      expect.objectContaining({ name: 'a.pdf' }),
+      expect.objectContaining({ name: 'b.pdf' }),
+    ]);
+  });
 });
 
 describe('PdfMetadataTool', () => {
@@ -645,5 +683,21 @@ describe('PdfTranslateTool', () => {
       }
     );
     expect(screen.getByRole('button', { name: 'Translate' })).toBeDisabled();
+  });
+
+  it('shows no output when the response has no segments', async () => {
+    fetchMock.mockResolvedValue({ json: async () => [[]] });
+    render(<PdfTranslateTool />);
+    fireEvent.change(
+      screen.getByPlaceholderText('Enter text to translate...'),
+      {
+        target: { value: 'Hello' },
+      }
+    );
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', { name: 'Translate' }));
+    });
+    expect(fetchMock).toHaveBeenCalled();
+    expect(screen.getAllByText('Hello')).toHaveLength(1);
   });
 });

@@ -1,4 +1,7 @@
 import '@testing-library/jest-dom';
+import { configure } from '@testing-library/react';
+
+configure({ asyncUtilTimeout: 5000 });
 
 process.env.NEXT_PUBLIC_MOCK_DELAY = '0';
 

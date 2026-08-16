@@ -7,6 +7,7 @@ import {
   downloadIconsZip,
 } from '@/utils/iconGenerator';
 import { DEFAULT_SVG, ICON_SIZES } from '@/data/iconPresets';
+import type { GeneratedIcon } from '@/types';
 
 jest.mock('@/utils/iconGenerator', () => ({
   generateIcons: jest.fn(),
@@ -264,6 +265,52 @@ describe('IconWorkbench', () => {
       expect(
         screen.getByText('Only SVG files are accepted.')
       ).toBeInTheDocument()
+    );
+  });
+
+  it('shows a generic error when the svg file cannot be parsed', async () => {
+    (readSvgFile as jest.Mock).mockResolvedValue({
+      ok: false,
+      reason: 'parse',
+    });
+
+    renderWorkbench();
+    fireEvent.click(screen.getByText('Icons'));
+    const input = document.querySelector(
+      'input[type="file"]'
+    ) as HTMLInputElement;
+    const file = new File(['<svg>bad'], 'test.svg', {
+      type: 'image/svg+xml',
+    });
+    Object.defineProperty(input, 'files', {
+      value: [file],
+      configurable: true,
+    });
+    fireEvent.change(input);
+
+    await waitFor(() =>
+      expect(screen.getByText('Invalid SVG file.')).toBeInTheDocument()
+    );
+  });
+
+  it('shows the rendering state while icons are generating', async () => {
+    let resolveGenerate!: (value: GeneratedIcon[]) => void;
+    mockGenerateIcons.mockImplementation(
+      () =>
+        new Promise((resolve) => {
+          resolveGenerate = resolve;
+        })
+    );
+
+    renderWorkbench();
+    fireEvent.click(screen.getByText('Generate Icons'));
+    expect(screen.getByText('Rendering…')).toBeInTheDocument();
+
+    resolveGenerate([
+      { size: 72, dataUrl: 'data:image/png;base64,aaa', canvas: mockCanvas() },
+    ]);
+    await waitFor(() =>
+      expect(screen.getByText('Generated Icons')).toBeInTheDocument()
     );
   });
 });

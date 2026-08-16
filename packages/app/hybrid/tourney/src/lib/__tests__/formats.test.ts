@@ -487,8 +487,8 @@ describe('advanceBracketWinners group promotion', () => {
   const knockoutFinal = (
     id: string,
     round: number,
-    p1: string,
-    p2: string
+    p1: string | null,
+    p2: string | null
   ) => ({
     ...bracketMatch(id, round, p1, p2),
     bracket: 'final' as const,
@@ -607,5 +607,89 @@ describe('advanceBracketWinners group promotion', () => {
     const k1 = advanced.find((m) => m.id === 'k1')!;
     expect(k1.participant1Id).toBe('p1');
     expect(k1.participant2Id).toBe('p2');
+  });
+
+  it('returns matches unchanged when there are no groups or participants', () => {
+    const advanced = advanceBracketWinners(knockoutBracket);
+    expect(advanced).toEqual(knockoutBracket);
+  });
+
+  it('ignores participants whose group is not part of the tournament', () => {
+    const matches = [
+      {
+        ...groupMatch('g1', 1, 'p1', 'p2'),
+        status: 'completed' as const,
+        participant1Score: 2,
+        participant2Score: 0,
+        winnerId: 'p1',
+      },
+      ...knockoutBracket,
+    ];
+    const advanced = advanceBracketWinners(matches, {
+      groups,
+      participants: participants.map((p) => ({ ...p, groupId: 'gUnknown' })),
+    });
+    const k1 = advanced.find((m) => m.id === 'k1')!;
+    expect(k1.participant1Id).toBeNull();
+    expect(k1.participant2Id).toBeNull();
+  });
+
+  it('leaves knockout slots empty when not enough participants qualify', () => {
+    const singleGroup = [
+      { id: 'gA', tournamentId: 't1', name: 'A', participantIds: ['p1', 'p2'] },
+    ];
+    const twoParticipants = [
+      { id: 'p1', tournamentId: 't1', name: 'P1', groupId: 'gA' },
+      { id: 'p2', tournamentId: 't1', name: 'P2', groupId: 'gA' },
+    ];
+    const matches = [
+      {
+        ...groupMatch('g1', 1, 'p1', 'p2'),
+        status: 'completed' as const,
+        participant1Score: 2,
+        participant2Score: 0,
+        winnerId: 'p1',
+      },
+      knockoutMatch('k1', 3001),
+      knockoutMatch('k2', 3001),
+      knockoutFinal('k3', 3002, 'k1', 'k2'),
+    ];
+    const advanced = advanceBracketWinners(matches, {
+      groups: singleGroup,
+      participants: twoParticipants,
+    });
+    const k1 = advanced.find((m) => m.id === 'k1')!;
+    const k2 = advanced.find((m) => m.id === 'k2')!;
+    expect(k1.participant1Id).toBe('p1');
+    expect(k1.participant2Id).toBe('p2');
+    expect(k2.participant1Id).toBeNull();
+    expect(k2.participant2Id).toBeNull();
+  });
+
+  it('fills only the empty knockout slot with a qualified participant', () => {
+    const singleGroup = [
+      { id: 'gA', tournamentId: 't1', name: 'A', participantIds: ['p1', 'p2'] },
+    ];
+    const twoParticipants = [
+      { id: 'p1', tournamentId: 't1', name: 'P1', groupId: 'gA' },
+      { id: 'p2', tournamentId: 't1', name: 'P2', groupId: 'gA' },
+    ];
+    const matches = [
+      {
+        ...groupMatch('g1', 1, 'p1', 'p2'),
+        status: 'completed' as const,
+        participant1Score: 2,
+        participant2Score: 0,
+        winnerId: 'p1',
+      },
+      knockoutFinal('k1', 3001, 'p2', null),
+    ];
+    const advanced = advanceBracketWinners(matches, {
+      groups: singleGroup,
+      participants: twoParticipants,
+    });
+    const k1 = advanced.find((m) => m.id === 'k1')!;
+    expect(k1.participant1Id).toBe('p2');
+    expect(k1.participant2Id).toBe('p1');
   });
 });

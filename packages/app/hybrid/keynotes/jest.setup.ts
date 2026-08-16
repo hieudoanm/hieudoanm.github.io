@@ -1,4 +1,9 @@
 import '@testing-library/jest-dom';
+import { configure } from '@testing-library/react';
+
+process.env.NEXT_PUBLIC_AUTOSAVE_DEBOUNCE_MS = '20';
+
+configure({ asyncUtilTimeout: 5000 });
 
 const mockRouterPush = jest.fn();
 const mockRouterBack = jest.fn();

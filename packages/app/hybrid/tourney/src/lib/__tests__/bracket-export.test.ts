@@ -137,6 +137,21 @@ describe('buildBracketPdf', () => {
     expect(click).toHaveBeenCalled();
     expect(urlSpy).toHaveBeenCalled();
   });
+
+  it('uses the default pdf filename when none is provided', () => {
+    const anchorPrototype = document.createElement('a') as HTMLAnchorElement;
+    const click = jest.fn();
+    anchorPrototype.click = click;
+    jest
+      .spyOn(document, 'createElement')
+      .mockReturnValue(anchorPrototype as HTMLElement);
+    jest.spyOn(URL, 'createObjectURL').mockReturnValue('blob:test');
+
+    buildBracketPdf('Cup', []);
+
+    expect(anchorPrototype.download).toBe('bracket.pdf');
+    expect(click).toHaveBeenCalled();
+  });
 });
 
 describe('exportBracketToPNG', () => {
@@ -203,5 +218,43 @@ describe('exportBracketToPNG', () => {
 
     exportBracketToPNG('Cup', [], 'bracket.png');
     expect(canvas.toDataURL).not.toHaveBeenCalled();
+  });
+
+  it('uses a default filename and renders null scores as dashes', () => {
+    const ctx = {
+      fillRect: createFillRect,
+      fillText: createFillText,
+      set font(value: string) {},
+      set fillStyle(value: string) {},
+      measureText: () => ({ width: 10 }),
+    };
+    const canvas = {
+      width: 0,
+      height: 0,
+      getContext: jest.fn(() => ctx),
+      toDataURL: jest.fn(() => 'data:image/png;base64,xxx'),
+    };
+    const click = jest.fn();
+    const anchor = { href: '', download: '', click };
+    jest
+      .spyOn(document, 'createElement')
+      .mockImplementation(((tag: string) =>
+        tag === 'canvas'
+          ? canvas
+          : anchor) as unknown as typeof document.createElement);
+
+    exportBracketToPNG('Cup', [
+      {
+        round: 1,
+        label: 'Round 1',
+        participant1Name: 'A',
+        participant2Name: 'B',
+        score1: null,
+        score2: null,
+      },
+    ]);
+
+    expect(anchor.download).toBe('bracket.png');
+    expect(click).toHaveBeenCalled();
   });
 });

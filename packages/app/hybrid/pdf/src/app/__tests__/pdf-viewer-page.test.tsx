@@ -1295,4 +1295,237 @@ describe('PDF viewer page', () => {
       expect.objectContaining({ value: 'Jane', label: 'Name' })
     );
   });
+
+  it('no-ops next and previous match when there are no matches', async () => {
+    render(<ViewerPage />);
+    await screen.findByRole('heading', { name: 'Annual Report' });
+    fireEvent.keyDown(window, { key: 'f', ctrlKey: true });
+    fireEvent.change(screen.getByPlaceholderText('Search...'), {
+      target: { value: 'zzz' },
+    });
+    expect(screen.getByText('No matches')).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Next match' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Previous match' }));
+    expect(screen.getByText('1 / 3')).toBeInTheDocument();
+  });
+
+  it('keeps presentation mode while fullscreen is still active', async () => {
+    Object.defineProperty(document, 'fullscreenElement', {
+      configurable: true,
+      get: () => ({}),
+    });
+    render(<ViewerPage />);
+    await screen.findByRole('heading', { name: 'Annual Report' });
+    fireEvent.click(screen.getByRole('button', { name: 'Presentation mode' }));
+    fireEvent(document, new Event('fullscreenchange'));
+    expect(screen.getByLabelText('Presentation view')).toBeInTheDocument();
+  });
+
+  it('adds signature, dropdown and radio fields from the forms tab', async () => {
+    render(<ViewerPage />);
+    await screen.findByRole('heading', { name: 'Annual Report' });
+    fireEvent.click(screen.getByRole('button', { name: 'forms' }));
+    await act(async () => {
+      fireEvent.click(
+        screen.getByRole('button', { name: 'Add dropdown field' })
+      );
+    });
+    expect(addFormField).toHaveBeenCalledWith(
+      expect.objectContaining({
+        type: 'dropdown',
+        options: ['Option A', 'Option B'],
+      })
+    );
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', { name: 'Add radio field' }));
+    });
+    expect(addFormField).toHaveBeenCalledWith(
+      expect.objectContaining({ type: 'radio', options: ['Yes', 'No'] })
+    );
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', { name: 'Add Signature' }));
+    });
+    expect(addFormField).toHaveBeenCalledWith(
+      expect.objectContaining({
+        type: 'signature',
+        label: 'Signature 3',
+        width: 220,
+        height: 80,
+      })
+    );
+    expect(
+      screen.getByRole('dialog', { name: 'Signature dialog' })
+    ).toBeInTheDocument();
+  });
+
+  it('updates only the changed field when several fields exist', async () => {
+    getFormFieldsByDocument.mockResolvedValue([
+      {
+        id: 'f1',
+        documentId: 'doc1',
+        pageNumber: 1,
+        type: 'text',
+        label: 'Field A',
+        value: '',
+        x: 100,
+        y: 100,
+        width: 180,
+        height: 24,
+      },
+      {
+        id: 'f2',
+        documentId: 'doc1',
+        pageNumber: 1,
+        type: 'text',
+        label: 'Field B',
+        value: '',
+        x: 100,
+        y: 140,
+        width: 180,
+        height: 24,
+      },
+    ]);
+    render(<ViewerPage />);
+    await screen.findByRole('heading', { name: 'Annual Report' });
+    fireEvent.click(screen.getByRole('button', { name: 'forms' }));
+    fireEvent.change(await screen.findByLabelText('Field A'), {
+      target: { value: 'x' },
+    });
+    await waitFor(() =>
+      expect(updateFormField).toHaveBeenCalledWith(
+        expect.objectContaining({ id: 'f1', value: 'x' })
+      )
+    );
+    expect(screen.getByLabelText('Field B')).toBeInTheDocument();
+  });
+
+  it('keeps other fields in place while dragging a selected field', async () => {
+    getFormFieldsByDocument.mockResolvedValue([
+      {
+        id: 'f1',
+        documentId: 'doc1',
+        pageNumber: 1,
+        type: 'text',
+        label: 'Field A',
+        value: '',
+        x: 100,
+        y: 100,
+        width: 180,
+        height: 24,
+      },
+      {
+        id: 'f2',
+        documentId: 'doc1',
+        pageNumber: 1,
+        type: 'text',
+        label: 'Field B',
+        value: '',
+        x: 100,
+        y: 140,
+        width: 180,
+        height: 24,
+      },
+    ]);
+    render(<ViewerPage />);
+    await screen.findByRole('heading', { name: 'Annual Report' });
+    fireEvent.click(screen.getByRole('button', { name: 'forms' }));
+    const moveHandle = await screen.findByLabelText('Move Field A field');
+    act(() => {
+      fireEvent.mouseDown(moveHandle, { clientX: 0, clientY: 0 });
+    });
+    act(() => {
+      fireEvent.mouseMove(moveHandle, { clientX: 30, clientY: 20 });
+    });
+    await act(async () => {
+      fireEvent.mouseUp(moveHandle, { clientX: 30, clientY: 20 });
+    });
+    await waitFor(() =>
+      expect(updateFormField).toHaveBeenCalledWith(
+        expect.objectContaining({ id: 'f1', x: 130, y: 120 })
+      )
+    );
+  });
+
+  it('ignores Tab on the forms tab when there are no fields', async () => {
+    render(<ViewerPage />);
+    await screen.findByRole('heading', { name: 'Annual Report' });
+    fireEvent.click(screen.getByRole('button', { name: 'forms' }));
+    fireEvent.keyDown(window, { key: 'Tab' });
+    expect(screen.getByRole('button', { name: 'forms' })).toBeInTheDocument();
+  });
+
+  it('ignores empty comments, closes the thread and ignores other keys', async () => {
+    render(<ViewerPage />);
+    await screen.findByRole('heading', { name: 'Annual Report' });
+    fireEvent.click(screen.getByRole('button', { name: 'annotations' }));
+    const commentToggle = await screen.findByRole('button', {
+      name: 'Comments for highlight annotation',
+    });
+    fireEvent.click(commentToggle);
+    const input = screen.getByLabelText(
+      'Comment input for highlight annotation'
+    );
+    await act(async () => {
+      fireEvent.click(
+        screen.getByRole('button', {
+          name: 'Add comment to highlight annotation',
+        })
+      );
+    });
+    expect(updateAnnotation).not.toHaveBeenCalled();
+    fireEvent.keyDown(input, { key: 'a' });
+    fireEvent.click(commentToggle);
+    expect(
+      screen.queryByLabelText('Comment input for highlight annotation')
+    ).not.toBeInTheDocument();
+  });
+
+  it('updates only the commented annotation in the list', async () => {
+    const underline = {
+      ...annotation,
+      id: 'ann2',
+      pageNumber: 1,
+      type: 'underline' as const,
+    };
+    getAnnotationsByDocument.mockResolvedValue([annotation, underline]);
+    render(<ViewerPage />);
+    await screen.findByRole('heading', { name: 'Annual Report' });
+    fireEvent.click(screen.getByRole('button', { name: 'annotations' }));
+    const toggle = await screen.findByRole('button', {
+      name: 'Comments for highlight annotation',
+    });
+    fireEvent.click(toggle);
+    fireEvent.change(
+      screen.getByLabelText('Comment input for highlight annotation'),
+      { target: { value: 'Note' } }
+    );
+    await act(async () => {
+      fireEvent.click(
+        screen.getByRole('button', {
+          name: 'Add comment to highlight annotation',
+        })
+      );
+    });
+    expect(updateAnnotation).toHaveBeenCalledWith(
+      expect.objectContaining({ id: 'ann1' })
+    );
+    expect(screen.getByText('Hi there (p.1)')).toBeInTheDocument();
+  });
+
+  it('applies a rotation transform to pages in continuous mode', async () => {
+    const rotated = { ...makePage(1), rotation: 90 };
+    getDocument.mockResolvedValue({
+      ...doc,
+      pages: [rotated, makePage(2), makePage(3)],
+    });
+    render(<ViewerPage />);
+    await screen.findByRole('heading', { name: 'Annual Report' });
+    fireEvent.click(
+      screen.getByRole('button', { name: 'Switch to continuous scroll' })
+    );
+    const continuous = screen.getByLabelText('Continuous pages');
+    expect(
+      continuous.querySelector('div[style*="rotate(90deg)"]')
+    ).toBeInTheDocument();
+  });
 });

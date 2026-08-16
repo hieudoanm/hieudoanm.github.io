@@ -232,6 +232,23 @@ edge a -> b: step`).diagram;
     expect(svg).toContain('rx="10"');
   });
 
+  it('renders a sequence message without a label', () => {
+    const sequence = layoutOf(
+      'kind: sequence\nnode a: Client\nnode b: Server\nedge a -> b'
+    );
+    const svg = buildSvg(sequence, '');
+    expect(svg).toContain('<line');
+    expect(svg).not.toContain('font-size="12"');
+  });
+
+  it('renders a sequence participant icon', () => {
+    const sequence = layoutOf(
+      'kind: sequence\nnode a: Client [icon=database]\nnode b: Server'
+    );
+    const svg = buildSvg(sequence, '');
+    expect(svg).toContain('data-icon="database"');
+  });
+
   it('renders subgraph boxes with their labels', () => {
     const layout = layoutOf(`subgraph web: Web Tier [color=blue]
 node a: API

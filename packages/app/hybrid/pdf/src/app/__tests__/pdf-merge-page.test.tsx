@@ -156,4 +156,25 @@ describe('Merge & Split page', () => {
     fireEvent.click(within(tertiaryRow).getAllByRole('button')[0]);
     expect(titles()).toEqual(['Secondary', 'Tertiary', 'Primary']);
   });
+
+  it('keeps the order when moving the first or last document', async () => {
+    render(<MergePage />);
+    await screen.findByText('Merge & Split');
+    fireEvent.click(screen.getByText('Secondary'));
+    fireEvent.click(screen.getByText('Tertiary'));
+    expect(screen.getByText('Selected Documents (3)')).toBeInTheDocument();
+
+    const titles = () => {
+      const panel = screen.getByText('Selected Documents (3)').parentElement!;
+      return Array.from(panel.querySelectorAll('.flex-1')).map(
+        (el) => el.textContent
+      );
+    };
+
+    const primaryRow = screen.getByText('Primary').parentElement!;
+    fireEvent.click(within(primaryRow).getAllByRole('button')[0]);
+    const tertiaryRow = screen.getByText('Tertiary').parentElement!;
+    fireEvent.click(within(tertiaryRow).getAllByRole('button')[1]);
+    expect(titles()).toEqual(['Primary', 'Secondary', 'Tertiary']);
+  });
 });

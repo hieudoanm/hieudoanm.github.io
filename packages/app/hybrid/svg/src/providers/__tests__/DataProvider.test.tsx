@@ -162,6 +162,7 @@ const Consumer = () => {
         {data.documents[0]?.gradients[0]?.stops[0]?.color}
       </span>
       <span data-testid="symbol-count">{data.symbols.length}</span>
+      <span data-testid="symbol-name">{data.symbols[0]?.name}</span>
       <span data-testid="history-count">{data.history.length}</span>
       <span data-testid="theme">{data.settings.theme}</span>
       <span data-testid="current-title">{data.currentDocument?.title}</span>
@@ -304,6 +305,15 @@ const Consumer = () => {
       </button>
       <button onClick={() => data.addGradient('missing', gradient)}>
         add-gradient-missing
+      </button>
+      <button
+        onClick={() =>
+          data.updateGradient('missing', {
+            ...gradient,
+            stops: [{ color: '#00ff00', offset: 0, opacity: 1 }],
+          })
+        }>
+        update-gradient-missing
       </button>
       <button onClick={() => data.removeGradient('missing', 'g1')}>
         remove-gradient-missing
@@ -625,9 +635,25 @@ describe('DataProvider', () => {
     );
     fireEvent.click(screen.getByText('update-symbol'));
     await waitFor(() =>
-      expect(db.symbols.put).toHaveBeenCalledWith(
-        expect.objectContaining({ id: 'sym-1', name: 'Renamed' })
-      )
+      expect(screen.getByTestId('symbol-name').textContent).toBe('Renamed')
+    );
+    expect(db.symbols.put).toHaveBeenCalledWith(
+      expect.objectContaining({ id: 'sym-1', name: 'Renamed' })
+    );
+  });
+
+  it('leaves other symbols unchanged when updating one', async () => {
+    db.symbols.getAll.mockResolvedValue([symbol('sym-1'), symbol('sym-2')]);
+    renderProvider();
+    await waitFor(() =>
+      expect(screen.getByTestId('symbol-count').textContent).toBe('2')
+    );
+    fireEvent.click(screen.getByText('update-symbol'));
+    await waitFor(() =>
+      expect(screen.getByTestId('symbol-name').textContent).toBe('Renamed')
+    );
+    expect(db.symbols.put).toHaveBeenCalledWith(
+      expect.objectContaining({ id: 'sym-1' })
     );
   });
 
@@ -668,6 +694,36 @@ describe('DataProvider', () => {
     await waitFor(() =>
       expect(screen.getByTestId('gradient-count').textContent).toBe('0')
     );
+  });
+
+  it('updates the matching gradient across docs and selects the current one', async () => {
+    db.documents.getAll.mockResolvedValue([
+      doc('doc-1', {
+        gradients: [
+          { ...gradient, stops: [] },
+          { ...gradient, id: 'g2', stops: [] },
+        ],
+      }),
+      doc('doc-2'),
+    ]);
+    db.documents.get.mockResolvedValue(
+      doc('doc-1', {
+        gradients: [
+          { ...gradient, stops: [] },
+          { ...gradient, id: 'g2', stops: [] },
+        ],
+      })
+    );
+    renderProvider();
+    await waitFor(() =>
+      expect(screen.getByTestId('gradient-count').textContent).toBe('2')
+    );
+    fireEvent.click(screen.getByText('set-current'));
+    fireEvent.click(screen.getByText('update-gradient'));
+    await waitFor(() =>
+      expect(screen.getByTestId('gradient-stop').textContent).toBe('#ff0000')
+    );
+    expect(screen.getByTestId('current-title').textContent).toBe('Doc doc-1');
   });
 
   it('saves history', async () => {
@@ -749,6 +805,7 @@ describe('DataProvider', () => {
     fireEvent.click(screen.getByText('toggle-vis-missing'));
     fireEvent.click(screen.getByText('toggle-lock-missing'));
     fireEvent.click(screen.getByText('add-gradient-missing'));
+    fireEvent.click(screen.getByText('update-gradient-missing'));
     fireEvent.click(screen.getByText('remove-gradient-missing'));
     fireEvent.click(screen.getByText('save-history-missing'));
     fireEvent.click(screen.getByText('undo-missing'));
@@ -808,14 +865,17 @@ describe('DataProvider', () => {
       expect(screen.getByTestId('doc-count').textContent).toBe('2')
     );
 
-    fireEvent.click(screen.getByText('undo'));
     fireEvent.click(screen.getByText('set-current'));
     fireEvent.click(screen.getByText('undo'));
+    await waitFor(() =>
+      expect(screen.getByTestId('shape-name').textContent).toBe('Shape s9')
+    );
     fireEvent.click(screen.getByText('redo'));
-    await waitFor(() => {
-      expect(db.history.getByDocument).toHaveBeenCalledWith('doc-1');
-      expect(db.documents.put).toHaveBeenCalled();
-    });
+    await waitFor(() =>
+      expect(screen.getByTestId('shape-name').textContent).toBe('Shape s1')
+    );
+    expect(db.history.getByDocument).toHaveBeenCalledWith('doc-1');
+    expect(db.documents.put).toHaveBeenCalled();
   });
 
   it('no-ops on redo when there is no redo stack', async () => {
@@ -828,6 +888,23 @@ describe('DataProvider', () => {
     fireEvent.click(screen.getByText('redo'));
     await waitFor(() => {
       expect(db.documents.put).not.toHaveBeenCalled();
+      expect(db.history.put).not.toHaveBeenCalled();
+    });
+  });
+
+  it('no-ops on redo when the document no longer exists', async () => {
+    renderProvider();
+    await waitFor(() =>
+      expect(screen.getByTestId('doc-count').textContent).toBe('1')
+    );
+    fireEvent.click(screen.getByText('set-current'));
+    fireEvent.click(screen.getByText('undo'));
+    await waitFor(() =>
+      expect(screen.getByTestId('shape-name').textContent).toBe('Shape s9')
+    );
+    db.documents.get.mockResolvedValue(undefined);
+    fireEvent.click(screen.getByText('redo'));
+    await waitFor(() => {
       expect(db.history.put).not.toHaveBeenCalled();
     });
   });

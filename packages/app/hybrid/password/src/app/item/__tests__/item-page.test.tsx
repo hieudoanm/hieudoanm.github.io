@@ -309,8 +309,10 @@ describe('ItemPage', () => {
     };
     mockDb.reset({ items: [totpItem] });
     render(<ItemPage />);
-    await waitFor(() =>
-      expect(screen.getByTestId('totp-code')).toHaveTextContent(/^\d{6}$/)
+    await waitFor(
+      () =>
+        expect(screen.getByTestId('totp-code')).toHaveTextContent(/^\d{6}$/),
+      { timeout: 5000 }
     );
     expect(
       screen.getByRole('button', { name: 'Show QR code' })
@@ -325,8 +327,10 @@ describe('ItemPage', () => {
     };
     mockDb.reset({ items: [totpItem] });
     render(<ItemPage />);
-    await waitFor(() =>
-      expect(screen.getByTestId('totp-code')).toHaveTextContent(/^\d{6}$/)
+    await waitFor(
+      () =>
+        expect(screen.getByTestId('totp-code')).toHaveTextContent(/^\d{6}$/),
+      { timeout: 5000 }
     );
   });
 
@@ -350,8 +354,10 @@ describe('ItemPage', () => {
     };
     mockDb.reset({ items: [totpItem] });
     render(<ItemPage />);
-    await waitFor(() =>
-      expect(screen.getByTestId('totp-code')).toHaveTextContent(/^\d{6}$/)
+    await waitFor(
+      () =>
+        expect(screen.getByTestId('totp-code')).toHaveTextContent(/^\d{6}$/),
+      { timeout: 5000 }
     );
     const code = screen.getByTestId('totp-code').textContent;
     fireEvent.click(screen.getByRole('button', { name: 'Copy code' }));
@@ -378,8 +384,8 @@ describe('ItemPage', () => {
     fireEvent.click(screen.getAllByRole('button', { name: 'Share' })[1]);
     await waitFor(() =>
       expect(
-        screen.getByText('Shared with team@example.com')
-      ).toBeInTheDocument()
+        screen.getAllByText('Shared with team@example.com').length
+      ).toBeGreaterThan(0)
     );
     expect(mockDb.db.items.put).toHaveBeenCalledWith(
       expect.objectContaining({

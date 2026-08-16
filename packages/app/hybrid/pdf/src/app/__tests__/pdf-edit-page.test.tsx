@@ -687,6 +687,207 @@ describe('PDF editor page', () => {
     expect(addToast).toHaveBeenCalledWith('Crop removed', 'success');
   });
 
+  it('moves the crop box by dragging and applies the new position', async () => {
+    render(<EditPage />);
+    await screen.findByRole('heading', { name: 'Annual Report - Editor' });
+    fireEvent.click(screen.getByRole('button', { name: 'Page' }));
+    fireEvent.click(screen.getByRole('button', { name: /^Crop$/ }));
+    const box = screen.getByLabelText('Crop box');
+    const pageDiv = box.parentElement as HTMLElement;
+    await act(async () => {
+      fireEvent.mouseDown(box, { clientX: 100, clientY: 100 });
+    });
+    await act(async () => {
+      fireEvent.mouseMove(pageDiv, { clientX: 160, clientY: 140 });
+    });
+    await act(async () => {
+      fireEvent.mouseUp(pageDiv);
+    });
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', { name: /^Apply$/ }));
+    });
+    const call = updateDocument.mock.calls.at(-1)![0];
+    expect(call.pages[0].crop).toEqual({
+      x: 160,
+      y: 140,
+      width: 300,
+      height: 400,
+    });
+  });
+
+  it('resizes the crop box via its handle', async () => {
+    render(<EditPage />);
+    await screen.findByRole('heading', { name: 'Annual Report - Editor' });
+    fireEvent.click(screen.getByRole('button', { name: 'Page' }));
+    fireEvent.click(screen.getByRole('button', { name: /^Crop$/ }));
+    const box = screen.getByLabelText('Crop box');
+    const pageDiv = box.parentElement as HTMLElement;
+    await act(async () => {
+      fireEvent.mouseDown(screen.getByLabelText('Resize crop box'), {
+        clientX: 400,
+        clientY: 500,
+      });
+    });
+    await act(async () => {
+      fireEvent.mouseMove(pageDiv, { clientX: 480, clientY: 560 });
+    });
+    await act(async () => {
+      fireEvent.mouseUp(pageDiv);
+    });
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', { name: /^Apply$/ }));
+    });
+    const call = updateDocument.mock.calls.at(-1)![0];
+    expect(call.pages[0].crop).toEqual({
+      x: 100,
+      y: 100,
+      width: 380,
+      height: 460,
+    });
+  });
+
+  it('ignores mouse events on the page when nothing is being dragged', async () => {
+    render(<EditPage />);
+    await screen.findByRole('heading', { name: 'Annual Report - Editor' });
+    fireEvent.click(screen.getByRole('button', { name: 'Page' }));
+    fireEvent.click(screen.getByRole('button', { name: /^Crop$/ }));
+    const pageDiv = screen.getByLabelText('Crop box')
+      .parentElement as HTMLElement;
+    fireEvent.mouseMove(pageDiv, { clientX: 50, clientY: 50 });
+    fireEvent.mouseUp(pageDiv);
+    fireEvent.mouseLeave(pageDiv);
+    expect(screen.getByLabelText('Crop box')).toBeInTheDocument();
+    expect(updateDocument).not.toHaveBeenCalled();
+  });
+
+  it('cancels a crop drag when the mouse leaves the page', async () => {
+    render(<EditPage />);
+    await screen.findByRole('heading', { name: 'Annual Report - Editor' });
+    fireEvent.click(screen.getByRole('button', { name: 'Page' }));
+    fireEvent.click(screen.getByRole('button', { name: /^Crop$/ }));
+    const box = screen.getByLabelText('Crop box');
+    const pageDiv = box.parentElement as HTMLElement;
+    await act(async () => {
+      fireEvent.mouseDown(box, { clientX: 100, clientY: 100 });
+    });
+    await act(async () => {
+      fireEvent.mouseLeave(pageDiv);
+    });
+    await act(async () => {
+      fireEvent.mouseMove(pageDiv, { clientX: 200, clientY: 200 });
+    });
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', { name: /^Apply$/ }));
+    });
+    const call = updateDocument.mock.calls.at(-1)![0];
+    expect(call.pages[0].crop).toEqual({
+      x: 100,
+      y: 100,
+      width: 300,
+      height: 400,
+    });
+  });
+
+  it('cancels an image resize when the mouse leaves the page', async () => {
+    render(<EditPage />);
+    await screen.findByRole('heading', { name: 'Annual Report - Editor' });
+    fireEvent.click(screen.getByRole('button', { name: 'Image' }));
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', { name: 'Add Image' }));
+    });
+    const handles = screen.getAllByLabelText('Resize image');
+    const pageDiv = screen.getByText('image-1').closest('div')!
+      .parentElement as HTMLElement;
+    await act(async () => {
+      fireEvent.mouseDown(handles[0], { clientX: 0, clientY: 0 });
+    });
+    await act(async () => {
+      fireEvent.mouseLeave(pageDiv);
+    });
+    expect(updateDocument).toHaveBeenCalledTimes(1);
+  });
+
+  it('renders an image block that has a source', async () => {
+    const withSrc = {
+      ...doc,
+      pages: [
+        {
+          ...makePage(1),
+          images: [
+            { ...makePage(1).images[0], src: 'data:image/png;base64,AAA' },
+          ],
+        },
+        makePage(2),
+        makePage(3),
+      ],
+    };
+    getDocument.mockResolvedValue(withSrc);
+    render(<EditPage />);
+    await screen.findByRole('heading', { name: 'Annual Report - Editor' });
+    expect(screen.getByAltText('photo')).toHaveAttribute(
+      'src',
+      'data:image/png;base64,AAA'
+    );
+  });
+
+  it('renders an image watermark with a label', async () => {
+    const withWatermark = {
+      ...doc,
+      pages: [
+        {
+          ...makePage(1),
+          watermark: {
+            id: 'wm-1',
+            documentId: 'doc1',
+            type: 'image',
+            opacity: 0.5,
+            rotation: 0,
+            position: 'center',
+            pageRange: '1',
+            image: 'data:image/png;base64,BBB',
+            label: 'stamp',
+          },
+        },
+        makePage(2),
+        makePage(3),
+      ],
+    };
+    getDocument.mockResolvedValue(withWatermark);
+    render(<EditPage />);
+    await screen.findByRole('heading', { name: 'Annual Report - Editor' });
+    expect(screen.getByAltText('stamp')).toHaveAttribute(
+      'src',
+      'data:image/png;base64,BBB'
+    );
+  });
+
+  it('renders an image watermark without a label', async () => {
+    const withWatermark = {
+      ...doc,
+      pages: [
+        {
+          ...makePage(1),
+          watermark: {
+            id: 'wm-1',
+            documentId: 'doc1',
+            type: 'image',
+            opacity: 0.5,
+            rotation: 0,
+            position: 'center',
+            pageRange: '1',
+            image: 'data:image/png;base64,CCC',
+          },
+        },
+        makePage(2),
+        makePage(3),
+      ],
+    };
+    getDocument.mockResolvedValue(withWatermark);
+    render(<EditPage />);
+    await screen.findByRole('heading', { name: 'Annual Report - Editor' });
+    expect(screen.getByAltText('Watermark')).toBeInTheDocument();
+  });
+
   it('merges pages from another document', async () => {
     const other = {
       ...doc,

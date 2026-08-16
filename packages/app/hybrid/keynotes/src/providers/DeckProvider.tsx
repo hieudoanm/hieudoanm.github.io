@@ -220,9 +220,18 @@ export const DeckProvider = ({ children }: { children: ReactNode }) => {
 
   const persist = useCallback(async (deck: Deck) => {
     if (saveTimerRef.current) clearTimeout(saveTimerRef.current);
+    const debounce = Number(
+      process.env.NEXT_PUBLIC_AUTOSAVE_DEBOUNCE_MS ?? 500
+    );
     saveTimerRef.current = setTimeout(async () => {
       await db.decks.put(deck);
-    }, 500);
+    }, debounce);
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      if (saveTimerRef.current) clearTimeout(saveTimerRef.current);
+    };
   }, []);
 
   useEffect(() => {

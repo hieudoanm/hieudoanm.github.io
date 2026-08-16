@@ -153,6 +153,44 @@ describe('calculateAnalytics', () => {
     const analytics = calculateAnalytics(tournament, [], []);
     expect(analytics.topScorer).toEqual({ participantId: '', totalScore: 0 });
   });
+
+  it('ignores participants from other tournaments when building the map', () => {
+    const analytics = calculateAnalytics(
+      tournament,
+      [match('m1', 1, 'a', 'b', 2, 1, 'a')],
+      [
+        { ...participant('a', 2), tournamentId: 't2' },
+        { ...participant('b', 1), tournamentId: 't2' },
+      ]
+    );
+    expect(analytics.upsets).toBe(0);
+  });
+
+  it('skips upset counting when a participant is missing or has no seed', () => {
+    const matches = [
+      match('m1', 1, 'a', 'ghost', 2, 1, 'a'),
+      match('m2', 1, 'c', 'd', 2, 1, 'd'),
+    ];
+    const participants = [
+      participant('a', 1),
+      participant('c', 2),
+      participant('d'),
+    ];
+    const analytics = calculateAnalytics(tournament, matches, participants);
+    expect(analytics.upsets).toBe(0);
+  });
+
+  it('skips null participant ids when computing streaks', () => {
+    const analytics = calculateAnalytics(
+      tournament,
+      [{ ...match('m1', 1, 'a', 'b', 2, 1, 'a'), participant2Id: null }],
+      []
+    );
+    expect(analytics.longestWinStreak).toEqual({
+      participantId: 'a',
+      streak: 1,
+    });
+  });
 });
 
 describe('predictStandings', () => {

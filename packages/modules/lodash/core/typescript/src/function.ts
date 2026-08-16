@@ -150,7 +150,9 @@ export function flip<T extends (...args: any[]) => any>(
 export function memoize<T extends (...args: any[]) => any>(
   func: T,
   resolver?: (...args: Parameters<T>) => string
-): (...args: Parameters<T>) => ReturnType<T> {
+): ((...args: Parameters<T>) => ReturnType<T>) & {
+  cache: Map<string, ReturnType<T>>;
+} {
   const cache = new Map<string, ReturnType<T>>();
   const memoized = function (this: any, ...args: Parameters<T>): ReturnType<T> {
     const key = resolver ? resolver(...args) : String(args[0]);

@@ -152,6 +152,38 @@ describe('CreatePage', () => {
     fireEvent.click(screen.getByRole('button', { name: 'Cancel' }));
     expect(mockRouter.back).toHaveBeenCalled();
   });
+
+  it('falls back to defaults when using a template missing optional fields', async () => {
+    window.localStorage.setItem(
+      'tourney-templates',
+      JSON.stringify([
+        {
+          id: 'tpl-1',
+          name: 'Minimal',
+          description: '',
+          format: 'round-robin',
+          maxParticipants: 8,
+        },
+      ])
+    );
+    render(<CreatePage />);
+    fireEvent.click(screen.getByRole('button', { name: 'Use' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Create' }));
+
+    await waitFor(() =>
+      expect(mockData.createTournament).toHaveBeenCalledWith(
+        expect.objectContaining({
+          name: 'Minimal',
+          format: 'round-robin',
+          maxParticipants: 8,
+          bestOf: 1,
+          scoringRule: 'standard',
+          thirdPlacePlayoff: false,
+          tiebreakers: ['points', 'wins', 'goal-difference', 'head-to-head'],
+        })
+      )
+    );
+  });
 });
 
 describe('ProfilePage', () => {

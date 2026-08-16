@@ -88,8 +88,10 @@ describe('dropRight', () => {
 
 describe('fill', () => {
   it('should fill elements', () => {
-    expect(fill([1, 2, 3], 'a')).toEqual(['a', 'a', 'a']);
-    expect(fill([4, 6, 8, 10], '*', 1, 3)).toEqual([4, '*', '*', 10]);
+    const numbers: (number | string)[] = [1, 2, 3];
+    expect(fill(numbers, 'a')).toEqual(['a', 'a', 'a']);
+    const evens: (number | string)[] = [4, 6, 8, 10];
+    expect(fill(evens, '*', 1, 3)).toEqual([4, '*', '*', 10]);
   });
 });
 
@@ -317,7 +319,10 @@ describe('xor', () => {
 
 describe('zip', () => {
   it('should zip arrays', () => {
-    expect(zip(['a', 'b'], [1, 2], [true, false])).toEqual([
+    const letters: (string | number | boolean)[] = ['a', 'b'];
+    const digits: (string | number | boolean)[] = [1, 2];
+    const flags: (string | number | boolean)[] = [true, false];
+    expect(zip(letters, digits, flags)).toEqual([
       ['a', 1, true],
       ['b', 2, false],
     ]);

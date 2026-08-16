@@ -1,2 +1,2 @@
 :HL["/downloads/tourney/_next/static/chunks/0sul8z69axofm.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"(tournament)","param":null,"prefetchHints":4192,"slots":{"children":{"name":"match","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"JPT0UtDuA-ig4e7Wyv4Xp"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"(tournament)","param":null,"prefetchHints":4192,"slots":{"children":{"name":"match","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"V5arbKf-wYfH2PEqOQEaR"}
