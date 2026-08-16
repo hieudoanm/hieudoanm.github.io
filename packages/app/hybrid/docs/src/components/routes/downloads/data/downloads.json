@@ -172,6 +172,30 @@
         ]
       },
       {
+        "label": "Football",
+        "description": "Football Manager",
+        "icon": "PiSoccerBall",
+        "href": "https://hieudoanm.github.io/downloads/football",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-football-latest"
+          }
+        ]
+      },
+      {
+        "label": "Keynotes",
+        "description": "Keynotes - Presentation",
+        "icon": "PiPresentation",
+        "href": "https://hieudoanm.github.io/downloads/keynotes",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-keynotes-latest"
+          }
+        ]
+      },
+      {
         "label": "Markdown",
         "description": "Markdown Editor",
         "icon": "PiMarkdownLogo",
@@ -180,6 +204,18 @@
           {
             "label": "Download App",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-markdown-latest"
+          }
+        ]
+      },
+      {
+        "label": "Messaging",
+        "description": "Messaging",
+        "icon": "PiPaperPlaneTilt",
+        "href": "https://hieudoanm.github.io/downloads/messaging",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-messaging-latest"
           }
         ]
       },

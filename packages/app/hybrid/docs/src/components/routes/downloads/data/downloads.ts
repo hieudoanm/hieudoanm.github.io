@@ -23,6 +23,8 @@ import {
   PiVideoCamera,
   PiWallet,
   PiPaperPlaneTilt,
+  PiSoccerBall,
+  PiPresentation,
 } from 'react-icons/pi';
 import downloadsJson from './downloads.json';
 
@@ -58,6 +60,8 @@ const ICON_BY_NAME: Record<string, IconType> = {
   PiVideoCamera,
   PiWallet,
   PiPaperPlaneTilt,
+  PiSoccerBall,
+  PiPresentation,
 };
 
 const resolveIcon = (name: string): Tool['icon'] => {
