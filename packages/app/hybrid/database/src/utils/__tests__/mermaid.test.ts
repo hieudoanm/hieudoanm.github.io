@@ -117,6 +117,11 @@ describe('parseErDiagram', () => {
     expect(model.relations).toEqual([{ from: 'A', to: 'B', label: 'x' }]);
   });
 
+  it('defaults to an empty label when none is present', () => {
+    const model = parseErDiagram('A ||--o{ B');
+    expect(model.relations).toEqual([{ from: 'A', to: 'B', label: '' }]);
+  });
+
   it('parses a full diagram with relations and blocks', () => {
     const model = parseErDiagram(
       [

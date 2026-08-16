@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002Feditor\u002F[id]","\u002Fhandouts\u002F[id]","\u002Fpresent\u002F[id]","\u002Fpresenter\u002F[id]","\u002Fprint\u002F[id]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()

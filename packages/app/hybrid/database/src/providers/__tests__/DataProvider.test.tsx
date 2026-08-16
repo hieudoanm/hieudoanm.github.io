@@ -6,6 +6,7 @@ jest.mock('@/lib/db', () => ({
   db: {
     connections: {
       getAll: jest.fn(),
+      get: jest.fn(),
       put: jest.fn(),
       delete: jest.fn(),
     },
@@ -67,6 +68,9 @@ const Consumer = () => {
       <span data-testid="history-count">{data.history.length}</span>
       <span data-testid="bookmark-count">{data.bookmarks.length}</span>
       <span data-testid="theme">{data.settings.theme}</span>
+      <span data-testid="current-id">
+        {data.currentConnection?.id ?? 'none'}
+      </span>
       <button
         onClick={() => data.createConnection('New', '/data/new.db', false)}>
         create
@@ -81,12 +85,22 @@ const Consumer = () => {
         update-theme
       </button>
       <button
+        onClick={() => data.updateConnection('db-1', { name: 'Renamed' })}>
+        update-existing
+      </button>
+      <button onClick={() => data.updateConnection('nope', { name: 'X' })}>
+        update-missing
+      </button>
+      <button
         onClick={() => data.setCurrentConnection({ ...connA, id: 'db-other' })}>
         set-conn
       </button>
       <button
         onClick={() => data.setCurrentConnection({ ...connA, id: 'unknown' })}>
         set-conn-unknown
+      </button>
+      <button onClick={() => data.setCurrentConnection(connA)}>
+        set-conn-db1
       </button>
     </div>
   );
@@ -103,6 +117,9 @@ describe('DataProvider', () => {
   beforeEach(() => {
     jest.clearAllMocks();
     db.connections.getAll.mockResolvedValue([connB, connA]);
+    db.connections.get.mockImplementation((id: string) =>
+      Promise.resolve(id === 'db-1' ? connA : undefined)
+    );
     db.history.getAll.mockResolvedValue([]);
     db.bookmarks.getAll.mockResolvedValue([]);
     db.settings.get.mockResolvedValue({
@@ -235,5 +252,61 @@ describe('DataProvider', () => {
       expect(screen.getByTestId('schema-count').textContent).toBe('1')
     );
     expect(screen.getByTestId('schema-name').textContent).toBe('users');
+  });
+
+  it('updates an existing connection and the current connection', async () => {
+    renderProvider();
+    await waitFor(() =>
+      expect(screen.getByTestId('conn-count').textContent).toBe('2')
+    );
+    fireEvent.click(screen.getByText('set-conn-db1'));
+    await waitFor(() =>
+      expect(screen.getByTestId('current-id').textContent).toBe('db-1')
+    );
+    fireEvent.click(screen.getByText('update-existing'));
+    await waitFor(() =>
+      expect(db.connections.put).toHaveBeenCalledWith(
+        expect.objectContaining({ id: 'db-1', name: 'Renamed' })
+      )
+    );
+    expect(screen.getByTestId('current-id').textContent).toBe('db-1');
+  });
+
+  it('sorts history newest first on load', async () => {
+    db.history.getAll.mockResolvedValue([
+      { id: 'h1', timestamp: 1 },
+      { id: 'h2', timestamp: 2 },
+    ]);
+    renderProvider();
+    await waitFor(() =>
+      expect(screen.getByTestId('history-count').textContent).toBe('2')
+    );
+  });
+
+  it('deletes a bookmark that was loaded from storage', async () => {
+    db.bookmarks.getAll.mockResolvedValue([
+      { id: 'bm-1', name: 'Saved', sql: 'SELECT 1' },
+    ]);
+    renderProvider();
+    await waitFor(() =>
+      expect(screen.getByTestId('bookmark-count').textContent).toBe('1')
+    );
+    fireEvent.click(screen.getByText('del-bookmark'));
+    await waitFor(() =>
+      expect(screen.getByTestId('bookmark-count').textContent).toBe('0')
+    );
+  });
+
+  it('does nothing when updating a missing connection', async () => {
+    renderProvider();
+    await waitFor(() =>
+      expect(screen.getByTestId('conn-count').textContent).toBe('2')
+    );
+    fireEvent.click(screen.getByText('update-missing'));
+    await waitFor(() =>
+      expect(db.connections.get).toHaveBeenCalledWith('nope')
+    );
+    expect(db.connections.put).not.toHaveBeenCalled();
+    expect(screen.getByTestId('conn-count').textContent).toBe('2');
   });
 });

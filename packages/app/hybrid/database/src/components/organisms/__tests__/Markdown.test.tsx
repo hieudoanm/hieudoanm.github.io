@@ -51,4 +51,36 @@ describe('Markdown', () => {
     render(<Markdown source={'```mermaid\nA ||--o{ B : has\n```'} />);
     expect(screen.getByTestId('er-svg')).toBeInTheDocument();
   });
+
+  it('renders headings at levels 2 and 3 with different styles', () => {
+    render(<Markdown source={'## Two\n### Three'} />);
+    expect(
+      screen.getByRole('heading', { level: 2, name: 'Two' })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { level: 3, name: 'Three' })
+    ).toBeInTheDocument();
+  });
+
+  it('clamps heading levels to h6', () => {
+    render(<Markdown source={'###### Six'} />);
+    expect(
+      screen.getByRole('heading', { level: 6, name: 'Six' })
+    ).toBeInTheDocument();
+  });
+
+  it('renders multi-line blockquotes as separate paragraphs', () => {
+    render(<Markdown source={'> line one\n> line two'} />);
+    expect(screen.getByText('line one')).toBeInTheDocument();
+    expect(screen.getByText('line two')).toBeInTheDocument();
+  });
+
+  it('renders nothing for a mermaid block that fails to render', () => {
+    const { renderErDiagram } = require('@/utils/mermaid') as {
+      renderErDiagram: jest.Mock;
+    };
+    renderErDiagram.mockReturnValueOnce(null);
+    render(<Markdown source={'```mermaid\nbroken\n```'} />);
+    expect(screen.queryByTestId('er-svg')).toBeNull();
+  });
 });

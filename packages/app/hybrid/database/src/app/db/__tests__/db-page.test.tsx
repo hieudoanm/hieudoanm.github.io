@@ -28,6 +28,11 @@ jest.mock('@/utils/format', () => ({
   copyToClipboard: jest.fn().mockResolvedValue(undefined),
 }));
 
+jest.mock('@/lib/examples', () => ({
+  fetchExampleBytes: jest.fn(),
+  listExamples: jest.fn(),
+}));
+
 jest.mock('@/components/molecules/SheetsToolbar', () => ({
   SheetsToolbar: ({ onOpen, onNewDb, onSave, onExport }: any) => (
     <div data-testid="toolbar">
@@ -154,6 +159,8 @@ jest.mock('@/components/organisms/VisualizationModal', () => ({
 const { useSqlDatabase } = jest.requireMock('@/hooks/useSqlDatabase');
 const { useData } = jest.requireMock('@/providers/DataProvider');
 const { copyToClipboard } = jest.requireMock('@/utils/format');
+const { fetchExampleBytes: mockFetchExampleBytes } =
+  jest.requireMock('@/lib/examples');
 const { useRouter } = jest.requireMock('next/navigation');
 const { useSearchParams } = jest.requireMock('next/navigation');
 
@@ -516,5 +523,100 @@ describe('DB page', () => {
     render(<DBPage />);
     fireEvent.click(screen.getByTestId('btn-prev'));
     expect(screen.getByTestId('dv-page').textContent).toBe('0');
+  });
+
+  it('opens an example database from the example param', async () => {
+    const openDb = jest.fn();
+    const bytes = new Uint8Array([1, 2, 3]);
+    mockFetchExampleBytes.mockResolvedValue(bytes);
+    useSqlDatabase.mockReturnValue({ ...defaultDbState, openDb });
+    (useSearchParams as jest.Mock).mockReturnValue(
+      new URLSearchParams('example=shop')
+    );
+    render(<DBPage />);
+    await waitFor(() => expect(openDb).toHaveBeenCalledTimes(1));
+    expect(openDb).toHaveBeenCalledWith(bytes, 'shop.sqlite');
+  });
+
+  it('shows a toast when the example fetch fails', async () => {
+    mockFetchExampleBytes.mockRejectedValue(new Error('boom'));
+    (useSearchParams as jest.Mock).mockReturnValue(
+      new URLSearchParams('example=shop')
+    );
+    render(<DBPage />);
+    await waitFor(() =>
+      expect(mockAddToast).toHaveBeenCalledWith('boom', 'error')
+    );
+  });
+
+  it('highlights the error line in the SQL editor gutter', () => {
+    useSqlDatabase.mockReturnValue({
+      ...dbLoadedState,
+      error: 'near "bogus": syntax error at line 3',
+    });
+    render(<DBPage />);
+    const textarea = screen.getByPlaceholderText('Enter SQL query...');
+    fireEvent.change(textarea, { target: { value: 'one\ntwo\nthree' } });
+    const gutter = document.querySelectorAll('pre')[1] as HTMLPreElement;
+    expect(gutter.innerHTML).toContain('text-error');
+    expect(gutter.innerHTML).toContain('3');
+  });
+
+  it('formats the SQL with Ctrl+Shift+Enter', () => {
+    useSqlDatabase.mockReturnValue(dbLoadedState);
+    render(<DBPage />);
+    const textarea = screen.getByPlaceholderText('Enter SQL query...');
+    fireEvent.change(textarea, { target: { value: 'select 1' } });
+    fireEvent.keyDown(textarea, {
+      key: 'Enter',
+      code: 'Enter',
+      ctrlKey: true,
+      shiftKey: true,
+    });
+    expect(
+      (screen.getByPlaceholderText('Enter SQL query...') as HTMLTextAreaElement)
+        .value
+    ).toContain('SELECT');
+  });
+
+  it('reopens the schema sidebar with Ctrl+K', () => {
+    useSqlDatabase.mockReturnValue(dbLoadedState);
+    const raf = jest
+      .spyOn(window, 'requestAnimationFrame')
+      .mockImplementation((cb) => {
+        (cb as FrameRequestCallback)(0);
+        return 0;
+      });
+    render(<DBPage />);
+    fireEvent.click(screen.getByText('Schema'));
+    expect(screen.queryByTestId('sidebar')).not.toBeInTheDocument();
+    fireEvent.keyDown(document, { key: 'K', code: 'KeyK', ctrlKey: true });
+    expect(screen.getByTestId('sidebar')).toBeInTheDocument();
+    expect(raf).toHaveBeenCalled();
+    raf.mockRestore();
+  });
+
+  it('builds autocomplete suggestions from loaded tables', () => {
+    useSqlDatabase.mockReturnValue({
+      ...dbLoadedState,
+      tables: [
+        {
+          name: 'users',
+          rowCount: 10,
+          columns: [{ name: 'id' }, { name: 'name' }],
+        },
+      ],
+    });
+    render(<DBPage />);
+    const editor = screen.getByPlaceholderText('Enter SQL query...');
+    fireEvent.change(editor, { target: { value: 'SELECT * FROM us' } });
+    fireEvent.keyDown(editor, { code: 'Space', ctrlKey: true });
+    expect(screen.getByText('table')).toBeInTheDocument();
+  });
+
+  it('does not copy when there are no result columns', () => {
+    render(<DBPage />);
+    fireEvent.click(screen.getByRole('button', { name: 'Copy result' }));
+    expect(copyToClipboard).not.toHaveBeenCalled();
   });
 });

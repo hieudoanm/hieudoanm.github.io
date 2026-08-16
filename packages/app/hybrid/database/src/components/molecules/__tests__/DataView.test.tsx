@@ -219,4 +219,113 @@ describe('DataView', () => {
     fireEvent.change(inputs[0], { target: { value: '1' } });
     expect(onColFilter).toHaveBeenCalledWith(0, '1');
   });
+
+  it('does not start editing Uint8Array cells', () => {
+    const onUpdateCell = jest.fn();
+    render(
+      <DataView
+        {...defaultProps}
+        editable={true}
+        onUpdateCell={onUpdateCell}
+        queryResult={{
+          columns: ['blob'],
+          rows: [[new Uint8Array([1, 2])]],
+        }}
+        filteredRows={[[new Uint8Array([1, 2])]]}
+        pageRows={[[new Uint8Array([1, 2])]]}
+      />
+    );
+    const cell = screen.getByText('[BLOB 2B]');
+    fireEvent.doubleClick(cell);
+    expect(screen.getAllByRole('textbox')).toHaveLength(1);
+  });
+
+  it('commits numeric edits as numbers', () => {
+    const onUpdateCell = jest.fn();
+    render(
+      <DataView {...defaultProps} editable={true} onUpdateCell={onUpdateCell} />
+    );
+    fireEvent.doubleClick(screen.getByText('Alice'));
+    const input = screen.getByDisplayValue('Alice');
+    fireEvent.change(input, { target: { value: '42' } });
+    fireEvent.keyDown(input, { key: 'Enter' });
+    expect(onUpdateCell).toHaveBeenCalledWith(0, 1, '42');
+  });
+
+  it('does not call onUpdateCell when the value is unchanged', () => {
+    const onUpdateCell = jest.fn();
+    render(
+      <DataView {...defaultProps} editable={true} onUpdateCell={onUpdateCell} />
+    );
+    fireEvent.doubleClick(screen.getByText('Alice'));
+    const input = screen.getByDisplayValue('Alice');
+    fireEvent.keyDown(input, { key: 'Enter' });
+    expect(onUpdateCell).not.toHaveBeenCalled();
+  });
+
+  it('cancels editing on Escape', () => {
+    const onUpdateCell = jest.fn();
+    render(
+      <DataView {...defaultProps} editable={true} onUpdateCell={onUpdateCell} />
+    );
+    fireEvent.doubleClick(screen.getByText('Alice'));
+    const input = screen.getByDisplayValue('Alice');
+    fireEvent.keyDown(input, { key: 'Escape' });
+    expect(onUpdateCell).not.toHaveBeenCalled();
+  });
+
+  it('copies a row as JSON via the row menu', () => {
+    const onCopyRow = jest.fn();
+    render(
+      <DataView
+        {...defaultProps}
+        editable={true}
+        onCopyRow={onCopyRow}
+        pageOriginalIndices={[0, 1, 2]}
+      />
+    );
+    fireEvent.click(screen.getAllByLabelText('Row actions')[0]);
+    fireEvent.click(screen.getByText('Copy JSON'));
+    expect(onCopyRow).toHaveBeenCalledWith(0, 'json');
+  });
+
+  it('closes the row menu when the overlay is clicked', () => {
+    render(
+      <DataView {...defaultProps} editable={true} pageOriginalIndices={[0]} />
+    );
+    fireEvent.click(screen.getAllByLabelText('Row actions')[0]);
+    expect(screen.getByText('Delete row')).toBeInTheDocument();
+    fireEvent.mouseDown(document.querySelector('.fixed.inset-0')!);
+    expect(screen.queryByText('Delete row')).toBeNull();
+  });
+
+  it('uses page-relative indices when pageOriginalIndices is missing', () => {
+    const onDeleteRow = jest.fn();
+    render(
+      <DataView
+        {...defaultProps}
+        page={2}
+        editable={true}
+        onDeleteRow={onDeleteRow}
+      />
+    );
+    fireEvent.click(screen.getAllByLabelText('Row actions')[0]);
+    fireEvent.click(screen.getByText('Delete row'));
+    expect(onDeleteRow).toHaveBeenCalledWith(200);
+  });
+
+  it('shows the import button for a table with columns', () => {
+    const onImport = jest.fn();
+    render(<DataView {...defaultProps} onImport={onImport} />);
+    fireEvent.click(screen.getByText('Import'));
+    expect(onImport).toHaveBeenCalled();
+  });
+
+  it('toggles the row menu when the same action button is clicked', () => {
+    render(<DataView {...defaultProps} editable={true} />);
+    const btn = screen.getAllByLabelText('Row actions')[0];
+    fireEvent.click(btn);
+    fireEvent.click(btn);
+    expect(screen.queryByText('Delete row')).toBeNull();
+  });
 });

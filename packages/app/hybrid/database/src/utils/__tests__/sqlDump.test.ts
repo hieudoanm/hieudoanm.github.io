@@ -116,6 +116,24 @@ describe('dumpDatabase', () => {
     expect(dump).toContain('CREATE INDEX idx_t ON t(id);');
     expect(dump).toContain('INSERT INTO "t"');
   });
+
+  it('emits only wrappers when there are no objects', () => {
+    const dump = dumpDatabase(fakeDb({}));
+    expect(dump).toContain('BEGIN TRANSACTION;');
+    expect(dump).toContain('COMMIT;');
+    expect(dump).not.toContain('CREATE');
+  });
+
+  it('includes views through the fallback branch', () => {
+    const db = fakeDb({
+      'type, name, sql FROM sqlite_master': {
+        columns: ['type', 'name', 'sql'],
+        values: [['view', 'v_users', 'CREATE VIEW v_users AS SELECT 1']],
+      },
+    });
+    const dump = dumpDatabase(db);
+    expect(dump).toContain('CREATE VIEW v_users AS SELECT 1;');
+  });
 });
 
 describe('downloadText', () => {

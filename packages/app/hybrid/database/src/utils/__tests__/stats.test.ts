@@ -9,7 +9,7 @@ import {
 
 interface FakeRes {
   columns: string[];
-  values: (string | number)[][];
+  values: (string | number | null | Uint8Array)[][];
 }
 
 const fakeDb = (results: Record<string, FakeRes>): SqliteDatabase => {
@@ -60,6 +60,95 @@ describe('computeTableStats', () => {
   });
 });
 
+describe('computeTableStats edge cases', () => {
+  it('counts utf-8 bytes across all ranges', () => {
+    const db = fakeDb({
+      "name FROM sqlite_master WHERE type='table'": {
+        columns: ['name'],
+        values: [['t']],
+      },
+      'SELECT COUNT(*) FROM "t"': { columns: [], values: [['1']] },
+      'FROM pragma_index_list("t")': { columns: [], values: [['0']] },
+      'SELECT * FROM "t"': {
+        columns: ['v'],
+        values: [[null], [new Uint8Array([1, 2])], ['é'], ['中'], ['😀']],
+      },
+    });
+    const stats = computeTableStats(db);
+    expect(stats[0].approxBytes).toBe(0 + 2 + 2 + 3 + 4);
+  });
+
+  it('falls back to zero counts when exec returns no rows', () => {
+    const db = fakeDb({
+      "name FROM sqlite_master WHERE type='table'": {
+        columns: ['name'],
+        values: [['t']],
+      },
+    });
+    const stats = computeTableStats(db);
+    expect(stats[0].rowCount).toBe(0);
+    expect(stats[0].indexCount).toBe(0);
+    expect(stats[0].approxBytes).toBe(0);
+  });
+
+  it('skips the byte scan when exec returns no result set', () => {
+    const db = fakeDb({
+      "name FROM sqlite_master WHERE type='table'": {
+        columns: ['name'],
+        values: [['t']],
+      },
+      'SELECT COUNT(*) FROM "t"': { columns: [], values: [['1']] },
+      'FROM pragma_index_list("t")': { columns: [], values: [['0']] },
+    });
+    const stats = computeTableStats(db);
+    expect(stats[0].rowCount).toBe(1);
+    expect(stats[0].approxBytes).toBe(0);
+  });
+
+  it('skips the scan when a table has zero rows', () => {
+    const db = fakeDb({
+      "name FROM sqlite_master WHERE type='table'": {
+        columns: ['name'],
+        values: [['empty']],
+      },
+      'SELECT COUNT(*) FROM "empty"': { columns: [], values: [['0']] },
+      'FROM pragma_index_list("empty")': { columns: [], values: [['0']] },
+    });
+    const stats = computeTableStats(db);
+    expect(stats[0].rowCount).toBe(0);
+    expect(stats[0].approxBytes).toBe(0);
+  });
+
+  it('handles a scan result with no rows array', () => {
+    const db = fakeDb({
+      "name FROM sqlite_master WHERE type='table'": {
+        columns: ['name'],
+        values: [['t']],
+      },
+      'SELECT COUNT(*) FROM "t"': { columns: [], values: [['1']] },
+      'FROM pragma_index_list("t")': { columns: [], values: [['0']] },
+      'SELECT * FROM "t"': { columns: ['id'], values: [] },
+    });
+    const stats = computeTableStats(db);
+    expect(stats[0].approxBytes).toBe(0);
+  });
+
+  it('falls back to zero bytes when the scan throws', () => {
+    const instance = {
+      exec: (sql: string) => {
+        if (sql.includes('SELECT * FROM "t"')) throw new Error('boom');
+        if (sql.includes('name FROM sqlite_master')) {
+          return [{ columns: ['name'], values: [['t']] }];
+        }
+        return [{ columns: [], values: [['1']] }];
+      },
+    };
+    const stats = computeTableStats(instance as unknown as SqliteDatabase);
+    expect(stats[0].approxBytes).toBe(0);
+    expect(stats[0].rowCount).toBe(1);
+  });
+});
+
 describe('computeDatabaseStats', () => {
   const db = fakeDb({
     'PRAGMA page_size': { columns: [], values: [['4096']] },
@@ -88,6 +177,37 @@ describe('computeDatabaseStats', () => {
     expect(stats.tableCount).toBe(1);
     expect(stats.indexCount).toBe(2);
   });
+
+  it('falls back to defaults when PRAGMA results are missing', () => {
+    const noPr = fakeDb({
+      "name FROM sqlite_master WHERE type='table'": {
+        columns: ['name'],
+        values: [],
+      },
+      "COUNT(*) FROM sqlite_master WHERE type='index'": {
+        columns: [],
+        values: [['0']],
+      },
+    });
+    const stats = computeDatabaseStats(noPr);
+    expect(stats.pageSize).toBe(4096);
+    expect(stats.pageCount).toBe(0);
+    expect(stats.totalBytes).toBe(0);
+    expect(stats.tableCount).toBe(0);
+  });
+
+  it('uses zero for the index count when the result is missing', () => {
+    const db = fakeDb({
+      "name FROM sqlite_master WHERE type='table'": {
+        columns: ['name'],
+        values: [['t']],
+      },
+      'SELECT COUNT(*) FROM "t"': { columns: [], values: [['0']] },
+      'FROM pragma_index_list("t")': { columns: [], values: [['0']] },
+    });
+    const stats = computeDatabaseStats(db);
+    expect(stats.indexCount).toBe(0);
+  });
 });
 
 describe('computeMockIndexUsage', () => {
@@ -113,6 +233,16 @@ describe('computeMockIndexUsage', () => {
     expect(usage[0].efficiency).toBeGreaterThanOrEqual(60);
     expect(usage[1].scans).toBe(0);
     expect(usage.some((u) => u.name === 'sqlite_autoindex_t_1')).toBe(false);
+  });
+
+  it('returns an empty list when the pragma has no rows', () => {
+    const db = fakeDb({
+      "name FROM sqlite_master WHERE type='table'": {
+        columns: ['name'],
+        values: [['t']],
+      },
+    });
+    expect(computeMockIndexUsage(db)).toEqual([]);
   });
 });
 

@@ -48,6 +48,39 @@ describe('SheetsSidebar', () => {
     expect(screen.getByText('No tables')).toBeInTheDocument();
   });
 
+  it('filters tables by the search box', () => {
+    render(
+      <SheetsSidebar
+        tables={tables}
+        activeTable={null}
+        opfsFiles={[]}
+        onSelectTable={jest.fn()}
+        onLoadOpfs={jest.fn()}
+      />
+    );
+    fireEvent.change(screen.getByPlaceholderText('Filter…'), {
+      target: { value: 'ord' },
+    });
+    expect(screen.getByText('orders')).toBeInTheDocument();
+    expect(screen.queryByText('customers')).not.toBeInTheDocument();
+  });
+
+  it('shows "No matches" when the search matches nothing', () => {
+    render(
+      <SheetsSidebar
+        tables={tables}
+        activeTable={null}
+        opfsFiles={[]}
+        onSelectTable={jest.fn()}
+        onLoadOpfs={jest.fn()}
+      />
+    );
+    fireEvent.change(screen.getByPlaceholderText('Filter…'), {
+      target: { value: 'zzz' },
+    });
+    expect(screen.getByText('No matches')).toBeInTheDocument();
+  });
+
   it('highlights active table', () => {
     render(
       <SheetsSidebar

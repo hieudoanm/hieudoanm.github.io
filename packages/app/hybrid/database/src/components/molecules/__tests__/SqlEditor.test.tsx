@@ -240,4 +240,146 @@ describe('SqlEditor', () => {
     fireEvent.keyDown(textarea, { code: 'Space', ctrlKey: true });
     expect(screen.queryByText('users')).not.toBeInTheDocument();
   });
+
+  it('highlights the error line in the gutter', () => {
+    render(
+      <SqlEditor
+        value={'SELECT 1\nSELECT bad\nSELECT 3'}
+        onChange={onChange}
+        onRun={onRun}
+        errorLine={2}
+      />
+    );
+    const gutter = document.querySelectorAll('pre')[1] as HTMLPreElement;
+    expect(gutter.innerHTML).toContain('text-error');
+    expect(gutter.innerHTML).toContain('2');
+  });
+
+  it('does not open suggestions when the caret word is empty', () => {
+    const onSuggest = jest.fn().mockReturnValue([{ label: 'x', type: 'kw' }]);
+    render(
+      <SqlEditor
+        value="SEL "
+        onChange={onChange}
+        onRun={onRun}
+        onSuggest={onSuggest}
+      />
+    );
+    const textarea = screen.getByRole('textbox') as HTMLTextAreaElement;
+    textarea.setSelectionRange(4, 4);
+    fireEvent.keyDown(textarea, { code: 'Space', ctrlKey: true });
+    expect(screen.queryByText('x')).not.toBeInTheDocument();
+  });
+
+  it('runs the selected text even when onRun receives non-whitespace', () => {
+    const onRun2 = jest.fn();
+    render(
+      <SqlEditor value={'  \nSELECT 2'} onChange={onChange} onRun={onRun2} />
+    );
+    const textarea = screen.getByRole('textbox') as HTMLTextAreaElement;
+    textarea.setSelectionRange(0, 2);
+    fireEvent.keyDown(textarea, { key: 'Enter', ctrlKey: true });
+    expect(onRun2).not.toHaveBeenCalled();
+  });
+
+  it('toggles comments with Ctrl+/', () => {
+    render(
+      <SqlEditor
+        value={'SELECT 1;\nSELECT 2'}
+        onChange={onChange}
+        onRun={onRun}
+      />
+    );
+    const textarea = screen.getByRole('textbox') as HTMLTextAreaElement;
+    textarea.setSelectionRange(0, 16);
+    fireEvent.keyDown(textarea, { key: '/', ctrlKey: true });
+    expect(onChange).toHaveBeenCalledWith('-- SELECT 1;\n-- SELECT 2');
+  });
+
+  it('toggles comments on the last line without a trailing newline', () => {
+    render(<SqlEditor value="SELECT 1" onChange={onChange} onRun={onRun} />);
+    const textarea = screen.getByRole('textbox');
+    fireEvent.keyDown(textarea, { key: '/', ctrlKey: true });
+    expect(onChange).toHaveBeenCalledWith('-- SELECT 1');
+  });
+
+  it('toggles comments with Cmd+/', () => {
+    render(<SqlEditor value="SELECT 1" onChange={onChange} onRun={onRun} />);
+    const textarea = screen.getByRole('textbox');
+    fireEvent.keyDown(textarea, { key: '/', metaKey: true });
+    expect(onChange).toHaveBeenCalledWith('-- SELECT 1');
+  });
+
+  it('uncomments a commented line with Ctrl+/', () => {
+    render(
+      <SqlEditor
+        value={'-- SELECT 1;\nSELECT 2'}
+        onChange={onChange}
+        onRun={onRun}
+      />
+    );
+    const textarea = screen.getByRole('textbox') as HTMLTextAreaElement;
+    textarea.setSelectionRange(0, 12);
+    fireEvent.keyDown(textarea, { key: '/', ctrlKey: true });
+    expect(onChange).toHaveBeenCalledWith('SELECT 1;\nSELECT 2');
+  });
+
+  it('opens suggestions with Ctrl+Space and closes with Escape', () => {
+    const onSuggest = jest.fn().mockReturnValue([
+      { label: 'users', type: 'table' },
+      { label: 'id', type: 'column' },
+    ]);
+    render(
+      <SqlEditor
+        value="SEL"
+        onChange={onChange}
+        onRun={onRun}
+        onSuggest={onSuggest}
+      />
+    );
+    const textarea = screen.getByRole('textbox');
+    fireEvent.keyDown(textarea, { code: 'Space', metaKey: true });
+    expect(screen.getByText('users')).toBeInTheDocument();
+    const badge = document.querySelector('.badge-success');
+    expect(badge).not.toBeNull();
+    expect(document.querySelector('.badge-warning')).not.toBeNull();
+    fireEvent.keyDown(textarea, { key: 'Escape' });
+    expect(screen.queryByText('users')).not.toBeInTheDocument();
+  });
+
+  it('ignores other keys while the completion is open', () => {
+    const onSuggest = jest
+      .fn()
+      .mockReturnValue([{ label: 'users', type: 'table' }]);
+    render(
+      <SqlEditor
+        value="SEL"
+        onChange={onChange}
+        onRun={onRun}
+        onSuggest={onSuggest}
+      />
+    );
+    const textarea = screen.getByRole('textbox');
+    fireEvent.keyDown(textarea, { code: 'Space', ctrlKey: true });
+    fireEvent.keyDown(textarea, { key: 'a' });
+    expect(screen.getByText('users')).toBeInTheDocument();
+  });
+
+  it('accepts a suggestion on Enter', () => {
+    const onSuggest = jest
+      .fn()
+      .mockReturnValue([{ label: 'users', type: 'table' }]);
+    render(
+      <SqlEditor
+        value="SEL"
+        onChange={onChange}
+        onRun={onRun}
+        onSuggest={onSuggest}
+      />
+    );
+    const textarea = screen.getByRole('textbox');
+    fireEvent.keyDown(textarea, { code: 'Space', ctrlKey: true });
+    fireEvent.keyDown(textarea, { key: 'Enter' });
+    expect(onChange).toHaveBeenCalledWith('users');
+  });
 });

@@ -11,6 +11,11 @@ jest.mock('react-icons/fi', () => ({
   FiImage: () => <span data-testid="ico-image" />,
 }));
 
+jest.mock('@/utils/sqlDump', () => {
+  const actual = jest.requireActual('@/utils/sqlDump');
+  return { ...actual, downloadText: jest.fn() };
+});
+
 const makeDb = (): SqliteDatabase => {
   const instance = {
     exec: (sql: string) => {
@@ -121,5 +126,69 @@ describe('ErDiagramView', () => {
     } as unknown as SqliteDatabase;
     render(<ErDiagramView dbInstance={db} />);
     expect(screen.getByText('No tables to visualize')).toBeInTheDocument();
+  });
+
+  it('zooms with the wheel and pans with the pointer', () => {
+    const { container } = render(<ErDiagramView dbInstance={makeDb()} />);
+    const stage = container.querySelector('.er-diagram')!;
+    const before = screen.getByText(/\d+%/).textContent;
+    fireEvent.wheel(stage, { clientX: 100, clientY: 100, deltaY: -50 });
+    const after = screen.getByText(/\d+%/).textContent;
+    expect(after).not.toBe(before);
+    fireEvent.wheel(stage, { clientX: 100, clientY: 100, deltaY: 50 });
+    expect(screen.getByText(/\d+%/).textContent).toBe(before);
+
+    fireEvent.pointerDown(stage, { button: 0, clientX: 20, clientY: 20 });
+    fireEvent.pointerMove(stage, { clientX: 60, clientY: 40 });
+    fireEvent.pointerMove(stage, { clientX: 80, clientY: 60 });
+    fireEvent.pointerUp(stage);
+    expect(stage).toBeInTheDocument();
+  });
+
+  it('ignores pointer down for non-left buttons', () => {
+    const { container } = render(<ErDiagramView dbInstance={makeDb()} />);
+    const stage = container.querySelector('.er-diagram')!;
+    fireEvent.pointerDown(stage, { button: 2, clientX: 20, clientY: 20 });
+    fireEvent.pointerMove(stage, { clientX: 80, clientY: 80 });
+    expect(stage).toBeInTheDocument();
+  });
+
+  it('exports the diagram as SVG with a stripped base name', () => {
+    const { downloadText } = require('@/utils/sqlDump') as {
+      downloadText: jest.Mock;
+    };
+    render(<ErDiagramView dbInstance={makeDb()} fileName="shop.db" />);
+    fireEvent.click(screen.getByText('SVG'));
+    expect(downloadText).toHaveBeenCalledWith(
+      'shop-er.svg',
+      expect.stringContaining('<svg')
+    );
+  });
+
+  it('exports the diagram as PNG when a canvas context is available', () => {
+    const getContext = jest.fn(() => null);
+    const origToDataURL = HTMLCanvasElement.prototype.toDataURL;
+    const origCreateObjectURL = URL.createObjectURL;
+    const origRevoke = URL.revokeObjectURL;
+    HTMLCanvasElement.prototype.getContext = getContext as never;
+    URL.createObjectURL = jest.fn(() => 'blob:png');
+    URL.revokeObjectURL = jest.fn();
+    class FakeImage {
+      onload: (() => void) | null = null;
+      set src(_v: string) {
+        this.onload?.();
+      }
+    }
+    (global as { Image: unknown }).Image = FakeImage as never;
+
+    const { container } = render(<ErDiagramView dbInstance={makeDb()} />);
+    fireEvent.click(screen.getByText('PNG'));
+    expect(getContext).toHaveBeenCalledWith('2d');
+
+    HTMLCanvasElement.prototype.getContext = undefined as never;
+    HTMLCanvasElement.prototype.toDataURL = origToDataURL;
+    URL.createObjectURL = origCreateObjectURL;
+    URL.revokeObjectURL = origRevoke;
+    expect(container.querySelector('svg')).not.toBeNull();
   });
 });

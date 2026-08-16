@@ -72,6 +72,67 @@ describe('readTableDesign', () => {
     expect(design.foreignKeys).toEqual([]);
     expect(design.indexes).toEqual([]);
   });
+
+  it('maps null defaults and null fk targets to empty strings', () => {
+    const exec = makeExec({
+      'table_info("t")': [
+        ['0', 'id', 'INTEGER', '0', null, '0'],
+        ['1', 'cid', 'INTEGER', '0', null, '0'],
+      ],
+      'foreign_key_list("t")': [['0', '0', 'customers', 'cid', null, '', '']],
+      'index_list("t")': [
+        ['0', 'uniq_id', '1', 'u'],
+        ['1', 'auto', '1', 'pk'],
+      ],
+    });
+    const design = readTableDesign(exec, 't');
+    expect(design.columns[0].defaultValue).toBe('');
+    expect(design.columns[1].fkColumn).toBe('');
+    expect(design.columns[1].fkTable).toBe('customers');
+    expect(design.indexes[0].unique).toBe(true);
+  });
+
+  it('handles an index with no detail rows', () => {
+    const exec = makeExec({
+      'table_info("t")': baseCols,
+      'foreign_key_list("t")': [],
+      'index_list("t")': [['0', 'idx', '0', 'c']],
+    });
+    const design = readTableDesign(exec, 't');
+    expect(design.indexes[0].columns).toEqual([]);
+  });
+
+  it('maps a null type to an empty string', () => {
+    const exec = makeExec({
+      'table_info("t")': [['0', 'id', null, '0', '', '1']],
+      'foreign_key_list("t")': [],
+      'index_list("t")': [],
+    });
+    const design = readTableDesign(exec, 't');
+    expect(design.columns[0].type).toBe('');
+  });
+
+  it('ignores foreign keys whose source column is missing', () => {
+    const exec = makeExec({
+      'table_info("t")': baseCols,
+      'foreign_key_list("t")': [
+        ['0', '0', 'customers', 'ghost', 'id', '', ''],
+        ['1', '0', 'customers', 'id', 'id', '', ''],
+      ],
+      'index_list("t")': [],
+    });
+    const design = readTableDesign(exec, 't');
+    expect(design.columns[0].fkTable).toBe('customers');
+    expect(design.columns[1].fkTable).toBe('');
+  });
+
+  it('falls back to empty when exec throws', () => {
+    const design = readTableDesign(() => {
+      throw new Error('boom');
+    }, 't');
+    expect(design.columns).toEqual([]);
+    expect(design.foreignKeys).toEqual([]);
+  });
 });
 
 describe('buildCreateTableSQL', () => {
@@ -137,6 +198,40 @@ describe('buildCreateTableSQL', () => {
     ];
     expect(buildCreateTableSQL('t', cols)).not.toContain('REFERENCES');
   });
+
+  it('references a table without a column when fkColumn is empty', () => {
+    const cols: DesignColumn[] = [
+      {
+        name: 'a',
+        type: 'INTEGER',
+        nullable: true,
+        primaryKey: false,
+        unique: false,
+        defaultValue: '',
+        fkTable: 'customers',
+        fkColumn: '',
+      },
+    ];
+    const sql = buildCreateTableSQL('orders', cols);
+    expect(sql).toContain('REFERENCES "customers"');
+    expect(sql).not.toContain('("');
+  });
+
+  it('defaults a missing column type to TEXT', () => {
+    const cols: DesignColumn[] = [
+      {
+        name: 'a',
+        type: '',
+        nullable: true,
+        primaryKey: false,
+        unique: false,
+        defaultValue: '',
+        fkTable: '',
+        fkColumn: '',
+      },
+    ];
+    expect(buildCreateTableSQL('t', cols)).toContain('"a" TEXT');
+  });
 });
 
 describe('buildAlterStatements', () => {
@@ -193,6 +288,40 @@ describe('buildAlterStatements', () => {
     const updated = [original[0]];
     const stmts = buildAlterStatements('t', original, updated);
     expect(stmts).toContain('ALTER TABLE "t" DROP COLUMN "old";');
+  });
+
+  it('builds ADD COLUMN with constraints and references', () => {
+    const added: DesignColumn = {
+      name: 'email',
+      type: 'TEXT',
+      nullable: false,
+      primaryKey: false,
+      unique: true,
+      defaultValue: 'n/a',
+      fkTable: 'contacts',
+      fkColumn: '',
+    };
+    const stmts = buildAlterStatements('t', original, [...original, added]);
+    const add = stmts.find((s) => s.includes('ADD COLUMN'));
+    expect(add).toContain('"email" TEXT NOT NULL UNIQUE DEFAULT n/a');
+    expect(add).toContain('REFERENCES "contacts"');
+  });
+
+  it('defaults an added column type and fk column', () => {
+    const added: DesignColumn = {
+      name: 'cid',
+      type: '',
+      nullable: true,
+      primaryKey: false,
+      unique: false,
+      defaultValue: '',
+      fkTable: 'customers',
+      fkColumn: 'id',
+    };
+    const stmts = buildAlterStatements('t', original, [...original, added]);
+    const add = stmts.find((s) => s.includes('ADD COLUMN'));
+    expect(add).toContain('ADD COLUMN "cid" TEXT');
+    expect(add).toContain('REFERENCES "customers"("id")');
   });
 });
 

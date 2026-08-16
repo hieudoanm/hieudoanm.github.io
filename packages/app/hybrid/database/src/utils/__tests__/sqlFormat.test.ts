@@ -110,4 +110,48 @@ describe('formatSql', () => {
       ['INSERT INTO customers (', '  name', ')', "VALUES ('Ada')"].join('\n')
     );
   });
+
+  it('keeps qualified identifiers without spaces', () => {
+    expect(
+      formatSql(
+        'select c.id, o.total from customers c join orders o on o.customer_id = c.id'
+      )
+    ).toBe(
+      [
+        'SELECT',
+        '  c.id,',
+        '  o.total',
+        'FROM customers c',
+        'JOIN orders o ON o.customer_id = c.id',
+      ].join('\n')
+    );
+  });
+
+  it('treats a bare JOIN without a modifier as a new line', () => {
+    expect(formatSql('select * from a join b on b.a_id = a.id')).toBe(
+      ['SELECT', '  *', 'FROM a', 'JOIN b ON b.a_id = a.id'].join('\n')
+    );
+  });
+
+  it('keeps decimal numbers intact', () => {
+    expect(formatSql('select 1.5, 2.25 from t')).toBe(
+      ['SELECT', '  1.5,', '  2.25', 'FROM t'].join('\n')
+    );
+  });
+
+  it('emits standalone comments on their own line', () => {
+    expect(formatSql('-- leading note\nselect 1')).toBe(
+      ['-- leading note', 'SELECT', '  1'].join('\n')
+    );
+  });
+
+  it('trims trailing whitespace from the result', () => {
+    expect(formatSql('select 1\n\n  ')).toBe(['SELECT', '  1'].join('\n'));
+  });
+
+  it('keeps a comment trailing the last clause inline', () => {
+    expect(formatSql('select 1 /* block */')).toBe(
+      ['SELECT', '  1 /* block */'].join('\n')
+    );
+  });
 });

@@ -40,6 +40,18 @@ describe('tokenizeInline', () => {
       { type: 'text', content: ' key' },
     ]);
   });
+
+  it('keeps unclosed bold markers as text', () => {
+    expect(tokenizeInline('still **open')).toEqual([
+      { type: 'text', content: 'still **open' },
+    ]);
+  });
+
+  it('handles a lone backtick at the end', () => {
+    expect(tokenizeInline('tail `')).toEqual([
+      { type: 'text', content: 'tail `' },
+    ]);
+  });
 });
 
 describe('splitTableRow', () => {
@@ -49,6 +61,14 @@ describe('splitTableRow', () => {
 
   it('handles rows without outer pipes', () => {
     expect(splitTableRow('a | b')).toEqual(['a', 'b']);
+  });
+
+  it('handles a single leading pipe', () => {
+    expect(splitTableRow('| a | b')).toEqual(['a', 'b']);
+  });
+
+  it('handles a single trailing pipe', () => {
+    expect(splitTableRow('a | b |')).toEqual(['a', 'b']);
   });
 
   it('preserves empty inner cells', () => {
@@ -67,6 +87,14 @@ describe('isTableSep', () => {
 
   it('rejects data rows', () => {
     expect(isTableSep('| a | b |')).toBe(false);
+  });
+
+  it('rejects a separator with an empty cell list', () => {
+    expect(isTableSep('   ')).toBe(false);
+  });
+
+  it('accepts a single-cell separator row', () => {
+    expect(isTableSep('---')).toBe(true);
   });
 });
 
@@ -118,6 +146,20 @@ describe('parseMarkdown', () => {
     expect(blocks[0]).toEqual({ type: 'list', items: ['one', '**two**'] });
   });
 
+  it('parses star bullet lists', () => {
+    const blocks = parseMarkdown('* alpha\n* beta');
+    expect(blocks[0]).toEqual({ type: 'list', items: ['alpha', 'beta'] });
+  });
+
+  it('skips blank lines and stops paragraphs at block breaks', () => {
+    const blocks = parseMarkdown('text\n\n> quote\n- item');
+    expect(blocks.map((b) => b.type)).toEqual([
+      'paragraph',
+      'blockquote',
+      'list',
+    ]);
+  });
+
   it('joins wrapped paragraph lines with a space', () => {
     const blocks = parseMarkdown('first part\nsecond part\n\nnext para');
     expect(blocks[0]).toEqual({
@@ -127,6 +169,31 @@ describe('parseMarkdown', () => {
     });
     expect(blocks[1].type).toBe('paragraph');
     expect(blocks[1].text).toBe('next para');
+  });
+
+  it('ends a paragraph at a following heading', () => {
+    const blocks = parseMarkdown('text one\ntext two\n# Heading');
+    expect(blocks[0]).toEqual({
+      type: 'paragraph',
+      text: 'text one text two',
+      lines: ['text one', 'text two'],
+    });
+    expect(blocks[1]).toEqual({ type: 'heading', level: 1, text: 'Heading' });
+  });
+
+  it('ends a paragraph at a following blockquote', () => {
+    const blocks = parseMarkdown('text one\ntext two\n> quoted');
+    expect(blocks[0].type).toBe('paragraph');
+    expect(blocks[0].text).toBe('text one text two');
+    expect(blocks[1].type).toBe('blockquote');
+    expect(blocks[1].text).toBe('quoted');
+  });
+
+  it('ends a paragraph at a following code fence', () => {
+    const blocks = parseMarkdown('text one\ntext two\n```sql\nSELECT 1\n```');
+    expect(blocks[0].type).toBe('paragraph');
+    expect(blocks[0].text).toBe('text one text two');
+    expect(blocks[1]).toEqual({ type: 'code', lang: 'sql', text: 'SELECT 1' });
   });
 
   it('parses a full post-like document', () => {

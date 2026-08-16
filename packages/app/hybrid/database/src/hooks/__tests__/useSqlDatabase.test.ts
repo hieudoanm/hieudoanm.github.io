@@ -318,6 +318,29 @@ describe('useSqlDatabase', () => {
     expect(result.current.status).toContain('Query error');
   });
 
+  it('runQuery surfaces non-Error query failures', async () => {
+    const { result } = renderHook(() => useSqlDatabase());
+    mockDbExec
+      .mockReturnValueOnce([{ columns: ['name'], values: [['users']] }])
+      .mockReturnValueOnce([{ columns: ['COUNT(*)'], values: [[10]] }])
+      .mockReturnValueOnce(PRAGMA_RESULT)
+      .mockReturnValueOnce([{ columns: ['id'], values: [[1]] }]);
+
+    await act(async () => {
+      await result.current.openDb(new Uint8Array([1, 2, 3]), 'test.db');
+    });
+
+    mockDbExec.mockImplementationOnce(() => {
+      throw 'crash';
+    });
+    act(() => {
+      result.current.runQuery('SELECT bad sql');
+    });
+
+    expect(result.current.error).toBe('crash');
+    expect(result.current.status).toContain('Query error');
+  });
+
   it('enumerateTables handles tables without PRAGMA columns', async () => {
     const { result } = renderHook(() => useSqlDatabase());
     mockDbExec
@@ -769,6 +792,53 @@ describe('useSqlDatabase', () => {
     expect(result.current.status).toBe('Query error');
   });
 
+  it('runStatements collects empty results for statements without result sets', async () => {
+    const { result } = renderHook(() => useSqlDatabase());
+    mockDbExec
+      .mockReturnValueOnce([{ columns: ['name'], values: [['users']] }])
+      .mockReturnValueOnce([{ columns: ['COUNT(*)'], values: [[10]] }])
+      .mockReturnValueOnce(PRAGMA_RESULT)
+      .mockReturnValueOnce([{ columns: ['id'], values: [[1]] }]);
+
+    await act(async () => {
+      await result.current.openDb(new Uint8Array([1, 2, 3]), 'test.db');
+    });
+
+    mockDbExec.mockReturnValueOnce([]);
+
+    let results: { columns: string[]; rows: unknown[][] }[] = [];
+    act(() => {
+      results = result.current.runStatements('INSERT INTO users VALUES (1)');
+    });
+
+    expect(results).toEqual([{ columns: [], rows: [] }]);
+    expect(result.current.status).toContain('Executed 1 statement');
+  });
+
+  it('runStatements surfaces non-Error failures', async () => {
+    const { result } = renderHook(() => useSqlDatabase());
+    mockDbExec
+      .mockReturnValueOnce([{ columns: ['name'], values: [['users']] }])
+      .mockReturnValueOnce([{ columns: ['COUNT(*)'], values: [[10]] }])
+      .mockReturnValueOnce(PRAGMA_RESULT)
+      .mockReturnValueOnce([{ columns: ['id'], values: [[1]] }]);
+
+    await act(async () => {
+      await result.current.openDb(new Uint8Array([1, 2, 3]), 'test.db');
+    });
+
+    mockDbExec.mockImplementationOnce(() => {
+      throw 'fatal';
+    });
+
+    act(() => {
+      result.current.runStatements('SELECT bad');
+    });
+
+    expect(result.current.error).toBe('fatal');
+    expect(result.current.status).toBe('Query error');
+  });
+
   it('explainQuery returns null without a database', () => {
     const { result } = renderHook(() => useSqlDatabase());
     expect(result.current.explainQuery('SELECT 1')).toBeNull();
@@ -827,6 +897,30 @@ describe('useSqlDatabase', () => {
 
     mockDbExec.mockImplementationOnce(() => {
       throw new Error('explain boom');
+    });
+
+    let res: { columns: string[]; rows: unknown[][] } | null = null;
+    act(() => {
+      res = result.current.explainQuery('SELECT bad');
+    });
+    expect(res).toBeNull();
+    expect(result.current.status).toBe('Explain error');
+  });
+
+  it('explainQuery surfaces non-Error failures', async () => {
+    const { result } = renderHook(() => useSqlDatabase());
+    mockDbExec
+      .mockReturnValueOnce([{ columns: ['name'], values: [['users']] }])
+      .mockReturnValueOnce([{ columns: ['COUNT(*)'], values: [[10]] }])
+      .mockReturnValueOnce(PRAGMA_RESULT)
+      .mockReturnValueOnce([{ columns: ['id'], values: [[1]] }]);
+
+    await act(async () => {
+      await result.current.openDb(new Uint8Array([1, 2, 3]), 'test.db');
+    });
+
+    mockDbExec.mockImplementationOnce(() => {
+      throw 'plan crash';
     });
 
     let res: { columns: string[]; rows: unknown[][] } | null = null;
