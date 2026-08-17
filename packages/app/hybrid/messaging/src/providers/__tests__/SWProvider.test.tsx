@@ -1,5 +1,5 @@
+import { SWProvider } from '@/providers/SWProvider';
 import { render, screen } from '@testing-library/react';
-import { SWProvider } from '@/components/SWProvider';
 
 jest.mock('@/hooks/useSWRegister', () => ({
   useSWRegister: jest.fn(() => false),

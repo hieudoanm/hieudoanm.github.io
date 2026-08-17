@@ -1,0 +1,32 @@
+name: CI - App - Hybrid - Diagram
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/diagram/**'
+      - '.github/workflows/ci-app-hybrid-diagram.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-hybrid-diagram-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/diagram
+      filter: '@hieudoanm.github.io/diagram'
+      releaseName: app-hybrid-diagram-latest
+      releaseTitle: App - Hybrid - Diagram (latest)
+      artifactPrefix: diagram

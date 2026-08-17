@@ -80,6 +80,11 @@ export const MOCK_CHATS: Chat[] = [
     disappearingSeconds: 0,
     createdAt: NOW - 30 * DAY,
     lastMessageAt: NOW - 12 * MIN,
+    settings: {
+      wallpaper: '',
+      notificationSound: true,
+      disappearingSeconds: 0,
+    },
   },
   {
     id: 'chat-bob',
@@ -95,6 +100,11 @@ export const MOCK_CHATS: Chat[] = [
     disappearingSeconds: 0,
     createdAt: NOW - 12 * DAY,
     lastMessageAt: NOW - 2 * HOUR,
+    settings: {
+      wallpaper: '',
+      notificationSound: true,
+      disappearingSeconds: 0,
+    },
   },
   {
     id: 'chat-group',
@@ -110,6 +120,11 @@ export const MOCK_CHATS: Chat[] = [
     disappearingSeconds: 0,
     createdAt: NOW - 60 * DAY,
     lastMessageAt: NOW - 8 * MIN,
+    settings: {
+      wallpaper: '',
+      notificationSound: true,
+      disappearingSeconds: 0,
+    },
   },
   {
     id: 'chat-carol',
@@ -125,6 +140,11 @@ export const MOCK_CHATS: Chat[] = [
     disappearingSeconds: 60,
     createdAt: NOW - 3 * DAY,
     lastMessageAt: NOW - DAY,
+    settings: {
+      wallpaper: '',
+      notificationSound: true,
+      disappearingSeconds: 60,
+    },
   },
 ];
 

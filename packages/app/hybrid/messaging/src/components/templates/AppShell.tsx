@@ -1,9 +1,13 @@
 'use client';
 
-import { type FC, useState } from 'react';
+import { type FC, useState, useEffect } from 'react';
 import { ChatSidebar } from '@/components/organisms/ChatSidebar';
 import { ChatPane } from '@/components/organisms/ChatPane';
 import { NewChatModal } from '@/components/organisms/NewChatModal';
+import { PinLockScreen } from '@/components/organisms/PinLockScreen';
+import { IncomingCallModal } from '@/components/organisms/IncomingCallModal';
+import { PairingModal } from '@/components/organisms/PairingModal';
+import { useData } from '@/providers/DataProvider';
 
 interface AppShellProps {
   selectedChatId: string | null;
@@ -15,6 +19,33 @@ export const AppShell: FC<AppShellProps> = ({
   onSelectChat,
 }) => {
   const [modalOpen, setModalOpen] = useState(false);
+  const [pairingOpen, setPairingOpen] = useState(false);
+  const {
+    privacySettings,
+    unlockPin,
+    isLocked,
+    activeCall,
+    answerCall,
+    declineCall,
+  } = useData();
+  const [showPinLock, setShowPinLock] = useState(false);
+
+  useEffect(() => {
+    if (privacySettings.pinEnabled && isLocked) {
+      setShowPinLock(true);
+    }
+  }, [privacySettings.pinEnabled, isLocked]);
+
+  const handleUnlock = async (pin: string): Promise<boolean> => {
+    const ok = await unlockPin(pin);
+    if (ok) setShowPinLock(false);
+    return ok;
+  };
+
+  if (showPinLock && privacySettings.pinEnabled) {
+    return <PinLockScreen onUnlock={handleUnlock} />;
+  }
+
   const hasChat = selectedChatId !== null;
 
   return (
@@ -25,6 +56,7 @@ export const AppShell: FC<AppShellProps> = ({
           selectedChatId={selectedChatId}
           onSelectChat={onSelectChat}
           onNewChat={() => setModalOpen(true)}
+          onPairDevice={() => setPairingOpen(true)}
         />
       </div>
       <div
@@ -40,6 +72,24 @@ export const AppShell: FC<AppShellProps> = ({
         onClose={() => setModalOpen(false)}
         onChatCreated={onSelectChat}
       />
+      {activeCall && activeCall.status === 'ringing' && (
+        <IncomingCallModal
+          call={activeCall}
+          onAnswer={(callId) => {
+            void answerCall(callId);
+            onSelectChat(activeCall.chatId);
+          }}
+          onDecline={(callId) => void declineCall(callId)}
+        />
+      )}
+      {pairingOpen && (
+        <PairingModal
+          onClose={() => setPairingOpen(false)}
+          onPaired={(deviceId, peerPublicKey) => {
+            setPairingOpen(false);
+          }}
+        />
+      )}
     </div>
   );
 };

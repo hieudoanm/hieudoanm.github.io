@@ -1,12 +1,14 @@
 'use client';
 
 import { type FC, useMemo, useState } from 'react';
-import { FaUserPlus } from 'react-icons/fa';
+import { FaUserPlus, FaPhone, FaDesktop } from 'react-icons/fa';
 import { useData } from '@/providers/DataProvider';
 import { ChatListItem } from '@/components/molecules/ChatListItem';
 import { SearchBar } from '@/components/molecules/SearchBar';
 import { EmptyState } from '@/components/atoms/EmptyState';
 import { Avatar } from '@/components/atoms/Avatar';
+import { CallHistoryPanel } from '@/components/organisms/CallHistoryPanel';
+import { DeviceSyncPanel } from '@/components/organisms/DeviceSyncPanel';
 import { getLastMessagePreview } from '@/lib/selectors';
 import type { Tab } from '@/types';
 
@@ -14,16 +16,20 @@ interface ChatSidebarProps {
   selectedChatId: string | null;
   onSelectChat: (id: string) => void;
   onNewChat: () => void;
+  onPairDevice?: () => void;
 }
 
 export const ChatSidebar: FC<ChatSidebarProps> = ({
   selectedChatId,
   onSelectChat,
   onNewChat,
-}) => {
-  const { account, chats, messages, contacts } = useData();
+  onPairDevice,
+}: ChatSidebarProps) => {
+  const { account, chats, messages, contacts, privacySettings } = useData();
   const [query, setQuery] = useState('');
   const [tab, setTab] = useState<Tab>('chats');
+  const [showCallHistory, setShowCallHistory] = useState(false);
+  const [showDeviceSync, setShowDeviceSync] = useState(false);
 
   const filteredChats = useMemo(() => {
     const sorted = [...chats].sort((a, b) => {
@@ -37,13 +43,16 @@ export const ChatSidebar: FC<ChatSidebarProps> = ({
 
   const filteredContacts = useMemo(() => {
     const term = query.trim().toLowerCase();
-    if (term === '') return contacts;
-    return contacts.filter(
+    const visible = contacts.filter(
+      (c) => !privacySettings.blockedContactIds.includes(c.id)
+    );
+    if (term === '') return visible;
+    return visible.filter(
       (c) =>
         c.name.toLowerCase().includes(term) ||
         c.username.toLowerCase().includes(term)
     );
-  }, [contacts, query]);
+  }, [contacts, query, privacySettings.blockedContactIds]);
 
   const renderList = (): React.ReactNode => {
     if (tab === 'contacts') {
@@ -143,8 +152,54 @@ export const ChatSidebar: FC<ChatSidebarProps> = ({
           className={`tab tab-md ${tab === 'contacts' ? 'tab-active' : ''}`}>
           Contacts
         </button>
+        <button
+          type="button"
+          role="tab"
+          onClick={() => {
+            setTab('calls');
+            setShowCallHistory(true);
+          }}
+          aria-selected={tab === 'calls'}
+          className={`tab tab-md ${tab === 'calls' ? 'tab-active' : ''}`}>
+          <FaPhone className="h-3 w-3" />
+        </button>
+        <button
+          type="button"
+          role="tab"
+          onClick={() => {
+            setTab('devices');
+            setShowDeviceSync(true);
+          }}
+          aria-selected={tab === 'devices'}
+          className={`tab tab-md ${tab === 'devices' ? 'tab-active' : ''}`}>
+          <FaDesktop className="h-3 w-3" />
+        </button>
       </div>
-      <div className="flex-1 overflow-y-auto p-2">{renderList()}</div>
+      <div className="flex-1 overflow-y-auto p-2">
+        {tab === 'calls' ? (
+          <CallHistoryPanel
+            onClose={() => {
+              setTab('chats');
+              setShowCallHistory(false);
+            }}
+            onCallBack={(chatId) => onSelectChat(chatId)}
+          />
+        ) : tab === 'devices' ? (
+          <DeviceSyncPanel
+            onClose={() => {
+              setTab('chats');
+              setShowDeviceSync(false);
+            }}
+            onPairNew={() => {
+              setShowDeviceSync(false);
+              setTab('chats');
+              onPairDevice?.();
+            }}
+          />
+        ) : (
+          renderList()
+        )}
+      </div>
     </aside>
   );
 };

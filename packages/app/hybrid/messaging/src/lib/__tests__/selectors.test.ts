@@ -31,6 +31,7 @@ const chat = (overrides: Partial<Chat> = {}): Chat => ({
   unreadCount: 0,
   createdAt: 1,
   lastMessageAt: 1,
+  settings: { wallpaper: '', notificationSound: true, disappearingSeconds: 0 },
   ...overrides,
 });
 

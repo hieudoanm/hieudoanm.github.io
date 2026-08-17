@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import RootLayout from '@/app/layout';
 
-jest.mock('@/components/SWProvider', () => ({
+jest.mock('@/providers/SWProvider', () => ({
   SWProvider: ({ children }: { children: React.ReactNode }) => <>{children}</>,
 }));
 

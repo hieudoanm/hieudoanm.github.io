@@ -7,12 +7,14 @@ interface ComposerProps {
   onSend: (text: string) => void;
   placeholder?: string;
   disabled?: boolean;
+  incognito?: boolean;
 }
 
 export const Composer: FC<ComposerProps> = ({
   onSend,
   placeholder = 'Type a message…',
   disabled = false,
+  incognito = false,
 }) => {
   const [text, setText] = useState('');
   const inputRef = useRef<HTMLTextAreaElement>(null);
@@ -44,6 +46,11 @@ export const Composer: FC<ComposerProps> = ({
 
   return (
     <div className="border-base-300 bg-base-100 flex items-end gap-2 border-t p-3">
+      {incognito && (
+        <div className="bg-warning/10 text-warning absolute -top-6 right-0 left-0 rounded-t-lg px-3 py-1 text-center text-[10px]">
+          Incognito keyboard — text is not saved to suggestions
+        </div>
+      )}
       <textarea
         ref={inputRef}
         value={text}
@@ -52,8 +59,12 @@ export const Composer: FC<ComposerProps> = ({
         disabled={disabled}
         placeholder={placeholder}
         rows={1}
+        autoComplete="off"
+        autoCorrect="off"
+        autoCapitalize="off"
+        spellCheck={false}
         aria-label="Message"
-        className="textarea textarea-bordered max-h-32 flex-1 resize-none"
+        className={`textarea textarea-bordered max-h-32 flex-1 resize-none ${incognito ? 'bg-base-200' : ''}`}
       />
       <button
         type="button"
