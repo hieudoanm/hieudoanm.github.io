@@ -1,21 +1,12 @@
 'use client';
 
-import {
-  type FC,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-  useCallback,
-} from 'react';
-import { FaLock, FaSearch, FaUsers, FaCog, FaImages } from 'react-icons/fa';
+import { type FC, useEffect, useMemo, useRef, useState } from 'react';
+import { FaLock } from 'react-icons/fa';
 import { useData } from '@/providers/DataProvider';
 import { useToast } from '@/providers/ToastProvider';
 import { ChatHeader } from '@/components/molecules/ChatHeader';
-import { MessageBubble } from '@/components/molecules/MessageBubble';
 import { Composer } from '@/components/molecules/Composer';
 import { ReplyComposer } from '@/components/molecules/ReplyComposer';
-import { DateDivider } from '@/components/molecules/DateDivider';
 import { ChatSearchBar } from '@/components/molecules/ChatSearchBar';
 import { TypingIndicator } from '@/components/atoms/TypingIndicator';
 import { EmptyState } from '@/components/atoms/EmptyState';
@@ -33,7 +24,9 @@ import { CallScreen } from '@/components/organisms/CallScreen';
 import { GroupCallView } from '@/components/organisms/GroupCallView';
 import { getChatMessages } from '@/lib/selectors';
 import { searchMessages } from '@/lib/format';
-import type { Message, MediaAttachment } from '@/types';
+import type { Message } from '@/types';
+import { useChatPaneHandlers } from './ChatPane/useChatPaneHandlers';
+import { MessageList } from './ChatPane/MessageList';
 
 interface ChatPaneProps {
   chatId: string | null;
@@ -46,24 +39,11 @@ export const ChatPane: FC<ChatPaneProps> = ({ chatId, onNewChat, onBack }) => {
     chats,
     contacts,
     messages,
-    sendMessage,
-    addReaction,
-    deleteMessage,
-    deleteForEveryone,
-    editMessage,
-    forwardMessage,
-    markChatRead,
     typingUsers,
-    setTyping,
-    sendMediaMessage,
-    sendSticker,
     activeVerification,
-    startVerification,
     clearVerification,
     privacySettings,
-    startCall,
     activeCall,
-    endCall,
     toggleCallMute,
     toggleCallVideo,
     toggleCallSpeaker,
@@ -71,6 +51,7 @@ export const ChatPane: FC<ChatPaneProps> = ({ chatId, onNewChat, onBack }) => {
     callMuted,
     callVideoOff,
     callSpeakerOff,
+    markChatRead,
   } = useData();
   const { showToast } = useToast();
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -104,6 +85,57 @@ export const ChatPane: FC<ChatPaneProps> = ({ chatId, onNewChat, onBack }) => {
     [searchResults]
   );
 
+  const otherContact = chat
+    ? contacts.find((c) => chat.memberIds.includes(c.id))
+    : undefined;
+
+  const chatTypingNames = useMemo(() => {
+    if (!chat) return [];
+    return typingUsers
+      .filter(
+        (t) =>
+          t.chatId === chat.id &&
+          t.typing &&
+          t.userId !== 'me' &&
+          Date.now() - t.timestamp < 5000
+      )
+      .map((t) => contacts.find((c) => c.id === t.userId)?.name ?? 'Someone');
+  }, [typingUsers, chat, contacts]);
+
+  const {
+    handleSend,
+    handleReact,
+    handleCopy,
+    handleForward,
+    handleEdit,
+    handleDelete,
+    handleDeleteForEveryone,
+    handleVerify,
+    handleImageSelect,
+    handleVideoSelect,
+    handleFileSelect,
+    handleVoiceSend,
+    handleStickerSelect,
+    handleVoiceCall,
+    handleVideoCall,
+    handleEndCall,
+    handleImageClick,
+    scrollToBottom,
+  } = useChatPaneHandlers({
+    chat,
+    replyingTo,
+    setReplyingTo,
+    editingMessage,
+    setEditingMessage,
+    setShowVoiceRecorder,
+    setShowStickerPicker,
+    setLightboxImages,
+    setLightboxIndex,
+    setForwardMessageId,
+    chatMessages,
+    scrollRef,
+  });
+
   useEffect(() => {
     if (chatId) {
       void markChatRead(chatId);
@@ -111,10 +143,8 @@ export const ChatPane: FC<ChatPaneProps> = ({ chatId, onNewChat, onBack }) => {
   }, [chatId, chatMessages.length, markChatRead]);
 
   useEffect(() => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
-    }
-  }, [chatMessages.length]);
+    scrollToBottom();
+  }, [chatMessages.length, scrollToBottom]);
 
   useEffect(() => {
     setSearchQuery('');
@@ -143,85 +173,6 @@ export const ChatPane: FC<ChatPaneProps> = ({ chatId, onNewChat, onBack }) => {
     }
   }, [searchIndex, searchResults]);
 
-  const otherContact = chat
-    ? contacts.find((c) => chat.memberIds.includes(c.id))
-    : undefined;
-
-  const chatTypingNames = useMemo(() => {
-    if (!chat) return [];
-    return typingUsers
-      .filter(
-        (t) =>
-          t.chatId === chat.id &&
-          t.typing &&
-          t.userId !== 'me' &&
-          Date.now() - t.timestamp < 5000
-      )
-      .map((t) => contacts.find((c) => c.id === t.userId)?.name ?? 'Someone');
-  }, [typingUsers, chat, contacts]);
-
-  const handleSend = useCallback(
-    (text: string): void => {
-      if (!chat) return;
-      if (editingMessage) {
-        void editMessage(chat.id, editingMessage.id, text);
-        setEditingMessage(null);
-        showToast('Message edited', 'info');
-        return;
-      }
-      const replyToId = replyingTo?.id;
-      void sendMessage(chat.id, text, replyToId);
-      setReplyingTo(null);
-    },
-    [chat, editingMessage, replyingTo, editMessage, sendMessage, showToast]
-  );
-
-  const handleReact = useCallback(
-    (messageId: string, emoji: string): void => {
-      if (!chat) return;
-      void addReaction(chat.id, messageId, emoji);
-    },
-    [chat, addReaction]
-  );
-
-  const handleCopy = useCallback(
-    (text: string): void => {
-      void navigator.clipboard.writeText(text);
-      showToast('Copied to clipboard', 'info');
-    },
-    [showToast]
-  );
-
-  const handleForward = useCallback((message: Message): void => {
-    setForwardMessageId(message.id);
-  }, []);
-
-  const handleEdit = useCallback((message: Message): void => {
-    setEditingMessage(message);
-    setReplyingTo(null);
-  }, []);
-
-  const handleDelete = useCallback(
-    (chatId: string, messageId: string): void => {
-      void deleteMessage(chatId, messageId);
-      showToast('Message deleted', 'info');
-    },
-    [deleteMessage, showToast]
-  );
-
-  const handleDeleteForEveryone = useCallback(
-    (chatId: string, messageId: string): void => {
-      void deleteForEveryone(chatId, messageId);
-      showToast('Message deleted for everyone', 'info');
-    },
-    [deleteForEveryone, showToast]
-  );
-
-  const handleVerify = useCallback(async (): Promise<void> => {
-    if (!chat) return;
-    await startVerification(chat.id);
-  }, [chat, startVerification]);
-
   useEffect(() => {
     if (!chat?.isSecret) return;
     const handler = (): void => {
@@ -232,95 +183,6 @@ export const ChatPane: FC<ChatPaneProps> = ({ chatId, onNewChat, onBack }) => {
     document.addEventListener('visibilitychange', handler);
     return () => document.removeEventListener('visibilitychange', handler);
   }, [chat?.isSecret, showToast]);
-
-  const handleImageSelect = useCallback(
-    async (file: File): Promise<void> => {
-      if (!chat) return;
-      const url = URL.createObjectURL(file);
-      const attachment: MediaAttachment = { file, url, type: 'image' };
-      await sendMediaMessage(chat.id, attachment, '');
-      showToast('Image sent', 'info');
-    },
-    [chat, sendMediaMessage, showToast]
-  );
-
-  const handleVideoSelect = useCallback(
-    async (file: File): Promise<void> => {
-      if (!chat) return;
-      const url = URL.createObjectURL(file);
-      const attachment: MediaAttachment = { file, url, type: 'video' };
-      await sendMediaMessage(chat.id, attachment, '');
-      showToast('Video sent', 'info');
-    },
-    [chat, sendMediaMessage, showToast]
-  );
-
-  const handleFileSelect = useCallback(
-    async (file: File): Promise<void> => {
-      if (!chat) return;
-      const url = URL.createObjectURL(file);
-      const attachment: MediaAttachment = { file, url, type: 'file' };
-      await sendMediaMessage(chat.id, attachment, '');
-      showToast('File sent', 'info');
-    },
-    [chat, sendMediaMessage, showToast]
-  );
-
-  const handleVoiceSend = useCallback(
-    async (blob: Blob, duration: number): Promise<void> => {
-      if (!chat) return;
-      const file = new File([blob], `voice-${Date.now()}.webm`, {
-        type: 'audio/webm',
-      });
-      const url = URL.createObjectURL(blob);
-      const attachment: MediaAttachment = { file, url, type: 'audio' };
-      await sendMediaMessage(chat.id, attachment, '');
-      setShowVoiceRecorder(false);
-      showToast('Voice message sent', 'info');
-    },
-    [chat, sendMediaMessage, showToast]
-  );
-
-  const handleStickerSelect = useCallback(
-    async (sticker: string): Promise<void> => {
-      if (!chat) return;
-      await sendSticker(chat.id, sticker);
-      setShowStickerPicker(false);
-    },
-    [chat, sendSticker]
-  );
-
-  const handleVoiceCall = useCallback(async (): Promise<void> => {
-    if (!chat) return;
-    await startCall(chat.id, 'voice');
-  }, [chat, startCall]);
-
-  const handleVideoCall = useCallback(async (): Promise<void> => {
-    if (!chat) return;
-    await startCall(chat.id, 'video');
-  }, [chat, startCall]);
-
-  const handleEndCall = useCallback(async (): Promise<void> => {
-    await endCall();
-  }, [endCall]);
-
-  const handleImageClick = useCallback(
-    (url: string): void => {
-      const imageUrls = chatMessages
-        .filter((m) => m.type === 'image' && m.mediaUrl)
-        .map((m) => m.mediaUrl!);
-      const idx = imageUrls.indexOf(url);
-      setLightboxImages(imageUrls);
-      setLightboxIndex(idx >= 0 ? idx : 0);
-    },
-    [chatMessages]
-  );
-
-  const scrollToBottom = useCallback((): void => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
-    }
-  }, []);
 
   if (!chat) {
     return (
@@ -412,60 +274,25 @@ export const ChatPane: FC<ChatPaneProps> = ({ chatId, onNewChat, onBack }) => {
       <div className="flex min-h-0 flex-1">
         <div className="flex min-w-0 flex-1 flex-col">
           <div ref={scrollRef} className="flex-1 overflow-y-auto px-4 py-3">
-            {grouped.length === 0 ? (
-              <div className="flex h-full items-center justify-center">
-                <p className="text-base-content/50 text-sm">
-                  No messages yet — say hello!
-                </p>
-              </div>
-            ) : (
-              grouped.map(({ message, isNewDay }) => {
-                const quotedMessage = message.replyToId
-                  ? messages.find((m) => m.id === message.replyToId)
-                  : undefined;
-                const quotedAuthorName = quotedMessage
-                  ? quotedMessage.authorId === 'me'
-                    ? 'You'
-                    : contacts.find((c) => c.id === quotedMessage.authorId)
-                        ?.name
-                  : undefined;
-                return (
-                  <div
-                    key={message.id}
-                    id={`message-${message.id}`}
-                    className="flex flex-col gap-1.5">
-                    {isNewDay && <DateDivider timestamp={message.createdAt} />}
-                    <MessageBubble
-                      message={message}
-                      mine={message.authorId === 'me'}
-                      authorName={
-                        message.authorId !== 'me'
-                          ? contacts.find((c) => c.id === message.authorId)
-                              ?.name
-                          : undefined
-                      }
-                      onReact={(emoji) => handleReact(message.id, emoji)}
-                      onReply={() => {
-                        setReplyingTo(message);
-                        setEditingMessage(null);
-                      }}
-                      onCopy={() => handleCopy(message.text)}
-                      onForward={() => handleForward(message)}
-                      onEdit={() => handleEdit(message)}
-                      onDelete={() => handleDelete(chat.id, message.id)}
-                      onDeleteForEveryone={() =>
-                        handleDeleteForEveryone(chat.id, message.id)
-                      }
-                      quotedMessage={quotedMessage}
-                      quotedAuthorName={quotedAuthorName}
-                      highlight={searchQuery.trim()}
-                      highlighted={highlightedIds.has(message.id)}
-                      onImageClick={handleImageClick}
-                    />
-                  </div>
-                );
-              })
-            )}
+            <MessageList
+              grouped={grouped}
+              contacts={contacts}
+              messages={messages}
+              highlightedIds={highlightedIds}
+              searchQuery={searchQuery}
+              onReact={handleReact}
+              onReply={(message) => {
+                setReplyingTo(message);
+                setEditingMessage(null);
+              }}
+              onCopy={handleCopy}
+              onForward={handleForward}
+              onEdit={handleEdit}
+              onDelete={handleDelete}
+              onDeleteForEveryone={handleDeleteForEveryone}
+              onImageClick={handleImageClick}
+              chatId={chat.id}
+            />
           </div>
           <TypingIndicator names={chatTypingNames} />
           {editingMessage && (

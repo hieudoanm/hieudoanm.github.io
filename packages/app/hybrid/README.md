@@ -32,10 +32,10 @@
 | 18  | code        | Code        | Editor     | VSCode / Zed                                  | No       | 23/57 · 40% | DONE   |
 | 19  | api         | API         | Tools      | Postman / Insomnia / Bruno                    | Optional | 19/52 · 37% | DONE   |
 | 20  | video       | Video       | Editor     | CapCut                                        | No       | 4/53 · 8%   | DONE   |
-| 21  | football    | Football    | Editor     | Football Formation / Analysis                 | No       |             | PLAN   |
-| 22  | messaging   | Messaging   | Tools      | Telegram / WhatsApp / Messenger / Signal      | Required |             | PLAN   |
-| 23  | keynotes    | Keynotes    | Editor     | PowerPoint / Google Slides / Apple Keynote    | No       |             | PLAN   |
-| 24  |             |             |            |                                               |          |             | PLAN   |
+| 21  | football    | Football    | Editor     | Football Formation / Analysis                 | No       |             | DONE   |
+| 22  | messaging   | Messaging   | Tools      | Telegram / WhatsApp / Messenger / Signal      | Required |             | DONE   |
+| 23  | keynotes    | Keynotes    | Editor     | PowerPoint / Google Slides / Apple Keynote    | No       |             | DONE   |
+| 24  | nikoli      | Nikoli      | Games      | Nikoli                                        | No       |             | DONE   |
 
 ## Techstack
 

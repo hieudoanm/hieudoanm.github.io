@@ -1,0 +1,2 @@
+:HL["/downloads/nikoli/_next/static/chunks/1t49c762xrran.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"(games)","param":null,"prefetchHints":4192,"slots":{"children":{"name":"heyawake","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"_TTKmdekUyjGwQQZo_o51"}

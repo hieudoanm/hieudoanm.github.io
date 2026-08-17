@@ -418,4 +418,256 @@ describe('parseOmeXml', () => {
     ]);
     expect(result.pixelsPerMicron).toBeNull();
   });
+
+  it('returns null pixelsPerMicron when PhysicalSizeX is zero', () => {
+    const result = parseOmeXml(
+      '<Pixels PhysicalSizeX="0"><Channel id="C0"/></Pixels>'
+    );
+    expect(result.pixelsPerMicron).toBeNull();
+  });
+
+  it('returns null pixelsPerMicron when PhysicalSizeX is negative', () => {
+    const result = parseOmeXml(
+      '<Pixels PhysicalSizeX="-1.5"><Channel id="C0"/></Pixels>'
+    );
+    expect(result.pixelsPerMicron).toBeNull();
+  });
+
+  it('handles channels with no id attribute', () => {
+    const result = parseOmeXml('<Pixels><Channel Name="OnlyName"/></Pixels>');
+    expect(result.channels[0].id).toBe('');
+    expect(result.channels[0].name).toBe('OnlyName');
+  });
+
+  it('returns empty channels when no Channel tags exist', () => {
+    const result = parseOmeXml('<OME><Image/></OME>');
+    expect(result.channels).toEqual([]);
+    expect(result.pixelsPerMicron).toBeNull();
+  });
 });
+
+describe('tiff edge cases', () => {
+  it('throws for unsupported bit depth', () => {
+    const pixels = new Uint8Array([0, 0]);
+    expect(() =>
+      parseTiff(
+        buildTiff({
+          width: 1,
+          height: 1,
+          samples: 1,
+          bits: 32,
+          strips: [pixels],
+        })
+      )
+    ).toThrow(TiffError);
+  });
+
+  it('decodes 16-bit big-endian chunky data', () => {
+    const pixels = new Uint8Array([0xff, 0x00, 0x80, 0x00, 0x40, 0x00]);
+    const parsed = parseTiff(
+      buildTiff({
+        width: 1,
+        height: 1,
+        samples: 3,
+        bits: 16,
+        photometric: 2,
+        strips: [pixels],
+        bigEndian: true,
+      })
+    );
+    expect(Array.from(parsed.planes[0].data)).toEqual([0xff]);
+    expect(Array.from(parsed.planes[1].data)).toEqual([0x80]);
+    expect(Array.from(parsed.planes[2].data)).toEqual([0x40]);
+  });
+
+  it('decodes 16-bit planar data', () => {
+    const stripR = new Uint8Array([0x00, 0xab]);
+    const stripG = new Uint8Array([0x00, 0xcd]);
+    const parsed = parseTiff(
+      buildTiff({
+        width: 1,
+        height: 1,
+        samples: 2,
+        bits: 16,
+        planar: 2,
+        strips: [stripR, stripG],
+      })
+    );
+    expect(Array.from(parsed.planes[0].data)).toEqual([0xab]);
+    expect(Array.from(parsed.planes[1].data)).toEqual([0xcd]);
+  });
+
+  it('decodes PackBits with compression 32773', () => {
+    const packBits = new Uint8Array([252, 200, 2, 1, 2, 3]);
+    const parsed = parseTiff(
+      buildTiff({
+        width: 8,
+        height: 1,
+        samples: 1,
+        compression: 32773,
+        strips: [packBits],
+      })
+    );
+    expect(Array.from(parsed.planes[0].data)).toEqual([
+      200, 200, 200, 200, 200, 1, 2, 3,
+    ]);
+  });
+
+  it('decodes multiple strips in planar mode', () => {
+    const stripR1 = new Uint8Array([1, 2]);
+    const stripR2 = new Uint8Array([3, 4]);
+    const stripG1 = new Uint8Array([10, 20]);
+    const stripG2 = new Uint8Array([30, 40]);
+    const parsed = parseTiff(
+      buildTiff({
+        width: 2,
+        height: 2,
+        samples: 2,
+        planar: 2,
+        rowsPerStrip: 1,
+        strips: [stripR1, stripR2, stripG1, stripG2],
+      })
+    );
+    expect(Array.from(parsed.planes[0].data)).toEqual([1, 2, 3, 4]);
+    expect(Array.from(parsed.planes[1].data)).toEqual([10, 20, 30, 40]);
+  });
+
+  it('falls back to default names for non-RGB photometric with 3 samples', () => {
+    const pixels = new Uint8Array([1, 2, 3]);
+    const parsed = parseTiff(
+      buildTiff({
+        width: 1,
+        height: 1,
+        samples: 3,
+        photometric: 0,
+        strips: [pixels],
+      })
+    );
+    expect(parsed.planes.map((p) => p.name)).toEqual([
+      'Channel 1',
+      'Channel 2',
+      'Channel 3',
+    ]);
+    expect(parsed.planes.map((p) => p.id)).toEqual([
+      'sample-0',
+      'sample-1',
+      'sample-2',
+    ]);
+  });
+
+  it('returns 0 for readAt with unsupported size', () => {
+    const view = new DataView(new ArrayBuffer(8));
+    view.setUint8(0, 0x49);
+    view.setUint8(1, 0x49);
+    view.setUint8(2, 0x2a);
+    view.setUint8(3, 0x00);
+    view.setUint32(4, 8, true);
+    const bytes = new Uint8Array(view.buffer);
+    bytes[0] = 0x49;
+    bytes[1] = 0x49;
+    bytes[2] = 0x2a;
+    bytes[3] = 0x00;
+
+    const packBits = new Uint8Array([0]);
+    const tiffBytes = buildTiff({
+      width: 1,
+      height: 1,
+      samples: 1,
+      strips: [packBits],
+    });
+    expect(() => parseTiff(tiffBytes)).not.toThrow();
+  });
+
+  it('parses OME XML with PhysicalSizeX for stack', () => {
+    const xml =
+      '<OME><Pixels PhysicalSizeX="0.5">' +
+      '<Channel id="C0" Name="Green"/></Pixels></OME>';
+    const parsed = parseTiffStack(
+      buildTiffStackWithDescription([new Uint8Array([1, 2])], xml)
+    );
+    expect(parsed.calibration.pixelsPerMicron).toBeCloseTo(2);
+    expect(parsed.slices[0].planes[0].name).toBe('Green');
+  });
+
+  it('uses default names for stack without OME metadata', () => {
+    const parsed = parseTiffStack(buildTiffStack([new Uint8Array([5])]));
+    expect(parsed.slices[0].planes[0].name).toBe('Channel 1');
+    expect(parsed.slices[0].planes[0].id).toBe('sample-0');
+  });
+
+  it('rejects non-TIFF in parseTiffStack', () => {
+    expect(() =>
+      parseTiffStack(new Uint8Array([0, 1, 2, 3, 4, 5, 6, 7]))
+    ).toThrow(TiffError);
+  });
+
+  it('returns TiffError with correct name', () => {
+    const err = new TiffError('test');
+    expect(err.name).toBe('TiffError');
+    expect(err.message).toBe('test');
+  });
+});
+
+const buildTiffStackWithDescription = (
+  strips: Uint8Array[],
+  description: string
+): Uint8Array => {
+  const samples = 1;
+  const bits = 8;
+  const entryCount = 10;
+  const ifdSize = 2 + entryCount * 12 + 4;
+  const total =
+    8 +
+    ifdSize * strips.length +
+    description.length +
+    1 +
+    strips.reduce((sum, strip) => sum + strip.length, 0);
+  const bytes = new Uint8Array(total);
+  const view = new DataView(bytes.buffer);
+  bytes[0] = 0x49;
+  bytes[1] = 0x49;
+  bytes[2] = 0x2a;
+  bytes[3] = 0x00;
+  view.setUint32(4, 8, true);
+  let ifdOffset = 8;
+  let dataOffset = 8 + ifdSize * strips.length;
+  const descOffset = dataOffset;
+  for (let i = 0; i < description.length; i++) {
+    bytes[descOffset + i] = description.charCodeAt(i);
+  }
+  bytes[descOffset + description.length] = 0;
+  dataOffset += description.length + 1;
+  strips.forEach((strip, pageIndex) => {
+    const next = pageIndex === strips.length - 1 ? 0 : ifdOffset + ifdSize;
+    view.setUint16(ifdOffset, entryCount, true);
+    const start = ifdOffset + 2;
+    const write = (
+      pos: number,
+      tag: number,
+      type: number,
+      count: number,
+      value: number
+    ): void => {
+      view.setUint16(pos, tag, true);
+      view.setUint16(pos + 2, type, true);
+      view.setUint32(pos + 4, count, true);
+      if (type === 3) view.setUint16(pos + 8, value, true);
+      else view.setUint32(pos + 8, value, true);
+    };
+    write(start, 256, 4, 1, 2);
+    write(start + 12, 257, 4, 1, 1);
+    write(start + 24, 258, 3, 1, bits);
+    write(start + 36, 259, 3, 1, 1);
+    write(start + 48, 262, 3, 1, 1);
+    write(start + 60, 277, 3, 1, samples);
+    write(start + 72, 278, 4, 1, 1);
+    write(start + 84, 273, 4, 1, dataOffset);
+    write(start + 96, 279, 4, 1, strip.length);
+    write(start + 108, 270, 2, description.length + 1, descOffset);
+    view.setUint32(ifdOffset + 2 + entryCount * 12, next, true);
+    bytes.set(strip, dataOffset);
+    dataOffset += strip.length;
+    ifdOffset += ifdSize;
+  });
+  return bytes;
+};

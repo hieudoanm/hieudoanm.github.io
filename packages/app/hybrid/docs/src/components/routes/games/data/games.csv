@@ -14,13 +14,6 @@ Countries,countries,Continents Sort,Drag countries into continents,PiSortAscendi
 Countries,countries,Emoji Guesser,Pick the flag,PiSmiley,emoji-guesser
 Countries,countries,Flag Guesser,Name the country,PiGlobe,flag-guesser
 Countries,countries,Higher or Lower,Compare populations,PiArrowsDownUp,countries-higher-lower
-Nikoli,nikoli,Fillomino,Fill with matching regions,PiSquaresFour,fillomino
-Nikoli,nikoli,Heyawake,Shade rooms by rules,PiGraph,heyawake
-Nikoli,nikoli,Masyu,Loop through pearls,PiCircleDashed,masyu
-Nikoli,nikoli,Norinori,Shade domino halves,PiTarget,norinori
-Nikoli,nikoli,Nurikabe,Paint islands black,PiPaintBrushBroad,nurikabe
-Nikoli,nikoli,Shikaku,Divide into rectangles,PiGridFour,shikaku
-Nikoli,nikoli,Sudoku,"4×4 & 9×9",PiPuzzlePiece,sudoku
 Memory,memory,Memory Match,Find matching pairs,PiGameController,memory-match
 Memory,memory,N-Back,Working memory,PiNumberSquareOne,n-back
 Memory,memory,PI,Memorization,PiPi,pi

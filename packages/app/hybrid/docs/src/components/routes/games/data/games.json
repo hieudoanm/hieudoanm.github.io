@@ -108,54 +108,6 @@
     ]
   },
   {
-    "id": "nikoli",
-    "label": "Nikoli",
-    "items": [
-      {
-        "label": "Fillomino",
-        "description": "Fill with matching regions",
-        "icon": "PiSquaresFour",
-        "toolId": "fillomino"
-      },
-      {
-        "label": "Heyawake",
-        "description": "Shade rooms by rules",
-        "icon": "PiGraph",
-        "toolId": "heyawake"
-      },
-      {
-        "label": "Masyu",
-        "description": "Loop through pearls",
-        "icon": "PiCircleDashed",
-        "toolId": "masyu"
-      },
-      {
-        "label": "Norinori",
-        "description": "Shade domino halves",
-        "icon": "PiTarget",
-        "toolId": "norinori"
-      },
-      {
-        "label": "Nurikabe",
-        "description": "Paint islands black",
-        "icon": "PiPaintBrushBroad",
-        "toolId": "nurikabe"
-      },
-      {
-        "label": "Shikaku",
-        "description": "Divide into rectangles",
-        "icon": "PiGridFour",
-        "toolId": "shikaku"
-      },
-      {
-        "label": "Sudoku",
-        "description": "4×4 & 9×9",
-        "icon": "PiPuzzlePiece",
-        "toolId": "sudoku"
-      }
-    ]
-  },
-  {
     "id": "memory",
     "label": "Memory",
     "items": [

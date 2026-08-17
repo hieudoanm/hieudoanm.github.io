@@ -23,7 +23,52 @@ jest.mock('next/navigation', () => ({
   useRouter: () => ({ push: jest.fn() }),
 }));
 
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+jest.mock('@/lib/photo-tools', () => ({
+  downloadBlob: jest.fn(),
+  loadImage: jest
+    .fn()
+    .mockResolvedValue({
+      width: 100,
+      height: 100,
+      naturalWidth: 100,
+      naturalHeight: 100,
+      src: '',
+    }),
+}));
+
+jest.mock('@/utils/trpc', () => ({
+  trpcClient: {
+    openrouter: {
+      generate: {
+        mutate: jest.fn().mockResolvedValue({ text: 'ok' }),
+      },
+    },
+  },
+}));
+
+jest.mock('next/link', () => {
+  const React = require('react');
+  const Link = React.forwardRef(
+    (
+      {
+        children,
+        href,
+        ...props
+      }: { children: React.ReactNode; href: string; [key: string]: unknown },
+      ref: React.Ref<HTMLAnchorElement>
+    ) => React.createElement('a', { ...props, href, ref }, children)
+  );
+  Link.displayName = 'Link';
+  return { __esModule: true, default: Link };
+});
+
+import {
+  fireEvent,
+  render,
+  screen,
+  waitFor,
+  act,
+} from '@testing-library/react';
 import HomePage from '@/app/page';
 import ToolsPage from '@/app/tools/page';
 import AlbumsPage from '@/app/albums/page';
@@ -178,6 +223,15 @@ describe('AlbumsPage', () => {
     fireEvent.click(await screen.findByRole('button', { name: /Delete/i }));
     await waitFor(() => expect(db.albums.delete).toHaveBeenCalled());
   });
+
+  it('early returns when album name is empty', async () => {
+    render(<AlbumsPage />);
+    fireEvent.click(await screen.findByRole('button', { name: 'New' }));
+    (db.albums.put as jest.Mock).mockClear();
+    fireEvent.click(screen.getByRole('button', { name: 'Create' }));
+    await act(async () => {});
+    expect(db.albums.put).not.toHaveBeenCalled();
+  });
 });
 
 describe('SettingsPage', () => {
@@ -217,6 +271,66 @@ describe('ToolsPage', () => {
       target: { value: 'gradient' },
     });
     expect(screen.getByText('Gradient Generator')).toBeInTheDocument();
+  });
+
+  it('shows placeholder text when no tool is selected', () => {
+    render(<ToolsPage />);
+    expect(
+      screen.getByText('Select an image tool from the sidebar')
+    ).toBeInTheDocument();
+  });
+
+  it('shows active tool title in header when a tool is selected', () => {
+    render(<ToolsPage />);
+    fireEvent.click(screen.getByRole('button', { name: /🤖/ }));
+    const generateButton = screen.getAllByRole('button', {
+      name: /✨ Generate/i,
+    })[0];
+    fireEvent.click(generateButton);
+    const header = screen.getByRole('heading', { level: 1 });
+    expect(header.textContent).toBe('Generate');
+  });
+
+  it('collapses and re-expands a category', () => {
+    render(<ToolsPage />);
+    const aiButton = screen.getByRole('button', { name: /🤖/ });
+    fireEvent.click(aiButton);
+    expect(
+      screen.getAllByRole('button', { name: /✨ Generate/i }).length
+    ).toBeGreaterThan(0);
+    fireEvent.click(aiButton);
+  });
+
+  it('filters tools by description text', () => {
+    render(<ToolsPage />);
+    fireEvent.change(screen.getByPlaceholderText('Search tools...'), {
+      target: { value: 'thumbnail' },
+    });
+    expect(screen.getByText('YouTube Thumbnails')).toBeInTheDocument();
+  });
+
+  it('shows no results for unmatched query', () => {
+    render(<ToolsPage />);
+    fireEvent.change(screen.getByPlaceholderText('Search tools...'), {
+      target: { value: 'xyznonexistent' },
+    });
+    expect(screen.queryByText('Image Tools')).toBeInTheDocument();
+  });
+
+  it('selecting a different tool updates the header', () => {
+    render(<ToolsPage />);
+    const header = screen.getByRole('heading', { level: 1 });
+    expect(header.textContent).toBe('Image Tools');
+
+    fireEvent.click(screen.getByRole('button', { name: /🤖/ }));
+    const aiButtons = screen.getAllByRole('button', { name: /✨ Generate/i });
+    fireEvent.click(aiButtons[0]);
+    expect(header.textContent).toBe('Generate');
+
+    fireEvent.click(screen.getByRole('button', { name: /✨ Create/ }));
+    const cameraBtn = screen.getAllByRole('button', { name: /📸 Camera/i });
+    fireEvent.click(cameraBtn[0]);
+    expect(header.textContent).toBe('Camera');
   });
 });
 

@@ -7,6 +7,7 @@ import {
 } from '@testing-library/react';
 import { downloadBlob, loadImage } from '@/lib/photo-tools';
 import { AiGenerateTool } from '@/components/tools/AiGenerateTool';
+import { AiRemoveBgTool } from '@/components/tools/AiRemoveBgTool';
 import { BarcodeTool } from '@/components/tools/BarcodeTool';
 import { Base64Tool } from '@/components/tools/Base64Tool';
 import { CameraTool } from '@/components/tools/CameraTool';
@@ -18,6 +19,7 @@ import { ImageResizeTool } from '@/components/tools/ImageResizeTool';
 import { ImageTranslateTool } from '@/components/tools/ImageTranslateTool';
 import { InvoiceParserTool } from '@/components/tools/InvoiceParserTool';
 import { QRCodeTool } from '@/components/tools/QRCodeTool';
+import { YouTubeThumbnailsTool } from '@/components/tools/YouTubeThumbnailsTool';
 
 jest.mock('@/lib/photo-tools', () => ({
   downloadBlob: jest.fn(),
@@ -477,5 +479,365 @@ describe('canvas tools', () => {
         'resized_photo.png'
       )
     );
+  });
+});
+
+describe('CameraTool - error paths', () => {
+  it('shows error when getUserMedia rejects with an Error', async () => {
+    (navigator.mediaDevices.getUserMedia as jest.Mock).mockRejectedValueOnce(
+      new Error('Permission denied')
+    );
+    render(<CameraTool config={config('camera')} />);
+    expect(await screen.findByText('Permission denied')).toBeTruthy();
+  });
+
+  it('shows fallback error when getUserMedia rejects with non-Error', async () => {
+    (navigator.mediaDevices.getUserMedia as jest.Mock).mockRejectedValueOnce(
+      'string error'
+    );
+    render(<CameraTool config={config('camera')} />);
+    expect(await screen.findByText('Could not access camera')).toBeTruthy();
+  });
+
+  it('renders nothing when overlay is none', async () => {
+    render(<CameraTool config={config('camera')} />);
+    await waitFor(() =>
+      expect(navigator.mediaDevices.getUserMedia).toHaveBeenCalled()
+    );
+    const svg = document.querySelector('svg.pointer-events-none');
+    expect(svg).toBeNull();
+  });
+
+  it('renders thirds overlay lines', async () => {
+    render(<CameraTool config={config('camera')} />);
+    await waitFor(() =>
+      expect(navigator.mediaDevices.getUserMedia).toHaveBeenCalled()
+    );
+    fireEvent.click(screen.getByRole('button', { name: 'thirds' }));
+    const svg = document.querySelector('svg.pointer-events-none');
+    expect(svg).toBeTruthy();
+    const lines = svg!.querySelectorAll('line');
+    expect(lines.length).toBe(4);
+  });
+
+  it('renders symmetry overlay elements', async () => {
+    render(<CameraTool config={config('camera')} />);
+    await waitFor(() =>
+      expect(navigator.mediaDevices.getUserMedia).toHaveBeenCalled()
+    );
+    fireEvent.click(screen.getByRole('button', { name: 'symmetry' }));
+    const svg = document.querySelector('svg.pointer-events-none');
+    expect(svg).toBeTruthy();
+    const lines = svg!.querySelectorAll('line');
+    expect(lines.length).toBe(2);
+    const circles = svg!.querySelectorAll('circle');
+    expect(circles.length).toBe(2);
+  });
+
+  it('switches facing mode and updates badge', async () => {
+    render(<CameraTool config={config('camera')} />);
+    await waitFor(() =>
+      expect(navigator.mediaDevices.getUserMedia).toHaveBeenCalled()
+    );
+    expect(screen.getByText('Front')).toBeTruthy();
+    fireEvent.click(
+      screen.getByText('Flip').parentElement!.querySelector('button')!
+    );
+    await waitFor(() => expect(screen.getByText('Rear')).toBeTruthy());
+  });
+
+  it('cycles through all overlay modes', async () => {
+    render(<CameraTool config={config('camera')} />);
+    await waitFor(() =>
+      expect(navigator.mediaDevices.getUserMedia).toHaveBeenCalled()
+    );
+    fireEvent.click(screen.getByRole('button', { name: 'thirds' }));
+    fireEvent.click(screen.getByRole('button', { name: 'symmetry' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Clean' }));
+  });
+
+  it('switches ratio and cycles through all ratios', async () => {
+    render(<CameraTool config={config('camera')} />);
+    await waitFor(() =>
+      expect(navigator.mediaDevices.getUserMedia).toHaveBeenCalled()
+    );
+    const ratioBtn = screen.getByRole('button', { name: /1:1/ });
+    fireEvent.click(ratioBtn);
+    expect(screen.getByText('4:3')).toBeTruthy();
+    fireEvent.click(screen.getByText('4:3').closest('button')!);
+    expect(screen.getByText('3:2')).toBeTruthy();
+    fireEvent.click(screen.getByText('3:2').closest('button')!);
+    expect(screen.getByText('16:9')).toBeTruthy();
+  });
+
+  it('capture does nothing when refs are missing', async () => {
+    render(<CameraTool config={config('camera')} />);
+    await waitFor(() =>
+      expect(navigator.mediaDevices.getUserMedia).toHaveBeenCalled()
+    );
+    const captureArea = document.querySelector('.group.flex.h-16');
+    expect(captureArea).toBeTruthy();
+  });
+});
+
+describe('CameraTool - handleCapture branches', () => {
+  it('handles capture with user facing mode and wide video', async () => {
+    const fakeVideo = {
+      videoWidth: 1920,
+      videoHeight: 1080,
+    };
+    const fakeCtx = {
+      ...canvasCtxStub,
+      drawImage: jest.fn(),
+      toBlob: jest.fn((cb: (b: Blob | null) => void) => cb(makeBlob())),
+    };
+    (HTMLCanvasElement.prototype.getContext as jest.Mock).mockReturnValue(
+      fakeCtx
+    );
+    (HTMLCanvasElement.prototype as any).videoWidth = 1920;
+    (HTMLCanvasElement.prototype as any).videoHeight = 1080;
+
+    render(<CameraTool config={config('camera')} />);
+    await waitFor(() =>
+      expect(navigator.mediaDevices.getUserMedia).toHaveBeenCalled()
+    );
+  });
+});
+
+describe('AiRemoveBgTool', () => {
+  it('shows mode buttons and default auto mode', () => {
+    render(<AiRemoveBgTool config={config('ai-remove-bg')} />);
+    expect(screen.getByText('Auto Detect')).toBeTruthy();
+    expect(screen.getByText('Pick Color')).toBeTruthy();
+    expect(screen.getByText('Remove Background')).toBeTruthy();
+  });
+
+  it('switches to pick mode and shows color picker', () => {
+    render(<AiRemoveBgTool config={config('ai-remove-bg')} />);
+    fireEvent.click(screen.getByText('Pick Color'));
+    expect(screen.getByText('Key Color:')).toBeTruthy();
+    expect(screen.getByText(/Feather:/)).toBeTruthy();
+  });
+
+  it('switches back to auto mode hides pick controls', () => {
+    render(<AiRemoveBgTool config={config('ai-remove-bg')} />);
+    fireEvent.click(screen.getByText('Pick Color'));
+    expect(screen.getByText('Key Color:')).toBeTruthy();
+    fireEvent.click(screen.getByText('Auto Detect'));
+    expect(screen.queryByText('Key Color:')).toBeNull();
+  });
+
+  it('disable button when no file uploaded', () => {
+    render(<AiRemoveBgTool config={config('ai-remove-bg')} />);
+    const btn = screen.getByRole('button', { name: 'Remove Background' });
+    expect(btn).toBeDisabled();
+  });
+
+  it('process auto mode downloads result', async () => {
+    const { container } = render(
+      <AiRemoveBgTool config={config('ai-remove-bg')} />
+    );
+    uploadFile(container);
+    await flush();
+    fireEvent.click(screen.getByRole('button', { name: 'Remove Background' }));
+    await waitFor(() =>
+      expect(mockDownloadBlob).toHaveBeenCalledWith(
+        expect.any(Blob),
+        expect.stringContaining('nobg_')
+      )
+    );
+  });
+
+  it('process pick mode downloads result', async () => {
+    const { container } = render(
+      <AiRemoveBgTool config={config('ai-remove-bg')} />
+    );
+    uploadFile(container);
+    await flush();
+    fireEvent.click(screen.getByText('Pick Color'));
+    fireEvent.click(screen.getByRole('button', { name: 'Remove Background' }));
+    await waitFor(() =>
+      expect(mockDownloadBlob).toHaveBeenCalledWith(
+        expect.any(Blob),
+        expect.stringContaining('nobg_')
+      )
+    );
+  });
+
+  it('changes tolerance and feather values', () => {
+    render(<AiRemoveBgTool config={config('ai-remove-bg')} />);
+    const toleranceSlider = screen.getByRole('slider', { name: /tolerance/i });
+    fireEvent.change(toleranceSlider, { target: { value: '80' } });
+    expect(screen.getByText('Tolerance: 80%')).toBeTruthy();
+
+    fireEvent.click(screen.getByText('Pick Color'));
+    const featherSlider = screen.getByRole('slider', { name: /feather/i });
+    fireEvent.change(featherSlider, { target: { value: '25' } });
+    expect(screen.getByText('Feather: 25px')).toBeTruthy();
+  });
+
+  it('does not process when file is null', async () => {
+    render(<AiRemoveBgTool config={config('ai-remove-bg')} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Remove Background' }));
+    await act(async () => {
+      await new Promise((r) => setTimeout(r, 10));
+    });
+    expect(mockDownloadBlob).not.toHaveBeenCalled();
+  });
+});
+
+describe('YouTubeThumbnailsTool', () => {
+  it('renders input and Load button', () => {
+    render(<YouTubeThumbnailsTool config={config('youtube-thumbnails')} />);
+    expect(screen.getByPlaceholderText(/Paste YouTube URL/)).toBeTruthy();
+    expect(screen.getByText('Load')).toBeTruthy();
+  });
+
+  it('shows hint when no video ID entered', () => {
+    render(<YouTubeThumbnailsTool config={config('youtube-thumbnails')} />);
+    expect(screen.getByText(/Supports youtube\.com\/watch/)).toBeTruthy();
+  });
+
+  it('shows error for invalid URL', () => {
+    render(<YouTubeThumbnailsTool config={config('youtube-thumbnails')} />);
+    fireEvent.change(screen.getByPlaceholderText(/Paste YouTube URL/), {
+      target: { value: 'not-a-url' },
+    });
+    fireEvent.click(screen.getByText('Load'));
+    expect(
+      screen.getByText('Could not find a valid YouTube video ID.')
+    ).toBeTruthy();
+  });
+
+  it('extracts video ID from youtube.com/watch?v= URL', () => {
+    render(<YouTubeThumbnailsTool config={config('youtube-thumbnails')} />);
+    fireEvent.change(screen.getByPlaceholderText(/Paste YouTube URL/), {
+      target: { value: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' },
+    });
+    fireEvent.click(screen.getByText('Load'));
+    expect(screen.getByText('dQw4w9WgXcQ')).toBeTruthy();
+    expect(screen.queryByText(/Supports/)).toBeNull();
+  });
+
+  it('extracts video ID from youtu.be short URL', () => {
+    render(<YouTubeThumbnailsTool config={config('youtube-thumbnails')} />);
+    fireEvent.change(screen.getByPlaceholderText(/Paste YouTube URL/), {
+      target: { value: 'https://youtu.be/dQw4w9WgXcQ' },
+    });
+    fireEvent.click(screen.getByText('Load'));
+    expect(screen.getByText('dQw4w9WgXcQ')).toBeTruthy();
+  });
+
+  it('extracts video ID from raw video ID', () => {
+    render(<YouTubeThumbnailsTool config={config('youtube-thumbnails')} />);
+    fireEvent.change(screen.getByPlaceholderText(/Paste YouTube URL/), {
+      target: { value: 'dQw4w9WgXcQ' },
+    });
+    fireEvent.click(screen.getByText('Load'));
+    expect(screen.getByText('dQw4w9WgXcQ')).toBeTruthy();
+  });
+
+  it('extracts video ID from /embed/ URL', () => {
+    render(<YouTubeThumbnailsTool config={config('youtube-thumbnails')} />);
+    fireEvent.change(screen.getByPlaceholderText(/Paste YouTube URL/), {
+      target: { value: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
+    });
+    fireEvent.click(screen.getByText('Load'));
+    expect(screen.getByText('dQw4w9WgXcQ')).toBeTruthy();
+  });
+
+  it('extracts video ID from /shorts/ URL', () => {
+    render(<YouTubeThumbnailsTool config={config('youtube-thumbnails')} />);
+    fireEvent.change(screen.getByPlaceholderText(/Paste YouTube URL/), {
+      target: { value: 'https://www.youtube.com/shorts/dQw4w9WgXcQ' },
+    });
+    fireEvent.click(screen.getByText('Load'));
+    expect(screen.getByText('dQw4w9WgXcQ')).toBeTruthy();
+  });
+
+  it('enters key triggers extract', () => {
+    render(<YouTubeThumbnailsTool config={config('youtube-thumbnails')} />);
+    const input = screen.getByPlaceholderText(/Paste YouTube URL/);
+    fireEvent.change(input, {
+      target: { value: 'dQw4w9WgXcQ' },
+    });
+    fireEvent.keyDown(input, { key: 'Enter' });
+    expect(screen.getByText('dQw4w9WgXcQ')).toBeTruthy();
+  });
+
+  it('toggles quality selection', () => {
+    render(<YouTubeThumbnailsTool config={config('youtube-thumbnails')} />);
+    fireEvent.change(screen.getByPlaceholderText(/Paste YouTube URL/), {
+      target: { value: 'dQw4w9WgXcQ' },
+    });
+    fireEvent.click(screen.getByText('Load'));
+    const allBtn = screen.getByText('All');
+    const noneBtn = screen.getByText('None');
+    fireEvent.click(noneBtn);
+    fireEvent.click(allBtn);
+  });
+
+  it('clicks example URL to populate', () => {
+    render(<YouTubeThumbnailsTool config={config('youtube-thumbnails')} />);
+    const exampleButtons = screen.getAllByText(/…$/);
+    fireEvent.click(exampleButtons[0]);
+    expect(screen.getByText('owosAu5aycM')).toBeTruthy();
+  });
+
+  it('shows quality cards and download button when videoId is set', () => {
+    render(<YouTubeThumbnailsTool config={config('youtube-thumbnails')} />);
+    fireEvent.change(screen.getByPlaceholderText(/Paste YouTube URL/), {
+      target: { value: 'dQw4w9WgXcQ' },
+    });
+    fireEvent.click(screen.getByText('Load'));
+    expect(screen.getByText('Max Resolution')).toBeTruthy();
+    expect(screen.getByText('High Quality')).toBeTruthy();
+    expect(screen.getByText('Standard')).toBeTruthy();
+    expect(screen.getByText('Medium Quality')).toBeTruthy();
+    expect(screen.getByText('Default')).toBeTruthy();
+    expect(screen.getByText(/Download selected/)).toBeTruthy();
+  });
+
+  it('individual download button triggers downloadOne', async () => {
+    render(<YouTubeThumbnailsTool config={config('youtube-thumbnails')} />);
+    fireEvent.change(screen.getByPlaceholderText(/Paste YouTube URL/), {
+      target: { value: 'dQw4w9WgXcQ' },
+    });
+    fireEvent.click(screen.getByText('Load'));
+
+    global.fetch = jest.fn().mockResolvedValue({
+      blob: jest.fn().mockResolvedValue(new Blob(['fake'])),
+    });
+    const downloadBtns = screen.getAllByText('⬇');
+    fireEvent.click(downloadBtns[0]);
+    await waitFor(() => expect(global.fetch).toHaveBeenCalled());
+  });
+
+  it('disables download when selected.size === 0', () => {
+    render(<YouTubeThumbnailsTool config={config('youtube-thumbnails')} />);
+    fireEvent.change(screen.getByPlaceholderText(/Paste YouTube URL/), {
+      target: { value: 'dQw4w9WgXcQ' },
+    });
+    fireEvent.click(screen.getByText('Load'));
+    fireEvent.click(screen.getByText('None'));
+    const dlBtn = screen.getByText(/Download selected/);
+    expect(dlBtn).toBeDisabled();
+  });
+
+  it('clears error when input changes', () => {
+    render(<YouTubeThumbnailsTool config={config('youtube-thumbnails')} />);
+    fireEvent.change(screen.getByPlaceholderText(/Paste YouTube URL/), {
+      target: { value: 'bad' },
+    });
+    fireEvent.click(screen.getByText('Load'));
+    expect(
+      screen.getByText('Could not find a valid YouTube video ID.')
+    ).toBeTruthy();
+    fireEvent.change(screen.getByPlaceholderText(/Paste YouTube URL/), {
+      target: { value: 'dQw4w9WgXcQ' },
+    });
+    expect(
+      screen.queryByText('Could not find a valid YouTube video ID.')
+    ).toBeNull();
   });
 });

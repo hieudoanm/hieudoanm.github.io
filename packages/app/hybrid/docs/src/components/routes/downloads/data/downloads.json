@@ -220,6 +220,18 @@
         ]
       },
       {
+        "label": "Nikoli",
+        "description": "Nikoli Games",
+        "icon": "PiGridNine",
+        "href": "https://hieudoanm.github.io/downloads/nikoli",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-nikoli-latest"
+          }
+        ]
+      },
+      {
         "label": "Password",
         "description": "Password Manager",
         "icon": "PiPassword",

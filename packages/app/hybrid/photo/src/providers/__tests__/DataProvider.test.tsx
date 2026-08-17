@@ -224,4 +224,197 @@ describe('useData', () => {
     const { result } = renderHook(() => useData(), { wrapper });
     await waitFor(() => expect(result.current.filters).toHaveLength(1));
   });
+
+  it('updateImage is a no-op when image not found', async () => {
+    (db.images.getAll as jest.Mock).mockResolvedValue([image('a')]);
+    const { result } = renderHook(() => useData(), { wrapper });
+    await waitFor(() => expect(result.current.images).toHaveLength(1));
+
+    await act(async () => {
+      await result.current.updateImage('nonexistent', { name: 'nope.png' });
+    });
+    expect(result.current.images[0].name).toBe('a.png');
+  });
+
+  it('updateAlbum is a no-op when album not found', async () => {
+    const { result } = renderHook(() => useData(), { wrapper });
+    await waitFor(() => expect(result.current.isLoading).toBe(false));
+
+    await act(async () => {
+      await result.current.updateAlbum('nonexistent', { name: 'nope' });
+    });
+    expect(result.current.albums).toHaveLength(0);
+  });
+
+  it('addImageToAlbum is a no-op when album not found', async () => {
+    (db.albums.getAll as jest.Mock).mockResolvedValue([]);
+    const { result } = renderHook(() => useData(), { wrapper });
+    await waitFor(() => expect(result.current.isLoading).toBe(false));
+    jest.clearAllMocks();
+
+    await act(async () => {
+      await result.current.addImageToAlbum('img1', 'nonexistent');
+    });
+    expect(db.albums.put).not.toHaveBeenCalled();
+  });
+
+  it('addImageToAlbum is a no-op when image already in album', async () => {
+    (db.albums.getAll as jest.Mock).mockResolvedValue([
+      {
+        id: 'al1',
+        name: 'A',
+        coverId: null,
+        imageIds: ['img1'],
+        createdAt: 1,
+        updatedAt: 1,
+      },
+    ]);
+    const { result } = renderHook(() => useData(), { wrapper });
+    await waitFor(() => expect(result.current.albums).toHaveLength(1));
+    jest.clearAllMocks();
+
+    await act(async () => {
+      await result.current.addImageToAlbum('img1', 'al1');
+    });
+    expect(db.albums.put).not.toHaveBeenCalled();
+  });
+
+  it('removeImageFromAlbum is a no-op when album not found', async () => {
+    (db.albums.getAll as jest.Mock).mockResolvedValue([]);
+    const { result } = renderHook(() => useData(), { wrapper });
+    await waitFor(() => expect(result.current.isLoading).toBe(false));
+    jest.clearAllMocks();
+
+    await act(async () => {
+      await result.current.removeImageFromAlbum('img1', 'nonexistent');
+    });
+    expect(db.albums.put).not.toHaveBeenCalled();
+  });
+
+  it('toggleFavorite is a no-op when image not found', async () => {
+    (db.images.getAll as jest.Mock).mockResolvedValue([image('a')]);
+    const { result } = renderHook(() => useData(), { wrapper });
+    await waitFor(() => expect(result.current.images).toHaveLength(1));
+
+    await act(async () => {
+      await result.current.toggleFavorite('nonexistent');
+    });
+    expect(result.current.images[0].favorite).toBe(false);
+  });
+
+  it('updateLayer is a no-op when layer not found', async () => {
+    const { result } = renderHook(() => useData(), { wrapper });
+    await waitFor(() => expect(result.current.isLoading).toBe(false));
+
+    await act(async () => {
+      await result.current.updateLayer('nonexistent', { opacity: 50 });
+    });
+    expect(db.layers.put).not.toHaveBeenCalled();
+  });
+
+  it('setCurrentImage accepts null', async () => {
+    const { result } = renderHook(() => useData(), { wrapper });
+    await waitFor(() => expect(result.current.isLoading).toBe(false));
+
+    act(() => result.current.setCurrentImage(image('a')));
+    expect(result.current.currentImage?.id).toBe('a');
+
+    act(() => result.current.setCurrentImage(null));
+    expect(result.current.currentImage).toBeNull();
+  });
+
+  it('setCurrentAdjustments replaces adjustments', async () => {
+    const { result } = renderHook(() => useData(), { wrapper });
+    await waitFor(() => expect(result.current.isLoading).toBe(false));
+
+    const customAdj = adjustments({ brightness: 42, contrast: 10 });
+    act(() => result.current.setCurrentAdjustments(customAdj));
+    expect(result.current.currentAdjustments.brightness).toBe(42);
+    expect(result.current.currentAdjustments.contrast).toBe(10);
+
+    const resetAdj = adjustments({ brightness: 0, contrast: 0 });
+    act(() => result.current.setCurrentAdjustments(resetAdj));
+    expect(result.current.currentAdjustments.brightness).toBe(0);
+    expect(result.current.currentAdjustments.contrast).toBe(0);
+  });
+
+  it('refreshData reloads data from db', async () => {
+    (db.images.getAll as jest.Mock).mockResolvedValue([image('a')]);
+    const { result } = renderHook(() => useData(), { wrapper });
+    await waitFor(() => expect(result.current.images).toHaveLength(1));
+
+    (db.images.getAll as jest.Mock).mockResolvedValue([image('a'), image('b')]);
+    await act(async () => {
+      await result.current.refreshData();
+    });
+    expect(result.current.images).toHaveLength(2);
+    expect(result.current.isLoading).toBe(false);
+  });
+
+  it('sorts images by updatedAt descending', async () => {
+    (db.images.getAll as jest.Mock).mockResolvedValue([
+      { ...image('old'), updatedAt: 100 },
+      { ...image('new'), updatedAt: 500 },
+    ]);
+    const { result } = renderHook(() => useData(), { wrapper });
+    await waitFor(() => expect(result.current.images).toHaveLength(2));
+    expect(result.current.images[0].id).toBe('new');
+    expect(result.current.images[1].id).toBe('old');
+  });
+
+  it('sorts history by timestamp descending', async () => {
+    (db.history.getAll as jest.Mock).mockResolvedValue([
+      {
+        id: 'h1',
+        imageId: 'a',
+        label: 'old',
+        adjustments: adjustments(),
+        filterId: null,
+        timestamp: 100,
+      },
+      {
+        id: 'h2',
+        imageId: 'a',
+        label: 'new',
+        adjustments: adjustments(),
+        filterId: null,
+        timestamp: 500,
+      },
+    ]);
+    const { result } = renderHook(() => useData(), { wrapper });
+    await waitFor(() => expect(result.current.history).toHaveLength(2));
+    expect(result.current.history[0].id).toBe('h2');
+    expect(result.current.history[1].id).toBe('h1');
+  });
+
+  it('deleteAlbum removes album', async () => {
+    (db.albums.getAll as jest.Mock).mockResolvedValue([
+      {
+        id: 'al1',
+        name: 'A',
+        coverId: null,
+        imageIds: [],
+        createdAt: 1,
+        updatedAt: 1,
+      },
+    ]);
+    const { result } = renderHook(() => useData(), { wrapper });
+    await waitFor(() => expect(result.current.albums).toHaveLength(1));
+
+    await act(async () => {
+      await result.current.deleteAlbum('al1');
+    });
+    expect(result.current.albums).toHaveLength(0);
+  });
+
+  it('updateSettings merges partial settings', async () => {
+    const { result } = renderHook(() => useData(), { wrapper });
+    await waitFor(() => expect(result.current.isLoading).toBe(false));
+
+    await act(async () => {
+      await result.current.updateSettings({ defaultQuality: 100 });
+    });
+    expect(result.current.settings.defaultQuality).toBe(100);
+    expect(result.current.settings.theme).toBe('nothing');
+  });
 });

@@ -25,6 +25,7 @@ import {
   PiPaperPlaneTilt,
   PiSoccerBall,
   PiPresentation,
+  PiGridNine,
 } from 'react-icons/pi';
 import downloadsJson from './downloads.json';
 
@@ -62,6 +63,7 @@ const ICON_BY_NAME: Record<string, IconType> = {
   PiPaperPlaneTilt,
   PiSoccerBall,
   PiPresentation,
+  PiGridNine,
 };
 
 const resolveIcon = (name: string): Tool['icon'] => {

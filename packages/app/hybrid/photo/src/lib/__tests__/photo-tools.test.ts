@@ -94,4 +94,113 @@ describe('processCanvas', () => {
     expect(anchor.click).toHaveBeenCalled();
     expect(URL.revokeObjectURL as jest.Mock).toHaveBeenCalled();
   });
+
+  it('uses default mimeType when not provided', async () => {
+    defineUrlMethods();
+    let image:
+      | { onload: (() => void) | null; width: number; height: number }
+      | undefined;
+    (global.Image as unknown as jest.Mock) = jest.fn(() => {
+      image = { onload: null, width: 2, height: 2 };
+      return image;
+    });
+
+    const ctx = { drawImage: jest.fn() } as unknown as CanvasRenderingContext2D;
+    const toBlob = jest.fn((cb: (b: Blob | null) => void) => {
+      cb(new Blob(['png']));
+    });
+    const anchor = { click: jest.fn(), href: '', download: '' };
+    const canvas = {
+      width: 0,
+      height: 0,
+      getContext: () => ctx,
+      toBlob,
+    };
+    document.createElement = jest
+      .fn()
+      .mockReturnValueOnce(canvas)
+      .mockReturnValueOnce(anchor) as unknown as typeof document.createElement;
+
+    const cb = jest.fn();
+    const promise = processCanvas(
+      { name: 'a.png', type: 'image/png' } as File,
+      cb
+    );
+    image!.onload!();
+    await promise;
+    expect(toBlob).toHaveBeenCalledWith(expect.any(Function), 'image/png');
+  });
+
+  it('uses file.name when filename is not provided', async () => {
+    defineUrlMethods();
+    let image:
+      | { onload: (() => void) | null; width: number; height: number }
+      | undefined;
+    (global.Image as unknown as jest.Mock) = jest.fn(() => {
+      image = { onload: null, width: 2, height: 2 };
+      return image;
+    });
+
+    const ctx = { drawImage: jest.fn() } as unknown as CanvasRenderingContext2D;
+    const toBlob = jest.fn((cb: (b: Blob | null) => void) => {
+      cb(new Blob(['png']));
+    });
+    const anchor = { click: jest.fn(), href: '', download: '' };
+    const canvas = {
+      width: 0,
+      height: 0,
+      getContext: () => ctx,
+      toBlob,
+    };
+    document.createElement = jest
+      .fn()
+      .mockReturnValueOnce(canvas)
+      .mockReturnValueOnce(anchor) as unknown as typeof document.createElement;
+
+    const cb = jest.fn();
+    const promise = processCanvas(
+      { name: 'test.jpg', type: 'image/jpeg' } as File,
+      cb,
+      'image/jpeg'
+    );
+    image!.onload!();
+    await promise;
+    expect(anchor.download).toBe('test.jpg');
+  });
+
+  it('does not download when toBlob returns null', async () => {
+    defineUrlMethods();
+    let image:
+      | { onload: (() => void) | null; width: number; height: number }
+      | undefined;
+    (global.Image as unknown as jest.Mock) = jest.fn(() => {
+      image = { onload: null, width: 2, height: 2 };
+      return image;
+    });
+
+    const ctx = { drawImage: jest.fn() } as unknown as CanvasRenderingContext2D;
+    const toBlob = jest.fn((cb: (b: Blob | null) => void) => {
+      cb(null);
+    });
+    const canvas = {
+      width: 0,
+      height: 0,
+      getContext: () => ctx,
+      toBlob,
+    };
+    document.createElement = jest
+      .fn()
+      .mockReturnValueOnce(canvas) as unknown as typeof document.createElement;
+
+    const cb = jest.fn();
+    const promise = processCanvas(
+      { name: 'a.png', type: 'image/png' } as File,
+      cb,
+      'image/png',
+      'out.png'
+    );
+    image!.onload!();
+    await promise;
+    expect(cb).toHaveBeenCalled();
+  });
 });
