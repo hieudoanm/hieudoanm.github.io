@@ -1,2 +1,2 @@
 :HL["/downloads/brainbow/_next/static/chunks/312f82s28lgsh.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4180,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"RolrC7xRxG6ACC3Qeg2PO"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4180,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"c-dB6sPDPUBbBMgX5nt1t"}

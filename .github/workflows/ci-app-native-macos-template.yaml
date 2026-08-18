@@ -37,11 +37,13 @@ jobs:
         run: make app
       - name: Create DMG
         run: make dmg
+      - name: Zip App
+        run: cd build && zip -r -y ${{ inputs.artifactPrefix }}.app.zip *.app
       - name: Upload App
         uses: actions/upload-artifact@v7.0.1
         with:
           name: ${{ inputs.artifactPrefix }}-app
-          path: ${{ inputs.package }}/build/*.app
+          path: ${{ inputs.package }}/build/*.app.zip
       - name: Upload DMG
         uses: actions/upload-artifact@v7.0.1
         with:
@@ -77,6 +79,6 @@ jobs:
           gh release create ${{ inputs.releaseName }} \
             --title "${{ inputs.releaseTitle }}" \
             --notes "Auto-built from commit ${{ github.sha }}" \
-            artifacts/app/*.app artifacts/dmg/*.dmg
+            artifacts/app/*.zip artifacts/dmg/*.dmg
         env:
           GH_TOKEN: ${{ github.token }}

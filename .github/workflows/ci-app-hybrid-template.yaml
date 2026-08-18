@@ -98,6 +98,13 @@ jobs:
       - name: Build Tauri Desktop
         working-directory: ${{ inputs.package }}
         run: pnpm exec tauri build --ci --config '{"build":{"beforeBuildCommand":""}}'
+      - name: Zip App Bundle
+        if: runner.os == 'macOS'
+        working-directory: ${{ inputs.package }}/src-tauri/target/release/bundle
+        run: |
+          for app in *.app; do
+            [ -d "$app" ] && zip -r -y "${app}.app.zip" "$app"
+          done
       - name: Set Date
         id: date
         run: echo "value=$(date +'%Y_%m_%d')" >> "$GITHUB_OUTPUT"
@@ -204,7 +211,7 @@ jobs:
               -name "*.AppImage" -o \
               -name "*.deb" -o \
               -name "*.dmg" -o \
-              -name "*.app" -o \
+              -name "*.app.zip" -o \
               -name "*.tar.xz" -o \
               -name "*.apk" -o \
               -name "*.aab" \
