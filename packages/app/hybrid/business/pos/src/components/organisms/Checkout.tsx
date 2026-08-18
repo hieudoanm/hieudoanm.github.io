@@ -1,3 +1,5 @@
+'use client';
+
 import type { FC } from 'react';
 import { useState } from 'react';
 import { CartItem, Transaction } from '@/types/pos';
@@ -25,11 +27,11 @@ export const Checkout: FC<{
       id: crypto.randomUUID(),
       items,
       subtotal,
+      tax: 0,
       total,
-      paymentMethod: 'cash',
-      amountTendered: tendered,
-      change,
-      timestamp: new Date().toISOString(),
+      payments: [{ method: 'cash', amount: tendered }],
+      status: 'completed',
+      createdAt: new Date().toISOString(),
     });
   };
 

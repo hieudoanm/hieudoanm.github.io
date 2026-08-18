@@ -25,6 +25,5 @@
 | 21  | chess       | Chess       | chess.com / lichess.org                       | No       | DONE   | Sports            | Games              |
 | 22  | football    | Football    | Football Formation / Analysis                 | No       | DONE   | Sports            | Games              |
 | 23  | tourney     | Touraments  | Football Cup / Swiss Manager                  | No       | DONE   | Sports            | Games              |
-| 24  | clipper     | Clipper     | Clipboard Manager                             | No       | DONE   | Utilities         | Productivity       |
-| 25  | docs        | Docs        | TinyWow                                       | No       | DONE   | Utilities         | Productivity       |
-| 26  | password    | Password    | BitWarden / 1Password                         | Required | DONE   | Utilities         | Productivity       |
+| 24  | docs        | Docs        | TinyWow                                       | No       | DONE   | Utilities         | Productivity       |
+| 25  | password    | Password    | BitWarden / 1Password                         | Required | DONE   | Utilities         | Productivity       |

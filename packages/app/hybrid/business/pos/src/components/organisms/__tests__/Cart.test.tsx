@@ -4,12 +4,28 @@ import { CartItem } from '@/types/pos';
 
 const ITEMS: CartItem[] = [
   {
-    item: { id: '1', name: 'Coffee', price: 3.5, category: 'Drinks' },
+    item: {
+      id: '1',
+      name: 'Coffee',
+      price: 3.5,
+      category: 'Drinks',
+      stock: 100,
+      lowStockThreshold: 10,
+    },
     quantity: 2,
+    discount: 0,
   },
   {
-    item: { id: '2', name: 'Sandwich', price: 6.0, category: 'Food' },
+    item: {
+      id: '2',
+      name: 'Sandwich',
+      price: 6.0,
+      category: 'Food',
+      stock: 30,
+      lowStockThreshold: 5,
+    },
     quantity: 1,
+    discount: 0,
   },
 ];
 

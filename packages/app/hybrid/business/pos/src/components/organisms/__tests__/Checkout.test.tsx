@@ -4,8 +4,16 @@ import { CartItem } from '@/types/pos';
 
 const ITEMS: CartItem[] = [
   {
-    item: { id: '1', name: 'Coffee', price: 3.5, category: 'Drinks' },
+    item: {
+      id: '1',
+      name: 'Coffee',
+      price: 3.5,
+      category: 'Drinks',
+      stock: 100,
+      lowStockThreshold: 10,
+    },
     quantity: 2,
+    discount: 0,
   },
 ];
 
@@ -71,9 +79,7 @@ describe('Checkout', () => {
       expect.objectContaining({
         items: ITEMS,
         total: 7,
-        amountTendered: 10,
-        change: 3,
-        paymentMethod: 'cash',
+        payments: [{ method: 'cash', amount: 10 }],
       })
     );
   });
