@@ -1,0 +1,27 @@
+id,name,number,role,bench
+neuer,Manuel Neuer,1,GK,false
+pavard,Benjamin Pavard,5,DEF,false
+boateng,Jérôme Boateng,17,DEF,false
+alaba,David Alaba,27,DEF,false
+davies,Alphonso Davies,19,DEF,false
+kimmich,Joshua Kimmich,32,MID,false
+thiago,Thiago,6,MID,false
+goretzka,Leon Goretzka,18,MID,false
+gnabry,Serge Gnabry,7,FWD,false
+lewandowski,Robert Lewandowski,9,FWD,false
+coman,Kingsley Coman,29,FWD,false
+ulreich,Sven Ulreich,26,GK,true
+hoffmann,Ron-Thorben Hoffmann,36,GK,true
+sule,Niklas Süle,4,DEF,true
+hernandez,Lucas Hernández,21,DEF,true
+martinez,Javi Martínez,8,DEF,true
+pavard2,Michaël Cuisance,11,MID,true
+tolisso,Corentin Tolisso,24,MID,true
+perisic,Ivan Perišić,14,MID,true
+coutinho,Philippe Coutinho,10,MID,true
+nubel,Alexander Nübel,35,GK,true
+sarr,Bouna Sarr,22,DEF,true
+odriozola,Álvaro Odriozola,2,DEF,true
+zirkzee,Joshua Zirkzee,33,FWD,true
+sanches,Renato Sanches,37,MID,true
+wriedt,Kwasi Okyere Wriedt,34,FWD,true

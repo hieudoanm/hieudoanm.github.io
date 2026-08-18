@@ -1,29 +1,29 @@
 # Hybrid
 
-| No  | Category          | ID          | App         | Description                                   | Back-end | Status |
-| --- | ----------------- | ----------- | ----------- | --------------------------------------------- | -------- | ------ |
-| 01  | Business          | pos         | POS         | Point of Sale                                 | Required | DONE   |
-| 02  | Developer Tools   | api         | API         | Postman / Insomnia / Bruno                    | Optional | DONE   |
-| 03  | Developer Tools   | boilerplate | Boilerplate | Nextjs + Tauri (Foundation)                   | Optional | DONE   |
-| 04  | Developer Tools   | code        | Code        | VSCode / Zed                                  | No       | DONE   |
-| 05  | Developer Tools   | database    | Database    | Redis GUI / Mongo Compass / pgAdmin / DBeaver | No       | DONE   |
-| 06  | Developer Tools   | diagram     | Diagram     | Diagram Editor                                | No       | DONE   |
-| 07  | Entertainment     | nikoli      | Nikoli      | Nikoli                                        | No       | DONE   |
-| 08  | Finance           | wallet      | Wallet      | Momo / Techcombank                            | Required | DONE   |
-| 09  | Graphics & Design | photo       | Photo       | Adobe Photoshop                               | No       | DONE   |
-| 10  | Graphics & Design | svg         | SVG         | Adobe Illustrator / CorelDRAW                 | No       | DONE   |
-| 11  | Graphics & Design | video       | Video       | CapCut                                        | No       | DONE   |
-| 12  | Medical           | brainbow    | Brainbow    | All-in-one Brainbow Software                  | No       | DONE   |
-| 13  | Productivity      | csv         | CSV         | Excel / Google Sheets                         | No       | DONE   |
-| 14  | Productivity      | keynotes    | Keynotes    | PowerPoint / Google Slides / Apple Keynote    | No       | DONE   |
-| 15  | Productivity      | markdown    | Markdown    | Obsidian                                      | No       | DONE   |
-| 16  | Productivity      | pdf         | PDF         | Adobe Acrobat PDF                             | No       | DONE   |
-| 17  | Productivity      | projects    | Projects    | Atlassian Trello / Kanban                     | Required | DONE   |
-| 18  | Productivity      | resume      | Resume      | Resume Builer                                 | No       | DONE   |
-| 19  | Social Networking | chat        | Chat        | Chat like Codex / Claude                      | Required | DONE   |
-| 20  | Social Networking | messaging   | Messaging   | Telegram / WhatsApp / Messenger / Signal      | Required | DONE   |
-| 21  | Sports            | chess       | Chess       | chess.com / lichess.org                       | No       | DONE   |
-| 22  | Sports            | football    | Football    | Football Formation / Analysis                 | No       | DONE   |
-| 23  | Sports            | tourney     | Touraments  | Football Cup / Swiss Manager                  | No       | DONE   |
-| 24  | Utilities         | docs        | Docs        | TinyWow                                       | No       | DONE   |
-| 25  | Utilities         | password    | Password    | BitWarden / 1Password                         | Required | DONE   |
+| No  | ID          | App         | Description                                   | Back-end | Status | Primary Category  | Secondary Category |
+| --- | ----------- | ----------- | --------------------------------------------- | -------- | ------ | ----------------- | ------------------ |
+| 01  | pos         | POS         | Point of Sale                                 | Required | DONE   | Business          | Finance            |
+| 02  | api         | API         | Postman / Insomnia / Bruno                    | Optional | DONE   | Developer Tools   | Productivity       |
+| 03  | boilerplate | Boilerplate | Nextjs + Tauri (Foundation)                   | Optional | DONE   | Developer Tools   | Productivity       |
+| 04  | code        | Code        | VSCode / Zed                                  | No       | DONE   | Developer Tools   | Productivity       |
+| 05  | database    | Database    | Redis GUI / Mongo Compass / pgAdmin / DBeaver | No       | DONE   | Developer Tools   | Business           |
+| 06  | diagram     | Diagram     | Diagram Editor                                | No       | DONE   | Developer Tools   | Graphics & Design  |
+| 07  | nikoli      | Nikoli      | Nikoli                                        | No       | DONE   | Entertainment     | Games              |
+| 08  | wallet      | Wallet      | Momo / Techcombank                            | Required | DONE   | Finance           | Business           |
+| 09  | photo       | Photo       | Adobe Photoshop                               | No       | DONE   | Graphics & Design | Photo & Video      |
+| 10  | svg         | SVG         | Adobe Illustrator / CorelDRAW                 | No       | DONE   | Graphics & Design | Photo & Video      |
+| 11  | video       | Video       | CapCut                                        | No       | DONE   | Graphics & Design | Photo & Video      |
+| 12  | brainbow    | Brainbow    | All-in-one Brainbow Software                  | No       | DONE   | Medical           | Education          |
+| 13  | csv         | CSV         | Excel / Google Sheets                         | No       | DONE   | Productivity      | Business           |
+| 14  | keynotes    | Keynotes    | PowerPoint / Google Slides / Apple Keynote    | No       | DONE   | Productivity      | Education          |
+| 15  | markdown    | Markdown    | Obsidian                                      | No       | DONE   | Productivity      | Education          |
+| 16  | pdf         | PDF         | Adobe Acrobat PDF                             | No       | DONE   | Productivity      | Business           |
+| 17  | projects    | Projects    | Atlassian Trello / Kanban                     | Required | DONE   | Productivity      | Business           |
+| 18  | resume      | Resume      | Resume Builer                                 | No       | DONE   | Productivity      | Business           |
+| 19  | chat        | Chat        | Chat like Codex / Claude                      | Required | DONE   | Social Networking | Business           |
+| 20  | messaging   | Messaging   | Telegram / WhatsApp / Messenger / Signal      | Required | DONE   | Social Networking | Business           |
+| 21  | chess       | Chess       | chess.com / lichess.org                       | No       | DONE   | Sports            | Games              |
+| 22  | football    | Football    | Football Formation / Analysis                 | No       | DONE   | Sports            | Games              |
+| 23  | tourney     | Touraments  | Football Cup / Swiss Manager                  | No       | DONE   | Sports            | Games              |
+| 24  | docs        | Docs        | TinyWow                                       | No       | DONE   | Utilities         | Productivity       |
+| 25  | password    | Password    | BitWarden / 1Password                         | Required | DONE   | Utilities         | Productivity       |

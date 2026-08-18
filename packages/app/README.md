@@ -44,14 +44,14 @@ Reference: [App Store - Categories](https://developer.apple.com/app-store/catego
 | No  | Category            | Name                       | Version | Alternative          |
 | --- | ------------------- | -------------------------- | ------- | -------------------- |
 | 01  | Language            | [TypeScript]               | 6.+     |                      |
-| 02  | Runtime             | [Node.js][node.js]         | 26.+    |                      |
-| 03  | Package Manager     | [pnpm][pnpm]               | 11.+    |                      |
-| 04  | Linter              | [ESLint][eslint]           | 9.+     |                      |
-| 05  | Formatter           | [Prettier][prettier]       | 3.+     |                      |
+| 02  | Runtime             | [Node.js][node.js]         | 26.+    | [Bun]                |
+| 03  | Package Manager     | [pnpm][pnpm]               | 11.+    | [npm]                |
+| 04  | Linter              | [ESLint][eslint]           | 9.+     | [Biome]              |
+| 05  | Formatter           | [Prettier][prettier]       | 3.+     | [Biome]              |
 | 06  | Testing Framework   | [Jest][jest]               | 30.+    |                      |
 | 07  | Testing Framework   | [Playwright][playwright]   | 1.+     |                      |
-| 08  | Framework           | [React][react]             | 19.+    |                      |
-| 09  | Framework           | [Next.js][next.js]         |         |                      |
+| 08  | Framework           | [React][react]             | 19.+    | [Solid]              |
+| 09  | Framework           | [Next.js][next.js]         |         | [SolidStart]         |
 | 10  | Styling             | [TailwindCSS][tailwindcss] | 4.+     |                      |
 | 11  | Styling             | [DaisyUI][daisyui]         | 5.+     |                      |
 | 12  | Desktop Application | [Tauri][tauri]             | 2.+     | [Electron][electron] |
@@ -73,10 +73,14 @@ Reference: [App Store - Categories](https://developer.apple.com/app-store/catego
 
 | No  | Group   | Category | Name      |
 | --- | ------- | -------- | --------- |
-| 01  | Desktop | [Linux]  | [Ubuntu]  |
-| 02  | Desktop | [Linux]  | [Arch]    |
-| 03  | Desktop |          | [macOS]   |
-| 04  | Mobile  |          | [Android] |
+| 01  | Desktop | [Linux]  | [Arch]    |
+| 02  | Desktop | [Linux]  | [Debian]  |
+| 03  | Desktop | [Linux]  | [Ubuntu]  |
+| 04  | Desktop |          | [macOS]   |
+| 05  | Desktop |          | [Windows] |
+| 06  | Tablet  |          | [iPadOS]  |
+| 07  | Mobile  |          | [iOS]     |
+| 08  | Mobile  |          | [Android] |
 
 [Linux]: https://linux.org/
 [Ubuntu]: https://ubuntu.com/

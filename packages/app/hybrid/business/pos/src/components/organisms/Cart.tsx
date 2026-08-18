@@ -66,7 +66,9 @@ export const Cart: FC<{
               </span>
             </div>
           </div>
-          <button onClick={onCheckout} className="btn btn-primary btn-sm w-full">
+          <button
+            onClick={onCheckout}
+            className="btn btn-primary btn-sm w-full">
             Checkout
           </button>
         </>

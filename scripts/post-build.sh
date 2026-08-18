@@ -102,6 +102,7 @@ build_all_apps() {
             [[ ! -d "$app_dir" ]] && continue
             local app_name="${app_dir%/}"
             app_name="${app_name##*/}"
+            [[ "$app_name" == "docs" ]] && continue
             apps+=("$category/$app_name")
         done
     done
@@ -120,6 +121,7 @@ verify_downloads() {
             [[ ! -d "$app_dir" ]] && continue
             local app_name="${app_dir%/}"
             app_name="${app_name##*/}"
+            [[ "$app_name" == "docs" ]] && continue
             if [[ ! -f "$app_dir/package.json" ]] || [[ ! -f "$app_dir/next.config.ts" ]]; then
                 continue
             fi
@@ -181,7 +183,12 @@ fi
 if [[ "$do_all" == true ]]; then
     build_all_apps
 elif [[ ${#app_names[@]} -gt 0 ]]; then
-    build_ordered "${app_names[@]}"
+    filtered=()
+    for name in "${app_names[@]}"; do
+        [[ "${name##*/}" == "docs" ]] && continue
+        filtered+=("$name")
+    done
+    build_ordered "${filtered[@]}"
 fi
 
 echo "Done."

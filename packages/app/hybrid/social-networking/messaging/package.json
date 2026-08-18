@@ -6,7 +6,7 @@
   "keywords": [
     "messaging"
   ],
-  "homepage": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-messaging-latest",
+  "homepage": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-social-networking-messaging-latest",
   "bugs": {
     "url": "https://github.com/hieudoanm/hieudoanm.github.io/issues"
   },
@@ -16,7 +16,7 @@
   },
   "license": "GPL-3.0",
   "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
-  "packageManager": "pnpm@11.21.0",
+  "packageManager": "pnpm@11.22.0",
   "engines": {
     "node": "26.7.0"
   },
@@ -54,7 +54,7 @@
     "@types/node": "26.2.0",
     "@types/react": "19.2.18",
     "@types/react-dom": "19.2.4",
-    "daisyui": "5.7.18",
+    "daisyui": "5.7.19",
     "eslint": "10.8.1",
     "eslint-config-next": "16.3.1",
     "fake-indexeddb": "6.2.5",

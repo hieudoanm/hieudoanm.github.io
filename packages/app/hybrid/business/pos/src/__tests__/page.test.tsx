@@ -3,7 +3,7 @@ import { Cart } from '@/components/organisms/Cart';
 import { Checkout } from '@/components/organisms/Checkout';
 import { Receipt } from '@/components/organisms/Receipt';
 import { ItemCatalog } from '@/components/organisms/ItemCatalog';
-import { SAMPLE_ITEMS } from '@/data/items';
+import { DEFAULT_ITEMS } from '@/data/items';
 
 let onComplete: jest.Mock;
 let onNewSale: jest.Mock;
@@ -17,15 +17,15 @@ describe('POS Sale Flow (organism integration)', () => {
   it('full sale flow: add to cart, checkout, receipt, new sale', () => {
     const onAdd = jest.fn();
     const { unmount: unmount1 } = render(
-      <ItemCatalog items={SAMPLE_ITEMS} onAdd={onAdd} />
+      <ItemCatalog items={DEFAULT_ITEMS} onAdd={onAdd} />
     );
     fireEvent.click(screen.getByText('Coffee'));
-    expect(onAdd).toHaveBeenCalledWith(SAMPLE_ITEMS[0]);
+    expect(onAdd).toHaveBeenCalledWith(DEFAULT_ITEMS[0]);
     unmount1();
 
     const cartItems = [
-      { item: SAMPLE_ITEMS[0], quantity: 2 },
-      { item: SAMPLE_ITEMS[1], quantity: 1 },
+      { item: DEFAULT_ITEMS[0], quantity: 2, discount: 0 },
+      { item: DEFAULT_ITEMS[1], quantity: 1, discount: 0 },
     ];
     const onCheckout = jest.fn();
     const onRemove = jest.fn();
@@ -43,11 +43,7 @@ describe('POS Sale Flow (organism integration)', () => {
     unmount2();
 
     const { unmount: unmount3 } = render(
-      <Checkout
-        items={cartItems}
-        onComplete={onComplete}
-        onBack={jest.fn()}
-      />
+      <Checkout items={cartItems} onComplete={onComplete} onBack={jest.fn()} />
     );
     fireEvent.change(screen.getByPlaceholderText('0.00'), {
       target: { value: '20' },
@@ -56,7 +52,7 @@ describe('POS Sale Flow (organism integration)', () => {
     expect(onComplete).toHaveBeenCalledWith(
       expect.objectContaining({
         items: cartItems,
-        paymentMethod: 'cash',
+        payments: [{ method: 'cash', amount: 20 }],
       })
     );
     unmount3();
@@ -68,7 +64,7 @@ describe('POS Sale Flow (organism integration)', () => {
   });
 
   it('removes item from cart', () => {
-    const cartItems = [{ item: SAMPLE_ITEMS[0], quantity: 1 }];
+    const cartItems = [{ item: DEFAULT_ITEMS[0], quantity: 1, discount: 0 }];
     const onRemove = jest.fn();
     render(
       <Cart
@@ -82,7 +78,7 @@ describe('POS Sale Flow (organism integration)', () => {
       .getAllByRole('button')
       .find((btn) => btn.className.includes('text-error'));
     fireEvent.click(trashBtn!);
-    expect(onRemove).toHaveBeenCalledWith(SAMPLE_ITEMS[0].id);
+    expect(onRemove).toHaveBeenCalledWith(DEFAULT_ITEMS[0].id);
   });
 
   it('shows empty cart state', () => {

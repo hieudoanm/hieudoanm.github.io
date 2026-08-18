@@ -4,8 +4,16 @@ import { CartItem } from '@/types/pos';
 
 const ITEMS: CartItem[] = [
   {
-    item: { id: '1', name: 'Coffee', price: 3.5, category: 'Drinks' },
+    item: {
+      id: '1',
+      name: 'Coffee',
+      price: 3.5,
+      category: 'Drinks',
+      stock: 100,
+      lowStockThreshold: 10,
+    },
     quantity: 2,
+    discount: 0,
   },
 ];
 
@@ -71,9 +79,7 @@ describe('Checkout', () => {
       expect.objectContaining({
         items: ITEMS,
         total: 7,
-        amountTendered: 10,
-        change: 3,
-        paymentMethod: 'cash',
+        payments: [{ method: 'cash', amount: 10 }],
       })
     );
   });
@@ -92,9 +98,7 @@ describe('Checkout', () => {
 
   it('calls onBack when back button is clicked', () => {
     const onBack = jest.fn();
-    render(
-      <Checkout items={ITEMS} onComplete={jest.fn()} onBack={onBack} />
-    );
+    render(<Checkout items={ITEMS} onComplete={jest.fn()} onBack={onBack} />);
     const backBtn = screen.getAllByRole('button')[0];
     fireEvent.click(backBtn);
     expect(onBack).toHaveBeenCalled();

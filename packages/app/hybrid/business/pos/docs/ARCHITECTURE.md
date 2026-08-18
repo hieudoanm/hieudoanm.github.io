@@ -57,15 +57,15 @@ src/
 
 Flat routes with route groups — no dynamic `[id]` or `[slug]` segments.
 
-| Route       | Page                       | Client | Description                       |
-| ----------- | -------------------------- | ------ | --------------------------------- |
-| `/`         | `(app)/page.tsx`           | No     | Main POS interface                |
-| `/about`    | `(info)/about/page.tsx`    | No     | App info and tech stack           |
-| `/downloads`| `(info)/downloads/page.tsx`| No     | Platform download links           |
-| `/version`  | `(info)/version/page.tsx`  | Yes    | Build version display             |
-| `*`         | `not-found.tsx`            | No     | 404 page                          |
-| `*`         | `error.tsx`                | Yes    | Runtime error boundary            |
-| `*`         | `global-error.tsx`         | Yes    | Root-level error boundary         |
+| Route        | Page                        | Client | Description               |
+| ------------ | --------------------------- | ------ | ------------------------- |
+| `/`          | `(app)/page.tsx`            | No     | Main POS interface        |
+| `/about`     | `(info)/about/page.tsx`     | No     | App info and tech stack   |
+| `/downloads` | `(info)/downloads/page.tsx` | No     | Platform download links   |
+| `/version`   | `(info)/version/page.tsx`   | Yes    | Build version display     |
+| `*`          | `not-found.tsx`             | No     | 404 page                  |
+| `*`          | `error.tsx`                 | Yes    | Runtime error boundary    |
+| `*`          | `global-error.tsx`          | Yes    | Root-level error boundary |
 
 ## Rendering Strategy
 

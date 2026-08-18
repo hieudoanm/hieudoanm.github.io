@@ -1,0 +1,305 @@
+1:I[83039,["/downloads/database/_next/static/chunks/1pf2amf9r7xi6.js"],"LoadingBoundaryProvider"]
+2:"$Sreact.fragment"
+3:I[41483,["/downloads/database/_next/static/chunks/1pf2amf9r7xi6.js"],"SWProvider"]
+4:I[83039,["/downloads/database/_next/static/chunks/1pf2amf9r7xi6.js"],"default"]
+5:I[11443,["/downloads/database/_next/static/chunks/1pf2amf9r7xi6.js","/downloads/database/_next/static/chunks/0diaj63e-swhp.js"],"default"]
+6:I[40523,["/downloads/database/_next/static/chunks/1pf2amf9r7xi6.js","/downloads/database/_next/static/chunks/2ppd_asr3igts.js"],"default"]
+7:I[88811,["/downloads/database/_next/static/chunks/1pf2amf9r7xi6.js"],"default"]
+8:I[18086,["/downloads/database/_next/static/chunks/1pf2amf9r7xi6.js","/downloads/database/_next/static/chunks/1e8x-k6o8wp_i.js"],""]
+a:I[80475,["/downloads/database/_next/static/chunks/1pf2amf9r7xi6.js"],"OutletBoundary"]
+b:"$Sreact.suspense"
+e:I[80475,["/downloads/database/_next/static/chunks/1pf2amf9r7xi6.js"],"ViewportBoundary"]
+10:I[80475,["/downloads/database/_next/static/chunks/1pf2amf9r7xi6.js"],"MetadataBoundary"]
+12:I[98665,["/downloads/database/_next/static/chunks/1pf2amf9r7xi6.js","/downloads/database/_next/static/chunks/38xd8_8tuhln2.js"],"default"]
+:HL["/downloads/database/_next/static/chunks/20u-5yuc8yzrr.css","style"]
+d:X
+0:{"P":null,"c":["","posts","classicmodels",""],"q":"","i":false,"f":[[["",{"children":["posts",{"children":[["slug","classicmodels","d",[]],{"children":["__PAGE__",{},"$undefined","$undefined",4608]},"$undefined","$undefined",4608]},"$undefined","$undefined",4608]},"$undefined","$undefined",4628],[["$","$L1",null,{"loading":[["$","div","l",{"className":"flex h-screen items-center justify-center","children":["$","span",null,{"className":"loading loading-spinner loading-lg text-primary"}]}],[],null],"children":["$","$2","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/downloads/database/_next/static/chunks/20u-5yuc8yzrr.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/downloads/database/_next/static/chunks/1pf2amf9r7xi6.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","data-theme":"dim","children":[["$","head",null,{"children":["$","link",null,{"rel":"apple-touch-icon","href":"/icons/icon-192.png"}]}],["$","body",null,{"className":"bg-base-100 text-base-content h-screen overflow-y-auto font-mono","children":["$","$L3",null,{"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$5","errorStyles":[],"errorScripts":[["$","script","script-0",{"src":"/downloads/database/_next/static/chunks/0diaj63e-swhp.js","async":true}]],"template":["$","$L6",null,{"children":["$","$L7",null,{}]}],"templateStyles":[],"templateScripts":[["$","script","script-0",{"src":"/downloads/database/_next/static/chunks/2ppd_asr3igts.js","async":true}]],"notFound":[["$","div",null,{"className":"flex min-h-screen flex-col items-center justify-center px-6","children":[["$","p",null,{"className":"text-base-content/50 mb-6 text-xs tracking-[0.2em] uppercase","children":"Error"}],["$","h1",null,{"className":"mb-3","children":"404"}],["$","p",null,{"className":"text-base-content/50 mb-10 max-w-sm text-center text-sm","children":"The page you are looking for does not exist."}],["$","div",null,{"className":"flex flex-wrap justify-center gap-3","children":["$","$L8",null,{"href":"/","className":"btn btn-primary btn-sm","children":"Go home"}]}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}]]}]}],{"children":[["$","$2","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$2","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$2","c",{"children":["$L9",[["$","script","script-0",{"src":"/downloads/database/_next/static/chunks/1e8x-k6o8wp_i.js","async":true,"nonce":"$undefined"}]],["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]]}],{},null,false,null]},null,false,"$d"]},null,false,"$d"]},null,false,null],["$","$2","h",{"children":[null,["$","$Le",null,{"children":"$Lf"}],["$","div",null,{"hidden":true,"children":["$","$L10",null,{"children":["$","$b",null,{"name":"Next.Metadata","children":"$L11"}]}]}],null]}],false]],"m":"$undefined","G":["$12",[["$","link","0",{"rel":"stylesheet","href":"/downloads/database/_next/static/chunks/20u-5yuc8yzrr.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]]],"S":true,"h":null,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"9FoKoO8gaFZFRGB6079jy"}
+d:C
+13:T1f47,<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="1056" viewBox="0 0 1140 1056" font-family="ui-monospace, SFMono-Regular, monospace">
+  <rect width="100%" height="100%" fill="#0f172a"/>
+  <g data-table="CUSTOMERS">
+    <rect x="40" y="40" width="220" height="368" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 40 80 L 260 80" stroke="#334155"/>
+    <text x="52" y="66" font-size="13" font-weight="600" fill="#e2e8f0">CUSTOMERS</text>
+      <text x="52" y="96" font-size="11" fill="#9ca3af">&#128273; CustomerNumber</text>
+      <text x="52" y="120" font-size="11" fill="#9ca3af">CustomerName</text>
+      <text x="52" y="144" font-size="11" fill="#9ca3af">ContactLastName</text>
+      <text x="52" y="168" font-size="11" fill="#9ca3af">ContactFirstName</text>
+      <text x="52" y="192" font-size="11" fill="#9ca3af">Phone</text>
+      <text x="52" y="216" font-size="11" fill="#9ca3af">AddressLine1</text>
+      <text x="52" y="240" font-size="11" fill="#9ca3af">AddressLine2</text>
+      <text x="52" y="264" font-size="11" fill="#9ca3af">City</text>
+      <text x="52" y="288" font-size="11" fill="#9ca3af">State</text>
+      <text x="52" y="312" font-size="11" fill="#9ca3af">PostalCode</text>
+      <text x="52" y="336" font-size="11" fill="#9ca3af">Country</text>
+      <text x="52" y="360" font-size="11" fill="#9ca3af">SalesRepEmployeeNumber</text>
+      <text x="52" y="384" font-size="11" fill="#9ca3af">CreditLimit</text>
+  </g>
+  <g data-table="EMPLOYEES">
+    <rect x="460" y="40" width="220" height="248" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 460 80 L 680 80" stroke="#334155"/>
+    <text x="472" y="66" font-size="13" font-weight="600" fill="#e2e8f0">EMPLOYEES</text>
+      <text x="472" y="96" font-size="11" fill="#9ca3af">&#128273; EmployeeNumber</text>
+      <text x="472" y="120" font-size="11" fill="#9ca3af">LastName</text>
+      <text x="472" y="144" font-size="11" fill="#9ca3af">FirstName</text>
+      <text x="472" y="168" font-size="11" fill="#9ca3af">Extension</text>
+      <text x="472" y="192" font-size="11" fill="#9ca3af">Email</text>
+      <text x="472" y="216" font-size="11" fill="#9ca3af">OfficeCode</text>
+      <text x="472" y="240" font-size="11" fill="#9ca3af">ReportsTo</text>
+      <text x="472" y="264" font-size="11" fill="#9ca3af">JobTitle</text>
+  </g>
+  <g data-table="OFFICES">
+    <rect x="880" y="40" width="220" height="272" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 880 80 L 1100 80" stroke="#334155"/>
+    <text x="892" y="66" font-size="13" font-weight="600" fill="#e2e8f0">OFFICES</text>
+      <text x="892" y="96" font-size="11" fill="#9ca3af">&#128273; OfficeCode</text>
+      <text x="892" y="120" font-size="11" fill="#9ca3af">City</text>
+      <text x="892" y="144" font-size="11" fill="#9ca3af">Phone</text>
+      <text x="892" y="168" font-size="11" fill="#9ca3af">AddressLine1</text>
+      <text x="892" y="192" font-size="11" fill="#9ca3af">AddressLine2</text>
+      <text x="892" y="216" font-size="11" fill="#9ca3af">State</text>
+      <text x="892" y="240" font-size="11" fill="#9ca3af">Country</text>
+      <text x="892" y="264" font-size="11" fill="#9ca3af">PostalCode</text>
+      <text x="892" y="288" font-size="11" fill="#9ca3af">Territory</text>
+  </g>
+  <g data-table="ORDERDETAILS">
+    <rect x="40" y="296" width="220" height="176" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 40 336 L 260 336" stroke="#334155"/>
+    <text x="52" y="322" font-size="13" font-weight="600" fill="#e2e8f0">ORDERDETAILS</text>
+      <text x="52" y="352" font-size="11" fill="#9ca3af">&#128273; OrderNumber</text>
+      <text x="52" y="376" font-size="11" fill="#9ca3af">&#128273; ProductCode</text>
+      <text x="52" y="400" font-size="11" fill="#9ca3af">QuantityOrdered</text>
+      <text x="52" y="424" font-size="11" fill="#9ca3af">PriceEach</text>
+      <text x="52" y="448" font-size="11" fill="#9ca3af">OrderLineNumber</text>
+  </g>
+  <g data-table="ORDERS">
+    <rect x="460" y="344" width="220" height="224" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 460 384 L 680 384" stroke="#334155"/>
+    <text x="472" y="370" font-size="13" font-weight="600" fill="#e2e8f0">ORDERS</text>
+      <text x="472" y="400" font-size="11" fill="#9ca3af">&#128273; OrderNumber</text>
+      <text x="472" y="424" font-size="11" fill="#9ca3af">OrderDate</text>
+      <text x="472" y="448" font-size="11" fill="#9ca3af">RequiredDate</text>
+      <text x="472" y="472" font-size="11" fill="#9ca3af">ShippedDate</text>
+      <text x="472" y="496" font-size="11" fill="#9ca3af">Status</text>
+      <text x="472" y="520" font-size="11" fill="#9ca3af">Comments</text>
+      <text x="472" y="544" font-size="11" fill="#9ca3af">CustomerNumber</text>
+  </g>
+  <g data-table="PAYMENTS">
+    <rect x="880" y="272" width="220" height="152" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 880 312 L 1100 312" stroke="#334155"/>
+    <text x="892" y="298" font-size="13" font-weight="600" fill="#e2e8f0">PAYMENTS</text>
+      <text x="892" y="328" font-size="11" fill="#9ca3af">&#128273; CustomerNumber</text>
+      <text x="892" y="352" font-size="11" fill="#9ca3af">&#128273; CheckNumber</text>
+      <text x="892" y="376" font-size="11" fill="#9ca3af">PaymentDate</text>
+      <text x="892" y="400" font-size="11" fill="#9ca3af">Amount</text>
+  </g>
+  <g data-table="PRODUCTLINES">
+    <rect x="40" y="504" width="220" height="152" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 40 544 L 260 544" stroke="#334155"/>
+    <text x="52" y="530" font-size="13" font-weight="600" fill="#e2e8f0">PRODUCTLINES</text>
+      <text x="52" y="560" font-size="11" fill="#9ca3af">&#128273; ProductLine</text>
+      <text x="52" y="584" font-size="11" fill="#9ca3af">TextDescription</text>
+      <text x="52" y="608" font-size="11" fill="#9ca3af">Description</text>
+      <text x="52" y="632" font-size="11" fill="#9ca3af">Image</text>
+  </g>
+  <g data-table="PRODUCTS">
+    <rect x="460" y="744" width="220" height="272" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 460 784 L 680 784" stroke="#334155"/>
+    <text x="472" y="770" font-size="13" font-weight="600" fill="#e2e8f0">PRODUCTS</text>
+      <text x="472" y="800" font-size="11" fill="#9ca3af">&#128273; ProductCode</text>
+      <text x="472" y="824" font-size="11" fill="#9ca3af">ProductName</text>
+      <text x="472" y="848" font-size="11" fill="#9ca3af">ProductLine</text>
+      <text x="472" y="872" font-size="11" fill="#9ca3af">ProductScale</text>
+      <text x="472" y="896" font-size="11" fill="#9ca3af">ProductVendor</text>
+      <text x="472" y="920" font-size="11" fill="#9ca3af">ProductDescription</text>
+      <text x="472" y="944" font-size="11" fill="#9ca3af">QuantityInStock</text>
+      <text x="472" y="968" font-size="11" fill="#9ca3af">BuyPrice</text>
+      <text x="472" y="992" font-size="11" fill="#9ca3af">MSRP</text>
+  </g>
+  <path d="M 1100 92 C 780 92, 780 92, 460 92" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="OFFICES.EMPLOYEES"/>
+  <path d="M 680 92 C 360 92, 360 92, 40 92" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="EMPLOYEES.CUSTOMERS"/>
+  <path d="M 260 92 C 360 92, 360 396, 460 396" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="CUSTOMERS.ORDERS"/>
+  <path d="M 680 396 C 360 396, 360 348, 40 348" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="ORDERS.ORDERDETAILS"/>
+  <path d="M 680 796 C 360 796, 360 348, 40 348" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="PRODUCTS.ORDERDETAILS"/>
+  <path d="M 260 556 C 360 556, 360 796, 460 796" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="PRODUCTLINES.PRODUCTS"/>
+  <path d="M 260 92 C 570 92, 570 324, 880 324" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="CUSTOMERS.PAYMENTS"/>
+</svg>9:["$","div",null,{"className":"bg-base-100 min-h-screen","children":[["$","header",null,{"className":"border-base-300 bg-base-100 sticky top-0 z-10 flex items-center justify-between border-b px-6 py-4","children":[["$","h1",null,{"className":"text-xl font-bold","children":"Schema Library"}],["$","$L8",null,{"href":"/posts","className":"btn btn-ghost btn-sm gap-2","children":[["$","svg",null,{"stroke":"currentColor","fill":"none","strokeWidth":"2","viewBox":"0 0 24 24","strokeLinecap":"round","strokeLinejoin":"round","className":"size-3.5","children":["$undefined",[["$","line","0",{"x1":"19","y1":"12","x2":"5","y2":"12","children":[]}],["$","polyline","1",{"points":"12 19 5 12 12 5","children":[]}]]],"style":{"color":"$undefined"},"height":"1em","width":"1em","xmlns":"http://www.w3.org/2000/svg"}]," All schemas"]}]]}],["$","main",null,{"className":"mx-auto max-w-3xl p-6","children":[["$","article",null,{"className":"prose-invert","children":[["$","h1","0",{"className":"mb-2 mt-2 text-2xl font-bold text-slate-50","children":["ClassicModels — B2B Retail Store"]}],["$","blockquote","1",{"className":"border-l-4 border-indigo-500/60 pl-4 text-slate-400","children":[["$","p","0",{"className":"mb-2 last:mb-0","children":["The MySQL sample database for a model-car wholesaler. Its charm is the"]}],["$","p","1",{"className":"mb-2 last:mb-0","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"orderdetails"}]," junction table with a composite PK, the ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"employees"}]," hierarchy,"]}],["$","p","2",{"className":"mb-2 last:mb-0","children":["and simple office/customer geography — ideal for teaching realistic reporting"]}],["$","p","3",{"className":"mb-2 last:mb-0","children":["queries."]}]]}],["$","h2","2",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["ER Diagram (Mermaid)"]}],["$","div","3",{"className":"overflow-x-auto rounded-xl border border-slate-800","dangerouslySetInnerHTML":{"__html":"$13"}}],"$L14","$L15","$L16","$L17","$L18","$L19","$L1a","$L1b","$L1c","$L1d","$L1e","$L1f","$L20","$L21","$L22","$L23","$L24","$L25","$L26","$L27"]}],"$L28"]}]]}]
+14:["$","h2","4",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["ASCII Diagram"]}]
+29:T8aa,+--------------------+         +-----------------------+
+|    PRODUCTLINES    |         |       OFFICES         |
+|--------------------|         |-----------------------|
+| PK ProductLine     |         | PK OfficeCode         |
++--------------------+         +-----------------------+
+        | 1                                 | 1
+        | *                                | *
+        v                                  v
++--------------------+         +-----------------------+
+|      PRODUCTS      |         |       EMPLOYEES       |
+|--------------------|         |-----------------------|
+| PK ProductCode     |         | PK EmployeeNumber     |
+| FK ProductLine     |         | FK OfficeCode         |
+|    QuantityInStock |         | FK ReportsTo -------- | self FK
+|    BuyPrice        |         |    Email              |
+|    MSRP            |         |    JobTitle           |
++--------------------+         +-----------------------+
+        | 1                                   | 1
+        | *                                  | *
+        v                                    v
++--------------------+         +-----------------------+
+|    ORDERDETAILS    |         |       CUSTOMERS       |
+|--------------------|         |-----------------------|
+| FK OrderNumber  *- |---------| PK CustomerNumber     |
+| FK ProductCode  *- |         | FK SalesRepEmployeeNumber
+|    QuantityOrdered |         |    CreditLimit        |
+|    PriceEach       |         +-----------------------+
++--------------------+                     | 1
+                                           | *
++--------------------+         +--------------------+   +--------------------+
+|      ORDERS        |         |      PAYMENTS      |   |                    |
+|--------------------|         |--------------------|   |                    |
+| PK OrderNumber     |---------| PK CustomerNumber  |   |                    |
+| FK CustomerNumber  |  *  1   | PK CheckNumber     |   |                    |
+|    Status          |         |    PaymentDate     |   |                    |
+|    OrderDate       |         |    Amount          |   |                    |
++--------------------+         +--------------------+   +--------------------+15:["$","div","5",{"className":"mb-4","children":["$","pre",null,{"className":"overflow-x-auto rounded-xl border border-slate-800 bg-slate-950 p-4 text-[13px] leading-relaxed text-slate-300","children":["$","code",null,{"children":"$29"}]}]}]
+16:["$","h2","6",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["Tables"]}]
+17:["$","div","7",{"className":"mb-4","children":["$","div",null,{"className":"overflow-x-auto rounded-xl border border-slate-800","children":["$","table",null,{"className":"w-full text-left text-sm","children":[["$","thead",null,{"children":["$","tr",null,{"className":"border-b border-slate-800 bg-slate-900/60","children":[["$","th","0",{"className":"px-4 py-2 font-semibold text-slate-200","children":["Table"]}],["$","th","1",{"className":"px-4 py-2 font-semibold text-slate-200","children":["PK"]}],["$","th","2",{"className":"px-4 py-2 font-semibold text-slate-200","children":["Key FKs"]}],["$","th","3",{"className":"px-4 py-2 font-semibold text-slate-200","children":["Notes"]}]]}]}],["$","tbody",null,{"children":[["$","tr","0",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Offices"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"OfficeCode"}]," (TEXT)"]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":["—"]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Natural-key geography"]}]]}],["$","tr","1",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Employees"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"EmployeeNumber"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"OfficeCode → Offices"}],", ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"ReportsTo → Employees"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Self-referencing mgr tree"]}]]}],["$","tr","2",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Customers"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"CustomerNumber"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"SalesRepEmployeeNumber → Employees"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Sales territory ownership"]}]]}],["$","tr","3",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Orders"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"OrderNumber"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"CustomerNumber → Customers"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Header, with status lifecycle"]}]]}],["$","tr","4",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"OrderDetails"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":"$L2a"}],"$L2b","$L2c"]}],"$L2d","$L2e","$L2f"]}]]}]}]}]
+18:["$","h2","8",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["Notable Design Patterns"]}]
+19:["$","ul","9",{"className":"mb-4 list-disc space-y-1 pl-5 text-slate-400","children":[["$","li","0",{"children":[["$","strong","0",{"className":"font-semibold text-slate-100","children":"Natural text keys"}],": ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"OfficeCode"}]," and ",["$","code","4",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"ProductCode"}]," are human-readable"]}]]}]
+1a:["$","p","10",{"className":"mb-4 text-slate-400","children":["identifiers used as primary keys — a nice contrast to integer surrogates."]}]
+1b:["$","ul","11",{"className":"mb-4 list-disc space-y-1 pl-5 text-slate-400","children":[["$","li","0",{"children":[["$","strong","0",{"className":"font-semibold text-slate-100","children":"Employee sales hierarchy"}],": ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Customers.SalesRepEmployeeNumber"}]," links each"]}]]}]
+1c:["$","p","12",{"className":"mb-4 text-slate-400","children":["account to a salesperson inside the ",["$","code","1",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Employees"}]," tree; combined with the self-FK you can roll revenue up to a manager."]}]
+1d:["$","ul","13",{"className":"mb-4 list-disc space-y-1 pl-5 text-slate-400","children":[["$","li","0",{"children":[["$","strong","0",{"className":"font-semibold text-slate-100","children":"Composite natural PK on `payments`"}],": ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"(CustomerNumber, CheckNumber)"}]," —"]}]]}]
+1e:["$","p","14",{"className":"mb-4 text-slate-400","children":["real-world business key rather than a synthetic ",["$","code","1",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"PaymentID"}],"."]}]
+1f:["$","ul","15",{"className":"mb-4 list-disc space-y-1 pl-5 text-slate-400","children":[["$","li","0",{"children":[["$","strong","0",{"className":"font-semibold text-slate-100","children":"`orderdetails` double FK"}],": ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"(OrderNumber, ProductCode)"}]," is both the PK and"]}]]}]
+20:["$","p","16",{"className":"mb-4 text-slate-400","children":["two FKs, the textbook \"association table\"."]}]
+21:["$","ul","17",{"className":"mb-4 list-disc space-y-1 pl-5 text-slate-400","children":[["$","li","0",{"children":[["$","strong","0",{"className":"font-semibold text-slate-100","children":"Status-driven pipeline"}],": ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"orders.Status"}]," ('In Process', 'Shipped',"]}]]}]
+22:["$","p","18",{"className":"mb-4 text-slate-400","children":["'Resolved', 'Cancelled') is a clean example of state-machine data."]}]
+23:["$","h2","19",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["Sample Queries"]}]
+30:T489,-- Revenue by product line
+SELECT pl.productLine, SUM(od.quantityOrdered * od.priceEach) AS revenue
+FROM productlines pl
+JOIN products p      ON p.productLine = pl.productLine
+JOIN orderdetails od ON od.productCode = p.productCode
+JOIN orders o        ON o.orderNumber = od.orderNumber
+WHERE o.status IN ('Shipped', 'Resolved')
+GROUP BY pl.productLine
+ORDER BY revenue DESC;
+
+-- Salesperson performance, with their office
+SELECT e.firstName, e.lastName, o.city AS office, COUNT(DISTINCT o2.orderNumber) AS orders
+FROM employees e
+JOIN offices o   ON o.officeCode = e.officeCode
+JOIN customers c ON c.salesRepEmployeeNumber = e.employeeNumber
+JOIN orders o2   ON o2.customerNumber = c.customerNumber
+WHERE o2.status IN ('Shipped', 'Resolved')
+GROUP BY e.employeeNumber
+ORDER BY orders DESC;
+
+-- Inventory below reorder pressure (ordered but not yet shipped)
+SELECT p.productName, p.quantityInStock, SUM(od.quantityOrdered) AS onOrder
+FROM products p
+JOIN orderdetails od ON od.productCode = p.productCode
+JOIN orders o        ON o.orderNumber = od.orderNumber
+WHERE o.status IN ('In Process', 'On Hold')
+GROUP BY p.productCode
+HAVING onOrder > p.quantityInStock;24:["$","div","20",{"className":"mb-4","children":["$","pre",null,{"className":"overflow-x-auto rounded-xl border border-slate-800 bg-slate-950 p-4 text-[13px] leading-relaxed text-slate-300","children":["$","code",null,{"children":"$30"}]}]}]
+25:["$","h2","21",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["Recreate the Sample"]}]
+26:["$","p","22",{"className":"mb-4 text-slate-400","children":["Run these statements in order to rebuild the schema."]}]
+31:Ta05,PRAGMA foreign_keys = ON;
+
+CREATE TABLE offices (
+  officeCode   TEXT PRIMARY KEY,
+  city         TEXT NOT NULL,
+  phone        TEXT NOT NULL,
+  addressLine1 TEXT,
+  addressLine2 TEXT,
+  state        TEXT,
+  country      TEXT NOT NULL,
+  postalCode   TEXT,
+  territory    TEXT NOT NULL
+);
+
+CREATE TABLE employees (
+  employeeNumber INTEGER PRIMARY KEY,
+  lastName       TEXT NOT NULL,
+  firstName      TEXT NOT NULL,
+  extension      TEXT NOT NULL,
+  email          TEXT NOT NULL,
+  officeCode     TEXT NOT NULL REFERENCES offices(officeCode),
+  reportsTo      INTEGER REFERENCES employees(employeeNumber),
+  jobTitle       TEXT NOT NULL
+);
+
+CREATE TABLE customers (
+  customerNumber         INTEGER PRIMARY KEY,
+  customerName           TEXT NOT NULL,
+  contactLastName        TEXT NOT NULL,
+  contactFirstName       TEXT NOT NULL,
+  phone                  TEXT NOT NULL,
+  addressLine1           TEXT NOT NULL,
+  addressLine2           TEXT,
+  city                   TEXT NOT NULL,
+  state                  TEXT,
+  postalCode             TEXT,
+  country                TEXT NOT NULL,
+  salesRepEmployeeNumber INTEGER REFERENCES employees(employeeNumber),
+  creditLimit            REAL
+);
+
+CREATE TABLE productlines (
+  productLine     TEXT PRIMARY KEY,
+  textDescription TEXT,
+  htmlDescription TEXT,
+  description     TEXT,
+  image           TEXT
+);
+
+CREATE TABLE products (
+  productCode        TEXT PRIMARY KEY,
+  productName        TEXT NOT NULL,
+  productLine        TEXT NOT NULL REFERENCES productlines(productLine),
+  productScale       TEXT NOT NULL,
+  productVendor      TEXT NOT NULL,
+  productDescription TEXT,
+  quantityInStock    INTEGER NOT NULL,
+  buyPrice           REAL NOT NULL,
+  msrp               REAL NOT NULL
+);
+
+CREATE TABLE orders (
+  orderNumber    INTEGER PRIMARY KEY,
+  orderDate      TEXT NOT NULL,
+  requiredDate   TEXT NOT NULL,
+  shippedDate    TEXT,
+  status         TEXT NOT NULL,
+  comments       TEXT,
+  customerNumber INTEGER NOT NULL REFERENCES customers(customerNumber)
+);
+
+CREATE TABLE orderdetails (
+  orderNumber     INTEGER NOT NULL REFERENCES orders(orderNumber),
+  productCode     TEXT NOT NULL REFERENCES products(productCode),
+  quantityOrdered INTEGER NOT NULL,
+  priceEach       REAL NOT NULL,
+  orderLineNumber INTEGER NOT NULL,
+  PRIMARY KEY (orderNumber, productCode)
+);
+
+CREATE TABLE payments (
+  customerNumber INTEGER NOT NULL REFERENCES customers(customerNumber),
+  checkNumber    TEXT NOT NULL,
+  paymentDate    TEXT NOT NULL,
+  amount         REAL NOT NULL,
+  PRIMARY KEY (customerNumber, checkNumber)
+);27:["$","div","23",{"className":"mb-4","children":["$","pre",null,{"className":"overflow-x-auto rounded-xl border border-slate-800 bg-slate-950 p-4 text-[13px] leading-relaxed text-slate-300","children":["$","code",null,{"children":"$31"}]}]}]
+28:["$","nav",null,{"className":"border-base-300 mt-12 flex items-center justify-between gap-3 border-t pt-4","children":[["$","$L8",null,{"href":"/posts/chinook","className":"btn btn-ghost btn-sm gap-2","children":[["$","svg",null,{"stroke":"currentColor","fill":"none","strokeWidth":"2","viewBox":"0 0 24 24","strokeLinecap":"round","strokeLinejoin":"round","className":"size-3.5","children":["$undefined",[["$","line","0",{"x1":"19","y1":"12","x2":"5","y2":"12","children":[]}],["$","polyline","1",{"points":"12 19 5 12 12 5","children":[]}]]],"style":{"color":"$undefined"},"height":"1em","width":"1em","xmlns":"http://www.w3.org/2000/svg"}]," ","Chinook — Digital Media Store"]}],["$","$L8",null,{"href":"/posts/e-commerce","className":"btn btn-ghost btn-sm gap-2","children":["E-Commerce Platform"," ",["$","svg",null,{"stroke":"currentColor","fill":"none","strokeWidth":"2","viewBox":"0 0 24 24","strokeLinecap":"round","strokeLinejoin":"round","className":"size-3.5","children":["$undefined",[["$","line","0",{"x1":"5","y1":"12","x2":"19","y2":"12","children":[]}],["$","polyline","1",{"points":"12 5 19 12 12 19","children":[]}]]],"style":{"color":"$undefined"},"height":"1em","width":"1em","xmlns":"http://www.w3.org/2000/svg"}]]}]]}]
+2a:[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"OrderNumber"}],"+",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"ProductCode"}]]
+2b:["$","td","2",{"className":"px-4 py-2 text-slate-400","children":["both composite FKs"]}]
+2c:["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Line items"]}]
+2d:["$","tr","5",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Products"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"ProductCode"}]," (TEXT)"]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"ProductLine → ProductLines"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Natural code as PK"]}]]}]
+2e:["$","tr","6",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"ProductLines"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"ProductLine"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":["—"]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Category lookup"]}]]}]
+2f:["$","tr","7",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Payments"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"CustomerNumber"}],"+",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"CheckNumber"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"CustomerNumber → Customers"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Composite PK, checks as keys"]}]]}]
+f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+c:null
+11:[["$","title","0",{"children":"ClassicModels — B2B Retail Store · Schema Library"}],["$","meta","1",{"name":"description","content":"The MySQL sample database for a model-car wholesaler. Its charm is the `orderdetails` junction table with a composite PK, the `employees` hierarchy, and simple office/customer geography — ideal for teaching realistic reporting queries."}],["$","link","2",{"rel":"manifest","href":"/manifest.json","crossOrigin":"$undefined"}],["$","meta","3",{"name":"mobile-web-app-capable","content":"yes"}],["$","meta","4",{"name":"apple-mobile-web-app-title","content":"Database"}],["$","meta","5",{"name":"apple-mobile-web-app-status-bar-style","content":"black-translucent"}]]

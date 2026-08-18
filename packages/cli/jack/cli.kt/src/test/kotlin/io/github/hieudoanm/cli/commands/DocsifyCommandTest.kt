@@ -6,6 +6,7 @@ import kotlin.test.assertContains
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
 import java.io.File
+import kotlin.io.path.createTempDirectory
 
 class DocsifyCommandTest {
     @Test
@@ -43,7 +44,7 @@ class DocsifyCommandTest {
 
     @Test
     fun testDocsifyScan() {
-        val tmpDir = createTempDir()
+        val tmpDir = createTempDirectory().toFile()
         File(tmpDir, "test.kt").writeText("""
             package test
             fun hello() {
@@ -62,7 +63,7 @@ class DocsifyCommandTest {
 
     @Test
     fun testDocsifyObsidianDot() {
-        val tmpDir = createTempDir()
+        val tmpDir = createTempDirectory().toFile()
         File(tmpDir, "file1.md").writeText("Link to [[file2]]")
         File(tmpDir, "file2.md").writeText("Link to [[file1]]")
         val cmd = DocsifyCommand()
@@ -75,7 +76,7 @@ class DocsifyCommandTest {
 
     @Test
     fun testDocsifyObsidianJson() {
-        val tmpDir = createTempDir()
+        val tmpDir = createTempDirectory().toFile()
         File(tmpDir, "file1.md").writeText("Link to [[file2]]")
         File(tmpDir, "file2.md").writeText("Link to [[file1]]")
         val cmd = DocsifyCommand()
@@ -87,7 +88,7 @@ class DocsifyCommandTest {
 
     @Test
     fun testDocsifyObsidianText() {
-        val tmpDir = createTempDir()
+        val tmpDir = createTempDirectory().toFile()
         File(tmpDir, "file1.md").writeText("Link to [[file2]]")
         File(tmpDir, "file2.md").writeText("Link to [[file1]]")
         val cmd = DocsifyCommand()
@@ -98,7 +99,7 @@ class DocsifyCommandTest {
 
     @Test
     fun testDocsifyObsidianToFile() {
-        val tmpDir = createTempDir()
+        val tmpDir = createTempDirectory().toFile()
         File(tmpDir, "file1.md").writeText("Link to [[file2]]")
         File(tmpDir, "file2.md").writeText("Link to [[file1]]")
         val out = "/tmp/test-obsidian-out.txt"

@@ -1,0 +1,183 @@
+1:I[83039,["/downloads/database/_next/static/chunks/1pf2amf9r7xi6.js"],"LoadingBoundaryProvider"]
+2:"$Sreact.fragment"
+3:I[41483,["/downloads/database/_next/static/chunks/1pf2amf9r7xi6.js"],"SWProvider"]
+4:I[83039,["/downloads/database/_next/static/chunks/1pf2amf9r7xi6.js"],"default"]
+5:I[11443,["/downloads/database/_next/static/chunks/1pf2amf9r7xi6.js","/downloads/database/_next/static/chunks/0diaj63e-swhp.js"],"default"]
+6:I[40523,["/downloads/database/_next/static/chunks/1pf2amf9r7xi6.js","/downloads/database/_next/static/chunks/2ppd_asr3igts.js"],"default"]
+7:I[88811,["/downloads/database/_next/static/chunks/1pf2amf9r7xi6.js"],"default"]
+8:I[18086,["/downloads/database/_next/static/chunks/1pf2amf9r7xi6.js","/downloads/database/_next/static/chunks/1e8x-k6o8wp_i.js"],""]
+a:I[80475,["/downloads/database/_next/static/chunks/1pf2amf9r7xi6.js"],"OutletBoundary"]
+b:"$Sreact.suspense"
+e:I[80475,["/downloads/database/_next/static/chunks/1pf2amf9r7xi6.js"],"ViewportBoundary"]
+10:I[80475,["/downloads/database/_next/static/chunks/1pf2amf9r7xi6.js"],"MetadataBoundary"]
+12:I[98665,["/downloads/database/_next/static/chunks/1pf2amf9r7xi6.js","/downloads/database/_next/static/chunks/38xd8_8tuhln2.js"],"default"]
+:HL["/downloads/database/_next/static/chunks/20u-5yuc8yzrr.css","style"]
+d:X
+0:{"P":null,"c":["","posts","hr",""],"q":"","i":false,"f":[[["",{"children":["posts",{"children":[["slug","hr","d",[]],{"children":["__PAGE__",{},"$undefined","$undefined",4608]},"$undefined","$undefined",4608]},"$undefined","$undefined",4608]},"$undefined","$undefined",4628],[["$","$L1",null,{"loading":[["$","div","l",{"className":"flex h-screen items-center justify-center","children":["$","span",null,{"className":"loading loading-spinner loading-lg text-primary"}]}],[],null],"children":["$","$2","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/downloads/database/_next/static/chunks/20u-5yuc8yzrr.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/downloads/database/_next/static/chunks/1pf2amf9r7xi6.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","data-theme":"dim","children":[["$","head",null,{"children":["$","link",null,{"rel":"apple-touch-icon","href":"/icons/icon-192.png"}]}],["$","body",null,{"className":"bg-base-100 text-base-content h-screen overflow-y-auto font-mono","children":["$","$L3",null,{"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$5","errorStyles":[],"errorScripts":[["$","script","script-0",{"src":"/downloads/database/_next/static/chunks/0diaj63e-swhp.js","async":true}]],"template":["$","$L6",null,{"children":["$","$L7",null,{}]}],"templateStyles":[],"templateScripts":[["$","script","script-0",{"src":"/downloads/database/_next/static/chunks/2ppd_asr3igts.js","async":true}]],"notFound":[["$","div",null,{"className":"flex min-h-screen flex-col items-center justify-center px-6","children":[["$","p",null,{"className":"text-base-content/50 mb-6 text-xs tracking-[0.2em] uppercase","children":"Error"}],["$","h1",null,{"className":"mb-3","children":"404"}],["$","p",null,{"className":"text-base-content/50 mb-10 max-w-sm text-center text-sm","children":"The page you are looking for does not exist."}],["$","div",null,{"className":"flex flex-wrap justify-center gap-3","children":["$","$L8",null,{"href":"/","className":"btn btn-primary btn-sm","children":"Go home"}]}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}]]}]}],{"children":[["$","$2","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$2","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$2","c",{"children":["$L9",[["$","script","script-0",{"src":"/downloads/database/_next/static/chunks/1e8x-k6o8wp_i.js","async":true,"nonce":"$undefined"}]],["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]]}],{},null,false,null]},null,false,"$d"]},null,false,"$d"]},null,false,null],["$","$2","h",{"children":[null,["$","$Le",null,{"children":"$Lf"}],["$","div",null,{"hidden":true,"children":["$","$L10",null,{"children":["$","$b",null,{"name":"Next.Metadata","children":"$L11"}]}]}],null]}],false]],"m":"$undefined","G":["$12",[["$","link","0",{"rel":"stylesheet","href":"/downloads/database/_next/static/chunks/20u-5yuc8yzrr.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]]],"S":true,"h":null,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"9FoKoO8gaFZFRGB6079jy"}
+d:C
+13:T1770,<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="560" viewBox="0 0 1140 560" font-family="ui-monospace, SFMono-Regular, monospace">
+  <rect width="100%" height="100%" fill="#0f172a"/>
+  <g data-table="COUNTRIES">
+    <rect x="40" y="40" width="220" height="128" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 40 80 L 260 80" stroke="#334155"/>
+    <text x="52" y="66" font-size="13" font-weight="600" fill="#e2e8f0">COUNTRIES</text>
+      <text x="52" y="96" font-size="11" fill="#9ca3af">&#128273; CountryID</text>
+      <text x="52" y="120" font-size="11" fill="#9ca3af">CountryName</text>
+      <text x="52" y="144" font-size="11" fill="#9ca3af">RegionID</text>
+  </g>
+  <g data-table="DEPARTMENTS">
+    <rect x="460" y="40" width="220" height="152" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 460 80 L 680 80" stroke="#334155"/>
+    <text x="472" y="66" font-size="13" font-weight="600" fill="#e2e8f0">DEPARTMENTS</text>
+      <text x="472" y="96" font-size="11" fill="#9ca3af">&#128273; DepartmentID</text>
+      <text x="472" y="120" font-size="11" fill="#9ca3af">DepartmentName</text>
+      <text x="472" y="144" font-size="11" fill="#9ca3af">ManagerID</text>
+      <text x="472" y="168" font-size="11" fill="#9ca3af">LocationID</text>
+  </g>
+  <g data-table="EMPLOYEES">
+    <rect x="880" y="40" width="220" height="320" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 880 80 L 1100 80" stroke="#334155"/>
+    <text x="892" y="66" font-size="13" font-weight="600" fill="#e2e8f0">EMPLOYEES</text>
+      <text x="892" y="96" font-size="11" fill="#9ca3af">&#128273; EmployeeID</text>
+      <text x="892" y="120" font-size="11" fill="#9ca3af">FirstName</text>
+      <text x="892" y="144" font-size="11" fill="#9ca3af">LastName</text>
+      <text x="892" y="168" font-size="11" fill="#9ca3af">Email</text>
+      <text x="892" y="192" font-size="11" fill="#9ca3af">PhoneNumber</text>
+      <text x="892" y="216" font-size="11" fill="#9ca3af">HireDate</text>
+      <text x="892" y="240" font-size="11" fill="#9ca3af">JobID</text>
+      <text x="892" y="264" font-size="11" fill="#9ca3af">Salary</text>
+      <text x="892" y="288" font-size="11" fill="#9ca3af">CommissionPct</text>
+      <text x="892" y="312" font-size="11" fill="#9ca3af">ManagerID</text>
+      <text x="892" y="336" font-size="11" fill="#9ca3af">DepartmentID</text>
+  </g>
+  <g data-table="JOB_HISTORY">
+    <rect x="40" y="296" width="220" height="176" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 40 336 L 260 336" stroke="#334155"/>
+    <text x="52" y="322" font-size="13" font-weight="600" fill="#e2e8f0">JOB_HISTORY</text>
+      <text x="52" y="352" font-size="11" fill="#9ca3af">&#128273; EmployeeID</text>
+      <text x="52" y="376" font-size="11" fill="#9ca3af">&#128273; StartDate</text>
+      <text x="52" y="400" font-size="11" fill="#9ca3af">EndDate</text>
+      <text x="52" y="424" font-size="11" fill="#9ca3af">JobID</text>
+      <text x="52" y="448" font-size="11" fill="#9ca3af">DepartmentID</text>
+  </g>
+  <g data-table="JOBS">
+    <rect x="460" y="272" width="220" height="152" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 460 312 L 680 312" stroke="#334155"/>
+    <text x="472" y="298" font-size="13" font-weight="600" fill="#e2e8f0">JOBS</text>
+      <text x="472" y="328" font-size="11" fill="#9ca3af">&#128273; JobID</text>
+      <text x="472" y="352" font-size="11" fill="#9ca3af">JobTitle</text>
+      <text x="472" y="376" font-size="11" fill="#9ca3af">MinSalary</text>
+      <text x="472" y="400" font-size="11" fill="#9ca3af">MaxSalary</text>
+  </g>
+  <g data-table="LOCATIONS">
+    <rect x="880" y="320" width="220" height="200" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 880 360 L 1100 360" stroke="#334155"/>
+    <text x="892" y="346" font-size="13" font-weight="600" fill="#e2e8f0">LOCATIONS</text>
+      <text x="892" y="376" font-size="11" fill="#9ca3af">&#128273; LocationID</text>
+      <text x="892" y="400" font-size="11" fill="#9ca3af">StreetAddress</text>
+      <text x="892" y="424" font-size="11" fill="#9ca3af">PostalCode</text>
+      <text x="892" y="448" font-size="11" fill="#9ca3af">City</text>
+      <text x="892" y="472" font-size="11" fill="#9ca3af">StateProvince</text>
+      <text x="892" y="496" font-size="11" fill="#9ca3af">CountryID</text>
+  </g>
+  <g data-table="REGIONS">
+    <rect x="40" y="408" width="220" height="104" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 40 448 L 260 448" stroke="#334155"/>
+    <text x="52" y="434" font-size="13" font-weight="600" fill="#e2e8f0">REGIONS</text>
+      <text x="52" y="464" font-size="11" fill="#9ca3af">&#128273; RegionID</text>
+      <text x="52" y="488" font-size="11" fill="#9ca3af">RegionName</text>
+  </g>
+  <path d="M 260 460 C 150 460, 150 92, 40 92" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="REGIONS.COUNTRIES"/>
+  <path d="M 260 92 C 570 92, 570 372, 880 372" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="COUNTRIES.LOCATIONS"/>
+  <path d="M 1100 372 C 780 372, 780 92, 460 92" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="LOCATIONS.DEPARTMENTS"/>
+  <path d="M 680 92 C 780 92, 780 92, 880 92" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="DEPARTMENTS.EMPLOYEES"/>
+  <path d="M 680 324 C 780 324, 780 92, 880 92" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="JOBS.EMPLOYEES"/>
+  <path d="M 1100 92 C 570 92, 570 348, 40 348" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="EMPLOYEES.JOB_HISTORY"/>
+  <path d="M 680 324 C 360 324, 360 348, 40 348" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="JOBS.JOB_HISTORY"/>
+  <path d="M 680 92 C 360 92, 360 348, 40 348" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="DEPARTMENTS.JOB_HISTORY"/>
+</svg>9:["$","div",null,{"className":"bg-base-100 min-h-screen","children":[["$","header",null,{"className":"border-base-300 bg-base-100 sticky top-0 z-10 flex items-center justify-between border-b px-6 py-4","children":[["$","h1",null,{"className":"text-xl font-bold","children":"Schema Library"}],["$","$L8",null,{"href":"/posts","className":"btn btn-ghost btn-sm gap-2","children":[["$","svg",null,{"stroke":"currentColor","fill":"none","strokeWidth":"2","viewBox":"0 0 24 24","strokeLinecap":"round","strokeLinejoin":"round","className":"size-3.5","children":["$undefined",[["$","line","0",{"x1":"19","y1":"12","x2":"5","y2":"12","children":[]}],["$","polyline","1",{"points":"12 19 5 12 12 5","children":[]}]]],"style":{"color":"$undefined"},"height":"1em","width":"1em","xmlns":"http://www.w3.org/2000/svg"}]," All schemas"]}]]}],["$","main",null,{"className":"mx-auto max-w-3xl p-6","children":[["$","article",null,{"className":"prose-invert","children":[["$","h1","0",{"className":"mb-2 mt-2 text-2xl font-bold text-slate-50","children":["Oracle HR — Human Resources"]}],["$","blockquote","1",{"className":"border-l-4 border-indigo-500/60 pl-4 text-slate-400","children":[["$","p","0",{"className":"mb-2 last:mb-0","children":["The classic Oracle \"HR\" sample schema (",["$","code","1",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"employees"}]," sample) that ships with"]}],["$","p","1",{"className":"mb-2 last:mb-0","children":["every Oracle Database install. Famous for teaching the"]}],["$","p","2",{"className":"mb-2 last:mb-0","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"employees → departments → locations → countries → regions"}]," hierarchy and the"]}],["$","p","3",{"className":"mb-2 last:mb-0","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"job_history"}]," time-series pattern."]}]]}],["$","h2","2",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["ER Diagram (Mermaid)"]}],["$","div","3",{"className":"overflow-x-auto rounded-xl border border-slate-800","dangerouslySetInnerHTML":{"__html":"$13"}}],"$L14","$L15","$L16","$L17","$L18","$L19","$L1a","$L1b","$L1c","$L1d","$L1e","$L1f","$L20","$L21","$L22","$L23","$L24","$L25","$L26","$L27"]}],"$L28"]}]]}]
+14:["$","h2","4",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["ASCII Diagram"]}]
+15:["$","div","5",{"className":"mb-4","children":["$","pre",null,{"className":"overflow-x-auto rounded-xl border border-slate-800 bg-slate-950 p-4 text-[13px] leading-relaxed text-slate-300","children":["$","code",null,{"children":" REGIONS ---< COUNTRIES ---< LOCATIONS ---< DEPARTMENTS\n                                                   ^   |\n                                                   |   | (self FK: roll-up)\n                                                   |   v\n                                                   | EMPLOYEES\n                                                   |   ^   ^\n                                                   |   |   | (self FK: manager)\n                                                   |   |   |\n                                                   +---|   +--- JOBS\n                                                       |\n                                                JOB_HISTORY (composite PK: EmployeeID + StartDate)"}]}]}]
+16:["$","h2","6",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["Tables"]}]
+17:["$","div","7",{"className":"mb-4","children":["$","div",null,{"className":"overflow-x-auto rounded-xl border border-slate-800","children":["$","table",null,{"className":"w-full text-left text-sm","children":[["$","thead",null,{"children":["$","tr",null,{"className":"border-b border-slate-800 bg-slate-900/60","children":[["$","th","0",{"className":"px-4 py-2 font-semibold text-slate-200","children":["Table"]}],["$","th","1",{"className":"px-4 py-2 font-semibold text-slate-200","children":["PK"]}],["$","th","2",{"className":"px-4 py-2 font-semibold text-slate-200","children":["Key FKs"]}],["$","th","3",{"className":"px-4 py-2 font-semibold text-slate-200","children":["Notes"]}]]}]}],["$","tbody",null,{"children":[["$","tr","0",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Regions"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"RegionID"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":["—"]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Top of geography"]}]]}],["$","tr","1",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Countries"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"CountryID"}]," (TEXT code)"]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"RegionID → Regions"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["2-letter ISO code PK"]}]]}],["$","tr","2",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Locations"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"LocationID"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"CountryID → Countries"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Street/city detail"]}]]}],["$","tr","3",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Departments"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"DepartmentID"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"ManagerID → Employees"}],", ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"LocationID → Locations"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Also self-roll-up? No—roll-up via ManagerID"]}]]}],["$","tr","4",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Employees"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"EmployeeID"}]]}],"$L29","$L2a"]}],"$L2b","$L2c"]}]]}]}]}]
+18:["$","h2","8",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["Notable Design Patterns"]}]
+19:["$","ul","9",{"className":"mb-4 list-disc space-y-1 pl-5 text-slate-400","children":[["$","li","0",{"children":[["$","strong","0",{"className":"font-semibold text-slate-100","children":"Two self-referencing FKs"}],": ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Employees.ManagerID"}]," (who manages whom) and"]}]]}]
+1a:["$","p","10",{"className":"mb-4 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Departments.ManagerID"}]," (who runs each department). Great for recursive-CTE exercises."]}]
+1b:["$","ul","11",{"className":"mb-4 list-disc space-y-1 pl-5 text-slate-400","children":[["$","li","0",{"children":[["$","strong","0",{"className":"font-semibold text-slate-100","children":"Natural text keys"}],": ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"CountryID"}]," (",["$","code","4",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"'US'"}],", ",["$","code","6",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"'UK'"}],") and ",["$","code","8",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"JobID"}]," (",["$","code","10",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"'IT_PROG'"}],","]}]]}]
+1c:["$","p","12",{"className":"mb-4 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"'SA_REP'"}],") as primary keys — compact and readable."]}]
+1d:["$","ul","13",{"className":"mb-4 list-disc space-y-1 pl-5 text-slate-400","children":[["$","li","0",{"children":[["$","strong","0",{"className":"font-semibold text-slate-100","children":"`Job_History` composite PK"}]," ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"(EmployeeID, StartDate)"}],": a temporal"]}]]}]
+1e:["$","p","14",{"className":"mb-4 text-slate-400","children":["\"snapshot\" of role changes. Combined with ",["$","code","1",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"EndDate"}]," it models a time-dimension in the classic Kimball sense."]}]
+1f:["$","ul","15",{"className":"mb-4 list-disc space-y-1 pl-5 text-slate-400","children":[["$","li","0",{"children":[["$","strong","0",{"className":"font-semibold text-slate-100","children":"Salary band lookup"}]," (",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Jobs.MinSalary"}],"/",["$","code","4",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"MaxSalary"}],") keeps range validation"]}]]}]
+20:["$","p","16",{"className":"mb-4 text-slate-400","children":["data in the database instead of the application."]}]
+21:["$","ul","17",{"className":"mb-4 list-disc space-y-1 pl-5 text-slate-400","children":[["$","li","0",{"children":["Perfect schema for practicing ",["$","code","1",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"CONNECT BY"}]," / recursive CTE ",["$","code","3",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"WITH RECURSIVE"}]," to"]}]]}]
+22:["$","p","18",{"className":"mb-4 text-slate-400","children":["walk the management tree."]}]
+23:["$","h2","19",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["Sample Queries"]}]
+24:["$","div","20",{"className":"mb-4","children":["$","pre",null,{"className":"overflow-x-auto rounded-xl border border-slate-800 bg-slate-950 p-4 text-[13px] leading-relaxed text-slate-300","children":["$","code",null,{"children":"-- Department headcount and salary totals\nSELECT d.departmentName, COUNT(e.employeeID) AS headcount,\n       ROUND(SUM(e.salary), 2) AS payroll\nFROM departments d\nJOIN employees e ON e.departmentID = d.departmentID\nGROUP BY d.departmentID\nORDER BY payroll DESC;\n\n-- Reporting chain for one employee (recursive CTE)\nWITH RECURSIVE chain(id, name, mgr, depth) AS (\n  SELECT employeeID, firstName || ' ' || lastName, managerID, 0\n  FROM employees WHERE employeeID = 101\n  UNION ALL\n  SELECT e.employeeID, e.firstName || ' ' || e.lastName, e.managerID, c.depth + 1\n  FROM employees e JOIN chain c ON e.employeeID = c.mgr\n)\nSELECT depth, name FROM chain ORDER BY depth;\n\n-- Everyone who changed department, with tenure per stop\nSELECT jh.employeeID, jh.startDate, jh.endDate, j.jobTitle, d.departmentName\nFROM job_history jh\nJOIN jobs j        ON j.jobID        = jh.jobID\nJOIN departments d ON d.departmentID = jh.departmentID\nORDER BY jh.employeeID, jh.startDate;"}]}]}]
+25:["$","h2","21",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["Recreate the Sample"]}]
+26:["$","p","22",{"className":"mb-4 text-slate-400","children":["Run these statements in order to rebuild the schema."]}]
+2d:T62a,PRAGMA foreign_keys = ON;
+
+CREATE TABLE regions (
+  regionID   INTEGER PRIMARY KEY,
+  regionName TEXT NOT NULL
+);
+
+CREATE TABLE countries (
+  countryID   TEXT PRIMARY KEY,
+  countryName TEXT NOT NULL,
+  regionID    INTEGER NOT NULL REFERENCES regions(regionID)
+);
+
+CREATE TABLE locations (
+  locationID    INTEGER PRIMARY KEY,
+  streetAddress TEXT,
+  postalCode    TEXT,
+  city          TEXT NOT NULL,
+  stateProvince TEXT,
+  countryID     TEXT NOT NULL REFERENCES countries(countryID)
+);
+
+CREATE TABLE jobs (
+  jobID     TEXT PRIMARY KEY,
+  jobTitle  TEXT NOT NULL,
+  minSalary REAL,
+  maxSalary REAL
+);
+
+CREATE TABLE departments (
+  departmentID   INTEGER PRIMARY KEY,
+  departmentName TEXT NOT NULL,
+  managerID      INTEGER REFERENCES employees(employeeID),
+  locationID     INTEGER REFERENCES locations(locationID)
+);
+
+CREATE TABLE employees (
+  employeeID    INTEGER PRIMARY KEY,
+  firstName     TEXT NOT NULL,
+  lastName      TEXT NOT NULL,
+  email         TEXT NOT NULL,
+  phoneNumber   TEXT,
+  hireDate      TEXT NOT NULL,
+  jobID         TEXT NOT NULL REFERENCES jobs(jobID),
+  salary        REAL NOT NULL,
+  commissionPct REAL,
+  managerID     INTEGER REFERENCES employees(employeeID),
+  departmentID  INTEGER REFERENCES departments(departmentID)
+);
+
+CREATE TABLE job_history (
+  employeeID   INTEGER NOT NULL REFERENCES employees(employeeID),
+  startDate    TEXT NOT NULL,
+  endDate      TEXT NOT NULL,
+  jobID        TEXT NOT NULL REFERENCES jobs(jobID),
+  departmentID INTEGER NOT NULL REFERENCES departments(departmentID),
+  PRIMARY KEY (employeeID, startDate)
+);27:["$","div","23",{"className":"mb-4","children":["$","pre",null,{"className":"overflow-x-auto rounded-xl border border-slate-800 bg-slate-950 p-4 text-[13px] leading-relaxed text-slate-300","children":["$","code",null,{"children":"$2d"}]}]}]
+28:["$","nav",null,{"className":"border-base-300 mt-12 flex items-center justify-between gap-3 border-t pt-4","children":[["$","$L8",null,{"href":"/posts/e-commerce","className":"btn btn-ghost btn-sm gap-2","children":[["$","svg",null,{"stroke":"currentColor","fill":"none","strokeWidth":"2","viewBox":"0 0 24 24","strokeLinecap":"round","strokeLinejoin":"round","className":"size-3.5","children":["$undefined",[["$","line","0",{"x1":"19","y1":"12","x2":"5","y2":"12","children":[]}],["$","polyline","1",{"points":"12 19 5 12 12 5","children":[]}]]],"style":{"color":"$undefined"},"height":"1em","width":"1em","xmlns":"http://www.w3.org/2000/svg"}]," ","E-Commerce Platform"]}],["$","$L8",null,{"href":"/posts/music-streaming","className":"btn btn-ghost btn-sm gap-2","children":["Music Streaming Service"," ",["$","svg",null,{"stroke":"currentColor","fill":"none","strokeWidth":"2","viewBox":"0 0 24 24","strokeLinecap":"round","strokeLinejoin":"round","className":"size-3.5","children":["$undefined",[["$","line","0",{"x1":"5","y1":"12","x2":"19","y2":"12","children":[]}],["$","polyline","1",{"points":"12 5 19 12 12 19","children":[]}]]],"style":{"color":"$undefined"},"height":"1em","width":"1em","xmlns":"http://www.w3.org/2000/svg"}]]}]]}]
+29:["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"JobID → Jobs"}],", ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"ManagerID → Employees"}],", ",["$","code","4",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"DepartmentID → Departments"}]]}]
+2a:["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Core table"]}]
+2b:["$","tr","5",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Jobs"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"JobID"}]," (TEXT code)"]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":["—"]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Title + salary band lookup"]}]]}]
+2c:["$","tr","6",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Job_History"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"EmployeeID"}],"+",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"StartDate"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"EmployeeID"}],", ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"JobID"}],", ",["$","code","4",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"DepartmentID"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Position history over time"]}]]}]
+f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+c:null
+11:[["$","title","0",{"children":"Oracle HR — Human Resources · Schema Library"}],["$","meta","1",{"name":"description","content":"The classic Oracle \"HR\" sample schema (`employees` sample) that ships with every Oracle Database install. Famous for teaching the `employees → departments → locations → countries → regions` hierarchy and the `job_history` time-series pattern."}],["$","link","2",{"rel":"manifest","href":"/manifest.json","crossOrigin":"$undefined"}],["$","meta","3",{"name":"mobile-web-app-capable","content":"yes"}],["$","meta","4",{"name":"apple-mobile-web-app-title","content":"Database"}],["$","meta","5",{"name":"apple-mobile-web-app-status-bar-style","content":"black-translucent"}]]

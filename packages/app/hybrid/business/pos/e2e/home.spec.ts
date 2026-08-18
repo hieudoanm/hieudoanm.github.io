@@ -9,9 +9,7 @@ test.describe('Home page', () => {
   test('renders navigation links', async ({ page }) => {
     await page.goto('/');
     await expect(page.getByRole('link', { name: 'About' })).toBeVisible();
-    await expect(
-      page.getByRole('link', { name: 'Downloads' })
-    ).toBeVisible();
+    await expect(page.getByRole('link', { name: 'Downloads' })).toBeVisible();
     await expect(page.getByRole('link', { name: 'Version' })).toBeVisible();
   });
 

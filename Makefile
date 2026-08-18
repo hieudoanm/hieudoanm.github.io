@@ -13,6 +13,9 @@ start-chat:
 start-chess:
 	pnpm run dev --filter=@hieudoanm.github.io/chess
 
+start-clipper:
+	pnpm run dev --filter=@hieudoanm.github.io/clipper
+
 start-code:
 	pnpm run dev --filter=@hieudoanm.github.io/code
 
