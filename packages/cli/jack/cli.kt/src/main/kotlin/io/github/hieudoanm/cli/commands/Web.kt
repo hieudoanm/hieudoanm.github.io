@@ -503,7 +503,7 @@ private fun htmlTableToMarkdown(table: Element): String {
     val sb = StringBuilder()
     val rows = table.select("tr")
     if (rows.isEmpty()) return ""
-    val headerCells = rows.first().select("td, th")
+    val headerCells = rows.first()!!.select("td, th")
     val colCount = headerCells.size
     sb.append("| ").append(headerCells.joinToString(" | ") { it.text().trim() }).appendLine(" |")
     sb.append("|").append((" --- |").repeat(colCount)).appendLine()
