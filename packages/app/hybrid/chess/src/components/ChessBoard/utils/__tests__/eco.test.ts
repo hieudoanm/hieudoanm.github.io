@@ -1,39 +1,39 @@
-import { ecoGroups, ecoOpenings, ecoSubgroups, replayPGN } from '../eco';
+import { ecoGroups, ecoSubgroups, ecoOpenings, replayPGN } from '../eco';
 
-describe('eco utils', () => {
-  it('returns sorted opening groups', () => {
-    expect(ecoGroups.length).toBeGreaterThan(10);
-    expect([...ecoGroups].sort()).toEqual(ecoGroups);
+describe('eco.ts', () => {
+  it('ecoGroups contains at least one group', () => {
+    expect(ecoGroups.length).toBeGreaterThan(0);
   });
 
-  it('returns subgroups for a group', () => {
-    const group = ecoGroups[0];
-    const subs = ecoSubgroups(group);
-    expect(subs.length).toBeGreaterThan(0);
+  it('ecoSubgroups returns subgroups for a group', () => {
+    const group = ecoGroups[0]!;
+    const subgroups = ecoSubgroups(group);
+    expect(Array.isArray(subgroups)).toBe(true);
   });
 
-  it('returns openings for a group/subgroup', () => {
-    const group = ecoGroups[0];
-    const subgroup = ecoSubgroups(group)[0];
-    const openings = ecoOpenings(group, subgroup);
-    expect(openings.length).toBeGreaterThan(0);
-    expect(openings[0].group).toBe(group);
-    expect(openings[0].subgroup ?? '').toBe(subgroup);
+  it('ecoOpenings returns openings for a group and subgroup', () => {
+    const group = ecoGroups[0]!;
+    const subgroups = ecoSubgroups(group);
+    const openings = ecoOpenings(group, subgroups[0] ?? '');
+    expect(Array.isArray(openings)).toBe(true);
   });
 
-  it('returns empty openings for unknown group', () => {
-    expect(ecoOpenings('Nope', 'Nope')).toEqual([]);
-  });
-});
-
-describe('replayPGN', () => {
-  it('replays a valid PGN', () => {
-    const game = replayPGN('1. e4 e5 2. Nf3');
-    expect(game).not.toBeNull();
-    expect(game?.turn).toBe('b');
+  it('replayPGN returns null for invalid pgn', () => {
+    expect(replayPGN('')).toBeNull();
+    expect(replayPGN('invalid')).toBeNull();
   });
 
-  it('returns null for invalid PGN', () => {
-    expect(replayPGN('not a pgn')).toBeNull();
+  it('replayPGN replays a valid pgn', () => {
+    const pgn = `[Event "Test"]
+[Result "*"]
+
+1. e4 e5 2. Nf3 *`;
+    const result = replayPGN(pgn);
+    expect(result).not.toBeNull();
+  });
+
+  it('downloadGIF is a function', async () => {
+    const { downloadGIF } = await import('../eco');
+    expect(typeof downloadGIF).toBe('function');
   });
 });

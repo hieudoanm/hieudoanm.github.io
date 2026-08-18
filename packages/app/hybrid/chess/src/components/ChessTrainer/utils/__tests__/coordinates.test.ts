@@ -29,6 +29,10 @@ describe('coordinates utils', () => {
     expect(fileOf(28)).toBe('e');
   });
 
+  it('returns empty string for out-of-range file', () => {
+    expect(fileOf(-1)).toBe('');
+  });
+
   it('lists all 64 squares', () => {
     const squares = allSquares();
     expect(squares).toHaveLength(64);

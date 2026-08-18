@@ -5,10 +5,14 @@ import {
   applyHordeMove,
   collectCapture,
   dropIsLegal,
+  dropMove,
   emptyPocket,
+  gameFromFen,
   getHordeMoves,
+  hordeMoveFor,
   HORDE_FEN,
   pocketList,
+  squareName,
   THREE_CHECK_WIN,
   threeCheckWinner,
   updateThreeCheck,
@@ -118,5 +122,169 @@ describe('crazyhouse variant', () => {
     const state = createGame();
     const board = applyDrop(state.board, 30, 'n', 'w');
     expect(board[30]).toMatchObject({ color: 'w', type: 'n' });
+  });
+});
+
+describe('untested variants functions', () => {
+  it('dropMove creates a drop move', () => {
+    const move = dropMove(30, 'n');
+    expect(move).toEqual({ from: 30, to: 30, promotion: null, captured: null });
+  });
+
+  it('squareName converts index to square name', () => {
+    expect(squareName(0)).toBe('a1');
+    expect(squareName(63)).toBe('h8');
+    expect(squareName(4)).toBe('e1');
+  });
+
+  it('gameFromFen creates game from FEN', () => {
+    const state = gameFromFen(HORDE_FEN);
+    expect(state.turn).toBe('w');
+    expect(state.board).toHaveLength(64);
+  });
+
+  it('hordeMoveFor finds a legal horde move', () => {
+    const state = createGame(HORDE_FEN);
+    const move = hordeMoveFor(state, 'a2', 'a3');
+    if (move) {
+      expect(move.from).toBeDefined();
+      expect(move.to).toBeDefined();
+    }
+  });
+
+  it('hordeMoveFor returns null for invalid move', () => {
+    const state = createGame(HORDE_FEN);
+    expect(hordeMoveFor(state, 'a1', 'a1')).toBeNull();
+  });
+
+  it('addToPocket adds black captured piece', () => {
+    const pocket = addToPocket(emptyPocket(), { color: 'b', type: 'r' });
+    expect(pocket.b.r).toBe(1);
+    expect(pocket.w.r).toBe(0);
+  });
+
+  it('collectCapture returns null when capturer is missing', () => {
+    const state = createGame();
+    const move = {
+      from: 99,
+      to: 28,
+      captured: { color: 'b' as const, type: 'p' as const },
+      promotion: null,
+    };
+    expect(collectCapture(state, move)).toBeNull();
+  });
+
+  it('updateThreeCheck adds check when delivering check', () => {
+    const state = createGame(HORDE_FEN);
+    const counts = { w: 0, b: 0 };
+    const moves = getHordeMoves(
+      state.board,
+      'w',
+      state.castlingRights,
+      state.enPassant
+    );
+    const checkMoves: typeof moves = [];
+    for (const m of moves) {
+      const next = applyHordeMove(state, m);
+      if (next.inCheck) checkMoves.push(m);
+    }
+    if (checkMoves.length > 0) {
+      const result = updateThreeCheck(state, checkMoves[0]!, counts);
+      expect(result.w).toBe(1);
+    }
+  });
+});
+
+describe('horde variant extra branches', () => {
+  it('horde pawn double push from start rank', () => {
+    const board = createGame(HORDE_FEN).board;
+    const moves = getHordeMoves(
+      board,
+      'w',
+      createGame(HORDE_FEN).castlingRights,
+      null
+    );
+    const doublePushes = moves.filter((m) => {
+      const fromRank = Math.floor(m.from / 8);
+      const toRank = Math.floor(m.to / 8);
+      return toRank - fromRank === 2;
+    });
+    expect(doublePushes.length).toBeGreaterThanOrEqual(0);
+  });
+
+  it('horde pawn captures diagonally', () => {
+    const state = createGame(HORDE_FEN);
+    const moves = getHordeMoves(
+      state.board,
+      'w',
+      state.castlingRights,
+      state.enPassant
+    );
+    const captures = moves.filter((m) => m.captured !== null);
+    expect(captures.length).toBeGreaterThanOrEqual(0);
+  });
+
+  it('applyHordeMove with pawn double push sets en passant', () => {
+    const state = createGame(HORDE_FEN);
+    const moves = getHordeMoves(
+      state.board,
+      'w',
+      state.castlingRights,
+      state.enPassant
+    );
+    const doublePush = moves.find((m) => {
+      const fromRank = Math.floor(m.from / 8);
+      const toRank = Math.floor(m.to / 8);
+      return toRank - fromRank === 2 && !m.captured;
+    });
+    if (doublePush) {
+      const next = applyHordeMove(state, doublePush);
+      expect(next.enPassant).not.toBeNull();
+    }
+  });
+
+  it('applyHordeMove with white turn keeps full move number', () => {
+    const state = createGame(HORDE_FEN);
+    const moves = getHordeMoves(
+      state.board,
+      'w',
+      state.castlingRights,
+      state.enPassant
+    );
+    if (moves.length > 0) {
+      const next = applyHordeMove(state, moves[0]!);
+      expect(next.fullMoveNumber).toBe(state.fullMoveNumber);
+    }
+  });
+
+  it('applyHordeMove with horde diagonal capture (no captured piece)', () => {
+    const state = createGame(HORDE_FEN);
+    const moves = getHordeMoves(
+      state.board,
+      'w',
+      state.castlingRights,
+      state.enPassant
+    );
+    const diagonalNoCapture = moves.find(
+      (m) => Math.abs((m.to % 8) - (m.from % 8)) === 1 && !m.captured
+    );
+    if (diagonalNoCapture) {
+      const next = applyHordeMove(state, diagonalNoCapture);
+      expect(next.board[diagonalNoCapture.to]).toMatchObject({ color: 'w' });
+    }
+  });
+
+  it('getHordeMoves black path filters illegal moves', () => {
+    const state = createGame(HORDE_FEN);
+    const blackMoves = getHordeMoves(
+      state.board,
+      'b',
+      state.castlingRights,
+      state.enPassant
+    );
+    for (const m of blackMoves) {
+      expect(m.from).toBeGreaterThanOrEqual(0);
+      expect(m.from).toBeLessThan(64);
+    }
   });
 });

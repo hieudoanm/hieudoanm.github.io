@@ -1,10 +1,13 @@
 import {
   deleteGame,
   decodeShare,
+  downloadPgn,
   encodeShare,
   filterGames,
   gameFromPgn,
   importGames,
+  loadGames,
+  persistGames,
   studyMoves,
 } from '../library';
 import type { StoredGame, StudyMove } from '../../types';
@@ -37,6 +40,38 @@ describe('gameFromPgn', () => {
   it('names the game after the players when no event is present', () => {
     const game = gameFromPgn(SAMPLE.replace('[Event "Test Match"]\n', ''));
     expect(game!.name).toBe('Alice vs Bob');
+  });
+
+  it('handles Event "?" by setting name to players', () => {
+    const pgn = '[Event "?"]\n[White "A"]\n[Black "B"]\n\n1. e4';
+    const game = gameFromPgn(pgn);
+    expect(game!.name).toBe('A vs B');
+  });
+
+  it('defaults white/black to "?" when headers missing', () => {
+    const pgn = '[Event "T"]\n[Result "1-0"]\n\n1. e4';
+    const game = gameFromPgn(pgn);
+    expect(game!.white).toBe('?');
+    expect(game!.black).toBe('?');
+  });
+
+  it('defaults result from game when Result header missing', () => {
+    const pgn = '[Event "T"]\n[White "A"]\n[Black "B"]\n\n1. e4 e5 1-0';
+    const game = gameFromPgn(pgn);
+    expect(game!.result).toBeDefined();
+  });
+});
+
+describe('importGames extra', () => {
+  it('handles empty chunks between game headers', () => {
+    const { games, skipped } = importGames(`${SAMPLE}\n\n   \n\n${SAMPLE}`);
+    expect(games.length).toBeGreaterThanOrEqual(1);
+  });
+});
+
+describe('studyMoves edge cases', () => {
+  it('returns empty array for invalid PGN', () => {
+    expect(studyMoves('')).toEqual([]);
   });
 });
 

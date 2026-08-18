@@ -36,6 +36,21 @@ describe('reviewPgn', () => {
     const result = reviewPgn('1. e4 e5 2. Nf3 1-0');
     expect(result!.moves.length).toBe(3);
   });
+
+  it('stops on illegal SAN and returns partial result', () => {
+    const result = reviewPgn('1. e4 zz');
+    expect(result).not.toBeNull();
+    expect(result!.moves.length).toBe(1);
+    expect(result!.moves[0].san).toBe('e4');
+  });
+
+  it('returns null when first move is illegal', () => {
+    expect(reviewPgn('1. zz')).toBeNull();
+  });
+
+  it('returns null for headers only with no moves', () => {
+    expect(reviewPgn('[Event "x"] [White "A"]')).toBeNull();
+  });
 });
 
 describe('sanToMove', () => {

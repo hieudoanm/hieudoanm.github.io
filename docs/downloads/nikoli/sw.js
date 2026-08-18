@@ -1,5 +1,14 @@
 const CACHE_NAME = 'nikoli-v1';
-const STATIC_ASSETS = ['/', '/sudoku/', '/nurikabe/', '/masyu/', '/shikaku/', '/fillomino/', '/norinori/', '/heyawake/'];
+const STATIC_ASSETS = [
+  '/',
+  '/sudoku/',
+  '/nurikabe/',
+  '/masyu/',
+  '/shikaku/',
+  '/fillomino/',
+  '/norinori/',
+  '/heyawake/',
+];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(

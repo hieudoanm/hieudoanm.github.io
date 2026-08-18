@@ -2,6 +2,16 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import { EnginePanel } from '../EnginePanel';
 import type { BoardMode } from '../../types';
 
+jest.mock('../EvalChart', () => ({
+  EvalChart: () => <div data-testid="eval-chart" />,
+}));
+
+global.ResizeObserver = class {
+  observe() {}
+  unobserve() {}
+  disconnect() {}
+};
+
 const baseProps = {
   boardMode: 'explore' as BoardMode,
   whiteEval: null,
@@ -115,6 +125,46 @@ describe('EnginePanel', () => {
     render(<EnginePanel {...baseProps} />);
     expect(screen.getByText('Black', { selector: 'span' })).toBeInTheDocument();
     expect(screen.getByText('White', { selector: 'span' })).toBeInTheDocument();
+  });
+
+  it('shows line score with negative scoreCp', () => {
+    render(
+      <EnginePanel
+        {...baseProps}
+        lines={[
+          {
+            san: 'e4',
+            move: { from: 12, to: 28, promotion: null, captured: null } as any,
+            scoreCp: -50,
+            mate: null,
+          },
+        ]}
+      />
+    );
+    expect(screen.getByText('-0.5')).toBeInTheDocument();
+  });
+
+  it('hides eval chart when graphPoints has single entry', () => {
+    const { container } = render(
+      <EnginePanel
+        {...baseProps}
+        graphPoints={[{ moveNumber: 0, san: 'Start', evalCp: 0 }]}
+      />
+    );
+    expect(screen.queryByTestId('eval-chart')).toBeNull();
+  });
+
+  it('shows eval chart when graphPoints has multiple entries', () => {
+    render(
+      <EnginePanel
+        {...baseProps}
+        graphPoints={[
+          { moveNumber: 0, san: 'Start', evalCp: 0 },
+          { moveNumber: 1, san: 'e4', evalCp: 50 },
+        ]}
+      />
+    );
+    expect(screen.getByTestId('eval-chart')).toBeTruthy();
   });
 
   it('to match snapshot', () => {

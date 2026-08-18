@@ -56,4 +56,45 @@ describe('fetchChessComPgn', () => {
     });
     await expect(fetchChessComPgn('nobody')).rejects.toThrow('No games found');
   });
+
+  it('throws when archives fetch fails', async () => {
+    (global as { fetch: typeof fetch }).fetch = jest.fn().mockResolvedValue({
+      ok: false,
+      status: 503,
+    });
+    await expect(fetchChessComPgn('alice')).rejects.toThrow('503');
+  });
+
+  it('skips months that fail to fetch', async () => {
+    const archives = [
+      'https://api.chess.com/pub/a/2026/08',
+      'https://api.chess.com/pub/a/2026/07',
+    ];
+    const fetchMock = jest.fn().mockImplementation(async (url: string) => {
+      if (url.includes('archives')) {
+        return { ok: true, json: async () => ({ archives }) };
+      }
+      if (url.includes('2026/08')) {
+        return { ok: false, status: 500 };
+      }
+      if (url.includes('2026/07')) {
+        return {
+          ok: true,
+          json: async () => ({ games: [{ pgn: '[A]\n1.e4' }] }),
+        };
+      }
+      return { ok: true, json: async () => ({ games: [] }) };
+    });
+    (global as { fetch: typeof fetch }).fetch = fetchMock;
+    const result = await fetchChessComPgn('alice', 5);
+    expect(result).toContain('1.e4');
+  });
+
+  it('throws when Lichess returns non-200', async () => {
+    (global as { fetch: typeof fetch }).fetch = jest.fn().mockResolvedValue({
+      ok: false,
+      status: 429,
+    });
+    await expect(fetchLichessPgn('alice')).rejects.toThrow('429');
+  });
 });

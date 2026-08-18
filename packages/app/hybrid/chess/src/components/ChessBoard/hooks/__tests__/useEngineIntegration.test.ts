@@ -1,163 +1,169 @@
-import { act, renderHook } from '@testing-library/react';
-import { createGame } from '@chess/ts';
+import { renderHook } from '@testing-library/react';
 import { useEngineIntegration } from '../useEngineIntegration';
+import { createGame } from '@chess/ts';
 
-const makeGame = (overrides: Partial<Record<string, unknown>> = {}) => ({
-  ...createGame(),
-  ...overrides,
-});
+const mockAnalyze = jest.fn();
+const mockDispatch = jest.fn();
+const gameRef = { current: createGame() };
 
-const makeDeps = (overrides: Partial<Record<string, unknown>> = {}) => ({
-  boardMode: 'explore',
-  fen: '',
-  thinking: false,
-  depth: 15,
-  humanSide: 'w',
-  gameRef: { current: makeGame() },
-  dispatch: jest.fn(),
-  analyze: jest.fn(),
-  bestMove: null,
-  evaluation: null,
-  onEngineMove: jest.fn(),
-  ...overrides,
+beforeEach(() => {
+  jest.clearAllMocks();
+  gameRef.current = createGame();
 });
 
 describe('useEngineIntegration', () => {
-  it('analyzes when black to move in play mode', () => {
-    const game = makeGame({ turn: 'b' });
-    const deps = makeDeps({
-      boardMode: 'play',
-      fen: 'x',
-      gameRef: { current: game },
-    });
-    renderHook(() => useEngineIntegration(deps as never));
-    expect(deps.analyze).toHaveBeenCalled();
+  const base = (overrides: Record<string, unknown> = {}) => ({
+    boardMode: 'explore' as const,
+    fen: 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1',
+    thinking: false,
+    depth: 15,
+    humanSide: 'w' as 'w',
+    gameRef,
+    dispatch: mockDispatch,
+    analyze: mockAnalyze,
+    bestMove: null as string | null,
+    evaluation: null as number | null,
+    onEngineMove: jest.fn(),
+    ...overrides,
   });
 
-  it('does not analyze in explore mode', () => {
-    const game = makeGame({ turn: 'b' });
-    const deps = makeDeps({
-      boardMode: 'explore',
-      gameRef: { current: game },
-    });
-    renderHook(() => useEngineIntegration(deps as never));
-    expect(deps.analyze).not.toHaveBeenCalled();
-  });
-
-  it('does not analyze when white to move', () => {
-    const game = makeGame({ turn: 'w' });
-    const deps = makeDeps({
-      boardMode: 'play',
-      fen: 'x',
-      gameRef: { current: game },
-    });
-    renderHook(() => useEngineIntegration(deps as never));
-    expect(deps.analyze).not.toHaveBeenCalled();
-  });
-
-  it('applies a legal best move on black turn', () => {
-    const game = makeGame({ turn: 'b' });
-    const dispatch = jest.fn();
-    const deps = makeDeps({
-      boardMode: 'play',
-      bestMove: 'e2e4',
-      gameRef: { current: game },
-      dispatch,
-    });
-    renderHook(() => useEngineIntegration(deps as never));
-    expect(dispatch).toHaveBeenCalledWith({
-      type: 'SET_THINKING',
-      thinking: false,
-    });
-  });
-
-  it('ignores a best move with invalid squares', () => {
-    const game = makeGame({ turn: 'b' });
-    const dispatch = jest.fn();
-    const deps = makeDeps({
-      boardMode: 'play',
-      bestMove: 'zz',
-      gameRef: { current: game },
-      dispatch,
-    });
-    renderHook(() => useEngineIntegration(deps as never));
-    expect(dispatch).not.toHaveBeenCalled();
-  });
-
-  it('computes eval percent clamped to range', () => {
-    const { result } = renderHook(() =>
-      useEngineIntegration(
-        makeDeps({ boardMode: 'play', evaluation: 2000 }) as never
-      )
-    );
-    expect(result.current.whiteEval).toBe(2000);
-    expect(result.current.evalPercent).toBe(100);
-    expect(result.current.evalLabel).toBe('20.0');
-  });
-
-  it('returns neutral eval when not in play mode', () => {
-    const { result } = renderHook(() =>
-      useEngineIntegration(makeDeps() as never)
-    );
+  it('returns default values in explore mode', () => {
+    const { result } = renderHook(() => useEngineIntegration(base()));
     expect(result.current.whiteEval).toBeNull();
     expect(result.current.evalPercent).toBe(50);
+    expect(result.current.statusLabel).toBeNull();
+  });
+
+  it('returns eval when in play mode with evaluation', () => {
+    const { result } = renderHook(() =>
+      useEngineIntegration(base({ boardMode: 'play', evaluation: 50 }))
+    );
+    expect(result.current.whiteEval).toBe(50);
+    expect(result.current.evalPercent).toBe(52.5);
+    expect(result.current.evalLabel).toBe('0.5');
+  });
+
+  it('returns status label in play mode on human turn', () => {
+    const { result } = renderHook(() =>
+      useEngineIntegration(base({ boardMode: 'play' }))
+    );
+    expect(result.current.statusLabel).toBe('Your turn');
+  });
+
+  it('shows Check! when in check', () => {
+    const game = createGame();
+    game.inCheck = true;
+    gameRef.current = game;
+    const { result } = renderHook(() =>
+      useEngineIntegration(base({ boardMode: 'play' }))
+    );
+    expect(result.current.statusLabel).toBe('Check!');
+  });
+
+  it('shows thinking label when thinking', () => {
+    const { result } = renderHook(() =>
+      useEngineIntegration(base({ boardMode: 'play', thinking: true }))
+    );
+    expect(result.current.statusLabel).toBe('Stockfish thinking…');
+  });
+
+  it('calls analyze when it is engine turn in play mode', () => {
+    const { result } = renderHook(() =>
+      useEngineIntegration(
+        base({
+          boardMode: 'play',
+        })
+      )
+    );
+    // engineSide is 'b' when humanSide is 'w', and starting position is white to move
+    // So engine won't analyze on the first render (it's white's turn)
+    // But if we change humanSide to 'b', engineSide becomes 'w' and it will analyze
+    mockAnalyze.mockClear();
+    const { result: result2 } = renderHook(() =>
+      useEngineIntegration(
+        base({
+          boardMode: 'play',
+          humanSide: 'b',
+        })
+      )
+    );
+    expect(mockAnalyze).toHaveBeenCalled();
+  });
+
+  it('applies bestMove when engine turn', () => {
+    const onEngineMove = jest.fn();
+    // Set humanSide to 'b' so engineSide is 'w', and starting position is white to move
+    renderHook(() =>
+      useEngineIntegration(
+        base({
+          boardMode: 'play',
+          humanSide: 'b',
+          bestMove: 'e2e4',
+          onEngineMove,
+        })
+      )
+    );
+    expect(onEngineMove).toHaveBeenCalled();
+  });
+
+  it('ignores bestMove when not engine turn', () => {
+    const onEngineMove = jest.fn();
+    // humanSide is 'w', engineSide is 'b', starting position is white to move
+    // So bestMove should be ignored because it's not engine's turn
+    renderHook(() =>
+      useEngineIntegration(
+        base({
+          boardMode: 'play',
+          humanSide: 'w',
+          bestMove: 'e2e4',
+          onEngineMove,
+        })
+      )
+    );
+    expect(onEngineMove).not.toHaveBeenCalled();
+  });
+
+  it('returns null statusLabel in explore mode', () => {
+    const { result } = renderHook(() => useEngineIntegration(base()));
+    expect(result.current.statusLabel).toBeNull();
+  });
+
+  it('clamps evalPercent for extreme values', () => {
+    const { result } = renderHook(() =>
+      useEngineIntegration(base({ boardMode: 'play', evaluation: 5000 }))
+    );
+    expect(result.current.evalPercent).toBe(100);
+  });
+
+  it('clamps evalPercent for very negative values', () => {
+    const { result } = renderHook(() =>
+      useEngineIntegration(base({ boardMode: 'play', evaluation: -5000 }))
+    );
+    expect(result.current.evalPercent).toBe(0);
+  });
+
+  it('returns zero evalLabel for null eval', () => {
+    const { result } = renderHook(() => useEngineIntegration(base()));
     expect(result.current.evalLabel).toBe('0.0');
   });
 
-  it('produces status labels', () => {
-    const cases: Array<[Partial<Record<string, unknown>>, string | null]> = [
-      [
-        {
-          gameRef: { current: makeGame({ status: 'checkmate' }) },
-          boardMode: 'play',
-        },
-        'Checkmate!',
-      ],
-      [
-        {
-          gameRef: { current: makeGame({ status: 'draw' }) },
-          boardMode: 'play',
-        },
-        'Draw',
-      ],
-      [
-        {
-          gameRef: { current: makeGame({ status: 'stalemate' }) },
-          boardMode: 'play',
-        },
-        'Draw',
-      ],
-      [
-        {
-          gameRef: { current: makeGame({ inCheck: true }) },
-          boardMode: 'play',
-        },
-        'Check!',
-      ],
-      [
-        {
-          gameRef: { current: makeGame({ turn: 'w' }) },
-          boardMode: 'play',
-          thinking: true,
-        },
-        'Stockfish thinking…',
-      ],
-      [
-        { gameRef: { current: makeGame({ turn: 'w' }) }, boardMode: 'play' },
-        'Your turn',
-      ],
-      [
-        { gameRef: { current: makeGame({ turn: 'b' }) }, boardMode: 'play' },
-        null,
-      ],
-      [{ boardMode: 'explore' }, null],
-    ];
+  it('shows Draw for draw status', () => {
+    const game = createGame();
+    game.status = 'draw';
+    gameRef.current = game;
+    const { result } = renderHook(() =>
+      useEngineIntegration(base({ boardMode: 'play' }))
+    );
+    expect(result.current.statusLabel).toBe('Draw');
+  });
 
-    cases.forEach(([deps, expected]) => {
-      const { result } = renderHook(() =>
-        useEngineIntegration(makeDeps(deps) as never)
-      );
-      expect(result.current.statusLabel).toBe(expected);
-    });
+  it('shows Checkmate! for checkmate status', () => {
+    const game = createGame();
+    game.status = 'checkmate';
+    gameRef.current = game;
+    const { result } = renderHook(() =>
+      useEngineIntegration(base({ boardMode: 'play' }))
+    );
+    expect(result.current.statusLabel).toBe('Checkmate!');
   });
 });

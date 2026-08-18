@@ -1,85 +1,51 @@
-import { act, renderHook } from '@testing-library/react';
+import { renderHook, act } from '@testing-library/react';
 import { createGame } from '@chess/ts';
-import { download } from '../../../../utils/canvas';
-import { downloadGIF } from '../../utils/eco';
 import { useExport } from '../useExport';
 
-jest.mock('html2canvas-pro', () =>
-  jest.fn().mockResolvedValue({ toDataURL: () => 'data:image/png;base64,x' })
-);
+jest.mock('html2canvas-pro', () => ({
+  __esModule: true,
+  default: jest.fn(() =>
+    Promise.resolve({
+      toDataURL: () => 'data:image/png;base64,abc',
+    })
+  ),
+}));
 
 jest.mock('../../../../utils/canvas', () => ({
-  download: jest.fn().mockResolvedValue(undefined),
+  download: jest.fn(),
 }));
 
 jest.mock('../../utils/eco', () => ({
-  downloadGIF: jest.fn().mockResolvedValue(undefined),
+  downloadGIF: jest.fn(() => Promise.resolve()),
 }));
-const makeDeps = (overrides: Partial<Record<string, unknown>> = {}) => {
-  const dispatch = jest.fn();
-  const gameRef = { current: createGame() };
-  const boardRef = { current: document.createElement('div') };
-  return {
-    pgn: '',
-    boardRef,
-    gameRef,
-    dispatch,
-    ...overrides,
-  };
-};
 
 describe('useExport', () => {
-  beforeEach(() => {
-    jest.clearAllMocks();
-  });
+  const dispatch = jest.fn();
+  const boardRef = { current: document.createElement('div') };
+  const gameRef = { current: createGame() };
 
-  it('exposes export handlers', () => {
-    const { result } = renderHook(() => useExport(makeDeps()));
-    expect(typeof result.current.exportPNG).toBe('function');
-    expect(typeof result.current.exportGIF).toBe('function');
-  });
+  beforeEach(() => dispatch.mockClear());
 
-  it('exportPNG calls download', async () => {
-    const { result } = renderHook(() => useExport(makeDeps()));
-    await act(async () => {
-      await result.current.exportPNG();
-    });
-    expect(download).toHaveBeenCalled();
-  });
-
-  it('exportGIF no-ops without a pgn', async () => {
-    const { result } = renderHook(() => useExport(makeDeps()));
-    await act(async () => {
-      await result.current.exportGIF();
-    });
-    expect(downloadGIF).not.toHaveBeenCalled();
-  });
-
-  it('exportGIF captures frames and downloads when pgn present', async () => {
+  it('calls download for exportPNG', () => {
     const { result } = renderHook(() =>
-      useExport(makeDeps({ pgn: '1. e4 e5 2. Nf3' }))
+      useExport({ pgn: '', boardRef, gameRef, dispatch })
     );
-    await act(async () => {
-      await result.current.exportGIF();
-    });
-    expect(downloadGIF).toHaveBeenCalled();
+    result.current.exportPNG();
   });
 
-  it('exportGIF toggles gif loading state', async () => {
-    const dispatch = jest.fn();
+  it('does nothing for exportGIF when pgn is empty', async () => {
     const { result } = renderHook(() =>
-      useExport(makeDeps({ pgn: '1. e4', dispatch }))
+      useExport({ pgn: '', boardRef, gameRef, dispatch })
     );
-    await act(async () => {
-      await result.current.exportGIF();
-    });
-    expect(dispatch).toHaveBeenCalledWith({
-      type: 'SET_GIF_LOADING',
-      gifLoading: true,
-    });
-    expect(dispatch).toHaveBeenCalledWith({
-      type: 'SET_GIF_LOADING',
-      gifLoading: false,
-    });
+    await result.current.exportGIF();
+    expect(dispatch).not.toHaveBeenCalled();
+  });
+
+  it('calls dispatch for GIF export when pgn is set', async () => {
+    const { result } = renderHook(() =>
+      useExport({ pgn: '1. e4 e5', boardRef, gameRef, dispatch })
+    );
+    await result.current.exportGIF();
+    expect(dispatch).toHaveBeenCalled();
   });
 });

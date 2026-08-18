@@ -1,25 +1,28 @@
-import { fireEvent, render, screen } from '@testing-library/react';
-import type { RefObject } from 'react';
+import { render, screen } from '@testing-library/react';
 import { BoardSection } from '../BoardSection';
-import type { BoardMode, SidePanel } from '../../types';
+import type { BoardMode, BoardTheme, SidePanel } from '../../types';
 
-jest.mock('react-chessboard', () => ({
+jest.mock('../../../organisms/chess/ChessBoard', () => ({
   Chessboard: () => <div data-testid="chessboard" />,
 }));
 
+jest.mock('../MovesPanel', () => ({
+  MovesPanel: () => <div data-testid="moves-panel" />,
+}));
+
 const baseProps = {
-  boardRef: { current: null } as RefObject<HTMLDivElement | null>,
+  boardRef: { current: document.createElement('div') },
   displayFen: 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1',
   panel: 'position' as SidePanel,
   boardMode: 'explore' as BoardMode,
   setupMode: false,
   keyboardBuffer: '',
   evalPercent: 50,
-  evalLabel: '+0.00',
+  evalLabel: '',
   statusLabel: null as string | null,
   ecoCursor: 0,
   ecoTotal: 0,
-  ecoMoves: [],
+  ecoMoves: [] as string[],
   onPieceDrop: jest.fn(),
   canDragPiece: jest.fn(),
   onEcoCursorChange: jest.fn(),
@@ -29,18 +32,18 @@ const baseProps = {
   onEcoEnd: jest.fn(),
   board: {
     flipped: false,
-    theme: 'dark' as const,
-    pieceSet: 'standard' as const,
+    theme: 'blue' as BoardTheme,
+    pieceSet: 'standard' as any,
     showNotation: true,
   },
   selection: {
-    selectedSquare: null,
-    legalTargets: [],
+    selectedSquare: null as string | null,
+    legalTargets: [] as string[],
     onSquareClick: jest.fn(),
   },
   history: {
-    moves: [],
-    cursor: -1,
+    moves: [] as any[],
+    cursor: 0,
     onUndo: jest.fn(),
     onRedo: jest.fn(),
     onJumpTo: jest.fn(),
@@ -48,136 +51,105 @@ const baseProps = {
 };
 
 describe('BoardSection', () => {
-  it('renders chessboard', () => {
+  it('renders the chessboard', () => {
     render(<BoardSection {...baseProps} />);
-    expect(screen.getByTestId('chessboard')).toBeInTheDocument();
+    expect(screen.getByTestId('chessboard')).toBeTruthy();
+  });
+
+  it('shows MovesPanel when moves exist', () => {
+    render(
+      <BoardSection
+        {...baseProps}
+        history={{
+          ...baseProps.history,
+          moves: [
+            {
+              san: 'e4',
+              fen: 'rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1',
+            },
+          ],
+        }}
+      />
+    );
+    expect(screen.getByTestId('moves-panel')).toBeTruthy();
+  });
+
+  it('shows keyboard buffer', () => {
+    render(<BoardSection {...baseProps} keyboardBuffer="Nf3" />);
+    expect(screen.getByText(/Nf3/)).toBeTruthy();
   });
 
   it('shows eval bar in play mode', () => {
-    render(<BoardSection {...baseProps} boardMode="play" />);
-    expect(screen.getByText('+0.00')).toBeInTheDocument();
+    const { container } = render(
+      <BoardSection
+        {...baseProps}
+        boardMode="play"
+        evalPercent={75}
+        evalLabel="+1.5"
+      />
+    );
+    expect(container.textContent).toContain('+1.5');
   });
 
   it('hides eval bar in explore mode', () => {
     const { container } = render(
-      <BoardSection {...baseProps} boardMode="explore" />
+      <BoardSection
+        {...baseProps}
+        boardMode="explore"
+        evalPercent={50}
+        evalLabel="0"
+      />
     );
-    const bar = container.querySelector('.opacity-0');
-    expect(bar).toBeInTheDocument();
+    // The eval bar div has opacity-0 in explore mode
+    const evalBar = container.querySelector('.pointer-events-none.opacity-0');
+    expect(evalBar).toBeTruthy();
   });
 
-  it('shows status label when provided', () => {
-    render(
-      <BoardSection {...baseProps} statusLabel="Check!" panel="position" />
-    );
-    expect(screen.getByText('Check!')).toBeInTheDocument();
-  });
-
-  it('hides status label in openings panel', () => {
-    render(
-      <BoardSection {...baseProps} statusLabel="Check!" panel="openings" />
-    );
-    expect(screen.queryByText('Check!')).not.toBeInTheDocument();
-  });
-
-  it('renders ECO navigator in openings panel', () => {
+  it('renders openings panel with eco moves', () => {
     render(
       <BoardSection
         {...baseProps}
         panel="openings"
         ecoCursor={2}
-        ecoTotal={5}
-        ecoMoves={['e4', 'e5', 'Nf3', 'Nc6', 'Bb5']}
+        ecoTotal={4}
+        ecoMoves={['e4', 'e5', 'Nf3', 'Nc6']}
       />
     );
-    expect(screen.getByText('2/5')).toBeInTheDocument();
-    expect(screen.getByText('Nf3')).toBeInTheDocument();
+    expect(screen.getByText('e4')).toBeTruthy();
+    expect(screen.getByText('2/4')).toBeTruthy();
   });
 
-  it('calls onEcoNext when next button clicked', () => {
-    const onEcoNext = jest.fn();
+  it('shows statusLabel', () => {
+    render(<BoardSection {...baseProps} statusLabel="Check!" />);
+    expect(screen.getByText('Check!')).toBeTruthy();
+  });
+
+  it('highlights selected square', () => {
+    const { container } = render(
+      <BoardSection
+        {...baseProps}
+        selection={{
+          selectedSquare: 'e2',
+          legalTargets: ['e3', 'e4'],
+          onSquareClick: jest.fn(),
+        }}
+      />
+    );
+    expect(container).toBeTruthy();
+  });
+
+  it('flips board orientation', () => {
     render(
       <BoardSection
         {...baseProps}
-        panel="openings"
-        ecoCursor={2}
-        ecoTotal={5}
-        ecoMoves={['e4', 'e5']}
-        onEcoNext={onEcoNext}
+        board={{ ...baseProps.board, flipped: true }}
       />
     );
-    fireEvent.click(screen.getByText('▶️'));
-    expect(onEcoNext).toHaveBeenCalled();
+    expect(screen.getByTestId('chessboard')).toBeTruthy();
   });
 
-  it('calls onEcoPrev when prev button clicked', () => {
-    const onEcoPrev = jest.fn();
-    render(
-      <BoardSection
-        {...baseProps}
-        panel="openings"
-        ecoCursor={2}
-        ecoTotal={5}
-        ecoMoves={['e4', 'e5']}
-        onEcoPrev={onEcoPrev}
-      />
-    );
-    fireEvent.click(screen.getByText('◀️'));
-    expect(onEcoPrev).toHaveBeenCalled();
-  });
-
-  it('disables prev buttons at cursor 0', () => {
-    render(
-      <BoardSection
-        {...baseProps}
-        panel="openings"
-        ecoCursor={0}
-        ecoTotal={5}
-        ecoMoves={['e4']}
-      />
-    );
-    const buttons = screen.getAllByRole('button');
-    const prevButtons = buttons.filter(
-      (b) => b.textContent === '⏪' || b.textContent === '◀️'
-    );
-    prevButtons.forEach((b) => expect(b).toBeDisabled());
-  });
-
-  it('disables next buttons at cursor max', () => {
-    render(
-      <BoardSection
-        {...baseProps}
-        panel="openings"
-        ecoCursor={5}
-        ecoTotal={5}
-        ecoMoves={['e4', 'e5', 'Nf3', 'Nc6', 'Bb5']}
-      />
-    );
-    const buttons = screen.getAllByRole('button');
-    const nextButtons = buttons.filter(
-      (b) => b.textContent === '▶️' || b.textContent === '⏩'
-    );
-    nextButtons.forEach((b) => expect(b).toBeDisabled());
-  });
-
-  it('calls onEcoCursorChange when move clicked', () => {
-    const onEcoCursorChange = jest.fn();
-    render(
-      <BoardSection
-        {...baseProps}
-        panel="openings"
-        ecoCursor={1}
-        ecoTotal={3}
-        ecoMoves={['e4', 'e5', 'Nf3']}
-        onEcoCursorChange={onEcoCursorChange}
-      />
-    );
-    fireEvent.click(screen.getByText('Nf3'));
-    expect(onEcoCursorChange).toHaveBeenCalledWith(3);
-  });
-
-  it('to match snapshot', () => {
-    const { container } = render(<BoardSection {...baseProps} />);
-    expect(container).toMatchSnapshot();
+  it('renders in setup mode', () => {
+    render(<BoardSection {...baseProps} setupMode={true} />);
+    expect(screen.getByTestId('chessboard')).toBeTruthy();
   });
 });

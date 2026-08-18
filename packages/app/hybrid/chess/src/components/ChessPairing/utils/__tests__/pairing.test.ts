@@ -111,3 +111,69 @@ describe('setResult', () => {
     expect(next[0].result).toBe('0-1');
   });
 });
+
+describe('pairSwiss edge cases', () => {
+  it('returns empty round for < 2 players', () => {
+    const result = pairSwiss([alice], [], 1);
+    expect(result.matches).toHaveLength(0);
+    expect(result.byes).toHaveLength(0);
+  });
+
+  it('awards bye when all opponents already played', () => {
+    const played = [
+      match(1, 'a', 'b', '1-0'),
+      match(1, 'c', 'd', '0-1'),
+      match(2, 'a', 'c', '1-0'),
+      match(2, 'b', 'd', '1-0'),
+      match(3, 'a', 'd', '1-0'),
+      match(3, 'b', 'c', '1-0'),
+    ];
+    const result = pairSwiss([alice, bob, carol, dave], played, 4);
+    expect(result.matches.length + result.byes.length).toBe(4);
+  });
+
+  it('avoids rematches', () => {
+    const played = [match(1, 'a', 'b', '1-0')];
+    const result = pairSwiss([alice, bob, carol, dave], played, 2);
+    const pairStrings = result.matches.map((m) => `${m.white}-${m.black}`);
+    for (const p of pairStrings) {
+      expect(p).not.toBe('a-b');
+      expect(p).not.toBe('b-a');
+    }
+  });
+});
+
+describe('sortStandings swiss mode', () => {
+  it('sorts by buchholz first then sb in swiss mode', () => {
+    const rows = computeStandings(
+      [alice, bob, carol, dave],
+      [
+        match(1, 'a', 'b', '1-0'),
+        match(1, 'c', 'd', '½-½'),
+        match(2, 'a', 'c', '1-0'),
+        match(2, 'b', 'd', '0-1'),
+      ]
+    );
+    const sorted = sortStandings(rows, 'swiss');
+    expect(sorted[0].player.id).toBe('a');
+  });
+});
+
+describe('computeStandings with BYE', () => {
+  it('skips BYE matches in standings', () => {
+    const byeMatch = {
+      ...match(1, 'a', '__bye__', '1-0'),
+      white: 'a',
+      black: '__bye__',
+    };
+    const rows = computeStandings([alice, bob], [byeMatch]);
+    expect(rows.find((r) => r.player.id === 'a')!.points).toBe(0);
+  });
+
+  it('handles draws in sonneborn-berger', () => {
+    const rows = computeStandings([alice, bob], [match(1, 'a', 'b', '½-½')]);
+    const a = rows.find((r) => r.player.id === 'a')!;
+    expect(a.draws).toBe(1);
+    expect(a.sb).toBeCloseTo(0.25, 5);
+  });
+});
