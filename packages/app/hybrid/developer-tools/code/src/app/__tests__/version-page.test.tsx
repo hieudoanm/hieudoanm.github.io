@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import VersionPage from '../version/page';
+import VersionPage from '../(info)/version/page';
 
 describe('VersionPage', () => {
   afterEach(() => {

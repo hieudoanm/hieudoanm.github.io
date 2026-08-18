@@ -1,8 +1,8 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import ErrorPage from '../error';
 import NotFoundPage from '../not-found';
-import AboutPage from '../about/page';
-import VersionPage from '../version/page';
+import AboutPage from '../(info)/about/page';
+import VersionPage from '../(info)/version/page';
 import HomePage from '../page';
 import RootLayout, { metadata } from '../layout';
 

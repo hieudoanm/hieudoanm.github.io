@@ -11,7 +11,7 @@ export const AboutTemplate: FC<{
   version: string;
   items: InfoRow[];
 }> = ({ name, description, version, items }) => (
-  <div className="flex min-h-screen flex-col items-center justify-center px-6 py-24">
+  <div className="flex h-full flex-col items-center justify-center px-6 py-24">
     <p className="text-base-content/50 mb-6 text-xs tracking-[0.2em] uppercase">
       About
     </p>

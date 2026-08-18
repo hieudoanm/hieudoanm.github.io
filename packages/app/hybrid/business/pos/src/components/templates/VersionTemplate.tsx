@@ -14,14 +14,12 @@ export const VersionTemplate: FC<{ version: string }> = ({ version }) => {
   const hasSegments = year && month && day;
 
   return (
-    <div className="bg-neutral text-neutral-content flex min-h-screen flex-col items-center justify-center px-6 py-24">
+    <div className="text-neutral-content flex h-full flex-col items-center justify-center px-6 py-24">
       <p className="text-neutral-content/50 mb-6 text-xs tracking-[0.2em] uppercase">
         Current deployment
       </p>
 
-      <h1 className="mb-3 text-4xl font-light tracking-tight">
-        POS Version
-      </h1>
+      <h1 className="mb-3 text-4xl font-light tracking-tight">POS Version</h1>
 
       <p className="text-neutral-content/50 mb-10 max-w-sm text-center text-sm">
         Build version of the current deployment

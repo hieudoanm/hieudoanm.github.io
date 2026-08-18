@@ -64,5 +64,5 @@
 - [ ] Light and dark themes
 - [ ] Offline-first with sync
 - [ ] Mobile-optimized touch interface
-- [ ] Keyboard shortcuts for快速 operations
+- [ ] Keyboard shortcuts for operations
 - [ ] Thermal printer integration

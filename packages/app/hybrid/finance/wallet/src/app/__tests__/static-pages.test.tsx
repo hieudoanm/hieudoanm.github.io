@@ -7,8 +7,8 @@ jest.mock('next/link', () => require('@/test-helpers').mockLinkModule);
 
 import { screen, fireEvent, waitFor } from '@testing-library/react';
 import { renderWithProviders } from '@/test-helpers';
-import AboutPage from '@/app/about/page';
-import VersionPage from '@/app/version/page';
+import AboutPage from '@/app/(info)/about/page';
+import VersionPage from '@/app/(info)/version/page';
 import ErrorPage from '@/app/error';
 import NotFoundPage from '@/app/not-found';
 import RootLayout from '@/app/layout';

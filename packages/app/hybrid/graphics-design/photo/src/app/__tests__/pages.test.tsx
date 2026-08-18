@@ -25,15 +25,13 @@ jest.mock('next/navigation', () => ({
 
 jest.mock('@/lib/photo-tools', () => ({
   downloadBlob: jest.fn(),
-  loadImage: jest
-    .fn()
-    .mockResolvedValue({
-      width: 100,
-      height: 100,
-      naturalWidth: 100,
-      naturalHeight: 100,
-      src: '',
-    }),
+  loadImage: jest.fn().mockResolvedValue({
+    width: 100,
+    height: 100,
+    naturalWidth: 100,
+    naturalHeight: 100,
+    src: '',
+  }),
 }));
 
 jest.mock('@/utils/trpc', () => ({
@@ -75,8 +73,8 @@ import AlbumsPage from '@/app/albums/page';
 import SettingsPage from '@/app/settings/page';
 import NotFoundPage from '@/app/not-found';
 import ErrorPage from '@/app/error';
-import AboutPage from '@/app/about/page';
-import VersionPage from '@/app/version/page';
+import AboutPage from '@/app/(info)/about/page';
+import VersionPage from '@/app/(info)/version/page';
 import ProfilePage from '@/app/profile/page';
 import RootLayout from '@/app/layout';
 import { db } from '@/lib/db';

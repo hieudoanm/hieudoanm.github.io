@@ -1,5 +1,5 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import VersionPage from '@/app/version/page';
+import VersionPage from '@/app/(info)/version/page';
 
 const writeText = jest.fn().mockResolvedValue(undefined);
 

@@ -29,9 +29,10 @@ describe('DownloadsTemplate', () => {
 
   it('renders download links with labels', () => {
     render(<DownloadsTemplate {...PROPS} />);
-    expect(
-      screen.getByRole('link', { name: 'Download .dmg' })
-    ).toHaveAttribute('href', PROPS.items[0].href);
+    expect(screen.getByRole('link', { name: 'Download .dmg' })).toHaveAttribute(
+      'href',
+      PROPS.items[0].href
+    );
     expect(
       screen.getByRole('link', { name: 'Download .AppImage' })
     ).toHaveAttribute('href', PROPS.items[1].href);
@@ -41,10 +42,5 @@ describe('DownloadsTemplate', () => {
     render(<DownloadsTemplate {...PROPS} />);
     expect(screen.getByText('v0.0.1')).toBeInTheDocument();
     expect(screen.getByText('Stable')).toBeInTheDocument();
-  });
-
-  it('links back to home', () => {
-    render(<DownloadsTemplate {...PROPS} />);
-    expect(document.querySelector('a[href="/"]')).toBeInTheDocument();
   });
 });

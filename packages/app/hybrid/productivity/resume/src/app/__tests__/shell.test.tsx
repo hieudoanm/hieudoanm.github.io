@@ -2,8 +2,8 @@ import { render, screen } from '@testing-library/react';
 import RootLayout from '../layout';
 import ErrorBoundary from '../error';
 import NotFound from '../not-found';
-import AboutPage from '../about/page';
-import VersionPage from '../version/page';
+import AboutPage from '../(info)/about/page';
+import VersionPage from '../(info)/version/page';
 
 describe('app shell', () => {
   it('renders the root layout with children', () => {
