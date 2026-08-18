@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-pnpm run lint --filter=...[origin/master]
-pnpm run build --filter=...[origin/master]
-pnpm run format --filter=...[origin/master]
+pnpm run lint --filter=...[origin/master] --concurrency=2
+pnpm run build --filter=...[origin/master] --concurrency=2
+pnpm run format --filter=...[origin/master] --concurrency=2
 git add -A

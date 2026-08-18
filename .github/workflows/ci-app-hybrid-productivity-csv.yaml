@@ -1,0 +1,32 @@
+name: CI - App - Hybrid - Productivity - CSV
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/productivity/csv/**'
+      - '.github/workflows/ci-app-hybrid-productivity-csv.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-hybrid-productivity-csv-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/productivity/csv
+      filter: '@hieudoanm.github.io/csv'
+      releaseName: app-hybrid-productivity-csv-latest
+      releaseTitle: App - Hybrid - Productivity - CSV (latest)
+      artifactPrefix: productivity-csv

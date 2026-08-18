@@ -10,7 +10,7 @@ fi
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 HYBRID_DIR="$ROOT_DIR/packages/app/hybrid"
 DOCS_DIR="$ROOT_DIR/docs"
-ROOT_APP="docs"
+ROOT_APP="utilities/docs"
 
 require() {
     command -v "$1" >/dev/null 2>&1 || {
@@ -34,17 +34,18 @@ docs app) has an output in docs/downloads and fails otherwise.
 Options:
   --all           Build and copy all apps in packages/app/hybrid (default)
   --app, -a       Only build/copy the docs app to docs/
-  --name <app>    Only build/copy a specific app in packages/app/hybrid
+  --name <path>   Only build/copy a specific app (e.g. developer-tools/api)
   --help, -h      Show this help
 EOF
 }
 
 build_app() {
-    local app_name="$1"
-    local app_dir="$HYBRID_DIR/$app_name"
+    local app_path="$1"
+    local app_dir="$HYBRID_DIR/$app_path"
+    local app_name="${app_path##*/}"
 
     if [[ ! -f "$app_dir/package.json" ]] || [[ ! -f "$app_dir/next.config.ts" ]]; then
-        echo "Skipping $app_name: not a Next.js app."
+        echo "Skipping $app_path: not a Next.js app."
         return
     fi
 
@@ -52,13 +53,13 @@ build_app() {
     local base_path=""
     local dest_dir="$DOCS_DIR"
 
-    if [[ "$app_name" != "$ROOT_APP" ]]; then
+    if [[ "$app_path" != "$ROOT_APP" ]]; then
         base_path="/downloads/$app_name"
         dest_dir="$DOCS_DIR/downloads/$app_name"
     fi
 
     if [[ -n "$base_path" ]]; then
-        echo "Rebuilding $app_name with BASE_PATH=$base_path..."
+        echo "Rebuilding $app_path with BASE_PATH=$base_path..."
         (
             cd "$app_dir"
             env BASE_PATH="$base_path" pnpm run build
@@ -81,21 +82,28 @@ build_app() {
 
 build_ordered() {
     local apps=("$@")
-    local app_name
-    for app_name in "${apps[@]}"; do
-        [[ "$app_name" == "$ROOT_APP" ]] && build_app "$app_name"
+    local app_path
+    for app_path in "${apps[@]}"; do
+        [[ "$app_path" == "$ROOT_APP" ]] && build_app "$app_path"
     done
-    for app_name in "${apps[@]}"; do
-        [[ "$app_name" != "$ROOT_APP" ]] && build_app "$app_name"
+    for app_path in "${apps[@]}"; do
+        [[ "$app_path" != "$ROOT_APP" ]] && build_app "$app_path"
     done
 }
 
 build_all_apps() {
     local apps=()
-    for app_dir in "$HYBRID_DIR"/*/; do
-        local app_name="${app_dir%/}"
-        app_name="${app_name##*/}"
-        apps+=("$app_name")
+    for category_dir in "$HYBRID_DIR"/*/; do
+        [[ ! -d "$category_dir" ]] && continue
+        local category="${category_dir%/}"
+        category="${category##*/}"
+        [[ "$category" == "docs" ]] && continue
+        for app_dir in "$category_dir"*/; do
+            [[ ! -d "$app_dir" ]] && continue
+            local app_name="${app_dir%/}"
+            app_name="${app_name##*/}"
+            apps+=("$category/$app_name")
+        done
     done
     build_ordered "${apps[@]}"
     verify_downloads
@@ -103,16 +111,22 @@ build_all_apps() {
 
 verify_downloads() {
     local missing=()
-    for app_dir in "$HYBRID_DIR"/*/; do
-        local app_name="${app_dir%/}"
-        app_name="${app_name##*/}"
-        [[ "$app_name" == "$ROOT_APP" ]] && continue
-        if [[ ! -f "$app_dir/package.json" ]] || [[ ! -f "$app_dir/next.config.ts" ]]; then
-            continue
-        fi
-        if [[ ! -d "$DOCS_DIR/downloads/$app_name" ]]; then
-            missing+=("$app_name")
-        fi
+    for category_dir in "$HYBRID_DIR"/*/; do
+        [[ ! -d "$category_dir" ]] && continue
+        local category="${category_dir%/}"
+        category="${category##*/}"
+        [[ "$category" == "docs" ]] && continue
+        for app_dir in "$category_dir"*/; do
+            [[ ! -d "$app_dir" ]] && continue
+            local app_name="${app_dir%/}"
+            app_name="${app_name##*/}"
+            if [[ ! -f "$app_dir/package.json" ]] || [[ ! -f "$app_dir/next.config.ts" ]]; then
+                continue
+            fi
+            if [[ ! -d "$DOCS_DIR/downloads/$app_name" ]]; then
+                missing+=("$category/$app_name")
+            fi
+        done
     done
     if [[ ${#missing[@]} -gt 0 ]]; then
         echo "Error: missing build outputs in $DOCS_DIR/downloads: ${missing[*]}" >&2
@@ -141,7 +155,7 @@ while [[ $# -gt 0 ]]; do
             ;;
         --name)
             if [[ $# -lt 2 ]]; then
-                echo "Error: --name requires an app name." >&2
+                echo "Error: --name requires a path (e.g. developer-tools/api)." >&2
                 exit 1
             fi
             app_names+=("$2")

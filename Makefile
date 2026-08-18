@@ -31,14 +31,26 @@ start-docs:
 start-football:
 	pnpm run dev --filter=@hieudoanm.github.io/football
 
+start-keynotes:
+	pnpm run dev --filter=@hieudoanm.github.io/keynotes
+
 start-markdown:
 	pnpm run dev --filter=@hieudoanm.github.io/markdown
+
+start-messaging:
+	pnpm run dev --filter=@hieudoanm.github.io/messaging
+
+start-nikoli:
+	pnpm run dev --filter=@hieudoanm.github.io/nikoli
 
 start-password:
 	pnpm run dev --filter=@hieudoanm.github.io/password
 
 start-pdf:
 	pnpm run dev --filter=@hieudoanm.github.io/pdf
+
+start-pos:
+	pnpm run dev --filter=@hieudoanm.github.io/pos
 
 start-photo:
 	pnpm run dev --filter=@hieudoanm.github.io/photo
