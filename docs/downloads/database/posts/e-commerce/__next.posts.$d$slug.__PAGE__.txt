@@ -1,0 +1,379 @@
+1:"$Sreact.fragment"
+2:I[18086,["/downloads/database/_next/static/chunks/1pf2amf9r7xi6.js","/downloads/database/_next/static/chunks/1e8x-k6o8wp_i.js"],""]
+3:T2b19,<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="1400" viewBox="0 0 1140 1400" font-family="ui-monospace, SFMono-Regular, monospace">
+  <rect width="100%" height="100%" fill="#0f172a"/>
+  <g data-table="ADDRESSES">
+    <rect x="40" y="40" width="220" height="200" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 40 80 L 260 80" stroke="#334155"/>
+    <text x="52" y="66" font-size="13" font-weight="600" fill="#e2e8f0">ADDRESSES</text>
+      <text x="52" y="96" font-size="11" fill="#9ca3af">&#128273; id</text>
+      <text x="52" y="120" font-size="11" fill="#9ca3af">customer_id</text>
+      <text x="52" y="144" font-size="11" fill="#9ca3af">line1</text>
+      <text x="52" y="168" font-size="11" fill="#9ca3af">city</text>
+      <text x="52" y="192" font-size="11" fill="#9ca3af">country</text>
+      <text x="52" y="216" font-size="11" fill="#9ca3af">postal_code</text>
+  </g>
+  <g data-table="CART_ITEMS">
+    <rect x="460" y="40" width="220" height="152" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 460 80 L 680 80" stroke="#334155"/>
+    <text x="472" y="66" font-size="13" font-weight="600" fill="#e2e8f0">CART_ITEMS</text>
+      <text x="472" y="96" font-size="11" fill="#9ca3af">&#128273; id</text>
+      <text x="472" y="120" font-size="11" fill="#9ca3af">cart_id</text>
+      <text x="472" y="144" font-size="11" fill="#9ca3af">variant_id</text>
+      <text x="472" y="168" font-size="11" fill="#9ca3af">quantity</text>
+  </g>
+  <g data-table="CARTS">
+    <rect x="880" y="40" width="220" height="128" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 880 80 L 1100 80" stroke="#334155"/>
+    <text x="892" y="66" font-size="13" font-weight="600" fill="#e2e8f0">CARTS</text>
+      <text x="892" y="96" font-size="11" fill="#9ca3af">&#128273; id</text>
+      <text x="892" y="120" font-size="11" fill="#9ca3af">customer_id</text>
+      <text x="892" y="144" font-size="11" fill="#9ca3af">status</text>
+  </g>
+  <g data-table="CATEGORIES">
+    <rect x="40" y="248" width="220" height="128" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 40 288 L 260 288" stroke="#334155"/>
+    <text x="52" y="274" font-size="13" font-weight="600" fill="#e2e8f0">CATEGORIES</text>
+      <text x="52" y="304" font-size="11" fill="#9ca3af">&#128273; id</text>
+      <text x="52" y="328" font-size="11" fill="#9ca3af">name</text>
+      <text x="52" y="352" font-size="11" fill="#9ca3af">parent_id</text>
+  </g>
+  <g data-table="CUSTOMERS">
+    <rect x="460" y="272" width="220" height="152" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 460 312 L 680 312" stroke="#334155"/>
+    <text x="472" y="298" font-size="13" font-weight="600" fill="#e2e8f0">CUSTOMERS</text>
+      <text x="472" y="328" font-size="11" fill="#9ca3af">&#128273; id</text>
+      <text x="472" y="352" font-size="11" fill="#9ca3af">email</text>
+      <text x="472" y="376" font-size="11" fill="#9ca3af">name</text>
+      <text x="472" y="400" font-size="11" fill="#9ca3af">created_at</text>
+  </g>
+  <g data-table="INVENTORY">
+    <rect x="880" y="272" width="220" height="152" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 880 312 L 1100 312" stroke="#334155"/>
+    <text x="892" y="298" font-size="13" font-weight="600" fill="#e2e8f0">INVENTORY</text>
+      <text x="892" y="328" font-size="11" fill="#9ca3af">&#128273; id</text>
+      <text x="892" y="352" font-size="11" fill="#9ca3af">variant_id</text>
+      <text x="892" y="376" font-size="11" fill="#9ca3af">quantity</text>
+      <text x="892" y="400" font-size="11" fill="#9ca3af">location</text>
+  </g>
+  <g data-table="ORDER_ITEMS">
+    <rect x="40" y="648" width="220" height="224" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 40 688 L 260 688" stroke="#334155"/>
+    <text x="52" y="674" font-size="13" font-weight="600" fill="#e2e8f0">ORDER_ITEMS</text>
+      <text x="52" y="704" font-size="11" fill="#9ca3af">&#128273; id</text>
+      <text x="52" y="728" font-size="11" fill="#9ca3af">order_id</text>
+      <text x="52" y="752" font-size="11" fill="#9ca3af">variant_id</text>
+      <text x="52" y="776" font-size="11" fill="#9ca3af">product_name</text>
+      <text x="52" y="800" font-size="11" fill="#9ca3af">sku</text>
+      <text x="52" y="824" font-size="11" fill="#9ca3af">unit_price</text>
+      <text x="52" y="848" font-size="11" fill="#9ca3af">quantity</text>
+  </g>
+  <g data-table="ORDERS">
+    <rect x="460" y="744" width="220" height="272" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 460 784 L 680 784" stroke="#334155"/>
+    <text x="472" y="770" font-size="13" font-weight="600" fill="#e2e8f0">ORDERS</text>
+      <text x="472" y="800" font-size="11" fill="#9ca3af">&#128273; id</text>
+      <text x="472" y="824" font-size="11" fill="#9ca3af">customer_id</text>
+      <text x="472" y="848" font-size="11" fill="#9ca3af">shipping_address_id</text>
+      <text x="472" y="872" font-size="11" fill="#9ca3af">subtotal</text>
+      <text x="472" y="896" font-size="11" fill="#9ca3af">shipping</text>
+      <text x="472" y="920" font-size="11" fill="#9ca3af">tax</text>
+      <text x="472" y="944" font-size="11" fill="#9ca3af">total</text>
+      <text x="472" y="968" font-size="11" fill="#9ca3af">status</text>
+      <text x="472" y="992" font-size="11" fill="#9ca3af">placed_at</text>
+  </g>
+  <g data-table="PAYMENTS">
+    <rect x="880" y="600" width="220" height="200" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 880 640 L 1100 640" stroke="#334155"/>
+    <text x="892" y="626" font-size="13" font-weight="600" fill="#e2e8f0">PAYMENTS</text>
+      <text x="892" y="656" font-size="11" fill="#9ca3af">&#128273; id</text>
+      <text x="892" y="680" font-size="11" fill="#9ca3af">order_id</text>
+      <text x="892" y="704" font-size="11" fill="#9ca3af">amount</text>
+      <text x="892" y="728" font-size="11" fill="#9ca3af">method</text>
+      <text x="892" y="752" font-size="11" fill="#9ca3af">status</text>
+      <text x="892" y="776" font-size="11" fill="#9ca3af">paid_at</text>
+  </g>
+  <g data-table="PRODUCT_CATEGORIES">
+    <rect x="40" y="592" width="220" height="104" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 40 632 L 260 632" stroke="#334155"/>
+    <text x="52" y="618" font-size="13" font-weight="600" fill="#e2e8f0">PRODUCT_CATEGORIES</text>
+      <text x="52" y="648" font-size="11" fill="#9ca3af">&#128273; product_id</text>
+      <text x="52" y="672" font-size="11" fill="#9ca3af">&#128273; category_id</text>
+  </g>
+  <g data-table="PRODUCTS">
+    <rect x="460" y="808" width="220" height="176" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 460 848 L 680 848" stroke="#334155"/>
+    <text x="472" y="834" font-size="13" font-weight="600" fill="#e2e8f0">PRODUCTS</text>
+      <text x="472" y="864" font-size="11" fill="#9ca3af">&#128273; id</text>
+      <text x="472" y="888" font-size="11" fill="#9ca3af">title</text>
+      <text x="472" y="912" font-size="11" fill="#9ca3af">description</text>
+      <text x="472" y="936" font-size="11" fill="#9ca3af">base_price</text>
+      <text x="472" y="960" font-size="11" fill="#9ca3af">active</text>
+  </g>
+  <g data-table="REVIEWS">
+    <rect x="880" y="880" width="220" height="200" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 880 920 L 1100 920" stroke="#334155"/>
+    <text x="892" y="906" font-size="13" font-weight="600" fill="#e2e8f0">REVIEWS</text>
+      <text x="892" y="936" font-size="11" fill="#9ca3af">&#128273; id</text>
+      <text x="892" y="960" font-size="11" fill="#9ca3af">product_id</text>
+      <text x="892" y="984" font-size="11" fill="#9ca3af">customer_id</text>
+      <text x="892" y="1008" font-size="11" fill="#9ca3af">rating</text>
+      <text x="892" y="1032" font-size="11" fill="#9ca3af">body</text>
+      <text x="892" y="1056" font-size="11" fill="#9ca3af">created_at</text>
+  </g>
+  <g data-table="VARIANTS">
+    <rect x="40" y="1160" width="220" height="200" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 40 1200 L 260 1200" stroke="#334155"/>
+    <text x="52" y="1186" font-size="13" font-weight="600" fill="#e2e8f0">VARIANTS</text>
+      <text x="52" y="1216" font-size="11" fill="#9ca3af">&#128273; id</text>
+      <text x="52" y="1240" font-size="11" fill="#9ca3af">product_id</text>
+      <text x="52" y="1264" font-size="11" fill="#9ca3af">sku</text>
+      <text x="52" y="1288" font-size="11" fill="#9ca3af">size</text>
+      <text x="52" y="1312" font-size="11" fill="#9ca3af">color</text>
+      <text x="52" y="1336" font-size="11" fill="#9ca3af">price</text>
+  </g>
+  <path d="M 680 324 C 360 324, 360 92, 40 92" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="CUSTOMERS.ADDRESSES"/>
+  <path d="M 680 324 C 780 324, 780 92, 880 92" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="CUSTOMERS.CARTS"/>
+  <path d="M 680 324 C 570 324, 570 796, 460 796" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="CUSTOMERS.ORDERS"/>
+  <path d="M 1100 92 C 780 92, 780 92, 460 92" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="CARTS.CART_ITEMS"/>
+  <path d="M 680 860 C 570 860, 570 92, 460 92" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="PRODUCTS.CART_ITEMS"/>
+  <path d="M 680 860 C 360 860, 360 1212, 40 1212" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="PRODUCTS.VARIANTS"/>
+  <path d="M 260 1212 C 360 1212, 360 92, 460 92" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="VARIANTS.CART_ITEMS"/>
+  <path d="M 260 1212 C 570 1212, 570 324, 880 324" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="VARIANTS.INVENTORY"/>
+  <path d="M 680 860 C 360 860, 360 644, 40 644" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="PRODUCTS.PRODUCT_CATEGORIES"/>
+  <path d="M 260 300 C 150 300, 150 644, 40 644" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="CATEGORIES.PRODUCT_CATEGORIES"/>
+  <path d="M 680 860 C 780 860, 780 932, 880 932" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="PRODUCTS.REVIEWS"/>
+  <path d="M 680 324 C 780 324, 780 932, 880 932" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="CUSTOMERS.REVIEWS"/>
+  <path d="M 680 796 C 360 796, 360 700, 40 700" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="ORDERS.ORDER_ITEMS"/>
+  <path d="M 260 1212 C 150 1212, 150 700, 40 700" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="VARIANTS.ORDER_ITEMS"/>
+  <path d="M 680 796 C 780 796, 780 652, 880 652" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="ORDERS.PAYMENTS"/>
+  <path d="M 260 92 C 360 92, 360 796, 460 796" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="ADDRESSES.ORDERS"/>
+</svg>1a:X
+1f:X
+1f:C
+0:{"buildId":"jQaBASBzw1ThkB6MOaG0J","data":[{"rsc":["$","$1","c",{"children":[["$","div",null,{"className":"bg-base-100 min-h-screen","children":[["$","header",null,{"className":"border-base-300 bg-base-100 sticky top-0 z-10 flex items-center justify-between border-b px-6 py-4","children":[["$","h1",null,{"className":"text-xl font-bold","children":"Schema Library"}],["$","$L2",null,{"href":"/posts","className":"btn btn-ghost btn-sm gap-2","children":[["$","svg",null,{"stroke":"currentColor","fill":"none","strokeWidth":"2","viewBox":"0 0 24 24","strokeLinecap":"round","strokeLinejoin":"round","className":"size-3.5","children":["$undefined",[["$","line","0",{"x1":"19","y1":"12","x2":"5","y2":"12","children":[]}],["$","polyline","1",{"points":"12 19 5 12 12 5","children":[]}]]],"style":{},"height":"1em","width":"1em","xmlns":"http://www.w3.org/2000/svg"}]," All schemas"]}]]}],["$","main",null,{"className":"mx-auto max-w-3xl p-6","children":[["$","article",null,{"className":"prose-invert","children":[["$","h1","0",{"className":"mb-2 mt-2 text-2xl font-bold text-slate-50","children":["E-Commerce Platform"]}],["$","blockquote","1",{"className":"border-l-4 border-indigo-500/60 pl-4 text-slate-400","children":[["$","p","0",{"className":"mb-2 last:mb-0","children":["A Shopify/Amazon-style retail platform: products with variants, shopping"]}],["$","p","1",{"className":"mb-2 last:mb-0","children":["carts, orders, payments, inventory, and customer reviews. This is the schema"]}],["$","p","2",{"className":"mb-2 last:mb-0","children":["shape most backend engineers are asked to design in interviews."]}]]}],["$","h2","2",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["ER Diagram (Mermaid)"]}],["$","div","3",{"className":"overflow-x-auto rounded-xl border border-slate-800","dangerouslySetInnerHTML":{"__html":"$3"}}],"$L4","$L5","$L6","$L7","$L8","$L9","$La","$Lb","$Lc","$Ld","$Le","$Lf","$L10","$L11","$L12","$L13","$L14","$L15"]}],"$L16"]}]]}],["$L17"],"$L18"]}],"isPartial":"$@19","staleTime":"$1a","varyParams":null},{"rsc":"$L1b","isPartial":"$@1c","staleTime":"$1a","varyParams":null},{"rsc":"$L1d","isPartial":"$@1e","staleTime":"$1a","varyParams":"$1f"},{"rsc":"$L20","isPartial":"$@21","staleTime":"$1a","varyParams":"$1f"},{"rsc":"$L22","isPartial":"$@23","staleTime":"$1a","varyParams":null}],"isUpgradeableISRFallback":false,"a":"$@24","rootVaryParams":null,"needsRuntimeRequest":"$@25"}
+32:I[80475,["/downloads/database/_next/static/chunks/1pf2amf9r7xi6.js"],"OutletBoundary"]
+33:"$Sreact.suspense"
+35:I[80475,["/downloads/database/_next/static/chunks/1pf2amf9r7xi6.js"],"ViewportBoundary"]
+36:I[80475,["/downloads/database/_next/static/chunks/1pf2amf9r7xi6.js"],"MetadataBoundary"]
+37:I[83039,["/downloads/database/_next/static/chunks/1pf2amf9r7xi6.js"],"default"]
+38:I[88811,["/downloads/database/_next/static/chunks/1pf2amf9r7xi6.js"],"default"]
+39:I[83039,["/downloads/database/_next/static/chunks/1pf2amf9r7xi6.js"],"LoadingBoundaryProvider"]
+3a:I[41483,["/downloads/database/_next/static/chunks/1pf2amf9r7xi6.js"],"SWProvider"]
+3b:I[11443,["/downloads/database/_next/static/chunks/1pf2amf9r7xi6.js","/downloads/database/_next/static/chunks/0diaj63e-swhp.js"],"default"]
+3c:I[40523,["/downloads/database/_next/static/chunks/1pf2amf9r7xi6.js","/downloads/database/_next/static/chunks/2ppd_asr3igts.js"],"default"]
+:HL["/downloads/database/_next/static/chunks/20u-5yuc8yzrr.css","style"]
+4:["$","h2","4",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["ASCII Diagram"]}]
+26:T661,                    +-----------------+
+                    |   CATEGORIES    |--- parent_id (self FK)
+                    +-----------------+
+                            ^
+                            |
+            +-------------------------------+
+            |       PRODUCT_CATEGORIES      | (junction)
+            +-------------------------------+
+                            |
+                            v
++-----------+      +-----------------+      +-----------+
+| CUSTOMERS |<-----|    PRODUCTS     |----->|  REVIEWS  |
++-----------+      +-----------------+      +-----------+
+     |                    |
+     |                    |
+     |             +------------+      +--------+      +-------------+
+     |             |  VARIANTS  |      |CARTS   |      | CART_ITEMS  |
+     |             +------------+      +--------+      +-------------+
+     |                  |                   |                |
+     |                  v                   v                |
+     |           +------------+        +--------+            |
+     |           | INVENTORY  |        |        |            |
+     |           +------------+        |        |            |
+     |                                 +--------+            |
+     v                                                       |
++-----------+      +------------+      +------------+        |
+| ADDRESSES |<-----|   ORDERS   |<-----| ORDER_ITEMS|<-------+
++-----------+      +------------+      +------------+
+                          |
+                          v
+                   +------------+
+                   |  PAYMENTS  |
+                   +------------+5:["$","div","5",{"className":"mb-4","children":["$","pre",null,{"className":"overflow-x-auto rounded-xl border border-slate-800 bg-slate-950 p-4 text-[13px] leading-relaxed text-slate-300","children":["$","code",null,{"children":"$26"}]}]}]
+6:["$","h2","6",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["Tables"]}]
+7:["$","div","7",{"className":"mb-4","children":["$","div",null,{"className":"overflow-x-auto rounded-xl border border-slate-800","children":["$","table",null,{"className":"w-full text-left text-sm","children":[["$","thead",null,{"children":["$","tr",null,{"className":"border-b border-slate-800 bg-slate-900/60","children":[["$","th","0",{"className":"px-4 py-2 font-semibold text-slate-200","children":["Table"]}],["$","th","1",{"className":"px-4 py-2 font-semibold text-slate-200","children":["PK"]}],["$","th","2",{"className":"px-4 py-2 font-semibold text-slate-200","children":["Key FKs"]}],["$","th","3",{"className":"px-4 py-2 font-semibold text-slate-200","children":["Notes"]}]]}]}],["$","tbody",null,{"children":[["$","tr","0",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Customers"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":["—"]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["—"]}]]}],["$","tr","1",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Addresses"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"customer_id → Customers"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Many addresses per customer"]}]]}],["$","tr","2",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Products"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":["—"]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Base product (title, price)"]}]]}],["$","tr","3",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Variants"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"product_id → Products"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["SKU/size/colour per item"]}]]}],["$","tr","4",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Categories"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"parent_id → Categories"}]," (self FK)"]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":"$L27"}]]}],"$L28","$L29","$L2a","$L2b","$L2c","$L2d","$L2e","$L2f"]}]]}]}]}]
+8:["$","h2","8",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["Notable Design Patterns"]}]
+9:["$","ul","9",{"className":"mb-4 list-disc space-y-1 pl-5 text-slate-400","children":[["$","li","0",{"children":[["$","strong","0",{"className":"font-semibold text-slate-100","children":"Product → Variant split"}],": the core e-commerce modelling decision."]}]]}]
+a:["$","p","10",{"className":"mb-4 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Products"}]," holds the title/description; ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Variants"}]," holds SKU, size, colour, and price. Inventory and order lines hang off the variant."]}]
+b:["$","ul","11",{"className":"mb-4 list-disc space-y-1 pl-5 text-slate-400","children":[["$","li","0",{"children":[["$","strong","0",{"className":"font-semibold text-slate-100","children":"Snapshotting at order time"}],": ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Order_Items.product_name"}],"/",["$","code","4",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"sku"}],"/",["$","code","6",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"unit_price"}]]}]]}]
+c:["$","p","12",{"className":"mb-4 text-slate-400","children":["are _copied_ into the line, never FK'd back — the seller can later rename or re-price a product without rewriting history."]}]
+d:["$","ul","13",{"className":"mb-4 list-disc space-y-1 pl-5 text-slate-400","children":[["$","li","0",{"children":[["$","strong","0",{"className":"font-semibold text-slate-100","children":"Self-FK category tree"}]," (",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Categories.parent_id"}],") supports unlimited nesting."]}],["$","li","1",{"children":[["$","strong","0",{"className":"font-semibold text-slate-100","children":"Cart vs Order separation"}],": ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Carts"}],"/",["$","code","4",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Cart_Items"}]," are mutable; ",["$","code","6",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Orders"}],"/"]}]]}]
+e:["$","p","14",{"className":"mb-4 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Order_Items"}]," are immutable once placed. Two very different lifetime models."]}]
+f:["$","ul","15",{"className":"mb-4 list-disc space-y-1 pl-5 text-slate-400","children":[["$","li","0",{"children":[["$","strong","0",{"className":"font-semibold text-slate-100","children":"Status strings as data"}],": ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"orders.status"}]," and ",["$","code","4",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"payments.status"}]," form simple"]}]]}]
+10:["$","p","16",{"className":"mb-4 text-slate-400","children":["state machines queryable with ",["$","code","1",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"WHERE"}],"."]}]
+11:["$","h2","17",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["Sample Queries"]}]
+30:T48a,-- Highest grossing products (by current variant price, last 90 days)
+SELECT p.title, SUM(oi.quantity * oi.unit_price) AS gross
+FROM order_items oi
+JOIN orders o ON o.id = oi.order_id
+JOIN products p ON p.id = oi.product_id
+WHERE o.status = 'completed' AND o.placed_at >= datetime('now', '-90 days')
+GROUP BY p.id
+ORDER BY gross DESC
+LIMIT 10;
+
+-- Low stock variants (below 10 units)
+SELECT v.sku, v.size, v.color, SUM(i.quantity) AS stock
+FROM variants v
+JOIN inventory i ON i.variant_id = v.id
+GROUP BY v.id
+HAVING stock < 10
+ORDER BY stock ASC;
+
+-- Average rating per category, only categories with 3+ reviews
+SELECT c.name, AVG(r.rating) AS avg_rating, COUNT(r.id) AS reviews
+FROM categories c
+JOIN product_categories pc ON pc.category_id = c.id
+JOIN reviews r ON r.product_id = pc.product_id
+GROUP BY c.id
+HAVING COUNT(r.id) >= 3
+ORDER BY avg_rating DESC;
+
+-- Abandoned carts (created, never converted, older than 7 days)
+SELECT c.id, cus.email, SUM(ci.quantity) AS items
+FROM carts c
+JOIN customers cus ON cus.id = c.customer_id
+JOIN cart_items ci  ON ci.cart_id = c.id
+WHERE c.status = 'active' AND c.created_at < datetime('now', '-7 days')
+GROUP BY c.id;12:["$","div","18",{"className":"mb-4","children":["$","pre",null,{"className":"overflow-x-auto rounded-xl border border-slate-800 bg-slate-950 p-4 text-[13px] leading-relaxed text-slate-300","children":["$","code",null,{"children":"$30"}]}]}]
+13:["$","h2","19",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["Recreate the Sample"]}]
+14:["$","p","20",{"className":"mb-4 text-slate-400","children":["Run these statements in order to rebuild the schema."]}]
+31:Tac2,PRAGMA foreign_keys = ON;
+
+CREATE TABLE customers (
+  id         TEXT PRIMARY KEY,
+  email      TEXT NOT NULL,
+  name       TEXT NOT NULL,
+  created_at TEXT
+);
+
+CREATE TABLE addresses (
+  id          TEXT PRIMARY KEY,
+  customer_id TEXT NOT NULL REFERENCES customers(id),
+  line1       TEXT NOT NULL,
+  city        TEXT NOT NULL,
+  country     TEXT NOT NULL,
+  postal_code TEXT
+);
+
+CREATE TABLE products (
+  id          TEXT PRIMARY KEY,
+  title       TEXT NOT NULL,
+  description TEXT,
+  base_price  REAL NOT NULL,
+  active      INTEGER NOT NULL DEFAULT 1
+);
+
+CREATE TABLE variants (
+  id         TEXT PRIMARY KEY,
+  product_id TEXT NOT NULL REFERENCES products(id),
+  sku        TEXT NOT NULL,
+  size       TEXT,
+  color      TEXT,
+  price      REAL NOT NULL
+);
+
+CREATE TABLE categories (
+  id        TEXT PRIMARY KEY,
+  name      TEXT NOT NULL,
+  parent_id TEXT REFERENCES categories(id)
+);
+
+CREATE TABLE product_categories (
+  product_id  TEXT NOT NULL REFERENCES products(id),
+  category_id TEXT NOT NULL REFERENCES categories(id),
+  PRIMARY KEY (product_id, category_id)
+);
+
+CREATE TABLE carts (
+  id          TEXT PRIMARY KEY,
+  customer_id TEXT NOT NULL REFERENCES customers(id),
+  status      TEXT NOT NULL
+);
+
+CREATE TABLE cart_items (
+  id         TEXT PRIMARY KEY,
+  cart_id    TEXT NOT NULL REFERENCES carts(id),
+  variant_id TEXT NOT NULL REFERENCES variants(id),
+  quantity   INTEGER NOT NULL DEFAULT 1
+);
+
+CREATE TABLE inventory (
+  id         TEXT PRIMARY KEY,
+  variant_id TEXT NOT NULL REFERENCES variants(id),
+  quantity   INTEGER NOT NULL DEFAULT 0,
+  location   TEXT
+);
+
+CREATE TABLE orders (
+  id                  TEXT PRIMARY KEY,
+  customer_id         TEXT NOT NULL REFERENCES customers(id),
+  shipping_address_id TEXT REFERENCES addresses(id),
+  subtotal            REAL NOT NULL,
+  shipping            REAL NOT NULL DEFAULT 0,
+  tax                 REAL NOT NULL DEFAULT 0,
+  total               REAL NOT NULL,
+  status              TEXT NOT NULL,
+  placed_at           TEXT
+);
+
+CREATE TABLE order_items (
+  id           TEXT PRIMARY KEY,
+  order_id     TEXT NOT NULL REFERENCES orders(id),
+  variant_id   TEXT NOT NULL REFERENCES variants(id),
+  product_name TEXT NOT NULL,
+  sku          TEXT NOT NULL,
+  unit_price   REAL NOT NULL,
+  quantity     INTEGER NOT NULL
+);
+
+CREATE TABLE payments (
+  id       TEXT PRIMARY KEY,
+  order_id TEXT NOT NULL REFERENCES orders(id),
+  amount   REAL NOT NULL,
+  method   TEXT,
+  status   TEXT NOT NULL,
+  paid_at  TEXT
+);
+
+CREATE TABLE reviews (
+  id          TEXT PRIMARY KEY,
+  product_id  TEXT NOT NULL REFERENCES products(id),
+  customer_id TEXT NOT NULL REFERENCES customers(id),
+  rating      INTEGER NOT NULL CHECK (rating BETWEEN 1 AND 5),
+  body        TEXT,
+  created_at  TEXT
+);15:["$","div","21",{"className":"mb-4","children":["$","pre",null,{"className":"overflow-x-auto rounded-xl border border-slate-800 bg-slate-950 p-4 text-[13px] leading-relaxed text-slate-300","children":["$","code",null,{"children":"$31"}]}]}]
+16:["$","nav",null,{"className":"border-base-300 mt-12 flex items-center justify-between gap-3 border-t pt-4","children":[["$","$L2",null,{"href":"/posts/classicmodels","className":"btn btn-ghost btn-sm gap-2","children":[["$","svg",null,{"stroke":"currentColor","fill":"none","strokeWidth":"2","viewBox":"0 0 24 24","strokeLinecap":"round","strokeLinejoin":"round","className":"size-3.5","children":["$undefined",[["$","line","0",{"x1":"19","y1":"12","x2":"5","y2":"12","children":[]}],["$","polyline","1",{"points":"12 19 5 12 12 5","children":[]}]]],"style":{},"height":"1em","width":"1em","xmlns":"http://www.w3.org/2000/svg"}]," ","ClassicModels — B2B Retail Store"]}],["$","$L2",null,{"href":"/posts/hr","className":"btn btn-ghost btn-sm gap-2","children":["Oracle HR — Human Resources"," ",["$","svg",null,{"stroke":"currentColor","fill":"none","strokeWidth":"2","viewBox":"0 0 24 24","strokeLinecap":"round","strokeLinejoin":"round","className":"size-3.5","children":["$undefined",[["$","line","0",{"x1":"5","y1":"12","x2":"19","y2":"12","children":[]}],["$","polyline","1",{"points":"12 5 19 12 12 19","children":[]}]]],"style":{},"height":"1em","width":"1em","xmlns":"http://www.w3.org/2000/svg"}]]}]]}]
+17:["$","script","script-0",{"src":"/downloads/database/_next/static/chunks/1e8x-k6o8wp_i.js","async":true}]
+18:["$","$L32",null,{"children":["$","$33",null,{"name":"Next.MetadataOutlet","children":"$@34"}]}]
+1b:["$","$1","h",{"children":[null,["$","$L35",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L36",null,{"children":["$","$33",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"E-Commerce Platform · Schema Library"}],["$","meta","1",{"name":"description","content":"A Shopify/Amazon-style retail platform: products with variants, shopping carts, orders, payments, inventory, and customer reviews. This is the schema shape most backend engineers are asked to design in interviews."}],["$","link","2",{"rel":"manifest","href":"/manifest.json"}],["$","meta","3",{"name":"mobile-web-app-capable","content":"yes"}],["$","meta","4",{"name":"apple-mobile-web-app-title","content":"Database"}],["$","meta","5",{"name":"apple-mobile-web-app-status-bar-style","content":"black-translucent"}]]}]}]}],null]}]
+1d:["$","$1","c",{"children":[null,["$","$L37",null,{"parallelRouterKey":"children","template":["$","$L38",null,{}]}]]}]
+20:["$","$1","c",{"children":[null,["$","$L37",null,{"parallelRouterKey":"children","template":["$","$L38",null,{}]}]]}]
+22:["$","$L39",null,{"loading":[["$","div","l",{"className":"flex h-screen items-center justify-center","children":["$","span",null,{"className":"loading loading-spinner loading-lg text-primary"}]}],[],null],"children":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/downloads/database/_next/static/chunks/20u-5yuc8yzrr.css","precedence":"next"}],["$","script","script-0",{"src":"/downloads/database/_next/static/chunks/1pf2amf9r7xi6.js","async":true}]],["$","html",null,{"lang":"en","data-theme":"dim","children":[["$","head",null,{"children":["$","link",null,{"rel":"apple-touch-icon","href":"/icons/icon-192.png"}]}],["$","body",null,{"className":"bg-base-100 text-base-content h-screen overflow-y-auto font-mono","children":["$","$L3a",null,{"children":["$","$L37",null,{"parallelRouterKey":"children","error":"$3b","errorStyles":[],"errorScripts":[["$","script","script-0",{"src":"/downloads/database/_next/static/chunks/0diaj63e-swhp.js","async":true}]],"template":["$","$L3c",null,{"children":["$","$L38",null,{}]}],"templateStyles":[],"templateScripts":[["$","script","script-0",{"src":"/downloads/database/_next/static/chunks/2ppd_asr3igts.js","async":true}]],"notFound":[["$","div",null,{"className":"flex min-h-screen flex-col items-center justify-center px-6","children":[["$","p",null,{"className":"text-base-content/50 mb-6 text-xs tracking-[0.2em] uppercase","children":"Error"}],["$","h1",null,{"className":"mb-3","children":"404"}],["$","p",null,{"className":"text-base-content/50 mb-10 max-w-sm text-center text-sm","children":"The page you are looking for does not exist."}],["$","div",null,{"className":"flex flex-wrap justify-center gap-3","children":["$","$L2",null,{"href":"/","className":"btn btn-primary btn-sm","children":"Go home"}]}]]}],[]]}]}]}]]}]]}]}]
+27:["Nested category tree"]
+28:["$","tr","5",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Product_Categories"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":["comp."]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":["both FKs"]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["M:N products ↔ categories"]}]]}]
+29:["$","tr","6",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Carts"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"customer_id → Customers"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Active + abandoned carts"]}]]}]
+2a:["$","tr","7",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Cart_Items"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"cart_id"}],", ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"variant_id"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Pending order contents"]}]]}]
+2b:["$","tr","8",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Inventory"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"variant_id → Variants"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Per-location stock counts"]}]]}]
+2c:["$","tr","9",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Orders"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"customer_id"}],", ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"shipping_address_id → Addresses"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Snapshot totals + status"]}]]}]
+2d:["$","tr","10",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Order_Items"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"order_id"}],", ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"variant_id"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":[["$","strong","0",{"className":"font-semibold text-slate-100","children":"Price/sku copied in"}]]}]]}]
+2e:["$","tr","11",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Payments"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"order_id → Orders"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["One order may have several"]}]]}]
+2f:["$","tr","12",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Reviews"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"product_id"}],", ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"customer_id"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Rating 1–5 + body"]}]]}]
+34:null
+25:true
+1a:300
+1a:C
+24:0
+1c:"$undefined"
+1e:"$undefined"
+21:"$undefined"
+23:"$undefined"
+19:"$undefined"

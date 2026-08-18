@@ -9,17 +9,17 @@
 
 ## Applications
 
-| No  | Application                | Android                              | iOS                          |
-| --- | -------------------------- | ------------------------------------ | ---------------------------- |
-| 01  | [Block](./block/README.md) | [Android](./block/android/README.md) | [iOS](./block/ios/README.md) |
-| 02  | [NFC](./nfc/README.md)     | [Android](./nfc/android/README.md)   | [iOS](./nfc/ios/README.md)   |
+| No  | Application                | Android                              | Apple                            |
+| --- | -------------------------- | ------------------------------------ | -------------------------------- |
+| 01  | [Block](./block/README.md) | [Android](./block/android/README.md) | [Apple](./block/apple/README.md) |
+| 02  | [NFC](./nfc/README.md)     | [Android](./nfc/android/README.md)   | [Apple](./nfc/apple/README.md)   |
 
 ## Platform
 
-| No  | Language | Styling   | Operating System |
-| --- | -------- | --------- | ---------------- |
-| 01  | [Kotlin] | [Jetpack] | [Android]        |
-| 02  | [Swift]  | [SwiftUI] | [iOS]            |
+| No  | Language | Styling   | Operating System           |
+| --- | -------- | --------- | -------------------------- |
+| 01  | [Kotlin] | [Jetpack] | [Android]                  |
+| 02  | [Swift]  | [SwiftUI] | [iOS] / [iPadOS] / [macOS] |
 
 [kotlin]: https://kotlinlang.org
 [jetpack]: https://developer.android.com/jetpack

@@ -7,7 +7,7 @@ export const Receipt: FC<{
   onNewSale: () => void;
 }> = ({ transaction, onNewSale }) => (
   <div className="flex flex-col items-center gap-4">
-    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-success/20">
+    <div className="bg-success/20 flex h-12 w-12 items-center justify-center rounded-full">
       <FiCheck className="text-success h-6 w-6" />
     </div>
 
@@ -27,7 +27,7 @@ export const Receipt: FC<{
         ))}
       </div>
 
-      <div className="border-base-content/20 border-t mt-3 pt-3">
+      <div className="border-base-content/20 mt-3 border-t pt-3">
         <div className="flex items-center justify-between">
           <span className="text-sm font-bold">Total</span>
           <span className="text-primary font-mono text-sm font-bold">
@@ -36,7 +36,7 @@ export const Receipt: FC<{
         </div>
       </div>
 
-      <div className="border-base-content/20 border-t mt-3 pt-3">
+      <div className="border-base-content/20 mt-3 border-t pt-3">
         <div className="flex items-center justify-between">
           <span className="text-sm">Cash</span>
           <span className="font-mono text-sm">

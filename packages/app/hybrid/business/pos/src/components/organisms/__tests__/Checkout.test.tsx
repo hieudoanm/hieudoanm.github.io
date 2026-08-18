@@ -92,9 +92,7 @@ describe('Checkout', () => {
 
   it('calls onBack when back button is clicked', () => {
     const onBack = jest.fn();
-    render(
-      <Checkout items={ITEMS} onComplete={jest.fn()} onBack={onBack} />
-    );
+    render(<Checkout items={ITEMS} onComplete={jest.fn()} onBack={onBack} />);
     const backBtn = screen.getAllByRole('button')[0];
     fireEvent.click(backBtn);
     expect(onBack).toHaveBeenCalled();

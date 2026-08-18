@@ -112,6 +112,18 @@
         ]
       },
       {
+        "label": "Clipper",
+        "description": "Utilities",
+        "icon": "PiClipboard",
+        "href": "https://hieudoanm.github.io/downloads/clipper",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-utilities-clipper-latest"
+          }
+        ]
+      },
+      {
         "label": "Code",
         "description": "Developer Tools",
         "icon": "PiCodeSimple",

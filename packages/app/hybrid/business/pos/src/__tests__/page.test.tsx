@@ -43,11 +43,7 @@ describe('POS Sale Flow (organism integration)', () => {
     unmount2();
 
     const { unmount: unmount3 } = render(
-      <Checkout
-        items={cartItems}
-        onComplete={onComplete}
-        onBack={jest.fn()}
-      />
+      <Checkout items={cartItems} onComplete={onComplete} onBack={jest.fn()} />
     );
     fireEvent.change(screen.getByPlaceholderText('0.00'), {
       target: { value: '20' },

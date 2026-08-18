@@ -96,6 +96,8 @@ describe('HomePage', () => {
     render(<HomePage />);
     fireEvent.click(screen.getAllByText(SAMPLE_ITEMS[0].name)[0]);
     const price = SAMPLE_ITEMS[0].price;
-    expect(screen.getAllByText(`$${price.toFixed(2)}`).length).toBeGreaterThanOrEqual(1);
+    expect(
+      screen.getAllByText(`$${price.toFixed(2)}`).length
+    ).toBeGreaterThanOrEqual(1);
   });
 });

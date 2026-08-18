@@ -97,7 +97,9 @@ describe('Cart', () => {
     );
     const buttons = screen.getAllByRole('button');
     const itemButtons = buttons.filter(
-      (btn) => !btn.className.includes('text-error') && btn.className.includes('btn-ghost')
+      (btn) =>
+        !btn.className.includes('text-error') &&
+        btn.className.includes('btn-ghost')
     );
     fireEvent.click(itemButtons[1]);
     expect(onUpdateQuantity).toHaveBeenCalledWith('1', 3);
@@ -115,7 +117,9 @@ describe('Cart', () => {
     );
     const buttons = screen.getAllByRole('button');
     const itemButtons = buttons.filter(
-      (btn) => !btn.className.includes('text-error') && btn.className.includes('btn-ghost')
+      (btn) =>
+        !btn.className.includes('text-error') &&
+        btn.className.includes('btn-ghost')
     );
     fireEvent.click(itemButtons[0]);
     expect(onUpdateQuantity).toHaveBeenCalledWith('1', 1);
