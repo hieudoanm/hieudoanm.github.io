@@ -48,8 +48,8 @@
     ]
   },
   {
-    "id": "apps-desktop",
-    "label": "Apps (Desktop)",
+    "id": "apps-hybrid",
+    "label": "Apps (Hybrid)",
     "items": [
       {
         "label": "API",
@@ -108,18 +108,6 @@
           {
             "label": "Download App",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-sports-chess-latest"
-          }
-        ]
-      },
-      {
-        "label": "Clipper",
-        "description": "Utilities",
-        "icon": "PiClipboard",
-        "href": "https://hieudoanm.github.io/downloads/clipper",
-        "actions": [
-          {
-            "label": "Download App",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-utilities-clipper-latest"
           }
         ]
       },
@@ -366,30 +354,54 @@
     ]
   },
   {
-    "id": "apps-mobile",
-    "label": "Apps (Mobile)",
+    "id": "apps-native",
+    "label": "Apps (Native)",
     "items": [
       {
         "label": "Block",
-        "description": "Apps Blocker",
+        "description": "Utilities",
         "icon": "PiProhibit",
-        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-block-latest",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-android-block-latest",
         "actions": [
           {
             "label": "Download App",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-block-latest"
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-android-block-latest"
+          }
+        ]
+      },
+      {
+        "label": "Clipper",
+        "description": "Utilities",
+        "icon": "PiClipboard",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-macos-clipper-latest",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-macos-clipper-latest"
           }
         ]
       },
       {
         "label": "NFC",
-        "description": "NFC Tools",
-        "icon": "PiProhibit",
-        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-nfc-latest",
+        "description": "Utilities",
+        "icon": "PiCardholder",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-android-nfc-latest",
         "actions": [
           {
             "label": "Download App",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-nfc-latest"
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-android-nfc-latest"
+          }
+        ]
+      },
+      {
+        "label": "Snap",
+        "description": "Utilities",
+        "icon": "PiGridFour",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-macos-snap-latest",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-macos-snap-latest"
           }
         ]
       }

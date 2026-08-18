@@ -1,6 +1,7 @@
 import { Tool } from '@hieudoanm.github.io/components/atoms';
 import type { IconType } from 'react-icons';
 import {
+  PiCardholder,
   PiChat,
   PiClipboard,
   PiCodeSimple,
@@ -11,6 +12,7 @@ import {
   PiGameController,
   PiGear,
   PiGlobe,
+  PiGridFour,
   PiGridNine,
   PiImage,
   PiMarkdownLogo,
@@ -41,6 +43,7 @@ type DownloadJsonSection = (typeof downloadsJson)[number];
 type DownloadJsonItem = DownloadJsonSection['items'][number];
 
 const ICON_BY_NAME: Record<string, IconType> = {
+  PiCardholder,
   PiChat,
   PiClipboard,
   PiCodeSimple,
@@ -51,6 +54,7 @@ const ICON_BY_NAME: Record<string, IconType> = {
   PiGameController,
   PiGear,
   PiGlobe,
+  PiGridFour,
   PiGridNine,
   PiImage,
   PiMarkdownLogo,
