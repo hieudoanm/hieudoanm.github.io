@@ -2,6 +2,7 @@ package io.github.hieudoanm.cli.commands
 
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.core.subcommands
+import com.github.ajalt.clikt.core.Context
 import com.github.ajalt.clikt.parameters.options.default
 import com.github.ajalt.clikt.parameters.options.flag
 import com.github.ajalt.clikt.parameters.options.option
@@ -10,7 +11,8 @@ import com.google.gson.GsonBuilder
 import java.net.InetSocketAddress
 import java.net.Socket
 
-class PortCommand : CliktCommand(name = "port", help = "Network port checking tools") {
+class PortCommand : CliktCommand(name = "port") {
+    override fun help(context: Context) = "Network port checking tools"
     init {
         subcommands(PortCheck(), PortFind(), PortScan())
     }
@@ -39,7 +41,8 @@ private fun checkPortOpen(host: String, port: Int, timeout: Int): Boolean {
 
 // ─── Check ───────────────────────────────────────────────────────────────────
 
-class PortCheck : CliktCommand(name = "check", help = "Check if a port is open") {
+class PortCheck : CliktCommand(name = "check") {
+    override fun help(context: Context) = "Check if a port is open"
     private val target by option("--target", "-T")
     private val timeout by option("--timeout", "-t").int().default(3)
     private val json by option("--json").flag()
@@ -59,7 +62,8 @@ class PortCheck : CliktCommand(name = "check", help = "Check if a port is open")
 
 // ─── Find ────────────────────────────────────────────────────────────────────
 
-class PortFind : CliktCommand(name = "find", help = "Find an available port in a range") {
+class PortFind : CliktCommand(name = "find") {
+    override fun help(context: Context) = "Find an available port in a range"
     private val start by option("--start", "-s").int().default(8000)
     private val end by option("--end", "-e").int().default(9000)
     private val json by option("--json").flag()
@@ -80,7 +84,8 @@ class PortFind : CliktCommand(name = "find", help = "Find an available port in a
 
 // ─── Scan ────────────────────────────────────────────────────────────────────
 
-class PortScan : CliktCommand(name = "scan", help = "Scan common ports on a host") {
+class PortScan : CliktCommand(name = "scan") {
+    override fun help(context: Context) = "Scan common ports on a host"
     private val host by option("--host", "-H")
     private val ports by option("--ports")
     private val timeout by option("--timeout", "-t").int().default(2)

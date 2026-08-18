@@ -33,7 +33,7 @@ const VersionPage: FC = () => (
         <p className="text-base-content/60 text-sm">
           Release tag:{' '}
           <code className="badge badge-ghost badge-sm">
-            app-hybrid-messaging-latest
+            app-hybrid-social-networking-messaging-latest
           </code>
         </p>
       </section>

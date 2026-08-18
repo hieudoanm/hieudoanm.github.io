@@ -10,7 +10,7 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/hybrid/productivity/keynotes/**'
+      - 'packages/app/hybrid/productivity/keynotes/**/*'
       - '.github/workflows/ci-app-hybrid-productivity-keynotes.yaml'
       - '.github/workflows/ci-app-hybrid-template.yaml'
 

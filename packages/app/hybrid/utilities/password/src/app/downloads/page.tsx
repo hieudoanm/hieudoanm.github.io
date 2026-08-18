@@ -2,7 +2,7 @@ import { DownloadsTemplate } from '@/components/templates/DownloadsTemplate';
 import { NextPage } from 'next';
 
 const RELEASE =
-  'https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-password-latest';
+  'https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-password-latest';
 
 const DownloadsPage: NextPage = () => (
   <DownloadsTemplate
@@ -24,19 +24,25 @@ const DownloadsPage: NextPage = () => (
         platform: 'Linux',
         requirements: 'Ubuntu 22.04.+',
         label: '.AppImage',
-        href: `${RELEASE}/password_0.0.1_amd64.AppImage`,
+        href: `${RELEASE}/password_amd64.AppImage`,
       },
       {
         platform: 'Linux (Debian)',
         requirements: 'Ubuntu 22.04.+',
         label: '.deb',
-        href: `${RELEASE}/password_0.0.1_amd64.deb`,
+        href: `${RELEASE}/password_amd64.deb`,
       },
       {
         platform: 'macOS',
-        requirements: 'macOS 13.+',
+        requirements: 'Apple Silicon · macOS 13.+',
         label: '.dmg',
-        href: `${RELEASE}/password_0.0.1_arm64.dmg`,
+        href: `${RELEASE}/password_aarch64.dmg`,
+      },
+      {
+        platform: 'Windows',
+        requirements: 'Windows 10.+',
+        label: '.msi',
+        href: `${RELEASE}/password_x64.msi`,
       },
     ]}
   />

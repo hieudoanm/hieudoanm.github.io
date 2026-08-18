@@ -1,0 +1,16 @@
+[package]
+name = "browserverless"
+version = "0.0.1"
+edition = "2021"
+description = "Servo-based browser integration layer"
+
+[dependencies]
+servo = { workspace = true }
+thiserror = { workspace = true }
+url = { workspace = true }
+log = { workspace = true }
+image = { workspace = true }
+dpi = "0.1"
+euclid = "0.22"
+
+[dev-dependencies]

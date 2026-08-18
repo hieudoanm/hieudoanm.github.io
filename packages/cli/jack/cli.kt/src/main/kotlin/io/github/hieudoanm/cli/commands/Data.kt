@@ -2,6 +2,7 @@ package io.github.hieudoanm.cli.commands
 
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.core.subcommands
+import com.github.ajalt.clikt.core.Context
 import com.github.ajalt.clikt.parameters.arguments.argument
 import com.github.ajalt.clikt.parameters.options.default
 import com.github.ajalt.clikt.parameters.options.flag
@@ -12,14 +13,16 @@ import com.google.gson.JsonElement
 import com.google.gson.JsonParser
 import java.io.File
 
-class DataCommand : CliktCommand(name = "data", help = "Data serialization and transformation tools") {
+class DataCommand : CliktCommand(name = "data") {
+    override fun help(context: Context) = "Data serialization and transformation tools"
     init {
         subcommands(DataCsv(), DataJson(), DataYml())
     }
     override fun run() = Unit
 }
 
-class DataCsv : CliktCommand(name = "csv", help = "View and format CSV files") {
+class DataCsv : CliktCommand(name = "csv") {
+    override fun help(context: Context) = "View and format CSV files"
     private val file by argument()
     private val json by option("--json").flag()
 
@@ -53,7 +56,8 @@ class DataCsv : CliktCommand(name = "csv", help = "View and format CSV files") {
     }
 }
 
-class DataJson : CliktCommand(name = "json", help = "Query, format, diff, and merge JSON data") {
+class DataJson : CliktCommand(name = "json") {
+    override fun help(context: Context) = "Query, format, diff, and merge JSON data"
     private val file by argument()
     private val query by option("--query", "-q").default("")
 
@@ -95,7 +99,8 @@ class DataJson : CliktCommand(name = "json", help = "Query, format, diff, and me
     }
 }
 
-class DataYml : CliktCommand(name = "yml", help = "Parse, validate, and lint YAML files") {
+class DataYml : CliktCommand(name = "yml") {
+    override fun help(context: Context) = "Parse, validate, and lint YAML files"
     private val file by argument()
     private val validate by option("--validate", "-V").flag()
     private val lint by option("--lint").flag()

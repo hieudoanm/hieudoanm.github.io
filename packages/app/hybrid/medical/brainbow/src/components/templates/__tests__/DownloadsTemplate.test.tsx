@@ -8,13 +8,13 @@ const PROPS = {
       platform: 'macOS',
       requirements: 'Apple Silicon · macOS 13.+',
       label: '.dmg',
-      href: 'https://example.com/brainbow_0.0.1_arm64.dmg',
+      href: 'https://example.com/brainbow_aarch64.dmg',
     },
     {
       platform: 'Linux',
       requirements: 'Ubuntu 22.04.+',
       label: '.AppImage',
-      href: 'https://example.com/brainbow_0.0.1_amd64.AppImage',
+      href: 'https://example.com/brainbow_amd64.AppImage',
     },
   ],
 };

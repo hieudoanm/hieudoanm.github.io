@@ -1,0 +1,32 @@
+name: CI - App - Hybrid - Games - Memory
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/games/memory/**/*'
+      - '.github/workflows/ci-app-hybrid-games-memory.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-hybrid-games-memory-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/games/memory
+      filter: '@hieudoanm.github.io/memory'
+      releaseName: app-hybrid-games-memory-latest
+      releaseTitle: App - Hybrid - Games - Memory (latest)
+      artifactPrefix: games-memory

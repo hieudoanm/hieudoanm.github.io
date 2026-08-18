@@ -10,7 +10,7 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/hybrid/graphics-design/photo/**'
+      - 'packages/app/hybrid/graphics-design/photo/**/*'
       - '.github/workflows/ci-app-hybrid-graphics-design-photo.yaml'
       - '.github/workflows/ci-app-hybrid-template.yaml'
 

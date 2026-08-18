@@ -57,7 +57,7 @@ const DownloadsPage: FC = () => (
       <p className="text-base-content/40 mt-6 text-xs">
         Desktop and mobile bundles are built from the latest release tag{' '}
         <code className="badge badge-ghost badge-sm">
-          app-hybrid-messaging-latest
+          app-hybrid-social-networking-messaging-latest
         </code>
         .
       </p>

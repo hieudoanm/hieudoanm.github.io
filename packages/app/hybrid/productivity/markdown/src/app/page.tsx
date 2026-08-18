@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { VaultApp } from '@/components/vault/VaultApp';
+import { VaultApp } from '@/components/markdown/VaultApp';
 
 const HomePage: FC = () => <VaultApp />;
 

@@ -10,7 +10,7 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/hybrid/social-networking/messaging/**'
+      - 'packages/app/hybrid/social-networking/messaging/**/*'
       - '.github/workflows/ci-app-hybrid-social-networking-messaging.yaml'
       - '.github/workflows/ci-app-hybrid-template.yaml'
 

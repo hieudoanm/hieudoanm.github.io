@@ -1,12 +1,14 @@
 use aes_gcm::{
     Aes256Gcm, Nonce,
-    aead::{Aead, KeyInit, OsRng},
+    aead::{Aead, KeyInit},
 };
-use rand::RngCore;
 use serde_json::Value;
 use std::path::Path;
 
 use crate::models::Secret;
+
+const KEY_LEN: usize = 32;
+const NONCE_LEN: usize = 12;
 
 pub const EVENT_SECRET_CREATE: &str = "secret.create";
 pub const EVENT_SECRET_UPDATE: &str = "secret.update";
@@ -20,8 +22,8 @@ pub fn get_or_create_secrets_key(data_dir: &Path) -> Result<Vec<u8>, String> {
     if let Ok(data) = std::fs::read_to_string(&key_path) {
         return hex::decode(data.trim()).map_err(|e| format!("decode key file: {e}"));
     }
-    let mut key = vec![0u8; 32];
-    rand::rngs::OsRng.fill_bytes(&mut key);
+    let mut key = vec![0u8; KEY_LEN];
+    rand::fill(&mut key);
     let hex_key = hex::encode(&key);
     std::fs::write(&key_path, &hex_key).map_err(|e| format!("write key file: {e}"))?;
     Ok(key)
@@ -29,11 +31,11 @@ pub fn get_or_create_secrets_key(data_dir: &Path) -> Result<Vec<u8>, String> {
 
 pub fn encrypt_secret(key: &[u8], plaintext: &str) -> Result<String, String> {
     let cipher = Aes256Gcm::new_from_slice(key).map_err(|e| format!("new cipher: {e}"))?;
-    let mut nonce_bytes = vec![0u8; 12];
-    OsRng.fill_bytes(&mut nonce_bytes);
-    let nonce = Nonce::from_slice(&nonce_bytes);
+    let mut nonce_bytes = [0u8; NONCE_LEN];
+    rand::fill(&mut nonce_bytes);
+    let nonce = Nonce::try_from(&nonce_bytes[..]).map_err(|e| format!("nonce: {e}"))?;
     let ciphertext = cipher
-        .encrypt(nonce, plaintext.as_bytes())
+        .encrypt(&nonce, plaintext.as_bytes())
         .map_err(|e| format!("encrypt: {e}"))?;
     Ok(hex::encode(nonce_bytes) + ":" + &hex::encode(ciphertext))
 }
@@ -46,9 +48,10 @@ pub fn decrypt_secret(key: &[u8], encrypted: &str) -> Result<String, String> {
     let nonce_bytes = hex::decode(parts[0]).map_err(|e| format!("decode nonce: {e}"))?;
     let ciphertext = hex::decode(parts[1]).map_err(|e| format!("decode ciphertext: {e}"))?;
     let cipher = Aes256Gcm::new_from_slice(key).map_err(|e| format!("new cipher: {e}"))?;
-    let nonce = Nonce::from_slice(&nonce_bytes);
+    let nonce =
+        Nonce::try_from(nonce_bytes.as_slice()).map_err(|_| "invalid nonce length".to_string())?;
     let plaintext = cipher
-        .decrypt(nonce, ciphertext.as_slice())
+        .decrypt(&nonce, ciphertext.as_slice())
         .map_err(|e| format!("decrypt: {e}"))?;
     String::from_utf8(plaintext).map_err(|e| format!("utf8: {e}"))
 }
@@ -222,5 +225,13 @@ mod tests {
         let result = decrypt_secret(&key, "abcdef123456:ZZZ");
         assert!(result.is_err());
         assert!(result.unwrap_err().contains("decode ciphertext"));
+    }
+
+    #[test]
+    fn decrypt_secret_invalid_nonce_length() {
+        let key = [0u8; 32];
+        let result = decrypt_secret(&key, "ab:abcdef");
+        assert!(result.is_err());
+        assert_eq!(result.unwrap_err(), "invalid nonce length");
     }
 }

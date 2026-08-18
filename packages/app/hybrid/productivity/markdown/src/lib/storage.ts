@@ -37,3 +37,22 @@ export const saveNotes = (notes: Note[]): void => {
     console.warn('[Storage] failed to save vault', err);
   }
 };
+
+export const loadUiPreference = (key: string, fallback: boolean): boolean => {
+  if (!isBrowser()) return fallback;
+  try {
+    const raw = window.localStorage.getItem(key);
+    return raw === null ? fallback : raw === 'true';
+  } catch {
+    return fallback;
+  }
+};
+
+export const saveUiPreference = (key: string, value: boolean): void => {
+  if (!isBrowser()) return;
+  try {
+    window.localStorage.setItem(key, String(value));
+  } catch {
+    // Storage unavailable — preference simply not persisted.
+  }
+};

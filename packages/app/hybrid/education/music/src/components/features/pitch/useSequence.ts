@@ -1,0 +1,60 @@
+import { useState } from 'react';
+
+import { whiteKeys } from './constants';
+
+const twinkleTwinkle = [
+  { note: 'C', duration: 400 },
+  { note: 'C', duration: 400 },
+  { note: 'G', duration: 400 },
+  { note: 'G', duration: 400 },
+  { note: 'A', duration: 400 },
+  { note: 'A', duration: 400 },
+  { note: 'G', duration: 800 },
+  { note: 'F', duration: 400 },
+  { note: 'F', duration: 400 },
+  { note: 'E', duration: 400 },
+  { note: 'E', duration: 400 },
+  { note: 'D', duration: 400 },
+  { note: 'D', duration: 400 },
+  { note: 'C', duration: 800 },
+];
+
+export const useSequence = (playTone: (id: string) => void) => {
+  const [isPracticing, setIsPracticing] = useState(false);
+  const [highlightedKey, setHighlightedKey] = useState<string | null>(null);
+
+  const playSequence = async <
+    T extends { id?: string; note?: string; duration?: number },
+  >(
+    sequence: T[],
+    getKey: (item: T) => string,
+    getDuration: (item: T) => number
+  ) => {
+    if (isPracticing) return;
+    setIsPracticing(true);
+    for (const item of sequence) {
+      const key = getKey(item);
+      setHighlightedKey(key);
+      playTone(key);
+      await new Promise((res) => setTimeout(res, getDuration(item)));
+      setHighlightedKey(null);
+    }
+    setIsPracticing(false);
+  };
+
+  const playPractice = () =>
+    playSequence(
+      whiteKeys,
+      (k) => k.id,
+      () => 800
+    );
+
+  const playTwinkle = () =>
+    playSequence(
+      twinkleTwinkle,
+      (k) => k.note,
+      (k) => k.duration
+    );
+
+  return { isPracticing, highlightedKey, playPractice, playTwinkle };
+};

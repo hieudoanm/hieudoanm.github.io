@@ -2,6 +2,7 @@ package io.github.hieudoanm.cli.commands
 
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.core.subcommands
+import com.github.ajalt.clikt.core.Context
 import com.github.ajalt.clikt.parameters.arguments.argument
 import com.github.ajalt.clikt.parameters.options.option
 import com.github.ajalt.clikt.parameters.options.flag
@@ -20,7 +21,8 @@ import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.time.temporal.ChronoUnit
 
-class CalcCommand : CliktCommand(name = "calc", help = "Financial and utility calculators") {
+class CalcCommand : CliktCommand(name = "calc") {
+    override fun help(context: Context) = "Financial and utility calculators"
     init {
         subcommands(
             CalcAge(), CalcBmi(), CalcCurrency(), CalcTax(), CalcCompound(), CalcLoan(),
@@ -32,7 +34,8 @@ class CalcCommand : CliktCommand(name = "calc", help = "Financial and utility ca
     override fun run() = Unit
 }
 
-class CalcAge : CliktCommand(name = "age", help = "Calculate age from birthdate") {
+class CalcAge : CliktCommand(name = "age") {
+    override fun help(context: Context) = "Calculate age from birthdate"
     private val year by option("--year", "-y", help = "Birth year").int().required()
     private val month by option("--month", "-m", help = "Birth month (1-12)").int().required()
     private val day by option("--day", "-d", help = "Birth day (1-31)").int().required()
@@ -85,7 +88,8 @@ class CalcAge : CliktCommand(name = "age", help = "Calculate age from birthdate"
     }
 }
 
-class CalcBmi : CliktCommand(name = "bmi", help = "Calculate Body Mass Index") {
+class CalcBmi : CliktCommand(name = "bmi") {
+    override fun help(context: Context) = "Calculate Body Mass Index"
     private val weight by argument()
     private val height by argument()
     override fun run() {
@@ -106,7 +110,8 @@ class CalcBmi : CliktCommand(name = "bmi", help = "Calculate Body Mass Index") {
     }
 }
 
-class CalcCurrency : CliktCommand(name = "currency", help = "Convert between currencies using Frankfurter API") {
+class CalcCurrency : CliktCommand(name = "currency") {
+    override fun help(context: Context) = "Convert between currencies using Frankfurter API"
     private val amount by argument()
     private val from by argument().default("EUR")
     private val to by argument().default("USD")
@@ -131,7 +136,8 @@ data class FrankfurterResponse(
     val rates: Map<String, Double>
 )
 
-class CalcTax : CliktCommand(name = "tax", help = "Calculate Vietnam personal income tax") {
+class CalcTax : CliktCommand(name = "tax") {
+    override fun help(context: Context) = "Calculate Vietnam personal income tax"
     private val income by argument("monthly income")
     private val dependents by option("--dependents", "-d", help = "Number of dependents").int().default(0)
     private val insurance by option("--insurance", "-i", help = "Enable insurance deductions").flag()
@@ -177,7 +183,8 @@ class CalcTax : CliktCommand(name = "tax", help = "Calculate Vietnam personal in
     }
 }
 
-class CalcCompound : CliktCommand(name = "compound", help = "Compound interest calculator") {
+class CalcCompound : CliktCommand(name = "compound") {
+    override fun help(context: Context) = "Compound interest calculator"
     private val principal by argument()
     private val rate by argument()
     private val years by argument()
@@ -231,7 +238,8 @@ class CalcCompound : CliktCommand(name = "compound", help = "Compound interest c
     }
 }
 
-class CalcLoan : CliktCommand(name = "loan", help = "Loan amortization calculator") {
+class CalcLoan : CliktCommand(name = "loan") {
+    override fun help(context: Context) = "Loan amortization calculator"
     private val principal by argument()
     private val rate by argument()
     private val years by argument()
@@ -267,7 +275,8 @@ class CalcLoan : CliktCommand(name = "loan", help = "Loan amortization calculato
     }
 }
 
-class CalcDiscount : CliktCommand(name = "discount", help = "Calculate discount and sale price") {
+class CalcDiscount : CliktCommand(name = "discount") {
+    override fun help(context: Context) = "Calculate discount and sale price"
     private val original by argument()
     private val percent by argument()
     override fun run() {
@@ -283,7 +292,8 @@ class CalcDiscount : CliktCommand(name = "discount", help = "Calculate discount 
     }
 }
 
-class CalcTip : CliktCommand(name = "tip", help = "Calculate tip and split bill") {
+class CalcTip : CliktCommand(name = "tip") {
+    override fun help(context: Context) = "Calculate tip and split bill"
     private val bill by argument()
     private val percent by argument().default("15")
     private val split by option("--split", "-s", help = "Number of people").int().default(1)
@@ -303,7 +313,8 @@ class CalcTip : CliktCommand(name = "tip", help = "Calculate tip and split bill"
     }
 }
 
-class CalcBase : CliktCommand(name = "base", help = "Convert between number bases") {
+class CalcBase : CliktCommand(name = "base") {
+    override fun help(context: Context) = "Convert between number bases"
     private val value by argument()
     private val fromBase by argument().default("dec")
     private val toBase by argument().default("hex")
@@ -319,7 +330,8 @@ class CalcBase : CliktCommand(name = "base", help = "Convert between number base
     }
 }
 
-class CalcUnit : CliktCommand(name = "unit", help = "Convert between units") {
+class CalcUnit : CliktCommand(name = "unit") {
+    override fun help(context: Context) = "Convert between units"
     private val value by argument()
     private val from by argument()
     private val to by argument()
@@ -358,7 +370,8 @@ class CalcUnit : CliktCommand(name = "unit", help = "Convert between units") {
     }
 }
 
-class CalcPercent : CliktCommand(name = "percent", help = "Calculate percentages") {
+class CalcPercent : CliktCommand(name = "percent") {
+    override fun help(context: Context) = "Calculate percentages"
     private val value by argument()
     private val total by argument()
     override fun run() {
@@ -369,7 +382,8 @@ class CalcPercent : CliktCommand(name = "percent", help = "Calculate percentages
     }
 }
 
-class CalcMortgage : CliktCommand(name = "mortgage", help = "Mortgage payment calculator") {
+class CalcMortgage : CliktCommand(name = "mortgage") {
+    override fun help(context: Context) = "Mortgage payment calculator"
     private val principal by argument()
     private val rate by argument()
     private val years by argument().default("30")
@@ -398,7 +412,8 @@ class CalcMortgage : CliktCommand(name = "mortgage", help = "Mortgage payment ca
     }
 }
 
-class CalcDate : CliktCommand(name = "date", help = "Date arithmetic and difference") {
+class CalcDate : CliktCommand(name = "date") {
+    override fun help(context: Context) = "Date arithmetic and difference"
     private val dateStr by argument("YYYY-MM-DD").default("")
     private val days by argument("days to add").default("0")
     override fun run() {
@@ -416,7 +431,8 @@ class CalcDate : CliktCommand(name = "date", help = "Date arithmetic and differe
     }
 }
 
-class CalcEval : CliktCommand(name = "eval", help = "Evaluate a mathematical expression") {
+class CalcEval : CliktCommand(name = "eval") {
+    override fun help(context: Context) = "Evaluate a mathematical expression"
     private val expr by argument()
     override fun run() {
         val result = evaluate(expr)
@@ -526,7 +542,8 @@ private data class Parser(val toks: List<Tok>) {
     }
 }
 
-class CalcStats : CliktCommand(name = "stats", help = "Statistical summary of numbers") {
+class CalcStats : CliktCommand(name = "stats") {
+    override fun help(context: Context) = "Statistical summary of numbers"
     private val values by argument().default("")
     override fun run() {
         val nums = values.split(Regex("\\s+")).filter { it.isNotEmpty() }.map { it.toDouble() }.sorted()
@@ -547,7 +564,8 @@ class CalcStats : CliktCommand(name = "stats", help = "Statistical summary of nu
     }
 }
 
-class CalcFactorial : CliktCommand(name = "factorial", help = "Compute factorial of a number") {
+class CalcFactorial : CliktCommand(name = "factorial") {
+    override fun help(context: Context) = "Compute factorial of a number"
     private val number by argument()
     override fun run() {
         val n = number.toLong()
@@ -558,7 +576,8 @@ class CalcFactorial : CliktCommand(name = "factorial", help = "Compute factorial
     }
 }
 
-class CalcRandom : CliktCommand(name = "random", help = "Generate random numbers") {
+class CalcRandom : CliktCommand(name = "random") {
+    override fun help(context: Context) = "Generate random numbers"
     private val min by argument().default("1")
     private val max by argument().default("100")
     private val count by option("--count", "-n", help = "Number of values").int().default(1)
@@ -573,7 +592,8 @@ class CalcRandom : CliktCommand(name = "random", help = "Generate random numbers
     }
 }
 
-class CalcPrime : CliktCommand(name = "prime", help = "Check if a number is prime, or generate primes") {
+class CalcPrime : CliktCommand(name = "prime") {
+    override fun help(context: Context) = "Check if a number is prime, or generate primes"
     private val number by argument()
     private val list by option("--list", "-l", help = "List all primes up to N").flag()
     override fun run() {
@@ -605,7 +625,8 @@ class CalcPrime : CliktCommand(name = "prime", help = "Check if a number is prim
     }
 }
 
-class CalcGcd : CliktCommand(name = "gcd", help = "Greatest common divisor") {
+class CalcGcd : CliktCommand(name = "gcd") {
+    override fun help(context: Context) = "Greatest common divisor"
     private val a by argument()
     private val b by argument()
     override fun run() {
@@ -614,7 +635,8 @@ class CalcGcd : CliktCommand(name = "gcd", help = "Greatest common divisor") {
     }
 }
 
-class CalcLcm : CliktCommand(name = "lcm", help = "Least common multiple") {
+class CalcLcm : CliktCommand(name = "lcm") {
+    override fun help(context: Context) = "Least common multiple"
     private val a by argument()
     private val b by argument()
     override fun run() {

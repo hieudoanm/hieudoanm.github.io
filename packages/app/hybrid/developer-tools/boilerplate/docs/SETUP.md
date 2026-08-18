@@ -76,11 +76,16 @@
 │   │   │   │   └── page.tsx
 │   │   │   └── version
 │   │   │       └── page.tsx
+│   │   ├── default.tsx
 │   │   ├── error.tsx
+│   │   ├── forbidden.tsx
 │   │   ├── global-error.tsx
 │   │   ├── layout.tsx
+│   │   ├── loading.tsx
 │   │   ├── not-found.tsx
-│   │   └── page.tsx
+│   │   ├── page.tsx
+│   │   ├── template.tsx
+│   │   └── unauthorized.tsx
 │   ├── components/
 │   │   ├── atoms/
 │   │   ├── molecules/

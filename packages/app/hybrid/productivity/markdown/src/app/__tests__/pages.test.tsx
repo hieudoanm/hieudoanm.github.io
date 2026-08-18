@@ -7,7 +7,7 @@ jest.mock('next/font/google', () => ({
   Lora: jest.fn(() => ({ variable: '--font-serif' })),
 }));
 
-jest.mock('@/components/vault/VaultApp', () => ({
+jest.mock('@/components/markdown/VaultApp', () => ({
   VaultApp: () => <div>vault-app-mock</div>,
 }));
 

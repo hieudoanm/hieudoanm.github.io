@@ -1,0 +1,31 @@
+name: CI - App - Native - macOS - Snap
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/native/snap/apple/macos/**/*'
+      - '.github/workflows/ci-app-native-macos-snap.yaml'
+      - '.github/workflows/ci-app-native-macos-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-native-macos-snap-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-native-macos-template.yaml
+    with:
+      package: packages/app/native/snap/apple/macos
+      releaseName: app-native-macos-snap-latest
+      releaseTitle: App - Native - macOS - Snap (latest)
+      artifactPrefix: macos-snap

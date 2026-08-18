@@ -1,32 +1,16 @@
 import { render, screen } from '@testing-library/react';
 import HomePage from '../page';
 
-jest.mock('@/components/organisms/SquadManager', () => ({
-  SquadManager: () => <div>SquadManager</div>,
-}));
-
 describe('HomePage', () => {
-  it('renders the app title and nav links', () => {
+  it('renders the app links', () => {
     render(<HomePage />);
-    expect(
-      screen.getByRole('heading', { name: 'Football Manager' })
-    ).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: 'About' })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: /Manager/ })).toHaveAttribute(
       'href',
-      '/about'
+      '/manager'
     );
-    expect(screen.getByRole('link', { name: 'Downloads' })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: /Touraments/ })).toHaveAttribute(
       'href',
-      '/downloads'
+      '/touraments'
     );
-    expect(screen.getByRole('link', { name: 'Version' })).toHaveAttribute(
-      'href',
-      '/version'
-    );
-  });
-
-  it('renders the squad manager', () => {
-    render(<HomePage />);
-    expect(screen.getByText('SquadManager')).toBeInTheDocument();
   });
 });

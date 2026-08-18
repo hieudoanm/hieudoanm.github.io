@@ -2,19 +2,22 @@ package io.github.hieudoanm.cli.commands
 
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.core.subcommands
+import com.github.ajalt.clikt.core.Context
 import com.github.ajalt.clikt.parameters.arguments.argument
 import com.google.gson.GsonBuilder
 import com.google.gson.JsonParser
 import io.github.hieudoanm.cli.services.Requests
 
-class GeminiCommand : CliktCommand(name = "gemini", help = "Interact with Google Gemini AI models") {
+class GeminiCommand : CliktCommand(name = "gemini") {
+    override fun help(context: Context) = "Interact with Google Gemini AI models"
     init {
         subcommands(GeminiCode())
     }
     override fun run() = Unit
 }
 
-class GeminiCode : CliktCommand(name = "code", help = "Gemini-powered AI coding assistant") {
+class GeminiCode : CliktCommand(name = "code") {
+    override fun help(context: Context) = "Gemini-powered AI coding assistant"
     private val prompt by argument()
 
     override fun run() {

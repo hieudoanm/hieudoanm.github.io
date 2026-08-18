@@ -1,0 +1,32 @@
+name: CI - App - Hybrid - Medical - Psychology
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/medical/psychology/**/*'
+      - '.github/workflows/ci-app-hybrid-medical-psychology.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-hybrid-medical-psychology-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/medical/psychology
+      filter: '@hieudoanm.github.io/psychology'
+      releaseName: app-hybrid-medical-psychology-latest
+      releaseTitle: App - Hybrid - Medical - Psychology (latest)
+      artifactPrefix: medical-psychology

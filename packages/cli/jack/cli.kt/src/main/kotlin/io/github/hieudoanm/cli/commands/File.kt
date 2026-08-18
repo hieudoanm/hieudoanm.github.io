@@ -2,6 +2,7 @@ package io.github.hieudoanm.cli.commands
 
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.core.subcommands
+import com.github.ajalt.clikt.core.Context
 import com.github.ajalt.clikt.parameters.arguments.argument
 import com.github.ajalt.clikt.parameters.arguments.default
 import com.github.ajalt.clikt.parameters.options.option
@@ -20,7 +21,8 @@ import kotlin.io.path.name
 
 private val gson = GsonBuilder().setPrettyPrinting().create()
 
-class FileCommand : CliktCommand(name = "file", help = "File introspection and analysis tools") {
+class FileCommand : CliktCommand(name = "file") {
+    override fun help(context: Context) = "File introspection and analysis tools"
     init {
         subcommands(
             FileChecksum(), FileChmod(), FileCount(), FileDuplicates(),
@@ -31,7 +33,8 @@ class FileCommand : CliktCommand(name = "file", help = "File introspection and a
     override fun run() = Unit
 }
 
-class FileChecksum : CliktCommand(name = "checksum", help = "Compute file checksum") {
+class FileChecksum : CliktCommand(name = "checksum") {
+    override fun help(context: Context) = "Compute file checksum"
     private val file: String by option("--file", "-f", help = "File path").required()
     private val algorithm: String by option("--algorithm", "-a", help = "Hash algorithm: md5, sha1, sha256, sha512").default("sha256")
     private val jsonOutput: Boolean by option("--json", help = "Output in JSON format").flag()
@@ -57,7 +60,8 @@ class FileChecksum : CliktCommand(name = "checksum", help = "Compute file checks
     }
 }
 
-class FileChmod : CliktCommand(name = "chmod", help = "Change file permissions") {
+class FileChmod : CliktCommand(name = "chmod") {
+    override fun help(context: Context) = "Change file permissions"
     private val mode: String by option("--mode", "-m", help = "Octal permission mode (e.g. 755)").required()
     private val file: String by option("--file", "-f", help = "File or directory path").required()
     private val recursive: Boolean by option("--recursive", "-r", help = "Change permissions recursively").flag()
@@ -74,7 +78,8 @@ class FileChmod : CliktCommand(name = "chmod", help = "Change file permissions")
     }
 }
 
-class FileCount : CliktCommand(name = "count", help = "Count lines in a file") {
+class FileCount : CliktCommand(name = "count") {
+    override fun help(context: Context) = "Count lines in a file"
     private val file: String by option("--file", "-f", help = "File path").required()
     private val jsonOutput: Boolean by option("--json", help = "Output in JSON format").flag()
 
@@ -93,7 +98,8 @@ class FileCount : CliktCommand(name = "count", help = "Count lines in a file") {
     }
 }
 
-class FileDuplicates : CliktCommand(name = "duplicates", help = "Find duplicate files") {
+class FileDuplicates : CliktCommand(name = "duplicates") {
+    override fun help(context: Context) = "Find duplicate files"
     private val dir: String by option("--dir", "-d", help = "Directory to scan").required()
     private val minSize by option("--min-size", "-m", help = "Minimum file size to consider (bytes)").long().default(1L)
     private val jsonOutput: Boolean by option("--json", help = "Output in JSON format").flag()
@@ -133,7 +139,8 @@ class FileDuplicates : CliktCommand(name = "duplicates", help = "Find duplicate 
     }
 }
 
-class FileEdit : CliktCommand(name = "edit", help = "Find and replace text in a file") {
+class FileEdit : CliktCommand(name = "edit") {
+    override fun help(context: Context) = "Find and replace text in a file"
     private val file: String by option("--file", "-f", help = "File path").required()
     private val old: String by option("--old", "-o", help = "Text or pattern to replace").required()
     private val new: String by option("--new", help = "Replacement text").default("")
@@ -152,7 +159,8 @@ class FileEdit : CliktCommand(name = "edit", help = "Find and replace text in a 
     }
 }
 
-class FileGrep : CliktCommand(name = "grep", help = "Search file contents using regex") {
+class FileGrep : CliktCommand(name = "grep") {
+    override fun help(context: Context) = "Search file contents using regex"
     private val pattern: String by option("--pattern", "-p", help = "Regex or fixed string pattern to search for").required()
     private val path: String? by option("--path", "-P", help = "File or directory to search")
     private val include: String? by option("--include", "-i", help = "Glob pattern for file names (e.g. \"*.go\")")
@@ -174,7 +182,8 @@ class FileGrep : CliktCommand(name = "grep", help = "Search file contents using 
     }
 }
 
-class FileHead : CliktCommand(name = "head", help = "Show the first N lines of a file") {
+class FileHead : CliktCommand(name = "head") {
+    override fun help(context: Context) = "Show the first N lines of a file"
     private val file: String by option("--file", "-f", help = "File path").required()
     private val headLines by option("--lines", "-n", help = "Number of lines").int().default(10)
 
@@ -185,7 +194,8 @@ class FileHead : CliktCommand(name = "head", help = "Show the first N lines of a
     }
 }
 
-class FileRead : CliktCommand(name = "read", help = "Read file content with line numbers") {
+class FileRead : CliktCommand(name = "read") {
+    override fun help(context: Context) = "Read file content with line numbers"
     private val file: String by option("--file", "-f", help = "File path").required()
     private val readLinesNum by option("--lines", "-n", help = "Number of lines to show (0 = all)").int().default(0)
     private val readOffset by option("--offset", "-o", help = "Starting line offset (0-based)").int().default(0)
@@ -225,7 +235,8 @@ class FileRead : CliktCommand(name = "read", help = "Read file content with line
     }
 }
 
-class FileSize : CliktCommand(name = "size", help = "Show file or directory size") {
+class FileSize : CliktCommand(name = "size") {
+    override fun help(context: Context) = "Show file or directory size"
     private val path: String by option("--path", "-p", help = "File or directory path").required()
     private val jsonOutput: Boolean by option("--json", help = "Output in JSON format").flag()
 
@@ -244,7 +255,8 @@ class FileSize : CliktCommand(name = "size", help = "Show file or directory size
     }
 }
 
-class FileStats : CliktCommand(name = "stats", help = "Show file statistics by extension") {
+class FileStats : CliktCommand(name = "stats") {
+    override fun help(context: Context) = "Show file statistics by extension"
     private val dir: String by option("--dir", "-d", help = "Directory path").required()
     private val jsonOutput: Boolean by option("--json", help = "Output in JSON format").flag()
 
@@ -284,7 +296,8 @@ class FileStats : CliktCommand(name = "stats", help = "Show file statistics by e
     }
 }
 
-class FileTail : CliktCommand(name = "tail", help = "Show the last N lines of a file") {
+class FileTail : CliktCommand(name = "tail") {
+    override fun help(context: Context) = "Show the last N lines of a file"
     private val file: String by option("--file", "-f", help = "File path").required()
     private val tailLines by option("--lines", "-n", help = "Number of lines").int().default(10)
 
@@ -302,7 +315,8 @@ class FileTail : CliktCommand(name = "tail", help = "Show the last N lines of a 
     }
 }
 
-class FileType : CliktCommand(name = "type", help = "Detect file type by extension") {
+class FileType : CliktCommand(name = "type") {
+    override fun help(context: Context) = "Detect file type by extension"
     private val file: String by option("--file", "-f", help = "File path").required()
     private val jsonOutput: Boolean by option("--json", help = "Output in JSON format").flag()
 
@@ -326,7 +340,8 @@ Modified : $modTime
     }
 }
 
-class FileWrite : CliktCommand(name = "write", help = "Write or append content to a file") {
+class FileWrite : CliktCommand(name = "write") {
+    override fun help(context: Context) = "Write or append content to a file"
     private val file: String by option("--file", "-f", help = "File path").required()
     private val content: String? by option("--content", "-c", help = "File content (omit to read from stdin)")
     private val append: Boolean by option("--append", "-a", help = "Append to file instead of overwriting").flag()

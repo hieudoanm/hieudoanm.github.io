@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { StatsBar } from '@/components/editor/StatsBar';
 import { TocSidebar } from '@/components/editor/TocSidebar';
-import { VaultSidebar } from '@/components/vault/VaultSidebar';
+import { VaultSidebar } from '@/components/markdown/VaultSidebar';
 import { ViewControls } from '@/components/editor/ViewControls';
 import { seedNotes } from '@/data/seed';
 

@@ -73,4 +73,58 @@ describe('formationReminders', () => {
     const squad = makeSquad({ players, assignments });
     expect(formationReminders(squad, formation)).toEqual([]);
   });
+
+  it('uses singular for single player with no slot', () => {
+    const squad = makeSquad({
+      players: [makePlayer({ id: 'p1', bench: false })],
+    });
+    const reminders = formationReminders(squad, formation);
+    expect(reminders).toContainEqual({
+      level: 'info',
+      text: '1 player on the pitch with no slot',
+    });
+  });
+
+  it('uses singular for single bench player', () => {
+    const squad = makeSquad({
+      players: [makePlayer({ id: 'p1', bench: true })],
+    });
+    const reminders = formationReminders(squad, formation);
+    expect(reminders).toContainEqual({
+      level: 'info',
+      text: '1 player on the bench ready to come on',
+    });
+  });
+
+  it('handles empty players array', () => {
+    const squad = makeSquad({ players: [] });
+    const reminders = formationReminders(squad, formation);
+    expect(reminders).toContainEqual({
+      level: 'warning',
+      text: '11 positions empty — assign a starter to every slot',
+    });
+    expect(reminders.some((r) => r.text.includes('pitch with no slot'))).toBe(
+      false
+    );
+  });
+
+  it('handles mixed bench and non-bench players', () => {
+    const squad = makeSquad({
+      players: [
+        makePlayer({ id: 'p1', bench: false }),
+        makePlayer({ id: 'p2', bench: true }),
+        makePlayer({ id: 'p3', bench: false }),
+      ],
+      assignments: { '442-0-0': ['p1'] },
+    });
+    const reminders = formationReminders(squad, formation);
+    expect(reminders).toContainEqual({
+      level: 'info',
+      text: '1 player on the bench ready to come on',
+    });
+    expect(reminders).toContainEqual({
+      level: 'info',
+      text: '1 player on the pitch with no slot',
+    });
+  });
 });

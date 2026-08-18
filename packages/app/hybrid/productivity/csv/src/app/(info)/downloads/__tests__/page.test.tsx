@@ -18,10 +18,13 @@ describe('DownloadsPage', () => {
     );
     expect(
       screen.getByRole('link', { name: 'Download .AppImage' })
-    ).toHaveAttribute('href', expect.stringContaining('app-hybrid-csv-latest'));
+    ).toHaveAttribute(
+      'href',
+      expect.stringContaining('app-hybrid-productivity-csv-latest')
+    );
     expect(screen.getByRole('link', { name: 'Download .deb' })).toHaveAttribute(
       'href',
-      expect.stringContaining('app-hybrid-csv-latest')
+      expect.stringContaining('app-hybrid-productivity-csv-latest')
     );
   });
 });

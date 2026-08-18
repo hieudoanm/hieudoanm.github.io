@@ -2,6 +2,7 @@ package io.github.hieudoanm.cli.commands
 
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.core.subcommands
+import com.github.ajalt.clikt.core.Context
 import com.github.ajalt.clikt.parameters.options.default
 import com.github.ajalt.clikt.parameters.options.flag
 import com.github.ajalt.clikt.parameters.options.option
@@ -13,7 +14,8 @@ import java.nio.file.Files
 import java.nio.file.Paths
 import java.util.regex.Pattern
 
-class SearchCommand : CliktCommand(name = "search", help = "Universal search for files, text, code, and the web") {
+class SearchCommand : CliktCommand(name = "search") {
+    override fun help(context: Context) = "Universal search for files, text, code, and the web"
     init {
         subcommands(SearchCode(), SearchFiles(), SearchText(), SearchWeb())
     }
@@ -73,7 +75,8 @@ private fun codePatternsFor(path: String, langFilter: String?): Triple<String, L
     }
 }
 
-class SearchCode : CliktCommand(name = "code", help = "Search for code symbols (functions, types, variables)") {
+class SearchCode : CliktCommand(name = "code") {
+    override fun help(context: Context) = "Search for code symbols (functions, types, variables)"
     private val symbol by option("--symbol", "-s")
     private val dir by option("--dir", "-d").default(".")
     private val lang by option("--lang", "-l")
@@ -124,7 +127,8 @@ class SearchCode : CliktCommand(name = "code", help = "Search for code symbols (
 
 // ─── Files ───────────────────────────────────────────────────────────────────
 
-class SearchFiles : CliktCommand(name = "files", help = "Find files by glob pattern") {
+class SearchFiles : CliktCommand(name = "files") {
+    override fun help(context: Context) = "Find files by glob pattern"
     private val pattern by option("--pattern", "-p")
     private val dir by option("--dir", "-d").default(".")
     private val maxDepth by option("--max-depth", "-D").int().default(0)
@@ -176,7 +180,8 @@ class SearchFiles : CliktCommand(name = "files", help = "Find files by glob patt
 
 data class TextMatch(val file: String, val line: Int, val content: String)
 
-class SearchText : CliktCommand(name = "text", help = "Search file contents using regex") {
+class SearchText : CliktCommand(name = "text") {
+    override fun help(context: Context) = "Search file contents using regex"
     private val pattern by option("--pattern", "-p")
     private val path by option("--path", "-P").default(".")
     private val ignoreCase by option("--ignore-case", "-i").flag()
@@ -253,7 +258,8 @@ class SearchText : CliktCommand(name = "text", help = "Search file contents usin
 
 data class WebResult(val title: String = "", val url: String = "", val snippet: String = "")
 
-class SearchWeb : CliktCommand(name = "web", help = "Search the internet") {
+class SearchWeb : CliktCommand(name = "web") {
+    override fun help(context: Context) = "Search the internet"
     private val query by option("--query", "-q")
     private val maxResults by option("--max-results", "-n").int().default(5)
     private val source by option("--source", "-s").default("duckduckgo")

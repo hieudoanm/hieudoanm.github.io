@@ -1,0 +1,32 @@
+name: CI - App - Hybrid - Shopping - Store
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/shopping/store/**/*'
+      - '.github/workflows/ci-app-hybrid-shopping-store.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-hybrid-shopping-store-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/shopping/store
+      filter: '@hieudoanm.github.io/store'
+      releaseName: app-hybrid-shopping-store-latest
+      releaseTitle: App - Hybrid - Shopping - Store (latest)
+      artifactPrefix: shopping-store

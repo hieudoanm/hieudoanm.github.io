@@ -8,13 +8,8 @@ Bored,bored,WeirdSearch,Weird Query Roller,PiSmileyMelting,weird-search
 Calculator,calculator,Calculator,"Arithmetic + Unit Converter",PiDivide,calculator
 Calculator,calculator,Inflation,Calculator,PiMoney,inflation
 Calculator,calculator,Split Bill,Calculator,PiCurrencyDollar,split-bill
-Calculator,calculator,Tax,Vietnam PIT,PiFlag,tax
-Clocks,clocks,Countdown,Timer,PiHourglass,countdown
 Clocks,clocks,Cron,Expression Builder,PiClockAfternoon,cron
-Clocks,clocks,Days Count,Date Difference,PiCalendar,days-count
 Clocks,clocks,Epoch Convert,Timestamp,PiClock,epoch-convert
-Clocks,clocks,Pomodoro,Timer,PiTimer,pomodoro
-Clocks,clocks,Watchface,Garmin,PiWatch,watchface
 Data - Excel,data-excel,Excel to PDF,"Excel → PDF",PiFileText,excel-to-pdf
 Data - Excel,data-excel,Excel to XML,"Excel → XML",PiArrowsClockwise,excel-to-xml
 Data - Excel,data-excel,Split Excel,Split large files,PiScissors,split-excel
@@ -33,29 +28,14 @@ Editors,editors,JSON Schema,Validator,PiFileText,json-schema
 Editors,editors,Manifest,JSON Editor,PiFileText,manifest
 Editors,editors,Regex,Pattern Generator,PiMagnifyingGlass,regex
 Editors,editors,Slides,Pitch Deck,PiPresentation,slides
-Editors,editors,Word Counter,Word Count,PiNotePencil,word-counter
 Education,education,DOI,Cite,PiFileText,doi
-Education,education,English,Dictionary,PiBooks,english
-Education,education,Flashcards,Words,PiNotebook,flashcards
-Education,education,Periodic Table,Elements,PiChartBar,periodic-table
-Education,education,Pitch,Training,PiPianoKeys,pitch
-Education,education,Sign Language,Detection,PiHandPeace,sign
-Health - Vision,health-vision,LogMAR Chart,LogMAR Chart,PiEyes,logmar
-Health - Vision,health-vision,Snellen Chart,Snellen Chart,PiEyes,snellen
-Health - Vision,health-vision,Tumbling E Chart,Tumbling E Chart,PiEyes,tumbling-e
-Psychology,psychology,RCI,Relationship closeness,PiHeart,relationship-closeness-inventory
-Psychology,psychology,ECR,Attachment styles,PiHeartStraight,experiences-in-close-relationships
-Psychology,psychology,SWLS,Life satisfaction,PiSmileyMelting,satisfaction-with-life
-Psychology,psychology,DAS,Relationship adjustment,PiGauge,dyadic-adjustment-scale
-Psychology,psychology,BDI,Depression severity,PiLifebuoy,beck-depression-inventory
-Psychology,psychology,GAD-7,Anxiety severity,PiSmileyNervous,generalized-anxiety-disorder
-Psychology,psychology,PHQ-9,Depression screening,PiFirstAidKit,patient-health-questionnaire
-Psychology,psychology,BFI,Personality traits,PiBrain,big-five-inventory
-Text - Convert,text-convert,Braille,Text to Braille,PiDotsNine,braille
-Text - Convert,text-convert,Case,Converter,PiFileText,text-case
-Text - Convert,text-convert,Leet Speak,Text to Leet,PiTextAa,leetspeak
-Text - Convert,text-convert,Morse,Text to Morse Code,PiWaveSine,morse
-Utilities,utilities,Clipboard,Clipboard,PiClipboard,clipboard
+Puzzle,puzzle,2048,Merge tiles,PiNumberSquareOne,game2048
+Puzzle,puzzle,Lights Out,Toggle all lights off,PiLamp,lights-out
+Puzzle,puzzle,Sliding Puzzle,Upload & slide tiles,PiSnowflake,sliding-puzzle
+Puzzle,puzzle,Towers,Towers of Hanoi,PiBuilding,towers
+Trivia,trivia,Palindrome,Palindrome,PiRepeat,palindrome
+Trivia,trivia,Pokedex,Pokemon,PiBook,pokedex
+Trivia,trivia,Quizify,Quiz,PiQuestion,quizify
 Utilities,utilities,Create ZIP,Zip Files,PiFileText,create-zip
 Utilities,utilities,Emojis,Explorer,PiSmiley,emojis
 Utilities,utilities,Kaprekar,Routine,PiChartBar,kaprekar
@@ -63,6 +43,4 @@ Utilities,utilities,Lorem Ipsum,Dummy text,PiNotePencil,lorem-ipsum
 Utilities,utilities,No Sleep,Timer,PiMoon,no-sleep
 Utilities,utilities,Screen Recorder,"Record & Download",PiFilmStrip,screen-recorder
 Visualization,visualization,Attractors,Strange Attractors,PiSpiral,attractors
-Visualization,visualization,Calendar Tracker,Activities,PiCalendar,calendar-tracker
-Visualization,visualization,Football,Tournaments & data,PiSoccerBall,football
 Visualization,visualization,Legislation,Visualization,PiBuildings,legislation

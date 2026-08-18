@@ -1,3 +1,4 @@
-# Allow all web crawlers complete access
-User-agent: *
-Disallow:
+User-Agent: *
+Allow: /
+
+Sitemap: https://hieudoanm.github.io/free/docs/sitemap.xml

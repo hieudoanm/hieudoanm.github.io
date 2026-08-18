@@ -14,7 +14,7 @@ export const TocSidebar: FC<TocSidebarProps> = ({ items }) => {
   };
 
   return (
-    <aside className="border-base-content/10 bg-base-200/50 hidden w-56 shrink-0 overflow-y-auto border-l p-2 lg:block">
+    <aside className="border-base-content/10 bg-base-200/50 hidden h-full min-h-0 w-56 shrink-0 overflow-y-auto border-l p-2 lg:block">
       <div className="text-base-content/50 mb-1 flex items-center gap-2 px-2 py-1 text-xs font-semibold tracking-wider uppercase">
         <TbList size={14} />
         Outline
@@ -25,7 +25,7 @@ export const TocSidebar: FC<TocSidebarProps> = ({ items }) => {
           No headings yet. Add some with the H1-H3 buttons.
         </p>
       ) : (
-        <ul className="flex flex-col gap-0.5">
+        <ul className="flex list-none flex-col gap-0.5">
           {items.map((item) => (
             <li key={item.id}>
               <button

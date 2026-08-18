@@ -62,12 +62,6 @@
         "description": "Calculator",
         "icon": "PiCurrencyDollar",
         "toolId": "split-bill"
-      },
-      {
-        "label": "Tax",
-        "description": "Vietnam PIT",
-        "icon": "PiFlag",
-        "toolId": "tax"
       }
     ]
   },
@@ -76,40 +70,16 @@
     "label": "Clocks",
     "items": [
       {
-        "label": "Countdown",
-        "description": "Timer",
-        "icon": "PiHourglass",
-        "toolId": "countdown"
-      },
-      {
         "label": "Cron",
         "description": "Expression Builder",
         "icon": "PiClockAfternoon",
         "toolId": "cron"
       },
       {
-        "label": "Days Count",
-        "description": "Date Difference",
-        "icon": "PiCalendar",
-        "toolId": "days-count"
-      },
-      {
         "label": "Epoch Convert",
         "description": "Timestamp",
         "icon": "PiClock",
         "toolId": "epoch-convert"
-      },
-      {
-        "label": "Pomodoro",
-        "description": "Timer",
-        "icon": "PiTimer",
-        "toolId": "pomodoro"
-      },
-      {
-        "label": "Watchface",
-        "description": "Garmin",
-        "icon": "PiWatch",
-        "toolId": "watchface"
       }
     ]
   },
@@ -242,12 +212,6 @@
         "description": "Pitch Deck",
         "icon": "PiPresentation",
         "toolId": "slides"
-      },
-      {
-        "label": "Word Counter",
-        "description": "Word Count",
-        "icon": "PiNotePencil",
-        "toolId": "word-counter"
       }
     ]
   },
@@ -260,144 +224,60 @@
         "description": "Cite",
         "icon": "PiFileText",
         "toolId": "doi"
-      },
-      {
-        "label": "English",
-        "description": "Dictionary",
-        "icon": "PiBooks",
-        "toolId": "english"
-      },
-      {
-        "label": "Flashcards",
-        "description": "Words",
-        "icon": "PiNotebook",
-        "toolId": "flashcards"
-      },
-      {
-        "label": "Periodic Table",
-        "description": "Elements",
-        "icon": "PiChartBar",
-        "toolId": "periodic-table"
-      },
-      {
-        "label": "Pitch",
-        "description": "Training",
-        "icon": "PiPianoKeys",
-        "toolId": "pitch"
-      },
-      {
-        "label": "Sign Language",
-        "description": "Detection",
-        "icon": "PiHandPeace",
-        "toolId": "sign"
       }
     ]
   },
   {
-    "id": "health-vision",
-    "label": "Health - Vision",
+    "id": "puzzle",
+    "label": "Puzzle",
     "items": [
       {
-        "label": "LogMAR Chart",
-        "description": "LogMAR Chart",
-        "icon": "PiEyes",
-        "toolId": "logmar"
+        "label": "2048",
+        "description": "Merge tiles",
+        "icon": "PiNumberSquareOne",
+        "toolId": "game2048"
       },
       {
-        "label": "Snellen Chart",
-        "description": "Snellen Chart",
-        "icon": "PiEyes",
-        "toolId": "snellen"
+        "label": "Lights Out",
+        "description": "Toggle all lights off",
+        "icon": "PiLamp",
+        "toolId": "lights-out"
       },
       {
-        "label": "Tumbling E Chart",
-        "description": "Tumbling E Chart",
-        "icon": "PiEyes",
-        "toolId": "tumbling-e"
+        "label": "Sliding Puzzle",
+        "description": "Upload & slide tiles",
+        "icon": "PiSnowflake",
+        "toolId": "sliding-puzzle"
+      },
+      {
+        "label": "Towers",
+        "description": "Towers of Hanoi",
+        "icon": "PiBuilding",
+        "toolId": "towers"
       }
     ]
   },
   {
-    "id": "psychology",
-    "label": "Psychology",
+    "id": "trivia",
+    "label": "Trivia",
     "items": [
       {
-        "label": "RCI",
-        "description": "Relationship closeness",
-        "icon": "PiHeart",
-        "toolId": "relationship-closeness-inventory"
+        "label": "Palindrome",
+        "description": "Palindrome",
+        "icon": "PiRepeat",
+        "toolId": "palindrome"
       },
       {
-        "label": "ECR",
-        "description": "Attachment styles",
-        "icon": "PiHeartStraight",
-        "toolId": "experiences-in-close-relationships"
+        "label": "Pokedex",
+        "description": "Pokemon",
+        "icon": "PiBook",
+        "toolId": "pokedex"
       },
       {
-        "label": "SWLS",
-        "description": "Life satisfaction",
-        "icon": "PiSmileyMelting",
-        "toolId": "satisfaction-with-life"
-      },
-      {
-        "label": "DAS",
-        "description": "Relationship adjustment",
-        "icon": "PiGauge",
-        "toolId": "dyadic-adjustment-scale"
-      },
-      {
-        "label": "BDI",
-        "description": "Depression severity",
-        "icon": "PiLifebuoy",
-        "toolId": "beck-depression-inventory"
-      },
-      {
-        "label": "GAD-7",
-        "description": "Anxiety severity",
-        "icon": "PiSmileyNervous",
-        "toolId": "generalized-anxiety-disorder"
-      },
-      {
-        "label": "PHQ-9",
-        "description": "Depression screening",
-        "icon": "PiFirstAidKit",
-        "toolId": "patient-health-questionnaire"
-      },
-      {
-        "label": "BFI",
-        "description": "Personality traits",
-        "icon": "PiBrain",
-        "toolId": "big-five-inventory"
-      }
-    ]
-  },
-  {
-    "id": "text-convert",
-    "label": "Text - Convert",
-    "items": [
-      {
-        "label": "Braille",
-        "description": "Text to Braille",
-        "icon": "PiDotsNine",
-        "toolId": "braille"
-      },
-      {
-        "label": "Case",
-        "description": "Converter",
-        "icon": "PiFileText",
-        "toolId": "text-case"
-      },
-      {
-        "label": "Leet Speak",
-        "description": "Text to Leet",
-        "icon": "PiTextAa",
-        "toolId": "leetspeak"
-      },
-      {
-        "label": "Morse",
-        "description": "Text to Morse Code",
-        "icon": "PiWaveSine",
-        "toolId": "morse"
+        "label": "Quizify",
+        "description": "Quiz",
+        "icon": "PiQuestion",
+        "toolId": "quizify"
       }
     ]
   },
@@ -405,12 +285,6 @@
     "id": "utilities",
     "label": "Utilities",
     "items": [
-      {
-        "label": "Clipboard",
-        "description": "Clipboard",
-        "icon": "PiClipboard",
-        "toolId": "clipboard"
-      },
       {
         "label": "Create ZIP",
         "description": "Zip Files",
@@ -458,18 +332,6 @@
         "description": "Strange Attractors",
         "icon": "PiSpiral",
         "toolId": "attractors"
-      },
-      {
-        "label": "Calendar Tracker",
-        "description": "Activities",
-        "icon": "PiCalendar",
-        "toolId": "calendar-tracker"
-      },
-      {
-        "label": "Football",
-        "description": "Tournaments & data",
-        "icon": "PiSoccerBall",
-        "toolId": "football"
       },
       {
         "label": "Legislation",

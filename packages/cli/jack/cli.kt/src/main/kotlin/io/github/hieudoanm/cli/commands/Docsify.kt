@@ -2,20 +2,23 @@ package io.github.hieudoanm.cli.commands
 
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.core.subcommands
+import com.github.ajalt.clikt.core.Context
 import com.github.ajalt.clikt.parameters.options.default
 import com.github.ajalt.clikt.parameters.options.flag
 import com.github.ajalt.clikt.parameters.options.option
 import com.google.gson.GsonBuilder
 import java.io.File
 
-class DocsifyCommand : CliktCommand(name = "docsify", help = "Codebase documentation and analysis tools") {
+class DocsifyCommand : CliktCommand(name = "docsify") {
+    override fun help(context: Context) = "Codebase documentation and analysis tools"
     init {
         subcommands(DocsifyTree(), DocsifyScan(), DocsifyObsidian(), DocsifyCobra())
     }
     override fun run() = Unit
 }
 
-class DocsifyTree : CliktCommand(name = "tree", help = "Generate directory tree as Markdown") {
+class DocsifyTree : CliktCommand(name = "tree") {
+    override fun help(context: Context) = "Generate directory tree as Markdown"
     private val dir by option("--dir").default(".")
     private val out by option("--out").default("TREE.md")
 
@@ -58,7 +61,8 @@ class DocsifyTree : CliktCommand(name = "tree", help = "Generate directory tree 
     }
 }
 
-class DocsifyScan : CliktCommand(name = "scan", help = "Scan a codebase and generate a GraphML file") {
+class DocsifyScan : CliktCommand(name = "scan") {
+    override fun help(context: Context) = "Scan a codebase and generate a GraphML file"
     private val dir by option("--dir").default(".")
     private val out by option("--out").default("codebase.graphml")
     private val exclude by option("--exclude").default(".git,node_modules,vendor,dist,.next,__pycache__")
@@ -129,7 +133,8 @@ class DocsifyScan : CliktCommand(name = "scan", help = "Scan a codebase and gene
     }
 }
 
-class DocsifyObsidian : CliktCommand(name = "obsidian", help = "Build a wiki-link graph from markdown files") {
+class DocsifyObsidian : CliktCommand(name = "obsidian") {
+    override fun help(context: Context) = "Build a wiki-link graph from markdown files"
     private val dir by option("--dir").default(".")
     private val out by option("--out").default("")
     private val format by option("--format").default("dot")
@@ -221,7 +226,8 @@ class DocsifyObsidian : CliktCommand(name = "obsidian", help = "Build a wiki-lin
 data class ObsidianNode(val id: String, val name: String, val path: String, val links: Int = 0)
 data class ObsidianEdge(val source: String, val target: String)
 
-class DocsifyCobra : CliktCommand(name = "cobra", help = "Show all registered CLI commands") {
+class DocsifyCobra : CliktCommand(name = "cobra") {
+    override fun help(context: Context) = "Show all registered CLI commands"
     private val file by option("--file", "-f").default(".")
     private val output by option("--output", "-o").default("")
 

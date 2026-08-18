@@ -2,19 +2,22 @@ package io.github.hieudoanm.cli.commands
 
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.core.subcommands
+import com.github.ajalt.clikt.core.Context
 import com.github.ajalt.clikt.parameters.arguments.argument
 import com.google.gson.GsonBuilder
 import com.google.gson.JsonParser
 import io.github.hieudoanm.cli.services.Requests
 
-class DoiCommand : CliktCommand(name = "doi", help = "DOI productivity tools") {
+class DoiCommand : CliktCommand(name = "doi") {
+    override fun help(context: Context) = "DOI productivity tools"
     init {
         subcommands(DoiCite(), DoiFetch(), DoiRef(), DoiValidate())
     }
     override fun run() = Unit
 }
 
-class DoiCite : CliktCommand(name = "cite", help = "Generate an APA citation from a DOI") {
+class DoiCite : CliktCommand(name = "cite") {
+    override fun help(context: Context) = "Generate an APA citation from a DOI"
     private val doi by argument()
     override fun run() {
         val response = fetchCrossref(doi)
@@ -23,7 +26,8 @@ class DoiCite : CliktCommand(name = "cite", help = "Generate an APA citation fro
     }
 }
 
-class DoiFetch : CliktCommand(name = "fetch", help = "Fetch raw metadata for a DOI") {
+class DoiFetch : CliktCommand(name = "fetch") {
+    override fun help(context: Context) = "Fetch raw metadata for a DOI"
     private val doi by argument()
     override fun run() {
         val response = fetchCrossref(doi)
@@ -34,7 +38,8 @@ class DoiFetch : CliktCommand(name = "fetch", help = "Fetch raw metadata for a D
     }
 }
 
-class DoiRef : CliktCommand(name = "ref", help = "Generate a formatted reference from a DOI") {
+class DoiRef : CliktCommand(name = "ref") {
+    override fun help(context: Context) = "Generate a formatted reference from a DOI"
     private val doi by argument()
     override fun run() {
         val response = fetchCrossref(doi)
@@ -43,7 +48,8 @@ class DoiRef : CliktCommand(name = "ref", help = "Generate a formatted reference
     }
 }
 
-class DoiValidate : CliktCommand(name = "validate", help = "Validate a DOI string format") {
+class DoiValidate : CliktCommand(name = "validate") {
+    override fun help(context: Context) = "Validate a DOI string format"
     private val doi by argument()
     override fun run() {
         val matched = Regex("^10\\.\\d{4,}/.+$").matches(doi)

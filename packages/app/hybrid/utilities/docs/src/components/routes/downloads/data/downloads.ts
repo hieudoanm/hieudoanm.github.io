@@ -1,33 +1,6 @@
 import { Tool } from '@hieudoanm.github.io/components/atoms';
 import type { IconType } from 'react-icons';
-import {
-  PiChat,
-  PiCodeSimple,
-  PiDatabase,
-  PiFilePdf,
-  PiFolder,
-  PiFrameCorners,
-  PiGameController,
-  PiGear,
-  PiGlobe,
-  PiGridNine,
-  PiImage,
-  PiMarkdownLogo,
-  PiMicroscope,
-  PiPaintBrush,
-  PiPaperPlaneTilt,
-  PiPassword,
-  PiPath,
-  PiPresentation,
-  PiProhibit,
-  PiShoppingCart,
-  PiSoccerBall,
-  PiTable,
-  PiTerminal,
-  PiTrophy,
-  PiVideoCamera,
-  PiWallet,
-} from 'react-icons/pi';
+import { PiCodeSimple, PiProhibit, PiTerminal } from 'react-icons/pi';
 import downloadsJson from './downloads.json';
 
 export interface DownloadSection {
@@ -40,32 +13,9 @@ type DownloadJsonSection = (typeof downloadsJson)[number];
 type DownloadJsonItem = DownloadJsonSection['items'][number];
 
 const ICON_BY_NAME: Record<string, IconType> = {
-  PiChat,
   PiCodeSimple,
-  PiDatabase,
-  PiFilePdf,
-  PiFolder,
-  PiFrameCorners,
-  PiGameController,
-  PiGear,
-  PiGlobe,
-  PiGridNine,
-  PiImage,
-  PiMarkdownLogo,
-  PiMicroscope,
-  PiPaintBrush,
-  PiPaperPlaneTilt,
-  PiPassword,
-  PiPath,
-  PiPresentation,
   PiProhibit,
-  PiShoppingCart,
-  PiSoccerBall,
-  PiTable,
   PiTerminal,
-  PiTrophy,
-  PiVideoCamera,
-  PiWallet,
 };
 
 const resolveIcon = (name: string): Tool['icon'] => {

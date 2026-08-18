@@ -1,0 +1,2 @@
+:HL["/free/eyes/_next/static/chunks/0f5d8avbnmi04.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4180,"slots":{"children":{"name":"(app)","param":null,"prefetchHints":4192,"slots":{"children":{"name":"snellen","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"fSZ8Gz-tywdEWzq4YX8ga"}

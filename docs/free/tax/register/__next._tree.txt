@@ -1,0 +1,2 @@
+:HL["/free/tax/_next/static/chunks/0muy9o2k86_k7.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4180,"slots":{"children":{"name":"(auth)","param":null,"prefetchHints":4192,"slots":{"children":{"name":"register","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"ICsPH9k4F22X1PweHP79w"}

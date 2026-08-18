@@ -3,11 +3,13 @@
 - [App](#app)
   - [Categories](#categories)
   - [Techstack](#techstack)
+    - [Hybrid](#hybrid)
+    - [Native](#native)
   - [Platform](#platform)
 
 ## Categories
 
-| No  | Category               | Example                                                                                                                                                                                                               |
+| No  | Category               | Examples                                                                                                                                                                                                              |
 | --- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 01  | Books                  | stories, comics, eReaders, coffee table books, graphic novels                                                                                                                                                         |
 | 02  | Business               | document management (PDFs, scanning, file viewing/editing), VoIP telephony, dictation, remote desktop, job search resources, customer resource management, collaboration, enterprise resource planning, point of sale |
@@ -41,17 +43,19 @@ Reference: [App Store - Categories](https://developer.apple.com/app-store/catego
 
 ## Techstack
 
+### Hybrid
+
 | No  | Category            | Name                       | Version | Alternative          |
 | --- | ------------------- | -------------------------- | ------- | -------------------- |
 | 01  | Language            | [TypeScript]               | 6.+     |                      |
-| 02  | Runtime             | [Node.js][node.js]         | 26.+    |                      |
-| 03  | Package Manager     | [pnpm][pnpm]               | 11.+    |                      |
-| 04  | Linter              | [ESLint][eslint]           | 9.+     |                      |
-| 05  | Formatter           | [Prettier][prettier]       | 3.+     |                      |
+| 02  | Runtime             | [Node.js][node.js]         | 26.+    | [Bun]                |
+| 03  | Package Manager     | [pnpm][pnpm]               | 11.+    | [npm]                |
+| 04  | Linter              | [ESLint][eslint]           | 9.+     | [Biome]              |
+| 05  | Formatter           | [Prettier][prettier]       | 3.+     | [Biome]              |
 | 06  | Testing Framework   | [Jest][jest]               | 30.+    |                      |
 | 07  | Testing Framework   | [Playwright][playwright]   | 1.+     |                      |
-| 08  | Framework           | [React][react]             | 19.+    |                      |
-| 09  | Framework           | [Next.js][next.js]         |         |                      |
+| 08  | Framework           | [React][react]             | 19.+    | [Solid]              |
+| 09  | Framework           | [Next.js][next.js]         |         | [SolidStart]         |
 | 10  | Styling             | [TailwindCSS][tailwindcss] | 4.+     |                      |
 | 11  | Styling             | [DaisyUI][daisyui]         | 5.+     |                      |
 | 12  | Desktop Application | [Tauri][tauri]             | 2.+     | [Electron][electron] |
@@ -69,17 +73,34 @@ Reference: [App Store - Categories](https://developer.apple.com/app-store/catego
 [tauri]: https://tauri.app/
 [electron]: https://www.electronjs.org/
 
+### Native
+
+| No  | Language | Styling   | Operating System           |
+| --- | -------- | --------- | -------------------------- |
+| 01  | [Kotlin] | [Jetpack] | [Android]                  |
+| 02  | [Swift]  | [SwiftUI] | [iOS] / [iPadOS] / [macOS] |
+
+[kotlin]: https://kotlinlang.org
+[jetpack]: https://developer.android.com/jetpack
+[android]: https://developer.android.com
+[swift]: https://www.swift.org
+[swiftui]: https://developer.apple.com/xcode/swiftui/
+[ios]: https://developer.apple.com/ios
+
 ## Platform
 
 | No  | Group   | Category | Name      |
 | --- | ------- | -------- | --------- |
-| 01  | Desktop | [Linux]  | [Ubuntu]  |
-| 02  | Desktop | [Linux]  | [Arch]    |
-| 03  | Desktop |          | [macOS]   |
-| 04  | Mobile  |          | [Android] |
+| 01  | Desktop | [Linux]  | [Arch]    |
+| 02  | Desktop | [Linux]  | [Debian]  |
+| 03  | Desktop | [Linux]  | [Ubuntu]  |
+| 04  | Desktop |          | [macOS]   |
+| 05  | Desktop |          | [Windows] |
+| 06  | Tablet  |          | [iPadOS]  |
+| 07  | Mobile  |          | [iOS]     |
+| 08  | Mobile  |          | [Android] |
 
 [Linux]: https://linux.org/
 [Ubuntu]: https://ubuntu.com/
 [Arch]: https://archlinux.org/
 [macOS]: https://www.apple.com/mac/
-[Android]: https://www.android.com/

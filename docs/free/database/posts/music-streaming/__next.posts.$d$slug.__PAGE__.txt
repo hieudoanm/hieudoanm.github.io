@@ -1,0 +1,256 @@
+1:"$Sreact.fragment"
+2:I[66278,["/free/database/_next/static/chunks/10eqrmue8jg7p.js","/free/database/_next/static/chunks/3r124p7l0dwms.js"],""]
+3:T1852,<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="912" viewBox="0 0 1140 912" font-family="ui-monospace, SFMono-Regular, monospace">
+  <rect width="100%" height="100%" fill="#0f172a"/>
+  <g data-table="ALBUMS">
+    <rect x="40" y="40" width="220" height="176" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 40 80 L 260 80" stroke="#334155"/>
+    <text x="52" y="66" font-size="13" font-weight="600" fill="#e2e8f0">ALBUMS</text>
+      <text x="52" y="96" font-size="11" fill="#9ca3af">&#128273; id</text>
+      <text x="52" y="120" font-size="11" fill="#9ca3af">artist_id</text>
+      <text x="52" y="144" font-size="11" fill="#9ca3af">title</text>
+      <text x="52" y="168" font-size="11" fill="#9ca3af">release_date</text>
+      <text x="52" y="192" font-size="11" fill="#9ca3af">artwork_url</text>
+  </g>
+  <g data-table="ARTISTS">
+    <rect x="460" y="40" width="220" height="152" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 460 80 L 680 80" stroke="#334155"/>
+    <text x="472" y="66" font-size="13" font-weight="600" fill="#e2e8f0">ARTISTS</text>
+      <text x="472" y="96" font-size="11" fill="#9ca3af">&#128273; id</text>
+      <text x="472" y="120" font-size="11" fill="#9ca3af">name</text>
+      <text x="472" y="144" font-size="11" fill="#9ca3af">genres</text>
+      <text x="472" y="168" font-size="11" fill="#9ca3af">country</text>
+  </g>
+  <g data-table="LIBRARY">
+    <rect x="880" y="40" width="220" height="128" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 880 80 L 1100 80" stroke="#334155"/>
+    <text x="892" y="66" font-size="13" font-weight="600" fill="#e2e8f0">LIBRARY</text>
+      <text x="892" y="96" font-size="11" fill="#9ca3af">&#128273; user_id</text>
+      <text x="892" y="120" font-size="11" fill="#9ca3af">&#128273; track_id</text>
+      <text x="892" y="144" font-size="11" fill="#9ca3af">saved_at</text>
+  </g>
+  <g data-table="LISTENING_HISTORY">
+    <rect x="40" y="296" width="220" height="176" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 40 336 L 260 336" stroke="#334155"/>
+    <text x="52" y="322" font-size="13" font-weight="600" fill="#e2e8f0">LISTENING_HISTORY</text>
+      <text x="52" y="352" font-size="11" fill="#9ca3af">&#128273; id</text>
+      <text x="52" y="376" font-size="11" fill="#9ca3af">user_id</text>
+      <text x="52" y="400" font-size="11" fill="#9ca3af">track_id</text>
+      <text x="52" y="424" font-size="11" fill="#9ca3af">played_at</text>
+      <text x="52" y="448" font-size="11" fill="#9ca3af">seconds_listened</text>
+  </g>
+  <g data-table="PLAYLIST_TRACKS">
+    <rect x="460" y="272" width="220" height="152" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 460 312 L 680 312" stroke="#334155"/>
+    <text x="472" y="298" font-size="13" font-weight="600" fill="#e2e8f0">PLAYLIST_TRACKS</text>
+      <text x="472" y="328" font-size="11" fill="#9ca3af">&#128273; playlist_id</text>
+      <text x="472" y="352" font-size="11" fill="#9ca3af">&#128273; track_id</text>
+      <text x="472" y="376" font-size="11" fill="#9ca3af">position</text>
+      <text x="472" y="400" font-size="11" fill="#9ca3af">added_at</text>
+  </g>
+  <g data-table="PLAYLISTS">
+    <rect x="880" y="296" width="220" height="176" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 880 336 L 1100 336" stroke="#334155"/>
+    <text x="892" y="322" font-size="13" font-weight="600" fill="#e2e8f0">PLAYLISTS</text>
+      <text x="892" y="352" font-size="11" fill="#9ca3af">&#128273; id</text>
+      <text x="892" y="376" font-size="11" fill="#9ca3af">user_id</text>
+      <text x="892" y="400" font-size="11" fill="#9ca3af">title</text>
+      <text x="892" y="424" font-size="11" fill="#9ca3af">public</text>
+      <text x="892" y="448" font-size="11" fill="#9ca3af">created_at</text>
+  </g>
+  <g data-table="SUBSCRIPTIONS">
+    <rect x="40" y="648" width="220" height="224" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 40 688 L 260 688" stroke="#334155"/>
+    <text x="52" y="674" font-size="13" font-weight="600" fill="#e2e8f0">SUBSCRIPTIONS</text>
+      <text x="52" y="704" font-size="11" fill="#9ca3af">&#128273; id</text>
+      <text x="52" y="728" font-size="11" fill="#9ca3af">user_id</text>
+      <text x="52" y="752" font-size="11" fill="#9ca3af">plan</text>
+      <text x="52" y="776" font-size="11" fill="#9ca3af">price</text>
+      <text x="52" y="800" font-size="11" fill="#9ca3af">status</text>
+      <text x="52" y="824" font-size="11" fill="#9ca3af">started_at</text>
+      <text x="52" y="848" font-size="11" fill="#9ca3af">renews_at</text>
+  </g>
+  <g data-table="TRACKS">
+    <rect x="460" y="600" width="220" height="200" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 460 640 L 680 640" stroke="#334155"/>
+    <text x="472" y="626" font-size="13" font-weight="600" fill="#e2e8f0">TRACKS</text>
+      <text x="472" y="656" font-size="11" fill="#9ca3af">&#128273; id</text>
+      <text x="472" y="680" font-size="11" fill="#9ca3af">album_id</text>
+      <text x="472" y="704" font-size="11" fill="#9ca3af">title</text>
+      <text x="472" y="728" font-size="11" fill="#9ca3af">duration_ms</text>
+      <text x="472" y="752" font-size="11" fill="#9ca3af">audio_url</text>
+      <text x="472" y="776" font-size="11" fill="#9ca3af">track_number</text>
+  </g>
+  <path d="M 680 92 C 360 92, 360 92, 40 92" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="ARTISTS.ALBUMS"/>
+  <path d="M 260 92 C 360 92, 360 652, 460 652" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="ALBUMS.TRACKS"/>
+  <path d="M 680 92 C 570 92, 570 652, 460 652" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="ARTISTS.TRACKS"/>
+  <path d="M 1100 348 C 780 348, 780 324, 460 324" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="PLAYLISTS.PLAYLIST_TRACKS"/>
+  <path d="M 680 652 C 570 652, 570 324, 460 324" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="TRACKS.PLAYLIST_TRACKS"/>
+  <path d="M 680 652 C 360 652, 360 348, 40 348" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="TRACKS.LISTENING_HISTORY"/>
+</svg>1a:X
+1f:X
+1f:C
+0:{"buildId":"DPmF1rWY15G-R2eiJWqpS","data":[{"rsc":["$","$1","c",{"children":[["$","div",null,{"className":"bg-base-100 min-h-screen","children":[["$","header",null,{"className":"border-base-300 bg-base-100 sticky top-0 z-10 flex items-center justify-between border-b px-6 py-4","children":[["$","h1",null,{"className":"text-xl font-bold","children":"Schema Library"}],["$","$L2",null,{"href":"/posts","className":"btn btn-ghost btn-sm gap-2","children":[["$","svg",null,{"stroke":"currentColor","fill":"none","strokeWidth":"2","viewBox":"0 0 24 24","strokeLinecap":"round","strokeLinejoin":"round","className":"size-3.5","children":["$undefined",[["$","line","0",{"x1":"19","y1":"12","x2":"5","y2":"12","children":[]}],["$","polyline","1",{"points":"12 19 5 12 12 5","children":[]}]]],"style":{},"height":"1em","width":"1em","xmlns":"http://www.w3.org/2000/svg"}]," All schemas"]}]]}],["$","main",null,{"className":"mx-auto max-w-3xl p-6","children":[["$","article",null,{"className":"prose-invert","children":[["$","h1","0",{"className":"mb-2 mt-2 text-2xl font-bold text-slate-50","children":["Music Streaming Service"]}],["$","blockquote","1",{"className":"border-l-4 border-indigo-500/60 pl-4 text-slate-400","children":[["$","p","0",{"className":"mb-2 last:mb-0","children":["A Spotify-style streaming platform: artists, albums, tracks, playlists,"]}],["$","p","1",{"className":"mb-2 last:mb-0","children":["listening history, subscriptions, and recommendations. A compact schema that"]}],["$","p","2",{"className":"mb-2 last:mb-0","children":["exercises every join type and both kinds of many-to-many junctions."]}]]}],["$","h2","2",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["ER Diagram (Mermaid)"]}],["$","div","3",{"className":"overflow-x-auto rounded-xl border border-slate-800","dangerouslySetInnerHTML":{"__html":"$3"}}],"$L4","$L5","$L6","$L7","$L8","$L9","$La","$Lb","$Lc","$Ld","$Le","$Lf","$L10","$L11","$L12","$L13","$L14","$L15"]}],"$L16"]}]]}],["$L17"],"$L18"]}],"isPartial":"$@19","staleTime":"$1a","varyParams":null},{"rsc":"$L1b","isPartial":"$@1c","staleTime":"$1a","varyParams":null},{"rsc":"$L1d","isPartial":"$@1e","staleTime":"$1a","varyParams":"$1f"},{"rsc":"$L20","isPartial":"$@21","staleTime":"$1a","varyParams":"$1f"},{"rsc":"$L22","isPartial":"$@23","staleTime":"$1a","varyParams":null}],"isUpgradeableISRFallback":false,"a":"$@24","rootVaryParams":null,"needsRuntimeRequest":"$@25"}
+2d:I[23916,["/free/database/_next/static/chunks/10eqrmue8jg7p.js"],"OutletBoundary"]
+2e:"$Sreact.suspense"
+30:I[23916,["/free/database/_next/static/chunks/10eqrmue8jg7p.js"],"ViewportBoundary"]
+31:I[23916,["/free/database/_next/static/chunks/10eqrmue8jg7p.js"],"MetadataBoundary"]
+32:I[17084,["/free/database/_next/static/chunks/10eqrmue8jg7p.js"],"IconMark"]
+33:I[4160,["/free/database/_next/static/chunks/10eqrmue8jg7p.js"],"default"]
+34:I[77608,["/free/database/_next/static/chunks/10eqrmue8jg7p.js"],"default"]
+35:I[4160,["/free/database/_next/static/chunks/10eqrmue8jg7p.js"],"LoadingBoundaryProvider"]
+36:I[41483,["/free/database/_next/static/chunks/10eqrmue8jg7p.js"],"SWProvider"]
+37:I[11443,["/free/database/_next/static/chunks/10eqrmue8jg7p.js","/free/database/_next/static/chunks/116ohefqh8701.js"],"default"]
+38:I[40523,["/free/database/_next/static/chunks/10eqrmue8jg7p.js","/free/database/_next/static/chunks/2xeqdjtv1ocwj.js"],"default"]
+:HL["/free/database/_next/static/chunks/2p4kffns0eld9.css","style"]
+4:["$","h2","4",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["ASCII Diagram"]}]
+5:["$","div","5",{"className":"mb-4","children":["$","pre",null,{"className":"overflow-x-auto rounded-xl border border-slate-800 bg-slate-950 p-4 text-[13px] leading-relaxed text-slate-300","children":["$","code",null,{"children":"   ARTISTS ---< ALBUMS ---< TRACKS ---< LIBRARY (user saved tracks)\n      |                         |\n      | performs on             | played in\n      v                         v\n      |                +----------------------+\n      +--------------->|  LISTENING_HISTORY   |\n      |                |  (user, track, when) |\n      |                +----------------------+\n      |\n      +--< ALBUMS       TRACKS ---< PLAYLIST_TRACKS >--- PLAYLISTS ---< USERS"}]}]}]
+6:["$","h2","6",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["Tables"]}]
+7:["$","div","7",{"className":"mb-4","children":["$","div",null,{"className":"overflow-x-auto rounded-xl border border-slate-800","children":["$","table",null,{"className":"w-full text-left text-sm","children":[["$","thead",null,{"children":["$","tr",null,{"className":"border-b border-slate-800 bg-slate-900/60","children":[["$","th","0",{"className":"px-4 py-2 font-semibold text-slate-200","children":["Table"]}],["$","th","1",{"className":"px-4 py-2 font-semibold text-slate-200","children":["PK"]}],["$","th","2",{"className":"px-4 py-2 font-semibold text-slate-200","children":["Key FKs"]}],["$","th","3",{"className":"px-4 py-2 font-semibold text-slate-200","children":["Notes"]}]]}]}],["$","tbody",null,{"children":[["$","tr","0",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Artists"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":["—"]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["—"]}]]}],["$","tr","1",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Albums"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"artist_id → Artists"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["One artist per album (simplified)"]}]]}],["$","tr","2",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Tracks"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"album_id → Albums"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Leaf audio unit"]}]]}],["$","tr","3",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Playlists"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"user_id → Users"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Ordered list metadata"]}]]}],["$","tr","4",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Playlist_Tracks"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"playlist_id"}],"+",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"track_id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":"$L26"}],"$L27"]}],"$L28","$L29","$L2a"]}]]}]}]}]
+8:["$","h2","8",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["Notable Design Patterns"]}]
+9:["$","ul","9",{"className":"mb-4 list-disc space-y-1 pl-5 text-slate-400","children":[["$","li","0",{"children":[["$","strong","0",{"className":"font-semibold text-slate-100","children":"Three kinds of M:N in one schema"}],":"]}]]}]
+a:["$","p","10",{"className":"mb-4 text-slate-400","children":["1. ",["$","code","1",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Playlist_Tracks"}]," — junction with a ",["$","strong","3",{"className":"font-semibold text-slate-100","children":"position"}]," column (order matters). 2. ",["$","code","5",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Library"}]," — plain saved/liked junction. 3. ",["$","code","7",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Listening_History"}]," — a ",["$","strong","9",{"className":"font-semibold text-slate-100","children":"fact table"}]," where each row is an event with its own surrogate PK and timestamp."]}]
+b:["$","ul","11",{"className":"mb-4 list-disc space-y-1 pl-5 text-slate-400","children":[["$","li","0",{"children":[["$","strong","0",{"className":"font-semibold text-slate-100","children":"Event logging vs state"}],": ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Listening_History"}]," is append-only and powers"]}]]}]
+c:["$","p","12",{"className":"mb-4 text-slate-400","children":["\"wrapped\" reports; ",["$","code","1",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Subscriptions.status"}]," is current state. Mixing these two modelling styles is realistic."]}]
+d:["$","ul","13",{"className":"mb-4 list-disc space-y-1 pl-5 text-slate-400","children":[["$","li","0",{"children":[["$","strong","0",{"className":"font-semibold text-slate-100","children":"Track-level granularity"}]," (not album) keeps playlists, history, and"]}]]}]
+e:["$","p","14",{"className":"mb-4 text-slate-400","children":["libraries expressive."]}]
+f:["$","ul","15",{"className":"mb-4 list-disc space-y-1 pl-5 text-slate-400","children":[["$","li","0",{"children":["Enables ",["$","strong","1",{"className":"font-semibold text-slate-100","children":"recommendation queries"}]," via track co-occurrence in"]}]]}]
+10:["$","p","16",{"className":"mb-4 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Listening_History"}]," or playlists."]}]
+11:["$","h2","17",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["Sample Queries"]}]
+2b:T559,-- Most played artists, last 30 days
+SELECT ar.name, COUNT(*) AS plays
+FROM listening_history lh
+JOIN tracks t  ON t.id = lh.track_id
+JOIN albums al ON al.id = t.album_id
+JOIN artists ar ON ar.id = al.artist_id
+WHERE lh.played_at >= datetime('now', '-30 days')
+GROUP BY ar.id
+ORDER BY plays DESC
+LIMIT 10;
+
+-- Top track per artist
+SELECT ar.name AS artist, t.title AS track, plays
+FROM (
+  SELECT al.artist_id, t.id AS track_id, COUNT(*) AS plays,
+         ROW_NUMBER() OVER (PARTITION BY al.artist_id ORDER BY COUNT(*) DESC) AS rn
+  FROM listening_history lh
+  JOIN tracks t  ON t.id = lh.track_id
+  JOIN albums al ON al.id = t.album_id
+  GROUP BY t.id
+) ranked
+JOIN tracks t  ON t.id = ranked.track_id
+JOIN artists ar ON ar.id = ranked.artist_id
+WHERE ranked.rn = 1
+ORDER BY plays DESC;
+
+-- Recommended tracks: played by users who share my listening history
+SELECT t.title, ar.name AS artist, COUNT(DISTINCT lh2.user_id) AS listeners
+FROM listening_history lh1
+JOIN listening_history lh2 ON lh2.track_id = lh1.track_id
+                            AND lh2.user_id <> lh1.user_id
+JOIN tracks t  ON t.id = lh2.track_id
+JOIN albums al ON al.id = t.album_id
+JOIN artists ar ON ar.id = al.artist_id
+WHERE lh1.user_id = 'user-42'
+  AND lh2.track_id NOT IN (
+    SELECT track_id FROM library WHERE user_id = 'user-42'
+  )
+  GROUP BY t.id
+  ORDER BY listeners DESC
+  LIMIT 10;12:["$","div","18",{"className":"mb-4","children":["$","pre",null,{"className":"overflow-x-auto rounded-xl border border-slate-800 bg-slate-950 p-4 text-[13px] leading-relaxed text-slate-300","children":["$","code",null,{"children":"$2b"}]}]}]
+13:["$","h2","19",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["Recreate the Sample"]}]
+14:["$","p","20",{"className":"mb-4 text-slate-400","children":["Run these statements in order to rebuild the schema."]}]
+2c:T6a7,PRAGMA foreign_keys = ON;
+
+CREATE TABLE users (
+  id    TEXT PRIMARY KEY,
+  name  TEXT NOT NULL,
+  email TEXT NOT NULL
+);
+
+CREATE TABLE artists (
+  id      TEXT PRIMARY KEY,
+  name    TEXT NOT NULL,
+  genres  TEXT,
+  country TEXT
+);
+
+CREATE TABLE albums (
+  id           TEXT PRIMARY KEY,
+  artist_id    TEXT NOT NULL REFERENCES artists(id),
+  title        TEXT NOT NULL,
+  release_date TEXT,
+  artwork_url  TEXT
+);
+
+CREATE TABLE tracks (
+  id           TEXT PRIMARY KEY,
+  album_id     TEXT NOT NULL REFERENCES albums(id),
+  title        TEXT NOT NULL,
+  duration_ms  INTEGER,
+  audio_url    TEXT,
+  track_number INTEGER
+);
+
+CREATE TABLE playlists (
+  id         TEXT PRIMARY KEY,
+  user_id    TEXT NOT NULL REFERENCES users(id),
+  title      TEXT NOT NULL,
+  public     INTEGER NOT NULL DEFAULT 0,
+  created_at TEXT
+);
+
+CREATE TABLE playlist_tracks (
+  playlist_id TEXT NOT NULL REFERENCES playlists(id),
+  track_id    TEXT NOT NULL REFERENCES tracks(id),
+  position    INTEGER NOT NULL,
+  added_at    TEXT,
+  PRIMARY KEY (playlist_id, track_id)
+);
+
+CREATE TABLE listening_history (
+  id               TEXT PRIMARY KEY,
+  user_id          TEXT NOT NULL REFERENCES users(id),
+  track_id         TEXT NOT NULL REFERENCES tracks(id),
+  played_at        TEXT NOT NULL,
+  seconds_listened INTEGER
+);
+
+CREATE TABLE subscriptions (
+  id         TEXT PRIMARY KEY,
+  user_id    TEXT NOT NULL REFERENCES users(id),
+  plan       TEXT NOT NULL,
+  price      REAL NOT NULL,
+  status     TEXT NOT NULL,
+  started_at TEXT,
+  renews_at  TEXT
+);
+
+CREATE TABLE library (
+  user_id  TEXT NOT NULL REFERENCES users(id),
+  track_id TEXT NOT NULL REFERENCES tracks(id),
+  saved_at TEXT,
+  PRIMARY KEY (user_id, track_id)
+);15:["$","div","21",{"className":"mb-4","children":["$","pre",null,{"className":"overflow-x-auto rounded-xl border border-slate-800 bg-slate-950 p-4 text-[13px] leading-relaxed text-slate-300","children":["$","code",null,{"children":"$2c"}]}]}]
+16:["$","nav",null,{"className":"border-base-300 mt-12 flex items-center justify-between gap-3 border-t pt-4","children":[["$","$L2",null,{"href":"/posts/hr","className":"btn btn-ghost btn-sm gap-2","children":[["$","svg",null,{"stroke":"currentColor","fill":"none","strokeWidth":"2","viewBox":"0 0 24 24","strokeLinecap":"round","strokeLinejoin":"round","className":"size-3.5","children":["$undefined",[["$","line","0",{"x1":"19","y1":"12","x2":"5","y2":"12","children":[]}],["$","polyline","1",{"points":"12 19 5 12 12 5","children":[]}]]],"style":{},"height":"1em","width":"1em","xmlns":"http://www.w3.org/2000/svg"}]," ","Oracle HR — Human Resources"]}],["$","$L2",null,{"href":"/posts/northwind","className":"btn btn-ghost btn-sm gap-2","children":["Northwind Traders"," ",["$","svg",null,{"stroke":"currentColor","fill":"none","strokeWidth":"2","viewBox":"0 0 24 24","strokeLinecap":"round","strokeLinejoin":"round","className":"size-3.5","children":["$undefined",[["$","line","0",{"x1":"5","y1":"12","x2":"19","y2":"12","children":[]}],["$","polyline","1",{"points":"12 5 19 12 12 19","children":[]}]]],"style":{},"height":"1em","width":"1em","xmlns":"http://www.w3.org/2000/svg"}]]}]]}]
+17:["$","script","script-0",{"src":"/free/database/_next/static/chunks/3r124p7l0dwms.js","async":true}]
+18:["$","$L2d",null,{"children":["$","$2e",null,{"name":"Next.MetadataOutlet","children":"$@2f"}]}]
+1b:["$","$1","h",{"children":[null,["$","$L30",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L31",null,{"children":["$","$2e",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Music Streaming Service · Schema Library"}],["$","meta","1",{"name":"description","content":"A Spotify-style streaming platform: artists, albums, tracks, playlists, listening history, subscriptions, and recommendations. A compact schema that exercises every join type and both kinds of many-to-many junctions."}],["$","link","2",{"rel":"manifest","href":"/manifest.json"}],["$","meta","3",{"name":"mobile-web-app-capable","content":"yes"}],["$","meta","4",{"name":"apple-mobile-web-app-title","content":"Database"}],["$","meta","5",{"name":"apple-mobile-web-app-status-bar-style","content":"black-translucent"}],["$","link","6",{"rel":"icon","href":"/free/database/favicon.ico?favicon.0vg85pxzt99x1.ico","sizes":"48x48","type":"image/x-icon"}],["$","$L32","7",{}]]}]}]}],null]}]
+1d:["$","$1","c",{"children":[null,["$","$L33",null,{"parallelRouterKey":"children","template":["$","$L34",null,{}]}]]}]
+20:["$","$1","c",{"children":[null,["$","$L33",null,{"parallelRouterKey":"children","template":["$","$L34",null,{}]}]]}]
+22:["$","$L35",null,{"loading":[["$","div","l",{"className":"flex h-screen items-center justify-center","children":["$","span",null,{"className":"loading loading-spinner loading-lg text-primary"}]}],[],null],"children":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/free/database/_next/static/chunks/2p4kffns0eld9.css","precedence":"next"}],["$","script","script-0",{"src":"/free/database/_next/static/chunks/10eqrmue8jg7p.js","async":true}]],["$","html",null,{"lang":"en","data-theme":"dim","children":[["$","head",null,{"children":["$","link",null,{"rel":"apple-touch-icon","href":"/icons/icon-192.png"}]}],["$","body",null,{"className":"bg-base-100 text-base-content h-screen overflow-y-auto font-mono","children":["$","$L36",null,{"children":["$","$L33",null,{"parallelRouterKey":"children","error":"$37","errorStyles":[],"errorScripts":[["$","script","script-0",{"src":"/free/database/_next/static/chunks/116ohefqh8701.js","async":true}]],"template":["$","$L38",null,{"children":["$","$L34",null,{}]}],"templateStyles":[],"templateScripts":[["$","script","script-0",{"src":"/free/database/_next/static/chunks/2xeqdjtv1ocwj.js","async":true}]],"notFound":[["$","div",null,{"className":"flex min-h-screen flex-col items-center justify-center px-6","children":[["$","p",null,{"className":"text-base-content/50 mb-6 text-xs tracking-[0.2em] uppercase","children":"Error"}],["$","h1",null,{"className":"mb-3","children":"404"}],["$","p",null,{"className":"text-base-content/50 mb-10 max-w-sm text-center text-sm","children":"The page you are looking for does not exist."}],["$","div",null,{"className":"flex flex-wrap justify-center gap-3","children":["$","$L2",null,{"href":"/","className":"btn btn-primary btn-sm","children":"Go home"}]}]]}],[]]}]}]}]]}]]}]}]
+26:["both FKs"]
+27:["$","td","3",{"className":"px-4 py-2 text-slate-400","children":[["$","strong","0",{"className":"font-semibold text-slate-100","children":"Ordered"}]," junction (position)"]}]
+28:["$","tr","5",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Listening_History"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"user_id"}],", ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"track_id"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Event log (fact table)"]}]]}]
+29:["$","tr","6",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Subscriptions"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"user_id → Users"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Plan + status + renewal"]}]]}]
+2a:["$","tr","7",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Library"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"user_id"}],"+",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"track_id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":["both FKs"]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Saved tracks (likes)"]}]]}]
+2f:null
+25:true
+1a:300
+1a:C
+24:0
+1c:"$undefined"
+1e:"$undefined"
+21:"$undefined"
+23:"$undefined"
+19:"$undefined"

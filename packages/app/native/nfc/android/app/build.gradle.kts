@@ -76,7 +76,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-compose:$lifecycleVersion")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycleVersion")
 
-    val navigationComposeVersion = "2.9.8"
+    val navigationComposeVersion = "2.10.0"
     implementation("androidx.navigation:navigation-compose:$navigationComposeVersion")
 
     val roomVersion = "2.8.4"
@@ -104,5 +104,5 @@ dependencies {
     testImplementation("androidx.test:core-ktx:1.7.0")
     testImplementation("org.robolectric:robolectric:4.16.1")
     testImplementation("androidx.compose.ui:ui-test-junit4")
-    testImplementation("androidx.navigation:navigation-testing:2.9.8")
+    testImplementation("androidx.navigation:navigation-testing:2.10.0")
 }

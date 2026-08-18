@@ -20,11 +20,11 @@ describe('DownloadsPage', () => {
       screen.getByRole('link', { name: 'Download .AppImage' })
     ).toHaveAttribute(
       'href',
-      expect.stringContaining('app-hybrid-football-latest')
+      expect.stringContaining('app-hybrid-sports-football-latest')
     );
     expect(screen.getByRole('link', { name: 'Download .deb' })).toHaveAttribute(
       'href',
-      expect.stringContaining('app-hybrid-football-latest')
+      expect.stringContaining('app-hybrid-sports-football-latest')
     );
   });
 });

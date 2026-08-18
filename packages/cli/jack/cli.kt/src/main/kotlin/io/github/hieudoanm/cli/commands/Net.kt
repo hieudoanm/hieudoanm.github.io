@@ -2,6 +2,7 @@ package io.github.hieudoanm.cli.commands
 
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.core.subcommands
+import com.github.ajalt.clikt.core.Context
 import com.github.ajalt.clikt.parameters.arguments.argument
 import com.github.ajalt.clikt.parameters.options.default
 import com.github.ajalt.clikt.parameters.options.flag
@@ -24,7 +25,8 @@ import javax.net.ssl.SSLContext
 import javax.net.ssl.TrustManager
 import javax.net.ssl.X509TrustManager
 
-class NetCommand : CliktCommand(name = "net", help = "Network diagnostics and servers") {
+class NetCommand : CliktCommand(name = "net") {
+    override fun help(context: Context) = "Network diagnostics and servers"
     init {
         subcommands(
             NetCert(), NetCertCheck(), NetCertInfo(), NetDns(), NetHttp(),
@@ -36,7 +38,8 @@ class NetCommand : CliktCommand(name = "net", help = "Network diagnostics and se
 
 // ─── TLS Cert ────────────────────────────────────────────────────────────────
 
-class NetCert : CliktCommand(name = "cert", help = "SSL/TLS certificate inspection") {
+class NetCert : CliktCommand(name = "cert") {
+    override fun help(context: Context) = "SSL/TLS certificate inspection"
     init {
         subcommands(NetCertInfo(), NetCertCheck())
     }
@@ -58,7 +61,8 @@ private fun tlsSocket(host: String): Socket {
     return factory.createSocket(parts[0], parts[1].toInt())
 }
 
-class NetCertInfo : CliktCommand(name = "info", help = "Show detailed certificate information") {
+class NetCertInfo : CliktCommand(name = "info") {
+    override fun help(context: Context) = "Show detailed certificate information"
     private val host by option("--host", "-H")
     override fun run() {
         val sock = tlsSocket(host ?: error("--host required"))
@@ -95,7 +99,8 @@ class NetCertInfo : CliktCommand(name = "info", help = "Show detailed certificat
     }
 }
 
-class NetCertCheck : CliktCommand(name = "check", help = "Quick certificate health check (expiry warning)") {
+class NetCertCheck : CliktCommand(name = "check") {
+    override fun help(context: Context) = "Quick certificate health check (expiry warning)"
     private val host by option("--host", "-H")
     override fun run() {
         val sock = tlsSocket(host ?: error("--host required"))
@@ -122,7 +127,8 @@ data class DnsResult(
     var txt: List<String> = emptyList()
 )
 
-class NetDns : CliktCommand(name = "dns", help = "DNS record lookup") {
+class NetDns : CliktCommand(name = "dns") {
+    override fun help(context: Context) = "DNS record lookup"
     private val domain by option("--domain", "-d")
     private val type by option("--type", "-t")
     private val json by option("--json").flag()
@@ -170,7 +176,8 @@ class NetDns : CliktCommand(name = "dns", help = "DNS record lookup") {
 
 // ─── HTTP ────────────────────────────────────────────────────────────────────
 
-class NetHttp : CliktCommand(name = "http", help = "Make HTTP requests") {
+class NetHttp : CliktCommand(name = "http") {
+    override fun help(context: Context) = "Make HTTP requests"
     private val url by option("--url", "-u")
     private val method by option("--method", "-X").default("GET")
     private val data by option("--data", "-d")
@@ -209,7 +216,8 @@ data class IPInfo(
     val org: String = "", val asn: String = ""
 )
 
-class NetIp : CliktCommand(name = "ip", help = "Look up your public IP and geolocation") {
+class NetIp : CliktCommand(name = "ip") {
+    override fun help(context: Context) = "Look up your public IP and geolocation"
     private val json by option("--json").flag()
     override fun run() {
         try {
@@ -258,7 +266,8 @@ class NetIp : CliktCommand(name = "ip", help = "Look up your public IP and geolo
 
 // ─── Ping ────────────────────────────────────────────────────────────────────
 
-class NetPing : CliktCommand(name = "ping", help = "TCP ping to check host reachability") {
+class NetPing : CliktCommand(name = "ping") {
+    override fun help(context: Context) = "TCP ping to check host reachability"
     private val host by option("--host", "-H")
     private val port by option("--port", "-p").int().default(80)
     private val count by option("--count", "-c").int().default(4)
@@ -299,7 +308,8 @@ class NetPing : CliktCommand(name = "ping", help = "TCP ping to check host reach
 
 // ─── Serve ───────────────────────────────────────────────────────────────────
 
-class NetServe : CliktCommand(name = "serve", help = "Start an HTTP file server") {
+class NetServe : CliktCommand(name = "serve") {
+    override fun help(context: Context) = "Start an HTTP file server"
     private val port by option("--port", "-p").int().default(8080)
     private val dir by option("--dir", "-d").default(".")
     private val cors by option("--cors").flag()
@@ -335,7 +345,8 @@ class NetServe : CliktCommand(name = "serve", help = "Start an HTTP file server"
 
 // ─── Status ──────────────────────────────────────────────────────────────────
 
-class NetStatus : CliktCommand(name = "status", help = "Check the uptime status of cloud services") {
+class NetStatus : CliktCommand(name = "status") {
+    override fun help(context: Context) = "Check the uptime status of cloud services"
     private val json by option("--json").flag()
     override fun run() {
         val services = mapOf(
@@ -364,7 +375,8 @@ class NetStatus : CliktCommand(name = "status", help = "Check the uptime status 
 
 // ─── Whois ───────────────────────────────────────────────────────────────────
 
-class NetWhois : CliktCommand(name = "whois", help = "WHOIS lookup for a domain") {
+class NetWhois : CliktCommand(name = "whois") {
+    override fun help(context: Context) = "WHOIS lookup for a domain"
     private val domain by option("--domain", "-d")
     private val server by option("--server", "-s")
     override fun run() {
@@ -402,7 +414,8 @@ private fun whoisServerFor(domain: String): String {
 
 // ─── WiFi ────────────────────────────────────────────────────────────────────
 
-class NetWifi : CliktCommand(name = "wifi", help = "Show current WiFi network info") {
+class NetWifi : CliktCommand(name = "wifi") {
+    override fun help(context: Context) = "Show current WiFi network info"
     private val json by option("--json").flag()
     override fun run() {
         try {

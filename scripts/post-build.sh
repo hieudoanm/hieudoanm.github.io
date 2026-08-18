@@ -26,10 +26,10 @@ Usage: post-build.sh [options]
 Builds hybrid apps and copies their out/ directories into docs/.
 
 The docs app is always built first and copied to docs/ (site root). Every other
-app in packages/app/hybrid is built with BASE_PATH=/downloads/<name> and copied
-to docs/downloads/<name> only after the docs app has finished. After a full
+app in packages/app/hybrid is built with BASE_PATH=/free/<name> and copied
+to docs/free/<name> only after the docs app has finished. After a full
 build, post-build.sh verifies that every app in packages/app/hybrid (except the
-docs app) has an output in docs/downloads and fails otherwise.
+docs app) has an output in docs/free and fails otherwise.
 
 Options:
   --all           Build and copy all apps in packages/app/hybrid (default)
@@ -54,8 +54,8 @@ build_app() {
     local dest_dir="$DOCS_DIR"
 
     if [[ "$app_path" != "$ROOT_APP" ]]; then
-        base_path="/downloads/$app_name"
-        dest_dir="$DOCS_DIR/downloads/$app_name"
+        base_path="/free/$app_name"
+        dest_dir="$DOCS_DIR/free/$app_name"
     fi
 
     if [[ -n "$base_path" ]]; then
@@ -84,10 +84,14 @@ build_ordered() {
     local apps=("$@")
     local app_path
     for app_path in "${apps[@]}"; do
-        [[ "$app_path" == "$ROOT_APP" ]] && build_app "$app_path"
+        if [[ "$app_path" == "$ROOT_APP" ]]; then
+            build_app "$app_path"
+        fi
     done
     for app_path in "${apps[@]}"; do
-        [[ "$app_path" != "$ROOT_APP" ]] && build_app "$app_path"
+        if [[ "$app_path" != "$ROOT_APP" ]]; then
+            build_app "$app_path"
+        fi
     done
 }
 
@@ -106,10 +110,10 @@ build_all_apps() {
         done
     done
     build_ordered "${apps[@]}"
-    verify_downloads
+    verify_free
 }
 
-verify_downloads() {
+verify_free() {
     local missing=()
     for category_dir in "$HYBRID_DIR"/*/; do
         [[ ! -d "$category_dir" ]] && continue
@@ -120,16 +124,17 @@ verify_downloads() {
             [[ ! -d "$app_dir" ]] && continue
             local app_name="${app_dir%/}"
             app_name="${app_name##*/}"
+            [[ "$category/$app_name" == "$ROOT_APP" ]] && continue
             if [[ ! -f "$app_dir/package.json" ]] || [[ ! -f "$app_dir/next.config.ts" ]]; then
                 continue
             fi
-            if [[ ! -d "$DOCS_DIR/downloads/$app_name" ]]; then
+            if [[ ! -d "$DOCS_DIR/free/$app_name" ]]; then
                 missing+=("$category/$app_name")
             fi
         done
     done
     if [[ ${#missing[@]} -gt 0 ]]; then
-        echo "Error: missing build outputs in $DOCS_DIR/downloads: ${missing[*]}" >&2
+        echo "Error: missing build outputs in $DOCS_DIR/free: ${missing[*]}" >&2
         echo "Each Next.js app in $HYBRID_DIR (except '$ROOT_APP') must be copied there." >&2
         exit 1
     fi

@@ -3,8 +3,8 @@ module github.com/hieudoanm/jack
 go 1.26.5
 
 require (
-	charm.land/bubbles/v2 v2.1.1
-	charm.land/bubbletea/v2 v2.0.8
+	charm.land/bubbles/v2 v2.2.1
+	charm.land/bubbletea/v2 v2.0.9
 	charm.land/lipgloss/v2 v2.0.6
 	github.com/AlecAivazis/survey/v2 v2.3.7
 	github.com/JohannesKaufmann/html-to-markdown/v2 v2.5.2
@@ -14,7 +14,7 @@ require (
 	github.com/go-shiori/go-readability v0.0.0-20251205110129-5db1dc9836f0
 	github.com/google/uuid v1.6.0
 	github.com/makiuchi-d/gozxing v0.1.1
-	github.com/mattn/go-sqlite3 v1.14.49
+	github.com/mattn/go-sqlite3 v1.14.50
 	github.com/notnil/chess v1.10.0
 	github.com/pdfcpu/pdfcpu v0.15.0
 	github.com/shirou/gopsutil/v4 v4.26.7
