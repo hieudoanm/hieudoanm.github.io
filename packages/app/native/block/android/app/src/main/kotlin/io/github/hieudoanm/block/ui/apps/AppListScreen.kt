@@ -1,9 +1,9 @@
 package io.github.hieudoanm.block.ui.apps
 
-import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
+import androidx.core.graphics.createBitmap
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -140,10 +140,9 @@ private fun AppItem(
 @Composable
 private fun rememberIconBitmap(drawable: Drawable): androidx.compose.ui.graphics.ImageBitmap? {
     return androidx.compose.runtime.remember(drawable) {
-        val bitmap = Bitmap.createBitmap(
+        val bitmap = createBitmap(
             drawable.intrinsicWidth.coerceAtLeast(1),
             drawable.intrinsicHeight.coerceAtLeast(1),
-            Bitmap.Config.ARGB_8888,
         )
         val canvas = Canvas(bitmap)
         drawable.setBounds(0, 0, canvas.width, canvas.height)

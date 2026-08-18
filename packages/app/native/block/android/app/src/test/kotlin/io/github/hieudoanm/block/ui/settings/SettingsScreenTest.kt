@@ -2,6 +2,7 @@ package io.github.hieudoanm.block.ui.settings
 
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
+import io.mockk.mockk
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -16,10 +17,11 @@ class SettingsScreenTest {
 
     @Test
     fun `displays settings title`() {
+        val vm = SettingsViewModel(mockk(relaxed = true))
         composeTestRule.setContent {
             SettingsScreen(
                 onNavigateBack = {},
-                viewModel = SettingsViewModel(io.mockk.mockk(relaxed = true)),
+                viewModel = vm,
             )
         }
         composeTestRule.onNodeWithText("Settings").assertExists()
@@ -27,10 +29,11 @@ class SettingsScreenTest {
 
     @Test
     fun `displays enable blocker toggle`() {
+        val vm = SettingsViewModel(mockk(relaxed = true))
         composeTestRule.setContent {
             SettingsScreen(
                 onNavigateBack = {},
-                viewModel = SettingsViewModel(io.mockk.mockk(relaxed = true)),
+                viewModel = vm,
             )
         }
         composeTestRule.onNodeWithText("Enable Blocker").assertExists()
@@ -38,10 +41,11 @@ class SettingsScreenTest {
 
     @Test
     fun `displays launch on boot toggle`() {
+        val vm = SettingsViewModel(mockk(relaxed = true))
         composeTestRule.setContent {
             SettingsScreen(
                 onNavigateBack = {},
-                viewModel = SettingsViewModel(io.mockk.mockk(relaxed = true)),
+                viewModel = vm,
             )
         }
         composeTestRule.onNodeWithText("Launch on Boot").assertExists()
@@ -49,10 +53,11 @@ class SettingsScreenTest {
 
     @Test
     fun `displays dark mode toggle`() {
+        val vm = SettingsViewModel(mockk(relaxed = true))
         composeTestRule.setContent {
             SettingsScreen(
                 onNavigateBack = {},
-                viewModel = SettingsViewModel(io.mockk.mockk(relaxed = true)),
+                viewModel = vm,
             )
         }
         composeTestRule.onNodeWithText("Dark Mode").assertExists()
@@ -60,10 +65,11 @@ class SettingsScreenTest {
 
     @Test
     fun `displays ignore system apps toggle`() {
+        val vm = SettingsViewModel(mockk(relaxed = true))
         composeTestRule.setContent {
             SettingsScreen(
                 onNavigateBack = {},
-                viewModel = SettingsViewModel(io.mockk.mockk(relaxed = true)),
+                viewModel = vm,
             )
         }
         composeTestRule.onNodeWithText("Ignore System Apps").assertExists()

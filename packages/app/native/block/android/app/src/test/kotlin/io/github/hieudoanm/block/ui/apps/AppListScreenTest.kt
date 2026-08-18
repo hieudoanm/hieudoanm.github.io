@@ -2,6 +2,8 @@ package io.github.hieudoanm.block.ui.apps
 
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
+import androidx.lifecycle.viewmodel.compose.viewModel
+import io.mockk.mockk
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -16,10 +18,11 @@ class AppListScreenTest {
 
     @Test
     fun `displays blocked apps title`() {
+        val vm = AppListViewModel(mockk(relaxed = true))
         composeTestRule.setContent {
             AppListScreen(
                 onNavigateBack = {},
-                viewModel = AppListViewModel(io.mockk.mockk(relaxed = true)),
+                viewModel = vm,
             )
         }
         composeTestRule.onNodeWithText("Blocked Apps").assertExists()
@@ -27,10 +30,11 @@ class AppListScreenTest {
 
     @Test
     fun `displays search placeholder`() {
+        val vm = AppListViewModel(mockk(relaxed = true))
         composeTestRule.setContent {
             AppListScreen(
                 onNavigateBack = {},
-                viewModel = AppListViewModel(io.mockk.mockk(relaxed = true)),
+                viewModel = vm,
             )
         }
         composeTestRule.onNodeWithText("Search apps\u2026").assertExists()
