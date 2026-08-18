@@ -2,23 +2,14 @@ import type { ComponentType } from 'react';
 import { Tool } from '@hieudoanm.github.io/components/atoms';
 import type { IconType } from 'react-icons';
 import {
-  PiArrowsDownUp,
-  PiBank,
   PiBook,
   PiBugDroid,
   PiBuilding,
-  PiCards,
   PiCheckCircle,
-  PiCircleDashed,
-  PiCoin,
-  PiDiceOne,
   PiGameController,
-  PiGlobe,
   PiGraph,
-  PiGridFour,
   PiHurricane,
   PiLamp,
-  PiMapTrifold,
   PiNumberSquareOne,
   PiPaintBrushBroad,
   PiPi,
@@ -28,13 +19,9 @@ import {
   PiScales,
   PiScissors,
   PiShuffle,
-  PiSmiley,
   PiSnowflake,
   PiSortAscending,
-  PiSquare,
-  PiSquaresFour,
   PiTarget,
-  PiX,
 } from 'react-icons/pi';
 import gamesJson from './games.json';
 
@@ -54,23 +41,14 @@ export interface GameSection {
 type GameJsonItem = (typeof gamesJson)[number]['items'][number];
 
 const ICON_BY_NAME: Record<string, IconType> = {
-  PiArrowsDownUp,
-  PiBank,
   PiBook,
   PiBugDroid,
   PiBuilding,
-  PiCards,
   PiCheckCircle,
-  PiCircleDashed,
-  PiCoin,
-  PiDiceOne,
   PiGameController,
-  PiGlobe,
   PiGraph,
-  PiGridFour,
   PiHurricane,
   PiLamp,
-  PiMapTrifold,
   PiNumberSquareOne,
   PiPaintBrushBroad,
   PiPi,
@@ -80,13 +58,9 @@ const ICON_BY_NAME: Record<string, IconType> = {
   PiScales,
   PiScissors,
   PiShuffle,
-  PiSmiley,
   PiSnowflake,
   PiSortAscending,
-  PiSquare,
-  PiSquaresFour,
   PiTarget,
-  PiX,
 };
 
 const resolveIcon = (name: string): GameItem['icon'] => {

@@ -2,6 +2,7 @@ package io.github.hieudoanm.cli.commands
 
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.core.subcommands
+import com.github.ajalt.clikt.core.Context
 import com.github.ajalt.clikt.parameters.arguments.argument
 import com.github.ajalt.clikt.parameters.arguments.multiple
 import com.github.ajalt.clikt.parameters.options.default
@@ -11,7 +12,8 @@ import com.github.ajalt.clikt.parameters.types.int
 import kotlin.random.Random
 import kotlin.math.*
 
-class CasinoCommand : CliktCommand(name = "casino", help = "Casino games") {
+class CasinoCommand : CliktCommand(name = "casino") {
+    override fun help(context: Context) = "Casino games"
     init {
         subcommands(CasinoCoin(), CasinoDice(), CasinoRoulette(), CasinoSlots(), CasinoBaccarat(), CasinoBlackjack(), CasinoPoker())
     }
@@ -20,7 +22,8 @@ class CasinoCommand : CliktCommand(name = "casino", help = "Casino games") {
 
 // -- Coin ------------------------------------------------------------------
 
-class CasinoCoin : CliktCommand(name = "coin", help = "Flip a coin") {
+class CasinoCoin : CliktCommand(name = "coin") {
+    override fun help(context: Context) = "Flip a coin"
     private val count by option("--count", "-n", help = "Number of flips").int().default(1)
     override fun run() {
         val c = maxOf(1, count)
@@ -39,7 +42,8 @@ class CasinoCoin : CliktCommand(name = "coin", help = "Flip a coin") {
 
 // -- Dice ------------------------------------------------------------------
 
-class CasinoDice : CliktCommand(name = "dice", help = "Roll dice") {
+class CasinoDice : CliktCommand(name = "dice") {
+    override fun help(context: Context) = "Roll dice"
     private val count by option("--count", "-n", help = "Number of dice").int().default(1)
     private val sides by option("--sides", "-s", help = "Sides per die").int().default(6)
     override fun run() {
@@ -58,7 +62,8 @@ class CasinoDice : CliktCommand(name = "dice", help = "Roll dice") {
 
 // -- Roulette --------------------------------------------------------------
 
-class CasinoRoulette : CliktCommand(name = "roulette", help = "Spin the roulette wheel") {
+class CasinoRoulette : CliktCommand(name = "roulette") {
+    override fun help(context: Context) = "Spin the roulette wheel"
     private val spins by option("--spins", "-n", help = "Number of spins").int().default(1)
     override fun run() {
         val numbers = listOf(0, 32, 15, 19, 4, 21, 2, 25, 17, 34, 6, 27, 13, 36,
@@ -81,13 +86,15 @@ class CasinoRoulette : CliktCommand(name = "roulette", help = "Spin the roulette
 
 // -- Slots -----------------------------------------------------------------
 
-class CasinoSlots : CliktCommand(name = "slots", help = "Play a slot machine") {
+class CasinoSlots : CliktCommand(name = "slots") {
+    override fun help(context: Context) = "Play a slot machine"
     private val bet by option("--bet", "-b", help = "Bet amount").int().default(25)
     init { subcommands(CasinoSlotsPlay()) }
     override fun run() { echo("See 'slots play'") }
 }
 
-class CasinoSlotsPlay : CliktCommand(name = "play", help = "Play the slot machine") {
+class CasinoSlotsPlay : CliktCommand(name = "play") {
+    override fun help(context: Context) = "Play the slot machine"
     private val bet by option("--bet", "-b", help = "Bet amount").int().default(25)
     override fun run() {
         val symbols = listOf("Cherry", "Lemon", "Bell", "Diamond", "7", "BAR")
@@ -105,12 +112,14 @@ class CasinoSlotsPlay : CliktCommand(name = "play", help = "Play the slot machin
 
 // -- Baccarat --------------------------------------------------------------
 
-class CasinoBaccarat : CliktCommand(name = "baccarat", help = "Baccarat games") {
+class CasinoBaccarat : CliktCommand(name = "baccarat") {
+    override fun help(context: Context) = "Baccarat games"
     init { subcommands(CasinoBaccaratPlay(), CasinoBaccaratStrategy()) }
     override fun run() = Unit
 }
 
-class CasinoBaccaratPlay : CliktCommand(name = "play", help = "Play a simplified baccarat hand") {
+class CasinoBaccaratPlay : CliktCommand(name = "play") {
+    override fun help(context: Context) = "Play a simplified baccarat hand"
     private val bet by option("--bet", "-b", help = "Bet amount").int().default(25)
     override fun run() {
         val deck = shuffledDeck().toMutableList()
@@ -129,7 +138,8 @@ class CasinoBaccaratPlay : CliktCommand(name = "play", help = "Play a simplified
     }
 }
 
-class CasinoBaccaratStrategy : CliktCommand(name = "strategy", help = "Baccarat strategy analysis via simulation") {
+class CasinoBaccaratStrategy : CliktCommand(name = "strategy") {
+    override fun help(context: Context) = "Baccarat strategy analysis via simulation"
     private val sims by option("--simulations", "-n", help = "Number of simulations").int().default(100000)
     override fun run() {
         val n = maxOf(1, sims)
@@ -161,12 +171,14 @@ class CasinoBaccaratStrategy : CliktCommand(name = "strategy", help = "Baccarat 
 
 // -- Blackjack -------------------------------------------------------------
 
-class CasinoBlackjack : CliktCommand(name = "blackjack", help = "Blackjack games") {
+class CasinoBlackjack : CliktCommand(name = "blackjack") {
+    override fun help(context: Context) = "Blackjack games"
     init { subcommands(CasinoBlackjackPlay(), CasinoBlackjackCount()) }
     override fun run() = Unit
 }
 
-class CasinoBlackjackPlay : CliktCommand(name = "play", help = "Play a blackjack hand") {
+class CasinoBlackjackPlay : CliktCommand(name = "play") {
+    override fun help(context: Context) = "Play a blackjack hand"
     private val s17 by option("--s17", help = "Dealer stands on soft 17").flag()
     override fun run() {
         val deck = shuffledDeck().toMutableList()
@@ -194,7 +206,8 @@ class CasinoBlackjackPlay : CliktCommand(name = "play", help = "Play a blackjack
     }
 }
 
-class CasinoBlackjackCount : CliktCommand(name = "count", help = "Practice card counting (Hi-Lo)") {
+class CasinoBlackjackCount : CliktCommand(name = "count") {
+    override fun help(context: Context) = "Practice card counting (Hi-Lo)"
     private val hands by option("--hands", "-n", help = "Number of hands").int().default(10)
     override fun run() {
         val n = maxOf(1, hands)
@@ -219,12 +232,14 @@ class CasinoBlackjackCount : CliktCommand(name = "count", help = "Practice card 
 
 // -- Poker -----------------------------------------------------------------
 
-class CasinoPoker : CliktCommand(name = "poker", help = "Poker odds calculator") {
+class CasinoPoker : CliktCommand(name = "poker") {
+    override fun help(context: Context) = "Poker odds calculator"
     init { subcommands(CasinoPokerOdds()) }
     override fun run() = Unit
 }
 
-class CasinoPokerOdds : CliktCommand(name = "odds", help = "Texas Hold'em odds via Monte Carlo simulation") {
+class CasinoPokerOdds : CliktCommand(name = "odds") {
+    override fun help(context: Context) = "Texas Hold'em odds via Monte Carlo simulation"
     private val hand by argument(help = "Hole cards (e.g. \"Ah Kh\")").multiple()
     private val board by option("--board", "-b", help = "Community cards (e.g. \"2h 7s Tc\")").default("")
     private val opponents by option("--opponents", "-o", help = "Number of opponents").int().default(1)

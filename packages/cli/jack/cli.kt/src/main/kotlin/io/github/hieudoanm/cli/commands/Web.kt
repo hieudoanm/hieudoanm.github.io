@@ -2,6 +2,7 @@ package io.github.hieudoanm.cli.commands
 
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.core.subcommands
+import com.github.ajalt.clikt.core.Context
 import com.github.ajalt.clikt.parameters.arguments.argument
 import com.github.ajalt.clikt.parameters.arguments.default
 import com.github.ajalt.clikt.parameters.options.option
@@ -16,7 +17,8 @@ import java.net.URL
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Element
 
-class WebCommand : CliktCommand(name = "web", help = "Web service tools") {
+class WebCommand : CliktCommand(name = "web") {
+    override fun help(context: Context) = "Web service tools"
     init {
         subcommands(
             WebInstagram(), WebShopify(), WebSimplify(), WebSnapshot(), WebWeather(), WebYoutube()
@@ -25,12 +27,14 @@ class WebCommand : CliktCommand(name = "web", help = "Web service tools") {
     override fun run() = Unit
 }
 
-class WebInstagram : CliktCommand(name = "instagram", help = "Instagram related tools") {
+class WebInstagram : CliktCommand(name = "instagram") {
+    override fun help(context: Context) = "Instagram related tools"
     init { subcommands(WebInstagramDownload()) }
     override fun run() = Unit
 }
 
-class WebInstagramDownload : CliktCommand(name = "download", help = "Download images from Instagram") {
+class WebInstagramDownload : CliktCommand(name = "download") {
+    override fun help(context: Context) = "Download images from Instagram"
     private val url by option("--url", "-u", help = "Instagram post URL or shortcode").required()
     private val output by option("--output", "-o", help = "Output directory").default(".")
     private val index by option("--index", "-i", help = "Specific image index (1-based)").int().default(0)
@@ -119,12 +123,14 @@ private fun scrapeIGImages(html: String): List<String> {
     return urls
 }
 
-class WebShopify : CliktCommand(name = "shopify", help = "Shopify detection and analysis tools") {
+class WebShopify : CliktCommand(name = "shopify") {
+    override fun help(context: Context) = "Shopify detection and analysis tools"
     init { subcommands(WebShopifyDetect()) }
     override fun run() = Unit
 }
 
-class WebShopifyDetect : CliktCommand(name = "detect", help = "Detect if a website is using Shopify") {
+class WebShopifyDetect : CliktCommand(name = "detect") {
+    override fun help(context: Context) = "Detect if a website is using Shopify"
     private val url by argument().default("")
     private val verbose by option("--verbose", "-v", help = "Show detection signals").flag()
     private val json by option("--json", help = "Output in JSON format").flag()
@@ -197,7 +203,8 @@ private fun checkShopify(urlStr: String): ShopifyResult {
     return ShopifyResult(isShopify, isPlus, signals)
 }
 
-class WebSnapshot : CliktCommand(name = "snapshot", help = "Take a screenshot of a web page") {
+class WebSnapshot : CliktCommand(name = "snapshot") {
+    override fun help(context: Context) = "Take a screenshot of a web page"
     private val url by option("--url", "-u", help = "URL to capture").required()
     private val output by option("--output", "-o", help = "Output file or directory").default("")
     private val width by option("--width", help = "Viewport width").int().default(0)
@@ -243,7 +250,8 @@ private fun hostnameSlug(rawURL: String): String {
     } catch (_: Exception) { "snapshot" }
 }
 
-class WebWeather : CliktCommand(name = "weather", help = "Check current weather for a city") {
+class WebWeather : CliktCommand(name = "weather") {
+    override fun help(context: Context) = "Check current weather for a city"
     private val city by argument().default("")
     private val forecast by option("--forecast", "-f", help = "Show 3-day forecast").flag()
     private val json by option("--json", help = "Output in JSON format").flag()
@@ -291,7 +299,8 @@ class WebWeather : CliktCommand(name = "weather", help = "Check current weather 
     }
 }
 
-class WebYoutube : CliktCommand(name = "youtube", help = "YouTube fetch and thumbnail tools") {
+class WebYoutube : CliktCommand(name = "youtube") {
+    override fun help(context: Context) = "YouTube fetch and thumbnail tools"
     init { subcommands(WebYoutubeThumbnails(), WebYoutubeFetch()) }
     override fun run() = Unit
 }
@@ -343,7 +352,8 @@ private fun ytDownloadThumb(videoID: String, qualityID: String, outDir: String):
     return path.absolutePath
 }
 
-class WebYoutubeThumbnails : CliktCommand(name = "thumbnails", help = "Download YouTube video thumbnails") {
+class WebYoutubeThumbnails : CliktCommand(name = "thumbnails") {
+    override fun help(context: Context) = "Download YouTube video thumbnails"
     private val url by option("--url", "-u", help = "Video URL or ID").required()
     private val quality by option("--quality", "-q", help = "Specific quality to download").default("")
     private val output by option("--output", "-o", help = "Output directory").default(".")
@@ -394,12 +404,14 @@ class WebYoutubeThumbnails : CliktCommand(name = "thumbnails", help = "Download 
     }
 }
 
-class WebSimplify : CliktCommand(name = "simplify", help = "Extract and convert web content") {
+class WebSimplify : CliktCommand(name = "simplify") {
+    override fun help(context: Context) = "Extract and convert web content"
     init { subcommands(WebSimplifyCsv(), WebSimplifyMd()) }
     override fun run() = Unit
 }
 
-class WebSimplifyCsv : CliktCommand(name = "csv", help = "Extract HTML tables to CSV") {
+class WebSimplifyCsv : CliktCommand(name = "csv") {
+    override fun help(context: Context) = "Extract HTML tables to CSV"
     private val url by option("--url", "-u", help = "URL to fetch").required()
     private val out by option("--out", "-o", help = "Output directory (default .)").default("")
 
@@ -431,7 +443,8 @@ class WebSimplifyCsv : CliktCommand(name = "csv", help = "Extract HTML tables to
     }
 }
 
-class WebSimplifyMd : CliktCommand(name = "md", help = "Convert webpage to markdown") {
+class WebSimplifyMd : CliktCommand(name = "md") {
+    override fun help(context: Context) = "Convert webpage to markdown"
     private val url by option("--url", "-u", help = "URL to fetch").required()
     private val out by option("--out", "-o", help = "Output directory (default .)").default("")
 
@@ -503,7 +516,7 @@ private fun htmlTableToMarkdown(table: Element): String {
     val sb = StringBuilder()
     val rows = table.select("tr")
     if (rows.isEmpty()) return ""
-    val headerCells = rows.first().select("td, th")
+    val headerCells = rows.first()!!.select("td, th")
     val colCount = headerCells.size
     sb.append("| ").append(headerCells.joinToString(" | ") { it.text().trim() }).appendLine(" |")
     sb.append("|").append((" --- |").repeat(colCount)).appendLine()
@@ -514,7 +527,8 @@ private fun htmlTableToMarkdown(table: Element): String {
     return sb.toString()
 }
 
-class WebYoutubeFetch : CliktCommand(name = "fetch", help = "Fetch YouTube video transcript") {
+class WebYoutubeFetch : CliktCommand(name = "fetch") {
+    override fun help(context: Context) = "Fetch YouTube video transcript"
     private val url by option("--url", "-u", help = "Video URL or ID").required()
     private val lang by option("--lang", "-l", help = "Language code (e.g. en, es, fr)").default("en")
     private val output by option("--output", "-o", help = "Save to file instead of stdout").default("")

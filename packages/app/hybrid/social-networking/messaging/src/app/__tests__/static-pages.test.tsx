@@ -32,7 +32,7 @@ describe('VersionPage', () => {
     expect(screen.getAllByText('Version').length).toBeGreaterThan(0);
     expect(screen.getByText('0.0.1')).toBeInTheDocument();
     expect(screen.getByText('Phase 1 complete')).toBeInTheDocument();
-    expect(screen.getByText('app-hybrid-messaging-latest')).toBeInTheDocument();
+    expect(screen.getByText('app-hybrid-social-networking-messaging-latest')).toBeInTheDocument();
   });
 });
 

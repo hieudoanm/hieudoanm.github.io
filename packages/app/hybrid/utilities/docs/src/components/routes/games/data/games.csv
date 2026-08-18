@@ -2,18 +2,6 @@ section,sectionId,label,description,icon,toolId
 Arcade,arcade,Dino Run,Infinite runner,PiGameController,dino-run
 Arcade,arcade,RPS,Rock Paper Scissors,PiScissors,rps
 Arcade,arcade,Snake,"12×12 grid",PiBugDroid,snake
-Arcade,arcade,T3,Tic-Tac-Toe,PiX,t3
-Casino,casino,Baccarat,Card game,PiBank,tai-baccarat
-Casino,casino,Blackjack,Cards Counter,PiCards,blackjack
-Casino,casino,Poker,Odds Calculator,PiCards,poker
-Casino,casino,Dice Game,Over/Under 7,PiDiceOne,dice-game
-Casino,casino,Slot Machine,3 reels,PiCoin,slot-machine
-Countries,countries,Border,Guess the neighbor,PiMapTrifold,countries-border
-Countries,countries,Connection,Group countries by category,PiGridFour,countries-connection
-Countries,countries,Continents Sort,Drag countries into continents,PiSortAscending,countries-continents-sort
-Countries,countries,Emoji Guesser,Pick the flag,PiSmiley,emoji-guesser
-Countries,countries,Flag Guesser,Name the country,PiGlobe,flag-guesser
-Countries,countries,Higher or Lower,Compare populations,PiArrowsDownUp,countries-higher-lower
 Memory,memory,Memory Match,Find matching pairs,PiGameController,memory-match
 Memory,memory,N-Back,Working memory,PiNumberSquareOne,n-back
 Memory,memory,PI,Memorization,PiPi,pi
@@ -30,4 +18,3 @@ Trivia,trivia,Through the Years,Timeline history game,PiSortAscending,through-th
 Trivia,trivia,Myth Versus Fact,Spot the false claim,PiCheckCircle,myth-versus-fact
 Word,word,Palindrome,Palindrome,PiRepeat,palindrome
 Word,word,Typoglycemia,Scrambled text,PiShuffle,typoglycemia
-Word,word,Wordle,Guess the word,PiSquare,wordle

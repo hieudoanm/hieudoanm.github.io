@@ -1,0 +1,129 @@
+name: CI - App - Native - Android - Template
+
+on:
+  workflow_call:
+    inputs:
+      package:
+        required: true
+        type: string
+        description: Android project directory, e.g. packages/app/native/block/android
+      releaseName:
+        required: true
+        type: string
+        description: GitHub release tag, e.g. app-native-android-block-latest
+      releaseTitle:
+        required: true
+        type: string
+        description: GitHub release title, e.g. App - Native - Android - Block (latest)
+      artifactPrefix:
+        required: true
+        type: string
+        description: Artifact name prefix, e.g. android-block
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: ${{ inputs.package }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7.0.1
+      - name: Install Java
+        uses: actions/setup-java@v5.7.0
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+      - name: Install Android SDK
+        uses: android-actions/setup-android@v4.0.1
+      - name: Cache Gradle
+        uses: actions/cache@v6.1.0
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('${{ inputs.package }}/**/*.gradle.kts', '${{ inputs.package }}/gradle.properties', '${{ inputs.package }}/**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+      - name: Make Gradle Executable
+        run: chmod +x gradlew
+      - name: Lint
+        run: ./gradlew lint
+      - name: Test
+        run: ./gradlew test
+      - name: Create Keystore
+        run: |
+          keytool -genkey -v -keystore release.keystore \
+            -alias release -keyalg RSA -keysize 2048 -validity 10000 \
+            -storepass android -keypass android \
+            -dname "CN=, OU=, O=, L=, S=, C="
+      - name: Build APK
+        run: ./gradlew assembleRelease
+        env:
+          RELEASE_STORE_FILE: ${{ github.workspace }}/${{ inputs.package }}/release.keystore
+          RELEASE_STORE_PASSWORD: android
+          RELEASE_KEY_ALIAS: release
+          RELEASE_KEY_PASSWORD: android
+      - name: Build AAB
+        run: ./gradlew bundleRelease
+        env:
+          RELEASE_STORE_FILE: ${{ github.workspace }}/${{ inputs.package }}/release.keystore
+          RELEASE_STORE_PASSWORD: android
+          RELEASE_KEY_ALIAS: release
+          RELEASE_KEY_PASSWORD: android
+      - name: Upload APK
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: ${{ inputs.artifactPrefix }}-apk
+          path: ${{ inputs.package }}/app/build/outputs/apk/release/
+      - name: Upload AAB
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: ${{ inputs.artifactPrefix }}-aab
+          path: ${{ inputs.package }}/app/build/outputs/bundle/release/
+
+  publish:
+    name: Publish to GitHub Release
+    needs: [build]
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7.0.1
+      - name: Download APK
+        uses: actions/download-artifact@v8.0.1
+        with:
+          name: ${{ inputs.artifactPrefix }}-apk
+          path: artifacts/apk
+      - name: Download AAB
+        uses: actions/download-artifact@v8.0.1
+        with:
+          name: ${{ inputs.artifactPrefix }}-aab
+          path: artifacts/aab
+      - name: Publish Release
+        run: |
+          RELEASE_NAME="${{ inputs.releaseName }}"
+          RELEASE_TITLE="${{ inputs.releaseTitle }}"
+          NOTES_FILE="${{ inputs.package }}/docs/DOWNLOADS.md"
+          RELEASE_NOTES="release-notes.md"
+          {
+            echo "Auto-built from commit ${{ github.sha }}"
+            if [[ -f "$NOTES_FILE" ]]; then
+              echo ""
+              echo "---"
+              echo ""
+              cat "$NOTES_FILE"
+            fi
+          } > "$RELEASE_NOTES"
+          gh release delete "$RELEASE_NAME" --yes --cleanup-tag 2>/dev/null || true
+          gh release create "$RELEASE_NAME" \
+            --title "$RELEASE_TITLE" \
+            --notes-file "$RELEASE_NOTES" \
+            artifacts/apk/*.apk artifacts/aab/*.aab
+        env:
+          GH_TOKEN: ${{ github.token }}

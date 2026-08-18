@@ -1,0 +1,32 @@
+name: CI - App - Hybrid - Medical - MRI
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/medical/mri/**'
+      - '.github/workflows/ci-app-hybrid-medical-mri.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-hybrid-medical-mri-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/medical/mri
+      filter: '@hieudoanm.github.io/mri'
+      releaseName: app-hybrid-medical-mri-latest
+      releaseTitle: App - Hybrid - Medical - MRI (latest)
+      artifactPrefix: medical-mri

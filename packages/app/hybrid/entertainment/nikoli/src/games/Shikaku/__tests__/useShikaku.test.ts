@@ -185,4 +185,91 @@ describe('useShikaku', () => {
       result.current.undo();
     });
   });
+
+  it('handleCellClick on already selected clue deselects', () => {
+    const { result } = renderHook(() => useShikaku());
+    act(() => {
+      result.current.handleCellClick(0, 1);
+    });
+    expect(result.current.selectedClue).toEqual({ row: 0, col: 1, value: 6 });
+    act(() => {
+      result.current.handleCellClick(0, 1);
+    });
+    expect(result.current.selectedClue).toEqual({ row: 0, col: 1, value: 6 });
+  });
+
+  it('handleCellClick on assigned clue does nothing', () => {
+    mockedUtils.validateRegion.mockReturnValue({
+      valid: true,
+      clue: { row: 0, col: 1, value: 6 },
+    });
+    const { result } = renderHook(() => useShikaku());
+    act(() => {
+      result.current.handleCellClick(0, 1);
+    });
+    act(() => {
+      result.current.handleCellClick(1, 1);
+    });
+    act(() => {
+      result.current.handleCellClick(0, 1);
+    });
+    expect(result.current.selectedClue).toBeNull();
+  });
+
+  it('autoSolve stops when called while already solving', () => {
+    const { result } = renderHook(() => useShikaku());
+    act(() => {
+      result.current.autoSolve();
+    });
+    expect(result.current.autoSolving).toBe(true);
+    act(() => {
+      result.current.autoSolve();
+    });
+    expect(result.current.autoSolving).toBe(false);
+  });
+
+  it('autoSolve returns early when isComplete', () => {
+    mockedUtils.validateRegion.mockReturnValue({
+      valid: true,
+      clue: { row: 0, col: 1, value: 6 },
+    });
+    const { result } = renderHook(() => useShikaku());
+    act(() => {
+      result.current.handleCellClick(0, 1);
+    });
+    act(() => {
+      result.current.handleCellClick(1, 1);
+    });
+    act(() => {
+      result.current.handleCellClick(0, 4);
+    });
+    act(() => {
+      result.current.handleCellClick(1, 4);
+    });
+    act(() => {
+      result.current.handleCellClick(2, 1);
+    });
+    act(() => {
+      result.current.handleCellClick(3, 1);
+    });
+    act(() => {
+      result.current.handleCellClick(2, 4);
+    });
+    act(() => {
+      result.current.handleCellClick(3, 4);
+    });
+    expect(result.current.isComplete).toBe(true);
+    act(() => {
+      result.current.autoSolve();
+    });
+    expect(result.current.autoSolving).toBe(false);
+  });
+
+  it('handleCellClick with no selected clue and non-clue cell', () => {
+    const { result } = renderHook(() => useShikaku());
+    act(() => {
+      result.current.handleCellClick(3, 3);
+    });
+    expect(result.current.selectedClue).toBeNull();
+  });
 });

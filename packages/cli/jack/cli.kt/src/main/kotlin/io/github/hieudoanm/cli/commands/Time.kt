@@ -2,6 +2,7 @@ package io.github.hieudoanm.cli.commands
 
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.core.subcommands
+import com.github.ajalt.clikt.core.Context
 import com.github.ajalt.clikt.parameters.arguments.argument
 import com.github.ajalt.clikt.parameters.arguments.default
 import com.github.ajalt.clikt.parameters.options.option
@@ -14,7 +15,8 @@ import java.time.*
 import java.time.format.DateTimeFormatter
 import kotlin.system.exitProcess
 
-class TimeCommand : CliktCommand(name = "time", help = "Time and scheduling tools") {
+class TimeCommand : CliktCommand(name = "time") {
+    override fun help(context: Context) = "Time and scheduling tools"
     init {
         subcommands(
             TimeAge(), TimeClock(), TimeCron(), TimeEpoch(), TimePomodoro(),
@@ -24,7 +26,8 @@ class TimeCommand : CliktCommand(name = "time", help = "Time and scheduling tool
     override fun run() = Unit
 }
 
-class TimeAge : CliktCommand(name = "age", help = "Calculate age from a birthdate") {
+class TimeAge : CliktCommand(name = "age") {
+    override fun help(context: Context) = "Calculate age from a birthdate"
     private val date by option("--date", "-d", help = "Birthdate (YYYY-MM-DD)").required()
     private val json by option("--json", help = "Output in JSON format").flag()
 
@@ -48,12 +51,14 @@ class TimeAge : CliktCommand(name = "age", help = "Calculate age from a birthdat
     }
 }
 
-class TimeClock : CliktCommand(name = "clock", help = "Clock and timer utilities") {
+class TimeClock : CliktCommand(name = "clock") {
+    override fun help(context: Context) = "Clock and timer utilities"
     init { subcommands(TimeClockNow()) }
     override fun run() = Unit
 }
 
-class TimeClockNow : CliktCommand(name = "now", help = "Display the current date and time") {
+class TimeClockNow : CliktCommand(name = "now") {
+    override fun help(context: Context) = "Display the current date and time"
     private val format by option("--format", help = "Output format pattern").default("")
     private val timezone by option("--timezone", "-z", help = "Timezone (e.g. UTC, Asia/Tokyo)").default("")
     private val json by option("--json", help = "Output in JSON format").flag()
@@ -79,7 +84,8 @@ class TimeClockNow : CliktCommand(name = "now", help = "Display the current date
     }
 }
 
-class TimeCron : CliktCommand(name = "cron", help = "Parse cron expressions and compute next runs") {
+class TimeCron : CliktCommand(name = "cron") {
+    override fun help(context: Context) = "Parse cron expressions and compute next runs"
     private val expression by option("--expression", "-e", help = "Cron expression").required()
     private val next by option("--next", "-n", help = "Show next N run times").int().default(0)
     private val until by option("--until", help = "Show runs until this date (YYYY-MM-DD)").default("")
@@ -204,7 +210,8 @@ private fun cronNextRuns(expr: String, count: Int, until: Instant): List<ZonedDa
     return runs
 }
 
-class TimeEpoch : CliktCommand(name = "epoch", help = "Convert between epoch timestamps and human-readable dates") {
+class TimeEpoch : CliktCommand(name = "epoch") {
+    override fun help(context: Context) = "Convert between epoch timestamps and human-readable dates"
     private val timestamp by argument().default("")
     private val from by option("--from", "-f", help = "Convert a date string to epoch").default("")
     private val relative by option("--relative", help = "Calculate relative time (e.g. '2 hours ago', '+3 days')").default("")
@@ -300,7 +307,8 @@ private fun CliktCommand.printEpochJSON(epoch: Long, rfc3339: String) {
     echo(gson.toJson(mapOf("epoch" to epoch, "rfc3339" to rfc3339)))
 }
 
-class TimePomodoro : CliktCommand(name = "pomodoro", help = "Start a Pomodoro timer") {
+class TimePomodoro : CliktCommand(name = "pomodoro") {
+    override fun help(context: Context) = "Start a Pomodoro timer"
     private val work by option("--work", "-w", help = "Work session minutes").int().default(25)
     private val rest by option("--rest", "-r", help = "Rest session minutes").int().default(5)
 
@@ -330,7 +338,8 @@ class TimePomodoro : CliktCommand(name = "pomodoro", help = "Start a Pomodoro ti
     }
 }
 
-class TimeStopwatch : CliktCommand(name = "stopwatch", help = "Measure elapsed time") {
+class TimeStopwatch : CliktCommand(name = "stopwatch") {
+    override fun help(context: Context) = "Measure elapsed time"
     private val json by option("--json", help = "Output in JSON format").flag()
 
     override fun run() {
@@ -357,7 +366,8 @@ class TimeStopwatch : CliktCommand(name = "stopwatch", help = "Measure elapsed t
     }
 }
 
-class TimeTimer : CliktCommand(name = "timer", help = "Simple countdown timer") {
+class TimeTimer : CliktCommand(name = "timer") {
+    override fun help(context: Context) = "Simple countdown timer"
     private val duration by option("--duration", "-d", help = "Duration (e.g. 30s, 5m)").required()
     private val json by option("--json", help = "Output in JSON format").flag()
 
@@ -403,7 +413,8 @@ private fun formatTimerDuration(ms: Long): String {
     return "%02d:%02d".format(m, s)
 }
 
-class TimeUntil : CliktCommand(name = "until", help = "Countdown to a specific date/time") {
+class TimeUntil : CliktCommand(name = "until") {
+    override fun help(context: Context) = "Countdown to a specific date/time"
     private val time by option("--time", "-t", help = "Target datetime").required()
 
     override fun run() {
@@ -454,7 +465,8 @@ private val commonZones = mapOf(
     "chi" to "America/Chicago", "den" to "America/Denver", "phx" to "America/Phoenix"
 )
 
-class TimeWorld : CliktCommand(name = "world", help = "Display current time in multiple timezones") {
+class TimeWorld : CliktCommand(name = "world") {
+    override fun help(context: Context) = "Display current time in multiple timezones"
     private val zones by argument().default("")
 
     override fun run() {

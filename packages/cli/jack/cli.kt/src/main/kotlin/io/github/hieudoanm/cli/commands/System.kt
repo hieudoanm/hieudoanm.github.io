@@ -2,6 +2,7 @@ package io.github.hieudoanm.cli.commands
 
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.core.subcommands
+import com.github.ajalt.clikt.core.Context
 import com.github.ajalt.clikt.parameters.arguments.argument
 import com.github.ajalt.clikt.parameters.arguments.default
 import com.github.ajalt.clikt.parameters.options.option
@@ -15,7 +16,8 @@ import java.lang.management.ManagementFactory
 import java.lang.management.OperatingSystemMXBean
 import kotlin.system.exitProcess
 
-class SystemCommand : CliktCommand(name = "system", help = "System utilities") {
+class SystemCommand : CliktCommand(name = "system") {
+    override fun help(context: Context) = "System utilities"
     init {
         subcommands(
             SystemInfo(), SystemEnv(), SystemPath(), SystemDisk(),
@@ -25,7 +27,8 @@ class SystemCommand : CliktCommand(name = "system", help = "System utilities") {
     override fun run() = Unit
 }
 
-class SystemInfo : CliktCommand(name = "info", help = "Show system information") {
+class SystemInfo : CliktCommand(name = "info") {
+    override fun help(context: Context) = "Show system information"
     private val json by option("--json", help = "Output in JSON format").flag()
 
     override fun run() {
@@ -47,7 +50,8 @@ class SystemInfo : CliktCommand(name = "info", help = "Show system information")
     }
 }
 
-class SystemEnv : CliktCommand(name = "env", help = "List or search environment variables") {
+class SystemEnv : CliktCommand(name = "env") {
+    override fun help(context: Context) = "List or search environment variables"
     private val filter by argument().default("")
     private val sortOut by option("--sort", help = "Sort alphabetically by key").flag()
     private val json by option("--json", help = "Output in JSON format").flag()
@@ -69,7 +73,8 @@ class SystemEnv : CliktCommand(name = "env", help = "List or search environment 
     private data class Entry(val key: String, val value: String)
 }
 
-class SystemPath : CliktCommand(name = "path", help = "List or search PATH directories and commands") {
+class SystemPath : CliktCommand(name = "path") {
+    override fun help(context: Context) = "List or search PATH directories and commands"
     private val command by argument().default("")
     private val sortOut by option("--sort", help = "Sort alphabetically by path").flag()
     private val json by option("--json", help = "Output in JSON format").flag()
@@ -112,7 +117,8 @@ class SystemPath : CliktCommand(name = "path", help = "List or search PATH direc
     private data class PathEntry(val index: Int, val dir: String, val exists: Boolean)
 }
 
-class SystemDisk : CliktCommand(name = "disk", help = "Show disk usage for mounted filesystems") {
+class SystemDisk : CliktCommand(name = "disk") {
+    override fun help(context: Context) = "Show disk usage for mounted filesystems"
     private val json by option("--json", help = "Output in JSON format").flag()
 
     override fun run() {
@@ -155,7 +161,8 @@ class SystemDisk : CliktCommand(name = "disk", help = "Show disk usage for mount
     }
 }
 
-class SystemBattery : CliktCommand(name = "battery", help = "Show battery status") {
+class SystemBattery : CliktCommand(name = "battery") {
+    override fun help(context: Context) = "Show battery status"
     private val json by option("--json", help = "Output in JSON format").flag()
 
     override fun run() {
@@ -217,7 +224,8 @@ class SystemBattery : CliktCommand(name = "battery", help = "Show battery status
     private data class BatteryInfo(val percent: Int, val charging: Boolean, val timeRemain: String)
 }
 
-class SystemClipboard : CliktCommand(name = "clipboard", help = "Read/write clipboard") {
+class SystemClipboard : CliktCommand(name = "clipboard") {
+    override fun help(context: Context) = "Read/write clipboard"
     private val write by option("--write", help = "Text to write to clipboard").default("")
     private val json by option("--json", help = "Output in JSON format").flag()
 
@@ -243,7 +251,8 @@ class SystemClipboard : CliktCommand(name = "clipboard", help = "Read/write clip
     }
 }
 
-class SystemMonitor : CliktCommand(name = "monitor", help = "Monitor system resources") {
+class SystemMonitor : CliktCommand(name = "monitor") {
+    override fun help(context: Context) = "Monitor system resources"
     private val json by option("--json", help = "Output in JSON format").flag()
 
     override fun run() {

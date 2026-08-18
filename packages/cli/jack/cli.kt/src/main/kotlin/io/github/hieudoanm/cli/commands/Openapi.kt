@@ -2,6 +2,7 @@ package io.github.hieudoanm.cli.commands
 
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.core.subcommands
+import com.github.ajalt.clikt.core.Context
 import com.github.ajalt.clikt.parameters.options.default
 import com.github.ajalt.clikt.parameters.options.flag
 import com.github.ajalt.clikt.parameters.options.option
@@ -10,7 +11,8 @@ import com.google.gson.reflect.TypeToken
 import java.io.File
 import java.util.regex.Pattern
 
-class OpenapiCommand : CliktCommand(name = "openapi", help = "OpenAPI related tools") {
+class OpenapiCommand : CliktCommand(name = "openapi") {
+    override fun help(context: Context) = "OpenAPI related tools"
     init {
         subcommands(OpenapiPostman(), OpenapiValidate())
     }
@@ -19,7 +21,8 @@ class OpenapiCommand : CliktCommand(name = "openapi", help = "OpenAPI related to
 
 // ─── Postman Converter ───────────────────────────────────────────────────────
 
-class OpenapiPostman : CliktCommand(name = "openapi2postman", help = "Convert OpenAPI to Postman collection") {
+class OpenapiPostman : CliktCommand(name = "openapi2postman") {
+    override fun help(context: Context) = "Convert OpenAPI to Postman collection"
     private val input by option("--input", "-i")
     private val output by option("--output", "-o")
     override fun run() {
@@ -173,7 +176,8 @@ private fun schemaToExample(schema: Map<String, Any?>?): Any? {
 private val validMethods = setOf("get", "put", "post", "delete", "options", "head", "patch", "trace")
 private val semverPattern = Pattern.compile("^\\d+\\.\\d+\\.\\d+$")
 
-class OpenapiValidate : CliktCommand(name = "validate", help = "Validate an OpenAPI specification") {
+class OpenapiValidate : CliktCommand(name = "validate") {
+    override fun help(context: Context) = "Validate an OpenAPI specification"
     private val file by option("--file", "-f")
     override fun run() {
         val f = file ?: error("--file required")

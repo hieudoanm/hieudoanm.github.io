@@ -84,10 +84,14 @@ build_ordered() {
     local apps=("$@")
     local app_path
     for app_path in "${apps[@]}"; do
-        [[ "$app_path" == "$ROOT_APP" ]] && build_app "$app_path"
+        if [[ "$app_path" == "$ROOT_APP" ]]; then
+            build_app "$app_path"
+        fi
     done
     for app_path in "${apps[@]}"; do
-        [[ "$app_path" != "$ROOT_APP" ]] && build_app "$app_path"
+        if [[ "$app_path" != "$ROOT_APP" ]]; then
+            build_app "$app_path"
+        fi
     done
 }
 
@@ -120,6 +124,7 @@ verify_downloads() {
             [[ ! -d "$app_dir" ]] && continue
             local app_name="${app_dir%/}"
             app_name="${app_name##*/}"
+            [[ "$category/$app_name" == "$ROOT_APP" ]] && continue
             if [[ ! -f "$app_dir/package.json" ]] || [[ ! -f "$app_dir/next.config.ts" ]]; then
                 continue
             fi

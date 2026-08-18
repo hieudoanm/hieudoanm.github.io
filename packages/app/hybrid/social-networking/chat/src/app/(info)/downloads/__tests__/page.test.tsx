@@ -20,11 +20,11 @@ describe('DownloadsPage', () => {
       screen.getByRole('link', { name: 'Download .AppImage' })
     ).toHaveAttribute(
       'href',
-      expect.stringContaining('app-hybrid-chat-latest')
+      expect.stringContaining('app-hybrid-social-networking-chat-latest')
     );
     expect(screen.getByRole('link', { name: 'Download .deb' })).toHaveAttribute(
       'href',
-      expect.stringContaining('app-hybrid-chat-latest')
+      expect.stringContaining('app-hybrid-social-networking-chat-latest')
     );
   });
 });

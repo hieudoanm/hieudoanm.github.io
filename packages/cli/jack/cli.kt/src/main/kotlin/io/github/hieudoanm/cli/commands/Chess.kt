@@ -2,6 +2,7 @@ package io.github.hieudoanm.cli.commands
 
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.core.subcommands
+import com.github.ajalt.clikt.core.Context
 import com.github.ajalt.clikt.parameters.arguments.argument
 import com.github.ajalt.clikt.parameters.arguments.default
 import com.github.ajalt.clikt.parameters.options.option
@@ -17,19 +18,22 @@ import kotlin.math.roundToInt
 import kotlin.random.Random
 import kotlin.math.*
 
-class ChessCommand : CliktCommand(name = "chess", help = "Chess tools and utilities") {
+class ChessCommand : CliktCommand(name = "chess") {
+    override fun help(context: Context) = "Chess tools and utilities"
     init {
         subcommands(ChessCom(), ChessElo(), ChessFenEval(), ChessFenSvg(), ChessPgn(), ChessPlay(), ChessRandom(), ChessSetup())
     }
     override fun run() = Unit
 }
 
-class ChessCom : CliktCommand(name = "com", help = "Chess.com integration") {
+class ChessCom : CliktCommand(name = "com") {
+    override fun help(context: Context) = "Chess.com integration"
     init { subcommands(ChessComPlayerCmd(), ChessComLeaderboards(), ChessComTitled()) }
     override fun run() = Unit
 }
 
-class ChessComPlayerCmd : CliktCommand(name = "player", help = "Show Chess.com player profile and stats") {
+class ChessComPlayerCmd : CliktCommand(name = "player") {
+    override fun help(context: Context) = "Show Chess.com player profile and stats"
     private val username by option("--username", "-u", help = "Chess.com username").required()
     override fun run() {
         val u = username.lowercase()
@@ -76,7 +80,8 @@ data class ChessComRecord(val win: Int, val draw: Int, val loss: Int)
 data class ChessComRating(val last: ChessComRatingLast, val best: ChessComRatingBest, val record: ChessComRecord)
 data class ChessComPlayerStats(val chessBullet: ChessComRating?, val chessBlitz: ChessComRating?, val chessRapid: ChessComRating?)
 
-class ChessComLeaderboards : CliktCommand(name = "leaderboards", help = "Show Chess.com leaderboards") {
+class ChessComLeaderboards : CliktCommand(name = "leaderboards") {
+    override fun help(context: Context) = "Show Chess.com leaderboards"
     private val top by option("--top", help = "Number of top players").int().default(5)
     private val countryFilter by option("--country", help = "Filter by country code").default("")
     override fun run() {
@@ -122,7 +127,8 @@ class ChessComLeaderboards : CliktCommand(name = "leaderboards", help = "Show Ch
 data class ChessComPlayer(val rank: Int, val username: String, val name: String?, val score: Int, val country: String, val winCount: Int, val drawCount: Int, val lossCount: Int)
 data class ChessComLeaderboardData(val liveBullet: List<ChessComPlayer>, val liveBlitz: List<ChessComPlayer>, val liveRapid: List<ChessComPlayer>, val liveBlitz960: List<ChessComPlayer>)
 
-class ChessComTitled : CliktCommand(name = "titled", help = "Show Chess.com titled player counts") {
+class ChessComTitled : CliktCommand(name = "titled") {
+    override fun help(context: Context) = "Show Chess.com titled player counts"
     private val titles = listOf("GM", "IM", "FM", "CM", "NM", "WGM", "WIM", "WFM", "WCM", "WNM")
     override fun run() {
         echo()
@@ -143,7 +149,8 @@ class ChessComTitled : CliktCommand(name = "titled", help = "Show Chess.com titl
 
 data class ChessComTitledResponse(val players: List<String>)
 
-class ChessElo : CliktCommand(name = "elo", help = "Calculate new Elo rating after a game") {
+class ChessElo : CliktCommand(name = "elo") {
+    override fun help(context: Context) = "Calculate new Elo rating after a game"
     private val myRating by option("--rating", "-r", help = "Your rating").int().required()
     private val opponentRating by option("--opponent", "-o", help = "Opponent's rating").int().required()
     private val score by option("--score", "-s", help = "Result (1=win, 0.5=draw, 0=loss)").double().required()
@@ -155,7 +162,8 @@ class ChessElo : CliktCommand(name = "elo", help = "Calculate new Elo rating aft
     }
 }
 
-class ChessFenEval : CliktCommand(name = "fen-eval", help = "Evaluate a FEN position using Lichess cloud eval") {
+class ChessFenEval : CliktCommand(name = "fen-eval") {
+    override fun help(context: Context) = "Evaluate a FEN position using Lichess cloud eval"
     private val fen by option("--fen", "-f", help = "FEN string").required()
     private val multipv by option("--multipv", help = "Number of principal variations").int().default(3)
     override fun run() {
@@ -181,7 +189,8 @@ class ChessFenEval : CliktCommand(name = "fen-eval", help = "Evaluate a FEN posi
 data class CloudEvalPV(val moves: String, val cp: Int?, val mate: Int?)
 data class CloudEvalResponse(val fen: String, val depth: Int, val knodes: Int, val pvs: List<CloudEvalPV>)
 
-class ChessFenSvg : CliktCommand(name = "fen-svg", help = "Render a FEN position as an SVG board image") {
+class ChessFenSvg : CliktCommand(name = "fen-svg") {
+    override fun help(context: Context) = "Render a FEN position as an SVG board image"
     private val fen by option("--fen", "-f", help = "FEN string").required()
     private val out by option("--out", "-o", help = "Output SVG file").default("board.svg")
     override fun run() {
@@ -228,12 +237,14 @@ private fun renderSvgFromFen(fen: String): String {
     return sb.toString()
 }
 
-class ChessPgn : CliktCommand(name = "pgn", help = "PGN chess game analysis tools") {
+class ChessPgn : CliktCommand(name = "pgn") {
+    override fun help(context: Context) = "PGN chess game analysis tools"
     init { subcommands(ChessPgnFen(), ChessPgnUci()) }
     override fun run() = Unit
 }
 
-class ChessPgnFen : CliktCommand(name = "fen", help = "Convert PGN to FEN per move") {
+class ChessPgnFen : CliktCommand(name = "fen") {
+    override fun help(context: Context) = "Convert PGN to FEN per move"
     private val pgnFile by option("--pgn-file", help = "Path to PGN file").default("")
     private val pgn by option("--pgn", help = "Raw PGN string").default("")
     override fun run() {
@@ -254,7 +265,8 @@ class ChessPgnFen : CliktCommand(name = "fen", help = "Convert PGN to FEN per mo
     }
 }
 
-class ChessPgnUci : CliktCommand(name = "uci", help = "Convert PGN moves to UCI notation") {
+class ChessPgnUci : CliktCommand(name = "uci") {
+    override fun help(context: Context) = "Convert PGN moves to UCI notation"
     private val pgnFile by option("--pgn-file", help = "Path to PGN file").default("")
     private val pgn by option("--pgn", help = "Raw PGN string").default("")
     override fun run() {
@@ -269,7 +281,8 @@ class ChessPgnUci : CliktCommand(name = "uci", help = "Convert PGN moves to UCI 
     }
 }
 
-class ChessPlay : CliktCommand(name = "play", help = "Play chess interactively in the terminal") {
+class ChessPlay : CliktCommand(name = "play") {
+    override fun help(context: Context) = "Play chess interactively in the terminal"
     private val blind by option("--blind", help = "Hide the board").flag()
     override fun run() {
         val pieces = mapOf(
@@ -317,7 +330,8 @@ class ChessPlay : CliktCommand(name = "play", help = "Play chess interactively i
     }
 }
 
-class ChessRandom : CliktCommand(name = "random", help = "Pick a random Chess960 starting position") {
+class ChessRandom : CliktCommand(name = "random") {
+    override fun help(context: Context) = "Pick a random Chess960 starting position"
     override fun run() {
         val positions = listOf(
             "BBQNNRKR", "BQNBNRKR", "BQNNRBKR", "BQNNRKRB", "QBBNNRKR", "QNBBNRKR", "QNBNRBKR", "QNBNRKRB",
@@ -331,7 +345,8 @@ class ChessRandom : CliktCommand(name = "random", help = "Pick a random Chess960
     }
 }
 
-class ChessSetup : CliktCommand(name = "setup", help = "Set up a Chess960 starting position") {
+class ChessSetup : CliktCommand(name = "setup") {
+    override fun help(context: Context) = "Set up a Chess960 starting position"
     private val number by argument("position number").default("518")
     override fun run() {
         val positions = listOf(

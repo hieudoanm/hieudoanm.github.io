@@ -2,23 +2,41 @@
 
 ## Web
 
-| Platform | Requirements | Download Link                   |
-| -------- | ------------ | ------------------------------- |
-| Web      | Any browser  | [Open in browser][download-web] |
+Open <https://hieudoanm.github.io/downloads/keynotes/> in any modern browser. The web build is a static export and
+installs as a PWA — offline-capable after the first visit.
 
-[download-web]: https://hieudoanm.github.io/app/hybrid/keynotes
+## Platforms
 
-The web build is a static export that runs entirely in the browser. Decks,
-slides, and settings are stored in IndexedDB on the device — no account or
-server required.
+| Platform | Distro | Architecture | Requirements | Download Link                              |
+| -------- | ------ | ------------ | ------------ | ------------------------------------------ |
+| Android  |        | Universal    | 14.+         | [Download `.apk`][download-apk]            |
+| Android  |        | Universal    | 14.+         | [Download `.aab`][download-aab]¹           |
+| Linux    | Ubuntu | amd64        | 22.04.+      | [Download `.AppImage`][download-app-image] |
+| Linux    | Debian | amd64        | 13.+         | [Download `.deb`][download-deb]            |
+| macOS    |        | aarch64      | 13.+         | [Download `.dmg`][download-dmg]²           |
+| Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi]            |
 
-## Desktop
+[download-apk]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-keynotes-latest/app-universal-release.apk
+[download-aab]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-keynotes-latest/app-universal-release.aab
+[download-app-image]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-keynotes-latest/keynotes_amd64.AppImage
+[download-deb]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-keynotes-latest/keynotes_amd64.deb
+[download-dmg]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-keynotes-latest/keynotes_aarch64.dmg
+[download-msi]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-keynotes-latest/keynotes_x64.msi
 
-Desktop builds (Tauri, see Phase 9 in [docs/ROADMAP.md](ROADMAP.md)) are not yet
-available. Once the bundling pipeline is in place, per-platform installers will
-be listed here.
+## Notes
+
+1. `.aab` is a Google Play upload artifact — to install directly on a device,
+   use the `.apk`.
+2. macOS builds are Apple Silicon only (`aarch64`).
+
+## Checksums
+
+SHA-256 digests for every asset are published alongside the release in
+[SHA256SUMS.txt][checksums].
+
+[checksums]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-keynotes-latest/SHA256SUMS.txt
 
 ## Source
 
-- [Source code](https://github.com/hieudoanm/hieudoanm.github.io)
-- [Releases](https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-keynotes-latest)
+- [Source code](https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/app/hybrid/productivity/keynotes)
+- [Releases](https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-productivity-keynotes-latest)

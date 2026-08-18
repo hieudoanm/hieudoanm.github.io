@@ -1,0 +1,32 @@
+name: CI - App - Hybrid - Games - Casino
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/games/casino/**'
+      - '.github/workflows/ci-app-hybrid-games-casino.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-hybrid-games-casino-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/games/casino
+      filter: '@hieudoanm.github.io/casino'
+      releaseName: app-hybrid-games-casino-latest
+      releaseTitle: App - Hybrid - Games - Casino (latest)
+      artifactPrefix: games-casino

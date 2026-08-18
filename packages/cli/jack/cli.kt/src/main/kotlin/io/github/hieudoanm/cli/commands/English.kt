@@ -2,13 +2,15 @@ package io.github.hieudoanm.cli.commands
 
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.core.subcommands
+import com.github.ajalt.clikt.core.Context
 import com.github.ajalt.clikt.parameters.options.option
 import com.github.ajalt.clikt.parameters.options.flag
 import com.github.ajalt.clikt.parameters.options.required
 import com.google.gson.GsonBuilder
 import io.github.hieudoanm.cli.services.Requests
 
-class EnglishCommand : CliktCommand(name = "english", help = "English dictionary tools") {
+class EnglishCommand : CliktCommand(name = "english") {
+    override fun help(context: Context) = "English dictionary tools"
     init {
         subcommands(EnglishDefine())
     }
@@ -29,7 +31,8 @@ data class EnglishWord(
     val results: List<EnglishResult> = emptyList()
 )
 
-class EnglishDefine : CliktCommand(name = "define", help = "Look up the definition of an English word") {
+class EnglishDefine : CliktCommand(name = "define") {
+    override fun help(context: Context) = "Look up the definition of an English word"
     private val word: String by option("--word", "-w", help = "Word to define").required()
     private val jsonOutput: Boolean by option("--json", help = "Output in JSON format").flag()
 

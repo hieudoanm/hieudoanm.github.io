@@ -17,7 +17,7 @@ export const ItemCatalog: FC<{
             {item.name}
           </span>
           <span className="text-base-content/50 text-xs">{item.category}</span>
-          <span className="text-primary text-sm font-mono font-bold">
+          <span className="text-primary font-mono text-sm font-bold">
             ${item.price.toFixed(2)}
           </span>
         </button>

@@ -20,90 +20,6 @@
         "description": "12×12 grid",
         "icon": "PiBugDroid",
         "toolId": "snake"
-      },
-      {
-        "label": "T3",
-        "description": "Tic-Tac-Toe",
-        "icon": "PiX",
-        "toolId": "t3"
-      }
-    ]
-  },
-  {
-    "id": "casino",
-    "label": "Casino",
-    "items": [
-      {
-        "label": "Baccarat",
-        "description": "Card game",
-        "icon": "PiBank",
-        "toolId": "tai-baccarat"
-      },
-      {
-        "label": "Blackjack",
-        "description": "Cards Counter",
-        "icon": "PiCards",
-        "toolId": "blackjack"
-      },
-      {
-        "label": "Poker",
-        "description": "Odds Calculator",
-        "icon": "PiCards",
-        "toolId": "poker"
-      },
-      {
-        "label": "Dice Game",
-        "description": "Over/Under 7",
-        "icon": "PiDiceOne",
-        "toolId": "dice-game"
-      },
-      {
-        "label": "Slot Machine",
-        "description": "3 reels",
-        "icon": "PiCoin",
-        "toolId": "slot-machine"
-      }
-    ]
-  },
-  {
-    "id": "countries",
-    "label": "Countries",
-    "items": [
-      {
-        "label": "Border",
-        "description": "Guess the neighbor",
-        "icon": "PiMapTrifold",
-        "toolId": "countries-border"
-      },
-      {
-        "label": "Connection",
-        "description": "Group countries by category",
-        "icon": "PiGridFour",
-        "toolId": "countries-connection"
-      },
-      {
-        "label": "Continents Sort",
-        "description": "Drag countries into continents",
-        "icon": "PiSortAscending",
-        "toolId": "countries-continents-sort"
-      },
-      {
-        "label": "Emoji Guesser",
-        "description": "Pick the flag",
-        "icon": "PiSmiley",
-        "toolId": "emoji-guesser"
-      },
-      {
-        "label": "Flag Guesser",
-        "description": "Name the country",
-        "icon": "PiGlobe",
-        "toolId": "flag-guesser"
-      },
-      {
-        "label": "Higher or Lower",
-        "description": "Compare populations",
-        "icon": "PiArrowsDownUp",
-        "toolId": "countries-higher-lower"
       }
     ]
   },
@@ -224,12 +140,6 @@
         "description": "Scrambled text",
         "icon": "PiShuffle",
         "toolId": "typoglycemia"
-      },
-      {
-        "label": "Wordle",
-        "description": "Guess the word",
-        "icon": "PiSquare",
-        "toolId": "wordle"
       }
     ]
   }

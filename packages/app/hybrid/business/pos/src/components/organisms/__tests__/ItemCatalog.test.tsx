@@ -3,8 +3,22 @@ import { ItemCatalog } from '../ItemCatalog';
 import { Item } from '@/types/pos';
 
 const ITEMS: Item[] = [
-  { id: '1', name: 'Coffee', price: 3.5, category: 'Drinks' },
-  { id: '2', name: 'Sandwich', price: 6.0, category: 'Food' },
+  {
+    id: '1',
+    name: 'Coffee',
+    price: 3.5,
+    category: 'Drinks',
+    stock: 100,
+    lowStockThreshold: 10,
+  },
+  {
+    id: '2',
+    name: 'Sandwich',
+    price: 6.0,
+    category: 'Food',
+    stock: 30,
+    lowStockThreshold: 5,
+  },
 ];
 
 describe('ItemCatalog', () => {

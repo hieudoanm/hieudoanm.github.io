@@ -16,6 +16,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: ci-extensions-browser-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     name: Build
@@ -23,21 +27,19 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v7.0.1
-        with:
-          fetch-depth: 0
       - name: Install pnpm
         uses: pnpm/action-setup@v6.0.10
         with:
-          version: '11.21.0'
+          version: '11.23.0'
       - name: Install Node.js
         uses: actions/setup-node@v7.0.0
         with:
           node-version: '26.7.0'
           cache: 'pnpm'
       - name: Setup Chrome
-        uses: browser-actions/setup-chrome@v2.1.2
+        uses: browser-actions/setup-chrome@v2.2.0
       - name: Install Dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
       - name: Build
         run: pnpm run build --filter=@hieudoanm.github.io/extension
       - name: Upload Build Artifacts
@@ -55,8 +57,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v7.0.1
-        with:
-          fetch-depth: 0
       - name: Download Build Artifacts
         uses: actions/download-artifact@v8.0.1
         with:

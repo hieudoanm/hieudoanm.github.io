@@ -24,7 +24,7 @@ describe('DownloadsTemplate', () => {
     items: [
       {
         platform: 'macOS',
-        requirements: 'macOS 13.+',
+        requirements: 'Apple Silicon · macOS 13.+',
         label: '.dmg',
         href: '/download.dmg',
       },
@@ -55,7 +55,7 @@ describe('DownloadsTemplate', () => {
 
   it('renders requirements', () => {
     render(<DownloadsTemplate {...defaultProps} />);
-    expect(screen.getByText('macOS 13.+')).toBeInTheDocument();
+    expect(screen.getByText('Apple Silicon · macOS 13.+')).toBeInTheDocument();
     expect(screen.getByText('Ubuntu 22.04.+')).toBeInTheDocument();
   });
 

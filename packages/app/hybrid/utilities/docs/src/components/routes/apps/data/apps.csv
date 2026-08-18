@@ -40,17 +40,6 @@ Education,education,Flashcards,Words,PiNotebook,flashcards
 Education,education,Periodic Table,Elements,PiChartBar,periodic-table
 Education,education,Pitch,Training,PiPianoKeys,pitch
 Education,education,Sign Language,Detection,PiHandPeace,sign
-Health - Vision,health-vision,LogMAR Chart,LogMAR Chart,PiEyes,logmar
-Health - Vision,health-vision,Snellen Chart,Snellen Chart,PiEyes,snellen
-Health - Vision,health-vision,Tumbling E Chart,Tumbling E Chart,PiEyes,tumbling-e
-Psychology,psychology,RCI,Relationship closeness,PiHeart,relationship-closeness-inventory
-Psychology,psychology,ECR,Attachment styles,PiHeartStraight,experiences-in-close-relationships
-Psychology,psychology,SWLS,Life satisfaction,PiSmileyMelting,satisfaction-with-life
-Psychology,psychology,DAS,Relationship adjustment,PiGauge,dyadic-adjustment-scale
-Psychology,psychology,BDI,Depression severity,PiLifebuoy,beck-depression-inventory
-Psychology,psychology,GAD-7,Anxiety severity,PiSmileyNervous,generalized-anxiety-disorder
-Psychology,psychology,PHQ-9,Depression screening,PiFirstAidKit,patient-health-questionnaire
-Psychology,psychology,BFI,Personality traits,PiBrain,big-five-inventory
 Text - Convert,text-convert,Braille,Text to Braille,PiDotsNine,braille
 Text - Convert,text-convert,Case,Converter,PiFileText,text-case
 Text - Convert,text-convert,Leet Speak,Text to Leet,PiTextAa,leetspeak
