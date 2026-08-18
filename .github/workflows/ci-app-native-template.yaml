@@ -1,4 +1,4 @@
-name: CI - App - Native Template
+name: CI - App - Native - Template
 
 on:
   workflow_call:
