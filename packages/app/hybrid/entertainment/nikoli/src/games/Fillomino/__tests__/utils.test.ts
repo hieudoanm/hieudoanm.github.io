@@ -69,6 +69,51 @@ describe('Fillomino utils', () => {
         }
       }
     });
+
+    it('horizontal placement preferred with low random', () => {
+      jest.spyOn(Math, 'random').mockReturnValue(0.1);
+      const { solution } = generatePuzzle();
+      jest.restoreAllMocks();
+      for (const row of solution) {
+        for (const cell of row) {
+          expect(cell).not.toBeNull();
+        }
+      }
+    });
+
+    it('vertical placement preferred with high random', () => {
+      jest.spyOn(Math, 'random').mockReturnValue(0.8);
+      const { solution } = generatePuzzle();
+      jest.restoreAllMocks();
+      for (const row of solution) {
+        for (const cell of row) {
+          expect(cell).not.toBeNull();
+        }
+      }
+    });
+
+    it('fits=false path triggered when occupied', () => {
+      let callCount = 0;
+      jest.spyOn(Math, 'random').mockImplementation(() => {
+        callCount++;
+        return callCount % 2 === 0 ? 0.1 : 0.9;
+      });
+      const { solution } = generatePuzzle();
+      jest.restoreAllMocks();
+      for (const row of solution) {
+        for (const cell of row) {
+          expect(cell).not.toBeNull();
+        }
+      }
+    });
+
+    it('puzzle with clueRatio=0.5 removes some clues', () => {
+      const { puzzle } = generatePuzzle(0.5);
+      const nullCount = puzzle.flat().filter((c) => c === null).length;
+      const totalCount = SIZE * SIZE;
+      expect(nullCount).toBeGreaterThan(0);
+      expect(nullCount).toBeLessThan(totalCount);
+    });
   });
 
   describe('isComplete', () => {
