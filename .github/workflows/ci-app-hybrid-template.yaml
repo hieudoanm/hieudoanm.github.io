@@ -100,10 +100,11 @@ jobs:
         run: pnpm exec tauri build --ci --config '{"build":{"beforeBuildCommand":""}}'
       - name: Zip App Bundle
         if: runner.os == 'macOS'
-        working-directory: ${{ inputs.package }}/src-tauri/target/release/bundle
+        working-directory: ${{ inputs.package }}/src-tauri/target/release/bundle/macos
         run: |
+          shopt -s nullglob
           for app in *.app; do
-            [ -d "$app" ] && zip -r -y "${app}.app.zip" "$app"
+            zip -r -y "${app}.zip" "$app"
           done
       - name: Set Date
         id: date
@@ -211,7 +212,7 @@ jobs:
               -name "*.AppImage" -o \
               -name "*.deb" -o \
               -name "*.dmg" -o \
-              -name "*.app.zip" -o \
+              -name "*.zip" -o \
               -name "*.tar.xz" -o \
               -name "*.apk" -o \
               -name "*.aab" \
