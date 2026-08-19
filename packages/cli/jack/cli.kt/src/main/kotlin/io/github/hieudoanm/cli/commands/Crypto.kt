@@ -2,6 +2,7 @@ package io.github.hieudoanm.cli.commands
 
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.core.subcommands
+import com.github.ajalt.clikt.core.Context
 import com.github.ajalt.clikt.parameters.arguments.argument
 import com.github.ajalt.clikt.parameters.arguments.default as argumentDefault
 import com.github.ajalt.clikt.parameters.options.default
@@ -23,7 +24,8 @@ import javax.crypto.Mac
 import javax.crypto.spec.GCMParameterSpec
 import javax.crypto.spec.SecretKeySpec
 
-class CryptoCommand : CliktCommand(name = "crypto", help = "Cryptographic and security tools") {
+class CryptoCommand : CliktCommand(name = "crypto") {
+    override fun help(context: Context) = "Cryptographic and security tools"
     init {
         subcommands(CryptoHash(), CryptoJwt(), CryptoKeygen(), CryptoPasswd(),
             CryptoUuid(), CryptoQrcode(), CryptoEncrypt(), CryptoDecrypt(), CryptoTotp())
@@ -31,7 +33,8 @@ class CryptoCommand : CliktCommand(name = "crypto", help = "Cryptographic and se
     override fun run() = Unit
 }
 
-class CryptoHash : CliktCommand(name = "hash", help = "Compute hashes of text or files") {
+class CryptoHash : CliktCommand(name = "hash") {
+    override fun help(context: Context) = "Compute hashes of text or files"
     private val algorithm by option("--algo", "-a").default("sha256")
     private val text by option("--text", "-t").default("")
     private val key by option("--key", "-k").default("")
@@ -116,14 +119,16 @@ class CryptoHash : CliktCommand(name = "hash", help = "Compute hashes of text or
     }
 }
 
-class CryptoJwt : CliktCommand(name = "jwt", help = "Encode and decode JWTs") {
+class CryptoJwt : CliktCommand(name = "jwt") {
+    override fun help(context: Context) = "Encode and decode JWTs"
     init {
         subcommands(CryptoJwtEncode(), CryptoJwtDecode())
     }
     override fun run() = Unit
 }
 
-class CryptoJwtEncode : CliktCommand(name = "encode", help = "Encode and sign a JWT token") {
+class CryptoJwtEncode : CliktCommand(name = "encode") {
+    override fun help(context: Context) = "Encode and sign a JWT token"
     private val algorithm by option("--algorithm", "-a").default("HS256")
     private val key by option("--key", "-k").required()
     private val claims by option("--claims", "-c").required()
@@ -151,7 +156,8 @@ class CryptoJwtEncode : CliktCommand(name = "encode", help = "Encode and sign a 
     }
 }
 
-class CryptoJwtDecode : CliktCommand(name = "decode", help = "Decode a JWT token without signature verification") {
+class CryptoJwtDecode : CliktCommand(name = "decode") {
+    override fun help(context: Context) = "Decode a JWT token without signature verification"
     private val token by option("--token", "-t").required()
     private val json by option("--json").flag()
 
@@ -180,7 +186,8 @@ class CryptoJwtDecode : CliktCommand(name = "decode", help = "Decode a JWT token
     }
 }
 
-class CryptoKeygen : CliktCommand(name = "keygen", help = "Generate a new SSH keypair") {
+class CryptoKeygen : CliktCommand(name = "keygen") {
+    override fun help(context: Context) = "Generate a new SSH keypair"
     private val algorithm by option("--algo", "-a").default("ed25519")
     private val bits by option("--bits", "-b").default("256")
     private val output by option("--output", "-o").default("id_rsa")
@@ -231,7 +238,8 @@ class CryptoKeygen : CliktCommand(name = "keygen", help = "Generate a new SSH ke
     }
 }
 
-class CryptoPasswd : CliktCommand(name = "passwd", help = "Generate secure random passwords") {
+class CryptoPasswd : CliktCommand(name = "passwd") {
+    override fun help(context: Context) = "Generate secure random passwords"
     private val length by option("--length", "-l").default("16")
     private val count by option("--count", "-n").default("1")
     private val digits by option("--digits", "-d").flag()
@@ -288,7 +296,8 @@ class CryptoPasswd : CliktCommand(name = "passwd", help = "Generate secure rando
     }
 }
 
-class CryptoUuid : CliktCommand(name = "uuid", help = "Generate UUID v4 identifiers") {
+class CryptoUuid : CliktCommand(name = "uuid") {
+    override fun help(context: Context) = "Generate UUID v4 identifiers"
     private val count by option("--count", "-n").default("1")
     private val json by option("--json").flag()
     override fun run() {
@@ -302,14 +311,16 @@ class CryptoUuid : CliktCommand(name = "uuid", help = "Generate UUID v4 identifi
     }
 }
 
-class CryptoQrcode : CliktCommand(name = "qrcode", help = "Generate a QR code in the terminal") {
+class CryptoQrcode : CliktCommand(name = "qrcode") {
+    override fun help(context: Context) = "Generate a QR code in the terminal"
     private val data by option("--data", "-d").default("")
     override fun run() {
         echo("QR code generation not available in this build")
     }
 }
 
-class CryptoEncrypt : CliktCommand(name = "encrypt", help = "Encrypt a file with AES-256-GCM") {
+class CryptoEncrypt : CliktCommand(name = "encrypt") {
+    override fun help(context: Context) = "Encrypt a file with AES-256-GCM"
     private val file by option("--file", "-f").default("")
     private val password by option("--password", "-p").required()
     private val output by option("--output", "-o").default("")
@@ -327,7 +338,8 @@ class CryptoEncrypt : CliktCommand(name = "encrypt", help = "Encrypt a file with
     }
 }
 
-class CryptoDecrypt : CliktCommand(name = "decrypt", help = "Decrypt a file encrypted with AES-256-GCM") {
+class CryptoDecrypt : CliktCommand(name = "decrypt") {
+    override fun help(context: Context) = "Decrypt a file encrypted with AES-256-GCM"
     private val file by option("--file", "-f").default("")
     private val password by option("--password", "-p").required()
     private val output by option("--output", "-o").default("")
@@ -350,7 +362,8 @@ class CryptoDecrypt : CliktCommand(name = "decrypt", help = "Decrypt a file encr
     }
 }
 
-class CryptoTotp : CliktCommand(name = "totp", help = "Generate a TOTP code from a Base32 secret") {
+class CryptoTotp : CliktCommand(name = "totp") {
+    override fun help(context: Context) = "Generate a TOTP code from a Base32 secret"
     private val secret by option("--secret", "-s").default("")
     private val step by option("--step").default("30")
     private val digits by option("--digits").default("6")

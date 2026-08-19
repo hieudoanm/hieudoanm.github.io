@@ -2,6 +2,7 @@ package io.github.hieudoanm.cli.commands
 
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.core.subcommands
+import com.github.ajalt.clikt.core.Context
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.google.gson.JsonArray
@@ -18,15 +19,17 @@ import io.github.hieudoanm.cli.services.newToolResultText
 import java.time.Duration
 import java.time.Instant
 
-class McpCommand : CliktCommand(name = "mcp", help = "MCP server exposing CLI tools to AI agents") {
+class McpCommand : CliktCommand(name = "mcp") {
+    override fun help(context: Context) = "MCP server exposing CLI tools to AI agents"
     init { subcommands(McpServe()) }
     override fun run() = Unit
 }
 
-class McpServe : CliktCommand(name = "serve", help = "Start the MCP server over stdio") {
+class McpServe : CliktCommand(name = "serve") {
+    override fun help(context: Context) = "Start the MCP server over stdio"
     override fun run() {
         val server = McpServer()
-        val root = currentContext.findRoot().command
+        val root = currentContext.findRoot().command as CliktCommand
         registerTools(server, root)
         System.err.println("[mcp] tools registered")
         server.run()
@@ -36,7 +39,7 @@ class McpServe : CliktCommand(name = "serve", help = "Start the MCP server over 
 fun registerTools(server: McpServer, root: CliktCommand) {
     System.err.println("[mcp] discovering tools...")
     val seen = mutableSetOf<CliktCommand>()
-    for (sub in root.registeredSubcommands()) {
+    for (sub in root.registeredSubcommands().filterIsInstance<CliktCommand>()) {
         val name = sub.commandName
         if (name in setOf("mcp", "completion", "help")) continue
         walkAndRegister(server, sub, name, seen)
@@ -49,11 +52,11 @@ private fun walkAndRegister(server: McpServer, cmd: CliktCommand, name: String, 
         if (cmd in seen) return
         seen.add(cmd)
         val schema = buildSchema(cmd)
-        @Suppress("DEPRECATION") val desc = cmd.commandHelp.ifEmpty { cmd.commandName }
+        val desc = cmd.help(cmd.currentContext).ifEmpty { cmd.commandName }
         server.addTool(name, desc, schema) { jsonArgs -> executeTool(name, jsonArgs) }
         System.err.println("[mcp]   $name")
     } else {
-        for (child in children) {
+        for (child in children.filterIsInstance<CliktCommand>()) {
             val childName = child.commandName
             if (childName == "help") continue
             walkAndRegister(server, child, "$name.$childName", seen)

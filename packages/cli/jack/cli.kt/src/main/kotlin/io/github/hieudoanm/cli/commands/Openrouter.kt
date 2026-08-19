@@ -2,6 +2,7 @@ package io.github.hieudoanm.cli.commands
 
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.core.subcommands
+import com.github.ajalt.clikt.core.Context
 import com.github.ajalt.clikt.parameters.options.default
 import com.github.ajalt.clikt.parameters.options.flag
 import com.github.ajalt.clikt.parameters.options.option
@@ -19,7 +20,8 @@ import java.io.InputStreamReader
 import java.net.InetSocketAddress
 import java.util.concurrent.TimeUnit
 
-class OpenrouterCommand : CliktCommand(name = "openrouter", help = "Interact with OpenRouter AI models and services") {
+class OpenrouterCommand : CliktCommand(name = "openrouter") {
+    override fun help(context: Context) = "Interact with OpenRouter AI models and services"
     init {
         subcommands(OpenrouterCode(), OpenrouterHook(), OpenrouterModels(), OpenrouterServe(), OpenrouterStatus())
     }
@@ -83,7 +85,8 @@ private fun fetchFreeModels(): List<OpenRouterModel> {
 
 // ─── Code (AI assistant) ─────────────────────────────────────────────────────
 
-class OpenrouterCode : CliktCommand(name = "code", help = "AI coding assistant with file editing and bash access") {
+class OpenrouterCode : CliktCommand(name = "code") {
+    override fun help(context: Context) = "AI coding assistant with file editing and bash access"
     private val model by option("--model").default("google/gemma-4-26b-a4b-it:free")
     override fun run() {
         val apiKey = loadApiKey() ?: error("OpenRouter API key not set. Set OPEN_ROUTER_API_KEY")
@@ -125,7 +128,8 @@ class OpenrouterCode : CliktCommand(name = "code", help = "AI coding assistant w
 
 // ─── Hook (Telegram webhook) ─────────────────────────────────────────────────
 
-class OpenrouterHook : CliktCommand(name = "hook", help = "Start webhook server on :8080 and expose via ngrok") {
+class OpenrouterHook : CliktCommand(name = "hook") {
+    override fun help(context: Context) = "Start webhook server on :8080 and expose via ngrok"
     override fun run() {
         echo("Starting hook mode...")
         val server = HttpServer.create(InetSocketAddress(8080), 0)
@@ -153,7 +157,8 @@ class OpenrouterHook : CliktCommand(name = "hook", help = "Start webhook server 
 
 // ─── Models ──────────────────────────────────────────────────────────────────
 
-class OpenrouterModels : CliktCommand(name = "models", help = "List available free models from OpenRouter") {
+class OpenrouterModels : CliktCommand(name = "models") {
+    override fun help(context: Context) = "List available free models from OpenRouter"
     private val search by option("--search", "-s")
     private val json by option("--json").flag()
     override fun run() {
@@ -192,7 +197,8 @@ private fun formatCtx(n: Int): String = when {
 
 // ─── Serve ───────────────────────────────────────────────────────────────────
 
-class OpenrouterServe : CliktCommand(name = "serve", help = "Start the OpenRouter HTTP server") {
+class OpenrouterServe : CliktCommand(name = "serve") {
+    override fun help(context: Context) = "Start the OpenRouter HTTP server"
     private val port by option("--port", "-p").default("8080")
     override fun run() {
         val server = HttpServer.create(InetSocketAddress(port.toInt()), 0)
@@ -261,7 +267,8 @@ private fun generate(model: String, prompt: String, apiKey: String): String {
 
 // ─── Status ──────────────────────────────────────────────────────────────────
 
-class OpenrouterStatus : CliktCommand(name = "status", help = "Probe free models for availability and latency") {
+class OpenrouterStatus : CliktCommand(name = "status") {
+    override fun help(context: Context) = "Probe free models for availability and latency"
     private val search by option("--search", "-s")
     private val workers by option("--workers", "-w").int().default(6)
     override fun run() {

@@ -2,25 +2,29 @@ package io.github.hieudoanm.cli.commands
 
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.core.subcommands
+import com.github.ajalt.clikt.core.Context
 import com.github.ajalt.clikt.parameters.options.option
 import com.github.ajalt.clikt.parameters.options.default
 import io.github.hieudoanm.cli.services.Requests
 
-class TelegramCommand : CliktCommand(name = "telegram", help = "Telegram bot and message tools") {
+class TelegramCommand : CliktCommand(name = "telegram") {
+    override fun help(context: Context) = "Telegram bot and message tools"
     init {
         subcommands(TelegramMessage(), TelegramWebhook())
     }
     override fun run() = Unit
 }
 
-class TelegramMessage : CliktCommand(name = "message", help = "Send Telegram messages") {
+class TelegramMessage : CliktCommand(name = "message") {
+    override fun help(context: Context) = "Send Telegram messages"
     init {
         subcommands(TelegramMessageSend())
     }
     override fun run() = Unit
 }
 
-class TelegramMessageSend : CliktCommand(name = "send", help = "Send a Telegram message") {
+class TelegramMessageSend : CliktCommand(name = "send") {
+    override fun help(context: Context) = "Send a Telegram message"
     override fun run() {
         echo("Telegram Token: ")
         val token = readLine() ?: ""
@@ -36,14 +40,16 @@ class TelegramMessageSend : CliktCommand(name = "send", help = "Send a Telegram 
     }
 }
 
-class TelegramWebhook : CliktCommand(name = "webhook", help = "Manage Telegram webhooks") {
+class TelegramWebhook : CliktCommand(name = "webhook") {
+    override fun help(context: Context) = "Manage Telegram webhooks"
     init {
         subcommands(TelegramWebhookSet(), TelegramWebhookInfo(), TelegramWebhookDelete())
     }
     override fun run() = Unit
 }
 
-class TelegramWebhookSet : CliktCommand(name = "set", help = "Set a Telegram webhook URL") {
+class TelegramWebhookSet : CliktCommand(name = "set") {
+    override fun help(context: Context) = "Set a Telegram webhook URL"
     override fun run() {
         echo("Telegram Token: ")
         val token = readLine() ?: ""
@@ -57,7 +63,8 @@ class TelegramWebhookSet : CliktCommand(name = "set", help = "Set a Telegram web
     }
 }
 
-class TelegramWebhookInfo : CliktCommand(name = "info", help = "Get current webhook info") {
+class TelegramWebhookInfo : CliktCommand(name = "info") {
+    override fun help(context: Context) = "Get current webhook info"
     override fun run() {
         echo("Telegram Token: ")
         val token = readLine() ?: ""
@@ -68,7 +75,8 @@ class TelegramWebhookInfo : CliktCommand(name = "info", help = "Get current webh
     }
 }
 
-class TelegramWebhookDelete : CliktCommand(name = "delete", help = "Delete the Telegram webhook") {
+class TelegramWebhookDelete : CliktCommand(name = "delete") {
+    override fun help(context: Context) = "Delete the Telegram webhook"
     override fun run() {
         echo("Telegram Token: ")
         val token = readLine() ?: ""

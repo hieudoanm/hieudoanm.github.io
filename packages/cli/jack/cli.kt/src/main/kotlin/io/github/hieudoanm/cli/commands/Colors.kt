@@ -2,6 +2,7 @@ package io.github.hieudoanm.cli.commands
 
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.core.subcommands
+import com.github.ajalt.clikt.core.Context
 import com.github.ajalt.clikt.parameters.arguments.argument
 import com.github.ajalt.clikt.parameters.options.option
 import com.github.ajalt.clikt.parameters.options.flag
@@ -10,7 +11,8 @@ import com.github.ajalt.clikt.parameters.types.int
 import kotlin.random.Random
 import kotlin.math.*
 
-class ColorsCommand : CliktCommand(name = "colors", help = "Color conversion and palette generation tools") {
+class ColorsCommand : CliktCommand(name = "colors") {
+    override fun help(context: Context) = "Color conversion and palette generation tools"
     init {
         subcommands(ColorsConvertHcl(), ColorsConvertHex(), ColorsConvertOklch(), ColorsConvertRgb(), ColorsPalette(), ColorsRandom())
     }
@@ -143,7 +145,8 @@ private fun rgbFromOklch(L: Double, C: Double, H: Double): ColorsRgb {
     return ColorsRgb(toSRGB(Rlin), toSRGB(Glin), toSRGB(Blin))
 }
 
-class ColorsConvertHcl : CliktCommand(name = "convert-hcl", help = "Convert HCL values to other color spaces") {
+class ColorsConvertHcl : CliktCommand(name = "convert-hcl") {
+    override fun help(context: Context) = "Convert HCL values to other color spaces"
     private val h by argument("hue")
     private val c by argument("chroma")
     private val l by argument("lightness")
@@ -163,7 +166,8 @@ class ColorsConvertHcl : CliktCommand(name = "convert-hcl", help = "Convert HCL 
     }
 }
 
-class ColorsConvertHex : CliktCommand(name = "convert-hex", help = "Convert a HEX color to other color spaces") {
+class ColorsConvertHex : CliktCommand(name = "convert-hex") {
+    override fun help(context: Context) = "Convert a HEX color to other color spaces"
     private val hex by argument("hex color, e.g. #FF6600")
     override fun run() {
         val rgb = hexToRgb(hex)
@@ -179,7 +183,8 @@ class ColorsConvertHex : CliktCommand(name = "convert-hex", help = "Convert a HE
     }
 }
 
-class ColorsConvertOklch : CliktCommand(name = "convert-oklch", help = "Convert OKLCH values to other color spaces") {
+class ColorsConvertOklch : CliktCommand(name = "convert-oklch") {
+    override fun help(context: Context) = "Convert OKLCH values to other color spaces"
     private val lightness by argument("lightness 0-1")
     private val chroma by argument("chroma")
     private val hue by argument("hue 0-360")
@@ -199,7 +204,8 @@ class ColorsConvertOklch : CliktCommand(name = "convert-oklch", help = "Convert 
     }
 }
 
-class ColorsConvertRgb : CliktCommand(name = "convert-rgb", help = "Convert RGB values to other color spaces") {
+class ColorsConvertRgb : CliktCommand(name = "convert-rgb") {
+    override fun help(context: Context) = "Convert RGB values to other color spaces"
     private val r by argument("red 0-255")
     private val g by argument("green 0-255")
     private val b by argument("blue 0-255")
@@ -217,7 +223,8 @@ class ColorsConvertRgb : CliktCommand(name = "convert-rgb", help = "Convert RGB 
     }
 }
 
-class ColorsPalette : CliktCommand(name = "palette", help = "Generate a color palette from a base HEX color") {
+class ColorsPalette : CliktCommand(name = "palette") {
+    override fun help(context: Context) = "Generate a color palette from a base HEX color"
     private val hex by argument("base hex color, e.g. #ff6600")
     override fun run() {
         if (!isValidHex(hex)) throw Exception("Invalid hex color")
@@ -250,7 +257,8 @@ class ColorsPalette : CliktCommand(name = "palette", help = "Generate a color pa
     }
 }
 
-class ColorsRandom : CliktCommand(name = "random", help = "Generate random HEX colors with RGB preview") {
+class ColorsRandom : CliktCommand(name = "random") {
+    override fun help(context: Context) = "Generate random HEX colors with RGB preview"
     private val max by option("--max", "-m", help = "Number of random colors").int().default(1)
     override fun run() {
         for (i in 0 until max) {
