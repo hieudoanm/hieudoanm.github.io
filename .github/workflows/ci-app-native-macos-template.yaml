@@ -75,10 +75,23 @@ jobs:
           path: artifacts/dmg
       - name: Publish Release
         run: |
-          gh release delete ${{ inputs.releaseName }} --yes --cleanup-tag 2>/dev/null || true
-          gh release create ${{ inputs.releaseName }} \
-            --title "${{ inputs.releaseTitle }}" \
-            --notes "Auto-built from commit ${{ github.sha }}" \
+          RELEASE_NAME="${{ inputs.releaseName }}"
+          RELEASE_TITLE="${{ inputs.releaseTitle }}"
+          NOTES_FILE="${{ inputs.package }}/Docs/DOWNLOADS.md"
+          RELEASE_NOTES="release-notes.md"
+          {
+            echo "Auto-built from commit ${{ github.sha }}"
+            if [[ -f "$NOTES_FILE" ]]; then
+              echo ""
+              echo "---"
+              echo ""
+              cat "$NOTES_FILE"
+            fi
+          } > "$RELEASE_NOTES"
+          gh release delete "$RELEASE_NAME" --yes --cleanup-tag 2>/dev/null || true
+          gh release create "$RELEASE_NAME" \
+            --title "$RELEASE_TITLE" \
+            --notes-file "$RELEASE_NOTES" \
             artifacts/app/*.zip artifacts/dmg/*.dmg
         env:
           GH_TOKEN: ${{ github.token }}

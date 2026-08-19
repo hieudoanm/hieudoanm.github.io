@@ -1,4 +1,4 @@
-.PHONY: build app dmg clean
+.PHONY: build app dmg clean dev
 
 APP_NAME := Snap
 BUNDLE_ID := io.github.hieudoanm.Snap
@@ -50,3 +50,7 @@ clean:
 	@swift package clean
 	@rm -rf $(BUILD_DIR)
 	@echo "Cleaned."
+
+dev:
+	@echo "Starting $(APP_NAME) in dev mode..."
+	@swift build -c debug && .build/debug/$(APP_NAME)

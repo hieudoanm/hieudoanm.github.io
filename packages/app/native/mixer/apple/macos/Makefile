@@ -1,7 +1,7 @@
 .PHONY: build app dmg clean dev
 
-APP_NAME := Clipper
-BUNDLE_ID := io.github.hieudoanm.Clipper
+APP_NAME := Mixer
+BUNDLE_ID := io.github.hieudoanm.Mixer
 VERSION := 0.0.1
 
 BUILD_DIR := build
@@ -28,7 +28,7 @@ app: build
 	@cp $(BINARY) $(MACOS_DIR)/$(APP_NAME)
 	@cp Resources/Info.plist $(CONTENTS_DIR)/Info.plist
 	@codesign --force --sign - \
-		--entitlements Resources/Clipper.entitlements \
+		--entitlements Resources/Mixer.entitlements \
 		$(APP_DIR)
 	@echo "$(APP_NAME).app created at $(APP_DIR)"
 
