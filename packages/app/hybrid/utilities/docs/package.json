@@ -63,7 +63,7 @@
     "@tauri-apps/api": "2.11.1",
     "chart.js": "4.5.1",
     "codemirror": "6.0.2",
-    "dompurify": "3.4.13",
+    "dompurify": "3.4.14",
     "file-saver": "2.0.5",
     "gif.js": "0.2.0",
     "github-markdown-css": "5.9.0",
