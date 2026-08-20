@@ -1,16 +1,16 @@
 import Foundation
 import CoreAudio
 
-struct AudioDevice: Identifiable {
-    let id: UInt32
-    let name: String
-    let isInput: Bool
-    let isOutput: Bool
-    let isDefault: Bool
-    let volume: Float
-    let isMuted: Bool
+public struct AudioDevice: Identifiable {
+    public let id: UInt32
+    public let name: String
+    public let isInput: Bool
+    public let isOutput: Bool
+    public let isDefault: Bool
+    public var volume: Float
+    public var isMuted: Bool
 
-    init(
+    public init(
         id: UInt32,
         name: String,
         isInput: Bool = false,
@@ -26,5 +26,6 @@ struct AudioDevice: Identifiable {
         self.isDefault = isDefault
         self.volume = volume
         self.isMuted = isMuted
-    }
+}
+
 }

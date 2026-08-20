@@ -7,12 +7,23 @@ let package = Package(
         .macOS(.v13)
     ],
     targets: [
+        .target(
+            name: "ClipperCore",
+            path: "Sources/Core"
+        ),
         .executableTarget(
             name: "Clipper",
+            dependencies: ["ClipperCore"],
             path: "Sources",
+            exclude: ["Core"],
             linkerSettings: [
                 .linkedFramework("Cocoa"),
             ]
-        )
+        ),
+        .testTarget(
+            name: "ClipperTests",
+            dependencies: ["ClipperCore"],
+            path: "Tests"
+        ),
     ]
 )

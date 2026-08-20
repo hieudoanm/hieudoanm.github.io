@@ -1,13 +1,13 @@
 import Foundation
 import CoreGraphics
 
-struct WindowRule: Codable, Identifiable, Hashable {
-    let id: UUID
-    var bundleIdentifier: String
-    var title: String?
-    var zone: NormalizedRect
+public struct WindowRule: Codable, Identifiable, Hashable {
+    public let id: UUID
+    public var bundleIdentifier: String
+    public var title: String?
+    public var zone: NormalizedRect
 
-    init(
+    public init(
         id: UUID = UUID(),
         bundleIdentifier: String,
         title: String? = nil,

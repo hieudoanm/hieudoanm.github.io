@@ -1,27 +1,33 @@
 import Foundation
+import Combine
 
-final class SettingsStore: ObservableObject {
-    @Published var launchAtLogin: Bool {
+public final class SettingsStore: ObservableObject {
+    @Published public var launchAtLogin: Bool {
         didSet { save() }
     }
 
-    @Published var showInactiveApps: Bool {
+    @Published public var showInactiveApps: Bool {
         didSet { save() }
     }
 
-    @Published var rememberVolumes: Bool {
+    @Published public var rememberVolumes: Bool {
         didSet { save() }
     }
 
-    @Published var globalShortcut: String {
+    @Published public var globalShortcut: String {
         didSet { save() }
     }
 
     private let settingsURL: URL
 
-    init() {
-        let appSupport = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!
-        let mixerDir = appSupport.appendingPathComponent("Mixer")
+    public init(directoryURL: URL? = nil) {
+        let mixerDir: URL
+        if let dir = directoryURL {
+            mixerDir = dir
+        } else {
+            let appSupport = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!
+            mixerDir = appSupport.appendingPathComponent("Mixer")
+        }
 
         if !FileManager.default.fileExists(atPath: mixerDir.path) {
             try? FileManager.default.createDirectory(at: mixerDir, withIntermediateDirectories: true)
@@ -43,7 +49,7 @@ final class SettingsStore: ObservableObject {
         }
     }
 
-    func save() {
+    public func save() {
         let settings = SettingsData(
             launchAtLogin: launchAtLogin,
             showInactiveApps: showInactiveApps,

@@ -1,15 +1,15 @@
 import Foundation
 
-struct AudioApplication: Identifiable, Hashable {
-    let id: String
-    let processID: pid_t
-    let bundleIdentifier: String?
-    let name: String
-    var volume: Float
-    var isMuted: Bool
-    var isPlaying: Bool
+public struct AudioApplication: Identifiable, Hashable {
+    public let id: String
+    public let processID: pid_t
+    public let bundleIdentifier: String?
+    public let name: String
+    public var volume: Float
+    public var isMuted: Bool
+    public var isPlaying: Bool
 
-    init(
+    public init(
         processID: pid_t,
         bundleIdentifier: String? = nil,
         name: String,

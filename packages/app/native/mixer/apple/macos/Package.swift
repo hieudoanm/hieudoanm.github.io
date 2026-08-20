@@ -7,9 +7,18 @@ let package = Package(
         .macOS(.v13)
     ],
     targets: [
+        .target(
+            name: "MixerCore",
+            path: "Sources/Core",
+            linkerSettings: [
+                .linkedFramework("CoreAudio"),
+            ]
+        ),
         .executableTarget(
             name: "Mixer",
+            dependencies: ["MixerCore"],
             path: "Sources",
+            exclude: ["Core"],
             linkerSettings: [
                 .linkedFramework("Cocoa"),
                 .linkedFramework("CoreAudio"),
@@ -17,6 +26,11 @@ let package = Package(
                 .linkedFramework("AudioUnit"),
                 .linkedFramework("AVFoundation"),
             ]
-        )
+        ),
+        .testTarget(
+            name: "MixerTests",
+            dependencies: ["MixerCore"],
+            path: "Tests"
+        ),
     ]
 )

@@ -1,3 +1,4 @@
+import ClipperCore
 import Foundation
 
 final class ClipboardMonitor {

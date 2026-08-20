@@ -1,3 +1,4 @@
+import SnapCore
 import Foundation
 
 final class WorkspaceManager {

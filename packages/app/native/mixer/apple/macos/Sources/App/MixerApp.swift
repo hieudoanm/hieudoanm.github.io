@@ -1,3 +1,4 @@
+import MixerCore
 import SwiftUI
 
 @main

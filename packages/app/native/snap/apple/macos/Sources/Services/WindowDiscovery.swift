@@ -1,3 +1,4 @@
+import SnapCore
 import CoreGraphics
 
 struct DiscoveredWindow {

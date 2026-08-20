@@ -1,29 +1,33 @@
 import Foundation
 
-final class LayoutStore {
-    static let shared = LayoutStore()
+public final class LayoutStore {
+    public static let shared = LayoutStore()
 
     private let fileName = "layouts.json"
     private let encoder = JSONEncoder()
     private let decoder = JSONDecoder()
+    private let directoryURL: URL
 
-    var layouts: [SnapLayout] {
+    public var layouts: [SnapLayout] {
         load()
     }
 
-    init() {
+    public init(directoryURL: URL? = nil) {
+        self.directoryURL = directoryURL
+            ?? FileManager.default.homeDirectoryForCurrentUser
+                .appendingPathComponent("Library/Application Support/Snap")
         encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
         encoder.dateEncodingStrategy = .iso8601
         decoder.dateDecodingStrategy = .iso8601
     }
 
-    func save(_ layout: SnapLayout) {
+    public func save(_ layout: SnapLayout) {
         var all = load()
         all.append(layout)
         persist(all)
     }
 
-    func update(_ layout: SnapLayout) {
+    public func update(_ layout: SnapLayout) {
         var all = load()
         if let index = all.firstIndex(where: { $0.id == layout.id }) {
             all[index] = layout
@@ -31,7 +35,7 @@ final class LayoutStore {
         }
     }
 
-    func delete(id: UUID) {
+    public func delete(id: UUID) {
         var all = load()
         all.removeAll { $0.id == id }
         persist(all)
@@ -62,7 +66,6 @@ final class LayoutStore {
     }
 
     private var fileURL: URL {
-        FileManager.default.homeDirectoryForCurrentUser
-            .appendingPathComponent("Library/Application Support/Snap/layouts.json")
+        directoryURL.appendingPathComponent(fileName)
     }
 }

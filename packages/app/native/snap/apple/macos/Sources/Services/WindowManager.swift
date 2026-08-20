@@ -1,3 +1,4 @@
+import SnapCore
 import AppKit
 import ApplicationServices
 

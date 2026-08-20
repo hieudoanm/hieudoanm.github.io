@@ -1,3 +1,4 @@
+import MixerCore
 import SwiftUI
 
 struct AudioApplicationRow: View {

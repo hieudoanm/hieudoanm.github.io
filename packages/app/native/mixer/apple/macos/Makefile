@@ -1,4 +1,4 @@
-.PHONY: build app dmg clean dev
+.PHONY: build app dmg clean dev test
 
 APP_NAME := Mixer
 BUNDLE_ID := io.github.hieudoanm.Mixer
@@ -50,6 +50,9 @@ clean:
 	@swift package clean
 	@rm -rf $(BUILD_DIR)
 	@echo "Cleaned."
+
+test:
+	swift test
 
 dev:
 	@echo "Starting $(APP_NAME) in dev mode..."

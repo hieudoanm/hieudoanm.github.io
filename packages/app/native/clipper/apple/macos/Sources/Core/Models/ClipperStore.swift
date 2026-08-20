@@ -1,23 +1,29 @@
 import Foundation
+import Combine
 
-final class ClipperStore: ObservableObject {
-    @Published var items: [ClipperItem] = []
+public final class ClipperStore: ObservableObject {
+    @Published public var items: [ClipperItem] = []
 
     private let storageURL: URL
 
-    init() {
-        let appSupport = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!
-        let dir = appSupport.appendingPathComponent("Clipper", isDirectory: true)
+    public init(directoryURL: URL? = nil) {
+        let dir: URL
+        if let d = directoryURL {
+            dir = d
+        } else {
+            let appSupport = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!
+            dir = appSupport.appendingPathComponent("Clipper", isDirectory: true)
+        }
         try? FileManager.default.createDirectory(at: dir, withIntermediateDirectories: true)
         self.storageURL = dir.appendingPathComponent("clipboard.json")
         load()
     }
 
-    var totalCount: Int { items.count }
-    var pinnedCount: Int { items.filter(\.pinned).count }
-    var textCount: Int { items.filter { $0.contentType == .text }.count }
+    public var totalCount: Int { items.count }
+    public var pinnedCount: Int { items.filter(\.pinned).count }
+    public var textCount: Int { items.filter { $0.contentType == .text }.count }
 
-    func add(_ content: String, type: ClipperItem.ContentType = .text) {
+    public func add(_ content: String, type: ClipperItem.ContentType = .text) {
         guard !content.isEmpty else { return }
         if let idx = items.firstIndex(where: { $0.content == content }) {
             items[idx].copiedCount += 1
@@ -30,24 +36,24 @@ final class ClipperStore: ObservableObject {
         save()
     }
 
-    func delete(_ item: ClipperItem) {
+    public func delete(_ item: ClipperItem) {
         items.removeAll { $0.id == item.id }
         save()
     }
 
-    func togglePin(_ item: ClipperItem) {
+    public func togglePin(_ item: ClipperItem) {
         if let idx = items.firstIndex(where: { $0.id == item.id }) {
             items[idx].pinned.toggle()
             save()
         }
     }
 
-    func clearUnpinned() {
+    public func clearUnpinned() {
         items.removeAll { !$0.pinned }
         save()
     }
 
-    func search(_ query: String) -> [ClipperItem] {
+    public func search(_ query: String) -> [ClipperItem] {
         guard !query.isEmpty else { return items }
         return items.filter { $0.content.localizedCaseInsensitiveContains(query) }
     }

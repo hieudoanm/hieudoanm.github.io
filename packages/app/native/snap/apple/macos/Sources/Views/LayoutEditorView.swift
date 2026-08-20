@@ -1,3 +1,4 @@
+import SnapCore
 import SwiftUI
 
 struct LayoutEditorView: View {

@@ -1,14 +1,14 @@
 import Foundation
 import CoreGraphics
 
-struct SnapLayout: Codable, Identifiable {
-    let id: UUID
-    var name: String
-    var windows: [WindowRule]
-    var createdAt: Date
-    var updatedAt: Date
+public struct SnapLayout: Codable, Identifiable {
+    public let id: UUID
+    public var name: String
+    public var windows: [WindowRule]
+    public var createdAt: Date
+    public var updatedAt: Date
 
-    init(
+    public init(
         id: UUID = UUID(),
         name: String,
         windows: [WindowRule] = [],
@@ -22,7 +22,7 @@ struct SnapLayout: Codable, Identifiable {
         self.updatedAt = updatedAt
     }
 
-    mutating func update(_ block: (inout SnapLayout) -> Void) {
+    public mutating func update(_ block: (inout SnapLayout) -> Void) {
         block(&self)
         updatedAt = Date()
     }

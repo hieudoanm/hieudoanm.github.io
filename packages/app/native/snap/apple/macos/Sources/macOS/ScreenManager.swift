@@ -1,3 +1,4 @@
+import SnapCore
 import AppKit
 import CoreGraphics
 
@@ -47,12 +48,9 @@ final class ScreenManager {
         normalized: NormalizedRect,
         screen: ScreenInfo
     ) -> CGRect {
-        let visibleFrame = screen.visibleFrame
-        return CGRect(
-            x: visibleFrame.origin.x + (normalized.x * visibleFrame.width),
-            y: visibleFrame.origin.y + ((1.0 - normalized.y - normalized.height) * visibleFrame.height),
-            width: normalized.width * visibleFrame.width,
-            height: normalized.height * visibleFrame.height
+        CoordinateConverter.toAbsoluteCoordinates(
+            normalized: normalized,
+            visibleFrame: screen.visibleFrame
         )
     }
 
@@ -60,12 +58,9 @@ final class ScreenManager {
         absolute: CGRect,
         screen: ScreenInfo
     ) -> NormalizedRect {
-        let visibleFrame = screen.visibleFrame
-        return NormalizedRect(
-            x: (absolute.origin.x - visibleFrame.origin.x) / visibleFrame.width,
-            y: 1.0 - ((absolute.origin.y - visibleFrame.origin.y) / visibleFrame.height) - (absolute.height / visibleFrame.height),
-            width: absolute.width / visibleFrame.width,
-            height: absolute.height / visibleFrame.height
+        CoordinateConverter.toNormalizedCoordinates(
+            absolute: absolute,
+            visibleFrame: screen.visibleFrame
         )
     }
 }

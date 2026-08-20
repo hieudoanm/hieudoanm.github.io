@@ -1,22 +1,26 @@
 import Foundation
 
-final class SettingsStore {
-    static let shared = SettingsStore()
+public final class SettingsStore {
+    public static let shared = SettingsStore()
 
     private let fileName = "settings.json"
     private let encoder = JSONEncoder()
     private let decoder = JSONDecoder()
+    private let directoryURL: URL
 
-    var settings: AppSettings {
+    public var settings: AppSettings {
         get { load() }
         set { persist(newValue) }
     }
 
-    init() {
+    public init(directoryURL: URL? = nil) {
+        self.directoryURL = directoryURL
+            ?? FileManager.default.homeDirectoryForCurrentUser
+                .appendingPathComponent("Library/Application Support/Snap")
         encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
     }
 
-    func update(_ block: (inout AppSettings) -> Void) {
+    public func update(_ block: (inout AppSettings) -> Void) {
         var current = load()
         block(&current)
         persist(current)
@@ -47,7 +51,6 @@ final class SettingsStore {
     }
 
     private var fileURL: URL {
-        FileManager.default.homeDirectoryForCurrentUser
-            .appendingPathComponent("Library/Application Support/Snap/settings.json")
+        directoryURL.appendingPathComponent(fileName)
     }
 }

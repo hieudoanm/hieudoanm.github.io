@@ -1,12 +1,12 @@
 import Foundation
 import CoreGraphics
 
-struct AppSettings: Codable, Equatable {
-    var launchAtLogin: Bool
-    var showInDock: Bool
-    var restoreOnMonitorChange: Bool
+public struct AppSettings: Codable, Equatable {
+    public var launchAtLogin: Bool
+    public var showInDock: Bool
+    public var restoreOnMonitorChange: Bool
 
-    init(
+    public init(
         launchAtLogin: Bool = false,
         showInDock: Bool = false,
         restoreOnMonitorChange: Bool = false
@@ -16,5 +16,5 @@ struct AppSettings: Codable, Equatable {
         self.restoreOnMonitorChange = restoreOnMonitorChange
     }
 
-    static let `default` = AppSettings()
+    public static let `default` = AppSettings()
 }
