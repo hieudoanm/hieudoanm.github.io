@@ -95,8 +95,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v7.0.1
-        with:
-          fetch-depth: 0
       - name: Download APK
         uses: actions/download-artifact@v8.0.1
         with:

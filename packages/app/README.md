@@ -3,6 +3,8 @@
 - [App](#app)
   - [Categories](#categories)
   - [Techstack](#techstack)
+    - [Hybrid](#hybrid)
+    - [Native](#native)
   - [Platform](#platform)
 
 ## Categories
@@ -41,6 +43,8 @@ Reference: [App Store - Categories](https://developer.apple.com/app-store/catego
 
 ## Techstack
 
+### Hybrid
+
 | No  | Category            | Name                       | Version | Alternative          |
 | --- | ------------------- | -------------------------- | ------- | -------------------- |
 | 01  | Language            | [TypeScript]               | 6.+     |                      |
@@ -69,6 +73,20 @@ Reference: [App Store - Categories](https://developer.apple.com/app-store/catego
 [tauri]: https://tauri.app/
 [electron]: https://www.electronjs.org/
 
+### Native
+
+| No  | Language | Styling   | Operating System           |
+| --- | -------- | --------- | -------------------------- |
+| 01  | [Kotlin] | [Jetpack] | [Android]                  |
+| 02  | [Swift]  | [SwiftUI] | [iOS] / [iPadOS] / [macOS] |
+
+[kotlin]: https://kotlinlang.org
+[jetpack]: https://developer.android.com/jetpack
+[android]: https://developer.android.com
+[swift]: https://www.swift.org
+[swiftui]: https://developer.apple.com/xcode/swiftui/
+[ios]: https://developer.apple.com/ios
+
 ## Platform
 
 | No  | Group   | Category | Name      |
@@ -86,4 +104,3 @@ Reference: [App Store - Categories](https://developer.apple.com/app-store/catego
 [Ubuntu]: https://ubuntu.com/
 [Arch]: https://archlinux.org/
 [macOS]: https://www.apple.com/mac/
-[Android]: https://www.android.com/
