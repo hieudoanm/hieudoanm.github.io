@@ -2,6 +2,7 @@ package io.github.hieudoanm.cli.commands
 
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.core.subcommands
+import com.github.ajalt.clikt.core.Context
 import com.github.ajalt.clikt.parameters.arguments.argument
 import com.github.ajalt.clikt.parameters.options.flag
 import com.github.ajalt.clikt.parameters.options.option
@@ -10,7 +11,8 @@ import java.net.URLDecoder
 import java.net.URLEncoder
 import java.text.Normalizer
 
-class ConvertCommand : CliktCommand(name = "convert", help = "Text conversion tools") {
+class ConvertCommand : CliktCommand(name = "convert") {
+    override fun help(context: Context) = "Text conversion tools"
     init {
         subcommands(
             ConvertBase64(), ConvertBraille(), ConvertCamelcase(), ConvertCapitalise(),
@@ -22,14 +24,16 @@ class ConvertCommand : CliktCommand(name = "convert", help = "Text conversion to
     override fun run() = Unit
 }
 
-class ConvertBase64 : CliktCommand(name = "base64", help = "Base64 encode/decode") {
+class ConvertBase64 : CliktCommand(name = "base64") {
+    override fun help(context: Context) = "Base64 encode/decode"
     init {
         subcommands(ConvertBase64Encode(), ConvertBase64Decode())
     }
     override fun run() = Unit
 }
 
-class ConvertBase64Encode : CliktCommand(name = "encode", help = "Encode text/file to base64") {
+class ConvertBase64Encode : CliktCommand(name = "encode") {
+    override fun help(context: Context) = "Encode text/file to base64"
     private val text by argument()
     private val file by option("--file", "-f", help = "File to encode (reads raw bytes → base64)")
     private val output by option("--output", "-o", help = "Write output to file instead of stdout")
@@ -49,7 +53,8 @@ class ConvertBase64Encode : CliktCommand(name = "encode", help = "Encode text/fi
     }
 }
 
-class ConvertBase64Decode : CliktCommand(name = "decode", help = "Decode base64 to text/file") {
+class ConvertBase64Decode : CliktCommand(name = "decode") {
+    override fun help(context: Context) = "Decode base64 to text/file"
     private val text by argument()
     private val file by option("--file", "-f", help = "File containing base64 to decode")
     private val output by option("--output", "-o", help = "Write decoded output to file instead of stdout")
@@ -71,7 +76,8 @@ class ConvertBase64Decode : CliktCommand(name = "decode", help = "Decode base64 
     }
 }
 
-class ConvertBraille : CliktCommand(name = "braille", help = "Convert text to Braille") {
+class ConvertBraille : CliktCommand(name = "braille") {
+    override fun help(context: Context) = "Convert text to Braille"
     private val text by argument()
 
     private val brailleMap = mapOf(
@@ -92,7 +98,8 @@ class ConvertBraille : CliktCommand(name = "braille", help = "Convert text to Br
     }
 }
 
-class ConvertCamelcase : CliktCommand(name = "camelcase", help = "Convert a string to camelCase") {
+class ConvertCamelcase : CliktCommand(name = "camelcase") {
+    override fun help(context: Context) = "Convert a string to camelCase"
     private val text by argument()
     override fun run() {
         val words = text.split(Regex("[\\s_-]+"))
@@ -103,7 +110,8 @@ class ConvertCamelcase : CliktCommand(name = "camelcase", help = "Convert a stri
     }
 }
 
-class ConvertCapitalise : CliktCommand(name = "capitalise", help = "Capitalise the first letter of each word") {
+class ConvertCapitalise : CliktCommand(name = "capitalise") {
+    override fun help(context: Context) = "Capitalise the first letter of each word"
     private val text by argument()
     override fun run() {
         val result = text.split(" ").joinToString(" ") { word ->
@@ -113,7 +121,8 @@ class ConvertCapitalise : CliktCommand(name = "capitalise", help = "Capitalise t
     }
 }
 
-class ConvertCount : CliktCommand(name = "count", help = "Count characters, words, and lines in text") {
+class ConvertCount : CliktCommand(name = "count") {
+    override fun help(context: Context) = "Count characters, words, and lines in text"
     private val text by argument()
     private val json by option("--json").flag()
     override fun run() {
@@ -128,7 +137,8 @@ class ConvertCount : CliktCommand(name = "count", help = "Count characters, word
     }
 }
 
-class ConvertDeburr : CliktCommand(name = "deburr", help = "Remove diacritical marks (accents) from letters") {
+class ConvertDeburr : CliktCommand(name = "deburr") {
+    override fun help(context: Context) = "Remove diacritical marks (accents) from letters"
     private val text by argument()
     override fun run() {
         val normalized = Normalizer.normalize(text, Normalizer.Form.NFD)
@@ -137,7 +147,8 @@ class ConvertDeburr : CliktCommand(name = "deburr", help = "Remove diacritical m
     }
 }
 
-class ConvertKebabcase : CliktCommand(name = "kebabcase", help = "Convert a string to kebab-case") {
+class ConvertKebabcase : CliktCommand(name = "kebabcase") {
+    override fun help(context: Context) = "Convert a string to kebab-case"
     private val text by argument()
     override fun run() {
         val kebab = text
@@ -148,14 +159,16 @@ class ConvertKebabcase : CliktCommand(name = "kebabcase", help = "Convert a stri
     }
 }
 
-class ConvertLowercase : CliktCommand(name = "lowercase", help = "Convert a string to lowercase") {
+class ConvertLowercase : CliktCommand(name = "lowercase") {
+    override fun help(context: Context) = "Convert a string to lowercase"
     private val text by argument()
     override fun run() {
         echo(text.lowercase())
     }
 }
 
-class ConvertMorse : CliktCommand(name = "morse", help = "Convert text to Morse code") {
+class ConvertMorse : CliktCommand(name = "morse") {
+    override fun help(context: Context) = "Convert text to Morse code"
     private val text by argument()
 
     private val morseMap = mapOf(
@@ -177,7 +190,8 @@ class ConvertMorse : CliktCommand(name = "morse", help = "Convert text to Morse 
     }
 }
 
-class ConvertPascalcase : CliktCommand(name = "pascalcase", help = "Convert a string to PascalCase") {
+class ConvertPascalcase : CliktCommand(name = "pascalcase") {
+    override fun help(context: Context) = "Convert a string to PascalCase"
     private val text by argument()
     override fun run() {
         val result = text.split(Regex("[\\s_-]+"))
@@ -186,7 +200,8 @@ class ConvertPascalcase : CliktCommand(name = "pascalcase", help = "Convert a st
     }
 }
 
-class ConvertSlug : CliktCommand(name = "slug", help = "Generate a URL-friendly slug") {
+class ConvertSlug : CliktCommand(name = "slug") {
+    override fun help(context: Context) = "Generate a URL-friendly slug"
     private val text by argument()
     override fun run() {
         val slug = text.lowercase()
@@ -198,7 +213,8 @@ class ConvertSlug : CliktCommand(name = "slug", help = "Generate a URL-friendly 
     }
 }
 
-class ConvertSnakecase : CliktCommand(name = "snakecase", help = "Convert a string to snake_case") {
+class ConvertSnakecase : CliktCommand(name = "snakecase") {
+    override fun help(context: Context) = "Convert a string to snake_case"
     private val text by argument()
     override fun run() {
         val snake = text
@@ -209,14 +225,16 @@ class ConvertSnakecase : CliktCommand(name = "snakecase", help = "Convert a stri
     }
 }
 
-class ConvertUppercase : CliktCommand(name = "uppercase", help = "Convert a string to uppercase") {
+class ConvertUppercase : CliktCommand(name = "uppercase") {
+    override fun help(context: Context) = "Convert a string to uppercase"
     private val text by argument()
     override fun run() {
         echo(text.uppercase())
     }
 }
 
-class ConvertUrl : CliktCommand(name = "url", help = "Encode or decode a URL") {
+class ConvertUrl : CliktCommand(name = "url") {
+    override fun help(context: Context) = "Encode or decode a URL"
     private val text by argument()
     private val decode by option("--decode", "-d").flag()
     override fun run() {

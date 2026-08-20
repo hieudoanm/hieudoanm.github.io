@@ -2,6 +2,7 @@ package io.github.hieudoanm.cli.commands
 
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.core.subcommands
+import com.github.ajalt.clikt.core.Context
 import com.github.ajalt.clikt.parameters.options.option
 import com.github.ajalt.clikt.parameters.options.flag
 import com.github.ajalt.clikt.parameters.options.default
@@ -74,14 +75,16 @@ fun checkRange(v: SemverVersion, rangeExpr: String): Boolean {
     return true
 }
 
-class SemverCommand : CliktCommand(name = "semver", help = "Parse, compare, sort, and bump semver strings") {
+class SemverCommand : CliktCommand(name = "semver") {
+    override fun help(context: Context) = "Parse, compare, sort, and bump semver strings"
     init {
         subcommands(SemverBump(), SemverCompare(), SemverRange(), SemverSort(), SemverValidate())
     }
     override fun run() = Unit
 }
 
-class SemverBump : CliktCommand(name = "bump", help = "Bump a semver version") {
+class SemverBump : CliktCommand(name = "bump") {
+    override fun help(context: Context) = "Bump a semver version"
     private val ver by option("--version", help = "Version to bump").required()
     private val major by option("--major", help = "Bump major version").flag()
     private val minor by option("--minor", help = "Bump minor version").flag()
@@ -111,7 +114,8 @@ class SemverBump : CliktCommand(name = "bump", help = "Bump a semver version") {
     }
 }
 
-class SemverCompare : CliktCommand(name = "compare", help = "Compare two semver strings") {
+class SemverCompare : CliktCommand(name = "compare") {
+    override fun help(context: Context) = "Compare two semver strings"
     private val aVer by option("--a", help = "First version").required()
     private val bVer by option("--b", help = "Second version").required()
     private val json by option("--json", help = "Output in JSON format").flag()
@@ -134,7 +138,8 @@ class SemverCompare : CliktCommand(name = "compare", help = "Compare two semver 
     }
 }
 
-class SemverRange : CliktCommand(name = "range", help = "Check if a version satisfies a range constraint") {
+class SemverRange : CliktCommand(name = "range") {
+    override fun help(context: Context) = "Check if a version satisfies a range constraint"
     private val ver by option("--version", help = "Version to check").required()
     private val rangeExpr by option("--range", help = "Range constraint (e.g. '>=1.0.0 <2.0.0')").required()
     private val json by option("--json", help = "Output in JSON format").flag()
@@ -152,7 +157,8 @@ class SemverRange : CliktCommand(name = "range", help = "Check if a version sati
     }
 }
 
-class SemverSort : CliktCommand(name = "sort", help = "Sort semver strings") {
+class SemverSort : CliktCommand(name = "sort") {
+    override fun help(context: Context) = "Sort semver strings"
     private val versions by option("--versions", help = "Comma-separated versions").required()
     private val json by option("--json", help = "Output in JSON format").flag()
 
@@ -169,7 +175,8 @@ class SemverSort : CliktCommand(name = "sort", help = "Sort semver strings") {
     }
 }
 
-class SemverValidate : CliktCommand(name = "validate", help = "Validate semver strings") {
+class SemverValidate : CliktCommand(name = "validate") {
+    override fun help(context: Context) = "Validate semver strings"
     private val versions by option("--versions", help = "Comma-separated versions").required()
     private val json by option("--json", help = "Output in JSON format").flag()
 

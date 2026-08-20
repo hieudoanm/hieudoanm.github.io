@@ -2,6 +2,7 @@ package io.github.hieudoanm.cli.commands
 
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.core.subcommands
+import com.github.ajalt.clikt.core.Context
 import com.github.ajalt.clikt.parameters.options.option
 import com.github.ajalt.clikt.parameters.options.flag
 import com.github.ajalt.clikt.parameters.options.default
@@ -11,7 +12,8 @@ import com.google.gson.reflect.TypeToken
 import io.github.hieudoanm.cli.services.Requests
 import java.io.File
 
-class GhCommand : CliktCommand(name = "gh", help = "GitHub CLI tools") {
+class GhCommand : CliktCommand(name = "gh") {
+    override fun help(context: Context) = "GitHub CLI tools"
     init {
         subcommands(GhCoc(), GhIgnore(), GhLanguages(), GhLicenseCmd(), GhOg())
     }
@@ -71,7 +73,8 @@ data class GhOwner(
     val avatar_url: String = ""
 )
 
-class GhLanguages : CliktCommand(name = "languages", help = "Show repository language breakdown") {
+class GhLanguages : CliktCommand(name = "languages") {
+    override fun help(context: Context) = "Show repository language breakdown"
     private val repo: String by option("--repo", "-r", help = "Repository (owner/repo)").required()
     private val output: String by option("--output", "-o", help = "Output SVG file path").default("languages.svg")
     private val jsonOutput: Boolean by option("--json", help = "Output in JSON format").flag()
@@ -139,7 +142,8 @@ private fun generateLanguagesSvg(langs: Map<String, Int>): String {
     return sb.toString()
 }
 
-class GhLicenseCmd : CliktCommand(name = "license", help = "Fetch a license template from GitHub") {
+class GhLicenseCmd : CliktCommand(name = "license") {
+    override fun help(context: Context) = "Fetch a license template from GitHub"
     private val spdxId: String? by option("--spdx-id", help = "SPDX license identifier")
     private val output: String by option("--output", "-o", help = "Output file path").default("LICENSE")
 
@@ -175,7 +179,8 @@ class GhLicenseCmd : CliktCommand(name = "license", help = "Fetch a license temp
     }
 }
 
-class GhCoc : CliktCommand(name = "coc", help = "Fetch a GitHub Code of Conduct") {
+class GhCoc : CliktCommand(name = "coc") {
+    override fun help(context: Context) = "Fetch a GitHub Code of Conduct"
     private val key: String? by option("--key", help = "Code of Conduct key")
     private val output: String by option("--output", "-o", help = "Output file path").default("CODE_OF_CONDUCT")
 
@@ -211,7 +216,8 @@ class GhCoc : CliktCommand(name = "coc", help = "Fetch a GitHub Code of Conduct"
     }
 }
 
-class GhIgnore : CliktCommand(name = "ignore", help = "Fetch a .gitignore template from GitHub") {
+class GhIgnore : CliktCommand(name = "ignore") {
+    override fun help(context: Context) = "Fetch a .gitignore template from GitHub"
     private val name: String? by option("--name", help = "Gitignore template name")
     private val output: String by option("--output", "-o", help = "Output file path").default(".gitignore")
 
@@ -247,7 +253,8 @@ class GhIgnore : CliktCommand(name = "ignore", help = "Fetch a .gitignore templa
     }
 }
 
-class GhOg : CliktCommand(name = "og", help = "Generate an Open Graph SVG for a GitHub repository") {
+class GhOg : CliktCommand(name = "og") {
+    override fun help(context: Context) = "Generate an Open Graph SVG for a GitHub repository"
     private val url: String by option("--url", "-u", help = "Repository (owner/repo)").required()
     private val output: String by option("--output", "-o", help = "Output SVG file path").default("og.svg")
 

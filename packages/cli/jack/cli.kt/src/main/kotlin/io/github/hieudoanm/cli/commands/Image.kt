@@ -2,6 +2,7 @@ package io.github.hieudoanm.cli.commands
 
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.core.subcommands
+import com.github.ajalt.clikt.core.Context
 import com.github.ajalt.clikt.parameters.options.option
 import com.github.ajalt.clikt.parameters.options.flag
 import com.github.ajalt.clikt.parameters.options.default
@@ -12,14 +13,16 @@ import javax.imageio.ImageIO
 import javax.imageio.ImageReader
 import java.util.Locale
 
-class ImageCommand : CliktCommand(name = "image", help = "Image inspection and conversion tools") {
+class ImageCommand : CliktCommand(name = "image") {
+    override fun help(context: Context) = "Image inspection and conversion tools"
     init {
         subcommands(ImageInfo(), ImageConvert(), ImageDominant())
     }
     override fun run() = Unit
 }
 
-class ImageInfo : CliktCommand(name = "info", help = "Show image metadata") {
+class ImageInfo : CliktCommand(name = "info") {
+    override fun help(context: Context) = "Show image metadata"
     private val file: String by option("--file", "-f", help = "Image file").required()
     private val jsonOutput: Boolean by option("--json", help = "Output in JSON format").flag()
 
@@ -65,7 +68,8 @@ class ImageInfo : CliktCommand(name = "info", help = "Show image metadata") {
     }
 }
 
-class ImageConvert : CliktCommand(name = "convert", help = "Convert image to another format") {
+class ImageConvert : CliktCommand(name = "convert") {
+    override fun help(context: Context) = "Convert image to another format"
     private val file: String by option("--file", "-i", help = "Input image file").required()
     private val toFormat: String by option("--format", "-f", help = "Output format (png, jpg, gif)").default("png")
     private val output: String? by option("--output", "-o", help = "Output file path")
@@ -104,7 +108,8 @@ class ImageConvert : CliktCommand(name = "convert", help = "Convert image to ano
     }
 }
 
-class ImageDominant : CliktCommand(name = "dominant", help = "Extract dominant colors from an image") {
+class ImageDominant : CliktCommand(name = "dominant") {
+    override fun help(context: Context) = "Extract dominant colors from an image"
     private val file: String by option("--file", "-f", help = "Image file").required()
     private val jsonOutput: Boolean by option("--json", help = "Output in JSON format").flag()
 
