@@ -19,6 +19,8 @@ pub const ALLOWED_TOOLS: &[&str] = &[
   "mrconvert",
   "dwi2mask",
   "dwi2tensor",
+  "python3",
+  "docker",
 ];
 
 #[derive(Debug, Clone)]

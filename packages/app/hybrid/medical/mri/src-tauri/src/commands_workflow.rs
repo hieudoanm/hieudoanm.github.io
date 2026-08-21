@@ -112,7 +112,7 @@ pub(crate) mod tests {
 
   #[test]
   fn job_manager_runs_tasks_to_completion() {
-    let connection = Arc::new(Mutex::new(Connection::open_in_memory().unwrap()));
+    let connection = Arc::new(Mutex::new(db::open_in_memory().unwrap()));
     let manager = JobManager::new(Arc::clone(&connection));
     let record = manager
       .submit_task(
@@ -139,7 +139,7 @@ pub(crate) mod tests {
 
   #[test]
   fn failed_jobs_record_the_error_and_support_retry() {
-    let connection = Arc::new(Mutex::new(Connection::open_in_memory().unwrap()));
+    let connection = Arc::new(Mutex::new(db::open_in_memory().unwrap()));
     let manager = JobManager::new(Arc::clone(&connection));
     let record = manager
       .submit_task(
@@ -177,7 +177,7 @@ pub(crate) mod tests {
 
   #[test]
   fn queued_jobs_can_be_cancelled() {
-    let connection = Arc::new(Mutex::new(Connection::open_in_memory().unwrap()));
+    let connection = Arc::new(Mutex::new(db::open_in_memory().unwrap()));
     let manager = JobManager::new(Arc::clone(&connection));
     // Fill both worker slots with long-running tasks.
     let blocker = || {
@@ -201,11 +201,7 @@ pub(crate) mod tests {
     wait_for_status(&connection, &second.id, jobs::STATUS_CANCELLED);
   }
 
-  fn wait_for_status(
-    connection: &Arc<Mutex<Connection>>,
-    job_id: &str,
-    status: &str,
-  ) {
+  fn wait_for_status(connection: &Arc<Mutex<rusqlite::Connection>>, job_id: &str, status: &str) {
     for _ in 0..200 {
       let current = jobs::get_job(
         &connection.lock().unwrap_or_else(|p| p.into_inner()),

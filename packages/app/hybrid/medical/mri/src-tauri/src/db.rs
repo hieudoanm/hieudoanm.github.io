@@ -82,7 +82,20 @@ const MIGRATIONS: &[&str] = &[
       started_at INTEGER,
       finished_at INTEGER
     );
-    CREATE INDEX IF NOT EXISTS idx_jobs_created ON jobs(created_at);",
+    CREATE INDEX IF NOT EXISTS idx_jobs_created ON jobs(created_at);
+    CREATE TABLE IF NOT EXISTS models (
+      id TEXT PRIMARY KEY,
+      name TEXT NOT NULL,
+      version TEXT NOT NULL,
+      task TEXT NOT NULL,
+      runtime TEXT NOT NULL,
+      source TEXT NOT NULL,
+      license TEXT NOT NULL DEFAULT '',
+      input_json TEXT NOT NULL DEFAULT '{}',
+      output_json TEXT NOT NULL DEFAULT '{}',
+      created_at INTEGER NOT NULL,
+      UNIQUE(name, version)
+    );",
 ];
 
 pub fn open(path: &Path) -> Result<Connection, String> {

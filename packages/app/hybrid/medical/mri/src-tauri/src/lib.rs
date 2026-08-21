@@ -2,11 +2,13 @@ pub mod analysis;
 pub mod classifier;
 pub mod commands;
 pub mod commands_intel;
+pub mod commands_models;
 pub mod commands_workflow;
 pub mod compare;
 pub mod db;
 pub mod import_dicom;
 pub mod import_nifti;
+pub mod inference;
 pub mod jobs;
 pub mod models;
 pub mod normalize;
@@ -16,6 +18,7 @@ pub mod protocol;
 pub mod provenance;
 pub mod qc;
 pub mod qc_stats;
+pub mod registry;
 pub mod state;
 pub mod store;
 pub mod viewer;
@@ -69,7 +72,12 @@ pub fn run() {
       commands_workflow::list_jobs,
       commands_workflow::get_job,
       commands_workflow::cancel_job,
-      commands_workflow::retry_job
+      commands_workflow::retry_job,
+      commands_models::register_model,
+      commands_models::list_models,
+      commands_models::delete_model,
+      commands_models::is_runtime_available,
+      commands_models::run_model
     ])
     .run(tauri::generate_context!())
     .expect("error while running tauri application");

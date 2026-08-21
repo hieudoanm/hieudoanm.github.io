@@ -38,6 +38,19 @@ jest.mock('@/lib/api/client', () => ({
     validateDataset: jest.fn(),
     runQc: jest.fn(),
     compareCompatibility: jest.fn(),
+    createPipeline: jest.fn(),
+    listPipelines: jest.fn().mockResolvedValue([]),
+    deletePipeline: jest.fn(),
+    runPipeline: jest.fn(),
+    listJobs: jest.fn().mockResolvedValue([]),
+    getJob: jest.fn(),
+    cancelJob: jest.fn(),
+    retryJob: jest.fn(),
+    registerModel: jest.fn(),
+    listModels: jest.fn().mockResolvedValue([]),
+    deleteModel: jest.fn(),
+    isRuntimeAvailable: jest.fn().mockResolvedValue(false),
+    runModel: jest.fn(),
   },
 }));
 
@@ -284,6 +297,33 @@ describe('ProtocolsPage', () => {
     render(<ProtocolsPage />);
     await screen.findByText('Protocols');
     expect(screen.getByTestId('protocol-form')).toBeInTheDocument();
+  });
+});
+
+describe('PipelinesPage', () => {
+  it('renders the pipelines workspace with the jobs panel', async () => {
+    (api.listPipelines as jest.Mock).mockResolvedValue([]);
+    (api.listDatasets as jest.Mock).mockResolvedValue([]);
+    const { default: PipelinesPage } =
+      await import('@/app/(app)/pipelines/page');
+    render(<PipelinesPage />);
+    await screen.findByText('Pipelines');
+    expect(screen.getByTestId('pipeline-form')).toBeInTheDocument();
+    expect(screen.getByTestId('jobs-panel')).toBeInTheDocument();
+  });
+});
+
+describe('ModelsPage', () => {
+  it('renders the model registry with the jobs panel', async () => {
+    (api.listModels as jest.Mock).mockResolvedValue([]);
+    (api.listDatasets as jest.Mock).mockResolvedValue([]);
+    (api.isRuntimeAvailable as jest.Mock).mockResolvedValue(false);
+    const { default: ModelsPage } = await import('@/app/(app)/models/page');
+    render(<ModelsPage />);
+    await screen.findByText('Models');
+    expect(screen.getByTestId('model-form')).toBeInTheDocument();
+    expect(screen.getByTestId('runtime-python')).toBeInTheDocument();
+    expect(screen.getByTestId('jobs-panel')).toBeInTheDocument();
   });
 });
 

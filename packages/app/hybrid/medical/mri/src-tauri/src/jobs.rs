@@ -179,6 +179,14 @@ pub struct JobContext {
 }
 
 impl JobContext {
+  /// Shared database access for job tasks.
+  pub fn lock_db(&self) -> MutexGuard<'_, Connection> {
+    self
+      .db
+      .lock()
+      .unwrap_or_else(|poisoned| poisoned.into_inner())
+  }
+
   pub fn log(&self, message: &str) {
     if let Ok(connection) = self.db.lock() {
       let _ = append_job_log(&connection, &self.job_id, message);
@@ -252,7 +260,8 @@ impl JobManager {
   /// Submits declarative work; the task is rebuilt from the payload so retry
   /// keeps working even after process restarts.
   pub fn submit(&self, kind: &str, inputs_json: &str) -> Result<JobRecord, String> {
-    build_task(kind, inputs_json)?;
+    // Validate that the payload can be rebuilt into a task before queueing.
+    let _ = build_task(kind, inputs_json)?;
     self.enqueue(kind, inputs_json, 0, None)
   }
 
@@ -309,7 +318,7 @@ impl JobManager {
         job_id, previous.status
       ));
     }
-    build_task(&previous.kind, &previous.inputs_json)?;
+    let _ = build_task(&previous.kind, &previous.inputs_json)?;
     self.enqueue(&previous.kind, &previous.inputs_json, previous.attempts + 1, None)
   }
 
@@ -392,20 +401,20 @@ fn execute(shared: Arc<Shared>, job_id: String, cancel: Arc<AtomicBool>, task: J
   let outcome = task(&context);
   {
     let connection = lock_db();
-    match outcome {
-      Ok(outputs) => {
-        let outputs_json = serde_json::to_string(&outputs).unwrap_or_else(|_| "[]".to_string());
-        let _ = update_job_outputs(&connection, &job_id, &outputs_json);
-        let _ = update_job_progress(&connection, &job_id, 1.0);
-        let _ = update_job_status(&connection, &job_id, STATUS_COMPLETED, None);
-      }
-      Err(error) => {
-        let status = if context.cancelled() {
-          STATUS_CANCELLED
-        } else {
-          STATUS_FAILED
-        };
-        let _ = update_job_status(&connection, &job_id, status, Some(&error));
+    // A cancelled job stays cancelled even if the task returned normally.
+    if context.cancelled() {
+      let _ = update_job_status(&connection, &job_id, STATUS_CANCELLED, None);
+    } else {
+      match outcome {
+        Ok(outputs) => {
+          let outputs_json = serde_json::to_string(&outputs).unwrap_or_else(|_| "[]".to_string());
+          let _ = update_job_outputs(&connection, &job_id, &outputs_json);
+          let _ = update_job_progress(&connection, &job_id, 1.0);
+          let _ = update_job_status(&connection, &job_id, STATUS_COMPLETED, None);
+        }
+        Err(error) => {
+          let _ = update_job_status(&connection, &job_id, STATUS_FAILED, Some(&error));
+        }
       }
     }
   }
@@ -432,6 +441,7 @@ fn build_task(kind: &str, inputs_json: &str) -> Result<JobTask, String> {
         run_pipeline_job(context, &payload.pipeline_id, payload.dataset_id.as_deref())
       }))
     }
+    "model" => crate::inference::build_model_task(inputs_json),
     other => Err(format!("unknown job kind '{other}'")),
   }
 }

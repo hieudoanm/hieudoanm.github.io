@@ -138,6 +138,97 @@ describe('api commands', () => {
     });
   });
 
+  it('createPipeline passes the definition JSON', async () => {
+    await api.createPipeline('{"name":"p","steps":[]}');
+    expect(invoke).toHaveBeenCalledWith('create_pipeline', {
+      definitionJson: '{"name":"p","steps":[]}',
+    });
+  });
+
+  it('listPipelines invokes with no args', async () => {
+    await api.listPipelines();
+    expect(invoke).toHaveBeenCalledWith('list_pipelines', undefined);
+  });
+
+  it('deletePipeline passes the pipeline id', async () => {
+    await api.deletePipeline('pipeline://p');
+    expect(invoke).toHaveBeenCalledWith('delete_pipeline', {
+      pipelineId: 'pipeline://p',
+    });
+  });
+
+  it('runPipeline passes pipeline and optional dataset ids', async () => {
+    await api.runPipeline('pipeline://p', 'dataset://d');
+    expect(invoke).toHaveBeenCalledWith('run_pipeline', {
+      pipelineId: 'pipeline://p',
+      datasetId: 'dataset://d',
+    });
+    await api.runPipeline('pipeline://p');
+    expect(invoke).toHaveBeenCalledWith('run_pipeline', {
+      pipelineId: 'pipeline://p',
+      datasetId: null,
+    });
+  });
+
+  it('listJobs invokes with no args', async () => {
+    await api.listJobs();
+    expect(invoke).toHaveBeenCalledWith('list_jobs', undefined);
+  });
+
+  it('getJob passes the job id', async () => {
+    await api.getJob('job://j');
+    expect(invoke).toHaveBeenCalledWith('get_job', { jobId: 'job://j' });
+  });
+
+  it('cancelJob and retryJob pass the job id', async () => {
+    await api.cancelJob('job://j');
+    expect(invoke).toHaveBeenCalledWith('cancel_job', { jobId: 'job://j' });
+    await api.retryJob('job://j');
+    expect(invoke).toHaveBeenCalledWith('retry_job', { jobId: 'job://j' });
+  });
+
+  it('registerModel passes the definition JSON', async () => {
+    await api.registerModel('{"name":"m","version":"1"}');
+    expect(invoke).toHaveBeenCalledWith('register_model', {
+      definitionJson: '{"name":"m","version":"1"}',
+    });
+  });
+
+  it('listModels invokes with no args', async () => {
+    await api.listModels();
+    expect(invoke).toHaveBeenCalledWith('list_models', undefined);
+  });
+
+  it('deleteModel passes the model id', async () => {
+    await api.deleteModel('model://m');
+    expect(invoke).toHaveBeenCalledWith('delete_model', {
+      modelId: 'model://m',
+    });
+  });
+
+  it('isRuntimeAvailable passes the runtime name', async () => {
+    invoke.mockResolvedValue(true);
+    await expect(api.isRuntimeAvailable('python')).resolves.toBe(true);
+    expect(invoke).toHaveBeenCalledWith('is_runtime_available', {
+      runtime: 'python',
+    });
+  });
+
+  it('runModel passes optional dataset and input references', async () => {
+    await api.runModel('model://m', 'dataset://d', 'series://1/s1');
+    expect(invoke).toHaveBeenCalledWith('run_model', {
+      modelId: 'model://m',
+      datasetId: 'dataset://d',
+      inputRef: 'series://1/s1',
+    });
+    await api.runModel('model://m');
+    expect(invoke).toHaveBeenCalledWith('run_model', {
+      modelId: 'model://m',
+      datasetId: null,
+      inputRef: null,
+    });
+  });
+
   it('rejects with a helpful message outside the desktop runtime', async () => {
     setInvoke(undefined);
     await expect(api.listDatasets('')).rejects.toThrow(

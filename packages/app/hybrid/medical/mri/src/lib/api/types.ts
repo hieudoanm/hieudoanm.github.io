@@ -156,3 +156,69 @@ export interface ImportSummary {
   skippedFiles: number;
   seriesCount: number;
 }
+
+export interface PipelineStep {
+  id: string;
+  tool: string;
+  args: string[];
+}
+
+export interface PipelineDefinition {
+  name: string;
+  steps: PipelineStep[];
+}
+
+export interface PipelineRow {
+  id: string;
+  name: string;
+  version: number;
+  definitionJson: string;
+  createdAt: number;
+}
+
+export type JobStatus =
+  'queued' | 'running' | 'completed' | 'failed' | 'cancelled';
+
+export interface JobLogEntry {
+  timestamp: number;
+  message: string;
+}
+
+export interface JobRecord {
+  id: string;
+  kind: string;
+  status: JobStatus;
+  progress: number;
+  attempts: number;
+  logsJson: string;
+  inputsJson: string;
+  outputsJson: string;
+  error: string | null;
+  createdAt: number;
+  startedAt: number | null;
+  finishedAt: number | null;
+}
+
+export type ModelRuntime = 'python' | 'docker';
+
+export interface ModelDefinition {
+  name: string;
+  version: string;
+  task: string;
+  runtime: ModelRuntime;
+  source: string;
+  license?: string;
+}
+
+export interface ModelRecord {
+  id: string;
+  name: string;
+  version: string;
+  task: string;
+  runtime: ModelRuntime;
+  source: string;
+  license: string;
+  inputJson: string;
+  outputJson: string;
+  createdAt: number;
+}

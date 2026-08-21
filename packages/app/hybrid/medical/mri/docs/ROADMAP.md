@@ -99,11 +99,11 @@ mobile app (Tauri Mobile).
 
 > Orchestration: the manual tool-hopping gap becomes a managed pipeline
 
-1. [ ] Pipeline builder: stored, versioned pipeline definitions runnable through
+1. [x] Pipeline builder: stored, versioned pipeline definitions runnable through
        GUI, CLI, API, and AI agent
-2. [ ] Rust process manager: structured arguments, validation, stdout/stderr
+2. [x] Rust process manager: structured arguments, validation, stdout/stderr
        capture, cancellation, timeouts, progress, resource limits
-3. [ ] Background job system: queue → run → progress → complete/fail with logs,
+3. [x] Background job system: queue → run → progress → complete/fail with logs,
        retries, outputs, provenance; UI never blocks
 4. [ ] Scientific-tool integration: dcm2niix (DICOM → NIfTI), ANTs
        (registration), FSL/MRtrix (diffusion), qMRLab (quantitative MRI)
@@ -119,9 +119,9 @@ mobile app (Tauri Mobile).
 
 > Models are first-class citizens, output is always reviewable
 
-1. [ ] Model registry: id, name, version, task, input/output, runtime, source,
+1. [x] Model registry: id, name, version, task, input/output, runtime, source,
        license
-2. [ ] Local model execution: ONNX, PyTorch, MONAI; containerized models;
+2. [x] Local model execution: ONNX, PyTorch, MONAI; containerized models;
        external inference services optional
 3. [ ] AI segmentation with model provenance recorded per inference
 4. [ ] AI review workflow: prediction → human review → correction → approval →

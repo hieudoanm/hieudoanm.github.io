@@ -3,6 +3,9 @@ import type {
   Dataset,
   DatasetDetail,
   ImportSummary,
+  JobRecord,
+  ModelRecord,
+  PipelineRow,
   ProtocolReport,
   ProtocolRow,
   ProvenanceRecord,
@@ -66,6 +69,23 @@ export interface MriApi {
     leftSeriesId: string,
     rightSeriesId: string
   ): Promise<CompareCompatibility>;
+  createPipeline(definitionJson: string): Promise<PipelineRow>;
+  listPipelines(): Promise<PipelineRow[]>;
+  deletePipeline(pipelineId: string): Promise<void>;
+  runPipeline(pipelineId: string, datasetId?: string): Promise<JobRecord>;
+  listJobs(): Promise<JobRecord[]>;
+  getJob(jobId: string): Promise<JobRecord>;
+  cancelJob(jobId: string): Promise<void>;
+  retryJob(jobId: string): Promise<JobRecord>;
+  registerModel(definitionJson: string): Promise<ModelRecord>;
+  listModels(): Promise<ModelRecord[]>;
+  deleteModel(modelId: string): Promise<void>;
+  isRuntimeAvailable(runtime: string): Promise<boolean>;
+  runModel(
+    modelId: string,
+    datasetId?: string,
+    inputRef?: string
+  ): Promise<JobRecord>;
 }
 
 export const api: MriApi = {
@@ -95,5 +115,30 @@ export const api: MriApi = {
     call<CompareCompatibility>('compare_compatibility', {
       leftSeriesId,
       rightSeriesId,
+    }),
+  createPipeline: (definitionJson) =>
+    call<PipelineRow>('create_pipeline', { definitionJson }),
+  listPipelines: () => call<PipelineRow[]>('list_pipelines'),
+  deletePipeline: (pipelineId) => call<void>('delete_pipeline', { pipelineId }),
+  runPipeline: (pipelineId, datasetId) =>
+    call<JobRecord>('run_pipeline', {
+      pipelineId,
+      datasetId: datasetId ?? null,
+    }),
+  listJobs: () => call<JobRecord[]>('list_jobs'),
+  getJob: (jobId) => call<JobRecord>('get_job', { jobId }),
+  cancelJob: (jobId) => call<void>('cancel_job', { jobId }),
+  retryJob: (jobId) => call<JobRecord>('retry_job', { jobId }),
+  registerModel: (definitionJson) =>
+    call<ModelRecord>('register_model', { definitionJson }),
+  listModels: () => call<ModelRecord[]>('list_models'),
+  deleteModel: (modelId) => call<void>('delete_model', { modelId }),
+  isRuntimeAvailable: (runtime) =>
+    call<boolean>('is_runtime_available', { runtime }),
+  runModel: (modelId, datasetId, inputRef) =>
+    call<JobRecord>('run_model', {
+      modelId,
+      datasetId: datasetId ?? null,
+      inputRef: inputRef ?? null,
     }),
 };

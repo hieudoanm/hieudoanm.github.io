@@ -45,4 +45,20 @@ describe('HomePage', () => {
       '/version'
     );
   });
+
+  it('links to the pipelines workspace', () => {
+    render(<HomePage />);
+    expect(screen.getByTestId('open-pipelines')).toHaveAttribute(
+      'href',
+      '/pipelines'
+    );
+  });
+
+  it('links to the model registry', () => {
+    render(<HomePage />);
+    expect(screen.getByTestId('open-models')).toHaveAttribute(
+      'href',
+      '/models'
+    );
+  });
 });

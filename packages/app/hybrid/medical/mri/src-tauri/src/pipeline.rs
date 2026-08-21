@@ -97,12 +97,12 @@ fn row_to_pipeline(row: &rusqlite::Row<'_>) -> rusqlite::Result<PipelineRow> {
 /// Latest version of every stored pipeline.
 pub fn list_pipelines(connection: &Connection) -> Result<Vec<PipelineRow>, String> {
   let mut statement = connection
-    .prepare(&format!(
+    .prepare(
       "SELECT p.id, p.name, p.version, p.definition_json, p.created_at FROM pipelines p
        INNER JOIN (SELECT name, MAX(version) AS version FROM pipelines GROUP BY name) latest
        ON p.name = latest.name AND p.version = latest.version
-       ORDER BY p.created_at DESC"
-    ))
+       ORDER BY p.created_at DESC",
+    )
     .map_err(|error| error.to_string())?;
   let rows = statement
     .query_map([], row_to_pipeline)

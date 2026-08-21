@@ -4,8 +4,10 @@ import { type FC } from 'react';
 import Link from 'next/link';
 import {
   FiActivity,
+  FiCpu,
   FiDownload,
   FiFolder,
+  FiGitMerge,
   FiInfo,
   FiShield,
   FiTag,
@@ -42,6 +44,18 @@ const HomePage: FC = () => (
         <Button variant="outline" size="lg">
           <FiShield className="mr-2" />
           Protocols
+        </Button>
+      </Link>
+      <Link href="/pipelines" data-testid="open-pipelines">
+        <Button variant="outline" size="lg">
+          <FiGitMerge className="mr-2" />
+          Pipelines
+        </Button>
+      </Link>
+      <Link href="/models" data-testid="open-models">
+        <Button variant="outline" size="lg">
+          <FiCpu className="mr-2" />
+          Models
         </Button>
       </Link>
     </div>
