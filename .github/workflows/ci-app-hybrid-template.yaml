@@ -76,7 +76,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, macos-latest]
+        os: [macos-latest, ubuntu-latest, windows-latest]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout
@@ -99,7 +99,7 @@ jobs:
       - name: Build Tauri Desktop
         working-directory: ${{ inputs.package }}
         run: pnpm exec tauri build --ci --config '{"build":{"beforeBuildCommand":""}}'
-      - name: Zip App Bundle
+      - name: Zip App Bundle for macOS
         if: runner.os == 'macOS'
         working-directory: ${{ inputs.package }}/src-tauri/target/release/bundle/macos
         run: |
