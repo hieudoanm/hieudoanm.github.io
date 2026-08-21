@@ -1,2 +1,2 @@
-:HL["/downloads/mri/_next/static/chunks/1rn1_l52shh-9.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4180,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"uAi7TK_gYoNuVJ4a25SWH"}
+:HL["/downloads/mri/_next/static/chunks/0u6lwt1jrv4u0.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4180,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"MqiESofPacm39cqUuGZIz"}

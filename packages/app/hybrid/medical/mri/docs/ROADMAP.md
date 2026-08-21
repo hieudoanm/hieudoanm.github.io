@@ -54,20 +54,21 @@ mobile app (Tauri Mobile).
 
 > Core data plane: import, browse, inspect, view, and trace provenance
 
-1. [ ] Workspace: local project container with dataset management (import,
+1. [x] Workspace: local project container with dataset management (import,
        organize, search)
-2. [ ] DICOM import: files and series with full metadata preservation (no
-       silently discarded tags); DICOMweb (QIDO-RS/WADO-RS/STOW-RS)
-3. [ ] NIfTI support with header inspection
-4. [ ] Filesystem abstraction: logical IDs (`dataset://`, `series://`,
+2. [x] DICOM import: files and series with full metadata preservation (no
+       silently discarded tags)
+3. [ ] DICOMweb (QIDO-RS/WADO-RS/STOW-RS)
+4. [x] NIfTI support with header inspection
+5. [x] Filesystem abstraction: logical IDs (`dataset://`, `series://`,
        `artifact://`) over local/mounted storage
-5. [ ] Local embedded database for metadata and references — no volumes in the
+6. [x] Local embedded database for metadata and references — no volumes in the
        relational store
-6. [ ] MRI study browser organized around studies, series, acquisitions
-7. [ ] Metadata viewer: original tags alongside normalized concepts
-8. [ ] Basic 2D slice viewer with window/level controls
-9. [ ] Provenance system: inputs, operations, software, environment, outputs
-       recorded for every derived artifact
+7. [x] MRI study browser organized around studies, series, acquisitions
+8. [x] Metadata viewer: original tags alongside normalized concepts
+9. [x] Basic 2D slice viewer with window/level controls
+10. [x] Provenance system: inputs, operations, software, environment, outputs
+        recorded for every derived artifact
 
 ---
 
@@ -75,20 +76,20 @@ mobile app (Tauri Mobile).
 
 > The differentiator: the system understands studies rather than listing files
 
-1. [ ] Automatic study analysis: modality, sequence, anatomical region,
+1. [x] Automatic study analysis: modality, sequence, anatomical region,
        orientation, voxel size, slice thickness, field strength, scanner,
        manufacturer, acquisition/diffusion parameters, temporal dimensions
-2. [ ] Sequence classifier (T1, T2, FLAIR, DWI, ADC, DTI, SWI, GRE, TOF, ASL,
+2. [x] Sequence classifier (T1, T2, FLAIR, DWI, ADC, DTI, SWI, GRE, TOF, ASL,
        BOLD, perfusion, spectroscopy, T1/T2/T2* mapping, Dixon, qSM) exposing
        confidence — inferred information never presented as authoritative
-3. [ ] Study normalization: scanner naming (MPRAGE/BRAVO/T1 3D/...) mapped to
+3. [x] Study normalization: scanner naming (MPRAGE/BRAVO/T1 3D/...) mapped to
        canonical concepts, originals preserved
-4. [ ] Protocol validation: user-defined protocols (required sequences,
+4. [x] Protocol validation: user-defined protocols (required sequences,
        constraints) checked automatically on import
-5. [ ] Automated machine-readable QC: motion, noise, SNR, intensity
+5. [x] Automated machine-readable QC: motion, noise, SNR, intensity
        non-uniformity, ghosting, artifacts, coverage, spacing, metadata
        consistency, missing sequences, corruption
-6. [ ] Cross-study comparison: registration, synchronized navigation, linked
+6. [x] Cross-study comparison: registration, synchronized navigation, linked
        crosshairs, overlays, difference maps, segmentation/measurement
        comparison, longitudinal statistics
 

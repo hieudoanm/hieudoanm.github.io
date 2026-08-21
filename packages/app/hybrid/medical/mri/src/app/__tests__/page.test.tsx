@@ -1,17 +1,48 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import HomePage from '@/app/page';
 
+jest.mock('next/link', () => ({
+  __esModule: true,
+  default: ({
+    href,
+    children,
+    ...props
+  }: {
+    href: string;
+    children: React.ReactNode;
+  }) => (
+    <a href={href} {...props}>
+      {children}
+    </a>
+  ),
+}));
+
 describe('HomePage', () => {
-  it('renders the home template', () => {
+  it('links to the workspace', () => {
     render(<HomePage />);
-    expect(screen.getByRole('button', { name: 'Import study' })).toBeVisible();
+    const link = screen.getByTestId('open-workspace');
+    expect(link).toHaveAttribute('href', '/workspace');
+    expect(
+      screen.getByRole('button', { name: /Open workspace/ })
+    ).toBeVisible();
   });
 
-  it('passes imported files to the template handler', () => {
+  it('shows the supported format badges', () => {
     render(<HomePage />);
-    const input = screen.getByTestId('file-input');
-    const files = [new File(['scan'], 'scan.dcm')];
-    fireEvent.change(input, { target: { files } });
-    expect(input).toBeInTheDocument();
+    expect(screen.getByText('DICOM')).toBeVisible();
+    expect(screen.getByText('NIfTI')).toBeVisible();
+  });
+
+  it('links to the info pages', () => {
+    render(<HomePage />);
+    expect(screen.getByTestId('open-about')).toHaveAttribute('href', '/about');
+    expect(screen.getByTestId('open-downloads')).toHaveAttribute(
+      'href',
+      '/downloads'
+    );
+    expect(screen.getByTestId('open-version')).toHaveAttribute(
+      'href',
+      '/version'
+    );
   });
 });
