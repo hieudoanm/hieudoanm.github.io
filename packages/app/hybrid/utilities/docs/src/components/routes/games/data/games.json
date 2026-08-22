@@ -30,42 +30,6 @@
     ]
   },
   {
-    "id": "casino",
-    "label": "Casino",
-    "items": [
-      {
-        "label": "Baccarat",
-        "description": "Card game",
-        "icon": "PiBank",
-        "toolId": "tai-baccarat"
-      },
-      {
-        "label": "Blackjack",
-        "description": "Cards Counter",
-        "icon": "PiCards",
-        "toolId": "blackjack"
-      },
-      {
-        "label": "Poker",
-        "description": "Odds Calculator",
-        "icon": "PiCards",
-        "toolId": "poker"
-      },
-      {
-        "label": "Dice Game",
-        "description": "Over/Under 7",
-        "icon": "PiDiceOne",
-        "toolId": "dice-game"
-      },
-      {
-        "label": "Slot Machine",
-        "description": "3 reels",
-        "icon": "PiCoin",
-        "toolId": "slot-machine"
-      }
-    ]
-  },
-  {
     "id": "memory",
     "label": "Memory",
     "items": [
