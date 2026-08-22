@@ -61,4 +61,12 @@ describe('HomePage', () => {
       '/models'
     );
   });
+
+  it('links to the DICOMweb bridge', () => {
+    render(<HomePage />);
+    expect(screen.getByTestId('open-dicomweb')).toHaveAttribute(
+      'href',
+      '/dicomweb'
+    );
+  });
 });

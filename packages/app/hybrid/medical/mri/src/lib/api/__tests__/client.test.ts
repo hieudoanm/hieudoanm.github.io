@@ -229,6 +229,44 @@ describe('api commands', () => {
     });
   });
 
+  it('addDicomwebServer passes name, url and auth header', async () => {
+    await api.addDicomwebServer('PACS', 'http://pacs.local', 'Bearer t');
+    expect(invoke).toHaveBeenCalledWith('add_dicomweb_server', {
+      name: 'PACS',
+      url: 'http://pacs.local',
+      authHeader: 'Bearer t',
+    });
+  });
+
+  it('qidoStudies passes the server, patient name and optional limit', async () => {
+    await api.qidoStudies('server://p', 'DOE', 25);
+    expect(invoke).toHaveBeenCalledWith('qido_studies', {
+      serverId: 'server://p',
+      patientName: 'DOE',
+      limit: 25,
+    });
+    await api.qidoStudies('server://p', '');
+    expect(invoke).toHaveBeenCalledWith('qido_studies', {
+      serverId: 'server://p',
+      patientName: '',
+      limit: null,
+    });
+  });
+
+  it('wadoImportSeries and stowExportDataset pass their ids', async () => {
+    await api.wadoImportSeries('server://p', '1.2.3', '4.5.6');
+    expect(invoke).toHaveBeenCalledWith('wado_import_series', {
+      serverId: 'server://p',
+      studyUid: '1.2.3',
+      seriesUid: '4.5.6',
+    });
+    await api.stowExportDataset('server://p', 'dataset://d');
+    expect(invoke).toHaveBeenCalledWith('stow_export_dataset', {
+      serverId: 'server://p',
+      datasetId: 'dataset://d',
+    });
+  });
+
   it('rejects with a helpful message outside the desktop runtime', async () => {
     setInvoke(undefined);
     await expect(api.listDatasets('')).rejects.toThrow(

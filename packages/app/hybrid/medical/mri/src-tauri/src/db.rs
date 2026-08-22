@@ -95,6 +95,13 @@ const MIGRATIONS: &[&str] = &[
       output_json TEXT NOT NULL DEFAULT '{}',
       created_at INTEGER NOT NULL,
       UNIQUE(name, version)
+    );
+    CREATE TABLE IF NOT EXISTS dicomweb_servers (
+      id TEXT PRIMARY KEY,
+      name TEXT NOT NULL UNIQUE,
+      url TEXT NOT NULL,
+      auth_header TEXT NOT NULL DEFAULT '',
+      created_at INTEGER NOT NULL
     );",
 ];
 

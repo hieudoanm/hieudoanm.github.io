@@ -222,3 +222,30 @@ export interface ModelRecord {
   outputJson: string;
   createdAt: number;
 }
+
+export interface DicomwebServer {
+  id: string;
+  name: string;
+  url: string;
+  authHeader: string;
+  createdAt: number;
+}
+
+export interface QidoStudy {
+  studyUid: string;
+  patientName: string;
+  studyDate: string;
+  studyDescription: string;
+}
+
+export interface QidoSeries {
+  seriesUid: string;
+  seriesDescription: string;
+  modality: string;
+  instanceCount: number;
+}
+
+export interface StowResult {
+  stored: number;
+  failed: number;
+}

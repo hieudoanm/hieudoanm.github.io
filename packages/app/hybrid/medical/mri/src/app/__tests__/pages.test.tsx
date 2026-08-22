@@ -51,6 +51,13 @@ jest.mock('@/lib/api/client', () => ({
     deleteModel: jest.fn(),
     isRuntimeAvailable: jest.fn().mockResolvedValue(false),
     runModel: jest.fn(),
+    addDicomwebServer: jest.fn(),
+    listDicomwebServers: jest.fn().mockResolvedValue([]),
+    deleteDicomwebServer: jest.fn().mockResolvedValue(undefined),
+    qidoStudies: jest.fn().mockResolvedValue([]),
+    qidoSeries: jest.fn().mockResolvedValue([]),
+    wadoImportSeries: jest.fn(),
+    stowExportDataset: jest.fn(),
   },
 }));
 
@@ -324,6 +331,17 @@ describe('ModelsPage', () => {
     expect(screen.getByTestId('model-form')).toBeInTheDocument();
     expect(screen.getByTestId('runtime-python')).toBeInTheDocument();
     expect(screen.getByTestId('jobs-panel')).toBeInTheDocument();
+  });
+});
+
+describe('DicomwebPage', () => {
+  it('renders the DICOMweb bridge with server form', async () => {
+    (api.listDicomwebServers as jest.Mock).mockResolvedValue([]);
+    (api.listDatasets as jest.Mock).mockResolvedValue([]);
+    const { default: DicomwebPage } = await import('@/app/(app)/dicomweb/page');
+    render(<DicomwebPage />);
+    await screen.findByText('DICOMweb');
+    expect(screen.getByTestId('server-form')).toBeInTheDocument();
   });
 });
 

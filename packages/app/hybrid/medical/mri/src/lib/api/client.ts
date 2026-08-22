@@ -2,6 +2,7 @@ import type {
   CompareCompatibility,
   Dataset,
   DatasetDetail,
+  DicomwebServer,
   ImportSummary,
   JobRecord,
   ModelRecord,
@@ -10,7 +11,10 @@ import type {
   ProtocolRow,
   ProvenanceRecord,
   QcReport,
+  QidoSeries,
+  QidoStudy,
   SeriesMetadata,
+  StowResult,
   StudyAnalysis,
 } from './types';
 
@@ -86,6 +90,25 @@ export interface MriApi {
     datasetId?: string,
     inputRef?: string
   ): Promise<JobRecord>;
+  addDicomwebServer(
+    name: string,
+    url: string,
+    authHeader: string
+  ): Promise<DicomwebServer>;
+  listDicomwebServers(): Promise<DicomwebServer[]>;
+  deleteDicomwebServer(serverId: string): Promise<void>;
+  qidoStudies(
+    serverId: string,
+    patientName: string,
+    limit?: number
+  ): Promise<QidoStudy[]>;
+  qidoSeries(serverId: string, studyUid: string): Promise<QidoSeries[]>;
+  wadoImportSeries(
+    serverId: string,
+    studyUid: string,
+    seriesUid: string
+  ): Promise<ImportSummary>;
+  stowExportDataset(serverId: string, datasetId: string): Promise<StowResult>;
 }
 
 export const api: MriApi = {
@@ -141,4 +164,29 @@ export const api: MriApi = {
       datasetId: datasetId ?? null,
       inputRef: inputRef ?? null,
     }),
+  addDicomwebServer: (name, url, authHeader) =>
+    call<DicomwebServer>('add_dicomweb_server', {
+      name,
+      url,
+      authHeader,
+    }),
+  listDicomwebServers: () => call<DicomwebServer[]>('list_dicomweb_servers'),
+  deleteDicomwebServer: (serverId) =>
+    call<void>('delete_dicomweb_server', { serverId }),
+  qidoStudies: (serverId, patientName, limit) =>
+    call<QidoStudy[]>('qido_studies', {
+      serverId,
+      patientName,
+      limit: limit ?? null,
+    }),
+  qidoSeries: (serverId, studyUid) =>
+    call<QidoSeries[]>('qido_series', { serverId, studyUid }),
+  wadoImportSeries: (serverId, studyUid, seriesUid) =>
+    call<ImportSummary>('wado_import_series', {
+      serverId,
+      studyUid,
+      seriesUid,
+    }),
+  stowExportDataset: (serverId, datasetId) =>
+    call<StowResult>('stow_export_dataset', { serverId, datasetId }),
 };

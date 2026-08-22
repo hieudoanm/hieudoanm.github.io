@@ -49,6 +49,13 @@ const createApi = (overrides: Partial<MriApi> = {}): MriApi => ({
   deleteModel: jest.fn().mockResolvedValue(undefined),
   isRuntimeAvailable: jest.fn().mockResolvedValue(false),
   runModel: jest.fn(),
+  addDicomwebServer: jest.fn(),
+  listDicomwebServers: jest.fn().mockResolvedValue([]),
+  deleteDicomwebServer: jest.fn().mockResolvedValue(undefined),
+  qidoStudies: jest.fn().mockResolvedValue([]),
+  qidoSeries: jest.fn().mockResolvedValue([]),
+  wadoImportSeries: jest.fn(),
+  stowExportDataset: jest.fn(),
   ...overrides,
 });
 

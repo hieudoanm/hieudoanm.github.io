@@ -1,11 +1,13 @@
 pub mod analysis;
 pub mod classifier;
 pub mod commands;
+pub mod commands_dicomweb;
 pub mod commands_intel;
 pub mod commands_models;
 pub mod commands_workflow;
 pub mod compare;
 pub mod db;
+pub mod dicomweb;
 pub mod import_dicom;
 pub mod import_nifti;
 pub mod inference;
@@ -77,7 +79,14 @@ pub fn run() {
       commands_models::list_models,
       commands_models::delete_model,
       commands_models::is_runtime_available,
-      commands_models::run_model
+      commands_models::run_model,
+      commands_dicomweb::add_dicomweb_server,
+      commands_dicomweb::list_dicomweb_servers,
+      commands_dicomweb::delete_dicomweb_server,
+      commands_dicomweb::qido_studies,
+      commands_dicomweb::qido_series,
+      commands_dicomweb::wado_import_series,
+      commands_dicomweb::stow_export_dataset
     ])
     .run(tauri::generate_context!())
     .expect("error while running tauri application");

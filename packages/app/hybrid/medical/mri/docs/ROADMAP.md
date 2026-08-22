@@ -58,7 +58,7 @@ mobile app (Tauri Mobile).
        organize, search)
 2. [x] DICOM import: files and series with full metadata preservation (no
        silently discarded tags)
-3. [ ] DICOMweb (QIDO-RS/WADO-RS/STOW-RS)
+3. [x] DICOMweb (QIDO-RS/WADO-RS/STOW-RS)
 4. [x] NIfTI support with header inspection
 5. [x] Filesystem abstraction: logical IDs (`dataset://`, `series://`,
        `artifact://`) over local/mounted storage

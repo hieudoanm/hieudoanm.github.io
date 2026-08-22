@@ -8,6 +8,7 @@ import {
   FiDownload,
   FiFolder,
   FiGitMerge,
+  FiGlobe,
   FiInfo,
   FiShield,
   FiTag,
@@ -33,29 +34,35 @@ const HomePage: FC = () => (
       </div>
     </div>
 
-    <div className="flex items-center gap-2">
-      <Link href="/workspace" data-testid="open-workspace">
-        <Button variant="primary" size="lg">
+    <div className="flex flex-col items-center gap-2">
+      <Link href="/workspace" data-testid="open-workspace" className="w-full">
+        <Button variant="primary" size="lg" className="w-full">
           <FiFolder className="mr-2" />
           Open workspace
         </Button>
       </Link>
-      <Link href="/protocols" data-testid="open-protocols">
-        <Button variant="outline" size="lg">
+      <Link href="/protocols" data-testid="open-protocols" className="w-full">
+        <Button variant="outline" size="lg" className="w-full">
           <FiShield className="mr-2" />
           Protocols
         </Button>
       </Link>
-      <Link href="/pipelines" data-testid="open-pipelines">
-        <Button variant="outline" size="lg">
+      <Link href="/pipelines" data-testid="open-pipelines" className="w-full">
+        <Button variant="outline" size="lg" className="w-full">
           <FiGitMerge className="mr-2" />
           Pipelines
         </Button>
       </Link>
-      <Link href="/models" data-testid="open-models">
-        <Button variant="outline" size="lg">
+      <Link href="/models" data-testid="open-models" className="w-full">
+        <Button variant="outline" size="lg" className="w-full">
           <FiCpu className="mr-2" />
           Models
+        </Button>
+      </Link>
+      <Link href="/dicomweb" data-testid="open-dicomweb" className="w-full">
+        <Button variant="outline" size="lg" className="w-full">
+          <FiGlobe className="mr-2" />
+          DICOMweb
         </Button>
       </Link>
     </div>
