@@ -147,10 +147,15 @@ describe('Heyawake utils', () => {
         Array.from({ length: SIZE }, () => makeCell(false))
       );
       const shadedPositions: [number, number][] = [
-        [0, 1], [0, 3], [0, 5],
-        [2, 1], [2, 3], [2, 5],
+        [0, 1],
+        [0, 3],
+        [0, 5],
+        [2, 1],
+        [2, 3],
+        [2, 5],
         [3, 2],
-        [4, 1], [4, 4],
+        [4, 1],
+        [4, 4],
         [5, 3],
       ];
       for (const [r, c] of shadedPositions) grid[r][c] = makeCell(true);
@@ -168,7 +173,14 @@ describe('Heyawake utils', () => {
       );
       grid[0][0] = makeCell(true);
       const rooms: Room[] = [
-        { id: 0, cells: [[0, 0], [0, 1]], clue: null },
+        {
+          id: 0,
+          cells: [
+            [0, 0],
+            [0, 1],
+          ],
+          clue: null,
+        },
       ];
       expect(checkWin(grid, rooms)).toBe(false);
     });

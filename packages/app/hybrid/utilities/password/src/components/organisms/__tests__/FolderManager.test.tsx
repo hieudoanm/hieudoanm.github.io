@@ -52,7 +52,9 @@ describe('FolderManager', () => {
     fireEvent.change(screen.getByPlaceholderText('New folder name'), {
       target: { value: 'Team Vault' },
     });
-    fireEvent.click(screen.getByRole('checkbox', { name: /Create as team vault/ }));
+    fireEvent.click(
+      screen.getByRole('checkbox', { name: /Create as team vault/ })
+    );
     fireEvent.click(screen.getByRole('button', { name: 'Create' }));
     expect(defaults.onCreate).toHaveBeenCalledWith('Team Vault', true);
   });
@@ -108,7 +110,9 @@ describe('FolderManager', () => {
 
   it('closes the dialog', () => {
     renderManager();
-    fireEvent.click(screen.getByRole('button', { name: 'Close folder manager' }));
+    fireEvent.click(
+      screen.getByRole('button', { name: 'Close folder manager' })
+    );
     expect(defaults.onClose).toHaveBeenCalled();
   });
 

@@ -11,12 +11,12 @@
 | macOS    |        | 13.+         | [Download `.dmg`][download-dmg]            |
 
 [download-aab]:
-  https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-nikoli-latest/app-universal-release.aab
+  https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-entertainment-nikoli-latest/app-universal-release.aab
 [download-apk]:
-  https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-nikoli-latest/app-universal-release.apk
+  https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-entertainment-nikoli-latest/app-universal-release.apk
 [download-app-image]:
-  https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-nikoli-latest/nikoli_0.0.1_amd64.AppImage
+  https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-entertainment-nikoli-latest/nikoli_0.0.1_amd64.AppImage
 [download-deb]:
-  https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-nikoli-latest/nikoli_0.0.1_amd64.deb
+  https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-entertainment-nikoli-latest/nikoli_0.0.1_amd64.deb
 [download-dmg]:
-  https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-nikoli-latest/nikoli_0.0.1_arm64.dmg
+  https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-entertainment-nikoli-latest/nikoli_0.0.1_arm64.dmg

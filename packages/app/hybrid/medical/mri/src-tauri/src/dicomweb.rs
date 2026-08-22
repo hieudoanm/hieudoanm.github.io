@@ -1,7 +1,6 @@
 use rusqlite::Connection;
 use serde::{Deserialize, Serialize};
 use serde_json::Value;
-use std::io::Read;
 use std::time::Duration;
 
 const CLIENT_TIMEOUT: Duration = Duration::from_secs(30);
@@ -231,18 +230,52 @@ struct Client {
 impl Client {
   fn new(server: &DicomwebServer) -> Self {
     Self {
-      agent: ureq::AgentBuilder::new().timeout(CLIENT_TIMEOUT).build(),
+      agent: ureq::Agent::config_builder()
+        .timeout_global(Some(CLIENT_TIMEOUT))
+        .build()
+        .new_agent(),
       base: server.url.trim_end_matches('/').to_string(),
       auth_header: server.auth_header.clone(),
     }
   }
 
-  fn request(&self, method: &str, path: &str) -> ureq::Request {
-    let mut request = self.agent.request(method, &format!("{}{path}", self.base));
-    if !self.auth_header.is_empty() {
-      request = request.set("Authorization", &self.auth_header);
+  fn get(
+    &self,
+    path: &str,
+    accept: &str,
+  ) -> Result<ureq::http::Response<ureq::Body>, String> {
+    let builder = self
+      .agent
+      .get(&format!("{}{path}", self.base))
+      .header("Accept", accept);
+    self.with_auth(builder).call().map_err(|error| error.to_string())
+  }
+
+  fn post(
+    &self,
+    path: &str,
+    content_type: &str,
+    body: Vec<u8>,
+  ) -> Result<ureq::http::Response<ureq::Body>, String> {
+    let builder = self
+      .agent
+      .post(&format!("{}{path}", self.base))
+      .header("Content-Type", content_type);
+    self
+      .with_auth(builder)
+      .send(body)
+      .map_err(|error| error.to_string())
+  }
+
+  fn with_auth<B>(
+    &self,
+    builder: ureq::RequestBuilder<B>,
+  ) -> ureq::RequestBuilder<B> {
+    if self.auth_header.is_empty() {
+      builder
+    } else {
+      builder.header("Authorization", self.auth_header.as_str())
     }
-    request
   }
 }
 
@@ -266,12 +299,12 @@ pub fn qido_studies(
   if !patient_name.trim().is_empty() {
     path.push_str(&format!("&PatientName={}", percent_encode(patient_name)));
   }
-  let response = client
-    .request("GET", &path)
-    .set("Accept", DICOM_JSON_ACCEPT)
-    .call()
+  let response = client.get(&path, DICOM_JSON_ACCEPT)?;
+  let body = response
+    .into_body()
+    .read_to_string()
     .map_err(|error| error.to_string())?;
-  let entries = parse_json_array(&response.into_string().map_err(|e| e.to_string())?)?;
+  let entries = parse_json_array(&body)?;
   Ok(entries
     .iter()
     .map(|entry| QidoStudy {
@@ -286,12 +319,12 @@ pub fn qido_studies(
 /// QIDO-RS: list the series of one study.
 pub fn qido_series(server: &DicomwebServer, study_uid: &str) -> Result<Vec<QidoSeries>, String> {
   let client = Client::new(server);
-  let response = client
-    .request("GET", &format!("/studies/{study_uid}/series"))
-    .set("Accept", DICOM_JSON_ACCEPT)
-    .call()
+  let response = client.get(&format!("/studies/{study_uid}/series"), DICOM_JSON_ACCEPT)?;
+  let body = response
+    .into_body()
+    .read_to_string()
     .map_err(|error| error.to_string())?;
-  let entries = parse_json_array(&response.into_string().map_err(|e| e.to_string())?)?;
+  let entries = parse_json_array(&body)?;
   Ok(entries
     .iter()
     .map(|entry| QidoSeries {
@@ -311,12 +344,13 @@ pub fn qido_instance_uids(
   limit: u32,
 ) -> Result<Vec<String>, String> {
   let client = Client::new(server);
-  let response = client
-    .request("GET", &format!("/studies/{study_uid}/series/{series_uid}/instances?limit={limit}"))
-    .set("Accept", DICOM_JSON_ACCEPT)
-    .call()
+  let path = format!("/studies/{study_uid}/series/{series_uid}/instances?limit={limit}");
+  let response = client.get(&path, DICOM_JSON_ACCEPT)?;
+  let body = response
+    .into_body()
+    .read_to_string()
     .map_err(|error| error.to_string())?;
-  let entries = parse_json_array(&response.into_string().map_err(|e| e.to_string())?)?;
+  let entries = parse_json_array(&body)?;
   Ok(entries
     .iter()
     .map(|entry| dicom_json_string(entry, "00080018"))
@@ -332,22 +366,18 @@ pub fn wado_instance(
   sop_uid: &str,
 ) -> Result<Vec<u8>, String> {
   let client = Client::new(server);
-  let response = client
-    .request(
-      "GET",
-      &format!("/studies/{study_uid}/series/{series_uid}/instances/{sop_uid}"),
-    )
-    .set("Accept", "multipart/related; type=\"application/dicom\"")
-    .call()
-    .map_err(|error| error.to_string())?;
+  let path = format!("/studies/{study_uid}/series/{series_uid}/instances/{sop_uid}");
+  let response =
+    client.get(&path, "multipart/related; type=\"application/dicom\"")?;
   let content_type = response
-    .header("content-type")
+    .headers()
+    .get("content-type")
+    .and_then(|value| value.to_str().ok())
     .unwrap_or_default()
     .to_string();
-  let mut body = Vec::new();
-  response
-    .into_reader()
-    .read_to_end(&mut body)
+  let body = response
+    .into_body()
+    .read_to_vec()
     .map_err(|error| error.to_string())?;
   let boundary = extract_boundary(&content_type)?;
   first_multipart_part(&body, &boundary)
@@ -368,19 +398,17 @@ pub fn stow_instances(
     Some(uid) => format!("/studies/{uid}"),
     None => "/studies".to_string(),
   };
-  let response = client
-    .request("POST", &path)
-    .set(
-      "Content-Type",
-      &format!("multipart/related; type=\"{DCM_PART_TYPE}\"; boundary={boundary}"),
-    )
-    .send_bytes(&build_stow_body(parts, &boundary))
-    .map_err(|error| error.to_string())?;
-  let status = response.status();
+  let content_type =
+    format!("multipart/related; type=\"{DCM_PART_TYPE}\"; boundary={boundary}");
+  let response = client.post(&path, &content_type, build_stow_body(parts, &boundary))?;
+  let status = response.status().as_u16();
   if !(200..300).contains(&status) {
     return Err(format!("STOW failed with status {status}"));
   }
-  let body = response.into_string().map_err(|error| error.to_string())?;
+  let body = response
+    .into_body()
+    .read_to_string()
+    .map_err(|error| error.to_string())?;
   let stored = parse_json_array(&body)
     .ok()
     .and_then(|entries| entries.first().cloned())
@@ -403,7 +431,7 @@ pub fn stow_instances(
 mod tests {
   use super::*;
   use crate::db;
-  use std::io::Write as _;
+  use std::io::{Read as _, Write as _};
   use std::net::TcpListener;
   use std::sync::mpsc::Receiver;
 
