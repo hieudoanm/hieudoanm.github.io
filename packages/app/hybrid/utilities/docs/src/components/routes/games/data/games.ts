@@ -6,7 +6,6 @@ import {
   PiBugDroid,
   PiBuilding,
   PiCheckCircle,
-  PiCircleDashed,
   PiGameController,
   PiGraph,
   PiHurricane,
@@ -22,9 +21,7 @@ import {
   PiShuffle,
   PiSnowflake,
   PiSortAscending,
-  PiSquaresFour,
   PiTarget,
-  PiX,
 } from 'react-icons/pi';
 import gamesJson from './games.json';
 
@@ -48,7 +45,6 @@ const ICON_BY_NAME: Record<string, IconType> = {
   PiBugDroid,
   PiBuilding,
   PiCheckCircle,
-  PiCircleDashed,
   PiGameController,
   PiGraph,
   PiHurricane,
@@ -64,9 +60,7 @@ const ICON_BY_NAME: Record<string, IconType> = {
   PiShuffle,
   PiSnowflake,
   PiSortAscending,
-  PiSquaresFour,
   PiTarget,
-  PiX,
 };
 
 const resolveIcon = (name: string): GameItem['icon'] => {

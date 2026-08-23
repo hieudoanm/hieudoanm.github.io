@@ -20,12 +20,6 @@
         "description": "12×12 grid",
         "icon": "PiBugDroid",
         "toolId": "snake"
-      },
-      {
-        "label": "T3",
-        "description": "Tic-Tac-Toe",
-        "icon": "PiX",
-        "toolId": "t3"
       }
     ]
   },

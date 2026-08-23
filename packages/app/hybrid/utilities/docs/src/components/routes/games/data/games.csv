@@ -2,7 +2,6 @@ section,sectionId,label,description,icon,toolId
 Arcade,arcade,Dino Run,Infinite runner,PiGameController,dino-run
 Arcade,arcade,RPS,Rock Paper Scissors,PiScissors,rps
 Arcade,arcade,Snake,"12×12 grid",PiBugDroid,snake
-Arcade,arcade,T3,Tic-Tac-Toe,PiX,t3
 Memory,memory,Memory Match,Find matching pairs,PiGameController,memory-match
 Memory,memory,N-Back,Working memory,PiNumberSquareOne,n-back
 Memory,memory,PI,Memorization,PiPi,pi

@@ -88,6 +88,18 @@
         ]
       },
       {
+        "label": "Casino",
+        "description": "Games",
+        "icon": "PiDiceOne",
+        "href": "https://hieudoanm.github.io/downloads/casino",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-games-casino-latest"
+          }
+        ]
+      },
+      {
         "label": "Chat",
         "description": "Social Networking",
         "icon": "PiChat",
@@ -120,6 +132,18 @@
           {
             "label": "Download App",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-developer-tools-code-latest"
+          }
+        ]
+      },
+      {
+        "label": "Countries",
+        "description": "Games",
+        "icon": "PiGlobeHemisphereWest",
+        "href": "https://hieudoanm.github.io/downloads/countries",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-games-countries-latest"
           }
         ]
       },
@@ -280,14 +304,14 @@
         ]
       },
       {
-        "label": "Resume",
-        "description": "Productivity",
-        "icon": "PiFilePdf",
-        "href": "https://hieudoanm.github.io/downloads/resume",
+        "label": "POS",
+        "description": "Business",
+        "icon": "PiShoppingCart",
+        "href": "https://hieudoanm.github.io/downloads/pos",
         "actions": [
           {
             "label": "Download App",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-productivity-resume-latest"
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-business-pos-latest"
           }
         ]
       },
@@ -304,6 +328,18 @@
         ]
       },
       {
+        "label": "Resume",
+        "description": "Productivity",
+        "icon": "PiFilePdf",
+        "href": "https://hieudoanm.github.io/downloads/resume",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-productivity-resume-latest"
+          }
+        ]
+      },
+      {
         "label": "SVG",
         "description": "Graphics & Design",
         "icon": "PiPath",
@@ -312,6 +348,18 @@
           {
             "label": "Download App",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-graphics-design-svg-latest"
+          }
+        ]
+      },
+      {
+        "label": "Tic-Tac-Toe",
+        "description": "Games",
+        "icon": "PiX",
+        "href": "https://hieudoanm.github.io/downloads/tic-tac-toe",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-games-tic-tac-toe-latest"
           }
         ]
       },
@@ -348,18 +396,6 @@
           {
             "label": "Download App",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-finance-wallet-latest"
-          }
-        ]
-      },
-      {
-        "label": "POS",
-        "description": "Business",
-        "icon": "PiShoppingCart",
-        "href": "https://hieudoanm.github.io/downloads/pos",
-        "actions": [
-          {
-            "label": "Download App",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-business-pos-latest"
           }
         ]
       }

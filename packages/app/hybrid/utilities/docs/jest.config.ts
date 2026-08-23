@@ -12,7 +12,6 @@ const config = {
   testTimeout: 30000,
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   moduleNameMapper: {
-    '^@chess/ts$': '<rootDir>/__mocks__/chess-ts.js',
     '^@frontend/react$': '<rootDir>/node_modules/@frontend/react/dist/index.js',
     '^@frontend/native$':
       '<rootDir>/node_modules/@frontend/native/dist/index.js',

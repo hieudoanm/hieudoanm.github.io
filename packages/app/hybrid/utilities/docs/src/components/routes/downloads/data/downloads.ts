@@ -6,12 +6,14 @@ import {
   PiClipboard,
   PiCodeSimple,
   PiDatabase,
+  PiDiceOne,
   PiFilePdf,
   PiFolder,
   PiFrameCorners,
   PiGameController,
   PiGear,
   PiGlobe,
+  PiGlobeHemisphereWest,
   PiGridFour,
   PiGridNine,
   PiImage,
@@ -31,6 +33,7 @@ import {
   PiTrophy,
   PiVideoCamera,
   PiWallet,
+  PiX,
 } from 'react-icons/pi';
 import downloadsJson from './downloads.json';
 
@@ -49,12 +52,14 @@ const ICON_BY_NAME: Record<string, IconType> = {
   PiClipboard,
   PiCodeSimple,
   PiDatabase,
+  PiDiceOne,
   PiFilePdf,
   PiFolder,
   PiFrameCorners,
   PiGameController,
   PiGear,
   PiGlobe,
+  PiGlobeHemisphereWest,
   PiGridFour,
   PiGridNine,
   PiImage,
@@ -74,6 +79,7 @@ const ICON_BY_NAME: Record<string, IconType> = {
   PiTrophy,
   PiVideoCamera,
   PiWallet,
+  PiX,
 };
 
 const resolveIcon = (name: string): Tool['icon'] => {

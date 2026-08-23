@@ -37,7 +37,6 @@
   },
   "dependencies": {
     "@api/ts": "workspace:*",
-    "@chess/ts": "workspace:*",
     "@codemirror/commands": "6.11.0",
     "@codemirror/lang-java": "6.0.2",
     "@codemirror/lang-javascript": "6.2.5",
@@ -76,7 +75,6 @@
     "pdfmake": "0.3.11",
     "react": "19.2.8",
     "react-chartjs-2": "5.3.1",
-    "react-chessboard": "5.12.1",
     "react-dom": "19.2.8",
     "react-icons": "5.7.0",
     "styled-jsx": "5.1.7",
