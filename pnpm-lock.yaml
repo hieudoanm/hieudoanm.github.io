@@ -70,8 +70,8 @@ importers:
         specifier: 19.2.5
         version: 19.2.5(@types/react@19.2.18)
       daisyui:
-        specifier: 5.7.20
-        version: 5.7.20
+        specifier: 5.7.21
+        version: 5.7.21
       eslint:
         specifier: 10.9.0
         version: 10.9.0(jiti@2.7.0)(supports-color@10.2.2)
@@ -158,8 +158,8 @@ importers:
         specifier: 19.2.5
         version: 19.2.5(@types/react@19.2.18)
       daisyui:
-        specifier: 5.7.20
-        version: 5.7.20
+        specifier: 5.7.21
+        version: 5.7.21
       eslint:
         specifier: 10.9.0
         version: 10.9.0(jiti@2.7.0)(supports-color@10.2.2)
@@ -249,8 +249,8 @@ importers:
         specifier: 19.2.5
         version: 19.2.5(@types/react@19.2.18)
       daisyui:
-        specifier: 5.7.20
-        version: 5.7.20
+        specifier: 5.7.21
+        version: 5.7.21
       eslint:
         specifier: 10.9.0
         version: 10.9.0(jiti@2.7.0)(supports-color@10.2.2)
@@ -394,8 +394,8 @@ importers:
         specifier: 19.2.5
         version: 19.2.5(@types/react@19.2.18)
       daisyui:
-        specifier: 5.7.20
-        version: 5.7.20
+        specifier: 5.7.21
+        version: 5.7.21
       eslint:
         specifier: 10.9.0
         version: 10.9.0(jiti@2.7.0)(supports-color@10.2.2)
@@ -494,8 +494,8 @@ importers:
         specifier: 1.4.11
         version: 1.4.11
       daisyui:
-        specifier: 5.7.20
-        version: 5.7.20
+        specifier: 5.7.21
+        version: 5.7.21
       eslint:
         specifier: 10.9.0
         version: 10.9.0(jiti@2.7.0)(supports-color@10.2.2)
@@ -591,8 +591,8 @@ importers:
         specifier: 19.2.5
         version: 19.2.5(@types/react@19.2.18)
       daisyui:
-        specifier: 5.7.20
-        version: 5.7.20
+        specifier: 5.7.21
+        version: 5.7.21
       eslint:
         specifier: 10.9.0
         version: 10.9.0(jiti@2.7.0)(supports-color@10.2.2)
@@ -685,8 +685,8 @@ importers:
         specifier: 19.2.5
         version: 19.2.5(@types/react@19.2.18)
       daisyui:
-        specifier: 5.7.20
-        version: 5.7.20
+        specifier: 5.7.21
+        version: 5.7.21
       eslint:
         specifier: 10.9.0
         version: 10.9.0(jiti@2.7.0)(supports-color@10.2.2)
@@ -785,8 +785,8 @@ importers:
         specifier: 19.2.5
         version: 19.2.5(@types/react@19.2.18)
       daisyui:
-        specifier: 5.7.20
-        version: 5.7.20
+        specifier: 5.7.21
+        version: 5.7.21
       eslint:
         specifier: 10.9.0
         version: 10.9.0(jiti@2.7.0)(supports-color@10.2.2)
@@ -873,8 +873,8 @@ importers:
         specifier: 19.2.5
         version: 19.2.5(@types/react@19.2.18)
       daisyui:
-        specifier: 5.7.20
-        version: 5.7.20
+        specifier: 5.7.21
+        version: 5.7.21
       eslint:
         specifier: 10.9.0
         version: 10.9.0(jiti@2.7.0)(supports-color@10.2.2)
@@ -961,8 +961,8 @@ importers:
         specifier: 19.2.5
         version: 19.2.5(@types/react@19.2.18)
       daisyui:
-        specifier: 5.7.20
-        version: 5.7.20
+        specifier: 5.7.21
+        version: 5.7.21
       eslint:
         specifier: 10.9.0
         version: 10.9.0(jiti@2.7.0)(supports-color@10.2.2)
@@ -1049,8 +1049,8 @@ importers:
         specifier: 19.2.5
         version: 19.2.5(@types/react@19.2.18)
       daisyui:
-        specifier: 5.7.20
-        version: 5.7.20
+        specifier: 5.7.21
+        version: 5.7.21
       eslint:
         specifier: 10.9.0
         version: 10.9.0(jiti@2.7.0)(supports-color@10.2.2)
@@ -1179,8 +1179,8 @@ importers:
         specifier: 19.2.5
         version: 19.2.5(@types/react@19.2.18)
       daisyui:
-        specifier: 5.7.20
-        version: 5.7.20
+        specifier: 5.7.21
+        version: 5.7.21
       eslint:
         specifier: 10.9.0
         version: 10.9.0(jiti@2.7.0)(supports-color@10.2.2)
@@ -1276,8 +1276,8 @@ importers:
         specifier: 19.2.5
         version: 19.2.5(@types/react@19.2.18)
       daisyui:
-        specifier: 5.7.20
-        version: 5.7.20
+        specifier: 5.7.21
+        version: 5.7.21
       eslint:
         specifier: 10.9.0
         version: 10.9.0(jiti@2.7.0)(supports-color@10.2.2)
@@ -1364,8 +1364,8 @@ importers:
         specifier: 19.2.5
         version: 19.2.5(@types/react@19.2.18)
       daisyui:
-        specifier: 5.7.20
-        version: 5.7.20
+        specifier: 5.7.21
+        version: 5.7.21
       eslint:
         specifier: 10.9.0
         version: 10.9.0(jiti@2.7.0)(supports-color@10.2.2)
@@ -1461,8 +1461,8 @@ importers:
         specifier: 19.2.5
         version: 19.2.5(@types/react@19.2.18)
       daisyui:
-        specifier: 5.7.20
-        version: 5.7.20
+        specifier: 5.7.21
+        version: 5.7.21
       eslint:
         specifier: 10.9.0
         version: 10.9.0(jiti@2.7.0)(supports-color@10.2.2)
@@ -1561,8 +1561,8 @@ importers:
         specifier: 19.2.5
         version: 19.2.5(@types/react@19.2.18)
       daisyui:
-        specifier: 5.7.20
-        version: 5.7.20
+        specifier: 5.7.21
+        version: 5.7.21
       eslint:
         specifier: 10.9.0
         version: 10.9.0(jiti@2.7.0)(supports-color@10.2.2)
@@ -1661,8 +1661,8 @@ importers:
         specifier: 19.2.5
         version: 19.2.5(@types/react@19.2.18)
       daisyui:
-        specifier: 5.7.20
-        version: 5.7.20
+        specifier: 5.7.21
+        version: 5.7.21
       eslint:
         specifier: 10.9.0
         version: 10.9.0(jiti@2.7.0)(supports-color@10.2.2)
@@ -1761,8 +1761,8 @@ importers:
         specifier: 19.2.5
         version: 19.2.5(@types/react@19.2.18)
       daisyui:
-        specifier: 5.7.20
-        version: 5.7.20
+        specifier: 5.7.21
+        version: 5.7.21
       eslint:
         specifier: 10.9.0
         version: 10.9.0(jiti@2.7.0)(supports-color@10.2.2)
@@ -1858,8 +1858,8 @@ importers:
         specifier: 19.2.5
         version: 19.2.5(@types/react@19.2.18)
       daisyui:
-        specifier: 5.7.20
-        version: 5.7.20
+        specifier: 5.7.21
+        version: 5.7.21
       eslint:
         specifier: 10.9.0
         version: 10.9.0(jiti@2.7.0)(supports-color@10.2.2)
@@ -1949,8 +1949,8 @@ importers:
         specifier: 19.2.5
         version: 19.2.5(@types/react@19.2.18)
       daisyui:
-        specifier: 5.7.20
-        version: 5.7.20
+        specifier: 5.7.21
+        version: 5.7.21
       eslint:
         specifier: 10.9.0
         version: 10.9.0(jiti@2.7.0)(supports-color@10.2.2)
@@ -2082,8 +2082,8 @@ importers:
         specifier: 19.2.5
         version: 19.2.5(@types/react@19.2.18)
       daisyui:
-        specifier: 5.7.20
-        version: 5.7.20
+        specifier: 5.7.21
+        version: 5.7.21
       eslint:
         specifier: 10.9.0
         version: 10.9.0(jiti@2.7.0)(supports-color@10.2.2)
@@ -2194,8 +2194,8 @@ importers:
         specifier: 19.2.5
         version: 19.2.5(@types/react@19.2.18)
       daisyui:
-        specifier: 5.7.20
-        version: 5.7.20
+        specifier: 5.7.21
+        version: 5.7.21
       eslint:
         specifier: 10.9.0
         version: 10.9.0(jiti@2.7.0)(supports-color@10.2.2)
@@ -2288,8 +2288,8 @@ importers:
         specifier: 19.2.5
         version: 19.2.5(@types/react@19.2.18)
       daisyui:
-        specifier: 5.7.20
-        version: 5.7.20
+        specifier: 5.7.21
+        version: 5.7.21
       eslint:
         specifier: 10.9.0
         version: 10.9.0(jiti@2.7.0)(supports-color@10.2.2)
@@ -2379,8 +2379,8 @@ importers:
         specifier: 19.2.5
         version: 19.2.5(@types/react@19.2.18)
       daisyui:
-        specifier: 5.7.20
-        version: 5.7.20
+        specifier: 5.7.21
+        version: 5.7.21
       eslint:
         specifier: 10.9.0
         version: 10.9.0(jiti@2.7.0)(supports-color@10.2.2)
@@ -2509,8 +2509,8 @@ importers:
         specifier: 19.2.5
         version: 19.2.5(@types/react@19.2.18)
       daisyui:
-        specifier: 5.7.20
-        version: 5.7.20
+        specifier: 5.7.21
+        version: 5.7.21
       eslint:
         specifier: 10.9.0
         version: 10.9.0(jiti@2.7.0)(supports-color@10.2.2)
@@ -2603,8 +2603,8 @@ importers:
         specifier: 19.2.5
         version: 19.2.5(@types/react@19.2.18)
       daisyui:
-        specifier: 5.7.20
-        version: 5.7.20
+        specifier: 5.7.21
+        version: 5.7.21
       eslint:
         specifier: 10.9.0
         version: 10.9.0(jiti@2.7.0)(supports-color@10.2.2)
@@ -2724,8 +2724,8 @@ importers:
         specifier: 19.2.5
         version: 19.2.5(@types/react@19.2.18)
       daisyui:
-        specifier: 5.7.20
-        version: 5.7.20
+        specifier: 5.7.21
+        version: 5.7.21
       eslint:
         specifier: 10.9.0
         version: 10.9.0(jiti@2.7.0)(supports-color@10.2.2)
@@ -2815,8 +2815,8 @@ importers:
         specifier: 19.2.5
         version: 19.2.5(@types/react@19.2.18)
       daisyui:
-        specifier: 5.7.20
-        version: 5.7.20
+        specifier: 5.7.21
+        version: 5.7.21
       eslint:
         specifier: 10.9.0
         version: 10.9.0(jiti@2.7.0)(supports-color@10.2.2)
@@ -2903,8 +2903,8 @@ importers:
         specifier: 19.2.5
         version: 19.2.5(@types/react@19.2.18)
       daisyui:
-        specifier: 5.7.20
-        version: 5.7.20
+        specifier: 5.7.21
+        version: 5.7.21
       eslint:
         specifier: 10.9.0
         version: 10.9.0(jiti@2.7.0)(supports-color@10.2.2)
@@ -3138,8 +3138,8 @@ importers:
         specifier: 1.0.0
         version: 1.0.0
       daisyui:
-        specifier: 5.7.20
-        version: 5.7.20
+        specifier: 5.7.21
+        version: 5.7.21
       eslint:
         specifier: 10.9.0
         version: 10.9.0(jiti@2.7.0)(supports-color@10.2.2)
@@ -3253,8 +3253,8 @@ importers:
         specifier: 19.2.5
         version: 19.2.5(@types/react@19.2.18)
       daisyui:
-        specifier: 5.7.20
-        version: 5.7.20
+        specifier: 5.7.21
+        version: 5.7.21
       eslint:
         specifier: 10.9.0
         version: 10.9.0(jiti@2.7.0)(supports-color@10.2.2)
@@ -3822,8 +3822,8 @@ importers:
         specifier: 1.0.0
         version: 1.0.0
       daisyui:
-        specifier: 5.7.20
-        version: 5.7.20
+        specifier: 5.7.21
+        version: 5.7.21
       eslint:
         specifier: 10.9.0
         version: 10.9.0(jiti@2.7.0)(supports-color@10.2.2)
@@ -8990,8 +8990,8 @@ packages:
     resolution: {integrity: sha512-ndfJ/JxxMd3nw31uyKoY2naivF+r29V+Lc0svZxe1JvvIRmi8hUsrMvdOwgS1o6uBHmiz91geQ0ylPP0aj1VUA==}
     engines: {node: '>=12'}
 
-  daisyui@5.7.20:
-    resolution: {integrity: sha512-qoL9qXXo/K/MzcteD1SvZOSeBaL8F9qBJvwX3KEpiVHQLzIEtGkNl/ZznSI7J0d+qnQJa2dAAFzTFDAx9df1rw==}
+  daisyui@5.7.21:
+    resolution: {integrity: sha512-DyJvCwrclM8K3Jp8TB9n2WZ+QUd+0/dSEY0WRvTE26wL06e8I6nEpKYYJWJ5SDRwc7FRDp3CyeREqYTHi9hM3A==}
 
   damerau-levenshtein@1.0.8:
     resolution: {integrity: sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==}
@@ -20589,7 +20589,7 @@ snapshots:
 
   d3-timer@3.0.1: {}
 
-  daisyui@5.7.20: {}
+  daisyui@5.7.21: {}
 
   damerau-levenshtein@1.0.8: {}
 
