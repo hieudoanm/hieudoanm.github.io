@@ -84,10 +84,14 @@ build_ordered() {
     local apps=("$@")
     local app_path
     for app_path in "${apps[@]}"; do
-        [[ "$app_path" == "$ROOT_APP" ]] && build_app "$app_path"
+        if [[ "$app_path" == "$ROOT_APP" ]]; then
+            build_app "$app_path"
+        fi
     done
     for app_path in "${apps[@]}"; do
-        [[ "$app_path" != "$ROOT_APP" ]] && build_app "$app_path"
+        if [[ "$app_path" != "$ROOT_APP" ]]; then
+            build_app "$app_path"
+        fi
     done
 }
 
@@ -102,7 +106,6 @@ build_all_apps() {
             [[ ! -d "$app_dir" ]] && continue
             local app_name="${app_dir%/}"
             app_name="${app_name##*/}"
-            [[ "$app_name" == "docs" ]] && continue
             apps+=("$category/$app_name")
         done
     done
@@ -121,7 +124,7 @@ verify_downloads() {
             [[ ! -d "$app_dir" ]] && continue
             local app_name="${app_dir%/}"
             app_name="${app_name##*/}"
-            [[ "$app_name" == "docs" ]] && continue
+            [[ "$category/$app_name" == "$ROOT_APP" ]] && continue
             if [[ ! -f "$app_dir/package.json" ]] || [[ ! -f "$app_dir/next.config.ts" ]]; then
                 continue
             fi
@@ -183,12 +186,7 @@ fi
 if [[ "$do_all" == true ]]; then
     build_all_apps
 elif [[ ${#app_names[@]} -gt 0 ]]; then
-    filtered=()
-    for name in "${app_names[@]}"; do
-        [[ "${name##*/}" == "docs" ]] && continue
-        filtered+=("$name")
-    done
-    build_ordered "${filtered[@]}"
+    build_ordered "${app_names[@]}"
 fi
 
 echo "Done."

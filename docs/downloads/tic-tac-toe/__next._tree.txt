@@ -1,2 +1,2 @@
 :HL["/downloads/tic-tac-toe/_next/static/chunks/1_ii5gbk6a5xj.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4180,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"7Gb2KiBLEFKY26TclBYyC"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4180,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"-c9NEQ9x4PPtHuid5Qzu-"}
