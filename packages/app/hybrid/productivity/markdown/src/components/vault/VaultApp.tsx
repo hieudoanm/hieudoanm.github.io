@@ -2,7 +2,13 @@
 
 import { FC, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
-import { TbDownload, TbHierarchy2, TbMenu2, TbPlus } from 'react-icons/tb';
+import {
+  TbDownload,
+  TbHierarchy2,
+  TbListNumbers,
+  TbMenu2,
+  TbPlus,
+} from 'react-icons/tb';
 import { useCodeMirror } from '@/hooks/useCodeMirror';
 import { useMarkdownRender } from '@/hooks/useMarkdownRender';
 import { useScrollSync } from '@/hooks/useScrollSync';
@@ -21,6 +27,7 @@ import { TocSidebar } from '@/components/editor/TocSidebar';
 import { ViewControls } from '@/components/editor/ViewControls';
 import { GraphView } from '@/components/vault/GraphView';
 import { VaultSidebar } from '@/components/vault/VaultSidebar';
+import { WordCounterDialog } from '@/components/vault/WordCounterDialog';
 
 const SAVE_DELAY = 400;
 
@@ -33,6 +40,7 @@ export const VaultApp: FC = () => {
   const [search, setSearch] = useState('');
   const [showSidebar, setShowSidebar] = useState(false);
   const [showGraph, setShowGraph] = useState(false);
+  const [showWordCounter, setShowWordCounter] = useState(false);
 
   const editorRef = useRef<HTMLDivElement | null>(null);
   const previewRef = useRef<HTMLDivElement | null>(null);
@@ -158,6 +166,14 @@ export const VaultApp: FC = () => {
     exportPdf(activeNote.title, html);
   }, [activeNote]);
 
+  const handleWordCounterChange = useCallback(
+    (content: string): void => {
+      handleDocChange(content);
+      setDoc(content);
+    },
+    [handleDocChange, setDoc]
+  );
+
   const { html, isRendering } = useMarkdownRender(activeNote?.content ?? '');
   const toc = useMemo(
     () => (activeNote ? extractToc(activeNote.content) : []),
@@ -221,6 +237,15 @@ export const VaultApp: FC = () => {
           </div>
 
           <ViewControls value={viewMode} onChange={setViewMode} />
+
+          <button
+            className="btn btn-ghost btn-sm tooltip tooltip-bottom"
+            data-tip="Word counter"
+            onClick={() => setShowWordCounter(true)}
+            disabled={!activeNote}
+            aria-label="Word counter">
+            <TbListNumbers size={18} />
+          </button>
 
           <button
             className="btn btn-ghost btn-sm tooltip tooltip-bottom"
@@ -306,6 +331,14 @@ export const VaultApp: FC = () => {
           notes={notes}
           onSelectNote={selectNote}
           onClose={() => setShowGraph(false)}
+        />
+      )}
+
+      {showWordCounter && activeNote && (
+        <WordCounterDialog
+          text={activeNote.content}
+          onTextChange={handleWordCounterChange}
+          onClose={() => setShowWordCounter(false)}
         />
       )}
     </div>

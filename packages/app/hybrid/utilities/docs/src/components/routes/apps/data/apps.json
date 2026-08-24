@@ -242,12 +242,6 @@
         "description": "Pitch Deck",
         "icon": "PiPresentation",
         "toolId": "slides"
-      },
-      {
-        "label": "Word Counter",
-        "description": "Word Count",
-        "icon": "PiNotePencil",
-        "toolId": "word-counter"
       }
     ]
   },
@@ -309,12 +303,6 @@
     "id": "utilities",
     "label": "Utilities",
     "items": [
-      {
-        "label": "Clipboard",
-        "description": "Clipboard",
-        "icon": "PiClipboard",
-        "toolId": "clipboard"
-      },
       {
         "label": "Create ZIP",
         "description": "Zip Files",

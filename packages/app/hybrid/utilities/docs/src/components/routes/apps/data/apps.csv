@@ -33,7 +33,6 @@ Editors,editors,JSON Schema,Validator,PiFileText,json-schema
 Editors,editors,Manifest,JSON Editor,PiFileText,manifest
 Editors,editors,Regex,Pattern Generator,PiMagnifyingGlass,regex
 Editors,editors,Slides,Pitch Deck,PiPresentation,slides
-Editors,editors,Word Counter,Word Count,PiNotePencil,word-counter
 Education,education,DOI,Cite,PiFileText,doi
 Education,education,Periodic Table,Elements,PiChartBar,periodic-table
 Education,education,Pitch,Training,PiPianoKeys,pitch
@@ -41,7 +40,6 @@ Text - Convert,text-convert,Braille,Text to Braille,PiDotsNine,braille
 Text - Convert,text-convert,Case,Converter,PiFileText,text-case
 Text - Convert,text-convert,Leet Speak,Text to Leet,PiTextAa,leetspeak
 Text - Convert,text-convert,Morse,Text to Morse Code,PiWaveSine,morse
-Utilities,utilities,Clipboard,Clipboard,PiClipboard,clipboard
 Utilities,utilities,Create ZIP,Zip Files,PiFileText,create-zip
 Utilities,utilities,Emojis,Explorer,PiSmiley,emojis
 Utilities,utilities,Kaprekar,Routine,PiChartBar,kaprekar
