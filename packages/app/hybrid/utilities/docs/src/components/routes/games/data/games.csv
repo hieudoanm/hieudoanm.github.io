@@ -12,9 +12,7 @@ Puzzle,puzzle,Lights Out,Toggle all lights off,PiLamp,lights-out
 Puzzle,puzzle,Maze,Gen & solve,PiHurricane,maze
 Puzzle,puzzle,Sliding Puzzle,Upload & slide tiles,PiSnowflake,sliding-puzzle
 Puzzle,puzzle,Towers,Towers of Hanoi,PiBuilding,towers
-Trivia,trivia,PD,,PiScales,pd
 Trivia,trivia,Pokedex,Pokemon,PiBook,pokedex
-Trivia,trivia,Through the Years,Timeline history game,PiSortAscending,through-the-years
 Trivia,trivia,Myth Versus Fact,Spot the false claim,PiCheckCircle,myth-versus-fact
 Word,word,Palindrome,Palindrome,PiRepeat,palindrome
 Word,word,Typoglycemia,Scrambled text,PiShuffle,typoglycemia

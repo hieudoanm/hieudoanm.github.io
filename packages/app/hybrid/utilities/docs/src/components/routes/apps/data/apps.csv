@@ -34,8 +34,6 @@ Editors,editors,Manifest,JSON Editor,PiFileText,manifest
 Editors,editors,Regex,Pattern Generator,PiMagnifyingGlass,regex
 Editors,editors,Slides,Pitch Deck,PiPresentation,slides
 Education,education,DOI,Cite,PiFileText,doi
-Education,education,Periodic Table,Elements,PiChartBar,periodic-table
-Education,education,Pitch,Training,PiPianoKeys,pitch
 Text - Convert,text-convert,Braille,Text to Braille,PiDotsNine,braille
 Text - Convert,text-convert,Leet Speak,Text to Leet,PiTextAa,leetspeak
 Text - Convert,text-convert,Morse,Text to Morse Code,PiWaveSine,morse

@@ -3,14 +3,14 @@
 1. Nature Sciences
    1. [ ] Mathematics
    2. [ ] Physics
-   3. [ ] Chemistry
+   3. [x] Chemistry
    4. [ ] Biology
 2. Social Sciences
    1. [ ] Literature
-   2. [ ] History
+   2. [x] Languages (Lingo)
    3. [ ] Geography
-   4. [ ] Music
-   5. [ ] Arts (Drawing)
-   6. [ ] Foreign Languages (Lingo)
-   7. [ ] Economics
+   4. [x] History
+   5. [x] Music
+   6. [ ] Arts (Drawing)
+   7. [x] Economics
    8. [ ] Moral

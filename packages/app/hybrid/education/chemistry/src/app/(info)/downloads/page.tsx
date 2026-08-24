@@ -1,0 +1,40 @@
+import { DownloadsTemplate } from '@/components/templates/DownloadsTemplate';
+import { NextPage } from 'next';
+
+const RELEASE =
+  'https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-chemistry-latest';
+
+const DownloadsPage: NextPage = () => (
+  <DownloadsTemplate
+    appName="Chemistry"
+    version="v0.0.1"
+    items={[
+      {
+        platform: 'Linux',
+        requirements: 'Ubuntu 22.04.+',
+        label: '.AppImage',
+        href: `${RELEASE}/chemistry_amd64.AppImage`,
+      },
+      {
+        platform: 'Linux (Debian)',
+        requirements: 'Ubuntu 22.04.+',
+        label: '.deb',
+        href: `${RELEASE}/chemistry_amd64.deb`,
+      },
+      {
+        platform: 'macOS',
+        requirements: 'Apple Silicon · macOS 13.+',
+        label: '.dmg',
+        href: `${RELEASE}/chemistry_aarch64.dmg`,
+      },
+      {
+        platform: 'Windows',
+        requirements: 'Windows 10.+',
+        label: '.msi',
+        href: `${RELEASE}/chemistry_x64.msi`,
+      },
+    ]}
+  />
+);
+
+export default DownloadsPage;
