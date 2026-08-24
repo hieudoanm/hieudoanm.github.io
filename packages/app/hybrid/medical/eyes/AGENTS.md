@@ -4,6 +4,18 @@ Visual acuity charts for vision screening: Snellen, LogMAR and Tumbling E.
 Next.js 16 + React 19 + Tailwind CSS 4 (DaisyUI 5) desktop/web app packaged with
 Tauri 2.
 
+## Documentation
+
+Reference docs live in `docs/`:
+
+| Doc                    | Covers                                                     |
+| ---------------------- | ---------------------------------------------------------- |
+| `docs/ARCHITECTURE.md` | Tech stack, directory structure, routing, state management |
+| `docs/ROADMAP.md`      | Phased feature roadmap with progress tracking              |
+| `docs/CONTRIBUTING.md` | Setup, dev commands, coding and testing conventions        |
+| `docs/PACKAGING.md`    | Packaging checklist per platform                           |
+| `docs/DOWNLOADS.md`    | Download links per platform                                |
+
 ## Key Conventions
 
 - Arrow functions for all function declarations and component exports
