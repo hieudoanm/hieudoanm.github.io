@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { PiClockCountdown } from 'react-icons/pi';
 import { HomeTemplate } from '@/components/templates/HomeTemplate';
+import { useProgress } from '@/hooks/useProgress';
 import { NextPage } from 'next';
 
 const ITEMS = [
@@ -14,12 +15,23 @@ const ITEMS = [
   },
 ];
 
-const HomePage: NextPage = () => (
-  <HomeTemplate
-    appName="History"
-    description="Explore history through interactive timeline games."
-    items={ITEMS}
-  />
-);
+const HomePage: NextPage = () => {
+  const { progress } = useProgress();
+  return (
+    <HomeTemplate
+      appName="History"
+      description="Explore history through interactive timeline games."
+      items={ITEMS}
+      stats={{ xp: progress.xp, streak: progress.streak }}
+      footer={
+        <>
+          <Link href="/about/">About</Link>
+          <Link href="/downloads/">Downloads</Link>
+          <Link href="/version/">Version</Link>
+        </>
+      }
+    />
+  );
+};
 
 export default HomePage;

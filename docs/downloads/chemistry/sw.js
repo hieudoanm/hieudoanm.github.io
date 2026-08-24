@@ -1,9 +1,6 @@
 const CACHE_NAME = 'chemistry-v1';
 
-const STATIC_ASSETS = [
-  '/',
-  '/periodic-table/',
-];
+const STATIC_ASSETS = ['/', '/periodic-table/'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(

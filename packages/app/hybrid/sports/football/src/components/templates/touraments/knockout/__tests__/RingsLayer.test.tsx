@@ -6,7 +6,7 @@ describe('RingsLayer', () => {
     const { container } = render(
       <svg>
         <RingsLayer rings={3} ticks={4} ringStep={15} rotation={0} />
-      </svg>,
+      </svg>
     );
     const circles = container.querySelectorAll('circle');
     expect(circles).toHaveLength(3);

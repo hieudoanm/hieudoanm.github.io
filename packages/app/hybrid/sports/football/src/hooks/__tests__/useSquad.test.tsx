@@ -112,13 +112,17 @@ describe('useSquad handlers', () => {
       result.current.toggleAssignment(formation.slots[0].id, pid);
     });
     await waitFor(() => {
-      expect(result.current.squad.assignments[formation.slots[0].id]).toContain(pid);
+      expect(result.current.squad.assignments[formation.slots[0].id]).toContain(
+        pid
+      );
     });
     act(() => {
       result.current.clearSlot(formation.slots[0].id);
     });
     await waitFor(() => {
-      expect(result.current.squad.assignments[formation.slots[0].id] ?? []).toHaveLength(0);
+      expect(
+        result.current.squad.assignments[formation.slots[0].id] ?? []
+      ).toHaveLength(0);
     });
   });
 
@@ -140,15 +144,23 @@ describe('useSquad handlers', () => {
       result.current.toggleAssignment(formation.slots[1].id, pid2);
     });
     await waitFor(() => {
-      expect(result.current.squad.assignments[formation.slots[0].id]).toContain(pid1);
-      expect(result.current.squad.assignments[formation.slots[1].id]).toContain(pid2);
+      expect(result.current.squad.assignments[formation.slots[0].id]).toContain(
+        pid1
+      );
+      expect(result.current.squad.assignments[formation.slots[1].id]).toContain(
+        pid2
+      );
     });
     act(() => {
       result.current.swapSlots(formation.slots[0].id, formation.slots[1].id);
     });
     await waitFor(() => {
-      expect(result.current.squad.assignments[formation.slots[0].id]).toContain(pid2);
-      expect(result.current.squad.assignments[formation.slots[1].id]).toContain(pid1);
+      expect(result.current.squad.assignments[formation.slots[0].id]).toContain(
+        pid2
+      );
+      expect(result.current.squad.assignments[formation.slots[1].id]).toContain(
+        pid1
+      );
     });
   });
 
@@ -178,7 +190,9 @@ describe('useSquad handlers', () => {
       result.current.toggleAssignment(formation.slots[0].id, pid);
     });
     await waitFor(() => {
-      expect(result.current.squad.assignments[formation.slots[0].id]).toHaveLength(1);
+      expect(
+        result.current.squad.assignments[formation.slots[0].id]
+      ).toHaveLength(1);
     });
     act(() => {
       result.current.resetAssignments();
@@ -199,13 +213,17 @@ describe('useSquad handlers', () => {
       result.current.toggleLeadership(pid, 'captain');
     });
     await waitFor(() => {
-      expect(result.current.squad.players.find((p) => p.id === pid)?.captain).toBe(true);
+      expect(
+        result.current.squad.players.find((p) => p.id === pid)?.captain
+      ).toBe(true);
     });
     act(() => {
       result.current.toggleLeadership(pid, 'captain');
     });
     await waitFor(() => {
-      expect(result.current.squad.players.find((p) => p.id === pid)?.captain).toBe(false);
+      expect(
+        result.current.squad.players.find((p) => p.id === pid)?.captain
+      ).toBe(false);
     });
   });
 
@@ -220,13 +238,17 @@ describe('useSquad handlers', () => {
       result.current.toggleBench(pid);
     });
     await waitFor(() => {
-      expect(result.current.squad.players.find((p) => p.id === pid)?.bench).toBe(true);
+      expect(
+        result.current.squad.players.find((p) => p.id === pid)?.bench
+      ).toBe(true);
     });
     act(() => {
       result.current.toggleBench(pid);
     });
     await waitFor(() => {
-      expect(result.current.squad.players.find((p) => p.id === pid)?.bench).toBe(false);
+      expect(
+        result.current.squad.players.find((p) => p.id === pid)?.bench
+      ).toBe(false);
     });
   });
 
@@ -287,19 +309,25 @@ describe('useSquad handlers', () => {
       result.current.toggleAssignment(formation.slots[0].id, pid1);
     });
     await waitFor(() => {
-      expect(result.current.squad.assignments[formation.slots[0].id]).toContain(pid1);
+      expect(result.current.squad.assignments[formation.slots[0].id]).toContain(
+        pid1
+      );
     });
     act(() => {
       result.current.toggleBench(pid2);
     });
     await waitFor(() => {
-      expect(result.current.squad.players.find((p) => p.id === pid2)?.bench).toBe(true);
+      expect(
+        result.current.squad.players.find((p) => p.id === pid2)?.bench
+      ).toBe(true);
     });
     act(() => {
       result.current.substitutePlayer(formation.slots[0].id, pid2);
     });
     await waitFor(() => {
-      expect(result.current.squad.assignments[formation.slots[0].id]).toContain(pid2);
+      expect(result.current.squad.assignments[formation.slots[0].id]).toContain(
+        pid2
+      );
     });
   });
 
@@ -440,12 +468,16 @@ describe('useSquad handlers', () => {
     await waitFor(() => {
       expect(result.current.library.squads.length).toBeGreaterThan(1);
     });
-    const extraSquadId = result.current.library.squads[result.current.library.squads.length - 1].id;
+    const extraSquadId =
+      result.current.library.squads[result.current.library.squads.length - 1]
+        .id;
     act(() => {
       result.current.removeSquad(extraSquadId);
     });
     await waitFor(() => {
-      expect(result.current.library.squads.find((s) => s.id === extraSquadId)).toBeUndefined();
+      expect(
+        result.current.library.squads.find((s) => s.id === extraSquadId)
+      ).toBeUndefined();
     });
   });
 
@@ -457,7 +489,9 @@ describe('useSquad handlers', () => {
     await waitFor(() => {
       expect(result.current.library.squads.length).toBeGreaterThan(1);
     });
-    const secondId = result.current.library.squads[result.current.library.squads.length - 1].id;
+    const secondId =
+      result.current.library.squads[result.current.library.squads.length - 1]
+        .id;
     act(() => {
       result.current.setActiveSquad(secondId);
     });
@@ -489,7 +523,9 @@ describe('useSquad handlers', () => {
       result.current.removePreset(presetId);
     });
     await waitFor(() => {
-      expect(result.current.squad.presets.find((p) => p.id === presetId)).toBeUndefined();
+      expect(
+        result.current.squad.presets.find((p) => p.id === presetId)
+      ).toBeUndefined();
     });
   });
 
@@ -583,13 +619,17 @@ describe('useSquad handlers', () => {
       result.current.toggleLeadership(pid, 'vice');
     });
     await waitFor(() => {
-      expect(result.current.squad.players.find((p) => p.id === pid)?.viceCaptain).toBe(true);
+      expect(
+        result.current.squad.players.find((p) => p.id === pid)?.viceCaptain
+      ).toBe(true);
     });
     act(() => {
       result.current.toggleLeadership(pid, 'vice');
     });
     await waitFor(() => {
-      expect(result.current.squad.players.find((p) => p.id === pid)?.viceCaptain).toBe(false);
+      expect(
+        result.current.squad.players.find((p) => p.id === pid)?.viceCaptain
+      ).toBe(false);
     });
   });
 });

@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { FC, ReactNode } from 'react';
 import { FiArrowLeft } from 'react-icons/fi';
+import { ThemeToggle } from '@/components/atoms/ThemeToggle';
 
 export interface ToolTemplateProps {
   title: string;
@@ -19,6 +20,7 @@ export const ToolTemplate: FC<ToolTemplateProps> = ({ title, children }) => (
           </Link>
           <h1 className="text-sm font-bold">{title}</h1>
         </div>
+        <ThemeToggle />
       </div>
     </header>
     <main className="mx-auto w-full max-w-2xl flex-1 p-6">{children}</main>

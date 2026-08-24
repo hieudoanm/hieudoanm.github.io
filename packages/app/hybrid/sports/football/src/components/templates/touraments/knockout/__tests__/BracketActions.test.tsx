@@ -12,7 +12,7 @@ describe('BracketActions', () => {
         onDownload={onDownload}
         onShare={onShare}
         copied={false}
-      />,
+      />
     );
     expect(screen.getByText('Reset bracket')).toBeInTheDocument();
     expect(screen.getByText('Download')).toBeInTheDocument();
@@ -26,7 +26,7 @@ describe('BracketActions', () => {
         onDownload={jest.fn()}
         onShare={jest.fn()}
         copied={true}
-      />,
+      />
     );
     expect(screen.getByText('Copied!')).toBeInTheDocument();
     expect(screen.queryByText('Share')).not.toBeInTheDocument();
@@ -42,7 +42,7 @@ describe('BracketActions', () => {
         onDownload={onDownload}
         onShare={onShare}
         copied={false}
-      />,
+      />
     );
     fireEvent.click(screen.getByText('Reset bracket'));
     fireEvent.click(screen.getByText('Download'));

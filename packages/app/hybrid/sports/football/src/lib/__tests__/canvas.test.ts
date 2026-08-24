@@ -71,7 +71,8 @@ describe('canvas', () => {
 
     it('fixes gradient classes before capture and restores after', async () => {
       const div = document.createElement('div');
-      div.innerHTML = '<span class="bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-blue-500">Text</span>';
+      div.innerHTML =
+        '<span class="bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-blue-500">Text</span>';
       const span = div.querySelector('span')!;
       const ref = { current: div };
       await download({ ref, output: 'gradient-test' });

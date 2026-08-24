@@ -16,12 +16,22 @@ beforeEach(() => {
 });
 
 describe('tree', () => {
-  const leaf = (id: string) => ({ kind: 'leaf' as const, team: id, angle: 0, angleIndex: 0 });
+  const leaf = (id: string) => ({
+    kind: 'leaf' as const,
+    team: id,
+    angle: 0,
+    angleIndex: 0,
+  });
 
   describe('buildTree', () => {
     it('builds a leaf node from a string', () => {
       const node = buildTree('A');
-      expect(node).toEqual({ kind: 'leaf', team: 'A', angle: 0, angleIndex: 0 });
+      expect(node).toEqual({
+        kind: 'leaf',
+        team: 'A',
+        angle: 0,
+        angleIndex: 0,
+      });
     });
 
     it('builds a match node from a pair', () => {
@@ -34,7 +44,10 @@ describe('tree', () => {
     });
 
     it('builds a nested bracket tree', () => {
-      const tree = buildTree([['A', 'B'], ['C', 'D']] as any);
+      const tree = buildTree([
+        ['A', 'B'],
+        ['C', 'D'],
+      ] as any);
       expect(tree.kind).toBe('match');
       if (tree.kind === 'match') {
         expect(tree.level).toBe(2);
@@ -56,7 +69,10 @@ describe('tree', () => {
 
   describe('collectNodes', () => {
     it('collects all nodes from a tree', () => {
-      const tree = buildTree([['A', 'B'], ['C', 'D']] as any);
+      const tree = buildTree([
+        ['A', 'B'],
+        ['C', 'D'],
+      ] as any);
       const nodes = collectNodes(tree);
       expect(nodes.length).toBeGreaterThan(0);
     });
@@ -83,7 +99,10 @@ describe('tree', () => {
 
   describe('getLeaves', () => {
     it('returns all leaf nodes', () => {
-      const tree = buildTree([['A', 'B'], ['C', 'D']] as any);
+      const tree = buildTree([
+        ['A', 'B'],
+        ['C', 'D'],
+      ] as any);
       const leaves = getLeaves(tree);
       expect(leaves).toHaveLength(4);
       expect(leaves.every((l) => l.kind === 'leaf')).toBe(true);
@@ -92,7 +111,10 @@ describe('tree', () => {
 
   describe('getAllMatches', () => {
     it('returns all match nodes', () => {
-      const tree = buildTree([['A', 'B'], ['C', 'D']] as any);
+      const tree = buildTree([
+        ['A', 'B'],
+        ['C', 'D'],
+      ] as any);
       const matches = getAllMatches(tree);
       expect(matches.length).toBe(3);
       expect(matches.every((m) => m.kind === 'match')).toBe(true);

@@ -62,13 +62,17 @@ describe('shared', () => {
     });
 
     it('maps subdivision flags for GB nations', () => {
-      const teams = { england: { id: 'england', name: 'England', iso: 'gb-eng' } };
+      const teams = {
+        england: { id: 'england', name: 'England', iso: 'gb-eng' },
+      };
       const result = toKnockoutTeams(teams);
       expect(result.england.flag).toBeTruthy();
     });
 
     it('handles GB-Scotland', () => {
-      const teams = { scotland: { id: 'scotland', name: 'Scotland', iso: 'gb-sct' } };
+      const teams = {
+        scotland: { id: 'scotland', name: 'Scotland', iso: 'gb-sct' },
+      };
       const result = toKnockoutTeams(teams);
       expect(result.scotland.flag).toBeTruthy();
     });
@@ -80,7 +84,9 @@ describe('shared', () => {
     });
 
     it('handles GB-Northern Ireland', () => {
-      const teams = { nir: { id: 'nir', name: 'Northern Ireland', iso: 'gb-nir' } };
+      const teams = {
+        nir: { id: 'nir', name: 'Northern Ireland', iso: 'gb-nir' },
+      };
       const result = toKnockoutTeams(teams);
       expect(result.nir.flag).toBeTruthy();
     });

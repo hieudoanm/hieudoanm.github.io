@@ -1,9 +1,6 @@
 const CACHE_NAME = 'history-v1';
 
-const STATIC_ASSETS = [
-  '/',
-  '/through-the-years/',
-];
+const STATIC_ASSETS = ['/', '/through-the-years/'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(

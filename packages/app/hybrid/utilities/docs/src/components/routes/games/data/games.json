@@ -100,22 +100,10 @@
     "label": "Trivia",
     "items": [
       {
-        "label": "PD",
-        "description": "",
-        "icon": "PiScales",
-        "toolId": "pd"
-      },
-      {
         "label": "Pokedex",
         "description": "Pokemon",
         "icon": "PiBook",
         "toolId": "pokedex"
-      },
-      {
-        "label": "Through the Years",
-        "description": "Timeline history game",
-        "icon": "PiSortAscending",
-        "toolId": "through-the-years"
       },
       {
         "label": "Myth Versus Fact",

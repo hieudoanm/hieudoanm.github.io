@@ -8,9 +8,39 @@ const makeGroup = (overrides?: Partial<GroupData>): GroupData => ({
   label: 'Group A',
   teams: ['BRA', 'ARG', 'GER'],
   standings: {
-    BRA: { pld: 3, w: 2, d: 1, l: 0, gf: 5, ga: 1, gd: 4, pts: 7 },
-    ARG: { pld: 3, w: 1, d: 1, l: 1, gf: 3, ga: 3, gd: 0, pts: 4 },
-    GER: { pld: 3, w: 0, d: 0, l: 3, gf: 1, ga: 5, gd: -4, pts: 0 },
+    BRA: {
+      teamId: 'BRA',
+      pld: 3,
+      w: 2,
+      d: 1,
+      l: 0,
+      gf: 5,
+      ga: 1,
+      gd: 4,
+      pts: 7,
+    },
+    ARG: {
+      teamId: 'ARG',
+      pld: 3,
+      w: 1,
+      d: 1,
+      l: 1,
+      gf: 3,
+      ga: 3,
+      gd: 0,
+      pts: 4,
+    },
+    GER: {
+      teamId: 'GER',
+      pld: 3,
+      w: 0,
+      d: 0,
+      l: 3,
+      gf: 1,
+      ga: 5,
+      gd: -4,
+      pts: 0,
+    },
   },
   ...overrides,
 });
@@ -44,25 +74,33 @@ describe('GroupTable', () => {
   });
 
   it('hides standings columns when no standings', () => {
-    render(<GroupTable group={makeGroup({ standings: undefined })} teams={teams} />);
+    render(
+      <GroupTable group={makeGroup({ standings: undefined })} teams={teams} />
+    );
     expect(screen.queryByText('Pld')).not.toBeInTheDocument();
   });
 
   it('shows positive GD with green', () => {
-    const { container } = render(<GroupTable group={makeGroup()} teams={teams} />);
+    const { container } = render(
+      <GroupTable group={makeGroup()} teams={teams} />
+    );
     const gdEl = container.querySelector('.text-green-400');
     expect(gdEl).toBeInTheDocument();
     expect(gdEl?.textContent).toBe('+4');
   });
 
   it('shows negative GD with red', () => {
-    const { container } = render(<GroupTable group={makeGroup()} teams={teams} />);
+    const { container } = render(
+      <GroupTable group={makeGroup()} teams={teams} />
+    );
     const gdEl = container.querySelector('.text-red-400');
     expect(gdEl).toBeInTheDocument();
   });
 
   it('shows zero GD with neutral color', () => {
-    const { container } = render(<GroupTable group={makeGroup()} teams={teams} />);
+    const { container } = render(
+      <GroupTable group={makeGroup()} teams={teams} />
+    );
     const gdEls = container.querySelectorAll('.text-neutral-400');
     expect(gdEls.length).toBeGreaterThan(0);
   });
@@ -73,13 +111,17 @@ describe('GroupTable', () => {
   });
 
   it('marks top 2 teams as advancing', () => {
-    const { container } = render(<GroupTable group={makeGroup()} teams={teams} />);
+    const { container } = render(
+      <GroupTable group={makeGroup()} teams={teams} />
+    );
     const advancing = container.querySelectorAll('.bg-amber-400\\/5');
     expect(advancing.length).toBe(2);
   });
 
   it('marks non-advancing teams without highlight', () => {
-    const { container } = render(<GroupTable group={makeGroup()} teams={teams} />);
+    const { container } = render(
+      <GroupTable group={makeGroup()} teams={teams} />
+    );
     const allRows = container.querySelectorAll('tbody tr');
     expect(allRows[2].className).not.toContain('bg-amber-400');
   });
@@ -89,6 +131,10 @@ describe('GroupStageTemplate', () => {
   it('renders group stage when groups exist', () => {
     const wc: WorldCupYearData = {
       year: 2014,
+      host: 'Brazil',
+      champion: 'Germany',
+      runnerUp: 'Argentina',
+      available: true,
       teams,
       groups: [makeGroup()],
     };
@@ -97,19 +143,43 @@ describe('GroupStageTemplate', () => {
   });
 
   it('renders knockout-only message when no groups', () => {
-    const wc: WorldCupYearData = { year: 1982, teams, groups: [] };
+    const wc: WorldCupYearData = {
+      year: 1982,
+      host: 'Spain',
+      champion: 'Italy',
+      runnerUp: 'West Germany',
+      available: true,
+      teams,
+      groups: [],
+    };
     render(<GroupStageTemplate wc={wc} tournament="world-cup" />);
     expect(screen.getByText(/straight knockout/)).toBeInTheDocument();
   });
 
   it('shows knockout link when knockout data exists', () => {
-    const wc: WorldCupYearData = { year: 2014, teams, groups: [] };
+    const wc: WorldCupYearData = {
+      year: 2014,
+      host: 'Brazil',
+      champion: 'Germany',
+      runnerUp: 'Argentina',
+      available: true,
+      teams,
+      groups: [],
+    };
     render(<GroupStageTemplate wc={wc} tournament="world-cup" />);
     expect(screen.getByText(/View Knockout Bracket/)).toBeInTheDocument();
   });
 
   it('hides knockout link when no knockout data for year', () => {
-    const wc: WorldCupYearData = { year: 2099, teams, groups: [] };
+    const wc: WorldCupYearData = {
+      year: 2099,
+      host: 'TBD',
+      champion: null,
+      runnerUp: null,
+      available: false,
+      teams,
+      groups: [],
+    };
     render(<GroupStageTemplate wc={wc} tournament="world-cup" />);
     expect(screen.queryByText(/View Knockout Bracket/)).not.toBeInTheDocument();
   });

@@ -31,7 +31,7 @@ describe('BracketPill', () => {
         invited={false}
         decided={false}
         onPick={jest.fn()}
-      />,
+      />
     );
     expect(screen.getByRole('img')).toBeInTheDocument();
   });
@@ -48,7 +48,7 @@ describe('BracketPill', () => {
         invited={false}
         decided={false}
         onPick={jest.fn()}
-      />,
+      />
     );
     const pill = screen.getByRole('img').closest('div')!;
     expect(pill.className).toContain('scale-75');
@@ -66,7 +66,7 @@ describe('BracketPill', () => {
         invited={false}
         decided={true}
         onPick={jest.fn()}
-      />,
+      />
     );
     const pill = screen.getByRole('img').closest('div')!;
     expect(pill.className).toContain('shadow-amber-400');
@@ -84,7 +84,7 @@ describe('BracketPill', () => {
         invited={true}
         decided={false}
         onPick={jest.fn()}
-      />,
+      />
     );
     const pill = screen.getByRole('img').closest('div')!;
     expect(pill.className).toContain('animate-pulse');
@@ -102,7 +102,7 @@ describe('BracketPill', () => {
         invited={false}
         decided={false}
         onPick={jest.fn()}
-      />,
+      />
     );
     const pill = screen.getByRole('img').closest('div')!;
     expect(pill.className).toContain('cursor-pointer');
@@ -121,7 +121,7 @@ describe('BracketPill', () => {
         decided={false}
         isChampion={true}
         onPick={jest.fn()}
-      />,
+      />
     );
     expect(screen.getByText('🏆')).toBeInTheDocument();
   });
@@ -138,7 +138,7 @@ describe('BracketPill', () => {
         invited={false}
         decided={false}
         onPick={jest.fn()}
-      />,
+      />
     );
     expect(screen.getByText('BRA')).toBeInTheDocument();
   });
@@ -155,7 +155,7 @@ describe('BracketPill', () => {
         invited={false}
         decided={false}
         onPick={jest.fn()}
-      />,
+      />
     );
     const label = container.querySelector('.absolute.-bottom-4');
     expect(label).toBeInTheDocument();
@@ -174,7 +174,7 @@ describe('BracketPill', () => {
         invited={false}
         decided={false}
         onPick={jest.fn()}
-      />,
+      />
     );
     const img = container.querySelector('img');
     expect(img).not.toBeInTheDocument();
@@ -192,9 +192,11 @@ describe('BracketPill', () => {
         invited={false}
         decided={false}
         onPick={jest.fn()}
-      />,
+      />
     );
-    expect(container.querySelector('.absolute.-bottom-4')).not.toBeInTheDocument();
+    expect(
+      container.querySelector('.absolute.-bottom-4')
+    ).not.toBeInTheDocument();
   });
 
   it('eliminated leaf shows strikethrough', () => {
@@ -209,7 +211,7 @@ describe('BracketPill', () => {
         invited={false}
         decided={false}
         onPick={jest.fn()}
-      />,
+      />
     );
     expect(screen.getByText('BRA').className).toContain('line-through');
   });

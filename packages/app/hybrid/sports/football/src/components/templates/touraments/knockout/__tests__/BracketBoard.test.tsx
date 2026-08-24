@@ -1,7 +1,16 @@
 import { render, screen } from '@testing-library/react';
 import { BracketBoard } from '../BracketBoard';
-import { buildTree, computeAngles, getLeaves, collectNodes, resetMatchIdCounter } from '../tree';
-import type { BracketNode, BracketMatch } from '@/data/touraments/types/bracket';
+import {
+  buildTree,
+  computeAngles,
+  getLeaves,
+  collectNodes,
+  resetMatchIdCounter,
+} from '../tree';
+import type {
+  BracketNode,
+  BracketMatch,
+} from '@/data/touraments/types/bracket';
 
 beforeEach(() => {
   resetMatchIdCounter();
@@ -35,7 +44,7 @@ describe('BracketBoard', () => {
         handlePick={jest.fn()}
         champ={null}
         bracketRef={{ current: null }}
-      />,
+      />
     );
     expect(container.querySelector('svg')).toBeInTheDocument();
   });
@@ -48,14 +57,16 @@ describe('BracketBoard', () => {
         winners={{ m0: 'A' }}
         allNodes={allNodes}
         teams={{}}
-        resolvedTeam={(n) => (n.kind === 'leaf' ? n.team : n.id === 'm0' ? 'A' : null)}
+        resolvedTeam={(n) =>
+          n.kind === 'leaf' ? n.team : n.id === 'm0' ? 'A' : null
+        }
         isEliminated={() => false}
         canPick={() => false}
         isInvited={() => false}
         handlePick={jest.fn()}
         champ="A"
         bracketRef={{ current: null }}
-      />,
+      />
     );
     expect(screen.getByText('🏆')).toBeInTheDocument();
   });

@@ -95,9 +95,7 @@ describe('library', () => {
         makeSquad({
           id: 's1',
           name: 'First',
-          players: [
-            { id: 'p1', name: 'Ada', number: 10, role: 'MID' },
-          ],
+          players: [{ id: 'p1', name: 'Ada', number: 10, role: 'MID' }],
           assignments: { '442-0-0': ['p1'] },
           lineups: [
             {
@@ -114,7 +112,9 @@ describe('library', () => {
     const copy = next.squads[1];
     expect(copy.lineups).toHaveLength(1);
     expect(copy.lineups[0].name).toBe('Plan A');
-    expect(copy.lineups[0].assignments).toEqual({ '442-0-0': [expect.any(String)] });
+    expect(copy.lineups[0].assignments).toEqual({
+      '442-0-0': [expect.any(String)],
+    });
   });
 
   it('duplicateSquad handles empty assignments', () => {

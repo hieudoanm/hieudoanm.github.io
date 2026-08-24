@@ -1,9 +1,6 @@
 const CACHE_NAME = 'music-v1';
 
-const STATIC_ASSETS = [
-  '/',
-  '/pitch/',
-];
+const STATIC_ASSETS = ['/', '/pitch/'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(

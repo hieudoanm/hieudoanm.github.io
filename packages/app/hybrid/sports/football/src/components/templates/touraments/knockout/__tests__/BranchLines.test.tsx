@@ -1,6 +1,11 @@
 import { render, screen } from '@testing-library/react';
 import { BranchLines } from '../BranchLines';
-import { buildTree, computeAngles, getLeaves, resetMatchIdCounter } from '../tree';
+import {
+  buildTree,
+  computeAngles,
+  getLeaves,
+  resetMatchIdCounter,
+} from '../tree';
 import type { BracketNode } from '@/data/touraments/types/bracket';
 
 beforeEach(() => {
@@ -24,7 +29,7 @@ describe('BranchLines', () => {
     const { container } = render(
       <svg>
         <BranchLines root={root} winners={{}} ringStep={15} />
-      </svg>,
+      </svg>
     );
     const paths = container.querySelectorAll('path');
     expect(paths.length).toBeGreaterThan(0);
@@ -35,11 +40,11 @@ describe('BranchLines', () => {
     const { container } = render(
       <svg>
         <BranchLines root={root} winners={{ m0: 'A' }} ringStep={15} />
-      </svg>,
+      </svg>
     );
     const paths = container.querySelectorAll('path');
     const lit = Array.from(paths).filter((p) =>
-      p.getAttribute('class')?.includes('stroke-red-500'),
+      p.getAttribute('class')?.includes('stroke-red-500')
     );
     expect(lit.length).toBeGreaterThan(0);
   });
@@ -49,11 +54,11 @@ describe('BranchLines', () => {
     const { container } = render(
       <svg>
         <BranchLines root={root} winners={{}} ringStep={15} />
-      </svg>,
+      </svg>
     );
     const paths = container.querySelectorAll('path');
     const unlit = Array.from(paths).filter((p) =>
-      p.getAttribute('class')?.includes('stroke-white/12'),
+      p.getAttribute('class')?.includes('stroke-white/12')
     );
     expect(unlit.length).toBeGreaterThan(0);
   });

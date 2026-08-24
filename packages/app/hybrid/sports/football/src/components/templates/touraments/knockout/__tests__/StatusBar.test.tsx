@@ -17,7 +17,7 @@ describe('StatusBar', () => {
         total={7}
         progress={100}
         teams={teams}
-      />,
+      />
     );
     expect(screen.getByText(/lifts the trophy/)).toBeInTheDocument();
     expect(screen.getByText('Brazil')).toBeInTheDocument();
@@ -33,7 +33,7 @@ describe('StatusBar', () => {
         total={7}
         progress={42}
         teams={teams}
-      />,
+      />
     );
     expect(screen.getByText(/matches decided/)).toBeInTheDocument();
     expect(container.textContent).toContain('3');
@@ -50,7 +50,7 @@ describe('StatusBar', () => {
         total={7}
         progress={0}
         teams={teams}
-      />,
+      />
     );
     expect(screen.getByText('—')).toBeInTheDocument();
   });
@@ -65,7 +65,7 @@ describe('StatusBar', () => {
         total={10}
         progress={50}
         teams={teams}
-      />,
+      />
     );
     const bar = document.querySelector('.bg-gradient-to-r');
     expect(bar).toBeInTheDocument();

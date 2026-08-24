@@ -1,9 +1,6 @@
 const CACHE_NAME = 'economics-v1';
 
-const STATIC_ASSETS = [
-  '/',
-  '/prisoners-dilemma/',
-];
+const STATIC_ASSETS = ['/', '/prisoners-dilemma/'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(

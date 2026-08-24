@@ -1,6 +1,9 @@
 import type { Metadata, Viewport } from 'next';
 import '@/styles/globals.css';
 import { FC, ReactNode } from 'react';
+import { NativeProvider } from '@/providers/NativeProvider';
+import { QueryProvider } from '@/providers/QueryProvider';
+import { SWProvider } from '@/providers/SWProvider';
 
 export const metadata: Metadata = {
   title: 'Music',
@@ -28,7 +31,11 @@ const RootLayout: FC<{ children: ReactNode }> = ({ children }) => (
       <link rel="apple-touch-icon" href="/icons/icon-192.png" />
     </head>
     <body className="bg-base-100 text-base-content min-h-dvh overflow-y-auto">
-      {children}
+      <SWProvider>
+        <NativeProvider>
+          <QueryProvider>{children}</QueryProvider>
+        </NativeProvider>
+      </SWProvider>
     </body>
   </html>
 );

@@ -20,11 +20,7 @@ describe('KnockOutTemplate', () => {
 
   it('renders with custom tournament', () => {
     render(
-      <KnockOutTemplate
-        yearData={yearData}
-        year={2020}
-        tournament="euro"
-      />,
+      <KnockOutTemplate yearData={yearData} year={2020} tournament="euro" />
     );
     expect(screen.getByText('Knockout Bracket')).toBeInTheDocument();
   });
