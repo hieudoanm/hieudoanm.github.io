@@ -5,7 +5,10 @@ import Link from 'next/link';
 import {
   TbDownload,
   TbHierarchy2,
+  TbLayoutSidebar,
+  TbLayoutSidebarFilled,
   TbListNumbers,
+  TbListTree,
   TbMenu2,
   TbPlus,
 } from 'react-icons/tb';
@@ -16,20 +19,28 @@ import { extractToc, renderMarkdown } from '@/lib/markdown';
 import { exportHtmlFile, exportMarkdownFile, exportPdf } from '@/lib/export';
 import { formatRelativeTime } from '@/lib/date';
 import { seedNotes } from '@/data/seed';
-import { loadNotes, saveNotes } from '@/lib/storage';
+import {
+  loadNotes,
+  loadUiPreference,
+  saveNotes,
+  saveUiPreference,
+} from '@/lib/storage';
 import type { Note, ViewMode } from '@/lib/types';
 import { buildGraph, resolveNoteTitle } from '@/lib/wikilinks';
 import { FileToolbar } from '@/components/editor/FileToolbar';
 import { FormatToolbar } from '@/components/editor/FormatToolbar';
+import { CaseToolbar } from '@/components/editor/CaseToolbar';
 import { MarkdownPreviewer } from '@/components/editor/MarkdownPreviewer';
 import { StatsBar } from '@/components/editor/StatsBar';
 import { TocSidebar } from '@/components/editor/TocSidebar';
 import { ViewControls } from '@/components/editor/ViewControls';
-import { GraphView } from '@/components/vault/GraphView';
-import { VaultSidebar } from '@/components/vault/VaultSidebar';
-import { WordCounterDialog } from '@/components/vault/WordCounterDialog';
+import { GraphView } from '@/components/markdown/GraphView';
+import { VaultSidebar } from '@/components/markdown/VaultSidebar';
+import { WordCounterDialog } from '@/components/markdown/WordCounterDialog';
 
 const SAVE_DELAY = 400;
+const FILES_PREF_KEY = 'markdown.ui.files-sidebar';
+const OUTLINE_PREF_KEY = 'markdown.ui.outline';
 
 export const VaultApp: FC = () => {
   const [notes, setNotes] = useState<Note[]>(() => loadNotes());
@@ -41,6 +52,12 @@ export const VaultApp: FC = () => {
   const [showSidebar, setShowSidebar] = useState(false);
   const [showGraph, setShowGraph] = useState(false);
   const [showWordCounter, setShowWordCounter] = useState(false);
+  const [showFiles, setShowFiles] = useState(() =>
+    loadUiPreference(FILES_PREF_KEY, true)
+  );
+  const [showOutline, setShowOutline] = useState(() =>
+    loadUiPreference(OUTLINE_PREF_KEY, true)
+  );
 
   const editorRef = useRef<HTMLDivElement | null>(null);
   const previewRef = useRef<HTMLDivElement | null>(null);
@@ -166,13 +183,19 @@ export const VaultApp: FC = () => {
     exportPdf(activeNote.title, html);
   }, [activeNote]);
 
-  const handleWordCounterChange = useCallback(
-    (content: string): void => {
-      handleDocChange(content);
-      setDoc(content);
-    },
-    [handleDocChange, setDoc]
-  );
+  const toggleFiles = useCallback((): void => {
+    setShowFiles((prev) => {
+      saveUiPreference(FILES_PREF_KEY, !prev);
+      return !prev;
+    });
+  }, []);
+
+  const toggleOutline = useCallback((): void => {
+    setShowOutline((prev) => {
+      saveUiPreference(OUTLINE_PREF_KEY, !prev);
+      return !prev;
+    });
+  }, []);
 
   const { html, isRendering } = useMarkdownRender(activeNote?.content ?? '');
   const toc = useMemo(
@@ -184,18 +207,20 @@ export const VaultApp: FC = () => {
   const previewVisible = viewMode !== 'editor';
 
   return (
-    <div className="relative flex h-full min-h-0">
-      <div className="hidden lg:block">
-        <VaultSidebar
-          notes={notes}
-          activeId={activeId}
-          search={search}
-          onSearchChange={setSearch}
-          onSelect={selectNote}
-          onNew={createNote}
-          mobile={false}
-        />
-      </div>
+    <div className="relative flex h-dvh min-h-0 overflow-hidden">
+      {showFiles && (
+        <div className="hidden h-full min-h-0 lg:block">
+          <VaultSidebar
+            notes={notes}
+            activeId={activeId}
+            search={search}
+            onSearchChange={setSearch}
+            onSelect={selectNote}
+            onNew={createNote}
+            mobile={false}
+          />
+        </div>
+      )}
 
       {showSidebar && (
         <>
@@ -240,6 +265,27 @@ export const VaultApp: FC = () => {
 
           <button
             className="btn btn-ghost btn-sm tooltip tooltip-bottom"
+            data-tip="Toggle file list"
+            onClick={toggleFiles}
+            aria-label={showFiles ? 'Hide file list' : 'Show file list'}>
+            {showFiles ? (
+              <TbLayoutSidebarFilled size={18} />
+            ) : (
+              <TbLayoutSidebar size={18} />
+            )}
+          </button>
+
+          <button
+            className="btn btn-ghost btn-sm tooltip tooltip-bottom"
+            data-tip="Toggle outline"
+            onClick={toggleOutline}
+            disabled={!activeNote}
+            aria-label={showOutline ? 'Hide outline' : 'Show outline'}>
+            <TbListTree size={18} />
+          </button>
+
+          <button
+            className="btn btn-ghost btn-sm tooltip tooltip-bottom"
             data-tip="Word counter"
             onClick={() => setShowWordCounter(true)}
             disabled={!activeNote}
@@ -278,6 +324,7 @@ export const VaultApp: FC = () => {
                   onDelete={deleteNote}
                 />
                 <FormatToolbar view={view} />
+                <CaseToolbar view={view} />
 
                 <div className="flex min-h-0 flex-1">
                   <div
@@ -322,7 +369,7 @@ export const VaultApp: FC = () => {
             )}
           </section>
 
-          {activeNote && <TocSidebar items={toc} />}
+          {activeNote && showOutline && <TocSidebar items={toc} />}
         </div>
       </main>
 
@@ -337,7 +384,6 @@ export const VaultApp: FC = () => {
       {showWordCounter && activeNote && (
         <WordCounterDialog
           text={activeNote.content}
-          onTextChange={handleWordCounterChange}
           onClose={() => setShowWordCounter(false)}
         />
       )}

@@ -8,7 +8,6 @@ describe('WordCounterDialog', () => {
     render(
       <WordCounterDialog
         text="Hello world. Second sentence!"
-        onTextChange={props.onTextChange ?? (() => undefined)}
         onClose={props.onClose ?? (() => undefined)}
       />
     );
@@ -23,15 +22,11 @@ describe('WordCounterDialog', () => {
     expect(screen.getByTestId('stat-readingTime')).toHaveTextContent('1 min');
   });
 
-  it.each([
-    ['Lowercase', 'hello world. second sentence!'],
-    ['Uppercase', 'HELLO WORLD. SECOND SENTENCE!'],
-    ['Trim Spaces', 'Hello world. Second sentence!'],
-  ])('applies the %s transform', (label, expected) => {
-    const onTextChange = jest.fn();
-    renderDialog({ onTextChange });
-    fireEvent.click(screen.getByRole('button', { name: label }));
-    expect(onTextChange).toHaveBeenCalledWith(expected);
+  it('does not render transform buttons', () => {
+    renderDialog();
+    expect(screen.queryByRole('button', { name: 'Lowercase' })).toBeNull();
+    expect(screen.queryByRole('button', { name: 'Uppercase' })).toBeNull();
+    expect(screen.queryByRole('button', { name: 'Trim Spaces' })).toBeNull();
   });
 
   it('copies text to the clipboard', () => {

@@ -2,16 +2,10 @@
 
 import { FC, useMemo } from 'react';
 import { TbCopy, TbX } from 'react-icons/tb';
-import {
-  applyTextTransform,
-  computeWordStats,
-  type TextTransform,
-  type WordStats,
-} from '@/lib/wordCounter';
+import { computeWordStats, type WordStats } from '@/lib/wordCounter';
 
 interface WordCounterDialogProps {
   text: string;
-  onTextChange: (text: string) => void;
   onClose: () => void;
 }
 
@@ -24,15 +18,8 @@ const statEntries = (stats: WordStats): Array<[string, string, number]> => [
   ['paragraphs', 'Paragraphs', stats.paragraphs],
 ];
 
-const TRANSFORMS: ReadonlyArray<[TextTransform, string]> = [
-  ['lowercase', 'Lowercase'],
-  ['uppercase', 'Uppercase'],
-  ['trim', 'Trim Spaces'],
-];
-
 export const WordCounterDialog: FC<WordCounterDialogProps> = ({
   text,
-  onTextChange,
   onClose,
 }) => {
   const stats = useMemo(() => computeWordStats(text), [text]);
@@ -81,15 +68,7 @@ export const WordCounterDialog: FC<WordCounterDialogProps> = ({
           </div>
         </div>
 
-        <div className="mt-3 flex gap-1">
-          {TRANSFORMS.map(([transform, label]) => (
-            <button
-              key={transform}
-              className="btn btn-ghost btn-xs"
-              onClick={() => onTextChange(applyTextTransform(text, transform))}>
-              {label}
-            </button>
-          ))}
+        <div className="mt-3 flex">
           <button
             className="btn btn-ghost btn-xs ml-auto"
             onClick={handleCopy}

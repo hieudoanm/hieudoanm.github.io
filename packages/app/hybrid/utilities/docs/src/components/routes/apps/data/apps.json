@@ -280,12 +280,6 @@
         "toolId": "braille"
       },
       {
-        "label": "Case",
-        "description": "Converter",
-        "icon": "PiFileText",
-        "toolId": "text-case"
-      },
-      {
         "label": "Leet Speak",
         "description": "Text to Leet",
         "icon": "PiTextAa",

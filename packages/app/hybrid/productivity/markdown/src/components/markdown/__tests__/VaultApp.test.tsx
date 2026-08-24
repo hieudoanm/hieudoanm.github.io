@@ -7,7 +7,7 @@ import {
   within,
 } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { VaultApp } from '@/components/vault/VaultApp';
+import { VaultApp } from '@/components/markdown/VaultApp';
 import { exportHtmlFile, exportMarkdownFile, exportPdf } from '@/lib/export';
 import { loadNotes } from '@/lib/storage';
 import * as storage from '@/lib/storage';
@@ -260,6 +260,44 @@ describe('VaultApp', () => {
     await user.click(overlay);
 
     expect(screen.queryByLabelText('Close sidebar')).not.toBeInTheDocument();
+  });
+
+  it('toggles the file list and persists the preference', async () => {
+    const user = userEvent.setup();
+    render(<VaultApp />);
+
+    expect(
+      screen.getByLabelText('Hide file list', { selector: 'header button' })
+    ).toBeInTheDocument();
+    await user.click(screen.getByLabelText('Hide file list'));
+    expect(screen.getByLabelText('Show file list')).toBeInTheDocument();
+    expect(localStorage.getItem('markdown.ui.files-sidebar')).toBe('false');
+
+    await user.click(screen.getByLabelText('Show file list'));
+    expect(screen.getByLabelText('Hide file list')).toBeInTheDocument();
+    expect(localStorage.getItem('markdown.ui.files-sidebar')).toBe('true');
+  });
+
+  it('toggles the outline and persists the preference', async () => {
+    const user = userEvent.setup();
+    render(<VaultApp />);
+
+    await user.click(screen.getByLabelText('Hide outline'));
+    expect(screen.getByLabelText('Show outline')).toBeInTheDocument();
+    expect(localStorage.getItem('markdown.ui.outline')).toBe('false');
+
+    await user.click(screen.getByLabelText('Show outline'));
+    expect(screen.getByLabelText('Hide outline')).toBeInTheDocument();
+    expect(localStorage.getItem('markdown.ui.outline')).toBe('true');
+  });
+
+  it('restores sidebar preferences from storage on load', () => {
+    localStorage.setItem('markdown.ui.files-sidebar', 'false');
+    localStorage.setItem('markdown.ui.outline', 'false');
+    render(<VaultApp />);
+
+    expect(screen.getByLabelText('Show file list')).toBeInTheDocument();
+    expect(screen.getByLabelText('Show outline')).toBeInTheDocument();
   });
 
   it('switches between editor and preview view modes', async () => {

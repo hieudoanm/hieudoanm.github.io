@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import { GraphView } from '@/components/vault/GraphView';
+import { GraphView } from '@/components/markdown/GraphView';
 import { seedNotes } from '@/data/seed';
 
 const chainable = (): Record<string, jest.Mock> => {
