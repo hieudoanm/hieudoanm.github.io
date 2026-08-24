@@ -1,2 +1,2 @@
-:HL["/downloads/football/_next/static/chunks/0ruwi8ufm0uz5.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4180,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"tM8yMWlC_LJEtmdn1Tnlu"}
+:HL["/downloads/football/_next/static/chunks/0duqn5mp1mzti.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4180,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"x948GPUmF8FiiUfZuk6tI"}

@@ -1,38 +1,38 @@
-import { SquadManager } from '@/components/organisms/SquadManager';
 import Link from 'next/link';
 import { NextPage } from 'next';
-import { FiInfo, FiDownload, FiClock } from 'react-icons/fi';
+import { FiUsers, FiTrendingUp } from 'react-icons/fi';
 
-const NAV_ITEMS = [
-  { label: 'About', href: '/about', icon: <FiInfo className="h-3.5 w-3.5" /> },
+const APPS = [
   {
-    label: 'Downloads',
-    href: '/downloads',
-    icon: <FiDownload className="h-3.5 w-3.5" />,
+    label: 'Manager',
+    description: 'Build squads, pick formations and track matches.',
+    href: '/manager',
+    icon: <FiUsers className="h-6 w-6" />,
   },
   {
-    label: 'Version',
-    href: '/version',
-    icon: <FiClock className="h-3.5 w-3.5" />,
+    label: 'Touraments',
+    description: 'Browse tournament history, group stages and brackets.',
+    href: '/touraments',
+    icon: <FiTrendingUp className="h-6 w-6" />,
   },
 ];
 
 const HomePage: NextPage = () => (
-  <div className="flex h-screen flex-col">
-    <header className="border-base-300 flex items-center justify-between gap-4 border-b px-4 py-2 print:hidden">
-      <h1 className="text-sm font-bold">Football Manager</h1>
-      <div className="flex items-center gap-1">
-        {NAV_ITEMS.map(({ label, href, icon }) => (
-          <Link key={href} href={href} className="btn btn-ghost btn-xs gap-1.5">
+  <div className="flex flex-1 flex-col items-center justify-center gap-8 p-4">
+    <div className="grid w-full max-w-xl grid-cols-1 gap-4 sm:grid-cols-2">
+      {APPS.map(({ label, description, href, icon }) => (
+        <Link
+          key={href}
+          href={href}
+          className="card border-base-300 bg-base-100 border transition-shadow hover:shadow-lg">
+          <div className="card-body gap-2 p-6">
             {icon}
-            {label}
-          </Link>
-        ))}
-      </div>
-    </header>
-    <main className="min-h-0 flex-1 p-4">
-      <SquadManager />
-    </main>
+            <h2 className="card-title text-base">{label}</h2>
+            <p className="text-base-content/70 text-sm">{description}</p>
+          </div>
+        </Link>
+      ))}
+    </div>
   </div>
 );
 

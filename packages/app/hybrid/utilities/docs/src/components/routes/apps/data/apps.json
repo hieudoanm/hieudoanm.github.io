@@ -352,12 +352,6 @@
         "toolId": "calendar-tracker"
       },
       {
-        "label": "Football",
-        "description": "Tournaments & data",
-        "icon": "PiSoccerBall",
-        "toolId": "football"
-      },
-      {
         "label": "Legislation",
         "description": "Visualization",
         "icon": "PiBuildings",
