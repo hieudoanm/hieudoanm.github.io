@@ -82,4 +82,53 @@ describe('library', () => {
   it('sets the active squad', () => {
     expect(setActiveSquad(makeLibrary(), 's2').activeId).toBe('s2');
   });
+
+  it('duplicateSquad returns library unchanged when squad not found', () => {
+    const library = makeLibrary();
+    const result = duplicateSquad(library, 'nonexistent');
+    expect(result).toBe(library);
+  });
+
+  it('duplicateSquad handles squads with lineups', () => {
+    const library = makeLibrary({
+      squads: [
+        makeSquad({
+          id: 's1',
+          name: 'First',
+          players: [
+            { id: 'p1', name: 'Ada', number: 10, role: 'MID' },
+          ],
+          assignments: { '442-0-0': ['p1'] },
+          lineups: [
+            {
+              id: 'l1',
+              name: 'Plan A',
+              formationId: '442',
+              assignments: { '442-0-0': ['p1'] },
+            },
+          ],
+        }),
+      ],
+    });
+    const next = duplicateSquad(library, 's1');
+    const copy = next.squads[1];
+    expect(copy.lineups).toHaveLength(1);
+    expect(copy.lineups[0].name).toBe('Plan A');
+    expect(copy.lineups[0].assignments).toEqual({ '442-0-0': [expect.any(String)] });
+  });
+
+  it('duplicateSquad handles empty assignments', () => {
+    const library = makeLibrary({
+      squads: [
+        makeSquad({
+          id: 's1',
+          name: 'First',
+          players: [{ id: 'p1', name: 'Ada', number: 10, role: 'MID' }],
+          assignments: {},
+        }),
+      ],
+    });
+    const next = duplicateSquad(library, 's1');
+    expect(next.squads[1].assignments).toEqual({});
+  });
 });

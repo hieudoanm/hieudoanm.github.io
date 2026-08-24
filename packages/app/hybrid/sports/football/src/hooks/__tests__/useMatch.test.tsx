@@ -131,4 +131,22 @@ describe('useMatch', () => {
     expect(result.current.match.goalsFor).toBe(1);
     expect(result.current.match.substitutions).toBe(1);
   });
+
+  it('undoGoal decrements the goals for counter', () => {
+    const { result } = renderHook(() => useMatch());
+    act(() => result.current.addGoal());
+    act(() => result.current.addGoal());
+    expect(result.current.match.goalsFor).toBe(2);
+    act(() => result.current.undoGoal());
+    expect(result.current.match.goalsFor).toBe(1);
+  });
+
+  it('undoConcede decrements the goals against counter', () => {
+    const { result } = renderHook(() => useMatch());
+    act(() => result.current.addConcede());
+    act(() => result.current.addConcede());
+    expect(result.current.match.goalsAgainst).toBe(2);
+    act(() => result.current.undoConcede());
+    expect(result.current.match.goalsAgainst).toBe(1);
+  });
 });
