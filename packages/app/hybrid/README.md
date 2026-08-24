@@ -13,10 +13,10 @@
 | 09  | music       | Music       | Pitch Ear-Training Game                       | No       | DONE   | Education         | Games              |
 | 10  | history     | History     | Through the Years Timeline Game               | No       | DONE   | Education         | Games              |
 | 11  | economics   | Economics   | Prisoner's Dilemma Game Theory                | No       | DONE   | Education         | Games              |
-| 12  | nikoli      | Nikoli      | Nikoli                                        | No       | DONE   | Entertainment     | Games              |
 | 13  | wallet      | Wallet      | Momo / Techcombank                            | Required | DONE   | Finance           | Business           |
 | 14  | casino      | Casino      | Baccarat / Roulette / Craps / Slots           | No       | DONE   | Games             | Entertainment      |
 | 15  | countries   | Countries   | New York Times Variant                        | No       | DONE   | Games             | Entertainment      |
+| 12  | nikoli      | Nikoli      | Nikoli                                        | No       | DONE   | Games             | Entertainment      |
 | 16  | tic-tac-toe | Tic-Tac-Toe | Classic / Notakto / Reverse / Wild Variants   | No       | DONE   | Games             | Entertainment      |
 | 17  | photo       | Photo       | Adobe Photoshop                               | No       | DONE   | Graphics & Design | Photo & Video      |
 | 18  | svg         | SVG         | Adobe Illustrator / CorelDRAW                 | No       | DONE   | Graphics & Design | Photo & Video      |

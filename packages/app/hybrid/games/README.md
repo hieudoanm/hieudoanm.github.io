@@ -2,4 +2,5 @@
 
 1. Casino
 2. Countries
-3. Tic-Tac-Toe
+3. Nikoli
+4. Tic-Tac-Toe
