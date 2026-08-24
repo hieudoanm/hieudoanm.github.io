@@ -51,9 +51,7 @@ describe('Tool pages', () => {
         <PrisonerDilemmaPage />
       </Wrapper>
     );
-    expect(
-      screen.getByRole('heading', { name: "Prisoner's Dilemma" })
-    ).toBeInTheDocument();
+    expect(screen.getByText('Cooperate')).toBeInTheDocument();
   });
 });
 

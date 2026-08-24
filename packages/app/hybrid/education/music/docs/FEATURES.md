@@ -16,7 +16,7 @@
 ## Home & Navigation
 
 - Card grid listing the tool with icon and description
-- Tool route opened from home inside the shared `ToolTemplate`
+- Tool route rendered directly, opened from the home card grid
 - Theme toggle in template header; choice persisted in localStorage
 
 ## Pitch (Ear Training)

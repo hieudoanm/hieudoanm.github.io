@@ -6,7 +6,7 @@
 
 - [x] Scaffold from psychology conventions, modernised deps
 - [x] Custom light/dark themes with FOUC-free bootstrap
-- [x] Home hub + ToolTemplate navigation
+- [x] Home hub navigation
 - [x] PWA shell (manifest + service worker) and error shells
 - [x] CI workflow wired to repo release pipeline
 

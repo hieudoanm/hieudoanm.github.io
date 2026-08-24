@@ -18,7 +18,7 @@ src/
 ├── app/        # Routes: home hub, prisoners-dilemma tool
 ├── components/
 │   ├── features/   # prisoners-dilemma/ — index.tsx, types, constants, utils
-│   └── templates/  # HomeTemplate, ToolTemplate
+│   └── templates/  # HomeTemplate
 └── styles/     # globals.css, base.css, themes.css
 ```
 

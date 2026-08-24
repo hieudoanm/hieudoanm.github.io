@@ -17,7 +17,7 @@ src/
 ├── app/        # Routes: home hub, pitch tool
 ├── components/
 │   ├── features/   # pitch/ — index.tsx, hooks, constants
-│   └── templates/  # HomeTemplate, ToolTemplate
+│   └── templates/  # HomeTemplate
 └── styles/     # globals.css, base.css, themes.css
 ```
 

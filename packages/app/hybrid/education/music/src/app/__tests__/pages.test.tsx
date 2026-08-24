@@ -51,7 +51,7 @@ describe('Tool pages', () => {
         <PitchPage />
       </Wrapper>
     );
-    expect(screen.getByRole('heading', { name: 'Pitch' })).toBeInTheDocument();
+    expect(screen.getByText(/Level/)).toBeInTheDocument();
   });
 });
 

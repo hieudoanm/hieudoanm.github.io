@@ -17,8 +17,8 @@ Ear-training app for note recognition built with Next.js and Tauri.
 
 - Features are self-contained under `src/components/features/pitch/` — colocate
   hooks, constants, helpers and tests.
-- Pages are thin: they compose templates (`HomeTemplate`, `ToolTemplate`) and
-  feature components.
+- Pages are thin: they compose templates (`HomeTemplate`) and feature
+  components.
 - Path alias `@/*` maps to `./src/*`.
 - DaisyUI themes are `music` (light) and `music-dark`; the theme init script in
   `layout.tsx` reads `localStorage['music:theme']`.

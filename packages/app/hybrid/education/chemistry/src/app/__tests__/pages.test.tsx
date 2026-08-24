@@ -51,9 +51,7 @@ describe('Tool pages', () => {
         <PeriodicTablePage />
       </Wrapper>
     );
-    expect(
-      screen.getByRole('heading', { name: 'Periodic Table' })
-    ).toBeInTheDocument();
+    expect(screen.getAllByTitle('Hydrogen').length).toBeGreaterThan(0);
   });
 });
 

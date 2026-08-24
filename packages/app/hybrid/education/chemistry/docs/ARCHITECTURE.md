@@ -17,7 +17,7 @@ src/
 ├── app/        # Routes: home hub, periodic table tool
 ├── components/
 │   ├── features/   # periodic-table/ — index.tsx
-│   └── templates/  # HomeTemplate, ToolTemplate
+│   └── templates/  # HomeTemplate
 └── styles/     # globals.css, base.css, themes.css
 ```
 

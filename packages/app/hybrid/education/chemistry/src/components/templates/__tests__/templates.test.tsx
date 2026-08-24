@@ -1,7 +1,7 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import { FiBox } from 'react-icons/fi';
 import { HomeTemplate } from '../HomeTemplate';
-import { ToolTemplate } from '../ToolTemplate';
+import { ThemeToggle } from '@/components/atoms/ThemeToggle';
 import { VersionTemplate } from '../VersionTemplate';
 
 describe('HomeTemplate', () => {
@@ -47,29 +47,9 @@ describe('HomeTemplate', () => {
   });
 });
 
-describe('ToolTemplate', () => {
-  it('renders a back link, the title and children', () => {
-    render(
-      <ToolTemplate title="Chemistry tool">
-        <p>content</p>
-      </ToolTemplate>
-    );
-    expect(
-      screen.getByRole('heading', { name: 'Chemistry tool' })
-    ).toBeInTheDocument();
-    expect(screen.getByText('content')).toBeInTheDocument();
-    expect(screen.getByRole('link')).toHaveAttribute('href', '/');
-    expect(screen.getByLabelText('Toggle theme')).toBeInTheDocument();
-  });
-});
-
 describe('ThemeToggle', () => {
   it('switches between light and dark themes', () => {
-    render(
-      <ToolTemplate title="tool">
-        <p>x</p>
-      </ToolTemplate>
-    );
+    render(<ThemeToggle />);
     const button = screen.getByLabelText('Toggle theme');
     expect(document.documentElement.dataset.theme).toBe('chemistry');
     fireEvent.click(button);

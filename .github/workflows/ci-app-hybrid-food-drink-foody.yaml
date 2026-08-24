@@ -1,0 +1,32 @@
+name: CI - App - Hybrid - Food & Drink - Foody
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/food-drink/foody/**'
+      - '.github/workflows/ci-app-hybrid-food-drink-foody.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-hybrid-food-drink-foody-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/food-drink/foody
+      filter: '@hieudoanm.github.io/foody'
+      releaseName: app-hybrid-food-drink-foody-latest
+      releaseTitle: App - Hybrid - Food & Drink - Foody (latest)
+      artifactPrefix: food-drink-foody

@@ -17,8 +17,8 @@ Game theory playground — iterated Prisoner's Dilemma against AI strategies.
 
 - Features are self-contained under `src/components/features/prisoners-dilemma/`
   — colocate hooks, constants, helpers and tests.
-- Pages are thin: they compose templates (`HomeTemplate`, `ToolTemplate`) and
-  feature components.
+- Pages are thin: they compose templates (`HomeTemplate`) and feature
+  components.
 - Path alias `@/*` maps to `./src/*`.
 - DaisyUI themes are `economics` (light) and `economics-dark`; the theme init
   script in `layout.tsx` reads `localStorage['economics:theme']`.

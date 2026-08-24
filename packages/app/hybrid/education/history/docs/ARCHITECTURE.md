@@ -18,7 +18,7 @@ src/
 ├── app/        # Routes: home hub, through-the-years tool
 ├── components/
 │   ├── features/   # through-the-years/ — engine, store, screens, components, data
-│   └── templates/  # HomeTemplate, ToolTemplate
+│   └── templates/  # HomeTemplate
 └── styles/     # globals.css, base.css, themes.css
 ```
 

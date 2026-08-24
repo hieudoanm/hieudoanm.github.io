@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { FC, ReactNode } from 'react';
 import ErrorPage from '@/app/error';
@@ -80,15 +80,15 @@ describe('HomePage', () => {
 });
 
 describe('Tool pages', () => {
-  it('flashcards page renders the deck inside a tool shell', () => {
+  it('flashcards page renders the deck selector', async () => {
     render(
       <Wrapper>
         <FlashcardsPage />
       </Wrapper>
     );
-    expect(
-      screen.getByRole('heading', { name: 'Flashcards' })
-    ).toBeInTheDocument();
+    await waitFor(() =>
+      expect(screen.getByLabelText('Language')).toBeInTheDocument()
+    );
   });
 });
 

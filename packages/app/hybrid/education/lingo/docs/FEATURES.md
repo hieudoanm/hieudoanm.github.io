@@ -17,7 +17,7 @@
 ## Home & Navigation
 
 - Card grid listing the three tools with icons and descriptions
-- Tool routes opened from home inside the shared `ToolTemplate`; closing returns
+- Tool routes rendered directly, opened from the home card grid; closing returns
   to `/`
 - Error shells: 404 / 403 / 401 / 500 templates plus loading state
 - Offline badge driven by `useOffline`

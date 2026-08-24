@@ -3,7 +3,6 @@ import { AboutTemplate } from '../AboutTemplate';
 import { DownloadsTemplate } from '../DownloadsTemplate';
 import { ErrorTemplate } from '../ErrorTemplate';
 import { HomeTemplate } from '../HomeTemplate';
-import { ToolTemplate } from '../ToolTemplate';
 import { VersionTemplate } from '../VersionTemplate';
 import { PiCards } from 'react-icons/pi';
 
@@ -53,31 +52,6 @@ describe('HomeTemplate', () => {
     render(<HomeTemplate appName="Lingo" description="desc" items={ITEMS} />);
     fireEvent.click(screen.getByTestId('theme-toggle'));
     expect(localStorage.getItem('lingo:theme')).toBe('lingo-dark');
-  });
-});
-
-describe('ToolTemplate', () => {
-  it('renders title with back link and children', () => {
-    render(
-      <ToolTemplate title="Flashcards">
-        <p>tool body</p>
-      </ToolTemplate>
-    );
-    expect(
-      screen.getByRole('heading', { name: 'Flashcards' })
-    ).toBeInTheDocument();
-    expect(screen.getByText('tool body')).toBeInTheDocument();
-    expect(screen.getByRole('link')).toHaveAttribute('href', '/');
-  });
-
-  it('exposes a theme toggle', () => {
-    localStorage.clear();
-    render(
-      <ToolTemplate title="T">
-        <p>body</p>
-      </ToolTemplate>
-    );
-    expect(screen.getByTestId('theme-toggle')).toBeInTheDocument();
   });
 });
 

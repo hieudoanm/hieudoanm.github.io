@@ -52,8 +52,8 @@ describe('Tool pages', () => {
       </Wrapper>
     );
     expect(
-      screen.getAllByRole('heading', { name: 'Through the Years' }).length
-    ).toBeGreaterThan(0);
+      screen.getByRole('heading', { name: 'Through the Years' })
+    ).toBeInTheDocument();
   });
 });
 

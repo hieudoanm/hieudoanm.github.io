@@ -29,8 +29,7 @@ Reference docs live in `docs/`:
 - Atomic design: atoms → features → templates
 - Each feature is a self-contained folder under `src/components/features/`:
   `index.tsx` (UI) and `utils.ts` (pure data + logic, zero UI imports)
-- Features are standalone — no `onClose` prop; pages wrap them in a
-  `ToolTemplate`
+- Features are standalone — no `onClose` prop; pages render them directly
 - Progress (XP + streak) lives in IndexedDB via `src/lib/progress.ts`; scoring
   is pure (`applyActivity`) and never recomputed in components
 - Static assets are fetched at runtime from `public/data/` and `public/models/`
@@ -57,7 +56,7 @@ src/app/            # App Router pages — /flashcards /english /sign + info rou
 src/components/
   atoms/            # Button, Badge, OfflineBadge, ThemeToggle
   features/         # flashcards, english, sign
-  templates/        # HomeTemplate, ToolTemplate, About/Downloads/Version/ErrorTemplate
+  templates/        # HomeTemplate, About/Downloads/Version/ErrorTemplate
 src/hooks/          # useTheme, useProgress, useOffline, useSWRegister, useUpdater
 src/lib/            # progress (IndexedDB), native bridge, publicPaths
 src/providers/      # SWProvider, NativeProvider, QueryProvider

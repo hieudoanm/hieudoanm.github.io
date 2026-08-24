@@ -6,7 +6,7 @@
 
 - [x] Scaffold from lingo conventions, modernised deps
 - [x] Custom light/dark themes with FOUC-free bootstrap
-- [x] Home hub + ToolTemplate navigation
+- [x] Home hub navigation
 - [x] CI workflow wired to repo release pipeline
 
 ## Phase 2 — Core tools (shipped)

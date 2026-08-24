@@ -35,9 +35,9 @@ lingo/
 │   ├── app/
 │   │   ├── layout.tsx                 # Providers + theme bootstrap (FOUC guard)
 │   │   ├── page.tsx                   # Home hub: Flashcards / Dictionary / Sign cards
-│   │   ├── english/page.tsx           # ToolTemplate > English dictionary
-│   │   ├── flashcards/page.tsx        # ToolTemplate > Flashcards
-│   │   ├── sign/page.tsx              # ToolTemplate > Sign recognition
+│   │   ├── english/page.tsx           # English dictionary
+│   │   ├── flashcards/page.tsx        # Flashcards
+│   │   ├── sign/page.tsx              # Sign recognition
 │   │   ├── (info)/                    # about / downloads / version routes
 │   │   ├── error.tsx                  # 500 shell (+ forbidden/unauthorized/default/global-error)
 │   │   ├── loading.tsx                # Loading spinner
@@ -48,7 +48,7 @@ lingo/
 │   │   │   ├── english/               # index.tsx + utils.ts + __tests__
 │   │   │   ├── flashcards/            # index.tsx + utils.ts + __tests__
 │   │   │   └── sign/                  # index.tsx + utils.ts + __tests__
-│   │   └── templates/                 # HomeTemplate, ToolTemplate, info/error templates
+│   │   └── templates/                 # HomeTemplate, info/error templates
 │   ├── hooks/                         # useTheme, useProgress, useOffline, useSWRegister, useUpdater
 │   ├── lib/
 │   │   ├── native/index.ts            # Tauri bridge (pickers, notify)

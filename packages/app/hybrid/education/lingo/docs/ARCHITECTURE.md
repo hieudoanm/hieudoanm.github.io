@@ -20,7 +20,7 @@ src/
 ├── components/
 │   ├── atoms/      # Button, Badge, OfflineBadge, ThemeToggle
 │   ├── features/   # flashcards/, english/, sign/ — index.tsx + utils.ts each
-│   └── templates/  # HomeTemplate, ToolTemplate, info/error templates
+│   └── templates/  # HomeTemplate, info/error templates
 ├── hooks/      # useTheme, useProgress, useOffline, useSWRegister, useUpdater
 ├── lib/        # progress.ts, native/, publicPaths.ts
 ├── providers/  # SWProvider > NativeProvider > QueryProvider
@@ -32,8 +32,8 @@ src/
 App Router with static export:
 
 - `/` — home hub (course grid)
-- `/flashcards`, `/english`, `/sign` — one page per tool, each wrapping its
-  feature in a `ToolTemplate`
+- `/flashcards`, `/english`, `/sign` — one page per tool, rendering its feature
+  directly
 - `(info)/about`, `(info)/downloads`, `(info)/version` — info routes
 - `error.tsx` / `not-found.tsx` / `forbidden.tsx` / `unauthorized.tsx` /
   `default.tsx` / `global-error.tsx` — error shells
