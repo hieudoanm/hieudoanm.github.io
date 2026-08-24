@@ -3118,8 +3118,8 @@ importers:
         specifier: 0.2.0
         version: 0.2.0
       html2canvas-pro:
-        specifier: 2.3.9
-        version: 2.3.9
+        specifier: 2.4.0
+        version: 2.4.0
       next:
         specifier: 16.3.2
         version: 16.3.2(@babel/core@7.29.7(supports-color@10.2.2))(@opentelemetry/api@1.4.1)(@playwright/test@1.62.1)(@types/node@26.2.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
@@ -3218,8 +3218,8 @@ importers:
         specifier: 2.11.1
         version: 2.11.1
       html2canvas-pro:
-        specifier: 2.3.9
-        version: 2.3.9
+        specifier: 2.4.0
+        version: 2.4.0
       next:
         specifier: 16.3.2
         version: 16.3.2(@babel/core@7.29.7(supports-color@10.2.2))(@opentelemetry/api@1.4.1)(@playwright/test@1.62.1)(@types/node@26.2.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
@@ -3481,8 +3481,8 @@ importers:
         specifier: 5.9.0
         version: 5.9.0
       html2canvas-pro:
-        specifier: 2.3.9
-        version: 2.3.9
+        specifier: 2.4.0
+        version: 2.4.0
       jszip:
         specifier: 3.10.1
         version: 3.10.1
@@ -10616,8 +10616,8 @@ packages:
   html-url-attributes@3.0.1:
     resolution: {integrity: sha512-ol6UPyBWqsrO6EJySPz2O7ZSr856WDrEzM5zMqp+FJJLGMW35cLYmmZnl0vztAZxRUoNZJFTCohfjuIJ8I4QBQ==}
 
-  html2canvas-pro@2.3.9:
-    resolution: {integrity: sha512-s5LCNV8QHkKm4DkOuoXDnC+CvIsXjftn9mEA5BOPFWGa9A2M+Tn7wwitRivS5cch2/Bby6KuFmLZac5jlM51Sw==}
+  html2canvas-pro@2.4.0:
+    resolution: {integrity: sha512-ERxMm/ZGRatO9g0mAM2EBlWFgCXDjma7RZFLCHm71gM6q/WqQRYaqB0MIGjjYKEHF8rKvXIeshrrJ8ovImd9aw==}
     engines: {node: '>=16.0.0'}
 
   htmlparser2@10.1.0:
@@ -22535,7 +22535,7 @@ snapshots:
 
   html-url-attributes@3.0.1: {}
 
-  html2canvas-pro@2.3.9:
+  html2canvas-pro@2.4.0:
     dependencies:
       css-line-break: 2.1.0
       text-segmentation: 1.0.3
