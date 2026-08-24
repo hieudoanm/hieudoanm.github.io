@@ -220,6 +220,18 @@
         ]
       },
       {
+        "label": "Lingo",
+        "description": "Education",
+        "icon": "PiGraduationCap",
+        "href": "https://hieudoanm.github.io/downloads/lingo",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-education-lingo-latest"
+          }
+        ]
+      },
+      {
         "label": "Markdown",
         "description": "Productivity",
         "icon": "PiMarkdownLogo",

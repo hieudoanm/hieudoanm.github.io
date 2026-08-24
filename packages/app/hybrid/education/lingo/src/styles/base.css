@@ -1,0 +1,9 @@
+@layer base {
+  html {
+    @apply h-full;
+  }
+
+  body {
+    @apply bg-base-100 text-base-content min-h-full;
+  }
+}

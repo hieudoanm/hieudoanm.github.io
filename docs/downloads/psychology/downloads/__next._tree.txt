@@ -1,2 +1,2 @@
-:HL["/downloads/psychology/_next/static/chunks/1bgk6_6bv1f9b.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4180,"slots":{"children":{"name":"(info)","param":null,"prefetchHints":4192,"slots":{"children":{"name":"downloads","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"5ixUc7AmAvMyJexRlHCnq"}
+:HL["/downloads/psychology/_next/static/chunks/3m3_4zqcdgrsz.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4180,"slots":{"children":{"name":"(info)","param":null,"prefetchHints":4192,"slots":{"children":{"name":"downloads","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"5Tob0fq6bJf5VXIr5cG6O"}

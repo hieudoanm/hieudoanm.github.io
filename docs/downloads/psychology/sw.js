@@ -1,6 +1,16 @@
 const CACHE_NAME = 'psychology-v1';
 
-const STATIC_ASSETS = ['/', '/beck-depression-inventory/', '/big-five-inventory/', '/dyadic-adjustment-scale/', '/experiences-in-close-relationships/', '/generalized-anxiety-disorder/', '/patient-health-questionnaire/', '/relationship-closeness-inventory/', '/satisfaction-with-life/'];
+const STATIC_ASSETS = [
+  '/',
+  '/beck-depression-inventory/',
+  '/big-five-inventory/',
+  '/dyadic-adjustment-scale/',
+  '/experiences-in-close-relationships/',
+  '/generalized-anxiety-disorder/',
+  '/patient-health-questionnaire/',
+  '/relationship-closeness-inventory/',
+  '/satisfaction-with-life/',
+];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
@@ -15,7 +25,9 @@ self.addEventListener('activate', (event) => {
       .keys()
       .then((keys) =>
         Promise.all(
-          keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key))
+          keys
+            .filter((key) => key !== CACHE_NAME)
+            .map((key) => caches.delete(key))
         )
       )
   );

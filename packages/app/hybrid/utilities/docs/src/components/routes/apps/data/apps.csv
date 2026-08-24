@@ -35,11 +35,8 @@ Editors,editors,Regex,Pattern Generator,PiMagnifyingGlass,regex
 Editors,editors,Slides,Pitch Deck,PiPresentation,slides
 Editors,editors,Word Counter,Word Count,PiNotePencil,word-counter
 Education,education,DOI,Cite,PiFileText,doi
-Education,education,English,Dictionary,PiBooks,english
-Education,education,Flashcards,Words,PiNotebook,flashcards
 Education,education,Periodic Table,Elements,PiChartBar,periodic-table
 Education,education,Pitch,Training,PiPianoKeys,pitch
-Education,education,Sign Language,Detection,PiHandPeace,sign
 Text - Convert,text-convert,Braille,Text to Braille,PiDotsNine,braille
 Text - Convert,text-convert,Case,Converter,PiFileText,text-case
 Text - Convert,text-convert,Leet Speak,Text to Leet,PiTextAa,leetspeak

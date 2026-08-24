@@ -262,18 +262,6 @@
         "toolId": "doi"
       },
       {
-        "label": "English",
-        "description": "Dictionary",
-        "icon": "PiBooks",
-        "toolId": "english"
-      },
-      {
-        "label": "Flashcards",
-        "description": "Words",
-        "icon": "PiNotebook",
-        "toolId": "flashcards"
-      },
-      {
         "label": "Periodic Table",
         "description": "Elements",
         "icon": "PiChartBar",
@@ -284,12 +272,6 @@
         "description": "Training",
         "icon": "PiPianoKeys",
         "toolId": "pitch"
-      },
-      {
-        "label": "Sign Language",
-        "description": "Detection",
-        "icon": "PiHandPeace",
-        "toolId": "sign"
       }
     ]
   },
