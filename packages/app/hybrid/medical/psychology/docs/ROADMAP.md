@@ -1,9 +1,9 @@
 # Psychology — Roadmap
 
 Validated self-report psychological scales for screening and self-reflection —
-BDI-II, BFI, DAS, ECR-R, GAD-7, PHQ-9, RCI-R, SWLS. One Next.js codebase
-(static export) shipped as a web app (PWA) and desktop app (Tauri). Migrated
-out of the `utilities/docs` monolith into a self-contained app under
+BDI-II, BFI, DAS, ECR-R, GAD-7, PHQ-9, RCI-R, SWLS. One Next.js codebase (static
+export) shipped as a web app (PWA) and desktop app (Tauri). Migrated out of the
+`utilities/docs` monolith into a self-contained app under
 `packages/app/hybrid/medical/psychology`.
 
 ---
@@ -47,8 +47,8 @@ out of the `utilities/docs` monolith into a self-contained app under
        (identifier `io.github.hieudoanm.psychology`; updater endpoint + pubkey
        configured; `createUpdaterArtifacts` defaults to `false` so plain builds
        need no signing key — see `docs/PACKAGING.md`)
-4. [x] App icon set generated and wired into `tauri.conf.json`, favicon, and
-       PWA manifest icons
+4. [x] App icon set generated and wired into `tauri.conf.json`, favicon, and PWA
+       manifest icons
 5. [x] CI: lint, typecheck, build web export, build Tauri desktop artifact
 
 ---
@@ -69,8 +69,8 @@ out of the `utilities/docs` monolith into a self-contained app under
        at 10 (`/generalized-anxiety-disorder/`)
 2. [x] **PHQ-9** — 9 items, published severity bands, item 9 crisis alert
        (`/patient-health-questionnaire/`)
-3. [x] **BDI-II** — 21 items over three steps, 21 severity bands, item 9
-       crisis alert (`/beck-depression-inventory/`)
+3. [x] **BDI-II** — 21 items over three steps, 21 severity bands, item 9 crisis
+       alert (`/beck-depression-inventory/`)
 4. [x] Shared wizard UX: intro step → item steps with progress bar → results
        step with screening disclaimer
 5. [x] Crisis-resources alert path in `ResultsStep` for safety-relevant items
@@ -88,8 +88,8 @@ out of the `utilities/docs` monolith into a self-contained app under
 4. [x] **RCI-R** — time entries (hours + minutes), activities checklist,
        influence ratings with reverse keying, plans section
        (`/relationship-closeness-inventory/`)
-5. [x] **SWLS** — 5 items, seven bands from extremely dissatisfied to
-       extremely satisfied (`/satisfaction-with-life/`)
+5. [x] **SWLS** — 5 items, seven bands from extremely dissatisfied to extremely
+       satisfied (`/satisfaction-with-life/`)
 
 ---
 
@@ -120,8 +120,8 @@ out of the `utilities/docs` monolith into a self-contained app under
 
 ## Phase 6 — Release Engineering
 
-1. [ ] macOS notarization pipeline (Developer ID + notarytool credentials in
-       CI) — see `docs/PACKAGING.md`
+1. [ ] macOS notarization pipeline (Developer ID + notarytool credentials in CI)
+       — see `docs/PACKAGING.md`
 2. [ ] Signed release builds with `createUpdaterArtifacts: true` publishing
        `.sig` bundles + `latest.json` to the updater endpoint
 3. [ ] `app-hybrid-psychology-latest` release tag populated with the exact
@@ -163,10 +163,9 @@ Resolved product decisions:
    functions matching published manuals exactly; no Rust involvement beyond the
    standard plugin shell keeps web and desktop behaviour identical.
 5. **Safety-first alerts**: safety-relevant items (BDI-II item 9, PHQ-9 item 9)
-   always surface crisis resources when scored above zero — this is treated as
-   a regression-level requirement, tested explicitly.
+   always surface crisis resources when scored above zero — this is treated as a
+   regression-level requirement, tested explicitly.
 6. **Desktop-first packaging**: macOS (Apple Silicon) and Linux (`.AppImage` /
-   `.deb`) ship first; Windows signing and mobile builds are tracked in Phase
-   6.
+   `.deb`) ship first; Windows signing and mobile builds are tracked in Phase 6.
 7. **Offline-only by design**: no backend is used or needed. The service worker
    makes the full experience available offline after the first visit.

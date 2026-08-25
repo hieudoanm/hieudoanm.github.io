@@ -2,8 +2,9 @@
 
 ## Web
 
-Open <https://hieudoanm.github.io/downloads/casino/> in any modern browser. The web build is a static export and
-installs as a PWA — offline-capable after the first visit.
+Open <https://hieudoanm.github.io/downloads/casino/> in any modern browser. The
+web build is a static export and installs as a PWA — offline-capable after the
+first visit.
 
 ## Platforms
 
@@ -16,12 +17,18 @@ installs as a PWA — offline-capable after the first visit.
 | macOS    |        | aarch64      | 13.+         | [Download `.dmg`][download-dmg]²           |
 | Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi]            |
 
-[download-apk]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-casino-latest/app-universal-release.apk
-[download-aab]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-casino-latest/app-universal-release.aab
-[download-app-image]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-casino-latest/casino_amd64.AppImage
-[download-deb]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-casino-latest/casino_amd64.deb
-[download-dmg]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-casino-latest/casino_aarch64.dmg
-[download-msi]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-casino-latest/casino_x64.msi
+[download-apk]:
+  https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-casino-latest/app-universal-release.apk
+[download-aab]:
+  https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-casino-latest/app-universal-release.aab
+[download-app-image]:
+  https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-casino-latest/casino_amd64.AppImage
+[download-deb]:
+  https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-casino-latest/casino_amd64.deb
+[download-dmg]:
+  https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-casino-latest/casino_aarch64.dmg
+[download-msi]:
+  https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-casino-latest/casino_x64.msi
 
 ## Notes
 
@@ -34,7 +41,8 @@ installs as a PWA — offline-capable after the first visit.
 SHA-256 digests for every asset are published alongside the release in
 [SHA256SUMS.txt][checksums].
 
-[checksums]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-casino-latest/SHA256SUMS.txt
+[checksums]:
+  https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-casino-latest/SHA256SUMS.txt
 
 ## Source
 

@@ -11,6 +11,9 @@ const COLUMNS = [
   'label',
   'description',
   'icon',
+  'version',
+  'lastUpdated',
+  'fileSize',
   'href',
   'releasesAction',
   'releasesUrl',
@@ -37,6 +40,9 @@ type DownloadItem = {
   description: string;
   icon: string;
   href: string;
+  version: string;
+  lastUpdated: string;
+  fileSize: string;
   actions: DownloadAction[];
 };
 
@@ -133,6 +139,9 @@ const toJson = (rows: CsvRow[]): DownloadSection[] => {
       description: row.description,
       icon: row.icon,
       href: row.href,
+      version: row.version || '1.0.0',
+      lastUpdated: row.lastUpdated || '',
+      fileSize: row.fileSize || '',
       actions: toActions(row),
     };
     if (section) {

@@ -18,7 +18,10 @@ describe('DownloadsPage', () => {
     );
     expect(
       screen.getByRole('link', { name: 'Download .AppImage' })
-    ).toHaveAttribute('href', expect.stringContaining('app-hybrid-developer-tools-api-latest'));
+    ).toHaveAttribute(
+      'href',
+      expect.stringContaining('app-hybrid-developer-tools-api-latest')
+    );
     expect(screen.getByRole('link', { name: 'Download .deb' })).toHaveAttribute(
       'href',
       expect.stringContaining('app-hybrid-developer-tools-api-latest')

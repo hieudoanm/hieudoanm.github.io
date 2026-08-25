@@ -1,24 +1,66 @@
 {
   "name": "Store",
   "short_name": "Store",
-  "description": "Apps Store - Browse and download apps",
+  "description": "Apps Store - Browse and download all hybrid and native apps with OS detection, recommended downloads, and detail pages.",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#ff0030",
   "orientation": "any",
+  "lang": "en",
+  "dir": "ltr",
+  "id": "/",
+  "categories": ["shopping"],
+  "iarc_rating_id": "",
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "shortcuts": [
+    {
+      "name": "Open Store",
+      "short_name": "Store",
+      "description": "Apps Store - Browse and download all hybrid and native apps with OS detection, recommended downloads, and detail pages.",
+      "url": "/",
+      "icons": [
+        {
+          "src": "/icons/icon-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "screenshots": [],
   "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
     {
       "src": "/icons/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
     },
     {
       "src": "/icons/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }

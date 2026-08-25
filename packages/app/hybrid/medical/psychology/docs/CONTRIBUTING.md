@@ -1,8 +1,8 @@
 # Contributing
 
 Thanks for contributing to **Psychology**, a hybrid collection of validated
-self-report psychological scales (BDI-II, BFI, DAS, ECR-R, GAD-7, PHQ-9,
-RCI-R, SWLS) that ships as a web app (browser) and desktop app (Tauri).
+self-report psychological scales (BDI-II, BFI, DAS, ECR-R, GAD-7, PHQ-9, RCI-R,
+SWLS) that ships as a web app (browser) and desktop app (Tauri).
 
 ## Getting Started
 
@@ -22,15 +22,15 @@ RCI-R, SWLS) that ships as a web app (browser) and desktop app (Tauri).
 
 ## Development Commands
 
-| Task       | Command                                                  |
-| ---------- | -------------------------------------------------------- |
-| Dev server | `pnpm dev --filter=@hieudoanm.github.io/psychology`      |
-| Build      | `pnpm build --filter=@hieudoanm.github.io/psychology`    |
-| Lint       | `pnpm lint --filter=@hieudoanm.github.io/psychology`     |
-| Format     | `pnpm format --filter=@hieudoanm.github.io/psychology`   |
-| Unit tests | `pnpm test --filter=@hieudoanm.github.io/psychology`     |
-| E2E tests  | `pnpm test:e2e --filter=@hieudoanm.github.io/psychology` |
-| Desktop    | `pnpm tauri --filter=@hieudoanm.github.io/psychology dev`|
+| Task       | Command                                                   |
+| ---------- | --------------------------------------------------------- |
+| Dev server | `pnpm dev --filter=@hieudoanm.github.io/psychology`       |
+| Build      | `pnpm build --filter=@hieudoanm.github.io/psychology`     |
+| Lint       | `pnpm lint --filter=@hieudoanm.github.io/psychology`      |
+| Format     | `pnpm format --filter=@hieudoanm.github.io/psychology`    |
+| Unit tests | `pnpm test --filter=@hieudoanm.github.io/psychology`      |
+| E2E tests  | `pnpm test:e2e --filter=@hieudoanm.github.io/psychology`  |
+| Desktop    | `pnpm tauri --filter=@hieudoanm.github.io/psychology dev` |
 
 Run `lint`, `format`, `test`, and `test:e2e` before pushing — CI enforces all of
 them.
@@ -51,7 +51,8 @@ every change.
 4. **DRY** — when a pattern repeats, centralize it.
 5. **Small, focused files** — functions ≤ 30 lines, files ≤ 200 lines.
 6. **Explicit error handling** — check errors and fail loudly.
-7. **Test names as documentation** — `it("flips reverse-keyed items before summing")`.
+7. **Test names as documentation** —
+   `it("flips reverse-keyed items before summing")`.
 8. **Consistent imports** — group by origin: stdlib, third-party, internal.
 9. **Pure functions with explicit dependencies** — accept inputs, return
    outputs; no global/singleton state.
@@ -97,21 +98,20 @@ every change.
 ## Scale Conventions
 
 - Atomic design: `atoms/` → `scales/` → `templates/`
-- Each scale is self-contained under
-  `src/components/scales/<ScaleName>/`: `index.tsx` (wizard UI inside
-  `ToolTemplate`), `constants.ts` (items + response options + reverse-key
-  metadata), `types.ts`, `utils.ts` (pure scoring + interpretation), plus
-  `__tests__/`
-- **All scoring logic lives in `utils` as pure functions** — no DOM types, no
-  UI imports; every band boundary and reverse-key flip is unit-tested directly
+- Each scale is self-contained under `src/components/scales/<ScaleName>/`:
+  `index.tsx` (wizard UI inside `ToolTemplate`), `constants.ts` (items +
+  response options + reverse-key metadata), `types.ts`, `utils.ts` (pure
+  scoring + interpretation), plus `__tests__/`
+- **All scoring logic lives in `utils` as pure functions** — no DOM types, no UI
+  imports; every band boundary and reverse-key flip is unit-tested directly
 - Every scale component receives `onClose: () => void`; route pages wire it to
   `router.push('/')`
 - Wizard steps render through the shared step components with a progress bar;
   results render through `ResultsStep`
 - Safety-relevant items (BDI-II item 9, PHQ-9 item 9) must surface the
   crisis-resources alert in `ResultsStep` — never remove or soften this path
-- Interpretation bands must match the published manuals; cite the band ranges
-  in test names when adding a scale
+- Interpretation bands must match the published manuals; cite the band ranges in
+  test names when adding a scale
 
 ## Testing Conventions
 
@@ -130,8 +130,7 @@ every change.
 
 1. Use `getByRole` / `getByTestId` over raw CSS/XPath.
 2. Assert on user-visible state (`toBeVisible`, `toHaveURL`).
-3. Cover the home → scale → close flow and the 404 route
-   (`e2e/home.spec.ts`).
+3. Cover the home → scale → close flow and the 404 route (`e2e/home.spec.ts`).
 
 ## Before You Push
 

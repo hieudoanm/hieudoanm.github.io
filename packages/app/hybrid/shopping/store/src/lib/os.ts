@@ -21,13 +21,4 @@ export const PLATFORM_LABELS: Record<Platform, string> = {
   unknown: 'Unknown',
 };
 
-export const PLATFORM_ICONS: Record<Platform, string> = {
-  macos: 'PiAppleLogo',
-  windows: 'PiWindowsLogo',
-  linux: 'PiLinuxLogo',
-  android: 'PiAndroidLogo',
-  ios: 'PiAppleLogo',
-  unknown: 'PiDevice',
-};
-
 export { detectPlatform };

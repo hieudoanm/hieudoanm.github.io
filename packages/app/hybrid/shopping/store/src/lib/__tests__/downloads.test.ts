@@ -11,6 +11,9 @@ const mockSections: RawSection[] = [
         description: 'Developer Tools',
         icon: 'PiTerminal',
         href: 'https://github.com/test',
+        version: '1.0.0',
+        lastUpdated: '2025-01-01',
+        fileSize: '10 MB',
         actions: [
           { label: '.dmg', url: 'https://example.com/test.dmg' },
           { label: '.apk', url: 'https://example.com/test.apk' },
@@ -27,6 +30,9 @@ const mockSections: RawSection[] = [
         description: 'Utilities',
         icon: 'PiGear',
         href: 'https://github.com/test',
+        version: '1.0.0',
+        lastUpdated: '2025-01-01',
+        fileSize: '',
         actions: [
           {
             label: '.dmg',
@@ -45,6 +51,9 @@ const mockSections: RawSection[] = [
         description: 'Utilities',
         icon: 'PiGear',
         href: 'https://github.com/test',
+        version: '1.0.0',
+        lastUpdated: '2025-01-01',
+        fileSize: '',
         actions: [
           {
             label: '.apk',
@@ -63,6 +72,9 @@ const mockSections: RawSection[] = [
         description: 'Developer Tools',
         icon: 'PiTerminal',
         href: 'https://github.com/cli',
+        version: '1.0.0',
+        lastUpdated: '2025-01-01',
+        fileSize: '',
         actions: [
           { label: '.dmg', url: 'https://example.com/cli.dmg' },
           { label: '.deb', url: 'https://example.com/cli.deb' },
@@ -79,6 +91,9 @@ const mockSections: RawSection[] = [
         description: 'Productivity',
         icon: 'PiGlobe',
         href: 'https://github.com/ext',
+        version: '1.0.0',
+        lastUpdated: '2025-01-01',
+        fileSize: '',
         actions: [
           { label: '.msi', url: 'https://example.com/ext.msi' },
           { label: '.appimage', url: 'https://example.com/ext.AppImage' },
@@ -173,6 +188,9 @@ describe('parseDownloads', () => {
             description: 'Other',
             icon: 'PiPackage',
             href: 'https://test.com',
+            version: '',
+            lastUpdated: '',
+            fileSize: '',
             actions: [{ label: '.bin', url: 'https://test.com/file.bin' }],
           },
         ],
@@ -194,6 +212,9 @@ describe('parseDownloads', () => {
             description: 'Utility',
             icon: 'PiPackage',
             href: 'https://test.com',
+            version: '',
+            lastUpdated: '',
+            fileSize: '',
             actions: [{ label: '.ipa', url: 'https://test.com/app.ipa' }],
           },
         ],
@@ -214,6 +235,9 @@ describe('parseDownloads', () => {
             description: 'Utility',
             icon: 'PiPackage',
             href: 'https://test.com',
+            version: '',
+            lastUpdated: '',
+            fileSize: '',
             actions: [
               { label: 'Download', url: 'https://test.com/ios-release.ipa' },
             ],
@@ -236,6 +260,9 @@ describe('parseDownloads', () => {
             description: 'Utility',
             icon: 'PiPackage',
             href: 'https://test.com',
+            version: '',
+            lastUpdated: '',
+            fileSize: '',
             actions: [{ label: 'Download', url: 'https://test.com/file' }],
           },
         ],
@@ -256,6 +283,9 @@ describe('parseDownloads', () => {
             description: 'Utility',
             icon: 'PiPackage',
             href: 'https://test.com',
+            version: '',
+            lastUpdated: '',
+            fileSize: '',
             actions: [{ label: 'Download', url: 'https://test.com/file.bin' }],
           },
         ],
@@ -280,6 +310,9 @@ describe('parseDownloads', () => {
             description: 'Utility',
             icon: 'PiPackage',
             href: 'https://test.com',
+            version: '',
+            lastUpdated: '',
+            fileSize: '',
             actions: [],
           },
         ],
@@ -289,7 +322,7 @@ describe('parseDownloads', () => {
     expect(apps[0].slug).toBe('my-app');
   });
 
-  it('parses real-world label format (Android APK, macOS DMG)', () => {
+  it('parses real-world label format', () => {
     const sections: RawSection[] = [
       {
         id: 'apps-hybrid',
@@ -300,13 +333,16 @@ describe('parseDownloads', () => {
             description: 'Utility',
             icon: 'PiPackage',
             href: 'https://test.com',
+            version: '2.0.0',
+            lastUpdated: '2025-06-01',
+            fileSize: '15 MB',
             actions: [
-              { label: 'Android APK', url: 'https://test.com/app.apk' },
-              { label: 'Android AAB', url: 'https://test.com/app.aab' },
-              { label: 'macOS DMG', url: 'https://test.com/app.dmg' },
-              { label: 'Linux AppImage', url: 'https://test.com/app.AppImage' },
-              { label: 'Linux DEB', url: 'https://test.com/app.deb' },
-              { label: 'Windows MSI', url: 'https://test.com/app.msi' },
+              { label: '.aab', url: 'https://test.com/app.aab' },
+              { label: '.apk', url: 'https://test.com/app.apk' },
+              { label: '.dmg', url: 'https://test.com/app.dmg' },
+              { label: '.AppImage', url: 'https://test.com/app.AppImage' },
+              { label: '.deb', url: 'https://test.com/app.deb' },
+              { label: '.msi', url: 'https://test.com/app.msi' },
             ],
           },
         ],
@@ -320,6 +356,14 @@ describe('parseDownloads', () => {
     expect(dls[3].platform).toBe('linux');
     expect(dls[4].platform).toBe('linux');
     expect(dls[5].platform).toBe('windows');
+  });
+
+  it('includes version metadata in parsed apps', () => {
+    const apps = parseDownloads(mockSections);
+    expect(apps[0].version).toBe('1.0.0');
+    expect(apps[0].lastUpdated).toBe('2025-01-01');
+    expect(apps[0].fileSize).toBe('10 MB');
+    expect(apps[0].screenshots).toEqual([]);
   });
 });
 

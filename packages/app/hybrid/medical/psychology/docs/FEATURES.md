@@ -22,9 +22,9 @@
 
 ## Scales
 
-Every scale follows the same wizard UX — intro step → item steps with a
-progress bar → results step — and every results step carries a screening
-disclaimer (self-report instruments are not diagnoses).
+Every scale follows the same wizard UX — intro step → item steps with a progress
+bar → results step — and every results step carries a screening disclaimer
+(self-report instruments are not diagnoses).
 
 ### Beck Depression Inventory (BDI-II)
 

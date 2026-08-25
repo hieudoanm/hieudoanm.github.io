@@ -1,4 +1,4 @@
-import { PLATFORM_LABELS, PLATFORM_ICONS } from '../os';
+import { PLATFORM_LABELS } from '../os';
 import type { Platform } from '../os';
 
 describe('PLATFORM_LABELS', () => {
@@ -23,21 +23,5 @@ describe('PLATFORM_LABELS', () => {
     expect(PLATFORM_LABELS.linux).toBe('Linux');
     expect(PLATFORM_LABELS.android).toBe('Android');
     expect(PLATFORM_LABELS.ios).toBe('iOS');
-  });
-});
-
-describe('PLATFORM_ICONS', () => {
-  it('has icons for all platforms', () => {
-    const platforms: Platform[] = [
-      'macos',
-      'windows',
-      'linux',
-      'android',
-      'ios',
-      'unknown',
-    ];
-    for (const p of platforms) {
-      expect(PLATFORM_ICONS[p]).toBeTruthy();
-    }
   });
 });

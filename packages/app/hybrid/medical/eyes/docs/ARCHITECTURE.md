@@ -65,15 +65,15 @@ src-tauri/            # Tauri shell (updater + dialog + notification plugins)
 
 Flat routes only — no dynamic `[id]` or `[slug]` segments.
 
-| Route          | Page     | Client | Purpose                                    |
-| -------------- | -------- | ------ | ------------------------------------------ |
-| `/`            | page.tsx | Yes    | Home: grid of chart cards                  |
-| `/snellen/`    | page.tsx | Yes    | Fullscreen Snellen chart modal             |
-| `/logmar/`     | page.tsx | Yes    | Fullscreen LogMAR chart modal              |
-| `/tumbling-e/` | page.tsx | Yes    | Fullscreen Tumbling E chart modal          |
-| `/about/`      | page.tsx | No     | AboutTemplate                              |
-| `/downloads/`  | page.tsx | No     | DownloadsTemplate (release links)          |
-| `/version/`    | page.tsx | No     | VersionTemplate (build version + copy)     |
+| Route          | Page     | Client | Purpose                                |
+| -------------- | -------- | ------ | -------------------------------------- |
+| `/`            | page.tsx | Yes    | Home: grid of chart cards              |
+| `/snellen/`    | page.tsx | Yes    | Fullscreen Snellen chart modal         |
+| `/logmar/`     | page.tsx | Yes    | Fullscreen LogMAR chart modal          |
+| `/tumbling-e/` | page.tsx | Yes    | Fullscreen Tumbling E chart modal      |
+| `/about/`      | page.tsx | No     | AboutTemplate                          |
+| `/downloads/`  | page.tsx | No     | DownloadsTemplate (release links)      |
+| `/version/`    | page.tsx | No     | VersionTemplate (build version + copy) |
 
 Chart pages render their chart inside a modal; every chart receives an
 `onClose: () => void` prop wired to `router.push('/')`.
@@ -107,10 +107,10 @@ Chart pages render their chart inside a modal; every chart receives an
 
 ## Chart Logic Conventions
 
-- Optotype pools and line tables live in each chart's `constants.ts`
-  (Snellen: ten lines 20/200 → 20/10 over `CDEFHKLNOPRSTUV`; LogMAR: fourteen
-  lines 1.0 → -0.3 with Snellen equivalents over `CDEFHKNPRSVZ`; Tumbling E:
-  ten lines 20/200 → 20/10 over four rotations)
+- Optotype pools and line tables live in each chart's `constants.ts` (Snellen:
+  ten lines 20/200 → 20/10 over `CDEFHKLNOPRSTUV`; LogMAR: fourteen lines 1.0 →
+  -0.3 with Snellen equivalents over `CDEFHKNPRSVZ`; Tumbling E: ten lines
+  20/200 → 20/10 over four rotations)
 - Randomisation helpers (`randomLetters`, `randomDirections`) are pure functions
   in `utils/` — zero UI imports, unit-tested directly
 - Line sizing uses Tailwind arbitrary `text-[…]rem` values scaled for a
@@ -147,6 +147,6 @@ Chart pages render their chart inside a modal; every chart receives an
 - **Desktop (Tauri)**: auto-update checks, system dialogs, notifications — via
   the official `tauri-plugin-updater`, `tauri-plugin-dialog`, and
   `tauri-plugin-notification` plugins
-- **No custom Rust commands** — the Rust side is stock plugin wiring
-  (`lib.rs`), so the web export behaves identically to the desktop app
+- **No custom Rust commands** — the Rust side is stock plugin wiring (`lib.rs`),
+  so the web export behaves identically to the desktop app
 - Feature detection in `lib/native` decides whether a call reaches Tauri IPC

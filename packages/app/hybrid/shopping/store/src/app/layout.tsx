@@ -12,6 +12,11 @@ export const metadata: Metadata = {
     statusBarStyle: 'black-translucent',
     title: 'Store',
   },
+  openGraph: {
+    title: 'Store',
+    description: 'Apps Store - Browse and download apps',
+    type: 'website',
+  },
 };
 
 const RootLayout: FC<{ children: ReactNode }> = ({ children }) => (

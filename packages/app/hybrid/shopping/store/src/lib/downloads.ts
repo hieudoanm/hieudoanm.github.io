@@ -17,6 +17,10 @@ export interface AppData {
   href: string;
   platforms: Platform[];
   downloads: DownloadOption[];
+  version: string;
+  lastUpdated: string;
+  fileSize: string;
+  screenshots: string[];
 }
 
 const parsePlatformFromUrl = (url: string): Platform => {
@@ -40,7 +44,7 @@ const parsePlatformFromLabel = (label: string): Platform => {
 
 const parsePlatformFromSection = (
   sectionId: string,
-  url: string
+  _url: string
 ): Platform[] => {
   if (sectionId === 'apps-hybrid')
     return ['macos', 'windows', 'linux', 'android', 'ios'];
@@ -65,6 +69,9 @@ export type RawSection = {
     description: string;
     icon: string;
     href: string;
+    version: string;
+    lastUpdated: string;
+    fileSize: string;
     actions: { label: string; url: string }[];
   }[];
 };
@@ -101,6 +108,10 @@ export const parseDownloads = (sections: RawSection[]): AppData[] => {
         href: item.href,
         platforms,
         downloads,
+        version: item.version || '1.0.0',
+        lastUpdated: item.lastUpdated || '',
+        fileSize: item.fileSize || '',
+        screenshots: [],
       });
     }
   }

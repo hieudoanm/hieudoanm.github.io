@@ -1,11 +1,23 @@
+'use client';
+
 import type { FC } from 'react';
 import { getIcon } from '@/lib/icons';
 import type { AppData } from '@/lib/downloads';
 import { PLATFORM_LABELS } from '@/lib/os';
+import { PiShareFat } from 'react-icons/pi';
 
 interface AppHeaderProps {
   app: AppData;
 }
+
+const handleShare = (app: AppData) => {
+  const url = `${typeof window !== 'undefined' ? window.location.origin : ''}/app/${app.slug}/`;
+  if (navigator.share) {
+    navigator.share({ title: app.label, text: app.description, url });
+  } else {
+    navigator.clipboard.writeText(url);
+  }
+};
 
 export const AppHeader: FC<AppHeaderProps> = ({ app }) => {
   const Icon = getIcon(app.icon);
@@ -20,6 +32,19 @@ export const AppHeader: FC<AppHeaderProps> = ({ app }) => {
         <span className="bg-primary/20 text-primary border-primary/30 badge badge-sm font-mono tracking-normal">
           {app.section}
         </span>
+        <span className="bg-base-300 text-base-content/60 badge badge-sm font-mono tracking-normal">
+          v{app.version}
+        </span>
+        {app.lastUpdated && (
+          <span className="bg-base-300 text-base-content/60 badge badge-sm font-mono tracking-normal">
+            {app.lastUpdated}
+          </span>
+        )}
+        {app.fileSize && (
+          <span className="bg-base-300 text-base-content/60 badge badge-sm font-mono tracking-normal">
+            {app.fileSize}
+          </span>
+        )}
         {app.platforms.map((p) => (
           <span
             key={p}
@@ -27,6 +52,13 @@ export const AppHeader: FC<AppHeaderProps> = ({ app }) => {
             {PLATFORM_LABELS[p]}
           </span>
         ))}
+        <button
+          type="button"
+          onClick={() => handleShare(app)}
+          className="btn btn-ghost btn-xs"
+          title="Share">
+          <PiShareFat className="text-sm" />
+        </button>
       </div>
     </div>
   );

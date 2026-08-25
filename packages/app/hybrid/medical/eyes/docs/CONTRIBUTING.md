@@ -97,8 +97,8 @@ every change.
 
 - Atomic design: `atoms/` → `charts/` → `templates/`
 - Each chart is self-contained under `src/components/charts/<Chart>/`:
-  `index.tsx` (fullscreen modal), `constants.ts` (line tables + optotype
-  pools), `utils/` (pure randomisation + generation)
+  `index.tsx` (fullscreen modal), `constants.ts` (line tables + optotype pools),
+  `utils/` (pure randomisation + generation)
 - **All chart logic lives in `utils/` as pure functions** — no DOM types, no UI
   imports; randomness goes through `Math.random` so tests can mock it
 - Every chart component receives `onClose: () => void`; route pages wire it to
@@ -124,8 +124,7 @@ every change.
 
 1. Use `getByRole` / `getByTestId` over raw CSS/XPath.
 2. Assert on user-visible state (`toBeVisible`, `toHaveURL`).
-3. Cover the home → chart → close flow and the 404 route
-   (`e2e/home.spec.ts`).
+3. Cover the home → chart → close flow and the 404 route (`e2e/home.spec.ts`).
 
 ## Before You Push
 

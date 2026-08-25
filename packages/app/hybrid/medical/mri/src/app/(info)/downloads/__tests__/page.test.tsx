@@ -16,7 +16,10 @@ describe('DownloadsPage', () => {
     );
     expect(
       screen.getByRole('link', { name: 'Download .AppImage' })
-    ).toHaveAttribute('href', expect.stringContaining('app-hybrid-medical-mri-latest'));
+    ).toHaveAttribute(
+      'href',
+      expect.stringContaining('app-hybrid-medical-mri-latest')
+    );
     expect(screen.getByText('macOS')).toBeInTheDocument();
     expect(screen.getByText('Linux (Debian)')).toBeInTheDocument();
   });

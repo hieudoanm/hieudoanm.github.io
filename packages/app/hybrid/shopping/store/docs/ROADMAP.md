@@ -25,36 +25,36 @@
 
 - [ ] App screenshots / preview images on detail pages
 - [ ] Category tags on cards (games, productivity, medical, etc.)
-- [ ] Sort options (name, category, recently added)
-- [ ] Grid/list view toggle
+- [x] Sort options (name, category)
+- [x] Grid/list view toggle
 - [ ] Animated page transitions (Framer Motion)
-- [ ] Keyboard navigation (arrow keys, Enter to select)
-- [ ] Share button (Web Share API)
-- [ ] Favorite / wishlist (localStorage)
-- [ ] Recently viewed apps (localStorage)
-- [ ] Dark/light theme persistence (localStorage)
+- [x] Keyboard navigation (press `/` to focus search, `Escape` to clear)
+- [x] Share button (Web Share API + clipboard fallback)
+- [x] Favorite / wishlist (localStorage)
+- [x] Recently viewed apps (localStorage)
+- [x] Dark/light theme persistence (localStorage)
 
 ## Phase 3 — Rich Catalog
 
 - [ ] App ratings and reviews (mock data)
-- [ ] Version history per app
+- [x] Version history per app
 - [ ] App screenshots gallery
-- [ ] System requirements display
-- [ ] File size and download count display
+- [x] System requirements display
+- [x] File size and download count display
 - [ ] Release notes per download
-- [ ] Related apps suggestions
+- [x] Related apps suggestions
 - [ ] Featured / promoted apps section
 - [ ] Trending apps (based on view count)
 
 ## Phase 4 — Search & Discovery
 
 - [ ] Full-text search with highlighting
-- [ ] Search suggestions / autocomplete
-- [ ] Advanced filters (platform, category, price)
+- [x] Search suggestions / autocomplete
+- [x] Advanced filters (platform, category)
 - [ ] Search history (localStorage)
 - [ ] URL-based deep linking for search queries
-- [ ] SEO metadata per app (Open Graph, Twitter cards)
-- [ ] Sitemap generation for all app pages
+- [x] SEO metadata per app (Open Graph, Twitter cards)
+- [x] Sitemap generation for all app pages
 - [ ] RSS feed for new apps
 
 ## Phase 5 — Platform & Ecosystem

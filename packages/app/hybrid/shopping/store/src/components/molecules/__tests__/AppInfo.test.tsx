@@ -16,6 +16,10 @@ const mockApp: AppData = {
     { platform: 'android', label: '.apk', url: 'https://example.com/test.apk' },
     { platform: 'windows', label: '.msi', url: 'https://example.com/test.msi' },
   ],
+  version: '1.0.0',
+  lastUpdated: '2025-01-01',
+  fileSize: '10 MB',
+  screenshots: [],
 };
 
 jest.mock('next/navigation', () => ({
@@ -81,5 +85,15 @@ describe('AppInfo', () => {
     const app = { ...mockApp, icon: 'UnknownIcon' };
     render(<AppInfo app={app} />);
     expect(screen.getByText('Test App')).toBeTruthy();
+  });
+
+  it('renders version badge', () => {
+    render(<AppInfo app={mockApp} />);
+    expect(screen.getByText('v1.0.0')).toBeTruthy();
+  });
+
+  it('renders file size when provided', () => {
+    render(<AppInfo app={mockApp} />);
+    expect(screen.getByText('10 MB')).toBeTruthy();
   });
 });

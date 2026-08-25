@@ -1,9 +1,9 @@
 # Eyes — Roadmap
 
-Visual acuity screening charts (Snellen, LogMAR, Tumbling E) for quick
-vision checks anywhere. One Next.js codebase (static export) shipped as a web
-app (PWA) and desktop app (Tauri). Migrated out of the `utilities/docs`
-monolith into a self-contained app under `packages/app/hybrid/medical/eyes`.
+Visual acuity screening charts (Snellen, LogMAR, Tumbling E) for quick vision
+checks anywhere. One Next.js codebase (static export) shipped as a web app (PWA)
+and desktop app (Tauri). Migrated out of the `utilities/docs` monolith into a
+self-contained app under `packages/app/hybrid/medical/eyes`.
 
 ---
 
@@ -29,8 +29,8 @@ monolith into a self-contained app under `packages/app/hybrid/medical/eyes`.
 
 1. UI: Next.js (`output: 'export'`), React, TailwindCSS + DaisyUI
 2. Shell: Tauri (desktop: macOS/Linux; mobile not shipped yet)
-3. Chart logic: pure TypeScript in each chart's `utils/` (`Math.random`-
-   driven optotype randomisation); Rust is stock plugin wiring only
+3. Chart logic: pure TypeScript in each chart's `utils/` (`Math.random`- driven
+   optotype randomisation); Rust is stock plugin wiring only
 4. Storage: none — screening sessions are ephemeral by design
 5. Package: self-contained `@hieudoanm.github.io/eyes` app under
    `packages/app/hybrid/medical/eyes`
@@ -47,8 +47,8 @@ monolith into a self-contained app under `packages/app/hybrid/medical/eyes`.
        (identifier `io.github.hieudoanm.eyes`; updater endpoint + pubkey
        configured; `createUpdaterArtifacts` defaults to `false` so plain builds
        need no signing key — see `docs/PACKAGING.md`)
-4. [x] App icon set generated and wired into `tauri.conf.json`, favicon, and
-       PWA manifest icons
+4. [x] App icon set generated and wired into `tauri.conf.json`, favicon, and PWA
+       manifest icons
 5. [x] CI: lint, typecheck, build web export, build Tauri desktop artifact
 
 ---
@@ -116,8 +116,8 @@ monolith into a self-contained app under `packages/app/hybrid/medical/eyes`.
 
 ## Phase 7 — Release Engineering
 
-1. [ ] macOS notarization pipeline (Developer ID + notarytool credentials in
-       CI) — see `docs/PACKAGING.md`
+1. [ ] macOS notarization pipeline (Developer ID + notarytool credentials in CI)
+       — see `docs/PACKAGING.md`
 2. [ ] Signed release builds with `createUpdaterArtifacts: true` publishing
        `.sig` bundles + `latest.json` to the updater endpoint
 3. [ ] `app-hybrid-eyes-latest` release tag populated with the exact artifact
@@ -155,11 +155,10 @@ Resolved product decisions:
    navigation (line stepping, reveal/hide, arrow keys) so learning one teaches
    all.
 4. **Pure-TypeScript chart logic**: randomisation stays in testable `utils/`
-   functions; no Rust involvement beyond the standard plugin shell keeps web
-   and desktop behaviour identical.
+   functions; no Rust involvement beyond the standard plugin shell keeps web and
+   desktop behaviour identical.
 5. **Desktop-first packaging**: macOS (Apple Silicon) and Linux (`.AppImage` /
    `.deb`) ship first because they cover the clinic-desktop use case; Windows
    signing and mobile builds are tracked in Phase 7.
-6. **Offline-only by design**: no backend is used or needed. The service
-   worker makes the full screening experience available offline after the
-   first visit.
+6. **Offline-only by design**: no backend is used or needed. The service worker
+   makes the full screening experience available offline after the first visit.

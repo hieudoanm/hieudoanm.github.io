@@ -1,8 +1,8 @@
 # Packaging Checklist
 
-Checklist for shipping Psychology to users: macOS notarization, Linux
-artifacts, and the Tauri updater pipeline. (Windows and mobile builds are not
-shipped yet — see `docs/ROADMAP.md`.)
+Checklist for shipping Psychology to users: macOS notarization, Linux artifacts,
+and the Tauri updater pipeline. (Windows and mobile builds are not shipped yet —
+see `docs/ROADMAP.md`.)
 
 ## Common
 
