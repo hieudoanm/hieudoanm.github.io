@@ -1,4 +1,4 @@
-(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,53107,e=>{"use strict";let t;var n,r=e.i(50491),o=e.i(60328),a=e.i(11680),i=e.i(44440),l=e.i(20137);let c=`# Typoglycemia
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,53107,e=>{"use strict";let t;var n,r=e.i(50491),o=e.i(60328),a=e.i(11680),i=e.i(42640),l=e.i(20137);let c=`# Typoglycemia
 
 Typoglycemia is a made-up word that comes from typo and hypoglycemia. It describes a popular idea about how people read text. The idea says that readers can understand words even when the letters in the middle are mixed up, as long as the first and last letters stay the same. Many examples of this are shared online to show how "easy" it is to read scrambled text.
 

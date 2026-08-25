@@ -1,12 +1,17 @@
 import { Tool } from '@hieudoanm.github.io/components/atoms';
 import type { IconType } from 'react-icons';
 import {
+  PiAtom,
+  PiBooks,
+  PiBrain,
   PiCardholder,
   PiChat,
   PiClipboard,
   PiCodeSimple,
+  PiCurrencyDollar,
   PiDatabase,
   PiDiceOne,
+  PiEye,
   PiFilePdf,
   PiFolder,
   PiFrameCorners,
@@ -17,9 +22,11 @@ import {
   PiGraduationCap,
   PiGridFour,
   PiGridNine,
+  PiHamburger,
   PiImage,
   PiMarkdownLogo,
   PiMicroscope,
+  PiMusicNote,
   PiPaintBrush,
   PiPaperPlaneTilt,
   PiPassword,
@@ -31,9 +38,11 @@ import {
   PiSoccerBall,
   PiTable,
   PiTerminal,
+  PiTimer,
   PiTrophy,
   PiVideoCamera,
   PiWallet,
+  PiWaveSine,
   PiX,
 } from 'react-icons/pi';
 import downloadsJson from './downloads.json';
@@ -48,12 +57,17 @@ type DownloadJsonSection = (typeof downloadsJson)[number];
 type DownloadJsonItem = DownloadJsonSection['items'][number];
 
 const ICON_BY_NAME: Record<string, IconType> = {
+  PiAtom,
+  PiBooks,
+  PiBrain,
   PiCardholder,
   PiChat,
   PiClipboard,
   PiCodeSimple,
+  PiCurrencyDollar,
   PiDatabase,
   PiDiceOne,
+  PiEye,
   PiFilePdf,
   PiFolder,
   PiFrameCorners,
@@ -64,9 +78,11 @@ const ICON_BY_NAME: Record<string, IconType> = {
   PiGraduationCap,
   PiGridFour,
   PiGridNine,
+  PiHamburger,
   PiImage,
   PiMarkdownLogo,
   PiMicroscope,
+  PiMusicNote,
   PiPaintBrush,
   PiPaperPlaneTilt,
   PiPassword,
@@ -78,9 +94,11 @@ const ICON_BY_NAME: Record<string, IconType> = {
   PiSoccerBall,
   PiTable,
   PiTerminal,
+  PiTimer,
   PiTrophy,
   PiVideoCamera,
   PiWallet,
+  PiWaveSine,
   PiX,
 };
 

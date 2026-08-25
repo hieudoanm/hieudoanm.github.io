@@ -112,6 +112,18 @@
         ]
       },
       {
+        "label": "Chemistry",
+        "description": "Education",
+        "icon": "PiAtom",
+        "href": "https://hieudoanm.github.io/downloads/chemistry",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-education-chemistry-latest"
+          }
+        ]
+      },
+      {
         "label": "Chess",
         "description": "Sports",
         "icon": "PiGameController",
@@ -196,6 +208,30 @@
         ]
       },
       {
+        "label": "Economics",
+        "description": "Education",
+        "icon": "PiCurrencyDollar",
+        "href": "https://hieudoanm.github.io/downloads/economics",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-education-economics-latest"
+          }
+        ]
+      },
+      {
+        "label": "Eyes",
+        "description": "Medical",
+        "icon": "PiEye",
+        "href": "https://hieudoanm.github.io/downloads/eyes",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-medical-eyes-latest"
+          }
+        ]
+      },
+      {
         "label": "Football",
         "description": "Sports",
         "icon": "PiSoccerBall",
@@ -204,6 +240,30 @@
           {
             "label": "Download App",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-sports-football-latest"
+          }
+        ]
+      },
+      {
+        "label": "Foody",
+        "description": "Food & Drink",
+        "icon": "PiHamburger",
+        "href": "https://hieudoanm.github.io/downloads/foody",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-food-drink-foody-latest"
+          }
+        ]
+      },
+      {
+        "label": "History",
+        "description": "Education",
+        "icon": "PiBooks",
+        "href": "https://hieudoanm.github.io/downloads/history",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-education-history-latest"
           }
         ]
       },
@@ -268,6 +328,18 @@
         ]
       },
       {
+        "label": "Music",
+        "description": "Education",
+        "icon": "PiMusicNote",
+        "href": "https://hieudoanm.github.io/downloads/music",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-education-music-latest"
+          }
+        ]
+      },
+      {
         "label": "Nikoli",
         "description": "Games",
         "icon": "PiGridNine",
@@ -275,7 +347,7 @@
         "actions": [
           {
             "label": "Download App",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-entertainment-nikoli-latest"
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-games-nikoli-latest"
           }
         ]
       },
@@ -336,6 +408,18 @@
           {
             "label": "Download App",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-productivity-projects-latest"
+          }
+        ]
+      },
+      {
+        "label": "Psychology",
+        "description": "Medical",
+        "icon": "PiBrain",
+        "href": "https://hieudoanm.github.io/downloads/psychology",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-medical-psychology-latest"
           }
         ]
       },
@@ -442,6 +526,18 @@
         ]
       },
       {
+        "label": "Mixer",
+        "description": "Utilities",
+        "icon": "PiWaveSine",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-macos-mixer-latest",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-macos-mixer-latest"
+          }
+        ]
+      },
+      {
         "label": "NFC",
         "description": "Utilities",
         "icon": "PiCardholder",
@@ -462,6 +558,18 @@
           {
             "label": "Download App",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-macos-snap-latest"
+          }
+        ]
+      },
+      {
+        "label": "Top",
+        "description": "Utilities",
+        "icon": "PiTimer",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-macos-top-latest",
+        "actions": [
+          {
+            "label": "Download App",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-macos-top-latest"
           }
         ]
       }
