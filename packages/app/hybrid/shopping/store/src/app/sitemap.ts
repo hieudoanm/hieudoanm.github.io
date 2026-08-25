@@ -8,7 +8,7 @@ const ALL_APPS = parseDownloads(
   downloads as Parameters<typeof parseDownloads>[0]
 );
 
-const BASE_URL = 'https://hieudoanm.github.io/downloads';
+const BASE_URL = 'https://hieudoanm.github.io/free/store';
 
 const sitemap = (): MetadataRoute.Sitemap => {
   const appUrls = ALL_APPS.map((app) => ({

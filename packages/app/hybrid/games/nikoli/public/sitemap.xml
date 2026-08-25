@@ -1,8 +1,57 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://hieudoanm.github.io/nikoli</loc>
-    <lastmod>2026-08-17</lastmod>
+    <loc>https://hieudoanm.github.io/free/nikoli/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://hieudoanm.github.io/free/nikoli/about/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hieudoanm.github.io/free/nikoli/downloads/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hieudoanm.github.io/free/nikoli/fillomino/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hieudoanm.github.io/free/nikoli/heyawake/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hieudoanm.github.io/free/nikoli/masyu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hieudoanm.github.io/free/nikoli/norinori/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hieudoanm.github.io/free/nikoli/nurikabe/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hieudoanm.github.io/free/nikoli/shikaku/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hieudoanm.github.io/free/nikoli/sudoku/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hieudoanm.github.io/free/nikoli/version/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
