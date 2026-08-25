@@ -32,10 +32,11 @@
 | 28  | pdf         | PDF         | Adobe Acrobat PDF                             | No       | DONE   | Productivity      | Business           |
 | 29  | projects    | Projects    | Atlassian Trello / Kanban                     | Required | DONE   | Productivity      | Business           |
 | 30  | resume      | Resume      | Resume Builer                                 | No       | DONE   | Productivity      | Business           |
-| 31  | chat        | Chat        | Chat like Codex / Claude                      | Required | DONE   | Social Networking | Business           |
-| 32  | messaging   | Messaging   | Telegram / WhatsApp / Messenger / Signal      | Required | DONE   | Social Networking | Business           |
-| 33  | chess       | Chess       | chess.com / lichess.org                       | No       | DONE   | Sports            | Games              |
-| 34  | football    | Football    | Football Formation / Analysis                 | No       | DONE   | Sports            | Games              |
-| 35  | tourney     | Touraments  | Football Cup / Swiss Manager                  | No       | DONE   | Sports            | Games              |
-| 36  | docs        | Docs        | TinyWow                                       | No       | DONE   | Utilities         | Productivity       |
-| 37  | password    | Password    | BitWarden / 1Password                         | Required | DONE   | Utilities         | Productivity       |
+| 31  | store       | Store       | App Store / Play Store                        | No       | DONE   | Shopping          | Business           |
+| 32  | chat        | Chat        | Chat like Codex / Claude                      | Required | DONE   | Social Networking | Business           |
+| 33  | messaging   | Messaging   | Telegram / WhatsApp / Messenger / Signal      | Required | DONE   | Social Networking | Business           |
+| 34  | chess       | Chess       | chess.com / lichess.org                       | No       | DONE   | Sports            | Games              |
+| 35  | football    | Football    | Football Formation / Analysis                 | No       | DONE   | Sports            | Games              |
+| 36  | tourney     | Touraments  | Football Cup / Swiss Manager                  | No       | DONE   | Sports            | Games              |
+| 37  | docs        | Docs        | TinyWow                                       | No       | DONE   | Utilities         | Productivity       |
+| 38  | password    | Password    | BitWarden / 1Password                         | Required | DONE   | Utilities         | Productivity       |

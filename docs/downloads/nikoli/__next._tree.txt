@@ -1,2 +1,0 @@
-:HL["/downloads/nikoli/_next/static/chunks/2f52h585tgdjy.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4180,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"B4Jhyt-155kUglOPoeUIE"}

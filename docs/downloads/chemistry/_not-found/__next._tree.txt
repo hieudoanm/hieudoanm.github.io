@@ -1,2 +1,0 @@
-:HL["/downloads/chemistry/_next/static/chunks/2qkyf_khf_7pi.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4180,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"K25R7JtrqYdvRsyEytP6e"}

@@ -1,0 +1,25 @@
+1:"$Sreact.fragment"
+2:I[50153,["/free/markdown/_next/static/chunks/3hhfevn74brzg.js"],"OutletBoundary"]
+3:"$Sreact.suspense"
+7:I[50153,["/free/markdown/_next/static/chunks/3hhfevn74brzg.js"],"ViewportBoundary"]
+8:I[50153,["/free/markdown/_next/static/chunks/3hhfevn74brzg.js"],"MetadataBoundary"]
+a:I[34727,["/free/markdown/_next/static/chunks/3hhfevn74brzg.js"],"default"]
+b:I[71309,["/free/markdown/_next/static/chunks/3hhfevn74brzg.js"],"default"]
+e:I[34727,["/free/markdown/_next/static/chunks/3hhfevn74brzg.js"],"LoadingBoundaryProvider"]
+f:I[75732,["/free/markdown/_next/static/chunks/3hhfevn74brzg.js","/free/markdown/_next/static/chunks/32i7fu1o8wg9s.js"],"default"]
+10:I[28580,["/free/markdown/_next/static/chunks/3hhfevn74brzg.js","/free/markdown/_next/static/chunks/2y5mj3x15lu7y.js"],"default"]
+:HL["/free/markdown/_next/static/chunks/1rge6f_9uulh0.css","style"]
+:HL["/free/markdown/_next/static/chunks/3ja3lkdat8o40.css","style"]
+6:X
+d:X
+d:C
+0:{"buildId":"GnN1fGcvbCYm7ayuOKAt1","data":[{"rsc":["$","$1","c",{"children":[["$","div",null,{"className":"flex h-screen flex-col items-center justify-center gap-4","children":[["$","h1",null,{"className":"text-2xl","children":"404"}],["$","p",null,{"className":"text-sm","children":"This note does not exist."}],["$","a",null,{"href":"/","className":"btn btn-primary btn-sm","children":"Back to vault"}]]}],null,["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"isPartial":"$@5","staleTime":"$6","varyParams":null},{"rsc":["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L7",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L8",null,{"children":["$","$3",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Markdown - Minimal Obsidian"}],["$","meta","1",{"name":"description","content":"A minimal Obsidian-like notes vault with a Markdown editor"}],["$","link","2",{"rel":"manifest","href":"/manifest.json"}],["$","meta","3",{"name":"mobile-web-app-capable","content":"yes"}],["$","meta","4",{"name":"apple-mobile-web-app-title","content":"Markdown"}],["$","meta","5",{"name":"apple-mobile-web-app-status-bar-style","content":"black-translucent"}]]}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"isPartial":"$@9","staleTime":"$6","varyParams":null},{"rsc":["$","$1","c",{"children":[null,["$","$La",null,{"parallelRouterKey":"children","template":["$","$Lb",null,{}]}]]}],"isPartial":"$@c","staleTime":"$6","varyParams":"$d"},{"rsc":["$","$Le",null,{"loading":[["$","div","l",{"className":"flex h-screen items-center justify-center","children":["$","span",null,{"className":"loading loading-spinner loading-lg text-primary"}]}],[],null],"children":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/free/markdown/_next/static/chunks/1rge6f_9uulh0.css","precedence":"next"}],["$","link","1",{"rel":"stylesheet","href":"/free/markdown/_next/static/chunks/3ja3lkdat8o40.css","precedence":"next"}],["$","script","script-0",{"src":"/free/markdown/_next/static/chunks/3hhfevn74brzg.js","async":true}]],["$","html",null,{"lang":"en","data-theme":"nothing","className":"inter_537b2856-module__DOofUa__variable jetbrains_mono_da46d059-module__t9WmUG__variable lora_fc948ed-module__r--KUq__variable","children":[["$","head",null,{"children":["$","link",null,{"rel":"apple-touch-icon","href":"/icons/icon-192.png"}]}],["$","body",null,{"className":"bg-base-100 text-base-content h-screen overflow-y-auto","style":{"fontFamily":"var(--font-mono)"},"children":["$","$La",null,{"parallelRouterKey":"children","error":"$f","errorStyles":[],"errorScripts":[["$","script","script-0",{"src":"/free/markdown/_next/static/chunks/32i7fu1o8wg9s.js","async":true}]],"template":["$","$L10",null,{"children":["$","$Lb",null,{}]}],"templateStyles":[],"templateScripts":[["$","script","script-0",{"src":"/free/markdown/_next/static/chunks/2y5mj3x15lu7y.js","async":true}]],"notFound":[["$","div",null,{"className":"flex h-screen flex-col items-center justify-center gap-4","children":[["$","h1",null,{"className":"text-2xl","children":"404"}],["$","p",null,{"className":"text-sm","children":"This note does not exist."}],["$","a",null,{"href":"/","className":"btn btn-primary btn-sm","children":"Back to vault"}]]}],[]]}]}]]}]]}]}],"isPartial":"$@11","staleTime":"$6","varyParams":null}],"isUpgradeableISRFallback":false,"a":"$@12","rootVaryParams":null,"needsRuntimeRequest":"$@13"}
+4:null
+6:300
+13:true
+6:C
+12:0
+9:"$undefined"
+c:"$undefined"
+11:"$undefined"
+5:"$undefined"

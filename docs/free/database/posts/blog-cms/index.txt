@@ -1,0 +1,228 @@
+1:I[34727,["/free/database/_next/static/chunks/1--z4n99tn7_d.js"],"LoadingBoundaryProvider"]
+2:"$Sreact.fragment"
+3:I[41483,["/free/database/_next/static/chunks/1--z4n99tn7_d.js"],"SWProvider"]
+4:I[34727,["/free/database/_next/static/chunks/1--z4n99tn7_d.js"],"default"]
+5:I[11443,["/free/database/_next/static/chunks/1--z4n99tn7_d.js","/free/database/_next/static/chunks/2nj0jdnnyouw6.js"],"default"]
+6:I[40523,["/free/database/_next/static/chunks/1--z4n99tn7_d.js","/free/database/_next/static/chunks/1l2hgdqtbj1y0.js"],"default"]
+7:I[71309,["/free/database/_next/static/chunks/1--z4n99tn7_d.js"],"default"]
+8:I[16652,["/free/database/_next/static/chunks/1--z4n99tn7_d.js","/free/database/_next/static/chunks/18j5hqbzezdw8.js"],""]
+a:I[50153,["/free/database/_next/static/chunks/1--z4n99tn7_d.js"],"OutletBoundary"]
+b:"$Sreact.suspense"
+e:I[50153,["/free/database/_next/static/chunks/1--z4n99tn7_d.js"],"ViewportBoundary"]
+10:I[50153,["/free/database/_next/static/chunks/1--z4n99tn7_d.js"],"MetadataBoundary"]
+12:I[98665,["/free/database/_next/static/chunks/1--z4n99tn7_d.js","/free/database/_next/static/chunks/1m8r76evy-dop.js"],"default"]
+:HL["/free/database/_next/static/chunks/2p4kffns0eld9.css","style"]
+d:X
+0:{"P":null,"c":["","posts","blog-cms",""],"q":"","i":false,"f":[[["",{"children":["posts",{"children":[["slug","blog-cms","d",[]],{"children":["__PAGE__",{},"$undefined","$undefined",4608]},"$undefined","$undefined",4608]},"$undefined","$undefined",4608]},"$undefined","$undefined",4628],[["$","$L1",null,{"loading":[["$","div","l",{"className":"flex h-screen items-center justify-center","children":["$","span",null,{"className":"loading loading-spinner loading-lg text-primary"}]}],[],null],"children":["$","$2","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/free/database/_next/static/chunks/2p4kffns0eld9.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/free/database/_next/static/chunks/1--z4n99tn7_d.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","data-theme":"dim","children":[["$","head",null,{"children":["$","link",null,{"rel":"apple-touch-icon","href":"/icons/icon-192.png"}]}],["$","body",null,{"className":"bg-base-100 text-base-content h-screen overflow-y-auto font-mono","children":["$","$L3",null,{"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$5","errorStyles":[],"errorScripts":[["$","script","script-0",{"src":"/free/database/_next/static/chunks/2nj0jdnnyouw6.js","async":true}]],"template":["$","$L6",null,{"children":["$","$L7",null,{}]}],"templateStyles":[],"templateScripts":[["$","script","script-0",{"src":"/free/database/_next/static/chunks/1l2hgdqtbj1y0.js","async":true}]],"notFound":[["$","div",null,{"className":"flex min-h-screen flex-col items-center justify-center px-6","children":[["$","p",null,{"className":"text-base-content/50 mb-6 text-xs tracking-[0.2em] uppercase","children":"Error"}],["$","h1",null,{"className":"mb-3","children":"404"}],["$","p",null,{"className":"text-base-content/50 mb-10 max-w-sm text-center text-sm","children":"The page you are looking for does not exist."}],["$","div",null,{"className":"flex flex-wrap justify-center gap-3","children":["$","$L8",null,{"href":"/","className":"btn btn-primary btn-sm","children":"Go home"}]}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}]]}]}],{"children":[["$","$2","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$2","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$2","c",{"children":["$L9",[["$","script","script-0",{"src":"/free/database/_next/static/chunks/18j5hqbzezdw8.js","async":true,"nonce":"$undefined"}]],["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]]}],{},null,false,null]},null,false,"$d"]},null,false,"$d"]},null,false,null],["$","$2","h",{"children":[null,["$","$Le",null,{"children":"$Lf"}],["$","div",null,{"hidden":true,"children":["$","$L10",null,{"children":["$","$b",null,{"name":"Next.Metadata","children":"$L11"}]}]}],null]}],false]],"m":"$undefined","G":["$12",[["$","link","0",{"rel":"stylesheet","href":"/free/database/_next/static/chunks/2p4kffns0eld9.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]]],"S":true,"h":null,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"1OTeUTt7f79R0ijAiMYGD"}
+d:C
+13:T18f7,<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="840" viewBox="0 0 1140 840" font-family="ui-monospace, SFMono-Regular, monospace">
+  <rect width="100%" height="100%" fill="#0f172a"/>
+  <g data-table="CATEGORIES">
+    <rect x="40" y="40" width="220" height="152" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 40 80 L 260 80" stroke="#334155"/>
+    <text x="52" y="66" font-size="13" font-weight="600" fill="#e2e8f0">CATEGORIES</text>
+      <text x="52" y="96" font-size="11" fill="#9ca3af">&#128273; id</text>
+      <text x="52" y="120" font-size="11" fill="#9ca3af">name</text>
+      <text x="52" y="144" font-size="11" fill="#9ca3af">slug</text>
+      <text x="52" y="168" font-size="11" fill="#9ca3af">parent_id</text>
+  </g>
+  <g data-table="COMMENTS">
+    <rect x="460" y="40" width="220" height="200" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 460 80 L 680 80" stroke="#334155"/>
+    <text x="472" y="66" font-size="13" font-weight="600" fill="#e2e8f0">COMMENTS</text>
+      <text x="472" y="96" font-size="11" fill="#9ca3af">&#128273; id</text>
+      <text x="472" y="120" font-size="11" fill="#9ca3af">post_id</text>
+      <text x="472" y="144" font-size="11" fill="#9ca3af">author_id</text>
+      <text x="472" y="168" font-size="11" fill="#9ca3af">content</text>
+      <text x="472" y="192" font-size="11" fill="#9ca3af">status</text>
+      <text x="472" y="216" font-size="11" fill="#9ca3af">created_at</text>
+  </g>
+  <g data-table="POST_CATEGORIES">
+    <rect x="880" y="40" width="220" height="104" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 880 80 L 1100 80" stroke="#334155"/>
+    <text x="892" y="66" font-size="13" font-weight="600" fill="#e2e8f0">POST_CATEGORIES</text>
+      <text x="892" y="96" font-size="11" fill="#9ca3af">&#128273; post_id</text>
+      <text x="892" y="120" font-size="11" fill="#9ca3af">&#128273; category_id</text>
+  </g>
+  <g data-table="POST_META">
+    <rect x="40" y="272" width="220" height="152" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 40 312 L 260 312" stroke="#334155"/>
+    <text x="52" y="298" font-size="13" font-weight="600" fill="#e2e8f0">POST_META</text>
+      <text x="52" y="328" font-size="11" fill="#9ca3af">&#128273; id</text>
+      <text x="52" y="352" font-size="11" fill="#9ca3af">post_id</text>
+      <text x="52" y="376" font-size="11" fill="#9ca3af">meta_key</text>
+      <text x="52" y="400" font-size="11" fill="#9ca3af">meta_value</text>
+  </g>
+  <g data-table="POST_TAGS">
+    <rect x="460" y="224" width="220" height="104" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 460 264 L 680 264" stroke="#334155"/>
+    <text x="472" y="250" font-size="13" font-weight="600" fill="#e2e8f0">POST_TAGS</text>
+      <text x="472" y="280" font-size="11" fill="#9ca3af">&#128273; post_id</text>
+      <text x="472" y="304" font-size="11" fill="#9ca3af">&#128273; tag_id</text>
+  </g>
+  <g data-table="POSTS">
+    <rect x="880" y="440" width="220" height="320" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 880 480 L 1100 480" stroke="#334155"/>
+    <text x="892" y="466" font-size="13" font-weight="600" fill="#e2e8f0">POSTS</text>
+      <text x="892" y="496" font-size="11" fill="#9ca3af">&#128273; id</text>
+      <text x="892" y="520" font-size="11" fill="#9ca3af">author_id</text>
+      <text x="892" y="544" font-size="11" fill="#9ca3af">parent_id</text>
+      <text x="892" y="568" font-size="11" fill="#9ca3af">type</text>
+      <text x="892" y="592" font-size="11" fill="#9ca3af">title</text>
+      <text x="892" y="616" font-size="11" fill="#9ca3af">slug</text>
+      <text x="892" y="640" font-size="11" fill="#9ca3af">body</text>
+      <text x="892" y="664" font-size="11" fill="#9ca3af">status</text>
+      <text x="892" y="688" font-size="11" fill="#9ca3af">excerpt</text>
+      <text x="892" y="712" font-size="11" fill="#9ca3af">published_at</text>
+      <text x="892" y="736" font-size="11" fill="#9ca3af">updated_at</text>
+  </g>
+  <g data-table="TAGS">
+    <rect x="40" y="456" width="220" height="128" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 40 496 L 260 496" stroke="#334155"/>
+    <text x="52" y="482" font-size="13" font-weight="600" fill="#e2e8f0">TAGS</text>
+      <text x="52" y="512" font-size="11" fill="#9ca3af">&#128273; id</text>
+      <text x="52" y="536" font-size="11" fill="#9ca3af">name</text>
+      <text x="52" y="560" font-size="11" fill="#9ca3af">slug</text>
+  </g>
+  <g data-table="USERS">
+    <rect x="460" y="600" width="220" height="200" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 460 640 L 680 640" stroke="#334155"/>
+    <text x="472" y="626" font-size="13" font-weight="600" fill="#e2e8f0">USERS</text>
+      <text x="472" y="656" font-size="11" fill="#9ca3af">&#128273; id</text>
+      <text x="472" y="680" font-size="11" fill="#9ca3af">username</text>
+      <text x="472" y="704" font-size="11" fill="#9ca3af">email</text>
+      <text x="472" y="728" font-size="11" fill="#9ca3af">display_name</text>
+      <text x="472" y="752" font-size="11" fill="#9ca3af">role</text>
+      <text x="472" y="776" font-size="11" fill="#9ca3af">created_at</text>
+  </g>
+  <path d="M 680 652 C 780 652, 780 492, 880 492" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="USERS.POSTS"/>
+  <path d="M 1100 492 C 780 492, 780 92, 460 92" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="POSTS.COMMENTS"/>
+  <path d="M 680 652 C 570 652, 570 92, 460 92" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="USERS.COMMENTS"/>
+  <path d="M 1100 492 C 990 492, 990 92, 880 92" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="POSTS.POST_CATEGORIES"/>
+  <path d="M 260 92 C 570 92, 570 92, 880 92" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="CATEGORIES.POST_CATEGORIES"/>
+  <path d="M 1100 492 C 780 492, 780 276, 460 276" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="POSTS.POST_TAGS"/>
+  <path d="M 260 508 C 360 508, 360 276, 460 276" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="TAGS.POST_TAGS"/>
+  <path d="M 1100 492 C 570 492, 570 324, 40 324" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="POSTS.POST_META"/>
+</svg>9:["$","div",null,{"className":"bg-base-100 min-h-screen","children":[["$","header",null,{"className":"border-base-300 bg-base-100 sticky top-0 z-10 flex items-center justify-between border-b px-6 py-4","children":[["$","h1",null,{"className":"text-xl font-bold","children":"Schema Library"}],["$","$L8",null,{"href":"/posts","className":"btn btn-ghost btn-sm gap-2","children":[["$","svg",null,{"stroke":"currentColor","fill":"none","strokeWidth":"2","viewBox":"0 0 24 24","strokeLinecap":"round","strokeLinejoin":"round","className":"size-3.5","children":["$undefined",[["$","line","0",{"x1":"19","y1":"12","x2":"5","y2":"12","children":[]}],["$","polyline","1",{"points":"12 19 5 12 12 5","children":[]}]]],"style":{"color":"$undefined"},"height":"1em","width":"1em","xmlns":"http://www.w3.org/2000/svg"}]," All schemas"]}]]}],["$","main",null,{"className":"mx-auto max-w-3xl p-6","children":[["$","article",null,{"className":"prose-invert","children":[["$","h1","0",{"className":"mb-2 mt-2 text-2xl font-bold text-slate-50","children":["Blog / CMS Platform"]}],["$","blockquote","1",{"className":"border-l-4 border-indigo-500/60 pl-4 text-slate-400","children":[["$","p","0",{"className":"mb-2 last:mb-0","children":["A WordPress/Medium-style content management system: authors, posts, pages,"]}],["$","p","1",{"className":"mb-2 last:mb-0","children":["categories, tags, comments, and metadata. The canonical \"post + taxonomy +"]}],["$","p","2",{"className":"mb-2 last:mb-0","children":["comments\" schema every CMS reimplements."]}]]}],["$","h2","2",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["ER Diagram (Mermaid)"]}],["$","div","3",{"className":"overflow-x-auto rounded-xl border border-slate-800","dangerouslySetInnerHTML":{"__html":"$13"}}],"$L14","$L15","$L16","$L17","$L18","$L19","$L1a","$L1b","$L1c","$L1d","$L1e","$L1f","$L20","$L21","$L22","$L23","$L24","$L25","$L26"]}],"$L27"]}]]}]
+14:["$","h2","4",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["ASCII Diagram"]}]
+28:T492,              +---------------+
+              |     USERS     |
+              +---------------+
+                    |
+                    | authors
+                    v
++-------------+   +---------------+
+| POST_META   |   |     POSTS     |
+|-------------|   |---------------|
+| post_id FK  |---| id            |
+| meta_key    |   | author_id FK  |
+| meta_value  |   | parent_id --->| (self FK: page tree)
++-------------+   | type, status  |
+                  +---------------+
+                    |    |    |
+       comments     |    |    |
+                    v    |    |
+             +----------+    |
+             | COMMENTS |    |
+             +----------+    |
+                             | M:N taxonomies
+              +-------------------------------+
+              |  POST_CATEGORIES / POST_TAGS   |
+              +-------------------------------+
+                    |                  |
+                    v                  v
+             +-----------+      +-----------+
+             | CATEGORIES|      |   TAGS    |
+             |-----------|      |-----------|
+             | parent_id -|-->  |           |
+             +-----------+      +-----------+15:["$","div","5",{"className":"mb-4","children":["$","pre",null,{"className":"overflow-x-auto rounded-xl border border-slate-800 bg-slate-950 p-4 text-[13px] leading-relaxed text-slate-300","children":["$","code",null,{"children":"$28"}]}]}]
+16:["$","h2","6",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["Tables"]}]
+17:["$","div","7",{"className":"mb-4","children":["$","div",null,{"className":"overflow-x-auto rounded-xl border border-slate-800","children":["$","table",null,{"className":"w-full text-left text-sm","children":[["$","thead",null,{"children":["$","tr",null,{"className":"border-b border-slate-800 bg-slate-900/60","children":[["$","th","0",{"className":"px-4 py-2 font-semibold text-slate-200","children":["Table"]}],["$","th","1",{"className":"px-4 py-2 font-semibold text-slate-200","children":["PK"]}],["$","th","2",{"className":"px-4 py-2 font-semibold text-slate-200","children":["Key FKs"]}],["$","th","3",{"className":"px-4 py-2 font-semibold text-slate-200","children":["Notes"]}]]}]}],["$","tbody",null,{"children":[["$","tr","0",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Users"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":["—"]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Authors + admins"]}]]}],["$","tr","1",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Posts"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"author_id → Users"}],", ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"parent_id → Posts"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Covers posts, pages, navs"]}]]}],["$","tr","2",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Categories"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"parent_id → Categories"}]," (self FK)"]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Hierarchical taxonomy"]}]]}],["$","tr","3",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Post_Categories"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"post_id"}],"+",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"category_id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":["both FKs"]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["M:N junction"]}]]}],["$","tr","4",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Tags"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"id"}]]}],"$L29","$L2a"]}],"$L2b","$L2c","$L2d"]}]]}]}]}]
+18:["$","h2","8",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["Notable Design Patterns"]}]
+19:["$","ul","9",{"className":"mb-4 list-disc space-y-1 pl-5 text-slate-400","children":[["$","li","0",{"children":[["$","strong","0",{"className":"font-semibold text-slate-100","children":"Polymorphic `Posts.type`"}],": one table stores blog posts, pages, and"]}]]}]
+1a:["$","p","10",{"className":"mb-4 text-slate-400","children":["navigation items distinguished by a ",["$","code","1",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"type"}]," column — the WordPress approach of a single ",["$","code","3",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"wp_posts"}]," table with ",["$","code","5",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"post_type"}],"."]}]
+1b:["$","ul","11",{"className":"mb-4 list-disc space-y-1 pl-5 text-slate-400","children":[["$","li","0",{"children":[["$","strong","0",{"className":"font-semibold text-slate-100","children":"Two taxonomies, one pattern"}],": hierarchical ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Categories"}]," (self-FK) vs flat"]}]]}]
+1c:["$","p","12",{"className":"mb-4 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Tags"}],", both attached through junction tables. Shows why WordPress models both via a unified ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"term_taxonomy"}]," concept."]}]
+1d:["$","ul","13",{"className":"mb-4 list-disc space-y-1 pl-5 text-slate-400","children":[["$","li","0",{"children":[["$","strong","0",{"className":"font-semibold text-slate-100","children":"Comments with moderation state"}]," (",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"status = pending/approved/spam"}],") — a"]}]]}]
+1e:["$","p","14",{"className":"mb-4 text-slate-400","children":["simple example of a workflow column."]}]
+1f:["$","ul","15",{"className":"mb-4 list-disc space-y-1 pl-5 text-slate-400","children":[["$","li","0",{"children":[["$","strong","0",{"className":"font-semibold text-slate-100","children":"EAV metadata"}]," (",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Post_Meta"}]," key/value rows) lets the CMS support arbitrary"]}]]}]
+20:["$","p","16",{"className":"mb-4 text-slate-400","children":["custom fields without schema migrations — the trade-off being awkward querying (and the reason PostgreSQL's ",["$","code","1",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"jsonb"}]," exists)."]}]
+21:["$","ul","17",{"className":"mb-4 list-disc space-y-1 pl-5 text-slate-400","children":[["$","li","0",{"children":[["$","strong","0",{"className":"font-semibold text-slate-100","children":"Slug columns"}]," (",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"posts.slug"}],", ",["$","code","4",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"categories.slug"}],") power SEO-friendly URLs."]}]]}]
+22:["$","h2","18",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["Sample Queries"]}]
+23:["$","div","19",{"className":"mb-4","children":["$","pre",null,{"className":"overflow-x-auto rounded-xl border border-slate-800 bg-slate-950 p-4 text-[13px] leading-relaxed text-slate-300","children":["$","code",null,{"children":"-- Published posts with their author and category names\nSELECT p.title, u.display_name, c.name AS category, p.published_at\nFROM posts p\nJOIN users u            ON u.id = p.author_id\nLEFT JOIN post_categories pc ON pc.post_id = p.id\nLEFT JOIN categories c  ON c.id = pc.category_id\nWHERE p.type = 'post' AND p.status = 'published'\nORDER BY p.published_at DESC\nLIMIT 20;\n\n-- Categories with post counts\nSELECT c.name, COUNT(pc.post_id) AS posts\nFROM categories c\nLEFT JOIN post_categories pc ON pc.category_id = c.id\nGROUP BY c.id\nORDER BY posts DESC;\n\n-- Most commented published posts\nSELECT p.title, COUNT(cm.id) AS comments\nFROM posts p\nLEFT JOIN comments cm ON cm.post_id = p.id AND cm.status = 'approved'\nWHERE p.status = 'published'\nGROUP BY p.id\nORDER BY comments DESC\nLIMIT 10;\n\n-- Custom field lookup via EAV (posts with a featured-image URL)\nSELECT p.title, pm.meta_value AS featured_image\nFROM posts p\nJOIN post_meta pm ON pm.post_id = p.id AND pm.meta_key = '_featured_image'\nWHERE p.status = 'published';"}]}]}]
+24:["$","h2","20",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["Recreate the Sample"]}]
+25:["$","p","21",{"className":"mb-4 text-slate-400","children":["Run these statements in order to rebuild the schema."]}]
+2e:T5e4,PRAGMA foreign_keys = ON;
+
+CREATE TABLE users (
+  id           INTEGER PRIMARY KEY,
+  username     TEXT NOT NULL,
+  email        TEXT NOT NULL,
+  display_name TEXT,
+  role         TEXT,
+  created_at   TEXT
+);
+
+CREATE TABLE posts (
+  id           INTEGER PRIMARY KEY,
+  author_id    INTEGER NOT NULL REFERENCES users(id),
+  parent_id    INTEGER REFERENCES posts(id),
+  type         TEXT NOT NULL,
+  title        TEXT NOT NULL,
+  slug         TEXT,
+  body         TEXT,
+  status       TEXT,
+  excerpt      TEXT,
+  published_at TEXT,
+  updated_at   TEXT
+);
+
+CREATE TABLE categories (
+  id        INTEGER PRIMARY KEY,
+  name      TEXT NOT NULL,
+  slug      TEXT,
+  parent_id INTEGER REFERENCES categories(id)
+);
+
+CREATE TABLE post_categories (
+  post_id     INTEGER NOT NULL REFERENCES posts(id),
+  category_id INTEGER NOT NULL REFERENCES categories(id),
+  PRIMARY KEY (post_id, category_id)
+);
+
+CREATE TABLE tags (
+  id   INTEGER PRIMARY KEY,
+  name TEXT NOT NULL,
+  slug TEXT
+);
+
+CREATE TABLE post_tags (
+  post_id INTEGER NOT NULL REFERENCES posts(id),
+  tag_id  INTEGER NOT NULL REFERENCES tags(id),
+  PRIMARY KEY (post_id, tag_id)
+);
+
+CREATE TABLE comments (
+  id         INTEGER PRIMARY KEY,
+  post_id    INTEGER NOT NULL REFERENCES posts(id),
+  author_id  INTEGER NOT NULL REFERENCES users(id),
+  content    TEXT,
+  status     TEXT,
+  created_at TEXT
+);
+
+CREATE TABLE post_meta (
+  id         INTEGER PRIMARY KEY,
+  post_id    INTEGER NOT NULL REFERENCES posts(id),
+  meta_key   TEXT,
+  meta_value TEXT
+);26:["$","div","22",{"className":"mb-4","children":["$","pre",null,{"className":"overflow-x-auto rounded-xl border border-slate-800 bg-slate-950 p-4 text-[13px] leading-relaxed text-slate-300","children":["$","code",null,{"children":"$2e"}]}]}]
+27:["$","nav",null,{"className":"border-base-300 mt-12 flex items-center justify-between gap-3 border-t pt-4","children":[["$","span",null,{}],["$","$L8",null,{"href":"/posts/chinook","className":"btn btn-ghost btn-sm gap-2","children":["Chinook — Digital Media Store"," ",["$","svg",null,{"stroke":"currentColor","fill":"none","strokeWidth":"2","viewBox":"0 0 24 24","strokeLinecap":"round","strokeLinejoin":"round","className":"size-3.5","children":["$undefined",[["$","line","0",{"x1":"5","y1":"12","x2":"19","y2":"12","children":[]}],["$","polyline","1",{"points":"12 5 19 12 12 19","children":[]}]]],"style":{"color":"$undefined"},"height":"1em","width":"1em","xmlns":"http://www.w3.org/2000/svg"}]]}]]}]
+29:["$","td","2",{"className":"px-4 py-2 text-slate-400","children":["—"]}]
+2a:["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Flat taxonomy"]}]
+2b:["$","tr","5",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Post_Tags"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"post_id"}],"+",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"tag_id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":["both FKs"]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["M:N junction"]}]]}]
+2c:["$","tr","6",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Comments"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"post_id → Posts"}],", ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"author_id → Users"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Status: pending/approved"]}]]}]
+2d:["$","tr","7",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Post_Meta"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"post_id → Posts"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["EAV for arbitrary fields"]}]]}]
+f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+c:null
+11:[["$","title","0",{"children":"Blog / CMS Platform · Schema Library"}],["$","meta","1",{"name":"description","content":"A WordPress/Medium-style content management system: authors, posts, pages, categories, tags, comments, and metadata. The canonical \"post + taxonomy + comments\" schema every CMS reimplements."}],["$","link","2",{"rel":"manifest","href":"/manifest.json","crossOrigin":"$undefined"}],["$","meta","3",{"name":"mobile-web-app-capable","content":"yes"}],["$","meta","4",{"name":"apple-mobile-web-app-title","content":"Database"}],["$","meta","5",{"name":"apple-mobile-web-app-status-bar-style","content":"black-translucent"}]]
