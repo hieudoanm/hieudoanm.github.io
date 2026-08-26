@@ -104,12 +104,6 @@
         "description": "Palindrome",
         "icon": "PiRepeat",
         "toolId": "palindrome"
-      },
-      {
-        "label": "Typoglycemia",
-        "description": "Scrambled text",
-        "icon": "PiShuffle",
-        "toolId": "typoglycemia"
       }
     ]
   }

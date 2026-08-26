@@ -77,9 +77,3 @@ ts-node --project scripts/tsconfig.json \
 8. Keep files under 200 lines, functions under 30 lines
 9. Test behaviour, not implementation — Jest + Testing Library
 10. Mobile-first responsive design
-
-## Note
-
-Games originally in this package (Maze, Snake, DinoRun) have been migrated to
-the standalone `games/8-bit` package. The source files remain here for
-reference.

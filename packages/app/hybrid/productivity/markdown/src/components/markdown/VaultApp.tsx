@@ -26,6 +26,7 @@ import {
   saveUiPreference,
 } from '@/lib/storage';
 import type { Note, ViewMode } from '@/lib/types';
+import type { CaseKind } from '@/lib/textCase';
 import { buildGraph, resolveNoteTitle } from '@/lib/wikilinks';
 import { FileToolbar } from '@/components/editor/FileToolbar';
 import { FormatToolbar } from '@/components/editor/FormatToolbar';
@@ -58,6 +59,8 @@ export const VaultApp: FC = () => {
   const [showOutline, setShowOutline] = useState(() =>
     loadUiPreference(OUTLINE_PREF_KEY, true)
   );
+  const [scramble, setScramble] = useState(false);
+  const [caseKind, setCaseKind] = useState<CaseKind | null>(null);
 
   const editorRef = useRef<HTMLDivElement | null>(null);
   const previewRef = useRef<HTMLDivElement | null>(null);
@@ -197,6 +200,10 @@ export const VaultApp: FC = () => {
     });
   }, []);
 
+  const toggleScramble = useCallback((): void => {
+    setScramble((prev) => !prev);
+  }, []);
+
   const { html, isRendering } = useMarkdownRender(activeNote?.content ?? '');
   const toc = useMemo(
     () => (activeNote ? extractToc(activeNote.content) : []),
@@ -324,7 +331,7 @@ export const VaultApp: FC = () => {
                   onDelete={deleteNote}
                 />
                 <FormatToolbar view={view} />
-                <CaseToolbar view={view} />
+                <CaseToolbar caseKind={caseKind} onCaseChange={setCaseKind} />
 
                 <div className="flex min-h-0 flex-1">
                   <div
@@ -343,6 +350,9 @@ export const VaultApp: FC = () => {
                       isRendering={isRendering}
                       previewRef={previewRef}
                       visible
+                      scramble={scramble}
+                      onToggleScramble={toggleScramble}
+                      caseKind={caseKind}
                     />
                   </div>
                 </div>

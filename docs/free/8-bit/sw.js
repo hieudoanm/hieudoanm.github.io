@@ -1,10 +1,5 @@
 const CACHE_NAME = '8bit-v1';
-const STATIC_ASSETS = [
-  '/',
-  '/maze/',
-  '/snake/',
-  '/dino-run/',
-];
+const STATIC_ASSETS = ['/', '/maze/', '/snake/', '/dino-run/'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(

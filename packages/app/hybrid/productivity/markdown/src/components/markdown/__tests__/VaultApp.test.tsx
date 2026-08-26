@@ -362,4 +362,25 @@ describe('VaultApp', () => {
     expect(screen.getByTestId('editor')).toBeInTheDocument();
     expect(screen.getByRole('button', { name: 'Bold' })).toBeEnabled();
   });
+
+  it('toggles typoglycemia scramble in the preview', async () => {
+    const user = userEvent.setup();
+    render(<VaultApp />);
+
+    const toggle = screen.getByRole('button', {
+      name: 'Enable typoglycemia',
+    });
+    await user.click(toggle);
+
+    expect(
+      screen.getByRole('button', { name: 'Disable typoglycemia' })
+    ).toBeInTheDocument();
+
+    await user.click(
+      screen.getByRole('button', { name: 'Disable typoglycemia' })
+    );
+    expect(
+      screen.getByRole('button', { name: 'Enable typoglycemia' })
+    ).toBeInTheDocument();
+  });
 });

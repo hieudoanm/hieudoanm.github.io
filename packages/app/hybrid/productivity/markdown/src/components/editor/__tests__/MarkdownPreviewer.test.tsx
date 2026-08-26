@@ -1,6 +1,11 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { createRef } from 'react';
 import { MarkdownPreviewer } from '@/components/editor/MarkdownPreviewer';
+
+jest.mock('@/lib/typoglycemia', () => ({
+  scrambleNodes: jest.fn(),
+  applyCaseNodes: jest.fn(),
+}));
 
 const renderPreviewer = (overrides = {}) => {
   const props = {
@@ -48,5 +53,55 @@ describe('MarkdownPreviewer', () => {
       'aria-label',
       'Markdown preview'
     );
+  });
+
+  it('shows the typoglycemia toggle when onToggleScramble is provided', () => {
+    renderPreviewer({
+      onToggleScramble: jest.fn(),
+      scramble: false,
+    });
+    expect(
+      screen.getByRole('button', { name: 'Enable typoglycemia' })
+    ).toBeInTheDocument();
+  });
+
+  it('hides the toggle when onToggleScramble is not provided', () => {
+    renderPreviewer();
+    expect(
+      screen.queryByRole('button', { name: /typoglycemia/i })
+    ).not.toBeInTheDocument();
+  });
+
+  it('calls onToggleScramble when the toggle is clicked', () => {
+    const onToggleScramble = jest.fn();
+    renderPreviewer({ onToggleScramble, scramble: false });
+    fireEvent.click(
+      screen.getByRole('button', { name: 'Enable typoglycemia' })
+    );
+    expect(onToggleScramble).toHaveBeenCalledTimes(1);
+  });
+
+  it('shows "Disable typoglycemia" label when scramble is active', () => {
+    renderPreviewer({
+      onToggleScramble: jest.fn(),
+      scramble: true,
+    });
+    expect(
+      screen.getByRole('button', { name: 'Disable typoglycemia' })
+    ).toBeInTheDocument();
+  });
+
+  it('applies active style when scramble is enabled', () => {
+    renderPreviewer({
+      onToggleScramble: jest.fn(),
+      scramble: true,
+    });
+    const btn = screen.getByRole('button', { name: 'Disable typoglycemia' });
+    expect(btn.className).toContain('btn-primary');
+  });
+
+  it('accepts caseKind prop without error', () => {
+    renderPreviewer({ caseKind: 'upper' });
+    expect(screen.getByTestId('markdown-preview')).toBeInTheDocument();
   });
 });
