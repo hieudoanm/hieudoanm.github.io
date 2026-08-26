@@ -9,9 +9,7 @@ Calculator,calculator,Calculator,"Arithmetic + Unit Converter",PiDivide,calculat
 Calculator,calculator,Inflation,Calculator,PiMoney,inflation
 Calculator,calculator,Split Bill,Calculator,PiCurrencyDollar,split-bill
 Calculator,calculator,Tax,Vietnam PIT,PiFlag,tax
-Clocks,clocks,Countdown,Timer,PiHourglass,countdown
 Clocks,clocks,Cron,Expression Builder,PiClockAfternoon,cron
-Clocks,clocks,Days Count,Date Difference,PiCalendar,days-count
 Clocks,clocks,Epoch Convert,Timestamp,PiClock,epoch-convert
 Clocks,clocks,Pomodoro,Timer,PiTimer,pomodoro
 Clocks,clocks,Watchface,Garmin,PiWatch,watchface

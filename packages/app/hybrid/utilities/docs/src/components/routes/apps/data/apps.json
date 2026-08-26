@@ -76,22 +76,10 @@
     "label": "Clocks",
     "items": [
       {
-        "label": "Countdown",
-        "description": "Timer",
-        "icon": "PiHourglass",
-        "toolId": "countdown"
-      },
-      {
         "label": "Cron",
         "description": "Expression Builder",
         "icon": "PiClockAfternoon",
         "toolId": "cron"
-      },
-      {
-        "label": "Days Count",
-        "description": "Date Difference",
-        "icon": "PiCalendar",
-        "toolId": "days-count"
       },
       {
         "label": "Epoch Convert",

@@ -42,11 +42,12 @@ export const END_YEAR = 2100
 export const years = new Array(END_YEAR - START_YEAR + 1).fill(0).map((_, i) => START_YEAR + i)
 
 export enum View {
-  THREE_DAY = '3-day',
   DAY = 'day',
+  THREE_DAY = '3-day',
   WEEK = 'week',
   MONTH = 'month',
-  MONTHLY = '12-months',
+  QUARTERLY = 'quarterly',
+  HALFLY = 'halfly',
   YEARLY = 'yearly',
 }
 

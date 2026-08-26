@@ -1,8 +1,2 @@
 export type SidebarTab =
-  | 'status'
-  | 'tasks'
-  | 'time'
-  | 'currency'
-  | 'passport'
-  | 'apps'
-  | 'world-clock';
+  'status' | 'tasks' | 'currency' | 'passport' | 'apps' | 'world-clock';

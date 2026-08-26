@@ -7,21 +7,25 @@ import { MonthCalendar } from '@/components/molecules/MonthCalendar'
 import { WeekView } from '@/components/molecules/WeekView'
 import { DayView } from '@/components/molecules/DayView'
 import { ThreeDayView } from '@/components/molecules/ThreeDayView'
-import { MonthlyView } from '@/components/molecules/MonthlyView'
+import { QuarterlyView } from '@/components/molecules/QuarterlyView'
+import { HalflyView } from '@/components/molecules/HalflyView'
 import { YearlyView } from '@/components/molecules/YearlyView'
 import { LunarDate } from '@/components/atoms/LunarDate'
 import { EventList } from '@/components/atoms/EventList'
+import { DaysCountModal } from '@/components/organisms/DaysCountModal'
+import { CountdownModal } from '@/components/organisms/CountdownModal'
 import { View, years, months } from '@/data/constants'
 import { events } from '@/data/events'
 
 const lunarCalendar = new LunarCalendar()
 
 const VIEW_LABELS: Record<View, string> = {
-  [View.THREE_DAY]: '3 Days',
   [View.DAY]: 'Day',
+  [View.THREE_DAY]: '3 Days',
   [View.WEEK]: 'Week',
   [View.MONTH]: 'Month',
-  [View.MONTHLY]: '12 Months',
+  [View.QUARTERLY]: 'Quarter',
+  [View.HALFLY]: 'Half',
   [View.YEARLY]: 'Year',
 }
 
@@ -66,6 +70,16 @@ export const CalendarApp: FC = () => {
         d.setDate(d.getDate() - 7)
         return { ...prev, weekStart: d, year: d.getFullYear(), month: d.getMonth() }
       }
+      if (prev.view === View.QUARTERLY) {
+        const newMonth = prev.month < 3 ? prev.month + 9 : prev.month - 3
+        const newYear = prev.month < 3 ? prev.year - 1 : prev.year
+        return { ...prev, month: newMonth, year: newYear }
+      }
+      if (prev.view === View.HALFLY) {
+        const newMonth = prev.month < 6 ? prev.month + 6 : prev.month - 6
+        const newYear = prev.month < 6 ? prev.year - 1 : prev.year
+        return { ...prev, month: newMonth, year: newYear }
+      }
       return { ...prev, year: prev.year - 1 }
     })
   }
@@ -81,6 +95,16 @@ export const CalendarApp: FC = () => {
         const d = new Date(prev.weekStart)
         d.setDate(d.getDate() + 7)
         return { ...prev, weekStart: d, year: d.getFullYear(), month: d.getMonth() }
+      }
+      if (prev.view === View.QUARTERLY) {
+        const newMonth = prev.month >= 9 ? prev.month - 9 : prev.month + 3
+        const newYear = prev.month >= 9 ? prev.year + 1 : prev.year
+        return { ...prev, month: newMonth, year: newYear }
+      }
+      if (prev.view === View.HALFLY) {
+        const newMonth = prev.month >= 6 ? prev.month - 6 : prev.month + 6
+        const newYear = prev.month >= 6 ? prev.year + 1 : prev.year
+        return { ...prev, month: newMonth, year: newYear }
       }
       return { ...prev, year: prev.year + 1 }
     })
@@ -112,16 +136,18 @@ export const CalendarApp: FC = () => {
   const headerLabel =
     state.view === View.WEEK
       ? formatWeekRange(state.weekStart)
-      : state.view === View.MONTHLY
-        ? `${state.year}`
-        : state.view === View.YEARLY
-          ? `${state.year}`
-          : `${months[state.month]} ${state.year}`
+      : state.view === View.QUARTERLY
+        ? `Q${Math.floor(state.month / 3) + 1} ${state.year}`
+        : state.view === View.HALFLY
+          ? `H${state.month < 6 ? 1 : 2} ${state.year}`
+          : state.view === View.YEARLY
+            ? `${state.year}`
+            : `${months[state.month]} ${state.year}`
 
   return (
     <div className="flex flex-1 flex-col overflow-hidden">
       <nav className="border-base-content/10 flex items-center gap-2 border-b px-4 py-2">
-        <button className="btn btn-sm btn-ghost" onClick={handleToday}>
+        <button className="btn btn-sm btn-ghost" onClick={handleToday} data-testid="nav-today">
           Today
         </button>
         <button className="btn btn-sm btn-ghost btn-square" onClick={handlePrev}>
@@ -131,9 +157,13 @@ export const CalendarApp: FC = () => {
           ›
         </button>
         <h2 className="text-base-content mr-auto text-lg font-semibold">{headerLabel}</h2>
-        {(state.view === View.MONTH ||
-          state.view === View.DAY ||
-          state.view === View.THREE_DAY) && (
+        <DaysCountModal />
+        <CountdownModal />
+        {(state.view === View.DAY ||
+          state.view === View.THREE_DAY ||
+          state.view === View.MONTH ||
+          state.view === View.QUARTERLY ||
+          state.view === View.HALFLY) && (
           <select
             className="select select-sm select-bordered border-base-content/10 bg-base-100 text-base-content"
             value={state.month}
@@ -147,7 +177,8 @@ export const CalendarApp: FC = () => {
           </select>
         )}
         {(state.view === View.MONTH ||
-          state.view === View.MONTHLY ||
+          state.view === View.QUARTERLY ||
+          state.view === View.HALFLY ||
           state.view === View.YEARLY) && (
           <select
             className="select select-sm select-bordered border-base-content/10 bg-base-100 text-base-content"
@@ -208,7 +239,8 @@ export const CalendarApp: FC = () => {
         {state.view === View.THREE_DAY && (
           <ThreeDayView year={state.year} month={state.month} day={today.getDate()} />
         )}
-        {state.view === View.MONTHLY && <MonthlyView year={state.year} />}
+        {state.view === View.QUARTERLY && <QuarterlyView year={state.year} month={state.month} />}
+        {state.view === View.HALFLY && <HalflyView year={state.year} month={state.month} />}
         {state.view === View.YEARLY && <YearlyView year={state.year} />}
       </div>
     </div>

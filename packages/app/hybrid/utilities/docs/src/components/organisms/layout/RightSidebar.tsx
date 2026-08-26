@@ -4,7 +4,6 @@ import dynamic from 'next/dynamic';
 import { useCallback, useEffect, useState, type FC } from 'react';
 import {
   PiCheckSquare,
-  PiClock,
   PiCurrencyDollar,
   PiGauge,
   PiGlobeHemisphereWest,
@@ -22,13 +21,6 @@ const TasksTab = dynamic(
   () =>
     import('@hieudoanm.github.io/components/organisms/layout/tabs/TasksTab').then(
       (m) => m.TasksTab
-    ),
-  { ssr: false }
-);
-const TimeTab = dynamic(
-  () =>
-    import('@hieudoanm.github.io/components/organisms/layout/tabs/TimeTab').then(
-      (m) => m.TimeTab
     ),
   { ssr: false }
 );
@@ -61,7 +53,6 @@ const TABS: {
 }[] = [
   { id: 'status', label: 'Status', icon: PiGauge },
   { id: 'tasks', label: 'Tasks', icon: PiCheckSquare },
-  { id: 'time', label: 'Time', icon: PiClock },
   { id: 'currency', label: 'Currency', icon: PiCurrencyDollar },
   { id: 'passport', label: 'Passport', icon: PiIdentificationCard },
   { id: 'world-clock', label: 'World Clock', icon: PiGlobeHemisphereWest },
@@ -94,8 +85,6 @@ export const RightSidebar: FC = () => {
           return <StatusTab />;
         case 'tasks':
           return <TasksTab />;
-        case 'time':
-          return <TimeTab />;
         case 'currency':
           return <CurrencyTab />;
         case 'passport':

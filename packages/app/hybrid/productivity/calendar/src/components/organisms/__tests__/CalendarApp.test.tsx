@@ -16,7 +16,7 @@ const switchTo = (label: string) => {
 describe('CalendarApp', () => {
   it('renders with Month view by default', () => {
     render(<CalendarApp />)
-    expect(screen.getByText('Today')).toBeInTheDocument()
+    expect(screen.getByTestId('nav-today')).toBeInTheDocument()
   })
 
   it('renders current month and year in header', () => {
@@ -95,7 +95,7 @@ describe('CalendarApp', () => {
     render(<CalendarApp />)
     fireEvent.click(screen.getByText('›'))
     fireEvent.click(screen.getByText('›'))
-    fireEvent.click(screen.getByText('Today'))
+    fireEvent.click(screen.getByTestId('nav-today'))
     const now = new Date()
     const monthNames = [
       'January',
@@ -168,11 +168,14 @@ describe('CalendarApp', () => {
     ).toBeInTheDocument()
   })
 
-  it('switches to 12 Months view', () => {
+  it('switches to Quarter view', () => {
     render(<CalendarApp />)
-    switchTo('12 Months')
+    switchTo('Quarter')
     const now = new Date()
-    expect(screen.getByRole('heading', { name: now.getFullYear().toString() })).toBeInTheDocument()
+    const quarter = Math.floor(now.getMonth() / 3) + 1
+    expect(
+      screen.getByRole('heading', { name: `Q${quarter} ${now.getFullYear()}` }),
+    ).toBeInTheDocument()
   })
 
   it('switches to Yearly view', () => {
@@ -206,16 +209,20 @@ describe('CalendarApp', () => {
     expect(screen.getByRole('heading', { name: now.getFullYear().toString() })).toBeInTheDocument()
   })
 
-  it('navigates 12 Months view forward and backward', () => {
+  it('navigates Quarter view forward and backward', () => {
     render(<CalendarApp />)
-    switchTo('12 Months')
+    switchTo('Quarter')
     const now = new Date()
+    const currentQuarter = Math.floor(now.getMonth() / 3) + 1
+    const currentYear = now.getFullYear()
     fireEvent.click(screen.getByText('›'))
-    expect(
-      screen.getByRole('heading', { name: (now.getFullYear() + 1).toString() }),
-    ).toBeInTheDocument()
+    const nextQuarter = currentQuarter === 4 ? 1 : currentQuarter + 1
+    const nextYear = currentQuarter === 4 ? currentYear + 1 : currentYear
+    expect(screen.getByRole('heading', { name: `Q${nextQuarter} ${nextYear}` })).toBeInTheDocument()
     fireEvent.click(screen.getByText('‹'))
-    expect(screen.getByRole('heading', { name: now.getFullYear().toString() })).toBeInTheDocument()
+    expect(
+      screen.getByRole('heading', { name: `Q${currentQuarter} ${currentYear}` }),
+    ).toBeInTheDocument()
   })
 
   it('navigates Day view forward and backward', () => {
@@ -276,13 +283,39 @@ describe('CalendarApp', () => {
     expect(screen.getByRole('heading', { name: /2025/ })).toBeInTheDocument()
   })
 
+  it('switches to Half view', () => {
+    render(<CalendarApp />)
+    switchTo('Half')
+    const now = new Date()
+    const half = now.getMonth() < 6 ? 1 : 2
+    expect(
+      screen.getByRole('heading', { name: `H${half} ${now.getFullYear()}` }),
+    ).toBeInTheDocument()
+  })
+
+  it('navigates Half view forward and backward', () => {
+    render(<CalendarApp />)
+    switchTo('Half')
+    const now = new Date()
+    const currentHalf = now.getMonth() < 6 ? 1 : 2
+    const currentYear = now.getFullYear()
+    fireEvent.click(screen.getByText('›'))
+    const nextHalf = currentHalf === 2 ? 1 : 2
+    const nextYear = currentHalf === 2 ? currentYear + 1 : currentYear
+    expect(screen.getByRole('heading', { name: `H${nextHalf} ${nextYear}` })).toBeInTheDocument()
+    fireEvent.click(screen.getByText('‹'))
+    expect(
+      screen.getByRole('heading', { name: `H${currentHalf} ${currentYear}` }),
+    ).toBeInTheDocument()
+  })
+
   it('navigates week to Today from far away', () => {
     render(<CalendarApp />)
     switchTo('Week')
     fireEvent.click(screen.getByText('›'))
     fireEvent.click(screen.getByText('›'))
     fireEvent.click(screen.getByText('›'))
-    fireEvent.click(screen.getByText('Today'))
+    fireEvent.click(screen.getByTestId('nav-today'))
     expect(screen.getByRole('heading')).toBeInTheDocument()
   })
 })

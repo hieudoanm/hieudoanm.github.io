@@ -10,7 +10,7 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/hybrid/developer-tools/boilerplate/**'
+      - 'packages/app/hybrid/developer-tools/boilerplate/**/*'
       - '.github/workflows/ci-app-hybrid-developer-tools-boilerplate.yaml'
       - '.github/workflows/ci-app-hybrid-template.yaml'
 
