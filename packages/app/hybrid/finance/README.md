@@ -1,3 +1,4 @@
 # Finance
 
-1. Wallet
+1. Tax
+2. Wallet

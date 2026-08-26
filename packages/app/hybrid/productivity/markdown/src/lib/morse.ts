@@ -70,7 +70,10 @@ export const applyMorse = (
   };
 };
 
-const walkTextNodes = (root: HTMLElement, fn: (text: string) => string): void => {
+const walkTextNodes = (
+  root: HTMLElement,
+  fn: (text: string) => string
+): void => {
   const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null);
   let node: Text | null;
   while ((node = walker.nextNode() as Text | null)) {

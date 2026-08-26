@@ -364,6 +364,46 @@
         ]
       },
       {
+        "label": "Clock",
+        "primaryCategory": "Utilities",
+        "secondaryCategory": "Productivity",
+        "icon": "PiClock",
+        "href": "https://hieudoanm.github.io/free/clock",
+        "version": "0.0.1",
+        "lastUpdated": "2026-08-27",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-clock-latest/app-universal-release.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-clock-latest/app-universal-release.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-clock-latest/clock_aarch64.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-clock-latest/clock_amd64.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-clock-latest/clock_amd64.deb"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-clock-latest/clock_x64.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-clock-latest/clock_x64.exe"
+          }
+        ]
+      },
+      {
         "label": "Code",
         "primaryCategory": "Developer Tools",
         "secondaryCategory": "Productivity",

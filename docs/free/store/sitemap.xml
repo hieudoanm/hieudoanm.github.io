@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://hieudoanm.github.io/free/store</loc>
-<lastmod>2026-08-26T13:44:47.529Z</lastmod>
+<lastmod>2026-08-26T18:15:59.748Z</lastmod>
 <changefreq>daily</changefreq>
 <priority>1</priority>
 </url>
@@ -57,6 +57,12 @@
 <url>
 <loc>https://hieudoanm.github.io/free/store/app/chess/</loc>
 <lastmod>2025-01-01</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://hieudoanm.github.io/free/store/app/clock/</loc>
+<lastmod>2026-08-27</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -290,13 +296,13 @@
 </url>
 <url>
 <loc>https://hieudoanm.github.io/free/store/about/</loc>
-<lastmod>2026-08-26T13:44:47.529Z</lastmod>
+<lastmod>2026-08-26T18:15:59.749Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.3</priority>
 </url>
 <url>
 <loc>https://hieudoanm.github.io/free/store/version/</loc>
-<lastmod>2026-08-26T13:44:47.529Z</lastmod>
+<lastmod>2026-08-26T18:15:59.749Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.3</priority>
 </url>

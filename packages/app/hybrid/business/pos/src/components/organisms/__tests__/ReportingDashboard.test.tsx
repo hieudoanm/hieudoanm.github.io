@@ -57,6 +57,15 @@ const renderComponent = (
 };
 
 describe('ReportingDashboard', () => {
+  beforeAll(() => {
+    jest.useFakeTimers();
+    jest.setSystemTime(new Date(`${TODAY}T12:00:00.000Z`));
+  });
+
+  afterAll(() => {
+    jest.useRealTimers();
+  });
+
   it('renders reports header', () => {
     renderComponent();
     expect(screen.getByText('Reports')).toBeInTheDocument();

@@ -4,10 +4,18 @@ import { ConvertToolbar } from '@/components/editor/ConvertToolbar';
 describe('ConvertToolbar', () => {
   it('renders case buttons and convert buttons', () => {
     render(<ConvertToolbar convertKind={null} onConvertChange={jest.fn()} />);
-    expect(screen.getByRole('button', { name: 'Case UPPER' })).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: 'Convert to Braille' })).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: 'Convert to Morse' })).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: 'Convert to Leet' })).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: 'Case UPPER' })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: 'Convert to Braille' })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: 'Convert to Morse' })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: 'Convert to Leet' })
+    ).toBeInTheDocument();
   });
 
   it('calls onConvertChange with case kind', () => {
@@ -59,7 +67,9 @@ describe('ConvertToolbar', () => {
   });
 
   it('highlights active braille button', () => {
-    render(<ConvertToolbar convertKind="braille" onConvertChange={jest.fn()} />);
+    render(
+      <ConvertToolbar convertKind="braille" onConvertChange={jest.fn()} />
+    );
     const btn = screen.getByRole('button', { name: 'Convert to Braille' });
     expect(btn.className).toContain('btn-primary');
   });

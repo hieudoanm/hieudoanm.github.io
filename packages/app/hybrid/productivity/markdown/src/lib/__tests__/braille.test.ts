@@ -8,9 +8,7 @@ describe('braillify', () => {
   });
 
   it('converts hello world', () => {
-    expect(braillify('hello world')).toBe(
-      `⠓⠑⠇⠇⠕${BRAILLE_SPACE}⠺⠕⠗⠇⠙`
-    );
+    expect(braillify('hello world')).toBe(`⠓⠑⠇⠇⠕${BRAILLE_SPACE}⠺⠕⠗⠇⠙`);
   });
 
   it('handles mixed case', () => {

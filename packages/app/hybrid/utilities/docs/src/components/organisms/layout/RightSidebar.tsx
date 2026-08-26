@@ -38,13 +38,6 @@ const PassportTab = dynamic(
     ),
   { ssr: false }
 );
-const ClockTab = dynamic(
-  () =>
-    import('@hieudoanm.github.io/components/organisms/layout/tabs/ClockTab').then(
-      (m) => m.ClockTab
-    ),
-  { ssr: false }
-);
 
 const TABS: {
   id: SidebarTab;
@@ -89,8 +82,6 @@ export const RightSidebar: FC = () => {
           return <CurrencyTab />;
         case 'passport':
           return <PassportTab />;
-        case 'world-clock':
-          return <ClockTab times={times} />;
       }
     },
     [times]
