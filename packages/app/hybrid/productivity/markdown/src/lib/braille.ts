@@ -1,4 +1,6 @@
-export const braille: Record<
+import type { SelectionEdit } from '@/lib/format';
+
+export const BRAILLE_MAP: Record<
   string,
   { unicode: string; dots: string; character: string }
 > = {
@@ -56,8 +58,39 @@ export const braille: Record<
 export const braillify = (text: string): string =>
   text
     .split('')
-    .map((ch) => braille[ch.toLowerCase()]?.character ?? ch)
+    .map((ch) => BRAILLE_MAP[ch.toLowerCase()]?.character ?? ch)
     .join('');
+
+export const applyBraille = (
+  doc: string,
+  start: number,
+  end: number
+): SelectionEdit => {
+  const hasSelection = start !== end;
+  const targetStart = hasSelection ? start : 0;
+  const targetEnd = hasSelection ? end : doc.length;
+  const converted = braillify(doc.slice(targetStart, targetEnd));
+
+  return {
+    text: `${doc.slice(0, targetStart)}${converted}${doc.slice(targetEnd)}`,
+    selectionStart: targetStart,
+    selectionEnd: targetStart + converted.length,
+  };
+};
+
+const walkTextNodes = (root: HTMLElement, fn: (text: string) => string): void => {
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null);
+  let node: Text | null;
+  while ((node = walker.nextNode() as Text | null)) {
+    if (!node.parentElement) continue;
+    if (node.parentElement.closest('code, pre, textarea')) continue;
+    node.textContent = fn(node.textContent ?? '');
+  }
+};
+
+export const applyBrailleNodes = (root: HTMLElement): void => {
+  walkTextNodes(root, braillify);
+};
 
 export const downloadBrf = (text: string) => {
   const out = braillify(text);
@@ -73,5 +106,3 @@ export const downloadBrf = (text: string) => {
   a.click();
   URL.revokeObjectURL(url);
 };
-
-export const SAMPLES = ['Hello world', 'Braille 101', 'The quick brown fox'];

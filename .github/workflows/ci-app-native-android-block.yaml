@@ -10,7 +10,7 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/native/block/android/**'
+      - 'packages/app/native/block/android/**/*'
       - '.github/workflows/ci-app-native-android-block.yaml'
       - '.github/workflows/ci-app-native-android-template.yaml'
 

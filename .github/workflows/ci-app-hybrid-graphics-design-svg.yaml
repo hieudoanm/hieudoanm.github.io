@@ -10,7 +10,7 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/hybrid/graphics-design/svg/**'
+      - 'packages/app/hybrid/graphics-design/svg/**/*'
       - '.github/workflows/ci-app-hybrid-graphics-design-svg.yaml'
       - '.github/workflows/ci-app-hybrid-template.yaml'
 

@@ -4,7 +4,12 @@ import { FC, RefObject, useEffect, useRef, useState } from 'react';
 import 'github-markdown-css/github-markdown-dark.css';
 import { TbLoader2, TbArrowsShuffle } from 'react-icons/tb';
 import { scrambleNodes, applyCaseNodes } from '@/lib/typoglycemia';
-import type { CaseKind } from '@/lib/textCase';
+import { applyBrailleNodes } from '@/lib/braille';
+import { applyMorseNodes } from '@/lib/morse';
+import { applyLeetNodes } from '@/lib/leet';
+import type { ConvertKind } from '@/components/editor/ConvertToolbar';
+
+import { type CaseKind } from '@/lib/textCase';
 
 interface MarkdownPreviewerProps {
   html: string;
@@ -13,10 +18,18 @@ interface MarkdownPreviewerProps {
   visible: boolean;
   scramble?: boolean;
   onToggleScramble?: () => void;
-  caseKind?: CaseKind | null;
+  convertKind?: ConvertKind;
 }
 
 const SCRAMBLE_INTERVAL_MS = 1000;
+
+const isCaseKind = (kind: ConvertKind): kind is CaseKind =>
+  kind === 'upper' ||
+  kind === 'lower' ||
+  kind === 'title' ||
+  kind === 'camel' ||
+  kind === 'snake' ||
+  kind === 'kebab';
 
 export const MarkdownPreviewer: FC<MarkdownPreviewerProps> = ({
   html,
@@ -25,7 +38,7 @@ export const MarkdownPreviewer: FC<MarkdownPreviewerProps> = ({
   visible,
   scramble = false,
   onToggleScramble,
-  caseKind = null,
+  convertKind = null,
 }) => {
   const contentRef = useRef<HTMLDivElement | null>(null);
   const [tick, setTick] = useState(0);
@@ -40,10 +53,18 @@ export const MarkdownPreviewer: FC<MarkdownPreviewerProps> = ({
     if (!contentRef.current) return;
     if (scramble) {
       scrambleNodes(contentRef.current);
-    } else if (caseKind) {
-      applyCaseNodes(contentRef.current, caseKind);
+    } else if (convertKind) {
+      if (isCaseKind(convertKind)) {
+        applyCaseNodes(contentRef.current, convertKind);
+      } else if (convertKind === 'braille') {
+        applyBrailleNodes(contentRef.current);
+      } else if (convertKind === 'morse') {
+        applyMorseNodes(contentRef.current);
+      } else if (convertKind === 'leet') {
+        applyLeetNodes(contentRef.current);
+      }
     }
-  }, [tick, scramble, caseKind, html]);
+  }, [tick, scramble, convertKind, html]);
 
   return (
     <div

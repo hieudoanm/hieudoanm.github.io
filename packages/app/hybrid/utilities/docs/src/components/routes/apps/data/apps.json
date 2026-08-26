@@ -276,30 +276,6 @@
     ]
   },
   {
-    "id": "text-convert",
-    "label": "Text - Convert",
-    "items": [
-      {
-        "label": "Braille",
-        "description": "Text to Braille",
-        "icon": "PiDotsNine",
-        "toolId": "braille"
-      },
-      {
-        "label": "Leet Speak",
-        "description": "Text to Leet",
-        "icon": "PiTextAa",
-        "toolId": "leetspeak"
-      },
-      {
-        "label": "Morse",
-        "description": "Text to Morse Code",
-        "icon": "PiWaveSine",
-        "toolId": "morse"
-      }
-    ]
-  },
-  {
     "id": "trivia",
     "label": "Trivia",
     "items": [

@@ -10,7 +10,7 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/native/mixer/apple/macos/**'
+      - 'packages/app/native/mixer/apple/macos/**/*'
       - '.github/workflows/ci-app-native-macos-mixer.yaml'
       - '.github/workflows/ci-app-native-macos-template.yaml'
 

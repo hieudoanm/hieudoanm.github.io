@@ -10,7 +10,7 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/hybrid/finance/wallet/**'
+      - 'packages/app/hybrid/finance/wallet/**/*'
       - '.github/workflows/ci-app-hybrid-finance-wallet.yaml'
       - '.github/workflows/ci-app-hybrid-template.yaml'
 

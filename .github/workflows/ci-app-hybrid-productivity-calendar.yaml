@@ -10,7 +10,7 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/hybrid/productivity/calendar/**'
+      - 'packages/app/hybrid/productivity/calendar/**/*'
       - '.github/workflows/ci-app-hybrid-productivity-calendar.yaml'
       - '.github/workflows/ci-app-hybrid-template.yaml'
 

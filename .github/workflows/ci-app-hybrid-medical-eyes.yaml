@@ -10,7 +10,7 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/hybrid/medical/eyes/**'
+      - 'packages/app/hybrid/medical/eyes/**/*'
       - '.github/workflows/ci-app-hybrid-medical-eyes.yaml'
       - '.github/workflows/ci-app-hybrid-template.yaml'
 

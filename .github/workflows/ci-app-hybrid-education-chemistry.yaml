@@ -10,7 +10,7 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/hybrid/education/chemistry/**'
+      - 'packages/app/hybrid/education/chemistry/**/*'
       - '.github/workflows/ci-app-hybrid-education-chemistry.yaml'
       - '.github/workflows/ci-app-hybrid-template.yaml'
 

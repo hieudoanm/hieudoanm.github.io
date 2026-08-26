@@ -10,7 +10,7 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/hybrid/games/tic-tac-toe/**'
+      - 'packages/app/hybrid/games/tic-tac-toe/**/*'
       - '.github/workflows/ci-app-hybrid-games-tic-tac-toe.yaml'
       - '.github/workflows/ci-app-hybrid-template.yaml'
 

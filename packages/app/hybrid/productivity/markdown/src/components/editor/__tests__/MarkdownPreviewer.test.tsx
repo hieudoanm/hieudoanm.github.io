@@ -100,8 +100,23 @@ describe('MarkdownPreviewer', () => {
     expect(btn.className).toContain('btn-primary');
   });
 
-  it('accepts caseKind prop without error', () => {
-    renderPreviewer({ caseKind: 'upper' });
+  it('accepts convertKind prop without error', () => {
+    renderPreviewer({ convertKind: 'upper' });
+    expect(screen.getByTestId('markdown-preview')).toBeInTheDocument();
+  });
+
+  it('accepts braille convertKind without error', () => {
+    renderPreviewer({ convertKind: 'braille' });
+    expect(screen.getByTestId('markdown-preview')).toBeInTheDocument();
+  });
+
+  it('accepts morse convertKind without error', () => {
+    renderPreviewer({ convertKind: 'morse' });
+    expect(screen.getByTestId('markdown-preview')).toBeInTheDocument();
+  });
+
+  it('accepts leet convertKind without error', () => {
+    renderPreviewer({ convertKind: 'leet' });
     expect(screen.getByTestId('markdown-preview')).toBeInTheDocument();
   });
 });

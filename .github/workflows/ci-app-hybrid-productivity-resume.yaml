@@ -10,7 +10,7 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/hybrid/productivity/resume/**'
+      - 'packages/app/hybrid/productivity/resume/**/*'
       - '.github/workflows/ci-app-hybrid-productivity-resume.yaml'
       - '.github/workflows/ci-app-hybrid-template.yaml'
 

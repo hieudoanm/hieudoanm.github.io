@@ -10,7 +10,7 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/hybrid/shopping/store/**'
+      - 'packages/app/hybrid/shopping/store/**/*'
       - '.github/workflows/ci-app-hybrid-shopping-store.yaml'
       - '.github/workflows/ci-app-hybrid-template.yaml'
 

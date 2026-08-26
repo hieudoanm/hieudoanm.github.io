@@ -10,7 +10,7 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/hybrid/games/memory/**'
+      - 'packages/app/hybrid/games/memory/**/*'
       - '.github/workflows/ci-app-hybrid-games-memory.yaml'
       - '.github/workflows/ci-app-hybrid-template.yaml'
 

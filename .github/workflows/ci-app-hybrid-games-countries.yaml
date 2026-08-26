@@ -10,7 +10,7 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/hybrid/games/countries/**'
+      - 'packages/app/hybrid/games/countries/**/*'
       - '.github/workflows/ci-app-hybrid-games-countries.yaml'
       - '.github/workflows/ci-app-hybrid-template.yaml'
 

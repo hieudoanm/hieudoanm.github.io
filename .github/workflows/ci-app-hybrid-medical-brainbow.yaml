@@ -10,7 +10,7 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/hybrid/medical/brainbow/**'
+      - 'packages/app/hybrid/medical/brainbow/**/*'
       - '.github/workflows/ci-app-hybrid-medical-brainbow.yaml'
       - '.github/workflows/ci-app-hybrid-template.yaml'
 

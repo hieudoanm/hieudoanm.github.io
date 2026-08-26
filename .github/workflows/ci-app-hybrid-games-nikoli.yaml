@@ -10,7 +10,7 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/hybrid/games/nikoli/**'
+      - 'packages/app/hybrid/games/nikoli/**/*'
       - '.github/workflows/ci-app-hybrid-games-nikoli.yaml'
       - '.github/workflows/ci-app-hybrid-template.yaml'
 

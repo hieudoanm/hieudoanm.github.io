@@ -10,7 +10,7 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/hybrid/education/history/**'
+      - 'packages/app/hybrid/education/history/**/*'
       - '.github/workflows/ci-app-hybrid-education-history.yaml'
       - '.github/workflows/ci-app-hybrid-template.yaml'
 

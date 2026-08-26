@@ -10,7 +10,7 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/hybrid/games/8-bit/**'
+      - 'packages/app/hybrid/games/8-bit/**/*'
       - '.github/workflows/ci-app-hybrid-games-8-bit.yaml'
       - '.github/workflows/ci-app-hybrid-template.yaml'
 

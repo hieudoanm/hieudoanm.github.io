@@ -10,7 +10,7 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/hybrid/medical/psychology/**'
+      - 'packages/app/hybrid/medical/psychology/**/*'
       - '.github/workflows/ci-app-hybrid-medical-psychology.yaml'
       - '.github/workflows/ci-app-hybrid-template.yaml'
 

@@ -1,11 +1,11 @@
-import { morsify, playMorse } from '../utils/morse';
+import { morsify, applyMorse, playMorse } from '../morse';
 
 describe('morsify', () => {
   it('converts a single letter', () => {
     expect(morsify('a')).toBe('.-');
   });
 
-  it('converts hello world', () => {
+  it('converts SOS', () => {
     expect(morsify('SOS')).toBe('... --- ...');
   });
 
@@ -27,6 +27,24 @@ describe('morsify', () => {
 
   it('handles digits', () => {
     expect(morsify('123')).toBe('.---- ..--- ...--');
+  });
+});
+
+describe('applyMorse', () => {
+  it('converts entire document when no selection', () => {
+    const result = applyMorse('hi', 2, 2);
+    expect(result.text).toBe('.... ..');
+  });
+
+  it('converts selected range only', () => {
+    const result = applyMorse('hi world', 0, 2);
+    expect(result.text).toBe('.... .. world');
+  });
+
+  it('places cursor at start when no selection', () => {
+    const result = applyMorse('ab', 2, 2);
+    expect(result.selectionStart).toBe(0);
+    expect(result.selectionEnd).toBe(result.text.length);
   });
 });
 

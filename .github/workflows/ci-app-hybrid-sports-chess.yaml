@@ -10,7 +10,7 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/hybrid/sports/chess/**'
+      - 'packages/app/hybrid/sports/chess/**/*'
       - '.github/workflows/ci-app-hybrid-sports-chess.yaml'
       - '.github/workflows/ci-app-hybrid-template.yaml'
 

@@ -10,7 +10,7 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/hybrid/education/lingo/**'
+      - 'packages/app/hybrid/education/lingo/**/*'
       - '.github/workflows/ci-app-hybrid-education-lingo.yaml'
       - '.github/workflows/ci-app-hybrid-template.yaml'
 

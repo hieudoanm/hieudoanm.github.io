@@ -26,11 +26,11 @@ import {
   saveUiPreference,
 } from '@/lib/storage';
 import type { Note, ViewMode } from '@/lib/types';
-import type { CaseKind } from '@/lib/textCase';
 import { buildGraph, resolveNoteTitle } from '@/lib/wikilinks';
 import { FileToolbar } from '@/components/editor/FileToolbar';
 import { FormatToolbar } from '@/components/editor/FormatToolbar';
-import { CaseToolbar } from '@/components/editor/CaseToolbar';
+import { ConvertToolbar } from '@/components/editor/ConvertToolbar';
+import type { ConvertKind } from '@/components/editor/ConvertToolbar';
 import { MarkdownPreviewer } from '@/components/editor/MarkdownPreviewer';
 import { StatsBar } from '@/components/editor/StatsBar';
 import { TocSidebar } from '@/components/editor/TocSidebar';
@@ -60,7 +60,7 @@ export const VaultApp: FC = () => {
     loadUiPreference(OUTLINE_PREF_KEY, true)
   );
   const [scramble, setScramble] = useState(false);
-  const [caseKind, setCaseKind] = useState<CaseKind | null>(null);
+  const [convertKind, setConvertKind] = useState<ConvertKind>(null);
 
   const editorRef = useRef<HTMLDivElement | null>(null);
   const previewRef = useRef<HTMLDivElement | null>(null);
@@ -331,7 +331,7 @@ export const VaultApp: FC = () => {
                   onDelete={deleteNote}
                 />
                 <FormatToolbar view={view} />
-                <CaseToolbar caseKind={caseKind} onCaseChange={setCaseKind} />
+                <ConvertToolbar convertKind={convertKind} onConvertChange={setConvertKind} />
 
                 <div className="flex min-h-0 flex-1">
                   <div
@@ -352,7 +352,7 @@ export const VaultApp: FC = () => {
                       visible
                       scramble={scramble}
                       onToggleScramble={toggleScramble}
-                      caseKind={caseKind}
+                      convertKind={convertKind}
                     />
                   </div>
                 </div>

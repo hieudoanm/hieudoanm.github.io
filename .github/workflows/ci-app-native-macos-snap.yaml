@@ -10,7 +10,7 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/native/snap/apple/macos/**'
+      - 'packages/app/native/snap/apple/macos/**/*'
       - '.github/workflows/ci-app-native-macos-snap.yaml'
       - '.github/workflows/ci-app-native-macos-template.yaml'
 

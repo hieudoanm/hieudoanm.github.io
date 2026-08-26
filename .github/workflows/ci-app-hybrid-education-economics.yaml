@@ -10,7 +10,7 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/hybrid/education/economics/**'
+      - 'packages/app/hybrid/education/economics/**/*'
       - '.github/workflows/ci-app-hybrid-education-economics.yaml'
       - '.github/workflows/ci-app-hybrid-template.yaml'
 

@@ -10,7 +10,7 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/native/nfc/android/**'
+      - 'packages/app/native/nfc/android/**/*'
       - '.github/workflows/ci-app-native-android-nfc.yaml'
       - '.github/workflows/ci-app-native-android-template.yaml'
 

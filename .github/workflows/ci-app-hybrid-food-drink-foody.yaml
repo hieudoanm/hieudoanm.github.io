@@ -10,7 +10,7 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/hybrid/food-drink/foody/**'
+      - 'packages/app/hybrid/food-drink/foody/**/*'
       - '.github/workflows/ci-app-hybrid-food-drink-foody.yaml'
       - '.github/workflows/ci-app-hybrid-template.yaml'
 

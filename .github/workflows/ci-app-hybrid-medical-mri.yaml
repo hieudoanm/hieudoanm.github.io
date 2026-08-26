@@ -10,7 +10,7 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/hybrid/medical/mri/**'
+      - 'packages/app/hybrid/medical/mri/**/*'
       - '.github/workflows/ci-app-hybrid-medical-mri.yaml'
       - '.github/workflows/ci-app-hybrid-template.yaml'
 

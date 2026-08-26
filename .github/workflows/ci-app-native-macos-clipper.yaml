@@ -10,7 +10,7 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/native/clipper/apple/macos/**'
+      - 'packages/app/native/clipper/apple/macos/**/*'
       - '.github/workflows/ci-app-native-macos-clipper.yaml'
       - '.github/workflows/ci-app-native-macos-template.yaml'
 
