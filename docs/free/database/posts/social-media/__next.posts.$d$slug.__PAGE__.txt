@@ -1,0 +1,239 @@
+1:"$Sreact.fragment"
+2:I[16652,["/free/database/_next/static/chunks/1--z4n99tn7_d.js","/free/database/_next/static/chunks/18j5hqbzezdw8.js"],""]
+3:T141f,<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="560" viewBox="0 0 1140 560" font-family="ui-monospace, SFMono-Regular, monospace">
+  <rect width="100%" height="100%" fill="#0f172a"/>
+  <g data-table="FOLLOWS">
+    <rect x="40" y="40" width="220" height="128" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 40 80 L 260 80" stroke="#334155"/>
+    <text x="52" y="66" font-size="13" font-weight="600" fill="#e2e8f0">FOLLOWS</text>
+      <text x="52" y="96" font-size="11" fill="#9ca3af">&#128273; follower_id</text>
+      <text x="52" y="120" font-size="11" fill="#9ca3af">&#128273; followee_id</text>
+      <text x="52" y="144" font-size="11" fill="#9ca3af">created_at</text>
+  </g>
+  <g data-table="LIKES">
+    <rect x="460" y="40" width="220" height="128" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 460 80 L 680 80" stroke="#334155"/>
+    <text x="472" y="66" font-size="13" font-weight="600" fill="#e2e8f0">LIKES</text>
+      <text x="472" y="96" font-size="11" fill="#9ca3af">&#128273; user_id</text>
+      <text x="472" y="120" font-size="11" fill="#9ca3af">&#128273; post_id</text>
+      <text x="472" y="144" font-size="11" fill="#9ca3af">created_at</text>
+  </g>
+  <g data-table="MEDIA">
+    <rect x="880" y="40" width="220" height="152" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 880 80 L 1100 80" stroke="#334155"/>
+    <text x="892" y="66" font-size="13" font-weight="600" fill="#e2e8f0">MEDIA</text>
+      <text x="892" y="96" font-size="11" fill="#9ca3af">&#128273; id</text>
+      <text x="892" y="120" font-size="11" fill="#9ca3af">post_id</text>
+      <text x="892" y="144" font-size="11" fill="#9ca3af">kind</text>
+      <text x="892" y="168" font-size="11" fill="#9ca3af">url</text>
+  </g>
+  <g data-table="MESSAGES">
+    <rect x="40" y="320" width="220" height="200" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 40 360 L 260 360" stroke="#334155"/>
+    <text x="52" y="346" font-size="13" font-weight="600" fill="#e2e8f0">MESSAGES</text>
+      <text x="52" y="376" font-size="11" fill="#9ca3af">&#128273; id</text>
+      <text x="52" y="400" font-size="11" fill="#9ca3af">sender_id</text>
+      <text x="52" y="424" font-size="11" fill="#9ca3af">recipient_id</text>
+      <text x="52" y="448" font-size="11" fill="#9ca3af">body</text>
+      <text x="52" y="472" font-size="11" fill="#9ca3af">created_at</text>
+      <text x="52" y="496" font-size="11" fill="#9ca3af">read</text>
+  </g>
+  <g data-table="POSTS">
+    <rect x="460" y="320" width="220" height="200" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 460 360 L 680 360" stroke="#334155"/>
+    <text x="472" y="346" font-size="13" font-weight="600" fill="#e2e8f0">POSTS</text>
+      <text x="472" y="376" font-size="11" fill="#9ca3af">&#128273; id</text>
+      <text x="472" y="400" font-size="11" fill="#9ca3af">user_id</text>
+      <text x="472" y="424" font-size="11" fill="#9ca3af">reply_to_id</text>
+      <text x="472" y="448" font-size="11" fill="#9ca3af">body</text>
+      <text x="472" y="472" font-size="11" fill="#9ca3af">media_count</text>
+      <text x="472" y="496" font-size="11" fill="#9ca3af">created_at</text>
+  </g>
+  <g data-table="USERS">
+    <rect x="880" y="296" width="220" height="176" rx="8" fill="#1e293b" stroke="#334155"/>
+    <path d="M 880 336 L 1100 336" stroke="#334155"/>
+    <text x="892" y="322" font-size="13" font-weight="600" fill="#e2e8f0">USERS</text>
+      <text x="892" y="352" font-size="11" fill="#9ca3af">&#128273; id</text>
+      <text x="892" y="376" font-size="11" fill="#9ca3af">username</text>
+      <text x="892" y="400" font-size="11" fill="#9ca3af">email</text>
+      <text x="892" y="424" font-size="11" fill="#9ca3af">display_name</text>
+      <text x="892" y="448" font-size="11" fill="#9ca3af">created_at</text>
+  </g>
+  <path d="M 1100 348 C 780 348, 780 372, 460 372" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="USERS.POSTS"/>
+  <path d="M 1100 348 C 780 348, 780 372, 460 372" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="USERS.POSTS"/>
+  <path d="M 1100 348 C 570 348, 570 92, 40 92" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="USERS.FOLLOWS"/>
+  <path d="M 1100 348 C 570 348, 570 92, 40 92" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="USERS.FOLLOWS"/>
+  <path d="M 1100 348 C 780 348, 780 92, 460 92" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="USERS.LIKES"/>
+  <path d="M 680 372 C 570 372, 570 92, 460 92" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="POSTS.LIKES"/>
+  <path d="M 680 372 C 780 372, 780 92, 880 92" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="POSTS.MEDIA"/>
+  <path d="M 1100 348 C 570 348, 570 372, 40 372" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="USERS.MESSAGES"/>
+  <path d="M 1100 348 C 570 348, 570 372, 40 372" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="5 3" data-edge="USERS.MESSAGES"/>
+</svg>1a:X
+1f:X
+1f:C
+0:{"buildId":"zF6yP3D1ReAgZ_W2OK9r_","data":[{"rsc":["$","$1","c",{"children":[["$","div",null,{"className":"bg-base-100 min-h-screen","children":[["$","header",null,{"className":"border-base-300 bg-base-100 sticky top-0 z-10 flex items-center justify-between border-b px-6 py-4","children":[["$","h1",null,{"className":"text-xl font-bold","children":"Schema Library"}],["$","$L2",null,{"href":"/posts","className":"btn btn-ghost btn-sm gap-2","children":[["$","svg",null,{"stroke":"currentColor","fill":"none","strokeWidth":"2","viewBox":"0 0 24 24","strokeLinecap":"round","strokeLinejoin":"round","className":"size-3.5","children":["$undefined",[["$","line","0",{"x1":"19","y1":"12","x2":"5","y2":"12","children":[]}],["$","polyline","1",{"points":"12 19 5 12 12 5","children":[]}]]],"style":{},"height":"1em","width":"1em","xmlns":"http://www.w3.org/2000/svg"}]," All schemas"]}]]}],["$","main",null,{"className":"mx-auto max-w-3xl p-6","children":[["$","article",null,{"className":"prose-invert","children":[["$","h1","0",{"className":"mb-2 mt-2 text-2xl font-bold text-slate-50","children":["Social Media Platform"]}],["$","blockquote","1",{"className":"border-l-4 border-indigo-500/60 pl-4 text-slate-400","children":[["$","p","0",{"className":"mb-2 last:mb-0","children":["A Twitter/X-style microblogging service: users, posts (tweets), replies,"]}],["$","p","1",{"className":"mb-2 last:mb-0","children":["likes, follows, mentions, and direct messages. The classic \"fan-out\" and"]}],["$","p","2",{"className":"mb-2 last:mb-0","children":["adjacency-list graph modelling case study."]}]]}],["$","h2","2",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["ER Diagram (Mermaid)"]}],["$","div","3",{"className":"overflow-x-auto rounded-xl border border-slate-800","dangerouslySetInnerHTML":{"__html":"$3"}}],"$L4","$L5","$L6","$L7","$L8","$L9","$La","$Lb","$Lc","$Ld","$Le","$Lf","$L10","$L11","$L12","$L13","$L14","$L15"]}],"$L16"]}]]}],["$L17"],"$L18"]}],"isPartial":"$@19","staleTime":"$1a","varyParams":null},{"rsc":"$L1b","isPartial":"$@1c","staleTime":"$1a","varyParams":null},{"rsc":"$L1d","isPartial":"$@1e","staleTime":"$1a","varyParams":"$1f"},{"rsc":"$L20","isPartial":"$@21","staleTime":"$1a","varyParams":"$1f"},{"rsc":"$L22","isPartial":"$@23","staleTime":"$1a","varyParams":null}],"isUpgradeableISRFallback":false,"a":"$@24","rootVaryParams":null,"needsRuntimeRequest":"$@25"}
+2c:I[50153,["/free/database/_next/static/chunks/1--z4n99tn7_d.js"],"OutletBoundary"]
+2d:"$Sreact.suspense"
+2f:I[50153,["/free/database/_next/static/chunks/1--z4n99tn7_d.js"],"ViewportBoundary"]
+30:I[50153,["/free/database/_next/static/chunks/1--z4n99tn7_d.js"],"MetadataBoundary"]
+31:I[33241,["/free/database/_next/static/chunks/1--z4n99tn7_d.js"],"IconMark"]
+32:I[34727,["/free/database/_next/static/chunks/1--z4n99tn7_d.js"],"default"]
+33:I[71309,["/free/database/_next/static/chunks/1--z4n99tn7_d.js"],"default"]
+34:I[34727,["/free/database/_next/static/chunks/1--z4n99tn7_d.js"],"LoadingBoundaryProvider"]
+35:I[41483,["/free/database/_next/static/chunks/1--z4n99tn7_d.js"],"SWProvider"]
+36:I[11443,["/free/database/_next/static/chunks/1--z4n99tn7_d.js","/free/database/_next/static/chunks/2nj0jdnnyouw6.js"],"default"]
+37:I[40523,["/free/database/_next/static/chunks/1--z4n99tn7_d.js","/free/database/_next/static/chunks/1l2hgdqtbj1y0.js"],"default"]
+:HL["/free/database/_next/static/chunks/2p4kffns0eld9.css","style"]
+4:["$","h2","4",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["ASCII Diagram"]}]
+26:T43f,            +------------------+
+            |      USERS       |
+            +------------------+
+              |  |  |  |  |  |
+      writes  |  |  |  |  |  |  follows / followed
+              |  |  |  |  |  |
+              v  |  |  |  |  |
+      +------------------+   |   +------------------+
+      |      POSTS       |   |   |     FOLLOWS      |
+      |------------------|   |   |------------------|
+      | reply_to_id ---->|---+   | follower_id   PK |
+      | user_id     ---->|--+    | followee_id   PK |
+      +------------------+  |    +------------------+
+              |             |
+              v             v
+      +------------------+  +------------------+
+      |      LIKES       |  |     MESSAGES     |
+      |------------------|  |------------------|
+      | user_id PK, FK   |  | sender_id    FK  |
+      | post_id PK, FK   |  | recipient_id FK  |
+      +------------------+  +------------------+
+              |
+              v
+      +------------------+
+      |      MEDIA       |
+      |------------------|
+      | post_id FK       |
+      +------------------+5:["$","div","5",{"className":"mb-4","children":["$","pre",null,{"className":"overflow-x-auto rounded-xl border border-slate-800 bg-slate-950 p-4 text-[13px] leading-relaxed text-slate-300","children":["$","code",null,{"children":"$26"}]}]}]
+6:["$","h2","6",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["Tables"]}]
+7:["$","div","7",{"className":"mb-4","children":["$","div",null,{"className":"overflow-x-auto rounded-xl border border-slate-800","children":["$","table",null,{"className":"w-full text-left text-sm","children":[["$","thead",null,{"children":["$","tr",null,{"className":"border-b border-slate-800 bg-slate-900/60","children":[["$","th","0",{"className":"px-4 py-2 font-semibold text-slate-200","children":["Table"]}],["$","th","1",{"className":"px-4 py-2 font-semibold text-slate-200","children":["PK"]}],["$","th","2",{"className":"px-4 py-2 font-semibold text-slate-200","children":["Key FKs"]}],["$","th","3",{"className":"px-4 py-2 font-semibold text-slate-200","children":["Notes"]}]]}]}],["$","tbody",null,{"children":[["$","tr","0",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Users"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":["—"]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Profile data"]}]]}],["$","tr","1",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Posts"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"user_id → Users"}],", ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"reply_to_id → Posts"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Self-FK for reply threads"]}]]}],["$","tr","2",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Follows"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"follower_id"}],"+",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"followee_id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":["both FKs"]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Directed graph adjacency"]}]]}],["$","tr","3",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Likes"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"user_id"}],"+",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"post_id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":["both FKs"]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["M:N with composite PK"]}]]}],["$","tr","4",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Media"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"id"}]]}],"$L27","$L28"]}],"$L29"]}]]}]}]}]
+8:["$","h2","8",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["Notable Design Patterns"]}]
+9:["$","ul","9",{"className":"mb-4 list-disc space-y-1 pl-5 text-slate-400","children":[["$","li","0",{"children":[["$","strong","0",{"className":"font-semibold text-slate-100","children":"Adjacency-list graph"}],": ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Follows"}]," and ",["$","code","4",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Likes"}]," are edge tables. Following is"]}]]}]
+a:["$","p","10",{"className":"mb-4 text-slate-400","children":["_directed_ — ",["$","code","1",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"follower_id → followee_id"}]," — so a composite PK is also the natural key that prevents duplicate follows."]}]
+b:["$","ul","11",{"className":"mb-4 list-disc space-y-1 pl-5 text-slate-400","children":[["$","li","0",{"children":[["$","strong","0",{"className":"font-semibold text-slate-100","children":"Reply threading via self-FK"}],": ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Posts.reply_to_id → Posts.id"}]," models a tree;"]}]]}]
+c:["$","p","12",{"className":"mb-4 text-slate-400","children":["combine with recursive CTEs to rebuild full conversation threads."]}]
+d:["$","ul","13",{"className":"mb-4 list-disc space-y-1 pl-5 text-slate-400","children":[["$","li","0",{"children":[["$","strong","0",{"className":"font-semibold text-slate-100","children":"Timeline strategies"}],": a simple ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"WHERE author_id IN (SELECT ...)"}]," over"]}]]}]
+e:["$","p","14",{"className":"mb-4 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Follows"}]," is a pull model; production systems add a materialised ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"timeline"}]," table and fan out on insert (a great design discussion point)."]}]
+f:["$","ul","15",{"className":"mb-4 list-disc space-y-1 pl-5 text-slate-400","children":[["$","li","0",{"children":[["$","strong","0",{"className":"font-semibold text-slate-100","children":"M:N likes as pure junction"}]," with ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"created_at"}]," as an edge attribute."]}],["$","li","1",{"children":[["$","strong","0",{"className":"font-semibold text-slate-100","children":"Messages as a normalised table"}]," with read/unread flag instead of a"]}]]}]
+10:["$","p","16",{"className":"mb-4 text-slate-400","children":["denormalised \"inbox/outbox\" duplication."]}]
+11:["$","h2","17",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["Sample Queries"]}]
+2a:T495,-- Home timeline: posts from people I follow, newest first
+SELECT p.body, u.username, p.created_at
+FROM posts p
+JOIN follows f ON f.followee_id = p.user_id
+JOIN users  u  ON u.id = p.user_id
+WHERE f.follower_id = 'user-1'
+  AND p.reply_to_id IS NULL
+ORDER BY p.created_at DESC
+LIMIT 50;
+
+-- Follow suggestions: who do the people I follow also follow?
+SELECT DISTINCT u.username
+FROM follows f1
+JOIN follows f2 ON f2.follower_id = f1.followee_id
+JOIN users u    ON u.id = f2.followee_id
+WHERE f1.follower_id = 'user-1'
+  AND f2.followee_id <> 'user-1'
+  AND f2.followee_id NOT IN (
+    SELECT followee_id FROM follows WHERE follower_id = 'user-1'
+  )
+LIMIT 20;
+
+-- Full reply thread using a recursive CTE
+WITH RECURSIVE thread(id, depth) AS (
+  SELECT id, 0 FROM posts WHERE id = 'post-100'
+  UNION ALL
+  SELECT p.id, t.depth + 1
+  FROM posts p JOIN thread t ON p.reply_to_id = t.id
+)
+SELECT p.id, p.body
+FROM thread t
+JOIN posts p ON p.id = t.id
+ORDER BY t.depth;
+
+-- Most liked accounts
+SELECT u.username, COUNT(l.user_id) AS likes_received
+FROM posts p
+JOIN likes l ON l.post_id = p.id
+JOIN users u ON u.id = p.user_id
+GROUP BY u.id
+ORDER BY likes_received DESC
+LIMIT 10;12:["$","div","18",{"className":"mb-4","children":["$","pre",null,{"className":"overflow-x-auto rounded-xl border border-slate-800 bg-slate-950 p-4 text-[13px] leading-relaxed text-slate-300","children":["$","code",null,{"children":"$2a"}]}]}]
+13:["$","h2","19",{"className":"mb-3 mt-8 text-xl font-semibold text-slate-100","children":["Recreate the Sample"]}]
+14:["$","p","20",{"className":"mb-4 text-slate-400","children":["Run these statements in order to rebuild the schema."]}]
+2b:T4a5,PRAGMA foreign_keys = ON;
+
+CREATE TABLE users (
+  id           TEXT PRIMARY KEY,
+  username     TEXT NOT NULL,
+  email        TEXT NOT NULL,
+  display_name TEXT,
+  created_at   TEXT
+);
+
+CREATE TABLE posts (
+  id          TEXT PRIMARY KEY,
+  user_id     TEXT NOT NULL REFERENCES users(id),
+  reply_to_id TEXT REFERENCES posts(id),
+  body        TEXT NOT NULL,
+  media_count INTEGER NOT NULL DEFAULT 0,
+  created_at  TEXT NOT NULL
+);
+
+CREATE TABLE follows (
+  follower_id TEXT NOT NULL REFERENCES users(id),
+  followee_id TEXT NOT NULL REFERENCES users(id),
+  created_at  TEXT,
+  PRIMARY KEY (follower_id, followee_id)
+);
+
+CREATE TABLE likes (
+  user_id    TEXT NOT NULL REFERENCES users(id),
+  post_id    TEXT NOT NULL REFERENCES posts(id),
+  created_at TEXT,
+  PRIMARY KEY (user_id, post_id)
+);
+
+CREATE TABLE media (
+  id      TEXT PRIMARY KEY,
+  post_id TEXT NOT NULL REFERENCES posts(id),
+  kind    TEXT,
+  url     TEXT NOT NULL
+);
+
+CREATE TABLE messages (
+  id           TEXT PRIMARY KEY,
+  sender_id    TEXT NOT NULL REFERENCES users(id),
+  recipient_id TEXT NOT NULL REFERENCES users(id),
+  body         TEXT NOT NULL,
+  created_at   TEXT,
+  read         INTEGER NOT NULL DEFAULT 0
+);15:["$","div","21",{"className":"mb-4","children":["$","pre",null,{"className":"overflow-x-auto rounded-xl border border-slate-800 bg-slate-950 p-4 text-[13px] leading-relaxed text-slate-300","children":["$","code",null,{"children":"$2b"}]}]}]
+16:["$","nav",null,{"className":"border-base-300 mt-12 flex items-center justify-between gap-3 border-t pt-4","children":[["$","$L2",null,{"href":"/posts/sakila","className":"btn btn-ghost btn-sm gap-2","children":[["$","svg",null,{"stroke":"currentColor","fill":"none","strokeWidth":"2","viewBox":"0 0 24 24","strokeLinecap":"round","strokeLinejoin":"round","className":"size-3.5","children":["$undefined",[["$","line","0",{"x1":"19","y1":"12","x2":"5","y2":"12","children":[]}],["$","polyline","1",{"points":"12 19 5 12 12 5","children":[]}]]],"style":{},"height":"1em","width":"1em","xmlns":"http://www.w3.org/2000/svg"}]," ","Sakila — DVD Rental Store"]}],["$","span",null,{}]]}]
+17:["$","script","script-0",{"src":"/free/database/_next/static/chunks/18j5hqbzezdw8.js","async":true}]
+18:["$","$L2c",null,{"children":["$","$2d",null,{"name":"Next.MetadataOutlet","children":"$@2e"}]}]
+1b:["$","$1","h",{"children":[null,["$","$L2f",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L30",null,{"children":["$","$2d",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Social Media Platform · Schema Library"}],["$","meta","1",{"name":"description","content":"A Twitter/X-style microblogging service: users, posts (tweets), replies, likes, follows, mentions, and direct messages. The classic \"fan-out\" and adjacency-list graph modelling case study."}],["$","link","2",{"rel":"manifest","href":"/manifest.json"}],["$","meta","3",{"name":"mobile-web-app-capable","content":"yes"}],["$","meta","4",{"name":"apple-mobile-web-app-title","content":"Database"}],["$","meta","5",{"name":"apple-mobile-web-app-status-bar-style","content":"black-translucent"}],["$","link","6",{"rel":"icon","href":"/free/database/favicon.ico?favicon.0vg85pxzt99x1.ico","sizes":"48x48","type":"image/x-icon"}],["$","$L31","7",{}]]}]}]}],null]}]
+1d:["$","$1","c",{"children":[null,["$","$L32",null,{"parallelRouterKey":"children","template":["$","$L33",null,{}]}]]}]
+20:["$","$1","c",{"children":[null,["$","$L32",null,{"parallelRouterKey":"children","template":["$","$L33",null,{}]}]]}]
+22:["$","$L34",null,{"loading":[["$","div","l",{"className":"flex h-screen items-center justify-center","children":["$","span",null,{"className":"loading loading-spinner loading-lg text-primary"}]}],[],null],"children":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/free/database/_next/static/chunks/2p4kffns0eld9.css","precedence":"next"}],["$","script","script-0",{"src":"/free/database/_next/static/chunks/1--z4n99tn7_d.js","async":true}]],["$","html",null,{"lang":"en","data-theme":"dim","children":[["$","head",null,{"children":["$","link",null,{"rel":"apple-touch-icon","href":"/icons/icon-192.png"}]}],["$","body",null,{"className":"bg-base-100 text-base-content h-screen overflow-y-auto font-mono","children":["$","$L35",null,{"children":["$","$L32",null,{"parallelRouterKey":"children","error":"$36","errorStyles":[],"errorScripts":[["$","script","script-0",{"src":"/free/database/_next/static/chunks/2nj0jdnnyouw6.js","async":true}]],"template":["$","$L37",null,{"children":["$","$L33",null,{}]}],"templateStyles":[],"templateScripts":[["$","script","script-0",{"src":"/free/database/_next/static/chunks/1l2hgdqtbj1y0.js","async":true}]],"notFound":[["$","div",null,{"className":"flex min-h-screen flex-col items-center justify-center px-6","children":[["$","p",null,{"className":"text-base-content/50 mb-6 text-xs tracking-[0.2em] uppercase","children":"Error"}],["$","h1",null,{"className":"mb-3","children":"404"}],["$","p",null,{"className":"text-base-content/50 mb-10 max-w-sm text-center text-sm","children":"The page you are looking for does not exist."}],["$","div",null,{"className":"flex flex-wrap justify-center gap-3","children":["$","$L2",null,{"href":"/","className":"btn btn-primary btn-sm","children":"Go home"}]}]]}],[]]}]}]}]]}]]}]}]
+27:["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"post_id → Posts"}]]}]
+28:["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Images/videos attached"]}]
+29:["$","tr","5",{"className":"border-b border-slate-800/60 last:border-0","children":[["$","td","0",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"Messages"}]]}],["$","td","1",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"id"}]]}],["$","td","2",{"className":"px-4 py-2 text-slate-400","children":[["$","code","0",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"sender_id"}],", ",["$","code","2",{"className":"rounded bg-slate-800 px-1 py-0.5 text-[0.85em] text-indigo-300","children":"recipient_id → Users"}]]}],["$","td","3",{"className":"px-4 py-2 text-slate-400","children":["Direct messages"]}]]}]
+2e:null
+25:true
+1a:300
+1a:C
+24:0
+1c:"$undefined"
+1e:"$undefined"
+21:"$undefined"
+23:"$undefined"
+19:"$undefined"

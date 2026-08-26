@@ -3,12 +3,10 @@ import { Tool } from '@hieudoanm.github.io/components/atoms';
 import type { IconType } from 'react-icons';
 import {
   PiBook,
-  PiBugDroid,
   PiBuilding,
   PiCheckCircle,
   PiGameController,
   PiGraph,
-  PiHurricane,
   PiLamp,
   PiNumberSquareOne,
   PiPaintBrushBroad,
@@ -42,12 +40,10 @@ type GameJsonItem = (typeof gamesJson)[number]['items'][number];
 
 const ICON_BY_NAME: Record<string, IconType> = {
   PiBook,
-  PiBugDroid,
   PiBuilding,
   PiCheckCircle,
   PiGameController,
   PiGraph,
-  PiHurricane,
   PiLamp,
   PiNumberSquareOne,
   PiPaintBrushBroad,

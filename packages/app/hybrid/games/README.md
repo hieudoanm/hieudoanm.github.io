@@ -1,6 +1,7 @@
 # Games
 
-1. Casino
-2. Countries
-3. Nikoli
-4. Tic-Tac-Toe
+1. 8-bit
+2. Casino
+3. Countries
+4. Nikoli
+5. Tic-Tac-Toe

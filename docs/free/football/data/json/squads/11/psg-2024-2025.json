@@ -1,0 +1,140 @@
+{
+  "name": "PSG 2024-2025",
+  "formationId": "433",
+  "players": [
+    {
+      "id": "donnarumma",
+      "name": "Gianluigi Donnarumma",
+      "number": 99,
+      "role": "GK"
+    },
+    { "id": "hakimi", "name": "Achraf Hakimi", "number": 2, "role": "DEF" },
+    { "id": "marquinhos", "name": "Marquinhos", "number": 5, "role": "DEF" },
+    { "id": "pacho", "name": "Willian Pacho", "number": 51, "role": "DEF" },
+    { "id": "mendes", "name": "Nuno Mendes", "number": 25, "role": "DEF" },
+    { "id": "vitinha", "name": "Vitinha", "number": 17, "role": "MID" },
+    { "id": "joaoneves", "name": "João Neves", "number": 87, "role": "MID" },
+    { "id": "fabian", "name": "Fabián Ruiz", "number": 8, "role": "MID" },
+    { "id": "dembele", "name": "Ousmane Dembélé", "number": 10, "role": "FWD" },
+    { "id": "ramos", "name": "Gonçalo Ramos", "number": 9, "role": "FWD" },
+    { "id": "barcola", "name": "Bradley Barcola", "number": 29, "role": "FWD" },
+    {
+      "id": "safonov",
+      "name": "Matvey Safonov",
+      "number": 39,
+      "role": "GK",
+      "bench": true
+    },
+    {
+      "id": "tenas",
+      "name": "Arnau Tenas",
+      "number": 80,
+      "role": "GK",
+      "bench": true
+    },
+    {
+      "id": "skriniar",
+      "name": "Milan Škriniar",
+      "number": 37,
+      "role": "DEF",
+      "bench": true
+    },
+    {
+      "id": "beraldo",
+      "name": "Lucas Beraldo",
+      "number": 35,
+      "role": "DEF",
+      "bench": true
+    },
+    {
+      "id": "kimpembe",
+      "name": "Presnel Kimpembe",
+      "number": 3,
+      "role": "DEF",
+      "bench": true
+    },
+    {
+      "id": "zague",
+      "name": "Yoram Zague",
+      "number": 27,
+      "role": "DEF",
+      "bench": true
+    },
+    {
+      "id": "hernandez",
+      "name": "Lucas Hernández",
+      "number": 21,
+      "role": "DEF",
+      "bench": true
+    },
+    {
+      "id": "zaire",
+      "name": "Warren Zaïre-Emery",
+      "number": 33,
+      "role": "MID",
+      "bench": true
+    },
+    {
+      "id": "kangin",
+      "name": "Lee Kang-in",
+      "number": 19,
+      "role": "MID",
+      "bench": true
+    },
+    {
+      "id": "asensio",
+      "name": "Marco Asensio",
+      "number": 11,
+      "role": "MID",
+      "bench": true
+    },
+    {
+      "id": "mayulu",
+      "name": "Senny Mayulu",
+      "number": 24,
+      "role": "MID",
+      "bench": true
+    },
+    {
+      "id": "doue",
+      "name": "Désiré Doué",
+      "number": 14,
+      "role": "FWD",
+      "bench": true
+    },
+    {
+      "id": "kolo",
+      "name": "Randal Kolo Muani",
+      "number": 23,
+      "role": "FWD",
+      "bench": true
+    },
+    {
+      "id": "kvara",
+      "name": "Khvicha Kvaratskhelia",
+      "number": 7,
+      "role": "FWD",
+      "bench": true
+    },
+    {
+      "id": "mbaye",
+      "name": "Ibrahim Mbaye",
+      "number": 42,
+      "role": "FWD",
+      "bench": true
+    }
+  ],
+  "assignments": {
+    "433-0-0": ["donnarumma"],
+    "433-1-1": ["hakimi"],
+    "433-1-2": ["marquinhos"],
+    "433-1-3": ["pacho"],
+    "433-1-4": ["mendes"],
+    "433-2-5": ["vitinha"],
+    "433-2-6": ["joaoneves"],
+    "433-2-7": ["fabian"],
+    "433-3-8": ["dembele"],
+    "433-3-9": ["ramos"],
+    "433-3-10": ["barcola"]
+  }
+}

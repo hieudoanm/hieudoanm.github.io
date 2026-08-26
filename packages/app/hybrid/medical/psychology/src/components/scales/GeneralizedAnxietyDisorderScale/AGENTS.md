@@ -1,4 +1,4 @@
-GeneralizedAnxietyDisorderScale
+# GeneralizedAnxietyDisorderScale
 
 ## Build & Test
 

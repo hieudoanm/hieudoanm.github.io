@@ -1,4 +1,4 @@
-DyadicAdjustmentScale
+# DyadicAdjustmentScale
 
 ## Build & Test
 

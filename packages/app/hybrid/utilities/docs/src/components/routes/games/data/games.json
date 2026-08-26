@@ -4,22 +4,10 @@
     "label": "Arcade",
     "items": [
       {
-        "label": "Dino Run",
-        "description": "Infinite runner",
-        "icon": "PiGameController",
-        "toolId": "dino-run"
-      },
-      {
         "label": "RPS",
         "description": "Rock Paper Scissors",
         "icon": "PiScissors",
         "toolId": "rps"
-      },
-      {
-        "label": "Snake",
-        "description": "12×12 grid",
-        "icon": "PiBugDroid",
-        "toolId": "snake"
       }
     ]
   },
@@ -74,12 +62,6 @@
         "description": "Toggle all lights off",
         "icon": "PiLamp",
         "toolId": "lights-out"
-      },
-      {
-        "label": "Maze",
-        "description": "Gen & solve",
-        "icon": "PiHurricane",
-        "toolId": "maze"
       },
       {
         "label": "Sliding Puzzle",

@@ -4,6 +4,45 @@
     "label": "Apps (Hybrid)",
     "items": [
       {
+        "label": "8-bit",
+        "description": "Games",
+        "icon": "PadGame",
+        "href": "https://hieudoanm.github.io/downloads/8-bit",
+        "version": "1.0.0",
+        "lastUpdated": "2026-08-26",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-8-bit-latest/app-universal-release.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-8-bit-latest/app-universal-release.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-8-bit-latest/8-bit_aarch64.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-8-bit-latest/8-bit_amd64.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-8-bit-latest/8-bit_amd64.deb"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-8-bit-latest/8-bit_x64.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-8-bit-latest/8-bit_x64.exe"
+          }
+        ]
+      },
+      {
         "label": "API",
         "description": "Developer Tools",
         "icon": "PiGlobe",
