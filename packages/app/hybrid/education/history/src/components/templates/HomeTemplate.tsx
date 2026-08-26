@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import { ComponentType, FC, ReactNode } from 'react';
-import { ThemeToggle } from '@/components/atoms/ThemeToggle';
 
 export interface CourseItem {
   label: string;
@@ -21,7 +20,6 @@ export interface HomeTemplateProps {
   description: string;
   items: CourseItem[];
   stats?: HomeStats;
-  footer?: ReactNode;
 }
 
 export const HomeTemplate: FC<HomeTemplateProps> = ({
@@ -29,7 +27,6 @@ export const HomeTemplate: FC<HomeTemplateProps> = ({
   description,
   items,
   stats,
-  footer,
 }) => (
   <main className="bg-base-100 flex min-h-dvh flex-col items-center gap-8 p-8">
     <div className="flex flex-col items-center gap-4 text-center">
@@ -51,8 +48,6 @@ export const HomeTemplate: FC<HomeTemplateProps> = ({
       ) : null}
     </div>
 
-    <ThemeToggle />
-
     <div className="grid w-full max-w-3xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {items.map(
         ({ label, description: itemDescription, icon: Icon, href }) => (
@@ -70,11 +65,5 @@ export const HomeTemplate: FC<HomeTemplateProps> = ({
         )
       )}
     </div>
-
-    {footer ? (
-      <footer className="text-base-content/50 mt-auto flex gap-4 text-xs">
-        {footer}
-      </footer>
-    ) : null}
   </main>
 );

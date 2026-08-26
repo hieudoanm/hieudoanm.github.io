@@ -1,2 +1,2 @@
 :HL["/free/mri/_next/static/chunks/2nfh13tcurb2n.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4180,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"K3cH3qgH8EjxAtmih4lQ1"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4180,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"2KvbWHl6c8-z4ApM3GiYD"}

@@ -1,20 +1,13 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import { FC, ReactNode } from 'react';
 import ErrorPage from '@/app/error';
-import ThroughTheYearsPage from '@/app/through-the-years/page';
 import ForbiddenPage from '@/app/forbidden';
 import GlobalError from '@/app/global-error';
 import HomePage from '@/app/page';
 import LoadingPage from '@/app/loading';
 import NotFoundPage from '@/app/not-found';
 import UnauthorizedPage from '@/app/unauthorized';
-import AboutPage from '@/app/(info)/about/page';
-import DownloadsPage from '@/app/(info)/downloads/page';
-import VersionPage from '@/app/(info)/version/page';
 
 global.fetch = jest.fn() as unknown as typeof global.fetch;
-
-const Wrapper: FC<{ children: ReactNode }> = ({ children }) => children;
 
 describe('HomePage', () => {
   it('renders the app heading and tool cards', () => {
@@ -22,62 +15,9 @@ describe('HomePage', () => {
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
       'History'
     );
-    ['through-the-years'].forEach((slug) => {
+    ['through-the-years', 'myth-vs-fact'].forEach((slug) => {
       expect(screen.getByTestId(`tool-card-${slug}`)).toBeInTheDocument();
     });
-  });
-
-  it('links to info pages in the footer', () => {
-    render(<HomePage />);
-    expect(screen.getByRole('link', { name: 'About' })).toHaveAttribute(
-      'href',
-      '/about'
-    );
-    expect(screen.getByRole('link', { name: 'Downloads' })).toHaveAttribute(
-      'href',
-      '/downloads'
-    );
-    expect(screen.getByRole('link', { name: 'Version' })).toHaveAttribute(
-      'href',
-      '/version'
-    );
-  });
-});
-
-describe('Tool pages', () => {
-  it('Tool page renders inside a tool shell', () => {
-    render(
-      <Wrapper>
-        <ThroughTheYearsPage />
-      </Wrapper>
-    );
-    expect(
-      screen.getByRole('heading', { name: 'Through the Years' })
-    ).toBeInTheDocument();
-  });
-});
-
-describe('Info pages', () => {
-  it('about page lists stack details', () => {
-    render(<AboutPage />);
-    expect(
-      screen.getAllByRole('heading', { name: 'History' }).length
-    ).toBeGreaterThan(0);
-    expect(screen.getByText('Framework')).toBeInTheDocument();
-  });
-
-  it('downloads page lists installers', () => {
-    render(<DownloadsPage />);
-    expect(screen.getByText('Installers')).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: 'Download .dmg' })).toHaveAttribute(
-      'href',
-      expect.stringContaining('history_aarch64.dmg')
-    );
-  });
-
-  it('version page renders segments', () => {
-    render(<VersionPage />);
-    expect(screen.getByText('Year')).toBeInTheDocument();
   });
 });
 

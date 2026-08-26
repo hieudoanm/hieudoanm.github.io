@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { PiClockCountdown } from 'react-icons/pi';
+import { PiCheckCircle, PiClockCountdown } from 'react-icons/pi';
 import { HomeTemplate } from '@/components/templates/HomeTemplate';
 import { useProgress } from '@/hooks/useProgress';
 import { NextPage } from 'next';
@@ -13,6 +13,12 @@ const ITEMS = [
     icon: PiClockCountdown,
     href: '/through-the-years/',
   },
+  {
+    label: 'Myth vs Fact',
+    description: 'Spot the false claim',
+    icon: PiCheckCircle,
+    href: '/myth-vs-fact/',
+  },
 ];
 
 const HomePage: NextPage = () => {
@@ -23,13 +29,6 @@ const HomePage: NextPage = () => {
       description="Explore history through interactive timeline games."
       items={ITEMS}
       stats={{ xp: progress.xp, streak: progress.streak }}
-      footer={
-        <>
-          <Link href="/about/">About</Link>
-          <Link href="/downloads/">Downloads</Link>
-          <Link href="/version/">Version</Link>
-        </>
-      }
     />
   );
 };

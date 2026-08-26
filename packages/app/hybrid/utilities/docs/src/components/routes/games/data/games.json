@@ -22,16 +22,34 @@
         "toolId": "pi"
       },
       {
+        "label": "Recall",
+        "description": "Memorization",
+        "icon": "PiGameController",
+        "toolId": "recall"
+      }
+    ]
+  },
+  {
+    "id": "trivia",
+    "label": "Trivia",
+    "items": [
+      {
         "label": "Quizify",
         "description": "Quiz",
         "icon": "PiQuestion",
         "toolId": "quizify"
       },
       {
-        "label": "Recall",
-        "description": "Memorization",
-        "icon": "PiGameController",
-        "toolId": "recall"
+        "label": "Palindrome",
+        "description": "Palindrome",
+        "icon": "PiRepeat",
+        "toolId": "palindrome"
+      },
+      {
+        "label": "Pokedex",
+        "description": "Pokemon",
+        "icon": "PiBook",
+        "toolId": "pokedex"
       }
     ]
   },
@@ -62,36 +80,6 @@
         "description": "Towers of Hanoi",
         "icon": "PiBuilding",
         "toolId": "towers"
-      }
-    ]
-  },
-  {
-    "id": "trivia",
-    "label": "Trivia",
-    "items": [
-      {
-        "label": "Pokedex",
-        "description": "Pokemon",
-        "icon": "PiBook",
-        "toolId": "pokedex"
-      },
-      {
-        "label": "Myth Versus Fact",
-        "description": "Spot the false claim",
-        "icon": "PiCheckCircle",
-        "toolId": "myth-versus-fact"
-      }
-    ]
-  },
-  {
-    "id": "word",
-    "label": "Word",
-    "items": [
-      {
-        "label": "Palindrome",
-        "description": "Palindrome",
-        "icon": "PiRepeat",
-        "toolId": "palindrome"
       }
     ]
   }
