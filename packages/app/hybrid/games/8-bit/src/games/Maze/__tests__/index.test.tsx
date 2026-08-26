@@ -1,4 +1,4 @@
-import { render, fireEvent, act } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 import { Maze } from '../index';
 
 jest.mock('next/navigation', () => ({
@@ -29,22 +29,22 @@ describe('Maze component', () => {
 
   it('renders size label', () => {
     const { getByText } = render(<Maze />);
-    expect(getByText(/Size:/)).toBeInTheDocument();
+    expect(getByText(/SIZE:/)).toBeInTheDocument();
   });
 
   it('renders New Maze button', () => {
     const { getByText } = render(<Maze />);
-    expect(getByText('New Maze')).toBeInTheDocument();
+    expect(getByText('NEW MAZE')).toBeInTheDocument();
   });
 
   it('renders Solve button', () => {
     const { getByText } = render(<Maze />);
-    expect(getByText('Solve')).toBeInTheDocument();
+    expect(getByText('SOLVE')).toBeInTheDocument();
   });
 
-  it('renders How to Play button', () => {
+  it('renders Help button', () => {
     const { getByText } = render(<Maze />);
-    expect(getByText('How to Play')).toBeInTheDocument();
+    expect(getByText('HELP')).toBeInTheDocument();
   });
 
   it('renders canvas', () => {
@@ -52,22 +52,22 @@ describe('Maze component', () => {
     expect(container.querySelector('canvas')).toBeInTheDocument();
   });
 
-  it('opens help modal on How to Play click', () => {
+  it('opens help modal on Help click', () => {
     const { getByText } = render(<Maze />);
-    fireEvent.click(getByText('How to Play'));
-    expect(getByText('Got it!')).toBeInTheDocument();
+    fireEvent.click(getByText('HELP'));
+    expect(getByText('GOT IT!')).toBeInTheDocument();
   });
 
   it('closes help modal on Got it click', () => {
     const { getByText, queryByText } = render(<Maze />);
-    fireEvent.click(getByText('How to Play'));
-    fireEvent.click(getByText('Got it!'));
-    expect(queryByText('Got it!')).not.toBeInTheDocument();
+    fireEvent.click(getByText('HELP'));
+    fireEvent.click(getByText('GOT IT!'));
+    expect(queryByText('GOT IT!')).not.toBeInTheDocument();
   });
 
   it('regenerates maze on New Maze click', () => {
     const { getByText } = render(<Maze />);
-    const btn = getByText('New Maze');
+    const btn = getByText('NEW MAZE');
     fireEvent.click(btn);
     fireEvent.click(btn);
   });
@@ -96,7 +96,7 @@ describe('Maze component', () => {
   });
 
   it('handles keyboard S to solve', () => {
-    const { container, getByText } = render(<Maze />);
+    const { container } = render(<Maze />);
     const div = container.querySelector('[tabindex="0"]')!;
     fireEvent.keyDown(div, { key: 's' });
   });

@@ -1,17 +1,5 @@
 [
   {
-    "id": "arcade",
-    "label": "Arcade",
-    "items": [
-      {
-        "label": "RPS",
-        "description": "Rock Paper Scissors",
-        "icon": "PiScissors",
-        "toolId": "rps"
-      }
-    ]
-  },
-  {
     "id": "memory",
     "label": "Memory",
     "items": [

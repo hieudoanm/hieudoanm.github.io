@@ -49,13 +49,13 @@ describe('GameInstructions', () => {
 
   it('calls onClose when close button clicked', () => {
     render(<GameInstructions {...defaultProps} />);
-    fireEvent.click(screen.getByText('✕'));
+    fireEvent.click(screen.getByText('X'));
     expect(defaultProps.onClose).toHaveBeenCalledTimes(1);
   });
 
   it('calls onClose when Got it button clicked', () => {
     render(<GameInstructions {...defaultProps} />);
-    fireEvent.click(screen.getByText('Got it!'));
+    fireEvent.click(screen.getByText('GOT IT!'));
     expect(defaultProps.onClose).toHaveBeenCalledTimes(1);
   });
 

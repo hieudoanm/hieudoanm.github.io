@@ -21,39 +21,41 @@ export const GameInstructions: FC<GameInstructionsProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
-      <div className="bg-base-content/50 absolute inset-0" onClick={onClose} />
-      <div className="bg-base-100 relative z-10 flex w-full max-w-md flex-col gap-4 rounded-xl p-6 shadow-2xl">
+      <div className="bg-base-content/80 absolute inset-0" onClick={onClose} />
+      <div className="bg-base-100 border-base-content/30 relative z-10 flex w-full max-w-md flex-col gap-4 border-2 p-6">
         <div className="flex items-center justify-between">
           <div>
-            <h3 className="text-base-content text-lg font-bold">{title}</h3>
-            <p className="text-base-content/40 text-xs">{subtitle}</p>
+            <h3 className="text-primary text-sm font-bold">{title}</h3>
+            <p className="text-base-content/40 text-[8px]">{subtitle}</p>
           </div>
           <button
             onClick={onClose}
-            className="btn btn-ghost btn-xs btn-square text-base opacity-60 hover:opacity-100">
-            ✕
+            className="text-base-content/60 hover:text-primary p-1 text-xs transition-colors">
+            X
           </button>
         </div>
 
         <div className="flex flex-col gap-2">
           {instructions.map((instruction, i) => (
             <div key={i} className="flex items-start gap-2">
-              <span className="text-primary mt-0.5 text-xs font-bold">
+              <span className="text-primary text-[8px] font-bold">
                 {i + 1}.
               </span>
-              <span className="text-base-content/70 text-xs leading-relaxed">
+              <span className="text-base-content/60 text-[8px] leading-relaxed">
                 {instruction}
               </span>
             </div>
           ))}
         </div>
 
-        <div className="bg-base-200 flex items-center justify-center rounded-lg p-4">
+        <div className="bg-base-200 border-base-content/10 flex items-center justify-center border p-4">
           {visualization}
         </div>
 
-        <button onClick={onClose} className="btn btn-primary btn-sm w-full">
-          Got it!
+        <button
+          onClick={onClose}
+          className="bg-primary text-primary-content hover:bg-primary/80 w-full p-2 text-[8px] font-bold transition-colors">
+          GOT IT!
         </button>
       </div>
     </div>

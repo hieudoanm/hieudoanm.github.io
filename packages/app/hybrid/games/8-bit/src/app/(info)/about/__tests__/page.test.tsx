@@ -7,7 +7,7 @@ describe('AboutPage', () => {
     expect(screen.getByText('8-Bit Games')).toBeInTheDocument();
     expect(
       screen.getByText(
-        'Three classic 8-bit arcade games: Maze, Snake, and DinoRun'
+        'Four classic 8-bit arcade games: Maze, Snake, DinoRun, and Rock Paper Scissors'
       )
     ).toBeInTheDocument();
   });

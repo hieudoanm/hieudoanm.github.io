@@ -143,47 +143,49 @@ export const DinoRun: FC = () => {
         tabIndex={0}
         onKeyDown={onKeyDown}
         className="flex flex-1 flex-col items-center gap-3 overflow-y-auto p-4 outline-none">
-        <div className="flex w-80 items-center justify-between text-sm">
+        <div className="flex w-80 items-center justify-between text-[8px]">
           <span>
-            Score: <strong>{score}</strong>
+            SCORE: <strong>{score}</strong>
           </span>
-          <span className="opacity-40">Best: {highScore}</span>
+          <span className="text-base-content/40">BEST: {highScore}</span>
         </div>
 
         <canvas
           ref={canvasRef}
           width={CANVAS_WIDTH}
           height={CANVAS_HEIGHT}
-          className="border-base-300 h-80 w-80 cursor-pointer rounded-lg border"
+          className="border-base-content/20 h-80 w-80 cursor-pointer border"
           onClick={handleJump}
         />
 
         {phase === 'idle' && (
-          <p className="text-center text-xs opacity-50">
-            Press Space or click to jump
+          <p className="text-base-content/40 text-center text-[8px]">
+            PRESS SPACE OR CLICK TO START
           </p>
         )}
         {phase === 'over' && (
           <div className="flex flex-col items-center gap-2">
-            <div className="alert alert-error justify-center py-2 text-sm">
-              Game Over — Score: {score}
+            <div className="bg-primary/20 text-primary border-primary/30 border p-2 text-center text-[8px]">
+              GAME OVER - SCORE: {score}
             </div>
-            <button onClick={startGame} className="btn btn-primary btn-sm">
-              Play Again
+            <button
+              onClick={startGame}
+              className="bg-primary text-primary-content hover:bg-primary/80 px-3 py-1 text-[8px] font-bold transition-colors">
+              PLAY AGAIN
             </button>
           </div>
         )}
 
         <div className="flex justify-center gap-2">
           <button
-            className="btn btn-sm btn-ghost"
+            className="text-base-content/40 hover:text-primary px-3 py-1 text-[8px] transition-colors"
             onClick={() => setHelpOpen(true)}>
-            How to Play
+            HELP
           </button>
         </div>
 
-        <p className="text-center text-xs opacity-40">
-          Space/↑ jump · R restart · Esc close
+        <p className="text-base-content/30 text-center text-[8px]">
+          SPACE/UP JUMP / R RESTART / ESC BACK
         </p>
       </div>
 

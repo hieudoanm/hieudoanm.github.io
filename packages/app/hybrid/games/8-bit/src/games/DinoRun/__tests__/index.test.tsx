@@ -1,4 +1,4 @@
-import { render, fireEvent, act } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 import { DinoRun } from '../index';
 
 jest.mock('next/navigation', () => ({
@@ -50,12 +50,12 @@ describe('DinoRun component', () => {
 
   it('renders score', () => {
     const { getByText } = render(<DinoRun />);
-    expect(getByText('Score:')).toBeInTheDocument();
+    expect(getByText('SCORE:')).toBeInTheDocument();
   });
 
   it('renders best score', () => {
     const { getByText } = render(<DinoRun />);
-    expect(getByText('Best: 0')).toBeInTheDocument();
+    expect(getByText('BEST: 0')).toBeInTheDocument();
   });
 
   it('renders canvas', () => {
@@ -63,20 +63,20 @@ describe('DinoRun component', () => {
     expect(container.querySelector('canvas')).toBeInTheDocument();
   });
 
-  it('renders How to Play button', () => {
+  it('renders Help button', () => {
     const { getByText } = render(<DinoRun />);
-    expect(getByText('How to Play')).toBeInTheDocument();
+    expect(getByText('HELP')).toBeInTheDocument();
   });
 
   it('opens help modal', () => {
     const { getByText } = render(<DinoRun />);
-    fireEvent.click(getByText('How to Play'));
-    expect(getByText('Got it!')).toBeInTheDocument();
+    fireEvent.click(getByText('HELP'));
+    expect(getByText('GOT IT!')).toBeInTheDocument();
   });
 
   it('renders idle prompt text', () => {
     const { getByText } = render(<DinoRun />);
-    expect(getByText('Press Space or click to jump')).toBeInTheDocument();
+    expect(getByText('PRESS SPACE OR CLICK TO START')).toBeInTheDocument();
   });
 
   it('starts game on canvas click', () => {
@@ -111,7 +111,7 @@ describe('DinoRun component', () => {
   it('renders keyboard hint', () => {
     const { getByText } = render(<DinoRun />);
     expect(
-      getByText('Space/↑ jump · R restart · Esc close')
+      getByText('SPACE/UP JUMP / R RESTART / ESC BACK')
     ).toBeInTheDocument();
   });
 

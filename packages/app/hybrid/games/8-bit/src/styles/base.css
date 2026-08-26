@@ -5,5 +5,11 @@
 
   body {
     @apply bg-base-100 text-base-content min-h-full;
+    font-family: 'Press Start 2P', monospace;
+    image-rendering: pixelated;
+  }
+
+  * {
+    border-radius: 0 !important;
   }
 }

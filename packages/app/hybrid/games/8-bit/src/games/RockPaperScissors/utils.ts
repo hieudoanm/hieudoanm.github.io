@@ -1,9 +1,9 @@
 export type Choice = 'rock' | 'paper' | 'scissors';
 
-export const CHOICES: { value: Choice; emoji: string; label: string }[] = [
-  { value: 'rock', emoji: '🪨', label: 'Rock' },
-  { value: 'paper', emoji: '📄', label: 'Paper' },
-  { value: 'scissors', emoji: '✂️', label: 'Scissors' },
+export const CHOICES: { value: Choice; label: string }[] = [
+  { value: 'rock', label: 'ROCK' },
+  { value: 'paper', label: 'PAPER' },
+  { value: 'scissors', label: 'SCISSORS' },
 ];
 
 export const BEATS: Record<Choice, Choice> = {

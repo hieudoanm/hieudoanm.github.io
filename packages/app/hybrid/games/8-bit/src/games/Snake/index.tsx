@@ -138,17 +138,17 @@ export const Snake: FC = () => {
         tabIndex={0}
         onKeyDown={onKeyDown}
         className="flex flex-1 flex-col gap-3 overflow-y-auto p-4 outline-none">
-        <div className="flex items-center justify-between text-sm">
+        <div className="flex items-center justify-between text-[8px]">
           <span>
-            Score: <strong>{score}</strong>
+            SCORE: <strong>{score}</strong>
           </span>
-          <span className="opacity-40">
-            {GRID}×{GRID}
+          <span className="text-base-content/40">
+            {GRID}x{GRID}
           </span>
         </div>
         <div className="flex flex-1 items-center justify-center">
           <div
-            className="border-base-content/20 grid overflow-hidden rounded-lg border-2 select-none"
+            className="border-base-content/20 grid overflow-hidden border-2 select-none"
             style={{
               gridTemplateColumns: `repeat(${GRID}, minmax(0, 1fr))`,
               aspectRatio: '1',
@@ -161,24 +161,32 @@ export const Snake: FC = () => {
               return (
                 <div
                   key={`${r}-${c}`}
-                  className={`border-base-200 aspect-square border ${cell === 'food' ? 'bg-error/70' : cell === 'head' ? 'bg-success' : cell === 'snake' ? 'bg-success/60' : 'bg-base-200/30'}`}
+                  className={`aspect-square ${
+                    cell === 'food'
+                      ? 'bg-primary'
+                      : cell === 'head'
+                        ? 'bg-base-content'
+                        : cell === 'snake'
+                          ? 'bg-base-content/60'
+                          : 'bg-base-200'
+                  }`}
                 />
               );
             })}
           </div>
         </div>
         {gameOver && (
-          <div className="alert alert-error justify-center py-2 text-sm">
-            Game Over — Score: {score}
+          <div className="bg-primary/20 text-primary border-primary/30 border p-2 text-center text-[8px]">
+            GAME OVER - SCORE: {score}
           </div>
         )}
         {paused && !gameOver && (
-          <div className="alert alert-info justify-center py-2 text-sm">
-            Paused
+          <div className="bg-base-content/10 text-base-content border-base-content/20 border p-2 text-center text-[8px]">
+            PAUSED
           </div>
         )}
-        <div className="flex items-center justify-center gap-2 text-sm">
-          <span className="opacity-60">Speed</span>
+        <div className="flex items-center justify-center gap-2 text-[8px]">
+          <span className="text-base-content/40">SPEED</span>
           <input
             type="range"
             min={1}
@@ -187,26 +195,28 @@ export const Snake: FC = () => {
             onChange={(e) => setSpeed(Number(e.target.value))}
             className="range range-primary range-xs w-28"
           />
-          <span className="font-normal">{speed}</span>
+          <span>{speed}</span>
         </div>
         <div className="flex flex-wrap justify-center gap-2">
           <button
             onClick={togglePause}
-            className="btn btn-primary btn-sm"
+            className="bg-primary text-primary-content hover:bg-primary/80 px-3 py-1 text-[8px] font-bold transition-colors disabled:opacity-40"
             disabled={gameOver}>
-            {paused ? 'Resume' : 'Pause'}
-          </button>
-          <button onClick={reset} className="btn btn-secondary btn-sm">
-            New Game
+            {paused ? 'RESUME' : 'PAUSE'}
           </button>
           <button
-            className="btn btn-sm btn-ghost"
+            onClick={reset}
+            className="border-base-content/30 text-base-content hover:bg-base-content/10 border px-3 py-1 text-[8px] font-bold transition-colors">
+            NEW GAME
+          </button>
+          <button
+            className="text-base-content/40 hover:text-primary px-3 py-1 text-[8px] transition-colors"
             onClick={() => setHelpOpen(true)}>
-            How to Play
+            HELP
           </button>
         </div>
-        <p className="text-center text-xs opacity-40">
-          Arrow keys move · Space pause · Esc close
+        <p className="text-base-content/30 text-center text-[8px]">
+          ARROWS MOVE / SPACE PAUSE / ESC BACK
         </p>
       </div>
 

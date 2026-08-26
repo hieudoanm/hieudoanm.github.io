@@ -21,27 +21,27 @@ describe('Snake component', () => {
 
   it('renders score', () => {
     const { getByText } = render(<Snake />);
-    expect(getByText('Score:')).toBeInTheDocument();
+    expect(getByText('SCORE:')).toBeInTheDocument();
   });
 
   it('renders grid size label', () => {
     const { getByText } = render(<Snake />);
-    expect(getByText('12×12')).toBeInTheDocument();
+    expect(getByText('12x12')).toBeInTheDocument();
   });
 
   it('renders Pause button', () => {
     const { getByText } = render(<Snake />);
-    expect(getByText('Pause')).toBeInTheDocument();
+    expect(getByText('PAUSE')).toBeInTheDocument();
   });
 
   it('renders New Game button', () => {
     const { getByText } = render(<Snake />);
-    expect(getByText('New Game')).toBeInTheDocument();
+    expect(getByText('NEW GAME')).toBeInTheDocument();
   });
 
-  it('renders How to Play button', () => {
+  it('renders Help button', () => {
     const { getByText } = render(<Snake />);
-    expect(getByText('How to Play')).toBeInTheDocument();
+    expect(getByText('HELP')).toBeInTheDocument();
   });
 
   it('renders speed slider', () => {
@@ -51,29 +51,29 @@ describe('Snake component', () => {
 
   it('toggles pause on button click', () => {
     const { getByText } = render(<Snake />);
-    fireEvent.click(getByText('Pause'));
-    expect(getByText('Resume')).toBeInTheDocument();
-    expect(getByText('Paused')).toBeInTheDocument();
+    fireEvent.click(getByText('PAUSE'));
+    expect(getByText('RESUME')).toBeInTheDocument();
+    expect(getByText('PAUSED')).toBeInTheDocument();
   });
 
   it('resumes from paused state', () => {
     const { getByText } = render(<Snake />);
-    fireEvent.click(getByText('Pause'));
-    fireEvent.click(getByText('Resume'));
-    expect(getByText('Pause')).toBeInTheDocument();
+    fireEvent.click(getByText('PAUSE'));
+    fireEvent.click(getByText('RESUME'));
+    expect(getByText('PAUSE')).toBeInTheDocument();
   });
 
   it('opens help modal', () => {
     const { getByText } = render(<Snake />);
-    fireEvent.click(getByText('How to Play'));
-    expect(getByText('Got it!')).toBeInTheDocument();
+    fireEvent.click(getByText('HELP'));
+    expect(getByText('GOT IT!')).toBeInTheDocument();
   });
 
   it('handles keyboard Space for pause', () => {
     const { container, getByText } = render(<Snake />);
     const div = container.querySelector('[tabindex="0"]')!;
     fireEvent.keyDown(div, { key: ' ' });
-    expect(getByText('Resume')).toBeInTheDocument();
+    expect(getByText('RESUME')).toBeInTheDocument();
   });
 
   it('handles keyboard Escape', () => {
@@ -99,7 +99,7 @@ describe('Snake component', () => {
   it('ignores arrow keys when paused', () => {
     const { container, getByText } = render(<Snake />);
     const div = container.querySelector('[tabindex="0"]')!;
-    fireEvent.click(getByText('Pause'));
+    fireEvent.click(getByText('PAUSE'));
     fireEvent.keyDown(div, { key: 'ArrowUp' });
   });
 
@@ -111,7 +111,7 @@ describe('Snake component', () => {
 
   it('resets game on New Game click', () => {
     const { getByText } = render(<Snake />);
-    fireEvent.click(getByText('New Game'));
+    fireEvent.click(getByText('NEW GAME'));
   });
 
   it('advances game tick', () => {
@@ -124,7 +124,7 @@ describe('Snake component', () => {
   it('renders keyboard hint', () => {
     const { getByText } = render(<Snake />);
     expect(
-      getByText('Arrow keys move · Space pause · Esc close')
+      getByText('ARROWS MOVE / SPACE PAUSE / ESC BACK')
     ).toBeInTheDocument();
   });
 });

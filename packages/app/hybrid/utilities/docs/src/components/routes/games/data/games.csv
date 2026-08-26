@@ -1,5 +1,4 @@
 section,sectionId,label,description,icon,toolId
-Arcade,arcade,RPS,Rock Paper Scissors,PiScissors,rps
 Memory,memory,Memory Match,Find matching pairs,PiGameController,memory-match
 Memory,memory,N-Back,Working memory,PiNumberSquareOne,n-back
 Memory,memory,PI,Memorization,PiPi,pi

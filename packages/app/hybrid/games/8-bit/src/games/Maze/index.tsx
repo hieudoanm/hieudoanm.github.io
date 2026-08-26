@@ -1,4 +1,4 @@
-import { FC, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { FC, useCallback, useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { GameInstructions } from '../_shared/GameInstructions';
 import { GAME_DATA } from '../_shared/gameData';
@@ -59,7 +59,7 @@ export const Maze: FC = () => {
     if (!ctx) return;
 
     ctx.clearRect(0, 0, canvasWidth, canvasHeight);
-    ctx.fillStyle = '#1e293b';
+    ctx.fillStyle = '#000000';
     ctx.fillRect(0, 0, canvasWidth, canvasHeight);
 
     const pathSet = new Set(path?.map((p) => `${p.row},${p.col}`));
@@ -70,22 +70,22 @@ export const Maze: FC = () => {
         const y = r * CELL_SIZE + WALL_THICKNESS / 2;
 
         if (pathSet.has(`${r},${c}`)) {
-          ctx.fillStyle = '#22c55e';
+          ctx.fillStyle = '#f5f5f5';
           ctx.fillRect(x, y, CELL_SIZE, CELL_SIZE);
         } else if (r === 0 && c === 0) {
-          ctx.fillStyle = '#3b82f6';
+          ctx.fillStyle = '#ff0030';
           ctx.fillRect(x, y, CELL_SIZE, CELL_SIZE);
         } else if (r === rows - 1 && c === cols - 1) {
-          ctx.fillStyle = '#ef4444';
+          ctx.fillStyle = '#ff0030';
           ctx.fillRect(x, y, CELL_SIZE, CELL_SIZE);
         } else {
-          ctx.fillStyle = '#0f172a';
+          ctx.fillStyle = '#0a0a0a';
           ctx.fillRect(x, y, CELL_SIZE, CELL_SIZE);
         }
 
         const cell = grid[r]?.[c];
         if (!cell) continue;
-        ctx.strokeStyle = '#475569';
+        ctx.strokeStyle = '#f5f5f5';
         ctx.lineWidth = WALL_THICKNESS;
 
         if (cell.walls.top) {
@@ -138,9 +138,9 @@ export const Maze: FC = () => {
         tabIndex={0}
         onKeyDown={onKeyDown}
         className="flex flex-1 flex-col gap-3 overflow-y-auto p-4 outline-none">
-        <div className="flex items-center justify-between text-sm">
-          <span className="opacity-50">
-            Size: {size}×{size}
+        <div className="flex items-center justify-between text-[8px]">
+          <span className="text-base-content/40">
+            SIZE: {size}x{size}
           </span>
           <input
             type="range"
@@ -160,33 +160,31 @@ export const Maze: FC = () => {
             ref={canvasRef}
             width={canvasWidth}
             height={canvasHeight}
-            className="rounded-lg"
+            className="border-base-content/20 border"
           />
         </div>
 
         <div className="flex justify-center gap-2">
-          <button onClick={regenerate} className="btn btn-primary btn-sm">
-            New Maze
+          <button
+            onClick={regenerate}
+            className="bg-primary text-primary-content hover:bg-primary/80 px-3 py-1 text-[8px] font-bold transition-colors">
+            NEW MAZE
           </button>
           <button
             onClick={startSolve}
             disabled={solving}
-            className="btn btn-secondary btn-sm">
-            {solving ? (
-              <span className="loading loading-spinner loading-xs" />
-            ) : (
-              'Solve'
-            )}
+            className="border-base-content/30 text-base-content hover:bg-base-content/10 border px-3 py-1 text-[8px] font-bold transition-colors disabled:opacity-40">
+            {solving ? '...' : 'SOLVE'}
           </button>
           <button
-            className="btn btn-sm btn-ghost"
+            className="text-base-content/40 hover:text-primary px-3 py-1 text-[8px] transition-colors"
             onClick={() => setHelpOpen(true)}>
-            How to Play
+            HELP
           </button>
         </div>
 
-        <p className="text-center text-xs opacity-40">
-          R new · S solve · Esc close
+        <p className="text-base-content/30 text-center text-[8px]">
+          R NEW / S SOLVE / ESC BACK
         </p>
       </div>
 

@@ -128,54 +128,75 @@ export const draw = (
 ) => {
   ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 
-  const gradient = ctx.createLinearGradient(0, 0, 0, GROUND_Y);
-  gradient.addColorStop(0, '#1a1a2e');
-  gradient.addColorStop(0.5, '#16213e');
-  gradient.addColorStop(1, '#0f3460');
-  ctx.fillStyle = gradient;
+  ctx.fillStyle = '#000000';
   ctx.fillRect(0, 0, CANVAS_WIDTH, GROUND_Y);
 
   ctx.font = '12px serif';
   for (const star of stars) {
     const alpha = 0.3 + Math.sin(star.twinkle) * 0.3;
     ctx.globalAlpha = alpha;
-    ctx.fillText('\u2728', star.x, star.y);
+    ctx.fillStyle = '#f5f5f5';
+    ctx.fillRect(star.x, star.y, 2, 2);
   }
   ctx.globalAlpha = 1;
 
   ctx.font = '20px serif';
   for (const cloud of clouds) {
-    ctx.fillText('\u2601\uFE0F', cloud.x, cloud.y);
+    ctx.fillStyle = '#f5f5f5';
+    ctx.globalAlpha = 0.2;
+    ctx.fillRect(cloud.x, cloud.y, 20, 4);
+    ctx.fillRect(cloud.x + 5, cloud.y - 4, 12, 4);
+    ctx.globalAlpha = 1;
   }
 
-  ctx.font = '28px serif';
-  ctx.fillText('\uD83C\uDF19', CANVAS_WIDTH - 50, 40);
+  ctx.fillStyle = '#f5f5f5';
+  ctx.fillRect(CANVAS_WIDTH - 40, 20, 16, 16);
+  ctx.fillRect(CANVAS_WIDTH - 36, 24, 8, 8);
 
-  ctx.fillStyle = '#2d5016';
-  ctx.fillRect(0, GROUND_Y, CANVAS_WIDTH, 4);
+  ctx.fillStyle = '#f5f5f5';
+  ctx.fillRect(0, GROUND_Y, CANVAS_WIDTH, 2);
 
-  ctx.font = '10px serif';
+  ctx.fillStyle = '#0a0a0a';
   for (let i = 0; i < CANVAS_WIDTH; i += 20) {
     const offset = (frameCount * 2 + i) % 40;
-    ctx.globalAlpha = 0.4;
-    ctx.fillText('\uD83C\uDF3F', i - offset, GROUND_Y + 16);
+    ctx.globalAlpha = 0.3;
+    ctx.fillRect(i - offset, GROUND_Y + 4, 4, 4);
+    ctx.globalAlpha = 1;
   }
-  ctx.globalAlpha = 1;
 
-  ctx.font = '36px serif';
+  ctx.fillStyle = '#f5f5f5';
   ctx.save();
   ctx.scale(-1, 1);
-  ctx.fillText('\uD83E\uDD95', -(dino.x + dino.width), dino.y + dino.height);
+  const dx = -(dino.x + dino.width);
+  const dy = dino.y;
+  ctx.fillRect(dx + 4, dy, 8, 8);
+  ctx.fillRect(dx, dy + 8, 20, 16);
+  ctx.fillRect(dx + 4, dy + 24, 6, 12);
+  ctx.fillRect(dx + 12, dy + 24, 6, 12);
+  ctx.fillRect(dx + 16, dy + 4, 8, 4);
+  ctx.fillRect(dx + 20, dy + 8, 4, 4);
   ctx.restore();
 
-  ctx.font = '28px serif';
   for (const o of obstacles) {
+    ctx.fillStyle = '#ff0030';
     if (o.type === 'bird') {
-      ctx.fillText('\uD83E\uDD85', o.x, o.y + o.height);
+      ctx.fillRect(o.x + 4, o.y, 24, 4);
+      ctx.fillRect(o.x, o.y + 4, 32, 8);
+      ctx.fillRect(o.x + 8, o.y + 12, 16, 4);
+      ctx.fillRect(o.x + 4, o.y + 16, 8, 4);
     } else if (o.type === 'rock') {
-      ctx.fillText('\uD83E\uDEA8', o.x, o.y + o.height);
+      ctx.fillRect(o.x + 4, o.y, 16, 4);
+      ctx.fillRect(o.x, o.y + 4, 24, 12);
+      ctx.fillRect(o.x + 4, o.y + 16, 16, 8);
+      ctx.fillRect(o.x + 8, o.y + 24, 8, 12);
     } else {
-      ctx.fillText('\uD83C\uDF35', o.x, o.y + o.height);
+      ctx.fillRect(o.x + 8, o.y, 8, 8);
+      ctx.fillRect(o.x + 4, o.y + 8, 16, 4);
+      ctx.fillRect(o.x, o.y + 12, 24, 8);
+      ctx.fillRect(o.x + 4, o.y + 20, 8, 8);
+      ctx.fillRect(o.x + 12, o.y + 20, 8, 8);
+      ctx.fillRect(o.x + 4, o.y + 28, 4, 8);
+      ctx.fillRect(o.x + 16, o.y + 28, 4, 8);
     }
   }
 };

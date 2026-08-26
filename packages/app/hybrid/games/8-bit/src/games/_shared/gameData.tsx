@@ -3,6 +3,7 @@ import type { ReactNode } from 'react';
 import { GAME_NAME as MAZE_NAME } from '../Maze/types';
 import { GAME_NAME as SNAKE_NAME } from '../Snake/types';
 import { GAME_NAME as DINORUN_NAME } from '../DinoRun/types';
+import { GAME_NAME as RPS_NAME } from '../RockPaperScissors/types';
 
 const MazeVisualization = () => (
   <div className="flex flex-col items-center gap-2">
@@ -10,32 +11,30 @@ const MazeVisualization = () => (
       className="grid gap-px"
       style={{ gridTemplateColumns: 'repeat(4, 1fr)', width: '80px' }}>
       {[
-        { wall: 'border-l-2 border-t-2', bg: 'bg-primary/20' },
-        { wall: 'border-t-2', bg: 'bg-primary/20' },
-        { wall: 'border-t-2 border-r-2', bg: 'bg-primary/20' },
-        { wall: 'border-r-2', bg: 'bg-primary/20' },
-        { wall: 'border-l-2', bg: 'bg-base-100' },
-        { wall: '', bg: 'bg-success/30' },
-        { wall: '', bg: 'bg-base-100' },
-        { wall: 'border-r-2', bg: 'bg-base-100' },
-        { wall: 'border-l-2 border-b-2', bg: 'bg-base-100' },
-        { wall: 'border-b-2', bg: 'bg-base-100' },
-        { wall: '', bg: 'bg-success/30' },
-        { wall: 'border-r-2', bg: 'bg-base-100' },
-        { wall: 'border-l-2 border-b-2', bg: 'bg-base-100' },
-        { wall: 'border-b-2', bg: 'bg-base-100' },
-        { wall: 'border-b-2', bg: 'bg-base-100' },
-        { wall: 'border-b-2 border-r-2', bg: 'bg-error/40' },
+        { wall: 'border-l-2 border-t-2', bg: 'bg-primary/30' },
+        { wall: 'border-t-2', bg: 'bg-primary/30' },
+        { wall: 'border-t-2 border-r-2', bg: 'bg-primary/30' },
+        { wall: 'border-r-2', bg: 'bg-primary/30' },
+        { wall: 'border-l-2', bg: 'bg-base-200' },
+        { wall: '', bg: 'bg-base-content/20' },
+        { wall: '', bg: 'bg-base-200' },
+        { wall: 'border-r-2', bg: 'bg-base-200' },
+        { wall: 'border-l-2 border-b-2', bg: 'bg-base-200' },
+        { wall: 'border-b-2', bg: 'bg-base-200' },
+        { wall: '', bg: 'bg-base-content/20' },
+        { wall: 'border-r-2', bg: 'bg-base-200' },
+        { wall: 'border-l-2 border-b-2', bg: 'bg-base-200' },
+        { wall: 'border-b-2', bg: 'bg-base-200' },
+        { wall: 'border-b-2', bg: 'bg-base-200' },
+        { wall: 'border-b-2 border-r-2', bg: 'bg-primary/60' },
       ].map((cell, i) => (
         <div
           key={i}
-          className={`flex aspect-square items-center justify-center rounded-sm text-[10px] ${cell.wall} ${cell.bg}`}
+          className={`flex aspect-square items-center justify-center ${cell.wall} ${cell.bg}`}
         />
       ))}
     </div>
-    <span className="text-[10px] opacity-50">
-      Blue: start · Green: path · Red: end
-    </span>
+    <span className="text-base-content/40 text-[8px]">RED: START / END</span>
   </div>
 );
 
@@ -45,42 +44,59 @@ const SnakeVisualization = () => (
       className="grid gap-px"
       style={{ gridTemplateColumns: 'repeat(4, 1fr)', width: '80px' }}>
       {[
-        { bg: 'bg-base-200/30' },
-        { bg: 'bg-base-200/30' },
-        { bg: 'bg-base-200/30' },
-        { bg: 'bg-base-200/30' },
-        { bg: 'bg-base-200/30' },
-        { bg: 'bg-success' },
-        { bg: 'bg-success/60' },
-        { bg: 'bg-success/60' },
-        { bg: 'bg-base-200/30' },
-        { bg: 'bg-base-200/30' },
-        { bg: 'bg-base-200/30' },
-        { bg: 'bg-error/70' },
-        { bg: 'bg-base-200/30' },
-        { bg: 'bg-base-200/30' },
-        { bg: 'bg-base-200/30' },
-        { bg: 'bg-base-200/30' },
+        { bg: 'bg-base-200' },
+        { bg: 'bg-base-200' },
+        { bg: 'bg-base-200' },
+        { bg: 'bg-base-200' },
+        { bg: 'bg-base-200' },
+        { bg: 'bg-base-content/30' },
+        { bg: 'bg-base-content/20' },
+        { bg: 'bg-base-content/20' },
+        { bg: 'bg-base-200' },
+        { bg: 'bg-base-200' },
+        { bg: 'bg-base-200' },
+        { bg: 'bg-primary/70' },
+        { bg: 'bg-base-200' },
+        { bg: 'bg-base-200' },
+        { bg: 'bg-base-200' },
+        { bg: 'bg-base-200' },
       ].map((cell, i) => (
         <div
           key={i}
-          className={`flex aspect-square items-center justify-center rounded-sm ${cell.bg}`}
+          className={`flex aspect-square items-center justify-center ${cell.bg}`}
         />
       ))}
     </div>
-    <span className="text-[10px] opacity-50">Green: snake · Red: food</span>
+    <span className="text-base-content/40 text-[8px]">
+      WHITE: SNAKE / RED: FOOD
+    </span>
   </div>
 );
 
 const DinoRunVisualization = () => (
   <div className="flex flex-col items-center gap-2">
-    <div className="bg-base-300 flex h-16 w-48 items-end rounded-lg p-2">
-      <span className="text-2xl">\uD83E\uDD95</span>
+    <div className="bg-base-200 border-base-content/10 flex h-16 w-48 items-end border p-2">
+      <span className="text-2xl">{'\uD83E\uDD95'}</span>
       <div className="flex-1" />
-      <span className="text-xl">\uD83C\uDF35</span>
-      <span className="text-xl">\uD83E\uDD85</span>
+      <span className="text-xl">{'\uD83C\uDF35'}</span>
+      <span className="text-xl">{'\uD83E\uDD85'}</span>
     </div>
-    <span className="text-[10px] opacity-50">Jump over obstacles to score</span>
+    <span className="text-base-content/40 text-[8px]">JUMP OVER OBSTACLES</span>
+  </div>
+);
+
+const RPSVisualization = () => (
+  <div className="flex flex-col items-center gap-2">
+    <div className="flex gap-4 text-2xl">
+      <span>{'\uD83E\uDEA8'}</span>
+      <span className="text-base-content/20">VS</span>
+      <span>{'\uD83D\uDCC4'}</span>
+      <span className="text-base-content/20">VS</span>
+      <span>{'\u2702\uFE0F'}</span>
+    </div>
+    <span className="text-base-content/40 text-[8px]">
+      PICK ONE TO BEAT THE BOT
+    </span>
   </div>
 );
 
@@ -96,11 +112,11 @@ export const GAME_DATA: Record<string, GameData> = {
     title: MAZE_NAME.en,
     subtitle: MAZE_NAME.ja,
     instructions: [
-      'A random perfect maze is generated on a grid.',
-      'The blue cell is the start (top-left); the red cell is the end (bottom-right).',
-      'Click "Solve" to animate the shortest path found by BFS.',
-      'Use the slider to change the maze size from 5×5 to 20×20.',
-      'Press R for a new maze, S to solve, Esc to go back.',
+      'A RANDOM PERFECT MAZE IS GENERATED.',
+      'RED CELLS ARE START AND END.',
+      'CLICK SOLVE TO ANIMATE THE SHORTEST PATH.',
+      'USE THE SLIDER TO CHANGE SIZE.',
+      'R NEW MAZE / S SOLVE / ESC BACK.',
     ],
     visualization: <MazeVisualization />,
   },
@@ -108,11 +124,11 @@ export const GAME_DATA: Record<string, GameData> = {
     title: SNAKE_NAME.en,
     subtitle: SNAKE_NAME.ja,
     instructions: [
-      'Use arrow keys to steer the snake.',
-      'Eating food grows the snake and adds a point.',
-      'Hitting a wall or your own body ends the game.',
-      'Space or P toggles pause.',
-      'Adjust the speed slider (1–5) to change the tick rate.',
+      'USE ARROW KEYS TO STEER.',
+      'EAT FOOD TO GROW AND SCORE.',
+      'HIT A WALL OR YOURSELF TO DIE.',
+      'SPACE OR P TO PAUSE.',
+      'ADJUST SPEED WITH THE SLIDER.',
     ],
     visualization: <SnakeVisualization />,
   },
@@ -120,12 +136,24 @@ export const GAME_DATA: Record<string, GameData> = {
     title: DINORUN_NAME.en,
     subtitle: DINORUN_NAME.ja,
     instructions: [
-      'The dino auto-runs and gains speed over time.',
-      'Press Space, click, or ArrowUp to jump.',
-      'Jump over cacti, rocks, and birds.',
-      'Landing on an obstacle ends the round.',
-      'Press R to restart after game over.',
+      'THE DINO AUTO-RUNS.',
+      'PRESS SPACE, CLICK, OR UP TO JUMP.',
+      'JUMP OVER CACTI, ROCKS, AND BIRDS.',
+      'LANDING ON AN OBSTACLE ENDS THE ROUND.',
+      'PRESS R TO RESTART.',
     ],
     visualization: <DinoRunVisualization />,
+  },
+  'rock-paper-scissors': {
+    title: RPS_NAME.en,
+    subtitle: RPS_NAME.ja,
+    instructions: [
+      'PICK ROCK, PAPER, OR SCISSORS.',
+      'THE BOT PICKS RANDOMLY.',
+      'ROCK BEATS SCISSORS.',
+      'PAPER BEATS ROCK.',
+      'SCISSORS BEATS PAPER.',
+    ],
+    visualization: <RPSVisualization />,
   },
 };

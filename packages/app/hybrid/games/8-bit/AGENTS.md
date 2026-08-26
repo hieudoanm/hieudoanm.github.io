@@ -1,6 +1,7 @@
 # 8-Bit Games
 
-Three classic 8-bit arcade games: Maze, Snake, and DinoRun.
+Four classic 8-bit arcade games: Maze, Snake, DinoRun, and Rock Paper Scissors.
+Strict black, white, and red color palette with pixel font styling.
 
 ## Build & Test
 
@@ -18,73 +19,92 @@ pnpm lint                   # ESLint
 src/
   app/
     (games)/
-      page.tsx              # Home — game grid with GameCards
-      maze/page.tsx         # Maze route
-      snake/page.tsx        # Snake route
-      dino-run/page.tsx     # DinoRun route
+      page.tsx                        # Home — game grid
+      maze/page.tsx                   # Maze route
+      snake/page.tsx                  # Snake route
+      dino-run/page.tsx               # DinoRun route
+      rock-paper-scissors/page.tsx    # Rock Paper Scissors route
     (info)/
-      about/page.tsx        # About page
-      downloads/page.tsx    # Downloads page
-      version/page.tsx      # Version page
-    layout.tsx              # Root layout — theme, Header
-    not-found.tsx           # 404 page
-    error.tsx               # Error boundary
+      about/page.tsx                  # About page
+      downloads/page.tsx              # Downloads page
+      version/page.tsx                # Version page
+    layout.tsx                        # Root layout — nothing theme, Header
+    not-found.tsx                     # 404 page
+    error.tsx                         # Error boundary
   components/
     organisms/
-      Header.tsx            # Nav header with theme toggle
+      Header.tsx                      # Nav header
     templates/
-      AboutTemplate.tsx     # Reusable about layout
-      DownloadsTemplate.tsx # Reusable downloads layout
-      VersionTemplate.tsx   # Reusable version layout
-      ErrorTemplate.tsx     # Error display
-      NotFoundTemplate.tsx  # 404 display
+      AboutTemplate.tsx               # Reusable about layout
+      DownloadsTemplate.tsx           # Reusable downloads layout
+      VersionTemplate.tsx             # Reusable version layout
+      ErrorTemplate.tsx               # Error display
+      NotFoundTemplate.tsx            # 404 display
   games/
     _shared/
-      gameData.ts           # Game metadata, instructions, visualizations
-      GameInstructions.tsx  # Modal with game instructions
+      gameData.tsx                    # Game metadata, instructions, visualizations
+      GameInstructions.tsx            # Modal with game instructions
     Maze/
-      index.tsx             # Canvas renderer, size slider, solve animation
-      maze.ts               # Pure logic — grid creation, maze generation, BFS solver
-      constants.ts          # DEFAULT/MIN/MAX size, CELL_SIZE, WALL_THICKNESS
-      types.ts              # GAME_NAME, Cell, Pos types
+      index.tsx                       # Canvas renderer, size slider, solve animation
+      maze.ts                         # Pure logic — grid creation, maze generation, BFS solver
+      constants.ts                    # DEFAULT/MIN/MAX size, CELL_SIZE, WALL_THICKNESS
+      types.ts                        # GAME_NAME, Cell, Pos types
     Snake/
-      index.tsx             # Grid render, game loop, input, HUD
-      snake.ts              # Pure logic — randomFood, initSnake, direction helpers
-      constants.ts          # GRID size, tick timing constants
-      types.ts              # GAME_NAME, Cell, Dir, Pos types
+      index.tsx                       # Grid render, game loop, input, HUD
+      snake.ts                        # Pure logic — randomFood, initSnake, direction helpers
+      constants.ts                    # GRID size, tick timing constants
+      types.ts                        # GAME_NAME, Cell, Dir, Pos types
     DinoRun/
-      index.tsx             # Canvas game loop, input, HUD
-      game.ts               # Pure simulation — spawn, tick, collision, drawing
-      constants.ts          # Physics/tuning constants (gravity, speeds, sizes)
-      types.ts              # GAME_NAME, Dino, Obstacle, Cloud, Star, Phase types
+      index.tsx                       # Canvas game loop, input, HUD
+      game.ts                         # Pure simulation — spawn, tick, collision, drawing
+      constants.ts                    # Physics/tuning constants
+      types.ts                        # GAME_NAME, Dino, Obstacle, Cloud, Star, Phase types
+    RockPaperScissors/
+      index.tsx                       # Choice picker, scoreboard, keyboard shortcuts
+      utils.ts                        # Pure logic — CHOICES, BEATS, play, randomChoice
+      types.ts                        # GAME_NAME type
   styles/
-    globals.css             # Tailwind CSS 4 + DaisyUI 5
+    globals.css                       # Google Fonts (Press Start 2P), Tailwind CSS 4, DaisyUI 5
+    base.css                          # Base 8-bit styles (pixel font, no border-radius)
+    themes.css                        # Custom "nothing" theme (black/white/red)
 public/
-  manifest.json             # PWA manifest
-  icons/                    # PWA icons (16–512px)
+  manifest.json                       # PWA manifest
+  icons/                              # PWA icons (16–512px)
 src-tauri/
-  tauri.conf.json           # Tauri 2 desktop config
-  src/lib.rs                # Tauri Rust entry
+  tauri.conf.json                     # Tauri 2 desktop config
 ```
+
+## Theme
+
+Uses the custom `nothing` theme from utilities/docs:
+
+- `base-100`: #000000 (black)
+- `base-content`: #f5f5f5 (white)
+- `primary`: #ff0030 (red)
+- Pixel font: Press Start 2P
+- No border-radius (all square corners)
+- 2px borders
 
 ## Games
 
-| Slug       | Game    | Description                                       |
-| ---------- | ------- | ------------------------------------------------- |
-| `maze`     | Maze    | Random perfect maze with BFS solver, 5×5 to 20×20 |
-| `snake`    | Snake   | Classic snake on a 12×12 grid with speed control  |
-| `dino-run` | DinoRun | Infinite runner with cacti, rocks, and birds      |
+| Slug                  | Game                | Description                                       |
+| --------------------- | ------------------- | ------------------------------------------------- |
+| `maze`                | Maze                | Random perfect maze with BFS solver, 5×5 to 20×20 |
+| `snake`               | Snake               | Classic snake on a 12×12 grid with speed control  |
+| `dino-run`            | DinoRun             | Infinite runner with cacti, rocks, and birds      |
+| `rock-paper-scissors` | Rock Paper Scissors | VS computer with streak tracking                  |
 
 ## Routes
 
 ```tsx
-// src/app/(games)/page.tsx              — game grid
-// src/app/(games)/maze/page.tsx         — maze
-// src/app/(games)/snake/page.tsx        — snake
-// src/app/(games)/dino-run/page.tsx     — dino run
-// src/app/(info)/about/page.tsx         — about
-// src/app/(info)/downloads/page.tsx     — downloads
-// src/app/(info)/version/page.tsx       — version
+// src/app/(games)/page.tsx                        — game grid
+// src/app/(games)/maze/page.tsx                   — maze
+// src/app/(games)/snake/page.tsx                  — snake
+// src/app/(games)/dino-run/page.tsx               — dino run
+// src/app/(games)/rock-paper-scissors/page.tsx    — rock paper scissors
+// src/app/(info)/about/page.tsx                   — about
+// src/app/(info)/downloads/page.tsx               — downloads
+// src/app/(info)/version/page.tsx                 — version
 ```
 
 ## Coding Rules
