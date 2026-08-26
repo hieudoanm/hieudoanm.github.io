@@ -8,7 +8,8 @@ const mockSections: RawSection[] = [
     items: [
       {
         label: 'Test App',
-        description: 'Developer Tools',
+        primaryCategory: 'Developer Tools',
+        secondaryCategory: 'Utilities',
         icon: 'PiTerminal',
         href: 'https://github.com/test',
         version: '1.0.0',
@@ -27,7 +28,8 @@ const mockSections: RawSection[] = [
     items: [
       {
         label: 'Native Mac App',
-        description: 'Utilities',
+        primaryCategory: 'Utilities',
+        secondaryCategory: 'System',
         icon: 'PiGear',
         href: 'https://github.com/test',
         version: '1.0.0',
@@ -48,7 +50,8 @@ const mockSections: RawSection[] = [
     items: [
       {
         label: 'Native Android App',
-        description: 'Utilities',
+        primaryCategory: 'Utilities',
+        secondaryCategory: 'System',
         icon: 'PiGear',
         href: 'https://github.com/test',
         version: '1.0.0',
@@ -69,7 +72,8 @@ const mockSections: RawSection[] = [
     items: [
       {
         label: 'CLI Tool',
-        description: 'Developer Tools',
+        primaryCategory: 'Developer Tools',
+        secondaryCategory: 'CLI',
         icon: 'PiTerminal',
         href: 'https://github.com/cli',
         version: '1.0.0',
@@ -88,7 +92,8 @@ const mockSections: RawSection[] = [
     items: [
       {
         label: 'Browser Extension',
-        description: 'Productivity',
+        primaryCategory: 'Productivity',
+        secondaryCategory: 'Browser',
         icon: 'PiGlobe',
         href: 'https://github.com/ext',
         version: '1.0.0',
@@ -185,7 +190,8 @@ describe('parseDownloads', () => {
         items: [
           {
             label: 'Unknown App',
-            description: 'Other',
+            primaryCategory: 'Other',
+            secondaryCategory: 'Misc',
             icon: 'PiPackage',
             href: 'https://test.com',
             version: '',
@@ -209,7 +215,8 @@ describe('parseDownloads', () => {
         items: [
           {
             label: 'iOS App',
-            description: 'Utility',
+            primaryCategory: 'Utility',
+            secondaryCategory: 'General',
             icon: 'PiPackage',
             href: 'https://test.com',
             version: '',
@@ -232,7 +239,8 @@ describe('parseDownloads', () => {
         items: [
           {
             label: 'App',
-            description: 'Utility',
+            primaryCategory: 'Utility',
+            secondaryCategory: 'General',
             icon: 'PiPackage',
             href: 'https://test.com',
             version: '',
@@ -257,7 +265,8 @@ describe('parseDownloads', () => {
         items: [
           {
             label: 'App',
-            description: 'Utility',
+            primaryCategory: 'Utility',
+            secondaryCategory: 'General',
             icon: 'PiPackage',
             href: 'https://test.com',
             version: '',
@@ -280,7 +289,8 @@ describe('parseDownloads', () => {
         items: [
           {
             label: 'App',
-            description: 'Utility',
+            primaryCategory: 'Utility',
+            secondaryCategory: 'General',
             icon: 'PiPackage',
             href: 'https://test.com',
             version: '',
@@ -307,7 +317,8 @@ describe('parseDownloads', () => {
         items: [
           {
             label: '  My App  ',
-            description: 'Utility',
+            primaryCategory: 'Utility',
+            secondaryCategory: 'General',
             icon: 'PiPackage',
             href: 'https://test.com',
             version: '',
@@ -330,7 +341,8 @@ describe('parseDownloads', () => {
         items: [
           {
             label: 'Real App',
-            description: 'Utility',
+            primaryCategory: 'Utility',
+            secondaryCategory: 'General',
             icon: 'PiPackage',
             href: 'https://test.com',
             version: '2.0.0',

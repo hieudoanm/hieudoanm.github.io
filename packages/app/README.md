@@ -9,7 +9,7 @@
 
 ## Categories
 
-| No  | Category               | Example                                                                                                                                                                                                               |
+| No  | Category               | Examples                                                                                                                                                                                                              |
 | --- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 01  | Books                  | stories, comics, eReaders, coffee table books, graphic novels                                                                                                                                                         |
 | 02  | Business               | document management (PDFs, scanning, file viewing/editing), VoIP telephony, dictation, remote desktop, job search resources, customer resource management, collaboration, enterprise resource planning, point of sale |

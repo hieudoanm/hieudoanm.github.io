@@ -10,8 +10,8 @@ export interface DownloadOption {
 export interface AppData {
   slug: string;
   label: string;
-  description: string;
-  category: string;
+  primaryCategory: string;
+  secondaryCategory: string;
   section: 'hybrid' | 'android' | 'macos' | 'cli' | 'extension';
   icon: string;
   href: string;
@@ -66,7 +66,8 @@ export type RawSection = {
   label: string;
   items: {
     label: string;
-    description: string;
+    primaryCategory: string;
+    secondaryCategory: string;
     icon: string;
     href: string;
     version: string;
@@ -101,8 +102,8 @@ export const parseDownloads = (sections: RawSection[]): AppData[] => {
       apps.push({
         slug: parseSlug(item.label),
         label: item.label,
-        description: item.description,
-        category: section.id,
+        primaryCategory: item.primaryCategory,
+        secondaryCategory: item.secondaryCategory,
         section: sectionKey,
         icon: item.icon,
         href: item.href,

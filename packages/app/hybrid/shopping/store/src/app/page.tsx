@@ -31,14 +31,16 @@ const ALL_PLATFORMS: { group: string; platforms: Platform[] }[] = [
   { group: 'Unknown', platforms: ['unknown'] },
 ];
 
-const ALL_CATEGORIES = [...new Set(ALL_APPS.map((a) => a.description))].sort();
+const ALL_CATEGORIES = [
+  ...new Set(ALL_APPS.map((a) => a.primaryCategory)),
+].sort();
 
 type SortKey = 'name' | 'category' | 'recent';
 
 const matchesQuery = (app: AppData, q: string): boolean => {
   const terms = q.toLowerCase().split(/\s+/).filter(Boolean);
   const haystack =
-    `${app.label} ${app.description} ${app.category}`.toLowerCase();
+    `${app.label} ${app.primaryCategory} ${app.secondaryCategory}`.toLowerCase();
   return terms.every((term) => haystack.includes(term));
 };
 
@@ -145,7 +147,7 @@ const HomePage = () => {
         let cmp = 0;
         if (sortKey === 'name') cmp = a.label.localeCompare(b.label);
         else if (sortKey === 'category')
-          cmp = a.description.localeCompare(b.description);
+          cmp = a.primaryCategory.localeCompare(b.primaryCategory);
         else if (sortKey === 'recent') cmp = 0;
         return sortAsc ? cmp : -cmp;
       });
@@ -162,7 +164,7 @@ const HomePage = () => {
         if (filtering && !matchesQuery(a, deferredQuery)) return false;
         if (activePlatform !== 'all' && !a.platforms.includes(activePlatform))
           return false;
-        if (activeCategory !== 'all' && a.description !== activeCategory)
+        if (activeCategory !== 'all' && a.primaryCategory !== activeCategory)
           return false;
         if (showFavoritesOnly && !isFavorite(a.slug)) return false;
         return true;
@@ -245,7 +247,7 @@ const HomePage = () => {
                     className="hover:bg-base-300 block px-4 py-2 text-sm">
                     {s.label}
                     <span className="text-base-content/40 ml-2 text-xs">
-                      {s.description}
+                      {s.primaryCategory}
                     </span>
                   </Link>
                 ))}
@@ -424,7 +426,7 @@ const HomePage = () => {
                         </span>
                         <span className="text-sm">{app.label}</span>
                         <span className="text-base-content/40 ml-auto text-xs">
-                          {app.description}
+                          {app.primaryCategory}
                         </span>
                       </Link>
                     ))}

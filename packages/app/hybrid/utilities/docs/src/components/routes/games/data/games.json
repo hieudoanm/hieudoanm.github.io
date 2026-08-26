@@ -1,59 +1,5 @@
 [
   {
-    "id": "memory",
-    "label": "Memory",
-    "items": [
-      {
-        "label": "Memory Match",
-        "description": "Find matching pairs",
-        "icon": "PiGameController",
-        "toolId": "memory-match"
-      },
-      {
-        "label": "N-Back",
-        "description": "Working memory",
-        "icon": "PiNumberSquareOne",
-        "toolId": "n-back"
-      },
-      {
-        "label": "PI",
-        "description": "Memorization",
-        "icon": "PiPi",
-        "toolId": "pi"
-      },
-      {
-        "label": "Recall",
-        "description": "Memorization",
-        "icon": "PiGameController",
-        "toolId": "recall"
-      }
-    ]
-  },
-  {
-    "id": "trivia",
-    "label": "Trivia",
-    "items": [
-      {
-        "label": "Quizify",
-        "description": "Quiz",
-        "icon": "PiQuestion",
-        "toolId": "quizify"
-      },
-      {
-        "label": "Palindrome",
-        "description": "Palindrome",
-        "icon": "PiRepeat",
-        "toolId": "palindrome"
-      },
-      {
-        "label": "Pokedex",
-        "description": "Pokemon",
-        "icon": "PiBook",
-        "toolId": "pokedex"
-      }
-    ]
-  },
-  {
     "id": "puzzle",
     "label": "Puzzle",
     "items": [
@@ -80,6 +26,30 @@
         "description": "Towers of Hanoi",
         "icon": "PiBuilding",
         "toolId": "towers"
+      }
+    ]
+  },
+  {
+    "id": "trivia",
+    "label": "Trivia",
+    "items": [
+      {
+        "label": "Palindrome",
+        "description": "Palindrome",
+        "icon": "PiRepeat",
+        "toolId": "palindrome"
+      },
+      {
+        "label": "Pokedex",
+        "description": "Pokemon",
+        "icon": "PiBook",
+        "toolId": "pokedex"
+      },
+      {
+        "label": "Quizify",
+        "description": "Quiz",
+        "icon": "PiQuestion",
+        "toolId": "quizify"
       }
     ]
   }

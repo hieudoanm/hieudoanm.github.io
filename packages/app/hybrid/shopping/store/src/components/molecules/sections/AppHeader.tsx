@@ -13,7 +13,7 @@ interface AppHeaderProps {
 const handleShare = (app: AppData) => {
   const url = `${typeof window !== 'undefined' ? window.location.origin : ''}/app/${app.slug}/`;
   if (navigator.share) {
-    navigator.share({ title: app.label, text: app.description, url });
+    navigator.share({ title: app.label, text: app.primaryCategory, url });
   } else {
     navigator.clipboard.writeText(url);
   }
@@ -27,7 +27,7 @@ export const AppHeader: FC<AppHeaderProps> = ({ app }) => {
         <Icon className="text-primary text-4xl" />
       </div>
       <h1 className="mb-2 text-3xl font-thin tracking-tight">{app.label}</h1>
-      <p className="text-base-content/50 text-sm">{app.description}</p>
+      <p className="text-base-content/50 text-sm">{app.primaryCategory}</p>
       <div className="mt-3 flex flex-wrap items-center justify-center gap-2">
         <span className="bg-primary/20 text-primary border-primary/30 badge badge-sm font-mono tracking-normal">
           {app.section}

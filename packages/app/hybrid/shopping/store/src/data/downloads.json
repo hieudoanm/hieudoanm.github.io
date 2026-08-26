@@ -4,8 +4,9 @@
     "label": "Apps (Hybrid)",
     "items": [
       {
-        "label": "8-bit",
-        "description": "Games",
+        "label": "8-Bit",
+        "primaryCategory": "Games",
+        "secondaryCategory": "Entertainment",
         "icon": "PadGame",
         "href": "https://hieudoanm.github.io/downloads/8-bit",
         "version": "1.0.0",
@@ -44,7 +45,8 @@
       },
       {
         "label": "API",
-        "description": "Developer Tools",
+        "primaryCategory": "Developer Tools",
+        "secondaryCategory": "Productivity",
         "icon": "PiGlobe",
         "href": "https://hieudoanm.github.io/downloads/api",
         "version": "1.0.0",
@@ -83,7 +85,8 @@
       },
       {
         "label": "Boilerplate",
-        "description": "Developer Tools",
+        "primaryCategory": "Developer Tools",
+        "secondaryCategory": "Productivity",
         "icon": "PiFrameCorners",
         "href": "https://hieudoanm.github.io/downloads/boilerplate",
         "version": "1.0.0",
@@ -122,7 +125,8 @@
       },
       {
         "label": "Brainbow",
-        "description": "Medical",
+        "primaryCategory": "Medical",
+        "secondaryCategory": "Health & Fitness",
         "icon": "PiMicroscope",
         "href": "https://hieudoanm.github.io/downloads/brainbow",
         "version": "1.0.0",
@@ -161,7 +165,8 @@
       },
       {
         "label": "Casino",
-        "description": "Games",
+        "primaryCategory": "Games",
+        "secondaryCategory": "Entertainment",
         "icon": "PiDiceOne",
         "href": "https://hieudoanm.github.io/downloads/casino",
         "version": "1.0.0",
@@ -200,7 +205,8 @@
       },
       {
         "label": "Chat",
-        "description": "Social Networking",
+        "primaryCategory": "Social Networking",
+        "secondaryCategory": "Business",
         "icon": "PiChat",
         "href": "https://hieudoanm.github.io/downloads/chat",
         "version": "1.0.0",
@@ -239,7 +245,8 @@
       },
       {
         "label": "Chemistry",
-        "description": "Education",
+        "primaryCategory": "Education",
+        "secondaryCategory": "Games",
         "icon": "PiAtom",
         "href": "https://hieudoanm.github.io/downloads/chemistry",
         "version": "1.0.0",
@@ -278,7 +285,8 @@
       },
       {
         "label": "Chess",
-        "description": "Sports",
+        "primaryCategory": "Sports",
+        "secondaryCategory": "Games",
         "icon": "PiGameController",
         "href": "https://hieudoanm.github.io/downloads/chess",
         "version": "1.0.0",
@@ -317,7 +325,8 @@
       },
       {
         "label": "Code",
-        "description": "Developer Tools",
+        "primaryCategory": "Developer Tools",
+        "secondaryCategory": "Productivity",
         "icon": "PiCodeSimple",
         "href": "https://hieudoanm.github.io/downloads/code",
         "version": "1.0.0",
@@ -356,7 +365,8 @@
       },
       {
         "label": "Countries",
-        "description": "Games",
+        "primaryCategory": "Games",
+        "secondaryCategory": "Entertainment",
         "icon": "PiGlobeHemisphereWest",
         "href": "https://hieudoanm.github.io/downloads/countries",
         "version": "1.0.0",
@@ -395,7 +405,8 @@
       },
       {
         "label": "CSV",
-        "description": "Productivity",
+        "primaryCategory": "Productivity",
+        "secondaryCategory": "Business",
         "icon": "PiTable",
         "href": "https://hieudoanm.github.io/downloads/csv",
         "version": "1.0.0",
@@ -434,7 +445,8 @@
       },
       {
         "label": "Database",
-        "description": "Developer Tools",
+        "primaryCategory": "Developer Tools",
+        "secondaryCategory": "Business",
         "icon": "PiDatabase",
         "href": "https://hieudoanm.github.io/downloads/database",
         "version": "1.0.0",
@@ -473,7 +485,8 @@
       },
       {
         "label": "Diagram",
-        "description": "Developer Tools",
+        "primaryCategory": "Developer Tools",
+        "secondaryCategory": "Graphics & Design",
         "icon": "PiPaintBrush",
         "href": "https://hieudoanm.github.io/downloads/diagram",
         "version": "1.0.0",
@@ -512,7 +525,8 @@
       },
       {
         "label": "Docs",
-        "description": "Utilities",
+        "primaryCategory": "Utilities",
+        "secondaryCategory": "Productivity",
         "icon": "PiGear",
         "href": "https://hieudoanm.github.io/downloads/docs",
         "version": "1.0.0",
@@ -551,7 +565,8 @@
       },
       {
         "label": "Economics",
-        "description": "Education",
+        "primaryCategory": "Education",
+        "secondaryCategory": "Games",
         "icon": "PiCurrencyDollar",
         "href": "https://hieudoanm.github.io/downloads/economics",
         "version": "1.0.0",
@@ -590,7 +605,8 @@
       },
       {
         "label": "Eyes",
-        "description": "Medical",
+        "primaryCategory": "Medical",
+        "secondaryCategory": "Health & Fitness",
         "icon": "PiEye",
         "href": "https://hieudoanm.github.io/downloads/eyes",
         "version": "1.0.0",
@@ -629,7 +645,8 @@
       },
       {
         "label": "Football",
-        "description": "Sports",
+        "primaryCategory": "Sports",
+        "secondaryCategory": "Games",
         "icon": "PiSoccerBall",
         "href": "https://hieudoanm.github.io/downloads/football",
         "version": "1.0.0",
@@ -668,7 +685,8 @@
       },
       {
         "label": "Foody",
-        "description": "Food & Drink",
+        "primaryCategory": "Food & Drink",
+        "secondaryCategory": "Health & Fitness",
         "icon": "PiHamburger",
         "href": "https://hieudoanm.github.io/downloads/foody",
         "version": "1.0.0",
@@ -707,7 +725,8 @@
       },
       {
         "label": "History",
-        "description": "Education",
+        "primaryCategory": "Education",
+        "secondaryCategory": "Games",
         "icon": "PiBooks",
         "href": "https://hieudoanm.github.io/downloads/history",
         "version": "1.0.0",
@@ -746,7 +765,8 @@
       },
       {
         "label": "Keynotes",
-        "description": "Productivity",
+        "primaryCategory": "Productivity",
+        "secondaryCategory": "Education",
         "icon": "PiPresentation",
         "href": "https://hieudoanm.github.io/downloads/keynotes",
         "version": "1.0.0",
@@ -785,7 +805,8 @@
       },
       {
         "label": "Lingo",
-        "description": "Education",
+        "primaryCategory": "Education",
+        "secondaryCategory": "Games",
         "icon": "PiGraduationCap",
         "href": "https://hieudoanm.github.io/downloads/lingo",
         "version": "1.0.0",
@@ -824,7 +845,8 @@
       },
       {
         "label": "Markdown",
-        "description": "Productivity",
+        "primaryCategory": "Productivity",
+        "secondaryCategory": "Education",
         "icon": "PiMarkdownLogo",
         "href": "https://hieudoanm.github.io/downloads/markdown",
         "version": "1.0.0",
@@ -862,8 +884,49 @@
         ]
       },
       {
+        "label": "Memory",
+        "primaryCategory": "Games",
+        "secondaryCategory": "Entertainment",
+        "icon": "PiMemoryCard",
+        "href": "https://hieudoanm.github.io/downloads/memory",
+        "version": "1.0.0",
+        "lastUpdated": "2025-01-01",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-memory-latest/app-universal-release.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-memory-latest/app-universal-release.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-memory-latest/memory_aarch64.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-memory-latest/memory_amd64.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-memory-latest/memory_amd64.deb"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-memory-latest/memory_x64.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-memory-latest/memory_x64.exe"
+          }
+        ]
+      },
+      {
         "label": "Messaging",
-        "description": "Social Networking",
+        "primaryCategory": "Social Networking",
+        "secondaryCategory": "Business",
         "icon": "PiPaperPlaneTilt",
         "href": "https://hieudoanm.github.io/downloads/messaging",
         "version": "1.0.0",
@@ -902,7 +965,8 @@
       },
       {
         "label": "MRI",
-        "description": "Medical",
+        "primaryCategory": "Medical",
+        "secondaryCategory": "Health & Fitness",
         "icon": "PiScan",
         "href": "https://hieudoanm.github.io/downloads/mri",
         "version": "1.0.0",
@@ -941,7 +1005,8 @@
       },
       {
         "label": "Music",
-        "description": "Education",
+        "primaryCategory": "Education",
+        "secondaryCategory": "Games",
         "icon": "PiMusicNote",
         "href": "https://hieudoanm.github.io/downloads/music",
         "version": "1.0.0",
@@ -980,7 +1045,8 @@
       },
       {
         "label": "Nikoli",
-        "description": "Games",
+        "primaryCategory": "Games",
+        "secondaryCategory": "Entertainment",
         "icon": "PiGridNine",
         "href": "https://hieudoanm.github.io/downloads/nikoli",
         "version": "1.0.0",
@@ -1019,7 +1085,8 @@
       },
       {
         "label": "Password",
-        "description": "Utilities",
+        "primaryCategory": "Utilities",
+        "secondaryCategory": "Productivity",
         "icon": "PiPassword",
         "href": "https://hieudoanm.github.io/downloads/password",
         "version": "1.0.0",
@@ -1058,7 +1125,8 @@
       },
       {
         "label": "PDF",
-        "description": "Productivity",
+        "primaryCategory": "Productivity",
+        "secondaryCategory": "Business",
         "icon": "PiFilePdf",
         "href": "https://hieudoanm.github.io/downloads/pdf",
         "version": "1.0.0",
@@ -1097,7 +1165,8 @@
       },
       {
         "label": "Photo",
-        "description": "Graphics & Design",
+        "primaryCategory": "Graphics & Design",
+        "secondaryCategory": "Photo & Video",
         "icon": "PiImage",
         "href": "https://hieudoanm.github.io/downloads/photo",
         "version": "1.0.0",
@@ -1136,7 +1205,8 @@
       },
       {
         "label": "POS",
-        "description": "Business",
+        "primaryCategory": "Business",
+        "secondaryCategory": "Finance",
         "icon": "PiShoppingCart",
         "href": "https://hieudoanm.github.io/downloads/pos",
         "version": "1.0.0",
@@ -1175,7 +1245,8 @@
       },
       {
         "label": "Projects",
-        "description": "Productivity",
+        "primaryCategory": "Productivity",
+        "secondaryCategory": "Business",
         "icon": "PiFolder",
         "href": "https://hieudoanm.github.io/downloads/projects",
         "version": "1.0.0",
@@ -1214,7 +1285,8 @@
       },
       {
         "label": "Psychology",
-        "description": "Medical",
+        "primaryCategory": "Medical",
+        "secondaryCategory": "Health & Fitness",
         "icon": "PiBrain",
         "href": "https://hieudoanm.github.io/downloads/psychology",
         "version": "1.0.0",
@@ -1253,7 +1325,8 @@
       },
       {
         "label": "Resume",
-        "description": "Productivity",
+        "primaryCategory": "Productivity",
+        "secondaryCategory": "Business",
         "icon": "PiFilePdf",
         "href": "https://hieudoanm.github.io/downloads/resume",
         "version": "1.0.0",
@@ -1291,8 +1364,49 @@
         ]
       },
       {
+        "label": "Store",
+        "primaryCategory": "Shopping",
+        "secondaryCategory": "Business",
+        "icon": "PiShoppingBag",
+        "href": "https://hieudoanm.github.io/downloads/store",
+        "version": "1.0.0",
+        "lastUpdated": "2025-01-01",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-shopping-store-latest/app-universal-release.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-shopping-store-latest/app-universal-release.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-shopping-store-latest/store_aarch64.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-shopping-store-latest/store_amd64.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-shopping-store-latest/store_amd64.deb"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-shopping-store-latest/store_x64.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-shopping-store-latest/store_x64.exe"
+          }
+        ]
+      },
+      {
         "label": "SVG",
-        "description": "Graphics & Design",
+        "primaryCategory": "Graphics & Design",
+        "secondaryCategory": "Photo & Video",
         "icon": "PiPath",
         "href": "https://hieudoanm.github.io/downloads/svg",
         "version": "1.0.0",
@@ -1331,7 +1445,8 @@
       },
       {
         "label": "Tic-Tac-Toe",
-        "description": "Games",
+        "primaryCategory": "Games",
+        "secondaryCategory": "Entertainment",
         "icon": "PiX",
         "href": "https://hieudoanm.github.io/downloads/tic-tac-toe",
         "version": "1.0.0",
@@ -1370,7 +1485,8 @@
       },
       {
         "label": "Tourney",
-        "description": "Sports",
+        "primaryCategory": "Sports",
+        "secondaryCategory": "Games",
         "icon": "PiTrophy",
         "href": "https://hieudoanm.github.io/downloads/tourney",
         "version": "1.0.0",
@@ -1409,7 +1525,8 @@
       },
       {
         "label": "Video",
-        "description": "Graphics & Design",
+        "primaryCategory": "Graphics & Design",
+        "secondaryCategory": "Photo & Video",
         "icon": "PiVideoCamera",
         "href": "https://hieudoanm.github.io/downloads/video",
         "version": "1.0.0",
@@ -1448,7 +1565,8 @@
       },
       {
         "label": "Wallet",
-        "description": "Finance",
+        "primaryCategory": "Finance",
+        "secondaryCategory": "Business",
         "icon": "PiWallet",
         "href": "https://hieudoanm.github.io/downloads/wallet",
         "version": "1.0.0",
@@ -1493,7 +1611,8 @@
     "items": [
       {
         "label": "Block",
-        "description": "Utilities",
+        "primaryCategory": "Utilities",
+        "secondaryCategory": "",
         "icon": "PiProhibit",
         "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-block-latest/app-universal-release.apk",
         "version": "1.0.0",
@@ -1508,7 +1627,8 @@
       },
       {
         "label": "NFC Toolkit",
-        "description": "Utilities",
+        "primaryCategory": "Utilities",
+        "secondaryCategory": "",
         "icon": "PiCardholder",
         "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-nfc-latest/app-universal-release.apk",
         "version": "1.0.0",
@@ -1529,7 +1649,8 @@
     "items": [
       {
         "label": "Clipper",
-        "description": "Utilities",
+        "primaryCategory": "Utilities",
+        "secondaryCategory": "",
         "icon": "PiClipboard",
         "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-clipper-latest/Clipper-0.0.1.dmg",
         "version": "1.0.0",
@@ -1544,7 +1665,8 @@
       },
       {
         "label": "Mixer",
-        "description": "Utilities",
+        "primaryCategory": "Utilities",
+        "secondaryCategory": "",
         "icon": "PiWaveSine",
         "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-mixer-latest/Mixer-0.0.1.dmg",
         "version": "1.0.0",
@@ -1559,7 +1681,8 @@
       },
       {
         "label": "Snap",
-        "description": "Utilities",
+        "primaryCategory": "Utilities",
+        "secondaryCategory": "",
         "icon": "PiGridFour",
         "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-snap-latest/Snap-0.0.1.dmg",
         "version": "1.0.0",
@@ -1574,7 +1697,8 @@
       },
       {
         "label": "Top",
-        "description": "Utilities",
+        "primaryCategory": "Utilities",
+        "secondaryCategory": "",
         "icon": "PiTimer",
         "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-top-latest/Top-0.0.1.dmg",
         "version": "1.0.0",

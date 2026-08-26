@@ -1,2 +1,2 @@
 :HL["/free/economics/_next/static/chunks/0__huvkg82d9c.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4180,"slots":{"children":{"name":"(info)","param":null,"prefetchHints":4192,"slots":{"children":{"name":"about","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"eWeS5htI8HPSGFfwx7NKf"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4180,"slots":{"children":{"name":"(info)","param":null,"prefetchHints":4192,"slots":{"children":{"name":"about","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"GiWCZDa3a9mqS9y0Yfc-A"}

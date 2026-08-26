@@ -17,8 +17,8 @@ jest.mock('@/lib/hooks', () => ({
 const mockApp: AppData = {
   slug: 'test-app',
   label: 'Test App',
-  description: 'Developer Tools',
-  category: 'apps-hybrid',
+  primaryCategory: 'Developer Tools',
+  secondaryCategory: 'Development',
   section: 'hybrid',
   icon: 'PiTerminal',
   href: 'https://github.com/test',

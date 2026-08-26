@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://hieudoanm.github.io/free/store</loc>
-<lastmod>2026-08-26T07:00:53.050Z</lastmod>
+<lastmod>2026-08-26T09:19:03.093Z</lastmod>
 <changefreq>daily</changefreq>
 <priority>1</priority>
 </url>
@@ -139,6 +139,12 @@
 <priority>0.8</priority>
 </url>
 <url>
+<loc>https://hieudoanm.github.io/free/store/app/memory/</loc>
+<lastmod>2025-01-01</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
 <loc>https://hieudoanm.github.io/free/store/app/messaging/</loc>
 <lastmod>2025-01-01</lastmod>
 <changefreq>weekly</changefreq>
@@ -200,6 +206,12 @@
 </url>
 <url>
 <loc>https://hieudoanm.github.io/free/store/app/resume/</loc>
+<lastmod>2025-01-01</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://hieudoanm.github.io/free/store/app/store/</loc>
 <lastmod>2025-01-01</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
@@ -272,13 +284,13 @@
 </url>
 <url>
 <loc>https://hieudoanm.github.io/free/store/about/</loc>
-<lastmod>2026-08-26T07:00:53.051Z</lastmod>
+<lastmod>2026-08-26T09:19:03.093Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.3</priority>
 </url>
 <url>
 <loc>https://hieudoanm.github.io/free/store/version/</loc>
-<lastmod>2026-08-26T07:00:53.051Z</lastmod>
+<lastmod>2026-08-26T09:19:03.093Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.3</priority>
 </url>

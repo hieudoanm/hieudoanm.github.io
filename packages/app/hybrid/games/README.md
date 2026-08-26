@@ -3,5 +3,6 @@
 1. 8-bit
 2. Casino
 3. Countries
-4. Nikoli
-5. Tic-Tac-Toe
+4. Memory
+5. Nikoli
+6. Tic-Tac-Toe

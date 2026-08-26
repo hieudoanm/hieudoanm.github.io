@@ -21,10 +21,10 @@ export const generateMetadata = async ({
 
   return {
     title: `${app.label} - Store`,
-    description: `${app.description} - Download ${app.label}`,
+    description: `${app.primaryCategory} - Download ${app.label}`,
     openGraph: {
       title: `${app.label} - Store`,
-      description: app.description,
+      description: app.primaryCategory,
       type: 'website',
     },
   };

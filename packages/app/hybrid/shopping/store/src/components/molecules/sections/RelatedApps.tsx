@@ -15,7 +15,7 @@ export const RelatedApps: FC<RelatedAppsProps> = ({ app, allApps }) => {
     .filter(
       (a) =>
         a.slug !== app.slug &&
-        (a.description === app.description || a.section === app.section)
+        (a.primaryCategory === app.primaryCategory || a.section === app.section)
     )
     .slice(0, 4);
 

@@ -43,7 +43,7 @@ export const StoreCard: FC<StoreCardProps> = ({
             {app.label}
           </div>
           <div className="text-base-content/40 mt-0.5 truncate text-[10px] tracking-widest uppercase">
-            {app.description}
+            {app.primaryCategory}
           </div>
         </div>
         <div className="flex w-full flex-col gap-1">

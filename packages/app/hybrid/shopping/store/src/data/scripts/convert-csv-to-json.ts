@@ -9,7 +9,8 @@ const COLUMNS = [
   'sectionId',
   'appId',
   'label',
-  'description',
+  'primaryCategory',
+  'secondaryCategory',
   'icon',
   'version',
   'lastUpdated',
@@ -37,7 +38,8 @@ type DownloadAction = {
 
 type DownloadItem = {
   label: string;
-  description: string;
+  primaryCategory: string;
+  secondaryCategory: string;
   icon: string;
   href: string;
   version: string;
@@ -136,7 +138,8 @@ const toJson = (rows: CsvRow[]): DownloadSection[] => {
     const section = sections.find((entry) => entry.id === row.sectionId);
     const item: DownloadItem = {
       label: row.label,
-      description: row.description,
+      primaryCategory: row.primaryCategory,
+      secondaryCategory: row.secondaryCategory,
       icon: row.icon,
       href: row.href,
       version: row.version || '1.0.0',
