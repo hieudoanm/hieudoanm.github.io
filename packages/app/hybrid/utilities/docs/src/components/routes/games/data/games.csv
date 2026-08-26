@@ -1,8 +1,0 @@
-section,sectionId,label,description,icon,toolId
-Puzzle,puzzle,2048,Merge tiles,PiNumberSquareOne,game2048
-Puzzle,puzzle,Lights Out,Toggle all lights off,PiLamp,lights-out
-Puzzle,puzzle,Sliding Puzzle,Upload & slide tiles,PiSnowflake,sliding-puzzle
-Puzzle,puzzle,Towers,Towers of Hanoi,PiBuilding,towers
-Trivia,trivia,Palindrome,Palindrome,PiRepeat,palindrome
-Trivia,trivia,Pokedex,Pokemon,PiBook,pokedex
-Trivia,trivia,Quizify,Quiz,PiQuestion,quizify

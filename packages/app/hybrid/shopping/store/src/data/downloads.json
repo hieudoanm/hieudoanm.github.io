@@ -7,9 +7,9 @@
         "label": "8-Bit",
         "primaryCategory": "Games",
         "secondaryCategory": "Entertainment",
-        "icon": "PadGame",
-        "href": "https://hieudoanm.github.io/downloads/8-bit",
-        "version": "1.0.0",
+        "icon": "PiJoystick",
+        "href": "https://hieudoanm.github.io/free/8-bit",
+        "version": "0.0.1",
         "lastUpdated": "2026-08-26",
         "fileSize": "",
         "actions": [
@@ -48,8 +48,8 @@
         "primaryCategory": "Developer Tools",
         "secondaryCategory": "Productivity",
         "icon": "PiGlobe",
-        "href": "https://hieudoanm.github.io/downloads/api",
-        "version": "1.0.0",
+        "href": "https://hieudoanm.github.io/free/api",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -88,8 +88,8 @@
         "primaryCategory": "Developer Tools",
         "secondaryCategory": "Productivity",
         "icon": "PiFrameCorners",
-        "href": "https://hieudoanm.github.io/downloads/boilerplate",
-        "version": "1.0.0",
+        "href": "https://hieudoanm.github.io/free/boilerplate",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -128,8 +128,8 @@
         "primaryCategory": "Medical",
         "secondaryCategory": "Health & Fitness",
         "icon": "PiMicroscope",
-        "href": "https://hieudoanm.github.io/downloads/brainbow",
-        "version": "1.0.0",
+        "href": "https://hieudoanm.github.io/free/brainbow",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -164,12 +164,52 @@
         ]
       },
       {
+        "label": "Calendar",
+        "primaryCategory": "Productivity",
+        "secondaryCategory": "Business",
+        "icon": "PiCalendarBlank",
+        "href": "https://hieudoanm.github.io/free/calendar",
+        "version": "0.0.1",
+        "lastUpdated": "2026-08-26",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-calendar-latest/app-universal-release.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-calendar-latest/app-universal-release.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-calendar-latest/calendar_aarch64.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-calendar-latest/calendar_amd64.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-calendar-latest/calendar_amd64.deb"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-calendar-latest/calendar_x64.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-calendar-latest/calendar_x64.exe"
+          }
+        ]
+      },
+      {
         "label": "Casino",
         "primaryCategory": "Games",
         "secondaryCategory": "Entertainment",
         "icon": "PiDiceOne",
-        "href": "https://hieudoanm.github.io/downloads/casino",
-        "version": "1.0.0",
+        "href": "https://hieudoanm.github.io/free/casino",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -208,8 +248,8 @@
         "primaryCategory": "Social Networking",
         "secondaryCategory": "Business",
         "icon": "PiChat",
-        "href": "https://hieudoanm.github.io/downloads/chat",
-        "version": "1.0.0",
+        "href": "https://hieudoanm.github.io/free/chat",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -248,8 +288,8 @@
         "primaryCategory": "Education",
         "secondaryCategory": "Games",
         "icon": "PiAtom",
-        "href": "https://hieudoanm.github.io/downloads/chemistry",
-        "version": "1.0.0",
+        "href": "https://hieudoanm.github.io/free/chemistry",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -288,8 +328,8 @@
         "primaryCategory": "Sports",
         "secondaryCategory": "Games",
         "icon": "PiGameController",
-        "href": "https://hieudoanm.github.io/downloads/chess",
-        "version": "1.0.0",
+        "href": "https://hieudoanm.github.io/free/chess",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -328,8 +368,8 @@
         "primaryCategory": "Developer Tools",
         "secondaryCategory": "Productivity",
         "icon": "PiCodeSimple",
-        "href": "https://hieudoanm.github.io/downloads/code",
-        "version": "1.0.0",
+        "href": "https://hieudoanm.github.io/free/code",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -368,8 +408,8 @@
         "primaryCategory": "Games",
         "secondaryCategory": "Entertainment",
         "icon": "PiGlobeHemisphereWest",
-        "href": "https://hieudoanm.github.io/downloads/countries",
-        "version": "1.0.0",
+        "href": "https://hieudoanm.github.io/free/countries",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -408,8 +448,8 @@
         "primaryCategory": "Productivity",
         "secondaryCategory": "Business",
         "icon": "PiTable",
-        "href": "https://hieudoanm.github.io/downloads/csv",
-        "version": "1.0.0",
+        "href": "https://hieudoanm.github.io/free/csv",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -448,8 +488,8 @@
         "primaryCategory": "Developer Tools",
         "secondaryCategory": "Business",
         "icon": "PiDatabase",
-        "href": "https://hieudoanm.github.io/downloads/database",
-        "version": "1.0.0",
+        "href": "https://hieudoanm.github.io/free/database",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -488,8 +528,8 @@
         "primaryCategory": "Developer Tools",
         "secondaryCategory": "Graphics & Design",
         "icon": "PiPaintBrush",
-        "href": "https://hieudoanm.github.io/downloads/diagram",
-        "version": "1.0.0",
+        "href": "https://hieudoanm.github.io/free/diagram",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -528,8 +568,8 @@
         "primaryCategory": "Utilities",
         "secondaryCategory": "Productivity",
         "icon": "PiGear",
-        "href": "https://hieudoanm.github.io/downloads/docs",
-        "version": "1.0.0",
+        "href": "https://hieudoanm.github.io/free/docs",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -568,8 +608,8 @@
         "primaryCategory": "Education",
         "secondaryCategory": "Games",
         "icon": "PiCurrencyDollar",
-        "href": "https://hieudoanm.github.io/downloads/economics",
-        "version": "1.0.0",
+        "href": "https://hieudoanm.github.io/free/economics",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -608,8 +648,8 @@
         "primaryCategory": "Medical",
         "secondaryCategory": "Health & Fitness",
         "icon": "PiEye",
-        "href": "https://hieudoanm.github.io/downloads/eyes",
-        "version": "1.0.0",
+        "href": "https://hieudoanm.github.io/free/eyes",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -648,8 +688,8 @@
         "primaryCategory": "Sports",
         "secondaryCategory": "Games",
         "icon": "PiSoccerBall",
-        "href": "https://hieudoanm.github.io/downloads/football",
-        "version": "1.0.0",
+        "href": "https://hieudoanm.github.io/free/football",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -688,8 +728,8 @@
         "primaryCategory": "Food & Drink",
         "secondaryCategory": "Health & Fitness",
         "icon": "PiHamburger",
-        "href": "https://hieudoanm.github.io/downloads/foody",
-        "version": "1.0.0",
+        "href": "https://hieudoanm.github.io/free/foody",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -728,8 +768,8 @@
         "primaryCategory": "Education",
         "secondaryCategory": "Games",
         "icon": "PiBooks",
-        "href": "https://hieudoanm.github.io/downloads/history",
-        "version": "1.0.0",
+        "href": "https://hieudoanm.github.io/free/history",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -768,8 +808,8 @@
         "primaryCategory": "Productivity",
         "secondaryCategory": "Education",
         "icon": "PiPresentation",
-        "href": "https://hieudoanm.github.io/downloads/keynotes",
-        "version": "1.0.0",
+        "href": "https://hieudoanm.github.io/free/keynotes",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -808,8 +848,8 @@
         "primaryCategory": "Education",
         "secondaryCategory": "Games",
         "icon": "PiGraduationCap",
-        "href": "https://hieudoanm.github.io/downloads/lingo",
-        "version": "1.0.0",
+        "href": "https://hieudoanm.github.io/free/lingo",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -848,8 +888,8 @@
         "primaryCategory": "Productivity",
         "secondaryCategory": "Education",
         "icon": "PiMarkdownLogo",
-        "href": "https://hieudoanm.github.io/downloads/markdown",
-        "version": "1.0.0",
+        "href": "https://hieudoanm.github.io/free/markdown",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -887,9 +927,9 @@
         "label": "Memory",
         "primaryCategory": "Games",
         "secondaryCategory": "Entertainment",
-        "icon": "PiMemoryCard",
-        "href": "https://hieudoanm.github.io/downloads/memory",
-        "version": "1.0.0",
+        "icon": "PiMemory",
+        "href": "https://hieudoanm.github.io/free/memory",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -928,8 +968,8 @@
         "primaryCategory": "Social Networking",
         "secondaryCategory": "Business",
         "icon": "PiPaperPlaneTilt",
-        "href": "https://hieudoanm.github.io/downloads/messaging",
-        "version": "1.0.0",
+        "href": "https://hieudoanm.github.io/free/messaging",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -968,8 +1008,8 @@
         "primaryCategory": "Medical",
         "secondaryCategory": "Health & Fitness",
         "icon": "PiScan",
-        "href": "https://hieudoanm.github.io/downloads/mri",
-        "version": "1.0.0",
+        "href": "https://hieudoanm.github.io/free/mri",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -1008,8 +1048,8 @@
         "primaryCategory": "Education",
         "secondaryCategory": "Games",
         "icon": "PiMusicNote",
-        "href": "https://hieudoanm.github.io/downloads/music",
-        "version": "1.0.0",
+        "href": "https://hieudoanm.github.io/free/music",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -1048,8 +1088,8 @@
         "primaryCategory": "Games",
         "secondaryCategory": "Entertainment",
         "icon": "PiGridNine",
-        "href": "https://hieudoanm.github.io/downloads/nikoli",
-        "version": "1.0.0",
+        "href": "https://hieudoanm.github.io/free/nikoli",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -1088,8 +1128,8 @@
         "primaryCategory": "Utilities",
         "secondaryCategory": "Productivity",
         "icon": "PiPassword",
-        "href": "https://hieudoanm.github.io/downloads/password",
-        "version": "1.0.0",
+        "href": "https://hieudoanm.github.io/free/password",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -1128,8 +1168,8 @@
         "primaryCategory": "Productivity",
         "secondaryCategory": "Business",
         "icon": "PiFilePdf",
-        "href": "https://hieudoanm.github.io/downloads/pdf",
-        "version": "1.0.0",
+        "href": "https://hieudoanm.github.io/free/pdf",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -1168,8 +1208,8 @@
         "primaryCategory": "Graphics & Design",
         "secondaryCategory": "Photo & Video",
         "icon": "PiImage",
-        "href": "https://hieudoanm.github.io/downloads/photo",
-        "version": "1.0.0",
+        "href": "https://hieudoanm.github.io/free/photo",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -1208,8 +1248,8 @@
         "primaryCategory": "Business",
         "secondaryCategory": "Finance",
         "icon": "PiShoppingCart",
-        "href": "https://hieudoanm.github.io/downloads/pos",
-        "version": "1.0.0",
+        "href": "https://hieudoanm.github.io/free/pos",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -1248,8 +1288,8 @@
         "primaryCategory": "Productivity",
         "secondaryCategory": "Business",
         "icon": "PiFolder",
-        "href": "https://hieudoanm.github.io/downloads/projects",
-        "version": "1.0.0",
+        "href": "https://hieudoanm.github.io/free/projects",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -1288,8 +1328,8 @@
         "primaryCategory": "Medical",
         "secondaryCategory": "Health & Fitness",
         "icon": "PiBrain",
-        "href": "https://hieudoanm.github.io/downloads/psychology",
-        "version": "1.0.0",
+        "href": "https://hieudoanm.github.io/free/psychology",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -1328,8 +1368,8 @@
         "primaryCategory": "Productivity",
         "secondaryCategory": "Business",
         "icon": "PiFilePdf",
-        "href": "https://hieudoanm.github.io/downloads/resume",
-        "version": "1.0.0",
+        "href": "https://hieudoanm.github.io/free/resume",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -1368,8 +1408,8 @@
         "primaryCategory": "Shopping",
         "secondaryCategory": "Business",
         "icon": "PiShoppingBag",
-        "href": "https://hieudoanm.github.io/downloads/store",
-        "version": "1.0.0",
+        "href": "https://hieudoanm.github.io/free/store",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -1408,8 +1448,8 @@
         "primaryCategory": "Graphics & Design",
         "secondaryCategory": "Photo & Video",
         "icon": "PiPath",
-        "href": "https://hieudoanm.github.io/downloads/svg",
-        "version": "1.0.0",
+        "href": "https://hieudoanm.github.io/free/svg",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -1448,8 +1488,8 @@
         "primaryCategory": "Games",
         "secondaryCategory": "Entertainment",
         "icon": "PiX",
-        "href": "https://hieudoanm.github.io/downloads/tic-tac-toe",
-        "version": "1.0.0",
+        "href": "https://hieudoanm.github.io/free/tic-tac-toe",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -1488,8 +1528,8 @@
         "primaryCategory": "Sports",
         "secondaryCategory": "Games",
         "icon": "PiTrophy",
-        "href": "https://hieudoanm.github.io/downloads/tourney",
-        "version": "1.0.0",
+        "href": "https://hieudoanm.github.io/free/tourney",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -1528,8 +1568,8 @@
         "primaryCategory": "Graphics & Design",
         "secondaryCategory": "Photo & Video",
         "icon": "PiVideoCamera",
-        "href": "https://hieudoanm.github.io/downloads/video",
-        "version": "1.0.0",
+        "href": "https://hieudoanm.github.io/free/video",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -1568,8 +1608,8 @@
         "primaryCategory": "Finance",
         "secondaryCategory": "Business",
         "icon": "PiWallet",
-        "href": "https://hieudoanm.github.io/downloads/wallet",
-        "version": "1.0.0",
+        "href": "https://hieudoanm.github.io/free/wallet",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -1615,7 +1655,7 @@
         "secondaryCategory": "",
         "icon": "PiProhibit",
         "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-block-latest/app-universal-release.apk",
-        "version": "1.0.0",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -1631,7 +1671,7 @@
         "secondaryCategory": "",
         "icon": "PiCardholder",
         "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-nfc-latest/app-universal-release.apk",
-        "version": "1.0.0",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -1653,7 +1693,7 @@
         "secondaryCategory": "",
         "icon": "PiClipboard",
         "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-clipper-latest/Clipper-0.0.1.dmg",
-        "version": "1.0.0",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -1669,7 +1709,7 @@
         "secondaryCategory": "",
         "icon": "PiWaveSine",
         "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-mixer-latest/Mixer-0.0.1.dmg",
-        "version": "1.0.0",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -1685,7 +1725,7 @@
         "secondaryCategory": "",
         "icon": "PiGridFour",
         "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-snap-latest/Snap-0.0.1.dmg",
-        "version": "1.0.0",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [
@@ -1701,7 +1741,7 @@
         "secondaryCategory": "",
         "icon": "PiTimer",
         "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-top-latest/Top-0.0.1.dmg",
-        "version": "1.0.0",
+        "version": "0.0.1",
         "lastUpdated": "2025-01-01",
         "fileSize": "",
         "actions": [

@@ -3,8 +3,6 @@ export type SidebarTab =
   | 'tasks'
   | 'time'
   | 'currency'
-  | 'calendar'
   | 'passport'
   | 'apps'
-  | 'games'
   | 'world-clock';

@@ -3,7 +3,6 @@ import { getTimeInZone, timezones } from '@hieudoanm.github.io/data/timezones';
 import dynamic from 'next/dynamic';
 import { useCallback, useEffect, useState, type FC } from 'react';
 import {
-  PiCalendarBlank,
   PiCheckSquare,
   PiClock,
   PiCurrencyDollar,
@@ -40,13 +39,6 @@ const CurrencyTab = dynamic(
     ),
   { ssr: false }
 );
-const CalendarTab = dynamic(
-  () =>
-    import('@hieudoanm.github.io/components/organisms/layout/tabs/CalendarTab').then(
-      (m) => m.CalendarTab
-    ),
-  { ssr: false }
-);
 const PassportTab = dynamic(
   () =>
     import('@hieudoanm.github.io/components/organisms/layout/tabs/PassportTab').then(
@@ -71,7 +63,6 @@ const TABS: {
   { id: 'tasks', label: 'Tasks', icon: PiCheckSquare },
   { id: 'time', label: 'Time', icon: PiClock },
   { id: 'currency', label: 'Currency', icon: PiCurrencyDollar },
-  { id: 'calendar', label: 'Calendar', icon: PiCalendarBlank },
   { id: 'passport', label: 'Passport', icon: PiIdentificationCard },
   { id: 'world-clock', label: 'World Clock', icon: PiGlobeHemisphereWest },
 ];
@@ -107,8 +98,6 @@ export const RightSidebar: FC = () => {
           return <TimeTab />;
         case 'currency':
           return <CurrencyTab />;
-        case 'calendar':
-          return <CalendarTab />;
         case 'passport':
           return <PassportTab />;
         case 'world-clock':

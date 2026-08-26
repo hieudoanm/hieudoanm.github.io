@@ -254,18 +254,36 @@
         "description": "Cite",
         "icon": "PiFileText",
         "toolId": "doi"
+      }
+    ]
+  },
+  {
+    "id": "puzzle",
+    "label": "Puzzle",
+    "items": [
+      {
+        "label": "2048",
+        "description": "Merge tiles",
+        "icon": "PiNumberSquareOne",
+        "toolId": "game2048"
       },
       {
-        "label": "Periodic Table",
-        "description": "Elements",
-        "icon": "PiChartBar",
-        "toolId": "periodic-table"
+        "label": "Lights Out",
+        "description": "Toggle all lights off",
+        "icon": "PiLamp",
+        "toolId": "lights-out"
       },
       {
-        "label": "Pitch",
-        "description": "Training",
-        "icon": "PiPianoKeys",
-        "toolId": "pitch"
+        "label": "Sliding Puzzle",
+        "description": "Upload & slide tiles",
+        "icon": "PiSnowflake",
+        "toolId": "sliding-puzzle"
+      },
+      {
+        "label": "Towers",
+        "description": "Towers of Hanoi",
+        "icon": "PiBuilding",
+        "toolId": "towers"
       }
     ]
   },
@@ -290,6 +308,30 @@
         "description": "Text to Morse Code",
         "icon": "PiWaveSine",
         "toolId": "morse"
+      }
+    ]
+  },
+  {
+    "id": "trivia",
+    "label": "Trivia",
+    "items": [
+      {
+        "label": "Palindrome",
+        "description": "Palindrome",
+        "icon": "PiRepeat",
+        "toolId": "palindrome"
+      },
+      {
+        "label": "Pokedex",
+        "description": "Pokemon",
+        "icon": "PiBook",
+        "toolId": "pokedex"
+      },
+      {
+        "label": "Quizify",
+        "description": "Quiz",
+        "icon": "PiQuestion",
+        "toolId": "quizify"
       }
     ]
   },
@@ -344,12 +386,6 @@
         "description": "Strange Attractors",
         "icon": "PiSpiral",
         "toolId": "attractors"
-      },
-      {
-        "label": "Calendar Tracker",
-        "description": "Activities",
-        "icon": "PiCalendar",
-        "toolId": "calendar-tracker"
       },
       {
         "label": "Legislation",

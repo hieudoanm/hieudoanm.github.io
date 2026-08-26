@@ -1,0 +1,32 @@
+name: CI - App - Hybrid - Productivity - Calendar
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/productivity/calendar/**'
+      - '.github/workflows/ci-app-hybrid-productivity-calendar.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-hybrid-productivity-calendar-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/productivity/calendar
+      filter: '@hieudoanm.github.io/calendar'
+      releaseName: app-hybrid-productivity-calendar-latest
+      releaseTitle: App - Hybrid - Productivity - Calendar (latest)
+      artifactPrefix: productivity-calendar

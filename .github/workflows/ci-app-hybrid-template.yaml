@@ -223,6 +223,7 @@ jobs:
             find "$dir" -type f \( \
               -name "*.AppImage" -o \
               -name "*.deb" -o \
+              -name "*.rpm" -o \
               -name "*.dmg" -o \
               -name "*.zip" -o \
               -name "*.tar.xz" -o \

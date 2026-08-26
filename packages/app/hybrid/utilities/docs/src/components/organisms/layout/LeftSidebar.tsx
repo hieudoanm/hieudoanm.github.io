@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { type FC } from 'react';
 import {
-  PiGameController,
   PiGear,
   PiHouse,
   PiInfo,
@@ -20,7 +19,6 @@ const LINKS: {
 }[] = [
   { href: '/', label: 'Home', icon: PiHouse },
   { href: '/apps', label: 'Apps', icon: PiSquaresFour },
-  { href: '/games', label: 'Games', icon: PiGameController },
   { href: '/downloads', label: 'Downloads', icon: PiPackage },
   { href: '/settings', label: 'Settings', icon: PiGear },
   { href: '/me', label: 'Me', icon: PiUser },

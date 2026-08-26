@@ -34,9 +34,16 @@ Editors,editors,Manifest,JSON Editor,PiFileText,manifest
 Editors,editors,Regex,Pattern Generator,PiMagnifyingGlass,regex
 Editors,editors,Slides,Pitch Deck,PiPresentation,slides
 Education,education,DOI,Cite,PiFileText,doi
+Puzzle,puzzle,2048,Merge tiles,PiNumberSquareOne,game2048
+Puzzle,puzzle,Lights Out,Toggle all lights off,PiLamp,lights-out
+Puzzle,puzzle,Sliding Puzzle,Upload & slide tiles,PiSnowflake,sliding-puzzle
+Puzzle,puzzle,Towers,Towers of Hanoi,PiBuilding,towers
 Text - Convert,text-convert,Braille,Text to Braille,PiDotsNine,braille
 Text - Convert,text-convert,Leet Speak,Text to Leet,PiTextAa,leetspeak
 Text - Convert,text-convert,Morse,Text to Morse Code,PiWaveSine,morse
+Trivia,trivia,Palindrome,Palindrome,PiRepeat,palindrome
+Trivia,trivia,Pokedex,Pokemon,PiBook,pokedex
+Trivia,trivia,Quizify,Quiz,PiQuestion,quizify
 Utilities,utilities,Create ZIP,Zip Files,PiFileText,create-zip
 Utilities,utilities,Emojis,Explorer,PiSmiley,emojis
 Utilities,utilities,Kaprekar,Routine,PiChartBar,kaprekar
@@ -44,5 +51,4 @@ Utilities,utilities,Lorem Ipsum,Dummy text,PiNotePencil,lorem-ipsum
 Utilities,utilities,No Sleep,Timer,PiMoon,no-sleep
 Utilities,utilities,Screen Recorder,"Record & Download",PiFilmStrip,screen-recorder
 Visualization,visualization,Attractors,Strange Attractors,PiSpiral,attractors
-Visualization,visualization,Calendar Tracker,Activities,PiCalendar,calendar-tracker
 Visualization,visualization,Legislation,Visualization,PiBuildings,legislation
