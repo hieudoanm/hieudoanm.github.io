@@ -1,0 +1,16 @@
+[package]
+name = "headless"
+version = "0.0.1"
+edition = "2021"
+description = "Headless browser rendering and screenshots"
+
+[dependencies]
+browserverless = { path = "../browserverless" }
+servo = { workspace = true }
+thiserror = { workspace = true }
+url = { workspace = true }
+log = { workspace = true }
+image = { workspace = true }
+libc = "0.2"
+
+[dev-dependencies]
