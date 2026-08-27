@@ -38,7 +38,7 @@ const parsePlatformFromLabel = (label: string): Platform => {
   if (/dmg/.test(lower)) return 'macos';
   if (/ipa/.test(lower)) return 'ios';
   if (/msi|exe/.test(lower)) return 'windows';
-  if (/appimage|deb/.test(lower)) return 'linux';
+  if (/appimage|deb|rpm/.test(lower)) return 'linux';
   return 'unknown';
 };
 

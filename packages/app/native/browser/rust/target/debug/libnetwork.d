@@ -1,0 +1,1 @@
+/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/app/native/browser/rust/target/debug/libnetwork.rlib: /Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/app/native/browser/rust/crates/network/src/lib.rs

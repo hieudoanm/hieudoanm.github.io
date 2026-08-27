@@ -1,0 +1,12 @@
+/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/app/native/browser/rust/target/debug/deps/thiserror-15914f3701cc6ca3.d: /Users/hieudoan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.20/src/lib.rs /Users/hieudoan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.20/src/aserror.rs /Users/hieudoan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.20/src/display.rs /Users/hieudoan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.20/src/var.rs /Users/hieudoan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.20/src/private.rs /Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/app/native/browser/rust/target/debug/build/thiserror-5087a0422900f0de/out/private.rs
+
+/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/app/native/browser/rust/target/debug/deps/libthiserror-15914f3701cc6ca3.rmeta: /Users/hieudoan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.20/src/lib.rs /Users/hieudoan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.20/src/aserror.rs /Users/hieudoan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.20/src/display.rs /Users/hieudoan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.20/src/var.rs /Users/hieudoan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.20/src/private.rs /Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/app/native/browser/rust/target/debug/build/thiserror-5087a0422900f0de/out/private.rs
+
+/Users/hieudoan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.20/src/lib.rs:
+/Users/hieudoan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.20/src/aserror.rs:
+/Users/hieudoan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.20/src/display.rs:
+/Users/hieudoan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.20/src/var.rs:
+/Users/hieudoan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.20/src/private.rs:
+/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/app/native/browser/rust/target/debug/build/thiserror-5087a0422900f0de/out/private.rs:
+
+# env-dep:OUT_DIR=/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/app/native/browser/rust/target/debug/build/thiserror-5087a0422900f0de/out

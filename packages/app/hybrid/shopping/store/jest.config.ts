@@ -22,6 +22,7 @@ const config = {
   )[],
   collectCoverageFrom: [
     'src/components/**/*.{ts,tsx}',
+    'src/hooks/**/*.{ts,tsx}',
     'src/lib/**/*.{ts,tsx}',
     'src/app/page.tsx',
     '!src/**/*.d.ts',

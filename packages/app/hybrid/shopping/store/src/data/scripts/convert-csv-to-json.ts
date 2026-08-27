@@ -23,6 +23,7 @@ const COLUMNS = [
   'dmgUrl',
   'appImageUrl',
   'debUrl',
+  'rpmUrl',
   'msiUrl',
   'exeUrl',
 ] as const;
@@ -114,6 +115,7 @@ const toActions = (row: CsvRow): DownloadAction[] => {
     ['.dmg', row.dmgUrl],
     ['.AppImage', row.appImageUrl],
     ['.deb', row.debUrl],
+    ['.x86_64.rpm', row.rpmUrl],
     ['.msi', row.msiUrl],
     ['.exe', row.exeUrl],
   ];

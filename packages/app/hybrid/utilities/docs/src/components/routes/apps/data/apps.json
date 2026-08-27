@@ -62,12 +62,6 @@
         "description": "Calculator",
         "icon": "PiCurrencyDollar",
         "toolId": "split-bill"
-      },
-      {
-        "label": "Tax",
-        "description": "Vietnam PIT",
-        "icon": "PiFlag",
-        "toolId": "tax"
       }
     ]
   },
@@ -86,18 +80,6 @@
         "description": "Timestamp",
         "icon": "PiClock",
         "toolId": "epoch-convert"
-      },
-      {
-        "label": "Pomodoro",
-        "description": "Timer",
-        "icon": "PiTimer",
-        "toolId": "pomodoro"
-      },
-      {
-        "label": "Watchface",
-        "description": "Garmin",
-        "icon": "PiWatch",
-        "toolId": "watchface"
       }
     ]
   },

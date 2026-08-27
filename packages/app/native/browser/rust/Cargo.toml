@@ -1,0 +1,23 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/html",
+    "crates/dom",
+    "crates/css",
+    "crates/style",
+    "crates/layout",
+    "crates/paint",
+    "crates/renderer",
+    "crates/browser",
+    "crates/cli",
+    "crates/network",
+]
+
+[workspace.dependencies]
+html5ever = "0.39"
+cssparser = "0.37"
+markup5ever = "0.39"
+clap = { version = "4", features = ["derive"] }
+thiserror = "2"
+image = "0.25"
+url = "2"

@@ -34,6 +34,10 @@
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-8-bit-latest/8-bit_amd64.deb"
           },
           {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-8-bit-latest/8-bit_x86_64.rpm"
+          },
+          {
             "label": ".msi",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-8-bit-latest/8-bit_x64.msi"
           },
@@ -72,6 +76,10 @@
           {
             "label": ".deb",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-api-latest/api_amd64.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-api-latest/api_x86_64.rpm"
           },
           {
             "label": ".msi",
@@ -114,6 +122,10 @@
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-boilerplate-latest/boilerplate_amd64.deb"
           },
           {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-boilerplate-latest/boilerplate_x86_64.rpm"
+          },
+          {
             "label": ".msi",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-boilerplate-latest/boilerplate_x64.msi"
           },
@@ -152,6 +164,10 @@
           {
             "label": ".deb",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-brainbow-latest/brainbow_amd64.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-brainbow-latest/brainbow_x86_64.rpm"
           },
           {
             "label": ".msi",
@@ -194,6 +210,10 @@
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-calendar-latest/calendar_amd64.deb"
           },
           {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-calendar-latest/calendar_x86_64.rpm"
+          },
+          {
             "label": ".msi",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-calendar-latest/calendar_x64.msi"
           },
@@ -232,6 +252,10 @@
           {
             "label": ".deb",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-casino-latest/casino_amd64.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-casino-latest/casino_x86_64.rpm"
           },
           {
             "label": ".msi",
@@ -274,6 +298,10 @@
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-social-networking-chat-latest/chat_amd64.deb"
           },
           {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-social-networking-chat-latest/chat_x86_64.rpm"
+          },
+          {
             "label": ".msi",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-social-networking-chat-latest/chat_x64.msi"
           },
@@ -312,6 +340,10 @@
           {
             "label": ".deb",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-chemistry-latest/chemistry_amd64.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-chemistry-latest/chemistry_x86_64.rpm"
           },
           {
             "label": ".msi",
@@ -354,6 +386,10 @@
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-chess-latest/chess_amd64.deb"
           },
           {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-chess-latest/chess_x86_64.rpm"
+          },
+          {
             "label": ".msi",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-chess-latest/chess_x64.msi"
           },
@@ -392,6 +428,10 @@
           {
             "label": ".deb",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-clock-latest/clock_amd64.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-clock-latest/clock_x86_64.rpm"
           },
           {
             "label": ".msi",
@@ -434,6 +474,10 @@
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-code-latest/code_amd64.deb"
           },
           {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-code-latest/code_x86_64.rpm"
+          },
+          {
             "label": ".msi",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-code-latest/code_x64.msi"
           },
@@ -472,6 +516,10 @@
           {
             "label": ".deb",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-countries-latest/countries_amd64.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-countries-latest/countries_x86_64.rpm"
           },
           {
             "label": ".msi",
@@ -514,6 +562,10 @@
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-csv-latest/csv_amd64.deb"
           },
           {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-csv-latest/csv_x86_64.rpm"
+          },
+          {
             "label": ".msi",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-csv-latest/csv_x64.msi"
           },
@@ -552,6 +604,10 @@
           {
             "label": ".deb",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-database-latest/database_amd64.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-database-latest/database_x86_64.rpm"
           },
           {
             "label": ".msi",
@@ -594,6 +650,10 @@
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-diagram-latest/diagram_amd64.deb"
           },
           {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-diagram-latest/diagram_x86_64.rpm"
+          },
+          {
             "label": ".msi",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-diagram-latest/diagram_x64.msi"
           },
@@ -632,6 +692,10 @@
           {
             "label": ".deb",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-docs-latest/hieudoanm_next_amd64.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-docs-latest/hieudoanm_next_x86_64.rpm"
           },
           {
             "label": ".msi",
@@ -674,6 +738,10 @@
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-economics-latest/economics_amd64.deb"
           },
           {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-economics-latest/economics_x86_64.rpm"
+          },
+          {
             "label": ".msi",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-economics-latest/economics_x64.msi"
           },
@@ -712,6 +780,10 @@
           {
             "label": ".deb",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-eyes-latest/eyes_amd64.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-eyes-latest/eyes_x86_64.rpm"
           },
           {
             "label": ".msi",
@@ -754,6 +826,10 @@
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-football-latest/football_amd64.deb"
           },
           {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-football-latest/football_x86_64.rpm"
+          },
+          {
             "label": ".msi",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-football-latest/football_x64.msi"
           },
@@ -792,6 +868,10 @@
           {
             "label": ".deb",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-food-drink-foody-latest/foody_amd64.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-food-drink-foody-latest/foody_x86_64.rpm"
           },
           {
             "label": ".msi",
@@ -834,6 +914,10 @@
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-history-latest/history_amd64.deb"
           },
           {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-history-latest/history_x86_64.rpm"
+          },
+          {
             "label": ".msi",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-history-latest/history_x64.msi"
           },
@@ -872,6 +956,10 @@
           {
             "label": ".deb",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-keynotes-latest/keynotes_amd64.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-keynotes-latest/keynotes_x86_64.rpm"
           },
           {
             "label": ".msi",
@@ -914,6 +1002,10 @@
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-lingo-latest/lingo_amd64.deb"
           },
           {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-lingo-latest/lingo_x86_64.rpm"
+          },
+          {
             "label": ".msi",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-lingo-latest/lingo_x64.msi"
           },
@@ -952,6 +1044,10 @@
           {
             "label": ".deb",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-markdown-latest/markdown_amd64.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-markdown-latest/markdown_x86_64.rpm"
           },
           {
             "label": ".msi",
@@ -994,6 +1090,10 @@
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-memory-latest/memory_amd64.deb"
           },
           {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-memory-latest/memory_x86_64.rpm"
+          },
+          {
             "label": ".msi",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-memory-latest/memory_x64.msi"
           },
@@ -1032,6 +1132,10 @@
           {
             "label": ".deb",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-social-networking-messaging-latest/messaging_amd64.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-social-networking-messaging-latest/messaging_x86_64.rpm"
           },
           {
             "label": ".msi",
@@ -1074,6 +1178,10 @@
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-mri-latest/mri_amd64.deb"
           },
           {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-mri-latest/mri_x86_64.rpm"
+          },
+          {
             "label": ".msi",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-mri-latest/mri_x64.msi"
           },
@@ -1112,6 +1220,10 @@
           {
             "label": ".deb",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-music-latest/music_amd64.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-music-latest/music_x86_64.rpm"
           },
           {
             "label": ".msi",
@@ -1154,6 +1266,10 @@
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-entertainment-nikoli-latest/nikoli_amd64.deb"
           },
           {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-entertainment-nikoli-latest/nikoli_x86_64.rpm"
+          },
+          {
             "label": ".msi",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-entertainment-nikoli-latest/nikoli_x64.msi"
           },
@@ -1192,6 +1308,10 @@
           {
             "label": ".deb",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-password-latest/password_amd64.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-password-latest/password_x86_64.rpm"
           },
           {
             "label": ".msi",
@@ -1234,6 +1354,10 @@
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-pdf-latest/pdf_amd64.deb"
           },
           {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-pdf-latest/pdf_x86_64.rpm"
+          },
+          {
             "label": ".msi",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-pdf-latest/pdf_x64.msi"
           },
@@ -1272,6 +1396,10 @@
           {
             "label": ".deb",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-photo-latest/photo_amd64.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-photo-latest/photo_x86_64.rpm"
           },
           {
             "label": ".msi",
@@ -1314,6 +1442,10 @@
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-business-pos-latest/pos_amd64.deb"
           },
           {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-business-pos-latest/pos_x86_64.rpm"
+          },
+          {
             "label": ".msi",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-business-pos-latest/pos_x64.msi"
           },
@@ -1352,6 +1484,10 @@
           {
             "label": ".deb",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-projects-latest/projects_amd64.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-projects-latest/projects_x86_64.rpm"
           },
           {
             "label": ".msi",
@@ -1394,6 +1530,10 @@
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-psychology-latest/psychology_amd64.deb"
           },
           {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-psychology-latest/psychology_x86_64.rpm"
+          },
+          {
             "label": ".msi",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-psychology-latest/psychology_x64.msi"
           },
@@ -1432,6 +1572,10 @@
           {
             "label": ".deb",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-resume-latest/resume_amd64.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-resume-latest/resume_x86_64.rpm"
           },
           {
             "label": ".msi",
@@ -1474,6 +1618,10 @@
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-shopping-store-latest/store_amd64.deb"
           },
           {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-shopping-store-latest/store_x86_64.rpm"
+          },
+          {
             "label": ".msi",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-shopping-store-latest/store_x64.msi"
           },
@@ -1514,12 +1662,60 @@
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-svg-latest/svg_amd64.deb"
           },
           {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-svg-latest/svg_x86_64.rpm"
+          },
+          {
             "label": ".msi",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-svg-latest/svg_x64.msi"
           },
           {
             "label": ".exe",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-svg-latest/svg_x64.exe"
+          }
+        ]
+      },
+      {
+        "label": "Tax",
+        "primaryCategory": "Finance",
+        "secondaryCategory": "Business",
+        "icon": "PiReceipt",
+        "href": "https://hieudoanm.github.io/free/tax",
+        "version": "0.0.1",
+        "lastUpdated": "2026-08-27",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-finance-tax-latest/app-universal-release.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-finance-tax-latest/app-universal-release.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-finance-tax-latest/tax_aarch64.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-finance-tax-latest/tax_amd64.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-finance-tax-latest/tax_amd64.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-finance-tax-latest/tax_x86_64.rpm"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-finance-tax-latest/tax_x64.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-finance-tax-latest/tax_x64.exe"
           }
         ]
       },
@@ -1552,6 +1748,10 @@
           {
             "label": ".deb",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-tic-tac-toe-latest/tic-tac-toe_amd64.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-tic-tac-toe-latest/tic-tac-toe_x86_64.rpm"
           },
           {
             "label": ".msi",
@@ -1594,6 +1794,10 @@
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-tourney-latest/tourney_amd64.deb"
           },
           {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-tourney-latest/tourney_x86_64.rpm"
+          },
+          {
             "label": ".msi",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-sports-tourney-latest/tourney_x64.msi"
           },
@@ -1634,6 +1838,10 @@
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-video-latest/video_amd64.deb"
           },
           {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-video-latest/video_x86_64.rpm"
+          },
+          {
             "label": ".msi",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-video-latest/video_x64.msi"
           },
@@ -1672,6 +1880,10 @@
           {
             "label": ".deb",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-finance-wallet-latest/wallet_amd64.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-finance-wallet-latest/wallet_x86_64.rpm"
           },
           {
             "label": ".msi",

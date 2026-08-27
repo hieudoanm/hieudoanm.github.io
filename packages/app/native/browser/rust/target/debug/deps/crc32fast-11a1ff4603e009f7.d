@@ -1,0 +1,10 @@
+/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/app/native/browser/rust/target/debug/deps/crc32fast-11a1ff4603e009f7.d: /Users/hieudoan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc32fast-1.5.1/src/lib.rs /Users/hieudoan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc32fast-1.5.1/src/baseline.rs /Users/hieudoan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc32fast-1.5.1/src/combine.rs /Users/hieudoan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc32fast-1.5.1/src/specialized/mod.rs /Users/hieudoan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc32fast-1.5.1/src/table.rs /Users/hieudoan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc32fast-1.5.1/src/specialized/aarch64.rs
+
+/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/app/native/browser/rust/target/debug/deps/libcrc32fast-11a1ff4603e009f7.rmeta: /Users/hieudoan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc32fast-1.5.1/src/lib.rs /Users/hieudoan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc32fast-1.5.1/src/baseline.rs /Users/hieudoan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc32fast-1.5.1/src/combine.rs /Users/hieudoan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc32fast-1.5.1/src/specialized/mod.rs /Users/hieudoan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc32fast-1.5.1/src/table.rs /Users/hieudoan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc32fast-1.5.1/src/specialized/aarch64.rs
+
+/Users/hieudoan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc32fast-1.5.1/src/lib.rs:
+/Users/hieudoan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc32fast-1.5.1/src/baseline.rs:
+/Users/hieudoan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc32fast-1.5.1/src/combine.rs:
+/Users/hieudoan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc32fast-1.5.1/src/specialized/mod.rs:
+/Users/hieudoan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc32fast-1.5.1/src/table.rs:
+/Users/hieudoan/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc32fast-1.5.1/src/specialized/aarch64.rs:

@@ -47,6 +47,7 @@ import {
   PiTrophy,
   PiVideoCamera,
   PiWallet,
+  PiReceipt,
   PiWaveSine,
   PiX,
 } from 'react-icons/pi';
@@ -100,6 +101,7 @@ export const ICON_MAP: Record<string, IconType> = {
   PiMemory,
   PiCalendarBlank,
   PiShoppingBag,
+  PiReceipt,
 };
 
 export const getIcon = (name: string): IconType => ICON_MAP[name] ?? PiPackage;
