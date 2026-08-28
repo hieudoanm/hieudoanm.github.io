@@ -37,6 +37,12 @@ public final class MemoryMonitor {
         let compressedBytes = UInt64(stats.compressor_page_count) * pageSize
         let usedBytes = activeBytes + wiredBytes + compressedBytes
 
-        return .success(MemoryStats(usedBytes: usedBytes, totalBytes: totalBytes))
+        return .success(MemoryStats(
+            usedBytes: usedBytes,
+            totalBytes: totalBytes,
+            activeBytes: activeBytes,
+            wiredBytes: wiredBytes,
+            compressedBytes: compressedBytes
+        ))
     }
 }

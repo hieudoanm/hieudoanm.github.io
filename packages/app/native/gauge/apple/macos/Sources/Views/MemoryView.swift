@@ -10,7 +10,12 @@ struct MemoryView: View {
                 title: "Memory",
                 usedBytes: stats.usedBytes,
                 totalBytes: stats.totalBytes,
-                percentage: stats.usagePercentage
+                percentage: stats.usagePercentage,
+                detailText: ByteFormatter.memoryBreakdown(
+                    active: stats.activeBytes,
+                    wired: stats.wiredBytes,
+                    compressed: stats.compressedBytes
+                )
             )
         } else {
             UnavailableView(title: "Memory")

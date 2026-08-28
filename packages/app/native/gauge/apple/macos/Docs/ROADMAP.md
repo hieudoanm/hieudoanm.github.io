@@ -31,7 +31,7 @@
 
 > Both metrics in the menu bar and popover.
 
-- [x] `🧠 39%   💾 83%` menu-bar indicator
+- [x] `CPU 39%   Disk 83%` menu-bar indicator
 - [x] Memory + Storage sections in popover
 - [x] Used / total values
 - [x] Memory pressure status row
@@ -51,8 +51,9 @@
 > Only after the core product is stable.
 
 - [ ] Memory pressure detail
-- [ ] Swap usage
-- [ ] Additional metrics (CPU, battery, network, temperature)
+- [x] Swap usage
+- [x] CPU usage
+- [ ] Additional metrics (battery, network, temperature)
 - [ ] Launch at login via `SMAppService`
 - [ ] Configurable refresh interval (presets shipped in v1)
 - [ ] Configurable menu-bar display

@@ -4,13 +4,14 @@
 
 ## Menu Bar
 
-- Compact indicator: `🧠 39%   💾 83%`
-- Monospaced digits keep the item width stable
+- Compact indicator: `CPU 39%   Disk 83%`
+- SF Symbols instead of emoji, monospaced digits keep the item width stable
 - Click opens a native popover with details
 
 ## Memory
 
 - Used / total (`12.4 / 32 GB`)
+- Breakdown: active / wired / compressed
 - Percentage (`39% used`)
 - Progress bar tinted by usage threshold
 - Defined metric: active + wired + compressed
@@ -18,15 +19,33 @@
 ## Storage
 
 - Used / total (`412 / 494 GB`)
+- Free and purgeable amounts
 - Percentage (`83% used`)
 - Progress bar tinted by usage threshold
 - Boot volume (`/`) in v1
 
+## CPU
+
+- Aggregate load percentage
+- Progress bar tinted by usage threshold
+- Delta of per-CPU tick counters between reads
+
+## Swap
+
+- Used / total swap
+- Progress bar tinted by usage threshold
+- Shown only when swap is configured
+
 ## Popover
 
-- Memory section
-- Storage section
-- Memory pressure status
+- Two views, switchable from the header chevron:
+  - Small view: compact percentage and used / total numbers (RAM, storage, CPU, swap)
+  - Details view: full sections with progress bars
+- Memory section (details) with active / wired / compressed breakdown
+- Storage section (details) with free / purgeable amounts
+- CPU section (details)
+- Swap section (details)
+- Memory pressure status (details)
 
 ## Settings
 

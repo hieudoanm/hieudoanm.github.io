@@ -32,19 +32,28 @@ Sources/
 │   ├── Models/
 │   │   ├── MemoryStats.swift
 │   │   ├── DiskStats.swift
+│   │   ├── SwapStats.swift
+│   │   ├── CPUStats.swift
 │   │   └── UsageThreshold.swift
 │   ├── ByteFormatter.swift
 │   └── SettingsStore.swift
 ├── Services/
 │   ├── MemoryMonitor.swift
 │   ├── DiskMonitor.swift
+│   ├── SwapMonitor.swift
+│   ├── CPUMonitor.swift
 │   └── MonitorError.swift
 └── Views/
     ├── MenuBarView.swift
+    ├── SmallView.swift
+    ├── DetailsView.swift
     ├── ResourceMeter.swift
     ├── MemoryView.swift
     ├── DiskView.swift
+    ├── CPUView.swift
+    ├── SwapView.swift
     ├── UnavailableView.swift
+    ├── UsageThresholdColor.swift
     └── SettingsView.swift
 ```
 
@@ -53,11 +62,13 @@ Sources/
 ```text
 ┌──────────────────────────────────┐
 │           Menu Bar               │
-│      🧠 39%   💾 83%             │
+│     CPU 39%   Disk 83%           │
 ├──────────────────────────────────┤
 │            Views                 │
-│  MenuBarView | ResourceMeter     │
+│  MenuBarView | SmallView         │
+│  DetailsView | ResourceMeter     │
 │  MemoryView | DiskView           │
+│  CPUView | SwapView              │
 │  SettingsView                    │
 ├──────────────────────────────────┤
 │          ViewModel               │
@@ -65,9 +76,11 @@ Sources/
 ├──────────────────────────────────┤
 │           Services               │
 │  MemoryMonitor | DiskMonitor     │
+│  SwapMonitor | CPUMonitor        │
 ├──────────────────────────────────┤
 │             Core                 │
 │  MemoryStats | DiskStats         │
+│  SwapStats | CPUStats            │
 │  ByteFormatter | Threshold       │
 │  SettingsStore                   │
 └──────────────────────────────────┘
@@ -92,15 +105,44 @@ active + wired + compressed  (pages × page size)
         MemoryStats
 ```
 
+The active / wired / compressed components are kept on the model and rendered
+as a breakdown line in the details view.
+
+### Swap
+
+**Definition:** bytes currently swapped out vs. total swap configured, from the
+Mach `vm.swapusage` sysctl.
+
+```text
+sysctlbyname("vm.swapusage")
+        ↓
+        SwapStats
+```
+
+### CPU
+
+**Definition:** aggregate processor load as the delta of cumulative per-CPU
+tick counters between two reads. The first sample reflects load since launch.
+
+```text
+host_processor_info(PROCESSOR_CPU_LOAD_INFO)
+        ↓
+(ticks_at_now − ticks_at_previous) / total
+        ↓
+        CPUStats
+```
+
 ### Disk
 
 **Definition of "used":** `total capacity − available for important usage`.
 Apple's "important usage" value excludes purgeable files the system can
-reclaim, which matches perceived consumed storage.
+reclaim, which matches perceived consumed storage. Free and purgeable amounts
+are exposed on the model for the details view.
 
 ```text
 URLResourceKey.volumeTotalCapacityKey
 URLResourceKey.volumeAvailableCapacityForImportantUsageKey
+URLResourceKey.volumeAvailableCapacityForOpportunisticUsageKey
         ↓
 total − available
         ↓
@@ -109,7 +151,7 @@ total − available
 
 ### Refresh
 
-A single coordinated 1-second timer drives both monitors. When the popover is
+A single coordinated 1-second timer drives all four monitors. When the popover is
 closed the menu-bar percentages still refresh in place (they are cheap
 host/FS reads); no independent per-metric timers exist.
 
@@ -140,7 +182,7 @@ Semantic system colors only — readable in Light and Dark Mode.
 
 ## Styling
 
-- Native SwiftUI with unicode glyphs for the menu bar (`🧠` / `💾`)
+- Native SwiftUI with SF Symbols for the menu bar
 - `.monospacedDigit()` for stable menu-bar width
 - SF Symbols and system colors throughout
 - `MenuBarExtra` popover as the primary UI surface

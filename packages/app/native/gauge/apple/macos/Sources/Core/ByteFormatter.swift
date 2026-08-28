@@ -27,4 +27,16 @@ public enum ByteFormatter {
     public static func usedOverTotal(usedBytes: UInt64, totalBytes: UInt64) -> String {
         "\(humanReadable(usedBytes)) / \(humanReadable(totalBytes))"
     }
+
+    public static func memoryBreakdown(active: UInt64, wired: UInt64, compressed: UInt64) -> String {
+        joinedDetails([("Active", active), ("Wired", wired), ("Compressed", compressed)])
+    }
+
+    public static func diskAvailability(available: UInt64, purgeable: UInt64) -> String {
+        joinedDetails([("Free", available), ("Purgeable", purgeable)])
+    }
+
+    public static func joinedDetails(_ parts: [(String, UInt64)]) -> String {
+        parts.map { "\($0.0) \(humanReadable($0.1))" }.joined(separator: " · ")
+    }
 }

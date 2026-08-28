@@ -6,6 +6,21 @@ struct ResourceMeter: View {
     let usedBytes: UInt64
     let totalBytes: UInt64
     let percentage: Double
+    let detailText: String?
+
+    init(
+        title: String,
+        usedBytes: UInt64,
+        totalBytes: UInt64,
+        percentage: Double,
+        detailText: String? = nil
+    ) {
+        self.title = title
+        self.usedBytes = usedBytes
+        self.totalBytes = totalBytes
+        self.percentage = percentage
+        self.detailText = detailText
+    }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
@@ -27,6 +42,13 @@ struct ResourceMeter: View {
                 .font(.system(.caption, design: .monospaced))
                 .monospacedDigit()
                 .foregroundColor(.secondary)
+
+            if let detailText {
+                Text(detailText)
+                    .font(.caption)
+                    .lineLimit(1)
+                    .foregroundColor(.secondary)
+            }
         }
     }
 
@@ -39,10 +61,6 @@ struct ResourceMeter: View {
     }
 
     private var thresholdColor: Color {
-        switch ThresholdMonitor.status(for: percentage) {
-        case .normal: return Color.secondary
-        case .elevated: return Color.orange
-        case .high: return Color.red
-        }
+        Color(usageThreshold: ThresholdMonitor.status(for: percentage))
     }
 }

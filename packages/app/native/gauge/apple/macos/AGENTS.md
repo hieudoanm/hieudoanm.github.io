@@ -242,19 +242,19 @@ The menu-bar display must be compact.
 Preferred initial design:
 
 ```text
-🧠 39%   💾 83%
+RAM 39%   Disk 83%
 ```
 
 Alternative configurations can later display:
 
 ```text
-🧠 12.4 GB   💾 412 GB
+RAM 12.4 GB   Disk 412 GB
 ```
 
 or:
 
 ```text
-🧠 12.4/32 GB   💾 412/494 GB
+RAM 12.4/32 GB   Disk 412/494 GB
 ```
 
 Do not make the menu-bar item excessively wide.
@@ -666,7 +666,7 @@ Implement:
 Expected:
 
 ```text
-🧠 39%
+RAM 39%
 
 Memory
 ████████░░░░░░░░
@@ -689,7 +689,7 @@ Implement:
 Expected:
 
 ```text
-💾 83%
+Disk 83%
 
 Storage
 █████████████░░░
@@ -703,7 +703,7 @@ Storage
 Combine both:
 
 ```text
-🧠 39%   💾 83%
+RAM 39%   Disk 83%
 ```
 
 Popover:

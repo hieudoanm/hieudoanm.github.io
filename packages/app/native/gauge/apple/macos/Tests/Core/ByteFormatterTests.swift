@@ -43,6 +43,16 @@ struct ByteFormatterTests {
         #expect(ByteFormatter.usedOverTotal(usedBytes: 12_400_000_000, totalBytes: 32_000_000_000) == "11.5 GB / 29.8 GB")
     }
 
+    @Test("memory breakdown joins labeled values")
+    func memoryBreakdown() {
+        #expect(ByteFormatter.memoryBreakdown(active: 8_200_000_000, wired: 3_100_000_000, compressed: 1_100_000_000) == "Active 7.6 GB · Wired 2.9 GB · Compressed 1.0 GB")
+    }
+
+    @Test("disk availability joins free and purgeable")
+    func diskAvailability() {
+        #expect(ByteFormatter.diskAvailability(available: 82_000_000_000, purgeable: 5_000_000_000) == "Free 76.4 GB · Purgeable 4.7 GB")
+    }
+
     @Test("rounds large values without excessive precision")
     func noExcessivePrecision() {
         #expect(ByteFormatter.humanReadable(113_000_000_000) == "105 GB")

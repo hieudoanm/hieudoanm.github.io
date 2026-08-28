@@ -43,10 +43,31 @@ struct DiskStatsTests {
         #expect(stats.usagePercentage == 100)
     }
 
+    @Test("init stores availability")
+    func initAvailability() {
+        let stats = DiskStats(
+            usedBytes: 400_000_000_000,
+            totalBytes: 500_000_000_000,
+            availableBytes: 80_000_000_000,
+            purgeableBytes: 5_000_000_000
+        )
+        #expect(stats.availableBytes == 80_000_000_000)
+        #expect(stats.purgeableBytes == 5_000_000_000)
+    }
+
+    @Test("availability defaults to zero")
+    func availabilityDefaults() {
+        let stats = DiskStats(usedBytes: 1, totalBytes: 2)
+        #expect(stats.availableBytes == 0)
+        #expect(stats.purgeableBytes == 0)
+    }
+
     @Test("equality")
     func equality() {
         let a = DiskStats(usedBytes: 1, totalBytes: 2)
         let b = DiskStats(usedBytes: 1, totalBytes: 2)
+        let c = DiskStats(usedBytes: 1, totalBytes: 2, availableBytes: 1)
         #expect(a == b)
+        #expect(a != c)
     }
 }

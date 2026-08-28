@@ -4,10 +4,14 @@ import SwiftUI
 final class GaugeViewModel: ObservableObject {
     @Published private(set) var memoryStats: MemoryStats?
     @Published private(set) var diskStats: DiskStats?
+    @Published private(set) var swapStats: SwapStats?
+    @Published private(set) var cpuStats: CPUStats?
     @Published var refreshInterval: TimeInterval
 
     private let memoryMonitor = MemoryMonitor()
     private let diskMonitor = DiskMonitor()
+    private let swapMonitor = SwapMonitor()
+    private let cpuMonitor = CPUMonitor()
     private let settingsStore = SettingsStore()
     private var refreshTimer: Timer?
 
@@ -27,6 +31,28 @@ final class GaugeViewModel: ObservableObject {
         return "\(stats.usagePercentage.intRounded)%"
     }
 
+    var cpuPercentText: String {
+        guard let stats = cpuStats else { return "--" }
+        return "\(stats.usage.intRounded)%"
+    }
+
+    var swapPercentText: String {
+        guard let stats = swapStats else { return "--" }
+        return "\(stats.usagePercentage.intRounded)%"
+    }
+
+    var memoryValueText: String? {
+        memoryStats.map { ByteFormatter.usedOverTotal(usedBytes: $0.usedBytes, totalBytes: $0.totalBytes) }
+    }
+
+    var diskValueText: String? {
+        diskStats.map { ByteFormatter.usedOverTotal(usedBytes: $0.usedBytes, totalBytes: $0.totalBytes) }
+    }
+
+    var swapValueText: String? {
+        swapStats.map { ByteFormatter.usedOverTotal(usedBytes: $0.usedBytes, totalBytes: $0.totalBytes) }
+    }
+
     var memoryPressure: MemoryPressureStatus {
         memoryStats.map(ThresholdMonitor.status) ?? .unknown
     }
@@ -37,6 +63,12 @@ final class GaugeViewModel: ObservableObject {
         }
         if case let .success(stats) = diskMonitor.read() {
             diskStats = stats
+        }
+        if case let .success(stats) = swapMonitor.read() {
+            swapStats = stats
+        }
+        if case let .success(stats) = cpuMonitor.read() {
+            cpuStats = stats
         }
     }
 

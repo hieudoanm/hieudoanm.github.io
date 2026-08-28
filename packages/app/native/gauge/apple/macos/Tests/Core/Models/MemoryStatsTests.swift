@@ -43,12 +43,37 @@ struct MemoryStatsTests {
         #expect(stats.usagePercentage == 100)
     }
 
+    @Test("init stores breakdown")
+    func initBreakdown() {
+        let stats = MemoryStats(
+            usedBytes: 12_000_000_000,
+            totalBytes: 16_000_000_000,
+            activeBytes: 8_000_000_000,
+            wiredBytes: 3_000_000_000,
+            compressedBytes: 1_000_000_000
+        )
+        #expect(stats.activeBytes == 8_000_000_000)
+        #expect(stats.wiredBytes == 3_000_000_000)
+        #expect(stats.compressedBytes == 1_000_000_000)
+    }
+
+    @Test("breakdown defaults to zero")
+    func breakdownDefaults() {
+        let stats = MemoryStats(usedBytes: 1, totalBytes: 2)
+        #expect(stats.activeBytes == 0)
+        #expect(stats.wiredBytes == 0)
+        #expect(stats.compressedBytes == 0)
+    }
+
     @Test("equality")
     func equality() {
         let a = MemoryStats(usedBytes: 1, totalBytes: 2)
         let b = MemoryStats(usedBytes: 1, totalBytes: 2)
         let c = MemoryStats(usedBytes: 2, totalBytes: 2)
+        let d = MemoryStats(usedBytes: 1, totalBytes: 2, activeBytes: 1)
         #expect(a == b)
         #expect(a != c)
+        #expect(a != d)
+        #expect(d != b)
     }
 }
