@@ -26,11 +26,19 @@ public final class CPUMonitor {
         let nice = current.nice - previous.nice
         let total = user + system + idle + nice
 
+        var load: [Double] = [0, 0, 0]
+        getloadavg(&load, 3)
+
         guard total > 0 else {
-            return .success(CPUStats(usage: 0))
+            return .success(CPUStats(usage: 0, loadAverage1: load[0], loadAverage5: load[1], loadAverage15: load[2]))
         }
 
-        return .success(CPUStats(usage: Double(user + system + nice) / Double(total) * 100))
+        return .success(CPUStats(
+            usage: Double(user + system + nice) / Double(total) * 100,
+            loadAverage1: load[0],
+            loadAverage5: load[1],
+            loadAverage15: load[2]
+        ))
     }
 
     private struct ProcessorTicks {

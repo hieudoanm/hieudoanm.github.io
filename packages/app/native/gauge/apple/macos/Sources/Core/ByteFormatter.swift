@@ -32,6 +32,10 @@ public enum ByteFormatter {
         joinedDetails([("Active", active), ("Wired", wired), ("Compressed", compressed)])
     }
 
+    public static func memoryAvailability(inactive: UInt64, cached: UInt64, free: UInt64) -> String {
+        joinedDetails([("Cached", cached), ("Inactive", inactive), ("Free", free)])
+    }
+
     public static func diskAvailability(available: UInt64, purgeable: UInt64) -> String {
         joinedDetails([("Free", available), ("Purgeable", purgeable)])
     }

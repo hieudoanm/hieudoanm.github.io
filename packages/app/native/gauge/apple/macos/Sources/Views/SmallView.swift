@@ -15,7 +15,7 @@ struct SmallView: View {
                 icon: "cpu",
                 title: "CPU",
                 percent: viewModel.cpuPercentText,
-                valueText: nil,
+                valueText: viewModel.cpuValueText,
                 isAvailable: viewModel.cpuStats != nil,
                 threshold: cpuThreshold
             )

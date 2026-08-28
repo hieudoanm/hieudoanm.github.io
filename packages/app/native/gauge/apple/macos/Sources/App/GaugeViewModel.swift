@@ -6,12 +6,14 @@ final class GaugeViewModel: ObservableObject {
     @Published private(set) var diskStats: DiskStats?
     @Published private(set) var swapStats: SwapStats?
     @Published private(set) var cpuStats: CPUStats?
+    @Published private(set) var systemInfo: SystemInfo?
     @Published var refreshInterval: TimeInterval
 
     private let memoryMonitor = MemoryMonitor()
     private let diskMonitor = DiskMonitor()
     private let swapMonitor = SwapMonitor()
     private let cpuMonitor = CPUMonitor()
+    private let systemMonitor = SystemInfoMonitor()
     private let settingsStore = SettingsStore()
     private var refreshTimer: Timer?
 
@@ -53,6 +55,10 @@ final class GaugeViewModel: ObservableObject {
         swapStats.map { ByteFormatter.usedOverTotal(usedBytes: $0.usedBytes, totalBytes: $0.totalBytes) }
     }
 
+    var cpuValueText: String? {
+        cpuStats.map { $0.loadAverageText }
+    }
+
     var memoryPressure: MemoryPressureStatus {
         memoryStats.map(ThresholdMonitor.status) ?? .unknown
     }
@@ -69,6 +75,9 @@ final class GaugeViewModel: ObservableObject {
         }
         if case let .success(stats) = cpuMonitor.read() {
             cpuStats = stats
+        }
+        if case let .success(info) = systemMonitor.read() {
+            systemInfo = info
         }
     }
 

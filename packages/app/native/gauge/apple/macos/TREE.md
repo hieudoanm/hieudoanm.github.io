@@ -28,6 +28,7 @@ Gauge/
 │   │   │   ├── DiskStats.swift
 │   │   │   ├── MemoryStats.swift
 │   │   │   ├── SwapStats.swift
+│   │   │   ├── SystemInfo.swift
 │   │   │   └── UsageThreshold.swift
 │   │   ├── ByteFormatter.swift
 │   │   └── SettingsStore.swift
@@ -36,7 +37,8 @@ Gauge/
 │   │   ├── DiskMonitor.swift
 │   │   ├── MemoryMonitor.swift
 │   │   ├── MonitorError.swift
-│   │   └── SwapMonitor.swift
+│   │   ├── SwapMonitor.swift
+│   │   └── SystemInfoMonitor.swift
 │   └── Views/
 │       ├── CPUView.swift
 │       ├── DetailsView.swift
@@ -47,6 +49,7 @@ Gauge/
 │       ├── SettingsView.swift
 │       ├── SmallView.swift
 │       ├── SwapView.swift
+│       ├── SystemInfoView.swift
 │       ├── UnavailableView.swift
 │       └── UsageThresholdColor.swift
 └── Tests/
@@ -56,6 +59,7 @@ Gauge/
         │   ├── DiskStatsTests.swift
         │   ├── MemoryStatsTests.swift
         │   ├── SwapStatsTests.swift
+        │   ├── SystemInfoTests.swift
         │   └── UsageThresholdTests.swift
         ├── ByteFormatterTests.swift
         └── SettingsStoreTests.swift

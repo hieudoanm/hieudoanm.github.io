@@ -21,6 +21,8 @@ struct DetailsView: View {
 
             SwapView(stats: viewModel.swapStats)
 
+            SystemInfoView(info: viewModel.systemInfo)
+
             Divider()
 
             footer

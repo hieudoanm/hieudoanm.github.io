@@ -53,6 +53,9 @@
 - [ ] Memory pressure detail
 - [x] Swap usage
 - [x] CPU usage
+- [x] CPU load average (1/5/15 min)
+- [x] Full RAM breakdown (active / wired / compressed / cached / inactive / free)
+- [x] System info (chip / cores / uptime)
 - [ ] Additional metrics (battery, network, temperature)
 - [ ] Launch at login via `SMAppService`
 - [ ] Configurable refresh interval (presets shipped in v1)

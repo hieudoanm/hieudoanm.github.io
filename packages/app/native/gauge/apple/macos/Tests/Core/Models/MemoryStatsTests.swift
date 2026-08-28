@@ -57,12 +57,29 @@ struct MemoryStatsTests {
         #expect(stats.compressedBytes == 1_000_000_000)
     }
 
+    @Test("init stores availability breakdown")
+    func initAvailability() {
+        let stats = MemoryStats(
+            usedBytes: 1,
+            totalBytes: 2,
+            inactiveBytes: 3,
+            cachedBytes: 4,
+            freeBytes: 5
+        )
+        #expect(stats.inactiveBytes == 3)
+        #expect(stats.cachedBytes == 4)
+        #expect(stats.freeBytes == 5)
+    }
+
     @Test("breakdown defaults to zero")
     func breakdownDefaults() {
         let stats = MemoryStats(usedBytes: 1, totalBytes: 2)
         #expect(stats.activeBytes == 0)
         #expect(stats.wiredBytes == 0)
         #expect(stats.compressedBytes == 0)
+        #expect(stats.inactiveBytes == 0)
+        #expect(stats.cachedBytes == 0)
+        #expect(stats.freeBytes == 0)
     }
 
     @Test("equality")

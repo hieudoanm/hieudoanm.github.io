@@ -12,6 +12,7 @@
 
 - Used / total (`12.4 / 32 GB`)
 - Breakdown: active / wired / compressed
+- Availability: cached / inactive / free
 - Percentage (`39% used`)
 - Progress bar tinted by usage threshold
 - Defined metric: active + wired + compressed
@@ -27,8 +28,16 @@
 ## CPU
 
 - Aggregate load percentage
+- Load average (`Load 2.1 · 1.8 · 1.5`)
 - Progress bar tinted by usage threshold
-- Delta of per-CPU tick counters between reads
+- Delta of per-CPU tick counters between reads, load average from `getloadavg`
+
+## System
+
+- Hardware chip (e.g. `Mac14,7`)
+- Core count
+- Uptime
+- Single footer line: `Mac14,7 · 8 cores · Up 2d 1h`
 
 ## Swap
 
@@ -39,12 +48,13 @@
 ## Popover
 
 - Two views, switchable from the header chevron:
-  - Small view: compact percentage and used / total numbers (RAM, storage, CPU, swap)
+  - Small view: compact percentage and used / total numbers (CPU with load average, RAM, storage, swap)
   - Details view: full sections with progress bars
-- Memory section (details) with active / wired / compressed breakdown
+- Memory section (details) with active / wired / compressed and cached / inactive / free breakdowns
 - Storage section (details) with free / purgeable amounts
-- CPU section (details)
+- CPU section (details) with load average
 - Swap section (details)
+- System footer (details) with chip / cores / uptime
 - Memory pressure status (details)
 
 ## Settings

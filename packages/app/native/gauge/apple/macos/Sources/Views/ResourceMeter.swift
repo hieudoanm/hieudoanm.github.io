@@ -6,20 +6,20 @@ struct ResourceMeter: View {
     let usedBytes: UInt64
     let totalBytes: UInt64
     let percentage: Double
-    let detailText: String?
+    let detailTexts: [String]
 
     init(
         title: String,
         usedBytes: UInt64,
         totalBytes: UInt64,
         percentage: Double,
-        detailText: String? = nil
+        detailTexts: [String] = []
     ) {
         self.title = title
         self.usedBytes = usedBytes
         self.totalBytes = totalBytes
         self.percentage = percentage
-        self.detailText = detailText
+        self.detailTexts = detailTexts
     }
 
     var body: some View {
@@ -43,8 +43,8 @@ struct ResourceMeter: View {
                 .monospacedDigit()
                 .foregroundColor(.secondary)
 
-            if let detailText {
-                Text(detailText)
+            ForEach(detailTexts, id: \.self) { text in
+                Text(text)
                     .font(.caption)
                     .lineLimit(1)
                     .foregroundColor(.secondary)

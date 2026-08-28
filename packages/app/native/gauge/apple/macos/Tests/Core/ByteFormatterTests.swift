@@ -48,6 +48,11 @@ struct ByteFormatterTests {
         #expect(ByteFormatter.memoryBreakdown(active: 8_200_000_000, wired: 3_100_000_000, compressed: 1_100_000_000) == "Active 7.6 GB · Wired 2.9 GB · Compressed 1.0 GB")
     }
 
+    @Test("memory availability joins cached inactive and free")
+    func memoryAvailability() {
+        #expect(ByteFormatter.memoryAvailability(inactive: 6_000_000_000, cached: 4_300_000_000, free: 1_100_000_000) == "Cached 4.0 GB · Inactive 5.6 GB · Free 1.0 GB")
+    }
+
     @Test("disk availability joins free and purgeable")
     func diskAvailability() {
         #expect(ByteFormatter.diskAvailability(available: 82_000_000_000, purgeable: 5_000_000_000) == "Free 76.4 GB · Purgeable 4.7 GB")

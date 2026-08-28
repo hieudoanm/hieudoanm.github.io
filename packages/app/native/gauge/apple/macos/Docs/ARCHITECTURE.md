@@ -34,6 +34,7 @@ Sources/
 │   │   ├── DiskStats.swift
 │   │   ├── SwapStats.swift
 │   │   ├── CPUStats.swift
+│   │   ├── SystemInfo.swift
 │   │   └── UsageThreshold.swift
 │   ├── ByteFormatter.swift
 │   └── SettingsStore.swift
@@ -42,6 +43,7 @@ Sources/
 │   ├── DiskMonitor.swift
 │   ├── SwapMonitor.swift
 │   ├── CPUMonitor.swift
+│   ├── SystemInfoMonitor.swift
 │   └── MonitorError.swift
 └── Views/
     ├── MenuBarView.swift
@@ -52,6 +54,7 @@ Sources/
     ├── DiskView.swift
     ├── CPUView.swift
     ├── SwapView.swift
+    ├── SystemInfoView.swift
     ├── UnavailableView.swift
     ├── UsageThresholdColor.swift
     └── SettingsView.swift
@@ -69,7 +72,7 @@ Sources/
 │  DetailsView | ResourceMeter     │
 │  MemoryView | DiskView           │
 │  CPUView | SwapView              │
-│  SettingsView                    │
+│  SystemInfoView | SettingsView   │
 ├──────────────────────────────────┤
 │          ViewModel               │
 │         GaugeViewModel           │
@@ -77,12 +80,13 @@ Sources/
 │           Services               │
 │  MemoryMonitor | DiskMonitor     │
 │  SwapMonitor | CPUMonitor        │
+│  SystemInfoMonitor               │
 ├──────────────────────────────────┤
 │             Core                 │
 │  MemoryStats | DiskStats         │
 │  SwapStats | CPUStats            │
-│  ByteFormatter | Threshold       │
-│  SettingsStore                   │
+│  SystemInfo | ByteFormatter      │
+│  Threshold | SettingsStore       │
 └──────────────────────────────────┘
 ```
 
@@ -106,7 +110,9 @@ active + wired + compressed  (pages × page size)
 ```
 
 The active / wired / compressed components are kept on the model and rendered
-as a breakdown line in the details view.
+as a breakdown line in the details view. The inactive / cached (`external_page_count`)
+/ free components are kept as a second line, giving a fuller picture of how much
+memory the system can reclaim.
 
 ### Swap
 
@@ -121,16 +127,36 @@ sysctlbyname("vm.swapusage")
 
 ### CPU
 
-**Definition:** aggregate processor load as the delta of cumulative per-CPU
-tick counters between two reads. The first sample reflects load since launch.
+**Definition of usage:** aggregate processor load as the delta of cumulative
+per-CPU tick counters between two reads. The first sample reflects load since
+launch.
+
+**Load average:** `getloadavg(3)` provides the 1/5/15-minute running averages of
+runnable threads, rendered as `Load 2.1 · 1.8 · 1.5`.
 
 ```text
-host_processor_info(PROCESSOR_CPU_LOAD_INFO)
-        ↓
-(ticks_at_now − ticks_at_previous) / total
-        ↓
-        CPUStats
+host_processor_info(PROCESSOR_CPU_LOAD_INFO)         getloadavg()
+        ↓                                                ↓
+(ticks_at_now − ticks_at_previous) / total         loadAverage1/5/15
+        ↓                                                ↓
+                        CPUStats
 ```
+
+### System
+
+**Definition:** static hardware identity and boot age, read once per refresh via
+sysctl (cost is negligible).
+
+```text
+hw.model | hw.physicalcpu | hw.logicalcpu | kern.boottime
+        ↓                       ↓               ↓
+      chip                     cores          uptime
+        ↓                       ↓               ↓
+                      SystemInfo
+```
+
+Rendered as a single footer line in the details view:
+`Apple M2 · 8 cores · Up 3d 15h`.
 
 ### Disk
 
@@ -151,7 +177,7 @@ total − available
 
 ### Refresh
 
-A single coordinated 1-second timer drives all four monitors. When the popover is
+A single coordinated 1-second timer drives all five monitors. When the popover is
 closed the menu-bar percentages still refresh in place (they are cheap
 host/FS reads); no independent per-metric timers exist.
 

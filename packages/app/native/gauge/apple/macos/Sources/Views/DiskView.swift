@@ -11,10 +11,12 @@ struct DiskView: View {
                 usedBytes: stats.usedBytes,
                 totalBytes: stats.totalBytes,
                 percentage: stats.usagePercentage,
-                detailText: ByteFormatter.diskAvailability(
-                    available: stats.availableBytes,
-                    purgeable: stats.purgeableBytes
-                )
+                detailTexts: [
+                    ByteFormatter.diskAvailability(
+                        available: stats.availableBytes,
+                        purgeable: stats.purgeableBytes
+                    ),
+                ]
             )
         } else {
             UnavailableView(title: "Storage")

@@ -21,6 +21,11 @@ struct CPUView: View {
 
                 ProgressView(value: min(max(stats.usage / 100, 0), 1))
                     .tint(Color(usageThreshold: threshold))
+
+                Text(stats.loadAverageText)
+                    .font(.caption)
+                    .lineLimit(1)
+                    .foregroundColor(.secondary)
             }
         } else {
             UnavailableView(title: "CPU")

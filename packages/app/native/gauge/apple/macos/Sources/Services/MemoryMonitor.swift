@@ -35,6 +35,9 @@ public final class MemoryMonitor {
         let activeBytes = UInt64(stats.active_count) * pageSize
         let wiredBytes = UInt64(stats.wire_count) * pageSize
         let compressedBytes = UInt64(stats.compressor_page_count) * pageSize
+        let inactiveBytes = UInt64(stats.inactive_count) * pageSize
+        let cachedBytes = UInt64(stats.external_page_count) * pageSize
+        let freeBytes = UInt64(stats.free_count) * pageSize
         let usedBytes = activeBytes + wiredBytes + compressedBytes
 
         return .success(MemoryStats(
@@ -42,7 +45,10 @@ public final class MemoryMonitor {
             totalBytes: totalBytes,
             activeBytes: activeBytes,
             wiredBytes: wiredBytes,
-            compressedBytes: compressedBytes
+            compressedBytes: compressedBytes,
+            inactiveBytes: inactiveBytes,
+            cachedBytes: cachedBytes,
+            freeBytes: freeBytes
         ))
     }
 }
