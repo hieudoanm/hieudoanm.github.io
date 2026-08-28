@@ -226,6 +226,8 @@ fn route(
     match (request.method(), path) {
         (&Method::Get, "/api/v1/health") => json(200, r#"{"status":"ok"}"#.to_string()),
         (&Method::Get, "/api/v1/version") => text(200, VERSION.to_string()),
+        (&Method::Get, "/api/v1/openapi.json") => json(200, openapi_spec()),
+        (&Method::Get, "/docs") => openapi_docs_page(),
         (&Method::Post, "/api/v1/scrape") => {
             let url = read_body(request)
                 .map_err(ScrapeError::InvalidJson)
@@ -401,6 +403,32 @@ fn extract_json_string(body: &str, field: &str) -> Result<String, ScrapeError> {
         }
     }
     Err(ScrapeError::InvalidJson("unterminated string".into()))
+}
+
+fn openapi_spec() -> String {
+    include_str!("../../../docs/openapi.json").replace("0.0.0", VERSION)
+}
+
+fn openapi_docs_page() -> (u16, Response<std::io::Cursor<Vec<u8>>>) {
+    let body = r#"<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Browserverless API Docs</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:300,400,700">
+</head>
+<body>
+  <redoc spec-url="/api/v1/openapi.json"></redoc>
+  <script src="https://cdn.redoc.ly/redoc/latest/bundles/redoc.standalone.js"></script>
+</body>
+</html>"#;
+    let header = Header::from_bytes(&b"Content-Type"[..], &b"text/html; charset=utf-8"[..])
+        .expect("static header");
+    let response = Response::from_string(body)
+        .with_status_code(200)
+        .with_header(header);
+    (200, response)
 }
 
 fn json(status: u16, body: String) -> (u16, Response<std::io::Cursor<Vec<u8>>>) {

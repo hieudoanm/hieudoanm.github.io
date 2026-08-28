@@ -9,7 +9,11 @@
 │   ├── cli/
 │   │   ├── src/
 │   │   │   ├── [headed.rs](./crates/cli/src/headed.rs)
-│   │   │   └── [main.rs](./crates/cli/src/main.rs)
+│   │   │   ├── [lib.rs](./crates/cli/src/lib.rs)
+│   │   │   ├── [main.rs](./crates/cli/src/main.rs)
+│   │   │   └── [serve.rs](./crates/cli/src/serve.rs)
+│   │   ├── tests/
+│   │   │   └── [serve_api.rs](./crates/cli/tests/serve_api.rs)
 │   │   └── [Cargo.toml](./crates/cli/Cargo.toml)
 │   ├── css/
 │   │   ├── src/
@@ -54,7 +58,20 @@
 │       ├── src/
 │       │   └── [lib.rs](./crates/style/src/lib.rs)
 │       └── [Cargo.toml](./crates/style/Cargo.toml)
+├── docker/
+│   └── [Dockerfile](./docker/Dockerfile)
 ├── docs/
+│   ├── [ARCHITECTURE.md](./docs/ARCHITECTURE.md)
+│   ├── [COMPATIBILITY.md](./docs/COMPATIBILITY.md)
+│   ├── [CONTRIBUTING.md](./docs/CONTRIBUTING.md)
+│   ├── [DEVELOPMENT.md](./docs/DEVELOPMENT.md)
+│   ├── [DOWNLOADS.md](./docs/DOWNLOADS.md)
+│   ├── [FEATURES.md](./docs/FEATURES.md)
+│   ├── [HEADLESS.md](./docs/HEADLESS.md)
+│   ├── [PACKAGING.md](./docs/PACKAGING.md)
+│   ├── [ROADMAP.md](./docs/ROADMAP.md)
+│   ├── [SERVER.md](./docs/SERVER.md)
+│   └── [servo-patches.md](./docs/servo-patches.md)
 ├── tasks/
 │   ├── [001-project-scaffolding.md](./tasks/001-project-scaffolding.md)
 │   ├── [002-dom.md](./tasks/002-dom.md)
@@ -76,6 +93,9 @@
 │   ├── [018-gui-implementation.md](./tasks/018-gui-implementation.md)
 │   └── [session-summary-2026-08-27.md](./tasks/session-summary-2026-08-27.md)
 ├── tests/
+│   ├── client/
+│   │   ├── [localhost.http](./tests/client/localhost.http)
+│   │   └── [render.http](./tests/client/render.http)
 │   ├── css/
 │   │   ├── [colors.html](./tests/css/colors.html)
 │   │   ├── [margin.html](./tests/css/margin.html)
@@ -93,10 +113,12 @@
 ├── [AGENTS.md](./AGENTS.md)
 ├── [Cargo.lock](./Cargo.lock)
 ├── [Cargo.toml](./Cargo.toml)
+├── [Dockerfile](./Dockerfile)
 ├── [LICENSE](./LICENSE)
 ├── [Makefile](./Makefile)
 ├── [README.md](./README.md)
-└── [TREE.md](./TREE.md)
+├── [TREE.md](./TREE.md)
+└── [docker-compose.yaml](./docker-compose.yaml)
 ```
 
-32 directories, 64 files
+35 directories, 83 files
