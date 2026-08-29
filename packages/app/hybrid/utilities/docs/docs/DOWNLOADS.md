@@ -1,11 +1,6 @@
-# Hieu Doan (Downloads)
+# Hieu Doan
 
-## Web
-
-Open <https://hieudoanm.github.io/> in any modern browser. The web build is a
-static export and installs as a PWA — offline-capable after the first visit.
-
-## Platforms
+## Installation
 
 | Platform | Distro | Architecture | Requirements | Download Link                              |
 | -------- | ------ | ------------ | ------------ | ------------------------------------------ |
@@ -29,13 +24,7 @@ static export and installs as a PWA — offline-capable after the first visit.
 [download-msi]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-docs-latest/hieudoanm_next_x64.msi
 
-## Notes
-
-1. `.aab` is a Google Play upload artifact — to install directly on a device,
-   use the `.apk`.
-2. macOS builds are Apple Silicon only (`aarch64`).
-
-## Checksums
+### Checksums
 
 SHA-256 digests for every asset are published alongside the release in
 [SHA256SUMS.txt][checksums].
@@ -43,7 +32,18 @@ SHA-256 digests for every asset are published alongside the release in
 [checksums]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-docs-latest/SHA256SUMS.txt
 
-## Source
+## About
 
-- [Source code](https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/app/hybrid/utilities/docs)
-- [Releases](https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-utilities-docs-latest)
+Hieu Doan — personal documentation and apps site.
+
+## Requirements
+
+- Android 14+
+- Linux (Ubuntu) 22.04+
+- Linux (Debian) 13+
+- macOS 13+
+- Windows 10+
+
+## LICENSE
+
+See [LICENSE](LICENSE).

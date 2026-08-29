@@ -1,12 +1,6 @@
-# Projects (Downloads)
+# Projects
 
-## Web
-
-Open <https://hieudoanm.github.io/downloads/projects/> in any modern browser.
-The web build is a static export and installs as a PWA — offline-capable after
-the first visit.
-
-## Platforms
+## Installation
 
 | Platform | Distro | Architecture | Requirements | Download Link                              |
 | -------- | ------ | ------------ | ------------ | ------------------------------------------ |
@@ -30,13 +24,7 @@ the first visit.
 [download-msi]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-projects-latest/projects_x64.msi
 
-## Notes
-
-1. `.aab` is a Google Play upload artifact — to install directly on a device,
-   use the `.apk`.
-2. macOS builds are Apple Silicon only (`aarch64`).
-
-## Checksums
+### Checksums
 
 SHA-256 digests for every asset are published alongside the release in
 [SHA256SUMS.txt][checksums].
@@ -44,7 +32,81 @@ SHA-256 digests for every asset are published alongside the release in
 [checksums]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-projects-latest/SHA256SUMS.txt
 
-## Source
+## About
 
-- [Source code](https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/app/hybrid/productivity/projects)
-- [Releases](https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-productivity-projects-latest)
+Projects — minimal Atlassian Trello / Kanban board.
+
+## Features
+
+## Boards
+
+- Board dashboard with grid of boards
+- Create/edit/delete boards
+- Demo boards seed data
+- Board background colors
+- Star/favorite boards
+
+## Lists & Cards
+
+- Board view with Kanban lists
+- Add/rename/delete lists
+- Add/edit/delete cards within lists
+- Drag-and-drop cards between lists
+- Drag-and-drop to reorder lists
+- Card labels (colored dots)
+- Card count per list badge
+- Collapse/expand lists
+
+## Card Detail
+
+- Card detail modal with description editor
+- Checklists with progress bar
+- Due date picker with indicators
+- Member assignment with avatars
+- Card priority levels
+- Card cover images
+- Card attachments (mock)
+- Card comments with timestamps
+- Mention users in comments (@username)
+- Copy and move card actions
+
+## Filtering & Search
+
+- Filter bar (label, member, due date, priority)
+- Saved filter presets (per board, stored in localStorage)
+- Board search with highlighted results (Q / F shortcuts)
+- Due date drag-to-reschedule in calendar
+
+## Organization & Views
+
+- Label management (10 colors)
+- List view (compact table with sortable columns)
+- Calendar view (monthly grid with due dates)
+- Timeline view (Gantt-style bars)
+
+## Collaboration
+
+- Activity feed per board with relative timestamps
+- Activity export (CSV download)
+- Notifications (mentions, due dates, assignments) with unread badge
+- Member roles (admin, member, viewer) — viewers are read-only
+- Board sharing (mock link + copy, edit permission toggle)
+
+## UX & Platform
+
+- Responsive layout
+- Skeleton loading states
+- Tauri desktop app build (bundling configured; signing not yet)
+- iOS/Android native shells (Tauri mobile entry point wired)
+
+## Requirements
+
+- Android 14+
+- Linux (Ubuntu) 22.04+
+- Linux (Debian) 13+
+- macOS 13+
+- Windows 10+
+
+## LICENSE
+
+See [LICENSE](LICENSE).

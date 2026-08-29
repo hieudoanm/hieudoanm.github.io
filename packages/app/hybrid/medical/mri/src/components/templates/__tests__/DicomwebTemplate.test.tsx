@@ -200,26 +200,22 @@ describe('DicomwebTemplate edge cases', () => {
 
   it('renders fallback labels when QIDO fields are missing', async () => {
     const api = createApi({
-      qidoStudies: jest
-        .fn()
-        .mockResolvedValue([
-          {
-            studyUid: '9.9',
-            patientName: '',
-            studyDate: '',
-            studyDescription: '',
-          },
-        ]),
-      qidoSeries: jest
-        .fn()
-        .mockResolvedValue([
-          {
-            seriesUid: '8.8',
-            seriesDescription: '',
-            modality: '',
-            instanceCount: 0,
-          },
-        ]),
+      qidoStudies: jest.fn().mockResolvedValue([
+        {
+          studyUid: '9.9',
+          patientName: '',
+          studyDate: '',
+          studyDescription: '',
+        },
+      ]),
+      qidoSeries: jest.fn().mockResolvedValue([
+        {
+          seriesUid: '8.8',
+          seriesDescription: '',
+          modality: '',
+          instanceCount: 0,
+        },
+      ]),
     });
     render(<DicomwebTemplate api={api} />);
     await screen.findByTestId(`server-select-${server.id}`);

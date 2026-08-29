@@ -1,12 +1,6 @@
-# Code (Downloads)
+# Code
 
-## Web
-
-Open <https://hieudoanm.github.io/downloads/code/> in any modern browser. The
-web build is a static export and installs as a PWA — offline-capable after the
-first visit.
-
-## Platforms
+## Installation
 
 | Platform | Distro | Architecture | Requirements | Download Link                              |
 | -------- | ------ | ------------ | ------------ | ------------------------------------------ |
@@ -30,13 +24,7 @@ first visit.
 [download-msi]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-code-latest/code_x64.msi
 
-## Notes
-
-1. `.aab` is a Google Play upload artifact — to install directly on a device,
-   use the `.apk`.
-2. macOS builds are Apple Silicon only (`aarch64`).
-
-## Checksums
+### Checksums
 
 SHA-256 digests for every asset are published alongside the release in
 [SHA256SUMS.txt][checksums].
@@ -44,7 +32,58 @@ SHA-256 digests for every asset are published alongside the release in
 [checksums]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-code-latest/SHA256SUMS.txt
 
-## Source
+## About
 
-- [Source code](https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/app/hybrid/developer-tools/code)
-- [Releases](https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-developer-tools-code-latest)
+Code — minimal VSCode / Zed editor.
+
+## Features
+
+## File System
+
+- File explorer sidebar with tree view
+- Create/rename/delete files and folders
+- Status bar with language and position
+- Auto-save (2s debounce to the real filesystem via Tauri plugin-fs)
+
+## Editor
+
+- Code editor with line numbers and syntax highlighting
+- Tab management (open, close, reorder)
+- Bracket matching and auto-closing
+- Current line highlight
+- Word wrap toggle
+- Font size zoom (Ctrl+/-)
+- Breadcrumb navigation
+
+## Editing
+
+- Find in file (Ctrl+F) with match count and navigation
+- Find and replace (Ctrl+H) with regex support
+- Find in files (Ctrl+Shift+F) with results grouped by file
+- Multi-cursor editing (Ctrl+Alt+up/down, Ctrl+D)
+- Auto-close HTML/JSX tags
+- Move line up/down (Alt+up/down)
+- Delete line (Ctrl+Shift+K)
+
+## Command & Themes
+
+- Command palette (Ctrl+P for files; Ctrl+Shift+P commands pending)
+- Keyboard shortcuts modal (Ctrl+/)
+- Theme marketplace (custom editor themes — dim/winter toggle)
+- Additional language support (ts/tsx/js/jsx/py/rs/md/json/css/html/xml)
+
+## Platform
+
+- Tauri desktop app build (bundling configured; signing not yet)
+
+## Requirements
+
+- Android 14+
+- Linux (Ubuntu) 22.04+
+- Linux (Debian) 13+
+- macOS 13+
+- Windows 10+
+
+## LICENSE
+
+See [LICENSE](LICENSE).

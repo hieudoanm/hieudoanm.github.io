@@ -1,12 +1,6 @@
-# API (Downloads)
+# API
 
-## Web
-
-Open <https://hieudoanm.github.io/downloads/api/> in any modern browser. The web
-build is a static export and installs as a PWA — offline-capable after the first
-visit.
-
-## Platforms
+## Installation
 
 | Platform | Distro | Architecture | Requirements | Download Link                              |
 | -------- | ------ | ------------ | ------------ | ------------------------------------------ |
@@ -30,13 +24,7 @@ visit.
 [download-msi]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-api-latest/api_x64.msi
 
-## Notes
-
-1. `.aab` is a Google Play upload artifact — to install directly on a device,
-   use the `.apk`.
-2. macOS builds are Apple Silicon only (`aarch64`).
-
-## Checksums
+### Checksums
 
 SHA-256 digests for every asset are published alongside the release in
 [SHA256SUMS.txt][checksums].
@@ -44,7 +32,98 @@ SHA-256 digests for every asset are published alongside the release in
 [checksums]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-api-latest/SHA256SUMS.txt
 
-## Source
+## About
 
-- [Source code](https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/app/hybrid/developer-tools/api)
-- [Releases](https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-developer-tools-api-latest)
+API Client — full-scale Postman / Insomnia / Bruno.
+
+## Features
+
+## Request Composer
+
+- Method + URL composer with send
+- Params / headers key-value editors
+- Body editor with JSON beautify
+- Keyboard shortcuts (Ctrl+Enter send, Ctrl+L clear)
+- Request timeout and redirect control
+- Multiple request tabs
+- Multipart form-data body with file uploads
+- GraphQL composer (query and variables editors, schema introspection)
+- Cookie jar with domain scoping
+- Protocol switcher (HTTP, WebSocket, gRPC, MQTT)
+
+## Authentication
+
+- Bearer and Basic auth presets
+- OAuth 1.0 and 2.0 flows (pending)
+- API Key and Digest auth (pending)
+
+## Response
+
+- Response panel with status, time, size, headers
+- Copy response body button
+- Response preview by content-type
+- Response diffing between requests
+- Pretty / raw / preview renderers (JSON, XML, HTML, image) (pending)
+- Response cookies viewer (pending)
+- JSON schema validation of responses (pending)
+
+## Realtime & Protocols
+
+- WebSocket client (connect, message log, close)
+- gRPC client (proto import, unary and streaming calls)
+- MQTT client (connect, subscribe, publish)
+
+## Scripting & Testing
+
+- Pre-request scripts (JS sandbox) (pending)
+- Test assertions (status, headers, body, schema) (pending)
+- Test runner with pass/fail summary (pending)
+- Script console / log output panel (pending)
+- Collection runner with delay and failure handling (pending)
+- Data-driven runs with CSV/JSON data files (pending)
+- Test report export (HTML / JSON) (pending)
+
+## Collections & Variables
+
+- Request collections (saved, named, grouped)
+- Environment variables (`{{var}}` substitution)
+- Multiple environments with active selector (pending)
+- Variable inspector with usage and unresolved references (pending)
+- Dynamic variables ({{$guid}}, {{$timestamp}}, {{$randomInt}}) (pending)
+
+## History & Automation
+
+- Local request history
+- History search and filtering
+- Newman-style CLI runner in Tauri desktop (pending)
+- Scheduled monitors (mock) (pending)
+
+## API Design & Team
+
+- Code generation (curl, fetch, fetch-ts)
+- Schema preview (OpenAPI import)
+- OpenAPI import/export (2.0 and 3.0/3.1) (pending)
+- Mock server from collection or schema (pending)
+- API documentation generation (pending)
+- Team workspaces (pending)
+- Git-based collection versioning (local-first, Bruno-style) (pending)
+- Cloud sync (mock) (pending)
+
+## Platform
+
+- Tauri desktop app build (bundling configured; signing not yet)
+- Light and dark themes (pending)
+- Command palette (Ctrl+K) (pending)
+- Plugin system (Bruno-style) (pending)
+
+## Requirements
+
+- Android 14+
+- Linux (Ubuntu) 22.04+
+- Linux (Debian) 13+
+- macOS 13+
+- Windows 10+
+
+## LICENSE
+
+See [LICENSE](LICENSE).

@@ -1,12 +1,6 @@
-# PDF (Downloads)
+# PDF
 
-## Web
-
-Open <https://hieudoanm.github.io/downloads/pdf/> in any modern browser. The web
-build is a static export and installs as a PWA — offline-capable after the first
-visit.
-
-## Platforms
+## Installation
 
 | Platform | Distro | Architecture | Requirements | Download Link                              |
 | -------- | ------ | ------------ | ------------ | ------------------------------------------ |
@@ -30,13 +24,7 @@ visit.
 [download-msi]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-pdf-latest/pdf_x64.msi
 
-## Notes
-
-1. `.aab` is a Google Play upload artifact — to install directly on a device,
-   use the `.apk`.
-2. macOS builds are Apple Silicon only (`aarch64`).
-
-## Checksums
+### Checksums
 
 SHA-256 digests for every asset are published alongside the release in
 [SHA256SUMS.txt][checksums].
@@ -44,7 +32,75 @@ SHA-256 digests for every asset are published alongside the release in
 [checksums]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-pdf-latest/SHA256SUMS.txt
 
-## Source
+## About
 
-- [Source code](https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/app/hybrid/productivity/pdf)
-- [Releases](https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-productivity-pdf-latest)
+PDF — minimal Adobe Acrobat PDF viewer/editor.
+
+## Features
+
+## Status
+
+52/60 roadmap items complete (Phases 1–6 done, Phase 7 pending).
+
+---
+
+## Viewing
+
+- Document list with grid/list view and recent documents
+- PDF upload with drag-and-drop
+- Page rendering with zoom (slider, presets, fit-to-width, fit-to-page, actual
+  size)
+- Page navigation (thumbnails, page number, arrows, Go to Page)
+- Continuous scroll and single-page layouts with page transitions
+- Page rotation, presentation (fullscreen) mode
+- Text search with match highlighting
+- Skeleton loading states
+
+## Annotations
+
+- Text highlighting, underline, and strikethrough
+- Sticky notes with comment threads
+- Freehand drawing pen tool
+- Shapes: rectangle, circle, arrow, line
+- 8-color annotation palette, annotation list sidebar
+- Undo/redo for annotations
+
+## Editing
+
+- Click-to-edit text blocks with font controls (size, bold, italic, color)
+- New text box creation
+- Image insertion with resize handles
+- Image controls: rotate, opacity, delete
+- Text and image watermarks
+- Stamp presets (Approved, Rejected, Draft, Confidential)
+
+## Page Management
+
+- Drag-and-drop page reorder via thumbnails
+- Delete pages with confirmation
+- Rotate individual pages
+- Duplicate page, extract pages by range
+- Split by page range, merge multiple PDFs with drag-to-reorder
+- Crop page with a visual crop box
+- Page labels and numbering
+
+## Forms & Signing
+
+- Form field detection (text, checkbox, radio, dropdown)
+- Manual field insertion and form filling with Tab navigation
+- Signatures: draw on canvas, type with font selection, or upload an image
+- Signature placement and resize
+- Export filled form as a new PDF
+- Print dialog with page range, copies, and headers/footers settings
+
+## Requirements
+
+- Android 14+
+- Linux (Ubuntu) 22.04+
+- Linux (Debian) 13+
+- macOS 13+
+- Windows 10+
+
+## LICENSE
+
+See [LICENSE](LICENSE).

@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://hieudoanm.github.io/free/psychology/sitemap.xml

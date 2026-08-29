@@ -1,12 +1,6 @@
-# Markdown (Downloads)
+# Markdown
 
-## Web
-
-Open <https://hieudoanm.github.io/downloads/markdown/> in any modern browser.
-The web build is a static export and installs as a PWA — offline-capable after
-the first visit.
-
-## Platforms
+## Installation
 
 | Platform | Distro | Architecture | Requirements | Download Link                              |
 | -------- | ------ | ------------ | ------------ | ------------------------------------------ |
@@ -30,13 +24,7 @@ the first visit.
 [download-msi]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-markdown-latest/markdown_x64.msi
 
-## Notes
-
-1. `.aab` is a Google Play upload artifact — to install directly on a device,
-   use the `.apk`.
-2. macOS builds are Apple Silicon only (`aarch64`).
-
-## Checksums
+### Checksums
 
 SHA-256 digests for every asset are published alongside the release in
 [SHA256SUMS.txt][checksums].
@@ -44,7 +32,49 @@ SHA-256 digests for every asset are published alongside the release in
 [checksums]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-markdown-latest/SHA256SUMS.txt
 
-## Source
+## About
 
-- [Source code](https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/app/hybrid/productivity/markdown)
-- [Releases](https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-productivity-markdown-latest)
+Markdown — minimal Obsidian-style notes app.
+
+## Features
+
+## Editing
+
+- CodeMirror markdown editor
+- Live preview pane (split view)
+- Markdown formatting toolbar
+- Word/character/line stats bar
+- Outline/collapse support in editor
+- Scroll sync between editor and preview
+
+## Vault
+
+- Vault sidebar with note tree
+- File operations (new, rename, save, delete)
+- Seeded vault with categorized notes
+- Wikilink resolution and navigation
+- Slug-based note addressing
+
+## Navigation & Search
+
+- Table of contents sidebar
+- Full-text search across the vault
+- Graph view of note links
+
+## Export & Platform
+
+- Export notes as PDF, HTML (DOCX pending)
+- Custom themes and fonts (lib/fonts)
+- Tauri desktop app build (bundling configured; signing not yet)
+
+## Requirements
+
+- Android 14+
+- Linux (Ubuntu) 22.04+
+- Linux (Debian) 13+
+- macOS 13+
+- Windows 10+
+
+## LICENSE
+
+See [LICENSE](LICENSE).

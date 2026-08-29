@@ -1,11 +1,6 @@
-# CSV (Downloads)
+# CSV
 
-## Web
-
-Open <https://hieudoanm.github.io/downloads/csv/> in any modern browser. The web build is a static export and
-installs as a PWA — offline-capable after the first visit.
-
-## Platforms
+## Installation
 
 | Platform | Distro | Architecture | Requirements | Download Link                              |
 | -------- | ------ | ------------ | ------------ | ------------------------------------------ |
@@ -23,20 +18,66 @@ installs as a PWA — offline-capable after the first visit.
 [download-dmg]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-csv-latest/csv_aarch64.dmg
 [download-msi]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-csv-latest/csv_x64.msi
 
-## Notes
-
-1. `.aab` is a Google Play upload artifact — to install directly on a device,
-   use the `.apk`.
-2. macOS builds are Apple Silicon only (`aarch64`).
-
-## Checksums
+### Checksums
 
 SHA-256 digests for every asset are published alongside the release in
 [SHA256SUMS.txt][checksums].
 
 [checksums]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-csv-latest/SHA256SUMS.txt
 
-## Source
+## About
 
-- [Source code](https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/app/hybrid/productivity/csv)
-- [Releases](https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-productivity-csv-latest)
+CSV — minimal Excel / Google Sheets.
+
+## Features
+
+## Grid
+
+- Sticky-header spreadsheet grid (column letters + row numbers)
+- Click / double-click / keyboard cell editing
+- Keyboard navigation (arrows, Tab, Enter, F2, Delete)
+- Add / delete rows and columns
+- Multiple sheets per file (`.xlsx`-style tabs) — add / remove / rename / switch
+- Column width / row height resizing
+- Freeze panes (rows / columns / both)
+- Cell comments (hover indicator + popover)
+- Range label in status bar (e.g. `A1:B2`)
+- Cell ranges and multi-cell selection (drag + Shift+arrows)
+- Copy / paste between cells (clipboard, TSV-delimited)
+
+## Data & Formulas
+
+- Formula support (`=SUM(A1:B2)`, `=AVG`, `=COUNT`, ...) with ranges
+- Number formatting and alignment
+- Auto-fill drag handle (numeric series, copy, tiling)
+- Find & replace across the grid (Ctrl+F, match highlighting)
+- Sort and filter rows (A→Z / Z→A, per-column filter bar)
+- Status bar (active cell + grid size)
+
+## Import / Export
+
+- Import CSV from file
+- TSV import + CSV/TSV auto-detection
+- Export CSV download
+- Export as `.csv`, `.tsv`, `.json`, `.html`, `.xml`, `.xlsx`
+
+## Persistence & UX
+
+- localStorage persistence
+- Legacy `csv-editor:grid` → `csv-editor:workbook` data migration
+- Undo / redo history
+- Keyboard shortcuts panel (Ctrl+K)
+- Dark / light theme toggle (persisted)
+- PWA / offline support (service worker + manifest)
+
+## Requirements
+
+- Android 14+
+- Linux (Ubuntu) 22.04+
+- Linux (Debian) 13+
+- macOS 13+
+- Windows 10+
+
+## LICENSE
+
+See [LICENSE](LICENSE).

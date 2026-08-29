@@ -1,12 +1,6 @@
-# Video (Downloads)
+# Video
 
-## Web
-
-Open <https://hieudoanm.github.io/downloads/video/> in any modern browser. The
-web build is a static export and installs as a PWA — offline-capable after the
-first visit.
-
-## Platforms
+## Installation
 
 | Platform | Distro | Architecture | Requirements | Download Link                              |
 | -------- | ------ | ------------ | ------------ | ------------------------------------------ |
@@ -30,13 +24,7 @@ first visit.
 [download-msi]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-video-latest/video_x64.msi
 
-## Notes
-
-1. `.aab` is a Google Play upload artifact — to install directly on a device,
-   use the `.apk`.
-2. macOS builds are Apple Silicon only (`aarch64`).
-
-## Checksums
+### Checksums
 
 SHA-256 digests for every asset are published alongside the release in
 [SHA256SUMS.txt][checksums].
@@ -44,7 +32,31 @@ SHA-256 digests for every asset are published alongside the release in
 [checksums]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-video-latest/SHA256SUMS.txt
 
-## Source
+## About
 
-- [Source code](https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/app/hybrid/graphics-design/video)
-- [Releases](https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-graphics-design-video-latest)
+Video — minimal CapCut-style video editor.
+
+## Features
+
+## Platform
+
+- 32 DaisyUI themes with dark default
+- Tauri desktop app build (bundling configured; signing not yet)
+- iOS/Android native shells (Tauri mobile entry point wired)
+
+## Playback
+
+- Playback speed control (0.5x, 1x, 1.5x, 2x) — processing tool, not a player
+  control
+
+## Requirements
+
+- Android 14+
+- Linux (Ubuntu) 22.04+
+- Linux (Debian) 13+
+- macOS 13+
+- Windows 10+
+
+## LICENSE
+
+See [LICENSE](LICENSE).

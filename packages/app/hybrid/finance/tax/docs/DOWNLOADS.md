@@ -1,12 +1,6 @@
-# Tax (Downloads)
+# Tax
 
-## Web
-
-Open <https://hieudoanm.github.io/downloads/tax/> in any modern browser. The web
-build is a static export and installs as a PWA — offline-capable after the first
-visit.
-
-## Platforms
+## Installation
 
 | Platform | Distro | Architecture | Requirements | Download Link                             |
 | -------- | ------ | ------------ | ------------ | ----------------------------------------- |
@@ -30,13 +24,7 @@ visit.
 [download-msi]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-finance-tax-latest/tax_x64.msi
 
-## Notes
-
-1. `.aab` is a Google Play upload artifact — to install directly on a device,
-   use the `.apk`.
-2. macOS builds are Apple Silicon only (`aarch64`).
-
-## Checksums
+### Checksums
 
 SHA-256 digests for every asset are published alongside the release in
 [SHA256SUMS.txt][checksums].
@@ -44,7 +32,82 @@ SHA-256 digests for every asset are published alongside the release in
 [checksums]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-finance-tax-latest/SHA256SUMS.txt
 
-## Source
+## About
 
-- [Source code](https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/app/hybrid/finance/tax)
-- [Releases](https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-finance-tax-latest)
+Tax — Vietnamese tax management application.
+
+## Features
+
+## Authentication
+
+- Login and registration flow
+- Route guard for protected pages
+- Local persistence with IndexedDB
+
+## Dashboard
+
+- Overview statistics (companies, submissions, pending, flagged audits)
+- Recent submissions list
+- Recent audits list
+- Quick navigation to all features
+
+## Tax Calculator
+
+- Personal income tax (PIT) calculator
+- Gross-to-Net and Net-to-Gross modes
+- Monthly and annual period support
+- Progressive tax brackets: 5% → 35% (7 brackets)
+- Personal deduction: 11,000,000 VND/month
+- Dependent deduction: 4,400,000 VND/dependent/month
+- Social insurance toggle (employee + employer)
+- Insurance cap: 36,000,000 VND/month
+- Detailed tax breakdown table
+- Effective tax rate calculation
+- Total employer labor cost
+
+## Tax Submission
+
+- Company tax declaration management
+- Tax types: PIT, CIT, VAT, FCT
+- Status tracking: draft → submitted → accepted/rejected/amended
+- Document management (01-KK/TNCN, GTGT, TNDN, etc.)
+- Deadline management
+- Period tracking (monthly, quarterly, annual)
+- Notes and comments
+
+## Tax Audit
+
+- Automated compliance checks
+- Manual internal audits
+- Risk scoring (0-100)
+- Finding tracking with severity levels (low/medium/high/critical)
+- Finding categories: discrepancy, missing_document, compliance_error,
+  overpayment, underpayment
+- Resolution tracking
+- Audit checklist (document, calculation, deadline, compliance)
+- Company-level audit history
+
+## Responsive Design
+
+- Desktop: Sidebar navigation
+- Mobile: Bottom navigation + header with hamburger menu
+- 32 DaisyUI themes with dark default
+- Accessible (skip to content, ARIA labels, screen reader announcements)
+
+## Offline Support
+
+- IndexedDB for local persistence
+- Offline indicator banner
+- Mock data with configurable delay
+
+## Requirements
+
+- Android 14+
+- Linux (Ubuntu) 22.04+
+- Linux (Debian) 13+
+- macOS 13+
+- Windows 10+
+
+## LICENSE
+
+No LICENSE file is included for this project.

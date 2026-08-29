@@ -1,16 +1,6 @@
-# Downloads
+# Calendar
 
-## Web App
-
-Install as a PWA from the hosted URL. Click the install button in your browser's
-address bar to add it to your home screen.
-
-## Desktop App
-
-Pre-built binaries are available on the
-[Releases](https://github.com/hieudoanm/hieudoanm.github.io/releases) page.
-
-### Platforms
+## Installation
 
 | Platform | Format             | Status |
 | -------- | ------------------ | ------ |
@@ -18,30 +8,75 @@ Pre-built binaries are available on the
 | Windows  | `.msi` / `.exe`    | ✅     |
 | Linux    | `.deb` / `.AppImage` | ✅   |
 
-### Build from Source
+## About
 
-```bash
-# Install Rust toolchain
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+Calendar — multi-view event calendar with GitHub-style activity visualization.
 
-# Install Tauri CLI
-cargo install tauri-cli
+## Features
 
-# Build desktop app
-pnpm tauri build
-```
+## Calendar Views
 
-The built binaries will be in `src-tauri/target/release/bundle/`.
+7 calendar views to visualise your data from different perspectives:
 
-## System Requirements
+### 3-Day View
 
-### Desktop
+Yesterday, today, and tomorrow in card format. Quick glance at upcoming events.
 
-- **macOS**: 10.15+ (Catalina)
-- **Windows**: 10+ (64-bit)
-- **Linux**: Ubuntu 18.04+, Debian 10+, Fedora 32+
+### Daily View
 
-### Web
+Full-year grid with GitHub-style activity dots. Each day is a cell in a 52×7 grid
+(weeks × weekdays). Shows event intensity with dot colour.
 
-- Modern browser with ES2020+ support
-- Service Worker support (for PWA/offline)
+### Weekly View
+
+Month-by-month grid where each row is a week. See how events cluster by week
+across the year.
+
+### Monthly View
+
+12-month dot grid. Each month is a row, each day is a dot. Quickly identify
+busy periods across the year.
+
+### Quarterly View
+
+Four quarterly rows showing event distribution. Each row covers one quarter
+(13 weeks). Good for high-level trend analysis.
+
+### Half View
+
+Two half-year rows. Each row covers 26 weeks. Ideal for spotting seasonal
+patterns.
+
+### Yearly View
+
+12-month overview with category labels. Shows event counts per month with
+visual bars.
+
+## Navigation
+
+- **Year selector** — cycle through years with arrow buttons
+- **View switcher** — dropdown to change between all 7 views
+- **Weekday filter** — toggle individual weekdays on/off in Daily/Weekly views
+- **Month navigation** — prev/next arrows in Monthly calendar
+
+## Data
+
+- 300+ events across multiple categories (holiday, cultural, seasonal, international)
+- Events grouped by month and year for efficient lookup
+- Date-based filtering with helper functions
+
+## Additional Pages
+
+- **About** — project description and tech stack
+- **Downloads** — installation instructions for all platforms
+- **Version** — changelog and version history
+
+## Requirements
+
+- macOS (`.dmg` / `.app`)
+- Windows (`.msi` / `.exe`)
+- Linux (`.deb` / `.AppImage`)
+
+## LICENSE
+
+See [LICENSE](LICENSE).
