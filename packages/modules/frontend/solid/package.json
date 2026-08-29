@@ -38,7 +38,7 @@
     "@types/jest": "30.0.0",
     "@types/node": "26.2.0",
     "@types/web-bluetooth": "0.0.21",
-    "eslint": "10.9.0",
+    "eslint": "10.9.1",
     "globals": "17.11.0",
     "prettier": "3.9.6",
     "rimraf": "6.1.3",
