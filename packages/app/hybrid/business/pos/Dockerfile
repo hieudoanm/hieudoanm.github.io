@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 # =============================================================================
-# POS - Minimal Point of Sale client (web/static build)
+# pos - POS Client
 #
 # The web build is a Next.js static export (`output: 'export'`, produced into
 # `out/`). It has no Node server, so the production image simply serves the
@@ -43,8 +43,8 @@ RUN pnpm build
 # Serve the static `out/` export with an unprivileged, non-root nginx
 # (listens on 8080). 1.27.4 pin avoids a 1.27.5 /run/nginx.pid regression.
 FROM nginxinc/nginx-unprivileged:${NGINX_VERSION}-alpine
-LABEL org.opencontainers.image.title="POS"
-LABEL org.opencontainers.image.description="Minimal Point of Sale client (static web build)"
+LABEL org.opencontainers.image.title="pos"
+LABEL org.opencontainers.image.description="POS Client"
 LABEL org.opencontainers.image.source="https://github.com/hieudoanm/hieudoanm.github.io"
 COPY --from=builder /app/out/ /usr/share/nginx/html/
 EXPOSE 8080

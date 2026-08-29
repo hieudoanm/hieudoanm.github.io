@@ -1,4 +1,4 @@
-.PHONY: build app dmg clean dev test icons
+.PHONY: build app dmg install clean dev test icons
 
 APP_NAME := Snap
 BUNDLE_ID := io.github.hieudoanm.Snap
@@ -65,6 +65,13 @@ dmg: app
 		$(DMG_PATH)
 	@rm -rf $(BUILD_DIR)/dmg-staging
 	@echo "$(DMG_NAME) created at $(DMG_PATH)"
+
+install: app
+	@echo "Installing $(APP_NAME).app to /Applications..."
+	@osascript -e 'quit app "$(APP_NAME)"' 2>/dev/null || true
+	@rm -rf /Applications/$(APP_NAME).app
+	@cp -R $(APP_DIR) /Applications/
+	@echo "$(APP_NAME).app installed to /Applications"
 
 clean:
 	@swift package clean
