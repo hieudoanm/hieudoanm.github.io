@@ -27,8 +27,25 @@ struct ThresholdMonitorTests {
     @Test("memory pressure maps to status")
     func memoryPressure() {
         #expect(ThresholdMonitor.status(for: MemoryStats(usedBytes: 3, totalBytes: 10)) == .normal)
-        #expect(ThresholdMonitor.status(for: MemoryStats(usedBytes: 8, totalBytes: 10)) == .elevated)
-        #expect(ThresholdMonitor.status(for: MemoryStats(usedBytes: 9, totalBytes: 10)) == .high)
+        #expect(ThresholdMonitor.status(for: MemoryStats(usedBytes: 8, totalBytes: 10)) == .warn)
+        #expect(ThresholdMonitor.status(for: MemoryStats(usedBytes: 9, totalBytes: 10)) == .critical)
+    }
+
+    @Test("kernel pressure levels map to status")
+    func pressureLevel() {
+        #expect(ThresholdMonitor.memoryPressure(forLevel: 1) == .normal)
+        #expect(ThresholdMonitor.memoryPressure(forLevel: 2) == .warn)
+        #expect(ThresholdMonitor.memoryPressure(forLevel: 4) == .critical)
+        #expect(ThresholdMonitor.memoryPressure(forLevel: 0) == .unknown)
+        #expect(ThresholdMonitor.memoryPressure(forLevel: 3) == .unknown)
+    }
+
+    @Test("pressure status display text")
+    func pressureDisplayText() {
+        #expect(MemoryPressureStatus.normal.displayText == "Normal")
+        #expect(MemoryPressureStatus.warn.displayText == "Warning")
+        #expect(MemoryPressureStatus.critical.displayText == "Critical")
+        #expect(MemoryPressureStatus.unknown.displayText == "Unknown")
     }
 
     @Test("disk status maps to threshold")

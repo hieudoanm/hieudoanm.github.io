@@ -7,15 +7,16 @@ struct CPUView: View {
     var body: some View {
         if let stats {
             let threshold = ThresholdMonitor.status(for: stats.usage)
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: 5) {
                 HStack {
                     Text("CPU")
                         .font(.caption)
                         .foregroundColor(.secondary)
                     Spacer()
-                    Text("\(Int(stats.usage.rounded()))%")
+                    Text(ByteFormatter.percent(stats.usage))
                         .font(.caption)
                         .fontWeight(.medium)
+                        .monospacedDigit()
                         .foregroundColor(Color(usageThreshold: threshold))
                 }
 
@@ -25,8 +26,12 @@ struct CPUView: View {
                 Text(stats.loadAverageText)
                     .font(.caption)
                     .lineLimit(1)
+                    .truncationMode(.tail)
                     .foregroundColor(.secondary)
             }
+            .accessibilityElement(children: .ignore)
+            .accessibilityLabel("CPU, \(ByteFormatter.percent(stats.usage)) used, \(stats.loadAverageText)")
+            .accessibilityAddTraits(.updatesFrequently)
         } else {
             UnavailableView(title: "CPU")
         }

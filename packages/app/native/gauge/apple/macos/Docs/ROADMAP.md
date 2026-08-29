@@ -40,24 +40,24 @@
 
 > Fit and finish.
 
-- [ ] Spacing and typography review
-- [ ] Dark Mode / Light Mode verification
-- [ ] Accessibility audit
-- [ ] Menu-bar width tuning
-- [ ] Error-state review
+- [x] Spacing and typography review
+- [x] Dark Mode / Light Mode verification
+- [x] Accessibility audit
+- [x] Menu-bar width tuning
+- [x] Error-state review
 
 ## Phase 6 — Optional Features
 
 > Only after the core product is stable.
 
-- [ ] Memory pressure detail
+- [x] Memory pressure detail
 - [x] Swap usage
 - [x] CPU usage
 - [x] CPU load average (1/5/15 min)
 - [x] Full RAM breakdown (active / wired / compressed / cached / inactive / free)
 - [x] System info (chip / cores / uptime)
 - [ ] Additional metrics (battery, network, temperature)
-- [ ] Launch at login via `SMAppService`
-- [ ] Configurable refresh interval (presets shipped in v1)
-- [ ] Configurable menu-bar display
+- [x] Launch at login via `SMAppService`
+- [x] Configurable refresh interval (presets shipped in v1)
+- [x] Configurable menu-bar display
 - [ ] Threshold customization

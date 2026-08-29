@@ -15,18 +15,24 @@ Gauge/
 ├── Package.swift
 ├── README.md
 ├── Resources/
+│   ├── AppIcon.icns
+│   ├── AppIcon.iconset/
+│   │   ├── AppIcon-render.swift
+│   │   └── AppIcon-source.svg
 │   ├── Gauge.entitlements
 │   └── Info.plist
 ├── Sources/
 │   ├── App/
 │   │   ├── GaugeApp.swift
 │   │   ├── GaugeViewModel.swift
+│   │   ├── LaunchAtLogin.swift
 │   │   └── MenuBarIcon.swift
 │   ├── Core/
 │   │   ├── Models/
 │   │   │   ├── CPUStats.swift
 │   │   │   ├── DiskStats.swift
 │   │   │   ├── MemoryStats.swift
+│   │   │   ├── MenuBarDisplay.swift
 │   │   │   ├── SwapStats.swift
 │   │   │   ├── SystemInfo.swift
 │   │   │   └── UsageThreshold.swift
@@ -36,6 +42,7 @@ Gauge/
 │   │   ├── CPUMonitor.swift
 │   │   ├── DiskMonitor.swift
 │   │   ├── MemoryMonitor.swift
+│   │   ├── MemoryPressureMonitor.swift
 │   │   ├── MonitorError.swift
 │   │   ├── SwapMonitor.swift
 │   │   └── SystemInfoMonitor.swift
@@ -58,6 +65,7 @@ Gauge/
         │   ├── CPUStatsTests.swift
         │   ├── DiskStatsTests.swift
         │   ├── MemoryStatsTests.swift
+        │   ├── MenuBarDisplayTests.swift
         │   ├── SwapStatsTests.swift
         │   ├── SystemInfoTests.swift
         │   └── UsageThresholdTests.swift

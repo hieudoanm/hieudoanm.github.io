@@ -43,6 +43,14 @@ struct ByteFormatterTests {
         #expect(ByteFormatter.usedOverTotal(usedBytes: 12_400_000_000, totalBytes: 32_000_000_000) == "11.5 GB / 29.8 GB")
     }
 
+    @Test("percent rounds to whole number with symbol")
+    func percent() {
+        #expect(ByteFormatter.percent(39.2) == "39%")
+        #expect(ByteFormatter.percent(39.6) == "40%")
+        #expect(ByteFormatter.percent(100) == "100%")
+        #expect(ByteFormatter.percent(0) == "0%")
+    }
+
     @Test("memory breakdown joins labeled values")
     func memoryBreakdown() {
         #expect(ByteFormatter.memoryBreakdown(active: 8_200_000_000, wired: 3_100_000_000, compressed: 1_100_000_000) == "Active 7.6 GB · Wired 2.9 GB · Compressed 1.0 GB")

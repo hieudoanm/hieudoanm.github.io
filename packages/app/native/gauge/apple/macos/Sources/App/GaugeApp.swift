@@ -14,9 +14,10 @@ struct GaugeApp: App {
         }
         .menuBarExtraStyle(.window)
 
-        Settings {
+        Window(SettingsView.windowTitle, id: SettingsView.windowID) {
             SettingsView(viewModel: viewModel)
         }
+        .windowResizability(.contentSize)
     }
 }
 

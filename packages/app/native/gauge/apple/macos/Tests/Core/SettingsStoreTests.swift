@@ -16,6 +16,7 @@ struct SettingsStoreTests {
     func defaults() {
         let (store, dir) = makeStore()
         #expect(store.refreshInterval == 1.0)
+        #expect(store.menuBarDisplay == .percentage)
         try? FileManager.default.removeItem(at: dir)
     }
 
@@ -23,8 +24,10 @@ struct SettingsStoreTests {
     func persist() {
         let (store, dir) = makeStore()
         store.refreshInterval = 5.0
+        store.menuBarDisplay = .usedOverTotal
         let loaded = SettingsStore(directoryURL: dir)
         #expect(loaded.refreshInterval == 5.0)
+        #expect(loaded.menuBarDisplay == .usedOverTotal)
         try? FileManager.default.removeItem(at: dir)
     }
 
@@ -36,6 +39,19 @@ struct SettingsStoreTests {
         try Data("not json".utf8).write(to: dir.appendingPathComponent("settings.json"))
         let store = SettingsStore(directoryURL: dir)
         #expect(store.refreshInterval == 1.0)
+        #expect(store.menuBarDisplay == .percentage)
+        try? FileManager.default.removeItem(at: dir)
+    }
+
+    @Test("legacy file without menu bar display falls back to percentages")
+    func legacyFile() throws {
+        let dir = FileManager.default.temporaryDirectory
+            .appendingPathComponent("GaugeTests/legacy-\(UUID().uuidString)")
+        try FileManager.default.createDirectory(at: dir, withIntermediateDirectories: true)
+        try Data(#"{"refreshInterval": 2.0}"#.utf8).write(to: dir.appendingPathComponent("settings.json"))
+        let store = SettingsStore(directoryURL: dir)
+        #expect(store.refreshInterval == 2.0)
+        #expect(store.menuBarDisplay == .percentage)
         try? FileManager.default.removeItem(at: dir)
     }
 }

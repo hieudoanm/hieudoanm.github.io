@@ -21,6 +21,10 @@ export const SECTION_META: Record<string, SectionMeta> = {
     label: 'macOS',
     description: 'Native apps built for macOS',
   },
+  cli: {
+    label: 'CLIs',
+    description: 'Command-line tools and binaries',
+  },
 };
 
 export const ALL_PLATFORMS: { group: string; platforms: string[] }[] = [

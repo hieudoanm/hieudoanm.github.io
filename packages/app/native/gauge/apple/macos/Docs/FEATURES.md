@@ -7,6 +7,10 @@
 - Compact indicator: `CPU 39%   Disk 83%`
 - SF Symbols instead of emoji, monospaced digits keep the item width stable
 - Click opens a native popover with details
+- Configurable display style (Settings → Menu Bar):
+  - Percentages: `CPU 39%   Disk 83%`
+  - Values: `CPU 39%   Disk 412 GB`
+  - Used / Total: `CPU 39%   Disk 412/494 GB`
 
 ## Memory
 
@@ -55,16 +59,23 @@
 - CPU section (details) with load average
 - Swap section (details)
 - System footer (details) with chip / cores / uptime
-- Memory pressure status (details)
+- Memory pressure status (details), read from the kernel
+  (`kern.memorystatus_vm_pressure_level`): `Normal` / `Warning` / `Critical`
 
 ## Settings
 
-- Refresh interval (1/2/5/10 seconds)
+- Refresh interval presets (1/2/5/10 seconds)
+- Menu Bar display style (Percentages / Values / Used-Total)
+- Launch at Login via `SMAppService`
 - No special permissions required
 
 ## UX
 
 - Values refresh every second by default
 - Automatic color coding only at meaningful thresholds
-- Light and Dark Mode friendly via semantic colors
+- Light and Dark Mode friendly via semantic colors (no hard-coded colors)
 - Accessible labels on all controls
+- Every section exposes a combined VoiceOver label (e.g. `Memory, 39% used, 12.4 GB of 32 GB`)
+- Menu-bar item is a single accessibility element that announces `39% CPU, 83% disk` and updates frequently
+- Error states render a distinct `Unable to read` row with a warning icon instead of blank or zero values
+- Menu-bar label uses monospaced digits and a fixed size so the indicator width stays stable

@@ -16,7 +16,6 @@ struct SmallView: View {
                 title: "CPU",
                 percent: viewModel.cpuPercentText,
                 valueText: viewModel.cpuValueText,
-                isAvailable: viewModel.cpuStats != nil,
                 threshold: cpuThreshold
             )
 
@@ -25,7 +24,6 @@ struct SmallView: View {
                 title: "Memory",
                 percent: viewModel.memoryPercentText,
                 valueText: viewModel.memoryValueText,
-                isAvailable: viewModel.memoryStats != nil,
                 threshold: memoryThreshold
             )
 
@@ -34,7 +32,6 @@ struct SmallView: View {
                 title: "Storage",
                 percent: viewModel.diskPercentText,
                 valueText: viewModel.diskValueText,
-                isAvailable: viewModel.diskStats != nil,
                 threshold: diskThreshold
             )
 
@@ -43,7 +40,6 @@ struct SmallView: View {
                 title: "Swap",
                 percent: viewModel.swapPercentText,
                 valueText: viewModel.swapValueText,
-                isAvailable: swapEnabled,
                 threshold: swapThreshold
             )
         }
@@ -54,18 +50,17 @@ struct SmallView: View {
         HStack {
             Label("Gauge", systemImage: "gauge.with.dots.needle.50percent")
                 .font(.headline)
+                .accessibilityElement(children: .combine)
             Spacer()
             Button(action: showDetails) {
                 Image(systemName: "chevron.down")
+                    .frame(width: 24, height: 24)
+                    .contentShape(Rectangle())
                     .accessibilityLabel("Show details")
             }
             .buttonStyle(.borderless)
             .help("Show details")
         }
-    }
-
-    private var swapEnabled: Bool {
-        (viewModel.swapStats?.totalBytes ?? 0) > 0
     }
 
     private var memoryThreshold: UsageThreshold {
@@ -89,27 +84,21 @@ struct SmallView: View {
         title: String,
         percent: String,
         valueText: String?,
-        isAvailable: Bool,
         threshold: UsageThreshold
     ) -> some View {
         HStack(spacing: 12) {
             Image(systemName: icon)
                 .foregroundColor(.secondary)
+                .accessibilityHidden(true)
 
             VStack(alignment: .leading, spacing: 2) {
                 Text(title)
                     .font(.caption)
                     .foregroundColor(.secondary)
-                if let valueText {
-                    Text(valueText)
-                        .font(.system(.callout, design: .monospaced))
-                        .monospacedDigit()
-                        .foregroundColor(.primary)
-                } else if !isAvailable {
-                    Text("Unable to read")
-                        .font(.system(.callout, design: .monospaced))
-                        .foregroundColor(.secondary)
-                }
+                Text(valueText ?? "Unable to read")
+                    .font(.system(.callout, design: .monospaced))
+                    .monospacedDigit()
+                    .foregroundColor(valueText == nil ? .secondary : .primary)
             }
 
             Spacer()
@@ -120,5 +109,15 @@ struct SmallView: View {
                 .monospacedDigit()
                 .foregroundColor(Color(usageThreshold: threshold))
         }
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(accessibilityText(title: title, percent: percent, valueText: valueText))
+        .accessibilityAddTraits(.updatesFrequently)
+    }
+
+    private func accessibilityText(title: String, percent: String, valueText: String?) -> String {
+        if let valueText {
+            return "\(title), \(percent), \(valueText)"
+        }
+        return "\(title), \(percent), unable to read"
     }
 }

@@ -9,6 +9,7 @@ struct SystemInfoView: View {
             Text("\(info.chip) · \(info.coresText) · \(info.uptimeText)")
                 .font(.caption)
                 .lineLimit(1)
+                .truncationMode(.tail)
                 .foregroundColor(.secondary)
         }
     }

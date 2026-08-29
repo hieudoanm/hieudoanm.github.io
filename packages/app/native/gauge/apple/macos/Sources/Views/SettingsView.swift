@@ -3,9 +3,18 @@ import SwiftUI
 
 struct SettingsView: View {
     @ObservedObject var viewModel: GaugeViewModel
+    @State private var launchAtLogin = LaunchAtLogin.isEnabled
+
+    static let windowID = "settings"
+    static let windowTitle = "Settings"
 
     var body: some View {
         Form {
+            Section("General") {
+                Toggle("Launch at Login", isOn: $launchAtLogin)
+                    .toggleStyle(.switch)
+            }
+
             Section("Monitoring") {
                 Picker("Refresh Interval", selection: Binding(
                     get: { SelectableInterval(seconds: viewModel.refreshInterval) },
@@ -13,6 +22,17 @@ struct SettingsView: View {
                 )) {
                     ForEach(SelectableInterval.allCases, id: \.self) { interval in
                         Text(interval.label).tag(interval)
+                    }
+                }
+            }
+
+            Section("Menu Bar") {
+                Picker("Display", selection: Binding(
+                    get: { viewModel.menuBarDisplay },
+                    set: { viewModel.updateMenuBarDisplay($0) }
+                )) {
+                    ForEach(MenuBarDisplay.allCases, id: \.self) { display in
+                        Text(display.title).tag(display)
                     }
                 }
             }
@@ -28,7 +48,16 @@ struct SettingsView: View {
             }
         }
         .formStyle(.grouped)
-        .frame(width: 400, height: 200)
+        .frame(width: 400, height: 260)
+        .onChange(of: launchAtLogin) { newValue in
+            launchAtLogin = LaunchAtLogin.setEnabled(newValue) ? newValue : LaunchAtLogin.isEnabled
+        }
+        .onAppear {
+            launchAtLogin = LaunchAtLogin.isEnabled
+        }
+        .onDisappear {
+            NSApp.setActivationPolicy(.accessory)
+        }
     }
 }
 

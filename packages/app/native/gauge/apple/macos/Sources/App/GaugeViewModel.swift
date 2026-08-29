@@ -7,18 +7,22 @@ final class GaugeViewModel: ObservableObject {
     @Published private(set) var swapStats: SwapStats?
     @Published private(set) var cpuStats: CPUStats?
     @Published private(set) var systemInfo: SystemInfo?
+    @Published private(set) var memoryPressure: MemoryPressureStatus = .unknown
     @Published var refreshInterval: TimeInterval
+    @Published var menuBarDisplay: MenuBarDisplay
 
     private let memoryMonitor = MemoryMonitor()
     private let diskMonitor = DiskMonitor()
     private let swapMonitor = SwapMonitor()
     private let cpuMonitor = CPUMonitor()
     private let systemMonitor = SystemInfoMonitor()
+    private let pressureMonitor = MemoryPressureMonitor()
     private let settingsStore = SettingsStore()
     private var refreshTimer: Timer?
 
     init() {
         self.refreshInterval = settingsStore.refreshInterval
+        self.menuBarDisplay = settingsStore.menuBarDisplay
         refresh()
         startAutoRefresh()
     }
@@ -59,8 +63,19 @@ final class GaugeViewModel: ObservableObject {
         cpuStats.map { $0.loadAverageText }
     }
 
-    var memoryPressure: MemoryPressureStatus {
-        memoryStats.map(ThresholdMonitor.status) ?? .unknown
+    var diskUsedText: String? {
+        diskStats.map { ByteFormatter.humanReadable($0.usedBytes) }
+    }
+
+    var menuBarDiskText: String {
+        switch menuBarDisplay {
+        case .percentage:
+            return diskPercentText
+        case .value:
+            return diskUsedText ?? "--"
+        case .usedOverTotal:
+            return diskValueText ?? "--"
+        }
     }
 
     func refresh() {
@@ -79,6 +94,14 @@ final class GaugeViewModel: ObservableObject {
         if case let .success(info) = systemMonitor.read() {
             systemInfo = info
         }
+        if case let .success(status) = pressureMonitor.read() {
+            memoryPressure = status
+        }
+    }
+
+    func updateMenuBarDisplay(_ display: MenuBarDisplay) {
+        menuBarDisplay = display
+        settingsStore.menuBarDisplay = display
     }
 
     func updateRefreshInterval(_ interval: TimeInterval) {

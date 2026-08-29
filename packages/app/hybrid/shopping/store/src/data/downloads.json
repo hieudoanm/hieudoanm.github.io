@@ -1972,6 +1972,38 @@
         ]
       },
       {
+        "label": "Gauge",
+        "primaryCategory": "Utilities",
+        "secondaryCategory": "",
+        "icon": "PiGauge",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-gauge-latest/Gauge-0.0.1.dmg",
+        "version": "0.0.1",
+        "lastUpdated": "2026-08-29",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-gauge-latest/Gauge-0.0.1.dmg"
+          }
+        ]
+      },
+      {
+        "label": "Ports",
+        "primaryCategory": "Utilities",
+        "secondaryCategory": "",
+        "icon": "PiPlugs",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-ports-latest/Ports-0.0.1.dmg",
+        "version": "0.0.1",
+        "lastUpdated": "2026-08-29",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-ports-latest/Ports-0.0.1.dmg"
+          }
+        ]
+      },
+      {
         "label": "Snap",
         "primaryCategory": "Utilities",
         "secondaryCategory": "",
@@ -2000,6 +2032,28 @@
           {
             "label": ".dmg",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-top-latest/Top-0.0.1.dmg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "clis",
+    "label": "CLIs",
+    "items": [
+      {
+        "label": "Browserverless",
+        "primaryCategory": "Developer Tools",
+        "secondaryCategory": "",
+        "icon": "PiBrowser",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-rust-browserverless-latest/app-native-rust-browserverless-browserverless",
+        "version": "0.0.1",
+        "lastUpdated": "2026-08-29",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": "View Releases",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-rust-browserverless-latest/app-native-rust-browserverless-browserverless"
           }
         ]
       }

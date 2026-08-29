@@ -28,6 +28,10 @@ public enum ByteFormatter {
         "\(humanReadable(usedBytes)) / \(humanReadable(totalBytes))"
     }
 
+    public static func percent(_ value: Double) -> String {
+        "\(Int(value.rounded()))%"
+    }
+
     public static func memoryBreakdown(active: UInt64, wired: UInt64, compressed: UInt64) -> String {
         joinedDetails([("Active", active), ("Wired", wired), ("Compressed", compressed)])
     }

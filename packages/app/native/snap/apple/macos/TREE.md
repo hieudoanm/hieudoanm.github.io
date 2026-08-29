@@ -9,6 +9,10 @@
 │   ├── [PACKAGING.md](./Docs/PACKAGING.md)
 │   └── [ROADMAP.md](./Docs/ROADMAP.md)
 ├── Resources/
+│   ├── [AppIcon.icns](./Resources/AppIcon.icns)
+│   ├── AppIcon.iconset/
+│   │   ├── [AppIcon-render.swift](./Resources/AppIcon.iconset/AppIcon-render.swift)
+│   │   └── [AppIcon-source.svg](./Resources/AppIcon.iconset/AppIcon-source.svg)
 │   ├── [Info.plist](./Resources/Info.plist)
 │   └── [Snap.entitlements](./Resources/Snap.entitlements)
 ├── Sources/

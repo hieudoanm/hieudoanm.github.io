@@ -4,6 +4,7 @@ import SwiftUI
 struct DetailsView: View {
     @ObservedObject var viewModel: GaugeViewModel
     let showSmall: () -> Void
+    @Environment(\.openWindow) private var openWindow
 
     var body: some View {
         VStack(alignment: .leading, spacing: 14) {
@@ -34,15 +35,20 @@ struct DetailsView: View {
         HStack {
             Label("Gauge", systemImage: "gauge.with.dots.needle.50percent")
                 .font(.headline)
+                .accessibilityElement(children: .combine)
             Spacer()
             Button(action: showSmall) {
                 Image(systemName: "chevron.up")
+                    .frame(width: 24, height: 24)
+                    .contentShape(Rectangle())
                     .accessibilityLabel("Show compact view")
             }
             .buttonStyle(.borderless)
             .help("Show compact view")
             Button(action: { viewModel.refresh() }) {
                 Image(systemName: "arrow.clockwise")
+                    .frame(width: 24, height: 24)
+                    .contentShape(Rectangle())
                     .accessibilityLabel("Refresh")
             }
             .buttonStyle(.borderless)
@@ -56,18 +62,20 @@ struct DetailsView: View {
                 .font(.caption)
                 .foregroundColor(.secondary)
             Spacer()
-            Text(viewModel.memoryPressure.rawValue.capitalized)
+            Text(viewModel.memoryPressure.displayText)
                 .font(.caption)
                 .fontWeight(.medium)
+                .monospacedDigit()
                 .foregroundColor(pressureColor)
         }
+        .accessibilityElement(children: .combine)
     }
 
     private var pressureColor: Color {
         switch viewModel.memoryPressure {
         case .normal: return Color.secondary
-        case .elevated: return Color.orange
-        case .high: return Color.red
+        case .warn: return Color.orange
+        case .critical: return Color.red
         case .unknown: return Color.secondary
         }
     }
@@ -77,6 +85,8 @@ struct DetailsView: View {
             Button(action: openSettings) {
                 Label("Settings", systemImage: "gear")
                     .font(.caption)
+                    .frame(height: 24)
+                    .contentShape(Rectangle())
             }
             .buttonStyle(.borderless)
             Spacer()
@@ -89,7 +99,10 @@ struct DetailsView: View {
     }
 
     private func openSettings() {
-        NSApp.activate(ignoringOtherApps: true)
-        NSApp.sendAction(Selector(("showSettingsWindow:")), to: nil, from: nil)
+        NSApp.setActivationPolicy(.regular)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            NSApp.activate(ignoringOtherApps: true)
+            openWindow(id: SettingsView.windowID)
+        }
     }
 }

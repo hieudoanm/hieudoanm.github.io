@@ -23,15 +23,16 @@ struct ResourceMeter: View {
     }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: 5) {
             HStack {
                 Text(title)
                     .font(.caption)
                     .foregroundColor(.secondary)
                 Spacer()
-                Text(percentageText)
+                Text("\(ByteFormatter.percent(percentage)) used")
                     .font(.caption)
                     .fontWeight(.medium)
+                    .monospacedDigit()
                     .foregroundColor(thresholdColor)
             }
 
@@ -47,20 +48,35 @@ struct ResourceMeter: View {
                 Text(text)
                     .font(.caption)
                     .lineLimit(1)
+                    .truncationMode(.tail)
                     .foregroundColor(.secondary)
             }
         }
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(Self.accessibilityLabel(
+            title: title,
+            usedBytes: usedBytes,
+            totalBytes: totalBytes,
+            percentage: percentage
+        ))
+        .accessibilityAddTraits(.updatesFrequently)
     }
 
     private var fraction: Double {
         min(max(percentage / 100, 0), 1)
     }
 
-    private var percentageText: String {
-        "\(Int(percentage.rounded()))% used"
-    }
-
     private var thresholdColor: Color {
         Color(usageThreshold: ThresholdMonitor.status(for: percentage))
+    }
+
+    private static func accessibilityLabel(
+        title: String,
+        usedBytes: UInt64,
+        totalBytes: UInt64,
+        percentage: Double
+    ) -> String {
+        "\(title), \(ByteFormatter.percent(percentage)) used, "
+            + "\(ByteFormatter.usedOverTotal(usedBytes: usedBytes, totalBytes: totalBytes))"
     }
 }

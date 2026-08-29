@@ -1,4 +1,4 @@
-.PHONY: build app dmg clean dev test
+.PHONY: build app dmg clean dev test icons
 
 APP_NAME := Snap
 BUNDLE_ID := io.github.hieudoanm.Snap
@@ -21,16 +21,36 @@ build: $(BINARY)
 $(BINARY):
 	swift build -c release
 
-app: build
+app: build icons
 	@echo "Creating $(APP_NAME).app bundle..."
 	@mkdir -p $(MACOS_DIR)
 	@mkdir -p $(RESOURCES_DIR)
 	@cp $(BINARY) $(MACOS_DIR)/$(APP_NAME)
 	@cp Resources/Info.plist $(CONTENTS_DIR)/Info.plist
+	@cp Resources/AppIcon.icns $(RESOURCES_DIR)/AppIcon.icns
 	@codesign --force --sign - \
 		--entitlements Resources/Snap.entitlements \
 		$(APP_DIR)
 	@echo "$(APP_NAME).app created at $(APP_DIR)"
+
+icons:
+	@echo "Generating app icons..."
+	@mkdir -p $(BUILD_DIR)/AppIcon.iconset
+	@swift Resources/AppIcon.iconset/AppIcon-render.swift \
+		Resources/AppIcon.iconset/AppIcon-source.svg \
+		$(BUILD_DIR)/AppIcon-master.png
+	@sips -z 16 16 $(BUILD_DIR)/AppIcon-master.png --out $(BUILD_DIR)/AppIcon.iconset/icon_16x16.png
+	@sips -z 32 32 $(BUILD_DIR)/AppIcon-master.png --out $(BUILD_DIR)/AppIcon.iconset/icon_16x16@2x.png
+	@sips -z 32 32 $(BUILD_DIR)/AppIcon-master.png --out $(BUILD_DIR)/AppIcon.iconset/icon_32x32.png
+	@sips -z 64 64 $(BUILD_DIR)/AppIcon-master.png --out $(BUILD_DIR)/AppIcon.iconset/icon_32x32@2x.png
+	@sips -z 128 128 $(BUILD_DIR)/AppIcon-master.png --out $(BUILD_DIR)/AppIcon.iconset/icon_128x128.png
+	@sips -z 256 256 $(BUILD_DIR)/AppIcon-master.png --out $(BUILD_DIR)/AppIcon.iconset/icon_128x128@2x.png
+	@sips -z 256 256 $(BUILD_DIR)/AppIcon-master.png --out $(BUILD_DIR)/AppIcon.iconset/icon_256x256.png
+	@sips -z 512 512 $(BUILD_DIR)/AppIcon-master.png --out $(BUILD_DIR)/AppIcon.iconset/icon_256x256@2x.png
+	@sips -z 512 512 $(BUILD_DIR)/AppIcon-master.png --out $(BUILD_DIR)/AppIcon.iconset/icon_512x512.png
+	@cp $(BUILD_DIR)/AppIcon-master.png $(BUILD_DIR)/AppIcon.iconset/icon_512x512@2x.png
+	@iconutil -c icns $(BUILD_DIR)/AppIcon.iconset -o Resources/AppIcon.icns
+	@echo "AppIcon.icns generated"
 
 dmg: app
 	@echo "Creating $(DMG_NAME)..."
