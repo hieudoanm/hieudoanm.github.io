@@ -70,7 +70,7 @@
     "tailwindcss": "4.3.3",
     "ts-jest": "29.4.12",
     "typescript": "6.0.3",
-    "typescript-eslint": "8.67.0",
+    "typescript-eslint": "8.68.0",
     "@tauri-apps/cli": "2.11.4",
     "fake-indexeddb": "6.2.5"
   }
