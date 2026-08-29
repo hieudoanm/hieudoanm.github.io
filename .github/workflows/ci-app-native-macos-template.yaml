@@ -37,6 +37,13 @@ jobs:
         run: make build
       - name: Create App Bundle
         run: make app
+      - name: Ad-hoc Sign App
+        run: |
+          for APP in build/*.app; do
+            echo "Signing $APP"
+            codesign --force --deep --sign - "$APP"
+            codesign --verify --deep --strict "$APP"
+          done
       - name: Create DMG
         run: make dmg
       - name: Zip App

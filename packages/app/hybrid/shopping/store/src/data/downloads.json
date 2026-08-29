@@ -2034,6 +2034,22 @@
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-top-latest/Top-0.0.1.dmg"
           }
         ]
+      },
+      {
+        "label": "Brewery",
+        "primaryCategory": "Utilities",
+        "secondaryCategory": "",
+        "icon": "PiBeerStein",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-brewery-latest/Brewery-0.0.1.dmg",
+        "version": "0.0.1",
+        "lastUpdated": "2026-08-29",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-brewery-latest/Brewery-0.0.1.dmg"
+          }
+        ]
       }
     ]
   },

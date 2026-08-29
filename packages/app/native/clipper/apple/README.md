@@ -1,4 +1,4 @@
-# Clippy (Apple)
+# Clipper (Apple)
 
 - [iOS] / [iPadOS]
 - [macOS]
