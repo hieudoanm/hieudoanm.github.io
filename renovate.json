@@ -1,5 +1,9 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended"],
-  "rangeStrategy": "pin"
+  "automerge": true,
+  "branchConcurrentLimit": 5,
+  "prConcurrentLimit": 5,
+  "rangeStrategy": "pin",
+  "rebaseWhen": "conflicted"
 }

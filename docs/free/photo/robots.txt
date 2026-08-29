@@ -1,4 +1,0 @@
-User-Agent: *
-Allow: /
-
-Sitemap: https://hieudoanm.github.io/free/photo/sitemap.xml
