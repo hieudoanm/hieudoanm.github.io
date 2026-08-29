@@ -55,7 +55,7 @@ jobs:
         with:
           components: clippy
       - name: Start sccache Server (Rust and C), caching compiled artifacts by content hash
-        uses: mozilla-actions/sccache-action@v0.0.10
+        uses: mozilla-actions/sccache-action@v0.0.11
       - name: Cache Cargo Registry (source downloads only)
         uses: actions/cache@v6.1.0
         with:
