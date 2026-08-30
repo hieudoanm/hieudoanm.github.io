@@ -1,5 +1,5 @@
 # Stage 1: Build the application
-FROM node:24.19.0-slim AS builder
+FROM node:24.20.0-slim AS builder
 
 WORKDIR /app
 
