@@ -89,22 +89,21 @@ every change.
 
 1. Use Tailwind utility classes; compose, don't write custom CSS.
 2. Use DaisyUI component classes (`btn`, `card`, `badge`, `modal`).
-3. Dark theme is the default (`data-theme="nothing"`).
+3. Dark theme is the default (`data-theme="luxury"`).
 4. `prettier-plugin-tailwindcss` sorts classes — keep class order consistent.
 5. Use `react-icons` Phosphor (`Pi`) set for domain icons.
 
 ## Chart Conventions
 
-- Atomic design: `atoms/` → `charts/` → `templates/`
-- Each chart is self-contained under `src/components/charts/<Chart>/`:
-  `index.tsx` (fullscreen modal), `constants.ts` (line tables + optotype pools),
+- Atomic design: `atoms/` → `organisms/` → `templates/`
+- Each chart is self-contained under `src/components/organisms/<Chart>/`:
+  `index.tsx` (fullscreen chart), `constants.ts` (line tables + optotype pools),
   `utils/` (pure randomisation + generation)
 - **All chart logic lives in `utils/` as pure functions** — no DOM types, no UI
   imports; randomness goes through `Math.random` so tests can mock it
-- Every chart component receives `onClose: () => void`; route pages wire it to
-  `router.push('/')`
+- Charts take no props; route pages render them directly
 - Line sizing uses Tailwind arbitrary values (`text-[9rem]` …) tuned for a
-  fullscreen modal — do not introduce per-chart pixel logic
+  fullscreen chart — do not introduce per-chart pixel logic
 - Keyboard navigation belongs in a window-level `keydown` handler registered on
   mount and cleaned up on unmount
 

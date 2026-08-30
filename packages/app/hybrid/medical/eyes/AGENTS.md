@@ -22,13 +22,11 @@ Reference docs live in `docs/`:
 - `FC` type for components
 - `@/*` path aliases
 - DaisyUI component classes (`btn` + `btn-*`, `card`, `modal`, etc.)
-- Dark theme as default (`data-theme="nothing"` on `<html>`)
+- Dark theme as default (`data-theme="luxury"` on `<html>`)
 - `prettier-plugin-tailwindcss` for class sorting
-- Atomic design: atoms → charts → templates
+- Atomic design: atoms → organisms → templates
 - Chart letter/direction randomisation lives in each chart's `utils/`
   (`generateChart`, `randomLetters`, `randomDirections`) — pure functions
-- Each chart component receives `onClose: () => void`; route pages wire it to
-  `router.push('/')`
 - `console.*` stripped in production via `compiler.removeConsole`
 
 ## Commands
@@ -49,7 +47,7 @@ pnpm tauri dev|build # Desktop app via Tauri CLI
 src/app/            # App Router pages (+ info routes, error shells)
 src/components/
   atoms/            # Button, Badge, OfflineBadge
-  charts/           # SnellenChart, LogMARChart, TumblingEChart
+  organisms/        # Header, SnellenChart, LogMARChart, TumblingEChart
   templates/        # HomeTemplate, About/Downloads/Version/ErrorTemplate
 src/hooks/          # useOffline, useSWRegister, useUpdater
 src/lib/native/     # isTauri / notification helpers
@@ -63,5 +61,5 @@ e2e/                # Playwright specs
 ## Routes
 
 - `/` — home listing the three charts
-- `/snellen`, `/logmar`, `/tumbling-e` — fullscreen chart modals
+- `/snellen`, `/logmar`, `/tumbling-e` — fullscreen charts
 - `/about`, `/downloads`, `/version` — info pages

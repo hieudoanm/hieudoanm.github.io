@@ -44,9 +44,4 @@ describe('DownloadsTemplate', () => {
     expect(screen.getByText('v0.0.1')).toBeInTheDocument();
     expect(screen.getByText('Stable')).toBeInTheDocument();
   });
-
-  it('links back to home', () => {
-    render(<DownloadsTemplate {...PROPS} />);
-    expect(document.querySelector('a[href="/"]')).toBeInTheDocument();
-  });
 });

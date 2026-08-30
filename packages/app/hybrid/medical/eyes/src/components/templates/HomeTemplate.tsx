@@ -21,7 +21,7 @@ export const HomeTemplate: FC<HomeTemplateProps> = ({
   description,
   items,
 }) => (
-  <main className="flex min-h-screen flex-col items-center justify-center gap-8 p-8">
+  <main className="flex min-h-full flex-col items-center justify-center gap-8 p-8">
     <div className="flex flex-col items-center gap-4 text-center">
       <h1>{appName}</h1>
       <p className="text-base-content/70 max-w-md">{description}</p>

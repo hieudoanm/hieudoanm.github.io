@@ -30,8 +30,8 @@ src/
 ├── app/              # App Router pages and layouts (+ info routes)
 ├── components/       # Atomic design components
 │   ├── atoms/        # Smallest building blocks (Button, Badge, OfflineBadge)
-│   ├── charts/       # Self-contained charts (SnellenChart, LogMARChart,
-│   │                 # TumblingEChart) each with utils/ + __tests__/
+│   ├── organisms/    # Composite components — Header + charts (SnellenChart,
+│   │                 # LogMARChart, TumblingEChart) each with utils/ + tests
 │   └── templates/    # Page-level layouts (HomeTemplate, AboutTemplate,
 │                     # DownloadsTemplate, VersionTemplate, ErrorTemplate)
 ├── hooks/            # Custom React hooks (useOffline, useSWRegister, useUpdater)
@@ -51,7 +51,7 @@ src-tauri/            # Tauri shell (updater + dialog + notification plugins)
 ├─────────────────────────────────────────┤
 │  Templates (components/templates/)      │  HomeTemplate, info templates
 ├─────────────────────────────────────────┤
-│  Charts (components/charts/)            │  Fullscreen chart modals
+│  Organisms (components/organisms/)      │  Header + fullscreen charts
 ├─────────────────────────────────────────┤
 │  Atoms (components/atoms/)              │  Button, Badge, OfflineBadge
 ├─────────────────────────────────────────┤
@@ -68,15 +68,15 @@ Flat routes only — no dynamic `[id]` or `[slug]` segments.
 | Route          | Page     | Client | Purpose                                |
 | -------------- | -------- | ------ | -------------------------------------- |
 | `/`            | page.tsx | Yes    | Home: grid of chart cards              |
-| `/snellen/`    | page.tsx | Yes    | Fullscreen Snellen chart modal         |
-| `/logmar/`     | page.tsx | Yes    | Fullscreen LogMAR chart modal          |
-| `/tumbling-e/` | page.tsx | Yes    | Fullscreen Tumbling E chart modal      |
+| `/snellen/`    | page.tsx | Yes    | Fullscreen Snellen chart               |
+| `/logmar/`     | page.tsx | Yes    | Fullscreen LogMAR chart                |
+| `/tumbling-e/` | page.tsx | Yes    | Fullscreen Tumbling E chart            |
 | `/about/`      | page.tsx | No     | AboutTemplate                          |
 | `/downloads/`  | page.tsx | No     | DownloadsTemplate (release links)      |
 | `/version/`    | page.tsx | No     | VersionTemplate (build version + copy) |
 
-Chart pages render their chart inside a modal; every chart receives an
-`onClose: () => void` prop wired to `router.push('/')`.
+Chart pages render their chart fullscreen and centered; each chart takes no
+props.
 
 ## Rendering Strategy
 
@@ -102,8 +102,7 @@ Chart pages render their chart inside a modal; every chart receives an
    util (`Math.random`-based, mockable in tests)
 3. Navigation (Prev/Next buttons, dot navigator, arrow keys) moves through the
    line array and hides the revealed answer on every move
-4. Closing the modal calls `onClose` → `router.push('/')`
-5. Nothing persists — screening sessions are ephemeral by design
+4. Nothing persists — screening sessions are ephemeral by design
 
 ## Chart Logic Conventions
 
@@ -114,13 +113,13 @@ Chart pages render their chart inside a modal; every chart receives an
 - Randomisation helpers (`randomLetters`, `randomDirections`) are pure functions
   in `utils/` — zero UI imports, unit-tested directly
 - Line sizing uses Tailwind arbitrary `text-[…]rem` values scaled for a
-  fullscreen modal
+  fullscreen chart
 
 ## Styling
 
 - **Tailwind CSS 4** with `@tailwindcss/postcss` plugin
 - **DaisyUI 5** for component classes (`btn`, `card`, `modal`, `badge`, etc.)
-- **Dark theme** via the shared `nothing` theme (`data-theme="nothing"` on
+- **Dark theme** via the shared `luxury` theme (`data-theme="luxury"` on
   `<html>`) — charts stay readable in dim exam rooms
 - **Global base styles** in `src/styles/base.css`
 - **Themes** in `src/styles/themes.css`

@@ -14,17 +14,7 @@ export const AboutTemplate: FC<{
   version: string;
   items: InfoRow[];
 }> = ({ appName, name, description, version, items }) => (
-  <div className="flex min-h-dvh flex-col">
-    <header className="border-base-300 bg-base-100 sticky top-0 z-10 border-b px-6 py-4">
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <Link href="/" className="btn btn-ghost btn-sm">
-            <FiArrowLeft className="text-lg" />
-          </Link>
-          <h1 className="text-sm font-bold">{appName}</h1>
-        </div>
-      </div>
-    </header>
+  <div className="flex min-h-full flex-col">
     <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col items-center gap-6 p-6 text-center">
       <p className="text-base-content/50 text-xs tracking-[0.2em] uppercase">
         About

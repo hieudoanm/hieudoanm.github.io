@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import '@/styles/globals.css';
+import { Header } from '@/components/organisms/Header';
 import { SWProvider } from '@/providers/SWProvider';
 import { NativeProvider } from '@/providers/NativeProvider';
 import { FC, ReactNode } from 'react';
@@ -22,11 +23,12 @@ export const viewport: Viewport = {
 };
 
 const RootLayout: FC<{ children: ReactNode }> = ({ children }) => (
-  <html lang="en" data-theme="nothing">
+  <html lang="en" data-theme="luxury">
     <head>
       <link rel="apple-touch-icon" href="/icons/icon-192.png" />
     </head>
     <body className="bg-base-100 text-base-content h-screen overflow-y-auto font-mono">
+      <Header title="Eyes" />
       <SWProvider>
         <NativeProvider>{children}</NativeProvider>
       </SWProvider>
