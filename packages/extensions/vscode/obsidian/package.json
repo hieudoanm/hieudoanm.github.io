@@ -6,7 +6,7 @@
   "publisher": "hieudoanm",
   "license": "GPL-3.0",
   "engines": {
-    "node": "26.7.0",
+    "node": "26.8.1",
     "vscode": "1.999.0"
   },
   "categories": [
@@ -64,7 +64,7 @@
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
-    "@types/node": "26.2.0",
+    "@types/node": "26.4.0",
     "@types/vscode": "1.134.0",
     "@vscode/vsce": "3.9.2",
     "eslint": "10.9.1",

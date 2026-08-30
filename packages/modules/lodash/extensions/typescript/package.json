@@ -18,7 +18,7 @@
   "license": "GPL-3.0",
   "packageManager": "pnpm@11.23.0",
   "engines": {
-    "node": "26.7.0"
+    "node": "26.8.1"
   },
   "scripts": {
     "format": "prettier --cache --write .",
@@ -30,7 +30,7 @@
   "devDependencies": {
     "@eslint/js": "10.0.1",
     "@types/jest": "30.0.0",
-    "@types/node": "26.2.0",
+    "@types/node": "26.4.0",
     "eslint": "10.9.1",
     "globals": "17.11.0",
     "jest": "30.5.0",
