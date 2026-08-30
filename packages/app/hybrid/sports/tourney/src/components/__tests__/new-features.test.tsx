@@ -38,6 +38,16 @@ const match = (
 });
 
 describe('CalendarView', () => {
+  const FIXED_NOW = new Date(2026, 0, 15, 12, 0, 0).getTime();
+
+  beforeEach(() => {
+    jest.useFakeTimers();
+    jest.setSystemTime(FIXED_NOW);
+  });
+
+  afterEach(() => {
+    jest.useRealTimers();
+  });
   it('shows scheduled matches on their day and unscheduled ones separately', () => {
     render(
       <CalendarView
