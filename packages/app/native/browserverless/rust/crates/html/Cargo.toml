@@ -8,6 +8,6 @@ dom = { path = "../dom" }
 thiserror = { workspace = true }
 html5ever = { workspace = true }
 markup5ever = { workspace = true }
-tendril = "0.4"
+tendril = "0.5"
 
 [dev-dependencies]
