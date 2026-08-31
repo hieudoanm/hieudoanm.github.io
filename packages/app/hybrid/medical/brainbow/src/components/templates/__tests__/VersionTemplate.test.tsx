@@ -1,10 +1,10 @@
 import {
   act,
+  fireEvent,
   render,
   screen,
   waitFor,
 } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 import { VersionTemplate } from '@/components/templates/VersionTemplate';
 
 describe('VersionTemplate', () => {
@@ -75,10 +75,11 @@ describe('VersionTemplate', () => {
   });
 
   it('copies the version to the clipboard and shows copied state', async () => {
-    const user = userEvent.setup({ advanceTimers: jest.advanceTimersByTime });
     render(<VersionTemplate version="2024.01.01" />);
-    await user.click(screen.getByRole('button', { name: /Copy version/i }));
-    expect(writeTextSpy).toHaveBeenCalledWith('2024.01.01');
+    fireEvent.click(screen.getByRole('button', { name: /Copy version/i }));
+    await waitFor(() => {
+      expect(writeTextSpy).toHaveBeenCalledWith('2024.01.01');
+    });
     await waitFor(() => {
       expect(screen.getByText('Copied')).toBeInTheDocument();
     });
@@ -88,9 +89,8 @@ describe('VersionTemplate', () => {
   });
 
   it('reverts to copy state after timeout', async () => {
-    const user = userEvent.setup({ advanceTimers: jest.advanceTimersByTime });
     render(<VersionTemplate version="2024.01.01" />);
-    await user.click(screen.getByRole('button', { name: /Copy version/i }));
+    fireEvent.click(screen.getByRole('button', { name: /Copy version/i }));
     await waitFor(() => {
       expect(screen.getByText('Copied')).toBeInTheDocument();
     });
