@@ -70,6 +70,12 @@ every change.
 
 ### Testing
 
+Break tests into small per-file suites — one `*.test.ts` / `*.test.tsx` per unit
+(component, page, hook, util, provider), colocated in a `__tests__/` directory;
+never merge multiple units into one file. App pages are tested under
+`src/app/__tests__/` and route-group pages (`(app)`, `(info)`) colocate
+`__tests__/page.test.tsx` in the same folder.
+
 1. Unit-test every `utils.ts` exhaustively (rules tables, payout edges).
 2. Test hooks through user-visible flows (select bet → deal → settle → next
    round) with `renderHook` + `act`.

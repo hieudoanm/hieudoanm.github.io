@@ -1,6 +1,4 @@
 import type { FC } from 'react';
-import Link from 'next/link';
-import { FiArrowLeft } from 'react-icons/fi';
 
 interface InfoRow {
   label: string;
@@ -8,24 +6,12 @@ interface InfoRow {
 }
 
 export const AboutTemplate: FC<{
-  appName: string;
   name: string;
   description: string;
   version: string;
   items: InfoRow[];
-}> = ({ appName, name, description, version, items }) => (
-  <div className="flex min-h-dvh flex-col">
-    <header className="border-base-300 bg-base-100 sticky top-0 z-10 border-b px-6 py-4">
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <Link href="/" className="btn btn-ghost btn-sm">
-            <FiArrowLeft className="text-lg" />
-          </Link>
-          <h1 className="text-sm font-bold">{appName}</h1>
-        </div>
-      </div>
-    </header>
-    <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col items-center gap-6 p-6 text-center">
+}> = ({ name, description, version, items }) => (
+  <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col items-center justify-center gap-6 px-4 py-12 text-center sm:px-6">
       <p className="text-base-content/50 text-xs tracking-[0.2em] uppercase">
         About
       </p>
@@ -56,7 +42,6 @@ export const AboutTemplate: FC<{
         <span className="badge badge-neutral rounded-full">Stable</span>
       </div>
     </main>
-  </div>
 );
 
 AboutTemplate.displayName = 'AboutTemplate';

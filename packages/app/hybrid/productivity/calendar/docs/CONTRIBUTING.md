@@ -43,7 +43,11 @@ Follow the directory structure in [ARCHITECTURE.md](./ARCHITECTURE.md).
 - Use Tailwind CSS for styling (no inline styles)
 - Use DaisyUI component classes (`btn`, `card`, `select`, `badge`)
 - Mark client components with `"use client"` only when needed (state, events)
-- Co-locate test files with source: `Component.tsx` → `Component.test.tsx`
+- Break tests into small per-file suites colocated in `__tests__/`:
+  `Component.tsx` → `__tests__/Component.test.tsx`; one `*.test.ts(x)` per unit
+  (component, page, hook, util, provider) — never merge multiple units into one
+  file. App pages are tested under `src/app/__tests__/`; route-group pages
+  colocate `__tests__/page.test.tsx` in the same folder.
 
 ## Calendar Data
 

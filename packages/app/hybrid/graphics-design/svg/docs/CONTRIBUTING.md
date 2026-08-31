@@ -116,7 +116,7 @@ Structure components as atoms -> molecules -> organisms -> templates:
 2. Use Arrange-Act-Assert.
 3. Keep tests isolated — each test manages its own state.
 4. Cover boundary conditions and error cases alongside happy paths.
-5. Use `it.each` for data-driven tests; colocate tests with source files.
+5. Break tests into small per-file suites — one `*.test.ts` / `*.test.tsx` per unit (component, page, hook, util, provider) colocated in a `__tests__/` directory; never merge multiple units into one file. App pages are tested under `src/app/__tests__/` with a `*.test.tsx` matching each page, and pages in route groups (`(app)`, `(info)`) colocate `__tests__/page.test.tsx` in the same folder. Use `it.each` for data-driven tests.
 6. Maintain ≥90% coverage on statements, branches, functions, and lines —
    enforced by `coverageThreshold` in `jest.config.ts`; run
    `pnpm exec jest --coverageReporters=text` to view per-file coverage.

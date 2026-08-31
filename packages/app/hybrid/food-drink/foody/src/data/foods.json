@@ -1,0 +1,386 @@
+[
+  {
+    "emoji": "🍕",
+    "value": "margherita-pizza",
+    "label": "Margherita Pizza",
+    "category": "italian"
+  },
+  {
+    "emoji": "🍝",
+    "value": "spaghetti-carbonara",
+    "label": "Spaghetti Carbonara",
+    "category": "italian"
+  },
+  {
+    "emoji": "🥘",
+    "value": "lasagna",
+    "label": "Lasagna",
+    "category": "italian"
+  },
+  {
+    "emoji": "🍚",
+    "value": "risotto",
+    "label": "Risotto",
+    "category": "italian"
+  },
+  {
+    "emoji": "🍰",
+    "value": "tiramisu",
+    "label": "Tiramisu",
+    "category": "italian"
+  },
+  {
+    "emoji": "🥖",
+    "value": "bruschetta",
+    "label": "Bruschetta",
+    "category": "italian"
+  },
+  {
+    "emoji": "🫓",
+    "value": "focaccia",
+    "label": "Focaccia",
+    "category": "italian"
+  },
+  {
+    "emoji": "🍨",
+    "value": "gelato",
+    "label": "Gelato",
+    "category": "italian"
+  },
+  {
+    "emoji": "🍲",
+    "value": "bibimbap",
+    "label": "Bibimbap",
+    "category": "korean"
+  },
+  {
+    "emoji": "🍡",
+    "value": "tteokbokki",
+    "label": "Tteokbokki",
+    "category": "korean"
+  },
+  {
+    "emoji": "🥩",
+    "value": "bulgogi",
+    "label": "Bulgogi",
+    "category": "korean"
+  },
+  {
+    "emoji": "🍛",
+    "value": "kimchi-fried-rice",
+    "label": "Kimchi Fried Rice",
+    "category": "korean"
+  },
+  {
+    "emoji": "🥓",
+    "value": "samgyeopsal",
+    "label": "Samgyeopsal",
+    "category": "korean"
+  },
+  {
+    "emoji": "🥟",
+    "value": "mandu",
+    "label": "Mandu",
+    "category": "korean"
+  },
+  {
+    "emoji": "🍜",
+    "value": "jjajangmyeon",
+    "label": "Jjajangmyeon",
+    "category": "korean"
+  },
+  {
+    "emoji": "🍲",
+    "value": "sundubu-jjigae",
+    "label": "Sundubu-jjigae",
+    "category": "korean"
+  },
+  {
+    "emoji": "🍣",
+    "value": "sushi",
+    "label": "Sushi",
+    "category": "japanese"
+  },
+  {
+    "emoji": "🍜",
+    "value": "ramen",
+    "label": "Ramen",
+    "category": "japanese"
+  },
+  {
+    "emoji": "🍤",
+    "value": "tempura",
+    "label": "Tempura",
+    "category": "japanese"
+  },
+  {
+    "emoji": "🍥",
+    "value": "udon",
+    "label": "Udon",
+    "category": "japanese"
+  },
+  {
+    "emoji": "🐙",
+    "value": "takoyaki",
+    "label": "Takoyaki",
+    "category": "japanese"
+  },
+  {
+    "emoji": "🍙",
+    "value": "onigiri",
+    "label": "Onigiri",
+    "category": "japanese"
+  },
+  {
+    "emoji": "🍱",
+    "value": "bento-box",
+    "label": "Bento Box",
+    "category": "japanese"
+  },
+  {
+    "emoji": "🍢",
+    "value": "yakitori",
+    "label": "Yakitori",
+    "category": "japanese"
+  },
+  {
+    "emoji": "🥜",
+    "value": "pad-thai",
+    "label": "Pad Thai",
+    "category": "thai"
+  },
+  {
+    "emoji": "🦐",
+    "value": "tom-yum-goong",
+    "label": "Tom Yum Goong",
+    "category": "thai"
+  },
+  {
+    "emoji": "🥘",
+    "value": "green-curry",
+    "label": "Green Curry",
+    "category": "thai"
+  },
+  {
+    "emoji": "🥭",
+    "value": "mango-sticky-rice",
+    "label": "Mango Sticky Rice",
+    "category": "thai"
+  },
+  {
+    "emoji": "🌶️",
+    "value": "som-tam",
+    "label": "Som Tam",
+    "category": "thai"
+  },
+  {
+    "emoji": "🍛",
+    "value": "massaman-curry",
+    "label": "Massaman Curry",
+    "category": "thai"
+  },
+  {
+    "emoji": "🍛",
+    "value": "pad-kra-pao",
+    "label": "Pad Kra Pao",
+    "category": "thai"
+  },
+  {
+    "emoji": "🍗",
+    "value": "gai-yang",
+    "label": "Gai Yang",
+    "category": "thai"
+  },
+  {
+    "emoji": "🍜",
+    "value": "pho",
+    "label": "Pho",
+    "category": "vietnamese"
+  },
+  {
+    "emoji": "🥖",
+    "value": "banh-mi",
+    "label": "Banh Mi",
+    "category": "vietnamese"
+  },
+  {
+    "emoji": "🍖",
+    "value": "bun-cha",
+    "label": "Bun Cha",
+    "category": "vietnamese"
+  },
+  {
+    "emoji": "🥗",
+    "value": "goi-cuon",
+    "label": "Goi Cuon",
+    "category": "vietnamese"
+  },
+  {
+    "emoji": "🍳",
+    "value": "banh-xeo",
+    "label": "Banh Xeo",
+    "category": "vietnamese"
+  },
+  {
+    "emoji": "🍚",
+    "value": "com-tam",
+    "label": "Com Tam",
+    "category": "vietnamese"
+  },
+  {
+    "emoji": "🍜",
+    "value": "bun-bo-hue",
+    "label": "Bun Bo Hue",
+    "category": "vietnamese"
+  },
+  {
+    "emoji": "🥘",
+    "value": "ca-kho-to",
+    "label": "Ca Kho To",
+    "category": "vietnamese"
+  },
+  {
+    "emoji": "🌮",
+    "value": "tacos-al-pastor",
+    "label": "Tacos al Pastor",
+    "category": "mexican"
+  },
+  {
+    "emoji": "🧀",
+    "value": "quesadilla",
+    "label": "Quesadilla",
+    "category": "mexican"
+  },
+  {
+    "emoji": "🌽",
+    "value": "elote",
+    "label": "Elote",
+    "category": "mexican"
+  },
+  {
+    "emoji": "🫕",
+    "value": "enchiladas",
+    "label": "Enchiladas",
+    "category": "mexican"
+  },
+  {
+    "emoji": "🥨",
+    "value": "churros",
+    "label": "Churros",
+    "category": "mexican"
+  },
+  {
+    "emoji": "🥑",
+    "value": "guacamole",
+    "label": "Guacamole",
+    "category": "mexican"
+  },
+  {
+    "emoji": "🫔",
+    "value": "tamales",
+    "label": "Tamales",
+    "category": "mexican"
+  },
+  {
+    "emoji": "🍲",
+    "value": "pozole",
+    "label": "Pozole",
+    "category": "mexican"
+  },
+  {
+    "emoji": "🍔",
+    "value": "cheeseburger",
+    "label": "Cheeseburger",
+    "category": "american"
+  },
+  {
+    "emoji": "🌭",
+    "value": "hot-dog",
+    "label": "Hot Dog",
+    "category": "american"
+  },
+  {
+    "emoji": "🍗",
+    "value": "fried-chicken",
+    "label": "Fried Chicken",
+    "category": "american"
+  },
+  {
+    "emoji": "🧀",
+    "value": "mac-and-cheese",
+    "label": "Mac and Cheese",
+    "category": "american"
+  },
+  {
+    "emoji": "🍗",
+    "value": "buffalo-wings",
+    "label": "Buffalo Wings",
+    "category": "american"
+  },
+  {
+    "emoji": "🥗",
+    "value": "caesar-salad",
+    "label": "Caesar Salad",
+    "category": "american"
+  },
+  {
+    "emoji": "🍖",
+    "value": "bbq-ribs",
+    "label": "BBQ Ribs",
+    "category": "american"
+  },
+  {
+    "emoji": "🥧",
+    "value": "apple-pie",
+    "label": "Apple Pie",
+    "category": "american"
+  },
+  {
+    "emoji": "🥟",
+    "value": "dumpling",
+    "label": "Dumpling",
+    "category": "chinese"
+  },
+  {
+    "emoji": "🦆",
+    "value": "peking-duck",
+    "label": "Peking Duck",
+    "category": "chinese"
+  },
+  {
+    "emoji": "🍚",
+    "value": "yangzhou-fried-rice",
+    "label": "Yangzhou Fried Rice",
+    "category": "chinese"
+  },
+  {
+    "emoji": "🥠",
+    "value": "spring-roll",
+    "label": "Spring Roll",
+    "category": "chinese"
+  },
+  {
+    "emoji": "🍜",
+    "value": "dan-dan-noodles",
+    "label": "Dan Dan Noodles",
+    "category": "chinese"
+  },
+  {
+    "emoji": "🥘",
+    "value": "kung-pao-chicken",
+    "label": "Kung Pao Chicken",
+    "category": "chinese"
+  },
+  {
+    "emoji": "🍜",
+    "value": "chow-mein",
+    "label": "Chow Mein",
+    "category": "chinese"
+  },
+  {
+    "emoji": "🥟",
+    "value": "xiao-long-bao",
+    "label": "Xiao Long Bao",
+    "category": "chinese"
+  }
+]

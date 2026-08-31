@@ -1,2 +1,2 @@
-:HL["/free/foody/_next/static/chunks/0v2qk_nlb2ud7.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4180,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"Pv0o-IvF7wY8pRqUe4RZ5"}
+:HL["/free/foody/_next/static/chunks/35nia-e4vw0wv.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4180,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"5S_Z3BCqW6yQoXVFrayQR"}

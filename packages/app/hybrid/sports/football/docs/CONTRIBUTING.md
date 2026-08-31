@@ -35,6 +35,11 @@ pnpm dev        # http://localhost:3000
 
 ## Testing Conventions
 
+- Break tests into small per-file suites: one `*.test.ts` / `*.test.tsx` per
+  unit (component, page, hook, util, provider), colocated in a `__tests__/`
+  directory — never merge multiple units into one file.
+- App pages are tested under `src/app/__tests__/` (e.g. `page.test.tsx`); pages
+  in route groups colocate `__tests__/page.test.tsx` in the same folder.
 - Test behaviour, not implementation — drive components through labels, roles,
   and visible text
 - Arrange-Act-Assert in each test

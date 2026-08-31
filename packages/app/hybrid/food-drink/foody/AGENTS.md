@@ -16,9 +16,10 @@ world cuisines, built with Next.js and Tauri.
 
 ## Key Conventions
 
-- The randomizer feature is self-contained under
-  `src/components/features/randomizer/` — colocate hooks, constants, components
-  and tests.
+- The randomizer feature is wired up in
+  `src/components/organisms/randomizer/` (the `FoodRandomizer` organism), and
+  its reusable pieces live in `src/components/molecules/` (`CuisineSelect`,
+  `HowToModal`, `Reel`) and `src/hooks/` (`useFoodPicker`).
 - Jest treats every file inside `__tests__/` as a suite: keep shared fixtures in
   `<feature>/testing/`, not in `__tests__/`.
 - Pages are thin: they compose templates (`HomeTemplate`) and feature
@@ -34,10 +35,13 @@ world cuisines, built with Next.js and Tauri.
 
 ## Data
 
-Dishes live in `src/components/features/randomizer/constants.ts`: 32 foods
-across six cuisines (Italy, Korea, Japan, Thailand, Vietnam, Mexico). Each food
-has `{ emoji, value, label, category }`; `FOOD_OPTIONS` maps each cuisine plus
-`all` to label lists used by the reel and picker.
+Static food data lives in `src/data/`. The 32 dishes are the source of truth in
+`src/data/foods.csv` (edit the CSV, then run `pnpm foods:convert` to regenerate
+`src/data/foods.json`, which the app consumes). Each food has
+`{ emoji, value, label, category }`. Types (`Cuisine`, `Food`, `ScheduleEntry`),
+cuisines (`CUISINES`) and the Sheldon schedule (`SHELDON_SCHEDULE`) are also
+exported from `src/data/`. `FOOD_OPTIONS` maps each cuisine plus `all` to label
+lists used by the reel and picker.
 
 ## Documentation
 

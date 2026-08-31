@@ -53,7 +53,11 @@ most here:
 
 ### Unit tests (Jest + Testing Library)
 
-- Tests live next to the code: `src/**/__tests__/*.test.ts(x)`.
+- Break tests into small per-file suites — one `*.test.ts` / `*.test.tsx` per
+  unit (component, page, hook, util, provider), colocated in a `__tests__/`
+  directory; never merge multiple units into one file. App pages are tested
+  under `src/app/__tests__/` and route-group pages (`(app)`, `(info)`) colocate
+  `__tests__/page.test.tsx` in the same folder.
 - Name tests as specifications: `it('exports the resume as JSON', ...)`.
 - Use Arrange–Act–Assert; keep each test isolated (own fixtures, no shared
   mutable state). Prefer `it.each` for data-driven cases.

@@ -3,7 +3,6 @@ import { NextPage } from 'next';
 
 const AboutPage: NextPage = () => (
   <AboutTemplate
-    appName="Foody"
     name="Foody"
     description="Interactive food randomizer and foody tools"
     version="v0.0.1"
