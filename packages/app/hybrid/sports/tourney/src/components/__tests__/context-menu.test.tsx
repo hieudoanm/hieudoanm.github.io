@@ -79,4 +79,44 @@ describe('ContextMenu', () => {
     expect(onClick).toHaveBeenCalled();
     expect(screen.queryByText('Go')).not.toBeInTheDocument();
   });
+
+  it('stays closed until opened', () => {
+    const item = { label: 'Delete', destructive: true, onClick: jest.fn() };
+    render(
+      <ContextMenu items={[item]}>
+        <span>target</span>
+      </ContextMenu>
+    );
+    expect(screen.queryByText('Delete')).not.toBeInTheDocument();
+  });
+
+  it('opens on context menu and triggers the item action', () => {
+    const item = { label: 'Delete', destructive: true, onClick: jest.fn() };
+    render(
+      <ContextMenu items={[item]}>
+        <span>target</span>
+      </ContextMenu>
+    );
+    fireEvent.contextMenu(screen.getByText('target'), {
+      clientX: 100,
+      clientY: 100,
+    });
+    expect(screen.getByText('Delete')).toBeInTheDocument();
+    fireEvent.click(screen.getByText('Delete'));
+    expect(item.onClick).toHaveBeenCalled();
+  });
+
+  it('renders non-destructive items without the destructive style', () => {
+    const normal = { label: 'Rename', onClick: jest.fn() };
+    render(
+      <ContextMenu items={[normal]}>
+        <span>target</span>
+      </ContextMenu>
+    );
+    fireEvent.contextMenu(screen.getByText('target'), {
+      clientX: 100,
+      clientY: 100,
+    });
+    expect(screen.getByText('Rename')).toBeInTheDocument();
+  });
 });

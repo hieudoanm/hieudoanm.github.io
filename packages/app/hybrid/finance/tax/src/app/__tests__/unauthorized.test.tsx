@@ -17,5 +17,6 @@ describe('unauthorized', () => {
   it('has link to login', () => {
     render(<Unauthorized />);
     expect(screen.getByText('Login')).toBeTruthy();
+    expect(screen.getByText('Login')).toHaveAttribute('href', '/login');
   });
 });

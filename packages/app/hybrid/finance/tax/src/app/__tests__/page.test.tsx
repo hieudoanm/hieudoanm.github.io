@@ -16,4 +16,9 @@ describe('Root page', () => {
       expect(useRouter().replace).toHaveBeenCalledWith('/personal');
     });
   });
+
+  it('renders a loading spinner while redirecting', () => {
+    render(<RootPage />);
+    expect(document.querySelector('.loading-spinner')).toBeInTheDocument();
+  });
 });

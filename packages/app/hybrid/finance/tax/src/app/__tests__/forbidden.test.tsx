@@ -11,5 +11,6 @@ describe('forbidden', () => {
   it('has link to home', () => {
     render(<Forbidden />);
     expect(screen.getByText('Go Home')).toBeTruthy();
+    expect(screen.getByText('Go Home')).toHaveAttribute('href', '/');
   });
 });

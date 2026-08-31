@@ -17,5 +17,6 @@ describe('not-found', () => {
   it('has link to home', () => {
     render(<NotFound />);
     expect(screen.getByText('Go Home')).toBeTruthy();
+    expect(screen.getByText('Go Home')).toHaveAttribute('href', '/');
   });
 });

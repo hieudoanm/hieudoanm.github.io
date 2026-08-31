@@ -5,5 +5,6 @@ describe('loading', () => {
   it('renders loading spinner', () => {
     const { container } = render(<Loading />);
     expect(container.querySelector('.loading')).toBeTruthy();
+    expect(container.querySelector('.loading-spinner')).toBeInTheDocument();
   });
 });

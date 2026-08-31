@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import RootLayout from '../layout';
+import RootLayout, { metadata } from '../layout';
 
 jest.mock('@/providers/Providers', () => ({
   Providers: ({ children }: { children: React.ReactNode }) => (
@@ -8,6 +8,12 @@ jest.mock('@/providers/Providers', () => ({
 }));
 
 describe('layout', () => {
+  it('exports app metadata', () => {
+    expect(metadata.title).toBe('Tax');
+    expect(metadata.manifest).toBe('/manifest.json');
+    expect((metadata.appleWebApp as { capable?: boolean }).capable).toBe(true);
+  });
+
   it('renders children in providers', () => {
     render(
       <RootLayout>
