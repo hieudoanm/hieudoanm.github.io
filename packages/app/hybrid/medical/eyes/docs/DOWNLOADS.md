@@ -1,15 +1,52 @@
 # Eyes
 
+> Visual acuity screening charts — Snellen, LogMAR, and Tumbling E — as a hybrid
+> web/desktop app. Randomized, keyboard-friendly, and ready wherever you screen:
+> phone, tablet, laptop, and desktop.
+
+![Android 14+](https://img.shields.io/badge/Android-14%2B-green)
+![Linux](https://img.shields.io/badge/Linux-22.04%2B-blue)
+![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
+![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
+
+```txt
+┌──────────────────────────────────────────────┐
+│  Snellen          20/20      [ Reveal ]      │
+│                                              │
+│              E F P                            │
+│            T O Z L                            │
+│           P E C F D                           │
+│          L O P T C                            │
+│        █ D F C Z █                           │
+│                                              │
+│   ◀  ───── 10 lines ──────  ▶                │
+└──────────────────────────────────────────────┘
+```
+
+---
+
+## Latest release
+
+- **Version:** `app-hybrid-medical-eyes-latest` — updates ship continuously.
+- **What's new:** see the [roadmap](ROADMAP) and [CONTRIBUTING](CONTRIBUTING).
+
+---
+
 ## Installation
 
-| Platform | Distro | Architecture | Requirements | Download Link                              |
-| -------- | ------ | ------------ | ------------ | ------------------------------------------ |
-| Android  |        | Universal    | 14.+         | [Download `.apk`][download-apk]            |
-| Android  |        | Universal    | 14.+         | [Download `.aab`][download-aab]¹           |
-| Linux    | Ubuntu | amd64        | 22.04.+      | [Download `.AppImage`][download-app-image] |
-| Linux    | Debian | amd64        | 13.+         | [Download `.deb`][download-deb]            |
-| macOS    |        | aarch64      | 13.+         | [Download `.dmg`][download-dmg]²           |
-| Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi]            |
+Pick the right file for your device — Android phones install the `.apk`, and
+Linux/macOS/Windows grab their native package below.
+
+### Downloads
+
+| No  | Platform | Distro | Architecture | Requirements | Download Link                     | Note |
+| --- | -------- | ------ | ------------ | ------------ | --------------------------------- | ---- |
+| 1   | Android  |        | Universal    | 14.+         | [Download `.apk`][download-apk]   | Install directly |
+| 2   | Android  |        | Universal    | 14.+         | [Download `.aab`][download-aab]¹  | For store upload |
+| 3   | Linux    | Ubuntu | amd64        | 22.04.+      | [Download `.AppImage`][download-app-image] | Run — no install |
+| 4   | Linux    | Debian | amd64        | 13.+         | [Download `.deb`][download-deb]   | |
+| 5   | macOS    |        | aarch64      | 13.+         | [Download `.dmg`][download-dmg]²  | Apple Silicon |
+| 6   | Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi]   | |
 
 [download-apk]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-eyes-latest/app-universal-release.apk
@@ -24,22 +61,61 @@
 [download-msi]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-eyes-latest/eyes_x64.msi
 
+<br>
+
+¹ `.aab` is for uploading to the Google Play Store — use the `.apk` to install
+directly.
+² `.dmg` is built for Apple Silicon.
+
 ### Checksums
 
-SHA-256 digests for every asset are published alongside the release in
-[SHA256SUMS.txt][checksums].
+> 🛡️ **Verify your download.** Every asset is published with a SHA-256 digest so
+> you can confirm the file you got is exactly the file we shipped. See
+> [SHA256SUMS.txt][checksums].
 
 [checksums]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-eyes-latest/SHA256SUMS.txt
 
+### Build from Source
+
+Prefer to build it yourself? Clone, install, and build in three steps:
+
+```bash
+git clone https://github.com/hieudoanm/hieudoanm.github.io.git
+cd packages/app/hybrid/medical/eyes
+pnpm install
+pnpm tauri build
+```
+
+See [PACKAGING](PACKAGING) for per-platform build checklists and
+[CONTRIBUTING](CONTRIBUTING) for setup and dev commands.
+
+## First Run
+
+Per-platform launch tips:
+
+- **macOS** — right-click the `.dmg` then **Open** to bypass Gatekeeper the
+  first time, or find the app bundle inside.
+- **Linux** — make it runnable: `chmod +x eyes_amd64.AppImage` then double-click.
+- **Windows** — SmartScreen may warn; choose **More info → Run anyway**.
+- **Android** — if Play Protect warns, tap **Install anyway**.
+
+---
+
 ## About
 
-Eyes — visual acuity screening charts (Snellen, LogMAR, Tumbling E) as a hybrid
-web/desktop app.
+Screening your vision, one randomized line at a time. Eyes brings Snellen,
+LogMAR, and Tumbling E acuity charts into a hybrid web/desktop app with
+randomized letters, fullscreen routes, and keyboard navigation — so screening
+is consistent, never memorized, and works on any screen.
+
+---
 
 ## Features
 
-## Project Foundation
+Three clinically familiar charts plus a rock-solid app shell.
+
+### 🧱 Project Foundation
 
 - Monorepo scaffold following the `brainbow` app conventions
   (`packages/app/hybrid/medical/eyes`)
@@ -48,14 +124,14 @@ web/desktop app.
 - Shared design system: DaisyUI `nothing` theme, base layout, navigation shell
 - CI: lint, typecheck, build web export, build Tauri desktop artifact
 
-## Home & Navigation
+### 🏠 Home & Navigation
 
 - Card grid listing all three charts with icons and descriptions
 - Fullscreen chart routes opened from home; closing returns to `/`
 - Error shells: 404 / 403 / 401 / 500 templates plus loading state
 - Offline badge driven by `useOffline`
 
-## Snellen Chart (`/snellen/`)
+### 👁️ Snellen Chart (`/snellen/`)
 
 - Ten lines from **20/200** down to **20/10** (1 → 10 Sloan-style letters per
   line from the `CDEFHKLNOPRSTUV` pool)
@@ -65,7 +141,7 @@ web/desktop app.
 - Arrow-key navigation through a window `keydown` handler
 - First/last line bounds disable navigation at the ends
 
-## LogMAR Chart (`/logmar/`)
+### 📏 LogMAR Chart (`/logmar/`)
 
 - Fourteen lines from **1.0** down to **-0.3 logMAR** with Snellen equivalents
   (20/200 → 20/10) and per-line scores
@@ -73,14 +149,14 @@ web/desktop app.
   session
 - Same modal UX: line navigation, reveal/hide, keyboard support
 
-## Tumbling E Chart (`/tumbling-e/`)
+### 🔠 Tumbling E Chart (`/tumbling-e/`)
 
 - Ten lines from **20/200** down to **20/10** (1 → 10 optotypes per line)
 - Letter E randomised across four rotations (right / down / left / up) per
   position — suitable for illiterate or non-Latin-script patients
 - Direction legend rendered with the optotype row
 
-## Info Pages & PWA
+### ℹ️ Info Pages & PWA
 
 - `/about/` — purpose, charts overview, disclaimer
 - `/downloads/` — desktop release links (Linux `.AppImage` / `.deb`, macOS
@@ -89,20 +165,25 @@ web/desktop app.
 - Installable PWA: manifest + icons generated from the Tauri icon set
 - Service worker caches the shell and all chart routes for offline screening
 
-## Desktop (Tauri)
+### 🖥️ Desktop (Tauri)
 
 - Auto-update checks via `tauri-plugin-updater`
 - Native dialogs via `tauri-plugin-dialog`
 - Notifications via `tauri-plugin-notification`
 
-## Requirements
+---
 
-- Android 14+
-- Linux (Ubuntu) 22.04+
-- Linux (Debian) 13+
-- macOS 13+
-- Windows 10+
+## First run
 
-## LICENSE
+---
+
+## Next steps
+
+- [CONTRIBUTING](CONTRIBUTING) — set up the dev environment and start tinkering.
+- [ROADMAP](ROADMAP) — see what's coming next on the roadmap.
+
+---
+
+## License
 
 See [LICENSE](LICENSE).

@@ -1,15 +1,50 @@
 # Database
 
+> A tiny DBeaver / pgAdmin you can throw in your pocket — browse tables, run
+> queries, and design schemas on your phone, tablet, laptop, or desktop.
+
+![Android 14+](https://img.shields.io/badge/Android-14%2B-green)
+![Linux](https://img.shields.io/badge/Linux-22.04%2B-blue)
+![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
+![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
+
+```txt
+┌─────────────────────────────────────┐
+│  DATABASE                ⚙  👤     │
+├──────────┬──────────────────────────┤
+│ Schema   │  SELECT * FROM users     │
+│ ──────── │  WHERE active = true;    │
+│ 📁 Tables│  ─────────────────────   │
+│  customers│  id │ name   │ email   │
+│  orders   │  1  │ Alice  │ a@…     │
+│  products │  2  │ Bob    │ b@…     │
+│ 📁 Views │  (2 rows, 3 ms)         │
+└──────────┴──────────────────────────┘
+```
+
+---
+
+## Latest release
+
+- **Version:** `app-hybrid-developer-tools-database-latest` — updates ship continuously.
+- **What's new:** see the [roadmap](ROADMAP) and [CONTRIBUTING](CONTRIBUTING).
+
+---
+
 ## Installation
 
-| Platform | Distro | Architecture | Requirements | Download Link                              |
-| -------- | ------ | ------------ | ------------ | ------------------------------------------ |
-| Android  |        | Universal    | 14.+         | [Download `.apk`][download-apk]            |
-| Android  |        | Universal    | 14.+         | [Download `.aab`][download-aab]¹           |
-| Linux    | Ubuntu | amd64        | 22.04.+      | [Download `.AppImage`][download-app-image] |
-| Linux    | Debian | amd64        | 13.+         | [Download `.deb`][download-deb]            |
-| macOS    |        | aarch64      | 13.+         | [Download `.dmg`][download-dmg]²           |
-| Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi]            |
+Pick the file that matches your platform and you're good to go.
+
+### Downloads
+
+| No  | Platform | Distro | Architecture | Requirements | Download Link                              | Note             |
+| --- | -------- | ------ | ------------ | ------------ | ------------------------------------------ | ---------------- |
+| 1   | Android  |        | Universal    | 14.+         | [Download `.apk`][download-apk]            | Install directly |
+| 2   | Android  |        | Universal    | 14.+         | [Download `.aab`][download-aab]¹           | For store upload |
+| 3   | Linux    | Ubuntu | amd64        | 22.04.+      | [Download `.AppImage`][download-app-image] | Run — no install |
+| 4   | Linux    | Debian | amd64        | 13.+         | [Download `.deb`][download-deb]            |                  |
+| 5   | macOS    |        | aarch64      | 13.+         | [Download `.dmg`][download-dmg]²           | Apple Silicon    |
+| 6   | Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi]            |                  |
 
 [download-apk]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-database-latest/app-universal-release.apk
@@ -24,31 +59,57 @@
 [download-msi]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-database-latest/database_x64.msi
 
+<br>
+
+¹ The `.aab` bundle is for Google Play upload, not direct install.
+
+² Apple Silicon (M1+) only. macOS 13 required.
+
 ### Checksums
 
-SHA-256 digests for every asset are published alongside the release in
-[SHA256SUMS.txt][checksums].
+> 🛡️ **Verify your download.** Every asset is published with a SHA-256 digest so
+> you can confirm the file you got is exactly the file we shipped. See
+> [SHA256SUMS.txt][checksums].
 
 [checksums]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-database-latest/SHA256SUMS.txt
 
+### Build from Source
+
+Prefer to build it yourself? Clone, install, and build in three steps:
+
+```bash
+git clone https://github.com/hieudoanm/hieudoanm.github.io.git
+cd packages/app/hybrid/developer-tools/database
+pnpm install
+pnpm tauri build
+```
+
+See [PACKAGING](PACKAGING) for per-platform build checklists and
+[CONTRIBUTING](CONTRIBUTING) for setup and dev commands.
+
+---
+
 ## About
 
-Database — minimal pgAdmin / DBeaver for SQLite today (sql.js); mock PostgreSQL,
-MySQL, and Redis support planned.
+A pocket-sized SQL studio — browse schemas, write queries, inspect ER
+diagrams, and manage SQLite databases right from your phone or desktop.
+
+---
 
 ## Features
 
-## Connections & Schema
+From connection management to ER diagrams, this one covers the full
+database workflow.
 
+### 🔗 Connections & Schema
 - Connection list with add/delete
 - Edit existing connection
 - Schema browser tree view
 - Schema search filter (table filter in sidebar, Ctrl+K to focus)
 - Mock database seed data (customers, orders, products tables)
 
-## Query Editor
-
+### ✏️ Query Editor
 - SQL query editor with syntax highlighting
 - Execute query with loading state
 - Keyboard shortcuts (Ctrl+Enter execute, Ctrl+Shift+Enter format, Ctrl+/
@@ -62,8 +123,7 @@ MySQL, and Redis support planned.
 - Query execution time tracking (sql.js path, elapsed ms in status bar)
 - Explain query plan (real `EXPLAIN QUERY PLAN` via sql.js)
 
-## Results
-
+### 📋 Results
 - Results table with sorting and pagination
 - Results export (CSV, JSON, Markdown, SQL INSERT)
 - Data viewer with browse/paginate
@@ -73,23 +133,20 @@ MySQL, and Redis support planned.
 - Copy row as SQL INSERT / JSON (per-row menu)
 - Multiple result tabs (each query/explain opens a tab)
 
-## Table Designer
-
+### 🎨 Table Designer
 - Table designer (add/remove columns, types, PK / NOT NULL constraints)
 - Live CREATE TABLE preview (updates as you type)
 - Foreign key editor (per-column FK table/column selects)
 - Export database as SQL dump
 - Export table as CSV / JSON / SQL INSERT
 
-## Import
-
+### 📥 Import
 - Import CSV wizard (file select, delimiter, column mapping, preview)
 - Import JSON (paste/array, map to table, execute)
 - Batch import with progress indicator (500-row chunks)
 - Import validation and error reporting (per-row warnings)
 
-## Schema Intelligence
-
+### 🧠 Schema Intelligence
 - Schema Library (`/posts`: 10 classic schemas with hand-written markdown)
 - ER diagram with tables and relationships (live, from the open database)
 - Zoom/pan on ER diagram (scroll to zoom at cursor, drag to pan, fit / zoom
@@ -100,8 +157,7 @@ MySQL, and Redis support planned.
 - Index usage statistics (mock)
 - Export ER diagram as PNG/SVG
 
-## Redis (planned)
-
+### 🔴 Redis (planned)
 Mock in-browser Redis engine, consistent with the offline-first SQLite path. See
 `docs/ROADMAP.md` Phase 8.
 
@@ -116,8 +172,7 @@ Mock in-browser Redis engine, consistent with the offline-first SQLite path. See
   commands/sec)
 - Redis import/export (JSON dump, RDB-style export)
 
-## UX & Platform
-
+### 🖥️ UX & Platform
 - Responsive layout (collapsible sidebar)
 - Resizable panel dividers (sidebar drag handle, 160–480px)
 - Collapsible sidebar
@@ -125,14 +180,28 @@ Mock in-browser Redis engine, consistent with the offline-first SQLite path. See
 - Skeleton loading states
 - Tauri desktop app build (bundling configured; signing/updater not yet)
 
-## Requirements
+---
 
-- Android 14+
-- Linux (Ubuntu) 22.04+
-- Linux (Debian) 13+
-- macOS 13+
-- Windows 10+
+# First run
 
-## LICENSE
+- **macOS:** Right-click the `.dmg` and choose **Open** to bypass Gatekeeper.
+- **Linux AppImage:** `chmod +x database_amd64.AppImage && ./database_amd64.AppImage`
+- **Windows SmartScreen:** Click **More info → Run anyway** if prompted.
+- **Android Play Protect:** Tap **Install anyway** if the warning appears.
+
+---
+
+## First run
+
+---
+
+## Next steps
+
+- Check [CONTRIBUTING](CONTRIBUTING) for dev setup, coding conventions, and how to run tests.
+- Browse the [ROADMAP](ROADMAP) for what's shipping next.
+
+---
+
+## License
 
 See [LICENSE](LICENSE).

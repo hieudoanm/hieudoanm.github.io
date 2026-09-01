@@ -1,15 +1,54 @@
 # Open Keynotes
 
+> An offline-first, in-browser presentation tool modeled on PowerPoint, Google
+> Slides, and Apple Keynote — no server required. Works on your phone, tablet,
+> laptop, and desktop so your slides go wherever you do.
+
+![Android 14+](https://img.shields.io/badge/Android-14%2B-green)
+![Linux](https://img.shields.io/badge/Linux-22.04%2B-blue)
+![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
+![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
+
+```txt
+┌────────────────────────────────────────────────────┐
+│ 🎤 Open Keynotes    [Present ▶] [Redo] [Undo] [⚙] │
+├──────┬─────────────────────────────────────────────┤
+│ 📄   │                                             │
+│ [1]  │        ┌─────────────────────────┐          │
+│ [2]  │        │                         │          │
+│ [3]  │        │   Quarterly Report Q4   │          │
+│ [4]  │        │                         │          │
+│      │        │   Revenue ↑  32%        │          │
+│      │        │   Users   ↑  18%        │          │
+│      │        └─────────────────────────┘          │
+├──────┴─────────────────────────────────────────────┤
+│ Slide 2 of 12  │  Speaker Notes: Review key metrics│
+└────────────────────────────────────────────────────┘
+```
+
+---
+
+## Latest release
+
+- **Version:** `app-hybrid-productivity-keynotes-latest` — updates ship continuously.
+- **What's new:** see the [roadmap](ROADMAP) and [CONTRIBUTING](CONTRIBUTING).
+
+---
+
 ## Installation
 
-| Platform | Distro | Architecture | Requirements | Download Link                              |
-| -------- | ------ | ------------ | ------------ | ------------------------------------------ |
-| Android  |        | Universal    | 14.+         | [Download `.apk`][download-apk]            |
-| Android  |        | Universal    | 14.+         | [Download `.aab`][download-aab]¹           |
-| Linux    | Ubuntu | amd64        | 22.04.+      | [Download `.AppImage`][download-app-image] |
-| Linux    | Debian | amd64        | 13.+         | [Download `.deb`][download-deb]            |
-| macOS    |        | aarch64      | 13.+         | [Download `.dmg`][download-dmg]²           |
-| Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi]            |
+Pick the right file for your platform.
+
+### Downloads
+
+| No  | Platform | Distro | Architecture | Requirements | Download Link | Note |
+| --- | -------- | ------ | ------------ | ------------ | ------------- | ---- |
+| 1   | Android  |        | Universal    | 14.+         | [Download `.apk`][download-apk] | Install directly |
+| 2   | Android  |        | Universal    | 14.+         | [Download `.aab`][download-aab]¹ | For store upload ¹ |
+| 3   | Linux    | Ubuntu | amd64        | 22.04.+      | [Download `.AppImage`][download-app-image] | Run — no install |
+| 4   | Linux    | Debian | amd64        | 13.+         | [Download `.deb`][download-deb] | |
+| 5   | macOS    |        | aarch64      | 13.+         | [Download `.dmg`][download-dmg]² | Apple Silicon ² |
+| 6   | Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi] | |
 
 [download-apk]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-keynotes-latest/app-universal-release.apk
@@ -24,18 +63,52 @@
 [download-msi]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-keynotes-latest/keynotes_x64.msi
 
+<br>
+
+¹ The `.aab` bundle is for Google Play store upload — sideload the `.apk`
+instead.
+
+² The `.dmg` is a universal Apple Silicon binary.
+
+## First run
+
+- **macOS** — right-click the `.dmg` and choose **Open** to bypass Gatekeeper.
+- **Linux** — `chmod +x keynotes_amd64.AppImage && ./keynotes_amd64.AppImage`.
+- **Windows** — SmartScreen may warn; click **More info → Run anyway**.
+- **Android** — Play Protect may block; tap **Install anyway**.
+
 ### Checksums
 
-SHA-256 digests for every asset are published alongside the release in
-[SHA256SUMS.txt][checksums].
+> 🛡️ **Verify your download.** Every asset is published with a SHA-256 digest so
+> you can confirm the file you got is exactly the file we shipped. See
+> [SHA256SUMS.txt][checksums].
 
 [checksums]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-keynotes-latest/SHA256SUMS.txt
 
+### Build from Source
+
+Prefer to build it yourself? Clone, install, and build in three steps:
+
+```bash
+git clone https://github.com/hieudoanm/hieudoanm.github.io.git
+cd packages/app/hybrid/productivity/keynotes
+pnpm install
+pnpm tauri build
+```
+
+See [PACKAGING](PACKAGING) for per-platform build checklists and
+[CONTRIBUTING](CONTRIBUTING) for setup and dev commands.
+
+---
+
 ## About
 
-Keynotes — an offline-first, in-browser presentation tool modeled on PowerPoint,
-Google Slides, and Apple Keynote. Mock in-browser engine, no server required.
+An offline-first, in-browser presentation tool modeled on PowerPoint, Google
+Slides, and Apple Keynote — full WYSIWYG canvas, rich animations, presenter
+view, and export to PPTX/PDF/HTML, all running without a server.
+
+---
 
 ## Features
 
@@ -43,7 +116,7 @@ Google Slides, and Apple Keynote. Mock in-browser engine, no server required.
 >
 > See [docs/ROADMAP.md](docs/ROADMAP.md) for the full phased roadmap.
 
-## Editor
+### ✏️ Editor
 
 1. [~] Deck management — create, rename, delete, list; duplicate deck is a
    no-op; no deck thumbnails
@@ -63,7 +136,7 @@ Google Slides, and Apple Keynote. Mock in-browser engine, no server required.
 9. [ ] Rulers, guides, gridlines, snap-to-grid, smart alignment guides
 10. [~] Page setup — 16:9, 4:3, custom width/height; no portrait/landscape
 
-## Formatting
+### 🎨 Formatting
 
 1. [~] Fill styles — solid, gradient (two stops + angle), pattern, opacity; no
    multi-stop gradient or image fill
@@ -84,7 +157,7 @@ Google Slides, and Apple Keynote. Mock in-browser engine, no server required.
 13. [~] Resize — drag handles + exact size in panel; aspect-lock not exposed
 14. [x] Position & size panel — x/y/w/h, rotation, opacity, lock
 
-## Content
+### 🖼️ Content
 
 1. [~] Images — insert by URL, border, rounded corners; no upload, drag-drop,
    paste, or crop
@@ -100,7 +173,7 @@ Google Slides, and Apple Keynote. Mock in-browser engine, no server required.
 9. [ ] Screenshot capture; [ ] hyperlinks
 10. [~] Embeds — YouTube, Mermaid, code snippets
 
-## Animation & Transitions
+### 🎬 Animation & Transitions
 
 1. [x] Entrance animations — 21 effects (fade, fly, zoom, wipe, bounce, slide,
        flip, …)
@@ -119,7 +192,7 @@ Google Slides, and Apple Keynote. Mock in-browser engine, no server required.
 11. [ ] Morph engine (label only)
 12. [x] Auto-advance timings (per-slide seconds)
 
-## Slide System
+### 🧩 Slide System
 
 1. [x] Slide master — editable placeholder UI (Master panel) + apply to slide
 2. [x] Layout library — 10 layouts
@@ -135,7 +208,7 @@ Google Slides, and Apple Keynote. Mock in-browser engine, no server required.
 10. [x] Duplicate / hide slides
 11. [x] Reuse slides from other decks (picker + insert)
 
-## Presentation
+### 🎤 Presentation
 
 1. [x] Fullscreen presentation mode — click/keyboard/arrow advance, Esc to exit
 2. [x] Presenter view — current slide, next-slide preview, notes, timer
@@ -146,7 +219,7 @@ Google Slides, and Apple Keynote. Mock in-browser engine, no server required.
 7. [x] Live captions / subtitles (Web Speech API)
 8. [x] Rehearsal mode — per-slide timing feedback + summary
 
-## Import / Export
+### 📤 Import / Export
 
 1. [x] Native JSON project files — export + import
 2. [x] Export PPTX (mock archive), [x] export PDF (print route), [x] export HTML
@@ -157,7 +230,7 @@ Google Slides, and Apple Keynote. Mock in-browser engine, no server required.
 5. [x] Image story (long SVG/PNG); [x] theme/template export (.theme); [x]
        handouts (1/2/3/6 slides per printed page)
 
-## Collaboration
+### 🤝 Collaboration
 
 1. [~] Realtime multiplayer (mock: BroadcastChannel across tabs) — provider
    level only
@@ -166,7 +239,7 @@ Google Slides, and Apple Keynote. Mock in-browser engine, no server required.
 4. [~] Version history — automatic snapshots + restore API; no UI, no diff
 5. [ ] Sharing links; [ ] review mode; [ ] snapshot sharing
 
-## Platform
+### 📱 Platform
 
 1. [ ] Tauri desktop build
 2. [~] Offline support (IndexedDB) — no PWA service worker
@@ -179,14 +252,20 @@ Google Slides, and Apple Keynote. Mock in-browser engine, no server required.
 7. [~] Dark theme (DaisyUI `night`) — no light theme toggle
 8. [ ] Diagnostics (engine status, storage usage, performance)
 
-## Requirements
+---
 
-- Android 14+
-- Linux (Ubuntu) 22.04+
-- Linux (Debian) 13+
-- macOS 13+
-- Windows 10+
+## First run
 
-## LICENSE
+---
+
+## Next steps
+
+- Found a bug or want a feature? See [CONTRIBUTING](CONTRIBUTING) to get
+  started.
+- Curious what's coming next? Check the [roadmap](ROADMAP).
+
+---
+
+## License
 
 No LICENSE file is included for this project.

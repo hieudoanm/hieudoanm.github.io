@@ -1,15 +1,55 @@
 # API
 
+> A full-scale API client — compose requests, inspect responses, and debug
+> protocols across phone, tablet, laptop, and desktop. It runs everywhere.
+
+![Android 14+](https://img.shields.io/badge/Android-14%2B-green)
+![Linux](https://img.shields.io/badge/Linux-22.04%2B-blue)
+![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
+![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
+
+```txt
+┌──────────────────────────────────────────┐
+│  API Client                              │
+│  ──────────────────────────────────────  │
+│  POST https://api.example.com/v1/users   │
+│  ┌────────────────────────────────────┐  │
+│  │ Key         │ Value                │  │
+│  │ Content-Type│ application/json     │  │
+│  │ Authorization│ Bearer eyJ...       │  │
+│  └────────────────────────────────────┘  │
+│  { "name": "Ada", "role": "engineer" }   │
+│                                          │
+│  ▶ Send                      200 OK 42ms │
+│  ┌────────────────────────────────────┐  │
+│  │ { "id": 42, "name": "Ada" }       │  │
+│  └────────────────────────────────────┘  │
+└──────────────────────────────────────────┘
+```
+
+---
+
+## Latest release
+
+- **Version:** `app-hybrid-developer-tools-api-latest` — updates ship continuously.
+- **What's new:** see the [roadmap](ROADMAP) and [CONTRIBUTING](CONTRIBUTING).
+
+---
+
 ## Installation
 
-| Platform | Distro | Architecture | Requirements | Download Link                              |
-| -------- | ------ | ------------ | ------------ | ------------------------------------------ |
-| Android  |        | Universal    | 14.+         | [Download `.apk`][download-apk]            |
-| Android  |        | Universal    | 14.+         | [Download `.aab`][download-aab]¹           |
-| Linux    | Ubuntu | amd64        | 22.04.+      | [Download `.AppImage`][download-app-image] |
-| Linux    | Debian | amd64        | 13.+         | [Download `.deb`][download-deb]            |
-| macOS    |        | aarch64      | 13.+         | [Download `.dmg`][download-dmg]²           |
-| Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi]            |
+Pick the file that matches your platform.
+
+### Downloads
+
+| No  | Platform | Distro | Architecture | Requirements | Download Link                              | Note              |
+| --- | -------- | ------ | ------------ | ------------ | ------------------------------------------ | ----------------- |
+| 1   | Android  |        | Universal    | 14.+         | [Download `.apk`][download-apk]            | Install directly  |
+| 2   | Android  |        | Universal    | 14.+         | [Download `.aab`][download-aab]¹           | For store upload  |
+| 3   | Linux    | Ubuntu | amd64        | 22.04.+      | [Download `.AppImage`][download-app-image] | Run — no install  |
+| 4   | Linux    | Debian | amd64        | 13.+         | [Download `.deb`][download-deb]            |                   |
+| 5   | macOS    |        | aarch64      | 13.+         | [Download `.dmg`][download-dmg]²           | Apple Silicon     |
+| 6   | Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi]            |                   |
 
 [download-apk]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-api-latest/app-universal-release.apk
@@ -24,22 +64,54 @@
 [download-msi]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-api-latest/api_x64.msi
 
+<br>
+
+¹ Android `.aab` — upload to Google Play or sideload via bundletool.
+
+² macOS `.dmg` — Apple Silicon build (M1/M2/M3/M4).
+
+## First run
+
+- **macOS:** Right-click the `.dmg` and select *Open* to bypass Gatekeeper.
+- **Linux AppImage:** `chmod +x api_amd64.AppImage && ./api_amd64.AppImage`
+- **Windows SmartScreen:** Click *More info → Run anyway* if SmartScreen flags the installer.
+
 ### Checksums
 
-SHA-256 digests for every asset are published alongside the release in
-[SHA256SUMS.txt][checksums].
+> 🛡️ **Verify your download.** Every asset is published with a SHA-256 digest so
+> you can confirm the file you got is exactly the file we shipped. See
+> [SHA256SUMS.txt][checksums].
 
 [checksums]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-api-latest/SHA256SUMS.txt
 
+### Build from Source
+
+Prefer to build it yourself? Clone, install, and build in three steps:
+
+```bash
+git clone https://github.com/hieudoanm/hieudoanm.github.io.git
+cd packages/app/hybrid/developer-tools/api
+pnpm install
+pnpm tauri build
+```
+
+See [PACKAGING](PACKAGING) for per-platform build checklists and
+[CONTRIBUTING](CONTRIBUTING) for setup and dev commands.
+
+---
+
 ## About
 
-API Client — full-scale Postman / Insomnia / Bruno.
+Full-scale API client in your pocket — compose, send, and inspect HTTP, WebSocket, gRPC, and MQTT requests from any device. Built with Tauri so it ships everywhere: phone, tablet, laptop, desktop.
+
+---
 
 ## Features
 
-## Request Composer
+Build, test, and debug APIs without leaving your keyboard.
 
+### 🔗 Request Composer
 - Method + URL composer with send
 - Params / headers key-value editors
 - Body editor with JSON beautify
@@ -51,14 +123,12 @@ API Client — full-scale Postman / Insomnia / Bruno.
 - Cookie jar with domain scoping
 - Protocol switcher (HTTP, WebSocket, gRPC, MQTT)
 
-## Authentication
-
+### 🔐 Authentication
 - Bearer and Basic auth presets
 - OAuth 1.0 and 2.0 flows (pending)
 - API Key and Digest auth (pending)
 
-## Response
-
+### 📬 Response
 - Response panel with status, time, size, headers
 - Copy response body button
 - Response preview by content-type
@@ -67,14 +137,12 @@ API Client — full-scale Postman / Insomnia / Bruno.
 - Response cookies viewer (pending)
 - JSON schema validation of responses (pending)
 
-## Realtime & Protocols
-
+### ⚡ Realtime & Protocols
 - WebSocket client (connect, message log, close)
 - gRPC client (proto import, unary and streaming calls)
 - MQTT client (connect, subscribe, publish)
 
-## Scripting & Testing
-
+### 🧪 Scripting & Testing
 - Pre-request scripts (JS sandbox) (pending)
 - Test assertions (status, headers, body, schema) (pending)
 - Test runner with pass/fail summary (pending)
@@ -83,23 +151,20 @@ API Client — full-scale Postman / Insomnia / Bruno.
 - Data-driven runs with CSV/JSON data files (pending)
 - Test report export (HTML / JSON) (pending)
 
-## Collections & Variables
-
+### 📂 Collections & Variables
 - Request collections (saved, named, grouped)
 - Environment variables (`{{var}}` substitution)
 - Multiple environments with active selector (pending)
 - Variable inspector with usage and unresolved references (pending)
 - Dynamic variables ({{$guid}}, {{$timestamp}}, {{$randomInt}}) (pending)
 
-## History & Automation
-
+### 🕒 History & Automation
 - Local request history
 - History search and filtering
 - Newman-style CLI runner in Tauri desktop (pending)
 - Scheduled monitors (mock) (pending)
 
-## API Design & Team
-
+### 📐 API Design & Team
 - Code generation (curl, fetch, fetch-ts)
 - Schema preview (OpenAPI import)
 - OpenAPI import/export (2.0 and 3.0/3.1) (pending)
@@ -109,21 +174,25 @@ API Client — full-scale Postman / Insomnia / Bruno.
 - Git-based collection versioning (local-first, Bruno-style) (pending)
 - Cloud sync (mock) (pending)
 
-## Platform
-
+### 🖥️ Platform
 - Tauri desktop app build (bundling configured; signing not yet)
 - Light and dark themes (pending)
 - Command palette (Ctrl+K) (pending)
 - Plugin system (Bruno-style) (pending)
 
-## Requirements
+---
 
-- Android 14+
-- Linux (Ubuntu) 22.04+
-- Linux (Debian) 13+
-- macOS 13+
-- Windows 10+
+## First run
 
-## LICENSE
+---
+
+## Next steps
+
+- **Want to contribute?** Check [CONTRIBUTING](CONTRIBUTING) for setup and dev commands.
+- **Curious what's coming?** Read the [roadmap](ROADMAP).
+
+---
+
+## License
 
 See [LICENSE](LICENSE).

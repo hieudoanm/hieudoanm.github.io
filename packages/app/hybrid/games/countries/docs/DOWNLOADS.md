@@ -1,15 +1,52 @@
 # Countries
 
+> Geography word games inspired by Wordle and Connections — every answer drawn
+> from the world's countries. Play on phone, tablet, laptop, or desktop,
+> completely offline.
+
+![Android 14+](https://img.shields.io/badge/Android-14%2B-green)
+![Linux](https://img.shields.io/badge/Linux-22.04%2B-blue)
+![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
+![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
+
+```txt
+┌──────────────────────────────────┐
+│  🌍 Countries                   │
+│  ──────────────────────────────  │
+│  C  O  U  N  T  R  Y           │
+│  🟩 🟩 ⬜ 🟩 🟩 🟩             │
+│                                  │
+│  ┌─────┐┌─────┐┌─────┐┌─────┐  │
+│  │ 🇯🇵 ││ 🇧🇷 ││ 🇳🇬 ││ 🇦🇺 │  │
+│  │Japan││Brazil││Nigeria││Aus.│  │
+│  └─────┘└─────┘└─────┘└─────┘  │
+│  🟨 🟩 🟨 ⬜  — 1 away...       │
+└──────────────────────────────────┘
+```
+
+---
+
+## Latest release
+
+- **Version:** `app-hybrid-games-countries-latest` — updates ship continuously.
+- **What's new:** see the [roadmap](ROADMAP) and [CONTRIBUTING](CONTRIBUTING).
+
+---
+
 ## Installation
 
-| Platform | Distro | Architecture | Requirements | Download Link                              |
-| -------- | ------ | ------------ | ------------ | ------------------------------------------ |
-| Android  |        | Universal    | 14.+         | [Download `.apk`][download-apk]            |
-| Android  |        | Universal    | 14.+         | [Download `.aab`][download-aab]¹           |
-| Linux    | Ubuntu | amd64        | 22.04.+      | [Download `.AppImage`][download-app-image] |
-| Linux    | Debian | amd64        | 13.+         | [Download `.deb`][download-deb]            |
-| macOS    |        | aarch64      | 13.+         | [Download `.dmg`][download-dmg]²           |
-| Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi]            |
+Pick the file that matches your platform.
+
+### Downloads
+
+| No  | Platform | Distro | Architecture | Requirements | Download Link                              | Note              |
+| --- | -------- | ------ | ------------ | ------------ | ------------------------------------------ | ----------------- |
+| 1   | Android  |        | Universal    | 14.+         | [Download `.apk`][download-apk]            | Install directly  |
+| 2   | Android  |        | Universal    | 14.+         | [Download `.aab`][download-aab]¹           | For store upload  |
+| 3   | Linux    | Ubuntu | amd64        | 22.04.+      | [Download `.AppImage`][download-app-image] | Run — no install  |
+| 4   | Linux    | Debian | amd64        | 13.+         | [Download `.deb`][download-deb]            |                   |
+| 5   | macOS    |        | aarch64      | 13.+         | [Download `.dmg`][download-dmg]²           | Apple Silicon     |
+| 6   | Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi]            |                   |
 
 [download-apk]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-countries-latest/app-universal-release.apk
@@ -24,25 +61,57 @@
 [download-msi]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-countries-latest/countries_x64.msi
 
+<br>
+
+¹ Android `.aab` — upload to Google Play or sideload via bundletool.
+
+² macOS `.dmg` — Apple Silicon build (M1/M2/M3/M4).
+
+## First run
+
+- **macOS:** Right-click the `.dmg` and select *Open* to bypass Gatekeeper.
+- **Linux AppImage:** `chmod +x countries_amd64.AppImage && ./countries_amd64.AppImage`
+- **Windows SmartScreen:** Click *More info → Run anyway* if SmartScreen flags the installer.
+- **Android Play Protect:** If Play Protect blocks the install, tap *Install anyway*.
+
 ### Checksums
 
-SHA-256 digests for every asset are published alongside the release in
-[SHA256SUMS.txt][checksums].
+> 🛡️ **Verify your download.** Every asset is published with a SHA-256 digest so
+> you can confirm the file you got is exactly the file we shipped. See
+> [SHA256SUMS.txt][checksums].
 
 [checksums]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-countries-latest/SHA256SUMS.txt
 
+### Build from Source
+
+Prefer to build it yourself? Clone, install, and build in three steps:
+
+```bash
+git clone https://github.com/hieudoanm/hieudoanm.github.io.git
+cd packages/app/hybrid/games/countries
+pnpm install
+pnpm tauri build
+```
+
+See [PACKAGING](PACKAGING) for per-platform build checklists and
+[CONTRIBUTING](CONTRIBUTING) for setup and dev commands.
+
+---
+
 ## About
 
-Countries — geography word games inspired by Wordle (NYT) and Connections (NYT),
-with every answer drawn from the world's countries.
+Geography word games that test your knowledge of the world's countries — from
+flag emojis to borders to population comparisons. Seven games, one dataset,
+zero internet required.
+
+---
 
 ## Features
 
-## Games
+Geography games that challenge what you know about every country on Earth.
 
-### Country Wordle
-
+### 🌐 Country Wordle
 - Guess the hidden country name in up to six tries
 - Every valid answer is a country from the shared dataset (~195 entries)
 - Daily puzzle: answer chosen deterministically by hashing today's date, so
@@ -57,8 +126,7 @@ with every answer drawn from the world's countries.
 - Win/lose alert with guess count or the revealed answer
 - New game button replays with a fresh daily draw
 
-### Country Connections
-
+### 🧩 Country Connections
 - Group sixteen countries into four hidden categories of four
 - Eight authored puzzles; each verified to be a disjoint partition of valid
   country names
@@ -71,16 +139,14 @@ with every answer drawn from the world's countries.
 - Shuffle and Deselect-all board controls
 - Losing reveals all remaining groups; win offers a next-puzzle button
 
-### Border Guesser
-
+### 🗺️ Border Guesser
 - Shown a country; pick which of four options it actually borders
 - Question pool: ranked countries with at least two neighbours in the borders
   dataset; decoys are never neighbours
 - Correct picks grow the streak; wrong picks reveal the full neighbour list
 - Score / streak / best-streak tracking with instant feedback
 
-### Continents Sort
-
+### 🌍 Continents Sort
 - Drag (or tap-to-select then tap) fifteen ranked countries into their
   continents — Africa, Europe, Asia, Oceania, Americas
 - Correct drops tint the card green; wrong drops are struck through in red and
@@ -88,27 +154,23 @@ with every answer drawn from the world's countries.
 - Color-coded continent buckets; game ends once every card is placed
 - Perfect-game detection and New Game redeal
 
-### Emoji Guesser
-
+### 😀 Emoji Guesser
 - Given a country name, pick its flag emoji from four options
 - Questions drawn from the top-ranked countries; decoys never repeat flags
 - Score / streak / best-streak tracking
 
-### Flag Guesser
-
+### 🏴 Flag Guesser
 - Name the country from its flag emoji — four options, one correct
 - Wrong picks reveal the correct name alongside its flag
 - Score / streak / best-streak tracking
 
-### Higher or Lower
-
+### ⬆️⬇️ Higher or Lower
 - Which of two countries has the larger population? Pick left or right
 - Population data for every ranked country; ties count as correct
 - Compact population formatting (`B`/`M`/`K`) revealed after each guess
 - Accuracy percentage plus score / streak / best-streak tracking
 
-## Shared Data
-
+### 📊 Shared Data
 - `src/games/_shared/` — single source of truth for all games:
   - `countries.ts` — guessable country names (Wordle)
   - `countries-data.ts` — 250 country entries with flag emoji, popularity rank,
@@ -118,37 +180,32 @@ with every answer drawn from the world's countries.
   - `quiz.ts` — shared quiz helpers: question pools, option builders, pure
     score/streak transitions
 
-## Shared Features
-
+### 🔄 Shared Features
 - Home page game card grid with descriptions
 - Sticky header with home navigation and theme toggle
 - Dracula (dark) theme by default, Bumblebee light theme toggle persisted to
   `localStorage`
 - Responsive layout (desktop and mobile)
 
-## Future Game Ideas
-
-| Game     | Description                                            |
-| -------- | ------------------------------------------------------ |
-| Capitals | Match countries to their capital cities                |
-| Globe    | GeoGuessr-style guessing with distance/direction hints |
-| Trivia   | Area, currency, and language questions                 |
-
-## Platform & UX
-
+### 📱 Platform & UX
 - Static export for offline-first PWA support
 - Tauri desktop shell configured (bundling not yet enabled — see
   [docs/PACKAGING.md](docs/PACKAGING.md))
 - PWA-ready static output
 
-## Requirements
+---
 
-- Android 14+
-- Linux (Ubuntu) 22.04+
-- Linux (Debian) 13+
-- macOS 13+
-- Windows 10+
+## First run
 
-## LICENSE
+---
+
+## Next steps
+
+- **Want to contribute?** Check [CONTRIBUTING](CONTRIBUTING) for setup and dev commands.
+- **Curious what's coming?** Read the [roadmap](ROADMAP).
+
+---
+
+## License
 
 See [LICENSE](LICENSE).

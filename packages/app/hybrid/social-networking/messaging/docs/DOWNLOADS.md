@@ -1,15 +1,49 @@
 # Messaging
 
+> End-to-end encrypted, peer-to-peer messaging — no server, no middleman.
+> Runs on your phone, tablet, laptop, or desktop.
+
+![Android 14+](https://img.shields.io/badge/Android-14%2B-green)
+![Linux](https://img.shields.io/badge/Linux-22.04%2B-blue)
+![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
+![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
+
+```txt
+┌─────────────────────────────────────┐
+│  MESSAGING              🔒  👤     │
+├──────────┬──────────────────────────┤
+│ Alice    │  🔒 End-to-end encrypted │
+│ ● Online │  ──────────────────────  │
+│ Bob      │  Alice: Hey, are you in? │
+│ ○ Last   │  Bob: Joining now!       │
+│   seen   │                          │
+│ Carol    │  📎  🎤  😀  Send →      │
+└──────────┴──────────────────────────┘
+```
+
+---
+
+## Latest release
+
+- **Version:** `app-hybrid-social-networking-messaging-latest` — updates ship continuously.
+- **What's new:** see the [roadmap](ROADMAP) and [CONTRIBUTING](CONTRIBUTING).
+
+---
+
 ## Installation
 
-| Platform | Distro | Architecture | Requirements | Download Link                              |
-| -------- | ------ | ------------ | ------------ | ------------------------------------------ |
-| Android  |        | Universal    | 14.+         | [Download `.apk`][download-apk]            |
-| Android  |        | Universal    | 14.+         | [Download `.aab`][download-aab]¹           |
-| Linux    | Ubuntu | amd64        | 22.04.+      | [Download `.AppImage`][download-app-image] |
-| Linux    | Debian | amd64        | 13.+         | [Download `.deb`][download-deb]            |
-| macOS    |        | aarch64      | 13.+         | [Download `.dmg`][download-dmg]²           |
-| Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi]            |
+Pick the file that matches your platform and you're good to go.
+
+### Downloads
+
+| No  | Platform | Distro | Architecture | Requirements | Download Link                              | Note             |
+| --- | -------- | ------ | ------------ | ------------ | ------------------------------------------ | ---------------- |
+| 1   | Android  |        | Universal    | 14.+         | [Download `.apk`][download-apk]            | Install directly |
+| 2   | Android  |        | Universal    | 14.+         | [Download `.aab`][download-aab]¹           | For store upload |
+| 3   | Linux    | Ubuntu | amd64        | 22.04.+      | [Download `.AppImage`][download-app-image] | Run — no install |
+| 4   | Linux    | Debian | amd64        | 13.+         | [Download `.deb`][download-deb]            |                  |
+| 5   | macOS    |        | aarch64      | 13.+         | [Download `.dmg`][download-dmg]²           | Apple Silicon    |
+| 6   | Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi]            |                  |
 
 [download-apk]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-social-networking-messaging-latest/app-universal-release.apk
@@ -24,33 +58,50 @@
 [download-msi]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-social-networking-messaging-latest/messaging_x64.msi
 
+<br>
+
+¹ The `.aab` bundle is for Google Play upload, not direct install.
+
+² Apple Silicon (M1+) only. macOS 13 required.
+
 ### Checksums
 
-SHA-256 digests for every asset are published alongside the release in
-[SHA256SUMS.txt][checksums].
+> 🛡️ **Verify your download.** Every asset is published with a SHA-256 digest so
+> you can confirm the file you got is exactly the file we shipped. See
+> [SHA256SUMS.txt][checksums].
 
 [checksums]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-social-networking-messaging-latest/SHA256SUMS.txt
 
-## About
+### Build from Source
 
-Messaging — Telegram / WhatsApp / Messenger / Signal-style chat client. No
-back-end: purely client-to-client with end-to-end encryption.
+Prefer to build it yourself? Clone, install, and build in three steps:
 
-## Features
+```bash
+git clone https://github.com/hieudoanm/hieudoanm.github.io.git
+cd packages/app/hybrid/social-networking/messaging
+pnpm install
+pnpm tauri build
+```
 
-## Status
-
-13/68 roadmap items complete — Phase 1 (Foundation) fully complete and part of
-Phase 2 (Conversations & Groups): chat list, 1:1/group chat, composer, delivery
-states, unread badges, reactions, presence, responsive layout, sign-up/sign-in.
-No back-end — the app is purely client-to-client with end-to-end encryption;
-real-time delivery is planned over WebRTC DataChannels.
+See [PACKAGING](PACKAGING) for per-platform build checklists and
+[CONTRIBUTING](CONTRIBUTING) for setup and dev commands.
 
 ---
 
-## Messaging
+## About
 
+Telegram / WhatsApp / Signal in one package — peer-to-peer, encrypted
+messaging with no back-end server. Your messages go straight to the other side.
+
+---
+
+## Features
+
+Full-featured, private messaging with everything you expect from a modern
+chat app.
+
+### ✉️ Messaging
 - 1:1 text messaging with delivery states (sending, sent, delivered, read)
 - Group chats with participant management and admin roles
 - Reply threading with quoted messages
@@ -60,8 +111,7 @@ real-time delivery is planned over WebRTC DataChannels.
 - Typing indicators and presence (online, last seen)
 - Unread badge counts and per-chat settings (mute, notifications)
 
-## Media & Rich Content
-
+### 🖼️ Media & Rich Content
 - Image, video, audio, and file attachments
 - Voice messages with recording
 - Image lightbox with zoom and swipe
@@ -70,8 +120,7 @@ real-time delivery is planned over WebRTC DataChannels.
 - Emoji autocomplete and link preview cards
 - Forward messages to multiple chats
 
-## Privacy & Security
-
+### 🔒 Privacy & Security
 - End-to-end encryption (X25519 + AES-GCM via Web Crypto)
 - Key verification and device trust list
 - Secret chats with screenshot warnings
@@ -81,16 +130,14 @@ real-time delivery is planned over WebRTC DataChannels.
 - Two-step verification / PIN lock
 - Message deletion for everyone
 
-## Calls
-
+### 📞 Calls
 - 1:1 voice and video calls (WebRTC)
 - Group voice/video calls
 - Call controls (mute, camera, speaker, switch)
 - Call history with missed-call indicators
 - Picture-in-picture and screen sharing
 
-## Peer-to-Peer & Real-time
-
+### 🌐 Peer-to-Peer & Real-time
 - WebRTC DataChannel transport (no back-end)
 - Pairing via QR code or copy-paste SDP offer/answer
 - End-to-end encryption (X25519 + AES-GCM via Web Crypto)
@@ -102,8 +149,7 @@ real-time delivery is planned over WebRTC DataChannels.
 - Reconnect and retry logic with backoff
 - Optional TURN relay for NAT traversal (no app logic)
 
-## Platform & Ecosystem
-
+### 📱 Platform & Ecosystem
 - Tauri desktop and Android shells
 - Channels and broadcast lists
 - Bots with slash commands (mock)
@@ -111,14 +157,28 @@ real-time delivery is planned over WebRTC DataChannels.
 - Encrypted backup and restore
 - Contact import and OS share-sheet integration
 
-## Requirements
+---
 
-- Android 14+
-- Linux (Ubuntu) 22.04+
-- Linux (Debian) 13+
-- macOS 13+
-- Windows 10+
+# First run
 
-## LICENSE
+- **macOS:** Right-click the `.dmg` and choose **Open** to bypass Gatekeeper.
+- **Linux AppImage:** `chmod +x messaging_amd64.AppImage && ./messaging_amd64.AppImage`
+- **Windows SmartScreen:** Click **More info → Run anyway** if prompted.
+- **Android Play Protect:** Tap **Install anyway** if the warning appears.
 
-No LICENSE file is included for this project.
+---
+
+## First run
+
+---
+
+## Next steps
+
+- Check [CONTRIBUTING](CONTRIBUTING) for dev setup, coding conventions, and how to run tests.
+- Browse the [ROADMAP](ROADMAP) for what's shipping next.
+
+---
+
+## License
+
+See [LICENSE](LICENSE).

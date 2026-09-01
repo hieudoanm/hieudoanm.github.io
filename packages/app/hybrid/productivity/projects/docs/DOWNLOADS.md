@@ -1,15 +1,52 @@
 # Projects
 
+> A minimal Kanban board inspired by Trello — drag cards, label them, assign
+> members, and ship work. Runs on your phone, tablet, laptop, and desktop so
+> your projects follow you everywhere.
+
+![Android 14+](https://img.shields.io/badge/Android-14%2B-green)
+![Linux](https://img.shields.io/badge/Linux-22.04%2B-blue)
+![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
+![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
+
+```txt
+┌────────────────────────────────────────────────┐
+│ 📋 My Board              [+ Add] [🔍] [⚙]     │
+├──────────────┬──────────────┬──────────────────┤
+│ TO DO        │ IN PROGRESS  │ DONE             │
+│ ┌──────────┐ │ ┌──────────┐ │ ┌──────────┐    │
+│ │ 🔴 Auth  │ │ │ 🔵 API   │ │ │ 🟢 Setup  │    │
+│ │ 👤 Alice │ │ │ 👤 Bob   │ │ │ 👤 Carol  │    │
+│ └──────────┘ │ └──────────┘ │ └──────────┘    │
+│ ┌──────────┐ │ ┌──────────┐ │                  │
+│ │ 🟡 Test  │ │ │ 🟠 Deploy│ │                  │
+│ └──────────┘ │ └──────────┘ │                  │
+└──────────────┴──────────────┴──────────────────┘
+```
+
+---
+
+## Latest release
+
+- **Version:** `app-hybrid-productivity-projects-latest` — updates ship continuously.
+- **What's new:** see the [roadmap](ROADMAP) and [CONTRIBUTING](CONTRIBUTING).
+
+---
+
 ## Installation
 
-| Platform | Distro | Architecture | Requirements | Download Link                              |
-| -------- | ------ | ------------ | ------------ | ------------------------------------------ |
-| Android  |        | Universal    | 14.+         | [Download `.apk`][download-apk]            |
-| Android  |        | Universal    | 14.+         | [Download `.aab`][download-aab]¹           |
-| Linux    | Ubuntu | amd64        | 22.04.+      | [Download `.AppImage`][download-app-image] |
-| Linux    | Debian | amd64        | 13.+         | [Download `.deb`][download-deb]            |
-| macOS    |        | aarch64      | 13.+         | [Download `.dmg`][download-dmg]²           |
-| Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi]            |
+Pick the right file for your platform.
+
+### Downloads
+
+| No  | Platform | Distro | Architecture | Requirements | Download Link | Note |
+| --- | -------- | ------ | ------------ | ------------ | ------------- | ---- |
+| 1   | Android  |        | Universal    | 14.+         | [Download `.apk`][download-apk] | Install directly |
+| 2   | Android  |        | Universal    | 14.+         | [Download `.aab`][download-aab]¹ | For store upload ¹ |
+| 3   | Linux    | Ubuntu | amd64        | 22.04.+      | [Download `.AppImage`][download-app-image] | Run — no install |
+| 4   | Linux    | Debian | amd64        | 13.+         | [Download `.deb`][download-deb] | |
+| 5   | macOS    |        | aarch64      | 13.+         | [Download `.dmg`][download-dmg]² | Apple Silicon ² |
+| 6   | Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi] | |
 
 [download-apk]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-projects-latest/app-universal-release.apk
@@ -24,21 +61,56 @@
 [download-msi]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-projects-latest/projects_x64.msi
 
+<br>
+
+¹ The `.aab` bundle is for Google Play store upload — sideload the `.apk`
+instead.
+
+² The `.dmg` is a universal Apple Silicon binary.
+
+## First run
+
+- **macOS** — right-click the `.dmg` and choose **Open** to bypass Gatekeeper.
+- **Linux** — `chmod +x projects_amd64.AppImage && ./projects_amd64.AppImage`.
+- **Windows** — SmartScreen may warn; click **More info → Run anyway**.
+- **Android** — Play Protect may block; tap **Install anyway**.
+
 ### Checksums
 
-SHA-256 digests for every asset are published alongside the release in
-[SHA256SUMS.txt][checksums].
+> 🛡️ **Verify your download.** Every asset is published with a SHA-256 digest so
+> you can confirm the file you got is exactly the file we shipped. See
+> [SHA256SUMS.txt][checksums].
 
 [checksums]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-projects-latest/SHA256SUMS.txt
 
+### Build from Source
+
+Prefer to build it yourself? Clone, install, and build in three steps:
+
+```bash
+git clone https://github.com/hieudoanm/hieudoanm.github.io.git
+cd packages/app/hybrid/productivity/projects
+pnpm install
+pnpm tauri build
+```
+
+See [PACKAGING](PACKAGING) for per-platform build checklists and
+[CONTRIBUTING](CONTRIBUTING) for setup and dev commands.
+
+---
+
 ## About
 
-Projects — minimal Atlassian Trello / Kanban board.
+A minimal Kanban board in the spirit of Trello and Atlassian — create boards,
+drag cards between lists, assign members, and keep your projects organized across
+every device you own.
+
+---
 
 ## Features
 
-## Boards
+### 📋 Boards
 
 - Board dashboard with grid of boards
 - Create/edit/delete boards
@@ -46,7 +118,7 @@ Projects — minimal Atlassian Trello / Kanban board.
 - Board background colors
 - Star/favorite boards
 
-## Lists & Cards
+### 📝 Lists & Cards
 
 - Board view with Kanban lists
 - Add/rename/delete lists
@@ -57,7 +129,7 @@ Projects — minimal Atlassian Trello / Kanban board.
 - Card count per list badge
 - Collapse/expand lists
 
-## Card Detail
+### 🔍 Card Detail
 
 - Card detail modal with description editor
 - Checklists with progress bar
@@ -70,21 +142,21 @@ Projects — minimal Atlassian Trello / Kanban board.
 - Mention users in comments (@username)
 - Copy and move card actions
 
-## Filtering & Search
+### 🏷️ Filtering & Search
 
 - Filter bar (label, member, due date, priority)
 - Saved filter presets (per board, stored in localStorage)
 - Board search with highlighted results (Q / F shortcuts)
 - Due date drag-to-reschedule in calendar
 
-## Organization & Views
+### 🗂️ Organization & Views
 
 - Label management (10 colors)
 - List view (compact table with sortable columns)
 - Calendar view (monthly grid with due dates)
 - Timeline view (Gantt-style bars)
 
-## Collaboration
+### 👥 Collaboration
 
 - Activity feed per board with relative timestamps
 - Activity export (CSV download)
@@ -92,21 +164,27 @@ Projects — minimal Atlassian Trello / Kanban board.
 - Member roles (admin, member, viewer) — viewers are read-only
 - Board sharing (mock link + copy, edit permission toggle)
 
-## UX & Platform
+### 📱 UX & Platform
 
 - Responsive layout
 - Skeleton loading states
 - Tauri desktop app build (bundling configured; signing not yet)
 - iOS/Android native shells (Tauri mobile entry point wired)
 
-## Requirements
+---
 
-- Android 14+
-- Linux (Ubuntu) 22.04+
-- Linux (Debian) 13+
-- macOS 13+
-- Windows 10+
+## First run
 
-## LICENSE
+---
+
+## Next steps
+
+- Found a bug or want a feature? See [CONTRIBUTING](CONTRIBUTING) to get
+  started.
+- Curious what's coming next? Check the [roadmap](ROADMAP).
+
+---
+
+## License
 
 See [LICENSE](LICENSE).

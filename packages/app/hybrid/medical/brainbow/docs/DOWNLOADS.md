@@ -1,15 +1,52 @@
 # Brainbow
 
+> All-in-one microscopy image analysis for neuron reconstruction — trace, count,
+> measure, and report, from your own microscope images. Runs everywhere your
+> science does: phone, tablet, laptop, and desktop.
+
+![Android 14+](https://img.shields.io/badge/Android-14%2B-green)
+![Linux](https://img.shields.io/badge/Linux-22.04%2B-blue)
+![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
+![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
+
+```txt
+┌──────────────────────────────────────────────┐
+│  image.tif            neuron count: 12       │
+│  ┌────────────────┐  ▸ 4 neurons traced      │
+│  │  ╭╮   ╭─╮     │  channels: R G B         │
+│  │ ╭╯╰╮ ╭╯ │ ╭╮  │  area: 420 µm²           │
+│  │ │  │ │  ╰─╯╰╮ │  density: high           │
+│  │ ╰──╯─╯      │ │  color div: 0.74         │
+│  │   ╭──╮      ╰─╯│  [ Export SVG ]          │
+│  └────┴──┘─┴───┴──┘                         │
+└──────────────────────────────────────────────┘
+```
+
+---
+
+## Latest release
+
+- **Version:** `app-hybrid-medical-brainbow-latest` — updates ship
+  continuously.
+- **What's new:** see the [roadmap](ROADMAP) and [CONTRIBUTING](CONTRIBUTING).
+
+---
+
 ## Installation
 
-| Platform | Distro | Architecture | Requirements | Download Link                              |
-| -------- | ------ | ------------ | ------------ | ------------------------------------------ |
-| Android  |        | Universal    | 14.+         | [Download `.apk`][download-apk]            |
-| Android  |        | Universal    | 14.+         | [Download `.aab`][download-aab]¹           |
-| Linux    | Ubuntu | amd64        | 22.04.+      | [Download `.AppImage`][download-app-image] |
-| Linux    | Debian | amd64        | 13.+         | [Download `.deb`][download-deb]            |
-| macOS    |        | aarch64      | 13.+         | [Download `.dmg`][download-dmg]²           |
-| Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi]            |
+Pick the right file for your device — Android phones install the `.apk`, and
+Linux/macOS/Windows grab their native package below.
+
+### Downloads
+
+| No  | Platform | Distro | Architecture | Requirements | Download Link                     | Note |
+| --- | -------- | ------ | ------------ | ------------ | --------------------------------- | ---- |
+| 1   | Android  |        | Universal    | 14.+         | [Download `.apk`][download-apk]   | Install directly |
+| 2   | Android  |        | Universal    | 14.+         | [Download `.aab`][download-aab]¹  | For store upload |
+| 3   | Linux    | Ubuntu | amd64        | 22.04.+      | [Download `.AppImage`][download-app-image] | Run — no install |
+| 4   | Linux    | Debian | amd64        | 13.+         | [Download `.deb`][download-deb]   | |
+| 5   | macOS    |        | aarch64      | 13.+         | [Download `.dmg`][download-dmg]²  | Apple Silicon |
+| 6   | Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi]   | |
 
 [download-apk]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-brainbow-latest/app-universal-release.apk
@@ -24,21 +61,62 @@
 [download-msi]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-brainbow-latest/brainbow_x64.msi
 
+<br>
+
+¹ `.aab` is for uploading to the Google Play Store — use the `.apk` to install
+directly.
+² `.dmg` is built for Apple Silicon.
+
 ### Checksums
 
-SHA-256 digests for every asset are published alongside the release in
-[SHA256SUMS.txt][checksums].
+> 🛡️ **Verify your download.** Every asset is published with a SHA-256 digest so
+> you can confirm the file you got is exactly the file we shipped. See
+> [SHA256SUMS.txt][checksums].
 
 [checksums]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-brainbow-latest/SHA256SUMS.txt
 
+### Build from Source
+
+Prefer to build it yourself? Clone, install, and build in three steps:
+
+```bash
+git clone https://github.com/hieudoanm/hieudoanm.github.io.git
+cd packages/app/hybrid/medical/brainbow
+pnpm install
+pnpm tauri build
+```
+
+See [PACKAGING](PACKAGING) for per-platform build checklists and
+[CONTRIBUTING](CONTRIBUTING) for setup and dev commands.
+
+## First Run
+
+Per-platform launch tips:
+
+- **macOS** — right-click the `.dmg` then **Open** to bypass Gatekeeper the
+  first time, or find the app bundle inside.
+- **Linux** — make it runnable: `chmod +x brainbow_amd64.AppImage` then
+  double-click.
+- **Windows** — SmartScreen may warn; choose **More info → Run anyway**.
+- **Android** — if Play Protect warns, tap **Install anyway**.
+
+---
+
 ## About
 
-Brainbow — all-in-one microscopy image analysis for neuron reconstruction.
+From import to publication-ready figures in one seat. Brainbow is an all-in-one
+microscopy image analysis tool for neuron reconstruction — trace, count,
+measure, annotate, and export from your own Brainbow images, on any screen.
+
+---
 
 ## Features
 
-## Project Foundation
+A complete analysis pipeline — import, segment, annotate, export — plus robust
+project handling.
+
+### 🧱 Project Foundation
 
 - Monorepo scaffold (app under `packages/app/hybrid/brainbow`)
 - Next.js static export validated against Tauri's `dist`
@@ -47,7 +125,7 @@ Brainbow — all-in-one microscopy image analysis for neuron reconstruction.
 - Shared design system: DaisyUI theme, base layout, navigation shell
 - CI: lint, typecheck, build web export, build Tauri desktop artifact
 
-## Image Handling
+### 🖼️ Image Handling
 
 - Import Brainbow microscopy images (PNG/JPEG/WebP/TIFF)
 - Pan/zoom canvas viewer (Canvas2D)
@@ -57,7 +135,7 @@ Brainbow — all-in-one microscopy image analysis for neuron reconstruction.
 - Scale calibration: pixels-per-micron set manually or read from TIFF metadata
 - Custom channel mapping for >3 channels (non-RGB acquisition orders)
 
-## Segmentation & Analysis
+### 🧬 Segmentation & Analysis
 
 - Manual neuron tracing/labeling tool (polygon/freehand)
 - Color-based clustering to suggest distinct neuron "hues" (k-means, TS)
@@ -69,7 +147,7 @@ Brainbow — all-in-one microscopy image analysis for neuron reconstruction.
 - Analysis presets: save/load segmentation + counting parameter sets
 - z-stack / time-series navigation with per-slice analysis and batch
 
-## Annotations
+### 📝 Annotations
 
 - Annotation layers: show/hide, color-code, export as overlay
 - Undo/redo history for annotation edits
@@ -78,7 +156,7 @@ Brainbow — all-in-one microscopy image analysis for neuron reconstruction.
 - Eraser and lasso-subtract tools for correcting over-segmented traces
 - Export annotations to lab-standard formats (ImageJ/Fiji ROI zip, plus more)
 
-## Export & Reporting
+### 🚀 Export & Reporting
 
 - Export annotated image as PNG (flattened raster)
 - Export results as CSV/JSON
@@ -87,7 +165,7 @@ Brainbow — all-in-one microscopy image analysis for neuron reconstruction.
 - Citation-ready methods snippet (for research write-ups)
 - Vector figure export (SVG) of annotations + scale bar for publications
 
-## Projects & Platform
+### 📦 Projects & Platform
 
 - Local project files: create/open/save `.brainbow` bundles (portable JSON)
 - Project export/import as portable `.brainbow` bundle
@@ -102,7 +180,7 @@ Brainbow — all-in-one microscopy image analysis for neuron reconstruction.
 - Full editing parity on tablet: touch-optimized annotation, analysis, and
   export
 
-## Workflows
+### 🔬 Workflows
 
 - Zoom minimap / field-of-view navigator for large confocal tile sets
 - Compare view: side-by-side or swipe-divider overlay of two datasets
@@ -110,14 +188,19 @@ Brainbow — all-in-one microscopy image analysis for neuron reconstruction.
 - Git-style version history for `.brainbow` project bundles
 - Playwright e2e coverage of the import → segment → export critical path
 
-## Requirements
+---
 
-- Android 14+
-- Linux (Ubuntu) 22.04+
-- Linux (Debian) 13+
-- macOS 13+
-- Windows 10+
+## First run
 
-## LICENSE
+---
+
+## Next steps
+
+- [CONTRIBUTING](CONTRIBUTING) — set up the dev environment and start tinkering.
+- [ROADMAP](ROADMAP) — see what's coming next on the roadmap.
+
+---
+
+## License
 
 See [LICENSE](LICENSE).

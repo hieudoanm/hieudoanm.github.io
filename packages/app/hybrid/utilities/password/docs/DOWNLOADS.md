@@ -1,15 +1,48 @@
 # Password
 
+> A minimal BitWarden / 1Password vault that runs everywhere — phone, tablet, laptop, and desktop. Generate passwords, manage TOTP, and stay secure from any screen.
+
+![Android 14+](https://img.shields.io/badge/Android-14%2B-green)
+![Linux](https://img.shields.io/badge/Linux-22.04%2B-blue)
+![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
+![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
+
+```txt
+┌─────────────────────────────────┐
+│  🔒 Vault           [search]   │
+│  ┌──────────────────────────┐   │
+│  │ ● Gmail       👤 📧     │   │
+│  │ ● GitHub      👤 🔑     │   │
+│  │ ● Netflix     👤 🎬     │   │
+│  │ ● Bank        💳 💰     │   │
+│  └──────────────────────────┘   │
+│  vault │ gen │ health │ totp   │
+└─────────────────────────────────┘
+```
+
+---
+
+## Latest release
+
+- **Version:** `app-hybrid-utilities-password-latest` — updates ship continuously.
+- **What's new:** see the [roadmap](ROADMAP) and [CONTRIBUTING](CONTRIBUTING).
+
+---
+
 ## Installation
 
-| Platform | Distro | Architecture | Requirements | Download Link                              |
-| -------- | ------ | ------------ | ------------ | ------------------------------------------ |
-| Android  |        | Universal    | 14.+         | [Download `.apk`][download-apk]            |
-| Android  |        | Universal    | 14.+         | [Download `.aab`][download-aab]¹           |
-| Linux    | Ubuntu | amd64        | 22.04.+      | [Download `.AppImage`][download-app-image] |
-| Linux    | Debian | amd64        | 13.+         | [Download `.deb`][download-deb]            |
-| macOS    |        | aarch64      | 13.+         | [Download `.dmg`][download-dmg]²           |
-| Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi]            |
+Pick the file that matches your platform and install directly.
+
+### Downloads
+
+| No  | Platform | Distro | Architecture | Requirements | Download Link                              | Note                     |
+| --- | -------- | ------ | ------------ | ------------ | ------------------------------------------ | ------------------------ |
+| 1   | Android  |        | Universal    | 14.+         | [Download `.apk`][download-apk]            | Install directly         |
+| 2   | Android  |        | Universal    | 14.+         | [Download `.aab`][download-aab]¹           | For store upload         |
+| 3   | Linux    | Ubuntu | amd64        | 22.04.+      | [Download `.AppImage`][download-app-image] | Run — no install         |
+| 4   | Linux    | Debian | amd64        | 13.+         | [Download `.deb`][download-deb]            |                          |
+| 5   | macOS    |        | aarch64      | 13.+         | [Download `.dmg`][download-dmg]²           | Apple Silicon            |
+| 6   | Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi]            |                          |
 
 [download-apk]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-password-latest/app-universal-release.apk
@@ -24,27 +57,46 @@
 [download-msi]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-password-latest/password_x64.msi
 
+<br>
+
+¹ The `.aab` bundle is for uploading to app stores; install the `.apk` directly on your device.
+
+² Right-click the `.dmg`, choose **Open**, then drag the app into your Applications folder.
+
 ### Checksums
 
-SHA-256 digests for every asset are published alongside the release in
-[SHA256SUMS.txt][checksums].
+> 🛡️ **Verify your download.** Every asset is published with a SHA-256 digest so
+> you can confirm the file you got is exactly the file we shipped. See
+> [SHA256SUMS.txt][checksums].
 
 [checksums]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-password-latest/SHA256SUMS.txt
 
-## About
+### Build from Source
 
-Password — minimal BitWarden / 1Password vault.
+Prefer to build it yourself? Clone, install, and build in three steps:
 
-## Features
+```bash
+git clone https://github.com/hieudoanm/hieudoanm.github.io.git
+cd packages/app/hybrid/utilities/password
+pnpm install
+pnpm tauri build
+```
 
-## Status
-
-51/59 roadmap items complete (Phases 1–6 done, Phase 7 partially complete).
+See [PACKAGING](PACKAGING) for per-platform build checklists and
+[CONTRIBUTING](CONTRIBUTING) for setup and dev commands.
 
 ---
 
-## Vault
+## About
+
+A vault packed into your pocket — store, generate, and manage every password you own, running natively on every device you own.
+
+---
+
+## Features
+
+### 🔒 Vault
 
 - Vault list with item cards (logins, cards, notes, identities, SSH keys)
 - Item detail view with show/hide for sensitive fields
@@ -56,7 +108,7 @@ Password — minimal BitWarden / 1Password vault.
 - Demo vault seed data (24 items)
 - Responsive layout (sidebar + vault)
 
-## UX
+### 🎯 UX
 
 - Keyboard shortcuts (Ctrl+K, Ctrl+N, Ctrl+L)
 - Swipe-to-delete on mobile
@@ -67,7 +119,7 @@ Password — minimal BitWarden / 1Password vault.
 - Sort options (name, date, most used)
 - Bulk select and delete
 
-## Security
+### 🔐 Security
 
 - Master password lock screen
 - Auto-lock on timeout (configurable; setting stored, no enforcement)
@@ -79,7 +131,7 @@ Password — minimal BitWarden / 1Password vault.
 - TOTP setup with QR code and countdown timer
 - Biometric toggle (mock)
 
-## Organization
+### 📂 Organization
 
 - Folder creation and management (IndexedDB store, FolderManager UI)
 - Drag items into folders
@@ -90,7 +142,7 @@ Password — minimal BitWarden / 1Password vault.
 - Duplicate item
 - Custom fields on any item type
 
-## Password Health
+### 🏥 Password Health
 
 - Overall health score (0-100)
 - Weak password detection with threshold
@@ -101,7 +153,7 @@ Password — minimal BitWarden / 1Password vault.
 - Remediation suggestions per item
 - Health dashboard with trends
 
-## Collaboration
+### 🤝 Collaboration
 
 - Item sharing with permission levels (view/edit)
 - Shared with me filter
@@ -112,18 +164,19 @@ Password — minimal BitWarden / 1Password vault.
 - Import from JSON
 - Export vault (encrypted JSON, plain CSV)
 
-## Platform
+### 🖥️ Platform
 
 - Tauri desktop app build (bundling configured; signing not yet)
 
-## Requirements
+---
 
-- Android 14+
-- Linux (Ubuntu) 22.04+
-- Linux (Debian) 13+
-- macOS 13+
-- Windows 10+
+## Next steps
 
-## LICENSE
+- Want to contribute? Check the [CONTRIBUTING](CONTRIBUTING) guide.
+- Curious what's coming? See the [roadmap](ROADMAP).
+
+---
+
+## License
 
 See [LICENSE](LICENSE).
