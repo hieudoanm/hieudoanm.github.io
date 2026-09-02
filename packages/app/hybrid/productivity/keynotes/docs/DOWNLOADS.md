@@ -268,4 +268,4 @@ view, and export to PPTX/PDF/HTML, all running without a server.
 
 ## License
 
-No LICENSE file is included for this project.
+See [LICENSE](LICENSE).

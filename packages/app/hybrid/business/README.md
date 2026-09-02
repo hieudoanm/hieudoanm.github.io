@@ -1,3 +1,4 @@
 # Business
 
-1. POS (Point of Sale)
+1. Menu
+2. POS (Point of Sale)
