@@ -1,62 +1,94 @@
 'use client';
 
-import { type FC } from 'react';
-import { useRouter } from 'next/navigation';
-import { Providers } from '@/providers/Providers';
-import { useToast } from '@/providers/ToastProvider';
-import { FiArrowLeft, FiUser, FiSave } from 'react-icons/fi';
+import { type FC, useState } from 'react';
+import Link from 'next/link';
+import { FiUser, FiMail, FiLogIn, FiCamera, FiCheck } from 'react-icons/fi';
 
-const ProfileContent: FC = () => {
-  const router = useRouter();
-  const { addToast } = useToast();
+const ProfilePage: FC = () => {
+  const [name, setName] = useState('Alex Johnson');
+  const [email, setEmail] = useState('alex@example.com');
+  const [saved, setSaved] = useState(false);
+
+  const handleSubmit = (event: React.FormEvent): void => {
+    event.preventDefault();
+    setSaved(true);
+    setTimeout(() => setSaved(false), 2000);
+  };
+
   return (
-    <div className="bg-base-100 min-h-screen">
-      <header className="border-base-300 bg-base-100 sticky top-0 z-10 flex items-center gap-3 border-b px-4 py-3">
-        <button
-          type="button"
-          onClick={() => router.push('/')}
-          className="btn btn-neutral btn-sm btn-circle">
-          <FiArrowLeft className="size-4" />
-        </button>
-        <h1 className="text-lg font-bold">Profile</h1>
-      </header>
-      <div className="mx-auto max-w-2xl p-6">
-        <div className="card bg-base-200 card-body">
-          <h2 className="card-title">User Information</h2>
-          <div className="flex items-center gap-4">
-            <div className="avatar placeholder">
-              <div className="bg-base-300 w-20 rounded-full">
-                <FiUser className="size-8" />
+    <main className="bg-base-200 flex min-h-screen items-center justify-center p-4">
+      <div className="w-full max-w-md">
+        <div className="card bg-base-100 w-full shadow-xl">
+          <div className="card-body">
+            <div className="mb-2 flex items-center justify-center">
+              <div className="relative">
+                <div className="text-primary bg-primary/10 flex h-20 w-20 items-center justify-center rounded-full">
+                  <FiUser className="h-10 w-10" />
+                </div>
+                <button
+                  type="button"
+                  aria-label="Change photo"
+                  className="btn btn-ghost btn-sm absolute -right-1 -bottom-1 rounded-full">
+                  <FiCamera className="h-4 w-4" />
+                </button>
               </div>
             </div>
-            <div className="flex-1 space-y-3">
-              <input
-                type="text"
-                defaultValue="User"
-                className="input input-bordered w-full"
-              />
-              <input
-                type="email"
-                placeholder="user@example.com"
-                className="input input-bordered w-full"
-              />
-            </div>
+            <h1 className="text-center text-2xl font-bold">Profile</h1>
+            <p className="text-base-content/60 mb-4 text-center text-sm">
+              Manage your account details
+            </p>
+
+            {saved && (
+              <div className="alert alert-success mb-4 text-sm">
+                <FiCheck className="h-4 w-4" />
+                Changes saved.
+              </div>
+            )}
+
+            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+              <div className="form-control">
+                <label className="label" htmlFor="profile-name">
+                  <span className="label-text">Full name</span>
+                </label>
+                <input
+                  id="profile-name"
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  className="input input-bordered w-full"
+                />
+              </div>
+              <div className="form-control">
+                <label className="label" htmlFor="profile-email">
+                  <span className="label-text">Email</span>
+                </label>
+                <div className="relative">
+                  <FiMail className="text-base-content/40 absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2" />
+                  <input
+                    id="profile-email"
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="input input-bordered w-full pl-9"
+                  />
+                </div>
+              </div>
+              <button type="submit" className="btn btn-primary mt-2 w-full">
+                Save changes
+              </button>
+            </form>
           </div>
-          <button
-            type="button"
-            onClick={() => addToast('Profile saved', 'success')}
-            className="btn btn-primary mt-4 w-full">
-            <FiSave className="size-4" /> Save
-          </button>
         </div>
+
+        <p className="text-base-content/60 mt-6 text-center text-sm">
+          <Link href="/sign-in" className="text-primary hover:underline">
+            <FiLogIn className="mr-1 inline h-3.5 w-3.5" />
+            Sign out
+          </Link>
+        </p>
       </div>
-    </div>
+    </main>
   );
 };
 
-const ProfilePage: FC = () => (
-  <Providers>
-    <ProfileContent />
-  </Providers>
-);
 export default ProfilePage;

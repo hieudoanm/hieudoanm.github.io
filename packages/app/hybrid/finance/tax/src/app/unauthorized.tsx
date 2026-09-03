@@ -6,7 +6,7 @@ const Unauthorized = () => {
     <main className="flex h-screen w-screen flex-col items-center justify-center gap-4">
       <h1 className="text-6xl font-bold">401</h1>
       <p className="text-base-content/60">Unauthorized access</p>
-      <Link href="/login" className="btn btn-primary">
+      <Link href="/sign-in" className="btn btn-primary">
         Login
       </Link>
     </main>

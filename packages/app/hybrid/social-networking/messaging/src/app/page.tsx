@@ -12,7 +12,7 @@ const HomePage: FC = () => {
   const router = useRouter();
 
   useEffect(() => {
-    if (!isLoading && !session) router.replace('/signin');
+    if (!isLoading && !session) router.replace('/sign-in');
   }, [isLoading, session, router]);
 
   useEffect(() => {

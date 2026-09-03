@@ -17,7 +17,7 @@ describe('RouteGuard', () => {
 
   it('renders children for public route when not authenticated', async () => {
     const { usePathname } = require('next/navigation');
-    usePathname.mockReturnValue('/login');
+    usePathname.mockReturnValue('/sign-in');
     render(
       <RouteGuard>
         <div>Protected Content</div>
@@ -38,14 +38,14 @@ describe('RouteGuard', () => {
       </RouteGuard>
     );
     await waitFor(() => {
-      expect(mockReplace).toHaveBeenCalledWith('/login');
+      expect(mockReplace).toHaveBeenCalledWith('/sign-in');
     });
   });
 
   it('redirects away from public route when authenticated', async () => {
     localStorage.setItem('tax-auth', 'true');
     const { useRouter, usePathname } = require('next/navigation');
-    usePathname.mockReturnValue('/login');
+    usePathname.mockReturnValue('/sign-in');
     const mockReplace = useRouter().replace;
     render(
       <RouteGuard>

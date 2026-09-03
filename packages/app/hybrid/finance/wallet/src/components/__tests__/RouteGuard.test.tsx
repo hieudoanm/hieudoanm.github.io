@@ -31,7 +31,7 @@ describe('RouteGuard', () => {
   });
 
   it('renders children on public route when unauthenticated', async () => {
-    renderGuard('/login');
+    renderGuard('/sign-in');
     await waitFor(() => {
       expect(screen.getByTestId('child')).toBeInTheDocument();
     });
@@ -52,21 +52,21 @@ describe('RouteGuard', () => {
   });
 
   it('hides children on public route when authenticated', async () => {
-    renderGuard('/login', true);
+    renderGuard('/sign-in', true);
     await waitFor(() => {
       expect(screen.queryByTestId('child')).not.toBeInTheDocument();
     });
   });
 
   it('treats /register as a public route', async () => {
-    renderGuard('/register');
+    renderGuard('/sign-up');
     await waitFor(() => {
       expect(screen.getByTestId('child')).toBeInTheDocument();
     });
   });
 
   it('hides children on /register when authenticated', async () => {
-    renderGuard('/register', true);
+    renderGuard('/sign-up', true);
     await waitFor(() => {
       expect(screen.queryByTestId('child')).not.toBeInTheDocument();
     });

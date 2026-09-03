@@ -4,9 +4,9 @@ import { useEffect, useRef, useState } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 
 const PUBLIC_ROUTES = [
-  '/login',
-  '/register',
-  '/forgot-password',
+  '/sign-in',
+  '/sign-up',
+  '/forget-password',
   '/reset-password',
 ];
 
@@ -39,7 +39,7 @@ export const RouteGuard = ({ children }: { children: React.ReactNode }) => {
     if (!ready) return;
 
     const target =
-      !isAuth && !isPublic ? '/login' : isAuth && isPublic ? '/' : null;
+      !isAuth && !isPublic ? '/sign-in' : isAuth && isPublic ? '/' : null;
 
     console.log('[RouteGuard]', { target });
 

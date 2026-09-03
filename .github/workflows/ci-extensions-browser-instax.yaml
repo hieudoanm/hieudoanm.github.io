@@ -1,0 +1,32 @@
+name: CI - Extensions - Browser - InstaX
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/extensions/browser/instax/**'
+      - '.github/workflows/ci-extensions-browser-instax.yaml'
+      - '.github/workflows/ci-extensions-browser-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-extensions-browser-instax-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-extensions-browser-template.yaml
+    with:
+      package: packages/extensions/browser/instax
+      filter: '@hieudoanm.github.io/instax'
+      releaseName: extensions-browser-instax-latest
+      releaseTitle: Extensions - Browser - InstaX (latest)
+      artifactPrefix: instax

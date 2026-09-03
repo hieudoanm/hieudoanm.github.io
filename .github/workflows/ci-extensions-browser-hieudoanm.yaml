@@ -1,0 +1,32 @@
+name: CI - Extensions - Browser - HieuDoanm
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/extensions/browser/hieudoanm/**'
+      - '.github/workflows/ci-extensions-browser-hieudoanm.yaml'
+      - '.github/workflows/ci-extensions-browser-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-extensions-browser-hieudoanm-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-extensions-browser-template.yaml
+    with:
+      package: packages/extensions/browser/hieudoanm
+      filter: '@hieudoanm.github.io/extension'
+      releaseName: extensions-browser-hieudoanm-latest
+      releaseTitle: Extensions - Browser - HieuDoanm (latest)
+      artifactPrefix: hieudoanm

@@ -1,11 +1,8 @@
 'use client';
 
-import { DashboardTemplate } from '@/components/templates';
-import Skeleton, {
-  SkeletonText,
-  SkeletonCard,
-} from '@/components/atoms/Skeleton';
+import { SkeletonCard, SkeletonText } from '@/components/atoms/Skeleton';
 import SettingsSection from '@/components/organisms/SettingsSection';
+import { DashboardTemplate } from '@/components/templates';
 import { useData } from '@/providers/DataProvider';
 
 const SettingsPage = () => {

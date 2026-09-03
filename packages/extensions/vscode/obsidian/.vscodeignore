@@ -1,9 +1,0 @@
-.vscodeignore
-.eslintrc*
-.prettierrc*
-.prettierignore
-.gitignore
-tsconfig.json
-src/**
-node_modules/**
-Makefile
