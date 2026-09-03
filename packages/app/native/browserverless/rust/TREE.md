@@ -71,6 +71,7 @@
 │   ├── [PACKAGING.md](./docs/PACKAGING.md)
 │   ├── [ROADMAP.md](./docs/ROADMAP.md)
 │   ├── [SERVER.md](./docs/SERVER.md)
+│   ├── [openapi.json](./docs/openapi.json)
 │   └── [servo-patches.md](./docs/servo-patches.md)
 ├── tasks/
 │   ├── [001-project-scaffolding.md](./tasks/001-project-scaffolding.md)
@@ -121,4 +122,4 @@
 └── [docker-compose.yaml](./docker-compose.yaml)
 ```
 
-35 directories, 83 files
+35 directories, 84 files

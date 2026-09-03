@@ -5,7 +5,6 @@
 │   ├── [ARCHITECTURE.md](./docs/ARCHITECTURE.md)
 │   ├── [CONTRIBUTING.md](./docs/CONTRIBUTING.md)
 │   ├── [DOWNLOADS.md](./docs/DOWNLOADS.md)
-│   ├── [FEATURES.md](./docs/FEATURES.md)
 │   ├── [PACKAGING.md](./docs/PACKAGING.md)
 │   └── [ROADMAP.md](./docs/ROADMAP.md)
 ├── e2e/
@@ -22,8 +21,20 @@
 │   └── [view-mode.spec.ts](./e2e/view-mode.spec.ts)
 ├── public/
 │   ├── icons/
+│   │   ├── [icon-128x128.png](./public/icons/icon-128x128.png)
+│   │   ├── [icon-144x144.png](./public/icons/icon-144x144.png)
+│   │   ├── [icon-152x152.png](./public/icons/icon-152x152.png)
+│   │   ├── [icon-16x16.png](./public/icons/icon-16x16.png)
+│   │   ├── [icon-180x180.png](./public/icons/icon-180x180.png)
 │   │   ├── [icon-192x192.png](./public/icons/icon-192x192.png)
+│   │   ├── [icon-256x256.png](./public/icons/icon-256x256.png)
+│   │   ├── [icon-32x32.png](./public/icons/icon-32x32.png)
+│   │   ├── [icon-384x384.png](./public/icons/icon-384x384.png)
+│   │   ├── [icon-48x48.png](./public/icons/icon-48x48.png)
 │   │   ├── [icon-512x512.png](./public/icons/icon-512x512.png)
+│   │   ├── [icon-64x64.png](./public/icons/icon-64x64.png)
+│   │   ├── [icon-72x72.png](./public/icons/icon-72x72.png)
+│   │   ├── [icon-96x96.png](./public/icons/icon-96x96.png)
 │   │   └── [icon.svg](./public/icons/icon.svg)
 │   ├── [apple-touch-icon.png](./public/apple-touch-icon.png)
 │   ├── [favicon.ico](./public/favicon.ico)
@@ -33,22 +44,57 @@
 │   └── [sw.js](./public/sw.js)
 ├── src/
 │   ├── app/
+│   │   ├── (auth)/
+│   │   │   ├── forget-password/
+│   │   │   │   ├── __tests__/
+│   │   │   │   │   └── [page.test.tsx](./src/app/(auth)/forget-password/__tests__/page.test.tsx)
+│   │   │   │   └── [page.tsx](./src/app/(auth)/forget-password/page.tsx)
+│   │   │   ├── profile/
+│   │   │   │   ├── __tests__/
+│   │   │   │   │   └── [page.test.tsx](./src/app/(auth)/profile/__tests__/page.test.tsx)
+│   │   │   │   └── [page.tsx](./src/app/(auth)/profile/page.tsx)
+│   │   │   ├── reset-password/
+│   │   │   │   ├── __tests__/
+│   │   │   │   │   └── [page.test.tsx](./src/app/(auth)/reset-password/__tests__/page.test.tsx)
+│   │   │   │   └── [page.tsx](./src/app/(auth)/reset-password/page.tsx)
+│   │   │   ├── sign-in/
+│   │   │   │   ├── __tests__/
+│   │   │   │   │   └── [page.test.tsx](./src/app/(auth)/sign-in/__tests__/page.test.tsx)
+│   │   │   │   └── [page.tsx](./src/app/(auth)/sign-in/page.tsx)
+│   │   │   └── sign-up/
+│   │   │       ├── __tests__/
+│   │   │       │   └── [page.test.tsx](./src/app/(auth)/sign-up/__tests__/page.test.tsx)
+│   │   │       └── [page.tsx](./src/app/(auth)/sign-up/page.tsx)
+│   │   ├── (info)/
+│   │   │   ├── about/
+│   │   │   │   └── [page.tsx](./src/app/(info)/about/page.tsx)
+│   │   │   ├── downloads/
+│   │   │   │   ├── __tests__/
+│   │   │   │   │   └── [page.test.tsx](./src/app/(info)/downloads/__tests__/page.test.tsx)
+│   │   │   │   └── [page.tsx](./src/app/(info)/downloads/page.tsx)
+│   │   │   └── version/
+│   │   │       └── [page.tsx](./src/app/(info)/version/page.tsx)
 │   │   ├── __tests__/
 │   │   │   ├── [about-page.test.tsx](./src/app/__tests__/about-page.test.tsx)
 │   │   │   ├── [error-page.test.tsx](./src/app/__tests__/error-page.test.tsx)
+│   │   │   ├── [error.test.tsx](./src/app/__tests__/error.test.tsx)
+│   │   │   ├── [forbidden.test.tsx](./src/app/__tests__/forbidden.test.tsx)
+│   │   │   ├── [global-error.test.tsx](./src/app/__tests__/global-error.test.tsx)
 │   │   │   ├── [home-page.test.tsx](./src/app/__tests__/home-page.test.tsx)
 │   │   │   ├── [layout.test.tsx](./src/app/__tests__/layout.test.tsx)
+│   │   │   ├── [loading.test.tsx](./src/app/__tests__/loading.test.tsx)
 │   │   │   ├── [not-found-page.test.tsx](./src/app/__tests__/not-found-page.test.tsx)
+│   │   │   ├── [not-found.test.tsx](./src/app/__tests__/not-found.test.tsx)
 │   │   │   ├── [pdf-compare-page.test.tsx](./src/app/__tests__/pdf-compare-page.test.tsx)
 │   │   │   ├── [pdf-edit-page.test.tsx](./src/app/__tests__/pdf-edit-page.test.tsx)
 │   │   │   ├── [pdf-merge-page.test.tsx](./src/app/__tests__/pdf-merge-page.test.tsx)
 │   │   │   ├── [pdf-viewer-page.test.tsx](./src/app/__tests__/pdf-viewer-page.test.tsx)
-│   │   │   ├── [profile-page.test.tsx](./src/app/__tests__/profile-page.test.tsx)
+│   │   │   ├── [robots.test.ts](./src/app/__tests__/robots.test.ts)
 │   │   │   ├── [settings-page.test.tsx](./src/app/__tests__/settings-page.test.tsx)
+│   │   │   ├── [template.test.tsx](./src/app/__tests__/template.test.tsx)
 │   │   │   ├── [tools-page.test.tsx](./src/app/__tests__/tools-page.test.tsx)
+│   │   │   ├── [unauthorized.test.tsx](./src/app/__tests__/unauthorized.test.tsx)
 │   │   │   └── [version-page.test.tsx](./src/app/__tests__/version-page.test.tsx)
-│   │   ├── about/
-│   │   │   └── [page.tsx](./src/app/about/page.tsx)
 │   │   ├── pdf/
 │   │   │   ├── compare/
 │   │   │   │   └── [page.tsx](./src/app/pdf/compare/page.tsx)
@@ -57,30 +103,36 @@
 │   │   │   ├── merge/
 │   │   │   │   └── [page.tsx](./src/app/pdf/merge/page.tsx)
 │   │   │   └── [page.tsx](./src/app/pdf/page.tsx)
-│   │   ├── profile/
-│   │   │   └── [page.tsx](./src/app/profile/page.tsx)
 │   │   ├── settings/
 │   │   │   └── [page.tsx](./src/app/settings/page.tsx)
 │   │   ├── tools/
 │   │   │   └── [page.tsx](./src/app/tools/page.tsx)
-│   │   ├── version/
-│   │   │   └── [page.tsx](./src/app/version/page.tsx)
+│   │   ├── [default.tsx](./src/app/default.tsx)
 │   │   ├── [error.tsx](./src/app/error.tsx)
+│   │   ├── [favicon.ico](./src/app/favicon.ico)
+│   │   ├── [forbidden.tsx](./src/app/forbidden.tsx)
+│   │   ├── [global-error.tsx](./src/app/global-error.tsx)
 │   │   ├── [layout.tsx](./src/app/layout.tsx)
+│   │   ├── [loading.tsx](./src/app/loading.tsx)
 │   │   ├── [not-found.tsx](./src/app/not-found.tsx)
-│   │   └── [page.tsx](./src/app/page.tsx)
+│   │   ├── [page.tsx](./src/app/page.tsx)
+│   │   ├── [robots.ts](./src/app/robots.ts)
+│   │   ├── [template.tsx](./src/app/template.tsx)
+│   │   └── [unauthorized.tsx](./src/app/unauthorized.tsx)
 │   ├── components/
 │   │   ├── __tests__/
 │   │   │   ├── [PdfFileUpload.test.tsx](./src/components/__tests__/PdfFileUpload.test.tsx)
-│   │   │   ├── [SWProvider.test.tsx](./src/components/__tests__/SWProvider.test.tsx)
-│   │   │   └── [templates.test.tsx](./src/components/__tests__/templates.test.tsx)
+│   │   │   └── [SWProvider.test.tsx](./src/components/__tests__/SWProvider.test.tsx)
 │   │   ├── atoms/
 │   │   │   ├── __mocks__/
 │   │   │   │   └── [PdfFileUpload.tsx](./src/components/atoms/__mocks__/PdfFileUpload.tsx)
 │   │   │   └── [PdfFileUpload.tsx](./src/components/atoms/PdfFileUpload.tsx)
 │   │   ├── molecules/
 │   │   │   ├── __tests__/
-│   │   │   │   └── [PageView.test.tsx](./src/components/molecules/__tests__/PageView.test.tsx)
+│   │   │   │   ├── [FormFieldsLayer.test.tsx](./src/components/molecules/__tests__/FormFieldsLayer.test.tsx)
+│   │   │   │   ├── [PageOrganizer.test.tsx](./src/components/molecules/__tests__/PageOrganizer.test.tsx)
+│   │   │   │   ├── [PageView.test.tsx](./src/components/molecules/__tests__/PageView.test.tsx)
+│   │   │   │   └── [SignaturePad.test.tsx](./src/components/molecules/__tests__/SignaturePad.test.tsx)
 │   │   │   ├── [FormFieldsLayer.tsx](./src/components/molecules/FormFieldsLayer.tsx)
 │   │   │   ├── [PageOrganizer.tsx](./src/components/molecules/PageOrganizer.tsx)
 │   │   │   ├── [PageView.tsx](./src/components/molecules/PageView.tsx)
@@ -89,7 +141,13 @@
 │   │   ├── organisms/
 │   │   │   └── [ToastContainer.tsx](./src/components/organisms/ToastContainer.tsx)
 │   │   ├── templates/
+│   │   │   ├── __tests__/
+│   │   │   │   ├── [AboutTemplate.test.tsx](./src/components/templates/__tests__/AboutTemplate.test.tsx)
+│   │   │   │   ├── [DownloadsTemplate.test.tsx](./src/components/templates/__tests__/DownloadsTemplate.test.tsx)
+│   │   │   │   ├── [ErrorTemplate.test.tsx](./src/components/templates/__tests__/ErrorTemplate.test.tsx)
+│   │   │   │   └── [VersionTemplate.test.tsx](./src/components/templates/__tests__/VersionTemplate.test.tsx)
 │   │   │   ├── [AboutTemplate.tsx](./src/components/templates/AboutTemplate.tsx)
+│   │   │   ├── [DownloadsTemplate.tsx](./src/components/templates/DownloadsTemplate.tsx)
 │   │   │   ├── [ErrorTemplate.tsx](./src/components/templates/ErrorTemplate.tsx)
 │   │   │   └── [VersionTemplate.tsx](./src/components/templates/VersionTemplate.tsx)
 │   │   ├── tools/
@@ -190,17 +248,23 @@
 │   ├── [build.rs](./src-tauri/build.rs)
 │   └── [tauri.conf.json](./src-tauri/tauri.conf.json)
 ├── [AGENTS.md](./AGENTS.md)
+├── [Dockerfile](./Dockerfile)
 ├── [LICENSE](./LICENSE)
 ├── [README.md](./README.md)
 ├── [TREE.md](./TREE.md)
+├── [apple-touch-icon.png](./apple-touch-icon.png)
+├── [docker-compose.yaml](./docker-compose.yaml)
 ├── [eslint.config.mts](./eslint.config.mts)
+├── [favicon.ico](./favicon.ico)
 ├── [jest.config.ts](./jest.config.ts)
 ├── [jest.setup.ts](./jest.setup.ts)
 ├── [next.config.ts](./next.config.ts)
 ├── [package.json](./package.json)
 ├── [playwright.config.ts](./playwright.config.ts)
 ├── [postcss.config.mjs](./postcss.config.mjs)
+├── [robots.txt](./robots.txt)
+├── [sitemap.xml](./sitemap.xml)
 └── [tsconfig.json](./tsconfig.json)
 ```
 
-42 directories, 155 files
+56 directories, 208 files

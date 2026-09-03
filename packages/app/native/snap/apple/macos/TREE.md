@@ -5,29 +5,30 @@
 │   ├── [ARCHITECTURE.md](./Docs/ARCHITECTURE.md)
 │   ├── [CONTRIBUTING.md](./Docs/CONTRIBUTING.md)
 │   ├── [DOWNLOADS.md](./Docs/DOWNLOADS.md)
-│   ├── [FEATURES.md](./Docs/FEATURES.md)
 │   ├── [PACKAGING.md](./Docs/PACKAGING.md)
 │   └── [ROADMAP.md](./Docs/ROADMAP.md)
 ├── Resources/
-│   ├── [AppIcon.icns](./Resources/AppIcon.icns)
 │   ├── AppIcon.iconset/
 │   │   ├── [AppIcon-render.swift](./Resources/AppIcon.iconset/AppIcon-render.swift)
 │   │   └── [AppIcon-source.svg](./Resources/AppIcon.iconset/AppIcon-source.svg)
+│   ├── [AppIcon.icns](./Resources/AppIcon.icns)
 │   ├── [Info.plist](./Resources/Info.plist)
 │   └── [Snap.entitlements](./Resources/Snap.entitlements)
 ├── Sources/
 │   ├── App/
 │   │   ├── [SnapApp.swift](./Sources/App/SnapApp.swift)
 │   │   └── [SnapViewModel.swift](./Sources/App/SnapViewModel.swift)
-│   ├── Models/
-│   │   ├── [AppSettings.swift](./Sources/Models/AppSettings.swift)
-│   │   ├── [NormalizedRect.swift](./Sources/Models/NormalizedRect.swift)
-│   │   ├── [ScreenInfo.swift](./Sources/Models/ScreenInfo.swift)
-│   │   ├── [SnapLayout.swift](./Sources/Models/SnapLayout.swift)
-│   │   └── [WindowRule.swift](./Sources/Models/WindowRule.swift)
-│   ├── Persistence/
-│   │   ├── [LayoutStore.swift](./Sources/Persistence/LayoutStore.swift)
-│   │   └── [SettingsStore.swift](./Sources/Persistence/SettingsStore.swift)
+│   ├── Core/
+│   │   ├── Models/
+│   │   │   ├── [AppSettings.swift](./Sources/Core/Models/AppSettings.swift)
+│   │   │   ├── [NormalizedRect.swift](./Sources/Core/Models/NormalizedRect.swift)
+│   │   │   ├── [ScreenInfo.swift](./Sources/Core/Models/ScreenInfo.swift)
+│   │   │   ├── [SnapLayout.swift](./Sources/Core/Models/SnapLayout.swift)
+│   │   │   └── [WindowRule.swift](./Sources/Core/Models/WindowRule.swift)
+│   │   ├── Utilities/
+│   │   │   └── [CoordinateConverter.swift](./Sources/Core/Utilities/CoordinateConverter.swift)
+│   │   ├── [LayoutStore.swift](./Sources/Core/LayoutStore.swift)
+│   │   └── [SettingsStore.swift](./Sources/Core/SettingsStore.swift)
 │   ├── Services/
 │   │   ├── [ApplicationManager.swift](./Sources/Services/ApplicationManager.swift)
 │   │   ├── [LayoutManager.swift](./Sources/Services/LayoutManager.swift)
@@ -47,6 +48,17 @@
 │       ├── [ScreenManager.swift](./Sources/macOS/ScreenManager.swift)
 │       └── [WorkspaceMonitor.swift](./Sources/macOS/WorkspaceMonitor.swift)
 ├── Tests/
+│   └── Core/
+│       ├── Models/
+│       │   ├── [AppSettingsTests.swift](./Tests/Core/Models/AppSettingsTests.swift)
+│       │   ├── [NormalizedRectTests.swift](./Tests/Core/Models/NormalizedRectTests.swift)
+│       │   ├── [ScreenInfoTests.swift](./Tests/Core/Models/ScreenInfoTests.swift)
+│       │   ├── [SnapLayoutTests.swift](./Tests/Core/Models/SnapLayoutTests.swift)
+│       │   └── [WindowRuleTests.swift](./Tests/Core/Models/WindowRuleTests.swift)
+│       ├── Utilities/
+│       │   └── [CoordinateConverterTests.swift](./Tests/Core/Utilities/CoordinateConverterTests.swift)
+│       ├── [LayoutStoreTests.swift](./Tests/Core/LayoutStoreTests.swift)
+│       └── [SettingsStoreTests.swift](./Tests/Core/SettingsStoreTests.swift)
 ├── [AGENTS.md](./AGENTS.md)
 ├── [LICENSE](./LICENSE)
 ├── [Makefile](./Makefile)
@@ -55,4 +67,4 @@
 └── [TREE.md](./TREE.md)
 ```
 
-10 directories, 38 files
+15 directories, 49 files

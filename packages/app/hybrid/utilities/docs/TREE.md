@@ -1,8 +1,12 @@
 # TREE
 
 ```text
-├── __mocks__/
-│   └── [chess-ts.js](./__mocks__/chess-ts.js)
+├── docs/
+│   ├── [ARCHITECTURE.md](./docs/ARCHITECTURE.md)
+│   ├── [CONTRIBUTING.md](./docs/CONTRIBUTING.md)
+│   ├── [DOWNLOADS.md](./docs/DOWNLOADS.md)
+│   ├── [PACKAGING.md](./docs/PACKAGING.md)
+│   └── [ROADMAP.md](./docs/ROADMAP.md)
 ├── e2e/
 │   └── [index.spec.ts](./e2e/index.spec.ts)
 ├── prisma/
@@ -42,16 +46,21 @@
 │   │   ├── [icon-128x128.png](./public/icons/icon-128x128.png)
 │   │   ├── [icon-144x144.png](./public/icons/icon-144x144.png)
 │   │   ├── [icon-152x152.png](./public/icons/icon-152x152.png)
+│   │   ├── [icon-16x16.png](./public/icons/icon-16x16.png)
+│   │   ├── [icon-180x180.png](./public/icons/icon-180x180.png)
 │   │   ├── [icon-192x192.png](./public/icons/icon-192x192.png)
+│   │   ├── [icon-256x256.png](./public/icons/icon-256x256.png)
+│   │   ├── [icon-32x32.png](./public/icons/icon-32x32.png)
 │   │   ├── [icon-384x384.png](./public/icons/icon-384x384.png)
+│   │   ├── [icon-48x48.png](./public/icons/icon-48x48.png)
 │   │   ├── [icon-512x512.png](./public/icons/icon-512x512.png)
 │   │   ├── [icon-512x512.svg](./public/icons/icon-512x512.svg)
+│   │   ├── [icon-64x64.png](./public/icons/icon-64x64.png)
 │   │   ├── [icon-72x72.png](./public/icons/icon-72x72.png)
 │   │   ├── [icon-96x96.png](./public/icons/icon-96x96.png)
 │   │   └── [icon.svg](./public/icons/icon.svg)
 │   ├── models/
-│   │   ├── [invoice-parser.onnx](./public/models/invoice-parser.onnx)
-│   │   └── [sign-model.onnx](./public/models/sign-model.onnx)
+│   │   └── [invoice-parser.onnx](./public/models/invoice-parser.onnx)
 │   ├── workers/
 │   │   └── [pdf.worker.min.js](./public/workers/pdf.worker.min.js)
 │   ├── [apple-touch-icon.png](./public/apple-touch-icon.png)
@@ -94,36 +103,14 @@
 │   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/calculator/inflation/page.tsx)
 │   │   │   │   │   ├── split-bill/
 │   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/calculator/split-bill/page.tsx)
-│   │   │   │   │   ├── tax/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/calculator/tax/page.tsx)
 │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/calculator/page.tsx)
 │   │   │   │   ├── clocks/
-│   │   │   │   │   ├── countdown/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/clocks/countdown/page.tsx)
 │   │   │   │   │   ├── cron/
 │   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/clocks/cron/page.tsx)
-│   │   │   │   │   ├── days-count/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/clocks/days-count/page.tsx)
 │   │   │   │   │   ├── epoch-convert/
 │   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/clocks/epoch-convert/page.tsx)
-│   │   │   │   │   ├── pomodoro/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/clocks/pomodoro/page.tsx)
-│   │   │   │   │   ├── watchface/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/clocks/watchface/page.tsx)
 │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/clocks/page.tsx)
-│   │   │   │   ├── data-csv/
-│   │   │   │   │   ├── csv-to-excel/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/data-csv/csv-to-excel/page.tsx)
-│   │   │   │   │   ├── csv-to-json/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/data-csv/csv-to-json/page.tsx)
-│   │   │   │   │   ├── csv-to-xml/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/data-csv/csv-to-xml/page.tsx)
-│   │   │   │   │   ├── split-csv/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/data-csv/split-csv/page.tsx)
-│   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/data-csv/page.tsx)
 │   │   │   │   ├── data-excel/
-│   │   │   │   │   ├── excel-to-csv/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/data-excel/excel-to-csv/page.tsx)
 │   │   │   │   │   ├── excel-to-pdf/
 │   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/data-excel/excel-to-pdf/page.tsx)
 │   │   │   │   │   ├── excel-to-xml/
@@ -131,15 +118,9 @@
 │   │   │   │   │   ├── split-excel/
 │   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/data-excel/split-excel/page.tsx)
 │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/data-excel/page.tsx)
-│   │   │   │   ├── data-json/
-│   │   │   │   │   ├── json-to-csv/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/data-json/json-to-csv/page.tsx)
-│   │   │   │   │   ├── json-to-xml/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/data-json/json-to-xml/page.tsx)
-│   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/data-json/page.tsx)
 │   │   │   │   ├── data-xml/
-│   │   │   │   │   ├── xml-to-csv/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/data-xml/xml-to-csv/page.tsx)
+│   │   │   │   │   ├── json-to-xml/
+│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/data-xml/json-to-xml/page.tsx)
 │   │   │   │   │   ├── xml-to-excel/
 │   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/data-xml/xml-to-excel/page.tsx)
 │   │   │   │   │   ├── xml-to-json/
@@ -170,66 +151,32 @@
 │   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/editors/manifest/page.tsx)
 │   │   │   │   │   ├── regex/
 │   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/editors/regex/page.tsx)
-│   │   │   │   │   ├── resume/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/editors/resume/page.tsx)
 │   │   │   │   │   ├── slides/
 │   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/editors/slides/page.tsx)
-│   │   │   │   │   ├── word-counter/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/editors/word-counter/page.tsx)
 │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/editors/page.tsx)
 │   │   │   │   ├── education/
 │   │   │   │   │   ├── doi/
 │   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/education/doi/page.tsx)
-│   │   │   │   │   ├── english/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/education/english/page.tsx)
-│   │   │   │   │   ├── flashcards/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/education/flashcards/page.tsx)
-│   │   │   │   │   ├── periodic-table/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/education/periodic-table/page.tsx)
-│   │   │   │   │   ├── pitch/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/education/pitch/page.tsx)
-│   │   │   │   │   ├── sign/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/education/sign/page.tsx)
 │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/education/page.tsx)
-│   │   │   │   ├── health-vision/
-│   │   │   │   │   ├── logmar/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/health-vision/logmar/page.tsx)
-│   │   │   │   │   ├── snellen/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/health-vision/snellen/page.tsx)
-│   │   │   │   │   ├── tumbling-e/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/health-vision/tumbling-e/page.tsx)
-│   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/health-vision/page.tsx)
-│   │   │   │   ├── psychology/
-│   │   │   │   │   ├── beck-depression-inventory/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/psychology/beck-depression-inventory/page.tsx)
-│   │   │   │   │   ├── big-five-inventory/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/psychology/big-five-inventory/page.tsx)
-│   │   │   │   │   ├── dyadic-adjustment-scale/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/psychology/dyadic-adjustment-scale/page.tsx)
-│   │   │   │   │   ├── experiences-in-close-relationships/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/psychology/experiences-in-close-relationships/page.tsx)
-│   │   │   │   │   ├── generalized-anxiety-disorder/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/psychology/generalized-anxiety-disorder/page.tsx)
-│   │   │   │   │   ├── patient-health-questionnaire/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/psychology/patient-health-questionnaire/page.tsx)
-│   │   │   │   │   ├── relationship-closeness-inventory/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/psychology/relationship-closeness-inventory/page.tsx)
-│   │   │   │   │   ├── satisfaction-with-life/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/psychology/satisfaction-with-life/page.tsx)
-│   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/psychology/page.tsx)
-│   │   │   │   ├── text-convert/
-│   │   │   │   │   ├── braille/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/text-convert/braille/page.tsx)
-│   │   │   │   │   ├── leetspeak/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/text-convert/leetspeak/page.tsx)
-│   │   │   │   │   ├── morse/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/text-convert/morse/page.tsx)
-│   │   │   │   │   ├── text-case/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/text-convert/text-case/page.tsx)
-│   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/text-convert/page.tsx)
+│   │   │   │   ├── puzzle/
+│   │   │   │   │   ├── game2048/
+│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/puzzle/game2048/page.tsx)
+│   │   │   │   │   ├── lights-out/
+│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/puzzle/lights-out/page.tsx)
+│   │   │   │   │   ├── sliding-puzzle/
+│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/puzzle/sliding-puzzle/page.tsx)
+│   │   │   │   │   ├── towers/
+│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/puzzle/towers/page.tsx)
+│   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/puzzle/page.tsx)
+│   │   │   │   ├── trivia/
+│   │   │   │   │   ├── palindrome/
+│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/trivia/palindrome/page.tsx)
+│   │   │   │   │   ├── pokedex/
+│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/trivia/pokedex/page.tsx)
+│   │   │   │   │   ├── quizify/
+│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/trivia/quizify/page.tsx)
+│   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/trivia/page.tsx)
 │   │   │   │   ├── utilities/
-│   │   │   │   │   ├── clipboard/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/utilities/clipboard/page.tsx)
 │   │   │   │   │   ├── create-zip/
 │   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/utilities/create-zip/page.tsx)
 │   │   │   │   │   ├── emojis/
@@ -246,142 +193,12 @@
 │   │   │   │   ├── visualization/
 │   │   │   │   │   ├── attractors/
 │   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/visualization/attractors/page.tsx)
-│   │   │   │   │   ├── calendar-tracker/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/visualization/calendar-tracker/page.tsx)
-│   │   │   │   │   ├── football/
-│   │   │   │   │   │   ├── [tournament]/
-│   │   │   │   │   │   │   ├── [year]/
-│   │   │   │   │   │   │   │   ├── knock-out/
-│   │   │   │   │   │   │   │   │   ├── [_client.tsx](./src/app/(products)/apps/visualization/football/[tournament]/[year]/knock-out/_client.tsx)
-│   │   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/visualization/football/[tournament]/[year]/knock-out/page.tsx)
-│   │   │   │   │   │   │   │   ├── [_client.tsx](./src/app/(products)/apps/visualization/football/[tournament]/[year]/_client.tsx)
-│   │   │   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/visualization/football/[tournament]/[year]/page.tsx)
-│   │   │   │   │   │   │   ├── [_client.tsx](./src/app/(products)/apps/visualization/football/[tournament]/_client.tsx)
-│   │   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/visualization/football/[tournament]/page.tsx)
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/visualization/football/page.tsx)
 │   │   │   │   │   ├── legislation/
 │   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/visualization/legislation/page.tsx)
 │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/visualization/page.tsx)
 │   │   │   │   └── [page.tsx](./src/app/(products)/apps/page.tsx)
-│   │   │   ├── downloads/
-│   │   │   │   └── [page.tsx](./src/app/(products)/downloads/page.tsx)
-│   │   │   └── games/
-│   │   │       ├── arcade/
-│   │   │       │   ├── dino-run/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/arcade/dino-run/page.tsx)
-│   │   │       │   ├── rps/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/arcade/rps/page.tsx)
-│   │   │       │   ├── snake/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/arcade/snake/page.tsx)
-│   │   │       │   └── [page.tsx](./src/app/(products)/games/arcade/page.tsx)
-│   │   │       ├── casino/
-│   │   │       │   ├── blackjack/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/casino/blackjack/page.tsx)
-│   │   │       │   ├── dice-game/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/casino/dice-game/page.tsx)
-│   │   │       │   ├── poker/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/casino/poker/page.tsx)
-│   │   │       │   ├── slot-machine/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/casino/slot-machine/page.tsx)
-│   │   │       │   ├── tai-baccarat/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/casino/tai-baccarat/page.tsx)
-│   │   │       │   └── [page.tsx](./src/app/(products)/games/casino/page.tsx)
-│   │   │       ├── chess/
-│   │   │       │   ├── chess-board/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/chess/chess-board/page.tsx)
-│   │   │       │   ├── chess-clock/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/chess/chess-clock/page.tsx)
-│   │   │       │   ├── chess-elo/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/chess/chess-elo/page.tsx)
-│   │   │       │   ├── chess-stats/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/chess/chess-stats/page.tsx)
-│   │   │       │   └── [page.tsx](./src/app/(products)/games/chess/page.tsx)
-│   │   │       ├── countries/
-│   │   │       │   ├── countries-border/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/countries/countries-border/page.tsx)
-│   │   │       │   ├── countries-connection/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/countries/countries-connection/page.tsx)
-│   │   │       │   ├── countries-continents-sort/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/countries/countries-continents-sort/page.tsx)
-│   │   │       │   ├── countries-higher-lower/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/countries/countries-higher-lower/page.tsx)
-│   │   │       │   ├── emoji-guesser/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/countries/emoji-guesser/page.tsx)
-│   │   │       │   ├── flag-guesser/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/countries/flag-guesser/page.tsx)
-│   │   │       │   └── [page.tsx](./src/app/(products)/games/countries/page.tsx)
-│   │   │       ├── memory/
-│   │   │       │   ├── memory-match/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/memory/memory-match/page.tsx)
-│   │   │       │   ├── n-back/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/memory/n-back/page.tsx)
-│   │   │       │   ├── pi/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/memory/pi/page.tsx)
-│   │   │       │   ├── quizify/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/memory/quizify/page.tsx)
-│   │   │       │   ├── recall/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/memory/recall/page.tsx)
-│   │   │       │   └── [page.tsx](./src/app/(products)/games/memory/page.tsx)
-│   │   │       ├── nikoli/
-│   │   │       │   ├── fillomino/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/nikoli/fillomino/page.tsx)
-│   │   │       │   ├── heyawake/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/nikoli/heyawake/page.tsx)
-│   │   │       │   ├── masyu/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/nikoli/masyu/page.tsx)
-│   │   │       │   ├── norinori/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/nikoli/norinori/page.tsx)
-│   │   │       │   ├── nurikabe/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/nikoli/nurikabe/page.tsx)
-│   │   │       │   ├── shikaku/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/nikoli/shikaku/page.tsx)
-│   │   │       │   ├── sudoku/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/nikoli/sudoku/page.tsx)
-│   │   │       │   └── [page.tsx](./src/app/(products)/games/nikoli/page.tsx)
-│   │   │       ├── puzzle/
-│   │   │       │   ├── game2048/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/puzzle/game2048/page.tsx)
-│   │   │       │   ├── lights-out/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/puzzle/lights-out/page.tsx)
-│   │   │       │   ├── maze/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/puzzle/maze/page.tsx)
-│   │   │       │   ├── sliding-puzzle/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/puzzle/sliding-puzzle/page.tsx)
-│   │   │       │   ├── towers/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/puzzle/towers/page.tsx)
-│   │   │       │   └── [page.tsx](./src/app/(products)/games/puzzle/page.tsx)
-│   │   │       ├── tic-tac-toe/
-│   │   │       │   ├── classic/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/tic-tac-toe/classic/page.tsx)
-│   │   │       │   ├── duck/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/tic-tac-toe/duck/page.tsx)
-│   │   │       │   ├── notakto/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/tic-tac-toe/notakto/page.tsx)
-│   │   │       │   ├── reverse/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/tic-tac-toe/reverse/page.tsx)
-│   │   │       │   ├── t3/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/tic-tac-toe/t3/page.tsx)
-│   │   │       │   └── wild/
-│   │   │       │       └── [page.tsx](./src/app/(products)/games/tic-tac-toe/wild/page.tsx)
-│   │   │       ├── trivia/
-│   │   │       │   ├── myth-versus-fact/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/trivia/myth-versus-fact/page.tsx)
-│   │   │       │   ├── pd/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/trivia/pd/page.tsx)
-│   │   │       │   ├── pokedex/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/trivia/pokedex/page.tsx)
-│   │   │       │   ├── through-the-years/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/trivia/through-the-years/page.tsx)
-│   │   │       │   └── [page.tsx](./src/app/(products)/games/trivia/page.tsx)
-│   │   │       ├── word/
-│   │   │       │   ├── palindrome/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/word/palindrome/page.tsx)
-│   │   │       │   ├── typoglycemia/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/word/typoglycemia/page.tsx)
-│   │   │       │   ├── wordle/
-│   │   │       │   │   └── [page.tsx](./src/app/(products)/games/word/wordle/page.tsx)
-│   │   │       │   └── [page.tsx](./src/app/(products)/games/word/page.tsx)
-│   │   │       └── [page.tsx](./src/app/(products)/games/page.tsx)
+│   │   │   └── downloads/
+│   │   │       └── [page.tsx](./src/app/(products)/downloads/page.tsx)
 │   │   ├── (system)/
 │   │   │   ├── me/
 │   │   │   │   └── [page.tsx](./src/app/(system)/me/page.tsx)
@@ -389,12 +206,18 @@
 │   │   │   │   └── [page.tsx](./src/app/(system)/settings/page.tsx)
 │   │   │   └── version/
 │   │   │       └── [page.tsx](./src/app/(system)/version/page.tsx)
+│   │   ├── [default.tsx](./src/app/default.tsx)
 │   │   ├── [error.tsx](./src/app/error.tsx)
+│   │   ├── [favicon.ico](./src/app/favicon.ico)
+│   │   ├── [forbidden.tsx](./src/app/forbidden.tsx)
 │   │   ├── [global-error.tsx](./src/app/global-error.tsx)
 │   │   ├── [layout.tsx](./src/app/layout.tsx)
 │   │   ├── [loading.tsx](./src/app/loading.tsx)
 │   │   ├── [not-found.tsx](./src/app/not-found.tsx)
-│   │   └── [page.tsx](./src/app/page.tsx)
+│   │   ├── [page.tsx](./src/app/page.tsx)
+│   │   ├── [robots.ts](./src/app/robots.ts)
+│   │   ├── [template.tsx](./src/app/template.tsx)
+│   │   └── [unauthorized.tsx](./src/app/unauthorized.tsx)
 │   ├── components/
 │   │   ├── atoms/
 │   │   │   ├── __tests__/
@@ -411,6 +234,8 @@
 │   │   │   ├── [TagBadge.tsx](./src/components/atoms/TagBadge.tsx)
 │   │   │   ├── [ToolCard.tsx](./src/components/atoms/ToolCard.tsx)
 │   │   │   └── [index.ts](./src/components/atoms/index.ts)
+│   │   ├── layout/
+│   │   │   └── [RootLayoutClient.tsx](./src/components/layout/RootLayoutClient.tsx)
 │   │   ├── molecules/
 │   │   │   ├── __tests__/
 │   │   │   │   ├── __snapshots__/
@@ -452,8 +277,6 @@
 │   │   │   │   │   └── [BlogHeader.test.tsx](./src/components/organisms/blog/__tests__/BlogHeader.test.tsx)
 │   │   │   │   ├── [BlogFooter.tsx](./src/components/organisms/blog/BlogFooter.tsx)
 │   │   │   │   └── [BlogHeader.tsx](./src/components/organisms/blog/BlogHeader.tsx)
-│   │   │   ├── chess/
-│   │   │   │   └── [ChessBoard.tsx](./src/components/organisms/chess/ChessBoard.tsx)
 │   │   │   ├── common/
 │   │   │   │   └── [PhotosGrid.tsx](./src/components/organisms/common/PhotosGrid.tsx)
 │   │   │   ├── landing/
@@ -485,37 +308,6 @@
 │   │   │   │   └── [Testimonials.tsx](./src/components/organisms/landing/Testimonials.tsx)
 │   │   │   ├── layout/
 │   │   │   │   ├── tabs/
-│   │   │   │   │   ├── CalendarTab/
-│   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   ├── __snapshots__/
-│   │   │   │   │   │   │   │   ├── [CalendarGrid.test.tsx.snap](./src/components/organisms/layout/tabs/CalendarTab/__tests__/__snapshots__/CalendarGrid.test.tsx.snap)
-│   │   │   │   │   │   │   │   ├── [CalendarHeader.test.tsx.snap](./src/components/organisms/layout/tabs/CalendarTab/__tests__/__snapshots__/CalendarHeader.test.tsx.snap)
-│   │   │   │   │   │   │   │   ├── [EventList.test.tsx.snap](./src/components/organisms/layout/tabs/CalendarTab/__tests__/__snapshots__/EventList.test.tsx.snap)
-│   │   │   │   │   │   │   │   ├── [LunarDate.test.tsx.snap](./src/components/organisms/layout/tabs/CalendarTab/__tests__/__snapshots__/LunarDate.test.tsx.snap)
-│   │   │   │   │   │   │   │   └── [index.test.tsx.snap](./src/components/organisms/layout/tabs/CalendarTab/__tests__/__snapshots__/index.test.tsx.snap)
-│   │   │   │   │   │   │   ├── [CalendarGrid.test.tsx](./src/components/organisms/layout/tabs/CalendarTab/__tests__/CalendarGrid.test.tsx)
-│   │   │   │   │   │   │   ├── [CalendarHeader.test.tsx](./src/components/organisms/layout/tabs/CalendarTab/__tests__/CalendarHeader.test.tsx)
-│   │   │   │   │   │   │   ├── [EventList.test.tsx](./src/components/organisms/layout/tabs/CalendarTab/__tests__/EventList.test.tsx)
-│   │   │   │   │   │   │   ├── [LunarDate.test.tsx](./src/components/organisms/layout/tabs/CalendarTab/__tests__/LunarDate.test.tsx)
-│   │   │   │   │   │   │   └── [index.test.tsx](./src/components/organisms/layout/tabs/CalendarTab/__tests__/index.test.tsx)
-│   │   │   │   │   │   ├── [CalendarGrid.tsx](./src/components/organisms/layout/tabs/CalendarTab/CalendarGrid.tsx)
-│   │   │   │   │   │   ├── [CalendarHeader.tsx](./src/components/organisms/layout/tabs/CalendarTab/CalendarHeader.tsx)
-│   │   │   │   │   │   ├── [EventList.tsx](./src/components/organisms/layout/tabs/CalendarTab/EventList.tsx)
-│   │   │   │   │   │   ├── [LunarDate.tsx](./src/components/organisms/layout/tabs/CalendarTab/LunarDate.tsx)
-│   │   │   │   │   │   └── [index.tsx](./src/components/organisms/layout/tabs/CalendarTab/index.tsx)
-│   │   │   │   │   ├── ClockTab/
-│   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   ├── __snapshots__/
-│   │   │   │   │   │   │   │   ├── [CityCard.test.tsx.snap](./src/components/organisms/layout/tabs/ClockTab/__tests__/__snapshots__/CityCard.test.tsx.snap)
-│   │   │   │   │   │   │   │   ├── [WeatherBadge.test.tsx.snap](./src/components/organisms/layout/tabs/ClockTab/__tests__/__snapshots__/WeatherBadge.test.tsx.snap)
-│   │   │   │   │   │   │   │   └── [WorldClock.test.tsx.snap](./src/components/organisms/layout/tabs/ClockTab/__tests__/__snapshots__/WorldClock.test.tsx.snap)
-│   │   │   │   │   │   │   ├── [CityCard.test.tsx](./src/components/organisms/layout/tabs/ClockTab/__tests__/CityCard.test.tsx)
-│   │   │   │   │   │   │   ├── [WeatherBadge.test.tsx](./src/components/organisms/layout/tabs/ClockTab/__tests__/WeatherBadge.test.tsx)
-│   │   │   │   │   │   │   └── [WorldClock.test.tsx](./src/components/organisms/layout/tabs/ClockTab/__tests__/WorldClock.test.tsx)
-│   │   │   │   │   │   ├── [CityCard.tsx](./src/components/organisms/layout/tabs/ClockTab/CityCard.tsx)
-│   │   │   │   │   │   ├── [WeatherBadge.tsx](./src/components/organisms/layout/tabs/ClockTab/WeatherBadge.tsx)
-│   │   │   │   │   │   ├── [WorldClock.tsx](./src/components/organisms/layout/tabs/ClockTab/WorldClock.tsx)
-│   │   │   │   │   │   └── [index.tsx](./src/components/organisms/layout/tabs/ClockTab/index.tsx)
 │   │   │   │   │   ├── CurrencyTab/
 │   │   │   │   │   │   ├── __tests__/
 │   │   │   │   │   │   │   ├── __snapshots__/
@@ -543,15 +335,11 @@
 │   │   │   │   │   │   ├── [ServiceRow.tsx](./src/components/organisms/layout/tabs/StatusTab/ServiceRow.tsx)
 │   │   │   │   │   │   ├── [constants.ts](./src/components/organisms/layout/tabs/StatusTab/constants.ts)
 │   │   │   │   │   │   └── [index.tsx](./src/components/organisms/layout/tabs/StatusTab/index.tsx)
-│   │   │   │   │   ├── TasksTab/
-│   │   │   │   │   │   ├── [TaskInput.tsx](./src/components/organisms/layout/tabs/TasksTab/TaskInput.tsx)
-│   │   │   │   │   │   ├── [TaskItem.tsx](./src/components/organisms/layout/tabs/TasksTab/TaskItem.tsx)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/organisms/layout/tabs/TasksTab/index.tsx)
-│   │   │   │   │   │   └── [types.ts](./src/components/organisms/layout/tabs/TasksTab/types.ts)
-│   │   │   │   │   └── TimeTab/
-│   │   │   │   │       ├── [TimeBlock.tsx](./src/components/organisms/layout/tabs/TimeTab/TimeBlock.tsx)
-│   │   │   │   │       ├── [constants.ts](./src/components/organisms/layout/tabs/TimeTab/constants.ts)
-│   │   │   │   │       └── [index.tsx](./src/components/organisms/layout/tabs/TimeTab/index.tsx)
+│   │   │   │   │   └── TasksTab/
+│   │   │   │   │       ├── [TaskInput.tsx](./src/components/organisms/layout/tabs/TasksTab/TaskInput.tsx)
+│   │   │   │   │       ├── [TaskItem.tsx](./src/components/organisms/layout/tabs/TasksTab/TaskItem.tsx)
+│   │   │   │   │       ├── [index.tsx](./src/components/organisms/layout/tabs/TasksTab/index.tsx)
+│   │   │   │   │       └── [types.ts](./src/components/organisms/layout/tabs/TasksTab/types.ts)
 │   │   │   │   ├── [Breadcrumb.tsx](./src/components/organisms/layout/Breadcrumb.tsx)
 │   │   │   │   ├── [LeftSidebar.tsx](./src/components/organisms/layout/LeftSidebar.tsx)
 │   │   │   │   ├── [RightSidebar.tsx](./src/components/organisms/layout/RightSidebar.tsx)
@@ -950,9 +738,9 @@
 │   │   │   │   │   │   │   │   │   │   │   └── [2026-07-31-fri-brainbrow-explained.yaml](./src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/07/2026-07-31-fri-brainbrow-explained.yaml)
 │   │   │   │   │   │   │   │   │   │   ├── 08/
 │   │   │   │   │   │   │   │   │   │   │   ├── [2026-08-01-sat-connectomics-explained.yaml](./src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-01-sat-connectomics-explained.yaml)
-│   │   │   │   │   │   │   │   │   │   │   ├── [2026-08-02-sun.yaml](./src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-02-sun.yaml)
-│   │   │   │   │   │   │   │   │   │   │   ├── [2026-08-03-mon.yaml](./src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-03-mon.yaml)
-│   │   │   │   │   │   │   │   │   │   │   ├── [2026-08-04-tue.yaml](./src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-04-tue.yaml)
+│   │   │   │   │   │   │   │   │   │   │   ├── [2026-08-02-sun-eeg-explained.yaml](./src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-02-sun-eeg-explained.yaml)
+│   │   │   │   │   │   │   │   │   │   │   ├── [2026-08-03-mon-github-stacked-pr.yaml](./src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-03-mon-github-stacked-pr.yaml)
+│   │   │   │   │   │   │   │   │   │   │   ├── [2026-08-04-tue-markdown-files.yaml](./src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-04-tue-markdown-files.yaml)
 │   │   │   │   │   │   │   │   │   │   │   ├── [2026-08-05-wed.yaml](./src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-05-wed.yaml)
 │   │   │   │   │   │   │   │   │   │   │   ├── [2026-08-06-thu.yaml](./src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-06-thu.yaml)
 │   │   │   │   │   │   │   │   │   │   │   ├── [2026-08-07-fri.yaml](./src/components/routes/apps/bored/Ship/posts/archive/2026/Q3/08/2026-08-07-fri.yaml)
@@ -1498,6 +1286,7 @@
 │   │   │   │   │   │   │   │   │   ├── [core-ram-vs-working-memory.yaml](./src/components/routes/apps/bored/Ship/posts/next/computational-neuroscience/core-ram-vs-working-memory.yaml)
 │   │   │   │   │   │   │   │   │   ├── [core-ssd-controller-vs-hippocampus.yaml](./src/components/routes/apps/bored/Ship/posts/next/computational-neuroscience/core-ssd-controller-vs-hippocampus.yaml)
 │   │   │   │   │   │   │   │   │   ├── [core-ssd-storage-vs-long-term-memory.yaml](./src/components/routes/apps/bored/Ship/posts/next/computational-neuroscience/core-ssd-storage-vs-long-term-memory.yaml)
+│   │   │   │   │   │   │   │   │   ├── [eeg-explained.yaml](./src/components/routes/apps/bored/Ship/posts/next/computational-neuroscience/eeg-explained.yaml)
 │   │   │   │   │   │   │   │   │   ├── [sense-gpu-vs-visual-cortex.yaml](./src/components/routes/apps/bored/Ship/posts/next/computational-neuroscience/sense-gpu-vs-visual-cortex.yaml)
 │   │   │   │   │   │   │   │   │   └── [sense-languages-processing.yaml](./src/components/routes/apps/bored/Ship/posts/next/computational-neuroscience/sense-languages-processing.yaml)
 │   │   │   │   │   │   │   │   ├── football-2026-world-cup/
@@ -1705,10 +1494,12 @@
 │   │   │   │   │   │   │   │   ├── software-interviews/
 │   │   │   │   │   │   │   │   │   ├── [ai-markdown.yaml](./src/components/routes/apps/bored/Ship/posts/next/software-interviews/ai-markdown.yaml)
 │   │   │   │   │   │   │   │   │   ├── [api-idempotency.yaml](./src/components/routes/apps/bored/Ship/posts/next/software-interviews/api-idempotency.yaml)
-│   │   │   │   │   │   │   │   │   └── [hydration.yaml](./src/components/routes/apps/bored/Ship/posts/next/software-interviews/hydration.yaml)
+│   │   │   │   │   │   │   │   │   ├── [hydration.yaml](./src/components/routes/apps/bored/Ship/posts/next/software-interviews/hydration.yaml)
+│   │   │   │   │   │   │   │   │   └── [markdown-files.yaml](./src/components/routes/apps/bored/Ship/posts/next/software-interviews/markdown-files.yaml)
 │   │   │   │   │   │   │   │   └── software-news/
 │   │   │   │   │   │   │   │       ├── [bun-zig-to-rust.yaml](./src/components/routes/apps/bored/Ship/posts/next/software-news/bun-zig-to-rust.yaml)
 │   │   │   │   │   │   │   │       ├── [claude-google-leak.yaml](./src/components/routes/apps/bored/Ship/posts/next/software-news/claude-google-leak.yaml)
+│   │   │   │   │   │   │   │       ├── [github-stacked-pr.yaml](./src/components/routes/apps/bored/Ship/posts/next/software-news/github-stacked-pr.yaml)
 │   │   │   │   │   │   │   │       ├── [kimi-k3.yaml](./src/components/routes/apps/bored/Ship/posts/next/software-news/kimi-k3.yaml)
 │   │   │   │   │   │   │   │       ├── [openai-hugging-face-hacking.yaml](./src/components/routes/apps/bored/Ship/posts/next/software-news/openai-hugging-face-hacking.yaml)
 │   │   │   │   │   │   │   │       └── [typescript-7.yaml](./src/components/routes/apps/bored/Ship/posts/next/software-news/typescript-7.yaml)
@@ -1780,30 +1571,17 @@
 │   │   │   │   │   │   ├── [constants.ts](./src/components/routes/apps/calculator/Inflation/constants.ts)
 │   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/calculator/Inflation/index.tsx)
 │   │   │   │   │   │   └── [types.ts](./src/components/routes/apps/calculator/Inflation/types.ts)
-│   │   │   │   │   ├── SplitBill/
-│   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   ├── [SplitBill.test.tsx](./src/components/routes/apps/calculator/SplitBill/__tests__/SplitBill.test.tsx)
-│   │   │   │   │   │   │   └── [calculate.test.ts](./src/components/routes/apps/calculator/SplitBill/__tests__/calculate.test.ts)
-│   │   │   │   │   │   ├── utils/
-│   │   │   │   │   │   │   └── [calculate.ts](./src/components/routes/apps/calculator/SplitBill/utils/calculate.ts)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/calculator/SplitBill/AGENTS.md)
-│   │   │   │   │   │   ├── [constants.ts](./src/components/routes/apps/calculator/SplitBill/constants.ts)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/calculator/SplitBill/index.tsx)
-│   │   │   │   │   │   └── [types.ts](./src/components/routes/apps/calculator/SplitBill/types.ts)
-│   │   │   │   │   └── Tax/
+│   │   │   │   │   └── SplitBill/
 │   │   │   │   │       ├── __tests__/
-│   │   │   │   │       │   └── [Tax.test.tsx](./src/components/routes/apps/calculator/Tax/__tests__/Tax.test.tsx)
+│   │   │   │   │       │   ├── [SplitBill.test.tsx](./src/components/routes/apps/calculator/SplitBill/__tests__/SplitBill.test.tsx)
+│   │   │   │   │       │   └── [calculate.test.ts](./src/components/routes/apps/calculator/SplitBill/__tests__/calculate.test.ts)
 │   │   │   │   │       ├── utils/
-│   │   │   │   │       │   └── [tax.ts](./src/components/routes/apps/calculator/Tax/utils/tax.ts)
-│   │   │   │   │       ├── [AGENTS.md](./src/components/routes/apps/calculator/Tax/AGENTS.md)
-│   │   │   │   │       ├── [constants.ts](./src/components/routes/apps/calculator/Tax/constants.ts)
-│   │   │   │   │       ├── [index.tsx](./src/components/routes/apps/calculator/Tax/index.tsx)
-│   │   │   │   │       └── [types.ts](./src/components/routes/apps/calculator/Tax/types.ts)
+│   │   │   │   │       │   └── [calculate.ts](./src/components/routes/apps/calculator/SplitBill/utils/calculate.ts)
+│   │   │   │   │       ├── [AGENTS.md](./src/components/routes/apps/calculator/SplitBill/AGENTS.md)
+│   │   │   │   │       ├── [constants.ts](./src/components/routes/apps/calculator/SplitBill/constants.ts)
+│   │   │   │   │       ├── [index.tsx](./src/components/routes/apps/calculator/SplitBill/index.tsx)
+│   │   │   │   │       └── [types.ts](./src/components/routes/apps/calculator/SplitBill/types.ts)
 │   │   │   │   ├── clocks/
-│   │   │   │   │   ├── Countdown/
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/clocks/Countdown/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/clocks/Countdown/index.tsx)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/apps/clocks/Countdown/utils.ts)
 │   │   │   │   │   ├── Cron/
 │   │   │   │   │   │   ├── utils/
 │   │   │   │   │   │   │   ├── __tests__/
@@ -1814,62 +1592,18 @@
 │   │   │   │   │   │   ├── [constants.ts](./src/components/routes/apps/clocks/Cron/constants.ts)
 │   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/clocks/Cron/index.tsx)
 │   │   │   │   │   │   └── [types.ts](./src/components/routes/apps/clocks/Cron/types.ts)
-│   │   │   │   │   ├── DaysCount/
-│   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   ├── [DaysCount.test.tsx](./src/components/routes/apps/clocks/DaysCount/__tests__/DaysCount.test.tsx)
-│   │   │   │   │   │   │   └── [utils.test.ts](./src/components/routes/apps/clocks/DaysCount/__tests__/utils.test.ts)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/clocks/DaysCount/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/clocks/DaysCount/index.tsx)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/apps/clocks/DaysCount/utils.ts)
 │   │   │   │   │   ├── EpochConvert/
 │   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/clocks/EpochConvert/AGENTS.md)
 │   │   │   │   │   │   └── [index.tsx](./src/components/routes/apps/clocks/EpochConvert/index.tsx)
-│   │   │   │   │   ├── Pomodoro/
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/clocks/Pomodoro/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/clocks/Pomodoro/index.tsx)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/apps/clocks/Pomodoro/utils.ts)
-│   │   │   │   │   ├── Watchface/
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/clocks/Watchface/AGENTS.md)
-│   │   │   │   │   │   └── [index.tsx](./src/components/routes/apps/clocks/Watchface/index.tsx)
 │   │   │   │   │   └── __tests__/
-│   │   │   │   │       ├── [Countdown.test.tsx](./src/components/routes/apps/clocks/__tests__/Countdown.test.tsx)
-│   │   │   │   │       ├── [Cron.test.tsx](./src/components/routes/apps/clocks/__tests__/Cron.test.tsx)
-│   │   │   │   │       ├── [Pomodoro.test.tsx](./src/components/routes/apps/clocks/__tests__/Pomodoro.test.tsx)
-│   │   │   │   │       └── [Watchface.test.tsx](./src/components/routes/apps/clocks/__tests__/Watchface.test.tsx)
+│   │   │   │   │       └── [Cron.test.tsx](./src/components/routes/apps/clocks/__tests__/Cron.test.tsx)
 │   │   │   │   ├── data/
 │   │   │   │   │   ├── scripts/
 │   │   │   │   │   │   └── [convert-csv-to-json.ts](./src/components/routes/apps/data/scripts/convert-csv-to-json.ts)
 │   │   │   │   │   ├── [apps.csv](./src/components/routes/apps/data/apps.csv)
 │   │   │   │   │   ├── [apps.json](./src/components/routes/apps/data/apps.json)
 │   │   │   │   │   └── [apps.ts](./src/components/routes/apps/data/apps.ts)
-│   │   │   │   ├── data-csv/
-│   │   │   │   │   ├── CsvToExcel/
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/data-csv/CsvToExcel/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/data-csv/CsvToExcel/index.tsx)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/apps/data-csv/CsvToExcel/utils.ts)
-│   │   │   │   │   ├── CsvToJson/
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/data-csv/CsvToJson/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/data-csv/CsvToJson/index.tsx)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/apps/data-csv/CsvToJson/utils.ts)
-│   │   │   │   │   ├── CsvToXml/
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/data-csv/CsvToXml/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/data-csv/CsvToXml/index.tsx)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/apps/data-csv/CsvToXml/utils.ts)
-│   │   │   │   │   ├── SplitCsv/
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/data-csv/SplitCsv/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/data-csv/SplitCsv/index.tsx)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/apps/data-csv/SplitCsv/utils.ts)
-│   │   │   │   │   └── __tests__/
-│   │   │   │   │       ├── [CsvToExcel.test.tsx](./src/components/routes/apps/data-csv/__tests__/CsvToExcel.test.tsx)
-│   │   │   │   │       ├── [CsvToJson.test.tsx](./src/components/routes/apps/data-csv/__tests__/CsvToJson.test.tsx)
-│   │   │   │   │       ├── [CsvToXml.test.tsx](./src/components/routes/apps/data-csv/__tests__/CsvToXml.test.tsx)
-│   │   │   │   │       ├── [SplitCsv.test.tsx](./src/components/routes/apps/data-csv/__tests__/SplitCsv.test.tsx)
-│   │   │   │   │       └── [utils.test.ts](./src/components/routes/apps/data-csv/__tests__/utils.test.ts)
 │   │   │   │   ├── data-excel/
-│   │   │   │   │   ├── ExcelToCsv/
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/data-excel/ExcelToCsv/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/data-excel/ExcelToCsv/index.tsx)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/apps/data-excel/ExcelToCsv/utils.ts)
 │   │   │   │   │   ├── ExcelToPdf/
 │   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/data-excel/ExcelToPdf/AGENTS.md)
 │   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/data-excel/ExcelToPdf/index.tsx)
@@ -1883,29 +1617,14 @@
 │   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/data-excel/SplitExcel/index.tsx)
 │   │   │   │   │   │   └── [utils.ts](./src/components/routes/apps/data-excel/SplitExcel/utils.ts)
 │   │   │   │   │   └── __tests__/
-│   │   │   │   │       ├── [ExcelToCsv.test.tsx](./src/components/routes/apps/data-excel/__tests__/ExcelToCsv.test.tsx)
 │   │   │   │   │       ├── [ExcelToPdf.test.tsx](./src/components/routes/apps/data-excel/__tests__/ExcelToPdf.test.tsx)
 │   │   │   │   │       ├── [ExcelToXml.test.tsx](./src/components/routes/apps/data-excel/__tests__/ExcelToXml.test.tsx)
-│   │   │   │   │       ├── [SplitExcel.test.tsx](./src/components/routes/apps/data-excel/__tests__/SplitExcel.test.tsx)
-│   │   │   │   │       └── [utils.test.ts](./src/components/routes/apps/data-excel/__tests__/utils.test.ts)
-│   │   │   │   ├── data-json/
-│   │   │   │   │   ├── JsonToCsv/
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/data-json/JsonToCsv/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/data-json/JsonToCsv/index.tsx)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/apps/data-json/JsonToCsv/utils.ts)
-│   │   │   │   │   ├── JsonToXml/
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/data-json/JsonToXml/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/data-json/JsonToXml/index.tsx)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/apps/data-json/JsonToXml/utils.ts)
-│   │   │   │   │   └── __tests__/
-│   │   │   │   │       ├── [JsonToCsv.test.tsx](./src/components/routes/apps/data-json/__tests__/JsonToCsv.test.tsx)
-│   │   │   │   │       ├── [JsonToXml.test.tsx](./src/components/routes/apps/data-json/__tests__/JsonToXml.test.tsx)
-│   │   │   │   │       └── [utils.test.ts](./src/components/routes/apps/data-json/__tests__/utils.test.ts)
+│   │   │   │   │       └── [SplitExcel.test.tsx](./src/components/routes/apps/data-excel/__tests__/SplitExcel.test.tsx)
 │   │   │   │   ├── data-xml/
-│   │   │   │   │   ├── XmlToCsv/
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/data-xml/XmlToCsv/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/data-xml/XmlToCsv/index.tsx)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/apps/data-xml/XmlToCsv/utils.ts)
+│   │   │   │   │   ├── JsonToXml/
+│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/data-xml/JsonToXml/AGENTS.md)
+│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/data-xml/JsonToXml/index.tsx)
+│   │   │   │   │   │   └── [utils.ts](./src/components/routes/apps/data-xml/JsonToXml/utils.ts)
 │   │   │   │   │   ├── XmlToExcel/
 │   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/data-xml/XmlToExcel/AGENTS.md)
 │   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/data-xml/XmlToExcel/index.tsx)
@@ -1915,7 +1634,7 @@
 │   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/data-xml/XmlToJson/index.tsx)
 │   │   │   │   │   │   └── [utils.ts](./src/components/routes/apps/data-xml/XmlToJson/utils.ts)
 │   │   │   │   │   └── __tests__/
-│   │   │   │   │       ├── [XmlToCsv.test.tsx](./src/components/routes/apps/data-xml/__tests__/XmlToCsv.test.tsx)
+│   │   │   │   │       ├── [JsonToXml.test.tsx](./src/components/routes/apps/data-xml/__tests__/JsonToXml.test.tsx)
 │   │   │   │   │       ├── [XmlToExcel.test.tsx](./src/components/routes/apps/data-xml/__tests__/XmlToExcel.test.tsx)
 │   │   │   │   │       ├── [XmlToJson.test.tsx](./src/components/routes/apps/data-xml/__tests__/XmlToJson.test.tsx)
 │   │   │   │   │       └── [utils.test.ts](./src/components/routes/apps/data-xml/__tests__/utils.test.ts)
@@ -2016,14 +1735,6 @@
 │   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/editors/Regex/AGENTS.md)
 │   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/editors/Regex/index.tsx)
 │   │   │   │   │   │   └── [types.ts](./src/components/routes/apps/editors/Regex/types.ts)
-│   │   │   │   │   ├── Resume/
-│   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   ├── [Resume.test.tsx](./src/components/routes/apps/editors/Resume/__tests__/Resume.test.tsx)
-│   │   │   │   │   │   │   └── [useCodeMirror.test.ts](./src/components/routes/apps/editors/Resume/__tests__/useCodeMirror.test.ts)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/editors/Resume/AGENTS.md)
-│   │   │   │   │   │   ├── [constants.ts](./src/components/routes/apps/editors/Resume/constants.ts)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/editors/Resume/index.tsx)
-│   │   │   │   │   │   └── [useCodeMirror.ts](./src/components/routes/apps/editors/Resume/useCodeMirror.ts)
 │   │   │   │   │   ├── Slides/
 │   │   │   │   │   │   ├── __tests__/
 │   │   │   │   │   │   │   └── [Slides.test.tsx](./src/components/routes/apps/editors/Slides/__tests__/Slides.test.tsx)
@@ -2056,10 +1767,6 @@
 │   │   │   │   │   │   ├── [constants.ts](./src/components/routes/apps/editors/Slides/constants.ts)
 │   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/editors/Slides/index.tsx)
 │   │   │   │   │   │   └── [types.ts](./src/components/routes/apps/editors/Slides/types.ts)
-│   │   │   │   │   ├── WordCounter/
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/editors/WordCounter/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/editors/WordCounter/index.tsx)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/apps/editors/WordCounter/utils.ts)
 │   │   │   │   │   ├── __tests__/
 │   │   │   │   │   │   ├── __snapshots__/
 │   │   │   │   │   │   │   ├── [JSONSchema.test.tsx.snap](./src/components/routes/apps/editors/__tests__/__snapshots__/JSONSchema.test.tsx.snap)
@@ -2079,195 +1786,99 @@
 │   │   │   │   │   │   ├── [ReferenceCard.tsx](./src/components/routes/apps/education/DOI/ReferenceCard.tsx)
 │   │   │   │   │   │   ├── [ReferenceTable.tsx](./src/components/routes/apps/education/DOI/ReferenceTable.tsx)
 │   │   │   │   │   │   └── [index.tsx](./src/components/routes/apps/education/DOI/index.tsx)
-│   │   │   │   │   ├── English/
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/education/English/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/education/English/index.tsx)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/apps/education/English/utils.ts)
-│   │   │   │   │   ├── Flashcards/
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/education/Flashcards/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/education/Flashcards/index.tsx)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/apps/education/Flashcards/utils.ts)
-│   │   │   │   │   ├── PeriodicTable/
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/education/PeriodicTable/AGENTS.md)
-│   │   │   │   │   │   └── [index.tsx](./src/components/routes/apps/education/PeriodicTable/index.tsx)
-│   │   │   │   │   ├── Pitch/
-│   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   ├── [Pitch.test.tsx](./src/components/routes/apps/education/Pitch/__tests__/Pitch.test.tsx)
-│   │   │   │   │   │   │   ├── [useAudio.test.ts](./src/components/routes/apps/education/Pitch/__tests__/useAudio.test.ts)
-│   │   │   │   │   │   │   ├── [useGame.test.ts](./src/components/routes/apps/education/Pitch/__tests__/useGame.test.ts)
-│   │   │   │   │   │   │   └── [useSequence.test.ts](./src/components/routes/apps/education/Pitch/__tests__/useSequence.test.ts)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/education/Pitch/AGENTS.md)
-│   │   │   │   │   │   ├── [constants.ts](./src/components/routes/apps/education/Pitch/constants.ts)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/education/Pitch/index.tsx)
-│   │   │   │   │   │   ├── [keyClasses.ts](./src/components/routes/apps/education/Pitch/keyClasses.ts)
-│   │   │   │   │   │   ├── [useAudio.ts](./src/components/routes/apps/education/Pitch/useAudio.ts)
-│   │   │   │   │   │   ├── [useGame.ts](./src/components/routes/apps/education/Pitch/useGame.ts)
-│   │   │   │   │   │   ├── [usePitchGame.ts](./src/components/routes/apps/education/Pitch/usePitchGame.ts)
-│   │   │   │   │   │   └── [useSequence.ts](./src/components/routes/apps/education/Pitch/useSequence.ts)
-│   │   │   │   │   ├── Sign/
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/education/Sign/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/education/Sign/index.tsx)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/apps/education/Sign/utils.ts)
 │   │   │   │   │   ├── __tests__/
 │   │   │   │   │   │   ├── __snapshots__/
-│   │   │   │   │   │   │   ├── [DOI.test.tsx.snap](./src/components/routes/apps/education/__tests__/__snapshots__/DOI.test.tsx.snap)
-│   │   │   │   │   │   │   ├── [Flashcards.test.tsx.snap](./src/components/routes/apps/education/__tests__/__snapshots__/Flashcards.test.tsx.snap)
-│   │   │   │   │   │   │   ├── [PeriodicTable.test.tsx.snap](./src/components/routes/apps/education/__tests__/__snapshots__/PeriodicTable.test.tsx.snap)
-│   │   │   │   │   │   │   └── [Pitch.test.tsx.snap](./src/components/routes/apps/education/__tests__/__snapshots__/Pitch.test.tsx.snap)
-│   │   │   │   │   │   ├── [DOI.test.tsx](./src/components/routes/apps/education/__tests__/DOI.test.tsx)
-│   │   │   │   │   │   ├── [English.test.tsx](./src/components/routes/apps/education/__tests__/English.test.tsx)
-│   │   │   │   │   │   ├── [Flashcards.test.tsx](./src/components/routes/apps/education/__tests__/Flashcards.test.tsx)
-│   │   │   │   │   │   ├── [PeriodicTable.test.tsx](./src/components/routes/apps/education/__tests__/PeriodicTable.test.tsx)
-│   │   │   │   │   │   ├── [Pitch.test.tsx](./src/components/routes/apps/education/__tests__/Pitch.test.tsx)
-│   │   │   │   │   │   └── [Sign.test.tsx](./src/components/routes/apps/education/__tests__/Sign.test.tsx)
+│   │   │   │   │   │   │   └── [DOI.test.tsx.snap](./src/components/routes/apps/education/__tests__/__snapshots__/DOI.test.tsx.snap)
+│   │   │   │   │   │   └── [DOI.test.tsx](./src/components/routes/apps/education/__tests__/DOI.test.tsx)
 │   │   │   │   │   └── data/
 │   │   │   │   │       └── [twinkle-twinkle-little-star.ts](./src/components/routes/apps/education/data/twinkle-twinkle-little-star.ts)
-│   │   │   │   ├── health-vision/
-│   │   │   │   │   ├── LogMARChart/
+│   │   │   │   ├── puzzle/
+│   │   │   │   │   ├── Game2048/
 │   │   │   │   │   │   ├── utils/
 │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   └── [chart.test.ts](./src/components/routes/apps/health-vision/LogMARChart/utils/__tests__/chart.test.ts)
-│   │   │   │   │   │   │   └── [chart.ts](./src/components/routes/apps/health-vision/LogMARChart/utils/chart.ts)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/health-vision/LogMARChart/AGENTS.md)
-│   │   │   │   │   │   ├── [constants.ts](./src/components/routes/apps/health-vision/LogMARChart/constants.ts)
-│   │   │   │   │   │   └── [index.tsx](./src/components/routes/apps/health-vision/LogMARChart/index.tsx)
-│   │   │   │   │   ├── SnellenChart/
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/health-vision/SnellenChart/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/health-vision/SnellenChart/index.tsx)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/apps/health-vision/SnellenChart/utils.ts)
-│   │   │   │   │   ├── TumblingEChart/
+│   │   │   │   │   │   │   │   └── [game.test.ts](./src/components/routes/apps/puzzle/Game2048/utils/__tests__/game.test.ts)
+│   │   │   │   │   │   │   └── [game.ts](./src/components/routes/apps/puzzle/Game2048/utils/game.ts)
+│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/puzzle/Game2048/AGENTS.md)
+│   │   │   │   │   │   ├── [constants.ts](./src/components/routes/apps/puzzle/Game2048/constants.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/puzzle/Game2048/index.tsx)
+│   │   │   │   │   │   └── [types.ts](./src/components/routes/apps/puzzle/Game2048/types.ts)
+│   │   │   │   │   ├── LightsOut/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── [LightsOut.test.tsx](./src/components/routes/apps/puzzle/LightsOut/__tests__/LightsOut.test.tsx)
+│   │   │   │   │   │   │   ├── [useLightsOut.test.ts](./src/components/routes/apps/puzzle/LightsOut/__tests__/useLightsOut.test.ts)
+│   │   │   │   │   │   │   └── [utils.test.ts](./src/components/routes/apps/puzzle/LightsOut/__tests__/utils.test.ts)
+│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/puzzle/LightsOut/AGENTS.md)
+│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/puzzle/LightsOut/index.tsx)
+│   │   │   │   │   │   ├── [useLightsOut.ts](./src/components/routes/apps/puzzle/LightsOut/useLightsOut.ts)
+│   │   │   │   │   │   └── [utils.ts](./src/components/routes/apps/puzzle/LightsOut/utils.ts)
+│   │   │   │   │   ├── SlidingPuzzle/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   ├── __snapshots__/
+│   │   │   │   │   │   │   │   └── [SlidingPuzzle.test.tsx.snap](./src/components/routes/apps/puzzle/SlidingPuzzle/__tests__/__snapshots__/SlidingPuzzle.test.tsx.snap)
+│   │   │   │   │   │   │   ├── [SlidingPuzzle.test.tsx](./src/components/routes/apps/puzzle/SlidingPuzzle/__tests__/SlidingPuzzle.test.tsx)
+│   │   │   │   │   │   │   ├── [useSlidingPuzzle.test.ts](./src/components/routes/apps/puzzle/SlidingPuzzle/__tests__/useSlidingPuzzle.test.ts)
+│   │   │   │   │   │   │   └── [utils.test.ts](./src/components/routes/apps/puzzle/SlidingPuzzle/__tests__/utils.test.ts)
+│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/puzzle/SlidingPuzzle/AGENTS.md)
+│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/puzzle/SlidingPuzzle/index.tsx)
+│   │   │   │   │   │   ├── [useSlidingPuzzle.ts](./src/components/routes/apps/puzzle/SlidingPuzzle/useSlidingPuzzle.ts)
+│   │   │   │   │   │   └── [utils.ts](./src/components/routes/apps/puzzle/SlidingPuzzle/utils.ts)
+│   │   │   │   │   ├── Towers/
 │   │   │   │   │   │   ├── utils/
 │   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   └── [chart.test.ts](./src/components/routes/apps/health-vision/TumblingEChart/utils/__tests__/chart.test.ts)
-│   │   │   │   │   │   │   └── [chart.ts](./src/components/routes/apps/health-vision/TumblingEChart/utils/chart.ts)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/health-vision/TumblingEChart/AGENTS.md)
-│   │   │   │   │   │   ├── [constants.ts](./src/components/routes/apps/health-vision/TumblingEChart/constants.ts)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/health-vision/TumblingEChart/index.tsx)
-│   │   │   │   │   │   └── [types.ts](./src/components/routes/apps/health-vision/TumblingEChart/types.ts)
+│   │   │   │   │   │   │   │   └── [towers.test.ts](./src/components/routes/apps/puzzle/Towers/utils/__tests__/towers.test.ts)
+│   │   │   │   │   │   │   └── [towers.ts](./src/components/routes/apps/puzzle/Towers/utils/towers.ts)
+│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/puzzle/Towers/AGENTS.md)
+│   │   │   │   │   │   ├── [constants.ts](./src/components/routes/apps/puzzle/Towers/constants.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/puzzle/Towers/index.tsx)
+│   │   │   │   │   │   └── [types.ts](./src/components/routes/apps/puzzle/Towers/types.ts)
 │   │   │   │   │   └── __tests__/
 │   │   │   │   │       ├── __snapshots__/
-│   │   │   │   │       │   └── [SnellenChart.test.tsx.snap](./src/components/routes/apps/health-vision/__tests__/__snapshots__/SnellenChart.test.tsx.snap)
-│   │   │   │   │       ├── [LogMARChart.test.tsx](./src/components/routes/apps/health-vision/__tests__/LogMARChart.test.tsx)
-│   │   │   │   │       ├── [SnellenChart.test.tsx](./src/components/routes/apps/health-vision/__tests__/SnellenChart.test.tsx)
-│   │   │   │   │       └── [TumblingEChart.test.tsx](./src/components/routes/apps/health-vision/__tests__/TumblingEChart.test.tsx)
-│   │   │   │   ├── psychology/
-│   │   │   │   │   ├── BeckDepressionInventory/
-│   │   │   │   │   │   ├── components/
-│   │   │   │   │   │   │   ├── [OptionsStep.tsx](./src/components/routes/apps/psychology/BeckDepressionInventory/components/OptionsStep.tsx)
-│   │   │   │   │   │   │   └── [ResultsStep.tsx](./src/components/routes/apps/psychology/BeckDepressionInventory/components/ResultsStep.tsx)
-│   │   │   │   │   │   ├── docs/
-│   │   │   │   │   │   │   └── [beck-depression-inventory.md](./src/components/routes/apps/psychology/BeckDepressionInventory/docs/beck-depression-inventory.md)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/psychology/BeckDepressionInventory/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/psychology/BeckDepressionInventory/index.tsx)
-│   │   │   │   │   │   ├── [items.ts](./src/components/routes/apps/psychology/BeckDepressionInventory/items.ts)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/apps/psychology/BeckDepressionInventory/utils.ts)
-│   │   │   │   │   ├── BigFiveInventory/
-│   │   │   │   │   │   ├── components/
-│   │   │   │   │   │   │   ├── [AgreeStep.tsx](./src/components/routes/apps/psychology/BigFiveInventory/components/AgreeStep.tsx)
-│   │   │   │   │   │   │   └── [ResultsStep.tsx](./src/components/routes/apps/psychology/BigFiveInventory/components/ResultsStep.tsx)
-│   │   │   │   │   │   ├── docs/
-│   │   │   │   │   │   │   └── [big-five-inventory.md](./src/components/routes/apps/psychology/BigFiveInventory/docs/big-five-inventory.md)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/psychology/BigFiveInventory/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/psychology/BigFiveInventory/index.tsx)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/apps/psychology/BigFiveInventory/utils.ts)
-│   │   │   │   │   ├── DyadicAdjustmentScale/
-│   │   │   │   │   │   ├── components/
-│   │   │   │   │   │   │   ├── [OptionsStep.tsx](./src/components/routes/apps/psychology/DyadicAdjustmentScale/components/OptionsStep.tsx)
-│   │   │   │   │   │   │   └── [ResultsStep.tsx](./src/components/routes/apps/psychology/DyadicAdjustmentScale/components/ResultsStep.tsx)
-│   │   │   │   │   │   ├── docs/
-│   │   │   │   │   │   │   └── [dyadic-adjustment-scale.md](./src/components/routes/apps/psychology/DyadicAdjustmentScale/docs/dyadic-adjustment-scale.md)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/psychology/DyadicAdjustmentScale/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/psychology/DyadicAdjustmentScale/index.tsx)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/apps/psychology/DyadicAdjustmentScale/utils.ts)
-│   │   │   │   │   ├── ExperiencesInCloseRelationships/
-│   │   │   │   │   │   ├── components/
-│   │   │   │   │   │   │   ├── [ResultsStep.tsx](./src/components/routes/apps/psychology/ExperiencesInCloseRelationships/components/ResultsStep.tsx)
-│   │   │   │   │   │   │   └── [ScaleStep.tsx](./src/components/routes/apps/psychology/ExperiencesInCloseRelationships/components/ScaleStep.tsx)
-│   │   │   │   │   │   ├── docs/
-│   │   │   │   │   │   │   └── [experiences-in-close-relationships.md](./src/components/routes/apps/psychology/ExperiencesInCloseRelationships/docs/experiences-in-close-relationships.md)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/psychology/ExperiencesInCloseRelationships/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/psychology/ExperiencesInCloseRelationships/index.tsx)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/apps/psychology/ExperiencesInCloseRelationships/utils.ts)
-│   │   │   │   │   ├── GeneralizedAnxietyDisorderScale/
-│   │   │   │   │   │   ├── components/
-│   │   │   │   │   │   │   ├── [FrequencyStep.tsx](./src/components/routes/apps/psychology/GeneralizedAnxietyDisorderScale/components/FrequencyStep.tsx)
-│   │   │   │   │   │   │   └── [ResultsStep.tsx](./src/components/routes/apps/psychology/GeneralizedAnxietyDisorderScale/components/ResultsStep.tsx)
-│   │   │   │   │   │   ├── docs/
-│   │   │   │   │   │   │   └── [generalized-anxiety-disorder-scale.md](./src/components/routes/apps/psychology/GeneralizedAnxietyDisorderScale/docs/generalized-anxiety-disorder-scale.md)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/psychology/GeneralizedAnxietyDisorderScale/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/psychology/GeneralizedAnxietyDisorderScale/index.tsx)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/apps/psychology/GeneralizedAnxietyDisorderScale/utils.ts)
-│   │   │   │   │   ├── PatientHealthQuestionnaire/
-│   │   │   │   │   │   ├── components/
-│   │   │   │   │   │   │   ├── [FrequencyStep.tsx](./src/components/routes/apps/psychology/PatientHealthQuestionnaire/components/FrequencyStep.tsx)
-│   │   │   │   │   │   │   └── [ResultsStep.tsx](./src/components/routes/apps/psychology/PatientHealthQuestionnaire/components/ResultsStep.tsx)
-│   │   │   │   │   │   ├── docs/
-│   │   │   │   │   │   │   └── [patient-health-questionnaire.md](./src/components/routes/apps/psychology/PatientHealthQuestionnaire/docs/patient-health-questionnaire.md)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/psychology/PatientHealthQuestionnaire/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/psychology/PatientHealthQuestionnaire/index.tsx)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/apps/psychology/PatientHealthQuestionnaire/utils.ts)
-│   │   │   │   │   ├── RelationshipClosenessInventory/
-│   │   │   │   │   │   ├── components/
-│   │   │   │   │   │   │   ├── [ActivitiesStep.tsx](./src/components/routes/apps/psychology/RelationshipClosenessInventory/components/ActivitiesStep.tsx)
-│   │   │   │   │   │   │   ├── [ResultsStep.tsx](./src/components/routes/apps/psychology/RelationshipClosenessInventory/components/ResultsStep.tsx)
-│   │   │   │   │   │   │   ├── [ScaleStep.tsx](./src/components/routes/apps/psychology/RelationshipClosenessInventory/components/ScaleStep.tsx)
-│   │   │   │   │   │   │   └── [TimeStep.tsx](./src/components/routes/apps/psychology/RelationshipClosenessInventory/components/TimeStep.tsx)
-│   │   │   │   │   │   ├── docs/
-│   │   │   │   │   │   │   └── [relationship-closeness-inventory-revised.md](./src/components/routes/apps/psychology/RelationshipClosenessInventory/docs/relationship-closeness-inventory-revised.md)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/psychology/RelationshipClosenessInventory/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/psychology/RelationshipClosenessInventory/index.tsx)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/apps/psychology/RelationshipClosenessInventory/utils.ts)
-│   │   │   │   │   └── SatisfactionWithLifeScale/
-│   │   │   │   │       ├── components/
-│   │   │   │   │       │   ├── [ResultsStep.tsx](./src/components/routes/apps/psychology/SatisfactionWithLifeScale/components/ResultsStep.tsx)
-│   │   │   │   │       │   └── [ScaleStep.tsx](./src/components/routes/apps/psychology/SatisfactionWithLifeScale/components/ScaleStep.tsx)
-│   │   │   │   │       ├── docs/
-│   │   │   │   │       │   └── [satisfacition-with-life-scale.md](./src/components/routes/apps/psychology/SatisfactionWithLifeScale/docs/satisfacition-with-life-scale.md)
-│   │   │   │   │       ├── [AGENTS.md](./src/components/routes/apps/psychology/SatisfactionWithLifeScale/AGENTS.md)
-│   │   │   │   │       ├── [index.tsx](./src/components/routes/apps/psychology/SatisfactionWithLifeScale/index.tsx)
-│   │   │   │   │       └── [utils.ts](./src/components/routes/apps/psychology/SatisfactionWithLifeScale/utils.ts)
-│   │   │   │   ├── text-convert/
-│   │   │   │   │   ├── Braille/
-│   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   ├── [Braille.test.tsx](./src/components/routes/apps/text-convert/Braille/__tests__/Braille.test.tsx)
-│   │   │   │   │   │   │   └── [braille.test.ts](./src/components/routes/apps/text-convert/Braille/__tests__/braille.test.ts)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/text-convert/Braille/AGENTS.md)
-│   │   │   │   │   │   ├── [braille.ts](./src/components/routes/apps/text-convert/Braille/braille.ts)
-│   │   │   │   │   │   └── [index.tsx](./src/components/routes/apps/text-convert/Braille/index.tsx)
-│   │   │   │   │   ├── LeetSpeak/
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/text-convert/LeetSpeak/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/text-convert/LeetSpeak/index.tsx)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/apps/text-convert/LeetSpeak/utils.ts)
-│   │   │   │   │   ├── Morse/
-│   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   ├── [Morse.test.tsx](./src/components/routes/apps/text-convert/Morse/__tests__/Morse.test.tsx)
-│   │   │   │   │   │   │   └── [morse.test.ts](./src/components/routes/apps/text-convert/Morse/__tests__/morse.test.ts)
+│   │   │   │   │       │   ├── [Game2048.test.tsx.snap](./src/components/routes/apps/puzzle/__tests__/__snapshots__/Game2048.test.tsx.snap)
+│   │   │   │   │       │   └── [Towers.test.tsx.snap](./src/components/routes/apps/puzzle/__tests__/__snapshots__/Towers.test.tsx.snap)
+│   │   │   │   │       ├── [Game2048.test.tsx](./src/components/routes/apps/puzzle/__tests__/Game2048.test.tsx)
+│   │   │   │   │       └── [Towers.test.tsx](./src/components/routes/apps/puzzle/__tests__/Towers.test.tsx)
+│   │   │   │   ├── trivia/
+│   │   │   │   │   ├── Palindrome/
 │   │   │   │   │   │   ├── utils/
-│   │   │   │   │   │   │   └── [morse.ts](./src/components/routes/apps/text-convert/Morse/utils/morse.ts)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/text-convert/Morse/AGENTS.md)
-│   │   │   │   │   │   ├── [constants.ts](./src/components/routes/apps/text-convert/Morse/constants.ts)
-│   │   │   │   │   │   └── [index.tsx](./src/components/routes/apps/text-convert/Morse/index.tsx)
-│   │   │   │   │   ├── TextCase/
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/text-convert/TextCase/AGENTS.md)
-│   │   │   │   │   │   └── [index.tsx](./src/components/routes/apps/text-convert/TextCase/index.tsx)
+│   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   └── [puzzle.test.ts](./src/components/routes/apps/trivia/Palindrome/utils/__tests__/puzzle.test.ts)
+│   │   │   │   │   │   │   └── [puzzle.ts](./src/components/routes/apps/trivia/Palindrome/utils/puzzle.ts)
+│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/trivia/Palindrome/AGENTS.md)
+│   │   │   │   │   │   ├── [constants.ts](./src/components/routes/apps/trivia/Palindrome/constants.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/trivia/Palindrome/index.tsx)
+│   │   │   │   │   │   └── [types.ts](./src/components/routes/apps/trivia/Palindrome/types.ts)
+│   │   │   │   │   ├── Pokedex/
+│   │   │   │   │   │   ├── components/
+│   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   └── [PokemonDetail.test.tsx](./src/components/routes/apps/trivia/Pokedex/components/__tests__/PokemonDetail.test.tsx)
+│   │   │   │   │   │   │   └── [PokemonDetail.tsx](./src/components/routes/apps/trivia/Pokedex/components/PokemonDetail.tsx)
+│   │   │   │   │   │   ├── data/
+│   │   │   │   │   │   │   └── [pokedex.ts](./src/components/routes/apps/trivia/Pokedex/data/pokedex.ts)
+│   │   │   │   │   │   ├── utils/
+│   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   └── [search.test.ts](./src/components/routes/apps/trivia/Pokedex/utils/__tests__/search.test.ts)
+│   │   │   │   │   │   │   └── [search.ts](./src/components/routes/apps/trivia/Pokedex/utils/search.ts)
+│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/trivia/Pokedex/AGENTS.md)
+│   │   │   │   │   │   ├── [constants.ts](./src/components/routes/apps/trivia/Pokedex/constants.ts)
+│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/trivia/Pokedex/index.tsx)
+│   │   │   │   │   │   └── [types.ts](./src/components/routes/apps/trivia/Pokedex/types.ts)
+│   │   │   │   │   ├── Quizify/
+│   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   └── [Quizify.test.tsx](./src/components/routes/apps/trivia/Quizify/__tests__/Quizify.test.tsx)
+│   │   │   │   │   │   ├── utils/
+│   │   │   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   │   │   └── [quiz.test.ts](./src/components/routes/apps/trivia/Quizify/utils/__tests__/quiz.test.ts)
+│   │   │   │   │   │   │   └── [quiz.ts](./src/components/routes/apps/trivia/Quizify/utils/quiz.ts)
+│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/trivia/Quizify/AGENTS.md)
+│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/trivia/Quizify/index.tsx)
+│   │   │   │   │   │   └── [types.ts](./src/components/routes/apps/trivia/Quizify/types.ts)
 │   │   │   │   │   └── __tests__/
 │   │   │   │   │       ├── __snapshots__/
-│   │   │   │   │       │   ├── [Braille.test.tsx.snap](./src/components/routes/apps/text-convert/__tests__/__snapshots__/Braille.test.tsx.snap)
-│   │   │   │   │       │   └── [Morse.test.tsx.snap](./src/components/routes/apps/text-convert/__tests__/__snapshots__/Morse.test.tsx.snap)
-│   │   │   │   │       ├── [Braille.test.tsx](./src/components/routes/apps/text-convert/__tests__/Braille.test.tsx)
-│   │   │   │   │       ├── [LeetSpeak.test.tsx](./src/components/routes/apps/text-convert/__tests__/LeetSpeak.test.tsx)
-│   │   │   │   │       └── [Morse.test.tsx](./src/components/routes/apps/text-convert/__tests__/Morse.test.tsx)
+│   │   │   │   │       │   ├── [Palindrome.test.tsx.snap](./src/components/routes/apps/trivia/__tests__/__snapshots__/Palindrome.test.tsx.snap)
+│   │   │   │   │       │   └── [Pokedex.test.tsx.snap](./src/components/routes/apps/trivia/__tests__/__snapshots__/Pokedex.test.tsx.snap)
+│   │   │   │   │       ├── [Palindrome.test.tsx](./src/components/routes/apps/trivia/__tests__/Palindrome.test.tsx)
+│   │   │   │   │       └── [Pokedex.test.tsx](./src/components/routes/apps/trivia/__tests__/Pokedex.test.tsx)
 │   │   │   │   ├── utilities/
-│   │   │   │   │   ├── Clipboard/
-│   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   └── [useClipboard.test.ts](./src/components/routes/apps/utilities/Clipboard/__tests__/useClipboard.test.ts)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/utilities/Clipboard/AGENTS.md)
-│   │   │   │   │   │   ├── [clipboard.ts](./src/components/routes/apps/utilities/Clipboard/clipboard.ts)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/utilities/Clipboard/index.tsx)
-│   │   │   │   │   │   └── [useClipboard.ts](./src/components/routes/apps/utilities/Clipboard/useClipboard.ts)
-│   │   │   │   │   ├── Colors/
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/utilities/Colors/AGENTS.md)
-│   │   │   │   │   │   └── [index.tsx](./src/components/routes/apps/utilities/Colors/index.tsx)
 │   │   │   │   │   ├── CreateZip/
 │   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/utilities/CreateZip/AGENTS.md)
 │   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/utilities/CreateZip/index.tsx)
@@ -2295,7 +1906,6 @@
 │   │   │   │   │   │   ├── __snapshots__/
 │   │   │   │   │   │   │   ├── [Emojis.test.tsx.snap](./src/components/routes/apps/utilities/__tests__/__snapshots__/Emojis.test.tsx.snap)
 │   │   │   │   │   │   │   └── [Kaprekar.test.tsx.snap](./src/components/routes/apps/utilities/__tests__/__snapshots__/Kaprekar.test.tsx.snap)
-│   │   │   │   │   │   ├── [Clipboard.test.tsx](./src/components/routes/apps/utilities/__tests__/Clipboard.test.tsx)
 │   │   │   │   │   │   ├── [Emojis.test.tsx](./src/components/routes/apps/utilities/__tests__/Emojis.test.tsx)
 │   │   │   │   │   │   ├── [Kaprekar.test.tsx](./src/components/routes/apps/utilities/__tests__/Kaprekar.test.tsx)
 │   │   │   │   │   │   ├── [LoremIpsum.test.tsx](./src/components/routes/apps/utilities/__tests__/LoremIpsum.test.tsx)
@@ -2313,411 +1923,6 @@
 │   │   │   │   │   │   ├── [constants.ts](./src/components/routes/apps/visualization/Attractors/constants.ts)
 │   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/visualization/Attractors/index.tsx)
 │   │   │   │   │   │   └── [types.ts](./src/components/routes/apps/visualization/Attractors/types.ts)
-│   │   │   │   │   ├── CalendarTracker/
-│   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   ├── [CalendarTracker.test.tsx](./src/components/routes/apps/visualization/CalendarTracker/__tests__/CalendarTracker.test.tsx)
-│   │   │   │   │   │   │   └── [constants.test.ts](./src/components/routes/apps/visualization/CalendarTracker/__tests__/constants.test.ts)
-│   │   │   │   │   │   ├── components/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   ├── [DailyView.test.tsx](./src/components/routes/apps/visualization/CalendarTracker/components/__tests__/DailyView.test.tsx)
-│   │   │   │   │   │   │   │   ├── [Dot.test.tsx](./src/components/routes/apps/visualization/CalendarTracker/components/__tests__/Dot.test.tsx)
-│   │   │   │   │   │   │   │   ├── [MonthlyView.test.tsx](./src/components/routes/apps/visualization/CalendarTracker/components/__tests__/MonthlyView.test.tsx)
-│   │   │   │   │   │   │   │   ├── [QuarterlyView.test.tsx](./src/components/routes/apps/visualization/CalendarTracker/components/__tests__/QuarterlyView.test.tsx)
-│   │   │   │   │   │   │   │   ├── [Weekday.test.tsx](./src/components/routes/apps/visualization/CalendarTracker/components/__tests__/Weekday.test.tsx)
-│   │   │   │   │   │   │   │   └── [WeeklyView.test.tsx](./src/components/routes/apps/visualization/CalendarTracker/components/__tests__/WeeklyView.test.tsx)
-│   │   │   │   │   │   │   ├── [DailyView.tsx](./src/components/routes/apps/visualization/CalendarTracker/components/DailyView.tsx)
-│   │   │   │   │   │   │   ├── [Dot.tsx](./src/components/routes/apps/visualization/CalendarTracker/components/Dot.tsx)
-│   │   │   │   │   │   │   ├── [MonthlyView.tsx](./src/components/routes/apps/visualization/CalendarTracker/components/MonthlyView.tsx)
-│   │   │   │   │   │   │   ├── [QuarterlyView.tsx](./src/components/routes/apps/visualization/CalendarTracker/components/QuarterlyView.tsx)
-│   │   │   │   │   │   │   ├── [Weekday.tsx](./src/components/routes/apps/visualization/CalendarTracker/components/Weekday.tsx)
-│   │   │   │   │   │   │   └── [WeeklyView.tsx](./src/components/routes/apps/visualization/CalendarTracker/components/WeeklyView.tsx)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/visualization/CalendarTracker/AGENTS.md)
-│   │   │   │   │   │   ├── [constants.ts](./src/components/routes/apps/visualization/CalendarTracker/constants.ts)
-│   │   │   │   │   │   └── [index.tsx](./src/components/routes/apps/visualization/CalendarTracker/index.tsx)
-│   │   │   │   │   ├── Football/
-│   │   │   │   │   │   ├── components/
-│   │   │   │   │   │   │   ├── [Breadcrumbs.tsx](./src/components/routes/apps/visualization/Football/components/Breadcrumbs.tsx)
-│   │   │   │   │   │   │   ├── [ErrorState.tsx](./src/components/routes/apps/visualization/Football/components/ErrorState.tsx)
-│   │   │   │   │   │   │   ├── [KnockoutLink.tsx](./src/components/routes/apps/visualization/Football/components/KnockoutLink.tsx)
-│   │   │   │   │   │   │   ├── [PageHeader.tsx](./src/components/routes/apps/visualization/Football/components/PageHeader.tsx)
-│   │   │   │   │   │   │   └── [PageShell.tsx](./src/components/routes/apps/visualization/Football/components/PageShell.tsx)
-│   │   │   │   │   │   ├── data/
-│   │   │   │   │   │   │   ├── club/
-│   │   │   │   │   │   │   │   ├── bundesliga/
-│   │   │   │   │   │   │   │   │   ├── [1992.ts](./src/components/routes/apps/visualization/Football/data/club/bundesliga/1992.ts)
-│   │   │   │   │   │   │   │   │   ├── [1993.ts](./src/components/routes/apps/visualization/Football/data/club/bundesliga/1993.ts)
-│   │   │   │   │   │   │   │   │   ├── [1994.ts](./src/components/routes/apps/visualization/Football/data/club/bundesliga/1994.ts)
-│   │   │   │   │   │   │   │   │   ├── [1995.ts](./src/components/routes/apps/visualization/Football/data/club/bundesliga/1995.ts)
-│   │   │   │   │   │   │   │   │   ├── [1996.ts](./src/components/routes/apps/visualization/Football/data/club/bundesliga/1996.ts)
-│   │   │   │   │   │   │   │   │   ├── [1997.ts](./src/components/routes/apps/visualization/Football/data/club/bundesliga/1997.ts)
-│   │   │   │   │   │   │   │   │   ├── [1998.ts](./src/components/routes/apps/visualization/Football/data/club/bundesliga/1998.ts)
-│   │   │   │   │   │   │   │   │   ├── [1999.ts](./src/components/routes/apps/visualization/Football/data/club/bundesliga/1999.ts)
-│   │   │   │   │   │   │   │   │   ├── [2000.ts](./src/components/routes/apps/visualization/Football/data/club/bundesliga/2000.ts)
-│   │   │   │   │   │   │   │   │   ├── [2001.ts](./src/components/routes/apps/visualization/Football/data/club/bundesliga/2001.ts)
-│   │   │   │   │   │   │   │   │   ├── [2002.ts](./src/components/routes/apps/visualization/Football/data/club/bundesliga/2002.ts)
-│   │   │   │   │   │   │   │   │   ├── [2003.ts](./src/components/routes/apps/visualization/Football/data/club/bundesliga/2003.ts)
-│   │   │   │   │   │   │   │   │   ├── [2004.ts](./src/components/routes/apps/visualization/Football/data/club/bundesliga/2004.ts)
-│   │   │   │   │   │   │   │   │   ├── [2005.ts](./src/components/routes/apps/visualization/Football/data/club/bundesliga/2005.ts)
-│   │   │   │   │   │   │   │   │   ├── [2006.ts](./src/components/routes/apps/visualization/Football/data/club/bundesliga/2006.ts)
-│   │   │   │   │   │   │   │   │   ├── [2007.ts](./src/components/routes/apps/visualization/Football/data/club/bundesliga/2007.ts)
-│   │   │   │   │   │   │   │   │   ├── [2008.ts](./src/components/routes/apps/visualization/Football/data/club/bundesliga/2008.ts)
-│   │   │   │   │   │   │   │   │   ├── [2009.ts](./src/components/routes/apps/visualization/Football/data/club/bundesliga/2009.ts)
-│   │   │   │   │   │   │   │   │   ├── [2010.ts](./src/components/routes/apps/visualization/Football/data/club/bundesliga/2010.ts)
-│   │   │   │   │   │   │   │   │   ├── [2011.ts](./src/components/routes/apps/visualization/Football/data/club/bundesliga/2011.ts)
-│   │   │   │   │   │   │   │   │   ├── [2012.ts](./src/components/routes/apps/visualization/Football/data/club/bundesliga/2012.ts)
-│   │   │   │   │   │   │   │   │   ├── [2013.ts](./src/components/routes/apps/visualization/Football/data/club/bundesliga/2013.ts)
-│   │   │   │   │   │   │   │   │   ├── [2014.ts](./src/components/routes/apps/visualization/Football/data/club/bundesliga/2014.ts)
-│   │   │   │   │   │   │   │   │   ├── [2015.ts](./src/components/routes/apps/visualization/Football/data/club/bundesliga/2015.ts)
-│   │   │   │   │   │   │   │   │   ├── [2016.ts](./src/components/routes/apps/visualization/Football/data/club/bundesliga/2016.ts)
-│   │   │   │   │   │   │   │   │   ├── [2017.ts](./src/components/routes/apps/visualization/Football/data/club/bundesliga/2017.ts)
-│   │   │   │   │   │   │   │   │   ├── [2018.ts](./src/components/routes/apps/visualization/Football/data/club/bundesliga/2018.ts)
-│   │   │   │   │   │   │   │   │   ├── [2019.ts](./src/components/routes/apps/visualization/Football/data/club/bundesliga/2019.ts)
-│   │   │   │   │   │   │   │   │   ├── [2020.ts](./src/components/routes/apps/visualization/Football/data/club/bundesliga/2020.ts)
-│   │   │   │   │   │   │   │   │   ├── [2021.ts](./src/components/routes/apps/visualization/Football/data/club/bundesliga/2021.ts)
-│   │   │   │   │   │   │   │   │   ├── [2022.ts](./src/components/routes/apps/visualization/Football/data/club/bundesliga/2022.ts)
-│   │   │   │   │   │   │   │   │   ├── [2023.ts](./src/components/routes/apps/visualization/Football/data/club/bundesliga/2023.ts)
-│   │   │   │   │   │   │   │   │   ├── [2024.ts](./src/components/routes/apps/visualization/Football/data/club/bundesliga/2024.ts)
-│   │   │   │   │   │   │   │   │   ├── [2025.ts](./src/components/routes/apps/visualization/Football/data/club/bundesliga/2025.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.ts](./src/components/routes/apps/visualization/Football/data/club/bundesliga/index.ts)
-│   │   │   │   │   │   │   │   │   └── [types.ts](./src/components/routes/apps/visualization/Football/data/club/bundesliga/types.ts)
-│   │   │   │   │   │   │   │   ├── champions-league/
-│   │   │   │   │   │   │   │   │   ├── [1992.ts](./src/components/routes/apps/visualization/Football/data/club/champions-league/1992.ts)
-│   │   │   │   │   │   │   │   │   ├── [1993.ts](./src/components/routes/apps/visualization/Football/data/club/champions-league/1993.ts)
-│   │   │   │   │   │   │   │   │   ├── [1994.ts](./src/components/routes/apps/visualization/Football/data/club/champions-league/1994.ts)
-│   │   │   │   │   │   │   │   │   ├── [1995.ts](./src/components/routes/apps/visualization/Football/data/club/champions-league/1995.ts)
-│   │   │   │   │   │   │   │   │   ├── [1996.ts](./src/components/routes/apps/visualization/Football/data/club/champions-league/1996.ts)
-│   │   │   │   │   │   │   │   │   ├── [1997.ts](./src/components/routes/apps/visualization/Football/data/club/champions-league/1997.ts)
-│   │   │   │   │   │   │   │   │   ├── [1998.ts](./src/components/routes/apps/visualization/Football/data/club/champions-league/1998.ts)
-│   │   │   │   │   │   │   │   │   ├── [1999.ts](./src/components/routes/apps/visualization/Football/data/club/champions-league/1999.ts)
-│   │   │   │   │   │   │   │   │   ├── [2000.ts](./src/components/routes/apps/visualization/Football/data/club/champions-league/2000.ts)
-│   │   │   │   │   │   │   │   │   ├── [2001.ts](./src/components/routes/apps/visualization/Football/data/club/champions-league/2001.ts)
-│   │   │   │   │   │   │   │   │   ├── [2002.ts](./src/components/routes/apps/visualization/Football/data/club/champions-league/2002.ts)
-│   │   │   │   │   │   │   │   │   ├── [2003.ts](./src/components/routes/apps/visualization/Football/data/club/champions-league/2003.ts)
-│   │   │   │   │   │   │   │   │   ├── [2004.ts](./src/components/routes/apps/visualization/Football/data/club/champions-league/2004.ts)
-│   │   │   │   │   │   │   │   │   ├── [2005.ts](./src/components/routes/apps/visualization/Football/data/club/champions-league/2005.ts)
-│   │   │   │   │   │   │   │   │   ├── [2006.ts](./src/components/routes/apps/visualization/Football/data/club/champions-league/2006.ts)
-│   │   │   │   │   │   │   │   │   ├── [2007.ts](./src/components/routes/apps/visualization/Football/data/club/champions-league/2007.ts)
-│   │   │   │   │   │   │   │   │   ├── [2008.ts](./src/components/routes/apps/visualization/Football/data/club/champions-league/2008.ts)
-│   │   │   │   │   │   │   │   │   ├── [2009.ts](./src/components/routes/apps/visualization/Football/data/club/champions-league/2009.ts)
-│   │   │   │   │   │   │   │   │   ├── [2010.ts](./src/components/routes/apps/visualization/Football/data/club/champions-league/2010.ts)
-│   │   │   │   │   │   │   │   │   ├── [2011.ts](./src/components/routes/apps/visualization/Football/data/club/champions-league/2011.ts)
-│   │   │   │   │   │   │   │   │   ├── [2012.ts](./src/components/routes/apps/visualization/Football/data/club/champions-league/2012.ts)
-│   │   │   │   │   │   │   │   │   ├── [2013.ts](./src/components/routes/apps/visualization/Football/data/club/champions-league/2013.ts)
-│   │   │   │   │   │   │   │   │   ├── [2014.ts](./src/components/routes/apps/visualization/Football/data/club/champions-league/2014.ts)
-│   │   │   │   │   │   │   │   │   ├── [2015.ts](./src/components/routes/apps/visualization/Football/data/club/champions-league/2015.ts)
-│   │   │   │   │   │   │   │   │   ├── [2016.ts](./src/components/routes/apps/visualization/Football/data/club/champions-league/2016.ts)
-│   │   │   │   │   │   │   │   │   ├── [2017.ts](./src/components/routes/apps/visualization/Football/data/club/champions-league/2017.ts)
-│   │   │   │   │   │   │   │   │   ├── [2018.ts](./src/components/routes/apps/visualization/Football/data/club/champions-league/2018.ts)
-│   │   │   │   │   │   │   │   │   ├── [2019.ts](./src/components/routes/apps/visualization/Football/data/club/champions-league/2019.ts)
-│   │   │   │   │   │   │   │   │   ├── [2020.ts](./src/components/routes/apps/visualization/Football/data/club/champions-league/2020.ts)
-│   │   │   │   │   │   │   │   │   ├── [2021.ts](./src/components/routes/apps/visualization/Football/data/club/champions-league/2021.ts)
-│   │   │   │   │   │   │   │   │   ├── [2022.ts](./src/components/routes/apps/visualization/Football/data/club/champions-league/2022.ts)
-│   │   │   │   │   │   │   │   │   ├── [2023.ts](./src/components/routes/apps/visualization/Football/data/club/champions-league/2023.ts)
-│   │   │   │   │   │   │   │   │   ├── [2024.ts](./src/components/routes/apps/visualization/Football/data/club/champions-league/2024.ts)
-│   │   │   │   │   │   │   │   │   ├── [2025.ts](./src/components/routes/apps/visualization/Football/data/club/champions-league/2025.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.ts](./src/components/routes/apps/visualization/Football/data/club/champions-league/index.ts)
-│   │   │   │   │   │   │   │   │   └── [types.ts](./src/components/routes/apps/visualization/Football/data/club/champions-league/types.ts)
-│   │   │   │   │   │   │   │   ├── la-liga/
-│   │   │   │   │   │   │   │   │   ├── [1997.ts](./src/components/routes/apps/visualization/Football/data/club/la-liga/1997.ts)
-│   │   │   │   │   │   │   │   │   ├── [1998.ts](./src/components/routes/apps/visualization/Football/data/club/la-liga/1998.ts)
-│   │   │   │   │   │   │   │   │   ├── [1999.ts](./src/components/routes/apps/visualization/Football/data/club/la-liga/1999.ts)
-│   │   │   │   │   │   │   │   │   ├── [2000.ts](./src/components/routes/apps/visualization/Football/data/club/la-liga/2000.ts)
-│   │   │   │   │   │   │   │   │   ├── [2001.ts](./src/components/routes/apps/visualization/Football/data/club/la-liga/2001.ts)
-│   │   │   │   │   │   │   │   │   ├── [2002.ts](./src/components/routes/apps/visualization/Football/data/club/la-liga/2002.ts)
-│   │   │   │   │   │   │   │   │   ├── [2003.ts](./src/components/routes/apps/visualization/Football/data/club/la-liga/2003.ts)
-│   │   │   │   │   │   │   │   │   ├── [2004.ts](./src/components/routes/apps/visualization/Football/data/club/la-liga/2004.ts)
-│   │   │   │   │   │   │   │   │   ├── [2005.ts](./src/components/routes/apps/visualization/Football/data/club/la-liga/2005.ts)
-│   │   │   │   │   │   │   │   │   ├── [2006.ts](./src/components/routes/apps/visualization/Football/data/club/la-liga/2006.ts)
-│   │   │   │   │   │   │   │   │   ├── [2007.ts](./src/components/routes/apps/visualization/Football/data/club/la-liga/2007.ts)
-│   │   │   │   │   │   │   │   │   ├── [2008.ts](./src/components/routes/apps/visualization/Football/data/club/la-liga/2008.ts)
-│   │   │   │   │   │   │   │   │   ├── [2009.ts](./src/components/routes/apps/visualization/Football/data/club/la-liga/2009.ts)
-│   │   │   │   │   │   │   │   │   ├── [2010.ts](./src/components/routes/apps/visualization/Football/data/club/la-liga/2010.ts)
-│   │   │   │   │   │   │   │   │   ├── [2011.ts](./src/components/routes/apps/visualization/Football/data/club/la-liga/2011.ts)
-│   │   │   │   │   │   │   │   │   ├── [2012.ts](./src/components/routes/apps/visualization/Football/data/club/la-liga/2012.ts)
-│   │   │   │   │   │   │   │   │   ├── [2013.ts](./src/components/routes/apps/visualization/Football/data/club/la-liga/2013.ts)
-│   │   │   │   │   │   │   │   │   ├── [2014.ts](./src/components/routes/apps/visualization/Football/data/club/la-liga/2014.ts)
-│   │   │   │   │   │   │   │   │   ├── [2015.ts](./src/components/routes/apps/visualization/Football/data/club/la-liga/2015.ts)
-│   │   │   │   │   │   │   │   │   ├── [2016.ts](./src/components/routes/apps/visualization/Football/data/club/la-liga/2016.ts)
-│   │   │   │   │   │   │   │   │   ├── [2017.ts](./src/components/routes/apps/visualization/Football/data/club/la-liga/2017.ts)
-│   │   │   │   │   │   │   │   │   ├── [2018.ts](./src/components/routes/apps/visualization/Football/data/club/la-liga/2018.ts)
-│   │   │   │   │   │   │   │   │   ├── [2019.ts](./src/components/routes/apps/visualization/Football/data/club/la-liga/2019.ts)
-│   │   │   │   │   │   │   │   │   ├── [2020.ts](./src/components/routes/apps/visualization/Football/data/club/la-liga/2020.ts)
-│   │   │   │   │   │   │   │   │   ├── [2021.ts](./src/components/routes/apps/visualization/Football/data/club/la-liga/2021.ts)
-│   │   │   │   │   │   │   │   │   ├── [2022.ts](./src/components/routes/apps/visualization/Football/data/club/la-liga/2022.ts)
-│   │   │   │   │   │   │   │   │   ├── [2023.ts](./src/components/routes/apps/visualization/Football/data/club/la-liga/2023.ts)
-│   │   │   │   │   │   │   │   │   ├── [2024.ts](./src/components/routes/apps/visualization/Football/data/club/la-liga/2024.ts)
-│   │   │   │   │   │   │   │   │   ├── [2025.ts](./src/components/routes/apps/visualization/Football/data/club/la-liga/2025.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.ts](./src/components/routes/apps/visualization/Football/data/club/la-liga/index.ts)
-│   │   │   │   │   │   │   │   │   └── [types.ts](./src/components/routes/apps/visualization/Football/data/club/la-liga/types.ts)
-│   │   │   │   │   │   │   │   └── premier-league/
-│   │   │   │   │   │   │   │       ├── [1992.ts](./src/components/routes/apps/visualization/Football/data/club/premier-league/1992.ts)
-│   │   │   │   │   │   │   │       ├── [1993.ts](./src/components/routes/apps/visualization/Football/data/club/premier-league/1993.ts)
-│   │   │   │   │   │   │   │       ├── [1994.ts](./src/components/routes/apps/visualization/Football/data/club/premier-league/1994.ts)
-│   │   │   │   │   │   │   │       ├── [1995.ts](./src/components/routes/apps/visualization/Football/data/club/premier-league/1995.ts)
-│   │   │   │   │   │   │   │       ├── [1996.ts](./src/components/routes/apps/visualization/Football/data/club/premier-league/1996.ts)
-│   │   │   │   │   │   │   │       ├── [1997.ts](./src/components/routes/apps/visualization/Football/data/club/premier-league/1997.ts)
-│   │   │   │   │   │   │   │       ├── [1998.ts](./src/components/routes/apps/visualization/Football/data/club/premier-league/1998.ts)
-│   │   │   │   │   │   │   │       ├── [1999.ts](./src/components/routes/apps/visualization/Football/data/club/premier-league/1999.ts)
-│   │   │   │   │   │   │   │       ├── [2000.ts](./src/components/routes/apps/visualization/Football/data/club/premier-league/2000.ts)
-│   │   │   │   │   │   │   │       ├── [2001.ts](./src/components/routes/apps/visualization/Football/data/club/premier-league/2001.ts)
-│   │   │   │   │   │   │   │       ├── [2002.ts](./src/components/routes/apps/visualization/Football/data/club/premier-league/2002.ts)
-│   │   │   │   │   │   │   │       ├── [2003.ts](./src/components/routes/apps/visualization/Football/data/club/premier-league/2003.ts)
-│   │   │   │   │   │   │   │       ├── [2004.ts](./src/components/routes/apps/visualization/Football/data/club/premier-league/2004.ts)
-│   │   │   │   │   │   │   │       ├── [2005.ts](./src/components/routes/apps/visualization/Football/data/club/premier-league/2005.ts)
-│   │   │   │   │   │   │   │       ├── [2006.ts](./src/components/routes/apps/visualization/Football/data/club/premier-league/2006.ts)
-│   │   │   │   │   │   │   │       ├── [2007.ts](./src/components/routes/apps/visualization/Football/data/club/premier-league/2007.ts)
-│   │   │   │   │   │   │   │       ├── [2008.ts](./src/components/routes/apps/visualization/Football/data/club/premier-league/2008.ts)
-│   │   │   │   │   │   │   │       ├── [2009.ts](./src/components/routes/apps/visualization/Football/data/club/premier-league/2009.ts)
-│   │   │   │   │   │   │   │       ├── [2010.ts](./src/components/routes/apps/visualization/Football/data/club/premier-league/2010.ts)
-│   │   │   │   │   │   │   │       ├── [2011.ts](./src/components/routes/apps/visualization/Football/data/club/premier-league/2011.ts)
-│   │   │   │   │   │   │   │       ├── [2012.ts](./src/components/routes/apps/visualization/Football/data/club/premier-league/2012.ts)
-│   │   │   │   │   │   │   │       ├── [2013.ts](./src/components/routes/apps/visualization/Football/data/club/premier-league/2013.ts)
-│   │   │   │   │   │   │   │       ├── [2014.ts](./src/components/routes/apps/visualization/Football/data/club/premier-league/2014.ts)
-│   │   │   │   │   │   │   │       ├── [2015.ts](./src/components/routes/apps/visualization/Football/data/club/premier-league/2015.ts)
-│   │   │   │   │   │   │   │       ├── [2016.ts](./src/components/routes/apps/visualization/Football/data/club/premier-league/2016.ts)
-│   │   │   │   │   │   │   │       ├── [2017.ts](./src/components/routes/apps/visualization/Football/data/club/premier-league/2017.ts)
-│   │   │   │   │   │   │   │       ├── [2018.ts](./src/components/routes/apps/visualization/Football/data/club/premier-league/2018.ts)
-│   │   │   │   │   │   │   │       ├── [2019.ts](./src/components/routes/apps/visualization/Football/data/club/premier-league/2019.ts)
-│   │   │   │   │   │   │   │       ├── [2020.ts](./src/components/routes/apps/visualization/Football/data/club/premier-league/2020.ts)
-│   │   │   │   │   │   │   │       ├── [2021.ts](./src/components/routes/apps/visualization/Football/data/club/premier-league/2021.ts)
-│   │   │   │   │   │   │   │       ├── [2022.ts](./src/components/routes/apps/visualization/Football/data/club/premier-league/2022.ts)
-│   │   │   │   │   │   │   │       ├── [2023.ts](./src/components/routes/apps/visualization/Football/data/club/premier-league/2023.ts)
-│   │   │   │   │   │   │   │       ├── [2024.ts](./src/components/routes/apps/visualization/Football/data/club/premier-league/2024.ts)
-│   │   │   │   │   │   │   │       ├── [2025.ts](./src/components/routes/apps/visualization/Football/data/club/premier-league/2025.ts)
-│   │   │   │   │   │   │   │       ├── [index.ts](./src/components/routes/apps/visualization/Football/data/club/premier-league/index.ts)
-│   │   │   │   │   │   │   │       └── [types.ts](./src/components/routes/apps/visualization/Football/data/club/premier-league/types.ts)
-│   │   │   │   │   │   │   ├── international/
-│   │   │   │   │   │   │   │   ├── afc/
-│   │   │   │   │   │   │   │   │   ├── [1956.ts](./src/components/routes/apps/visualization/Football/data/international/afc/1956.ts)
-│   │   │   │   │   │   │   │   │   ├── [1960.ts](./src/components/routes/apps/visualization/Football/data/international/afc/1960.ts)
-│   │   │   │   │   │   │   │   │   ├── [1964.ts](./src/components/routes/apps/visualization/Football/data/international/afc/1964.ts)
-│   │   │   │   │   │   │   │   │   ├── [1968.ts](./src/components/routes/apps/visualization/Football/data/international/afc/1968.ts)
-│   │   │   │   │   │   │   │   │   ├── [1972.ts](./src/components/routes/apps/visualization/Football/data/international/afc/1972.ts)
-│   │   │   │   │   │   │   │   │   ├── [1976.ts](./src/components/routes/apps/visualization/Football/data/international/afc/1976.ts)
-│   │   │   │   │   │   │   │   │   ├── [1980.ts](./src/components/routes/apps/visualization/Football/data/international/afc/1980.ts)
-│   │   │   │   │   │   │   │   │   ├── [1984.ts](./src/components/routes/apps/visualization/Football/data/international/afc/1984.ts)
-│   │   │   │   │   │   │   │   │   ├── [1988.ts](./src/components/routes/apps/visualization/Football/data/international/afc/1988.ts)
-│   │   │   │   │   │   │   │   │   ├── [1992.ts](./src/components/routes/apps/visualization/Football/data/international/afc/1992.ts)
-│   │   │   │   │   │   │   │   │   ├── [1996.ts](./src/components/routes/apps/visualization/Football/data/international/afc/1996.ts)
-│   │   │   │   │   │   │   │   │   ├── [2000.ts](./src/components/routes/apps/visualization/Football/data/international/afc/2000.ts)
-│   │   │   │   │   │   │   │   │   ├── [2004.ts](./src/components/routes/apps/visualization/Football/data/international/afc/2004.ts)
-│   │   │   │   │   │   │   │   │   ├── [2007.ts](./src/components/routes/apps/visualization/Football/data/international/afc/2007.ts)
-│   │   │   │   │   │   │   │   │   ├── [2011.ts](./src/components/routes/apps/visualization/Football/data/international/afc/2011.ts)
-│   │   │   │   │   │   │   │   │   ├── [2015.ts](./src/components/routes/apps/visualization/Football/data/international/afc/2015.ts)
-│   │   │   │   │   │   │   │   │   ├── [2019.ts](./src/components/routes/apps/visualization/Football/data/international/afc/2019.ts)
-│   │   │   │   │   │   │   │   │   ├── [2024.ts](./src/components/routes/apps/visualization/Football/data/international/afc/2024.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.ts](./src/components/routes/apps/visualization/Football/data/international/afc/index.ts)
-│   │   │   │   │   │   │   │   │   └── [types.ts](./src/components/routes/apps/visualization/Football/data/international/afc/types.ts)
-│   │   │   │   │   │   │   │   ├── afcon/
-│   │   │   │   │   │   │   │   │   ├── [1957.ts](./src/components/routes/apps/visualization/Football/data/international/afcon/1957.ts)
-│   │   │   │   │   │   │   │   │   ├── [1959.ts](./src/components/routes/apps/visualization/Football/data/international/afcon/1959.ts)
-│   │   │   │   │   │   │   │   │   ├── [1962.ts](./src/components/routes/apps/visualization/Football/data/international/afcon/1962.ts)
-│   │   │   │   │   │   │   │   │   ├── [1963.ts](./src/components/routes/apps/visualization/Football/data/international/afcon/1963.ts)
-│   │   │   │   │   │   │   │   │   ├── [1965.ts](./src/components/routes/apps/visualization/Football/data/international/afcon/1965.ts)
-│   │   │   │   │   │   │   │   │   ├── [1968.ts](./src/components/routes/apps/visualization/Football/data/international/afcon/1968.ts)
-│   │   │   │   │   │   │   │   │   ├── [1970.ts](./src/components/routes/apps/visualization/Football/data/international/afcon/1970.ts)
-│   │   │   │   │   │   │   │   │   ├── [1972.ts](./src/components/routes/apps/visualization/Football/data/international/afcon/1972.ts)
-│   │   │   │   │   │   │   │   │   ├── [1974.ts](./src/components/routes/apps/visualization/Football/data/international/afcon/1974.ts)
-│   │   │   │   │   │   │   │   │   ├── [1976.ts](./src/components/routes/apps/visualization/Football/data/international/afcon/1976.ts)
-│   │   │   │   │   │   │   │   │   ├── [1978.ts](./src/components/routes/apps/visualization/Football/data/international/afcon/1978.ts)
-│   │   │   │   │   │   │   │   │   ├── [1980.ts](./src/components/routes/apps/visualization/Football/data/international/afcon/1980.ts)
-│   │   │   │   │   │   │   │   │   ├── [1982.ts](./src/components/routes/apps/visualization/Football/data/international/afcon/1982.ts)
-│   │   │   │   │   │   │   │   │   ├── [1984.ts](./src/components/routes/apps/visualization/Football/data/international/afcon/1984.ts)
-│   │   │   │   │   │   │   │   │   ├── [1986.ts](./src/components/routes/apps/visualization/Football/data/international/afcon/1986.ts)
-│   │   │   │   │   │   │   │   │   ├── [1988.ts](./src/components/routes/apps/visualization/Football/data/international/afcon/1988.ts)
-│   │   │   │   │   │   │   │   │   ├── [1990.ts](./src/components/routes/apps/visualization/Football/data/international/afcon/1990.ts)
-│   │   │   │   │   │   │   │   │   ├── [1992.ts](./src/components/routes/apps/visualization/Football/data/international/afcon/1992.ts)
-│   │   │   │   │   │   │   │   │   ├── [1994.ts](./src/components/routes/apps/visualization/Football/data/international/afcon/1994.ts)
-│   │   │   │   │   │   │   │   │   ├── [1996.ts](./src/components/routes/apps/visualization/Football/data/international/afcon/1996.ts)
-│   │   │   │   │   │   │   │   │   ├── [1998.ts](./src/components/routes/apps/visualization/Football/data/international/afcon/1998.ts)
-│   │   │   │   │   │   │   │   │   ├── [2000.ts](./src/components/routes/apps/visualization/Football/data/international/afcon/2000.ts)
-│   │   │   │   │   │   │   │   │   ├── [2002.ts](./src/components/routes/apps/visualization/Football/data/international/afcon/2002.ts)
-│   │   │   │   │   │   │   │   │   ├── [2004.ts](./src/components/routes/apps/visualization/Football/data/international/afcon/2004.ts)
-│   │   │   │   │   │   │   │   │   ├── [2006.ts](./src/components/routes/apps/visualization/Football/data/international/afcon/2006.ts)
-│   │   │   │   │   │   │   │   │   ├── [2008.ts](./src/components/routes/apps/visualization/Football/data/international/afcon/2008.ts)
-│   │   │   │   │   │   │   │   │   ├── [2010.ts](./src/components/routes/apps/visualization/Football/data/international/afcon/2010.ts)
-│   │   │   │   │   │   │   │   │   ├── [2012.ts](./src/components/routes/apps/visualization/Football/data/international/afcon/2012.ts)
-│   │   │   │   │   │   │   │   │   ├── [2013.ts](./src/components/routes/apps/visualization/Football/data/international/afcon/2013.ts)
-│   │   │   │   │   │   │   │   │   ├── [2015.ts](./src/components/routes/apps/visualization/Football/data/international/afcon/2015.ts)
-│   │   │   │   │   │   │   │   │   ├── [2017.ts](./src/components/routes/apps/visualization/Football/data/international/afcon/2017.ts)
-│   │   │   │   │   │   │   │   │   ├── [2019.ts](./src/components/routes/apps/visualization/Football/data/international/afcon/2019.ts)
-│   │   │   │   │   │   │   │   │   ├── [2022.ts](./src/components/routes/apps/visualization/Football/data/international/afcon/2022.ts)
-│   │   │   │   │   │   │   │   │   ├── [2024.ts](./src/components/routes/apps/visualization/Football/data/international/afcon/2024.ts)
-│   │   │   │   │   │   │   │   │   ├── [2025.ts](./src/components/routes/apps/visualization/Football/data/international/afcon/2025.ts)
-│   │   │   │   │   │   │   │   │   ├── [2026.ts](./src/components/routes/apps/visualization/Football/data/international/afcon/2026.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.ts](./src/components/routes/apps/visualization/Football/data/international/afcon/index.ts)
-│   │   │   │   │   │   │   │   │   └── [types.ts](./src/components/routes/apps/visualization/Football/data/international/afcon/types.ts)
-│   │   │   │   │   │   │   │   ├── asean/
-│   │   │   │   │   │   │   │   │   ├── [1996.ts](./src/components/routes/apps/visualization/Football/data/international/asean/1996.ts)
-│   │   │   │   │   │   │   │   │   ├── [1998.ts](./src/components/routes/apps/visualization/Football/data/international/asean/1998.ts)
-│   │   │   │   │   │   │   │   │   ├── [2000.ts](./src/components/routes/apps/visualization/Football/data/international/asean/2000.ts)
-│   │   │   │   │   │   │   │   │   ├── [2002.ts](./src/components/routes/apps/visualization/Football/data/international/asean/2002.ts)
-│   │   │   │   │   │   │   │   │   ├── [2004.ts](./src/components/routes/apps/visualization/Football/data/international/asean/2004.ts)
-│   │   │   │   │   │   │   │   │   ├── [2005.ts](./src/components/routes/apps/visualization/Football/data/international/asean/2005.ts)
-│   │   │   │   │   │   │   │   │   ├── [2007.ts](./src/components/routes/apps/visualization/Football/data/international/asean/2007.ts)
-│   │   │   │   │   │   │   │   │   ├── [2008.ts](./src/components/routes/apps/visualization/Football/data/international/asean/2008.ts)
-│   │   │   │   │   │   │   │   │   ├── [2010.ts](./src/components/routes/apps/visualization/Football/data/international/asean/2010.ts)
-│   │   │   │   │   │   │   │   │   ├── [2012.ts](./src/components/routes/apps/visualization/Football/data/international/asean/2012.ts)
-│   │   │   │   │   │   │   │   │   ├── [2014.ts](./src/components/routes/apps/visualization/Football/data/international/asean/2014.ts)
-│   │   │   │   │   │   │   │   │   ├── [2016.ts](./src/components/routes/apps/visualization/Football/data/international/asean/2016.ts)
-│   │   │   │   │   │   │   │   │   ├── [2018.ts](./src/components/routes/apps/visualization/Football/data/international/asean/2018.ts)
-│   │   │   │   │   │   │   │   │   ├── [2021.ts](./src/components/routes/apps/visualization/Football/data/international/asean/2021.ts)
-│   │   │   │   │   │   │   │   │   ├── [2022.ts](./src/components/routes/apps/visualization/Football/data/international/asean/2022.ts)
-│   │   │   │   │   │   │   │   │   ├── [2023.ts](./src/components/routes/apps/visualization/Football/data/international/asean/2023.ts)
-│   │   │   │   │   │   │   │   │   ├── [2024.ts](./src/components/routes/apps/visualization/Football/data/international/asean/2024.ts)
-│   │   │   │   │   │   │   │   │   ├── [2025.ts](./src/components/routes/apps/visualization/Football/data/international/asean/2025.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.ts](./src/components/routes/apps/visualization/Football/data/international/asean/index.ts)
-│   │   │   │   │   │   │   │   │   └── [types.ts](./src/components/routes/apps/visualization/Football/data/international/asean/types.ts)
-│   │   │   │   │   │   │   │   ├── concacaf/
-│   │   │   │   │   │   │   │   │   ├── [1991.ts](./src/components/routes/apps/visualization/Football/data/international/concacaf/1991.ts)
-│   │   │   │   │   │   │   │   │   ├── [1993.ts](./src/components/routes/apps/visualization/Football/data/international/concacaf/1993.ts)
-│   │   │   │   │   │   │   │   │   ├── [1996.ts](./src/components/routes/apps/visualization/Football/data/international/concacaf/1996.ts)
-│   │   │   │   │   │   │   │   │   ├── [1998.ts](./src/components/routes/apps/visualization/Football/data/international/concacaf/1998.ts)
-│   │   │   │   │   │   │   │   │   ├── [2000.ts](./src/components/routes/apps/visualization/Football/data/international/concacaf/2000.ts)
-│   │   │   │   │   │   │   │   │   ├── [2002.ts](./src/components/routes/apps/visualization/Football/data/international/concacaf/2002.ts)
-│   │   │   │   │   │   │   │   │   ├── [2003.ts](./src/components/routes/apps/visualization/Football/data/international/concacaf/2003.ts)
-│   │   │   │   │   │   │   │   │   ├── [2005.ts](./src/components/routes/apps/visualization/Football/data/international/concacaf/2005.ts)
-│   │   │   │   │   │   │   │   │   ├── [2007.ts](./src/components/routes/apps/visualization/Football/data/international/concacaf/2007.ts)
-│   │   │   │   │   │   │   │   │   ├── [2009.ts](./src/components/routes/apps/visualization/Football/data/international/concacaf/2009.ts)
-│   │   │   │   │   │   │   │   │   ├── [2011.ts](./src/components/routes/apps/visualization/Football/data/international/concacaf/2011.ts)
-│   │   │   │   │   │   │   │   │   ├── [2013.ts](./src/components/routes/apps/visualization/Football/data/international/concacaf/2013.ts)
-│   │   │   │   │   │   │   │   │   ├── [2015.ts](./src/components/routes/apps/visualization/Football/data/international/concacaf/2015.ts)
-│   │   │   │   │   │   │   │   │   ├── [2017.ts](./src/components/routes/apps/visualization/Football/data/international/concacaf/2017.ts)
-│   │   │   │   │   │   │   │   │   ├── [2019.ts](./src/components/routes/apps/visualization/Football/data/international/concacaf/2019.ts)
-│   │   │   │   │   │   │   │   │   ├── [2021.ts](./src/components/routes/apps/visualization/Football/data/international/concacaf/2021.ts)
-│   │   │   │   │   │   │   │   │   ├── [2023.ts](./src/components/routes/apps/visualization/Football/data/international/concacaf/2023.ts)
-│   │   │   │   │   │   │   │   │   ├── [2025.ts](./src/components/routes/apps/visualization/Football/data/international/concacaf/2025.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.ts](./src/components/routes/apps/visualization/Football/data/international/concacaf/index.ts)
-│   │   │   │   │   │   │   │   │   └── [types.ts](./src/components/routes/apps/visualization/Football/data/international/concacaf/types.ts)
-│   │   │   │   │   │   │   │   ├── copa/
-│   │   │   │   │   │   │   │   │   ├── [1916.ts](./src/components/routes/apps/visualization/Football/data/international/copa/1916.ts)
-│   │   │   │   │   │   │   │   │   ├── [1917.ts](./src/components/routes/apps/visualization/Football/data/international/copa/1917.ts)
-│   │   │   │   │   │   │   │   │   ├── [1919.ts](./src/components/routes/apps/visualization/Football/data/international/copa/1919.ts)
-│   │   │   │   │   │   │   │   │   ├── [1920.ts](./src/components/routes/apps/visualization/Football/data/international/copa/1920.ts)
-│   │   │   │   │   │   │   │   │   ├── [1921.ts](./src/components/routes/apps/visualization/Football/data/international/copa/1921.ts)
-│   │   │   │   │   │   │   │   │   ├── [1922.ts](./src/components/routes/apps/visualization/Football/data/international/copa/1922.ts)
-│   │   │   │   │   │   │   │   │   ├── [1923.ts](./src/components/routes/apps/visualization/Football/data/international/copa/1923.ts)
-│   │   │   │   │   │   │   │   │   ├── [1924.ts](./src/components/routes/apps/visualization/Football/data/international/copa/1924.ts)
-│   │   │   │   │   │   │   │   │   ├── [1925.ts](./src/components/routes/apps/visualization/Football/data/international/copa/1925.ts)
-│   │   │   │   │   │   │   │   │   ├── [1926.ts](./src/components/routes/apps/visualization/Football/data/international/copa/1926.ts)
-│   │   │   │   │   │   │   │   │   ├── [1927.ts](./src/components/routes/apps/visualization/Football/data/international/copa/1927.ts)
-│   │   │   │   │   │   │   │   │   ├── [1929.ts](./src/components/routes/apps/visualization/Football/data/international/copa/1929.ts)
-│   │   │   │   │   │   │   │   │   ├── [1935.ts](./src/components/routes/apps/visualization/Football/data/international/copa/1935.ts)
-│   │   │   │   │   │   │   │   │   ├── [1936.ts](./src/components/routes/apps/visualization/Football/data/international/copa/1936.ts)
-│   │   │   │   │   │   │   │   │   ├── [1937.ts](./src/components/routes/apps/visualization/Football/data/international/copa/1937.ts)
-│   │   │   │   │   │   │   │   │   ├── [1939.ts](./src/components/routes/apps/visualization/Football/data/international/copa/1939.ts)
-│   │   │   │   │   │   │   │   │   ├── [1941.ts](./src/components/routes/apps/visualization/Football/data/international/copa/1941.ts)
-│   │   │   │   │   │   │   │   │   ├── [1942.ts](./src/components/routes/apps/visualization/Football/data/international/copa/1942.ts)
-│   │   │   │   │   │   │   │   │   ├── [1945.ts](./src/components/routes/apps/visualization/Football/data/international/copa/1945.ts)
-│   │   │   │   │   │   │   │   │   ├── [1946.ts](./src/components/routes/apps/visualization/Football/data/international/copa/1946.ts)
-│   │   │   │   │   │   │   │   │   ├── [1947.ts](./src/components/routes/apps/visualization/Football/data/international/copa/1947.ts)
-│   │   │   │   │   │   │   │   │   ├── [1949.ts](./src/components/routes/apps/visualization/Football/data/international/copa/1949.ts)
-│   │   │   │   │   │   │   │   │   ├── [1953.ts](./src/components/routes/apps/visualization/Football/data/international/copa/1953.ts)
-│   │   │   │   │   │   │   │   │   ├── [1955.ts](./src/components/routes/apps/visualization/Football/data/international/copa/1955.ts)
-│   │   │   │   │   │   │   │   │   ├── [1956.ts](./src/components/routes/apps/visualization/Football/data/international/copa/1956.ts)
-│   │   │   │   │   │   │   │   │   ├── [1957.ts](./src/components/routes/apps/visualization/Football/data/international/copa/1957.ts)
-│   │   │   │   │   │   │   │   │   ├── [1959.ts](./src/components/routes/apps/visualization/Football/data/international/copa/1959.ts)
-│   │   │   │   │   │   │   │   │   ├── [1963.ts](./src/components/routes/apps/visualization/Football/data/international/copa/1963.ts)
-│   │   │   │   │   │   │   │   │   ├── [1967.ts](./src/components/routes/apps/visualization/Football/data/international/copa/1967.ts)
-│   │   │   │   │   │   │   │   │   ├── [1975.ts](./src/components/routes/apps/visualization/Football/data/international/copa/1975.ts)
-│   │   │   │   │   │   │   │   │   ├── [1979.ts](./src/components/routes/apps/visualization/Football/data/international/copa/1979.ts)
-│   │   │   │   │   │   │   │   │   ├── [1983.ts](./src/components/routes/apps/visualization/Football/data/international/copa/1983.ts)
-│   │   │   │   │   │   │   │   │   ├── [1987.ts](./src/components/routes/apps/visualization/Football/data/international/copa/1987.ts)
-│   │   │   │   │   │   │   │   │   ├── [1989.ts](./src/components/routes/apps/visualization/Football/data/international/copa/1989.ts)
-│   │   │   │   │   │   │   │   │   ├── [1991.ts](./src/components/routes/apps/visualization/Football/data/international/copa/1991.ts)
-│   │   │   │   │   │   │   │   │   ├── [1993.ts](./src/components/routes/apps/visualization/Football/data/international/copa/1993.ts)
-│   │   │   │   │   │   │   │   │   ├── [1995.ts](./src/components/routes/apps/visualization/Football/data/international/copa/1995.ts)
-│   │   │   │   │   │   │   │   │   ├── [1997.ts](./src/components/routes/apps/visualization/Football/data/international/copa/1997.ts)
-│   │   │   │   │   │   │   │   │   ├── [1999.ts](./src/components/routes/apps/visualization/Football/data/international/copa/1999.ts)
-│   │   │   │   │   │   │   │   │   ├── [2001.ts](./src/components/routes/apps/visualization/Football/data/international/copa/2001.ts)
-│   │   │   │   │   │   │   │   │   ├── [2004.ts](./src/components/routes/apps/visualization/Football/data/international/copa/2004.ts)
-│   │   │   │   │   │   │   │   │   ├── [2007.ts](./src/components/routes/apps/visualization/Football/data/international/copa/2007.ts)
-│   │   │   │   │   │   │   │   │   ├── [2011.ts](./src/components/routes/apps/visualization/Football/data/international/copa/2011.ts)
-│   │   │   │   │   │   │   │   │   ├── [2015.ts](./src/components/routes/apps/visualization/Football/data/international/copa/2015.ts)
-│   │   │   │   │   │   │   │   │   ├── [2016.ts](./src/components/routes/apps/visualization/Football/data/international/copa/2016.ts)
-│   │   │   │   │   │   │   │   │   ├── [2019.ts](./src/components/routes/apps/visualization/Football/data/international/copa/2019.ts)
-│   │   │   │   │   │   │   │   │   ├── [2021.ts](./src/components/routes/apps/visualization/Football/data/international/copa/2021.ts)
-│   │   │   │   │   │   │   │   │   ├── [2024.ts](./src/components/routes/apps/visualization/Football/data/international/copa/2024.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.ts](./src/components/routes/apps/visualization/Football/data/international/copa/index.ts)
-│   │   │   │   │   │   │   │   │   └── [types.ts](./src/components/routes/apps/visualization/Football/data/international/copa/types.ts)
-│   │   │   │   │   │   │   │   ├── euro/
-│   │   │   │   │   │   │   │   │   ├── [1960.ts](./src/components/routes/apps/visualization/Football/data/international/euro/1960.ts)
-│   │   │   │   │   │   │   │   │   ├── [1964.ts](./src/components/routes/apps/visualization/Football/data/international/euro/1964.ts)
-│   │   │   │   │   │   │   │   │   ├── [1968.ts](./src/components/routes/apps/visualization/Football/data/international/euro/1968.ts)
-│   │   │   │   │   │   │   │   │   ├── [1972.ts](./src/components/routes/apps/visualization/Football/data/international/euro/1972.ts)
-│   │   │   │   │   │   │   │   │   ├── [1976.ts](./src/components/routes/apps/visualization/Football/data/international/euro/1976.ts)
-│   │   │   │   │   │   │   │   │   ├── [1980.ts](./src/components/routes/apps/visualization/Football/data/international/euro/1980.ts)
-│   │   │   │   │   │   │   │   │   ├── [1984.ts](./src/components/routes/apps/visualization/Football/data/international/euro/1984.ts)
-│   │   │   │   │   │   │   │   │   ├── [1988.ts](./src/components/routes/apps/visualization/Football/data/international/euro/1988.ts)
-│   │   │   │   │   │   │   │   │   ├── [1992.ts](./src/components/routes/apps/visualization/Football/data/international/euro/1992.ts)
-│   │   │   │   │   │   │   │   │   ├── [1996.ts](./src/components/routes/apps/visualization/Football/data/international/euro/1996.ts)
-│   │   │   │   │   │   │   │   │   ├── [2000.ts](./src/components/routes/apps/visualization/Football/data/international/euro/2000.ts)
-│   │   │   │   │   │   │   │   │   ├── [2004.ts](./src/components/routes/apps/visualization/Football/data/international/euro/2004.ts)
-│   │   │   │   │   │   │   │   │   ├── [2008.ts](./src/components/routes/apps/visualization/Football/data/international/euro/2008.ts)
-│   │   │   │   │   │   │   │   │   ├── [2012.ts](./src/components/routes/apps/visualization/Football/data/international/euro/2012.ts)
-│   │   │   │   │   │   │   │   │   ├── [2016.ts](./src/components/routes/apps/visualization/Football/data/international/euro/2016.ts)
-│   │   │   │   │   │   │   │   │   ├── [2021.ts](./src/components/routes/apps/visualization/Football/data/international/euro/2021.ts)
-│   │   │   │   │   │   │   │   │   ├── [2024.ts](./src/components/routes/apps/visualization/Football/data/international/euro/2024.ts)
-│   │   │   │   │   │   │   │   │   ├── [index.ts](./src/components/routes/apps/visualization/Football/data/international/euro/index.ts)
-│   │   │   │   │   │   │   │   │   └── [types.ts](./src/components/routes/apps/visualization/Football/data/international/euro/types.ts)
-│   │   │   │   │   │   │   │   └── world-cup/
-│   │   │   │   │   │   │   │       ├── [1930.ts](./src/components/routes/apps/visualization/Football/data/international/world-cup/1930.ts)
-│   │   │   │   │   │   │   │       ├── [1934.ts](./src/components/routes/apps/visualization/Football/data/international/world-cup/1934.ts)
-│   │   │   │   │   │   │   │       ├── [1938.ts](./src/components/routes/apps/visualization/Football/data/international/world-cup/1938.ts)
-│   │   │   │   │   │   │   │       ├── [1950.ts](./src/components/routes/apps/visualization/Football/data/international/world-cup/1950.ts)
-│   │   │   │   │   │   │   │       ├── [1954.ts](./src/components/routes/apps/visualization/Football/data/international/world-cup/1954.ts)
-│   │   │   │   │   │   │   │       ├── [1958.ts](./src/components/routes/apps/visualization/Football/data/international/world-cup/1958.ts)
-│   │   │   │   │   │   │   │       ├── [1962.ts](./src/components/routes/apps/visualization/Football/data/international/world-cup/1962.ts)
-│   │   │   │   │   │   │   │       ├── [1966.ts](./src/components/routes/apps/visualization/Football/data/international/world-cup/1966.ts)
-│   │   │   │   │   │   │   │       ├── [1970.ts](./src/components/routes/apps/visualization/Football/data/international/world-cup/1970.ts)
-│   │   │   │   │   │   │   │       ├── [1974.ts](./src/components/routes/apps/visualization/Football/data/international/world-cup/1974.ts)
-│   │   │   │   │   │   │   │       ├── [1978.ts](./src/components/routes/apps/visualization/Football/data/international/world-cup/1978.ts)
-│   │   │   │   │   │   │   │       ├── [1982.ts](./src/components/routes/apps/visualization/Football/data/international/world-cup/1982.ts)
-│   │   │   │   │   │   │   │       ├── [1986.ts](./src/components/routes/apps/visualization/Football/data/international/world-cup/1986.ts)
-│   │   │   │   │   │   │   │       ├── [1990.ts](./src/components/routes/apps/visualization/Football/data/international/world-cup/1990.ts)
-│   │   │   │   │   │   │   │       ├── [1994.ts](./src/components/routes/apps/visualization/Football/data/international/world-cup/1994.ts)
-│   │   │   │   │   │   │   │       ├── [1998.ts](./src/components/routes/apps/visualization/Football/data/international/world-cup/1998.ts)
-│   │   │   │   │   │   │   │       ├── [2002.ts](./src/components/routes/apps/visualization/Football/data/international/world-cup/2002.ts)
-│   │   │   │   │   │   │   │       ├── [2006.ts](./src/components/routes/apps/visualization/Football/data/international/world-cup/2006.ts)
-│   │   │   │   │   │   │   │       ├── [2010.ts](./src/components/routes/apps/visualization/Football/data/international/world-cup/2010.ts)
-│   │   │   │   │   │   │   │       ├── [2014.ts](./src/components/routes/apps/visualization/Football/data/international/world-cup/2014.ts)
-│   │   │   │   │   │   │   │       ├── [2018.ts](./src/components/routes/apps/visualization/Football/data/international/world-cup/2018.ts)
-│   │   │   │   │   │   │   │       ├── [2022.ts](./src/components/routes/apps/visualization/Football/data/international/world-cup/2022.ts)
-│   │   │   │   │   │   │   │       ├── [2026.ts](./src/components/routes/apps/visualization/Football/data/international/world-cup/2026.ts)
-│   │   │   │   │   │   │   │       ├── [index.ts](./src/components/routes/apps/visualization/Football/data/international/world-cup/index.ts)
-│   │   │   │   │   │   │   │       ├── [knock-out.ts](./src/components/routes/apps/visualization/Football/data/international/world-cup/knock-out.ts)
-│   │   │   │   │   │   │   │       └── [types.ts](./src/components/routes/apps/visualization/Football/data/international/world-cup/types.ts)
-│   │   │   │   │   │   │   ├── [shared.ts](./src/components/routes/apps/visualization/Football/data/shared.ts)
-│   │   │   │   │   │   │   └── [tournament.ts](./src/components/routes/apps/visualization/Football/data/tournament.ts)
-│   │   │   │   │   │   ├── pages/
-│   │   │   │   │   │   │   ├── group-stage/
-│   │   │   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/visualization/Football/pages/group-stage/index.tsx)
-│   │   │   │   │   │   │   │   └── [types.ts](./src/components/routes/apps/visualization/Football/pages/group-stage/types.ts)
-│   │   │   │   │   │   │   ├── knock-out/
-│   │   │   │   │   │   │   │   ├── components/
-│   │   │   │   │   │   │   │   │   ├── [BracketActions.tsx](./src/components/routes/apps/visualization/Football/pages/knock-out/components/BracketActions.tsx)
-│   │   │   │   │   │   │   │   │   ├── [BracketBoard.tsx](./src/components/routes/apps/visualization/Football/pages/knock-out/components/BracketBoard.tsx)
-│   │   │   │   │   │   │   │   │   ├── [BracketContent.tsx](./src/components/routes/apps/visualization/Football/pages/knock-out/components/BracketContent.tsx)
-│   │   │   │   │   │   │   │   │   ├── [BracketPill.tsx](./src/components/routes/apps/visualization/Football/pages/knock-out/components/BracketPill.tsx)
-│   │   │   │   │   │   │   │   │   ├── [BranchLines.tsx](./src/components/routes/apps/visualization/Football/pages/knock-out/components/BranchLines.tsx)
-│   │   │   │   │   │   │   │   │   ├── [FooterNote.tsx](./src/components/routes/apps/visualization/Football/pages/knock-out/components/FooterNote.tsx)
-│   │   │   │   │   │   │   │   │   ├── [Header.tsx](./src/components/routes/apps/visualization/Football/pages/knock-out/components/Header.tsx)
-│   │   │   │   │   │   │   │   │   ├── [Legend.tsx](./src/components/routes/apps/visualization/Football/pages/knock-out/components/Legend.tsx)
-│   │   │   │   │   │   │   │   │   ├── [ResetButton.tsx](./src/components/routes/apps/visualization/Football/pages/knock-out/components/ResetButton.tsx)
-│   │   │   │   │   │   │   │   │   ├── [RingsLayer.tsx](./src/components/routes/apps/visualization/Football/pages/knock-out/components/RingsLayer.tsx)
-│   │   │   │   │   │   │   │   │   └── [StatusBar.tsx](./src/components/routes/apps/visualization/Football/pages/knock-out/components/StatusBar.tsx)
-│   │   │   │   │   │   │   │   ├── [constants.ts](./src/components/routes/apps/visualization/Football/pages/knock-out/constants.ts)
-│   │   │   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/visualization/Football/pages/knock-out/index.tsx)
-│   │   │   │   │   │   │   │   ├── [tree.ts](./src/components/routes/apps/visualization/Football/pages/knock-out/tree.ts)
-│   │   │   │   │   │   │   │   └── [types.ts](./src/components/routes/apps/visualization/Football/pages/knock-out/types.ts)
-│   │   │   │   │   │   │   ├── tournaments/
-│   │   │   │   │   │   │   │   ├── [TournamentCard.tsx](./src/components/routes/apps/visualization/Football/pages/tournaments/TournamentCard.tsx)
-│   │   │   │   │   │   │   │   └── [index.tsx](./src/components/routes/apps/visualization/Football/pages/tournaments/index.tsx)
-│   │   │   │   │   │   │   └── years/
-│   │   │   │   │   │   │       ├── [StatList.tsx](./src/components/routes/apps/visualization/Football/pages/years/StatList.tsx)
-│   │   │   │   │   │   │       ├── [YearCard.tsx](./src/components/routes/apps/visualization/Football/pages/years/YearCard.tsx)
-│   │   │   │   │   │   │       └── [index.tsx](./src/components/routes/apps/visualization/Football/pages/years/index.tsx)
-│   │   │   │   │   │   └── [AGENTS.md](./src/components/routes/apps/visualization/Football/AGENTS.md)
 │   │   │   │   │   ├── Legislation/
 │   │   │   │   │   │   ├── components/
 │   │   │   │   │   │   │   ├── __tests__/
@@ -2739,564 +1944,6 @@
 │   │   │   │   │   ├── [downloads.json](./src/components/routes/downloads/data/downloads.json)
 │   │   │   │   │   └── [downloads.ts](./src/components/routes/downloads/data/downloads.ts)
 │   │   │   │   └── [index.tsx](./src/components/routes/downloads/index.tsx)
-│   │   │   ├── games/
-│   │   │   │   ├── arcade/
-│   │   │   │   │   ├── DinoRun/
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/arcade/DinoRun/AGENTS.md)
-│   │   │   │   │   │   ├── [constants.ts](./src/components/routes/games/arcade/DinoRun/constants.ts)
-│   │   │   │   │   │   ├── [game.ts](./src/components/routes/games/arcade/DinoRun/game.ts)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/games/arcade/DinoRun/index.tsx)
-│   │   │   │   │   │   └── [types.ts](./src/components/routes/games/arcade/DinoRun/types.ts)
-│   │   │   │   │   ├── RockPaperScissors/
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/arcade/RockPaperScissors/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/games/arcade/RockPaperScissors/index.tsx)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/games/arcade/RockPaperScissors/utils.ts)
-│   │   │   │   │   ├── Snake/
-│   │   │   │   │   │   ├── utils/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   └── [snake.test.ts](./src/components/routes/games/arcade/Snake/utils/__tests__/snake.test.ts)
-│   │   │   │   │   │   │   └── [snake.ts](./src/components/routes/games/arcade/Snake/utils/snake.ts)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/arcade/Snake/AGENTS.md)
-│   │   │   │   │   │   ├── [constants.ts](./src/components/routes/games/arcade/Snake/constants.ts)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/games/arcade/Snake/index.tsx)
-│   │   │   │   │   │   └── [types.ts](./src/components/routes/games/arcade/Snake/types.ts)
-│   │   │   │   │   └── __tests__/
-│   │   │   │   │       ├── __snapshots__/
-│   │   │   │   │       │   ├── [RockPaperScissors.test.tsx.snap](./src/components/routes/games/arcade/__tests__/__snapshots__/RockPaperScissors.test.tsx.snap)
-│   │   │   │   │       │   └── [Snake.test.tsx.snap](./src/components/routes/games/arcade/__tests__/__snapshots__/Snake.test.tsx.snap)
-│   │   │   │   │       ├── [RockPaperScissors.test.tsx](./src/components/routes/games/arcade/__tests__/RockPaperScissors.test.tsx)
-│   │   │   │   │       └── [Snake.test.tsx](./src/components/routes/games/arcade/__tests__/Snake.test.tsx)
-│   │   │   │   ├── casino/
-│   │   │   │   │   ├── Baccarat/
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/casino/Baccarat/AGENTS.md)
-│   │   │   │   │   │   ├── [constants.ts](./src/components/routes/games/casino/Baccarat/constants.ts)
-│   │   │   │   │   │   ├── [game.ts](./src/components/routes/games/casino/Baccarat/game.ts)
-│   │   │   │   │   │   └── [index.tsx](./src/components/routes/games/casino/Baccarat/index.tsx)
-│   │   │   │   │   ├── Blackjack/
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/casino/Blackjack/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/games/casino/Blackjack/index.tsx)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/games/casino/Blackjack/utils.ts)
-│   │   │   │   │   ├── DiceGame/
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/casino/DiceGame/AGENTS.md)
-│   │   │   │   │   │   ├── [game.ts](./src/components/routes/games/casino/DiceGame/game.ts)
-│   │   │   │   │   │   └── [index.tsx](./src/components/routes/games/casino/DiceGame/index.tsx)
-│   │   │   │   │   ├── Poker/
-│   │   │   │   │   │   ├── components/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   ├── [CardPicker.test.tsx](./src/components/routes/games/casino/Poker/components/__tests__/CardPicker.test.tsx)
-│   │   │   │   │   │   │   │   └── [MeterBar.test.tsx](./src/components/routes/games/casino/Poker/components/__tests__/MeterBar.test.tsx)
-│   │   │   │   │   │   │   ├── [CardChip.tsx](./src/components/routes/games/casino/Poker/components/CardChip.tsx)
-│   │   │   │   │   │   │   ├── [CardPicker.tsx](./src/components/routes/games/casino/Poker/components/CardPicker.tsx)
-│   │   │   │   │   │   │   └── [MeterBar.tsx](./src/components/routes/games/casino/Poker/components/MeterBar.tsx)
-│   │   │   │   │   │   ├── utils/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   └── [poker.test.ts](./src/components/routes/games/casino/Poker/utils/__tests__/poker.test.ts)
-│   │   │   │   │   │   │   └── [poker.ts](./src/components/routes/games/casino/Poker/utils/poker.ts)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/casino/Poker/AGENTS.md)
-│   │   │   │   │   │   ├── [constants.ts](./src/components/routes/games/casino/Poker/constants.ts)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/games/casino/Poker/index.tsx)
-│   │   │   │   │   │   └── [types.ts](./src/components/routes/games/casino/Poker/types.ts)
-│   │   │   │   │   ├── SlotMachine/
-│   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   ├── __snapshots__/
-│   │   │   │   │   │   │   │   └── [SlotMachine.test.tsx.snap](./src/components/routes/games/casino/SlotMachine/__tests__/__snapshots__/SlotMachine.test.tsx.snap)
-│   │   │   │   │   │   │   └── [SlotMachine.test.tsx](./src/components/routes/games/casino/SlotMachine/__tests__/SlotMachine.test.tsx)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/casino/SlotMachine/AGENTS.md)
-│   │   │   │   │   │   ├── [constants.ts](./src/components/routes/games/casino/SlotMachine/constants.ts)
-│   │   │   │   │   │   ├── [game.ts](./src/components/routes/games/casino/SlotMachine/game.ts)
-│   │   │   │   │   │   └── [index.tsx](./src/components/routes/games/casino/SlotMachine/index.tsx)
-│   │   │   │   │   └── __tests__/
-│   │   │   │   │       ├── __snapshots__/
-│   │   │   │   │       │   ├── [Blackjack.test.tsx.snap](./src/components/routes/games/casino/__tests__/__snapshots__/Blackjack.test.tsx.snap)
-│   │   │   │   │       │   ├── [DiceGame.test.tsx.snap](./src/components/routes/games/casino/__tests__/__snapshots__/DiceGame.test.tsx.snap)
-│   │   │   │   │       │   └── [Poker.test.tsx.snap](./src/components/routes/games/casino/__tests__/__snapshots__/Poker.test.tsx.snap)
-│   │   │   │   │       ├── [Blackjack.test.tsx](./src/components/routes/games/casino/__tests__/Blackjack.test.tsx)
-│   │   │   │   │       ├── [DiceGame.test.tsx](./src/components/routes/games/casino/__tests__/DiceGame.test.tsx)
-│   │   │   │   │       └── [Poker.test.tsx](./src/components/routes/games/casino/__tests__/Poker.test.tsx)
-│   │   │   │   ├── chess/
-│   │   │   │   │   ├── ChessBoard/
-│   │   │   │   │   │   ├── components/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   ├── __snapshots__/
-│   │   │   │   │   │   │   │   │   ├── [BoardSection.test.tsx.snap](./src/components/routes/games/chess/ChessBoard/components/__tests__/__snapshots__/BoardSection.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   ├── [EcoPanel.test.tsx.snap](./src/components/routes/games/chess/ChessBoard/components/__tests__/__snapshots__/EcoPanel.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   ├── [EnginePanel.test.tsx.snap](./src/components/routes/games/chess/ChessBoard/components/__tests__/__snapshots__/EnginePanel.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   ├── [ExportPanel.test.tsx.snap](./src/components/routes/games/chess/ChessBoard/components/__tests__/__snapshots__/ExportPanel.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   ├── [Header.test.tsx.snap](./src/components/routes/games/chess/ChessBoard/components/__tests__/__snapshots__/Header.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   └── [PositionPanel.test.tsx.snap](./src/components/routes/games/chess/ChessBoard/components/__tests__/__snapshots__/PositionPanel.test.tsx.snap)
-│   │   │   │   │   │   │   │   ├── [BoardSection.test.tsx](./src/components/routes/games/chess/ChessBoard/components/__tests__/BoardSection.test.tsx)
-│   │   │   │   │   │   │   │   ├── [EcoPanel.test.tsx](./src/components/routes/games/chess/ChessBoard/components/__tests__/EcoPanel.test.tsx)
-│   │   │   │   │   │   │   │   ├── [EnginePanel.test.tsx](./src/components/routes/games/chess/ChessBoard/components/__tests__/EnginePanel.test.tsx)
-│   │   │   │   │   │   │   │   ├── [ExportPanel.test.tsx](./src/components/routes/games/chess/ChessBoard/components/__tests__/ExportPanel.test.tsx)
-│   │   │   │   │   │   │   │   ├── [Header.test.tsx](./src/components/routes/games/chess/ChessBoard/components/__tests__/Header.test.tsx)
-│   │   │   │   │   │   │   │   └── [PositionPanel.test.tsx](./src/components/routes/games/chess/ChessBoard/components/__tests__/PositionPanel.test.tsx)
-│   │   │   │   │   │   │   ├── [BoardSection.tsx](./src/components/routes/games/chess/ChessBoard/components/BoardSection.tsx)
-│   │   │   │   │   │   │   ├── [EcoPanel.tsx](./src/components/routes/games/chess/ChessBoard/components/EcoPanel.tsx)
-│   │   │   │   │   │   │   ├── [EnginePanel.tsx](./src/components/routes/games/chess/ChessBoard/components/EnginePanel.tsx)
-│   │   │   │   │   │   │   ├── [ExportPanel.tsx](./src/components/routes/games/chess/ChessBoard/components/ExportPanel.tsx)
-│   │   │   │   │   │   │   ├── [Header.tsx](./src/components/routes/games/chess/ChessBoard/components/Header.tsx)
-│   │   │   │   │   │   │   └── [PositionPanel.tsx](./src/components/routes/games/chess/ChessBoard/components/PositionPanel.tsx)
-│   │   │   │   │   │   ├── hooks/
-│   │   │   │   │   │   │   ├── [boardReducer.ts](./src/components/routes/games/chess/ChessBoard/hooks/boardReducer.ts)
-│   │   │   │   │   │   │   ├── [useChessBoard.ts](./src/components/routes/games/chess/ChessBoard/hooks/useChessBoard.ts)
-│   │   │   │   │   │   │   ├── [useEcoData.ts](./src/components/routes/games/chess/ChessBoard/hooks/useEcoData.ts)
-│   │   │   │   │   │   │   ├── [useEngineIntegration.ts](./src/components/routes/games/chess/ChessBoard/hooks/useEngineIntegration.ts)
-│   │   │   │   │   │   │   └── [useExport.ts](./src/components/routes/games/chess/ChessBoard/hooks/useExport.ts)
-│   │   │   │   │   │   ├── utils/
-│   │   │   │   │   │   │   └── [eco.ts](./src/components/routes/games/chess/ChessBoard/utils/eco.ts)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/chess/ChessBoard/AGENTS.md)
-│   │   │   │   │   │   ├── [constants.ts](./src/components/routes/games/chess/ChessBoard/constants.ts)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/games/chess/ChessBoard/index.tsx)
-│   │   │   │   │   │   └── [types.ts](./src/components/routes/games/chess/ChessBoard/types.ts)
-│   │   │   │   │   ├── ChessClock/
-│   │   │   │   │   │   ├── components/
-│   │   │   │   │   │   │   └── [icons.tsx](./src/components/routes/games/chess/ChessClock/components/icons.tsx)
-│   │   │   │   │   │   ├── utils/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   └── [clock.test.ts](./src/components/routes/games/chess/ChessClock/utils/__tests__/clock.test.ts)
-│   │   │   │   │   │   │   └── [clock.ts](./src/components/routes/games/chess/ChessClock/utils/clock.ts)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/chess/ChessClock/AGENTS.md)
-│   │   │   │   │   │   ├── [constants.ts](./src/components/routes/games/chess/ChessClock/constants.ts)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/games/chess/ChessClock/index.tsx)
-│   │   │   │   │   │   └── [types.ts](./src/components/routes/games/chess/ChessClock/types.ts)
-│   │   │   │   │   ├── ChessElo/
-│   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   ├── [Elo.test.tsx](./src/components/routes/games/chess/ChessElo/__tests__/Elo.test.tsx)
-│   │   │   │   │   │   │   ├── [PerformanceTab.test.tsx](./src/components/routes/games/chess/ChessElo/__tests__/PerformanceTab.test.tsx)
-│   │   │   │   │   │   │   └── [RatingTab.test.tsx](./src/components/routes/games/chess/ChessElo/__tests__/RatingTab.test.tsx)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/chess/ChessElo/AGENTS.md)
-│   │   │   │   │   │   ├── [PerformanceTab.tsx](./src/components/routes/games/chess/ChessElo/PerformanceTab.tsx)
-│   │   │   │   │   │   ├── [RatingTab.tsx](./src/components/routes/games/chess/ChessElo/RatingTab.tsx)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/games/chess/ChessElo/index.tsx)
-│   │   │   │   │   │   └── [types.ts](./src/components/routes/games/chess/ChessElo/types.ts)
-│   │   │   │   │   ├── ChessStats/
-│   │   │   │   │   │   ├── components/
-│   │   │   │   │   │   │   ├── [Analysis.tsx](./src/components/routes/games/chess/ChessStats/components/Analysis.tsx)
-│   │   │   │   │   │   │   ├── [HistogramBar.tsx](./src/components/routes/games/chess/ChessStats/components/HistogramBar.tsx)
-│   │   │   │   │   │   │   ├── [Percentile.tsx](./src/components/routes/games/chess/ChessStats/components/Percentile.tsx)
-│   │   │   │   │   │   │   ├── [SearchBar.tsx](./src/components/routes/games/chess/ChessStats/components/SearchBar.tsx)
-│   │   │   │   │   │   │   ├── [StatCard.tsx](./src/components/routes/games/chess/ChessStats/components/StatCard.tsx)
-│   │   │   │   │   │   │   └── [TitleSection.tsx](./src/components/routes/games/chess/ChessStats/components/TitleSection.tsx)
-│   │   │   │   │   │   ├── data/
-│   │   │   │   │   │   │   └── [analysis.json](./src/components/routes/games/chess/ChessStats/data/analysis.json)
-│   │   │   │   │   │   ├── utils/
-│   │   │   │   │   │   │   ├── [percentile.ts](./src/components/routes/games/chess/ChessStats/utils/percentile.ts)
-│   │   │   │   │   │   │   └── [sql.ts](./src/components/routes/games/chess/ChessStats/utils/sql.ts)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/chess/ChessStats/AGENTS.md)
-│   │   │   │   │   │   ├── [constants.ts](./src/components/routes/games/chess/ChessStats/constants.ts)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/games/chess/ChessStats/index.tsx)
-│   │   │   │   │   │   └── [types.ts](./src/components/routes/games/chess/ChessStats/types.ts)
-│   │   │   │   │   └── __tests__/
-│   │   │   │   │       └── [ChessClock.test.tsx](./src/components/routes/games/chess/__tests__/ChessClock.test.tsx)
-│   │   │   │   ├── countries/
-│   │   │   │   │   ├── Border/
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/countries/Border/AGENTS.md)
-│   │   │   │   │   │   ├── [borders.ts](./src/components/routes/games/countries/Border/borders.ts)
-│   │   │   │   │   │   └── [index.tsx](./src/components/routes/games/countries/Border/index.tsx)
-│   │   │   │   │   ├── Connection/
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/countries/Connection/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/games/countries/Connection/index.tsx)
-│   │   │   │   │   │   ├── [puzzles.ts](./src/components/routes/games/countries/Connection/puzzles.ts)
-│   │   │   │   │   │   └── [types.ts](./src/components/routes/games/countries/Connection/types.ts)
-│   │   │   │   │   ├── ContinentsSort/
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/countries/ContinentsSort/AGENTS.md)
-│   │   │   │   │   │   └── [index.tsx](./src/components/routes/games/countries/ContinentsSort/index.tsx)
-│   │   │   │   │   ├── EmojiGuesser/
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/countries/EmojiGuesser/AGENTS.md)
-│   │   │   │   │   │   └── [index.tsx](./src/components/routes/games/countries/EmojiGuesser/index.tsx)
-│   │   │   │   │   ├── FlagGuesser/
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/countries/FlagGuesser/AGENTS.md)
-│   │   │   │   │   │   └── [index.tsx](./src/components/routes/games/countries/FlagGuesser/index.tsx)
-│   │   │   │   │   └── HigherOrLower/
-│   │   │   │   │       ├── [AGENTS.md](./src/components/routes/games/countries/HigherOrLower/AGENTS.md)
-│   │   │   │   │       ├── [index.tsx](./src/components/routes/games/countries/HigherOrLower/index.tsx)
-│   │   │   │   │       └── [population.ts](./src/components/routes/games/countries/HigherOrLower/population.ts)
-│   │   │   │   ├── data/
-│   │   │   │   │   ├── scripts/
-│   │   │   │   │   │   └── [convert-csv-to-json.ts](./src/components/routes/games/data/scripts/convert-csv-to-json.ts)
-│   │   │   │   │   ├── [games.csv](./src/components/routes/games/data/games.csv)
-│   │   │   │   │   ├── [games.json](./src/components/routes/games/data/games.json)
-│   │   │   │   │   └── [games.ts](./src/components/routes/games/data/games.ts)
-│   │   │   │   ├── memory/
-│   │   │   │   │   ├── MemoryMatch/
-│   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   ├── [MemoryMatch.test.tsx](./src/components/routes/games/memory/MemoryMatch/__tests__/MemoryMatch.test.tsx)
-│   │   │   │   │   │   │   ├── [useMemoryMatch.test.ts](./src/components/routes/games/memory/MemoryMatch/__tests__/useMemoryMatch.test.ts)
-│   │   │   │   │   │   │   └── [utils.test.ts](./src/components/routes/games/memory/MemoryMatch/__tests__/utils.test.ts)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/memory/MemoryMatch/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/games/memory/MemoryMatch/index.tsx)
-│   │   │   │   │   │   ├── [useMemoryMatch.ts](./src/components/routes/games/memory/MemoryMatch/useMemoryMatch.ts)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/games/memory/MemoryMatch/utils.ts)
-│   │   │   │   │   ├── NBack/
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/memory/NBack/AGENTS.md)
-│   │   │   │   │   │   ├── [constants.ts](./src/components/routes/games/memory/NBack/constants.ts)
-│   │   │   │   │   │   └── [index.tsx](./src/components/routes/games/memory/NBack/index.tsx)
-│   │   │   │   │   ├── PiNumber/
-│   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   ├── [Pi.test.tsx](./src/components/routes/games/memory/PiNumber/__tests__/Pi.test.tsx)
-│   │   │   │   │   │   │   └── [usePiGame.test.ts](./src/components/routes/games/memory/PiNumber/__tests__/usePiGame.test.ts)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/memory/PiNumber/AGENTS.md)
-│   │   │   │   │   │   ├── [constants.ts](./src/components/routes/games/memory/PiNumber/constants.ts)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/games/memory/PiNumber/index.tsx)
-│   │   │   │   │   │   ├── [keyHandlers.ts](./src/components/routes/games/memory/PiNumber/keyHandlers.ts)
-│   │   │   │   │   │   └── [usePiGame.ts](./src/components/routes/games/memory/PiNumber/usePiGame.ts)
-│   │   │   │   │   ├── Quizify/
-│   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   └── [Quizify.test.tsx](./src/components/routes/games/memory/Quizify/__tests__/Quizify.test.tsx)
-│   │   │   │   │   │   ├── utils/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   └── [quiz.test.ts](./src/components/routes/games/memory/Quizify/utils/__tests__/quiz.test.ts)
-│   │   │   │   │   │   │   └── [quiz.ts](./src/components/routes/games/memory/Quizify/utils/quiz.ts)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/memory/Quizify/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/games/memory/Quizify/index.tsx)
-│   │   │   │   │   │   └── [types.ts](./src/components/routes/games/memory/Quizify/types.ts)
-│   │   │   │   │   ├── Recall/
-│   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   ├── [Recall.test.tsx](./src/components/routes/games/memory/Recall/__tests__/Recall.test.tsx)
-│   │   │   │   │   │   │   ├── [useHighStreak.test.ts](./src/components/routes/games/memory/Recall/__tests__/useHighStreak.test.ts)
-│   │   │   │   │   │   │   └── [useRecall.test.ts](./src/components/routes/games/memory/Recall/__tests__/useRecall.test.ts)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/memory/Recall/AGENTS.md)
-│   │   │   │   │   │   ├── [constants.ts](./src/components/routes/games/memory/Recall/constants.ts)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/games/memory/Recall/index.tsx)
-│   │   │   │   │   │   ├── [useHighStreak.ts](./src/components/routes/games/memory/Recall/useHighStreak.ts)
-│   │   │   │   │   │   └── [useRecall.ts](./src/components/routes/games/memory/Recall/useRecall.ts)
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── __snapshots__/
-│   │   │   │   │   │   │   └── [Pi.test.tsx.snap](./src/components/routes/games/memory/__tests__/__snapshots__/Pi.test.tsx.snap)
-│   │   │   │   │   │   ├── [Pi.test.tsx](./src/components/routes/games/memory/__tests__/Pi.test.tsx)
-│   │   │   │   │   │   └── [Recall.test.tsx](./src/components/routes/games/memory/__tests__/Recall.test.tsx)
-│   │   │   │   │   └── data/
-│   │   │   │   │       └── [pi.ts](./src/components/routes/games/memory/data/pi.ts)
-│   │   │   │   ├── nikoli/
-│   │   │   │   │   ├── Fillomino/
-│   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   ├── [Fillomino.test.tsx](./src/components/routes/games/nikoli/Fillomino/__tests__/Fillomino.test.tsx)
-│   │   │   │   │   │   │   ├── [useFillomino.test.ts](./src/components/routes/games/nikoli/Fillomino/__tests__/useFillomino.test.ts)
-│   │   │   │   │   │   │   └── [utils.test.ts](./src/components/routes/games/nikoli/Fillomino/__tests__/utils.test.ts)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/nikoli/Fillomino/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/games/nikoli/Fillomino/index.tsx)
-│   │   │   │   │   │   ├── [types.ts](./src/components/routes/games/nikoli/Fillomino/types.ts)
-│   │   │   │   │   │   ├── [useFillomino.ts](./src/components/routes/games/nikoli/Fillomino/useFillomino.ts)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/games/nikoli/Fillomino/utils.ts)
-│   │   │   │   │   ├── Heyawake/
-│   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   ├── [Heyawake.test.tsx](./src/components/routes/games/nikoli/Heyawake/__tests__/Heyawake.test.tsx)
-│   │   │   │   │   │   │   ├── [useHeyawake.test.ts](./src/components/routes/games/nikoli/Heyawake/__tests__/useHeyawake.test.ts)
-│   │   │   │   │   │   │   └── [utils.test.ts](./src/components/routes/games/nikoli/Heyawake/__tests__/utils.test.ts)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/nikoli/Heyawake/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/games/nikoli/Heyawake/index.tsx)
-│   │   │   │   │   │   ├── [types.ts](./src/components/routes/games/nikoli/Heyawake/types.ts)
-│   │   │   │   │   │   ├── [useHeyawake.ts](./src/components/routes/games/nikoli/Heyawake/useHeyawake.ts)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/games/nikoli/Heyawake/utils.ts)
-│   │   │   │   │   ├── Masyu/
-│   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   ├── [Masyu.test.tsx](./src/components/routes/games/nikoli/Masyu/__tests__/Masyu.test.tsx)
-│   │   │   │   │   │   │   ├── [useMasyu.test.ts](./src/components/routes/games/nikoli/Masyu/__tests__/useMasyu.test.ts)
-│   │   │   │   │   │   │   └── [utils.test.ts](./src/components/routes/games/nikoli/Masyu/__tests__/utils.test.ts)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/nikoli/Masyu/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/games/nikoli/Masyu/index.tsx)
-│   │   │   │   │   │   ├── [types.ts](./src/components/routes/games/nikoli/Masyu/types.ts)
-│   │   │   │   │   │   ├── [useMasyu.ts](./src/components/routes/games/nikoli/Masyu/useMasyu.ts)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/games/nikoli/Masyu/utils.ts)
-│   │   │   │   │   ├── Norinori/
-│   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   ├── [Norinori.test.tsx](./src/components/routes/games/nikoli/Norinori/__tests__/Norinori.test.tsx)
-│   │   │   │   │   │   │   ├── [useNorinori.test.ts](./src/components/routes/games/nikoli/Norinori/__tests__/useNorinori.test.ts)
-│   │   │   │   │   │   │   └── [utils.test.ts](./src/components/routes/games/nikoli/Norinori/__tests__/utils.test.ts)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/nikoli/Norinori/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/games/nikoli/Norinori/index.tsx)
-│   │   │   │   │   │   ├── [types.ts](./src/components/routes/games/nikoli/Norinori/types.ts)
-│   │   │   │   │   │   ├── [useNorinori.ts](./src/components/routes/games/nikoli/Norinori/useNorinori.ts)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/games/nikoli/Norinori/utils.ts)
-│   │   │   │   │   ├── Nurikabe/
-│   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   ├── [Nurikabe.test.tsx](./src/components/routes/games/nikoli/Nurikabe/__tests__/Nurikabe.test.tsx)
-│   │   │   │   │   │   │   ├── [useNurikabe.test.ts](./src/components/routes/games/nikoli/Nurikabe/__tests__/useNurikabe.test.ts)
-│   │   │   │   │   │   │   └── [utils.test.ts](./src/components/routes/games/nikoli/Nurikabe/__tests__/utils.test.ts)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/nikoli/Nurikabe/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/games/nikoli/Nurikabe/index.tsx)
-│   │   │   │   │   │   ├── [types.ts](./src/components/routes/games/nikoli/Nurikabe/types.ts)
-│   │   │   │   │   │   ├── [useNurikabe.ts](./src/components/routes/games/nikoli/Nurikabe/useNurikabe.ts)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/games/nikoli/Nurikabe/utils.ts)
-│   │   │   │   │   ├── Shikaku/
-│   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   ├── [Shikaku.test.tsx](./src/components/routes/games/nikoli/Shikaku/__tests__/Shikaku.test.tsx)
-│   │   │   │   │   │   │   ├── [useShikaku.test.ts](./src/components/routes/games/nikoli/Shikaku/__tests__/useShikaku.test.ts)
-│   │   │   │   │   │   │   └── [utils.test.ts](./src/components/routes/games/nikoli/Shikaku/__tests__/utils.test.ts)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/nikoli/Shikaku/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/games/nikoli/Shikaku/index.tsx)
-│   │   │   │   │   │   ├── [types.ts](./src/components/routes/games/nikoli/Shikaku/types.ts)
-│   │   │   │   │   │   ├── [useShikaku.ts](./src/components/routes/games/nikoli/Shikaku/useShikaku.ts)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/games/nikoli/Shikaku/utils.ts)
-│   │   │   │   │   ├── Sudoku/
-│   │   │   │   │   │   ├── utils/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   └── [sudoku.test.ts](./src/components/routes/games/nikoli/Sudoku/utils/__tests__/sudoku.test.ts)
-│   │   │   │   │   │   │   └── [sudoku.ts](./src/components/routes/games/nikoli/Sudoku/utils/sudoku.ts)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/nikoli/Sudoku/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/games/nikoli/Sudoku/index.tsx)
-│   │   │   │   │   │   └── [types.ts](./src/components/routes/games/nikoli/Sudoku/types.ts)
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── __snapshots__/
-│   │   │   │   │   │   │   └── [Sudoku.test.tsx.snap](./src/components/routes/games/nikoli/__tests__/__snapshots__/Sudoku.test.tsx.snap)
-│   │   │   │   │   │   └── [Sudoku.test.tsx](./src/components/routes/games/nikoli/__tests__/Sudoku.test.tsx)
-│   │   │   │   │   └── _shared/
-│   │   │   │   │       ├── [GameInstructions.tsx](./src/components/routes/games/nikoli/_shared/GameInstructions.tsx)
-│   │   │   │   │       └── [gameData.tsx](./src/components/routes/games/nikoli/_shared/gameData.tsx)
-│   │   │   │   ├── puzzle/
-│   │   │   │   │   ├── Game2048/
-│   │   │   │   │   │   ├── utils/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   └── [game.test.ts](./src/components/routes/games/puzzle/Game2048/utils/__tests__/game.test.ts)
-│   │   │   │   │   │   │   └── [game.ts](./src/components/routes/games/puzzle/Game2048/utils/game.ts)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/puzzle/Game2048/AGENTS.md)
-│   │   │   │   │   │   ├── [constants.ts](./src/components/routes/games/puzzle/Game2048/constants.ts)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/games/puzzle/Game2048/index.tsx)
-│   │   │   │   │   │   └── [types.ts](./src/components/routes/games/puzzle/Game2048/types.ts)
-│   │   │   │   │   ├── LightsOut/
-│   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   ├── [LightsOut.test.tsx](./src/components/routes/games/puzzle/LightsOut/__tests__/LightsOut.test.tsx)
-│   │   │   │   │   │   │   ├── [useLightsOut.test.ts](./src/components/routes/games/puzzle/LightsOut/__tests__/useLightsOut.test.ts)
-│   │   │   │   │   │   │   └── [utils.test.ts](./src/components/routes/games/puzzle/LightsOut/__tests__/utils.test.ts)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/puzzle/LightsOut/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/games/puzzle/LightsOut/index.tsx)
-│   │   │   │   │   │   ├── [useLightsOut.ts](./src/components/routes/games/puzzle/LightsOut/useLightsOut.ts)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/games/puzzle/LightsOut/utils.ts)
-│   │   │   │   │   ├── Maze/
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/puzzle/Maze/AGENTS.md)
-│   │   │   │   │   │   ├── [constants.ts](./src/components/routes/games/puzzle/Maze/constants.ts)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/games/puzzle/Maze/index.tsx)
-│   │   │   │   │   │   ├── [maze.ts](./src/components/routes/games/puzzle/Maze/maze.ts)
-│   │   │   │   │   │   └── [types.ts](./src/components/routes/games/puzzle/Maze/types.ts)
-│   │   │   │   │   ├── SlidingPuzzle/
-│   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   ├── __snapshots__/
-│   │   │   │   │   │   │   │   └── [SlidingPuzzle.test.tsx.snap](./src/components/routes/games/puzzle/SlidingPuzzle/__tests__/__snapshots__/SlidingPuzzle.test.tsx.snap)
-│   │   │   │   │   │   │   ├── [SlidingPuzzle.test.tsx](./src/components/routes/games/puzzle/SlidingPuzzle/__tests__/SlidingPuzzle.test.tsx)
-│   │   │   │   │   │   │   ├── [useSlidingPuzzle.test.ts](./src/components/routes/games/puzzle/SlidingPuzzle/__tests__/useSlidingPuzzle.test.ts)
-│   │   │   │   │   │   │   └── [utils.test.ts](./src/components/routes/games/puzzle/SlidingPuzzle/__tests__/utils.test.ts)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/puzzle/SlidingPuzzle/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/games/puzzle/SlidingPuzzle/index.tsx)
-│   │   │   │   │   │   ├── [useSlidingPuzzle.ts](./src/components/routes/games/puzzle/SlidingPuzzle/useSlidingPuzzle.ts)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/games/puzzle/SlidingPuzzle/utils.ts)
-│   │   │   │   │   ├── Towers/
-│   │   │   │   │   │   ├── utils/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   └── [towers.test.ts](./src/components/routes/games/puzzle/Towers/utils/__tests__/towers.test.ts)
-│   │   │   │   │   │   │   └── [towers.ts](./src/components/routes/games/puzzle/Towers/utils/towers.ts)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/puzzle/Towers/AGENTS.md)
-│   │   │   │   │   │   ├── [constants.ts](./src/components/routes/games/puzzle/Towers/constants.ts)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/games/puzzle/Towers/index.tsx)
-│   │   │   │   │   │   └── [types.ts](./src/components/routes/games/puzzle/Towers/types.ts)
-│   │   │   │   │   └── __tests__/
-│   │   │   │   │       ├── __snapshots__/
-│   │   │   │   │       │   ├── [Game2048.test.tsx.snap](./src/components/routes/games/puzzle/__tests__/__snapshots__/Game2048.test.tsx.snap)
-│   │   │   │   │       │   └── [Towers.test.tsx.snap](./src/components/routes/games/puzzle/__tests__/__snapshots__/Towers.test.tsx.snap)
-│   │   │   │   │       ├── [Game2048.test.tsx](./src/components/routes/games/puzzle/__tests__/Game2048.test.tsx)
-│   │   │   │   │       └── [Towers.test.tsx](./src/components/routes/games/puzzle/__tests__/Towers.test.tsx)
-│   │   │   │   ├── tic-tac-toe/
-│   │   │   │   │   ├── Classic/
-│   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   ├── __snapshots__/
-│   │   │   │   │   │   │   │   └── [Classic.test.tsx.snap](./src/components/routes/games/tic-tac-toe/Classic/__tests__/__snapshots__/Classic.test.tsx.snap)
-│   │   │   │   │   │   │   └── [Classic.test.tsx](./src/components/routes/games/tic-tac-toe/Classic/__tests__/Classic.test.tsx)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/tic-tac-toe/Classic/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/games/tic-tac-toe/Classic/index.tsx)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/games/tic-tac-toe/Classic/utils.ts)
-│   │   │   │   │   ├── Duck/
-│   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   ├── __snapshots__/
-│   │   │   │   │   │   │   │   └── [Duck.test.tsx.snap](./src/components/routes/games/tic-tac-toe/Duck/__tests__/__snapshots__/Duck.test.tsx.snap)
-│   │   │   │   │   │   │   └── [Duck.test.tsx](./src/components/routes/games/tic-tac-toe/Duck/__tests__/Duck.test.tsx)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/tic-tac-toe/Duck/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/games/tic-tac-toe/Duck/index.tsx)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/games/tic-tac-toe/Duck/utils.ts)
-│   │   │   │   │   ├── Notakto/
-│   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   ├── __snapshots__/
-│   │   │   │   │   │   │   │   └── [Notakto.test.tsx.snap](./src/components/routes/games/tic-tac-toe/Notakto/__tests__/__snapshots__/Notakto.test.tsx.snap)
-│   │   │   │   │   │   │   └── [Notakto.test.tsx](./src/components/routes/games/tic-tac-toe/Notakto/__tests__/Notakto.test.tsx)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/tic-tac-toe/Notakto/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/games/tic-tac-toe/Notakto/index.tsx)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/games/tic-tac-toe/Notakto/utils.ts)
-│   │   │   │   │   ├── Reverse/
-│   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   ├── __snapshots__/
-│   │   │   │   │   │   │   │   └── [Reverse.test.tsx.snap](./src/components/routes/games/tic-tac-toe/Reverse/__tests__/__snapshots__/Reverse.test.tsx.snap)
-│   │   │   │   │   │   │   └── [Reverse.test.tsx](./src/components/routes/games/tic-tac-toe/Reverse/__tests__/Reverse.test.tsx)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/tic-tac-toe/Reverse/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/games/tic-tac-toe/Reverse/index.tsx)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/games/tic-tac-toe/Reverse/utils.ts)
-│   │   │   │   │   ├── T3/
-│   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   ├── __snapshots__/
-│   │   │   │   │   │   │   │   └── [TicTacToe.test.tsx.snap](./src/components/routes/games/tic-tac-toe/T3/__tests__/__snapshots__/TicTacToe.test.tsx.snap)
-│   │   │   │   │   │   │   └── [TicTacToe.test.tsx](./src/components/routes/games/tic-tac-toe/T3/__tests__/TicTacToe.test.tsx)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/tic-tac-toe/T3/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/games/tic-tac-toe/T3/index.tsx)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/games/tic-tac-toe/T3/utils.ts)
-│   │   │   │   │   └── Wild/
-│   │   │   │   │       ├── __tests__/
-│   │   │   │   │       │   ├── __snapshots__/
-│   │   │   │   │       │   │   └── [Wild.test.tsx.snap](./src/components/routes/games/tic-tac-toe/Wild/__tests__/__snapshots__/Wild.test.tsx.snap)
-│   │   │   │   │       │   └── [Wild.test.tsx](./src/components/routes/games/tic-tac-toe/Wild/__tests__/Wild.test.tsx)
-│   │   │   │   │       ├── [AGENTS.md](./src/components/routes/games/tic-tac-toe/Wild/AGENTS.md)
-│   │   │   │   │       ├── [index.tsx](./src/components/routes/games/tic-tac-toe/Wild/index.tsx)
-│   │   │   │   │       └── [utils.ts](./src/components/routes/games/tic-tac-toe/Wild/utils.ts)
-│   │   │   │   ├── trivia/
-│   │   │   │   │   ├── MythVersusFact/
-│   │   │   │   │   │   ├── data/
-│   │   │   │   │   │   │   ├── scripts/
-│   │   │   │   │   │   │   │   └── [convert-csv-to-json.ts](./src/components/routes/games/trivia/MythVersusFact/data/scripts/convert-csv-to-json.ts)
-│   │   │   │   │   │   │   ├── [items.csv](./src/components/routes/games/trivia/MythVersusFact/data/items.csv)
-│   │   │   │   │   │   │   └── [items.json](./src/components/routes/games/trivia/MythVersusFact/data/items.json)
-│   │   │   │   │   │   ├── utils/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   └── [game.test.ts](./src/components/routes/games/trivia/MythVersusFact/utils/__tests__/game.test.ts)
-│   │   │   │   │   │   │   └── [game.ts](./src/components/routes/games/trivia/MythVersusFact/utils/game.ts)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/trivia/MythVersusFact/AGENTS.md)
-│   │   │   │   │   │   ├── [constants.ts](./src/components/routes/games/trivia/MythVersusFact/constants.ts)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/games/trivia/MythVersusFact/index.tsx)
-│   │   │   │   │   │   └── [types.ts](./src/components/routes/games/trivia/MythVersusFact/types.ts)
-│   │   │   │   │   ├── Pokedex/
-│   │   │   │   │   │   ├── components/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   └── [PokemonDetail.test.tsx](./src/components/routes/games/trivia/Pokedex/components/__tests__/PokemonDetail.test.tsx)
-│   │   │   │   │   │   │   └── [PokemonDetail.tsx](./src/components/routes/games/trivia/Pokedex/components/PokemonDetail.tsx)
-│   │   │   │   │   │   ├── data/
-│   │   │   │   │   │   │   └── [pokedex.ts](./src/components/routes/games/trivia/Pokedex/data/pokedex.ts)
-│   │   │   │   │   │   ├── utils/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   └── [search.test.ts](./src/components/routes/games/trivia/Pokedex/utils/__tests__/search.test.ts)
-│   │   │   │   │   │   │   └── [search.ts](./src/components/routes/games/trivia/Pokedex/utils/search.ts)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/trivia/Pokedex/AGENTS.md)
-│   │   │   │   │   │   ├── [constants.ts](./src/components/routes/games/trivia/Pokedex/constants.ts)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/games/trivia/Pokedex/index.tsx)
-│   │   │   │   │   │   └── [types.ts](./src/components/routes/games/trivia/Pokedex/types.ts)
-│   │   │   │   │   ├── PrisonerDilemma/
-│   │   │   │   │   │   ├── utils/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   └── [game.test.ts](./src/components/routes/games/trivia/PrisonerDilemma/utils/__tests__/game.test.ts)
-│   │   │   │   │   │   │   └── [game.ts](./src/components/routes/games/trivia/PrisonerDilemma/utils/game.ts)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/trivia/PrisonerDilemma/AGENTS.md)
-│   │   │   │   │   │   ├── [constants.ts](./src/components/routes/games/trivia/PrisonerDilemma/constants.ts)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/games/trivia/PrisonerDilemma/index.tsx)
-│   │   │   │   │   │   └── [types.ts](./src/components/routes/games/trivia/PrisonerDilemma/types.ts)
-│   │   │   │   │   ├── ThroughTheYears/
-│   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   ├── [browse.test.tsx](./src/components/routes/games/trivia/ThroughTheYears/__tests__/browse.test.tsx)
-│   │   │   │   │   │   │   ├── [decks.test.ts](./src/components/routes/games/trivia/ThroughTheYears/__tests__/decks.test.ts)
-│   │   │   │   │   │   │   └── [engine.test.ts](./src/components/routes/games/trivia/ThroughTheYears/__tests__/engine.test.ts)
-│   │   │   │   │   │   ├── components/
-│   │   │   │   │   │   │   ├── components/
-│   │   │   │   │   │   │   │   ├── [BrowseCompact.tsx](./src/components/routes/games/trivia/ThroughTheYears/components/components/BrowseCompact.tsx)
-│   │   │   │   │   │   │   │   ├── [BrowseSpread.tsx](./src/components/routes/games/trivia/ThroughTheYears/components/components/BrowseSpread.tsx)
-│   │   │   │   │   │   │   │   ├── [Card.tsx](./src/components/routes/games/trivia/ThroughTheYears/components/components/Card.tsx)
-│   │   │   │   │   │   │   │   └── [Timeline.tsx](./src/components/routes/games/trivia/ThroughTheYears/components/components/Timeline.tsx)
-│   │   │   │   │   │   │   └── screens/
-│   │   │   │   │   │   │       ├── [BrowseScreen.tsx](./src/components/routes/games/trivia/ThroughTheYears/components/screens/BrowseScreen.tsx)
-│   │   │   │   │   │   │       ├── [GameOverScreen.tsx](./src/components/routes/games/trivia/ThroughTheYears/components/screens/GameOverScreen.tsx)
-│   │   │   │   │   │   │       ├── [GameScreen.tsx](./src/components/routes/games/trivia/ThroughTheYears/components/screens/GameScreen.tsx)
-│   │   │   │   │   │   │       └── [SetupScreen.tsx](./src/components/routes/games/trivia/ThroughTheYears/components/screens/SetupScreen.tsx)
-│   │   │   │   │   │   ├── data/
-│   │   │   │   │   │   │   ├── csv/
-│   │   │   │   │   │   │   │   ├── africa/
-│   │   │   │   │   │   │   │   │   ├── [egypt-events.csv](./src/components/routes/games/trivia/ThroughTheYears/data/csv/africa/egypt-events.csv)
-│   │   │   │   │   │   │   │   │   └── [south-africa-events.csv](./src/components/routes/games/trivia/ThroughTheYears/data/csv/africa/south-africa-events.csv)
-│   │   │   │   │   │   │   │   ├── americas/
-│   │   │   │   │   │   │   │   │   ├── [mexico-events.csv](./src/components/routes/games/trivia/ThroughTheYears/data/csv/americas/mexico-events.csv)
-│   │   │   │   │   │   │   │   │   └── [united-states-events.csv](./src/components/routes/games/trivia/ThroughTheYears/data/csv/americas/united-states-events.csv)
-│   │   │   │   │   │   │   │   ├── asia/
-│   │   │   │   │   │   │   │   │   ├── [china-events.csv](./src/components/routes/games/trivia/ThroughTheYears/data/csv/asia/china-events.csv)
-│   │   │   │   │   │   │   │   │   ├── [india-events.csv](./src/components/routes/games/trivia/ThroughTheYears/data/csv/asia/india-events.csv)
-│   │   │   │   │   │   │   │   │   ├── [iraq-events.csv](./src/components/routes/games/trivia/ThroughTheYears/data/csv/asia/iraq-events.csv)
-│   │   │   │   │   │   │   │   │   ├── [japan-events.csv](./src/components/routes/games/trivia/ThroughTheYears/data/csv/asia/japan-events.csv)
-│   │   │   │   │   │   │   │   │   └── [vietnam-events.csv](./src/components/routes/games/trivia/ThroughTheYears/data/csv/asia/vietnam-events.csv)
-│   │   │   │   │   │   │   │   ├── europe/
-│   │   │   │   │   │   │   │   │   ├── [france-events.csv](./src/components/routes/games/trivia/ThroughTheYears/data/csv/europe/france-events.csv)
-│   │   │   │   │   │   │   │   │   ├── [germany-events.csv](./src/components/routes/games/trivia/ThroughTheYears/data/csv/europe/germany-events.csv)
-│   │   │   │   │   │   │   │   │   ├── [greece-events.csv](./src/components/routes/games/trivia/ThroughTheYears/data/csv/europe/greece-events.csv)
-│   │   │   │   │   │   │   │   │   ├── [italy-events.csv](./src/components/routes/games/trivia/ThroughTheYears/data/csv/europe/italy-events.csv)
-│   │   │   │   │   │   │   │   │   └── [united-kingdom-events.csv](./src/components/routes/games/trivia/ThroughTheYears/data/csv/europe/united-kingdom-events.csv)
-│   │   │   │   │   │   │   │   └── world/
-│   │   │   │   │   │   │   │       └── [world-events.csv](./src/components/routes/games/trivia/ThroughTheYears/data/csv/world/world-events.csv)
-│   │   │   │   │   │   │   ├── json/
-│   │   │   │   │   │   │   │   ├── africa/
-│   │   │   │   │   │   │   │   │   ├── [egypt-events.json](./src/components/routes/games/trivia/ThroughTheYears/data/json/africa/egypt-events.json)
-│   │   │   │   │   │   │   │   │   └── [south-africa-events.json](./src/components/routes/games/trivia/ThroughTheYears/data/json/africa/south-africa-events.json)
-│   │   │   │   │   │   │   │   ├── americas/
-│   │   │   │   │   │   │   │   │   ├── [mexico-events.json](./src/components/routes/games/trivia/ThroughTheYears/data/json/americas/mexico-events.json)
-│   │   │   │   │   │   │   │   │   └── [united-states-events.json](./src/components/routes/games/trivia/ThroughTheYears/data/json/americas/united-states-events.json)
-│   │   │   │   │   │   │   │   ├── asia/
-│   │   │   │   │   │   │   │   │   ├── [china-events.json](./src/components/routes/games/trivia/ThroughTheYears/data/json/asia/china-events.json)
-│   │   │   │   │   │   │   │   │   ├── [india-events.json](./src/components/routes/games/trivia/ThroughTheYears/data/json/asia/india-events.json)
-│   │   │   │   │   │   │   │   │   ├── [iraq-events.json](./src/components/routes/games/trivia/ThroughTheYears/data/json/asia/iraq-events.json)
-│   │   │   │   │   │   │   │   │   ├── [japan-events.json](./src/components/routes/games/trivia/ThroughTheYears/data/json/asia/japan-events.json)
-│   │   │   │   │   │   │   │   │   └── [vietnam-events.json](./src/components/routes/games/trivia/ThroughTheYears/data/json/asia/vietnam-events.json)
-│   │   │   │   │   │   │   │   ├── europe/
-│   │   │   │   │   │   │   │   │   ├── [france-events.json](./src/components/routes/games/trivia/ThroughTheYears/data/json/europe/france-events.json)
-│   │   │   │   │   │   │   │   │   ├── [germany-events.json](./src/components/routes/games/trivia/ThroughTheYears/data/json/europe/germany-events.json)
-│   │   │   │   │   │   │   │   │   ├── [greece-events.json](./src/components/routes/games/trivia/ThroughTheYears/data/json/europe/greece-events.json)
-│   │   │   │   │   │   │   │   │   ├── [italy-events.json](./src/components/routes/games/trivia/ThroughTheYears/data/json/europe/italy-events.json)
-│   │   │   │   │   │   │   │   │   └── [united-kingdom-events.json](./src/components/routes/games/trivia/ThroughTheYears/data/json/europe/united-kingdom-events.json)
-│   │   │   │   │   │   │   │   └── world/
-│   │   │   │   │   │   │   │       └── [world-events.json](./src/components/routes/games/trivia/ThroughTheYears/data/json/world/world-events.json)
-│   │   │   │   │   │   │   ├── scripts/
-│   │   │   │   │   │   │   │   └── [convert-csv-to-json.ts](./src/components/routes/games/trivia/ThroughTheYears/data/scripts/convert-csv-to-json.ts)
-│   │   │   │   │   │   │   ├── [categories.ts](./src/components/routes/games/trivia/ThroughTheYears/data/categories.ts)
-│   │   │   │   │   │   │   ├── [constants.ts](./src/components/routes/games/trivia/ThroughTheYears/data/constants.ts)
-│   │   │   │   │   │   │   ├── [continents.ts](./src/components/routes/games/trivia/ThroughTheYears/data/continents.ts)
-│   │   │   │   │   │   │   ├── [decks.ts](./src/components/routes/games/trivia/ThroughTheYears/data/decks.ts)
-│   │   │   │   │   │   │   └── [modes.ts](./src/components/routes/games/trivia/ThroughTheYears/data/modes.ts)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/trivia/ThroughTheYears/AGENTS.md)
-│   │   │   │   │   │   ├── [engine.ts](./src/components/routes/games/trivia/ThroughTheYears/engine.ts)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/games/trivia/ThroughTheYears/index.tsx)
-│   │   │   │   │   │   ├── [store.ts](./src/components/routes/games/trivia/ThroughTheYears/store.ts)
-│   │   │   │   │   │   └── [types.ts](./src/components/routes/games/trivia/ThroughTheYears/types.ts)
-│   │   │   │   │   └── __tests__/
-│   │   │   │   │       ├── __snapshots__/
-│   │   │   │   │       │   ├── [Pokedex.test.tsx.snap](./src/components/routes/games/trivia/__tests__/__snapshots__/Pokedex.test.tsx.snap)
-│   │   │   │   │       │   └── [PrisonerDilemma.test.tsx.snap](./src/components/routes/games/trivia/__tests__/__snapshots__/PrisonerDilemma.test.tsx.snap)
-│   │   │   │   │       ├── [Pokedex.test.tsx](./src/components/routes/games/trivia/__tests__/Pokedex.test.tsx)
-│   │   │   │   │       └── [PrisonerDilemma.test.tsx](./src/components/routes/games/trivia/__tests__/PrisonerDilemma.test.tsx)
-│   │   │   │   ├── word/
-│   │   │   │   │   ├── Palindrome/
-│   │   │   │   │   │   ├── utils/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   └── [puzzle.test.ts](./src/components/routes/games/word/Palindrome/utils/__tests__/puzzle.test.ts)
-│   │   │   │   │   │   │   └── [puzzle.ts](./src/components/routes/games/word/Palindrome/utils/puzzle.ts)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/word/Palindrome/AGENTS.md)
-│   │   │   │   │   │   ├── [constants.ts](./src/components/routes/games/word/Palindrome/constants.ts)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/games/word/Palindrome/index.tsx)
-│   │   │   │   │   │   └── [types.ts](./src/components/routes/games/word/Palindrome/types.ts)
-│   │   │   │   │   ├── Typoglycemia/
-│   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   └── [EditorTab.test.tsx](./src/components/routes/games/word/Typoglycemia/__tests__/EditorTab.test.tsx)
-│   │   │   │   │   │   ├── utils/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   └── [typoglycemia.test.ts](./src/components/routes/games/word/Typoglycemia/utils/__tests__/typoglycemia.test.ts)
-│   │   │   │   │   │   │   └── [typoglycemia.ts](./src/components/routes/games/word/Typoglycemia/utils/typoglycemia.ts)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/word/Typoglycemia/AGENTS.md)
-│   │   │   │   │   │   ├── [EditorTab.tsx](./src/components/routes/games/word/Typoglycemia/EditorTab.tsx)
-│   │   │   │   │   │   ├── [ViewTab.tsx](./src/components/routes/games/word/Typoglycemia/ViewTab.tsx)
-│   │   │   │   │   │   ├── [constants.ts](./src/components/routes/games/word/Typoglycemia/constants.ts)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/games/word/Typoglycemia/index.tsx)
-│   │   │   │   │   │   └── [types.ts](./src/components/routes/games/word/Typoglycemia/types.ts)
-│   │   │   │   │   ├── Wordle/
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/games/word/Wordle/AGENTS.md)
-│   │   │   │   │   │   └── [index.tsx](./src/components/routes/games/word/Wordle/index.tsx)
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── __snapshots__/
-│   │   │   │   │   │   │   ├── [Palindrome.test.tsx.snap](./src/components/routes/games/word/__tests__/__snapshots__/Palindrome.test.tsx.snap)
-│   │   │   │   │   │   │   ├── [Typoglycemia.test.tsx.snap](./src/components/routes/games/word/__tests__/__snapshots__/Typoglycemia.test.tsx.snap)
-│   │   │   │   │   │   │   └── [Wordle.test.tsx.snap](./src/components/routes/games/word/__tests__/__snapshots__/Wordle.test.tsx.snap)
-│   │   │   │   │   │   ├── [Palindrome.test.tsx](./src/components/routes/games/word/__tests__/Palindrome.test.tsx)
-│   │   │   │   │   │   ├── [Typoglycemia.test.tsx](./src/components/routes/games/word/__tests__/Typoglycemia.test.tsx)
-│   │   │   │   │   │   └── [Wordle.test.tsx](./src/components/routes/games/word/__tests__/Wordle.test.tsx)
-│   │   │   │   │   └── data/
-│   │   │   │   │       └── [wordle.ts](./src/components/routes/games/word/data/wordle.ts)
-│   │   │   │   ├── [AGENTS.md](./src/components/routes/games/AGENTS.md)
-│   │   │   │   └── [index.tsx](./src/components/routes/games/index.tsx)
 │   │   │   ├── resume/
 │   │   │   │   ├── [Sections.tsx](./src/components/routes/resume/Sections.tsx)
 │   │   │   │   ├── [data.ts](./src/components/routes/resume/data.ts)
@@ -3325,14 +1972,6 @@
 │   │       │   │   │   └── [AppsStoreTemplate.test.tsx](./src/components/templates/app/AppsStoreTemplate/__tests__/AppsStoreTemplate.test.tsx)
 │   │       │   │   ├── [AppsStoreTemplate.tsx](./src/components/templates/app/AppsStoreTemplate/AppsStoreTemplate.tsx)
 │   │       │   │   └── [index.ts](./src/components/templates/app/AppsStoreTemplate/index.ts)
-│   │       │   ├── DownloadsTemplate/
-│   │       │   │   ├── __tests__/
-│   │       │   │   │   ├── __snapshots__/
-│   │       │   │   │   │   └── [DownloadsTemplate.test.tsx.snap](./src/components/templates/app/DownloadsTemplate/__tests__/__snapshots__/DownloadsTemplate.test.tsx.snap)
-│   │       │   │   │   └── [DownloadsTemplate.test.tsx](./src/components/templates/app/DownloadsTemplate/__tests__/DownloadsTemplate.test.tsx)
-│   │       │   │   ├── [AGENTS.md](./src/components/templates/app/DownloadsTemplate/AGENTS.md)
-│   │       │   │   ├── [DownloadsTemplate.tsx](./src/components/templates/app/DownloadsTemplate/DownloadsTemplate.tsx)
-│   │       │   │   └── [index.ts](./src/components/templates/app/DownloadsTemplate/index.ts)
 │   │       │   ├── SettingsTemplate/
 │   │       │   │   ├── [SettingsTemplate.tsx](./src/components/templates/app/SettingsTemplate/SettingsTemplate.tsx)
 │   │       │   │   └── [index.ts](./src/components/templates/app/SettingsTemplate/index.ts)
@@ -3365,7 +2004,6 @@
 │   │   ├── [countries.ts](./src/data/countries.ts)
 │   │   ├── [currencies.ts](./src/data/currencies.ts)
 │   │   ├── [models.ts](./src/data/models.ts)
-│   │   ├── [periodic-table.ts](./src/data/periodic-table.ts)
 │   │   ├── [timezones.ts](./src/data/timezones.ts)
 │   │   └── [weather.ts](./src/data/weather.ts)
 │   ├── examples/
@@ -3393,7 +2031,9 @@
 │   │       ├── [resume.types.ts](./src/services/yaml2pdfmake/resume.types.ts)
 │   │       └── [yaml2pdfmake.service.ts](./src/services/yaml2pdfmake/yaml2pdfmake.service.ts)
 │   ├── styles/
-│   │   └── [globals.css](./src/styles/globals.css)
+│   │   ├── [base.css](./src/styles/base.css)
+│   │   ├── [globals.css](./src/styles/globals.css)
+│   │   └── [themes.css](./src/styles/themes.css)
 │   ├── utils/
 │   │   └── [canvas.ts](./src/utils/canvas.ts)
 │   └── [global.d.ts](./src/global.d.ts)
@@ -3425,9 +2065,11 @@
 │   ├── [build.rs](./src-tauri/build.rs)
 │   └── [tauri.conf.json](./src-tauri/tauri.conf.json)
 ├── [AGENTS.md](./AGENTS.md)
+├── [Dockerfile](./Dockerfile)
 ├── [LICENSE](./LICENSE)
 ├── [README.md](./README.md)
 ├── [TREE.md](./TREE.md)
+├── [docker-compose.yaml](./docker-compose.yaml)
 ├── [eslint.config.mts](./eslint.config.mts)
 ├── [jest.config.ts](./jest.config.ts)
 ├── [jest.setup.ts](./jest.setup.ts)
@@ -3438,4 +2080,4 @@
 └── [tsconfig.json](./tsconfig.json)
 ```
 
-755 directories, 2680 files
+412 directories, 1665 files

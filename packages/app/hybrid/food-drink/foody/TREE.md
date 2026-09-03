@@ -55,6 +55,27 @@
 │   │   │       ├── __tests__/
 │   │   │       │   └── [page.test.tsx](./src/app/(app)/wheel/__tests__/page.test.tsx)
 │   │   │       └── [page.tsx](./src/app/(app)/wheel/page.tsx)
+│   │   ├── (auth)/
+│   │   │   ├── forget-password/
+│   │   │   │   ├── __tests__/
+│   │   │   │   │   └── [page.test.tsx](./src/app/(auth)/forget-password/__tests__/page.test.tsx)
+│   │   │   │   └── [page.tsx](./src/app/(auth)/forget-password/page.tsx)
+│   │   │   ├── profile/
+│   │   │   │   ├── __tests__/
+│   │   │   │   │   └── [page.test.tsx](./src/app/(auth)/profile/__tests__/page.test.tsx)
+│   │   │   │   └── [page.tsx](./src/app/(auth)/profile/page.tsx)
+│   │   │   ├── reset-password/
+│   │   │   │   ├── __tests__/
+│   │   │   │   │   └── [page.test.tsx](./src/app/(auth)/reset-password/__tests__/page.test.tsx)
+│   │   │   │   └── [page.tsx](./src/app/(auth)/reset-password/page.tsx)
+│   │   │   ├── sign-in/
+│   │   │   │   ├── __tests__/
+│   │   │   │   │   └── [page.test.tsx](./src/app/(auth)/sign-in/__tests__/page.test.tsx)
+│   │   │   │   └── [page.tsx](./src/app/(auth)/sign-in/page.tsx)
+│   │   │   └── sign-up/
+│   │   │       ├── __tests__/
+│   │   │       │   └── [page.test.tsx](./src/app/(auth)/sign-up/__tests__/page.test.tsx)
+│   │   │       └── [page.tsx](./src/app/(auth)/sign-up/page.tsx)
 │   │   ├── (info)/
 │   │   │   ├── about/
 │   │   │   │   ├── __tests__/
@@ -72,9 +93,11 @@
 │   │   │   ├── [error.test.tsx](./src/app/__tests__/error.test.tsx)
 │   │   │   ├── [forbidden.test.tsx](./src/app/__tests__/forbidden.test.tsx)
 │   │   │   ├── [global-error.test.tsx](./src/app/__tests__/global-error.test.tsx)
+│   │   │   ├── [layout.test.tsx](./src/app/__tests__/layout.test.tsx)
 │   │   │   ├── [loading.test.tsx](./src/app/__tests__/loading.test.tsx)
 │   │   │   ├── [not-found.test.tsx](./src/app/__tests__/not-found.test.tsx)
 │   │   │   ├── [page.test.tsx](./src/app/__tests__/page.test.tsx)
+│   │   │   ├── [robots.test.ts](./src/app/__tests__/robots.test.ts)
 │   │   │   └── [unauthorized.test.tsx](./src/app/__tests__/unauthorized.test.tsx)
 │   │   ├── [default.tsx](./src/app/default.tsx)
 │   │   ├── [error.tsx](./src/app/error.tsx)
@@ -99,6 +122,13 @@
 │   │   │   ├── [OfflineBadge.tsx](./src/components/atoms/OfflineBadge.tsx)
 │   │   │   └── [ThemeToggle.tsx](./src/components/atoms/ThemeToggle.tsx)
 │   │   ├── molecules/
+│   │   │   ├── __fixtures__/
+│   │   │   │   └── [fixtures.ts](./src/components/molecules/__fixtures__/fixtures.ts)
+│   │   │   ├── __tests__/
+│   │   │   │   ├── [CuisineSelect.test.tsx](./src/components/molecules/__tests__/CuisineSelect.test.tsx)
+│   │   │   │   └── [Reel.test.tsx](./src/components/molecules/__tests__/Reel.test.tsx)
+│   │   │   ├── [CuisineSelect.tsx](./src/components/molecules/CuisineSelect.tsx)
+│   │   │   └── [Reel.tsx](./src/components/molecules/Reel.tsx)
 │   │   ├── organisms/
 │   │   │   ├── __tests__/
 │   │   │   │   └── [Header.test.tsx](./src/components/organisms/__tests__/Header.test.tsx)
@@ -107,22 +137,8 @@
 │   │   │   │   │   └── [index.test.tsx](./src/components/organisms/list/__tests__/index.test.tsx)
 │   │   │   │   └── [index.tsx](./src/components/organisms/list/index.tsx)
 │   │   │   ├── randomizer/
-│   │   │   │   ├── __fixtures__/
-│   │   │   │   │   └── [fixtures.ts](./src/components/organisms/randomizer/__fixtures__/fixtures.ts)
 │   │   │   │   ├── __tests__/
 │   │   │   │   │   └── [index.test.tsx](./src/components/organisms/randomizer/__tests__/index.test.tsx)
-│   │   │   │   ├── components/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   ├── [CuisineSelect.test.tsx](./src/components/organisms/randomizer/components/__tests__/CuisineSelect.test.tsx)
-│   │   │   │   │   │   ├── [HowToModal.test.tsx](./src/components/organisms/randomizer/components/__tests__/HowToModal.test.tsx)
-│   │   │   │   │   │   └── [Reel.test.tsx](./src/components/organisms/randomizer/components/__tests__/Reel.test.tsx)
-│   │   │   │   │   ├── [CuisineSelect.tsx](./src/components/organisms/randomizer/components/CuisineSelect.tsx)
-│   │   │   │   │   ├── [HowToModal.tsx](./src/components/organisms/randomizer/components/HowToModal.tsx)
-│   │   │   │   │   └── [Reel.tsx](./src/components/organisms/randomizer/components/Reel.tsx)
-│   │   │   │   ├── hooks/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [useFoodPicker.test.ts](./src/components/organisms/randomizer/hooks/__tests__/useFoodPicker.test.ts)
-│   │   │   │   │   └── [useFoodPicker.ts](./src/components/organisms/randomizer/hooks/useFoodPicker.ts)
 │   │   │   │   └── [index.tsx](./src/components/organisms/randomizer/index.tsx)
 │   │   │   ├── schedule/
 │   │   │   │   ├── __tests__/
@@ -157,10 +173,12 @@
 │   │   └── [types.ts](./src/data/types.ts)
 │   ├── hooks/
 │   │   ├── __tests__/
+│   │   │   ├── [useFoodPicker.test.ts](./src/hooks/__tests__/useFoodPicker.test.ts)
 │   │   │   ├── [useOffline.test.ts](./src/hooks/__tests__/useOffline.test.ts)
 │   │   │   ├── [useSWRegister.test.ts](./src/hooks/__tests__/useSWRegister.test.ts)
 │   │   │   ├── [useTheme.test.ts](./src/hooks/__tests__/useTheme.test.ts)
 │   │   │   └── [useUpdater.test.ts](./src/hooks/__tests__/useUpdater.test.ts)
+│   │   ├── [useFoodPicker.ts](./src/hooks/useFoodPicker.ts)
 │   │   ├── [useOffline.ts](./src/hooks/useOffline.ts)
 │   │   ├── [useSWRegister.ts](./src/hooks/useSWRegister.ts)
 │   │   ├── [useTheme.ts](./src/hooks/useTheme.ts)
@@ -228,4 +246,4 @@
 └── [tsconfig.json](./tsconfig.json)
 ```
 
-60 directories, 165 files
+68 directories, 175 files

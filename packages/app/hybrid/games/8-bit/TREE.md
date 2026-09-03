@@ -5,10 +5,10 @@
 │   ├── [ARCHITECTURE.md](./docs/ARCHITECTURE.md)
 │   ├── [CONTRIBUTING.md](./docs/CONTRIBUTING.md)
 │   ├── [DOWNLOADS.md](./docs/DOWNLOADS.md)
-│   ├── [FEATURES.md](./docs/FEATURES.md)
 │   ├── [PACKAGING.md](./docs/PACKAGING.md)
 │   └── [ROADMAP.md](./docs/ROADMAP.md)
 ├── e2e/
+│   └── [home.spec.ts](./e2e/home.spec.ts)
 ├── public/
 │   ├── icons/
 │   │   ├── [icon-128x128.png](./public/icons/icon-128x128.png)
@@ -34,17 +34,64 @@
 │   └── [sw.js](./public/sw.js)
 ├── src/
 │   ├── app/
+│   │   ├── (auth)/
+│   │   │   ├── forget-password/
+│   │   │   │   ├── __tests__/
+│   │   │   │   │   └── [page.test.tsx](./src/app/(auth)/forget-password/__tests__/page.test.tsx)
+│   │   │   │   └── [page.tsx](./src/app/(auth)/forget-password/page.tsx)
+│   │   │   ├── profile/
+│   │   │   │   ├── __tests__/
+│   │   │   │   │   └── [page.test.tsx](./src/app/(auth)/profile/__tests__/page.test.tsx)
+│   │   │   │   └── [page.tsx](./src/app/(auth)/profile/page.tsx)
+│   │   │   ├── reset-password/
+│   │   │   │   ├── __tests__/
+│   │   │   │   │   └── [page.test.tsx](./src/app/(auth)/reset-password/__tests__/page.test.tsx)
+│   │   │   │   └── [page.tsx](./src/app/(auth)/reset-password/page.tsx)
+│   │   │   ├── sign-in/
+│   │   │   │   ├── __tests__/
+│   │   │   │   │   └── [page.test.tsx](./src/app/(auth)/sign-in/__tests__/page.test.tsx)
+│   │   │   │   └── [page.tsx](./src/app/(auth)/sign-in/page.tsx)
+│   │   │   └── sign-up/
+│   │   │       ├── __tests__/
+│   │   │       │   └── [page.test.tsx](./src/app/(auth)/sign-up/__tests__/page.test.tsx)
+│   │   │       └── [page.tsx](./src/app/(auth)/sign-up/page.tsx)
 │   │   ├── (games)/
 │   │   │   ├── dino-run/
 │   │   │   │   └── [page.tsx](./src/app/(games)/dino-run/page.tsx)
 │   │   │   ├── maze/
 │   │   │   │   └── [page.tsx](./src/app/(games)/maze/page.tsx)
+│   │   │   ├── rock-paper-scissors/
+│   │   │   │   └── [page.tsx](./src/app/(games)/rock-paper-scissors/page.tsx)
 │   │   │   └── snake/
 │   │   │       └── [page.tsx](./src/app/(games)/snake/page.tsx)
 │   │   ├── (info)/
+│   │   │   ├── about/
+│   │   │   │   ├── __tests__/
+│   │   │   │   │   └── [page.test.tsx](./src/app/(info)/about/__tests__/page.test.tsx)
+│   │   │   │   └── [page.tsx](./src/app/(info)/about/page.tsx)
+│   │   │   ├── downloads/
+│   │   │   │   ├── __tests__/
+│   │   │   │   │   └── [page.test.tsx](./src/app/(info)/downloads/__tests__/page.test.tsx)
+│   │   │   │   └── [page.tsx](./src/app/(info)/downloads/page.tsx)
+│   │   │   └── version/
+│   │   │       ├── __tests__/
+│   │   │       │   └── [page.test.tsx](./src/app/(info)/version/__tests__/page.test.tsx)
+│   │   │       └── [page.tsx](./src/app/(info)/version/page.tsx)
 │   │   ├── __tests__/
+│   │   │   ├── [default.test.tsx](./src/app/__tests__/default.test.tsx)
+│   │   │   ├── [error.test.tsx](./src/app/__tests__/error.test.tsx)
+│   │   │   ├── [forbidden.test.tsx](./src/app/__tests__/forbidden.test.tsx)
+│   │   │   ├── [global-error.test.tsx](./src/app/__tests__/global-error.test.tsx)
+│   │   │   ├── [layout.test.tsx](./src/app/__tests__/layout.test.tsx)
+│   │   │   ├── [loading.test.tsx](./src/app/__tests__/loading.test.tsx)
+│   │   │   ├── [not-found.test.tsx](./src/app/__tests__/not-found.test.tsx)
+│   │   │   ├── [page.test.tsx](./src/app/__tests__/page.test.tsx)
+│   │   │   ├── [robots.test.ts](./src/app/__tests__/robots.test.ts)
+│   │   │   ├── [template.test.tsx](./src/app/__tests__/template.test.tsx)
+│   │   │   └── [unauthorized.test.tsx](./src/app/__tests__/unauthorized.test.tsx)
 │   │   ├── [default.tsx](./src/app/default.tsx)
 │   │   ├── [error.tsx](./src/app/error.tsx)
+│   │   ├── [favicon.ico](./src/app/favicon.ico)
 │   │   ├── [forbidden.tsx](./src/app/forbidden.tsx)
 │   │   ├── [global-error.tsx](./src/app/global-error.tsx)
 │   │   ├── [layout.tsx](./src/app/layout.tsx)
@@ -57,27 +104,47 @@
 │   ├── components/
 │   │   ├── organisms/
 │   │   │   ├── __tests__/
+│   │   │   │   └── [Header.test.tsx](./src/components/organisms/__tests__/Header.test.tsx)
 │   │   │   └── [Header.tsx](./src/components/organisms/Header.tsx)
 │   │   └── templates/
 │   │       ├── __tests__/
+│   │       │   ├── [AboutTemplate.test.tsx](./src/components/templates/__tests__/AboutTemplate.test.tsx)
+│   │       │   ├── [DownloadsTemplate.test.tsx](./src/components/templates/__tests__/DownloadsTemplate.test.tsx)
+│   │       │   ├── [ErrorTemplate.test.tsx](./src/components/templates/__tests__/ErrorTemplate.test.tsx)
+│   │       │   └── [VersionTemplate.test.tsx](./src/components/templates/__tests__/VersionTemplate.test.tsx)
+│   │       ├── [AboutTemplate.tsx](./src/components/templates/AboutTemplate.tsx)
+│   │       ├── [DownloadsTemplate.tsx](./src/components/templates/DownloadsTemplate.tsx)
 │   │       ├── [ErrorTemplate.tsx](./src/components/templates/ErrorTemplate.tsx)
-│   │       └── [NotFoundTemplate.tsx](./src/components/templates/NotFoundTemplate.tsx)
+│   │       └── [VersionTemplate.tsx](./src/components/templates/VersionTemplate.tsx)
 │   ├── games/
 │   │   ├── DinoRun/
 │   │   │   ├── __tests__/
-│   │   │   │   └── __tests__/
+│   │   │   │   ├── __tests__/
+│   │   │   │   ├── [game.test.ts](./src/games/DinoRun/__tests__/game.test.ts)
+│   │   │   │   └── [index.test.tsx](./src/games/DinoRun/__tests__/index.test.tsx)
 │   │   │   ├── [constants.ts](./src/games/DinoRun/constants.ts)
 │   │   │   ├── [game.ts](./src/games/DinoRun/game.ts)
 │   │   │   ├── [index.tsx](./src/games/DinoRun/index.tsx)
 │   │   │   └── [types.ts](./src/games/DinoRun/types.ts)
 │   │   ├── Maze/
 │   │   │   ├── __tests__/
+│   │   │   │   ├── [index.test.tsx](./src/games/Maze/__tests__/index.test.tsx)
+│   │   │   │   └── [maze.test.ts](./src/games/Maze/__tests__/maze.test.ts)
 │   │   │   ├── [constants.ts](./src/games/Maze/constants.ts)
 │   │   │   ├── [index.tsx](./src/games/Maze/index.tsx)
 │   │   │   ├── [maze.ts](./src/games/Maze/maze.ts)
 │   │   │   └── [types.ts](./src/games/Maze/types.ts)
+│   │   ├── RockPaperScissors/
+│   │   │   ├── __tests__/
+│   │   │   │   ├── [index.test.tsx](./src/games/RockPaperScissors/__tests__/index.test.tsx)
+│   │   │   │   └── [utils.test.ts](./src/games/RockPaperScissors/__tests__/utils.test.ts)
+│   │   │   ├── [index.tsx](./src/games/RockPaperScissors/index.tsx)
+│   │   │   ├── [types.ts](./src/games/RockPaperScissors/types.ts)
+│   │   │   └── [utils.ts](./src/games/RockPaperScissors/utils.ts)
 │   │   ├── Snake/
 │   │   │   ├── __tests__/
+│   │   │   │   ├── [index.test.tsx](./src/games/Snake/__tests__/index.test.tsx)
+│   │   │   │   └── [snake.test.ts](./src/games/Snake/__tests__/snake.test.ts)
 │   │   │   ├── utils/
 │   │   │   │   └── __tests__/
 │   │   │   ├── [constants.ts](./src/games/Snake/constants.ts)
@@ -86,6 +153,8 @@
 │   │   │   └── [types.ts](./src/games/Snake/types.ts)
 │   │   └── _shared/
 │   │       ├── __tests__/
+│   │       │   ├── [GameInstructions.test.tsx](./src/games/_shared/__tests__/GameInstructions.test.tsx)
+│   │       │   └── [gameData.test.ts](./src/games/_shared/__tests__/gameData.test.ts)
 │   │       ├── [GameInstructions.tsx](./src/games/_shared/GameInstructions.tsx)
 │   │       └── [gameData.tsx](./src/games/_shared/gameData.tsx)
 │   └── styles/
@@ -115,13 +184,16 @@
 │   ├── src/
 │   │   ├── [lib.rs](./src-tauri/src/lib.rs)
 │   │   └── [main.rs](./src-tauri/src/main.rs)
+│   ├── [Cargo.lock](./src-tauri/Cargo.lock)
 │   ├── [Cargo.toml](./src-tauri/Cargo.toml)
 │   ├── [build.rs](./src-tauri/build.rs)
 │   └── [tauri.conf.json](./src-tauri/tauri.conf.json)
 ├── [AGENTS.md](./AGENTS.md)
+├── [Dockerfile](./Dockerfile)
 ├── [LICENSE](./LICENSE)
 ├── [README.md](./README.md)
 ├── [TREE.md](./TREE.md)
+├── [docker-compose.yaml](./docker-compose.yaml)
 ├── [eslint.config.mts](./eslint.config.mts)
 ├── [jest.config.ts](./jest.config.ts)
 ├── [jest.setup.ts](./jest.setup.ts)
@@ -132,4 +204,4 @@
 └── [tsconfig.json](./tsconfig.json)
 ```
 
-34 directories, 95 files
+54 directories, 147 files
