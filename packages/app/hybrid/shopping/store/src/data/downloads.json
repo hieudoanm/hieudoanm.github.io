@@ -2090,15 +2090,27 @@
         "fileSize": "",
         "actions": [
           {
-            "label": ".crx",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-bored-latest/bored-v3.crx"
+            "label": "v2.crx",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-bored-latest/bored-v2.crx"
           },
           {
-            "label": ".xpi",
+            "label": "v2.xpi",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-bored-latest/bored-v2.xpi"
           },
           {
-            "label": ".zip",
+            "label": "v2.zip",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-bored-latest/bored-v2.zip"
+          },
+          {
+            "label": "v3.crx",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-bored-latest/bored-v3.crx"
+          },
+          {
+            "label": "v3.xpi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-bored-latest/bored-v3.xpi"
+          },
+          {
+            "label": "v3.zip",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-bored-latest/bored-v3.zip"
           }
         ]
@@ -2114,15 +2126,27 @@
         "fileSize": "",
         "actions": [
           {
-            "label": ".crx",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-githubx-latest/githubx-v3.crx"
+            "label": "v2.crx",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-githubx-latest/githubx-v2.crx"
           },
           {
-            "label": ".xpi",
+            "label": "v2.xpi",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-githubx-latest/githubx-v2.xpi"
           },
           {
-            "label": ".zip",
+            "label": "v2.zip",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-githubx-latest/githubx-v2.zip"
+          },
+          {
+            "label": "v3.crx",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-githubx-latest/githubx-v3.crx"
+          },
+          {
+            "label": "v3.xpi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-githubx-latest/githubx-v3.xpi"
+          },
+          {
+            "label": "v3.zip",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-githubx-latest/githubx-v3.zip"
           }
         ]
@@ -2138,15 +2162,27 @@
         "fileSize": "",
         "actions": [
           {
-            "label": ".crx",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-instax-latest/instax-v3.crx"
+            "label": "v2.crx",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-instax-latest/instax-v2.crx"
           },
           {
-            "label": ".xpi",
+            "label": "v2.xpi",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-instax-latest/instax-v2.xpi"
           },
           {
-            "label": ".zip",
+            "label": "v2.zip",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-instax-latest/instax-v2.zip"
+          },
+          {
+            "label": "v3.crx",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-instax-latest/instax-v3.crx"
+          },
+          {
+            "label": "v3.xpi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-instax-latest/instax-v3.xpi"
+          },
+          {
+            "label": "v3.zip",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-instax-latest/instax-v3.zip"
           }
         ]
@@ -2162,15 +2198,27 @@
         "fileSize": "",
         "actions": [
           {
-            "label": ".crx",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-snapshot-latest/snapshot-v3.crx"
+            "label": "v2.crx",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-snapshot-latest/snapshot-v2.crx"
           },
           {
-            "label": ".xpi",
+            "label": "v2.xpi",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-snapshot-latest/snapshot-v2.xpi"
           },
           {
-            "label": ".zip",
+            "label": "v2.zip",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-snapshot-latest/snapshot-v2.zip"
+          },
+          {
+            "label": "v3.crx",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-snapshot-latest/snapshot-v3.crx"
+          },
+          {
+            "label": "v3.xpi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-snapshot-latest/snapshot-v3.xpi"
+          },
+          {
+            "label": "v3.zip",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-snapshot-latest/snapshot-v3.zip"
           }
         ]

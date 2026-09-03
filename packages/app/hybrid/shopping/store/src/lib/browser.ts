@@ -1,3 +1,6 @@
+import type { DownloadOption } from './downloads';
+import { getDownloadFormat } from './downloads';
+
 export type Browser =
   | 'chrome'
   | 'firefox'
@@ -123,3 +126,22 @@ export const ENGINE_LABELS: Record<Engine, string> = {
   webkit: 'WebKit',
   unknown: 'Unknown',
 };
+
+export const BROWSER_TO_FORMAT: Record<Browser, string> = {
+  chrome: 'crx',
+  edge: 'crx',
+  opera: 'crx',
+  brave: 'crx',
+  vivaldi: 'crx',
+  firefox: 'xpi',
+  safari: 'zip',
+  unknown: 'zip',
+};
+
+export const recommendExtension = (
+  downloads: DownloadOption[],
+  browser: Browser
+): DownloadOption | undefined =>
+  downloads.find(
+    (download) => getDownloadFormat(download) === BROWSER_TO_FORMAT[browser]
+  );

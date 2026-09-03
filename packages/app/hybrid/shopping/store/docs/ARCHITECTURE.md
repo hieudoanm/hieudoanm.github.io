@@ -59,8 +59,12 @@ src/
 │   ├── AppPage.tsx             # Detail page wrapper
 │   └── AppInfo.tsx             # Detail view component
 ├── data/
-│   ├── downloads.json          # App catalog (44 apps)
-│   ├── downloads.csv           # Source data
+│   ├── downloads.json          # App catalog (57 apps)
+│   ├── csv/
+│   │   ├── hybrid.csv          # C-shaped hybrid apps
+│   │   ├── native.csv          # Native Android + macOS apps
+│   │   ├── clis.csv            # Command-line tools
+│   │   └── extensions.csv      # Browser extensions
 │   └── scripts/
 │       └── convert-csv-to-json.ts  # CSV → JSON converter
 ├── lib/

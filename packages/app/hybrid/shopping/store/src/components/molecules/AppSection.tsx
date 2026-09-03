@@ -4,6 +4,7 @@ import { type FC } from 'react';
 import Link from 'next/link';
 import { StoreCard } from '@/components/atoms/StoreCard';
 import { getRecommendedDownload, type AppData } from '@/lib/downloads';
+import { detectBrowser, recommendExtension } from '@/lib/browser';
 import { SECTION_META, type ViewMode } from '@/lib/types';
 import type { Platform } from '@/lib/os';
 
@@ -27,6 +28,8 @@ export const AppSection: FC<AppSectionProps> = ({
     description: '',
   };
 
+  const browser = detectBrowser().browser;
+
   return (
     <section>
       <div className="mb-4">
@@ -40,7 +43,11 @@ export const AppSection: FC<AppSectionProps> = ({
               key={app.slug}
               app={app}
               platform={platform}
-              recommended={getRecommendedDownload(app, platform)}
+              recommended={
+                app.section === 'extension'
+                  ? recommendExtension(app.downloads, browser)
+                  : getRecommendedDownload(app, platform)
+              }
             />
           ))}
         </div>

@@ -29,8 +29,8 @@ Reference docs live in `docs/`:
 - OS detection is client-only — always wrapped in `useEffect`
 - `parseDownloads()` converts raw JSON sections to `AppData[]`
 - `generateStaticParams` required for all dynamic routes (`output: export`)
-- Store has its own copy of `downloads.json` / `downloads.csv` (not
-  cross-package)
+- Store has its own copy of `downloads.json` (and its per-section source CSVs
+  in `src/data/csv/`) — not cross-package
 
 ## Commands
 
@@ -55,8 +55,8 @@ src/components/
   AppPage.tsx           # Detail page wrapper
   AppInfo.tsx           # Detail view component
 src/data/
-  downloads.json        # App catalog (44 apps)
-  downloads.csv         # Source data
+  downloads.json        # App catalog (57 apps)
+  csv/                  # Source data (per-section CSV files)
   scripts/              # CSV → JSON converter
 src/lib/
   os.ts                 # Platform detection

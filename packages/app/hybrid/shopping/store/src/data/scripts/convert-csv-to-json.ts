@@ -2,7 +2,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 const DATA_DIR = join(__dirname, '..');
-const CSV_PATH = join(DATA_DIR, 'downloads.csv');
+const CSV_DIR = join(DATA_DIR, 'csv');
 const JSON_PATH = join(DATA_DIR, 'downloads.json');
 const COLUMNS = [
   'section',
@@ -26,9 +26,12 @@ const COLUMNS = [
   'rpmUrl',
   'msiUrl',
   'exeUrl',
-  'crxUrl',
-  'xpiUrl',
-  'zipUrl',
+  'crxV2Url',
+  'xpiV2Url',
+  'zipV2Url',
+  'crxV3Url',
+  'xpiV3Url',
+  'zipV3Url',
 ] as const;
 
 type Column = (typeof COLUMNS)[number];
@@ -94,19 +97,24 @@ const parseCsvRows = (csv: string): string[][] => {
 };
 
 const readCsvRows = (): CsvRow[] => {
-  const csv = readFileSync(CSV_PATH, 'utf8')
-    .replace(/\r\n/g, '\n')
-    .replace(/\r/g, '');
-  const [header, ...body] = parseCsvRows(csv);
-  return body
-    .filter((values) => values.some((value) => value.trim() !== ''))
-    .map((values) => {
+  const files = ['hybrid.csv', 'native.csv', 'clis.csv', 'extensions.csv'];
+  const rows: CsvRow[] = [];
+  for (const file of files) {
+    const csv = readFileSync(join(CSV_DIR, file), 'utf8')
+      .replace(/\r\n/g, '\n')
+      .replace(/\r/g, '');
+    const [header, ...body] = parseCsvRows(csv);
+    for (const values of body) {
+      if (!values.some((value) => value.trim() !== '')) continue;
       const row = {} as CsvRow;
+      for (const column of COLUMNS) row[column] = '';
       header.forEach((column, index) => {
         row[column as Column] = values[index] ?? '';
       });
-      return row;
-    });
+      rows.push(row);
+    }
+  }
+  return rows;
 };
 
 const toActions = (row: CsvRow): DownloadAction[] => {
@@ -121,9 +129,12 @@ const toActions = (row: CsvRow): DownloadAction[] => {
     ['.x86_64.rpm', row.rpmUrl],
     ['.msi', row.msiUrl],
     ['.exe', row.exeUrl],
-    ['.crx', row.crxUrl],
-    ['.xpi', row.xpiUrl],
-    ['.zip', row.zipUrl],
+    ['v2.crx', row.crxV2Url],
+    ['v2.xpi', row.xpiV2Url],
+    ['v2.zip', row.zipV2Url],
+    ['v3.crx', row.crxV3Url],
+    ['v3.xpi', row.xpiV3Url],
+    ['v3.zip', row.zipV3Url],
   ];
 
   for (const [label, url] of platformMap) {

@@ -34,9 +34,13 @@ store/
 │   │   └── AppInfo.tsx
 │   ├── data/
 │   │   ├── downloads.json
-│   │   ├── downloads.csv
-│   │   └── scripts/
-│   │       └── convert-csv-to-json.ts
+│   │   └── csv/
+│   │       ├── hybrid.csv
+│   │       ├── native.csv
+│   │       ├── clis.csv
+│   │       ├── extensions.csv
+│   │       └── scripts/
+│   │           └── convert-csv-to-json.ts
 │   ├── lib/
 │   │   ├── os.ts
 │   │   └── downloads.ts

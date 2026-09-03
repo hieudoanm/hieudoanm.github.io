@@ -61,6 +61,11 @@ const parseSlug = (label: string): string =>
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-|-$/g, '');
 
+export const getDownloadFormat = (download: DownloadOption): string => {
+  const match = download.url.match(/\.([a-z0-9]+)(?:$|\?)/i);
+  return match ? match[1].toLowerCase() : 'other';
+};
+
 export type RawSection = {
   id: string;
   label: string;

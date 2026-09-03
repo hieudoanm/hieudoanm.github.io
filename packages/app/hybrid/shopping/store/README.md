@@ -70,7 +70,7 @@ src/
 │   └── AppInfo.tsx             # Detail view component
 ├── data/
 │   ├── downloads.json          # App catalog
-│   ├── downloads.csv           # Source data
+│   ├── csv/                    # Source data (per-section CSV files)
 │   └── scripts/                # CSV → JSON converter
 ├── lib/
 │   ├── os.ts                   # OS detection utilities

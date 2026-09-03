@@ -1,4 +1,9 @@
-import { detectBrowser, BROWSER_LABELS, ENGINE_LABELS } from '../browser';
+import {
+  detectBrowser,
+  BROWSER_LABELS,
+  ENGINE_LABELS,
+  recommendExtension,
+} from '../browser';
 
 describe('detectBrowser', () => {
   it('detects Chrome', () => {
@@ -84,3 +89,77 @@ describe('labels', () => {
     expect(ENGINE_LABELS.unknown).toBe('Unknown');
   });
 });
+
+describe('recommendExtension', () => {
+  const downloads = [
+    {
+      platform: 'unknown' as const,
+      label: 'v2.crx',
+      url: 'https://example.com/releases/snapshot-v2.crx',
+    },
+    {
+      platform: 'unknown' as const,
+      label: 'v3.crx',
+      url: 'https://example.com/releases/snapshot-v3.crx',
+    },
+    {
+      platform: 'unknown' as const,
+      label: 'v2.xpi',
+      url: 'https://example.com/releases/snapshot-v2.xpi',
+    },
+    {
+      platform: 'unknown' as const,
+      label: 'v3.xpi',
+      url: 'https://example.com/releases/snapshot-v3.xpi',
+    },
+    {
+      platform: 'unknown' as const,
+      label: 'v2.zip',
+      url: 'https://example.com/releases/snapshot-v2.zip',
+    },
+    {
+      platform: 'unknown' as const,
+      label: 'v3.zip',
+      url: 'https://example.com/releases/snapshot-v3.zip',
+    },
+  ];
+
+  it('recommends crx for chrome', () => {
+    const rec = recommendExtension(downloads, 'chrome');
+    expect(rec?.url.endsWith('.crx')).toBe(true);
+  });
+
+  it('recommends crx for edge', () => {
+    const rec = recommendExtension(downloads, 'edge');
+    expect(rec?.url.endsWith('.crx')).toBe(true);
+  });
+
+  it('recommends xpi for firefox', () => {
+    const rec = recommendExtension(downloads, 'firefox');
+    expect(rec?.url.endsWith('.xpi')).toBe(true);
+  });
+
+  it('recommends zip for safari', () => {
+    const rec = recommendExtension(downloads, 'safari');
+    expect(rec?.url.endsWith('.zip')).toBe(true);
+  });
+
+  it('recommends zip for unknown browser', () => {
+    const rec = recommendExtension(downloads, 'unknown');
+    expect(rec?.url.endsWith('.zip')).toBe(true);
+  });
+
+  it('picks the first version of the matching format (v2)', () => {
+    const rec = recommendExtension(downloads, 'firefox');
+    expect(rec?.label).toBe('v2.xpi');
+  });
+
+  it('returns undefined when no download matches', () => {
+    const rec = recommendExtension(
+      downloads.filter((d) => d.url.endsWith('.crx')),
+      'firefox'
+    );
+    expect(rec).toBeUndefined();
+  });
+});
+

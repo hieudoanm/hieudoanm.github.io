@@ -98,9 +98,10 @@ every change.
 
 ## Data Conventions
 
-- The store has its own copy of `downloads.json` / `downloads.csv` in
-  `src/data/` — not imported cross-package.
-- To update the catalog, edit `src/data/downloads.csv` and run
+- The store has its own copy of `downloads.json` in `src/data/` with source CSVs
+  in `src/data/csv/` (hybrid/native/clis/extensions.csv) — not imported
+  cross-package.
+- To update the catalog, edit the per-section CSVs in `src/data/csv/` and run
   `pnpm ts-node src/data/scripts/convert-csv-to-json.ts` to regenerate JSON.
 - Platform detection happens client-side via `navigator.userAgent` in
   `src/lib/os.ts` — always wrap in `useEffect` to avoid hydration mismatch.

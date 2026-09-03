@@ -1,0 +1,2 @@
+section,sectionId,appId,label,primaryCategory,secondaryCategory,icon,version,lastUpdated,fileSize,href,releasesAction,releasesUrl
+CLIs,clis,browserverless,Browserverless,Developer Tools,,PiBrowser,0.0.1,2026-08-29,,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-rust-browserverless-latest/app-native-rust-browserverless-browserverless,View Releases,https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-rust-browserverless-latest/app-native-rust-browserverless-browserverless
