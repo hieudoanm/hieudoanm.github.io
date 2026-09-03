@@ -78,17 +78,18 @@ jobs:
       - name: Collect Release Artifacts
         run: |
           mkdir -p release
-          find artifacts -type f \( \
-            -name "*.zip" -o \
-            -name "*.xpi" -o \
-            -name "*.crx" \
-          \) -print0 |
-            while IFS= read -r -d '' file; do
-              cp "$file" release/
+          cp artifacts/README.md release/ 2>/dev/null || true
+          for ver in v2 v3; do
+            for file in artifacts/$ver/*; do
+              [ -f "$file" ] || continue
+              base="$(basename "$file")"
+              name="${base%.*}-${ver}.${base##*.}"
+              cp "$file" "release/$name"
             done
+          done
           cd release
-          for file in ./*; do
-            sha256sum --binary "${file#./}"
+          for file in *.zip *.xpi *.crx; do
+            [ -f "$file" ] && sha256sum --binary "$file"
           done > SHA256SUMS.txt
           sha256sum --check --quiet SHA256SUMS.txt
       - name: Publish Release
