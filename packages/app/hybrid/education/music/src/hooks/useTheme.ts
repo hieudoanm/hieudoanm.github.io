@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from 'react';
 
-export type Theme = 'music' | 'music-dark';
+export type Theme = 'music-light' | 'music-dark';
 
 const THEME_KEY = 'music:theme';
-const DEFAULT_THEME: Theme = 'music';
+const DEFAULT_THEME: Theme = 'music-light';
 
 const readStoredTheme = (): Theme => {
   try {
@@ -39,7 +39,7 @@ export const useTheme = (): {
     theme,
     toggleTheme: () =>
       setTheme((current) =>
-        current === 'music-dark' ? 'music' : 'music-dark'
+        current === 'music-dark' ? 'music-light' : 'music-dark'
       ),
   };
 };

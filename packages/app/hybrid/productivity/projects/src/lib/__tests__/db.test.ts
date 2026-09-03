@@ -158,7 +158,7 @@ describe('db', () => {
 
   it('settings.get returns defaults when nothing is stored', async () => {
     await expect(db.settings.get()).resolves.toEqual({
-      theme: 'nothing',
+      theme: 'projects-light',
       defaultView: 'kanban',
       notifications: true,
       notificationsReadAt: 0,

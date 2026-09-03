@@ -19,7 +19,7 @@ const RootLayout: FC<{ children: ReactNode }> = ({ children }) => {
   console.log('[RootLayout] render');
 
   return (
-    <html lang="vi" data-theme="nothing">
+    <html lang="vi" data-theme="tax-dark">
       <body className="bg-base-100 text-base-content h-screen overflow-hidden">
         <Header />
         <Providers>{children}</Providers>

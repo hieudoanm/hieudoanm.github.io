@@ -41,15 +41,15 @@ test('has theme dropdown', async ({ page }) => {
   await expect(page.locator('select').first()).toBeVisible();
 });
 
-test('theme dropdown has options', async ({ page }) => {
+test('theme dropdown has two options', async ({ page }) => {
   await page.goto('/settings');
   const select = page.locator('select').first();
-  await expect(select.locator('option')).toHaveCount(31, { timeout: 10000 });
+  await expect(select.locator('option')).toHaveCount(2, { timeout: 10000 });
 });
 
 test('can change theme', async ({ page }) => {
   await page.goto('/settings');
-  await page.locator('select').first().selectOption('light');
+  await page.locator('select').first().selectOption('photo-dark');
 });
 
 test('has format dropdown', async ({ page }) => {

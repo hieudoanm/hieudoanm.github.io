@@ -29,7 +29,7 @@ describe('SettingsPage', () => {
       ).toBeInTheDocument()
     );
     expect(screen.getByRole('combobox', { name: 'Theme' })).toHaveValue(
-      'nothing'
+      'password-light'
     );
     expect(screen.getByText('Auto-lock timeout: 5 min')).toBeInTheDocument();
     expect(screen.getByText('Clipboard clear: 30s')).toBeInTheDocument();
@@ -43,7 +43,7 @@ describe('SettingsPage', () => {
       ).toBeInTheDocument()
     );
     fireEvent.change(screen.getByRole('combobox', { name: 'Theme' }), {
-      target: { value: 'night' },
+      target: { value: 'password-dark' },
     });
     fireEvent.click(screen.getByRole('button', { name: 'Save Settings' }));
     await waitFor(() =>
@@ -51,12 +51,15 @@ describe('SettingsPage', () => {
     );
     expect(mockDb.db.settings.put).toHaveBeenCalledWith(
       expect.objectContaining({
-        theme: 'night',
+        theme: 'password-dark',
         autoLockTimeout: 5,
         clipboardClear: 30,
       })
     );
-    expect(document.documentElement).toHaveAttribute('data-theme', 'night');
+    expect(document.documentElement).toHaveAttribute(
+      'data-theme',
+      'password-dark'
+    );
   });
 
   it('updates auto-lock via slider', async () => {

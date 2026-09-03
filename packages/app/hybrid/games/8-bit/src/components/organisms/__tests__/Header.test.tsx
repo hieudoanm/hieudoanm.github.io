@@ -52,8 +52,8 @@ describe('Header', () => {
 
   it('applies and persists the default theme', () => {
     render(<Header />);
-    expect(document.documentElement.getAttribute('data-theme')).toBe('nothing');
-    expect(localStorage.getItem('8-bit-theme')).toBe('nothing');
+    expect(document.documentElement.getAttribute('data-theme')).toBe('8-bit-dark');
+    expect(localStorage.getItem('8-bit-theme')).toBe('8-bit-dark');
   });
 
   it('toggles between themes', async () => {
@@ -61,8 +61,8 @@ describe('Header', () => {
     render(<Header />);
     await user.click(screen.getByTestId('theme-toggle'));
     expect(document.documentElement.getAttribute('data-theme')).toBe(
-      'bumblebee'
+      '8-bit-light'
     );
-    expect(localStorage.getItem('8-bit-theme')).toBe('bumblebee');
+    expect(localStorage.getItem('8-bit-theme')).toBe('8-bit-light');
   });
 });

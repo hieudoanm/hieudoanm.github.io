@@ -9,7 +9,7 @@ describe('useTheme', () => {
 
   it('defaults to the light theme', () => {
     const { result } = renderHook(() => useTheme());
-    expect(result.current.theme).toBe('history');
+    expect(result.current.theme).toBe('history-light');
   });
 
   it('applies theme to document and toggles to dark', () => {
@@ -32,8 +32,8 @@ describe('useTheme', () => {
     act(() => {
       result.current.toggleTheme();
     });
-    expect(result.current.theme).toBe('history');
-    expect(localStorage.getItem('history:theme')).toBe('history');
+    expect(result.current.theme).toBe('history-light');
+    expect(localStorage.getItem('history:theme')).toBe('history-light');
   });
 
   it('restores stored theme on mount', async () => {

@@ -1,34 +1,72 @@
 @plugin 'daisyui' {
   themes:
-    night --default,
-    dark,
-    light,
-    cupcake,
-    emerald,
-    corporate,
-    synthwave,
-    retro,
-    cyberpunk,
-    valentine,
-    halloween,
-    garden,
-    forest,
-    aqua,
-    lofi,
-    pastel,
-    fantasy,
-    wireframe,
-    black,
-    luxury,
-    dracula,
-    cmyk,
-    autumn,
-    business,
-    acid,
-    lemonade,
-    coffee,
-    winter,
-    dim,
-    nord,
-    sunset;
+    menu-light --default,
+    menu-dark;
+}
+
+@plugin 'daisyui/theme' {
+  name: 'menu-light';
+  default: true;
+  color-scheme: 'light';
+  --color-base-100: #ffffff;
+  --color-base-200: #f5f5f5;
+  --color-base-300: #e5e5e5;
+  --color-base-content: #1a1a1a;
+  --color-primary: #ff0030;
+  --color-primary-content: #ffffff;
+  --color-secondary: #1f1f1f;
+  --color-secondary-content: #ffffff;
+  --color-accent: #4a5560;
+  --color-accent-content: #ffffff;
+  --color-neutral: #6b7280;
+  --color-neutral-content: #ffffff;
+  --color-info: #4da3ff;
+  --color-info-content: #ffffff;
+  --color-success: #00c853;
+  --color-success-content: #ffffff;
+  --color-warning: #ffb000;
+  --color-warning-content: #1a1a1a;
+  --color-error: #ff0030;
+  --color-error-content: #ffffff;
+  --radius-selector: 2rem;
+  --radius-field: 2rem;
+  --radius-box: 2rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+@plugin 'daisyui/theme' {
+  name: 'menu-dark';
+  color-scheme: 'dark';
+  --color-base-100: #000000;
+  --color-base-200: #0a0a0a;
+  --color-base-300: #1f1f1f;
+  --color-base-content: #f5f5f5;
+  --color-primary: #ff0030;
+  --color-primary-content: #f5f5f5;
+  --color-secondary: #f5f5f5;
+  --color-secondary-content: #1f1f1f;
+  --color-accent: #6e7b86;
+  --color-accent-content: #f5f5f5;
+  --color-neutral: #8a8a8a;
+  --color-neutral-content: #000000;
+  --color-info: #4da3ff;
+  --color-info-content: #f5f5f5;
+  --color-success: #00c853;
+  --color-success-content: #f5f5f5;
+  --color-warning: #ffb000;
+  --color-warning-content: #f5f5f5;
+  --color-error: #ff0030;
+  --color-error-content: #f5f5f5;
+  --radius-selector: 2rem;
+  --radius-field: 2rem;
+  --radius-box: 2rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
 }

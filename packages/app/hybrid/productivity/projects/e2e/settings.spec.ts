@@ -35,19 +35,25 @@ test('has theme dropdown', async ({ page }) => {
   await expect(page.locator('select').first()).toBeVisible();
 });
 
-test('theme dropdown has options', async ({ page }) => {
+test('theme dropdown has two options', async ({ page }) => {
   await page.goto('/settings');
   const select = page.locator('select').first();
   await expect(select).toBeVisible();
   const options = await select.locator('option').allTextContents();
-  expect(options.some((o) => o.toLowerCase().includes('night'))).toBeTruthy();
-  expect(options.some((o) => o.toLowerCase().includes('dark'))).toBeTruthy();
-  expect(options.some((o) => o.toLowerCase().includes('light'))).toBeTruthy();
+  expect(
+    options.some((o) => o.toLowerCase().includes('projects-light'))
+  ).toBeTruthy();
+  expect(
+    options.some((o) => o.toLowerCase().includes('projects-dark'))
+  ).toBeTruthy();
+  expect(
+    (await page.locator('select').first().locator('option').count())
+  ).toBe(2);
 });
 
 test('can change theme', async ({ page }) => {
   await page.goto('/settings');
-  await page.locator('select').first().selectOption('light');
+  await page.locator('select').first().selectOption('projects-dark');
 });
 
 test('has default view dropdown', async ({ page }) => {

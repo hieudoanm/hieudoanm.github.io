@@ -5,7 +5,7 @@ import type { FC, ReactNode } from 'react';
 import { Header } from '@/components/organisms/Header';
 
 const RootLayout: FC<{ children: ReactNode }> = ({ children }) => (
-  <html lang="en" data-theme="nothing">
+  <html lang="en" data-theme="8-bit-dark">
     <head>
       <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     </head>

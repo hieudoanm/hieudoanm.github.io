@@ -3,25 +3,8 @@ import type { Theme } from '@/types';
 import { themes } from '@/types';
 
 const STORAGE_KEY = 'wallet-theme';
-const DARK_DEFAULT = 'nothing';
-const LIGHT_DEFAULT = 'winter';
-const DARK_THEMES = [
-  'nothing',
-  'dark',
-  'synthwave',
-  'cyberpunk',
-  'halloween',
-  'forest',
-  'black',
-  'luxury',
-  'dracula',
-  'business',
-  'night',
-  'coffee',
-  'dim',
-  'nord',
-  'sunset',
-];
+const DARK_DEFAULT: Theme = 'wallet-dark';
+const LIGHT_DEFAULT: Theme = 'wallet-light';
 
 export const useTheme = () => {
   const [theme, setThemeState] = useState<Theme>(DARK_DEFAULT);
@@ -34,7 +17,7 @@ export const useTheme = () => {
     }
   }, []);
 
-  const isDark = DARK_THEMES.includes(theme);
+  const isDark = theme === 'wallet-dark';
 
   const setTheme = useCallback((newTheme: Theme) => {
     setThemeState(newTheme);

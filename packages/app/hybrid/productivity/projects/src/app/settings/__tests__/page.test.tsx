@@ -20,7 +20,11 @@ jest.mock('@/providers/Providers', () => ({
 
 jest.mock('@/providers/DataProvider', () => ({
   useData: () => ({
-    settings: { theme: 'nothing', defaultView: 'kanban', notifications: true },
+    settings: {
+      theme: 'projects-light',
+      defaultView: 'kanban',
+      notifications: true,
+    },
     updateSettings,
   }),
 }));
@@ -50,14 +54,16 @@ describe('SettingsPage', () => {
   it('saves settings and applies the theme', async () => {
     render(<SettingsPage />);
     fireEvent.change(screen.getAllByRole('combobox')[0], {
-      target: { value: 'dark' },
+      target: { value: 'projects-dark' },
     });
     fireEvent.click(screen.getByRole('button', { name: 'Save Settings' }));
     await waitFor(() =>
-      expect(document.documentElement.getAttribute('data-theme')).toBe('dark')
+      expect(document.documentElement.getAttribute('data-theme')).toBe(
+        'projects-dark'
+      )
     );
     expect(updateSettings).toHaveBeenCalledWith({
-      theme: 'dark',
+      theme: 'projects-dark',
       defaultView: 'kanban',
     });
     expect(addToast).toHaveBeenCalledWith('Settings saved', 'success');
@@ -71,7 +77,7 @@ describe('SettingsPage', () => {
     fireEvent.click(screen.getByRole('button', { name: 'Save Settings' }));
     await waitFor(() =>
       expect(updateSettings).toHaveBeenCalledWith({
-        theme: 'nothing',
+        theme: 'projects-light',
         defaultView: 'list',
       })
     );

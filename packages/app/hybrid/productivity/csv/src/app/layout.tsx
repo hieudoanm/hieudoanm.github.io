@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 const RootLayout: FC<{ children: ReactNode }> = ({ children }) => (
   <html
     lang="en"
-    data-theme="spreadsheet"
+    data-theme="csv-light"
     className={`${sans.variable} ${mono.variable}`}>
     <head>
       <link rel="apple-touch-icon" href="/apple-touch-icon.png" />

@@ -26,22 +26,22 @@ test.describe('Settings Page', () => {
     await expect(page.locator('text=Appearance')).toBeVisible();
   });
 
-  test('theme dropdown defaults to nothing', async ({ page }) => {
+  test('theme dropdown defaults to api-light', async ({ page }) => {
     await page.goto('/settings');
-    await expect(page.locator('select')).toHaveValue('nothing');
+    await expect(page.locator('select')).toHaveValue('api-light');
   });
 
-  test('theme dropdown has many options', async ({ page }) => {
+  test('theme dropdown has two options', async ({ page }) => {
     await page.goto('/settings');
     const options = await page.locator('select option').count();
-    expect(options).toBeGreaterThan(5);
+    expect(options).toBe(2);
   });
 
   test('can change theme selection', async ({ page }) => {
     await page.goto('/settings');
     const themeSelect = page.locator('select');
-    await themeSelect.selectOption('dracula');
-    await expect(themeSelect).toHaveValue('dracula');
+    await themeSelect.selectOption('api-dark');
+    await expect(themeSelect).toHaveValue('api-dark');
   });
 
   test('displays Data section', async ({ page }) => {

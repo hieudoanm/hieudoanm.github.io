@@ -5,7 +5,7 @@ import { ActivityBar } from '../ActivityBar';
 describe('ActivityBar', () => {
   const defaultProps = {
     sidebarState: 'explorer' as const,
-    theme: 'dim' as const,
+    theme: 'code-dark' as const,
     onOpenExplorer: jest.fn(),
     onOpenSearch: jest.fn(),
     onToggleTheme: jest.fn(),
@@ -51,8 +51,8 @@ describe('ActivityBar', () => {
   });
 
   it('highlights theme button when winter theme is active', () => {
-    render(<ActivityBar {...defaultProps} theme="winter" />);
-    const btn = screen.getByTitle(/Switch to dim/);
+    render(<ActivityBar {...defaultProps} theme="code-light" />);
+    const btn = screen.getByTitle(/Switch to code-dark/);
     expect(btn.className).toContain('text-primary');
   });
 
@@ -78,12 +78,12 @@ describe('ActivityBar', () => {
   });
 
   it('shows correct theme toggle title for dim theme', () => {
-    render(<ActivityBar {...defaultProps} theme="dim" />);
-    expect(screen.getByTitle('Switch to winter theme')).toBeInTheDocument();
+    render(<ActivityBar {...defaultProps} theme="code-dark" />);
+    expect(screen.getByTitle('Switch to code-light theme')).toBeInTheDocument();
   });
 
   it('shows correct theme toggle title for winter theme', () => {
-    render(<ActivityBar {...defaultProps} theme="winter" />);
-    expect(screen.getByTitle('Switch to dim theme')).toBeInTheDocument();
+    render(<ActivityBar {...defaultProps} theme="code-light" />);
+    expect(screen.getByTitle('Switch to code-dark theme')).toBeInTheDocument();
   });
 });

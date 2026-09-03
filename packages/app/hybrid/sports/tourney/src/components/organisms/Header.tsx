@@ -18,7 +18,7 @@ const ThemeToggle: FC = () => {
   useEffect(() => {
     setMounted(true);
     setIsLight(
-      document.documentElement.getAttribute('data-theme') === 'luxury'
+      document.documentElement.getAttribute('data-theme') === 'tourney-light'
     );
   }, []);
 
@@ -28,7 +28,7 @@ const ThemeToggle: FC = () => {
     <button
       className="btn btn-ghost btn-sm btn-circle"
       onClick={() => {
-        const next = isLight ? 'nothing' : 'luxury';
+        const next = isLight ? 'tourney-dark' : 'tourney-light';
         document.documentElement.setAttribute('data-theme', next);
         localStorage.setItem('tourney-theme', next);
         setIsLight(!isLight);

@@ -171,7 +171,7 @@ const baseData = () => ({
     },
   ],
   settings: {
-    theme: 'nothing',
+    theme: 'projects-light',
     defaultView: 'kanban',
     notifications: true,
     notificationsReadAt: 0,

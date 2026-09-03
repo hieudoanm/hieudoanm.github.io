@@ -25,7 +25,7 @@ describe('RootLayout', () => {
         <div />
       </RootLayout>,
     );
-    expect(document.documentElement).toHaveAttribute('data-theme', 'chess');
+    expect(document.documentElement).toHaveAttribute('data-theme', 'chess-light');
   });
 });
 

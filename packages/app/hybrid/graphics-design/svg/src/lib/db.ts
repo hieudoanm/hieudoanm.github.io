@@ -92,7 +92,7 @@ export const db = {
       return (
         settings ?? {
           id: 'default',
-          theme: 'nothing',
+          theme: 'svg-light',
           gridSize: 20,
           snapToGrid: true,
           showGrid: true,

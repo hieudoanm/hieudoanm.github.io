@@ -63,7 +63,7 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
   const [history, setHistory] = useState<QueryHistory[]>([]);
   const [bookmarks, setBookmarks] = useState<Bookmark[]>([]);
   const [settings, setSettings] = useState<Settings>({
-    theme: 'nothing',
+    theme: 'database-light',
     defaultPort: 5432,
     editorFontSize: 14,
     queryTimeout: 30,

@@ -23,7 +23,7 @@ describe('RootLayout', () => {
         <div />
       </RootLayout>,
     );
-    expect(document.documentElement).toHaveAttribute('data-theme', 'dracula');
+    expect(document.documentElement).toHaveAttribute('data-theme', 'nikoli-dark');
   });
 
   it('renders header', () => {

@@ -15,7 +15,7 @@ describe('ThemeToggle', () => {
     expect(
       screen.getByRole('button', { name: 'Switch to dark mode' })
     ).toBeInTheDocument();
-    expect(document.documentElement.dataset.theme).toBe('paper');
+    expect(document.documentElement.dataset.theme).toBe('resume-light');
   });
 
   it('toggles to dark mode and updates the document theme', () => {
@@ -26,6 +26,6 @@ describe('ThemeToggle', () => {
     expect(
       screen.getByRole('button', { name: 'Switch to light mode' })
     ).toBeInTheDocument();
-    expect(document.documentElement.dataset.theme).toBe('night');
+    expect(document.documentElement.dataset.theme).toBe('resume-dark');
   });
 });

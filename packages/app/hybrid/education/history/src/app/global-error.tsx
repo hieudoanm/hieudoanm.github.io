@@ -10,7 +10,7 @@ interface GlobalErrorProps {
 }
 
 const GlobalError: FC<GlobalErrorProps> = ({ reset }) => (
-  <html lang="en" data-theme="history">
+  <html lang="en" data-theme="history-light">
     <body className="bg-base-100 text-base-content">
       <ErrorTemplate
         code="500"

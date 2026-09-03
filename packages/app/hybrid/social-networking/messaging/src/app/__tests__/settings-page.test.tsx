@@ -49,7 +49,7 @@ beforeEach(() => {
   db.messages.getAll.mockResolvedValue([]);
   db.settings.get.mockResolvedValue({
     id: 'default',
-    theme: 'nothing',
+    theme: 'messaging-light',
     notifications: true,
     readReceipts: true,
     typingIndicators: true,
@@ -76,13 +76,13 @@ describe('SettingsPage', () => {
   it('changes the theme and applies it to the document', async () => {
     renderPage();
     const select = await screen.findByLabelText('Theme');
-    fireEvent.change(select, { target: { value: 'dark' } });
+    fireEvent.change(select, { target: { value: 'messaging-dark' } });
     await waitFor(() =>
       expect(db.settings.put).toHaveBeenCalledWith(
-        expect.objectContaining({ theme: 'dark' })
+        expect.objectContaining({ theme: 'messaging-dark' })
       )
     );
-    expect(document.documentElement.getAttribute('data-theme')).toBe('dark');
+    expect(document.documentElement.getAttribute('data-theme')).toBe('messaging-dark');
   });
 
   it('toggles read receipts', async () => {

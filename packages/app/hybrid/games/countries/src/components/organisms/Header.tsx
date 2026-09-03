@@ -8,8 +8,8 @@ import { usePathname } from 'next/navigation';
 const STORAGE_KEY = 'countries-theme';
 
 const getInitialTheme = (): string => {
-  if (typeof window === 'undefined') return 'dracula';
-  return localStorage.getItem(STORAGE_KEY) || 'dracula';
+  if (typeof window === 'undefined') return 'countries-dark';
+  return localStorage.getItem(STORAGE_KEY) || 'countries-dark';
 };
 
 export const Header: FC = () => {
@@ -22,7 +22,7 @@ export const Header: FC = () => {
   }, [theme]);
 
   const toggleTheme = () =>
-    setTheme((current) => (current === 'dracula' ? 'bumblebee' : 'dracula'));
+    setTheme((current) => (current === 'countries-dark' ? 'countries-light' : 'countries-dark'));
 
   return (
     <header className="border-base-300 bg-base-100 sticky top-0 z-10 border-b px-6 py-3">
@@ -51,7 +51,7 @@ export const Header: FC = () => {
             className="btn btn-ghost btn-sm"
             onClick={toggleTheme}
             data-testid="theme-toggle">
-            {theme === 'dracula' ? '☀️' : '🧛'}
+            {theme === 'countries-dark' ? '☀️' : '🧛'}
           </button>
         </nav>
       </div>

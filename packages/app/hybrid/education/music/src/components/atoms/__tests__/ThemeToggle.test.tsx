@@ -5,10 +5,10 @@ describe('ThemeToggle', () => {
   it('switches between light and dark themes', () => {
     render(<ThemeToggle />);
     const button = screen.getByLabelText('Toggle theme');
-    expect(document.documentElement.dataset.theme).toBe('music');
+    expect(document.documentElement.dataset.theme).toBe('music-light');
     fireEvent.click(button);
     expect(document.documentElement.dataset.theme).toBe('music-dark');
     fireEvent.click(button);
-    expect(document.documentElement.dataset.theme).toBe('music');
+    expect(document.documentElement.dataset.theme).toBe('music-light');
   });
 });

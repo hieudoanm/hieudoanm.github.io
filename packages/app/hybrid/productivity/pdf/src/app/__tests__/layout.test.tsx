@@ -14,7 +14,7 @@ describe('RootLayout', () => {
     );
     expect(screen.getByText('Hello world')).toBeInTheDocument();
     expect(document.documentElement).toHaveAttribute('lang', 'en');
-    expect(document.documentElement).toHaveAttribute('data-theme', 'nothing');
+    expect(document.documentElement).toHaveAttribute('data-theme', 'pdf-light');
     expect(
       document.querySelector('link[rel="apple-touch-icon"]')
     ).toHaveAttribute('href', '/icons/icon-192.png');

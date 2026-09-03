@@ -18,7 +18,7 @@ const NAV_ITEMS: NavItem[] = [
 
 export const Header: FC<{ title: string }> = ({ title }) => {
   const [theme, toggle] = useTheme();
-  const isLight = theme === 'light';
+  const isLight = theme === 'eyes-light';
 
   return (
     <header className="border-base-300 bg-base-100 sticky top-0 z-10 border-b px-6 py-4">

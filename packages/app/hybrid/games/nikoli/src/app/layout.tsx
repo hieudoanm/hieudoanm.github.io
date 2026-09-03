@@ -9,12 +9,12 @@ const STORAGE_KEY = 'nikoli-theme';
 
 const RootLayout: FC<{ children: ReactNode }> = ({ children }) => {
   useEffect(() => {
-    const saved = localStorage.getItem(STORAGE_KEY) || 'dracula';
+    const saved = localStorage.getItem(STORAGE_KEY) || 'nikoli-dark';
     document.documentElement.setAttribute('data-theme', saved);
   }, []);
 
   return (
-    <html lang="en" data-theme="dracula">
+    <html lang="en" data-theme="nikoli-dark">
       <head>
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </head>

@@ -10,7 +10,7 @@ export const seedDatabase = async () => {
   for (const filter of mockFilters) await db.filters.put(filter);
 
   await db.settings.put({
-    theme: 'nothing',
+    theme: 'photo-light',
     defaultExportFormat: 'png',
     canvasBackground: 'checkerboard',
     defaultQuality: 85,

@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from 'react';
 
-export type Theme = 'lingo' | 'lingo-dark';
+export type Theme = 'lingo-light' | 'lingo-dark';
 
 const THEME_KEY = 'lingo:theme';
-const DEFAULT_THEME: Theme = 'lingo';
+const DEFAULT_THEME: Theme = 'lingo-light';
 
 const readStoredTheme = (): Theme => {
   try {
@@ -36,7 +36,7 @@ export const useTheme = (): { theme: Theme; toggleTheme: () => void } => {
     theme,
     toggleTheme: () =>
       setTheme((current) =>
-        current === 'lingo-dark' ? 'lingo' : 'lingo-dark'
+        current === 'lingo-dark' ? 'lingo-light' : 'lingo-dark'
       ),
   };
 };

@@ -62,7 +62,7 @@ export const DataProvider = ({ children }: DataProviderProps) => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [folders, setFolders] = useState<Folder[]>([]);
   const [settings, setSettings] = useState<Settings>({
-    theme: 'nothing',
+    theme: 'chat-light',
     defaultModel: 'gpt-4o',
     systemPrompt: '',
     mockDelay: 800,

@@ -111,7 +111,7 @@ const symbol = (id: string, overrides: Partial<SVGSymbol> = {}): SVGSymbol => ({
 });
 
 const settings: SVGSettings = {
-  theme: 'nothing',
+  theme: 'svg-light',
   gridSize: 20,
   snapToGrid: true,
   showGrid: true,
@@ -233,7 +233,7 @@ const Consumer = () => {
         }>
         update-symbol
       </button>
-      <button onClick={() => data.updateSettings({ theme: 'dark' })}>
+      <button onClick={() => data.updateSettings({ theme: 'svg-dark' })}>
         update-settings
       </button>
       <button onClick={() => data.addGradient('doc-1', gradient)}>
@@ -369,7 +369,7 @@ describe('DataProvider', () => {
     expect(seedDatabase).toHaveBeenCalled();
     expect(screen.getByTestId('shape-count').textContent).toBe('1');
     expect(screen.getByTestId('symbol-count').textContent).toBe('1');
-    expect(screen.getByTestId('theme').textContent).toBe('nothing');
+    expect(screen.getByTestId('theme').textContent).toBe('svg-light');
     expect(screen.getByTestId('is-loading').textContent).toBe('false');
   });
 
@@ -660,14 +660,14 @@ describe('DataProvider', () => {
   it('updates settings', async () => {
     renderProvider();
     await waitFor(() =>
-      expect(screen.getByTestId('theme').textContent).toBe('nothing')
+      expect(screen.getByTestId('theme').textContent).toBe('svg-light')
     );
     fireEvent.click(screen.getByText('update-settings'));
     await waitFor(() =>
-      expect(screen.getByTestId('theme').textContent).toBe('dark')
+      expect(screen.getByTestId('theme').textContent).toBe('svg-dark')
     );
     expect(db.settings.put).toHaveBeenCalledWith(
-      expect.objectContaining({ theme: 'dark' })
+      expect.objectContaining({ theme: 'svg-dark' })
     );
   });
 

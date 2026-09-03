@@ -237,7 +237,7 @@ beforeEach(() => {
   ]);
   db.settings.get.mockResolvedValue({
     id: 'default',
-    theme: 'nothing',
+    theme: 'messaging-light',
     notifications: true,
     readReceipts: true,
     typingIndicators: true,

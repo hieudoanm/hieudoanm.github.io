@@ -4,16 +4,16 @@ import { useEffect, useState } from 'react';
 
 const STORAGE_KEY = 'eyes-theme';
 
-type Theme = 'luxury' | 'light';
+type Theme = 'eyes-dark' | 'eyes-light';
 
 const getInitialTheme = (): Theme => {
-  if (typeof window === 'undefined') return 'luxury';
+  if (typeof window === 'undefined') return 'eyes-dark';
   try {
-    return window.localStorage.getItem(STORAGE_KEY) === 'light'
-      ? 'light'
-      : 'luxury';
+    return window.localStorage.getItem(STORAGE_KEY) === 'eyes-light'
+      ? 'eyes-light'
+      : 'eyes-dark';
   } catch {
-    return 'luxury';
+    return 'eyes-dark';
   }
 };
 
@@ -30,7 +30,7 @@ export const useTheme = (): [Theme, () => void] => {
   }, [theme]);
 
   const toggle = (): void => {
-    setTheme((current) => (current === 'luxury' ? 'light' : 'luxury'));
+    setTheme((current) => (current === 'eyes-dark' ? 'eyes-light' : 'eyes-dark'));
   };
 
   return [theme, toggle];

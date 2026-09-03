@@ -171,11 +171,11 @@ describe('CodePage', () => {
   it('toggles the theme via the activity bar palette button', () => {
     render(<CodePage />);
 
-    expect(screen.getByTitle('Switch to winter theme')).toBeInTheDocument();
+    expect(screen.getByTitle('Switch to code-light theme')).toBeInTheDocument();
 
-    fireEvent.click(screen.getByTitle('Switch to winter theme'));
+    fireEvent.click(screen.getByTitle('Switch to code-light theme'));
 
-    expect(screen.getByTitle('Switch to dim theme')).toBeInTheDocument();
+    expect(screen.getByTitle('Switch to code-dark theme')).toBeInTheDocument();
   });
 
   it('searches files with debounce and opens a result', async () => {

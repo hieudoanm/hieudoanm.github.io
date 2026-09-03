@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 };
 
 const RootLayout: FC<{ children: ReactNode }> = ({ children }) => (
-  <html lang="en" data-theme="dim">
+  <html lang="en" data-theme="menu-dark">
     <body className="bg-base-100 text-base-content flex min-h-screen flex-col overflow-y-auto font-mono">
       <Header />
       {children}

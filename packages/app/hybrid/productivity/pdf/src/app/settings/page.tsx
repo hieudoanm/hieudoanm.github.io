@@ -7,40 +7,7 @@ import { Providers } from '@/providers/Providers';
 import { useData } from '@/providers/DataProvider';
 import { useToast } from '@/providers/ToastProvider';
 
-const THEMES = [
-  'nothing',
-  'night',
-  'dark',
-  'light',
-  'cupcake',
-  'emerald',
-  'corporate',
-  'synthwave',
-  'retro',
-  'cyberpunk',
-  'valentine',
-  'halloween',
-  'garden',
-  'forest',
-  'aqua',
-  'lofi',
-  'pastel',
-  'fantasy',
-  'wireframe',
-  'black',
-  'luxury',
-  'dracula',
-  'cmyk',
-  'autumn',
-  'business',
-  'acid',
-  'lemonade',
-  'coffee',
-  'winter',
-  'dim',
-  'nord',
-  'sunset',
-];
+const THEMES = ['pdf-light', 'pdf-dark'];
 
 const SettingsPage: FC = () => {
   const { settings, updateSettings } = useData();

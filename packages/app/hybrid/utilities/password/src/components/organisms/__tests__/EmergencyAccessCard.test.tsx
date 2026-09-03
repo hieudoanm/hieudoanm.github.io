@@ -11,7 +11,7 @@ jest.mock('@/providers/DataProvider', () => ({
 }));
 
 const makeSettings = (overrides: Partial<Settings> = {}): Settings => ({
-  theme: 'nothing',
+  theme: 'password-light',
   autoLockTimeout: 5,
   clipboardClear: 30,
   biometricEnabled: false,

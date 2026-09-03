@@ -48,7 +48,7 @@ test('has theme dropdown', async ({ page }) => {
 
 test('can change theme', async ({ page }) => {
   await page.goto('/settings');
-  await page.locator('select').first().selectOption('light');
+  await page.locator('select').first().selectOption('svg-dark');
 });
 
 test('has grid size input', async ({ page }) => {

@@ -88,7 +88,7 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
   const [members, setMembers] = useState<Member[]>([]);
   const [activity, setActivity] = useState<Activity[]>([]);
   const [settings, setSettings] = useState<ProjectsSettings>({
-    theme: 'nothing',
+    theme: 'projects-light',
     defaultView: 'kanban',
     notifications: true,
   });

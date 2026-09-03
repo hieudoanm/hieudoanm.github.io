@@ -181,7 +181,7 @@ const messagesData = [
 
 const settingsData = {
   id: 'default',
-  theme: 'nothing',
+  theme: 'messaging-light',
   notifications: true,
   readReceipts: true,
   typingIndicators: true,

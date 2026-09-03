@@ -44,9 +44,9 @@ test.describe('Settings Page', () => {
 
   test('displays theme buttons', async ({ page }) => {
     await page.goto('/settings');
-    await expect(page.locator('button:has-text("night")')).toBeVisible();
-    await expect(page.locator('button:has-text("dark")')).toBeVisible();
-    await expect(page.locator('button:has-text("light")')).toBeVisible();
+    await expect(page.locator('button:has-text("pdf-light")')).toBeVisible();
+    await expect(page.locator('button:has-text("pdf-dark")')).toBeVisible();
+    await expect(page.locator('button:has-text("pdf-light")')).toBeVisible();
   });
 
   test('displays Default Zoom slider', async ({ page }) => {
@@ -78,8 +78,8 @@ test.describe('Settings Page', () => {
 
   test('can select a theme', async ({ page }) => {
     await page.goto('/settings');
-    await page.locator('button:has-text("light")').click();
-    await expect(page.locator('button:has-text("light")').first()).toHaveClass(
+    await page.locator('button:has-text("pdf-dark")').click();
+    await expect(page.locator('button:has-text("pdf-dark")').first()).toHaveClass(
       /ring-2/
     );
   });

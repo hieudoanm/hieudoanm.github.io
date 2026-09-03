@@ -22,10 +22,10 @@ export const viewport: Viewport = {
   maximumScale: 1,
 };
 
-const THEME_INIT = `(function(){try{var t=localStorage.getItem('music:theme');document.documentElement.dataset.theme=t==='music-dark'?'music-dark':'music';}catch(e){document.documentElement.dataset.theme='music';}})();`;
+const THEME_INIT = `(function(){try{var t=localStorage.getItem('music:theme');document.documentElement.dataset.theme=t==='music-dark'?'music-dark':'music-light';}catch(e){document.documentElement.dataset.theme='music-light';}})();`;
 
 const RootLayout: FC<{ children: ReactNode }> = ({ children }) => (
-  <html lang="en" data-theme="music">
+  <html lang="en" data-theme="music-light">
     <head>
       <script dangerouslySetInnerHTML={{ __html: THEME_INIT }} />
       <link rel="apple-touch-icon" href="/icons/icon-192.png" />

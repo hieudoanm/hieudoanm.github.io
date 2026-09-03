@@ -83,7 +83,7 @@ export const DataProvider = ({ children }: DataProviderProps) => {
   const [stamps, setStamps] = useState<Stamp[]>([]);
   const [settings, setSettings] = useState<Settings>({
     id: 'default',
-    theme: 'nothing',
+    theme: 'pdf-light',
     defaultZoom: 100,
     pageLayout: 'continuous',
     annotationDefaults: { color: '#facc15', strokeWidth: 2 },

@@ -59,8 +59,8 @@ test('Save Settings button is visible', async ({ page }) => {
 test('can change theme', async ({ page }) => {
   await page.goto('/settings');
   const themeSelect = page.locator('select').first();
-  await themeSelect.selectOption('light');
-  await expect(themeSelect).toHaveValue('light');
+  await themeSelect.selectOption('password-dark');
+  await expect(themeSelect).toHaveValue('password-dark');
 });
 
 test('save shows success toast', async ({ page }) => {

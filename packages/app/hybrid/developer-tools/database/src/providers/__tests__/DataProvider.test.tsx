@@ -81,7 +81,7 @@ const Consumer = () => {
         add-bookmark
       </button>
       <button onClick={() => data.deleteBookmark('bm-1')}>del-bookmark</button>
-      <button onClick={() => data.updateSettings({ theme: 'dark' })}>
+      <button onClick={() => data.updateSettings({ theme: 'database-dark' })}>
         update-theme
       </button>
       <button
@@ -124,7 +124,7 @@ describe('DataProvider', () => {
     db.bookmarks.getAll.mockResolvedValue([]);
     db.settings.get.mockResolvedValue({
       id: 'default',
-      theme: 'night',
+      theme: 'database-light',
       defaultPort: 5432,
       editorFontSize: 14,
       queryTimeout: 30,
@@ -143,7 +143,7 @@ describe('DataProvider', () => {
       expect(screen.getByTestId('conn-count').textContent).toBe('2')
     );
     expect(screen.getByTestId('is-loading').textContent).toBe('false');
-    expect(screen.getByTestId('theme').textContent).toBe('night');
+    expect(screen.getByTestId('theme').textContent).toBe('database-light');
   });
 
   it('throws when used outside the provider', () => {
@@ -218,14 +218,14 @@ describe('DataProvider', () => {
   it('updates settings', async () => {
     renderProvider();
     await waitFor(() =>
-      expect(screen.getByTestId('theme').textContent).toBe('night')
+      expect(screen.getByTestId('theme').textContent).toBe('database-light')
     );
     fireEvent.click(screen.getByText('update-theme'));
     await waitFor(() =>
-      expect(screen.getByTestId('theme').textContent).toBe('dark')
+      expect(screen.getByTestId('theme').textContent).toBe('database-dark')
     );
     expect(db.settings.put).toHaveBeenCalledWith(
-      expect.objectContaining({ theme: 'dark' })
+      expect.objectContaining({ theme: 'database-dark' })
     );
   });
 

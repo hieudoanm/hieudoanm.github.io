@@ -333,7 +333,7 @@ const buildSymbol = (): SVGSymbol => ({
 });
 
 const settings: SVGSettings = {
-  theme: 'nothing',
+  theme: 'svg-light',
   gridSize: 20,
   snapToGrid: false,
   showGrid: false,

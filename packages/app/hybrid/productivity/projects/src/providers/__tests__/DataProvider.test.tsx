@@ -163,7 +163,7 @@ const Consumer = () => {
       <button onClick={() => data.addActivity('board-1', 'card-1', 'Moved')}>
         add-activity
       </button>
-      <button onClick={() => data.updateSettings({ theme: 'dark' })}>
+      <button onClick={() => data.updateSettings({ theme: 'projects-dark' })}>
         update-settings
       </button>
       <button onClick={() => data.refreshData()}>refresh</button>
@@ -279,7 +279,7 @@ const seedStore = () => {
     },
   ]);
   db.settings.get.mockResolvedValue({
-    theme: 'nothing',
+    theme: 'projects-light',
     defaultView: 'kanban',
     notifications: true,
   });
@@ -636,14 +636,14 @@ describe('DataProvider', () => {
   it('updates settings', async () => {
     renderProvider();
     await waitFor(() =>
-      expect(screen.getByTestId('theme').textContent).toBe('nothing')
+      expect(screen.getByTestId('theme').textContent).toBe('projects-light')
     );
     fireEvent.click(screen.getByText('update-settings'));
     await waitFor(() =>
-      expect(screen.getByTestId('theme').textContent).toBe('dark')
+      expect(screen.getByTestId('theme').textContent).toBe('projects-dark')
     );
     expect(db.settings.put).toHaveBeenCalledWith(
-      expect.objectContaining({ theme: 'dark' })
+      expect.objectContaining({ theme: 'projects-dark' })
     );
   });
 

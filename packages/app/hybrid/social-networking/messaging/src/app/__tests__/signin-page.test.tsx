@@ -30,7 +30,7 @@ jest.mock('@/lib/db', () => ({
     settings: {
       get: jest.fn().mockResolvedValue({
         id: 'default',
-        theme: 'nothing',
+        theme: 'messaging-light',
         notifications: true,
         readReceipts: true,
         typingIndicators: true,

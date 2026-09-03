@@ -29,7 +29,7 @@ describe('RootLayout', () => {
         <div />
       </RootLayout>,
     );
-    expect(document.documentElement).toHaveAttribute('data-theme', 'lingo');
+    expect(document.documentElement).toHaveAttribute('data-theme', 'lingo-light');
   });
 });
 

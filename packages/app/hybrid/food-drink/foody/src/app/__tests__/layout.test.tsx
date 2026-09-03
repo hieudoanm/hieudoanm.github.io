@@ -32,7 +32,7 @@ describe('RootLayout', () => {
         <div />
       </RootLayout>,
     );
-    expect(document.documentElement).toHaveAttribute('data-theme', 'foody');
+    expect(document.documentElement).toHaveAttribute('data-theme', 'foody-light');
   });
 
   it('renders header', () => {

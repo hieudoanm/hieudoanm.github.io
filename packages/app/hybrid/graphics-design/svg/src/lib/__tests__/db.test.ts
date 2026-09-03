@@ -142,7 +142,7 @@ describe('db', () => {
   it('settings.get returns defaults when nothing is stored', async () => {
     await expect(db.settings.get()).resolves.toEqual({
       id: 'default',
-      theme: 'nothing',
+      theme: 'svg-light',
       gridSize: 20,
       snapToGrid: true,
       showGrid: true,

@@ -86,7 +86,7 @@ export const db = {
       return (
         s ?? {
           id: 'default',
-          theme: 'nothing',
+          theme: 'database-light',
           defaultPort: 5432,
           editorFontSize: 14,
           queryTimeout: 30,

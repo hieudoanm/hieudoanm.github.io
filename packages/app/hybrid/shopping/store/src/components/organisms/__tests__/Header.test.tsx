@@ -27,7 +27,7 @@ jest.mock('next/link', () => {
 describe('Header', () => {
   beforeEach(() => {
     localStorage.clear();
-    document.documentElement.setAttribute('data-theme', 'nothing');
+    document.documentElement.setAttribute('data-theme', 'store-dark');
   });
 
   it('renders Store link', () => {
@@ -61,7 +61,7 @@ describe('Header', () => {
     render(<Header />);
     const toggle = screen.getByTestId('theme-toggle');
     await user.click(toggle);
-    expect(document.documentElement.getAttribute('data-theme')).toBe('winter');
+    expect(document.documentElement.getAttribute('data-theme')).toBe('store-light');
   });
 
   it('toggles back to nothing theme', async () => {
@@ -70,7 +70,7 @@ describe('Header', () => {
     const toggle = screen.getByTestId('theme-toggle');
     await user.click(toggle);
     await user.click(toggle);
-    expect(document.documentElement.getAttribute('data-theme')).toBe('nothing');
+    expect(document.documentElement.getAttribute('data-theme')).toBe('store-dark');
   });
 
   it('highlights active route', () => {

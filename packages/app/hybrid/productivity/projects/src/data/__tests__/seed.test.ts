@@ -31,7 +31,7 @@ describe('seedDatabase', () => {
     expect(mockDb.members.put).toHaveBeenCalledTimes(6);
     expect(mockDb.activity.put).toHaveBeenCalledTimes(4);
     expect(mockDb.settings.put).toHaveBeenCalledWith({
-      theme: 'nothing',
+      theme: 'projects-light',
       defaultView: 'kanban',
       notifications: true,
       notificationsReadAt: 0,

@@ -23,7 +23,7 @@ describe('RootLayout', () => {
         <div />
       </RootLayout>,
     );
-    expect(document.documentElement).toHaveAttribute('data-theme', 'nothing');
+    expect(document.documentElement).toHaveAttribute('data-theme', '8-bit-dark');
   });
 
   it('renders header', () => {

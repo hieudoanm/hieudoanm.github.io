@@ -17,23 +17,23 @@ describe('SettingsPage', () => {
 
   it('renders theme picker and data management', () => {
     render(<SettingsPage />);
-    expect(screen.getByRole('combobox')).toHaveValue('nothing');
+    expect(screen.getByRole('combobox')).toHaveValue('api-light');
     expect(screen.getByText('Clear history and draft')).toBeInTheDocument();
   });
 
   it('applies and persists a theme', () => {
     render(<SettingsPage />);
     fireEvent.change(screen.getByRole('combobox'), {
-      target: { value: 'dracula' },
+      target: { value: 'api-dark' },
     });
-    expect(localStorage.getItem('api-client:theme')).toBe('dracula');
-    expect(document.documentElement.getAttribute('data-theme')).toBe('dracula');
+    expect(localStorage.getItem('api-client:theme')).toBe('api-dark');
+    expect(document.documentElement.getAttribute('data-theme')).toBe('api-dark');
   });
 
   it('restores saved theme on mount', () => {
-    localStorage.setItem('api-client:theme', 'synthwave');
+    localStorage.setItem('api-client:theme', 'api-dark');
     render(<SettingsPage />);
-    expect(screen.getByRole('combobox')).toHaveValue('synthwave');
+    expect(screen.getByRole('combobox')).toHaveValue('api-dark');
   });
 
   it('clears history and draft', () => {

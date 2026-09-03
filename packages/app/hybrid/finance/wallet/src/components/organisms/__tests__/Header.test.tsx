@@ -41,7 +41,7 @@ describe('Header', () => {
     const toggle = screen.getByTestId('theme-toggle');
     expect(toggle).toBeInTheDocument();
     fireEvent.click(toggle);
-    expect(document.documentElement).toHaveAttribute('data-theme', 'winter');
-    expect(localStorage.getItem('wallet-theme')).toBe('winter');
+    expect(document.documentElement).toHaveAttribute('data-theme', 'wallet-light');
+    expect(localStorage.getItem('wallet-theme')).toBe('wallet-light');
   });
 });

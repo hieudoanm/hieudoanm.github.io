@@ -226,9 +226,9 @@ describe('Editor', () => {
     const user = userEvent.setup();
     render(<Editor />);
     await user.click(screen.getByLabelText('Toggle theme'));
-    expect(document.documentElement.dataset.theme).toBe('light');
+    expect(document.documentElement.dataset.theme).toBe('csv-light');
     await user.click(screen.getByLabelText('Toggle theme'));
-    expect(document.documentElement.dataset.theme).toBe('spreadsheet');
+    expect(document.documentElement.dataset.theme).toBe('csv-dark');
   });
 
   it('exports the active sheet as CSV', () => {

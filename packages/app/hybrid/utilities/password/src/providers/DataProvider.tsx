@@ -73,7 +73,7 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
   const [allItems, setAllItems] = useState<VaultItem[]>([]);
   const [folders, setFolders] = useState<Folder[]>([]);
   const [settings, setSettings] = useState<Settings>({
-    theme: 'nothing',
+    theme: 'password-light',
     autoLockTimeout: 5,
     clipboardClear: 30,
     biometricEnabled: false,

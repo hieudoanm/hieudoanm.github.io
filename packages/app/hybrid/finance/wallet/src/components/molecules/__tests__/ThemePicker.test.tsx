@@ -4,7 +4,7 @@ import ThemePicker from '../ThemePicker';
 jest.mock('@/hooks/useTheme', () => ({
   __esModule: true,
   useTheme: jest.fn(() => ({
-    theme: 'business',
+    theme: 'wallet-dark',
     setTheme: jest.fn(),
   })),
 }));
@@ -17,17 +17,18 @@ describe('ThemePicker', () => {
 
   it('renders current theme name', () => {
     render(<ThemePicker />);
-    expect(screen.getByText('business')).toBeInTheDocument();
+    expect(screen.getByText('wallet-dark')).toBeInTheDocument();
   });
 
-  it('renders Show all button when themes > 10', () => {
+  it('renders both theme options', () => {
     render(<ThemePicker />);
-    expect(screen.getByText(/Show all/)).toBeInTheDocument();
+    expect(screen.getByText('Wallet Light')).toBeInTheDocument();
+    expect(screen.getByText('Wallet Dark')).toBeInTheDocument();
   });
 
-  it('renders first 10 themes by default', () => {
+  it('renders Wallet Light and Wallet Dark themes', () => {
     render(<ThemePicker />);
-    expect(screen.getByText('Dark')).toBeInTheDocument();
-    expect(screen.getByText('Light')).toBeInTheDocument();
+    expect(screen.getByText('Wallet Light')).toBeInTheDocument();
+    expect(screen.getByText('Wallet Dark')).toBeInTheDocument();
   });
 });

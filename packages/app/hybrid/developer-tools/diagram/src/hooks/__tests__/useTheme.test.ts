@@ -10,14 +10,14 @@ describe('useTheme', () => {
   it('defaults to dark and applies the diagram theme', () => {
     const { result } = renderHook(() => useTheme());
     expect(result.current.theme).toBe('dark');
-    expect(document.documentElement.dataset.theme).toBe('diagram');
+    expect(document.documentElement.dataset.theme).toBe('diagram-dark');
   });
 
   it('restores a stored theme', () => {
     window.localStorage.setItem('diagram-editor:theme', 'light');
     const { result } = renderHook(() => useTheme());
     expect(result.current.theme).toBe('light');
-    expect(document.documentElement.dataset.theme).toBe('light');
+    expect(document.documentElement.dataset.theme).toBe('diagram-light');
   });
 
   it('toggles between dark and light', () => {

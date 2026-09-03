@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from 'react';
 
-export type Theme = 'economics' | 'economics-dark';
+export type Theme = 'economics-light' | 'economics-dark';
 
 const THEME_KEY = 'economics:theme';
-const DEFAULT_THEME: Theme = 'economics';
+const DEFAULT_THEME: Theme = 'economics-light';
 
 const readStoredTheme = (): Theme => {
   try {
@@ -39,7 +39,7 @@ export const useTheme = (): {
     theme,
     toggleTheme: () =>
       setTheme((current) =>
-        current === 'economics-dark' ? 'economics' : 'economics-dark'
+        current === 'economics-dark' ? 'economics-light' : 'economics-dark'
       ),
   };
 };

@@ -22,7 +22,7 @@ export const useTheme = (): { theme: Theme; toggleTheme: () => void } => {
 
   useEffect(() => {
     document.documentElement.dataset.theme =
-      theme === 'dark' ? 'diagram' : 'light';
+      theme === 'dark' ? 'diagram-dark' : 'diagram-light';
     try {
       window.localStorage.setItem(THEME_KEY, theme);
     } catch {

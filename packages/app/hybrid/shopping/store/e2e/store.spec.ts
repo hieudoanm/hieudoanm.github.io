@@ -76,7 +76,7 @@ test.describe('Store', () => {
   test('toggles theme', async ({ page }) => {
     await page.goto('/');
     await page.getByTestId('theme-toggle').click();
-    await expect(page.locator('html')).toHaveAttribute('data-theme', 'winter');
+    await expect(page.locator('html')).toHaveAttribute('data-theme', 'store-light');
   });
 
   test('shows 404 for unknown routes', async ({ page }) => {

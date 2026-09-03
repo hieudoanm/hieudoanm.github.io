@@ -15,7 +15,7 @@ export const OTHER = 'me';
 
 export const DEFAULT_SETTINGS: AppSettings = {
   id: 'default',
-  theme: 'nothing',
+  theme: 'messaging-light',
   notifications: true,
   readReceipts: true,
   typingIndicators: true,

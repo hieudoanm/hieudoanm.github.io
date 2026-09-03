@@ -74,7 +74,7 @@ const folder = (id: string): Folder => ({
 });
 
 const settings: Settings = {
-  theme: 'nothing',
+  theme: 'chat-light',
   defaultModel: 'gpt-4o',
   systemPrompt: '',
   mockDelay: 800,
@@ -159,7 +159,7 @@ const Consumer = () => {
       <button onClick={() => data.moveToFolder('missing', 'f1')}>
         move-to-folder-missing
       </button>
-      <button onClick={() => data.updateSettings({ theme: 'dark' })}>
+      <button onClick={() => data.updateSettings({ theme: 'chat-dark' })}>
         update-settings
       </button>
       <button onClick={() => data.refreshData()}>refresh</button>
@@ -238,7 +238,7 @@ describe('DataProvider', () => {
     expect(screen.getByTestId('conv-title').textContent).toBe('Conv conv-1');
     expect(screen.getByTestId('msg-count').textContent).toBe('3');
     expect(screen.getByTestId('folder-count').textContent).toBe('1');
-    expect(screen.getByTestId('theme').textContent).toBe('nothing');
+    expect(screen.getByTestId('theme').textContent).toBe('chat-light');
     expect(screen.getByTestId('is-loading').textContent).toBe('false');
     expect(screen.getByTestId('current-msg-count').textContent).toBe('0');
   });
@@ -540,14 +540,14 @@ describe('DataProvider', () => {
   it('updates settings', async () => {
     renderProvider();
     await waitFor(() =>
-      expect(screen.getByTestId('theme').textContent).toBe('nothing')
+      expect(screen.getByTestId('theme').textContent).toBe('chat-light')
     );
     fireEvent.click(screen.getByText('update-settings'));
     await waitFor(() =>
-      expect(screen.getByTestId('theme').textContent).toBe('dark')
+      expect(screen.getByTestId('theme').textContent).toBe('chat-dark')
     );
     expect(db.settings.put).toHaveBeenCalledWith(
-      expect.objectContaining({ theme: 'dark' })
+      expect.objectContaining({ theme: 'chat-dark' })
     );
   });
 

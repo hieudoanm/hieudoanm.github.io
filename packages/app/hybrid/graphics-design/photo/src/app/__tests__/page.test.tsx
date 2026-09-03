@@ -101,7 +101,7 @@ const seedDb = (images: PhotoImage[], albums: Album[] = []): void => {
   (db.history.getAll as jest.Mock).mockResolvedValue([]);
   (db.layers.getAll as jest.Mock).mockResolvedValue([]);
   (db.settings.get as jest.Mock).mockResolvedValue({
-    theme: 'nothing',
+    theme: 'photo-light',
     defaultExportFormat: 'png',
     canvasBackground: 'checkerboard',
     defaultQuality: 85,
@@ -323,7 +323,7 @@ describe('HomePage', () => {
     (db.history.getAll as jest.Mock).mockResolvedValue([]);
     (db.layers.getAll as jest.Mock).mockResolvedValue([]);
     (db.settings.get as jest.Mock).mockResolvedValue({
-      theme: 'nothing',
+      theme: 'photo-light',
       defaultExportFormat: 'png',
       canvasBackground: 'checkerboard',
       defaultQuality: 85,
@@ -341,7 +341,7 @@ describe('HomePage', () => {
     (db.history.getAll as jest.Mock).mockResolvedValue([]);
     (db.layers.getAll as jest.Mock).mockResolvedValue([]);
     (db.settings.get as jest.Mock).mockResolvedValue({
-      theme: 'nothing',
+      theme: 'photo-light',
       defaultExportFormat: 'png',
       canvasBackground: 'checkerboard',
       defaultQuality: 85,

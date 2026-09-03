@@ -5,40 +5,7 @@ import { type FC, useEffect, useState } from 'react';
 import { FiArrowLeft, FiMoon, FiSun } from 'react-icons/fi';
 import { useRouter } from 'next/navigation';
 
-const THEMES: readonly string[] = [
-  'nothing',
-  'night',
-  'dark',
-  'light',
-  'cupcake',
-  'emerald',
-  'corporate',
-  'synthwave',
-  'retro',
-  'cyberpunk',
-  'valentine',
-  'halloween',
-  'garden',
-  'forest',
-  'aqua',
-  'lofi',
-  'pastel',
-  'fantasy',
-  'wireframe',
-  'black',
-  'luxury',
-  'dracula',
-  'cmyk',
-  'autumn',
-  'business',
-  'acid',
-  'lemonade',
-  'coffee',
-  'winter',
-  'dim',
-  'nord',
-  'sunset',
-];
+const THEMES: readonly string[] = ['api-light', 'api-dark'];
 
 const THEME_KEY = 'api-client:theme';
 const HISTORY_KEY = 'api-client:history';
@@ -46,7 +13,7 @@ const DRAFT_KEY = 'api-client:draft';
 
 const SettingsPage: FC = () => {
   const router = useRouter();
-  const [theme, setTheme] = useState('nothing');
+  const [theme, setTheme] = useState('api-light');
 
   useEffect(() => {
     const stored = localStorage.getItem(THEME_KEY);
@@ -83,11 +50,7 @@ const SettingsPage: FC = () => {
         <div className="mx-auto max-w-2xl space-y-8 p-6">
           <section className="card bg-base-200 card-body">
             <h2 className="card-title flex items-center gap-2">
-              {theme === 'nothing' || theme === 'night' || theme === 'dark' ? (
-                <FiMoon className="size-4" />
-              ) : (
-                <FiSun className="size-4" />
-              )}
+              {theme === 'api-dark' ? (<FiMoon className="size-4" />) : (<FiSun className="size-4" />)}
               Appearance
             </h2>
             <div className="form-control">

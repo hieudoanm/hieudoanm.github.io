@@ -1,11 +1,11 @@
 @plugin 'daisyui' {
   themes:
-    foody --default,
+    foody-light --default,
     foody-dark;
 }
 
 @plugin 'daisyui/theme' {
-  name: 'foody';
+  name: 'foody-light';
   default: true;
   color-scheme: 'light';
   --color-base-100: #fffaf3;

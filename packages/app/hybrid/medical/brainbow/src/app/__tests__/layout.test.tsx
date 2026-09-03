@@ -53,6 +53,6 @@ describe('RootLayout', () => {
     );
     expect(screen.getByTestId('page')).toBeInTheDocument();
     expect(document.documentElement).toHaveAttribute('lang', 'en');
-    expect(document.documentElement).toHaveAttribute('data-theme', 'nothing');
+    expect(document.documentElement).toHaveAttribute('data-theme', 'brainbow-light');
   });
 });

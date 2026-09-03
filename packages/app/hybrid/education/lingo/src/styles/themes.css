@@ -1,12 +1,11 @@
 @plugin 'daisyui' {
   themes:
-    lingo --default,
+    lingo-light --default,
     lingo-dark;
 }
 
-/* Light theme (default) — Duolingo-inspired */
 @plugin 'daisyui/theme' {
-  name: 'lingo';
+  name: 'lingo-light';
   default: true;
   color-scheme: 'light';
   --color-base-100: #ffffff;
@@ -39,7 +38,6 @@
   --noise: 0;
 }
 
-/* Dark theme (toggle) */
 @plugin 'daisyui/theme' {
   name: 'lingo-dark';
   color-scheme: 'dark';

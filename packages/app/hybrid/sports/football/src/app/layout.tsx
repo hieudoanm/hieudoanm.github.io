@@ -30,7 +30,7 @@ const NAV_ITEMS = [
 ];
 
 const RootLayout: FC<{ children: ReactNode }> = ({ children }) => (
-  <html lang="en" data-theme="dim">
+  <html lang="en" data-theme="football-light">
     <head>
       <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
     </head>

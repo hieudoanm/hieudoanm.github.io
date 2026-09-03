@@ -43,13 +43,13 @@ describe('Header', () => {
 
   it('sets default data-theme to nothing', () => {
     render(<Header />)
-    expect(document.documentElement.getAttribute('data-theme')).toBe('nothing')
+    expect(document.documentElement.getAttribute('data-theme')).toBe('calendar-dark')
   })
 
   it('toggles theme on click', () => {
     render(<Header />)
     fireEvent.click(screen.getByRole('button', { name: /toggle theme/i }))
-    expect(document.documentElement.getAttribute('data-theme')).toBe('light')
+    expect(document.documentElement.getAttribute('data-theme')).toBe('calendar-light')
   })
 
   it('toggles back to nothing theme', () => {
@@ -57,12 +57,12 @@ describe('Header', () => {
     const toggle = screen.getByRole('button', { name: /toggle theme/i })
     fireEvent.click(toggle)
     fireEvent.click(toggle)
-    expect(document.documentElement.getAttribute('data-theme')).toBe('nothing')
+    expect(document.documentElement.getAttribute('data-theme')).toBe('calendar-dark')
   })
 
   it('persists theme to localStorage', () => {
     render(<Header />)
     fireEvent.click(screen.getByRole('button', { name: /toggle theme/i }))
-    expect(localStorage.getItem('calendar-theme')).toBe('light')
+    expect(localStorage.getItem('calendar-theme')).toBe('calendar-light')
   })
 })

@@ -43,6 +43,6 @@ describe('layout', () => {
       </RootLayout>
     );
     expect(document.documentElement.getAttribute('lang')).toBe('vi');
-    expect(document.documentElement.getAttribute('data-theme')).toBe('nothing');
+    expect(document.documentElement.getAttribute('data-theme')).toBe('tax-dark');
   });
 });

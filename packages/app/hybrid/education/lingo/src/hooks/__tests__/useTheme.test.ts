@@ -9,7 +9,7 @@ describe('useTheme', () => {
 
   it('defaults to the light theme', () => {
     const { result } = renderHook(() => useTheme());
-    expect(result.current.theme).toBe('lingo');
+    expect(result.current.theme).toBe('lingo-light');
   });
 
   it('applies theme to document and toggles to dark', () => {
@@ -32,8 +32,8 @@ describe('useTheme', () => {
     act(() => {
       result.current.toggleTheme();
     });
-    expect(result.current.theme).toBe('lingo');
-    expect(localStorage.getItem('lingo:theme')).toBe('lingo');
+    expect(result.current.theme).toBe('lingo-light');
+    expect(localStorage.getItem('lingo:theme')).toBe('lingo-light');
   });
 
   it('restores stored theme on mount', async () => {

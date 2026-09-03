@@ -13,8 +13,8 @@ const navItems = [
 const STORAGE_KEY = 'pos-theme';
 
 const getInitialTheme = (): string => {
-  if (typeof window === 'undefined') return 'dim';
-  return localStorage.getItem(STORAGE_KEY) || 'dim';
+  if (typeof window === 'undefined') return 'pos-dark';
+  return localStorage.getItem(STORAGE_KEY) || 'pos-dark';
 };
 
 export const Header: FC = () => {
@@ -26,7 +26,7 @@ export const Header: FC = () => {
   }, [theme]);
 
   const toggleTheme = () =>
-    setTheme((current) => (current === 'dim' ? 'light' : 'dim'));
+    setTheme((current) => (current === 'pos-dark' ? 'pos-light' : 'pos-dark'));
 
   return (
     <header className="border-base-300 border-b">
@@ -46,7 +46,7 @@ export const Header: FC = () => {
             onClick={toggleTheme}
             data-testid="theme-toggle"
             aria-label="Toggle theme">
-            {theme === 'dim' ? <FiSun className="text-sm" /> : <FiMoon className="text-sm" />}
+            {theme === 'pos-dark' ? <FiSun className="text-sm" /> : <FiMoon className="text-sm" />}
           </button>
         </div>
       </nav>

@@ -84,7 +84,10 @@ describe('seedDatabase', () => {
     expect(db.albums.put).toHaveBeenCalledTimes(mockAlbums.length);
     expect(db.filters.put).toHaveBeenCalledTimes(mockFilters.length);
     expect(db.settings.put).toHaveBeenCalledWith(
-      expect.objectContaining({ theme: 'nothing', defaultExportFormat: 'png' })
+      expect.objectContaining({
+        theme: 'photo-light',
+        defaultExportFormat: 'png',
+      })
     );
   });
 

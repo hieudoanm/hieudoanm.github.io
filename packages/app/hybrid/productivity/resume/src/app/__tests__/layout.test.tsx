@@ -25,7 +25,7 @@ describe('RootLayout', () => {
         <div />
       </RootLayout>,
     );
-    expect(document.documentElement).toHaveAttribute('data-theme', 'paper');
+    expect(document.documentElement).toHaveAttribute('data-theme', 'resume-light');
   });
 });
 

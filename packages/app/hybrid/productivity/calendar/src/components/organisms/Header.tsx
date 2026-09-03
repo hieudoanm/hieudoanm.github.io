@@ -7,8 +7,8 @@ import Link from 'next/link'
 const STORAGE_KEY = 'calendar-theme'
 
 const getInitialTheme = (): string => {
-  if (typeof window === 'undefined') return 'nothing'
-  return localStorage.getItem(STORAGE_KEY) || 'nothing'
+  if (typeof window === 'undefined') return 'calendar-dark'
+  return localStorage.getItem(STORAGE_KEY) || 'calendar-dark'
 }
 
 export const Header: FC = () => {
@@ -20,7 +20,7 @@ export const Header: FC = () => {
   }, [theme])
 
   const toggleTheme = () =>
-    setTheme((current) => (current === 'nothing' ? 'light' : 'nothing'))
+    setTheme((current) => (current === 'calendar-dark' ? 'calendar-light' : 'calendar-dark'))
 
   return (
     <header className="border-base-content/10 bg-base-100 sticky top-0 z-10 border-b px-4 py-2">
@@ -49,7 +49,7 @@ export const Header: FC = () => {
             Version
           </Link>
           <button type="button" aria-label="Toggle theme" onClick={toggleTheme}>
-            {theme === 'nothing' ? '☀️' : '🌙'}
+            {theme === 'calendar-dark' ? '☀️' : '🌙'}
           </button>
         </nav>
       </div>

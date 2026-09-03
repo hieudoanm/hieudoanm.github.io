@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from 'react';
 
-export type Theme = 'history' | 'history-dark';
+export type Theme = 'history-light' | 'history-dark';
 
 const THEME_KEY = 'history:theme';
-const DEFAULT_THEME: Theme = 'history';
+const DEFAULT_THEME: Theme = 'history-light';
 
 const readStoredTheme = (): Theme => {
   try {
@@ -39,7 +39,7 @@ export const useTheme = (): {
     theme,
     toggleTheme: () =>
       setTheme((current) =>
-        current === 'history-dark' ? 'history' : 'history-dark'
+        current === 'history-dark' ? 'history-light' : 'history-dark'
       ),
   };
 };

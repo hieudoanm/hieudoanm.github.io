@@ -8,7 +8,7 @@ jest.mock('@/hooks/useTheme', () => ({
   useTheme: () => ({
     isDark: mockIsDark,
     toggleTheme: mockToggleTheme,
-    theme: 'nothing',
+    theme: 'wallet-dark',
     setTheme: jest.fn(),
   }),
 }));

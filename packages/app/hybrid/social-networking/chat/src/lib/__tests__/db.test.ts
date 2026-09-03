@@ -153,7 +153,7 @@ describe('db', () => {
   it('settings.get returns defaults when nothing is stored', async () => {
     await expect(db.settings.get()).resolves.toEqual({
       id: 'default',
-      theme: 'nothing',
+      theme: 'chat-light',
       defaultModel: 'gpt-4o',
       systemPrompt: '',
       mockDelay: 800,

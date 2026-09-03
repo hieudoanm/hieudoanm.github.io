@@ -386,13 +386,13 @@ describe('useCodePage', () => {
   describe('new features', () => {
     it('toggleTheme toggles between dim and winter', () => {
       const { result } = renderHook(() => useCodePage());
-      expect(result.current.theme).toBe('dim');
+      expect(result.current.theme).toBe('code-dark');
 
       act(() => result.current.toggleTheme());
-      expect(result.current.theme).toBe('winter');
+      expect(result.current.theme).toBe('code-light');
 
       act(() => result.current.toggleTheme());
-      expect(result.current.theme).toBe('dim');
+      expect(result.current.theme).toBe('code-dark');
     });
 
     it('toggleTheme sets data-theme attribute on document', () => {
@@ -400,11 +400,11 @@ describe('useCodePage', () => {
 
       act(() => result.current.toggleTheme());
       expect(document.documentElement.getAttribute('data-theme')).toBe(
-        'winter'
+        'code-light'
       );
 
       act(() => result.current.toggleTheme());
-      expect(document.documentElement.getAttribute('data-theme')).toBe('dim');
+      expect(document.documentElement.getAttribute('data-theme')).toBe('code-dark');
     });
 
     it('toggleWordWrap toggles wordWrap state', () => {

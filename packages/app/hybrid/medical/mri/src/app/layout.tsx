@@ -20,7 +20,7 @@ export const viewport: Viewport = {
 };
 
 const RootLayout: FC<{ children: ReactNode }> = ({ children }) => (
-  <html lang="en" data-theme="nothing">
+  <html lang="en" data-theme="mri-light">
     <head>
       <link rel="apple-touch-icon" href="/icons/icon-192.png" />
     </head>

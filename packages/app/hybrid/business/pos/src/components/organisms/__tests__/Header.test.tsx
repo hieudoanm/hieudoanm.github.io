@@ -43,7 +43,7 @@ describe('Header', () => {
     render(<Header />);
     const toggle = screen.getByTestId('theme-toggle');
     fireEvent.click(toggle);
-    expect(document.documentElement).toHaveAttribute('data-theme', 'light');
-    expect(localStorage.getItem('pos-theme')).toBe('light');
+    expect(document.documentElement).toHaveAttribute('data-theme', 'pos-light');
+    expect(localStorage.getItem('pos-theme')).toBe('pos-light');
   });
 });

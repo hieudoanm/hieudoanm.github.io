@@ -23,10 +23,10 @@ export const viewport: Viewport = {
   maximumScale: 1,
 };
 
-const THEME_INIT = `(function(){try{var t=localStorage.getItem('history:theme');document.documentElement.dataset.theme=t==='history-dark'?'history-dark':'history';}catch(e){document.documentElement.dataset.theme='history';}})();`;
+const THEME_INIT = `(function(){try{var t=localStorage.getItem('history:theme');document.documentElement.dataset.theme=t==='history-dark'?'history-dark':'history-light';}catch(e){document.documentElement.dataset.theme='history-light';}})();`;
 
 const RootLayout: FC<{ children: ReactNode }> = ({ children }) => (
-  <html lang="en" data-theme="history">
+  <html lang="en" data-theme="history-light">
     <head>
       <script dangerouslySetInnerHTML={{ __html: THEME_INIT }} />
       <link rel="apple-touch-icon" href="/icons/icon-192.png" />

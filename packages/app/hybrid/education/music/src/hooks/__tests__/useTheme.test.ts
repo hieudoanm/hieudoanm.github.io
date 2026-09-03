@@ -9,7 +9,7 @@ describe('useTheme', () => {
 
   it('defaults to the light theme', () => {
     const { result } = renderHook(() => useTheme());
-    expect(result.current.theme).toBe('music');
+    expect(result.current.theme).toBe('music-light');
   });
 
   it('applies theme to document and toggles to dark', () => {
@@ -32,8 +32,8 @@ describe('useTheme', () => {
     act(() => {
       result.current.toggleTheme();
     });
-    expect(result.current.theme).toBe('music');
-    expect(localStorage.getItem('music:theme')).toBe('music');
+    expect(result.current.theme).toBe('music-light');
+    expect(localStorage.getItem('music:theme')).toBe('music-light');
   });
 
   it('restores stored theme on mount', async () => {

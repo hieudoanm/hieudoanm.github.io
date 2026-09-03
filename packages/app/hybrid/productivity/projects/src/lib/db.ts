@@ -144,7 +144,7 @@ export const db = {
       const s = await (await getDB()).get('settings', 'settings');
       return (
         s ?? {
-          theme: 'nothing',
+          theme: 'projects-light',
           defaultView: 'kanban',
           notifications: true,
           notificationsReadAt: 0,

@@ -23,7 +23,7 @@ const { useRouter } = jest.requireMock('next/navigation');
 const { useData } = jest.requireMock('@/providers/DataProvider');
 
 const settings = {
-  theme: 'night',
+  theme: 'chat-light',
   defaultModel: 'gpt-4o',
   systemPrompt: 'You are helpful',
 };
@@ -55,8 +55,8 @@ describe('SettingsPage', () => {
   it('changes the theme select', () => {
     render(<SettingsPage />);
     const themeSelect = screen.getAllByRole('combobox')[0];
-    fireEvent.change(themeSelect, { target: { value: 'light' } });
-    expect(themeSelect).toHaveValue('light');
+    fireEvent.change(themeSelect, { target: { value: 'chat-dark' } });
+    expect(themeSelect).toHaveValue('chat-dark');
   });
 
   it('changes the default model select', () => {
@@ -79,7 +79,7 @@ describe('SettingsPage', () => {
     updateSettings.mockResolvedValue(undefined);
     render(<SettingsPage />);
     fireEvent.change(screen.getAllByRole('combobox')[0], {
-      target: { value: 'emerald' },
+      target: { value: 'chat-dark' },
     });
     fireEvent.change(
       screen.getByPlaceholderText('Enter custom instructions...'),
@@ -90,11 +90,13 @@ describe('SettingsPage', () => {
     fireEvent.click(screen.getByText('Save Settings'));
     await waitFor(() =>
       expect(updateSettings).toHaveBeenCalledWith({
-        theme: 'emerald',
+        theme: 'chat-dark',
         defaultModel: 'gpt-4o',
         systemPrompt: 'New prompt',
       })
     );
-    expect(document.documentElement.getAttribute('data-theme')).toBe('emerald');
+    expect(document.documentElement.getAttribute('data-theme')).toBe(
+      'chat-dark'
+    );
   });
 });

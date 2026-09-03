@@ -9,28 +9,28 @@ beforeEach(() => {
 });
 
 describe('useTheme', () => {
-  it('defaults to nothing theme', () => {
+  it('defaults to wallet-dark theme', () => {
     const { result } = renderHook(() => useTheme());
-    expect(result.current.theme).toBe('nothing');
+    expect(result.current.theme).toBe('wallet-dark');
     expect(result.current.isDark).toBe(true);
   });
 
   it('loads stored theme from localStorage', () => {
-    localStorage.setItem(STORAGE_KEY, 'winter');
+    localStorage.setItem(STORAGE_KEY, 'wallet-light');
     const { result } = renderHook(() => useTheme());
-    expect(result.current.theme).toBe('winter');
+    expect(result.current.theme).toBe('wallet-light');
     expect(result.current.isDark).toBe(false);
   });
 
   it('sets theme and persists to localStorage', () => {
     const { result } = renderHook(() => useTheme());
     act(() => {
-      result.current.setTheme('corporate');
+      result.current.setTheme('wallet-light');
     });
-    expect(result.current.theme).toBe('corporate');
-    expect(localStorage.getItem(STORAGE_KEY)).toBe('corporate');
+    expect(result.current.theme).toBe('wallet-light');
+    expect(localStorage.getItem(STORAGE_KEY)).toBe('wallet-light');
     expect(document.documentElement.getAttribute('data-theme')).toBe(
-      'corporate'
+      'wallet-light'
     );
   });
 
@@ -39,13 +39,13 @@ describe('useTheme', () => {
     act(() => {
       result.current.toggleTheme();
     });
-    expect(result.current.theme).toBe('winter');
+    expect(result.current.theme).toBe('wallet-light');
     expect(result.current.isDark).toBe(false);
 
     act(() => {
       result.current.toggleTheme();
     });
-    expect(result.current.theme).toBe('nothing');
+    expect(result.current.theme).toBe('wallet-dark');
     expect(result.current.isDark).toBe(true);
   });
 });

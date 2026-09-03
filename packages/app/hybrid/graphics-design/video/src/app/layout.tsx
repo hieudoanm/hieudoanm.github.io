@@ -12,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" data-theme="nothing">
+    <html lang="en" data-theme="video-light">
       <body className="bg-base-100 text-base-content h-screen overflow-y-auto font-mono">
         {children}
       </body>

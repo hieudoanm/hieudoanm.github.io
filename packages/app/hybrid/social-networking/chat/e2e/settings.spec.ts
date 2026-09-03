@@ -39,11 +39,11 @@ test.describe('Settings Page', () => {
     await expect(page.locator('select').first()).toBeVisible();
   });
 
-  test('theme dropdown has multiple options', async ({ page }) => {
+  test('theme dropdown has two options', async ({ page }) => {
     await page.goto('/settings');
     const themeSelect = page.locator('select').first();
     const options = await themeSelect.locator('option').count();
-    expect(options).toBeGreaterThan(1);
+    expect(options).toBe(2);
   });
 
   test('displays AI Model section', async ({ page }) => {
@@ -95,8 +95,8 @@ test.describe('Settings Page', () => {
   test('can change theme selection', async ({ page }) => {
     await page.goto('/settings');
     const themeSelect = page.locator('select').first();
-    await themeSelect.selectOption('light');
-    await expect(themeSelect).toHaveValue('light');
+    await themeSelect.selectOption('chat-dark');
+    await expect(themeSelect).toHaveValue('chat-dark');
   });
 
   test('save settings button works', async ({ page }) => {

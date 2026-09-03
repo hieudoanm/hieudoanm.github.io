@@ -27,7 +27,7 @@ describe('RootLayout', () => {
       </RootLayout>
     );
     const html = document.documentElement;
-    expect(html).toHaveAttribute('data-theme', 'nothing');
+    expect(html).toHaveAttribute('data-theme', 'markdown-light');
     expect(html!.className).toContain('--font-sans');
     expect(html!.className).toContain('--font-mono');
     expect(html!.className).toContain('--font-serif');

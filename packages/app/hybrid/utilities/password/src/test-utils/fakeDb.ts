@@ -26,7 +26,7 @@ export interface FakeDb {
 }
 
 export const DEFAULT_SETTINGS: Settings = {
-  theme: 'nothing',
+  theme: 'password-light',
   autoLockTimeout: 5,
   clipboardClear: 30,
   biometricEnabled: false,

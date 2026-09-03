@@ -98,7 +98,7 @@ describe('db', () => {
     setupDB({ settings: undefined });
     await expect(db.settings.get()).resolves.toEqual({
       id: 'default',
-      theme: 'nothing',
+      theme: 'password-light',
       autoLockTimeout: 5,
       clipboardClear: 30,
       biometricEnabled: false,

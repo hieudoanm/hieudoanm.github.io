@@ -10,7 +10,7 @@ interface GlobalErrorProps {
 }
 
 const GlobalError: NextPage<GlobalErrorProps> = ({ reset }) => (
-  <html lang="en" data-theme="nothing">
+  <html lang="en" data-theme="mri-light">
     <body className="bg-base-100 text-base-content font-mono">
       <ErrorTemplate
         code="500"

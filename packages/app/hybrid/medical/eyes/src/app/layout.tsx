@@ -23,7 +23,7 @@ export const viewport: Viewport = {
 };
 
 const RootLayout: FC<{ children: ReactNode }> = ({ children }) => (
-  <html lang="en" data-theme="luxury">
+  <html lang="en" data-theme="eyes-dark">
     <head>
       <link rel="apple-touch-icon" href="/icons/icon-192.png" />
     </head>

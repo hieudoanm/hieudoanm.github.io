@@ -14,8 +14,8 @@ const navItems = [
 const STORAGE_KEY = 'nikoli-theme';
 
 const getInitialTheme = (): string => {
-  if (typeof window === 'undefined') return 'dracula';
-  return localStorage.getItem(STORAGE_KEY) || 'dracula';
+  if (typeof window === 'undefined') return 'nikoli-dark';
+  return localStorage.getItem(STORAGE_KEY) || 'nikoli-dark';
 };
 
 export const Header: FC = () => {
@@ -28,7 +28,7 @@ export const Header: FC = () => {
   }, [theme]);
 
   const toggleTheme = () =>
-    setTheme((t) => (t === 'dracula' ? 'bumblebee' : 'dracula'));
+    setTheme((t) => (t === 'nikoli-dark' ? 'nikoli-light' : 'nikoli-dark'));
 
   return (
     <header className="border-base-300 bg-base-100 sticky top-0 z-10 border-b px-6 py-3">
@@ -51,7 +51,7 @@ export const Header: FC = () => {
             type="button"
             className="btn btn-ghost btn-sm"
             onClick={toggleTheme}>
-            {theme === 'dracula' ? '☀️' : '🧛'}
+            {theme === 'nikoli-dark' ? '☀️' : '🧛'}
           </button>
         </nav>
       </div>

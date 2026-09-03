@@ -32,7 +32,7 @@ describe('RootLayout', () => {
         <div />
       </RootLayout>,
     );
-    expect(document.documentElement).toHaveAttribute('data-theme', 'history');
+    expect(document.documentElement).toHaveAttribute('data-theme', 'history-light');
   });
 
   it('renders header', () => {

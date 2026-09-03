@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 const RootLayout: FC<{ children: ReactNode }> = ({ children }) => (
   <html
     lang="en"
-    data-theme="diagram"
+    data-theme="diagram-light"
     className={`${sans.variable} ${mono.variable}`}>
     <head>
       <link rel="apple-touch-icon" href="/icons/icon-192.png" />

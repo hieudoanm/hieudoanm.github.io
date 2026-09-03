@@ -6,7 +6,7 @@ const updateSettings = jest.fn().mockResolvedValue(undefined);
 const addToast = jest.fn();
 
 const defaultSettings = {
-  theme: 'nothing',
+  theme: 'svg-light',
   gridSize: 20,
   snapToGrid: true,
   showGrid: true,
@@ -58,15 +58,17 @@ describe('SettingsPage', () => {
   it('saves settings and applies the theme', async () => {
     render(<SettingsPage />);
     fireEvent.change(screen.getAllByRole('combobox')[0], {
-      target: { value: 'dark' },
+      target: { value: 'svg-dark' },
     });
     fireEvent.click(screen.getByRole('button', { name: 'Save Settings' }));
     await waitFor(() =>
-      expect(document.documentElement.getAttribute('data-theme')).toBe('dark')
+      expect(document.documentElement.getAttribute('data-theme')).toBe(
+        'svg-dark'
+      )
     );
     expect(updateSettings).toHaveBeenCalledWith({
       ...defaultSettings,
-      theme: 'dark',
+      theme: 'svg-dark',
     });
     expect(addToast).toHaveBeenCalledWith('Settings saved', 'success');
   });
@@ -88,7 +90,7 @@ describe('SettingsPage', () => {
     fireEvent.click(screen.getByRole('button', { name: 'Save Settings' }));
     await waitFor(() =>
       expect(updateSettings).toHaveBeenCalledWith({
-        theme: 'nothing',
+        theme: 'svg-light',
         gridSize: 30,
         snapToGrid: false,
         showGrid: false,

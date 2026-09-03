@@ -22,7 +22,7 @@ export const viewport: Viewport = {
 };
 
 const RootLayout: FC<{ children: React.ReactNode }> = ({ children }) => (
-  <html lang="en" data-theme="nothing">
+  <html lang="en" data-theme="tourney-dark">
     <body className="bg-base-100 text-base-content">
       <Header />
       <Providers>{children}</Providers>

@@ -37,7 +37,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: ReactNode }>) {
   return (
-    <html lang="en" data-theme="nothing">
+    <html lang="en" data-theme="messaging-light">
       <body>
         <SWProvider>
           <Providers>{children}</Providers>

@@ -63,7 +63,7 @@ export const db = {
       return (
         s ?? {
           id: 'default',
-          theme: 'nothing',
+          theme: 'password-light',
           autoLockTimeout: 5,
           clipboardClear: 30,
           biometricEnabled: false,

@@ -33,8 +33,8 @@ describe('Header', () => {
 
   it('applies and persists the default dracula theme', () => {
     render(<Header />);
-    expect(document.documentElement.getAttribute('data-theme')).toBe('dracula');
-    expect(localStorage.getItem('casino-theme')).toBe('dracula');
+    expect(document.documentElement.getAttribute('data-theme')).toBe('casino-dark');
+    expect(localStorage.getItem('casino-theme')).toBe('casino-dark');
   });
 
   it('toggles between dark and light themes', async () => {
@@ -42,17 +42,17 @@ describe('Header', () => {
     render(<Header />);
     await user.click(screen.getByTestId('theme-toggle'));
     expect(document.documentElement.getAttribute('data-theme')).toBe(
-      'bumblebee'
+      'casino-light'
     );
-    expect(localStorage.getItem('casino-theme')).toBe('bumblebee');
+    expect(localStorage.getItem('casino-theme')).toBe('casino-light');
     await user.click(screen.getByTestId('theme-toggle'));
-    expect(document.documentElement.getAttribute('data-theme')).toBe('dracula');
+    expect(document.documentElement.getAttribute('data-theme')).toBe('casino-dark');
   });
 
   it('restores a saved theme on mount', () => {
-    localStorage.setItem('casino-theme', 'bumblebee');
+    localStorage.setItem('casino-theme', 'casino-light');
     render(<Header />);
     expect(screen.getByTestId('theme-toggle')).toBeInTheDocument();
-    expect(localStorage.getItem('casino-theme')).toBe('bumblebee');
+    expect(localStorage.getItem('casino-theme')).toBe('casino-light');
   });
 });

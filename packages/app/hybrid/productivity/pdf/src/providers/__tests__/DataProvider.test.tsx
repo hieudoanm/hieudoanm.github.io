@@ -270,7 +270,7 @@ const Consumer = () => {
         add-stamp
       </button>
       <button onClick={() => data.deleteStamp('stamp-1')}>delete-stamp</button>
-      <button onClick={() => data.updateSettings({ theme: 'dark' })}>
+      <button onClick={() => data.updateSettings({ theme: 'pdf-dark' })}>
         update-settings
       </button>
       <button
@@ -313,7 +313,7 @@ const seedStore = () => {
   db.stamps.getAll.mockResolvedValue([stamp('stamp-1')]);
   db.settings.get.mockResolvedValue({
     id: 'default',
-    theme: 'nothing',
+    theme: 'pdf-light',
     defaultZoom: 100,
     pageLayout: 'continuous',
     annotationDefaults: { color: '#facc15', strokeWidth: 2 },
@@ -585,14 +585,14 @@ describe('DataProvider', () => {
   it('updates settings', async () => {
     renderProvider();
     await waitFor(() =>
-      expect(screen.getByTestId('theme').textContent).toBe('nothing')
+      expect(screen.getByTestId('theme').textContent).toBe('pdf-light')
     );
     fireEvent.click(screen.getByText('update-settings'));
     await waitFor(() =>
-      expect(screen.getByTestId('theme').textContent).toBe('dark')
+      expect(screen.getByTestId('theme').textContent).toBe('pdf-dark')
     );
     expect(db.settings.put).toHaveBeenCalledWith(
-      expect.objectContaining({ theme: 'dark' })
+      expect.objectContaining({ theme: 'pdf-dark' })
     );
   });
 

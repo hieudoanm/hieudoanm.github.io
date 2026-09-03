@@ -1,11 +1,11 @@
 @plugin 'daisyui' {
   themes:
-    music --default,
+    music-light --default,
     music-dark;
 }
 
 @plugin 'daisyui/theme' {
-  name: 'music';
+  name: 'music-light';
   default: true;
   color-scheme: 'light';
   --color-base-100: #ffffff;

@@ -16,6 +16,6 @@ describe('RootLayout', () => {
     );
     expect(screen.getByText('Page content')).toBeInTheDocument();
     expect(document.documentElement).toHaveAttribute('lang', 'en');
-    expect(document.documentElement).toHaveAttribute('data-theme', 'nothing');
+    expect(document.documentElement).toHaveAttribute('data-theme', 'chat-light');
   });
 });

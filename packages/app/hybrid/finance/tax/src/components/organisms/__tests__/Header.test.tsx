@@ -41,7 +41,7 @@ describe('Header', () => {
     const toggle = screen.getByTestId('theme-toggle');
     expect(toggle).toBeInTheDocument();
     fireEvent.click(toggle);
-    expect(document.documentElement).toHaveAttribute('data-theme', 'winter');
-    expect(localStorage.getItem('tax-theme')).toBe('winter');
+    expect(document.documentElement).toHaveAttribute('data-theme', 'tax-light');
+    expect(localStorage.getItem('tax-theme')).toBe('tax-light');
   });
 });

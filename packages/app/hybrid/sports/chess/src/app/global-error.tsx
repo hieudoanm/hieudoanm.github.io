@@ -12,7 +12,7 @@ const GlobalErrorPage: NextPage<{
   error: Error & { digest?: string };
   reset: () => void;
 }) => (
-  <html lang="en" data-theme="dim">
+  <html lang="en" data-theme="chess-dark">
     <body className="bg-base-100 text-base-content flex min-h-screen flex-col items-center justify-center font-mono">
       <p className="text-base-content/50 mb-6 text-xs tracking-[0.2em] uppercase">
         Error

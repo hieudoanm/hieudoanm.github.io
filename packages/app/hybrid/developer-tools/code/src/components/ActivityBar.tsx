@@ -12,7 +12,7 @@ type SidebarState = 'closed' | 'explorer' | 'search';
 
 interface ActivityBarProps {
   sidebarState: SidebarState;
-  theme: 'dim' | 'winter';
+  theme: 'code-dark' | 'code-light';
   onOpenExplorer: () => void;
   onOpenSearch: () => void;
   onToggleTheme: () => void;
@@ -44,8 +44,8 @@ export const ActivityBar: FC<ActivityBarProps> = ({
     </button>
     <button
       onClick={onToggleTheme}
-      className={`btn btn-ghost btn-square btn-sm ${theme === 'winter' ? 'text-primary' : 'text-base-content/60'}`}
-      title={`Switch to ${theme === 'dim' ? 'winter' : 'dim'} theme`}>
+      className={`btn btn-ghost btn-square btn-sm ${theme === 'code-light' ? 'text-primary' : 'text-base-content/60'}`}
+      title={`Switch to ${theme === 'code-dark' ? 'code-light' : 'code-dark'} theme`}>
       <LuPalette className="h-5 w-5" />
     </button>
     <div className="flex-1" />

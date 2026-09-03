@@ -4,8 +4,8 @@ import { useLocalStorage } from './useLocalStorage';
 export type ThemePreference = 'light' | 'dark';
 
 export const THEME_BY_PREFERENCE: Record<ThemePreference, string> = {
-  light: 'paper',
-  dark: 'night',
+  light: 'resume-light',
+  dark: 'resume-dark',
 };
 
 export const useTheme = (): {

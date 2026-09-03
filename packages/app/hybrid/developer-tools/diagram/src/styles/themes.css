@@ -1,42 +1,45 @@
 @plugin 'daisyui' {
   themes:
-    night --default,
-    dark,
-    light,
-    cupcake,
-    emerald,
-    corporate,
-    synthwave,
-    retro,
-    cyberpunk,
-    valentine,
-    halloween,
-    garden,
-    forest,
-    aqua,
-    lofi,
-    pastel,
-    fantasy,
-    wireframe,
-    black,
-    luxury,
-    dracula,
-    cmyk,
-    autumn,
-    business,
-    acid,
-    lemonade,
-    coffee,
-    winter,
-    dim,
-    nord,
-    sunset;
+    diagram-light --default,
+    diagram-dark;
 }
 
 @plugin 'daisyui/theme' {
-  name: 'diagram';
+  name: 'diagram-light';
   default: true;
-  prefersdark: true;
+  color-scheme: 'light';
+  --color-base-100: #ffffff;
+  --color-base-200: #f1f5f9;
+  --color-base-300: #e2e8f0;
+  --color-base-content: #0f172a;
+  --color-primary: #16a34a;
+  --color-primary-content: #ffffff;
+  --color-secondary: #0ea5e9;
+  --color-secondary-content: #ffffff;
+  --color-accent: #8b5cf6;
+  --color-accent-content: #ffffff;
+  --color-neutral: #334155;
+  --color-neutral-content: #ffffff;
+  --color-info: #0ea5e9;
+  --color-info-content: #ffffff;
+  --color-success: #16a34a;
+  --color-success-content: #ffffff;
+  --color-warning: #f59e0b;
+  --color-warning-content: #ffffff;
+  --color-error: #ef4444;
+  --color-error-content: #ffffff;
+  --radius-selector: 0.375rem;
+  --radius-field: 0.375rem;
+  --radius-box: 0.5rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+@plugin 'daisyui/theme' {
+  name: 'diagram-dark';
   color-scheme: 'dark';
   --color-base-100: #0b0f14;
   --color-base-200: #111820;
@@ -64,6 +67,6 @@
   --size-selector: 0.25rem;
   --size-field: 0.25rem;
   --border: 1px;
-  --depth: 1;
+  --depth: 0;
   --noise: 0;
 }

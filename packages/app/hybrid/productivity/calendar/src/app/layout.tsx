@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 const RootLayout: FC<{ children: ReactNode }> = ({ children }) => (
   <html
     lang="en"
-    data-theme="nothing"
+    data-theme="calendar-dark"
     className={`${sans.variable} ${mono.variable} ${serif.variable}`}
   >
     <head>

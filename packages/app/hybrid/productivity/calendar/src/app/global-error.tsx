@@ -6,7 +6,7 @@ const GlobalErrorPage: NextPage<{
   error: Error & { digest?: string }
   reset: () => void
 }> = ({ error, reset }: { error: Error & { digest?: string }; reset: () => void }) => (
-  <html lang="en" data-theme="dim">
+  <html lang="en" data-theme="calendar-dark">
     <body className="bg-base-100 text-base-content flex min-h-screen flex-col items-center justify-center font-mono">
       <p className="text-base-content/50 mb-6 text-xs tracking-[0.2em] uppercase">Error</p>
       <h1 className="mb-3">500</h1>

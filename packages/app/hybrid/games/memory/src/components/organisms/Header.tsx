@@ -7,8 +7,8 @@ import Link from 'next/link';
 const STORAGE_KEY = 'memory-theme';
 
 const getInitialTheme = (): string => {
-  if (typeof window === 'undefined') return 'nothing';
-  return localStorage.getItem(STORAGE_KEY) || 'nothing';
+  if (typeof window === 'undefined') return 'memory-dark';
+  return localStorage.getItem(STORAGE_KEY) || 'memory-dark';
 };
 
 export const Header: FC = () => {
@@ -20,7 +20,7 @@ export const Header: FC = () => {
   }, [theme]);
 
   const toggleTheme = () =>
-    setTheme((current) => (current === 'nothing' ? 'bumblebee' : 'nothing'));
+    setTheme((current) => (current === 'memory-dark' ? 'memory-light' : 'memory-dark'));
 
   return (
     <header className="border-base-300 bg-base-100 sticky top-0 z-10 border-b-2 px-4 py-3">
@@ -50,7 +50,7 @@ export const Header: FC = () => {
             className="btn btn-ghost btn-sm"
             onClick={toggleTheme}
             data-testid="theme-toggle">
-            {theme === 'nothing' ? '☀️' : '🧛'}
+            {theme === 'memory-dark' ? '☀️' : '🧛'}
           </button>
         </nav>
       </div>

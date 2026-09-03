@@ -9,8 +9,8 @@ import { PiSun, PiMoon } from 'react-icons/pi';
 const STORAGE_KEY = 'store-theme';
 
 const getInitialTheme = (): string => {
-  if (typeof window === 'undefined') return 'nothing';
-  return localStorage.getItem(STORAGE_KEY) || 'nothing';
+  if (typeof window === 'undefined') return 'store-dark';
+  return localStorage.getItem(STORAGE_KEY) || 'store-dark';
 };
 
 export const Header: FC = () => {
@@ -23,7 +23,7 @@ export const Header: FC = () => {
   }, [theme]);
 
   const toggleTheme = () =>
-    setTheme((current) => (current === 'nothing' ? 'winter' : 'nothing'));
+    setTheme((current) => (current === 'store-dark' ? 'store-light' : 'store-dark'));
 
   return (
     <header className="border-base-300 bg-base-100 sticky top-0 z-10 border-b px-6 py-3">
@@ -52,7 +52,7 @@ export const Header: FC = () => {
             className="btn btn-ghost btn-sm"
             onClick={toggleTheme}
             data-testid="theme-toggle">
-            {theme === 'nothing' ? (
+            {theme === 'store-dark' ? (
               <PiSun className="text-lg" />
             ) : (
               <PiMoon className="text-lg" />

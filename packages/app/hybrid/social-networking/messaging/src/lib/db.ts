@@ -123,7 +123,7 @@ export const db = {
       return (
         settings ?? {
           id: 'default',
-          theme: 'nothing',
+          theme: 'messaging-light',
           notifications: true,
           readReceipts: true,
           typingIndicators: true,

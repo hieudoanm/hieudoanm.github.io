@@ -69,7 +69,7 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
   const [history, setHistory] = useState<EditHistoryEntry[]>([]);
   const [layers, setLayers] = useState<Layer[]>([]);
   const [settings, setSettings] = useState<PhotoSettings>({
-    theme: 'nothing',
+    theme: 'photo-light',
     defaultExportFormat: 'png',
     canvasBackground: 'checkerboard',
     defaultQuality: 85,

@@ -131,7 +131,7 @@ const Probe = () => {
       <button type="button" onClick={() => toggleFavorite('v-1')}>
         Toggle
       </button>
-      <button type="button" onClick={() => updateSettings({ theme: 'night' })}>
+      <button type="button" onClick={() => updateSettings({ theme: 'password-dark' })}>
         Theme
       </button>
       <button type="button" onClick={() => createFolder('Work')}>
@@ -224,7 +224,7 @@ describe('DataProvider', () => {
   it('loads and sorts items by updatedAt descending', async () => {
     mockDb.reset({
       items: [makeItem('v-1', 'Older', 100), makeItem('v-2', 'Newer', 200)],
-      settings: { theme: 'night', autoLockTimeout: 15, clipboardClear: 60 },
+      settings: { theme: 'password-light', autoLockTimeout: 15, clipboardClear: 60 },
     });
     render(
       <DataProvider>
@@ -237,7 +237,7 @@ describe('DataProvider', () => {
     const titles = screen.getAllByTestId(/^item-/).map((n) => n.textContent);
     expect(titles[0]).toContain('Newer');
     expect(titles[1]).toContain('Older');
-    expect(screen.getByTestId('theme')).toHaveTextContent('night');
+    expect(screen.getByTestId('theme')).toHaveTextContent('password-light');
   });
 
   it('creates an item and persists it', async () => {
@@ -620,10 +620,10 @@ describe('DataProvider', () => {
     );
     fireEvent.click(screen.getByRole('button', { name: 'Theme' }));
     await waitFor(() =>
-      expect(screen.getByTestId('theme')).toHaveTextContent('night')
+      expect(screen.getByTestId('theme')).toHaveTextContent('password-dark')
     );
     expect(mockDb.db.settings.put).toHaveBeenCalledWith(
-      expect.objectContaining({ theme: 'night' })
+      expect.objectContaining({ theme: 'password-dark' })
     );
   });
 

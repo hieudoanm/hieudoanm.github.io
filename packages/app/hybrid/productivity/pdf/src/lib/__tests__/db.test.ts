@@ -243,7 +243,7 @@ describe('db', () => {
     const settings = await db.settings.get();
     expect(settings).toEqual({
       id: 'default',
-      theme: 'nothing',
+      theme: 'pdf-light',
       defaultZoom: 100,
       pageLayout: 'continuous',
       annotationDefaults: { color: '#facc15', strokeWidth: 2 },

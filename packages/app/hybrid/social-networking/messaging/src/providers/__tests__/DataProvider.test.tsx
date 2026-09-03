@@ -136,7 +136,7 @@ const msg = (overrides: Partial<Message> = {}): Message => ({
 
 const appSettings = (overrides: Partial<AppSettings> = {}): AppSettings => ({
   id: 'default',
-  theme: 'nothing',
+  theme: 'messaging-light',
   notifications: true,
   readReceipts: true,
   typingIndicators: true,
@@ -212,7 +212,7 @@ describe('DataProvider', () => {
         'chat-alice',
         'c2',
       ]);
-      expect(result.current.settings.theme).toBe('nothing');
+      expect(result.current.settings.theme).toBe('messaging-light');
     });
 
     it('handles a missing account', async () => {
@@ -1275,9 +1275,9 @@ describe('DataProvider', () => {
       const { result } = renderHook(() => useData(), { wrapper: Wrapper });
       await flush();
       await act(async () => {
-        await result.current.updateSettings({ theme: 'dark' });
+        await result.current.updateSettings({ theme: 'messaging-dark' });
       });
-      expect(result.current.settings.theme).toBe('dark');
+      expect(result.current.settings.theme).toBe('messaging-dark');
       expect(db.settings.put).toHaveBeenCalled();
     });
   });

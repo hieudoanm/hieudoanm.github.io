@@ -33,8 +33,8 @@ describe('Header', () => {
 
   it('applies and persists the default dracula theme', () => {
     render(<Header />);
-    expect(document.documentElement.getAttribute('data-theme')).toBe('dracula');
-    expect(localStorage.getItem('countries-theme')).toBe('dracula');
+    expect(document.documentElement.getAttribute('data-theme')).toBe('countries-dark');
+    expect(localStorage.getItem('countries-theme')).toBe('countries-dark');
   });
 
   it('toggles between dark and light themes', async () => {
@@ -42,17 +42,17 @@ describe('Header', () => {
     render(<Header />);
     await user.click(screen.getByTestId('theme-toggle'));
     expect(document.documentElement.getAttribute('data-theme')).toBe(
-      'bumblebee'
+      'countries-light'
     );
-    expect(localStorage.getItem('countries-theme')).toBe('bumblebee');
+    expect(localStorage.getItem('countries-theme')).toBe('countries-light');
     await user.click(screen.getByTestId('theme-toggle'));
-    expect(document.documentElement.getAttribute('data-theme')).toBe('dracula');
+    expect(document.documentElement.getAttribute('data-theme')).toBe('countries-dark');
   });
 
   it('restores a saved theme on mount', () => {
-    localStorage.setItem('countries-theme', 'bumblebee');
+    localStorage.setItem('countries-theme', 'countries-light');
     render(<Header />);
     expect(screen.getByTestId('theme-toggle')).toBeInTheDocument();
-    expect(localStorage.getItem('countries-theme')).toBe('bumblebee');
+    expect(localStorage.getItem('countries-theme')).toBe('countries-light');
   });
 });

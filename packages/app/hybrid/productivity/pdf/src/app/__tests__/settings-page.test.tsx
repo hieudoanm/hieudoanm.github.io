@@ -18,7 +18,7 @@ const { useToast } = jest.requireMock('@/providers/ToastProvider');
 
 const settings = {
   id: 'default',
-  theme: 'nothing',
+  theme: 'pdf-light',
   defaultZoom: 100,
   pageLayout: 'continuous',
   annotationDefaults: { color: '#facc15', strokeWidth: 2 },
@@ -42,7 +42,7 @@ describe('Settings page', () => {
     expect(screen.getByText('Default Zoom: 100%')).toBeInTheDocument();
     expect(screen.getByText('Stroke Width: 2px')).toBeInTheDocument();
 
-    fireEvent.click(screen.getByText('night'));
+    fireEvent.click(screen.getByText('pdf-dark'));
     const ranges = document.querySelectorAll('input[type="range"]');
     fireEvent.change(ranges[0], { target: { value: '150' } });
     fireEvent.change(screen.getByRole('combobox'), {
@@ -59,12 +59,12 @@ describe('Settings page', () => {
       fireEvent.click(screen.getByRole('button', { name: 'Save Settings' }));
     });
     expect(updateSettings).toHaveBeenCalledWith({
-      theme: 'night',
+      theme: 'pdf-dark',
       defaultZoom: 150,
       pageLayout: 'single',
       annotationDefaults: { color: '#123456', strokeWidth: 7 },
     });
-    expect(document.documentElement.getAttribute('data-theme')).toBe('night');
+    expect(document.documentElement.getAttribute('data-theme')).toBe('pdf-dark');
     expect(addToast).toHaveBeenCalledWith('Settings saved', 'success');
   });
 
@@ -72,7 +72,7 @@ describe('Settings page', () => {
     const { rerender } = render(<Settings />);
     const newSettings = {
       ...settings,
-      theme: 'dracula',
+      theme: 'pdf-dark',
       defaultZoom: 200,
       pageLayout: 'single' as const,
       annotationDefaults: { color: '#000000', strokeWidth: 5 },

@@ -9,7 +9,7 @@ const GlobalError = ({
   error: Error & { digest?: string };
   reset: () => void;
 }) => (
-  <html lang="en" data-theme="nothing">
+  <html lang="en" data-theme="store-dark">
     <body>
       <ErrorTemplate
         code="500"

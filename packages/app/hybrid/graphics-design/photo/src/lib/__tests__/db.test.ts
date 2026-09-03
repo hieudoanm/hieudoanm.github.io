@@ -242,7 +242,7 @@ describe('db', () => {
     await connect();
     current.fakeIDB.stores.settings.get.mockResolvedValue(undefined);
     await expect(current.db.settings.get()).resolves.toEqual({
-      theme: 'nothing',
+      theme: 'photo-light',
       defaultExportFormat: 'png',
       canvasBackground: 'checkerboard',
       defaultQuality: 85,

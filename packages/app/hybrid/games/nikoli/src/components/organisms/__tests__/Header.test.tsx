@@ -46,16 +46,16 @@ describe('Header', () => {
   it('persists theme to localStorage', () => {
     render(<Header />);
     fireEvent.click(screen.getByText('☀️'));
-    expect(localStorage.getItem('nikoli-theme')).toBe('bumblebee');
+    expect(localStorage.getItem('nikoli-theme')).toBe('nikoli-light');
   });
 
   it('sets data-theme attribute on html', () => {
     render(<Header />);
-    expect(document.documentElement.getAttribute('data-theme')).toBe('dracula');
+    expect(document.documentElement.getAttribute('data-theme')).toBe('nikoli-dark');
   });
 
   it('reads saved theme from localStorage', () => {
-    localStorage.setItem('nikoli-theme', 'bumblebee');
+    localStorage.setItem('nikoli-theme', 'nikoli-light');
     render(<Header />);
     expect(screen.getByText('🧛')).toBeInTheDocument();
   });

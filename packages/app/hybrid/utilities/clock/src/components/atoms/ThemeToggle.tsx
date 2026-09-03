@@ -10,7 +10,7 @@ export const ThemeToggle: FC = () => {
   useEffect(() => {
     setMounted(true);
     setIsLight(
-      document.documentElement.getAttribute('data-theme') === 'luxury'
+      document.documentElement.getAttribute('data-theme') === 'clock-light'
     );
   }, []);
 
@@ -20,7 +20,7 @@ export const ThemeToggle: FC = () => {
     <button
       className="btn btn-ghost btn-sm btn-circle"
       onClick={() => {
-        const next = isLight ? 'nothing' : 'luxury';
+        const next = isLight ? 'clock-dark' : 'clock-light';
         document.documentElement.setAttribute('data-theme', next);
         setIsLight(!isLight);
       }}

@@ -20,7 +20,7 @@ export const seedDatabase = async () => {
   for (const a of mockActivity) await db.activity.put(a);
 
   await db.settings.put({
-    theme: 'nothing',
+    theme: 'projects-light',
     defaultView: 'kanban',
     notifications: true,
     notificationsReadAt: 0,

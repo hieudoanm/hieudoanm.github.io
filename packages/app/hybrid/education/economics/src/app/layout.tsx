@@ -22,10 +22,10 @@ export const viewport: Viewport = {
   maximumScale: 1,
 };
 
-const THEME_INIT = `(function(){try{var t=localStorage.getItem('economics:theme');document.documentElement.dataset.theme=t==='economics-dark'?'economics-dark':'economics';}catch(e){document.documentElement.dataset.theme='economics';}})();`;
+const THEME_INIT = `(function(){try{var t=localStorage.getItem('economics:theme');document.documentElement.dataset.theme=t==='economics-dark'?'economics-dark':'economics-light';}catch(e){document.documentElement.dataset.theme='economics-light';}})();`;
 
 const RootLayout: FC<{ children: ReactNode }> = ({ children }) => (
-  <html lang="en" data-theme="economics">
+  <html lang="en" data-theme="economics-light">
     <head>
       <script dangerouslySetInnerHTML={{ __html: THEME_INIT }} />
       <link rel="apple-touch-icon" href="/icons/icon-192.png" />

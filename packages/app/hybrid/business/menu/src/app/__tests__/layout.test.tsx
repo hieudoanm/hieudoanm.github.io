@@ -32,7 +32,7 @@ describe('RootLayout', () => {
         <div />
       </RootLayout>,
     );
-    expect(document.documentElement).toHaveAttribute('data-theme', 'dim');
+    expect(document.documentElement).toHaveAttribute('data-theme', 'menu-dark');
   });
 });
 

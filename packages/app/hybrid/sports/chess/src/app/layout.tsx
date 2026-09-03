@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 const RootLayout: FC<{ children: ReactNode }> = ({ children }) => (
   <html
     lang="en"
-    data-theme="chess"
+    data-theme="chess-light"
     className={`${sans.variable} ${mono.variable}`}>
     <body className="h-screen overflow-hidden">{children}</body>
   </html>

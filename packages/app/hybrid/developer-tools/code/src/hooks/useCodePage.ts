@@ -37,7 +37,7 @@ export const useCodePage = () => {
   const [rootPath, setRootPath] = useState<string | null>(null);
   const [pendingDelete, setPendingDelete] = useState<string | null>(null);
   const [showFilePrompt, setShowFilePrompt] = useState(false);
-  const [theme, setTheme] = useState<'dim' | 'winter'>('dim');
+  const [theme, setTheme] = useState<'code-dark' | 'code-light'>('code-dark');
   const [showQuickOpen, setShowQuickOpen] = useState(false);
   const [quickOpenQuery, setQuickOpenQuery] = useState('');
   const [globalSearchQuery, setGlobalSearchQuery] = useState('');
@@ -346,7 +346,7 @@ export const useCodePage = () => {
 
   const toggleTheme = useCallback(() => {
     setTheme((prev) => {
-      const next = prev === 'dim' ? 'winter' : 'dim';
+      const next = prev === 'code-dark' ? 'code-light' : 'code-dark';
       document.documentElement.setAttribute('data-theme', next);
       return next;
     });

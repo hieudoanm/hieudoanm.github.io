@@ -16,7 +16,7 @@ describe('RootLayout', () => {
   it('sets the html theme and language attributes', () => {
     render(<RootLayout>content</RootLayout>);
     const html = document.documentElement;
-    expect(html.getAttribute('data-theme')).toBe('nothing');
+    expect(html.getAttribute('data-theme')).toBe('code-light');
     expect(html.getAttribute('lang')).toBe('en');
   });
 

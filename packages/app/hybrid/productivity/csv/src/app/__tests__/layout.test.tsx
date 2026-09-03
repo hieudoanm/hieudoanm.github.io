@@ -26,7 +26,7 @@ describe('RootLayout', () => {
       </RootLayout>
     );
     const html = document.documentElement;
-    expect(html).toHaveAttribute('data-theme', 'spreadsheet');
+    expect(html).toHaveAttribute('data-theme', 'csv-light');
     expect(html!.className).toContain('--font-sans');
     expect(html!.className).toContain('--font-mono');
     expect(screen.getByText('hello page')).toBeInTheDocument();

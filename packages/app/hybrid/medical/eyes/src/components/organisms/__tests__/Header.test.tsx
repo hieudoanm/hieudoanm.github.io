@@ -4,7 +4,7 @@ import { Header } from '@/components/organisms/Header';
 describe('Header', () => {
   beforeEach(() => {
     window.localStorage.clear();
-    document.documentElement.dataset.theme = 'luxury';
+    document.documentElement.dataset.theme = 'eyes-dark';
   });
 
   it('renders the title', () => {
@@ -39,20 +39,20 @@ describe('Header', () => {
       name: /switch to light theme/i,
     });
     fireEvent.click(toggle);
-    expect(document.documentElement.dataset.theme).toBe('light');
-    expect(window.localStorage.getItem('eyes-theme')).toBe('light');
+    expect(document.documentElement.dataset.theme).toBe('eyes-light');
+    expect(window.localStorage.getItem('eyes-theme')).toBe('eyes-light');
     expect(
       screen.getByRole('button', { name: /switch to dark theme/i })
     ).toBeInTheDocument();
   });
 
   it('toggles back to dark theme from light', () => {
-    window.localStorage.setItem('eyes-theme', 'light');
+    window.localStorage.setItem('eyes-theme', 'eyes-light');
     render(<Header title="Eyes" />);
     fireEvent.click(
       screen.getByRole('button', { name: /switch to dark theme/i })
     );
-    expect(document.documentElement.dataset.theme).toBe('luxury');
-    expect(window.localStorage.getItem('eyes-theme')).toBe('luxury');
+    expect(document.documentElement.dataset.theme).toBe('eyes-dark');
+    expect(window.localStorage.getItem('eyes-theme')).toBe('eyes-dark');
   });
 });

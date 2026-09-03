@@ -36,7 +36,7 @@ export const SnellenChart: FC = () => {
 
   return (
     <div
-      data-theme="luxury"
+      data-theme="eyes-dark"
       className="flex h-screen w-full max-w-4xl flex-col p-8">
       <div className="flex w-full items-center justify-center">
         <span className="text-primary/50 text-[0.6rem] font-light tracking-[0.35em] uppercase">

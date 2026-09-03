@@ -6,39 +6,7 @@ import { FaArrowLeft } from 'react-icons/fa';
 import { useData } from '@/providers/DataProvider';
 import { useToast } from '@/providers/ToastProvider';
 
-const THEMES = [
-  'nothing',
-  'night',
-  'dark',
-  'light',
-  'cupcake',
-  'emerald',
-  'corporate',
-  'synthwave',
-  'retro',
-  'cyberpunk',
-  'valentine',
-  'garden',
-  'forest',
-  'aqua',
-  'lofi',
-  'pastel',
-  'fantasy',
-  'wireframe',
-  'black',
-  'luxury',
-  'dracula',
-  'cmyk',
-  'autumn',
-  'business',
-  'acid',
-  'lemonade',
-  'coffee',
-  'winter',
-  'dim',
-  'nord',
-  'sunset',
-];
+const THEMES = ['messaging-light', 'messaging-dark'];
 
 const DISAPPEARING_OPTIONS = [
   { value: 0, label: 'Off' },

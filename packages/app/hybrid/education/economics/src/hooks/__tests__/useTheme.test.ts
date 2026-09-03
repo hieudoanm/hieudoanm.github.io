@@ -9,7 +9,7 @@ describe('useTheme', () => {
 
   it('defaults to the light theme', () => {
     const { result } = renderHook(() => useTheme());
-    expect(result.current.theme).toBe('economics');
+    expect(result.current.theme).toBe('economics-light');
   });
 
   it('applies theme to document and toggles to dark', () => {
@@ -32,8 +32,8 @@ describe('useTheme', () => {
     act(() => {
       result.current.toggleTheme();
     });
-    expect(result.current.theme).toBe('economics');
-    expect(localStorage.getItem('economics:theme')).toBe('economics');
+    expect(result.current.theme).toBe('economics-light');
+    expect(localStorage.getItem('economics:theme')).toBe('economics-light');
   });
 
   it('restores stored theme on mount', async () => {

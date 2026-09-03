@@ -107,7 +107,7 @@ const seedDb = (): void => {
   (db.history.getAll as jest.Mock).mockResolvedValue([]);
   (db.layers.getAll as jest.Mock).mockResolvedValue([]);
   (db.settings.get as jest.Mock).mockResolvedValue({
-    theme: 'nothing',
+    theme: 'photo-light',
     defaultExportFormat: 'png',
     canvasBackground: 'checkerboard',
     defaultQuality: 85,

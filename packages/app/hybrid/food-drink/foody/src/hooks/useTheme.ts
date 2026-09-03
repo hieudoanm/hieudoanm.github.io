@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from 'react';
 
-export type Theme = 'foody' | 'foody-dark';
+export type Theme = 'foody-light' | 'foody-dark';
 
 const THEME_KEY = 'foody:theme';
-const DEFAULT_THEME: Theme = 'foody';
+const DEFAULT_THEME: Theme = 'foody-light';
 
 const readStoredTheme = (): Theme => {
   try {
@@ -39,7 +39,7 @@ export const useTheme = (): {
     theme,
     toggleTheme: () =>
       setTheme((current) =>
-        current === 'foody-dark' ? 'foody' : 'foody-dark'
+        current === 'foody-dark' ? 'foody-light' : 'foody-dark'
       ),
   };
 };

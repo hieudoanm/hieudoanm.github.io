@@ -13,8 +13,8 @@ const navItems = [
 const STORAGE_KEY = 'tax-theme';
 
 const getInitialTheme = (): string => {
-  if (typeof window === 'undefined') return 'nothing';
-  return localStorage.getItem(STORAGE_KEY) || 'nothing';
+  if (typeof window === 'undefined') return 'tax-dark';
+  return localStorage.getItem(STORAGE_KEY) || 'tax-dark';
 };
 
 export const Header: FC = () => {
@@ -26,7 +26,7 @@ export const Header: FC = () => {
   }, [theme]);
 
   const toggleTheme = () =>
-    setTheme((current) => (current === 'nothing' ? 'winter' : 'nothing'));
+    setTheme((current) => (current === 'tax-dark' ? 'tax-light' : 'tax-dark'));
 
   return (
     <header className="border-base-300 bg-base-200 sticky top-0 z-30 border-b px-4 py-3">
@@ -46,7 +46,7 @@ export const Header: FC = () => {
             onClick={toggleTheme}
             data-testid="theme-toggle"
             aria-label="Toggle theme">
-            {theme === 'nothing' ? (
+            {theme === 'tax-dark' ? (
               <FiSun className="text-lg" />
             ) : (
               <FiMoon className="text-lg" />

@@ -25,7 +25,7 @@ const mockPush = jest.fn();
 const mockUpdateSettings = jest.fn().mockResolvedValue(undefined);
 
 const baseSettings = {
-  theme: 'nothing',
+  theme: 'database-light',
   defaultPort: 5432,
   editorFontSize: 14,
   queryTimeout: 30,
@@ -43,7 +43,7 @@ describe('SettingsPage', () => {
 
   it('renders settings with current values', () => {
     render(<SettingsPage />);
-    expect(screen.getByRole('combobox')).toHaveValue('nothing');
+    expect(screen.getByRole('combobox')).toHaveValue('database-light');
     expect(screen.getByText('Font Size: 14px')).toBeInTheDocument();
     expect(screen.getByText('Query Timeout: 30s')).toBeInTheDocument();
   });
@@ -51,19 +51,19 @@ describe('SettingsPage', () => {
   it('saves updated settings and applies the theme', async () => {
     render(<SettingsPage />);
     fireEvent.change(screen.getByRole('combobox'), {
-      target: { value: 'dracula' },
+      target: { value: 'database-dark' },
     });
     fireEvent.click(screen.getByText('Save Settings'));
     await waitFor(() =>
       expect(mockUpdateSettings).toHaveBeenCalledWith({
-        theme: 'dracula',
+        theme: 'database-dark',
         editorFontSize: 14,
         queryTimeout: 30,
       })
     );
     await waitFor(() =>
       expect(document.documentElement.getAttribute('data-theme')).toBe(
-        'dracula'
+        'database-dark'
       )
     );
   });

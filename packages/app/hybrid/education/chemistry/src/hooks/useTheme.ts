@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from 'react';
 
-export type Theme = 'chemistry' | 'chemistry-dark';
+export type Theme = 'chemistry-light' | 'chemistry-dark';
 
 const THEME_KEY = 'chemistry:theme';
-const DEFAULT_THEME: Theme = 'chemistry';
+const DEFAULT_THEME: Theme = 'chemistry-light';
 
 const readStoredTheme = (): Theme => {
   try {
@@ -39,7 +39,7 @@ export const useTheme = (): {
     theme,
     toggleTheme: () =>
       setTheme((current) =>
-        current === 'chemistry-dark' ? 'chemistry' : 'chemistry-dark'
+        current === 'chemistry-dark' ? 'chemistry-light' : 'chemistry-dark'
       ),
   };
 };

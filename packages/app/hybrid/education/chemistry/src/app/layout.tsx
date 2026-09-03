@@ -22,10 +22,10 @@ export const viewport: Viewport = {
   maximumScale: 1,
 };
 
-const THEME_INIT = `(function(){try{var t=localStorage.getItem('chemistry:theme');document.documentElement.dataset.theme=t==='chemistry-dark'?'chemistry-dark':'chemistry';}catch(e){document.documentElement.dataset.theme='chemistry';}})();`;
+const THEME_INIT = `(function(){try{var t=localStorage.getItem('chemistry:theme');document.documentElement.dataset.theme=t==='chemistry-dark'?'chemistry-dark':'chemistry-light';}catch(e){document.documentElement.dataset.theme='chemistry-light';}})();`;
 
 const RootLayout: FC<{ children: ReactNode }> = ({ children }) => (
-  <html lang="en" data-theme="chemistry">
+  <html lang="en" data-theme="chemistry-light">
     <head>
       <script dangerouslySetInnerHTML={{ __html: THEME_INIT }} />
       <link rel="apple-touch-icon" href="/icons/icon-192.png" />

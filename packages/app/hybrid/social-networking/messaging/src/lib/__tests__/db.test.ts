@@ -164,7 +164,7 @@ describe('db.settings', () => {
   it('returns defaults when nothing is stored', async () => {
     const settings = await db.settings.get();
     expect(settings).toMatchObject<Partial<AppSettings>>({
-      theme: 'nothing',
+      theme: 'messaging-light',
       notifications: true,
       readReceipts: true,
       typingIndicators: true,
@@ -173,9 +173,9 @@ describe('db.settings', () => {
   });
 
   it('stores and retrieves settings with the default key', async () => {
-    await db.settings.put({ ...(await db.settings.get()), theme: 'dark' });
+    await db.settings.put({ ...(await db.settings.get()), theme: 'messaging-dark' });
     const settings = await db.settings.get();
-    expect(settings.theme).toBe('dark');
+    expect(settings.theme).toBe('messaging-dark');
     expect(settings.id).toBe('default');
   });
 });

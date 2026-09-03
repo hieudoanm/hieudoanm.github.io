@@ -9,7 +9,7 @@ jest.mock('@/lib/db', () => ({
     settings: {
       get: jest.fn().mockResolvedValue({
         id: 'default',
-        theme: 'nothing',
+        theme: 'database-light',
         defaultPort: 5432,
         editorFontSize: 14,
         queryTimeout: 30,

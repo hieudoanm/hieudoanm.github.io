@@ -29,7 +29,7 @@ describe('RootLayout', () => {
         <div />
       </RootLayout>,
     );
-    expect(document.documentElement).toHaveAttribute('data-theme', 'economics');
+    expect(document.documentElement).toHaveAttribute('data-theme', 'economics-light');
   });
 });
 
