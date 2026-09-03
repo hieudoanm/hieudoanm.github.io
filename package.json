@@ -22,7 +22,7 @@
   "scripts": {
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "test": "turbo run test --concurrency=2",
+    "test": "turbo run test --concurrency=1",
     "build": "turbo run build",
     "postbuild": "./scripts/post-build.sh --all",
     "format": "turbo run format",
