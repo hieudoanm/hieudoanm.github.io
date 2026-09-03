@@ -7,6 +7,10 @@ jest.mock('@/providers/Providers', () => ({
   ),
 }));
 
+jest.mock('@/components/organisms/Header', () => ({
+  Header: () => <div data-testid="header">Header</div>,
+}));
+
 describe('layout', () => {
   it('exports app metadata', () => {
     expect(metadata.title).toBe('Tax');
@@ -21,6 +25,15 @@ describe('layout', () => {
       </RootLayout>
     );
     expect(screen.getByText('Layout Content')).toBeTruthy();
+  });
+
+  it('renders the header', () => {
+    render(
+      <RootLayout>
+        <div>Content</div>
+      </RootLayout>
+    );
+    expect(screen.getByTestId('header')).toBeTruthy();
   });
 
   it('sets correct html attributes', () => {

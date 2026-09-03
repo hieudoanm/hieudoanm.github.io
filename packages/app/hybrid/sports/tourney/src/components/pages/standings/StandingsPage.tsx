@@ -6,7 +6,6 @@ import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { useData } from '@/providers/DataProvider';
 import { Navbar, NAV_ITEMS } from '@/components/organisms/Navbar';
-import { Header } from '@/components/organisms/Header';
 import { calculateStandings } from '@/data/models';
 import type { StandingSnapshot } from '@/types';
 import { StandingsTable } from './StandingsTable';
@@ -92,16 +91,6 @@ const StandingsPageContent: FC = () => {
 
   return (
     <div className="flex min-h-dvh flex-col pb-20">
-      <Header
-        title={tournament.name}
-        subtitle="Standings"
-        action={
-          <Link href={`/tournament?id=${id}`} className="btn btn-ghost btn-sm">
-            Back
-          </Link>
-        }
-      />
-
       <main className="container mx-auto flex flex-1 flex-col gap-6 p-6">
         <div className="border-base-content/10 bg-base-200 rounded-2xl border p-4">
           <h3 className="mb-2 text-sm font-medium">Standings Snapshots</h3>

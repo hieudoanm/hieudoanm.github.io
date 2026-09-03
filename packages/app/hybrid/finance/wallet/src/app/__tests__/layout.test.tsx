@@ -4,6 +4,9 @@ jest.mock(
   () => require('@/test-helpers').mockNextNavigation
 );
 jest.mock('next/link', () => require('@/test-helpers').mockLinkModule);
+jest.mock('@/components/organisms/Header', () => () => (
+  <div data-testid="header">Header</div>
+));
 
 import { screen } from '@testing-library/react';
 import { renderWithProviders } from '@/test-helpers';
@@ -23,5 +26,14 @@ describe('RootLayout', () => {
       </RootLayout>
     );
     expect(screen.getByTestId('child')).toBeInTheDocument();
+  });
+
+  it('renders the header', () => {
+    renderWithProviders(
+      <RootLayout>
+        <div>Child</div>
+      </RootLayout>
+    );
+    expect(screen.getByTestId('header')).toBeInTheDocument();
   });
 });

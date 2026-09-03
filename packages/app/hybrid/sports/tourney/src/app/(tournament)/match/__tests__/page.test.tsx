@@ -92,7 +92,8 @@ describe('App route', () => {
 
   it('renders the match route', () => {
     render(<Route />);
-    expect(screen.getByText('Match Detail')).toBeInTheDocument();
+    expect(screen.getAllByText('Alpha').length).toBeGreaterThan(0);
+    expect(screen.getAllByText('Beta').length).toBeGreaterThan(0);
     expect(screen.getByRole('button', { name: 'Save' })).toBeInTheDocument();
   });
 });

@@ -1,12 +1,10 @@
 'use client';
 
 import { FC } from 'react';
-import { Header } from '@/components/organisms/Header';
 import { DownloadsTemplate } from '@/components/templates/DownloadsTemplate';
 
 const DownloadsPage: FC = () => (
   <div className="flex flex-col">
-    <Header />
     <DownloadsTemplate
       version="0.0.1"
       items={[

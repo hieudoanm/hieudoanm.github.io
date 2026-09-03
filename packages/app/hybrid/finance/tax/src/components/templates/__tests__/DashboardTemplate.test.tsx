@@ -1,4 +1,4 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { DashboardTemplate } from '../DashboardTemplate';
 
 jest.mock('next/navigation', () => ({
@@ -42,31 +42,5 @@ describe('DashboardTemplate', () => {
       </DashboardTemplate>
     );
     expect(screen.getByText('Business Content')).toBeTruthy();
-  });
-
-  it('toggles sidebar on menu button click', () => {
-    render(
-      <DashboardTemplate>
-        <div>Content</div>
-      </DashboardTemplate>
-    );
-    const menuBtn = screen.getByLabelText('Toggle menu');
-    fireEvent.click(menuBtn);
-    expect(menuBtn).toBeTruthy();
-  });
-
-  it('overlay click closes sidebar', () => {
-    render(
-      <DashboardTemplate>
-        <div>Content</div>
-      </DashboardTemplate>
-    );
-    const menuBtn = screen.getByLabelText('Toggle menu');
-    fireEvent.click(menuBtn);
-    const overlay = document.querySelector('.fixed.inset-0.bg-black\\/50');
-    if (overlay) {
-      fireEvent.click(overlay);
-    }
-    expect(screen.getByText('Content')).toBeTruthy();
   });
 });

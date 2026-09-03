@@ -6,7 +6,6 @@ import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { useData } from '@/providers/DataProvider';
 import { Navbar, NAV_ITEMS } from '@/components/organisms/Navbar';
-import { Header } from '@/components/organisms/Header';
 import {
   buildBracketExportRows,
   buildBracketPdf,
@@ -78,16 +77,6 @@ const BracketPageContent: FC = () => {
 
   return (
     <div className="flex min-h-dvh flex-col pb-20">
-      <Header
-        title={tournament.name}
-        subtitle="Bracket"
-        action={
-          <Link href={`/tournament?id=${id}`} className="btn btn-ghost btn-sm">
-            Back
-          </Link>
-        }
-      />
-
       <main className="flex-1 overflow-x-auto p-6">
         <div className="mb-4 flex flex-wrap gap-2">
           <button

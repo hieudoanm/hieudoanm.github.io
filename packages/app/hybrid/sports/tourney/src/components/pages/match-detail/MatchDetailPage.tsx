@@ -6,24 +6,15 @@ import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { useData } from '@/providers/DataProvider';
 import { Navbar, NAV_ITEMS } from '@/components/organisms/Navbar';
-import { Header } from '@/components/organisms/Header';
 import { advanceBracketWinners } from '@/lib/formats';
 import { getAggregateScores, resolveMatchResult } from '@/lib/match-rules';
-import type { Match, MatchSet, MatchStatus } from '@/types';
+import type { Match, MatchSet } from '@/types';
 import { MatchParticipants } from './MatchParticipants';
 import { ScoreEditor } from './ScoreEditor';
 import { SetEditor, type SetRow } from './SetEditor';
 import { PenaltyEditor } from './PenaltyEditor';
 import { WinnerSelector } from './WinnerSelector';
 import { WalkoverSelector } from './WalkoverSelector';
-
-const statusBadgeClass: Record<MatchStatus, string> = {
-  scheduled: 'badge-neutral',
-  'in-progress': 'badge-warning',
-  completed: 'badge-success',
-  postponed: 'badge-info',
-  walkover: 'badge-error',
-};
 
 type MatchPatch = Partial<
   Omit<
@@ -266,22 +257,6 @@ const MatchDetailPageContent: FC = () => {
 
   return (
     <div className="flex min-h-dvh flex-col pb-20">
-      <Header
-        title="Match Detail"
-        badges={
-          <span className={`badge badge-sm ${statusBadgeClass[match.status]}`}>
-            {match.status}
-          </span>
-        }
-        action={
-          <Link
-            href={`/matches?tournamentId=${match.tournamentId}`}
-            className="btn btn-ghost btn-sm">
-            Back
-          </Link>
-        }
-      />
-
       <main className="container mx-auto flex flex-1 flex-col gap-6 p-6">
         <MatchParticipants
           participant1Name={participant1?.name ?? 'TBD'}

@@ -8,8 +8,6 @@ import { useData } from '@/providers/DataProvider';
 import { calculateStandings } from '@/lib/standings';
 import { generateBracket } from '@/lib/formats';
 import { Navbar, NAV_ITEMS } from '@/components/organisms/Navbar';
-import { Header } from '@/components/organisms/Header';
-import { statusBadgeClass, formatLabel } from './constants';
 import { OverviewView } from './OverviewView';
 import { BracketView } from './BracketView';
 import { StandingsView } from './StandingsView';
@@ -122,26 +120,6 @@ const TournamentDetailPageContent: FC = () => {
 
   return (
     <div className="flex min-h-dvh flex-col pb-20">
-      <Header
-        title={tournament.name}
-        badges={
-          <>
-            <span
-              className={`badge badge-sm ${statusBadgeClass[tournament.status]}`}>
-              {tournament.status}
-            </span>
-            <span className="badge badge-sm badge-outline">
-              {formatLabel[tournament.format]}
-            </span>
-          </>
-        }
-        action={
-          <Link href="/" className="btn btn-ghost btn-sm">
-            Back
-          </Link>
-        }
-      />
-
       <div className="border-base-300 bg-base-100 sticky top-[65px] z-10 border-b px-6">
         <div className="flex gap-1 overflow-x-auto">
           {tabs.map((tab) => (

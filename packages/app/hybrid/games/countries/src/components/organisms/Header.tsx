@@ -31,6 +31,21 @@ export const Header: FC = () => {
           Countries
         </Link>
         <nav className="flex items-center gap-1">
+          <Link
+            href="/about"
+            className="text-base-content/60 hover:text-primary px-2 py-1 text-xs transition-colors">
+            ABOUT
+          </Link>
+          <Link
+            href="/downloads"
+            className="text-base-content/60 hover:text-primary px-2 py-1 text-xs transition-colors">
+            DOWNLOADS
+          </Link>
+          <Link
+            href="/version"
+            className="text-base-content/60 hover:text-primary px-2 py-1 text-xs transition-colors">
+            VERSION
+          </Link>
           <button
             type="button"
             className="btn btn-ghost btn-sm"

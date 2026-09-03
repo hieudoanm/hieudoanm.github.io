@@ -38,6 +38,11 @@ export const Header: FC = () => {
             About
           </Link>
           <Link
+            href="/downloads/"
+            className={`btn btn-ghost btn-sm ${pathname === '/downloads/' ? 'btn-active' : ''}`}>
+            Downloads
+          </Link>
+          <Link
             href="/version/"
             className={`btn btn-ghost btn-sm ${pathname === '/version/' ? 'btn-active' : ''}`}>
             Version

@@ -5,7 +5,6 @@ import { DailySummary } from '@/components/organisms/DailySummary';
 import { DigitalReceipt } from '@/components/organisms/DigitalReceipt';
 import { DiscountManager } from '@/components/organisms/DiscountManager';
 import { GiftCardManager } from '@/components/organisms/GiftCardManager';
-import { Header } from '@/components/organisms/Header';
 import { InventoryManager } from '@/components/organisms/InventoryManager';
 import { ItemCatalog } from '@/components/organisms/ItemCatalog';
 import { PaymentPanel } from '@/components/organisms/PaymentPanel';
@@ -154,7 +153,6 @@ const HomePage: NextPage = () => {
 
   return (
     <div className="bg-base-100 flex h-screen flex-col overflow-hidden">
-      <Header />
       {view === 'sale' && (
         <main className="container mx-auto flex min-h-0 flex-1 flex-col overflow-y-auto p-4 md:p-8">
           <div className="flex flex-wrap items-center gap-2 pb-4">

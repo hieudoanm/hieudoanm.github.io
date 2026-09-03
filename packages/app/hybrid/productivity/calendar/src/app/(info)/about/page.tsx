@@ -1,10 +1,8 @@
 import { FC } from 'react'
-import { Header } from '@/components/organisms/Header'
 import { AboutTemplate } from '@/components/templates/AboutTemplate'
 
 const AboutPage: FC = () => (
   <div className="flex flex-col">
-    <Header />
     <AboutTemplate
       name="Calendar"
       description="A calendar productivity app with multiple views including daily, weekly, monthly, quarterly, half, and yearly."

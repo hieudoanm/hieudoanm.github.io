@@ -45,6 +45,12 @@ describe('Header', () => {
     expect(screen.getByText('Version')).toBeTruthy();
   });
 
+  it('renders Downloads link', () => {
+    render(<Header />);
+    expect(screen.getByText('Downloads')).toBeTruthy();
+    expect(screen.getByText('Downloads')).toHaveAttribute('href', '/downloads/');
+  });
+
   it('renders theme toggle button', () => {
     render(<Header />);
     expect(screen.getByTestId('theme-toggle')).toBeTruthy();

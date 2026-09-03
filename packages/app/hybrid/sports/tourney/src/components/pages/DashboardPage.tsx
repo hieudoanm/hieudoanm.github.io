@@ -2,13 +2,11 @@
 
 import { useData } from '@/providers/DataProvider';
 import type { TournamentStatus } from '@/types';
-import Link from 'next/link';
 import { useState } from 'react';
 import { SearchBar } from '@/components/molecules/SearchBar';
 import { StatusFilter } from '@/components/molecules/StatusFilter';
 import { TournamentList } from '@/components/molecules/TournamentList';
 import { Navbar, NAV_ITEMS } from '@/components/organisms/Navbar';
-import { Header } from '@/components/organisms/Header';
 import type { FC } from 'react';
 
 export const DashboardPage: FC = () => {
@@ -31,20 +29,6 @@ export const DashboardPage: FC = () => {
 
   return (
     <div className="flex min-h-dvh flex-col pb-20">
-      <Header
-        title="Tourney"
-        action={
-          <div className="flex items-center gap-2">
-            <Link href="/downloads" className="btn btn-ghost btn-sm">
-              Downloads
-            </Link>
-            <Link href="/create" className="btn btn-primary btn-sm">
-              Create
-            </Link>
-          </div>
-        }
-      />
-
       <main className="container mx-auto flex flex-1 flex-col p-4 sm:p-6">
         <SearchBar value={search} onChange={setSearch} />
         <StatusFilter value={filter} onChange={setFilter} />

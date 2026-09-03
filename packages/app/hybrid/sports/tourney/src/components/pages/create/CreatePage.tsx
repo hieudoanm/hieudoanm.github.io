@@ -5,7 +5,6 @@ import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { useData } from '@/providers/DataProvider';
 import { Navbar, NAV_ITEMS } from '@/components/organisms/Navbar';
-import { Header } from '@/components/organisms/Header';
 import { FormatSelector } from './FormatSelector';
 import { TiebreakerList } from './TiebreakerList';
 import { getTemplates, saveTemplate, deleteTemplate } from '@/lib/templates';
@@ -103,8 +102,6 @@ export const CreatePage: FC = () => {
 
   return (
     <div className="flex min-h-dvh flex-col pb-20">
-      <Header title="Create Tournament" />
-
       <main className="container mx-auto flex-1 p-6">
         <form onSubmit={handleSubmit} className="flex flex-col gap-6">
           <fieldset className="border-base-content/20 rounded-xl border p-4">

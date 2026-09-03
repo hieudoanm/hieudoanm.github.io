@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { Header } from '../Header';
 
 jest.mock('next/navigation', () => ({
@@ -18,6 +19,11 @@ jest.mock('next/link', () => {
 });
 
 describe('Header', () => {
+  beforeEach(() => {
+    localStorage.clear();
+    document.documentElement.removeAttribute('data-theme');
+  });
+
   it('renders the app title', () => {
     render(<Header />);
     expect(screen.getByText('8-BIT GAMES')).toBeInTheDocument();
@@ -32,5 +38,31 @@ describe('Header', () => {
   it('renders about link', () => {
     render(<Header />);
     expect(screen.getByText('ABOUT')).toBeInTheDocument();
+  });
+
+  it('renders downloads link', () => {
+    render(<Header />);
+    expect(screen.getByText('DOWNLOADS')).toBeInTheDocument();
+  });
+
+  it('renders version link', () => {
+    render(<Header />);
+    expect(screen.getByText('VERSION')).toBeInTheDocument();
+  });
+
+  it('applies and persists the default theme', () => {
+    render(<Header />);
+    expect(document.documentElement.getAttribute('data-theme')).toBe('nothing');
+    expect(localStorage.getItem('8-bit-theme')).toBe('nothing');
+  });
+
+  it('toggles between themes', async () => {
+    const user = userEvent.setup();
+    render(<Header />);
+    await user.click(screen.getByTestId('theme-toggle'));
+    expect(document.documentElement.getAttribute('data-theme')).toBe(
+      'bumblebee'
+    );
+    expect(localStorage.getItem('8-bit-theme')).toBe('bumblebee');
   });
 });

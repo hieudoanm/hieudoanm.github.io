@@ -2,40 +2,46 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import Header from '../Header';
 
 jest.mock('next/link', () => {
-  return ({
-    children,
-    href,
-    ...props
-  }: {
-    children: React.ReactNode;
-    href: string;
-    [key: string]: unknown;
-  }) => (
-    <a href={href} {...props}>
-      {children}
-    </a>
+  return ({ children, href }: { children: React.ReactNode; href: string }) => (
+    <a href={href}>{children}</a>
   );
 });
 
-jest.mock('next/navigation', () => ({
-  usePathname: () => '/',
-}));
-
 describe('Header', () => {
-  it('renders the app name', () => {
-    render(<Header />);
-    expect(screen.getByText('Wallet')).toBeInTheDocument();
+  beforeEach(() => {
+    document.documentElement.removeAttribute('data-theme');
+    localStorage.clear();
   });
 
-  it('renders notification bell', () => {
+  it('renders the Wallet brand linking home', () => {
     render(<Header />);
-    expect(screen.getByLabelText('Notifications')).toBeInTheDocument();
+    const brand = screen.getByRole('link', { name: /wallet/i });
+    expect(brand).toBeInTheDocument();
+    expect(brand.getAttribute('href')).toBe('/');
   });
 
-  it('toggles menu on hamburger click', () => {
+  it('renders About, Downloads, and Version links', () => {
     render(<Header />);
-    const menuButton = screen.getByLabelText('Open menu');
-    fireEvent.click(menuButton);
-    expect(screen.getByLabelText('Close menu')).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'About' })).toHaveAttribute(
+      'href',
+      '/about',
+    );
+    expect(screen.getByRole('link', { name: 'Downloads' })).toHaveAttribute(
+      'href',
+      '/downloads',
+    );
+    expect(screen.getByRole('link', { name: 'Version' })).toHaveAttribute(
+      'href',
+      '/version',
+    );
+  });
+
+  it('renders a theme toggle and toggles the theme', () => {
+    render(<Header />);
+    const toggle = screen.getByTestId('theme-toggle');
+    expect(toggle).toBeInTheDocument();
+    fireEvent.click(toggle);
+    expect(document.documentElement).toHaveAttribute('data-theme', 'winter');
+    expect(localStorage.getItem('wallet-theme')).toBe('winter');
   });
 });

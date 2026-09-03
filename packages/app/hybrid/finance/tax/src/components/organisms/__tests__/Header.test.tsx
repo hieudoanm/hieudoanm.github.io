@@ -8,22 +8,40 @@ jest.mock('next/link', () => {
 });
 
 describe('Header', () => {
-  it('renders menu button', () => {
-    const onMenuToggle = jest.fn();
-    render(<Header onMenuToggle={onMenuToggle} />);
-    expect(screen.getByLabelText('Toggle menu')).toBeTruthy();
+  beforeEach(() => {
+    document.documentElement.removeAttribute('data-theme');
+    localStorage.clear();
   });
 
-  it('calls onMenuToggle when menu button clicked', () => {
-    const onMenuToggle = jest.fn();
-    render(<Header onMenuToggle={onMenuToggle} />);
-    fireEvent.click(screen.getByLabelText('Toggle menu'));
-    expect(onMenuToggle).toHaveBeenCalled();
-  });
-
-  it('renders profile link', () => {
+  it('renders the Tax brand linking home', () => {
     render(<Header />);
-    const profileLinks = screen.getAllByRole('link');
-    expect(profileLinks.length).toBeGreaterThan(0);
+    const brand = screen.getByRole('link', { name: /tax/i });
+    expect(brand).toBeInTheDocument();
+    expect(brand.getAttribute('href')).toBe('/');
+  });
+
+  it('renders About, Downloads, and Version links', () => {
+    render(<Header />);
+    expect(screen.getByRole('link', { name: 'About' })).toHaveAttribute(
+      'href',
+      '/about',
+    );
+    expect(screen.getByRole('link', { name: 'Downloads' })).toHaveAttribute(
+      'href',
+      '/downloads',
+    );
+    expect(screen.getByRole('link', { name: 'Version' })).toHaveAttribute(
+      'href',
+      '/version',
+    );
+  });
+
+  it('renders a theme toggle and persists the theme', () => {
+    render(<Header />);
+    const toggle = screen.getByTestId('theme-toggle');
+    expect(toggle).toBeInTheDocument();
+    fireEvent.click(toggle);
+    expect(document.documentElement).toHaveAttribute('data-theme', 'winter');
+    expect(localStorage.getItem('tax-theme')).toBe('winter');
   });
 });

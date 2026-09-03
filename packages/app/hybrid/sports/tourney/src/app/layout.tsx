@@ -2,6 +2,7 @@ import '@/styles/globals.css';
 import type { Metadata, Viewport } from 'next';
 import { FC } from 'react';
 import { Providers } from './providers';
+import { Header } from '@/components/organisms/Header';
 
 export const metadata: Metadata = {
   title: 'Tourney - Tournaments Manager',
@@ -23,6 +24,7 @@ export const viewport: Viewport = {
 const RootLayout: FC<{ children: React.ReactNode }> = ({ children }) => (
   <html lang="en" data-theme="nothing">
     <body className="bg-base-100 text-base-content">
+      <Header />
       <Providers>{children}</Providers>
     </body>
   </html>

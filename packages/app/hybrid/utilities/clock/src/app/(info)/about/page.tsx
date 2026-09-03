@@ -1,12 +1,10 @@
 'use client';
 
 import { FC } from 'react';
-import { Header } from '@/components/organisms/Header';
 import { AboutTemplate } from '@/components/templates/AboutTemplate';
 
 const AboutPage: FC = () => (
   <div className="flex flex-col">
-    <Header />
     <AboutTemplate
       name="Clock"
       description="A collection of time-related utilities: Pomodoro timer, watchface display, world clock, countdown timer, and stopwatch."

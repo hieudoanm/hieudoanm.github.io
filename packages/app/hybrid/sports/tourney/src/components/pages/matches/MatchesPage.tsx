@@ -6,7 +6,6 @@ import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { useData } from '@/providers/DataProvider';
 import { Navbar, NAV_ITEMS } from '@/components/organisms/Navbar';
-import { Header } from '@/components/organisms/Header';
 import { CalendarView } from '@/components/organisms/CalendarView';
 import { autoSchedule } from '@/lib/scheduling';
 import { MatchListItem } from './MatchListItem';
@@ -106,16 +105,6 @@ const MatchesPageContent: FC = () => {
 
   return (
     <div className="flex min-h-dvh flex-col pb-20">
-      <Header
-        title={tournament.name}
-        subtitle={`Matches (${tournamentMatches.length})`}
-        action={
-          <Link href={`/tournament?id=${id}`} className="btn btn-ghost btn-sm">
-            Back
-          </Link>
-        }
-      />
-
       <main className="container mx-auto flex flex-1 flex-col p-6">
         <div className="mb-4 flex flex-wrap items-center gap-2">
           <button

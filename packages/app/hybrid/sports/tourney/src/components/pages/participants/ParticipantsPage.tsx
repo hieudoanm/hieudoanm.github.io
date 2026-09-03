@@ -6,7 +6,6 @@ import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { useData } from '@/providers/DataProvider';
 import { Navbar, NAV_ITEMS } from '@/components/organisms/Navbar';
-import { Header } from '@/components/organisms/Header';
 import { AddParticipantForm } from './AddParticipantForm';
 import { BatchAddForm } from './BatchAddForm';
 import { ParticipantList } from './ParticipantList';
@@ -210,16 +209,6 @@ const ParticipantsPageContent: FC = () => {
 
   return (
     <div className="flex min-h-dvh flex-col pb-20">
-      <Header
-        title={tournament.name}
-        subtitle={`Participants (${tournamentParticipants.length}/${tournament.maxParticipants})`}
-        action={
-          <Link href={`/tournament?id=${id}`} className="btn btn-ghost btn-sm">
-            Back
-          </Link>
-        }
-      />
-
       <main className="container mx-auto flex flex-1 flex-col gap-4 p-6">
         <AddParticipantForm
           value={newName}

@@ -16,6 +16,21 @@ describe('Header', () => {
     );
   });
 
+  it('renders about link', () => {
+    render(<Header />);
+    expect(screen.getByText('ABOUT')).toHaveAttribute('href', '/about');
+  });
+
+  it('renders downloads link', () => {
+    render(<Header />);
+    expect(screen.getByText('DOWNLOADS')).toHaveAttribute('href', '/downloads');
+  });
+
+  it('renders version link', () => {
+    render(<Header />);
+    expect(screen.getByText('VERSION')).toHaveAttribute('href', '/version');
+  });
+
   it('applies and persists the default dracula theme', () => {
     render(<Header />);
     expect(document.documentElement.getAttribute('data-theme')).toBe('dracula');

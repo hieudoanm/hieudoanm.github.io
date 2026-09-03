@@ -8,6 +8,10 @@ jest.mock('@/lib/fonts', () => ({
 
 jest.mock('@/styles/globals.css', () => ({}))
 
+jest.mock('@/components/organisms/Header', () => ({
+  Header: () => <div data-testid="header">Header</div>,
+}))
+
 import RootLayout, { metadata } from '../layout'
 
 describe('RootLayout', () => {
@@ -18,6 +22,15 @@ describe('RootLayout', () => {
       </RootLayout>,
     )
     expect(screen.getByText('child')).toBeInTheDocument()
+  })
+
+  it('renders header', () => {
+    render(
+      <RootLayout>
+        <div />
+      </RootLayout>,
+    )
+    expect(screen.getByTestId('header')).toBeInTheDocument()
   })
 
   it('sets html data-theme', () => {
