@@ -2074,5 +2074,107 @@
         ]
       }
     ]
+  },
+  {
+    "id": "extensions",
+    "label": "Extensions (Browser)",
+    "items": [
+      {
+        "label": "Bored",
+        "primaryCategory": "Games",
+        "secondaryCategory": "Entertainment",
+        "icon": "PiDiceOne",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/extensions-browser-bored-latest",
+        "version": "0.0.1",
+        "lastUpdated": "2026-09-03",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".crx",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-bored-latest/bored-v3.crx"
+          },
+          {
+            "label": ".xpi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-bored-latest/bored-v2.xpi"
+          },
+          {
+            "label": ".zip",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-bored-latest/bored-v3.zip"
+          }
+        ]
+      },
+      {
+        "label": "GitHubX",
+        "primaryCategory": "Developer Tools",
+        "secondaryCategory": "Productivity",
+        "icon": "PiBrowser",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/extensions-browser-githubx-latest",
+        "version": "0.0.1",
+        "lastUpdated": "2026-09-03",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".crx",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-githubx-latest/githubx-v3.crx"
+          },
+          {
+            "label": ".xpi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-githubx-latest/githubx-v2.xpi"
+          },
+          {
+            "label": ".zip",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-githubx-latest/githubx-v3.zip"
+          }
+        ]
+      },
+      {
+        "label": "InstaX",
+        "primaryCategory": "Social Networking",
+        "secondaryCategory": "",
+        "icon": "PiImage",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/extensions-browser-instax-latest",
+        "version": "0.0.1",
+        "lastUpdated": "2026-09-03",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".crx",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-instax-latest/instax-v3.crx"
+          },
+          {
+            "label": ".xpi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-instax-latest/instax-v2.xpi"
+          },
+          {
+            "label": ".zip",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-instax-latest/instax-v3.zip"
+          }
+        ]
+      },
+      {
+        "label": "Snapshot",
+        "primaryCategory": "Utilities",
+        "secondaryCategory": "Graphics & Design",
+        "icon": "PiScan",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/extensions-browser-snapshot-latest",
+        "version": "0.0.1",
+        "lastUpdated": "2026-09-03",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".crx",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-snapshot-latest/snapshot-v3.crx"
+          },
+          {
+            "label": ".xpi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-snapshot-latest/snapshot-v2.xpi"
+          },
+          {
+            "label": ".zip",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-snapshot-latest/snapshot-v3.zip"
+          }
+        ]
+      }
+    ]
   }
 ]

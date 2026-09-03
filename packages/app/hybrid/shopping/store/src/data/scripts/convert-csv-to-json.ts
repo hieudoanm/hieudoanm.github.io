@@ -26,6 +26,9 @@ const COLUMNS = [
   'rpmUrl',
   'msiUrl',
   'exeUrl',
+  'crxUrl',
+  'xpiUrl',
+  'zipUrl',
 ] as const;
 
 type Column = (typeof COLUMNS)[number];
@@ -118,6 +121,9 @@ const toActions = (row: CsvRow): DownloadAction[] => {
     ['.x86_64.rpm', row.rpmUrl],
     ['.msi', row.msiUrl],
     ['.exe', row.exeUrl],
+    ['.crx', row.crxUrl],
+    ['.xpi', row.xpiUrl],
+    ['.zip', row.zipUrl],
   ];
 
   for (const [label, url] of platformMap) {

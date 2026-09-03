@@ -25,6 +25,10 @@ export const SECTION_META: Record<string, SectionMeta> = {
     label: 'CLIs',
     description: 'Command-line tools and binaries',
   },
+  extension: {
+    label: 'Extensions',
+    description: 'Browser extensions for Chrome, Firefox, and Edge',
+  },
 };
 
 export const ALL_PLATFORMS: { group: string; platforms: string[] }[] = [
