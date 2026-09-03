@@ -1,2 +1,2 @@
-:HL["/free/economics/_next/static/chunks/1p16irqf_ptnq.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4180,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"zt58HxMsolkFK-MBvwypl"}
+:HL["/free/economics/_next/static/chunks/1zul5_lm-op36.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4180,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"cv29xyYbw-gZ00DnNkUQv"}

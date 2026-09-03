@@ -1,2 +1,2 @@
-:HL["/free/casino/_next/static/chunks/2u-7odly-rk58.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4180,"slots":{"children":{"name":"(games)","param":null,"prefetchHints":4192,"slots":{"children":{"name":"roulette","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"F_IdJvOIS1bzriiAzuVfg"}
+:HL["/free/casino/_next/static/chunks/06mvgi2qv17wq.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4180,"slots":{"children":{"name":"(games)","param":null,"prefetchHints":4192,"slots":{"children":{"name":"roulette","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"bPEcYfsFsEDtq3P1b7kqe"}

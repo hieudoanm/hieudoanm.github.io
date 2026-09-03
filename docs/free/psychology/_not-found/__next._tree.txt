@@ -1,2 +1,2 @@
-:HL["/free/psychology/_next/static/chunks/1si6xmhu-9c5l.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4180,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"t2wKPiy6A910Aoewzc3pJ"}
+:HL["/free/psychology/_next/static/chunks/2bgevj7j6l-ns.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4180,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"CZM5etGalkLwrMse2HZwD"}

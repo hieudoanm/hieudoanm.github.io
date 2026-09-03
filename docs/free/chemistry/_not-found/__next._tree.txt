@@ -1,2 +1,2 @@
-:HL["/free/chemistry/_next/static/chunks/0jgqfg25l1sby.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4180,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"Bo05a1sEIs24pDUEaGvEY"}
+:HL["/free/chemistry/_next/static/chunks/071cwca4pbhfl.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4180,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"7o5OXk1di2XGrJy4MKRqE"}
