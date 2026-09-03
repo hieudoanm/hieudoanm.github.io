@@ -27,7 +27,9 @@ describe('SettingsPage', () => {
       target: { value: 'api-dark' },
     });
     expect(localStorage.getItem('api-client:theme')).toBe('api-dark');
-    expect(document.documentElement.getAttribute('data-theme')).toBe('api-dark');
+    expect(document.documentElement.getAttribute('data-theme')).toBe(
+      'api-dark'
+    );
   });
 
   it('restores saved theme on mount', () => {

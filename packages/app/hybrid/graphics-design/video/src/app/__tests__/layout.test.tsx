@@ -15,7 +15,10 @@ describe('RootLayout', () => {
         <p>page content</p>
       </RootLayout>
     );
-    expect(document.documentElement).toHaveAttribute('data-theme', 'video-light');
+    expect(document.documentElement).toHaveAttribute(
+      'data-theme',
+      'video-light'
+    );
     expect(document.documentElement).toHaveAttribute('lang', 'en');
     expect(document.body.textContent).toContain('page content');
   });

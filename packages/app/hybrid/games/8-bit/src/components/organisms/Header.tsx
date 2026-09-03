@@ -20,12 +20,16 @@ export const Header: FC = () => {
   }, [theme]);
 
   const toggleTheme = () =>
-    setTheme((current) => (current === '8-bit-dark' ? '8-bit-light' : '8-bit-dark'));
+    setTheme((current) =>
+      current === '8-bit-dark' ? '8-bit-light' : '8-bit-dark'
+    );
 
   return (
     <header className="border-base-300 bg-base-100 sticky top-0 z-10 border-b-2 px-4 py-3">
       <div className="flex items-center justify-between">
-        <Link href="/" className="text-primary text-xs font-bold tracking-wider">
+        <Link
+          href="/"
+          className="text-primary text-xs font-bold tracking-wider">
           8-BIT GAMES
         </Link>
 

@@ -33,7 +33,9 @@ describe('Header', () => {
 
   it('applies and persists the default dracula theme', () => {
     render(<Header />);
-    expect(document.documentElement.getAttribute('data-theme')).toBe('casino-dark');
+    expect(document.documentElement.getAttribute('data-theme')).toBe(
+      'casino-dark'
+    );
     expect(localStorage.getItem('casino-theme')).toBe('casino-dark');
   });
 
@@ -46,7 +48,9 @@ describe('Header', () => {
     );
     expect(localStorage.getItem('casino-theme')).toBe('casino-light');
     await user.click(screen.getByTestId('theme-toggle'));
-    expect(document.documentElement.getAttribute('data-theme')).toBe('casino-dark');
+    expect(document.documentElement.getAttribute('data-theme')).toBe(
+      'casino-dark'
+    );
   });
 
   it('restores a saved theme on mount', () => {

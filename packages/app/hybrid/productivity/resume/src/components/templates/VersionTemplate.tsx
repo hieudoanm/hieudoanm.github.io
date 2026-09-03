@@ -1,7 +1,8 @@
 'use client';
 
-import { useState, type FC } from 'react';
-import { LuCopy, LuCheck } from 'react-icons/lu';
+import type { FC } from 'react';
+import { useState } from 'react';
+import { FiCheck, FiCopy } from 'react-icons/fi';
 
 export const VersionTemplate: FC<{ version: string }> = ({ version }) => {
   const [copied, setCopied] = useState(false);
@@ -12,35 +13,91 @@ export const VersionTemplate: FC<{ version: string }> = ({ version }) => {
     setTimeout(() => setCopied(false), 1500);
   };
 
+  const [year, month, day, hh, mm, ss] = version.split('.');
+  const hasSegments = year && month && day;
+
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center px-6">
-      <p className="text-base-content/50 mb-6 text-xs tracking-[0.2em] uppercase">
-        Version
+    <div className="mx-auto flex w-full max-w-2xl flex-col items-center gap-6 px-6 py-16 text-center">
+      <p className="text-base-content/50 text-xs tracking-[0.2em] uppercase">
+        Current deployment
       </p>
 
-      <h1 className="mb-3">Resume Builder</h1>
+      <h1 className="mb-1">Version</h1>
 
-      <p className="text-base-content/50 mb-10 max-w-sm text-center text-sm">
-        Build your resume with 32 free templates and export it as PDF.
-      </p>
-
-      <div className="border-base-content/10 bg-base-200 mb-8 w-full max-w-md rounded-2xl border p-6">
-        <div className="flex items-center justify-between gap-4">
-          <span className="text-base-content/50 text-sm">Build version</span>
-          <button
-            type="button"
-            onClick={copy}
-            className="btn btn-accent btn-sm font-mono"
-            aria-label="Copy version">
-            {copied ? <LuCheck /> : <LuCopy />}
+      <div className="border-base-content/10 bg-base-200 w-full max-w-lg rounded-2xl border p-6">
+        {hasSegments ? (
+          <div className="flex items-center justify-center gap-0">
+            <Segment value={year} label="Year" primary />
+            <Dot />
+            <Segment value={month} label="Month" />
+            <Dot />
+            <Segment value={day} label="Day" />
+            {hh && (
+              <>
+                <Dot />
+                <Segment value={hh} label="Hour" />
+              </>
+            )}
+            {mm && (
+              <>
+                <Dot />
+                <Segment value={mm} label="Min" />
+              </>
+            )}
+            {ss && (
+              <>
+                <Dot />
+                <Segment value={ss} label="Sec" />
+              </>
+            )}
+          </div>
+        ) : (
+          <p className="text-error font-mono text-xl font-bold break-all">
             {version}
-          </button>
-        </div>
+          </p>
+        )}
       </div>
 
-      <span className="badge badge-accent rounded-full">Stable</span>
+      <div className="flex flex-wrap justify-center gap-3">
+        <button
+          onClick={copy}
+          className={`btn btn-sm rounded-full ${copied ? 'btn-success' : 'btn-primary'}`}>
+          {copied ? <FiCheck /> : <FiCopy />}
+          {copied ? 'Copied' : 'Copy version'}
+        </button>
+        <button className="btn btn-neutral btn-sm rounded-full" onClick={copy}>
+          {version}
+        </button>
+      </div>
+
+      <div className="flex flex-wrap justify-center gap-3">
+        <span className="border-base-content/20 text-base-content/50 rounded-full border px-3 py-1 text-xs">
+          Format: YYYY.MM.DD.hh.mm.ss
+        </span>
+        <span className="badge badge-neutral rounded-full">Stable</span>
+      </div>
     </div>
   );
 };
+
+const Segment: FC<{ value: string; label: string; primary?: boolean }> = ({
+  value,
+  label,
+  primary,
+}) => (
+  <div className="flex flex-col items-center px-4">
+    <span
+      className={`font-mono text-2xl font-bold ${primary ? 'text-primary' : 'text-base-content'}`}>
+      {value}
+    </span>
+    <span className="text-base-content/50 mt-1 text-xs tracking-[0.2em] uppercase">
+      {label}
+    </span>
+  </div>
+);
+
+const Dot: FC = () => (
+  <span className="text-base-content/50 font-mono text-xl">.</span>
+);
 
 VersionTemplate.displayName = 'VersionTemplate';

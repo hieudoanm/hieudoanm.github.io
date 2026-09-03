@@ -1,8 +1,8 @@
 # Psychology
 
 > Eight validated self-report instruments (BDI-II, BFI, DAS, ECR-R, GAD-7,
-> PHQ-9, RCI-R, SWLS) wrapped in one friendly, guided wizard. Screening that runs
-> everywhere: phone, tablet, laptop, and desktop.
+> PHQ-9, RCI-R, SWLS) wrapped in one friendly, guided wizard. Screening that
+> runs everywhere: phone, tablet, laptop, and desktop.
 
 ![Android 14+](https://img.shields.io/badge/Android-14%2B-green)
 ![Linux](https://img.shields.io/badge/Linux-22.04%2B-blue)
@@ -41,14 +41,14 @@ Linux/macOS/Windows grab their native package below.
 
 ### Downloads
 
-| No  | Platform | Distro | Architecture | Requirements | Download Link                     | Note |
-| --- | -------- | ------ | ------------ | ------------ | --------------------------------- | ---- |
-| 1   | Android  |        | Universal    | 14.+         | [Download `.apk`][download-apk]   | Install directly |
-| 2   | Android  |        | Universal    | 14.+         | [Download `.aab`][download-aab]¹  | For store upload |
+| No  | Platform | Distro | Architecture | Requirements | Download Link                              | Note             |
+| --- | -------- | ------ | ------------ | ------------ | ------------------------------------------ | ---------------- |
+| 1   | Android  |        | Universal    | 14.+         | [Download `.apk`][download-apk]            | Install directly |
+| 2   | Android  |        | Universal    | 14.+         | [Download `.aab`][download-aab]¹           | For store upload |
 | 3   | Linux    | Ubuntu | amd64        | 22.04.+      | [Download `.AppImage`][download-app-image] | Run — no install |
-| 4   | Linux    | Debian | amd64        | 13.+         | [Download `.deb`][download-deb]   | |
-| 5   | macOS    |        | aarch64      | 13.+         | [Download `.dmg`][download-dmg]²  | Apple Silicon |
-| 6   | Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi]   | |
+| 4   | Linux    | Debian | amd64        | 13.+         | [Download `.deb`][download-deb]            |                  |
+| 5   | macOS    |        | aarch64      | 13.+         | [Download `.dmg`][download-dmg]²           | Apple Silicon    |
+| 6   | Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi]            |                  |
 
 [download-apk]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-psychology-latest/app-universal-release.apk
@@ -66,8 +66,7 @@ Linux/macOS/Windows grab their native package below.
 <br>
 
 ¹ `.aab` is for uploading to the Google Play Store — use the `.apk` to install
-directly.
-² `.dmg` is built for Apple Silicon.
+directly. ² `.dmg` is built for Apple Silicon.
 
 ### Checksums
 

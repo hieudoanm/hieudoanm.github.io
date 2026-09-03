@@ -5,7 +5,7 @@ describe('VersionPage', () => {
   it('renders the version header and copy button', () => {
     render(<VersionPage />);
     expect(
-      screen.getByRole('heading', { name: 'Password Version' })
+      screen.getByRole('heading', { name: 'Version' })
     ).toBeInTheDocument();
     expect(
       screen.getByRole('button', { name: 'Copy version' })

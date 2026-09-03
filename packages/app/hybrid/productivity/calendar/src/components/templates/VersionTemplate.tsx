@@ -2,6 +2,7 @@
 
 import type { FC } from 'react'
 import { useState } from 'react'
+import { FiCheck, FiCopy } from 'react-icons/fi'
 
 export const VersionTemplate: FC<{ version: string }> = ({ version }) => {
   const [copied, setCopied] = useState(false)
@@ -16,18 +17,12 @@ export const VersionTemplate: FC<{ version: string }> = ({ version }) => {
   const hasSegments = year && month && day
 
   return (
-    <div className="flex h-full flex-col items-center justify-center px-6 py-24">
-      <p className="text-base-content/50 mb-6 text-xs tracking-[0.2em] uppercase">
-        Current deployment
-      </p>
+    <div className="mx-auto flex w-full max-w-2xl flex-col items-center gap-6 px-6 py-16 text-center">
+      <p className="text-base-content/50 text-xs uppercase tracking-[0.2em]">Current deployment</p>
 
-      <h1 className="mb-3 font-mono text-4xl font-light tracking-tight">Calendar Version</h1>
+      <h1 className="mb-1">Version</h1>
 
-      <p className="text-base-content/50 mb-10 max-w-sm text-center text-sm">
-        Build version of the current deployment
-      </p>
-
-      <div className="border-base-content/10 bg-base-200 mb-8 w-full max-w-lg rounded-2xl border p-6">
+      <div className="border-base-content/10 bg-base-200 w-full max-w-lg rounded-2xl border p-6">
         {hasSegments ? (
           <div className="flex items-center justify-center gap-0">
             <Segment value={year} label="Year" primary />
@@ -55,20 +50,19 @@ export const VersionTemplate: FC<{ version: string }> = ({ version }) => {
             )}
           </div>
         ) : (
-          <p className="text-base-content text-center font-mono text-xl font-bold break-all">
-            {version}
-          </p>
+          <p className="text-error font-mono text-xl font-bold break-all">{version}</p>
         )}
       </div>
 
-      <div className="mb-8 flex flex-wrap justify-center gap-3">
+      <div className="flex flex-wrap justify-center gap-3">
         <button
           onClick={copy}
           className={`btn btn-sm rounded-full ${copied ? 'btn-success' : 'btn-primary'}`}
         >
+          {copied ? <FiCheck /> : <FiCopy />}
           {copied ? 'Copied' : 'Copy version'}
         </button>
-        <button className="btn btn-outline btn-sm rounded-full" onClick={copy}>
+        <button className="btn btn-neutral btn-sm rounded-full" onClick={copy}>
           {version}
         </button>
       </div>
@@ -94,7 +88,7 @@ const Segment: FC<{ value: string; label: string; primary?: boolean }> = ({
     >
       {value}
     </span>
-    <span className="text-base-content/50 mt-1 text-[10px] tracking-widest uppercase">{label}</span>
+    <span className="text-base-content/50 mt-1 text-xs uppercase tracking-[0.2em]">{label}</span>
   </div>
 )
 

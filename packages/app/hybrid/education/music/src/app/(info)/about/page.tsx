@@ -3,7 +3,6 @@ import { NextPage } from 'next';
 
 const AboutPage: NextPage = () => (
   <AboutTemplate
-    appName="Music"
     name="Music"
     description="Ear-training games and music tools"
     version="v0.0.1"

@@ -46,9 +46,9 @@ test('theme dropdown has two options', async ({ page }) => {
   expect(
     options.some((o) => o.toLowerCase().includes('projects-dark'))
   ).toBeTruthy();
-  expect(
-    (await page.locator('select').first().locator('option').count())
-  ).toBe(2);
+  expect(await page.locator('select').first().locator('option').count()).toBe(
+    2
+  );
 });
 
 test('can change theme', async ({ page }) => {

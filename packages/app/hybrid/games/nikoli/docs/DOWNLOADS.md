@@ -36,7 +36,8 @@
 
 ## Latest release
 
-- **Version:** `app-hybrid-entertainment-nikoli-latest` — updates ship continuously.
+- **Version:** `app-hybrid-entertainment-nikoli-latest` — updates ship
+  continuously.
 - **What's new:** see the [roadmap](ROADMAP) and [CONTRIBUTING](CONTRIBUTING).
 
 ---
@@ -47,14 +48,14 @@ Pick the file that matches your platform.
 
 ### Downloads
 
-| No  | Platform | Distro | Architecture | Requirements | Download Link                              | Note              |
-| --- | -------- | ------ | ------------ | ------------ | ------------------------------------------ | ----------------- |
-| 1   | Android  |        | Universal    | 14.+         | [Download `.apk`][download-apk]            | Install directly  |
-| 2   | Android  |        | Universal    | 14.+         | [Download `.aab`][download-aab]¹           | For store upload  |
-| 3   | Linux    | Ubuntu | amd64        | 22.04.+      | [Download `.AppImage`][download-app-image] | Run — no install  |
-| 4   | Linux    | Debian | amd64        | 13.+         | [Download `.deb`][download-deb]            |                   |
-| 5   | macOS    |        | aarch64      | 13.+         | [Download `.dmg`][download-dmg]²           | Apple Silicon     |
-| 6   | Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi]            |                   |
+| No  | Platform | Distro | Architecture | Requirements | Download Link                              | Note             |
+| --- | -------- | ------ | ------------ | ------------ | ------------------------------------------ | ---------------- |
+| 1   | Android  |        | Universal    | 14.+         | [Download `.apk`][download-apk]            | Install directly |
+| 2   | Android  |        | Universal    | 14.+         | [Download `.aab`][download-aab]¹           | For store upload |
+| 3   | Linux    | Ubuntu | amd64        | 22.04.+      | [Download `.AppImage`][download-app-image] | Run — no install |
+| 4   | Linux    | Debian | amd64        | 13.+         | [Download `.deb`][download-deb]            |                  |
+| 5   | macOS    |        | aarch64      | 13.+         | [Download `.dmg`][download-dmg]²           | Apple Silicon    |
+| 6   | Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi]            |                  |
 
 [download-apk]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-entertainment-nikoli-latest/app-universal-release.apk
@@ -77,10 +78,13 @@ Pick the file that matches your platform.
 
 ## First run
 
-- **macOS:** Right-click the `.dmg` and select *Open* to bypass Gatekeeper.
-- **Linux AppImage:** `chmod +x nikoli_amd64.AppImage && ./nikoli_amd64.AppImage`
-- **Windows SmartScreen:** Click *More info → Run anyway* if SmartScreen flags the installer.
-- **Android Play Protect:** If Play Protect blocks the install, tap *Install anyway*.
+- **macOS:** Right-click the `.dmg` and select _Open_ to bypass Gatekeeper.
+- **Linux AppImage:**
+  `chmod +x nikoli_amd64.AppImage && ./nikoli_amd64.AppImage`
+- **Windows SmartScreen:** Click _More info → Run anyway_ if SmartScreen flags
+  the installer.
+- **Android Play Protect:** If Play Protect blocks the install, tap _Install
+  anyway_.
 
 ### Checksums
 
@@ -110,8 +114,8 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 ## About
 
 Seven classic Nikoli logic puzzles — Sudoku, Nurikabe, Masyu, Shikaku,
-Fillomino, Norinori, and Heyawake. Culture-independent puzzles that rely on
-pure logic rather than language, playable on any device.
+Fillomino, Norinori, and Heyawake. Culture-independent puzzles that rely on pure
+logic rather than language, playable on any device.
 
 ---
 
@@ -120,6 +124,7 @@ pure logic rather than language, playable on any device.
 Pure-logic puzzle games from the publisher that popularised Sudoku worldwide.
 
 ### 🔢 Sudoku
+
 - Fill a 9×9 grid so each row, column, and 3×3 box contains digits 1–9
 - Three difficulty levels: Easy, Medium, Hard
 - Hint system with cell highlighting
@@ -128,6 +133,7 @@ Pure-logic puzzle games from the publisher that popularised Sudoku worldwide.
 - Undo history
 
 ### 🏠 Nurikabe
+
 - Paint cells black to form a single connected stream, leaving numbered islands
 - Each numbered island must contain exactly that many cells
 - Islands cannot touch each other horizontally or vertically
@@ -135,35 +141,41 @@ Pure-logic puzzle games from the publisher that popularised Sudoku worldwide.
 - Undo, auto-solve, new game
 
 ### 💎 Masyu
+
 - Draw a single loop through all pearls
 - Turn at black pearls, go straight through white pearls
 - Loop must visit every pearl on the board
 - Undo, auto-solve, new game
 
 ### 🔲 Shikaku
+
 - Divide the grid into rectangles, each containing exactly one numbered cell
 - Each rectangle's area equals its number
 - Rectangles cannot overlap
 - Undo, auto-solve, new game
 
 ### 🧱 Fillomino
+
 - Fill the grid with polyominoes where each region's size equals its number
 - Regions of the same number cannot touch (except diagonally)
 - Undo, auto-solve, new game
 
 ### 🟫 Norinori
+
 - Shade exactly two cells in each domino-shaped region
 - Shaded cells cannot touch each other horizontally or vertically (except within
   a domino)
 - Undo, auto-solve, new game
 
 ### 🏠 Heyawake
+
 - Shade cells following numbered room constraints
 - Numbers indicate how many cells in that room must be shaded
 - No three consecutive unshaded cells in a row or column
 - Undo, auto-solve, new game
 
 ### 📖 More Nikoli Puzzles
+
 Nikoli publishes 80+ puzzle types. The following are candidates for future
 additions:
 
@@ -185,6 +197,7 @@ additions:
 | Edel           | エデル           | Nonogram      | Shade cells to form a picture; row/column clues indicate shade runs       |
 
 ### 🔄 Shared Features
+
 - "How to Play" instructions modal for each game with visual examples
 - Responsive layout (desktop and mobile)
 - Dark theme by default
@@ -193,6 +206,7 @@ additions:
 - Game card grid on home page with descriptions
 
 ### 🏛️ About Nikoli
+
 - Founded in 1980 by Maki Kaji (木村 薫), named after the racehorse Nikoli who
   won the 1980 Irish 2,000 Guineas
 - Publisher of _Puzzle Communication Nikoli_, a quarterly magazine
@@ -203,6 +217,7 @@ additions:
 - Over 80 puzzle types published
 
 ### 📱 Platform & UX
+
 - Static export for offline-first PWA support
 - Service worker caches all pages for offline play
 - Tauri desktop app build (bundling configured; signing not yet)
@@ -216,7 +231,8 @@ additions:
 
 ## Next steps
 
-- **Want to contribute?** Check [CONTRIBUTING](CONTRIBUTING) for setup and dev commands.
+- **Want to contribute?** Check [CONTRIBUTING](CONTRIBUTING) for setup and dev
+  commands.
 - **Curious what's coming?** Read the [roadmap](ROADMAP).
 
 ---

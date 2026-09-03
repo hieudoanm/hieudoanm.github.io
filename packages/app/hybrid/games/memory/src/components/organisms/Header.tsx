@@ -20,12 +20,16 @@ export const Header: FC = () => {
   }, [theme]);
 
   const toggleTheme = () =>
-    setTheme((current) => (current === 'memory-dark' ? 'memory-light' : 'memory-dark'));
+    setTheme((current) =>
+      current === 'memory-dark' ? 'memory-light' : 'memory-dark'
+    );
 
   return (
     <header className="border-base-300 bg-base-100 sticky top-0 z-10 border-b-2 px-4 py-3">
       <div className="flex items-center justify-between">
-        <Link href="/" className="text-primary text-xs font-bold tracking-wider">
+        <Link
+          href="/"
+          className="text-primary text-xs font-bold tracking-wider">
           MEMORY GAMES
         </Link>
 

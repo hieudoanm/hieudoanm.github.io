@@ -1,27 +1,27 @@
 'use client';
 
 import { ErrorTemplate } from '@/components/templates/ErrorTemplate';
-import { Button } from '@/components/atoms/Button';
 
-interface GlobalErrorProps {
-  error: Error;
+const GlobalErrorPage = ({
+  error,
+  reset,
+}: {
+  error: Error & { digest?: string };
   reset: () => void;
-}
-
-const GlobalError = ({ reset }: GlobalErrorProps) => (
-  <html lang="en" data-theme="psychology-light">
-    <body className="bg-base-100 text-base-content font-mono">
+}) => (
+  <html lang="en">
+    <body className="bg-base-100 text-base-content">
       <ErrorTemplate
         code="500"
         description="Something went wrong."
         action={
-          <Button variant="primary" onClick={reset}>
+          <button className="btn btn-primary btn-sm" onClick={() => reset()}>
             Try again
-          </Button>
+          </button>
         }
       />
     </body>
   </html>
 );
 
-export default GlobalError;
+export default GlobalErrorPage;

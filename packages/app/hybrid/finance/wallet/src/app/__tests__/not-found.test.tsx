@@ -1,24 +1,29 @@
-jest.mock('@/lib/db', () => require('@/test-helpers').mockDbModule);
-jest.mock(
-  'next/navigation',
-  () => require('@/test-helpers').mockNextNavigation
-);
-jest.mock('next/link', () => require('@/test-helpers').mockLinkModule);
-
-import { screen } from '@testing-library/react';
-import { renderWithProviders } from '@/test-helpers';
+import { render, screen } from '@testing-library/react';
 import NotFoundPage from '../not-found';
 
-beforeEach(() => {
-  localStorage.clear();
-  jest.clearAllMocks();
+jest.mock('next/link', () => {
+  const MockLink = ({
+    children,
+    href,
+  }: {
+    children: React.ReactNode;
+    href: string;
+  }) => <a href={href}>{children}</a>;
+  MockLink.displayName = 'MockLink';
+  return MockLink;
 });
 
 describe('NotFoundPage', () => {
-  it('renders the 404 page', () => {
-    renderWithProviders(<NotFoundPage />);
+  it('renders 404 and the page not found message', () => {
+    render(<NotFoundPage />);
     expect(screen.getByText('404')).toBeInTheDocument();
-    expect(screen.getByText('Page not found')).toBeInTheDocument();
-    expect(screen.getByText('Go Home')).toBeInTheDocument();
+    expect(
+      screen.getByText('The page you are looking for does not exist.')
+    ).toBeInTheDocument();
+  });
+
+  it('renders go home link', () => {
+    render(<NotFoundPage />);
+    expect(screen.getByText('Go home')).toHaveAttribute('href', '/');
   });
 });

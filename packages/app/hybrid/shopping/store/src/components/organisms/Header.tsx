@@ -23,7 +23,9 @@ export const Header: FC = () => {
   }, [theme]);
 
   const toggleTheme = () =>
-    setTheme((current) => (current === 'store-dark' ? 'store-light' : 'store-dark'));
+    setTheme((current) =>
+      current === 'store-dark' ? 'store-light' : 'store-dark'
+    );
 
   return (
     <header className="border-base-300 bg-base-100 sticky top-0 z-10 border-b px-6 py-3">

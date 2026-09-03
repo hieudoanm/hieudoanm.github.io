@@ -10,7 +10,11 @@ const Wrapper: React.FC<{
   children: (store: MenuStore, selected: Restaurant | null) => React.ReactNode;
 }> = ({ children }) => {
   const [state, setState] = React.useState(emptyMenu());
-  const store: MenuStore = { state, setState, reset: () => setState(emptyMenu()) };
+  const store: MenuStore = {
+    state,
+    setState,
+    reset: () => setState(emptyMenu()),
+  };
   return <>{children(store, null)}</>;
 };
 
@@ -19,7 +23,11 @@ describe('RestaurantManager', () => {
     render(
       <Wrapper>
         {(store, selected) => (
-          <RestaurantManager store={store} selected={selected} onSelect={() => {}} />
+          <RestaurantManager
+            store={store}
+            selected={selected}
+            onSelect={() => {}}
+          />
         )}
       </Wrapper>
     );
@@ -32,12 +40,19 @@ describe('RestaurantManager', () => {
     render(
       <Wrapper>
         {(store, selected) => (
-          <RestaurantManager store={store} selected={selected} onSelect={() => {}} />
+          <RestaurantManager
+            store={store}
+            selected={selected}
+            onSelect={() => {}}
+          />
         )}
       </Wrapper>
     );
 
-    await user.type(screen.getByPlaceholderText(/e\.g\. the golden fork/i), 'Burger Spot');
+    await user.type(
+      screen.getByPlaceholderText(/e\.g\. the golden fork/i),
+      'Burger Spot'
+    );
     await user.click(screen.getByRole('button', { name: /create/i }));
 
     expect(screen.getByText('Burger Spot')).toBeInTheDocument();
@@ -50,12 +65,19 @@ describe('RestaurantManager', () => {
     render(
       <Wrapper>
         {(store, selected) => (
-          <RestaurantManager store={store} selected={selected} onSelect={onSelect} />
+          <RestaurantManager
+            store={store}
+            selected={selected}
+            onSelect={onSelect}
+          />
         )}
       </Wrapper>
     );
 
-    await user.type(screen.getByPlaceholderText(/e\.g\. the golden fork/i), 'Test');
+    await user.type(
+      screen.getByPlaceholderText(/e\.g\. the golden fork/i),
+      'Test'
+    );
     await user.click(screen.getByRole('button', { name: /create/i }));
     await user.click(screen.getByRole('button', { name: /open/i }));
 
@@ -69,12 +91,19 @@ describe('RestaurantManager', () => {
     render(
       <Wrapper>
         {(store, selected) => (
-          <RestaurantManager store={store} selected={selected} onSelect={() => {}} />
+          <RestaurantManager
+            store={store}
+            selected={selected}
+            onSelect={() => {}}
+          />
         )}
       </Wrapper>
     );
 
-    await user.type(screen.getByPlaceholderText(/e\.g\. the golden fork/i), 'To Delete');
+    await user.type(
+      screen.getByPlaceholderText(/e\.g\. the golden fork/i),
+      'To Delete'
+    );
     await user.click(screen.getByRole('button', { name: /create/i }));
     expect(screen.getByText('To Delete')).toBeInTheDocument();
 

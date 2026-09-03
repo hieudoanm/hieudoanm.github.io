@@ -33,7 +33,9 @@ describe('Header', () => {
 
   it('applies and persists the default dracula theme', () => {
     render(<Header />);
-    expect(document.documentElement.getAttribute('data-theme')).toBe('countries-dark');
+    expect(document.documentElement.getAttribute('data-theme')).toBe(
+      'countries-dark'
+    );
     expect(localStorage.getItem('countries-theme')).toBe('countries-dark');
   });
 
@@ -46,7 +48,9 @@ describe('Header', () => {
     );
     expect(localStorage.getItem('countries-theme')).toBe('countries-light');
     await user.click(screen.getByTestId('theme-toggle'));
-    expect(document.documentElement.getAttribute('data-theme')).toBe('countries-dark');
+    expect(document.documentElement.getAttribute('data-theme')).toBe(
+      'countries-dark'
+    );
   });
 
   it('restores a saved theme on mount', () => {

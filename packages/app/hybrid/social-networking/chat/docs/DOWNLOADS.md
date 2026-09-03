@@ -1,7 +1,7 @@
 # Chat
 
-> Talk to any AI from one interface — Chat is a minimal, no-fluff AI chat
-> client that runs on your phone, tablet, laptop, or desktop.
+> Talk to any AI from one interface — Chat is a minimal, no-fluff AI chat client
+> that runs on your phone, tablet, laptop, or desktop.
 
 ![Android 14+](https://img.shields.io/badge/Android-14%2B-green)
 ![Linux](https://img.shields.io/badge/Linux-22.04%2B-blue)
@@ -25,7 +25,8 @@
 
 ## Latest release
 
-- **Version:** `app-hybrid-social-networking-chat-latest` — updates ship continuously.
+- **Version:** `app-hybrid-social-networking-chat-latest` — updates ship
+  continuously.
 - **What's new:** see the [roadmap](ROADMAP) and [CONTRIBUTING](CONTRIBUTING).
 
 ---
@@ -101,6 +102,7 @@ fly, and keep your conversations organised without the cruft.
 All the pieces you need for a focused AI chat workflow.
 
 ### 💬 Conversations
+
 - Conversation list with sidebar
 - New conversation creation
 - Basic search across conversations
@@ -109,6 +111,7 @@ All the pieces you need for a focused AI chat workflow.
 - Import conversations from JSON
 
 ### ✉️ Messaging
+
 - Message input with Enter-to-send
 - User and assistant message bubbles
 - Mock AI responses (random templates)
@@ -120,6 +123,7 @@ All the pieces you need for a focused AI chat workflow.
 - Edit user message and re-generate
 
 ### 🎨 Rendering
+
 - Markdown rendering in messages (bold, italic, lists, links)
 - Code blocks with syntax highlighting
 - Copy code block button
@@ -127,11 +131,13 @@ All the pieces you need for a focused AI chat workflow.
 - Table rendering in messages
 
 ### ⚙️ Configuration
+
 - Model selector dropdown (GPT-4o, Claude 3.5, Gemini, Llama)
 - System prompt editor (custom instructions)
 - Prompt templates (Translate, Explain, Write, Summarize)
 
 ### 🖥️ UX & Platform
+
 - Responsive layout (sidebar + chat)
 - Keyboard shortcuts (Ctrl+K, Ctrl+N, Ctrl+Shift+C)
 - Tauri desktop app build (bundling configured; signing not yet)
@@ -153,7 +159,8 @@ All the pieces you need for a focused AI chat workflow.
 
 ## Next steps
 
-- Check [CONTRIBUTING](CONTRIBUTING) for dev setup, coding conventions, and how to run tests.
+- Check [CONTRIBUTING](CONTRIBUTING) for dev setup, coding conventions, and how
+  to run tests.
 - Browse the [ROADMAP](ROADMAP) for what's shipping next.
 
 ---

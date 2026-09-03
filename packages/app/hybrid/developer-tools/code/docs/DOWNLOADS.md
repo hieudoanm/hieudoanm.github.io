@@ -1,7 +1,7 @@
 # Code
 
-> A pocket-sized code editor — syntax highlighting, multi-cursor, find in
-> files, and more, right on your phone, tablet, laptop, or desktop.
+> A pocket-sized code editor — syntax highlighting, multi-cursor, find in files,
+> and more, right on your phone, tablet, laptop, or desktop.
 
 ![Android 14+](https://img.shields.io/badge/Android-14%2B-green)
 ![Linux](https://img.shields.io/badge/Linux-22.04%2B-blue)
@@ -26,7 +26,8 @@
 
 ## Latest release
 
-- **Version:** `app-hybrid-developer-tools-code-latest` — updates ship continuously.
+- **Version:** `app-hybrid-developer-tools-code-latest` — updates ship
+  continuously.
 - **What's new:** see the [roadmap](ROADMAP) and [CONTRIBUTING](CONTRIBUTING).
 
 ---
@@ -102,12 +103,14 @@ multi-cursor, find across projects, and ship code from any device.
 All the essentials for editing code on the go.
 
 ### 📂 File System
+
 - File explorer sidebar with tree view
 - Create/rename/delete files and folders
 - Status bar with language and position
 - Auto-save (2s debounce to the real filesystem via Tauri plugin-fs)
 
 ### ✏️ Editor
+
 - Code editor with line numbers and syntax highlighting
 - Tab management (open, close, reorder)
 - Bracket matching and auto-closing
@@ -117,6 +120,7 @@ All the essentials for editing code on the go.
 - Breadcrumb navigation
 
 ### 🔍 Editing
+
 - Find in file (Ctrl+F) with match count and navigation
 - Find and replace (Ctrl+H) with regex support
 - Find in files (Ctrl+Shift+F) with results grouped by file
@@ -126,12 +130,14 @@ All the essentials for editing code on the go.
 - Delete line (Ctrl+Shift+K)
 
 ### 🎛️ Command & Themes
+
 - Command palette (Ctrl+P for files; Ctrl+Shift+P commands pending)
 - Keyboard shortcuts modal (Ctrl+/)
 - Theme marketplace (custom editor themes — dim/winter toggle)
 - Additional language support (ts/tsx/js/jsx/py/rs/md/json/css/html/xml)
 
 ### 🖥️ Platform
+
 - Tauri desktop app build (bundling configured; signing not yet)
 
 ---
@@ -151,7 +157,8 @@ All the essentials for editing code on the go.
 
 ## Next steps
 
-- Check [CONTRIBUTING](CONTRIBUTING) for dev setup, coding conventions, and how to run tests.
+- Check [CONTRIBUTING](CONTRIBUTING) for dev setup, coding conventions, and how
+  to run tests.
 - Browse the [ROADMAP](ROADMAP) for what's shipping next.
 
 ---

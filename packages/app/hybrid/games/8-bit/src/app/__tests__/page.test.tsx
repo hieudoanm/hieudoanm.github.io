@@ -3,9 +3,13 @@ import HomePage from '@/app/page';
 
 jest.mock('next/link', () => ({
   __esModule: true,
-  default: ({ children, href }: { children: React.ReactNode; href: string }) => (
-    <a href={href}>{children}</a>
-  ),
+  default: ({
+    children,
+    href,
+  }: {
+    children: React.ReactNode;
+    href: string;
+  }) => <a href={href}>{children}</a>,
 }));
 
 describe('HomePage', () => {
@@ -24,7 +28,13 @@ describe('HomePage', () => {
 
   it('links to correct routes', () => {
     render(<HomePage />);
-    expect(screen.getByText('MAZE').closest('a')).toHaveAttribute('href', '/maze');
-    expect(screen.getByText('SNAKE').closest('a')).toHaveAttribute('href', '/snake');
+    expect(screen.getByText('MAZE').closest('a')).toHaveAttribute(
+      'href',
+      '/maze'
+    );
+    expect(screen.getByText('SNAKE').closest('a')).toHaveAttribute(
+      'href',
+      '/snake'
+    );
   });
 });

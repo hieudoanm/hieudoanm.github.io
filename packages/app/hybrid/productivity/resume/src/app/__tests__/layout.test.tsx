@@ -14,7 +14,7 @@ describe('RootLayout', () => {
     render(
       <RootLayout>
         <div>child</div>
-      </RootLayout>,
+      </RootLayout>
     );
     expect(screen.getByText('child')).toBeInTheDocument();
   });
@@ -23,9 +23,12 @@ describe('RootLayout', () => {
     render(
       <RootLayout>
         <div />
-      </RootLayout>,
+      </RootLayout>
     );
-    expect(document.documentElement).toHaveAttribute('data-theme', 'resume-light');
+    expect(document.documentElement).toHaveAttribute(
+      'data-theme',
+      'resume-light'
+    );
   });
 });
 

@@ -27,7 +27,8 @@
 
 ## Latest release
 
-- **Version:** `app-hybrid-education-history-latest` — updates ship continuously.
+- **Version:** `app-hybrid-education-history-latest` — updates ship
+  continuously.
 - **What's new:** see the [roadmap](ROADMAP) and [CONTRIBUTING](CONTRIBUTING).
 
 ---
@@ -93,6 +94,7 @@ across 15 decks and 6 continents. Fun, competitive, and runs on any device.
 Order events, beat the clock, and master history.
 
 ### 🔨 Project Foundation
+
 - Monorepo scaffold following the lingo app conventions
   (`packages/app/hybrid/education/history`)
 - Next.js static export validated against Tauri's `dist` expectations
@@ -103,11 +105,13 @@ Order events, beat the clock, and master history.
 - Unit test coverage thresholds enforced at 80% global
 
 ### 🏠 Home & Navigation
+
 - Card grid listing the tool with icon and description
 - Tool route rendered directly, opened from the home card grid
 - Theme toggle in template header; choice persisted in localStorage
 
 ### 🗺️ Through the Years
+
 - Timeline-based history game: place historical events in chronological order
 - 4 game modes: Practice (unlimited), Classic (20 events), Endless (first
   mistake ends), Hardcore (one life)
@@ -126,8 +130,8 @@ Order events, beat the clock, and master history.
 
 # First run
 
-- **macOS:** Right-click the `.dmg` → "Open" to bypass Gatekeeper, then drag
-  the app to your Applications folder.
+- **macOS:** Right-click the `.dmg` → "Open" to bypass Gatekeeper, then drag the
+  app to your Applications folder.
 - **Linux (AppImage):** `chmod +x history_amd64.AppImage` then run it — no
   install needed.
 - **Windows:** SmartScreen may flag the `.msi` — click "More info" → "Run

@@ -3,7 +3,6 @@ import { NextPage } from 'next';
 
 const AboutPage: NextPage = () => (
   <AboutTemplate
-    appName="Chemistry"
     name="Chemistry"
     description="Interactive periodic table and chemistry tools"
     version="v0.0.1"

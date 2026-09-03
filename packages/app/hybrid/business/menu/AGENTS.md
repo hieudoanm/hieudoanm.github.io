@@ -4,13 +4,13 @@
 
 Reference docs live in `docs/`:
 
-| Doc                    | Covers                                                     |
-| ---------------------- | ---------------------------------------------------------- |
-| `docs/ARCHITECTURE.md` | Tech stack, directory structure, routing, data flow        |
-| `docs/ROADMAP.md`      | Phased feature roadmap with progress tracking              |
-| `docs/CONTRIBUTING.md` | Setup, dev commands, coding and testing conventions        |
-| `docs/PACKAGING.md`    | Packaging checklist per platform                           |
-| `docs/DOWNLOADS.md`    | Download links per platform                                |
+| Doc                    | Covers                                              |
+| ---------------------- | --------------------------------------------------- |
+| `docs/ARCHITECTURE.md` | Tech stack, directory structure, routing, data flow |
+| `docs/ROADMAP.md`      | Phased feature roadmap with progress tracking       |
+| `docs/CONTRIBUTING.md` | Setup, dev commands, coding and testing conventions |
+| `docs/PACKAGING.md`    | Packaging checklist per platform                    |
+| `docs/DOWNLOADS.md`    | Download links per platform                         |
 
 ## Key Conventions
 

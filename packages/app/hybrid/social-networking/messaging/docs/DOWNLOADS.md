@@ -1,7 +1,7 @@
 # Messaging
 
-> End-to-end encrypted, peer-to-peer messaging — no server, no middleman.
-> Runs on your phone, tablet, laptop, or desktop.
+> End-to-end encrypted, peer-to-peer messaging — no server, no middleman. Runs
+> on your phone, tablet, laptop, or desktop.
 
 ![Android 14+](https://img.shields.io/badge/Android-14%2B-green)
 ![Linux](https://img.shields.io/badge/Linux-22.04%2B-blue)
@@ -25,7 +25,8 @@
 
 ## Latest release
 
-- **Version:** `app-hybrid-social-networking-messaging-latest` — updates ship continuously.
+- **Version:** `app-hybrid-social-networking-messaging-latest` — updates ship
+  continuously.
 - **What's new:** see the [roadmap](ROADMAP) and [CONTRIBUTING](CONTRIBUTING).
 
 ---
@@ -91,17 +92,18 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-Telegram / WhatsApp / Signal in one package — peer-to-peer, encrypted
-messaging with no back-end server. Your messages go straight to the other side.
+Telegram / WhatsApp / Signal in one package — peer-to-peer, encrypted messaging
+with no back-end server. Your messages go straight to the other side.
 
 ---
 
 ## Features
 
-Full-featured, private messaging with everything you expect from a modern
-chat app.
+Full-featured, private messaging with everything you expect from a modern chat
+app.
 
 ### ✉️ Messaging
+
 - 1:1 text messaging with delivery states (sending, sent, delivered, read)
 - Group chats with participant management and admin roles
 - Reply threading with quoted messages
@@ -112,6 +114,7 @@ chat app.
 - Unread badge counts and per-chat settings (mute, notifications)
 
 ### 🖼️ Media & Rich Content
+
 - Image, video, audio, and file attachments
 - Voice messages with recording
 - Image lightbox with zoom and swipe
@@ -121,6 +124,7 @@ chat app.
 - Forward messages to multiple chats
 
 ### 🔒 Privacy & Security
+
 - End-to-end encryption (X25519 + AES-GCM via Web Crypto)
 - Key verification and device trust list
 - Secret chats with screenshot warnings
@@ -131,6 +135,7 @@ chat app.
 - Message deletion for everyone
 
 ### 📞 Calls
+
 - 1:1 voice and video calls (WebRTC)
 - Group voice/video calls
 - Call controls (mute, camera, speaker, switch)
@@ -138,6 +143,7 @@ chat app.
 - Picture-in-picture and screen sharing
 
 ### 🌐 Peer-to-Peer & Real-time
+
 - WebRTC DataChannel transport (no back-end)
 - Pairing via QR code or copy-paste SDP offer/answer
 - End-to-end encryption (X25519 + AES-GCM via Web Crypto)
@@ -150,6 +156,7 @@ chat app.
 - Optional TURN relay for NAT traversal (no app logic)
 
 ### 📱 Platform & Ecosystem
+
 - Tauri desktop and Android shells
 - Channels and broadcast lists
 - Bots with slash commands (mock)
@@ -162,7 +169,8 @@ chat app.
 # First run
 
 - **macOS:** Right-click the `.dmg` and choose **Open** to bypass Gatekeeper.
-- **Linux AppImage:** `chmod +x messaging_amd64.AppImage && ./messaging_amd64.AppImage`
+- **Linux AppImage:**
+  `chmod +x messaging_amd64.AppImage && ./messaging_amd64.AppImage`
 - **Windows SmartScreen:** Click **More info → Run anyway** if prompted.
 - **Android Play Protect:** Tap **Install anyway** if the warning appears.
 
@@ -174,7 +182,8 @@ chat app.
 
 ## Next steps
 
-- Check [CONTRIBUTING](CONTRIBUTING) for dev setup, coding conventions, and how to run tests.
+- Check [CONTRIBUTING](CONTRIBUTING) for dev setup, coding conventions, and how
+  to run tests.
 - Browse the [ROADMAP](ROADMAP) for what's shipping next.
 
 ---

@@ -11,7 +11,7 @@ export const ErrorTemplate: FC<ErrorTemplateProps> = ({
   description,
   action,
 }) => (
-  <div className="flex h-full flex-col items-center justify-center px-6">
+  <div className="flex min-h-screen flex-col items-center justify-center px-6">
     <p className="text-base-content/50 mb-6 text-xs tracking-[0.2em] uppercase">
       Error
     </p>

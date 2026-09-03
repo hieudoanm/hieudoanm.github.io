@@ -46,7 +46,11 @@ export const Header: FC = () => {
             onClick={toggleTheme}
             data-testid="theme-toggle"
             aria-label="Toggle theme">
-            {theme === 'pos-dark' ? <FiSun className="text-sm" /> : <FiMoon className="text-sm" />}
+            {theme === 'pos-dark' ? (
+              <FiSun className="text-sm" />
+            ) : (
+              <FiMoon className="text-sm" />
+            )}
           </button>
         </div>
       </nav>

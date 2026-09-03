@@ -3,9 +3,13 @@ import { render, screen } from '@testing-library/react';
 jest.mock('@/styles/globals.css', () => ({}));
 jest.mock('next/link', () => ({
   __esModule: true,
-  default: ({ children, href }: { children: React.ReactNode; href: string }) => (
-    <a href={href}>{children}</a>
-  ),
+  default: ({
+    children,
+    href,
+  }: {
+    children: React.ReactNode;
+    href: string;
+  }) => <a href={href}>{children}</a>,
 }));
 jest.mock('react-icons/fi', () => ({
   FiClock: () => null,
@@ -20,7 +24,7 @@ describe('RootLayout', () => {
     render(
       <RootLayout>
         <div>child</div>
-      </RootLayout>,
+      </RootLayout>
     );
     expect(screen.getByText('child')).toBeInTheDocument();
   });
@@ -29,7 +33,7 @@ describe('RootLayout', () => {
     render(
       <RootLayout>
         <div />
-      </RootLayout>,
+      </RootLayout>
     );
     expect(screen.getByText('About')).toHaveAttribute('href', '/about');
     expect(screen.getByText('Downloads')).toHaveAttribute('href', '/downloads');

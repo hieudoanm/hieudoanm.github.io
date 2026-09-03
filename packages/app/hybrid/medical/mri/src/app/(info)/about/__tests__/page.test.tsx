@@ -22,12 +22,4 @@ describe('AboutPage', () => {
     render(<AboutPage />);
     expect(screen.getByText('v0.0.1')).toBeInTheDocument();
   });
-
-  it('links back to home', () => {
-    render(<AboutPage />);
-    expect(screen.getByRole('link', { name: /Home/ })).toHaveAttribute(
-      'href',
-      '/'
-    );
-  });
 });

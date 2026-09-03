@@ -32,7 +32,11 @@ const Header: FC = () => {
             onClick={toggleTheme}
             data-testid="theme-toggle"
             aria-label="Toggle theme">
-            {isDark ? <FiSun className="text-lg" /> : <FiMoon className="text-lg" />}
+            {isDark ? (
+              <FiSun className="text-lg" />
+            ) : (
+              <FiMoon className="text-lg" />
+            )}
           </button>
         </nav>
       </div>

@@ -26,7 +26,8 @@
 
 ## Latest release
 
-- **Version:** `app-hybrid-developer-tools-database-latest` — updates ship continuously.
+- **Version:** `app-hybrid-developer-tools-database-latest` — updates ship
+  continuously.
 - **What's new:** see the [roadmap](ROADMAP) and [CONTRIBUTING](CONTRIBUTING).
 
 ---
@@ -92,17 +93,18 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-A pocket-sized SQL studio — browse schemas, write queries, inspect ER
-diagrams, and manage SQLite databases right from your phone or desktop.
+A pocket-sized SQL studio — browse schemas, write queries, inspect ER diagrams,
+and manage SQLite databases right from your phone or desktop.
 
 ---
 
 ## Features
 
-From connection management to ER diagrams, this one covers the full
-database workflow.
+From connection management to ER diagrams, this one covers the full database
+workflow.
 
 ### 🔗 Connections & Schema
+
 - Connection list with add/delete
 - Edit existing connection
 - Schema browser tree view
@@ -110,6 +112,7 @@ database workflow.
 - Mock database seed data (customers, orders, products tables)
 
 ### ✏️ Query Editor
+
 - SQL query editor with syntax highlighting
 - Execute query with loading state
 - Keyboard shortcuts (Ctrl+Enter execute, Ctrl+Shift+Enter format, Ctrl+/
@@ -124,6 +127,7 @@ database workflow.
 - Explain query plan (real `EXPLAIN QUERY PLAN` via sql.js)
 
 ### 📋 Results
+
 - Results table with sorting and pagination
 - Results export (CSV, JSON, Markdown, SQL INSERT)
 - Data viewer with browse/paginate
@@ -134,6 +138,7 @@ database workflow.
 - Multiple result tabs (each query/explain opens a tab)
 
 ### 🎨 Table Designer
+
 - Table designer (add/remove columns, types, PK / NOT NULL constraints)
 - Live CREATE TABLE preview (updates as you type)
 - Foreign key editor (per-column FK table/column selects)
@@ -141,12 +146,14 @@ database workflow.
 - Export table as CSV / JSON / SQL INSERT
 
 ### 📥 Import
+
 - Import CSV wizard (file select, delimiter, column mapping, preview)
 - Import JSON (paste/array, map to table, execute)
 - Batch import with progress indicator (500-row chunks)
 - Import validation and error reporting (per-row warnings)
 
 ### 🧠 Schema Intelligence
+
 - Schema Library (`/posts`: 10 classic schemas with hand-written markdown)
 - ER diagram with tables and relationships (live, from the open database)
 - Zoom/pan on ER diagram (scroll to zoom at cursor, drag to pan, fit / zoom
@@ -158,6 +165,7 @@ database workflow.
 - Export ER diagram as PNG/SVG
 
 ### 🔴 Redis (planned)
+
 Mock in-browser Redis engine, consistent with the offline-first SQLite path. See
 `docs/ROADMAP.md` Phase 8.
 
@@ -173,6 +181,7 @@ Mock in-browser Redis engine, consistent with the offline-first SQLite path. See
 - Redis import/export (JSON dump, RDB-style export)
 
 ### 🖥️ UX & Platform
+
 - Responsive layout (collapsible sidebar)
 - Resizable panel dividers (sidebar drag handle, 160–480px)
 - Collapsible sidebar
@@ -185,7 +194,8 @@ Mock in-browser Redis engine, consistent with the offline-first SQLite path. See
 # First run
 
 - **macOS:** Right-click the `.dmg` and choose **Open** to bypass Gatekeeper.
-- **Linux AppImage:** `chmod +x database_amd64.AppImage && ./database_amd64.AppImage`
+- **Linux AppImage:**
+  `chmod +x database_amd64.AppImage && ./database_amd64.AppImage`
 - **Windows SmartScreen:** Click **More info → Run anyway** if prompted.
 - **Android Play Protect:** Tap **Install anyway** if the warning appears.
 
@@ -197,7 +207,8 @@ Mock in-browser Redis engine, consistent with the offline-first SQLite path. See
 
 ## Next steps
 
-- Check [CONTRIBUTING](CONTRIBUTING) for dev setup, coding conventions, and how to run tests.
+- Check [CONTRIBUTING](CONTRIBUTING) for dev setup, coding conventions, and how
+  to run tests.
 - Browse the [ROADMAP](ROADMAP) for what's shipping next.
 
 ---

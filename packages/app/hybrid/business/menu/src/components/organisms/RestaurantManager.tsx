@@ -4,11 +4,7 @@ import { FormEvent, useState } from 'react';
 import type { FC } from 'react';
 import { FiPlus, FiTrash2 } from 'react-icons/fi';
 import type { Restaurant } from '@/types/menu';
-import {
-  accentOptions,
-  createRestaurant,
-  deleteRestaurant,
-} from '@/lib/menu';
+import { accentOptions, createRestaurant, deleteRestaurant } from '@/lib/menu';
 import type { MenuStore } from '@/components/organisms/types';
 
 interface RestaurantManagerProps {
@@ -45,7 +41,9 @@ const RestaurantManager: FC<RestaurantManagerProps> = ({
     <div className="card bg-base-100 shadow">
       <div className="card-body gap-4">
         <h1 className="text-3xl font-bold">Menus</h1>
-        <form onSubmit={handleSubmit} className="flex flex-wrap items-end gap-2">
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-wrap items-end gap-2">
           <div className="form-control w-full max-w-56">
             <label className="label" htmlFor="restaurant-name">
               <span className="label-text">Restaurant name</span>
@@ -81,8 +79,7 @@ const RestaurantManager: FC<RestaurantManagerProps> = ({
               id="restaurant-accent"
               className="select select-bordered select-sm"
               value={accent}
-              onChange={(e) => setAccent(e.target.value)}
-            >
+              onChange={(e) => setAccent(e.target.value)}>
               {accentOptions.map((a) => (
                 <option key={a} value={a}>
                   {a}
@@ -103,20 +100,20 @@ const RestaurantManager: FC<RestaurantManagerProps> = ({
                 key={r.id}
                 className={`card flex flex-row items-center gap-2 border p-3 ${
                   selected?.id === r.id ? 'border-primary' : ''
-                }`}
-              >
+                }`}>
                 <div>
                   <div className="font-semibold">{r.name}</div>
-                  <div className="text-sm text-base-content/60">
-                    {store.state.items.filter((i) => i.restaurantId === r.id)
-                      .length}{' '}
+                  <div className="text-base-content/60 text-sm">
+                    {
+                      store.state.items.filter((i) => i.restaurantId === r.id)
+                        .length
+                    }{' '}
                     items · {r.id.slice(0, 8)}
                   </div>
                 </div>
                 <button
                   className="btn btn-ghost btn-sm"
-                  onClick={() => onSelect(r)}
-                >
+                  onClick={() => onSelect(r)}>
                   Open
                 </button>
                 <button
@@ -124,8 +121,7 @@ const RestaurantManager: FC<RestaurantManagerProps> = ({
                   aria-label="Delete"
                   onClick={() => {
                     store.setState(deleteRestaurant(store.state, r.id));
-                  }}
-                >
+                  }}>
                   <FiTrash2 />
                 </button>
               </div>

@@ -1,55 +1,52 @@
 import { render, screen } from '@testing-library/react';
 import { DownloadsTemplate } from '../DownloadsTemplate';
 
-describe('DownloadsTemplate', () => {
-  const items = [
+const PROPS = {
+  version: 'v0.0.1',
+  items: [
     {
       platform: 'macOS',
-      requirements: 'macOS 13+',
-      label: 'Download',
-      href: 'https://example.com/mac',
+      requirements: 'Apple Silicon · macOS 13.+',
+      label: '.dmg',
+      href: 'https://example.com/app.dmg',
     },
     {
-      platform: 'Windows',
-      requirements: 'Windows 10+',
-      label: 'Download',
-      href: 'https://example.com/win',
+      platform: 'Linux',
+      requirements: 'Ubuntu 22.04.+',
+      label: '.AppImage',
+      href: 'https://example.com/app.AppImage',
     },
-  ];
+  ],
+};
 
-  it('renders the heading', () => {
-    render(<DownloadsTemplate version="1.0.0" items={items} />);
+describe('DownloadsTemplate', () => {
+  it('renders the Downloads heading', () => {
+    render(<DownloadsTemplate {...PROPS} />);
     expect(screen.getByText('Downloads')).toBeInTheDocument();
   });
 
-  it('renders the version badge', () => {
-    render(<DownloadsTemplate version="1.0.0" items={items} />);
-    expect(screen.getByText('v1.0.0')).toBeInTheDocument();
-  });
-
-  it('renders all platform names', () => {
-    render(<DownloadsTemplate version="1.0.0" items={items} />);
+  it('renders platforms with requirements', () => {
+    render(<DownloadsTemplate {...PROPS} />);
     expect(screen.getByText('macOS')).toBeInTheDocument();
-    expect(screen.getByText('Windows')).toBeInTheDocument();
+    expect(screen.getByText('Apple Silicon · macOS 13.+')).toBeInTheDocument();
+    expect(screen.getByText('Linux')).toBeInTheDocument();
+    expect(screen.getByText('Ubuntu 22.04.+')).toBeInTheDocument();
   });
 
-  it('renders requirements text', () => {
-    render(<DownloadsTemplate version="1.0.0" items={items} />);
-    expect(screen.getByText('macOS 13+')).toBeInTheDocument();
-    expect(screen.getByText('Windows 10+')).toBeInTheDocument();
+  it('renders download links with labels and hrefs', () => {
+    render(<DownloadsTemplate {...PROPS} />);
+    expect(screen.getByRole('link', { name: 'Download .dmg' })).toHaveAttribute(
+      'href',
+      PROPS.items[0].href
+    );
+    expect(
+      screen.getByRole('link', { name: 'Download .AppImage' })
+    ).toHaveAttribute('href', PROPS.items[1].href);
   });
 
-  it('renders download links', () => {
-    render(<DownloadsTemplate version="1.0.0" items={items} />);
-    const links = screen.getAllByText('Download');
-    expect(links).toHaveLength(2);
-    expect(links[0]).toHaveAttribute('href', 'https://example.com/mac');
-    expect(links[1]).toHaveAttribute('href', 'https://example.com/win');
-  });
-
-  it('renders with empty items', () => {
-    render(<DownloadsTemplate version="0.0.1" items={[]} />);
-    expect(screen.getByText('Downloads')).toBeInTheDocument();
+  it('renders version and stable badge', () => {
+    render(<DownloadsTemplate {...PROPS} />);
     expect(screen.getByText('v0.0.1')).toBeInTheDocument();
+    expect(screen.getByText('Stable')).toBeInTheDocument();
   });
 });

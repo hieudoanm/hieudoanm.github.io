@@ -28,7 +28,8 @@
 
 ## Latest release
 
-- **Version:** `app-hybrid-productivity-projects-latest` — updates ship continuously.
+- **Version:** `app-hybrid-productivity-projects-latest` — updates ship
+  continuously.
 - **What's new:** see the [roadmap](ROADMAP) and [CONTRIBUTING](CONTRIBUTING).
 
 ---
@@ -39,14 +40,14 @@ Pick the right file for your platform.
 
 ### Downloads
 
-| No  | Platform | Distro | Architecture | Requirements | Download Link | Note |
-| --- | -------- | ------ | ------------ | ------------ | ------------- | ---- |
-| 1   | Android  |        | Universal    | 14.+         | [Download `.apk`][download-apk] | Install directly |
-| 2   | Android  |        | Universal    | 14.+         | [Download `.aab`][download-aab]¹ | For store upload ¹ |
-| 3   | Linux    | Ubuntu | amd64        | 22.04.+      | [Download `.AppImage`][download-app-image] | Run — no install |
-| 4   | Linux    | Debian | amd64        | 13.+         | [Download `.deb`][download-deb] | |
-| 5   | macOS    |        | aarch64      | 13.+         | [Download `.dmg`][download-dmg]² | Apple Silicon ² |
-| 6   | Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi] | |
+| No  | Platform | Distro | Architecture | Requirements | Download Link                              | Note               |
+| --- | -------- | ------ | ------------ | ------------ | ------------------------------------------ | ------------------ |
+| 1   | Android  |        | Universal    | 14.+         | [Download `.apk`][download-apk]            | Install directly   |
+| 2   | Android  |        | Universal    | 14.+         | [Download `.aab`][download-aab]¹           | For store upload ¹ |
+| 3   | Linux    | Ubuntu | amd64        | 22.04.+      | [Download `.AppImage`][download-app-image] | Run — no install   |
+| 4   | Linux    | Debian | amd64        | 13.+         | [Download `.deb`][download-deb]            |                    |
+| 5   | macOS    |        | aarch64      | 13.+         | [Download `.dmg`][download-dmg]²           | Apple Silicon ²    |
+| 6   | Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi]            |                    |
 
 [download-apk]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-projects-latest/app-universal-release.apk
@@ -103,8 +104,8 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 ## About
 
 A minimal Kanban board in the spirit of Trello and Atlassian — create boards,
-drag cards between lists, assign members, and keep your projects organized across
-every device you own.
+drag cards between lists, assign members, and keep your projects organized
+across every device you own.
 
 ---
 

@@ -63,13 +63,13 @@ src/
 
 Static routes with query-param-driven guest menu.
 
-| Route        | Page                     | Client | Description                      |
-| ------------ | ------------------------ | ------ | -------------------------------- |
-| `/`          | `page.tsx`               | Yes    | Owner dashboard (restaurants)    |
-| `/menu`      | `menu/page.tsx`          | Yes    | Guest menu (reads `?d=` param)   |
-| `/about`     | `(info)/about/page.tsx`  | No     | App info and tech stack          |
-| `/downloads` | `(info)/downloads/page.tsx` | No  | Platform download links          |
-| `/version`   | `(info)/version/page.tsx` | Yes   | Build version display            |
+| Route        | Page                        | Client | Description                    |
+| ------------ | --------------------------- | ------ | ------------------------------ |
+| `/`          | `page.tsx`                  | Yes    | Owner dashboard (restaurants)  |
+| `/menu`      | `menu/page.tsx`             | Yes    | Guest menu (reads `?d=` param) |
+| `/about`     | `(info)/about/page.tsx`     | No     | App info and tech stack        |
+| `/downloads` | `(info)/downloads/page.tsx` | No     | Platform download links        |
+| `/version`   | `(info)/version/page.tsx`   | Yes    | Build version display          |
 
 ## Rendering Strategy
 

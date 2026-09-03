@@ -42,15 +42,13 @@ const RestaurantDashboard: FC<RestaurantDashboardProps> = ({ store }) => {
               <div className="tabs tabs-boxed">
                 <button
                   className={`tab ${tab === 'menu' ? 'tab-active' : ''}`}
-                  onClick={() => setTab('menu')}
-                >
+                  onClick={() => setTab('menu')}>
                   <FiMenu className="mr-1" />
                   Menu
                 </button>
                 <button
                   className={`tab ${tab === 'share' ? 'tab-active' : ''}`}
-                  onClick={() => setTab('share')}
-                >
+                  onClick={() => setTab('share')}>
                   <FiMenu className="mr-1 rotate-180" />
                   Share
                 </button>

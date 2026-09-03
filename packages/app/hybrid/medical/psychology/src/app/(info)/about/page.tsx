@@ -3,7 +3,6 @@ import { NextPage } from 'next';
 
 const AboutPage: NextPage = () => (
   <AboutTemplate
-    appName="Psychology"
     name="Psychology"
     description="Validated psychological self-report scales"
     version="v0.0.1"

@@ -10,7 +10,7 @@ describe('PageTransitionTemplate', () => {
     render(
       <PageTransitionTemplate>
         <p>hello</p>
-      </PageTransitionTemplate>,
+      </PageTransitionTemplate>
     );
     expect(screen.getByText('hello')).toBeInTheDocument();
   });
@@ -19,7 +19,7 @@ describe('PageTransitionTemplate', () => {
     const { container } = render(
       <PageTransitionTemplate>
         <p>content</p>
-      </PageTransitionTemplate>,
+      </PageTransitionTemplate>
     );
     act(() => {});
     const wrapper = container.firstElementChild as HTMLElement;
@@ -30,7 +30,7 @@ describe('PageTransitionTemplate', () => {
     const { container } = render(
       <PageTransitionTemplate>
         <p>content</p>
-      </PageTransitionTemplate>,
+      </PageTransitionTemplate>
     );
     act(() => {});
     const wrapper = container.firstElementChild as HTMLElement;
@@ -44,7 +44,7 @@ describe('PageTransitionTemplate', () => {
     const { unmount } = render(
       <PageTransitionTemplate>
         <p>content</p>
-      </PageTransitionTemplate>,
+      </PageTransitionTemplate>
     );
     act(() => {});
     unmount();
@@ -54,7 +54,7 @@ describe('PageTransitionTemplate', () => {
     const { container } = render(
       <PageTransitionTemplate>
         <p>content</p>
-      </PageTransitionTemplate>,
+      </PageTransitionTemplate>
     );
     act(() => {});
     const wrapper = container.firstElementChild as HTMLElement;

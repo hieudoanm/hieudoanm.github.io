@@ -2,28 +2,33 @@ import { render, screen } from '@testing-library/react';
 import { ErrorTemplate } from '../ErrorTemplate';
 
 describe('ErrorTemplate', () => {
-  it('renders the code', () => {
-    render(<ErrorTemplate code="404" />);
-    expect(screen.getByText('404')).toBeInTheDocument();
-  });
-
-  it('renders a description when provided', () => {
-    render(<ErrorTemplate code="404" description="Page not found" />);
-    expect(screen.getByText('Page not found')).toBeInTheDocument();
-  });
-
-  it('omits the description when not provided', () => {
+  it('renders error code', () => {
     render(<ErrorTemplate code="500" />);
-    expect(screen.queryByText(/not found/)).toBeNull();
+    expect(screen.getByText('500')).toBeTruthy();
   });
 
-  it('renders an action when provided', () => {
-    render(<ErrorTemplate code="404" action={<button>Go home</button>} />);
-    expect(screen.getByText('Go home')).toBeInTheDocument();
+  it('renders Error label', () => {
+    render(<ErrorTemplate code="500" />);
+    expect(screen.getByText('Error')).toBeTruthy();
   });
 
-  it('omits the action when not provided', () => {
-    render(<ErrorTemplate code="404" />);
-    expect(screen.queryByRole('button')).toBeNull();
+  it('renders description when provided', () => {
+    render(<ErrorTemplate code="500" description="Server error" />);
+    expect(screen.getByText('Server error')).toBeTruthy();
+  });
+
+  it('does not render description when not provided', () => {
+    render(<ErrorTemplate code="500" />);
+    expect(screen.queryByText('Server error')).toBeNull();
+  });
+
+  it('renders action when provided', () => {
+    render(<ErrorTemplate code="500" action={<button>Retry</button>} />);
+    expect(screen.getByText('Retry')).toBeTruthy();
+  });
+
+  it('does not render action when not provided', () => {
+    render(<ErrorTemplate code="500" />);
+    expect(screen.queryByText('Retry')).toBeNull();
   });
 });

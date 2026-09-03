@@ -253,7 +253,13 @@ describe('orders', () => {
       customerName: '  Alice  ',
       note: '  No onions  ',
       lines: [
-        { itemId: 'pizza', name: 'Pizza', emoji: '🍕', price: 1000, quantity: 1 },
+        {
+          itemId: 'pizza',
+          name: 'Pizza',
+          emoji: '🍕',
+          price: 1000,
+          quantity: 1,
+        },
       ],
     });
     expect(order.tableNumber).toBe('3');
@@ -268,9 +274,7 @@ describe('orders', () => {
     let { state, restaurant } = baseRestaurant();
     const { state: s1 } = placeOrder(state, {
       restaurantId: restaurant.id,
-      lines: [
-        { itemId: 'a', name: 'A', emoji: 'a', price: 100, quantity: 1 },
-      ],
+      lines: [{ itemId: 'a', name: 'A', emoji: 'a', price: 100, quantity: 1 }],
     });
     const { state: s2, restaurant: other } = createRestaurant(s1, {
       name: 'Other',
@@ -285,9 +289,7 @@ describe('orders', () => {
     let { state, restaurant } = baseRestaurant();
     const { state: s1, order } = placeOrder(state, {
       restaurantId: restaurant.id,
-      lines: [
-        { itemId: 'a', name: 'A', emoji: 'a', price: 100, quantity: 1 },
-      ],
+      lines: [{ itemId: 'a', name: 'A', emoji: 'a', price: 100, quantity: 1 }],
     });
     const next = updateOrderStatus(s1, order.id, 'served');
     expect(ordersForRestaurant(next, restaurant.id)[0].status).toBe('served');
@@ -319,7 +321,10 @@ describe('query param encoding', () => {
 
   it('rejects wrong version', () => {
     const { state, restaurant } = baseRestaurant();
-    const payload = encodeMenuData(restaurant, itemsForRestaurant(state, restaurant.id));
+    const payload = encodeMenuData(
+      restaurant,
+      itemsForRestaurant(state, restaurant.id)
+    );
     const broken = payload.slice(0, 2) + '9' + payload.slice(3); // corrupt v
     expect(decodeMenuData(broken)).toBeNull();
   });

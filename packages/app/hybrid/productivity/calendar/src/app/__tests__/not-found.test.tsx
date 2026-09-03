@@ -1,21 +1,23 @@
 import { render, screen } from '@testing-library/react'
-
 import NotFoundPage from '../not-found'
 
+jest.mock('next/link', () => {
+  const MockLink = ({ children, href }: { children: React.ReactNode; href: string }) => (
+    <a href={href}>{children}</a>
+  )
+  MockLink.displayName = 'MockLink'
+  return MockLink
+})
+
 describe('NotFoundPage', () => {
-  it('renders 404 heading', () => {
+  it('renders 404 and the page not found message', () => {
     render(<NotFoundPage />)
     expect(screen.getByText('404')).toBeInTheDocument()
+    expect(screen.getByText('The page you are looking for does not exist.')).toBeInTheDocument()
   })
 
-  it('renders description', () => {
+  it('renders go home link', () => {
     render(<NotFoundPage />)
-    expect(screen.getByText('This page does not exist.')).toBeInTheDocument()
-  })
-
-  it('renders back link', () => {
-    render(<NotFoundPage />)
-    const link = screen.getByText('Back to calendar')
-    expect(link).toHaveAttribute('href', '/')
+    expect(screen.getByText('Go home')).toHaveAttribute('href', '/')
   })
 })

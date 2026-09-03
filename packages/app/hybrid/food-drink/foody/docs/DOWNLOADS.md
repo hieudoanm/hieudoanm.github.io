@@ -1,8 +1,8 @@
 # Foody
 
-> Can't decide what to eat? Spin the reel and let fate pick your next meal
-> from 32 dishes across six world cuisines. Runs everywhere: phone, tablet,
-> laptop, desktop.
+> Can't decide what to eat? Spin the reel and let fate pick your next meal from
+> 32 dishes across six world cuisines. Runs everywhere: phone, tablet, laptop,
+> desktop.
 
 ![Linux](https://img.shields.io/badge/Linux-22.04%2B-blue)
 ![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
@@ -85,8 +85,8 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-Can't decide what to eat? Spin the slot-machine reel and let fate pick from
-32 dishes across six world cuisines. Quick, fun, and runs on any device.
+Can't decide what to eat? Spin the slot-machine reel and let fate pick from 32
+dishes across six world cuisines. Quick, fun, and runs on any device.
 
 ---
 
@@ -95,6 +95,7 @@ Can't decide what to eat? Spin the slot-machine reel and let fate pick from
 Let the reel decide your next meal.
 
 ### 🔨 Project Foundation
+
 - Monorepo scaffold following the lingo app conventions
   (`packages/app/hybrid/food-drink/foody`)
 - Next.js static export validated against Tauri's `out` expectations
@@ -105,11 +106,13 @@ Let the reel decide your next meal.
 - Unit test coverage thresholds enforced at 80% global
 
 ### 🏠 Home & Navigation
+
 - Card grid listing the Food Randomizer tool with icon and description
 - Tool route rendered directly, opened from the home card grid
 - Theme toggle in template header; choice persisted in localStorage
 
 ### 🎰 Food Randomizer
+
 - Slot-machine style reel cycling dish names while spinning
 - 32 dishes across six cuisines: Italy, Korea, Japan, Thailand, Vietnam and
   Mexico (`randomizer/constants.ts`)
@@ -121,6 +124,7 @@ Let the reel decide your next meal.
 - Local spin counter shown under the reel
 
 ### 📁 Data Model
+
 - `Cuisine { emoji, value, label }` and `Food { emoji, value, label, category }`
 - `FOOD_OPTIONS` maps every cuisine plus `all` to dish label lists used by the
   reel animation and random pick
@@ -129,10 +133,10 @@ Let the reel decide your next meal.
 
 # First run
 
-- **macOS:** Right-click the `.dmg` → "Open" to bypass Gatekeeper, then drag
-  the app to your Applications folder.
-- **Linux (AppImage):** `chmod +x foody_amd64.AppImage` then run it — no
-  install needed.
+- **macOS:** Right-click the `.dmg` → "Open" to bypass Gatekeeper, then drag the
+  app to your Applications folder.
+- **Linux (AppImage):** `chmod +x foody_amd64.AppImage` then run it — no install
+  needed.
 - **Windows:** SmartScreen may flag the `.msi` — click "More info" → "Run
   anyway".
 

@@ -1,29 +1,37 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { VersionTemplate } from '../VersionTemplate';
 
 describe('VersionTemplate', () => {
-  it('renders the heading', () => {
-    render(<VersionTemplate version="1.0.0" />);
-    expect(screen.getAllByText('Version').length).toBeGreaterThanOrEqual(1);
+  it('renders heading and copy button', () => {
+    render(<VersionTemplate version="2026.08.09.10.20.30" />);
+    expect(screen.getByText('Version')).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: /Copy version/i })
+    ).toBeInTheDocument();
+    expect(screen.getByText('Stable')).toBeInTheDocument();
   });
 
-  it('renders the version string', () => {
-    render(<VersionTemplate version="2.3.4" />);
-    expect(screen.getByText('2.3.4')).toBeInTheDocument();
+  it('renders date segments for a timestamp version', () => {
+    render(<VersionTemplate version="2026.08.09.10.20.30" />);
+    expect(screen.getByText('2026')).toBeInTheDocument();
+    expect(screen.getByText('Year')).toBeInTheDocument();
+    expect(screen.getByText('Min')).toBeInTheDocument();
   });
 
-  it('renders the package name', () => {
-    render(<VersionTemplate version="1.0.0" />);
-    expect(screen.getByText('@hieudoanm.github.io/clock')).toBeInTheDocument();
+  it('copies version to clipboard', async () => {
+    Object.assign(navigator, {
+      clipboard: { writeText: jest.fn().mockResolvedValue(undefined) },
+    });
+    render(<VersionTemplate version="2026.08.09.10.20.30" />);
+    fireEvent.click(screen.getByRole('button', { name: /Copy version/i }));
+    await screen.findByText('Copied');
+    expect(navigator.clipboard.writeText).toHaveBeenCalledWith(
+      '2026.08.09.10.20.30'
+    );
   });
 
-  it('renders framework info', () => {
-    render(<VersionTemplate version="1.0.0" />);
-    expect(screen.getByText('Next.js 16')).toBeInTheDocument();
-  });
-
-  it('renders UI info', () => {
-    render(<VersionTemplate version="1.0.0" />);
-    expect(screen.getByText('Tailwind CSS 4 + DaisyUI 5')).toBeInTheDocument();
+  it('falls back to raw version text for non-timestamp versions', () => {
+    render(<VersionTemplate version="v0.0.1" />);
+    expect(screen.getByText('v0.0.1')).toBeInTheDocument();
   });
 });

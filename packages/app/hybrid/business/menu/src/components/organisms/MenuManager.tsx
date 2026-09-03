@@ -19,8 +19,7 @@ interface MenuManagerProps {
   store: MenuStore;
 }
 
-const menuItemInput =
-  'input input-bordered input-sm w-full bg-base-200';
+const menuItemInput = 'input input-bordered input-sm w-full bg-base-200';
 
 interface ItemFormProps {
   restaurantId: string;
@@ -89,10 +88,9 @@ const ItemForm: FC<ItemFormProps> = ({ restaurantId, store }) => {
         </div>
         <div className="form-control">
           <select
-            className="select select-bordered select-sm w-full bg-base-200"
+            className="select select-bordered select-sm bg-base-200 w-full"
             value={category}
-            onChange={(e) => setCategory(e.target.value as 'food' | 'drink')}
-          >
+            onChange={(e) => setCategory(e.target.value as 'food' | 'drink')}>
             <option value="food">Food</option>
             <option value="drink">Drink</option>
           </select>
@@ -100,7 +98,7 @@ const ItemForm: FC<ItemFormProps> = ({ restaurantId, store }) => {
         <div className="form-control flex flex-row gap-2">
           <input
             type="text"
-            className="input input-bordered input-sm w-16 bg-base-200"
+            className="input input-bordered input-sm bg-base-200 w-16"
             placeholder="🍽️"
             value={emoji}
             onChange={(e) => setEmoji(e.target.value)}
@@ -122,10 +120,9 @@ interface ItemRowProps {
 
 const ItemRow: FC<ItemRowProps> = ({ item, store }) => (
   <li
-    className={`flex flex-wrap items-center justify-between gap-2 border border-base-300 p-3 ${
+    className={`border-base-300 flex flex-wrap items-center justify-between gap-2 border p-3 ${
       item.available ? '' : 'opacity-50'
-    }`}
-  >
+    }`}>
     <div className="flex items-center gap-3">
       <span className="text-2xl">{item.emoji}</span>
       <div>
@@ -133,15 +130,12 @@ const ItemRow: FC<ItemRowProps> = ({ item, store }) => (
           {item.name}
           <span
             className={`badge badge-sm ml-2 ${
-              item.category === 'food'
-                ? 'badge-secondary'
-                : 'badge-info'
-            }`}
-          >
+              item.category === 'food' ? 'badge-secondary' : 'badge-info'
+            }`}>
             {item.category}
           </span>
         </div>
-        <div className="text-sm text-base-content/60">{item.description}</div>
+        <div className="text-base-content/60 text-sm">{item.description}</div>
       </div>
     </div>
     <div className="flex items-center gap-2">
@@ -152,15 +146,13 @@ const ItemRow: FC<ItemRowProps> = ({ item, store }) => (
           store.setState(
             updateItem(store.state, item.id, { available: !item.available })
           )
-        }
-      >
+        }>
         {item.available ? 'In stock' : 'Out of stock'}
       </button>
       <button
         className="btn btn-ghost btn-xs text-error"
         aria-label="Remove item"
-        onClick={() => store.setState(removeItem(store.state, item.id))}
-      >
+        onClick={() => store.setState(removeItem(store.state, item.id))}>
         <FiTrash2 />
       </button>
     </div>
@@ -170,7 +162,9 @@ const ItemRow: FC<ItemRowProps> = ({ item, store }) => (
 const MenuManager: FC<MenuManagerProps> = ({ restaurantId, store }) => {
   const items = itemsForRestaurant(store.state, restaurantId);
   const [filter, setFilter] = useState<'all' | 'food' | 'drink'>('all');
-  const visible = items.filter((i) => filter === 'all' || i.category === filter);
+  const visible = items.filter(
+    (i) => filter === 'all' || i.category === filter
+  );
 
   return (
     <div className="flex flex-col gap-4">
@@ -180,8 +174,7 @@ const MenuManager: FC<MenuManagerProps> = ({ restaurantId, store }) => {
           <button
             key={f}
             className={`tab ${filter === f ? 'tab-active' : ''}`}
-            onClick={() => setFilter(f)}
-          >
+            onClick={() => setFilter(f)}>
             {f === 'all' ? 'All' : f === 'food' ? 'Food' : 'Drink'}
           </button>
         ))}

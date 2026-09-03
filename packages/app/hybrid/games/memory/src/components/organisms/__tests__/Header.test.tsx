@@ -48,7 +48,9 @@ describe('Header', () => {
 
   it('applies and persists the default theme', () => {
     render(<Header />);
-    expect(document.documentElement.getAttribute('data-theme')).toBe('memory-dark');
+    expect(document.documentElement.getAttribute('data-theme')).toBe(
+      'memory-dark'
+    );
     expect(localStorage.getItem('memory-theme')).toBe('memory-dark');
   });
 

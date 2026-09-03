@@ -1,49 +1,53 @@
 import { render, screen } from '@testing-library/react'
 import { DownloadsTemplate } from '../DownloadsTemplate'
 
-jest.mock('next/link', () => ({
-  __esModule: true,
-  default: ({ children, ...props }: any) => <a {...props}>{children}</a>,
-}))
+const PROPS = {
+  version: 'v0.0.1',
+  items: [
+    {
+      platform: 'macOS',
+      requirements: 'Apple Silicon · macOS 13.+',
+      label: '.dmg',
+      href: 'https://example.com/app.dmg',
+    },
+    {
+      platform: 'Linux',
+      requirements: 'Ubuntu 22.04.+',
+      label: '.AppImage',
+      href: 'https://example.com/app.AppImage',
+    },
+  ],
+}
 
 describe('DownloadsTemplate', () => {
-  it('renders the heading', () => {
-    render(
-      <DownloadsTemplate
-        version="1.0.0"
-        items={[
-          {
-            platform: 'Web',
-            requirements: 'Any browser',
-            label: 'Open',
-            href: '/',
-          },
-        ]}
-      />,
-    )
-    expect(screen.getByText('Installers')).toBeInTheDocument()
+  it('renders the Downloads heading', () => {
+    render(<DownloadsTemplate {...PROPS} />)
+    expect(screen.getByText('Downloads')).toBeInTheDocument()
   })
 
-  it('renders download items', () => {
-    render(
-      <DownloadsTemplate
-        version="1.0.0"
-        items={[
-          {
-            platform: 'macOS',
-            requirements: 'macOS 10.15+',
-            label: 'Download',
-            href: '/download',
-          },
-        ]}
-      />,
-    )
+  it('renders platforms with requirements', () => {
+    render(<DownloadsTemplate {...PROPS} />)
     expect(screen.getByText('macOS')).toBeInTheDocument()
-    expect(screen.getByText('macOS 10.15+')).toBeInTheDocument()
+    expect(screen.getByText('Apple Silicon · macOS 13.+')).toBeInTheDocument()
+    expect(screen.getByText('Linux')).toBeInTheDocument()
+    expect(screen.getByText('Ubuntu 22.04.+')).toBeInTheDocument()
   })
 
-  it('renders version badge', () => {
-    render(<DownloadsTemplate version="1.0.0" items={[]} />)
-    expect(screen.getByText('1.0.0')).toBeInTheDocument()
+  it('renders download links with labels and hrefs', () => {
+    render(<DownloadsTemplate {...PROPS} />)
+    expect(screen.getByRole('link', { name: 'Download .dmg' })).toHaveAttribute(
+      'href',
+      PROPS.items[0].href,
+    )
+    expect(screen.getByRole('link', { name: 'Download .AppImage' })).toHaveAttribute(
+      'href',
+      PROPS.items[1].href,
+    )
+  })
+
+  it('renders version and stable badge', () => {
+    render(<DownloadsTemplate {...PROPS} />)
+    expect(screen.getByText('v0.0.1')).toBeInTheDocument()
+    expect(screen.getByText('Stable')).toBeInTheDocument()
   })
 })

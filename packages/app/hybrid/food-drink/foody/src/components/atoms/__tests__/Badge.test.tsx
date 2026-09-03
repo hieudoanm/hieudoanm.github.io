@@ -9,9 +9,7 @@ describe('Badge', () => {
     ['error', 'badge-error'],
     ['neutral', 'badge-neutral'],
   ])('renders the %s variant', (variant, className) => {
-    const { container } = render(
-      <Badge variant={variant as 'info'}>x</Badge>
-    );
+    const { container } = render(<Badge variant={variant as 'info'}>x</Badge>);
     expect(container.firstChild).toHaveClass('badge', className);
   });
 

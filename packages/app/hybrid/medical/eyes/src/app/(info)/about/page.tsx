@@ -3,7 +3,6 @@ import { NextPage } from 'next';
 
 const AboutPage: NextPage = () => (
   <AboutTemplate
-    appName="Eyes"
     name="Eyes"
     description="Visual acuity charts for vision screening"
     version="v0.0.1"

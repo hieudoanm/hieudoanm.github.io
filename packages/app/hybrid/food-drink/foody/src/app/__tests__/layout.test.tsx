@@ -2,13 +2,19 @@ import { render, screen } from '@testing-library/react';
 
 jest.mock('@/styles/globals.css', () => ({}));
 jest.mock('@/providers/NativeProvider', () => ({
-  NativeProvider: ({ children }: { children: React.ReactNode }) => <div>{children}</div>,
+  NativeProvider: ({ children }: { children: React.ReactNode }) => (
+    <div>{children}</div>
+  ),
 }));
 jest.mock('@/providers/QueryProvider', () => ({
-  QueryProvider: ({ children }: { children: React.ReactNode }) => <div>{children}</div>,
+  QueryProvider: ({ children }: { children: React.ReactNode }) => (
+    <div>{children}</div>
+  ),
 }));
 jest.mock('@/providers/SWProvider', () => ({
-  SWProvider: ({ children }: { children: React.ReactNode }) => <div>{children}</div>,
+  SWProvider: ({ children }: { children: React.ReactNode }) => (
+    <div>{children}</div>
+  ),
 }));
 jest.mock('@/components/organisms/Header', () => ({
   Header: () => <div data-testid="header">Header</div>,
@@ -21,7 +27,7 @@ describe('RootLayout', () => {
     render(
       <RootLayout>
         <div>child</div>
-      </RootLayout>,
+      </RootLayout>
     );
     expect(screen.getByText('child')).toBeInTheDocument();
   });
@@ -30,16 +36,19 @@ describe('RootLayout', () => {
     render(
       <RootLayout>
         <div />
-      </RootLayout>,
+      </RootLayout>
     );
-    expect(document.documentElement).toHaveAttribute('data-theme', 'foody-light');
+    expect(document.documentElement).toHaveAttribute(
+      'data-theme',
+      'foody-light'
+    );
   });
 
   it('renders header', () => {
     render(
       <RootLayout>
         <div />
-      </RootLayout>,
+      </RootLayout>
     );
     expect(screen.getByTestId('header')).toBeInTheDocument();
   });

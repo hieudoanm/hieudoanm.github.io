@@ -105,7 +105,11 @@ Each game module follows this pattern:
 
 ### Unit tests (Jest)
 
-Break tests into small per-file suites — one `*.test.ts` / `*.test.tsx` per unit (component, page, hook, util, provider), colocated in a `__tests__/` directory; never merge multiple units into one file. App pages are tested under `src/app/__tests__/` and route-group pages (`(app)`, `(info)`) colocate `__tests__/page.test.tsx` in the same folder.
+Break tests into small per-file suites — one `*.test.ts` / `*.test.tsx` per unit
+(component, page, hook, util, provider), colocated in a `__tests__/` directory;
+never merge multiple units into one file. App pages are tested under
+`src/app/__tests__/` and route-group pages (`(app)`, `(info)`) colocate
+`__tests__/page.test.tsx` in the same folder.
 
 1. Test behaviour, not implementation.
 2. Use Arrange-Act-Assert.

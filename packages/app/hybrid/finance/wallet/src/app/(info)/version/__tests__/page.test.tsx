@@ -17,7 +17,7 @@ beforeEach(() => {
 describe('VersionPage', () => {
   it('renders version segments', () => {
     renderWithProviders(<VersionPage />);
-    expect(screen.getByText('Wallet Version')).toBeInTheDocument();
+    expect(screen.getByText('Version')).toBeInTheDocument();
     expect(screen.getByText('Year')).toBeInTheDocument();
     expect(screen.getByText('Month')).toBeInTheDocument();
   });

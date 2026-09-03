@@ -1,20 +1,17 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import GlobalError from '../global-error';
+import GlobalErrorPage from '../global-error';
 
-describe('GlobalError', () => {
-  it('renders error template', () => {
-    render(<GlobalError error={new Error('test')} reset={jest.fn()} />);
+describe('GlobalErrorPage', () => {
+  it('renders 500 and try again button', () => {
+    const reset = jest.fn();
+    render(<GlobalErrorPage error={new Error('test')} reset={reset} />);
     expect(screen.getByText('500')).toBeInTheDocument();
-  });
-
-  it('renders description', () => {
-    render(<GlobalError error={new Error('test')} reset={jest.fn()} />);
     expect(screen.getByText('Something went wrong.')).toBeInTheDocument();
   });
 
-  it('calls reset on button click', () => {
+  it('calls reset when try again is clicked', () => {
     const reset = jest.fn();
-    render(<GlobalError error={new Error('test')} reset={reset} />);
+    render(<GlobalErrorPage error={new Error('test')} reset={reset} />);
     fireEvent.click(screen.getByText('Try again'));
     expect(reset).toHaveBeenCalled();
   });

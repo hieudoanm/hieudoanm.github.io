@@ -1,13 +1,23 @@
 'use client';
 
-import { ErrorPage } from '../routes/ErrorPage';
+import { ErrorTemplate } from '@/components/templates/ErrorTemplate';
 
-const Error = ({
+const ErrorPage = ({
   error,
   reset,
 }: {
   error: Error & { digest?: string };
   reset: () => void;
-}) => <ErrorPage statusCode={500} error={error} reset={reset} />;
+}) => (
+  <ErrorTemplate
+    code="500"
+    description="Something went wrong."
+    action={
+      <button className="btn btn-primary btn-sm" onClick={() => reset()}>
+        Try again
+      </button>
+    }
+  />
+);
 
-export default Error;
+export default ErrorPage;

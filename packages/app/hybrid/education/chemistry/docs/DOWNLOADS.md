@@ -29,7 +29,8 @@
 
 ## Latest release
 
-- **Version:** `app-hybrid-education-chemistry-latest` — updates ship continuously.
+- **Version:** `app-hybrid-education-chemistry-latest` — updates ship
+  continuously.
 - **What's new:** see the [roadmap](ROADMAP) and [CONTRIBUTING](CONTRIBUTING).
 
 ---
@@ -95,6 +96,7 @@ and explore chemistry on any device. Beautiful, responsive, and educational.
 Explore the elements like never before.
 
 ### 🔨 Project Foundation
+
 - Monorepo scaffold following the lingo app conventions
   (`packages/app/hybrid/education/chemistry`)
 - Next.js static export validated against Tauri's `dist` expectations
@@ -105,11 +107,13 @@ Explore the elements like never before.
 - Unit test coverage thresholds enforced at 80% global
 
 ### 🏠 Home & Navigation
+
 - Card grid listing the tool with icon and description
 - Tool route rendered directly, opened from the home card grid
 - Theme toggle in template header; choice persisted in localStorage
 
 ### 🧪 Periodic Table
+
 - Interactive periodic table rendered from
   `@hieudoanm.github.io/data/periodic-table`
 - Elements color-coded by `specificName` category
@@ -122,8 +126,8 @@ Explore the elements like never before.
 
 # First run
 
-- **macOS:** Right-click the `.dmg` → "Open" to bypass Gatekeeper, then drag
-  the app to your Applications folder.
+- **macOS:** Right-click the `.dmg` → "Open" to bypass Gatekeeper, then drag the
+  app to your Applications folder.
 - **Linux (AppImage):** `chmod +x chemistry_amd64.AppImage` then run it — no
   install needed.
 - **Windows:** SmartScreen may flag the `.msi` — click "More info" → "Run

@@ -22,7 +22,9 @@ export const Header: FC = () => {
   }, [theme]);
 
   const toggleTheme = () =>
-    setTheme((current) => (current === 'tic-tac-toe-dark' ? 'tic-tac-toe-light' : 'tic-tac-toe-dark'));
+    setTheme((current) =>
+      current === 'tic-tac-toe-dark' ? 'tic-tac-toe-light' : 'tic-tac-toe-dark'
+    );
 
   return (
     <header className="border-base-300 bg-base-100 sticky top-0 z-10 border-b px-6 py-3">

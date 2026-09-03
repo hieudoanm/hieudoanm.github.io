@@ -1,7 +1,6 @@
 'use client';
 
 import { ErrorTemplate } from '@/components/templates/ErrorTemplate';
-import { NextPage } from 'next';
 
 const ErrorPage = ({
   error,
@@ -12,7 +11,7 @@ const ErrorPage = ({
 }) => (
   <ErrorTemplate
     code="500"
-    description={error.message ?? 'Something went wrong.'}
+    description="Something went wrong."
     action={
       <button className="btn btn-primary btn-sm" onClick={() => reset()}>
         Try again

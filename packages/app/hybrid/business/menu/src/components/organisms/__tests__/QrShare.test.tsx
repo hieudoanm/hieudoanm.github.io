@@ -15,10 +15,13 @@ const renderQr = (restaurantName = 'Cafe') => {
   });
   let currentState = s1;
   const setState = jest.fn((updater: any) => {
-    currentState = typeof updater === 'function' ? updater(currentState) : updater;
+    currentState =
+      typeof updater === 'function' ? updater(currentState) : updater;
   });
   const store: MenuStore = {
-    get state() { return currentState; },
+    get state() {
+      return currentState;
+    },
     setState,
     reset: jest.fn(),
   };
@@ -41,13 +44,19 @@ describe('QrShare', () => {
   it('shows the share description', async () => {
     renderQr();
     await screen.findByRole('img', { name: /qr code/i });
-    expect(screen.getByText(/print this qr code or send the link/i)).toBeInTheDocument();
+    expect(
+      screen.getByText(/print this qr code or send the link/i)
+    ).toBeInTheDocument();
   });
 
   it('shows the copy button and open menu link', async () => {
     renderQr();
     await screen.findByRole('img', { name: /qr code/i });
-    expect(screen.getByRole('button', { name: /copy link/i })).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /open menu/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: /copy link/i })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('link', { name: /open menu/i })
+    ).toBeInTheDocument();
   });
 });

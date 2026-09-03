@@ -1,5 +1,8 @@
+'use client';
+
 import type { FC } from 'react';
 import { useState } from 'react';
+import { FiCheck, FiCopy } from 'react-icons/fi';
 
 export const VersionTemplate: FC<{ version: string }> = ({ version }) => {
   const [copied, setCopied] = useState(false);
@@ -14,30 +17,14 @@ export const VersionTemplate: FC<{ version: string }> = ({ version }) => {
   const hasSegments = year && month && day;
 
   return (
-    <div
-      className="flex min-h-screen flex-col items-center justify-center px-6 py-24"
-      style={{ backgroundColor: '#000000', color: '#f5f5f5' }}>
-      <p
-        className="mb-6 text-xs tracking-[0.2em] uppercase"
-        style={{ color: '#8a8a8a' }}>
+    <div className="mx-auto flex w-full max-w-2xl flex-col items-center gap-6 px-6 py-16 text-center">
+      <p className="text-base-content/50 text-xs tracking-[0.2em] uppercase">
         Current deployment
       </p>
 
-      <h1
-        className="mb-3 text-4xl font-light tracking-tight"
-        style={{ fontFamily: 'monospace' }}>
-        SVG Version
-      </h1>
+      <h1 className="mb-1">Version</h1>
 
-      <p
-        className="mb-10 max-w-sm text-center text-sm"
-        style={{ color: '#8a8a8a' }}>
-        Build version of the current deployment
-      </p>
-
-      <div
-        className="mb-8 w-full max-w-lg rounded-2xl border p-6"
-        style={{ backgroundColor: '#0a0a0a', borderColor: '#1f1f1f' }}>
+      <div className="border-base-content/10 bg-base-200 w-full max-w-lg rounded-2xl border p-6">
         {hasSegments ? (
           <div className="flex items-center justify-center gap-0">
             <Segment value={year} label="Year" primary />
@@ -65,43 +52,29 @@ export const VersionTemplate: FC<{ version: string }> = ({ version }) => {
             )}
           </div>
         ) : (
-          <p
-            className="text-center font-mono text-xl font-bold break-all"
-            style={{ color: '#ff0030' }}>
+          <p className="text-error font-mono text-xl font-bold break-all">
             {version}
           </p>
         )}
       </div>
 
-      <div className="mb-8 flex flex-wrap justify-center gap-3">
+      <div className="flex flex-wrap justify-center gap-3">
         <button
           onClick={copy}
-          className="rounded-full px-6 py-2 text-sm font-medium transition-colors"
-          style={{
-            backgroundColor: copied ? '#00c853' : '#ff0030',
-            color: '#f5f5f5',
-          }}>
+          className={`btn btn-sm rounded-full ${copied ? 'btn-success' : 'btn-primary'}`}>
+          {copied ? <FiCheck /> : <FiCopy />}
           {copied ? 'Copied' : 'Copy version'}
         </button>
-        <button
-          className="rounded-full px-6 py-2 text-sm font-medium transition-colors"
-          style={{ backgroundColor: '#1f1f1f', color: '#f5f5f5' }}
-          onClick={copy}>
+        <button className="btn btn-neutral btn-sm rounded-full" onClick={copy}>
           {version}
         </button>
       </div>
 
       <div className="flex flex-wrap justify-center gap-3">
-        <span
-          className="rounded-full border px-3 py-1 text-xs"
-          style={{ borderColor: '#1f1f1f', color: '#8a8a8a' }}>
+        <span className="border-base-content/20 text-base-content/50 rounded-full border px-3 py-1 text-xs">
           Format: YYYY.MM.DD.hh.mm.ss
         </span>
-        <span
-          className="rounded-full px-3 py-1 text-xs"
-          style={{ backgroundColor: '#1f1f1f', color: '#f5f5f5' }}>
-          Stable
-        </span>
+        <span className="badge badge-neutral rounded-full">Stable</span>
       </div>
     </div>
   );
@@ -114,22 +87,17 @@ const Segment: FC<{ value: string; label: string; primary?: boolean }> = ({
 }) => (
   <div className="flex flex-col items-center px-4">
     <span
-      className="font-mono text-2xl font-bold"
-      style={{ color: primary ? '#ff0030' : '#f5f5f5' }}>
+      className={`font-mono text-2xl font-bold ${primary ? 'text-primary' : 'text-base-content'}`}>
       {value}
     </span>
-    <span
-      className="mt-1 text-[10px] tracking-widest uppercase"
-      style={{ color: '#8a8a8a' }}>
+    <span className="text-base-content/50 mt-1 text-xs tracking-[0.2em] uppercase">
       {label}
     </span>
   </div>
 );
 
 const Dot: FC = () => (
-  <span className="font-mono text-xl" style={{ color: '#8a8a8a' }}>
-    .
-  </span>
+  <span className="text-base-content/50 font-mono text-xl">.</span>
 );
 
 VersionTemplate.displayName = 'VersionTemplate';

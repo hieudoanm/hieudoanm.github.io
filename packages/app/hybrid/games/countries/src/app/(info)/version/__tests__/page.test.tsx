@@ -15,9 +15,9 @@ describe('VersionPage', () => {
       value: { writeText },
       configurable: true,
     });
-    const { rerender } = render(<VersionPage />);
+    render(<VersionPage />);
     await screen.findByText('Year');
-    fireEvent.click(screen.getByTestId('copy-version'));
+    fireEvent.click(screen.getByRole('button', { name: /copy version/i }));
     expect(writeText).toHaveBeenCalledWith(expect.stringMatching(/^\d{4}\./));
     expect(await screen.findByText('Copied')).toBeInTheDocument();
   });

@@ -173,7 +173,10 @@ describe('db.settings', () => {
   });
 
   it('stores and retrieves settings with the default key', async () => {
-    await db.settings.put({ ...(await db.settings.get()), theme: 'messaging-dark' });
+    await db.settings.put({
+      ...(await db.settings.get()),
+      theme: 'messaging-dark',
+    });
     const settings = await db.settings.get();
     expect(settings.theme).toBe('messaging-dark');
     expect(settings.id).toBe('default');

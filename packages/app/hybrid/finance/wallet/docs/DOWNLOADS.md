@@ -96,8 +96,8 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-A dead-simple Momo / Techcombank-style mobile banking app — track your
-balance, move money, split bills, and keep an eye on budgets from any device.
+A dead-simple Momo / Techcombank-style mobile banking app — track your balance,
+move money, split bills, and keep an eye on budgets from any device.
 
 ---
 
@@ -106,6 +106,7 @@ balance, move money, split bills, and keep an eye on budgets from any device.
 Everything you need to manage money without the bloat.
 
 ### 👤 Account
+
 - Authentication flow (login, register, forgot/reset password)
 - Profile with user info, settings, theme picker
 - Dashboard with balance, accounts, quick actions, recent transactions
@@ -114,6 +115,7 @@ Everything you need to manage money without the bloat.
 - 32 DaisyUI themes with dark default
 
 ### 💸 Transactions
+
 - Transaction list with search, type filter, date range filter
 - Infinite scroll / pagination for transaction list
 - Swipe gestures on transaction items (delete, archive)
@@ -121,6 +123,7 @@ Everything you need to manage money without the bloat.
 - Payment history with status (pending, completed, failed)
 
 ### 🔄 Money Movement
+
 - Transfer wizard (3-step: recipient, amount, review)
 - Card carousel with freeze/unfreeze
 - Recurring bills with mark-as-paid
@@ -130,6 +133,7 @@ Everything you need to manage money without the bloat.
 - Recurring transfers (auto-pay setup)
 
 ### 📊 Budgets & Insights
+
 - Budget summary with category cards
 - Spending charts (pie chart by category, line chart over time)
 - Monthly/yearly spending reports (monthly trends; yearly selector pending)
@@ -137,10 +141,12 @@ Everything you need to manage money without the bloat.
 - Search with filters (date range, amount range, category)
 
 ### 📇 Contacts & Social
+
 - Contact list with frequent recipients
 - Split bill feature (equal or custom splits)
 
 ### 🏦 Banking Products
+
 - Loan product catalog (personal, auto, home, education)
 - EMI calculator with slider inputs
 - Loan dashboard with active loans and repayment schedules
@@ -151,12 +157,14 @@ Everything you need to manage money without the bloat.
 - Savings goal creation and management
 
 ### 🛡️ Insurance & Rewards
+
 - Coverage summary dashboard
 - Premium payment from wallet
 - Card rewards: cashback tracking, reward points, tier status
 - Reward catalog (redeem points)
 
 ### 🔔 Notifications & UX
+
 - Notifications with filter and mark-as-read
 - Currency alert notifications (rate thresholds)
 - Page transition animations (Framer Motion)
@@ -167,6 +175,7 @@ Everything you need to manage money without the bloat.
 - Offline indicator banner
 
 ### 📱 PWA
+
 - Service worker for static asset caching
 - PWA manifest with install prompt
 
@@ -175,7 +184,8 @@ Everything you need to manage money without the bloat.
 # First run
 
 - **macOS:** Right-click the `.dmg` and choose **Open** to bypass Gatekeeper.
-- **Linux AppImage:** `chmod +x wallet_amd64.AppImage && ./wallet_amd64.AppImage`
+- **Linux AppImage:**
+  `chmod +x wallet_amd64.AppImage && ./wallet_amd64.AppImage`
 - **Windows SmartScreen:** Click **More info → Run anyway** if prompted.
 - **Android Play Protect:** Tap **Install anyway** if the warning appears.
 
@@ -187,7 +197,8 @@ Everything you need to manage money without the bloat.
 
 ## Next steps
 
-- Check [CONTRIBUTING](CONTRIBUTING) for dev setup, coding conventions, and how to run tests.
+- Check [CONTRIBUTING](CONTRIBUTING) for dev setup, coding conventions, and how
+  to run tests.
 - Browse the [ROADMAP](ROADMAP) for what's shipping next.
 
 ---

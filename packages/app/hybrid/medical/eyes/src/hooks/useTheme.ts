@@ -30,7 +30,9 @@ export const useTheme = (): [Theme, () => void] => {
   }, [theme]);
 
   const toggle = (): void => {
-    setTheme((current) => (current === 'eyes-dark' ? 'eyes-light' : 'eyes-dark'));
+    setTheme((current) =>
+      current === 'eyes-dark' ? 'eyes-light' : 'eyes-dark'
+    );
   };
 
   return [theme, toggle];

@@ -17,7 +17,9 @@ describe('ThemeToggle', () => {
     render(<ThemeToggle />);
     const btn = screen.getByTitle('Toggle theme');
     await user.click(btn);
-    expect(document.documentElement.getAttribute('data-theme')).toBe('clock-light');
+    expect(document.documentElement.getAttribute('data-theme')).toBe(
+      'clock-light'
+    );
   });
 
   it('toggles back on second click', async () => {
@@ -26,6 +28,8 @@ describe('ThemeToggle', () => {
     const btn = screen.getByTitle('Toggle theme');
     await user.click(btn);
     await user.click(btn);
-    expect(document.documentElement.getAttribute('data-theme')).toBe('clock-dark');
+    expect(document.documentElement.getAttribute('data-theme')).toBe(
+      'clock-dark'
+    );
   });
 });

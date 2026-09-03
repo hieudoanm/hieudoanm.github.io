@@ -18,7 +18,7 @@ const GlobalError = ({
   reset: () => void;
 }) => {
   return (
-    <html lang="en" data-theme="nothing">
+    <html lang="en">
       <body>
         <ErrorTemplate
           error={{

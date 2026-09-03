@@ -1,23 +1,37 @@
-import { render, screen } from '@testing-library/react';
-import { VersionTemplate } from '@/components/templates/VersionTemplate';
+import { fireEvent, render, screen } from '@testing-library/react';
+import { VersionTemplate } from '../VersionTemplate';
 
 describe('VersionTemplate', () => {
-  it('splits a timestamped version into segments', () => {
-    render(<VersionTemplate version="2026.08.21.10.30.00" />);
-    expect(screen.getByText('Year')).toBeInTheDocument();
-    expect(screen.getByText('Sec')).toBeInTheDocument();
+  it('renders heading and copy button', () => {
+    render(<VersionTemplate version="2026.08.09.10.20.30" />);
+    expect(screen.getByText('Version')).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: /Copy version/i })
+    ).toBeInTheDocument();
+    expect(screen.getByText('Stable')).toBeInTheDocument();
+  });
+
+  it('renders date segments for a timestamp version', () => {
+    render(<VersionTemplate version="2026.08.09.10.20.30" />);
     expect(screen.getByText('2026')).toBeInTheDocument();
+    expect(screen.getByText('Year')).toBeInTheDocument();
+    expect(screen.getByText('Min')).toBeInTheDocument();
   });
 
-  it('falls back to raw text for non-timestamped versions', () => {
-    render(<VersionTemplate version="dev" />);
-    expect(screen.queryByText('Year')).not.toBeInTheDocument();
-    expect(screen.getAllByText('dev').length).toBeGreaterThan(0);
+  it('copies version to clipboard', async () => {
+    Object.assign(navigator, {
+      clipboard: { writeText: jest.fn().mockResolvedValue(undefined) },
+    });
+    render(<VersionTemplate version="2026.08.09.10.20.30" />);
+    fireEvent.click(screen.getByRole('button', { name: /Copy version/i }));
+    await screen.findByText('Copied');
+    expect(navigator.clipboard.writeText).toHaveBeenCalledWith(
+      '2026.08.09.10.20.30'
+    );
   });
 
-  it('omits trailing segments when absent', () => {
-    render(<VersionTemplate version="2026.08.21" />);
-    expect(screen.getByText('Day')).toBeInTheDocument();
-    expect(screen.queryByText('Hour')).not.toBeInTheDocument();
+  it('falls back to raw version text for non-timestamp versions', () => {
+    render(<VersionTemplate version="v0.0.1" />);
+    expect(screen.getByText('v0.0.1')).toBeInTheDocument();
   });
 });

@@ -16,10 +16,10 @@ world cuisines, built with Next.js and Tauri.
 
 ## Key Conventions
 
-- The randomizer feature is wired up in
-  `src/components/organisms/randomizer/` (the `FoodRandomizer` organism), and
-  its reusable pieces live in `src/components/molecules/` (`CuisineSelect`,
-  `HowToModal`, `Reel`) and `src/hooks/` (`useFoodPicker`).
+- The randomizer feature is wired up in `src/components/organisms/randomizer/`
+  (the `FoodRandomizer` organism), and its reusable pieces live in
+  `src/components/molecules/` (`CuisineSelect`, `HowToModal`, `Reel`) and
+  `src/hooks/` (`useFoodPicker`).
 - Jest treats every file inside `__tests__/` as a suite: keep shared fixtures in
   `<feature>/testing/`, not in `__tests__/`.
 - Pages are thin: they compose templates (`HomeTemplate`) and feature

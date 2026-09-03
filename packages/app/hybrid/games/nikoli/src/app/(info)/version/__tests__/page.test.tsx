@@ -17,7 +17,7 @@ describe('VersionPage', () => {
     await act(async () => {
       render(<VersionPage />);
     });
-    expect(screen.getByText('Nikoli Version')).toBeInTheDocument();
+    expect(screen.getByText('Version')).toBeInTheDocument();
   });
 
   it('sets version from current date', async () => {

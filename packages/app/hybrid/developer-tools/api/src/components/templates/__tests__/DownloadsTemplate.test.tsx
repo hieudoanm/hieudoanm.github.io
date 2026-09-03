@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { DownloadsTemplate } from '@/components/templates/DownloadsTemplate';
+import { DownloadsTemplate } from '../DownloadsTemplate';
 
 const PROPS = {
   version: 'v0.0.1',
@@ -8,26 +8,32 @@ const PROPS = {
       platform: 'macOS',
       requirements: 'Apple Silicon · macOS 13.+',
       label: '.dmg',
-      href: 'https://example.com/api_aarch64.dmg',
+      href: 'https://example.com/app.dmg',
     },
     {
       platform: 'Linux',
       requirements: 'Ubuntu 22.04.+',
       label: '.AppImage',
-      href: 'https://example.com/api_amd64.AppImage',
+      href: 'https://example.com/app.AppImage',
     },
   ],
 };
 
 describe('DownloadsTemplate', () => {
+  it('renders the Downloads heading', () => {
+    render(<DownloadsTemplate {...PROPS} />);
+    expect(screen.getByText('Downloads')).toBeInTheDocument();
+  });
+
   it('renders platforms with requirements', () => {
     render(<DownloadsTemplate {...PROPS} />);
     expect(screen.getByText('macOS')).toBeInTheDocument();
     expect(screen.getByText('Apple Silicon · macOS 13.+')).toBeInTheDocument();
+    expect(screen.getByText('Linux')).toBeInTheDocument();
     expect(screen.getByText('Ubuntu 22.04.+')).toBeInTheDocument();
   });
 
-  it('renders download links with labels', () => {
+  it('renders download links with labels and hrefs', () => {
     render(<DownloadsTemplate {...PROPS} />);
     expect(screen.getByRole('link', { name: 'Download .dmg' })).toHaveAttribute(
       'href',
@@ -42,10 +48,5 @@ describe('DownloadsTemplate', () => {
     render(<DownloadsTemplate {...PROPS} />);
     expect(screen.getByText('v0.0.1')).toBeInTheDocument();
     expect(screen.getByText('Stable')).toBeInTheDocument();
-  });
-
-  it('links back to home', () => {
-    render(<DownloadsTemplate {...PROPS} />);
-    expect(document.querySelector('a[href="/"]')).toBeInTheDocument();
   });
 });

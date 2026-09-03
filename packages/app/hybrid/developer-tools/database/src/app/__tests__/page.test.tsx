@@ -2,7 +2,9 @@ import { render, screen } from '@testing-library/react';
 import HomePage from '@/app/page';
 
 jest.mock('@/providers/Providers', () => ({
-  Providers: ({ children }: { children: React.ReactNode }) => <div>{children}</div>,
+  Providers: ({ children }: { children: React.ReactNode }) => (
+    <div>{children}</div>
+  ),
 }));
 
 jest.mock('@/providers/DataProvider', () => ({
@@ -47,7 +49,9 @@ describe('HomePage', () => {
 
   it('renders the search input', () => {
     render(<HomePage />);
-    expect(screen.getByPlaceholderText('Search connections...')).toBeInTheDocument();
+    expect(
+      screen.getByPlaceholderText('Search connections...')
+    ).toBeInTheDocument();
   });
 
   it('renders new connection button', () => {

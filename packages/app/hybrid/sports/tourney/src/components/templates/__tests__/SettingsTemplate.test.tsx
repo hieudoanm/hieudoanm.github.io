@@ -22,7 +22,9 @@ describe('SettingsTemplate', () => {
 
   it('renders the settings sections and current values', () => {
     renderTemplate();
-    expect(screen.getByRole('heading', { name: 'Settings' })).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { name: 'Settings' })
+    ).toBeInTheDocument();
     expect(screen.getByText('Customize your experience')).toBeInTheDocument();
     expect(screen.getAllByText('Language').length).toBeGreaterThan(0);
     expect(screen.getByText('Theme')).toBeInTheDocument();

@@ -50,7 +50,11 @@ const SettingsPage: FC = () => {
         <div className="mx-auto max-w-2xl space-y-8 p-6">
           <section className="card bg-base-200 card-body">
             <h2 className="card-title flex items-center gap-2">
-              {theme === 'api-dark' ? (<FiMoon className="size-4" />) : (<FiSun className="size-4" />)}
+              {theme === 'api-dark' ? (
+                <FiMoon className="size-4" />
+              ) : (
+                <FiSun className="size-4" />
+              )}
               Appearance
             </h2>
             <div className="form-control">

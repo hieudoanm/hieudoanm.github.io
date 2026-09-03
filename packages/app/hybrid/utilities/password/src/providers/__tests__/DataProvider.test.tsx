@@ -131,7 +131,9 @@ const Probe = () => {
       <button type="button" onClick={() => toggleFavorite('v-1')}>
         Toggle
       </button>
-      <button type="button" onClick={() => updateSettings({ theme: 'password-dark' })}>
+      <button
+        type="button"
+        onClick={() => updateSettings({ theme: 'password-dark' })}>
         Theme
       </button>
       <button type="button" onClick={() => createFolder('Work')}>
@@ -224,7 +226,11 @@ describe('DataProvider', () => {
   it('loads and sorts items by updatedAt descending', async () => {
     mockDb.reset({
       items: [makeItem('v-1', 'Older', 100), makeItem('v-2', 'Newer', 200)],
-      settings: { theme: 'password-light', autoLockTimeout: 15, clipboardClear: 60 },
+      settings: {
+        theme: 'password-light',
+        autoLockTimeout: 15,
+        clipboardClear: 60,
+      },
     });
     render(
       <DataProvider>

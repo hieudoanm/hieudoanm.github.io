@@ -3,7 +3,6 @@ import { NextPage } from 'next';
 
 const AboutPage: NextPage = () => (
   <AboutTemplate
-    appName="History"
     name="History"
     description="Timeline-based history games and tools"
     version="v0.0.1"

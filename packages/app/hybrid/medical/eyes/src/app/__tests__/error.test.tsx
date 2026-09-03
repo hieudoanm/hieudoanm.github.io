@@ -1,23 +1,21 @@
-import { fireEvent, render, screen } from '@testing-library/react';
-import ErrorPage from '@/app/error';
-import GlobalError from '@/app/global-error';
+import { render, screen, fireEvent } from '@testing-library/react';
+import ErrorPage from '../error';
 
 describe('ErrorPage', () => {
-  it('renders the 500 template and resets', () => {
+  it('renders 500 and the try again button', () => {
     const reset = jest.fn();
     render(<ErrorPage error={new Error('boom')} reset={reset} />);
     expect(screen.getByText('500')).toBeInTheDocument();
-    fireEvent.click(screen.getByText('Try again'));
-    expect(reset).toHaveBeenCalled();
+    expect(screen.getByText('Something went wrong.')).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: 'Try again' })
+    ).toBeInTheDocument();
   });
-});
 
-describe('GlobalError', () => {
-  it('renders the 500 template inside an html document', () => {
+  it('calls reset when try again is clicked', () => {
     const reset = jest.fn();
-    render(<GlobalError error={new Error('boom')} reset={reset} />);
-    expect(screen.getByText('500')).toBeInTheDocument();
-    fireEvent.click(screen.getByText('Try again'));
+    render(<ErrorPage error={new Error('boom')} reset={reset} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Try again' }));
     expect(reset).toHaveBeenCalled();
   });
 });

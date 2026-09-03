@@ -30,7 +30,11 @@ describe('PostView', () => {
 
   it('omits navigation links when prev or next is null', () => {
     render(
-      <PostView post={makePost('northwind', 'Northwind')} prev={null} next={null} />
+      <PostView
+        post={makePost('northwind', 'Northwind')}
+        prev={null}
+        next={null}
+      />
     );
     expect(screen.getByText('Northwind')).toBeInTheDocument();
   });

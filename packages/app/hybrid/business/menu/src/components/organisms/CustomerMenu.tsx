@@ -5,7 +5,13 @@ import type { FC } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { FiMinus, FiPlus, FiShoppingCart } from 'react-icons/fi';
 import type { MenuItem, OrderLine, Restaurant } from '@/types/menu';
-import { decodeMenuData, itemsForRestaurant, money, orderSubtotal, placeOrder } from '@/lib/menu';
+import {
+  decodeMenuData,
+  itemsForRestaurant,
+  money,
+  orderSubtotal,
+  placeOrder,
+} from '@/lib/menu';
 import { useMenuStore } from '@/hooks/useMenuStore';
 
 const CategorySection: FC<{
@@ -26,13 +32,12 @@ const CategorySection: FC<{
             key={item.id}
             className={`card bg-base-200 shadow ${
               item.available ? '' : 'opacity-50'
-            }`}
-          >
+            }`}>
             <div className="card-body flex-row items-center gap-3 p-3">
               <span className="text-3xl">{item.emoji}</span>
               <div className="min-w-0 flex-1">
                 <div className="font-semibold">{item.name}</div>
-                <div className="truncate text-sm text-base-content/60">
+                <div className="text-base-content/60 truncate text-sm">
                   {item.description}
                 </div>
                 <div className="text-sm font-bold">{money(item.price)}</div>
@@ -43,8 +48,7 @@ const CategorySection: FC<{
                     <button
                       className="btn btn-circle btn-sm"
                       aria-label="Decrease quantity"
-                      onClick={() => onChange(item.id, -1)}
-                    >
+                      onClick={() => onChange(item.id, -1)}>
                       <FiMinus />
                     </button>
                   )}
@@ -52,8 +56,7 @@ const CategorySection: FC<{
                   <button
                     className="btn btn-circle btn-sm btn-primary"
                     aria-label="Increase quantity"
-                    onClick={() => onChange(item.id, 1)}
-                  >
+                    onClick={() => onChange(item.id, 1)}>
                     <FiPlus />
                   </button>
                 </div>
@@ -84,8 +87,7 @@ const CustomerMenu: FC = () => {
 
   const restaurant = snapshot?.restaurant;
   const items = restaurant ? itemsForRestaurant(state, restaurant.id) : [];
-  const effectiveItems =
-    items.length > 0 ? items : (snapshot?.items ?? []);
+  const effectiveItems = items.length > 0 ? items : (snapshot?.items ?? []);
 
   const change = (id: string, delta: number) => {
     setQuantities((q) => {
@@ -138,7 +140,7 @@ const CustomerMenu: FC = () => {
 
   return (
     <div className="mx-auto flex min-h-screen w-full max-w-md flex-col px-4 pb-32">
-      <header className="sticky top-0 z-10 -mx-4 border-b border-base-300 bg-base-100/95 px-4 py-4 backdrop-blur">
+      <header className="border-base-300 bg-base-100/95 sticky top-0 z-10 -mx-4 border-b px-4 py-4 backdrop-blur">
         <h1 className="text-2xl font-bold">{snapshot.restaurant.name}</h1>
         {snapshot.restaurant.description && (
           <p className="text-base-content/60">
@@ -166,22 +168,22 @@ const CustomerMenu: FC = () => {
       </div>
 
       {placed ? (
-        <div className="fixed inset-x-0 bottom-0 z-20 border-t border-base-300 bg-base-100 px-4 py-4">
+        <div className="border-base-300 bg-base-100 fixed inset-x-0 bottom-0 z-20 border-t px-4 py-4">
           <div className="flex items-start gap-3">
-            <FiShoppingCart className="mt-1 text-3xl text-primary" />
+            <FiShoppingCart className="text-primary mt-1 text-3xl" />
             <div className="flex-1">
               <h2 className="font-bold">Order placed</h2>
-              <p className="text-sm text-base-content/70">
+              <p className="text-base-content/70 text-sm">
                 Order #{orderId.slice(0, 8)} · {money(subtotal)}
               </p>
-              <p className="text-sm text-base-content/70">
+              <p className="text-base-content/70 text-sm">
                 When the order is ready, you’ll be notified.
               </p>
             </div>
           </div>
         </div>
       ) : (
-        <div className="fixed inset-x-0 bottom-0 z-20 border-t border-base-300 bg-base-100 px-4 py-4">
+        <div className="border-base-300 bg-base-100 fixed inset-x-0 bottom-0 z-20 border-t px-4 py-4">
           {lines.length > 0 ? (
             <div className="mb-3 flex max-h-40 flex-col gap-1 overflow-y-auto">
               {lines.map((l) => (
@@ -194,7 +196,7 @@ const CustomerMenu: FC = () => {
               ))}
             </div>
           ) : (
-            <p className="mb-2 text-sm text-base-content/50">
+            <p className="text-base-content/50 mb-2 text-sm">
               Tap + to add food or drinks to your order.
             </p>
           )}
@@ -224,8 +226,7 @@ const CustomerMenu: FC = () => {
           <button
             className="btn btn-primary btn-block"
             disabled={lines.length === 0}
-            onClick={handlePlace}
-          >
+            onClick={handlePlace}>
             <FiShoppingCart className="mr-1" />
             Place order · {money(subtotal)}
           </button>

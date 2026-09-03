@@ -39,14 +39,14 @@ Linux/macOS/Windows grab their native package below.
 
 ### Downloads
 
-| No  | Platform | Distro | Architecture | Requirements | Download Link                     | Note |
-| --- | -------- | ------ | ------------ | ------------ | --------------------------------- | ---- |
-| 1   | Android  |        | Universal    | 14.+         | [Download `.apk`][download-apk]   | Install directly |
-| 2   | Android  |        | Universal    | 14.+         | [Download `.aab`][download-aab]¹  | For store upload |
+| No  | Platform | Distro | Architecture | Requirements | Download Link                              | Note             |
+| --- | -------- | ------ | ------------ | ------------ | ------------------------------------------ | ---------------- |
+| 1   | Android  |        | Universal    | 14.+         | [Download `.apk`][download-apk]            | Install directly |
+| 2   | Android  |        | Universal    | 14.+         | [Download `.aab`][download-aab]¹           | For store upload |
 | 3   | Linux    | Ubuntu | amd64        | 22.04.+      | [Download `.AppImage`][download-app-image] | Run — no install |
-| 4   | Linux    | Debian | amd64        | 13.+         | [Download `.deb`][download-deb]   | |
-| 5   | macOS    |        | aarch64      | 13.+         | [Download `.dmg`][download-dmg]²  | Apple Silicon |
-| 6   | Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi]   | |
+| 4   | Linux    | Debian | amd64        | 13.+         | [Download `.deb`][download-deb]            |                  |
+| 5   | macOS    |        | aarch64      | 13.+         | [Download `.dmg`][download-dmg]²           | Apple Silicon    |
+| 6   | Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi]            |                  |
 
 [download-apk]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-eyes-latest/app-universal-release.apk
@@ -64,8 +64,7 @@ Linux/macOS/Windows grab their native package below.
 <br>
 
 ¹ `.aab` is for uploading to the Google Play Store — use the `.apk` to install
-directly.
-² `.dmg` is built for Apple Silicon.
+directly. ² `.dmg` is built for Apple Silicon.
 
 ### Checksums
 
@@ -96,7 +95,8 @@ Per-platform launch tips:
 
 - **macOS** — right-click the `.dmg` then **Open** to bypass Gatekeeper the
   first time, or find the app bundle inside.
-- **Linux** — make it runnable: `chmod +x eyes_amd64.AppImage` then double-click.
+- **Linux** — make it runnable: `chmod +x eyes_amd64.AppImage` then
+  double-click.
 - **Windows** — SmartScreen may warn; choose **More info → Run anyway**.
 - **Android** — if Play Protect warns, tap **Install anyway**.
 
@@ -106,8 +106,8 @@ Per-platform launch tips:
 
 Screening your vision, one randomized line at a time. Eyes brings Snellen,
 LogMAR, and Tumbling E acuity charts into a hybrid web/desktop app with
-randomized letters, fullscreen routes, and keyboard navigation — so screening
-is consistent, never memorized, and works on any screen.
+randomized letters, fullscreen routes, and keyboard navigation — so screening is
+consistent, never memorized, and works on any screen.
 
 ---
 

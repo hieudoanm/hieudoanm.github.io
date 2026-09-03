@@ -64,7 +64,9 @@ describe('Settings page', () => {
       pageLayout: 'single',
       annotationDefaults: { color: '#123456', strokeWidth: 7 },
     });
-    expect(document.documentElement.getAttribute('data-theme')).toBe('pdf-dark');
+    expect(document.documentElement.getAttribute('data-theme')).toBe(
+      'pdf-dark'
+    );
     expect(addToast).toHaveBeenCalledWith('Settings saved', 'success');
   });
 

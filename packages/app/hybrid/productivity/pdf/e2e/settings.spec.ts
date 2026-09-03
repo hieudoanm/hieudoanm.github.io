@@ -79,9 +79,9 @@ test.describe('Settings Page', () => {
   test('can select a theme', async ({ page }) => {
     await page.goto('/settings');
     await page.locator('button:has-text("pdf-dark")').click();
-    await expect(page.locator('button:has-text("pdf-dark")').first()).toHaveClass(
-      /ring-2/
-    );
+    await expect(
+      page.locator('button:has-text("pdf-dark")').first()
+    ).toHaveClass(/ring-2/);
   });
 
   test('can change page layout', async ({ page }) => {

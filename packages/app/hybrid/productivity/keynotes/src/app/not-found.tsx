@@ -1,13 +1,16 @@
 import Link from 'next/link';
+import { ErrorTemplate } from '@/components/templates/ErrorTemplate';
 
-export default function NotFound() {
-  return (
-    <main className="flex h-screen flex-col items-center justify-center gap-3">
-      <div className="text-5xl font-bold tracking-tight">404</div>
-      <p className="text-sm opacity-60">This page does not exist.</p>
+const NotFoundPage = () => (
+  <ErrorTemplate
+    code="404"
+    description="The page you are looking for does not exist."
+    action={
       <Link href="/" className="btn btn-primary btn-sm">
-        Back home
+        Go home
       </Link>
-    </main>
-  );
-}
+    }
+  />
+);
+
+export default NotFoundPage;

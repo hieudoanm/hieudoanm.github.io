@@ -40,14 +40,14 @@ Pick the file that matches your platform.
 
 ### Downloads
 
-| No  | Platform | Distro | Architecture | Requirements | Download Link                              | Note                |
-| --- | -------- | ------ | ------------ | ------------ | ------------------------------------------ | ------------------- |
-| 1   | Android  |        | Universal    | 14.+         | [Download `.apk`][download-apk]            | Install directly    |
-| 2   | Android  |        | Universal    | 14.+         | [Download `.aab`][download-aab]¹           | For store upload ¹  |
-| 3   | Linux    | Ubuntu | amd64        | 22.04.+      | [Download `.AppImage`][download-app-image] | Run — no install    |
-| 4   | Linux    | Debian | amd64        | 13.+         | [Download `.deb`][download-deb]            | System package      |
-| 5   | macOS    |        | aarch64      | 13.+         | [Download `.dmg`][download-dmg]²           | Apple Silicon ²     |
-| 6   | Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi]            |                     |
+| No  | Platform | Distro | Architecture | Requirements | Download Link                              | Note               |
+| --- | -------- | ------ | ------------ | ------------ | ------------------------------------------ | ------------------ |
+| 1   | Android  |        | Universal    | 14.+         | [Download `.apk`][download-apk]            | Install directly   |
+| 2   | Android  |        | Universal    | 14.+         | [Download `.aab`][download-aab]¹           | For store upload ¹ |
+| 3   | Linux    | Ubuntu | amd64        | 22.04.+      | [Download `.AppImage`][download-app-image] | Run — no install   |
+| 4   | Linux    | Debian | amd64        | 13.+         | [Download `.deb`][download-deb]            | System package     |
+| 5   | macOS    |        | aarch64      | 13.+         | [Download `.dmg`][download-dmg]²           | Apple Silicon ²    |
+| 6   | Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi]            |                    |
 
 [download-apk]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-lingo-latest/app-universal-release.apk
@@ -65,8 +65,7 @@ Pick the file that matches your platform.
 <br>
 
 ¹ The `.aab` is the Android App Bundle — upload it to Google Play for
-distribution.
-² The `.dmg` is built for Apple Silicon (aarch64) Macs.
+distribution. ² The `.dmg` is built for Apple Silicon (aarch64) Macs.
 
 ### Checksums
 
@@ -106,6 +105,7 @@ that runs on any device.
 Learn words, look them up, and recognise signs — all in one app.
 
 ### 🔨 Project Foundation
+
 - Monorepo scaffold following the `psychology` app conventions
   (`packages/app/hybrid/education/lingo`)
 - Next.js static export validated against Tauri's `dist` expectations
@@ -116,6 +116,7 @@ Learn words, look them up, and recognise signs — all in one app.
 - Unit test coverage thresholds enforced at 80% global
 
 ### 🏠 Home & Navigation
+
 - Card grid listing the three tools with icons and descriptions
 - Tool routes rendered directly, opened from the home card grid; closing returns
   to `/`
@@ -124,6 +125,7 @@ Learn words, look them up, and recognise signs — all in one app.
 - Theme toggle in every template header; choice persisted in localStorage
 
 ### 🃏 Flashcards
+
 - Vocabulary cards fetched at runtime from `/data/words.json` via TanStack Query
   (kept out of the JS bundle)
 - Language filter derived from the dataset (`getLanguages` / `filterByLanguage`)
@@ -131,11 +133,13 @@ Learn words, look them up, and recognise signs — all in one app.
 - Awards 10 XP per 10 navigated cards through the shared progress store
 
 ### 📖 English Dictionary
+
 - Word lookup with part-of-speech grouped definitions
 - Clickable synonym/antonym badges that navigate between words
 - Graceful handling of missing/blank input
 
 ### ✋ Sign Recognition
+
 - Real-time webcam letter recognition: MediaPipe Hands landmarks → ONNX model
   inference (`sign-model.onnx`)
 - Mirrored video rendering with landmark overlay drawing
@@ -144,11 +148,13 @@ Learn words, look them up, and recognise signs — all in one app.
 - Start/stop lifecycle with camera + inference cleanup on unmount
 
 ### 📊 Progress
+
 - XP and daily streak persisted in IndexedDB (`idb`)
 - Pure scoring function (`applyActivity`) — streak increments once per day
 - Home hub displays current XP and streak badges
 
 ### 🔗 Platform Integration
+
 - Tauri updater plugin with signed releases
 - Native notifications via `nativeNotify`
 - PWA manifest + network-first service worker for web installs
@@ -157,10 +163,10 @@ Learn words, look them up, and recognise signs — all in one app.
 
 # First run
 
-- **macOS:** Right-click the `.dmg` → "Open" to bypass Gatekeeper, then drag
-  the app to your Applications folder.
-- **Linux (AppImage):** `chmod +x lingo_amd64.AppImage` then run it — no
-  install needed.
+- **macOS:** Right-click the `.dmg` → "Open" to bypass Gatekeeper, then drag the
+  app to your Applications folder.
+- **Linux (AppImage):** `chmod +x lingo_amd64.AppImage` then run it — no install
+  needed.
 - **Windows:** SmartScreen may flag the `.msi` — click "More info" → "Run
   anyway".
 - **Android:** Play Protect may warn about the `.apk` — tap "Install anyway".

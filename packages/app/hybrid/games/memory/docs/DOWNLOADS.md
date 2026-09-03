@@ -40,14 +40,14 @@ Pick the file that matches your platform.
 
 ### Downloads
 
-| No  | Platform | Distro | Architecture | Requirements | Download Link                              | Note              |
-| --- | -------- | ------ | ------------ | ------------ | ------------------------------------------ | ----------------- |
-| 1   | Android  |        | Universal    | 14.+         | [Download `.apk`][download-apk]            | Install directly  |
-| 2   | Android  |        | Universal    | 14.+         | [Download `.aab`][download-aab]            | For store upload  |
-| 3   | Linux    | Ubuntu | amd64        | 22.04.+      | [Download `.AppImage`][download-app-image] | Run — no install  |
-| 4   | Linux    | Debian | amd64        | 13.+         | [Download `.deb`][download-deb]            |                   |
-| 5   | macOS    |        | aarch64      | 13.+         | [Download `.dmg`][download-dmg]            | Apple Silicon     |
-| 6   | Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi]            |                   |
+| No  | Platform | Distro | Architecture | Requirements | Download Link                              | Note             |
+| --- | -------- | ------ | ------------ | ------------ | ------------------------------------------ | ---------------- |
+| 1   | Android  |        | Universal    | 14.+         | [Download `.apk`][download-apk]            | Install directly |
+| 2   | Android  |        | Universal    | 14.+         | [Download `.aab`][download-aab]            | For store upload |
+| 3   | Linux    | Ubuntu | amd64        | 22.04.+      | [Download `.AppImage`][download-app-image] | Run — no install |
+| 4   | Linux    | Debian | amd64        | 13.+         | [Download `.deb`][download-deb]            |                  |
+| 5   | macOS    |        | aarch64      | 13.+         | [Download `.dmg`][download-dmg]            | Apple Silicon    |
+| 6   | Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi]            |                  |
 
 [download-apk]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-memory-latest/app-universal-release.apk
@@ -66,10 +66,13 @@ Pick the file that matches your platform.
 
 ## First run
 
-- **macOS:** Right-click the `.dmg` and select *Open* to bypass Gatekeeper.
-- **Linux AppImage:** `chmod +x memory_amd64.AppImage && ./memory_amd64.AppImage`
-- **Windows SmartScreen:** Click *More info → Run anyway* if SmartScreen flags the installer.
-- **Android Play Protect:** If Play Protect blocks the install, tap *Install anyway*.
+- **macOS:** Right-click the `.dmg` and select _Open_ to bypass Gatekeeper.
+- **Linux AppImage:**
+  `chmod +x memory_amd64.AppImage && ./memory_amd64.AppImage`
+- **Windows SmartScreen:** Click _More info → Run anyway_ if SmartScreen flags
+  the installer.
+- **Android Play Protect:** If Play Protect blocks the install, tap _Install
+  anyway_.
 
 ### Checksums
 
@@ -109,6 +112,7 @@ with progressive digit challenges. Runs on any device.
 Brain-training games that sharpen memory, focus, and recall.
 
 ### 🎴 Memory Match
+
 - Classic card-matching game with emoji pairs
 - Multiple emoji categories to choose from
 - Configurable grid size: 2-6 rows, 4-6 columns
@@ -119,6 +123,7 @@ Brain-training games that sharpen memory, focus, and recall.
 - Win detection with final score display (moves + time)
 
 ### 🔢 Pi
+
 - Memorize and recall digits of Pi in sequence
 - Two modes: Practice (browse digits) and Game (type from memory)
 - Scrolling digit viewport with highlighted current position
@@ -128,6 +133,7 @@ Brain-training games that sharpen memory, focus, and recall.
 - Visual feedback: green flash (correct), red flash (mistake)
 
 ### 🧩 N-Back
+
 - Cognitive training exercise for working memory
 - 3x3 grid with letters appearing in sequence
 - Configurable n-back level: 1, 2, or 3
@@ -138,6 +144,7 @@ Brain-training games that sharpen memory, focus, and recall.
 - 30% target probability for balanced difficulty
 
 ### 📝 Recall
+
 - Progressive difficulty: level N shows N digits
 - Memorization time scales with digit count (650ms/digit, 1.2-6s range)
 - Live countdown timer during show phase
@@ -148,6 +155,7 @@ Brain-training games that sharpen memory, focus, and recall.
 - Level resets to 1 on incorrect answer
 
 ### 🔄 Shared Features
+
 - Responsive layout (desktop and mobile)
 - Dark theme by default (`nothing` theme)
 - Sticky header with navigation links
@@ -159,6 +167,7 @@ Brain-training games that sharpen memory, focus, and recall.
 - Service worker for offline caching
 
 ### 📱 Platform & UX
+
 - Static export for offline-first PWA support
 - Service worker caches all pages for offline play
 - Tauri desktop app build (bundling configured; signing not yet)
@@ -172,7 +181,8 @@ Brain-training games that sharpen memory, focus, and recall.
 
 ## Next steps
 
-- **Want to contribute?** Check [CONTRIBUTING](CONTRIBUTING) for setup and dev commands.
+- **Want to contribute?** Check [CONTRIBUTING](CONTRIBUTING) for setup and dev
+  commands.
 - **Curious what's coming?** Read the [roadmap](ROADMAP).
 
 ---

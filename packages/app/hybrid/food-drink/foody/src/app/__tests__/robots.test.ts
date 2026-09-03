@@ -11,6 +11,8 @@ describe('robots', () => {
 
   it('returns sitemap URL', () => {
     const result = robots();
-    expect(result.sitemap).toBe('https://hieudoanm.github.io/free/foody/sitemap.xml');
+    expect(result.sitemap).toBe(
+      'https://hieudoanm.github.io/free/foody/sitemap.xml'
+    );
   });
 });

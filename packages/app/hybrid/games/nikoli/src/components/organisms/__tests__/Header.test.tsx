@@ -51,7 +51,9 @@ describe('Header', () => {
 
   it('sets data-theme attribute on html', () => {
     render(<Header />);
-    expect(document.documentElement.getAttribute('data-theme')).toBe('nikoli-dark');
+    expect(document.documentElement.getAttribute('data-theme')).toBe(
+      'nikoli-dark'
+    );
   });
 
   it('reads saved theme from localStorage', () => {

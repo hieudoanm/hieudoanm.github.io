@@ -17,9 +17,7 @@ const config = {
   collectCoverage: true,
   coverageDirectory: '<rootDir>/coverage',
   coverageReporters: ['html', 'lcov', 'text-summary'] as (
-    | 'html'
-    | 'lcov'
-    | 'text-summary'
+    'html' | 'lcov' | 'text-summary'
   )[],
   collectCoverageFrom: [
     'src/**/*.{ts,tsx}',

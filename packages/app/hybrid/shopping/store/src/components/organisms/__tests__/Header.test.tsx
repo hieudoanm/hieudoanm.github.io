@@ -48,7 +48,10 @@ describe('Header', () => {
   it('renders Downloads link', () => {
     render(<Header />);
     expect(screen.getByText('Downloads')).toBeTruthy();
-    expect(screen.getByText('Downloads')).toHaveAttribute('href', '/downloads/');
+    expect(screen.getByText('Downloads')).toHaveAttribute(
+      'href',
+      '/downloads/'
+    );
   });
 
   it('renders theme toggle button', () => {
@@ -61,7 +64,9 @@ describe('Header', () => {
     render(<Header />);
     const toggle = screen.getByTestId('theme-toggle');
     await user.click(toggle);
-    expect(document.documentElement.getAttribute('data-theme')).toBe('store-light');
+    expect(document.documentElement.getAttribute('data-theme')).toBe(
+      'store-light'
+    );
   });
 
   it('toggles back to nothing theme', async () => {
@@ -70,7 +75,9 @@ describe('Header', () => {
     const toggle = screen.getByTestId('theme-toggle');
     await user.click(toggle);
     await user.click(toggle);
-    expect(document.documentElement.getAttribute('data-theme')).toBe('store-dark');
+    expect(document.documentElement.getAttribute('data-theme')).toBe(
+      'store-dark'
+    );
   });
 
   it('highlights active route', () => {

@@ -1,77 +1,52 @@
 import { render, screen } from '@testing-library/react';
 import { DownloadsTemplate } from '../DownloadsTemplate';
 
-jest.mock('next/link', () => {
-  const MockLink = ({
-    children,
-    href,
-  }: {
-    children: React.ReactNode;
-    href: string;
-  }) => <a href={href}>{children}</a>;
-  MockLink.displayName = 'MockLink';
-  return MockLink;
-});
-
-jest.mock('react-icons/fi', () => ({
-  FiDownload: () => <span data-testid="download-icon" />,
-  FiArrowLeft: () => <span data-testid="arrow-icon" />,
-}));
+const PROPS = {
+  version: 'v0.0.1',
+  items: [
+    {
+      platform: 'macOS',
+      requirements: 'Apple Silicon · macOS 13.+',
+      label: '.dmg',
+      href: 'https://example.com/app.dmg',
+    },
+    {
+      platform: 'Linux',
+      requirements: 'Ubuntu 22.04.+',
+      label: '.AppImage',
+      href: 'https://example.com/app.AppImage',
+    },
+  ],
+};
 
 describe('DownloadsTemplate', () => {
-  const defaultProps = {
-    version: 'v1.0.0',
-    items: [
-      {
-        platform: 'macOS',
-        requirements: 'Apple Silicon · macOS 13.+',
-        label: '.dmg',
-        href: '/download.dmg',
-      },
-      {
-        platform: 'Linux',
-        requirements: 'Ubuntu 22.04.+',
-        label: '.AppImage',
-        href: '/download.AppImage',
-      },
-    ],
-  };
-
-  it('renders Downloads label', () => {
-    render(<DownloadsTemplate {...defaultProps} />);
+  it('renders the Downloads heading', () => {
+    render(<DownloadsTemplate {...PROPS} />);
     expect(screen.getByText('Downloads')).toBeInTheDocument();
   });
 
-  it('renders Installers heading', () => {
-    render(<DownloadsTemplate {...defaultProps} />);
-    expect(screen.getByText('Installers')).toBeInTheDocument();
-  });
-
-  it('renders platform names', () => {
-    render(<DownloadsTemplate {...defaultProps} />);
+  it('renders platforms with requirements', () => {
+    render(<DownloadsTemplate {...PROPS} />);
     expect(screen.getByText('macOS')).toBeInTheDocument();
-    expect(screen.getByText('Linux')).toBeInTheDocument();
-  });
-
-  it('renders requirements', () => {
-    render(<DownloadsTemplate {...defaultProps} />);
     expect(screen.getByText('Apple Silicon · macOS 13.+')).toBeInTheDocument();
+    expect(screen.getByText('Linux')).toBeInTheDocument();
     expect(screen.getByText('Ubuntu 22.04.+')).toBeInTheDocument();
   });
 
-  it('renders download links', () => {
-    render(<DownloadsTemplate {...defaultProps} />);
-    const dmgLink = screen.getByText('.dmg').closest('a');
-    expect(dmgLink).toHaveAttribute('href', '/download.dmg');
+  it('renders download links with labels and hrefs', () => {
+    render(<DownloadsTemplate {...PROPS} />);
+    expect(screen.getByRole('link', { name: 'Download .dmg' })).toHaveAttribute(
+      'href',
+      PROPS.items[0].href
+    );
+    expect(
+      screen.getByRole('link', { name: 'Download .AppImage' })
+    ).toHaveAttribute('href', PROPS.items[1].href);
   });
 
-  it('renders version badge', () => {
-    render(<DownloadsTemplate {...defaultProps} />);
-    expect(screen.getByText('v1.0.0')).toBeInTheDocument();
-  });
-
-  it('renders Stable badge', () => {
-    render(<DownloadsTemplate {...defaultProps} />);
+  it('renders version and stable badge', () => {
+    render(<DownloadsTemplate {...PROPS} />);
+    expect(screen.getByText('v0.0.1')).toBeInTheDocument();
     expect(screen.getByText('Stable')).toBeInTheDocument();
   });
 });

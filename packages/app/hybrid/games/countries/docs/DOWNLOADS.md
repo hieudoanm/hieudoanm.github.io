@@ -39,14 +39,14 @@ Pick the file that matches your platform.
 
 ### Downloads
 
-| No  | Platform | Distro | Architecture | Requirements | Download Link                              | Note              |
-| --- | -------- | ------ | ------------ | ------------ | ------------------------------------------ | ----------------- |
-| 1   | Android  |        | Universal    | 14.+         | [Download `.apk`][download-apk]            | Install directly  |
-| 2   | Android  |        | Universal    | 14.+         | [Download `.aab`][download-aab]¹           | For store upload  |
-| 3   | Linux    | Ubuntu | amd64        | 22.04.+      | [Download `.AppImage`][download-app-image] | Run — no install  |
-| 4   | Linux    | Debian | amd64        | 13.+         | [Download `.deb`][download-deb]            |                   |
-| 5   | macOS    |        | aarch64      | 13.+         | [Download `.dmg`][download-dmg]²           | Apple Silicon     |
-| 6   | Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi]            |                   |
+| No  | Platform | Distro | Architecture | Requirements | Download Link                              | Note             |
+| --- | -------- | ------ | ------------ | ------------ | ------------------------------------------ | ---------------- |
+| 1   | Android  |        | Universal    | 14.+         | [Download `.apk`][download-apk]            | Install directly |
+| 2   | Android  |        | Universal    | 14.+         | [Download `.aab`][download-aab]¹           | For store upload |
+| 3   | Linux    | Ubuntu | amd64        | 22.04.+      | [Download `.AppImage`][download-app-image] | Run — no install |
+| 4   | Linux    | Debian | amd64        | 13.+         | [Download `.deb`][download-deb]            |                  |
+| 5   | macOS    |        | aarch64      | 13.+         | [Download `.dmg`][download-dmg]²           | Apple Silicon    |
+| 6   | Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi]            |                  |
 
 [download-apk]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-countries-latest/app-universal-release.apk
@@ -69,10 +69,13 @@ Pick the file that matches your platform.
 
 ## First run
 
-- **macOS:** Right-click the `.dmg` and select *Open* to bypass Gatekeeper.
-- **Linux AppImage:** `chmod +x countries_amd64.AppImage && ./countries_amd64.AppImage`
-- **Windows SmartScreen:** Click *More info → Run anyway* if SmartScreen flags the installer.
-- **Android Play Protect:** If Play Protect blocks the install, tap *Install anyway*.
+- **macOS:** Right-click the `.dmg` and select _Open_ to bypass Gatekeeper.
+- **Linux AppImage:**
+  `chmod +x countries_amd64.AppImage && ./countries_amd64.AppImage`
+- **Windows SmartScreen:** Click _More info → Run anyway_ if SmartScreen flags
+  the installer.
+- **Android Play Protect:** If Play Protect blocks the install, tap _Install
+  anyway_.
 
 ### Checksums
 
@@ -102,8 +105,8 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 ## About
 
 Geography word games that test your knowledge of the world's countries — from
-flag emojis to borders to population comparisons. Seven games, one dataset,
-zero internet required.
+flag emojis to borders to population comparisons. Seven games, one dataset, zero
+internet required.
 
 ---
 
@@ -112,6 +115,7 @@ zero internet required.
 Geography games that challenge what you know about every country on Earth.
 
 ### 🌐 Country Wordle
+
 - Guess the hidden country name in up to six tries
 - Every valid answer is a country from the shared dataset (~195 entries)
 - Daily puzzle: answer chosen deterministically by hashing today's date, so
@@ -127,6 +131,7 @@ Geography games that challenge what you know about every country on Earth.
 - New game button replays with a fresh daily draw
 
 ### 🧩 Country Connections
+
 - Group sixteen countries into four hidden categories of four
 - Eight authored puzzles; each verified to be a disjoint partition of valid
   country names
@@ -140,6 +145,7 @@ Geography games that challenge what you know about every country on Earth.
 - Losing reveals all remaining groups; win offers a next-puzzle button
 
 ### 🗺️ Border Guesser
+
 - Shown a country; pick which of four options it actually borders
 - Question pool: ranked countries with at least two neighbours in the borders
   dataset; decoys are never neighbours
@@ -147,6 +153,7 @@ Geography games that challenge what you know about every country on Earth.
 - Score / streak / best-streak tracking with instant feedback
 
 ### 🌍 Continents Sort
+
 - Drag (or tap-to-select then tap) fifteen ranked countries into their
   continents — Africa, Europe, Asia, Oceania, Americas
 - Correct drops tint the card green; wrong drops are struck through in red and
@@ -155,22 +162,26 @@ Geography games that challenge what you know about every country on Earth.
 - Perfect-game detection and New Game redeal
 
 ### 😀 Emoji Guesser
+
 - Given a country name, pick its flag emoji from four options
 - Questions drawn from the top-ranked countries; decoys never repeat flags
 - Score / streak / best-streak tracking
 
 ### 🏴 Flag Guesser
+
 - Name the country from its flag emoji — four options, one correct
 - Wrong picks reveal the correct name alongside its flag
 - Score / streak / best-streak tracking
 
 ### ⬆️⬇️ Higher or Lower
+
 - Which of two countries has the larger population? Pick left or right
 - Population data for every ranked country; ties count as correct
 - Compact population formatting (`B`/`M`/`K`) revealed after each guess
 - Accuracy percentage plus score / streak / best-streak tracking
 
 ### 📊 Shared Data
+
 - `src/games/_shared/` — single source of truth for all games:
   - `countries.ts` — guessable country names (Wordle)
   - `countries-data.ts` — 250 country entries with flag emoji, popularity rank,
@@ -181,6 +192,7 @@ Geography games that challenge what you know about every country on Earth.
     score/streak transitions
 
 ### 🔄 Shared Features
+
 - Home page game card grid with descriptions
 - Sticky header with home navigation and theme toggle
 - Dracula (dark) theme by default, Bumblebee light theme toggle persisted to
@@ -188,6 +200,7 @@ Geography games that challenge what you know about every country on Earth.
 - Responsive layout (desktop and mobile)
 
 ### 📱 Platform & UX
+
 - Static export for offline-first PWA support
 - Tauri desktop shell configured (bundling not yet enabled — see
   [docs/PACKAGING.md](docs/PACKAGING.md))
@@ -201,7 +214,8 @@ Geography games that challenge what you know about every country on Earth.
 
 ## Next steps
 
-- **Want to contribute?** Check [CONTRIBUTING](CONTRIBUTING) for setup and dev commands.
+- **Want to contribute?** Check [CONTRIBUTING](CONTRIBUTING) for setup and dev
+  commands.
 - **Curious what's coming?** Read the [roadmap](ROADMAP).
 
 ---

@@ -26,10 +26,12 @@ const Header: FC = () => {
   }, [theme]);
 
   const toggleTheme = () =>
-    setTheme((current) => (current === 'menu-dark' ? 'menu-light' : 'menu-dark'));
+    setTheme((current) =>
+      current === 'menu-dark' ? 'menu-light' : 'menu-dark'
+    );
 
   return (
-    <header className="navbar border-b border-base-300 bg-base-200 px-4">
+    <header className="navbar border-base-300 bg-base-200 border-b px-4">
       <div className="navbar-start">
         <Link href="/" className="btn btn-ghost text-xl normal-case">
           <FiCoffee className="text-xl" />
@@ -48,7 +50,11 @@ const Header: FC = () => {
           onClick={toggleTheme}
           data-testid="theme-toggle"
           aria-label="Toggle theme">
-          {theme === 'menu-dark' ? <FiSun className="text-lg" /> : <FiMoon className="text-lg" />}
+          {theme === 'menu-dark' ? (
+            <FiSun className="text-lg" />
+          ) : (
+            <FiMoon className="text-lg" />
+          )}
         </button>
       </div>
     </header>

@@ -1,7 +1,6 @@
 import { ErrorTemplate } from '@/components/templates/ErrorTemplate';
-import { NextPage } from 'next';
 
-const UnauthorizedPage: NextPage = () => (
+const UnauthorizedPage = () => (
   <ErrorTemplate
     code="401"
     description="You must be authenticated to access this page."

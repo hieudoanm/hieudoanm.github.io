@@ -18,7 +18,7 @@ describe('VersionPage', () => {
 
   it('renders the current deployment version', () => {
     render(<VersionPage />);
-    expect(screen.getByText('Database Version')).toBeInTheDocument();
+    expect(screen.getByText('Version')).toBeInTheDocument();
     expect(screen.getByText('Copy version')).toBeInTheDocument();
     expect(screen.getByText('Year')).toBeInTheDocument();
     expect(screen.getByText('Format: YYYY.MM.DD.hh.mm.ss')).toBeInTheDocument();

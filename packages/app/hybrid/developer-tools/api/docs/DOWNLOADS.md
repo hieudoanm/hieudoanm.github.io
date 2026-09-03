@@ -31,7 +31,8 @@
 
 ## Latest release
 
-- **Version:** `app-hybrid-developer-tools-api-latest` — updates ship continuously.
+- **Version:** `app-hybrid-developer-tools-api-latest` — updates ship
+  continuously.
 - **What's new:** see the [roadmap](ROADMAP) and [CONTRIBUTING](CONTRIBUTING).
 
 ---
@@ -42,14 +43,14 @@ Pick the file that matches your platform.
 
 ### Downloads
 
-| No  | Platform | Distro | Architecture | Requirements | Download Link                              | Note              |
-| --- | -------- | ------ | ------------ | ------------ | ------------------------------------------ | ----------------- |
-| 1   | Android  |        | Universal    | 14.+         | [Download `.apk`][download-apk]            | Install directly  |
-| 2   | Android  |        | Universal    | 14.+         | [Download `.aab`][download-aab]¹           | For store upload  |
-| 3   | Linux    | Ubuntu | amd64        | 22.04.+      | [Download `.AppImage`][download-app-image] | Run — no install  |
-| 4   | Linux    | Debian | amd64        | 13.+         | [Download `.deb`][download-deb]            |                   |
-| 5   | macOS    |        | aarch64      | 13.+         | [Download `.dmg`][download-dmg]²           | Apple Silicon     |
-| 6   | Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi]            |                   |
+| No  | Platform | Distro | Architecture | Requirements | Download Link                              | Note             |
+| --- | -------- | ------ | ------------ | ------------ | ------------------------------------------ | ---------------- |
+| 1   | Android  |        | Universal    | 14.+         | [Download `.apk`][download-apk]            | Install directly |
+| 2   | Android  |        | Universal    | 14.+         | [Download `.aab`][download-aab]¹           | For store upload |
+| 3   | Linux    | Ubuntu | amd64        | 22.04.+      | [Download `.AppImage`][download-app-image] | Run — no install |
+| 4   | Linux    | Debian | amd64        | 13.+         | [Download `.deb`][download-deb]            |                  |
+| 5   | macOS    |        | aarch64      | 13.+         | [Download `.dmg`][download-dmg]²           | Apple Silicon    |
+| 6   | Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi]            |                  |
 
 [download-apk]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-developer-tools-api-latest/app-universal-release.apk
@@ -72,9 +73,10 @@ Pick the file that matches your platform.
 
 ## First run
 
-- **macOS:** Right-click the `.dmg` and select *Open* to bypass Gatekeeper.
+- **macOS:** Right-click the `.dmg` and select _Open_ to bypass Gatekeeper.
 - **Linux AppImage:** `chmod +x api_amd64.AppImage && ./api_amd64.AppImage`
-- **Windows SmartScreen:** Click *More info → Run anyway* if SmartScreen flags the installer.
+- **Windows SmartScreen:** Click _More info → Run anyway_ if SmartScreen flags
+  the installer.
 
 ### Checksums
 
@@ -103,7 +105,9 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-Full-scale API client in your pocket — compose, send, and inspect HTTP, WebSocket, gRPC, and MQTT requests from any device. Built with Tauri so it ships everywhere: phone, tablet, laptop, desktop.
+Full-scale API client in your pocket — compose, send, and inspect HTTP,
+WebSocket, gRPC, and MQTT requests from any device. Built with Tauri so it ships
+everywhere: phone, tablet, laptop, desktop.
 
 ---
 
@@ -112,6 +116,7 @@ Full-scale API client in your pocket — compose, send, and inspect HTTP, WebSoc
 Build, test, and debug APIs without leaving your keyboard.
 
 ### 🔗 Request Composer
+
 - Method + URL composer with send
 - Params / headers key-value editors
 - Body editor with JSON beautify
@@ -124,11 +129,13 @@ Build, test, and debug APIs without leaving your keyboard.
 - Protocol switcher (HTTP, WebSocket, gRPC, MQTT)
 
 ### 🔐 Authentication
+
 - Bearer and Basic auth presets
 - OAuth 1.0 and 2.0 flows (pending)
 - API Key and Digest auth (pending)
 
 ### 📬 Response
+
 - Response panel with status, time, size, headers
 - Copy response body button
 - Response preview by content-type
@@ -138,11 +145,13 @@ Build, test, and debug APIs without leaving your keyboard.
 - JSON schema validation of responses (pending)
 
 ### ⚡ Realtime & Protocols
+
 - WebSocket client (connect, message log, close)
 - gRPC client (proto import, unary and streaming calls)
 - MQTT client (connect, subscribe, publish)
 
 ### 🧪 Scripting & Testing
+
 - Pre-request scripts (JS sandbox) (pending)
 - Test assertions (status, headers, body, schema) (pending)
 - Test runner with pass/fail summary (pending)
@@ -152,6 +161,7 @@ Build, test, and debug APIs without leaving your keyboard.
 - Test report export (HTML / JSON) (pending)
 
 ### 📂 Collections & Variables
+
 - Request collections (saved, named, grouped)
 - Environment variables (`{{var}}` substitution)
 - Multiple environments with active selector (pending)
@@ -159,12 +169,14 @@ Build, test, and debug APIs without leaving your keyboard.
 - Dynamic variables ({{$guid}}, {{$timestamp}}, {{$randomInt}}) (pending)
 
 ### 🕒 History & Automation
+
 - Local request history
 - History search and filtering
 - Newman-style CLI runner in Tauri desktop (pending)
 - Scheduled monitors (mock) (pending)
 
 ### 📐 API Design & Team
+
 - Code generation (curl, fetch, fetch-ts)
 - Schema preview (OpenAPI import)
 - OpenAPI import/export (2.0 and 3.0/3.1) (pending)
@@ -175,6 +187,7 @@ Build, test, and debug APIs without leaving your keyboard.
 - Cloud sync (mock) (pending)
 
 ### 🖥️ Platform
+
 - Tauri desktop app build (bundling configured; signing not yet)
 - Light and dark themes (pending)
 - Command palette (Ctrl+K) (pending)
@@ -188,7 +201,8 @@ Build, test, and debug APIs without leaving your keyboard.
 
 ## Next steps
 
-- **Want to contribute?** Check [CONTRIBUTING](CONTRIBUTING) for setup and dev commands.
+- **Want to contribute?** Check [CONTRIBUTING](CONTRIBUTING) for setup and dev
+  commands.
 - **Curious what's coming?** Read the [roadmap](ROADMAP).
 
 ---

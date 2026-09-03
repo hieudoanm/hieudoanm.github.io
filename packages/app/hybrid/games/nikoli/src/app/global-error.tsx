@@ -2,7 +2,7 @@
 
 import { ErrorTemplate } from '@/components/templates/ErrorTemplate';
 
-const GlobalError = ({
+const GlobalErrorPage = ({
   error,
   reset,
 }: {
@@ -10,7 +10,7 @@ const GlobalError = ({
   reset: () => void;
 }) => (
   <html lang="en" className="dark">
-    <body>
+    <body className="bg-base-100 text-base-content">
       <ErrorTemplate
         code="500"
         description="Something went wrong."
@@ -24,4 +24,4 @@ const GlobalError = ({
   </html>
 );
 
-export default GlobalError;
+export default GlobalErrorPage;

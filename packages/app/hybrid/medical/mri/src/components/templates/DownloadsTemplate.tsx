@@ -1,38 +1,26 @@
 import type { FC } from 'react';
 import Link from 'next/link';
-import { FiChevronLeft, FiDownload } from 'react-icons/fi';
-import { Badge } from '@/components/atoms/Badge';
+import { FiDownload } from 'react-icons/fi';
 
-export interface DownloadItem {
+interface DownloadItem {
   platform: string;
   requirements: string;
   label: string;
   href: string;
 }
 
-export interface DownloadsTemplateProps {
+export const DownloadsTemplate: FC<{
   version: string;
   items: DownloadItem[];
-}
-
-export const DownloadsTemplate: FC<DownloadsTemplateProps> = ({
-  version,
-  items,
-}) => (
-  <main className="mx-auto flex min-h-screen max-w-2xl flex-col items-center justify-center gap-6 p-8 text-center">
-    <div className="flex w-full items-center gap-4">
-      <Link href="/" className="btn btn-ghost btn-sm">
-        <FiChevronLeft /> Home
-      </Link>
-    </div>
-
+}> = ({ version, items }) => (
+  <div className="mx-auto flex w-full max-w-2xl flex-col items-center gap-6 px-6 py-16 text-center">
     <p className="text-base-content/50 text-xs tracking-[0.2em] uppercase">
       Downloads
     </p>
 
-    <h1 className="text-3xl font-bold">Installers</h1>
+    <h1 className="mb-1">Installers</h1>
 
-    <p className="text-base-content/70 max-w-md text-sm">
+    <p className="text-base-content/50 max-w-sm text-sm">
       Pick the package for your platform. The mobile web app is available from
       any browser.
     </p>
@@ -43,19 +31,19 @@ export const DownloadsTemplate: FC<DownloadsTemplateProps> = ({
           <div
             key={`${platform}-${label}`}
             className="flex items-center justify-between gap-4">
-            <div className="flex flex-col items-start text-left">
-              <span className="text-base-content text-sm font-bold">
+            <div className="text-left">
+              <span className="text-base-content block text-sm font-bold">
                 {platform}
               </span>
-              <span className="text-base-content/50 text-xs">
+              <span className="text-base-content/50 block text-xs">
                 {requirements}
               </span>
             </div>
             <Link
               href={href}
-              className="btn btn-primary btn-sm"
+              className="btn btn-primary btn-sm gap-1.5"
               aria-label={`Download ${label}`}>
-              <FiDownload />
+              <FiDownload className="h-3.5 w-3.5" />
               {label}
             </Link>
           </div>
@@ -63,11 +51,13 @@ export const DownloadsTemplate: FC<DownloadsTemplateProps> = ({
       </div>
     </div>
 
-    <div className="flex flex-wrap items-center justify-center gap-3">
+    <div className="flex flex-wrap justify-center gap-3">
       <span className="border-base-content/20 text-base-content/50 rounded-full border px-3 py-1 text-xs">
         {version}
       </span>
-      <Badge variant="neutral">Stable</Badge>
+      <span className="badge badge-neutral rounded-full">Stable</span>
     </div>
-  </main>
+  </div>
 );
+
+DownloadsTemplate.displayName = 'DownloadsTemplate';

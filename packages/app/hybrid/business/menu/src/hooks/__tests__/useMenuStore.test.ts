@@ -18,7 +18,13 @@ describe('useMenuStore', () => {
       result.current.setState((s) => ({
         ...s,
         restaurants: [
-          { id: 'r1', name: 'Test', accent: 'primary', tableCount: 1, createdAt: '2025-01-01' },
+          {
+            id: 'r1',
+            name: 'Test',
+            accent: 'primary',
+            tableCount: 1,
+            createdAt: '2025-01-01',
+          },
         ],
       }));
     });
@@ -32,7 +38,13 @@ describe('useMenuStore', () => {
       'menu_state',
       JSON.stringify({
         restaurants: [
-          { id: 'r2', name: 'Saved', accent: 'secondary', tableCount: 2, createdAt: '2025-01-02' },
+          {
+            id: 'r2',
+            name: 'Saved',
+            accent: 'secondary',
+            tableCount: 2,
+            createdAt: '2025-01-02',
+          },
         ],
         items: [],
         orders: [],
@@ -48,7 +60,13 @@ describe('useMenuStore', () => {
       result.current.setState((s) => ({
         ...s,
         restaurants: [
-          { id: 'r3', name: 'X', accent: 'primary', tableCount: 1, createdAt: '2025-01-01' },
+          {
+            id: 'r3',
+            name: 'X',
+            accent: 'primary',
+            tableCount: 1,
+            createdAt: '2025-01-01',
+          },
         ],
       }));
     });

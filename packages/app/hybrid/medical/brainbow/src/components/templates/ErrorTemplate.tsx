@@ -1,8 +1,8 @@
 import type { FC, ReactNode } from 'react';
 
-export interface ErrorTemplateProps {
+interface ErrorTemplateProps {
   code: string;
-  description: string;
+  description?: string;
   action?: ReactNode;
 }
 
@@ -11,9 +11,23 @@ export const ErrorTemplate: FC<ErrorTemplateProps> = ({
   description,
   action,
 }) => (
-  <main className="flex min-h-screen flex-col items-center justify-center gap-6 p-8 text-center">
-    <h1 className="text-6xl">{code}</h1>
-    <p className="text-base-content/70 max-w-md">{description}</p>
-    {action ? <div className="mt-2">{action}</div> : null}
-  </main>
+  <div className="flex min-h-screen flex-col items-center justify-center px-6">
+    <p className="text-base-content/50 mb-6 text-xs tracking-[0.2em] uppercase">
+      Error
+    </p>
+
+    <h1 className="mb-3">{code}</h1>
+
+    {description && (
+      <p className="text-base-content/50 mb-10 max-w-sm text-center text-sm">
+        {description}
+      </p>
+    )}
+
+    {action && (
+      <div className="flex flex-wrap justify-center gap-3">{action}</div>
+    )}
+  </div>
 );
+
+ErrorTemplate.displayName = 'ErrorTemplate';

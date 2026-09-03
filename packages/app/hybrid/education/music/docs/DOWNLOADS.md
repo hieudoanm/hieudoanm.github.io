@@ -1,8 +1,8 @@
 # Music
 
 > Ear-training games and music tools — guess notes on an on-screen piano,
-> sharpen your pitch, and play melodies. Runs everywhere: phone, tablet,
-> laptop, desktop.
+> sharpen your pitch, and play melodies. Runs everywhere: phone, tablet, laptop,
+> desktop.
 
 ![Linux](https://img.shields.io/badge/Linux-22.04%2B-blue)
 ![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
@@ -94,6 +94,7 @@ scales, and play melodies — all from a beautiful hybrid web/desktop app.
 Sharpen your ears and have fun doing it.
 
 ### 🔨 Project Foundation
+
 - Monorepo scaffold following the lingo app conventions
   (`packages/app/hybrid/education/music`)
 - Next.js static export validated against Tauri's `dist` expectations
@@ -104,11 +105,13 @@ Sharpen your ears and have fun doing it.
 - Unit test coverage thresholds enforced at 80% global
 
 ### 🏠 Home & Navigation
+
 - Card grid listing the tool with icon and description
 - Tool route rendered directly, opened from the home card grid
 - Theme toggle in template header; choice persisted in localStorage
 
 ### 🎵 Pitch (Ear Training)
+
 - Guess-the-note piano game: random note plays, player guesses on on-screen
   keyboard
 - 11 difficulty levels with growing note pools (C → full chromatic scale)
@@ -124,10 +127,10 @@ Sharpen your ears and have fun doing it.
 
 # First run
 
-- **macOS:** Right-click the `.dmg` → "Open" to bypass Gatekeeper, then drag
-  the app to your Applications folder.
-- **Linux (AppImage):** `chmod +x music_amd64.AppImage` then run it — no
-  install needed.
+- **macOS:** Right-click the `.dmg` → "Open" to bypass Gatekeeper, then drag the
+  app to your Applications folder.
+- **Linux (AppImage):** `chmod +x music_amd64.AppImage` then run it — no install
+  needed.
 - **Windows:** SmartScreen may flag the `.msi` — click "More info" → "Run
   anyway".
 

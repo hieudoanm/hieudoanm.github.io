@@ -33,7 +33,9 @@ describe('Header', () => {
 
   it('applies and persists the default dracula theme', () => {
     render(<Header />);
-    expect(document.documentElement.getAttribute('data-theme')).toBe('tic-tac-toe-dark');
+    expect(document.documentElement.getAttribute('data-theme')).toBe(
+      'tic-tac-toe-dark'
+    );
     expect(localStorage.getItem('tic-tac-toe-theme')).toBe('tic-tac-toe-dark');
   });
 
@@ -46,7 +48,9 @@ describe('Header', () => {
     );
     expect(localStorage.getItem('tic-tac-toe-theme')).toBe('tic-tac-toe-light');
     await user.click(screen.getByTestId('theme-toggle'));
-    expect(document.documentElement.getAttribute('data-theme')).toBe('tic-tac-toe-dark');
+    expect(document.documentElement.getAttribute('data-theme')).toBe(
+      'tic-tac-toe-dark'
+    );
   });
 
   it('restores a saved theme on mount', () => {

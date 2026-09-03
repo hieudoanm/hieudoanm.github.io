@@ -6,7 +6,6 @@ const RELEASE =
 
 const DownloadsPage: NextPage = () => (
   <DownloadsTemplate
-    appName="History"
     version="v0.0.1"
     items={[
       {

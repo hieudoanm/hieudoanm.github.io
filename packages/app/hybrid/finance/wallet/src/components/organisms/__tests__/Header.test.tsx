@@ -24,15 +24,15 @@ describe('Header', () => {
     render(<Header />);
     expect(screen.getByRole('link', { name: 'About' })).toHaveAttribute(
       'href',
-      '/about',
+      '/about'
     );
     expect(screen.getByRole('link', { name: 'Downloads' })).toHaveAttribute(
       'href',
-      '/downloads',
+      '/downloads'
     );
     expect(screen.getByRole('link', { name: 'Version' })).toHaveAttribute(
       'href',
-      '/version',
+      '/version'
     );
   });
 
@@ -41,7 +41,10 @@ describe('Header', () => {
     const toggle = screen.getByTestId('theme-toggle');
     expect(toggle).toBeInTheDocument();
     fireEvent.click(toggle);
-    expect(document.documentElement).toHaveAttribute('data-theme', 'wallet-light');
+    expect(document.documentElement).toHaveAttribute(
+      'data-theme',
+      'wallet-light'
+    );
     expect(localStorage.getItem('wallet-theme')).toBe('wallet-light');
   });
 });

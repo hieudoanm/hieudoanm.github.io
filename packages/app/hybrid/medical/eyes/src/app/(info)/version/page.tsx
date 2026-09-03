@@ -15,7 +15,7 @@ const VersionPage: NextPage = () => {
     pad(now.getSeconds()),
   ].join('.');
 
-  return <VersionTemplate appName="Eyes" version={version} />;
+  return <VersionTemplate version={version} />;
 };
 
 export default VersionPage;

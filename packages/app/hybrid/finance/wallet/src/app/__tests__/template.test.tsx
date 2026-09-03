@@ -7,7 +7,7 @@ describe('Template', () => {
     render(
       <Template>
         <div>child</div>
-      </Template>,
+      </Template>
     );
     expect(screen.getByText('child')).toBeInTheDocument();
   });
@@ -16,7 +16,7 @@ describe('Template', () => {
     const { container } = render(
       <Template>
         <div>content</div>
-      </Template>,
+      </Template>
     );
     expect(container.firstChild).toBeTruthy();
   });
@@ -25,7 +25,7 @@ describe('Template', () => {
     render(
       <Template>
         <span>single</span>
-      </Template>,
+      </Template>
     );
     expect(screen.getByText('single')).toBeInTheDocument();
   });
@@ -35,7 +35,7 @@ describe('Template', () => {
       <Template>
         <div>first</div>
         <div>second</div>
-      </Template>,
+      </Template>
     );
     expect(screen.getByText('first')).toBeInTheDocument();
     expect(screen.getByText('second')).toBeInTheDocument();
@@ -45,7 +45,7 @@ describe('Template', () => {
     render(
       <Template>
         <div data-testid="target">preserved</div>
-      </Template>,
+      </Template>
     );
     expect(screen.getByTestId('target')).toBeInTheDocument();
   });

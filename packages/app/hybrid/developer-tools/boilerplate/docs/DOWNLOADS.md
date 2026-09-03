@@ -28,7 +28,8 @@
 
 ## Latest release
 
-- **Version:** `app-hybrid-developer-tools-boilerplate-latest` — updates ship continuously.
+- **Version:** `app-hybrid-developer-tools-boilerplate-latest` — updates ship
+  continuously.
 - **What's new:** see the [roadmap](ROADMAP) and [CONTRIBUTING](CONTRIBUTING).
 
 ---
@@ -94,9 +95,9 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-A batteries-included Next.js + Tauri starter — app shell, atomic design
-system with 90+ components, DaisyUI theming, PWA support, and a desktop
-build, all ready to go.
+A batteries-included Next.js + Tauri starter — app shell, atomic design system
+with 90+ components, DaisyUI theming, PWA support, and a desktop build, all
+ready to go.
 
 ---
 
@@ -105,6 +106,7 @@ build, all ready to go.
 A full design system and app shell, pre-wired and ready to extend.
 
 ### 🐚 App Shell
+
 - App Router with flat routes
 - Home page with navigation links
 - About page with tech stack info
@@ -117,21 +119,25 @@ A full design system and app shell, pre-wired and ready to extend.
 - Skeleton loading states
 
 ### 🖥️ Platform
+
 - Dark theme default (DaisyUI)
 - Service worker for offline caching
 - PWA manifest for installability
 - Tauri desktop app build for macOS
 
 ### 🔵 Design System — Atoms
+
 - Spinner, Badge, Avatar, Separator, TextField, Skeleton
 - Button, Checkbox, Icon, Progress, Rating, StatusDot, Switch, Textarea
 - CodeBlock, FileInput, Kbd, Radio, Select, Slider, Tag
 
 ### 🟣 Design System — Molecules
+
 - CopyButton, Divider, IconButton, Indicator, NumberField, PasswordField
 - Toast, Modal, Card, EmptyState, Tabs, Dropdown
 
 ### 🟠 Design System — Organisms & Templates
+
 - Alert, AvatarGroup, Breadcrumbs, Fieldset, NavItem, Pagination, SearchBar
 - Accordion, ChatBubble, FormRow, Steps, TagInput, Timeline, TreeView
 - ButtonGroup, Carousel, ConfirmDialog, DangerZone, KeyValue, List, Menu
@@ -155,7 +161,8 @@ A full design system and app shell, pre-wired and ready to extend.
 # First run
 
 - **macOS:** Right-click the `.dmg` and choose **Open** to bypass Gatekeeper.
-- **Linux AppImage:** `chmod +x boilerplate_amd64.AppImage && ./boilerplate_amd64.AppImage`
+- **Linux AppImage:**
+  `chmod +x boilerplate_amd64.AppImage && ./boilerplate_amd64.AppImage`
 - **Windows SmartScreen:** Click **More info → Run anyway** if prompted.
 - **Android Play Protect:** Tap **Install anyway** if the warning appears.
 
@@ -167,7 +174,8 @@ A full design system and app shell, pre-wired and ready to extend.
 
 ## Next steps
 
-- Check [CONTRIBUTING](CONTRIBUTING) for dev setup, coding conventions, and how to run tests.
+- Check [CONTRIBUTING](CONTRIBUTING) for dev setup, coding conventions, and how
+  to run tests.
 - Browse the [ROADMAP](ROADMAP) for what's shipping next.
 
 ---

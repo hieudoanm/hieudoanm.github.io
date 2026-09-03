@@ -24,7 +24,9 @@ const QrShare: FC<QrShareProps> = ({ restaurant, store }) => {
     const relative = makeCustomerUrl(restaurant, items);
     const next = `${window.location.origin}${window.location.pathname.replace(/\/$/, '')}${relative}`;
     setUrl(next);
-    qrDataUrl(next, 320).then(setDataUrl).catch(() => setDataUrl(''));
+    qrDataUrl(next, 320)
+      .then(setDataUrl)
+      .catch(() => setDataUrl(''));
   }, [restaurant, items]);
 
   const handleCopy = () => {
@@ -48,7 +50,7 @@ const QrShare: FC<QrShareProps> = ({ restaurant, store }) => {
           className="h-64 w-64 rounded-xl bg-white p-2"
         />
       ) : (
-        <div className="flex h-64 w-64 items-center justify-center rounded-xl bg-base-200 text-base-content/40">
+        <div className="bg-base-200 text-base-content/40 flex h-64 w-64 items-center justify-center rounded-xl">
           Generating…
         </div>
       )}
@@ -59,8 +61,8 @@ const QrShare: FC<QrShareProps> = ({ restaurant, store }) => {
           camera to open your menu and place an order.
         </p>
         <div className="flex items-center gap-2">
-          <FiLink className="shrink-0 text-primary" />
-          <span className="truncate break-all text-sm text-base-content/80">
+          <FiLink className="text-primary shrink-0" />
+          <span className="text-base-content/80 truncate text-sm break-all">
             {url || makeCustomerUrl(restaurant, items)}
           </span>
         </div>
@@ -74,8 +76,7 @@ const QrShare: FC<QrShareProps> = ({ restaurant, store }) => {
               className="btn btn-outline btn-sm"
               href={url}
               target="_blank"
-              rel="noopener noreferrer"
-            >
+              rel="noopener noreferrer">
               <FiExternalLink className="mr-1" />
               Open menu
             </a>

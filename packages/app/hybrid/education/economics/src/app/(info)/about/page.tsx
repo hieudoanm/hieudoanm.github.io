@@ -3,7 +3,6 @@ import { NextPage } from 'next';
 
 const AboutPage: NextPage = () => (
   <AboutTemplate
-    appName="Economics"
     name="Economics"
     description="Game theory and economics simulations"
     version="v0.0.1"

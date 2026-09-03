@@ -18,7 +18,7 @@ describe('app shell', () => {
   it('renders the error boundary with reset', () => {
     const reset = jest.fn();
     render(<ErrorBoundary error={new global.Error('boom')} reset={reset} />);
-    expect(screen.getByText('Internal server error')).toBeInTheDocument();
+    expect(screen.getByText('Something went wrong.')).toBeInTheDocument();
     expect(screen.getByText('500')).toBeInTheDocument();
     expect(
       screen.getByRole('button', { name: /try again/i })
@@ -27,7 +27,9 @@ describe('app shell', () => {
 
   it('renders the not-found page', () => {
     render(<NotFound />);
-    expect(screen.getByText('Page not found')).toBeInTheDocument();
+    expect(
+      screen.getByText('The page you are looking for does not exist.')
+    ).toBeInTheDocument();
     expect(screen.getByText('404')).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /go home/i })).toBeInTheDocument();
   });
@@ -39,9 +41,12 @@ describe('app shell', () => {
     expect(screen.getByText('A3 · A4 · A5 · A6 · B5')).toBeInTheDocument();
   });
 
-  it('renders the version page with a build version', () => {
+  it('renders the version page', async () => {
     render(<VersionPage />);
-    expect(screen.getByText('Build version')).toBeInTheDocument();
-    expect(screen.getByText(/\d{4}\.\d{2}\.\d{2}/)).toBeInTheDocument();
+    expect(screen.getByText('Version')).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: /copy version/i })
+    ).toBeInTheDocument();
+    expect(await screen.findByText(/\d{4}\.\d{2}\.\d{2}/)).toBeInTheDocument();
   });
 });

@@ -1,6 +1,8 @@
 # Password
 
-> A minimal BitWarden / 1Password vault that runs everywhere — phone, tablet, laptop, and desktop. Generate passwords, manage TOTP, and stay secure from any screen.
+> A minimal BitWarden / 1Password vault that runs everywhere — phone, tablet,
+> laptop, and desktop. Generate passwords, manage TOTP, and stay secure from any
+> screen.
 
 ![Android 14+](https://img.shields.io/badge/Android-14%2B-green)
 ![Linux](https://img.shields.io/badge/Linux-22.04%2B-blue)
@@ -24,7 +26,8 @@
 
 ## Latest release
 
-- **Version:** `app-hybrid-utilities-password-latest` — updates ship continuously.
+- **Version:** `app-hybrid-utilities-password-latest` — updates ship
+  continuously.
 - **What's new:** see the [roadmap](ROADMAP) and [CONTRIBUTING](CONTRIBUTING).
 
 ---
@@ -35,14 +38,14 @@ Pick the file that matches your platform and install directly.
 
 ### Downloads
 
-| No  | Platform | Distro | Architecture | Requirements | Download Link                              | Note                     |
-| --- | -------- | ------ | ------------ | ------------ | ------------------------------------------ | ------------------------ |
-| 1   | Android  |        | Universal    | 14.+         | [Download `.apk`][download-apk]            | Install directly         |
-| 2   | Android  |        | Universal    | 14.+         | [Download `.aab`][download-aab]¹           | For store upload         |
-| 3   | Linux    | Ubuntu | amd64        | 22.04.+      | [Download `.AppImage`][download-app-image] | Run — no install         |
-| 4   | Linux    | Debian | amd64        | 13.+         | [Download `.deb`][download-deb]            |                          |
-| 5   | macOS    |        | aarch64      | 13.+         | [Download `.dmg`][download-dmg]²           | Apple Silicon            |
-| 6   | Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi]            |                          |
+| No  | Platform | Distro | Architecture | Requirements | Download Link                              | Note             |
+| --- | -------- | ------ | ------------ | ------------ | ------------------------------------------ | ---------------- |
+| 1   | Android  |        | Universal    | 14.+         | [Download `.apk`][download-apk]            | Install directly |
+| 2   | Android  |        | Universal    | 14.+         | [Download `.aab`][download-aab]¹           | For store upload |
+| 3   | Linux    | Ubuntu | amd64        | 22.04.+      | [Download `.AppImage`][download-app-image] | Run — no install |
+| 4   | Linux    | Debian | amd64        | 13.+         | [Download `.deb`][download-deb]            |                  |
+| 5   | macOS    |        | aarch64      | 13.+         | [Download `.dmg`][download-dmg]²           | Apple Silicon    |
+| 6   | Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi]            |                  |
 
 [download-apk]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-utilities-password-latest/app-universal-release.apk
@@ -59,9 +62,11 @@ Pick the file that matches your platform and install directly.
 
 <br>
 
-¹ The `.aab` bundle is for uploading to app stores; install the `.apk` directly on your device.
+¹ The `.aab` bundle is for uploading to app stores; install the `.apk` directly
+on your device.
 
-² Right-click the `.dmg`, choose **Open**, then drag the app into your Applications folder.
+² Right-click the `.dmg`, choose **Open**, then drag the app into your
+Applications folder.
 
 ### Checksums
 
@@ -90,7 +95,8 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-A vault packed into your pocket — store, generate, and manage every password you own, running natively on every device you own.
+A vault packed into your pocket — store, generate, and manage every password you
+own, running natively on every device you own.
 
 ---
 

@@ -1,17 +1,16 @@
 import Link from 'next/link';
 import { ErrorTemplate } from '@/components/templates/ErrorTemplate';
-import { Button } from '@/components/atoms/Button';
 
-const NotFound = () => (
+const NotFoundPage = () => (
   <ErrorTemplate
     code="404"
     description="The page you are looking for does not exist."
     action={
-      <Link href="/">
-        <Button variant="primary">Go home</Button>
+      <Link href="/" className="btn btn-primary btn-sm">
+        Go home
       </Link>
     }
   />
 );
 
-export default NotFound;
+export default NotFoundPage;

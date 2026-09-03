@@ -6,7 +6,7 @@ describe('GlobalErrorPage', () => {
     const reset = jest.fn();
     render(<GlobalErrorPage error={new Error('test')} reset={reset} />);
     expect(screen.getByText('500')).toBeInTheDocument();
-    expect(screen.getByText('Try again')).toBeInTheDocument();
+    expect(screen.getByText('Something went wrong.')).toBeInTheDocument();
   });
 
   it('calls reset when try again is clicked', () => {

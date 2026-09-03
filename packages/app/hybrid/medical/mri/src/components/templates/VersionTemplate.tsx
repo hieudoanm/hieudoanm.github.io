@@ -1,16 +1,10 @@
 'use client';
 
-import { type FC, useState } from 'react';
-import Link from 'next/link';
-import { FiCheck, FiChevronLeft, FiCopy } from 'react-icons/fi';
-import { Badge } from '@/components/atoms/Badge';
-import { Button } from '@/components/atoms/Button';
+import type { FC } from 'react';
+import { useState } from 'react';
+import { FiCheck, FiCopy } from 'react-icons/fi';
 
-export interface VersionTemplateProps {
-  version: string;
-}
-
-export const VersionTemplate: FC<VersionTemplateProps> = ({ version }) => {
+export const VersionTemplate: FC<{ version: string }> = ({ version }) => {
   const [copied, setCopied] = useState(false);
 
   const copy = async () => {
@@ -23,45 +17,39 @@ export const VersionTemplate: FC<VersionTemplateProps> = ({ version }) => {
   const hasSegments = year && month && day;
 
   return (
-    <main className="mx-auto flex min-h-screen max-w-2xl flex-col items-center justify-center gap-6 p-8 text-center">
-      <div className="flex w-full items-center gap-4">
-        <Link href="/" className="btn btn-ghost btn-sm">
-          <FiChevronLeft /> Home
-        </Link>
-      </div>
-
+    <div className="mx-auto flex w-full max-w-2xl flex-col items-center gap-6 px-6 py-16 text-center">
       <p className="text-base-content/50 text-xs tracking-[0.2em] uppercase">
         Current deployment
       </p>
 
-      <h1 className="text-3xl font-bold">Version</h1>
+      <h1 className="mb-1">Version</h1>
 
       <div className="border-base-content/10 bg-base-200 w-full max-w-lg rounded-2xl border p-6">
         {hasSegments ? (
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center gap-0">
             <Segment value={year} label="Year" primary />
             <Dot />
             <Segment value={month} label="Month" />
             <Dot />
             <Segment value={day} label="Day" />
-            {hh ? (
+            {hh && (
               <>
                 <Dot />
                 <Segment value={hh} label="Hour" />
               </>
-            ) : null}
-            {mm ? (
+            )}
+            {mm && (
               <>
                 <Dot />
                 <Segment value={mm} label="Min" />
               </>
-            ) : null}
-            {ss ? (
+            )}
+            {ss && (
               <>
                 <Dot />
                 <Segment value={ss} label="Sec" />
               </>
-            ) : null}
+            )}
           </div>
         ) : (
           <p className="text-error font-mono text-xl font-bold break-all">
@@ -70,26 +58,25 @@ export const VersionTemplate: FC<VersionTemplateProps> = ({ version }) => {
         )}
       </div>
 
-      <div className="flex flex-wrap items-center justify-center gap-3">
-        <Button
-          variant={copied ? 'secondary' : 'primary'}
-          size="sm"
-          onClick={() => void copy()}>
-          {copied ? <FiCheck className="mr-1" /> : <FiCopy className="mr-1" />}
+      <div className="flex flex-wrap justify-center gap-3">
+        <button
+          onClick={copy}
+          className={`btn btn-sm rounded-full ${copied ? 'btn-success' : 'btn-primary'}`}>
+          {copied ? <FiCheck /> : <FiCopy />}
           {copied ? 'Copied' : 'Copy version'}
-        </Button>
-        <Button variant="outline" size="sm" onClick={() => void copy()}>
+        </button>
+        <button className="btn btn-neutral btn-sm rounded-full" onClick={copy}>
           {version}
-        </Button>
+        </button>
       </div>
 
-      <div className="flex flex-wrap items-center justify-center gap-3">
+      <div className="flex flex-wrap justify-center gap-3">
         <span className="border-base-content/20 text-base-content/50 rounded-full border px-3 py-1 text-xs">
           Format: YYYY.MM.DD.hh.mm.ss
         </span>
-        <Badge variant="neutral">Stable</Badge>
+        <span className="badge badge-neutral rounded-full">Stable</span>
       </div>
-    </main>
+    </div>
   );
 };
 
@@ -112,3 +99,5 @@ const Segment: FC<{ value: string; label: string; primary?: boolean }> = ({
 const Dot: FC = () => (
   <span className="text-base-content/50 font-mono text-xl">.</span>
 );
+
+VersionTemplate.displayName = 'VersionTemplate';

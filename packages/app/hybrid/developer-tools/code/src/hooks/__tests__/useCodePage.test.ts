@@ -404,7 +404,9 @@ describe('useCodePage', () => {
       );
 
       act(() => result.current.toggleTheme());
-      expect(document.documentElement.getAttribute('data-theme')).toBe('code-dark');
+      expect(document.documentElement.getAttribute('data-theme')).toBe(
+        'code-dark'
+      );
     });
 
     it('toggleWordWrap toggles wordWrap state', () => {

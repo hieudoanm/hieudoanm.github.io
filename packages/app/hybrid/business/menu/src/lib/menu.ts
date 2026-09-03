@@ -1,4 +1,10 @@
-import type { MenuItem, MenuState, Order, OrderLine, Restaurant } from '@/types/menu';
+import type {
+  MenuItem,
+  MenuState,
+  Order,
+  OrderLine,
+  Restaurant,
+} from '@/types/menu';
 import { newId, nowIso } from '@/lib/ids';
 
 export const emptyMenu = (): MenuState => ({
@@ -53,10 +59,7 @@ export const updateRestaurant = (
   ),
 });
 
-export const deleteRestaurant = (
-  state: MenuState,
-  id: string
-): MenuState => ({
+export const deleteRestaurant = (state: MenuState, id: string): MenuState => ({
   ...state,
   restaurants: state.restaurants.filter((r) => r.id !== id),
   items: state.items.filter((i) => i.restaurantId !== id),
@@ -128,8 +131,7 @@ export const itemsForRestaurant = (
 export const restaurantById = (
   state: MenuState,
   id: string
-): Restaurant | undefined =>
-  state.restaurants.find((r) => r.id === id);
+): Restaurant | undefined => state.restaurants.find((r) => r.id === id);
 
 export const orderSubtotal = (lines: OrderLine[]): number =>
   Math.round(
@@ -192,7 +194,10 @@ export interface MenuSnapshot {
   items: MenuItem[];
 }
 
-export const encodeMenuData = (restaurant: Restaurant, items: MenuItem[]): string => {
+export const encodeMenuData = (
+  restaurant: Restaurant,
+  items: MenuItem[]
+): string => {
   const snapshot: MenuSnapshot = { v: 1, restaurant, items };
   const json = JSON.stringify(snapshot);
   if (typeof btoa === 'undefined') return encodeURIComponent(json);

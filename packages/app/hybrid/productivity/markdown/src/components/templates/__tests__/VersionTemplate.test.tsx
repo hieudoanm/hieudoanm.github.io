@@ -1,48 +1,37 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import { VersionTemplate } from '@/components/templates/VersionTemplate';
+import { VersionTemplate } from '../VersionTemplate';
 
 describe('VersionTemplate', () => {
-  beforeEach(() => {
+  it('renders heading and copy button', () => {
+    render(<VersionTemplate version="2026.08.09.10.20.30" />);
+    expect(screen.getByText('Version')).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: /Copy version/i })
+    ).toBeInTheDocument();
+    expect(screen.getByText('Stable')).toBeInTheDocument();
+  });
+
+  it('renders date segments for a timestamp version', () => {
+    render(<VersionTemplate version="2026.08.09.10.20.30" />);
+    expect(screen.getByText('2026')).toBeInTheDocument();
+    expect(screen.getByText('Year')).toBeInTheDocument();
+    expect(screen.getByText('Min')).toBeInTheDocument();
+  });
+
+  it('copies version to clipboard', async () => {
     Object.assign(navigator, {
       clipboard: { writeText: jest.fn().mockResolvedValue(undefined) },
     });
-  });
-
-  it('renders every segment for a full version', () => {
-    render(<VersionTemplate version="2024.01.05.10.30.45" />);
-    expect(screen.getByText('2024')).toBeInTheDocument();
-    expect(screen.getByText('Month')).toBeInTheDocument();
-    expect(screen.getByText('10')).toBeInTheDocument();
-    expect(screen.getByText('Sec')).toBeInTheDocument();
-    expect(screen.getByText('Copy version')).toBeInTheDocument();
-    expect(screen.queryByText('Stable')).toBeInTheDocument();
-  });
-
-  it('renders a compact version without time segments', () => {
-    render(<VersionTemplate version="2024.01.05" />);
-    expect(screen.getByText('2024')).toBeInTheDocument();
-    expect(screen.getByText('01')).toBeInTheDocument();
-    expect(screen.getByText('05')).toBeInTheDocument();
-    expect(screen.queryByText('Hour')).not.toBeInTheDocument();
-    expect(screen.queryByText('Min')).not.toBeInTheDocument();
-    expect(screen.queryByText('Sec')).not.toBeInTheDocument();
-  });
-
-  it.each(['unreleased', '2024', '2024.01'])(
-    'falls back to the raw version when segments are missing (%s)',
-    (version) => {
-      render(<VersionTemplate version={version} />);
-      expect(screen.getAllByText(version)).toHaveLength(2);
-      expect(screen.queryByText('Month')).not.toBeInTheDocument();
-    }
-  );
-
-  it('copies the version to the clipboard', async () => {
-    render(<VersionTemplate version="2024.01.05.10.30.45" />);
-    fireEvent.click(screen.getByRole('button', { name: 'Copy version' }));
-    expect(await screen.findByText('Copied')).toBeInTheDocument();
+    render(<VersionTemplate version="2026.08.09.10.20.30" />);
+    fireEvent.click(screen.getByRole('button', { name: /Copy version/i }));
+    await screen.findByText('Copied');
     expect(navigator.clipboard.writeText).toHaveBeenCalledWith(
-      '2024.01.05.10.30.45'
+      '2026.08.09.10.20.30'
     );
+  });
+
+  it('falls back to raw version text for non-timestamp versions', () => {
+    render(<VersionTemplate version="v0.0.1" />);
+    expect(screen.getByText('v0.0.1')).toBeInTheDocument();
   });
 });

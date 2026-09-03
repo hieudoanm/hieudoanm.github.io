@@ -1,22 +1,39 @@
 import { render, screen } from '@testing-library/react';
-import { AboutTemplate } from '@/components/templates/AboutTemplate';
+import { AboutTemplate } from '../AboutTemplate';
+
+const PROPS = {
+  name: 'Test App',
+  description: 'A test application',
+  version: 'v0.0.1',
+  items: [
+    { label: 'Framework', value: 'Next.js' },
+    { label: 'Shell', value: 'Tauri' },
+  ],
+};
 
 describe('AboutTemplate', () => {
-  it('renders name, description, and items', () => {
-    render(
-      <AboutTemplate
-        name="Photo"
-        description="An editor"
-        version="1.0.0"
-        items={[
-          { label: 'Author', value: 'hieudoanm' },
-          { label: 'License', value: 'GPL-3.0' },
-        ]}
-      />
-    );
-    expect(screen.getByText('Photo')).toBeInTheDocument();
-    expect(screen.getByText('An editor')).toBeInTheDocument();
-    expect(screen.getByText('hieudoanm')).toBeInTheDocument();
-    expect(screen.getByText('1.0.0')).toBeInTheDocument();
+  it('renders the About label', () => {
+    render(<AboutTemplate {...PROPS} />);
+    expect(screen.getByText('About')).toBeInTheDocument();
+  });
+
+  it('renders the name and description', () => {
+    render(<AboutTemplate {...PROPS} />);
+    expect(screen.getByText('Test App')).toBeInTheDocument();
+    expect(screen.getByText('A test application')).toBeInTheDocument();
+  });
+
+  it('renders item labels and values', () => {
+    render(<AboutTemplate {...PROPS} />);
+    expect(screen.getByText('Framework')).toBeInTheDocument();
+    expect(screen.getByText('Next.js')).toBeInTheDocument();
+    expect(screen.getByText('Shell')).toBeInTheDocument();
+    expect(screen.getByText('Tauri')).toBeInTheDocument();
+  });
+
+  it('renders version and stable badge', () => {
+    render(<AboutTemplate {...PROPS} />);
+    expect(screen.getByText('v0.0.1')).toBeInTheDocument();
+    expect(screen.getByText('Stable')).toBeInTheDocument();
   });
 });

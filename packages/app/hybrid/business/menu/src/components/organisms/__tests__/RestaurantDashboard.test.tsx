@@ -41,7 +41,10 @@ describe('RestaurantDashboard', () => {
     const user = userEvent.setup();
     render(<DashboardWithStore />);
 
-    await user.type(screen.getByPlaceholderText(/e\.g\. the golden fork/i), 'My Place');
+    await user.type(
+      screen.getByPlaceholderText(/e\.g\. the golden fork/i),
+      'My Place'
+    );
     await user.click(screen.getByRole('button', { name: /create/i }));
 
     expect(screen.getAllByText('My Place').length).toBeGreaterThanOrEqual(1);
@@ -52,7 +55,10 @@ describe('RestaurantDashboard', () => {
     const user = userEvent.setup();
     render(<DashboardWithStore />);
 
-    await user.type(screen.getByPlaceholderText(/e\.g\. the golden fork/i), 'Cafe');
+    await user.type(
+      screen.getByPlaceholderText(/e\.g\. the golden fork/i),
+      'Cafe'
+    );
     await user.click(screen.getByRole('button', { name: /create/i }));
 
     await user.click(screen.getByRole('button', { name: /share/i }));

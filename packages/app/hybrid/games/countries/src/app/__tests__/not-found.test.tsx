@@ -14,22 +14,16 @@ jest.mock('next/link', () => {
 });
 
 describe('NotFoundPage', () => {
-  it('renders 404', () => {
+  it('renders 404 and the page not found message', () => {
     render(<NotFoundPage />);
     expect(screen.getByText('404')).toBeInTheDocument();
-  });
-
-  it('renders description', () => {
-    render(<NotFoundPage />);
     expect(
       screen.getByText('The page you are looking for does not exist.')
     ).toBeInTheDocument();
   });
 
-  it('renders Go home link', () => {
+  it('renders go home link', () => {
     render(<NotFoundPage />);
-    const link = screen.getByText('Go home');
-    expect(link).toBeInTheDocument();
-    expect(link.closest('a')).toHaveAttribute('href', '/');
+    expect(screen.getByText('Go home')).toHaveAttribute('href', '/');
   });
 });

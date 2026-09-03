@@ -1,20 +1,23 @@
 'use client';
 
-const Error = () => {
-  console.log('[Error] render');
-  return (
-    <main
-      className="flex h-screen w-screen flex-col items-center justify-center gap-4"
-      role="alert">
-      <h1 className="text-6xl font-bold">Error</h1>
-      <p className="text-base-content/60">Something went wrong</p>
-      <button
-        className="btn btn-primary"
-        onClick={() => window.location.reload()}>
-        Try Again
-      </button>
-    </main>
-  );
-};
+import { ErrorTemplate } from '@/components/templates/ErrorTemplate';
 
-export default Error;
+const ErrorPage = ({
+  error,
+  reset,
+}: {
+  error: Error & { digest?: string };
+  reset: () => void;
+}) => (
+  <ErrorTemplate
+    code="500"
+    description="Something went wrong."
+    action={
+      <button className="btn btn-primary btn-sm" onClick={() => reset()}>
+        Try again
+      </button>
+    }
+  />
+);
+
+export default ErrorPage;

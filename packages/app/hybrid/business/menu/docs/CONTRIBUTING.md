@@ -20,14 +20,14 @@ Thanks for contributing to **Menu**, a hybrid app that ships as a web app
 
 ## Development Commands
 
-| Task       | Command                                             |
-| ---------- | --------------------------------------------------- |
-| Dev server | `pnpm dev --filter=@hieudoanm.github.io/menu`       |
-| Build      | `pnpm build --filter=@hieudoanm.github.io/menu`     |
-| Lint       | `pnpm lint --filter=@hieudoanm.github.io/menu`      |
-| Format     | `pnpm format --filter=@hieudoanm.github.io/menu`    |
-| Unit tests | `pnpm test --filter=@hieudoanm.github.io/menu`      |
-| E2E tests  | `pnpm test:e2e --filter=@hieudoanm.github.io/menu`  |
+| Task       | Command                                            |
+| ---------- | -------------------------------------------------- |
+| Dev server | `pnpm dev --filter=@hieudoanm.github.io/menu`      |
+| Build      | `pnpm build --filter=@hieudoanm.github.io/menu`    |
+| Lint       | `pnpm lint --filter=@hieudoanm.github.io/menu`     |
+| Format     | `pnpm format --filter=@hieudoanm.github.io/menu`   |
+| Unit tests | `pnpm test --filter=@hieudoanm.github.io/menu`     |
+| E2E tests  | `pnpm test:e2e --filter=@hieudoanm.github.io/menu` |
 
 Run `lint`, `format`, `test`, and `test:e2e` before pushing — CI enforces all of
 them.

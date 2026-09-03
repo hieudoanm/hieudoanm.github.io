@@ -18,7 +18,13 @@ const Wrapper: React.FC = () => {
     restaurantId = restaurant.id;
     return s;
   });
-  const store: MenuStore = { state, setState, reset: () => { setState(emptyMenu()); } };
+  const store: MenuStore = {
+    state,
+    setState,
+    reset: () => {
+      setState(emptyMenu());
+    },
+  };
   return <MenuManager restaurantId={restaurantId} store={store} />;
 };
 

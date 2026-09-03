@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import type { FC } from 'react';
 
 interface InfoRow {
   label: string;
@@ -11,25 +11,35 @@ export const AboutTemplate: FC<{
   version: string;
   items: InfoRow[];
 }> = ({ name, description, version, items }) => (
-  <div className="flex flex-1 flex-col items-center justify-center p-8">
-    <div className="max-w-md text-center">
-      <h1 className="text-base-content mb-4 font-mono text-2xl font-normal tracking-widest uppercase">
-        {name}
-      </h1>
-      <p className="text-base-content/60 mb-6 text-sm">{description}</p>
-      <div className="border-base-300 rounded-box bg-base-200 border p-4 text-left">
-        {items.map((item, i) => (
-          <div key={item.label}>
-            {i > 0 && <div className="border-base-300 my-2 border-t" />}
-            <div className="flex justify-between text-sm">
-              <span className="text-base-content/50">{item.label}</span>
-              <span className="font-mono">{item.value}</span>
-            </div>
+  <div className="mx-auto flex w-full max-w-2xl flex-col items-center gap-6 px-6 py-16 text-center">
+    <p className="text-base-content/50 text-xs tracking-[0.2em] uppercase">
+      About
+    </p>
+
+    <h1 className="mb-1">{name}</h1>
+
+    <p className="text-base-content/50 max-w-sm text-sm">{description}</p>
+
+    <div className="border-base-content/10 bg-base-200 w-full max-w-lg rounded-2xl border p-6">
+      <div className="flex flex-col gap-4">
+        {items.map(({ label, value }) => (
+          <div key={label} className="flex items-center justify-between">
+            <span className="text-base-content/50 text-sm">{label}</span>
+            <span className="text-base-content font-mono text-sm font-bold">
+              {value}
+            </span>
           </div>
         ))}
       </div>
-      <span className="badge badge-primary badge-sm mt-4">v{version}</span>
+    </div>
+
+    <div className="flex flex-wrap justify-center gap-3">
+      <span className="border-base-content/20 text-base-content/50 rounded-full border px-3 py-1 text-xs">
+        {version}
+      </span>
+      <span className="badge badge-neutral rounded-full">Stable</span>
     </div>
   </div>
 );
+
 AboutTemplate.displayName = 'AboutTemplate';

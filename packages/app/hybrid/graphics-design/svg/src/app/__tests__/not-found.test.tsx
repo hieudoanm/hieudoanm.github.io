@@ -1,27 +1,29 @@
 import { render, screen } from '@testing-library/react';
-import NotFoundPage from '@/app/not-found';
+import NotFoundPage from '../not-found';
 
-jest.mock('next/link', () => ({
-  __esModule: true,
-  default: ({
-    href,
+jest.mock('next/link', () => {
+  const MockLink = ({
     children,
+    href,
   }: {
-    href: string;
     children: React.ReactNode;
-  }) => <a href={href}>{children}</a>,
-}));
+    href: string;
+  }) => <a href={href}>{children}</a>;
+  MockLink.displayName = 'MockLink';
+  return MockLink;
+});
 
 describe('NotFoundPage', () => {
-  it('renders the 404 template with a home link', () => {
+  it('renders 404 and the page not found message', () => {
     render(<NotFoundPage />);
     expect(screen.getByText('404')).toBeInTheDocument();
     expect(
       screen.getByText('The page you are looking for does not exist.')
     ).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: 'Go home' })).toHaveAttribute(
-      'href',
-      '/'
-    );
+  });
+
+  it('renders go home link', () => {
+    render(<NotFoundPage />);
+    expect(screen.getByText('Go home')).toHaveAttribute('href', '/');
   });
 });

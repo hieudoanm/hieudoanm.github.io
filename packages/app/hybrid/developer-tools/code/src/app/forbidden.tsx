@@ -1,4 +1,4 @@
-import { ErrorTemplate } from '../components/templates/ErrorTemplate';
+import { ErrorTemplate } from '@/components/templates/ErrorTemplate';
 
 const ForbiddenPage = () => (
   <ErrorTemplate

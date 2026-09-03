@@ -2,7 +2,9 @@ import { render, screen } from '@testing-library/react';
 
 jest.mock('@/styles/globals.css', () => ({}));
 jest.mock('@/providers/Providers', () => ({
-  Providers: ({ children }: { children: React.ReactNode }) => <div>{children}</div>,
+  Providers: ({ children }: { children: React.ReactNode }) => (
+    <div>{children}</div>
+  ),
 }));
 jest.mock('@/components/PwaRegister', () => ({
   PwaRegister: () => null,
@@ -18,7 +20,7 @@ describe('RootLayout', () => {
     render(
       <RootLayout>
         <div>child</div>
-      </RootLayout>,
+      </RootLayout>
     );
     expect(screen.getByText('child')).toBeInTheDocument();
   });
@@ -27,7 +29,7 @@ describe('RootLayout', () => {
     render(
       <RootLayout>
         <div />
-      </RootLayout>,
+      </RootLayout>
     );
     expect(document.documentElement).toHaveAttribute('data-theme', 'night');
   });

@@ -1,47 +1,39 @@
 import { render, screen } from '@testing-library/react';
 import { AboutTemplate } from '../AboutTemplate';
 
-describe('AboutTemplate', () => {
-  const defaultProps = {
-    name: 'Test App',
-    description: 'A test application',
-    version: 'v1.0.0',
-    items: [
-      { label: 'Framework', value: 'Next.js' },
-      { label: 'Language', value: 'TypeScript' },
-    ],
-  };
+const PROPS = {
+  name: 'Test App',
+  description: 'A test application',
+  version: 'v0.0.1',
+  items: [
+    { label: 'Framework', value: 'Next.js' },
+    { label: 'Shell', value: 'Tauri' },
+  ],
+};
 
-  it('renders name', () => {
-    render(<AboutTemplate {...defaultProps} />);
-    expect(screen.getByText('Test App')).toBeInTheDocument();
+describe('AboutTemplate', () => {
+  it('renders the About label', () => {
+    render(<AboutTemplate {...PROPS} />);
+    expect(screen.getByText('About')).toBeInTheDocument();
   });
 
-  it('renders description', () => {
-    render(<AboutTemplate {...defaultProps} />);
+  it('renders the name and description', () => {
+    render(<AboutTemplate {...PROPS} />);
+    expect(screen.getByText('Test App')).toBeInTheDocument();
     expect(screen.getByText('A test application')).toBeInTheDocument();
   });
 
-  it('renders version badge', () => {
-    render(<AboutTemplate {...defaultProps} />);
-    expect(screen.getByText('v1.0.0')).toBeInTheDocument();
-  });
-
-  it('renders info items', () => {
-    render(<AboutTemplate {...defaultProps} />);
+  it('renders item labels and values', () => {
+    render(<AboutTemplate {...PROPS} />);
     expect(screen.getByText('Framework')).toBeInTheDocument();
     expect(screen.getByText('Next.js')).toBeInTheDocument();
-    expect(screen.getByText('Language')).toBeInTheDocument();
-    expect(screen.getByText('TypeScript')).toBeInTheDocument();
+    expect(screen.getByText('Shell')).toBeInTheDocument();
+    expect(screen.getByText('Tauri')).toBeInTheDocument();
   });
 
-  it('renders Stable badge', () => {
-    render(<AboutTemplate {...defaultProps} />);
+  it('renders version and stable badge', () => {
+    render(<AboutTemplate {...PROPS} />);
+    expect(screen.getByText('v0.0.1')).toBeInTheDocument();
     expect(screen.getByText('Stable')).toBeInTheDocument();
-  });
-
-  it('renders About label', () => {
-    render(<AboutTemplate {...defaultProps} />);
-    expect(screen.getByText('About')).toBeInTheDocument();
   });
 });

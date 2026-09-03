@@ -1,7 +1,7 @@
 # Diagram
 
-> Draw diagrams by typing plain text — auto-layout renders them for you.
-> Runs on your phone, tablet, laptop, or desktop.
+> Draw diagrams by typing plain text — auto-layout renders them for you. Runs on
+> your phone, tablet, laptop, or desktop.
 
 ![Android 14+](https://img.shields.io/badge/Android-14%2B-green)
 ![Linux](https://img.shields.io/badge/Linux-22.04%2B-blue)
@@ -28,7 +28,8 @@
 
 ## Latest release
 
-- **Version:** `app-hybrid-developer-tools-diagram-latest` — updates ship continuously.
+- **Version:** `app-hybrid-developer-tools-diagram-latest` — updates ship
+  continuously.
 - **What's new:** see the [roadmap](ROADMAP) and [CONTRIBUTING](CONTRIBUTING).
 
 ---
@@ -104,6 +105,7 @@ deterministic auto-layout, live SVG preview, and 16 built-in examples.
 Everything from syntax parsing to sequence diagrams, all auto-laid-out for you.
 
 ### 📝 Core
+
 - Text editor with line numbers and gutter
 - Strict line-level parsing with error highlighting
 - Deterministic auto-layout (layered longest-path ranking)
@@ -120,6 +122,7 @@ Everything from syntax parsing to sequence diagrams, all auto-laid-out for you.
 - Playwright smoke tests
 
 ### 🔤 Language
+
 - Built-in tech icons on nodes (`[icon=database]`)
 - Built-in example diagrams (16: Uber, Twitter/X, Netflix, Instagram, and more)
 - Undirected edges (`--`) and self-loops
@@ -131,12 +134,14 @@ Everything from syntax parsing to sequence diagrams, all auto-laid-out for you.
 - Multi-line and rich node labels (class bodies, notes)
 
 ### 🖱️ Interaction
+
 - Undo / redo history (toolbar + Ctrl/Cmd+Z, Ctrl/Cmd+Y, Ctrl/Cmd+Shift+Z)
 - Click-to-select and drag nodes on the canvas
 - Copy as Markdown/PlantUML/Mermaid snippets
 - Multiple layouts (DAG vertical, layered) as options
 
 ### 🔀 Sequence & Special Diagrams
+
 - Sequence layout (lifeline columns, time-ordered rows)
 - Sequence rendering in Canvas: participant headers, dashed lifelines, messages
 - State machine examples + syntax docs (states as `round`/`ellipse` nodes)
@@ -147,6 +152,7 @@ Everything from syntax parsing to sequence diagrams, all auto-laid-out for you.
 - Force-directed / arbitrary-graph layout option
 
 ### 📤 Export
+
 - Print-friendly and A4-oriented SVG export
 - Export PNG (via canvas rasterization)
 - More shapes / custom icon glyphs
@@ -157,7 +163,8 @@ Everything from syntax parsing to sequence diagrams, all auto-laid-out for you.
 # First run
 
 - **macOS:** Right-click the `.dmg` and choose **Open** to bypass Gatekeeper.
-- **Linux AppImage:** `chmod +x diagram_amd64.AppImage && ./diagram_amd64.AppImage`
+- **Linux AppImage:**
+  `chmod +x diagram_amd64.AppImage && ./diagram_amd64.AppImage`
 - **Windows SmartScreen:** Click **More info → Run anyway** if prompted.
 - **Android Play Protect:** Tap **Install anyway** if the warning appears.
 
@@ -169,7 +176,8 @@ Everything from syntax parsing to sequence diagrams, all auto-laid-out for you.
 
 ## Next steps
 
-- Check [CONTRIBUTING](CONTRIBUTING) for dev setup, coding conventions, and how to run tests.
+- Check [CONTRIBUTING](CONTRIBUTING) for dev setup, coding conventions, and how
+  to run tests.
 - Browse the [ROADMAP](ROADMAP) for what's shipping next.
 
 ---

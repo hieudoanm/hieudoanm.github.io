@@ -1,8 +1,7 @@
 # 8-Bit Games
 
-> Classic arcade and puzzle games with retro pixel-art style — mazes, snake,
-> and dino running. Play on your phone, tablet, laptop, or desktop, fully
-> offline.
+> Classic arcade and puzzle games with retro pixel-art style — mazes, snake, and
+> dino running. Play on your phone, tablet, laptop, or desktop, fully offline.
 
 ![Android 14+](https://img.shields.io/badge/Android-14%2B-green)
 ![Linux](https://img.shields.io/badge/Linux-22.04%2B-blue)
@@ -38,14 +37,14 @@ Pick the file that matches your platform.
 
 ### Downloads
 
-| No  | Platform | Distro | Architecture | Requirements | Download Link                              | Note              |
-| --- | -------- | ------ | ------------ | ------------ | ------------------------------------------ | ----------------- |
-| 1   | Android  |        | Universal    | 14.+         | [Download `.apk`][download-apk]            | Install directly  |
-| 2   | Android  |        | Universal    | 14.+         | [Download `.aab`][download-aab]¹           | For store upload  |
-| 3   | Linux    | Ubuntu | amd64        | 22.04.+      | [Download `.AppImage`][download-app-image] | Run — no install  |
-| 4   | Linux    | Debian | amd64        | 13.+         | [Download `.deb`][download-deb]            |                   |
-| 5   | macOS    |        | aarch64      | 13.+         | [Download `.dmg`][download-dmg]²           | Apple Silicon     |
-| 6   | Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi]            |                   |
+| No  | Platform | Distro | Architecture | Requirements | Download Link                              | Note             |
+| --- | -------- | ------ | ------------ | ------------ | ------------------------------------------ | ---------------- |
+| 1   | Android  |        | Universal    | 14.+         | [Download `.apk`][download-apk]            | Install directly |
+| 2   | Android  |        | Universal    | 14.+         | [Download `.aab`][download-aab]¹           | For store upload |
+| 3   | Linux    | Ubuntu | amd64        | 22.04.+      | [Download `.AppImage`][download-app-image] | Run — no install |
+| 4   | Linux    | Debian | amd64        | 13.+         | [Download `.deb`][download-deb]            |                  |
+| 5   | macOS    |        | aarch64      | 13.+         | [Download `.dmg`][download-dmg]²           | Apple Silicon    |
+| 6   | Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi]            |                  |
 
 [download-apk]:
   https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-8-bit-latest/app-universal-release.apk
@@ -68,10 +67,12 @@ Pick the file that matches your platform.
 
 ## First run
 
-- **macOS:** Right-click the `.dmg` and select *Open* to bypass Gatekeeper.
+- **macOS:** Right-click the `.dmg` and select _Open_ to bypass Gatekeeper.
 - **Linux AppImage:** `chmod +x 8-bit_amd64.AppImage && ./8-bit_amd64.AppImage`
-- **Windows SmartScreen:** Click *More info → Run anyway* if SmartScreen flags the installer.
-- **Android Play Protect:** If Play Protect blocks the install, tap *Install anyway*.
+- **Windows SmartScreen:** Click _More info → Run anyway_ if SmartScreen flags
+  the installer.
+- **Android Play Protect:** If Play Protect blocks the install, tap _Install
+  anyway_.
 
 ### Checksums
 
@@ -111,6 +112,7 @@ keyboard, zero internet.
 Retro 8-bit arcade and puzzle games with a tight pixel-art aesthetic.
 
 ### 🔲 Maze
+
 - Generate a random perfect maze on a 5×5 to 20×20 grid
 - Recursive-backtracker algorithm carves passages via DFS
 - BFS solver animates the shortest path from top-left to bottom-right
@@ -119,6 +121,7 @@ Retro 8-bit arcade and puzzle games with a tight pixel-art aesthetic.
 - Keyboard shortcuts: R (new maze), S (solve), Esc (close)
 
 ### 🐍 Snake
+
 - Classic snake on a 12×12 grid
 - Arrow keys steer; eating food grows the snake and adds a point
 - Hitting a wall or your own body ends the game
@@ -128,6 +131,7 @@ Retro 8-bit arcade and puzzle games with a tight pixel-art aesthetic.
 - Head and food are colour-coded on a responsive grid
 
 ### 🦕 DinoRun
+
 - Infinite runner on a 320×320 canvas
 - Dino auto-runs and gains speed over time (up to 10×)
 - Jump over cacti, rocks, and birds (Space / click / ArrowUp)
@@ -137,6 +141,7 @@ Retro 8-bit arcade and puzzle games with a tight pixel-art aesthetic.
 - Press R to restart after game over
 
 ### 🔄 Shared Features
+
 - "How to Play" instructions modal for each game with visual examples
 - Responsive layout (desktop and mobile)
 - Dark theme by default (dracula), light theme option (bumblebee)
@@ -146,6 +151,7 @@ Retro 8-bit arcade and puzzle games with a tight pixel-art aesthetic.
 - Bilingual game names (English + Japanese)
 
 ### 📱 Platform & UX
+
 - Static export for offline-first PWA support
 - Service worker caches all pages for offline play
 - Tauri desktop app build (bundling configured; signing not yet)
@@ -159,7 +165,8 @@ Retro 8-bit arcade and puzzle games with a tight pixel-art aesthetic.
 
 ## Next steps
 
-- **Want to contribute?** Check [CONTRIBUTING](CONTRIBUTING) for setup and dev commands.
+- **Want to contribute?** Check [CONTRIBUTING](CONTRIBUTING) for setup and dev
+  commands.
 - **Curious what's coming?** Read the [roadmap](ROADMAP).
 
 ---

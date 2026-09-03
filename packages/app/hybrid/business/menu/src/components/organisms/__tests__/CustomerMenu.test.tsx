@@ -56,7 +56,11 @@ beforeEach(() => {
   jest.clearAllMocks();
   (useSearchParams as jest.Mock).mockReturnValue(new URLSearchParams(''));
   currentStore = {
-    state: { restaurants: [restaurant], items: [foodItem, drinkItem], orders: [] },
+    state: {
+      restaurants: [restaurant],
+      items: [foodItem, drinkItem],
+      orders: [],
+    },
     setState: mockSetState,
     reset: jest.fn(),
   };
@@ -97,7 +101,9 @@ describe('CustomerMenu', () => {
     setupWithMenu();
     render(<CustomerMenu />);
 
-    const addPizzaBtns = screen.getAllByRole('button', { name: /increase quantity/i });
+    const addPizzaBtns = screen.getAllByRole('button', {
+      name: /increase quantity/i,
+    });
     await user.click(addPizzaBtns[0]);
 
     expect(screen.getByText('1')).toBeInTheDocument();
@@ -112,7 +118,9 @@ describe('CustomerMenu', () => {
     setupWithMenu();
     render(<CustomerMenu />);
 
-    const addPizzaBtns = screen.getAllByRole('button', { name: /increase quantity/i });
+    const addPizzaBtns = screen.getAllByRole('button', {
+      name: /increase quantity/i,
+    });
     await user.click(addPizzaBtns[0]);
     await user.click(addPizzaBtns[0]);
 
@@ -124,12 +132,16 @@ describe('CustomerMenu', () => {
     setupWithMenu();
     render(<CustomerMenu />);
 
-    const addPizzaBtns = screen.getAllByRole('button', { name: /increase quantity/i });
+    const addPizzaBtns = screen.getAllByRole('button', {
+      name: /increase quantity/i,
+    });
     await user.click(addPizzaBtns[0]);
     await user.click(addPizzaBtns[0]);
     expect(screen.getByText('2')).toBeInTheDocument();
 
-    await user.click(screen.getByRole('button', { name: /decrease quantity/i }));
+    await user.click(
+      screen.getByRole('button', { name: /decrease quantity/i })
+    );
     expect(screen.getByText('1')).toBeInTheDocument();
   });
 

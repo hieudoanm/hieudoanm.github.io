@@ -1,73 +1,37 @@
-import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { VersionTemplate } from '../VersionTemplate';
 
-jest.mock('next/link', () => {
-  const MockLink = ({
-    children,
-    href,
-    className,
-  }: {
-    children: React.ReactNode;
-    href: string;
-    className?: string;
-  }) => (
-    <a href={href} className={className}>
-      {children}
-    </a>
-  );
-  MockLink.displayName = 'MockLink';
-  return { __esModule: true, default: MockLink };
-});
-
 describe('VersionTemplate', () => {
-  it('renders version heading', () => {
-    render(<VersionTemplate version="2024.01.15.10.30.00" />);
-    expect(screen.getByText('Version')).toBeTruthy();
+  it('renders heading and copy button', () => {
+    render(<VersionTemplate version="2026.08.09.10.20.30" />);
+    expect(screen.getByText('Version')).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: /Copy version/i })
+    ).toBeInTheDocument();
+    expect(screen.getByText('Stable')).toBeInTheDocument();
   });
 
-  it('renders version segments', () => {
-    render(<VersionTemplate version="2024.01.15.10.30.00" />);
-    expect(screen.getByText('2024')).toBeTruthy();
-    expect(screen.getByText('01')).toBeTruthy();
-    expect(screen.getByText('15')).toBeTruthy();
-  });
-
-  it('renders Copy version button', () => {
-    render(<VersionTemplate version="2024.01.15" />);
-    expect(screen.getByText('Copy version')).toBeTruthy();
-  });
-
-  it('renders format hint', () => {
-    render(<VersionTemplate version="2024.01.15" />);
-    expect(screen.getByText('Format: YYYY.MM.DD.hh.mm.ss')).toBeTruthy();
-  });
-
-  it('renders Stable badge', () => {
-    render(<VersionTemplate version="2024.01.15" />);
-    expect(screen.getByText('Stable')).toBeTruthy();
-  });
-
-  it('renders Current deployment label', () => {
-    render(<VersionTemplate version="2024.01.15" />);
-    expect(screen.getByText('Current deployment')).toBeTruthy();
-  });
-
-  it('renders raw version when no segments', () => {
-    render(<VersionTemplate version="unknown" />);
-    expect(screen.getAllByText('unknown').length).toBeGreaterThan(0);
+  it('renders date segments for a timestamp version', () => {
+    render(<VersionTemplate version="2026.08.09.10.20.30" />);
+    expect(screen.getByText('2026')).toBeInTheDocument();
+    expect(screen.getByText('Year')).toBeInTheDocument();
+    expect(screen.getByText('Min')).toBeInTheDocument();
   });
 
   it('copies version to clipboard', async () => {
-    const user = userEvent.setup();
-    // jsdom doesn't support clipboard API — mock the async function directly
-    const mockClipboard = { writeText: jest.fn().mockResolvedValue(undefined) };
-    // Override navigator.clipboard via the global prototype
-    jest
-      .spyOn(global.navigator, 'clipboard', 'get')
-      .mockReturnValue(mockClipboard as unknown as Clipboard);
-    render(<VersionTemplate version="2024.01.15" />);
-    await user.click(screen.getByText('Copy version'));
-    expect(mockClipboard.writeText).toHaveBeenCalledWith('2024.01.15');
+    Object.assign(navigator, {
+      clipboard: { writeText: jest.fn().mockResolvedValue(undefined) },
+    });
+    render(<VersionTemplate version="2026.08.09.10.20.30" />);
+    fireEvent.click(screen.getByRole('button', { name: /Copy version/i }));
+    await screen.findByText('Copied');
+    expect(navigator.clipboard.writeText).toHaveBeenCalledWith(
+      '2026.08.09.10.20.30'
+    );
+  });
+
+  it('falls back to raw version text for non-timestamp versions', () => {
+    render(<VersionTemplate version="v0.0.1" />);
+    expect(screen.getByText('v0.0.1')).toBeInTheDocument();
   });
 });

@@ -10,7 +10,9 @@ jest.mock('next/navigation', () => ({
 describe('VersionPage', () => {
   it('renders version template', () => {
     render(<VersionPage />);
-    expect(screen.getByText('POS Version')).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { name: 'Version' })
+    ).toBeInTheDocument();
   });
 
   it('displays a timestamp format version', () => {

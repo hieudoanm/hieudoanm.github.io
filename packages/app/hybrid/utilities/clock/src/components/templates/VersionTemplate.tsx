@@ -1,33 +1,103 @@
-import { FC } from 'react';
+'use client';
 
-export const VersionTemplate: FC<{ version: string }> = ({ version }) => (
-  <div className="flex flex-1 flex-col items-center justify-center p-8">
-    <div className="max-w-md text-center">
-      <h1 className="text-base-content mb-4 font-mono text-2xl font-normal tracking-widest uppercase">
-        Version
-      </h1>
-      <div className="border-base-300 rounded-box bg-base-200 border p-4 text-left">
-        <div className="flex justify-between text-sm">
-          <span className="text-base-content/50">Package</span>
-          <span className="font-mono">@hieudoanm.github.io/clock</span>
-        </div>
-        <div className="border-base-300 my-2 border-t" />
-        <div className="flex justify-between text-sm">
-          <span className="text-base-content/50">Version</span>
-          <span className="font-mono">{version}</span>
-        </div>
-        <div className="border-base-300 my-2 border-t" />
-        <div className="flex justify-between text-sm">
-          <span className="text-base-content/50">Framework</span>
-          <span className="font-mono">Next.js 16</span>
-        </div>
-        <div className="border-base-300 my-2 border-t" />
-        <div className="flex justify-between text-sm">
-          <span className="text-base-content/50">UI</span>
-          <span className="font-mono">Tailwind CSS 4 + DaisyUI 5</span>
-        </div>
+import type { FC } from 'react';
+import { useState } from 'react';
+import { FiCheck, FiCopy } from 'react-icons/fi';
+
+export const VersionTemplate: FC<{ version: string }> = ({ version }) => {
+  const [copied, setCopied] = useState(false);
+
+  const copy = async () => {
+    await navigator.clipboard.writeText(version);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 1500);
+  };
+
+  const [year, month, day, hh, mm, ss] = version.split('.');
+  const hasSegments = year && month && day;
+
+  return (
+    <div className="mx-auto flex w-full max-w-2xl flex-col items-center gap-6 px-6 py-16 text-center">
+      <p className="text-base-content/50 text-xs tracking-[0.2em] uppercase">
+        Current deployment
+      </p>
+
+      <h1 className="mb-1">Version</h1>
+
+      <div className="border-base-content/10 bg-base-200 w-full max-w-lg rounded-2xl border p-6">
+        {hasSegments ? (
+          <div className="flex items-center justify-center gap-0">
+            <Segment value={year} label="Year" primary />
+            <Dot />
+            <Segment value={month} label="Month" />
+            <Dot />
+            <Segment value={day} label="Day" />
+            {hh && (
+              <>
+                <Dot />
+                <Segment value={hh} label="Hour" />
+              </>
+            )}
+            {mm && (
+              <>
+                <Dot />
+                <Segment value={mm} label="Min" />
+              </>
+            )}
+            {ss && (
+              <>
+                <Dot />
+                <Segment value={ss} label="Sec" />
+              </>
+            )}
+          </div>
+        ) : (
+          <p className="text-error font-mono text-xl font-bold break-all">
+            {version}
+          </p>
+        )}
+      </div>
+
+      <div className="flex flex-wrap justify-center gap-3">
+        <button
+          onClick={copy}
+          className={`btn btn-sm rounded-full ${copied ? 'btn-success' : 'btn-primary'}`}>
+          {copied ? <FiCheck /> : <FiCopy />}
+          {copied ? 'Copied' : 'Copy version'}
+        </button>
+        <button className="btn btn-neutral btn-sm rounded-full" onClick={copy}>
+          {version}
+        </button>
+      </div>
+
+      <div className="flex flex-wrap justify-center gap-3">
+        <span className="border-base-content/20 text-base-content/50 rounded-full border px-3 py-1 text-xs">
+          Format: YYYY.MM.DD.hh.mm.ss
+        </span>
+        <span className="badge badge-neutral rounded-full">Stable</span>
       </div>
     </div>
+  );
+};
+
+const Segment: FC<{ value: string; label: string; primary?: boolean }> = ({
+  value,
+  label,
+  primary,
+}) => (
+  <div className="flex flex-col items-center px-4">
+    <span
+      className={`font-mono text-2xl font-bold ${primary ? 'text-primary' : 'text-base-content'}`}>
+      {value}
+    </span>
+    <span className="text-base-content/50 mt-1 text-xs tracking-[0.2em] uppercase">
+      {label}
+    </span>
   </div>
 );
+
+const Dot: FC = () => (
+  <span className="text-base-content/50 font-mono text-xl">.</span>
+);
+
 VersionTemplate.displayName = 'VersionTemplate';

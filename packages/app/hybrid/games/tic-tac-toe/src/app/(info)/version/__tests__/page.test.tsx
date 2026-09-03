@@ -17,7 +17,7 @@ describe('VersionPage', () => {
     });
     const { rerender } = render(<VersionPage />);
     await screen.findByText('Year');
-    fireEvent.click(screen.getByTestId('copy-version'));
+    fireEvent.click(screen.getByRole('button', { name: 'Copy version' }));
     expect(writeText).toHaveBeenCalledWith(expect.stringMatching(/^\d{4}\./));
     expect(await screen.findByText('Copied')).toBeInTheDocument();
   });

@@ -15,7 +15,7 @@ const VersionPage: NextPage = () => {
     pad(now.getSeconds()),
   ].join('.');
 
-  return <VersionTemplate appName="Psychology" version={version} />;
+  return <VersionTemplate version={version} />;
 };
 
 export default VersionPage;

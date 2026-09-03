@@ -126,7 +126,12 @@ under `src/app/(games)/<slug>/page.tsx`.
 3. Keep tests isolated — each test manages its own state.
 4. Cover boundary conditions and error cases alongside happy paths (e.g.
    duplicate letters in Wordle evaluation, four-mistakes loss in Connections).
-5. Break tests into small per-file suites — one `*.test.ts` / `*.test.tsx` per unit (component, page, hook, util, provider) colocated in a `__tests__/` directory; never merge multiple units into one file. App pages are tested under `src/app/__tests__/` with a `*.test.tsx` matching each page, and pages in route groups (`(app)`, `(info)`) colocate `__tests__/page.test.tsx` in the same folder. Use `it.each` for data-driven tests.
+5. Break tests into small per-file suites — one `*.test.ts` / `*.test.tsx` per
+   unit (component, page, hook, util, provider) colocated in a `__tests__/`
+   directory; never merge multiple units into one file. App pages are tested
+   under `src/app/__tests__/` with a `*.test.tsx` matching each page, and pages
+   in route groups (`(app)`, `(info)`) colocate `__tests__/page.test.tsx` in the
+   same folder. Use `it.each` for data-driven tests.
 6. Maintain ≥80% coverage on statements, branches, functions, and lines —
    enforced by `coverageThreshold` in `jest.config.ts`; run
    `pnpm exec jest --coverageReporters=text` to view per-file coverage.

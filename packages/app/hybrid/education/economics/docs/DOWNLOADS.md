@@ -1,7 +1,7 @@
 # Economics
 
-> Game theory and economics simulations — pit yourself against AI strategies
-> in an iterated Prisoner's Dilemma. Runs everywhere: phone, tablet, laptop,
+> Game theory and economics simulations — pit yourself against AI strategies in
+> an iterated Prisoner's Dilemma. Runs everywhere: phone, tablet, laptop,
 > desktop.
 
 ![Linux](https://img.shields.io/badge/Linux-22.04%2B-blue)
@@ -28,7 +28,8 @@
 
 ## Latest release
 
-- **Version:** `app-hybrid-education-economics-latest` — updates ship continuously.
+- **Version:** `app-hybrid-education-economics-latest` — updates ship
+  continuously.
 - **What's new:** see the [roadmap](ROADMAP) and [CONTRIBUTING](CONTRIBUTING).
 
 ---
@@ -84,8 +85,8 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-A game theory playground in your pocket — face off against five AI strategies
-in an iterated Prisoner's Dilemma, track payoffs, and learn cooperation theory.
+A game theory playground in your pocket — face off against five AI strategies in
+an iterated Prisoner's Dilemma, track payoffs, and learn cooperation theory.
 Runs on any device.
 
 ---
@@ -95,6 +96,7 @@ Runs on any device.
 Think strategically and outsmart the bots.
 
 ### 🔨 Project Foundation
+
 - Monorepo scaffold following the lingo app conventions
   (`packages/app/hybrid/education/economics`)
 - Next.js static export validated against Tauri's `dist` expectations
@@ -105,11 +107,13 @@ Think strategically and outsmart the bots.
 - Unit test coverage thresholds enforced at 80% global
 
 ### 🏠 Home & Navigation
+
 - Card grid listing the tool with icon and description
 - Tool route rendered directly, opened from the home card grid
 - Theme toggle in template header; choice persisted in localStorage
 
 ### 🤝 Prisoner's Dilemma
+
 - 10-round iterated prisoner's dilemma against AI strategies
 - 5 bot strategies: Tit for Tat, Always Defect, Always Cooperate, Grim Trigger,
   Random
@@ -124,8 +128,8 @@ Think strategically and outsmart the bots.
 
 # First run
 
-- **macOS:** Right-click the `.dmg` → "Open" to bypass Gatekeeper, then drag
-  the app to your Applications folder.
+- **macOS:** Right-click the `.dmg` → "Open" to bypass Gatekeeper, then drag the
+  app to your Applications folder.
 - **Linux (AppImage):** `chmod +x economics_amd64.AppImage` then run it — no
   install needed.
 - **Windows:** SmartScreen may flag the `.msi` — click "More info" → "Run

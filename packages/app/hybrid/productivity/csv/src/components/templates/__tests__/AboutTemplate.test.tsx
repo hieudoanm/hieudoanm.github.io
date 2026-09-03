@@ -1,26 +1,39 @@
 import { render, screen } from '@testing-library/react';
 import { AboutTemplate } from '../AboutTemplate';
 
+const PROPS = {
+  name: 'Test App',
+  description: 'A test application',
+  version: 'v0.0.1',
+  items: [
+    { label: 'Framework', value: 'Next.js' },
+    { label: 'Shell', value: 'Tauri' },
+  ],
+};
+
 describe('AboutTemplate', () => {
-  it('renders name, description, items and version', () => {
-    render(
-      <AboutTemplate
-        name="CSV Importer"
-        description="Work with tabular data"
-        version="v1.0.0"
-        items={[
-          { label: 'Framework', value: 'Next.js' },
-          { label: 'Format', value: 'TSV' },
-        ]}
-      />
-    );
-    expect(screen.getByText('CSV Importer')).toBeInTheDocument();
-    expect(screen.getByText('Work with tabular data')).toBeInTheDocument();
+  it('renders the About label', () => {
+    render(<AboutTemplate {...PROPS} />);
+    expect(screen.getByText('About')).toBeInTheDocument();
+  });
+
+  it('renders the name and description', () => {
+    render(<AboutTemplate {...PROPS} />);
+    expect(screen.getByText('Test App')).toBeInTheDocument();
+    expect(screen.getByText('A test application')).toBeInTheDocument();
+  });
+
+  it('renders item labels and values', () => {
+    render(<AboutTemplate {...PROPS} />);
     expect(screen.getByText('Framework')).toBeInTheDocument();
     expect(screen.getByText('Next.js')).toBeInTheDocument();
-    expect(screen.getByText('Format')).toBeInTheDocument();
-    expect(screen.getByText('TSV')).toBeInTheDocument();
-    expect(screen.getByText('v1.0.0')).toBeInTheDocument();
+    expect(screen.getByText('Shell')).toBeInTheDocument();
+    expect(screen.getByText('Tauri')).toBeInTheDocument();
+  });
+
+  it('renders version and stable badge', () => {
+    render(<AboutTemplate {...PROPS} />);
+    expect(screen.getByText('v0.0.1')).toBeInTheDocument();
     expect(screen.getByText('Stable')).toBeInTheDocument();
   });
 });

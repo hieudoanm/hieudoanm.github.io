@@ -82,7 +82,9 @@ describe('SettingsPage', () => {
         expect.objectContaining({ theme: 'messaging-dark' })
       )
     );
-    expect(document.documentElement.getAttribute('data-theme')).toBe('messaging-dark');
+    expect(document.documentElement.getAttribute('data-theme')).toBe(
+      'messaging-dark'
+    );
   });
 
   it('toggles read receipts', async () => {

@@ -1,26 +1,37 @@
-import { render, screen, fireEvent } from '@testing-library/react';
-import { VersionTemplate } from '@/components/templates/VersionTemplate';
+import { fireEvent, render, screen } from '@testing-library/react';
+import { VersionTemplate } from '../VersionTemplate';
 
 describe('VersionTemplate', () => {
-  it('renders segmented version when complete', () => {
-    render(<VersionTemplate version="2026.08.06.12.00.00" />);
+  it('renders heading and copy button', () => {
+    render(<VersionTemplate version="2026.08.09.10.20.30" />);
+    expect(screen.getByText('Version')).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: /Copy version/i })
+    ).toBeInTheDocument();
+    expect(screen.getByText('Stable')).toBeInTheDocument();
+  });
+
+  it('renders date segments for a timestamp version', () => {
+    render(<VersionTemplate version="2026.08.09.10.20.30" />);
     expect(screen.getByText('2026')).toBeInTheDocument();
     expect(screen.getByText('Year')).toBeInTheDocument();
-    expect(screen.getByText('Sec')).toBeInTheDocument();
+    expect(screen.getByText('Min')).toBeInTheDocument();
   });
 
-  it('falls back to raw version for short strings', () => {
-    render(<VersionTemplate version="dev" />);
-    expect(screen.getAllByText('dev').length).toBeGreaterThan(0);
-  });
-
-  it('copies the version and shows feedback', async () => {
-    Object.defineProperty(navigator, 'clipboard', {
-      configurable: true,
-      value: { writeText: jest.fn().mockResolvedValue(undefined) },
+  it('copies version to clipboard', async () => {
+    Object.assign(navigator, {
+      clipboard: { writeText: jest.fn().mockResolvedValue(undefined) },
     });
-    render(<VersionTemplate version="2026.08.06" />);
-    fireEvent.click(screen.getByRole('button', { name: 'Copy version' }));
-    expect(await screen.findByText('Copied')).toBeInTheDocument();
+    render(<VersionTemplate version="2026.08.09.10.20.30" />);
+    fireEvent.click(screen.getByRole('button', { name: /Copy version/i }));
+    await screen.findByText('Copied');
+    expect(navigator.clipboard.writeText).toHaveBeenCalledWith(
+      '2026.08.09.10.20.30'
+    );
+  });
+
+  it('falls back to raw version text for non-timestamp versions', () => {
+    render(<VersionTemplate version="v0.0.1" />);
+    expect(screen.getByText('v0.0.1')).toBeInTheDocument();
   });
 });

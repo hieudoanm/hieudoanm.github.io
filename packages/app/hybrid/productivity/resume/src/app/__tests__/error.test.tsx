@@ -1,20 +1,21 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import ErrorBoundary from '../error';
+import ErrorPage from '../error';
 
-describe('ErrorBoundary', () => {
-  it('renders 500 and try again button', () => {
+describe('ErrorPage', () => {
+  it('renders 500 and the try again button', () => {
     const reset = jest.fn();
-    render(<ErrorBoundary error={new Error('test')} reset={reset} />);
+    render(<ErrorPage error={new Error('boom')} reset={reset} />);
     expect(screen.getByText('500')).toBeInTheDocument();
+    expect(screen.getByText('Something went wrong.')).toBeInTheDocument();
     expect(
-      screen.getByRole('button', { name: /try again/i }),
+      screen.getByRole('button', { name: 'Try again' })
     ).toBeInTheDocument();
   });
 
   it('calls reset when try again is clicked', () => {
     const reset = jest.fn();
-    render(<ErrorBoundary error={new Error('test')} reset={reset} />);
-    fireEvent.click(screen.getByRole('button', { name: /try again/i }));
+    render(<ErrorPage error={new Error('boom')} reset={reset} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Try again' }));
     expect(reset).toHaveBeenCalled();
   });
 });

@@ -2,13 +2,19 @@ import { render, screen } from '@testing-library/react';
 
 jest.mock('@/styles/globals.css', () => ({}));
 jest.mock('@/providers/NativeProvider', () => ({
-  NativeProvider: ({ children }: { children: React.ReactNode }) => <div>{children}</div>,
+  NativeProvider: ({ children }: { children: React.ReactNode }) => (
+    <div>{children}</div>
+  ),
 }));
 jest.mock('@/providers/QueryProvider', () => ({
-  QueryProvider: ({ children }: { children: React.ReactNode }) => <div>{children}</div>,
+  QueryProvider: ({ children }: { children: React.ReactNode }) => (
+    <div>{children}</div>
+  ),
 }));
 jest.mock('@/providers/SWProvider', () => ({
-  SWProvider: ({ children }: { children: React.ReactNode }) => <div>{children}</div>,
+  SWProvider: ({ children }: { children: React.ReactNode }) => (
+    <div>{children}</div>
+  ),
 }));
 
 import RootLayout, { metadata, viewport } from '../layout';
@@ -18,7 +24,7 @@ describe('RootLayout', () => {
     render(
       <RootLayout>
         <div>child</div>
-      </RootLayout>,
+      </RootLayout>
     );
     expect(screen.getByText('child')).toBeInTheDocument();
   });
@@ -27,9 +33,12 @@ describe('RootLayout', () => {
     render(
       <RootLayout>
         <div />
-      </RootLayout>,
+      </RootLayout>
     );
-    expect(document.documentElement).toHaveAttribute('data-theme', 'music-light');
+    expect(document.documentElement).toHaveAttribute(
+      'data-theme',
+      'music-light'
+    );
   });
 });
 

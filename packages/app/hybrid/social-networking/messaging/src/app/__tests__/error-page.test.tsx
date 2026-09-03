@@ -2,18 +2,20 @@ import { render, screen } from '@testing-library/react';
 import ErrorPage from '@/app/error';
 
 describe('ErrorPage', () => {
-  it('shows the error message and retries', () => {
+  it('renders 500 and the try again button', () => {
     const reset = jest.fn();
     render(<ErrorPage error={new Error('boom')} reset={reset} />);
-    expect(screen.getByText('boom')).toBeInTheDocument();
-    screen.getByText('Try again').click();
-    expect(reset).toHaveBeenCalled();
+    expect(screen.getByText('500')).toBeInTheDocument();
+    expect(screen.getByText('Something went wrong.')).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: 'Try again' })
+    ).toBeInTheDocument();
   });
 
-  it('falls back to a generic message', () => {
-    render(<ErrorPage error={new Error('')} reset={jest.fn()} />);
-    expect(
-      screen.getByText(/An unexpected error occurred/)
-    ).toBeInTheDocument();
+  it('calls reset when try again is clicked', () => {
+    const reset = jest.fn();
+    render(<ErrorPage error={new Error('boom')} reset={reset} />);
+    screen.getByRole('button', { name: 'Try again' }).click();
+    expect(reset).toHaveBeenCalled();
   });
 });

@@ -4,7 +4,10 @@ import DownloadsPage from '../page';
 describe('DownloadsPage', () => {
   it('renders the downloads heading', () => {
     render(<DownloadsPage />);
-    expect(screen.getByRole('heading', { name: 'Downloads' })).toBeInTheDocument();
+    expect(screen.getByText('Downloads')).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { name: 'Installers' })
+    ).toBeInTheDocument();
   });
 
   it('shows all platforms', () => {
@@ -18,8 +21,10 @@ describe('DownloadsPage', () => {
 
   it('has download links with menu_ artifact names', () => {
     render(<DownloadsPage />);
-    const dmg = screen.getByRole('link', { name: '.dmg' });
-    expect(dmg.getAttribute('href')).toContain('app-hybrid-business-menu-latest');
+    const dmg = screen.getByRole('link', { name: 'Download .dmg' });
+    expect(dmg.getAttribute('href')).toContain(
+      'app-hybrid-business-menu-latest'
+    );
     expect(dmg.getAttribute('href')).toContain('menu_aarch64.dmg');
   });
 });

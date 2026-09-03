@@ -3,7 +3,6 @@ import { NextPage } from 'next';
 
 const AboutPage: NextPage = () => (
   <AboutTemplate
-    appName="Lingo"
     name="Lingo"
     description="Learn languages — flashcards, dictionary and sign language"
     version="v0.0.1"

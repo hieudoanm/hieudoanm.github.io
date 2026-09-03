@@ -52,7 +52,9 @@ describe('Header', () => {
 
   it('applies and persists the default theme', () => {
     render(<Header />);
-    expect(document.documentElement.getAttribute('data-theme')).toBe('8-bit-dark');
+    expect(document.documentElement.getAttribute('data-theme')).toBe(
+      '8-bit-dark'
+    );
     expect(localStorage.getItem('8-bit-theme')).toBe('8-bit-dark');
   });
 

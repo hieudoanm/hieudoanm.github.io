@@ -1,32 +1,37 @@
-import { render, screen, fireEvent, act } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { VersionTemplate } from '../VersionTemplate';
 
 describe('VersionTemplate', () => {
-  it('renders segmented version', () => {
-    render(<VersionTemplate version="2026.07.31.12.30.00" />);
+  it('renders heading and copy button', () => {
+    render(<VersionTemplate version="2026.08.09.10.20.30" />);
+    expect(screen.getByText('Version')).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: /Copy version/i })
+    ).toBeInTheDocument();
+    expect(screen.getByText('Stable')).toBeInTheDocument();
+  });
+
+  it('renders date segments for a timestamp version', () => {
+    render(<VersionTemplate version="2026.08.09.10.20.30" />);
     expect(screen.getByText('2026')).toBeInTheDocument();
-    expect(screen.getByText('07')).toBeInTheDocument();
-    expect(screen.getByText('31')).toBeInTheDocument();
+    expect(screen.getByText('Year')).toBeInTheDocument();
+    expect(screen.getByText('Min')).toBeInTheDocument();
   });
 
-  it('renders plain version when not segmented', () => {
-    render(<VersionTemplate version="unknown" />);
-    expect(screen.getAllByText('unknown').length).toBeGreaterThan(0);
-  });
-
-  it('copies version to clipboard and resets the label', async () => {
-    jest.useFakeTimers();
-    const writeText = jest.fn().mockResolvedValue(undefined);
+  it('copies version to clipboard', async () => {
     Object.assign(navigator, {
-      clipboard: { writeText },
+      clipboard: { writeText: jest.fn().mockResolvedValue(undefined) },
     });
-    render(<VersionTemplate version="2026.07.31" />);
-    fireEvent.click(screen.getByText('Copy version'));
-    await act(async () => {});
-    expect(writeText).toHaveBeenCalledWith('2026.07.31');
-    expect(screen.getByText('Copied')).toBeInTheDocument();
-    act(() => jest.advanceTimersByTime(1500));
-    expect(screen.getByText('Copy version')).toBeInTheDocument();
-    jest.useRealTimers();
+    render(<VersionTemplate version="2026.08.09.10.20.30" />);
+    fireEvent.click(screen.getByRole('button', { name: /Copy version/i }));
+    await screen.findByText('Copied');
+    expect(navigator.clipboard.writeText).toHaveBeenCalledWith(
+      '2026.08.09.10.20.30'
+    );
+  });
+
+  it('falls back to raw version text for non-timestamp versions', () => {
+    render(<VersionTemplate version="v0.0.1" />);
+    expect(screen.getByText('v0.0.1')).toBeInTheDocument();
   });
 });

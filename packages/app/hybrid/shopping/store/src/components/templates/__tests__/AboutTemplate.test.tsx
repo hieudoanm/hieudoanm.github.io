@@ -1,47 +1,39 @@
 import { render, screen } from '@testing-library/react';
 import { AboutTemplate } from '../AboutTemplate';
 
+const PROPS = {
+  name: 'Test App',
+  description: 'A test application',
+  version: 'v0.0.1',
+  items: [
+    { label: 'Framework', value: 'Next.js' },
+    { label: 'Shell', value: 'Tauri' },
+  ],
+};
+
 describe('AboutTemplate', () => {
-  const defaultProps = {
-    name: 'Store',
-    description: 'An app store for all my projects',
-    version: '2024.01.15',
-    items: [
-      { label: 'Apps', value: '43' },
-      { label: 'Platform', value: 'Web' },
-    ],
-  };
-
-  it('renders name', () => {
-    render(<AboutTemplate {...defaultProps} />);
-    expect(screen.getByText('Store')).toBeTruthy();
+  it('renders the About label', () => {
+    render(<AboutTemplate {...PROPS} />);
+    expect(screen.getByText('About')).toBeInTheDocument();
   });
 
-  it('renders description', () => {
-    render(<AboutTemplate {...defaultProps} />);
-    expect(screen.getByText('An app store for all my projects')).toBeTruthy();
+  it('renders the name and description', () => {
+    render(<AboutTemplate {...PROPS} />);
+    expect(screen.getByText('Test App')).toBeInTheDocument();
+    expect(screen.getByText('A test application')).toBeInTheDocument();
   });
 
-  it('renders version', () => {
-    render(<AboutTemplate {...defaultProps} />);
-    expect(screen.getByText('2024.01.15')).toBeTruthy();
+  it('renders item labels and values', () => {
+    render(<AboutTemplate {...PROPS} />);
+    expect(screen.getByText('Framework')).toBeInTheDocument();
+    expect(screen.getByText('Next.js')).toBeInTheDocument();
+    expect(screen.getByText('Shell')).toBeInTheDocument();
+    expect(screen.getByText('Tauri')).toBeInTheDocument();
   });
 
-  it('renders info items', () => {
-    render(<AboutTemplate {...defaultProps} />);
-    expect(screen.getByText('Apps')).toBeTruthy();
-    expect(screen.getByText('43')).toBeTruthy();
-    expect(screen.getByText('Platform')).toBeTruthy();
-    expect(screen.getByText('Web')).toBeTruthy();
-  });
-
-  it('renders About heading', () => {
-    render(<AboutTemplate {...defaultProps} />);
-    expect(screen.getByText('About')).toBeTruthy();
-  });
-
-  it('renders Stable badge', () => {
-    render(<AboutTemplate {...defaultProps} />);
-    expect(screen.getByText('Stable')).toBeTruthy();
+  it('renders version and stable badge', () => {
+    render(<AboutTemplate {...PROPS} />);
+    expect(screen.getByText('v0.0.1')).toBeInTheDocument();
+    expect(screen.getByText('Stable')).toBeInTheDocument();
   });
 });
