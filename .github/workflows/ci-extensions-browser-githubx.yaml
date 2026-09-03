@@ -29,4 +29,4 @@ jobs:
       filter: '@hieudoanm.github.io/githubx'
       releaseName: extensions-browser-githubx-latest
       releaseTitle: Extensions - Browser - GitHubX (latest)
-      artifactPrefix: githubx
+      artifactPrefix: extensions-browser-githubx

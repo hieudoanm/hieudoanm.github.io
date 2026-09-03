@@ -29,4 +29,4 @@ jobs:
       filter: '@hieudoanm.github.io/instax'
       releaseName: extensions-browser-instax-latest
       releaseTitle: Extensions - Browser - InstaX (latest)
-      artifactPrefix: instax
+      artifactPrefix: extensions-browser-instax

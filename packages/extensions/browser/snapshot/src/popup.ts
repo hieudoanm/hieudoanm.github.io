@@ -1,4 +1,9 @@
-const captureBtn = document.getElementById('captureBtn') as HTMLButtonElement;
+const captureViewBtn = document.getElementById(
+  'captureViewBtn'
+) as HTMLButtonElement;
+const captureFullBtn = document.getElementById(
+  'captureFullBtn'
+) as HTMLButtonElement;
 const downloadBtn = document.getElementById('downloadBtn') as HTMLButtonElement;
 const copyBtn = document.getElementById('copyBtn') as HTMLButtonElement;
 const previewWrap = document.getElementById('previewWrap');
@@ -15,72 +20,77 @@ const tabUrlEl = document.getElementById('tabUrl');
 
 let lastDataUrl: string | null = null;
 let lastFilename: string | null = null;
+let isBusy = false;
 
 chrome.tabs.query({ active: true, currentWindow: true }, ([tab]) => {
   if (!tabUrlEl) return;
   if (tab?.url) {
     try {
       const url = new URL(tab.url);
-      tabUrlEl.innerHTML = `<span>${url.hostname}</span>${url.pathname === '/' ? '' : url.pathname}`;
+      tabUrlEl.textContent = `${url.hostname}${url.pathname === '/' ? '' : url.pathname}`;
     } catch {
-      tabUrlEl.innerHTML = `<span>${tab.url}</span>`;
+      tabUrlEl.textContent = tab.url;
     }
   }
 });
 
-function setStatus(msg: string, type = '') {
+function setStatus(msg: string, type = ''): void {
   if (!statusEl) return;
   statusEl.textContent = msg;
   statusEl.className = 'status' + (type ? ` ${type}` : '');
 }
 
-function bytesToSize(base64: string) {
+function bytesToSize(base64: string): string {
   const bytes = Math.round((base64.length * 3) / 4);
   if (bytes < 1024) return `${bytes} B`;
   if (bytes < 1048576) return `${(bytes / 1024).toFixed(1)} KB`;
   return `${(bytes / 1048576).toFixed(1)} MB`;
 }
 
-function getTimestamp() {
+function getTimestamp(): string {
   const now = new Date();
   return now.toISOString().replace(/[:.]/g, '-').replace('T', '_').slice(0, 19);
 }
 
-async function captureTab() {
-  if (!formatSelect) return;
+function setBusy(busy: boolean): void {
+  isBusy = busy;
+  captureViewBtn.disabled = busy;
+  captureFullBtn.disabled = busy;
+}
+
+async function capture(mode: 'view' | 'full'): Promise<void> {
+  if (isBusy) return;
   const format = formatSelect.value;
   const quality = format === 'png' ? undefined : 92;
 
-  captureBtn?.classList.add('loading');
-  setStatus('Capturing...');
+  setBusy(true);
+  setStatus(mode === 'full' ? 'Capturing full page...' : 'Capturing view...');
   previewWrap?.classList.remove('visible');
   lastDataUrl = null;
 
   try {
-    const [tab] = await chrome.tabs.query({
-      active: true,
-      currentWindow: true,
-    });
-    if (!tab) throw new Error('No active tab found.');
-
-    const dataUrl = await chrome.runtime.sendMessage({
-      action: 'captureTab',
+    const response = await chrome.runtime.sendMessage({
+      action: mode === 'full' ? 'captureFullPage' : 'captureView',
       format,
       quality,
     });
 
-    if (!dataUrl || dataUrl.startsWith('ERROR:')) {
-      throw new Error(dataUrl?.replace('ERROR:', '') || 'Capture failed.');
+    if (!response?.dataUrl) {
+      throw new Error(response?.error || 'Capture failed.');
     }
 
+    const dataUrl = response.dataUrl as string;
     lastDataUrl = dataUrl;
-    lastFilename = `snapshot_${getTimestamp()}.${format}`;
+    lastFilename = `snapshot_${mode}_${getTimestamp()}.${format}`;
 
-    previewImg!.src = dataUrl;
+    previewImg.src = dataUrl;
     previewSize!.textContent = bytesToSize(dataUrl);
-    previewWrap!.classList.add('visible');
+    previewWrap?.classList.add('visible');
 
-    setStatus('Captured successfully', 'ok');
+    setStatus(
+      mode === 'full' ? 'Full page captured' : 'Captured successfully',
+      'ok'
+    );
 
     if (autoDownload?.checked) {
       triggerDownload(dataUrl, lastFilename);
@@ -88,11 +98,11 @@ async function captureTab() {
   } catch (err: unknown) {
     setStatus((err as Error).message || 'Capture failed.', 'err');
   } finally {
-    captureBtn.classList.remove('loading');
+    setBusy(false);
   }
 }
 
-function triggerDownload(dataUrl: string, filename: string) {
+function triggerDownload(dataUrl: string, filename: string): void {
   chrome.downloads.download({ url: dataUrl, filename, saveAs: false }, () => {
     if (chrome.runtime.lastError) {
       setStatus('Download error: ' + chrome.runtime.lastError.message, 'err');
@@ -101,6 +111,14 @@ function triggerDownload(dataUrl: string, filename: string) {
     }
   });
 }
+
+captureViewBtn.addEventListener('click', () => {
+  void capture('view');
+});
+
+captureFullBtn.addEventListener('click', () => {
+  void capture('full');
+});
 
 downloadBtn.addEventListener('click', () => {
   if (!lastDataUrl) return;
@@ -118,46 +136,3 @@ copyBtn.addEventListener('click', async () => {
     setStatus('Copy not supported in this context.', 'err');
   }
 });
-
-captureBtn.addEventListener('click', captureTab);
-
-// YouTube Transcript
-document.getElementById('getTranscript')?.addEventListener('click', () => {
-  chrome.tabs.query({ active: true, currentWindow: true }, ([tab]) => {
-    if (!tab?.id) return;
-    const transcriptEl = document.getElementById('transcript');
-    if (!transcriptEl) return;
-    chrome.tabs.sendMessage(
-      tab.id,
-      { action: 'GET_TRANSCRIPT' },
-      (response) => {
-        if (response) {
-          transcriptEl.textContent = response as string;
-          transcriptEl.style.display = 'block';
-        } else {
-          transcriptEl.textContent = 'No transcript found.';
-          transcriptEl.style.display = 'block';
-        }
-      }
-    );
-  });
-});
-
-// Shopify detection
-const shopifyStatusEl = document.getElementById('shopifyStatus');
-if (shopifyStatusEl) {
-  chrome.tabs.query({ active: true, currentWindow: true }, ([tab]) => {
-    if (!tab?.id) return;
-    chrome.tabs.sendMessage(tab.id, 'CHECK_SHOPIFY', (response) => {
-      if (response?.isShopify) {
-        shopifyStatusEl.textContent = response.isShopifyPlus
-          ? '🚀 Plus detected'
-          : '✅ Detected';
-        shopifyStatusEl.style.color = '#2ea44f';
-      } else if (response && !response.isShopify) {
-        shopifyStatusEl.textContent = '❌ Not detected';
-        shopifyStatusEl.style.color = 'var(--muted)';
-      }
-    });
-  });
-}

@@ -35,7 +35,7 @@
 [instagram-download]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/instagram/download
 [shopify-detect]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/shopify/detect
 [tab-new]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/tab/new
-[tab-snapshot]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/snapshot
+[tab-snapshot]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/snapshot
 [youtube-transcript]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/youtube/transcript
 
 ## Browsers

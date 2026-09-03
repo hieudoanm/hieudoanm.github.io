@@ -1,7 +1,7 @@
 {
   "name": "hieudoanm Extension",
   "version": "1.0.0",
-  "description": "Block ads, block sites, track Claude usage, detect Shopify stores, hide chess.com ratings, capture tab snapshots, and redirect new tab.",
+  "description": "Block ads, track Claude usage, detect Shopify stores, hide chess.com ratings, and redirect new tab.",
   "author": "Hieu Doan",
   "icons": {
     "128": "icons/128x128.png"
@@ -16,7 +16,6 @@
   "permissions": [
     "activeTab",
     "tabs",
-    "downloads",
     "storage",
     "declarativeNetRequest",
     "declarativeNetRequestFeedback",
@@ -29,7 +28,6 @@
     "service_worker": "background.js"
   },
   "action": {
-    "default_popup": "popup.html",
     "default_title": "hieudoanm Extension",
     "default_icon": {
       "128": "icons/128x128.png"

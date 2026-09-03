@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SnapShot</title>
+  <title>Snapshot</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Bebas+Neue&display=swap');
 
@@ -13,8 +13,8 @@
       --bg: #0a0a0b;
       --surface: #111114;
       --border: #222228;
-      --accent: #e8ff47;
-      --accent2: #47ffe8;
+      --accent: #47ffe8;
+      --accent2: #356bff;
       --text: #e8e8ec;
       --muted: #5a5a68;
       --danger: #ff4757;
@@ -41,15 +41,11 @@
       position: absolute;
       top: -30px; right: -30px;
       width: 100px; height: 100px;
-      background: radial-gradient(circle, rgba(232,255,71,0.12) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(71,255,232,0.12) 0%, transparent 70%);
       pointer-events: none;
     }
 
-    .brand {
-      display: flex;
-      align-items: baseline;
-      gap: 8px;
-    }
+    .brand { display: flex; align-items: baseline; gap: 8px; }
     .brand-name {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 28px;
@@ -72,9 +68,7 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
-    .tab-info span {
-      color: var(--accent2);
-    }
+    .tab-info span { color: var(--accent2); }
 
     .body {
       padding: 16px 20px 20px;
@@ -83,11 +77,37 @@
       gap: 12px;
     }
 
-    /* Options */
+    .mode-flex { display: flex; gap: 8px; }
+    .mode-btn {
+      flex: 1;
+      padding: 16px 12px;
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-family: 'DM Mono', monospace;
+      cursor: pointer;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      transition: border-color 0.15s, transform 0.15s;
+    }
+    .mode-btn:hover { border-color: var(--accent); transform: translateY(-1px); }
+    .mode-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+    .mode-title { font-family: 'Bebas Neue', sans-serif; font-size: 16px; letter-spacing: 0.08em; color: var(--accent); }
+    .mode-desc { font-size: 9px; color: var(--muted); line-height: 1.4; }
+
     .options-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 8px;
+    }
+    .option-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 10px 12px;
     }
     .option-label {
       font-size: 9px;
@@ -96,26 +116,9 @@
       text-transform: uppercase;
       margin-bottom: 5px;
     }
-    .option-box {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 10px 12px;
-    }
-    .toggle-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .toggle-label {
-      font-size: 11px;
-      color: var(--text);
-    }
-    .toggle {
-      position: relative;
-      width: 32px;
-      height: 18px;
-    }
+    .toggle-row { display: flex; align-items: center; justify-content: space-between; }
+    .toggle-label { font-size: 11px; color: var(--text); }
+    .toggle { position: relative; width: 32px; height: 18px; }
     .toggle input { opacity: 0; width: 0; height: 0; }
     .toggle-track {
       position: absolute;
@@ -137,9 +140,7 @@
     }
     .toggle input:checked ~ .toggle-thumb { transform: translateX(14px); }
 
-    .select-wrap {
-      position: relative;
-    }
+    .select-wrap { position: relative; }
     .select-wrap select {
       width: 100%;
       background: transparent;
@@ -163,55 +164,9 @@
     }
     .select-wrap select option { background: #1a1a20; }
 
-    /* Capture button */
-    .btn-capture {
-      position: relative;
-      width: 100%;
-      padding: 14px;
-      background: var(--accent);
-      color: #0a0a0b;
-      border: none;
-      border-radius: var(--radius);
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 18px;
-      letter-spacing: 0.12em;
-      cursor: pointer;
-      overflow: hidden;
-      transition: transform 0.15s, box-shadow 0.15s;
-    }
-    .btn-capture:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 6px 24px rgba(232,255,71,0.25);
-    }
-    .btn-capture:active { transform: translateY(0); }
-    .btn-capture.loading { pointer-events: none; }
-    .btn-capture .btn-text { transition: opacity 0.2s; }
-    .btn-capture.loading .btn-text { opacity: 0; }
-    .btn-capture .spinner {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      transition: opacity 0.2s;
-    }
-    .btn-capture.loading .spinner { opacity: 1; }
-    .spinner-ring {
-      width: 18px; height: 18px;
-      border: 2px solid rgba(0,0,0,0.2);
-      border-top-color: #0a0a0b;
-      border-radius: 50%;
-      animation: spin 0.7s linear infinite;
-    }
-    @keyframes spin { to { transform: rotate(360deg); } }
+    .divider { height: 1px; background: var(--border); }
 
-    /* Preview */
-    .preview-wrap {
-      display: none;
-      flex-direction: column;
-      gap: 8px;
-    }
+    .preview-wrap { display: none; flex-direction: column; gap: 8px; }
     .preview-wrap.visible { display: flex; }
     .preview-label {
       font-size: 9px;
@@ -229,8 +184,8 @@
     .preview-img-box img {
       width: 100%;
       display: block;
-      max-height: 140px;
-      object-fit: cover;
+      max-height: 160px;
+      object-fit: contain;
     }
     .preview-overlay {
       position: absolute;
@@ -262,7 +217,6 @@
     }
     .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
 
-    /* Status */
     .status {
       font-size: 10px;
       text-align: center;
@@ -273,18 +227,13 @@
     }
     .status.ok { color: var(--accent); }
     .status.err { color: var(--danger); }
-
-    .divider {
-      height: 1px;
-      background: var(--border);
-    }
   </style>
 </head>
 <body>
 
 <div class="header">
   <div class="brand">
-    <span class="brand-name">SnapShot</span>
+    <span class="brand-name">Snapshot</span>
     <span class="brand-tag">Tab Capture</span>
   </div>
   <div class="tab-info" id="tabUrl">
@@ -293,6 +242,17 @@
 </div>
 
 <div class="body">
+
+  <div class="mode-flex">
+    <button class="mode-btn" id="captureViewBtn">
+      <span class="mode-title">Current View</span>
+      <span class="mode-desc">Capture exactly what is on screen</span>
+    </button>
+    <button class="mode-btn" id="captureFullBtn">
+      <span class="mode-title">Full Page</span>
+      <span class="mode-desc">Scroll &amp; stitch the whole page</span>
+    </button>
+  </div>
 
   <div class="options-grid">
     <div class="option-box">
@@ -318,13 +278,9 @@
     </div>
   </div>
 
-  <button class="btn-capture" id="captureBtn">
-    <span class="btn-text">Capture Tab</span>
-    <div class="spinner"><div class="spinner-ring"></div></div>
-  </button>
+  <div class="divider"></div>
 
   <div class="preview-wrap" id="previewWrap">
-    <div class="divider"></div>
     <div class="preview-label">Preview</div>
     <div class="preview-img-box">
       <img id="previewImg" src="" alt="Screenshot preview" />
@@ -339,27 +295,6 @@
   </div>
 
   <div class="status" id="status"></div>
-
-  <div class="divider"></div>
-  <div style="padding: 8px 20px 12px; display:flex; align-items:center; gap:8px; font-size:11px; color:var(--muted);">
-    <span>Shopify:</span>
-    <span id="shopifyStatus" style="color:var(--muted);">checking…</span>
-  </div>
-
-  <div class="divider"></div>
-  <div style="padding: 12px 20px;">
-    <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
-      <span style="font-size:9px; color:var(--muted); letter-spacing:0.15em; text-transform:uppercase;">YouTube Transcript</span>
-    </div>
-    <button id="getTranscript" class="btn-secondary" style="width:100%; margin-bottom:8px;">Get Transcript</button>
-    <pre id="transcript" style="font-size:10px; color:var(--muted); white-space:pre-wrap; word-wrap:break-word; max-height:120px; overflow-y:auto; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:8px; display:none;"></pre>
-  </div>
-
-  <div class="divider"></div>
-  <div style="padding:8px 20px 12px; display:flex; align-items:center; gap:8px; font-size:11px; color:var(--muted);">
-    <span>📷 Instagram:</span>
-    <span style="color:var(--muted);">Hover images to download</span>
-  </div>
 
 </div>
 
