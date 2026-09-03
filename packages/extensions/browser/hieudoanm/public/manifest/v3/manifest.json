@@ -1,7 +1,7 @@
 {
   "name": "hieudoanm Extension",
   "version": "1.0.0",
-  "description": "Block ads, block sites, track Claude usage, detect Shopify stores, hide chess.com ratings, capture tab snapshots, redirect new tab, and enhance GitHub browsing.",
+  "description": "Block ads, block sites, track Claude usage, detect Shopify stores, hide chess.com ratings, capture tab snapshots, and redirect new tab.",
   "author": "Hieu Doan",
   "icons": {
     "128": "icons/128x128.png"
@@ -56,14 +56,6 @@
     },
     {
       "matches": [
-        "*://github.com/*"
-      ],
-      "js": [
-        "github.js"
-      ]
-    },
-    {
-      "matches": [
         "*://*.chess.com/*"
       ],
       "js": [
@@ -85,15 +77,6 @@
       "js": [
         "claude.js"
       ]
-    },
-    {
-      "matches": [
-        "https://www.instagram.com/*"
-      ],
-      "js": [
-        "instagram.js"
-      ],
-      "run_at": "document_idle"
     },
     {
       "matches": [

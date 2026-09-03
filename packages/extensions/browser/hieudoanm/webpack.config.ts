@@ -10,11 +10,9 @@ const baseConfig = {
   entry: {
     background: './src/background/index.ts',
     content: './src/content/index.ts',
-    github: './src/content/github-link-opener.ts',
     chess: './src/content/chess-focus.ts',
     shopify: './src/content/shopify-detect.ts',
     claude: './src/content/claude-limit.ts',
-    instagram: './src/content/instagram-download.ts',
     youtube: './src/content/youtube-transcript.ts',
     popup: './src/popup/index.ts',
   },
