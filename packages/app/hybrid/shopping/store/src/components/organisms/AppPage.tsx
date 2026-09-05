@@ -12,7 +12,9 @@ const ALL_APPS = parseDownloads(
   downloads as Parameters<typeof parseDownloads>[0]
 );
 
-export const AppPage: FC = () => {
+export const AppPage: FC<{ screenshots?: string[] }> = ({
+  screenshots = [],
+}) => {
   const params = useParams<{ slug: string }>();
   const app = ALL_APPS.find((a) => a.slug === params.slug);
   const { addRecent } = useRecentlyViewed();
@@ -32,7 +34,7 @@ export const AppPage: FC = () => {
     );
   }
 
-  return <AppInfo app={app} allApps={ALL_APPS} />;
+  return <AppInfo app={app} allApps={ALL_APPS} screenshots={screenshots} />;
 };
 
 AppPage.displayName = 'AppPage';

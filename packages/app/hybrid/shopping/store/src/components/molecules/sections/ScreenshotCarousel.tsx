@@ -69,7 +69,7 @@ export const ScreenshotCarousel: FC<ScreenshotCarouselProps> = ({
           <img
             src={screenshots[index]}
             alt={`${label} screenshot ${index + 1}`}
-            className="max-h-80 object-contain"
+            className="aspect-video w-full object-contain"
           />
         </button>
         {screenshots.length > 1 && (
@@ -98,7 +98,7 @@ export const ScreenshotCarousel: FC<ScreenshotCarouselProps> = ({
               <img
                 src={src}
                 alt={`${label} thumbnail ${i + 1}`}
-                className="h-10 w-16 object-cover"
+                className="aspect-video w-16 object-cover"
               />
             </button>
           ))}

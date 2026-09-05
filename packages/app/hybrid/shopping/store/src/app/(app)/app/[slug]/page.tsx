@@ -1,7 +1,18 @@
 import type { Metadata } from 'next';
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
 import { parseDownloads } from '@/lib/downloads';
 import downloads from '@/data/downloads.json';
 import { AppPage } from '@/components/organisms/AppPage';
+
+const SCREENSHOT_PAGES = ['home', 'about', 'downloads', 'version'] as const;
+
+const getScreenshots = (slug: string): string[] =>
+  SCREENSHOT_PAGES.filter((page) =>
+    existsSync(
+      join(process.cwd(), 'public', 'screenshots', slug, `${page}.png`)
+    )
+  ).map((page) => `/screenshots/${slug}/${page}.png`);
 
 const ALL_APPS = parseDownloads(
   downloads as Parameters<typeof parseDownloads>[0]
@@ -30,6 +41,9 @@ export const generateMetadata = async ({
   };
 };
 
-const Page = () => <AppPage />;
+const Page = async ({ params }: PageProps) => {
+  const { slug } = await params;
+  return <AppPage screenshots={getScreenshots(slug)} />;
+};
 
 export default Page;

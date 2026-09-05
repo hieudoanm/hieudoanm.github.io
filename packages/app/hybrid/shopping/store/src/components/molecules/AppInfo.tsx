@@ -14,16 +14,20 @@ import { BackLink } from './sections/BackLink';
 interface AppInfoProps {
   app: AppData;
   allApps?: AppData[];
+  screenshots?: string[];
 }
 
-export const AppInfo: FC<AppInfoProps> = ({ app, allApps }) => {
-  const screenshots =
-    app.screenshots.length > 0 ? app.screenshots : getAppScreenshots(app);
+export const AppInfo: FC<AppInfoProps> = ({
+  app,
+  allApps,
+  screenshots = [],
+}) => {
+  const images = screenshots.length > 0 ? screenshots : getAppScreenshots(app);
 
   return (
     <div className="mx-auto max-w-2xl p-6">
       <AppHeader app={app} />
-      <ScreenshotCarousel screenshots={screenshots} label={app.label} />
+      <ScreenshotCarousel screenshots={images} label={app.label} />
       <SystemRequirements app={app} />
       <WebVersion app={app} />
       <DownloadSection app={app} />
