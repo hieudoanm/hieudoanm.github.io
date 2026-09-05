@@ -21,7 +21,7 @@ const FilterBar: FC<FilterBarProps> = ({
   onTextChange,
   onClose,
 }) => (
-  <div className="no-print flex flex-wrap items-center gap-1 border-b border-base-300 bg-base-200 px-2 py-1">
+  <div className="no-print border-base-300 bg-base-200 flex flex-wrap items-center gap-1 border-b px-2 py-1">
     <label className="text-xs font-medium">Filter</label>
     <select
       aria-label="Filter column"

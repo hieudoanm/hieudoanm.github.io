@@ -1,8 +1,8 @@
-import nextJest from 'next/jest.js'
+import nextJest from 'next/jest.js';
 
 const createJestConfig = nextJest({
   dir: './',
-})
+});
 
 /** @type {import('jest').Config} */
 const config = {
@@ -17,7 +17,9 @@ const config = {
   },
   collectCoverage: true,
   coverageDirectory: '<rootDir>/coverage',
-  coverageReporters: ['html', 'lcov', 'text-summary'] as ('html' | 'lcov' | 'text-summary')[],
+  coverageReporters: ['html', 'lcov', 'text-summary'] as (
+    'html' | 'lcov' | 'text-summary'
+  )[],
   collectCoverageFrom: [
     'src/**/*.{ts,tsx}',
     '!src/**/*.d.ts',
@@ -33,6 +35,6 @@ const config = {
       lines: 80,
     },
   },
-}
+};
 
-export default createJestConfig(config)
+export default createJestConfig(config);

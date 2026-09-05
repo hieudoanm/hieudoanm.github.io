@@ -1,4 +1,4 @@
-import { buildVersion } from './version'
+import { buildVersion } from './version';
 
 export const about = {
   name: 'Calendar',
@@ -10,4 +10,4 @@ export const about = {
     { label: 'Language', value: 'TypeScript 6' },
     { label: 'Styling', value: 'Tailwind CSS 4 + DaisyUI 5' },
   ],
-}
+};

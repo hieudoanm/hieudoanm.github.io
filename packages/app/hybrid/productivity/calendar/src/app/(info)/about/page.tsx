@@ -1,6 +1,6 @@
-import { AboutTemplate } from '@/components/templates/AboutTemplate'
-import { about } from '@/content/about'
+import { AboutTemplate } from '@/components/templates/AboutTemplate';
+import { about } from '@/content/about';
 
-const AboutPage = () => <AboutTemplate {...about} />
+const AboutPage = () => <AboutTemplate {...about} />;
 
-export default AboutPage
+export default AboutPage;

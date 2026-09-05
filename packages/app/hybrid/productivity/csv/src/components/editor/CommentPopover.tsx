@@ -20,7 +20,7 @@ const CommentPopover: FC<CommentPopoverProps> = ({
   onDelete,
   onClose,
 }) => (
-  <div className="no-print fixed top-16 left-1/2 z-50 w-80 -translate-x-1/2 rounded-lg border border-base-300 bg-base-100 p-3 shadow-xl">
+  <div className="no-print border-base-300 bg-base-100 fixed top-16 left-1/2 z-50 w-80 -translate-x-1/2 rounded-lg border p-3 shadow-xl">
     <div className="mb-2 flex items-center justify-between">
       <span className="text-sm font-semibold">Comment on {cellLabel}</span>
       <button

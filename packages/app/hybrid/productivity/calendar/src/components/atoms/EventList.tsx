@@ -1,5 +1,5 @@
-import type { Event } from '@/data/events'
-import { FC } from 'react'
+import type { Event } from '@/data/events';
+import { FC } from 'react';
 
 export const EventList: FC<{ events: Event[] }> = ({ events }) => (
   <div className="px-4 py-3">
@@ -13,14 +13,15 @@ export const EventList: FC<{ events: Event[] }> = ({ events }) => (
         {events.map((event) => (
           <div
             key={event.title}
-            className="bg-base-content/5 border-base-content/10 rounded-lg border px-2 py-1.5 text-[11px] leading-snug"
-          >
+            className="bg-base-content/5 border-base-content/10 rounded-lg border px-2 py-1.5 text-[11px] leading-snug">
             <p className="text-base-content font-normal">{event.title}</p>
-            <p className="text-base-content/50 mt-0.5 text-[10px]">{event.field}</p>
+            <p className="text-base-content/50 mt-0.5 text-[10px]">
+              {event.field}
+            </p>
           </div>
         ))}
       </div>
     )}
   </div>
-)
-EventList.displayName = 'EventList'
+);
+EventList.displayName = 'EventList';

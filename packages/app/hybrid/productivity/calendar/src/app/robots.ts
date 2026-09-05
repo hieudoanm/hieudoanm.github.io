@@ -1,6 +1,6 @@
-import type { MetadataRoute } from 'next'
+import type { MetadataRoute } from 'next';
 
-export const dynamic = 'force-static'
+export const dynamic = 'force-static';
 
 const robots = (): MetadataRoute.Robots => ({
   rules: [
@@ -10,6 +10,6 @@ const robots = (): MetadataRoute.Robots => ({
     },
   ],
   sitemap: 'https://hieudoanm.github.io/free/calendar/sitemap.xml',
-})
+});
 
-export default robots
+export default robots;

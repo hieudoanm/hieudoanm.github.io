@@ -1,42 +1,51 @@
-'use client'
+'use client';
 
-import { TimeLeft, calcProgress, diffParts, toDateInputValue } from '@/lib/countdown'
-import { FC, useEffect, useRef, useState } from 'react'
+import {
+  TimeLeft,
+  calcProgress,
+  diffParts,
+  toDateInputValue,
+} from '@/lib/countdown';
+import { FC, useEffect, useRef, useState } from 'react';
 
 export const CountdownModal: FC = () => {
-  const dialogRef = useRef<HTMLDialogElement>(null)
+  const dialogRef = useRef<HTMLDialogElement>(null);
 
-  const defaultStart = new Date()
-  const defaultEnd = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000)
+  const defaultStart = new Date();
+  const defaultEnd = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
 
-  const [editing, setEditing] = useState(false)
-  const [title, setTitle] = useState('My Countdown')
-  const [titleInput, setTitleInput] = useState('My Countdown')
-  const [start, setStart] = useState(defaultStart)
-  const [end, setEnd] = useState(defaultEnd)
-  const [startInput, setStartInput] = useState(toDateInputValue(defaultStart))
-  const [endInput, setEndInput] = useState(toDateInputValue(defaultEnd))
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>(() => diffParts(new Date(), defaultEnd))
-  const [progress, setProgress] = useState(() => calcProgress(defaultStart, defaultEnd))
+  const [editing, setEditing] = useState(false);
+  const [title, setTitle] = useState('My Countdown');
+  const [titleInput, setTitleInput] = useState('My Countdown');
+  const [start, setStart] = useState(defaultStart);
+  const [end, setEnd] = useState(defaultEnd);
+  const [startInput, setStartInput] = useState(toDateInputValue(defaultStart));
+  const [endInput, setEndInput] = useState(toDateInputValue(defaultEnd));
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>(() =>
+    diffParts(new Date(), defaultEnd)
+  );
+  const [progress, setProgress] = useState(() =>
+    calcProgress(defaultStart, defaultEnd)
+  );
 
   useEffect(() => {
     const timer = setInterval(() => {
-      const now = new Date()
-      if (now < start) setTimeLeft(diffParts(now, start))
-      else if (now > end) setTimeLeft(diffParts(end, now))
-      else setTimeLeft(diffParts(now, end))
-      setProgress(calcProgress(start, end))
-    }, 1000)
-    return () => clearInterval(timer)
-  }, [start, end])
+      const now = new Date();
+      if (now < start) setTimeLeft(diffParts(now, start));
+      else if (now > end) setTimeLeft(diffParts(end, now));
+      else setTimeLeft(diffParts(now, end));
+      setProgress(calcProgress(start, end));
+    }, 1000);
+    return () => clearInterval(timer);
+  }, [start, end]);
 
   const handleSave = () => {
-    if (!startInput || !endInput) return
-    setStart(new Date(startInput))
-    setEnd(new Date(endInput))
-    setTitle(titleInput)
-    setEditing(false)
-  }
+    if (!startInput || !endInput) return;
+    setStart(new Date(startInput));
+    setEnd(new Date(endInput));
+    setTitle(titleInput);
+    setEditing(false);
+  };
 
   const units: [string, number][] = [
     ['yrs', timeLeft.years],
@@ -45,10 +54,10 @@ export const CountdownModal: FC = () => {
     ['hrs', timeLeft.hours],
     ['min', timeLeft.minutes],
     ['sec', timeLeft.seconds],
-  ]
+  ];
 
-  const open = () => dialogRef.current?.showModal()
-  const close = () => dialogRef.current?.close()
+  const open = () => dialogRef.current?.showModal();
+  const close = () => dialogRef.current?.close();
 
   return (
     <>
@@ -59,12 +68,13 @@ export const CountdownModal: FC = () => {
       <dialog ref={dialogRef} className="modal">
         <div className="modal-box border-base-content/10 bg-base-100 border">
           <div className="flex justify-between">
-            <h3 className="text-base-content mb-4 text-lg font-semibold">Countdown</h3>
+            <h3 className="text-base-content mb-4 text-lg font-semibold">
+              Countdown
+            </h3>
 
             <button
               onClick={() => setEditing((v) => !v)}
-              className={`btn btn-outline btn-xs mb-2 font-mono tracking-widest ${editing ? 'btn-primary' : ''}`}
-            >
+              className={`btn btn-outline btn-xs mb-2 font-mono tracking-widest ${editing ? 'btn-primary' : ''}`}>
               {editing ? 'Cancel' : 'Edit'}
             </button>
           </div>
@@ -108,18 +118,21 @@ export const CountdownModal: FC = () => {
               </div>
               <button
                 onClick={handleSave}
-                className="btn btn-primary btn-sm w-full font-mono tracking-widest"
-              >
+                className="btn btn-primary btn-sm w-full font-mono tracking-widest">
                 Save
               </button>
             </div>
           ) : (
             <>
-              <p className="mb-2 text-center font-mono text-lg tracking-widest">{title}</p>
+              <p className="mb-2 text-center font-mono text-lg tracking-widest">
+                {title}
+              </p>
               <div className="border-base-content/10 rounded-xl border p-4">
                 <div className="grid grid-cols-6 gap-2 text-center">
                   {units.map(([label, value]) => (
-                    <div key={label} className="flex flex-col items-center gap-1">
+                    <div
+                      key={label}
+                      className="flex flex-col items-center gap-1">
                       <span className="font-mono text-2xl leading-none font-normal tabular-nums">
                         {String(value).padStart(2, '0')}
                       </span>
@@ -130,8 +143,12 @@ export const CountdownModal: FC = () => {
                   ))}
                 </div>
               </div>
-              <div className="flex flex-col gap-1.5 mt-2">
-                <progress className="progress progress-primary w-full" value={progress} max="100" />
+              <div className="mt-2 flex flex-col gap-1.5">
+                <progress
+                  className="progress progress-primary w-full"
+                  value={progress}
+                  max="100"
+                />
                 <div className="flex justify-between font-mono text-[10px] opacity-30">
                   <span>{start.toDateString()}</span>
                   <span>{progress.toFixed(1)}%</span>
@@ -153,6 +170,6 @@ export const CountdownModal: FC = () => {
         </form>
       </dialog>
     </>
-  )
-}
-CountdownModal.displayName = 'CountdownModal'
+  );
+};
+CountdownModal.displayName = 'CountdownModal';

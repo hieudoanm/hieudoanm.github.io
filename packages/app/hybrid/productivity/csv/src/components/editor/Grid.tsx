@@ -245,14 +245,14 @@ const Grid: FC<GridProps> = ({
 
   return (
     <div
-      className="h-full overflow-auto bg-base-200 print:h-auto print:overflow-visible"
+      className="bg-base-200 h-full overflow-auto print:h-auto print:overflow-visible"
       onPointerMove={handleContainerPointerMove}
       onPointerUp={handleContainerPointerUp}>
       <table className="border-separate border-spacing-0" role="grid">
         <thead>
           <tr>
             <th
-              className="border-base-300 sticky top-0 left-0 z-40 border bg-base-300"
+              className="border-base-300 bg-base-300 sticky top-0 left-0 z-40 border"
               scope="colgroup"
               style={{ width: HEADER_WIDTH, height: HEADER_HEIGHT }}
             />
@@ -261,7 +261,7 @@ const Grid: FC<GridProps> = ({
               return (
                 <th
                   key={col}
-                  className={`border-base-300 sticky top-0 relative border px-1.5 font-mono text-[11px] font-medium ${
+                  className={`border-base-300 relative sticky top-0 border px-1.5 font-mono text-[11px] font-medium ${
                     frozen ? 'z-30' : 'z-20'
                   } ${
                     col === selection.focus.col
@@ -294,7 +294,7 @@ const Grid: FC<GridProps> = ({
             return (
               <tr key={row}>
                 <th
-                  className={`border-base-300 sticky left-0 relative border px-1.5 font-mono text-[11px] font-medium ${
+                  className={`border-base-300 relative sticky left-0 border px-1.5 font-mono text-[11px] font-medium ${
                     frozen ? 'z-30' : 'z-20'
                   } ${
                     row === selection.focus.row

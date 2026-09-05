@@ -55,7 +55,7 @@ const Cell: FC<CellProps> = ({
   if (isEditing) {
     return (
       <td
-        className="border-base-300 border bg-base-100 p-0"
+        className="border-base-300 bg-base-100 border p-0"
         style={cellStyle}
         role="gridcell">
         <input
@@ -82,7 +82,7 @@ const Cell: FC<CellProps> = ({
     <td
       aria-selected={isSelected || isFocus}
       className={`group border-base-300 relative border p-0 ${tone} ${
-        isFocus ? 'z-10 shadow-[inset_0_0_0_1px_theme(colors.primary)]' : ''
+        isFocus ? 'shadow-[inset_0_0_0_1px_theme(colors.primary)] z-10' : ''
       } ${extraClassName}`}
       style={{ ...cellStyle, textAlign: alignment }}
       onClick={onSelect}
@@ -107,7 +107,7 @@ const Cell: FC<CellProps> = ({
       {showFillHandle && (
         <div
           aria-label="Fill handle"
-          className="absolute -right-[3px] -bottom-[3px] z-20 h-3 w-3 cursor-crosshair rounded-sm border border-base-100 bg-primary"
+          className="border-base-100 bg-primary absolute -right-[3px] -bottom-[3px] z-20 h-3 w-3 cursor-crosshair rounded-sm border"
           onPointerDown={onFillHandlePointerDown}
           role="button"
         />

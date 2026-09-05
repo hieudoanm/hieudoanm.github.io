@@ -1,31 +1,31 @@
-'use client'
+'use client';
 
-import { type FC, useState } from 'react'
-import Link from 'next/link'
-import { FiUser, FiMail, FiLock, FiEye, FiEyeOff } from 'react-icons/fi'
+import { type FC, useState } from 'react';
+import Link from 'next/link';
+import { FiUser, FiMail, FiLock, FiEye, FiEyeOff } from 'react-icons/fi';
 
 const SignUpPage: FC = () => {
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [confirm, setConfirm] = useState('')
-  const [showPassword, setShowPassword] = useState(false)
-  const [error, setError] = useState('')
-  const [submitted, setSubmitted] = useState(false)
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirm, setConfirm] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState('');
+  const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (event: React.FormEvent): void => {
-    event.preventDefault()
+    event.preventDefault();
     if (!name.trim() || !email.trim() || !password || !confirm) {
-      setError('Please fill in all fields.')
-      return
+      setError('Please fill in all fields.');
+      return;
     }
     if (password !== confirm) {
-      setError("Passwords don't match.")
-      return
+      setError("Passwords don't match.");
+      return;
     }
-    setError('')
-    setSubmitted(true)
-  }
+    setError('');
+    setSubmitted(true);
+  };
 
   return (
     <main className="bg-base-200 flex min-h-screen items-center justify-center p-4">
@@ -38,12 +38,18 @@ const SignUpPage: FC = () => {
               </div>
             </div>
             <h1 className="text-center text-2xl font-bold">Create account</h1>
-            <p className="text-base-content/60 mb-4 text-center text-sm">Join us and get started</p>
+            <p className="text-base-content/60 mb-4 text-center text-sm">
+              Join us and get started
+            </p>
 
-            {error && <div className="alert alert-error mb-4 text-sm">{error}</div>}
+            {error && (
+              <div className="alert alert-error mb-4 text-sm">{error}</div>
+            )}
 
             {submitted ? (
-              <div className="alert alert-success text-sm">Account created successfully.</div>
+              <div className="alert alert-success text-sm">
+                Account created successfully.
+              </div>
             ) : (
               <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                 <div className="form-control">
@@ -88,9 +94,10 @@ const SignUpPage: FC = () => {
                     <button
                       type="button"
                       onClick={() => setShowPassword((v) => !v)}
-                      aria-label={showPassword ? 'Hide password' : 'Show password'}
-                      className="text-base-content/40 hover:text-base-content absolute top-1/2 right-3 -translate-y-1/2"
-                    >
+                      aria-label={
+                        showPassword ? 'Hide password' : 'Show password'
+                      }
+                      className="text-base-content/40 hover:text-base-content absolute top-1/2 right-3 -translate-y-1/2">
                       {showPassword ? (
                         <FiEyeOff className="h-5 w-5" />
                       ) : (
@@ -128,7 +135,7 @@ const SignUpPage: FC = () => {
         </p>
       </div>
     </main>
-  )
-}
+  );
+};
 
-export default SignUpPage
+export default SignUpPage;

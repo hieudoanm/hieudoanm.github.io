@@ -1,25 +1,25 @@
-'use client'
+'use client';
 
-import { type FC, useState } from 'react'
-import Link from 'next/link'
-import { FiLock, FiMail, FiEye, FiEyeOff } from 'react-icons/fi'
+import { type FC, useState } from 'react';
+import Link from 'next/link';
+import { FiLock, FiMail, FiEye, FiEyeOff } from 'react-icons/fi';
 
 const SignInPage: FC = () => {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [showPassword, setShowPassword] = useState(false)
-  const [submitted, setSubmitted] = useState(false)
-  const [error, setError] = useState('')
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
 
   const handleSubmit = (event: React.FormEvent): void => {
-    event.preventDefault()
+    event.preventDefault();
     if (!email.trim() || !password) {
-      setError('Enter your email and password.')
-      return
+      setError('Enter your email and password.');
+      return;
     }
-    setError('')
-    setSubmitted(true)
-  }
+    setError('');
+    setSubmitted(true);
+  };
 
   return (
     <main className="bg-base-200 flex min-h-screen items-center justify-center p-4">
@@ -36,10 +36,14 @@ const SignInPage: FC = () => {
               Welcome back to your account
             </p>
 
-            {error && <div className="alert alert-error mb-4 text-sm">{error}</div>}
+            {error && (
+              <div className="alert alert-error mb-4 text-sm">{error}</div>
+            )}
 
             {submitted ? (
-              <div className="alert alert-success text-sm">Signed in successfully.</div>
+              <div className="alert alert-success text-sm">
+                Signed in successfully.
+              </div>
             ) : (
               <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                 <div className="form-control">
@@ -71,9 +75,10 @@ const SignInPage: FC = () => {
                     <button
                       type="button"
                       onClick={() => setShowPassword((v) => !v)}
-                      aria-label={showPassword ? 'Hide password' : 'Show password'}
-                      className="text-base-content/40 hover:text-base-content absolute top-1/2 right-3 -translate-y-1/2"
-                    >
+                      aria-label={
+                        showPassword ? 'Hide password' : 'Show password'
+                      }
+                      className="text-base-content/40 hover:text-base-content absolute top-1/2 right-3 -translate-y-1/2">
                       {showPassword ? (
                         <FiEyeOff className="h-5 w-5" />
                       ) : (
@@ -85,9 +90,13 @@ const SignInPage: FC = () => {
                 <div className="flex items-center justify-between">
                   <label className="flex cursor-pointer items-center gap-2">
                     <input type="checkbox" className="checkbox checkbox-sm" />
-                    <span className="text-base-content/60 text-sm">Remember me</span>
+                    <span className="text-base-content/60 text-sm">
+                      Remember me
+                    </span>
                   </label>
-                  <Link href="/forget-password" className="text-primary text-sm hover:underline">
+                  <Link
+                    href="/forget-password"
+                    className="text-primary text-sm hover:underline">
                     Forgot password?
                   </Link>
                 </div>
@@ -107,7 +116,7 @@ const SignInPage: FC = () => {
         </p>
       </div>
     </main>
-  )
-}
+  );
+};
 
-export default SignInPage
+export default SignInPage;

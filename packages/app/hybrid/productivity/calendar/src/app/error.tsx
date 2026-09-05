@@ -1,8 +1,14 @@
-'use client'
+'use client';
 
-import { ErrorTemplate } from '@/components/templates/ErrorTemplate'
+import { ErrorTemplate } from '@/components/templates/ErrorTemplate';
 
-const ErrorPage = ({ error, reset }: { error: Error & { digest?: string }; reset: () => void }) => (
+const ErrorPage = ({
+  error,
+  reset,
+}: {
+  error: Error & { digest?: string };
+  reset: () => void;
+}) => (
   <ErrorTemplate
     code="500"
     description="Something went wrong."
@@ -12,6 +18,6 @@ const ErrorPage = ({ error, reset }: { error: Error & { digest?: string }; reset
       </button>
     }
   />
-)
+);
 
-export default ErrorPage
+export default ErrorPage;

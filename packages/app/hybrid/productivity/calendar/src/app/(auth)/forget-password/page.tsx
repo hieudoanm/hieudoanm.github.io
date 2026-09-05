@@ -1,23 +1,23 @@
-'use client'
+'use client';
 
-import { type FC, useState } from 'react'
-import Link from 'next/link'
-import { FiMail, FiKey } from 'react-icons/fi'
+import { type FC, useState } from 'react';
+import Link from 'next/link';
+import { FiMail, FiKey } from 'react-icons/fi';
 
 const ForgetPasswordPage: FC = () => {
-  const [email, setEmail] = useState('')
-  const [error, setError] = useState('')
-  const [submitted, setSubmitted] = useState(false)
+  const [email, setEmail] = useState('');
+  const [error, setError] = useState('');
+  const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (event: React.FormEvent): void => {
-    event.preventDefault()
+    event.preventDefault();
     if (!email.trim()) {
-      setError('Enter your email address.')
-      return
+      setError('Enter your email address.');
+      return;
     }
-    setError('')
-    setSubmitted(true)
-  }
+    setError('');
+    setSubmitted(true);
+  };
 
   return (
     <main className="bg-base-200 flex min-h-screen items-center justify-center p-4">
@@ -34,7 +34,9 @@ const ForgetPasswordPage: FC = () => {
               We&apos;ll email you a link to reset your password
             </p>
 
-            {error && <div className="alert alert-error mb-4 text-sm">{error}</div>}
+            {error && (
+              <div className="alert alert-error mb-4 text-sm">{error}</div>
+            )}
 
             {submitted ? (
               <div className="alert alert-success text-sm">
@@ -71,7 +73,7 @@ const ForgetPasswordPage: FC = () => {
         </p>
       </div>
     </main>
-  )
-}
+  );
+};
 
-export default ForgetPasswordPage
+export default ForgetPasswordPage;

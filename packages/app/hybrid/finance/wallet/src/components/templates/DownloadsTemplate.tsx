@@ -9,55 +9,100 @@ interface DownloadItem {
   href: string;
 }
 
-export const DownloadsTemplate: FC<{
+const OS_ORDER = ['Android', 'macOS', 'Linux', 'Windows'] as const;
+
+interface DownloadsTemplateProps {
   version: string;
   items: DownloadItem[];
-}> = ({ version, items }) => (
-  <div className="mx-auto flex w-full max-w-2xl flex-col items-center gap-6 px-6 py-16 text-center">
-    <p className="text-base-content/50 text-xs tracking-[0.2em] uppercase">
-      Downloads
-    </p>
+}
 
-    <h1 className="mb-1">Installers</h1>
+const osName = (platform: string): string => platform.split(' ')[0];
 
-    <p className="text-base-content/50 max-w-sm text-sm">
-      Pick the package for your platform. The mobile web app is available from
-      any browser.
-    </p>
+const groupByOS = (items: DownloadItem[]) => {
+  const groups = new Map<string, DownloadItem[]>();
+  for (const item of items) {
+    const os = osName(item.platform);
+    const list = groups.get(os) ?? [];
+    list.push(item);
+    groups.set(os, list);
+  }
 
-    <div className="border-base-content/10 bg-base-200 w-full max-w-lg rounded-2xl border p-6">
-      <div className="flex flex-col gap-4">
-        {items.map(({ platform, requirements, label, href }) => (
-          <div
-            key={`${platform}-${label}`}
-            className="flex items-center justify-between gap-4">
-            <div className="text-left">
-              <span className="text-base-content block text-sm font-bold">
-                {platform}
-              </span>
-              <span className="text-base-content/50 block text-xs">
-                {requirements}
-              </span>
+  const ordered = new Map<string, DownloadItem[]>();
+  for (const os of OS_ORDER) {
+    const list = groups.get(os);
+    if (list) ordered.set(os, list);
+  }
+  for (const [os, list] of groups) {
+    if (!ordered.has(os)) ordered.set(os, list);
+  }
+  return ordered;
+};
+
+export const DownloadsTemplate: FC<DownloadsTemplateProps> = ({
+  version,
+  items,
+}) => {
+  const sections = groupByOS(items);
+
+  return (
+    <div className="mx-auto flex w-full max-w-2xl flex-col items-center gap-6 px-6 py-16 text-center">
+      <p className="text-base-content/50 text-xs tracking-[0.2em] uppercase">
+        Downloads
+      </p>
+
+      <h1 className="mb-1">Installers</h1>
+
+      <p className="text-base-content/50 max-w-sm text-sm">
+        Pick the package for your platform. The mobile web app is available from
+        any browser.
+      </p>
+
+      <div className="flex w-full max-w-lg flex-col gap-6">
+        {[...sections.entries()].map(([os, osItems]) => (
+          <section
+            key={os}
+            className="border-base-content/10 bg-base-200 flex w-full flex-col gap-4 rounded-2xl border p-6">
+            <h2 className="text-base-content text-start text-sm font-bold tracking-[0.2em] uppercase">
+              {os}
+            </h2>
+
+            <div className="flex flex-col gap-4">
+              {osItems.map(({ platform, requirements, label, href }) => (
+                <div
+                  key={`${platform}-${label}`}
+                  className="flex items-center justify-between gap-4">
+                  <div className="text-left">
+                    {platform !== os && (
+                      <span className="text-base-content block text-sm font-bold">
+                        {platform}
+                      </span>
+                    )}
+                    <span className="text-base-content/50 block text-xs">
+                      {requirements}
+                    </span>
+                  </div>
+                  <Link
+                    href={href}
+                    className="btn btn-primary btn-sm gap-1.5"
+                    aria-label={`Download ${label}`}>
+                    <FiDownload className="h-3.5 w-3.5" />
+                    {label}
+                  </Link>
+                </div>
+              ))}
             </div>
-            <Link
-              href={href}
-              className="btn btn-primary btn-sm gap-1.5"
-              aria-label={`Download ${label}`}>
-              <FiDownload className="h-3.5 w-3.5" />
-              {label}
-            </Link>
-          </div>
+          </section>
         ))}
       </div>
-    </div>
 
-    <div className="flex flex-wrap justify-center gap-3">
-      <span className="border-base-content/20 text-base-content/50 rounded-full border px-3 py-1 text-xs">
-        {version}
-      </span>
-      <span className="badge badge-neutral rounded-full">Stable</span>
+      <div className="flex flex-wrap justify-center gap-3">
+        <span className="border-base-content/20 text-base-content/50 rounded-full border px-3 py-1 text-xs">
+          {version}
+        </span>
+        <span className="badge badge-neutral rounded-full">Stable</span>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 DownloadsTemplate.displayName = 'DownloadsTemplate';

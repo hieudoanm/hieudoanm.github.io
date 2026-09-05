@@ -1,7 +1,10 @@
-import { ErrorTemplate } from '@/components/templates/ErrorTemplate'
+import { ErrorTemplate } from '@/components/templates/ErrorTemplate';
 
 const UnauthorizedPage = () => (
-  <ErrorTemplate code="401" description="You must be authenticated to access this page." />
-)
+  <ErrorTemplate
+    code="401"
+    description="You must be authenticated to access this page."
+  />
+);
 
-export default UnauthorizedPage
+export default UnauthorizedPage;

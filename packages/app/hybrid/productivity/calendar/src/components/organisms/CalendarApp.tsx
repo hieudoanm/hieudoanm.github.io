@@ -1,23 +1,23 @@
-'use client'
+'use client';
 
-import { FC, useMemo, useState } from 'react'
-import { LunarCalendar } from '@lodashx/ts'
+import { FC, useMemo, useState } from 'react';
+import { LunarCalendar } from '@lodashx/ts';
 
-import { MonthCalendar } from '@/components/molecules/MonthCalendar'
-import { WeekView } from '@/components/molecules/WeekView'
-import { DayView } from '@/components/molecules/DayView'
-import { ThreeDayView } from '@/components/molecules/ThreeDayView'
-import { QuarterlyView } from '@/components/molecules/QuarterlyView'
-import { HalflyView } from '@/components/molecules/HalflyView'
-import { YearlyView } from '@/components/molecules/YearlyView'
-import { LunarDate } from '@/components/atoms/LunarDate'
-import { EventList } from '@/components/atoms/EventList'
-import { DaysCountModal } from '@/components/organisms/DaysCountModal'
-import { CountdownModal } from '@/components/organisms/CountdownModal'
-import { View, years, months } from '@/data/constants'
-import { events } from '@/data/events'
+import { MonthCalendar } from '@/components/molecules/MonthCalendar';
+import { WeekView } from '@/components/molecules/WeekView';
+import { DayView } from '@/components/molecules/DayView';
+import { ThreeDayView } from '@/components/molecules/ThreeDayView';
+import { QuarterlyView } from '@/components/molecules/QuarterlyView';
+import { HalflyView } from '@/components/molecules/HalflyView';
+import { YearlyView } from '@/components/molecules/YearlyView';
+import { LunarDate } from '@/components/atoms/LunarDate';
+import { EventList } from '@/components/atoms/EventList';
+import { DaysCountModal } from '@/components/organisms/DaysCountModal';
+import { CountdownModal } from '@/components/organisms/CountdownModal';
+import { View, years, months } from '@/data/constants';
+import { events } from '@/data/events';
 
-const lunarCalendar = new LunarCalendar()
+const lunarCalendar = new LunarCalendar();
 
 const VIEW_LABELS: Record<View, string> = {
   [View.DAY]: 'Day',
@@ -27,111 +27,133 @@ const VIEW_LABELS: Record<View, string> = {
   [View.QUARTERLY]: 'Quarter',
   [View.HALFLY]: 'Half',
   [View.YEARLY]: 'Year',
-}
+};
 
 const getEventsForDate = (date: Date) =>
   events.filter(({ year, month, date: d, frequency }) => {
-    const yearMatch = year === 0 || frequency === 'annual' || year === date.getFullYear()
-    const monthMatch = month === 0 || month === date.getMonth() + 1
-    const dateMatch = d === 0 || d === date.getDate()
-    return yearMatch && monthMatch && dateMatch
-  })
+    const yearMatch =
+      year === 0 || frequency === 'annual' || year === date.getFullYear();
+    const monthMatch = month === 0 || month === date.getMonth() + 1;
+    const dateMatch = d === 0 || d === date.getDate();
+    return yearMatch && monthMatch && dateMatch;
+  });
 
 export const CalendarApp: FC = () => {
-  const today = new Date()
+  const today = new Date();
   const [state, setState] = useState({
     year: today.getFullYear(),
     month: today.getMonth(),
     weekStart: getWeekStart(today),
     view: View.MONTH,
-  })
-  const [chosenDate, setChosenDate] = useState(today)
+  });
+  const [chosenDate, setChosenDate] = useState(today);
 
-  const chosenEvents = useMemo(() => getEventsForDate(chosenDate), [chosenDate])
+  const chosenEvents = useMemo(
+    () => getEventsForDate(chosenDate),
+    [chosenDate]
+  );
 
   const lunarResult = useMemo(() => {
     const result = lunarCalendar.solar2lunar(
       chosenDate.getFullYear(),
       chosenDate.getMonth() + 1,
-      chosenDate.getDate(),
-    )
-    return result === -1 ? null : result
-  }, [chosenDate])
+      chosenDate.getDate()
+    );
+    return result === -1 ? null : result;
+  }, [chosenDate]);
 
   const handlePrev = () => {
     setState((prev) => {
-      if (prev.view === View.MONTH || prev.view === View.DAY || prev.view === View.THREE_DAY) {
-        const newMonth = prev.month === 0 ? 11 : prev.month - 1
-        const newYear = prev.month === 0 ? prev.year - 1 : prev.year
-        return { ...prev, month: newMonth, year: newYear }
+      if (
+        prev.view === View.MONTH ||
+        prev.view === View.DAY ||
+        prev.view === View.THREE_DAY
+      ) {
+        const newMonth = prev.month === 0 ? 11 : prev.month - 1;
+        const newYear = prev.month === 0 ? prev.year - 1 : prev.year;
+        return { ...prev, month: newMonth, year: newYear };
       }
       if (prev.view === View.WEEK) {
-        const d = new Date(prev.weekStart)
-        d.setDate(d.getDate() - 7)
-        return { ...prev, weekStart: d, year: d.getFullYear(), month: d.getMonth() }
+        const d = new Date(prev.weekStart);
+        d.setDate(d.getDate() - 7);
+        return {
+          ...prev,
+          weekStart: d,
+          year: d.getFullYear(),
+          month: d.getMonth(),
+        };
       }
       if (prev.view === View.QUARTERLY) {
-        const newMonth = prev.month < 3 ? prev.month + 9 : prev.month - 3
-        const newYear = prev.month < 3 ? prev.year - 1 : prev.year
-        return { ...prev, month: newMonth, year: newYear }
+        const newMonth = prev.month < 3 ? prev.month + 9 : prev.month - 3;
+        const newYear = prev.month < 3 ? prev.year - 1 : prev.year;
+        return { ...prev, month: newMonth, year: newYear };
       }
       if (prev.view === View.HALFLY) {
-        const newMonth = prev.month < 6 ? prev.month + 6 : prev.month - 6
-        const newYear = prev.month < 6 ? prev.year - 1 : prev.year
-        return { ...prev, month: newMonth, year: newYear }
+        const newMonth = prev.month < 6 ? prev.month + 6 : prev.month - 6;
+        const newYear = prev.month < 6 ? prev.year - 1 : prev.year;
+        return { ...prev, month: newMonth, year: newYear };
       }
-      return { ...prev, year: prev.year - 1 }
-    })
-  }
+      return { ...prev, year: prev.year - 1 };
+    });
+  };
 
   const handleNext = () => {
     setState((prev) => {
-      if (prev.view === View.MONTH || prev.view === View.DAY || prev.view === View.THREE_DAY) {
-        const newMonth = prev.month === 11 ? 0 : prev.month + 1
-        const newYear = prev.month === 11 ? prev.year + 1 : prev.year
-        return { ...prev, month: newMonth, year: newYear }
+      if (
+        prev.view === View.MONTH ||
+        prev.view === View.DAY ||
+        prev.view === View.THREE_DAY
+      ) {
+        const newMonth = prev.month === 11 ? 0 : prev.month + 1;
+        const newYear = prev.month === 11 ? prev.year + 1 : prev.year;
+        return { ...prev, month: newMonth, year: newYear };
       }
       if (prev.view === View.WEEK) {
-        const d = new Date(prev.weekStart)
-        d.setDate(d.getDate() + 7)
-        return { ...prev, weekStart: d, year: d.getFullYear(), month: d.getMonth() }
+        const d = new Date(prev.weekStart);
+        d.setDate(d.getDate() + 7);
+        return {
+          ...prev,
+          weekStart: d,
+          year: d.getFullYear(),
+          month: d.getMonth(),
+        };
       }
       if (prev.view === View.QUARTERLY) {
-        const newMonth = prev.month >= 9 ? prev.month - 9 : prev.month + 3
-        const newYear = prev.month >= 9 ? prev.year + 1 : prev.year
-        return { ...prev, month: newMonth, year: newYear }
+        const newMonth = prev.month >= 9 ? prev.month - 9 : prev.month + 3;
+        const newYear = prev.month >= 9 ? prev.year + 1 : prev.year;
+        return { ...prev, month: newMonth, year: newYear };
       }
       if (prev.view === View.HALFLY) {
-        const newMonth = prev.month >= 6 ? prev.month - 6 : prev.month + 6
-        const newYear = prev.month >= 6 ? prev.year + 1 : prev.year
-        return { ...prev, month: newMonth, year: newYear }
+        const newMonth = prev.month >= 6 ? prev.month - 6 : prev.month + 6;
+        const newYear = prev.month >= 6 ? prev.year + 1 : prev.year;
+        return { ...prev, month: newMonth, year: newYear };
       }
-      return { ...prev, year: prev.year + 1 }
-    })
-  }
+      return { ...prev, year: prev.year + 1 };
+    });
+  };
 
   const handleToday = () => {
-    const t = new Date()
+    const t = new Date();
     setState({
       year: t.getFullYear(),
       month: t.getMonth(),
       weekStart: getWeekStart(t),
       view: state.view,
-    })
-    setChosenDate(t)
-  }
+    });
+    setChosenDate(t);
+  };
 
   const handleViewChange = (view: View) => {
-    setState((prev) => ({ ...prev, view }))
-  }
+    setState((prev) => ({ ...prev, view }));
+  };
 
   const handleMonthSelect = (month: number) => {
-    setState((prev) => ({ ...prev, month, year: prev.year }))
-  }
+    setState((prev) => ({ ...prev, month, year: prev.year }));
+  };
 
   const handleYearSelect = (year: number) => {
-    setState((prev) => ({ ...prev, year }))
-  }
+    setState((prev) => ({ ...prev, year }));
+  };
 
   const headerLabel =
     state.view === View.WEEK
@@ -142,21 +164,30 @@ export const CalendarApp: FC = () => {
           ? `H${state.month < 6 ? 1 : 2} ${state.year}`
           : state.view === View.YEARLY
             ? `${state.year}`
-            : `${months[state.month]} ${state.year}`
+            : `${months[state.month]} ${state.year}`;
 
   return (
     <div className="flex flex-1 flex-col overflow-hidden">
       <nav className="border-base-content/10 flex items-center gap-2 border-b px-4 py-2">
-        <button className="btn btn-sm btn-ghost" onClick={handleToday} data-testid="nav-today">
+        <button
+          className="btn btn-sm btn-ghost"
+          onClick={handleToday}
+          data-testid="nav-today">
           Today
         </button>
-        <button className="btn btn-sm btn-ghost btn-square" onClick={handlePrev}>
+        <button
+          className="btn btn-sm btn-ghost btn-square"
+          onClick={handlePrev}>
           ‹
         </button>
-        <button className="btn btn-sm btn-ghost btn-square" onClick={handleNext}>
+        <button
+          className="btn btn-sm btn-ghost btn-square"
+          onClick={handleNext}>
           ›
         </button>
-        <h2 className="text-base-content mr-auto text-lg font-semibold">{headerLabel}</h2>
+        <h2 className="text-base-content mr-auto text-lg font-semibold">
+          {headerLabel}
+        </h2>
         <DaysCountModal />
         <CountdownModal />
         {(state.view === View.DAY ||
@@ -167,8 +198,7 @@ export const CalendarApp: FC = () => {
           <select
             className="select select-sm select-bordered border-base-content/10 bg-base-100 text-base-content"
             value={state.month}
-            onChange={(e) => handleMonthSelect(Number(e.target.value))}
-          >
+            onChange={(e) => handleMonthSelect(Number(e.target.value))}>
             {months.map((name, i) => (
               <option key={name} value={i}>
                 {name}
@@ -183,8 +213,7 @@ export const CalendarApp: FC = () => {
           <select
             className="select select-sm select-bordered border-base-content/10 bg-base-100 text-base-content"
             value={state.year}
-            onChange={(e) => handleYearSelect(Number(e.target.value))}
-          >
+            onChange={(e) => handleYearSelect(Number(e.target.value))}>
             {years.map((y) => (
               <option key={y} value={y}>
                 {y}
@@ -198,11 +227,12 @@ export const CalendarApp: FC = () => {
           </div>
           <ul
             tabIndex={-1}
-            className="menu dropdown-content border-base-content/10 bg-base-100 z-50 mt-1 w-40 rounded-box border shadow-lg"
-          >
+            className="menu dropdown-content border-base-content/10 bg-base-100 rounded-box z-50 mt-1 w-40 border shadow-lg">
             {Object.values(View).map((v) => (
               <li key={v}>
-                <a className={state.view === v ? 'active' : ''} onClick={() => handleViewChange(v)}>
+                <a
+                  className={state.view === v ? 'active' : ''}
+                  onClick={() => handleViewChange(v)}>
                   {VIEW_LABELS[v]}
                 </a>
               </li>
@@ -232,37 +262,51 @@ export const CalendarApp: FC = () => {
             <EventList events={chosenEvents} />
           </>
         )}
-        {state.view === View.WEEK && <WeekView year={state.year} weekStart={state.weekStart} />}
+        {state.view === View.WEEK && (
+          <WeekView year={state.year} weekStart={state.weekStart} />
+        )}
         {state.view === View.DAY && (
-          <DayView year={state.year} month={state.month} day={today.getDate()} />
+          <DayView
+            year={state.year}
+            month={state.month}
+            day={today.getDate()}
+          />
         )}
         {state.view === View.THREE_DAY && (
-          <ThreeDayView year={state.year} month={state.month} day={today.getDate()} />
+          <ThreeDayView
+            year={state.year}
+            month={state.month}
+            day={today.getDate()}
+          />
         )}
-        {state.view === View.QUARTERLY && <QuarterlyView year={state.year} month={state.month} />}
-        {state.view === View.HALFLY && <HalflyView year={state.year} month={state.month} />}
+        {state.view === View.QUARTERLY && (
+          <QuarterlyView year={state.year} month={state.month} />
+        )}
+        {state.view === View.HALFLY && (
+          <HalflyView year={state.year} month={state.month} />
+        )}
         {state.view === View.YEARLY && <YearlyView year={state.year} />}
       </div>
     </div>
-  )
-}
-CalendarApp.displayName = 'CalendarApp'
+  );
+};
+CalendarApp.displayName = 'CalendarApp';
 
 function getWeekStart(date: Date): Date {
-  const d = new Date(date)
-  const day = d.getDay()
-  d.setDate(d.getDate() - day)
-  d.setHours(0, 0, 0, 0)
-  return d
+  const d = new Date(date);
+  const day = d.getDay();
+  d.setDate(d.getDate() - day);
+  d.setHours(0, 0, 0, 0);
+  return d;
 }
 
 function formatWeekRange(start: Date): string {
-  const end = new Date(start)
-  end.setDate(end.getDate() + 6)
-  const sm = months[start.getMonth()].slice(0, 3)
-  const em = months[end.getMonth()].slice(0, 3)
+  const end = new Date(start);
+  end.setDate(end.getDate() + 6);
+  const sm = months[start.getMonth()].slice(0, 3);
+  const em = months[end.getMonth()].slice(0, 3);
   if (start.getMonth() === end.getMonth()) {
-    return `${sm} ${start.getDate()} – ${end.getDate()}, ${start.getFullYear()}`
+    return `${sm} ${start.getDate()} – ${end.getDate()}, ${start.getFullYear()}`;
   }
-  return `${sm} ${start.getDate()} – ${em} ${end.getDate()}, ${end.getFullYear()}`
+  return `${sm} ${start.getDate()} – ${em} ${end.getDate()}, ${end.getFullYear()}`;
 }

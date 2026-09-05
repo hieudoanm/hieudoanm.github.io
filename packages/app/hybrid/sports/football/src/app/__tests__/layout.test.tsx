@@ -15,6 +15,8 @@ jest.mock('react-icons/fi', () => ({
   FiClock: () => null,
   FiDownload: () => null,
   FiInfo: () => null,
+  FiMoon: () => null,
+  FiSun: () => null,
 }));
 
 import RootLayout, { metadata } from '../layout';

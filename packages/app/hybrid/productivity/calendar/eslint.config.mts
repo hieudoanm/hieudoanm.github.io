@@ -1,4 +1,4 @@
-import { defineConfig, globalIgnores } from 'eslint/config'
+import { defineConfig, globalIgnores } from 'eslint/config';
 
 const eslintConfig = defineConfig([
   globalIgnores([
@@ -10,6 +10,6 @@ const eslintConfig = defineConfig([
     'node_modules/**',
     'out/**',
   ]),
-])
+]);
 
-export default eslintConfig
+export default eslintConfig;

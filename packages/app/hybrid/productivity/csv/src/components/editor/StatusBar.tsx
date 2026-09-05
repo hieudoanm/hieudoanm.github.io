@@ -15,7 +15,7 @@ const StatusBar: FC<StatusBarProps> = ({
   sheetName,
   gridSize,
 }) => (
-  <div className="flex items-center justify-between border-t border-base-300 bg-base-200 px-3 py-1 font-mono text-xs text-base-content/80">
+  <div className="border-base-300 bg-base-200 text-base-content/80 flex items-center justify-between border-t px-3 py-1 font-mono text-xs">
     <div className="flex items-center gap-3">
       <span aria-label="Active cell">{activeLabel}</span>
       {rangeLabel !== activeLabel && <span>{rangeLabel}</span>}

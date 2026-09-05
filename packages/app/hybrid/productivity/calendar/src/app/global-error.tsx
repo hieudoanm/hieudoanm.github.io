@@ -1,13 +1,13 @@
-'use client'
+'use client';
 
-import { ErrorTemplate } from '@/components/templates/ErrorTemplate'
+import { ErrorTemplate } from '@/components/templates/ErrorTemplate';
 
 const GlobalErrorPage = ({
   error,
   reset,
 }: {
-  error: Error & { digest?: string }
-  reset: () => void
+  error: Error & { digest?: string };
+  reset: () => void;
 }) => (
   <html lang="en">
     <body className="bg-base-100 text-base-content">
@@ -22,6 +22,6 @@ const GlobalErrorPage = ({
       />
     </body>
   </html>
-)
+);
 
-export default GlobalErrorPage
+export default GlobalErrorPage;

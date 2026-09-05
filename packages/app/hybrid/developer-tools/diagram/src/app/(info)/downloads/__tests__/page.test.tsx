@@ -9,11 +9,11 @@ describe('DownloadsPage', () => {
 
   it('renders platform download links', () => {
     render(<DownloadsPage />);
-    expect(screen.getAllByText('Android').length).toBe(2);
-    expect(screen.getAllByText('Linux').length).toBe(2);
+    expect(screen.getAllByText('Android').length).toBe(1);
+    expect(screen.getAllByText('Linux').length).toBe(1);
     expect(screen.getByText('Linux (Debian)')).toBeInTheDocument();
     expect(screen.getByText('macOS')).toBeInTheDocument();
-    expect(screen.getAllByText('Windows').length).toBe(2);
+    expect(screen.getAllByText('Windows').length).toBe(1);
   });
 
   it('renders download links with correct hrefs', () => {

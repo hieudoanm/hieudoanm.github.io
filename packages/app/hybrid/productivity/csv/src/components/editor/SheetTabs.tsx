@@ -38,7 +38,7 @@ const SheetTabs: FC<SheetTabsProps> = ({
   };
 
   return (
-    <div className="no-print flex items-center gap-1 overflow-x-auto border-t border-base-300 bg-base-200 px-2 py-1">
+    <div className="no-print border-base-300 bg-base-200 flex items-center gap-1 overflow-x-auto border-t px-2 py-1">
       {sheets.map((sheet) => {
         const isActive = sheet.id === activeId;
         const isRenaming = sheet.id === renamingId;

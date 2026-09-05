@@ -18,7 +18,7 @@ export const VersionTemplate: FC<{ version: string }> = ({ version }) => {
 
   return (
     <div className="mx-auto flex w-full max-w-2xl flex-col items-center gap-6 px-6 py-16 text-center">
-      <p className="text-base-content/50 text-xs uppercase tracking-[0.2em]">
+      <p className="text-base-content/50 text-xs tracking-[0.2em] uppercase">
         Current deployment
       </p>
 
@@ -90,7 +90,7 @@ const Segment: FC<{ value: string; label: string; primary?: boolean }> = ({
       className={`font-mono text-2xl font-bold ${primary ? 'text-primary' : 'text-base-content'}`}>
       {value}
     </span>
-    <span className="text-base-content/50 mt-1 text-xs uppercase tracking-[0.2em]">
+    <span className="text-base-content/50 mt-1 text-xs tracking-[0.2em] uppercase">
       {label}
     </span>
   </div>

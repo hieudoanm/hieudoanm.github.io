@@ -1,7 +1,10 @@
-import { ErrorTemplate } from '@/components/templates/ErrorTemplate'
+import { ErrorTemplate } from '@/components/templates/ErrorTemplate';
 
 const ForbiddenPage = () => (
-  <ErrorTemplate code="403" description="You do not have permission to access this page." />
-)
+  <ErrorTemplate
+    code="403"
+    description="You do not have permission to access this page."
+  />
+);
 
-export default ForbiddenPage
+export default ForbiddenPage;

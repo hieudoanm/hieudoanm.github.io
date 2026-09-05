@@ -1,7 +1,7 @@
-'use client'
+'use client';
 
-import { FC } from 'react'
+import { FC } from 'react';
 
-const DefaultPage: FC = () => null
+const DefaultPage: FC = () => null;
 
-export default DefaultPage
+export default DefaultPage;

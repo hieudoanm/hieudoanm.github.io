@@ -1,7 +1,7 @@
-import { buildVersion } from './version'
+import { buildVersion } from './version';
 
 const RELEASE =
-  'https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-calendar-latest'
+  'https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-calendar-latest';
 
 export const download = {
   version: buildVersion,
@@ -55,4 +55,4 @@ export const download = {
       href: `${RELEASE}/calendar.msi`,
     },
   ],
-}
+};

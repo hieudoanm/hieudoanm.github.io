@@ -27,7 +27,7 @@ const ShortcutsModal: FC<ShortcutsModalProps> = ({ open, onClose }) => {
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
       onClick={onClose}>
       <div
-        className="w-full max-w-md rounded-xl border border-base-300 bg-base-100 p-4 shadow-2xl"
+        className="border-base-300 bg-base-100 w-full max-w-md rounded-xl border p-4 shadow-2xl"
         onClick={(event) => event.stopPropagation()}
         role="dialog"
         aria-label="Keyboard shortcuts">
@@ -40,7 +40,7 @@ const ShortcutsModal: FC<ShortcutsModalProps> = ({ open, onClose }) => {
             <FiX />
           </button>
         </div>
-        <ul className="divide-y divide-base-300">
+        <ul className="divide-base-300 divide-y">
           {SHORTCUTS.map(({ keys, label }) => (
             <li
               key={label}

@@ -12,7 +12,7 @@ export const AboutTemplate: FC<{
   items: InfoRow[];
 }> = ({ name, description, version, items }) => (
   <div className="mx-auto flex w-full max-w-2xl flex-col items-center gap-6 px-6 py-16 text-center">
-    <p className="text-base-content/50 text-xs uppercase tracking-[0.2em]">
+    <p className="text-base-content/50 text-xs tracking-[0.2em] uppercase">
       About
     </p>
 

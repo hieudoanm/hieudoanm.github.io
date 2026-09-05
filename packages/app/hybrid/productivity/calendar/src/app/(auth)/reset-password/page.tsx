@@ -1,29 +1,29 @@
-'use client'
+'use client';
 
-import { type FC, useState } from 'react'
-import Link from 'next/link'
-import { FiShield, FiEye, FiEyeOff } from 'react-icons/fi'
+import { type FC, useState } from 'react';
+import Link from 'next/link';
+import { FiShield, FiEye, FiEyeOff } from 'react-icons/fi';
 
 const ResetPasswordPage: FC = () => {
-  const [password, setPassword] = useState('')
-  const [confirm, setConfirm] = useState('')
-  const [showPassword, setShowPassword] = useState(false)
-  const [error, setError] = useState('')
-  const [submitted, setSubmitted] = useState(false)
+  const [password, setPassword] = useState('');
+  const [confirm, setConfirm] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState('');
+  const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (event: React.FormEvent): void => {
-    event.preventDefault()
+    event.preventDefault();
     if (!password || !confirm) {
-      setError('Enter your new password.')
-      return
+      setError('Enter your new password.');
+      return;
     }
     if (password !== confirm) {
-      setError("Passwords don't match.")
-      return
+      setError("Passwords don't match.");
+      return;
     }
-    setError('')
-    setSubmitted(true)
-  }
+    setError('');
+    setSubmitted(true);
+  };
 
   return (
     <main className="bg-base-200 flex min-h-screen items-center justify-center p-4">
@@ -40,10 +40,14 @@ const ResetPasswordPage: FC = () => {
               Choose a new password for your account
             </p>
 
-            {error && <div className="alert alert-error mb-4 text-sm">{error}</div>}
+            {error && (
+              <div className="alert alert-error mb-4 text-sm">{error}</div>
+            )}
 
             {submitted ? (
-              <div className="alert alert-success text-sm">Your password has been reset.</div>
+              <div className="alert alert-success text-sm">
+                Your password has been reset.
+              </div>
             ) : (
               <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                 <div className="form-control">
@@ -62,9 +66,10 @@ const ResetPasswordPage: FC = () => {
                     <button
                       type="button"
                       onClick={() => setShowPassword((v) => !v)}
-                      aria-label={showPassword ? 'Hide password' : 'Show password'}
-                      className="text-base-content/40 hover:text-base-content absolute top-1/2 right-3 -translate-y-1/2"
-                    >
+                      aria-label={
+                        showPassword ? 'Hide password' : 'Show password'
+                      }
+                      className="text-base-content/40 hover:text-base-content absolute top-1/2 right-3 -translate-y-1/2">
                       {showPassword ? (
                         <FiEyeOff className="h-5 w-5" />
                       ) : (
@@ -102,7 +107,7 @@ const ResetPasswordPage: FC = () => {
         </p>
       </div>
     </main>
-  )
-}
+  );
+};
 
-export default ResetPasswordPage
+export default ResetPasswordPage;

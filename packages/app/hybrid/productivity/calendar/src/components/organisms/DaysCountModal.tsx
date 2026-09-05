@@ -1,22 +1,22 @@
-'use client'
+'use client';
 
-import { FC, useMemo, useRef, useState } from 'react'
-import { daysBetween } from '@/lib/daysBetween'
+import { FC, useMemo, useRef, useState } from 'react';
+import { daysBetween } from '@/lib/daysBetween';
 
-const todayString = (): string => new Date().toISOString().split('T')[0]
+const todayString = (): string => new Date().toISOString().split('T')[0];
 
 export const DaysCountModal: FC = () => {
-  const dialogRef = useRef<HTMLDialogElement>(null)
-  const [fromDate, setFromDate] = useState('')
-  const [toDate, setToDate] = useState('')
+  const dialogRef = useRef<HTMLDialogElement>(null);
+  const [fromDate, setFromDate] = useState('');
+  const [toDate, setToDate] = useState('');
 
   const result = useMemo(() => {
-    if (!fromDate || !toDate) return null
-    const from = new Date(fromDate)
-    const to = new Date(toDate)
-    if (isNaN(from.getTime()) || isNaN(to.getTime())) return null
-    return daysBetween(from, to)
-  }, [fromDate, toDate])
+    if (!fromDate || !toDate) return null;
+    const from = new Date(fromDate);
+    const to = new Date(toDate);
+    if (isNaN(from.getTime()) || isNaN(to.getTime())) return null;
+    return daysBetween(from, to);
+  }, [fromDate, toDate]);
 
   const durationParts = result
     ? [
@@ -24,10 +24,10 @@ export const DaysCountModal: FC = () => {
         ...(result.months > 0 ? [`${result.months} m`] : []),
         `${result.days} d`,
       ]
-    : []
+    : [];
 
-  const open = () => dialogRef.current?.showModal()
-  const close = () => dialogRef.current?.close()
+  const open = () => dialogRef.current?.showModal();
+  const close = () => dialogRef.current?.close();
 
   return (
     <>
@@ -37,13 +37,17 @@ export const DaysCountModal: FC = () => {
 
       <dialog ref={dialogRef} className="modal">
         <div className="modal-box border-base-content/10 bg-base-100 border">
-          <h3 className="text-base-content mb-4 text-lg font-semibold">Days Count</h3>
+          <h3 className="text-base-content mb-4 text-lg font-semibold">
+            Days Count
+          </h3>
 
           <div className="space-y-4">
             <div className="flex items-end gap-2">
               <div className="form-control flex-1">
                 <label className="label mb-1 p-0">
-                  <span className="label-text text-xs font-normal opacity-70">From</span>
+                  <span className="label-text text-xs font-normal opacity-70">
+                    From
+                  </span>
                 </label>
                 <input
                   type="date"
@@ -54,8 +58,7 @@ export const DaysCountModal: FC = () => {
               </div>
               <button
                 className="btn btn-outline btn-sm mb-0.5"
-                onClick={() => setFromDate(todayString())}
-              >
+                onClick={() => setFromDate(todayString())}>
                 Today
               </button>
             </div>
@@ -63,7 +66,9 @@ export const DaysCountModal: FC = () => {
             <div className="flex items-end gap-2">
               <div className="form-control flex-1">
                 <label className="label mb-1 p-0">
-                  <span className="label-text text-xs font-normal opacity-70">To</span>
+                  <span className="label-text text-xs font-normal opacity-70">
+                    To
+                  </span>
                 </label>
                 <input
                   type="date"
@@ -74,8 +79,7 @@ export const DaysCountModal: FC = () => {
               </div>
               <button
                 className="btn btn-outline btn-sm mb-0.5"
-                onClick={() => setToDate(todayString())}
-              >
+                onClick={() => setToDate(todayString())}>
                 Today
               </button>
             </div>
@@ -84,12 +88,16 @@ export const DaysCountModal: FC = () => {
               <div className="space-y-2 rounded-xl p-3">
                 <div className="flex items-center justify-between">
                   <span className="text-xs opacity-70">Total Days</span>
-                  <span className="text-lg font-normal">{result.totalDays.toLocaleString()}</span>
+                  <span className="text-lg font-normal">
+                    {result.totalDays.toLocaleString()}
+                  </span>
                 </div>
                 <div className="divider my-1" />
                 <div className="flex items-center justify-between">
                   <span className="text-xs opacity-70">Duration</span>
-                  <span className="text-sm font-normal">{durationParts.join(' ')}</span>
+                  <span className="text-sm font-normal">
+                    {durationParts.join(' ')}
+                  </span>
                 </div>
               </div>
             )}
@@ -107,6 +115,6 @@ export const DaysCountModal: FC = () => {
         </form>
       </dialog>
     </>
-  )
-}
-DaysCountModal.displayName = 'DaysCountModal'
+  );
+};
+DaysCountModal.displayName = 'DaysCountModal';

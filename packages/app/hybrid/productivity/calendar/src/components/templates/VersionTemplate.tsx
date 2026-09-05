@@ -1,24 +1,26 @@
-'use client'
+'use client';
 
-import type { FC } from 'react'
-import { useState } from 'react'
-import { FiCheck, FiCopy } from 'react-icons/fi'
+import type { FC } from 'react';
+import { useState } from 'react';
+import { FiCheck, FiCopy } from 'react-icons/fi';
 
 export const VersionTemplate: FC<{ version: string }> = ({ version }) => {
-  const [copied, setCopied] = useState(false)
+  const [copied, setCopied] = useState(false);
 
   const copy = async () => {
-    await navigator.clipboard.writeText(version)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 1500)
-  }
+    await navigator.clipboard.writeText(version);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 1500);
+  };
 
-  const [year, month, day, hh, mm, ss] = version.split('.')
-  const hasSegments = year && month && day
+  const [year, month, day, hh, mm, ss] = version.split('.');
+  const hasSegments = year && month && day;
 
   return (
     <div className="mx-auto flex w-full max-w-2xl flex-col items-center gap-6 px-6 py-16 text-center">
-      <p className="text-base-content/50 text-xs uppercase tracking-[0.2em]">Current deployment</p>
+      <p className="text-base-content/50 text-xs tracking-[0.2em] uppercase">
+        Current deployment
+      </p>
 
       <h1 className="mb-1">Version</h1>
 
@@ -50,15 +52,16 @@ export const VersionTemplate: FC<{ version: string }> = ({ version }) => {
             )}
           </div>
         ) : (
-          <p className="text-error font-mono text-xl font-bold break-all">{version}</p>
+          <p className="text-error font-mono text-xl font-bold break-all">
+            {version}
+          </p>
         )}
       </div>
 
       <div className="flex flex-wrap justify-center gap-3">
         <button
           onClick={copy}
-          className={`btn btn-sm rounded-full ${copied ? 'btn-success' : 'btn-primary'}`}
-        >
+          className={`btn btn-sm rounded-full ${copied ? 'btn-success' : 'btn-primary'}`}>
           {copied ? <FiCheck /> : <FiCopy />}
           {copied ? 'Copied' : 'Copy version'}
         </button>
@@ -74,8 +77,8 @@ export const VersionTemplate: FC<{ version: string }> = ({ version }) => {
         <span className="badge badge-neutral rounded-full">Stable</span>
       </div>
     </div>
-  )
-}
+  );
+};
 
 const Segment: FC<{ value: string; label: string; primary?: boolean }> = ({
   value,
@@ -84,14 +87,17 @@ const Segment: FC<{ value: string; label: string; primary?: boolean }> = ({
 }) => (
   <div className="flex flex-col items-center px-4">
     <span
-      className={`font-mono text-2xl font-bold ${primary ? 'text-primary' : 'text-base-content'}`}
-    >
+      className={`font-mono text-2xl font-bold ${primary ? 'text-primary' : 'text-base-content'}`}>
       {value}
     </span>
-    <span className="text-base-content/50 mt-1 text-xs uppercase tracking-[0.2em]">{label}</span>
+    <span className="text-base-content/50 mt-1 text-xs tracking-[0.2em] uppercase">
+      {label}
+    </span>
   </div>
-)
+);
 
-const Dot: FC = () => <span className="text-base-content/50 font-mono text-xl">.</span>
+const Dot: FC = () => (
+  <span className="text-base-content/50 font-mono text-xl">.</span>
+);
 
-VersionTemplate.displayName = 'VersionTemplate'
+VersionTemplate.displayName = 'VersionTemplate';

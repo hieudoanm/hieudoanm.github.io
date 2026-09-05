@@ -1,19 +1,19 @@
-'use client'
+'use client';
 
-import { type FC, useState } from 'react'
-import Link from 'next/link'
-import { FiUser, FiMail, FiLogIn, FiCamera, FiCheck } from 'react-icons/fi'
+import { type FC, useState } from 'react';
+import Link from 'next/link';
+import { FiUser, FiMail, FiLogIn, FiCamera, FiCheck } from 'react-icons/fi';
 
 const ProfilePage: FC = () => {
-  const [name, setName] = useState('Alex Johnson')
-  const [email, setEmail] = useState('alex@example.com')
-  const [saved, setSaved] = useState(false)
+  const [name, setName] = useState('Alex Johnson');
+  const [email, setEmail] = useState('alex@example.com');
+  const [saved, setSaved] = useState(false);
 
   const handleSubmit = (event: React.FormEvent): void => {
-    event.preventDefault()
-    setSaved(true)
-    setTimeout(() => setSaved(false), 2000)
-  }
+    event.preventDefault();
+    setSaved(true);
+    setTimeout(() => setSaved(false), 2000);
+  };
 
   return (
     <main className="bg-base-200 flex min-h-screen items-center justify-center p-4">
@@ -28,8 +28,7 @@ const ProfilePage: FC = () => {
                 <button
                   type="button"
                   aria-label="Change photo"
-                  className="btn btn-ghost btn-sm absolute -right-1 -bottom-1 rounded-full"
-                >
+                  className="btn btn-ghost btn-sm absolute -right-1 -bottom-1 rounded-full">
                   <FiCamera className="h-4 w-4" />
                 </button>
               </div>
@@ -89,7 +88,7 @@ const ProfilePage: FC = () => {
         </p>
       </div>
     </main>
-  )
-}
+  );
+};
 
-export default ProfilePage
+export default ProfilePage;

@@ -92,7 +92,8 @@ The app is a single-page editor — all editing happens in one view.
 
 ## Styling
 
-- **Tailwind CSS 4** + **DaisyUI 5** (dark default via `data-theme="spreadsheet"`)
+- **Tailwind CSS 4** + **DaisyUI 5** (dark default via
+  `data-theme="spreadsheet"`)
 - Monospace font for cell content (`JetBrains_Mono`)
 - Sticky first column + header row for scrolling long grids
 

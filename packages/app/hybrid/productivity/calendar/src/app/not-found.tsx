@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import { ErrorTemplate } from '@/components/templates/ErrorTemplate'
+import Link from 'next/link';
+import { ErrorTemplate } from '@/components/templates/ErrorTemplate';
 
 const NotFoundPage = () => (
   <ErrorTemplate
@@ -11,6 +11,6 @@ const NotFoundPage = () => (
       </Link>
     }
   />
-)
+);
 
-export default NotFoundPage
+export default NotFoundPage;

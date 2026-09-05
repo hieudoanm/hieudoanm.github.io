@@ -1,7 +1,7 @@
 export interface TimeBlock {
-  label: string
-  start: number
-  end: number
+  label: string;
+  start: number;
+  end: number;
 }
 
 export const TIME_BLOCKS: TimeBlock[] = [
@@ -13,4 +13,4 @@ export const TIME_BLOCKS: TimeBlock[] = [
   { label: 'Dinner', start: 18, end: 19 },
   { label: 'Exercise', start: 19, end: 21 },
   { label: 'Relaxation', start: 21, end: 24 },
-]
+];

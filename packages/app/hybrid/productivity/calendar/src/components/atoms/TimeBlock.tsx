@@ -1,16 +1,20 @@
-import { FC } from 'react'
-import { TimeBlock as TimeBlockType } from '@/data/timeBlocks'
+import { FC } from 'react';
+import { TimeBlock as TimeBlockType } from '@/data/timeBlocks';
 
-const HOUR_HEIGHT = 56
+const HOUR_HEIGHT = 56;
 
 interface TimeBlockProps {
-  block: TimeBlockType
-  currentHour: number
-  isActive: boolean
+  block: TimeBlockType;
+  currentHour: number;
+  isActive: boolean;
 }
 
-export const TimeBlock: FC<TimeBlockProps> = ({ block, currentHour, isActive }) => {
-  const hours = block.end - block.start
+export const TimeBlock: FC<TimeBlockProps> = ({
+  block,
+  currentHour,
+  isActive,
+}) => {
+  const hours = block.end - block.start;
 
   return (
     <div
@@ -25,21 +29,20 @@ export const TimeBlock: FC<TimeBlockProps> = ({ block, currentHour, isActive }) 
         isActive
           ? 'bg-base-content/20 border-base-content/40 shadow-sm'
           : 'bg-base-content/10 border-base-content/20 opacity-80'
-      }`}
-    >
+      }`}>
       <span
-        className={`shrink-0 font-mono text-[10px] tabular-nums ${isActive ? 'opacity-80' : 'opacity-50'}`}
-      >
-        {String(block.start).padStart(2, '0')}–{String(block.end).padStart(2, '0')}
+        className={`shrink-0 font-mono text-[10px] tabular-nums ${isActive ? 'opacity-80' : 'opacity-50'}`}>
+        {String(block.start).padStart(2, '0')}–
+        {String(block.end).padStart(2, '0')}
       </span>
 
-      <span className={`flex-1 text-xs font-normal ${isActive ? 'opacity-100' : 'opacity-60'}`}>
+      <span
+        className={`flex-1 text-xs font-normal ${isActive ? 'opacity-100' : 'opacity-60'}`}>
         {block.label}
       </span>
 
       <span
-        className={`shrink-0 font-mono text-[10px] tabular-nums ${isActive ? 'opacity-60' : 'opacity-30'}`}
-      >
+        className={`shrink-0 font-mono text-[10px] tabular-nums ${isActive ? 'opacity-60' : 'opacity-30'}`}>
         {hours}h
       </span>
 
@@ -54,6 +57,6 @@ export const TimeBlock: FC<TimeBlockProps> = ({ block, currentHour, isActive }) 
         </div>
       )}
     </div>
-  )
-}
-TimeBlock.displayName = 'TimeBlock'
+  );
+};
+TimeBlock.displayName = 'TimeBlock';

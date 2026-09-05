@@ -1,6 +1,6 @@
-import { VersionTemplate } from '@/components/templates/VersionTemplate'
-import { buildVersion } from '@/content/version'
+import { VersionTemplate } from '@/components/templates/VersionTemplate';
+import { buildVersion } from '@/content/version';
 
-const VersionPage = () => <VersionTemplate version={buildVersion} />
+const VersionPage = () => <VersionTemplate version={buildVersion} />;
 
-export default VersionPage
+export default VersionPage;

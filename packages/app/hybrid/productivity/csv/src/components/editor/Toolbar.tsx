@@ -105,7 +105,7 @@ const Toolbar: FC<ToolbarProps> = ({
   };
 
   return (
-    <div className="no-print flex flex-wrap items-center gap-1 border-b border-base-300 bg-base-200 px-2 py-1.5">
+    <div className="no-print border-base-300 bg-base-200 flex flex-wrap items-center gap-1 border-b px-2 py-1.5">
       <button className={buttonClass} onClick={onUndo} disabled={!canUndo}>
         <FiArrowLeft /> Undo
       </button>

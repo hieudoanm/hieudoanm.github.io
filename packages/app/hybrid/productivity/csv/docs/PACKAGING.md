@@ -1,7 +1,7 @@
 # CSV — Packaging Checklist
 
-Checklist for shipping CSV to users: macOS notarization, Windows
-code-signing, Android/iOS store builds, and the Tauri updater pipeline.
+Checklist for shipping CSV to users: macOS notarization, Windows code-signing,
+Android/iOS store builds, and the Tauri updater pipeline.
 
 App: `csv` (bundle identifier `io.github.hieudoanm.csv`, version 0.0.1).
 

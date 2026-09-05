@@ -1,8 +1,8 @@
 # CSV
 
-> A minimal Excel / Google Sheets that runs entirely offline — formulas, multiple
-> sheets, and import/export without the bloat. Works on your phone, tablet,
-> laptop, and desktop so your data is always at hand.
+> A minimal Excel / Google Sheets that runs entirely offline — formulas,
+> multiple sheets, and import/export without the bloat. Works on your phone,
+> tablet, laptop, and desktop so your data is always at hand.
 
 ![Android 14+](https://img.shields.io/badge/Android-14%2B-green)
 ![Linux](https://img.shields.io/badge/Linux-22.04%2B-blue)
@@ -51,16 +51,26 @@ Pick the right file for your platform.
 | 7   | Windows  |        | x64          | 10.+         | [Download `.msi`][download-msi]            |                  |
 | 8   | Windows  |        | x64          | 10.+         | [Download `.exe`][download-exe]            | Portable         |
 
-[download-apk]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-csv-latest/csv.apk
-[download-aab]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-csv-latest/csv.aab
-[download-app-image]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-csv-latest/csv.AppImage
-[download-deb]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-csv-latest/csv.deb
-[download-rpm]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-csv-latest/csv.rpm
-[download-dmg]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-csv-latest/csv.dmg
-[download-msi]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-csv-latest/csv.msi
-[download-exe]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-csv-latest/csv.exe
+[download-apk]:
+  https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-csv-latest/csv.apk
+[download-aab]:
+  https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-csv-latest/csv.aab
+[download-app-image]:
+  https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-csv-latest/csv.AppImage
+[download-deb]:
+  https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-csv-latest/csv.deb
+[download-rpm]:
+  https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-csv-latest/csv.rpm
+[download-dmg]:
+  https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-csv-latest/csv.dmg
+[download-msi]:
+  https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-csv-latest/csv.msi
+[download-exe]:
+  https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-csv-latest/csv.exe
 
-¹ The `.aab` bundle is used when submitting to the Google Play Store; install the `.apk` directly on devices instead. ² The `.dmg` is built for Apple Silicon (M-series) Macs.
+¹ The `.aab` bundle is used when submitting to the Google Play Store; install
+the `.apk` directly on devices instead. ² The `.dmg` is built for Apple Silicon
+(M-series) Macs.
 
 ## First run
 
@@ -75,7 +85,8 @@ Pick the right file for your platform.
 > you can confirm the file you got is exactly the file we shipped. See
 > [SHA256SUMS.txt][checksums].
 
-[checksums]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-csv-latest/SHA256SUMS.txt
+[checksums]:
+  https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-productivity-csv-latest/SHA256SUMS.txt
 
 ### Build from Source
 

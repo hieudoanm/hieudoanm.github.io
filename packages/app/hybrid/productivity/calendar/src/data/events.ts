@@ -1,12 +1,12 @@
 export interface Event {
-  year: number
-  month: number
-  date: number
-  frequency: 'annual'
-  type: string
-  country: string
-  field: string
-  title: string
+  year: number;
+  month: number;
+  date: number;
+  frequency: 'annual';
+  type: string;
+  country: string;
+  field: string;
+  title: string;
 }
 
 export const events: Event[] = [
@@ -7080,4 +7080,4 @@ export const events: Event[] = [
     country: 'United States',
     field: 'Speaker of the House',
   },
-]
+];
