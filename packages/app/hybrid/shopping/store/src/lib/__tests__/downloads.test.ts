@@ -1,5 +1,9 @@
-import { parseDownloads, getRecommendedDownload } from '../downloads';
-import type { RawSection } from '../downloads';
+import {
+  parseDownloads,
+  getRecommendedDownload,
+  getReleasePageUrl,
+} from '../downloads';
+import type { AppData, RawSection } from '../downloads';
 
 const mockSections: RawSection[] = [
   {
@@ -402,5 +406,56 @@ describe('getRecommendedDownload', () => {
     const apps = parseDownloads(mockSections);
     const rec = getRecommendedDownload(apps[1], 'windows');
     expect(rec).toBeUndefined();
+  });
+});
+
+describe('getReleasePageUrl', () => {
+  const RELEASES = 'https://github.com/hieudoanm/hieudoanm.github.io/releases';
+
+  const appWithDownloads = (urls: { label: string; url: string }[]): AppData =>
+    ({
+      slug: 'demo',
+      label: 'Demo',
+      primaryCategory: 'Utility',
+      secondaryCategory: 'General',
+      section: 'hybrid',
+      icon: 'PiPackage',
+      href: 'https://hieudoanm.github.io/free/demo',
+      platforms: ['macos', 'windows', 'linux', 'android', 'ios'],
+      downloads: urls.map((u) => ({
+        platform: 'unknown',
+        version: '',
+        ...u,
+      })),
+      version: '1.0.0',
+      lastUpdated: '2025-01-01',
+      fileSize: '10 MB',
+      screenshots: [],
+    }) as AppData;
+
+  it('returns release tag page derived from download URL', () => {
+    const app = appWithDownloads([
+      {
+        label: '.aab',
+        url: `${RELEASES}/download/app-hybrid-games-8-bit-latest/8-bit.aab`,
+      },
+    ]);
+    expect(getReleasePageUrl(app)).toBe(
+      `${RELEASES}/tag/app-hybrid-games-8-bit-latest`
+    );
+  });
+
+  it('returns href directly when it is already a release tag page', () => {
+    const app = appWithDownloads([]);
+    app.href = `${RELEASES}/tag/extensions-browser-bored-latest`;
+    expect(getReleasePageUrl(app)).toBe(
+      `${RELEASES}/tag/extensions-browser-bored-latest`
+    );
+  });
+
+  it('returns empty string when no downloadable release exists', () => {
+    const app = appWithDownloads([]);
+    app.href = 'https://hieudoanm.github.io/free/demo';
+    expect(getReleasePageUrl(app)).toBe('');
   });
 });

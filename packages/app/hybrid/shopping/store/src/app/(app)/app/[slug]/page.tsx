@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { existsSync } from 'node:fs';
 import { join } from 'node:path';
-import { parseDownloads } from '@/lib/downloads';
+import { parseDownloads, getReleasePageUrl } from '@/lib/downloads';
 import downloads from '@/data/downloads.json';
 import { AppPage } from '@/components/organisms/AppPage';
 
@@ -43,7 +43,13 @@ export const generateMetadata = async ({
 
 const Page = async ({ params }: PageProps) => {
   const { slug } = await params;
-  return <AppPage screenshots={getScreenshots(slug)} />;
+  const app = ALL_APPS.find((a) => a.slug === slug);
+  return (
+    <AppPage
+      screenshots={getScreenshots(slug)}
+      releaseUrl={app ? getReleasePageUrl(app) : ''}
+    />
+  );
 };
 
 export default Page;

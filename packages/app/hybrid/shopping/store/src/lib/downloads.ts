@@ -66,6 +66,22 @@ export const getDownloadFormat = (download: DownloadOption): string => {
   return match ? match[1].toLowerCase() : 'other';
 };
 
+const RELEASES_BASE =
+  'https://github.com/hieudoanm/hieudoanm.github.io/releases';
+
+const parseReleaseTag = (url: string): string | undefined => {
+  const match = url.match(/\/releases\/download\/([^/]+)\//);
+  return match ? match[1] : undefined;
+};
+
+export const getReleasePageUrl = (app: AppData): string => {
+  if (app.href.includes('/releases/tag/')) return app.href;
+  const tag = app.downloads
+    .map((d) => parseReleaseTag(d.url))
+    .find((t): t is string => Boolean(t));
+  return tag ? `${RELEASES_BASE}/tag/${tag}` : '';
+};
+
 export type RawSection = {
   id: string;
   label: string;
