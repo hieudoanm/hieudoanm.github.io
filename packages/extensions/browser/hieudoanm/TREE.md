@@ -18,19 +18,15 @@
 │       ├── v2/
 │       │   └── [manifest.json](./public/manifest/v2/manifest.json)
 │       └── v3/
-│           ├── [manifest.json](./public/manifest/v3/manifest.json)
-│           └── [rules.json](./public/manifest/v3/rules.json)
+│           └── [manifest.json](./public/manifest/v3/manifest.json)
 ├── src/
 │   ├── background/
-│   │   ├── [ad-blocker.ts](./src/background/ad-blocker.ts)
 │   │   ├── [claude-limit.ts](./src/background/claude-limit.ts)
 │   │   ├── [index.ts](./src/background/index.ts)
 │   │   └── [youtube-transcript.ts](./src/background/youtube-transcript.ts)
 │   └── content/
-│       ├── [ad-blocker.ts](./src/content/ad-blocker.ts)
 │       ├── [chess-focus.ts](./src/content/chess-focus.ts)
 │       ├── [claude-limit.ts](./src/content/claude-limit.ts)
-│       ├── [index.ts](./src/content/index.ts)
 │       ├── [shopify-detect.ts](./src/content/shopify-detect.ts)
 │       └── [youtube-transcript.ts](./src/content/youtube-transcript.ts)
 ├── [AGENTS.md](./AGENTS.md)

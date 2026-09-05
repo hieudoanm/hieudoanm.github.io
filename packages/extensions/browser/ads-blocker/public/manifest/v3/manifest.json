@@ -1,0 +1,51 @@
+{
+  "name": "Ads Blocker",
+  "version": "0.0.1",
+  "description": "Blocks ads, banners, and tracking requests across every web page.",
+  "author": "Hieu Doan",
+  "icons": {
+    "16": "icons/16x16.png",
+    "48": "icons/48x48.png",
+    "128": "icons/128x128.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "ads-blocker-extension@hieudoanm.github.io"
+    }
+  },
+  "homepage_url": "https://hieudoanm.github.io",
+  "offline_enabled": true,
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Ads Blocker",
+    "default_icon": {
+      "16": "icons/16x16.png",
+      "48": "icons/48x48.png",
+      "128": "icons/128x128.png"
+    }
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_block",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "manifest_version": 3
+}

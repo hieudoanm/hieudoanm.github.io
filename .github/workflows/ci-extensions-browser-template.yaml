@@ -96,11 +96,22 @@ jobs:
         run: |
           RELEASE_NAME="${{ inputs.releaseName }}"
           RELEASE_TITLE="${{ inputs.releaseTitle }}"
+          NOTES_FILE="${{ inputs.package }}/docs/DOWNLOADS.md"
+          RELEASE_NOTES="release-notes.md"
+          {
+            echo "Auto-built Extension from commit ${{ github.sha }}"
+            if [[ -f "$NOTES_FILE" ]]; then
+              echo ""
+              echo "---"
+              echo ""
+              cat "$NOTES_FILE"
+            fi
+          } > "$RELEASE_NOTES"
           mapfile -d '' -t files < <(find release -type f -print0 | sort -z)
           gh release delete "$RELEASE_NAME" --yes --cleanup-tag 2>/dev/null || true
           gh release create "$RELEASE_NAME" \
             --title "$RELEASE_TITLE" \
-            --notes "Auto-built Extension from commit ${{ github.sha }}" \
+            --notes-file "$RELEASE_NOTES" \
             "${files[@]}"
         env:
           GH_TOKEN: ${{ github.token }}

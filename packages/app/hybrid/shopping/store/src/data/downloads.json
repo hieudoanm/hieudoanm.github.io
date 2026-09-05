@@ -2168,6 +2168,42 @@
     "label": "Extensions (Browser)",
     "items": [
       {
+        "label": "Ads Blocker",
+        "primaryCategory": "Utilities",
+        "secondaryCategory": "Privacy",
+        "icon": "PiShieldCheck",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/extensions-browser-ads-blocker-latest",
+        "version": "0.0.1",
+        "lastUpdated": "2026-09-06",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": "v2.crx",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-ads-blocker-latest/ads-blocker-v2.crx"
+          },
+          {
+            "label": "v2.xpi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-ads-blocker-latest/ads-blocker-v2.xpi"
+          },
+          {
+            "label": "v2.zip",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-ads-blocker-latest/ads-blocker-v2.zip"
+          },
+          {
+            "label": "v3.crx",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-ads-blocker-latest/ads-blocker-v3.crx"
+          },
+          {
+            "label": "v3.xpi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-ads-blocker-latest/ads-blocker-v3.xpi"
+          },
+          {
+            "label": "v3.zip",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-ads-blocker-latest/ads-blocker-v3.zip"
+          }
+        ]
+      },
+      {
         "label": "Bored",
         "primaryCategory": "Games",
         "secondaryCategory": "Entertainment",
@@ -2240,6 +2276,42 @@
         ]
       },
       {
+        "label": "hieudoanm Extension",
+        "primaryCategory": "Productivity",
+        "secondaryCategory": "Developer Tools",
+        "icon": "PiUserCircle",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/extensions-browser-hieudoanm-extension-latest",
+        "version": "1.0.0",
+        "lastUpdated": "2026-09-06",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": "v2.crx",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-hieudoanm-extension-latest/hieudoanm-extension-v2.crx"
+          },
+          {
+            "label": "v2.xpi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-hieudoanm-extension-latest/hieudoanm-extension-v2.xpi"
+          },
+          {
+            "label": "v2.zip",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-hieudoanm-extension-latest/hieudoanm-extension-v2.zip"
+          },
+          {
+            "label": "v3.crx",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-hieudoanm-extension-latest/hieudoanm-extension-v3.crx"
+          },
+          {
+            "label": "v3.xpi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-hieudoanm-extension-latest/hieudoanm-extension-v3.xpi"
+          },
+          {
+            "label": "v3.zip",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-hieudoanm-extension-latest/hieudoanm-extension-v3.zip"
+          }
+        ]
+      },
+      {
         "label": "InstaX",
         "primaryCategory": "Social Networking",
         "secondaryCategory": "",
@@ -2272,6 +2344,42 @@
           {
             "label": "v3.zip",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-instax-latest/instax-v3.zip"
+          }
+        ]
+      },
+      {
+        "label": "New Tab",
+        "primaryCategory": "Productivity",
+        "secondaryCategory": "",
+        "icon": "PiTabs",
+        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/extensions-browser-new-tab-latest",
+        "version": "0.0.1",
+        "lastUpdated": "2026-09-06",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": "v2.crx",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-new-tab-latest/new-tab-v2.crx"
+          },
+          {
+            "label": "v2.xpi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-new-tab-latest/new-tab-v2.xpi"
+          },
+          {
+            "label": "v2.zip",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-new-tab-latest/new-tab-v2.zip"
+          },
+          {
+            "label": "v3.crx",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-new-tab-latest/new-tab-v3.crx"
+          },
+          {
+            "label": "v3.xpi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-new-tab-latest/new-tab-v3.xpi"
+          },
+          {
+            "label": "v3.zip",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-new-tab-latest/new-tab-v3.zip"
           }
         ]
       },

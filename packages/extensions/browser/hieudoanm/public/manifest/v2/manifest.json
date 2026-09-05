@@ -1,7 +1,7 @@
 {
   "name": "hieudoanm Extension",
   "version": "1.0.0",
-  "description": "Block ads, track Claude usage, detect Shopify stores, and hide chess.com ratings.",
+  "description": "Track Claude usage, detect Shopify stores, and hide chess.com ratings.",
   "author": "Hieu Doan",
   "icons": {
     "128": "icons/128x128.png"
@@ -13,19 +13,9 @@
   },
   "homepage_url": "https://hieudoanm.github.io",
   "offline_enabled": true,
-  "permissions": [
-    "activeTab",
-    "tabs",
-    "storage",
-    "webRequest",
-    "webRequestBlocking",
-    "scripting",
-    "<all_urls>"
-  ],
+  "permissions": ["activeTab", "tabs", "storage", "scripting", "<all_urls>"],
   "background": {
-    "scripts": [
-      "background.js"
-    ],
+    "scripts": ["background.js"],
     "persistent": false
   },
   "browser_action": {
@@ -36,45 +26,20 @@
   },
   "content_scripts": [
     {
-      "matches": [
-        "<all_urls>"
-      ],
-      "js": [
-        "content.js"
-      ],
-      "run_at": "document_start"
+      "matches": ["*://*.chess.com/*"],
+      "js": ["chess.js"]
     },
     {
-      "matches": [
-        "*://*.chess.com/*"
-      ],
-      "js": [
-        "chess.js"
-      ]
+      "matches": ["<all_urls>"],
+      "js": ["shopify.js"]
     },
     {
-      "matches": [
-        "<all_urls>"
-      ],
-      "js": [
-        "shopify.js"
-      ]
+      "matches": ["*://*.claude.ai/*"],
+      "js": ["claude.js"]
     },
     {
-      "matches": [
-        "*://*.claude.ai/*"
-      ],
-      "js": [
-        "claude.js"
-      ]
-    },
-    {
-      "matches": [
-        "*://www.youtube.com/watch*"
-      ],
-      "js": [
-        "youtube.js"
-      ],
+      "matches": ["*://www.youtube.com/watch*"],
+      "js": ["youtube.js"],
       "run_at": "document_idle"
     }
   ],

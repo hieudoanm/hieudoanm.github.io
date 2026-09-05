@@ -8,11 +8,8 @@ const baseConfig = {
   mode,
   devtool: isProduction ? 'source-map' : 'inline-source-map',
   entry: {
-    background: './src/background/index.ts',
-    chess: './src/content/chess-focus.ts',
-    shopify: './src/content/shopify-detect.ts',
-    claude: './src/content/claude-limit.ts',
-    youtube: './src/content/youtube-transcript.ts',
+    background: './src/background.ts',
+    content: './src/content.ts',
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.jsx', '.js', '...'],
@@ -50,7 +47,7 @@ export default [
           {
             from: 'public',
             to: '.',
-            globOptions: { ignore: ['**/manifest/**'] },
+            globOptions: { ignore: ['**/manifest/**', '**/rules.json'] },
           },
           { from: 'public/manifest/v2/manifest.json', to: 'manifest.json' },
           { from: 'public/icons', to: 'icons' },
@@ -75,6 +72,7 @@ export default [
           },
           { from: 'public/manifest/v3/manifest.json', to: 'manifest.json' },
           { from: 'public/icons', to: 'icons' },
+          { from: 'public/manifest/v3/rules.json', to: 'rules.json' },
         ],
       }),
     ],

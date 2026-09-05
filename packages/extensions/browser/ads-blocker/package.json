@@ -1,8 +1,8 @@
 {
-  "name": "@hieudoanm.github.io/extension",
+  "name": "@hieudoanm.github.io/ads-blocker",
   "version": "0.0.1",
   "private": true,
-  "description": "Enhance Claude.ai, Shopify, chess.com, and YouTube browsing.",
+  "description": "Ads Blocker Extension - blocks ads and banners across every web page.",
   "main": "dist/background.js",
   "repository": {
     "type": "git",
@@ -51,9 +51,9 @@
     "webpack-cli": "7.2.3"
   },
   "keywords": [
-    "claude",
-    "shopify",
-    "chess",
-    "youtube"
+    "ads",
+    "adblock",
+    "blocker",
+    "banners"
   ]
 }

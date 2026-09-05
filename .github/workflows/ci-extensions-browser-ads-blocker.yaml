@@ -1,0 +1,32 @@
+name: CI - Extensions - Browser - Ads Blocker
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/extensions/browser/ads-blocker/**'
+      - '.github/workflows/ci-extensions-browser-ads-blocker.yaml'
+      - '.github/workflows/ci-extensions-browser-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-extensions-browser-ads-blocker-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-extensions-browser-template.yaml
+    with:
+      package: packages/extensions/browser/ads-blocker
+      filter: '@hieudoanm.github.io/ads-blocker'
+      releaseName: extensions-browser-ads-blocker-latest
+      releaseTitle: Extensions - Browser - Ads Blocker (latest)
+      artifactPrefix: extensions-browser-ads-blocker

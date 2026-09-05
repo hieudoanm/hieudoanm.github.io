@@ -16,7 +16,7 @@
 
 | No  | Group                               | Extension                                |
 | --- | ----------------------------------- | ---------------------------------------- |
-| 1   | Block                               | [block/ads][block-ads]                   |
+| 1   | Block                               | [block/ads-browser][ads-browser]         |
 | 2   | Block                               | [block/sites][block-sites]               |
 | 3   | [Chess](https://chess.com)          | [chess/focus][chess-focus]               |
 | 4   | [Claude](https://claude.ai)         | [claude/limit][claude-limit]             |
@@ -27,7 +27,7 @@
 | 9   | Tab                                 | [tab/snapshot][tab-snapshot]             |
 | 10  | [Youtube](https://www.youtube.com/) | [youtube/transcript][youtube-transcript] |
 
-[block-ads]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/block/ads
+[ads-browser]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/ads-blocker
 [block-sites]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/block/sites
 [chess-focus]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/chess/focus
 [claude-limit]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/claude/limit
