@@ -7,6 +7,7 @@ import { AppHeader } from './sections/AppHeader';
 import { DownloadSection } from './sections/DownloadSection';
 import { ScreenshotCarousel } from './sections/ScreenshotCarousel';
 import { SystemRequirements } from './sections/SystemRequirements';
+import { WebVersion } from './sections/WebVersion';
 import { RelatedApps } from './sections/RelatedApps';
 import { BackLink } from './sections/BackLink';
 
@@ -24,6 +25,7 @@ export const AppInfo: FC<AppInfoProps> = ({ app, allApps }) => {
       <AppHeader app={app} />
       <ScreenshotCarousel screenshots={screenshots} label={app.label} />
       <SystemRequirements app={app} />
+      <WebVersion app={app} />
       <DownloadSection app={app} />
       {allApps && <RelatedApps app={app} allApps={allApps} />}
       <BackLink />

@@ -55,6 +55,18 @@ describe('AppInfo', () => {
     expect(screen.getByText('Download Options')).toBeTruthy();
   });
 
+  it('renders the web version link for hybrid apps', () => {
+    render(<AppInfo app={mockApp} />);
+    const link = screen.getByRole('link', { name: /Open in Browser/ });
+    expect(link).toHaveAttribute('href', 'https://github.com/test');
+  });
+
+  it('does not render the web version link for non-hybrid apps', () => {
+    const app = { ...mockApp, section: 'android' as const };
+    render(<AppInfo app={app} />);
+    expect(screen.queryByRole('link', { name: /Open in Browser/ })).toBeNull();
+  });
+
   it('renders platform groups', () => {
     render(<AppInfo app={mockApp} />);
     expect(screen.getAllByText('macOS').length).toBeGreaterThan(0);
