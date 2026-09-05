@@ -1,7 +1,7 @@
 {
   "name": "hieudoanm Extension",
   "version": "1.0.0",
-  "description": "Block ads, track Claude usage, detect Shopify stores, hide chess.com ratings, and redirect new tab.",
+  "description": "Block ads, track Claude usage, detect Shopify stores, and hide chess.com ratings.",
   "author": "Hieu Doan",
   "icons": {
     "128": "icons/128x128.png"

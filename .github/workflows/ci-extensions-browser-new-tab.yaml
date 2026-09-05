@@ -1,0 +1,32 @@
+name: CI - Extensions - Browser - New Tab
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/extensions/browser/new-tab/**'
+      - '.github/workflows/ci-extensions-browser-new-tab.yaml'
+      - '.github/workflows/ci-extensions-browser-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-extensions-browser-new-tab-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-extensions-browser-template.yaml
+    with:
+      package: packages/extensions/browser/new-tab
+      filter: '@hieudoanm.github.io/new-tab'
+      releaseName: extensions-browser-new-tab-latest
+      releaseTitle: Extensions - Browser - New Tab (latest)
+      artifactPrefix: extensions-browser-new-tab

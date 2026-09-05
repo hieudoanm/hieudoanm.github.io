@@ -25,7 +25,6 @@
 │   │   ├── [ad-blocker.ts](./src/background/ad-blocker.ts)
 │   │   ├── [claude-limit.ts](./src/background/claude-limit.ts)
 │   │   ├── [index.ts](./src/background/index.ts)
-│   │   ├── [new-tab.ts](./src/background/new-tab.ts)
 │   │   └── [youtube-transcript.ts](./src/background/youtube-transcript.ts)
 │   └── content/
 │       ├── [ad-blocker.ts](./src/content/ad-blocker.ts)

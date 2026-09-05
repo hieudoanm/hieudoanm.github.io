@@ -23,7 +23,7 @@
 | 5   | [GitHub](https://github.com)        | [github/open-link][github-open-link]     |
 | 6   | [Instagram](https://instagram.com)  | [instagram/download][instagram-download] |
 | 7   | [Shopify](https://shopify.com)      | [shopify/detect][shopify-detect]         |
-| 8   | Tab                                 | [tab/new][tab-new]                       |
+| 8   | Tab                                 | [new-tab][tab-new]                       |
 | 9   | Tab                                 | [tab/snapshot][tab-snapshot]             |
 | 10  | [Youtube](https://www.youtube.com/) | [youtube/transcript][youtube-transcript] |
 
@@ -34,7 +34,7 @@
 [github-open-link]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/github/open-link
 [instagram-download]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/instagram/download
 [shopify-detect]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/shopify/detect
-[tab-new]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/tab/new
+[tab-new]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/new-tab
 [tab-snapshot]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/snapshot
 [youtube-transcript]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/youtube/transcript
 
