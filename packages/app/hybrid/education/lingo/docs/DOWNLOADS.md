@@ -9,21 +9,7 @@
 ![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
 ![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
 
-```txt
-┌──────────────── Lingo ────────────────┐
-│  📚 Flashcards  📖 Dict  ✋ Sign      │
-│                                       │
-│   ┌───────────────────────────────┐   │
-│   │                               │   │
-│   │     🐱  c a t                 │   │
-│   │     a small domestic animal   │   │
-│   │                               │   │
-│   │     synonyms: feline, kitty   │   │
-│   └───────────────────────────────┘   │
-│                                       │
-│   XP: 1,240  🔥 Streak: 7 days       │
-└───────────────────────────────────────┘
-```
+![lingo screenshot](https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/app/hybrid/shopping/store/public/screenshots/lingo/home.png)
 
 ---
 
@@ -175,10 +161,6 @@ Learn words, look them up, and recognise signs — all in one app.
 - **Windows:** SmartScreen may flag the `.msi` — click "More info" → "Run
   anyway".
 - **Android:** Play Protect may warn about the `.apk` — tap "Install anyway".
-
----
-
-## First run
 
 ---
 

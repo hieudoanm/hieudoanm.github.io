@@ -9,19 +9,7 @@
 ![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
 ![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
 
-```txt
-┌──────────────────────────────────────────────┐
-│  Snellen          20/20      [ Reveal ]      │
-│                                              │
-│              E F P                            │
-│            T O Z L                            │
-│           P E C F D                           │
-│          L O P T C                            │
-│        █ D F C Z █                           │
-│                                              │
-│   ◀  ───── 10 lines ──────  ▶                │
-└──────────────────────────────────────────────┘
-```
+![eyes screenshot](https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/app/hybrid/shopping/store/public/screenshots/eyes/home.png)
 
 ---
 
@@ -174,10 +162,6 @@ Three clinically familiar charts plus a rock-solid app shell.
 - Auto-update checks via `tauri-plugin-updater`
 - Native dialogs via `tauri-plugin-dialog`
 - Notifications via `tauri-plugin-notification`
-
----
-
-## First run
 
 ---
 

@@ -8,18 +8,7 @@
 ![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
 ![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
 
-```txt
-┌─────────────────────────────────────┐
-│  MESSAGING              🔒  👤     │
-├──────────┬──────────────────────────┤
-│ Alice    │  🔒 End-to-end encrypted │
-│ ● Online │  ──────────────────────  │
-│ Bob      │  Alice: Hey, are you in? │
-│ ○ Last   │  Bob: Joining now!       │
-│   seen   │                          │
-│ Carol    │  📎  🎤  😀  Send →      │
-└──────────┴──────────────────────────┘
-```
+![messaging screenshot](https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/app/hybrid/shopping/store/public/screenshots/messaging/home.png)
 
 ---
 
@@ -176,10 +165,6 @@ app.
 - **Linux AppImage:** `chmod +x messaging.AppImage && ./messaging.AppImage`
 - **Windows SmartScreen:** Click **More info → Run anyway** if prompted.
 - **Android Play Protect:** Tap **Install anyway** if the warning appears.
-
----
-
-## First run
 
 ---
 

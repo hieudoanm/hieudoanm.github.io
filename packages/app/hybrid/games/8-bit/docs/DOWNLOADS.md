@@ -8,19 +8,7 @@
 ![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
 ![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
 
-```txt
-┌──────────────────────────────────┐
-│  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  │
-│  ▓ ╔═══╗       ▓     ▓     ▓  │
-│  ▓ ║   ║   ▓   ▓ ▓▓▓ ▓ ▓▓▓ ▓  │
-│  ▓ ║   ▓▓▓ ▓▓▓ ▓   ▓ ▓   ▓ ▓  │
-│  ▓ ║       ▓   ▓▓▓ ▓ ▓▓▓ ▓ ▓  │
-│  ▓ ▓▓▓ ▓▓▓ ▓ ▓▓▓   ▓     ▓ ▓  │
-│  ▓   ▓   ▓ ▓   ▓▓▓ ▓▓▓ ▓▓▓ ▓  │
-│  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  │
-│  Score: 128  Best: 256          │
-└──────────────────────────────────┘
-```
+![8-bit screenshot](https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/app/hybrid/shopping/store/public/screenshots/8-bit/home.png)
 
 ---
 
@@ -160,10 +148,6 @@ Retro 8-bit arcade and puzzle games with a tight pixel-art aesthetic.
 - Service worker caches all pages for offline play
 - Tauri desktop app build (bundling configured; signing not yet)
 - PWA manifest for installability
-
----
-
-## First run
 
 ---
 

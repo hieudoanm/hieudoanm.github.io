@@ -9,24 +9,7 @@
 ![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
 ![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
 
-```txt
-┌──────────────────────────────────────────────────┐
-│ 📕 PDF Viewer      [Annotate] [Edit] [Sign] [⚙]  │
-├──────┬───────────────────────────────────────────┤
-│ 📄   │                                           │
-│ [1]  │    ┌─────────────────────────────────┐    │
-│ [2]  │    │  ┌─────────────────────────┐    │    │
-│ [3]  │    │  │   Sample Document        │    │    │
-│ [4]  │    │  │                         │    │    │
-│      │    │  │   Lorem ipsum dolor sit  │    │    │
-│      │    │  │   amet, consectetur      │    │    │
-│      │    │  │   adipiscing elit.       │    │    │
-│      │    │  └─────────────────────────┘    │    │
-│      │    └─────────────────────────────────┘    │
-├──────┴───────────────────────────────────────────┤
-│ Page 3 of 24  │  Zoom: 125%  │  🔍 Search        │
-└──────────────────────────────────────────────────┘
-```
+![pdf screenshot](https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/app/hybrid/shopping/store/public/screenshots/pdf/home.png)
 
 ---
 
@@ -165,10 +148,6 @@ reorder all running in your browser or as a native desktop app.
 - Signature placement and resize
 - Export filled form as a new PDF
 - Print dialog with page range, copies, and headers/footers settings
-
----
-
-## First run
 
 ---
 

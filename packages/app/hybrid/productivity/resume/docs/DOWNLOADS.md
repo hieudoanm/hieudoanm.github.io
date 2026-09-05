@@ -9,23 +9,7 @@
 ![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
 ![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
 
-```txt
-┌──────────────────────────────────────────────┐
-│ 📄 Resume Builder        [Preview] [Export]  │
-├──────────────────┬───────────────────────────┤
-│ 👤 Personal Info │ ┌───────────────────────┐ │
-│ 📝 Summary       │ │  ┌──────────────────┐ │ │
-│ 💼 Experience    │ │  │  JOHN DOE        │ │ │
-│ 🎓 Education     │ │  │  Engineer        │ │ │
-│ 🛠️ Skills        │ │  │  ─────────────── │ │ │
-│ 📜 Certs         │ │  │  EXPERIENCE      │ │ │
-│ 🌐 Languages     │ │  │  · Tech Corp     │ │ │
-│ 🎯 Interests     │ │  │  · Startup Inc   │ │ │
-│                  │ │  └──────────────────┘ │ │
-├──────────────────┴───────────────────────────┤
-│ Words: 312  │  Paper: A4  │  Fit: ✓         │
-└──────────────────────────────────────────────┘
-```
+![resume screenshot](https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/app/hybrid/shopping/store/public/screenshots/resume/home.png)
 
 ---
 
@@ -153,10 +137,6 @@ next resume ready in minutes.
 - Keyboard shortcuts: `Cmd/Ctrl+Z` undo, `Cmd/Ctrl+Shift+Z` / `Cmd+Y` redo,
   `Cmd/Ctrl+S` download
 - Responsive layout, accessible controls
-
----
-
-## First run
 
 ---
 

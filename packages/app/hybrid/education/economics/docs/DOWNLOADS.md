@@ -8,21 +8,7 @@
 ![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
 ![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
 
-```txt
-┌──────────────── Economics ────────────────┐
-│  🔀 Prisoner's Dilemma                    │
-│                                           │
-│  You: Cooperate │ Bot: Always Defect      │
-│  ┌─────────────┬─────────────┐            │
-│  │  C  (1 yr)  │  C  (1 yr)  │            │
-│  ├─────────────┼─────────────┤            │
-│  │  D  (0 yr)  │  D  (3 yr)  │            │
-│  └─────────────┴─────────────┘            │
-│                                           │
-│  Round 7/10  Score: +2  │  Your  Bot      │
-│  [C] Cooperate  [D] Defect  [R] Reset     │
-└───────────────────────────────────────────┘
-```
+![economics screenshot](https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/app/hybrid/shopping/store/public/screenshots/economics/home.png)
 
 ---
 
@@ -148,10 +134,6 @@ Think strategically and outsmart the bots.
   needed.
 - **Windows:** SmartScreen may flag the `.msi` — click "More info" → "Run
   anyway".
-
----
-
-## First run
 
 ---
 

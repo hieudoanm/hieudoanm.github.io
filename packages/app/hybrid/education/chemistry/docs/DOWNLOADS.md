@@ -8,22 +8,7 @@
 ![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
 ![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
 
-```txt
-┌──────────────── Chemistry ────────────────┐
-│  Periodic Table of Elements               │
-│                                           │
-│  ┌──┐ ┌──┐   ┌──┐ ┌──┐ ┌──┐ ┌──┐ ┌──┐  │
-│  │H │ │He│   │Li│ │Be│ │B │ │C │ │N │  │
-│  │1 │ │2 │   │3 │ │4 │ │5 │ │6 │ │7 │  │
-│  └──┘ └──┘   └──┘ └──┘ └──┘ └──┘ └──┘  │
-│  ┌──┐ ┌──┐ ┌──┐ ┌──┐ ┌──┐ ┌──┐ ┌──┐    │
-│  │O │ │F │ │Ne│ │Na│ │Mg│ │Al│ │Si│    │
-│  │8 │ │9 │ │10│ │11│ │12│ │13│ │14│    │
-│  └──┘ └──┘ └──┘ └──┘ └──┘ └──┘ └──┘    │
-│                                           │
-│  [Metals] [Nonmetals] [Noble Gases]       │
-└───────────────────────────────────────────┘
-```
+![chemistry screenshot](https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/app/hybrid/shopping/store/public/screenshots/chemistry/home.png)
 
 ---
 

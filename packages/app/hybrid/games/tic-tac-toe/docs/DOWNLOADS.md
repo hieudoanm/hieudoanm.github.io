@@ -9,23 +9,7 @@
 ![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
 ![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
 
-```txt
-┌──────────────────────────────────┐
-│  ┌───┬───┬───┐                  │
-│  │ X │ O │ X │  Tic-Tac-Toe    │
-│  ├───┼───┼───┤                  │
-│  │   │ X │ O │  Player: X      │
-│  ├───┼───┼───┤                  │
-│  │ O │   │ X │  Wins: 3        │
-│  └───┴───┴───┘                  │
-│                                  │
-│  ┌──────────────────────────┐    │
-│  │ 🃏 Baccarat  🎰 Slots   │    │
-│  │ 🎲 Craps     🃏 War     │    │
-│  │ 🎯 Keno      🔢 Hi-Lo   │    │
-│  └──────────────────────────┘    │
-└──────────────────────────────────┘
-```
+![tic-tac-toe screenshot](https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/app/hybrid/shopping/store/public/screenshots/tic-tac-toe/home.png)
 
 ---
 
@@ -207,10 +191,6 @@ A full casino suite with card games, dice games, and number draws.
 - Tauri 2 desktop shell (macOS / Linux / Windows targets configured)
 - Dark (Dracula) and light (Bumblebee) themes with persistence
 - Responsive layouts down to mobile widths
-
----
-
-## First run
 
 ---
 

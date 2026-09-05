@@ -9,18 +9,7 @@
 ![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
 ![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
 
-```txt
-┌─────────────────────────────────┐
-│  ┌─────────┬──────────┐        │
-│  │ Group A │ Group B  │        │
-│  │  P  W  D│  P  W  D│        │
-│  │ ────────│──────────│        │
-│  │ 1  9  3│ 1  9  3 │        │
-│  │ 2  6  1│ 2  6  1 │        │
-│  └─────────┴──────────┘        │
-│  brackets │ schedule │ stats   │
-└─────────────────────────────────┘
-```
+![tourney screenshot](https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/app/hybrid/shopping/store/public/screenshots/tourney/home.png)
 
 ---
 

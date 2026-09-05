@@ -9,16 +9,7 @@
 ![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
 ![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
 
-```txt
-┌──────────────────────────────────────────────┐
-│  Hieu Doan Docs              ⌘K  Search  ☰    │
-├──────────────────────────────────────────────┤
-│  ▸ Home        # Getting Started              │
-│  ▸ Dev Tools      Docs that run everywhere    │
-│  ▸ Medical                         Next.js    │
-│  ▸ Finance                          Tauri 2   │
-└──────────────────────────────────────────────┘
-```
+![docs screenshot](https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/app/hybrid/shopping/store/public/screenshots/docs/home.png)
 
 ---
 
@@ -126,10 +117,6 @@ Everything lives in one frictionless, docs-first shell.
 
 - Runs on phone, tablet, laptop, and desktop through a shared, installable front
   end.
-
----
-
-## First run
 
 ---
 

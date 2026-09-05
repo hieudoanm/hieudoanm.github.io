@@ -8,21 +8,7 @@
 ![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
 ![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
 
-```txt
-┌─────────────────────────────────────┐
-│  BOILERPLATE             ⚙  👤     │
-├─────────────────────────────────────┤
-│  ▸ Atoms    Button  Badge  Spinner │
-│  ▸ Molecules Toast  Modal  Card    │
-│  ▸ Organisms Table  Nav    Footer  │
-│  ▸ Templates Hero    FAQ    Blog   │
-│                                     │
-│  ┌────────────────────────────────┐ │
-│  │  32 DaisyUI themes · PWA ready│ │
-│  │  Tauri desktop · Dark default │ │
-│  └────────────────────────────────┘ │
-└─────────────────────────────────────┘
-```
+![boilerplate screenshot](https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/app/hybrid/shopping/store/public/screenshots/boilerplate/home.png)
 
 ---
 
@@ -168,10 +154,6 @@ A full design system and app shell, pre-wired and ready to extend.
 - **Linux AppImage:** `chmod +x boilerplate.AppImage && ./boilerplate.AppImage`
 - **Windows SmartScreen:** Click **More info → Run anyway** if prompted.
 - **Android Play Protect:** Tap **Install anyway** if the warning appears.
-
----
-
-## First run
 
 ---
 

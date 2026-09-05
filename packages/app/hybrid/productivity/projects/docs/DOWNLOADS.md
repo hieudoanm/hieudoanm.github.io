@@ -9,20 +9,7 @@
 ![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
 ![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
 
-```txt
-┌────────────────────────────────────────────────┐
-│ 📋 My Board              [+ Add] [🔍] [⚙]     │
-├──────────────┬──────────────┬──────────────────┤
-│ TO DO        │ IN PROGRESS  │ DONE             │
-│ ┌──────────┐ │ ┌──────────┐ │ ┌──────────┐    │
-│ │ 🔴 Auth  │ │ │ 🔵 API   │ │ │ 🟢 Setup  │    │
-│ │ 👤 Alice │ │ │ 👤 Bob   │ │ │ 👤 Carol  │    │
-│ └──────────┘ │ └──────────┘ │ └──────────┘    │
-│ ┌──────────┐ │ ┌──────────┐ │                  │
-│ │ 🟡 Test  │ │ │ 🟠 Deploy│ │                  │
-│ └──────────┘ │ └──────────┘ │                  │
-└──────────────┴──────────────┴──────────────────┘
-```
+![projects screenshot](https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/app/hybrid/shopping/store/public/screenshots/projects/home.png)
 
 ---
 
@@ -174,10 +161,6 @@ across every device you own.
 - Skeleton loading states
 - Tauri desktop app build (bundling configured; signing not yet)
 - iOS/Android native shells (Tauri mobile entry point wired)
-
----
-
-## First run
 
 ---
 

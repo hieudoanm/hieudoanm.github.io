@@ -8,23 +8,7 @@
 ![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
 ![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
 
-```txt
-┌─────────────────────────────────────┐
-│  WALLET                  ⚙  👤     │
-├─────────────────────────────────────┤
-│  Balance                            │
-│  ┌────────────────────────────────┐ │
-│  │  $12,458.92         Checking   │ │
-│  └────────────────────────────────┘ │
-│                                     │
-│  Recent Transactions                │
-│  ─────────────────────              │
-│  • Coffee Shop      -$4.50         │
-│  • Payroll          +$3,200.00     │
-│  • Electricity      -$89.12        │
-│  • Transfer         -$500.00       │
-└─────────────────────────────────────┘
-```
+![wallet screenshot](https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/app/hybrid/shopping/store/public/screenshots/wallet/home.png)
 
 ---
 
@@ -191,10 +175,6 @@ Everything you need to manage money without the bloat.
 - **Linux AppImage:** `chmod +x wallet.AppImage && ./wallet.AppImage`
 - **Windows SmartScreen:** Click **More info → Run anyway** if prompted.
 - **Android Play Protect:** Tap **Install anyway** if the warning appears.
-
----
-
-## First run
 
 ---
 

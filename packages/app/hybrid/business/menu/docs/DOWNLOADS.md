@@ -10,20 +10,7 @@
 ![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
 ![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
 
-```txt
-┌─────────────────────────────────────────────┐
-│  THE GOLDEN FORK                            │
-│  ┌───────────────────────────────────────┐  │
-│  │ 🍕 Margherita         $12.00          │  │
-│  │ 🍔 Smash Burger       $9.50           │  │
-│  │ 🥤 Lemonade           $3.00           │  │
-│  │ ───────────────────────────────       │  │
-│  │ Your order                     $24.50 │  │
-│  │ [ + Place order + ]                  │  │
-│  └───────────────────────────────────────┘  │
-│      [ Menu QR code ]                       │
-└─────────────────────────────────────────────┘
-```
+![menu screenshot](https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/app/hybrid/shopping/store/public/screenshots/menu/home.png)
 
 ---
 

@@ -9,21 +9,7 @@
 ![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
 ![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
 
-```txt
-┌──────────────────────────────────┐
-│  🧠 Memory Games                │
-│  ──────────────────────────────  │
-│  ┌─────┐ ┌─────┐ ┌─────┐       │
-│  │ 🐱  │ │ 🐶  │ │ 🐱  │       │
-│  └─────┘ └─────┘ └─────┘       │
-│  ┌─────┐ ┌─────┐ ┌─────┐       │
-│  │ 🐸  │ │ 🐶  │ │ 🐸  │       │
-│  └─────┘ └─────┘ └─────┘       │
-│  ──────────────────────────────  │
-│  Moves: 5  |  Pairs: 4/6       │
-│  Time: 00:32                     │
-└──────────────────────────────────┘
-```
+![memory screenshot](https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/app/hybrid/shopping/store/public/screenshots/memory/home.png)
 
 ---
 
@@ -179,10 +165,6 @@ Brain-training games that sharpen memory, focus, and recall.
 - Service worker caches all pages for offline play
 - Tauri desktop app build (bundling configured; signing not yet)
 - PWA manifest for installability
-
----
-
-## First run
 
 ---
 

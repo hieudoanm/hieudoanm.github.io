@@ -8,21 +8,7 @@
 ![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
 ![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
 
-```txt
-┌──────────────── Music ────────────────┐
-│                                       │
-│   ♪  ♫  ♬  Pitch Training  ♩  ♪  ♫  │
-│   ┌──┬┬┬┬┬┬┬┬┬┬┬┬──┬┬┬┬┬┬┬┬┬┬┬┐    │
-│   │  │││││││││││││  ││││││││││││    │
-│   │  │││││││││││││  ││││││││││││    │
-│   │  │││││││││││││  ││││││││││││    │
-│   │  │├┤├┤├┤├┤│  │├┤├┤├┤├┤│  │    │
-│   └──┴┴┴┴┴┴┴┴┴┴┴──┴┴┴┴┴┴┴┴┴┴┴┘    │
-│     C  D  E  F  G  A  B  C          │
-│                                       │
-│   Level: 5/11   Score: 420  🏆 680   │
-└───────────────────────────────────────┘
-```
+![music screenshot](https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/app/hybrid/shopping/store/public/screenshots/music/home.png)
 
 ---
 
@@ -147,10 +133,6 @@ Sharpen your ears and have fun doing it.
   needed.
 - **Windows:** SmartScreen may flag the `.msi` — click "More info" → "Run
   anyway".
-
----
-
-## First run
 
 ---
 

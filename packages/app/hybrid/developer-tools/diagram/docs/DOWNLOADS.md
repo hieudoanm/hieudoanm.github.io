@@ -8,21 +8,7 @@
 ![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
 ![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
 
-```txt
-┌─────────────────────────────────────┐
-│  DIAGRAM                ⚙  👤     │
-├─────────────────────────────────────┤
-│  A ──▶ B ──▶ C                     │
-│       ╲           ╱                │
-│        ╲         ╱                 │
-│         ▼       ▼                  │
-│          [  D  ]                   │
-│                                     │
-│  ┌────────────────────────────────┐ │
-│  │  Live preview   │  Text editor │ │
-│  └────────────────────────────────┘ │
-└─────────────────────────────────────┘
-```
+![diagram screenshot](https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/app/hybrid/shopping/store/public/screenshots/diagram/home.png)
 
 ---
 
@@ -170,10 +156,6 @@ Everything from syntax parsing to sequence diagrams, all auto-laid-out for you.
 - **Linux AppImage:** `chmod +x diagram.AppImage && ./diagram.AppImage`
 - **Windows SmartScreen:** Click **More info → Run anyway** if prompted.
 - **Android Play Protect:** Tap **Install anyway** if the warning appears.
-
----
-
-## First run
 
 ---
 

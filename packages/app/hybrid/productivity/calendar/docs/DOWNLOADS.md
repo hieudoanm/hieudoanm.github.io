@@ -9,21 +9,7 @@
 ![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
 ![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
 
-```txt
-┌──────────────────────────────────────┐
-│  ◀  2025  📅  ▶    [3-Day ▾] [⚙]   │
-├──────────────────────────────────────┤
-│  Mon   Tue   Wed   Thu   Fri  Sat  Sun │
-│                    1     2     3    4    5 │
-│   ·     ·     ·     ·     ·    ·    ·  │
-│   6     7     8     9    10   11   12 │
-│   ·     ·     ·     ·     ·    ·    ·  │
-│  ...                                  │
-├──────────────────────────────────────┤
-│  TODAY: Team standup 10:00           │
-│  🟡 Holiday  🔵 Meeting  🟢 Personal │
-└──────────────────────────────────────┘
-```
+![calendar screenshot](https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/app/hybrid/shopping/store/public/screenshots/calendar/home.png)
 
 ---
 
@@ -162,10 +148,6 @@ A few things to know before your first launch:
 - **Windows** — Windows SmartScreen may show an "unknown publisher" warning;
   choose _More info → Run anyway_. The `.msi` installs Calendar into the Start
   menu.
-
----
-
-## First run
 
 ---
 

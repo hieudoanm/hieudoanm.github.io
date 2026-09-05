@@ -9,20 +9,7 @@
 ![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
 ![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
 
-```txt
-┌──────────────────────────────────┐
-│  🌍 Countries                   │
-│  ──────────────────────────────  │
-│  C  O  U  N  T  R  Y           │
-│  🟩 🟩 ⬜ 🟩 🟩 🟩             │
-│                                  │
-│  ┌─────┐┌─────┐┌─────┐┌─────┐  │
-│  │ 🇯🇵 ││ 🇧🇷 ││ 🇳🇬 ││ 🇦🇺 │  │
-│  │Japan││Brazil││Nigeria││Aus.│  │
-│  └─────┘└─────┘└─────┘└─────┘  │
-│  🟨 🟩 🟨 ⬜  — 1 away...       │
-└──────────────────────────────────┘
-```
+![countries screenshot](https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/app/hybrid/shopping/store/public/screenshots/countries/home.png)
 
 ---
 
@@ -208,10 +195,6 @@ Geography games that challenge what you know about every country on Earth.
 - Tauri desktop shell configured (bundling not yet enabled — see
   [docs/PACKAGING.md](docs/PACKAGING.md))
 - PWA-ready static output
-
----
-
-## First run
 
 ---
 

@@ -9,20 +9,7 @@
 ![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
 ![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
 
-```txt
-┌──────────────────────────────────────────────┐
-│  Tax Calculator           PIT · Gross→Net     │
-│  ┌────────────────────────────────────────┐  │
-│  │ Gross salary   22,000,000 VND/mo      │  │
-│  │ Dependents           0               │   │
-│  │ Insurance           ▸ on              │  │
-│  │                        ┌────────────┐  │  │
-│  │ Tax payable → 1,528,000│   Compute  │  │  │
-│  │                        └────────────┘  │  │
-│  └────────────────────────────────────────┘  │
-│  effective rate 6.9% · 7 brackets           │
-└──────────────────────────────────────────────┘
-```
+![tax screenshot](https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/app/hybrid/shopping/store/public/screenshots/tax/home.png)
 
 ---
 
@@ -181,10 +168,6 @@ Personal and business tax workflows, all in one syncable place.
 - IndexedDB for local persistence
 - Offline indicator banner
 - Mock data with configurable delay
-
----
-
-## First run
 
 ---
 

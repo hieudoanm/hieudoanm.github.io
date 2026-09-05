@@ -8,20 +8,7 @@
 ![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
 ![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
 
-```txt
-┌──────────────── History ────────────────┐
-│  📅 Through the Years                   │
-│                                         │
-│  ──●──────●────●───────●──────●─────►  │
-│    1776   1789  1804   1865   1969      │
-│                                         │
-│  American   French   end of   Moon      │
-│  Indep.     Revol.   Slavery  Landing   │
-│                                         │
-│  Score: 820  🔥 Streak: 5  ⏱️ 12.4s    │
-│  [Place event here ▼]                   │
-└─────────────────────────────────────────┘
-```
+![history screenshot](https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/app/hybrid/shopping/store/public/screenshots/history/home.png)
 
 ---
 
@@ -150,10 +137,6 @@ Order events, beat the clock, and master history.
   needed.
 - **Windows:** SmartScreen may flag the `.msi` — click "More info" → "Run
   anyway".
-
----
-
-## First run
 
 ---
 

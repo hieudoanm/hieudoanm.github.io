@@ -8,22 +8,7 @@
 ![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
 ![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
 
-```txt
-┌──────────────── Foody ─────────────────┐
-│  🍜 Food Randomizer                    │
-│                                        │
-│  ┌──────────────────────────────────┐  │
-│  │           🍝                     │  │
-│  │         Spaghetti                │  │
-│  │           Bolognese              │  │
-│  └──────────────────────────────────┘  │
-│                                        │
-│  🇮🇹 Italy  🇰🇷 Korea  🇯🇵 Japan       │
-│  🇹🇭 Thailand 🇻🇳 Vietnam 🇲🇽 Mexico  │
-│                                        │
-│  [ SPIN ]   Spins: 12                  │
-└────────────────────────────────────────┘
-```
+![foody screenshot](https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/app/hybrid/shopping/store/public/screenshots/foody/home.png)
 
 ---
 
@@ -153,10 +138,6 @@ Let the reel decide your next meal.
   needed.
 - **Windows:** SmartScreen may flag the `.msi` — click "More info" → "Run
   anyway".
-
----
-
-## First run
 
 ---
 

@@ -9,18 +9,7 @@
 ![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
 ![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
 
-```txt
-┌──────────────────────────────────────────────┐
-│        ┌───────┐        World Clock          │
-│     ┌──┤   ╷   ├──┐   ┌────────────────┐     │
-│     │  └──┤   ├──┘  │   │ Hanoi    09:42 │    │
-│   ──┼─────┤   ├─────┼── ▸ Tokyo    11:42 │    │
-│     │  ┌──┤   ├──┐  │   │ London   03:42 │    │
-│     └──┤   ╵   ├──┘   │ New York 22:42   │    │
-│        └───────┘       └────────────────┘     │
-│         09:42:37   ▸ Pomodoro 24:13           │
-└──────────────────────────────────────────────┘
-```
+![clock screenshot](https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/app/hybrid/shopping/store/public/screenshots/clock/home.png)
 
 ---
 
@@ -154,10 +143,6 @@ Five time tools plus a polished platform layer, all in one app.
 - PWA installable with offline support
 - Tauri desktop app (bundling configured; signing not yet)
 - nothing theme (black, white, red)
-
----
-
-## First run
 
 ---
 

@@ -9,24 +9,7 @@
 ![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
 ![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
 
-```txt
-┌─────────────────────── Store ──────────────────────┐
-│ 🔍 Search apps...              🌙  │ All │ Hybrid  │
-├───────────────────────────────────────────────────┤
-│  ┌──────────┐ ┌──────────┐ ┌──────────┐         │
-│  │  🛒 Store │ │  🎵 Music │ │  🧪 Chem  │         │
-│  │  Cross-plat│ │  Hybrid   │ │  Hybrid   │         │
-│  │  [Download]│ │  [Download]│ │  [Download]│         │
-│  └──────────┘ └──────────┘ └──────────┘         │
-│  ┌──────────┐ ┌──────────┐ ┌──────────┐         │
-│  │  🗺️ Hist  │ │  💰 Econ  │ │  🍜 Food  │         │
-│  │  Hybrid   │ │  Hybrid   │ │  Hybrid   │         │
-│  │  [Download]│ │  [Download]│ │  [Download]│         │
-│  └──────────┘ └──────────┘ └──────────┘         │
-│                                                   │
-│  📱 44 apps · v2.0.0 · © 2024 hieudoanm         │
-└───────────────────────────────────────────────────┘
-```
+![store screenshot](https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/app/hybrid/shopping/store/public/screenshots/store/home.png)
 
 ---
 
@@ -192,10 +175,6 @@ Everything you need to discover, compare, and download apps.
 - **Windows:** SmartScreen may flag the `.msi` — click "More info" → "Run
   anyway".
 - **Android:** Play Protect may warn about the `.apk` — tap "Install anyway".
-
----
-
-## First run
 
 ---
 

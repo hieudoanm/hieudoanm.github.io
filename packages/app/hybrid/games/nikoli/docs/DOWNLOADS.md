@@ -9,28 +9,7 @@
 ![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
 ![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
 
-```txt
-┌──────────────────────────────────┐
-│  🧩 Nikoli Puzzles              │
-│  ──────────────────────────────  │
-│  ┌───┬───┬───┬───┬───┬───┬───┐  │
-│  │ 5 │ 3 │ . │ . │ 7 │ . │ . │  │
-│  ├───┼───┼───┼───┼───┼───┼───┤  │
-│  │ 6 │ . │ . │ 1 │ 9 │ 5 │ . │  │
-│  ├───┼───┼───┼───┼───┼───┼───┤  │
-│  │ . │ 9 │ 8 │ . │ . │ . │ . │  │
-│  ├───┼───┼───┼───┼───┼───┼───┤  │
-│  │ 8 │ . │ . │ . │ 6 │ . │ . │  │
-│  ├───┼───┼───┼───┼───┼───┼───┤  │
-│  │ 4 │ . │ . │ 8 │ . │ 3 │ . │  │
-│  ├───┼───┼───┼───┼───┼───┼───┤  │
-│  │ . │ . │ . │ . │ 2 │ . │ 6 │  │
-│  ├───┼───┼───┼───┼───┼───┼───┤  │
-│  │ . │ . │ . │ . │ . │ . │ . │  │
-│  └───┴───┴───┴───┴───┴───┴───┘  │
-│  Timer: 12:34  Hints: 3         │
-└──────────────────────────────────┘
-```
+![nikoli screenshot](https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/app/hybrid/shopping/store/public/screenshots/nikoli/home.png)
 
 ---
 
@@ -225,10 +204,6 @@ additions:
 - Service worker caches all pages for offline play
 - Tauri desktop app build (bundling configured; signing not yet)
 - PWA manifest for installability
-
----
-
-## First run
 
 ---
 

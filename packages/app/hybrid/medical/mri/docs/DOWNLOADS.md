@@ -10,19 +10,7 @@
 ![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
 ![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
 
-```txt
-┌──────────────────────────────────────────────┐
-│  Study: T1 MPRAGE       ROI ███  QC ✓        │
-│  ┌────────────────┐                         │
-│  │ ╭───────╮  ◐   │  T1   74%  ✓            │
-│  │ │  ╭───╮ │     │  T2   88%  ✓            │
-│  │ │  ╰───╯ │     │ FLAIR 92%  ✓            │
-│  │ │    ◧   │  ╭╮ │  DWI  61%  ⚠ motion     │
-│  │ ╰───────╯  │ │ │                        │
-│  └────────────┴─┴─┘                        │
-│  window 400/1300  zoom 1.2x  slice 34/120   │
-└──────────────────────────────────────────────┘
-```
+![mri screenshot](https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/app/hybrid/shopping/store/public/screenshots/mri/home.png)
 
 ---
 
@@ -220,10 +208,6 @@ An MRI-first workspace that treats your studies as data — not just files.
 - Collaborative review workflows
 - Automated research reports
 - Playwright e2e coverage of the import → review → export critical path
-
----
-
-## First run
 
 ---
 

@@ -9,22 +9,7 @@
 ![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
 ![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
 
-```txt
-┌────────────────────────────────────────────────────┐
-│ 🎤 Open Keynotes    [Present ▶] [Redo] [Undo] [⚙] │
-├──────┬─────────────────────────────────────────────┤
-│ 📄   │                                             │
-│ [1]  │        ┌─────────────────────────┐          │
-│ [2]  │        │                         │          │
-│ [3]  │        │   Quarterly Report Q4   │          │
-│ [4]  │        │                         │          │
-│      │        │   Revenue ↑  32%        │          │
-│      │        │   Users   ↑  18%        │          │
-│      │        └─────────────────────────┘          │
-├──────┴─────────────────────────────────────────────┤
-│ Slide 2 of 12  │  Speaker Notes: Review key metrics│
-└────────────────────────────────────────────────────┘
-```
+![keynotes screenshot](https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/app/hybrid/shopping/store/public/screenshots/keynotes/home.png)
 
 ---
 
@@ -255,10 +240,6 @@ view, and export to PPTX/PDF/HTML, all running without a server.
 6. [~] Responsive layout (basic)
 7. [~] Dark theme (DaisyUI `night`) — no light theme toggle
 8. [ ] Diagnostics (engine status, storage usage, performance)
-
----
-
-## First run
 
 ---
 

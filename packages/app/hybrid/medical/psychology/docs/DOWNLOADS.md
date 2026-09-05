@@ -9,20 +9,7 @@
 ![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
 ![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
 
-```txt
-┌──────────────────────────────────────────────┐
-│  PHQ-9   Step 2 of 3   ████████░░  7/9       │
-├──────────────────────────────────────────────┤
-│  Over the last 2 weeks, how often...         │
-│                                              │
-│  ( ) Not at all      ( ) Several days        │
-│  ( ) More than half  ( ) Nearly every day    │
-│                                              │
-│  Result: score 12 · moderate — see your       │
-│  healthcare provider.                        │
-│          [ ← Back ]      [ Next → ]          │
-└──────────────────────────────────────────────┘
-```
+![psychology screenshot](https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/app/hybrid/shopping/store/public/screenshots/psychology/home.png)
 
 ---
 
@@ -216,10 +203,6 @@ bar → results step — and every results step carries a screening disclaimer
 - Auto-update checks via `tauri-plugin-updater`
 - Native dialogs via `tauri-plugin-dialog`
 - Notifications via `tauri-plugin-notification`
-
----
-
-## First run
 
 ---
 

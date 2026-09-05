@@ -9,18 +9,7 @@
 ![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
 ![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
 
-```txt
-┌──────────────────────────────────────────────┐
-│  image.tif            neuron count: 12       │
-│  ┌────────────────┐  ▸ 4 neurons traced      │
-│  │  ╭╮   ╭─╮     │  channels: R G B         │
-│  │ ╭╯╰╮ ╭╯ │ ╭╮  │  area: 420 µm²           │
-│  │ │  │ │  ╰─╯╰╮ │  density: high           │
-│  │ ╰──╯─╯      │ │  color div: 0.74         │
-│  │   ╭──╮      ╰─╯│  [ Export SVG ]          │
-│  └────┴──┘─┴───┴──┘                         │
-└──────────────────────────────────────────────┘
-```
+![brainbow screenshot](https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/app/hybrid/shopping/store/public/screenshots/brainbow/home.png)
 
 ---
 
@@ -189,10 +178,6 @@ project handling.
 - Shareable read-only viewer link (web export mode)
 - Git-style version history for `.brainbow` project bundles
 - Playwright e2e coverage of the import → segment → export critical path
-
----
-
-## First run
 
 ---
 

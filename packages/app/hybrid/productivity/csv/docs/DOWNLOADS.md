@@ -9,21 +9,7 @@
 ![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
 ![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
 
-```txt
-┌──────────────────────────────────────────────────┐
-│ 📊 CSV Editor      [Import] [Export] [Undo] [⚙]  │
-├──────────────────────────────────────────────────┤
-│   │  A       │  B        │  C        │  D        │
-│───┼──────────┼───────────┼───────────┼───────────│
-│ 1 │ Name     │ Revenue   │ Cost      │ Profit    │
-│ 2 │ Q1       │ 12000     │ 8000      │ =C2-D2    │
-│ 3 │ Q2       │ 15000     │ 9500      │ =C3-D3    │
-│ 4 │ Q3       │ 18200     │ 10100     │ =C4-D4    │
-│ 5 │ Q4       │ 21000     │ 11200     │ =C5-D5    │
-├──────────────────────────────────────────────────┤
-│ Sheet1 │ Sheet2 │ +    │  Status: Ready  │ SUM: … │
-└──────────────────────────────────────────────────┘
-```
+![csv screenshot](https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/app/hybrid/shopping/store/public/screenshots/csv/home.png)
 
 ---
 
@@ -152,10 +138,6 @@ JSON, HTML, XML, and XLSX without the bloat.
 - Keyboard shortcuts panel (Ctrl+K)
 - Dark / light theme toggle (persisted)
 - PWA / offline support (service worker + manifest)
-
----
-
-## First run
 
 ---
 

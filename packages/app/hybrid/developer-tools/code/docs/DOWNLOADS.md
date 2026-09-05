@@ -8,19 +8,7 @@
 ![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
 ![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
 
-```txt
-┌─────────────────────────────────────┐
-│  CODE                    ⚙  👤     │
-├──────────┬──────────────────────────┤
-│ 📁 src/  │  1 │ const app = () => { │
-│   index  │  2 │   return (          │
-│   util   │  3 │     <Hello />       │
-│ 📁 test/ │  4 │   );                │
-│          │  5 │ };                   │
-│          │  ─────────────────────   │
-│          │  TypeScript  Ln 1, Col 1 │
-└──────────┴──────────────────────────┘
-```
+![code screenshot](https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/app/hybrid/shopping/store/public/screenshots/code/home.png)
 
 ---
 
@@ -152,10 +140,6 @@ All the essentials for editing code on the go.
 - **Linux AppImage:** `chmod +x code.AppImage && ./code.AppImage`
 - **Windows SmartScreen:** Click **More info → Run anyway** if prompted.
 - **Android Play Protect:** Tap **Install anyway** if the warning appears.
-
----
-
-## First run
 
 ---
 

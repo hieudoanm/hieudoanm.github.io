@@ -8,24 +8,7 @@
 ![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
 ![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
 
-```txt
-┌──────────────────────────────────────────┐
-│  API Client                              │
-│  ──────────────────────────────────────  │
-│  POST https://api.example.com/v1/users   │
-│  ┌────────────────────────────────────┐  │
-│  │ Key         │ Value                │  │
-│  │ Content-Type│ application/json     │  │
-│  │ Authorization│ Bearer eyJ...       │  │
-│  └────────────────────────────────────┘  │
-│  { "name": "Ada", "role": "engineer" }   │
-│                                          │
-│  ▶ Send                      200 OK 42ms │
-│  ┌────────────────────────────────────┐  │
-│  │ { "id": 42, "name": "Ada" }       │  │
-│  └────────────────────────────────────┘  │
-└──────────────────────────────────────────┘
-```
+![api screenshot](https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/app/hybrid/shopping/store/public/screenshots/api/home.png)
 
 ---
 
@@ -196,10 +179,6 @@ Build, test, and debug APIs without leaving your keyboard.
 - Light and dark themes (pending)
 - Command palette (Ctrl+K) (pending)
 - Plugin system (Bruno-style) (pending)
-
----
-
-## First run
 
 ---
 

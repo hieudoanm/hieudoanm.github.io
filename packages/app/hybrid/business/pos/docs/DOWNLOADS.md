@@ -9,20 +9,7 @@
 ![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
 ![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
 
-```txt
-┌─────────────────────────────────────────────┐
-│  ORDER #42                    TABLE B-7     │
-│  ┌───────────────────────────────────────┐  │
-│  │ Espresso         2 × $3.50     $7.00  │  │
-│  │ Croissant        1 × $4.00     $4.00  │  │
-│  │ ───────────────────────────────       │  │
-│  │ Subtotal                      $11.00  │  │
-│  │ Tax (8%)                       $0.88  │  │
-│  │ TOTAL                        $11.88   │  │
-│  └───────────────────────────────────────┘  │
-│      [ PAY CASH ]   [ CARD ]   [ SPLIT ]    │
-└─────────────────────────────────────────────┘
-```
+![pos screenshot](https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/app/hybrid/shopping/store/public/screenshots/pos/home.png)
 
 ---
 
@@ -155,7 +142,7 @@ Every order, every sale, every report — handled in one place.
 
 ---
 
-# First run
+## First run
 
 A few things to know before your first launch:
 
@@ -168,10 +155,6 @@ A few things to know before your first launch:
   choose _More info → Run anyway_. The `.msi` installs POS into the Start menu.
 - **Android** — Google Play Protect may ask to scan the sideloaded `.apk`; allow
   it to check, then _Install anyway_ if you trust the source.
-
----
-
-## First run
 
 ---
 

@@ -9,18 +9,7 @@
 ![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
 ![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
 
-```txt
-┌─────────────────────────────────┐
-│  ♜ ♞ ♝ ♛ ♚ ♝ ♞ ♜              │
-│  ♟ ♟ ♟ ♟ ♟ ♟ ♟ ♟              │
-│  ┌─┬─┬─┬─┬─┬─┬─┬─┐            │
-│  │ │ │ │ │ │ │ │ │  eval: +0.3 │
-│  │ │ │ │ │ │ │ │ │             │
-│  └─┴─┴─┴─┴─┴─┴─┴─┘            │
-│  ♙ ♙ ♙ ♙ ♙ ♙ ♙ ♙              │
-│  ♖ ♘ ♗ ♕ ♔ ♗ ♘ ♖              │
-└─────────────────────────────────┘
-```
+![chess screenshot](https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/app/hybrid/shopping/store/public/screenshots/chess/home.png)
 
 ---
 

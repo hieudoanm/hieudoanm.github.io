@@ -9,23 +9,7 @@
 ![macOS](https://img.shields.io/badge/macOS-13%2B-lightgrey)
 ![Windows](https://img.shields.io/badge/Windows-10%2B-blue)
 
-```txt
-┌──────────────────────────────────────────┐
-│ 📝 Markdown            [Sync] [⚙] [···]  │
-├────────────────────┬─────────────────────┤
-│ 📁 Vault            │ # My Note           │
-│ ├─ notes/           │                     │
-│ │ ├─ daily/         │ This is a **live**  │
-│ │ ├─ projects/      │ preview of my       │
-│ │ └─ archive/       │ markdown notes.     │
-│ └─ templates/       │                     │
-│                     │ - [x] Write docs    │
-│ 🔍 Search...        │ - [ ] Ship it       │
-│ 📊 Graph            │                     │
-├────────────────────┴─────────────────────┤
-│ Words: 142  Lines: 18  Characters: 847   │
-└──────────────────────────────────────────┘
-```
+![markdown screenshot](https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/app/hybrid/shopping/store/public/screenshots/markdown/home.png)
 
 ---
 
@@ -145,10 +129,6 @@ every device you own.
 - Export notes as PDF, HTML (DOCX pending)
 - Custom themes and fonts (lib/fonts)
 - Tauri desktop app build (bundling configured; signing not yet)
-
----
-
-## First run
 
 ---
 
