@@ -28,7 +28,7 @@ const RootLayout: FC<{ children: ReactNode }> = ({ children }) => (
       <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
     </head>
     <body className="bg-base-100 text-base-content h-screen overflow-y-auto font-mono">
-      <Header title="Eyes" />
+      <Header />
       <SWProvider>
         <NativeProvider>{children}</NativeProvider>
       </SWProvider>

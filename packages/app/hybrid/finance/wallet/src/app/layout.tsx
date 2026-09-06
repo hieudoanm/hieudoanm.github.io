@@ -1,8 +1,8 @@
+import { Header } from '@/components/organisms/Header';
 import { Providers } from '@/providers/Providers';
 import '@/styles/globals.css';
 import type { Metadata, Viewport } from 'next';
 import { FC, ReactNode } from 'react';
-import Header from '@/components/organisms/Header';
 
 export const metadata: Metadata = {
   title: 'Wallet',

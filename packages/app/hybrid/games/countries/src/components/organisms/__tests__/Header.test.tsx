@@ -16,27 +16,39 @@ describe('Header', () => {
     );
   });
 
-  it('renders about link', () => {
+  it('renders about links', () => {
     render(<Header />);
-    expect(screen.getByText('ABOUT')).toHaveAttribute('href', '/about');
+    const aboutLinks = screen.getAllByText('About');
+    expect(aboutLinks.length).toBeGreaterThanOrEqual(1);
+    aboutLinks.forEach((link) =>
+      expect(link.closest('a')).toHaveAttribute('href', '/about')
+    );
   });
 
-  it('renders downloads link', () => {
+  it('renders downloads links', () => {
     render(<Header />);
-    expect(screen.getByText('DOWNLOADS')).toHaveAttribute('href', '/downloads');
+    const downloadsLinks = screen.getAllByText('Downloads');
+    expect(downloadsLinks.length).toBeGreaterThanOrEqual(1);
+    downloadsLinks.forEach((link) =>
+      expect(link.closest('a')).toHaveAttribute('href', '/downloads')
+    );
   });
 
-  it('renders version link', () => {
+  it('renders version links', () => {
     render(<Header />);
-    expect(screen.getByText('VERSION')).toHaveAttribute('href', '/version');
+    const versionLinks = screen.getAllByText('Version');
+    expect(versionLinks.length).toBeGreaterThanOrEqual(1);
+    versionLinks.forEach((link) =>
+      expect(link.closest('a')).toHaveAttribute('href', '/version')
+    );
   });
 
-  it('applies and persists the default dracula theme', () => {
+  it('applies and persists the default light theme', () => {
     render(<Header />);
     expect(document.documentElement.getAttribute('data-theme')).toBe(
-      'countries-dark'
+      'countries-light'
     );
-    expect(localStorage.getItem('countries-theme')).toBe('countries-dark');
+    expect(localStorage.getItem('countries-theme')).toBe('countries-light');
   });
 
   it('toggles between dark and light themes', async () => {
@@ -44,19 +56,19 @@ describe('Header', () => {
     render(<Header />);
     await user.click(screen.getByTestId('theme-toggle'));
     expect(document.documentElement.getAttribute('data-theme')).toBe(
-      'countries-light'
+      'countries-dark'
     );
-    expect(localStorage.getItem('countries-theme')).toBe('countries-light');
+    expect(localStorage.getItem('countries-theme')).toBe('countries-dark');
     await user.click(screen.getByTestId('theme-toggle'));
     expect(document.documentElement.getAttribute('data-theme')).toBe(
-      'countries-dark'
+      'countries-light'
     );
   });
 
   it('restores a saved theme on mount', () => {
-    localStorage.setItem('countries-theme', 'countries-light');
+    localStorage.setItem('countries-theme', 'countries-dark');
     render(<Header />);
     expect(screen.getByTestId('theme-toggle')).toBeInTheDocument();
-    expect(localStorage.getItem('countries-theme')).toBe('countries-light');
+    expect(localStorage.getItem('countries-theme')).toBe('countries-dark');
   });
 });

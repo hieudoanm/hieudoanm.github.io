@@ -2,56 +2,53 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { Header } from '../Header';
 
-jest.mock('next/link', () => {
-  const MockLink = ({
-    children,
-    href,
-    ...props
-  }: {
-    children: React.ReactNode;
-    href: string;
-    [key: string]: unknown;
-  }) => (
-    <a href={href} {...props}>
-      {children}
-    </a>
-  );
-  MockLink.displayName = 'MockLink';
-  return { __esModule: true, default: MockLink };
-});
-
 describe('Header', () => {
   beforeEach(() => {
     localStorage.clear();
     document.documentElement.removeAttribute('data-theme');
   });
 
-  it('renders MEMORY GAMES link', () => {
+  it('renders Memory link', () => {
     render(<Header />);
-    expect(screen.getByText('MEMORY GAMES')).toHaveAttribute('href', '/');
+    expect(screen.getByText('Memory').closest('a')).toHaveAttribute(
+      'href',
+      '/'
+    );
   });
 
-  it('renders ABOUT link', () => {
+  it('renders about links', () => {
     render(<Header />);
-    expect(screen.getByText('ABOUT')).toHaveAttribute('href', '/about');
+    const aboutLinks = screen.getAllByText('About');
+    expect(aboutLinks.length).toBeGreaterThanOrEqual(1);
+    aboutLinks.forEach((link) =>
+      expect(link.closest('a')).toHaveAttribute('href', '/about')
+    );
   });
 
-  it('renders DOWNLOADS link', () => {
+  it('renders downloads links', () => {
     render(<Header />);
-    expect(screen.getByText('DOWNLOADS')).toHaveAttribute('href', '/downloads');
+    const downloadsLinks = screen.getAllByText('Downloads');
+    expect(downloadsLinks.length).toBeGreaterThanOrEqual(1);
+    downloadsLinks.forEach((link) =>
+      expect(link.closest('a')).toHaveAttribute('href', '/downloads')
+    );
   });
 
-  it('renders VERSION link', () => {
+  it('renders version links', () => {
     render(<Header />);
-    expect(screen.getByText('VERSION')).toHaveAttribute('href', '/version');
+    const versionLinks = screen.getAllByText('Version');
+    expect(versionLinks.length).toBeGreaterThanOrEqual(1);
+    versionLinks.forEach((link) =>
+      expect(link.closest('a')).toHaveAttribute('href', '/version')
+    );
   });
 
-  it('applies and persists the default theme', () => {
+  it('applies and persists the default light theme', () => {
     render(<Header />);
     expect(document.documentElement.getAttribute('data-theme')).toBe(
-      'memory-dark'
+      'memory-light'
     );
-    expect(localStorage.getItem('memory-theme')).toBe('memory-dark');
+    expect(localStorage.getItem('memory-theme')).toBe('memory-light');
   });
 
   it('toggles between themes', async () => {
@@ -59,9 +56,9 @@ describe('Header', () => {
     render(<Header />);
     await user.click(screen.getByTestId('theme-toggle'));
     expect(document.documentElement.getAttribute('data-theme')).toBe(
-      'memory-light'
+      'memory-dark'
     );
-    expect(localStorage.getItem('memory-theme')).toBe('memory-light');
+    expect(localStorage.getItem('memory-theme')).toBe('memory-dark');
   });
 
   it('has displayName', () => {

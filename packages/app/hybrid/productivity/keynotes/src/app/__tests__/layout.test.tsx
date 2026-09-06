@@ -12,10 +12,21 @@ jest.mock('@/components/PwaRegister', () => ({
 jest.mock('@/components/atoms/SkipLink', () => ({
   SkipLink: () => null,
 }));
+jest.mock('next/link', () => {
+  const React = jest.requireActual<typeof import('react')>('react');
+  return React.forwardRef<
+    HTMLAnchorElement,
+    React.HTMLAttributes<HTMLAnchorElement>
+  >((props, ref) => <a ref={ref} {...props} />);
+});
 
 import RootLayout, { metadata, viewport } from '../layout';
 
 describe('RootLayout', () => {
+  beforeEach(() => {
+    localStorage.clear();
+  });
+
   it('renders children', () => {
     render(
       <RootLayout>
@@ -31,7 +42,7 @@ describe('RootLayout', () => {
         <div />
       </RootLayout>
     );
-    expect(document.documentElement).toHaveAttribute('data-theme', 'night');
+    expect(document.documentElement).toHaveAttribute('data-theme', 'light');
   });
 });
 

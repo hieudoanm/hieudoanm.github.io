@@ -9,7 +9,7 @@ interface DownloadItem {
   href: string;
 }
 
-const OS_ORDER = ['Android', 'macOS', 'Linux', 'Windows'] as const;
+const OS_ORDER = ['Android', 'Linux', 'macOS', 'Windows'] as const;
 
 interface DownloadsTemplateProps {
   version: string;

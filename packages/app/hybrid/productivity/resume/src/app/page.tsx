@@ -2,29 +2,21 @@
 
 import Link from 'next/link';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import {
-  LuDownload,
-  LuInfo,
-  LuRedo,
-  LuRotateCcw,
-  LuTag,
-  LuUndo,
-} from 'react-icons/lu';
-import { ThemeToggle } from '../components/app/ThemeToggle';
+import { LuRedo, LuRotateCcw, LuUndo } from 'react-icons/lu';
 import { DataPanel } from '../components/resume/data/DataPanel';
 import { EditorPanel } from '../components/resume/editor/EditorPanel';
-import { ProfileSwitcher } from '../components/resume/preview/ProfileSwitcher';
 import { PreviewPanel } from '../components/resume/preview/PreviewPanel';
+import { ProfileSwitcher } from '../components/resume/preview/ProfileSwitcher';
 import { TemplatePicker } from '../components/resume/preview/TemplatePicker';
 import { RESUME_TEMPLATES } from '../components/resume/templates';
-import { getPaperSize, DEFAULT_PAPER_ID } from '../data/paper';
+import { DEFAULT_PAPER_ID, getPaperSize } from '../data/paper';
 import { seedResumeData } from '../data/seed';
 import { useHistory } from '../hooks/useHistory';
 import { useKeyboardShortcuts } from '../hooks/useKeyboardShortcuts';
 import { useLocalStorage } from '../hooks/useLocalStorage';
 import { useResumeProfiles } from '../hooks/useResumeProfiles';
-import { DEFAULT_RESUME_OPTIONS } from '../types/resume';
 import type { ResumeData, ResumeOptions } from '../types/resume';
+import { DEFAULT_RESUME_OPTIONS } from '../types/resume';
 import { downloadResumeFile } from '../utils/export';
 
 type SidebarTab = 'editor' | 'templates' | 'data';
@@ -107,7 +99,7 @@ const HomePage = () => {
           <Link
             href="/"
             className="btn btn-ghost btn-sm text-sm font-black tracking-tight">
-            Free Resume Builder
+            Open Resume
           </Link>
         </div>
         <div className="flex-none gap-1">
@@ -134,19 +126,6 @@ const HomePage = () => {
             <LuRotateCcw />
             Reset
           </button>
-          <ThemeToggle />
-          <Link href="/downloads/" className="btn btn-ghost btn-sm">
-            <LuDownload />
-            Downloads
-          </Link>
-          <Link href="/version/" className="btn btn-ghost btn-sm">
-            <LuTag />
-            Version
-          </Link>
-          <Link href="/about/" className="btn btn-ghost btn-sm">
-            <LuInfo />
-            About
-          </Link>
         </div>
       </header>
 

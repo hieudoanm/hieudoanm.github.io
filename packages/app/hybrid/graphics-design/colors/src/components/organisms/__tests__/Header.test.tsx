@@ -1,10 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { Header } from '../Header';
 
-jest.mock('next/navigation', () => ({
-  usePathname: () => '/about/',
-}));
-
 jest.mock('next/link', () => {
   const React = jest.requireActual<typeof import('react')>('react');
   return React.forwardRef<
@@ -13,11 +9,11 @@ jest.mock('next/link', () => {
   >((props, ref) => <a ref={ref} {...props} />);
 });
 
-jest.mock('@/components/atoms/ThemeToggle', () => ({
-  ThemeToggle: () => <button type="button" aria-label="Toggle theme" />,
-}));
-
 describe('Header', () => {
+  beforeEach(() => {
+    localStorage.clear();
+  });
+
   it('renders the Colors logo text', () => {
     render(<Header />);
     expect(screen.getByText('Colors')).toBeInTheDocument();
@@ -25,27 +21,20 @@ describe('Header', () => {
 
   it('renders About, Downloads, and Version nav links', () => {
     render(<Header />);
-    expect(screen.getByRole('link', { name: 'About' })).toHaveAttribute(
-      'href',
-      '/about/'
-    );
-    expect(screen.getByRole('link', { name: 'Downloads' })).toHaveAttribute(
-      'href',
-      '/downloads/'
-    );
-    expect(screen.getByRole('link', { name: 'Version' })).toHaveAttribute(
-      'href',
-      '/version/'
-    );
+    const aboutLinks = screen.getAllByRole('link', { name: 'About' });
+    expect(aboutLinks.length).toBeGreaterThanOrEqual(1);
+    expect(aboutLinks[0]).toHaveAttribute('href', '/about');
+
+    const downloadsLinks = screen.getAllByRole('link', { name: 'Downloads' });
+    expect(downloadsLinks.length).toBeGreaterThanOrEqual(1);
+    expect(downloadsLinks[0]).toHaveAttribute('href', '/downloads');
+
+    const versionLinks = screen.getAllByRole('link', { name: 'Version' });
+    expect(versionLinks.length).toBeGreaterThanOrEqual(1);
+    expect(versionLinks[0]).toHaveAttribute('href', '/version');
   });
 
-  it('highlights the active link based on pathname', () => {
-    render(<Header />);
-    const aboutLink = screen.getByRole('link', { name: 'About' });
-    expect(aboutLink.className).toContain('font-semibold');
-  });
-
-  it('renders the ThemeToggle', () => {
+  it('renders the theme toggle button', () => {
     render(<Header />);
     expect(
       screen.getByRole('button', { name: 'Toggle theme' })

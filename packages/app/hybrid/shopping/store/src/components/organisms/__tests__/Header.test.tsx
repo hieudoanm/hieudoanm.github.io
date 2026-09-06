@@ -27,7 +27,7 @@ jest.mock('next/link', () => {
 describe('Header', () => {
   beforeEach(() => {
     localStorage.clear();
-    document.documentElement.setAttribute('data-theme', 'store-dark');
+    document.documentElement.removeAttribute('data-theme');
   });
 
   it('renders Store link', () => {
@@ -37,21 +37,22 @@ describe('Header', () => {
 
   it('renders About link', () => {
     render(<Header />);
-    expect(screen.getByText('About')).toBeTruthy();
+    expect(screen.getAllByText('About').length).toBeGreaterThanOrEqual(1);
   });
 
   it('renders Version link', () => {
     render(<Header />);
-    expect(screen.getByText('Version')).toBeTruthy();
+    expect(screen.getAllByText('Version').length).toBeGreaterThanOrEqual(1);
   });
 
   it('renders Downloads link', () => {
     render(<Header />);
-    expect(screen.getByText('Downloads')).toBeTruthy();
-    expect(screen.getByText('Downloads')).toHaveAttribute(
-      'href',
-      '/downloads/'
-    );
+    expect(
+      screen.getAllByRole('link', { name: 'Downloads' }).length
+    ).toBeGreaterThanOrEqual(1);
+    expect(
+      screen.getAllByRole('link', { name: 'Downloads' })[0]
+    ).toHaveAttribute('href', '/downloads');
   });
 
   it('renders theme toggle button', () => {
@@ -65,26 +66,25 @@ describe('Header', () => {
     const toggle = screen.getByTestId('theme-toggle');
     await user.click(toggle);
     expect(document.documentElement.getAttribute('data-theme')).toBe(
-      'store-light'
+      'store-dark'
     );
   });
 
-  it('toggles back to nothing theme', async () => {
+  it('toggles back to light theme', async () => {
     const user = userEvent.setup();
     render(<Header />);
     const toggle = screen.getByTestId('theme-toggle');
     await user.click(toggle);
     await user.click(toggle);
     expect(document.documentElement.getAttribute('data-theme')).toBe(
-      'store-dark'
+      'store-light'
     );
   });
 
-  it('highlights active route', () => {
-    const mockUsePathname = jest.requireMock('next/navigation');
-    mockUsePathname.usePathname = () => '/about/';
+  it('renders navigation links in desktop and mobile dropdown', () => {
     render(<Header />);
-    const aboutLink = screen.getByText('About');
-    expect(aboutLink.className).toContain('btn-active');
+    expect(screen.getAllByRole('link', { name: 'About' }).length).toBe(2);
+    expect(screen.getAllByRole('link', { name: 'Downloads' }).length).toBe(2);
+    expect(screen.getAllByRole('link', { name: 'Version' }).length).toBe(2);
   });
 });

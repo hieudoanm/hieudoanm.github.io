@@ -1,8 +1,5 @@
-jest.mock('next/navigation', () => ({
-  usePathname: () => '/about/',
-}));
-
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { Header } from '../Header';
 
 beforeEach(() => {
@@ -19,52 +16,55 @@ describe('Header', () => {
 
   it('renders nav links', () => {
     render(<Header />);
-    expect(screen.getByText('About')).toBeInTheDocument();
-    expect(screen.getByText('Downloads')).toBeInTheDocument();
-    expect(screen.getByText('Version')).toBeInTheDocument();
+    expect(screen.getAllByText('About').length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText('Downloads').length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText('Version').length).toBeGreaterThanOrEqual(1);
   });
 
   it('renders theme toggle button', () => {
     render(<Header />);
-    expect(screen.getByText('☀️')).toBeInTheDocument();
+    expect(screen.getByTestId('theme-toggle')).toBeInTheDocument();
   });
 
-  it('toggles theme on button click', () => {
+  it('toggles theme on button click', async () => {
+    const user = userEvent.setup();
     render(<Header />);
-    const btn = screen.getByText('☀️');
-    fireEvent.click(btn);
-    expect(screen.getByText('🧛')).toBeInTheDocument();
-  });
-
-  it('toggles back to original theme', () => {
-    render(<Header />);
-    fireEvent.click(screen.getByText('☀️'));
-    fireEvent.click(screen.getByText('🧛'));
-    expect(screen.getByText('☀️')).toBeInTheDocument();
-  });
-
-  it('persists theme to localStorage', () => {
-    render(<Header />);
-    fireEvent.click(screen.getByText('☀️'));
-    expect(localStorage.getItem('nikoli-theme')).toBe('nikoli-light');
-  });
-
-  it('sets data-theme attribute on html', () => {
-    render(<Header />);
+    await user.click(screen.getByTestId('theme-toggle'));
     expect(document.documentElement.getAttribute('data-theme')).toBe(
       'nikoli-dark'
     );
   });
 
-  it('reads saved theme from localStorage', () => {
-    localStorage.setItem('nikoli-theme', 'nikoli-light');
+  it('toggles back to original theme', async () => {
+    const user = userEvent.setup();
     render(<Header />);
-    expect(screen.getByText('🧛')).toBeInTheDocument();
+    const toggle = screen.getByTestId('theme-toggle');
+    await user.click(toggle);
+    await user.click(toggle);
+    expect(document.documentElement.getAttribute('data-theme')).toBe(
+      'nikoli-light'
+    );
   });
 
-  it('highlights active nav link', () => {
+  it('persists theme to localStorage', async () => {
+    const user = userEvent.setup();
     render(<Header />);
-    const aboutLink = screen.getByText('About');
-    expect(aboutLink.closest('a')).toHaveClass('btn-active');
+    await user.click(screen.getByTestId('theme-toggle'));
+    expect(localStorage.getItem('nikoli-theme')).toBe('nikoli-dark');
+  });
+
+  it('sets data-theme attribute on html', () => {
+    render(<Header />);
+    expect(document.documentElement.getAttribute('data-theme')).toBe(
+      'nikoli-light'
+    );
+  });
+
+  it('reads saved theme from localStorage', () => {
+    localStorage.setItem('nikoli-theme', 'nikoli-dark');
+    render(<Header />);
+    expect(document.documentElement.getAttribute('data-theme')).toBe(
+      'nikoli-dark'
+    );
   });
 });

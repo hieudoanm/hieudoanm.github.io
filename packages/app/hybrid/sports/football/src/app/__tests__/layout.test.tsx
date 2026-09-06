@@ -15,6 +15,7 @@ jest.mock('react-icons/fi', () => ({
   FiClock: () => null,
   FiDownload: () => null,
   FiInfo: () => null,
+  FiMenu: () => null,
   FiMoon: () => null,
   FiSun: () => null,
 }));
@@ -22,6 +23,10 @@ jest.mock('react-icons/fi', () => ({
 import RootLayout, { metadata } from '../layout';
 
 describe('RootLayout', () => {
+  beforeEach(() => {
+    localStorage.clear();
+  });
+
   it('renders children', () => {
     render(
       <RootLayout>
@@ -37,9 +42,15 @@ describe('RootLayout', () => {
         <div />
       </RootLayout>
     );
-    expect(screen.getByText('About')).toHaveAttribute('href', '/about');
-    expect(screen.getByText('Downloads')).toHaveAttribute('href', '/downloads');
-    expect(screen.getByText('Version')).toHaveAttribute('href', '/version');
+    expect(screen.getAllByText('About')[0]).toHaveAttribute('href', '/about');
+    expect(screen.getAllByText('Downloads')[0]).toHaveAttribute(
+      'href',
+      '/downloads'
+    );
+    expect(screen.getAllByText('Version')[0]).toHaveAttribute(
+      'href',
+      '/version'
+    );
   });
 });
 

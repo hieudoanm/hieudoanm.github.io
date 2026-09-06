@@ -1,7 +1,7 @@
 import { buildVersion } from './version';
 
 export const about = {
-  name: 'Free Resume Builder',
+  name: 'Open Resume',
   description:
     'Build a professional resume with 32 free templates and export it as PDF.',
   version: buildVersion,

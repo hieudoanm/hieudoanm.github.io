@@ -2,22 +2,6 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { Header } from '../Header';
 
-jest.mock('next/navigation', () => ({
-  usePathname: () => '/',
-}));
-
-jest.mock('next/link', () => {
-  const MockLink = ({
-    children,
-    href,
-  }: {
-    children: React.ReactNode;
-    href: string;
-  }) => <a href={href}>{children}</a>;
-  MockLink.displayName = 'MockLink';
-  return MockLink;
-});
-
 describe('Header', () => {
   beforeEach(() => {
     localStorage.clear();
@@ -26,36 +10,36 @@ describe('Header', () => {
 
   it('renders the app title', () => {
     render(<Header />);
-    expect(screen.getByText('8-BIT GAMES')).toBeInTheDocument();
+    expect(screen.getByText('8-Bit')).toBeInTheDocument();
   });
 
   it('renders a link to home', () => {
     render(<Header />);
-    const link = screen.getByText('8-BIT GAMES').closest('a');
+    const link = screen.getByText('8-Bit').closest('a');
     expect(link).toHaveAttribute('href', '/');
   });
 
-  it('renders about link', () => {
+  it('renders about links', () => {
     render(<Header />);
-    expect(screen.getByText('ABOUT')).toBeInTheDocument();
+    expect(screen.getAllByText('About').length).toBeGreaterThanOrEqual(1);
   });
 
-  it('renders downloads link', () => {
+  it('renders downloads links', () => {
     render(<Header />);
-    expect(screen.getByText('DOWNLOADS')).toBeInTheDocument();
+    expect(screen.getAllByText('Downloads').length).toBeGreaterThanOrEqual(1);
   });
 
-  it('renders version link', () => {
+  it('renders version links', () => {
     render(<Header />);
-    expect(screen.getByText('VERSION')).toBeInTheDocument();
+    expect(screen.getAllByText('Version').length).toBeGreaterThanOrEqual(1);
   });
 
-  it('applies and persists the default theme', () => {
+  it('applies and persists the default light theme', () => {
     render(<Header />);
     expect(document.documentElement.getAttribute('data-theme')).toBe(
-      '8-bit-dark'
+      '8-bit-light'
     );
-    expect(localStorage.getItem('8-bit-theme')).toBe('8-bit-dark');
+    expect(localStorage.getItem('8-bit-theme')).toBe('8-bit-light');
   });
 
   it('toggles between themes', async () => {
@@ -63,8 +47,8 @@ describe('Header', () => {
     render(<Header />);
     await user.click(screen.getByTestId('theme-toggle'));
     expect(document.documentElement.getAttribute('data-theme')).toBe(
-      '8-bit-light'
+      '8-bit-dark'
     );
-    expect(localStorage.getItem('8-bit-theme')).toBe('8-bit-light');
+    expect(localStorage.getItem('8-bit-theme')).toBe('8-bit-dark');
   });
 });

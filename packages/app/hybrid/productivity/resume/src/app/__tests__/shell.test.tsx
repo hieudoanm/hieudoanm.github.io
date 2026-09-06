@@ -1,9 +1,9 @@
 import { render, screen } from '@testing-library/react';
-import RootLayout from '../layout';
-import ErrorBoundary from '../error';
-import NotFound from '../not-found';
 import AboutPage from '../(info)/about/page';
 import VersionPage from '../(info)/version/page';
+import ErrorBoundary from '../error';
+import RootLayout from '../layout';
+import NotFound from '../not-found';
 
 describe('app shell', () => {
   it('renders the root layout with children', () => {
@@ -36,7 +36,7 @@ describe('app shell', () => {
 
   it('renders the about page', () => {
     render(<AboutPage />);
-    expect(screen.getByText('Free Resume Builder')).toBeInTheDocument();
+    expect(screen.getByText('Open Resume')).toBeInTheDocument();
     expect(screen.getByText('32 Free Templates')).toBeInTheDocument();
     expect(screen.getByText('A3 · A4 · A5 · A6 · B5')).toBeInTheDocument();
   });

@@ -1,11 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { Header } from '../Header';
 
-jest.mock('next/link', () => ({
-  __esModule: true,
-  default: ({ children, ...props }: any) => <a {...props}>{children}</a>,
-}));
-
 beforeEach(() => {
   localStorage.clear();
   document.documentElement.removeAttribute('data-theme');
@@ -14,26 +9,38 @@ beforeEach(() => {
 describe('Header', () => {
   it('renders the app name', () => {
     render(<Header />);
-    expect(screen.getByText('CALENDAR')).toBeInTheDocument();
+    expect(screen.getByText('Calendar')).toBeInTheDocument();
   });
 
   it('renders navigation links', () => {
     render(<Header />);
-    expect(screen.getByText('About')).toBeInTheDocument();
-    expect(screen.getByText('Downloads')).toBeInTheDocument();
-    expect(screen.getByText('Version')).toBeInTheDocument();
+    expect(screen.getAllByText('About').length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText('Downloads').length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText('Version').length).toBeGreaterThanOrEqual(1);
   });
 
   it('links to correct routes', () => {
     render(<Header />);
-    expect(screen.getByText('About')).toHaveAttribute('href', '/about');
-    expect(screen.getByText('Downloads')).toHaveAttribute('href', '/downloads');
-    expect(screen.getByText('Version')).toHaveAttribute('href', '/version');
+    const aboutLinks = screen.getAllByText('About');
+    aboutLinks.forEach((link) =>
+      expect(link.closest('a')).toHaveAttribute('href', '/about')
+    );
+    const downloadsLinks = screen.getAllByText('Downloads');
+    downloadsLinks.forEach((link) =>
+      expect(link.closest('a')).toHaveAttribute('href', '/downloads')
+    );
+    const versionLinks = screen.getAllByText('Version');
+    versionLinks.forEach((link) =>
+      expect(link.closest('a')).toHaveAttribute('href', '/version')
+    );
   });
 
   it('links home from the logo', () => {
     render(<Header />);
-    expect(screen.getByText('CALENDAR')).toHaveAttribute('href', '/');
+    expect(screen.getByText('Calendar').closest('a')).toHaveAttribute(
+      'href',
+      '/'
+    );
   });
 
   it('renders theme toggle button', () => {
@@ -43,10 +50,10 @@ describe('Header', () => {
     ).toBeInTheDocument();
   });
 
-  it('sets default data-theme to nothing', () => {
+  it('sets default data-theme to light', () => {
     render(<Header />);
     expect(document.documentElement.getAttribute('data-theme')).toBe(
-      'calendar-dark'
+      'calendar-light'
     );
   });
 
@@ -54,23 +61,23 @@ describe('Header', () => {
     render(<Header />);
     fireEvent.click(screen.getByRole('button', { name: /toggle theme/i }));
     expect(document.documentElement.getAttribute('data-theme')).toBe(
-      'calendar-light'
+      'calendar-dark'
     );
   });
 
-  it('toggles back to nothing theme', () => {
+  it('toggles back to light theme', () => {
     render(<Header />);
     const toggle = screen.getByRole('button', { name: /toggle theme/i });
     fireEvent.click(toggle);
     fireEvent.click(toggle);
     expect(document.documentElement.getAttribute('data-theme')).toBe(
-      'calendar-dark'
+      'calendar-light'
     );
   });
 
   it('persists theme to localStorage', () => {
     render(<Header />);
     fireEvent.click(screen.getByRole('button', { name: /toggle theme/i }));
-    expect(localStorage.getItem('calendar-theme')).toBe('calendar-light');
+    expect(localStorage.getItem('calendar-theme')).toBe('calendar-dark');
   });
 });

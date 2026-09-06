@@ -25,15 +25,18 @@ describe('HomePage', () => {
 
   it('renders the builder header and preview', () => {
     render(<HomePage />);
-    expect(screen.getByText('Free Resume Builder')).toBeInTheDocument();
+    expect(screen.getByText('Open Resume')).toBeInTheDocument();
     expect(screen.getByLabelText('Paper size')).toBeInTheDocument();
     expect(screen.getByText('John Smith')).toBeInTheDocument();
   });
 
-  it('renders navigation links', () => {
+  it('renders the undo, redo and reset controls', () => {
     render(<HomePage />);
-    expect(screen.getByRole('link', { name: /about/i })).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /version/i })).toBeInTheDocument();
+    expect(screen.getByLabelText('Undo')).toBeInTheDocument();
+    expect(screen.getByLabelText('Redo')).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: /^reset$/i })
+    ).toBeInTheDocument();
   });
 
   it('resets the data after confirmation', () => {

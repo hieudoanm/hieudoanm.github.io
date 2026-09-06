@@ -3,90 +3,72 @@
 exports[`VersionTemplate to match snapshot 1`] = `
 <div>
   <div
-    class="flex min-h-screen flex-col items-center justify-center px-6 py-24"
-    style="background-color: rgb(0, 0, 0); color: rgb(245, 245, 245);"
+    class="mx-auto flex w-full max-w-2xl flex-col items-center gap-4 px-4 py-10 text-center sm:gap-6 sm:px-6 sm:py-16"
   >
     <p
-      class="mb-6 text-xs tracking-[0.2em] uppercase"
-      style="color: rgb(138, 138, 138);"
+      class="text-base-content/50 text-xs tracking-[0.2em] uppercase"
     >
       Current deployment
     </p>
     <h1
-      class="mb-3 text-4xl font-light tracking-tight"
-      style="font-family: monospace;"
+      class="mb-1"
     >
-      App Version
+      Version
     </h1>
-    <p
-      class="mb-10 max-w-sm text-center text-sm"
-      style="color: rgb(138, 138, 138);"
-    >
-      Build version of the current deployment
-    </p>
     <div
-      class="mb-8 w-full max-w-lg rounded-2xl border p-6"
-      style="background-color: rgb(10, 10, 10); border-color: rgb(31, 31, 31);"
+      class="border-base-content/10 bg-base-200 w-full max-w-lg overflow-x-auto rounded-2xl border p-4 sm:p-6"
     >
       <div
-        class="flex items-center justify-center gap-0"
+        class="flex min-w-max items-center justify-center gap-0"
       >
         <div
-          class="flex flex-col items-center px-4"
+          class="flex flex-col items-center px-2 sm:px-4"
         >
           <span
-            class="font-mono text-2xl font-bold"
-            style="color: rgb(255, 0, 48);"
+            class="font-mono text-xl font-bold sm:text-2xl text-primary"
           >
             0
           </span>
           <span
-            class="mt-1 text-[10px] tracking-widest uppercase"
-            style="color: rgb(138, 138, 138);"
+            class="text-base-content/50 mt-1 hidden text-[10px] tracking-[0.2em] uppercase sm:inline sm:text-xs"
           >
             Year
           </span>
         </div>
         <span
-          class="font-mono text-xl"
-          style="color: rgb(138, 138, 138);"
+          class="text-base-content/50 font-mono text-xl"
         >
           .
         </span>
         <div
-          class="flex flex-col items-center px-4"
+          class="flex flex-col items-center px-2 sm:px-4"
         >
           <span
-            class="font-mono text-2xl font-bold"
-            style="color: rgb(245, 245, 245);"
+            class="font-mono text-xl font-bold sm:text-2xl text-base-content"
           >
             0
           </span>
           <span
-            class="mt-1 text-[10px] tracking-widest uppercase"
-            style="color: rgb(138, 138, 138);"
+            class="text-base-content/50 mt-1 hidden text-[10px] tracking-[0.2em] uppercase sm:inline sm:text-xs"
           >
             Month
           </span>
         </div>
         <span
-          class="font-mono text-xl"
-          style="color: rgb(138, 138, 138);"
+          class="text-base-content/50 font-mono text-xl"
         >
           .
         </span>
         <div
-          class="flex flex-col items-center px-4"
+          class="flex flex-col items-center px-2 sm:px-4"
         >
           <span
-            class="font-mono text-2xl font-bold"
-            style="color: rgb(245, 245, 245);"
+            class="font-mono text-xl font-bold sm:text-2xl text-base-content"
           >
             0
           </span>
           <span
-            class="mt-1 text-[10px] tracking-widest uppercase"
-            style="color: rgb(138, 138, 138);"
+            class="text-base-content/50 mt-1 hidden text-[10px] tracking-[0.2em] uppercase sm:inline sm:text-xs"
           >
             Day
           </span>
@@ -94,17 +76,38 @@ exports[`VersionTemplate to match snapshot 1`] = `
       </div>
     </div>
     <div
-      class="mb-8 flex flex-wrap justify-center gap-3"
+      class="flex w-full flex-col items-center gap-3 sm:flex-row sm:justify-center"
     >
       <button
-        class="rounded-full px-6 py-2 text-sm font-medium transition-colors"
-        style="background-color: rgb(255, 0, 48); color: rgb(245, 245, 245);"
+        class="btn btn-sm w-full rounded-full sm:w-auto btn-primary"
       >
+        <svg
+          fill="none"
+          height="1em"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            height="13"
+            rx="2"
+            ry="2"
+            width="13"
+            x="9"
+            y="9"
+          />
+          <path
+            d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+          />
+        </svg>
         Copy version
       </button>
       <button
-        class="rounded-full px-6 py-2 text-sm font-medium transition-colors"
-        style="background-color: rgb(31, 31, 31); color: rgb(245, 245, 245);"
+        class="btn btn-neutral btn-sm w-full truncate rounded-full sm:w-auto"
       >
         0.0.0
       </button>
@@ -113,14 +116,12 @@ exports[`VersionTemplate to match snapshot 1`] = `
       class="flex flex-wrap justify-center gap-3"
     >
       <span
-        class="rounded-full border px-3 py-1 text-xs"
-        style="border-color: rgb(31, 31, 31); color: rgb(138, 138, 138);"
+        class="border-base-content/20 text-base-content/50 rounded-full border px-3 py-1 text-xs"
       >
         Format: YYYY.MM.DD.hh.mm.ss
       </span>
       <span
-        class="rounded-full px-3 py-1 text-xs"
-        style="background-color: rgb(31, 31, 31); color: rgb(245, 245, 245);"
+        class="badge badge-neutral rounded-full"
       >
         Stable
       </span>

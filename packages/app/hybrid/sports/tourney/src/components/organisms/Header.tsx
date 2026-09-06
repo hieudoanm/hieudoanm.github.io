@@ -1,78 +1,94 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import { FC, useEffect, useState } from 'react';
-import { PiMoonBold, PiSunBold } from 'react-icons/pi';
+import { FiMenu, FiMoon, FiSun } from 'react-icons/fi';
 
 const NAV_LINKS = [
   { href: '/about', label: 'About' },
   { href: '/downloads', label: 'Downloads' },
   { href: '/version', label: 'Version' },
-];
+] as const;
 
-const ThemeToggle: FC = () => {
-  const [mounted, setMounted] = useState(false);
-  const [isLight, setIsLight] = useState(false);
+const APP_NAME: string = 'Tourney';
+const THEME_KEY: string = 'tourney-theme';
+const THEME_DARK: string = 'tourney-dark';
+const THEME_LIGHT: string = 'tourney-light';
 
-  useEffect(() => {
-    setMounted(true);
-    setIsLight(
-      document.documentElement.getAttribute('data-theme') === 'tourney-light'
-    );
-  }, []);
-
-  if (!mounted) return <div className="btn btn-ghost btn-sm btn-circle" />;
-
-  return (
-    <button
-      className="btn btn-ghost btn-sm btn-circle"
-      onClick={() => {
-        const next = isLight ? 'tourney-dark' : 'tourney-light';
-        document.documentElement.setAttribute('data-theme', next);
-        localStorage.setItem('tourney-theme', next);
-        setIsLight(!isLight);
-      }}
-      title="Toggle theme"
-      aria-label="Toggle theme">
-      {isLight ? (
-        <PiSunBold className="h-4 w-4" />
-      ) : (
-        <PiMoonBold className="h-4 w-4" />
-      )}
-    </button>
-  );
+const getInitialTheme = (): string => {
+  if (typeof window === 'undefined') return THEME_LIGHT;
+  return localStorage.getItem(THEME_KEY) || THEME_LIGHT;
 };
-ThemeToggle.displayName = 'ThemeToggle';
 
 export const Header: FC = () => {
-  const pathname = usePathname();
+  const [theme, setTheme] = useState(getInitialTheme);
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem(THEME_KEY, theme);
+  }, [theme]);
+
+  const toggleTheme = () =>
+    setTheme((current) => (current === THEME_LIGHT ? THEME_DARK : THEME_LIGHT));
 
   return (
-    <header className="border-base-300 bg-base-100 sticky top-0 z-10 border-b px-6 py-4">
-      <div className="container mx-auto flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <Link href="/" className="text-base-content font-bold">
-            Tourney
+    <header className="border-base-300 bg-base-100 sticky top-0 z-10 w-full border-b px-4 py-3 sm:px-6">
+      <div className="flex items-center justify-between">
+        <div>
+          <Link href="/" className="text-base-content text-sm font-bold">
+            {APP_NAME}
           </Link>
-          <div className="border-base-300 hidden items-center gap-2 border-l pl-3 sm:flex">
-            {NAV_LINKS.map((link) => (
+        </div>
+
+        <nav className="flex w-auto items-center gap-1">
+          <div className="hidden items-center gap-1 md:flex">
+            {NAV_LINKS.map(({ href, label }) => (
               <Link
-                key={link.href}
-                href={link.href}
-                className={`btn btn-ghost btn-sm ${
-                  pathname === link.href
-                    ? 'text-primary'
-                    : 'text-base-content/50'
-                }`}>
-                {link.label}
+                key={href}
+                href={href}
+                className="text-base-content/60 hover:text-primary px-3 py-1 text-xs transition-colors">
+                {label}
               </Link>
             ))}
           </div>
-        </div>
-        <ThemeToggle />
+          <div className="dropdown dropdown-end md:hidden">
+            <button
+              type="button"
+              className="btn btn-ghost btn-sm"
+              aria-label="Menu"
+              aria-haspopup="menu"
+              tabIndex={0}>
+              <FiMenu className="text-lg" />
+            </button>
+            <ul
+              tabIndex={0}
+              role="menu"
+              className="dropdown-content bg-base-100 border-base-300 menu rounded-box border px-2 py-2 shadow">
+              {NAV_LINKS.map(({ href, label }) => (
+                <li key={href}>
+                  <Link href={href} className="text-xs">
+                    {label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <button
+            type="button"
+            className="btn btn-ghost btn-sm"
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+            data-testid="theme-toggle">
+            {theme === THEME_DARK ? (
+              <FiSun className="text-lg" />
+            ) : (
+              <FiMoon className="text-lg" />
+            )}
+          </button>
+        </nav>
       </div>
     </header>
   );
 };
+
 Header.displayName = 'Header';
