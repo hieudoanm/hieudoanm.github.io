@@ -23,7 +23,7 @@ concurrency:
 jobs:
   c:
     name: C
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     defaults:
       run:
         working-directory: packages/app/headless/kevin/c
@@ -44,7 +44,7 @@ jobs:
 
   cpp:
     name: C++
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     defaults:
       run:
         working-directory: packages/app/headless/kevin/cpp

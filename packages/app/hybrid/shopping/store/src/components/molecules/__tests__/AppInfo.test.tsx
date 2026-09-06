@@ -101,7 +101,7 @@ describe('AppInfo', () => {
 
   it('renders version badge', () => {
     render(<AppInfo app={mockApp} />);
-    expect(screen.getByText('v1.0.0')).toBeTruthy();
+    expect(screen.getByText('1.0.0')).toBeTruthy();
   });
 
   it('renders file size when provided', () => {

@@ -37,7 +37,7 @@ describe('AppHeader', () => {
 
   it('renders version badge', () => {
     render(<AppHeader app={mockApp} />);
-    expect(screen.getByText('v1.0.0')).toBeTruthy();
+    expect(screen.getByText('1.0.0')).toBeTruthy();
   });
 
   it('renders lastUpdated when provided', () => {
