@@ -101,8 +101,8 @@ const readCsvRows = (): CsvRow[] => {
   const rows: CsvRow[] = [];
   for (const file of files) {
     const csv = readFileSync(join(CSV_DIR, file), 'utf8')
-      .replace(/\r\n/g, '\n')
-      .replace(/\r/g, '');
+      .replaceAll('\r\n', '\n')
+      .replaceAll('\r', '');
     const [header, ...body] = parseCsvRows(csv);
     for (const values of body) {
       if (!values.some((value) => value.trim() !== '')) continue;

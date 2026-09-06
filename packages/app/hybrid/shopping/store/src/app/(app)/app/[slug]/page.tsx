@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, NextPage } from 'next';
 import { existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { parseDownloads, getReleasePageUrl } from '@/lib/downloads';
@@ -46,7 +46,7 @@ export const generateMetadata = async ({
   };
 };
 
-const Page = async ({ params }: PageProps) => {
+const Page: NextPage<PageProps> = async ({ params }) => {
   const { slug } = await params;
   const app = ALL_APPS.find((a) => a.slug === slug);
   return (

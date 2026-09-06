@@ -7,7 +7,11 @@ STORE_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 CSV_DIR="$STORE_DIR/src/data/csv"
 CSV_SOURCES="${CSV_SOURCES:-hybrid.csv|home,about,downloads,version
 extensions.csv|home
-native.csv|home}"
+native.csv|home
+headless.csv|home}"
+SOURCE_SPECS="$(printf '%s\n' "$CSV_SOURCES" | sed '/^[[:space:]]*$/d')"
+SOURCE_PAGES="$(printf '%s\n' "$SOURCE_SPECS" | cut -d'|' -f2- | tr ',' '\n' | sed 's/^[[:space:]]*//; s/[[:space:]]*$//' | grep -v '^$' | sort -u | tr '\n' ' ')"
+SOURCE_FILES="$(printf '%s\n' "$SOURCE_SPECS" | cut -d'|' -f1 | sed 's/^[[:space:]]*//; s/[[:space:]]*$//' | grep -v '^$' | sort -u | sed 's/\.csv$//' | tr '\n' ' ')"
 OUT_DIR="$STORE_DIR/public/screenshots"
 VIEWPORT="${VIEWPORT:-1280,720}"
 WAIT_MS="${WAIT_MS:-2000}"
@@ -24,15 +28,22 @@ Sources (set CSV_SOURCES to override):
     hybrid.csv      home, about, downloads, version pages
     extensions.csv  landing page (home)
     native.csv      landing page (home)
+    headless.csv    landing page (home)
 
 Default output: public/screenshots
 
 Page flags (combinable; default is --all):
-    --all         capture all available pages
-    --home        capture only the home page
-    --about       capture only the about page (hybrid only)
-    --downloads   capture only the downloads page (hybrid only)
-    --version     capture only the version page (hybrid only)
+    --all         capture every page listed in the sources
+    --<page>      capture only <page> for the sources that declare it.
+                  Page flags are derived from the CSV_SOURCES page
+                  lists (e.g. --home, --about, --downloads, --version
+                  with the default sources).
+
+File flags (combinable; default is all CSV files):
+    --<file>      capture only the apps from <file>, using the CSV
+                  basename without .csv (e.g. --hybrid, --extensions,
+                  --native, --headless). File flags are derived from
+                  CSV_SOURCES.
 
 Environment:
     VIEWPORT     viewport size (default 1280,720)
@@ -50,21 +61,27 @@ require() {
 }
 
 CAPTURE_ALL=0
-CAPTURE_HOME=0
-CAPTURE_ABOUT=0
-CAPTURE_DOWNLOADS=0
-CAPTURE_VERSION=0
+SELECTED_PAGES=""
+SELECTED_FILES=""
 
 while [[ $# -gt 0 ]]; do
     case "$1" in
         --all) CAPTURE_ALL=1 ;;
-        --home) CAPTURE_HOME=1 ;;
-        --about) CAPTURE_ABOUT=1 ;;
-        --downloads) CAPTURE_DOWNLOADS=1 ;;
-        --version) CAPTURE_VERSION=1 ;;
         -h | --help)
             usage
             exit 0
+            ;;
+        --*)
+            name="${1#--}"
+            if [[ " $SOURCE_PAGES " == *" $name "* ]]; then
+                SELECTED_PAGES="$SELECTED_PAGES $name"
+            elif [[ " $SOURCE_FILES " == *" $name "* ]]; then
+                SELECTED_FILES="$SELECTED_FILES $name"
+            else
+                printf 'Error: unknown option %s\n' "$1" >&2
+                usage >&2
+                exit 1
+            fi
             ;;
         -*)
             printf 'Error: unknown option %s\n' "$1" >&2
@@ -76,20 +93,26 @@ while [[ $# -gt 0 ]]; do
     shift
 done
 
-if [[ "$CAPTURE_ALL" -eq 0 && "$CAPTURE_HOME" -eq 0 &&
-    "$CAPTURE_ABOUT" -eq 0 &&
-    "$CAPTURE_DOWNLOADS" -eq 0 && "$CAPTURE_VERSION" -eq 0 ]]; then
-    CAPTURE_ALL=1
+if [[ -n "$SELECTED_FILES" ]]; then
+    FILTERED=""
+    while IFS= read -r spec; do
+        [[ -z "$spec" ]] && continue
+        file="${spec%%|*}"
+        file="${file%.csv}"
+        if [[ " $SELECTED_FILES " == *" $file "* ]]; then
+            FILTERED="$FILTERED$spec"$'\n'
+        fi
+    done <<< "$SOURCE_SPECS"
+    CSV_SOURCES="$FILTERED"
 fi
 
-PAGES=""
 if [[ "$CAPTURE_ALL" -eq 1 ]]; then
-    PAGES="home about downloads version"
+    PAGES="$SOURCE_PAGES"
 else
-    [[ "$CAPTURE_HOME" -eq 1 ]] && PAGES="$PAGES home"
-    [[ "$CAPTURE_ABOUT" -eq 1 ]] && PAGES="$PAGES about"
-    [[ "$CAPTURE_DOWNLOADS" -eq 1 ]] && PAGES="$PAGES downloads"
-    [[ "$CAPTURE_VERSION" -eq 1 ]] && PAGES="$PAGES version"
+    PAGES="$SELECTED_PAGES"
+    if [[ -z "$PAGES" ]]; then
+        PAGES="$SOURCE_PAGES"
+    fi
 fi
 PAGES="$(printf '%s\n' "$PAGES" | sed 's/^ *//; s/ *$//')"
 
@@ -122,12 +145,10 @@ import sys
 pages = set(os.environ["PAGES"].split())
 csv_dir = sys.argv[1]
 
-SUFFIXES = {
-    "home": "",
-    "about": "/about",
-    "downloads": "/downloads",
-    "version": "/version",
-}
+
+def suffix(name):
+    return "" if name == "home" else "/" + name
+
 
 for spec in os.environ["CSV_SOURCES"].splitlines():
     spec = spec.strip()
@@ -147,9 +168,10 @@ for spec in os.environ["CSV_SOURCES"].splitlines():
             href = (row.get("href") or "").strip()
             if not app_id or not href:
                 continue
-            for name, suffix in SUFFIXES.items():
-                if name in pages and name in valid_pages:
-                    print(f"{app_id}\t{name}\t{href}{suffix}")
+            for name in pages:
+                if name not in valid_pages:
+                    continue
+                print(f"{app_id}\t{name}\t{href}{suffix(name)}")
 PY
 
 printf 'Capturing pages: %s\n' "$PAGES"
