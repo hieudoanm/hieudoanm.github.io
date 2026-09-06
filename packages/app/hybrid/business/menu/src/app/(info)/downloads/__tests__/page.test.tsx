@@ -11,7 +11,9 @@ describe('DownloadsPage', () => {
     render(<DownloadsPage />);
     expect(screen.getAllByText('Android').length).toBe(1);
     expect(screen.getAllByText('Linux').length).toBe(1);
-    expect(screen.getByText('Linux (Debian)')).toBeInTheDocument();
+    expect(
+      screen.getByRole('link', { name: 'Download .deb' })
+    ).toBeInTheDocument();
     expect(screen.getByText('macOS')).toBeInTheDocument();
     expect(screen.getAllByText('Windows').length).toBe(1);
   });

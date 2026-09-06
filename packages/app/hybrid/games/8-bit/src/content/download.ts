@@ -7,12 +7,6 @@ export const download = {
   version: buildVersion,
   items: [
     {
-      platform: 'macOS',
-      requirements: 'Apple Silicon · macOS 13.+',
-      label: '.dmg',
-      href: `${RELEASE}/8-bit.dmg`,
-    },
-    {
       platform: 'Android',
       requirements: 'Android 14.+',
       label: '.aab',
@@ -26,7 +20,7 @@ export const download = {
     },
     {
       platform: 'Linux',
-      requirements: 'Ubuntu 22.04.+',
+      requirements: 'All Distro',
       label: '.AppImage',
       href: `${RELEASE}/8-bit.AppImage`,
     },
@@ -37,10 +31,16 @@ export const download = {
       href: `${RELEASE}/8-bit.rpm`,
     },
     {
-      platform: 'Linux (Debian)',
+      platform: 'Linux',
       requirements: 'Debian 13.+',
       label: '.deb',
       href: `${RELEASE}/8-bit.deb`,
+    },
+    {
+      platform: 'macOS',
+      requirements: 'Apple Silicon · macOS 13.+',
+      label: '.dmg',
+      href: `${RELEASE}/8-bit.dmg`,
     },
     {
       platform: 'Windows',

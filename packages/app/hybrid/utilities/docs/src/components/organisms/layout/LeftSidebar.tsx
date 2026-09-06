@@ -12,8 +12,8 @@ const LINKS: {
 }[] = [
   { href: '/', label: 'Home', icon: PiHouse },
   { href: '/apps', label: 'Apps', icon: PiSquaresFour },
-  { href: '/settings', label: 'Settings', icon: PiGear },
-  { href: '/me', label: 'Me', icon: PiUser },
+  { href: '/about', label: 'About', icon: PiUser },
+  { href: '/version', label: 'Version', icon: PiGear },
 ];
 
 export const LeftSidebar: FC = () => {
