@@ -7,19 +7,19 @@ describe('useTheme', () => {
     document.documentElement.removeAttribute('data-theme');
   });
 
-  it('defaults to night and applies it to the document', () => {
+  it('defaults to keynotes-light and applies it to the document', () => {
     const { result } = renderHook(() => useTheme());
-    expect(result.current.theme).toBe('night');
-    expect(document.documentElement.dataset.theme).toBe('night');
+    expect(result.current.theme).toBe('keynotes-light');
+    expect(document.documentElement.dataset.theme).toBe('keynotes-light');
   });
 
-  it('toggles between night and light, persisting to localStorage', () => {
+  it('toggles between keynotes-light and keynotes-dark, persisting to localStorage', () => {
     const { result } = renderHook(() => useTheme());
     act(() => result.current.toggle());
-    expect(result.current.theme).toBe('light');
-    expect(window.localStorage.getItem('keynotes-theme')).toBe('light');
-    expect(document.documentElement.dataset.theme).toBe('light');
+    expect(result.current.theme).toBe('keynotes-dark');
+    expect(window.localStorage.getItem('keynotes-theme')).toBe('keynotes-dark');
+    expect(document.documentElement.dataset.theme).toBe('keynotes-dark');
     act(() => result.current.toggle());
-    expect(result.current.theme).toBe('night');
+    expect(result.current.theme).toBe('keynotes-light');
   });
 });

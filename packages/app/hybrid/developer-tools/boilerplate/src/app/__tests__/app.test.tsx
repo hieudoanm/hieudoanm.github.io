@@ -14,7 +14,10 @@ describe('RootLayout', () => {
       </RootLayout>
     );
     expect(document.documentElement).toHaveAttribute('lang', 'en');
-    expect(document.documentElement).toHaveAttribute('data-theme', 'nothing');
+    expect(document.documentElement).toHaveAttribute(
+      'data-theme',
+      'boilerplate-light'
+    );
     expect(screen.getByText('child content')).toBeInTheDocument();
   });
 

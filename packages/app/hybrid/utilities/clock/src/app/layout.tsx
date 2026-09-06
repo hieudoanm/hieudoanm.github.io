@@ -10,7 +10,7 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
   const [queryClient] = useState(() => new QueryClient());
 
   return (
-    <html lang="en" data-theme="clock-dark">
+    <html lang="en" data-theme="clock-light">
       <head>
         <title>Clock</title>
         <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />

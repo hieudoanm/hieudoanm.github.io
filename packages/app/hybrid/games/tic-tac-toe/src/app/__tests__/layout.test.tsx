@@ -25,7 +25,7 @@ describe('RootLayout', () => {
     );
     expect(document.documentElement).toHaveAttribute(
       'data-theme',
-      'tic-tac-toe-dark'
+      'tic-tac-toe-light'
     );
   });
 

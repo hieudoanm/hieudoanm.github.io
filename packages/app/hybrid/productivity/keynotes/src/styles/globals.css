@@ -1,15 +1,6 @@
 @import 'tailwindcss';
-
-@plugin 'daisyui' {
-  themes:
-    night --default,
-    dark,
-    light,
-    business,
-    dim,
-    nord,
-    sunset;
-}
+@import './base.css';
+@import './themes.css';
 
 @layer base {
   html,

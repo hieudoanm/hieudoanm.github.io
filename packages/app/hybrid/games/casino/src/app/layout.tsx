@@ -20,11 +20,11 @@ export const viewport: Viewport = {
   maximumScale: 1,
 };
 
-const THEME_INIT = `(function(){try{var t=localStorage.getItem('casino-theme');document.documentElement.dataset.theme=t==='casino-light'?'casino-light':'casino-dark';}catch(e){document.documentElement.dataset.theme='casino-dark';}})();`;
+const THEME_INIT = `(function(){try{var t=localStorage.getItem('casino-theme');document.documentElement.dataset.theme=t==='casino-dark'?'casino-dark':'casino-light';}catch(e){document.documentElement.dataset.theme='casino-light';}})();`;
 
 const RootLayout: FC<{ children: ReactNode }> = ({ children }) => {
   return (
-    <html lang="en" data-theme="casino-dark">
+    <html lang="en" data-theme="casino-light">
       <head>
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT }} />
         <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />

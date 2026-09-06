@@ -41,7 +41,7 @@ describe('RootLayout', () => {
     );
     expect(document.documentElement).toHaveAttribute(
       'data-theme',
-      'calendar-dark'
+      'calendar-light'
     );
   });
 

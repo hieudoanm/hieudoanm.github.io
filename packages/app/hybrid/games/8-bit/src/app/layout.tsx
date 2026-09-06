@@ -20,10 +20,10 @@ export const viewport: Viewport = {
   maximumScale: 1,
 };
 
-const THEME_INIT = `(function(){try{var t=localStorage.getItem('8-bit-theme');document.documentElement.dataset.theme=t==='8-bit-light'?'8-bit-light':'8-bit-dark';}catch(e){document.documentElement.dataset.theme='8-bit-dark';}})();`;
+const THEME_INIT = `(function(){try{var t=localStorage.getItem('8-bit-theme');document.documentElement.dataset.theme=t==='8-bit-dark'?'8-bit-dark':'8-bit-light';}catch(e){document.documentElement.dataset.theme='8-bit-light';}})();`;
 
 const RootLayout: FC<{ children: ReactNode }> = ({ children }) => (
-  <html lang="en" data-theme="8-bit-dark">
+  <html lang="en" data-theme="8-bit-light">
     <head>
       <script dangerouslySetInnerHTML={{ __html: THEME_INIT }} />
       <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />

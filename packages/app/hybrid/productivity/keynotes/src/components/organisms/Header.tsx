@@ -12,8 +12,8 @@ const NAV_LINKS = [
 
 const APP_NAME: string = 'Keynotes';
 const THEME_KEY: string = 'keynotes-theme';
-const THEME_DARK: string = 'night';
-const THEME_LIGHT: string = 'light';
+const THEME_DARK: string = 'keynotes-dark';
+const THEME_LIGHT: string = 'keynotes-light';
 
 const getInitialTheme = (): string => {
   if (typeof window === 'undefined') return THEME_LIGHT;

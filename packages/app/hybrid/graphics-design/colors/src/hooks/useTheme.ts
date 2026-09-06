@@ -5,12 +5,12 @@ import { useEffect, useState } from 'react';
 export type Theme = 'colors-light' | 'colors-dark';
 
 const THEME_KEY = 'colors:theme';
-const DEFAULT_THEME: Theme = 'colors-dark';
+const DEFAULT_THEME: Theme = 'colors-light';
 
 const readStoredTheme = (): Theme => {
   try {
     const raw = window.localStorage.getItem(THEME_KEY);
-    return raw === 'colors-light' ? 'colors-light' : DEFAULT_THEME;
+    return raw === 'colors-dark' ? 'colors-dark' : DEFAULT_THEME;
   } catch {
     return DEFAULT_THEME;
   }

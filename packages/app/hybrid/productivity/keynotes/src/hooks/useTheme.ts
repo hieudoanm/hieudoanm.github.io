@@ -2,18 +2,18 @@
 
 import { useCallback, useEffect, useState } from 'react';
 
-export type AppTheme = 'night' | 'light';
+export type AppTheme = 'keynotes-light' | 'keynotes-dark';
 
 const STORAGE_KEY = 'keynotes-theme';
 
 const readStored = (): AppTheme => {
-  if (typeof window === 'undefined') return 'night';
+  if (typeof window === 'undefined') return 'keynotes-light';
   const saved = window.localStorage.getItem(STORAGE_KEY);
-  return saved === 'light' ? 'light' : 'night';
+  return saved === 'keynotes-dark' ? 'keynotes-dark' : 'keynotes-light';
 };
 
 export const useTheme = (): { theme: AppTheme; toggle: () => void } => {
-  const [theme, setTheme] = useState<AppTheme>('night');
+  const [theme, setTheme] = useState<AppTheme>('keynotes-light');
 
   useEffect(() => {
     setTheme(readStored());
@@ -25,7 +25,8 @@ export const useTheme = (): { theme: AppTheme; toggle: () => void } => {
 
   const toggle = useCallback(() => {
     setTheme((t) => {
-      const next: AppTheme = t === 'night' ? 'light' : 'night';
+      const next: AppTheme =
+        t === 'keynotes-dark' ? 'keynotes-light' : 'keynotes-dark';
       window.localStorage.setItem(STORAGE_KEY, next);
       return next;
     });

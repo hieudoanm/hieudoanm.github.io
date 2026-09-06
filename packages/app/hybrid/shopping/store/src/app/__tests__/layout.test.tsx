@@ -34,7 +34,7 @@ describe('RootLayout', () => {
     );
     expect(document.documentElement).toHaveAttribute(
       'data-theme',
-      'store-dark'
+      'store-light'
     );
   });
 });

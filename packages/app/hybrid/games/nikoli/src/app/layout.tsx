@@ -21,11 +21,11 @@ export const viewport: Viewport = {
   maximumScale: 1,
 };
 
-const THEME_INIT = `(function(){try{var t=localStorage.getItem('nikoli-theme');document.documentElement.dataset.theme=t==='nikoli-light'?'nikoli-light':'nikoli-dark';}catch(e){document.documentElement.dataset.theme='nikoli-dark';}})();`;
+const THEME_INIT = `(function(){try{var t=localStorage.getItem('nikoli-theme');document.documentElement.dataset.theme=t==='nikoli-dark'?'nikoli-dark':'nikoli-light';}catch(e){document.documentElement.dataset.theme='nikoli-light';}})();`;
 
 const RootLayout: FC<{ children: ReactNode }> = ({ children }) => {
   return (
-    <html lang="en" data-theme="nikoli-dark">
+    <html lang="en" data-theme="nikoli-light">
       <head>
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT }} />
         <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />

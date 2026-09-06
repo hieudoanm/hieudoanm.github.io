@@ -42,7 +42,10 @@ describe('RootLayout', () => {
         <div />
       </RootLayout>
     );
-    expect(document.documentElement).toHaveAttribute('data-theme', 'light');
+    expect(document.documentElement).toHaveAttribute(
+      'data-theme',
+      'keynotes-light'
+    );
   });
 });
 

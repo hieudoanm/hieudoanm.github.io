@@ -6,7 +6,7 @@ import { useTheme } from '@/hooks/useTheme';
 
 export const ThemeToggle: FC = () => {
   const { theme, toggle } = useTheme();
-  const dark = theme === 'night';
+  const dark = theme === 'keynotes-dark';
   return (
     <button
       type="button"

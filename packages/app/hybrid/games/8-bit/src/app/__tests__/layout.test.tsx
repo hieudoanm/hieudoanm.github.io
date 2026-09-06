@@ -25,7 +25,7 @@ describe('RootLayout', () => {
     );
     expect(document.documentElement).toHaveAttribute(
       'data-theme',
-      '8-bit-dark'
+      '8-bit-light'
     );
   });
 

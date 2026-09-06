@@ -21,10 +21,10 @@ export const viewport: Viewport = {
   maximumScale: 1,
 };
 
-const THEME_INIT = `(function(){try{var t=localStorage.getItem('colors:theme');document.documentElement.dataset.theme=t==='colors-light'?'colors-light':'colors-dark';}catch(e){document.documentElement.dataset.theme='colors-dark';}})();`;
+const THEME_INIT = `(function(){try{var t=localStorage.getItem('colors:theme');document.documentElement.dataset.theme=t==='colors-dark'?'colors-dark':'colors-light';}catch(e){document.documentElement.dataset.theme='colors-light';}})();`;
 
 const RootLayout: FC<{ children: ReactNode }> = ({ children }) => (
-  <html lang="en" data-theme="colors-dark">
+  <html lang="en" data-theme="colors-light">
     <head>
       <script dangerouslySetInnerHTML={{ __html: THEME_INIT }} />
       <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />

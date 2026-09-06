@@ -111,8 +111,8 @@ describe('EditorPage integration', () => {
       target: { value: '100' },
     });
 
-    fireEvent.click(screen.getByTitle('Switch to light theme'));
-    expect(screen.getByTitle('Switch to dark theme')).toBeInTheDocument();
+    fireEvent.click(screen.getByTitle('Switch to dark theme'));
+    expect(screen.getByTitle('Switch to light theme')).toBeInTheDocument();
   });
 
   it('switches left panel tabs and inserts objects', async () => {

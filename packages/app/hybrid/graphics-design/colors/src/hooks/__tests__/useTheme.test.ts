@@ -18,26 +18,33 @@ describe('useTheme', () => {
     delete document.documentElement.dataset.theme;
   });
 
-  it('defaults to colors-dark', () => {
+  it('defaults to colors-light', () => {
     const { result } = renderHook(() => useTheme());
-    expect(result.current.theme).toBe('colors-dark');
+    expect(result.current.theme).toBe('colors-light');
   });
 
   it('stores the default theme in localStorage and sets dataset.theme', () => {
     renderHook(() => useTheme());
-    expect(getStored()).toBe('colors-dark');
-    expect(getDatasetTheme()).toBe('colors-dark');
-  });
-
-  it('reads a stored light theme from localStorage', () => {
-    window.localStorage.setItem(THEME_KEY, 'colors-light');
-    const { result } = renderHook(() => useTheme());
-    expect(result.current.theme).toBe('colors-light');
+    expect(getStored()).toBe('colors-light');
     expect(getDatasetTheme()).toBe('colors-light');
   });
 
-  it('toggleTheme flips to colors-light and back', () => {
+  it('reads a stored dark theme from localStorage', () => {
+    window.localStorage.setItem(THEME_KEY, 'colors-dark');
     const { result } = renderHook(() => useTheme());
+    expect(result.current.theme).toBe('colors-dark');
+    expect(getDatasetTheme()).toBe('colors-dark');
+  });
+
+  it('toggleTheme flips to colors-dark and back', () => {
+    const { result } = renderHook(() => useTheme());
+
+    act(() => {
+      result.current.toggleTheme();
+    });
+    expect(result.current.theme).toBe('colors-dark');
+    expect(getStored()).toBe('colors-dark');
+    expect(getDatasetTheme()).toBe('colors-dark');
 
     act(() => {
       result.current.toggleTheme();
@@ -45,16 +52,9 @@ describe('useTheme', () => {
     expect(result.current.theme).toBe('colors-light');
     expect(getStored()).toBe('colors-light');
     expect(getDatasetTheme()).toBe('colors-light');
-
-    act(() => {
-      result.current.toggleTheme();
-    });
-    expect(result.current.theme).toBe('colors-dark');
-    expect(getStored()).toBe('colors-dark');
-    expect(getDatasetTheme()).toBe('colors-dark');
   });
 
-  it('falls back to colors-dark when localStorage is unavailable', () => {
+  it('falls back to colors-light when localStorage is unavailable', () => {
     const getItem = jest
       .spyOn(Storage.prototype, 'getItem')
       .mockImplementation(() => {
@@ -67,12 +67,12 @@ describe('useTheme', () => {
       });
 
     const { result } = renderHook(() => useTheme());
-    expect(result.current.theme).toBe('colors-dark');
+    expect(result.current.theme).toBe('colors-light');
 
     act(() => {
       result.current.toggleTheme();
     });
-    expect(result.current.theme).toBe('colors-light');
+    expect(result.current.theme).toBe('colors-dark');
 
     getItem.mockRestore();
     setItem.mockRestore();

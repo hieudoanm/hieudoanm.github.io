@@ -20,11 +20,11 @@ export const viewport: Viewport = {
   maximumScale: 1,
 };
 
-const THEME_INIT = `(function(){try{var t=localStorage.getItem('tic-tac-toe-theme');document.documentElement.dataset.theme=t==='tic-tac-toe-light'?'tic-tac-toe-light':'tic-tac-toe-dark';}catch(e){document.documentElement.dataset.theme='tic-tac-toe-dark';}})();`;
+const THEME_INIT = `(function(){try{var t=localStorage.getItem('tic-tac-toe-theme');document.documentElement.dataset.theme=t==='tic-tac-toe-dark'?'tic-tac-toe-dark':'tic-tac-toe-light';}catch(e){document.documentElement.dataset.theme='tic-tac-toe-light';}})();`;
 
 const RootLayout: FC<{ children: ReactNode }> = ({ children }) => {
   return (
-    <html lang="en" data-theme="tic-tac-toe-dark">
+    <html lang="en" data-theme="tic-tac-toe-light">
       <head>
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT }} />
         <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />

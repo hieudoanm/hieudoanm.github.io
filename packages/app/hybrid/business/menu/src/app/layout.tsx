@@ -21,7 +21,7 @@ export const viewport: Viewport = {
 };
 
 const RootLayout: FC<{ children: ReactNode }> = ({ children }) => (
-  <html lang="en" data-theme="menu-dark">
+  <html lang="en" data-theme="menu-light">
     <body className="bg-base-100 text-base-content h-screen overflow-y-auto font-mono">
       <Header />
       {children}

@@ -25,7 +25,7 @@ describe('RootLayout', () => {
     );
     expect(document.documentElement).toHaveAttribute(
       'data-theme',
-      'nikoli-dark'
+      'nikoli-light'
     );
   });
 
