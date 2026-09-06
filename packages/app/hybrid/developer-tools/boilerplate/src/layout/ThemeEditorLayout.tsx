@@ -35,7 +35,7 @@ export const useTheme = (): ThemeContextValue => {
 export const ThemeEditorLayout: FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  const [selectedTheme, setSelectedTheme] = useState('nothing');
+  const [selectedTheme, setSelectedTheme] = useState('boilerplate-light');
   const [config, setConfig] = useState<ThemeConfig>(DEFAULT_CONFIG);
 
   useEffect(() => {
