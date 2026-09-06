@@ -4,7 +4,10 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 STORE_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
-CSV_FILE="$STORE_DIR/src/data/csv/hybrid.csv"
+CSV_DIR="$STORE_DIR/src/data/csv"
+CSV_SOURCES="${CSV_SOURCES:-hybrid.csv|home,about,downloads,version
+extensions.csv|home
+native.csv|home}"
 OUT_DIR="$STORE_DIR/public/screenshots"
 VIEWPORT="${VIEWPORT:-1280,720}"
 WAIT_MS="${WAIT_MS:-2000}"
@@ -14,21 +17,28 @@ usage() {
     cat <<'EOF'
 Usage: screenshots.sh [options] [OUT_DIR]
 
-Capture 1280x720 screenshots of every hybrid app web page into
+Capture 1280x720 screenshots of every app web page into
 OUT_DIR/<app>/{home,about,downloads,version}.png.
+
+Sources (set CSV_SOURCES to override):
+    hybrid.csv      home, about, downloads, version pages
+    extensions.csv  landing page (home)
+    native.csv      landing page (home)
 
 Default output: public/screenshots
 
 Page flags (combinable; default is --all):
-    --all         capture all pages (home, about, downloads, version)
-    --about       capture only the about page
-    --downloads   capture only the downloads page
-    --version     capture only the version page
+    --all         capture all available pages
+    --home        capture only the home page
+    --about       capture only the about page (hybrid only)
+    --downloads   capture only the downloads page (hybrid only)
+    --version     capture only the version page (hybrid only)
 
 Environment:
-    VIEWPORT   viewport size (default 1280,720)
-    WAIT_MS    wait after navigation in ms (default 2000)
-    BROWSER    chromium | firefox | webkit | chrome | msedge (default firefox)
+    VIEWPORT     viewport size (default 1280,720)
+    WAIT_MS      wait after navigation in ms (default 2000)
+    BROWSER      chromium | firefox | webkit | chrome | msedge (default firefox)
+    CSV_SOURCES  newline-separated "file.csv|page1,page2" list (default above)
 EOF
 }
 
@@ -40,6 +50,7 @@ require() {
 }
 
 CAPTURE_ALL=0
+CAPTURE_HOME=0
 CAPTURE_ABOUT=0
 CAPTURE_DOWNLOADS=0
 CAPTURE_VERSION=0
@@ -47,6 +58,7 @@ CAPTURE_VERSION=0
 while [[ $# -gt 0 ]]; do
     case "$1" in
         --all) CAPTURE_ALL=1 ;;
+        --home) CAPTURE_HOME=1 ;;
         --about) CAPTURE_ABOUT=1 ;;
         --downloads) CAPTURE_DOWNLOADS=1 ;;
         --version) CAPTURE_VERSION=1 ;;
@@ -64,7 +76,8 @@ while [[ $# -gt 0 ]]; do
     shift
 done
 
-if [[ "$CAPTURE_ALL" -eq 0 && "$CAPTURE_ABOUT" -eq 0 &&
+if [[ "$CAPTURE_ALL" -eq 0 && "$CAPTURE_HOME" -eq 0 &&
+    "$CAPTURE_ABOUT" -eq 0 &&
     "$CAPTURE_DOWNLOADS" -eq 0 && "$CAPTURE_VERSION" -eq 0 ]]; then
     CAPTURE_ALL=1
 fi
@@ -73,6 +86,7 @@ PAGES=""
 if [[ "$CAPTURE_ALL" -eq 1 ]]; then
     PAGES="home about downloads version"
 else
+    [[ "$CAPTURE_HOME" -eq 1 ]] && PAGES="$PAGES home"
     [[ "$CAPTURE_ABOUT" -eq 1 ]] && PAGES="$PAGES about"
     [[ "$CAPTURE_DOWNLOADS" -eq 1 ]] && PAGES="$PAGES downloads"
     [[ "$CAPTURE_VERSION" -eq 1 ]] && PAGES="$PAGES version"
@@ -81,8 +95,17 @@ PAGES="$(printf '%s\n' "$PAGES" | sed 's/^ *//; s/ *$//')"
 
 require node
 
-if [[ ! -f "$CSV_FILE" ]]; then
-    printf 'Error: CSV not found at %s\n' "$CSV_FILE" >&2
+missing=()
+local_csv=""
+while IFS= read -r spec; do
+    [[ -z "$spec" ]] && continue
+    local_csv="${spec%%|*}"
+    if [[ ! -f "$CSV_DIR/$local_csv" ]]; then
+        missing+=("$local_csv")
+    fi
+done <<< "$CSV_SOURCES"
+if [[ ${#missing[@]} -gt 0 ]]; then
+    printf 'Error: CSV not found: %s\n' "${missing[*]}" >&2
     exit 1
 fi
 
@@ -91,12 +114,13 @@ mkdir -p "$OUT_DIR"
 TARGETS="$(mktemp)"
 trap 'rm -f "$TARGETS"' EXIT
 
-PAGES="$PAGES" python3 - "$CSV_FILE" > "$TARGETS" <<'PY'
+PAGES="$PAGES" CSV_SOURCES="$CSV_SOURCES" python3 - "$CSV_DIR" > "$TARGETS" <<'PY'
 import csv
 import os
 import sys
 
 pages = set(os.environ["PAGES"].split())
+csv_dir = sys.argv[1]
 
 SUFFIXES = {
     "home": "",
@@ -105,15 +129,27 @@ SUFFIXES = {
     "version": "/version",
 }
 
-with open(sys.argv[1], encoding="utf-8", newline="") as f:
-    for row in csv.DictReader(f):
-        app_id = (row.get("appId") or "").strip()
-        href = (row.get("href") or "").strip()
-        if not app_id or not href:
-            continue
-        for name, suffix in SUFFIXES.items():
-            if name in pages:
-                print(f"{app_id}\t{name}\t{href}{suffix}")
+for spec in os.environ["CSV_SOURCES"].splitlines():
+    spec = spec.strip()
+    if not spec:
+        continue
+    rel_path, _, valid = spec.partition("|")
+    valid_pages = {p.strip() for p in valid.split(",") if p.strip()}
+    csv_path = os.path.join(csv_dir, rel_path)
+    try:
+        f = open(csv_path, encoding="utf-8", newline="")
+    except OSError as err:
+        print(f"Warning: skipping {rel_path}: {err}", file=sys.stderr)
+        continue
+    with f:
+        for row in csv.DictReader(f):
+            app_id = (row.get("appId") or "").strip()
+            href = (row.get("href") or "").strip()
+            if not app_id or not href:
+                continue
+            for name, suffix in SUFFIXES.items():
+                if name in pages and name in valid_pages:
+                    print(f"{app_id}\t{name}\t{href}{suffix}")
 PY
 
 printf 'Capturing pages: %s\n' "$PAGES"
@@ -163,15 +199,21 @@ async function main() {
 
     const browser = await pw[type].launch(launchOptions);
     let failures = 0;
+    let skipped = 0;
     try {
         const context = await browser.newContext({ viewport: { width, height } });
         const page = await context.newPage();
         for (const target of targets) {
             const dir = path.join(outDir, target.appId);
             const out = path.join(dir, `${target.name}.png`);
-            console.log(`Capturing ${target.url} -> ${out}`);
             try {
-                await page.goto(target.url);
+                const res = await page.goto(target.url);
+                if (res && res.status() === 404) {
+                    skipped += 1;
+                    console.log(`Skipping ${target.url} (HTTP 404)`);
+                    continue;
+                }
+                console.log(`Capturing ${target.url} -> ${out}`);
                 if (waitMs > 0) {
                     await page.waitForTimeout(waitMs);
                 }
@@ -187,7 +229,11 @@ async function main() {
         await browser.close();
     }
 
-    console.log(`\nCaptured ${targets.length - failures} screenshots into ${outDir}`);
+    const captured = targets.length - failures - skipped;
+    console.log(`\nCaptured ${captured} screenshots into ${outDir}`);
+    if (skipped > 0) {
+        console.log(`Skipped ${skipped} screenshots (HTTP 404).`);
+    }
     if (failures > 0) {
         console.error(`Failed to capture ${failures} screenshots.`);
         process.exit(1);
