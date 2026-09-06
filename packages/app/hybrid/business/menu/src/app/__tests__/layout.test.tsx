@@ -1,9 +1,9 @@
 import { render, screen } from '@testing-library/react';
 
 jest.mock('@/styles/globals.css', () => ({}));
-jest.mock('@/components/organisms/Header', () => () => (
-  <div data-testid="header">Header</div>
-));
+jest.mock('@/components/organisms/Header', () => ({
+  Header: () => <div data-testid="header">Header</div>,
+}));
 
 import RootLayout, { metadata } from '../layout';
 

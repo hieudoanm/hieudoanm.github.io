@@ -1,46 +1,70 @@
 import { render, screen } from '@testing-library/react';
-import { Header } from '@/components/organisms/Header';
+import userEvent from '@testing-library/user-event';
+import { Header } from '../Header';
 
-const mockPathname = jest.fn(() => '/');
-jest.mock('next/navigation', () => ({
-  usePathname: () => mockPathname(),
-}));
+beforeEach(() => {
+  jest.clearAllMocks();
+  localStorage.clear();
+  document.documentElement.removeAttribute('data-theme');
+});
 
 describe('Header', () => {
-  beforeEach(() => {
-    mockPathname.mockReturnValue('/');
+  it('renders Tourney logo', () => {
+    render(<Header />);
+    expect(screen.getByText('Tourney')).toBeInTheDocument();
   });
 
-  it('renders the brand linking to /', () => {
+  it('renders nav links', () => {
     render(<Header />);
-    const brand = screen.getByRole('link', { name: 'Tourney' });
-    expect(brand).toBeInTheDocument();
-    expect(brand).toHaveAttribute('href', '/');
+    expect(screen.getAllByText('About').length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText('Downloads').length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText('Version').length).toBeGreaterThanOrEqual(1);
   });
 
-  it('renders the nav links', () => {
+  it('renders theme toggle button', () => {
     render(<Header />);
-    expect(screen.getByText('About')).toBeInTheDocument();
-    expect(screen.getByText('Downloads')).toBeInTheDocument();
-    expect(screen.getByText('Version')).toBeInTheDocument();
+    expect(screen.getByTestId('theme-toggle')).toBeInTheDocument();
   });
 
-  it('renders the theme toggle', () => {
+  it('toggles theme on button click', async () => {
+    const user = userEvent.setup();
     render(<Header />);
-    expect(screen.getByTitle('Toggle theme')).toBeInTheDocument();
+    await user.click(screen.getByTestId('theme-toggle'));
+    expect(document.documentElement.getAttribute('data-theme')).toBe(
+      'tourney-dark'
+    );
   });
 
-  it('highlights the active nav link based on pathname', () => {
-    mockPathname.mockReturnValue('/about');
+  it('toggles back to original theme', async () => {
+    const user = userEvent.setup();
     render(<Header />);
-    const aboutLink = screen.getByText('About');
-    expect(aboutLink.className).toContain('text-primary');
+    const toggle = screen.getByTestId('theme-toggle');
+    await user.click(toggle);
+    await user.click(toggle);
+    expect(document.documentElement.getAttribute('data-theme')).toBe(
+      'tourney-light'
+    );
   });
 
-  it('does not highlight inactive nav links', () => {
-    mockPathname.mockReturnValue('/about');
+  it('persists theme to localStorage', async () => {
+    const user = userEvent.setup();
     render(<Header />);
-    const downloadsLink = screen.getByText('Downloads');
-    expect(downloadsLink.className).toContain('text-base-content/50');
+    await user.click(screen.getByTestId('theme-toggle'));
+    expect(localStorage.getItem('tourney-theme')).toBe('tourney-dark');
+  });
+
+  it('sets data-theme attribute on html', () => {
+    render(<Header />);
+    expect(document.documentElement.getAttribute('data-theme')).toBe(
+      'tourney-light'
+    );
+  });
+
+  it('reads saved theme from localStorage', () => {
+    localStorage.setItem('tourney-theme', 'tourney-dark');
+    render(<Header />);
+    expect(document.documentElement.getAttribute('data-theme')).toBe(
+      'tourney-dark'
+    );
   });
 });

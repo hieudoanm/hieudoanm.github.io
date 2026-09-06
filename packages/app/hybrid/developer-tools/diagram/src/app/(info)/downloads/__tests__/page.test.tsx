@@ -7,26 +7,54 @@ describe('DownloadsPage', () => {
     expect(screen.getByText('Installers')).toBeInTheDocument();
   });
 
-  it('renders platform download links', () => {
+  it('renders only the canonical download link for each platform', () => {
     render(<DownloadsPage />);
-    expect(screen.getAllByText('Android').length).toBe(1);
-    expect(screen.getAllByText('Linux').length).toBe(1);
     expect(
-      screen.getByRole('link', { name: 'Download .deb' })
+      screen.getByRole('link', { name: 'Download .apk' })
     ).toBeInTheDocument();
-    expect(screen.getByText('macOS')).toBeInTheDocument();
-    expect(screen.getAllByText('Windows').length).toBe(1);
+    expect(
+      screen.getByRole('link', { name: 'Download .AppImage' })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('link', { name: 'Download .dmg' })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('link', { name: 'Download .exe' })
+    ).toBeInTheDocument();
+  });
+
+  it('does not render secondary package variants', () => {
+    render(<DownloadsPage />);
+    expect(
+      screen.queryByRole('link', { name: 'Download .aab' })
+    ).not.toBeInTheDocument();
+    expect(
+      screen.queryByRole('link', { name: 'Download .rpm' })
+    ).not.toBeInTheDocument();
+    expect(
+      screen.queryByRole('link', { name: 'Download .deb' })
+    ).not.toBeInTheDocument();
+    expect(
+      screen.queryByRole('link', { name: 'Download .msi' })
+    ).not.toBeInTheDocument();
   });
 
   it('renders download links with correct hrefs', () => {
     render(<DownloadsPage />);
-    expect(screen.getByRole('link', { name: 'Download .aab' })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: 'Download .apk' })).toHaveAttribute(
       'href',
-      expect.stringContaining('diagram.aab')
+      expect.stringContaining('diagram.apk')
     );
+    expect(
+      screen.getByRole('link', { name: 'Download .AppImage' })
+    ).toHaveAttribute('href', expect.stringContaining('diagram.AppImage'));
     expect(screen.getByRole('link', { name: 'Download .dmg' })).toHaveAttribute(
       'href',
       expect.stringContaining('diagram.dmg')
+    );
+    expect(screen.getByRole('link', { name: 'Download .exe' })).toHaveAttribute(
+      'href',
+      expect.stringContaining('diagram.exe')
     );
   });
 });

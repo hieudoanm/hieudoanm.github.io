@@ -3,8 +3,8 @@
 import type { FC, ReactNode } from 'react';
 import { LuFileDown, LuPrinter, LuTriangleAlert } from 'react-icons/lu';
 import { PAPER_SIZES } from '../../../data/paper';
-import { DENSITY_ZOOM, RESUME_DENSITIES } from '../../../types/resume';
 import type { ResumeOptions } from '../../../types/resume';
+import { DENSITY_ZOOM, RESUME_DENSITIES } from '../../../types/resume';
 import { onePageAdvice } from '../../../utils/fit';
 import { ZoomControls } from './ZoomControls';
 
