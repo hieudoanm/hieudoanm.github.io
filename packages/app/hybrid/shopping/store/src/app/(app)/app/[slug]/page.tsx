@@ -6,7 +6,10 @@ import downloads from '@/data/downloads.json';
 import { AppPage } from '@/components/organisms/AppPage';
 
 const SCREENSHOT_BASE_URL =
-  'https://hieudoanm.github.io/free/store/screenshots';
+  process.env.NODE_ENV === 'development'
+    ? 'http://localhost:3000/screenshots'
+    : 'https://hieudoanm.github.io/free/store/screenshots';
+
 const SCREENSHOT_PAGES = ['home', 'about', 'downloads', 'version'] as const;
 
 const getScreenshots = (slug: string): string[] =>

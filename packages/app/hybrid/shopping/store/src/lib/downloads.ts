@@ -12,7 +12,7 @@ export interface AppData {
   label: string;
   primaryCategory: string;
   secondaryCategory: string;
-  section: 'hybrid' | 'android' | 'macos' | 'cli' | 'extension';
+  section: 'hybrid' | 'android' | 'macos' | 'headless' | 'extension';
   icon: string;
   href: string;
   platforms: Platform[];
@@ -50,7 +50,7 @@ const parsePlatformFromSection = (
     return ['macos', 'windows', 'linux', 'android', 'ios'];
   if (sectionId === 'apps-native-android') return ['android'];
   if (sectionId === 'apps-native-macos') return ['macos'];
-  if (sectionId === 'clis') return ['macos', 'linux'];
+  if (sectionId === 'headless') return ['macos', 'linux', 'windows'];
   if (sectionId === 'extensions') return ['macos', 'windows', 'linux'];
   return ['unknown'];
 };
@@ -116,8 +116,8 @@ export const parseDownloads = (sections: RawSection[]): AppData[] => {
         ? (section.id.replace('apps-native-', '') as 'android' | 'macos')
         : section.id === 'apps-hybrid'
           ? 'hybrid'
-          : section.id === 'clis'
-            ? 'cli'
+          : section.id === 'headless'
+            ? 'headless'
             : 'extension';
 
       apps.push({

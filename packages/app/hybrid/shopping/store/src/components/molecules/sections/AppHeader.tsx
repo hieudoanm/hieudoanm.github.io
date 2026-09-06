@@ -33,7 +33,7 @@ export const AppHeader: FC<AppHeaderProps> = ({ app }) => {
           {app.section}
         </span>
         <span className="bg-base-300 text-base-content/60 badge badge-sm font-mono tracking-normal">
-          v{app.version}
+          {app.version}
         </span>
         {app.lastUpdated && (
           <span className="bg-base-300 text-base-content/60 badge badge-sm font-mono tracking-normal">

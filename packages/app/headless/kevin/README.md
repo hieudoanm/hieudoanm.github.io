@@ -34,4 +34,4 @@ DEL key
 
 ## LICENSE
 
-[GPT-3.0](./LICENSE)
+[GPL-3.0](./c/LICENSE)

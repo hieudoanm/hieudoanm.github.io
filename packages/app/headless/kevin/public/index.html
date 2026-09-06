@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Browserverless — a Servo-powered browser runtime as a library, CLI, and HTTP server."
+      content="KeVIN — an in-memory key/value store with a Redis-style protocol, written in C and C++."
     />
-    <title>Browserverless</title>
+    <title>KeVIN</title>
     <style>
       :root {
         --bg: #f7f8fa;
@@ -18,7 +18,7 @@
         --text: #181d25;
         --muted: #555f6e;
         --faint: #8a93a2;
-        --accent: #356bff;
+        --accent: #0e9f6e;
         --ok: #0e9f6e;
         --radius: 10px;
         --radius-sm: 6px;
@@ -111,7 +111,7 @@
       }
       .btn:hover { text-decoration: none; }
       .btn-primary { color: #ffffff; background: var(--accent); border-color: var(--accent); }
-      .btn-primary:hover { background: #2b5beb; border-color: #2b5beb; }
+      .btn-primary:hover { background: #0c8a60; border-color: #0c8a60; }
       .btn-ghost { color: var(--text); background: var(--card); border-color: var(--border); }
       .btn-ghost:hover { background: var(--card-hover); }
       .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 6px; }
@@ -189,14 +189,13 @@
       <a class="brand" href="#">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
           <rect x="4" y="4" width="120" height="120" rx="28" fill="#ffffff" stroke="#d9dde3" stroke-width="2" />
-          <rect x="12" y="12" width="104" height="104" rx="20" fill="#356bff" />
-          <rect x="30" y="34" width="68" height="52" rx="8" fill="#ffffff" />
-          <circle cx="38" cy="42" r="2" fill="#356bff" />
-          <circle cx="46" cy="42" r="2" fill="#356bff" />
-          <circle cx="54" cy="42" r="2" fill="#356bff" />
-          <path d="M46 58l8 8 12-14" fill="none" stroke="#356bff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+          <rect x="12" y="12" width="104" height="104" rx="20" fill="#0e9f6e" />
+          <ellipse cx="64" cy="40" rx="30" ry="14" fill="#ffffff" />
+          <path d="M34 40v16a30 14 0 0 0 60 0V40" fill="none" stroke="#ffffff" stroke-width="10" />
+          <rect x="60" y="56" width="8" height="30" rx="3" fill="#181d25" />
+          <circle cx="54" cy="60" r="7" fill="none" stroke="#181d25" stroke-width="4" />
         </svg>
-        <span class="store-title">Browserverless</span>
+        <span class="store-title">KeVIN</span>
       </a>
       <nav>
         <a href="#overview">Overview</a>
@@ -208,49 +207,48 @@
     <main>
       <section class="hero">
         <div class="hero-left">
-          <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Browserverless logo">
+          <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="KeVIN logo">
             <rect x="4" y="4" width="120" height="120" rx="28" fill="#ffffff" stroke="#d9dde3" stroke-width="2" />
-            <rect x="12" y="12" width="104" height="104" rx="20" fill="#356bff" />
-            <rect x="30" y="34" width="68" height="52" rx="8" fill="#ffffff" />
-            <circle cx="38" cy="42" r="2" fill="#356bff" />
-            <circle cx="46" cy="42" r="2" fill="#356bff" />
-            <circle cx="54" cy="42" r="2" fill="#356bff" />
-            <path d="M46 58l8 8 12-14" fill="none" stroke="#356bff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+            <rect x="12" y="12" width="104" height="104" rx="20" fill="#0e9f6e" />
+            <ellipse cx="64" cy="40" rx="30" ry="14" fill="#ffffff" />
+            <path d="M34 40v16a30 14 0 0 0 60 0V40" fill="none" stroke="#ffffff" stroke-width="10" />
+            <rect x="60" y="56" width="8" height="30" rx="3" fill="#181d25" />
+            <circle cx="54" cy="60" r="7" fill="none" stroke="#181d25" stroke-width="4" />
           </svg>
           <div class="title-block">
-            <h1>Browserverless</h1>
+            <h1>KeVIN</h1>
             <div class="badges">
-              <span class="badge">CLI</span>
+              <span class="badge">Database</span>
               <span class="badge">Developer Tools</span>
-              <span class="badge">Rust</span>
+              <span class="badge">C · C++</span>
             </div>
           </div>
           <p class="lead">
-            A Servo-powered browser runtime that works as a library, CLI, and HTTP serve
-            API.
+            An in-memory key/value store with a Redis-style protocol, written
+            twice — once in C, once in C++.
           </p>
         </div>
         <div class="hero-right">
           <a
             class="btn btn-primary"
-            href="https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-rust-browserverless-latest"
+            href="https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-kevin-latest"
           >
             Download
           </a>
           <a
             class="btn btn-ghost"
-            href="https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/app/native/browserverless"
+            href="https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/app/headless/kevin"
           >
             View source
           </a>
           <div class="stats">
             <div class="stat">
               <strong>100%</strong>
-              <span>Offline</span>
+              <span>In-memory</span>
             </div>
             <div class="stat">
               <strong>0</strong>
-              <span>Data collected</span>
+              <span>Disk writes</span>
             </div>
             <div class="stat">
               <strong>GPL-3.0</strong>
@@ -265,35 +263,38 @@
           <span class="dot" style="background: #c9ced6"></span>
           <span class="dot" style="background: #d9dde3"></span>
           <span class="dot" style="background: #e5e8ed"></span>
-          <span class="mock-url">browserverless serve --port 3000</span>
+          <span class="mock-url">kv --port 6379</span>
         </div>
         <div class="mock-body">
           <div>
             <div class="mock-endpoint">
-              <span class="ep">GET /scrape</span>
-              <span class="ep">GET /screenshot</span>
-              <span class="ep">GET /health</span>
+              <span class="ep">PING</span>
+              <span class="ep">SET</span>
+              <span class="ep">GET</span>
+              <span class="ep">KEYS</span>
             </div>
             <div class="mock-endpoint" style="margin-bottom: 0">
-              <span class="ep">GET /version</span>
+              <span class="ep">DEL</span>
             </div>
           </div>
           <div>
             <div class="mock-term">
-              <div><dim>$</dim> serverless-browser --headless --url https://example.com</div>
-              <div><dim>rendering offscreen via gluesmith...</dim></div>
-              <div><span class="pr">ok</span> page loaded in 412 ms</div>
-              <div><dim>saving screenshot to</dim> <span class="ar">shot.png</span></div>
-              <div><dim>saving html to</dim> <span class="ar">page.html</span></div>
-              <div><dim>$</dim> </div>
-              <div><dim>window(1280, 800)</dim> Scroll        Resize        Repaint</div>
-              <div><span class="pr">ok</span> javascript evaluated</div>
+              <div><dim>$</dim> kv --port 6379</div>
+              <div><span class="pr">ok</span> listening on 0.0.0.0:6379</div>
+              <div><dim>&gt; </dim>PING</div>
+              <div><span class="pr">PONG</span></div>
+              <div><dim>&gt; </dim>SET session 7a1f</div>
+              <div><span class="pr">OK</span></div>
+              <div><dim>&gt; </dim>GET session</div>
+              <div><span class="ar">7a1f</span></div>
+              <div><dim>&gt; </dim>KEYS</div>
+              <div><span class="ar">session</span></div>
             </div>
           </div>
           <div>
             <div class="mock-shot">
-              <strong>1280×800</strong>
-              <span>offscreen render, ready to screenshot</span>
+              <strong>&mu;s</strong>
+              <span>lookups served from RAM</span>
             </div>
           </div>
         </div>
@@ -302,36 +303,36 @@
       <section id="overview" class="card">
         <h2>Overview</h2>
         <p class="sub">
-          A Rust component-browser engine built on Servo. Render pages headlessly, drive a
-          winit window, or serve the same engine over HTTP — component style.
+          A tiny key/value server that talks the same protocol Redis clients
+          already speak, keeping the whole store in memory.
         </p>
         <div class="features">
           <div class="feature">
-            <h3>Headless rendering</h3>
+            <h3>Redis-style protocol</h3>
             <p>
-              Renders offscreen and captures screenshots or the full page HTML without a
-              visible window.
+              PING, SET, GET, KEYS, and DEL use the simple framing existing
+              clients and tools understand.
             </p>
           </div>
           <div class="feature">
-            <h3>Headed window</h3>
+            <h3>In-memory storage</h3>
             <p>
-              A winit window handles scroll, resize, and live repaint for interactive
-              browsing.
+              Every value lives in RAM, so reads and writes never touch the
+              disk — fastest when data fits in memory.
             </p>
           </div>
           <div class="feature">
-            <h3>HTTP serve API</h3>
+            <h3>Two implementations</h3>
             <p>
-              Serves scrape, screenshot, health, and version endpoints for other services
-              to call.
+              The same <code>kv</code> binary is built twice, once with a
+              C compiler and once with a C++ compiler, from matching sources.
             </p>
           </div>
           <div class="feature">
-            <h3>Library API</h3>
+            <h3>Server or library</h3>
             <p>
-              Embed navigation, load waits, and JavaScript evaluation directly in your own
-              Rust program.
+              Run it standalone on a port like Redis, or link it into your own
+              C or C++ program.
             </p>
           </div>
         </div>
@@ -342,15 +343,32 @@
           <h2>Details</h2>
           <p class="sub">Application listing information.</p>
           <ul class="detail-list">
-            <li><span class="k">Name</span><span class="v">Browserverless</span></li>
-            <li><span class="k">Version</span><span class="v">0.0.1</span></li>
-            <li><span class="k">Updated</span><span class="v">August 29, 2026</span></li>
-            <li><span class="k">Offered by</span><span class="v">Hieu Doan</span></li>
-            <li><span class="k">Size</span><span class="v">&asymp; 173&nbsp;MiB</span></li>
-            <li><span class="k">Languages</span><span class="v">English</span></li>
-            <li><span class="k">Platforms</span><span class="v">CLI · Library</span></li>
-            <li><span class="k">Primary category</span><span class="v">Developer Tools</span></li>
-            <li><span class="k">License</span><span class="v">GPL-3.0</span></li>
+            <li><span class="k">Name</span><span class="v">KeVIN</span></li>
+            <li><span class="k">Version</span><span class="v">latest</span></li>
+            <li>
+              <span class="k">Updated</span
+              ><span class="v">September 6, 2026</span>
+            </li>
+            <li>
+              <span class="k">Offered by</span><span class="v">Hieu Doan</span>
+            </li>
+            <li>
+              <span class="k">Size</span><span class="v">&mdash;</span>
+            </li>
+            <li>
+              <span class="k">Languages</span><span class="v">English</span>
+            </li>
+            <li>
+              <span class="k">Platforms</span
+              ><span class="v">Linux · macOS · Windows</span>
+            </li>
+            <li>
+              <span class="k">Primary category</span
+              ><span class="v">Developer Tools</span>
+            </li>
+            <li>
+              <span class="k">License</span><span class="v">GPL-3.0</span>
+            </li>
           </ul>
         </section>
 
@@ -368,8 +386,8 @@
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M20 6L9 17l-5-5"></path>
               </svg>
-              Not used or transferred for purposes that are unrelated to the app's core
-              functionality.
+              Not used or transferred for purposes that are unrelated to the
+              app's core functionality.
             </li>
             <li>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -383,8 +401,8 @@
               <rect x="4" y="10" width="16" height="10" rx="2"></rect>
               <path d="M8 10V7a4 4 0 0 1 8 0v3"></path>
             </svg>
-            Pages are fetched by your own instance for your own jobs. You decide what the
-            engine loads and where screenshots or HTML are written.
+            Values live only in memory while the process runs. There is no
+            persistence, no traffic beyond your own network, and no telemetry.
           </div>
         </section>
       </div>
@@ -394,10 +412,10 @@
         <a href="#overview">Overview</a>
         <a href="#details">Details</a>
         <a href="#privacy">Privacy</a>
-        <a href="https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/app/native/browserverless">
+        <a href="https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/app/headless/kevin">
           Source code
         </a>
-        <a href="https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-rust-browserverless-latest">
+        <a href="https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-kevin-latest">
           Releases
         </a>
       </footer>

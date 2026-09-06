@@ -1,4 +1,4 @@
-name: CI - Server - Backbone
+name: CI - App - Headless - Backbone
 
 on:
   push:
@@ -10,14 +10,14 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/server/backbone/**'
-      - '.github/workflows/ci-server-backbone.yaml'
+      - 'packages/app/headless/backbone/**'
+      - '.github/workflows/ci-app-headless-backbone.yaml'
 
 permissions:
   contents: write
 
 concurrency:
-  group: ci-server-backbone-${{ github.ref }}
+  group: ci-app-headless-backbone-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -26,7 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: packages/server/backbone/rust
+        working-directory: packages/app/headless/backbone/rust
     steps:
       - name: Checkout
         uses: actions/checkout@v7.0.1
@@ -41,8 +41,8 @@ jobs:
             ~/.cargo/registry
             ~/.cargo/git
             target
-          key: ${{ runner.os }}-cargo-server-backbone-rust-${{ hashFiles('packages/server/backbone/rust/Cargo.lock') }}
-          restore-keys: ${{ runner.os }}-cargo-server-backbone-rust-
+          key: ${{ runner.os }}-cargo-app-headless-backbone-rust-${{ hashFiles('packages/app/headless/backbone/rust/Cargo.lock') }}
+          restore-keys: ${{ runner.os }}-cargo-app-headless-backbone-rust-
       - name: Lint
         run: cargo clippy -- -D warnings
       - name: Test
@@ -52,15 +52,15 @@ jobs:
       - name: Upload Build Artifacts
         uses: actions/upload-artifact@v7.0.1
         with:
-          name: backbone-rust
-          path: packages/server/backbone/rust/target/release/backbone
+          name: app-headless-backbone-rust
+          path: packages/app/headless/backbone/rust/target/release/backbone
 
   go:
     name: Go
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: packages/server/backbone/go
+        working-directory: packages/app/headless/backbone/go
     steps:
       - name: Checkout
         uses: actions/checkout@v7.0.1
@@ -68,7 +68,7 @@ jobs:
         uses: actions/setup-go@v7.0.0
         with:
           go-version: '1.27.0'
-          cache-dependency-path: packages/server/backbone/go/go.sum
+          cache-dependency-path: packages/app/headless/backbone/go/go.sum
       - name: Lint
         run: go vet ./...
       - name: Test
@@ -78,8 +78,8 @@ jobs:
       - name: Upload Build Artifacts
         uses: actions/upload-artifact@v7.0.1
         with:
-          name: backbone-go
-          path: packages/server/backbone/go/bin/backbone
+          name: app-headless-backbone-go
+          path: packages/app/headless/backbone/go/bin/backbone
 
   publish:
     name: Publish to GitHub Release
@@ -105,10 +105,10 @@ jobs:
           done
       - name: Publish Release
         run: |
-          gh release delete backbone-latest --yes --cleanup-tag 2>/dev/null || true
-          gh release create backbone-latest \
-            --title "Server - Backbone (latest)" \
-            --notes "Auto-built server binaries from commit ${{ github.sha }}" \
+          gh release delete app-headless-backbone-latest --yes --cleanup-tag 2>/dev/null || true
+          gh release create app-headless-backbone-latest \
+            --title "App - Headless - Backbone (latest)" \
+            --notes "Auto-built headless app binaries from commit ${{ github.sha }}" \
             release/*
         env:
           GH_TOKEN: ${{ github.token }}

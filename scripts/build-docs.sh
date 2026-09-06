@@ -214,8 +214,9 @@ build_workspace_deps
 
 build_hybrid_apps
 
-copy_landing_pages "$ROOT_DIR/packages/extensions/browser"
+copy_landing_pages "$ROOT_DIR/packages/app/headless"
 copy_landing_pages "$ROOT_DIR/packages/app/native"
+copy_landing_pages "$ROOT_DIR/packages/extensions/browser"
 
 init_docsify
 

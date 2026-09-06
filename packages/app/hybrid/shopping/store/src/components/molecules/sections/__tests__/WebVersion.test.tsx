@@ -35,7 +35,7 @@ describe('WebVersion', () => {
     expect(screen.getByText('Web Version')).toBeInTheDocument();
   });
 
-  it.each(['android', 'macos', 'cli', 'extension'] as const)(
+  it.each(['android', 'macos', 'headless', 'extension'] as const)(
     'does not render the web version link for %s apps',
     (section) => {
       render(<WebVersion app={{ ...mockApp, section }} />);

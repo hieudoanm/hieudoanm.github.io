@@ -25,6 +25,10 @@ export const SECTION_META: Record<string, SectionMeta> = {
     label: 'CLIs',
     description: 'Command-line tools and binaries',
   },
+  headless: {
+    label: 'Headless',
+    description: 'Headless services and in-memory data apps',
+  },
   extension: {
     label: 'Extensions',
     description: 'Browser extensions for Chrome, Firefox, and Edge',

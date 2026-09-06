@@ -71,8 +71,8 @@ const mockSections: RawSection[] = [
     ],
   },
   {
-    id: 'clis',
-    label: 'CLIs',
+    id: 'headless',
+    label: 'Headless',
     items: [
       {
         label: 'CLI Tool',
@@ -132,7 +132,7 @@ describe('parseDownloads', () => {
     expect(apps[0].section).toBe('hybrid');
     expect(apps[1].section).toBe('macos');
     expect(apps[2].section).toBe('android');
-    expect(apps[3].section).toBe('cli');
+    expect(apps[3].section).toBe('headless');
     expect(apps[4].section).toBe('extension');
   });
 
@@ -151,9 +151,9 @@ describe('parseDownloads', () => {
     expect(apps[2].platforms).toEqual(['android']);
   });
 
-  it('detects platforms for cli section', () => {
+  it('detects platforms for headless section', () => {
     const apps = parseDownloads(mockSections);
-    expect(apps[3].platforms).toEqual(['macos', 'linux']);
+    expect(apps[3].platforms).toEqual(['macos', 'linux', 'windows']);
   });
 
   it('detects platforms for extension section', () => {
@@ -174,7 +174,7 @@ describe('parseDownloads', () => {
     expect(macNative.downloads[0].platform).toBe('macos');
   });
 
-  it('parses cli download platforms from labels', () => {
+  it('parses headless download platforms from labels', () => {
     const apps = parseDownloads(mockSections);
     expect(apps[3].downloads[0].platform).toBe('macos');
     expect(apps[3].downloads[1].platform).toBe('linux');

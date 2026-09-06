@@ -2142,22 +2142,38 @@
     ]
   },
   {
-    "id": "clis",
-    "label": "CLIs",
+    "id": "headless",
+    "label": "Headless",
     "items": [
+      {
+        "label": "Backbone",
+        "primaryCategory": "Developer Tools",
+        "secondaryCategory": "",
+        "icon": "PiPlugs",
+        "href": "https://hieudoanm.github.io/free/backbone/",
+        "version": "latest",
+        "lastUpdated": "2025-01-01",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": "View Releases",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-backbone-latest"
+          }
+        ]
+      },
       {
         "label": "Browserverless",
         "primaryCategory": "Developer Tools",
         "secondaryCategory": "",
         "icon": "PiBrowser",
-        "href": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-rust-browserverless-latest/app-native-rust-browserverless-browserverless",
+        "href": "https://hieudoanm.github.io/free/browserverless/",
         "version": "latest",
         "lastUpdated": "2026-08-29",
         "fileSize": "",
         "actions": [
           {
             "label": "View Releases",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-rust-browserverless-latest/app-native-rust-browserverless-browserverless"
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-browserverless-latest"
           }
         ]
       },
@@ -2166,14 +2182,30 @@
         "primaryCategory": "Developer Tools",
         "secondaryCategory": "",
         "icon": "PiTerminalWindow",
-        "href": "",
+        "href": "https://hieudoanm.github.io/free/jack/",
         "version": "latest",
         "lastUpdated": "2026-09-06",
         "fileSize": "",
         "actions": [
           {
             "label": "View Releases",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/cli-jack-latest"
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-jack-latest"
+          }
+        ]
+      },
+      {
+        "label": "KeVIN",
+        "primaryCategory": "Developer Tools",
+        "secondaryCategory": "",
+        "icon": "PiDatabase",
+        "href": "https://hieudoanm.github.io/free/kevin/",
+        "version": "latest",
+        "lastUpdated": "2026-09-06",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": "View Releases",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-kevin-latest"
           }
         ]
       }

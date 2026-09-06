@@ -1,0 +1,5 @@
+no,section,sectionId,appId,label,primaryCategory,secondaryCategory,icon,version,lastUpdated,fileSize,href,releasesAction,releasesUrl
+1,Headless,headless,backbone,Backbone,Developer Tools,,PiPlugs,latest,2025-01-01,,https://hieudoanm.github.io/free/backbone/,View Releases,https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-backbone-latest
+2,Headless,headless,browserverless,Browserverless,Developer Tools,,PiBrowser,latest,2026-08-29,,https://hieudoanm.github.io/free/browserverless/,View Releases,https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-browserverless-latest
+3,Headless,headless,jack,J.A.C.K.,Developer Tools,,PiTerminalWindow,latest,2026-09-06,,https://hieudoanm.github.io/free/jack/,View Releases,https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-jack-latest
+4,Headless,headless,kevin,KeVIN,Developer Tools,,PiDatabase,latest,2026-09-06,,https://hieudoanm.github.io/free/kevin/,View Releases,https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-kevin-latest

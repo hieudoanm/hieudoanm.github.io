@@ -1,4 +1,4 @@
-name: CI - App - Native - Rust - Browserverless
+name: CI - App - Headless - Browserverless
 
 on:
   push:
@@ -10,13 +10,13 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/native/browserverless/rust/**'
+      - 'packages/app/headless/browserverless/rust/**'
 
 permissions:
   contents: write
 
 concurrency:
-  group: ci-app-native-rust-browserverless-${{ github.ref }}
+  group: ci-app-headless-browserverless-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: packages/app/native/browserverless/rust
+        working-directory: packages/app/headless/browserverless/rust
     env:
       RUSTC_WRAPPER: sccache
       SCCACHE_GHA_ENABLED: "true"
@@ -35,7 +35,7 @@ jobs:
         uses: actions/checkout@v7.0.1
         with:
           sparse-checkout: |
-            packages/app/native/browserverless/rust
+            packages/app/headless/browserverless/rust
       - name: Install System Dependencies
         run: |
           sudo apt-get update
@@ -60,8 +60,8 @@ jobs:
         uses: actions/cache@v6.1.0
         with:
           path: ~/.cargo/registry
-          key: ${{ runner.os }}-cargo-registry-app-native-rust-browserverless-${{ hashFiles('packages/app/native/browserverless/rust/Cargo.lock') }}
-          restore-keys: ${{ runner.os }}-cargo-registry-app-native-rust-browserverless-
+          key: ${{ runner.os }}-cargo-registry-app-headless-browserverless-${{ hashFiles('packages/app/headless/browserverless/rust/Cargo.lock') }}
+          restore-keys: ${{ runner.os }}-cargo-registry-app-headless-browserverless-
       # Each cargo invocation compiles a different profile/compiler
       # (clippy-driver / dev-rustc / release-rustc), so the three steps cannot
       # share artifacts. sccache content-addressed cache makes each one a near
@@ -75,8 +75,8 @@ jobs:
       - name: Upload Build Artifacts
         uses: actions/upload-artifact@v7.0.1
         with:
-          name: app-native-rust-browserverless
-          path: packages/app/native/browserverless/rust/target/release/browserverless
+          name: app-headless-browserverless
+          path: packages/app/headless/browserverless/rust/target/release/browserverless
 
   publish:
     name: Publish to GitHub Release
@@ -88,18 +88,18 @@ jobs:
       - name: Download Build Artifacts
         uses: actions/download-artifact@v8.0.1
         with:
-          name: app-native-rust-browserverless
+          name: app-headless-browserverless
           path: artifacts
       - name: Collect Release Artifacts
         run: |
           mkdir -p release
           for file in artifacts/*; do
-            cp "$file" "release/app-native-rust-browserverless-$(basename "$file")"
+            cp "$file" "release/app-headless-browserverless-$(basename "$file")"
           done
       - name: Publish Release
         run: |
           set -euo pipefail
-          tag="app-native-rust-browserverless-latest"
+          tag="app-headless-browserverless-latest"
           # No checkout in this job: gh must not resolve the repo or commit via
           # git, so pass --repo and --target explicitly.
           repo="${GITHUB_REPOSITORY}"
@@ -114,7 +114,7 @@ jobs:
             if gh release create "$tag" \
               --repo "$repo" \
               --target "$sha" \
-              --title "App - Native - Rust - Browserverless (latest)" \
+              --title "App - Headless - Browserverless (latest)" \
               --notes "Auto-built Browserverless from commit $sha" \
               release/*; then
               exit 0

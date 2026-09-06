@@ -97,7 +97,7 @@ const parseCsvRows = (csv: string): string[][] => {
 };
 
 const readCsvRows = (): CsvRow[] => {
-  const files = ['hybrid.csv', 'native.csv', 'clis.csv', 'extensions.csv'];
+  const files = ['hybrid.csv', 'native.csv', 'headless.csv', 'extensions.csv'];
   const rows: CsvRow[] = [];
   for (const file of files) {
     const csv = readFileSync(join(CSV_DIR, file), 'utf8')

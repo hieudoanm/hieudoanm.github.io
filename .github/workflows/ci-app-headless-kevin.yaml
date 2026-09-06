@@ -1,0 +1,96 @@
+name: CI - App - Headless - KeVIN
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/headless/kevin/**'
+      - '.github/workflows/ci-app-headless-kevin.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-headless-kevin-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  c:
+    name: C
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: packages/app/headless/kevin/c
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7.0.1
+      - name: Lint
+        run: make lint
+      - name: Test
+        run: make test
+      - name: Build
+        run: make build
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: app-headless-kevin-c
+          path: packages/app/headless/kevin/c/bin/kv
+
+  cpp:
+    name: C++
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: packages/app/headless/kevin/cpp
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7.0.1
+      - name: Lint
+        run: make lint
+      - name: Test
+        run: make test
+      - name: Build
+        run: make build
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: app-headless-kevin-cpp
+          path: packages/app/headless/kevin/cpp/bin/kv
+
+  publish:
+    name: Publish to GitHub Release
+    needs: [c, cpp]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7.0.1
+      - name: Download Build Artifacts
+        uses: actions/download-artifact@v8.0.1
+        with:
+          path: artifacts
+      - name: Collect Release Artifacts
+        run: |
+          mkdir -p release
+          for dir in artifacts/*/; do
+            artifact_name=$(basename "$dir")
+            for file in "$dir"*; do
+              cp "$file" "release/${artifact_name}-$(basename "$file")"
+            done
+          done
+      - name: Publish Release
+        run: |
+          gh release delete app-headless-kevin-latest --yes --cleanup-tag 2>/dev/null || true
+          gh release create app-headless-kevin-latest \
+            --title "App - Headless - KeVIN (latest)" \
+            --notes "Auto-built headless app binaries from commit ${{ github.sha }}" \
+            release/*
+        env:
+          GH_TOKEN: ${{ github.token }}
