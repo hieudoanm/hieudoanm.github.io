@@ -48,7 +48,7 @@ build_app() {
     touch "$dest_dir/.nojekyll"
 }
 
-build_all_apps() {
+build_hybrid_apps() {
     local apps=()
     for category_dir in "$HYBRID_DIR"/*/; do
         [[ ! -d "$category_dir" ]] && continue
@@ -73,6 +73,72 @@ build_all_apps() {
         fi
     done
     verify_free
+}
+
+copy_landing_pages() {
+    local base_dir="$1"
+    local src_file slug dest_dir
+
+    if [[ ! -d "$base_dir" ]]; then
+        echo "Skipping landing pages: $base_dir not found."
+        return
+    fi
+
+    for src_file in "$base_dir"/*/public/index.html; do
+        [[ -f "$src_file" ]] || continue
+        slug="${src_file%/public/index.html}"
+        slug="${slug##*/}"
+        dest_dir="$DOCS_DIR/free/$slug"
+
+        echo "Copying $src_file -> $dest_dir/index.html"
+        mkdir -p "$dest_dir"
+        cp "$src_file" "$dest_dir/index.html"
+        touch "$dest_dir/.nojekyll"
+    done
+}
+
+init_docsify() {
+    local docsify_lib="$ROOT_DIR/node_modules/docsify/lib"
+    local free_dir="$DOCS_DIR/free"
+    local assets_dir="$free_dir/docsify"
+
+    if [[ ! -f "$docsify_lib/docsify.min.js" ]]; then
+        echo "Error: docsify is not installed. Run 'pnpm add -D docsify'." >&2
+        exit 1
+    fi
+
+    echo "Initializing docsify at $free_dir..."
+    mkdir -p "$assets_dir"
+    cp "$docsify_lib/docsify.min.js" "$assets_dir/docsify.min.js"
+    cp "$docsify_lib/themes/vue.css" "$assets_dir/vue.css"
+
+    cat > "$free_dir/index.html" <<'HTML'
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>hieudoanm · Free</title>
+    <link rel="stylesheet" href="./docsify/vue.css" />
+  </head>
+  <body>
+    <div id="app">Loading...</div>
+    <script>
+      window.$docsify = {
+        name: 'hieudoanm',
+        repo: 'https://github.com/hieudoanm/hieudoanm.github.io',
+        loadSidebar: false,
+        maxLevel: 3
+      };
+    </script>
+    <script src="./docsify/docsify.min.js"></script>
+  </body>
+</html>
+HTML
+
+    echo "Copying $ROOT_DIR/README.md -> $free_dir/README.md"
+    cp "$ROOT_DIR/README.md" "$free_dir/README.md"
+    touch "$free_dir/.nojekyll"
 }
 
 verify_free() {
@@ -146,7 +212,12 @@ require pnpm
 
 build_workspace_deps
 
-build_all_apps
+build_hybrid_apps
+
+copy_landing_pages "$ROOT_DIR/packages/extensions/browser"
+copy_landing_pages "$ROOT_DIR/packages/app/native"
+
+init_docsify
 
 echo "Done."
 

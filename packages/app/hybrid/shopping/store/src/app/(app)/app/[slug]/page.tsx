@@ -5,6 +5,8 @@ import { parseDownloads, getReleasePageUrl } from '@/lib/downloads';
 import downloads from '@/data/downloads.json';
 import { AppPage } from '@/components/organisms/AppPage';
 
+const SCREENSHOT_BASE_URL =
+  'https://hieudoanm.github.io/free/store/screenshots';
 const SCREENSHOT_PAGES = ['home', 'about', 'downloads', 'version'] as const;
 
 const getScreenshots = (slug: string): string[] =>
@@ -12,7 +14,7 @@ const getScreenshots = (slug: string): string[] =>
     existsSync(
       join(process.cwd(), 'public', 'screenshots', slug, `${page}.png`)
     )
-  ).map((page) => `/screenshots/${slug}/${page}.png`);
+  ).map((page) => `${SCREENSHOT_BASE_URL}/${slug}/${page}.png`);
 
 const ALL_APPS = parseDownloads(
   downloads as Parameters<typeof parseDownloads>[0]

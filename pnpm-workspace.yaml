@@ -7,6 +7,7 @@ allowBuilds:
   '@vscode/vsce-sign': true
   canvas: true
   core-js: true
+  docsify: true
   esbuild: true
   keytar: true
   msgpackr-extract: true
