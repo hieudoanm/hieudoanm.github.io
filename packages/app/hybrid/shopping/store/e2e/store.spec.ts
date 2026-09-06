@@ -8,9 +8,9 @@ test.describe('Store', () => {
 
   test('displays section headings', async ({ page }) => {
     await page.goto('/');
-    await expect(page.getByRole('heading', { name: 'Hybrid' })).toBeVisible();
-    await expect(page.getByRole('heading', { name: 'Android' })).toBeVisible();
-    await expect(page.getByRole('heading', { name: 'macOS' })).toBeVisible();
+    await expect(page.getByRole('heading', { name: /Hybrid/ })).toBeVisible();
+    await expect(page.getByRole('heading', { name: /Android/ })).toBeVisible();
+    await expect(page.getByRole('heading', { name: /macOS/ })).toBeVisible();
   });
 
   test('shows filter chips for platform and category', async ({ page }) => {

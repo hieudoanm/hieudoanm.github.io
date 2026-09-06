@@ -30,3 +30,4 @@ jobs:
       releaseName: extensions-browser-bored-latest
       releaseTitle: Extensions - Browser - Bored (latest)
       artifactPrefix: extensions-browser-bored
+    secrets: inherit

@@ -30,3 +30,4 @@ jobs:
       releaseName: extensions-browser-new-tab-latest
       releaseTitle: Extensions - Browser - New Tab (latest)
       artifactPrefix: extensions-browser-new-tab
+    secrets: inherit

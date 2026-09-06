@@ -36,7 +36,9 @@ export const AppSection: FC<AppSectionProps> = ({
   return (
     <section>
       <div className="mb-4">
-        <h2 className="text-lg font-light tracking-tight">{meta.label}</h2>
+        <h2 className="text-lg font-light tracking-tight">
+          {meta.label} ({apps.length})
+        </h2>
         <p className="text-base-content/40 text-xs">{meta.description}</p>
       </div>
       {viewMode === 'grid' ? (

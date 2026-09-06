@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 const mockToggleFavorite = jest.fn();
@@ -83,7 +83,7 @@ describe('HomePage', () => {
 
   it('renders section headings', () => {
     render(<HomePage />);
-    expect(screen.getAllByText('Hybrid').length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText(/Hybrid/).length).toBeGreaterThanOrEqual(1);
     expect(screen.getAllByText('Android').length).toBeGreaterThanOrEqual(1);
     expect(screen.getAllByText('macOS').length).toBeGreaterThanOrEqual(1);
   });
@@ -137,7 +137,10 @@ describe('HomePage', () => {
     const user = userEvent.setup();
     render(<HomePage />);
     await user.click(screen.getByRole('button', { name: 'Games' }));
-    expect(screen.getByText(/\d+ apps/)).toBeTruthy();
+    const countRow = screen
+      .getByText('Clear filters')
+      .closest('div') as HTMLElement;
+    expect(within(countRow).getByText(/\d+ apps/)).toBeTruthy();
   });
 
   it('search shows app count singular', async () => {

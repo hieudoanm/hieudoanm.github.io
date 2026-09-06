@@ -30,3 +30,4 @@ jobs:
       releaseName: extensions-browser-snapshot-latest
       releaseTitle: Extensions - Browser - Snapshot (latest)
       artifactPrefix: extensions-browser-snapshot
+    secrets: inherit

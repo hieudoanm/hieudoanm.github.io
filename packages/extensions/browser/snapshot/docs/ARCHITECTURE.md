@@ -12,17 +12,17 @@
 
 ## Tech Stack
 
-| Layer         | Technology                                     |
-| ------------- | ---------------------------------------------- |
-| Runtime       | Browser extension (WebExtension API, both MV2 and MV3) |
-| Language      | TypeScript 6 (strict)                          |
-| Build         | Webpack 5 + ts-loader                          |
-| Manifests     | MV2 + MV3 (identical, permission shape differs)|
-| DOM/Canvas    | Content script + `OffscreenCanvas` stitching   |
-| UI            | Action popup (`popup.html`, `popup.ts`)        |
-| Linting       | ESLint 10 + Prettier                           |
-| Packaging     | Makefile + `web-ext` (zip / xpi / crx)         |
-| Package Mgr   | pnpm                                           |
+| Layer       | Technology                                             |
+| ----------- | ------------------------------------------------------ |
+| Runtime     | Browser extension (WebExtension API, both MV2 and MV3) |
+| Language    | TypeScript 6 (strict)                                  |
+| Build       | Webpack 5 + ts-loader                                  |
+| Manifests   | MV2 + MV3 (identical, permission shape differs)        |
+| DOM/Canvas  | Content script + `OffscreenCanvas` stitching           |
+| UI          | Action popup (`popup.html`, `popup.ts`)                |
+| Linting     | ESLint 10 + Prettier                                   |
+| Packaging   | Makefile + `web-ext` (zip / xpi / crx)                 |
+| Package Mgr | pnpm                                                   |
 
 ## Directory Structure
 
@@ -97,13 +97,13 @@ directory.
 
 ## Manifest Versions
 
-| Concern            | Manifest V2                          | Manifest V3                            |
-| ------------------ | ------------------------------------ | -------------------------------------- |
-| Permissions        | `activeTab`, `tabs`, `downloads`, `storage` | `activeTab`, `tabs`, `downloads`, `storage` |
-| Host access        | content_scripts `matches` `<all_urls>` | `host_permissions` `<all_urls>`         |
-| User interface     | `browser_action` + `popup.html`      | `action` + `popup.html`                |
-| Content script     | `content.js`, `run_at: document_start` | `content.js`, `run_at: document_start` |
-| Background         | `background.scripts` + `persistent: false` | `background.service_worker`        |
+| Concern        | Manifest V2                                 | Manifest V3                                 |
+| -------------- | ------------------------------------------- | ------------------------------------------- |
+| Permissions    | `activeTab`, `tabs`, `downloads`, `storage` | `activeTab`, `tabs`, `downloads`, `storage` |
+| Host access    | content_scripts `matches` `<all_urls>`      | `host_permissions` `<all_urls>`             |
+| User interface | `browser_action` + `popup.html`             | `action` + `popup.html`                     |
+| Content script | `content.js`, `run_at: document_start`      | `content.js`, `run_at: document_start`      |
+| Background     | `background.scripts` + `persistent: false`  | `background.service_worker`                 |
 
 ## Capture Strategy
 

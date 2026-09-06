@@ -30,3 +30,4 @@ jobs:
       releaseName: extensions-browser-shopifyx-latest
       releaseTitle: Extensions - Browser - ShopifyX (latest)
       artifactPrefix: extensions-browser-shopifyx
+    secrets: inherit

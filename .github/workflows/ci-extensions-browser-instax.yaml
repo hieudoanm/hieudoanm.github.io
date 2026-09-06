@@ -30,3 +30,4 @@ jobs:
       releaseName: extensions-browser-instax-latest
       releaseTitle: Extensions - Browser - InstaX (latest)
       artifactPrefix: extensions-browser-instax
+    secrets: inherit

@@ -119,7 +119,10 @@ const HomePage = () => {
         <p className="text-base-content/30 mb-2 font-mono text-xs tracking-widest uppercase">
           {today}
         </p>
-        <h1 className="mb-2 text-3xl font-thin tracking-tight">Store</h1>
+        <h1 className="mb-1 text-3xl font-thin tracking-tight">Store</h1>
+        <p className="text-base-content/30 mb-2 font-mono text-xs tracking-widest uppercase">
+          {ALL_APPS.length} apps
+        </p>
         <p className="text-base-content/40 mb-6 text-xs">
           {platform !== 'unknown'
             ? `Detected: ${PLATFORM_LABELS[platform]}`

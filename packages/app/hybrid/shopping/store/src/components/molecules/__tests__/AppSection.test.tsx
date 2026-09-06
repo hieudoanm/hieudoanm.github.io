@@ -31,7 +31,7 @@ describe('AppSection', () => {
         isFavorite={() => false}
       />
     );
-    expect(screen.getByText('Hybrid')).toBeTruthy();
+    expect(screen.getByText('Hybrid (1)')).toBeTruthy();
   });
 
   it('renders grid view', () => {
@@ -96,6 +96,6 @@ describe('AppSection', () => {
         isFavorite={() => false}
       />
     );
-    expect(screen.getByText('unknown-section')).toBeTruthy();
+    expect(screen.getByText('unknown-section (1)')).toBeTruthy();
   });
 });

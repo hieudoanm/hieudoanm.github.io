@@ -12,16 +12,16 @@
 
 ## Tech Stack
 
-| Layer         | Technology                                     |
-| ------------- | ---------------------------------------------- |
-| Runtime       | Browser extension (WebExtension API, both MV2 and MV3) |
-| Language      | TypeScript 6 (strict)                          |
-| Build         | Webpack 5 + ts-loader                          |
-| Manifests     | MV2 + MV3 (identical, permission shape differs)|
-| DOM           | Content script only (click interception)       |
-| Linting       | ESLint 10 + Prettier                           |
-| Packaging     | Makefile + `web-ext` (zip / xpi / crx)         |
-| Package Mgr   | pnpm                                           |
+| Layer       | Technology                                             |
+| ----------- | ------------------------------------------------------ |
+| Runtime     | Browser extension (WebExtension API, both MV2 and MV3) |
+| Language    | TypeScript 6 (strict)                                  |
+| Build       | Webpack 5 + ts-loader                                  |
+| Manifests   | MV2 + MV3 (identical, permission shape differs)        |
+| DOM         | Content script only (click interception)               |
+| Linting     | ESLint 10 + Prettier                                   |
+| Packaging   | Makefile + `web-ext` (zip / xpi / crx)                 |
+| Package Mgr | pnpm                                                   |
 
 ## Directory Structure
 
@@ -86,12 +86,12 @@ exclusively to GitHub.
 
 ## Manifest Versions
 
-| Concern            | Manifest V2                            | Manifest V3                              |
-| ------------------ | -------------------------------------- | ---------------------------------------- |
-| Permissions        | `activeTab`                            | `activeTab`                              |
-| Host access        | content_scripts `matches` `*://github.com/*` | `host_permissions` `*://github.com/*` |
-| Content script     | `content.js`, `run_at: document_idle`  | `content.js`, `run_at: document_idle`    |
-| Background/action  | — (none)                               | — (none)                                 |
+| Concern           | Manifest V2                                  | Manifest V3                           |
+| ----------------- | -------------------------------------------- | ------------------------------------- |
+| Permissions       | `activeTab`                                  | `activeTab`                           |
+| Host access       | content_scripts `matches` `*://github.com/*` | `host_permissions` `*://github.com/*` |
+| Content script    | `content.js`, `run_at: document_idle`        | `content.js`, `run_at: document_idle` |
+| Background/action | — (none)                                     | — (none)                              |
 
 ## Link Interception Strategy
 

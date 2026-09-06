@@ -11,16 +11,16 @@
 
 ## Tech Stack
 
-| Layer         | Technology                                     |
-| ------------- | ---------------------------------------------- |
-| Runtime       | Browser extension (WebExtension API, both MV2 and MV3) |
-| Language      | TypeScript 6 (strict)                          |
-| Build         | Webpack 5 + ts-loader                          |
-| Manifests     | MV2 + MV3 (identical, permission shape differs)|
-| Background    | MV3 service worker / MV2 background page       |
-| Linting       | ESLint 10 + Prettier                           |
-| Packaging     | Makefile + `web-ext` (zip / xpi / crx)         |
-| Package Mgr   | pnpm                                           |
+| Layer       | Technology                                             |
+| ----------- | ------------------------------------------------------ |
+| Runtime     | Browser extension (WebExtension API, both MV2 and MV3) |
+| Language    | TypeScript 6 (strict)                                  |
+| Build       | Webpack 5 + ts-loader                                  |
+| Manifests   | MV2 + MV3 (identical, permission shape differs)        |
+| Background  | MV3 service worker / MV2 background page               |
+| Linting     | ESLint 10 + Prettier                                   |
+| Packaging   | Makefile + `web-ext` (zip / xpi / crx)                 |
+| Package Mgr | pnpm                                                   |
 
 ## Directory Structure
 
@@ -85,12 +85,12 @@ entirely from the background context and is invisible otherwise.
 
 ## Manifest Versions
 
-| Concern            | Manifest V2                            | Manifest V3                              |
-| ------------------ | -------------------------------------- | ---------------------------------------- |
-| Permissions        | `tabs`, `<all_urls>`                   | `tabs`                                   |
-| Host access        | `<all_urls>` permission                | `host_permissions` `<all_urls>`          |
-| Background         | `background.scripts` + `persistent: false` | `background.service_worker`          |
-| Content/action     | — (none)                               | — (none)                                 |
+| Concern        | Manifest V2                                | Manifest V3                     |
+| -------------- | ------------------------------------------ | ------------------------------- |
+| Permissions    | `tabs`, `<all_urls>`                       | `tabs`                          |
+| Host access    | `<all_urls>` permission                    | `host_permissions` `<all_urls>` |
+| Background     | `background.scripts` + `persistent: false` | `background.service_worker`     |
+| Content/action | — (none)                                   | — (none)                        |
 
 ## Redirect Strategy
 
@@ -102,7 +102,7 @@ entirely from the background context and is invisible otherwise.
   and `tabs.onUpdated` inspects `changeInfo.url`, covering both the moment a
   tab opens and any navigation to a new-tab URL.
 - **Redirect** — matches are rewritten via `chrome.tabs.update(tabId,
-  { url: TARGET_URL })`, landing on the hieudoanm home page.
+{ url: TARGET_URL })`, landing on the hieudoanm home page.
 
 ## State Management
 

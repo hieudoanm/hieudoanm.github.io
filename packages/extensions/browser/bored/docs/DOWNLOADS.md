@@ -94,8 +94,7 @@ real activity. Zero data leaves your browser.
 ### 🎯 Suggestion wheel
 
 - 20 offline activities (walks, calls, reading, chores, …) no internet needed
-- Exponential spin easing (`SPIN_BASE_DELAY_MS` 40 → `SPIN_DURATION_MS`
-  2400) for a satisfying land
+- Exponential spin easing (`SPIN_BASE_DELAY_MS` 40 → `SPIN_DURATION_MS` 2400) for a satisfying land
 
 ### 🌱 Better alternatives
 

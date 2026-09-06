@@ -1,289 +1,161 @@
-# [HIEU DOAN](https://hieudoanm.github.io)
+# 👨‍💻 I'm [Hieu Doan][hieudoanm] - Software Engineer
 
-## 📚 Table of Contents
+- `Profile`: [LinkedIn][linkedin] - [Twitter][twitter] - [Instagram][instagram]
+- `Monorepo`: [hieudoanm/hieudoanm.github.io](https://github.com/hieudoanm/hieudoanm.github.io)
+- `Languages`: [TypeScript][ts] - [Go][go] - [Rust][rust] - [Kotlin][kotlin] - [Swift][swift] - [Python][python]
 
-- [HIEU DOAN](#hieu-doan)
-  - [📚 Table of Contents](#-table-of-contents)
-  - [📖 1. Overview](#-1-overview)
-  - [✨ 2. Features](#-2-features)
-  - [🎥 3. Demo](#-3-demo)
-  - [🚀 4. Usage](#-4-usage)
-  - [🛠️ 5. Development Stack](#️-5-development-stack)
-    - [5.1 Programming Languages](#51-programming-languages)
-    - [🖥️ 5.2 Development Tools](#️-52-development-tools)
-    - [⚙️ 5.3 Monorepo](#️-53-monorepo)
-    - [📟 5.4 CLI (Command-line Interface)](#-54-cli-command-line-interface)
-    - [💻 5.5 Application](#-55-application)
-      - [⚛️ 5.5.1 Front-end](#️-551-front-end)
-      - [📡 5.5.2 Back-end](#-552-back-end)
-  - [📄 6. License](#-6-license)
+<!-- Profile -->
 
-## 📖 1. Overview
+[hieudoanm]: https://hieudoanm.github.io
+[linkedin]: https://www.linkedin.com/in/hieudoanm/
+[twitter]: https://x.com/hieudoanm
+[instagram]: https://instagram.com/hieudoanm.github.io
 
-`hieudoanm.github.io` is a focused project in this monorepo that delivers a practical tool with a clean user experience across platforms.
+<!-- Languages  -->
 
-| No  | Metadata       | Value                                                                             |
-| --- | -------------- | --------------------------------------------------------------------------------- |
-| 1   | Repository     | [hieudoanm/hieudoanm.github.io](https://github.com/hieudoanm/hieudoanm.github.io) |
-| 2   | Default Branch | [master](https://github.com/hieudoanm/hieudoanm.github.io/commits/master/)        |
-| 3   | License        | [GPL-3.0](https://github.com/hieudoanm/hieudoanm.github.io/blob/master/LICENSE)   |
-| 4   | Releases       | [Releases](https://github.com/hieudoanm/hieudoanm.github.io/releases)             |
-| 5   | Home Page      | [hieudoanm.github.io](https://hieudoanm.github.io)                                |
-| 6   | App Page       | [hieudoanm.vercel.app](https://hieudoanm.vercel.app)                              |
-| 7   | Languages      | `Go`, `Kotlin`, `Python`, `Rust`, `Swift`, `TypeScript`                           |
-| 8   | Size           | 2,468,808 `kb` = 2.47 `GB`                                                        |
-
-## ✨ 2. Features
-
-1. [x] Core functionality tailored to `hieudoanm.github.io`
-2. [x] Web experience for quick access
-3. [x] CLI distribution for automation workflows
-4. [x] Mobile-ready build targets
-5. [x] Desktop-ready build targets
-
-## 🎥 3. Demo
-
-- 🌐 [Live Demo](https://hieudoanm.github.io/)
-
-## 🚀 4. Usage
-
-- 🌐 [Web](https://hieudoanm.github.io/)
-- 💻 [CLI](https://github.com/hieudoanm/hieudoanm.github.io/releases)
-- 📱 [Mobile](https://github.com/hieudoanm/hieudoanm.github.io/releases)
-- 🖥️ [Desktop](https://github.com/hieudoanm/hieudoanm.github.io/releases)
-  - 🍎 [MacOS](https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/macos-latest)
-  - 🐧 [Ubuntu](https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/ubuntu-latest)
-  - 🪟 [Windows](https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/windows-latest)
-
-## 🛠️ 5. Development Stack
-
-### 5.1 Programming Languages
-
-| No  | Language                 | GitHub                  | Docker                    | Group    | Usage       |
-| --- | ------------------------ | ----------------------- | ------------------------- | -------- | ----------- |
-| 1   | [Bash][bash]             | N/A                     |                           | Software | CLI         |
-| 2   | [Go][go]                 | [GitHub][gh-go]         | [golang][docker-golang]   | Software | CLI         |
-| 3   | [Rust][rust]             | [GitHub][gh-rust]       | [rust][docker-rust]       | Software | CLI         |
-| 4   | [TypeScript][typescript] | [GitHub][gh-typescript] | [node][docker-node]       | Software | Web         |
-| 5   | [Kotlin][kt]             | [GitHub][gh-kt]         | [openjdk][docker-openjdk] | Software | Android     |
-| 6   | [Swift][swift]           | [GitHub][gh-swift]      | [swift][docker-swift]     | Software | iOS / macOS |
-| 7   | [Java][java]             | [GitHub][gh-java]       | [openjdk][docker-openjdk] | Software | Back-end    |
-| 8   | [Python][py]             | [GitHub][gh-py]         | [python][docker-python]   | Data     | AI          |
-
-[bash]: https://www.gnu.org/software/bash/
-[typescript]: https://www.typescriptlang.org/
+[ts]: https://www.typescriptlang.org/
 [go]: https://go.dev/
 [rust]: https://www.rust-lang.org/
-[py]: https://www.python.org/
-[kt]: https://kotlinlang.org/
+[kotlin]: https://kotlinlang.org/
 [swift]: https://www.swift.org/
-[java]: https://www.java.com/
+[python]: https://www.python.org/
 
-<!-- GitHub -->
+## Projects
 
-[gh-typescript]: https://github.com/microsoft/typescript
-[gh-go]: https://github.com/golang/go
-[gh-rust]: https://github.com/rust-lang/rust
-[gh-py]: https://github.com/python/cpython
-[gh-kt]: https://github.com/JetBrains/kotlin
-[gh-swift]: https://github.com/apple/swift
-[gh-java]: https://github.com/openjdk/jdk
+| No  | Platform | Category          | Name           | Releases                            |
+| --- | -------- | ----------------- | -------------- | ----------------------------------- |
+| 1   | Android  | Utilities         | Block          | [Releases][releases-block]          |
+| 2   | Android  | Utilities         | NFC            | [Releases][releases-nfc]            |
+| 3   | Browser  | Extension         | Ads Blocker    | [Releases][releases-ads-blocker]    |
+| 4   | Browser  | Extension         | Bored          | [Releases][releases-bored]          |
+| 5   | Browser  | Extension         | ChessX         | [Releases][releases-chessx]         |
+| 6   | Browser  | Extension         | ClaudeX        | [Releases][releases-claudex]        |
+| 7   | Browser  | Extension         | GitHubX        | [Releases][releases-githubx]        |
+| 8   | Browser  | Extension         | InstaX         | [Releases][releases-instax]         |
+| 9   | Browser  | Extension         | New Tab        | [Releases][releases-new-tab]        |
+| 10  | Browser  | Extension         | ShopifyX       | [Releases][releases-shopifyx]       |
+| 11  | Browser  | Extension         | Snapshot       | [Releases][releases-snapshot]       |
+| 12  | CLI      | Developer Tools   | J.A.C.K.       | [Releases][releases-jack]           |
+| 13  | Hybrid   | Business          | Menu           | [Releases][releases-menu]           |
+| 14  | Hybrid   | Business          | POS            | [Releases][releases-pos]            |
+| 15  | Hybrid   | Developer Tools   | API            | [Releases][releases-api]            |
+| 16  | Hybrid   | Developer Tools   | Boilerplate    | [Releases][releases-boilerplate]    |
+| 17  | Hybrid   | Developer Tools   | Code           | [Releases][releases-code]           |
+| 18  | Hybrid   | Developer Tools   | Database       | [Releases][releases-database]       |
+| 19  | Hybrid   | Developer Tools   | Diagram        | [Releases][releases-diagram]        |
+| 20  | Hybrid   | Education         | Chemistry      | [Releases][releases-chemistry]      |
+| 21  | Hybrid   | Education         | Economics      | [Releases][releases-economics]      |
+| 22  | Hybrid   | Education         | History        | [Releases][releases-history]        |
+| 23  | Hybrid   | Education         | Lingo          | [Releases][releases-lingo]          |
+| 24  | Hybrid   | Education         | Music          | [Releases][releases-music]          |
+| 25  | Hybrid   | Finance           | Tax            | [Releases][releases-tax]            |
+| 26  | Hybrid   | Finance           | Wallet         | [Releases][releases-wallet]         |
+| 27  | Hybrid   | Food & Drink      | Foody          | [Releases][releases-foody]          |
+| 28  | Hybrid   | Games             | 8-Bit          | [Releases][releases-8-bit]          |
+| 29  | Hybrid   | Games             | Casino         | [Releases][releases-casino]         |
+| 30  | Hybrid   | Games             | Countries      | [Releases][releases-countries]      |
+| 31  | Hybrid   | Games             | Memory         | [Releases][releases-memory]         |
+| 32  | Hybrid   | Games             | Nikoli         | [Releases][releases-nikoli]         |
+| 33  | Hybrid   | Games             | Tic-Tac-Toe    | [Releases][releases-tic-tac-toe]    |
+| 34  | Hybrid   | Graphics & Design | Colors         | [Releases][releases-colors]         |
+| 35  | Hybrid   | Graphics & Design | Photo          | [Releases][releases-photo]          |
+| 36  | Hybrid   | Graphics & Design | SVG            | [Releases][releases-svg]            |
+| 37  | Hybrid   | Graphics & Design | Video          | [Releases][releases-video]          |
+| 38  | Hybrid   | Medical           | Brainbow       | [Releases][releases-brainbow]       |
+| 39  | Hybrid   | Medical           | Eyes           | [Releases][releases-eyes]           |
+| 40  | Hybrid   | Medical           | MRI            | [Releases][releases-mri]            |
+| 41  | Hybrid   | Medical           | Psychology     | [Releases][releases-psychology]     |
+| 42  | Hybrid   | Productivity      | CSV            | [Releases][releases-csv]            |
+| 43  | Hybrid   | Productivity      | Calendar       | [Releases][releases-calendar]       |
+| 44  | Hybrid   | Productivity      | Keynotes       | [Releases][releases-keynotes]       |
+| 45  | Hybrid   | Productivity      | Markdown       | [Releases][releases-markdown]       |
+| 46  | Hybrid   | Productivity      | PDF            | [Releases][releases-pdf]            |
+| 47  | Hybrid   | Productivity      | Projects       | [Releases][releases-projects]       |
+| 48  | Hybrid   | Productivity      | Resume         | [Releases][releases-resume]         |
+| 49  | Hybrid   | Shopping          | Store          | [Releases][releases-store]          |
+| 50  | Hybrid   | Social Networking | Chat           | [Releases][releases-chat]           |
+| 51  | Hybrid   | Social Networking | Messaging      | [Releases][releases-messaging]      |
+| 52  | Hybrid   | Sports            | Chess          | [Releases][releases-chess]          |
+| 53  | Hybrid   | Sports            | Football       | [Releases][releases-football]       |
+| 54  | Hybrid   | Sports            | Tourney        | [Releases][releases-tourney]        |
+| 55  | Hybrid   | Utilities         | Clock          | [Releases][releases-clock]          |
+| 56  | Hybrid   | Utilities         | Docs           | [Releases][releases-docs]           |
+| 57  | Hybrid   | Utilities         | Password       | [Releases][releases-password]       |
+| 58  | Other    | Developer Tools   | Browserverless | [Releases][releases-browserverless] |
+| 59  | Server   | Backend           | Backbone       | [Releases][releases-backbone]       |
+| 60  | macOS    | Utilities         | Brewery        | [Releases][releases-brewery]        |
+| 61  | macOS    | Utilities         | Clipper        | [Releases][releases-clipper]        |
+| 62  | macOS    | Utilities         | Gauge          | [Releases][releases-gauge]          |
+| 63  | macOS    | Utilities         | Mixer          | [Releases][releases-mixer]          |
+| 64  | macOS    | Utilities         | Ports          | [Releases][releases-ports]          |
+| 65  | macOS    | Utilities         | Snap           | [Releases][releases-snap]           |
+| 66  | macOS    | Utilities         | Top            | [Releases][releases-top]            |
 
-<!-- Docker -->
+<!-- Releases -->
 
-[docker-golang]: https://hub.docker.com/_/golang
-[docker-rust]: https://hub.docker.com/_/rust
-[docker-node]: https://hub.docker.com/_/node
-[docker-openjdk]: https://hub.docker.com/_/openjdk
-[docker-swift]: https://hub.docker.com/_/swift
-[docker-python]: https://hub.docker.com/_/python
-
-### 🖥️ 5.2 Development Tools
-
-| No  | Group | Technology                 | GitHub                   | Download                         |
-| --- | ----- | -------------------------- | ------------------------ | -------------------------------- |
-| 1   | IDE   | [Antigravity][antigravity] |                          | [Download][download-antigravity] |
-| 2   | IDE   | [Cursor][cursor]           | [GitHub][gh-cursor]      | [Download][download-cursor]      |
-| 3   | Agent | [Claude Code][claude-code] | [GitHub][gh-claude-code] | [Download][download-claude-code] |
-| 4   | Agent | [Gemini][gemini]           | [GitHub][gh-gemini]      | [Download][download-gemini]      |
-| 5   | Agent | [OpenCode][opencode]       | [GitHub][gh-opencode]    | [Download][download-opencode]    |
-
-[antigravity]: https://antigravity.google/
-[cursor]: https://cursor.com/
-[claude-code]: https://code.claude.com/docs/en/overview
-[gemini]: https://gemini.google.com/
-[opencode]: https://opencode.ai/
-
-<!-- GitHub -->
-
-[gh-cursor]: https://github.com/cursor/cursor
-[gh-claude-code]: https://github.com/anthropics/claude-code
-[gh-gemini]: https://github.com/google/gemini
-[gh-opencode]: https://github.com/anomalyco/opencode
-
-<!-- Download -->
-
-[download-antigravity]: https://antigravity.google/download
-[download-cursor]: https://cursor.com/download
-[download-claude-code]: https://claude.com/product/claude-code
-[download-gemini]: https://geminicli.com/
-[download-opencode]: https://github.com/anomalyco/opencode/releases
-
-### ⚙️ 5.3 Monorepo
-
-| No  | Group        | Technology             | GitHub                 |
-| --- | ------------ | ---------------------- | ---------------------- |
-| 1   | Git          | [GitHub][github]       | [GitHub][gh-github]    |
-| 2   | Git Hooks    | [Husky][husky]         | [GitHub][gh-husky]     |
-| 3   | Build        | [Turborepo][turborepo] | [GitHub][gh-turborepo] |
-| 4   | Dependencies | [Renovate][renovate]   | [GitHub][gh-renovate]  |
-
-```bash
-pnpm install --save-dev --save-exact husky turbo
-```
-
-### 📟 5.4 CLI (Command-line Interface)
-
-| No  | Group     | Technology     | GitHub                 |
-| --- | --------- | -------------- | ---------------------- |
-| 1   | Framework | [Cobra][cobra] | [GitHub][gh-cobra]     |
-| 2   | TUI       | BubbleTea      | [GitHub][gh-bubbletea] |
-
-```bash
-# 1. Cobra
-go get -u github.com/spf13/cobra@latest
-# OR
-go install github.com/spf13/cobra-cli@latest
-```
-
-### 💻 5.5 Application
-
-#### ⚛️ 5.5.1 Front-end
-
-| No  | Group                     | Technology                  | GitHub                   |
-| --- | ------------------------- | --------------------------- | ------------------------ |
-| 01  | Runtime                   | [Node.js][node.js]          | [GitHub][gh-node]        |
-| 02  | Packages Manager          | [pnpm][pnpm]                | [GitHub][gh-pnpm]        |
-| 03  | Linter                    | [ESLint][eslint]            | [GitHub][gh-eslint]      |
-| 04  | Formatter                 | [Prettier][prettier]        | [GitHub][gh-prettier]    |
-| 05  | Unit Tests                | [Jest][jest]                | [GitHub][gh-jest]        |
-| 06  | E2E Tests                 | Playwright                  | GitHub                   |
-| 07  | Framework                 | [Next.js][nextjs]           | [GitHub][gh-nextjs]      |
-| 08  | Styling                   | [Tailwind CSS][tailwindcss] | [GitHub][gh-tailwindcss] |
-| 09  | UI                        | [DaisyUI][daisyui]          | [GitHub][gh-daisyui]     |
-| 10  | Hybrid (Desktop & Mobile) | [Tauri][tauri]              | [GitHub][gh-tauri]       |
-| 11  | Static Hosting            | [GitHub Pages][githubpages] | [GitHub][gh-githubpages] |
-| 12  | Dynamic Hosting           | [Vercel][vercel]            | [GitHub][gh-vercel]      |
-
-[tauri]: https://v2.tauri.app/
-[githubpages]: https://pages.github.com/
-[vercel]: https://vercel.com/
-
-<!-- GitHub -->
-
-[gh-nextjs]: https://github.com/vercel/next.js
-[gh-tauri]: https://github.com/tauri-apps/tauri
-[gh-githubpages]: https://github.com/github/pages-gemini
-[gh-vercel]: https://github.com/vercel/vercel
-
-```bash
-# 1. Node.js
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
-nvm install
-# 2. TypeScript
-pnpm install --save-dev --save-exact @types/node ts-node typescript
-# 3. Linter
-pnpm install --save-dev --save-exact eslint
-# 4. Formatter
-pnpm install --save-dev --save-exact prettier prettier-plugin-tailwindcss
-# 5. Testing
-pnpm install --save-dev --save-exact @types/jest jest jest-environment-jsdom ts-jest
-# 6. Styling
-pnpm install --save-dev --save-exact @tailwindcss/postcss tailwindcss daisyui
-# 7. Tauri
-pnpm install --save-exact @tauri-apps/api
-pnpm install --save-dev --save-exact @tauri-apps/cli
-```
-
-#### 📡 5.5.2 Back-end
-
-| No  | Group   | Technology                    | GitHub                    |
-| --- | ------- | ----------------------------- | ------------------------- |
-| 1   | BFF     | [tRPC][trpc]                  | [GitHub][gh-trpc]         |
-| 2   | ORM     | [Prisma][prisma]              | [GitHub][gh-prisma]       |
-| 3   | KV      | [Redis][redis]                | [GitHub][gh-redis]        |
-| 4   | JSON    | [MongoDB][mongodb]            | [GitHub][gh-mongodb]      |
-| 5   | SQL     | [PostgreSQL][postgresql]      | [GitHub][gh-postgresql]   |
-| 6   | Auth    | [Auth.js][auth.js]            | [GitHub][gh-authjs]       |
-| 7   | Email   | [Resend][resend]              | [GitHub][gh-resend]       |
-| 8   | Payment | [Lemon Squeezy][lemonsqueezy] | [GitHub][gh-lemonsqueezy] |
-
-```bash
-# 1. tRPC
-pnpm install --save-dev --save-exact @trpc/server @trpc/client @trpc/react-query @trpc/next @tanstack/react-query@latest zod
-# 2. Prisma
-pnpm install --save-dev --save-exact prisma
-# 3. Redis
-pnpm install --save-exact redis
-# 4. Auth.js
-pnpm install --save-exact next-auth
-# 5. Email
-pnpm install --save-exact resend
-# 6. Payment
-pnpm install --save-exact @lemonsqueezy/lemonsqueezy.js
-```
-
-## 📄 6. License
-
-[GNU General Public License - Version 3 (GPL-3.0)](https://opensource.org/license/gpl-3.0)
-
-<!-- Monorepo -->
-
-[github]: https://github.com/
-[husky]: https://typicode.github.io/husky/
-[turborepo]: https://turborepo.org/
-[renovate]: https://www.mend.io/renovate/
-[gh-github]: https://github.com/github
-[gh-husky]: https://github.com/typicode/husky
-[gh-turborepo]: https://github.com/vercel/turborepo
-[gh-renovate]: https://github.com/renovatebot/renovate
-
-<!-- Application -->
-
-[node.js]: https://nodejs.org/
-[pnpm]: https://pnpm.io/
-[eslint]: https://eslint.org/
-[prettier]: https://prettier.io/
-[jest]: https://jestjs.io/
-[nextjs]: https://nextjs.org/
-[tailwindcss]: https://tailwindcss.com/
-[daisyui]: https://daisyui.com/
-[gh-node]: https://github.com/nodejs/node
-[gh-pnpm]: https://github.com/pnpm/pnpm
-[gh-eslint]: https://github.com/eslint/eslint
-[gh-prettier]: https://github.com/prettier/prettier
-[gh-jest]: https://github.com/facebook/jest
-[gh-tailwindcss]: https://github.com/tailwindlabs/tailwindcss
-[gh-daisyui]: https://github.com/saadeghi/daisyui
-[trpc]: https://trpc.io/
-[prisma]: https://prisma.io/
-[redis]: https://redis.io/
-[mongodb]: https://www.mongodb.com/
-[postgresql]: https://www.postgresql.org/
-[auth.js]: https://authjs.dev/
-[resend]: https://resend.com/
-[lemonsqueezy]: https://www.lemonsqueezy.com/
-[gh-trpc]: https://github.com/trpc/trpc
-[gh-prisma]: https://github.com/prisma/prisma
-[gh-redis]: https://github.com/redis/redis
-[gh-mongodb]: https://github.com/mongodb/mongo
-[gh-postgresql]: https://github.com/postgres/postgres
-[gh-authjs]: https://github.com/nextauthjs/next-auth
-[gh-resend]: https://github.com/resend
-[gh-lemonsqueezy]: https://github.com/lmsqueezy/lemonsqueezy.js
-
-<!-- CLI -->
-
-[cobra]: https://cobra.dev/
-[gh-cobra]: https://github.com/spf13/cobra
-[gh-bubbletea]: https://github.com/charmbracelet/bubbletea
+[releases-pos]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-business-pos-latest
+[releases-api]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-developer-tools-api-latest
+[releases-boilerplate]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-developer-tools-boilerplate-latest
+[releases-code]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-developer-tools-code-latest
+[releases-database]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-developer-tools-database-latest
+[releases-diagram]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-developer-tools-diagram-latest
+[releases-chemistry]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-education-chemistry-latest
+[releases-economics]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-education-economics-latest
+[releases-history]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-education-history-latest
+[releases-lingo]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-education-lingo-latest
+[releases-music]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-education-music-latest
+[releases-tax]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-finance-tax-latest
+[releases-wallet]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-finance-wallet-latest
+[releases-foody]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-food-drink-foody-latest
+[releases-8-bit]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-games-8-bit-latest
+[releases-casino]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-games-casino-latest
+[releases-countries]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-games-countries-latest
+[releases-memory]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-games-memory-latest
+[releases-nikoli]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-games-nikoli-latest
+[releases-tic-tac-toe]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-games-tic-tac-toe-latest
+[releases-photo]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-graphics-design-photo-latest
+[releases-svg]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-graphics-design-svg-latest
+[releases-video]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-graphics-design-video-latest
+[releases-brainbow]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-medical-brainbow-latest
+[releases-eyes]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-medical-eyes-latest
+[releases-mri]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-medical-mri-latest
+[releases-psychology]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-medical-psychology-latest
+[releases-calendar]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-productivity-calendar-latest
+[releases-csv]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-productivity-csv-latest
+[releases-keynotes]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-productivity-keynotes-latest
+[releases-markdown]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-productivity-markdown-latest
+[releases-pdf]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-productivity-pdf-latest
+[releases-projects]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-productivity-projects-latest
+[releases-resume]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-productivity-resume-latest
+[releases-store]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-shopping-store-latest
+[releases-chat]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-social-networking-chat-latest
+[releases-messaging]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-social-networking-messaging-latest
+[releases-chess]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-sports-chess-latest
+[releases-football]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-sports-football-latest
+[releases-tourney]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-sports-tourney-latest
+[releases-clock]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-utilities-clock-latest
+[releases-docs]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-utilities-docs-latest
+[releases-password]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-utilities-password-latest
+[releases-brewery]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-macos-brewery-latest
+[releases-clipper]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-macos-clipper-latest
+[releases-gauge]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-macos-gauge-latest
+[releases-mixer]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-macos-mixer-latest
+[releases-ports]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-macos-ports-latest
+[releases-snap]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-macos-snap-latest
+[releases-top]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-macos-top-latest
+[releases-block]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-android-block-latest
+[releases-nfc]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-android-nfc-latest
+[releases-browserverless]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-rust-browserverless-latest
+[releases-menu]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-business-menu-latest
+[releases-colors]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-graphics-design-colors-latest
+[releases-jack]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/cli-jack-latest
+[releases-backbone]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/backbone-latest
+[releases-ads-blocker]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/extensions-browser-ads-blocker-latest
+[releases-bored]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/extensions-browser-bored-latest
+[releases-chessx]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/extensions-browser-chessx-latest
+[releases-claudex]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/extensions-browser-claudex-latest
+[releases-githubx]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/extensions-browser-githubx-latest
+[releases-instax]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/extensions-browser-instax-latest
+[releases-new-tab]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/extensions-browser-new-tab-latest
+[releases-shopifyx]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/extensions-browser-shopifyx-latest
+[releases-snapshot]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/extensions-browser-snapshot-latest

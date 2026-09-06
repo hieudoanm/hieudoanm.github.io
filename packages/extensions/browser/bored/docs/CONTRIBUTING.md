@@ -21,13 +21,13 @@ and Gecko browsers via both Manifest V2 and Manifest V3 builds.
 
 ## Development Commands
 
-| Task     | Command                                                        |
-| -------- | -------------------------------------------------------------- |
-| Build    | `pnpm build --filter=@hieudoanm.github.io/bored`               |
-| Lint     | `pnpm lint --filter=@hieudoanm.github.io/bored`                |
-| Format   | `pnpm format --filter=@hieudoanm.github.io/bored`              |
-| Web-ext  | `pnpm web-ext lint --source-dir dist/v3` (also `dist/v2`)      |
-| Clean    | `pnpm clean --filter=@hieudoanm.github.io/bored`               |
+| Task    | Command                                                   |
+| ------- | --------------------------------------------------------- |
+| Build   | `pnpm build --filter=@hieudoanm.github.io/bored`          |
+| Lint    | `pnpm lint --filter=@hieudoanm.github.io/bored`           |
+| Format  | `pnpm format --filter=@hieudoanm.github.io/bored`         |
+| Web-ext | `pnpm web-ext lint --source-dir dist/v3` (also `dist/v2`) |
+| Clean   | `pnpm clean --filter=@hieudoanm.github.io/bored`          |
 
 `pnpm build` runs clean → lint → format → webpack → `make build` (zip/xpi/crx).
 Run lint and format before pushing — CI enforces them.

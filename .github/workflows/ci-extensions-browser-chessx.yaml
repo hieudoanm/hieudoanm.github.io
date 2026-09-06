@@ -30,3 +30,4 @@ jobs:
       releaseName: extensions-browser-chessx-latest
       releaseTitle: Extensions - Browser - ChessX (latest)
       artifactPrefix: extensions-browser-chessx
+    secrets: inherit

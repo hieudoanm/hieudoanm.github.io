@@ -30,3 +30,4 @@ jobs:
       releaseName: extensions-browser-claudex-latest
       releaseTitle: Extensions - Browser - ClaudeX (latest)
       artifactPrefix: extensions-browser-claudex
+    secrets: inherit

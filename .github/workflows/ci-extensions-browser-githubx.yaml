@@ -30,3 +30,4 @@ jobs:
       releaseName: extensions-browser-githubx-latest
       releaseTitle: Extensions - Browser - GitHubX (latest)
       artifactPrefix: extensions-browser-githubx
+    secrets: inherit

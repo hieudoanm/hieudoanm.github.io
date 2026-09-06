@@ -21,13 +21,13 @@ Chromium and Gecko browsers via both Manifest V2 and Manifest V3 builds.
 
 ## Development Commands
 
-| Task     | Command                                                        |
-| -------- | -------------------------------------------------------------- |
-| Build    | `pnpm build --filter=@hieudoanm.github.io/snapshot`            |
-| Lint     | `pnpm lint --filter=@hieudoanm.github.io/snapshot`             |
-| Format   | `pnpm format --filter=@hieudoanm.github.io/snapshot`           |
-| Web-ext  | `pnpm web-ext lint --source-dir dist/v3` (also `dist/v2`)      |
-| Clean    | `pnpm clean --filter=@hieudoanm.github.io/snapshot`            |
+| Task    | Command                                                   |
+| ------- | --------------------------------------------------------- |
+| Build   | `pnpm build --filter=@hieudoanm.github.io/snapshot`       |
+| Lint    | `pnpm lint --filter=@hieudoanm.github.io/snapshot`        |
+| Format  | `pnpm format --filter=@hieudoanm.github.io/snapshot`      |
+| Web-ext | `pnpm web-ext lint --source-dir dist/v3` (also `dist/v2`) |
+| Clean   | `pnpm clean --filter=@hieudoanm.github.io/snapshot`       |
 
 `pnpm build` runs clean → lint → format → webpack → `make build` (zip/xpi/crx).
 Run lint and format before pushing — CI enforces them.

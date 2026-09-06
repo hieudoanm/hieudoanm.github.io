@@ -23,6 +23,13 @@ on:
         required: true
         type: string
         description: Artifact name prefix, e.g. instax
+    secrets:
+      WEB_EXT_API_KEY:
+        required: false
+        description: AMO automation API key (Mozilla developer hub)
+      WEB_EXT_API_SECRET:
+        required: false
+        description: AMO automation API secret (Mozilla developer hub)
 
 jobs:
   build:
@@ -58,23 +65,38 @@ jobs:
           name: ${{ inputs.artifactPrefix }}-build
           path: ${{ inputs.package }}/download/
           if-no-files-found: error
+      - name: Upload Build Sources
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: ${{ inputs.artifactPrefix }}-dist
+          path: ${{ inputs.package }}/dist/
+          if-no-files-found: error
 
   publish:
     name: Publish to GitHub Release
     needs: [build]
     if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     permissions:
       contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v7.0.1
+      - name: Setup Node.js
+        uses: actions/setup-node@v7.0.0
+        with:
+          node-version-file: .nvmrc
       - name: Download Build Artifacts
         uses: actions/download-artifact@v8.0.1
         with:
           name: ${{ inputs.artifactPrefix }}-build
           path: artifacts
+      - name: Download Build Sources
+        uses: actions/download-artifact@v8.0.1
+        with:
+          name: ${{ inputs.artifactPrefix }}-dist
+          path: dist
       - name: Collect Release Artifacts
         run: |
           mkdir -p release
@@ -87,6 +109,81 @@ jobs:
               cp "$file" "release/$name"
             done
           done
+      - name: Sign Firefox Add-on (AMO)
+        if: secrets.WEB_EXT_API_KEY != '' && secrets.WEB_EXT_API_SECRET != ''
+        env:
+          WEB_EXT_API_KEY: ${{ secrets.WEB_EXT_API_KEY }}
+          WEB_EXT_API_SECRET: ${{ secrets.WEB_EXT_API_SECRET }}
+        run: |
+          set -euo pipefail
+
+          MANIFEST="dist/v2/manifest.json"
+          ADDON_ID="$(node -e '
+            const m = require(process.argv[1]);
+            const gecko = (m.browser_specific_settings ?? m.applications)?.gecko;
+            process.stdout.write((gecko && gecko.id) || "");
+          ' "$MANIFEST")"
+          ADDON_VERSION="$(node -e 'process.stdout.write(require(process.argv[1]).version)' "$MANIFEST")"
+          if [[ -z "$ADDON_ID" ]]; then
+            echo "::error::No gecko id in $MANIFEST; cannot sign for AMO." >&2
+            exit 1
+          fi
+          echo "Signing $ADDON_ID v$ADDON_VERSION via AMO (unlisted)..."
+
+          SIGNED_XPI=""
+          set +e
+          npx --yes web-ext@10.6.0 sign \
+            --source-dir dist/v2 \
+            --channel unlisted \
+            --artifacts-dir signed \
+            --no-upload-source-code 2>&1 | tee /tmp/amo-sign.log
+          STATUS=${PIPESTATUS[0]}
+          set -e
+
+          if [[ $STATUS -eq 0 ]]; then
+            SIGNED_XPI="$(find signed -name '*.xpi' -print -quit)"
+          elif grep -Eqi 'already (been signed|exists)' /tmp/amo-sign.log; then
+            echo "Version $ADDON_VERSION already signed on AMO; fetching the existing signed artifact."
+            TOKEN="$(node -e '
+              const crypto = require("crypto");
+              const b64 = (o) => Buffer.from(JSON.stringify(o)).toString("base64url");
+              const header = b64({ alg: "HS256", typ: "JWT" });
+              const now = Math.floor(Date.now() / 1000);
+              const payload = b64({ iss: process.env.WEB_EXT_API_KEY, exp: now + 300, iat: now, jti: crypto.randomUUID() });
+              const sig = crypto.createHmac("sha256", process.env.WEB_EXT_API_SECRET)
+                .update(header + "." + payload).digest("base64url");
+              process.stdout.write(header + "." + payload + "." + sig);
+            ')"
+            DOWNLOAD_URL="$(curl -fsSL \
+              -H "Authorization: Bearer $TOKEN" \
+              "https://addons.mozilla.org/api/v5/addons/addon/$ADDON_ID/versions/$ADDON_VERSION/" \
+              | node -e '
+                let s = "";
+                process.stdin.on("data", (d) => { s += d; });
+                process.stdin.on("end", () => {
+                  const v = JSON.parse(s);
+                  const f = v.file ?? v.files?.[0];
+                  process.stdout.write(f?.url || "");
+                });
+              ')"
+
+            if [[ -z "$DOWNLOAD_URL" ]]; then
+              echo "::error::AMO has no signed artifact for $ADDON_ID v$ADDON_VERSION." >&2
+              exit 1
+            fi
+            mkdir -p signed
+            curl -fsSL -H "Authorization: Bearer $TOKEN" -o signed/reuse.xpi "$DOWNLOAD_URL"
+            SIGNED_XPI="signed/reuse.xpi"
+          else
+            echo "::error::AMO signing failed with exit code $STATUS; see /tmp/amo-sign.log." >&2
+            exit 1
+          fi
+
+          cp "$SIGNED_XPI" "release/${{ inputs.artifactPrefix }}-v2.xpi"
+          echo "Replaced unsigned V2 .xpi with AMO-signed artifact:"
+          ls -l "release/${{ inputs.artifactPrefix }}-v2.xpi"
+      - name: Regenerate Checksums
+        run: |
           cd release
           for file in *.zip *.xpi *.crx; do
             [ -f "$file" ] && sha256sum --binary "$file"

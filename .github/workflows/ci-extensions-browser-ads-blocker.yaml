@@ -30,3 +30,4 @@ jobs:
       releaseName: extensions-browser-ads-blocker-latest
       releaseTitle: Extensions - Browser - Ads Blocker (latest)
       artifactPrefix: extensions-browser-ads-blocker
+    secrets: inherit

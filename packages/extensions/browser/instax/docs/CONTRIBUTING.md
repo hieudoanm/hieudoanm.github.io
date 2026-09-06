@@ -21,13 +21,13 @@ Gecko browsers via both Manifest V2 and Manifest V3 builds.
 
 ## Development Commands
 
-| Task     | Command                                                        |
-| -------- | -------------------------------------------------------------- |
-| Build    | `pnpm build --filter=@hieudoanm.github.io/instax`              |
-| Lint     | `pnpm lint --filter=@hieudoanm.github.io/instax`               |
-| Format   | `pnpm format --filter=@hieudoanm.github.io/instax`             |
-| Web-ext  | `pnpm web-ext lint --source-dir dist/v3` (also `dist/v2`)      |
-| Clean    | `pnpm clean --filter=@hieudoanm.github.io/instax`              |
+| Task    | Command                                                   |
+| ------- | --------------------------------------------------------- |
+| Build   | `pnpm build --filter=@hieudoanm.github.io/instax`         |
+| Lint    | `pnpm lint --filter=@hieudoanm.github.io/instax`          |
+| Format  | `pnpm format --filter=@hieudoanm.github.io/instax`        |
+| Web-ext | `pnpm web-ext lint --source-dir dist/v3` (also `dist/v2`) |
+| Clean   | `pnpm clean --filter=@hieudoanm.github.io/instax`         |
 
 `pnpm build` runs clean → lint → format → webpack → `make build` (zip/xpi/crx).
 Run lint and format before pushing — CI enforces them.
