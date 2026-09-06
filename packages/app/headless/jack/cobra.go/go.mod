@@ -90,4 +90,4 @@ require (
 	rsc.io/qr v0.2.0
 )
 
-replace github.com/hieudoanm/api => ../../../modules/api/go
+replace github.com/hieudoanm/api => ../../../../modules/api/go
