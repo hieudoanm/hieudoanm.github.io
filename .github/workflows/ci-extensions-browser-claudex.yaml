@@ -1,0 +1,32 @@
+name: CI - Extensions - Browser - ClaudeX
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/extensions/browser/claudex/**'
+      - '.github/workflows/ci-extensions-browser-claudex.yaml'
+      - '.github/workflows/ci-extensions-browser-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-extensions-browser-claudex-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-extensions-browser-template.yaml
+    with:
+      package: packages/extensions/browser/claudex
+      filter: '@hieudoanm.github.io/claudex'
+      releaseName: extensions-browser-claudex-latest
+      releaseTitle: Extensions - Browser - ClaudeX (latest)
+      artifactPrefix: extensions-browser-claudex

@@ -36,7 +36,6 @@ src/
 │   ├── templates/      # Page-level layouts
 │   └── routes/         # Route-level components
 │       ├── apps/       # Mini-app portal (16 categories)
-│       ├── downloads/  # Downloads hub
 │       ├── games/      # Games
 │       ├── resume/     # Resume
 │       ├── settings/   # App settings
@@ -58,7 +57,7 @@ src/
 ┌─────────────────────────────────────────┐
 │  App Router (src/app/)                  │  (products) and (system) groups
 ├─────────────────────────────────────────┤
-│  Route components (routes/)             │  apps, downloads, games, resume
+│  Route components (routes/)             │  apps, games, resume
 ├─────────────────────────────────────────┤
 │  Templates (components/templates/)      │  Page-level layout shells
 ├─────────────────────────────────────────┤
@@ -74,16 +73,15 @@ src/
 
 ## Routing
 
-| Route        | Page      | Client | Description                        |
-| ------------ | --------- | ------ | ---------------------------------- |
-| `/`          | Start     | Yes    | Home / launch page                 |
-| `/apps`      | Apps      | Yes    | Mini-app portal with 16 categories |
-| `/games`     | Games     | Yes    | Games (e.g. chess)                 |
-| `/downloads` | Downloads | Yes    | Downloadable assets                |
-| `/resume`    | Resume    | Yes    | Resume display                     |
-| `/settings`  | Settings  | Yes    | App preferences                    |
-| `/version`   | Version   | Yes    | Build version, copy to clipboard   |
-| `*`          | Error     | -      | 404 / error boundaries             |
+| Route       | Page     | Client | Description                        |
+| ----------- | -------- | ------ | ---------------------------------- |
+| `/`         | Start    | Yes    | Home / launch page                 |
+| `/apps`     | Apps     | Yes    | Mini-app portal with 16 categories |
+| `/games`    | Games    | Yes    | Games (e.g. chess)                 |
+| `/resume`   | Resume   | Yes    | Resume display                     |
+| `/settings` | Settings | Yes    | App preferences                    |
+| `/version`  | Version  | Yes    | Build version, copy to clipboard   |
+| `*`         | Error    | -      | 404 / error boundaries             |
 
 Mini-apps live under the Apps portal and are indexed by category; each app is a
 self-contained route component in `routes/apps/<category>/<app>`.

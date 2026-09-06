@@ -12,6 +12,7 @@ import {
   PiClock,
   PiCodeSimple,
   PiCurrencyDollar,
+  PiCrown,
   PiDatabase,
   PiDiceOne,
   PiEye,
@@ -47,9 +48,11 @@ import {
   PiShoppingCart,
   PiShoppingBag,
   PiSoccerBall,
+  PiSparkle,
   PiTable,
   PiTabs,
   PiTerminal,
+  PiTerminalWindow,
   PiTimer,
   PiTrophy,
   PiUserCircle,
@@ -62,6 +65,7 @@ import {
 
 export const ICON_MAP: Record<string, IconType> = {
   PiTerminal,
+  PiTerminalWindow,
   PiCodeSimple,
   PiProhibit,
   PiGlobe,
@@ -70,6 +74,7 @@ export const ICON_MAP: Record<string, IconType> = {
   PiDiceOne,
   PiChat,
   PiAtom,
+  PiCrown,
   PiBeerStein,
   PiGameController,
   PiDatabase,
@@ -117,6 +122,7 @@ export const ICON_MAP: Record<string, IconType> = {
   PiCalendarBlank,
   PiShoppingBag,
   PiShieldCheck,
+  PiSparkle,
   PiReceipt,
 };
 

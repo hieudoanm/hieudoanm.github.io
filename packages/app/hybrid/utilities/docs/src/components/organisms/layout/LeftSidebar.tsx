@@ -3,14 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { type FC } from 'react';
-import {
-  PiGear,
-  PiHouse,
-  PiInfo,
-  PiPackage,
-  PiSquaresFour,
-  PiUser,
-} from 'react-icons/pi';
+import { PiGear, PiHouse, PiSquaresFour, PiUser } from 'react-icons/pi';
 
 const LINKS: {
   href: string;
@@ -19,10 +12,8 @@ const LINKS: {
 }[] = [
   { href: '/', label: 'Home', icon: PiHouse },
   { href: '/apps', label: 'Apps', icon: PiSquaresFour },
-  { href: '/downloads', label: 'Downloads', icon: PiPackage },
   { href: '/settings', label: 'Settings', icon: PiGear },
   { href: '/me', label: 'Me', icon: PiUser },
-  { href: '/version', label: 'Version', icon: PiInfo },
 ];
 
 export const LeftSidebar: FC = () => {

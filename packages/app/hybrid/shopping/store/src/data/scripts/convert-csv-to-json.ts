@@ -153,7 +153,7 @@ const toActions = (row: CsvRow): DownloadAction[] => {
 const toJson = (rows: CsvRow[]): DownloadSection[] => {
   const sections: DownloadSection[] = [];
   for (const row of rows) {
-    if (row.label === '' || row.href === '') continue;
+    if (row.label === '') continue;
     const section = sections.find((entry) => entry.id === row.sectionId);
     const item: DownloadItem = {
       label: row.label,

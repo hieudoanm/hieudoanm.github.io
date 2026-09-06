@@ -19,24 +19,22 @@
 | 1   | Block                               | [block/ads-browser][ads-browser]         |
 | 2   | Block                               | [block/sites][block-sites]               |
 | 3   | [Chess](https://chess.com)          | [chess/focus][chess-focus]               |
-| 4   | [Claude](https://claude.ai)         | [claude/limit][claude-limit]             |
+| 4   | [Claude](https://claude.ai)         | [claudex][claudex]                       |
 | 5   | [GitHub](https://github.com)        | [github/open-link][github-open-link]     |
 | 6   | [Instagram](https://instagram.com)  | [instagram/download][instagram-download] |
-| 7   | [Shopify](https://shopify.com)      | [shopify/detect][shopify-detect]         |
+| 7   | [Shopify](https://shopify.com)      | [shopifyx][shopifyx]                     |
 | 8   | Tab                                 | [new-tab][tab-new]                       |
 | 9   | Tab                                 | [tab/snapshot][tab-snapshot]             |
-| 10  | [Youtube](https://www.youtube.com/) | [youtube/transcript][youtube-transcript] |
 
 [ads-browser]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/ads-blocker
 [block-sites]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/block/sites
-[chess-focus]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/chess/focus
-[claude-limit]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/claude/limit
+[chess-focus]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/chessx
+[claudex]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/claudex
 [github-open-link]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/github/open-link
 [instagram-download]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/instagram/download
-[shopify-detect]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/shopify/detect
+[shopifyx]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/shopifyx
 [tab-new]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/new-tab
 [tab-snapshot]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/snapshot
-[youtube-transcript]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/youtube/transcript
 
 ## Browsers
 

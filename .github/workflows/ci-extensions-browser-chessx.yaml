@@ -1,0 +1,32 @@
+name: CI - Extensions - Browser - ChessX
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/extensions/browser/chessx/**'
+      - '.github/workflows/ci-extensions-browser-chessx.yaml'
+      - '.github/workflows/ci-extensions-browser-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-extensions-browser-chessx-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-extensions-browser-template.yaml
+    with:
+      package: packages/extensions/browser/chessx
+      filter: '@hieudoanm.github.io/chessx'
+      releaseName: extensions-browser-chessx-latest
+      releaseTitle: Extensions - Browser - ChessX (latest)
+      artifactPrefix: extensions-browser-chessx

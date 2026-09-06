@@ -6,7 +6,6 @@ import {
   PiCheckSquare,
   PiCurrencyDollar,
   PiGauge,
-  PiGlobeHemisphereWest,
   PiIdentificationCard,
 } from 'react-icons/pi';
 
@@ -48,7 +47,6 @@ const TABS: {
   { id: 'tasks', label: 'Tasks', icon: PiCheckSquare },
   { id: 'currency', label: 'Currency', icon: PiCurrencyDollar },
   { id: 'passport', label: 'Passport', icon: PiIdentificationCard },
-  { id: 'world-clock', label: 'World Clock', icon: PiGlobeHemisphereWest },
 ];
 
 export const RightSidebar: FC = () => {

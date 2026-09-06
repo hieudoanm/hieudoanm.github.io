@@ -3,7 +3,6 @@ import '@hieudoanm.github.io/styles/globals.css';
 import { Metadata } from 'next';
 import { Be_Vietnam_Pro } from 'next/font/google';
 import { FC, ReactNode } from 'react';
-import { Header } from '@/components/organisms/Header';
 
 const beVietnamPro = Be_Vietnam_Pro({
   weight: ['300', '400', '500', '600', '700', '800', '900'],
@@ -26,7 +25,6 @@ const RootLayout: FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <html lang="en" data-theme="nothing">
       <body className={beVietnamPro.className + ' antialiased'}>
-        <Header />
         <RootLayoutClient>{children}</RootLayoutClient>
       </body>
     </html>

@@ -6,7 +6,6 @@ import { FiMoon, FiSun } from 'react-icons/fi';
 
 const NAV_LINKS = [
   { href: '/about', label: 'About' },
-  { href: '/downloads', label: 'Downloads' },
   { href: '/version', label: 'Version' },
 ] as const;
 

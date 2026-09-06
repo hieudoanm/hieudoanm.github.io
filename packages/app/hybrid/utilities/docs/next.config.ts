@@ -11,20 +11,6 @@ const nextConfig: NextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
-  redirects() {
-    return [
-      {
-        source: '/foss',
-        destination: '/downloads',
-        permanent: true,
-      },
-      {
-        source: '/free',
-        destination: '/downloads',
-        permanent: true,
-      },
-    ];
-  },
   turbopack: {
     rules: {
       '*.md': {

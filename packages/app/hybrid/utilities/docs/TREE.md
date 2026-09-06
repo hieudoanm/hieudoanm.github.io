@@ -197,8 +197,6 @@
 │   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/visualization/legislation/page.tsx)
 │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/visualization/page.tsx)
 │   │   │   │   └── [page.tsx](./src/app/(products)/apps/page.tsx)
-│   │   │   └── downloads/
-│   │   │       └── [page.tsx](./src/app/(products)/downloads/page.tsx)
 │   │   ├── (system)/
 │   │   │   ├── me/
 │   │   │   │   └── [page.tsx](./src/app/(system)/me/page.tsx)
@@ -1936,14 +1934,6 @@
 │   │   │   │   │       └── [Legislation.test.tsx](./src/components/routes/apps/visualization/__tests__/Legislation.test.tsx)
 │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/AGENTS.md)
 │   │   │   │   └── [index.tsx](./src/components/routes/apps/index.tsx)
-│   │   │   ├── downloads/
-│   │   │   │   ├── data/
-│   │   │   │   │   ├── scripts/
-│   │   │   │   │   │   └── [convert-csv-to-json.ts](./src/components/routes/downloads/data/scripts/convert-csv-to-json.ts)
-│   │   │   │   │   ├── [downloads.csv](./src/components/routes/downloads/data/downloads.csv)
-│   │   │   │   │   ├── [downloads.json](./src/components/routes/downloads/data/downloads.json)
-│   │   │   │   │   └── [downloads.ts](./src/components/routes/downloads/data/downloads.ts)
-│   │   │   │   └── [index.tsx](./src/components/routes/downloads/index.tsx)
 │   │   │   ├── resume/
 │   │   │   │   ├── [Sections.tsx](./src/components/routes/resume/Sections.tsx)
 │   │   │   │   ├── [data.ts](./src/components/routes/resume/data.ts)

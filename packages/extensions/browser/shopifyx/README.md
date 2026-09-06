@@ -1,0 +1,1 @@
+# ShopifyX - Shopify Extension
