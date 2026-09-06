@@ -1,8 +1,6 @@
 'use client';
 
-import Link from 'next/link';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { LuRedo, LuRotateCcw, LuUndo } from 'react-icons/lu';
 import { DataPanel } from '../components/resume/data/DataPanel';
 import { EditorPanel } from '../components/resume/editor/EditorPanel';
 import { PreviewPanel } from '../components/resume/preview/PreviewPanel';
@@ -94,41 +92,6 @@ const HomePage = () => {
 
   return (
     <div className="flex h-screen flex-col">
-      <header className="navbar bg-base-100 border-base-300 border-b px-4">
-        <div className="flex-1">
-          <Link
-            href="/"
-            className="btn btn-ghost btn-sm text-sm font-black tracking-tight">
-            Open Resume
-          </Link>
-        </div>
-        <div className="flex-none gap-1">
-          <button
-            type="button"
-            className="btn btn-ghost btn-sm"
-            aria-label="Undo"
-            disabled={!canUndo}
-            onClick={undo}>
-            <LuUndo />
-          </button>
-          <button
-            type="button"
-            className="btn btn-ghost btn-sm"
-            aria-label="Redo"
-            disabled={!canRedo}
-            onClick={redo}>
-            <LuRedo />
-          </button>
-          <button
-            type="button"
-            className="btn btn-ghost btn-sm"
-            onClick={resetData}>
-            <LuRotateCcw />
-            Reset
-          </button>
-        </div>
-      </header>
-
       <div className="flex min-h-0 flex-1 flex-col lg:flex-row">
         <aside className="bg-base-100 border-base-300 flex min-h-0 flex-col lg:w-[400px] lg:border-r">
           <ProfileSwitcher
@@ -204,6 +167,11 @@ const HomePage = () => {
             options={options}
             onPaperChange={setPaperId}
             onOptionsChange={setOptions}
+            canUndo={canUndo}
+            canRedo={canRedo}
+            onUndo={undo}
+            onRedo={redo}
+            onReset={resetData}
           />
         </main>
       </div>

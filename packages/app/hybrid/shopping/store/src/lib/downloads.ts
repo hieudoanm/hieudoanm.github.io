@@ -61,6 +61,14 @@ const parseSlug = (label: string): string =>
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-|-$/g, '');
 
+const slugFromUrl = (url: string): string | undefined => {
+  const match = url.match(/\/free\/([^/]+)\/?$/);
+  return match ? match[1] : undefined;
+};
+
+const parseSlugFromItem = (label: string, href: string): string =>
+  slugFromUrl(href) ?? parseSlug(label);
+
 export const getDownloadFormat = (download: DownloadOption): string => {
   const match = download.url.match(/\.([a-z0-9]+)(?:$|\?)/i);
   return match ? match[1].toLowerCase() : 'other';
@@ -121,7 +129,7 @@ export const parseDownloads = (sections: RawSection[]): AppData[] => {
             : 'extension';
 
       apps.push({
-        slug: parseSlug(item.label),
+        slug: parseSlugFromItem(item.label, item.href),
         label: item.label,
         primaryCategory: item.primaryCategory,
         secondaryCategory: item.secondaryCategory,

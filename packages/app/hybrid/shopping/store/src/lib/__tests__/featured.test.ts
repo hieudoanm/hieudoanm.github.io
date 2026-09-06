@@ -19,7 +19,8 @@ const makeApp = (slug: string): AppData => ({
 
 describe('isFeatured', () => {
   it('returns true for featured slugs', () => {
-    expect(isFeatured(makeApp('chess'))).toBe(true);
+    expect(isFeatured(makeApp('api'))).toBe(true);
+    expect(isFeatured(makeApp('resume'))).toBe(true);
   });
 
   it('returns false for non-featured slugs', () => {

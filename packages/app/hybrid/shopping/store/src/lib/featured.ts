@@ -1,12 +1,12 @@
 import type { AppData } from './downloads';
 
 export const FEATURED_SLUGS = [
-  '8-bit',
-  'chess',
-  'calendar',
-  'clock',
-  'csv',
+  'api',
+  'code',
   'database',
+  'diagram',
+  'markdown',
+  'resume',
 ];
 
 export const isFeatured = (app: AppData): boolean =>

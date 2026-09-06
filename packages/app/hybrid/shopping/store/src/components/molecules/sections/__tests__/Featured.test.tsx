@@ -38,25 +38,97 @@ const makeApp = (slug: string): AppData => ({
 
 describe('Featured', () => {
   it('returns nothing for no apps', () => {
-    render(<Featured apps={[]} platform="macos" />);
+    render(
+      <Featured
+        apps={[]}
+        platform="macos"
+        viewMode="grid"
+        isFavorite={() => false}
+      />
+    );
     expect(screen.queryByText('Featured')).toBeNull();
   });
 
   it('renders the section heading', () => {
-    render(<Featured apps={[makeApp('chess')]} platform="macos" />);
+    render(
+      <Featured
+        apps={[makeApp('chess')]}
+        platform="macos"
+        viewMode="grid"
+        isFavorite={() => false}
+      />
+    );
     expect(screen.getByText('Featured')).toBeTruthy();
   });
 
-  it('renders a card per app', () => {
+  it('renders a card per app in grid view', () => {
     render(
-      <Featured apps={[makeApp('chess'), makeApp('clock')]} platform="macos" />
+      <Featured
+        apps={[makeApp('chess'), makeApp('clock')]}
+        platform="macos"
+        viewMode="grid"
+        isFavorite={() => false}
+      />
     );
     expect(screen.getByText('Chess')).toBeTruthy();
     expect(screen.getByText('Clock')).toBeTruthy();
   });
 
-  it('renders recommended download buttons', () => {
-    render(<Featured apps={[makeApp('chess')]} platform="macos" />);
+  it('renders recommended download buttons in grid view', () => {
+    render(
+      <Featured
+        apps={[makeApp('chess')]}
+        platform="macos"
+        viewMode="grid"
+        isFavorite={() => false}
+      />
+    );
     expect(screen.getAllByText('.dmg').length).toBeGreaterThan(0);
+  });
+
+  it('renders gallery view with home screenshots', () => {
+    render(
+      <Featured
+        apps={[makeApp('chess')]}
+        platform="macos"
+        viewMode="gallery"
+        isFavorite={() => false}
+      />
+    );
+    const img = screen.getByAltText('Chess home screenshot');
+    expect(img).toBeTruthy();
+    expect(img).toHaveAttribute(
+      'src',
+      expect.stringContaining('/screenshots/chess/home.png')
+    );
+    expect(screen.getByRole('link', { name: /Chess/ })).toHaveAttribute(
+      'href',
+      expect.stringContaining('/app/chess')
+    );
+  });
+
+  it('renders list view', () => {
+    render(
+      <Featured
+        apps={[makeApp('chess')]}
+        platform="macos"
+        viewMode="list"
+        isFavorite={() => false}
+      />
+    );
+    expect(screen.getByText('Chess')).toBeTruthy();
+    expect(screen.queryByAltText('Chess home screenshot')).toBeNull();
+  });
+
+  it('shows filled heart for favorites in list view', () => {
+    render(
+      <Featured
+        apps={[makeApp('chess')]}
+        platform="macos"
+        viewMode="list"
+        isFavorite={() => true}
+      />
+    );
+    expect(screen.getByText('\u2665')).toBeTruthy();
   });
 });

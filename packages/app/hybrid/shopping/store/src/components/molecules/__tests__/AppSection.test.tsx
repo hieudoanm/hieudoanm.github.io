@@ -47,6 +47,54 @@ describe('AppSection', () => {
     expect(screen.getByText('Test App')).toBeTruthy();
   });
 
+  it('renders gallery view with home screenshot', () => {
+    render(
+      <AppSection
+        sectionKey="hybrid"
+        apps={mockApps}
+        platform="macos"
+        viewMode="gallery"
+        isFavorite={() => false}
+      />
+    );
+    const img = screen.getByAltText('Test App home screenshot');
+    expect(img).toBeTruthy();
+    expect(img).toHaveAttribute(
+      'src',
+      expect.stringContaining('/screenshots/test/home.png')
+    );
+    expect(screen.getByRole('link', { name: /Test App/ })).toHaveAttribute(
+      'href',
+      expect.stringContaining('/app/test')
+    );
+  });
+
+  it('shows filled heart for favorites in gallery view', () => {
+    render(
+      <AppSection
+        sectionKey="hybrid"
+        apps={mockApps}
+        platform="macos"
+        viewMode="gallery"
+        isFavorite={() => true}
+      />
+    );
+    expect(screen.getByText('\u2665')).toBeTruthy();
+  });
+
+  it('shows empty heart for non-favorites in gallery view', () => {
+    render(
+      <AppSection
+        sectionKey="hybrid"
+        apps={mockApps}
+        platform="macos"
+        viewMode="gallery"
+        isFavorite={() => false}
+      />
+    );
+    expect(screen.getByText('\u2661')).toBeTruthy();
+  });
+
   it('renders list view', () => {
     render(
       <AppSection

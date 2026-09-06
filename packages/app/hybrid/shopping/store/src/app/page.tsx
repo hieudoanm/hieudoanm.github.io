@@ -33,7 +33,7 @@ const formatToday = (): string =>
 const HomePage = () => {
   const [today, setToday] = useState('');
   const [platform, setPlatform] = useState<Platform>('unknown');
-  const { favorites, isFavorite } = useFavorites();
+  const { isFavorite } = useFavorites();
   const { slugs: recentSlugs } = useRecentlyViewed();
   const {
     history: searchHistory,
@@ -182,11 +182,22 @@ const HomePage = () => {
         )}
 
         {!hasFilters && featuredApps.length > 0 && (
-          <Featured apps={featuredApps} platform={platform} />
+          <Featured
+            apps={featuredApps}
+            platform={platform}
+            viewMode={viewMode}
+            isFavorite={isFavorite}
+            highlightQuery={deferredQuery}
+          />
         )}
 
         {!hasFilters && recentApps.length > 0 && (
-          <RecentlyViewed apps={recentApps} />
+          <RecentlyViewed
+            apps={recentApps}
+            viewMode={viewMode}
+            isFavorite={isFavorite}
+            highlightQuery={deferredQuery}
+          />
         )}
 
         <div className="flex w-full max-w-3xl flex-col gap-10">

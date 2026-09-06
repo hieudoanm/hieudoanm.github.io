@@ -19,6 +19,11 @@ const renderToolbar = (overrides: Partial<ToolbarProps> = {}) => {
     onZoomChange: jest.fn(),
     onDownload: jest.fn(),
     onPrint: jest.fn(),
+    canUndo: false,
+    canRedo: false,
+    onUndo: jest.fn(),
+    onRedo: jest.fn(),
+    onReset: jest.fn(),
     ...overrides,
   };
   render(<PreviewToolbar {...props} />);
@@ -87,5 +92,33 @@ describe('PreviewToolbar', () => {
     expect(props.onDownload).toHaveBeenCalled();
     fireEvent.click(screen.getByRole('button', { name: /print \/ pdf/i }));
     expect(props.onPrint).toHaveBeenCalled();
+  });
+
+  it('disables undo when canUndo is false', () => {
+    renderToolbar({ canUndo: false });
+    expect(screen.getByLabelText('Undo')).toBeDisabled();
+  });
+
+  it('enables undo when canUndo is true', () => {
+    const props = renderToolbar({ canUndo: true });
+    fireEvent.click(screen.getByLabelText('Undo'));
+    expect(props.onUndo).toHaveBeenCalled();
+  });
+
+  it('disables redo when canRedo is false', () => {
+    renderToolbar({ canRedo: false });
+    expect(screen.getByLabelText('Redo')).toBeDisabled();
+  });
+
+  it('enables redo when canRedo is true', () => {
+    const props = renderToolbar({ canRedo: true });
+    fireEvent.click(screen.getByLabelText('Redo'));
+    expect(props.onRedo).toHaveBeenCalled();
+  });
+
+  it('triggers the reset handler', () => {
+    const props = renderToolbar();
+    fireEvent.click(screen.getByRole('button', { name: /^reset$/i }));
+    expect(props.onReset).toHaveBeenCalled();
   });
 });

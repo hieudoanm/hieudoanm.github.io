@@ -36,13 +36,13 @@ describe('WebVersion', () => {
   });
 
   it.each(['android', 'macos', 'headless', 'extension'] as const)(
-    'does not render the web version link for %s apps',
+    'renders the web version link for %s apps',
     (section) => {
       render(<WebVersion app={{ ...mockApp, section }} />);
-      expect(screen.queryByText('Web Version')).toBeNull();
+      expect(screen.getByText('Web Version')).toBeInTheDocument();
       expect(
-        screen.queryByRole('link', { name: /Open in Browser/ })
-      ).toBeNull();
+        screen.getByRole('link', { name: /Open in Browser/ })
+      ).toBeInTheDocument();
     }
   );
 });

@@ -7,25 +7,13 @@ import {
 } from '@testing-library/react';
 import HomePage from '../page';
 
-jest.mock('next/link', () => {
-  const Link = ({
-    children,
-    href,
-  }: {
-    children: React.ReactNode;
-    href: string;
-  }) => <a href={href}>{children}</a>;
-  return Link;
-});
-
 describe('HomePage', () => {
   beforeEach(() => {
     localStorage.clear();
   });
 
-  it('renders the builder header and preview', () => {
+  it('renders the builder and preview', () => {
     render(<HomePage />);
-    expect(screen.getByText('Open Resume')).toBeInTheDocument();
     expect(screen.getByLabelText('Paper size')).toBeInTheDocument();
     expect(screen.getByText('John Smith')).toBeInTheDocument();
   });

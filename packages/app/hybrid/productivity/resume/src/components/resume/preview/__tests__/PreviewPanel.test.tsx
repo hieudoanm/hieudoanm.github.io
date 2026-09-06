@@ -14,6 +14,11 @@ const renderPanel = (
       options={DEFAULT_RESUME_OPTIONS}
       onPaperChange={jest.fn()}
       onOptionsChange={jest.fn()}
+      canUndo={false}
+      canRedo={false}
+      onUndo={jest.fn()}
+      onRedo={jest.fn()}
+      onReset={jest.fn()}
       {...overrides}
     />
   );

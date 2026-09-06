@@ -1,5 +1,5 @@
 import type { AppData } from '../downloads';
-import { getAppScreenshots } from '../screenshots';
+import { getAppScreenshots, getHomeScreenshotUrl } from '../screenshots';
 
 const mockApp: AppData = {
   slug: 'chess',
@@ -43,5 +43,19 @@ describe('getAppScreenshots', () => {
     const [uri] = getAppScreenshots(app);
     const decoded = decodeURIComponent(uri);
     expect(decoded).toContain('A&amp;B &lt;App&gt;');
+  });
+});
+
+describe('getHomeScreenshotUrl', () => {
+  it('returns the home screenshot URL for a slug', () => {
+    expect(getHomeScreenshotUrl('chess')).toMatch(
+      /screenshots\/chess\/home\.png$/
+    );
+  });
+
+  it('preserves slugs with dashes', () => {
+    expect(getHomeScreenshotUrl('tic-tac-toe')).toMatch(
+      /screenshots\/tic-tac-toe\/home\.png$/
+    );
   });
 });

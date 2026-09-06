@@ -18,6 +18,11 @@ interface PreviewPanelProps {
   options: ResumeOptions;
   onPaperChange: (id: string) => void;
   onOptionsChange: (options: ResumeOptions) => void;
+  canUndo: boolean;
+  canRedo: boolean;
+  onUndo: () => void;
+  onRedo: () => void;
+  onReset: () => void;
 }
 
 export const PreviewPanel: FC<PreviewPanelProps> = ({
@@ -27,6 +32,11 @@ export const PreviewPanel: FC<PreviewPanelProps> = ({
   options,
   onPaperChange,
   onOptionsChange,
+  canUndo,
+  canRedo,
+  onUndo,
+  onRedo,
+  onReset,
 }) => {
   const paper = getPaperSize(paperId);
   const pxWidth = mmToPx(paper.widthMm);
@@ -63,6 +73,11 @@ export const PreviewPanel: FC<PreviewPanelProps> = ({
         onZoomChange={setZoom}
         onDownload={handleDownloadHtml}
         onPrint={() => printResume(paper.widthMm, paper.heightMm)}
+        canUndo={canUndo}
+        canRedo={canRedo}
+        onUndo={onUndo}
+        onRedo={onRedo}
+        onReset={onReset}
       />
       <PreviewStage
         containerRef={containerRef}

@@ -337,6 +337,30 @@ describe('parseDownloads', () => {
     expect(apps[0].slug).toBe('my-app');
   });
 
+  it('prefers the href slug over the label slug', () => {
+    const sections: RawSection[] = [
+      {
+        id: 'headless',
+        label: 'Headless',
+        items: [
+          {
+            label: 'J.A.C.K.',
+            primaryCategory: 'Developer Tools',
+            secondaryCategory: 'Tooling',
+            icon: 'PiTerminalWindow',
+            href: 'https://hieudoanm.github.io/free/jack/',
+            version: '',
+            lastUpdated: '',
+            fileSize: '',
+            actions: [],
+          },
+        ],
+      },
+    ];
+    const apps = parseDownloads(sections);
+    expect(apps[0].slug).toBe('jack');
+  });
+
   it('parses real-world label format', () => {
     const sections: RawSection[] = [
       {

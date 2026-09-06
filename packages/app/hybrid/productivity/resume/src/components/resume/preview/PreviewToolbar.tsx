@@ -1,7 +1,14 @@
 'use client';
 
 import type { FC, ReactNode } from 'react';
-import { LuFileDown, LuPrinter, LuTriangleAlert } from 'react-icons/lu';
+import {
+  LuFileDown,
+  LuPrinter,
+  LuRedo,
+  LuRotateCcw,
+  LuTriangleAlert,
+  LuUndo,
+} from 'react-icons/lu';
 import { PAPER_SIZES } from '../../../data/paper';
 import type { ResumeOptions } from '../../../types/resume';
 import { DENSITY_ZOOM, RESUME_DENSITIES } from '../../../types/resume';
@@ -22,6 +29,11 @@ interface PreviewToolbarProps {
   onZoomChange: (zoom: number) => void;
   onDownload: () => void;
   onPrint: () => void;
+  canUndo: boolean;
+  canRedo: boolean;
+  onUndo: () => void;
+  onRedo: () => void;
+  onReset: () => void;
 }
 
 const GroupLabel: FC<{ children: ReactNode }> = ({ children }) => (
@@ -44,6 +56,11 @@ export const PreviewToolbar: FC<PreviewToolbarProps> = ({
   onZoomChange,
   onDownload,
   onPrint,
+  canUndo,
+  canRedo,
+  onUndo,
+  onRedo,
+  onReset,
 }) => {
   const advice = onePageAdvice(overflows, words);
 
@@ -106,6 +123,30 @@ export const PreviewToolbar: FC<PreviewToolbarProps> = ({
         <ZoomControls scale={scale} zoom={zoom} onZoomChange={onZoomChange} />
 
         <div className="ml-auto flex items-center gap-2">
+          <button
+            type="button"
+            className="btn btn-ghost btn-sm"
+            aria-label="Undo"
+            disabled={!canUndo}
+            onClick={onUndo}>
+            <LuUndo />
+          </button>
+          <button
+            type="button"
+            className="btn btn-ghost btn-sm"
+            aria-label="Redo"
+            disabled={!canRedo}
+            onClick={onRedo}>
+            <LuRedo />
+          </button>
+          <button
+            type="button"
+            className="btn btn-ghost btn-sm"
+            onClick={onReset}>
+            <LuRotateCcw />
+            Reset
+          </button>
+          <div className="border-base-300 mx-1 h-5 w-px" aria-hidden="true" />
           <button
             type="button"
             className="btn btn-neutral btn-sm"

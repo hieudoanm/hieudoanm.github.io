@@ -1,7 +1,13 @@
 'use client';
 
 import { type FC } from 'react';
-import { PiGridFour, PiList, PiArrowUp, PiArrowDown } from 'react-icons/pi';
+import {
+  PiArrowUp,
+  PiArrowDown,
+  PiGridFour,
+  PiImageSquare,
+  PiList,
+} from 'react-icons/pi';
 import type { SortKey, ViewMode } from '@/lib/types';
 
 interface SortBarProps {
@@ -51,13 +57,24 @@ export const SortBar: FC<SortBarProps> = ({
       <div className="flex items-center gap-1">
         <button
           type="button"
+          onClick={() => setViewMode('gallery')}
+          aria-label="Gallery view"
+          className={`btn btn-ghost btn-xs ${
+            viewMode === 'gallery' ? 'btn-active' : ''
+          }`}>
+          <PiImageSquare />
+        </button>
+        <button
+          type="button"
           onClick={() => setViewMode('grid')}
+          aria-label="Grid view"
           className={`btn btn-ghost btn-xs ${viewMode === 'grid' ? 'btn-active' : ''}`}>
           <PiGridFour />
         </button>
         <button
           type="button"
           onClick={() => setViewMode('list')}
+          aria-label="List view"
           className={`btn btn-ghost btn-xs ${viewMode === 'list' ? 'btn-active' : ''}`}>
           <PiList />
         </button>

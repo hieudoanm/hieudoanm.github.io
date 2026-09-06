@@ -1,5 +1,13 @@
 import type { AppData } from './downloads';
 
+export const SCREENSHOT_BASE_URL =
+  process.env.NODE_ENV === 'development'
+    ? 'http://localhost:3000/screenshots'
+    : 'https://hieudoanm.github.io/free/store/screenshots';
+
+export const getHomeScreenshotUrl = (slug: string): string =>
+  `${SCREENSHOT_BASE_URL}/${slug}/home.png`;
+
 const WIDTH = 640;
 const HEIGHT = 400;
 
