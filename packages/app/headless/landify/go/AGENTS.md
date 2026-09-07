@@ -19,17 +19,18 @@ and `make test` passes.
 
 ## Layout
 
-- `static/` — input assets embedded at build time: `template-<type>.tmpl`
-  (one page template per landing-page type), `partials/` (shared blocks:
-  `base-css`, `header`, `footer`), and `example.yaml` (annotated placeholder
-  written by `landify new`)
+- `static/` — input assets embedded at build time: `templates/` (one
+  `template-<type>.tmpl` page template per landing-page type), `partials/`
+  (shared blocks: `base-css`, `header`, `footer`), and `examples/` (one
+  annotated `example-<type>.yaml` placeholder per page type, written by
+  `landify new -t <type>`)
 - `internal/landify/` — config schema, strict parsing, validation, rendering
 - `cmd/` — cobra command wiring
 
 ## Content rules
 
-- `landify.yaml` feeds a `static/template-<type>.tmpl` via `html/template`;
-  unknown YAML fields are parse errors (strict decoding via
+- `landify.yaml` feeds a `static/templates/template-<type>.tmpl` via
+  `html/template`; unknown YAML fields are parse errors (strict decoding via
   `KnownFields(true)`). The `theme` section takes only the eight base colors +
   `radius`; all other `:root` tokens are derived (shades, tints, WCAG contrast)
   in `internal/landify/color.go`.
@@ -40,10 +41,15 @@ and `make test` passes.
   (version/license badges, per-OS download buttons, install snippet), `app`
   (store badges, ratings, portrait screenshot gallery), `pricing` (tier cards
   with a tagged "most popular" plan), `portfolio` (avatar, skills chips,
-  project grid), and `docs` (topic card links, code sample). Required fields
-  are per-type and enforced in `internal/landify/validate.go`
-  (`KnownTypes()`). Only `product` requires `hero.image.src` and
-  `demo.video.src`; all media shares the 1280 × 720 (16:9) frame.
+  project grid), `docs` (topic card links, code sample), `faq` (native
+  `<details>` question/answer rows, no JavaScript), `team` (values strip and
+  member card grid), `status` (state banner colored by
+  `status.state`, uptime stats, incident log), and `linktree` (compact profile
+  with big link cards and social pills — the only layout without a hero
+  section). Required fields are per-type and enforced in
+  `internal/landify/validate.go` (`KnownTypes()`). Only `product` requires
+  `hero.image.src` and `demo.video.src`; all media shares the 1280 × 720
+  (16:9) frame.
 - `Render` selects the template by type, falling back to `product` for
   unknown types (validation is what rejects them); the `@LANDIFY_THEME@` slot
   inside each template's `<style>` is spliced by build.go after execution.
@@ -59,7 +65,8 @@ and `make test` passes.
 
 ## CLI
 
-- `landify new` — create `landify.yaml`; refuses to overwrite without `-F`
+- `landify new -t <type>` — create `landify.yaml` from the annotated example
+  of the given page type (default `product`); refuses to overwrite without `-F`
 - `landify validate -f <file>` — schema check, exits 1 listing every problem
 - `landify build -f <file> -o <output> --theme <name>` — render and write the
   page; `--theme` replaces the YAML `theme:` section with a built-in preset

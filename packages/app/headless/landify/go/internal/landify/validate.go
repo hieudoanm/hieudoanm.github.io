@@ -7,7 +7,7 @@ import (
 
 // KnownTypes returns the supported page types in alphabetical order.
 func KnownTypes() []string {
-	return []string{"app", "docs", "download", "event", "portfolio", "pricing", "product", "waitlist"}
+	return []string{"app", "docs", "download", "event", "faq", "linktree", "portfolio", "pricing", "product", "status", "team", "waitlist"}
 }
 
 // NormalizeType returns cfg.Type canonicalized: empty maps to the default
@@ -152,6 +152,68 @@ func Errors(cfg *Config) []string {
 			require(p.Title, fmt.Sprintf("portfolio.projects[%d].title", i))
 			require(p.Body, fmt.Sprintf("portfolio.projects[%d].body", i))
 			require(p.Href, fmt.Sprintf("portfolio.projects[%d].href", i))
+		}
+	case "faq":
+		require(cfg.Hero.Headline, "hero.headline")
+		require(cfg.Hero.Subheadline, "hero.subheadline")
+		if len(cfg.FAQ.Items) == 0 {
+			add("faq.items must contain at least one item")
+		}
+		for i, item := range cfg.FAQ.Items {
+			require(item.Question, fmt.Sprintf("faq.items[%d].question", i))
+			require(item.Answer, fmt.Sprintf("faq.items[%d].answer", i))
+		}
+	case "team":
+		require(cfg.Hero.Headline, "hero.headline")
+		require(cfg.Hero.Subheadline, "hero.subheadline")
+		if len(cfg.Team.Members) == 0 {
+			add("team.members must contain at least one member")
+		}
+		for i, m := range cfg.Team.Members {
+			require(m.Name, fmt.Sprintf("team.members[%d].name", i))
+			require(m.Role, fmt.Sprintf("team.members[%d].role", i))
+		}
+		for i, v := range cfg.Team.Values {
+			require(v.Title, fmt.Sprintf("team.values[%d].title", i))
+			require(v.Body, fmt.Sprintf("team.values[%d].body", i))
+		}
+	case "status":
+		require(cfg.Hero.Headline, "hero.headline")
+		require(cfg.Hero.Subheadline, "hero.subheadline")
+		require(cfg.Status.State, "status.state")
+		if cfg.Status.State != "" {
+			switch cfg.Status.State {
+			case "operational", "degraded", "outage", "maintenance":
+			default:
+				add("status.state must be one of operational | degraded | outage | maintenance")
+			}
+		}
+		for i, s := range cfg.Status.Stats {
+			require(s.Label, fmt.Sprintf("status.stats[%d].label", i))
+			require(s.Value, fmt.Sprintf("status.stats[%d].value", i))
+		}
+		for i, t := range cfg.Status.Incidents {
+			require(t.Date, fmt.Sprintf("status.incidents[%d].date", i))
+			require(t.Title, fmt.Sprintf("status.incidents[%d].title", i))
+			if t.State != "" {
+				switch t.State {
+				case "investigating", "monitoring", "resolved":
+				default:
+					add("status.incidents[%d].state must be one of investigating | monitoring | resolved", i)
+				}
+			}
+		}
+	case "linktree":
+		if len(cfg.Linktree.Cards) == 0 {
+			add("linktree.cards must contain at least one card")
+		}
+		for i, c := range cfg.Linktree.Cards {
+			require(c.Title, fmt.Sprintf("linktree.cards[%d].title", i))
+			require(c.Href, fmt.Sprintf("linktree.cards[%d].href", i))
+		}
+		for i, s := range cfg.Linktree.Social {
+			require(s.Label, fmt.Sprintf("linktree.social[%d].label", i))
+			require(s.Href, fmt.Sprintf("linktree.social[%d].href", i))
 		}
 	case "pricing":
 		require(cfg.Hero.Headline, "hero.headline")

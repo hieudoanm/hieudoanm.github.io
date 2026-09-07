@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{{.Site.Description}}" />
+    <title>{{.Site.Name}}</title>
+    <style>
+      :root {
+@LANDIFY_THEME@      }
+{{template "base-css" .}}
+      .values {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+      .value {
+        background: var(--base-200);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+        padding: 24px;
+        text-align: center;
+      }
+      .value .icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        font-size: 22px;
+        border-radius: var(--radius);
+        background: var(--primary-soft);
+        border: 1px solid var(--border-soft);
+      }
+      .value h3 {
+        margin: 14px 0 8px;
+        font-size: 16px;
+        font-weight: 700;
+      }
+      .value p {
+        margin: 0;
+        font-size: 13.5px;
+        color: var(--neutral);
+      }
+      .members {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 16px;
+      }
+      .member {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background: var(--base-200);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+        padding: 28px 22px;
+      }
+      .member .avatar {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        font-size: 30px;
+        line-height: 1;
+        background: var(--primary-soft);
+        border: 2px solid var(--border-soft);
+      }
+      .member h3 {
+        margin: 16px 0 2px;
+        font-size: 17px;
+        font-weight: 700;
+      }
+      .member .role {
+        margin: 0;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--primary-dark);
+      }
+      .member .bio {
+        margin: 10px 0 0;
+        font-size: 13.5px;
+        color: var(--neutral);
+      }
+      @media (max-width: 900px) {
+        .values {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    {{template "header" .}}
+
+    <main id="top">
+      <section class="hero">
+        <div>
+          {{if .Hero.Badge}}<span class="badge">{{.Hero.Badge}}</span>{{end}}
+          <h1>{{.Hero.Headline}}</h1>
+          <p class="lead">{{.Hero.Subheadline}}</p>
+        </div>
+      </section>
+
+      {{if .Team.Values}}
+      <section id="values" class="block">
+        {{if or .Features.Heading .Features.Sub}}
+        <div class="block-head">
+          <h2>{{.Features.Heading}}</h2>
+          {{if .Features.Sub}}<p class="sub">{{.Features.Sub}}</p>{{end}}
+        </div>
+        {{end}}
+        <div class="values">
+          {{range .Team.Values}}
+          <div class="value">
+            <span class="icon" aria-hidden="true">{{.Icon}}</span>
+            <h3>{{.Title}}</h3>
+            <p>{{.Body}}</p>
+          </div>
+          {{end}}
+        </div>
+      </section>
+      {{end}}
+
+      <section id="team" class="block">
+        {{if or .Team.Heading .Team.Sub}}
+        <div class="block-head">
+          <h2>{{.Team.Heading}}</h2>
+          {{if .Team.Sub}}<p class="sub">{{.Team.Sub}}</p>{{end}}
+        </div>
+        {{end}}
+        <div class="members">
+          {{range .Team.Members}}
+          <div class="member">
+            {{if .Avatar}}<span class="avatar" aria-hidden="true">{{.Avatar}}</span>{{end}}
+            <h3>{{.Name}}</h3>
+            <p class="role">{{.Role}}</p>
+            {{if .Bio}}<p class="bio">{{.Bio}}</p>{{end}}
+          </div>
+          {{end}}
+        </div>
+      </section>
+
+      {{if .CTA.Heading}}
+      <section id="cta" class="block">
+        <div class="cta">
+          <span class="icon" aria-hidden="true">{{.CTA.Icon}}</span>
+          <h2>{{.CTA.Heading}}</h2>
+          <p>{{.CTA.Body}}</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="{{.CTA.Button.Href}}">{{.CTA.Button.Label}}</a>
+          </div>
+        </div>
+      </section>
+      {{end}}
+
+      {{template "footer" .}}
+    </main>
+  </body>
+</html>

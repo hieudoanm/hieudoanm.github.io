@@ -22,16 +22,20 @@ The top-level `type:` field selects the page layout (`product` is the
 default); each type has its own required fields, checked by
 `landify validate`.
 
-| No. | Screenshot                                                                              | Type        | Layout                                                                               |
-| --- | --------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------ |
-| 1   | ![product](/packages/app/headless/landify/examples/templates/product/product.png)       | `product`   | Original: centered hero, feature grid, demo video, closing CTA.                      |
-| 2   | ![waitlist](/packages/app/headless/landify/examples/templates/waitlist/waitlist.png)    | `waitlist`  | Email-capture panel with launch date and social links (no video needed).             |
-| 3   | ![event](/packages/app/headless/landify/examples/templates/event/event.png)             | `event`     | Date/venue strip, agenda timeline, speaker grid, tickets button.                     |
-| 4   | ![download](/packages/app/headless/landify/examples/templates/download/download.png)    | `download`  | Version/license badges, per-OS download buttons, install snippet, feature grid, CTA. |
-| 5   | ![app](/packages/app/headless/landify/examples/templates/app/app.png)                   | `app`       | Store badges, ratings line, portrait screenshot gallery, feature grid.               |
-| 6   | ![pricing](/packages/app/headless/landify/examples/templates/pricing/pricing.png)       | `pricing`   | Tier cards with a tagged "most popular" plan, perks lists, footnote.                 |
-| 7   | ![portfolio](/packages/app/headless/landify/examples/templates/portfolio/portfolio.png) | `portfolio` | Avatar, role and location chips, skills, project card grid, contact CTA.             |
-| 8   | ![docs](/packages/app/headless/landify/examples/templates/docs/docs.png)                | `docs`      | Topic card links, optional code sample, hero actions.                                |
+| No. | Screenshot                                                                              | Type        | Layout                                                                                |
+| --- | --------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------- |
+| 1   | ![product](/packages/app/headless/landify/examples/templates/product/product.png)       | `product`   | Original: centered hero, feature grid, demo video, closing CTA.                       |
+| 2   | ![waitlist](/packages/app/headless/landify/examples/templates/waitlist/waitlist.png)    | `waitlist`  | Email-capture panel with launch date and social links (no video needed).              |
+| 3   | ![event](/packages/app/headless/landify/examples/templates/event/event.png)             | `event`     | Date/venue strip, agenda timeline, speaker grid, tickets button.                      |
+| 4   | ![download](/packages/app/headless/landify/examples/templates/download/download.png)    | `download`  | Version/license badges, per-OS download buttons, install snippet, feature grid, CTA.  |
+| 5   | ![app](/packages/app/headless/landify/examples/templates/app/app.png)                   | `app`       | Store badges, ratings line, portrait screenshot gallery, feature grid.                |
+| 6   | ![pricing](/packages/app/headless/landify/examples/templates/pricing/pricing.png)       | `pricing`   | Tier cards with a tagged "most popular" plan, perks lists, footnote.                  |
+| 7   | ![portfolio](/packages/app/headless/landify/examples/templates/portfolio/portfolio.png) | `portfolio` | Avatar, role and location chips, skills, project card grid, contact CTA.              |
+| 8   | ![docs](/packages/app/headless/landify/examples/templates/docs/docs.png)                | `docs`      | Topic card links, optional code sample, hero actions.                                 |
+| 9   | ![faq](/packages/app/headless/landify/examples/templates/faq/faq.png)                   | `faq`       | Question/answer accordion via native `<details>` rows — no JavaScript.                |
+| 10  | ![team](/packages/app/headless/landify/examples/templates/team/team.png)                | `team`      | Values strip, member card grid with roles and bios, hiring CTA.                       |
+| 11  | ![status](/packages/app/headless/landify/examples/templates/status/status.png)          | `status`    | State banner (green/amber/red by state), uptime stats, incident log.                  |
+| 12  | ![linktree](/packages/app/headless/landify/examples/templates/linktree/linktree.png)    | `linktree`  | Compact profile, big link cards, social pills — the only type without a hero section. |
 
 Every type reuses the same header, footer, buttons, and 64 themes. The template
 gallery lives in `examples/templates/<type>/`: the `<type>.yaml` source, its
@@ -122,7 +126,8 @@ The gallery lives in `examples/themes/`: one folder per theme
 cd go
 make build
 
-./bin/landify new                     # write an annotated landify.yaml
+./bin/landify new                     # write an annotated landify.yaml (default: product)
+./bin/landify new -t docs             # ... or scaffold the docs layout instead
 ./bin/landify validate                # check it, then:
 ./bin/landify build --theme ocean     # ocean-colored index.html
 ./bin/landify serve                   # preview on http://localhost:8080
@@ -130,10 +135,10 @@ make build
 
 ## Commands
 
-| Command                                              | What it does                                                                                                 |
-| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| `landify new`                                        | Generate a commented `landify.yaml` placeholder (refuses to overwrite without `-F`).                         |
-| `landify validate -f <file>`                         | Check the schema; lists every problem and exits 1 on failure.                                                |
-| `landify build -f <file> -o <output> --theme <name>` | Validate and render the page (defaults: `landify.yaml` → `index.html`; `--theme` applies a built-in preset). |
-| `landify themes`                                     | List the sixty-four built-in theme presets.                                                                  |
-| `landify serve -d <dir> -p <port>`                   | Serve a directory of static files over HTTP (default `.` and port `8080`); stops on Ctrl+C.                  |
+| Command                                              | What it does                                                                                                                 |
+| ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `landify new -t <type>`                              | Generate a commented `landify.yaml` placeholder for a page type (`-t` default `product`, refuses to overwrite without `-F`). |
+| `landify validate -f <file>`                         | Check the schema; lists every problem and exits 1 on failure.                                                                |
+| `landify build -f <file> -o <output> --theme <name>` | Validate and render the page (defaults: `landify.yaml` → `index.html`; `--theme` applies a built-in preset).                 |
+| `landify themes`                                     | List the sixty-four built-in theme presets.                                                                                  |
+| `landify serve -d <dir> -p <port>`                   | Serve a directory of static files over HTTP (default `.` and port `8080`); stops on Ctrl+C.                                  |

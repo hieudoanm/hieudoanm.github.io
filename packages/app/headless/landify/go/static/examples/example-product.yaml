@@ -8,14 +8,11 @@
 # intent is explicit. All fields marked "required" must be non-empty for
 # `landify validate` to pass.
 #
-# Type: the page layout. "product" (default) is the original hero + features +
-# demo video + CTA layout. Alternatives: "waitlist" (email-capture panel),
-# "event" (date/venue strip, agenda, speakers), "download" (version and
-# license badges, per-OS buttons, install snippet), "app" (store badges,
-# ratings, portrait screenshots), "pricing" (tier cards), "portfolio"
-# (personal page with avatar, skills, projects), and "docs" (topic cards and a
-# code sample). The required fields below change with the type — see
-# internal/landify/validate.go or `landify validate`.
+# Type: the "product" layout (default) is the original hero + features +
+# demo video + CTA page and the only one that requires media — hero.image.src
+# and demo.video.src below. The other page types each ship their own annotated
+# example: `landify new -t <type>` writes waitlist, event, download, app,
+# pricing, portfolio, docs, faq, team, status, or linktree.
 #
 # Media: only the "product" layout requires a hero image and demo video.
 # Both render in the same 16:9 frame (1280 × 720).
@@ -27,7 +24,7 @@
 # neutral (neutral-faint, border, border-soft) — is calculated from them.
 # Values below are the defaults; any field left empty keeps its default.
 
-type: product            # product (default) | waitlist | event | download | app | pricing | portfolio | docs
+type: product            # product (default) | waitlist | event | download | app | pricing | portfolio | docs | faq | team | status | linktree
 
 theme:
   base: "#f7f8fa"         #   backgrounds and surface family

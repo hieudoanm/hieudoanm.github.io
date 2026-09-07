@@ -158,7 +158,7 @@ pricing:
       period: month
       tag: Most popular
       perks:
-        - Eight page types
+        - Twelve page types
         - Header and footer remixes
       cta:
         label: Go Pro
@@ -330,6 +330,155 @@ footer:
   copyright: "© 2026 Landify Docs"
 `
 
+const faqDoc = `
+type: faq
+site:
+  name: Landify Help
+  description: Frequently asked questions.
+  nav:
+    - label: Questions
+      href: "#faq"
+hero:
+  badge: "🙋 FAQ"
+  headline: Questions, answered.
+  subheadline: Straight answers to the questions we hear the most.
+faq:
+  heading: Frequently asked
+  sub: Picked from real support conversations.
+  items:
+    - question: Does Landify need a build step?
+      answer: No. It ships one flat HTML file.
+    - question: Where do the colors come from?
+      answer: From the eight theme colors in this file.
+cta:
+  icon: "💬"
+  heading: Still curious?
+  body: Ask a human instead.
+  button:
+    label: Contact support
+    href: mailto:support@example.com
+footer:
+  copyright: "© 2026 Landify Help"
+`
+
+const teamDoc = `
+type: team
+site:
+  name: Landify Studio
+  description: The people behind Landify.
+  nav:
+    - label: Values
+      href: "#values"
+hero:
+  badge: "🦊 The crew"
+  headline: Small team, big pages.
+  subheadline: Four people, one YAML file.
+features:
+  heading: What we stand for
+  sub: The principles behind every page we ship.
+team:
+  heading: Meet the team
+  sub: Spread across three time zones.
+  values:
+    - icon: "🧪"
+      title: Experiment
+      body: Prototype first, polish later.
+    - icon: "📐"
+      title: Design rigorously
+      body: Eight colors become a full system.
+  members:
+    - name: Ana Ruiz
+      role: Design engineer
+      bio: Leads the generator.
+      avatar: "🦊"
+    - name: Sam Lee
+      role: Product designer
+      bio: Writes the placeholders.
+      avatar: "🐨"
+cta:
+  icon: "💌"
+  heading: Want to build with us?
+  body: We are hiring.
+  button:
+    label: See open roles
+    href: https://example.com/jobs
+footer:
+  copyright: "© 2026 Landify Studio"
+`
+
+const statusDoc = `
+type: status
+site:
+  name: Landify Status
+  description: Live status for Landify.
+  nav:
+    - label: Status
+      href: "#status"
+hero:
+  badge: "⚡ Live"
+  headline: All systems normal.
+  subheadline: Updated whenever something changes.
+status:
+  state: operational
+  updated: "September 7, 2026 09:00 UTC"
+  announcement: No scheduled maintenance this week.
+  stats:
+    - label: Uptime (30d)
+      value: 99.99%
+    - label: API latency
+      value: 42 ms
+  heading: Recent incidents
+  sub: Newest first.
+  incidents:
+    - date: August 14
+      title: Elevated API latency
+      state: resolved
+      body: Transient slowdown, now back to normal.
+    - date: July 2
+      title: Scheduled maintenance
+      state: resolved
+      body: Brief read-only window overnight.
+cta:
+  icon: "🔔"
+  heading: Want updates?
+  body: Email on every status change.
+  button:
+    label: Subscribe
+    href: https://forms.example.com/status
+footer:
+  copyright: "© 2026 Landify Status"
+`
+
+const linktreeDoc = `
+type: linktree
+site:
+  name: "Ana @ the foxes"
+  description: Every link to Ana Ruiz in one place.
+  nav:
+    - label: Links
+      href: "#links"
+linktree:
+  avatar: "🦊"
+  heading: "@anaruiz"
+  sub: Design engineer making flat pages and tiny tools.
+  cards:
+    - icon: "🛠️"
+      title: Landify
+      note: flat landing pages
+      href: https://example.com/landify
+    - icon: "💌"
+      title: Say hello
+      note: replies within a day
+      href: mailto:ana@example.com
+  social:
+    - label: "𝕏"
+      href: https://twitter.com
+    - label: GitHub
+      href: https://github.com
+footer:
+  copyright: "© 2026 Ana Ruiz"
+`
+
 func TestPricingLoadsAndRenders(t *testing.T) {
 	cfg, err := Load([]byte(pricingDoc))
 	if err != nil {
@@ -346,7 +495,7 @@ func TestPricingLoadsAndRenders(t *testing.T) {
 		`<div class="tier featured">`,
 		`<span class="tier-name">Starter</span>`,
 		`<div class="tier-price">$12<span class="tier-period"> / month</span></div>`,
-		`<li><span class="tick" aria-hidden="true">✓</span> Eight page types</li>`,
+		`<li><span class="tick" aria-hidden="true">✓</span> Twelve page types</li>`,
 		`<a class="btn btn-primary" href="https://example.com/pro">Go Pro</a>`,
 		`<p class="pricing-note">Prices in USD. Cancel anytime.</p>`,
 	} {
@@ -428,6 +577,106 @@ func TestDocsLoadsAndRenders(t *testing.T) {
 	} {
 		if !strings.Contains(string(html), want) {
 			t.Errorf("docs render missing %q", want)
+		}
+	}
+}
+
+func TestFAQLoadsAndRenders(t *testing.T) {
+	cfg, err := Load([]byte(faqDoc))
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !Valid(cfg) {
+		t.Fatalf("Valid = false, want true: %v", Errors(cfg))
+	}
+	html, err := Render(cfg)
+	if err != nil {
+		t.Fatalf("Render: %v", err)
+	}
+	for _, want := range []string{
+		`<details class="faq-item">`,
+		`<summary>Does Landify need a build step?</summary>`,
+		"one flat HTML file",
+		`<h2>Frequently asked</h2>`,
+	} {
+		if !strings.Contains(string(html), want) {
+			t.Errorf("faq render missing %q", want)
+		}
+	}
+}
+
+func TestTeamLoadsAndRenders(t *testing.T) {
+	cfg, err := Load([]byte(teamDoc))
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !Valid(cfg) {
+		t.Fatalf("Valid = false, want true: %v", Errors(cfg))
+	}
+	html, err := Render(cfg)
+	if err != nil {
+		t.Fatalf("Render: %v", err)
+	}
+	for _, want := range []string{
+		`<div class="value">`,
+		`<div class="member">`,
+		`<span class="avatar" aria-hidden="true">🦊</span>`,
+		`<p class="role">Design engineer</p>`,
+		`<h2>Meet the team</h2>`,
+	} {
+		if !strings.Contains(string(html), want) {
+			t.Errorf("team render missing %q", want)
+		}
+	}
+}
+
+func TestStatusLoadsAndRenders(t *testing.T) {
+	cfg, err := Load([]byte(statusDoc))
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !Valid(cfg) {
+		t.Fatalf("Valid = false, want true: %v", Errors(cfg))
+	}
+	html, err := Render(cfg)
+	if err != nil {
+		t.Fatalf("Render: %v", err)
+	}
+	for _, want := range []string{
+		`<div class="status-banner st-operational">`,
+		`<strong>operational</strong>`,
+		`<span class="status-updated">Updated September 7, 2026 09:00 UTC</span>`,
+		`<span class="stat-value">99.99%</span>`,
+		`<span class="inc-pill inc-resolved">resolved</span>`,
+		`<span class="incident-title">Elevated API latency</span>`,
+	} {
+		if !strings.Contains(string(html), want) {
+			t.Errorf("status render missing %q", want)
+		}
+	}
+}
+
+func TestLinktreeLoadsAndRenders(t *testing.T) {
+	cfg, err := Load([]byte(linktreeDoc))
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !Valid(cfg) {
+		t.Fatalf("Valid = false, want true: %v", Errors(cfg))
+	}
+	html, err := Render(cfg)
+	if err != nil {
+		t.Fatalf("Render: %v", err)
+	}
+	for _, want := range []string{
+		`<span class="lt-avatar" aria-hidden="true">🦊</span>`,
+		`<h1>@anaruiz</h1>`,
+		`<a class="lt-card" href="https://example.com/landify">`,
+		`<span class="lt-card-note">replies within a day</span>`,
+		`<a class="lt-social-link" href="https://github.com">GitHub</a>`,
+	} {
+		if !strings.Contains(string(html), want) {
+			t.Errorf("linktree render missing %q", want)
 		}
 	}
 }
@@ -613,6 +862,61 @@ func TestDocsRequiresPackages(t *testing.T) {
 	cfg.Docs.Packages = nil
 	if !containsErr(Errors(cfg), "docs.packages must contain at least one card") {
 		t.Fatalf("Errors = %v, want packages error", Errors(cfg))
+	}
+}
+
+func TestFAQRequiresItems(t *testing.T) {
+	cfg, err := Load([]byte(faqDoc))
+	if err != nil {
+		t.Fatal(err)
+	}
+	cfg.FAQ.Items = nil
+	if !containsErr(Errors(cfg), "faq.items must contain at least one item") {
+		t.Fatalf("Errors = %v, want faq items error", Errors(cfg))
+	}
+}
+
+func TestTeamRequiresMembers(t *testing.T) {
+	cfg, err := Load([]byte(teamDoc))
+	if err != nil {
+		t.Fatal(err)
+	}
+	cfg.Team.Members = nil
+	if !containsErr(Errors(cfg), "team.members must contain at least one member") {
+		t.Fatalf("Errors = %v, want team members error", Errors(cfg))
+	}
+}
+
+func TestStatusRejectsUnknownState(t *testing.T) {
+	cfg, err := Load([]byte(statusDoc))
+	if err != nil {
+		t.Fatal(err)
+	}
+	cfg.Status.State = "partially_sunny"
+	if !containsErr(Errors(cfg), "status.state must be one of operational | degraded | outage | maintenance") {
+		t.Fatalf("Errors = %v, want status state error", Errors(cfg))
+	}
+}
+
+func TestStatusRejectsUnknownIncidentState(t *testing.T) {
+	cfg, err := Load([]byte(statusDoc))
+	if err != nil {
+		t.Fatal(err)
+	}
+	cfg.Status.Incidents[0].State = "paused"
+	if !containsErr(Errors(cfg), "status.incidents[0].state must be one of investigating | monitoring | resolved") {
+		t.Fatalf("Errors = %v, want incident state error", Errors(cfg))
+	}
+}
+
+func TestLinktreeRequiresCards(t *testing.T) {
+	cfg, err := Load([]byte(linktreeDoc))
+	if err != nil {
+		t.Fatal(err)
+	}
+	cfg.Linktree.Cards = nil
+	if !containsErr(Errors(cfg), "linktree.cards must contain at least one card") {
+		t.Fatalf("Errors = %v, want linktree cards error", Errors(cfg))
 	}
 }
 

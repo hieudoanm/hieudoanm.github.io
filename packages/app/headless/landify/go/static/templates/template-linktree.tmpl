@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{{.Site.Description}}" />
+    <title>{{.Site.Name}}</title>
+    <style>
+      :root {
+@LANDIFY_THEME@      }
+{{template "base-css" .}}
+      main {
+        max-width: 640px;
+        padding-top: 48px;
+        padding-bottom: 48px;
+      }
+      .lt-profile {
+        text-align: center;
+        padding-bottom: 28px;
+      }
+      .lt-avatar {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 88px;
+        height: 88px;
+        border-radius: 50%;
+        font-size: 40px;
+        line-height: 1;
+        background: var(--primary-soft);
+        border: 2px solid var(--primary);
+      }
+      .lt-profile h1 {
+        margin: 14px 0 6px;
+        font-size: 24px;
+        font-weight: 800;
+        letter-spacing: -0.01em;
+      }
+      .lt-sub {
+        margin: 0;
+        font-size: 14.5px;
+        color: var(--neutral);
+      }
+      .lt-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .lt-card {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        background: var(--base-200);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+        padding: 16px 20px;
+        color: var(--base-content);
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .lt-card:hover {
+        border-color: var(--primary);
+        color: var(--primary);
+        text-decoration: none;
+      }
+      .lt-card .icon {
+        font-size: 20px;
+        line-height: 1;
+      }
+      .lt-card-title {
+        flex: 1;
+        text-align: left;
+      }
+      .lt-card-note {
+        font-size: 12.5px;
+        font-weight: 500;
+        color: var(--neutral);
+      }
+      .lt-social {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 26px;
+      }
+      .lt-social-link {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--primary-dark);
+        background: var(--primary-soft);
+        border: 1px solid var(--border-soft);
+        border-radius: 999px;
+        padding: 8px 16px;
+      }
+      .lt-social-link:hover {
+        border-color: var(--primary);
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    {{template "header" .}}
+
+    <main id="top">
+      <section class="lt-profile">
+        {{if .Linktree.Avatar}}<span class="lt-avatar" aria-hidden="true">{{.Linktree.Avatar}}</span>{{end}}
+        {{if .Linktree.Heading}}<h1>{{.Linktree.Heading}}</h1>{{end}}
+        {{if .Linktree.Sub}}<p class="lt-sub">{{.Linktree.Sub}}</p>{{end}}
+      </section>
+
+      <section id="links" class="lt-cards">
+        {{range .Linktree.Cards}}
+        <a class="lt-card" href="{{.Href}}">
+          {{if .Icon}}<span class="icon" aria-hidden="true">{{.Icon}}</span>{{end}}
+          <span class="lt-card-title">{{.Title}}</span>
+          {{if .Note}}<span class="lt-card-note">{{.Note}}</span>{{end}}
+        </a>
+        {{end}}
+      </section>
+
+      {{if .Linktree.Social}}
+      <nav class="lt-social" aria-label="Social links">
+        {{range .Linktree.Social}}<a class="lt-social-link" href="{{.Href}}">{{.Label}}</a>{{end}}
+      </nav>
+      {{end}}
+
+      {{template "footer" .}}
+    </main>
+  </body>
+</html>

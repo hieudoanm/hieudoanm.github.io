@@ -27,6 +27,10 @@ type Config struct {
 	App       App       `yaml:"app"`
 	Portfolio Portfolio `yaml:"portfolio"`
 	Docs      Docs      `yaml:"docs"`
+	FAQ       FAQ       `yaml:"faq"`
+	Team      Team      `yaml:"team"`
+	Status    Status    `yaml:"status"`
+	Linktree  Linktree  `yaml:"linktree"`
 }
 
 // Theme is the design input. Only the base colors are authored; every other

@@ -27,7 +27,7 @@
 # neutral (neutral-faint, border, border-soft) — is calculated from them.
 # Values below are the defaults; any field left empty keeps its default.
 
-type: product # product (default) | waitlist | event | download | app | pricing | portfolio | docs
+type: product # product (default) | waitlist | event | download | app | pricing | portfolio | docs | faq | team | status | linktree
 
 theme:
   base: '#f7f8fa' #   backgrounds and surface family

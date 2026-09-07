@@ -1,0 +1,102 @@
+# landify.yaml — the single content source for your landing page.
+#
+#   landify validate   # check that this file is valid
+#   landify build      # generate index.html from this file
+#
+# Every field below has placeholder text and a short "what to do" hint.
+# Attributes like mark, badge, and icon are emoji; keep them quoted so the
+# intent is explicit. All fields marked "required" must be non-empty for
+# `landify validate` to pass.
+#
+# Type: the "event" layout is a conference-style page — a date/venue strip, an
+# agenda timeline, a speaker grid, and a tickets button. Required: event.date,
+# event.venue.name, event.primary (label + href), at least one event.agenda
+# item (time + title), and at least one event.speaker (name + role).
+#
+# Colors: theme is the only design input. List the eight base colors (and,
+# optionally, the corner radius); every other CSS token the page uses —
+# surfaces (base-100/200/300, base-content), accent shades and tints
+# (primary-dark/soft/content, secondary-content), and hairlines derived from
+# neutral (neutral-faint, border, border-soft) — is calculated from them.
+# Values below are the defaults; any field left empty keeps its default.
+
+type: event               # waitlist | event | download | app | pricing | portfolio | docs | faq | team | status | linktree
+
+theme:
+  base: "#f7f8fa"         #   backgrounds and surface family
+  primary: "#0d9488"      #   brand accent
+  secondary: "#7c3aed"    #   secondary accent
+  neutral: "#555f6e"      #   muted text and hairline base
+  info: "#2563eb"
+  warning: "#d97706"
+  success: "#16a34a"
+  error: "#dc2626"
+  radius: "10px"          #   corner radius (not a color)
+
+site:                     # used in the navbar, <title>, and meta description
+  name: Landify            # [required] your product or site name
+  mark: "🌄"               # [optional] emoji shown next to the name
+  description: >-          # [required] one sentence used for <meta name="description">
+    A flat, dependency-free landing page generated from a single YAML file.
+  nav:                     # [required] links shown in the top navbar
+    - label: Agenda       #   visible link text
+      href: "#agenda"     #   link target: "#section" or a full URL
+    - label: Speakers
+      href: "#speakers"
+    - label: Tickets
+      href: "https://tickets.example.com"
+
+hero:                     # the first thing visitors see
+  badge: "🎟️ Save the date"   # [optional] small pill above the headline
+  headline: Your event headline.   # [required] the big title
+  subheadline: >-          # [required] one or two sentences of supporting text
+    Describe the event in one or two sentences. Keep it short and clear.
+  secondary:               # [optional] secondary link, e.g. the venue
+    label: Venue
+    href: "#venue"
+
+event:                     # the event details and program
+  date: "March 14, 2026"   # [required]
+  time: "9:00 – 17:00"     # [optional]
+  venue:                   # [required] venue.name is required
+    name: Civic Hall       #   [required] venue name
+    city: Paris            #   [optional]
+    address: "1 Rue des Flots"   #   [optional]
+  primary:                 # [required] the tickets button
+    label: Get tickets
+    href: "https://tickets.example.com"
+  speakers_heading: Speakers       # [optional] section heading
+  speakers_sub: The folks on stage.   # [optional]
+  agenda:                  # [required] at least one slot
+    - time: "09:30"        #   [required] start time
+      title: Keynote       #   [required] session title
+      speaker: Ana         #   [optional]
+      body: A look at where things go next.   # [optional]
+    - time: "11:00"
+      title: Hands-on lab
+      speaker: Sam
+      body: Build your first page, live.
+  speakers:                # [required] at least one speaker
+    - name: Ana            #   [required]
+      role: Principal Engineer   #   [required]
+      avatar: "🦊"         #   [optional] emoji avatar
+    - name: Sam
+      role: Product Designer
+      avatar: "🐙"
+
+cta:                       # the closing call to action
+  icon: "🎟️"               # [optional] emoji above the heading
+  heading: See you there.   # [required]
+  body: >-                 # [required]
+    Get a ticket before they sell out.
+  button:                  # [required] the single main action
+    label: Get tickets
+    href: "https://tickets.example.com"
+
+footer:                    # the simple footer row
+  copyright: "© 2026 Landify"   # [required] shown first in the footer
+  links:                   # [required] footer links; use the same items as nav
+    - label: Agenda
+      href: "#agenda"
+    - label: Speakers
+      href: "#speakers"

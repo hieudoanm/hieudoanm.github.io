@@ -1,0 +1,41 @@
+type: linktree
+site:
+  name: "Ana @ the foxes"
+  mark: "🦊"
+  description: Every link to Ana Ruiz in one place.
+  nav:
+    - label: Links
+      href: "#links"
+linktree:
+  avatar: "🦊"
+  heading: "@anaruiz"
+  sub: Design engineer making flat pages and tiny tools.
+  cards:
+    - icon: "🛠️"
+      title: Landify
+      note: flat landing pages
+      href: https://example.com/landify
+    - icon: "📄"
+      title: My writing
+      note: notes on design systems
+      href: https://example.com/writing
+    - icon: "🎙️"
+      title: Podcast
+      note: new episode Fridays
+      href: https://example.com/podcast
+    - icon: "💌"
+      title: Say hello
+      note: replies within a day
+      href: mailto:ana@example.com
+  social:
+    - label: "𝕏"
+      href: https://twitter.com
+    - label: GitHub
+      href: https://github.com
+    - label: LinkedIn
+      href: https://linkedin.com
+footer:
+  copyright: "© 2026 Ana Ruiz"
+  links:
+    - label: Links
+      href: "#links"

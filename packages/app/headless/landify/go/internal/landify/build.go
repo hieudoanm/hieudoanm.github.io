@@ -25,7 +25,7 @@ func Render(cfg *Config) ([]byte, error) {
 	if !isKnownType(kind) {
 		kind = "product"
 	}
-	tmpl, err := template.New("page").ParseFS(static.FS, "template-*.tmpl", "partials/*.tmpl")
+	tmpl, err := template.New("page").ParseFS(static.FS, "templates/*.tmpl", "partials/*.tmpl")
 	if err != nil {
 		return nil, fmt.Errorf("parse templates: %w", err)
 	}

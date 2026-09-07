@@ -7,5 +7,5 @@ import "embed"
 
 // FS holds the raw templates and example content as shipped with the module.
 //
-//go:embed template-*.tmpl partials example.yaml
+//go:embed templates partials examples
 var FS embed.FS

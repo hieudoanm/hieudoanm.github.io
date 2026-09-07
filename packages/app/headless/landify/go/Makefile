@@ -17,6 +17,7 @@ help:
 build:
 	@mkdir -p $(BUILD_DIR)
 	go build -o $(BINARY) .
+	@du -h $(BINARY) | awk '{print "built ./$(BINARY) (" $$1 ")"}'
 
 new:
 	go run . new
