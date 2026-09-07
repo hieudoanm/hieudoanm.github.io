@@ -1,0 +1,92 @@
+theme:
+  base: "#f8fafc"
+  primary: "#1e293b"
+  secondary: "#475569"
+  neutral: "#64748b"
+  info: "#0ea5e9"
+  warning: "#f59e0b"
+  success: "#10b981"
+  error: "#ef4444"
+  radius: "10px"
+
+site:
+  name: Browserverless
+  mark: "🌐"
+  description: >-
+    A Servo-powered browser runtime that works as a library, a CLI, and an
+    HTTP server.
+  nav:
+    - label: Features
+      href: "#features"
+    - label: Demo
+      href: "#demo"
+    - label: Get started
+      href: "#cta"
+
+hero:
+  badge: "🌐 Servo-powered"
+  headline: A browser, without the window.
+  subheadline: >-
+    Drive the Servo engine headlessly from your terminal, open a headed window
+    when you want pixels, or serve the same runtime over HTTP.
+  primary:
+    label: Get the engine
+    href: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-browserverless-latest
+  secondary:
+    label: Watch the demo
+    href: "#demo"
+  image:
+    src: "demo.png"
+    alt: "Browserverless terminal: serve, shot, render, and version"
+
+features:
+  heading: One engine, three faces
+  sub: The same Servo runtime, exposed however your project needs it.
+  items:
+    - icon: "🖥️"
+      title: Headless rendering
+      body: >-
+        Render pages to PNG or HTML without ever opening a window — perfect
+        for screenshots and scrapers.
+    - icon: "🪟"
+      title: Headed window
+      body: >-
+        Dial in a real 1280 × 800 window for debugging and demos while you
+        develop.
+    - icon: "📡"
+      title: HTTP server
+      body: >-
+        `browserverless serve` puts the same engine behind an endpoint your
+        other apps can call.
+    - icon: "📦"
+      title: Library API
+      body: >-
+        Embed the runtime as a Rust library and drive it from code instead of
+        the CLI.
+
+demo:
+  heading: Demo
+  sub: Serve, screenshot, render — the whole headless workflow, end to end.
+  video:
+    src: "demo.mp4"
+    poster: "demo.png"
+
+cta:
+  icon: "🌐"
+  heading: Put a browser in your pipeline.
+  body: >-
+    Grab the engine, run `browserverless serve`, and start scripting pages
+    from anywhere.
+  button:
+    label: Get the engine
+    href: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-browserverless-latest
+
+footer:
+  copyright: "© 2026 Browserverless"
+  links:
+    - label: Features
+      href: "#features"
+    - label: Demo
+      href: "#demo"
+    - label: Get started
+      href: "#cta"

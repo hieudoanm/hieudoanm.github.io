@@ -1,0 +1,92 @@
+theme:
+  base: "#f8fafc"
+  primary: "#1e293b"
+  secondary: "#475569"
+  neutral: "#64748b"
+  info: "#0ea5e9"
+  warning: "#f59e0b"
+  success: "#10b981"
+  error: "#ef4444"
+  radius: "10px"
+
+site:
+  name: J.A.C.K.
+  mark: "🃏"
+  description: >-
+    A personal CLI toolbox with 180+ commands across 14 modules — calculate,
+    convert, encrypt, and time anything from your terminal.
+  nav:
+    - label: Features
+      href: "#features"
+    - label: Demo
+      href: "#demo"
+    - label: Get started
+      href: "#cta"
+
+hero:
+  badge: "🃏 180+ commands"
+  headline: A jack-of-all-trades for your terminal.
+  subheadline: >-
+    J.A.C.K. packs 180+ commands across 14 modules into a single binary —
+    built with Cobra, Clap, Clikt, Swift Argument Parser, and Oclif.
+  primary:
+    label: Get the toolbox
+    href: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-jack-latest
+  secondary:
+    label: Watch the demo
+    href: "#demo"
+  image:
+    src: "demo.png"
+    alt: "J.A.C.K. terminal: calc loan, crypto totp, convert base64, time pomodoro"
+
+features:
+  heading: 14 modules, one binary
+  sub: Reach for `jack`, not fifteen separate tools.
+  items:
+    - icon: "🧮"
+      title: Calculator module
+      body: >-
+        Nineteen calculators, from loan payments to unit rates — one `jack
+        calc` command away.
+    - icon: "🔄"
+      title: Converter module
+      body: >-
+        Fourteen converters for encodings, scales, and formats so you never
+        open a web page to base64 again.
+    - icon: "🔐"
+      title: Crypto module
+      body: >-
+        Hash, hex, and TOTP one-time codes on demand, straight from the
+        terminal.
+    - icon: "🎲"
+      title: Everyday module
+      body: >-
+        Chess openings, colors, timers, system info, and web lookups for the
+        small stuff.
+
+demo:
+  heading: Demo
+  sub: Four modules, four commands — the everyday J.A.C.K. workflow.
+  video:
+    src: "demo.mp4"
+    poster: "demo.png"
+
+cta:
+  icon: "🃏"
+  heading: Grab your toolbox.
+  body: >-
+    Install J.A.C.K., then `jack calc`, `jack crypto`, `jack convert` — that
+    feeling when the terminal just does it.
+  button:
+    label: Get the toolbox
+    href: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-jack-latest
+
+footer:
+  copyright: "© 2026 J.A.C.K."
+  links:
+    - label: Features
+      href: "#features"
+    - label: Demo
+      href: "#demo"
+    - label: Get started
+      href: "#cta"

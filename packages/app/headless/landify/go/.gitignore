@@ -1,0 +1,13 @@
+# Build artifacts
+/bin/
+
+# Generated from `landify build`
+/index.html
+
+# Generated from `landify new`
+/landify.yaml
+
+# macOS
+.DS_Store
+
+/bin

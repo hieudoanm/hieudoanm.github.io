@@ -77,7 +77,7 @@ build_hybrid_apps() {
 
 copy_landing_pages() {
     local base_dir="$1"
-    local src_file slug dest_dir
+    local src_file slug dest_dir pub_dir
 
     if [[ ! -d "$base_dir" ]]; then
         echo "Skipping landing pages: $base_dir not found."
@@ -88,11 +88,13 @@ copy_landing_pages() {
         [[ -f "$src_file" ]] || continue
         slug="${src_file%/public/index.html}"
         slug="${slug##*/}"
+        pub_dir="$(dirname "$src_file")"
         dest_dir="$DOCS_DIR/free/$slug"
 
-        echo "Copying $src_file -> $dest_dir/index.html"
+        echo "Copying $pub_dir -> $dest_dir"
+        rm -rf "$dest_dir"
         mkdir -p "$dest_dir"
-        cp "$src_file" "$dest_dir/index.html"
+        cp -R "$pub_dir"/. "$dest_dir"
         touch "$dest_dir/.nojekyll"
     done
 }

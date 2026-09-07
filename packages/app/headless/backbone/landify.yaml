@@ -1,0 +1,93 @@
+theme:
+  base: "#f8fafc"
+  primary: "#1e293b"
+  secondary: "#475569"
+  neutral: "#64748b"
+  info: "#0ea5e9"
+  warning: "#f59e0b"
+  success: "#10b981"
+  error: "#ef4444"
+  radius: "10px"
+
+site:
+  name: Backbone
+  mark: "🖥️"
+  description: >-
+    A self-hosted back-end as a service with auth, a database, cron jobs, and
+    webhooks.
+  nav:
+    - label: Features
+      href: "#features"
+    - label: Demo
+      href: "#demo"
+    - label: Get started
+      href: "#cta"
+
+hero:
+  badge: "🖥️ Self-hosted"
+  headline: Your own back-end as a service.
+  subheadline: >-
+    Host auth, a database, cron jobs, and webhooks in one server — no cloud
+    account required. Ships as native servers and libraries for Go, Kotlin,
+    and Rust.
+  primary:
+    label: Get the server
+    href: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-backbone-latest
+  secondary:
+    label: Watch the demo
+    href: "#demo"
+  image:
+    src: "demo.png"
+    alt: "Backbone terminal: init, serve, job, and notify"
+
+features:
+  heading: Batteries included
+  sub: Everything a self-hosted back end needs, wired to one `ffi` — no cloud lock-in.
+  items:
+    - icon: "🔐"
+      title: BackboneAuth
+      body: >-
+        Built-in, no-account authentication with JSON Web Tokens and a Cognito
+        drop-in for AWS-style identity flows.
+    - icon: "🗃️"
+      title: BackboneBase
+      body: >-
+        A data API over SQLite (or Amazon RDS) that serves JSON Straight from
+        one port.
+    - icon: "⏰"
+      title: BackboneJobs
+      body: >-
+        In-process cron scheduling — register jobs like nightly-report and they
+        just run, on time.
+    - icon: "🔔"
+      title: BackboneHooks
+      body: >-
+        Webhook delivery with retries and hard, typed callbacks for consuming
+        CloudWatch-style events.
+
+demo:
+  heading: Demo
+  sub: Init, serve, schedule, and notify — the whole workflow in one terminal.
+  video:
+    src: "demo.mp4"
+    poster: "demo.png"
+
+cta:
+  icon: "🖥️"
+  heading: Spin up your back end.
+  body: >-
+    Download the server, run `backbone init`, and go live with auth, data, and
+    jobs on your own hardware.
+  button:
+    label: Get the server
+    href: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-backbone-latest
+
+footer:
+  copyright: "© 2026 Backbone"
+  links:
+    - label: Features
+      href: "#features"
+    - label: Demo
+      href: "#demo"
+    - label: Get started
+      href: "#cta"

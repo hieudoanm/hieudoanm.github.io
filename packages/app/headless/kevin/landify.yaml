@@ -1,0 +1,92 @@
+theme:
+  base: "#f8fafc"
+  primary: "#1e293b"
+  secondary: "#475569"
+  neutral: "#64748b"
+  info: "#0ea5e9"
+  warning: "#f59e0b"
+  success: "#10b981"
+  error: "#ef4444"
+  radius: "10px"
+
+site:
+  name: KeVIN
+  mark: "🔑"
+  description: >-
+    An in-memory key/value store with a Redis-style protocol, written in C
+    and C++.
+  nav:
+    - label: Features
+      href: "#features"
+    - label: Demo
+      href: "#demo"
+    - label: Get started
+      href: "#cta"
+
+hero:
+  badge: "⚡ In-memory"
+  headline: A tiny key/value store that speaks Redis.
+  subheadline: >-
+    KeVIN keeps the whole store in RAM and talks the simple protocol Redis
+    clients already speak — PING, SET, GET, KEYS, DEL — in C and C++.
+  primary:
+    label: Get the server
+    href: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-kevin-latest
+  secondary:
+    label: Watch the demo
+    href: "#demo"
+  image:
+    src: "demo.png"
+    alt: "KeVIN terminal: start server, SET, GET, and KEYS"
+
+features:
+  heading: Small, fast, familiar
+  sub: Everything a Redis-style store needs, minus the heap of moving parts.
+  items:
+    - icon: "🔌"
+      title: Redis-style protocol
+      body: >-
+        PING, SET, GET, KEYS, and DEL use the simple framing existing clients
+        and tools understand.
+    - icon: "⚡"
+      title: In-memory storage
+      body: >-
+        Every value lives in RAM, so reads and writes never touch the disk —
+        lookups served in microseconds.
+    - icon: "🔁"
+      title: Two implementations
+      body: >-
+        The same store, written twice — once in C and once in C++ — for the
+        implementation that suits your build.
+    - icon: "📚"
+      title: Server or library
+      body: >-
+        Run it as a `kv --port 6379` server or link it in as a library and
+        drive the store from code.
+
+demo:
+  heading: Demo
+  sub: Start the server, then SET, GET, and KEYS — a Redis client's home turf.
+  video:
+    src: "demo.mp4"
+    poster: "demo.png"
+
+cta:
+  icon: "🔑"
+  heading: Keep it in memory.
+  body: >-
+    Start `kv --port 6379`, point your Redis client at it, and watch lookups
+    come back in microseconds.
+  button:
+    label: Get the server
+    href: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-kevin-latest
+
+footer:
+  copyright: "© 2026 KeVIN"
+  links:
+    - label: Features
+      href: "#features"
+    - label: Demo
+      href: "#demo"
+    - label: Get started
+      href: "#cta"

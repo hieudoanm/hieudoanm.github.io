@@ -2208,6 +2208,22 @@
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-kevin-latest"
           }
         ]
+      },
+      {
+        "label": "Landify",
+        "primaryCategory": "Developer Tools",
+        "secondaryCategory": "",
+        "icon": "PiFileCode",
+        "href": "https://hieudoanm.github.io/free/landify/",
+        "version": "latest",
+        "lastUpdated": "2026-09-07",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": "View Releases",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-landify-latest"
+          }
+        ]
       }
     ]
   },

@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+  <title>Browserverless terminal: serve, shot, render, version</title>
+  <desc>Animated terminal window showing browserverless serve, shot, render, and version with their output.</desc>
+
+  <style>
+    .line { opacity: 0; }
+    .line.serve { animation: rise 0.4s ease-out 0.9s forwards; }
+    .line.listening { animation: rise 0.4s ease-out 1.7s forwards; }
+    .line.shot { animation: rise 0.4s ease-out 3.1s forwards; }
+    .line.page { animation: rise 0.4s ease-out 3.9s forwards; }
+    .line.render { animation: rise 0.4s ease-out 5.3s forwards; }
+    .line.captured { animation: rise 0.4s ease-out 6.1s forwards; }
+    .line.version { animation: rise 0.4s ease-out 7.6s forwards; }
+    .line.servo { animation: rise 0.4s ease-out 8.4s forwards; }
+    .line.window { animation: rise 0.4s ease-out 9.4s forwards; }
+    .line.prompt { animation: rise 0.4s ease-out 11.0s forwards; }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+
+  <rect x="0" y="0" width="1280" height="720" fill="#0f172a"/>
+  <rect x="0" y="0" width="1280" height="48" fill="#1e293b"/>
+  <line x1="0" y1="48" x2="1280" y2="48" stroke="#334155" stroke-width="1"/>
+
+  <circle cx="32" cy="24" r="8" fill="#ef4444"/>
+  <circle cx="58" cy="24" r="8" fill="#f59e0b"/>
+  <circle cx="84" cy="24" r="8" fill="#22c55e"/>
+
+  <text x="640" y="32" font-size="20" fill="#94a3b8" text-anchor="middle">browserverless — zsh</text>
+
+  <g font-size="27" transform-origin="48 108">
+    <g class="line serve" transform-origin="48 108">
+      <text x="48" y="108">
+        <tspan fill="#475569">~/browserverless </tspan><tspan fill="#e2e8f0">$ </tspan><tspan fill="#14b8a6">browserverless </tspan><tspan fill="#e2e8f0">serve --port 3000</tspan>
+      </text>
+    </g>
+    <g class="line listening" transform-origin="48 148">
+      <text x="48" y="148" fill="#34d399">🌐 ok listening on 0.0.0.0:3000</text>
+    </g>
+
+    <g class="line shot" transform-origin="48 296">
+      <text x="48" y="296">
+        <tspan fill="#475569">~/browserverless </tspan><tspan fill="#e2e8f0">$ </tspan><tspan fill="#14b8a6">browserverless </tspan><tspan fill="#e2e8f0">shot --url https://example.com</tspan>
+      </text>
+    </g>
+    <g class="line page" transform-origin="48 336">
+      <text x="48" y="336" fill="#34d399">📸 ok page loaded in 412 ms</text>
+    </g>
+
+    <g class="line render" transform-origin="48 404">
+      <text x="48" y="404">
+        <tspan fill="#475569">~/browserverless </tspan><tspan fill="#e2e8f0">$ </tspan><tspan fill="#14b8a6">browserverless </tspan><tspan fill="#e2e8f0">render --url https://example.com</tspan>
+      </text>
+    </g>
+    <g class="line captured" transform-origin="48 444">
+      <text x="48" y="444" fill="#34d399">🧾 ok page.html captured</text>
+    </g>
+
+    <g class="line version" transform-origin="48 512">
+      <text x="48" y="512">
+        <tspan fill="#475569">~/browserverless </tspan><tspan fill="#e2e8f0">$ </tspan><tspan fill="#14b8a6">browserverless </tspan><tspan fill="#e2e8f0">version</tspan>
+      </text>
+    </g>
+    <g class="line servo" transform-origin="48 552">
+      <text x="48" y="552" fill="#94a3b8">🔄 servo renderer · headless</text>
+    </g>
+    <g class="line window" transform-origin="48 592">
+      <text x="48" y="592" fill="#fbbf24">🪟 window (1280, 800) ready</text>
+    </g>
+
+    <g class="line prompt" transform-origin="48 648">
+      <text x="48" y="648">
+        <tspan fill="#475569">~/browserverless </tspan><tspan fill="#e2e8f0">$ </tspan>
+      </text>
+    </g>
+  </g>
+</svg>

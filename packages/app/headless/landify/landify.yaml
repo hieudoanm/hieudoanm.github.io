@@ -1,0 +1,101 @@
+# landify.yaml — the single content source for your landing page.
+#
+#   landify validate   # check that this file is valid
+#   landify build      # generate index.html from this file
+#
+# Every field below has placeholder text and a short "what to do" hint.
+# Attributes like mark, badge, and icon are emoji; keep them quoted so the
+# intent is explicit. All fields marked "required" must be non-empty for
+# `landify validate` to pass.
+#
+# Media: the hero always renders an image and the demo always renders a video.
+# Both render in the same 16:9 frame (1280 × 720).
+#
+# Colors: theme is the only design input. List the eight base colors (and,
+# optionally, the corner radius); every other CSS token the page uses —
+# surfaces (base-100/200/300, base-content), accent shades and tints
+# (primary-dark/soft/content, secondary-content), and hairlines derived from
+# neutral (neutral-faint, border, border-soft) — is calculated from them.
+# Values below are the defaults; any field left empty keeps its default.
+
+theme:
+  base: "#f8fafc"         #   backgrounds and surface family
+  primary: "#1e293b"      #   brand accent
+  secondary: "#475569"    #   secondary accent
+  neutral: "#64748b"      #   muted text and hairline base
+  info: "#0ea5e9"
+  warning: "#f59e0b"
+  success: "#10b981"
+  error: "#ef4444"
+  radius: "10px"          #   corner radius (not a color)
+
+site:                     # used in the navbar, <title>, and meta description
+  name: Landify            # [required] your product or site name
+  mark: "🌄"               # [optional] emoji shown next to the name
+  description: >-          # [required] one sentence used for <meta name="description">
+    A flat, dependency-free landing page generated from a single YAML file.
+  nav:                     # [required] links shown in the top navbar
+    - label: Features      #   visible link text
+      href: "#features"    #   link target: "#section" or a full URL
+    - label: Demo
+      href: "#demo"
+    - label: Get started
+      href: "#cta"
+
+hero:                     # the first thing visitors see
+  badge: "🚀 New"         # [optional] small pill above the headline
+  headline: Your headline goes here.   # [required] the big title
+  subheadline: >-          # [required] one or two sentences of supporting text
+    Describe what you offer in one or two sentences. Keep it short and clear.
+  primary:                 # [required] the main call to action
+    label: Get started
+    href: "#cta"
+  secondary:               # [optional] the secondary call to action
+    label: Learn more
+    href: "#demo"
+  image:                   # [required] the hero image, rendered at 1280 × 720 (16:9)
+    src: "demo.png"        #   [required] image URL or path at 16:9 (1280 × 720)
+    alt: "Landify terminal: new, build, serve"   # [optional] accessible description
+
+features:                 # [required] the feature grid; add or remove items freely
+  heading: Features
+  sub: Everything you need for a clean, fast landing page.
+  items:
+    - icon: "⚡"          # [optional] emoji shown as the card icon
+      title: Zero build step        # [required] feature title
+      body: >-            # [required] short description
+        Open index.html in a browser or drop it on any static host.
+    - icon: "🧩"
+      title: YAML-powered content
+      body: >-
+        Edit one YAML file, regenerate, and the whole page updates in place.
+    - icon: "🚀"
+      title: Ship anywhere
+      body: >-
+        GitHub Pages, Netlify, or a USB stick — HTML and CSS only.
+
+demo:                      # a video walkthrough, also at 1280 × 720 (16:9)
+  heading: Demo
+  sub: A short video walkthrough of your product.
+  video:
+    src: "demo.mp4"       #   [required] MP4 video path or URL
+    poster: "demo.png"    #   [optional] poster frame shown before playback
+
+cta:                       # the closing call to action
+  icon: "🪄"               # [optional] emoji above the heading
+  heading: Make your mark on the web.   # [required]
+  body: >-                 # [required]
+    Write your YAML, generate, and go live before your coffee cools.
+  button:                  # [required] the single main action
+    label: Get the template
+    href: https://github.com/hieudoanm/hieudoanm.github.io
+
+footer:                    # the simple footer row
+  copyright: "© 2026 Landify"   # [required] shown first in the footer
+  links:                   # [required] footer links; use the same items as nav
+    - label: Features
+      href: "#features"
+    - label: Demo
+      href: "#demo"
+    - label: Get started
+      href: "#cta"

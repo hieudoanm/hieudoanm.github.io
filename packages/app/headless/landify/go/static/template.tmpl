@@ -3,30 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="A personal CLI toolbox with 180&#43; commands across 14 modules — calculate, convert, encrypt, and time anything from your terminal." />
-    <title>J.A.C.K.</title>
+    <meta name="description" content="{{.Site.Description}}" />
+    <title>{{.Site.Name}}</title>
     <style>
       :root {
-        --base-100: #f8fafc;
-        --base-200: #fefeff;
-        --base-300: #f1f3f4;
-        --base-content: #181d25;
-        --border: #64748b;
-        --border-soft: #bdc4cf;
-        --error: #ef4444;
-        --info: #0ea5e9;
-        --neutral: #64748b;
-        --neutral-faint: #a7b0be;
-        --primary: #1e293b;
-        --primary-content: #ffffff;
-        --primary-dark: #1a2332;
-        --primary-soft: #dee1e5;
-        --radius: 10px;
-        --secondary: #475569;
-        --secondary-content: #ffffff;
-        --success: #10b981;
-        --warning: #f59e0b;
-      }
+@LANDIFY_THEME@      }
 
       * {
         box-sizing: border-box;
@@ -185,7 +166,7 @@
         background: var(--base-300);
       }
 
-       
+      /* Both media slots share one 16:9 (1280 × 720) frame. */
       .hero-media,
       .demo-media {
         display: block;
@@ -324,87 +305,69 @@
   <body>
     <header>
       <a class="brand" href="#top">
-        <span class="mark">🃏</span>
-        <span>J.A.C.K.</span>
+        {{if .Site.Mark}}<span class="mark">{{.Site.Mark}}</span>{{end}}
+        <span>{{.Site.Name}}</span>
       </a>
       <nav>
-        <a href="#features">Features</a><a href="#demo">Demo</a><a href="#cta">Get started</a>
+        {{range .Site.Nav}}<a href="{{.Href}}">{{.Label}}</a>{{end}}
       </nav>
     </header>
 
     <main id="top">
       <section class="hero">
         <div>
-          <span class="badge">🃏 180&#43; commands</span>
-          <h1>A jack-of-all-trades for your terminal.</h1>
-          <p class="lead">J.A.C.K. packs 180&#43; commands across 14 modules into a single binary — built with Cobra, Clap, Clikt, Swift Argument Parser, and Oclif.</p>
+          <span class="badge">{{.Hero.Badge}}</span>
+          <h1>{{.Hero.Headline}}</h1>
+          <p class="lead">{{.Hero.Subheadline}}</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-jack-latest">Get the toolbox</a>
-            <a class="btn btn-ghost" href="#demo">Watch the demo</a>
+            {{if .Hero.Primary.Href}}<a class="btn btn-primary" href="{{.Hero.Primary.Href}}">{{.Hero.Primary.Label}}</a>{{end}}
+            {{if .Hero.Secondary.Href}}<a class="btn btn-ghost" href="{{.Hero.Secondary.Href}}">{{.Hero.Secondary.Label}}</a>{{end}}
           </div>
         </div>
-        <img class="hero-media" src="demo.png" alt="J.A.C.K. terminal: calc loan, crypto totp, convert base64, time pomodoro" />
+        <img class="hero-media" src="{{.Hero.Image.Src}}" alt="{{.Hero.Image.Alt}}" />
       </section>
 
       <section id="features" class="block">
         <div class="block-head">
-          <h2>14 modules, one binary</h2>
-          <p class="sub">Reach for `jack`, not fifteen separate tools.</p>
+          <h2>{{.Features.Heading}}</h2>
+          <p class="sub">{{.Features.Sub}}</p>
         </div>
         <div class="features">
-          
+          {{range .Features.Items}}
           <div class="feature">
-            <span class="icon">🧮</span>
-            <h3>Calculator module</h3>
-            <p>Nineteen calculators, from loan payments to unit rates — one `jack calc` command away.</p>
+            <span class="icon">{{.Icon}}</span>
+            <h3>{{.Title}}</h3>
+            <p>{{.Body}}</p>
           </div>
-          
-          <div class="feature">
-            <span class="icon">🔄</span>
-            <h3>Converter module</h3>
-            <p>Fourteen converters for encodings, scales, and formats so you never open a web page to base64 again.</p>
-          </div>
-          
-          <div class="feature">
-            <span class="icon">🔐</span>
-            <h3>Crypto module</h3>
-            <p>Hash, hex, and TOTP one-time codes on demand, straight from the terminal.</p>
-          </div>
-          
-          <div class="feature">
-            <span class="icon">🎲</span>
-            <h3>Everyday module</h3>
-            <p>Chess openings, colors, timers, system info, and web lookups for the small stuff.</p>
-          </div>
-          
+          {{end}}
         </div>
       </section>
 
       <section id="demo" class="block">
         <div class="block-head">
-          <h2>Demo</h2>
-          <p class="sub">Four modules, four commands — the everyday J.A.C.K. workflow.</p>
+          <h2>{{.Demo.Heading}}</h2>
+          <p class="sub">{{.Demo.Sub}}</p>
         </div>
-        <video class="demo-media" controls preload="metadata" poster="demo.png">
-          <source src="demo.mp4" type="video/mp4" />
+        <video class="demo-media" controls preload="metadata"{{if .Demo.Video.Poster}} poster="{{.Demo.Video.Poster}}"{{end}}>
+          <source src="{{.Demo.Video.Src}}" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </section>
 
       <section id="cta" class="block">
         <div class="cta">
-          <span class="icon" aria-hidden="true">🃏</span>
-          <h2>Grab your toolbox.</h2>
-          <p>Install J.A.C.K., then `jack calc`, `jack crypto`, `jack convert` — that feeling when the terminal just does it.</p>
+          <span class="icon" aria-hidden="true">{{.CTA.Icon}}</span>
+          <h2>{{.CTA.Heading}}</h2>
+          <p>{{.CTA.Body}}</p>
           <div class="actions">
-            <a class="btn btn-primary" href="https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-jack-latest">Get the toolbox</a>
+            <a class="btn btn-primary" href="{{.CTA.Button.Href}}">{{.CTA.Button.Label}}</a>
           </div>
         </div>
       </section>
 
       <footer>
-        <span>© 2026 J.A.C.K.</span>
-        <a href="#features">Features</a><a href="#demo">Demo</a><a href="#cta">Get started</a>
+        <span>{{.Footer.Copyright}}</span>
+        {{range .Footer.Links}}<a href="{{.Href}}">{{.Label}}</a>{{end}}
       </footer>
     </main>
   </body>

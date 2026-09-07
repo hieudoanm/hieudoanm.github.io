@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+  <title>J.A.C.K. terminal: calc, crypto, convert, time</title>
+  <desc>Animated terminal window showing jack calc loan, jack crypto totp, jack convert base64, and jack time pomodoro with their output.</desc>
+
+  <style>
+    .line { opacity: 0; }
+    .line.calc { animation: rise 0.4s ease-out 0.9s forwards; }
+    .line.payment { animation: rise 0.4s ease-out 1.7s forwards; }
+    .line.totp { animation: rise 0.4s ease-out 3.1s forwards; }
+    .line.code { animation: rise 0.4s ease-out 3.9s forwards; }
+    .line.convert { animation: rise 0.4s ease-out 5.3s forwards; }
+    .line.base64 { animation: rise 0.4s ease-out 6.1s forwards; }
+    .line.pomodoro { animation: rise 0.4s ease-out 7.6s forwards; }
+    .line.focus { animation: rise 0.4s ease-out 8.4s forwards; }
+    .line.logged { animation: rise 0.4s ease-out 9.4s forwards; }
+    .line.prompt { animation: rise 0.4s ease-out 11.0s forwards; }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+
+  <rect x="0" y="0" width="1280" height="720" fill="#0f172a"/>
+  <rect x="0" y="0" width="1280" height="48" fill="#1e293b"/>
+  <line x1="0" y1="48" x2="1280" y2="48" stroke="#334155" stroke-width="1"/>
+
+  <circle cx="32" cy="24" r="8" fill="#ef4444"/>
+  <circle cx="58" cy="24" r="8" fill="#f59e0b"/>
+  <circle cx="84" cy="24" r="8" fill="#22c55e"/>
+
+  <text x="640" y="32" font-size="20" fill="#94a3b8" text-anchor="middle">jack — zsh</text>
+
+  <g font-size="27" transform-origin="48 108">
+    <g class="line calc" transform-origin="48 108">
+      <text x="48" y="108">
+        <tspan fill="#475569">~/jack </tspan><tspan fill="#e2e8f0">$ </tspan><tspan fill="#14b8a6">jack </tspan><tspan fill="#e2e8f0">calc loan --amount 25000 --rate 0.062 --term 60</tspan>
+      </text>
+    </g>
+    <g class="line payment" transform-origin="48 148">
+      <text x="48" y="148">
+        <tspan fill="#34d399">💰 ok monthly payment </tspan><tspan fill="#fbbf24">$486.64</tspan>
+      </text>
+    </g>
+
+    <g class="line totp" transform-origin="48 296">
+      <text x="48" y="296">
+        <tspan fill="#475569">~/jack </tspan><tspan fill="#e2e8f0">$ </tspan><tspan fill="#14b8a6">jack </tspan><tspan fill="#e2e8f0">crypto totp</tspan>
+      </text>
+    </g>
+    <g class="line code" transform-origin="48 336">
+      <text x="48" y="336" fill="#fbbf24">🔐 845 372</text>
+      <text x="310" y="336" fill="#94a3b8">(30s)</text>
+    </g>
+
+    <g class="line convert" transform-origin="48 404">
+      <text x="48" y="404">
+        <tspan fill="#475569">~/jack </tspan><tspan fill="#e2e8f0">$ </tspan><tspan fill="#14b8a6">jack </tspan><tspan fill="#e2e8f0">convert base64 "J.A.C.K."</tspan>
+      </text>
+    </g>
+    <g class="line base64" transform-origin="48 444">
+      <text x="48" y="444" fill="#fbbf24">🔁 SkEuQy5LLg==</text>
+    </g>
+
+    <g class="line pomodoro" transform-origin="48 512">
+      <text x="48" y="512">
+        <tspan fill="#475569">~/jack </tspan><tspan fill="#e2e8f0">$ </tspan><tspan fill="#14b8a6">jack </tspan><tspan fill="#e2e8f0">time pomodoro</tspan>
+      </text>
+    </g>
+    <g class="line focus" transform-origin="48 552">
+      <text x="48" y="552" fill="#34d399">⏱️ ok focus started · 25:00</text>
+    </g>
+    <g class="line logged" transform-origin="48 592">
+      <text x="48" y="592" fill="#94a3b8">✅ session logged locally</text>
+    </g>
+
+    <g class="line prompt" transform-origin="48 648">
+      <text x="48" y="648">
+        <tspan fill="#475569">~/jack </tspan><tspan fill="#e2e8f0">$ </tspan>
+      </text>
+    </g>
+  </g>
+</svg>
