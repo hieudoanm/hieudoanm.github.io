@@ -17,12 +17,12 @@ test.describe('Home Page', () => {
     await expect(page.locator('#resume-sheet')).toBeVisible();
   });
 
-  test('shows 32 templates in the picker', async ({ page }) => {
+  test('shows 64 templates in the picker', async ({ page }) => {
     await page.goto('/');
     await page.getByRole('tab', { name: /templates/i }).click();
     await expect(
       page.getByLabel('Template results').locator('button')
-    ).toHaveCount(32);
+    ).toHaveCount(64);
   });
 
   test('filters templates by search', async ({ page }) => {

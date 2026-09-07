@@ -1,6 +1,6 @@
 # Resume
 
-> Build a polished, professional resume entirely offline — 32 templates, live
+> Build a polished, professional resume entirely offline — 64 templates, live
 > preview, and one-click export. Works on your phone, tablet, laptop, and
 > desktop so your next opportunity is always ready.
 
@@ -93,7 +93,7 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-A minimal, offline-first resume builder with 32 templates, live paper-size
+A minimal, offline-first resume builder with 64 templates, live paper-size
 preview, and export to HTML/PDF — no account, no cloud, no tracking, just your
 next resume ready in minutes.
 
@@ -112,7 +112,7 @@ next resume ready in minutes.
 
 ### 🎨 Templates
 
-- 32 offline templates with live thumbnails
+- 64 offline templates with live thumbnails
 - Template search with category filter chips
 
 ### 👁️ Preview

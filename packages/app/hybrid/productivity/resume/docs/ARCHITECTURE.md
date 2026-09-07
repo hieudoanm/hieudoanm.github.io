@@ -31,7 +31,9 @@ src/
         ResumeSheet.tsx    Sized A4-style sheet that renders the active template
         TemplatePicker.tsx Sidebar list of templates (aria-pressed buttons)
       template/primitives.tsx  Section, TextBlock, BulletList, HeaderRow, ContactList
-      templates/           32 templates + index.ts registry
+      templates/           8 group folders (classic, minimal, sidebar, bands,
+                            colorful, natural, soft, specialty) with 8 templates
+                            each + index.ts registry and __tests__/
     templates/             AboutTemplate, VersionTemplate, ErrorTemplate
   data/
     paper.ts               PAPER_SIZES, mmToPx, DEFAULT_PAPER_ID

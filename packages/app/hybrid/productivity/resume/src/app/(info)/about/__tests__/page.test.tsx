@@ -9,7 +9,7 @@ describe('AboutPage', () => {
 
   it('renders the template count', () => {
     render(<AboutPage />);
-    expect(screen.getByText('32 Free Templates')).toBeInTheDocument();
+    expect(screen.getByText('64 Free Templates')).toBeInTheDocument();
   });
 
   it('renders the supported paper sizes', () => {

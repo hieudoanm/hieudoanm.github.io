@@ -63,7 +63,7 @@ describe('HomePage', () => {
     const templateButtons = within(
       screen.getByLabelText('Template results')
     ).getAllByRole('button');
-    expect(templateButtons).toHaveLength(32);
+    expect(templateButtons).toHaveLength(64);
     expect(
       within(screen.getByLabelText('Template results')).getAllByRole('button', {
         pressed: true,

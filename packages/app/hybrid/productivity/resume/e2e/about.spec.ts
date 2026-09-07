@@ -7,7 +7,7 @@ test.describe('About Page', () => {
     await expect(page).toHaveTitle(/Resume/);
     await expect(page.locator('text=Free Resume Builder')).toBeVisible();
     await expect(
-      page.getByText('32 Free Templates', { exact: true })
+      page.getByText('64 Free Templates', { exact: true })
     ).toBeVisible();
   });
 });

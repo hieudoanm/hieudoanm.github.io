@@ -1,14 +1,20 @@
 # Templates
 
-The app ships **32 free templates**. Each is a React component that renders a
+The app ships **64 free templates**. Each is a React component that renders a
 full `ResumeData` at 100% of the sheet size, styled entirely with **inline
 styles** (no Tailwind classes) so it prints and exports cleanly as standalone
 HTML.
 
 ## How it works
 
-- Registry: `src/components/resume/templates/index.ts` exports
-  `RESUME_TEMPLATES: ResumeTemplate[]` and `getTemplate(id)`.
+- Templates live in eight group folders under `src/components/templates/resume/`
+  (classic·minimal·sidebar·bands·colorful·natural·soft·specialty), eight
+  templates per folder. Each folder carries its templates' tests in a nested
+  `__tests__/` directory.
+- `TemplatePicker` renders a divider heading per group between the template
+  buttons; groups with no matches are hidden.
+- Registry: `src/components/templates/resume/index.ts` exports
+  `TEMPLATE_GROUPS`, `RESUME_TEMPLATES: ResumeTemplate[]` and `getTemplate(id)`.
 - `ResumeTemplate = { id, name, description, component: ComponentType<{ data: ResumeData }> }`.
 - `ResumeSheet` resolves the active id with `getTemplate` and renders
   `<Template data={data} />` inside a `mm`-sized sheet.
@@ -19,8 +25,7 @@ HTML.
 
 ## Shared primitives
 
-`src/components/resume/template/primitives.tsx` provides the building blocks
-used by every template:
+`src/components/atoms/` provides the building blocks used by every template:
 
 | Primitive     | Purpose                                       |
 | ------------- | --------------------------------------------- |
@@ -57,26 +62,40 @@ A template must:
 4. Verify:
 
 ```sh
-pnpm exec jest src/components/resume/templates --coverage=false
+pnpm exec jest src/components/templates/resume --coverage=false
 pnpm exec jest src/app/__tests__/page.test.tsx --coverage=false   # count assertions
 pnpm exec playwright test e2e/home.spec.ts --reporter=line        # picker count + names
 ```
 
 ## Guardrails wired into tests
 
-- `templates.test.tsx` asserts the registry has exactly **32** entries, unique
-  ids, non-empty names/descriptions, and that every template renders seed data
-  and empty data.
-- `page.test.tsx` asserts the picker shows **32** selectable buttons.
-- `e2e/home.spec.ts` asserts `button[aria-pressed]` count is **32** and that
+- `registry.test.ts` asserts the registry has exactly **64** entries, unique
+  ids, non-empty names/descriptions. Every template also has its own
+  template-specific render + empty-data test in the same directory.
+- `page.test.tsx` asserts the picker shows **64** selectable buttons.
+- `e2e/home.spec.ts` asserts `button[aria-pressed]` count is **64** and that
   Classic / Modern / Elegant / Creative are present.
-- Changing the count means updating all four.
+- Changing the count means updating all of the above plus the marketing copy
+  (`src/content/about.ts`, `src/app/layout.tsx`) and the docs.
 
 ## Visual reference
 
-The 32 templates span: classic serifs (Classic, Elegant, Topaz, Inkwell,
-Pinnacle), single-column modern (Minimal, Slate, Quartz, Lattice), colored
-sidebars (Modern, Beacon, Nova, Aurora), header bands (Executive, Meadow, Ember,
-Timber, Sterling, Summit, Kinetic, Wave, Pulse), and utility/specialty
-(Technical, Academic, Compact, Align, Orbit, Sierra, Creative, Bold,
-Professional, Simple). See `index.ts` descriptions for the full list.
+The 64 templates are organized into eight folders (see `TEMPLATE_GROUPS` in
+`index.ts`):
+
+- **Classic & Formal** — classic serifs and letterpress: Classic, Elegant,
+  Topaz, Inkwell, Pinnacle, Vintage, Terra, Ceremony.
+- **Minimal & Clean** — single-column modern: Minimal, Slate, Quartz, Lattice,
+  Simple, Compact, Align, Zen.
+- **Sidebar Layouts** — colored / two-column sidebars: Modern, Beacon, Nova,
+  Aurora, Dusk, Iris, Harbor, Willow.
+- **Header Bands** — strong top color bands: Executive, Meadow, Ember, Timber,
+  Sterling, Summit, Wave, Kinetic.
+- **Colorful & Gradient** — vivid gradients and neon: Amber, Azure, Sol,
+  Solstice, Glow, Pulse, Saffron, Prism.
+- **Nature & Earth** — earthy and botanical: Grove, Flora, Pine, Nectar, Oasis,
+  Peaks, Tide, Ridge.
+- **Soft & Neutral** — pastels, light, and muted: Sherbet, Rose, Opal, Marble,
+  Canvas, Breeze, Copper, Coral.
+- **Specialty** — distinctive utilities: Technical, Academic, Orbit, Sierra,
+  Creative, Bold, Professional, Muse.

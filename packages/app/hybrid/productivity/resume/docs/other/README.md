@@ -1,7 +1,7 @@
 # Resume Builder — Documentation
 
 Free Resume Builder is a simple, **fully offline** resume editor: write your
-details, pick one of 32 templates, preview on real paper sizes, and export to
+details, pick one of 64 templates, preview on real paper sizes, and export to
 HTML / print to PDF. It runs as a static PWA and a Tauri desktop app — no
 backend, no accounts, no network.
 
@@ -18,7 +18,7 @@ backend, no accounts, no network.
 | Area        | Detail                                                            |
 | ----------- | ----------------------------------------------------------------- |
 | Pages       | `/` builder · `/about/` · `/version/` · 404 / error               |
-| Editor tabs | Editor · Templates (32) · Data (import/export)                    |
+| Editor tabs | Editor · Templates (64) · Data (import/export)                    |
 | Paper sizes | A3 · A4 · A5 · A6 · B5                                            |
 | Export      | HTML file download · Print / PDF via `window.print()`             |
 | Persistence | `localStorage` (`resume.data`, `resume.template`, `resume.paper`) |

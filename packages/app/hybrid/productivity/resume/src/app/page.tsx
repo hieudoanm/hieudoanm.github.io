@@ -1,12 +1,12 @@
 'use client';
 
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { DataPanel } from '../components/resume/data/DataPanel';
-import { EditorPanel } from '../components/resume/editor/EditorPanel';
-import { PreviewPanel } from '../components/resume/preview/PreviewPanel';
-import { ProfileSwitcher } from '../components/resume/preview/ProfileSwitcher';
-import { TemplatePicker } from '../components/resume/preview/TemplatePicker';
-import { RESUME_TEMPLATES } from '../components/resume/templates';
+import { DataPanel } from '../components/organisms/DataPanel';
+import { EditorPanel } from '../components/organisms/EditorPanel';
+import { ProfileSwitcher } from '../components/organisms/ProfileSwitcher';
+import { TaggedTemplatePicker } from '../components/organisms/TemplatePicker';
+import { PreviewPanel } from '../components/templates/PreviewPanel';
+import { RESUME_TEMPLATES } from '../components/templates/resume';
 import { DEFAULT_PAPER_ID, getPaperSize } from '../data/paper';
 import { seedResumeData } from '../data/seed';
 import { useHistory } from '../hooks/useHistory';
@@ -149,7 +149,7 @@ const HomePage = () => {
               <EditorPanel data={data} onChange={setData} />
             ) : tab === 'templates' ? (
               <div className="p-3">
-                <TemplatePicker
+                <TaggedTemplatePicker
                   selectedId={templateId}
                   onSelect={setTemplateId}
                 />

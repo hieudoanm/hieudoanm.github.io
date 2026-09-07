@@ -1,0 +1,99 @@
+'use client';
+
+import type { FC } from 'react';
+import { getPaperSize, mmToPx } from '../../data/paper';
+import { useOverflowDetect } from '../../hooks/useOverflowDetect';
+import { usePreviewScale } from '../../hooks/usePreviewScale';
+import type { ResumeData, ResumeOptions } from '../../types/resume';
+import { countResumeWords } from '../../utils/count';
+import { downloadResumeFile, printResume } from '../../utils/export';
+import { PreviewStage } from '../organisms/PreviewStage';
+import { PreviewToolbar } from '../organisms/PreviewToolbar';
+import { ResumeSheet } from '../organisms/ResumeSheet';
+
+interface PreviewPanelProps {
+  data: ResumeData;
+  templateId: string;
+  paperId: string;
+  options: ResumeOptions;
+  onPaperChange: (id: string) => void;
+  onOptionsChange: (options: ResumeOptions) => void;
+  canUndo: boolean;
+  canRedo: boolean;
+  onUndo: () => void;
+  onRedo: () => void;
+  onReset: () => void;
+}
+
+export const PreviewPanel: FC<PreviewPanelProps> = ({
+  data,
+  templateId,
+  paperId,
+  options,
+  onPaperChange,
+  onOptionsChange,
+  canUndo,
+  canRedo,
+  onUndo,
+  onRedo,
+  onReset,
+}) => {
+  const paper = getPaperSize(paperId);
+  const pxWidth = mmToPx(paper.widthMm);
+  const pxHeight = mmToPx(paper.heightMm);
+  const { containerRef, scale, zoom, setZoom } = usePreviewScale(pxWidth);
+  const overflows = useOverflowDetect([data, templateId, paperId, options]);
+  const words = countResumeWords(data);
+
+  const handleDownloadHtml = () => {
+    downloadResumeFile(data, paper);
+  };
+
+  const handleDensityChange = (density: ResumeOptions['density']) => {
+    onOptionsChange({ ...options, density });
+  };
+
+  const handleAccentChange = (accentColor: string) => {
+    onOptionsChange({ ...options, accentColor });
+  };
+
+  return (
+    <div className="flex min-h-0 min-w-0 flex-1 flex-col">
+      <PreviewToolbar
+        paperId={paperId}
+        density={options.density}
+        accentColor={options.accentColor}
+        scale={scale}
+        zoom={zoom}
+        overflows={overflows}
+        words={words}
+        onPaperChange={onPaperChange}
+        onDensityChange={handleDensityChange}
+        onAccentChange={handleAccentChange}
+        onZoomChange={setZoom}
+        onDownload={handleDownloadHtml}
+        onPrint={() => printResume(paper.widthMm, paper.heightMm)}
+        canUndo={canUndo}
+        canRedo={canRedo}
+        onUndo={onUndo}
+        onRedo={onRedo}
+        onReset={onReset}
+      />
+      <PreviewStage
+        containerRef={containerRef}
+        scale={scale}
+        widthPx={pxWidth}
+        heightPx={pxHeight}>
+        <ResumeSheet
+          data={data}
+          templateId={templateId}
+          widthMm={paper.widthMm}
+          heightMm={paper.heightMm}
+          options={options}
+        />
+      </PreviewStage>
+    </div>
+  );
+};
+
+PreviewPanel.displayName = 'PreviewPanel';

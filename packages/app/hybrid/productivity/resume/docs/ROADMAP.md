@@ -14,7 +14,7 @@
 | Editing     | Multiple named profiles with quick switching                                                                         |
 | Editing     | Example resumes to start from                                                                                        |
 | Editing     | Drag-and-drop reordering of list items (native DnD, no library)                                                      |
-| Templates   | 32 offline templates with live thumbnails                                                                            |
+| Templates   | 64 offline templates with live thumbnails                                                                            |
 | Templates   | Template search with category filter chips                                                                           |
 | Preview     | Real paper sizes: A3 · A4 · A5 · A6 · B5                                                                             |
 | Preview     | Text density (compact / normal / spacious) and accent color                                                          |
