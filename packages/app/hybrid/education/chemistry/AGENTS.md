@@ -15,8 +15,9 @@ Interactive periodic table of elements built with Next.js and Tauri.
 
 ## Key Conventions
 
-- Features are self-contained under `src/components/features/periodic-table/` —
-  colocate hooks, constants, helpers and tests.
+- Atomic design: the periodic table lives in `src/components/atoms/`
+  (`ElementCell`), `src/components/molecules/` (`PeriodicGridView`,
+  `CategoryFilter`) and `src/components/organisms/` (`PeriodicTable`).
 - Pages are thin: they compose templates (`HomeTemplate`) and feature
   components.
 - Path alias `@/*` maps to `./src/*`.

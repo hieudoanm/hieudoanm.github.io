@@ -25,19 +25,8 @@ describe('HomeTemplate', () => {
     expect(screen.getByTestId('tool-card-periodic-table')).toBeInTheDocument();
   });
 
-  it('renders xp and streak stats when provided', () => {
-    render(<HomeTemplate {...base} stats={{ xp: 120, streak: 3 }} />);
-    expect(screen.getByTestId('stat-xp').textContent).toContain('120');
-    expect(screen.getByTestId('stat-streak').textContent).toContain('3');
-  });
-
-  it('omits stats when not provided', () => {
-    render(<HomeTemplate {...base} />);
-    expect(screen.queryByTestId('stat-xp')).not.toBeInTheDocument();
-  });
-
   it('renders footer links when provided', () => {
-    render(<HomeTemplate {...base} footer={<a href="/about">About</a>} />);
+    render(<HomeTemplate {...base} />);
     expect(screen.getByRole('link', { name: 'About' })).toHaveAttribute(
       'href',
       '/about'

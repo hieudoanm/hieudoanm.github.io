@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import PeriodicTablePage from '@/app/periodic-table/page';
+import PeriodicTablePage from '@/app/(games)/periodic-table/page';
 
 describe('PeriodicTablePage', () => {
   it('Tool page renders inside a tool shell', () => {
