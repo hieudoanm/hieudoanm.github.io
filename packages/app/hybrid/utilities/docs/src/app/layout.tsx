@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 
 const RootLayout: FC<{ children: ReactNode }> = ({ children }) => {
   return (
-    <html lang="en" data-theme="light">
+    <html lang="en" data-theme="nothing">
       <body className={beVietnamPro.className + ' antialiased'}>
         <RootLayoutClient>{children}</RootLayoutClient>
       </body>
