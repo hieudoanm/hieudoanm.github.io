@@ -1,4 +1,4 @@
-import { isTauri, nativeNotify } from '../index';
+import { isTauri, nativeNotify } from '../native';
 
 const isPermissionGranted = jest.fn();
 const requestPermission = jest.fn();

@@ -5,5 +5,13 @@ describe('PrisonerDilemmaPage', () => {
   it('Tool page renders inside a tool shell', () => {
     render(<PrisonerDilemmaPage />);
     expect(screen.getByText('Cooperate')).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /View Bots/ })).toHaveAttribute(
+      'href',
+      '/prisoners-dilemma/bots'
+    );
+    expect(screen.getByRole('link', { name: /Simulation/ })).toHaveAttribute(
+      'href',
+      '/prisoners-dilemma/stimulation'
+    );
   });
 });

@@ -115,8 +115,10 @@ Think strategically and outsmart the bots.
 ### 🤝 Prisoner's Dilemma
 
 - 10-round iterated prisoner's dilemma against AI strategies
-- 5 bot strategies: Tit for Tat, Always Defect, Always Cooperate, Grim Trigger,
-  Random
+- 32 bot strategies, each with its own behaviour classified as cooperate, defect
+  or other, with a dedicated bots browser at `/prisoners-dilemma/bots`
+- Round-robin tournament simulation at `/prisoners-dilemma/stimulation` with
+  configurable rounds per match and score rankings
 - Payoff matrix displayed: cooperate/cooperate = 1yr, defect/defect = 2yr
 - Keyboard shortcuts: C (cooperate), D (defect), R (reset), Enter (next round)
 - Strategy reveal at game end

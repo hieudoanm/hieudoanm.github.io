@@ -2,9 +2,9 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import { PrisonerDilemma } from '../index';
 import { TOTAL_ROUNDS } from '../constants';
 
-jest.mock('../utils/game', () => {
-  const actual = jest.requireActual('../utils/game');
-  return { ...actual, pickStrategy: () => 'alwayscooperate' };
+jest.mock('../game', () => {
+  const actual = jest.requireActual('../game');
+  return { ...actual, pickStrategy: () => 'always-cooperate' };
 });
 
 const renderGame = (): void => {

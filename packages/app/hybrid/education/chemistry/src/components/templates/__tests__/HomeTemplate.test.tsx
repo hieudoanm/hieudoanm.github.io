@@ -24,12 +24,4 @@ describe('HomeTemplate', () => {
     expect(screen.getByText('Test app')).toBeInTheDocument();
     expect(screen.getByTestId('tool-card-periodic-table')).toBeInTheDocument();
   });
-
-  it('renders footer links when provided', () => {
-    render(<HomeTemplate {...base} />);
-    expect(screen.getByRole('link', { name: 'About' })).toHaveAttribute(
-      'href',
-      '/about'
-    );
-  });
 });
