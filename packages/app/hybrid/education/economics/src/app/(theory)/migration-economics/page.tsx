@@ -91,6 +91,26 @@ const MigrationPage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Economics_of_immigration',
+        label: 'Wikipedia: Economics of Immigration',
+        description:
+          'Overview of migration economics, wage gains, and remittance flows.',
+      },
+      {
+        href: 'https://www.investopedia.com/terms/r/remittance.asp',
+        label: 'Investopedia: Remittance',
+        description:
+          'Entry explaining remittances and their role in migration economics.',
+      },
+      {
+        href: 'https://www.britannica.com/topic/brain-drain',
+        label: 'Encyclopedia Britannica: Brain Drain',
+        description:
+          'Encyclopedia entry on the emigration of skilled workers and its effects.',
+      },
+    ]}
   />
 );
 

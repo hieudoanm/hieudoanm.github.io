@@ -97,6 +97,26 @@ const UnemploymentPage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://www.investopedia.com/terms/o/okunslaw.asp',
+        label: "Investopedia: Okun's Law",
+        description:
+          "Okun's law linking short-run GDP growth to changes in the unemployment rate.",
+      },
+      {
+        href: 'https://www.investopedia.com/terms/u/unemployment.asp',
+        label: 'Investopedia: Unemployment',
+        description:
+          'Definition of unemployment and how the unemployment rate is measured.',
+      },
+      {
+        href: 'https://en.wikipedia.org/wiki/Okun%27s_law',
+        label: "Wikipedia: Okun's law",
+        description:
+          'The empirical relationship between output and unemployment gaps.',
+      },
+    ]}
   />
 );
 

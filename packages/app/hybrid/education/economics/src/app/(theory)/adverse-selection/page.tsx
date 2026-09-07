@@ -100,6 +100,26 @@ const AdverseSelectionPage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Adverse_selection',
+        label: 'Wikipedia: Adverse Selection',
+        description:
+          'Overview of adverse selection theory, its causes, and market implications.',
+      },
+      {
+        href: 'https://www.investopedia.com/terms/a/adverseselection.asp',
+        label: 'Investopedia: Adverse Selection',
+        description:
+          'Entry defining adverse selection and its role in insurance and financial markets.',
+      },
+      {
+        href: 'https://www.nobelprize.org/prizes/economic-sciences/2001/akerlof/summary/',
+        label: 'Nobel Prize: George Akerlof (2001)',
+        description:
+          'Nobel Prize page for Akerlof, summarising his research on markets with asymmetric information.',
+      },
+    ]}
   />
 );
 

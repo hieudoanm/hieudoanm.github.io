@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import SimulationPage from '@/app/(games)/prisoners-dilemma/stimulation/page';
+import SimulationPage from '@/app/(games)/prisoners-dilemma/simulation/page';
 import { STRATEGIES } from '@/games/prisoners-dilemma/constants';
 
 describe('SimulationPage', () => {

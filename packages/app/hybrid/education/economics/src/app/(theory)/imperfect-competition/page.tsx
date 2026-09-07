@@ -97,6 +97,26 @@ const ImperfectCompetitionPage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Imperfect_competition',
+        label: 'Wikipedia: Imperfect Competition',
+        description:
+          'Overview of market structures between perfect competition and monopoly.',
+      },
+      {
+        href: 'https://www.investopedia.com/terms/i/imperfectcompetition.asp',
+        label: 'Investopedia: Imperfect Competition',
+        description:
+          'Entry defining imperfect competition and its types: monopolistic competition and oligopoly.',
+      },
+      {
+        href: 'https://en.wikipedia.org/wiki/Monopolistic_competition',
+        label: 'Wikipedia: Monopolistic Competition',
+        description:
+          'Detailed analysis of monopolistic competition, product differentiation, and long-run equilibrium.',
+      },
+    ]}
   />
 );
 

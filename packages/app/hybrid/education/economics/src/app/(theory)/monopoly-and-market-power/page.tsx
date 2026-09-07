@@ -99,6 +99,26 @@ const MonopolyPage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Monopoly',
+        label: 'Wikipedia: Monopoly',
+        description:
+          'Overview of monopoly theory, pricing, deadweight loss, and regulation.',
+      },
+      {
+        href: 'https://www.investopedia.com/terms/m/monopoly.asp',
+        label: 'Investopedia: Monopoly',
+        description:
+          'Entry defining monopoly, barriers to entry, and market power.',
+      },
+      {
+        href: 'https://www.britannica.com/topic/monopoly-economics',
+        label: 'Encyclopedia Britannica: Monopoly',
+        description:
+          'Encyclopedia entry on monopoly and its effects on market outcomes.',
+      },
+    ]}
   />
 );
 

@@ -89,6 +89,26 @@ const PortfolioTheoryPage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Modern_portfolio_theory',
+        label: 'Wikipedia: Modern Portfolio Theory',
+        description:
+          'Overview of MPT, diversification, and the efficient frontier.',
+      },
+      {
+        href: 'https://www.investopedia.com/terms/m/modernportfoliotheory.asp',
+        label: 'Investopedia: Modern Portfolio Theory',
+        description:
+          'Entry on MPT, expected returns, and portfolio construction.',
+      },
+      {
+        href: 'https://www.nobelprize.org/prizes/economic-sciences/1990/markowitz/facts/',
+        label: 'Nobel Prize: Harry Markowitz (1990)',
+        description:
+          'Nobel biography of Markowitz, founder of modern portfolio theory.',
+      },
+    ]}
   />
 );
 

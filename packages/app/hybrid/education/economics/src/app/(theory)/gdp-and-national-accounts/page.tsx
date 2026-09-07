@@ -97,6 +97,26 @@ const GDPPage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Gross_domestic_product',
+        label: 'Wikipedia: Gross Domestic Product',
+        description:
+          'Overview of GDP definition, measurement approaches, and limitations.',
+      },
+      {
+        href: 'https://www.investopedia.com/terms/g/gdp.asp',
+        label: 'Investopedia: Gross Domestic Product',
+        description:
+          'Entry explaining GDP calculation, real vs nominal, and economic significance.',
+      },
+      {
+        href: 'https://www.bea.gov/resources/methodologies/gdp-dashboard',
+        label: 'BEA: GDP Dashboard',
+        description:
+          'U.S. Bureau of Economic Analysis official GDP data and national accounts methodology.',
+      },
+    ]}
   />
 );
 

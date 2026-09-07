@@ -89,6 +89,25 @@ const OverconfidencePage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Overconfidence_effect',
+        label: 'Wikipedia: Overconfidence Effect',
+        description: 'Overview of the bias and the evidence behind it.',
+      },
+      {
+        href: 'https://www.investopedia.com/overconfidence-bias-7485796',
+        label: 'Investopedia: Overconfidence Bias',
+        description:
+          'How overconfidence distorts investing decisions and performance.',
+      },
+      {
+        href: 'https://www.britannica.com/science/Dunning-Kruger-effect',
+        label: 'Britannica: Dunning-Kruger Effect',
+        description:
+          'Related phenomenon in which the least competent overestimate their ability.',
+      },
+    ]}
   />
 );
 

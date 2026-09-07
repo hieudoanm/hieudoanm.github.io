@@ -102,6 +102,26 @@ const HeuristicsPage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Heuristics_in_judgment_and_decision-making',
+        label: 'Wikipedia: Heuristics in Judgment and Decision-Making',
+        description:
+          'Survey of Kahneman and Tverskys research on mental shortcuts and cognitive biases.',
+      },
+      {
+        href: 'https://www.nobelprize.org/prizes/economic-sciences/2002/kahneman/summary/',
+        label: 'Nobel Prize: Daniel Kahneman (2002)',
+        description:
+          'Nobel Prize page for Kahneman, recognizing his work on judgment under uncertainty and prospect theory.',
+      },
+      {
+        href: 'https://www.investopedia.com/terms/c/cognitive-bias.asp',
+        label: 'Investopedia: Cognitive Bias',
+        description:
+          'Entry listing common cognitive biases that affect financial and everyday decision-making.',
+      },
+    ]}
   />
 );
 

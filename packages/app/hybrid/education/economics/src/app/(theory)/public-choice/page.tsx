@@ -96,6 +96,26 @@ const PublicChoicePage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Public_choice',
+        label: 'Wikipedia: Public choice',
+        description:
+          'Overview of public choice theory, applying economic analysis to political decision-making.',
+      },
+      {
+        href: 'https://www.nobelprize.org/prizes/economic-sciences/1986/buchanan/facts/',
+        label: 'Nobel Prize: James M. Buchanan Jr.',
+        description:
+          'Official Nobel Prize biography of James Buchanan, founder of public choice theory.',
+      },
+      {
+        href: 'https://www.investopedia.com/terms/j/james-m-buchanan-jr.asp',
+        label: 'Investopedia: James M. Buchanan',
+        description:
+          'Introduction to James Buchanan and the public choice school of economics.',
+      },
+    ]}
   />
 );
 

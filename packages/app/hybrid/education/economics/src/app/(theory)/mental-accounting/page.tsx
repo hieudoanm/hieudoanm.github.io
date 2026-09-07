@@ -90,6 +90,26 @@ const MentalAccountingPage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Mental_accounting',
+        label: 'Wikipedia: Mental Accounting',
+        description:
+          "Overview of Thaler's concept and its role in behavioral economics.",
+      },
+      {
+        href: 'https://www.investopedia.com/terms/m/mental-accounting.asp',
+        label: 'Investopedia: Mental Accounting',
+        description:
+          'Entry explaining how people categorize and treat money differently.',
+      },
+      {
+        href: 'https://www.nobelprize.org/prizes/economic-sciences/2017/summary/',
+        label: 'Nobel Prize: Richard Thaler 2017',
+        description:
+          'Nobel award to Thaler for contributions to behavioral economics including mental accounting.',
+      },
+    ]}
   />
 );
 

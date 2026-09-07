@@ -117,7 +117,7 @@ Think strategically and outsmart the bots.
 - 10-round iterated prisoner's dilemma against AI strategies
 - 32 bot strategies, each with its own behaviour classified as cooperate, defect
   or other, with a dedicated bots browser at `/prisoners-dilemma/bots`
-- Round-robin tournament simulation at `/prisoners-dilemma/stimulation` with
+- Round-robin tournament simulation at `/prisoners-dilemma/simulation` with
   configurable rounds per match and score rankings
 - Payoff matrix displayed: cooperate/cooperate = 1yr, defect/defect = 2yr
 - Keyboard shortcuts: C (cooperate), D (defect), R (reset), Enter (next round)
@@ -125,6 +125,40 @@ Think strategically and outsmart the bots.
 - Round history tracking with scores per round
 - Win/lose/draw determination with visual feedback
 - Pure game logic in `utils/game.ts` with exhaustive type checking
+
+### 🎮 Interactive Games & Simulations
+
+Each theory page links to a playable game under `app/(games)`:
+
+- **Auction Simulator** (`/auction-theory/auction`) — bid against three AI
+  bidders across English, Dutch, first-price and Vickrey formats; discover
+  revenue equivalence and the winner's curse.
+- **Ultimatum Split** (`/bargaining-theory/ultimatum`) — propose a split of $100
+  and learn how much you must offer to be accepted.
+- **Contribute!** (`/public-goods-dilemma/contribute`) — play a public goods
+  game and watch free riding trump the group optimum.
+- **Commons Harvest** (`/tragedy-of-the-commons/harvest`) — graze one shared
+  renewable resource against four villagers and try to avoid collapse.
+- **Cournot Competition** (`/oligopoly/cournot`) — pick your output against a
+  rival firm and feel the pull of the Cournot equilibrium.
+- **Play RPS** (`/zero-sum-games/rps`) — learn minimax and the value of zero-sum
+  games against exploitable bot strategies.
+- **Stag Hunt** (`/coordination-games/stag-hunt`) — coordinate with a partner
+  and learn why trust earns more than playing it safe.
+- **Price Lab** (`/supply-and-demand/price-lab`) — drag the curves and see
+  equilibrium, shortages, surpluses and elasticity live.
+- **Framing Game** (`/prospect-theory/framing`) — answer Kahneman and Tversky
+  questions and discover your own reflection effect.
+- **Endowment Experiment** (`/endowment-effect/trade`) — measure your own
+  willingness to accept vs pay and see the gap.
+- **Commitment Device** (`/time-inconsistency/savings`) — save across 12 days
+  and feel present bias steal your own plans.
+- **Dictator Game** (`/social-preferences/dictator`) — decide how much of your
+  endowment to give when nobody can punish you.
+- **Order Book** (`/market-microstructure/order-book`) — trade the spread: cross
+  it with market orders or earn it back with limits.
+- **Job Market** (`/signaling/job-market`) — set wages and learn why education
+  only works as a signal when it costs more for the unproductive.
 
 ---
 

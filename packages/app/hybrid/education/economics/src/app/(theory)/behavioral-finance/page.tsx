@@ -94,6 +94,26 @@ const BehavioralFinancePage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Behavioral_economics',
+        label: 'Wikipedia: Behavioral Economics',
+        description:
+          'Survey of behavioral economics and its application to financial markets and investor bias.',
+      },
+      {
+        href: 'https://www.investopedia.com/terms/b/behavioralfinance.asp',
+        label: 'Investopedia: Behavioral Finance',
+        description:
+          'Entry defining behavioral finance and the key biases that affect investor decision-making.',
+      },
+      {
+        href: 'https://www.nobelprize.org/prizes/economic-sciences/2017/thaler/summary/',
+        label: 'Nobel Prize: Richard Thaler (2017)',
+        description:
+          'Nobel Prize page for Thaler, whose work on nudge theory and mental accounting shaped behavioral finance.',
+      },
+    ]}
   />
 );
 

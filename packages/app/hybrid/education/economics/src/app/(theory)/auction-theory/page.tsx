@@ -97,6 +97,34 @@ const AuctionTheoryPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/auction-theory/auction',
+        label: 'Auction Simulator',
+        description:
+          'Bid against three AI bidders across four auction formats and discover revenue equivalence.',
+      },
+    ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Auction_theory',
+        label: 'Wikipedia: Auction Theory',
+        description:
+          'Survey of auction theory, formats, and key results like revenue equivalence.',
+      },
+      {
+        href: 'https://www.nobelprize.org/prizes/economic-sciences/2020/milgrom-wilson/summary/',
+        label: 'Nobel Prize: 2020 (Milgrom & Wilson)',
+        description:
+          'Nobel Prize page for auction theory pioneers Paul Milgrom and Robert Wilson.',
+      },
+      {
+        href: 'https://www.investopedia.com/terms/v/vickrey-auction.asp',
+        label: 'Investopedia: Vickrey Auction',
+        description:
+          'Entry explaining the second-price sealed-bid auction and its truthful bidding property.',
+      },
+    ]}
   />
 );
 

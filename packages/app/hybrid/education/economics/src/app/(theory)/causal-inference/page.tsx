@@ -99,6 +99,26 @@ const CausalInferencePage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Causal_inference',
+        label: 'Wikipedia: Causal Inference',
+        description:
+          'Survey of methods for estimating cause and effect from observational and experimental data.',
+      },
+      {
+        href: 'https://www.nobelprize.org/prizes/economic-sciences/2021/card-angrist-imbens/summary/',
+        label: 'Nobel Prize: 2021 (Card, Angrist, Imbens)',
+        description:
+          'Nobel Prize page recognizing contributions to natural experiments and causal inference methods.',
+      },
+      {
+        href: 'https://www.nobelprize.org/prizes/economic-sciences/2019/banerjee-duflo-kremer/summary/',
+        label: 'Nobel Prize: 2019 (Banerjee, Duflo, Kremer)',
+        description:
+          'Nobel Prize page recognizing experimental approaches to alleviating global poverty.',
+      },
+    ]}
   />
 );
 

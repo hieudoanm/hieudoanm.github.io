@@ -90,6 +90,26 @@ const ArbitragePage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Arbitrage',
+        label: 'Wikipedia: Arbitrage',
+        description:
+          'Overview of arbitrage theory, types, and its role in market efficiency.',
+      },
+      {
+        href: 'https://www.investopedia.com/terms/a/arbitrage.asp',
+        label: 'Investopedia: Arbitrage',
+        description:
+          'Entry defining arbitrage with examples across financial markets.',
+      },
+      {
+        href: 'https://www.britannica.com/money/arbitrage',
+        label: 'Encyclopedia Britannica: Arbitrage',
+        description:
+          'Encyclopedic overview of arbitrage as a mechanism for price convergence.',
+      },
+    ]}
   />
 );
 

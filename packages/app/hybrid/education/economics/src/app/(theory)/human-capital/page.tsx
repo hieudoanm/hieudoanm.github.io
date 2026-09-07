@@ -88,6 +88,26 @@ const HumanCapitalPage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Human_capital',
+        label: 'Wikipedia: Human Capital',
+        description:
+          'Overview of human capital theory, investment in education, and economic returns.',
+      },
+      {
+        href: 'https://www.nobelprize.org/prizes/economic-sciences/1992/summary/',
+        label: 'Nobel Prize: 1992 Economic Sciences',
+        description:
+          'Nobel citation for Gary Becker for extending microeconomic analysis to human behavior.',
+      },
+      {
+        href: 'https://www.investopedia.com/terms/h/humancapital.asp',
+        label: 'Investopedia: Human Capital',
+        description:
+          'Entry defining human capital and its role in productivity and economic growth.',
+      },
+    ]}
   />
 );
 

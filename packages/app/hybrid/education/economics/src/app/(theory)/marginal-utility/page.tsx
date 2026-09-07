@@ -96,6 +96,26 @@ const MarginalUtilityPage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Marginal_utility',
+        label: 'Wikipedia: Marginal Utility',
+        description:
+          'Overview of the concept, its history, and the law of diminishing marginal utility.',
+      },
+      {
+        href: 'https://www.investopedia.com/terms/m/marginalutility.asp',
+        label: 'Investopedia: Marginal Utility',
+        description:
+          'Entry defining marginal utility and its role in consumer choice theory.',
+      },
+      {
+        href: 'https://www.britannica.com/science/marginal-utility',
+        label: 'Encyclopedia Britannica: Marginal Utility',
+        description:
+          'Encyclopedia entry on the concept and its economic applications.',
+      },
+    ]}
   />
 );
 

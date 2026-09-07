@@ -70,9 +70,28 @@ const PrisonerDilemmaPage: NextPage = () => (
         description: 'Browse all 32 strategies and learn how each one plays.',
       },
       {
-        href: '/prisoners-dilemma/stimulation',
+        href: '/prisoners-dilemma/simulation',
         label: 'Simulation',
         description: 'Run a round-robin tournament between every pair of bots.',
+      },
+    ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Prisoner%27s_dilemma',
+        label: 'Wikipedia: Prisoner’s Dilemma',
+        description: 'Overview of the classic game and its applications.',
+      },
+      {
+        href: 'https://plato.stanford.edu/entries/prisoner-dilemma/',
+        label: 'Stanford Encyclopedia of Philosophy: Prisoner’s Dilemma',
+        description:
+          'Authoritative survey of the dilemma and its formal treatment.',
+      },
+      {
+        href: 'https://www.investopedia.com/terms/p/prisoners-dilemma.asp',
+        label: 'Investopedia: Prisoner’s Dilemma',
+        description:
+          'Entry on how the dilemma works and its business applications.',
       },
     ]}
   />

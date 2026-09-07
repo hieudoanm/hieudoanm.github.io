@@ -107,6 +107,26 @@ const MechanismDesignPage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://www.nobelprize.org/prizes/economic-sciences/2007/summary/',
+        label: 'Nobel Prize: 2007 Economic Sciences',
+        description:
+          'Nobel award to Hurwicz, Maskin, and Myerson for mechanism design theory.',
+      },
+      {
+        href: 'https://en.wikipedia.org/wiki/Mechanism_design',
+        label: 'Wikipedia: Mechanism Design',
+        description:
+          'Overview of reverse game theory, incentive compatibility, and the revelation principle.',
+      },
+      {
+        href: 'https://www.investopedia.com/terms/m/mechanism-design.asp',
+        label: 'Investopedia: Mechanism Design',
+        description:
+          'Entry explaining how rules are designed to achieve desired economic outcomes.',
+      },
+    ]}
   />
 );
 

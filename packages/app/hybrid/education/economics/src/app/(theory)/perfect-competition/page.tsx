@@ -93,6 +93,25 @@ const PerfectCompetitionPage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Perfect_competition',
+        label: 'Wikipedia: Perfect Competition',
+        description: 'Overview of the market structure and its assumptions.',
+      },
+      {
+        href: 'https://www.investopedia.com/terms/p/perfectcompetition.asp',
+        label: 'Investopedia: Perfect Competition',
+        description:
+          'Entry on the conditions, results, and efficiency of perfect competition.',
+      },
+      {
+        href: 'https://www.britannica.com/topic/perfect-competition',
+        label: 'Britannica: Perfect Competition',
+        description:
+          'Article on the idealized market used as the benchmark for efficiency.',
+      },
+    ]}
   />
 );
 

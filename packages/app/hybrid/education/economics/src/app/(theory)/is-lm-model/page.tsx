@@ -94,6 +94,26 @@ const ISLMPage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/IS%E2%80%93LM_model',
+        label: 'Wikipedia: IS-LM Model',
+        description:
+          'Overview of the model developed by Hicks and Hansen and its applications.',
+      },
+      {
+        href: 'https://www.investopedia.com/terms/i/is-lm-curve.asp',
+        label: 'Investopedia: IS-LM Curve',
+        description:
+          'Entry explaining the IS and LM curves and their intersection.',
+      },
+      {
+        href: 'https://www.britannica.com/topic/IS-LM-model',
+        label: 'Encyclopedia Britannica: IS-LM Model',
+        description:
+          'Encyclopedia entry on the IS-LM framework for macroeconomic policy analysis.',
+      },
+    ]}
   />
 );
 

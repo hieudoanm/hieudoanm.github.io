@@ -100,6 +100,26 @@ const KeynesianPage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Keynesian_economics',
+        label: 'Wikipedia: Keynesian Economics',
+        description:
+          'Comprehensive overview of Keynesian theory and its policy implications.',
+      },
+      {
+        href: 'https://www.investopedia.com/terms/k/keynesianeconomics.asp',
+        label: 'Investopedia: Keynesian Economics',
+        description:
+          'Entry defining aggregate demand, the multiplier, and countercyclical policy.',
+      },
+      {
+        href: 'https://www.nobelprize.org/prizes/economic-sciences/1999/summary/',
+        label: 'Nobel Prize: Robert Mundell 1999',
+        description:
+          'Nobel citation for work on monetary and fiscal policy in the Keynesian tradition.',
+      },
+    ]}
   />
 );
 

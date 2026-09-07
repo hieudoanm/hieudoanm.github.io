@@ -102,6 +102,26 @@ const GameTheoryBasicsPage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Game_theory',
+        label: 'Wikipedia: Game Theory',
+        description:
+          'Comprehensive overview of game theory, solution concepts, and applications.',
+      },
+      {
+        href: 'https://www.nobelprize.org/prizes/economic-sciences/1994/summary/',
+        label: 'Nobel Prize: 1994 Economic Sciences',
+        description:
+          'Nobel citation for John Nash, John Harsanyi, and Reinhard Selten for game theory analysis.',
+      },
+      {
+        href: 'https://plato.stanford.edu/entries/game-theory/',
+        label: 'Stanford Encyclopedia of Philosophy: Game Theory',
+        description:
+          'In-depth philosophical and formal treatment of game theory concepts and debates.',
+      },
+    ]}
   />
 );
 

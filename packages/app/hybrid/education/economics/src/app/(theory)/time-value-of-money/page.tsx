@@ -93,6 +93,26 @@ const TimeValuePage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Time_value_of_money',
+        label: 'Wikipedia: Time value of money',
+        description:
+          'The concept that money today is worth more than the same amount in the future.',
+      },
+      {
+        href: 'https://www.investopedia.com/terms/t/timevalueofmoney.asp',
+        label: 'Investopedia: Time Value of Money',
+        description:
+          'Explanation of TVM with future value, present value, and compounding formulas.',
+      },
+      {
+        href: 'https://www.investopedia.com/terms/p/presentvalue.asp',
+        label: 'Investopedia: Present Value',
+        description:
+          'How present value discounts future cash flows for investment decisions.',
+      },
+    ]}
   />
 );
 

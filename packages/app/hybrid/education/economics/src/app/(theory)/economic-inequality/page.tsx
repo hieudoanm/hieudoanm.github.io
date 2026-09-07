@@ -102,6 +102,26 @@ const InequalityPage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Economic_inequality',
+        label: 'Wikipedia: Economic Inequality',
+        description:
+          'Comprehensive overview of income and wealth inequality, measurement tools, and causes.',
+      },
+      {
+        href: 'https://ourworldindata.org/economic-inequality',
+        label: 'Our World in Data: Economic Inequality',
+        description:
+          'Data-driven exploration of global inequality trends, causes, and consequences.',
+      },
+      {
+        href: 'https://www.investopedia.com/terms/g/gini-index.asp',
+        label: 'Investopedia: Gini Index',
+        description:
+          'Entry defining the Gini coefficient and its use in measuring income distribution.',
+      },
+    ]}
   />
 );
 

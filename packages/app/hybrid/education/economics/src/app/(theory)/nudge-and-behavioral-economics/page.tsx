@@ -109,6 +109,26 @@ const NudgePage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Nudge_theory',
+        label: 'Wikipedia: Nudge Theory',
+        description:
+          'Overview of nudge theory, choice architecture, and libertarian paternalism.',
+      },
+      {
+        href: 'https://www.investopedia.com/terms/b/behavioraleconomics.asp',
+        label: 'Investopedia: Behavioral Economics',
+        description:
+          'Introduction to behavioral economics and how psychology shapes economic decisions.',
+      },
+      {
+        href: 'https://www.nobelprize.org/prizes/economic-sciences/2017/thaler/facts/',
+        label: 'Nobel Prize: Richard Thaler (2017)',
+        description:
+          'Nobel biography of Thaler, awarded for integrating psychology into economics.',
+      },
+    ]}
   />
 );
 

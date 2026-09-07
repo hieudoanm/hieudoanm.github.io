@@ -101,6 +101,34 @@ const TragedyOfTheCommonsPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/tragedy-of-the-commons/harvest',
+        label: 'Commons Harvest',
+        description:
+          'Graze one shared resource against four villagers and try to avoid collapse.',
+      },
+    ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Tragedy_of_the_commons',
+        label: 'Wikipedia: Tragedy of the commons',
+        description:
+          "Hardin's parable of the overexploitation of shared resources.",
+      },
+      {
+        href: 'https://www.investopedia.com/terms/t/tragedy-of-the-commons.asp',
+        label: 'Investopedia: Tragedy of the Commons',
+        description:
+          'The tragedy of the commons and policy responses to resource overuse.',
+      },
+      {
+        href: 'https://www.nobelprize.org/prizes/economic-sciences/2009/ostrom/facts/',
+        label: 'Nobel Prize: Elinor Ostrom',
+        description:
+          'The 2009 Nobel Prize recognized the governance of common-pool resources.',
+      },
+    ]}
   />
 );
 

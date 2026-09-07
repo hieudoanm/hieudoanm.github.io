@@ -93,6 +93,25 @@ const NashEquilibriumPage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Nash_equilibrium',
+        label: 'Wikipedia: Nash Equilibrium',
+        description: 'Overview of the concept, its definition, and history.',
+      },
+      {
+        href: 'https://www.investopedia.com/terms/n/nash-equilibrium.asp',
+        label: 'Investopedia: Nash Equilibrium',
+        description:
+          'How it works in game theory, with worked examples including the Prisoner’s Dilemma.',
+      },
+      {
+        href: 'https://www.nobelprize.org/prizes/economic-sciences/1994/nash/facts/',
+        label: 'Nobel Prize: John Nash (1994)',
+        description:
+          'Nobel biography of Nash and his contribution to game theory.',
+      },
+    ]}
   />
 );
 

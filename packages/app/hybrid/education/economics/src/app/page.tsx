@@ -1,75 +1,86 @@
 'use client';
 
-import {
-  PiStrategy,
-  PiGlobe,
-  PiUsersThree,
-  PiArrowsLeftRight,
-  PiTarget,
-  PiShield,
-  PiHandshake,
-  PiLightbulb,
-  PiChartLineDown,
-  PiSquaresFour,
-  PiFeather,
-  PiFlowArrow,
-  PiTestTube,
-  PiClockCountdown,
-  PiChartLine,
-  PiBank,
-  PiChartLineUp,
-  PiGraph,
-  PiArrowLineUp,
-  PiArrowsCounterClockwise,
-  PiWind,
-  PiWarning,
-  PiBuildingOffice,
-  PiChartPie,
-  PiGlobeHemisphereWest,
-  PiBrain,
-  PiMegaphone,
-  PiUsers,
-  PiPiggyBank,
-  PiCoins,
-  PiBriefcase,
-  PiTrendDown,
-  PiRepeat,
-  PiTreeStructure,
-  PiHandCoins,
-  PiGridFour,
-  PiDna,
-  PiGameController,
-  PiStack,
-  PiTag,
-  PiShoppingCart,
-  PiFactory,
-  PiEquals,
-  PiClock,
-  PiWarningCircle,
-  PiChartBar,
-  PiIntersect,
-  PiTrendUp,
-  PiWaveSine,
-  PiMoney,
-  PiCrosshair,
-  PiUserMinus,
-  PiChartScatter,
-  PiGauge,
-  PiSmileySad,
-  PiBoundingBox,
-  PiArrowsClockwise,
-  PiWallet,
-  PiGift,
-  PiHeart,
-  PiCrown,
-  PiGraduationCap,
-  PiSneaker,
-  PiAirplane,
-} from 'react-icons/pi';
 import { HomeTemplate } from '@/components/templates/HomeTemplate';
 import { NextPage } from 'next';
+import { IconType } from 'react-icons';
+import {
+  PiAirplane,
+  PiArrowLineUp,
+  PiArrowsClockwise,
+  PiArrowsCounterClockwise,
+  PiArrowsLeftRight,
+  PiBank,
+  PiBoundingBox,
+  PiBrain,
+  PiBriefcase,
+  PiBuildingOffice,
+  PiChartBar,
+  PiChartLine,
+  PiChartLineDown,
+  PiChartLineUp,
+  PiChartPie,
+  PiChartScatter,
+  PiClock,
+  PiClockCountdown,
+  PiCoins,
+  PiCrosshair,
+  PiCrown,
+  PiDna,
+  PiEquals,
+  PiFactory,
+  PiFeather,
+  PiFlowArrow,
+  PiGameController,
+  PiGauge,
+  PiGift,
+  PiGlobe,
+  PiGlobeHemisphereWest,
+  PiGraduationCap,
+  PiGraph,
+  PiGridFour,
+  PiHandCoins,
+  PiHandshake,
+  PiHeart,
+  PiIntersect,
+  PiLightbulb,
+  PiMegaphone,
+  PiMoney,
+  PiPiggyBank,
+  PiRepeat,
+  PiShield,
+  PiShoppingCart,
+  PiSmileySad,
+  PiSneaker,
+  PiSquaresFour,
+  PiStack,
+  PiStrategy,
+  PiTag,
+  PiTarget,
+  PiTestTube,
+  PiTreeStructure,
+  PiTrendDown,
+  PiTrendUp,
+  PiUserMinus,
+  PiUsers,
+  PiUsersThree,
+  PiWallet,
+  PiWarning,
+  PiWarningCircle,
+  PiWaveSine,
+  PiWind,
+} from 'react-icons/pi';
 
-const ITEMS = [
+type Item = {
+  label: string;
+  description: string;
+  icon: IconType;
+  href: string;
+  badge?: string;
+  category: string;
+  difficulty: 'Beginner' | 'Intermediate' | 'Advanced';
+};
+
+const ITEMS: Item[] = [
   {
     label: "Prisoner's Dilemma",
     description: 'Iterated game theory against AI strategies',
@@ -77,6 +88,7 @@ const ITEMS = [
     href: '/prisoners-dilemma/',
     badge: 'Nobel 1994',
     category: 'Game Theory',
+    difficulty: 'Beginner',
   },
   {
     label: 'Nash Equilibrium',
@@ -85,6 +97,7 @@ const ITEMS = [
     href: '/nash-equilibrium/',
     badge: 'Nobel 1994',
     category: 'Game Theory',
+    difficulty: 'Intermediate',
   },
   {
     label: 'Tragedy of the Commons',
@@ -93,6 +106,7 @@ const ITEMS = [
     href: '/tragedy-of-the-commons/',
     badge: 'Nobel 2009',
     category: 'Public & Macro',
+    difficulty: 'Beginner',
   },
   {
     label: 'Public Goods Dilemma',
@@ -100,6 +114,7 @@ const ITEMS = [
     icon: PiUsersThree,
     href: '/public-goods-dilemma/',
     category: 'Public & Macro',
+    difficulty: 'Beginner',
   },
   {
     label: 'Opportunity Cost',
@@ -107,6 +122,7 @@ const ITEMS = [
     icon: PiArrowsLeftRight,
     href: '/opportunity-cost/',
     category: 'Markets & Pricing',
+    difficulty: 'Beginner',
   },
   {
     label: 'Moral Hazard',
@@ -115,6 +131,7 @@ const ITEMS = [
     href: '/moral-hazard/',
     badge: 'Nobel 2001',
     category: 'Information & Risk',
+    difficulty: 'Intermediate',
   },
   {
     label: 'Auction Theory',
@@ -123,6 +140,7 @@ const ITEMS = [
     href: '/auction-theory/',
     badge: 'Nobel 1996 · 2020',
     category: 'Game Theory',
+    difficulty: 'Advanced',
   },
   {
     label: 'Bayesian Updating',
@@ -130,6 +148,7 @@ const ITEMS = [
     icon: PiLightbulb,
     href: '/bayesian-updating/',
     category: 'Behavioral',
+    difficulty: 'Intermediate',
   },
   {
     label: 'Prospect Theory',
@@ -138,6 +157,7 @@ const ITEMS = [
     href: '/prospect-theory/',
     badge: 'Nobel 2002',
     category: 'Behavioral',
+    difficulty: 'Intermediate',
   },
   {
     label: 'Mechanism Design',
@@ -147,6 +167,7 @@ const ITEMS = [
     href: '/mechanism-design/',
     badge: 'Nobel 2007',
     category: 'Game Theory',
+    difficulty: 'Advanced',
   },
   {
     label: 'Nudge & Behavioral Econ',
@@ -156,6 +177,7 @@ const ITEMS = [
     href: '/nudge-and-behavioral-economics/',
     badge: 'Nobel 2017',
     category: 'Behavioral',
+    difficulty: 'Beginner',
   },
   {
     label: 'Causal Inference',
@@ -164,6 +186,7 @@ const ITEMS = [
     href: '/causal-inference/',
     badge: 'Nobel 2021',
     category: 'Information & Risk',
+    difficulty: 'Advanced',
   },
   {
     label: 'Development RCTs',
@@ -172,6 +195,7 @@ const ITEMS = [
     href: '/development-rcts/',
     badge: 'Nobel 2019',
     category: 'Development & Growth',
+    difficulty: 'Advanced',
   },
   {
     label: 'Time Inconsistency',
@@ -180,6 +204,7 @@ const ITEMS = [
     href: '/time-inconsistency/',
     badge: 'Nobel 2004',
     category: 'Behavioral',
+    difficulty: 'Intermediate',
   },
   {
     label: 'Market Microstructure',
@@ -187,6 +212,7 @@ const ITEMS = [
     icon: PiChartLine,
     href: '/market-microstructure/',
     category: 'Information & Risk',
+    difficulty: 'Advanced',
   },
   {
     label: 'Institutions & Growth',
@@ -195,6 +221,7 @@ const ITEMS = [
     href: '/institutions-and-growth/',
     badge: 'Nobel 1993 · 2024',
     category: 'Development & Growth',
+    difficulty: 'Intermediate',
   },
   {
     label: 'Supply & Demand',
@@ -202,6 +229,7 @@ const ITEMS = [
     icon: PiChartLineUp,
     href: '/supply-and-demand/',
     category: 'Markets & Pricing',
+    difficulty: 'Beginner',
   },
   {
     label: 'Elasticity',
@@ -209,6 +237,7 @@ const ITEMS = [
     icon: PiGraph,
     href: '/elasticity/',
     category: 'Markets & Pricing',
+    difficulty: 'Beginner',
   },
   {
     label: 'Marginal Utility',
@@ -216,6 +245,7 @@ const ITEMS = [
     icon: PiArrowLineUp,
     href: '/marginal-utility/',
     category: 'Markets & Pricing',
+    difficulty: 'Beginner',
   },
   {
     label: 'Zero-Sum Games',
@@ -223,6 +253,7 @@ const ITEMS = [
     icon: PiArrowsCounterClockwise,
     href: '/zero-sum-games/',
     category: 'Game Theory',
+    difficulty: 'Beginner',
   },
   {
     label: 'Externalities',
@@ -230,6 +261,7 @@ const ITEMS = [
     icon: PiWind,
     href: '/externalities/',
     category: 'Public & Macro',
+    difficulty: 'Beginner',
   },
   {
     label: 'Adverse Selection',
@@ -237,6 +269,7 @@ const ITEMS = [
     icon: PiWarning,
     href: '/adverse-selection/',
     category: 'Information & Risk',
+    difficulty: 'Intermediate',
   },
   {
     label: 'Monopoly & Market Power',
@@ -244,6 +277,7 @@ const ITEMS = [
     icon: PiBuildingOffice,
     href: '/monopoly-and-market-power/',
     category: 'Markets & Pricing',
+    difficulty: 'Intermediate',
   },
   {
     label: 'Oligopoly',
@@ -251,6 +285,7 @@ const ITEMS = [
     icon: PiChartPie,
     href: '/oligopoly/',
     category: 'Game Theory',
+    difficulty: 'Intermediate',
   },
   {
     label: 'Trade & Tariffs',
@@ -258,6 +293,7 @@ const ITEMS = [
     icon: PiGlobeHemisphereWest,
     href: '/trade-and-tariffs/',
     category: 'Markets & Pricing',
+    difficulty: 'Beginner',
   },
   {
     label: 'Behavioral Heuristics',
@@ -265,6 +301,7 @@ const ITEMS = [
     icon: PiBrain,
     href: '/behavioral-heuristics/',
     category: 'Behavioral',
+    difficulty: 'Beginner',
   },
   {
     label: 'Signaling',
@@ -272,6 +309,7 @@ const ITEMS = [
     icon: PiMegaphone,
     href: '/signaling/',
     category: 'Information & Risk',
+    difficulty: 'Intermediate',
   },
   {
     label: 'Public Choice',
@@ -279,6 +317,7 @@ const ITEMS = [
     icon: PiUsers,
     href: '/public-choice/',
     category: 'Public & Macro',
+    difficulty: 'Intermediate',
   },
   {
     label: 'Keynesian Economics',
@@ -286,6 +325,7 @@ const ITEMS = [
     icon: PiPiggyBank,
     href: '/keynesian-economics/',
     category: 'Public & Macro',
+    difficulty: 'Intermediate',
   },
   {
     label: 'Monetary Policy',
@@ -293,6 +333,7 @@ const ITEMS = [
     icon: PiCoins,
     href: '/monetary-policy/',
     category: 'Public & Macro',
+    difficulty: 'Intermediate',
   },
   {
     label: 'Labor Markets',
@@ -300,6 +341,7 @@ const ITEMS = [
     icon: PiBriefcase,
     href: '/labor-markets/',
     category: 'Markets & Pricing',
+    difficulty: 'Beginner',
   },
   {
     label: 'Economic Inequality',
@@ -307,6 +349,7 @@ const ITEMS = [
     icon: PiTrendDown,
     href: '/economic-inequality/',
     category: 'Development & Growth',
+    difficulty: 'Beginner',
   },
   {
     label: 'Repeated Games & Tit-for-Tat',
@@ -315,6 +358,7 @@ const ITEMS = [
     icon: PiRepeat,
     href: '/repeated-games/',
     category: 'Game Theory',
+    difficulty: 'Intermediate',
   },
   {
     label: 'Backward Induction',
@@ -322,6 +366,7 @@ const ITEMS = [
     icon: PiTreeStructure,
     href: '/backward-induction/',
     category: 'Game Theory',
+    difficulty: 'Intermediate',
   },
   {
     label: 'Bargaining Theory',
@@ -330,6 +375,7 @@ const ITEMS = [
     icon: PiHandCoins,
     href: '/bargaining-theory/',
     category: 'Game Theory',
+    difficulty: 'Advanced',
   },
   {
     label: 'Coordination Games',
@@ -337,6 +383,7 @@ const ITEMS = [
     icon: PiGridFour,
     href: '/coordination-games/',
     category: 'Game Theory',
+    difficulty: 'Beginner',
   },
   {
     label: 'Evolutionary Game Theory',
@@ -345,6 +392,7 @@ const ITEMS = [
     icon: PiDna,
     href: '/evolutionary-game-theory/',
     category: 'Game Theory',
+    difficulty: 'Advanced',
   },
   {
     label: 'Game Theory Basics',
@@ -352,6 +400,7 @@ const ITEMS = [
     icon: PiGameController,
     href: '/game-theory-basics/',
     category: 'Game Theory',
+    difficulty: 'Beginner',
   },
   {
     label: 'Imperfect Competition',
@@ -359,6 +408,7 @@ const ITEMS = [
     icon: PiStack,
     href: '/imperfect-competition/',
     category: 'Markets & Pricing',
+    difficulty: 'Advanced',
   },
   {
     label: 'Price Discrimination',
@@ -366,6 +416,7 @@ const ITEMS = [
     icon: PiTag,
     href: '/price-discrimination/',
     category: 'Markets & Pricing',
+    difficulty: 'Intermediate',
   },
   {
     label: 'Consumer Theory',
@@ -373,6 +424,7 @@ const ITEMS = [
     icon: PiShoppingCart,
     href: '/consumer-theory/',
     category: 'Markets & Pricing',
+    difficulty: 'Intermediate',
   },
   {
     label: 'Production & Costs',
@@ -381,6 +433,7 @@ const ITEMS = [
     icon: PiFactory,
     href: '/production-and-costs/',
     category: 'Markets & Pricing',
+    difficulty: 'Intermediate',
   },
   {
     label: 'Perfect Competition',
@@ -388,6 +441,7 @@ const ITEMS = [
     icon: PiEquals,
     href: '/perfect-competition/',
     category: 'Markets & Pricing',
+    difficulty: 'Beginner',
   },
   {
     label: 'Time Value of Money',
@@ -395,6 +449,7 @@ const ITEMS = [
     icon: PiClock,
     href: '/time-value-of-money/',
     category: 'Markets & Pricing',
+    difficulty: 'Beginner',
   },
   {
     label: 'Market Failures',
@@ -403,6 +458,7 @@ const ITEMS = [
     icon: PiWarningCircle,
     href: '/market-failures/',
     category: 'Public & Macro',
+    difficulty: 'Intermediate',
   },
   {
     label: 'GDP & National Accounts',
@@ -410,6 +466,7 @@ const ITEMS = [
     icon: PiChartBar,
     href: '/gdp-and-national-accounts/',
     category: 'Public & Macro',
+    difficulty: 'Beginner',
   },
   {
     label: 'Aggregate Demand & Supply',
@@ -417,6 +474,7 @@ const ITEMS = [
     icon: PiIntersect,
     href: '/aggregate-demand-supply/',
     category: 'Public & Macro',
+    difficulty: 'Intermediate',
   },
   {
     label: 'The Phillips Curve',
@@ -424,6 +482,7 @@ const ITEMS = [
     icon: PiTrendUp,
     href: '/phillips-curve/',
     category: 'Public & Macro',
+    difficulty: 'Intermediate',
   },
   {
     label: 'Business Cycles',
@@ -431,6 +490,7 @@ const ITEMS = [
     icon: PiWaveSine,
     href: '/business-cycles/',
     category: 'Public & Macro',
+    difficulty: 'Beginner',
   },
   {
     label: 'Fiscal Policy',
@@ -438,6 +498,7 @@ const ITEMS = [
     icon: PiMoney,
     href: '/fiscal-policy/',
     category: 'Public & Macro',
+    difficulty: 'Intermediate',
   },
   {
     label: 'The IS-LM Model',
@@ -445,6 +506,7 @@ const ITEMS = [
     icon: PiCrosshair,
     href: '/is-lm-model/',
     category: 'Public & Macro',
+    difficulty: 'Advanced',
   },
   {
     label: "Unemployment & Okun's Law",
@@ -453,6 +515,7 @@ const ITEMS = [
     icon: PiUserMinus,
     href: '/unemployment-okuns-law/',
     category: 'Public & Macro',
+    difficulty: 'Intermediate',
   },
   {
     label: 'Efficient Market Hypothesis',
@@ -461,6 +524,7 @@ const ITEMS = [
     icon: PiChartScatter,
     href: '/efficient-market-hypothesis/',
     category: 'Finance',
+    difficulty: 'Advanced',
   },
   {
     label: 'CAPM & Risk',
@@ -469,6 +533,7 @@ const ITEMS = [
     icon: PiGauge,
     href: '/capm-and-risk/',
     category: 'Finance',
+    difficulty: 'Advanced',
   },
   {
     label: 'Behavioral Finance',
@@ -476,6 +541,7 @@ const ITEMS = [
     icon: PiSmileySad,
     href: '/behavioral-finance/',
     category: 'Finance',
+    difficulty: 'Intermediate',
   },
   {
     label: 'Portfolio Theory',
@@ -483,6 +549,7 @@ const ITEMS = [
     icon: PiBoundingBox,
     href: '/portfolio-theory/',
     category: 'Finance',
+    difficulty: 'Advanced',
   },
   {
     label: 'Arbitrage',
@@ -490,6 +557,7 @@ const ITEMS = [
     icon: PiArrowsClockwise,
     href: '/arbitrage/',
     category: 'Finance',
+    difficulty: 'Intermediate',
   },
   {
     label: 'Mental Accounting',
@@ -497,6 +565,7 @@ const ITEMS = [
     icon: PiWallet,
     href: '/mental-accounting/',
     category: 'Behavioral',
+    difficulty: 'Beginner',
   },
   {
     label: 'The Endowment Effect',
@@ -505,6 +574,7 @@ const ITEMS = [
     icon: PiGift,
     href: '/endowment-effect/',
     category: 'Behavioral',
+    difficulty: 'Beginner',
   },
   {
     label: 'Social Preferences',
@@ -513,6 +583,7 @@ const ITEMS = [
     icon: PiHeart,
     href: '/social-preferences/',
     category: 'Behavioral',
+    difficulty: 'Intermediate',
   },
   {
     label: 'Overconfidence Bias',
@@ -521,6 +592,7 @@ const ITEMS = [
     icon: PiCrown,
     href: '/overconfidence-bias/',
     category: 'Behavioral',
+    difficulty: 'Beginner',
   },
   {
     label: 'Human Capital',
@@ -528,6 +600,7 @@ const ITEMS = [
     icon: PiGraduationCap,
     href: '/human-capital/',
     category: 'Development & Growth',
+    difficulty: 'Beginner',
   },
   {
     label: 'Poverty Traps',
@@ -535,6 +608,7 @@ const ITEMS = [
     icon: PiSneaker,
     href: '/poverty-traps/',
     category: 'Development & Growth',
+    difficulty: 'Intermediate',
   },
   {
     label: 'Migration Economics',
@@ -543,6 +617,7 @@ const ITEMS = [
     icon: PiAirplane,
     href: '/migration-economics/',
     category: 'Development & Growth',
+    difficulty: 'Intermediate',
   },
 ];
 

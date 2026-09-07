@@ -93,6 +93,25 @@ const PhillipsCurvePage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Phillips_curve',
+        label: 'Wikipedia: Phillips Curve',
+        description: 'Overview of the tradeoff and the expectations critique.',
+      },
+      {
+        href: 'https://www.investopedia.com/terms/p/phillipscurve.asp',
+        label: 'Investopedia: Phillips Curve',
+        description:
+          'Entry explaining the inflation–unemployment relationship and its limits.',
+      },
+      {
+        href: 'https://www.britannica.com/topic/Phillips-curve',
+        label: 'Britannica: Phillips Curve',
+        description:
+          'Article on the research behind the curve and why the tradeoff broke down.',
+      },
+    ]}
   />
 );
 

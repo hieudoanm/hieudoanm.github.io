@@ -100,6 +100,26 @@ const RepeatedGamesPage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Tit_for_tat',
+        label: 'Wikipedia: Tit for tat',
+        description:
+          "The tit-for-tat strategy in repeated games and Axelrod's tournament results.",
+      },
+      {
+        href: 'https://en.wikipedia.org/wiki/Folk_theorem_(game_theory)',
+        label: 'Wikipedia: Folk theorem (game theory)',
+        description:
+          'The folk theorem on cooperative outcomes achievable in infinitely repeated games.',
+      },
+      {
+        href: 'https://plato.stanford.edu/entries/game-theory/',
+        label: 'Stanford Encyclopedia of Philosophy: Game Theory',
+        description:
+          'A rigorous overview of repeated games and game-theoretic equilibrium concepts.',
+      },
+    ]}
   />
 );
 

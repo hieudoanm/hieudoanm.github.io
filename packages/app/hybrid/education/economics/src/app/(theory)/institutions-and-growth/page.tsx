@@ -99,6 +99,26 @@ const InstitutionsGrowthPage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://www.nobelprize.org/prizes/economic-sciences/2024/popular-information/prize-fact/',
+        label: 'Nobel Prize: 2024 Economic Sciences',
+        description:
+          'Acemoglu, Johnson, and Robinson awarded for work on inclusive institutions and prosperity.',
+      },
+      {
+        href: 'https://en.wikipedia.org/wiki/Why_Nations_Fail',
+        label: 'Wikipedia: Why Nations Fail',
+        description:
+          'Overview of the Acemoglu and Robinson book on inclusive vs extractive institutions.',
+      },
+      {
+        href: 'https://www.investopedia.com/terms/i/institutional-economics.asp',
+        label: 'Investopedia: Institutional Economics',
+        description:
+          'Entry explaining how institutions shape economic behavior and growth.',
+      },
+    ]}
   />
 );
 

@@ -89,6 +89,26 @@ const AggregateDemandSupplyPage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Aggregate_demand',
+        label: 'Wikipedia: Aggregate Demand',
+        description:
+          'Explanation of aggregate demand, its components, and the downward-sloping curve.',
+      },
+      {
+        href: 'https://www.khanacademy.org/economics-finance-domain/macroeconomics/gdp-topic/aggregate-demand-supply/v/aggregate-demand',
+        label: 'Khan Academy: Aggregate Demand',
+        description:
+          'Video walkthrough of the aggregate demand concept and the AD-AS model.',
+      },
+      {
+        href: 'https://www.investopedia.com/terms/a/aggregatedemand.asp',
+        label: 'Investopedia: Aggregate Demand',
+        description:
+          'Entry defining aggregate demand, its formula, and factors that shift the curve.',
+      },
+    ]}
   />
 );
 

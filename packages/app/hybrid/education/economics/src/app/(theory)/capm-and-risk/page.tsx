@@ -93,6 +93,26 @@ const CAPMPage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Capital_asset_pricing_model',
+        label: 'Wikipedia: Capital Asset Pricing Model',
+        description:
+          'Derivation and discussion of CAPM, beta, and the Security Market Line.',
+      },
+      {
+        href: 'https://www.investopedia.com/terms/c/capm.asp',
+        label: 'Investopedia: CAPM',
+        description:
+          'Entry defining CAPM, its formula, and its use in estimating cost of equity.',
+      },
+      {
+        href: 'https://onlinelibrary.wiley.com/doi/10.1111/j.1540-6261.1964.tb02865.x',
+        label: 'Sharpe (1964): Capital Asset Prices',
+        description:
+          "William Sharpe's foundational paper establishing the capital asset pricing model.",
+      },
+    ]}
   />
 );
 

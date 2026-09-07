@@ -98,6 +98,26 @@ const BackwardInductionPage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Backward_induction',
+        label: 'Wikipedia: Backward Induction',
+        description:
+          'Overview of backward induction as a solution concept for sequential games.',
+      },
+      {
+        href: 'https://en.wikipedia.org/wiki/Centipede_game_theory',
+        label: 'Wikipedia: Centipede Game',
+        description:
+          'Description of the centipede game and its role in testing backward induction.',
+      },
+      {
+        href: 'https://en.wikipedia.org/wiki/Subgame_perfect_equilibrium',
+        label: 'Wikipedia: Subgame Perfect Equilibrium',
+        description:
+          'Formal definition of subgame-perfect equilibrium, the concept backward induction produces.',
+      },
+    ]}
   />
 );
 

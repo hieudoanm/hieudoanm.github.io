@@ -103,6 +103,34 @@ const OligopolyPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/oligopoly/cournot',
+        label: 'Cournot Competition',
+        description:
+          'Pick your output against a rival firm and feel the pull of the Cournot equilibrium.',
+      },
+    ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Oligopoly',
+        label: 'Wikipedia: Oligopoly',
+        description:
+          'Overview of oligopoly market structure and strategic behavior.',
+      },
+      {
+        href: 'https://www.investopedia.com/terms/o/oligopoly.asp',
+        label: 'Investopedia: Oligopoly',
+        description:
+          'Entry explaining the characteristics of oligopolistic markets.',
+      },
+      {
+        href: 'https://www.britannica.com/topic/oligopoly',
+        label: 'Britannica: Oligopoly',
+        description:
+          'Article on how each of a few large producers affects but does not control the market.',
+      },
+    ]}
   />
 );
 

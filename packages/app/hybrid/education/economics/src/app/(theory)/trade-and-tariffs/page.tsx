@@ -104,6 +104,26 @@ const TradeTariffsPage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Comparative_advantage',
+        label: 'Wikipedia: Comparative advantage',
+        description:
+          "Ricardo's theory of comparative advantage and gains from trade.",
+      },
+      {
+        href: 'https://www.investopedia.com/terms/t/tariff.asp',
+        label: 'Investopedia: Tariff',
+        description:
+          'Definition of tariffs, types, and their economic effects on trade.',
+      },
+      {
+        href: 'https://www.investopedia.com/terms/c/comparativeadvantage.asp',
+        label: 'Investopedia: Comparative Advantage',
+        description:
+          'Comparative advantage explained with examples of mutually beneficial trade.',
+      },
+    ]}
   />
 );
 

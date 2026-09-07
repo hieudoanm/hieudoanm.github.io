@@ -100,6 +100,26 @@ const ConsumerTheoryPage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Consumer_choice',
+        label: 'Wikipedia: Consumer Choice',
+        description:
+          'Overview of consumer theory, utility maximization, and indifference curve analysis.',
+      },
+      {
+        href: 'https://www.investopedia.com/terms/i/indifferencecurve.asp',
+        label: 'Investopedia: Indifference Curve',
+        description:
+          'Entry explaining the indifference curve, its properties, and the consumer optimum.',
+      },
+      {
+        href: 'https://www.khanacademy.org/economics-finance-domain/microeconomics/consumer-consumer-theory/indifference-curves-tutorial/v/indifference-curves-and-marginal-rate-of-substitution',
+        label: 'Khan Academy: Indifference Curves & MRS',
+        description:
+          'Video explaining indifference curves and the marginal rate of substitution.',
+      },
+    ]}
   />
 );
 

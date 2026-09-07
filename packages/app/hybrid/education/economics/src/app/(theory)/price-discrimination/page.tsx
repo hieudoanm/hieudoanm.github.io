@@ -100,6 +100,26 @@ const PriceDiscriminationPage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Price_discrimination',
+        label: 'Wikipedia: Price Discrimination',
+        description:
+          'Overview of the three degrees and how firms capture surplus.',
+      },
+      {
+        href: 'https://www.investopedia.com/terms/p/pricediscrimination.asp',
+        label: 'Investopedia: Price Discrimination',
+        description:
+          'Entry on the types of price discrimination and real-world examples.',
+      },
+      {
+        href: 'https://www.britannica.com/topic/price-discrimination',
+        label: 'Britannica: Price Discrimination',
+        description:
+          'Article on selling the same product at different prices to different buyers.',
+      },
+    ]}
   />
 );
 

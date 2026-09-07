@@ -104,6 +104,26 @@ const MonetaryPolicyPage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Monetary_policy',
+        label: 'Wikipedia: Monetary Policy',
+        description:
+          'Overview of central bank tools, interest rates, and inflation targeting.',
+      },
+      {
+        href: 'https://www.investopedia.com/terms/m/monetarypolicy.asp',
+        label: 'Investopedia: Monetary Policy',
+        description:
+          'Entry defining monetary policy and its impact on the economy.',
+      },
+      {
+        href: 'https://www.nobelprize.org/prizes/economic-sciences/2022/popular-information/prize-fact/',
+        label: 'Nobel Prize: 2022 Economic Sciences',
+        description:
+          'Nobel award to Bernanke, Diamond, and Dybvig for research on banks and financial crises.',
+      },
+    ]}
   />
 );
 

@@ -98,6 +98,34 @@ const CoordinationGamesPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/coordination-games/stag-hunt',
+        label: 'Stag Hunt',
+        description:
+          'Coordinate with a partner and learn why trust earns more than playing it safe.',
+      },
+    ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Coordination_game',
+        label: 'Wikipedia: Coordination Game',
+        description:
+          'Overview of coordination games, multiple equilibria, and real-world examples.',
+      },
+      {
+        href: 'https://en.wikipedia.org/wiki/Stag_hunt',
+        label: 'Wikipedia: Stag Hunt',
+        description:
+          'Detailed look at the stag hunt game, trust, and social cooperation.',
+      },
+      {
+        href: 'https://en.wikipedia.org/wiki/Focal_point_(game_theory)',
+        label: 'Wikipedia: Focal Point (Game Theory)',
+        description:
+          "Schelling's concept of focal points and how people coordinate without communication.",
+      },
+    ]}
   />
 );
 

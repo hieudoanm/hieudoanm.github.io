@@ -2,6 +2,16 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import { PiStrategy, PiTarget, PiWind } from 'react-icons/pi';
 import { HomeTemplate } from '../HomeTemplate';
 
+const openAdvanced = () => {
+  const toggle = screen.getByTestId('advanced-toggle');
+  if (
+    toggle.getAttribute('data-testid') &&
+    !screen.queryByTestId('category-Game Theory')
+  ) {
+    fireEvent.click(toggle);
+  }
+};
+
 const ITEMS = [
   {
     label: "Prisoner's Dilemma",
@@ -78,6 +88,7 @@ describe('HomeTemplate', () => {
       <HomeTemplate appName="Economics" description="desc" items={ITEMS} />
     );
     expect(screen.getByTestId('tool-card-externalities')).toBeInTheDocument();
+    openAdvanced();
 
     fireEvent.click(screen.getByTestId('category-Game Theory'));
     expect(

@@ -99,6 +99,26 @@ const ExternalitiesPage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Externality',
+        label: 'Wikipedia: Externality',
+        description:
+          'Comprehensive overview of negative and positive externalities, market failure, and remedies.',
+      },
+      {
+        href: 'https://www.investopedia.com/terms/e/externality.asp',
+        label: 'Investopedia: Externalities',
+        description:
+          'Entry defining externalities and their impact on market efficiency and welfare.',
+      },
+      {
+        href: 'https://en.wikipedia.org/wiki/Coase_theorem',
+        label: 'Wikipedia: Coase Theorem',
+        description:
+          'Explanation of how private bargaining can resolve externalities under ideal conditions.',
+      },
+    ]}
   />
 );
 

@@ -99,6 +99,26 @@ const BusinessCyclesPage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Business_cycle',
+        label: 'Wikipedia: Business Cycle',
+        description:
+          'Overview of the phases of the business cycle and competing theories of its causes.',
+      },
+      {
+        href: 'https://www.khanacademy.org/economics-finance-domain/macroeconomics/healthy-economy/business-cycles/v/business-cycles-intro',
+        label: 'Khan Academy: Business Cycles Intro',
+        description:
+          'Video introduction to expansions, recessions, and stabilization policy.',
+      },
+      {
+        href: 'https://www.nber.org/research/data/us-business-cycle-expansions-and-contractions',
+        label: 'NBER: US Business Cycle Dates',
+        description:
+          'Official chronology of US business cycle peaks and troughs maintained by the NBER.',
+      },
+    ]}
   />
 );
 

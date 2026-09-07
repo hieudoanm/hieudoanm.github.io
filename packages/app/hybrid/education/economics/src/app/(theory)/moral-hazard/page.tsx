@@ -94,6 +94,26 @@ const MoralHazardPage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Moral_hazard',
+        label: 'Wikipedia: Moral Hazard',
+        description:
+          'Overview of moral hazard, asymmetric information, and principal-agent problems.',
+      },
+      {
+        href: 'https://www.investopedia.com/terms/m/moralhazard.asp',
+        label: 'Investopedia: Moral Hazard',
+        description:
+          'Entry explaining how insurance and guarantees change behavior.',
+      },
+      {
+        href: 'https://www.britannica.com/topic/moral-hazard',
+        label: 'Encyclopedia Britannica: Moral Hazard',
+        description:
+          'Encyclopedia entry on moral hazard in economics and finance.',
+      },
+    ]}
   />
 );
 

@@ -89,6 +89,26 @@ const FiscalPolicyPage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Fiscal_policy',
+        label: 'Wikipedia: Fiscal Policy',
+        description:
+          'Overview of fiscal policy tools, multiplier effects, and stabilization goals.',
+      },
+      {
+        href: 'https://www.investopedia.com/terms/f/fiscalpolicy.asp',
+        label: 'Investopedia: Fiscal Policy',
+        description:
+          'Entry explaining government spending, taxation, and their macroeconomic effects.',
+      },
+      {
+        href: 'https://www.imf.org/en/Publications/fiscal-monitor',
+        label: 'IMF: Fiscal Monitor',
+        description:
+          'IMF publication analyzing global fiscal trends, debt, and policy recommendations.',
+      },
+    ]}
   />
 );
 

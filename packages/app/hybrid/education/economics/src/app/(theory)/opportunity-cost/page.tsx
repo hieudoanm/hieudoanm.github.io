@@ -93,6 +93,25 @@ const OpportunityCostPage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Opportunity_cost',
+        label: 'Wikipedia: Opportunity Cost',
+        description:
+          'Overview of the concept and how it shapes economic decisions.',
+      },
+      {
+        href: 'https://www.investopedia.com/terms/o/opportunitycost.asp',
+        label: 'Investopedia: Opportunity Cost',
+        description: 'Definition, formula, and examples of opportunity cost.',
+      },
+      {
+        href: 'https://www.britannica.com/topic/comparative-advantage',
+        label: 'Britannica: Comparative Advantage',
+        description:
+          'Article on comparative advantage and the gains from trade.',
+      },
+    ]}
   />
 );
 

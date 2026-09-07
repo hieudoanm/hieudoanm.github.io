@@ -101,6 +101,26 @@ const LaborMarketsPage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Minimum_wage',
+        label: 'Wikipedia: Minimum Wage',
+        description:
+          'Overview of minimum wage policy, history, and empirical evidence.',
+      },
+      {
+        href: 'https://www.investopedia.com/terms/m/minimum_wage.asp',
+        label: 'Investopedia: Minimum Wage',
+        description:
+          'Entry defining minimum wage and its economic effects on employment.',
+      },
+      {
+        href: 'https://www.nobelprize.org/prizes/economic-sciences/2021/popular-information/prize-fact/',
+        label: 'Nobel Prize: 2021 Economic Sciences',
+        description:
+          'Nobel award to Card, Krueger, and Angrist for empirical labor economics.',
+      },
+    ]}
   />
 );
 

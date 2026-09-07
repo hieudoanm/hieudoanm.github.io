@@ -98,6 +98,26 @@ const MarketFailuresPage: NextPage = () => (
         ),
       },
     ]}
+    references={[
+      {
+        href: 'https://en.wikipedia.org/wiki/Market_failure',
+        label: 'Wikipedia: Market Failure',
+        description:
+          'Overview of market failure types including externalities, public goods, and market power.',
+      },
+      {
+        href: 'https://www.investopedia.com/terms/m/marketfailure.asp',
+        label: 'Investopedia: Market Failure',
+        description:
+          'Entry defining market failure and its causes and remedies.',
+      },
+      {
+        href: 'https://www.britannica.com/topic/market-failure',
+        label: 'Encyclopedia Britannica: Market Failure',
+        description:
+          'Encyclopedia entry on when free markets fail to allocate resources efficiently.',
+      },
+    ]}
   />
 );
 
