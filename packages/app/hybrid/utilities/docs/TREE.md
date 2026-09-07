@@ -316,15 +316,7 @@
 │   │   │   │   │   │   ├── [CurrencySelect.tsx](./src/components/organisms/layout/tabs/CurrencyTab/CurrencySelect.tsx)
 │   │   │   │   │   │   ├── [QuickPairs.tsx](./src/components/organisms/layout/tabs/CurrencyTab/QuickPairs.tsx)
 │   │   │   │   │   │   └── [index.tsx](./src/components/organisms/layout/tabs/CurrencyTab/index.tsx)
-│   │   │   │   │   ├── PassportTab/
-│   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   ├── __snapshots__/
-│   │   │   │   │   │   │   │   └── [PassportTab.test.tsx.snap](./src/components/organisms/layout/tabs/PassportTab/__tests__/__snapshots__/PassportTab.test.tsx.snap)
-│   │   │   │   │   │   │   └── [PassportTab.test.tsx](./src/components/organisms/layout/tabs/PassportTab/__tests__/PassportTab.test.tsx)
-│   │   │   │   │   │   ├── [CountryRow.tsx](./src/components/organisms/layout/tabs/PassportTab/CountryRow.tsx)
-│   │   │   │   │   │   ├── [RegionFilter.tsx](./src/components/organisms/layout/tabs/PassportTab/RegionFilter.tsx)
-│   │   │   │   │   │   ├── [SearchInput.tsx](./src/components/organisms/layout/tabs/PassportTab/SearchInput.tsx)
-│   │   │   │   │   │   └── [index.tsx](./src/components/organisms/layout/tabs/PassportTab/index.tsx)
+
 │   │   │   │   │   ├── StatusTab/
 │   │   │   │   │   │   ├── __tests__/
 │   │   │   │   │   │   │   ├── __snapshots__/

@@ -23,8 +23,8 @@ const SignInPage: FC = () => {
 
   return (
     <main className="bg-base-200 flex min-h-screen items-center justify-center p-4">
-      <div className="w-full max-w-sm">
-        <div className="card bg-base-100 w-full shadow-xl">
+      <div className="w-full sm:w-3/5 md:w-2/5">
+        <div className="card bg-base-100 border-base-300 w-full border">
           <div className="card-body">
             <div className="mb-2 flex items-center justify-center">
               <div className="bg-primary/10 text-primary flex h-14 w-14 items-center justify-center rounded-2xl">

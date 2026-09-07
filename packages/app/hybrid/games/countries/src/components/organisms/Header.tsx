@@ -63,7 +63,7 @@ export const Header: FC = () => {
             <ul
               tabIndex={0}
               role="menu"
-              className="dropdown-content bg-base-100 border-base-300 menu rounded-box border px-2 py-2 shadow">
+              className="dropdown-content bg-base-100 border-base-300 menu rounded-box border px-2 py-2">
               {NAV_LINKS.map(({ href, label }) => (
                 <li key={href}>
                   <Link href={href} className="text-xs">

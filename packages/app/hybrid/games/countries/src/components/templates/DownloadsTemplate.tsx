@@ -97,7 +97,7 @@ const DownloadRow: FC<DownloadRowProps> = ({ item, showPlatform = true }) => (
 DownloadRow.displayName = 'DownloadRow';
 
 const MinimalDownloads: FC<{ items: DownloadItem[] }> = ({ items }) => (
-  <div className="mx-auto flex w-full max-w-md items-stretch">
+  <div className="flex w-full items-stretch sm:w-3/5 md:w-1/2">
     <div className="card bg-base-200 border-base-content/10 flex w-full flex-col gap-4 rounded-2xl border p-6">
       {items.map((item) => (
         <DownloadRow key={`${item.platform}-${item.label}`} item={item} />
@@ -150,7 +150,7 @@ const DownloadsHeader: FC = () => (
 
     <h1 className="mb-1">Installers</h1>
 
-    <p className="text-base-content/50 max-w-sm text-sm">
+    <p className="text-base-content/50 w-full text-sm sm:w-3/5">
       Pick the package for your platform. The mobile web app is available from
       any browser.
     </p>
@@ -189,7 +189,7 @@ const FullDownloads: FC<{ version: string; items: DownloadItem[] }> = ({
 
   return (
     <>
-      <div className="flex w-full max-w-lg flex-col gap-6">
+      <div className="flex w-full flex-col gap-6 sm:w-3/4 md:w-2/3">
         {[...sections.entries()].map(([os, osItems]) => (
           <DownloadsSection key={os} os={os} items={osItems} />
         ))}
@@ -214,7 +214,7 @@ export const DownloadsTemplate: FC<DownloadsTemplateProps> = ({
     setCurrentMode((prev) => (prev === 'minimal' ? 'full' : 'minimal'));
 
   return (
-    <div className="mx-auto flex w-full max-w-2xl flex-col items-center gap-6 px-6 py-16 text-center">
+    <div className="flex w-full flex-col items-center gap-6 px-4 py-10 text-center sm:px-6 sm:py-16">
       <DownloadsHeader />
       <ModeToggle isMinimal={isMinimal} onToggle={toggle} />
       {isMinimal ? (

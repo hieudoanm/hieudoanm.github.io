@@ -19,7 +19,7 @@ export const ErrorTemplate: FC<ErrorTemplateProps> = ({
     <h1 className="mb-3">{code}</h1>
 
     {description && (
-      <p className="text-base-content/50 mb-10 max-w-sm text-center text-sm">
+      <p className="text-base-content/50 mb-10 w-full text-center text-sm sm:w-3/5">
         {description}
       </p>
     )}

@@ -17,14 +17,14 @@ export const VersionTemplate: FC<{ version: string }> = ({ version }) => {
   const hasSegments = year && month && day;
 
   return (
-    <div className="mx-auto flex w-full max-w-2xl flex-col items-center gap-4 px-4 py-10 text-center sm:gap-6 sm:px-6 sm:py-16">
+    <div className="flex w-full flex-col items-center gap-4 px-4 py-10 text-center sm:gap-6 sm:px-6 sm:py-16">
       <p className="text-base-content/50 text-xs tracking-[0.2em] uppercase">
         Current deployment
       </p>
 
       <h1 className="mb-1">Version</h1>
 
-      <div className="border-base-content/10 bg-base-200 w-full max-w-lg overflow-x-auto rounded-2xl border p-4 sm:p-6">
+      <div className="border-base-content/10 bg-base-200 w-full overflow-x-auto rounded-2xl border p-4 sm:w-3/4 sm:p-6 md:w-2/3">
         {hasSegments ? (
           <div className="flex min-w-max items-center justify-center gap-0">
             <Segment value={year} label="Year" primary />
@@ -60,12 +60,14 @@ export const VersionTemplate: FC<{ version: string }> = ({ version }) => {
 
       <div className="flex w-full flex-col items-center gap-3 sm:flex-row sm:justify-center">
         <button
+          type="button"
           onClick={copy}
           className={`btn btn-sm w-full rounded-full sm:w-auto ${copied ? 'btn-success' : 'btn-primary'}`}>
           {copied ? <FiCheck /> : <FiCopy />}
           {copied ? 'Copied' : 'Copy version'}
         </button>
         <button
+          type="button"
           className="btn btn-neutral btn-sm w-full truncate rounded-full sm:w-auto"
           onClick={copy}>
           {version}

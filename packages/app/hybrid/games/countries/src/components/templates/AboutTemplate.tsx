@@ -11,16 +11,18 @@ export const AboutTemplate: FC<{
   version: string;
   items: InfoRow[];
 }> = ({ name, description, version, items }) => (
-  <div className="mx-auto flex w-full max-w-2xl flex-col items-center gap-6 px-6 py-16 text-center">
+  <div className="flex w-full flex-col items-center gap-6 px-4 py-10 text-center sm:px-6 sm:py-16">
     <p className="text-base-content/50 text-xs tracking-[0.2em] uppercase">
       About
     </p>
 
     <h1 className="mb-1">{name}</h1>
 
-    <p className="text-base-content/50 max-w-sm text-sm">{description}</p>
+    <p className="text-base-content/50 w-full text-sm sm:w-3/5">
+      {description}
+    </p>
 
-    <div className="border-base-content/10 bg-base-200 w-full max-w-lg rounded-2xl border p-6">
+    <div className="border-base-content/10 bg-base-200 w-full rounded-2xl border p-4 sm:w-3/4 sm:p-6 md:w-2/3">
       <div className="flex flex-col gap-4">
         {items.map(({ label, value }) => (
           <div key={label} className="flex items-center justify-between">

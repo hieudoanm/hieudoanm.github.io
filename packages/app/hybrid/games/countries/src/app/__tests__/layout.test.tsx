@@ -4,6 +4,9 @@ jest.mock('@/styles/globals.css', () => ({}));
 jest.mock('@/components/organisms/Header', () => ({
   Header: () => <div data-testid="header">Header</div>,
 }));
+jest.mock('@/components/organisms/Footer', () => ({
+  Footer: () => <div data-testid="footer">Footer</div>,
+}));
 
 import RootLayout from '../layout';
 
@@ -36,5 +39,14 @@ describe('RootLayout', () => {
       </RootLayout>
     );
     expect(screen.getByTestId('header')).toBeInTheDocument();
+  });
+
+  it('renders footer', () => {
+    render(
+      <RootLayout>
+        <div />
+      </RootLayout>
+    );
+    expect(screen.getByTestId('footer')).toBeInTheDocument();
   });
 });

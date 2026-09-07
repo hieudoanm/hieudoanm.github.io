@@ -1,67 +1,102 @@
 'use client';
-import Link from 'next/link';
+import { NextPage } from 'next';
+import { useRouter } from 'next/navigation';
+import { IconType } from 'react-icons';
+import {
+  FiCrosshair,
+  FiGlobe,
+  FiGrid,
+  FiList,
+  FiTrendingUp,
+  FiType,
+} from 'react-icons/fi';
 
-const games = [
+export type Game = {
+  name: string;
+  slug: string;
+  description: string;
+  icon: IconType;
+};
+
+const games: Game[] = [
   {
-    name: 'Country Wordle',
-    slug: 'wordle',
+    name: 'Guess the Country',
+    slug: 'guess',
     description:
-      'Guess the hidden country name in six tries — every answer is a country.',
-  },
-  {
-    name: 'Country Connections',
-    slug: 'connections',
-    description:
-      'Group sixteen countries into four hidden categories of four. Four mistakes allowed.',
-  },
-  {
-    name: 'Border Guesser',
-    slug: 'border',
-    description:
-      'Which country does this one border? Pick the right neighbour from four options.',
-  },
-  {
-    name: 'Continents Sort',
-    slug: 'continents-sort',
-    description:
-      'Drag fifteen countries into their continents — Africa, Europe, Asia, Oceania, Americas.',
-  },
-  {
-    name: 'Emoji Guesser',
-    slug: 'emoji-guesser',
-    description: 'Given a country name, pick its flag emoji from four options.',
-  },
-  {
-    name: 'Flag Guesser',
-    slug: 'flag-guesser',
-    description:
-      'Name the country from its flag emoji. Four options, one correct.',
+      'Three ways to play — identify the flag, its emoji, or which country it borders.',
+    icon: FiCrosshair,
   },
   {
     name: 'Higher or Lower',
     slug: 'higher-or-lower',
-    description: 'Which country has the larger population? Build your streak.',
+    description:
+      'Which country wins? Compare populations or passport strength and build your streak.',
+    icon: FiTrendingUp,
   },
-] as const;
+  {
+    name: 'Country Connections',
+    slug: 'nyt/connections',
+    description:
+      'Group sixteen countries into four hidden categories of four. Four mistakes allowed.',
+    icon: FiGrid,
+  },
+  {
+    name: 'Country Wordle',
+    slug: 'nyt/wordle',
+    description:
+      'Guess the hidden country name in six tries — every answer is a country.',
+    icon: FiType,
+  },
+  {
+    name: 'Continents Sort',
+    slug: 'sort/continents',
+    description:
+      'Drag fifteen countries into their continents — Africa, Europe, Asia, Oceania, North America, South America.',
+    icon: FiList,
+  },
+];
 
-const HomePage = () => (
-  <div className="mx-auto max-w-3xl p-6">
-    <h1 className="mb-6 text-center text-3xl font-bold">Countries Games</h1>
-    <div className="grid gap-4 sm:grid-cols-2">
-      {games.map((game) => (
-        <Link
-          key={game.slug}
-          href={`/${game.slug}`}
-          className="card bg-base-200 shadow-sm transition-shadow hover:shadow-md"
-          data-testid={`open-${game.slug}`}>
-          <div className="card-body">
-            <h2 className="card-title text-lg">{game.name}</h2>
-            <p className="text-base-content/70 text-sm">{game.description}</p>
+const HomePage: NextPage = () => {
+  const router = useRouter();
+  return (
+    <div className="flex w-full flex-col gap-y-4 px-4 py-6 sm:px-6 md:gap-y-8 lg:px-10">
+      <div className="text-center">
+        <h1 className="text-primary font-serif text-4xl font-bold tracking-tight">
+          Countries Games
+        </h1>
+        <p className="text-base-content/60 mt-2 text-sm">
+          Play games to learn about countries around the world
+        </p>
+      </div>
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {games.map((game) => (
+          <div
+            key={game.slug}
+            className="card border-base-300 bg-base-100 border transition-colors"
+            data-testid={`card-${game.slug}`}>
+            <div className="card-body">
+              <div className="flex items-center gap-3">
+                <span className="bg-primary/10 text-primary flex h-10 w-10 shrink-0 items-center justify-center rounded-xl">
+                  <game.icon aria-hidden="true" />
+                </span>
+                <h2 className="card-title text-lg">{game.name}</h2>
+              </div>
+              <p className="text-base-content/70 text-sm">{game.description}</p>
+              <div className="card-actions">
+                <button
+                  type="button"
+                  onClick={() => router.push(`/${game.slug}`)}
+                  className="btn btn-primary btn-sm w-full"
+                  data-testid={`open-${game.slug}`}>
+                  Play
+                </button>
+              </div>
+            </div>
           </div>
-        </Link>
-      ))}
+        ))}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default HomePage;

@@ -2,40 +2,52 @@
 
 import { useCallback, useMemo, useState } from 'react';
 import { applyQuizGuess, INITIAL_STATS, type QuizStats } from '../_shared/quiz';
-import type { HLMessage, HLPair, HLSide } from './types';
-import { isHigherCorrect, pickPair, populationOf } from './utils';
+import type { HLMessage, HLMode, HLQuestion, HLSide } from './types';
+import { buildQuestion, isHigherCorrect, isLowerRankCorrect } from './utils';
 
 export interface UseHigherOrLowerResult {
-  pair: HLPair;
+  mode: HLMode;
+  question: HLQuestion;
   stats: QuizStats;
   games: number;
   message: HLMessage;
   revealed: boolean;
-  leftPop: number;
-  rightPop: number;
+  chooseMode: (mode: HLMode) => void;
   guess: (side: HLSide) => void;
   next: () => void;
 }
 
 export const useHigherOrLower = (): UseHigherOrLowerResult => {
-  const [pair, setPair] = useState<HLPair>(pickPair);
+  const [mode, setMode] = useState<HLMode>('population');
+  const [question, setQuestion] = useState<HLQuestion>(() =>
+    buildQuestion('population')
+  );
   const [stats, setStats] = useState<QuizStats>(INITIAL_STATS);
   const [games, setGames] = useState(0);
-  const [revealed, setRevealed] = useState(false);
   const [message, setMessage] = useState<HLMessage>(null);
+  const [revealed, setRevealed] = useState(false);
+
+  const chooseMode = useCallback((nextMode: HLMode): void => {
+    setMode(nextMode);
+    setQuestion(buildQuestion(nextMode));
+    setMessage(null);
+    setRevealed(false);
+  }, []);
 
   const next = useCallback((): void => {
-    setPair(pickPair());
-    setRevealed(false);
+    setQuestion(buildQuestion(mode));
     setMessage(null);
-  }, []);
+    setRevealed(false);
+  }, [mode]);
 
   const guess = useCallback(
     (side: HLSide): void => {
       if (revealed) return;
-      const leftPop = populationOf(pair.left.name);
-      const rightPop = populationOf(pair.right.name);
-      const correct = isHigherCorrect(side, leftPop, rightPop);
+      const { leftValue, rightValue, mode: questionMode } = question;
+      const correct =
+        questionMode === 'passport'
+          ? isLowerRankCorrect(side, leftValue, rightValue)
+          : isHigherCorrect(side, leftValue, rightValue);
       setGames((current) => current + 1);
       setRevealed(true);
       setStats((current) => applyQuizGuess(current, correct));
@@ -45,21 +57,21 @@ export const useHigherOrLower = (): UseHigherOrLowerResult => {
           : { text: 'Wrong!', correct: false }
       );
     },
-    [pair, revealed]
+    [question, revealed]
   );
 
   return useMemo(
     () => ({
-      pair,
+      mode,
+      question,
       stats,
       games,
       message,
       revealed,
-      leftPop: populationOf(pair.left.name),
-      rightPop: populationOf(pair.right.name),
+      chooseMode,
       guess,
       next,
     }),
-    [games, guess, message, next, pair, revealed, stats]
+    [chooseMode, games, guess, message, mode, next, question, revealed, stats]
   );
 };

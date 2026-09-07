@@ -17,8 +17,8 @@ const ProfilePage: FC = () => {
 
   return (
     <main className="bg-base-200 flex min-h-screen items-center justify-center p-4">
-      <div className="w-full max-w-md">
-        <div className="card bg-base-100 w-full shadow-xl">
+      <div className="w-full sm:w-3/5 md:w-1/2">
+        <div className="card bg-base-100 border-base-300 w-full border">
           <div className="card-body">
             <div className="mb-2 flex items-center justify-center">
               <div className="relative">
