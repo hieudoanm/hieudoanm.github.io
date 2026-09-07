@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{{.Site.Description}}" />
+    <title>{{.Site.Name}}</title>
+    <style>
+      :root {
+@LANDIFY_THEME@      }
+{{template "base-css" .}}
+      .docs-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      .doc-card {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        background: var(--base-200);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+        padding: 22px 20px;
+        color: var(--base-content);
+        text-decoration: none;
+      }
+      .doc-card:hover {
+        border-color: var(--primary);
+        color: var(--primary);
+      }
+      .doc-card h3 {
+        font-size: 16px;
+        font-weight: 700;
+        margin: 0;
+      }
+      .doc-card p {
+        margin: 0;
+        font-size: 14px;
+        color: var(--neutral);
+      }
+      .docs-sample {
+        max-width: 640px;
+        margin: 40px auto 0;
+      }
+      .docs-sample pre {
+        margin: 0;
+      }
+      @media (max-width: 900px) {
+        .docs-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    {{template "header" .}}
+
+    <main id="top">
+      <section class="hero">
+        <div>
+          {{if .Hero.Badge}}<span class="badge">{{.Hero.Badge}}</span>{{end}}
+          <h1>{{.Hero.Headline}}</h1>
+          <p class="lead">{{.Hero.Subheadline}}</p>
+          {{if or .Hero.Primary.Href .Hero.Secondary.Href}}
+          <div class="hero-actions">
+            {{if .Hero.Primary.Href}}<a class="btn btn-primary" href="{{.Hero.Primary.Href}}">{{.Hero.Primary.Label}}</a>{{end}}
+            {{if .Hero.Secondary.Href}}<a class="btn btn-ghost" href="{{.Hero.Secondary.Href}}">{{.Hero.Secondary.Label}}</a>{{end}}
+          </div>
+          {{end}}
+        </div>
+      </section>
+
+      <section id="docs" class="block">
+        {{if or .Docs.Heading .Docs.Sub}}
+        <div class="block-head">
+          <h2>{{.Docs.Heading}}</h2>
+          {{if .Docs.Sub}}<p class="sub">{{.Docs.Sub}}</p>{{end}}
+        </div>
+        {{end}}
+        <div class="docs-grid">
+          {{range .Docs.Packages}}
+          <a class="doc-card" href="{{.Href}}">
+            <span class="icon" aria-hidden="true">{{.Icon}}</span>
+            <h3>{{.Title}}</h3>
+            <p>{{.Body}}</p>
+          </a>
+          {{end}}
+        </div>
+        {{if .Docs.Sample}}
+        <div class="docs-sample install-block">
+          <pre><code>{{.Docs.Sample}}</code></pre>
+        </div>
+        {{end}}
+      </section>
+
+      {{if .CTA.Heading}}
+      <section id="cta" class="block">
+        <div class="cta">
+          <span class="icon" aria-hidden="true">{{.CTA.Icon}}</span>
+          <h2>{{.CTA.Heading}}</h2>
+          <p>{{.CTA.Body}}</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="{{.CTA.Button.Href}}">{{.CTA.Button.Label}}</a>
+          </div>
+        </div>
+      </section>
+      {{end}}
+
+      {{template "footer" .}}
+    </main>
+  </body>
+</html>

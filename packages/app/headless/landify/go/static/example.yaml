@@ -8,7 +8,16 @@
 # intent is explicit. All fields marked "required" must be non-empty for
 # `landify validate` to pass.
 #
-# Media: the hero always renders an image and the demo always renders a video.
+# Type: the page layout. "product" (default) is the original hero + features +
+# demo video + CTA layout. Alternatives: "waitlist" (email-capture panel),
+# "event" (date/venue strip, agenda, speakers), "download" (version and
+# license badges, per-OS buttons, install snippet), "app" (store badges,
+# ratings, portrait screenshots), "pricing" (tier cards), "portfolio"
+# (personal page with avatar, skills, projects), and "docs" (topic cards and a
+# code sample). The required fields below change with the type — see
+# internal/landify/validate.go or `landify validate`.
+#
+# Media: only the "product" layout requires a hero image and demo video.
 # Both render in the same 16:9 frame (1280 × 720).
 #
 # Colors: theme is the only design input. List the eight base colors (and,
@@ -17,6 +26,8 @@
 # (primary-dark/soft/content, secondary-content), and hairlines derived from
 # neutral (neutral-faint, border, border-soft) — is calculated from them.
 # Values below are the defaults; any field left empty keeps its default.
+
+type: product            # product (default) | waitlist | event | download | app | pricing | portfolio | docs
 
 theme:
   base: "#f7f8fa"         #   backgrounds and surface family

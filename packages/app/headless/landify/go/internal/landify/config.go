@@ -9,15 +9,24 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
-// Config is the top-level schema for landify.yaml.
+// Config is the top-level schema for landify.yaml. Type selects the page
+// template; it defaults to "product" when empty.
 type Config struct {
-	Theme    Theme    `yaml:"theme"`
-	Site     Site     `yaml:"site"`
-	Hero     Hero     `yaml:"hero"`
-	Features Features `yaml:"features"`
-	Demo     Demo     `yaml:"demo"`
-	CTA      CTA      `yaml:"cta"`
-	Footer   Footer   `yaml:"footer"`
+	Type      string    `yaml:"type"`
+	Theme     Theme     `yaml:"theme"`
+	Site      Site      `yaml:"site"`
+	Hero      Hero      `yaml:"hero"`
+	Features  Features  `yaml:"features"`
+	Demo      Demo      `yaml:"demo"`
+	CTA       CTA       `yaml:"cta"`
+	Footer    Footer    `yaml:"footer"`
+	Waitlist  Waitlist  `yaml:"waitlist"`
+	Event     Event     `yaml:"event"`
+	Download  Download  `yaml:"download"`
+	Pricing   Pricing   `yaml:"pricing"`
+	App       App       `yaml:"app"`
+	Portfolio Portfolio `yaml:"portfolio"`
+	Docs      Docs      `yaml:"docs"`
 }
 
 // Theme is the design input. Only the base colors are authored; every other
@@ -155,6 +164,75 @@ type CTA struct {
 	Heading string `yaml:"heading"`
 	Body    string `yaml:"body"`
 	Button  Button `yaml:"button"`
+}
+
+// Waitlist powers the "waitlist" page type: an email capture panel with an
+// optional launch date and social links.
+type Waitlist struct {
+	Launches string    `yaml:"launches"`
+	Heading  string    `yaml:"heading"`
+	Body     string    `yaml:"body"`
+	Form     Form      `yaml:"form"`
+	Social   []NavItem `yaml:"social"`
+}
+
+// Form is the email capture form of a waitlist page.
+type Form struct {
+	Action      string `yaml:"action"`
+	Placeholder string `yaml:"placeholder"`
+	Button      string `yaml:"button"`
+}
+
+// Event powers the "event" page type: a conference-style page with a date and
+// venue strip, an agenda timeline, and a speaker grid.
+type Event struct {
+	Date            string       `yaml:"date"`
+	Time            string       `yaml:"time"`
+	Venue           EventVenue   `yaml:"venue"`
+	Primary         Button       `yaml:"primary"`
+	SpeakersHeading string       `yaml:"speakers_heading"`
+	SpeakersSub     string       `yaml:"speakers_sub"`
+	Agenda          []AgendaItem `yaml:"agenda"`
+	Speakers        []Speaker    `yaml:"speakers"`
+}
+
+// EventVenue is the location shown in the event meta strip.
+type EventVenue struct {
+	Name    string `yaml:"name"`
+	City    string `yaml:"city"`
+	Address string `yaml:"address"`
+}
+
+// AgendaItem is a single timed slot in the event agenda.
+type AgendaItem struct {
+	Time    string `yaml:"time"`
+	Title   string `yaml:"title"`
+	Body    string `yaml:"body"`
+	Speaker string `yaml:"speaker"`
+}
+
+// Speaker is a person card in the event speaker grid.
+type Speaker struct {
+	Name   string `yaml:"name"`
+	Role   string `yaml:"role"`
+	Avatar string `yaml:"avatar"`
+}
+
+// Download powers the "download" page type: a release page with version and
+// license badges, per-OS download buttons, and an install snippet.
+type Download struct {
+	Version   string     `yaml:"version"`
+	License   string     `yaml:"license"`
+	Repo      string     `yaml:"repo"`
+	Install   string     `yaml:"install"`
+	Platforms []Platform `yaml:"platforms"`
+}
+
+// Platform is one OS/arch download button on a download page.
+type Platform struct {
+	Name string `yaml:"name"`
+	Icon string `yaml:"icon"`
+	Href string `yaml:"href"`
 }
 
 // Footer holds the copyright line and a set of links.

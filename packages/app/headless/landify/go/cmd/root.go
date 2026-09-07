@@ -20,6 +20,7 @@ Commands:
   new       create a landify.yaml with placeholder content
   validate  check the schema of landify.yaml
   build     generate index.html from landify.yaml
+  themes    list the sixty-four built-in theme presets
   serve     preview the result over HTTP`,
 	SilenceUsage:  true,
 	SilenceErrors: true,
@@ -35,5 +36,5 @@ func Execute() {
 
 func init() {
 	rootCmd.PersistentFlags().StringP("file", "f", "landify.yaml", "path to the YAML content file")
-	rootCmd.AddCommand(newCmd, validateCmd, buildCmd, serveCmd)
+	rootCmd.AddCommand(newCmd, validateCmd, buildCmd, themesCmd, serveCmd)
 }

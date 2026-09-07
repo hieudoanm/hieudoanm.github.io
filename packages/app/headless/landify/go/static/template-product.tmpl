@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{{.Site.Description}}" />
+    <title>{{.Site.Name}}</title>
+    <style>
+      :root {
+@LANDIFY_THEME@      }
+{{template "base-css" .}}
+    </style>
+  </head>
+  <body>
+    {{template "header" .}}
+
+    <main id="top">
+      <section class="hero">
+        <div>
+          <span class="badge">{{.Hero.Badge}}</span>
+          <h1>{{.Hero.Headline}}</h1>
+          <p class="lead">{{.Hero.Subheadline}}</p>
+          <div class="hero-actions">
+            {{if .Hero.Primary.Href}}<a class="btn btn-primary" href="{{.Hero.Primary.Href}}">{{.Hero.Primary.Label}}</a>{{end}}
+            {{if .Hero.Secondary.Href}}<a class="btn btn-ghost" href="{{.Hero.Secondary.Href}}">{{.Hero.Secondary.Label}}</a>{{end}}
+          </div>
+        </div>
+        <img class="hero-media" src="{{.Hero.Image.Src}}" alt="{{.Hero.Image.Alt}}" />
+      </section>
+
+      <section id="features" class="block">
+        <div class="block-head">
+          <h2>{{.Features.Heading}}</h2>
+          <p class="sub">{{.Features.Sub}}</p>
+        </div>
+        <div class="features">
+          {{range .Features.Items}}
+          <div class="feature">
+            <span class="icon">{{.Icon}}</span>
+            <h3>{{.Title}}</h3>
+            <p>{{.Body}}</p>
+          </div>
+          {{end}}
+        </div>
+      </section>
+
+      <section id="demo" class="block">
+        <div class="block-head">
+          <h2>{{.Demo.Heading}}</h2>
+          <p class="sub">{{.Demo.Sub}}</p>
+        </div>
+        <video class="demo-media" controls preload="metadata"{{if .Demo.Video.Poster}} poster="{{.Demo.Video.Poster}}"{{end}}>
+          <source src="{{.Demo.Video.Src}}" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </section>
+
+      <section id="cta" class="block">
+        <div class="cta">
+          <span class="icon" aria-hidden="true">{{.CTA.Icon}}</span>
+          <h2>{{.CTA.Heading}}</h2>
+          <p>{{.CTA.Body}}</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="{{.CTA.Button.Href}}">{{.CTA.Button.Label}}</a>
+          </div>
+        </div>
+      </section>
+
+      {{template "footer" .}}
+    </main>
+  </body>
+</html>

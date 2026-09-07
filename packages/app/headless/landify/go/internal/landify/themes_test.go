@@ -3,35 +3,56 @@ package landify
 import "testing"
 
 func TestThemeByNameResolvesEveryPreset(t *testing.T) {
-	tests := []struct {
-		name        string
-		wantPrimary string
-	}{
-		{"ocean", "#0e7490"},
-		{"forest", "#15803d"},
-		{"sunset", "#ea580c"},
-		{"royal", "#6d28d9"},
-		{"rose", "#be185d"},
-		{"slate", "#1e293b"},
-		{"sand", "#a16207"},
-		{"midnight", "#22d3ee"},
+	names := []string{
+		"ocean", "forest", "sunset", "royal", "rose", "slate", "sand", "midnight",
+		"lagoon", "seafoam", "glacier", "sky", "cobalt", "arctic", "sapphire", "teal",
+		"emerald", "jade", "mint", "moss", "fern", "graphite", "steel", "iron",
+		"pearl", "silver", "concrete", "indigo", "violet", "lavender", "orchid", "iris",
+		"periwinkle", "carnation", "magenta", "peony", "fuchsia", "blush", "cherry", "crimson",
+		"tomato", "amber", "apricot", "tangerine", "pumpkin", "gold", "honey", "marigold",
+		"mocha", "coffee", "caramel", "olive", "lime", "chartreuse", "plum", "wine",
+		"burgundy", "noir", "eclipse", "nebula", "abyss", "obsidian", "fog", "frost",
 	}
-	if got := len(Themes()); got != len(tests) {
-		t.Fatalf("Themes() = %d, want %d", got, len(tests))
+	wantPrimary := map[string]string{
+		"ocean":    "#0e7490",
+		"forest":   "#15803d",
+		"sunset":   "#ea580c",
+		"royal":    "#6d28d9",
+		"rose":     "#be185d",
+		"slate":    "#1e293b",
+		"sand":     "#a16207",
+		"midnight": "#22d3ee",
 	}
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			theme, ok := ThemeByName(tt.name)
-			if !ok {
-				t.Fatalf("ThemeByName(%q): not found", tt.name)
-			}
-			if theme.Primary != tt.wantPrimary {
-				t.Errorf("theme.primary = %q, want %q", theme.Primary, tt.wantPrimary)
-			}
-			if _, ok := ThemeByName(up(tt.name)); !ok {
-				t.Errorf("ThemeByName(%q): case-insensitive lookup failed", up(tt.name))
-			}
-		})
+	if len(wantPrimary) != 8 {
+		t.Fatalf("primary contract covers %d themes, want 8", len(wantPrimary))
+	}
+
+	got := Themes()
+	if len(got) != len(names) {
+		t.Fatalf("Themes() = %d, want %d", len(got), len(names))
+	}
+	seen := make(map[string]bool, len(got))
+	for i, nt := range got {
+		if nt.Name == "" {
+			t.Fatalf("themes[%d]: empty name", i)
+		}
+		if seen[nt.Name] {
+			t.Fatalf("themes[%d]: duplicate name %q", i, nt.Name)
+		}
+		seen[nt.Name] = true
+		if nt.Name != names[i] {
+			t.Errorf("themes[%d].name = %q, want %q", i, nt.Name, names[i])
+		}
+		theme, ok := ThemeByName(nt.Name)
+		if !ok {
+			t.Fatalf("ThemeByName(%q): not found", nt.Name)
+		}
+		if want, ok := wantPrimary[nt.Name]; ok && theme.Primary != want {
+			t.Errorf("theme.primary = %q, want %q", theme.Primary, want)
+		}
+		if _, ok := ThemeByName(up(nt.Name)); !ok {
+			t.Errorf("ThemeByName(%q): case-insensitive lookup failed", up(nt.Name))
+		}
 	}
 }
 

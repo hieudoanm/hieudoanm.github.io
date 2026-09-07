@@ -1,0 +1,55 @@
+type: app
+site:
+  name: Landify Pocket
+  description: Read the whole web in one pocket.
+  nav:
+    - label: Screenshots
+      href: "#screenshots"
+    - label: Features
+      href: "#features"
+hero:
+  badge: "📱 Now on iOS and Android"
+  headline: Read the whole web in one pocket.
+  subheadline: A flat, fast, offline-first reader with zero distractions.
+  image:
+    src: ../media/app-hero.png
+    alt: Landify Pocket marketing visual
+app:
+  stores:
+    - name: App Store
+      icon: "🍎"
+      href: "https://example.com/app-store"
+    - name: Google Play
+      icon: "▶️"
+      href: "https://example.com/play"
+  ratings: "4.9"
+  reviews: "12,400 reviews"
+  shots:
+    - title: Library
+      src: "../media/shot1.png"
+    - title: Article
+      src: "../media/shot2.png"
+    - title: Focus mode
+      src: "../media/shot3.png"
+features:
+  heading: Why readers switch
+  sub: Everything you love about paper, in your pocket.
+  items:
+    - icon: "⚡"
+      title: Instant
+      body: Pages open before you blink.
+    - icon: "📴"
+      title: Offline
+      body: Every article cached by default.
+    - icon: "🔒"
+      title: Private
+      body: No trackers, no accounts required.
+cta:
+  icon: "📱"
+  heading: Available now.
+  body: Download today and read without the noise.
+  button:
+    label: Get the app
+    href: "https://example.com/app-store"
+footer:
+  copyright: "© 2026 Landify"

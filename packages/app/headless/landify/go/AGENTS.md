@@ -19,23 +19,41 @@ and `make test` passes.
 
 ## Layout
 
-- `static/` — input assets embedded at build time: `template.tmpl` (the page
-  template) and `example.yaml` (annotated placeholder written by `landify new`)
+- `static/` — input assets embedded at build time: `template-<type>.tmpl`
+  (one page template per landing-page type), `partials/` (shared blocks:
+  `base-css`, `header`, `footer`), and `example.yaml` (annotated placeholder
+  written by `landify new`)
 - `internal/landify/` — config schema, strict parsing, validation, rendering
 - `cmd/` — cobra command wiring
 
 ## Content rules
 
-- `landify.yaml` feeds `static/template.tmpl` via `html/template`; unknown
-  YAML fields are parse errors (strict decoding via `KnownFields(true)`). The
-  `theme` section takes only the eight base colors + `radius`; all other `:root`
-  tokens are derived (shades, tints, WCAG contrast) in `internal/landify/color.go`.
-- The hero always renders an image (`hero.image.src` required) and the demo
-  always renders a video (`demo.video.src` required); both share the same
-  1280 × 720 (16:9) frame.
-- Built-in theme presets live in `internal/landify/themes.go` (keep exactly 8,
-  add/remove via `namedThemes`); a gallery of the rendered pages and captured
-  images lives in `landify/themes/html` and `landify/themes/images`.
+- `landify.yaml` feeds a `static/template-<type>.tmpl` via `html/template`;
+  unknown YAML fields are parse errors (strict decoding via
+  `KnownFields(true)`). The `theme` section takes only the eight base colors +
+  `radius`; all other `:root` tokens are derived (shades, tints, WCAG contrast)
+  in `internal/landify/color.go`.
+- The top-level `type:` field selects the page layout:
+  `product` (default, the original hero + features + demo-video + CTA layout),
+  `waitlist` (email-capture panel with launch date and social links),
+  `event` (date/venue strip, agenda timeline, speaker grid), `download`
+  (version/license badges, per-OS download buttons, install snippet), `app`
+  (store badges, ratings, portrait screenshot gallery), `pricing` (tier cards
+  with a tagged "most popular" plan), `portfolio` (avatar, skills chips,
+  project grid), and `docs` (topic card links, code sample). Required fields
+  are per-type and enforced in `internal/landify/validate.go`
+  (`KnownTypes()`). Only `product` requires `hero.image.src` and
+  `demo.video.src`; all media shares the 1280 × 720 (16:9) frame.
+- `Render` selects the template by type, falling back to `product` for
+  unknown types (validation is what rejects them); the `@LANDIFY_THEME@` slot
+  inside each template's `<style>` is spliced by build.go after execution.
+- Built-in theme presets live in `internal/landify/themes.go` (keep exactly 64,
+  add/remove via `namedThemes`); the theme gallery lives in
+  `landify/examples/themes` — one folder per theme with `<name>.html` (built
+  from `themes/showcase.yaml`) and `<name>.png`, sharing `demo.*` media at the
+  folder root — and the page-type gallery in `landify/examples/templates/<type>/`
+  (one `<type>.yaml` + built `<type>.html` + captured `<type>.png` per type, all
+  rendered with the `slate` preset, sharing `media/`).
 - `landify build` writes to `index.html` in the current directory by default
   (`-o` to override).
 
@@ -46,5 +64,6 @@ and `make test` passes.
 - `landify build -f <file> -o <output> --theme <name>` — render and write the
   page; `--theme` replaces the YAML `theme:` section with a built-in preset
   (see `internal/landify/themes.go`), and validates the name against it
+- `landify themes` — list the sixty-four built-in theme presets
 - `landify serve -d <dir> -p <port>` — serve a directory of static files over
   HTTP and shut down gracefully on Ctrl+C (used to preview the built page)

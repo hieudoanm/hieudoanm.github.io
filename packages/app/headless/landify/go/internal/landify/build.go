@@ -17,19 +17,25 @@ import (
 // (html/template's CSS value filter would otherwise mangle a raw block).
 const themeSlot = "@LANDIFY_THEME@"
 
-// Render returns the landing page HTML for cfg.
+// Render returns the landing page HTML for cfg. The page type (cfg.Type)
+// selects which embedded template is used; unknown types fall back to
+// product so hand-built configs still render.
 func Render(cfg *Config) ([]byte, error) {
-	tmplText, err := static.FS.ReadFile("template.tmpl")
-	if err != nil {
-		return nil, fmt.Errorf("read template: %w", err)
+	kind := NormalizeType(cfg.Type)
+	if !isKnownType(kind) {
+		kind = "product"
 	}
-	tmpl, err := template.New("page").Parse(string(tmplText))
+	tmpl, err := template.New("page").ParseFS(static.FS, "template-*.tmpl", "partials/*.tmpl")
 	if err != nil {
-		return nil, fmt.Errorf("parse template: %w", err)
+		return nil, fmt.Errorf("parse templates: %w", err)
+	}
+	page := tmpl.Lookup("template-" + kind + ".tmpl")
+	if page == nil {
+		return nil, fmt.Errorf("no template for type %q", kind)
 	}
 	var buf bytes.Buffer
-	if err := tmpl.Execute(&buf, cfg); err != nil {
-		return nil, fmt.Errorf("render template: %w", err)
+	if err := page.Execute(&buf, cfg); err != nil {
+		return nil, fmt.Errorf("render %s template: %w", kind, err)
 	}
 	tokens, err := Tokens(cfg.Theme)
 	if err != nil {
