@@ -1,8 +1,43 @@
-import { PAYOFF, STRATEGIES } from './constants';
+import { STRATEGIES } from './constants';
 import { chooseOpponent } from './game';
 import type { Move, Round } from './types';
 
+export interface PayoffConfig {
+  bothCooperate: number;
+  youDefectTheyCooperate: number;
+  youCooperateTheyDefect: number;
+  bothDefect: number;
+}
+
+export const DEFAULT_PAYOFF: PayoffConfig = {
+  bothCooperate: 3,
+  youDefectTheyCooperate: 5,
+  youCooperateTheyDefect: -5,
+  bothDefect: -2,
+};
+
+const resolvePayoff = (
+  aMove: Move,
+  bMove: Move,
+  cfg: PayoffConfig
+): [number, number] => {
+  if (aMove === 'cooperate' && bMove === 'cooperate')
+    return [cfg.bothCooperate, cfg.bothCooperate];
+  if (aMove === 'defect' && bMove === 'cooperate')
+    return [cfg.youDefectTheyCooperate, cfg.youCooperateTheyDefect];
+  if (aMove === 'cooperate' && bMove === 'defect')
+    return [cfg.youCooperateTheyDefect, cfg.youDefectTheyCooperate];
+  return [cfg.bothDefect, cfg.bothDefect];
+};
+
 export interface MatchResult {
+  aScore: number;
+  bScore: number;
+}
+
+export interface MatchupResult {
+  aId: string;
+  bId: string;
   aScore: number;
   bScore: number;
 }
@@ -27,7 +62,8 @@ const clampRounds = (rounds: number): number => {
 export const playMatch = (
   strategyA: string,
   strategyB: string,
-  rounds: number
+  rounds: number,
+  payoff: PayoffConfig = DEFAULT_PAYOFF
 ): MatchResult => {
   const history: Round[] = [];
   const aMoves: Move[] = [];
@@ -37,7 +73,7 @@ export const playMatch = (
   for (let r = 1; r <= clampRounds(rounds); r++) {
     const aMove = chooseOpponent(strategyA, history, bMoves);
     const bMove = chooseOpponent(strategyB, history, aMoves);
-    const [pa, pb] = PAYOFF[aMove][bMove];
+    const [pa, pb] = resolvePayoff(aMove, bMove, payoff);
     aScore += pa;
     bScore += pb;
     history.push({
@@ -53,7 +89,15 @@ export const playMatch = (
   return { aScore, bScore };
 };
 
-export const runTournament = (roundsPerMatch: number): Standing[] => {
+export interface TournamentResult {
+  standings: Standing[];
+  matchups: MatchupResult[];
+}
+
+export const runTournament = (
+  roundsPerMatch: number,
+  payoff: PayoffConfig = DEFAULT_PAYOFF
+): TournamentResult => {
   const standings: Record<string, Standing> = {};
   for (const s of STRATEGIES) {
     standings[s.id] = {
@@ -66,11 +110,14 @@ export const runTournament = (roundsPerMatch: number): Standing[] => {
     };
   }
 
+  const matchups: MatchupResult[] = [];
+
   for (let i = 0; i < STRATEGIES.length; i++) {
     for (let j = i + 1; j < STRATEGIES.length; j++) {
       const a = STRATEGIES[i].id;
       const b = STRATEGIES[j].id;
-      const { aScore, bScore } = playMatch(a, b, roundsPerMatch);
+      const { aScore, bScore } = playMatch(a, b, roundsPerMatch, payoff);
+      matchups.push({ aId: a, bId: b, aScore, bScore });
       const sa = standings[a];
       const sb = standings[b];
       sa.score += aScore;
@@ -90,10 +137,12 @@ export const runTournament = (roundsPerMatch: number): Standing[] => {
     }
   }
 
-  return Object.values(standings).sort(
+  const standingsArr = Object.values(standings).sort(
     (x, y) =>
       y.score - x.score ||
       y.wins - x.wins ||
       x.strategyId.localeCompare(y.strategyId)
   );
+
+  return { standings: standingsArr, matchups };
 };

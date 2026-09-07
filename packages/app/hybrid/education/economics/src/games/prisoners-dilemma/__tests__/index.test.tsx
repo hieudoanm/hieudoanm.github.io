@@ -15,7 +15,7 @@ describe('PrisonerDilemma', () => {
   it('renders the payoff table and move buttons in the choose phase', () => {
     renderGame();
     expect(screen.getByText(/Round/)).toBeInTheDocument();
-    expect(screen.getByText('1yr, 1yr')).toBeInTheDocument();
+    expect(screen.getAllByText('+3').length).toBeGreaterThan(0);
     expect(
       screen.getByRole('button', { name: /Cooperate/i })
     ).toBeInTheDocument();
@@ -26,7 +26,7 @@ describe('PrisonerDilemma', () => {
     renderGame();
     fireEvent.click(screen.getByRole('button', { name: /Defect/i }));
     expect(screen.getByText('VS')).toBeInTheDocument();
-    expect(screen.getByText('+3 / +0')).toBeInTheDocument();
+    expect(screen.getByText('+5 / -5')).toBeInTheDocument();
     expect(
       screen.getByRole('button', { name: 'Next Round' })
     ).toBeInTheDocument();
@@ -35,7 +35,7 @@ describe('PrisonerDilemma', () => {
   it('scores mutual cooperation', () => {
     renderGame();
     fireEvent.click(screen.getByRole('button', { name: /Cooperate/i }));
-    expect(screen.getByText('+1 / +1')).toBeInTheDocument();
+    expect(screen.getByText('+3 / +3')).toBeInTheDocument();
   });
 
   it('finishes the match after all rounds and shows results', () => {
@@ -45,7 +45,8 @@ describe('PrisonerDilemma', () => {
       fireEvent.click(screen.getByRole('button', { name: /Next|Results/i }));
     }
     expect(screen.getByText('Bot won!')).toBeInTheDocument();
-    expect(screen.getAllByText('30yr').length).toBe(2);
+    expect(screen.getAllByText('+50').length).toBeGreaterThan(0);
+    expect(screen.getAllByText('-50').length).toBeGreaterThan(0);
     expect(
       screen.getByRole('button', { name: 'Play Again' })
     ).toBeInTheDocument();
@@ -59,13 +60,13 @@ describe('PrisonerDilemma', () => {
       container.querySelector('strong')?.textContent ?? '';
 
     fireEvent.keyDown(board, { key: 'c' });
-    expect(screen.getByText('+1 / +1')).toBeInTheDocument();
+    expect(screen.getByText('+3 / +3')).toBeInTheDocument();
 
     fireEvent.keyDown(board, { key: 'Enter' });
     expect(roundNumber()).toBe('2');
 
     fireEvent.keyDown(board, { key: 'd' });
-    expect(screen.getByText('+3 / +0')).toBeInTheDocument();
+    expect(screen.getByText('+5 / -5')).toBeInTheDocument();
 
     fireEvent.keyDown(board, { key: 'r' });
     expect(roundNumber()).toBe('1');

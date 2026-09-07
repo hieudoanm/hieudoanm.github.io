@@ -7,7 +7,12 @@ describe('HomePage', () => {
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
       'Economics'
     );
-    ['prisoners-dilemma'].forEach((slug) => {
+    [
+      'prisoners-dilemma',
+      'tragedy-of-the-commons',
+      'public-goods-dilemma',
+      'opportunity-cost',
+    ].forEach((slug) => {
       expect(screen.getByTestId(`tool-card-${slug}`)).toBeInTheDocument();
     });
   });

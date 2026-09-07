@@ -12,10 +12,9 @@ describe('SimulationPage', () => {
     expect(screen.getAllByTestId(/^standing-(?!bot)/)).toHaveLength(
       STRATEGIES.length
     );
-    expect(screen.getByRole('link', { name: /Back to Game/ })).toHaveAttribute(
-      'href',
-      '/prisoners-dilemma'
-    );
+    expect(
+      screen.getByRole('link', { name: /Back to Theory/ })
+    ).toHaveAttribute('href', '/prisoners-dilemma');
   });
 
   it('re-runs the tournament with the configured round count', () => {

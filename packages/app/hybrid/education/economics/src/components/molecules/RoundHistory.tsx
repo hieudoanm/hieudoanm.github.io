@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { Phase, Round } from '@/games/prisoners-dilemma/types';
+import { formatScore } from '@/games/prisoners-dilemma/game';
 
 interface RoundHistoryProps {
   history: Round[];
@@ -20,7 +21,7 @@ export const RoundHistory: FC<RoundHistoryProps> = ({ history, phase }) => {
             {r.opponent === 'cooperate' ? '🤝' : '🔪'}
           </span>
           <span>
-            +{r.pScore} / +{r.oScore}
+            {formatScore(r.pScore)} / {formatScore(r.oScore)}
           </span>
         </div>
       ))}

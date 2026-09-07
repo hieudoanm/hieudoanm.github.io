@@ -84,4 +84,4 @@ export const chooseOpponent = (
   return BEHAVIOURS[def.behavior](history, playerHistory);
 };
 
-export const formatScore = (s: number) => `${s}yr`;
+export const formatScore = (s: number) => `${s > 0 ? '+' : ''}${s}`;

@@ -7,10 +7,9 @@ describe('BotsPage', () => {
     render(<BotsPage />);
     expect(screen.getByRole('heading', { name: 'Bots' })).toBeInTheDocument();
     expect(screen.getAllByTestId(/^strategy-/)).toHaveLength(STRATEGIES.length);
-    expect(screen.getByRole('link', { name: /Back to Game/ })).toHaveAttribute(
-      'href',
-      '/prisoners-dilemma'
-    );
+    expect(
+      screen.getByRole('link', { name: /Back to Theory/ })
+    ).toHaveAttribute('href', '/prisoners-dilemma');
   });
 
   it('filters bots by search query', () => {

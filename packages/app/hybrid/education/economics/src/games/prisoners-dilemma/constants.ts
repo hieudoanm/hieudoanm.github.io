@@ -1,8 +1,8 @@
 import { Behavior, Move, Stance } from './types';
 
 export const PAYOFF: Record<Move, Record<Move, [number, number]>> = {
-  cooperate: { cooperate: [1, 1], defect: [0, 3] },
-  defect: { cooperate: [3, 0], defect: [2, 2] },
+  cooperate: { cooperate: [3, 3], defect: [-5, 5] },
+  defect: { cooperate: [5, -5], defect: [-2, -2] },
 };
 
 export type StrategyDef = {

@@ -24,7 +24,7 @@ const BotsPage: NextPage = () => {
       <Link
         href="/prisoners-dilemma"
         className="text-primary text-sm hover:underline">
-        ← Back to Game
+        ← Back to Theory
       </Link>
       <input
         type="search"

@@ -12,7 +12,7 @@ export const StrategyList: FC<{ strategies?: StrategyDef[] }> = ({
         <div
           key={id}
           data-testid={`strategy-${id}`}
-          className="card bg-base-200 border-base-content/10 flex flex-col gap-1 border p-3">
+          className="card border-base-content/10 flex flex-col gap-1 border p-3">
           <div className="flex items-center gap-2">
             <span className="text-xl">{emoji}</span>
             <span className="text-sm font-normal">{label}</span>

@@ -119,7 +119,15 @@ describe('STRATEGIES', () => {
 });
 
 describe('formatScore', () => {
-  it('formats a score in years', () => {
-    expect(formatScore(7)).toBe('7yr');
+  it('formats a score with a sign prefix', () => {
+    expect(formatScore(7)).toBe('+7');
+  });
+
+  it('formats zero without a prefix', () => {
+    expect(formatScore(0)).toBe('0');
+  });
+
+  it('formats negative scores with a sign', () => {
+    expect(formatScore(-5)).toBe('-5');
   });
 });
