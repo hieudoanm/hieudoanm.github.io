@@ -1,6 +1,6 @@
 'use client';
 
-import { Sign } from '@/components/features/sign';
+import { Sign } from '@/games/sign';
 import { NextPage } from 'next';
 
 const SignPage: NextPage = () => <Sign />;

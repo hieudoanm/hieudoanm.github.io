@@ -33,7 +33,7 @@ beforeEach(() => {
 const renderDeck = (): void => {
   render(
     <Wrapper>
-      <Flashcards />
+      <Flashcards language="korean" />
     </Wrapper>
   );
 };
@@ -43,13 +43,12 @@ it('shows loading state first', () => {
   expect(screen.getByText('Loading flashcards...')).toBeInTheDocument();
 });
 
-it('shows language selector defaulting to korean with first card', async () => {
+it('shows the first Korean card after loading', async () => {
   renderDeck();
-  const select = await screen.findByTestId('language-select');
-  expect(select).toHaveValue('korean');
   await waitFor(() => {
     expect(screen.getByText(/1 \/ 2/)).toBeInTheDocument();
   });
+  expect(screen.getByTestId('flashcard').textContent).toMatch(/안녕|감사/);
 });
 
 it('flips card when clicked', async () => {
@@ -67,16 +66,6 @@ it('navigates to next and previous cards', async () => {
   expect(screen.getByText(/2 \//)).toBeInTheDocument();
   fireEvent.click(screen.getByText('Previous'));
   expect(screen.getByText(/1 \//)).toBeInTheDocument();
-});
-
-it('changes language and resets deck', async () => {
-  renderDeck();
-  const select = await screen.findByTestId('language-select');
-  fireEvent.change(select, { target: { value: 'spanish' } });
-  await waitFor(() => {
-    expect(screen.getByText('hola')).toBeInTheDocument();
-  });
-  expect(select).toHaveValue('spanish');
 });
 
 it('handles keyboard navigation and flip', async () => {
@@ -99,10 +88,23 @@ it('handles keyboard navigation and flip', async () => {
 it('removes key listener on unmount', async () => {
   const { unmount } = render(
     <Wrapper>
-      <Flashcards />
+      <Flashcards language="korean" />
     </Wrapper>
   );
   await screen.findByText(/1 \/ 2/);
   unmount();
   expect(() => fireEvent.keyDown(window, { code: 'ArrowRight' })).not.toThrow();
+});
+
+it('shows a message when the language has no cards', async () => {
+  render(
+    <Wrapper>
+      <Flashcards language="french" />
+    </Wrapper>
+  );
+  await waitFor(() => {
+    expect(
+      screen.getByText('No flashcards available for french.')
+    ).toBeInTheDocument();
+  });
 });

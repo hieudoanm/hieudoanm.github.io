@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { PiCards, PiGlobe, PiHandWaving } from 'react-icons/pi';
 import { HomeTemplate } from '@/components/templates/HomeTemplate';
-import { useProgress } from '@/hooks/useProgress';
 import { NextPage } from 'next';
 
 const ITEMS = [
@@ -28,13 +27,11 @@ const ITEMS = [
 ];
 
 const HomePage: NextPage = () => {
-  const { progress } = useProgress();
   return (
     <HomeTemplate
       appName="Lingo"
       description="Learn languages — flashcards, dictionary and sign language."
       items={ITEMS}
-      stats={{ xp: progress.xp, streak: progress.streak }}
       footer={
         <>
           <Link href="/about/">About</Link>

@@ -1,4 +1,10 @@
-import { filterByLanguage, FlashCard, getLanguages, shuffle } from '../utils';
+import {
+  filterByLanguage,
+  FlashCard,
+  formatLanguage,
+  getLanguages,
+  shuffle,
+} from '../utils';
 
 const CARDS: FlashCard[] = [
   { language: 'korean', front: '안녕', back: 'hello' },
@@ -21,6 +27,16 @@ describe('filterByLanguage', () => {
     const korean = filterByLanguage(CARDS, 'korean');
     expect(korean).toHaveLength(2);
     expect(korean.every((card) => card.language === 'korean')).toBe(true);
+  });
+});
+
+describe('formatLanguage', () => {
+  it('capitalizes simple slugs', () => {
+    expect(formatLanguage('korean')).toBe('Korean');
+  });
+
+  it('splits underscores into readable names', () => {
+    expect(formatLanguage('myanmar_(burmese)')).toBe('Myanmar (Burmese)');
   });
 });
 

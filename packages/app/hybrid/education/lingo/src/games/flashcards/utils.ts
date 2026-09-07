@@ -15,5 +15,15 @@ export const filterByLanguage = (
   language: string
 ): FlashCard[] => cards.filter((card) => card.language === language);
 
+export const formatLanguage = (language: string): string =>
+  language
+    .split('_')
+    .map((part) => {
+      const open = part.startsWith('(') ? '(' : '';
+      const word = open ? part.slice(1) : part;
+      return `${open}${word.charAt(0).toUpperCase()}${word.slice(1)}`;
+    })
+    .join(' ');
+
 export const shuffle = <T>(items: T[]): T[] =>
   [...items].sort(() => Math.random() - 0.5);

@@ -2,24 +2,20 @@
 
 import { useQuery } from '@tanstack/react-query';
 import { FC, useEffect, useMemo, useState } from 'react';
-import { useProgress } from '@/hooks/useProgress';
-import {
-  filterByLanguage,
-  FlashCard,
-  getLanguages,
-  shuffle,
-  WORDS_URL,
-} from './utils';
+import { awardXp } from '@/lib/progress';
+import { filterByLanguage, FlashCard, shuffle, WORDS_URL } from './utils';
 
 const XP_PER_TEN_CARDS = 10;
 
-export const Flashcards: FC = () => {
-  const [language, setLanguage] = useState('korean');
+interface FlashcardsProps {
+  language: string;
+}
+
+export const Flashcards: FC<FlashcardsProps> = ({ language }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
   const [shuffledCards, setShuffledCards] = useState<FlashCard[]>([]);
   const [reviewedCount, setReviewedCount] = useState(0);
-  const { awardXp } = useProgress();
 
   const { isPending, data } = useQuery<FlashCard[]>({
     queryKey: ['words'],
@@ -31,7 +27,6 @@ export const Flashcards: FC = () => {
   });
 
   const words = useMemo(() => data ?? [], [data]);
-  const allLanguages = useMemo(() => getLanguages(words), [words]);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -47,7 +42,7 @@ export const Flashcards: FC = () => {
     setCurrentIndex((prev) => (prev + 1) % shuffledCards.length);
     setReviewedCount((prev) => {
       const count = prev + 1;
-      if (count % 10 === 0) awardXp(XP_PER_TEN_CARDS);
+      if (count % 10 === 0) void awardXp(XP_PER_TEN_CARDS);
       return count;
     });
   };
@@ -87,19 +82,6 @@ export const Flashcards: FC = () => {
 
   return (
     <>
-      <select
-        value={language}
-        onChange={(e) => setLanguage(e.target.value)}
-        className="select select-bordered select-sm mb-4 w-full capitalize"
-        aria-label="Language"
-        data-testid="language-select">
-        {allLanguages.map((lang) => (
-          <option key={lang} value={lang}>
-            {lang}
-          </option>
-        ))}
-      </select>
-
       {currentCard ? (
         <>
           <div

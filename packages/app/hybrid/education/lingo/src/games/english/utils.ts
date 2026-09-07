@@ -13,7 +13,7 @@ export interface Word {
 }
 
 const BASE =
-  'https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/data/english/words';
+  'https://raw.githubusercontent.com/hieudoanm/hieudoanm/refs/heads/master/drive/documents/english/words';
 
 export const wordUrl = (word: string): string =>
   `${BASE}/${encodeURI(word.trim().toLowerCase())}.json`;

@@ -30,9 +30,7 @@ export const LanguagesEnglish: FC = () => {
         />
       </div>
 
-      <div
-        className="relative min-h-0 flex-1 overflow-y-auto"
-        style={{ maxHeight: '60vh' }}>
+      <div className="relative flex-1 overflow-y-auto">
         <div className="mx-auto flex max-w-3xl flex-col gap-8">
           {(isPending || isFetching) && (
             <div className="text-base-content/50 text-center text-lg font-normal">

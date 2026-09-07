@@ -3,7 +3,7 @@ import { fetchWord, groupByPartOfSpeech, wordUrl, Word } from '../utils';
 describe('wordUrl', () => {
   it('builds lowercased trimmed url', () => {
     expect(wordUrl('  Hello World ')).toBe(
-      'https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/refs/heads/master/packages/data/english/words/hello%20world.json'
+      'https://raw.githubusercontent.com/hieudoanm/hieudoanm/refs/heads/master/drive/documents/english/words/hello%20world.json'
     );
   });
 });

@@ -26,10 +26,13 @@ Reference docs live in `docs/`:
 - Light theme as default (`data-theme="lingo"` on `<html>`), toggleable with
   `lingo-dark`; persisted in localStorage under `lingo:theme`
 - `prettier-plugin-tailwindcss` for class sorting
-- Atomic design: atoms → features → templates
-- Each feature is a self-contained folder under `src/components/features/`:
-  `index.tsx` (UI) and `utils.ts` (pure data + logic, zero UI imports)
-- Features are standalone — no `onClose` prop; pages render them directly
+- Atomic design: atoms → games → templates
+- Each game is a self-contained folder under `src/games/`: `index.tsx` (UI) and
+  `utils.ts` (pure data + logic, zero UI imports)
+- Games are standalone — no `onClose` prop; pages render them directly
+- `/flashcards` is a language hub (Duolingo-style list); the flashcard deck
+  lives at `/flashcards/[language]`, pre-rendered via `generateStaticParams`
+- Offline detection is inlined in `OfflineBadge` (no shared hook)
 - Progress (XP + streak) lives in IndexedDB via `src/lib/progress.ts`; scoring
   is pure (`applyActivity`) and never recomputed in components
 - Static assets are fetched at runtime from `public/data/` and `public/models/`
@@ -55,9 +58,9 @@ pnpm tauri dev|build # Desktop app via Tauri CLI
 src/app/            # App Router pages — /flashcards /english /sign + info routes
 src/components/
   atoms/            # Button, Badge, OfflineBadge, ThemeToggle
-  features/         # flashcards, english, sign
+  games/            # flashcards, english, sign
   templates/        # HomeTemplate, About/Downloads/Version/ErrorTemplate
-src/hooks/          # useTheme, useProgress, useOffline, useSWRegister, useUpdater
+src/hooks/          # useTheme, useSWRegister, useUpdater
 src/lib/            # progress (IndexedDB), native bridge, publicPaths
 src/providers/      # SWProvider, NativeProvider, QueryProvider
 src/styles/         # globals.css (tailwind), base.css, themes.css
@@ -68,5 +71,5 @@ e2e/                # Playwright specs
 
 ## Routes
 
-`/` (home hub), `/flashcards`, `/english`, `/sign` plus `/about`, `/downloads`,
-`/version`.
+`/` (home hub), `/flashcards` (language hub), `/flashcards/[language]`,
+`/english`, `/sign` plus `/about`, `/downloads`, `/version`.
