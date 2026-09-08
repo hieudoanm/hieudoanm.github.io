@@ -4,7 +4,7 @@ import { blackKeys, whiteKeys } from './constants';
 import { usePitchGame } from './usePitchGame';
 
 const CHUNKY_BTN =
-  'btn min-w-36 rounded-2xl border-0 border-b-4 border-black/25 text-base font-extrabold tracking-wide transition-all duration-100 active:translate-y-1 active:border-b-0';
+  'btn w-full rounded-2xl border-0 border-b-4 border-black/25 text-base font-extrabold tracking-wide transition-all duration-100 active:translate-y-1 active:border-b-0 sm:w-auto sm:min-w-36';
 
 export const Pitch: FC = () => {
   const {
@@ -27,12 +27,12 @@ export const Pitch: FC = () => {
 
   return (
     <div className="flex flex-col gap-6">
-      <div className="flex items-center justify-between gap-3">
+      <div className="flex flex-wrap items-center justify-center gap-3 sm:justify-between">
         <span className="badge bg-base-100 border-base-content/10 badge-lg rounded-full border font-bold shadow-sm">
           Level {level}
         </span>
         <progress
-          className="progress progress-primary h-3 w-40 rounded-full"
+          className="progress progress-primary h-3 w-full max-w-40 rounded-full sm:w-40"
           value={score % 10}
           max={10}
           aria-label="Level progress"

@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { ComponentType, FC, ReactNode } from 'react';
+import { ComponentType, FC } from 'react';
 
 export interface CourseItem {
   label: string;
@@ -14,14 +14,12 @@ export interface HomeTemplateProps {
   appName: string;
   description: string;
   items: CourseItem[];
-  footer?: ReactNode;
 }
 
 export const HomeTemplate: FC<HomeTemplateProps> = ({
-  appName,
-  description,
-  items,
-  footer,
+  appName = '',
+  description = '',
+  items = [],
 }) => (
   <main className="bg-base-100 flex min-h-dvh flex-col items-center gap-8 p-8">
     <div className="flex flex-col items-center gap-4 text-center">
@@ -38,7 +36,7 @@ export const HomeTemplate: FC<HomeTemplateProps> = ({
             key={href}
             href={href}
             data-testid={`tool-card-${href.replace(/\//g, '')}`}
-            className="card bg-base-200 border-base-content/10 hover:border-primary border transition-colors">
+            className="card border-base-content/10 hover:border-primary border transition-colors">
             <div className="card-body items-center gap-2 text-center">
               <Icon className="text-primary text-4xl" />
               <h2 className="card-title text-lg">{label}</h2>
@@ -48,11 +46,5 @@ export const HomeTemplate: FC<HomeTemplateProps> = ({
         )
       )}
     </div>
-
-    {footer ? (
-      <footer className="text-base-content/50 mt-auto flex gap-4 text-xs">
-        {footer}
-      </footer>
-    ) : null}
   </main>
 );

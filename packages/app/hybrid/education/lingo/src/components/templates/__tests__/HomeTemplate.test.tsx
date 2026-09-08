@@ -13,17 +13,9 @@ const ITEMS = [
 
 describe('HomeTemplate', () => {
   it('renders app name, description and cards', () => {
-    render(
-      <HomeTemplate
-        appName="Lingo"
-        description="desc"
-        items={ITEMS}
-        footer={<span>footer</span>}
-      />
-    );
+    render(<HomeTemplate appName="Lingo" description="desc" items={ITEMS} />);
     expect(screen.getByRole('heading', { name: 'Lingo' })).toBeInTheDocument();
     expect(screen.getByText('desc')).toBeInTheDocument();
     expect(screen.getByTestId('tool-card-flashcards')).toBeInTheDocument();
-    expect(screen.getByText('footer')).toBeInTheDocument();
   });
 });

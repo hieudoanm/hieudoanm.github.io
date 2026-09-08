@@ -32,13 +32,6 @@ const HomePage: NextPage = () => {
       appName="Lingo"
       description="Learn languages — flashcards, dictionary and sign language."
       items={ITEMS}
-      footer={
-        <>
-          <Link href="/about/">About</Link>
-          <Link href="/downloads/">Downloads</Link>
-          <Link href="/version/">Version</Link>
-        </>
-      }
     />
   );
 };

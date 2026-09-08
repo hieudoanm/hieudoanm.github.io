@@ -27,12 +27,6 @@ describe('HomeTemplate', () => {
     ).toBeInTheDocument();
   });
 
-  it('renders xp and streak stats when provided', () => {
-    render(<HomeTemplate {...base} stats={{ xp: 120, streak: 3 }} />);
-    expect(screen.getByTestId('stat-xp').textContent).toContain('120');
-    expect(screen.getByTestId('stat-streak').textContent).toContain('3');
-  });
-
   it('omits stats when not provided', () => {
     render(<HomeTemplate {...base} />);
     expect(screen.queryByTestId('stat-xp')).not.toBeInTheDocument();

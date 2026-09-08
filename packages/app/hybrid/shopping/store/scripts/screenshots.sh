@@ -222,6 +222,7 @@ async function main() {
     const browser = await pw[type].launch(launchOptions);
     let failures = 0;
     let skipped = 0;
+    const skippedUrls = [];
     try {
         const context = await browser.newContext({ viewport: { width, height } });
         const page = await context.newPage();
@@ -232,6 +233,7 @@ async function main() {
                 const res = await page.goto(target.url);
                 if (res && res.status() === 404) {
                     skipped += 1;
+                    skippedUrls.push(target.url);
                     console.log(`Skipping ${target.url} (HTTP 404)`);
                     continue;
                 }
@@ -254,7 +256,10 @@ async function main() {
     const captured = targets.length - failures - skipped;
     console.log(`\nCaptured ${captured} screenshots into ${outDir}`);
     if (skipped > 0) {
-        console.log(`Skipped ${skipped} screenshots (HTTP 404).`);
+        console.log(`Skipped ${skipped} screenshot(s) (HTTP 404):`);
+        for (const url of skippedUrls) {
+            console.log(`  ${url}`);
+        }
     }
     if (failures > 0) {
         console.error(`Failed to capture ${failures} screenshots.`);
