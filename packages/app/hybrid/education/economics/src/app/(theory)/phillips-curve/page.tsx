@@ -93,6 +93,14 @@ const PhillipsCurvePage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/phillips-curve/tradeoff',
+        label: 'Phillips Curve Lab',
+        description:
+          'Navigate short-run tradeoffs, anchor expectations, and see the economy return to NAIRU.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Phillips_curve',

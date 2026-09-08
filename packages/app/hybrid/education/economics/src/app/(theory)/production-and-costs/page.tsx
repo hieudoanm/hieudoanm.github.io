@@ -92,6 +92,14 @@ const ProductionCostsPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/production-and-costs/lab',
+        label: 'Production & Cost Curves',
+        description:
+          'Interactive lab: drag sliders to see Q, MP, AP, TC, MC, ATC and AVC, then check profit-maximizing output.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Production_function',

@@ -242,6 +242,28 @@ Each theory page links to a playable game under `app/(games)`:
   against Taylor-rule scenarios and fight the inflation–output tradeoff.
 - **Nudge Design Lab** (`/nudge-and-behavioral-economics/choice`) — choose
   opt-in, opt-out or active-choice defaults to lift participation.
+- **Trade-Off Builder** (`/opportunity-cost/trade-offs`) — allocate time between
+  studying and work to see opportunity cost in action.
+- **Calibration Challenge** (`/overconfidence-bias/calibration`) — state
+  confidence intervals and learn where your certainty beats the market.
+- **Phillips Curve Lab** (`/phillips-curve/tradeoff`) — steer the
+  inflation–unemployment tradeoff and trace the Phillips curve.
+- **Diversification Lab** (`/portfolio-theory/frontier`) — weight three assets,
+  watch variance fall with 1/√N diversification, and find the minimum-variance
+  portfolio.
+- **Poverty Trap Escape** (`/poverty-traps/escape`) — simulate capital
+  accumulation and find the transfer that lifts a household above the trap
+  threshold.
+- **Production & Cost Curves** (`/production-and-costs/lab`) — shift inputs and
+  watch output, marginal product and cost curves respond.
+- **Voting Power Lab** (`/public-choice/voting`) — measure the influence of
+  legislators and interest groups in public choices.
+- **Future Value Lab** (`/time-value-of-money/lab`) — discount and compound cash
+  flows to compare money across time.
+- **Trade & Tariff Lab** (`/trade-and-tariffs/lab`) — pick tariffs, measure
+  consumer/producer surplus, and play retaliation to find the Nash tariff.
+- **Okun's Law Lab** (`/unemployment-okuns-law/lab`) — move GDP growth and watch
+  unemployment respond, then chase missing growth targets.
 
 ---
 

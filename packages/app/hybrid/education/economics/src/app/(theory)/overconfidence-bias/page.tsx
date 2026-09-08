@@ -89,6 +89,14 @@ const OverconfidencePage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/overconfidence-bias/calibration',
+        label: 'Calibration Challenge',
+        description:
+          'Test how calibrated your confidence is across factual questions, a market bet, and a range estimate.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Overconfidence_effect',

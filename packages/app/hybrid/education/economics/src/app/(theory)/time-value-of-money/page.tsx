@@ -93,6 +93,14 @@ const TimeValuePage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/time-value-of-money/lab',
+        label: 'Future Value Lab',
+        description:
+          'Interactive sliders for compounding, present value, doubling time and investment comparisons.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Time_value_of_money',

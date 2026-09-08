@@ -104,6 +104,14 @@ const TradeTariffsPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/trade-and-tariffs/lab',
+        label: 'Trade & Tariff Lab',
+        description:
+          'Set a tariff on imports and watch consumer, producer, and government surplus shift; then pick tariffs that hit revenue, protection, and import targets before a retaliation round.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Comparative_advantage',

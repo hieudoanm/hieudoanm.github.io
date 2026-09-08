@@ -93,6 +93,14 @@ const OpportunityCostPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/opportunity-cost/trade-offs',
+        label: 'Trade-Off Builder',
+        description:
+          'Explore explicit monetary opportunity cost with a sandbox and challenge rounds.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Opportunity_cost',

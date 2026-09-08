@@ -94,6 +94,14 @@ const PovertyTrapsPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/poverty-traps/escape',
+        label: 'Poverty Trap Escape',
+        description:
+          'Simulate the S-shaped savings dynamic and design the minimum one-off transfer that lifts a household past the escape threshold.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Poverty_trap',

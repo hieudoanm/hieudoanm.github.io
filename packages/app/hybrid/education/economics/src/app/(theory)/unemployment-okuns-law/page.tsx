@@ -97,6 +97,14 @@ const UnemploymentPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/unemployment-okuns-law/lab',
+        label: "Okun's Law Lab",
+        description:
+          "A hands-on lab: steer the unemployment rate with GDP growth and estimate Okun's coefficient from data.",
+      },
+    ]}
     references={[
       {
         href: 'https://www.investopedia.com/terms/o/okunslaw.asp',

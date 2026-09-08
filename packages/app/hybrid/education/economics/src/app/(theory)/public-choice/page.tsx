@@ -96,6 +96,14 @@ const PublicChoicePage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/public-choice/voting',
+        label: 'Voting Power Lab',
+        description:
+          'Simulate median-voter convergence, the voting paradox with agenda control, and rent-seeking contests.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Public_choice',

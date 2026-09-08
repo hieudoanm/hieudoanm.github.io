@@ -89,6 +89,14 @@ const PortfolioTheoryPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/portfolio-theory/frontier',
+        label: 'Diversification Lab',
+        description:
+          'Mix three risky assets to trace the efficient frontier, and discover the 1/√N rule of idiosyncratic-risk reduction.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Modern_portfolio_theory',
