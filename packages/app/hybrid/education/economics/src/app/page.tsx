@@ -75,6 +75,7 @@ type Item = {
   description: string;
   icon: IconType;
   href: string;
+  gameHref?: string;
   badge?: string;
   category: string;
   difficulty: 'Beginner' | 'Intermediate' | 'Advanced';
@@ -621,12 +622,82 @@ const ITEMS: Item[] = [
   },
 ];
 
+const GAMES: Record<string, string> = {
+  '/prisoners-dilemma/': '/prisoners-dilemma/versus',
+  '/nash-equilibrium/': '/nash-equilibrium/solve',
+  '/tragedy-of-the-commons/': '/tragedy-of-the-commons/harvest',
+  '/public-goods-dilemma/': '/public-goods-dilemma/contribute',
+  '/opportunity-cost/': '/opportunity-cost/trade-offs',
+  '/moral-hazard/': '/moral-hazard/insurance',
+  '/auction-theory/': '/auction-theory/auction',
+  '/bayesian-updating/': '/bayesian-updating/monty-hall',
+  '/prospect-theory/': '/prospect-theory/framing',
+  '/mechanism-design/': '/mechanism-design/reveal',
+  '/nudge-and-behavioral-economics/': '/nudge-and-behavioral-economics/choice',
+  '/causal-inference/': '/causal-inference/experiments',
+  '/development-rcts/': '/development-rcts/experiment',
+  '/time-inconsistency/': '/time-inconsistency/savings',
+  '/market-microstructure/': '/market-microstructure/order-book',
+  '/institutions-and-growth/': '/institutions-and-growth/lab',
+  '/supply-and-demand/': '/supply-and-demand/price-lab',
+  '/elasticity/': '/elasticity/pricing',
+  '/marginal-utility/': '/marginal-utility/lab',
+  '/zero-sum-games/': '/zero-sum-games/rps',
+  '/externalities/': '/externalities/pigou',
+  '/adverse-selection/': '/adverse-selection/lemons',
+  '/monopoly-and-market-power/': '/monopoly-and-market-power/pricing',
+  '/oligopoly/': '/oligopoly/cournot',
+  '/trade-and-tariffs/': '/trade-and-tariffs/lab',
+  '/behavioral-heuristics/': '/behavioral-heuristics/lab',
+  '/signaling/': '/signaling/job-market',
+  '/public-choice/': '/public-choice/voting',
+  '/keynesian-economics/': '/keynesian-economics/cross',
+  '/monetary-policy/': '/monetary-policy/interest',
+  '/labor-markets/': '/labor-markets/wage',
+  '/economic-inequality/': '/economic-inequality/lorenz',
+  '/repeated-games/': '/repeated-games/tournament',
+  '/backward-induction/': '/backward-induction/rollback',
+  '/bargaining-theory/': '/bargaining-theory/ultimatum',
+  '/coordination-games/': '/coordination-games/stag-hunt',
+  '/evolutionary-game-theory/': '/evolutionary-game-theory/replicator',
+  '/game-theory-basics/': '/game-theory-basics/matrix',
+  '/imperfect-competition/': '/imperfect-competition/lab',
+  '/price-discrimination/': '/price-discrimination/split',
+  '/consumer-theory/': '/consumer-theory/utility',
+  '/production-and-costs/': '/production-and-costs/lab',
+  '/perfect-competition/': '/perfect-competition/firm',
+  '/time-value-of-money/': '/time-value-of-money/lab',
+  '/market-failures/': '/market-failures/policies',
+  '/gdp-and-national-accounts/': '/gdp-and-national-accounts/aggregate',
+  '/aggregate-demand-supply/': '/aggregate-demand-supply/shocks',
+  '/phillips-curve/': '/phillips-curve/tradeoff',
+  '/business-cycles/': '/business-cycles/predict',
+  '/fiscal-policy/': '/fiscal-policy/stimulus',
+  '/is-lm-model/': '/is-lm-model/equilibrium',
+  '/unemployment-okuns-law/': '/unemployment-okuns-law/lab',
+  '/efficient-market-hypothesis/': '/efficient-market-hypothesis/random-walk',
+  '/capm-and-risk/': '/capm-and-risk/portfolio',
+  '/behavioral-finance/': '/behavioral-finance/bubble',
+  '/portfolio-theory/': '/portfolio-theory/frontier',
+  '/arbitrage/': '/arbitrage/triangular',
+  '/mental-accounting/': '/mental-accounting/scenarios',
+  '/endowment-effect/': '/endowment-effect/trade',
+  '/social-preferences/': '/social-preferences/dictator',
+  '/overconfidence-bias/': '/overconfidence-bias/calibration',
+  '/human-capital/': '/human-capital/decision',
+  '/poverty-traps/': '/poverty-traps/escape',
+  '/migration-economics/': '/migration-economics/moves',
+};
+
 const HomePage: NextPage = () => {
   return (
     <HomeTemplate
       appName="Economics"
       description="Explore game theory and economic concepts."
-      items={ITEMS}
+      items={ITEMS.map((item) => ({
+        ...item,
+        ...(GAMES[item.href] ? { gameHref: GAMES[item.href] } : {}),
+      }))}
     />
   );
 };

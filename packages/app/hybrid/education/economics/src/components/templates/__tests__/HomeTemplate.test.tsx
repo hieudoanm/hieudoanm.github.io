@@ -51,6 +51,37 @@ describe('HomeTemplate', () => {
     ).toBeInTheDocument();
   });
 
+  it('renders a Play link next to Study when gameHref is present', () => {
+    render(
+      <HomeTemplate
+        appName="Economics"
+        description="desc"
+        items={ITEMS.map((item) => ({
+          ...item,
+          gameHref: `${item.href}lab`,
+        }))}
+      />
+    );
+    expect(screen.getByTestId('play-prisoners-dilemma')).toBeInTheDocument();
+    expect(screen.getByTestId('study-prisoners-dilemma')).toBeInTheDocument();
+    expect(
+      screen.getByTestId('play-prisoners-dilemma').getAttribute('href')
+    ).toBe('/prisoners-dilemma/lab');
+  });
+
+  it('omits the Play link when gameHref is absent', () => {
+    render(
+      <HomeTemplate appName="Economics" description="desc" items={ITEMS} />
+    );
+    expect(
+      screen.queryByTestId('play-prisoners-dilemma')
+    ).not.toBeInTheDocument();
+    expect(
+      screen.getByTestId('tool-card-prisoners-dilemma')
+    ).toBeInTheDocument();
+    expect(screen.getAllByText('Game Theory').length).toBeGreaterThan(0);
+  });
+
   it('hides the search and filter controls when showFilters is false', () => {
     render(
       <HomeTemplate
