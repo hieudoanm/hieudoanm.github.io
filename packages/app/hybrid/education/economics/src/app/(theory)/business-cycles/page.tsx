@@ -99,6 +99,14 @@ const BusinessCyclesPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/business-cycles/predict',
+        label: 'Business Cycle Forecaster',
+        description:
+          'Act as an economic forecaster: use trailing growth, unemployment, confidence and inflation to call the next phase of the cycle before it is revealed.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Business_cycle',

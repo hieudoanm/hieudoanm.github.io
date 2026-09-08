@@ -89,6 +89,14 @@ const FiscalPolicyPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/fiscal-policy/stimulus',
+        label: 'Fiscal Multiplier Lab',
+        description:
+          'Set government spending and tax cuts to close output gaps while keeping the fiscal budget in check.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Fiscal_policy',

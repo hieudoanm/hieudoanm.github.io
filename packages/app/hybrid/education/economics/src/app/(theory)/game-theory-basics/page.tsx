@@ -102,6 +102,14 @@ const GameTheoryBasicsPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/game-theory-basics/matrix',
+        label: 'Payoff Matrix Explorer',
+        description:
+          'Explore six classic 2x2 games: Nash equilibria, dominant strategies, and best responses.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Game_theory',

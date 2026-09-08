@@ -101,6 +101,14 @@ const LaborMarketsPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/labor-markets/wage',
+        label: 'Labor Market Lab',
+        description:
+          'Set demand and supply curves, then push the minimum wage above equilibrium to see unemployment and deadweight loss.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Minimum_wage',

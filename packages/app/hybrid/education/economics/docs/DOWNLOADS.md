@@ -186,6 +186,62 @@ Each theory page links to a playable game under `app/(games)`:
   output at P = MC and watches long-run profits fall to zero.
 - **Pigou's Factory** (`/externalities/pigou`) — run a polluting mill, then tax
   it and watch the private optimum slide to the social optimum.
+- **AD-AS Shocks Lab** (`/aggregate-demand-supply/shocks`) — nudge price and
+  output to the short-run equilibrium after demand and supply shocks.
+- **Triangular Arbitrage Lab** (`/arbitrage/triangular`) — hunt implied-cross
+  mispricing across FX triangles and keep the margin when it closes.
+- **Bubble Lab** (`/behavioral-finance/bubble`) — buy and sell an asset as
+  prices inflate past fundamentals, then get out before the crash.
+- **Heuristics Lab** (`/behavioral-heuristics/lab`) — meet anchor, availability
+  and representativeness biases in everyday judgment calls.
+- **Business Cycle Forecaster** (`/business-cycles/predict`) — read leading
+  indicators and call expansion vs recession before the GDP number lands.
+- **Portfolio Lab** (`/capm-and-risk/portfolio`) — blend stock, bond and
+  risk-free assets between the CML and the efficient frontier.
+- **Causation Challenge** (`/causal-inference/experiments`) — spend an
+  investigation budget to expose confounders hidden behind correlations.
+- **Budget Line Lab** (`/consumer-theory/utility`) — slide along the budget line
+  to the optimal bundle for Cobb-Douglas, substitutes and complements.
+- **RCT Simulator** (`/development-rcts/experiment`) — design trials, read the
+  confidence interval and test whether an effect is real.
+- **Inequality Explorer** (`/economic-inequality/lorenz`) — bend the Lorenz
+  curve with a flat tax and rebate to hit your Gini target.
+- **Random Walk Market** (`/efficient-market-hypothesis/random-walk`) — trade on
+  tips and watch forecast accuracy fall to luck under weak-form EMH.
+- **Fiscal Multiplier Lab** (`/fiscal-policy/stimulus`) — size stimulus against
+  an output gap and feel how big 1/(1−MPC) gets when MPC is high.
+- **Payoff Matrix Explorer** (`/game-theory-basics/matrix`) — find the Nash
+  equilibrium in prisoner's dilemma, stag hunt, chicken and beyond.
+- **GDP Explorer** (`/gdp-and-national-accounts/aggregate`) — build an economy
+  with C + I + G + NX sliders, then hit target GDP figures in a quiz.
+- **Human Capital Decision** (`/human-capital/decision`) — choose years of
+  schooling and weigh discounted lifetime earnings against tuition costs.
+- **Market Power Lab** (`/imperfect-competition/lab`) — set differentiation,
+  price and output across perfect competition, monopolistic competition and
+  monopoly.
+- **Institutions Game** (`/institutions-and-growth/lab`) — tune property rights,
+  contracts and stability to make inclusive institutions out-grow extractive
+  ones across ten simulated years.
+- **IS-LM Explorer** (`/is-lm-model/equilibrium`) — move the IS and LM curves
+  with fiscal and monetary policy to find equilibrium and tackle policy
+  challenges.
+- **Keynesian Cross** (`/keynesian-economics/cross`) — set MPC and autonomous
+  spending, then compute the ΔG that closes each output gap.
+- **Labor Market Lab** (`/labor-markets/wage`) — push the minimum wage above
+  equilibrium and watch unemployment and deadweight loss appear.
+- **Marginal Utility Lab** (`/marginal-utility/lab`) — allocate a budget between
+  apples and cookies and find the utility-maximizing bundle.
+- **Market Failure Fixer** (`/market-failures/policies`) — match the right
+  policy to each market failure, then set a Pigouvian tax to restore optimal
+  output.
+- **Mental Accounting Game** (`/mental-accounting/scenarios`) — wrestle with six
+  Thaler-style vignettes about fungibility and sunk costs.
+- **Migration Decision Lab** (`/migration-economics/moves`) — compute the NPV of
+  moving, then simulate labor flows until destination wages equalize.
+- **Monetary Policy Lab** (`/monetary-policy/interest`) — set the policy rate
+  against Taylor-rule scenarios and fight the inflation–output tradeoff.
+- **Nudge Design Lab** (`/nudge-and-behavioral-economics/choice`) — choose
+  opt-in, opt-out or active-choice defaults to lift participation.
 
 ---
 

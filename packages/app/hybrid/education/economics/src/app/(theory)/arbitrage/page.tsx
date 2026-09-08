@@ -90,6 +90,14 @@ const ArbitragePage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/arbitrage/triangular',
+        label: 'Triangular Arbitrage Lab',
+        description:
+          'Spot a mispriced EUR/JPY cross in five FX quotes and trade a triangle to lock in the spread.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Arbitrage',

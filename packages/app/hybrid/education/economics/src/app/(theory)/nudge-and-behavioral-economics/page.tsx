@@ -109,6 +109,14 @@ const NudgePage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/nudge-and-behavioral-economics/choice',
+        label: 'Nudge Design Lab',
+        description:
+          'Design opt-in vs opt-out defaults and run an auto-enroll simulator to see default effects.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Nudge_theory',

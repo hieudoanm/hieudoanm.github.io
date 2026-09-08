@@ -102,6 +102,14 @@ const HeuristicsPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/behavioral-heuristics/lab',
+        label: 'Heuristics Lab',
+        description:
+          'Answer estimation puzzles with and without an anchor and watch anchoring, availability and representativeness bend your guesses.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Heuristics_in_judgment_and_decision-making',

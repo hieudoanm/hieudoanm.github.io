@@ -94,6 +94,14 @@ const ISLMPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/is-lm-model/equilibrium',
+        label: 'IS-LM Explorer',
+        description:
+          'Move the IS and LM curves with fiscal and monetary policy to find equilibrium and tackle policy challenges.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/IS%E2%80%93LM_model',

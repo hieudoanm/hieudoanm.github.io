@@ -99,6 +99,14 @@ const CausalInferencePage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/causal-inference/experiments',
+        label: 'Causation Challenge',
+        description:
+          'Interactive quiz: classify six real-world correlations as causal or spurious, using an investigation budget of randomized trials and confounder controls.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Causal_inference',

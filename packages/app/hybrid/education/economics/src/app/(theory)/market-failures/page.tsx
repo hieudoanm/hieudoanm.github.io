@@ -98,6 +98,14 @@ const MarketFailuresPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/market-failures/policies',
+        label: 'Market Failure Fixer',
+        description:
+          'Match the right policy to each market failure, then set a Pigouvian tax to restore optimal output.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Market_failure',

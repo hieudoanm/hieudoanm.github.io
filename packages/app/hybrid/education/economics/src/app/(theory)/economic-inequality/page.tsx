@@ -102,6 +102,14 @@ const InequalityPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/economic-inequality/lorenz',
+        label: 'Inequality Explorer',
+        description:
+          'Tax a ten-person economy and watch the Lorenz curve bend — hit the target Gini and see what redistribution really moves.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Economic_inequality',

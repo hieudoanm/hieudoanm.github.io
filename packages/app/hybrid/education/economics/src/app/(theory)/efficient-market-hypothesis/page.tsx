@@ -91,6 +91,14 @@ const EMHPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/efficient-market-hypothesis/random-walk',
+        label: 'Random Walk Market',
+        description:
+          'Simulate a weak-form efficient market where a public tip has no reliable predictive power.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Efficient-market_hypothesis',

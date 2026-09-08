@@ -104,6 +104,14 @@ const MonetaryPolicyPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/monetary-policy/interest',
+        label: 'Monetary Policy Lab',
+        description:
+          'Set policy rates against the Taylor rule and steer inflation and output toward target.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Monetary_policy',

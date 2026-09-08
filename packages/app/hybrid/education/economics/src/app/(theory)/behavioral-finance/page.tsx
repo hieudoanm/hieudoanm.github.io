@@ -94,6 +94,14 @@ const BehavioralFinancePage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/behavioral-finance/bubble',
+        label: 'Bubble Lab',
+        description:
+          'Trade an asset as its price inflates beyond fundamentals, then crashes — learn to sell before the bubble bursts.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Behavioral_economics',

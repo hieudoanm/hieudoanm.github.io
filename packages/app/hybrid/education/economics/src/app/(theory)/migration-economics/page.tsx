@@ -91,6 +91,14 @@ const MigrationPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/migration-economics/moves',
+        label: 'Migration Decision Lab',
+        description:
+          'Choose to stay or move, price the move as an NPV over a 10-year horizon, and simulate how labor flows equalize wages.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Economics_of_immigration',

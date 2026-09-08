@@ -97,6 +97,14 @@ const GDPPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/gdp-and-national-accounts/aggregate',
+        label: 'GDP Explorer',
+        description:
+          'Build an economy with C + I + G + NX sliders, then hit target GDP figures in a quiz.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Gross_domestic_product',

@@ -90,6 +90,14 @@ const MentalAccountingPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/mental-accounting/scenarios',
+        label: 'Mental Accounting Game',
+        description:
+          'Wrestle with six Thaler-style vignettes — then split a $1,000 windfall across mental accounts.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Mental_accounting',

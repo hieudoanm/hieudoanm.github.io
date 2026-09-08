@@ -93,6 +93,14 @@ const CAPMPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/capm-and-risk/portfolio',
+        label: 'Portfolio Lab',
+        description:
+          'Blend a stock and a bond, watch risk and return trade off along the efficient frontier, then price stocks by beta.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Capital_asset_pricing_model',

@@ -99,6 +99,14 @@ const InstitutionsGrowthPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/institutions-and-growth/lab',
+        label: 'Institutions Game',
+        description:
+          'Set property rights, contracts, and stability to drive ten years of GDP growth toward a target—and see inclusive institutions outperform.',
+      },
+    ]}
     references={[
       {
         href: 'https://www.nobelprize.org/prizes/economic-sciences/2024/popular-information/prize-fact/',

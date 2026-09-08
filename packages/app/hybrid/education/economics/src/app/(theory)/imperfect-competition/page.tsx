@@ -97,6 +97,14 @@ const ImperfectCompetitionPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/imperfect-competition/lab',
+        label: 'Market Power Lab',
+        description:
+          'Set product differentiation, price, and output across perfect competition, monopolistic competition, and monopoly.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Imperfect_competition',

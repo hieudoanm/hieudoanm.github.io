@@ -96,6 +96,14 @@ const MarginalUtilityPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/marginal-utility/lab',
+        label: 'Marginal Utility Lab',
+        description:
+          'Allocate a budget between apples and cookies and find the utility-maximizing bundle.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Marginal_utility',

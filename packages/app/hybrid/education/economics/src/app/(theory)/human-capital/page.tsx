@@ -88,6 +88,14 @@ const HumanCapitalPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/human-capital/decision',
+        label: 'Human Capital Decision',
+        description:
+          'Interactive simulator: choose years of schooling and weigh discounted lifetime earnings against tuition costs.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Human_capital',

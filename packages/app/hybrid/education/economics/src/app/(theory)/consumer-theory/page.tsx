@@ -100,6 +100,14 @@ const ConsumerTheoryPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/consumer-theory/utility',
+        label: 'Budget Line Lab',
+        description:
+          'Move a point along the budget line to maximize utility for Cobb-Douglas, perfect substitutes, and perfect complements.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Consumer_choice',

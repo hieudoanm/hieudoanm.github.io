@@ -104,6 +104,14 @@ const DevelopmentRCTsPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/development-rcts/experiment',
+        label: 'RCT Simulator',
+        description:
+          'Run your own experiment: pick a sample size and allocation, observe the ATE and confidence interval, then judge whether the finding is significant or noise.',
+      },
+    ]}
     references={[
       {
         href: 'https://www.nobelprize.org/prizes/economic-sciences/2019/summary/',

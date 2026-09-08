@@ -100,6 +100,14 @@ const KeynesianPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/keynesian-economics/cross',
+        label: 'Keynesian Cross',
+        description:
+          'Set MPC and autonomous spending to find equilibrium output, then close an output gap with the right dose of government spending.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Keynesian_economics',

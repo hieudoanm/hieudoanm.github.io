@@ -89,6 +89,14 @@ const AggregateDemandSupplyPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/aggregate-demand-supply/shocks',
+        label: 'AD-AS Shocks Lab',
+        description:
+          'Hit the economy with demand shocks and watch the short-run gap and inflation evolve—then adjust back to long-run.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Aggregate_demand',
