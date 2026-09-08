@@ -1,18 +1,23 @@
 'use client';
 
-import { FC } from 'react';
+import { ErrorTemplate } from '@/components/templates/ErrorTemplate';
 
-const ErrorFallback: FC<{ error: Error; reset: () => void }> = ({
+const ErrorPage = ({
   error,
   reset,
+}: {
+  error: Error & { digest?: string };
+  reset: () => void;
 }) => (
-  <main className="mx-auto max-w-2xl px-6 py-12 text-center">
-    <h2 className="text-error mb-3 text-2xl font-bold">Something went wrong</h2>
-    <p className="text-base-content/60 mb-6">{error.message}</p>
-    <button type="button" onClick={reset} className="btn btn-primary">
-      Try again
-    </button>
-  </main>
+  <ErrorTemplate
+    code="500"
+    description="Something went wrong."
+    action={
+      <button className="btn btn-primary btn-sm" onClick={() => reset()}>
+        Try again
+      </button>
+    }
+  />
 );
 
-export default ErrorFallback;
+export default ErrorPage;

@@ -68,6 +68,64 @@ final class HomebrewServiceTests: XCTestCase {
         }
     }
 
+    // MARK: - Cask index
+
+    func testInstalledCaskIndexMapsAppsToTokens() async throws {
+        let service = makeService([
+            "list": MockBrewClient.success(stdout: "firefox\ndocker"),
+            "info": MockBrewClient.success(stdout: """
+            {
+              "casks": [
+                {
+                  "token": "firefox",
+                  "bundle_id": "org.mozilla.firefox",
+                  "artifacts": [{ "app": ["/Applications/Firefox.app"] }]
+                },
+                {
+                  "token": "docker",
+                  "artifacts": [{ "app": ["Docker.app"] }]
+                }
+              ]
+            }
+            """),
+        ])
+
+        let index = try await service.installedCaskIndex()
+
+        let byPath = InstalledApp(name: "Firefox", path: "/Applications/Firefox.app")
+        XCTAssertEqual(index.token(for: byPath), "firefox")
+
+        let byBundleID = InstalledApp(
+            name: "Firefox",
+            path: "/Applications/Firefox.app",
+            bundleIdentifier: "org.mozilla.firefox"
+        )
+        XCTAssertEqual(index.token(for: byBundleID), "firefox")
+
+        let unresolved = InstalledApp(name: "Docker", path: "/Applications/Docker.app", caskToken: nil)
+        let token = index.token(for: unresolved)
+        XCTAssertEqual(token, "docker", "A relative artifact path should normalize to /Applications")
+    }
+
+    func testInstalledCaskIndexIsEmptyWhenNoCasks() async throws {
+        let service = makeService(["list": MockBrewClient.success(stdout: "")])
+        let index = try await service.installedCaskIndex()
+        XCTAssertNil(index.token(for: InstalledApp(name: "X", path: "/Applications/X.app")))
+    }
+
+    func testInstalledCaskIndexPropagatesCommandFailure() async {
+        let service = makeService(["list": ProcessResult(stdout: "", stderr: "boom", exitCode: 1)])
+        do {
+            _ = try await service.installedCaskIndex()
+            XCTFail("Expected failure")
+        } catch {
+            guard case BrewError.commandFailed(let exitCode, _) = error else {
+                return XCTFail("Expected commandFailed, got \(error)")
+            }
+            XCTAssertEqual(exitCode, 1)
+        }
+    }
+
     // MARK: - Command failure
 
     func testUpgradeAllPropagatesFailure() async {

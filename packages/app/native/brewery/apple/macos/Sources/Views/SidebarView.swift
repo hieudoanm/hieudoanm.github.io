@@ -6,9 +6,15 @@ struct SidebarView: View {
     @ObservedObject var viewModel: BreweryViewModel
 
     var body: some View {
-        List(BreweryViewModel.Section.allCases, selection: $viewModel.selectedSection) { section in
-            Label(section.title, systemImage: section.systemImage)
-                .tag(section)
+        List(selection: $viewModel.selectedSection) {
+            ForEach(groupedSections, id: \.group) { group in
+                Section(group.group.title) {
+                    ForEach(group.sections) { section in
+                        Label(section.title, systemImage: section.systemImage)
+                            .tag(section)
+                    }
+                }
+            }
         }
         .listStyle(.sidebar)
         .navigationTitle("Brewery")
@@ -32,6 +38,13 @@ struct SidebarView: View {
                 .keyboardShortcut(",", modifiers: .command)
             }
         }
+    }
+
+    private var groupedSections: [(group: BreweryViewModel.Section.Group, sections: [BreweryViewModel.Section])] {
+        [
+            (.applications, [.apps]),
+            (.homebrew, [.discover, .installed, .updates, .services]),
+        ]
     }
 
     private func openSettings() {

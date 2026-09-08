@@ -72,6 +72,7 @@ install: app
 	@osascript -e 'quit app "$(APP_NAME)"' 2>/dev/null || true
 	@rm -rf /Applications/$(APP_NAME).app
 	@cp -R $(APP_DIR) /Applications/
+	@rm -rf $(BUILD_DIR) .build
 	@echo "$(APP_NAME).app installed to /Applications"
 
 clean:

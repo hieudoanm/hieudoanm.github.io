@@ -1,5 +1,18 @@
 import Foundation
 
+/// The app artifacts a Homebrew cask owns, from `brew info --json=v2`.
+public struct InstalledCask: Equatable, Sendable {
+    public let token: String
+    public let bundleIdentifier: String?
+    public let appPaths: [String]
+
+    public init(token: String, bundleIdentifier: String?, appPaths: [String]) {
+        self.token = token
+        self.bundleIdentifier = bundleIdentifier
+        self.appPaths = appPaths
+    }
+}
+
 /// Parses Homebrew JSON output (`brew info --json=v2`) into structured models.
 public enum BrewParser {
 
@@ -36,6 +49,96 @@ public enum BrewParser {
         let installed: String?
     }
 
+    // MARK: - Cask artifact shape (installed apps a cask manages)
+
+    /// A cask record from `brew info --json=v2`. Only the fields needed to map
+    /// the cask back to installed app bundles are decoded; the `artifacts`
+    /// section is read tolerantly because real casks mix strings, dicts, and
+    /// nested structures (e.g. `zap`, `postflight_steps`) that we don't care
+    /// about.
+    private struct CaskDetails: Decodable {
+        let token: String?
+        let bundle_id: String?
+        let appPaths: [String]
+
+        private enum CodingKeys: String, CodingKey {
+            case token
+            case bundle_id
+            case artifacts
+        }
+
+        init(from decoder: Decoder) throws {
+            let container = try decoder.container(keyedBy: CodingKeys.self)
+            token = try container.decodeIfPresent(String.self, forKey: .token)
+            bundle_id = try container.decodeIfPresent(String.self, forKey: .bundle_id)
+            let groups = (try? container.decode([ArtifactGroup].self, forKey: .artifacts)) ?? []
+            appPaths = groups.flatMap { $0.resolvedAppPaths() }
+        }
+    }
+
+    /// One element of the top-level `artifacts` array. It is a dictionary keyed
+    /// by artifact type (`app`, `binary`, `zap`, ...). Only the `app` entries
+    /// and the sibling `target` override are read; everything else is skipped.
+    private struct ArtifactGroup: Decodable {
+        private struct DynamicKey: CodingKey {
+            var stringValue: String
+            var intValue: Int? { nil }
+            init?(stringValue: String) { self.stringValue = stringValue }
+            init?(intValue: Int) { nil }
+        }
+
+        private let app: [AppArtifact]
+        private let target: String?
+
+        init(from decoder: Decoder) throws {
+            let container = try decoder.container(keyedBy: DynamicKey.self)
+            if let appKey = DynamicKey(stringValue: "app") {
+                app = (try? container.decode([AppArtifact].self, forKey: appKey)) ?? []
+            } else {
+                app = []
+            }
+            if let targetKey = DynamicKey(stringValue: "target") {
+                target = (try? container.decodeIfPresent(String.self, forKey: targetKey))
+            } else {
+                target = nil
+            }
+        }
+
+        /// A single `app` entry: a plain path string, or a `{ "path": ..,
+        /// "target": .. }` override.
+        private struct AppArtifact: Decodable {
+            let path: String
+            let target: String?
+
+            init(from decoder: Decoder) throws {
+                let container = try decoder.singleValueContainer()
+                if let value = try? container.decode(String.self) {
+                    path = value
+                    target = nil
+                    return
+                }
+                let dict = try container.decode([String: String].self)
+                path = dict["path"] ?? ""
+                target = dict["target"]
+            }
+        }
+
+        func resolvedAppPaths() -> [String] {
+            // A single relative entry with a sibling `target` (Homebrew's
+            // non-default install location) wins over the raw path.
+            if app.count == 1, let target, !target.isEmpty, app[0].target == nil {
+                return [target]
+            }
+            return app.map { Self.normalize($0.path, target: $0.target) }
+        }
+
+        private static func normalize(_ raw: String, target: String?) -> String {
+            if let target, !target.isEmpty { return target }
+            if raw.hasPrefix("/") { return raw }
+            return "/Applications/\(raw)"
+        }
+    }
+
     // MARK: - Entry points
 
     /// Parses a `brew info --json=v2` document into a list of packages.
@@ -50,6 +153,29 @@ public enum BrewParser {
         let formulae = (info.formulae ?? []).map(formula)
         let casks = (info.casks ?? []).map(cask)
         return formulae + casks
+    }
+
+    /// Parses the `casks` section of a `brew info --json=v2` document into the
+    /// installed app artifacts each cask owns.
+    public static func parseInstalledCasks(_ json: String) throws -> [InstalledCask] {
+        struct TopLevel: Decodable {
+            let casks: [CaskDetails]?
+        }
+
+        guard let data = json.data(using: .utf8) else {
+            throw BrewError.parsingFailed("Output is not valid UTF-8.")
+        }
+        guard let top = try? JSONDecoder().decode(TopLevel.self, from: data) else {
+            throw BrewError.parsingFailed("Output is not valid JSON.")
+        }
+
+        return (top.casks ?? []).map { details in
+            InstalledCask(
+                token: details.token ?? "",
+                bundleIdentifier: details.bundle_id,
+                appPaths: details.appPaths
+            )
+        }
     }
 
     /// Parses a `brew outdated --json=v2` document into a list of outdated packages.

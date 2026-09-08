@@ -16,15 +16,38 @@ final class BreweryViewModel: ObservableObject {
     enum Section: String, Hashable, CaseIterable, Identifiable {
         case discover
         case installed
+        case apps
         case updates
         case services
 
+        enum Group: String, Hashable, Identifiable {
+            case homebrew
+            case applications
+
+            var id: String { rawValue }
+
+            var title: String {
+                switch self {
+                case .homebrew: return "Homebrew"
+                case .applications: return "Applications"
+                }
+            }
+        }
+
         var id: String { rawValue }
+
+        var group: Group {
+            switch self {
+            case .discover, .installed, .updates, .services: return .homebrew
+            case .apps: return .applications
+            }
+        }
 
         var title: String {
             switch self {
             case .discover: return "Discover"
             case .installed: return "Installed"
+            case .apps: return "Apps"
             case .updates: return "Updates"
             case .services: return "Services"
             }
@@ -34,6 +57,7 @@ final class BreweryViewModel: ObservableObject {
             switch self {
             case .discover: return "magnifyingglass"
             case .installed: return "shippingbox"
+            case .apps: return "macwindow"
             case .updates: return "arrow.triangle.2.circlepath"
             case .services: return "gearshape.2"
             }
@@ -48,6 +72,7 @@ final class BreweryViewModel: ObservableObject {
     @Published var searchQuery = ""
     @Published private(set) var searchResults: [Package] = []
     @Published private(set) var installedPackages: [Package] = []
+    @Published private(set) var installedApps: [InstalledApp] = []
     @Published private(set) var outdatedPackages: [Package] = []
     @Published private(set) var services: [BrewServiceInfo] = []
     @Published private(set) var isLoading = false
@@ -214,13 +239,43 @@ final class BreweryViewModel: ObservableObject {
         selectedPackage = match
     }
 
+    // MARK: - Apps
+
+    func loadApps() async {
+        do {
+            let apps = await Task.detached { AppCatalog.enumerateApps() }.value
+            let index = try await service.installedCaskIndex()
+            installedApps = apps.map { app in
+                var marked = app
+                marked.caskToken = index.token(for: app)
+                return marked
+            }
+        } catch {
+            setError("Unable to load apps", error)
+        }
+    }
+
+    func trashApp(_ app: InstalledApp) async {
+        await runMutation("Move \(app.name) to Trash") {
+            try await Task.detached { try AppCatalog.trash(at: app.path) }.value
+        }
+    }
+
+    func uninstallCaskApp(_ app: InstalledApp) async {
+        guard let token = app.caskToken else { return }
+        await runMutation("Uninstall \(app.name)") {
+            try await self.service.uninstall(name: token, type: .cask)
+        }
+    }
+
     // MARK: - Refresh
 
     func refreshAll() async {
         async let installed: Void = loadInstalled()
         async let outdated: Void = loadOutdated()
         async let services: Void = loadServices()
-        _ = await (installed, outdated, services)
+        async let apps: Void = loadApps()
+        _ = await (installed, outdated, services, apps)
     }
 
     func refreshAfterMutation() async {

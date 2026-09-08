@@ -79,6 +79,21 @@ export const DoiProvider = ({ children }: { children: ReactNode }) => {
   }, [retryToken]);
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const initial = new URLSearchParams(window.location.search).get('q') ?? '';
+    setQuery(initial);
+  }, []);
+
+  const updateQuery = useCallback((q: string) => {
+    setQuery(q);
+    if (typeof window === 'undefined') return;
+    const url = new URL(window.location.href);
+    if (q) url.searchParams.set('q', q);
+    else url.searchParams.delete('q');
+    window.history.replaceState(null, '', url.toString());
+  }, []);
+
+  useEffect(() => {
     if (!db) return;
     setReport(buildReport(db, query, top));
     setSearchResults(query ? search(db, query, SEARCH_LIMIT) : []);
@@ -99,7 +114,7 @@ export const DoiProvider = ({ children }: { children: ReactNode }) => {
         top,
         graphLimit,
         minDegree,
-        setQuery,
+        setQuery: updateQuery,
         setGraphLimit,
         setMinDegree,
         report,

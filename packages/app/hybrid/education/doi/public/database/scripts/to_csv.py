@@ -19,7 +19,8 @@ def convert(db_path: Path, out_dir: Path) -> list[tuple[str, int]]:
     summary: list[tuple[str, int]] = []
     for table in _table_names(connection):
         columns = [row[1] for row in connection.execute(f'PRAGMA table_info("{table}")')]
-        rows = connection.execute(f'SELECT "{", ".join(columns)}" FROM "{table}"').fetchall()
+        quoted = ", ".join(f'"{col}"' for col in columns)
+        rows = connection.execute(f"SELECT {quoted} FROM \"{table}\"").fetchall()
         _write(out_dir / f"{db_path.stem}.{table}.csv", columns, rows)
         summary.append((table, len(rows)))
     connection.close()

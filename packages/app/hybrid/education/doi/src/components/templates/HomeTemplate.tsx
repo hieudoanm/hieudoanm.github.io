@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { FC, ReactNode } from 'react';
 
 interface LandingItem {
@@ -23,14 +24,14 @@ export const HomeTemplate: FC<HomeTemplateProps> = ({ items }) => (
     </section>
     <section className="grid gap-4 sm:grid-cols-3">
       {items.map((item) => (
-        <a
+        <Link
           key={item.href}
           href={item.href}
           className="card bg-base-200 card-body hover:bg-base-300 transition-colors">
           <div className="text-primary text-2xl">{item.icon}</div>
           <h2 className="text-lg font-semibold">{item.title}</h2>
           <p className="text-base-content/60 text-sm">{item.description}</p>
-        </a>
+        </Link>
       ))}
     </section>
   </main>

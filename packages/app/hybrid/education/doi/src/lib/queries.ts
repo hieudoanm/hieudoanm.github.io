@@ -23,13 +23,32 @@ const EMPTY_STATS: OverviewStats = {
   yearSpan: 0,
 };
 
-const likeParams = (query: string): string[] => {
-  const like = `%${query}%`;
-  return [like, like, like, like];
+const SEARCH_FIELDS = ['title', 'author', 'abstract', 'doi'];
+
+const queryWords = (query: string): string[] =>
+  query.trim().split(/\s+/).filter(Boolean);
+
+const fieldMatch = (prefixes: string[]): string =>
+  prefixes
+    .flatMap((p) => SEARCH_FIELDS.map((f) => `${p}${f} LIKE ?`))
+    .join(' OR ');
+
+const matchClause = (query: string, prefixes: string[] = ['']): string => {
+  const n = queryWords(query).length;
+  if (n === 0) return '';
+  const perWord = `(${fieldMatch(prefixes)})`;
+  return ` AND ${Array(n).fill(perWord).join(' AND ')}`;
 };
 
-const matchClause =
-  ' AND (title LIKE ? OR author LIKE ? OR abstract LIKE ? OR doi LIKE ?)';
+const matchWhere = (query: string, prefixes: string[] = ['']): string =>
+  matchClause(query, prefixes).replace(/^ AND /, 'WHERE ');
+
+const likeParams = (query: string, perWord = SEARCH_FIELDS.length): string[] =>
+  queryWords(query).flatMap((word) => {
+    const like = `%${word}%`;
+    return Array(perWord).fill(like);
+  });
+
 const hasYearClause = " AND year GLOB '[0-9][0-9][0-9][0-9]'";
 
 const scalar = (db: Database, sql: string, params: string[]): string => {
@@ -38,8 +57,9 @@ const scalar = (db: Database, sql: string, params: string[]): string => {
 };
 
 const overview = (db: Database, query: string): OverviewStats => {
-  const params = query ? likeParams(query) : [];
-  const clause = query ? matchClause : '';
+  const clause = matchClause(query);
+  const params = likeParams(query);
+  const active = queryWords(query).length > 0;
 
   const count = (sql: string, extra: string, p: string[]): number =>
     Number(scalar(db, `${sql} WHERE 1=1${extra}${clause}`, [...p, ...params]));
@@ -53,16 +73,15 @@ const overview = (db: Database, query: string): OverviewStats => {
   const stubWorks = totalWorks - titledWorks;
 
   let referenceEdges = 0;
-  if (query) {
+  if (active) {
     referenceEdges = Number(
       scalar(
         db,
         `SELECT COUNT(*) FROM "references" r
          JOIN works a ON r.workId = a.doi
          JOIN works b ON r.referencedId = b.doi
-         WHERE (a.title LIKE ? OR a.author LIKE ? OR a.abstract LIKE ? OR a.doi LIKE ?)
-            OR (b.title LIKE ? OR b.author LIKE ? OR b.abstract LIKE ? OR b.doi LIKE ?)`,
-        [...params, ...params]
+         WHERE 1=1${matchClause(query, ['a.', 'b.'])}`,
+        likeParams(query, 8)
       )
     );
   } else {
@@ -103,8 +122,8 @@ const overview = (db: Database, query: string): OverviewStats => {
 };
 
 const yearDistribution = (db: Database, query: string): YearCount[] => {
-  const params = query ? likeParams(query) : [];
-  const clause = query ? matchClause : '';
+  const clause = matchClause(query);
+  const params = likeParams(query);
   const res = db.exec(
     `SELECT year, COUNT(*) FROM works
      WHERE title != ''${hasYearClause}${clause}
@@ -124,12 +143,12 @@ const topRanked = (
   top: number
 ): RankedWork[] => {
   const col = cited ? 'r.referencedId' : 'r.workId';
-  const params = query ? likeParams(query) : [];
-  const where = query
-    ? ` WHERE (w.title LIKE ? OR w.author LIKE ? OR w.abstract LIKE ? OR w.doi LIKE ?)`
+  const params = likeParams(query);
+  const where = queryWords(query).length
+    ? ` WHERE 1=1${matchClause(query, ['w.'])}`
     : ` WHERE w.title != ''`;
   const res = db.exec(
-    `SELECT ${col}, w.title, w.year, COUNT(*) AS times
+    `SELECT ${col}, w.title, w.year, w.type, COUNT(*) AS times
      FROM "references" r
      JOIN works w ON w.doi = ${col}
      ${where}
@@ -142,7 +161,8 @@ const topRanked = (
     doi: String(row[0]),
     title: String(row[1]),
     year: _year(String(row[2])),
-    count: Number(row[3]),
+    type: String(row[3]),
+    count: Number(row[4]),
   }));
 };
 
@@ -151,8 +171,8 @@ const topAuthors = (
   query: string,
   top: number
 ): AuthorCount[] => {
-  const params = query ? likeParams(query) : [];
-  const clause = query ? matchClause : '';
+  const clause = matchClause(query);
+  const params = likeParams(query);
   const res = db.exec(
     `SELECT author, COUNT(*) AS count FROM works
      WHERE author != ''${clause}
@@ -166,10 +186,11 @@ const topAuthors = (
 };
 
 const search = (db: Database, query: string, limit: number): Work[] => {
+  const where = matchWhere(query);
   const params = likeParams(query);
   const res = db.exec(
     `SELECT doi, title, author, year, abstract, type FROM works
-     WHERE title LIKE ? OR author LIKE ? OR abstract LIKE ? OR doi LIKE ?
+     ${where}
      ORDER BY title LIMIT ${limit}`,
     params
   );
@@ -189,10 +210,10 @@ const graph = (
   limit: number,
   minDegree = 0
 ): { nodes: GraphNode[]; edges: GraphEdge[] } => {
-  const params = query ? likeParams(query) : [];
-  const clause = query ? matchClause : '';
+  const clause = matchClause(query);
+  const params = likeParams(query);
   const nodeRes = db.exec(
-    `SELECT doi, title, year, author FROM works WHERE title != ''${clause}`,
+    `SELECT doi, title, year, author, type FROM works WHERE title != ''${clause}`,
     params
   );
   const nodes: GraphNode[] = (nodeRes[0]?.values ?? []).map((row) => ({
@@ -201,6 +222,7 @@ const graph = (
     title: String(row[1]),
     year: _year(String(row[2])),
     author: String(row[3]),
+    type: String(row[4]),
     inDegree: 0,
   }));
 

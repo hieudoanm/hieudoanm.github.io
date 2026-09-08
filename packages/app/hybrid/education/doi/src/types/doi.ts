@@ -28,6 +28,7 @@ export interface RankedWork {
   doi: string;
   title: string;
   year: string;
+  type: string;
   count: number;
 }
 
@@ -42,6 +43,7 @@ export interface GraphNode {
   title: string;
   year: string;
   author: string;
+  type: string;
   inDegree: number;
   x?: number;
   y?: number;

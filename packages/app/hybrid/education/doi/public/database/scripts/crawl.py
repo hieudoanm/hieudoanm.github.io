@@ -2,17 +2,27 @@
 
 import argparse
 import json
+import logging
 import sqlite3
 import sys
 import time
 import urllib.error
 import urllib.parse
 import urllib.request
+from collections import deque
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s %(levelname)s %(message)s",
+    datefmt="%H:%M:%S",
+)
+log = logging.getLogger(__name__)
+
 CROSSREF_ENDPOINT = "https://api.crossref.org/works/{doi}"
+MAX_RETRIES = 3
 
 
 @dataclass
@@ -47,6 +57,7 @@ class CrossrefClient:
         url = CROSSREF_ENDPOINT.format(doi=_quote(doi))
         request = urllib.request.Request(url, headers=self._headers)
         self._throttle()
+        start = time.monotonic()
         try:
             with urllib.request.urlopen(request, timeout=self._timeout) as response:
                 data = json.loads(response.read())
@@ -56,6 +67,9 @@ class CrossrefClient:
             raise
         except (urllib.error.URLError, TimeoutError, json.JSONDecodeError):
             return None
+        elapsed = time.monotonic() - start
+        if elapsed > 2.0:
+            log.warning("Slow fetch %s: %.1fs", doi, elapsed)
         return _to_work(doi, data)
 
     def _throttle(self) -> None:
@@ -282,7 +296,56 @@ def _parse_args(argv: list[str]) -> argparse.Namespace:
         "--no-backfill", action="store_true",
         help="Skip filling empty-title stub works from Crossref after the crawl",
     )
+    parser.add_argument(
+        "--backfill-batch", type=int, default=5,
+        help="Number of stubs to backfill per batch (default: 5)",
+    )
     return parser.parse_args(argv)
+
+
+def _metadata_path(db_path: Path) -> Path:
+    return db_path.parent / "metadata.json"
+
+
+def _write_metadata(
+    db_path: Path, store: WorkStore, elapsed: float, visited: int, args: argparse.Namespace
+) -> None:
+    stubs = store.stubs()
+    dois = store.dois()
+    years = [
+        row[0]
+        for row in store._conn.execute(
+            "SELECT DISTINCT year FROM works WHERE year != ''"
+        ).fetchall()
+        if row[0]
+    ]
+    authors = [
+        row[0]
+        for row in store._conn.execute(
+            "SELECT DISTINCT author FROM works WHERE author != ''"
+        ).fetchall()
+        if row[0]
+    ]
+    edges = store._conn.execute('SELECT COUNT(*) FROM "references"').fetchone()[0]
+    meta = {
+        "doi": args.doi,
+        "level": args.level,
+        "total_works": len(dois),
+        "titled_works": len(dois) - len(stubs),
+        "stub_works": len(stubs),
+        "reference_edges": edges,
+        "distinct_authors": len(authors),
+        "year_min": min(years) if years else "",
+        "year_max": max(years) if years else "",
+        "elapsed_seconds": round(elapsed, 1),
+        "visited": visited,
+    }
+    path = _metadata_path(db_path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with open(path, "w", encoding="utf-8") as fh:
+        json.dump(meta, fh, indent=2, ensure_ascii=False)
+        fh.write("\n")
+    log.info("Metadata written to %s", path)
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -290,34 +353,40 @@ def main(argv: list[str] | None = None) -> int:
     store = WorkStore(args.out)
     client = CrossrefClient(args.mailto, args.delay, args.timeout)
     visited: set[str] = set()
-    queue: list[tuple[str, int]] = [(_normalize(args.doi), 0)]
+    queue: deque[tuple[str, int]] = deque([(_normalize(args.doi), 0)])
     max_depth = args.level + 1
     start = time.monotonic()
 
-    print(f"🚀 Launching crawl from {args.doi} -> {args.out}")
-    print(
-        f"📦 Level {args.level} (max depth {max_depth}), "
-        f"⏱  {args.delay}s between requests"
+    log.info("Launching crawl from %s -> %s", args.doi, args.out)
+    log.info(
+        "Level %d (max depth %d), %.1fs between requests",
+        args.level,
+        max_depth,
+        args.delay,
     )
 
     try:
         while queue:
-            doi, depth = queue.pop(0)
+            doi, depth = queue.popleft()
             if not doi or doi in visited:
                 continue
             if depth > max_depth:
                 continue
             visited.add(doi)
-            work = client.fetch(doi)
+            work = _fetch_with_retry(client, doi)
             if work is None:
-                print(f"⏭️  skipped {doi} (no record returned)")
+                log.warning("Skipped %s (no record returned)", doi)
                 continue
             stored = store.save(work)
             refs = len(work.references)
-            print(f"[visited {len(visited):>3}] ✨ {work.doi} 🧬 {refs} refs")
-            print(f"    ➕ {stored} new reference edges stored")
-            print(f"    📝 {work.title}")
-            print("    ────────────────")
+            log.info(
+                "[%3d] %s | %d refs | +%d edges",
+                len(visited),
+                work.doi,
+                refs,
+                stored,
+            )
+            log.info("  %s", work.title)
             if args.no_follow_references or depth >= max_depth:
                 continue
             for reference in work.references:
@@ -325,34 +394,66 @@ def main(argv: list[str] | None = None) -> int:
                 if normalized and normalized not in visited:
                     queue.append((normalized, depth + 1))
         if not args.no_backfill:
-            _backfill(store, client)
+            _backfill(store, client, args.backfill_batch)
     finally:
+        elapsed = time.monotonic() - start
+        stubs_remaining = len(store.stubs())
+        _write_metadata(args.out, store, elapsed, len(visited), args)
         store.close()
 
-    elapsed = time.monotonic() - start
-    print("")
-    print(f"🏁 Crawl complete in {elapsed:.1f}s — visited {len(visited)} works")
-    print(f"💾 Saved to {args.out}")
+    log.info(
+        "Crawl complete in %.1fs — visited %d works, %d stubs remaining",
+        elapsed,
+        len(visited),
+        stubs_remaining,
+    )
+    log.info("Saved to %s", args.out)
     return 0
 
 
-def _backfill(store: WorkStore, client: CrossrefClient) -> None:
+def _backfill(
+    store: WorkStore, client: CrossrefClient, batch_size: int = 5
+) -> None:
     stubs = store.stubs()
-    print(f"\n🗂️  Backfilling {len(stubs)} empty-title stub works...")
+    total = len(stubs)
+    log.info("Backfilling %d stubs in batches of %d", total, batch_size)
     filled = 0
-    for article in stubs:
-        work = client.fetch(article)
-        if work is None:
-            continue
-        store.update(work)
-        filled += 1
-        if filled % 25 == 0 or filled == len(stubs):
-            print(f"    ✅ backfilled {filled}/{len(stubs)}")
-    print(f"✨ Backfill done: {filled} filled, {len(stubs) - filled} still empty")
+    for i in range(0, total, batch_size):
+        batch = stubs[i : i + batch_size]
+        for article in batch:
+            work = _fetch_with_retry(client, article)
+            if work is None:
+                continue
+            store.update(work)
+            filled += 1
+        store._conn.commit()
+        log.info(
+            "Backfilled %d/%d (filled %d)",
+            min(i + batch_size, total),
+            total,
+            filled,
+        )
+    log.info("Backfill done: %d filled, %d still empty", filled, total - filled)
 
 
 def _normalize(doi: str) -> str:
     return doi.strip().lower()
+
+
+def _fetch_with_retry(
+    client: CrossrefClient, doi: str, max_retries: int = MAX_RETRIES
+) -> Work | None:
+    for attempt in range(max_retries):
+        work = client.fetch(doi)
+        if work is not None:
+            return work
+        if attempt < max_retries - 1:
+            wait = 2 ** attempt
+            log.warning(
+                "Retry %d/%d for %s in %ds", attempt + 1, max_retries, doi, wait
+            )
+            time.sleep(wait)
+    return None
 
 
 if __name__ == "__main__":

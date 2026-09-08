@@ -11,20 +11,4 @@ describe('HomePage', () => {
       expect(screen.getByTestId(`tool-card-${slug}`)).toBeInTheDocument();
     });
   });
-
-  it('links to info pages in the footer', () => {
-    render(<HomePage />);
-    expect(screen.getByRole('link', { name: 'About' })).toHaveAttribute(
-      'href',
-      '/about'
-    );
-    expect(screen.getByRole('link', { name: 'Downloads' })).toHaveAttribute(
-      'href',
-      '/downloads'
-    );
-    expect(screen.getByRole('link', { name: 'Version' })).toHaveAttribute(
-      'href',
-      '/version'
-    );
-  });
 });

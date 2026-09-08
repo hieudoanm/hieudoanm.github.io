@@ -1,12 +1,16 @@
-import { FC } from 'react';
+import Link from 'next/link';
+import { ErrorTemplate } from '@/components/templates/ErrorTemplate';
 
-const NotFound: FC = () => (
-  <main className="mx-auto max-w-2xl px-6 py-12 text-center">
-    <h2 className="mb-3 text-2xl font-bold">404 — Page not found</h2>
-    <p className="text-base-content/60">
-      The page you are looking for does not exist.
-    </p>
-  </main>
+const NotFoundPage = () => (
+  <ErrorTemplate
+    code="404"
+    description="The page you are looking for does not exist."
+    action={
+      <Link href="/" className="btn btn-primary btn-sm">
+        Go home
+      </Link>
+    }
+  />
 );
 
-export default NotFound;
+export default NotFoundPage;

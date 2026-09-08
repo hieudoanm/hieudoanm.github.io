@@ -4,16 +4,16 @@ import { FiBarChart2, FiSearch, FiShare2 } from 'react-icons/fi';
 
 const ITEMS = [
   {
-    href: '/overview',
-    title: 'Overview',
-    description: 'Citation statistics and year distribution',
-    icon: <FiBarChart2 />,
-  },
-  {
     href: '/graph',
     title: 'Graph',
     description: 'Interactive force-directed citation network',
     icon: <FiShare2 />,
+  },
+  {
+    href: '/overview',
+    title: 'Overview',
+    description: 'Citation statistics and year distribution',
+    icon: <FiBarChart2 />,
   },
   {
     href: '/search',

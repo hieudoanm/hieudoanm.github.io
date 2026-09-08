@@ -28,6 +28,26 @@ struct ContentView: View {
 
     @ViewBuilder
     private var detailView: some View {
+        switch viewModel.selectedSection.group {
+        case .applications:
+            applicationsDetail
+        case .homebrew:
+            homebrewDetail
+        }
+    }
+
+    @ViewBuilder
+    private var applicationsDetail: some View {
+        switch viewModel.selectedSection {
+        case .apps:
+            AppsView(viewModel: viewModel)
+        default:
+            EmptyView()
+        }
+    }
+
+    @ViewBuilder
+    private var homebrewDetail: some View {
         switch viewModel.selectedSection {
         case .discover:
             DiscoverView(viewModel: viewModel)
@@ -37,6 +57,8 @@ struct ContentView: View {
             UpdatesView(viewModel: viewModel)
         case .services:
             ServicesView(viewModel: viewModel)
+        case .apps:
+            EmptyView()
         }
     }
 

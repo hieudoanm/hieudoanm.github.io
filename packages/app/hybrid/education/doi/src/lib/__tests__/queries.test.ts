@@ -133,6 +133,20 @@ describe('search', () => {
     expect(search(db, '10.1/d', 10).map((w) => w.doi)).toEqual(['10.1/d']);
   });
 
+  it('breaks a query into words and requires every word to match', async () => {
+    const db = await setupDb();
+
+    expect(search(db, 'thermal transport', 10).map((w) => w.doi)).toEqual([
+      '10.1/a',
+    ]);
+    expect(search(db, 'thermal  aging', 10).map((w) => w.doi)).toEqual([
+      '10.1/e',
+    ]);
+    expect(search(db, 'alice thermal', 10).map((w) => w.doi)).toEqual([
+      '10.1/a',
+    ]);
+  });
+
   it('returns no matches for an unknown query', async () => {
     const db = await setupDb();
     expect(search(db, 'zzz', 10)).toEqual([]);

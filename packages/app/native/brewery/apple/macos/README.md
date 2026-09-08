@@ -10,6 +10,7 @@ Brewery is a native SwiftUI application that presents a graphical interface over
 
 - **Discover** — search Homebrew formulae and casks, then install from the app.
 - **Installed** — browse installed packages (formulae vs. casks in separate tabs), inspect, upgrade, or uninstall individual packages.
+- **Apps** — browse every GUI app installed under `/Applications` and `~/Applications`, grouped by functional category, and uninstall it (Homebrew casks via `brew uninstall --cask`, everything else moves to the Trash).
 - **Updates** — refresh Homebrew metadata and upgrade outdated packages, individually or all at once.
 - **Services** — list Homebrew services and start, stop, and restart them.
 - **Settings** — launch-at-login and auto-check-for-updates preferences.

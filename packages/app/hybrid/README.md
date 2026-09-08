@@ -47,6 +47,7 @@
 | 43  | clock       | [Clock][clock]             | Pomodoro / Watchface / World Clock / Timer / Stopwatch           | No       | DONE   | Utilities         | Productivity       |
 | 44  | docs        | [Docs][docs]               | TinyWow                                                          | No       | DONE   | Utilities         | Productivity       |
 | 45  | password    | [Password][password]       | BitWarden / 1Password                                            | Required | DONE   | Utilities         | Productivity       |
+| 46  | doi         | [DOI][doi]                 | Crossref Citation Network Visualizer                             | No       | DONE   | Education         | Developer Tools    |
 
 [menu]: https://hieudoanm.github.io/free/menu/
 [pos]: https://hieudoanm.github.io/free/pos/
@@ -92,4 +93,5 @@
 [clock]: https://hieudoanm.github.io/free/clock/
 [docs]: https://hieudoanm.github.io/free/docs/
 [password]: https://hieudoanm.github.io/free/password/
+[doi]: https://hieudoanm.github.io/free/doi/
 [colors]: https://hieudoanm.github.io/free/colors/

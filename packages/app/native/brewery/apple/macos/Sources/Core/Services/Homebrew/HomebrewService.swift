@@ -1,5 +1,28 @@
 import Foundation
 
+/// Maps installed apps back to the Homebrew cask that manages them.
+public struct CaskIndex: Sendable {
+    private var byPath: [String: String] = [:]
+    private var byBundleIdentifier: [String: String] = [:]
+
+    public init() {}
+
+    public mutating func add(token: String, appPath: String) {
+        byPath[appPath] = token
+    }
+
+    public mutating func add(token: String, bundleIdentifier: String) {
+        byBundleIdentifier[bundleIdentifier] = token
+    }
+
+    public func token(for app: InstalledApp) -> String? {
+        guard let match = byPath[app.path] ?? app.bundleIdentifier.flatMap({ byBundleIdentifier[$0] }) else {
+            return nil
+        }
+        return match
+    }
+}
+
 /// Concrete `BrewService` that performs Homebrew commands through a `BrewClient`.
 public struct HomebrewService: BrewService {
     private let client: any BrewClient
@@ -42,6 +65,32 @@ public struct HomebrewService: BrewService {
         }
         return packages
     }
+
+    // MARK: - Cask index
+
+    public func installedCaskIndex() async throws -> CaskIndex {
+        let tokens = try await tokens(arguments: ["list", "--cask"])
+        guard !tokens.isEmpty else { return CaskIndex() }
+
+        let result = try await client.execute(arguments: ["info", "--json=v2", "--cask"] + tokens)
+        guard result.succeeded else {
+            throw BrewError.commandFailed(exitCode: result.exitCode, stderr: result.stderr)
+        }
+
+        let casks = try BrewParser.parseInstalledCasks(result.stdout)
+        var index = CaskIndex()
+        for cask in casks {
+            for path in cask.appPaths {
+                index.add(token: cask.token, appPath: path)
+            }
+            if let bundleIdentifier = cask.bundleIdentifier, !bundleIdentifier.isEmpty {
+                index.add(token: cask.token, bundleIdentifier: bundleIdentifier)
+            }
+        }
+        return index
+    }
+
+    // MARK: - Search
 
     public func search(query: String) async throws -> [Package] {
         let trimmed = query.trimmingCharacters(in: .whitespacesAndNewlines)

@@ -125,6 +125,130 @@ final class BrewParserTests: XCTestCase {
         XCTAssertTrue(packages.isEmpty)
     }
 
+    // MARK: - Installed cask artifacts
+
+    func testParseInstalledCasksCollectsAppPathsAndBundleID() throws {
+        let json = """
+        {
+          "casks": [
+            {
+              "token": "firefox",
+              "bundle_id": "org.mozilla.firefox",
+              "artifacts": [
+                { "app": ["/Applications/Firefox.app"] },
+                { "app": ["/Applications/Firefox.app/Contents/MacOS/Firefox Binaries"] }
+              ]
+            },
+            {
+              "token": "docker",
+              "artifacts": [{ "app": ["Docker.app"] }]
+            }
+          ]
+        }
+        """
+        let casks = try BrewParser.parseInstalledCasks(json)
+        XCTAssertEqual(casks.count, 2)
+
+        let firefox = try XCTUnwrap(casks.first { $0.token == "firefox" })
+        XCTAssertEqual(firefox.bundleIdentifier, "org.mozilla.firefox")
+        XCTAssertEqual(firefox.appPaths, [
+            "/Applications/Firefox.app",
+            "/Applications/Firefox.app/Contents/MacOS/Firefox Binaries",
+        ])
+
+        let docker = try XCTUnwrap(casks.first { $0.token == "docker" })
+        XCTAssertNil(docker.bundleIdentifier)
+        XCTAssertEqual(docker.appPaths, ["/Applications/Docker.app"])
+    }
+
+    func testParseInstalledCasksHandlesTargetedArtifacts() throws {
+        let json = """
+        {
+          "casks": [
+            {
+              "token": "vlc",
+              "artifacts": [
+                { "app": [{ "path": "VLC.app", "target": "/Applications/VLC.app" }] }
+              ]
+            }
+          ]
+        }
+        """
+        let casks = try BrewParser.parseInstalledCasks(json)
+        let vlc = try XCTUnwrap(casks.first)
+        XCTAssertEqual(vlc.appPaths, ["/Applications/VLC.app"])
+    }
+
+    func testParseInstalledCasksUsesSiblingTargetOverride() throws {
+        let json = """
+        {
+          "casks": [
+            {
+              "token": "chromium",
+              "artifacts": [
+                {
+                  "app": ["chrome-mac/Chromium.app"],
+                  "command_wrapper": ["chromium", { "executable": "/Applications/Chromium.app/Contents/MacOS/Chromium" }],
+                  "target": "/Applications/Chromium.app",
+                  "zap": [{ "trash": ["~/Library/Application Support/Chromium", "~/Library/Caches/Chromium"] }]
+                }
+              ]
+            }
+          ]
+        }
+        """
+        let casks = try BrewParser.parseInstalledCasks(json)
+        let chromium = try XCTUnwrap(casks.first)
+        XCTAssertEqual(chromium.appPaths, ["/Applications/Chromium.app"])
+    }
+
+    func testParseInstalledCasksIgnoresUnrelatedArtifacts() throws {
+        let json = """
+        {
+          "casks": [
+            {
+              "token": "ngrok",
+              "artifacts": [
+                { "binary": ["ngrok"], "target": "/opt/homebrew/bin/ngrok" },
+                {
+                  "postflight_steps": [
+                    {
+                      "steps": [
+                        {
+                          "paths": [{ "base": "staged_path", "path": "ngrok" }],
+                          "permissions": "0755",
+                          "type": "set_permissions"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                { "zap": [{ "trash": ["~/.ngrok3", "~/Library/Application Support/ngrok"] }] }
+              ]
+            }
+          ]
+        }
+        """
+        let casks = try BrewParser.parseInstalledCasks(json)
+        let ngrok = try XCTUnwrap(casks.first)
+        XCTAssertEqual(ngrok.appPaths, [], "Non-app artifacts should be ignored, not fail the parse")
+    }
+
+    func testParseInstalledCasksToleratesMissingArtifacts() throws {
+        let casks = try BrewParser.parseInstalledCasks("{\"casks\": [{\"token\": \"minimal\"}]}")
+        XCTAssertEqual(casks.count, 1)
+        XCTAssertNil(casks.first?.bundleIdentifier)
+        XCTAssertEqual(casks.first?.appPaths, [])
+    }
+
+    func testParseInstalledCasksRejectsMalformedJSON() {
+        XCTAssertThrowsError(try BrewParser.parseInstalledCasks("not json")) { error in
+            guard case BrewError.parsingFailed = error else {
+                return XCTFail("Expected parsingFailed, got \(error)")
+            }
+        }
+    }
+
     // MARK: - Tokens
 
     func testParseTokensSplitsLinesAndFiltersBlanks() {

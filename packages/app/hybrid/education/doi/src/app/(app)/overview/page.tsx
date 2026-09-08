@@ -30,15 +30,15 @@ const OverviewPage: FC = () => {
   } = report;
 
   return (
-    <main className="mx-auto max-w-5xl px-6 py-10">
-      <header className="mb-8 flex flex-wrap items-center justify-between gap-4">
+    <main className="mx-auto max-w-5xl px-4 py-6 sm:px-6 sm:py-10">
+      <header className="mb-8 flex flex-col gap-4 md:flex-row md:flex-wrap md:items-center md:justify-between">
         <div>
-          <h1 className="mb-1 text-3xl font-bold">Overview</h1>
+          <h1 className="mb-1 text-2xl font-bold sm:text-3xl">Overview</h1>
           <p className="text-base-content/60 text-sm">
             Citation statistics {query && <>matching &quot;{query}&quot;</>}
           </p>
         </div>
-        <div className="form-control w-64">
+        <div className="form-control w-full md:w-64">
           <input
             type="text"
             placeholder="Search works..."
@@ -51,7 +51,7 @@ const OverviewPage: FC = () => {
       </header>
 
       <section
-        className="mb-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"
+        className="mb-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
         data-testid="overview-stats">
         <StatCard label="Total works" value={s.totalWorks} icon={<FiHash />} />
         <StatCard
@@ -87,14 +87,14 @@ const OverviewPage: FC = () => {
       </section>
 
       <section className="grid gap-4 lg:grid-cols-3">
-        <div>
+        <div className="min-w-0">
           <RankingList title="Most cited" rows={mostCited} />
         </div>
-        <div>
+        <div className="min-w-0">
           <RankingList title="Most citing" rows={mostCiting} />
         </div>
-        <div>
-          <div className="card bg-base-200 card-body">
+        <div className="min-w-0">
+          <div className="card bg-base-200 card-body min-w-0">
             <h3 className="mb-3 font-semibold">Top authors</h3>
             {topAuthors.length === 0 ? (
               <p className="text-base-content/50 text-sm">No data.</p>
@@ -105,8 +105,10 @@ const OverviewPage: FC = () => {
                     <span className="text-base-content/40 mt-0.5 w-5 shrink-0 text-right">
                       {i + 1}
                     </span>
-                    <div className="min-w-0">
-                      <p className="truncate font-medium">{a.author}</p>
+                    <div className="min-w-0 flex-1">
+                      <p className="truncate font-medium" title={a.author}>
+                        {a.author}
+                      </p>
                       <p className="text-base-content/50 text-xs">
                         {a.count} work{a.count !== 1 ? 's' : ''}
                       </p>

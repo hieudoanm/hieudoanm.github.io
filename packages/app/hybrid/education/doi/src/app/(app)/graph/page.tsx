@@ -24,10 +24,12 @@ const GraphPage: FC = () => {
   if (loading) return <LoadingState />;
 
   return (
-    <main className="mx-auto max-w-7xl px-6 py-10">
-      <header className="mb-6 flex flex-wrap items-center justify-between gap-4">
+    <main className="mx-auto max-w-7xl px-4 py-6 sm:px-6 sm:py-10">
+      <header className="mb-6 flex flex-col gap-4 md:flex-row md:flex-wrap md:items-center md:justify-between">
         <div>
-          <h1 className="mb-1 text-3xl font-bold">Citation graph</h1>
+          <h1 className="mb-1 text-2xl font-bold sm:text-3xl">
+            Citation graph
+          </h1>
           <p className="text-base-content/60 text-sm">
             Nodes sized by in-degree · click to inspect · {graphNodes.length}{' '}
             works, {graphEdges.length} edges
@@ -43,7 +45,7 @@ const GraphPage: FC = () => {
               onChange={(e) =>
                 setGraphLimit(Math.max(1, Number(e.target.value) || 1))
               }
-              className="input input-bordered input-sm w-24"
+              className="input input-bordered input-sm w-20 sm:w-24"
               aria-label="Node cap"
               title="Node cap"
             />
@@ -61,7 +63,7 @@ const GraphPage: FC = () => {
               ))}
             </select>
           </div>
-          <div className="form-control w-64">
+          <div className="form-control w-full min-w-0 sm:w-64">
             <input
               type="text"
               placeholder="Filter graph..."

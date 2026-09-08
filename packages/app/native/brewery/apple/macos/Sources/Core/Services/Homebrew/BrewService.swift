@@ -9,6 +9,7 @@ public protocol BrewService {
     func isHomebrewAvailable() async -> Bool
     func brewVersion() async throws -> String
     func listInstalled() async throws -> [Package]
+    func installedCaskIndex() async throws -> CaskIndex
     func search(query: String) async throws -> [Package]
     func info(name: String) async throws -> Package
     func install(name: String, type: PackageType) async throws -> String

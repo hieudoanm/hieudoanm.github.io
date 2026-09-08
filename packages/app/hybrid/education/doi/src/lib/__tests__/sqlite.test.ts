@@ -43,14 +43,14 @@ describe('sqlite', () => {
     const { mod } = await loadModule();
 
     expect(mod.WASM_PATH).toBe('/downloads/doi/wasm/sql-wasm.wasm');
-    expect(mod.DB_PATH).toBe('/downloads/doi/data/doi.db');
+    expect(mod.DB_PATH).toBe('/downloads/doi/database/doi.db');
   });
 
   it('defaults asset paths without a base path', async () => {
     const { mod } = await loadModule();
 
     expect(mod.WASM_PATH).toBe('/wasm/sql-wasm.wasm');
-    expect(mod.DB_PATH).toBe('/data/doi.db');
+    expect(mod.DB_PATH).toBe('/database/doi.db');
   });
 
   it('initialises sql.js once and reuses the promise', async () => {
