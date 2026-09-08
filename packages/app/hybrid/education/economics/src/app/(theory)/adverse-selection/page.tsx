@@ -100,6 +100,14 @@ const AdverseSelectionPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/adverse-selection/lemons',
+        label: 'The Market for Lemons',
+        description:
+          'Post one price for a used car and watch good cars refuse to sell at "fair" prices—Akerlof\'s adverse selection in action.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Adverse_selection',

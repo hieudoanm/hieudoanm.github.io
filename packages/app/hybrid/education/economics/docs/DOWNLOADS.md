@@ -159,6 +159,33 @@ Each theory page links to a playable game under `app/(games)`:
   it with market orders or earn it back with limits.
 - **Job Market** (`/signaling/job-market`) — set wages and learn why education
   only works as a signal when it costs more for the unproductive.
+- **Nash Solver** (`/nash-equilibrium/solve`) — best-respond across Battle of
+  the Sexes, Stag Hunt and Matching Pennies and spot pure Nash equilibria—or
+  when only mixing wins.
+- **Rollback: Entry Game** (`/backward-induction/rollback`) — move first in a
+  market-entry game and watch the subgame-perfect outcome emerge via rollback.
+- **Repeated Dilemma** (`/repeated-games/tournament`) — 10 rounds of the
+  iterated prisoner's dilemma against Tit-for-Tat, Grim Trigger, and friends.
+- **Replicator Dynamics Lab** (`/evolutionary-game-theory/replicator`) — tune
+  payoffs and step generations to see hawk–dove shares hit their ESS.
+- **Revelation Game** (`/mechanism-design/reveal`) — report your value for a
+  public project and find out why the Clarke pivot rule makes honesty optimal.
+- **Hidden Effort** (`/moral-hazard/insurance`) — choose insurance and care and
+  watch full cover quietly remove the incentive to try.
+- **The Market for Lemons** (`/adverse-selection/lemons`) — post one price and
+  watch good cars refuse to sell: Akerlof's adverse selection.
+- **Monty Hall Explorer** (`/bayesian-updating/monty-hall`) — switch vs stay
+  across 20 trials as the 2/3 odds reveal themselves.
+- **Revenue Explorer** (`/elasticity/pricing`) — pick prices under different
+  demand elasticities and find revenue-max at |e| = 1.
+- **Monopoly Pricing Lab** (`/monopoly-and-market-power/pricing`) — the sole
+  seller of a linear-demand good quizzes the deadweight loss triangle.
+- **Segment Pricing Lab** (`/price-discrimination/split`) — charge one price or
+  two per-segment prices and see third-degree discrimination raise the take.
+- **Competitive Firm Lab** (`/perfect-competition/firm`) — a price-taker picks
+  output at P = MC and watches long-run profits fall to zero.
+- **Pigou's Factory** (`/externalities/pigou`) — run a polluting mill, then tax
+  it and watch the private optimum slide to the social optimum.
 
 ---
 

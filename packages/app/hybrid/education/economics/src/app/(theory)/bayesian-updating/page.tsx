@@ -100,6 +100,14 @@ const BayesianUpdatingPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/bayesian-updating/monty-hall',
+        label: 'Monty Hall Explorer',
+        description:
+          'Test switching vs staying across repeated trials and watch a 2/3 vs 1/3 win rate emerge — Bayesian updating the fun way.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Bayesian_inference',

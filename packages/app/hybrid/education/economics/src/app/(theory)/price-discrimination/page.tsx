@@ -100,6 +100,14 @@ const PriceDiscriminationPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/price-discrimination/split',
+        label: 'Segment Pricing Lab',
+        description:
+          'Charge one price or two per-segment prices and see third-degree price discrimination raise the take.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Price_discrimination',

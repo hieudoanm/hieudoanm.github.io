@@ -99,6 +99,14 @@ const ExternalitiesPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/externalities/pigou',
+        label: "Pigou's Factory",
+        description:
+          'Run a polluting mill, then impose a per-ton Pigouvian tax and watch the private profit-maximum slide to the social optimum.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Externality',

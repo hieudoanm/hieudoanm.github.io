@@ -93,6 +93,14 @@ const NashEquilibriumPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/nash-equilibrium/solve',
+        label: 'Nash Equilibrium Solver',
+        description:
+          'Best-respond to an AI opponent across three classic games and learn to spot Nash equilibria—or when only mixing wins.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Nash_equilibrium',

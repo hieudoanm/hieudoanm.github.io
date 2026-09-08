@@ -99,6 +99,14 @@ const MonopolyPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/monopoly-and-market-power/pricing',
+        label: 'Monopoly Pricing Lab',
+        description:
+          'Sole seller of a linear-demand good: pick output to maximize profit and see the deadweight loss left behind.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Monopoly',

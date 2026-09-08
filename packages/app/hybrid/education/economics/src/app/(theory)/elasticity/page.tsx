@@ -96,6 +96,14 @@ const ElasticityPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/elasticity/pricing',
+        label: 'Revenue Explorer',
+        description:
+          'Pick prices under different demand elasticities and find the revenue-maximizing spot where |elasticity| equals one.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Price_elasticity_of_demand',

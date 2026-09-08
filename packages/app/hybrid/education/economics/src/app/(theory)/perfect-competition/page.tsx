@@ -93,6 +93,14 @@ const PerfectCompetitionPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/perfect-competition/firm',
+        label: 'Competitive Firm Lab',
+        description:
+          'A price-taking firm: choose output where price equals marginal cost, and watch long-run profits fall to zero.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Perfect_competition',

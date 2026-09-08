@@ -100,6 +100,14 @@ const RepeatedGamesPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/repeated-games/tournament',
+        label: 'Repeated Dilemma',
+        description:
+          "Play 10 rounds of the iterated prisoner's dilemma against classic AI strategies and learn when cooperation survives.",
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Tit_for_tat',

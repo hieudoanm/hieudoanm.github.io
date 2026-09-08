@@ -107,6 +107,14 @@ const MechanismDesignPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/mechanism-design/reveal',
+        label: 'Revelation Game',
+        description:
+          'Report what a public project is worth to you and see why the pivot (Clarke) rule makes honesty your best move.',
+      },
+    ]}
     references={[
       {
         href: 'https://www.nobelprize.org/prizes/economic-sciences/2007/summary/',

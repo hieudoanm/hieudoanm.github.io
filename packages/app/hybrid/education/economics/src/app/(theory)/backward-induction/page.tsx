@@ -98,6 +98,14 @@ const BackwardInductionPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/backward-induction/rollback',
+        label: 'Rollback: Entry Game',
+        description:
+          'Move first in a market-entry game while your rival plays perfectly, and see the subgame-perfect outcome appear by rollback.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Backward_induction',

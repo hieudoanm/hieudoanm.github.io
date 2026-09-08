@@ -94,6 +94,14 @@ const MoralHazardPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/moral-hazard/insurance',
+        label: 'Hidden Effort',
+        description:
+          'Insure your home, choose how hard to guard it, and watch full cover quietly destroy your incentive to try.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Moral_hazard',

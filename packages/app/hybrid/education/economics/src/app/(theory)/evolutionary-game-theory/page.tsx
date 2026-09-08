@@ -101,6 +101,14 @@ const EvolutionaryGameTheoryPage: NextPage = () => (
         ),
       },
     ]}
+    links={[
+      {
+        href: '/evolutionary-game-theory/replicator',
+        label: 'Replicator Dynamics Lab',
+        description:
+          'Tune payoffs and step generations to watch hawk–dove population shares converge on an evolutionarily stable strategy.',
+      },
+    ]}
     references={[
       {
         href: 'https://en.wikipedia.org/wiki/Evolutionary_game_theory',
