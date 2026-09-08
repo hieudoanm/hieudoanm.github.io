@@ -532,6 +532,50 @@
         ]
       },
       {
+        "label": "DOI",
+        "primaryCategory": "Education",
+        "secondaryCategory": "Games",
+        "icon": "PiNetwork",
+        "href": "https://hieudoanm.github.io/free/doi",
+        "version": "latest",
+        "lastUpdated": "2026-09-08",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-doi-latest/doi.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-doi-latest/doi.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-doi-latest/doi.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-doi-latest/doi.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-doi-latest/doi.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-doi-latest/doi.rpm"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-doi-latest/doi.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-doi-latest/doi.exe"
+          }
+        ]
+      },
+      {
         "label": "Tax",
         "primaryCategory": "Finance",
         "secondaryCategory": "Business",
