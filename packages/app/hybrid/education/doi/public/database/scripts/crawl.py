@@ -22,6 +22,8 @@ logging.basicConfig(
 log = logging.getLogger(__name__)
 
 CROSSREF_ENDPOINT = "https://api.crossref.org/works/{doi}"
+SEARCH_ENDPOINT = "https://api.crossref.org/works"
+SEARCH_SELECT = "DOI"
 MAX_RETRIES = 3
 
 
@@ -78,6 +80,41 @@ class CrossrefClient:
             time.sleep(self._delay - elapsed)
         self._last_request = time.monotonic()
 
+    def search(self, query: str, rows: int, cursor: str = "*") -> tuple[list[str], str | None]:
+        params = {
+            "query.title": query,
+            "rows": str(rows),
+            "select": SEARCH_SELECT,
+            "cursor": cursor,
+        }
+        url = SEARCH_ENDPOINT + "?" + urllib.parse.urlencode(params)
+        request = urllib.request.Request(url, headers=self._headers)
+        self._throttle()
+        start = time.monotonic()
+        try:
+            with urllib.request.urlopen(request, timeout=self._timeout) as response:
+                data = json.loads(response.read())
+        except urllib.error.HTTPError as err:
+            if 400 <= err.code < 500:
+                log.warning("Search query rejected by Crossref: HTTP %d", err.code)
+                return [], None
+            raise
+        except (urllib.error.URLError, TimeoutError, json.JSONDecodeError):
+            return [], None
+        elapsed = time.monotonic() - start
+        if elapsed > 2.0:
+            log.warning("Slow search %.1fs", elapsed)
+        message = data.get("message")
+        if not isinstance(message, dict):
+            return [], None
+        dois = [
+            str(item["DOI"])
+            for item in message.get("items") or []
+            if isinstance(item, dict) and item.get("DOI")
+        ]
+        next_cursor = message.get("next-cursor")
+        return dois, str(next_cursor) if next_cursor else None
+
 
 def _quote(doi: str) -> str:
     return urllib.parse.quote(doi.strip(), safe="")
@@ -124,7 +161,9 @@ def _year(message: dict[str, Any]) -> str:
             continue
         parts = date.get("date-parts")
         if isinstance(parts, list) and parts and isinstance(parts[0], list) and parts[0]:
-            return str(parts[0][0])
+            year = parts[0][0]
+            if year:
+                return str(year).strip()
     return ""
 
 
@@ -260,10 +299,18 @@ class WorkStore:
 
 def _parse_args(argv: list[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Crawl Crossref works starting from a DOI, following "
-        "references, and store doi/title/author/abstract/type in SQLite."
+        description="Crawl Crossref: given a DOI, follow its references and "
+        "store doi/title/author/abstract/type in SQLite; or given "
+        "--query, store the list of matching works."
     )
-    parser.add_argument("doi", help="Starting DOI, e.g. 10.1038/nature12373")
+    parser.add_argument("identifier", help="Starting DOI (e.g. 10.1038/nature12373) or title query")
+    parser.add_argument(
+        "-q",
+        "--query",
+        action="store_true",
+        help="Treat identifier as a title query, store the matching works "
+        "without crawling references",
+    )
     parser.add_argument(
         "-o",
         "--out",
@@ -300,6 +347,14 @@ def _parse_args(argv: list[str]) -> argparse.Namespace:
         "--backfill-batch", type=int, default=5,
         help="Number of stubs to backfill per batch (default: 5)",
     )
+    parser.add_argument(
+        "-r", "--rows", type=int, default=100,
+        help="Results per search page (default: 100, query mode only)",
+    )
+    parser.add_argument(
+        "-n", "--limit", type=int, default=0,
+        help="Stop after this many works (default: 0 = no limit, query mode only)",
+    )
     return parser.parse_args(argv)
 
 
@@ -307,9 +362,7 @@ def _metadata_path(db_path: Path) -> Path:
     return db_path.parent / "metadata.json"
 
 
-def _write_metadata(
-    db_path: Path, store: WorkStore, elapsed: float, visited: int, args: argparse.Namespace
-) -> None:
+def _write_metadata(db_path: Path, store: WorkStore) -> None:
     stubs = store.stubs()
     dois = store.dois()
     years = [
@@ -317,7 +370,7 @@ def _write_metadata(
         for row in store._conn.execute(
             "SELECT DISTINCT year FROM works WHERE year != ''"
         ).fetchall()
-        if row[0]
+        if row[0] and row[0].isdigit()
     ]
     authors = [
         row[0]
@@ -328,8 +381,6 @@ def _write_metadata(
     ]
     edges = store._conn.execute('SELECT COUNT(*) FROM "references"').fetchone()[0]
     meta = {
-        "doi": args.doi,
-        "level": args.level,
         "total_works": len(dois),
         "titled_works": len(dois) - len(stubs),
         "stub_works": len(stubs),
@@ -337,8 +388,6 @@ def _write_metadata(
         "distinct_authors": len(authors),
         "year_min": min(years) if years else "",
         "year_max": max(years) if years else "",
-        "elapsed_seconds": round(elapsed, 1),
-        "visited": visited,
     }
     path = _metadata_path(db_path)
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -352,12 +401,17 @@ def main(argv: list[str] | None = None) -> int:
     args = _parse_args(list(argv) if argv is not None else sys.argv[1:])
     store = WorkStore(args.out)
     client = CrossrefClient(args.mailto, args.delay, args.timeout)
+
+    seeds = [_normalize(args.identifier)]
+    if args.query:
+        seeds = _search_seed_dois(client, args)
+
     visited: set[str] = set()
-    queue: deque[tuple[str, int]] = deque([(_normalize(args.doi), 0)])
+    queue: deque[tuple[str, int]] = deque((doi, 0) for doi in seeds)
     max_depth = args.level + 1
     start = time.monotonic()
 
-    log.info("Launching crawl from %s -> %s", args.doi, args.out)
+    log.info("Launching crawl from %d seed(s) -> %s", len(seeds), args.out)
     log.info(
         "Level %d (max depth %d), %.1fs between requests",
         args.level,
@@ -398,7 +452,7 @@ def main(argv: list[str] | None = None) -> int:
     finally:
         elapsed = time.monotonic() - start
         stubs_remaining = len(store.stubs())
-        _write_metadata(args.out, store, elapsed, len(visited), args)
+        _write_metadata(args.out, store)
         store.close()
 
     log.info(
@@ -409,6 +463,49 @@ def main(argv: list[str] | None = None) -> int:
     )
     log.info("Saved to %s", args.out)
     return 0
+
+
+def _search_seed_dois(
+    client: CrossrefClient, args: argparse.Namespace
+) -> list[str]:
+    query = args.identifier.strip()
+    log.info("Searching Crossref for %r", query)
+    cursor: str | None = "*"
+    seeds: list[str] = []
+    pages = 0
+    while cursor:
+        dois, cursor = _search_page_with_retry(client, query, args.rows, cursor)
+        if not dois:
+            break
+        for doi in dois:
+            normalized = _normalize(doi)
+            if normalized in seeds:
+                continue
+            seeds.append(normalized)
+            log.info("Seed [%d] %s", len(seeds), doi)
+            if args.limit and len(seeds) >= args.limit:
+                cursor = None
+                break
+        pages += 1
+    if not seeds:
+        log.warning("No works matched query %r — nothing to crawl", query)
+    return seeds
+
+
+def _search_page_with_retry(
+    client: CrossrefClient, query: str, rows: int, cursor: str
+) -> tuple[list[str], str | None]:
+    for attempt in range(MAX_RETRIES):
+        dois, next_cursor = client.search(query, rows, cursor)
+        if dois or next_cursor is None:
+            return dois, next_cursor
+        if attempt < MAX_RETRIES - 1:
+            wait = 2 ** attempt
+            log.warning(
+                "Retry %d/%d for search %r in %ds", attempt + 1, MAX_RETRIES, query, wait
+            )
+            time.sleep(wait)
+    return [], None
 
 
 def _backfill(
