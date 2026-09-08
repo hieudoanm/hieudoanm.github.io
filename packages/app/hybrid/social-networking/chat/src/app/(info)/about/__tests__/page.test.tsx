@@ -15,8 +15,8 @@ describe('AboutPage', () => {
   it('renders the tech stack', () => {
     render(<AboutPage />);
     expect(screen.getByText('Framework')).toBeInTheDocument();
-    expect(screen.getByText('Next.js 16')).toBeInTheDocument();
+    expect(screen.getByText('Next.js 16.+')).toBeInTheDocument();
     expect(screen.getByText('Styling')).toBeInTheDocument();
-    expect(screen.getByText('Tailwind CSS 4 + DaisyUI 5')).toBeInTheDocument();
+    expect(screen.getByText('DaisyUI 5.+')).toBeInTheDocument();
   });
 });

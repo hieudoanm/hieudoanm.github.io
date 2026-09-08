@@ -6,10 +6,10 @@ export const about = {
     'Build a professional resume with 64 free templates and export it as PDF.',
   version: buildVersion,
   items: [
-    { label: 'Framework', value: 'Next.js 16' },
-    { label: 'Language', value: 'TypeScript 6' },
-    { label: 'Styling', value: 'Tailwind CSS 4 + DaisyUI 5' },
-    { label: 'Templates', value: '64 Free Templates' },
-    { label: 'Paper sizes', value: 'A3 · A4 · A5 · A6 · B5' },
+    { label: 'Language', value: 'TypeScript 6.+' },
+    { label: 'Framework', value: 'Next.js 16.+' },
+    { label: 'Styling', value: 'Tailwind CSS 4.+' },
+    { label: 'Components', value: 'DaisyUI 5.+' },
+    { label: 'Desktop', value: 'Tauri 2.+' },
   ],
 };

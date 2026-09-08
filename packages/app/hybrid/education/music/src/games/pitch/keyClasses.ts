@@ -8,7 +8,7 @@ export const whiteKeyClass = (
   if (feedback?.wrongId === id)
     return 'bg-error border-error text-error-content';
   if (highlightedKey === id) return 'bg-info border-info text-info-content';
-  return 'bg-base-content border-base-content text-base-100';
+  return 'bg-white border-white text-black';
 };
 
 export const blackKeyClass = (
@@ -22,5 +22,5 @@ export const blackKeyClass = (
     return 'bg-error border-error text-error-content shadow-[0_4px_0_oklch(var(--er)/0.6)]';
   if (highlightedKey === id)
     return 'bg-info border-info text-info-content shadow-[0_4px_0_oklch(var(--in)/0.6)]';
-  return 'bg-base-100 border-base-300 text-base-content shadow-[0_4px_0_oklch(0_0_0/0.3)]';
+  return 'bg-black border-black text-white shadow-[0_4px_0_rgba(0,0,0,0.45)]';
 };

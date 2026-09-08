@@ -5,9 +5,10 @@ export const about = {
   description: 'Digital wallet and payments',
   version: buildVersion,
   items: [
-    { label: 'Framework', value: 'Next.js 16' },
-    { label: 'Language', value: 'TypeScript 6' },
-    { label: 'Styling', value: 'Tailwind CSS 4 + DaisyUI 5' },
-    { label: 'Security', value: 'Encrypted' },
+    { label: 'Language', value: 'TypeScript 6.+' },
+    { label: 'Framework', value: 'Next.js 16.+' },
+    { label: 'Styling', value: 'Tailwind CSS 4.+' },
+    { label: 'Components', value: 'DaisyUI 5.+' },
+    { label: 'Desktop', value: 'Tauri 2.+' },
   ],
 };

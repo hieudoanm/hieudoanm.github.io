@@ -13,9 +13,9 @@ describe('AboutPage', () => {
 
   it('renders all info items', () => {
     render(<AboutPage />);
-    expect(screen.getByText('Next.js 16')).toBeInTheDocument();
-    expect(screen.getByText('TypeScript 6')).toBeInTheDocument();
-    expect(screen.getByText('Tailwind CSS 4 + DaisyUI 5')).toBeInTheDocument();
-    expect(screen.getByText('CodeMirror 6')).toBeInTheDocument();
+    expect(screen.getByText('Next.js 16.+')).toBeInTheDocument();
+    expect(screen.getByText('TypeScript 6.+')).toBeInTheDocument();
+    expect(screen.getByText('Tailwind CSS 4.+')).toBeInTheDocument();
+    expect(screen.getByText('DaisyUI 5.+')).toBeInTheDocument();
   });
 });

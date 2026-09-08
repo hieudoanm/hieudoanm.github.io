@@ -7,13 +7,17 @@ describe('AboutPage', () => {
     expect(screen.getByText('Open Resume')).toBeInTheDocument();
   });
 
-  it('renders the template count', () => {
+  it('renders the tech stack items', () => {
     render(<AboutPage />);
-    expect(screen.getByText('64 Free Templates')).toBeInTheDocument();
-  });
-
-  it('renders the supported paper sizes', () => {
-    render(<AboutPage />);
-    expect(screen.getByText('A3 · A4 · A5 · A6 · B5')).toBeInTheDocument();
+    expect(screen.getByText('Language')).toBeInTheDocument();
+    expect(screen.getByText('TypeScript 6.+')).toBeInTheDocument();
+    expect(screen.getByText('Framework')).toBeInTheDocument();
+    expect(screen.getByText('Next.js 16.+')).toBeInTheDocument();
+    expect(screen.getByText('Styling')).toBeInTheDocument();
+    expect(screen.getByText('Tailwind CSS 4.+')).toBeInTheDocument();
+    expect(screen.getByText('Components')).toBeInTheDocument();
+    expect(screen.getByText('DaisyUI 5.+')).toBeInTheDocument();
+    expect(screen.getByText('Desktop')).toBeInTheDocument();
+    expect(screen.getByText('Tauri 2.+')).toBeInTheDocument();
   });
 });

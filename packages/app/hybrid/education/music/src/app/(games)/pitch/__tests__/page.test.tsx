@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import PitchPage from '@/app/pitch/page';
+import PitchPage from '@/app/(games)/pitch/page';
 
 describe('PitchPage', () => {
   it('Tool page renders inside a tool shell', () => {

@@ -5,9 +5,10 @@ export const about = {
   description: 'SVG editor and generator',
   version: buildVersion,
   items: [
-    { label: 'Framework', value: 'Next.js 16' },
-    { label: 'Language', value: 'TypeScript 6' },
-    { label: 'Styling', value: 'Tailwind CSS 4 + DaisyUI 5' },
-    { label: 'Format', value: 'SVG' },
+    { label: 'Language', value: 'TypeScript 6.+' },
+    { label: 'Framework', value: 'Next.js 16.+' },
+    { label: 'Styling', value: 'Tailwind CSS 4.+' },
+    { label: 'Components', value: 'DaisyUI 5.+' },
+    { label: 'Desktop', value: 'Tauri 2.+' },
   ],
 };

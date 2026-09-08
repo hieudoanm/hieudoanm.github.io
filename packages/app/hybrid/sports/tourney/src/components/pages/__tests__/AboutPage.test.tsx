@@ -10,7 +10,7 @@ describe('AboutPage', () => {
     render(<AboutPage />);
     expect(screen.getByText('Tourney')).toBeInTheDocument();
     expect(screen.getByText('Framework')).toBeInTheDocument();
-    expect(screen.getByText('Next.js 16')).toBeInTheDocument();
+    expect(screen.getByText('Next.js 16.+')).toBeInTheDocument();
     expect(screen.getByText('Stable')).toBeInTheDocument();
   });
 });

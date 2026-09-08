@@ -1,6 +1,6 @@
 import { act, renderHook } from '@testing-library/react';
-import { useSequence } from '../useSequence';
 import { whiteKeys } from '../constants';
+import { useSequence } from '../useSequence';
 
 describe('useSequence', () => {
   it('walks through the practice scale highlighting each key', async () => {

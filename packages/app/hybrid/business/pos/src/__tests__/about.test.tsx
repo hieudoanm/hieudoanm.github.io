@@ -16,7 +16,7 @@ describe('AboutPage', () => {
 
   it('displays framework info', () => {
     render(<AboutPage />);
-    expect(screen.getByText('Next.js 16')).toBeInTheDocument();
+    expect(screen.getByText('Next.js 16.+')).toBeInTheDocument();
   });
 
   it('displays version', () => {

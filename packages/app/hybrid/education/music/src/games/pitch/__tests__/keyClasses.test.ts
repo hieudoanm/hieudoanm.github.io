@@ -24,7 +24,7 @@ describe('whiteKeyClass', () => {
 
   it('falls back to the default style', () => {
     expect(whiteKeyClass(null, null, 'e')).toBe(
-      'bg-base-content border-base-content text-base-100'
+      'bg-white border-white text-black'
     );
   });
 });
@@ -44,7 +44,7 @@ describe('blackKeyClass', () => {
 
   it('falls back to the default style', () => {
     expect(blackKeyClass(null, null, 'as')).toBe(
-      'bg-base-100 border-base-300 text-base-content shadow-[0_4px_0_oklch(0_0_0/0.3)]'
+      'bg-black border-black text-white shadow-[0_4px_0_rgba(0,0,0,0.45)]'
     );
   });
 });
