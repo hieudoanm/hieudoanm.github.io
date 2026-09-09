@@ -73,6 +73,8 @@ install: app
 	@cp -R $(APP_DIR) /Applications/
 	@rm -rf $(BUILD_DIR) .build
 	@echo "$(APP_NAME).app installed to /Applications"
+	@echo "Opening $(APP_NAME).app..."
+	@open /Applications/$(APP_NAME).app
 
 clean:
 	@swift package clean

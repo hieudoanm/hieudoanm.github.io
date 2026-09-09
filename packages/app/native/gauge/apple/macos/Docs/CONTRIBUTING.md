@@ -67,6 +67,16 @@ No permissions are required to run Gauge.
 - Handle unavailable metrics by showing "Unable to read", never `0 GB`
 - One coordinated timer for all metrics
 
+### Ports Conventions
+
+- Views never spawn `lsof` directly — go through `PortDiscovering`
+- `PortDiscovering` / `ProcessTerminating` protocols keep discovery and
+  termination mockable and UI-independent
+- Never build shell strings from process metadata; use `Process` with explicit
+  executable URLs and arguments
+- Never auto-kill a process; destructive actions require explicit user action
+- Keep all parsing in `LsofParser` so it stays unit-testable
+
 ## Before You Push
 
 1. `make build` — clean compile
@@ -74,4 +84,5 @@ No permissions are required to run Gauge.
 3. `make dev` — smoke test the app
 4. Menu-bar icon shows memory and disk percentages
 5. Popover shows both progress bars with used/total values
-6. Verify both Light Mode and Dark Mode
+6. Ports view lists listening ports and kill actions work
+7. Verify both Light Mode and Dark Mode

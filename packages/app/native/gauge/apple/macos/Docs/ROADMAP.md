@@ -61,3 +61,18 @@
 - [x] Configurable refresh interval (presets shipped in v1)
 - [x] Configurable menu-bar display
 - [ ] Threshold customization
+
+## Phase 7 — Port Monitoring
+
+> Developer view for discovering and managing local listening ports,
+> migrated from the standalone Ports app.
+
+- [x] `PortInfo` / `NetworkEndpoint` models in GaugeCore
+- [x] `lsof`-based discovery service (`LsofPortDiscoveryService`)
+- [x] Defensive `lsof` output parsing (`LsofParser`)
+- [x] `ProcessTerminating` protocol and `SignalProcessTerminator` (SIGTERM / SIGKILL)
+- [x] `PortsViewModel` sharing the Gauge `SettingsStore.refreshInterval`
+- [x] Dedicated Ports tab in the popover (search, list, kill action)
+- [x] Monitor and Ports as two tabs with Monitor the default
+- [ ] Open port in browser action
+- [ ] Project detection for development servers

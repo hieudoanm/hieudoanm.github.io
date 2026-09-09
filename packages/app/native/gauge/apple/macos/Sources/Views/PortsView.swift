@@ -1,4 +1,4 @@
-import PortsCore
+import GaugeCore
 import SwiftUI
 
 private enum KillRequest {
@@ -18,9 +18,9 @@ private enum KillRequest {
     }
 }
 
-struct MenuBarView: View {
+/// The Gauge Ports tab for monitoring and managing listening ports.
+struct PortsView: View {
     @ObservedObject var viewModel: PortsViewModel
-    @Environment(\.openWindow) private var openWindow
 
     @State private var pendingKill: KillRequest?
     @State private var killError: String?
@@ -44,7 +44,6 @@ struct MenuBarView: View {
                 onForceKill: { pendingKill = .forceKill($0) }
             )
         }
-        .frame(width: 360)
         .padding(14)
         .task {
             viewModel.start()
@@ -76,15 +75,22 @@ struct MenuBarView: View {
                 .font(.headline)
                 .accessibilityElement(children: .combine)
             Spacer()
-            Button(action: openSettings) {
-                Image(systemName: "gearshape")
+            Text("\(viewModel.listeningCount) listening")
+                .font(.caption)
+                .monospacedDigit()
+                .foregroundColor(.secondary)
+            Button {
+                Task { await viewModel.refresh() }
+            } label: {
+                Image(systemName: "arrow.clockwise")
                     .frame(width: 24, height: 24)
                     .contentShape(Rectangle())
-                    .accessibilityLabel("Settings")
+                    .accessibilityLabel("Refresh")
             }
             .buttonStyle(.borderless)
-            .help("Settings")
+            .help("Refresh")
         }
+        .padding(.bottom, 16)
     }
 
     private var searchField: some View {
@@ -108,14 +114,6 @@ struct MenuBarView: View {
             }
         }
         .padding(.vertical, 8)
-    }
-
-    private func openSettings() {
-        NSApp.setActivationPolicy(.regular)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            NSApp.activate(ignoringOtherApps: true)
-            openWindow(id: SettingsView.windowID)
-        }
     }
 
     private var killDialogPresented: Binding<Bool> {
@@ -167,7 +165,7 @@ struct MenuBarView: View {
             case .invalidPID:
                 return "Invalid process ID (PID \(port.pid))."
             case .refusedToKillAppProcess:
-                return "Cannot kill Ports itself."
+                return "Cannot kill Gauge itself."
             case .killFailed:
                 return request.isForce
                     ? "Unable to \(action) \(port.processName) (PID \(port.pid))."

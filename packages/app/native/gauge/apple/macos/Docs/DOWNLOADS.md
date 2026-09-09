@@ -8,7 +8,7 @@
 
 ## About
 
-Gauge — RAM and storage usage at a glance from your menu bar.
+Gauge — RAM, storage, and local-port usage at a glance from your menu bar.
 
 ## Features
 
@@ -59,11 +59,22 @@ Gauge — RAM and storage usage at a glance from your menu bar.
 - Progress bar tinted by usage threshold
 - Shown only when swap is configured
 
+## Ports
+
+- Lists processes listening on local TCP ports and bound UDP sockets
+- Port, protocol, process name and PID per row
+- Search by port, process name, PID, command, path or directory
+- Right-click context menu: copy address / port / PID, kill or force kill
+- Kill sends SIGTERM; force kill sends SIGKILL (with confirmation dialog)
+- Runs `/usr/sbin/lsof` with explicit arguments — no shell involved
+- Separate Ports tab sharing the refresh interval configured in Settings
+
 ## Popover
 
-- Two views, switchable from the header chevron:
-  - Small view: compact percentage and used / total numbers (CPU with load average, RAM, storage, swap)
-  - Details view: full sections with progress bars
+- Two tabs, Monitor (default) and Ports:
+  - Monitor tab: compact percentage and used / total numbers (small view) with
+    full progress-bar sections (details view) switchable from the header
+  - Ports tab: searchable list of local listening ports with kill actions
 - Memory section (details) with active / wired / compressed and cached / inactive / free breakdowns
 - Storage section (details) with free / purgeable amounts
 - CPU section (details) with load average

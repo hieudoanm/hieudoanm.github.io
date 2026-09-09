@@ -1,6 +1,6 @@
 import Testing
 import Foundation
-@testable import PortsCore
+@testable import GaugeCore
 
 @Suite("NetworkEndpoint")
 struct NetworkEndpointTests {

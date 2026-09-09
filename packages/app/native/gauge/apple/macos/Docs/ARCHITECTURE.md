@@ -4,6 +4,7 @@
 
 - Monitor RAM and disk usage at a glance from the menu bar
 - Compact native macOS menu-bar utility with popover details
+- Separate Ports view for monitoring and managing local listening ports
 - Low resource footprint (~0% idle CPU, <50 MB memory)
 - No special permissions, local-first, no backend
 - Accurate, documented metrics
@@ -16,6 +17,7 @@
 | UI             | SwiftUI                        |
 | Memory API     | Mach VM (`host_statistics64`)  |
 | Disk API       | Foundation `URLResourceValue`  |
+| Port discovery | `lsof` via `Process`           |
 | Persistence    | Codable + JSON + FileManager   |
 | Build          | Swift Package Manager          |
 | Min macOS      | 13 Ventura                     |
@@ -27,6 +29,8 @@ Sources/
 ├── App/
 │   ├── GaugeApp.swift
 │   ├── GaugeViewModel.swift
+│   ├── PortsViewModel.swift
+│   ├── LaunchAtLogin.swift
 │   └── MenuBarIcon.swift
 ├── Core/
 │   ├── Models/
@@ -35,7 +39,15 @@ Sources/
 │   │   ├── SwapStats.swift
 │   │   ├── CPUStats.swift
 │   │   ├── SystemInfo.swift
-│   │   └── UsageThreshold.swift
+│   │   ├── UsageThreshold.swift
+│   │   ├── NetworkEndpoint.swift
+│   │   └── PortInfo.swift
+│   ├── Services/
+│   │   ├── PortDiscovering.swift
+│   │   ├── LsofPortDiscoveryService.swift
+│   │   ├── LsofParser.swift
+│   │   ├── ProcessTerminating.swift
+│   │   └── SignalProcessTerminator.swift
 │   ├── ByteFormatter.swift
 │   └── SettingsStore.swift
 ├── Services/
@@ -49,6 +61,9 @@ Sources/
     ├── MenuBarView.swift
     ├── SmallView.swift
     ├── DetailsView.swift
+    ├── PortsView.swift
+    ├── PortListView.swift
+    ├── PortRow.swift
     ├── ResourceMeter.swift
     ├── MemoryView.swift
     ├── DiskView.swift
@@ -70,21 +85,23 @@ Sources/
 │            Views                 │
 │  MenuBarView | SmallView         │
 │  DetailsView | ResourceMeter     │
-│  MemoryView | DiskView           │
-│  CPUView | SwapView              │
-│  SystemInfoView | SettingsView   │
+│  PortsView | PortListView        │
+│  PortRow | SettingsView          │
 ├──────────────────────────────────┤
-│          ViewModel               │
-│         GaugeViewModel           │
+│          ViewModels              │
+│  GaugeViewModel | PortsViewModel │
 ├──────────────────────────────────┤
 │           Services               │
 │  MemoryMonitor | DiskMonitor     │
 │  SwapMonitor | CPUMonitor        │
-│  SystemInfoMonitor               │
+│  SystemInfoMonitor |             │
+│  LsofPortDiscoveryService        │
 ├──────────────────────────────────┤
 │             Core                 │
 │  MemoryStats | DiskStats         │
 │  SwapStats | CPUStats            │
+│  PortInfo | NetworkEndpoint      │
+│  LsofParser | SignalTerminator   │
 │  SystemInfo | ByteFormatter      │
 │  Threshold | SettingsStore       │
 └──────────────────────────────────┘
@@ -175,11 +192,39 @@ total − available
         DiskStats
 ```
 
+### Ports
+
+**Definition:** processes listening on local TCP ports and bound UDP sockets.
+`LsofPortDiscoveryService` runs `/usr/sbin/lsof` with explicit arguments
+(`-nP -iTCP -sTCP:LISTEN` and `-nP -iUDP`) via `Process` — never through a
+shell. `LsofParser` defensively parses the tabular output into `PortInfo`
+values, skipping headers, malformed rows, and connected UDP sockets, and
+deduplicating per (pid, protocol, port, address).
+
+```text
+lsof -nP -iTCP -sTCP:LISTEN     lsof -nP -iUDP
+        ↓                             ↓
+        LsofParser → LsofParser
+                ↓
+            [PortInfo]
+                ↓
+          PortsViewModel
+                ↓
+             PortsView
+```
+
+Termination is sealed behind `ProcessTerminating`: `SignalProcessTerminator`
+sends SIGTERM for a graceful kill and SIGKILL for a force kill, always
+refusing to signal invalid PIDs or the app itself. Discovery and termination
+are protocol-based so unit tests can substitute mocks.
+
 ### Refresh
 
 A single coordinated 1-second timer drives all five monitors. When the popover is
 closed the menu-bar percentages still refresh in place (they are cheap
-host/FS reads); no independent per-metric timers exist.
+host/FS reads); no independent per-metric timers exist. The Ports view runs its
+own lightweight discovery loop on launch, honoring the same
+`SettingsStore.refreshInterval`.
 
 ## Formatting
 
@@ -203,7 +248,8 @@ Semantic system colors only — readable in Light and Dark Mode.
 ## State Management
 
 - `GaugeViewModel` — observable coordinator between Views and Services
-- `SettingsStore` — persists user preferences (refresh interval)
+- `PortsViewModel` — observable coordinator for port discovery and termination
+- `SettingsStore` — persists user preferences (refresh interval, shared by both view models)
 - Models are immutable value types with computed ratio/percentage
 
 ## Styling

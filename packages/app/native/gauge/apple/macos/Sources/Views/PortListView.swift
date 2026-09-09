@@ -1,4 +1,4 @@
-import PortsCore
+import GaugeCore
 import SwiftUI
 
 struct PortListView: View {

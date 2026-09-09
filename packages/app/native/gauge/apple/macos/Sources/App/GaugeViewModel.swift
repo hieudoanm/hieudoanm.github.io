@@ -17,10 +17,11 @@ final class GaugeViewModel: ObservableObject {
     private let cpuMonitor = CPUMonitor()
     private let systemMonitor = SystemInfoMonitor()
     private let pressureMonitor = MemoryPressureMonitor()
-    private let settingsStore = SettingsStore()
+    private let settingsStore: SettingsStore
     private var refreshTimer: Timer?
 
-    init() {
+    init(settingsStore: SettingsStore = SettingsStore()) {
+        self.settingsStore = settingsStore
         self.refreshInterval = settingsStore.refreshInterval
         self.menuBarDisplay = settingsStore.menuBarDisplay
         refresh()

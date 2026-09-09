@@ -1,6 +1,6 @@
 import Darwin
 import Testing
-@testable import PortsCore
+@testable import GaugeCore
 
 @Suite("SignalProcessTerminator")
 struct SignalProcessTerminatorTests {
