@@ -44,7 +44,6 @@ import {
   PiPresentation,
   PiProhibit,
   PiReceipt,
-  PiShieldCheck,
   PiShoppingBag,
   PiShoppingCart,
   PiSoccerBall,
@@ -119,7 +118,6 @@ export const ICON_MAP: Record<string, IconType> = {
   PiMemory,
   PiCalendarBlank,
   PiShoppingBag,
-  PiShieldCheck,
   PiSparkle,
   PiReceipt,
 };

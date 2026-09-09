@@ -10,6 +10,9 @@
 - [x] Popup with "Block distracting sites" toggle (default on, `storage.sync`)
 - [x] Offline focus wall on `BLOCKED_DOMAINS` in `src/lib/block.ts` with
       better sites + suggestion wheel
+- [x] Popup with "Block ads" toggle (default on, `storage.sync`)
+- [x] Ad DOM hiding via `MutationObserver` + network blocking (`webRequest`
+      on MV2, static DNR `rules.json` on MV3) in `src/lib/ads.ts`
 - [x] Popup with "Capture view" / "Capture full page" actions
 - [x] `CAPTURE_VIEW` / `CAPTURE_FULLPAGE` message dispatch in background
 - [x] `SNAP_GET_LAYOUT` content metrics (scrollY, innerHeight, document size)

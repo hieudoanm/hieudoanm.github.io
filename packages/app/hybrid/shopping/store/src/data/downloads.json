@@ -2200,42 +2200,6 @@
     "label": "Extensions (Browser)",
     "items": [
       {
-        "label": "Ads Blocker",
-        "primaryCategory": "Utilities",
-        "secondaryCategory": "Privacy",
-        "icon": "PiShieldCheck",
-        "href": "https://hieudoanm.github.io/free/ads-blocker",
-        "version": "latest",
-        "lastUpdated": "2026-09-06",
-        "fileSize": "",
-        "actions": [
-          {
-            "label": "v2.crx",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-ads-blocker-latest/ads-blocker-v2.crx"
-          },
-          {
-            "label": "v2.xpi",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-ads-blocker-latest/ads-blocker-v2.xpi"
-          },
-          {
-            "label": "v2.zip",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-ads-blocker-latest/ads-blocker-v2.zip"
-          },
-          {
-            "label": "v3.crx",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-ads-blocker-latest/ads-blocker-v3.crx"
-          },
-          {
-            "label": "v3.xpi",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-ads-blocker-latest/ads-blocker-v3.xpi"
-          },
-          {
-            "label": "v3.zip",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-ads-blocker-latest/ads-blocker-v3.zip"
-          }
-        ]
-      },
-      {
         "label": "ChessX",
         "primaryCategory": "Games",
         "secondaryCategory": "Board Games",

@@ -11,10 +11,12 @@
 │   │   ├── v2/
 │   │   │   └── [manifest.json](./public/manifest/v2/manifest.json)
 │   │   └── v3/
-│   │       └── [manifest.json](./public/manifest/v3/manifest.json)
+│   │       ├── [manifest.json](./public/manifest/v3/manifest.json)
+│   │       └── [rules.json](./public/manifest/v3/rules.json)
 │   └── [popup.html](./public/popup.html)
 ├── src/
 │   ├── lib/
+│   │   ├── [ads.ts](./src/lib/ads.ts)
 │   │   ├── [block.ts](./src/lib/block.ts)
 │   │   ├── [newtab.ts](./src/lib/newtab.ts)
 │   │   └── [stitch.ts](./src/lib/stitch.ts)
@@ -32,4 +34,4 @@
 └── [webpack.config.ts](./webpack.config.ts)
 ```
 
-7 directories, 22 files
+7 directories, 24 files

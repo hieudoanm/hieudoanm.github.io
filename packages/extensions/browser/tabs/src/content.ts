@@ -1,3 +1,4 @@
+import { maybeRunAdsBlocker } from './lib/ads';
 import { maybeRenderBlockWall } from './lib/block';
 
 interface LayoutInfo {
@@ -11,6 +12,7 @@ const SNAP_PREFIX = 'SNAP_';
 const SCROLL_SETTLE_MS = 120;
 
 maybeRenderBlockWall();
+maybeRunAdsBlocker();
 
 function getLayout(): LayoutInfo {
   return {

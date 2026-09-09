@@ -29,6 +29,12 @@ Reference docs live in `docs/`:
   page with the offline focus wall built from `BETTER_SITES` and `SUGGESTIONS`;
   the `blockDistractingSites` toggle (default on, `storage.sync`) gates it and
   is the only config the wall reads
+- Ad blocking lives in `src/lib/ads.ts`: `AD_SELECTORS` hides ad banners via an
+  idempotent `MutationObserver`, `AD_NETWORK_DOMAINS` feeds the network blocker;
+  the `blockAds` toggle (default on, `storage.sync`) gates it, with MV2 network
+  blocking in `background.ts` via `webRequest` and MV3 via the static DNR
+  ruleset `ruleset_block` in `public/manifest/v3/rules.json` — keep the two
+  domain lists in sync
 - Keep `BETTER_SITES` (jump shortcuts) and `SUGGESTIONS` (spin-wheel ideas)
   family-friendly and dependency-free; they render without any network call
 - The block wall and the capture content script coexist in `content.ts`: the
@@ -52,5 +58,6 @@ Reference docs live in `docs/`:
 - Errors are prefixed `Snapshot:` so they read consistently in the popup
   status line; never dump raw data URLs to logs
 - Cross-browser: Chromium (MV3) + Firefox (MV2)
-- Everything runs fully offline: redirect target, block wall, and capture
-  all work with no network calls and no data leaving the page or device
+- Everything runs fully offline: redirect target, block wall, ad blocking,
+  and capture all work with no network calls and no data leaving the page or
+  device

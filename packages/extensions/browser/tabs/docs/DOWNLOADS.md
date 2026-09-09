@@ -1,6 +1,6 @@
 # Tabs
 
-> Redirect every new tab to your home page, block distracting sites, and capture the current view or the full page — in one extension.
+> Redirect every new tab to your home page, block distracting sites and ads, and capture the current view or the full page — in one extension.
 
 ![Chromium](https://img.shields.io/badge/Chromium-Chrome%2FEdge%2FBrave%2FOpera%2FVivaldi%2FArc-blue)
 ![Firefox](https://img.shields.io/badge/Firefox-MV2-lightblue)
@@ -74,12 +74,15 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-Tabs combines three tab essentials in one toolbar button. **New Tab** redirects
+Tabs combines four tab essentials in one toolbar button. **New Tab** redirects
 every fresh tab to the hieudoanm home page (**New Tab** section of the popup:
 a toggle to turn it off, default on). **Block** stops on an offline focus wall
 when you visit a distracting site (Facebook, X, Instagram, Reddit, TikTok,
 Netflix, Twitch, Discord, and more) — with better sites to jump to and a
-suggestion wheel, toggleable from the popup. **Snapshot** turns the same icon
+suggestion wheel, toggleable from the popup. **Block Ads** hides ad banners on
+the page and cancels advertising and tracking requests at the network level
+(DoubleClick, Google Analytics, AppNexus, Outbrain, Taboola, and friends),
+toggleable from the popup. **Snapshot** turns the same icon
 into a camera — **Capture view** screenshots what's on screen, **Capture full
 page** stitches the entire scrollable page from chunks on an
 `OffscreenCanvas`, so even very tall articles capture cleanly across screen
@@ -101,6 +104,14 @@ sizes. Fully offline, no data leaves your machine.
 - Better sites to jump to + a suggestion wheel, all dependency-free
 - Enable/disable from the popup (`blockDistractingSites`, stored in
   `storage.sync`); nothing about your browsing leaves the page
+
+### 🛡️ Block ads & trackers
+
+- Ad banners are hidden on the page via a `MutationObserver`
+- Advertising and tracking requests are cancelled at the network level
+  (`webRequest` on MV2, `declarativeNetRequest` `rules.json` on MV3)
+- Enable/disable from the popup (`blockAds`, stored in `storage.sync`); fully
+  offline, no rules are ever fetched
 
 ### 📸 Capture view
 
@@ -132,6 +143,8 @@ sizes. Fully offline, no data leaves your machine.
 - Open a new tab — it lands on your home page (toggle it off in the popup if
   you prefer the browser default).
 - Visit a distracting site — the focus wall appears (toggleable from the popup).
+- Open a news or video site — ads and tracking requests stop (toggleable from
+  the popup).
 - Open any page and click the icon.
 - Choose **Capture view** or **Capture full page** — the image downloads.
 - Try it on a long article to see the full-page stitch in action.

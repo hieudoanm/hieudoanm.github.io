@@ -2,9 +2,9 @@
 
 Thanks for contributing to **Tabs**, a cross-browser extension that redirects
 every new tab to the hieudoanm home page, blocks distracting sites with an
-offline focus wall, and captures the visible viewport or the full page of any
-tab as an image, on Chromium and Gecko browsers via both Manifest V2 and
-Manifest V3 builds.
+offline focus wall, hides ads and tracking requests, and captures the visible
+viewport or the full page of any tab as an image, on Chromium and Gecko
+browsers via both Manifest V2 and Manifest V3 builds.
 
 ## Getting Started
 
@@ -85,16 +85,21 @@ every change.
 4. The block wall lives in `src/lib/block.ts` and only fires on
    `BLOCKED_DOMAINS`; the `blockDistractingSites` toggle (default on,
    `storage.sync`) gates it, and non-blocked pages must never see the wall.
-5. Content scripts must be idempotent — running twice must not stack
+5. Ad blocking lives in `src/lib/ads.ts` — `AD_SELECTORS` (DOM hiding via
+   `MutationObserver`) and `AD_NETWORK_DOMAINS` (network blocking) must stay in
+   sync with the static MV3 DNR ruleset in `public/manifest/v3/rules.json`; the
+   `blockAds` toggle (default on, `storage.sync`) gates both layers.
+6. Content scripts must be idempotent — running twice must not stack
    listeners; guards belong where listeners are bound.
-6. Protect the user — capture chunks must never scroll the page to a position
+7. Protect the user — capture chunks must never scroll the page to a position
    it can't restore, and scroll position should be near-fully restored after a
    full-page capture.
-7. Use `document_start` for the content script so layout metrics are ready the
+8. Use `document_start` for the content script so layout metrics are ready the
    moment the user asks to capture.
-8. The new-tab redirect target is the single constant `TARGET_URL` in
+9. The new-tab redirect target is the single constant `TARGET_URL` in
    `src/lib/newtab.ts` — the only place to change the landing URL.
-9. Prefix debug logs with `[Tabs]` and keep them minimal.
+10. Prefix debug logs with `[Tabs]` and keep them minimal, and prefix errors
+    with `Block:` / `BlockAds:` / `Snapshot:` consistently.
 
 ## Testing Conventions
 
@@ -108,8 +113,10 @@ quality gates are:
 
 - Open a new tab → it redirects to `TARGET_URL`; toggle off in the popup →
   default new-tab page loads
-  - Visit a `BLOCKED_DOMAINS` site → the focus wall appears; toggle off in the
-    popup → the site loads normally
+- Visit a `BLOCKED_DOMAINS` site → the focus wall appears; toggle off in the
+  popup → the site loads normally
+  - Open a page with ads → ad banners hidden and ad/tracking requests
+    cancelled; toggle "Block ads" off in the popup → they return
   - Capture view → a PNG of the visible viewport downloads
   - Capture full page on a tall page (e.g. a long article) → one complete
     image, no seams or aspect-ratio distortion

@@ -35,17 +35,16 @@
 
 ---
 
-### Browser Extensions (7)
+### Browser Extensions (6)
 
-| No  | Platform | Category  | Name        | Free                     | Releases                         |
-| --- | -------- | --------- | ----------- | ------------------------ | -------------------------------- |
-| 3   | Browser  | Extension | Ads Blocker | [Free][free-ads-blocker] | [Releases][releases-ads-blocker] |
-| 4   | Browser  | Extension | ChessX      | [Free][free-chessx]      | [Releases][releases-chessx]      |
-| 5   | Browser  | Extension | ClaudeX     | [Free][free-claudex]     | [Releases][releases-claudex]     |
-| 6   | Browser  | Extension | GitHubX     | [Free][free-githubx]     | [Releases][releases-githubx]     |
-| 7   | Browser  | Extension | InstaX      | [Free][free-instax]      | [Releases][releases-instax]      |
-| 8   | Browser  | Extension | ShopifyX    | [Free][free-shopifyx]    | [Releases][releases-shopifyx]    |
-| 9   | Browser  | Extension | Tabs        | [Free][free-tabs]        | [Releases][releases-tabs]        |
+| No  | Platform | Category  | Name     | Free                  | Releases                      |
+| --- | -------- | --------- | -------- | --------------------- | ----------------------------- |
+| 3   | Browser  | Extension | ChessX   | [Free][free-chessx]   | [Releases][releases-chessx]   |
+| 4   | Browser  | Extension | ClaudeX  | [Free][free-claudex]  | [Releases][releases-claudex]  |
+| 5   | Browser  | Extension | GitHubX  | [Free][free-githubx]  | [Releases][releases-githubx]  |
+| 6   | Browser  | Extension | InstaX   | [Free][free-instax]   | [Releases][releases-instax]   |
+| 7   | Browser  | Extension | ShopifyX | [Free][free-shopifyx] | [Releases][releases-shopifyx] |
+| 8   | Browser  | Extension | Tabs     | [Free][free-tabs]     | [Releases][releases-tabs]     |
 
 ---
 
@@ -214,7 +213,6 @@
 <!-- Free -->
 
 [free-block]: https://hieudoanm.github.io/free/block/
-[free-ads-blocker]: https://hieudoanm.github.io/free/ads-blocker/
 [free-chessx]: https://hieudoanm.github.io/free/chessx/
 [free-claudex]: https://hieudoanm.github.io/free/claudex/
 [free-githubx]: https://hieudoanm.github.io/free/githubx/
@@ -337,7 +335,6 @@
 [releases-backbone]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-backbone-latest
 [releases-kevin]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-kevin-latest
 [releases-landify]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-landify-latest
-[releases-ads-blocker]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/extensions-browser-ads-blocker-latest
 [releases-chessx]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/extensions-browser-chessx-latest
 [releases-claudex]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/extensions-browser-claudex-latest
 [releases-githubx]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/extensions-browser-githubx-latest

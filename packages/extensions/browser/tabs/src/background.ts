@@ -1,3 +1,4 @@
+import { AD_NETWORK_DOMAINS, ADS_KEY } from './lib/ads';
 import { registerNewTabRedirect } from './lib/newtab';
 import { stitchChunks, type SnapshotChunk } from './lib/stitch';
 
@@ -15,6 +16,38 @@ interface LayoutInfo {
 
 const SNAP = 'SNAP_';
 const SETTLE_EXTRA_MS = 80;
+const ADS_RULESET_ID = 'ruleset_block';
+
+let adsBlockEnabled = true;
+
+void chrome.storage.sync.get(ADS_KEY, (result) => {
+  adsBlockEnabled = result[ADS_KEY] !== false;
+  applyNetworkBlockState();
+});
+
+chrome.storage.onChanged.addListener((changes, area) => {
+  if (area === 'sync' && ADS_KEY in changes) {
+    adsBlockEnabled = changes[ADS_KEY]?.newValue !== false;
+    applyNetworkBlockState();
+  }
+});
+
+function applyNetworkBlockState(): void {
+  if (typeof chrome.declarativeNetRequest !== 'undefined') {
+    void chrome.declarativeNetRequest.updateEnabledRulesets({
+      enableRulesetIds: adsBlockEnabled ? [ADS_RULESET_ID] : [],
+      disableRulesetIds: adsBlockEnabled ? [] : [ADS_RULESET_ID],
+    });
+  }
+}
+
+if (typeof chrome.webRequest !== 'undefined') {
+  chrome.webRequest.onBeforeRequest.addListener(
+    () => (adsBlockEnabled ? { cancel: true } : {}),
+    { urls: AD_NETWORK_DOMAINS },
+    ['blocking']
+  );
+}
 
 registerNewTabRedirect();
 

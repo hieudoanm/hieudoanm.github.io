@@ -72,6 +72,7 @@ export default [
             globOptions: { ignore: ['**/manifest/**'] },
           },
           { from: 'public/manifest/v3/manifest.json', to: 'manifest.json' },
+          { from: 'public/manifest/v3/rules.json', to: 'rules.json' },
           { from: 'public/icons', to: 'icons' },
         ],
       }),

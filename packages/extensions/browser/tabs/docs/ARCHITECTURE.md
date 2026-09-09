@@ -7,6 +7,7 @@
 - Ship both **Manifest V2** and **Manifest V3** builds from a single source
 - Redirect every new tab to the hieudoanm home page (`https://hieudoanm.github.io/app/`)
 - Block distracting sites with an offline "focus wall" fallback
+- Block ads and tracking requests fully offline
 - Capture the visible viewport or the full page of any tab as an image
 - Support both automatic download and copy-to-clipboard
 - Stitch tall pages cross-device correctly via `OffscreenCanvas` chunking
@@ -30,10 +31,11 @@
 
 ```txt
 src/
-├── background.ts   # New-tab redirect + capture orchestration
-├── content.ts      # Page layout reader + block wall trigger
+├── background.ts   # New-tab redirect + capture orchestration + network ad blocking
+├── content.ts      # Page layout reader + block wall + ad-hiding triggers
 ├── popup.ts        # Action popup UI (capture buttons + redirect/block toggles)
 └── lib/
+    ├── ads.ts      # Ad selectors + network domains + offline ad-hiding
     ├── block.ts    # Distracting-site block wall (+ better sites + suggestion wheel)
     ├── newtab.ts   # New-tab/home URL interception + redirect
     └── stitch.ts   # OffscreenCanvas chunk stitching
@@ -42,9 +44,10 @@ public/
 ├── popup.html          # Popup markup
 └── manifest/
     ├── v2/
-    │   └── manifest.json   # MV2 manifest (browser_action, <all_urls>)
+    │   └── manifest.json   # MV2 manifest (browser_action, <all_urls>, webRequest)
     └── v3/
-        └── manifest.json   # MV3 manifest (action, host_permissions <all_urls>)
+        ├── manifest.json   # MV3 manifest (action, host_permissions <all_urls>, DNR)
+        └── rules.json      # MV3 static declarativeNetRequest ads rules
 docs/               # Architecture, roadmap, contributing, packaging, downloads
 ```
 
@@ -90,12 +93,18 @@ directory.
 │  - Requests page layout via SNAP_GET_LAYOUT               │
 │  - Scales chunks + stitches via OffscreenCanvas (stitch)   │
 │  - Downloads (downloads.download) or clipboard.write       │
+│  - Cancels ad/tracking requests (MV2 webRequest, MV3 DNR)   │
 ├────────────────────────────────────────────────────────────┤
 │  Content (src/content.ts)                                  │  Runs <all_urls>
 │  - Answers SNAP_GET_LAYOUT / SNAP_SCROLL_TO                │  document_start
 │  - Reports scrollY, innerHeight, document size             │
 │  - Scrolls the page for full-page stitching                │
 │  - Triggers the block wall via maybeRenderBlockWall()      │
+│  - Triggers ad hiding via maybeRunAdsBlocker()             │
+├────────────────────────────────────────────────────────────┤
+│  lib/ads (src/lib/ads.ts)                                  │  Shared helper
+│  - AD_SELECTORS (DOM hiding) + AD_NETWORK_DOMAINS          │
+│  - MutationObserver-based ad hiding, offline               │
 ├────────────────────────────────────────────────────────────┤
 │  lib/block (src/lib/block.ts)                              │  Shared helper
 │  - BLOCKED_DOMAINS + BETTER_SITES + SUGGESTIONS            │
@@ -113,13 +122,14 @@ directory.
 
 ## Manifest Versions
 
-| Concern        | Manifest V2                                 | Manifest V3                                 |
-| -------------- | ------------------------------------------- | ------------------------------------------- |
-| Permissions    | `activeTab`, `tabs`, `downloads`, `storage` | `activeTab`, `tabs`, `downloads`, `storage` |
-| Host access    | content_scripts `matches` `<all_urls>`      | `host_permissions` `<all_urls>`             |
-| User interface | `browser_action` + `popup.html`             | `action` + `popup.html`                     |
-| Content script | `content.js`, `run_at: document_start`      | `content.js`, `run_at: document_start`      |
-| Background     | `background.scripts` + `persistent: false`  | `background.service_worker`                 |
+| Concern        | Manifest V2                                                                     | Manifest V3                                                                                           |
+| -------------- | ------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| Permissions    | `activeTab`, `tabs`, `downloads`, `storage`, `webRequest`, `webRequestBlocking` | `activeTab`, `tabs`, `downloads`, `storage`, `declarativeNetRequest`, `declarativeNetRequestFeedback` |
+| Host access    | content_scripts `matches` `<all_urls>`                                          | `host_permissions` `<all_urls>`                                                                       |
+| User interface | `browser_action` + `popup.html`                                                 | `action` + `popup.html`                                                                               |
+| Content script | `content.js`, `run_at: document_start`                                          | `content.js`, `run_at: document_start`                                                                |
+| Background     | `background.scripts` + `persistent: false`                                      | `background.service_worker`                                                                           |
+| Network ads    | `webRequest` + `webRequestBlocking` listener                                    | static DNR ruleset `rules.json`                                                                       |
 
 ## New-Tab Redirect Strategy
 
@@ -144,6 +154,23 @@ directory.
   (spin-wheel ideas) render fully offline, no network calls; nothing about the
   user's browsing ever leaves the page.
 
+## Ad-Blocking Strategy
+
+- **DOM hiding** — `AD_SELECTORS` in `src/lib/ads.ts` matches common ad
+  containers; `maybeRunAdsBlocker()` in `content.ts` hides them
+  (`display: none !important`) with an idempotent `MutationObserver` so
+  dynamically injected ads get caught too.
+- **Network blocking** — `AD_NETWORK_DOMAINS` (DoubleClick, Google Analytics,
+  Google Syndication, AppNexus, Outbrain, Taboola) is enforced two ways: MV2
+  cancels requests with a blocking `webRequest` listener in `background.ts`;
+  MV3 ships the static DNR ruleset `ruleset_block` from
+  `public/manifest/v3/rules.json`.
+- **Toggle** — the popup checkbox `blockAds` lives in `storage.sync` (default
+  on). The content script re-checks it on every load; the background flips the
+  MV3 static ruleset on/off via `updateEnabledRulesets` and gates the MV2
+  `webRequest` listener, so both DOM hiding and network blocking respect it.
+- **Offline** — no rules are fetched, no telemetry, no network round-trips.
+
 ## Capture Strategy
 
 - **View capture** — background captures `chrome.tabs.captureVisibleTab`
@@ -162,8 +189,8 @@ directory.
 ## State Management
 
 - **Minimal** — per-invocation capture state lives in the message flow; the
-  `redirectNewTabs` and `blockDistractingSites` preferences are the only
-  persisted values in `storage.sync`.
+  `redirectNewTabs`, `blockDistractingSites`, and `blockAds` preferences are
+  the only persisted values in `storage.sync`.
 
 ## Performance
 

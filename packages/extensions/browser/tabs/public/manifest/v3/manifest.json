@@ -1,7 +1,7 @@
 {
   "name": "Tabs",
   "version": "0.0.1",
-  "description": "Redirect new tabs to the hieudoanm home page, capture the current view or the full scrolling page, and block distracting sites.",
+  "description": "Redirect new tabs to the hieudoanm home page, capture the current view or the full scrolling page, and block distracting sites and ads.",
   "author": "Hieu Doan",
   "icons": {
     "16": "icons/16x16.png",
@@ -19,11 +19,22 @@
     "activeTab",
     "tabs",
     "downloads",
-    "storage"
+    "storage",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback"
   ],
   "host_permissions": [
     "<all_urls>"
   ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_block",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
   "background": {
     "service_worker": "background.js",
     "scripts": [

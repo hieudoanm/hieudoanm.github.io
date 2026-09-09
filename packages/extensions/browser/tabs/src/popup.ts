@@ -23,6 +23,7 @@ const newTabRedirect = document.getElementById(
 const blockDistractingSites = document.getElementById(
   'blockDistractingSites'
 ) as HTMLInputElement;
+const blockAds = document.getElementById('blockAds') as HTMLInputElement;
 
 let lastDataUrl: string | null = null;
 let lastFilename: string | null = null;
@@ -61,6 +62,19 @@ chrome.storage.sync.get('blockDistractingSites', (result) => {
 blockDistractingSites?.addEventListener('change', () => {
   chrome.storage.sync.set({
     blockDistractingSites: blockDistractingSites.checked,
+  });
+});
+
+chrome.storage.sync.get('blockAds', (result) => {
+  if (chrome.runtime.lastError) return;
+  if (blockAds) {
+    blockAds.checked = result.blockAds !== false;
+  }
+});
+
+blockAds?.addEventListener('change', () => {
+  chrome.storage.sync.set({
+    blockAds: blockAds.checked,
   });
 });
 

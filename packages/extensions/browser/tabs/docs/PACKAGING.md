@@ -41,9 +41,9 @@ App: `tabs`, version 0.0.1. Manifest IDs:
       "no data collected" in the privacy tab
 - [ ] Icons at 16/48/128 + a 440x280 promotional tile uploaded
 - [ ] `<all_urls>` `host_permissions` justified — new-tab redirect,
-      blocking distracting sites, and screenshots of any tab are the core
-      features; `activeTab`/`tabs`/`downloads`/`storage` documented in the
-      permission rationale
+      blocking distracting sites and ads, and screenshots of any tab are the
+      core features; `activeTab`/`tabs`/`downloads`/`storage`/`webRequest`/
+      `declarativeNetRequest` documented in the permission rationale
 
 ## Edge Add-ons
 
@@ -61,8 +61,9 @@ App: `tabs`, version 0.0.1. Manifest IDs:
 - [ ] Source code linked to the open-source license (GPL-3.0)
 - [ ] Answer review questions: no remote code, no data collection, permissions
       justified for new-tab redirect (tabs read), block wall (content script
-      read on `<all_urls>`), and screenshot capture (tabs read + downloads
-      write)
+      read on `<all_urls>`), ad blocking (webRequest/DNR for network blocking +
+      content script for DOM hiding), and screenshot capture (tabs read +
+      downloads write)
 
 ## Release Automation
 

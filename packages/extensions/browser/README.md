@@ -14,17 +14,15 @@
 
 ## Extensions
 
-| No  | Group                              | Extension                        |
-| --- | ---------------------------------- | -------------------------------- |
-| 1   | Block                              | [block/ads-browser][ads-browser] |
-| 2   | [Chess](https://chess.com)         | [chessx][chessx]                 |
-| 3   | [Claude](https://claude.ai)        | [claudex][claudex]               |
-| 4   | [GitHub](https://github.com)       | [githubx][githubx]               |
-| 5   | [Instagram](https://instagram.com) | [instagramx][instax]             |
-| 6   | [Shopify](https://shopify.com)     | [shopifyx][shopifyx]             |
-| 7   | Tabs                               | [tabs][tabs]                     |
+| No  | Group                              | Extension            |
+| --- | ---------------------------------- | -------------------- |
+| 1   | [Chess](https://chess.com)         | [chessx][chessx]     |
+| 2   | [Claude](https://claude.ai)        | [claudex][claudex]   |
+| 3   | [GitHub](https://github.com)       | [githubx][githubx]   |
+| 4   | [Instagram](https://instagram.com) | [instagramx][instax] |
+| 5   | [Shopify](https://shopify.com)     | [shopifyx][shopifyx] |
+| 6   | Tabs                               | [tabs][tabs]         |
 
-[ads-browser]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/ads-blocker
 [chessx]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/chessx
 [claudex]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/claudex
 [githubx]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/githubx
