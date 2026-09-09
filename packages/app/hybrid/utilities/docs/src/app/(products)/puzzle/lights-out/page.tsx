@@ -5,7 +5,7 @@ import { LightsOut } from '@hieudoanm.github.io/components/routes/apps/puzzle/Li
 
 const GamesPuzzleLightsOut = () => {
   const router = useRouter();
-  return <LightsOut onClose={() => router.push('/apps/puzzle')} />;
+  return <LightsOut onClose={() => router.push('/puzzle')} />;
 };
 
 export default GamesPuzzleLightsOut;

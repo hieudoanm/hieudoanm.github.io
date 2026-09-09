@@ -5,7 +5,7 @@ import { Towers } from '@hieudoanm.github.io/components/routes/apps/puzzle/Tower
 
 const GamesPuzzleTowers = () => {
   const router = useRouter();
-  return <Towers onClose={() => router.push('/apps/puzzle')} />;
+  return <Towers onClose={() => router.push('/puzzle')} />;
 };
 
 export default GamesPuzzleTowers;

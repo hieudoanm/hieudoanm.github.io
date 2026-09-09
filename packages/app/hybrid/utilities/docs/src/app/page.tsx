@@ -1,8 +1,12 @@
 'use client';
 
-import { Start } from '@hieudoanm.github.io/components/routes/start';
-import { type NextPage } from 'next';
+import { AppsStoreTemplate } from '@hieudoanm.github.io/components/templates/app/AppsStoreTemplate';
+import { getHomeSections } from '@hieudoanm.github.io/components/routes/apps/data/apps';
 
-const StartPage: NextPage = () => <Start />;
+const sections = getHomeSections();
+
+const StartPage = () => (
+  <AppsStoreTemplate title="Start Page" sections={sections} />
+);
 
 export default StartPage;

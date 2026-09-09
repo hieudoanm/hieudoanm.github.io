@@ -11,23 +11,28 @@ const COLUMNS = [
   'description',
   'icon',
   'toolId',
+  'href',
+  'badge',
 ] as const;
 
 type Column = (typeof COLUMNS)[number];
 
 type CsvRow = Record<Column, string>;
 
-type AppItem = {
+type Item = {
   label: string;
   description: string;
   icon: string;
-  toolId: string;
+  badge?: string;
+  sectionId?: string;
+  toolId?: string;
+  href?: string;
 };
 
-type AppSection = {
-  id: string;
+type Section = {
+  id?: string;
   label: string;
-  items: AppItem[];
+  items: Item[];
 };
 
 const parseCsvRows = (csv: string): string[][] => {
@@ -81,26 +86,30 @@ const readCsvRows = (): CsvRow[] => {
     });
 };
 
-const toJson = (rows: CsvRow[]): AppSection[] => {
-  const sections: AppSection[] = [];
+const toItem = (row: CsvRow): Item => {
+  const item: Item = {
+    label: row.label,
+    description: row.description,
+    icon: row.icon,
+  };
+  if (row.badge) item.badge = row.badge;
+  if (row.sectionId) item.sectionId = row.sectionId;
+  if (row.toolId) item.toolId = row.toolId;
+  if (row.href) item.href = row.href;
+  return item;
+};
+
+const toJson = (rows: CsvRow[]): Section[] => {
+  const sections: Section[] = [];
   for (const row of rows) {
-    if (row.label === '' || row.toolId === '') continue;
-    const section = sections.find((entry) => entry.label === row.section);
-    const item: AppItem = {
-      label: row.label,
-      description: row.description,
-      icon: row.icon,
-      toolId: row.toolId,
-    };
-    if (section) {
-      section.items.push(item);
-    } else {
-      sections.push({
-        id: row.sectionId,
-        label: row.section,
-        items: [item],
-      });
+    if (row.label === '' || (row.toolId === '' && row.href === '')) continue;
+    let section = sections.find((entry) => entry.label === row.section);
+    if (!section) {
+      section = { label: row.section, items: [] };
+      if (row.sectionId) section.id = row.sectionId;
+      sections.push(section);
     }
+    section.items.push(toItem(row));
   }
   return sections;
 };

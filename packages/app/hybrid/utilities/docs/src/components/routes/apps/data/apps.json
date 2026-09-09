@@ -1,344 +1,781 @@
 [
   {
-    "id": "bored",
+    "label": "Agents",
+    "items": [
+      {
+        "label": "Claude",
+        "description": "Anthropic",
+        "icon": "PiStarFour",
+        "badge": "Chat",
+        "href": "https://claude.ai/"
+      },
+      {
+        "label": "ChatGPT",
+        "description": "OpenAI",
+        "icon": "PiStarFour",
+        "badge": "Chat",
+        "href": "https://chatgpt.com"
+      },
+      {
+        "label": "Qwen",
+        "description": "Alibaba Cloud",
+        "icon": "PiStarFour",
+        "badge": "Chat",
+        "href": "https://qwen.ai"
+      },
+      {
+        "label": "Kimi",
+        "description": "Moonshot AI",
+        "icon": "PiMoon",
+        "badge": "Chat",
+        "href": "https://kimi.moonshot.cn"
+      },
+      {
+        "label": "Perplexity",
+        "description": "AI Search",
+        "icon": "PiMagnifyingGlass",
+        "badge": "Research",
+        "href": "https://www.perplexity.ai"
+      },
+      {
+        "label": "Gemini",
+        "description": "Google",
+        "icon": "PiSparkle",
+        "href": "https://gemini.google.com/app"
+      },
+      {
+        "label": "Grok",
+        "description": "xAI",
+        "icon": "PiLightning",
+        "href": "https://grok.com"
+      },
+      {
+        "label": "Copilot",
+        "description": "Microsoft",
+        "icon": "PiWindowsLogo",
+        "href": "https://copilot.microsoft.com"
+      },
+      {
+        "label": "DeepSeek",
+        "description": "DeepSeek",
+        "icon": "PiDrop",
+        "href": "https://chat.deepseek.com"
+      },
+      {
+        "label": "Mistral",
+        "description": "Mistral AI",
+        "icon": "PiWind",
+        "href": "https://chat.mistral.ai"
+      },
+      {
+        "label": "Meta AI",
+        "description": "Meta",
+        "icon": "PiInfinity",
+        "href": "https://www.meta.ai"
+      },
+      {
+        "label": "HuggingChat",
+        "description": "HuggingFace",
+        "icon": "PiSmiley",
+        "href": "https://huggingface.co/chat"
+      },
+      {
+        "label": "Poe",
+        "description": "Quora",
+        "icon": "PiChatCircle",
+        "href": "https://poe.com"
+      },
+      {
+        "label": "Cohere",
+        "description": "Cohere",
+        "icon": "PiWaveform",
+        "href": "https://coral.cohere.com"
+      }
+    ]
+  },
+  {
+    "label": "Code",
+    "items": [
+      {
+        "label": "GitHub",
+        "description": "Git",
+        "icon": "PiGithubLogo",
+        "href": "https://github.com"
+      },
+      {
+        "label": "Renovate",
+        "description": "Code",
+        "icon": "PiRobot",
+        "href": "https://developer.mend.io"
+      },
+      {
+        "label": "Vercel",
+        "description": "Deployment",
+        "icon": "PiGlobe",
+        "href": "https://vercel.com"
+      },
+      {
+        "label": "Supabase",
+        "description": "Database",
+        "icon": "PiDatabase",
+        "href": "https://supabase.com"
+      }
+    ]
+  },
+  {
+    "label": "Google Workspace",
+    "items": [
+      {
+        "label": "Calendar",
+        "description": "Calendar",
+        "icon": "PiCalendar",
+        "href": "https://calendar.google.com"
+      },
+      {
+        "label": "Docs",
+        "description": "Word",
+        "icon": "PiNotePencil",
+        "href": "https://docs.google.com"
+      },
+      {
+        "label": "Drive",
+        "description": "OneDrive",
+        "icon": "PiFolder",
+        "href": "https://drive.google.com"
+      },
+      {
+        "label": "Gmail",
+        "description": "Email",
+        "icon": "PiEnvelope",
+        "href": "https://gmail.com"
+      },
+      {
+        "label": "Maps",
+        "description": "Maps",
+        "icon": "PiMapPin",
+        "href": "https://maps.google.com"
+      },
+      {
+        "label": "Sheets",
+        "description": "Excel",
+        "icon": "PiChartBar",
+        "href": "https://sheets.google.com"
+      },
+      {
+        "label": "Slides",
+        "description": "PowerPoint",
+        "icon": "PiPlay",
+        "href": "https://slides.google.com"
+      },
+      {
+        "label": "Tasks",
+        "description": "ToDo",
+        "icon": "PiCheckCircle",
+        "href": "https://tasks.google.com"
+      }
+    ]
+  },
+  {
+    "label": "Microsoft Workspace",
+    "items": [
+      {
+        "label": "Outlook",
+        "description": "Gmail",
+        "icon": "PiEnvelopeSimple",
+        "href": "https://outlook.com"
+      },
+      {
+        "label": "Calendar",
+        "description": "Calendar",
+        "icon": "PiCalendar",
+        "href": "https://outlook.live.com/calendar"
+      },
+      {
+        "label": "OneDrive",
+        "description": "Drive",
+        "icon": "PiCloudArrowUp",
+        "href": "https://onedrive.live.com"
+      },
+      {
+        "label": "Word",
+        "description": "Docs",
+        "icon": "PiFileDoc",
+        "href": "https://www.microsoft365.com/launch/word"
+      },
+      {
+        "label": "Excel",
+        "description": "Sheets",
+        "icon": "PiChartBar",
+        "href": "https://www.microsoft365.com/launch/excel"
+      },
+      {
+        "label": "PowerPoint",
+        "description": "Slides",
+        "icon": "PiPresentationChart",
+        "href": "https://www.microsoft365.com/launch/powerpoint"
+      },
+      {
+        "label": "To Do",
+        "description": "Tasks",
+        "icon": "PiCheckCircle",
+        "href": "https://to-do.office.com/tasks/"
+      },
+      {
+        "label": "Teams",
+        "description": "Chat",
+        "icon": "PiUsersThree",
+        "href": "https://teams.microsoft.com"
+      },
+      {
+        "label": "OneNote",
+        "description": "Keep",
+        "icon": "PiNotebook",
+        "href": "https://www.onenote.com"
+      },
+      {
+        "label": "Microsoft 365",
+        "description": "Workspace",
+        "icon": "PiWindowsLogo",
+        "href": "https://www.microsoft365.com"
+      }
+    ]
+  },
+  {
+    "label": "Messaging",
+    "items": [
+      {
+        "label": "Discord",
+        "description": "Messaging",
+        "icon": "PiGameController",
+        "href": "https://discord.com"
+      },
+      {
+        "label": "Messenger",
+        "description": "Messaging",
+        "icon": "PiHeart",
+        "href": "https://www.messenger.com"
+      },
+      {
+        "label": "Slack",
+        "description": "Messaging",
+        "icon": "PiCodeSimple",
+        "href": "https://slack.com"
+      },
+      {
+        "label": "Telegram",
+        "description": "Messaging",
+        "icon": "PiAirplane",
+        "href": "https://web.telegram.org/"
+      }
+    ]
+  },
+  {
+    "label": "Music",
+    "items": [
+      {
+        "label": "Spotify",
+        "description": "Music",
+        "icon": "PiMusicNote",
+        "href": "https://open.spotify.com"
+      },
+      {
+        "label": "YouTube",
+        "description": "Videos",
+        "icon": "PiPlay",
+        "href": "https://youtube.com"
+      }
+    ]
+  },
+  {
+    "label": "Social",
+    "items": [
+      {
+        "label": "Facebook",
+        "description": "Social network",
+        "icon": "PiFacebookLogo",
+        "href": "https://facebook.com"
+      },
+      {
+        "label": "Instagram",
+        "description": "Photos",
+        "icon": "PiCamera",
+        "href": "https://instagram.com"
+      },
+      {
+        "label": "Reddit",
+        "description": "Social network",
+        "icon": "PiAlien",
+        "href": "https://reddit.com"
+      },
+      {
+        "label": "Threads",
+        "description": "Social network",
+        "icon": "PiThreadsLogo",
+        "href": "https://threads.net"
+      },
+      {
+        "label": "Tiktok",
+        "description": "Social network",
+        "icon": "PiMusicNote",
+        "href": "https://www.tiktok.com"
+      },
+      {
+        "label": "X",
+        "description": "Social network",
+        "icon": "PiTwitterLogo",
+        "href": "https://x.com"
+      }
+    ]
+  },
+  {
+    "label": "Work",
+    "items": [
+      {
+        "label": "LinkedIn",
+        "description": "Social network",
+        "icon": "PiBriefcase",
+        "href": "https://linkedin.com"
+      },
+      {
+        "label": "Hacker News",
+        "description": "News",
+        "icon": "PiNewspaper",
+        "href": "https://news.ycombinator.com"
+      },
+      {
+        "label": "Indie Hackers",
+        "description": "News",
+        "icon": "PiCodeSimple",
+        "href": "https://www.indiehackers.com"
+      },
+      {
+        "label": "Product Hunt",
+        "description": "News",
+        "icon": "PiPackage",
+        "href": "https://www.producthunt.com"
+      },
+      {
+        "label": "Y Combinator",
+        "description": "Startup",
+        "icon": "PiLightning",
+        "href": "https://www.ycombinator.com"
+      },
+      {
+        "label": "BetaList",
+        "description": "Launch",
+        "icon": "PiRocket",
+        "href": "https://betalist.com"
+      },
+      {
+        "label": "TechCrunch",
+        "description": "News",
+        "icon": "PiNewspaper",
+        "href": "https://techcrunch.com"
+      },
+      {
+        "label": "Starter Story",
+        "description": "Stories",
+        "icon": "PiBookOpen",
+        "href": "https://www.starterstory.com"
+      },
+      {
+        "label": "Failory",
+        "description": "Stories",
+        "icon": "PiTrendDown",
+        "href": "https://www.failory.com"
+      },
+      {
+        "label": "Wellfound",
+        "description": "Jobs",
+        "icon": "PiBriefcase",
+        "href": "https://wellfound.com"
+      },
+      {
+        "label": "Crunchbase",
+        "description": "Data",
+        "icon": "PiChartLine",
+        "href": "https://www.crunchbase.com"
+      },
+      {
+        "label": "Hashnode",
+        "description": "Blogging",
+        "icon": "PiCodeSimple",
+        "href": "https://hashnode.com"
+      }
+    ]
+  },
+  {
     "label": "Bored",
     "items": [
       {
         "label": "Research",
         "description": "Knowledge Explorer",
         "icon": "PiMagnifyingGlass",
+        "sectionId": "bored",
         "toolId": "research"
       },
       {
         "label": "Develop",
         "description": "Skill Builder",
         "icon": "PiNotebook",
+        "sectionId": "bored",
         "toolId": "develop"
       },
       {
         "label": "Build",
         "description": "Product Creator",
         "icon": "PiWrench",
+        "sectionId": "bored",
         "toolId": "build"
       },
       {
         "label": "Ship",
         "description": "Infographic Publisher",
         "icon": "PiRocketLaunch",
+        "sectionId": "bored",
         "toolId": "ship"
       },
       {
         "label": "VibeSlotCode",
         "description": "Stack + Idea Generator",
         "icon": "PiSparkle",
+        "sectionId": "bored",
         "toolId": "vibe-slot-code"
       },
       {
         "label": "WeirdSearch",
         "description": "Weird Query Roller",
         "icon": "PiSmileyMelting",
+        "sectionId": "bored",
         "toolId": "weird-search"
       }
-    ]
+    ],
+    "id": "bored"
   },
   {
-    "id": "calculator",
     "label": "Calculator",
     "items": [
       {
         "label": "Calculator",
         "description": "Arithmetic + Unit Converter",
         "icon": "PiDivide",
+        "sectionId": "calculator",
         "toolId": "calculator"
       },
       {
         "label": "Inflation",
         "description": "Calculator",
         "icon": "PiMoney",
+        "sectionId": "calculator",
         "toolId": "inflation"
       },
       {
         "label": "Split Bill",
         "description": "Calculator",
         "icon": "PiCurrencyDollar",
+        "sectionId": "calculator",
         "toolId": "split-bill"
       }
-    ]
+    ],
+    "id": "calculator"
   },
   {
-    "id": "clocks",
     "label": "Clocks",
     "items": [
       {
         "label": "Cron",
         "description": "Expression Builder",
         "icon": "PiClockAfternoon",
+        "sectionId": "clocks",
         "toolId": "cron"
       },
       {
         "label": "Epoch Convert",
         "description": "Timestamp",
         "icon": "PiClock",
+        "sectionId": "clocks",
         "toolId": "epoch-convert"
       }
-    ]
+    ],
+    "id": "clocks"
   },
   {
-    "id": "data-excel",
     "label": "Data - Excel",
     "items": [
       {
         "label": "Excel to PDF",
         "description": "Excel → PDF",
         "icon": "PiFileText",
+        "sectionId": "data-excel",
         "toolId": "excel-to-pdf"
       },
       {
         "label": "Excel to XML",
         "description": "Excel → XML",
         "icon": "PiArrowsClockwise",
+        "sectionId": "data-excel",
         "toolId": "excel-to-xml"
       },
       {
         "label": "Split Excel",
         "description": "Split large files",
         "icon": "PiScissors",
+        "sectionId": "data-excel",
         "toolId": "split-excel"
       }
-    ]
+    ],
+    "id": "data-excel"
   },
   {
-    "id": "data-xml",
     "label": "Data - XML",
     "items": [
       {
         "label": "JSON to XML",
         "description": "JSON → XML",
         "icon": "PiArrowsClockwise",
+        "sectionId": "data-xml",
         "toolId": "json-to-xml"
       },
       {
         "label": "XML to Excel",
         "description": "XML → Excel",
         "icon": "PiArrowsClockwise",
+        "sectionId": "data-xml",
         "toolId": "xml-to-excel"
       },
       {
         "label": "XML to JSON",
         "description": "XML → JSON",
         "icon": "PiArrowsClockwise",
+        "sectionId": "data-xml",
         "toolId": "xml-to-json"
       }
-    ]
+    ],
+    "id": "data-xml"
   },
   {
-    "id": "developer",
     "label": "Developer",
     "items": [
       {
         "label": "Diff",
         "description": "Text Comparison",
         "icon": "PiNotePencil",
+        "sectionId": "developer",
         "toolId": "text-diff"
       },
       {
         "label": "Figlet",
         "description": "Text art",
         "icon": "PiNotePencil",
+        "sectionId": "developer",
         "toolId": "figlet"
       },
       {
         "label": "IP",
         "description": "Inspector",
         "icon": "PiGlobe",
+        "sectionId": "developer",
         "toolId": "ip"
       },
       {
         "label": "OpenAPI",
         "description": "to Postman",
         "icon": "PiArrowsClockwise",
+        "sectionId": "developer",
         "toolId": "openapi"
       },
       {
         "label": "Proxy",
         "description": "CORS Proxy",
         "icon": "PiLink",
+        "sectionId": "developer",
         "toolId": "proxy"
       },
       {
         "label": "Shopify Detect",
         "description": "Detect Shopify",
         "icon": "PiMagnifyingGlass",
+        "sectionId": "developer",
         "toolId": "shopify-detect"
       },
       {
         "label": "URL Tracer",
         "description": "Redirect Tracker",
         "icon": "PiLink",
+        "sectionId": "developer",
         "toolId": "text-url-tracer"
       },
       {
         "label": "UUID",
         "description": "Generator",
         "icon": "PiKey",
+        "sectionId": "developer",
         "toolId": "uuid"
       }
-    ]
+    ],
+    "id": "developer"
   },
   {
-    "id": "editors",
     "label": "Editors",
     "items": [
       {
         "label": "JSON Schema",
         "description": "Validator",
         "icon": "PiFileText",
+        "sectionId": "editors",
         "toolId": "json-schema"
       },
       {
         "label": "Manifest",
         "description": "JSON Editor",
         "icon": "PiFileText",
+        "sectionId": "editors",
         "toolId": "manifest"
       },
       {
         "label": "Regex",
         "description": "Pattern Generator",
         "icon": "PiMagnifyingGlass",
+        "sectionId": "editors",
         "toolId": "regex"
       },
       {
         "label": "Slides",
         "description": "Pitch Deck",
         "icon": "PiPresentation",
+        "sectionId": "editors",
         "toolId": "slides"
       }
-    ]
+    ],
+    "id": "editors"
   },
   {
-    "id": "education",
-    "label": "Education",
-    "items": [
-      {
-        "label": "DOI",
-        "description": "Cite",
-        "icon": "PiFileText",
-        "toolId": "doi"
-      }
-    ]
-  },
-  {
-    "id": "puzzle",
     "label": "Puzzle",
     "items": [
       {
         "label": "2048",
         "description": "Merge tiles",
         "icon": "PiNumberSquareOne",
+        "sectionId": "puzzle",
         "toolId": "game2048"
       },
       {
         "label": "Lights Out",
         "description": "Toggle all lights off",
         "icon": "PiLamp",
+        "sectionId": "puzzle",
         "toolId": "lights-out"
       },
       {
         "label": "Sliding Puzzle",
         "description": "Upload & slide tiles",
         "icon": "PiSnowflake",
+        "sectionId": "puzzle",
         "toolId": "sliding-puzzle"
       },
       {
         "label": "Towers",
         "description": "Towers of Hanoi",
         "icon": "PiBuilding",
+        "sectionId": "puzzle",
         "toolId": "towers"
       }
-    ]
+    ],
+    "id": "puzzle"
   },
   {
-    "id": "trivia",
     "label": "Trivia",
     "items": [
       {
         "label": "Palindrome",
         "description": "Palindrome",
         "icon": "PiRepeat",
+        "sectionId": "trivia",
         "toolId": "palindrome"
       },
       {
         "label": "Pokedex",
         "description": "Pokemon",
         "icon": "PiBook",
+        "sectionId": "trivia",
         "toolId": "pokedex"
       },
       {
         "label": "Quizify",
         "description": "Quiz",
         "icon": "PiQuestion",
+        "sectionId": "trivia",
         "toolId": "quizify"
       }
-    ]
+    ],
+    "id": "trivia"
   },
   {
-    "id": "utilities",
     "label": "Utilities",
     "items": [
       {
         "label": "Create ZIP",
         "description": "Zip Files",
         "icon": "PiFileText",
+        "sectionId": "utilities",
         "toolId": "create-zip"
       },
       {
         "label": "Emojis",
         "description": "Explorer",
         "icon": "PiSmiley",
+        "sectionId": "utilities",
         "toolId": "emojis"
       },
       {
         "label": "Kaprekar",
         "description": "Routine",
         "icon": "PiChartBar",
+        "sectionId": "utilities",
         "toolId": "kaprekar"
       },
       {
         "label": "Lorem Ipsum",
         "description": "Dummy text",
         "icon": "PiNotePencil",
+        "sectionId": "utilities",
         "toolId": "lorem-ipsum"
       },
       {
         "label": "No Sleep",
         "description": "Timer",
         "icon": "PiMoon",
+        "sectionId": "utilities",
         "toolId": "no-sleep"
       },
       {
         "label": "Screen Recorder",
         "description": "Record & Download",
         "icon": "PiFilmStrip",
+        "sectionId": "utilities",
         "toolId": "screen-recorder"
       }
-    ]
+    ],
+    "id": "utilities"
   },
   {
-    "id": "visualization",
     "label": "Visualization",
     "items": [
       {
         "label": "Attractors",
         "description": "Strange Attractors",
         "icon": "PiSpiral",
+        "sectionId": "visualization",
         "toolId": "attractors"
       },
       {
         "label": "Legislation",
         "description": "Visualization",
         "icon": "PiBuildings",
+        "sectionId": "visualization",
         "toolId": "legislation"
       }
-    ]
+    ],
+    "id": "visualization"
   }
 ]

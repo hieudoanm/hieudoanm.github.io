@@ -1,46 +1,105 @@
-section,sectionId,label,description,icon,toolId
-Bored,bored,Research,Knowledge Explorer,PiMagnifyingGlass,research
-Bored,bored,Develop,Skill Builder,PiNotebook,develop
-Bored,bored,Build,Product Creator,PiWrench,build
-Bored,bored,Ship,Infographic Publisher,PiRocketLaunch,ship
-Bored,bored,VibeSlotCode,"Stack + Idea Generator",PiSparkle,vibe-slot-code
-Bored,bored,WeirdSearch,Weird Query Roller,PiSmileyMelting,weird-search
-Calculator,calculator,Calculator,"Arithmetic + Unit Converter",PiDivide,calculator
-Calculator,calculator,Inflation,Calculator,PiMoney,inflation
-Calculator,calculator,Split Bill,Calculator,PiCurrencyDollar,split-bill
-Clocks,clocks,Cron,Expression Builder,PiClockAfternoon,cron
-Clocks,clocks,Epoch Convert,Timestamp,PiClock,epoch-convert
-Data - Excel,data-excel,Excel to PDF,"Excel → PDF",PiFileText,excel-to-pdf
-Data - Excel,data-excel,Excel to XML,"Excel → XML",PiArrowsClockwise,excel-to-xml
-Data - Excel,data-excel,Split Excel,Split large files,PiScissors,split-excel
-Data - XML,data-xml,JSON to XML,"JSON → XML",PiArrowsClockwise,json-to-xml
-Data - XML,data-xml,XML to Excel,"XML → Excel",PiArrowsClockwise,xml-to-excel
-Data - XML,data-xml,XML to JSON,"XML → JSON",PiArrowsClockwise,xml-to-json
-Developer,developer,Diff,Text Comparison,PiNotePencil,text-diff
-Developer,developer,Figlet,Text art,PiNotePencil,figlet
-Developer,developer,IP,Inspector,PiGlobe,ip
-Developer,developer,OpenAPI,to Postman,PiArrowsClockwise,openapi
-Developer,developer,Proxy,CORS Proxy,PiLink,proxy
-Developer,developer,Shopify Detect,Detect Shopify,PiMagnifyingGlass,shopify-detect
-Developer,developer,URL Tracer,Redirect Tracker,PiLink,text-url-tracer
-Developer,developer,UUID,Generator,PiKey,uuid
-Editors,editors,JSON Schema,Validator,PiFileText,json-schema
-Editors,editors,Manifest,JSON Editor,PiFileText,manifest
-Editors,editors,Regex,Pattern Generator,PiMagnifyingGlass,regex
-Editors,editors,Slides,Pitch Deck,PiPresentation,slides
-Education,education,DOI,Cite,PiFileText,doi
-Puzzle,puzzle,2048,Merge tiles,PiNumberSquareOne,game2048
-Puzzle,puzzle,Lights Out,Toggle all lights off,PiLamp,lights-out
-Puzzle,puzzle,Sliding Puzzle,Upload & slide tiles,PiSnowflake,sliding-puzzle
-Puzzle,puzzle,Towers,Towers of Hanoi,PiBuilding,towers
-Trivia,trivia,Palindrome,Palindrome,PiRepeat,palindrome
-Trivia,trivia,Pokedex,Pokemon,PiBook,pokedex
-Trivia,trivia,Quizify,Quiz,PiQuestion,quizify
-Utilities,utilities,Create ZIP,Zip Files,PiFileText,create-zip
-Utilities,utilities,Emojis,Explorer,PiSmiley,emojis
-Utilities,utilities,Kaprekar,Routine,PiChartBar,kaprekar
-Utilities,utilities,Lorem Ipsum,Dummy text,PiNotePencil,lorem-ipsum
-Utilities,utilities,No Sleep,Timer,PiMoon,no-sleep
-Utilities,utilities,Screen Recorder,"Record & Download",PiFilmStrip,screen-recorder
-Visualization,visualization,Attractors,Strange Attractors,PiSpiral,attractors
-Visualization,visualization,Legislation,Visualization,PiBuildings,legislation
+section,sectionId,label,description,icon,toolId,href,badge
+Agents,,Claude,Anthropic,PiStarFour,,https://claude.ai/,Chat
+Agents,,ChatGPT,OpenAI,PiStarFour,,https://chatgpt.com,Chat
+Agents,,Qwen,Alibaba Cloud,PiStarFour,,https://qwen.ai,Chat
+Agents,,Kimi,Moonshot AI,PiMoon,,https://kimi.moonshot.cn,Chat
+Agents,,Perplexity,AI Search,PiMagnifyingGlass,,https://www.perplexity.ai,Research
+Agents,,Gemini,Google,PiSparkle,,https://gemini.google.com/app,
+Agents,,Grok,xAI,PiLightning,,https://grok.com,
+Agents,,Copilot,Microsoft,PiWindowsLogo,,https://copilot.microsoft.com,
+Agents,,DeepSeek,DeepSeek,PiDrop,,https://chat.deepseek.com,
+Agents,,Mistral,Mistral AI,PiWind,,https://chat.mistral.ai,
+Agents,,Meta AI,Meta,PiInfinity,,https://www.meta.ai,
+Agents,,HuggingChat,HuggingFace,PiSmiley,,https://huggingface.co/chat,
+Agents,,Poe,Quora,PiChatCircle,,https://poe.com,
+Agents,,Cohere,Cohere,PiWaveform,,https://coral.cohere.com,
+Code,,GitHub,Git,PiGithubLogo,,https://github.com,
+Code,,Renovate,Code,PiRobot,,https://developer.mend.io,
+Code,,Vercel,Deployment,PiGlobe,,https://vercel.com,
+Code,,Supabase,Database,PiDatabase,,https://supabase.com,
+Google Workspace,,Calendar,Calendar,PiCalendar,,https://calendar.google.com,
+Google Workspace,,Docs,Word,PiNotePencil,,https://docs.google.com,
+Google Workspace,,Drive,OneDrive,PiFolder,,https://drive.google.com,
+Google Workspace,,Gmail,Email,PiEnvelope,,https://gmail.com,
+Google Workspace,,Maps,Maps,PiMapPin,,https://maps.google.com,
+Google Workspace,,Sheets,Excel,PiChartBar,,https://sheets.google.com,
+Google Workspace,,Slides,PowerPoint,PiPlay,,https://slides.google.com,
+Google Workspace,,Tasks,ToDo,PiCheckCircle,,https://tasks.google.com,
+Microsoft Workspace,,Outlook,Gmail,PiEnvelopeSimple,,https://outlook.com,
+Microsoft Workspace,,Calendar,Calendar,PiCalendar,,https://outlook.live.com/calendar,
+Microsoft Workspace,,OneDrive,Drive,PiCloudArrowUp,,https://onedrive.live.com,
+Microsoft Workspace,,Word,Docs,PiFileDoc,,https://www.microsoft365.com/launch/word,
+Microsoft Workspace,,Excel,Sheets,PiChartBar,,https://www.microsoft365.com/launch/excel,
+Microsoft Workspace,,PowerPoint,Slides,PiPresentationChart,,https://www.microsoft365.com/launch/powerpoint,
+Microsoft Workspace,,To Do,Tasks,PiCheckCircle,,https://to-do.office.com/tasks/,
+Microsoft Workspace,,Teams,Chat,PiUsersThree,,https://teams.microsoft.com,
+Microsoft Workspace,,OneNote,Keep,PiNotebook,,https://www.onenote.com,
+Microsoft Workspace,,Microsoft 365,Workspace,PiWindowsLogo,,https://www.microsoft365.com,
+Messaging,,Discord,Messaging,PiGameController,,https://discord.com,
+Messaging,,Messenger,Messaging,PiHeart,,https://www.messenger.com,
+Messaging,,Slack,Messaging,PiCodeSimple,,https://slack.com,
+Messaging,,Telegram,Messaging,PiAirplane,,https://web.telegram.org/,
+Music,,Spotify,Music,PiMusicNote,,https://open.spotify.com,
+Music,,YouTube,Videos,PiPlay,,https://youtube.com,
+Social,,Facebook,Social network,PiFacebookLogo,,https://facebook.com,
+Social,,Instagram,Photos,PiCamera,,https://instagram.com,
+Social,,Reddit,Social network,PiAlien,,https://reddit.com,
+Social,,Threads,Social network,PiThreadsLogo,,https://threads.net,
+Social,,Tiktok,Social network,PiMusicNote,,https://www.tiktok.com,
+Social,,X,Social network,PiTwitterLogo,,https://x.com,
+Work,,LinkedIn,Social network,PiBriefcase,,https://linkedin.com,
+Work,,Hacker News,News,PiNewspaper,,https://news.ycombinator.com,
+Work,,Indie Hackers,News,PiCodeSimple,,https://www.indiehackers.com,
+Work,,Product Hunt,News,PiPackage,,https://www.producthunt.com,
+Work,,Y Combinator,Startup,PiLightning,,https://www.ycombinator.com,
+Work,,BetaList,Launch,PiRocket,,https://betalist.com,
+Work,,TechCrunch,News,PiNewspaper,,https://techcrunch.com,
+Work,,Starter Story,Stories,PiBookOpen,,https://www.starterstory.com,
+Work,,Failory,Stories,PiTrendDown,,https://www.failory.com,
+Work,,Wellfound,Jobs,PiBriefcase,,https://wellfound.com,
+Work,,Crunchbase,Data,PiChartLine,,https://www.crunchbase.com,
+Work,,Hashnode,Blogging,PiCodeSimple,,https://hashnode.com,
+Bored,bored,Research,Knowledge Explorer,PiMagnifyingGlass,research,,
+Bored,bored,Develop,Skill Builder,PiNotebook,develop,,
+Bored,bored,Build,Product Creator,PiWrench,build,,
+Bored,bored,Ship,Infographic Publisher,PiRocketLaunch,ship,,
+Bored,bored,VibeSlotCode,Stack + Idea Generator,PiSparkle,vibe-slot-code,,
+Bored,bored,WeirdSearch,Weird Query Roller,PiSmileyMelting,weird-search,,
+Calculator,calculator,Calculator,Arithmetic + Unit Converter,PiDivide,calculator,,
+Calculator,calculator,Inflation,Calculator,PiMoney,inflation,,
+Calculator,calculator,Split Bill,Calculator,PiCurrencyDollar,split-bill,,
+Clocks,clocks,Cron,Expression Builder,PiClockAfternoon,cron,,
+Clocks,clocks,Epoch Convert,Timestamp,PiClock,epoch-convert,,
+Data - Excel,data-excel,Excel to PDF,Excel → PDF,PiFileText,excel-to-pdf,,
+Data - Excel,data-excel,Excel to XML,Excel → XML,PiArrowsClockwise,excel-to-xml,,
+Data - Excel,data-excel,Split Excel,Split large files,PiScissors,split-excel,,
+Data - XML,data-xml,JSON to XML,JSON → XML,PiArrowsClockwise,json-to-xml,,
+Data - XML,data-xml,XML to Excel,XML → Excel,PiArrowsClockwise,xml-to-excel,,
+Data - XML,data-xml,XML to JSON,XML → JSON,PiArrowsClockwise,xml-to-json,,
+Developer,developer,Diff,Text Comparison,PiNotePencil,text-diff,,
+Developer,developer,Figlet,Text art,PiNotePencil,figlet,,
+Developer,developer,IP,Inspector,PiGlobe,ip,,
+Developer,developer,OpenAPI,to Postman,PiArrowsClockwise,openapi,,
+Developer,developer,Proxy,CORS Proxy,PiLink,proxy,,
+Developer,developer,Shopify Detect,Detect Shopify,PiMagnifyingGlass,shopify-detect,,
+Developer,developer,URL Tracer,Redirect Tracker,PiLink,text-url-tracer,,
+Developer,developer,UUID,Generator,PiKey,uuid,,
+Editors,editors,JSON Schema,Validator,PiFileText,json-schema,,
+Editors,editors,Manifest,JSON Editor,PiFileText,manifest,,
+Editors,editors,Regex,Pattern Generator,PiMagnifyingGlass,regex,,
+Editors,editors,Slides,Pitch Deck,PiPresentation,slides,,
+Puzzle,puzzle,2048,Merge tiles,PiNumberSquareOne,game2048,,
+Puzzle,puzzle,Lights Out,Toggle all lights off,PiLamp,lights-out,,
+Puzzle,puzzle,Sliding Puzzle,Upload & slide tiles,PiSnowflake,sliding-puzzle,,
+Puzzle,puzzle,Towers,Towers of Hanoi,PiBuilding,towers,,
+Trivia,trivia,Palindrome,Palindrome,PiRepeat,palindrome,,
+Trivia,trivia,Pokedex,Pokemon,PiBook,pokedex,,
+Trivia,trivia,Quizify,Quiz,PiQuestion,quizify,,
+Utilities,utilities,Create ZIP,Zip Files,PiFileText,create-zip,,
+Utilities,utilities,Emojis,Explorer,PiSmiley,emojis,,
+Utilities,utilities,Kaprekar,Routine,PiChartBar,kaprekar,,
+Utilities,utilities,Lorem Ipsum,Dummy text,PiNotePencil,lorem-ipsum,,
+Utilities,utilities,No Sleep,Timer,PiMoon,no-sleep,,
+Utilities,utilities,Screen Recorder,Record & Download,PiFilmStrip,screen-recorder,,
+Visualization,visualization,Attractors,Strange Attractors,PiSpiral,attractors,,
+Visualization,visualization,Legislation,Visualization,PiBuildings,legislation,,

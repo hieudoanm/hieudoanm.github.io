@@ -5,7 +5,7 @@ import { Quizify } from '@hieudoanm.github.io/components/routes/apps/trivia/Quiz
 
 const GamesTriviaQuizify = () => {
   const router = useRouter();
-  return <Quizify onClose={() => router.push('/apps/trivia')} />;
+  return <Quizify onClose={() => router.push('/trivia')} />;
 };
 
 export default GamesTriviaQuizify;

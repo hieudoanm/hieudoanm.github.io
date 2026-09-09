@@ -5,7 +5,7 @@ import { SlidingPuzzle } from '@hieudoanm.github.io/components/routes/apps/puzzl
 
 const GamesPuzzleSlidingPuzzle = () => {
   const router = useRouter();
-  return <SlidingPuzzle onClose={() => router.push('/apps/puzzle')} />;
+  return <SlidingPuzzle onClose={() => router.push('/puzzle')} />;
 };
 
 export default GamesPuzzleSlidingPuzzle;

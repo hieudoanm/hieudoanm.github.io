@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { type FC } from 'react';
-import { PiGear, PiHouse, PiSquaresFour, PiUser } from 'react-icons/pi';
+import { PiGear, PiHouse, PiUser } from 'react-icons/pi';
 
 const LINKS: {
   href: string;
@@ -11,7 +11,6 @@ const LINKS: {
   icon: FC<{ className?: string; size?: number }>;
 }[] = [
   { href: '/', label: 'Home', icon: PiHouse },
-  { href: '/apps', label: 'Apps', icon: PiSquaresFour },
   { href: '/about', label: 'About', icon: PiUser },
   { href: '/version', label: 'Version', icon: PiGear },
 ];

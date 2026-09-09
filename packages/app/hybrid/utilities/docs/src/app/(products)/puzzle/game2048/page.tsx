@@ -5,7 +5,7 @@ import { Game2048 } from '@hieudoanm.github.io/components/routes/apps/puzzle/Gam
 
 const GamesPuzzleGame2048 = () => {
   const router = useRouter();
-  return <Game2048 onClose={() => router.push('/apps/puzzle')} />;
+  return <Game2048 onClose={() => router.push('/puzzle')} />;
 };
 
 export default GamesPuzzleGame2048;

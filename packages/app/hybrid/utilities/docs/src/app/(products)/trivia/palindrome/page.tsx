@@ -5,7 +5,7 @@ import { Palindrome } from '@hieudoanm.github.io/components/routes/apps/trivia/P
 
 const GamesTriviaPalindrome = () => {
   const router = useRouter();
-  return <Palindrome onClose={() => router.push('/apps/trivia')} />;
+  return <Palindrome onClose={() => router.push('/trivia')} />;
 };
 
 export default GamesTriviaPalindrome;
