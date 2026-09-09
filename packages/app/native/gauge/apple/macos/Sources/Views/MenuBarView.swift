@@ -4,11 +4,13 @@ import SwiftUI
 struct MenuBarView: View {
     @ObservedObject var clipboardViewModel: ClipboardViewModel
     @ObservedObject var viewModel: GaugeViewModel
+    @ObservedObject var networkViewModel: NetworkViewModel
     @ObservedObject var portsViewModel: PortsViewModel
 
     private enum Tab: Hashable {
         case clipboard
         case memory
+        case network
         case ports
     }
 
@@ -26,6 +28,7 @@ struct MenuBarView: View {
         .frame(width: 360)
         .onAppear {
             viewModel.refresh()
+            networkViewModel.start()
             portsViewModel.start()
         }
         .animation(.easeInOut(duration: 0.15), value: selectedTab)
@@ -36,6 +39,7 @@ struct MenuBarView: View {
         Picker("Tab", selection: $selectedTab) {
             Text("Clipboard").tag(Tab.clipboard)
             Text("Memory").tag(Tab.memory)
+            Text("Network").tag(Tab.network)
             Text("Ports").tag(Tab.ports)
         }
         .pickerStyle(.segmented)
@@ -66,6 +70,9 @@ struct MenuBarView: View {
                     .transition(.move(edge: .trailing).combined(with: .opacity))
                 }
             }
+        case .network:
+            NetworkView(viewModel: networkViewModel)
+                .transition(.opacity)
         case .ports:
             PortsView(viewModel: portsViewModel)
                 .transition(.opacity)

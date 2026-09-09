@@ -6,6 +6,7 @@
 - Compact native macOS menu-bar utility with popover details
 - Separate Ports view for monitoring and managing local listening ports
 - Clipboard history tab so nothing you copy is ever lost
+- Live network throughput and per-interface traffic in a dedicated tab
 - Low resource footprint (~0% idle CPU, <50 MB memory)
 - No special permissions, local-first, no backend
 - Accurate, documented metrics
@@ -20,6 +21,7 @@
 | Disk API       | Foundation `URLResourceValue` |
 | Port discovery | `lsof` via `Process`          |
 | Clipboard      | `NSPasteboard` changeCount    |
+| Network        | `getifaddrs` + IOKit          |
 | Persistence    | Codable + JSON + FileManager  |
 | Build          | Swift Package Manager         |
 | Min macOS      | 13 Ventura                    |
@@ -33,6 +35,7 @@ Sources/
 │   ├── GaugeViewModel.swift
 │   ├── PortsViewModel.swift
 │   ├── ClipboardViewModel.swift
+│   ├── NetworkViewModel.swift
 │   ├── LaunchAtLogin.swift
 │   └── MenuBarIcon.swift
 ├── Core/
@@ -46,13 +49,16 @@ Sources/
 │   │   ├── NetworkEndpoint.swift
 │   │   ├── PortInfo.swift
 │   │   ├── ClipperItem.swift
-│   │   └── ClipperStore.swift
+│   │   ├── ClipperStore.swift
+│   │   ├── NetworkStats.swift
+│   │   └── NetworkSnapshots.swift
 │   ├── Services/
 │   │   ├── PortDiscovering.swift
 │   │   ├── LsofPortDiscoveryService.swift
 │   │   ├── LsofParser.swift
 │   │   ├── ProcessTerminating.swift
-│   │   └── SignalProcessTerminator.swift
+│   │   ├── SignalProcessTerminator.swift
+│   │   └── NetworkInterfaceClassifying.swift
 │   ├── ByteFormatter.swift
 │   └── SettingsStore.swift
 ├── Services/
@@ -63,12 +69,15 @@ Sources/
 │   ├── SystemInfoMonitor.swift
 │   ├── MonitorError.swift
 │   ├── ClipboardMonitor.swift
-│   └── PasteboardManager.swift
+│   ├── PasteboardManager.swift
+│   ├── NetworkMonitor.swift
+│   └── IOKitNetworkInterfaceClassifier.swift
 └── Views/
     ├── MenuBarView.swift
     ├── SmallView.swift
     ├── DetailsView.swift
     ├── ClipboardView.swift
+    ├── NetworkView.swift
     ├── PortsView.swift
     ├── PortListView.swift
     ├── PortRow.swift
@@ -93,13 +102,14 @@ Sources/
 │            Views                 │
 │  MenuBarView | SmallView         │
 │  DetailsView | ResourceMeter     │
-│  ClipboardView | PortsView       │
-│  PortListView | PortRow          │
-│  SettingsView                    │
+│  ClipboardView | NetworkView     │
+│  PortsView | PortListView        │
+│  PortRow | SettingsView          │
 ├──────────────────────────────────┤
 │          ViewModels              │
 │  GaugeViewModel | PortsViewModel │
-│  ClipboardViewModel              │
+│  ClipboardViewModel |            │
+│  NetworkViewModel                │
 ├──────────────────────────────────┤
 │           Services               │
 │  MemoryMonitor | DiskMonitor     │
@@ -108,6 +118,8 @@ Sources/
 │  LsofPortDiscoveryService        │
 │  ClipboardMonitor |              │
 │  PasteboardManager               │
+│  NetworkMonitor |                │
+│  IOKitInterfaceClassifier        │
 ├──────────────────────────────────┤
 │             Core                 │
 │  MemoryStats | DiskStats         │
@@ -115,6 +127,7 @@ Sources/
 │  PortInfo | NetworkEndpoint      │
 │  LsofParser | SignalTerminator   │
 │  ClipperItem | ClipperStore      │
+│  NetworkStats | Snapshots        │
 │  SystemInfo | ByteFormatter      │
 │  Threshold | SettingsStore       │
 └──────────────────────────────────┘
@@ -259,14 +272,50 @@ never pretends to own the clipboard. A user copy from history writes back via
 tick. Monitoring can be paused in Settings, and `ClipperStore.maxItems` caps
 retained history to the configured limit.
 
+### Network
+
+**Definition:** real-time download/upload throughput and per-interface traffic.
+`NetworkMonitor` reads the kernel's cumulative per-interface byte counters via
+`getifaddrs` — the same counters `netstat` reports — and turns the delta between
+two consecutive reads into a bytes-per-second rate. Counters are 32-bit, so the
+model's `delta(from:to:)` handles their wrap; totals are accumulated from deltas
+instead of reading raw cumulative values, keeping them accurate and bounded to
+the current app session (loopback traffic is excluded).
+
+`NetworkSnapshots.aggregate` collapses the getifaddrs per-address entries into
+one sample per interface (OR-ing up/address flags, taking the highest counter).
+Wi-Fi vs Ethernet is resolved by `IOKitNetworkInterfaceClassifier`, which walks
+the IOKit parent chain of each BSD interface looking for `IO80211Interface`
+conformance or `80211`/`WLAN`/`AirPort`/`Ethernet` class markers. Interface
+status is derived from link state and whether the interface holds an IP:
+connected (up + address), link up, or down.
+
+```text
+getifaddrs()
+        ↓
+[NetworkAddressSnapshot] (one entry per address family)
+        ↓
+NetworkSnapshots.aggregate  →  one sample per interface
+        ↓
+NetworkMonitor  (delta / elapsed since previous tick)
+        ↓
+       NetworkStats
+        ↓
+    NetworkViewModel  (accumulates session totals)
+        ↓
+        NetworkView
+```
+
 ### Refresh
 
 A single coordinated 1-second timer drives all five system monitors. When the
 popover is closed the menu-bar percentages still refresh in place (they are
 cheap host/FS reads); no independent per-metric timers exist. The Ports view
 runs its own lightweight discovery loop on launch, honoring the same
-`SettingsStore.refreshInterval`. The Clipboard monitor is independent: a
-0.5-second pasteboard poll whose only cost is a `changeCount` comparison.
+`SettingsStore.refreshInterval`; the Network view behaves the same way, so
+throughput rates always divide by the configured interval. The Clipboard
+monitor is independent: a 0.5-second pasteboard poll whose only cost is a
+`changeCount` comparison.
 
 ## Formatting
 

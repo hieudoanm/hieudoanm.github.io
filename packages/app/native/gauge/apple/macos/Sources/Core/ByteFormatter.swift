@@ -32,6 +32,26 @@ public enum ByteFormatter {
         "\(Int(value.rounded()))%"
     }
 
+    public static func rate(_ bytesPerSecond: Double?) -> String {
+        guard let bytesPerSecond, bytesPerSecond >= 0 else { return "--" }
+        let units = ["B/s", "KB/s", "MB/s", "GB/s", "TB/s"]
+        var value = bytesPerSecond
+        var unitIndex = 0
+
+        while value >= 1024 && unitIndex < units.count - 1 {
+            value /= 1024
+            unitIndex += 1
+        }
+
+        if unitIndex == 0 {
+            return "\(Int(value)) \(units[unitIndex])"
+        }
+        if value >= 100 {
+            return "\(Int(value.rounded())) \(units[unitIndex])"
+        }
+        return String(format: "%.1f \(units[unitIndex])", value)
+    }
+
     public static func memoryBreakdown(active: UInt64, wired: UInt64, compressed: UInt64) -> String {
         joinedDetails([("Active", active), ("Wired", wired), ("Compressed", compressed)])
     }

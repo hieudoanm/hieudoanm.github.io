@@ -5,6 +5,7 @@ import SwiftUI
 struct GaugeApp: App {
     @StateObject private var clipboardViewModel = AppDelegate.clipboardViewModel
     @StateObject private var viewModel = AppDelegate.viewModel
+    @StateObject private var networkViewModel = AppDelegate.networkViewModel
     @StateObject private var portsViewModel = AppDelegate.portsViewModel
     @NSApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
 
@@ -13,6 +14,7 @@ struct GaugeApp: App {
             MenuBarView(
                 clipboardViewModel: clipboardViewModel,
                 viewModel: viewModel,
+                networkViewModel: networkViewModel,
                 portsViewModel: portsViewModel
             )
         } label: {
@@ -38,11 +40,15 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     static let viewModel = GaugeViewModel(settingsStore: settingsStore)
 
     @MainActor
+    static let networkViewModel = NetworkViewModel(settingsStore: settingsStore)
+
+    @MainActor
     static let portsViewModel = PortsViewModel(settingsStore: settingsStore)
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         NSApp.setActivationPolicy(.accessory)
         Task { @MainActor in
+            Self.networkViewModel.start()
             Self.portsViewModel.start()
         }
     }

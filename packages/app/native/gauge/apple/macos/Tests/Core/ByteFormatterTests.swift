@@ -66,6 +66,16 @@ struct ByteFormatterTests {
         #expect(ByteFormatter.diskAvailability(available: 82_000_000_000, purgeable: 5_000_000_000) == "Free 76.4 GB · Purgeable 4.7 GB")
     }
 
+    @Test("rate formats bytes per second")
+    func rate() {
+        #expect(ByteFormatter.rate(0) == "0 B/s")
+        #expect(ByteFormatter.rate(512) == "512 B/s")
+        #expect(ByteFormatter.rate(1_500) == "1.5 KB/s")
+        #expect(ByteFormatter.rate(150_000) == "146 KB/s")
+        #expect(ByteFormatter.rate(1_300_000) == "1.2 MB/s")
+        #expect(ByteFormatter.rate(nil) == "--")
+    }
+
     @Test("rounds large values without excessive precision")
     func noExcessivePrecision() {
         #expect(ByteFormatter.humanReadable(113_000_000_000) == "105 GB")

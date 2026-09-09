@@ -93,8 +93,10 @@ No permissions are required to run Gauge.
 2. `make test` — all tests pass
 3. `make dev` — smoke test the app
 4. Menu-bar icon shows memory and disk percentages
-5. Popover shows all three tabs with Memory the default
+5. Popover shows all four tabs with Memory the default
 6. Memory tab shows both progress bars with used/total values
 7. Clipboard tab captures, searches, and copies history; pin and delete work
-8. Ports view lists listening ports and kill actions work
-9. Verify both Light Mode and Dark Mode
+8. Network tab shows live download/upload rates, session totals, and
+   per-interface rows with Wi-Fi/Ethernet classification
+9. Ports view lists listening ports and kill actions work
+10. Verify both Light Mode and Dark Mode

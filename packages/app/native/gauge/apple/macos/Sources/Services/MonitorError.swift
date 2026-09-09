@@ -5,5 +5,6 @@ public enum MonitorError: Error {
     case unableToReadSwap
     case unableToReadCPU
     case unableToReadMemoryPressure
+    case unableToReadNetwork
     case unavailableFileSystem
 }

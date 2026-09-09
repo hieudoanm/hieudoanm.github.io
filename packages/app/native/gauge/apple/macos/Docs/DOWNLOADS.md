@@ -8,8 +8,8 @@
 
 ## About
 
-Gauge — RAM, storage, local-port, and clipboard history at a glance from your
-menu bar.
+Gauge — RAM, storage, network throughput, local ports, and clipboard history
+at a glance from your menu bar.
 
 ## Features
 
@@ -60,6 +60,17 @@ menu bar.
 - Progress bar tinted by usage threshold
 - Shown only when swap is configured
 
+## Network
+
+- Live download / upload rates (`↓` / `↑`)
+- Total received / sent this session (loopback excluded)
+- Per-interface rows: name, kind, status and its own ↓ / ↑ rates
+- Interface status: `Connected` (link up + address), `Link up`, or `Down`
+- Wi-Fi vs Ethernet detection via IOKit interface classification
+- Rates derived from `getifaddrs` byte-counter deltas, 32-bit wrap handled
+- Separate Network tab between Memory and Ports, honoring the refresh interval
+  configured in Settings
+
 ## Ports
 
 - Lists processes listening on local TCP ports and bound UDP sockets
@@ -84,10 +95,12 @@ menu bar.
 
 ## Popover
 
-- Three tabs, Clipboard, Memory (default) and Ports:
+- Four tabs, Clipboard, Memory (default), Network and Ports:
   - Memory tab: compact percentage and used / total numbers (small view) with
     full progress-bar sections (details view) switchable from the header
   - Clipboard tab: searchable history with copy, pin, and delete actions
+  - Network tab: download / upload speeds, session totals, and per-interface
+    traffic
   - Ports tab: searchable list of local listening ports with kill actions
 - Memory section (details) with active / wired / compressed and cached / inactive / free breakdowns
 - Storage section (details) with free / purgeable amounts

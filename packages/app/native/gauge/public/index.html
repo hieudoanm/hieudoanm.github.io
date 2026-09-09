@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Gauge — live system stats and clipboard history right in your menu bar." />
+      content="Gauge — live system stats, network throughput, and clipboard history right in your menu bar." />
     <title>Gauge</title>
     <style>
       :root {
@@ -600,8 +600,8 @@
             </div>
           </div>
           <p class="lead">
-            Live system stats, local ports, and clipboard history right in your
-            menu bar.
+            Live system stats, network throughput, local ports, and clipboard
+            history right in your menu bar.
           </p>
         </div>
         <div class="hero-right">
@@ -638,7 +638,7 @@
           <span class="dot" style="background: #d9dde3"></span>
           <span class="dot" style="background: #e5e8ed"></span>
           <span class="mock-url"
-            >Gauge — System Monitor, Ports &amp; Clipboard</span
+            >Gauge — System Monitor, Network, Ports &amp; Clipboard</span
           >
         </div>
         <div class="mock-body">
@@ -656,6 +656,10 @@
               <strong style="color: var(--text)">6 listening</strong>
               <br />Clipboard:
               <strong style="color: var(--text)">120 saved</strong>
+              <br />Network:
+              <strong style="color: var(--text)"
+                >↓ 8.4 MB/s · ↑ 1.2 MB/s</strong
+              >
             </div>
           </div>
           <div>
@@ -708,10 +712,10 @@
       <section id="overview" class="card">
         <h2>Overview</h2>
         <p class="sub">
-          A menu-bar system monitor that keeps an eye on CPU, disk, the ports
-          your local servers use, and a running clipboard history — with a
-          popover for the full picture and a dedicated view for managing
-          listeners.
+          A menu-bar system monitor that keeps an eye on CPU, disk, live network
+          throughput, the ports your local servers use, and a running clipboard
+          history — with separate tabs for the popover picture, network speeds,
+          and managing listeners.
         </p>
         <div class="features">
           <div class="feature">
@@ -747,6 +751,13 @@
             <p>
               See what is using a local port, copy the address or PID, and kill
               or force-kill the owning process from a dedicated Ports view.
+            </p>
+          </div>
+          <div class="feature">
+            <h3>Network monitoring</h3>
+            <p>
+              Live download and upload speeds, total traffic this session, and
+              per-interface status with Wi-Fi and Ethernet detection.
             </p>
           </div>
           <div class="feature">
