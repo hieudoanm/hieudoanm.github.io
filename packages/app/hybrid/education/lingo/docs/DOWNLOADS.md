@@ -1,8 +1,8 @@
 # Lingo
 
-> Duolingo-style language learning — flashcards, dictionary, and sign-language
-> recognition. Run vocabulary drills, look up words, or learn ASL. Runs
-> everywhere: phone, tablet, laptop, desktop.
+> Duolingo-style language learning — flashcards, dictionary, sign-language
+> recognition, and music. Run vocabulary drills, look up words, learn ASL, or
+> train your ear. Runs everywhere: phone, tablet, laptop, desktop.
 
 ![Android 14+](https://img.shields.io/badge/Android-14%2B-green)
 ![Linux](https://img.shields.io/badge/Linux-22.04%2B-blue)
@@ -85,9 +85,9 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-Your pocket language coach — flashcard drills, a built-in dictionary, and
-real-time sign-language recognition, all in a beautiful hybrid web/desktop app
-that runs on any device.
+Your pocket language coach — flashcard drills, a built-in dictionary, real-time
+sign-language recognition, and an ear-training piano game, all in a beautiful
+hybrid web/desktop app that runs on any device.
 
 ---
 
@@ -108,7 +108,7 @@ Learn words, look them up, and recognise signs — all in one app.
 
 ### 🏠 Home & Navigation
 
-- Card grid listing the three tools with icons and descriptions
+- Card grid listing the four tools with icons and descriptions
 - Tool routes rendered directly, opened from the home card grid; closing returns
   to `/`
 - Error shells: 404 / 403 / 401 / 500 templates plus loading state
@@ -137,6 +137,16 @@ Learn words, look them up, and recognise signs — all in one app.
 - Pure feature extraction in utils: 126-dim vector = 63 landmark offsets + 21
   hand connections × 3 bone vectors, scale-normalised
 - Start/stop lifecycle with camera + inference cleanup on unmount
+
+### 🎵 Music
+
+- Piano note recognition ear-training game (migrated from the `music` app)
+- 12 progressive levels: 1–7 use white keys only, black keys introduced in
+  levels 8–12
+- Game modes: score-based guessing, practice scale, and a Twinkle Twinkle
+  singalong, each with key highlighting feedback
+- Per-note audio samples from `public/audio/3/`, served via `PUBLIC_BASE`
+- High score persisted in localStorage (`music-high-score`)
 
 ### 📊 Progress
 

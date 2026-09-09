@@ -50,8 +50,8 @@ pnpm dev --filter=@hieudoanm.github.io/lingo   # dev server on :3000
 
 ## Docs
 
-Update `docs/FEATURES.md` when shipping features and regenerate
-`docs/DOWNLOADS.md` after touching packaging config:
+Update the feature inventory in `docs/DOWNLOADS.md` when shipping features and
+regenerate it after touching packaging config:
 
 ```bash
 python3 packages/app/hybrid/scripts/generate-downloads-md.py

@@ -1,6 +1,6 @@
 # Roadmap
 
-> Phased roadmap. Shipped items live in `docs/FEATURES.md`.
+> Phased roadmap. Shipped items live in `docs/DOWNLOADS.md`.
 
 ## Phase 1 — Foundation (shipped)
 
@@ -16,6 +16,7 @@
       nav
 - [x] Dictionary: part-of-speech groups, synonym/antonym navigation
 - [x] Sign: webcam recognition with MediaPipe Hands + ONNX inference
+- [x] Music: piano note recognition ear-training game (migrated from `music`)
 - [x] XP/streak progress layer in IndexedDB
 
 ## Phase 3 — Learning experience

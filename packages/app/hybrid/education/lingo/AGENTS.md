@@ -1,21 +1,20 @@
 # Lingo
 
-Duolingo-style language learning: flashcards, dictionary and sign-language
-recognition. Next.js 16 + React 19 + Tailwind CSS 4 (DaisyUI 5) desktop/web app
-packaged with Tauri 2.
+Duolingo-style language learning: flashcards, dictionary, sign-language
+recognition and an ear-training music game. Next.js 16 + React 19 + Tailwind CSS
+4 (DaisyUI 5) desktop/web app packaged with Tauri 2.
 
 ## Documentation
 
 Reference docs live in `docs/`:
 
-| Doc                    | Covers                                                     |
-| ---------------------- | ---------------------------------------------------------- |
-| `docs/ARCHITECTURE.md` | Tech stack, directory structure, routing, state management |
-| `docs/FEATURES.md`     | Feature inventory with progress tracking                   |
-| `docs/ROADMAP.md`      | Phased feature roadmap                                     |
-| `docs/CONTRIBUTING.md` | Setup, dev commands, coding and testing conventions        |
-| `docs/PACKAGING.md`    | Packaging checklist per platform                           |
-| `docs/DOWNLOADS.md`    | Download links per platform (generated)                    |
+| Doc                    | Covers                                                      |
+| ---------------------- | ----------------------------------------------------------- |
+| `docs/ARCHITECTURE.md` | Tech stack, directory structure, routing, state management  |
+| `docs/ROADMAP.md`      | Phased feature roadmap (shipped items)                      |
+| `docs/CONTRIBUTING.md` | Setup, dev commands, coding and testing conventions         |
+| `docs/PACKAGING.md`    | Packaging checklist per platform                            |
+| `docs/DOWNLOADS.md`    | Download links + feature inventory per platform (generated) |
 
 ## Key Conventions
 
@@ -35,10 +34,13 @@ Reference docs live in `docs/`:
 - Offline detection is inlined in `OfflineBadge` (no shared hook)
 - Progress (XP + streak) lives in IndexedDB via `src/lib/progress.ts`; scoring
   is pure (`applyActivity`) and never recomputed in components
-- Static assets are fetched at runtime from `public/data/` and `public/models/`
-  through `src/lib/publicPaths.ts`, which respects the web deployment's
-  `BASE_PATH`
+- Static assets are fetched at runtime from `public/data/`, `public/models/` and
+  `public/audio/` through `src/lib/publicPaths.ts`, which respects the web
+  deployment's `BASE_PATH`
 - `console.*` stripped in production via `compiler.removeConsole`
+- The `/music` game (migrated from the `music` app) stores its high score in
+  `localStorage['music-high-score']`; levels 1–7 are white keys only, black keys
+  appear from level 8
 
 ## Commands
 
@@ -55,21 +57,23 @@ pnpm tauri dev|build # Desktop app via Tauri CLI
 ## Structure
 
 ```
-src/app/            # App Router pages — /flashcards /english /sign + info routes
+src/app/            # App Router pages — /flashcards /english /sign /music + info routes
 src/components/
   atoms/            # Button, Badge, OfflineBadge, ThemeToggle
-  games/            # flashcards, english, sign
+  organisms/        # Header
   templates/        # HomeTemplate, About/Downloads/Version/ErrorTemplate
+src/content/        # about/download/version copy
+src/games/          # flashcards, english, sign, music
 src/hooks/          # useTheme, useSWRegister, useUpdater
 src/lib/            # progress (IndexedDB), native bridge, publicPaths
 src/providers/      # SWProvider, NativeProvider, QueryProvider
 src/styles/         # globals.css (tailwind), base.css, themes.css
 src-tauri/          # Tauri shell (updater + dialog + notification plugins)
-public/             # manifest.json, sw.js, icons, data/words.json, models/sign-model.onnx
+public/             # manifest.json, sw.js, icons, data/, models/, audio/
 e2e/                # Playwright specs
 ```
 
 ## Routes
 
 `/` (home hub), `/flashcards` (language hub), `/flashcards/[language]`,
-`/english`, `/sign` plus `/about`, `/downloads`, `/version`.
+`/english`, `/sign`, `/music` plus `/about`, `/downloads`, `/version`.

@@ -7,7 +7,7 @@ describe('HomePage', () => {
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
       'Lingo'
     );
-    ['flashcards', 'english', 'sign'].forEach((slug) => {
+    ['flashcards', 'english', 'sign', 'music'].forEach((slug) => {
       expect(screen.getByTestId(`tool-card-${slug}`)).toBeInTheDocument();
     });
   });

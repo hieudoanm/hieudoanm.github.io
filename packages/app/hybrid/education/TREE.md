@@ -252,6 +252,219 @@
 │   ├── [playwright.config.ts](./chemistry/playwright.config.ts)
 │   ├── [postcss.config.mjs](./chemistry/postcss.config.mjs)
 │   └── [tsconfig.json](./chemistry/tsconfig.json)
+├── doi/
+│   ├── docs/
+│   │   ├── [ARCHITECTURE.md](./doi/docs/ARCHITECTURE.md)
+│   │   ├── [CONTRIBUTING.md](./doi/docs/CONTRIBUTING.md)
+│   │   ├── [DOWNLOADS.md](./doi/docs/DOWNLOADS.md)
+│   │   ├── [PACKAGING.md](./doi/docs/PACKAGING.md)
+│   │   └── [ROADMAP.md](./doi/docs/ROADMAP.md)
+│   ├── e2e/
+│   │   └── [smoke.spec.ts](./doi/e2e/smoke.spec.ts)
+│   ├── prisma/
+│   │   ├── dbml/
+│   │   │   └── [schema.dbml](./doi/prisma/dbml/schema.dbml)
+│   │   ├── json-schema/
+│   │   │   └── [json-schema.json](./doi/prisma/json-schema/json-schema.json)
+│   │   └── [schema.prisma](./doi/prisma/schema.prisma)
+│   ├── public/
+│   │   ├── database/
+│   │   │   ├── csv/
+│   │   │   │   ├── [doi.references.csv](./doi/public/database/csv/doi.references.csv)
+│   │   │   │   └── [doi.works.csv](./doi/public/database/csv/doi.works.csv)
+│   │   │   ├── docs/
+│   │   │   │   └── [swagger.json](./doi/public/database/docs/swagger.json)
+│   │   │   ├── images/
+│   │   │   │   └── [graph.svg](./doi/public/database/images/graph.svg)
+│   │   │   ├── scripts/
+│   │   │   │   ├── [analyse.py](./doi/public/database/scripts/analyse.py)
+│   │   │   │   ├── [crawl.py](./doi/public/database/scripts/crawl.py)
+│   │   │   │   ├── [to_csv.py](./doi/public/database/scripts/to_csv.py)
+│   │   │   │   └── [visualise.py](./doi/public/database/scripts/visualise.py)
+│   │   │   ├── temp/
+│   │   │   │   └── [backfill_types.py](./doi/public/database/temp/backfill_types.py)
+│   │   │   ├── [Makefile](./doi/public/database/Makefile)
+│   │   │   ├── [README.md](./doi/public/database/README.md)
+│   │   │   ├── [doi.db](./doi/public/database/doi.db)
+│   │   │   ├── [doi.db-journal](./doi/public/database/doi.db-journal)
+│   │   │   ├── [metadata.json](./doi/public/database/metadata.json)
+│   │   │   └── [pyproject.toml](./doi/public/database/pyproject.toml)
+│   │   ├── icons/
+│   │   │   ├── [icon-128x128.png](./doi/public/icons/icon-128x128.png)
+│   │   │   ├── [icon-144x144.png](./doi/public/icons/icon-144x144.png)
+│   │   │   ├── [icon-152x152.png](./doi/public/icons/icon-152x152.png)
+│   │   │   ├── [icon-16x16.png](./doi/public/icons/icon-16x16.png)
+│   │   │   ├── [icon-180x180.png](./doi/public/icons/icon-180x180.png)
+│   │   │   ├── [icon-192x192.png](./doi/public/icons/icon-192x192.png)
+│   │   │   ├── [icon-256x256.png](./doi/public/icons/icon-256x256.png)
+│   │   │   ├── [icon-32x32.png](./doi/public/icons/icon-32x32.png)
+│   │   │   ├── [icon-384x384.png](./doi/public/icons/icon-384x384.png)
+│   │   │   ├── [icon-48x48.png](./doi/public/icons/icon-48x48.png)
+│   │   │   ├── [icon-512x512.png](./doi/public/icons/icon-512x512.png)
+│   │   │   ├── [icon-64x64.png](./doi/public/icons/icon-64x64.png)
+│   │   │   ├── [icon-72x72.png](./doi/public/icons/icon-72x72.png)
+│   │   │   ├── [icon-96x96.png](./doi/public/icons/icon-96x96.png)
+│   │   │   └── [icon.svg](./doi/public/icons/icon.svg)
+│   │   ├── wasm/
+│   │   │   └── [sql-wasm.wasm](./doi/public/wasm/sql-wasm.wasm)
+│   │   ├── [apple-touch-icon.png](./doi/public/apple-touch-icon.png)
+│   │   ├── [favicon.ico](./doi/public/favicon.ico)
+│   │   ├── [manifest.json](./doi/public/manifest.json)
+│   │   ├── [robots.txt](./doi/public/robots.txt)
+│   │   ├── [sitemap.xml](./doi/public/sitemap.xml)
+│   │   └── [sw.js](./doi/public/sw.js)
+│   ├── src/
+│   │   ├── app/
+│   │   │   ├── (app)/
+│   │   │   │   ├── graph/
+│   │   │   │   │   └── [page.tsx](./doi/src/app/(app)/graph/page.tsx)
+│   │   │   │   ├── overview/
+│   │   │   │   │   └── [page.tsx](./doi/src/app/(app)/overview/page.tsx)
+│   │   │   │   └── search/
+│   │   │   │       └── [page.tsx](./doi/src/app/(app)/search/page.tsx)
+│   │   │   ├── (info)/
+│   │   │   │   ├── about/
+│   │   │   │   │   └── [page.tsx](./doi/src/app/(info)/about/page.tsx)
+│   │   │   │   ├── downloads/
+│   │   │   │   │   └── [page.tsx](./doi/src/app/(info)/downloads/page.tsx)
+│   │   │   │   └── version/
+│   │   │   │       └── [page.tsx](./doi/src/app/(info)/version/page.tsx)
+│   │   │   ├── [default.tsx](./doi/src/app/default.tsx)
+│   │   │   ├── [error.tsx](./doi/src/app/error.tsx)
+│   │   │   ├── [favicon.ico](./doi/src/app/favicon.ico)
+│   │   │   ├── [forbidden.tsx](./doi/src/app/forbidden.tsx)
+│   │   │   ├── [global-error.tsx](./doi/src/app/global-error.tsx)
+│   │   │   ├── [layout.tsx](./doi/src/app/layout.tsx)
+│   │   │   ├── [loading.tsx](./doi/src/app/loading.tsx)
+│   │   │   ├── [not-found.tsx](./doi/src/app/not-found.tsx)
+│   │   │   ├── [page.tsx](./doi/src/app/page.tsx)
+│   │   │   ├── [robots.ts](./doi/src/app/robots.ts)
+│   │   │   └── [unauthorized.tsx](./doi/src/app/unauthorized.tsx)
+│   │   ├── components/
+│   │   │   ├── atoms/
+│   │   │   │   ├── [SearchBox.tsx](./doi/src/components/atoms/SearchBox.tsx)
+│   │   │   │   ├── [SearchResultItem.tsx](./doi/src/components/atoms/SearchResultItem.tsx)
+│   │   │   │   └── [StatCard.tsx](./doi/src/components/atoms/StatCard.tsx)
+│   │   │   ├── molecules/
+│   │   │   │   ├── [CitationGraph.tsx](./doi/src/components/molecules/CitationGraph.tsx)
+│   │   │   │   ├── [ErrorState.tsx](./doi/src/components/molecules/ErrorState.tsx)
+│   │   │   │   ├── [LoadingState.tsx](./doi/src/components/molecules/LoadingState.tsx)
+│   │   │   │   ├── [RankingList.tsx](./doi/src/components/molecules/RankingList.tsx)
+│   │   │   │   ├── [SearchResults.tsx](./doi/src/components/molecules/SearchResults.tsx)
+│   │   │   │   └── [YearChart.tsx](./doi/src/components/molecules/YearChart.tsx)
+│   │   │   ├── organisms/
+│   │   │   │   └── [Header.tsx](./doi/src/components/organisms/Header.tsx)
+│   │   │   └── templates/
+│   │   │       ├── [AboutTemplate.tsx](./doi/src/components/templates/AboutTemplate.tsx)
+│   │   │       ├── [DownloadsTemplate.tsx](./doi/src/components/templates/DownloadsTemplate.tsx)
+│   │   │       ├── [ErrorTemplate.tsx](./doi/src/components/templates/ErrorTemplate.tsx)
+│   │   │       ├── [HomeTemplate.tsx](./doi/src/components/templates/HomeTemplate.tsx)
+│   │   │       └── [VersionTemplate.tsx](./doi/src/components/templates/VersionTemplate.tsx)
+│   │   ├── content/
+│   │   │   ├── [about.ts](./doi/src/content/about.ts)
+│   │   │   ├── [download.ts](./doi/src/content/download.ts)
+│   │   │   └── [version.ts](./doi/src/content/version.ts)
+│   │   ├── lib/
+│   │   │   ├── __tests__/
+│   │   │   │   ├── [abstract.test.ts](./doi/src/lib/__tests__/abstract.test.ts)
+│   │   │   │   ├── [queries.test.ts](./doi/src/lib/__tests__/queries.test.ts)
+│   │   │   │   └── [sqlite.test.ts](./doi/src/lib/__tests__/sqlite.test.ts)
+│   │   │   ├── stubs/
+│   │   │   │   └── [node-builtins.ts](./doi/src/lib/stubs/node-builtins.ts)
+│   │   │   ├── [abstract.ts](./doi/src/lib/abstract.ts)
+│   │   │   ├── [queries.ts](./doi/src/lib/queries.ts)
+│   │   │   └── [sqlite.ts](./doi/src/lib/sqlite.ts)
+│   │   ├── providers/
+│   │   │   ├── [DoiProvider.tsx](./doi/src/providers/DoiProvider.tsx)
+│   │   │   └── [Shell.tsx](./doi/src/providers/Shell.tsx)
+│   │   ├── styles/
+│   │   │   ├── [base.css](./doi/src/styles/base.css)
+│   │   │   ├── [globals.css](./doi/src/styles/globals.css)
+│   │   │   └── [themes.css](./doi/src/styles/themes.css)
+│   │   └── types/
+│   │       └── [doi.ts](./doi/src/types/doi.ts)
+│   ├── src-tauri/
+│   │   ├── capabilities/
+│   │   │   └── [default.json](./doi/src-tauri/capabilities/default.json)
+│   │   ├── icons/
+│   │   │   ├── android/
+│   │   │   │   ├── mipmap-anydpi-v26/
+│   │   │   │   │   └── [ic_launcher.xml](./doi/src-tauri/icons/android/mipmap-anydpi-v26/ic_launcher.xml)
+│   │   │   │   ├── mipmap-hdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./doi/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./doi/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./doi/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-mdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./doi/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./doi/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./doi/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./doi/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./doi/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./doi/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xxhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./doi/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./doi/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./doi/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xxxhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./doi/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./doi/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./doi/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png)
+│   │   │   │   └── values/
+│   │   │   │       └── [ic_launcher_background.xml](./doi/src-tauri/icons/android/values/ic_launcher_background.xml)
+│   │   │   ├── ios/
+│   │   │   │   ├── [AppIcon-20x20@1x.png](./doi/src-tauri/icons/ios/AppIcon-20x20@1x.png)
+│   │   │   │   ├── [AppIcon-20x20@2x-1.png](./doi/src-tauri/icons/ios/AppIcon-20x20@2x-1.png)
+│   │   │   │   ├── [AppIcon-20x20@2x.png](./doi/src-tauri/icons/ios/AppIcon-20x20@2x.png)
+│   │   │   │   ├── [AppIcon-20x20@3x.png](./doi/src-tauri/icons/ios/AppIcon-20x20@3x.png)
+│   │   │   │   ├── [AppIcon-29x29@1x.png](./doi/src-tauri/icons/ios/AppIcon-29x29@1x.png)
+│   │   │   │   ├── [AppIcon-29x29@2x-1.png](./doi/src-tauri/icons/ios/AppIcon-29x29@2x-1.png)
+│   │   │   │   ├── [AppIcon-29x29@2x.png](./doi/src-tauri/icons/ios/AppIcon-29x29@2x.png)
+│   │   │   │   ├── [AppIcon-29x29@3x.png](./doi/src-tauri/icons/ios/AppIcon-29x29@3x.png)
+│   │   │   │   ├── [AppIcon-40x40@1x.png](./doi/src-tauri/icons/ios/AppIcon-40x40@1x.png)
+│   │   │   │   ├── [AppIcon-40x40@2x-1.png](./doi/src-tauri/icons/ios/AppIcon-40x40@2x-1.png)
+│   │   │   │   ├── [AppIcon-40x40@2x.png](./doi/src-tauri/icons/ios/AppIcon-40x40@2x.png)
+│   │   │   │   ├── [AppIcon-40x40@3x.png](./doi/src-tauri/icons/ios/AppIcon-40x40@3x.png)
+│   │   │   │   ├── [AppIcon-512@2x.png](./doi/src-tauri/icons/ios/AppIcon-512@2x.png)
+│   │   │   │   ├── [AppIcon-60x60@2x.png](./doi/src-tauri/icons/ios/AppIcon-60x60@2x.png)
+│   │   │   │   ├── [AppIcon-60x60@3x.png](./doi/src-tauri/icons/ios/AppIcon-60x60@3x.png)
+│   │   │   │   ├── [AppIcon-76x76@1x.png](./doi/src-tauri/icons/ios/AppIcon-76x76@1x.png)
+│   │   │   │   ├── [AppIcon-76x76@2x.png](./doi/src-tauri/icons/ios/AppIcon-76x76@2x.png)
+│   │   │   │   └── [AppIcon-83.5x83.5@2x.png](./doi/src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png)
+│   │   │   ├── [128x128.png](./doi/src-tauri/icons/128x128.png)
+│   │   │   ├── [128x128@2x.png](./doi/src-tauri/icons/128x128@2x.png)
+│   │   │   ├── [32x32.png](./doi/src-tauri/icons/32x32.png)
+│   │   │   ├── [64x64.png](./doi/src-tauri/icons/64x64.png)
+│   │   │   ├── [Square107x107Logo.png](./doi/src-tauri/icons/Square107x107Logo.png)
+│   │   │   ├── [Square142x142Logo.png](./doi/src-tauri/icons/Square142x142Logo.png)
+│   │   │   ├── [Square150x150Logo.png](./doi/src-tauri/icons/Square150x150Logo.png)
+│   │   │   ├── [Square284x284Logo.png](./doi/src-tauri/icons/Square284x284Logo.png)
+│   │   │   ├── [Square30x30Logo.png](./doi/src-tauri/icons/Square30x30Logo.png)
+│   │   │   ├── [Square310x310Logo.png](./doi/src-tauri/icons/Square310x310Logo.png)
+│   │   │   ├── [Square44x44Logo.png](./doi/src-tauri/icons/Square44x44Logo.png)
+│   │   │   ├── [Square71x71Logo.png](./doi/src-tauri/icons/Square71x71Logo.png)
+│   │   │   ├── [Square89x89Logo.png](./doi/src-tauri/icons/Square89x89Logo.png)
+│   │   │   ├── [StoreLogo.png](./doi/src-tauri/icons/StoreLogo.png)
+│   │   │   ├── [create-icons.sh](./doi/src-tauri/icons/create-icons.sh)
+│   │   │   ├── [icon.icns](./doi/src-tauri/icons/icon.icns)
+│   │   │   ├── [icon.ico](./doi/src-tauri/icons/icon.ico)
+│   │   │   └── [icon.png](./doi/src-tauri/icons/icon.png)
+│   │   ├── src/
+│   │   │   ├── [lib.rs](./doi/src-tauri/src/lib.rs)
+│   │   │   └── [main.rs](./doi/src-tauri/src/main.rs)
+│   │   ├── [Cargo.lock](./doi/src-tauri/Cargo.lock)
+│   │   ├── [Cargo.toml](./doi/src-tauri/Cargo.toml)
+│   │   ├── [build.rs](./doi/src-tauri/build.rs)
+│   │   └── [tauri.conf.json](./doi/src-tauri/tauri.conf.json)
+│   ├── [AGENTS.md](./doi/AGENTS.md)
+│   ├── [eslint.config.mts](./doi/eslint.config.mts)
+│   ├── [jest.config.ts](./doi/jest.config.ts)
+│   ├── [jest.setup.ts](./doi/jest.setup.ts)
+│   ├── [next.config.ts](./doi/next.config.ts)
+│   ├── [package.json](./doi/package.json)
+│   ├── [playwright.config.ts](./doi/playwright.config.ts)
+│   ├── [postcss.config.mjs](./doi/postcss.config.mjs)
+│   └── [tsconfig.json](./doi/tsconfig.json)
 ├── economics/
 │   ├── docs/
 │   │   ├── [ARCHITECTURE.md](./economics/docs/ARCHITECTURE.md)
@@ -1822,11 +2035,9 @@
 │   │   │   ├── atoms/
 │   │   │   │   ├── __tests__/
 │   │   │   │   │   ├── [Badge.test.tsx](./history/src/components/atoms/__tests__/Badge.test.tsx)
-│   │   │   │   │   ├── [OfflineBadge.test.tsx](./history/src/components/atoms/__tests__/OfflineBadge.test.tsx)
 │   │   │   │   │   └── [ThemeToggle.test.tsx](./history/src/components/atoms/__tests__/ThemeToggle.test.tsx)
 │   │   │   │   ├── [Badge.tsx](./history/src/components/atoms/Badge.tsx)
 │   │   │   │   ├── [Button.tsx](./history/src/components/atoms/Button.tsx)
-│   │   │   │   ├── [OfflineBadge.tsx](./history/src/components/atoms/OfflineBadge.tsx)
 │   │   │   │   └── [ThemeToggle.tsx](./history/src/components/atoms/ThemeToggle.tsx)
 │   │   │   ├── organisms/
 │   │   │   │   ├── __tests__/
@@ -1923,24 +2134,17 @@
 │   │   │       └── [types.ts](./history/src/games/through-the-years/types.ts)
 │   │   ├── hooks/
 │   │   │   ├── __tests__/
-│   │   │   │   ├── [useOffline.test.ts](./history/src/hooks/__tests__/useOffline.test.ts)
-│   │   │   │   ├── [useProgress.test.ts](./history/src/hooks/__tests__/useProgress.test.ts)
 │   │   │   │   ├── [useSWRegister.test.ts](./history/src/hooks/__tests__/useSWRegister.test.ts)
 │   │   │   │   ├── [useTheme.test.ts](./history/src/hooks/__tests__/useTheme.test.ts)
 │   │   │   │   └── [useUpdater.test.ts](./history/src/hooks/__tests__/useUpdater.test.ts)
-│   │   │   ├── [useOffline.ts](./history/src/hooks/useOffline.ts)
-│   │   │   ├── [useProgress.ts](./history/src/hooks/useProgress.ts)
 │   │   │   ├── [useSWRegister.ts](./history/src/hooks/useSWRegister.ts)
 │   │   │   ├── [useTheme.ts](./history/src/hooks/useTheme.ts)
 │   │   │   └── [useUpdater.ts](./history/src/hooks/useUpdater.ts)
 │   │   ├── lib/
-│   │   │   ├── __tests__/
-│   │   │   │   └── [progress.test.ts](./history/src/lib/__tests__/progress.test.ts)
-│   │   │   ├── native/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   └── [index.test.ts](./history/src/lib/native/__tests__/index.test.ts)
-│   │   │   │   └── [index.ts](./history/src/lib/native/index.ts)
-│   │   │   └── [progress.ts](./history/src/lib/progress.ts)
+│   │   │   └── native/
+│   │   │       ├── __tests__/
+│   │   │       │   └── [index.test.ts](./history/src/lib/native/__tests__/index.test.ts)
+│   │   │       └── [index.ts](./history/src/lib/native/index.ts)
 │   │   ├── providers/
 │   │   │   ├── __tests__/
 │   │   │   │   ├── [NativeProvider.test.tsx](./history/src/providers/__tests__/NativeProvider.test.tsx)
@@ -2059,6 +2263,22 @@
 │   │   ├── [home.spec.ts](./lingo/e2e/home.spec.ts)
 │   │   └── [version.spec.ts](./lingo/e2e/version.spec.ts)
 │   ├── public/
+│   │   ├── audio/
+│   │   │   ├── 3/
+│   │   │   │   ├── [a.mp3](./lingo/public/audio/3/a.mp3)
+│   │   │   │   ├── [as.mp3](./lingo/public/audio/3/as.mp3)
+│   │   │   │   ├── [b.mp3](./lingo/public/audio/3/b.mp3)
+│   │   │   │   ├── [c.mp3](./lingo/public/audio/3/c.mp3)
+│   │   │   │   ├── [cs.mp3](./lingo/public/audio/3/cs.mp3)
+│   │   │   │   ├── [d.mp3](./lingo/public/audio/3/d.mp3)
+│   │   │   │   ├── [ds.mp3](./lingo/public/audio/3/ds.mp3)
+│   │   │   │   ├── [e.mp3](./lingo/public/audio/3/e.mp3)
+│   │   │   │   ├── [f.mp3](./lingo/public/audio/3/f.mp3)
+│   │   │   │   ├── [fs.mp3](./lingo/public/audio/3/fs.mp3)
+│   │   │   │   ├── [g.mp3](./lingo/public/audio/3/g.mp3)
+│   │   │   │   └── [gs.mp3](./lingo/public/audio/3/gs.mp3)
+│   │   │   └── 4/
+│   │   │       └── [c.mp3](./lingo/public/audio/4/c.mp3)
 │   │   ├── data/
 │   │   │   └── [words.json](./lingo/public/data/words.json)
 │   │   ├── icons/
@@ -2119,6 +2339,10 @@
 │   │   │   │   │   ├── __tests__/
 │   │   │   │   │   │   └── [page.test.tsx](./lingo/src/app/(games)/flashcards/__tests__/page.test.tsx)
 │   │   │   │   │   └── [page.tsx](./lingo/src/app/(games)/flashcards/page.tsx)
+│   │   │   │   ├── music/
+│   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   └── [page.test.tsx](./lingo/src/app/(games)/music/__tests__/page.test.tsx)
+│   │   │   │   │   └── [page.tsx](./lingo/src/app/(games)/music/page.tsx)
 │   │   │   │   └── sign/
 │   │   │   │       └── [page.tsx](./lingo/src/app/(games)/sign/page.tsx)
 │   │   │   ├── (info)/
@@ -2196,6 +2420,21 @@
 │   │   │   │   ├── [flags.ts](./lingo/src/games/flashcards/flags.ts)
 │   │   │   │   ├── [index.tsx](./lingo/src/games/flashcards/index.tsx)
 │   │   │   │   └── [utils.ts](./lingo/src/games/flashcards/utils.ts)
+│   │   │   ├── music/
+│   │   │   │   ├── __tests__/
+│   │   │   │   │   ├── [index.test.tsx](./lingo/src/games/music/__tests__/index.test.tsx)
+│   │   │   │   │   ├── [keyClasses.test.ts](./lingo/src/games/music/__tests__/keyClasses.test.ts)
+│   │   │   │   │   ├── [useAudio.test.ts](./lingo/src/games/music/__tests__/useAudio.test.ts)
+│   │   │   │   │   ├── [useGame.test.ts](./lingo/src/games/music/__tests__/useGame.test.ts)
+│   │   │   │   │   └── [useSequence.test.ts](./lingo/src/games/music/__tests__/useSequence.test.ts)
+│   │   │   │   ├── [constants.ts](./lingo/src/games/music/constants.ts)
+│   │   │   │   ├── [index.tsx](./lingo/src/games/music/index.tsx)
+│   │   │   │   ├── [keyClasses.ts](./lingo/src/games/music/keyClasses.ts)
+│   │   │   │   ├── [twinkle-twinkle-little-star.ts](./lingo/src/games/music/twinkle-twinkle-little-star.ts)
+│   │   │   │   ├── [useAudio.ts](./lingo/src/games/music/useAudio.ts)
+│   │   │   │   ├── [useGame.ts](./lingo/src/games/music/useGame.ts)
+│   │   │   │   ├── [useMusicGame.ts](./lingo/src/games/music/useMusicGame.ts)
+│   │   │   │   └── [useSequence.ts](./lingo/src/games/music/useSequence.ts)
 │   │   │   └── sign/
 │   │   │       ├── __tests__/
 │   │   │       │   ├── [index.test.tsx](./lingo/src/games/sign/__tests__/index.test.tsx)
@@ -2319,279 +2558,8 @@
 │   ├── [playwright.config.ts](./lingo/playwright.config.ts)
 │   ├── [postcss.config.mjs](./lingo/postcss.config.mjs)
 │   └── [tsconfig.json](./lingo/tsconfig.json)
-├── music/
-│   ├── docs/
-│   │   ├── [ARCHITECTURE.md](./music/docs/ARCHITECTURE.md)
-│   │   ├── [CONTRIBUTING.md](./music/docs/CONTRIBUTING.md)
-│   │   ├── [DOWNLOADS.md](./music/docs/DOWNLOADS.md)
-│   │   ├── [PACKAGING.md](./music/docs/PACKAGING.md)
-│   │   └── [ROADMAP.md](./music/docs/ROADMAP.md)
-│   ├── e2e/
-│   │   ├── screenshots/
-│   │   │   ├── [about.png](./music/e2e/screenshots/about.png)
-│   │   │   ├── [downloads.png](./music/e2e/screenshots/downloads.png)
-│   │   │   ├── [home.png](./music/e2e/screenshots/home.png)
-│   │   │   └── [version.png](./music/e2e/screenshots/version.png)
-│   │   ├── [about.spec.ts](./music/e2e/about.spec.ts)
-│   │   ├── [downloads.spec.ts](./music/e2e/downloads.spec.ts)
-│   │   ├── [home.spec.ts](./music/e2e/home.spec.ts)
-│   │   └── [version.spec.ts](./music/e2e/version.spec.ts)
-│   ├── public/
-│   │   ├── audio/
-│   │   │   ├── 3/
-│   │   │   │   ├── [a.mp3](./music/public/audio/3/a.mp3)
-│   │   │   │   ├── [as.mp3](./music/public/audio/3/as.mp3)
-│   │   │   │   ├── [b.mp3](./music/public/audio/3/b.mp3)
-│   │   │   │   ├── [c.mp3](./music/public/audio/3/c.mp3)
-│   │   │   │   ├── [cs.mp3](./music/public/audio/3/cs.mp3)
-│   │   │   │   ├── [d.mp3](./music/public/audio/3/d.mp3)
-│   │   │   │   ├── [ds.mp3](./music/public/audio/3/ds.mp3)
-│   │   │   │   ├── [e.mp3](./music/public/audio/3/e.mp3)
-│   │   │   │   ├── [f.mp3](./music/public/audio/3/f.mp3)
-│   │   │   │   ├── [fs.mp3](./music/public/audio/3/fs.mp3)
-│   │   │   │   ├── [g.mp3](./music/public/audio/3/g.mp3)
-│   │   │   │   └── [gs.mp3](./music/public/audio/3/gs.mp3)
-│   │   │   └── 4/
-│   │   │       └── [c.mp3](./music/public/audio/4/c.mp3)
-│   │   ├── icons/
-│   │   │   ├── [icon-128x128.png](./music/public/icons/icon-128x128.png)
-│   │   │   ├── [icon-144x144.png](./music/public/icons/icon-144x144.png)
-│   │   │   ├── [icon-152x152.png](./music/public/icons/icon-152x152.png)
-│   │   │   ├── [icon-16x16.png](./music/public/icons/icon-16x16.png)
-│   │   │   ├── [icon-180x180.png](./music/public/icons/icon-180x180.png)
-│   │   │   ├── [icon-192x192.png](./music/public/icons/icon-192x192.png)
-│   │   │   ├── [icon-256x256.png](./music/public/icons/icon-256x256.png)
-│   │   │   ├── [icon-32x32.png](./music/public/icons/icon-32x32.png)
-│   │   │   ├── [icon-384x384.png](./music/public/icons/icon-384x384.png)
-│   │   │   ├── [icon-48x48.png](./music/public/icons/icon-48x48.png)
-│   │   │   ├── [icon-512x512.png](./music/public/icons/icon-512x512.png)
-│   │   │   ├── [icon-64x64.png](./music/public/icons/icon-64x64.png)
-│   │   │   ├── [icon-72x72.png](./music/public/icons/icon-72x72.png)
-│   │   │   ├── [icon-96x96.png](./music/public/icons/icon-96x96.png)
-│   │   │   └── [icon.svg](./music/public/icons/icon.svg)
-│   │   ├── [apple-touch-icon.png](./music/public/apple-touch-icon.png)
-│   │   ├── [favicon.ico](./music/public/favicon.ico)
-│   │   ├── [manifest.json](./music/public/manifest.json)
-│   │   ├── [robots.txt](./music/public/robots.txt)
-│   │   ├── [sitemap.xml](./music/public/sitemap.xml)
-│   │   └── [sw.js](./music/public/sw.js)
-│   ├── src/
-│   │   ├── app/
-│   │   │   ├── (auth)/
-│   │   │   │   ├── forget-password/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./music/src/app/(auth)/forget-password/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./music/src/app/(auth)/forget-password/page.tsx)
-│   │   │   │   ├── profile/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./music/src/app/(auth)/profile/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./music/src/app/(auth)/profile/page.tsx)
-│   │   │   │   ├── reset-password/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./music/src/app/(auth)/reset-password/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./music/src/app/(auth)/reset-password/page.tsx)
-│   │   │   │   ├── sign-in/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./music/src/app/(auth)/sign-in/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./music/src/app/(auth)/sign-in/page.tsx)
-│   │   │   │   └── sign-up/
-│   │   │   │       ├── __tests__/
-│   │   │   │       │   └── [page.test.tsx](./music/src/app/(auth)/sign-up/__tests__/page.test.tsx)
-│   │   │   │       └── [page.tsx](./music/src/app/(auth)/sign-up/page.tsx)
-│   │   │   ├── (games)/
-│   │   │   │   └── pitch/
-│   │   │   │       ├── __tests__/
-│   │   │   │       │   └── [page.test.tsx](./music/src/app/(games)/pitch/__tests__/page.test.tsx)
-│   │   │   │       └── [page.tsx](./music/src/app/(games)/pitch/page.tsx)
-│   │   │   ├── (info)/
-│   │   │   │   ├── about/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./music/src/app/(info)/about/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./music/src/app/(info)/about/page.tsx)
-│   │   │   │   ├── downloads/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./music/src/app/(info)/downloads/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./music/src/app/(info)/downloads/page.tsx)
-│   │   │   │   └── version/
-│   │   │   │       ├── __tests__/
-│   │   │   │       │   └── [page.test.tsx](./music/src/app/(info)/version/__tests__/page.test.tsx)
-│   │   │   │       └── [page.tsx](./music/src/app/(info)/version/page.tsx)
-│   │   │   ├── __tests__/
-│   │   │   │   ├── [error.test.tsx](./music/src/app/__tests__/error.test.tsx)
-│   │   │   │   ├── [forbidden.test.tsx](./music/src/app/__tests__/forbidden.test.tsx)
-│   │   │   │   ├── [global-error.test.tsx](./music/src/app/__tests__/global-error.test.tsx)
-│   │   │   │   ├── [layout.test.tsx](./music/src/app/__tests__/layout.test.tsx)
-│   │   │   │   ├── [loading.test.tsx](./music/src/app/__tests__/loading.test.tsx)
-│   │   │   │   ├── [not-found.test.tsx](./music/src/app/__tests__/not-found.test.tsx)
-│   │   │   │   ├── [page.test.tsx](./music/src/app/__tests__/page.test.tsx)
-│   │   │   │   ├── [robots.test.ts](./music/src/app/__tests__/robots.test.ts)
-│   │   │   │   └── [unauthorized.test.tsx](./music/src/app/__tests__/unauthorized.test.tsx)
-│   │   │   ├── [default.tsx](./music/src/app/default.tsx)
-│   │   │   ├── [error.tsx](./music/src/app/error.tsx)
-│   │   │   ├── [favicon.ico](./music/src/app/favicon.ico)
-│   │   │   ├── [forbidden.tsx](./music/src/app/forbidden.tsx)
-│   │   │   ├── [global-error.tsx](./music/src/app/global-error.tsx)
-│   │   │   ├── [layout.tsx](./music/src/app/layout.tsx)
-│   │   │   ├── [loading.tsx](./music/src/app/loading.tsx)
-│   │   │   ├── [not-found.tsx](./music/src/app/not-found.tsx)
-│   │   │   ├── [page.tsx](./music/src/app/page.tsx)
-│   │   │   ├── [robots.ts](./music/src/app/robots.ts)
-│   │   │   └── [unauthorized.tsx](./music/src/app/unauthorized.tsx)
-│   │   ├── components/
-│   │   │   ├── atoms/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   ├── [Badge.test.tsx](./music/src/components/atoms/__tests__/Badge.test.tsx)
-│   │   │   │   │   └── [ThemeToggle.test.tsx](./music/src/components/atoms/__tests__/ThemeToggle.test.tsx)
-│   │   │   │   ├── [Badge.tsx](./music/src/components/atoms/Badge.tsx)
-│   │   │   │   ├── [Button.tsx](./music/src/components/atoms/Button.tsx)
-│   │   │   │   └── [ThemeToggle.tsx](./music/src/components/atoms/ThemeToggle.tsx)
-│   │   │   ├── organisms/
-│   │   │   │   └── [Header.tsx](./music/src/components/organisms/Header.tsx)
-│   │   │   └── templates/
-│   │   │       ├── __tests__/
-│   │   │       │   ├── [AboutTemplate.test.tsx](./music/src/components/templates/__tests__/AboutTemplate.test.tsx)
-│   │   │       │   ├── [DownloadsTemplate.test.tsx](./music/src/components/templates/__tests__/DownloadsTemplate.test.tsx)
-│   │   │       │   ├── [ErrorTemplate.test.tsx](./music/src/components/templates/__tests__/ErrorTemplate.test.tsx)
-│   │   │       │   ├── [HomeTemplate.test.tsx](./music/src/components/templates/__tests__/HomeTemplate.test.tsx)
-│   │   │       │   └── [VersionTemplate.test.tsx](./music/src/components/templates/__tests__/VersionTemplate.test.tsx)
-│   │   │       ├── [AboutTemplate.tsx](./music/src/components/templates/AboutTemplate.tsx)
-│   │   │       ├── [DownloadsTemplate.tsx](./music/src/components/templates/DownloadsTemplate.tsx)
-│   │   │       ├── [ErrorTemplate.tsx](./music/src/components/templates/ErrorTemplate.tsx)
-│   │   │       ├── [HomeTemplate.tsx](./music/src/components/templates/HomeTemplate.tsx)
-│   │   │       └── [VersionTemplate.tsx](./music/src/components/templates/VersionTemplate.tsx)
-│   │   ├── content/
-│   │   │   ├── [about.ts](./music/src/content/about.ts)
-│   │   │   ├── [download.ts](./music/src/content/download.ts)
-│   │   │   └── [version.ts](./music/src/content/version.ts)
-│   │   ├── games/
-│   │   │   └── pitch/
-│   │   │       ├── __tests__/
-│   │   │       │   ├── [index.test.tsx](./music/src/games/pitch/__tests__/index.test.tsx)
-│   │   │       │   ├── [keyClasses.test.ts](./music/src/games/pitch/__tests__/keyClasses.test.ts)
-│   │   │       │   ├── [useAudio.test.ts](./music/src/games/pitch/__tests__/useAudio.test.ts)
-│   │   │       │   ├── [useGame.test.ts](./music/src/games/pitch/__tests__/useGame.test.ts)
-│   │   │       │   └── [useSequence.test.ts](./music/src/games/pitch/__tests__/useSequence.test.ts)
-│   │   │       ├── [constants.ts](./music/src/games/pitch/constants.ts)
-│   │   │       ├── [index.tsx](./music/src/games/pitch/index.tsx)
-│   │   │       ├── [keyClasses.ts](./music/src/games/pitch/keyClasses.ts)
-│   │   │       ├── [useAudio.ts](./music/src/games/pitch/useAudio.ts)
-│   │   │       ├── [useGame.ts](./music/src/games/pitch/useGame.ts)
-│   │   │       ├── [usePitchGame.ts](./music/src/games/pitch/usePitchGame.ts)
-│   │   │       └── [useSequence.ts](./music/src/games/pitch/useSequence.ts)
-│   │   ├── hooks/
-│   │   │   ├── __tests__/
-│   │   │   │   ├── [useSWRegister.test.ts](./music/src/hooks/__tests__/useSWRegister.test.ts)
-│   │   │   │   ├── [useTheme.test.ts](./music/src/hooks/__tests__/useTheme.test.ts)
-│   │   │   │   └── [useUpdater.test.ts](./music/src/hooks/__tests__/useUpdater.test.ts)
-│   │   │   ├── [useSWRegister.ts](./music/src/hooks/useSWRegister.ts)
-│   │   │   ├── [useTheme.ts](./music/src/hooks/useTheme.ts)
-│   │   │   └── [useUpdater.ts](./music/src/hooks/useUpdater.ts)
-│   │   ├── lib/
-│   │   │   ├── __tests__/
-│   │   │   │   └── [native.test.ts](./music/src/lib/__tests__/native.test.ts)
-│   │   │   └── [native.ts](./music/src/lib/native.ts)
-│   │   ├── providers/
-│   │   │   ├── __tests__/
-│   │   │   │   ├── [NativeProvider.test.tsx](./music/src/providers/__tests__/NativeProvider.test.tsx)
-│   │   │   │   ├── [QueryProvider.test.tsx](./music/src/providers/__tests__/QueryProvider.test.tsx)
-│   │   │   │   └── [SWProvider.test.tsx](./music/src/providers/__tests__/SWProvider.test.tsx)
-│   │   │   ├── [NativeProvider.tsx](./music/src/providers/NativeProvider.tsx)
-│   │   │   ├── [QueryProvider.tsx](./music/src/providers/QueryProvider.tsx)
-│   │   │   └── [SWProvider.tsx](./music/src/providers/SWProvider.tsx)
-│   │   └── styles/
-│   │       ├── [base.css](./music/src/styles/base.css)
-│   │       ├── [globals.css](./music/src/styles/globals.css)
-│   │       └── [themes.css](./music/src/styles/themes.css)
-│   ├── src-tauri/
-│   │   ├── capabilities/
-│   │   │   └── [default.json](./music/src-tauri/capabilities/default.json)
-│   │   ├── icons/
-│   │   │   ├── android/
-│   │   │   │   ├── mipmap-anydpi-v26/
-│   │   │   │   │   └── [ic_launcher.xml](./music/src-tauri/icons/android/mipmap-anydpi-v26/ic_launcher.xml)
-│   │   │   │   ├── mipmap-hdpi/
-│   │   │   │   │   ├── [ic_launcher.png](./music/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png)
-│   │   │   │   │   ├── [ic_launcher_foreground.png](./music/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png)
-│   │   │   │   │   └── [ic_launcher_round.png](./music/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png)
-│   │   │   │   ├── mipmap-mdpi/
-│   │   │   │   │   ├── [ic_launcher.png](./music/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png)
-│   │   │   │   │   ├── [ic_launcher_foreground.png](./music/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png)
-│   │   │   │   │   └── [ic_launcher_round.png](./music/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png)
-│   │   │   │   ├── mipmap-xhdpi/
-│   │   │   │   │   ├── [ic_launcher.png](./music/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png)
-│   │   │   │   │   ├── [ic_launcher_foreground.png](./music/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   └── [ic_launcher_round.png](./music/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png)
-│   │   │   │   ├── mipmap-xxhdpi/
-│   │   │   │   │   ├── [ic_launcher.png](./music/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png)
-│   │   │   │   │   ├── [ic_launcher_foreground.png](./music/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   └── [ic_launcher_round.png](./music/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png)
-│   │   │   │   ├── mipmap-xxxhdpi/
-│   │   │   │   │   ├── [ic_launcher.png](./music/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png)
-│   │   │   │   │   ├── [ic_launcher_foreground.png](./music/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png)
-│   │   │   │   │   └── [ic_launcher_round.png](./music/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png)
-│   │   │   │   └── values/
-│   │   │   │       └── [ic_launcher_background.xml](./music/src-tauri/icons/android/values/ic_launcher_background.xml)
-│   │   │   ├── ios/
-│   │   │   │   ├── [AppIcon-20x20@1x.png](./music/src-tauri/icons/ios/AppIcon-20x20@1x.png)
-│   │   │   │   ├── [AppIcon-20x20@2x-1.png](./music/src-tauri/icons/ios/AppIcon-20x20@2x-1.png)
-│   │   │   │   ├── [AppIcon-20x20@2x.png](./music/src-tauri/icons/ios/AppIcon-20x20@2x.png)
-│   │   │   │   ├── [AppIcon-20x20@3x.png](./music/src-tauri/icons/ios/AppIcon-20x20@3x.png)
-│   │   │   │   ├── [AppIcon-29x29@1x.png](./music/src-tauri/icons/ios/AppIcon-29x29@1x.png)
-│   │   │   │   ├── [AppIcon-29x29@2x-1.png](./music/src-tauri/icons/ios/AppIcon-29x29@2x-1.png)
-│   │   │   │   ├── [AppIcon-29x29@2x.png](./music/src-tauri/icons/ios/AppIcon-29x29@2x.png)
-│   │   │   │   ├── [AppIcon-29x29@3x.png](./music/src-tauri/icons/ios/AppIcon-29x29@3x.png)
-│   │   │   │   ├── [AppIcon-40x40@1x.png](./music/src-tauri/icons/ios/AppIcon-40x40@1x.png)
-│   │   │   │   ├── [AppIcon-40x40@2x-1.png](./music/src-tauri/icons/ios/AppIcon-40x40@2x-1.png)
-│   │   │   │   ├── [AppIcon-40x40@2x.png](./music/src-tauri/icons/ios/AppIcon-40x40@2x.png)
-│   │   │   │   ├── [AppIcon-40x40@3x.png](./music/src-tauri/icons/ios/AppIcon-40x40@3x.png)
-│   │   │   │   ├── [AppIcon-512@2x.png](./music/src-tauri/icons/ios/AppIcon-512@2x.png)
-│   │   │   │   ├── [AppIcon-60x60@2x.png](./music/src-tauri/icons/ios/AppIcon-60x60@2x.png)
-│   │   │   │   ├── [AppIcon-60x60@3x.png](./music/src-tauri/icons/ios/AppIcon-60x60@3x.png)
-│   │   │   │   ├── [AppIcon-76x76@1x.png](./music/src-tauri/icons/ios/AppIcon-76x76@1x.png)
-│   │   │   │   ├── [AppIcon-76x76@2x.png](./music/src-tauri/icons/ios/AppIcon-76x76@2x.png)
-│   │   │   │   └── [AppIcon-83.5x83.5@2x.png](./music/src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png)
-│   │   │   ├── [128x128.png](./music/src-tauri/icons/128x128.png)
-│   │   │   ├── [128x128@2x.png](./music/src-tauri/icons/128x128@2x.png)
-│   │   │   ├── [256x256.png](./music/src-tauri/icons/256x256.png)
-│   │   │   ├── [32x32.png](./music/src-tauri/icons/32x32.png)
-│   │   │   ├── [64x64.png](./music/src-tauri/icons/64x64.png)
-│   │   │   ├── [Square107x107Logo.png](./music/src-tauri/icons/Square107x107Logo.png)
-│   │   │   ├── [Square142x142Logo.png](./music/src-tauri/icons/Square142x142Logo.png)
-│   │   │   ├── [Square150x150Logo.png](./music/src-tauri/icons/Square150x150Logo.png)
-│   │   │   ├── [Square284x284Logo.png](./music/src-tauri/icons/Square284x284Logo.png)
-│   │   │   ├── [Square30x30Logo.png](./music/src-tauri/icons/Square30x30Logo.png)
-│   │   │   ├── [Square310x310Logo.png](./music/src-tauri/icons/Square310x310Logo.png)
-│   │   │   ├── [Square44x44Logo.png](./music/src-tauri/icons/Square44x44Logo.png)
-│   │   │   ├── [Square71x71Logo.png](./music/src-tauri/icons/Square71x71Logo.png)
-│   │   │   ├── [Square89x89Logo.png](./music/src-tauri/icons/Square89x89Logo.png)
-│   │   │   ├── [StoreLogo.png](./music/src-tauri/icons/StoreLogo.png)
-│   │   │   ├── [create-icons.sh](./music/src-tauri/icons/create-icons.sh)
-│   │   │   ├── [icon.icns](./music/src-tauri/icons/icon.icns)
-│   │   │   ├── [icon.ico](./music/src-tauri/icons/icon.ico)
-│   │   │   └── [icon.png](./music/src-tauri/icons/icon.png)
-│   │   ├── src/
-│   │   │   ├── [lib.rs](./music/src-tauri/src/lib.rs)
-│   │   │   └── [main.rs](./music/src-tauri/src/main.rs)
-│   │   ├── [Cargo.lock](./music/src-tauri/Cargo.lock)
-│   │   ├── [Cargo.toml](./music/src-tauri/Cargo.toml)
-│   │   ├── [build.rs](./music/src-tauri/build.rs)
-│   │   └── [tauri.conf.json](./music/src-tauri/tauri.conf.json)
-│   ├── [AGENTS.md](./music/AGENTS.md)
-│   ├── [Dockerfile](./music/Dockerfile)
-│   ├── [LICENSE](./music/LICENSE)
-│   ├── [README.md](./music/README.md)
-│   ├── [TREE.md](./music/TREE.md)
-│   ├── [docker-compose.yaml](./music/docker-compose.yaml)
-│   ├── [eslint.config.mts](./music/eslint.config.mts)
-│   ├── [jest.config.ts](./music/jest.config.ts)
-│   ├── [jest.setup.ts](./music/jest.setup.ts)
-│   ├── [next.config.ts](./music/next.config.ts)
-│   ├── [package.json](./music/package.json)
-│   ├── [playwright.config.ts](./music/playwright.config.ts)
-│   ├── [postcss.config.mjs](./music/postcss.config.mjs)
-│   └── [tsconfig.json](./music/tsconfig.json)
 ├── [README.md](./README.md)
 └── [TREE.md](./TREE.md)
 ```
 
-728 directories, 1863 files
+721 directories, 1838 files

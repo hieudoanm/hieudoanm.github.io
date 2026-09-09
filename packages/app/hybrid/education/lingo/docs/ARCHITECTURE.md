@@ -16,11 +16,13 @@
 
 ```
 src/
-├── app/        # Routes: home hub, three tools, (info) group, error shells
+├── app/        # Routes: home hub, (games) tools, (info) group, (auth), error shells
 ├── components/
 │   ├── atoms/      # Button, Badge, OfflineBadge, ThemeToggle
-│   ├── features/   # flashcards/, english/, sign/ — index.tsx + utils.ts each
+│   ├── organisms/  # Header
 │   └── templates/  # HomeTemplate, info/error templates
+├── content/    # about/download/version copy
+├── games/      # flashcards/, english/, sign/, music/ — index.tsx + utils.ts each
 ├── hooks/      # useTheme, useProgress, useOffline, useSWRegister, useUpdater
 ├── lib/        # progress.ts, native/, publicPaths.ts
 ├── providers/  # SWProvider > NativeProvider > QueryProvider
@@ -32,9 +34,11 @@ src/
 App Router with static export:
 
 - `/` — home hub (course grid)
-- `/flashcards`, `/english`, `/sign` — one page per tool, rendering its feature
-  directly
+- `/flashcards`, `/english`, `/sign`, `/music` — one page per game under
+  `(games)/`, rendering its feature directly
 - `(info)/about`, `(info)/downloads`, `(info)/version` — info routes
+- `(auth)/sign-in`, `(auth)/sign-up`, `(auth)/forget-password`,
+  `(auth)/reset-password`, `(auth)/profile` — auth routes
 - `error.tsx` / `not-found.tsx` / `forbidden.tsx` / `unauthorized.tsx` /
   `default.tsx` / `global-error.tsx` — error shells
 - `loading.tsx` — route-level loading state
@@ -64,13 +68,28 @@ Three layers, kept deliberately separate:
 
 ## Static Assets & Base Path
 
-`public/data/words.json` and `public/models/sign-model.onnx` are fetched at
+`public/data/words.json`, `public/models/sign-model.onnx` and
+`public/audio/3/*.mp3` (piano note samples for the Music game) are fetched at
 runtime. URLs come from `src/lib/publicPaths.ts`, which prefixes
 `NEXT_PUBLIC_BASE_PATH` (inlined from the same `BASE_PATH` env var that sets
 Next's `basePath`). Consequences:
 
 - Dev/Tauri builds: empty prefix → `/data/words.json`
 - Web deploy (`scripts/post-build.sh`): `/downloads/lingo/data/words.json`
+
+## Music Game
+
+Ear-training piano game migrated from the `music` app under `src/games/music/`:
+
+- `index.tsx` — piano keyboard UI; `useMusicGame` composes the three hooks
+- `useAudio` — plays per-note mp3s from `public/audio/3/` via `PUBLIC_BASE`
+- `useGame` — level + score state; a wrong guess ends the run and persists a
+  high score in `localStorage['music-high-score']`
+- `useSequence` — walks a note sequence (practice scale / Twinkle Twinkle)
+  highlighting each key
+- `constants.ts` — key map and 12 levels; levels 1–7 use white keys only, black
+  keys are introduced in levels 8–12
+- `keyClasses.ts` — pure functions mapping feedback/highlight to key styles
 
 ## Sign Recognition Pipeline
 

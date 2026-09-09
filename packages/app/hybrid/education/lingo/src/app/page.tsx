@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { PiCards, PiGlobe, PiHandWaving } from 'react-icons/pi';
+import { PiCards, PiGlobe, PiHandWaving, PiMusicNote } from 'react-icons/pi';
 import { HomeTemplate } from '@/components/templates/HomeTemplate';
 import { NextPage } from 'next';
 
@@ -23,6 +23,12 @@ const ITEMS = [
     description: 'Real-time hand-sign recognition',
     icon: PiHandWaving,
     href: '/sign/',
+  },
+  {
+    label: 'Music',
+    description: 'Piano note recognition ear-training game',
+    icon: PiMusicNote,
+    href: '/music/',
   },
 ];
 
