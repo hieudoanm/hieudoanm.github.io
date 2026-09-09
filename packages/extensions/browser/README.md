@@ -23,8 +23,7 @@
 | 5   | [GitHub](https://github.com)        | [github/open-link][github-open-link]     |
 | 6   | [Instagram](https://instagram.com)  | [instagram/download][instagram-download] |
 | 7   | [Shopify](https://shopify.com)      | [shopifyx][shopifyx]                     |
-| 8   | Tab                                 | [new-tab][tab-new]                       |
-| 9   | Tab                                 | [tab/snapshot][tab-snapshot]             |
+| 8   | Tab                                 | [tabs][tab-tabs]                             |
 
 [ads-browser]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/ads-blocker
 [block-sites]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/block/sites
@@ -33,8 +32,7 @@
 [github-open-link]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/github/open-link
 [instagram-download]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/instagram/download
 [shopifyx]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/shopifyx
-[tab-new]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/new-tab
-[tab-snapshot]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/snapshot
+[tab-tabs]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/tabs
 
 ## Browsers
 

@@ -444,6 +444,50 @@
         ]
       },
       {
+        "label": "Lingo",
+        "primaryCategory": "Education",
+        "secondaryCategory": "Games",
+        "icon": "PiGraduationCap",
+        "href": "https://hieudoanm.github.io/free/lingo",
+        "version": "latest",
+        "lastUpdated": "2025-01-01",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-lingo-latest/lingo.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-lingo-latest/lingo.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-lingo-latest/lingo.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-lingo-latest/lingo.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-lingo-latest/lingo.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-lingo-latest/lingo.rpm"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-lingo-latest/lingo.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-lingo-latest/lingo.exe"
+          }
+        ]
+      },
+      {
         "label": "DOI",
         "primaryCategory": "Education",
         "secondaryCategory": "Games",
@@ -2372,42 +2416,6 @@
         ]
       },
       {
-        "label": "New Tab",
-        "primaryCategory": "Productivity",
-        "secondaryCategory": "",
-        "icon": "PiTabs",
-        "href": "https://hieudoanm.github.io/free/new-tab",
-        "version": "latest",
-        "lastUpdated": "2026-09-06",
-        "fileSize": "",
-        "actions": [
-          {
-            "label": "v2.crx",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-new-tab-latest/new-tab-v2.crx"
-          },
-          {
-            "label": "v2.xpi",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-new-tab-latest/new-tab-v2.xpi"
-          },
-          {
-            "label": "v2.zip",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-new-tab-latest/new-tab-v2.zip"
-          },
-          {
-            "label": "v3.crx",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-new-tab-latest/new-tab-v3.crx"
-          },
-          {
-            "label": "v3.xpi",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-new-tab-latest/new-tab-v3.xpi"
-          },
-          {
-            "label": "v3.zip",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-new-tab-latest/new-tab-v3.zip"
-          }
-        ]
-      },
-      {
         "label": "ShopifyX",
         "primaryCategory": "Shopping",
         "secondaryCategory": "",
@@ -2444,38 +2452,38 @@
         ]
       },
       {
-        "label": "Snapshot",
-        "primaryCategory": "Utilities",
-        "secondaryCategory": "Graphics & Design",
-        "icon": "PiScan",
-        "href": "https://hieudoanm.github.io/free/snapshot",
+        "label": "Tabs",
+        "primaryCategory": "Productivity",
+        "secondaryCategory": "",
+        "icon": "PiTabs",
+        "href": "https://hieudoanm.github.io/free/tabs",
         "version": "latest",
-        "lastUpdated": "2026-09-03",
+        "lastUpdated": "2026-09-09",
         "fileSize": "",
         "actions": [
           {
             "label": "v2.crx",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-snapshot-latest/snapshot-v2.crx"
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-tabs-latest/tabs-v2.crx"
           },
           {
             "label": "v2.xpi",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-snapshot-latest/snapshot-v2.xpi"
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-tabs-latest/tabs-v2.xpi"
           },
           {
             "label": "v2.zip",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-snapshot-latest/snapshot-v2.zip"
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-tabs-latest/tabs-v2.zip"
           },
           {
             "label": "v3.crx",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-snapshot-latest/snapshot-v3.crx"
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-tabs-latest/tabs-v3.crx"
           },
           {
             "label": "v3.xpi",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-snapshot-latest/snapshot-v3.xpi"
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-tabs-latest/tabs-v3.xpi"
           },
           {
             "label": "v3.zip",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-snapshot-latest/snapshot-v3.zip"
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-tabs-latest/tabs-v3.zip"
           }
         ]
       }

@@ -1,0 +1,33 @@
+name: CI - Extensions - Browser - Tabs
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/extensions/browser/tabs/**'
+      - '.github/workflows/ci-extensions-browser-tabs.yaml'
+      - '.github/workflows/ci-extensions-browser-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-extensions-browser-tabs-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-extensions-browser-template.yaml
+    with:
+      package: packages/extensions/browser/tabs
+      filter: '@hieudoanm.github.io/tabs'
+      releaseName: extensions-browser-tabs-latest
+      releaseTitle: Extensions - Browser - Tabs (latest)
+      artifactPrefix: extensions-browser-tabs
+    secrets: inherit
