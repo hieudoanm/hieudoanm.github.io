@@ -15,6 +15,7 @@
 │   └── [popup.html](./public/popup.html)
 ├── src/
 │   ├── lib/
+│   │   ├── [block.ts](./src/lib/block.ts)
 │   │   ├── [newtab.ts](./src/lib/newtab.ts)
 │   │   └── [stitch.ts](./src/lib/stitch.ts)
 │   ├── [background.ts](./src/background.ts)
@@ -31,4 +32,4 @@
 └── [webpack.config.ts](./webpack.config.ts)
 ```
 
-7 directories, 21 files
+7 directories, 22 files

@@ -1,9 +1,10 @@
 # Contributing
 
 Thanks for contributing to **Tabs**, a cross-browser extension that redirects
-every new tab to the hieudoanm home page and captures the visible viewport or
-the full page of any tab as an image, on Chromium and Gecko browsers via both
-Manifest V2 and Manifest V3 builds.
+every new tab to the hieudoanm home page, blocks distracting sites with an
+offline focus wall, and captures the visible viewport or the full page of any
+tab as an image, on Chromium and Gecko browsers via both Manifest V2 and
+Manifest V3 builds.
 
 ## Getting Started
 
@@ -81,16 +82,19 @@ every change.
 3. Redirect **only** new-tab / home / private-browsing URLs
    (`chrome://newtab`, `about:newtab`, `about:home`, `about:privatebrowsing`);
    every other URL is left completely untouched.
-4. Content scripts must be idempotent — running twice must not stack
+4. The block wall lives in `src/lib/block.ts` and only fires on
+   `BLOCKED_DOMAINS`; the `blockDistractingSites` toggle (default on,
+   `storage.sync`) gates it, and non-blocked pages must never see the wall.
+5. Content scripts must be idempotent — running twice must not stack
    listeners; guards belong where listeners are bound.
-5. Protect the user — capture chunks must never scroll the page to a position
+6. Protect the user — capture chunks must never scroll the page to a position
    it can't restore, and scroll position should be near-fully restored after a
    full-page capture.
-6. Use `document_start` for the content script so layout metrics are ready the
+7. Use `document_start` for the content script so layout metrics are ready the
    moment the user asks to capture.
-7. The new-tab redirect target is the single constant `TARGET_URL` in
+8. The new-tab redirect target is the single constant `TARGET_URL` in
    `src/lib/newtab.ts` — the only place to change the landing URL.
-8. Prefix debug logs with `[Tabs]` and keep them minimal.
+9. Prefix debug logs with `[Tabs]` and keep them minimal.
 
 ## Testing Conventions
 
@@ -101,14 +105,18 @@ quality gates are:
    schema and forbidden APIs (`make lint`).
 2. **Manual matrix** — smoke-test after any change:
    - MV3: Chromium (Chrome/Edge) — `dist/v3`; MV2: Firefox — `dist/v2`
-   - Open a new tab → it redirects to `TARGET_URL`; toggle off in the popup →
-     default new-tab page loads
-   - Capture view → a PNG of the visible viewport downloads
-   - Capture full page on a tall page (e.g. a long article) → one complete
-     image, no seams or aspect-ratio distortion
-   - Capture on a lazily-loaded feed → all sections that render appear
-   - Protected pages (`chrome://`,`about:`) → explicit error in the popup
-   - `download` action works in both MV2 and MV3
+
+- Open a new tab → it redirects to `TARGET_URL`; toggle off in the popup →
+  default new-tab page loads
+  - Visit a `BLOCKED_DOMAINS` site → the focus wall appears; toggle off in the
+    popup → the site loads normally
+  - Capture view → a PNG of the visible viewport downloads
+  - Capture full page on a tall page (e.g. a long article) → one complete
+    image, no seams or aspect-ratio distortion
+  - Capture on a lazily-loaded feed → all sections that render appear
+  - Protected pages (`chrome://`,`about:`) → explicit error in the popup
+  - `download` action works in both MV2 and MV3
+
 3. **No false positives** — the content script is read-only for layout; nothing
    but the capture scroll is ever applied.
 

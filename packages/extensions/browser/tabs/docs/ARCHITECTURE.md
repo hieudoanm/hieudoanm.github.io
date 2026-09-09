@@ -6,6 +6,7 @@
   Opera, Vivaldi, Arc) and Gecko browsers (Firefox, Tor)
 - Ship both **Manifest V2** and **Manifest V3** builds from a single source
 - Redirect every new tab to the hieudoanm home page (`https://hieudoanm.github.io/app/`)
+- Block distracting sites with an offline "focus wall" fallback
 - Capture the visible viewport or the full page of any tab as an image
 - Support both automatic download and copy-to-clipboard
 - Stitch tall pages cross-device correctly via `OffscreenCanvas` chunking
@@ -30,9 +31,10 @@
 ```txt
 src/
 ├── background.ts   # New-tab redirect + capture orchestration
-├── content.ts      # Page layout reader
-├── popup.ts        # Action popup UI (capture buttons + redirect toggle)
+├── content.ts      # Page layout reader + block wall trigger
+├── popup.ts        # Action popup UI (capture buttons + redirect/block toggles)
 └── lib/
+    ├── block.ts    # Distracting-site block wall (+ better sites + suggestion wheel)
     ├── newtab.ts   # New-tab/home URL interception + redirect
     └── stitch.ts   # OffscreenCanvas chunk stitching
 public/
@@ -78,7 +80,7 @@ directory.
 ┌────────────────────────────────────────────────────────────┐
 │  Popup (src/popup.ts)                                      │  Action toolbar icon
 │  - "Capture view" / "Capture full page" buttons            │
-│  - New Tab redirect toggle (sync storage)                  │
+│  - New Tab redirect + Block toggles (sync storage)         │
 │  - Sends CAPTURE_VIEW / CAPTURE_FULLPAGE to background     │
 ├────────────────────────────────────────────────────────────┤
 │  Background (src/background.ts)                            │  MV3 service worker /
@@ -93,6 +95,12 @@ directory.
 │  - Answers SNAP_GET_LAYOUT / SNAP_SCROLL_TO                │  document_start
 │  - Reports scrollY, innerHeight, document size             │
 │  - Scrolls the page for full-page stitching                │
+│  - Triggers the block wall via maybeRenderBlockWall()      │
+├────────────────────────────────────────────────────────────┤
+│  lib/block (src/lib/block.ts)                              │  Shared helper
+│  - BLOCKED_DOMAINS + BETTER_SITES + SUGGESTIONS            │
+│  - isBlockedHostname() prefix-suffix matching              │
+│  - Renders an offline focus wall when enabled              │
 ├────────────────────────────────────────────────────────────┤
 │  lib/newtab (src/lib/newtab.ts)                            │  Shared helper
 │  - isNewTab(url) prefix matching                           │
@@ -125,6 +133,17 @@ directory.
 - **Toggle** — the popup checkbox `redirectNewTabs` lives in `storage.sync`
   (default on); every other URL is left completely untouched.
 
+## Block Strategy
+
+- **Block list** — `BLOCKED_DOMAINS` in `src/lib/block.ts` (facebook, x/twitter,
+  instagram, reddit, tiktok, youtube, netflix, twitch, discord); `content.ts`
+  replaces the page with the offline "focus wall" when one loads.
+- **Toggle** — the popup checkbox `blockDistractingSites` lives in `storage.sync`
+  (default on); `maybeRenderBlockWall()` re-checks it on every load.
+- **Wall content** — `BETTER_SITES` (jump shortcuts) and `SUGGESTIONS`
+  (spin-wheel ideas) render fully offline, no network calls; nothing about the
+  user's browsing ever leaves the page.
+
 ## Capture Strategy
 
 - **View capture** — background captures `chrome.tabs.captureVisibleTab`
@@ -143,7 +162,8 @@ directory.
 ## State Management
 
 - **Minimal** — per-invocation capture state lives in the message flow; the
-  `redirectNewTabs` preference is the only persisted value in `storage.sync`.
+  `redirectNewTabs` and `blockDistractingSites` preferences are the only
+  persisted values in `storage.sync`.
 
 ## Performance
 

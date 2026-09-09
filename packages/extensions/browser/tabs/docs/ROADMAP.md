@@ -2,11 +2,14 @@
 
 ## Phase 1 — Tab Foundations
 
-> Foundation: new-tab redirect + core capture from the popup.
+> Foundation: new-tab redirect + block wall + core capture from the popup.
 
 - [x] Popup with "Redirect new tabs" toggle (default on, `storage.sync`)
 - [x] New-tab / home / private-browsing URL interception
       (`tabs.onCreated` + `tabs.onUpdated`)
+- [x] Popup with "Block distracting sites" toggle (default on, `storage.sync`)
+- [x] Offline focus wall on `BLOCKED_DOMAINS` in `src/lib/block.ts` with
+      better sites + suggestion wheel
 - [x] Popup with "Capture view" / "Capture full page" actions
 - [x] `CAPTURE_VIEW` / `CAPTURE_FULLPAGE` message dispatch in background
 - [x] `SNAP_GET_LAYOUT` content metrics (scrollY, innerHeight, document size)

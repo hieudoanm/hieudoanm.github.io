@@ -23,6 +23,17 @@ Reference docs live in `docs/`:
   and leave every other URL untouched
 - The popup checkbox `redirectNewTabs` (default on) is persisted in
   `storage.sync`; the background reads it before each redirect
+- The block list lives in `src/lib/block.ts` (`BLOCKED_DOMAINS`): facebook,
+  x/twitter, instagram, reddit, tiktok, youtube, netflix, twitch, discord —
+  when one loads, `maybeRenderBlockWall()` in `src/content.ts` replaces the
+  page with the offline focus wall built from `BETTER_SITES` and `SUGGESTIONS`;
+  the `blockDistractingSites` toggle (default on, `storage.sync`) gates it and
+  is the only config the wall reads
+- Keep `BETTER_SITES` (jump shortcuts) and `SUGGESTIONS` (spin-wheel ideas)
+  family-friendly and dependency-free; they render without any network call
+- The block wall and the capture content script coexist in `content.ts`: the
+  block only fires on a blocked domain, the capture listeners only answer
+  `SNAP_` messages — never let the wall intercept non-blocked pages
 - Two message actions arrive from the popup: `captureView` and
   `captureFullPage`; both respond with `{ dataUrl }` or `{ error }` and the
   background **must return `true`** from the listener to keep the channel open
@@ -41,3 +52,5 @@ Reference docs live in `docs/`:
 - Errors are prefixed `Snapshot:` so they read consistently in the popup
   status line; never dump raw data URLs to logs
 - Cross-browser: Chromium (MV3) + Firefox (MV2)
+- Everything runs fully offline: redirect target, block wall, and capture
+  all work with no network calls and no data leaving the page or device

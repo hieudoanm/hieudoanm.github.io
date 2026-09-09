@@ -46,8 +46,8 @@ pnpm tauri dev|build # Desktop app via Tauri CLI
 
 ## Structure
 
-```
-src/app/                # App Router pages (65 app detail pages + info routes)
+```txt
+src/app/                # App Router pages (64 app detail pages + info routes)
 src/components/
   organisms/            # Header
   templates/            # About/Version/NotFound/Error templates
@@ -55,7 +55,7 @@ src/components/
   AppPage.tsx           # Detail page wrapper
   AppInfo.tsx           # Detail view component
 src/data/
-  downloads.json        # App catalog (65 apps)
+  downloads.json        # App catalog (64 apps)
   csv/                  # Source data (per-section CSV files)
   scripts/              # CSV → JSON converter
 src/lib/
@@ -69,6 +69,6 @@ e2e/                    # Playwright specs
 ## Routes
 
 - `/` — home with search, filter tabs, app grid
-- `/app/[slug]` — app detail page (65 static pages)
+- `/app/[slug]` — app detail page (64 static pages)
 - `/about` — about the store
 - `/version` — changelog

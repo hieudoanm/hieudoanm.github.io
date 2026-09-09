@@ -471,9 +471,9 @@ describe('getReleasePageUrl', () => {
 
   it('returns href directly when it is already a release tag page', () => {
     const app = appWithDownloads([]);
-    app.href = `${RELEASES}/tag/extensions-browser-bored-latest`;
+    app.href = `${RELEASES}/tag/extensions-browser-tabs-latest`;
     expect(getReleasePageUrl(app)).toBe(
-      `${RELEASES}/tag/extensions-browser-bored-latest`
+      `${RELEASES}/tag/extensions-browser-tabs-latest`
     );
   });
 

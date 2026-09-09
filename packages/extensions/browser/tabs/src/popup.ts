@@ -20,6 +20,9 @@ const tabUrlEl = document.getElementById('tabUrl');
 const newTabRedirect = document.getElementById(
   'newTabRedirect'
 ) as HTMLInputElement;
+const blockDistractingSites = document.getElementById(
+  'blockDistractingSites'
+) as HTMLInputElement;
 
 let lastDataUrl: string | null = null;
 let lastFilename: string | null = null;
@@ -46,6 +49,19 @@ chrome.storage.sync.get('redirectNewTabs', (result) => {
 
 newTabRedirect?.addEventListener('change', () => {
   chrome.storage.sync.set({ redirectNewTabs: newTabRedirect.checked });
+});
+
+chrome.storage.sync.get('blockDistractingSites', (result) => {
+  if (chrome.runtime.lastError) return;
+  if (blockDistractingSites) {
+    blockDistractingSites.checked = result.blockDistractingSites !== false;
+  }
+});
+
+blockDistractingSites?.addEventListener('change', () => {
+  chrome.storage.sync.set({
+    blockDistractingSites: blockDistractingSites.checked,
+  });
 });
 
 function setStatus(msg: string, type = ''): void {

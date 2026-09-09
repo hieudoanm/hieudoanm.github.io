@@ -2236,42 +2236,6 @@
         ]
       },
       {
-        "label": "Bored",
-        "primaryCategory": "Games",
-        "secondaryCategory": "Entertainment",
-        "icon": "PiDiceOne",
-        "href": "https://hieudoanm.github.io/free/bored",
-        "version": "latest",
-        "lastUpdated": "2026-09-03",
-        "fileSize": "",
-        "actions": [
-          {
-            "label": "v2.crx",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-bored-latest/bored-v2.crx"
-          },
-          {
-            "label": "v2.xpi",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-bored-latest/bored-v2.xpi"
-          },
-          {
-            "label": "v2.zip",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-bored-latest/bored-v2.zip"
-          },
-          {
-            "label": "v3.crx",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-bored-latest/bored-v3.crx"
-          },
-          {
-            "label": "v3.xpi",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-bored-latest/bored-v3.xpi"
-          },
-          {
-            "label": "v3.zip",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-bored-latest/bored-v3.zip"
-          }
-        ]
-      },
-      {
         "label": "ChessX",
         "primaryCategory": "Games",
         "secondaryCategory": "Board Games",

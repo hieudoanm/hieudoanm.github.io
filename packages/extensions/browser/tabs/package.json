@@ -2,7 +2,7 @@
   "name": "@hieudoanm.github.io/tabs",
   "version": "0.0.1",
   "private": true,
-  "description": "Tabs Extension - redirect new tabs to the hieudoanm home page and capture the current view or the full scrolling page.",
+  "description": "Tabs Extension - redirect new tabs to the hieudoanm home page, capture the current view or the full scrolling page, and block distracting sites.",
   "main": "dist/background.js",
   "repository": {
     "type": "git",
@@ -57,6 +57,9 @@
     "snapshot",
     "screenshot",
     "capture",
-    "full-page"
+    "full-page",
+    "block",
+    "distraction",
+    "focus"
   ]
 }

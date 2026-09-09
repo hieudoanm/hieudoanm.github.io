@@ -1,7 +1,7 @@
 {
   "name": "Tabs",
   "version": "0.0.1",
-  "description": "Redirect new tabs to the hieudoanm home page and capture the current view or the full scrolling page.",
+  "description": "Redirect new tabs to the hieudoanm home page, capture the current view or the full scrolling page, and block distracting sites.",
   "author": "Hieu Doan",
   "icons": {
     "16": "icons/16x16.png",

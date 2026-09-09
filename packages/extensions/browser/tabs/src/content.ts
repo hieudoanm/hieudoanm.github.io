@@ -1,3 +1,5 @@
+import { maybeRenderBlockWall } from './lib/block';
+
 interface LayoutInfo {
   scrollHeight: number;
   clientHeight: number;
@@ -7,6 +9,8 @@ interface LayoutInfo {
 
 const SNAP_PREFIX = 'SNAP_';
 const SCROLL_SETTLE_MS = 120;
+
+maybeRenderBlockWall();
 
 function getLayout(): LayoutInfo {
   return {
