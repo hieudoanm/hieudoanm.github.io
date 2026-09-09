@@ -1,6 +1,6 @@
-import Testing
 import Foundation
-@testable import ClipperCore
+import Testing
+@testable import GaugeCore
 
 @Suite("ClipperStore")
 struct ClipperStoreTests {
@@ -48,6 +48,19 @@ struct ClipperStoreTests {
         #expect(store.items[0].content == "hello")
         #expect(store.items[0].copiedCount == 2)
         #expect(store.items[1].content == "world")
+        try? FileManager.default.removeItem(at: dir)
+    }
+
+    @Test("add respects maxItems cap")
+    func addMaxItems() {
+        let (store, dir) = makeStore()
+        store.maxItems = 3
+        store.add("a")
+        store.add("b")
+        store.add("c")
+        store.add("d")
+        #expect(store.totalCount == 3)
+        #expect(store.items[0].content == "d")
         try? FileManager.default.removeItem(at: dir)
     }
 

@@ -3,6 +3,7 @@ import SwiftUI
 
 struct SettingsView: View {
     @ObservedObject var viewModel: GaugeViewModel
+    @ObservedObject var clipboardViewModel: ClipboardViewModel
     @State private var launchAtLogin = LaunchAtLogin.isEnabled
 
     static let windowID = "settings"
@@ -37,6 +38,22 @@ struct SettingsView: View {
                 }
             }
 
+            Section("Clipboard") {
+                Toggle("Monitor clipboard automatically", isOn: $clipboardViewModel.isMonitoring)
+                Picker("Max history size", selection: $clipboardViewModel.maxHistorySize) {
+                    Text("100").tag(100)
+                    Text("500").tag(500)
+                    Text("1,000").tag(1000)
+                    Text("5,000").tag(5000)
+                }
+                HStack {
+                    Text("Saved items")
+                    Spacer()
+                    Text("\(clipboardViewModel.store.totalCount)")
+                        .foregroundColor(.secondary)
+                }
+            }
+
             Section {
                 Label {
                     Text("No special permissions required")
@@ -48,7 +65,7 @@ struct SettingsView: View {
             }
         }
         .formStyle(.grouped)
-        .frame(width: 400, height: 260)
+        .frame(width: 400, height: 400)
         .onChange(of: launchAtLogin) { newValue in
             launchAtLogin = LaunchAtLogin.setEnabled(newValue) ? newValue : LaunchAtLogin.isEnabled
         }

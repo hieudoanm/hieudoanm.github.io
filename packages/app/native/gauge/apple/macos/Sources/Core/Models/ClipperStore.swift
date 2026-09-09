@@ -1,8 +1,11 @@
-import Foundation
 import Combine
+import Foundation
 
 public final class ClipperStore: ObservableObject {
     @Published public var items: [ClipperItem] = []
+
+    /// Maximum retained history items. 0 means unlimited.
+    public var maxItems: Int = 0
 
     private let storageURL: URL
 
@@ -32,6 +35,9 @@ public final class ClipperStore: ObservableObject {
         } else {
             let item = ClipperItem(content: content, contentType: type)
             items.insert(item, at: 0)
+        }
+        if maxItems > 0, items.count > maxItems {
+            items.removeLast(items.count - maxItems)
         }
         save()
     }

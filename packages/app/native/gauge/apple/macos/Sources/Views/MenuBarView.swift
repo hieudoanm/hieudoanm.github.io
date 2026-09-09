@@ -2,15 +2,17 @@ import GaugeCore
 import SwiftUI
 
 struct MenuBarView: View {
+    @ObservedObject var clipboardViewModel: ClipboardViewModel
     @ObservedObject var viewModel: GaugeViewModel
     @ObservedObject var portsViewModel: PortsViewModel
 
     private enum Tab: Hashable {
-        case monitor
+        case clipboard
+        case memory
         case ports
     }
 
-    @State private var selectedTab: Tab = .monitor
+    @State private var selectedTab: Tab = .memory
     @State private var showsDetails = false
 
     var body: some View {
@@ -32,7 +34,8 @@ struct MenuBarView: View {
 
     private var tabBar: some View {
         Picker("Tab", selection: $selectedTab) {
-            Text("Monitor").tag(Tab.monitor)
+            Text("Clipboard").tag(Tab.clipboard)
+            Text("Memory").tag(Tab.memory)
             Text("Ports").tag(Tab.ports)
         }
         .pickerStyle(.segmented)
@@ -44,7 +47,10 @@ struct MenuBarView: View {
     @ViewBuilder
     private var content: some View {
         switch selectedTab {
-        case .monitor:
+        case .clipboard:
+            ClipboardView(viewModel: clipboardViewModel)
+                .transition(.opacity)
+        case .memory:
             Group {
                 if showsDetails {
                     DetailsView(

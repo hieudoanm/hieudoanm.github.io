@@ -1,5 +1,5 @@
-import ClipperCore
 import Cocoa
+import GaugeCore
 
 final class PasteboardManager {
     static let shared = PasteboardManager()

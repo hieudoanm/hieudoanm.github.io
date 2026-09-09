@@ -19,14 +19,14 @@ No permissions are required to run Gauge.
 
 ## Development Commands
 
-| Command | Description |
-|---------|-------------|
-| `make build` | Build the app |
-| `make app` | Create .app bundle |
-| `make dmg` | Create .dmg installer |
-| `make test` | Run unit tests |
-| `make dev` | Build and run for development |
-| `make clean` | Remove build artifacts |
+| Command      | Description                   |
+| ------------ | ----------------------------- |
+| `make build` | Build the app                 |
+| `make app`   | Create .app bundle            |
+| `make dmg`   | Create .dmg installer         |
+| `make test`  | Run unit tests                |
+| `make dev`   | Build and run for development |
+| `make clean` | Remove build artifacts        |
 
 ## Coding Conventions
 
@@ -77,12 +77,24 @@ No permissions are required to run Gauge.
 - Never auto-kill a process; destructive actions require explicit user action
 - Keep all parsing in `LsofParser` so it stays unit-testable
 
+### Clipboard Conventions
+
+- Views never touch `NSPasteboard` directly — go through `PasteboardManager`
+- Keep all history logic in `ClipperStore` (dedupe, pin, cap, save) so it stays
+  unit-testable
+- The system pasteboard is the source of truth; never clear or overwrite it
+  except for an explicit user "copy" action
+- Persist atomically to `Application Support/Clipper/clipboard.json`
+- Never skip the `maxItems` cap — history must stay bounded
+
 ## Before You Push
 
 1. `make build` — clean compile
 2. `make test` — all tests pass
 3. `make dev` — smoke test the app
 4. Menu-bar icon shows memory and disk percentages
-5. Popover shows both progress bars with used/total values
-6. Ports view lists listening ports and kill actions work
-7. Verify both Light Mode and Dark Mode
+5. Popover shows all three tabs with Memory the default
+6. Memory tab shows both progress bars with used/total values
+7. Clipboard tab captures, searches, and copies history; pin and delete work
+8. Ports view lists listening ports and kill actions work
+9. Verify both Light Mode and Dark Mode

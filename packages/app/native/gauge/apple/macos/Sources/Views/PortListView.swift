@@ -31,6 +31,7 @@ struct PortListView: View {
                     }
                 }
             }
+            .frame(maxHeight: 420)
         }
     }
 

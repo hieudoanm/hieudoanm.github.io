@@ -2,13 +2,14 @@
 
 ## Installation
 
-| Platform | Minimum Version | Download |
-|----------|----------------|----------|
-| macOS | 13 Ventura | [Download .dmg](https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-gauge-latest/Gauge-0.0.1.dmg) |
+| Platform | Minimum Version | Download                                                                                                                    |
+| -------- | --------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| macOS    | 13 Ventura      | [Download .dmg](https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-gauge-latest/Gauge-0.0.1.dmg) |
 
 ## About
 
-Gauge — RAM, storage, and local-port usage at a glance from your menu bar.
+Gauge — RAM, storage, local-port, and clipboard history at a glance from your
+menu bar.
 
 ## Features
 
@@ -69,11 +70,24 @@ Gauge — RAM, storage, and local-port usage at a glance from your menu bar.
 - Runs `/usr/sbin/lsof` with explicit arguments — no shell involved
 - Separate Ports tab sharing the refresh interval configured in Settings
 
+## Clipboard
+
+- Automatic history of everything you copy (`NSPasteboard` change detection)
+- Search by content (case-insensitive)
+- Copy again, pin to keep on top, or delete any item
+- Repeated copies dedupe and move to the front with a copy count
+- `Clear Unpinned` to wipe history in one click
+- Pause monitoring any time from Settings
+- Configurable max history size (100 / 500 / 1,000 / 5,000, default 500)
+- Stored locally at `~/Library/Application Support/Clipper/clipboard.json` —
+  nothing leaves your machine
+
 ## Popover
 
-- Two tabs, Monitor (default) and Ports:
-  - Monitor tab: compact percentage and used / total numbers (small view) with
+- Three tabs, Clipboard, Memory (default) and Ports:
+  - Memory tab: compact percentage and used / total numbers (small view) with
     full progress-bar sections (details view) switchable from the header
+  - Clipboard tab: searchable history with copy, pin, and delete actions
   - Ports tab: searchable list of local listening ports with kill actions
 - Memory section (details) with active / wired / compressed and cached / inactive / free breakdowns
 - Storage section (details) with free / purgeable amounts
@@ -87,6 +101,7 @@ Gauge — RAM, storage, and local-port usage at a glance from your menu bar.
 
 - Refresh interval presets (1/2/5/10 seconds)
 - Menu Bar display style (Percentages / Values / Used-Total)
+- Clipboard: monitor on/off, max history size, saved items count
 - Launch at Login via `SMAppService`
 - No special permissions required
 

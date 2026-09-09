@@ -1,12 +1,10 @@
 # Gauge
 
-Lightweight menu-bar utility for monitoring RAM and disk storage usage at a glance, plus a developer view for managing processes listening on local ports.
+Lightweight menu-bar utility for monitoring RAM and disk storage usage at a glance, with a developer view for managing processes listening on local ports and a clipboard history that never loses a copy.
 
 ## Overview
 
-Gauge is a small native macOS menu-bar utility that answers two questions: _how much memory and storage am I using right now?_ and _what is using this port?_ A compact menu-bar indicator shows current usage, and clicking it opens a popover
-with two tabs — **Monitor** (default) for detailed memory, storage, CPU, swap and
-system info, and **Ports** for discovering and managing local listeners.
+Gauge is a small native macOS menu-bar utility that answers three questions: _how much memory and storage am I using right now?_, _what is using this port?_, and _where did that thing I copied go?_ A compact menu-bar indicator shows current usage, and clicking it opens a popover with three tabs — **Clipboard** for searchable copy history, **Memory** (default) for detailed memory, storage, CPU, swap and system info, and **Ports** for discovering and managing local listeners.
 
 ## Features
 
@@ -15,8 +13,9 @@ system info, and **Ports** for discovering and managing local listeners.
 - **Menu bar** — compact indicators (e.g. `CPU 39%  Disk 83%`) readable without opening the popover.
 - **Popover** — reusable `ResourceMeter` progress bars for memory and storage.
 - **Port monitoring** — a dedicated Ports tab lists processes listening on local TCP/UDP ports via `lsof`, with search, copy-paste actions, and graceful (SIGTERM) or force (SIGKILL) termination.
-- **Continuous refresh** — a single coordinated refresh (default ~1 s) driven by one shared refresh interval for system metrics and ports.
-- **No special permissions** — basic monitoring and port discovery require none.
+- **Clipboard history** — a dedicated Clipboard tab captures everything you copy, with search, re-copy, pin, delete, and clear-unpinned; stored locally at `Application Support/Clipper/clipboard.json`.
+- **Continuous refresh** — a single coordinated refresh (default ~1 s) driven by one shared refresh interval for system metrics and ports; clipboard history polls the pasteboard change count every 0.5 s.
+- **No special permissions** — basic monitoring, port discovery, and clipboard history require none.
 
 ## Technology
 
@@ -27,6 +26,7 @@ system info, and **Ports** for discovering and managing local listeners.
 | Memory      | Mach VM APIs (`host_statistics64`)                    |
 | Storage     | Foundation volume capacity APIs                       |
 | Discovery   | `Process` with explicit exec paths (no shell strings) |
+| Clipboard   | `NSPasteboard` change count + atomic JSON store       |
 | Testability | `PortDiscovering` / `ProcessTerminating` protocols    |
 | Build       | Swift Package Manager                                 |
 | Min macOS   | 13 Ventura                                            |
@@ -46,6 +46,7 @@ make clean     # Remove build artifacts
 ```txt
 SystemMonitor → MemoryMonitor / DiskMonitor → observable state → SwiftUI menu bar / popover
 PortDiscovery → Service → ViewModel → SwiftUI Ports view
+Pasteboard change → PasteboardManager → ClipperStore → ClipboardViewModel → SwiftUI Clipboard view
 ```
 
 Monitoring logic is UI-independent, and port discovery/termination are separated behind `PortDiscovering` / `ProcessTerminating` protocols, so calculations and parsing are unit-testable.

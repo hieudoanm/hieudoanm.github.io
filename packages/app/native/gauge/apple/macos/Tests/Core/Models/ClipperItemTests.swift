@@ -1,6 +1,6 @@
-import Testing
 import Foundation
-@testable import ClipperCore
+import Testing
+@testable import GaugeCore
 
 @Suite("ClipperItem")
 struct ClipperItemTests {

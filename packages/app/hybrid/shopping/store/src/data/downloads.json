@@ -2088,22 +2088,6 @@
         ]
       },
       {
-        "label": "Clipper",
-        "primaryCategory": "Utilities",
-        "secondaryCategory": "",
-        "icon": "PiClipboard",
-        "href": "https://hieudoanm.github.io/free/clipper",
-        "version": "latest",
-        "lastUpdated": "2025-01-01",
-        "fileSize": "",
-        "actions": [
-          {
-            "label": ".dmg",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-clipper-latest/Clipper.dmg"
-          }
-        ]
-      },
-      {
         "label": "Gauge",
         "primaryCategory": "Utilities",
         "secondaryCategory": "",
@@ -2132,22 +2116,6 @@
           {
             "label": ".dmg",
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-mixer-latest/Mixer.dmg"
-          }
-        ]
-      },
-      {
-        "label": "Ports",
-        "primaryCategory": "Utilities",
-        "secondaryCategory": "",
-        "icon": "PiPlugs",
-        "href": "https://hieudoanm.github.io/free/ports",
-        "version": "latest",
-        "lastUpdated": "2026-08-29",
-        "fileSize": "",
-        "actions": [
-          {
-            "label": ".dmg",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-ports-latest/Ports.dmg"
           }
         ]
       },

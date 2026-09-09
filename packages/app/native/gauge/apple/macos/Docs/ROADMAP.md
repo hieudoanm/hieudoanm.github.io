@@ -73,6 +73,22 @@
 - [x] `ProcessTerminating` protocol and `SignalProcessTerminator` (SIGTERM / SIGKILL)
 - [x] `PortsViewModel` sharing the Gauge `SettingsStore.refreshInterval`
 - [x] Dedicated Ports tab in the popover (search, list, kill action)
-- [x] Monitor and Ports as two tabs with Monitor the default
+- [x] Monitor and Ports as two tabs with Monitor the default (renamed to
+      Memory when the Clipboard tab was added)
 - [ ] Open port in browser action
 - [ ] Project detection for development servers
+
+## Phase 8 — Clipboard History
+
+> Clipboard manager migrated from the standalone Clipper app.
+
+- [x] `ClipperItem` / `ClipperStore` models in GaugeCore (dedupe, pin, cap,
+      atomic JSON persistence at `Application Support/Clipper/clipboard.json`)
+- [x] `ClipboardMonitor` (0.5 s `changeCount` poll) and single access point
+      `PasteboardManager`
+- [x] `ClipboardViewModel` sharing monitor state and max-history prefs with Settings
+- [x] Dedicated Clipboard tab in the popover (search, copy, pin, delete,
+      clear unpinned)
+- [x] Clipboard section in Settings (monitor toggle, max history picker)
+- [ ] Rich-text / image clipboard support
+- [ ] Snippets with custom names

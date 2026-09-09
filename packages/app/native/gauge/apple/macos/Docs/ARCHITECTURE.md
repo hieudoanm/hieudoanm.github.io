@@ -5,22 +5,24 @@
 - Monitor RAM and disk usage at a glance from the menu bar
 - Compact native macOS menu-bar utility with popover details
 - Separate Ports view for monitoring and managing local listening ports
+- Clipboard history tab so nothing you copy is ever lost
 - Low resource footprint (~0% idle CPU, <50 MB memory)
 - No special permissions, local-first, no backend
 - Accurate, documented metrics
 
 ## Tech Stack
 
-| Layer          | Technology                     |
-| -------------- | ------------------------------ |
-| Language       | Swift 5.9+                     |
-| UI             | SwiftUI                        |
-| Memory API     | Mach VM (`host_statistics64`)  |
-| Disk API       | Foundation `URLResourceValue`  |
-| Port discovery | `lsof` via `Process`           |
-| Persistence    | Codable + JSON + FileManager   |
-| Build          | Swift Package Manager          |
-| Min macOS      | 13 Ventura                     |
+| Layer          | Technology                    |
+| -------------- | ----------------------------- |
+| Language       | Swift 5.9+                    |
+| UI             | SwiftUI                       |
+| Memory API     | Mach VM (`host_statistics64`) |
+| Disk API       | Foundation `URLResourceValue` |
+| Port discovery | `lsof` via `Process`          |
+| Clipboard      | `NSPasteboard` changeCount    |
+| Persistence    | Codable + JSON + FileManager  |
+| Build          | Swift Package Manager         |
+| Min macOS      | 13 Ventura                    |
 
 ## Directory Structure
 
@@ -30,6 +32,7 @@ Sources/
 │   ├── GaugeApp.swift
 │   ├── GaugeViewModel.swift
 │   ├── PortsViewModel.swift
+│   ├── ClipboardViewModel.swift
 │   ├── LaunchAtLogin.swift
 │   └── MenuBarIcon.swift
 ├── Core/
@@ -41,7 +44,9 @@ Sources/
 │   │   ├── SystemInfo.swift
 │   │   ├── UsageThreshold.swift
 │   │   ├── NetworkEndpoint.swift
-│   │   └── PortInfo.swift
+│   │   ├── PortInfo.swift
+│   │   ├── ClipperItem.swift
+│   │   └── ClipperStore.swift
 │   ├── Services/
 │   │   ├── PortDiscovering.swift
 │   │   ├── LsofPortDiscoveryService.swift
@@ -56,11 +61,14 @@ Sources/
 │   ├── SwapMonitor.swift
 │   ├── CPUMonitor.swift
 │   ├── SystemInfoMonitor.swift
-│   └── MonitorError.swift
+│   ├── MonitorError.swift
+│   ├── ClipboardMonitor.swift
+│   └── PasteboardManager.swift
 └── Views/
     ├── MenuBarView.swift
     ├── SmallView.swift
     ├── DetailsView.swift
+    ├── ClipboardView.swift
     ├── PortsView.swift
     ├── PortListView.swift
     ├── PortRow.swift
@@ -85,23 +93,28 @@ Sources/
 │            Views                 │
 │  MenuBarView | SmallView         │
 │  DetailsView | ResourceMeter     │
-│  PortsView | PortListView        │
-│  PortRow | SettingsView          │
+│  ClipboardView | PortsView       │
+│  PortListView | PortRow          │
+│  SettingsView                    │
 ├──────────────────────────────────┤
 │          ViewModels              │
 │  GaugeViewModel | PortsViewModel │
+│  ClipboardViewModel              │
 ├──────────────────────────────────┤
 │           Services               │
 │  MemoryMonitor | DiskMonitor     │
 │  SwapMonitor | CPUMonitor        │
 │  SystemInfoMonitor |             │
 │  LsofPortDiscoveryService        │
+│  ClipboardMonitor |              │
+│  PasteboardManager               │
 ├──────────────────────────────────┤
 │             Core                 │
 │  MemoryStats | DiskStats         │
 │  SwapStats | CPUStats            │
 │  PortInfo | NetworkEndpoint      │
 │  LsofParser | SignalTerminator   │
+│  ClipperItem | ClipperStore      │
 │  SystemInfo | ByteFormatter      │
 │  Threshold | SettingsStore       │
 └──────────────────────────────────┘
@@ -218,13 +231,42 @@ sends SIGTERM for a graceful kill and SIGKILL for a force kill, always
 refusing to signal invalid PIDs or the app itself. Discovery and termination
 are protocol-based so unit tests can substitute mocks.
 
+### Clipboard
+
+**Definition:** a searchable, local-first history of everything copied to the
+system clipboard (migrated from the standalone Clipper app). `PasteboardManager`
+is the single access point to `NSPasteboard.general`; `ClipboardMonitor` polls
+`changeCount` every 0.5 s and appends new text to `ClipperStore` when it
+changes. The store deduplicates repeated copies (bump `copiedCount`, move to
+front), supports pin/delete/clear-unpinned, searches case-insensitively, and
+persists atomically to `~/Library/Application Support/Clipper/clipboard.json`.
+
+```text
+NSPasteboard.general.changeCount
+        ↓ (poll every 0.5 s)
+     changed?  ──no──→  wait for next tick
+        ↓ yes
+   getLatestContent()
+        ↓
+   ClipperStore.add()  →  dedupe / cap / save
+        ↓
+     ClipboardView
+```
+
+The system pasteboard remains the source of truth — Gauge only observes and
+never pretends to own the clipboard. A user copy from history writes back via
+`PasteboardManager.copyToClipboard`, which the monitor deduplicates on the next
+tick. Monitoring can be paused in Settings, and `ClipperStore.maxItems` caps
+retained history to the configured limit.
+
 ### Refresh
 
-A single coordinated 1-second timer drives all five monitors. When the popover is
-closed the menu-bar percentages still refresh in place (they are cheap
-host/FS reads); no independent per-metric timers exist. The Ports view runs its
-own lightweight discovery loop on launch, honoring the same
-`SettingsStore.refreshInterval`.
+A single coordinated 1-second timer drives all five system monitors. When the
+popover is closed the menu-bar percentages still refresh in place (they are
+cheap host/FS reads); no independent per-metric timers exist. The Ports view
+runs its own lightweight discovery loop on launch, honoring the same
+`SettingsStore.refreshInterval`. The Clipboard monitor is independent: a
+0.5-second pasteboard poll whose only cost is a `changeCount` comparison.
 
 ## Formatting
 
@@ -249,7 +291,9 @@ Semantic system colors only — readable in Light and Dark Mode.
 
 - `GaugeViewModel` — observable coordinator between Views and Services
 - `PortsViewModel` — observable coordinator for port discovery and termination
-- `SettingsStore` — persists user preferences (refresh interval, shared by both view models)
+- `ClipboardViewModel` — observable coordinator for clipboard history, owns the
+  `ClipperStore` and monitor, persists monitor/max-history preferences
+- `SettingsStore` — persists user preferences (refresh interval, shared by the system and ports view models)
 - Models are immutable value types with computed ratio/percentage
 
 ## Styling

@@ -1,5 +1,5 @@
-import ClipperCore
 import Foundation
+import GaugeCore
 
 final class ClipboardMonitor {
     private var timer: Timer?
@@ -11,6 +11,7 @@ final class ClipboardMonitor {
     }
 
     func start() {
+        guard timer == nil else { return }
         timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { [weak self] _ in
             self?.check()
         }
@@ -21,7 +22,7 @@ final class ClipboardMonitor {
         timer = nil
     }
 
-    private func check() {
+    func check() {
         guard pasteboard.hasNewContent, let content = pasteboard.getLatestContent() else { return }
         store.add(content)
     }

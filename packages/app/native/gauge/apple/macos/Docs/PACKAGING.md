@@ -29,9 +29,10 @@ Gauge, bundle ID `io.github.hieudoanm.Gauge`, version 0.0.1.
 ### Permissions
 
 Gauge requires no special permissions for its basic functionality, including
-port discovery via `lsof` (the app never requests Full Disk Access,
-Accessibility, root privileges, or network extensions). Do not request any
-except when a future feature genuinely requires one.
+port discovery via `lsof` and reading the shared pasteboard for clipboard
+history (the app never requests Full Disk Access, Accessibility, root
+privileges, or network extensions). Do not request any except when a future
+feature genuinely requires one.
 
 ### Launch at Login (Future)
 
