@@ -1,5 +1,5 @@
 const CACHE_NAME = 'projects-v1';
-const STATIC_ASSETS = ['/', '/about/', '/settings/', '/version/'];
+const STATIC_ASSETS = ['/', '/about/', '/version/'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(

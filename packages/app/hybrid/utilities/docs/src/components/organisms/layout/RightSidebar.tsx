@@ -2,7 +2,7 @@ import type { SidebarTab } from '@hieudoanm.github.io/components/organisms/layou
 import { getTimeInZone, timezones } from '@hieudoanm.github.io/data/timezones';
 import dynamic from 'next/dynamic';
 import { useCallback, useEffect, useState, type FC } from 'react';
-import { PiCheckSquare, PiCurrencyDollar, PiGauge } from 'react-icons/pi';
+import { PiCurrencyDollar, PiGauge } from 'react-icons/pi';
 
 const StatusTab = dynamic(
   () =>
@@ -11,13 +11,7 @@ const StatusTab = dynamic(
     ),
   { ssr: false }
 );
-const TasksTab = dynamic(
-  () =>
-    import('@hieudoanm.github.io/components/organisms/layout/tabs/TasksTab').then(
-      (m) => m.TasksTab
-    ),
-  { ssr: false }
-);
+
 const CurrencyTab = dynamic(
   () =>
     import('@hieudoanm.github.io/components/organisms/layout/tabs/CurrencyTab').then(
@@ -25,13 +19,13 @@ const CurrencyTab = dynamic(
     ),
   { ssr: false }
 );
+
 const TABS: {
   id: SidebarTab;
   label: string;
   icon: FC<{ className?: string; size?: number }>;
 }[] = [
   { id: 'status', label: 'Status', icon: PiGauge },
-  { id: 'tasks', label: 'Tasks', icon: PiCheckSquare },
   { id: 'currency', label: 'Currency', icon: PiCurrencyDollar },
 ];
 
@@ -60,8 +54,6 @@ export const RightSidebar: FC = () => {
       switch (tab) {
         case 'status':
           return <StatusTab />;
-        case 'tasks':
-          return <TasksTab />;
         case 'currency':
           return <CurrencyTab />;
       }

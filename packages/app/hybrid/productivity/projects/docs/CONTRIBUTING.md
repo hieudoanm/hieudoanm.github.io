@@ -106,7 +106,7 @@ Structure components as atoms -> molecules -> organisms -> templates:
 - `atoms/` — smallest building blocks (Button, Badge, Input)
 - `molecules/` — combinations of atoms (Card, Modal, Form)
 - `organisms/` — complex sections (Header, Sidebar, ProjectCard)
-- `templates/` — page-level layouts (ProjectsTemplate, SettingsTemplate)
+- `templates/` — page-level layouts (AboutTemplate, VersionTemplate)
 
 ## Testing Conventions
 

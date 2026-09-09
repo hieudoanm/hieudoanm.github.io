@@ -88,11 +88,11 @@ describe('db', () => {
     db = (await import('@/lib/db')).db;
   });
 
-  it('creates the seven object stores on upgrade', async () => {
+  it('creates the object stores on upgrade', async () => {
     await db.boards.getAll();
     expect(jest.requireMock('idb').openDB).toHaveBeenCalledWith(
       'projects-db',
-      1,
+      2,
       expect.any(Object)
     );
     expect(Object.keys(stores).sort()).toEqual([
@@ -102,7 +102,9 @@ describe('db', () => {
       'labels',
       'lists',
       'members',
+      'session',
       'settings',
+      'tasks',
     ]);
   });
 
@@ -156,6 +158,35 @@ describe('db', () => {
     await expect(db.activity.getAll()).resolves.toHaveLength(1);
   });
 
+  it('tasks put/delete round-trip', async () => {
+    await db.tasks.put({
+      id: 'task-1',
+      userId: 'mem-1',
+      text: 'Ship it',
+      completed: false,
+      createdAt: 1000,
+      updatedAt: 1000,
+    });
+    await expect(db.tasks.getAll()).resolves.toHaveLength(1);
+    await db.tasks.delete('task-1');
+    await expect(db.tasks.getAll()).resolves.toHaveLength(0);
+  });
+
+  it('session.get returns signed-out defaults when nothing is stored', async () => {
+    await expect(db.session.get()).resolves.toEqual({
+      id: 'session',
+      userId: null,
+    });
+  });
+
+  it('session put/get round-trips the stored member', async () => {
+    await db.session.put({ id: 'session', userId: 'mem-2' });
+    await expect(db.session.get()).resolves.toEqual({
+      id: 'session',
+      userId: 'mem-2',
+    });
+  });
+
   it('settings.get returns defaults when nothing is stored', async () => {
     await expect(db.settings.get()).resolves.toEqual({
       theme: 'projects-light',
@@ -198,6 +229,8 @@ describe('db', () => {
     stores['members'] = { data: new Map() };
     stores['activity'] = { data: new Map() };
     stores['settings'] = { data: new Map() };
+    stores['tasks'] = { data: new Map() };
+    stores['session'] = { data: new Map() };
     await db.boards.getAll();
     expect(Object.keys(stores).sort()).toEqual([
       'activity',
@@ -206,7 +239,9 @@ describe('db', () => {
       'labels',
       'lists',
       'members',
+      'session',
       'settings',
+      'tasks',
     ]);
   });
 

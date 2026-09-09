@@ -7,10 +7,12 @@ import type {
   Member,
   Activity,
   ProjectsSettings,
+  Task,
+  Session,
 } from '@/types';
 
 const DB_NAME = 'projects-db';
-const DB_VERSION = 1;
+const DB_VERSION = 2;
 
 const delay = () =>
   new Promise((r) =>
@@ -25,6 +27,8 @@ interface ProjectsDB {
   members: { key: string; value: Member };
   activity: { key: string; value: Activity };
   settings: { key: string; value: ProjectsSettings & { id: string } };
+  tasks: { key: string; value: Task };
+  session: { key: string; value: Session };
 }
 
 let dbPromise: Promise<IDBPDatabase<ProjectsDB>> | null = null;
@@ -47,6 +51,10 @@ const getDB = () => {
           db.createObjectStore('activity', { keyPath: 'id' });
         if (!db.objectStoreNames.contains('settings'))
           db.createObjectStore('settings', { keyPath: 'id' });
+        if (!db.objectStoreNames.contains('tasks'))
+          db.createObjectStore('tasks', { keyPath: 'id' });
+        if (!db.objectStoreNames.contains('session'))
+          db.createObjectStore('session', { keyPath: 'id' });
       },
     });
   }
@@ -154,6 +162,31 @@ export const db = {
     put: async (s: ProjectsSettings): Promise<void> => {
       await delay();
       await (await getDB()).put('settings', { ...s, id: 'settings' });
+    },
+  },
+  tasks: {
+    getAll: async (): Promise<Task[]> => {
+      await delay();
+      return (await getDB()).getAll('tasks');
+    },
+    put: async (task: Task): Promise<void> => {
+      await delay();
+      await (await getDB()).put('tasks', task);
+    },
+    delete: async (id: string): Promise<void> => {
+      await delay();
+      await (await getDB()).delete('tasks', id);
+    },
+  },
+  session: {
+    get: async (): Promise<Session> => {
+      await delay();
+      const s = await (await getDB()).get('session', 'session');
+      return s ?? { id: 'session', userId: null };
+    },
+    put: async (session: Session): Promise<void> => {
+      await delay();
+      await (await getDB()).put('session', session);
     },
   },
 };

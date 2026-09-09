@@ -31,7 +31,7 @@ src/
 │   ├── atoms/          # CardBadge, LabelChip, DueDateBadge, Avatar
 │   ├── molecules/      # CardItem, ListItem, ChecklistItem, ActivityEntry
 │   ├── organisms/      # Sidebar, BoardHeader, KanbanBoard, CalendarGrid
-│   └── templates/      # BoardTemplate, SettingsTemplate
+│   └── templates/      # AboutTemplate, DownloadsTemplate, ErrorTemplate, VersionTemplate
 │   └── RouteGuard.tsx  # Auth route protection
 ├── data/               # Mock boards, lists, cards, members
 ├── hooks/              # useDragDrop, useBoard, useCard, useCalendar
@@ -66,19 +66,20 @@ e2e/                    # Playwright E2E tests
 
 ## Routing
 
-| Route                  | Page          | Client | Description                             |
-| ---------------------- | ------------- | ------ | --------------------------------------- |
-| `/`                    | `page.tsx`    | Yes    | Dashboard — all boards, recent activity |
-| `/board/[id]`          | Board View    | Yes    | Kanban lists, drag-and-drop cards       |
-| `/board/[id]/list`     | List View     | Yes    | Compact table view of all cards         |
-| `/board/[id]/cal`      | Calendar View | Yes    | Cards plotted on monthly calendar       |
-| `/board/[id]/timeline` | Timeline View | Yes    | Gantt-style timeline bars               |
-| `/card/[id]`           | Card Detail   | Yes    | Description, checklists, activity       |
-| `/settings`            | Settings      | Yes    | Theme, default view, notification prefs |
-| `/profile`             | Profile       | Yes    | User info, avatar                       |
-| `/version`             | Version       | Yes    | Build version display                   |
+| Route      | Page       | Client | Description                                                                     |
+| ---------- | ---------- | ------ | ------------------------------------------------------------------------------- |
+| `/`        | `page.tsx` | Yes    | Board shell — sidebar + view switcher (kanban, list, calendar, timeline, tasks) |
+| `/profile` | Profile    | Yes    | User info, avatar                                                               |
+| `/version` | Version    | Yes    | Build version display                                                           |
 
-Pass entity IDs via URL params (e.g. `/board/[id]`) for board and card routes.
+The current board is selected via the `?id` URL param, and the active view is
+switched in the shell (seed value from `settings.defaultView`). The **tasks**
+view is personal and per-member: an `AuthProvider` (persisted offline in the
+`session` store, default signed-out) exposes the current member, and the tasks
+list is filtered to that member — signed-out visits show nothing on the public
+board view. The old `/board/[id]`, `/board/[id]/list`, `/board/[id]/cal`,
+`/board/[id]/timeline`, `/card/[id]` and `/card` routes were consolidated into
+the `/` shell and are no longer served.
 
 ## Rendering Strategy
 
@@ -91,9 +92,12 @@ Pass entity IDs via URL params (e.g. `/board/[id]`) for board and card routes.
 ## State Management
 
 - **IndexedDB** for persistent state — boards, lists, cards, labels, members,
-  checklists, activity, settings stored in `projects-db`
+  checklists, activity, settings, tasks, and the offline `session` identity
+  stored in `projects-db`
 - **Local state** with `useState` / `useReducer` — component-scoped UI state
 - **DataProvider** context wraps the app — manages data access layer
+- **AuthProvider** context wraps the app — offline signed-in member
+  (`switchMember` / `signOut`), persisted in the `session` store
 - **Optimistic UI** — card moves apply instantly, persist in background
 
 ## Styling

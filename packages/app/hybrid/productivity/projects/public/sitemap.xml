@@ -11,31 +11,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hieudoanm.github.io/free/projects/board/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://hieudoanm.github.io/free/projects/board/cal/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://hieudoanm.github.io/free/projects/board/list/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://hieudoanm.github.io/free/projects/board/timeline/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://hieudoanm.github.io/free/projects/card/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://hieudoanm.github.io/free/projects/downloads/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -46,7 +21,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hieudoanm.github.io/free/projects/settings/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

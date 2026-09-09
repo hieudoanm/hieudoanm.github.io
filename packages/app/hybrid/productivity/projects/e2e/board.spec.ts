@@ -11,35 +11,30 @@ test.afterEach(async ({ page }, testInfo) => {
 });
 
 const goToBoard = async (page: import('@playwright/test').Page) => {
-  await page.goto('/board?id=board-2');
+  await page.goto('/?id=board-2');
   await expect(page.locator('h1')).toBeVisible();
 };
 
-test('loads board page', async ({ page }) => {
+test('loads board page on the root route', async ({ page }) => {
   await goToBoard(page);
-  await expect(page).toHaveURL(/\/board/);
+  await expect(page).toHaveURL(/id=board-2/);
 });
 
-test('displays board name in header', async ({ page }) => {
+test('displays the selected board name in header', async ({ page }) => {
   await goToBoard(page);
-  await expect(page.locator('h1')).toBeVisible();
-});
-
-test('has back button', async ({ page }) => {
-  await goToBoard(page);
-  await expect(page.locator('button').first()).toBeVisible();
+  await expect(page.locator('h1')).toHaveText('Personal Tasks');
 });
 
 test('has star toggle', async ({ page }) => {
   await goToBoard(page);
-  await expect(page.locator('button').nth(1)).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Toggle star' })).toBeVisible();
 });
 
-test('has view mode buttons', async ({ page }) => {
+test('has archive button', async ({ page }) => {
   await goToBoard(page);
-  await expect(page.locator('a:has-text("List")')).toBeVisible();
-  await expect(page.locator('a:has-text("Calendar")')).toBeVisible();
-  await expect(page.locator('a:has-text("Timeline")')).toBeVisible();
+  await expect(
+    page.getByRole('button', { name: 'Open archive' })
+  ).toBeVisible();
 });
 
 test('has Add list button', async ({ page }) => {
@@ -96,6 +91,7 @@ test('clicking card opens modal', async ({ page }) => {
   await goToBoard(page);
   const card = page.locator('.card').filter({ hasText: /./ }).first();
   await card.click();
+  await expect(page.locator('input.input-ghost')).toBeVisible();
 });
 
 test('card modal has title input', async ({ page }) => {
@@ -150,18 +146,22 @@ test('card modal has label buttons', async ({ page }) => {
   await expect(page.locator('.badge').first()).toBeVisible();
 });
 
-test('can close card modal', async ({ page }) => {
+test('sidebar lists all projects', async ({ page }) => {
   await goToBoard(page);
-  const card = page
-    .locator('.card')
-    .filter({ has: page.locator('.text-xs') })
-    .first();
-  await card.click();
-  await page.keyboard.press('Escape');
+  const sidebar = page.getByRole('complementary');
+  await expect(sidebar.getByText('Projects')).toBeVisible();
+  await expect(
+    sidebar.getByRole('link', { name: /Personal Tasks/ })
+  ).toBeVisible();
+  await expect(
+    sidebar.getByRole('link', { name: /Project Alpha/ })
+  ).toBeVisible();
+  await expect(
+    sidebar.getByRole('link', { name: /Event Planning/ })
+  ).toBeVisible();
 });
 
-test('back navigates to home', async ({ page }) => {
+test('has add project button in sidebar', async ({ page }) => {
   await goToBoard(page);
-  await page.locator('button').first().click();
-  await expect(page).toHaveURL('/');
+  await expect(page.getByRole('button', { name: 'Add project' })).toBeVisible();
 });

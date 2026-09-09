@@ -12,7 +12,7 @@ test.afterEach(async ({ page }, testInfo) => {
 
 test('loads version page', async ({ page }) => {
   await page.goto('/version');
-  await expect(page.locator('text=Projects Version')).toBeVisible();
+  await expect(page.locator('h1', { hasText: 'Version' })).toBeVisible();
 });
 
 test('displays version format', async ({ page }) => {

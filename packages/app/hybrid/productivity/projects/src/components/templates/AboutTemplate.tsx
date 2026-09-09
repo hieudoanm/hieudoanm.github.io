@@ -25,9 +25,7 @@ export const AboutTemplate: FC<{
         {items.map(({ label, value }) => (
           <div key={label} className="flex items-center justify-between">
             <span className="text-base-content/50 text-sm">{label}</span>
-            <span className="text-base-content font-mono text-sm font-bold">
-              {value}
-            </span>
+            <span className="text-base-content text-sm font-bold">{value}</span>
           </div>
         ))}
       </div>

@@ -97,3 +97,17 @@ export interface ProjectsSettings {
   notifications: boolean;
   notificationsReadAt?: number;
 }
+
+export interface Task {
+  id: string;
+  userId: string;
+  text: string;
+  completed: boolean;
+  createdAt: number;
+  updatedAt: number;
+}
+
+export interface Session {
+  id: string;
+  userId: string | null;
+}

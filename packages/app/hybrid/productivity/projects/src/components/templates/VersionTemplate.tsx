@@ -52,7 +52,7 @@ export const VersionTemplate: FC<{ version: string }> = ({ version }) => {
             )}
           </div>
         ) : (
-          <p className="text-error font-mono text-lg font-bold break-all sm:text-xl">
+          <p className="text-error text-lg font-bold break-all sm:text-xl">
             {version}
           </p>
         )}
@@ -89,7 +89,7 @@ const Segment: FC<{ value: string; label: string; primary?: boolean }> = ({
 }) => (
   <div className="flex flex-col items-center px-2 sm:px-4">
     <span
-      className={`font-mono text-xl font-bold sm:text-2xl ${primary ? 'text-primary' : 'text-base-content'}`}>
+      className={`text-xl font-bold sm:text-2xl ${primary ? 'text-primary' : 'text-base-content'}`}>
       {value}
     </span>
     <span className="text-base-content/50 mt-1 hidden text-[10px] tracking-[0.2em] uppercase sm:inline sm:text-xs">
@@ -98,8 +98,6 @@ const Segment: FC<{ value: string; label: string; primary?: boolean }> = ({
   </div>
 );
 
-const Dot: FC = () => (
-  <span className="text-base-content/50 font-mono text-xl">.</span>
-);
+const Dot: FC = () => <span className="text-base-content/50 text-xl">.</span>;
 
 VersionTemplate.displayName = 'VersionTemplate';

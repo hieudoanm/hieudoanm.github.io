@@ -27,6 +27,7 @@ jest.mock('@/lib/db', () => ({
     members: { getAll: jest.fn(), put: jest.fn() },
     activity: { getAll: jest.fn(), put: jest.fn() },
     settings: { get: jest.fn(), put: jest.fn() },
+    tasks: { getAll: jest.fn(), put: jest.fn(), delete: jest.fn() },
   },
 }));
 

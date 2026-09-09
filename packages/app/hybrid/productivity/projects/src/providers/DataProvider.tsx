@@ -17,6 +17,7 @@ import type {
   Activity,
   ProjectsSettings,
   ChecklistItem,
+  Task,
 } from '@/types';
 import { db } from '@/lib/db';
 import { seedDatabase } from '@/data/seed';
@@ -29,6 +30,7 @@ interface DataContextType {
   labels: Label[];
   members: Member[];
   activity: Activity[];
+  tasks: Task[];
   settings: ProjectsSettings;
   isLoading: boolean;
   createBoard: (name: string, background: string) => Promise<Board>;
@@ -64,6 +66,9 @@ interface DataContextType {
   ) => Promise<void>;
   toggleChecklistItem: (cardId: string, itemId: string) => Promise<void>;
   addChecklistItem: (cardId: string, text: string) => Promise<void>;
+  addTask: (userId: string, text: string) => Promise<void>;
+  toggleTask: (id: string) => Promise<void>;
+  deleteTask: (id: string) => Promise<void>;
   addActivity: (
     boardId: string,
     cardId: string | null,
@@ -87,6 +92,7 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
   const [labels, setLabels] = useState<Label[]>([]);
   const [members, setMembers] = useState<Member[]>([]);
   const [activity, setActivity] = useState<Activity[]>([]);
+  const [tasks, setTasks] = useState<Task[]>([]);
   const [settings, setSettings] = useState<ProjectsSettings>({
     theme: 'projects-light',
     defaultView: 'kanban',
@@ -97,7 +103,7 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
   const refreshData = useCallback(async () => {
     setIsLoading(true);
     await seedDatabase();
-    const [b, l, c, lb, m, a, s] = await Promise.all([
+    const [b, l, c, lb, m, a, s, t] = await Promise.all([
       db.boards.getAll(),
       db.lists.getAll(),
       db.cards.getAll(),
@@ -105,6 +111,7 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
       db.members.getAll(),
       db.activity.getAll(),
       db.settings.get(),
+      db.tasks.getAll(),
     ]);
     setBoards(b);
     setLists(l);
@@ -112,6 +119,7 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
     setLabels(lb);
     setMembers(m);
     setActivity(a.sort((x, y) => y.timestamp - x.timestamp));
+    setTasks(t);
     setSettings(s);
     setIsLoading(false);
   }, []);
@@ -592,6 +600,39 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
     []
   );
 
+  const addTask = useCallback(async (userId: string, text: string) => {
+    const task: Task = {
+      id: generateId(),
+      userId,
+      text,
+      completed: false,
+      createdAt: Date.now(),
+      updatedAt: Date.now(),
+    };
+    await db.tasks.put(task);
+    setTasks((p) => [...p, task]);
+  }, []);
+
+  const toggleTask = useCallback(
+    async (id: string) => {
+      const task = tasks.find((t) => t.id === id);
+      if (!task) return;
+      const updated = {
+        ...task,
+        completed: !task.completed,
+        updatedAt: Date.now(),
+      };
+      await db.tasks.put(updated);
+      setTasks((p) => p.map((t) => (t.id === id ? updated : t)));
+    },
+    [tasks]
+  );
+
+  const deleteTask = useCallback(async (id: string) => {
+    await db.tasks.delete(id);
+    setTasks((p) => p.filter((t) => t.id !== id));
+  }, []);
+
   const updateSettings = useCallback(
     async (partial: Partial<ProjectsSettings>) => {
       const updated = { ...settings, ...partial };
@@ -610,6 +651,7 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
         labels,
         members,
         activity,
+        tasks,
         settings,
         isLoading,
         createBoard,
@@ -632,6 +674,9 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
         moveCard,
         toggleChecklistItem,
         addChecklistItem,
+        addTask,
+        toggleTask,
+        deleteTask,
         addActivity,
         updateSettings,
         refreshData,
