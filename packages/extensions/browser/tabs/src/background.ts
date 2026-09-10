@@ -32,14 +32,14 @@ chrome.storage.onChanged.addListener((changes, area) => {
   }
 });
 
-function applyNetworkBlockState(): void {
+const applyNetworkBlockState = (): void => {
   if (typeof chrome.declarativeNetRequest !== 'undefined') {
     void chrome.declarativeNetRequest.updateEnabledRulesets({
       enableRulesetIds: adsBlockEnabled ? [ADS_RULESET_ID] : [],
       disableRulesetIds: adsBlockEnabled ? [] : [ADS_RULESET_ID],
     });
   }
-}
+};
 
 if (typeof chrome.webRequest !== 'undefined') {
   chrome.webRequest.onBeforeRequest.addListener(
@@ -71,16 +71,18 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
   }
 });
 
-async function handleCaptureView(request: CaptureRequest): Promise<string> {
+const handleCaptureView = async (request: CaptureRequest): Promise<string> => {
   const captureOptions = buildCaptureOptions(request);
   const dataUrl = await captureVisibleTab(captureOptions);
   if (request.format !== 'png' && request.format !== 'jpeg') {
     return reencode(dataUrl, request.format, request.quality ?? 92);
   }
   return dataUrl;
-}
+};
 
-async function handleCaptureFullPage(request: CaptureRequest): Promise<string> {
+const handleCaptureFullPage = async (
+  request: CaptureRequest
+): Promise<string> => {
   const tabId = await getActiveTabId();
   const layout = await sendToContent<LayoutInfo>(tabId, {
     action: `${SNAP}GET_LAYOUT`,
@@ -122,25 +124,27 @@ async function handleCaptureFullPage(request: CaptureRequest): Promise<string> {
     return stitched;
   }
   return reencode(stitched, request.format ?? 'jpeg', request.quality ?? 92);
-}
+};
 
-function buildCaptureOptions(request: CaptureRequest): {
+const buildCaptureOptions = (
+  request: CaptureRequest
+): {
   format: 'png' | 'jpeg';
   quality?: number;
-} {
+} => {
   const format = request.format === 'png' ? 'png' : 'jpeg';
   const options: { format: 'png' | 'jpeg'; quality?: number } = { format };
   if (format === 'jpeg') {
     options.quality = request.quality || 92;
   }
   return options;
-}
+};
 
-function captureVisibleTab(options: {
+const captureVisibleTab = (options: {
   format: 'png' | 'jpeg';
   quality?: number;
-}): Promise<string> {
-  return new Promise((resolve, reject) => {
+}): Promise<string> =>
+  new Promise((resolve, reject) => {
     chrome.tabs.captureVisibleTab(
       chrome.windows.WINDOW_ID_CURRENT,
       options,
@@ -153,21 +157,20 @@ function captureVisibleTab(options: {
       }
     );
   });
-}
 
-async function getActiveTabId(): Promise<number> {
+const getActiveTabId = async (): Promise<number> => {
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
   if (!tab?.id) {
     throw new Error('Snapshot: no active tab');
   }
   return tab.id;
-}
+};
 
-function sendToContent<T>(
+const sendToContent = <T>(
   tabId: number,
   message: unknown
-): Promise<T | undefined> {
-  return new Promise((resolve) => {
+): Promise<T | undefined> =>
+  new Promise((resolve) => {
     chrome.tabs.sendMessage(tabId, message, (response) => {
       if (chrome.runtime.lastError) {
         resolve(undefined);
@@ -176,22 +179,21 @@ function sendToContent<T>(
       resolve(response as T);
     });
   });
-}
 
-async function getBitmapSize(
+const getBitmapSize = async (
   dataUrl: string
-): Promise<{ width: number; height: number }> {
+): Promise<{ width: number; height: number }> => {
   const response = await fetch(dataUrl);
   const blob = await response.blob();
   const bitmap = await createImageBitmap(blob);
   return { width: bitmap.width, height: bitmap.height };
-}
+};
 
-async function reencode(
+const reencode = async (
   dataUrl: string,
   format: string,
   quality: number
-): Promise<string> {
+): Promise<string> => {
   const { width, height } = await getBitmapSize(dataUrl);
   const canvas = new OffscreenCanvas(width, height);
   const ctx = canvas.getContext('2d');
@@ -208,17 +210,15 @@ async function reencode(
     quality: quality / 100,
   });
   return blobToDataUrl(out);
-}
+};
 
-function blobToDataUrl(blob: Blob): Promise<string> {
-  return new Promise((resolve, reject) => {
+const blobToDataUrl = (blob: Blob): Promise<string> =>
+  new Promise((resolve, reject) => {
     const reader = new FileReader();
     reader.onloadend = () => resolve(reader.result as string);
     reader.onerror = () => reject(new Error('Snapshot: failed to read blob'));
     reader.readAsDataURL(blob);
   });
-}
 
-function wait(ms: number): Promise<void> {
-  return new Promise((resolve) => window.setTimeout(resolve, ms));
-}
+const wait = (ms: number): Promise<void> =>
+  new Promise((resolve) => window.setTimeout(resolve, ms));

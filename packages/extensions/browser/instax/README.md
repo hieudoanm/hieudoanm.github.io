@@ -1,1 +1,0 @@
-# InstaX - Instagram Extension

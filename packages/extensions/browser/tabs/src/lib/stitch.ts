@@ -3,11 +3,25 @@ export interface SnapshotChunk {
   y: number;
 }
 
-export async function stitchChunks(
+const dataUrlToBitmap = async (dataUrl: string): Promise<ImageBitmap> => {
+  const response = await fetch(dataUrl);
+  const blob = await response.blob();
+  return createImageBitmap(blob);
+};
+
+const blobToDataUrl = (blob: Blob): Promise<string> =>
+  new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onloadend = () => resolve(reader.result as string);
+    reader.onerror = () => reject(new Error('Snapshot: failed to read blob'));
+    reader.readAsDataURL(blob);
+  });
+
+export const stitchChunks = async (
   chunks: ReadonlyArray<SnapshotChunk>,
   widthPx: number,
   heightPx: number
-): Promise<string> {
+): Promise<string> => {
   const canvas = new OffscreenCanvas(widthPx, heightPx);
   const ctx = canvas.getContext('2d');
   if (!ctx) {
@@ -24,19 +38,4 @@ export async function stitchChunks(
 
   const blob = await canvas.convertToBlob({ type: 'image/png' });
   return blobToDataUrl(blob);
-}
-
-async function dataUrlToBitmap(dataUrl: string): Promise<ImageBitmap> {
-  const response = await fetch(dataUrl);
-  const blob = await response.blob();
-  return createImageBitmap(blob);
-}
-
-function blobToDataUrl(blob: Blob): Promise<string> {
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onloadend = () => resolve(reader.result as string);
-    reader.onerror = () => reject(new Error('Snapshot: failed to read blob'));
-    reader.readAsDataURL(blob);
-  });
-}
+};

@@ -26,7 +26,7 @@ export const AD_NETWORK_DOMAINS = [
   '*://*.taboola.com/*',
 ];
 
-function hideAdElements(): void {
+const hideAdElements = (): void => {
   const elements = document.querySelectorAll<HTMLElement>(
     AD_SELECTORS.join(', ')
   );
@@ -35,9 +35,9 @@ function hideAdElements(): void {
       el.style.setProperty('display', 'none', 'important');
     }
   }
-}
+};
 
-export function maybeRunAdsBlocker(): void {
+export const maybeRunAdsBlocker = (): void => {
   chrome.storage.sync.get(ADS_KEY, (result) => {
     if (chrome.runtime.lastError || result[ADS_KEY] === false) return;
 
@@ -58,4 +58,4 @@ export function maybeRunAdsBlocker(): void {
       });
     }
   });
-}
+};

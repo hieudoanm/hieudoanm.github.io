@@ -14,15 +14,18 @@ Reference docs live in `docs/`:
 
 ## Key Conventions
 
-- New-tab interception lives entirely in the background; the redirect target is
-  the single constant `TARGET_URL` in `src/lib/newtab.ts` — the only place to
-  change the landing URL
+- New-tab interception lives entirely in the background; the default landing
+  URL is `DEFAULT_TARGET_URL` in `src/lib/newtab.ts`. Users can override it from
+  the popup's New Tab tab (stored in `storage.sync` under `newTabTargetUrl`);
+  the background resolves the stored URL before every redirect, falling back to
+  the default when unset, and refuses newtab/about targets to avoid loops
 - Listen on both `tabs.onCreated` (via `pendingUrl`, fires before navigation
   completes) and `tabs.onUpdated` (catches late navigations into
   `chrome://newtab`); redirect **only** new-tab / home / private-browsing URLs
   and leave every other URL untouched
-- The popup checkbox `redirectNewTabs` (default on) is persisted in
-  `storage.sync`; the background reads it before each redirect
+- The popup toggle `redirectNewTabs` (default on) and the custom redirect
+  target `newTabTargetUrl` (default `https://hieudoanm.github.io`) are persisted
+  in `storage.sync`; the background reads both before each redirect
 - The block list lives in `src/lib/block.ts` (`BLOCKED_DOMAINS`): facebook,
   x/twitter, instagram, reddit, tiktok, youtube, netflix, twitch, discord —
   when one loads, `maybeRenderBlockWall()` in `src/content.ts` replaces the
@@ -35,6 +38,22 @@ Reference docs live in `docs/`:
   blocking in `background.ts` via `webRequest` and MV3 via the static DNR
   ruleset `ruleset_block` in `public/manifest/v3/rules.json` — keep the two
   domain lists in sync
+- The popup is a 5-tab bar ordered alphabetically: **Ads, Block, Insta, New
+  Tab, Snap** — keep data-tab ids, buttons, and panes in this order. The Insta
+  tab and its pane are hidden unless the active tab is `instagram.com`, and the
+  popup opens straight onto Insta when it is (contextual feature)
+- The Instagram gesture lives in `src/lib/insta.ts`
+  (`registerInstaGesture()`): **Shift + right-click** on an Instagram page
+  opens `<img>` sources collected from the right-clicked element plus its
+  siblings and their subtrees (carousel images), `Set`-deduped, each in a new
+  tab with `noopener noreferrer`. The gesture fires on the right-button
+  `mousedown` (`event.button === 2` + `shiftKey`) — deliberately not on
+  `contextmenu`, which Instagram/Facebook pages can swallow — and a
+  capture-phase `window` `contextmenu` listener suppresses the menu only when
+  paired (within `CONTEXT_MENU_PAIR_MS`) with a fired gesture. Plain
+  right-clicks keep the normal menu. No multi-click/interval heuristics. Gated
+  by the `instaGesture` toggle (default on, `storage.sync`) and an
+  `instagram.com` hostname check — on every other page it is inert
 - Keep `BETTER_SITES` (jump shortcuts) and `SUGGESTIONS` (spin-wheel ideas)
   family-friendly and dependency-free; they render without any network call
 - The block wall and the capture content script coexist in `content.ts`: the

@@ -19,14 +19,12 @@
 | 1   | [Chess](https://chess.com)         | [chessx][chessx]     |
 | 2   | [Claude](https://claude.ai)        | [claudex][claudex]   |
 | 3   | [GitHub](https://github.com)       | [githubx][githubx]   |
-| 4   | [Instagram](https://instagram.com) | [instagramx][instax] |
-| 5   | [Shopify](https://shopify.com)     | [shopifyx][shopifyx] |
-| 6   | Tabs                               | [tabs][tabs]         |
+| 4   | [Shopify](https://shopify.com)     | [shopifyx][shopifyx] |
+| 5   | Tabs                               | [tabs][tabs]         |
 
 [chessx]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/chessx
 [claudex]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/claudex
 [githubx]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/githubx
-[instax]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/instax
 [shopifyx]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/shopifyx
 [tabs]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/tabs
 

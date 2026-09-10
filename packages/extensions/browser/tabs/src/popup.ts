@@ -24,21 +24,48 @@ const blockDistractingSites = document.getElementById(
   'blockDistractingSites'
 ) as HTMLInputElement;
 const blockAds = document.getElementById('blockAds') as HTMLInputElement;
+const newTabTargetUrl = document.getElementById(
+  'newTabTargetUrl'
+) as HTMLInputElement;
+const tabButtons = Array.from(
+  document.querySelectorAll<HTMLButtonElement>('.tab-btn')
+);
+const panes = Array.from(document.querySelectorAll<HTMLElement>('.pane'));
+const instaTabBtn =
+  document.querySelector<HTMLButtonElement>('[data-tab="insta"]');
+const instaToggle = document.getElementById('instaToggle') as HTMLInputElement;
+
+const DEFAULT_TARGET_URL = 'https://hieudoanm.github.io';
+const TARGET_URL_KEY = 'newTabTargetUrl';
+let savedTargetUrl = DEFAULT_TARGET_URL;
 
 let lastDataUrl: string | null = null;
 let lastFilename: string | null = null;
 let isBusy = false;
 
+const isInstagramUrl = (value: string): boolean => {
+  try {
+    return new URL(value).hostname.endsWith('instagram.com');
+  } catch {
+    return false;
+  }
+};
+
 chrome.tabs.query({ active: true, currentWindow: true }, ([tab]) => {
-  if (!tabUrlEl) return;
-  if (tab?.url) {
-    try {
-      const url = new URL(tab.url);
-      tabUrlEl.textContent = `${url.hostname}${url.pathname === '/' ? '' : url.pathname}`;
-    } catch {
-      tabUrlEl.textContent = tab.url;
+  const url = tab?.url;
+  if (tabUrlEl) {
+    if (url) {
+      try {
+        const parsed = new URL(url);
+        tabUrlEl.textContent = `${parsed.hostname}${parsed.pathname === '/' ? '' : parsed.pathname}`;
+      } catch {
+        tabUrlEl.textContent = url;
+      }
     }
   }
+  const onInstagram = url ? isInstagramUrl(url) : false;
+  instaTabBtn?.classList.toggle('hidden', !onInstagram);
+  if (onInstagram) activateTab('insta');
 });
 
 chrome.storage.sync.get('redirectNewTabs', (result) => {
@@ -78,31 +105,92 @@ blockAds?.addEventListener('change', () => {
   });
 });
 
-function setStatus(msg: string, type = ''): void {
+chrome.storage.sync.get('instaGesture', (result) => {
+  if (chrome.runtime.lastError) return;
+  if (instaToggle) {
+    instaToggle.checked = result.instaGesture !== false;
+  }
+});
+
+instaToggle?.addEventListener('change', () => {
+  chrome.storage.sync.set({ instaGesture: instaToggle.checked });
+});
+
+const activateTab = (tabId: string): void => {
+  tabButtons.forEach((btn) => {
+    const active = btn.dataset.tab === tabId;
+    btn.classList.toggle('active', active);
+    btn.setAttribute('aria-selected', String(active));
+  });
+  panes.forEach((pane) => {
+    pane.classList.toggle('active', pane.id === `pane-${tabId}`);
+  });
+};
+
+tabButtons.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const dataTab = btn.dataset.tab;
+    if (dataTab) activateTab(dataTab);
+  });
+});
+
+const isValidTargetUrl = (value: string): boolean => {
+  try {
+    const url = new URL(value);
+    return url.protocol === 'http:' || url.protocol === 'https:';
+  } catch {
+    return false;
+  }
+};
+
+chrome.storage.sync.get(TARGET_URL_KEY, (result) => {
+  if (chrome.runtime.lastError) return;
+  const value = result[TARGET_URL_KEY];
+  savedTargetUrl =
+    typeof value === 'string' && value.trim()
+      ? value.trim()
+      : DEFAULT_TARGET_URL;
+  if (newTabTargetUrl) newTabTargetUrl.value = savedTargetUrl;
+});
+
+newTabTargetUrl?.addEventListener('change', () => {
+  const raw = newTabTargetUrl.value.trim();
+  if (!isValidTargetUrl(raw)) {
+    newTabTargetUrl.value = savedTargetUrl;
+    setStatus('Target must start with http:// or https://', 'err');
+    return;
+  }
+  savedTargetUrl = raw;
+  newTabTargetUrl.value = raw;
+  chrome.storage.sync.set({ [TARGET_URL_KEY]: raw });
+  setStatus('Target saved ✓', 'ok');
+});
+
+const setStatus = (msg: string, type = ''): void => {
   if (!statusEl) return;
   statusEl.textContent = msg;
   statusEl.className = 'status' + (type ? ` ${type}` : '');
-}
+};
 
-function bytesToSize(base64: string): string {
+const bytesToSize = (base64: string): string => {
   const bytes = Math.round((base64.length * 3) / 4);
   if (bytes < 1024) return `${bytes} B`;
   if (bytes < 1048576) return `${(bytes / 1024).toFixed(1)} KB`;
   return `${(bytes / 1048576).toFixed(1)} MB`;
-}
+};
 
-function getTimestamp(): string {
+const getTimestamp = (): string => {
   const now = new Date();
   return now.toISOString().replace(/[:.]/g, '-').replace('T', '_').slice(0, 19);
-}
+};
 
-function setBusy(busy: boolean): void {
+const setBusy = (busy: boolean): void => {
   isBusy = busy;
   captureViewBtn.disabled = busy;
   captureFullBtn.disabled = busy;
-}
+};
 
-async function capture(mode: 'view' | 'full'): Promise<void> {
+const capture = async (mode: 'view' | 'full'): Promise<void> => {
   if (isBusy) return;
   const format = formatSelect.value;
   const quality = format === 'png' ? undefined : 92;
@@ -144,9 +232,9 @@ async function capture(mode: 'view' | 'full'): Promise<void> {
   } finally {
     setBusy(false);
   }
-}
+};
 
-function triggerDownload(dataUrl: string, filename: string): void {
+const triggerDownload = (dataUrl: string, filename: string): void => {
   chrome.downloads.download({ url: dataUrl, filename, saveAs: false }, () => {
     if (chrome.runtime.lastError) {
       setStatus('Download error: ' + chrome.runtime.lastError.message, 'err');
@@ -154,7 +242,7 @@ function triggerDownload(dataUrl: string, filename: string): void {
       setStatus('Saved to downloads ✓', 'ok');
     }
   });
-}
+};
 
 captureViewBtn.addEventListener('click', () => {
   void capture('view');

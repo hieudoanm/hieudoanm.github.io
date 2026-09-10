@@ -1,5 +1,6 @@
 import { maybeRunAdsBlocker } from './lib/ads';
 import { maybeRenderBlockWall } from './lib/block';
+import { registerInstaGesture } from './lib/insta';
 
 interface LayoutInfo {
   scrollHeight: number;
@@ -13,23 +14,22 @@ const SCROLL_SETTLE_MS = 120;
 
 maybeRenderBlockWall();
 maybeRunAdsBlocker();
+registerInstaGesture();
 
-function getLayout(): LayoutInfo {
-  return {
-    scrollHeight: document.documentElement.scrollHeight,
-    clientHeight: document.documentElement.clientHeight,
-    scrollY: window.scrollY,
-    dpr: window.devicePixelRatio || 1,
-  };
-}
+const getLayout = (): LayoutInfo => ({
+  scrollHeight: document.documentElement.scrollHeight,
+  clientHeight: document.documentElement.clientHeight,
+  scrollY: window.scrollY,
+  dpr: window.devicePixelRatio || 1,
+});
 
-function scrollToY(y: number): void {
+const scrollToY = (y: number): void => {
   window.scrollTo({ top: y, left: 0, behavior: 'auto' });
-}
+};
 
-function flushLayout(): void {
+const flushLayout = (): void => {
   void document.body.offsetHeight;
-}
+};
 
 chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
   const action: string | undefined = message?.action;

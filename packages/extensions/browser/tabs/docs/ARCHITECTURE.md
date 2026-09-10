@@ -113,7 +113,7 @@ directory.
 ├────────────────────────────────────────────────────────────┤
 │  lib/newtab (src/lib/newtab.ts)                            │  Shared helper
 │  - isNewTab(url) prefix matching                           │
-│  - tabs.onCreated/onUpdated → tabs.update(TARGET_URL)      │
+│  - tabs.onCreated/onUpdated -> update target               │
 ├────────────────────────────────────────────────────────────┤
 │  lib/stitch (src/lib/stitch.ts)                           │  Shared helper
 │  - stitchChunks → OffscreenCanvas composition              │
@@ -140,8 +140,13 @@ directory.
   (a tab can be created "pending" before it has a final URL) and `tabs.onUpdated`
   inspects `changeInfo.url`, covering both the moment a tab opens and any
   navigation to a new-tab URL.
-- **Toggle** — the popup checkbox `redirectNewTabs` lives in `storage.sync`
+- **Toggle** — the popup toggle `redirectNewTabs` lives in `storage.sync`
   (default on); every other URL is left completely untouched.
+- **Configurable target** — `DEFAULT_TARGET_URL` in `src/lib/newtab.ts`
+  (`https://hieudoanm.github.io`) is the fallback; users can point new tabs at
+  any `http(s)` URL from the popup's New Tab tab, stored in `storage.sync` as
+  `newTabTargetUrl`. The background re-resolves the target before each redirect
+  and skips blank/newtab targets to avoid loops.
 
 ## Block Strategy
 
@@ -189,8 +194,8 @@ directory.
 ## State Management
 
 - **Minimal** — per-invocation capture state lives in the message flow; the
-  `redirectNewTabs`, `blockDistractingSites`, and `blockAds` preferences are
-  the only persisted values in `storage.sync`.
+  `redirectNewTabs`, `newTabTargetUrl`, `blockDistractingSites`, and `blockAds`
+  preferences are the only persisted values in `storage.sync`.
 
 ## Performance
 

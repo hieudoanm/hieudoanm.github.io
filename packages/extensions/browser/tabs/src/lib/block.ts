@@ -56,101 +56,96 @@ const SUGGESTIONS: ReadonlyArray<string> = [
 const SPIN_BASE_DELAY_MS = 40;
 const SPIN_DURATION_MS = 2400;
 
-function normalizeHostname(hostname: string): string {
-  return hostname.replace(/^www\./, '').toLowerCase();
-}
+const normalizeHostname = (hostname: string): string =>
+  hostname.replace(/^www\./, '').toLowerCase();
 
-export function isBlockedHostname(hostname: string): boolean {
+export const isBlockedHostname = (hostname: string): boolean => {
   const host = normalizeHostname(hostname);
   return BLOCKED_DOMAINS.some(
     (domain) => host === domain || host.endsWith(`.${domain}`)
   );
-}
+};
 
-function pickRandom<T>(items: ReadonlyArray<T>): T {
-  return items[Math.floor(Math.random() * items.length)] ?? items[0];
-}
+const pickRandom = <T>(items: ReadonlyArray<T>): T =>
+  items[Math.floor(Math.random() * items.length)] ?? items[0];
 
-function pause(ms: number): Promise<void> {
-  return new Promise((resolve) => {
+const pause = (ms: number): Promise<void> =>
+  new Promise((resolve) => {
     window.setTimeout(resolve, ms);
   });
-}
 
-function buildStyles(): string {
-  return `
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body { height: 100%; }
-    body {
-      font-family: system-ui, -apple-system, sans-serif;
-      background: radial-gradient(circle at top, #1f2937, #0f172a);
-      color: #f8fafc;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 2rem 1rem;
-    }
-    .block-wall { max-width: 640px; width: 100%; text-align: center; }
-    .block-ball { font-size: 4rem; margin-bottom: 0.5rem; }
-    h1 { font-size: 2rem; margin-bottom: 0.5rem; }
-    .lede { color: #94a3b8; margin-bottom: 1rem; }
-    .domain {
-      display: inline-block;
-      margin-bottom: 1.5rem;
-      padding: 0.4rem 1rem;
-      background: #1e293b;
-      border-radius: 9999px;
-      font-family: monospace;
-      font-size: 0.9rem;
-      color: #ef4444;
-    }
-    h2 { font-size: 1.15rem; margin: 1.5rem 0 0.75rem; color: #cbd5e1; }
-    .better-sites { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.6rem; }
-    .better-sites a {
-      color: #0f172a;
-      background: #f59e0b;
-      text-decoration: none;
-      font-weight: 600;
-      padding: 0.6rem 0.8rem;
-      border-radius: 0.6rem;
-      transition: transform 0.12s ease, background 0.12s ease;
-    }
-    .better-sites a:hover { transform: translateY(-2px); background: #fbbf24; }
-    .wheel { margin-top: 2rem; }
-    .wheel-display {
-      min-height: 3.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.9rem 1.2rem;
-      background: #1e293b;
-      border: 2px solid #334155;
-      border-radius: 1rem;
-      font-size: 1.05rem;
-      line-height: 1.4;
-      color: #e2e8f0;
-    }
-    .wheel-display.spinning { color: #94a3b8; font-style: italic; }
-    .wheel-button {
-      margin-top: 0.9rem;
-      border: none;
-      cursor: pointer;
-      font: inherit;
-      font-size: 1rem;
-      font-weight: 700;
-      color: #0f172a;
-      background: linear-gradient(90deg, #ef4444, #f59e0b);
-      padding: 0.8rem 1.8rem;
-      border-radius: 9999px;
-      transition: transform 0.12s ease, filter 0.12s ease;
-    }
-    .wheel-button:hover { transform: translateY(-2px); filter: brightness(1.05); }
-    .wheel-button:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
-  `;
-}
+const buildStyles = (): string => `
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: radial-gradient(circle at top, #1f2937, #0f172a);
+    color: #f8fafc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+  }
+  .block-wall { max-width: 640px; width: 100%; text-align: center; }
+  .block-ball { font-size: 4rem; margin-bottom: 0.5rem; }
+  h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+  .lede { color: #94a3b8; margin-bottom: 1rem; }
+  .domain {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    padding: 0.4rem 1rem;
+    background: #1e293b;
+    border-radius: 9999px;
+    font-family: monospace;
+    font-size: 0.9rem;
+    color: #ef4444;
+  }
+  h2 { font-size: 1.15rem; margin: 1.5rem 0 0.75rem; color: #cbd5e1; }
+  .better-sites { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.6rem; }
+  .better-sites a {
+    color: #0f172a;
+    background: #f59e0b;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.6rem 0.8rem;
+    border-radius: 0.6rem;
+    transition: transform 0.12s ease, background 0.12s ease;
+  }
+  .better-sites a:hover { transform: translateY(-2px); background: #fbbf24; }
+  .wheel { margin-top: 2rem; }
+  .wheel-display {
+    min-height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.9rem 1.2rem;
+    background: #1e293b;
+    border: 2px solid #334155;
+    border-radius: 1rem;
+    font-size: 1.05rem;
+    line-height: 1.4;
+    color: #e2e8f0;
+  }
+  .wheel-display.spinning { color: #94a3b8; font-style: italic; }
+  .wheel-button {
+    margin-top: 0.9rem;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0f172a;
+    background: linear-gradient(90deg, #ef4444, #f59e0b);
+    padding: 0.8rem 1.8rem;
+    border-radius: 9999px;
+    transition: transform 0.12s ease, filter 0.12s ease;
+  }
+  .wheel-button:hover { transform: translateY(-2px); filter: brightness(1.05); }
+  .wheel-button:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+`;
 
-function createBetterSites(root: HTMLElement): void {
+const createBetterSites = (root: HTMLElement): void => {
   for (const site of BETTER_SITES) {
     const link = document.createElement('a');
     link.href = site.url;
@@ -159,13 +154,13 @@ function createBetterSites(root: HTMLElement): void {
     link.textContent = site.label;
     root.appendChild(link);
   }
-}
+};
 
-function buildWall(): {
+const buildWall = (): {
   root: HTMLElement;
   wheelDisplay: HTMLElement;
   wheelButton: HTMLButtonElement;
-} {
+} => {
   const domain = window.location.hostname;
 
   const root = document.createElement('div');
@@ -222,12 +217,12 @@ function buildWall(): {
   root.appendChild(wheel);
 
   return { root, wheelDisplay, wheelButton };
-}
+};
 
-async function revealResult(
+const revealResult = async (
   display: HTMLElement,
   result: string
-): Promise<void> {
+): Promise<void> => {
   const finalIndex = SUGGESTIONS.indexOf(result);
   const lastTwo = [SUGGESTIONS[finalIndex - 2], SUGGESTIONS[finalIndex - 1]];
 
@@ -238,12 +233,12 @@ async function revealResult(
     }
   }
   display.textContent = `→ ${result}`;
-}
+};
 
-async function spinSuggestions(
+const spinSuggestions = async (
   display: HTMLElement,
   button: HTMLButtonElement
-): Promise<string> {
+): Promise<string> => {
   button.disabled = true;
   display.classList.add('spinning');
 
@@ -264,9 +259,9 @@ async function spinSuggestions(
   button.disabled = false;
 
   return result;
-}
+};
 
-function renderBlockedWall(): void {
+const renderBlockedWall = (): void => {
   document.body.replaceChildren();
 
   const style = document.createElement('style');
@@ -280,10 +275,10 @@ function renderBlockedWall(): void {
   wheelButton.addEventListener('click', () => {
     void spinSuggestions(wheelDisplay, wheelButton);
   });
-}
+};
 
-function isBlockingEnabled(): Promise<boolean> {
-  return new Promise((resolve) => {
+const isBlockingEnabled = (): Promise<boolean> =>
+  new Promise((resolve) => {
     chrome.storage.sync.get(BLOCK_KEY, (result) => {
       if (chrome.runtime.lastError) {
         resolve(true);
@@ -292,9 +287,8 @@ function isBlockingEnabled(): Promise<boolean> {
       resolve(result[BLOCK_KEY] !== false);
     });
   });
-}
 
-async function renderIfBlocked(): Promise<void> {
+const renderIfBlocked = async (): Promise<void> => {
   if (!isBlockedHostname(window.location.hostname)) return;
   if (!(await isBlockingEnabled())) return;
 
@@ -305,8 +299,8 @@ async function renderIfBlocked(): Promise<void> {
   } else {
     renderBlockedWall();
   }
-}
+};
 
-export function maybeRenderBlockWall(): void {
+export const maybeRenderBlockWall = (): void => {
   void renderIfBlocked();
-}
+};

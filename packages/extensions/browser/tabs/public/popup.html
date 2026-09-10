@@ -70,12 +70,37 @@
     }
     .tab-info span { color: var(--accent2); }
 
+    .tabbar {
+      display: flex;
+      border-bottom: 1px solid var(--border);
+      background: var(--surface);
+    }
+    .tab-btn {
+      flex: 1;
+      padding: 10px 4px;
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid transparent;
+      color: var(--muted);
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .tab-btn:hover { color: var(--text); }
+    .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+    .tab-btn.hidden { display: none; }
+
     .body {
       padding: 16px 20px 20px;
       display: flex;
       flex-direction: column;
-      gap: 12px;
     }
+
+    .pane { display: none; flex-direction: column; gap: 12px; }
+    .pane.active { display: flex; }
 
     .mode-flex { display: flex; gap: 8px; }
     .mode-btn {
@@ -118,7 +143,7 @@
     }
     .toggle-row { display: flex; align-items: center; justify-content: space-between; }
     .toggle-label { font-size: 11px; color: var(--text); }
-    .toggle { position: relative; width: 32px; height: 18px; }
+    .toggle { position: relative; width: 32px; height: 18px; flex-shrink: 0; }
     .toggle input { opacity: 0; width: 0; height: 0; }
     .toggle-track {
       position: absolute;
@@ -139,6 +164,22 @@
       pointer-events: none;
     }
     .toggle input:checked ~ .toggle-thumb { transform: translateX(14px); }
+
+    .url-input {
+      width: 100%;
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      color: var(--text);
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      padding: 8px 10px;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    .url-input:focus { border-color: var(--accent); }
+    .hint { margin-top: 6px; font-size: 9px; color: var(--muted); line-height: 1.5; }
+    .pane > .hint { margin-top: 0; padding: 0 2px; }
 
     .select-wrap { position: relative; }
     .select-wrap select {
@@ -241,98 +282,142 @@
   </div>
 </div>
 
+<nav class="tabbar" role="tablist" aria-label="Features">
+  <button class="tab-btn active" type="button" role="tab" aria-selected="true" data-tab="ads">Ads</button>
+  <button class="tab-btn" type="button" role="tab" aria-selected="false" data-tab="block">Block</button>
+  <button class="tab-btn hidden" type="button" role="tab" aria-selected="false" data-tab="insta">Insta</button>
+  <button class="tab-btn" type="button" role="tab" aria-selected="false" data-tab="newtab">New Tab</button>
+  <button class="tab-btn" type="button" role="tab" aria-selected="false" data-tab="snap">Snap</button>
+</nav>
+
 <div class="body">
 
-  <div class="option-box">
-    <div class="option-label">New Tab</div>
-    <div class="toggle-row">
-      <span class="toggle-label">Redirect to hieudoanm home</span>
-      <label class="toggle">
-        <input type="checkbox" id="newTabRedirect" checked />
-        <div class="toggle-track"></div>
-        <div class="toggle-thumb"></div>
-      </label>
-    </div>
-  </div>
-
-  <div class="option-box">
-    <div class="option-label">Block</div>
-    <div class="toggle-row">
-      <span class="toggle-label">Block distracting sites</span>
-      <label class="toggle">
-        <input type="checkbox" id="blockDistractingSites" checked />
-        <div class="toggle-track"></div>
-        <div class="toggle-thumb"></div>
-      </label>
-    </div>
-  </div>
-
-  <div class="option-box">
-    <div class="option-label">Block Ads</div>
-    <div class="toggle-row">
-      <span class="toggle-label">Hide ads and tracking requests</span>
-      <label class="toggle">
-        <input type="checkbox" id="blockAds" checked />
-        <div class="toggle-track"></div>
-        <div class="toggle-thumb"></div>
-      </label>
-    </div>
-  </div>
-
-  <div class="divider"></div>
-
-  <div class="mode-flex">
-    <button class="mode-btn" id="captureViewBtn">
-      <span class="mode-title">Current View</span>
-      <span class="mode-desc">Capture exactly what is on screen</span>
-    </button>
-    <button class="mode-btn" id="captureFullBtn">
-      <span class="mode-title">Full Page</span>
-      <span class="mode-desc">Scroll &amp; stitch the whole page</span>
-    </button>
-  </div>
-
-  <div class="options-grid">
+  <section class="pane active" id="pane-ads" role="tabpanel">
     <div class="option-box">
-      <div class="option-label">Auto-save</div>
+      <div class="option-label">Block Ads</div>
       <div class="toggle-row">
-        <span class="toggle-label">Download</span>
+        <span class="toggle-label">Hide ads and tracking requests</span>
         <label class="toggle">
-          <input type="checkbox" id="autoDownload" checked />
+          <input type="checkbox" id="blockAds" checked />
           <div class="toggle-track"></div>
           <div class="toggle-thumb"></div>
         </label>
       </div>
     </div>
+  </section>
+
+  <section class="pane" id="pane-block" role="tabpanel">
     <div class="option-box">
-      <div class="option-label">Format</div>
-      <div class="select-wrap">
-        <select id="formatSelect">
-          <option value="png">PNG</option>
-          <option value="jpeg">JPEG</option>
-          <option value="webp">WebP</option>
-        </select>
+      <div class="option-label">Block</div>
+      <div class="toggle-row">
+        <span class="toggle-label">Block distracting sites</span>
+        <label class="toggle">
+          <input type="checkbox" id="blockDistractingSites" checked />
+          <div class="toggle-track"></div>
+          <div class="toggle-thumb"></div>
+        </label>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="divider"></div>
-
-  <div class="preview-wrap" id="previewWrap">
-    <div class="preview-label">Preview</div>
-    <div class="preview-img-box">
-      <img id="previewImg" src="" alt="Screenshot preview" />
-      <div class="preview-overlay">
-        <span class="preview-size" id="previewSize"></span>
+  <section class="pane" id="pane-insta" role="tabpanel">
+    <div class="option-box">
+      <div class="option-label">Open Photos</div>
+      <div class="toggle-row">
+        <span class="toggle-label">Double right-click to open</span>
+        <label class="toggle">
+          <input type="checkbox" id="instaToggle" checked />
+          <div class="toggle-track"></div>
+          <div class="toggle-thumb"></div>
+        </label>
       </div>
     </div>
-    <div class="btn-row">
-      <button class="btn-secondary" id="downloadBtn">⬇ Download</button>
-      <button class="btn-secondary" id="copyBtn">⧉ Copy</button>
+    <div class="hint">
+      On Instagram, hold Shift and right-click a post image to open every photo
+      of the post in new tabs. Plain right-clicks keep the normal menu.
     </div>
-  </div>
+  </section>
 
-  <div class="status" id="status"></div>
+  <section class="pane" id="pane-newtab" role="tabpanel">
+    <div class="option-box">
+      <div class="option-label">Redirect</div>
+      <div class="toggle-row">
+        <span class="toggle-label">Redirect new tabs</span>
+        <label class="toggle">
+          <input type="checkbox" id="newTabRedirect" checked />
+          <div class="toggle-track"></div>
+          <div class="toggle-thumb"></div>
+        </label>
+      </div>
+    </div>
+
+    <div class="option-box">
+      <div class="option-label">Target URL</div>
+      <input
+        class="url-input"
+        type="url"
+        id="newTabTargetUrl"
+        placeholder="https://hieudoanm.github.io"
+        spellcheck="false"
+        autocomplete="off" />
+      <div class="hint">
+        Every new tab opens this address. Defaults to hieudoanm.github.io.
+      </div>
+    </div>
+  </section>
+
+  <section class="pane" id="pane-snap" role="tabpanel">
+    <div class="mode-flex">
+      <button class="mode-btn" id="captureViewBtn">
+        <span class="mode-title">Current View</span>
+        <span class="mode-desc">Capture exactly what is on screen</span>
+      </button>
+      <button class="mode-btn" id="captureFullBtn">
+        <span class="mode-title">Full Page</span>
+        <span class="mode-desc">Scroll &amp; stitch the whole page</span>
+      </button>
+    </div>
+
+    <div class="options-grid">
+      <div class="option-box">
+        <div class="option-label">Auto-save</div>
+        <div class="toggle-row">
+          <span class="toggle-label">Download</span>
+          <label class="toggle">
+            <input type="checkbox" id="autoDownload" checked />
+            <div class="toggle-track"></div>
+            <div class="toggle-thumb"></div>
+          </label>
+        </div>
+      </div>
+      <div class="option-box">
+        <div class="option-label">Format</div>
+        <div class="select-wrap">
+          <select id="formatSelect">
+            <option value="png">PNG</option>
+            <option value="jpeg">JPEG</option>
+            <option value="webp">WebP</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="preview-wrap" id="previewWrap">
+      <div class="preview-label">Preview</div>
+      <div class="preview-img-box">
+        <img id="previewImg" src="" alt="Screenshot preview" />
+        <div class="preview-overlay">
+          <span class="preview-size" id="previewSize"></span>
+        </div>
+      </div>
+      <div class="btn-row">
+        <button class="btn-secondary" id="downloadBtn">⬇ Download</button>
+        <button class="btn-secondary" id="copyBtn">⧉ Copy</button>
+      </div>
+    </div>
+
+    <div class="status" id="status"></div>
+  </section>
 
 </div>
 

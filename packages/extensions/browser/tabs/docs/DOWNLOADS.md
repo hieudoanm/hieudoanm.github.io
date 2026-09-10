@@ -1,6 +1,6 @@
 # Tabs
 
-> Redirect every new tab to your home page, block distracting sites and ads, and capture the current view or the full page — in one extension.
+> Redirect every new tab to your home page, block distracting sites and ads, capture the current view or the full page, and open every photo of an Instagram post on double right-click — in one extension.
 
 ![Chromium](https://img.shields.io/badge/Chromium-Chrome%2FEdge%2FBrave%2FOpera%2FVivaldi%2FArc-blue)
 ![Firefox](https://img.shields.io/badge/Firefox-MV2-lightblue)
@@ -74,19 +74,14 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-Tabs combines four tab essentials in one toolbar button. **New Tab** redirects
-every fresh tab to the hieudoanm home page (**New Tab** section of the popup:
-a toggle to turn it off, default on). **Block** stops on an offline focus wall
-when you visit a distracting site (Facebook, X, Instagram, Reddit, TikTok,
-Netflix, Twitch, Discord, and more) — with better sites to jump to and a
-suggestion wheel, toggleable from the popup. **Block Ads** hides ad banners on
-the page and cancels advertising and tracking requests at the network level
-(DoubleClick, Google Analytics, AppNexus, Outbrain, Taboola, and friends),
-toggleable from the popup. **Snapshot** turns the same icon
+Tabs combines five tab essentials in one toolbar button. **Ads** hides ad banners on the page and cancels advertising and tracking requests at the network level (DoubleClick, Google Analytics, AppNexus, Outbrain, Taboola, and friends), toggleable from the popup. **Block** stops on an offline focus wall when you visit a distracting site (Facebook, X, Instagram, Reddit, TikTok, Netflix, Twitch, Discord, and more) — with better sites to jump to and a suggestion wheel, toggleable from the popup. **Insta** appears only while you're on Instagram: Shift + right-click a
+post to open every photo of it in new tabs. **New Tab** redirects every fresh tab to the hieudoanm home page
+(a toggle to turn it off, default on, plus a configurable target URL). **Snap** turns the same icon
 into a camera — **Capture view** screenshots what's on screen, **Capture full
 page** stitches the entire scrollable page from chunks on an
 `OffscreenCanvas`, so even very tall articles capture cleanly across screen
-sizes. Fully offline, no data leaves your machine.
+sizes. Fully offline, no data leaves your
+machine.
 
 ---
 
@@ -95,6 +90,9 @@ sizes. Fully offline, no data leaves your machine.
 ### 🔀 New Tab redirect
 
 - Redirects new-tab / home / private-browsing URLs to the hieudoanm home page
+- The target is configurable: set any `https://` link in the popup's New Tab
+  tab (`newTabTargetUrl`, stored in `storage.sync`); defaults to
+  `https://hieudoanm.github.io`
 - Enable/disable from the popup (`redirectNewTabs`, stored in `storage.sync`)
 - Every other URL is left completely untouched
 
@@ -123,6 +121,15 @@ sizes. Fully offline, no data leaves your machine.
 - Scrolls and stitches the whole page with `SNAP_GET_LAYOUT`/`SNAP_SCROLL_TO`
 - Chunked `OffscreenCanvas` composition preserves aspect ratio on tall pages
 - Scroll position is restored after the capture
+
+### 📸 Open Instagram photos
+
+- On Instagram, hold **Shift** and right-click a post image to open every photo
+  of the post (including carousel siblings) in new tabs
+- Plain right-clicks keep the normal context menu; the gesture is inert on
+  every other site
+- Enable/disable from the popup's **Insta** tab (`instaGesture`, stored in
+  `storage.sync`); that tab only appears while you're on `instagram.com`
 
 ### 🖼️ About the output
 

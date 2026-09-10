@@ -2308,42 +2308,6 @@
         ]
       },
       {
-        "label": "InstaX",
-        "primaryCategory": "Social Networking",
-        "secondaryCategory": "",
-        "icon": "PiImage",
-        "href": "https://hieudoanm.github.io/free/instax",
-        "version": "latest",
-        "lastUpdated": "2026-09-03",
-        "fileSize": "",
-        "actions": [
-          {
-            "label": "v2.crx",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-instax-latest/instax-v2.crx"
-          },
-          {
-            "label": "v2.xpi",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-instax-latest/instax-v2.xpi"
-          },
-          {
-            "label": "v2.zip",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-instax-latest/instax-v2.zip"
-          },
-          {
-            "label": "v3.crx",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-instax-latest/instax-v3.crx"
-          },
-          {
-            "label": "v3.xpi",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-instax-latest/instax-v3.xpi"
-          },
-          {
-            "label": "v3.zip",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-instax-latest/instax-v3.zip"
-          }
-        ]
-      },
-      {
         "label": "ShopifyX",
         "primaryCategory": "Shopping",
         "secondaryCategory": "",

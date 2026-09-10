@@ -26,7 +26,7 @@
 
 > Polish: richer output and tricky pages.
 
-- [ ] Custom redirect target (any URL) instead of the fixed `TARGET_URL`
+- [x] Custom redirect target (any URL) instead of the fixed `TARGET_URL`
 - [ ] Copy-to-clipboard via `clipboard.write` (blocked on protected pages)
 - [ ] Format picker (PNG / JPEG) and quality slider
 - [ ] Custom filename pattern in `storage`

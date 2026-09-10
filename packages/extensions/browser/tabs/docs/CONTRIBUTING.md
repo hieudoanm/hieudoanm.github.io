@@ -96,10 +96,13 @@ every change.
    full-page capture.
 8. Use `document_start` for the content script so layout metrics are ready the
    moment the user asks to capture.
-9. The new-tab redirect target is the single constant `TARGET_URL` in
-   `src/lib/newtab.ts` — the only place to change the landing URL.
+9. The new-tab redirect target defaults to `DEFAULT_TARGET_URL` in
+   `src/lib/newtab.ts`; users can override it per-install from the popup's New
+   Tab tab (stored in `storage.sync` as `newTabTargetUrl`), and the background
+   falls back to the default whenever the stored value is empty or invalid.
 10. Prefix debug logs with `[Tabs]` and keep them minimal, and prefix errors
-    with `Block:` / `BlockAds:` / `Snapshot:` consistently.
+    with `Block:` / `BlockAds:` / `Snapshot:` consistently; the Insta gesture
+    debug logs use an `Insta:` prefix.
 
 ## Testing Conventions
 
@@ -111,8 +114,9 @@ quality gates are:
 2. **Manual matrix** — smoke-test after any change:
    - MV3: Chromium (Chrome/Edge) — `dist/v3`; MV2: Firefox — `dist/v2`
 
-- Open a new tab → it redirects to `TARGET_URL`; toggle off in the popup →
-  default new-tab page loads
+- Open a new tab → it redirects to the configured target (default
+  `https://hieudoanm.github.io`); toggle off in the popup → default new-tab
+  page loads; change the Target URL in the New Tab tab → next new tab goes there
 - Visit a `BLOCKED_DOMAINS` site → the focus wall appears; toggle off in the
   popup → the site loads normally
   - Open a page with ads → ad banners hidden and ad/tracking requests

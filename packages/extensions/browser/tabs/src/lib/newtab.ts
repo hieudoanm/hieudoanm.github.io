@@ -1,8 +1,9 @@
-export const TARGET_URL = 'https://hieudoanm.github.io/app/';
+export const DEFAULT_TARGET_URL = 'https://hieudoanm.github.io';
+export const TARGET_URL_KEY = 'newTabTargetUrl';
 
 const REDIRECT_KEY = 'redirectNewTabs';
 
-function isNewTab(url: string | undefined): boolean {
+const isNewTab = (url: string | undefined): boolean => {
   if (!url) return false;
   return (
     url.startsWith('chrome://newtab') ||
@@ -10,14 +11,26 @@ function isNewTab(url: string | undefined): boolean {
     url.startsWith('about:home') ||
     url.startsWith('about:privatebrowsing')
   );
-}
+};
 
-function redirectToTarget(tabId: number): void {
-  chrome.tabs.update(tabId, { url: TARGET_URL });
-}
+const getStoredTargetUrl = (): Promise<string> =>
+  new Promise((resolve) => {
+    chrome.storage.sync.get(TARGET_URL_KEY, (result) => {
+      if (chrome.runtime.lastError) {
+        resolve(DEFAULT_TARGET_URL);
+        return;
+      }
+      const value = result[TARGET_URL_KEY];
+      resolve(
+        typeof value === 'string' && value.trim()
+          ? value.trim()
+          : DEFAULT_TARGET_URL
+      );
+    });
+  });
 
-function shouldRedirect(): Promise<boolean> {
-  return new Promise((resolve) => {
+const shouldRedirect = (): Promise<boolean> =>
+  new Promise((resolve) => {
     chrome.storage.sync.get(REDIRECT_KEY, (result) => {
       if (chrome.runtime.lastError) {
         resolve(true);
@@ -26,15 +39,15 @@ function shouldRedirect(): Promise<boolean> {
       resolve(result[REDIRECT_KEY] !== false);
     });
   });
-}
 
-async function maybeRedirect(tabId: number): Promise<void> {
-  if (await shouldRedirect()) {
-    redirectToTarget(tabId);
-  }
-}
+const maybeRedirect = async (tabId: number): Promise<void> => {
+  if (!(await shouldRedirect())) return;
+  const target = await getStoredTargetUrl();
+  if (isNewTab(target)) return;
+  chrome.tabs.update(tabId, { url: target });
+};
 
-export function registerNewTabRedirect(): void {
+export const registerNewTabRedirect = (): void => {
   chrome.tabs.onCreated.addListener((tab) => {
     const tabId = tab.id;
     if (tabId === undefined) return;
@@ -47,4 +60,4 @@ export function registerNewTabRedirect(): void {
       void maybeRedirect(tabId);
     }
   });
-}
+};
