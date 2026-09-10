@@ -92,3 +92,16 @@
 - [x] Clipboard section in Settings (monitor toggle, max history picker)
 - [ ] Rich-text / image clipboard support
 - [ ] Snippets with custom names
+
+## Phase 9 — IP Inspector
+
+> Public IP inspector migrated from the web IP tool.
+
+- [x] `IPInfo` / `DNSResponse` models in GaugeCore
+- [x] `IPLookupService` (ipify → ipinfo → ipapi fallback, Cloudflare DNS-over-HTTPS)
+- [x] Pure `IPInfoParsing` (normalise both providers, `detectVPN`, offline
+      classification) with unit tests
+- [x] Dedicated IP tab in the popover between Clipboard and Memory
+      (geolocation rows, raw JSON, VPN badge, map link, DNS lookup)
+- [x] Offline state shown distinctly from generic errors
+- [ ] Custom DNS record types / IPv6 queries

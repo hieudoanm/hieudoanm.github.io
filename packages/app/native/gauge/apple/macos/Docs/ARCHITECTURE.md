@@ -7,6 +7,7 @@
 - Separate Ports view for monitoring and managing local listening ports
 - Clipboard history tab so nothing you copy is ever lost
 - Live network throughput and per-interface traffic in a dedicated tab
+- Public IP inspector with geolocation, ASN/org, and DNS lookups
 - Low resource footprint (~0% idle CPU, <50 MB memory)
 - No special permissions, local-first, no backend
 - Accurate, documented metrics
@@ -22,6 +23,7 @@
 | Port discovery | `lsof` via `Process`          |
 | Clipboard      | `NSPasteboard` changeCount    |
 | Network        | `getifaddrs` + IOKit          |
+| IP / DNS       | `URLSession` public APIs      |
 | Persistence    | Codable + JSON + FileManager  |
 | Build          | Swift Package Manager         |
 | Min macOS      | 13 Ventura                    |
@@ -36,6 +38,7 @@ Sources/
 │   ├── PortsViewModel.swift
 │   ├── ClipboardViewModel.swift
 │   ├── NetworkViewModel.swift
+│   ├── IPViewModel.swift
 │   ├── LaunchAtLogin.swift
 │   └── MenuBarIcon.swift
 ├── Core/
@@ -51,14 +54,18 @@ Sources/
 │   │   ├── ClipperItem.swift
 │   │   ├── ClipperStore.swift
 │   │   ├── NetworkStats.swift
-│   │   └── NetworkSnapshots.swift
+│   │   ├── NetworkSnapshots.swift
+│   │   ├── IPInfo.swift
+│   │   └── DNSResponse.swift
 │   ├── Services/
 │   │   ├── PortDiscovering.swift
 │   │   ├── LsofPortDiscoveryService.swift
 │   │   ├── LsofParser.swift
 │   │   ├── ProcessTerminating.swift
 │   │   ├── SignalProcessTerminator.swift
-│   │   └── NetworkInterfaceClassifying.swift
+│   │   ├── NetworkInterfaceClassifying.swift
+│   │   ├── IPLookupServicing.swift
+│   │   └── IPInfoParsing.swift
 │   ├── ByteFormatter.swift
 │   └── SettingsStore.swift
 ├── Services/
@@ -71,12 +78,14 @@ Sources/
 │   ├── ClipboardMonitor.swift
 │   ├── PasteboardManager.swift
 │   ├── NetworkMonitor.swift
-│   └── IOKitNetworkInterfaceClassifier.swift
+│   ├── IOKitNetworkInterfaceClassifier.swift
+│   └── IPLookupService.swift
 └── Views/
     ├── MenuBarView.swift
     ├── SmallView.swift
     ├── DetailsView.swift
     ├── ClipboardView.swift
+    ├── IPView.swift
     ├── NetworkView.swift
     ├── PortsView.swift
     ├── PortListView.swift
@@ -104,12 +113,12 @@ Sources/
 │  DetailsView | ResourceMeter     │
 │  ClipboardView | NetworkView     │
 │  PortsView | PortListView        │
-│  PortRow | SettingsView          │
+│  IPView | PortRow | SettingsView │
 ├──────────────────────────────────┤
 │          ViewModels              │
 │  GaugeViewModel | PortsViewModel │
 │  ClipboardViewModel |            │
-│  NetworkViewModel                │
+│  NetworkViewModel | IPViewModel  │
 ├──────────────────────────────────┤
 │           Services               │
 │  MemoryMonitor | DiskMonitor     │
@@ -119,7 +128,7 @@ Sources/
 │  ClipboardMonitor |              │
 │  PasteboardManager               │
 │  NetworkMonitor |                │
-│  IOKitInterfaceClassifier        │
+│  IPLookupService | IOKitClassifier│
 ├──────────────────────────────────┤
 │             Core                 │
 │  MemoryStats | DiskStats         │
@@ -128,6 +137,8 @@ Sources/
 │  LsofParser | SignalTerminator   │
 │  ClipperItem | ClipperStore      │
 │  NetworkStats | Snapshots        │
+│  IPInfo | DNSResponse            │
+│  IPInfoParsing | IPNetworkError  │
 │  SystemInfo | ByteFormatter      │
 │  Threshold | SettingsStore       │
 └──────────────────────────────────┘
@@ -306,6 +317,39 @@ NetworkMonitor  (delta / elapsed since previous tick)
         NetworkView
 ```
 
+### IP
+
+**Definition:** the device's current public IP plus geolocation, ASN, and org
+details, resolved through public HTTP APIs — never shell commands or local
+network scanning. `IPLookupService` gets the IP from `api.ipify.org`, asks
+`ipinfo.io` for enrichment, and falls back to `ipapi.co` if that fails (both
+may rate-limit, so the fallback keeps the tab working). DNS A-record lookups
+hit Cloudflare's DNS-over-HTTPS endpoint (`application/dns-json`) with a
+timeout. Responses are normalised into `IPInfo` / `DNSResponse` by pure
+`IPInfoParsing` functions in Core, so decoding and the VPN/shared-hosting
+heuristic (`detectVPN`) are unit-tested. Wire-format JSON is shown verbatim via
+collapsible sections.
+
+```text
+api.ipify.org  (current IP)
+        ↓
+ipinfo.io ──fail──→ ipapi.co
+        ↓
+   IPInfoParsing (normalise + detectVPN + offline classification)
+        ↓
+       IPInfo | DNSResponse
+        ↓
+      IPViewModel
+        ↓
+        IPView
+```
+
+`IPViewModel` classifies `URLError`s into an explicit **Offline** state
+(`notConnectedToInternet`, `cannotConnectToHost`, `cannotFindHost`,
+`networkConnectionLost`, `timedOut`, `dnsLookupFailed`) versus a generic error
+message, satisfying "offline shows offline, errors show the error". The IP tab
+does not auto-refresh — data is fetched when the tab appears and on Refresh.
+
 ### Refresh
 
 A single coordinated 1-second timer drives all five system monitors. When the
@@ -342,6 +386,8 @@ Semantic system colors only — readable in Light and Dark Mode.
 - `PortsViewModel` — observable coordinator for port discovery and termination
 - `ClipboardViewModel` — observable coordinator for clipboard history, owns the
   `ClipperStore` and monitor, persists monitor/max-history preferences
+- `IPViewModel` — observable coordinator for IP/DNS lookups, classifies
+  connectivity failures into an explicit Offline state
 - `SettingsStore` — persists user preferences (refresh interval, shared by the system and ports view models)
 - Models are immutable value types with computed ratio/percentage
 

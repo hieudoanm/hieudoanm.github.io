@@ -571,13 +571,6 @@
         "toolId": "figlet"
       },
       {
-        "label": "IP",
-        "description": "Inspector",
-        "icon": "PiGlobe",
-        "sectionId": "developer",
-        "toolId": "ip"
-      },
-      {
         "label": "OpenAPI",
         "description": "to Postman",
         "icon": "PiArrowsClockwise",
@@ -590,13 +583,6 @@
         "icon": "PiLink",
         "sectionId": "developer",
         "toolId": "proxy"
-      },
-      {
-        "label": "Shopify Detect",
-        "description": "Detect Shopify",
-        "icon": "PiMagnifyingGlass",
-        "sectionId": "developer",
-        "toolId": "shopify-detect"
       },
       {
         "label": "URL Tracer",

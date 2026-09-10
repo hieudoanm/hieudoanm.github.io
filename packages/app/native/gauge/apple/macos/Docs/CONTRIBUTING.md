@@ -87,16 +87,28 @@ No permissions are required to run Gauge.
 - Persist atomically to `Application Support/Clipper/clipboard.json`
 - Never skip the `maxItems` cap — history must stay bounded
 
+### IP Conventions
+
+- Views never build HTTP requests directly — go through `IPLookupServicing`
+- Keep all parsing and classification in `IPInfoParsing` (normalise ipinfo /
+  ipapi payloads, `detectVPN`, `IPNetworkError`) so it stays unit-testable
+- Prefer `ipinfo.io` and fall back to `ipapi.co`; never fail the tab when one
+  provider rate-limits
+- Distinguish an explicit Offline state from generic errors — never show a
+  misleading value when the lookup fails
+
 ## Before You Push
 
 1. `make build` — clean compile
 2. `make test` — all tests pass
 3. `make dev` — smoke test the app
 4. Menu-bar icon shows memory and disk percentages
-5. Popover shows all four tabs with Memory the default
+5. Popover shows all five tabs with Memory the default
 6. Memory tab shows both progress bars with used/total values
 7. Clipboard tab captures, searches, and copies history; pin and delete work
-8. Network tab shows live download/upload rates, session totals, and
+8. IP tab shows the current IP, geolocation, and DNS lookup; Offline and error
+   states render distinctly
+9. Network tab shows live download/upload rates, session totals, and
    per-interface rows with Wi-Fi/Ethernet classification
-9. Ports view lists listening ports and kill actions work
-10. Verify both Light Mode and Dark Mode
+10. Ports view lists listening ports and kill actions work
+11. Verify both Light Mode and Dark Mode

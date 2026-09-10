@@ -16,25 +16,37 @@
 │   └── [Info.plist](./Resources/Info.plist)
 ├── Sources/
 │   ├── App/
+│   │   ├── [ClipboardViewModel.swift](./Sources/App/ClipboardViewModel.swift)
 │   │   ├── [GaugeApp.swift](./Sources/App/GaugeApp.swift)
 │   │   ├── [GaugeViewModel.swift](./Sources/App/GaugeViewModel.swift)
+│   │   ├── [IPViewModel.swift](./Sources/App/IPViewModel.swift)
 │   │   ├── [LaunchAtLogin.swift](./Sources/App/LaunchAtLogin.swift)
 │   │   ├── [MenuBarIcon.swift](./Sources/App/MenuBarIcon.swift)
+│   │   ├── [NetworkViewModel.swift](./Sources/App/NetworkViewModel.swift)
 │   │   └── [PortsViewModel.swift](./Sources/App/PortsViewModel.swift)
 │   ├── Core/
 │   │   ├── Models/
 │   │   │   ├── [CPUStats.swift](./Sources/Core/Models/CPUStats.swift)
+│   │   │   ├── [ClipperItem.swift](./Sources/Core/Models/ClipperItem.swift)
+│   │   │   ├── [ClipperStore.swift](./Sources/Core/Models/ClipperStore.swift)
+│   │   │   ├── [DNSResponse.swift](./Sources/Core/Models/DNSResponse.swift)
 │   │   │   ├── [DiskStats.swift](./Sources/Core/Models/DiskStats.swift)
+│   │   │   ├── [IPInfo.swift](./Sources/Core/Models/IPInfo.swift)
 │   │   │   ├── [MemoryStats.swift](./Sources/Core/Models/MemoryStats.swift)
 │   │   │   ├── [MenuBarDisplay.swift](./Sources/Core/Models/MenuBarDisplay.swift)
 │   │   │   ├── [NetworkEndpoint.swift](./Sources/Core/Models/NetworkEndpoint.swift)
+│   │   │   ├── [NetworkSnapshots.swift](./Sources/Core/Models/NetworkSnapshots.swift)
+│   │   │   ├── [NetworkStats.swift](./Sources/Core/Models/NetworkStats.swift)
 │   │   │   ├── [PortInfo.swift](./Sources/Core/Models/PortInfo.swift)
 │   │   │   ├── [SwapStats.swift](./Sources/Core/Models/SwapStats.swift)
 │   │   │   ├── [SystemInfo.swift](./Sources/Core/Models/SystemInfo.swift)
 │   │   │   └── [UsageThreshold.swift](./Sources/Core/Models/UsageThreshold.swift)
 │   │   ├── Services/
+│   │   │   ├── [IPInfoParsing.swift](./Sources/Core/Services/IPInfoParsing.swift)
+│   │   │   ├── [IPLookupServicing.swift](./Sources/Core/Services/IPLookupServicing.swift)
 │   │   │   ├── [LsofParser.swift](./Sources/Core/Services/LsofParser.swift)
 │   │   │   ├── [LsofPortDiscoveryService.swift](./Sources/Core/Services/LsofPortDiscoveryService.swift)
+│   │   │   ├── [NetworkInterfaceClassifying.swift](./Sources/Core/Services/NetworkInterfaceClassifying.swift)
 │   │   │   ├── [PortDiscovering.swift](./Sources/Core/Services/PortDiscovering.swift)
 │   │   │   ├── [ProcessTerminating.swift](./Sources/Core/Services/ProcessTerminating.swift)
 │   │   │   └── [SignalProcessTerminator.swift](./Sources/Core/Services/SignalProcessTerminator.swift)
@@ -42,18 +54,26 @@
 │   │   └── [SettingsStore.swift](./Sources/Core/SettingsStore.swift)
 │   ├── Services/
 │   │   ├── [CPUMonitor.swift](./Sources/Services/CPUMonitor.swift)
+│   │   ├── [ClipboardMonitor.swift](./Sources/Services/ClipboardMonitor.swift)
 │   │   ├── [DiskMonitor.swift](./Sources/Services/DiskMonitor.swift)
+│   │   ├── [IOKitNetworkInterfaceClassifier.swift](./Sources/Services/IOKitNetworkInterfaceClassifier.swift)
+│   │   ├── [IPLookupService.swift](./Sources/Services/IPLookupService.swift)
 │   │   ├── [MemoryMonitor.swift](./Sources/Services/MemoryMonitor.swift)
 │   │   ├── [MemoryPressureMonitor.swift](./Sources/Services/MemoryPressureMonitor.swift)
 │   │   ├── [MonitorError.swift](./Sources/Services/MonitorError.swift)
+│   │   ├── [NetworkMonitor.swift](./Sources/Services/NetworkMonitor.swift)
+│   │   ├── [PasteboardManager.swift](./Sources/Services/PasteboardManager.swift)
 │   │   ├── [SwapMonitor.swift](./Sources/Services/SwapMonitor.swift)
 │   │   └── [SystemInfoMonitor.swift](./Sources/Services/SystemInfoMonitor.swift)
 │   └── Views/
 │       ├── [CPUView.swift](./Sources/Views/CPUView.swift)
+│       ├── [ClipboardView.swift](./Sources/Views/ClipboardView.swift)
 │       ├── [DetailsView.swift](./Sources/Views/DetailsView.swift)
 │       ├── [DiskView.swift](./Sources/Views/DiskView.swift)
+│       ├── [IPView.swift](./Sources/Views/IPView.swift)
 │       ├── [MemoryView.swift](./Sources/Views/MemoryView.swift)
 │       ├── [MenuBarView.swift](./Sources/Views/MenuBarView.swift)
+│       ├── [NetworkView.swift](./Sources/Views/NetworkView.swift)
 │       ├── [PortListView.swift](./Sources/Views/PortListView.swift)
 │       ├── [PortRow.swift](./Sources/Views/PortRow.swift)
 │       ├── [PortsView.swift](./Sources/Views/PortsView.swift)
@@ -68,14 +88,18 @@
 │   └── Core/
 │       ├── Models/
 │       │   ├── [CPUStatsTests.swift](./Tests/Core/Models/CPUStatsTests.swift)
+│       │   ├── [ClipperItemTests.swift](./Tests/Core/Models/ClipperItemTests.swift)
+│       │   ├── [ClipperStoreTests.swift](./Tests/Core/Models/ClipperStoreTests.swift)
 │       │   ├── [DiskStatsTests.swift](./Tests/Core/Models/DiskStatsTests.swift)
 │       │   ├── [MemoryStatsTests.swift](./Tests/Core/Models/MemoryStatsTests.swift)
 │       │   ├── [MenuBarDisplayTests.swift](./Tests/Core/Models/MenuBarDisplayTests.swift)
+│       │   ├── [NetworkStatsTests.swift](./Tests/Core/Models/NetworkStatsTests.swift)
 │       │   ├── [PortTests.swift](./Tests/Core/Models/PortTests.swift)
 │       │   ├── [SwapStatsTests.swift](./Tests/Core/Models/SwapStatsTests.swift)
 │       │   ├── [SystemInfoTests.swift](./Tests/Core/Models/SystemInfoTests.swift)
 │       │   └── [UsageThresholdTests.swift](./Tests/Core/Models/UsageThresholdTests.swift)
 │       ├── Services/
+│       │   ├── [IPInfoParsingTests.swift](./Tests/Core/Services/IPInfoParsingTests.swift)
 │       │   ├── [LsofParserTests.swift](./Tests/Core/Services/LsofParserTests.swift)
 │       │   └── [ProcessTerminationTests.swift](./Tests/Core/Services/ProcessTerminationTests.swift)
 │       ├── [ByteFormatterTests.swift](./Tests/Core/ByteFormatterTests.swift)
@@ -88,4 +112,4 @@
 └── [TREE.md](./TREE.md)
 ```
 
-14 directories, 71 files
+14 directories, 95 files

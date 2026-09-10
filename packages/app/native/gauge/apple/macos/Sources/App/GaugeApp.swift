@@ -4,6 +4,7 @@ import SwiftUI
 @main
 struct GaugeApp: App {
     @StateObject private var clipboardViewModel = AppDelegate.clipboardViewModel
+    @StateObject private var ipViewModel = AppDelegate.ipViewModel
     @StateObject private var viewModel = AppDelegate.viewModel
     @StateObject private var networkViewModel = AppDelegate.networkViewModel
     @StateObject private var portsViewModel = AppDelegate.portsViewModel
@@ -13,6 +14,7 @@ struct GaugeApp: App {
         MenuBarExtra {
             MenuBarView(
                 clipboardViewModel: clipboardViewModel,
+                ipViewModel: ipViewModel,
                 viewModel: viewModel,
                 networkViewModel: networkViewModel,
                 portsViewModel: portsViewModel
@@ -35,6 +37,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
     @MainActor
     static let clipboardViewModel = ClipboardViewModel()
+
+    @MainActor
+    static let ipViewModel = IPViewModel()
 
     @MainActor
     static let viewModel = GaugeViewModel(settingsStore: settingsStore)

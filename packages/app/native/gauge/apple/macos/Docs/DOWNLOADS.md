@@ -93,12 +93,28 @@ at a glance from your menu bar.
 - Stored locally at `~/Library/Application Support/Clipper/clipboard.json` —
   nothing leaves your machine
 
+## IP
+
+- Current public IP via `api.ipify.org`, enriched by `ipinfo.io` with
+  automatic `ipapi.co` fallback
+- IP / version, ASN, organization, timezone, country, region, city, postal and
+  coordinates, plus a `View on map` link to OpenStreetMap
+- `VPN / shared hosting` badge for Cloudflare / Amazon / Google / DigitalOcean /
+  Microsoft orgs
+- A-record DNS lookup through Cloudflare DNS-over-HTTPS (`application/dns-json`)
+- Raw JSON visible for both the IP info and the DNS response
+- Distinct **Offline** state when the network is unreachable, and an error
+  state when a lookup fails
+- Dedicated IP tab between Clipboard and Memory; fetches on tab open and on
+  Refresh
+
 ## Popover
 
-- Four tabs, Clipboard, Memory (default), Network and Ports:
+- Five tabs, Clipboard, IP, Memory (default), Network and Ports:
   - Memory tab: compact percentage and used / total numbers (small view) with
     full progress-bar sections (details view) switchable from the header
   - Clipboard tab: searchable history with copy, pin, and delete actions
+  - IP tab: current IP, geolocation, ASN/org, VPN badge and DNS A-record lookup
   - Network tab: download / upload speeds, session totals, and per-interface
     traffic
   - Ports tab: searchable list of local listening ports with kill actions
