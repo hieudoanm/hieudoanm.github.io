@@ -1,6 +1,6 @@
 # Tabs
 
-> Redirect every new tab to your home page, block distracting sites and ads, capture the current view or the full page, and open every photo of an Instagram post on double right-click — in one extension.
+> Redirect every new tab to your home page, block distracting sites and ads, capture the current view or the full page, open external links from GitHub pages in new tabs, and open every photo of an Instagram post on Shift + right-click — in one extension.
 
 ![Chromium](https://img.shields.io/badge/Chromium-Chrome%2FEdge%2FBrave%2FOpera%2FVivaldi%2FArc-blue)
 ![Firefox](https://img.shields.io/badge/Firefox-MV2-lightblue)
@@ -74,7 +74,7 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-Tabs combines five tab essentials in one toolbar button. **Ads** hides ad banners on the page and cancels advertising and tracking requests at the network level (DoubleClick, Google Analytics, AppNexus, Outbrain, Taboola, and friends), toggleable from the popup. **Block** stops on an offline focus wall when you visit a distracting site (Facebook, X, Instagram, Reddit, TikTok, Netflix, Twitch, Discord, and more) — with better sites to jump to and a suggestion wheel, toggleable from the popup. **Insta** appears only while you're on Instagram: Shift + right-click a
+Tabs combines six tab essentials in one toolbar button. **Ads** hides ad banners on the page and cancels advertising and tracking requests at the network level (DoubleClick, Google Analytics, AppNexus, Outbrain, Taboola, and friends), toggleable from the popup. **Block** stops on an offline focus wall when you visit a distracting site (Facebook, X, Instagram, Reddit, TikTok, Netflix, Twitch, Discord, and more) — with better sites to jump to and a suggestion wheel, toggleable from the popup. **GitHub** appears only while you're on GitHub: any link that leaves github.com opens in a new tab instead of navigating away, toggleable from the popup. **Insta** appears only while you're on Instagram: Shift + right-click a
 post to open every photo of it in new tabs. **New Tab** redirects every fresh tab to the hieudoanm home page
 (a toggle to turn it off, default on, plus a configurable target URL). **Snap** turns the same icon
 into a camera — **Capture view** screenshots what's on screen, **Capture full
@@ -122,6 +122,15 @@ machine.
 - Chunked `OffscreenCanvas` composition preserves aspect ratio on tall pages
 - Scroll position is restored after the capture
 
+### 🔗 GitHub external links
+
+- On GitHub, links that resolve outside `github.com` open in a new tab instead
+  of navigating away
+- In-repo links, `#` and `javascript:` hrefs, modifier-key clicks, and
+  programmatic clicks pass through untouched
+- Enable/disable from the popup's **GitHub** tab (`githubExternalLinks`, stored
+  in `storage.sync`); that tab only appears while you're on `github.com`
+
 ### 📸 Open Instagram photos
 
 - On Instagram, hold **Shift** and right-click a post image to open every photo
@@ -150,6 +159,8 @@ machine.
 - Open a new tab — it lands on your home page (toggle it off in the popup if
   you prefer the browser default).
 - Visit a distracting site — the focus wall appears (toggleable from the popup).
+- Open a GitHub page and click a link that leaves github.com — it opens in a
+  new tab instead of navigating away (toggleable from the popup).
 - Open a news or video site — ads and tracking requests stop (toggleable from
   the popup).
 - Open any page and click the icon.

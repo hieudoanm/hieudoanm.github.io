@@ -38,10 +38,20 @@ Reference docs live in `docs/`:
   blocking in `background.ts` via `webRequest` and MV3 via the static DNR
   ruleset `ruleset_block` in `public/manifest/v3/rules.json` — keep the two
   domain lists in sync
-- The popup is a 5-tab bar ordered alphabetically: **Ads, Block, Insta, New
-  Tab, Snap** — keep data-tab ids, buttons, and panes in this order. The Insta
-  tab and its pane are hidden unless the active tab is `instagram.com`, and the
-  popup opens straight onto Insta when it is (contextual feature)
+- The popup is a 6-tab bar ordered alphabetically: **Ads, Block, GitHub,
+  Insta, New Tab, Snap** — keep data-tab ids, buttons, and panes in this
+  order. The GitHub and Insta tabs and panes are hidden unless the active tab
+  is `github.com` / `instagram.com`, and the popup opens straight onto the
+  matching tab when it is (contextual features)
+- External-link routing lives in `src/lib/github.ts`
+  (`registerExternalLinkRouting()`): on a `github.com` host it mounts a
+  delegated `click` listener that resolves `getAbsoluteUrl()` and routes any
+  link leaving GitHub to a new tab (`preventDefault` +
+  `window.open(..., '_blank', 'noopener')`); in-repo links, `#` and
+  `javascript:` hrefs, modifier-key clicks, and programmatic clicks pass
+  through untouched. The listener mounts only on GitHub hosts (no per-page
+  cost elsewhere). Gated by the `githubExternalLinks` toggle (default on,
+  `storage.sync`)
 - The Instagram gesture lives in `src/lib/insta.ts`
   (`registerInstaGesture()`): **Shift + right-click** on an Instagram page
   opens `<img>` sources collected from the right-clicked element plus its

@@ -34,6 +34,12 @@ const panes = Array.from(document.querySelectorAll<HTMLElement>('.pane'));
 const instaTabBtn =
   document.querySelector<HTMLButtonElement>('[data-tab="insta"]');
 const instaToggle = document.getElementById('instaToggle') as HTMLInputElement;
+const githubTabBtn = document.querySelector<HTMLButtonElement>(
+  '[data-tab="github"]'
+);
+const githubToggle = document.getElementById(
+  'githubToggle'
+) as HTMLInputElement;
 
 const DEFAULT_TARGET_URL = 'https://hieudoanm.github.io';
 const TARGET_URL_KEY = 'newTabTargetUrl';
@@ -46,6 +52,15 @@ let isBusy = false;
 const isInstagramUrl = (value: string): boolean => {
   try {
     return new URL(value).hostname.endsWith('instagram.com');
+  } catch {
+    return false;
+  }
+};
+
+const isGitHubUrl = (value: string): boolean => {
+  try {
+    const hostname = new URL(value).hostname;
+    return hostname === 'github.com' || hostname.endsWith('.github.com');
   } catch {
     return false;
   }
@@ -64,8 +79,14 @@ chrome.tabs.query({ active: true, currentWindow: true }, ([tab]) => {
     }
   }
   const onInstagram = url ? isInstagramUrl(url) : false;
+  const onGitHub = url ? isGitHubUrl(url) : false;
   instaTabBtn?.classList.toggle('hidden', !onInstagram);
-  if (onInstagram) activateTab('insta');
+  githubTabBtn?.classList.toggle('hidden', !onGitHub);
+  if (onInstagram) {
+    activateTab('insta');
+  } else if (onGitHub) {
+    activateTab('github');
+  }
 });
 
 chrome.storage.sync.get('redirectNewTabs', (result) => {
@@ -114,6 +135,17 @@ chrome.storage.sync.get('instaGesture', (result) => {
 
 instaToggle?.addEventListener('change', () => {
   chrome.storage.sync.set({ instaGesture: instaToggle.checked });
+});
+
+chrome.storage.sync.get('githubExternalLinks', (result) => {
+  if (chrome.runtime.lastError) return;
+  if (githubToggle) {
+    githubToggle.checked = result.githubExternalLinks !== false;
+  }
+});
+
+githubToggle?.addEventListener('change', () => {
+  chrome.storage.sync.set({ githubExternalLinks: githubToggle.checked });
 });
 
 const activateTab = (tabId: string): void => {

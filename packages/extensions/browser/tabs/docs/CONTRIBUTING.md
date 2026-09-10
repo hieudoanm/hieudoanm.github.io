@@ -2,9 +2,10 @@
 
 Thanks for contributing to **Tabs**, a cross-browser extension that redirects
 every new tab to the hieudoanm home page, blocks distracting sites with an
-offline focus wall, hides ads and tracking requests, and captures the visible
-viewport or the full page of any tab as an image, on Chromium and Gecko
-browsers via both Manifest V2 and Manifest V3 builds.
+offline focus wall, hides ads and tracking requests, routes external links from
+GitHub pages into new tabs, and captures the visible viewport or the full page
+of any tab as an image, on Chromium and Gecko browsers via both Manifest V2 and
+Manifest V3 builds.
 
 ## Getting Started
 
@@ -102,7 +103,12 @@ every change.
    falls back to the default whenever the stored value is empty or invalid.
 10. Prefix debug logs with `[Tabs]` and keep them minimal, and prefix errors
     with `Block:` / `BlockAds:` / `Snapshot:` consistently; the Insta gesture
-    debug logs use an `Insta:` prefix.
+    and GitHub routing debug logs use `Insta:` and `GitHub:` prefixes.
+11. GitHub external-link routing lives in `src/lib/github.ts` and mounts its
+    click listener only on `github.com` hosts; in-repo links, `#` /
+    `javascript:` hrefs, modifier-key clicks, and programmatic clicks always
+    pass through untouched, and the `githubExternalLinks` toggle (default on,
+    `storage.sync`) gates it.
 
 ## Testing Conventions
 
@@ -119,6 +125,9 @@ quality gates are:
   page loads; change the Target URL in the New Tab tab → next new tab goes there
 - Visit a `BLOCKED_DOMAINS` site → the focus wall appears; toggle off in the
   popup → the site loads normally
+  - On a GitHub page → external links open in new tabs; in-repo links navigate
+    normally; toggle "githubExternalLinks" off → external links navigate away
+    in the same tab
   - Open a page with ads → ad banners hidden and ad/tracking requests
     cancelled; toggle "Block ads" off in the popup → they return
   - Capture view → a PNG of the visible viewport downloads

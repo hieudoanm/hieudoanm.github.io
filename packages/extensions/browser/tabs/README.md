@@ -1,7 +1,8 @@
 # Tabs - Tabs Extension
 
 Redirect every new tab to the hieudoanm home page, block distracting sites and
-ads, and capture the current tab as a screenshot, all from one toolbar button.
+ads, keep GitHub routing external links to new tabs, and capture the current
+tab as a screenshot, all from one toolbar button.
 
 Features:
 
@@ -12,6 +13,10 @@ Features:
   sites to jump to and a suggestion wheel (toggleable from the popup).
 - **Block ads** — hides ad banners on the page and cancels advertising and
   tracking requests at the network level (toggleable from the popup).
+- **GitHub** — on GitHub pages, links that leave github.com open in a new tab
+  instead of navigating away (toggleable from the popup).
+- **Instagram** — on Instagram, Shift + right-click a post image to open every
+  photo of the post in new tabs (toggleable from the popup).
 - **Current view** — a snapshot of exactly what is visible on screen.
 - **Full page** — scrolls through the whole page, stitches the screenshots
   together, and downloads the full-length image.

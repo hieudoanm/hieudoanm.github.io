@@ -1,5 +1,6 @@
 import { maybeRunAdsBlocker } from './lib/ads';
 import { maybeRenderBlockWall } from './lib/block';
+import { registerExternalLinkRouting } from './lib/github';
 import { registerInstaGesture } from './lib/insta';
 
 interface LayoutInfo {
@@ -14,6 +15,7 @@ const SCROLL_SETTLE_MS = 120;
 
 maybeRenderBlockWall();
 maybeRunAdsBlocker();
+registerExternalLinkRouting();
 registerInstaGesture();
 
 const getLayout = (): LayoutInfo => ({
