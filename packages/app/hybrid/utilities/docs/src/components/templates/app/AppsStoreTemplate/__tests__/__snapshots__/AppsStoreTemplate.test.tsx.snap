@@ -19,7 +19,7 @@ exports[`AppsStoreTemplate to match snapshot 1`] = `
         Apps
       </h1>
       <div
-        class="mb-6 w-full max-w-3xl"
+        class="mb-4 w-full max-w-3xl"
       >
         <div
           class="join w-full"
@@ -49,6 +49,43 @@ exports[`AppsStoreTemplate to match snapshot 1`] = `
             </svg>
           </button>
         </div>
+      </div>
+      <div
+        class="mb-6 flex w-full max-w-3xl flex-wrap items-center justify-center gap-2"
+      >
+        <button
+          aria-pressed="true"
+          class="btn btn-xs btn-primary"
+          type="button"
+        >
+          All
+        </button>
+        <button
+          aria-pressed="false"
+          class="btn btn-xs btn-ghost border-base-300 border"
+          type="button"
+        >
+          App
+          <span
+            aria-hidden="true"
+            class="text-base-content/60"
+          >
+            1
+          </span>
+        </button>
+        <button
+          aria-pressed="false"
+          class="btn btn-xs btn-ghost border-base-300 border"
+          type="button"
+        >
+          Bookmark
+          <span
+            aria-hidden="true"
+            class="text-base-content/60"
+          >
+            1
+          </span>
+        </button>
       </div>
       <section
         aria-label="Utilities"

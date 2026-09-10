@@ -97,6 +97,8 @@ export interface AppItem {
   description: string;
   icon: IconType;
   toolId: string;
+  type: string;
+  typeId: string;
 }
 
 export interface AppSection {
@@ -110,6 +112,8 @@ interface BookmarkJsonItem {
   description: string;
   icon: string;
   badge?: string;
+  type: string;
+  typeId: string;
   href: string;
 }
 
@@ -119,6 +123,8 @@ interface AppJsonItem {
   icon: string;
   sectionId: string;
   toolId: string;
+  type: string;
+  typeId: string;
 }
 
 type JsonItem = BookmarkJsonItem | AppJsonItem;
@@ -127,6 +133,14 @@ type JsonSection = (typeof appsJson)[number];
 const isAppItem = (item: JsonItem): item is AppJsonItem =>
   (item as AppJsonItem).sectionId !== undefined &&
   (item as AppJsonItem).toolId !== undefined;
+
+const toTypeFields = (item: {
+  type: string;
+  typeId: string;
+}): { type: string; typeId: string } => ({
+  type: item.typeId,
+  typeId: item.type,
+});
 
 const ICON_BY_NAME: Record<string, IconType> = {
   PiAirplane,
@@ -233,6 +247,7 @@ const toBookmarkTool = (item: BookmarkJsonItem): Tool => ({
   href: item.href,
   icon: resolveIcon(item.icon),
   ...(item.badge ? { badge: item.badge } : {}),
+  ...toTypeFields(item),
 });
 
 export const APP_SECTIONS: AppSection[] = appsJson
@@ -244,7 +259,8 @@ export const APP_SECTIONS: AppSection[] = appsJson
       label: t.label,
       description: t.description,
       icon: resolveIcon(t.icon),
-      toolId: t.toolId as string,
+      toolId: t.toolId,
+      ...toTypeFields(t),
     })),
   }));
 
@@ -261,6 +277,8 @@ export const getAppSections = (): {
       description: t.description,
       icon: t.icon,
       href: `/${id}/${t.toolId}`,
+      type: t.type,
+      typeId: t.typeId,
     })),
   }));
 
@@ -277,6 +295,7 @@ export const getHomeSections = (): {
             description: item.description,
             icon: resolveIcon(item.icon),
             href: `/${item.sectionId}/${item.toolId}`,
+            ...toTypeFields(item),
           }
         : toBookmarkTool(item)
     ),

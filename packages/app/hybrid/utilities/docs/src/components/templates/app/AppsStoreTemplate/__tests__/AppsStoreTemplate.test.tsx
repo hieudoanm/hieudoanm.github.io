@@ -11,12 +11,16 @@ const sections = [
         description: 'Arithmetic',
         icon: PiStarFour,
         href: '/utilities/calculator',
+        type: 'App',
+        typeId: 'app',
       },
       {
         label: 'Pomodoro',
         description: 'Timer',
         icon: PiStarFour,
         href: '/clocks/pomodoro',
+        type: 'Bookmark',
+        typeId: 'bookmark',
       },
     ],
   },
@@ -73,5 +77,40 @@ describe('AppsStoreTemplate', () => {
       target: { value: 'zzz' },
     });
     expect(screen.getAllByText(/No results match/).length).toBeGreaterThan(0);
+  });
+
+  it('renders a type filter for each distinct type', () => {
+    render(<AppsStoreTemplate title="Apps" sections={sections} />);
+    expect(screen.getByRole('button', { name: 'All' })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'App' })).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: 'Bookmark' })
+    ).toBeInTheDocument();
+  });
+
+  it('filters items by type', () => {
+    render(<AppsStoreTemplate title="Apps" sections={sections} />);
+    fireEvent.click(screen.getByRole('button', { name: 'App' }));
+    expect(screen.getAllByText('Calculator').length).toBeGreaterThan(0);
+    expect(screen.queryAllByText('Pomodoro').length).toBe(0);
+  });
+
+  it('deselects a type filter to restore items', () => {
+    render(<AppsStoreTemplate title="Apps" sections={sections} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Bookmark' }));
+    expect(screen.queryAllByText('Calculator').length).toBe(0);
+    expect(screen.getAllByText('Pomodoro').length).toBeGreaterThan(0);
+    fireEvent.click(screen.getByRole('button', { name: 'Bookmark' }));
+    expect(screen.getAllByText('Calculator').length).toBeGreaterThan(0);
+    expect(screen.getAllByText('Pomodoro').length).toBeGreaterThan(0);
+  });
+
+  it('resets type filters via the All button', () => {
+    render(<AppsStoreTemplate title="Apps" sections={sections} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Bookmark' }));
+    expect(screen.queryAllByText('Calculator').length).toBe(0);
+    fireEvent.click(screen.getByRole('button', { name: 'All' }));
+    expect(screen.getAllByText('Calculator').length).toBeGreaterThan(0);
+    expect(screen.getAllByText('Pomodoro').length).toBeGreaterThan(0);
   });
 });

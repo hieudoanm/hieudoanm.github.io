@@ -12,6 +12,8 @@ export interface Tool {
   icon: ComponentType<{ className?: string; size?: number }>;
   href: string;
   badge?: string;
+  type?: string;
+  typeId?: string;
   actions?: Action[];
 }
 

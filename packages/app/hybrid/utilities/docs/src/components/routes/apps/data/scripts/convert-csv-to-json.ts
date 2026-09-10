@@ -7,6 +7,8 @@ const JSON_PATH = join(DATA_DIR, 'apps.json');
 const COLUMNS = [
   'section',
   'sectionId',
+  'type',
+  'typeId',
   'label',
   'description',
   'icon',
@@ -24,6 +26,8 @@ type Item = {
   description: string;
   icon: string;
   badge?: string;
+  type?: string;
+  typeId?: string;
   sectionId?: string;
   toolId?: string;
   href?: string;
@@ -93,6 +97,8 @@ const toItem = (row: CsvRow): Item => {
     icon: row.icon,
   };
   if (row.badge) item.badge = row.badge;
+  if (row.type) item.type = row.type;
+  if (row.typeId) item.typeId = row.typeId;
   if (row.sectionId) item.sectionId = row.sectionId;
   if (row.toolId) item.toolId = row.toolId;
   if (row.href) item.href = row.href;
