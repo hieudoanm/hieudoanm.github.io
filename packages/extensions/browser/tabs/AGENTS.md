@@ -38,11 +38,12 @@ Reference docs live in `docs/`:
   blocking in `background.ts` via `webRequest` and MV3 via the static DNR
   ruleset `ruleset_block` in `public/manifest/v3/rules.json` — keep the two
   domain lists in sync
-- The popup is a 6-tab bar ordered alphabetically: **Ads, Block, GitHub,
-  Insta, New Tab, Snap** — keep data-tab ids, buttons, and panes in this
-  order. The GitHub and Insta tabs and panes are hidden unless the active tab
-  is `github.com` / `instagram.com`, and the popup opens straight onto the
-  matching tab when it is (contextual features)
+- The popup is a 7-tab bar ordered alphabetically: **Ads, Block, GitHub,
+  Insta, New Tab, Shopify, Snap** — keep data-tab ids, buttons, and panes in
+  this order. The GitHub and Insta tabs and panes are hidden unless the active
+  tab is `github.com` / `instagram.com`, and the popup opens straight onto the
+  matching tab when it is (contextual features); the Shopify tab is always
+  visible and its pane shows the result of a manual "Check Shopify" button
 - External-link routing lives in `src/lib/github.ts`
   (`registerExternalLinkRouting()`): on a `github.com` host it mounts a
   delegated `click` listener that resolves `getAbsoluteUrl()` and routes any
@@ -64,6 +65,38 @@ Reference docs live in `docs/`:
   right-clicks keep the normal menu. No multi-click/interval heuristics. Gated
   by the `instaGesture` toggle (default on, `storage.sync`) and an
   `instagram.com` hostname check — on every other page it is inert
+- Shopify detection in `src/lib/shopify.ts`
+  (`registerShopifyDetection()`) follows the Fera.ai "Shopify App Detector"
+  architecture: the **content script pushes one-way, fire-and-forget** to the
+  background, and the **popup and background only talk over
+  `chrome.runtime.sendMessage`** — the popup never sends `tabs.sendMessage` to
+  a content script. On page load (immediately / at `DOMContentLoaded`, then
+  600 ms after `load`, and again on `visibilitychange`) the content script
+  computes a `ShopifyDetectionResult` (`isShopify`, `isShopifyPlus`, plus the
+  `indicators` / `plusIndicators` breakdown) and sends
+  `{ action: SHOPIFY_RESULT_ACTION, result }` with **no reply expected**. A
+  store is Shopify if any indicator (window.Shopify, `shopify-checkout-api-token`
+  meta, `cdn.shopify.com` script, `/cart.js`) is true; Plus if a shopify store
+  also has any plus indicator (`checkout.shopify` host, `Shopify.checkout`,
+  `shopify-digital-wallet` meta). `window.Shopify` / `Shopify.checkout` are
+  page-context globals the isolated content-world cannot read, so a tiny
+  main-world probe (guarded `__tabsShopifyHook`, removed after append) answers
+  `TABS_SHOPIFY_CHECK` `postMessage` requests; if the page uses CSP nonces
+  (e.g. `script-src 'strict-dynamic'`) the probe copies an existing script's
+  nonce, and detection falls back to DOM-only indicators if the probe is
+  unavailable. The background stores the last true result per tab in
+  `shopifyResults` and sets a **toolbar badge** "S" on detected stores. The
+  popup's Shopify tab is always visible; clicking "Check Shopify" sends
+  `{ action: GET_SHOPIFY_ACTION, tabId }` to the background, which returns the
+  cached result instantly when present, otherwise runs
+  `detectShopifyInPage()` in the tab's **MAIN world** via
+  `chrome.scripting.executeScript` (reads `window.Shopify` + DOM directly,
+  immune to CSP and content-script channel quirk, works on stale tabs). If
+  `chrome.scripting` is unavailable (e.g. older Firefox) the push-cache is the
+  only source. The popup retries up to 2 times (250 ms apart), races each round
+  trip against a 1.2 s timeout, and shows a fast visible outcome — verdict,
+  "Not a Shopify store", or "Not responding — refresh the page" — instead of
+  hanging on "Checking…"
 - Keep `BETTER_SITES` (jump shortcuts) and `SUGGESTIONS` (spin-wheel ideas)
   family-friendly and dependency-free; they render without any network call
 - The block wall and the capture content script coexist in `content.ts`: the

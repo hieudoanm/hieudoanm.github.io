@@ -1,3 +1,5 @@
+import { GET_SHOPIFY_ACTION } from './lib/shopify';
+
 const captureViewBtn = document.getElementById(
   'captureViewBtn'
 ) as HTMLButtonElement;
@@ -40,6 +42,32 @@ const githubTabBtn = document.querySelector<HTMLButtonElement>(
 const githubToggle = document.getElementById(
   'githubToggle'
 ) as HTMLInputElement;
+const shopifyCheckBtn = document.getElementById(
+  'shopifyCheckBtn'
+) as HTMLButtonElement;
+const shopifyVerdict = document.getElementById('shopifyVerdict');
+const shopifyIndicators = document.getElementById('shopifyIndicators');
+const shopifyPlusIndicators = document.getElementById('shopifyPlusIndicators');
+
+interface ShopifyIndicatorSet {
+  windowShopify: boolean;
+  shopifyMeta: boolean;
+  shopifyCDN: boolean;
+  cartJS: boolean;
+}
+
+interface ShopifyPlusIndicatorSet {
+  checkoutDomain: boolean;
+  checkoutObject: boolean;
+  digitalWalletMeta: boolean;
+}
+
+interface ShopifyDetectionResult {
+  isShopify: boolean;
+  isShopifyPlus: boolean;
+  indicators: ShopifyIndicatorSet;
+  plusIndicators: ShopifyPlusIndicatorSet;
+}
 
 const DEFAULT_TARGET_URL = 'https://hieudoanm.github.io';
 const TARGET_URL_KEY = 'newTabTargetUrl';
@@ -87,6 +115,105 @@ chrome.tabs.query({ active: true, currentWindow: true }, ([tab]) => {
   } else if (onGitHub) {
     activateTab('github');
   }
+});
+
+const renderIndicators = (
+  el: HTMLElement | null,
+  indicators: ShopifyIndicatorSet | ShopifyPlusIndicatorSet
+): void => {
+  if (!el) return;
+  el.replaceChildren();
+  for (const [key, value] of Object.entries(indicators)) {
+    const row = document.createElement('li');
+    const label = document.createElement('span');
+    label.textContent = key;
+    const state = document.createElement('span');
+    state.classList.add(value ? 'on' : 'off');
+    state.textContent = value ? 'yes' : 'no';
+    row.append(label, state);
+    el.append(row);
+  }
+};
+
+const SHOPIFY_QUERY_TIMEOUT_MS = 1200;
+
+const sendShopifyQuery = (
+  tabId: number
+): Promise<ShopifyDetectionResult | undefined> =>
+  Promise.race([
+    chrome.runtime.sendMessage({ action: GET_SHOPIFY_ACTION, tabId }).then(
+      (res) => {
+        console.log('Shopify: relay reply', res);
+        return res?.isShopify !== undefined
+          ? (res as ShopifyDetectionResult)
+          : undefined;
+      },
+      (err) => {
+        console.warn('Shopify: relay send failed', err);
+        return undefined;
+      }
+    ),
+    new Promise<undefined>((resolve) =>
+      window.setTimeout(() => resolve(undefined), SHOPIFY_QUERY_TIMEOUT_MS)
+    ),
+  ]);
+
+const setShopifyVerdict = (message: string): void => {
+  if (shopifyVerdict) shopifyVerdict.textContent = message;
+};
+
+const renderShopifyResult = (result: ShopifyDetectionResult): void => {
+  console.log(
+    `Shopify: popup isShopify=${result.isShopify} isShopifyPlus=${result.isShopifyPlus}`
+  );
+  setShopifyVerdict(
+    result.isShopify
+      ? result.isShopifyPlus
+        ? 'Shopify Plus store'
+        : 'Shopify store'
+      : 'Not a Shopify store'
+  );
+  renderIndicators(shopifyIndicators, result.indicators);
+  renderIndicators(shopifyPlusIndicators, result.plusIndicators);
+};
+
+const sleep = (ms: number): Promise<void> =>
+  new Promise<void>((resolve) => window.setTimeout(resolve, ms));
+
+const MAX_SHOPIFY_ATTEMPTS = 2;
+
+const runShopifyCheck = async (tabId: number): Promise<void> => {
+  setShopifyVerdict('Checking…');
+  shopifyCheckBtn.disabled = true;
+  try {
+    for (let attempt = 0; attempt < MAX_SHOPIFY_ATTEMPTS; attempt++) {
+      const result = await sendShopifyQuery(tabId);
+      if (result !== undefined) {
+        renderShopifyResult(result);
+        return;
+      }
+      if (attempt < MAX_SHOPIFY_ATTEMPTS - 1) {
+        console.log(`Shopify: no reply on attempt ${attempt + 1}, retrying`);
+        await sleep(250);
+      }
+    }
+    setShopifyVerdict('Not responding — refresh the page');
+    console.warn(
+      'Shopify: no reply; the content script may not be loaded — refresh the page'
+    );
+  } finally {
+    shopifyCheckBtn.disabled = false;
+  }
+};
+
+shopifyCheckBtn?.addEventListener('click', () => {
+  chrome.tabs.query({ active: true, currentWindow: true }, ([tab]) => {
+    if (tab?.id == null) {
+      setShopifyVerdict('No active tab');
+      return;
+    }
+    void runShopifyCheck(tab.id);
+  });
 });
 
 chrome.storage.sync.get('redirectNewTabs', (result) => {

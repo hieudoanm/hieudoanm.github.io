@@ -14,16 +14,14 @@
 
 ## Extensions
 
-| No  | Group                              | Extension            |
-| --- | ---------------------------------- | -------------------- |
-| 1   | [Chess](https://chess.com)         | [chessx][chessx]     |
-| 2   | [Claude](https://claude.ai)        | [claudex][claudex]   |
-| 3   | [Shopify](https://shopify.com)     | [shopifyx][shopifyx] |
-| 4   | Tabs                               | [tabs][tabs]         |
+| No  | Group                       | Extension          |
+| --- | --------------------------- | ------------------ |
+| 1   | [Chess](https://chess.com)  | [chessx][chessx]   |
+| 2   | [Claude](https://claude.ai) | [claudex][claudex] |
+| 3   | Tabs                        | [tabs][tabs]       |
 
 [chessx]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/chessx
 [claudex]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/claudex
-[shopifyx]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/shopifyx
 [tabs]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/tabs
 
 ## Browsers

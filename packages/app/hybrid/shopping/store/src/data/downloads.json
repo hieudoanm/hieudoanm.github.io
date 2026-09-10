@@ -2272,42 +2272,6 @@
         ]
       },
       {
-        "label": "ShopifyX",
-        "primaryCategory": "Shopping",
-        "secondaryCategory": "",
-        "icon": "PiShoppingBag",
-        "href": "https://hieudoanm.github.io/free/shopifyx",
-        "version": "latest",
-        "lastUpdated": "2026-09-06",
-        "fileSize": "",
-        "actions": [
-          {
-            "label": "v2.crx",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-shopifyx-latest/shopifyx-v2.crx"
-          },
-          {
-            "label": "v2.xpi",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-shopifyx-latest/shopifyx-v2.xpi"
-          },
-          {
-            "label": "v2.zip",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-shopifyx-latest/shopifyx-v2.zip"
-          },
-          {
-            "label": "v3.crx",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-shopifyx-latest/shopifyx-v3.crx"
-          },
-          {
-            "label": "v3.xpi",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-shopifyx-latest/shopifyx-v3.xpi"
-          },
-          {
-            "label": "v3.zip",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-shopifyx-latest/shopifyx-v3.zip"
-          }
-        ]
-      },
-      {
         "label": "Tabs",
         "primaryCategory": "Productivity",
         "secondaryCategory": "",

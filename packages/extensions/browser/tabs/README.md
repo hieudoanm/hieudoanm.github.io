@@ -1,8 +1,8 @@
 # Tabs - Tabs Extension
 
 Redirect every new tab to the hieudoanm home page, block distracting sites and
-ads, keep GitHub routing external links to new tabs, and capture the current
-tab as a screenshot, all from one toolbar button.
+ads, keep GitHub routing external links to new tabs, detect Shopify stores, and
+capture the current tab as a screenshot, all from one toolbar button.
 
 Features:
 
@@ -17,6 +17,8 @@ Features:
   instead of navigating away (toggleable from the popup).
 - **Instagram** — on Instagram, Shift + right-click a post image to open every
   photo of the post in new tabs (toggleable from the popup).
+- **Shopify** — on a Shopify store, the popup tells you whether it runs Shopify
+  or Shopify Plus (read-only, no config).
 - **Current view** — a snapshot of exactly what is visible on screen.
 - **Full page** — scrolls through the whole page, stitches the screenshots
   together, and downloads the full-length image.

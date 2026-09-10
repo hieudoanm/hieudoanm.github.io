@@ -2,6 +2,7 @@ import { maybeRunAdsBlocker } from './lib/ads';
 import { maybeRenderBlockWall } from './lib/block';
 import { registerExternalLinkRouting } from './lib/github';
 import { registerInstaGesture } from './lib/insta';
+import { registerShopifyDetection } from './lib/shopify';
 
 interface LayoutInfo {
   scrollHeight: number;
@@ -17,6 +18,7 @@ maybeRenderBlockWall();
 maybeRunAdsBlocker();
 registerExternalLinkRouting();
 registerInstaGesture();
+registerShopifyDetection();
 
 const getLayout = (): LayoutInfo => ({
   scrollHeight: document.documentElement.scrollHeight,

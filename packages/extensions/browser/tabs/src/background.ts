@@ -1,8 +1,14 @@
 import { AD_NETWORK_DOMAINS, ADS_KEY } from './lib/ads';
 import { registerNewTabRedirect } from './lib/newtab';
 import { stitchChunks, type SnapshotChunk } from './lib/stitch';
+import {
+  GET_SHOPIFY_ACTION,
+  SHOPIFY_RESULT_ACTION,
+  type ShopifyDetectionResult,
+} from './lib/shopify';
 
 interface CaptureRequest {
+  action: string;
   format: string;
   quality?: number;
 }
@@ -17,6 +23,10 @@ interface LayoutInfo {
 const SNAP = 'SNAP_';
 const SETTLE_EXTRA_MS = 80;
 const ADS_RULESET_ID = 'ruleset_block';
+
+const SNAP_ACTIONS = new Set(['captureView', 'captureFullPage']);
+
+const shopifyResults = new Map<number, ShopifyDetectionResult>();
 
 let adsBlockEnabled = true;
 
@@ -51,9 +61,9 @@ if (typeof chrome.webRequest !== 'undefined') {
 
 registerNewTabRedirect();
 
-chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
-  if (message?.action === 'captureView') {
-    void handleCaptureView(message as CaptureRequest)
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (SNAP_ACTIONS.has(message?.action)) {
+    void handleCapture(message as CaptureRequest)
       .then((dataUrl) => sendResponse({ dataUrl }))
       .catch((err: unknown) =>
         sendResponse({ error: (err as Error).message || 'Capture failed' })
@@ -61,15 +71,108 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
     return true;
   }
 
-  if (message?.action === 'captureFullPage') {
-    void handleCaptureFullPage(message as CaptureRequest)
-      .then((dataUrl) => sendResponse({ dataUrl }))
-      .catch((err: unknown) =>
-        sendResponse({ error: (err as Error).message || 'Capture failed' })
-      );
+  if (message?.action === SHOPIFY_RESULT_ACTION) {
+    const tabId = sender.tab?.id;
+    const result = (message as { result?: ShopifyDetectionResult }).result;
+    if (tabId == null || !result) return;
+    if (result.isShopify) {
+      shopifyResults.set(tabId, result);
+      void chrome.action.setBadgeText({ tabId, text: 'S' });
+    } else {
+      shopifyResults.delete(tabId);
+      void chrome.action.setBadgeText({ tabId, text: '' });
+    }
+    return;
+  }
+
+  if (message?.action === GET_SHOPIFY_ACTION) {
+    void handleShopifyCheck(message).then((result) => sendResponse(result));
     return true;
   }
 });
+
+chrome.tabs.onRemoved.addListener((tabId) => {
+  shopifyResults.delete(tabId);
+  void chrome.action.setBadgeText({ tabId, text: '' });
+});
+
+const handleCapture = async (request: CaptureRequest): Promise<string> =>
+  request.action === 'captureFullPage'
+    ? handleCaptureFullPage(request)
+    : handleCaptureView(request);
+
+const handleShopifyCheck = async (message: {
+  action: string;
+  tabId?: number;
+}): Promise<ShopifyDetectionResult | { error: string }> => {
+  const tabId =
+    typeof message.tabId === 'number'
+      ? message.tabId
+      : await getActiveTabId().catch(() => null);
+  if (tabId == null) {
+    return { error: 'Snapshot: no active tab' };
+  }
+
+  const cached = shopifyResults.get(tabId);
+  if (cached) return cached;
+
+  if (typeof chrome.scripting?.executeScript === 'function') {
+    try {
+      const [injection] = await chrome.scripting.executeScript({
+        target: { tabId },
+        world: 'MAIN',
+        func: detectShopifyInPage,
+      });
+      const result = injection?.result;
+      if (result && typeof result.isShopify === 'boolean') {
+        const verdict = result as unknown as ShopifyDetectionResult;
+        if (verdict.isShopify) {
+          shopifyResults.set(tabId, verdict);
+          void chrome.action.setBadgeText({ tabId, text: 'S' });
+        } else {
+          void chrome.action.setBadgeText({ tabId, text: '' });
+        }
+        return verdict;
+      }
+    } catch (err) {
+      console.warn('Shopify: executeScript in page failed:', err);
+    }
+  }
+
+  return { error: 'Shopify check timed out' };
+};
+
+const detectShopifyInPage = (): {
+  isShopify: boolean;
+  isShopifyPlus: boolean;
+  indicators: Record<string, boolean>;
+  plusIndicators: Record<string, boolean>;
+} => {
+  const shopify = (window as { Shopify?: { checkout?: unknown } }).Shopify;
+  const scriptSrcs = Array.from(document.scripts).map((script) => script.src);
+  const indicators = {
+    windowShopify: typeof shopify !== 'undefined',
+    shopifyMeta: !!document.querySelector(
+      'meta[name="shopify-checkout-api-token"]'
+    ),
+    shopifyCDN: scriptSrcs.some((src) => src.includes('cdn.shopify.com')),
+    cartJS: scriptSrcs.some((src) => src.includes('/cart.js')),
+  };
+  const plusIndicators = {
+    checkoutDomain: location.hostname.includes('checkout.shopify'),
+    checkoutObject: typeof shopify?.checkout !== 'undefined',
+    digitalWalletMeta: !!document.querySelector(
+      'meta[name="shopify-digital-wallet"]'
+    ),
+  };
+  const isShopify = Object.values(indicators).some(Boolean);
+  return {
+    isShopify,
+    isShopifyPlus: isShopify && Object.values(plusIndicators).some(Boolean),
+    indicators,
+    plusIndicators,
+  };
+};
 
 const handleCaptureView = async (request: CaptureRequest): Promise<string> => {
   const captureOptions = buildCaptureOptions(request);

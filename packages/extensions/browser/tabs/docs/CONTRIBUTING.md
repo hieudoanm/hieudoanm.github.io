@@ -3,7 +3,8 @@
 Thanks for contributing to **Tabs**, a cross-browser extension that redirects
 every new tab to the hieudoanm home page, blocks distracting sites with an
 offline focus wall, hides ads and tracking requests, routes external links from
-GitHub pages into new tabs, and captures the visible viewport or the full page
+GitHub pages into new tabs, detects Shopify stores as you browse, and captures
+the visible viewport or the full page
 of any tab as an image, on Chromium and Gecko browsers via both Manifest V2 and
 Manifest V3 builds.
 
@@ -102,13 +103,36 @@ every change.
    Tab tab (stored in `storage.sync` as `newTabTargetUrl`), and the background
    falls back to the default whenever the stored value is empty or invalid.
 10. Prefix debug logs with `[Tabs]` and keep them minimal, and prefix errors
-    with `Block:` / `BlockAds:` / `Snapshot:` consistently; the Insta gesture
-    and GitHub routing debug logs use `Insta:` and `GitHub:` prefixes.
+    with `Block:` / `BlockAds:` / `Snapshot:` consistently; the Insta gesture,
+    GitHub routing, and Shopify detection debug logs use `Insta:`, `GitHub:`,
+    and `Shopify:` prefixes.
 11. GitHub external-link routing lives in `src/lib/github.ts` and mounts its
     click listener only on `github.com` hosts; in-repo links, `#` /
     `javascript:` hrefs, modifier-key clicks, and programmatic clicks always
     pass through untouched, and the `githubExternalLinks` toggle (default on,
     `storage.sync`) gates it.
+12. Shopify detection lives in `src/lib/shopify.ts` — modeled on the Fera.ai
+    "Shopify App Detector": the content script pushes one-way, fire-and-forget
+    `SHOPIFY_RESULT_ACTION` messages to the background (on load, 600 ms after
+    `load`, and on `visibilitychange`); the popup and background only talk
+    over `chrome.runtime.sendMessage` — the popup never does
+    `tabs.sendMessage` to a content script. A store is Shopify if any
+    indicator holds (window.Shopify, checkout-token meta, `cdn.shopify.com`
+    script, `/cart.js`), Plus if a shopify store also has any plus indicator
+    (`checkout.shopify` host, `Shopify.checkout`, digital-wallet meta);
+    detection never probes the DOM before it exists. `window.Shopify` and
+    `Shopify.checkout` live in the page's main world and are invisible to the
+    isolated content-world, so the lib injects a tiny main-world probe (guarded by
+    `window.__tabsShopifyHook`, removed after append) that answers
+    `TABS_SHOPIFY_CHECK` `postMessage` round-trips. Injection is deferred until
+    an existing script is present (or `DOMContentLoaded`) and copies an existing
+    script's nonce when the page enforces CSP nonces (`strict-dynamic` blocks
+    plain inline scripts); it falls back to DOM-only indicators if the probe is
+    unavailable. The background caches the result per tab (`shopifyResults`) and
+    sets an "S" toolbar badge on detected stores. The popup's Shopify tab is
+    always visible; clicking "Check Shopify" sends `GET_SHOPIFY_ACTION` to the
+    background, which returns the cache or runs `detectShopifyInPage()` in the
+    tab's MAIN world via `chrome.scripting.executeScript` on Chromium.
 
 ## Testing Conventions
 
@@ -125,9 +149,11 @@ quality gates are:
   page loads; change the Target URL in the New Tab tab → next new tab goes there
 - Visit a `BLOCKED_DOMAINS` site → the focus wall appears; toggle off in the
   popup → the site loads normally
-  - On a GitHub page → external links open in new tabs; in-repo links navigate
-    normally; toggle "githubExternalLinks" off → external links navigate away
-    in the same tab
+- On a GitHub page → external links open in new tabs; in-repo links navigate
+  normally; toggle "githubExternalLinks" off → external links navigate away
+  in the same tab
+  - On a Shopify storefront → the popup's Shopify tab shows a Shopify / Shopify
+    Plus verdict with the indicator breakdown; on regular pages it stays hidden
   - Open a page with ads → ad banners hidden and ad/tracking requests
     cancelled; toggle "Block ads" off in the popup → they return
   - Capture view → a PNG of the visible viewport downloads

@@ -1,6 +1,6 @@
 # Tabs
 
-> Redirect every new tab to your home page, block distracting sites and ads, capture the current view or the full page, open external links from GitHub pages in new tabs, and open every photo of an Instagram post on Shift + right-click — in one extension.
+> Redirect every new tab to your home page, block distracting sites and ads, capture the current view or the full page, open external links from GitHub pages in new tabs, open every photo of an Instagram post on Shift + right-click, and detect Shopify stores as you browse — in one extension.
 
 ![Chromium](https://img.shields.io/badge/Chromium-Chrome%2FEdge%2FBrave%2FOpera%2FVivaldi%2FArc-blue)
 ![Firefox](https://img.shields.io/badge/Firefox-MV2-lightblue)
@@ -74,8 +74,8 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-Tabs combines six tab essentials in one toolbar button. **Ads** hides ad banners on the page and cancels advertising and tracking requests at the network level (DoubleClick, Google Analytics, AppNexus, Outbrain, Taboola, and friends), toggleable from the popup. **Block** stops on an offline focus wall when you visit a distracting site (Facebook, X, Instagram, Reddit, TikTok, Netflix, Twitch, Discord, and more) — with better sites to jump to and a suggestion wheel, toggleable from the popup. **GitHub** appears only while you're on GitHub: any link that leaves github.com opens in a new tab instead of navigating away, toggleable from the popup. **Insta** appears only while you're on Instagram: Shift + right-click a
-post to open every photo of it in new tabs. **New Tab** redirects every fresh tab to the hieudoanm home page
+Tabs combines seven tab essentials in one toolbar button. **Ads** hides ad banners on the page and cancels advertising and tracking requests at the network level (DoubleClick, Google Analytics, AppNexus, Outbrain, Taboola, and friends), toggleable from the popup. **Block** stops on an offline focus wall when you visit a distracting site (Facebook, X, Instagram, Reddit, TikTok, Netflix, Twitch, Discord, and more) — with better sites to jump to and a suggestion wheel, toggleable from the popup. **GitHub** appears only while you're on GitHub: any link that leaves github.com opens in a new tab instead of navigating away, toggleable from the popup. **Insta** appears only while you're on Instagram: Shift + right-click a
+post to open every photo of it in new tabs. **Shopify** appears only while you're on a Shopify store: it tells you at a glance whether the store runs Shopify or Shopify Plus, read-only, with the full indicator breakdown. **New Tab** redirects every fresh tab to the hieudoanm home page
 (a toggle to turn it off, default on, plus a configurable target URL). **Snap** turns the same icon
 into a camera — **Capture view** screenshots what's on screen, **Capture full
 page** stitches the entire scrollable page from chunks on an
@@ -140,6 +140,19 @@ machine.
 - Enable/disable from the popup's **Insta** tab (`instaGesture`, stored in
   `storage.sync`); that tab only appears while you're on `instagram.com`
 
+### 🏬 Detect Shopify stores
+
+- On a Shopify store, the popup's **Shopify** tab shows whether the store runs
+  Shopify or Shopify Plus, with the full indicator breakdown
+- Always visible: click **Check Shopify** to get the verdict. The content
+  script proactively pushes its result to the background, which caches it per
+  tab and marks detected stores with an "S" toolbar badge; the popup reads
+  from that cache (falling back to an in-page check) — nothing is ever
+  probed before the DOM exists. `window.Shopify` is read through a tiny
+  page-context probe, since the extension's isolated world can't see page
+  globals
+- No config
+
 ### 🖼️ About the output
 
 - Built from the live page, so lazy-loaded content that renders counts
@@ -161,6 +174,8 @@ machine.
 - Visit a distracting site — the focus wall appears (toggleable from the popup).
 - Open a GitHub page and click a link that leaves github.com — it opens in a
   new tab instead of navigating away (toggleable from the popup).
+- Open a Shopify store — the popup's Shopify tab shows whether it's Shopify or
+  Shopify Plus (read-only verdict, no config needed).
 - Open a news or video site — ads and tracking requests stop (toggleable from
   the popup).
 - Open any page and click the icon.
