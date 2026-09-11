@@ -1,16 +1,20 @@
+import { createLogger } from '../utils/log';
+
 export const EXTERNAL_LINKS_KEY = 'githubExternalLinks';
+
+const log = createLogger('GitHub:');
 
 let routingEnabled = true;
 
 void chrome.storage.sync.get(EXTERNAL_LINKS_KEY, (result) => {
   routingEnabled = result[EXTERNAL_LINKS_KEY] !== false;
-  console.log(`GitHub: routing enabled=${routingEnabled}`);
+  log.info(`routing enabled=${routingEnabled}`);
 });
 
 chrome.storage.onChanged.addListener((changes, area) => {
   if (area === 'sync' && EXTERNAL_LINKS_KEY in changes) {
     routingEnabled = changes[EXTERNAL_LINKS_KEY]?.newValue !== false;
-    console.log(`GitHub: toggle changed -> enabled=${routingEnabled}`);
+    log.info(`toggle changed -> enabled=${routingEnabled}`);
   }
 });
 
@@ -18,7 +22,7 @@ const isGitHubPage = (): boolean => {
   const hostname = location.hostname;
   const isGitHub =
     hostname === 'github.com' || hostname.endsWith('.github.com');
-  console.log(`GitHub: hostname="${hostname}" isGitHub=${isGitHub}`);
+  log.debug(`hostname="${hostname}" isGitHub=${isGitHub}`);
   return isGitHub;
 };
 
@@ -40,7 +44,7 @@ const getAbsoluteUrl = (href: string): string => {
 
 const handleClick = (event: MouseEvent): void => {
   if (!routingEnabled) {
-    console.log('GitHub: routing disabled, ignoring');
+    log.debug('routing disabled, ignoring');
     return;
   }
 
@@ -59,17 +63,17 @@ const handleClick = (event: MouseEvent): void => {
   const absoluteUrl = getAbsoluteUrl(href);
   if (isGitHubUrl(absoluteUrl)) return;
 
-  console.log(`GitHub: routing external link to a new tab: ${absoluteUrl}`);
+  log.info(`routing external link to a new tab: ${absoluteUrl}`);
   event.preventDefault();
   window.open(absoluteUrl, '_blank', 'noopener');
 };
 
 export const registerExternalLinkRouting = (): void => {
   if (!isGitHubPage()) {
-    console.log('GitHub: not on GitHub, skipping listener');
+    log.debug('not on GitHub, skipping listener');
     return;
   }
 
-  console.log('GitHub: registering click listener');
+  log.debug('registering click listener');
   document.addEventListener('click', handleClick);
 };

@@ -1,6 +1,12 @@
 # TREE
 
 ```text
+├── docs/
+│   ├── [ARCHITECTURE.md](./docs/ARCHITECTURE.md)
+│   ├── [CONTRIBUTING.md](./docs/CONTRIBUTING.md)
+│   ├── [DOWNLOADS.md](./docs/DOWNLOADS.md)
+│   ├── [PACKAGING.md](./docs/PACKAGING.md)
+│   └── [ROADMAP.md](./docs/ROADMAP.md)
 ├── public/
 │   ├── icons/
 │   │   ├── [128x128.png](./public/icons/128x128.png)
@@ -13,13 +19,22 @@
 │   │   └── v3/
 │   │       ├── [manifest.json](./public/manifest/v3/manifest.json)
 │   │       └── [rules.json](./public/manifest/v3/rules.json)
+│   ├── [index.html](./public/index.html)
+│   ├── [popup.css](./public/popup.css)
 │   └── [popup.html](./public/popup.html)
 ├── src/
 │   ├── lib/
 │   │   ├── [ads.ts](./src/lib/ads.ts)
 │   │   ├── [block.ts](./src/lib/block.ts)
+│   │   ├── [chess.ts](./src/lib/chess.ts)
+│   │   ├── [claude.ts](./src/lib/claude.ts)
+│   │   ├── [github.ts](./src/lib/github.ts)
+│   │   ├── [insta.ts](./src/lib/insta.ts)
 │   │   ├── [newtab.ts](./src/lib/newtab.ts)
+│   │   ├── [shopify.ts](./src/lib/shopify.ts)
 │   │   └── [stitch.ts](./src/lib/stitch.ts)
+│   ├── utils/
+│   │   └── [log.ts](./src/utils/log.ts)
 │   ├── [background.ts](./src/background.ts)
 │   ├── [content.ts](./src/content.ts)
 │   └── [popup.ts](./src/popup.ts)
@@ -34,4 +49,4 @@
 └── [webpack.config.ts](./webpack.config.ts)
 ```
 
-7 directories, 24 files
+9 directories, 37 files

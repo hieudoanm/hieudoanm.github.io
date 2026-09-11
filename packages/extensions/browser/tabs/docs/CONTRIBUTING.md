@@ -3,7 +3,8 @@
 Thanks for contributing to **Tabs**, a cross-browser extension that redirects
 every new tab to the hieudoanm home page, blocks distracting sites with an
 offline focus wall, hides ads and tracking requests, routes external links from
-GitHub pages into new tabs, detects Shopify stores as you browse, and captures
+GitHub pages into new tabs, detects Shopify stores as you browse, tracks
+Claude.ai API rate-limit usage, and captures
 the visible viewport or the full page
 of any tab as an image, on Chromium and Gecko browsers via both Manifest V2 and
 Manifest V3 builds.
@@ -104,8 +105,8 @@ every change.
    falls back to the default whenever the stored value is empty or invalid.
 10. Prefix debug logs with `[Tabs]` and keep them minimal, and prefix errors
     with `Block:` / `BlockAds:` / `Snapshot:` consistently; the Insta gesture,
-    GitHub routing, Shopify detection, and Chess focus debug logs use `Insta:`,
-    `GitHub:`, `Shopify:`, and `Chess:` prefixes.
+    GitHub routing, Shopify detection, Chess focus, and Claude usage debug logs
+    use `Insta:`, `GitHub:`, `Shopify:`, `Chess:`, and `Claude:` prefixes.
 11. GitHub external-link routing lives in `src/lib/github.ts` and mounts its
     click listener only on `github.com` hosts; in-repo links, `#` /
     `javascript:` hrefs, modifier-key clicks, and programmatic clicks always
@@ -141,6 +142,16 @@ none`), and re-applies hiding through a single `MutationObserver`
     `DOMContentLoaded`. It is declarative and idempotent — never mutates game
     state, clicks, or sends messages — and the `chessFocus` toggle (default on,
     `storage.sync`) gates it.
+14. Claude.ai usage lives in `src/lib/claude.ts` — on a `claude.ai` host it
+    overrides `window.fetch` once (watched paths: `/rate_limits`, `/usage`),
+    parses tolerated response shapes, merges daily/weekly periods into
+    `localStorage['claude_limit_data']`, renders the inline
+    `claude-limit-indicator`, and pushes `CLAUDE_RESULT_ACTION` with the parsed
+    `ClaudeLimitData` to the background (which updates a per-tab badge and
+    `chrome.storage.local['claudeLimit']`). It is claude.ai-only and
+    toggleable (`claudeUsage`, default on, `storage.sync`). The shared module
+    must stay side-effect-free at import — the background and popup import its
+    constants and pure helpers (`claudePercent`, `claudeColor`, `formatReset`).
 
 ## Testing Conventions
 

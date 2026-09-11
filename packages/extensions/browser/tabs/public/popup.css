@@ -110,6 +110,32 @@
     .indicators li .on { color: var(--accent); }
     .indicators li .off { color: var(--muted); }
 
+    .usage-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .usage-col {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .usage-label {
+      font-size: 9px;
+      color: var(--muted);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .usage-value {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    .usage-reset {
+      font-size: 9px;
+      color: var(--muted);
+    }
+
     .body {
       padding: 16px 20px 20px;
       display: flex;

@@ -1,4 +1,15 @@
+import { createLogger } from './utils/log';
 import { GET_SHOPIFY_ACTION } from './lib/shopify';
+import {
+  CLAUDE_KEY,
+  CLAUDE_STORAGE_KEY,
+  claudeColor,
+  claudePercent,
+  formatReset,
+  type ClaudeLimitData,
+} from './lib/claude';
+
+const log = createLogger('Shopify:');
 
 const captureViewBtn = document.getElementById(
   'captureViewBtn'
@@ -37,6 +48,11 @@ const instaTabBtn =
   document.querySelector<HTMLButtonElement>('[data-tab="insta"]');
 const instaToggle = document.getElementById('instaToggle') as HTMLInputElement;
 const chessToggle = document.getElementById('chessFocus') as HTMLInputElement;
+const claudeUsage = document.getElementById('claudeUsage') as HTMLInputElement;
+const claudeDaily = document.getElementById('claudeDaily');
+const claudeWeekly = document.getElementById('claudeWeekly');
+const claudeDailyReset = document.getElementById('claudeDailyReset');
+const claudeWeeklyReset = document.getElementById('claudeWeeklyReset');
 const githubTabBtn = document.querySelector<HTMLButtonElement>(
   '[data-tab="github"]'
 );
@@ -144,13 +160,13 @@ const sendShopifyQuery = (
   Promise.race([
     chrome.runtime.sendMessage({ action: GET_SHOPIFY_ACTION, tabId }).then(
       (res) => {
-        console.log('Shopify: relay reply', res);
+        log.debug('relay reply', res);
         return res?.isShopify !== undefined
           ? (res as ShopifyDetectionResult)
           : undefined;
       },
       (err) => {
-        console.warn('Shopify: relay send failed', err);
+        log.warn('relay send failed', err);
         return undefined;
       }
     ),
@@ -164,8 +180,8 @@ const setShopifyVerdict = (message: string): void => {
 };
 
 const renderShopifyResult = (result: ShopifyDetectionResult): void => {
-  console.log(
-    `Shopify: popup isShopify=${result.isShopify} isShopifyPlus=${result.isShopifyPlus}`
+  log.info(
+    `popup isShopify=${result.isShopify} isShopifyPlus=${result.isShopifyPlus}`
   );
   setShopifyVerdict(
     result.isShopify
@@ -194,13 +210,13 @@ const runShopifyCheck = async (tabId: number): Promise<void> => {
         return;
       }
       if (attempt < MAX_SHOPIFY_ATTEMPTS - 1) {
-        console.log(`Shopify: no reply on attempt ${attempt + 1}, retrying`);
+        log.warn(`no reply on attempt ${attempt + 1}, retrying`);
         await sleep(250);
       }
     }
     setShopifyVerdict('Not responding — refresh the page');
-    console.warn(
-      'Shopify: no reply; the content script may not be loaded — refresh the page'
+    log.warn(
+      'no reply; the content script may not be loaded — refresh the page'
     );
   } finally {
     shopifyCheckBtn.disabled = false;
@@ -285,6 +301,61 @@ chrome.storage.sync.get('chessFocus', (result) => {
 
 chessToggle?.addEventListener('change', () => {
   chrome.storage.sync.set({ chessFocus: chessToggle.checked });
+});
+
+const renderClaudeColumn = (
+  valueEl: HTMLElement | null,
+  resetEl: HTMLElement | null,
+  pct: number | null,
+  resetAt: number | null
+): void => {
+  if (!valueEl) return;
+  if (pct === null) {
+    valueEl.textContent = '—';
+    valueEl.style.color = '';
+    if (resetEl) resetEl.textContent = '';
+    return;
+  }
+  valueEl.textContent = `${pct}%`;
+  valueEl.style.color = claudeColor(pct);
+  if (resetEl) resetEl.textContent = `\u21bb ${formatReset(resetAt)}`;
+};
+
+const renderClaudeUsage = (data: ClaudeLimitData | undefined): void => {
+  const pct = data ? claudePercent(data) : { daily: null, weekly: null };
+  renderClaudeColumn(
+    claudeDaily,
+    claudeDailyReset,
+    pct.daily,
+    data?.daily.resetAt ?? null
+  );
+  renderClaudeColumn(
+    claudeWeekly,
+    claudeWeeklyReset,
+    pct.weekly,
+    data?.weekly.resetAt ?? null
+  );
+};
+
+chrome.storage.local.get(CLAUDE_STORAGE_KEY, (result) => {
+  if (chrome.runtime.lastError) return;
+  renderClaudeUsage(result[CLAUDE_STORAGE_KEY] as ClaudeLimitData | undefined);
+});
+
+chrome.storage.onChanged.addListener((changes, area) => {
+  if (area !== 'local' || !(CLAUDE_STORAGE_KEY in changes)) return;
+  renderClaudeUsage(
+    changes[CLAUDE_STORAGE_KEY]?.newValue as ClaudeLimitData | undefined
+  );
+});
+
+chrome.storage.sync.get(CLAUDE_KEY, (result) => {
+  if (chrome.runtime.lastError) return;
+  if (claudeUsage) claudeUsage.checked = result[CLAUDE_KEY] !== false;
+});
+
+claudeUsage?.addEventListener('change', () => {
+  chrome.storage.sync.set({ [CLAUDE_KEY]: claudeUsage.checked });
 });
 
 const activateTab = (tabId: string): void => {

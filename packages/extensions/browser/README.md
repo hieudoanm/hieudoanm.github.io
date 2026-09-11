@@ -14,12 +14,10 @@
 
 ## Extensions
 
-| No  | Group                       | Extension          |
-| --- | --------------------------- | ------------------ |
-| 1   | [Claude](https://claude.ai) | [claudex][claudex] |
-| 2   | Tabs                        | [tabs][tabs]       |
+| No  | Group | Extension          |
+| --- | ----- | ------------------ |
+| 1   | Tabs  | [tabs][tabs]       |
 
-[claudex]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/claudex
 [tabs]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/tabs
 
 ## Browsers

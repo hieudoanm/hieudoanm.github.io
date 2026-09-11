@@ -9,6 +9,8 @@
 - Block distracting sites with an offline "focus wall" fallback
 - Block ads and tracking requests fully offline
 - Capture the visible viewport or the full page of any tab as an image
+- Track Claude.ai daily/weekly API rate-limit usage in an inline indicator and
+  a toolbar badge
 - Support both automatic download and copy-to-clipboard
 - Stitch tall pages cross-device correctly via `OffscreenCanvas` chunking
 - Type-safe throughout with strict TypeScript
@@ -37,6 +39,7 @@ src/
 └── lib/
     ├── ads.ts      # Ad selectors + network domains + offline ad-hiding
     ├── block.ts    # Distracting-site block wall (+ better sites + suggestion wheel)
+    ├── claude.ts   # Claude.ai rate-limit usage tracking + inline indicator
     ├── newtab.ts   # New-tab/home URL interception + redirect
     └── stitch.ts   # OffscreenCanvas chunk stitching
 public/
@@ -101,6 +104,12 @@ directory.
 │  - Scrolls the page for full-page stitching                │
 │  - Triggers the block wall via maybeRenderBlockWall()      │
 │  - Triggers ad hiding via maybeRunAdsBlocker()             │
+│  - Registers Claude.ai usage via registerClaudeUsage()     │
+├────────────────────────────────────────────────────────────┤
+│  lib/claude (src/lib/claude.ts)                          │  Shared helper
+│  - claude.ai fetch override watching /rate_limits //usage │
+│  - Parses + merges daily/weekly usage -> claudeLimitData  │
+│  - Renders inline indicator, pushes CLAUDE_RESULT_ACTION  │
 ├────────────────────────────────────────────────────────────┤
 │  lib/ads (src/lib/ads.ts)                                  │  Shared helper
 │  - AD_SELECTORS (DOM hiding) + AD_NETWORK_DOMAINS          │
@@ -188,6 +197,28 @@ directory.
   on); gated by hostname and the toggle, and the observer never touches game
   state, clicks, or messages.
 
+## Claude.ai Usage Strategy
+
+- **Scope** — `registerClaudeUsage()` in `src/lib/claude.ts` runs only on
+  `claude.ai` hosts. It overrides `window.fetch` once and inspects only
+  responses whose URL contains `/rate_limits` or `/usage`, parsing tolerantly
+  across response shapes (top-level array, `rate_limits`/`limits` objects,
+  usage objects, `*_message_count` fallbacks). Nothing is inspected on any
+  other host.
+- **Surfaces** — parsed daily/weekly periods merge into
+  `localStorage['claude_limit_data']` and render as the inline
+  `claude-limit-indicator` next to the composer (MutationObserver + 1s/3s
+  fallbacks, 60s refresh, idempotent `replaceWith` mounts); the content script
+  also pushes `CLAUDE_RESULT_ACTION` fire-and-forget so the background updates
+  a per-tab badge (`X%`, colored by `claudeColor`: red ≥ 90, amber ≥ 60,
+  green below; blank without data) and stores `chrome.storage.local['claudeLimit']`
+  for the popup's Claude tab readout.
+- **Toggle** — the popup checkbox `claudeUsage` lives in `storage.sync`
+  (default on); a `storage.onChanged` listener starts/stops the tracking live.
+- **Modularity** — the module is side-effect-free at import; the background
+  and popup only import its constants, `claudePercent`, `claudeColor`,
+  `formatReset`, and types.
+
 ## Capture Strategy
 
 - **View capture** — background captures `chrome.tabs.captureVisibleTab`
@@ -207,8 +238,11 @@ directory.
 
 - **Minimal** — per-invocation capture state lives in the message flow; the
   `redirectNewTabs`, `newTabTargetUrl`, `blockDistractingSites`, `blockAds`,
-  `instaGesture`, `githubExternalLinks`, and `chessFocus` preferences are the
-  persisted values in `storage.sync`.
+  `instaGesture`, `githubExternalLinks`, `chessFocus`, and `claudeUsage`
+  preferences are the persisted values in `storage.sync`. The Claude usage
+  readout additionally persists the latest parsed `ClaudeLimitData` in
+  `chrome.storage.local['claudeLimit']` (written by the background from
+  `CLAUDE_RESULT_ACTION` pushes) so the popup always shows the last result.
 
 ## Performance
 

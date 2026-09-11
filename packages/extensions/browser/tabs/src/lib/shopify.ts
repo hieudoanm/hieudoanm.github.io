@@ -1,3 +1,5 @@
+import { createLogger } from '../utils/log';
+
 interface ShopifyIndicatorSet {
   windowShopify: boolean;
   shopifyMeta: boolean;
@@ -28,6 +30,8 @@ export const GET_SHOPIFY_ACTION = 'GET_SHOPIFY';
 
 const MAIN_WORLD_CHANNEL = 'TABS_SHOPIFY_CHECK';
 const MAIN_WORLD_TIMEOUT_MS = 400;
+
+const log = createLogger('Shopify:');
 
 const MAIN_WORLD_PROBE = `(() => {
   if (window.__tabsShopifyHook) return;
@@ -158,8 +162,8 @@ const primeProbe = async (): Promise<void> => {
 
 const reportShopifyResult = (): void => {
   const result = buildResult(cachedProbe);
-  console.log(
-    `Shopify: isShopify=${result.isShopify} isShopifyPlus=${result.isShopifyPlus}`
+  log.info(
+    `isShopify=${result.isShopify} isShopifyPlus=${result.isShopifyPlus}`
   );
   try {
     chrome.runtime.sendMessage(

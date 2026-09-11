@@ -1,1 +1,0 @@
-# ClaudeX - Claude.ai Extension

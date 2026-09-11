@@ -1,6 +1,7 @@
 import { maybeRunAdsBlocker } from './lib/ads';
 import { maybeRenderBlockWall } from './lib/block';
 import { registerChessFocus } from './lib/chess';
+import { registerClaudeUsage } from './lib/claude';
 import { registerExternalLinkRouting } from './lib/github';
 import { registerInstaGesture } from './lib/insta';
 import { registerShopifyDetection } from './lib/shopify';
@@ -18,6 +19,7 @@ const SCROLL_SETTLE_MS = 120;
 maybeRenderBlockWall();
 maybeRunAdsBlocker();
 registerChessFocus();
+registerClaudeUsage();
 registerExternalLinkRouting();
 registerInstaGesture();
 registerShopifyDetection();

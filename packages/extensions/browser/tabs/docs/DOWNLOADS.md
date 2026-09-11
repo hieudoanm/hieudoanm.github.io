@@ -1,6 +1,6 @@
 # Tabs
 
-> Redirect every new tab to your home page, block distracting sites and ads, capture the current view or the full page, open external links from GitHub pages in new tabs, open every photo of an Instagram post on Shift + right-click, and detect Shopify stores as you browse — in one extension.
+> Redirect every new tab to your home page, block distracting sites and ads, capture the current view or the full page, open external links from GitHub pages in new tabs, open every photo of an Instagram post on Shift + right-click, detect Shopify stores as you browse, and track Claude.ai API rate-limit usage — in one extension.
 
 ![Chromium](https://img.shields.io/badge/Chromium-Chrome%2FEdge%2FBrave%2FOpera%2FVivaldi%2FArc-blue)
 ![Firefox](https://img.shields.io/badge/Firefox-MV2-lightblue)
@@ -11,7 +11,7 @@
 ## Latest release
 
 - **Version:** `0.0.1` — tag `extensions-browser-tabs-latest`.
-- **What's new:** see the [roadmap](ROADMAP) and [CONTRIBUTING](CONTRIBUTING).
+- **What's new:** see the [ROADMAP](ROADMAP) and [CONTRIBUTING](CONTRIBUTING).
 
 ---
 
@@ -74,8 +74,8 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-Tabs combines seven tab essentials in one toolbar button. **Ads** hides ad banners on the page and cancels advertising and tracking requests at the network level (DoubleClick, Google Analytics, AppNexus, Outbrain, Taboola, and friends), toggleable from the popup. **Block** stops on an offline focus wall when you visit a distracting site (Facebook, X, Instagram, Reddit, TikTok, Netflix, Twitch, Discord, and more) — with better sites to jump to and a suggestion wheel, toggleable from the popup. **GitHub** appears only while you're on GitHub: any link that leaves github.com opens in a new tab instead of navigating away, toggleable from the popup. **Insta** appears only while you're on Instagram: Shift + right-click a
-post to open every photo of it in new tabs. **Shopify** appears only while you're on a Shopify store: it tells you at a glance whether the store runs Shopify or Shopify Plus, read-only, with the full indicator breakdown. **New Tab** redirects every fresh tab to the hieudoanm home page
+Tabs combines eight tab essentials in one toolbar button. **Ads** hides ad banners on the page and cancels advertising and tracking requests at the network level (DoubleClick, Google Analytics, AppNexus, Outbrain, Taboola, and friends), toggleable from the popup. **Block** stops on an offline focus wall when you visit a distracting site (Facebook, X, Instagram, Reddit, TikTok, Netflix, Twitch, Discord, and more) — with better sites to jump to and a suggestion wheel, toggleable from the popup. **GitHub** appears only while you're on GitHub: any link that leaves github.com opens in a new tab instead of navigating away, toggleable from the popup. **Insta** appears only while you're on Instagram: Shift + right-click a
+post to open every photo of it in new tabs. **Shopify** appears only while you're on a Shopify store: it tells you at a glance whether the store runs Shopify or Shopify Plus, read-only, with the full indicator breakdown. **Claude** shows your daily and weekly Claude.ai API rate-limit usage in the popup and a toolbar badge. **New Tab** redirects every fresh tab to the hieudoanm home page
 (a toggle to turn it off, default on, plus a configurable target URL). **Snap** turns the same icon
 into a camera — **Capture view** screenshots what's on screen, **Capture full
 page** stitches the entire scrollable page from chunks on an
@@ -118,6 +118,18 @@ machine.
 - A single `MutationObserver` re-applies hiding after Chess.com's SPA re-renders
 - Enable/disable from the popup's **Chess** tab (`chessFocus`, stored in
   `storage.sync`); runs only on `chess.com`, never touches game state
+
+### 🤖 Claude.ai rate-limit usage
+
+- On Claude.ai, daily and weekly API rate-limit usage is read from the
+  `/rate_limits` and `/usage` responses and merged into
+  `localStorage['claude_limit_data']`
+- A small inline indicator next to the composer shows the current percentage
+  and reset time for each period
+- The toolbar badge shows the higher of the two percentages only on
+  `claude.ai` tabs — red ≥ 90%, amber ≥ 60%, green below
+- The popup's **Claude** tab shows the same readout and the toggle
+  (`claudeUsage`, stored in `storage.sync`, default on)
 
 ### 📸 Capture view
 
@@ -184,6 +196,8 @@ machine.
   new tab instead of navigating away (toggleable from the popup).
 - Open a Shopify store — the popup's Shopify tab shows whether it's Shopify or
   Shopify Plus (read-only verdict, no config needed).
+- Open Claude.ai — the popup's Claude tab shows your daily and weekly usage,
+  and the toolbar badge updates on api.claude.ai requests (toggleable).
 - Open a news or video site — ads and tracking requests stop (toggleable from
   the popup).
 - Open any page and click the icon.

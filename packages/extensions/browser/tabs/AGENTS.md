@@ -40,19 +40,35 @@ Reference docs live in `docs/`:
   only rerun when nodes are actually added/removed, plus one initial pass on
   `DOMContentLoaded`; the `chessFocus` toggle (default on, `storage.sync`)
   gates it and it never mutates game state, clicks, or sends any data
+- Claude.ai usage lives in `src/lib/claude.ts` (`registerClaudeUsage()`): on a
+  `claude.ai` host it overrides `window.fetch` once and inspects only responses
+  whose URL contains `/rate_limits` or `/usage` (`WATCHED`), parsing tolerantly
+  across response shapes (top-level array, `rate_limits`/`limits` objects,
+  usage objects, `*_message_count` fallbacks). Parsed daily/weekly periods are
+  merged into `localStorage['claude_limit_data']`, rendered as the inline
+  `claude-limit-indicator` next to the composer (MutationObserver + 1s/3s
+  fallbacks, 60s refresh, idempotent `replaceWith` mounts), and pushed
+  fire-and-forget as `{ action: CLAUDE_RESULT_ACTION, result: ClaudeLimitData }`
+  so the background can update a per-tab badge (`X%`, `claudeColor` thresholds,
+  blank when no data) and the popup can read `chrome.storage.local['claudeLimit']`.
+  The module must stay side-effect-free at import — the background and popup
+  import only its constants, `claudePercent`, `claudeColor`, `formatReset`, and
+  types. Always claude.ai-only: fetch override, observer, and render mount only
+  on that host; `claudeUsage` toggle (default on, `storage.sync`) gates start/stop
+  live via a `storage.onChanged` listener
 - Ad blocking lives in `src/lib/ads.ts`: `AD_SELECTORS` hides ad banners via an
   idempotent `MutationObserver`, `AD_NETWORK_DOMAINS` feeds the network blocker;
   the `blockAds` toggle (default on, `storage.sync`) gates it, with MV2 network
   blocking in `background.ts` via `webRequest` and MV3 via the static DNR
   ruleset `ruleset_block` in `public/manifest/v3/rules.json` — keep the two
   domain lists in sync
-- The popup is an 8-tab bar ordered alphabetically: **Ads, Block, Chess,
-  GitHub, Insta, New Tab, Shopify, Snap** — keep data-tab ids, buttons, and
-  panes in this order. The GitHub and Insta tabs and panes are hidden unless
-  the active tab is `github.com` / `instagram.com`, and the popup opens
-  straight onto the matching tab when it is (contextual features); the Shopify
-  tab is always visible and its pane shows the result of a manual
-  "Check Shopify" button
+- The popup is a 9-tab bar ordered alphabetically: **Ads, Block, Chess,
+  Claude, GitHub, Insta, New Tab, Shopify, Snap** — keep data-tab ids,
+  buttons, and panes in this order. The GitHub and Insta tabs and panes are
+  hidden unless the active tab is `github.com` / `instagram.com`, and the
+  popup opens straight onto the matching tab when it is (contextual
+  features); the Shopify tab is always visible and its pane shows the result
+  of a manual "Check Shopify" button
 - External-link routing lives in `src/lib/github.ts`
   (`registerExternalLinkRouting()`): on a `github.com` host it mounts a
   delegated `click` listener that resolves `getAbsoluteUrl()` and routes any

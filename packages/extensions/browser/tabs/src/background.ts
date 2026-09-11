@@ -1,11 +1,29 @@
 import { AD_NETWORK_DOMAINS, ADS_KEY } from './lib/ads';
 import { registerNewTabRedirect } from './lib/newtab';
 import { stitchChunks, type SnapshotChunk } from './lib/stitch';
+import { createLogger } from './utils/log';
 import {
   GET_SHOPIFY_ACTION,
   SHOPIFY_RESULT_ACTION,
   type ShopifyDetectionResult,
 } from './lib/shopify';
+import {
+  CLAUDE_RESULT_ACTION,
+  CLAUDE_STORAGE_KEY,
+  claudeColor,
+  claudePercent,
+  type ClaudeLimitData,
+} from './lib/claude';
+
+type BadgeAction = {
+  setBadgeText: (details: { text: string; tabId?: number }) => void;
+  setBadgeBackgroundColor: (details: { color: string; tabId?: number }) => void;
+};
+
+const chromeApi = chrome as unknown as Record<string, BadgeAction | undefined>;
+const badgeAction = chromeApi.action ?? chromeApi.browserAction;
+
+const log = createLogger('Shopify:');
 
 interface CaptureRequest {
   action: string;
@@ -85,6 +103,19 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     return;
   }
 
+  if (message?.action === CLAUDE_RESULT_ACTION) {
+    const tabId = sender.tab?.id;
+    const result = (message as { result?: ClaudeLimitData | null }).result;
+    if (tabId == null) return;
+    if (result) {
+      void chrome.storage.local.set({ [CLAUDE_STORAGE_KEY]: result });
+      applyClaudeBadge(tabId, result);
+    } else if (badgeAction) {
+      badgeAction.setBadgeText({ tabId, text: '' });
+    }
+    return;
+  }
+
   if (message?.action === GET_SHOPIFY_ACTION) {
     void handleShopifyCheck(message).then((result) => sendResponse(result));
     return true;
@@ -95,6 +126,18 @@ chrome.tabs.onRemoved.addListener((tabId) => {
   shopifyResults.delete(tabId);
   void chrome.action.setBadgeText({ tabId, text: '' });
 });
+
+const applyClaudeBadge = (tabId: number, data: ClaudeLimitData): void => {
+  if (!badgeAction) return;
+  const { daily, weekly } = claudePercent(data);
+  if (daily === null && weekly === null) {
+    badgeAction.setBadgeText({ tabId, text: '' });
+    return;
+  }
+  const pct = Math.max(daily ?? 0, weekly ?? 0);
+  badgeAction.setBadgeText({ tabId, text: `${pct}%` });
+  badgeAction.setBadgeBackgroundColor({ tabId, color: claudeColor(pct) });
+};
 
 const handleCapture = async (request: CaptureRequest): Promise<string> =>
   request.action === 'captureFullPage'
@@ -135,7 +178,7 @@ const handleShopifyCheck = async (message: {
         return verdict;
       }
     } catch (err) {
-      console.warn('Shopify: executeScript in page failed:', err);
+      log.warn('executeScript in page failed:', err);
     }
   }
 

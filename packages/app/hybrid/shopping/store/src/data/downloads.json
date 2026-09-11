@@ -2200,42 +2200,6 @@
     "label": "Extensions (Browser)",
     "items": [
       {
-        "label": "ClaudeX",
-        "primaryCategory": "Developer Tools",
-        "secondaryCategory": "Productivity",
-        "icon": "PiSparkle",
-        "href": "https://hieudoanm.github.io/free/claudex",
-        "version": "latest",
-        "lastUpdated": "2026-09-06",
-        "fileSize": "",
-        "actions": [
-          {
-            "label": "v2.crx",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-claudex-latest/claudex-v2.crx"
-          },
-          {
-            "label": "v2.xpi",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-claudex-latest/claudex-v2.xpi"
-          },
-          {
-            "label": "v2.zip",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-claudex-latest/claudex-v2.zip"
-          },
-          {
-            "label": "v3.crx",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-claudex-latest/claudex-v3.crx"
-          },
-          {
-            "label": "v3.xpi",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-claudex-latest/claudex-v3.xpi"
-          },
-          {
-            "label": "v3.zip",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-claudex-latest/claudex-v3.zip"
-          }
-        ]
-      },
-      {
         "label": "Tabs",
         "primaryCategory": "Productivity",
         "secondaryCategory": "",

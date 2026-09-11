@@ -1,8 +1,9 @@
 # Tabs - Tabs Extension
 
 Redirect every new tab to the hieudoanm home page, block distracting sites and
-ads, keep GitHub routing external links to new tabs, detect Shopify stores, and
-capture the current tab as a screenshot, all from one toolbar button.
+ads, keep GitHub routing external links to new tabs, detect Shopify stores,
+track Claude.ai API rate-limit usage, and capture the current tab as a
+screenshot, all from one toolbar button.
 
 Features:
 
@@ -21,6 +22,9 @@ Features:
   or Shopify Plus (read-only, no config).
 - **Chess** — on Chess.com, live-game start/over overlays, user taglines, and
   ratings are hidden so you can focus on the board (toggleable from the popup).
+- **Claude** — on Claude.ai, daily and weekly API rate-limit usage is read from
+  the /rate_limits and /usage responses and shown in a toolbar badge and the
+  popup (toggleable from the popup).
 - **Current view** — a snapshot of exactly what is visible on screen.
 - **Full page** — scrolls through the whole page, stitches the screenshots
   together, and downloads the full-length image.

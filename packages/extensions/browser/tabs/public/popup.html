@@ -10,14 +10,11 @@
 
 <div class="header">
   <div class="brand">
-    <span class="brand-name">Tabs</span>
-    <span class="brand-tag">Tab Manager</span>
+    <span class="brand-name">tab-x</span>
+    <span class="brand-tag">__BUILD_VERSION__</span>
   </div>
   <div class="tab-info">
     <span id="tabUrl">loading...</span>
-  </div>
-  <div class="tab-info">
-    <span id="buildVersion">__BUILD_VERSION__</span>
   </div>
 </div>
 
@@ -25,6 +22,7 @@
   <button class="tab-btn active" type="button" role="tab" aria-selected="true" data-tab="ads">Ads</button>
   <button class="tab-btn" type="button" role="tab" aria-selected="false" data-tab="block">Block</button>
   <button class="tab-btn" type="button" role="tab" aria-selected="false" data-tab="chess">Chess</button>
+  <button class="tab-btn" type="button" role="tab" aria-selected="false" data-tab="claude">Claude</button>
   <button class="tab-btn hidden" type="button" role="tab" aria-selected="false" data-tab="github">GitHub</button>
   <button class="tab-btn hidden" type="button" role="tab" aria-selected="false" data-tab="insta">Insta</button>
   <button class="tab-btn" type="button" role="tab" aria-selected="false" data-tab="newtab">New Tab</button>
@@ -77,6 +75,40 @@
     <div class="hint">
       On Chess.com, live-game start/over overlays, user taglines, and ratings
       are hidden so you can focus on the board. Toggle off to show them again.
+    </div>
+  </section>
+
+  <section class="pane" id="pane-claude" role="tabpanel">
+    <div class="option-box">
+      <div class="option-label">Usage</div>
+      <div class="usage-cols">
+        <div class="usage-col">
+          <div class="usage-label">Daily</div>
+          <div class="usage-value" id="claudeDaily">—</div>
+          <div class="usage-reset" id="claudeDailyReset"></div>
+        </div>
+        <div class="usage-col">
+          <div class="usage-label">Weekly</div>
+          <div class="usage-value" id="claudeWeekly">—</div>
+          <div class="usage-reset" id="claudeWeeklyReset"></div>
+        </div>
+      </div>
+    </div>
+    <div class="option-box">
+      <div class="option-label">Track Usage</div>
+      <div class="toggle-row">
+        <span class="toggle-label">Rate-limit badge &amp; indicator</span>
+        <label class="toggle">
+          <input type="checkbox" id="claudeUsage" checked />
+          <div class="toggle-track"></div>
+          <div class="toggle-thumb"></div>
+        </label>
+      </div>
+    </div>
+    <div class="hint">
+      On Claude.ai, daily and weekly API rate-limit usage is read from
+      /rate_limits and /usage responses. The toolbar badge shows the higher
+      percentage only on claude.ai tabs.
     </div>
   </section>
 
