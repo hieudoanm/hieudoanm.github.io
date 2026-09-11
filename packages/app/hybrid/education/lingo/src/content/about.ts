@@ -2,7 +2,7 @@ import { buildVersion } from './version';
 
 export const about = {
   name: 'Lingo',
-  description: 'Learn languages — flashcards, dictionary and sign language',
+  description: 'Learn languages — vocabulary, dictionary and sign language',
   version: buildVersion,
   items: [
     { label: 'Language', value: 'TypeScript 6.+' },

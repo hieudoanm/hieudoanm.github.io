@@ -2,9 +2,10 @@ const CACHE_NAME = 'lingo-v1';
 
 const STATIC_ASSETS = [
   '/',
-  '/flashcards/',
-  '/english/',
-  '/sign/',
+  '/languages/',
+  '/history/',
+  '/languages/english/',
+  '/languages/sign/',
   '/downloads/',
   '/about/',
   '/version/',

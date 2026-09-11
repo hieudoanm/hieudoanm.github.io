@@ -8,7 +8,7 @@ import { FC, ReactNode } from 'react';
 
 export const metadata: Metadata = {
   title: 'Lingo',
-  description: 'Learn languages — flashcards, dictionary and sign language',
+  description: 'Learn languages — vocabulary, dictionary and sign language',
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,

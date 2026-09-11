@@ -1,7 +1,7 @@
 {
   "name": "Lingo",
   "short_name": "Lingo",
-  "description": "Learn languages \u2014 flashcards, dictionary and sign language.",
+  "description": "Learn languages \u2014 vocabulary, dictionary and sign language.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -19,7 +19,7 @@
     {
       "name": "Open Lingo",
       "short_name": "Lingo",
-      "description": "Learn languages \u2014 flashcards, dictionary and sign language.",
+      "description": "Learn languages \u2014 vocabulary, dictionary and sign language.",
       "url": "/",
       "icons": [
         {

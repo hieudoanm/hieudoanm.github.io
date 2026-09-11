@@ -356,50 +356,6 @@
         ]
       },
       {
-        "label": "History",
-        "primaryCategory": "Education",
-        "secondaryCategory": "Games",
-        "icon": "PiBooks",
-        "href": "https://hieudoanm.github.io/free/history",
-        "version": "latest",
-        "lastUpdated": "2025-01-01",
-        "fileSize": "",
-        "actions": [
-          {
-            "label": ".aab",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-history-latest/history.aab"
-          },
-          {
-            "label": ".apk",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-history-latest/history.apk"
-          },
-          {
-            "label": ".dmg",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-history-latest/history.dmg"
-          },
-          {
-            "label": ".AppImage",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-history-latest/history.AppImage"
-          },
-          {
-            "label": ".deb",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-history-latest/history.deb"
-          },
-          {
-            "label": ".x86_64.rpm",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-history-latest/history.rpm"
-          },
-          {
-            "label": ".msi",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-history-latest/history.msi"
-          },
-          {
-            "label": ".exe",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-education-history-latest/history.exe"
-          }
-        ]
-      },
-      {
         "label": "Lingo",
         "primaryCategory": "Education",
         "secondaryCategory": "Games",

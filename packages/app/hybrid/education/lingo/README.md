@@ -1,6 +1,6 @@
 # Lingo
 
-> Duolingo-style language learning — flashcards, dictionary and sign-language
+> Duolingo-style language learning — vocabulary, dictionary and sign-language
 > recognition as a hybrid web/desktop app.
 
 ## Overview

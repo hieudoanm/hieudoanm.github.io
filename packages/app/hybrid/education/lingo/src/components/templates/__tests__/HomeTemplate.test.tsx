@@ -4,10 +4,10 @@ import { HomeTemplate } from '../HomeTemplate';
 
 const ITEMS = [
   {
-    label: 'Flashcards',
+    label: 'Languages',
     description: 'Vocabulary decks',
     icon: PiCards,
-    href: '/flashcards/',
+    href: '/languages/',
   },
 ];
 
@@ -16,6 +16,6 @@ describe('HomeTemplate', () => {
     render(<HomeTemplate appName="Lingo" description="desc" items={ITEMS} />);
     expect(screen.getByRole('heading', { name: 'Lingo' })).toBeInTheDocument();
     expect(screen.getByText('desc')).toBeInTheDocument();
-    expect(screen.getByTestId('tool-card-flashcards')).toBeInTheDocument();
+    expect(screen.getByTestId('tool-card-languages')).toBeInTheDocument();
   });
 });

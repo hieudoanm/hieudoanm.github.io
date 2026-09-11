@@ -11,7 +11,7 @@ describe('AboutPage', () => {
     render(<AboutPage />);
     expect(
       screen.getByText(
-        'Learn languages — flashcards, dictionary and sign language'
+        'Learn languages — vocabulary, dictionary and sign language'
       )
     ).toBeInTheDocument();
   });

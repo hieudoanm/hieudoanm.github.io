@@ -1,6 +1,6 @@
 # Lingo
 
-Duolingo-style language learning: flashcards, dictionary, sign-language
+Duolingo-style language learning: vocabulary, dictionary, sign-language
 recognition and an ear-training music game. Next.js 16 + React 19 + Tailwind CSS
 4 (DaisyUI 5) desktop/web app packaged with Tauri 2.
 
@@ -29,8 +29,8 @@ Reference docs live in `docs/`:
 - Each game is a self-contained folder under `src/games/`: `index.tsx` (UI) and
   `utils.ts` (pure data + logic, zero UI imports)
 - Games are standalone — no `onClose` prop; pages render them directly
-- `/flashcards` is a language hub (Duolingo-style list); the flashcard deck
-  lives at `/flashcards/[language]`, pre-rendered via `generateStaticParams`
+- `/languages` is a language hub (Duolingo-style list); the flashcard deck lives
+  at `/languages/[language]`, pre-rendered via `generateStaticParams`
 - Offline detection is inlined in `OfflineBadge` (no shared hook)
 - Progress (XP + streak) lives in IndexedDB via `src/lib/progress.ts`; scoring
   is pure (`applyActivity`) and never recomputed in components
@@ -57,13 +57,13 @@ pnpm tauri dev|build # Desktop app via Tauri CLI
 ## Structure
 
 ```
-src/app/            # App Router pages — /flashcards /english /sign /music + info routes
+src/app/            # App Router pages — /languages /music /history + info routes
 src/components/
   atoms/            # Button, Badge, OfflineBadge, ThemeToggle
   organisms/        # Header
   templates/        # HomeTemplate, About/Downloads/Version/ErrorTemplate
 src/content/        # about/download/version copy
-src/games/          # flashcards, english, sign, music
+src/games/          # languages (incl. sign/, english/), music, history
 src/hooks/          # useTheme, useSWRegister, useUpdater
 src/lib/            # progress (IndexedDB), native bridge, publicPaths
 src/providers/      # SWProvider, NativeProvider, QueryProvider
@@ -75,5 +75,7 @@ e2e/                # Playwright specs
 
 ## Routes
 
-`/` (home hub), `/flashcards` (language hub), `/flashcards/[language]`,
-`/english`, `/sign`, `/music` plus `/about`, `/downloads`, `/version`.
+`/` (home hub), `/languages` (language hub), `/languages/[language]`,
+`/languages/english` (dictionary), `/languages/sign` (sign-language
+recognition), `/history` (history hub), `/history/myth-vs-fact`,
+`/history/through-the-years`, `/music` plus `/about`, `/downloads`, `/version`.

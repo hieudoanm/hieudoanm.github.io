@@ -11,18 +11,22 @@ test('home lists all course cards', async ({ page }) => {
   await page.goto('/');
 
   await expect(page.getByRole('heading', { name: 'Lingo' })).toBeVisible();
-  for (const slug of ['flashcards', 'english', 'sign', 'music', 'chemistry']) {
+  for (const slug of ['languages', 'music', 'chemistry']) {
     await expect(page.getByTestId(`tool-card-${slug}`)).toBeVisible();
   }
+  await expect(page.getByTestId('tool-card-history')).toBeVisible();
 });
 
-test('flashcard flow completes from home', async ({ page }) => {
+test('language hub flow completes from home', async ({ page }) => {
   await page.goto('/');
 
-  await page.getByTestId('tool-card-flashcards').click();
-  await expect(page.getByRole('heading', { name: 'Flashcards' })).toBeVisible();
+  await page.getByTestId('tool-card-languages').click();
+  await expect(
+    page.getByRole('heading', { name: 'Choose a language' })
+  ).toBeVisible();
 
-  await expect(page.getByTestId('language-select')).toHaveValue('korean');
+  await page.getByTestId('language-korean').click();
+  await expect(page.getByTestId('flashcard')).toBeVisible();
   await page.getByRole('button', { name: 'Next' }).click();
   await expect(page.getByText(/2 \//)).toBeVisible();
 
@@ -32,7 +36,7 @@ test('flashcard flow completes from home', async ({ page }) => {
 });
 
 test('dictionary looks up a word', async ({ page }) => {
-  await page.goto('/english/');
+  await page.goto('/languages/english/');
 
   await page.getByPlaceholder('Type a word...').fill('hello');
   await expect(page.getByRole('heading', { name: 'hello' })).toBeVisible({

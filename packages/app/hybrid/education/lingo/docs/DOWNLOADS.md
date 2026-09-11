@@ -1,6 +1,6 @@
 # Lingo
 
-> Duolingo-style language learning — flashcards, dictionary, sign-language
+> Duolingo-style language learning — vocabulary, dictionary, sign-language
 > recognition, and music. Run vocabulary drills, look up words, learn ASL, or
 > train your ear. Runs everywhere: phone, tablet, laptop, desktop.
 

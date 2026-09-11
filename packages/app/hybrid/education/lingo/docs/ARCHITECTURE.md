@@ -22,7 +22,7 @@ src/
 │   ├── organisms/  # Header
 │   └── templates/  # HomeTemplate, info/error templates
 ├── content/    # about/download/version copy
-├── games/      # flashcards/, english/, sign/, music/ — index.tsx + utils.ts each
+├── games/      # languages/ (incl. sign/, english/), music/ — index.tsx + utils.ts each
 ├── hooks/      # useTheme, useProgress, useOffline, useSWRegister, useUpdater
 ├── lib/        # progress.ts, native/, publicPaths.ts
 ├── providers/  # SWProvider > NativeProvider > QueryProvider
@@ -34,8 +34,10 @@ src/
 App Router with static export:
 
 - `/` — home hub (course grid)
-- `/flashcards`, `/english`, `/sign`, `/music` — one page per game under
+- `/languages`, `/music`, `/history` — one page per game (or hub) under
   `(games)/`, rendering its feature directly
+- `/languages/english` — dictionary under the languages hub
+- `/languages/sign` — sign-language recognition under the languages hub
 - `(info)/about`, `(info)/downloads`, `(info)/version` — info routes
 - `(auth)/sign-in`, `(auth)/sign-up`, `(auth)/forget-password`,
   `(auth)/reset-password`, `(auth)/profile` — auth routes
