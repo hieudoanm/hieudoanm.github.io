@@ -55,7 +55,7 @@
 
 ---
 
-### Hybrid (45)
+### Hybrid (44)
 
 #### Business (2)
 
@@ -78,15 +78,14 @@
 
 ---
 
-#### Education (5)
+#### Education (4)
 
 | No  | Platform | Category  | Name      | Free                   | Releases                       |
 | --- | -------- | --------- | --------- | ---------------------- | ------------------------------ |
-| 16  | Hybrid   | Education | Chemistry | [Free][free-chemistry] | [Releases][releases-chemistry] |
-| 17  | Hybrid   | Education | Economics | [Free][free-economics] | [Releases][releases-economics] |
-| 18  | Hybrid   | Education | History   | [Free][free-history]   | [Releases][releases-history]   |
-| 19  | Hybrid   | Education | Lingo     | [Free][free-lingo]     | [Releases][releases-lingo]     |
-| 20  | Hybrid   | Education | DOI       | [Free][free-doi]       | [Releases][releases-doi]       |
+| 16  | Hybrid   | Education | Economics | [Free][free-economics] | [Releases][releases-economics] |
+| 17  | Hybrid   | Education | History   | [Free][free-history]   | [Releases][releases-history]   |
+| 18  | Hybrid   | Education | Lingo     | [Free][free-lingo]     | [Releases][releases-lingo]     |
+| 19  | Hybrid   | Education | DOI       | [Free][free-doi]       | [Releases][releases-doi]       |
 
 ---
 
@@ -94,8 +93,8 @@
 
 | No  | Platform | Category | Name   | Free                | Releases                    |
 | --- | -------- | -------- | ------ | ------------------- | --------------------------- |
-| 21  | Hybrid   | Finance  | Tax    | [Free][free-tax]    | [Releases][releases-tax]    |
-| 22  | Hybrid   | Finance  | Wallet | [Free][free-wallet] | [Releases][releases-wallet] |
+| 20  | Hybrid   | Finance  | Tax    | [Free][free-tax]    | [Releases][releases-tax]    |
+| 21  | Hybrid   | Finance  | Wallet | [Free][free-wallet] | [Releases][releases-wallet] |
 
 ---
 
@@ -103,7 +102,7 @@
 
 | No  | Platform | Category     | Name  | Free               | Releases                   |
 | --- | -------- | ------------ | ----- | ------------------ | -------------------------- |
-| 23  | Hybrid   | Food & Drink | Foody | [Free][free-foody] | [Releases][releases-foody] |
+| 22  | Hybrid   | Food & Drink | Foody | [Free][free-foody] | [Releases][releases-foody] |
 
 ---
 
@@ -111,12 +110,12 @@
 
 | No  | Platform | Category | Name        | Free                     | Releases                         |
 | --- | -------- | -------- | ----------- | ------------------------ | -------------------------------- |
-| 24  | Hybrid   | Games    | 8-Bit       | [Free][free-8-bit]       | [Releases][releases-8-bit]       |
-| 25  | Hybrid   | Games    | Casino      | [Free][free-casino]      | [Releases][releases-casino]      |
-| 26  | Hybrid   | Games    | Countries   | [Free][free-countries]   | [Releases][releases-countries]   |
-| 27  | Hybrid   | Games    | Memory      | [Free][free-memory]      | [Releases][releases-memory]      |
-| 28  | Hybrid   | Games    | Nikoli      | [Free][free-nikoli]      | [Releases][releases-nikoli]      |
-| 29  | Hybrid   | Games    | Tic-Tac-Toe | [Free][free-tic-tac-toe] | [Releases][releases-tic-tac-toe] |
+| 23  | Hybrid   | Games    | 8-Bit       | [Free][free-8-bit]       | [Releases][releases-8-bit]       |
+| 24  | Hybrid   | Games    | Casino      | [Free][free-casino]      | [Releases][releases-casino]      |
+| 25  | Hybrid   | Games    | Countries   | [Free][free-countries]   | [Releases][releases-countries]   |
+| 26  | Hybrid   | Games    | Memory      | [Free][free-memory]      | [Releases][releases-memory]      |
+| 27  | Hybrid   | Games    | Nikoli      | [Free][free-nikoli]      | [Releases][releases-nikoli]      |
+| 28  | Hybrid   | Games    | Tic-Tac-Toe | [Free][free-tic-tac-toe] | [Releases][releases-tic-tac-toe] |
 
 ---
 
@@ -124,10 +123,10 @@
 
 | No  | Platform | Category          | Name   | Free                | Releases                    |
 | --- | -------- | ----------------- | ------ | ------------------- | --------------------------- |
-| 30  | Hybrid   | Graphics & Design | Colors | [Free][free-colors] | [Releases][releases-colors] |
-| 31  | Hybrid   | Graphics & Design | Photo  | [Free][free-photo]  | [Releases][releases-photo]  |
-| 32  | Hybrid   | Graphics & Design | SVG    | [Free][free-svg]    | [Releases][releases-svg]    |
-| 33  | Hybrid   | Graphics & Design | Video  | [Free][free-video]  | [Releases][releases-video]  |
+| 29  | Hybrid   | Graphics & Design | Colors | [Free][free-colors] | [Releases][releases-colors] |
+| 30  | Hybrid   | Graphics & Design | Photo  | [Free][free-photo]  | [Releases][releases-photo]  |
+| 31  | Hybrid   | Graphics & Design | SVG    | [Free][free-svg]    | [Releases][releases-svg]    |
+| 32  | Hybrid   | Graphics & Design | Video  | [Free][free-video]  | [Releases][releases-video]  |
 
 ---
 
@@ -135,10 +134,10 @@
 
 | No  | Platform | Category | Name       | Free                    | Releases                        |
 | --- | -------- | -------- | ---------- | ----------------------- | ------------------------------- |
-| 34  | Hybrid   | Medical  | Brainbow   | [Free][free-brainbow]   | [Releases][releases-brainbow]   |
-| 35  | Hybrid   | Medical  | Eyes       | [Free][free-eyes]       | [Releases][releases-eyes]       |
-| 36  | Hybrid   | Medical  | MRI        | [Free][free-mri]        | [Releases][releases-mri]        |
-| 37  | Hybrid   | Medical  | Psychology | [Free][free-psychology] | [Releases][releases-psychology] |
+| 33  | Hybrid   | Medical  | Brainbow   | [Free][free-brainbow]   | [Releases][releases-brainbow]   |
+| 34  | Hybrid   | Medical  | Eyes       | [Free][free-eyes]       | [Releases][releases-eyes]       |
+| 35  | Hybrid   | Medical  | MRI        | [Free][free-mri]        | [Releases][releases-mri]        |
+| 36  | Hybrid   | Medical  | Psychology | [Free][free-psychology] | [Releases][releases-psychology] |
 
 ---
 
@@ -146,13 +145,13 @@
 
 | No  | Platform | Category     | Name     | Free                  | Releases                      |
 | --- | -------- | ------------ | -------- | --------------------- | ----------------------------- |
-| 38  | Hybrid   | Productivity | Calendar | [Free][free-calendar] | [Releases][releases-calendar] |
-| 39  | Hybrid   | Productivity | CSV      | [Free][free-csv]      | [Releases][releases-csv]      |
-| 40  | Hybrid   | Productivity | Keynotes | [Free][free-keynotes] | [Releases][releases-keynotes] |
-| 41  | Hybrid   | Productivity | Markdown | [Free][free-markdown] | [Releases][releases-markdown] |
-| 42  | Hybrid   | Productivity | PDF      | [Free][free-pdf]      | [Releases][releases-pdf]      |
-| 43  | Hybrid   | Productivity | Projects | [Free][free-projects] | [Releases][releases-projects] |
-| 44  | Hybrid   | Productivity | Resume   | [Free][free-resume]   | [Releases][releases-resume]   |
+| 37  | Hybrid   | Productivity | Calendar | [Free][free-calendar] | [Releases][releases-calendar] |
+| 38  | Hybrid   | Productivity | CSV      | [Free][free-csv]      | [Releases][releases-csv]      |
+| 39  | Hybrid   | Productivity | Keynotes | [Free][free-keynotes] | [Releases][releases-keynotes] |
+| 40  | Hybrid   | Productivity | Markdown | [Free][free-markdown] | [Releases][releases-markdown] |
+| 41  | Hybrid   | Productivity | PDF      | [Free][free-pdf]      | [Releases][releases-pdf]      |
+| 42  | Hybrid   | Productivity | Projects | [Free][free-projects] | [Releases][releases-projects] |
+| 43  | Hybrid   | Productivity | Resume   | [Free][free-resume]   | [Releases][releases-resume]   |
 
 ---
 
@@ -160,7 +159,7 @@
 
 | No  | Platform | Category | Name  | Free               | Releases                   |
 | --- | -------- | -------- | ----- | ------------------ | -------------------------- |
-| 45  | Hybrid   | Shopping | Store | [Free][free-store] | [Releases][releases-store] |
+| 44  | Hybrid   | Shopping | Store | [Free][free-store] | [Releases][releases-store] |
 
 ---
 
@@ -168,8 +167,8 @@
 
 | No  | Platform | Category          | Name      | Free                   | Releases                       |
 | --- | -------- | ----------------- | --------- | ---------------------- | ------------------------------ |
-| 46  | Hybrid   | Social Networking | Chat      | [Free][free-chat]      | [Releases][releases-chat]      |
-| 47  | Hybrid   | Social Networking | Messaging | [Free][free-messaging] | [Releases][releases-messaging] |
+| 45  | Hybrid   | Social Networking | Chat      | [Free][free-chat]      | [Releases][releases-chat]      |
+| 46  | Hybrid   | Social Networking | Messaging | [Free][free-messaging] | [Releases][releases-messaging] |
 
 ---
 
@@ -177,9 +176,9 @@
 
 | No  | Platform | Category | Name     | Free                  | Releases                      |
 | --- | -------- | -------- | -------- | --------------------- | ----------------------------- |
-| 48  | Hybrid   | Sports   | Chess    | [Free][free-chess]    | [Releases][releases-chess]    |
-| 49  | Hybrid   | Sports   | Football | [Free][free-football] | [Releases][releases-football] |
-| 50  | Hybrid   | Sports   | Tourney  | [Free][free-tourney]  | [Releases][releases-tourney]  |
+| 47  | Hybrid   | Sports   | Chess    | [Free][free-chess]    | [Releases][releases-chess]    |
+| 48  | Hybrid   | Sports   | Football | [Free][free-football] | [Releases][releases-football] |
+| 49  | Hybrid   | Sports   | Tourney  | [Free][free-tourney]  | [Releases][releases-tourney]  |
 
 ---
 
@@ -187,9 +186,9 @@
 
 | No  | Platform | Category  | Name     | Free                  | Releases                      |
 | --- | -------- | --------- | -------- | --------------------- | ----------------------------- |
-| 51  | Hybrid   | Utilities | Clock    | [Free][free-clock]    | [Releases][releases-clock]    |
-| 52  | Hybrid   | Utilities | Docs     | [Free][free-docs]     | [Releases][releases-docs]     |
-| 53  | Hybrid   | Utilities | Password | [Free][free-password] | [Releases][releases-password] |
+| 50  | Hybrid   | Utilities | Clock    | [Free][free-clock]    | [Releases][releases-clock]    |
+| 51  | Hybrid   | Utilities | Docs     | [Free][free-docs]     | [Releases][releases-docs]     |
+| 52  | Hybrid   | Utilities | Password | [Free][free-password] | [Releases][releases-password] |
 
 ---
 
@@ -197,10 +196,10 @@
 
 | No  | Platform | Category  | Name    | Free                 | Releases                     |
 | --- | -------- | --------- | ------- | -------------------- | ---------------------------- |
-| 54  | macOS    | Utilities | Brewery | [Free][free-brewery] | [Releases][releases-brewery] |
-| 55  | macOS    | Utilities | Gauge   | [Free][free-gauge]   | [Releases][releases-gauge]   |
-| 56  | macOS    | Utilities | Snap    | [Free][free-snap]    | [Releases][releases-snap]    |
-| 57  | macOS    | Utilities | Top     | [Free][free-top]     | [Releases][releases-top]     |
+| 53  | macOS    | Utilities | Brewery | [Free][free-brewery] | [Releases][releases-brewery] |
+| 54  | macOS    | Utilities | Gauge   | [Free][free-gauge]   | [Releases][releases-gauge]   |
+| 55  | macOS    | Utilities | Snap    | [Free][free-snap]    | [Releases][releases-snap]    |
+| 56  | macOS    | Utilities | Top     | [Free][free-top]     | [Releases][releases-top]     |
 
 ---
 
@@ -215,7 +214,6 @@
 [free-code]: https://hieudoanm.github.io/free/code/
 [free-database]: https://hieudoanm.github.io/free/database/
 [free-diagram]: https://hieudoanm.github.io/free/diagram/
-[free-chemistry]: https://hieudoanm.github.io/free/chemistry/
 [free-economics]: https://hieudoanm.github.io/free/economics/
 [free-history]: https://hieudoanm.github.io/free/history/
 [free-lingo]: https://hieudoanm.github.io/free/lingo/
@@ -272,7 +270,6 @@
 [releases-code]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-developer-tools-code-latest
 [releases-database]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-developer-tools-database-latest
 [releases-diagram]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-developer-tools-diagram-latest
-[releases-chemistry]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-education-chemistry-latest
 [releases-economics]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-education-economics-latest
 [releases-history]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-education-history-latest
 [releases-lingo]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-education-lingo-latest

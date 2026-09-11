@@ -1,7 +1,13 @@
 'use client';
 
 import Link from 'next/link';
-import { PiCards, PiGlobe, PiHandWaving, PiMusicNote } from 'react-icons/pi';
+import {
+  PiCards,
+  PiFlask,
+  PiGlobe,
+  PiHandWaving,
+  PiMusicNote,
+} from 'react-icons/pi';
 import { HomeTemplate } from '@/components/templates/HomeTemplate';
 import { NextPage } from 'next';
 
@@ -29,6 +35,12 @@ const ITEMS = [
     description: 'Piano note recognition ear-training game',
     icon: PiMusicNote,
     href: '/music/',
+  },
+  {
+    label: 'Chemistry',
+    description: 'Interactive periodic table of elements',
+    icon: PiFlask,
+    href: '/chemistry/',
   },
 ];
 

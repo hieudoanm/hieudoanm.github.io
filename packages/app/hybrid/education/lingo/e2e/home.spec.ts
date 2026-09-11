@@ -7,11 +7,11 @@ test('page has correct title', async ({ page }) => {
   await expect(page).toHaveTitle('Lingo');
 });
 
-test('home lists all three courses', async ({ page }) => {
+test('home lists all course cards', async ({ page }) => {
   await page.goto('/');
 
   await expect(page.getByRole('heading', { name: 'Lingo' })).toBeVisible();
-  for (const slug of ['flashcards', 'english', 'sign']) {
+  for (const slug of ['flashcards', 'english', 'sign', 'music', 'chemistry']) {
     await expect(page.getByTestId(`tool-card-${slug}`)).toBeVisible();
   }
 });
