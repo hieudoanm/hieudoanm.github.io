@@ -32,18 +32,27 @@ Reference docs live in `docs/`:
   page with the offline focus wall built from `BETTER_SITES` and `SUGGESTIONS`;
   the `blockDistractingSites` toggle (default on, `storage.sync`) gates it and
   is the only config the wall reads
+- Chess.com focus lives in `src/lib/chess.ts` (`registerChessFocus()`): on a
+  `chess.com` host it sets `display: none` on every match of `HIDE_CLASSES`
+  (live-game start/over overlays, user tagline username/rating, user rating),
+  and a single `MutationObserver` (with `WebKitMutationObserver` fallback) on
+  `childList` + `subtree` re-applies hiding after Chess.com's SPA re-renders —
+  only rerun when nodes are actually added/removed, plus one initial pass on
+  `DOMContentLoaded`; the `chessFocus` toggle (default on, `storage.sync`)
+  gates it and it never mutates game state, clicks, or sends any data
 - Ad blocking lives in `src/lib/ads.ts`: `AD_SELECTORS` hides ad banners via an
   idempotent `MutationObserver`, `AD_NETWORK_DOMAINS` feeds the network blocker;
   the `blockAds` toggle (default on, `storage.sync`) gates it, with MV2 network
   blocking in `background.ts` via `webRequest` and MV3 via the static DNR
   ruleset `ruleset_block` in `public/manifest/v3/rules.json` — keep the two
   domain lists in sync
-- The popup is a 7-tab bar ordered alphabetically: **Ads, Block, GitHub,
-  Insta, New Tab, Shopify, Snap** — keep data-tab ids, buttons, and panes in
-  this order. The GitHub and Insta tabs and panes are hidden unless the active
-  tab is `github.com` / `instagram.com`, and the popup opens straight onto the
-  matching tab when it is (contextual features); the Shopify tab is always
-  visible and its pane shows the result of a manual "Check Shopify" button
+- The popup is an 8-tab bar ordered alphabetically: **Ads, Block, Chess,
+  GitHub, Insta, New Tab, Shopify, Snap** — keep data-tab ids, buttons, and
+  panes in this order. The GitHub and Insta tabs and panes are hidden unless
+  the active tab is `github.com` / `instagram.com`, and the popup opens
+  straight onto the matching tab when it is (contextual features); the Shopify
+  tab is always visible and its pane shows the result of a manual
+  "Check Shopify" button
 - External-link routing lives in `src/lib/github.ts`
   (`registerExternalLinkRouting()`): on a `github.com` host it mounts a
   delegated `click` listener that resolves `getAbsoluteUrl()` and routes any

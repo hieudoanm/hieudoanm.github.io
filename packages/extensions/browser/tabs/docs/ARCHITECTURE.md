@@ -176,6 +176,18 @@ directory.
   `webRequest` listener, so both DOM hiding and network blocking respect it.
 - **Offline** — no rules are fetched, no telemetry, no network round-trips.
 
+## Chess.com Focus Strategy
+
+- **Scope** — `registerChessFocus()` in `src/lib/chess.ts` runs only on
+  `chess.com` hosts; it hides every `HIDE_CLASSES` match (live-game start/over
+  overlays, user tagline username/rating, user rating) with `display: none`.
+- **Re-renders** — a single `MutationObserver` (with `WebKitMutationObserver`
+  fallback) watches `childList` + `subtree`; it re-scans only when nodes are
+  actually added or removed, plus one initial pass at `DOMContentLoaded`.
+- **Toggle** — the popup checkbox `chessFocus` lives in `storage.sync` (default
+  on); gated by hostname and the toggle, and the observer never touches game
+  state, clicks, or messages.
+
 ## Capture Strategy
 
 - **View capture** — background captures `chrome.tabs.captureVisibleTab`
@@ -194,8 +206,9 @@ directory.
 ## State Management
 
 - **Minimal** — per-invocation capture state lives in the message flow; the
-  `redirectNewTabs`, `newTabTargetUrl`, `blockDistractingSites`, and `blockAds`
-  preferences are the only persisted values in `storage.sync`.
+  `redirectNewTabs`, `newTabTargetUrl`, `blockDistractingSites`, `blockAds`,
+  `instaGesture`, `githubExternalLinks`, and `chessFocus` preferences are the
+  persisted values in `storage.sync`.
 
 ## Performance
 

@@ -19,6 +19,8 @@ Features:
   photo of the post in new tabs (toggleable from the popup).
 - **Shopify** — on a Shopify store, the popup tells you whether it runs Shopify
   or Shopify Plus (read-only, no config).
+- **Chess** — on Chess.com, live-game start/over overlays, user taglines, and
+  ratings are hidden so you can focus on the board (toggleable from the popup).
 - **Current view** — a snapshot of exactly what is visible on screen.
 - **Full page** — scrolls through the whole page, stitches the screenshots
   together, and downloads the full-length image.

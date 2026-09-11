@@ -36,6 +36,7 @@ const panes = Array.from(document.querySelectorAll<HTMLElement>('.pane'));
 const instaTabBtn =
   document.querySelector<HTMLButtonElement>('[data-tab="insta"]');
 const instaToggle = document.getElementById('instaToggle') as HTMLInputElement;
+const chessToggle = document.getElementById('chessFocus') as HTMLInputElement;
 const githubTabBtn = document.querySelector<HTMLButtonElement>(
   '[data-tab="github"]'
 );
@@ -273,6 +274,17 @@ chrome.storage.sync.get('githubExternalLinks', (result) => {
 
 githubToggle?.addEventListener('change', () => {
   chrome.storage.sync.set({ githubExternalLinks: githubToggle.checked });
+});
+
+chrome.storage.sync.get('chessFocus', (result) => {
+  if (chrome.runtime.lastError) return;
+  if (chessToggle) {
+    chessToggle.checked = result.chessFocus !== false;
+  }
+});
+
+chessToggle?.addEventListener('change', () => {
+  chrome.storage.sync.set({ chessFocus: chessToggle.checked });
 });
 
 const activateTab = (tabId: string): void => {

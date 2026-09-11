@@ -2200,42 +2200,6 @@
     "label": "Extensions (Browser)",
     "items": [
       {
-        "label": "ChessX",
-        "primaryCategory": "Games",
-        "secondaryCategory": "Board Games",
-        "icon": "PiCrown",
-        "href": "https://hieudoanm.github.io/free/chessx",
-        "version": "latest",
-        "lastUpdated": "2026-09-06",
-        "fileSize": "",
-        "actions": [
-          {
-            "label": "v2.crx",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-chessx-latest/chessx-v2.crx"
-          },
-          {
-            "label": "v2.xpi",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-chessx-latest/chessx-v2.xpi"
-          },
-          {
-            "label": "v2.zip",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-chessx-latest/chessx-v2.zip"
-          },
-          {
-            "label": "v3.crx",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-chessx-latest/chessx-v3.crx"
-          },
-          {
-            "label": "v3.xpi",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-chessx-latest/chessx-v3.xpi"
-          },
-          {
-            "label": "v3.zip",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-chessx-latest/chessx-v3.zip"
-          }
-        ]
-      },
-      {
         "label": "ClaudeX",
         "primaryCategory": "Developer Tools",
         "secondaryCategory": "Productivity",

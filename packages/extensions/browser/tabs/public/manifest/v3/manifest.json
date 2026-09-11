@@ -1,7 +1,7 @@
 {
   "name": "Tabs",
   "version": "0.0.1",
-  "description": "Redirect new tabs to the hieudoanm home page, capture the current view or the full scrolling page, block distracting sites and ads, open external links from GitHub pages in new tabs, and detect Shopify stores as you browse.",
+  "description": "Redirect new tabs to the hieudoanm home page, capture the current view or the full scrolling page, block distracting sites and ads, open external links from GitHub pages in new tabs, detect Shopify stores as you browse, and hide ratings and overlays on Chess.com.",
   "author": "Hieu Doan",
   "icons": {
     "16": "icons/16x16.png",

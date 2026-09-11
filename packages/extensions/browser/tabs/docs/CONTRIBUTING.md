@@ -104,8 +104,8 @@ every change.
    falls back to the default whenever the stored value is empty or invalid.
 10. Prefix debug logs with `[Tabs]` and keep them minimal, and prefix errors
     with `Block:` / `BlockAds:` / `Snapshot:` consistently; the Insta gesture,
-    GitHub routing, and Shopify detection debug logs use `Insta:`, `GitHub:`,
-    and `Shopify:` prefixes.
+    GitHub routing, Shopify detection, and Chess focus debug logs use `Insta:`,
+    `GitHub:`, `Shopify:`, and `Chess:` prefixes.
 11. GitHub external-link routing lives in `src/lib/github.ts` and mounts its
     click listener only on `github.com` hosts; in-repo links, `#` /
     `javascript:` hrefs, modifier-key clicks, and programmatic clicks always
@@ -133,6 +133,14 @@ every change.
     always visible; clicking "Check Shopify" sends `GET_SHOPIFY_ACTION` to the
     background, which returns the cache or runs `detectShopifyInPage()` in the
     tab's MAIN world via `chrome.scripting.executeScript` on Chromium.
+13. Chess.com focus lives in `src/lib/chess.ts` — a content-side observer only;
+    it runs on `chess.com` hosts, hides every `HIDE_CLASSES` match (`display:
+none`), and re-applies hiding through a single `MutationObserver`
+    (`WebKitMutationObserver` fallback) on `childList` + `subtree`, re-scanning
+    only when nodes are actually added/removed plus one initial pass at
+    `DOMContentLoaded`. It is declarative and idempotent — never mutates game
+    state, clicks, or sends messages — and the `chessFocus` toggle (default on,
+    `storage.sync`) gates it.
 
 ## Testing Conventions
 

@@ -148,7 +148,7 @@ describe('HomePage', () => {
     render(<HomePage />);
     await user.type(
       screen.getByPlaceholderText('Search apps… (press /)'),
-      'ChessX'
+      'Tabs'
     );
     expect(screen.getByText('1 app')).toBeTruthy();
   });

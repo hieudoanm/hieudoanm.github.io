@@ -111,6 +111,14 @@ machine.
 - Enable/disable from the popup (`blockAds`, stored in `storage.sync`); fully
   offline, no rules are ever fetched
 
+### ♟️ Chess.com focus
+
+- On Chess.com, live-game start/over overlays, user taglines, and ratings are
+  hidden so you can focus on the board
+- A single `MutationObserver` re-applies hiding after Chess.com's SPA re-renders
+- Enable/disable from the popup's **Chess** tab (`chessFocus`, stored in
+  `storage.sync`); runs only on `chess.com`, never touches game state
+
 ### 📸 Capture view
 
 - One-click screenshot of the visible viewport

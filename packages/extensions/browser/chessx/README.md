@@ -1,1 +1,0 @@
-# ChessX - Chess.com Extension

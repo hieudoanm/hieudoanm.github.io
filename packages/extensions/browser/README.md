@@ -16,11 +16,9 @@
 
 | No  | Group                       | Extension          |
 | --- | --------------------------- | ------------------ |
-| 1   | [Chess](https://chess.com)  | [chessx][chessx]   |
-| 2   | [Claude](https://claude.ai) | [claudex][claudex] |
-| 3   | Tabs                        | [tabs][tabs]       |
+| 1   | [Claude](https://claude.ai) | [claudex][claudex] |
+| 2   | Tabs                        | [tabs][tabs]       |
 
-[chessx]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/chessx
 [claudex]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/claudex
 [tabs]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/tabs
 

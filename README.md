@@ -35,13 +35,12 @@
 
 ---
 
-### Browser Extensions (3)
+### Browser Extensions (2)
 
 | No  | Platform | Category  | Name    | Free                 | Releases                     |
 | --- | -------- | --------- | ------- | -------------------- | ---------------------------- |
-| 3   | Browser  | Extension | ChessX  | [Free][free-chessx]  | [Releases][releases-chessx]  |
-| 4   | Browser  | Extension | ClaudeX | [Free][free-claudex] | [Releases][releases-claudex] |
-| 5   | Browser  | Extension | Tabs    | [Free][free-tabs]    | [Releases][releases-tabs]    |
+| 3   | Browser  | Extension | ClaudeX | [Free][free-claudex] | [Releases][releases-claudex] |
+| 4   | Browser  | Extension | Tabs    | [Free][free-tabs]    | [Releases][releases-tabs]    |
 
 ---
 
@@ -210,7 +209,6 @@
 <!-- Free -->
 
 [free-block]: https://hieudoanm.github.io/free/block/
-[free-chessx]: https://hieudoanm.github.io/free/chessx/
 [free-claudex]: https://hieudoanm.github.io/free/claudex/
 [free-tabs]: https://hieudoanm.github.io/free/tabs/
 [free-menu]: https://hieudoanm.github.io/free/menu/
@@ -329,6 +327,5 @@
 [releases-backbone]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-backbone-latest
 [releases-kevin]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-kevin-latest
 [releases-landify]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-landify-latest
-[releases-chessx]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/extensions-browser-chessx-latest
 [releases-claudex]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/extensions-browser-claudex-latest
 [releases-tabs]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/extensions-browser-tabs-latest
