@@ -1,0 +1,24 @@
+// Font weight utilities — Tailwind v3 default scale
+
+$font-weight-default: 400;
+$font-weights: (
+  ('thin', 100),
+  ('extralight', 200),
+  ('light', 300),
+  ('normal', 400),
+  ('medium', 500),
+  ('semibold', 600),
+  ('bold', 700),
+  ('extrabold', 800),
+  ('black', 900)
+);
+
+.font {
+  font-weight: $font-weight-default;
+}
+
+@each $name, $value in $font-weights {
+  .font-#{$name} {
+    font-weight: $value;
+  }
+}

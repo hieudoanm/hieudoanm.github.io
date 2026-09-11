@@ -1,0 +1,119 @@
+// Inset utilities — Tailwind v3 default scale
+
+@use 'sass:math';
+
+$inset-unit: 0.25rem;
+$inset-steps: (
+  ('0\\.5', 0.5),
+  ('1', 1),
+  ('1\\.5', 1.5),
+  ('2', 2),
+  ('2\\.5', 2.5),
+  ('3', 3),
+  ('3\\.5', 3.5),
+  ('4', 4),
+  ('5', 5),
+  ('6', 6),
+  ('7', 7),
+  ('8', 8),
+  ('9', 9),
+  ('10', 10),
+  ('11', 11),
+  ('12', 12),
+  ('14', 14),
+  ('16', 16),
+  ('20', 20),
+  ('24', 24),
+  ('28', 28),
+  ('32', 32),
+  ('36', 36),
+  ('40', 40),
+  ('44', 44),
+  ('48', 48),
+  ('52', 52),
+  ('56', 56),
+  ('60', 60),
+  ('64', 64),
+  ('72', 72),
+  ('80', 80),
+  ('96', 96)
+);
+
+$inset-fractions: (
+  ('1\\/2', 1, 2),
+  ('1\\/3', 1, 3),
+  ('2\\/3', 2, 3),
+  ('1\\/4', 1, 4),
+  ('2\\/4', 1, 2),
+  ('3\\/4', 3, 4)
+);
+
+$inset-axes: (
+  ('', 'inset-', '-inset-', top right bottom left),
+  ('x', 'inset-x-', '-inset-x-', left right),
+  ('y', 'inset-y-', '-inset-y-', top bottom),
+  ('t', 'top-', '-top-', top),
+  ('r', 'right-', '-right-', right),
+  ('b', 'bottom-', '-bottom-', bottom),
+  ('l', 'left-', '-left-', left)
+);
+
+@each $axis, $positive, $negative, $properties in $inset-axes {
+  .#{$positive}0 {
+    @each $property in $properties {
+      #{$property}: 0;
+    }
+  }
+
+  .#{$positive}px {
+    @each $property in $properties {
+      #{$property}: 1px;
+    }
+  }
+
+  .#{$positive}auto {
+    @each $property in $properties {
+      #{$property}: auto;
+    }
+  }
+
+  .#{$positive}full {
+    @each $property in $properties {
+      #{$property}: 100%;
+    }
+  }
+
+  .#{$negative}full {
+    @each $property in $properties {
+      #{$property}: -100%;
+    }
+  }
+
+  @each $class, $step in $inset-steps {
+    .#{$positive}#{$class} {
+      @each $property in $properties {
+        #{$property}: $step * $inset-unit;
+      }
+    }
+
+    .#{$negative}#{$class} {
+      @each $property in $properties {
+        #{$property}: -1 * $step * $inset-unit;
+      }
+    }
+  }
+
+  @each $class, $numerator, $denominator in $inset-fractions {
+    .#{$positive}#{$class} {
+      @each $property in $properties {
+        #{$property}: math.div($numerator, $denominator) * 100%;
+      }
+    }
+
+    .#{$negative}#{$class} {
+      @each $property in $properties {
+        #{$property}: -1 * math.div($numerator, $denominator) * 100%;
+      }
+    }
+  }
+}

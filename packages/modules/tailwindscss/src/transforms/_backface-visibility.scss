@@ -1,0 +1,9 @@
+// Backface visibility utilities — Tailwind v3 default scale
+
+$backface-visibilities: (('visible', visible), ('hidden', hidden));
+
+@each $name, $value in $backface-visibilities {
+  .backface-#{$name} {
+    backface-visibility: $value;
+  }
+}

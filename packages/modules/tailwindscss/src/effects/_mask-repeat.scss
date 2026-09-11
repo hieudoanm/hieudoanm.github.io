@@ -1,0 +1,17 @@
+// Mask repeat utilities — Tailwind v4 default scale
+
+$mask-repeats: (
+  ('repeat', repeat),
+  ('no-repeat', no-repeat),
+  ('repeat-x', repeat-x),
+  ('repeat-y', repeat-y),
+  ('repeat-round', round),
+  ('repeat-space', space)
+);
+
+@each $name, $value in $mask-repeats {
+  .mask-repeat-#{$name} {
+    -webkit-mask-repeat: $value;
+    mask-repeat: $value;
+  }
+}

@@ -1,0 +1,39 @@
+// Scale utilities — Tailwind v3 default scale
+
+@use 'transform-composite' as *;
+
+$scale-unit: 1%;
+$scales: (
+  ('0', 0),
+  ('50', 50),
+  ('75', 75),
+  ('90', 90),
+  ('95', 95),
+  ('100', 100),
+  ('105', 105),
+  ('110', 110),
+  ('125', 125),
+  ('150', 150)
+);
+
+@each $name, $value in $scales {
+  .scale-#{$name} {
+    --tw-scale-x: #{$value * $scale-unit};
+    --tw-scale-y: #{$value * $scale-unit};
+    transform: #{$transform-composite};
+  }
+}
+
+@each $name, $value in $scales {
+  .scale-x-#{$name} {
+    --tw-scale-x: #{$value * $scale-unit};
+    transform: #{$transform-composite};
+  }
+}
+
+@each $name, $value in $scales {
+  .scale-y-#{$name} {
+    --tw-scale-y: #{$value * $scale-unit};
+    transform: #{$transform-composite};
+  }
+}

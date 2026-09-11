@@ -1,0 +1,14 @@
+// Tab size utilities — Tailwind v3 default scale
+
+$tab-size-default: 8;
+$tab-sizes: (('0', 0), ('2', 2), ('4', 4), ('8', 8));
+
+.tab {
+  tab-size: $tab-size-default;
+}
+
+@each $name, $value in $tab-sizes {
+  .tab-#{$name} {
+    tab-size: $value;
+  }
+}

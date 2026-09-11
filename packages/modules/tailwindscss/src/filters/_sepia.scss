@@ -1,0 +1,13 @@
+// Sepia utilities — Tailwind v3 default scale
+
+@use 'filter-composite' as *;
+
+.sepia-0 {
+  --tw-sepia: sepia(0);
+  filter: #{$filter-composite};
+}
+
+.sepia {
+  --tw-sepia: sepia(100%);
+  filter: #{$filter-composite};
+}

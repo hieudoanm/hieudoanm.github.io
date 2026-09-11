@@ -1,0 +1,20 @@
+// Touch action utilities — Tailwind v3 default scale
+
+$touch-actions: (
+  ('auto', auto),
+  ('none', none),
+  ('pan-x', pan-x),
+  ('pan-left', pan-left),
+  ('pan-right', pan-right),
+  ('pan-y', pan-y),
+  ('pan-up', pan-up),
+  ('pan-down', pan-down),
+  ('pinch-zoom', pinch-zoom),
+  ('manipulation', manipulation)
+);
+
+@each $name, $value in $touch-actions {
+  .touch-#{$name} {
+    touch-action: $value;
+  }
+}

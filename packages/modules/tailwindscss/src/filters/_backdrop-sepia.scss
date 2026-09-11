@@ -1,0 +1,15 @@
+// Backdrop sepia utilities — Tailwind v3 default scale
+
+@use 'filter-composite' as *;
+
+.backdrop-sepia-0 {
+  --tw-backdrop-sepia: sepia(0);
+  -webkit-backdrop-filter: #{$backdrop-filter-composite};
+  backdrop-filter: #{$backdrop-filter-composite};
+}
+
+.backdrop-sepia {
+  --tw-backdrop-sepia: sepia(100%);
+  -webkit-backdrop-filter: #{$backdrop-filter-composite};
+  backdrop-filter: #{$backdrop-filter-composite};
+}

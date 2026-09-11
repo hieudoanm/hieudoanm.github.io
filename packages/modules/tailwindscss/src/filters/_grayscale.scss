@@ -1,0 +1,13 @@
+// Grayscale utilities — Tailwind v3 default scale
+
+@use 'filter-composite' as *;
+
+.grayscale-0 {
+  --tw-grayscale: grayscale(0);
+  filter: #{$filter-composite};
+}
+
+.grayscale {
+  --tw-grayscale: grayscale(100%);
+  filter: #{$filter-composite};
+}

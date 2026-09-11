@@ -1,0 +1,28 @@
+// Scroll snap type utilities — Tailwind v3 default scale
+
+.snap-none {
+  scroll-snap-type: none;
+}
+
+.snap-x {
+  --tw-scroll-snap-strictness: proximity;
+  scroll-snap-type: x var(--tw-scroll-snap-strictness);
+}
+
+.snap-y {
+  --tw-scroll-snap-strictness: proximity;
+  scroll-snap-type: y var(--tw-scroll-snap-strictness);
+}
+
+.snap-both {
+  --tw-scroll-snap-strictness: proximity;
+  scroll-snap-type: both var(--tw-scroll-snap-strictness);
+}
+
+.snap-mandatory {
+  --tw-scroll-snap-strictness: mandatory;
+}
+
+.snap-proximity {
+  --tw-scroll-snap-strictness: proximity;
+}

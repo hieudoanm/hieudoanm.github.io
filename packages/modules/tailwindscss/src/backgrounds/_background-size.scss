@@ -1,0 +1,9 @@
+// Background size utilities — Tailwind v3 default scale
+
+$background-sizes: (('auto', auto), ('cover', cover), ('contain', contain));
+
+@each $name, $value in $background-sizes {
+  .bg-#{$name} {
+    background-size: $value;
+  }
+}

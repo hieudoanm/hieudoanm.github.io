@@ -1,0 +1,22 @@
+// Backdrop contrast utilities — Tailwind v3 default scale
+
+@use 'sass:math';
+@use 'filter-composite' as *;
+
+$backdrop-contrasts: (
+  ('0', 0),
+  ('50', 50),
+  ('75', 75),
+  ('100', 100),
+  ('125', 125),
+  ('150', 150),
+  ('200', 200)
+);
+
+@each $name, $value in $backdrop-contrasts {
+  .backdrop-contrast-#{$name} {
+    --tw-backdrop-contrast: contrast(#{math.div($value, 100)});
+    -webkit-backdrop-filter: #{$backdrop-filter-composite};
+    backdrop-filter: #{$backdrop-filter-composite};
+  }
+}

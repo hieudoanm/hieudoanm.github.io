@@ -1,0 +1,24 @@
+// Transition duration utilities — Tailwind v3 default scale
+
+$transition-duration-default: 150ms;
+$transition-durations: (
+  ('0', 0s),
+  ('75', 75ms),
+  ('100', 100ms),
+  ('150', 150ms),
+  ('200', 200ms),
+  ('300', 300ms),
+  ('500', 500ms),
+  ('700', 700ms),
+  ('1000', 1000ms)
+);
+
+.duration {
+  transition-duration: $transition-duration-default;
+}
+
+@each $name, $value in $transition-durations {
+  .duration-#{$name} {
+    transition-duration: $value;
+  }
+}

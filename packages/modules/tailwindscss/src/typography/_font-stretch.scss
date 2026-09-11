@@ -1,0 +1,19 @@
+// Font stretch utilities — Tailwind v3 default scale
+
+$font-stretches: (
+  ('normal', normal),
+  ('ultra-condensed', ultra-condensed),
+  ('extra-condensed', extra-condensed),
+  ('condensed', condensed),
+  ('semi-condensed', semi-condensed),
+  ('semi-expanded', semi-expanded),
+  ('expanded', expanded),
+  ('extra-expanded', extra-expanded),
+  ('ultra-expanded', ultra-expanded)
+);
+
+@each $name, $value in $font-stretches {
+  .font-stretch-#{$name} {
+    font-stretch: $value;
+  }
+}

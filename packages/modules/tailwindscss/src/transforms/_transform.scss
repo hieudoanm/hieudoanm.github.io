@@ -1,0 +1,40 @@
+// Transform base utilities — Tailwind v3 default scale
+
+@use 'transform-composite' as *;
+
+.transform {
+  --tw-translate-x: 0rem;
+  --tw-translate-y: 0rem;
+  --tw-rotate: 0deg;
+  --tw-skew-x: 0deg;
+  --tw-skew-y: 0deg;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: #{$transform-composite};
+}
+
+.transform-cpu {
+  --tw-translate-x: 0rem;
+  --tw-translate-y: 0rem;
+  --tw-rotate: 0deg;
+  --tw-skew-x: 0deg;
+  --tw-skew-y: 0deg;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: #{$transform-composite};
+}
+
+.transform-gpu {
+  --tw-translate-x: 0rem;
+  --tw-translate-y: 0rem;
+  --tw-rotate: 0deg;
+  --tw-skew-x: 0deg;
+  --tw-skew-y: 0deg;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: #{$transform-composite-gpu};
+}
+
+.transform-none {
+  transform: none;
+}

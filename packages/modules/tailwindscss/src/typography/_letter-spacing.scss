@@ -1,0 +1,21 @@
+// Letter spacing utilities — Tailwind v3 default scale
+
+$letter-spacing-default: 0em;
+$letter-spacings: (
+  ('tighter', -0.05em),
+  ('tight', -0.025em),
+  ('normal', 0em),
+  ('wide', 0.025em),
+  ('wider', 0.05em),
+  ('widest', 0.1em)
+);
+
+.tracking {
+  letter-spacing: $letter-spacing-default;
+}
+
+@each $name, $value in $letter-spacings {
+  .tracking-#{$name} {
+    letter-spacing: $value;
+  }
+}

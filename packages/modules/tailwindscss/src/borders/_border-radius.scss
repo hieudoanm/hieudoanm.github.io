@@ -1,0 +1,41 @@
+// Border radius utilities — Tailwind v3 default scale
+
+$border-radius-default: 0.25rem;
+$border-radius-names: (
+  ('none', 0),
+  ('sm', 0.125rem),
+  ('md', 0.375rem),
+  ('lg', 0.5rem),
+  ('xl', 0.75rem),
+  ('2xl', 1rem),
+  ('3xl', 1.5rem),
+  ('full', 9999px)
+);
+
+$border-radius-sides: (
+  ('', border-radius),
+  ('-t', border-top-left-radius border-top-right-radius),
+  ('-b', border-bottom-left-radius border-bottom-right-radius),
+  ('-l', border-top-left-radius border-bottom-left-radius),
+  ('-r', border-top-right-radius border-bottom-right-radius),
+  ('-tl', border-top-left-radius),
+  ('-tr', border-top-right-radius),
+  ('-bl', border-bottom-left-radius),
+  ('-br', border-bottom-right-radius)
+);
+
+@each $side, $properties in $border-radius-sides {
+  .rounded#{$side} {
+    @each $property in $properties {
+      #{$property}: $border-radius-default;
+    }
+  }
+
+  @each $name, $value in $border-radius-names {
+    .rounded#{$side}-#{$name} {
+      @each $property in $properties {
+        #{$property}: $value;
+      }
+    }
+  }
+}

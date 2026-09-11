@@ -1,0 +1,9 @@
+// Table border collapse utilities — Tailwind v3 default scale
+
+$border-collapses: (('collapse', collapse), ('separate', separate));
+
+@each $name, $value in $border-collapses {
+  .border-#{$name} {
+    border-collapse: $value;
+  }
+}

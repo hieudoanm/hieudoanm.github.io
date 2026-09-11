@@ -1,0 +1,13 @@
+// Invert utilities — Tailwind v3 default scale
+
+@use 'filter-composite' as *;
+
+.invert-0 {
+  --tw-invert: invert(0);
+  filter: #{$filter-composite};
+}
+
+.invert {
+  --tw-invert: invert(100%);
+  filter: #{$filter-composite};
+}

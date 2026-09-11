@@ -1,0 +1,17 @@
+// Overscroll behavior utilities — Tailwind v3 default scale
+
+$overscroll-values: (('auto', auto), ('contain', contain), ('none', none));
+
+$overscroll-axes: (
+  ('', overscroll-behavior),
+  ('-x', overscroll-behavior-x),
+  ('-y', overscroll-behavior-y)
+);
+
+@each $axis, $property in $overscroll-axes {
+  @each $name, $value in $overscroll-values {
+    .overscroll#{$axis}-#{$name} {
+      #{$property}: $value;
+    }
+  }
+}

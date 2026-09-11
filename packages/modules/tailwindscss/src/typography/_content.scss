@@ -1,0 +1,6 @@
+// Content utilities — Tailwind v3 default scale
+
+.content-none {
+  --tw-content: none;
+  content: var(--tw-content);
+}

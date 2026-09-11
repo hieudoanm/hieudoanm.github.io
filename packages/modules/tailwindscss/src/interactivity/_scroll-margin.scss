@@ -1,0 +1,88 @@
+// Scroll margin utilities — Tailwind v3 default scale
+
+$scroll-margin-unit: 0.25rem;
+$scroll-margin-steps: (
+  ('0\\.5', 0.5),
+  ('1', 1),
+  ('1\\.5', 1.5),
+  ('2', 2),
+  ('2\\.5', 2.5),
+  ('3', 3),
+  ('3\\.5', 3.5),
+  ('4', 4),
+  ('5', 5),
+  ('6', 6),
+  ('7', 7),
+  ('8', 8),
+  ('9', 9),
+  ('10', 10),
+  ('11', 11),
+  ('12', 12),
+  ('14', 14),
+  ('16', 16),
+  ('20', 20),
+  ('24', 24),
+  ('28', 28),
+  ('32', 32),
+  ('36', 36),
+  ('40', 40),
+  ('44', 44),
+  ('48', 48),
+  ('52', 52),
+  ('56', 56),
+  ('60', 60),
+  ('64', 64),
+  ('72', 72),
+  ('80', 80),
+  ('96', 96)
+);
+
+$scroll-margin-axes: (
+  ('', scroll-margin),
+  ('x', scroll-margin-left scroll-margin-right),
+  ('y', scroll-margin-top scroll-margin-bottom),
+  ('t', scroll-margin-top),
+  ('r', scroll-margin-right),
+  ('b', scroll-margin-bottom),
+  ('l', scroll-margin-left)
+);
+
+@each $axis, $properties in $scroll-margin-axes {
+  .scroll-m#{$axis}-0 {
+    @each $property in $properties {
+      #{$property}: 0;
+    }
+  }
+
+  .scroll-m#{$axis}-px {
+    @each $property in $properties {
+      #{$property}: 1px;
+    }
+  }
+
+  .-scroll-m#{$axis}-px {
+    @each $property in $properties {
+      #{$property}: -1px;
+    }
+  }
+
+  .scroll-m#{$axis}-auto {
+    @each $property in $properties {
+      #{$property}: auto;
+    }
+  }
+
+  @each $class, $step in $scroll-margin-steps {
+    .scroll-m#{$axis}-#{$class} {
+      @each $property in $properties {
+        #{$property}: $step * $scroll-margin-unit;
+      }
+    }
+
+    .-scroll-m#{$axis}-#{$class} {
+      @each $property in $properties {
+        #{$property}: -1 * $step * $scroll-margin-unit;
+      }
+    }
+  }
+}

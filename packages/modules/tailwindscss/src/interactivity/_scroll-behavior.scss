@@ -1,0 +1,9 @@
+// Scroll behavior utilities — Tailwind v3 default scale
+
+$scroll-behaviors: (('auto', auto), ('smooth', smooth));
+
+@each $name, $value in $scroll-behaviors {
+  .scroll-#{$name} {
+    scroll-behavior: $value;
+  }
+}

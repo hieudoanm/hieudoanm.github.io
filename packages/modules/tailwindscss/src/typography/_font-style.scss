@@ -1,0 +1,9 @@
+// Font style utilities — Tailwind v3 default scale
+
+$font-styles: (('italic', italic), ('not-italic', normal));
+
+@each $name, $value in $font-styles {
+  .#{$name} {
+    font-style: $value;
+  }
+}

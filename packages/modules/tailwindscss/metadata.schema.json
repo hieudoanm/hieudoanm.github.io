@@ -1,0 +1,32 @@
+{
+  "nano": {
+    "tailwind.nano.css": { "size": "<bytes>", "kb": "<kilobytes>" },
+    "tailwind.nano.css.map": { "size": "<bytes>", "kb": "<kilobytes>" },
+    "tailwind.nano.min.css": { "size": "<bytes>", "kb": "<kilobytes>" },
+    "tailwind.nano.min.css.map": { "size": "<bytes>", "kb": "<kilobytes>" }
+  },
+  "micro": {
+    "tailwind.micro.css": { "size": "<bytes>", "kb": "<kilobytes>" },
+    "tailwind.micro.css.map": { "size": "<bytes>", "kb": "<kilobytes>" },
+    "tailwind.micro.min.css": { "size": "<bytes>", "kb": "<kilobytes>" },
+    "tailwind.micro.min.css.map": { "size": "<bytes>", "kb": "<kilobytes>" }
+  },
+  "lite": {
+    "tailwind.lite.css": { "size": "<bytes>", "kb": "<kilobytes>" },
+    "tailwind.lite.css.map": { "size": "<bytes>", "kb": "<kilobytes>" },
+    "tailwind.lite.min.css": { "size": "<bytes>", "kb": "<kilobytes>" },
+    "tailwind.lite.min.css.map": { "size": "<bytes>", "kb": "<kilobytes>" }
+  },
+  "standard": {
+    "tailwind.standard.css": { "size": "<bytes>", "kb": "<kilobytes>" },
+    "tailwind.standard.css.map": { "size": "<bytes>", "kb": "<kilobytes>" },
+    "tailwind.standard.min.css": { "size": "<bytes>", "kb": "<kilobytes>" },
+    "tailwind.standard.min.css.map": { "size": "<bytes>", "kb": "<kilobytes>" }
+  },
+  "full": {
+    "tailwind.css": { "size": "<bytes>", "kb": "<kilobytes>" },
+    "tailwind.css.map": { "size": "<bytes>", "kb": "<kilobytes>" },
+    "tailwind.min.css": { "size": "<bytes>", "kb": "<kilobytes>" },
+    "tailwind.min.css.map": { "size": "<bytes>", "kb": "<kilobytes>" }
+  }
+}

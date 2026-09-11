@@ -1,0 +1,20 @@
+// Backdrop saturate utilities — Tailwind v3 default scale
+
+@use 'sass:math';
+@use 'filter-composite' as *;
+
+$backdrop-saturations: (
+  ('0', 0),
+  ('50', 50),
+  ('100', 100),
+  ('150', 150),
+  ('200', 200)
+);
+
+@each $name, $value in $backdrop-saturations {
+  .backdrop-saturate-#{$name} {
+    --tw-backdrop-saturate: saturate(#{math.div($value, 100)});
+    -webkit-backdrop-filter: #{$backdrop-filter-composite};
+    backdrop-filter: #{$backdrop-filter-composite};
+  }
+}

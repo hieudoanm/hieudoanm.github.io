@@ -1,0 +1,72 @@
+// Max block size utilities — logical max-height scale
+
+$max-block-size-unit: 0.25rem;
+$max-block-size-steps: (
+  ('0\\.5', 0.5),
+  ('1', 1),
+  ('1\\.5', 1.5),
+  ('2', 2),
+  ('2\\.5', 2.5),
+  ('3', 3),
+  ('3\\.5', 3.5),
+  ('4', 4),
+  ('5', 5),
+  ('6', 6),
+  ('7', 7),
+  ('8', 8),
+  ('9', 9),
+  ('10', 10),
+  ('11', 11),
+  ('12', 12),
+  ('14', 14),
+  ('16', 16),
+  ('20', 20),
+  ('24', 24),
+  ('28', 28),
+  ('32', 32),
+  ('36', 36),
+  ('40', 40),
+  ('44', 44),
+  ('48', 48),
+  ('52', 52),
+  ('56', 56),
+  ('60', 60),
+  ('64', 64),
+  ('72', 72),
+  ('80', 80),
+  ('96', 96)
+);
+
+.max-block-size-none {
+  max-block-size: none;
+}
+
+.max-block-size-0 {
+  max-block-size: 0;
+}
+
+.max-block-size-px {
+  max-block-size: 1px;
+}
+
+.max-block-size-full {
+  max-block-size: 100%;
+}
+
+.max-block-size-min {
+  max-block-size: min-content;
+}
+
+.max-block-size-max {
+  max-block-size: max-content;
+}
+
+.max-block-size-fit {
+  max-block-size: fit-content;
+}
+
+@each $class, $step in $max-block-size-steps {
+  .max-block-size-#{$class} {
+    max-block-size: $step * $max-block-size-unit;
+  }
+}
