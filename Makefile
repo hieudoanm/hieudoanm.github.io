@@ -40,9 +40,6 @@ start-diagram:
 start-docs:
 	pnpm run dev --filter=@hieudoanm.github.io/docs
 
-start-economics:
-	pnpm run dev --filter=@hieudoanm.github.io/economics
-
 start-eyes:
 	pnpm run dev --filter=@hieudoanm.github.io/eyes
 
@@ -51,9 +48,6 @@ start-football:
 
 start-foody:
 	pnpm run dev --filter=@hieudoanm.github.io/foody
-
-start-history:
-	pnpm run dev --filter=@hieudoanm.github.io/history
 
 start-keynotes:
 	pnpm run dev --filter=@hieudoanm.github.io/keynotes
