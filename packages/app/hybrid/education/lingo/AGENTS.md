@@ -63,7 +63,7 @@ src/components/
   organisms/        # Header
   templates/        # HomeTemplate, About/Downloads/Version/ErrorTemplate
 src/content/        # about/download/version copy
-src/games/          # languages (incl. sign/, english/), music, history
+src/games/          # languages (incl. sign/, english/), music, history, economics
 src/hooks/          # useTheme, useSWRegister, useUpdater
 src/lib/            # progress (IndexedDB), native bridge, publicPaths
 src/providers/      # SWProvider, NativeProvider, QueryProvider
@@ -78,4 +78,6 @@ e2e/                # Playwright specs
 `/` (home hub), `/languages` (language hub), `/languages/[language]`,
 `/languages/english` (dictionary), `/languages/sign` (sign-language
 recognition), `/history` (history hub), `/history/myth-vs-fact`,
-`/history/through-the-years`, `/music` plus `/about`, `/downloads`, `/version`.
+`/history/through-the-years`, `/economics` (economics hub),
+`/economics/<category>` (theory), `/economics/<category>/<game>` (game),
+`/music` plus `/about`, `/downloads`, `/version`.

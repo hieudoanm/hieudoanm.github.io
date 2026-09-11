@@ -9,42 +9,41 @@
 | 05  | code        | [Code][code]               | VSCode / Zed                                                     | No       | DONE   | Developer Tools   | Productivity       |
 | 06  | database    | [Database][database]       | Redis GUI / Mongo Compass / pgAdmin / DBeaver                    | No       | DONE   | Developer Tools   | Business           |
 | 07  | diagram     | [Diagram][diagram]         | Diagram Editor                                                   | No       | DONE   | Developer Tools   | Graphics & Design  |
-| 08  | economics   | [Economics][economics]     | Prisoner's Dilemma Game Theory                                   | No       | DONE   | Education         | Games              |
-| 09  | lingo       | [Lingo][lingo]             | Duolingo / Flashcards / Sign Language                            | No       | DONE   | Education         | Games              |
-| 10  | tax         | [Tax][tax]                 | Tax Utilities                                                    | Required | DONE   | Finance           | Business           |
-| 11  | wallet      | [Wallet][wallet]           | Momo / Techcombank                                               | Required | DONE   | Finance           | Business           |
-| 12  | foody       | [Foody][foody]             | Random Food Suggestion                                           | No       | DONE   | Food & Drink      | Health & Fitness   |
-| 13  | 8-bit       | [8-Bit][8-bit]             | Maze / Snake / DinoRun Retro Games                               | No       | DONE   | Games             | Entertainment      |
-| 14  | casino      | [Casino][casino]           | Baccarat / Roulette / Craps / Slots                              | No       | DONE   | Games             | Entertainment      |
-| 15  | countries   | [Countries][countries]     | New York Times Variant                                           | No       | DONE   | Games             | Entertainment      |
-| 16  | memory      | [Memory][memory]           | Memory Match / Pi / N-Back / Recall                              | No       | DONE   | Games             | Entertainment      |
-| 17  | nikoli      | [Nikoli][nikoli]           | Nikoli                                                           | No       | DONE   | Games             | Entertainment      |
-| 18  | tic-tac-toe | [Tic-Tac-Toe][tic-tac-toe] | Classic / Notakto / Reverse / Wild Variants                      | No       | DONE   | Games             | Entertainment      |
-| 19  | colors      | [Colors][colors]           | Color Picker / Palette / Wheel / Converter                       | No       | DONE   | Graphics & Design | Photo & Video      |
-| 20  | photo       | [Photo][photo]             | Adobe Photoshop                                                  | No       | DONE   | Graphics & Design | Photo & Video      |
-| 21  | svg         | [SVG][svg]                 | Adobe Illustrator / CorelDRAW                                    | No       | DONE   | Graphics & Design | Photo & Video      |
-| 22  | video       | [Video Tools][video]       | CapCut                                                           | No       | DONE   | Graphics & Design | Photo & Video      |
-| 23  | brainbow    | [Brainbow][brainbow]       | All-in-one Brainbow Software                                     | No       | DONE   | Medical           | Health & Fitness   |
-| 24  | eyes        | [Eyes][eyes]               | Snellen / LogMAR / Tumbling E Vision Charts                      | No       | DONE   | Medical           | Health & Fitness   |
-| 25  | mri         | [MRI][mri]                 | MRI Viewer / Imaging Software                                    | No       | DONE   | Medical           | Health & Fitness   |
-| 26  | psychology  | [Psychology][psychology]   | BDI-II / PHQ-9 / GAD-7 Psychological Scales                      | No       | DONE   | Medical           | Health & Fitness   |
-| 27  | calendar    | [Calendar][calendar]       | Google Calendar / Outlook Calendar                               | No       | DONE   | Productivity      | Business           |
-| 28  | csv         | [CSV][csv]                 | Excel / Google Sheets                                            | No       | DONE   | Productivity      | Business           |
-| 29  | keynotes    | [Keynotes][keynotes]       | PowerPoint / Google Slides / Apple Keynote                       | No       | DONE   | Productivity      | Education          |
-| 30  | markdown    | [Markdown][markdown]       | Obsidian                                                         | No       | DONE   | Productivity      | Education          |
-| 31  | pdf         | [PDF][pdf]                 | Adobe Acrobat PDF                                                | No       | DONE   | Productivity      | Business           |
-| 32  | projects    | [Projects][projects]       | Atlassian Trello / Kanban                                        | Required | DONE   | Productivity      | Business           |
-| 33  | resume      | [Resume][resume]           | Resume Builder                                                   | No       | DONE   | Productivity      | Business           |
-| 34  | store       | [Store][store]             | App Store / Play Store                                           | No       | DONE   | Shopping          | Business           |
-| 35  | chat        | [Chat][chat]               | Chat like Codex / Claude                                         | Required | DONE   | Social Networking | Business           |
-| 36  | messaging   | [Messaging][messaging]     | Telegram / WhatsApp / Messenger / Signal                         | Required | DONE   | Social Networking | Business           |
-| 37  | chess       | [Chess][chess]             | chess.com / lichess.org                                          | No       | DONE   | Sports            | Games              |
-| 38  | football    | [Football][football]       | Football Formation / Analysis                                    | No       | DONE   | Sports            | Games              |
-| 39  | tourney     | [Tourney][tourney]         | Tournament management app for creating and tracking competitions | No       | DONE   | Sports            | Games              |
-| 40  | clock       | [Clock][clock]             | Pomodoro / Watchface / World Clock / Timer / Stopwatch           | No       | DONE   | Utilities         | Productivity       |
-| 41  | docs        | [Docs][docs]               | TinyWow                                                          | No       | DONE   | Utilities         | Productivity       |
-| 42  | password    | [Password][password]       | BitWarden / 1Password                                            | Required | DONE   | Utilities         | Productivity       |
-| 43  | doi         | [DOI][doi]                 | Crossref Citation Network Visualizer                             | No       | DONE   | Education         | Developer Tools    |
+| 08  | lingo       | [Lingo][lingo]             | Duolingo / Flashcards / Sign Language                            | No       | DONE   | Education         | Games              |
+| 09  | tax         | [Tax][tax]                 | Tax Utilities                                                    | Required | DONE   | Finance           | Business           |
+| 10  | wallet      | [Wallet][wallet]           | Momo / Techcombank                                               | Required | DONE   | Finance           | Business           |
+| 11  | foody       | [Foody][foody]             | Random Food Suggestion                                           | No       | DONE   | Food & Drink      | Health & Fitness   |
+| 12  | 8-bit       | [8-Bit][8-bit]             | Maze / Snake / DinoRun Retro Games                               | No       | DONE   | Games             | Entertainment      |
+| 13  | casino      | [Casino][casino]           | Baccarat / Roulette / Craps / Slots                              | No       | DONE   | Games             | Entertainment      |
+| 14  | countries   | [Countries][countries]     | New York Times Variant                                           | No       | DONE   | Games             | Entertainment      |
+| 15  | memory      | [Memory][memory]           | Memory Match / Pi / N-Back / Recall                              | No       | DONE   | Games             | Entertainment      |
+| 16  | nikoli      | [Nikoli][nikoli]           | Nikoli                                                           | No       | DONE   | Games             | Entertainment      |
+| 17  | tic-tac-toe | [Tic-Tac-Toe][tic-tac-toe] | Classic / Notakto / Reverse / Wild Variants                      | No       | DONE   | Games             | Entertainment      |
+| 18  | colors      | [Colors][colors]           | Color Picker / Palette / Wheel / Converter                       | No       | DONE   | Graphics & Design | Photo & Video      |
+| 19  | photo       | [Photo][photo]             | Adobe Photoshop                                                  | No       | DONE   | Graphics & Design | Photo & Video      |
+| 20  | svg         | [SVG][svg]                 | Adobe Illustrator / CorelDRAW                                    | No       | DONE   | Graphics & Design | Photo & Video      |
+| 21  | video       | [Video Tools][video]       | CapCut                                                           | No       | DONE   | Graphics & Design | Photo & Video      |
+| 22  | brainbow    | [Brainbow][brainbow]       | All-in-one Brainbow Software                                     | No       | DONE   | Medical           | Health & Fitness   |
+| 23  | eyes        | [Eyes][eyes]               | Snellen / LogMAR / Tumbling E Vision Charts                      | No       | DONE   | Medical           | Health & Fitness   |
+| 24  | mri         | [MRI][mri]                 | MRI Viewer / Imaging Software                                    | No       | DONE   | Medical           | Health & Fitness   |
+| 25  | psychology  | [Psychology][psychology]   | BDI-II / PHQ-9 / GAD-7 Psychological Scales                      | No       | DONE   | Medical           | Health & Fitness   |
+| 26  | calendar    | [Calendar][calendar]       | Google Calendar / Outlook Calendar                               | No       | DONE   | Productivity      | Business           |
+| 27  | csv         | [CSV][csv]                 | Excel / Google Sheets                                            | No       | DONE   | Productivity      | Business           |
+| 28  | keynotes    | [Keynotes][keynotes]       | PowerPoint / Google Slides / Apple Keynote                       | No       | DONE   | Productivity      | Education          |
+| 29  | markdown    | [Markdown][markdown]       | Obsidian                                                         | No       | DONE   | Productivity      | Education          |
+| 30  | pdf         | [PDF][pdf]                 | Adobe Acrobat PDF                                                | No       | DONE   | Productivity      | Business           |
+| 31  | projects    | [Projects][projects]       | Atlassian Trello / Kanban                                        | Required | DONE   | Productivity      | Business           |
+| 32  | resume      | [Resume][resume]           | Resume Builder                                                   | No       | DONE   | Productivity      | Business           |
+| 33  | store       | [Store][store]             | App Store / Play Store                                           | No       | DONE   | Shopping          | Business           |
+| 34  | chat        | [Chat][chat]               | Chat like Codex / Claude                                         | Required | DONE   | Social Networking | Business           |
+| 35  | messaging   | [Messaging][messaging]     | Telegram / WhatsApp / Messenger / Signal                         | Required | DONE   | Social Networking | Business           |
+| 36  | chess       | [Chess][chess]             | chess.com / lichess.org                                          | No       | DONE   | Sports            | Games              |
+| 37  | football    | [Football][football]       | Football Formation / Analysis                                    | No       | DONE   | Sports            | Games              |
+| 38  | tourney     | [Tourney][tourney]         | Tournament management app for creating and tracking competitions | No       | DONE   | Sports            | Games              |
+| 39  | clock       | [Clock][clock]             | Pomodoro / Watchface / World Clock / Timer / Stopwatch           | No       | DONE   | Utilities         | Productivity       |
+| 40  | docs        | [Docs][docs]               | TinyWow                                                          | No       | DONE   | Utilities         | Productivity       |
+| 41  | password    | [Password][password]       | BitWarden / 1Password                                            | Required | DONE   | Utilities         | Productivity       |
+| 42  | doi         | [DOI][doi]                 | Crossref Citation Network Visualizer                             | No       | DONE   | Education         | Developer Tools    |
 
 [menu]: https://hieudoanm.github.io/free/menu/
 [pos]: https://hieudoanm.github.io/free/pos/
@@ -53,7 +52,6 @@
 [code]: https://hieudoanm.github.io/free/code/
 [database]: https://hieudoanm.github.io/free/database/
 [diagram]: https://hieudoanm.github.io/free/diagram/
-[economics]: https://hieudoanm.github.io/free/economics/
 [lingo]: https://hieudoanm.github.io/free/lingo/
 [tax]: https://hieudoanm.github.io/free/tax/
 [wallet]: https://hieudoanm.github.io/free/wallet/

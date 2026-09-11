@@ -2,7 +2,13 @@
 
 import { HomeTemplate } from '@/components/templates/HomeTemplate';
 import { NextPage } from 'next';
-import { PiCalendar, PiCards, PiFlask, PiMusicNote } from 'react-icons/pi';
+import {
+  PiBank,
+  PiCalendar,
+  PiCards,
+  PiFlask,
+  PiMusicNote,
+} from 'react-icons/pi';
 
 const ITEMS = [
   {
@@ -28,6 +34,12 @@ const ITEMS = [
     description: 'Timeline and myth-vs-fact history games',
     icon: PiCalendar,
     href: '/history/',
+  },
+  {
+    label: 'Economics',
+    description: 'Game theory, markets, behavioral and macro concepts',
+    icon: PiBank,
+    href: '/economics/',
   },
 ];
 
