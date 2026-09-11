@@ -1,12 +1,5 @@
 import { AD_NETWORK_DOMAINS, ADS_KEY } from './lib/ads';
-import { registerNewTabRedirect } from './lib/newtab';
-import { stitchChunks, type SnapshotChunk } from './lib/stitch';
-import { createLogger } from './utils/log';
-import {
-  GET_SHOPIFY_ACTION,
-  SHOPIFY_RESULT_ACTION,
-  type ShopifyDetectionResult,
-} from './lib/shopify';
+import { SOUND_AUDIBLE_ACTION } from './lib/audio';
 import {
   CLAUDE_RESULT_ACTION,
   CLAUDE_STORAGE_KEY,
@@ -14,6 +7,25 @@ import {
   claudePercent,
   type ClaudeLimitData,
 } from './lib/claude';
+import { registerNewTabRedirect } from './lib/newtab';
+import {
+  GET_SHOPIFY_ACTION,
+  GET_SHOPIFY_STATE_ACTION,
+  SHOPIFY_RESULT_ACTION,
+  type ShopifyDetectionResult,
+} from './lib/shopify';
+import {
+  GET_SOUND_STATE_ACTION,
+  SOUND_MUTE_ALL_ACTION,
+  SOUND_MUTE_OTHERS_ACTION,
+  SOUND_MUTE_TAB_ACTION,
+  SOUND_STATE_CHANGED_ACTION,
+  SoundTabInfo,
+  toSoundTabInfo,
+  type SoundState,
+} from './lib/sounds';
+import { stitchChunks, type SnapshotChunk } from './lib/snapshot';
+import { createLogger } from './utils/log';
 
 type BadgeAction = {
   setBadgeText: (details: { text: string; tabId?: number }) => void;
@@ -24,6 +36,8 @@ const chromeApi = chrome as unknown as Record<string, BadgeAction | undefined>;
 const badgeAction = chromeApi.action ?? chromeApi.browserAction;
 
 const log = createLogger('Shopify:');
+const soundLog = createLogger('Sound:');
+const appLog = createLogger('Tabs:');
 
 interface CaptureRequest {
   action: string;
@@ -45,6 +59,7 @@ const ADS_RULESET_ID = 'ruleset_block';
 const SNAP_ACTIONS = new Set(['captureView', 'captureFullPage']);
 
 const shopifyResults = new Map<number, ShopifyDetectionResult>();
+const contentAudibleTabs = new Set<number>();
 
 let adsBlockEnabled = true;
 
@@ -103,6 +118,24 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     return;
   }
 
+  if (message?.action === SOUND_AUDIBLE_ACTION) {
+    const tabId = sender.tab?.id;
+    if (tabId == null) return;
+    const playing = (message as { playing?: unknown }).playing === true;
+    if (playing) {
+      contentAudibleTabs.add(tabId);
+    } else {
+      contentAudibleTabs.delete(tabId);
+    }
+    soundLog.info('content audible report', {
+      tabId,
+      playing,
+      audibleTabs: contentAudibleTabs.size,
+    });
+    void pushSoundState();
+    return;
+  }
+
   if (message?.action === CLAUDE_RESULT_ACTION) {
     const tabId = sender.tab?.id;
     const result = (message as { result?: ClaudeLimitData | null }).result;
@@ -120,11 +153,40 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     void handleShopifyCheck(message).then((result) => sendResponse(result));
     return true;
   }
+
+  if (message?.action === GET_SHOPIFY_STATE_ACTION) {
+    void handleShopifyState(message).then((result) => sendResponse(result));
+    return true;
+  }
+
+  if (message?.action === GET_SOUND_STATE_ACTION) {
+    return collectSoundState();
+  }
+
+  if (message?.action === SOUND_MUTE_TAB_ACTION) {
+    return handleMuteTab(message);
+  }
+
+  if (message?.action === SOUND_MUTE_ALL_ACTION) {
+    return handleMuteAll(message);
+  }
+
+  if (message?.action === SOUND_MUTE_OTHERS_ACTION) {
+    return handleMuteOthers(message);
+  }
 });
 
 chrome.tabs.onRemoved.addListener((tabId) => {
   shopifyResults.delete(tabId);
+  contentAudibleTabs.delete(tabId);
   void chrome.action.setBadgeText({ tabId, text: '' });
+  void pushSoundState();
+});
+
+chrome.tabs.onUpdated.addListener((_tabId, changeInfo) => {
+  if (changeInfo.audible !== undefined || changeInfo.mutedInfo !== undefined) {
+    void pushSoundState();
+  }
 });
 
 const applyClaudeBadge = (tabId: number, data: ClaudeLimitData): void => {
@@ -139,10 +201,102 @@ const applyClaudeBadge = (tabId: number, data: ClaudeLimitData): void => {
   badgeAction.setBadgeBackgroundColor({ tabId, color: claudeColor(pct) });
 };
 
+const queryTabs = (
+  queryInfo: chrome.tabs.QueryInfo = {}
+): Promise<chrome.tabs.Tab[]> =>
+  new Promise((resolve) => {
+    chrome.tabs.query(queryInfo, (tabs) => {
+      if (chrome.runtime.lastError) {
+        resolve([]);
+        return;
+      }
+      resolve(tabs);
+    });
+  });
+
+const collectSoundState = async (): Promise<SoundState> => {
+  const tabs = await queryTabs();
+  const tabsInfo: SoundTabInfo[] = [];
+  for (const tab of tabs) {
+    const info = toSoundTabInfo(tab);
+    if (!info) continue;
+    info.audible = info.audible || contentAudibleTabs.has(info.tabId);
+    soundLog.info('sound merged audible', {
+      tabId: info.tabId,
+      audible: info.audible,
+      contentReported: contentAudibleTabs.has(info.tabId),
+    });
+    tabsInfo.push(info);
+  }
+  return { tabs: tabsInfo };
+};
+
+const pushSoundState = async (): Promise<void> => {
+  try {
+    const state = await collectSoundState();
+    await chrome.runtime.sendMessage({
+      action: SOUND_STATE_CHANGED_ACTION,
+      state,
+    });
+  } catch {
+    soundLog.debug('no popup listening for sound state');
+  }
+};
+
+const handleMuteTab = async (message: {
+  action: string;
+  tabId?: number;
+  muted?: boolean;
+}): Promise<SoundState> => {
+  if (typeof message.tabId === 'number' && typeof message.muted === 'boolean') {
+    await chrome.tabs.update(message.tabId, { muted: message.muted });
+    soundLog.info(`muted=${message.muted} tabId=${message.tabId}`);
+  }
+  return collectSoundState();
+};
+
+const handleMuteAll = async (message: {
+  action: string;
+  muted?: boolean;
+}): Promise<SoundState> => {
+  const muted = message.muted === true;
+  const tabs = await queryTabs();
+  for (const tab of tabs) {
+    if (tab.id != null && (tab.mutedInfo?.muted ?? false) !== muted) {
+      await chrome.tabs.update(tab.id, { muted });
+    }
+  }
+  soundLog.info(`muteAll=${muted} tabs=${tabs.length}`);
+  return collectSoundState();
+};
+
+const handleMuteOthers = async (message: {
+  action: string;
+  tabId?: number;
+}): Promise<SoundState> => {
+  const keepId = message.tabId;
+  const tabs = await queryTabs();
+  for (const tab of tabs) {
+    if (tab.id == null || tab.id === keepId) continue;
+    if (!tab.mutedInfo?.muted) {
+      await chrome.tabs.update(tab.id, { muted: true });
+    }
+  }
+  soundLog.info(`muteOthers keep=${keepId} tabs=${tabs.length}`);
+  return collectSoundState();
+};
+
 const handleCapture = async (request: CaptureRequest): Promise<string> =>
   request.action === 'captureFullPage'
     ? handleCaptureFullPage(request)
     : handleCaptureView(request);
+
+const handleShopifyState = async (message: {
+  tabId?: number;
+}): Promise<ShopifyDetectionResult | undefined> => {
+  if (typeof message.tabId !== 'number') return undefined;
+  return shopifyResults.get(message.tabId);
+};
 
 const handleShopifyCheck = async (message: {
   action: string;
@@ -161,21 +315,15 @@ const handleShopifyCheck = async (message: {
 
   if (typeof chrome.scripting?.executeScript === 'function') {
     try {
-      const [injection] = await chrome.scripting.executeScript({
-        target: { tabId },
-        world: 'MAIN',
-        func: detectShopifyInPage,
-      });
-      const result = injection?.result;
+      const result = await runScriptInPage(tabId);
       if (result && typeof result.isShopify === 'boolean') {
-        const verdict = result as unknown as ShopifyDetectionResult;
-        if (verdict.isShopify) {
-          shopifyResults.set(tabId, verdict);
+        if (result.isShopify) {
+          shopifyResults.set(tabId, result);
           void chrome.action.setBadgeText({ tabId, text: 'S' });
         } else {
           void chrome.action.setBadgeText({ tabId, text: '' });
         }
-        return verdict;
+        return result;
       }
     } catch (err) {
       log.warn('executeScript in page failed:', err);
@@ -184,6 +332,26 @@ const handleShopifyCheck = async (message: {
 
   return { error: 'Shopify check timed out' };
 };
+
+const runScriptInPage = (
+  tabId: number
+): Promise<ShopifyDetectionResult | undefined> =>
+  new Promise((resolve) => {
+    chrome.scripting.executeScript(
+      {
+        target: { tabId },
+        world: 'MAIN',
+        func: detectShopifyInPage,
+      },
+      (injections) => {
+        if (chrome.runtime.lastError || !injections?.length) {
+          resolve(undefined);
+          return;
+        }
+        resolve(injections[0]?.result as ShopifyDetectionResult | undefined);
+      }
+    );
+  });
 
 const detectShopifyInPage = (): {
   isShopify: boolean;
@@ -305,7 +473,7 @@ const captureVisibleTab = (options: {
   });
 
 const getActiveTabId = async (): Promise<number> => {
-  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+  const [tab] = await queryTabs({ active: true, currentWindow: true });
   if (!tab?.id) {
     throw new Error('Snapshot: no active tab');
   }
@@ -368,3 +536,5 @@ const blobToDataUrl = (blob: Blob): Promise<string> =>
 
 const wait = (ms: number): Promise<void> =>
   new Promise((resolve) => window.setTimeout(resolve, ms));
+
+appLog.info('background ready');

@@ -2060,22 +2060,6 @@
         ]
       },
       {
-        "label": "Mixer",
-        "primaryCategory": "Utilities",
-        "secondaryCategory": "",
-        "icon": "PiWaveSine",
-        "href": "https://hieudoanm.github.io/free/mixer",
-        "version": "latest",
-        "lastUpdated": "2025-01-01",
-        "fileSize": "",
-        "actions": [
-          {
-            "label": ".dmg",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-mixer-latest/Mixer.dmg"
-          }
-        ]
-      },
-      {
         "label": "Snap",
         "primaryCategory": "Utilities",
         "secondaryCategory": "",

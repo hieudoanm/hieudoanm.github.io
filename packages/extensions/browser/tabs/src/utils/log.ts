@@ -8,15 +8,17 @@ export interface Logger {
   error(...args: unknown[]): void;
 }
 
+const timestamp = (): string => new Date().toTimeString().slice(0, 8);
+
 const bindLevel = (
   level: LogLevel,
   prefix: string
 ): ((...args: unknown[]) => void) => {
   return (...args: unknown[]) => {
     if (prefix) {
-      console[level](prefix, ...args);
+      console[level]('[TAB-X]', timestamp(), prefix, ...args);
     } else {
-      console[level](...args);
+      console[level]('[TAB-X]', timestamp(), ...args);
     }
   };
 };

@@ -4,7 +4,7 @@ Thanks for contributing to **Tabs**, a cross-browser extension that redirects
 every new tab to the hieudoanm home page, blocks distracting sites with an
 offline focus wall, hides ads and tracking requests, routes external links from
 GitHub pages into new tabs, detects Shopify stores as you browse, tracks
-Claude.ai API rate-limit usage, and captures
+Claude.ai API rate-limit usage, controls tab sound, and captures
 the visible viewport or the full page
 of any tab as an image, on Chromium and Gecko browsers via both Manifest V2 and
 Manifest V3 builds.
@@ -53,7 +53,7 @@ every change.
 4. **DRY** — when a pattern repeats, centralize it. Duplication is how bugs get
    missed.
 5. **Small, focused files** — functions ≤ 30 lines, files ≤ 200 lines.
-   `lib/newtab.ts` and `lib/stitch.ts` stay single-purpose helpers.
+   `lib/newtab.ts` and `lib/snapshot.ts` stay single-purpose helpers.
 6. **Explicit error handling** — check errors and fail loudly; never let
    failures silently propagate. Protected pages, canvas caps, and
    `clipboard-write` denials are surfaced to the popup.
@@ -105,8 +105,9 @@ every change.
    falls back to the default whenever the stored value is empty or invalid.
 10. Prefix debug logs with `[Tabs]` and keep them minimal, and prefix errors
     with `Block:` / `BlockAds:` / `Snapshot:` consistently; the Insta gesture,
-    GitHub routing, Shopify detection, Chess focus, and Claude usage debug logs
-    use `Insta:`, `GitHub:`, `Shopify:`, `Chess:`, and `Claude:` prefixes.
+    GitHub routing, Shopify detection, Chess focus, Claude usage, and Sound
+    debug logs use `Insta:`, `GitHub:`, `Shopify:`, `Chess:`, `Claude:`, and
+    `Sound:` prefixes.
 11. GitHub external-link routing lives in `src/lib/github.ts` and mounts its
     click listener only on `github.com` hosts; in-repo links, `#` /
     `javascript:` hrefs, modifier-key clicks, and programmatic clicks always
@@ -130,8 +131,10 @@ every change.
     script's nonce when the page enforces CSP nonces (`strict-dynamic` blocks
     plain inline scripts); it falls back to DOM-only indicators if the probe is
     unavailable. The background caches the result per tab (`shopifyResults`) and
-    sets an "S" toolbar badge on detected stores. The popup's Shopify tab is
-    always visible; clicking "Check Shopify" sends `GET_SHOPIFY_ACTION` to the
+    sets an "S" toolbar badge on detected stores. The popup's Shopify tab
+    appears only when the active tab's cached result says `isShopify` (asked
+    via the cache-only `GET_SHOPIFY_STATE_ACTION`, never `executeScript` on
+    popup open); clicking "Check Shopify" sends `GET_SHOPIFY_ACTION` to the
     background, which returns the cache or runs `detectShopifyInPage()` in the
     tab's MAIN world via `chrome.scripting.executeScript` on Chromium.
 13. Chess.com focus lives in `src/lib/chess.ts` — a content-side observer only;
@@ -152,6 +155,21 @@ none`), and re-applies hiding through a single `MutationObserver`
     toggleable (`claudeUsage`, default on, `storage.sync`). The shared module
     must stay side-effect-free at import — the background and popup import its
     constants and pure helpers (`claudePercent`, `claudeColor`, `formatReset`).
+15. Sound control lives in `src/lib/sounds.ts` (pure constants/types/helpers
+    only — the background and popup import it and it must stay side-effect-free
+    at import). The popup's Sound tab lists every tab and detects playback via
+    `tab.audible`, plus per-tab mute/unmute via `chrome.tabs.update(tabId, {
+muted })`; `background.ts` answers `GET_SOUND_STATE` and the `SOUND_MUTE_*`
+    actions and broadcasts live `SOUND_STATE_CHANGED_ACTION` updates on
+    `tabs.onUpdated` / `tabs.onRemoved`. The popup re-polls `GET_SOUND_STATE`
+    every 1.5 s while open (re-render only on change). Firefox fallback:
+    `src/lib/audio.ts` runs a content-script sweep (top frame, triggered only
+    in Firefox via `navigator.userAgent` — `chrome.runtime.getBrowserInfo` is
+    not available in content scripts) that reports
+    `{ action: SOUND_AUDIBLE_ACTION, playing }` when a non-muted
+    `<video>`/`<audio>` with `volume > 0` starts/stops, and `background.ts`
+    merges those reports so audible = API `audible` OR page media playing.
+    No toggle.
 
 ## Testing Conventions
 
@@ -175,6 +193,9 @@ quality gates are:
     Plus verdict with the indicator breakdown; on regular pages it stays hidden
   - Open a page with ads → ad banners hidden and ad/tracking requests
     cancelled; toggle "Block ads" off in the popup → they return
+  - Open the Sound tab → every tab is listed; a tab playing audio shows ♪;
+    Mute toggles only that tab, "Mute All" mutes every tab, "Mute Others"
+    mutes all but the active tab, and playback/mute changes update the list live
   - Capture view → a PNG of the visible viewport downloads
   - Capture full page on a tall page (e.g. a long article) → one complete
     image, no seams or aspect-ratio distortion

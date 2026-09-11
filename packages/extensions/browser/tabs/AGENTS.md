@@ -62,13 +62,44 @@ Reference docs live in `docs/`:
   blocking in `background.ts` via `webRequest` and MV3 via the static DNR
   ruleset `ruleset_block` in `public/manifest/v3/rules.json` — keep the two
   domain lists in sync
-- The popup is a 9-tab bar ordered alphabetically: **Ads, Block, Chess,
-  Claude, GitHub, Insta, New Tab, Shopify, Snap** — keep data-tab ids,
-  buttons, and panes in this order. The GitHub and Insta tabs and panes are
-  hidden unless the active tab is `github.com` / `instagram.com`, and the
-  popup opens straight onto the matching tab when it is (contextual
-  features); the Shopify tab is always visible and its pane shows the result
-  of a manual "Check Shopify" button
+- Sound control lives in `src/lib/sounds.ts` (pure constants/types/helpers only —
+  it is imported by both `background.ts` and `popup.ts` and must stay
+  side-effect-free at import). The popup's Sound tab lists every tab
+  (favicon, title, hostname) with a `♪ playing` marker when `tab.audible` and
+  a muted style when `mutedInfo.muted`; each row toggles that tab via
+  `chrome.tabs.update(tabId, { muted })`. Global actions: **Mute All** mutes
+  every tab (repeating the query in `background.ts` `handleMuteAll`), **Mute
+  Others** mutes all tabs except the active one (`handleMuteOthers`). The
+  popup requests state with `GET_SOUND_STATE` and also re-polls it every 1.5 s
+  while open (re-rendering only on change), and the background broadcasts
+  fresh state as `{ action: SOUND_STATE_CHANGED_ACTION, state }` on
+  `tabs.onUpdated` when `audible` / `mutedInfo` change and on `tabs.onRemoved`
+  (fire-and-forget, `lastError` swallowed) so the open popup stays live.
+  There is no toggle for this feature
+- Firefox audibility fallback — Firefox's `tabs.Tab.audible` is unreliable (it
+  is decoupled from the real audio state; speaker-visible tabs can report
+  `false`). So on Firefox only (detected per-page via
+  `navigator.userAgent` — `chrome.runtime.getBrowserInfo` is a background-only
+  API, not available in content scripts), `src/lib/audio.ts`
+  `registerAudioDetection()` runs in the top frame of every page and reports
+  fire-and-forget
+  `{ action: SOUND_AUDIBLE_ACTION, playing }` whenever a non-muted
+  `<video>`/`<audio>` element with `volume > 0` toggles playing (1 s sweep,
+  change-only). `background.ts` merges those per-tab reports into the sound
+  state, so a row counts as audible if **either** the API says so **or** the
+  page is audibly playing media; reports are dropped on `tabs.onRemoved`
+- The popup is a 10-tab bar ordered alphabetically: **Ads, Block, Chess,
+  Claude, GitHub, Insta, New Tab, Shopify, Snap, Sound** — keep data-tab ids,
+  buttons, and panes in this order. Contextual tabs (GitHub, Insta, Chess,
+  Claude, Shopify) start with class `hidden` in `popup.html` and are shown only
+  when the active tab matches: `github.com` / `instagram.com` / `chess.com` /
+  `claude.ai` hostnames (via `matchesHost` in `popup.ts`, www-stripped, exact
+  domain or `.<domain>` suffix), and Shopify when the background's per-tab
+  detection cache reports `isShopify` (asked via the cache-only
+  `GET_SHOPIFY_STATE_ACTION`, never `executeScript`). The popup opens straight
+  onto the first matching tab — Insta → GitHub → Chess → Claude → Shopify — so
+  all five are contextual features; Shopify's pane still shows the result of a
+  manual "Check Shopify" button
 - External-link routing lives in `src/lib/github.ts`
   (`registerExternalLinkRouting()`): on a `github.com` host it mounts a
   delegated `click` listener that resolves `getAbsoluteUrl()` and routes any
@@ -111,7 +142,8 @@ Reference docs live in `docs/`:
   nonce, and detection falls back to DOM-only indicators if the probe is
   unavailable. The background stores the last true result per tab in
   `shopifyResults` and sets a **toolbar badge** "S" on detected stores. The
-  popup's Shopify tab is always visible; clicking "Check Shopify" sends
+  popup's Shopify tab appears only when the active tab's cached result says
+  `isShopify` (via cache-only `GET_SHOPIFY_STATE_ACTION`); clicking "Check Shopify" sends
   `{ action: GET_SHOPIFY_ACTION, tabId }` to the background, which returns the
   cached result instantly when present, otherwise runs
   `detectShopifyInPage()` in the tab's **MAIN world** via
@@ -134,12 +166,12 @@ Reference docs live in `docs/`:
 - Full-page capture is split: the content script measures layout only
   (`scrollHeight`/`clientHeight`/`scrollY`/`dpr`) and drives scrolling; the
   background scrolls `clientHeight`-sized steps with `SETTLE_EXTRA_MS = 80`
-  settle time, then `stitchChunks()` in `src/lib/stitch.ts` composites chunks
+  settle time, then `stitchChunks()` in `src/lib/snapshot.ts` composites chunks
   on an `OffscreenCanvas` (white fill, `createImageBitmap` decode, then
   `convertToBlob` → PNG data URL)
 - Formats other than PNG/JPEG are re-encoded server-side of the document (in
   the background) with default quality 92; keep capture math in the background
-  and pure image work in `src/lib/stitch.ts`
+  and pure image work in `src/lib/snapshot.ts`
 - Popup flow stays idempotent: single `lastDataUrl` + filename, busy guard;
   autodownload default is PNG named from the tab's hostname/path
 - Errors are prefixed `Snapshot:` so they read consistently in the popup

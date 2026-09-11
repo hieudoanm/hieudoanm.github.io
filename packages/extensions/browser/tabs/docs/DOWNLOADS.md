@@ -1,6 +1,6 @@
 # Tabs
 
-> Redirect every new tab to your home page, block distracting sites and ads, capture the current view or the full page, open external links from GitHub pages in new tabs, open every photo of an Instagram post on Shift + right-click, detect Shopify stores as you browse, and track Claude.ai API rate-limit usage — in one extension.
+> Redirect every new tab to your home page, block distracting sites and ads, capture the current view or the full page, open external links from GitHub pages in new tabs, open every photo of an Instagram post on Shift + right-click, detect Shopify stores as you browse, track Claude.ai API rate-limit usage, and control tab sound — in one extension.
 
 ![Chromium](https://img.shields.io/badge/Chromium-Chrome%2FEdge%2FBrave%2FOpera%2FVivaldi%2FArc-blue)
 ![Firefox](https://img.shields.io/badge/Firefox-MV2-lightblue)
@@ -74,8 +74,8 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-Tabs combines eight tab essentials in one toolbar button. **Ads** hides ad banners on the page and cancels advertising and tracking requests at the network level (DoubleClick, Google Analytics, AppNexus, Outbrain, Taboola, and friends), toggleable from the popup. **Block** stops on an offline focus wall when you visit a distracting site (Facebook, X, Instagram, Reddit, TikTok, Netflix, Twitch, Discord, and more) — with better sites to jump to and a suggestion wheel, toggleable from the popup. **GitHub** appears only while you're on GitHub: any link that leaves github.com opens in a new tab instead of navigating away, toggleable from the popup. **Insta** appears only while you're on Instagram: Shift + right-click a
-post to open every photo of it in new tabs. **Shopify** appears only while you're on a Shopify store: it tells you at a glance whether the store runs Shopify or Shopify Plus, read-only, with the full indicator breakdown. **Claude** shows your daily and weekly Claude.ai API rate-limit usage in the popup and a toolbar badge. **New Tab** redirects every fresh tab to the hieudoanm home page
+Tabs combines ten tab essentials in one toolbar button. **Ads** hides ad banners on the page and cancels advertising and tracking requests at the network level (DoubleClick, Google Analytics, AppNexus, Outbrain, Taboola, and friends), toggleable from the popup. **Block** stops on an offline focus wall when you visit a distracting site (Facebook, X, Instagram, Reddit, TikTok, Netflix, Twitch, Discord, and more) — with better sites to jump to and a suggestion wheel, toggleable from the popup. **Chess** appears only while you're on Chess.com: ratings and overlays are hidden so you can focus on the board, toggleable from the popup. **Sound** lists every tab, flags the ones playing audio with a ♪, and lets you mute or unmute any tab, mute them all, or mute everything except the current one. **GitHub** appears only while you're on GitHub: any link that leaves github.com opens in a new tab instead of navigating away, toggleable from the popup. **Insta** appears only while you're on Instagram: Shift + right-click a
+post to open every photo of it in new tabs. **Shopify** appears only while you're on a Shopify store: it tells you at a glance whether the store runs Shopify or Shopify Plus, read-only, with the full indicator breakdown. **Claude** appears only while you're on Claude.ai: it shows your daily and weekly API rate-limit usage in the popup and a toolbar badge. **New Tab** redirects every fresh tab to the hieudoanm home page
 (a toggle to turn it off, default on, plus a configurable target URL). **Snap** turns the same icon
 into a camera — **Capture view** screenshots what's on screen, **Capture full
 page** stitches the entire scrollable page from chunks on an
@@ -130,6 +130,14 @@ machine.
   `claude.ai` tabs — red ≥ 90%, amber ≥ 60%, green below
 - The popup's **Claude** tab shows the same readout and the toggle
   (`claudeUsage`, stored in `storage.sync`, default on)
+
+### 🔊 Control tab sound
+
+- Lists **every tab** and flags the ones currently producing audio with a ♪,
+  updating live as playback or mute state changes
+- **Mute / Unmute** beside any tab, **Mute All** silences every tab, **Mute
+  Others** silences everything except the tab you're on
+- No config — open the popup's **Sound** tab and it just works
 
 ### 📸 Capture view
 
@@ -198,6 +206,8 @@ machine.
   Shopify Plus (read-only verdict, no config needed).
 - Open Claude.ai — the popup's Claude tab shows your daily and weekly usage,
   and the toolbar badge updates on api.claude.ai requests (toggleable).
+- Open the popup's Sound tab — every tab is listed, ones producing audio show
+  ♪; mute any tab, mute all, or mute everything except the current one.
 - Open a news or video site — ads and tracking requests stop (toggleable from
   the popup).
 - Open any page and click the icon.

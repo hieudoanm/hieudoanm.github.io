@@ -57,7 +57,6 @@ import {
   PiUserCircle,
   PiVideoCamera,
   PiWallet,
-  PiWaveSine,
   PiX,
 } from 'react-icons/pi';
 
@@ -109,7 +108,6 @@ export const ICON_MAP: Record<string, IconType> = {
   PiUserCircle,
   PiVideoCamera,
   PiWallet,
-  PiWaveSine,
   PiCardholder,
   PiGridFour,
   PiTimer,

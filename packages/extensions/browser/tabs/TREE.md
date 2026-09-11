@@ -11,7 +11,10 @@
 │   ├── icons/
 │   │   ├── [128x128.png](./public/icons/128x128.png)
 │   │   ├── [16x16.png](./public/icons/16x16.png)
+│   │   ├── [32x32.png](./public/icons/32x32.png)
 │   │   ├── [48x48.png](./public/icons/48x48.png)
+│   │   ├── [64x64.png](./public/icons/64x64.png)
+│   │   ├── [96x96.png](./public/icons/96x96.png)
 │   │   └── [icon.svg](./public/icons/icon.svg)
 │   ├── manifest/
 │   │   ├── v2/
@@ -25,6 +28,7 @@
 ├── src/
 │   ├── lib/
 │   │   ├── [ads.ts](./src/lib/ads.ts)
+│   │   ├── [audio.ts](./src/lib/audio.ts)
 │   │   ├── [block.ts](./src/lib/block.ts)
 │   │   ├── [chess.ts](./src/lib/chess.ts)
 │   │   ├── [claude.ts](./src/lib/claude.ts)
@@ -32,7 +36,8 @@
 │   │   ├── [insta.ts](./src/lib/insta.ts)
 │   │   ├── [newtab.ts](./src/lib/newtab.ts)
 │   │   ├── [shopify.ts](./src/lib/shopify.ts)
-│   │   └── [stitch.ts](./src/lib/stitch.ts)
+│   │   ├── [snapshot.ts](./src/lib/snapshot.ts)
+│   │   └── [sounds.ts](./src/lib/sounds.ts)
 │   ├── utils/
 │   │   └── [log.ts](./src/utils/log.ts)
 │   ├── [background.ts](./src/background.ts)
@@ -49,4 +54,4 @@
 └── [webpack.config.ts](./webpack.config.ts)
 ```
 
-9 directories, 37 files
+9 directories, 42 files

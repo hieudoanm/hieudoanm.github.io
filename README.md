@@ -199,9 +199,8 @@
 | --- | -------- | --------- | ------- | -------------------- | ---------------------------- |
 | 54  | macOS    | Utilities | Brewery | [Free][free-brewery] | [Releases][releases-brewery] |
 | 55  | macOS    | Utilities | Gauge   | [Free][free-gauge]   | [Releases][releases-gauge]   |
-| 56  | macOS    | Utilities | Mixer   | [Free][free-mixer]   | [Releases][releases-mixer]   |
-| 57  | macOS    | Utilities | Snap    | [Free][free-snap]    | [Releases][releases-snap]    |
-| 58  | macOS    | Utilities | Top     | [Free][free-top]     | [Releases][releases-top]     |
+| 56  | macOS    | Utilities | Snap    | [Free][free-snap]    | [Releases][releases-snap]    |
+| 57  | macOS    | Utilities | Top     | [Free][free-top]     | [Releases][releases-top]     |
 
 ---
 
@@ -260,7 +259,6 @@
 [free-backbone]: https://hieudoanm.github.io/free/backbone/
 [free-brewery]: https://hieudoanm.github.io/free/brewery/
 [free-gauge]: https://hieudoanm.github.io/free/gauge/
-[free-mixer]: https://hieudoanm.github.io/free/mixer/
 [free-snap]: https://hieudoanm.github.io/free/snap/
 [free-top]: https://hieudoanm.github.io/free/top/
 [free-kevin]: https://hieudoanm.github.io/free/kevin/
@@ -313,7 +311,6 @@
 [releases-password]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-utilities-password-latest
 [releases-brewery]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-macos-brewery-latest
 [releases-gauge]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-macos-gauge-latest
-[releases-mixer]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-macos-mixer-latest
 [releases-snap]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-macos-snap-latest
 [releases-top]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-macos-top-latest
 [releases-block]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-android-block-latest

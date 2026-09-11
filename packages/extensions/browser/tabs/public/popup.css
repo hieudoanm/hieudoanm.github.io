@@ -311,3 +311,66 @@
     }
     .status.ok { color: var(--accent); }
     .status.err { color: var(--danger); }
+
+    .sound-count {
+      font-size: 10px;
+      color: var(--muted);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .tab-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding: 0;
+      margin: 0;
+      max-height: 220px;
+      overflow-y: auto;
+    }
+    .sound-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .sound-favicon {
+      width: 16px;
+      height: 16px;
+      border-radius: 3px;
+      flex-shrink: 0;
+      background: var(--border);
+    }
+    .sound-info {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .sound-title {
+      font-size: 10px;
+      color: var(--text);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .sound-meta {
+      font-size: 9px;
+      color: var(--muted);
+    }
+    .sound-row.audible .sound-meta { color: var(--accent); }
+    .sound-row.muted .sound-title {
+      color: var(--muted);
+      text-decoration: line-through;
+    }
+    .sound-toggle {
+      flex-shrink: 0;
+      padding: 5px 10px;
+      font-size: 9px;
+      max-width: 72px;
+    }
+    .sound-empty {
+      font-size: 10px;
+      color: var(--muted);
+      padding: 6px 0;
+    }

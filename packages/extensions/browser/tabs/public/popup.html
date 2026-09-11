@@ -21,13 +21,14 @@
 <nav class="tabbar" role="tablist" aria-label="Features">
   <button class="tab-btn active" type="button" role="tab" aria-selected="true" data-tab="ads">Ads</button>
   <button class="tab-btn" type="button" role="tab" aria-selected="false" data-tab="block">Block</button>
-  <button class="tab-btn" type="button" role="tab" aria-selected="false" data-tab="chess">Chess</button>
-  <button class="tab-btn" type="button" role="tab" aria-selected="false" data-tab="claude">Claude</button>
+  <button class="tab-btn hidden" type="button" role="tab" aria-selected="false" data-tab="chess">Chess</button>
+  <button class="tab-btn hidden" type="button" role="tab" aria-selected="false" data-tab="claude">Claude</button>
   <button class="tab-btn hidden" type="button" role="tab" aria-selected="false" data-tab="github">GitHub</button>
   <button class="tab-btn hidden" type="button" role="tab" aria-selected="false" data-tab="insta">Insta</button>
   <button class="tab-btn" type="button" role="tab" aria-selected="false" data-tab="newtab">New Tab</button>
-  <button class="tab-btn" type="button" role="tab" aria-selected="false" data-tab="shopify">Shopify</button>
+  <button class="tab-btn hidden" type="button" role="tab" aria-selected="false" data-tab="shopify">Shopify</button>
   <button class="tab-btn" type="button" role="tab" aria-selected="false" data-tab="snap">Snap</button>
+  <button class="tab-btn" type="button" role="tab" aria-selected="false" data-tab="sound">Sound</button>
 </nav>
 
 <div class="body">
@@ -253,6 +254,26 @@
     </div>
 
     <div class="status" id="status"></div>
+  </section>
+
+  <section class="pane" id="pane-sound" role="tabpanel">
+    <div class="sound-count" id="soundPlayingCount">0 playing</div>
+    <div class="btn-row">
+      <button class="btn-secondary" id="soundMuteAllBtn" type="button">
+        Mute All
+      </button>
+      <button class="btn-secondary" id="soundMuteOthersBtn" type="button">
+        Mute Others
+      </button>
+    </div>
+    <div class="option-box">
+      <div class="option-label">Tabs</div>
+      <ul class="tab-list" id="soundTabList"></ul>
+    </div>
+    <div class="hint">
+      Every tab is listed; rows playing audio show ♪. Mute or unmute any
+      individual tab, mute every tab, or mute all except the current one.
+    </div>
   </section>
 
 </div>

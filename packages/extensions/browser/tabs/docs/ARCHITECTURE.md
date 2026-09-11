@@ -11,6 +11,8 @@
 - Capture the visible viewport or the full page of any tab as an image
 - Track Claude.ai daily/weekly API rate-limit usage in an inline indicator and
   a toolbar badge
+- Control tab sound from the popup: mute or unmute any tab, mute all, or mute
+  all but the current one
 - Support both automatic download and copy-to-clipboard
 - Stitch tall pages cross-device correctly via `OffscreenCanvas` chunking
 - Type-safe throughout with strict TypeScript
@@ -38,12 +40,15 @@ src/
 ├── popup.ts        # Action popup UI (capture buttons + redirect/block toggles)
 └── lib/
     ├── ads.ts      # Ad selectors + network domains + offline ad-hiding
+    ├── audio.ts    # Firefox audio-eligibility sweep for the Sound tab
     ├── block.ts    # Distracting-site block wall (+ better sites + suggestion wheel)
     ├── claude.ts   # Claude.ai rate-limit usage tracking + inline indicator
     ├── newtab.ts   # New-tab/home URL interception + redirect
-    └── stitch.ts   # OffscreenCanvas chunk stitching
+    ├── shopify.ts  # Shopify detection (probe + indicators, push-only)
+    ├── sounds.ts   # Tab sound control (pure constants/types/helpers)
+    └── snapshot.ts # OffscreenCanvas chunk stitching
 public/
-├── icons/              # 16x16.png, 48x48.png, 128x128.png, icon.svg
+├── icons/              # 16x16.png, 32x32.png, 48x48.png, 64x64.png, 96x96.png, 128x128.png, icon.svg
 ├── popup.html          # Popup markup
 └── manifest/
     ├── v2/
@@ -88,6 +93,11 @@ directory.
 │  - "Capture view" / "Capture full page" buttons            │
 │  - New Tab redirect + Block toggles (sync storage)         │
 │  - Sends CAPTURE_VIEW / CAPTURE_FULLPAGE to background     │
+│  - Contextual tabs show only on matching sites +           │
+│    activate the first match (GitHub/Insta/Chess/           │
+│    Claude hostname, Shopify via cached detect)             │
+│  - Sound tab: tab list with ♪ playback markers + mute      │
+│    actions (GET_SOUND_STATE / SOUND_MUTE_*)                │
 ├────────────────────────────────────────────────────────────┤
 │  Background (src/background.ts)                            │  MV3 service worker /
 │  - Registers the new-tab redirect (lib/newtab.ts)          │  MV2 background page
@@ -105,6 +115,16 @@ directory.
 │  - Triggers the block wall via maybeRenderBlockWall()      │
 │  - Triggers ad hiding via maybeRunAdsBlocker()             │
 │  - Registers Claude.ai usage via registerClaudeUsage()     │
+│  - Registers audio detection via registerAudioDetection()  │
+├────────────────────────────────────────────────────────────┤
+│  lib/sounds (src/lib/sounds.ts)                            │
+│  - Pure constants/types/helpers (toSoundTabInfo)           │
+│  - Background collects sound state + applies mute actions  │
+│  - Pushes live SOUND_STATE_CHANGED_ACTION on audio change  │
+├────────────────────────────────────────────────────────────┤
+│  lib/audio (src/lib/audio.ts)                              │  Firefox only
+│  - Top-frame media sweep, reports SOUND_AUDIBLE_ACTION     │
+│  - Fallback when tabs.Tab.audible is unreliable            │
 ├────────────────────────────────────────────────────────────┤
 │  lib/claude (src/lib/claude.ts)                          │  Shared helper
 │  - claude.ai fetch override watching /rate_limits //usage │
@@ -124,8 +144,8 @@ directory.
 │  - isNewTab(url) prefix matching                           │
 │  - tabs.onCreated/onUpdated -> update target               │
 ├────────────────────────────────────────────────────────────┤
-│  lib/stitch (src/lib/stitch.ts)                           │  Shared helper
-│  - stitchChunks → OffscreenCanvas composition              │
+│  lib/snapshot (src/lib/snapshot.ts)                         │  Shared helper
+│  - stitchChunks → OffscreenCanvas composition                │
 └────────────────────────────────────────────────────────────┘
 ```
 
@@ -219,6 +239,39 @@ directory.
   and popup only import its constants, `claudePercent`, `claudeColor`,
   `formatReset`, and types.
 
+## Sound Strategy
+
+- **Scope** — mute control is background- and popup-only.
+  `src/lib/sounds.ts` holds pure constants/types/helpers
+  (`GET_SOUND_STATE`, `SOUND_MUTE_TAB` / `SOUND_MUTE_ALL` /
+  `SOUND_MUTE_OTHERS`, `SOUND_STATE_CHANGED`, `toSoundTabInfo`).
+- **Detection** — the popup's Sound tab lists **every tab** and marks the ones
+  currently producing audio with a ♪, muted styling from
+  `tab.mutedInfo.muted`; the count shows how many are playing.
+- **Firefox audibility fallback** — `tabs.Tab.audible` is reliable on Chromium
+  but decoupled from the real audio state on Firefox (a speaker-visible tab
+  can report `false`). So on Firefox only (detected per-page via
+  `navigator.userAgent` — `chrome.runtime.getBrowserInfo` is background-only,
+  unavailable in content scripts), `src/lib/audio.ts`
+  `registerAudioDetection()` sweeps the top frame once a second and sends
+  fire-and-forget `{ action: SOUND_AUDIBLE_ACTION, playing }` when a
+  non-muted `<video>`/`<audio>` with `volume > 0` starts or stops;
+  `background.ts` merges those reports (`contentAudibleTabs`) into the state,
+  so audible = API `audible` **OR** audibly playing page media.
+- **Actions** — each row toggles `chrome.tabs.update(tabId, { muted })`;
+  **Mute All** loops all tabs and mutes each, **Mute Others** mutes every tab
+  except the active one (`handleMuteAll` / `handleMuteOthers` in
+  `background.ts`). Every action replies with a freshly collected
+  `SoundState`.
+- **Live updates** — `tabs.onUpdated` (only when `audible` or `mutedInfo`
+  change), `tabs.onRemoved`, and the `SOUND_AUDIBLE_ACTION` reports all push
+  `{ action: SOUND_STATE_CHANGED_ACTION, state }` fire-and-forget so an open
+  popup stays current; failures (no popup open) are swallowed. The popup also
+  re-polls `GET_SOUND_STATE` every 1.5 s while open, re-rendering only when
+  the audible/muted set changed.
+- **No config** — the feature has no toggle and nothing is stored; `tabs`
+  permission covers reading `audible`/`mutedInfo`.
+
 ## Capture Strategy
 
 - **View capture** — background captures `chrome.tabs.captureVisibleTab`
@@ -243,6 +296,7 @@ directory.
   readout additionally persists the latest parsed `ClaudeLimitData` in
   `chrome.storage.local['claudeLimit']` (written by the background from
   `CLAUDE_RESULT_ACTION` pushes) so the popup always shows the last result.
+  Sound control stores nothing — tab mute state is owned by the browser.
 
 ## Performance
 

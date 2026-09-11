@@ -1,5 +1,5 @@
 import { createLogger } from './utils/log';
-import { GET_SHOPIFY_ACTION } from './lib/shopify';
+import { GET_SHOPIFY_ACTION, GET_SHOPIFY_STATE_ACTION } from './lib/shopify';
 import {
   CLAUDE_KEY,
   CLAUDE_STORAGE_KEY,
@@ -8,8 +8,18 @@ import {
   formatReset,
   type ClaudeLimitData,
 } from './lib/claude';
+import {
+  GET_SOUND_STATE_ACTION,
+  SOUND_MUTE_ALL_ACTION,
+  SOUND_MUTE_OTHERS_ACTION,
+  SOUND_MUTE_TAB_ACTION,
+  SOUND_STATE_CHANGED_ACTION,
+  type SoundState,
+  type SoundTabInfo,
+} from './lib/sounds';
 
 const log = createLogger('Shopify:');
+const soundLog = createLogger('Sound:');
 
 const captureViewBtn = document.getElementById(
   'captureViewBtn'
@@ -47,7 +57,12 @@ const panes = Array.from(document.querySelectorAll<HTMLElement>('.pane'));
 const instaTabBtn =
   document.querySelector<HTMLButtonElement>('[data-tab="insta"]');
 const instaToggle = document.getElementById('instaToggle') as HTMLInputElement;
+const chessTabBtn =
+  document.querySelector<HTMLButtonElement>('[data-tab="chess"]');
 const chessToggle = document.getElementById('chessFocus') as HTMLInputElement;
+const claudeTabBtn = document.querySelector<HTMLButtonElement>(
+  '[data-tab="claude"]'
+);
 const claudeUsage = document.getElementById('claudeUsage') as HTMLInputElement;
 const claudeDaily = document.getElementById('claudeDaily');
 const claudeWeekly = document.getElementById('claudeWeekly');
@@ -59,12 +74,23 @@ const githubTabBtn = document.querySelector<HTMLButtonElement>(
 const githubToggle = document.getElementById(
   'githubToggle'
 ) as HTMLInputElement;
+const shopifyTabBtn = document.querySelector<HTMLButtonElement>(
+  '[data-tab="shopify"]'
+);
 const shopifyCheckBtn = document.getElementById(
   'shopifyCheckBtn'
 ) as HTMLButtonElement;
 const shopifyVerdict = document.getElementById('shopifyVerdict');
 const shopifyIndicators = document.getElementById('shopifyIndicators');
 const shopifyPlusIndicators = document.getElementById('shopifyPlusIndicators');
+const soundTabList = document.getElementById('soundTabList');
+const soundPlayingCount = document.getElementById('soundPlayingCount');
+const soundMuteAllBtn = document.getElementById(
+  'soundMuteAllBtn'
+) as HTMLButtonElement;
+const soundMuteOthersBtn = document.getElementById(
+  'soundMuteOthersBtn'
+) as HTMLButtonElement;
 
 interface ShopifyIndicatorSet {
   windowShopify: boolean;
@@ -94,21 +120,65 @@ let lastDataUrl: string | null = null;
 let lastFilename: string | null = null;
 let isBusy = false;
 
-const isInstagramUrl = (value: string): boolean => {
+const matchesHost = (value: string, domain: string): boolean => {
   try {
-    return new URL(value).hostname.endsWith('instagram.com');
+    const hostname = new URL(value).hostname.replace(/^www\./i, '');
+    return hostname === domain || hostname.endsWith(`.${domain}`);
   } catch {
     return false;
   }
 };
 
-const isGitHubUrl = (value: string): boolean => {
-  try {
-    const hostname = new URL(value).hostname;
-    return hostname === 'github.com' || hostname.endsWith('.github.com');
-  } catch {
-    return false;
-  }
+const isInstagramUrl = (value: string): boolean =>
+  matchesHost(value, 'instagram.com');
+const isGitHubUrl = (value: string): boolean =>
+  matchesHost(value, 'github.com');
+const isChessUrl = (value: string): boolean => matchesHost(value, 'chess.com');
+const isClaudeUrl = (value: string): boolean => matchesHost(value, 'claude.ai');
+
+const SHOPIFY_STATE_TIMEOUT_MS = 600;
+
+const getShopifyState = (
+  tabId: number
+): Promise<ShopifyDetectionResult | undefined> =>
+  Promise.race([
+    chrome.runtime
+      .sendMessage({ action: GET_SHOPIFY_STATE_ACTION, tabId })
+      .then(
+        (res) =>
+          res?.isShopify === true ? (res as ShopifyDetectionResult) : undefined,
+        () => undefined
+      ),
+    new Promise<undefined>((resolve) =>
+      window.setTimeout(() => resolve(undefined), SHOPIFY_STATE_TIMEOUT_MS)
+    ),
+  ]);
+
+const setupContextualTabs = (
+  url: string | undefined,
+  tabId: number | undefined
+): void => {
+  const onInstagram = url ? isInstagramUrl(url) : false;
+  const onGitHub = url ? isGitHubUrl(url) : false;
+  const onChess = url ? isChessUrl(url) : false;
+  const onClaude = url ? isClaudeUrl(url) : false;
+
+  instaTabBtn?.classList.toggle('hidden', !onInstagram);
+  githubTabBtn?.classList.toggle('hidden', !onGitHub);
+  chessTabBtn?.classList.toggle('hidden', !onChess);
+  claudeTabBtn?.classList.toggle('hidden', !onClaude);
+
+  if (onInstagram) return void activateTab('insta');
+  if (onGitHub) return void activateTab('github');
+  if (onChess) return void activateTab('chess');
+  if (onClaude) return void activateTab('claude');
+
+  if (tabId == null) return;
+  void getShopifyState(tabId).then((result) => {
+    if (!result) return;
+    shopifyTabBtn?.classList.remove('hidden');
+    activateTab('shopify');
+  });
 };
 
 chrome.tabs.query({ active: true, currentWindow: true }, ([tab]) => {
@@ -123,15 +193,7 @@ chrome.tabs.query({ active: true, currentWindow: true }, ([tab]) => {
       }
     }
   }
-  const onInstagram = url ? isInstagramUrl(url) : false;
-  const onGitHub = url ? isGitHubUrl(url) : false;
-  instaTabBtn?.classList.toggle('hidden', !onInstagram);
-  githubTabBtn?.classList.toggle('hidden', !onGitHub);
-  if (onInstagram) {
-    activateTab('insta');
-  } else if (onGitHub) {
-    activateTab('github');
-  }
+  setupContextualTabs(url, tab?.id);
 });
 
 const renderIndicators = (
@@ -510,3 +572,139 @@ copyBtn.addEventListener('click', async () => {
     setStatus('Copy not supported in this context.', 'err');
   }
 });
+
+const renderSoundState = (state: SoundState): void => {
+  const tabs = state.tabs;
+  if (soundPlayingCount) {
+    const playing = tabs.filter((tab) => tab.audible && !tab.muted).length;
+    soundPlayingCount.textContent = `${playing} playing`;
+  }
+  if (!soundTabList) return;
+  soundTabList.replaceChildren();
+  if (tabs.length === 0) {
+    const empty = document.createElement('li');
+    empty.className = 'sound-empty';
+    empty.textContent = 'No tabs';
+    soundTabList.append(empty);
+    return;
+  }
+  for (const tab of tabs) {
+    soundTabList.append(buildSoundRow(tab));
+  }
+};
+
+const buildSoundRow = (tab: SoundTabInfo): HTMLLIElement => {
+  const row = document.createElement('li');
+  row.className =
+    'sound-row' + (tab.audible ? ' audible' : '') + (tab.muted ? ' muted' : '');
+
+  const favicon = document.createElement('img');
+  favicon.className = 'sound-favicon';
+  favicon.alt = '';
+  if (tab.favIconUrl) favicon.src = tab.favIconUrl;
+
+  const info = document.createElement('div');
+  info.className = 'sound-info';
+  const title = document.createElement('div');
+  title.className = 'sound-title';
+  title.textContent = tab.title || 'Untitled';
+  const meta = document.createElement('div');
+  meta.className = 'sound-meta';
+  meta.textContent = tab.audible ? '♪ playing' : tab.hostname || '—';
+  info.append(title, meta);
+
+  const toggle = document.createElement('button');
+  toggle.type = 'button';
+  toggle.className = 'btn-secondary sound-toggle';
+  toggle.textContent = tab.muted ? 'Unmute' : 'Mute';
+  toggle.addEventListener('click', () => {
+    void sendSoundAction({
+      action: SOUND_MUTE_TAB_ACTION,
+      tabId: tab.tabId,
+      muted: !tab.muted,
+    });
+  });
+
+  row.append(favicon, info, toggle);
+  return row;
+};
+
+const soundStateKey = (state: SoundState): string =>
+  state.tabs
+    .map(
+      (tab) =>
+        `${tab.tabId}:${tab.audible ? 'a' : '-'}:${tab.muted ? 'm' : '-'}`
+    )
+    .join('|');
+
+let renderedSoundKey = '';
+
+const applySoundReply = (reply: unknown): void => {
+  const state = reply as SoundState | undefined;
+  if (!state?.tabs) return;
+  const key = soundStateKey(state);
+  if (key === renderedSoundKey) return;
+  renderedSoundKey = key;
+  renderSoundState(state);
+};
+
+const sendSoundAction = (payload: unknown): void => {
+  chrome.runtime.sendMessage(payload, (reply) => {
+    if (chrome.runtime.lastError) {
+      soundLog.debug(
+        'sendMessage lastError:',
+        chrome.runtime.lastError.message
+      );
+      void chrome.runtime.lastError;
+      return;
+    }
+    soundLog.debug('reply received');
+    applySoundReply(reply);
+  });
+};
+
+const SOUND_REFRESH_MS = 1500;
+
+let soundPollTimer: number | null = null;
+
+const startSoundPolling = (): void => {
+  if (soundPollTimer != null) return;
+  soundPollTimer = window.setInterval(() => {
+    sendSoundAction({ action: GET_SOUND_STATE_ACTION });
+  }, SOUND_REFRESH_MS);
+};
+
+const stopSoundPolling = (): void => {
+  if (soundPollTimer == null) return;
+  window.clearInterval(soundPollTimer);
+  soundPollTimer = null;
+};
+
+document.addEventListener('visibilitychange', () => {
+  soundLog.debug('visibility change →', document.visibilityState);
+  if (document.visibilityState === 'hidden') {
+    stopSoundPolling();
+  } else {
+    startSoundPolling();
+  }
+});
+
+soundMuteAllBtn?.addEventListener('click', () => {
+  void sendSoundAction({ action: SOUND_MUTE_ALL_ACTION, muted: true });
+});
+
+soundMuteOthersBtn?.addEventListener('click', () => {
+  chrome.tabs.query({ active: true, currentWindow: true }, ([tab]) => {
+    if (tab?.id == null) return;
+    void sendSoundAction({ action: SOUND_MUTE_OTHERS_ACTION, tabId: tab.id });
+  });
+});
+
+chrome.runtime.onMessage.addListener((message) => {
+  if (message?.action !== SOUND_STATE_CHANGED_ACTION) return;
+  applySoundReply(message.state);
+});
+
+startSoundPolling();
+soundLog.debug('popup ready, visibility', document.visibilityState);
+sendSoundAction({ action: GET_SOUND_STATE_ACTION });

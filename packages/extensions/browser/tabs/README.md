@@ -2,8 +2,8 @@
 
 Redirect every new tab to the hieudoanm home page, block distracting sites and
 ads, keep GitHub routing external links to new tabs, detect Shopify stores,
-track Claude.ai API rate-limit usage, and capture the current tab as a
-screenshot, all from one toolbar button.
+track Claude.ai API rate-limit usage, control tab sound, and capture the current
+tab as a screenshot, all from one toolbar button.
 
 Features:
 
@@ -25,6 +25,9 @@ Features:
 - **Claude** — on Claude.ai, daily and weekly API rate-limit usage is read from
   the /rate_limits and /usage responses and shown in a toolbar badge and the
   popup (toggleable from the popup).
+- **Sound** — every tab is listed with a ♪ marker while it is playing audio;
+  mute or unmute any individual tab, mute all tabs, or mute all tabs except
+  the current one (no config, works in the popup).
 - **Current view** — a snapshot of exactly what is visible on screen.
 - **Full page** — scrolls through the whole page, stitches the screenshots
   together, and downloads the full-length image.

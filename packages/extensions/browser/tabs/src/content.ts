@@ -1,4 +1,5 @@
 import { maybeRunAdsBlocker } from './lib/ads';
+import { registerAudioDetection } from './lib/audio';
 import { maybeRenderBlockWall } from './lib/block';
 import { registerChessFocus } from './lib/chess';
 import { registerClaudeUsage } from './lib/claude';
@@ -23,6 +24,10 @@ registerClaudeUsage();
 registerExternalLinkRouting();
 registerInstaGesture();
 registerShopifyDetection();
+
+if (navigator.userAgent.includes('Firefox')) {
+  registerAudioDetection();
+}
 
 const getLayout = (): LayoutInfo => ({
   scrollHeight: document.documentElement.scrollHeight,
