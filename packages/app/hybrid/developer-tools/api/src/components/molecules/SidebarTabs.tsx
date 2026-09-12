@@ -4,6 +4,8 @@ import { type FC } from 'react';
 
 type SidebarSection = 'history' | 'collections' | 'runner' | 'design';
 
+export type { SidebarSection };
+
 interface SidebarTabsProps {
   value: SidebarSection;
   onChange: (tab: SidebarSection) => void;

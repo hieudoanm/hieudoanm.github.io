@@ -7,7 +7,7 @@ interface PageTransitionProps {
 }
 
 export const PageTransition: FC<PageTransitionProps> = ({ children }) => (
-  <div className="animate-in fade-in slide-in-from-bottom-3 duration-200">
+  <div className="animate-in fade-in slide-in-from-bottom-3 h-full duration-200">
     {children}
   </div>
 );

@@ -20,7 +20,7 @@ const PageTransitionTemplate: FC<{ children: ReactNode }> = ({ children }) => {
   }, []);
 
   return (
-    <div ref={ref} className={ready ? 'animate-page-in' : ''}>
+    <div ref={ref} className={ready ? 'animate-page-in h-full' : ''}>
       {children}
     </div>
   );

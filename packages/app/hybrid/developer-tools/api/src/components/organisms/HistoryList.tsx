@@ -67,7 +67,7 @@ export const HistoryList: FC<HistoryListProps> = ({
           <p className="text-sm">No matching requests</p>
         </div>
       ) : (
-        <ul className="menu w-full gap-0.5 p-1">
+        <ul className="menu w-full gap-0.5">
           {filtered.map((entry) => (
             <HistoryEntryItem
               key={entry.id}

@@ -223,7 +223,7 @@ export const CollectionsPanel: FC<CollectionsPanelProps> = ({
         </div>
       )}
 
-      <ul className="menu w-full gap-0.5 p-1">
+      <ul className="menu w-full gap-0.5">
         {collections.map((collection) => (
           <li key={collection.id}>
             <details>

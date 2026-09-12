@@ -244,7 +244,9 @@ describe('ApiClient', () => {
     fireEvent.change(screen.getByLabelText('Sidebar section'), {
       target: { value: 'collections' },
     });
-    expect(screen.getByText('No collections yet')).toBeInTheDocument();
+    expect(
+      screen.getByText('Chess.com Published-Data API', { selector: 'span' })
+    ).toBeInTheDocument();
 
     fireEvent.change(screen.getByLabelText('Request URL'), {
       target: { value: 'https://api.example.com/users' },
@@ -292,7 +294,12 @@ describe('ApiClient', () => {
     fireEvent.change(screen.getByLabelText('Sidebar section'), {
       target: { value: 'runner' },
     });
-    expect(screen.getByText('My Collection')).toBeInTheDocument();
+    const option = screen
+      .getByText('My Collection')
+      .closest('option') as HTMLOptionElement;
+    fireEvent.change(screen.getByLabelText('Run collection'), {
+      target: { value: option.value },
+    });
     fireEvent.click(screen.getByText('Run'));
 
     expect(await screen.findByText('1/1 passed')).toBeInTheDocument();

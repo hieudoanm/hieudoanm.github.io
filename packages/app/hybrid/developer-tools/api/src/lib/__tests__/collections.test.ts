@@ -1,4 +1,5 @@
 import {
+  initialCollections,
   loadCollections,
   newCollection,
   newCollectionEntry,
@@ -170,6 +171,105 @@ describe('collection persistence', () => {
   it('returns empty array when not an array', () => {
     localStorage.setItem('api-client:collections', '{"x":1}');
     expect(loadCollections()).toEqual([]);
+  });
+});
+
+describe('initialCollections', () => {
+  beforeEach(() => {
+    localStorage.clear();
+  });
+
+  it('returns the preloaded collections when nothing is stored', () => {
+    const seeded = initialCollections();
+    expect(seeded.map((c) => c.name)).toEqual([
+      'Chess.com Published-Data API',
+      'Bored API',
+      'Crossref REST API',
+    ]);
+    expect(
+      seeded.some((c) =>
+        c.groups[0]?.entries.some(
+          (e) => e.request.url === 'https://api.chess.com/pub/player/erik'
+        )
+      )
+    ).toBe(true);
+    expect(
+      seeded.some((c) =>
+        c.groups[0]?.entries.some(
+          (e) => e.request.url === 'https://bored-api.appbrewery.com/random'
+        )
+      )
+    ).toBe(true);
+    expect(
+      seeded.some((c) =>
+        c.groups.some((g) =>
+          g.entries.some(
+            (e) =>
+              e.request.url ===
+              'https://api.crossref.org/works/10.1371/journal.pone.0185809'
+          )
+        )
+      )
+    ).toBe(true);
+  });
+
+  it('returns stored collections when the storage key exists', () => {
+    const collection = newCollection('API');
+    saveCollections([collection]);
+    expect(initialCollections()).toHaveLength(1);
+    expect(initialCollections()[0].name).toBe('API');
+  });
+
+  it('adds missing preloaded collections to legacy stored collections', () => {
+    localStorage.setItem(
+      'api-client:collections',
+      JSON.stringify([
+        {
+          ...newCollection('API'),
+          id: 'chess-com-published-data-api',
+          name: 'Chess.com Published-Data API',
+          groups: [],
+        },
+      ])
+    );
+    expect(initialCollections().map((c) => c.name)).toEqual([
+      'Chess.com Published-Data API',
+      'Bored API',
+      'Crossref REST API',
+    ]);
+  });
+
+  it('does not re-add a preloaded collection that was explicitly removed', () => {
+    localStorage.setItem('api-client:collections', '[]');
+    localStorage.setItem(
+      'api-client:collections:removed',
+      JSON.stringify(['chess-com-published-data-api'])
+    );
+    const seeded = initialCollections();
+    expect(seeded.map((c) => c.name)).toEqual([
+      'Bored API',
+      'Crossref REST API',
+    ]);
+  });
+
+  it('keeps user collections and preloads together', () => {
+    localStorage.setItem(
+      'api-client:collections',
+      JSON.stringify([newCollection('My API')])
+    );
+    localStorage.setItem('api-client:collections:removed', '[]');
+    const seeded = initialCollections();
+    expect(seeded.map((c) => c.name)).toEqual([
+      'My API',
+      'Chess.com Published-Data API',
+      'Bored API',
+      'Crossref REST API',
+    ]);
+  });
+
+  it('does not re-seed when all collections were deleted', () => {
+    saveCollections([]);
+    expect(initialCollections()).toEqual([]);
   });
 });
 

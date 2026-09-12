@@ -1,3 +1,7 @@
+import boredCollection from '../../public/collections/bored.collection.json';
+import chessCollection from '../../public/collections/chess.collection.json';
+import crossrefCollection from '../../public/collections/crossref.collection.json';
+
 import {
   CollectionEntry,
   RequestCollection,
@@ -5,6 +9,12 @@ import {
   RequestExample,
   RequestGroup,
 } from '@/types/api-client';
+
+const PRELOADED_COLLECTIONS: RequestCollection[] = [
+  chessCollection as unknown as RequestCollection,
+  boredCollection as unknown as RequestCollection,
+  crossrefCollection as unknown as RequestCollection,
+];
 
 const uid = (): string => Math.random().toString(36).slice(2, 10);
 
@@ -80,6 +90,7 @@ export const saveEntry = (
 };
 
 const COLLECTIONS_KEY = 'api-client:collections';
+const REMOVED_KEY = 'api-client:collections:removed';
 
 export const loadCollections = (): RequestCollection[] => {
   try {
@@ -92,12 +103,48 @@ export const loadCollections = (): RequestCollection[] => {
   }
 };
 
+const loadRemovedIds = (): Set<string> => {
+  try {
+    const raw = localStorage.getItem(REMOVED_KEY);
+    if (!raw) return new Set();
+    const parsed: unknown = JSON.parse(raw);
+    const ids = Array.isArray(parsed)
+      ? parsed.filter((id): id is string => typeof id === 'string')
+      : [];
+    return new Set(ids);
+  } catch {
+    return new Set();
+  }
+};
+
 export const saveCollections = (collections: RequestCollection[]): void => {
+  const present = new Set(collections.map((collection) => collection.id));
+  const removed = [...PRELOADED_COLLECTIONS]
+    .map((collection) => collection.id)
+    .filter((id) => !present.has(id));
   try {
     localStorage.setItem(COLLECTIONS_KEY, JSON.stringify(collections));
   } catch {
     // storage full or unavailable — ignore
   }
+  try {
+    localStorage.setItem(REMOVED_KEY, JSON.stringify(removed));
+  } catch {
+    // storage full or unavailable — ignore
+  }
+};
+
+export const initialCollections = (): RequestCollection[] => {
+  const stored = loadCollections();
+  const storedIds = new Set(stored.map((collection) => collection.id));
+  const removed = loadRemovedIds();
+  const preloads = PRELOADED_COLLECTIONS.filter(
+    (collection) => !removed.has(collection.id)
+  );
+  return [
+    ...stored,
+    ...preloads.filter((collection) => !storedIds.has(collection.id)),
+  ];
 };
 
 export const upsertExample = (

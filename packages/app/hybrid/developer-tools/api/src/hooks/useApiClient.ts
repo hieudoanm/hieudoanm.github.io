@@ -1,7 +1,14 @@
 'use client';
 
-import { useCallback, useEffect, useRef, useState } from 'react';
-
+import { FormFiles } from '@/lib/body';
+import { initialCollections, saveCollections } from '@/lib/collections';
+import {
+  loadCookies,
+  mergeCookies,
+  parseSetCookies,
+  saveCookies,
+  setCookieLines,
+} from '@/lib/cookies';
 import {
   addHistoryEntry,
   emptyRequest,
@@ -13,17 +20,8 @@ import {
   saveHistory,
   saveTabs,
 } from '@/lib/http';
-import { loadCollections, saveCollections } from '@/lib/collections';
 import { tryMock } from '@/lib/mock';
 import { loadEnvironment, saveEnvironment } from '@/lib/variables';
-import {
-  loadCookies,
-  mergeCookies,
-  parseSetCookies,
-  saveCookies,
-  setCookieLines,
-} from '@/lib/cookies';
-import { FormFiles } from '@/lib/body';
 import {
   EnvironmentVariable,
   HistoryEntry,
@@ -34,6 +32,7 @@ import {
   ResponseMeta,
   StoredCookie,
 } from '@/types/api-client';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 export interface UseApiClient {
   tabs: RequestTab[];
@@ -82,7 +81,7 @@ export const useApiClient = (): UseApiClient => {
   );
   const [history, setHistory] = useState<HistoryEntry[]>([]);
   const [collections, setCollections] =
-    useState<RequestCollection[]>(loadCollections);
+    useState<RequestCollection[]>(initialCollections);
   const [env, setEnv] = useState<EnvironmentVariable[]>(loadEnvironment);
   const [cookies, setCookies] = useState<StoredCookie[]>(loadCookies);
   const [protocol, setProtocol] = useState<RequestProtocol>('http');

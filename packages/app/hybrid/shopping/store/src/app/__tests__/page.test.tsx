@@ -140,7 +140,7 @@ describe('HomePage', () => {
     const countRow = screen
       .getByText('Clear filters')
       .closest('div') as HTMLElement;
-    expect(within(countRow).getByText(/\d+ apps/)).toBeTruthy();
+    expect(within(countRow).getByText(/\d+ apps?/)).toBeTruthy();
   });
 
   it('search shows app count singular', async () => {

@@ -1,0 +1,840 @@
+{
+  "id": "crossref-rest-api",
+  "name": "Crossref REST API",
+  "groups": [
+    {
+      "id": "members",
+      "name": "Members",
+      "entries": [
+        {
+          "id": "get-members-id-works",
+          "name": "GET /members/{id}/works",
+          "request": {
+            "method": "GET",
+            "url": "https://api.crossref.org/members/98/works?rows=2",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        },
+        {
+          "id": "get-members-id",
+          "name": "GET /members/{id}",
+          "request": {
+            "method": "GET",
+            "url": "https://api.crossref.org/members/98",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        },
+        {
+          "id": "get-members",
+          "name": "GET /members",
+          "request": {
+            "method": "GET",
+            "url": "https://api.crossref.org/members",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "journals",
+      "name": "Journals",
+      "entries": [
+        {
+          "id": "get-journals",
+          "name": "GET /journals",
+          "request": {
+            "method": "GET",
+            "url": "https://api.crossref.org/journals",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        },
+        {
+          "id": "get-journals-issn",
+          "name": "GET /journals/{issn}",
+          "request": {
+            "method": "GET",
+            "url": "https://api.crossref.org/journals/0028-0836",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        },
+        {
+          "id": "get-journals-issn-works",
+          "name": "GET /journals/{issn}/works",
+          "request": {
+            "method": "GET",
+            "url": "https://api.crossref.org/journals/0028-0836/works?rows=2",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "prefixes",
+      "name": "Prefixes",
+      "entries": [
+        {
+          "id": "get-prefixes-prefix-works",
+          "name": "GET /prefixes/{prefix}/works",
+          "request": {
+            "method": "GET",
+            "url": "https://api.crossref.org/prefixes/10.9770/works?rows=2",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        },
+        {
+          "id": "get-prefixes-prefix",
+          "name": "GET /prefixes/{prefix}",
+          "request": {
+            "method": "GET",
+            "url": "https://api.crossref.org/prefixes/10.9770",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "funders",
+      "name": "Funders",
+      "entries": [
+        {
+          "id": "get-funders-id-works",
+          "name": "GET /funders/{id}/works",
+          "request": {
+            "method": "GET",
+            "url": "https://api.crossref.org/funders/501100000692/works?rows=2",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        },
+        {
+          "id": "get-funders-id",
+          "name": "GET /funders/{id}",
+          "request": {
+            "method": "GET",
+            "url": "https://api.crossref.org/funders/501100000692",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        },
+        {
+          "id": "get-funders",
+          "name": "GET /funders",
+          "request": {
+            "method": "GET",
+            "url": "https://api.crossref.org/funders",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "types",
+      "name": "Types",
+      "entries": [
+        {
+          "id": "get-types-id",
+          "name": "GET /types/{id}",
+          "request": {
+            "method": "GET",
+            "url": "https://api.crossref.org/types/journal-article",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        },
+        {
+          "id": "get-types",
+          "name": "GET /types",
+          "request": {
+            "method": "GET",
+            "url": "https://api.crossref.org/types",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        },
+        {
+          "id": "get-types-id-works",
+          "name": "GET /types/{id}/works",
+          "request": {
+            "method": "GET",
+            "url": "https://api.crossref.org/types/journal-article/works",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "licenses",
+      "name": "Licenses",
+      "entries": [
+        {
+          "id": "get-licenses",
+          "name": "GET /licenses",
+          "request": {
+            "method": "GET",
+            "url": "https://api.crossref.org/licenses",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "works",
+      "name": "Works",
+      "entries": [
+        {
+          "id": "get-works-doi",
+          "name": "GET /works/{doi}",
+          "request": {
+            "method": "GET",
+            "url": "https://api.crossref.org/works/10.1371/journal.pone.0185809",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        },
+        {
+          "id": "get-works",
+          "name": "GET /works",
+          "request": {
+            "method": "GET",
+            "url": "https://api.crossref.org/works?rows=2&query=crispr",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        },
+        {
+          "id": "get-works-doi-agency",
+          "name": "GET /works/{doi}/agency",
+          "request": {
+            "method": "GET",
+            "url": "https://api.crossref.org/works/10.1371/journal.pone.0185809/agency",
+            "params": [
+              {
+                "id": "p",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "headers": [
+              {
+                "id": "h",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "body": "",
+            "bodyType": "raw",
+            "formData": [
+              {
+                "id": "f",
+                "key": "",
+                "value": "",
+                "enabled": true
+              }
+            ],
+            "graphqlQuery": "",
+            "graphqlVariables": "",
+            "authType": "none",
+            "token": "",
+            "username": "",
+            "password": "",
+            "timeoutMs": "",
+            "redirect": "follow",
+            "preRequestScript": "",
+            "testScript": ""
+          }
+        }
+      ]
+    }
+  ]
+}

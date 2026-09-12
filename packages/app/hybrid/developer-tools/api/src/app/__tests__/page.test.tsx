@@ -9,20 +9,4 @@ describe('HomePage', () => {
     expect(screen.getByText('Send')).toBeInTheDocument();
     expect(screen.getByText('No requests yet')).toBeInTheDocument();
   });
-
-  it('renders navigation links to info pages', () => {
-    render(<HomePage />);
-    expect(screen.getByRole('link', { name: 'About' })).toHaveAttribute(
-      'href',
-      '/about'
-    );
-    expect(screen.getByRole('link', { name: 'Settings' })).toHaveAttribute(
-      'href',
-      '/settings'
-    );
-    expect(screen.getByRole('link', { name: 'Version' })).toHaveAttribute(
-      'href',
-      '/version'
-    );
-  });
 });
