@@ -1,6 +1,3 @@
-start-8-bit:
-	pnpm run dev --filter=@hieudoanm.github.io/8-bit
-
 start-api:
 	pnpm run dev --filter=@hieudoanm.github.io/api
 
@@ -70,9 +67,6 @@ start-mri:
 start-music:
 	pnpm run dev --filter=@hieudoanm.github.io/music
 
-start-nikoli:
-	pnpm run dev --filter=@hieudoanm.github.io/nikoli
-
 start-password:
 	pnpm run dev --filter=@hieudoanm.github.io/password
 
@@ -99,9 +93,6 @@ start-store:
 
 start-svg:
 	pnpm run dev --filter=@hieudoanm.github.io/svg
-
-start-tic-tac-toe:
-	pnpm run dev --filter=@hieudoanm.github.io/tic-tac-toe
 
 start-tourney:
 	pnpm run dev --filter=@hieudoanm.github.io/tourney

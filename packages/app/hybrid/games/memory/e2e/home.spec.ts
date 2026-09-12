@@ -16,8 +16,17 @@ test.describe('Home Page', () => {
     await expect(page).toHaveTitle(/Memory/);
   });
 
-  test('all 4 game cards are visible', async ({ page }) => {
-    const gameNames = ['Memory Match', 'Pi', 'N-Back', 'Recall'];
+  test('all 8 game cards are visible', async ({ page }) => {
+    const gameNames = [
+      'Memory Match',
+      'Pi',
+      'N-Back',
+      'Recall',
+      'Puzzles',
+      'Nikoli',
+      'Tic-Tac-Toe',
+      '8-Bit',
+    ];
 
     for (const name of gameNames) {
       await expect(page.getByText(name, { exact: true })).toBeVisible();

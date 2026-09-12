@@ -810,48 +810,6 @@
     "id": "editors"
   },
   {
-    "label": "Puzzle",
-    "items": [
-      {
-        "label": "2048",
-        "description": "Merge tiles",
-        "icon": "PiNumberSquareOne",
-        "type": "app",
-        "typeId": "App",
-        "sectionId": "puzzle",
-        "toolId": "game2048"
-      },
-      {
-        "label": "Lights Out",
-        "description": "Toggle all lights off",
-        "icon": "PiLamp",
-        "type": "app",
-        "typeId": "App",
-        "sectionId": "puzzle",
-        "toolId": "lights-out"
-      },
-      {
-        "label": "Sliding Puzzle",
-        "description": "Upload & slide tiles",
-        "icon": "PiSnowflake",
-        "type": "app",
-        "typeId": "App",
-        "sectionId": "puzzle",
-        "toolId": "sliding-puzzle"
-      },
-      {
-        "label": "Towers",
-        "description": "Towers of Hanoi",
-        "icon": "PiBuilding",
-        "type": "app",
-        "typeId": "App",
-        "sectionId": "puzzle",
-        "toolId": "towers"
-      }
-    ],
-    "id": "puzzle"
-  },
-  {
     "label": "Trivia",
     "items": [
       {

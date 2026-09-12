@@ -158,16 +158,6 @@
 │   │   │   │   │   ├── doi/
 │   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/education/doi/page.tsx)
 │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/education/page.tsx)
-│   │   │   │   ├── puzzle/
-│   │   │   │   │   ├── game2048/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/puzzle/game2048/page.tsx)
-│   │   │   │   │   ├── lights-out/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/puzzle/lights-out/page.tsx)
-│   │   │   │   │   ├── sliding-puzzle/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/puzzle/sliding-puzzle/page.tsx)
-│   │   │   │   │   ├── towers/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/puzzle/towers/page.tsx)
-│   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/puzzle/page.tsx)
 │   │   │   │   ├── trivia/
 │   │   │   │   │   ├── palindrome/
 │   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/trivia/palindrome/page.tsx)
@@ -1782,51 +1772,6 @@
 │   │   │   │   │   │   └── [DOI.test.tsx](./src/components/routes/apps/education/__tests__/DOI.test.tsx)
 │   │   │   │   │   └── data/
 │   │   │   │   │       └── [twinkle-twinkle-little-star.ts](./src/components/routes/apps/education/data/twinkle-twinkle-little-star.ts)
-│   │   │   │   ├── puzzle/
-│   │   │   │   │   ├── Game2048/
-│   │   │   │   │   │   ├── utils/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   └── [game.test.ts](./src/components/routes/apps/puzzle/Game2048/utils/__tests__/game.test.ts)
-│   │   │   │   │   │   │   └── [game.ts](./src/components/routes/apps/puzzle/Game2048/utils/game.ts)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/puzzle/Game2048/AGENTS.md)
-│   │   │   │   │   │   ├── [constants.ts](./src/components/routes/apps/puzzle/Game2048/constants.ts)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/puzzle/Game2048/index.tsx)
-│   │   │   │   │   │   └── [types.ts](./src/components/routes/apps/puzzle/Game2048/types.ts)
-│   │   │   │   │   ├── LightsOut/
-│   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   ├── [LightsOut.test.tsx](./src/components/routes/apps/puzzle/LightsOut/__tests__/LightsOut.test.tsx)
-│   │   │   │   │   │   │   ├── [useLightsOut.test.ts](./src/components/routes/apps/puzzle/LightsOut/__tests__/useLightsOut.test.ts)
-│   │   │   │   │   │   │   └── [utils.test.ts](./src/components/routes/apps/puzzle/LightsOut/__tests__/utils.test.ts)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/puzzle/LightsOut/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/puzzle/LightsOut/index.tsx)
-│   │   │   │   │   │   ├── [useLightsOut.ts](./src/components/routes/apps/puzzle/LightsOut/useLightsOut.ts)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/apps/puzzle/LightsOut/utils.ts)
-│   │   │   │   │   ├── SlidingPuzzle/
-│   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   ├── __snapshots__/
-│   │   │   │   │   │   │   │   └── [SlidingPuzzle.test.tsx.snap](./src/components/routes/apps/puzzle/SlidingPuzzle/__tests__/__snapshots__/SlidingPuzzle.test.tsx.snap)
-│   │   │   │   │   │   │   ├── [SlidingPuzzle.test.tsx](./src/components/routes/apps/puzzle/SlidingPuzzle/__tests__/SlidingPuzzle.test.tsx)
-│   │   │   │   │   │   │   ├── [useSlidingPuzzle.test.ts](./src/components/routes/apps/puzzle/SlidingPuzzle/__tests__/useSlidingPuzzle.test.ts)
-│   │   │   │   │   │   │   └── [utils.test.ts](./src/components/routes/apps/puzzle/SlidingPuzzle/__tests__/utils.test.ts)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/puzzle/SlidingPuzzle/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/puzzle/SlidingPuzzle/index.tsx)
-│   │   │   │   │   │   ├── [useSlidingPuzzle.ts](./src/components/routes/apps/puzzle/SlidingPuzzle/useSlidingPuzzle.ts)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/apps/puzzle/SlidingPuzzle/utils.ts)
-│   │   │   │   │   ├── Towers/
-│   │   │   │   │   │   ├── utils/
-│   │   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   │   └── [towers.test.ts](./src/components/routes/apps/puzzle/Towers/utils/__tests__/towers.test.ts)
-│   │   │   │   │   │   │   └── [towers.ts](./src/components/routes/apps/puzzle/Towers/utils/towers.ts)
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/puzzle/Towers/AGENTS.md)
-│   │   │   │   │   │   ├── [constants.ts](./src/components/routes/apps/puzzle/Towers/constants.ts)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/puzzle/Towers/index.tsx)
-│   │   │   │   │   │   └── [types.ts](./src/components/routes/apps/puzzle/Towers/types.ts)
-│   │   │   │   │   └── __tests__/
-│   │   │   │   │       ├── __snapshots__/
-│   │   │   │   │       │   ├── [Game2048.test.tsx.snap](./src/components/routes/apps/puzzle/__tests__/__snapshots__/Game2048.test.tsx.snap)
-│   │   │   │   │       │   └── [Towers.test.tsx.snap](./src/components/routes/apps/puzzle/__tests__/__snapshots__/Towers.test.tsx.snap)
-│   │   │   │   │       ├── [Game2048.test.tsx](./src/components/routes/apps/puzzle/__tests__/Game2048.test.tsx)
-│   │   │   │   │       └── [Towers.test.tsx](./src/components/routes/apps/puzzle/__tests__/Towers.test.tsx)
 │   │   │   │   ├── trivia/
 │   │   │   │   │   ├── Palindrome/
 │   │   │   │   │   │   ├── utils/

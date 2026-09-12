@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://hieudoanm.github.io/free/tic-tac-toe/sitemap.xml
