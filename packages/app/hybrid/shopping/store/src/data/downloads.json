@@ -1766,22 +1766,6 @@
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-snap-latest/Snap.dmg"
           }
         ]
-      },
-      {
-        "label": "Top",
-        "primaryCategory": "Utilities",
-        "secondaryCategory": "",
-        "icon": "PiTimer",
-        "href": "https://hieudoanm.github.io/free/top",
-        "version": "latest",
-        "lastUpdated": "2025-01-01",
-        "fileSize": "",
-        "actions": [
-          {
-            "label": ".dmg",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-top-latest/Top.dmg"
-          }
-        ]
       }
     ]
   },

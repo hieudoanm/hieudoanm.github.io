@@ -4,16 +4,16 @@ import { PiMemory } from 'react-icons/pi';
 
 const GAMES = [
   {
+    name: '8-Bit',
+    description: 'Maze, Snake, Dino Run and more',
+    icon: PiMemory,
+    href: '/8-bit/',
+  },
+  {
     name: 'Memory',
     description: 'Emoji card pairing grid, Pi digit memorization, and more',
     icon: PiMemory,
     href: '/memory/',
-  },
-  {
-    name: 'Puzzles',
-    description: '2048, Lights Out, Towers and more',
-    icon: PiMemory,
-    href: '/puzzles/',
   },
   {
     name: 'Nikoli',
@@ -22,16 +22,16 @@ const GAMES = [
     href: '/nikoli/',
   },
   {
+    name: 'Puzzles',
+    description: '2048, Lights Out, Towers and more',
+    icon: PiMemory,
+    href: '/puzzles/',
+  },
+  {
     name: 'Tic-Tac-Toe',
     description: 'Classic, Reverse, Duck, Wild and more',
     icon: PiMemory,
     href: '/tic-tac-toe/',
-  },
-  {
-    name: '8-Bit',
-    description: 'Maze, Snake, Dino Run and more',
-    icon: PiMemory,
-    href: '/8-bit/',
   },
 ];
 

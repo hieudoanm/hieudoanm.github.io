@@ -16,12 +16,14 @@
 │   └── [Info.plist](./Resources/Info.plist)
 ├── Sources/
 │   ├── App/
+│   │   ├── [AppsViewModel.swift](./Sources/App/AppsViewModel.swift)
 │   │   ├── [ClipboardViewModel.swift](./Sources/App/ClipboardViewModel.swift)
 │   │   ├── [GaugeApp.swift](./Sources/App/GaugeApp.swift)
 │   │   ├── [GaugeViewModel.swift](./Sources/App/GaugeViewModel.swift)
 │   │   ├── [IPViewModel.swift](./Sources/App/IPViewModel.swift)
 │   │   ├── [LaunchAtLogin.swift](./Sources/App/LaunchAtLogin.swift)
 │   │   ├── [MenuBarIcon.swift](./Sources/App/MenuBarIcon.swift)
+│   │   ├── [MenuBarPanelPositioner.swift](./Sources/App/MenuBarPanelPositioner.swift)
 │   │   ├── [NetworkViewModel.swift](./Sources/App/NetworkViewModel.swift)
 │   │   └── [PortsViewModel.swift](./Sources/App/PortsViewModel.swift)
 │   ├── Core/
@@ -38,6 +40,7 @@
 │   │   │   ├── [NetworkSnapshots.swift](./Sources/Core/Models/NetworkSnapshots.swift)
 │   │   │   ├── [NetworkStats.swift](./Sources/Core/Models/NetworkStats.swift)
 │   │   │   ├── [PortInfo.swift](./Sources/Core/Models/PortInfo.swift)
+│   │   │   ├── [RunningAppInfo.swift](./Sources/Core/Models/RunningAppInfo.swift)
 │   │   │   ├── [SwapStats.swift](./Sources/Core/Models/SwapStats.swift)
 │   │   │   ├── [SystemInfo.swift](./Sources/Core/Models/SystemInfo.swift)
 │   │   │   └── [UsageThreshold.swift](./Sources/Core/Models/UsageThreshold.swift)
@@ -49,6 +52,8 @@
 │   │   │   ├── [NetworkInterfaceClassifying.swift](./Sources/Core/Services/NetworkInterfaceClassifying.swift)
 │   │   │   ├── [PortDiscovering.swift](./Sources/Core/Services/PortDiscovering.swift)
 │   │   │   ├── [ProcessTerminating.swift](./Sources/Core/Services/ProcessTerminating.swift)
+│   │   │   ├── [RunningAppProviding.swift](./Sources/Core/Services/RunningAppProviding.swift)
+│   │   │   ├── [RunningAppsDiscoveryService.swift](./Sources/Core/Services/RunningAppsDiscoveryService.swift)
 │   │   │   └── [SignalProcessTerminator.swift](./Sources/Core/Services/SignalProcessTerminator.swift)
 │   │   ├── [ByteFormatter.swift](./Sources/Core/ByteFormatter.swift)
 │   │   └── [SettingsStore.swift](./Sources/Core/SettingsStore.swift)
@@ -66,6 +71,9 @@
 │   │   ├── [SwapMonitor.swift](./Sources/Services/SwapMonitor.swift)
 │   │   └── [SystemInfoMonitor.swift](./Sources/Services/SystemInfoMonitor.swift)
 │   └── Views/
+│       ├── [AppRow.swift](./Sources/Views/AppRow.swift)
+│       ├── [AppsListView.swift](./Sources/Views/AppsListView.swift)
+│       ├── [AppsView.swift](./Sources/Views/AppsView.swift)
 │       ├── [CPUView.swift](./Sources/Views/CPUView.swift)
 │       ├── [ClipboardView.swift](./Sources/Views/ClipboardView.swift)
 │       ├── [DetailsView.swift](./Sources/Views/DetailsView.swift)
@@ -101,7 +109,8 @@
 │       ├── Services/
 │       │   ├── [IPInfoParsingTests.swift](./Tests/Core/Services/IPInfoParsingTests.swift)
 │       │   ├── [LsofParserTests.swift](./Tests/Core/Services/LsofParserTests.swift)
-│       │   └── [ProcessTerminationTests.swift](./Tests/Core/Services/ProcessTerminationTests.swift)
+│       │   ├── [ProcessTerminationTests.swift](./Tests/Core/Services/ProcessTerminationTests.swift)
+│       │   ├── [RunningAppsDiscoveryTests.swift](./Tests/Core/Services/RunningAppsDiscoveryTests.swift)
 │       ├── [ByteFormatterTests.swift](./Tests/Core/ByteFormatterTests.swift)
 │       └── [SettingsStoreTests.swift](./Tests/Core/SettingsStoreTests.swift)
 ├── [AGENTS.md](./AGENTS.md)

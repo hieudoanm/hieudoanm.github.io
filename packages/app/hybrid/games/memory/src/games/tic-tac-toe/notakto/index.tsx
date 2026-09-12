@@ -14,19 +14,19 @@ export const Notakto = () => {
         and you <em>lose</em>!
       </p>
 
-      <div className="mb-4 grid grid-cols-3 gap-2">
+      <div className="mb-4 grid aspect-square w-full auto-rows-fr grid-cols-3 gap-2">
         {board.map((cell, i) => {
           const isLosingCell = loserCells?.includes(i);
           const owner = moves.findIndex((m) => m.idx === i);
           const textColor =
-            cell === 'X' ? (owner % 2 === 0 ? 'text-info' : 'text-error') : '';
+            cell === 'X' ? (owner % 2 === 0 ? 'text-white' : 'text-error') : '';
           return (
             <button
               key={`notakto-${i}`}
               type="button"
               data-testid={`cell-${i}`}
               onClick={() => play(i)}
-              className={`btn btn-square h-full w-full text-6xl ${
+              className={`btn h-full w-full text-6xl ${
                 isLosingCell ? 'btn-error' : 'btn-neutral'
               } ${textColor}`}>
               {cell}
@@ -48,15 +48,7 @@ export const Notakto = () => {
           </span>
         ) : (
           <span>
-            Player{' '}
-            <span
-              className={
-                current === 1
-                  ? 'text-info font-normal'
-                  : 'text-error font-normal'
-              }>
-              {current}
-            </span>{' '}
+            Player <span className="font-normal text-white">{current}</span>{' '}
             &apos;s turn
           </span>
         )}

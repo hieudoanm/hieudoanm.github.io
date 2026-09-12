@@ -4,8 +4,8 @@ import { useT3 } from './useT3';
 import { aboutToDisappear } from './utils';
 
 const MARK_COLOR: Record<string, string> = {
-  X: 'text-info',
-  O: 'text-error',
+  X: 'text-white',
+  O: 'text-white',
 };
 
 export const T3 = () => {
@@ -19,14 +19,14 @@ export const T3 = () => {
         the 4th, the <em>oldest</em> one disappears.
       </p>
 
-      <div className="mb-4 grid grid-cols-3 gap-2">
+      <div className="mb-4 grid aspect-square w-full auto-rows-fr grid-cols-3 gap-2">
         {board.map((value, i) => (
           <button
             key={`t3-${i}`}
             type="button"
             data-testid={`cell-${i}`}
             onClick={() => play(i)}
-            className={`btn btn-square h-full w-full text-6xl ${
+            className={`btn h-full w-full text-6xl ${
               winner?.cells.includes(i) ? 'btn-warning' : 'btn-neutral'
             } ${i === fading && !winner ? 'opacity-50' : ''} ${value ? MARK_COLOR[value] : ''}`}>
             {value}
@@ -43,15 +43,7 @@ export const T3 = () => {
           </span>
         ) : (
           <span>
-            Current:{' '}
-            <span
-              className={
-                current === 'X'
-                  ? 'text-info font-normal'
-                  : 'text-error font-normal'
-              }>
-              {current}
-            </span>
+            Current: <span className="font-normal text-white">{current}</span>
           </span>
         )}
       </div>

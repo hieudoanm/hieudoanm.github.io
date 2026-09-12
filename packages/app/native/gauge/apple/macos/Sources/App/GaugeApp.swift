@@ -8,6 +8,7 @@ struct GaugeApp: App {
     @StateObject private var viewModel = AppDelegate.viewModel
     @StateObject private var networkViewModel = AppDelegate.networkViewModel
     @StateObject private var portsViewModel = AppDelegate.portsViewModel
+    @StateObject private var appsViewModel = AppDelegate.appsViewModel
     @NSApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
 
     var body: some Scene {
@@ -17,7 +18,8 @@ struct GaugeApp: App {
                 ipViewModel: ipViewModel,
                 viewModel: viewModel,
                 networkViewModel: networkViewModel,
-                portsViewModel: portsViewModel
+                portsViewModel: portsViewModel,
+                appsViewModel: appsViewModel
             )
         } label: {
             MenuBarIcon(viewModel: viewModel)
@@ -50,11 +52,18 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     @MainActor
     static let portsViewModel = PortsViewModel(settingsStore: settingsStore)
 
+    @MainActor
+    static let appsViewModel = AppsViewModel()
+
+    @MainActor
+    static let menuBarPanelPositioner = MenuBarPanelPositioner.shared
+
     func applicationDidFinishLaunching(_ notification: Notification) {
         NSApp.setActivationPolicy(.accessory)
         Task { @MainActor in
             Self.networkViewModel.start()
             Self.portsViewModel.start()
+            Self.menuBarPanelPositioner.start()
         }
     }
 

@@ -3,8 +3,8 @@
 import { useDuck } from './useDuck';
 
 const MARK_COLOR: Record<string, string> = {
-  X: 'text-info',
-  O: 'text-error',
+  X: 'text-white',
+  O: 'text-white',
 };
 
 export const Duck = () => {
@@ -29,7 +29,7 @@ export const Duck = () => {
         opponent!
       </p>
 
-      <div className="mb-4 grid grid-cols-3 gap-2">
+      <div className="mb-4 grid aspect-square w-full auto-rows-fr grid-cols-3 gap-2">
         {board.map((value, i) => {
           const isDuck = duck === i;
           const isPending = pendingMark === i;
@@ -39,7 +39,7 @@ export const Duck = () => {
               type="button"
               data-testid={`cell-${i}`}
               onClick={() => play(i)}
-              className={`btn btn-square h-full w-full text-6xl ${
+              className={`btn h-full w-full text-6xl ${
                 winner?.cells.includes(i)
                   ? 'btn-warning'
                   : isDuck
@@ -69,14 +69,7 @@ export const Duck = () => {
           <span className="text-warning font-normal">Draw!</span>
         ) : (
           <span>
-            <span
-              className={
-                current === 'X'
-                  ? 'text-info font-normal'
-                  : 'text-error font-normal'
-              }>
-              {current}
-            </span>
+            <span className="font-normal text-white">{current}</span>
             {phase === 'mark' ? "'s turn — place mark" : "'s turn — move duck"}
           </span>
         )}

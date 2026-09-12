@@ -3,8 +3,8 @@
 import { useWild } from './useWild';
 
 const MARK_COLOR: Record<string, string> = {
-  X: 'text-info',
-  O: 'text-error',
+  X: 'text-white',
+  O: 'text-white',
 };
 
 export const Wild = () => {
@@ -50,14 +50,14 @@ export const Wild = () => {
         </button>
       </div>
 
-      <div className="mb-4 grid grid-cols-3 gap-2">
+      <div className="mb-4 grid aspect-square w-full auto-rows-fr grid-cols-3 gap-2">
         {board.map((value, i) => (
           <button
             key={`wild-${i}`}
             type="button"
             data-testid={`cell-${i}`}
             onClick={() => play(i)}
-            className={`btn btn-square h-full w-full text-6xl ${
+            className={`btn h-full w-full text-6xl ${
               winner?.cells.includes(i) ? 'btn-warning' : 'btn-neutral'
             } ${value ? MARK_COLOR[value] : ''}`}>
             {value}
@@ -76,7 +76,7 @@ export const Wild = () => {
           <span className="text-warning font-normal">Draw!</span>
         ) : (
           <span>
-            Player <span className="text-info font-normal">{current}</span>
+            Player <span className="font-normal text-white">{current}</span>
             &apos;s turn
           </span>
         )}

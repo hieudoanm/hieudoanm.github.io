@@ -7,6 +7,7 @@ struct MenuBarView: View {
     @ObservedObject var viewModel: GaugeViewModel
     @ObservedObject var networkViewModel: NetworkViewModel
     @ObservedObject var portsViewModel: PortsViewModel
+    @ObservedObject var appsViewModel: AppsViewModel
 
     private enum Tab: Hashable {
         case clipboard
@@ -14,6 +15,7 @@ struct MenuBarView: View {
         case memory
         case network
         case ports
+        case front
     }
 
     @State private var selectedTab: Tab = .memory
@@ -27,7 +29,7 @@ struct MenuBarView: View {
 
             content
         }
-        .frame(width: 360)
+        .frame(width: 480)
         .onAppear {
             viewModel.refresh()
             networkViewModel.start()
@@ -40,6 +42,7 @@ struct MenuBarView: View {
     private var tabBar: some View {
         Picker("Tab", selection: $selectedTab) {
             Text("Clipboard").tag(Tab.clipboard)
+            Text("Front").tag(Tab.front)
             Text("IP").tag(Tab.ip)
             Text("Memory").tag(Tab.memory)
             Text("Network").tag(Tab.network)
@@ -81,6 +84,9 @@ struct MenuBarView: View {
                 .transition(.opacity)
         case .ports:
             PortsView(viewModel: portsViewModel)
+                .transition(.opacity)
+        case .front:
+            AppsView(viewModel: appsViewModel)
                 .transition(.opacity)
         }
     }

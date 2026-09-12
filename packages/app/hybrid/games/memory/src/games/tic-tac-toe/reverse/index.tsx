@@ -3,8 +3,8 @@
 import { useReverse } from './useReverse';
 
 const MARK_COLOR: Record<string, string> = {
-  X: 'text-info',
-  O: 'text-error',
+  X: 'text-white',
+  O: 'text-white',
 };
 
 export const Reverse = () => {
@@ -19,14 +19,14 @@ export const Reverse = () => {
         <em>lose</em>!
       </p>
 
-      <div className="mb-4 grid grid-cols-3 gap-2">
+      <div className="mb-4 grid aspect-square w-full auto-rows-fr grid-cols-3 gap-2">
         {board.map((value, i) => (
           <button
             key={`reverse-${i}`}
             type="button"
             data-testid={`cell-${i}`}
             onClick={() => play(i)}
-            className={`btn btn-square h-full w-full text-6xl ${
+            className={`btn h-full w-full text-6xl ${
               loser?.cells.includes(i) ? 'btn-error' : 'btn-neutral'
             } ${value ? MARK_COLOR[value] : ''}`}>
             {value}
@@ -45,7 +45,7 @@ export const Reverse = () => {
           <span className="text-warning font-normal">Draw! Nobody lost.</span>
         ) : (
           <span>
-            Current: <span className="text-info font-normal">{current}</span>
+            Current: <span className="font-normal text-white">{current}</span>
           </span>
         )}
       </div>

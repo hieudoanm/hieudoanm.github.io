@@ -186,14 +186,13 @@
 
 ---
 
-### macOS (4)
+### macOS (3)
 
 | No  | Platform | Category  | Name    | Free                 | Releases                     |
 | --- | -------- | --------- | ------- | -------------------- | ---------------------------- |
 | 47  | macOS    | Utilities | Brewery | [Free][free-brewery] | [Releases][releases-brewery] |
 | 48  | macOS    | Utilities | Gauge   | [Free][free-gauge]   | [Releases][releases-gauge]   |
 | 49  | macOS    | Utilities | Snap    | [Free][free-snap]    | [Releases][releases-snap]    |
-| 50  | macOS    | Utilities | Top     | [Free][free-top]     | [Releases][releases-top]     |
 
 ---
 
