@@ -104,12 +104,11 @@
 
 ---
 
-#### Games (2)
+#### Games (1)
 
 | No  | Platform | Category | Name   | Free                | Releases                    |
 | --- | -------- | -------- | ------ | ------------------- | --------------------------- |
-| 21  | Hybrid   | Games    | Casino | [Free][free-casino] | [Releases][releases-casino] |
-| 22  | Hybrid   | Games    | Memory | [Free][free-memory] | [Releases][releases-memory] |
+| 21  | Hybrid   | Games    | Memory | [Free][free-memory] | [Releases][releases-memory] |
 
 ---
 
@@ -117,10 +116,10 @@
 
 | No  | Platform | Category          | Name   | Free                | Releases                    |
 | --- | -------- | ----------------- | ------ | ------------------- | --------------------------- |
-| 23  | Hybrid   | Graphics & Design | Colors | [Free][free-colors] | [Releases][releases-colors] |
-| 24  | Hybrid   | Graphics & Design | Photo  | [Free][free-photo]  | [Releases][releases-photo]  |
-| 25  | Hybrid   | Graphics & Design | SVG    | [Free][free-svg]    | [Releases][releases-svg]    |
-| 26  | Hybrid   | Graphics & Design | Video  | [Free][free-video]  | [Releases][releases-video]  |
+| 22  | Hybrid   | Graphics & Design | Colors | [Free][free-colors] | [Releases][releases-colors] |
+| 23  | Hybrid   | Graphics & Design | Photo  | [Free][free-photo]  | [Releases][releases-photo]  |
+| 24  | Hybrid   | Graphics & Design | SVG    | [Free][free-svg]    | [Releases][releases-svg]    |
+| 25  | Hybrid   | Graphics & Design | Video  | [Free][free-video]  | [Releases][releases-video]  |
 
 ---
 
@@ -128,10 +127,10 @@
 
 | No  | Platform | Category | Name       | Free                    | Releases                        |
 | --- | -------- | -------- | ---------- | ----------------------- | ------------------------------- |
-| 27  | Hybrid   | Medical  | Brainbow   | [Free][free-brainbow]   | [Releases][releases-brainbow]   |
-| 28  | Hybrid   | Medical  | Eyes       | [Free][free-eyes]       | [Releases][releases-eyes]       |
-| 29  | Hybrid   | Medical  | MRI        | [Free][free-mri]        | [Releases][releases-mri]        |
-| 30  | Hybrid   | Medical  | Psychology | [Free][free-psychology] | [Releases][releases-psychology] |
+| 26  | Hybrid   | Medical  | Brainbow   | [Free][free-brainbow]   | [Releases][releases-brainbow]   |
+| 27  | Hybrid   | Medical  | Eyes       | [Free][free-eyes]       | [Releases][releases-eyes]       |
+| 28  | Hybrid   | Medical  | MRI        | [Free][free-mri]        | [Releases][releases-mri]        |
+| 29  | Hybrid   | Medical  | Psychology | [Free][free-psychology] | [Releases][releases-psychology] |
 
 ---
 
@@ -139,13 +138,13 @@
 
 | No  | Platform | Category     | Name     | Free                  | Releases                      |
 | --- | -------- | ------------ | -------- | --------------------- | ----------------------------- |
-| 31  | Hybrid   | Productivity | Calendar | [Free][free-calendar] | [Releases][releases-calendar] |
-| 32  | Hybrid   | Productivity | CSV      | [Free][free-csv]      | [Releases][releases-csv]      |
-| 33  | Hybrid   | Productivity | Keynotes | [Free][free-keynotes] | [Releases][releases-keynotes] |
-| 34  | Hybrid   | Productivity | Markdown | [Free][free-markdown] | [Releases][releases-markdown] |
-| 35  | Hybrid   | Productivity | PDF      | [Free][free-pdf]      | [Releases][releases-pdf]      |
-| 36  | Hybrid   | Productivity | Projects | [Free][free-projects] | [Releases][releases-projects] |
-| 37  | Hybrid   | Productivity | Resume   | [Free][free-resume]   | [Releases][releases-resume]   |
+| 30  | Hybrid   | Productivity | Calendar | [Free][free-calendar] | [Releases][releases-calendar] |
+| 31  | Hybrid   | Productivity | CSV      | [Free][free-csv]      | [Releases][releases-csv]      |
+| 32  | Hybrid   | Productivity | Keynotes | [Free][free-keynotes] | [Releases][releases-keynotes] |
+| 33  | Hybrid   | Productivity | Markdown | [Free][free-markdown] | [Releases][releases-markdown] |
+| 34  | Hybrid   | Productivity | PDF      | [Free][free-pdf]      | [Releases][releases-pdf]      |
+| 35  | Hybrid   | Productivity | Projects | [Free][free-projects] | [Releases][releases-projects] |
+| 36  | Hybrid   | Productivity | Resume   | [Free][free-resume]   | [Releases][releases-resume]   |
 
 ---
 
@@ -153,7 +152,7 @@
 
 | No  | Platform | Category | Name  | Free               | Releases                   |
 | --- | -------- | -------- | ----- | ------------------ | -------------------------- |
-| 38  | Hybrid   | Shopping | Store | [Free][free-store] | [Releases][releases-store] |
+| 37  | Hybrid   | Shopping | Store | [Free][free-store] | [Releases][releases-store] |
 
 ---
 
@@ -161,8 +160,8 @@
 
 | No  | Platform | Category          | Name      | Free                   | Releases                       |
 | --- | -------- | ----------------- | --------- | ---------------------- | ------------------------------ |
-| 39  | Hybrid   | Social Networking | Chat      | [Free][free-chat]      | [Releases][releases-chat]      |
-| 40  | Hybrid   | Social Networking | Messaging | [Free][free-messaging] | [Releases][releases-messaging] |
+| 38  | Hybrid   | Social Networking | Chat      | [Free][free-chat]      | [Releases][releases-chat]      |
+| 39  | Hybrid   | Social Networking | Messaging | [Free][free-messaging] | [Releases][releases-messaging] |
 
 ---
 
@@ -170,9 +169,9 @@
 
 | No  | Platform | Category | Name     | Free                  | Releases                      |
 | --- | -------- | -------- | -------- | --------------------- | ----------------------------- |
-| 41  | Hybrid   | Sports   | Chess    | [Free][free-chess]    | [Releases][releases-chess]    |
-| 42  | Hybrid   | Sports   | Football | [Free][free-football] | [Releases][releases-football] |
-| 43  | Hybrid   | Sports   | Tourney  | [Free][free-tourney]  | [Releases][releases-tourney]  |
+| 40  | Hybrid   | Sports   | Chess    | [Free][free-chess]    | [Releases][releases-chess]    |
+| 41  | Hybrid   | Sports   | Football | [Free][free-football] | [Releases][releases-football] |
+| 42  | Hybrid   | Sports   | Tourney  | [Free][free-tourney]  | [Releases][releases-tourney]  |
 
 ---
 
@@ -180,9 +179,9 @@
 
 | No  | Platform | Category  | Name     | Free                  | Releases                      |
 | --- | -------- | --------- | -------- | --------------------- | ----------------------------- |
-| 44  | Hybrid   | Utilities | Clock    | [Free][free-clock]    | [Releases][releases-clock]    |
-| 45  | Hybrid   | Utilities | Docs     | [Free][free-docs]     | [Releases][releases-docs]     |
-| 46  | Hybrid   | Utilities | Password | [Free][free-password] | [Releases][releases-password] |
+| 43  | Hybrid   | Utilities | Clock    | [Free][free-clock]    | [Releases][releases-clock]    |
+| 44  | Hybrid   | Utilities | Docs     | [Free][free-docs]     | [Releases][releases-docs]     |
+| 45  | Hybrid   | Utilities | Password | [Free][free-password] | [Releases][releases-password] |
 
 ---
 
@@ -190,9 +189,9 @@
 
 | No  | Platform | Category  | Name    | Free                 | Releases                     |
 | --- | -------- | --------- | ------- | -------------------- | ---------------------------- |
-| 47  | macOS    | Utilities | Brewery | [Free][free-brewery] | [Releases][releases-brewery] |
-| 48  | macOS    | Utilities | Gauge   | [Free][free-gauge]   | [Releases][releases-gauge]   |
-| 49  | macOS    | Utilities | Snap    | [Free][free-snap]    | [Releases][releases-snap]    |
+| 46  | macOS    | Utilities | Brewery | [Free][free-brewery] | [Releases][releases-brewery] |
+| 47  | macOS    | Utilities | Gauge   | [Free][free-gauge]   | [Releases][releases-gauge]   |
+| 48  | macOS    | Utilities | Snap    | [Free][free-snap]    | [Releases][releases-snap]    |
 
 ---
 
@@ -212,7 +211,6 @@
 [free-tax]: https://hieudoanm.github.io/free/tax/
 [free-wallet]: https://hieudoanm.github.io/free/wallet/
 [free-foody]: https://hieudoanm.github.io/free/foody/
-[free-casino]: https://hieudoanm.github.io/free/casino/
 [free-memory]: https://hieudoanm.github.io/free/memory/
 [free-colors]: https://hieudoanm.github.io/free/colors/
 [free-photo]: https://hieudoanm.github.io/free/photo/
@@ -245,7 +243,6 @@
 [free-brewery]: https://hieudoanm.github.io/free/brewery/
 [free-gauge]: https://hieudoanm.github.io/free/gauge/
 [free-snap]: https://hieudoanm.github.io/free/snap/
-[free-top]: https://hieudoanm.github.io/free/top/
 [free-kevin]: https://hieudoanm.github.io/free/kevin/
 [free-landify]: https://hieudoanm.github.io/free/landify/
 
@@ -262,7 +259,6 @@
 [releases-tax]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-finance-tax-latest
 [releases-wallet]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-finance-wallet-latest
 [releases-foody]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-food-drink-foody-latest
-[releases-casino]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-games-casino-latest
 [releases-memory]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-games-memory-latest
 [releases-photo]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-graphics-design-photo-latest
 [releases-svg]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-graphics-design-svg-latest
@@ -290,7 +286,6 @@
 [releases-brewery]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-macos-brewery-latest
 [releases-gauge]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-macos-gauge-latest
 [releases-snap]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-macos-snap-latest
-[releases-top]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-macos-top-latest
 [releases-block]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-android-block-latest
 [releases-nfc]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-android-nfc-latest
 [releases-browserverless]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-browserverless-latest

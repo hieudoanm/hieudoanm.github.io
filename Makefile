@@ -7,9 +7,6 @@ start-boilerplate:
 start-brainbow:
 	pnpm run dev --filter=@hieudoanm.github.io/brainbow
 
-start-casino:
-	pnpm run dev --filter=@hieudoanm.github.io/casino
-
 start-chat:
 	pnpm run dev --filter=@hieudoanm.github.io/chat
 

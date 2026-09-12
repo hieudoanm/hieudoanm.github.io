@@ -10,6 +10,12 @@ const GAMES = [
     href: '/8-bit/',
   },
   {
+    name: 'Gambling',
+    description: 'Baccarat, Roulette, Craps and more',
+    icon: PiMemory,
+    href: '/gambling/',
+  },
+  {
     name: 'Memory',
     description: 'Emoji card pairing grid, Pi digit memorization, and more',
     icon: PiMemory,

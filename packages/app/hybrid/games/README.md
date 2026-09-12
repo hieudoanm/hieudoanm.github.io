@@ -1,4 +1,3 @@
 # Games
 
-1. Casino
-2. Memory
+1. Memory
