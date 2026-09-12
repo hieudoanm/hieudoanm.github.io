@@ -7,9 +7,11 @@ describe('HomePage', () => {
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
       'Lingo'
     );
-    ['languages', 'music', 'chemistry', 'economics'].forEach((slug) => {
-      expect(screen.getByTestId(`tool-card-${slug}`)).toBeInTheDocument();
-    });
+    ['languages', 'music', 'chemistry', 'economics', 'geography'].forEach(
+      (slug) => {
+        expect(screen.getByTestId(`tool-card-${slug}`)).toBeInTheDocument();
+      }
+    );
     expect(screen.getByTestId('tool-card-history')).toBeInTheDocument();
   });
 });

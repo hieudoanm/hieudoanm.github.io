@@ -8,7 +8,7 @@
 2. Social Sciences
    1. [ ] Literature
    2. [x] Languages (Lingo)
-   3. [ ] Geography
+   3. [x] Geography
    4. [x] History
    5. [x] Music
    6. [ ] Arts (Drawing)

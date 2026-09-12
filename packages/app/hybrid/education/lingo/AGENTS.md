@@ -57,13 +57,13 @@ pnpm tauri dev|build # Desktop app via Tauri CLI
 ## Structure
 
 ```
-src/app/            # App Router pages — /languages /music /history + info routes
+src/app/            # App Router pages — /languages /music /history /economics /geography + info routes
 src/components/
   atoms/            # Button, Badge, OfflineBadge, ThemeToggle
   organisms/        # Header
   templates/        # HomeTemplate, About/Downloads/Version/ErrorTemplate
 src/content/        # about/download/version copy
-src/games/          # languages (incl. sign/, english/), music, history, economics
+src/games/          # languages (incl. sign/, english/), music, history, economics, geography
 src/hooks/          # useTheme, useSWRegister, useUpdater
 src/lib/            # progress (IndexedDB), native bridge, publicPaths
 src/providers/      # SWProvider, NativeProvider, QueryProvider
@@ -80,4 +80,6 @@ e2e/                # Playwright specs
 recognition), `/history` (history hub), `/history/myth-vs-fact`,
 `/history/through-the-years`, `/economics` (economics hub),
 `/economics/<category>` (theory), `/economics/<category>/<game>` (game),
+`/geography` (geography hub), `/geography/guess`, `/geography/higher-or-lower`,
+`/geography/wordle`, `/geography/connections`, `/geography/sort-continents`,
 `/music` plus `/about`, `/downloads`, `/version`.

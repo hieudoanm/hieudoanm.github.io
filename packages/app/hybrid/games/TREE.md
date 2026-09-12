@@ -9,7 +9,15 @@
 │   │   ├── [PACKAGING.md](./8-bit/docs/PACKAGING.md)
 │   │   └── [ROADMAP.md](./8-bit/docs/ROADMAP.md)
 │   ├── e2e/
-│   │   └── [home.spec.ts](./8-bit/e2e/home.spec.ts)
+│   │   ├── screenshots/
+│   │   │   ├── [about.png](./8-bit/e2e/screenshots/about.png)
+│   │   │   ├── [downloads.png](./8-bit/e2e/screenshots/downloads.png)
+│   │   │   ├── [home.png](./8-bit/e2e/screenshots/home.png)
+│   │   │   └── [version.png](./8-bit/e2e/screenshots/version.png)
+│   │   ├── [about.spec.ts](./8-bit/e2e/about.spec.ts)
+│   │   ├── [downloads.spec.ts](./8-bit/e2e/downloads.spec.ts)
+│   │   ├── [home.spec.ts](./8-bit/e2e/home.spec.ts)
+│   │   └── [version.spec.ts](./8-bit/e2e/version.spec.ts)
 │   ├── public/
 │   │   ├── icons/
 │   │   │   ├── [icon-128x128.png](./8-bit/public/icons/icon-128x128.png)
@@ -117,10 +125,13 @@
 │   │   │       ├── [DownloadsTemplate.tsx](./8-bit/src/components/templates/DownloadsTemplate.tsx)
 │   │   │       ├── [ErrorTemplate.tsx](./8-bit/src/components/templates/ErrorTemplate.tsx)
 │   │   │       └── [VersionTemplate.tsx](./8-bit/src/components/templates/VersionTemplate.tsx)
+│   │   ├── content/
+│   │   │   ├── [about.ts](./8-bit/src/content/about.ts)
+│   │   │   ├── [download.ts](./8-bit/src/content/download.ts)
+│   │   │   └── [version.ts](./8-bit/src/content/version.ts)
 │   │   ├── games/
 │   │   │   ├── DinoRun/
 │   │   │   │   ├── __tests__/
-│   │   │   │   │   ├── __tests__/
 │   │   │   │   │   ├── [game.test.ts](./8-bit/src/games/DinoRun/__tests__/game.test.ts)
 │   │   │   │   │   └── [index.test.tsx](./8-bit/src/games/DinoRun/__tests__/index.test.tsx)
 │   │   │   │   ├── [constants.ts](./8-bit/src/games/DinoRun/constants.ts)
@@ -146,8 +157,6 @@
 │   │   │   │   ├── __tests__/
 │   │   │   │   │   ├── [index.test.tsx](./8-bit/src/games/Snake/__tests__/index.test.tsx)
 │   │   │   │   │   └── [snake.test.ts](./8-bit/src/games/Snake/__tests__/snake.test.ts)
-│   │   │   │   ├── utils/
-│   │   │   │   │   └── __tests__/
 │   │   │   │   ├── [constants.ts](./8-bit/src/games/Snake/constants.ts)
 │   │   │   │   ├── [index.tsx](./8-bit/src/games/Snake/index.tsx)
 │   │   │   │   ├── [snake.ts](./8-bit/src/games/Snake/snake.ts)
@@ -166,9 +175,55 @@
 │   │   ├── capabilities/
 │   │   │   └── [default.json](./8-bit/src-tauri/capabilities/default.json)
 │   │   ├── icons/
+│   │   │   ├── android/
+│   │   │   │   ├── mipmap-anydpi-v26/
+│   │   │   │   │   └── [ic_launcher.xml](./8-bit/src-tauri/icons/android/mipmap-anydpi-v26/ic_launcher.xml)
+│   │   │   │   ├── mipmap-hdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./8-bit/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./8-bit/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./8-bit/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-mdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./8-bit/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./8-bit/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./8-bit/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./8-bit/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./8-bit/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./8-bit/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xxhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./8-bit/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./8-bit/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./8-bit/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xxxhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./8-bit/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./8-bit/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./8-bit/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png)
+│   │   │   │   └── values/
+│   │   │   │       └── [ic_launcher_background.xml](./8-bit/src-tauri/icons/android/values/ic_launcher_background.xml)
+│   │   │   ├── ios/
+│   │   │   │   ├── [AppIcon-20x20@1x.png](./8-bit/src-tauri/icons/ios/AppIcon-20x20@1x.png)
+│   │   │   │   ├── [AppIcon-20x20@2x-1.png](./8-bit/src-tauri/icons/ios/AppIcon-20x20@2x-1.png)
+│   │   │   │   ├── [AppIcon-20x20@2x.png](./8-bit/src-tauri/icons/ios/AppIcon-20x20@2x.png)
+│   │   │   │   ├── [AppIcon-20x20@3x.png](./8-bit/src-tauri/icons/ios/AppIcon-20x20@3x.png)
+│   │   │   │   ├── [AppIcon-29x29@1x.png](./8-bit/src-tauri/icons/ios/AppIcon-29x29@1x.png)
+│   │   │   │   ├── [AppIcon-29x29@2x-1.png](./8-bit/src-tauri/icons/ios/AppIcon-29x29@2x-1.png)
+│   │   │   │   ├── [AppIcon-29x29@2x.png](./8-bit/src-tauri/icons/ios/AppIcon-29x29@2x.png)
+│   │   │   │   ├── [AppIcon-29x29@3x.png](./8-bit/src-tauri/icons/ios/AppIcon-29x29@3x.png)
+│   │   │   │   ├── [AppIcon-40x40@1x.png](./8-bit/src-tauri/icons/ios/AppIcon-40x40@1x.png)
+│   │   │   │   ├── [AppIcon-40x40@2x-1.png](./8-bit/src-tauri/icons/ios/AppIcon-40x40@2x-1.png)
+│   │   │   │   ├── [AppIcon-40x40@2x.png](./8-bit/src-tauri/icons/ios/AppIcon-40x40@2x.png)
+│   │   │   │   ├── [AppIcon-40x40@3x.png](./8-bit/src-tauri/icons/ios/AppIcon-40x40@3x.png)
+│   │   │   │   ├── [AppIcon-512@2x.png](./8-bit/src-tauri/icons/ios/AppIcon-512@2x.png)
+│   │   │   │   ├── [AppIcon-60x60@2x.png](./8-bit/src-tauri/icons/ios/AppIcon-60x60@2x.png)
+│   │   │   │   ├── [AppIcon-60x60@3x.png](./8-bit/src-tauri/icons/ios/AppIcon-60x60@3x.png)
+│   │   │   │   ├── [AppIcon-76x76@1x.png](./8-bit/src-tauri/icons/ios/AppIcon-76x76@1x.png)
+│   │   │   │   ├── [AppIcon-76x76@2x.png](./8-bit/src-tauri/icons/ios/AppIcon-76x76@2x.png)
+│   │   │   │   └── [AppIcon-83.5x83.5@2x.png](./8-bit/src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png)
 │   │   │   ├── [128x128.png](./8-bit/src-tauri/icons/128x128.png)
 │   │   │   ├── [128x128@2x.png](./8-bit/src-tauri/icons/128x128@2x.png)
+│   │   │   ├── [256x256.png](./8-bit/src-tauri/icons/256x256.png)
 │   │   │   ├── [32x32.png](./8-bit/src-tauri/icons/32x32.png)
+│   │   │   ├── [64x64.png](./8-bit/src-tauri/icons/64x64.png)
 │   │   │   ├── [Square107x107Logo.png](./8-bit/src-tauri/icons/Square107x107Logo.png)
 │   │   │   ├── [Square142x142Logo.png](./8-bit/src-tauri/icons/Square142x142Logo.png)
 │   │   │   ├── [Square150x150Logo.png](./8-bit/src-tauri/icons/Square150x150Logo.png)
@@ -179,6 +234,7 @@
 │   │   │   ├── [Square71x71Logo.png](./8-bit/src-tauri/icons/Square71x71Logo.png)
 │   │   │   ├── [Square89x89Logo.png](./8-bit/src-tauri/icons/Square89x89Logo.png)
 │   │   │   ├── [StoreLogo.png](./8-bit/src-tauri/icons/StoreLogo.png)
+│   │   │   ├── [create-icons.sh](./8-bit/src-tauri/icons/create-icons.sh)
 │   │   │   ├── [icon.icns](./8-bit/src-tauri/icons/icon.icns)
 │   │   │   ├── [icon.ico](./8-bit/src-tauri/icons/icon.ico)
 │   │   │   └── [icon.png](./8-bit/src-tauri/icons/icon.png)
@@ -210,7 +266,15 @@
 │   │   ├── [DOWNLOADS.md](./casino/docs/DOWNLOADS.md)
 │   │   └── [ROADMAP.md](./casino/docs/ROADMAP.md)
 │   ├── e2e/
-│   │   └── [home.spec.ts](./casino/e2e/home.spec.ts)
+│   │   ├── screenshots/
+│   │   │   ├── [about.png](./casino/e2e/screenshots/about.png)
+│   │   │   ├── [downloads.png](./casino/e2e/screenshots/downloads.png)
+│   │   │   ├── [home.png](./casino/e2e/screenshots/home.png)
+│   │   │   └── [version.png](./casino/e2e/screenshots/version.png)
+│   │   ├── [about.spec.ts](./casino/e2e/about.spec.ts)
+│   │   ├── [downloads.spec.ts](./casino/e2e/downloads.spec.ts)
+│   │   ├── [home.spec.ts](./casino/e2e/home.spec.ts)
+│   │   └── [version.spec.ts](./casino/e2e/version.spec.ts)
 │   ├── public/
 │   │   ├── icons/
 │   │   │   ├── [icon-128x128.png](./casino/public/icons/icon-128x128.png)
@@ -330,6 +394,10 @@
 │   │   │       ├── [DownloadsTemplate.tsx](./casino/src/components/templates/DownloadsTemplate.tsx)
 │   │   │       ├── [ErrorTemplate.tsx](./casino/src/components/templates/ErrorTemplate.tsx)
 │   │   │       └── [VersionTemplate.tsx](./casino/src/components/templates/VersionTemplate.tsx)
+│   │   ├── content/
+│   │   │   ├── [about.ts](./casino/src/content/about.ts)
+│   │   │   ├── [download.ts](./casino/src/content/download.ts)
+│   │   │   └── [version.ts](./casino/src/content/version.ts)
 │   │   ├── games/
 │   │   │   ├── _shared/
 │   │   │   │   ├── __tests__/
@@ -436,9 +504,55 @@
 │   │   ├── capabilities/
 │   │   │   └── [default.json](./casino/src-tauri/capabilities/default.json)
 │   │   ├── icons/
+│   │   │   ├── android/
+│   │   │   │   ├── mipmap-anydpi-v26/
+│   │   │   │   │   └── [ic_launcher.xml](./casino/src-tauri/icons/android/mipmap-anydpi-v26/ic_launcher.xml)
+│   │   │   │   ├── mipmap-hdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./casino/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./casino/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./casino/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-mdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./casino/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./casino/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./casino/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./casino/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./casino/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./casino/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xxhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./casino/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./casino/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./casino/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xxxhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./casino/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./casino/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./casino/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png)
+│   │   │   │   └── values/
+│   │   │   │       └── [ic_launcher_background.xml](./casino/src-tauri/icons/android/values/ic_launcher_background.xml)
+│   │   │   ├── ios/
+│   │   │   │   ├── [AppIcon-20x20@1x.png](./casino/src-tauri/icons/ios/AppIcon-20x20@1x.png)
+│   │   │   │   ├── [AppIcon-20x20@2x-1.png](./casino/src-tauri/icons/ios/AppIcon-20x20@2x-1.png)
+│   │   │   │   ├── [AppIcon-20x20@2x.png](./casino/src-tauri/icons/ios/AppIcon-20x20@2x.png)
+│   │   │   │   ├── [AppIcon-20x20@3x.png](./casino/src-tauri/icons/ios/AppIcon-20x20@3x.png)
+│   │   │   │   ├── [AppIcon-29x29@1x.png](./casino/src-tauri/icons/ios/AppIcon-29x29@1x.png)
+│   │   │   │   ├── [AppIcon-29x29@2x-1.png](./casino/src-tauri/icons/ios/AppIcon-29x29@2x-1.png)
+│   │   │   │   ├── [AppIcon-29x29@2x.png](./casino/src-tauri/icons/ios/AppIcon-29x29@2x.png)
+│   │   │   │   ├── [AppIcon-29x29@3x.png](./casino/src-tauri/icons/ios/AppIcon-29x29@3x.png)
+│   │   │   │   ├── [AppIcon-40x40@1x.png](./casino/src-tauri/icons/ios/AppIcon-40x40@1x.png)
+│   │   │   │   ├── [AppIcon-40x40@2x-1.png](./casino/src-tauri/icons/ios/AppIcon-40x40@2x-1.png)
+│   │   │   │   ├── [AppIcon-40x40@2x.png](./casino/src-tauri/icons/ios/AppIcon-40x40@2x.png)
+│   │   │   │   ├── [AppIcon-40x40@3x.png](./casino/src-tauri/icons/ios/AppIcon-40x40@3x.png)
+│   │   │   │   ├── [AppIcon-512@2x.png](./casino/src-tauri/icons/ios/AppIcon-512@2x.png)
+│   │   │   │   ├── [AppIcon-60x60@2x.png](./casino/src-tauri/icons/ios/AppIcon-60x60@2x.png)
+│   │   │   │   ├── [AppIcon-60x60@3x.png](./casino/src-tauri/icons/ios/AppIcon-60x60@3x.png)
+│   │   │   │   ├── [AppIcon-76x76@1x.png](./casino/src-tauri/icons/ios/AppIcon-76x76@1x.png)
+│   │   │   │   ├── [AppIcon-76x76@2x.png](./casino/src-tauri/icons/ios/AppIcon-76x76@2x.png)
+│   │   │   │   └── [AppIcon-83.5x83.5@2x.png](./casino/src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png)
 │   │   │   ├── [128x128.png](./casino/src-tauri/icons/128x128.png)
 │   │   │   ├── [128x128@2x.png](./casino/src-tauri/icons/128x128@2x.png)
+│   │   │   ├── [256x256.png](./casino/src-tauri/icons/256x256.png)
 │   │   │   ├── [32x32.png](./casino/src-tauri/icons/32x32.png)
+│   │   │   ├── [64x64.png](./casino/src-tauri/icons/64x64.png)
 │   │   │   ├── [Square107x107Logo.png](./casino/src-tauri/icons/Square107x107Logo.png)
 │   │   │   ├── [Square142x142Logo.png](./casino/src-tauri/icons/Square142x142Logo.png)
 │   │   │   ├── [Square150x150Logo.png](./casino/src-tauri/icons/Square150x150Logo.png)
@@ -449,6 +563,7 @@
 │   │   │   ├── [Square71x71Logo.png](./casino/src-tauri/icons/Square71x71Logo.png)
 │   │   │   ├── [Square89x89Logo.png](./casino/src-tauri/icons/Square89x89Logo.png)
 │   │   │   ├── [StoreLogo.png](./casino/src-tauri/icons/StoreLogo.png)
+│   │   │   ├── [create-icons.sh](./casino/src-tauri/icons/create-icons.sh)
 │   │   │   ├── [icon.icns](./casino/src-tauri/icons/icon.icns)
 │   │   │   ├── [icon.ico](./casino/src-tauri/icons/icon.ico)
 │   │   │   └── [icon.png](./casino/src-tauri/icons/icon.png)
@@ -472,251 +587,6 @@
 │   ├── [playwright.config.ts](./casino/playwright.config.ts)
 │   ├── [postcss.config.mjs](./casino/postcss.config.mjs)
 │   └── [tsconfig.json](./casino/tsconfig.json)
-├── countries/
-│   ├── docs/
-│   │   ├── [ARCHITECTURE.md](./countries/docs/ARCHITECTURE.md)
-│   │   ├── [CONTRIBUTING.md](./countries/docs/CONTRIBUTING.md)
-│   │   ├── [DOWNLOADS.md](./countries/docs/DOWNLOADS.md)
-│   │   ├── [PACKAGING.md](./countries/docs/PACKAGING.md)
-│   │   └── [ROADMAP.md](./countries/docs/ROADMAP.md)
-│   ├── e2e/
-│   │   └── [home.spec.ts](./countries/e2e/home.spec.ts)
-│   ├── public/
-│   │   ├── icons/
-│   │   │   ├── [icon-128x128.png](./countries/public/icons/icon-128x128.png)
-│   │   │   ├── [icon-144x144.png](./countries/public/icons/icon-144x144.png)
-│   │   │   ├── [icon-152x152.png](./countries/public/icons/icon-152x152.png)
-│   │   │   ├── [icon-16x16.png](./countries/public/icons/icon-16x16.png)
-│   │   │   ├── [icon-180x180.png](./countries/public/icons/icon-180x180.png)
-│   │   │   ├── [icon-192x192.png](./countries/public/icons/icon-192x192.png)
-│   │   │   ├── [icon-256x256.png](./countries/public/icons/icon-256x256.png)
-│   │   │   ├── [icon-32x32.png](./countries/public/icons/icon-32x32.png)
-│   │   │   ├── [icon-384x384.png](./countries/public/icons/icon-384x384.png)
-│   │   │   ├── [icon-48x48.png](./countries/public/icons/icon-48x48.png)
-│   │   │   ├── [icon-512x512.png](./countries/public/icons/icon-512x512.png)
-│   │   │   ├── [icon-64x64.png](./countries/public/icons/icon-64x64.png)
-│   │   │   ├── [icon-72x72.png](./countries/public/icons/icon-72x72.png)
-│   │   │   ├── [icon-96x96.png](./countries/public/icons/icon-96x96.png)
-│   │   │   └── [icon.svg](./countries/public/icons/icon.svg)
-│   │   ├── [apple-touch-icon.png](./countries/public/apple-touch-icon.png)
-│   │   ├── [favicon.ico](./countries/public/favicon.ico)
-│   │   ├── [manifest.json](./countries/public/manifest.json)
-│   │   ├── [robots.txt](./countries/public/robots.txt)
-│   │   ├── [sitemap.xml](./countries/public/sitemap.xml)
-│   │   └── [sw.js](./countries/public/sw.js)
-│   ├── src/
-│   │   ├── app/
-│   │   │   ├── (auth)/
-│   │   │   │   ├── forget-password/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./countries/src/app/(auth)/forget-password/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./countries/src/app/(auth)/forget-password/page.tsx)
-│   │   │   │   ├── profile/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./countries/src/app/(auth)/profile/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./countries/src/app/(auth)/profile/page.tsx)
-│   │   │   │   ├── reset-password/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./countries/src/app/(auth)/reset-password/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./countries/src/app/(auth)/reset-password/page.tsx)
-│   │   │   │   ├── sign-in/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./countries/src/app/(auth)/sign-in/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./countries/src/app/(auth)/sign-in/page.tsx)
-│   │   │   │   └── sign-up/
-│   │   │   │       ├── __tests__/
-│   │   │   │       │   └── [page.test.tsx](./countries/src/app/(auth)/sign-up/__tests__/page.test.tsx)
-│   │   │   │       └── [page.tsx](./countries/src/app/(auth)/sign-up/page.tsx)
-│   │   │   ├── (games)/
-│   │   │   │   ├── border/
-│   │   │   │   │   └── [page.tsx](./countries/src/app/(games)/border/page.tsx)
-│   │   │   │   ├── connections/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./countries/src/app/(games)/connections/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./countries/src/app/(games)/connections/page.tsx)
-│   │   │   │   ├── continents-sort/
-│   │   │   │   │   └── [page.tsx](./countries/src/app/(games)/continents-sort/page.tsx)
-│   │   │   │   ├── emoji-guesser/
-│   │   │   │   │   └── [page.tsx](./countries/src/app/(games)/emoji-guesser/page.tsx)
-│   │   │   │   ├── flag-guesser/
-│   │   │   │   │   └── [page.tsx](./countries/src/app/(games)/flag-guesser/page.tsx)
-│   │   │   │   ├── higher-or-lower/
-│   │   │   │   │   └── [page.tsx](./countries/src/app/(games)/higher-or-lower/page.tsx)
-│   │   │   │   └── wordle/
-│   │   │   │       ├── __tests__/
-│   │   │   │       │   └── [page.test.tsx](./countries/src/app/(games)/wordle/__tests__/page.test.tsx)
-│   │   │   │       └── [page.tsx](./countries/src/app/(games)/wordle/page.tsx)
-│   │   │   ├── (info)/
-│   │   │   │   ├── about/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./countries/src/app/(info)/about/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./countries/src/app/(info)/about/page.tsx)
-│   │   │   │   ├── downloads/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./countries/src/app/(info)/downloads/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./countries/src/app/(info)/downloads/page.tsx)
-│   │   │   │   └── version/
-│   │   │   │       ├── __tests__/
-│   │   │   │       │   └── [page.test.tsx](./countries/src/app/(info)/version/__tests__/page.test.tsx)
-│   │   │   │       └── [page.tsx](./countries/src/app/(info)/version/page.tsx)
-│   │   │   ├── __tests__/
-│   │   │   │   ├── [default.test.tsx](./countries/src/app/__tests__/default.test.tsx)
-│   │   │   │   ├── [error.test.tsx](./countries/src/app/__tests__/error.test.tsx)
-│   │   │   │   ├── [forbidden.test.tsx](./countries/src/app/__tests__/forbidden.test.tsx)
-│   │   │   │   ├── [global-error.test.tsx](./countries/src/app/__tests__/global-error.test.tsx)
-│   │   │   │   ├── [layout.test.tsx](./countries/src/app/__tests__/layout.test.tsx)
-│   │   │   │   ├── [loading.test.tsx](./countries/src/app/__tests__/loading.test.tsx)
-│   │   │   │   ├── [not-found.test.tsx](./countries/src/app/__tests__/not-found.test.tsx)
-│   │   │   │   ├── [page.test.tsx](./countries/src/app/__tests__/page.test.tsx)
-│   │   │   │   ├── [robots.test.ts](./countries/src/app/__tests__/robots.test.ts)
-│   │   │   │   ├── [template.test.tsx](./countries/src/app/__tests__/template.test.tsx)
-│   │   │   │   └── [unauthorized.test.tsx](./countries/src/app/__tests__/unauthorized.test.tsx)
-│   │   │   ├── [default.tsx](./countries/src/app/default.tsx)
-│   │   │   ├── [error.tsx](./countries/src/app/error.tsx)
-│   │   │   ├── [favicon.ico](./countries/src/app/favicon.ico)
-│   │   │   ├── [forbidden.tsx](./countries/src/app/forbidden.tsx)
-│   │   │   ├── [global-error.tsx](./countries/src/app/global-error.tsx)
-│   │   │   ├── [layout.tsx](./countries/src/app/layout.tsx)
-│   │   │   ├── [loading.tsx](./countries/src/app/loading.tsx)
-│   │   │   ├── [not-found.tsx](./countries/src/app/not-found.tsx)
-│   │   │   ├── [page.tsx](./countries/src/app/page.tsx)
-│   │   │   ├── [robots.ts](./countries/src/app/robots.ts)
-│   │   │   ├── [template.tsx](./countries/src/app/template.tsx)
-│   │   │   └── [unauthorized.tsx](./countries/src/app/unauthorized.tsx)
-│   │   ├── components/
-│   │   │   ├── organisms/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   └── [Header.test.tsx](./countries/src/components/organisms/__tests__/Header.test.tsx)
-│   │   │   │   └── [Header.tsx](./countries/src/components/organisms/Header.tsx)
-│   │   │   └── templates/
-│   │   │       ├── __tests__/
-│   │   │       │   ├── [AboutTemplate.test.tsx](./countries/src/components/templates/__tests__/AboutTemplate.test.tsx)
-│   │   │       │   ├── [DownloadsTemplate.test.tsx](./countries/src/components/templates/__tests__/DownloadsTemplate.test.tsx)
-│   │   │       │   ├── [ErrorTemplate.test.tsx](./countries/src/components/templates/__tests__/ErrorTemplate.test.tsx)
-│   │   │       │   └── [VersionTemplate.test.tsx](./countries/src/components/templates/__tests__/VersionTemplate.test.tsx)
-│   │   │       ├── [AboutTemplate.tsx](./countries/src/components/templates/AboutTemplate.tsx)
-│   │   │       ├── [DownloadsTemplate.tsx](./countries/src/components/templates/DownloadsTemplate.tsx)
-│   │   │       ├── [ErrorTemplate.tsx](./countries/src/components/templates/ErrorTemplate.tsx)
-│   │   │       └── [VersionTemplate.tsx](./countries/src/components/templates/VersionTemplate.tsx)
-│   │   ├── games/
-│   │   │   ├── _shared/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   ├── [countries.test.ts](./countries/src/games/_shared/__tests__/countries.test.ts)
-│   │   │   │   │   └── [quiz.test.ts](./countries/src/games/_shared/__tests__/quiz.test.ts)
-│   │   │   │   ├── [borders.ts](./countries/src/games/_shared/borders.ts)
-│   │   │   │   ├── [countries-data.ts](./countries/src/games/_shared/countries-data.ts)
-│   │   │   │   ├── [countries.ts](./countries/src/games/_shared/countries.ts)
-│   │   │   │   ├── [population.ts](./countries/src/games/_shared/population.ts)
-│   │   │   │   └── [quiz.ts](./countries/src/games/_shared/quiz.ts)
-│   │   │   ├── border/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   ├── [index.test.tsx](./countries/src/games/border/__tests__/index.test.tsx)
-│   │   │   │   │   ├── [useBorder.test.ts](./countries/src/games/border/__tests__/useBorder.test.ts)
-│   │   │   │   │   └── [utils.test.ts](./countries/src/games/border/__tests__/utils.test.ts)
-│   │   │   │   ├── [index.tsx](./countries/src/games/border/index.tsx)
-│   │   │   │   ├── [types.ts](./countries/src/games/border/types.ts)
-│   │   │   │   ├── [useBorder.ts](./countries/src/games/border/useBorder.ts)
-│   │   │   │   └── [utils.ts](./countries/src/games/border/utils.ts)
-│   │   │   ├── connections/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   ├── [index.test.tsx](./countries/src/games/connections/__tests__/index.test.tsx)
-│   │   │   │   │   ├── [puzzles.test.ts](./countries/src/games/connections/__tests__/puzzles.test.ts)
-│   │   │   │   │   ├── [useConnections.test.ts](./countries/src/games/connections/__tests__/useConnections.test.ts)
-│   │   │   │   │   └── [utils.test.ts](./countries/src/games/connections/__tests__/utils.test.ts)
-│   │   │   │   ├── [index.tsx](./countries/src/games/connections/index.tsx)
-│   │   │   │   ├── [puzzles.ts](./countries/src/games/connections/puzzles.ts)
-│   │   │   │   ├── [types.ts](./countries/src/games/connections/types.ts)
-│   │   │   │   ├── [useConnections.ts](./countries/src/games/connections/useConnections.ts)
-│   │   │   │   └── [utils.ts](./countries/src/games/connections/utils.ts)
-│   │   │   ├── continents-sort/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   ├── [index.test.tsx](./countries/src/games/continents-sort/__tests__/index.test.tsx)
-│   │   │   │   │   ├── [useContinentsSort.test.ts](./countries/src/games/continents-sort/__tests__/useContinentsSort.test.ts)
-│   │   │   │   │   └── [utils.test.ts](./countries/src/games/continents-sort/__tests__/utils.test.ts)
-│   │   │   │   ├── [index.tsx](./countries/src/games/continents-sort/index.tsx)
-│   │   │   │   ├── [types.ts](./countries/src/games/continents-sort/types.ts)
-│   │   │   │   ├── [useContinentsSort.ts](./countries/src/games/continents-sort/useContinentsSort.ts)
-│   │   │   │   └── [utils.ts](./countries/src/games/continents-sort/utils.ts)
-│   │   │   ├── emoji-guesser/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   ├── [index.test.tsx](./countries/src/games/emoji-guesser/__tests__/index.test.tsx)
-│   │   │   │   │   ├── [useEmojiGuesser.test.ts](./countries/src/games/emoji-guesser/__tests__/useEmojiGuesser.test.ts)
-│   │   │   │   │   └── [utils.test.ts](./countries/src/games/emoji-guesser/__tests__/utils.test.ts)
-│   │   │   │   ├── [index.tsx](./countries/src/games/emoji-guesser/index.tsx)
-│   │   │   │   ├── [types.ts](./countries/src/games/emoji-guesser/types.ts)
-│   │   │   │   ├── [useEmojiGuesser.ts](./countries/src/games/emoji-guesser/useEmojiGuesser.ts)
-│   │   │   │   └── [utils.ts](./countries/src/games/emoji-guesser/utils.ts)
-│   │   │   ├── flag-guesser/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   ├── [index.test.tsx](./countries/src/games/flag-guesser/__tests__/index.test.tsx)
-│   │   │   │   │   ├── [useFlagGuesser.test.ts](./countries/src/games/flag-guesser/__tests__/useFlagGuesser.test.ts)
-│   │   │   │   │   └── [utils.test.ts](./countries/src/games/flag-guesser/__tests__/utils.test.ts)
-│   │   │   │   ├── [index.tsx](./countries/src/games/flag-guesser/index.tsx)
-│   │   │   │   ├── [types.ts](./countries/src/games/flag-guesser/types.ts)
-│   │   │   │   ├── [useFlagGuesser.ts](./countries/src/games/flag-guesser/useFlagGuesser.ts)
-│   │   │   │   └── [utils.ts](./countries/src/games/flag-guesser/utils.ts)
-│   │   │   ├── higher-or-lower/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   ├── [index.test.tsx](./countries/src/games/higher-or-lower/__tests__/index.test.tsx)
-│   │   │   │   │   ├── [useHigherOrLower.test.ts](./countries/src/games/higher-or-lower/__tests__/useHigherOrLower.test.ts)
-│   │   │   │   │   └── [utils.test.ts](./countries/src/games/higher-or-lower/__tests__/utils.test.ts)
-│   │   │   │   ├── [index.tsx](./countries/src/games/higher-or-lower/index.tsx)
-│   │   │   │   ├── [types.ts](./countries/src/games/higher-or-lower/types.ts)
-│   │   │   │   ├── [useHigherOrLower.ts](./countries/src/games/higher-or-lower/useHigherOrLower.ts)
-│   │   │   │   └── [utils.ts](./countries/src/games/higher-or-lower/utils.ts)
-│   │   │   └── wordle/
-│   │   │       ├── __tests__/
-│   │   │       │   ├── [index.test.tsx](./countries/src/games/wordle/__tests__/index.test.tsx)
-│   │   │       │   ├── [useWordle.test.ts](./countries/src/games/wordle/__tests__/useWordle.test.ts)
-│   │   │       │   └── [utils.test.ts](./countries/src/games/wordle/__tests__/utils.test.ts)
-│   │   │       ├── [index.tsx](./countries/src/games/wordle/index.tsx)
-│   │   │       ├── [types.ts](./countries/src/games/wordle/types.ts)
-│   │   │       ├── [useWordle.ts](./countries/src/games/wordle/useWordle.ts)
-│   │   │       └── [utils.ts](./countries/src/games/wordle/utils.ts)
-│   │   └── styles/
-│   │       ├── [base.css](./countries/src/styles/base.css)
-│   │       ├── [globals.css](./countries/src/styles/globals.css)
-│   │       └── [themes.css](./countries/src/styles/themes.css)
-│   ├── src-tauri/
-│   │   ├── capabilities/
-│   │   │   └── [default.json](./countries/src-tauri/capabilities/default.json)
-│   │   ├── icons/
-│   │   │   ├── [128x128.png](./countries/src-tauri/icons/128x128.png)
-│   │   │   ├── [128x128@2x.png](./countries/src-tauri/icons/128x128@2x.png)
-│   │   │   ├── [32x32.png](./countries/src-tauri/icons/32x32.png)
-│   │   │   ├── [Square107x107Logo.png](./countries/src-tauri/icons/Square107x107Logo.png)
-│   │   │   ├── [Square142x142Logo.png](./countries/src-tauri/icons/Square142x142Logo.png)
-│   │   │   ├── [Square150x150Logo.png](./countries/src-tauri/icons/Square150x150Logo.png)
-│   │   │   ├── [Square284x284Logo.png](./countries/src-tauri/icons/Square284x284Logo.png)
-│   │   │   ├── [Square30x30Logo.png](./countries/src-tauri/icons/Square30x30Logo.png)
-│   │   │   ├── [Square310x310Logo.png](./countries/src-tauri/icons/Square310x310Logo.png)
-│   │   │   ├── [Square44x44Logo.png](./countries/src-tauri/icons/Square44x44Logo.png)
-│   │   │   ├── [Square71x71Logo.png](./countries/src-tauri/icons/Square71x71Logo.png)
-│   │   │   ├── [Square89x89Logo.png](./countries/src-tauri/icons/Square89x89Logo.png)
-│   │   │   ├── [StoreLogo.png](./countries/src-tauri/icons/StoreLogo.png)
-│   │   │   ├── [icon.icns](./countries/src-tauri/icons/icon.icns)
-│   │   │   ├── [icon.ico](./countries/src-tauri/icons/icon.ico)
-│   │   │   └── [icon.png](./countries/src-tauri/icons/icon.png)
-│   │   ├── src/
-│   │   │   ├── [lib.rs](./countries/src-tauri/src/lib.rs)
-│   │   │   └── [main.rs](./countries/src-tauri/src/main.rs)
-│   │   ├── [Cargo.lock](./countries/src-tauri/Cargo.lock)
-│   │   ├── [Cargo.toml](./countries/src-tauri/Cargo.toml)
-│   │   ├── [build.rs](./countries/src-tauri/build.rs)
-│   │   └── [tauri.conf.json](./countries/src-tauri/tauri.conf.json)
-│   ├── [Dockerfile](./countries/Dockerfile)
-│   ├── [LICENSE](./countries/LICENSE)
-│   ├── [README.md](./countries/README.md)
-│   ├── [TREE.md](./countries/TREE.md)
-│   ├── [docker-compose.yaml](./countries/docker-compose.yaml)
-│   ├── [eslint.config.mts](./countries/eslint.config.mts)
-│   ├── [jest.config.ts](./countries/jest.config.ts)
-│   ├── [jest.setup.ts](./countries/jest.setup.ts)
-│   ├── [next.config.ts](./countries/next.config.ts)
-│   ├── [package.json](./countries/package.json)
-│   ├── [playwright.config.ts](./countries/playwright.config.ts)
-│   ├── [postcss.config.mjs](./countries/postcss.config.mjs)
-│   └── [tsconfig.json](./countries/tsconfig.json)
 ├── memory/
 │   ├── docs/
 │   │   ├── [ARCHITECTURE.md](./memory/docs/ARCHITECTURE.md)
@@ -725,7 +595,15 @@
 │   │   ├── [PACKAGING.md](./memory/docs/PACKAGING.md)
 │   │   └── [ROADMAP.md](./memory/docs/ROADMAP.md)
 │   ├── e2e/
-│   │   └── [home.spec.ts](./memory/e2e/home.spec.ts)
+│   │   ├── screenshots/
+│   │   │   ├── [about.png](./memory/e2e/screenshots/about.png)
+│   │   │   ├── [downloads.png](./memory/e2e/screenshots/downloads.png)
+│   │   │   ├── [home.png](./memory/e2e/screenshots/home.png)
+│   │   │   └── [version.png](./memory/e2e/screenshots/version.png)
+│   │   ├── [about.spec.ts](./memory/e2e/about.spec.ts)
+│   │   ├── [downloads.spec.ts](./memory/e2e/downloads.spec.ts)
+│   │   ├── [home.spec.ts](./memory/e2e/home.spec.ts)
+│   │   └── [version.spec.ts](./memory/e2e/version.spec.ts)
 │   ├── public/
 │   │   ├── icons/
 │   │   │   ├── [icon-128x128.png](./memory/public/icons/icon-128x128.png)
@@ -786,6 +664,8 @@
 │   │   │   │   ├── about/
 │   │   │   │   │   └── [page.tsx](./memory/src/app/(info)/about/page.tsx)
 │   │   │   │   ├── downloads/
+│   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   └── [page.test.tsx](./memory/src/app/(info)/downloads/__tests__/page.test.tsx)
 │   │   │   │   │   └── [page.tsx](./memory/src/app/(info)/downloads/page.tsx)
 │   │   │   │   └── version/
 │   │   │   │       └── [page.tsx](./memory/src/app/(info)/version/page.tsx)
@@ -825,6 +705,10 @@
 │   │   │       ├── [DownloadsTemplate.tsx](./memory/src/components/templates/DownloadsTemplate.tsx)
 │   │   │       ├── [ErrorTemplate.tsx](./memory/src/components/templates/ErrorTemplate.tsx)
 │   │   │       └── [VersionTemplate.tsx](./memory/src/components/templates/VersionTemplate.tsx)
+│   │   ├── content/
+│   │   │   ├── [about.ts](./memory/src/content/about.ts)
+│   │   │   ├── [download.ts](./memory/src/content/download.ts)
+│   │   │   └── [version.ts](./memory/src/content/version.ts)
 │   │   ├── data/
 │   │   │   └── [pi.ts](./memory/src/data/pi.ts)
 │   │   ├── games/
@@ -870,9 +754,55 @@
 │   │   ├── capabilities/
 │   │   │   └── [default.json](./memory/src-tauri/capabilities/default.json)
 │   │   ├── icons/
+│   │   │   ├── android/
+│   │   │   │   ├── mipmap-anydpi-v26/
+│   │   │   │   │   └── [ic_launcher.xml](./memory/src-tauri/icons/android/mipmap-anydpi-v26/ic_launcher.xml)
+│   │   │   │   ├── mipmap-hdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./memory/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./memory/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./memory/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-mdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./memory/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./memory/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./memory/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./memory/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./memory/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./memory/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xxhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./memory/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./memory/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./memory/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xxxhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./memory/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./memory/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./memory/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png)
+│   │   │   │   └── values/
+│   │   │   │       └── [ic_launcher_background.xml](./memory/src-tauri/icons/android/values/ic_launcher_background.xml)
+│   │   │   ├── ios/
+│   │   │   │   ├── [AppIcon-20x20@1x.png](./memory/src-tauri/icons/ios/AppIcon-20x20@1x.png)
+│   │   │   │   ├── [AppIcon-20x20@2x-1.png](./memory/src-tauri/icons/ios/AppIcon-20x20@2x-1.png)
+│   │   │   │   ├── [AppIcon-20x20@2x.png](./memory/src-tauri/icons/ios/AppIcon-20x20@2x.png)
+│   │   │   │   ├── [AppIcon-20x20@3x.png](./memory/src-tauri/icons/ios/AppIcon-20x20@3x.png)
+│   │   │   │   ├── [AppIcon-29x29@1x.png](./memory/src-tauri/icons/ios/AppIcon-29x29@1x.png)
+│   │   │   │   ├── [AppIcon-29x29@2x-1.png](./memory/src-tauri/icons/ios/AppIcon-29x29@2x-1.png)
+│   │   │   │   ├── [AppIcon-29x29@2x.png](./memory/src-tauri/icons/ios/AppIcon-29x29@2x.png)
+│   │   │   │   ├── [AppIcon-29x29@3x.png](./memory/src-tauri/icons/ios/AppIcon-29x29@3x.png)
+│   │   │   │   ├── [AppIcon-40x40@1x.png](./memory/src-tauri/icons/ios/AppIcon-40x40@1x.png)
+│   │   │   │   ├── [AppIcon-40x40@2x-1.png](./memory/src-tauri/icons/ios/AppIcon-40x40@2x-1.png)
+│   │   │   │   ├── [AppIcon-40x40@2x.png](./memory/src-tauri/icons/ios/AppIcon-40x40@2x.png)
+│   │   │   │   ├── [AppIcon-40x40@3x.png](./memory/src-tauri/icons/ios/AppIcon-40x40@3x.png)
+│   │   │   │   ├── [AppIcon-512@2x.png](./memory/src-tauri/icons/ios/AppIcon-512@2x.png)
+│   │   │   │   ├── [AppIcon-60x60@2x.png](./memory/src-tauri/icons/ios/AppIcon-60x60@2x.png)
+│   │   │   │   ├── [AppIcon-60x60@3x.png](./memory/src-tauri/icons/ios/AppIcon-60x60@3x.png)
+│   │   │   │   ├── [AppIcon-76x76@1x.png](./memory/src-tauri/icons/ios/AppIcon-76x76@1x.png)
+│   │   │   │   ├── [AppIcon-76x76@2x.png](./memory/src-tauri/icons/ios/AppIcon-76x76@2x.png)
+│   │   │   │   └── [AppIcon-83.5x83.5@2x.png](./memory/src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png)
 │   │   │   ├── [128x128.png](./memory/src-tauri/icons/128x128.png)
 │   │   │   ├── [128x128@2x.png](./memory/src-tauri/icons/128x128@2x.png)
+│   │   │   ├── [256x256.png](./memory/src-tauri/icons/256x256.png)
 │   │   │   ├── [32x32.png](./memory/src-tauri/icons/32x32.png)
+│   │   │   ├── [64x64.png](./memory/src-tauri/icons/64x64.png)
 │   │   │   ├── [Square107x107Logo.png](./memory/src-tauri/icons/Square107x107Logo.png)
 │   │   │   ├── [Square142x142Logo.png](./memory/src-tauri/icons/Square142x142Logo.png)
 │   │   │   ├── [Square150x150Logo.png](./memory/src-tauri/icons/Square150x150Logo.png)
@@ -883,6 +813,7 @@
 │   │   │   ├── [Square71x71Logo.png](./memory/src-tauri/icons/Square71x71Logo.png)
 │   │   │   ├── [Square89x89Logo.png](./memory/src-tauri/icons/Square89x89Logo.png)
 │   │   │   ├── [StoreLogo.png](./memory/src-tauri/icons/StoreLogo.png)
+│   │   │   ├── [create-icons.sh](./memory/src-tauri/icons/create-icons.sh)
 │   │   │   ├── [icon.icns](./memory/src-tauri/icons/icon.icns)
 │   │   │   ├── [icon.ico](./memory/src-tauri/icons/icon.ico)
 │   │   │   └── [icon.png](./memory/src-tauri/icons/icon.png)
@@ -914,6 +845,13 @@
 │   │   ├── [PACKAGING.md](./nikoli/docs/PACKAGING.md)
 │   │   └── [ROADMAP.md](./nikoli/docs/ROADMAP.md)
 │   ├── e2e/
+│   │   ├── screenshots/
+│   │   │   ├── [about.png](./nikoli/e2e/screenshots/about.png)
+│   │   │   ├── [downloads.png](./nikoli/e2e/screenshots/downloads.png)
+│   │   │   ├── [home.png](./nikoli/e2e/screenshots/home.png)
+│   │   │   └── [version.png](./nikoli/e2e/screenshots/version.png)
+│   │   ├── [about.spec.ts](./nikoli/e2e/about.spec.ts)
+│   │   ├── [downloads.spec.ts](./nikoli/e2e/downloads.spec.ts)
 │   │   ├── [fillomino.spec.ts](./nikoli/e2e/fillomino.spec.ts)
 │   │   ├── [heyawake.spec.ts](./nikoli/e2e/heyawake.spec.ts)
 │   │   ├── [home.spec.ts](./nikoli/e2e/home.spec.ts)
@@ -922,7 +860,8 @@
 │   │   ├── [norinori.spec.ts](./nikoli/e2e/norinori.spec.ts)
 │   │   ├── [nurikabe.spec.ts](./nikoli/e2e/nurikabe.spec.ts)
 │   │   ├── [shikaku.spec.ts](./nikoli/e2e/shikaku.spec.ts)
-│   │   └── [sudoku.spec.ts](./nikoli/e2e/sudoku.spec.ts)
+│   │   ├── [sudoku.spec.ts](./nikoli/e2e/sudoku.spec.ts)
+│   │   └── [version.spec.ts](./nikoli/e2e/version.spec.ts)
 │   ├── public/
 │   │   ├── icons/
 │   │   │   ├── [icon-128x128.png](./nikoli/public/icons/icon-128x128.png)
@@ -1036,6 +975,10 @@
 │   │   │       ├── [DownloadsTemplate.tsx](./nikoli/src/components/templates/DownloadsTemplate.tsx)
 │   │   │       ├── [ErrorTemplate.tsx](./nikoli/src/components/templates/ErrorTemplate.tsx)
 │   │   │       └── [VersionTemplate.tsx](./nikoli/src/components/templates/VersionTemplate.tsx)
+│   │   ├── content/
+│   │   │   ├── [about.ts](./nikoli/src/content/about.ts)
+│   │   │   ├── [download.ts](./nikoli/src/content/download.ts)
+│   │   │   └── [version.ts](./nikoli/src/content/version.ts)
 │   │   ├── games/
 │   │   │   ├── Fillomino/
 │   │   │   │   ├── __tests__/
@@ -1119,9 +1062,55 @@
 │   │   ├── capabilities/
 │   │   │   └── [default.json](./nikoli/src-tauri/capabilities/default.json)
 │   │   ├── icons/
+│   │   │   ├── android/
+│   │   │   │   ├── mipmap-anydpi-v26/
+│   │   │   │   │   └── [ic_launcher.xml](./nikoli/src-tauri/icons/android/mipmap-anydpi-v26/ic_launcher.xml)
+│   │   │   │   ├── mipmap-hdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./nikoli/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./nikoli/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./nikoli/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-mdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./nikoli/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./nikoli/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./nikoli/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./nikoli/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./nikoli/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./nikoli/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xxhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./nikoli/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./nikoli/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./nikoli/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xxxhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./nikoli/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./nikoli/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./nikoli/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png)
+│   │   │   │   └── values/
+│   │   │   │       └── [ic_launcher_background.xml](./nikoli/src-tauri/icons/android/values/ic_launcher_background.xml)
+│   │   │   ├── ios/
+│   │   │   │   ├── [AppIcon-20x20@1x.png](./nikoli/src-tauri/icons/ios/AppIcon-20x20@1x.png)
+│   │   │   │   ├── [AppIcon-20x20@2x-1.png](./nikoli/src-tauri/icons/ios/AppIcon-20x20@2x-1.png)
+│   │   │   │   ├── [AppIcon-20x20@2x.png](./nikoli/src-tauri/icons/ios/AppIcon-20x20@2x.png)
+│   │   │   │   ├── [AppIcon-20x20@3x.png](./nikoli/src-tauri/icons/ios/AppIcon-20x20@3x.png)
+│   │   │   │   ├── [AppIcon-29x29@1x.png](./nikoli/src-tauri/icons/ios/AppIcon-29x29@1x.png)
+│   │   │   │   ├── [AppIcon-29x29@2x-1.png](./nikoli/src-tauri/icons/ios/AppIcon-29x29@2x-1.png)
+│   │   │   │   ├── [AppIcon-29x29@2x.png](./nikoli/src-tauri/icons/ios/AppIcon-29x29@2x.png)
+│   │   │   │   ├── [AppIcon-29x29@3x.png](./nikoli/src-tauri/icons/ios/AppIcon-29x29@3x.png)
+│   │   │   │   ├── [AppIcon-40x40@1x.png](./nikoli/src-tauri/icons/ios/AppIcon-40x40@1x.png)
+│   │   │   │   ├── [AppIcon-40x40@2x-1.png](./nikoli/src-tauri/icons/ios/AppIcon-40x40@2x-1.png)
+│   │   │   │   ├── [AppIcon-40x40@2x.png](./nikoli/src-tauri/icons/ios/AppIcon-40x40@2x.png)
+│   │   │   │   ├── [AppIcon-40x40@3x.png](./nikoli/src-tauri/icons/ios/AppIcon-40x40@3x.png)
+│   │   │   │   ├── [AppIcon-512@2x.png](./nikoli/src-tauri/icons/ios/AppIcon-512@2x.png)
+│   │   │   │   ├── [AppIcon-60x60@2x.png](./nikoli/src-tauri/icons/ios/AppIcon-60x60@2x.png)
+│   │   │   │   ├── [AppIcon-60x60@3x.png](./nikoli/src-tauri/icons/ios/AppIcon-60x60@3x.png)
+│   │   │   │   ├── [AppIcon-76x76@1x.png](./nikoli/src-tauri/icons/ios/AppIcon-76x76@1x.png)
+│   │   │   │   ├── [AppIcon-76x76@2x.png](./nikoli/src-tauri/icons/ios/AppIcon-76x76@2x.png)
+│   │   │   │   └── [AppIcon-83.5x83.5@2x.png](./nikoli/src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png)
 │   │   │   ├── [128x128.png](./nikoli/src-tauri/icons/128x128.png)
 │   │   │   ├── [128x128@2x.png](./nikoli/src-tauri/icons/128x128@2x.png)
+│   │   │   ├── [256x256.png](./nikoli/src-tauri/icons/256x256.png)
 │   │   │   ├── [32x32.png](./nikoli/src-tauri/icons/32x32.png)
+│   │   │   ├── [64x64.png](./nikoli/src-tauri/icons/64x64.png)
 │   │   │   ├── [Square107x107Logo.png](./nikoli/src-tauri/icons/Square107x107Logo.png)
 │   │   │   ├── [Square142x142Logo.png](./nikoli/src-tauri/icons/Square142x142Logo.png)
 │   │   │   ├── [Square150x150Logo.png](./nikoli/src-tauri/icons/Square150x150Logo.png)
@@ -1132,6 +1121,7 @@
 │   │   │   ├── [Square71x71Logo.png](./nikoli/src-tauri/icons/Square71x71Logo.png)
 │   │   │   ├── [Square89x89Logo.png](./nikoli/src-tauri/icons/Square89x89Logo.png)
 │   │   │   ├── [StoreLogo.png](./nikoli/src-tauri/icons/StoreLogo.png)
+│   │   │   ├── [create-icons.sh](./nikoli/src-tauri/icons/create-icons.sh)
 │   │   │   ├── [icon.icns](./nikoli/src-tauri/icons/icon.icns)
 │   │   │   ├── [icon.ico](./nikoli/src-tauri/icons/icon.ico)
 │   │   │   └── [icon.png](./nikoli/src-tauri/icons/icon.png)
@@ -1163,7 +1153,15 @@
 │   │   ├── [DOWNLOADS.md](./tic-tac-toe/docs/DOWNLOADS.md)
 │   │   └── [ROADMAP.md](./tic-tac-toe/docs/ROADMAP.md)
 │   ├── e2e/
-│   │   └── [home.spec.ts](./tic-tac-toe/e2e/home.spec.ts)
+│   │   ├── screenshots/
+│   │   │   ├── [about.png](./tic-tac-toe/e2e/screenshots/about.png)
+│   │   │   ├── [downloads.png](./tic-tac-toe/e2e/screenshots/downloads.png)
+│   │   │   ├── [home.png](./tic-tac-toe/e2e/screenshots/home.png)
+│   │   │   └── [version.png](./tic-tac-toe/e2e/screenshots/version.png)
+│   │   ├── [about.spec.ts](./tic-tac-toe/e2e/about.spec.ts)
+│   │   ├── [downloads.spec.ts](./tic-tac-toe/e2e/downloads.spec.ts)
+│   │   ├── [home.spec.ts](./tic-tac-toe/e2e/home.spec.ts)
+│   │   └── [version.spec.ts](./tic-tac-toe/e2e/version.spec.ts)
 │   ├── public/
 │   │   ├── icons/
 │   │   │   ├── [icon-128x128.png](./tic-tac-toe/public/icons/icon-128x128.png)
@@ -1275,6 +1273,10 @@
 │   │   │       ├── [DownloadsTemplate.tsx](./tic-tac-toe/src/components/templates/DownloadsTemplate.tsx)
 │   │   │       ├── [ErrorTemplate.tsx](./tic-tac-toe/src/components/templates/ErrorTemplate.tsx)
 │   │   │       └── [VersionTemplate.tsx](./tic-tac-toe/src/components/templates/VersionTemplate.tsx)
+│   │   ├── content/
+│   │   │   ├── [about.ts](./tic-tac-toe/src/content/about.ts)
+│   │   │   ├── [download.ts](./tic-tac-toe/src/content/download.ts)
+│   │   │   └── [version.ts](./tic-tac-toe/src/content/version.ts)
 │   │   ├── games/
 │   │   │   ├── _shared/
 │   │   │   │   └── [board.ts](./tic-tac-toe/src/games/_shared/board.ts)
@@ -1340,9 +1342,55 @@
 │   │   ├── capabilities/
 │   │   │   └── [default.json](./tic-tac-toe/src-tauri/capabilities/default.json)
 │   │   ├── icons/
+│   │   │   ├── android/
+│   │   │   │   ├── mipmap-anydpi-v26/
+│   │   │   │   │   └── [ic_launcher.xml](./tic-tac-toe/src-tauri/icons/android/mipmap-anydpi-v26/ic_launcher.xml)
+│   │   │   │   ├── mipmap-hdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./tic-tac-toe/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./tic-tac-toe/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./tic-tac-toe/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-mdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./tic-tac-toe/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./tic-tac-toe/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./tic-tac-toe/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./tic-tac-toe/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./tic-tac-toe/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./tic-tac-toe/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xxhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./tic-tac-toe/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./tic-tac-toe/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./tic-tac-toe/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xxxhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./tic-tac-toe/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./tic-tac-toe/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./tic-tac-toe/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png)
+│   │   │   │   └── values/
+│   │   │   │       └── [ic_launcher_background.xml](./tic-tac-toe/src-tauri/icons/android/values/ic_launcher_background.xml)
+│   │   │   ├── ios/
+│   │   │   │   ├── [AppIcon-20x20@1x.png](./tic-tac-toe/src-tauri/icons/ios/AppIcon-20x20@1x.png)
+│   │   │   │   ├── [AppIcon-20x20@2x-1.png](./tic-tac-toe/src-tauri/icons/ios/AppIcon-20x20@2x-1.png)
+│   │   │   │   ├── [AppIcon-20x20@2x.png](./tic-tac-toe/src-tauri/icons/ios/AppIcon-20x20@2x.png)
+│   │   │   │   ├── [AppIcon-20x20@3x.png](./tic-tac-toe/src-tauri/icons/ios/AppIcon-20x20@3x.png)
+│   │   │   │   ├── [AppIcon-29x29@1x.png](./tic-tac-toe/src-tauri/icons/ios/AppIcon-29x29@1x.png)
+│   │   │   │   ├── [AppIcon-29x29@2x-1.png](./tic-tac-toe/src-tauri/icons/ios/AppIcon-29x29@2x-1.png)
+│   │   │   │   ├── [AppIcon-29x29@2x.png](./tic-tac-toe/src-tauri/icons/ios/AppIcon-29x29@2x.png)
+│   │   │   │   ├── [AppIcon-29x29@3x.png](./tic-tac-toe/src-tauri/icons/ios/AppIcon-29x29@3x.png)
+│   │   │   │   ├── [AppIcon-40x40@1x.png](./tic-tac-toe/src-tauri/icons/ios/AppIcon-40x40@1x.png)
+│   │   │   │   ├── [AppIcon-40x40@2x-1.png](./tic-tac-toe/src-tauri/icons/ios/AppIcon-40x40@2x-1.png)
+│   │   │   │   ├── [AppIcon-40x40@2x.png](./tic-tac-toe/src-tauri/icons/ios/AppIcon-40x40@2x.png)
+│   │   │   │   ├── [AppIcon-40x40@3x.png](./tic-tac-toe/src-tauri/icons/ios/AppIcon-40x40@3x.png)
+│   │   │   │   ├── [AppIcon-512@2x.png](./tic-tac-toe/src-tauri/icons/ios/AppIcon-512@2x.png)
+│   │   │   │   ├── [AppIcon-60x60@2x.png](./tic-tac-toe/src-tauri/icons/ios/AppIcon-60x60@2x.png)
+│   │   │   │   ├── [AppIcon-60x60@3x.png](./tic-tac-toe/src-tauri/icons/ios/AppIcon-60x60@3x.png)
+│   │   │   │   ├── [AppIcon-76x76@1x.png](./tic-tac-toe/src-tauri/icons/ios/AppIcon-76x76@1x.png)
+│   │   │   │   ├── [AppIcon-76x76@2x.png](./tic-tac-toe/src-tauri/icons/ios/AppIcon-76x76@2x.png)
+│   │   │   │   └── [AppIcon-83.5x83.5@2x.png](./tic-tac-toe/src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png)
 │   │   │   ├── [128x128.png](./tic-tac-toe/src-tauri/icons/128x128.png)
 │   │   │   ├── [128x128@2x.png](./tic-tac-toe/src-tauri/icons/128x128@2x.png)
+│   │   │   ├── [256x256.png](./tic-tac-toe/src-tauri/icons/256x256.png)
 │   │   │   ├── [32x32.png](./tic-tac-toe/src-tauri/icons/32x32.png)
+│   │   │   ├── [64x64.png](./tic-tac-toe/src-tauri/icons/64x64.png)
 │   │   │   ├── [Square107x107Logo.png](./tic-tac-toe/src-tauri/icons/Square107x107Logo.png)
 │   │   │   ├── [Square142x142Logo.png](./tic-tac-toe/src-tauri/icons/Square142x142Logo.png)
 │   │   │   ├── [Square150x150Logo.png](./tic-tac-toe/src-tauri/icons/Square150x150Logo.png)
@@ -1353,6 +1401,7 @@
 │   │   │   ├── [Square71x71Logo.png](./tic-tac-toe/src-tauri/icons/Square71x71Logo.png)
 │   │   │   ├── [Square89x89Logo.png](./tic-tac-toe/src-tauri/icons/Square89x89Logo.png)
 │   │   │   ├── [StoreLogo.png](./tic-tac-toe/src-tauri/icons/StoreLogo.png)
+│   │   │   ├── [create-icons.sh](./tic-tac-toe/src-tauri/icons/create-icons.sh)
 │   │   │   ├── [icon.icns](./tic-tac-toe/src-tauri/icons/icon.icns)
 │   │   │   ├── [icon.ico](./tic-tac-toe/src-tauri/icons/icon.ico)
 │   │   │   └── [icon.png](./tic-tac-toe/src-tauri/icons/icon.png)
@@ -1380,4 +1429,4 @@
 └── [TREE.md](./TREE.md)
 ```
 
-358 directories, 1019 files
+418 directories, 1294 files

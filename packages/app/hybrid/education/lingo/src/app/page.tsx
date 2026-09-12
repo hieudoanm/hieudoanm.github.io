@@ -7,6 +7,7 @@ import {
   PiCalendar,
   PiCards,
   PiFlask,
+  PiGlobeStand,
   PiMusicNote,
 } from 'react-icons/pi';
 
@@ -40,6 +41,12 @@ const ITEMS = [
     description: 'Game theory, markets, behavioral and macro concepts',
     icon: PiBank,
     href: '/economics/',
+  },
+  {
+    label: 'Geography',
+    description: 'Countries, continents, flags and capitals',
+    icon: PiGlobeStand,
+    href: '/geography/',
   },
 ];
 
