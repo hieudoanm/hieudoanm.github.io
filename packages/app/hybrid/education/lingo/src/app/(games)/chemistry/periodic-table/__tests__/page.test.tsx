@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import ChemistryPage from '@/app/(games)/chemistry/page';
+import ChemistryPage from '@/app/(games)/chemistry/periodic-table/page';
 
 describe('ChemistryPage', () => {
   it('renders a periodic table inside a tool shell', () => {

@@ -864,15 +864,6 @@
         "toolId": "emojis"
       },
       {
-        "label": "Kaprekar",
-        "description": "Routine",
-        "icon": "PiChartBar",
-        "type": "app",
-        "typeId": "App",
-        "sectionId": "utilities",
-        "toolId": "kaprekar"
-      },
-      {
         "label": "Lorem Ipsum",
         "description": "Dummy text",
         "icon": "PiNotePencil",

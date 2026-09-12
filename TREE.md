@@ -23407,8 +23407,6 @@
 │   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/utilities/create-zip/page.tsx)
 │   │   │   │   │   │   │   │   │   ├── emojis/
 │   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/utilities/emojis/page.tsx)
-│   │   │   │   │   │   │   │   │   ├── kaprekar/
-│   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/utilities/kaprekar/page.tsx)
 │   │   │   │   │   │   │   │   │   ├── lorem-ipsum/
 │   │   │   │   │   │   │   │   │   │   └── [page.tsx](./packages/app/hybrid/utilities/docs/src/app/(products)/utilities/lorem-ipsum/page.tsx)
 │   │   │   │   │   │   │   │   │   ├── no-sleep/
@@ -25052,10 +25050,6 @@
 │   │   │   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/Emojis/AGENTS.md)
 │   │   │   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/Emojis/index.tsx)
 │   │   │   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/Emojis/utils.ts)
-│   │   │   │   │   │   │   │   │   │   ├── Kaprekar/
-│   │   │   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/Kaprekar/AGENTS.md)
-│   │   │   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/Kaprekar/index.tsx)
-│   │   │   │   │   │   │   │   │   │   │   └── [utils.ts](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/Kaprekar/utils.ts)
 │   │   │   │   │   │   │   │   │   │   ├── LoremIpsum/
 │   │   │   │   │   │   │   │   │   │   │   ├── [AGENTS.md](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/LoremIpsum/AGENTS.md)
 │   │   │   │   │   │   │   │   │   │   │   ├── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/LoremIpsum/index.tsx)
@@ -25069,10 +25063,8 @@
 │   │   │   │   │   │   │   │   │   │   │   └── [index.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/ScreenRecorder/index.tsx)
 │   │   │   │   │   │   │   │   │   │   ├── __tests__/
 │   │   │   │   │   │   │   │   │   │   │   ├── __snapshots__/
-│   │   │   │   │   │   │   │   │   │   │   │   ├── [Emojis.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/__tests__/__snapshots__/Emojis.test.tsx.snap)
-│   │   │   │   │   │   │   │   │   │   │   │   └── [Kaprekar.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/__tests__/__snapshots__/Kaprekar.test.tsx.snap)
+│   │   │   │   │   │   │   │   │   │   │   │   └── [Emojis.test.tsx.snap](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/__tests__/__snapshots__/Emojis.test.tsx.snap)
 │   │   │   │   │   │   │   │   │   │   │   ├── [Emojis.test.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/__tests__/Emojis.test.tsx)
-│   │   │   │   │   │   │   │   │   │   │   ├── [Kaprekar.test.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/__tests__/Kaprekar.test.tsx)
 │   │   │   │   │   │   │   │   │   │   │   ├── [LoremIpsum.test.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/__tests__/LoremIpsum.test.tsx)
 │   │   │   │   │   │   │   │   │   │   │   └── [NoSleep.test.tsx](./packages/app/hybrid/utilities/docs/src/components/routes/apps/utilities/__tests__/NoSleep.test.tsx)
 │   │   │   │   │   │   │   │   │   │   └── data/

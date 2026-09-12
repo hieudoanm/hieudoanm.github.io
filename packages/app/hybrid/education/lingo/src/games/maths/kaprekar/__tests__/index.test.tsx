@@ -1,70 +1,64 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import { Kaprekar } from '../Kaprekar';
+import { Kaprekar } from '../index';
 
 describe('Kaprekar', () => {
-  beforeEach(() => {
-    jest.useFakeTimers();
-  });
-
-  afterEach(() => {
-    jest.useRealTimers();
-  });
-
-  it('should render with default 6174 constant', () => {
-    const { container } = render(<Kaprekar onClose={jest.fn()} />);
-    expect(container).toMatchSnapshot();
-    expect(screen.getByText('6174')).toBeInTheDocument();
-  });
-
-  it('should increment number with + button', () => {
-    render(<Kaprekar onClose={jest.fn()} />);
+  it('renders with the default 6174 constant', () => {
+    render(<Kaprekar />);
     const input = screen.getByRole('spinbutton') as HTMLInputElement;
     expect(input.value).toBe('6174');
+    expect(
+      screen.getByText("Kaprekar's Constant · 4 digits")
+    ).toBeInTheDocument();
+  });
+
+  it('increments the number with the + button', () => {
+    render(<Kaprekar />);
+    const input = screen.getByRole('spinbutton') as HTMLInputElement;
     fireEvent.click(screen.getByText('+'));
     expect(input.value).toBe('6175');
   });
 
-  it('should decrement number with - button', () => {
-    render(<Kaprekar onClose={jest.fn()} />);
+  it('decrements the number with the − button', () => {
+    render(<Kaprekar />);
     const input = screen.getByRole('spinbutton') as HTMLInputElement;
     fireEvent.click(screen.getAllByText('−')[0]);
     expect(input.value).toBe('6173');
   });
 
-  it('should not go below 100 when decrementing', () => {
-    render(<Kaprekar onClose={jest.fn()} />);
+  it('clamps to 100 when decrementing', () => {
+    render(<Kaprekar />);
     const input = screen.getByRole('spinbutton');
     fireEvent.change(input, { target: { value: '100' } });
     fireEvent.click(screen.getAllByText('−')[0]);
     expect((input as HTMLInputElement).value).toBe('100');
   });
 
-  it('should not go above 9999 when incrementing', () => {
-    render(<Kaprekar onClose={jest.fn()} />);
+  it('clamps to 9999 when incrementing', () => {
+    render(<Kaprekar />);
     const input = screen.getByRole('spinbutton');
     fireEvent.change(input, { target: { value: '9999' } });
     fireEvent.click(screen.getByText('+'));
     expect((input as HTMLInputElement).value).toBe('9999');
   });
 
-  it('should reset to 6174 on reset button click', () => {
-    render(<Kaprekar onClose={jest.fn()} />);
+  it('resets to 6174 on Reset click', () => {
+    render(<Kaprekar />);
     const input = screen.getByRole('spinbutton');
     fireEvent.change(input, { target: { value: '1234' } });
     fireEvent.click(screen.getByText('Reset'));
     expect((input as HTMLInputElement).value).toBe('6174');
   });
 
-  it('should show routine for non-constant numbers', () => {
-    render(<Kaprekar onClose={jest.fn()} />);
+  it('shows the routine for non-constant numbers', () => {
+    render(<Kaprekar />);
     const input = screen.getByRole('spinbutton');
     fireEvent.change(input, { target: { value: '3524' } });
     expect(screen.getByText(/5432/)).toBeInTheDocument();
     expect(screen.getByText(/3087/)).toBeInTheDocument();
   });
 
-  it('should show out of range message for numbers < 100', () => {
-    render(<Kaprekar onClose={jest.fn()} />);
+  it('shows an out of range message for numbers < 100', () => {
+    render(<Kaprekar />);
     const input = screen.getByRole('spinbutton');
     fireEvent.change(input, { target: { value: '50' } });
     expect(
@@ -72,8 +66,8 @@ describe('Kaprekar', () => {
     ).toBeInTheDocument();
   });
 
-  it('should show out of range message for numbers > 9999', () => {
-    render(<Kaprekar onClose={jest.fn()} />);
+  it('shows an out of range message for numbers > 9999', () => {
+    render(<Kaprekar />);
     const input = screen.getByRole('spinbutton');
     fireEvent.change(input, { target: { value: '12345' } });
     expect(
@@ -81,40 +75,42 @@ describe('Kaprekar', () => {
     ).toBeInTheDocument();
   });
 
-  it('should show constant display for 495', () => {
-    render(<Kaprekar onClose={jest.fn()} />);
+  it('shows the constant display for 495', () => {
+    render(<Kaprekar />);
     const input = screen.getByRole('spinbutton');
     fireEvent.change(input, { target: { value: '495' } });
     expect(screen.getByText('495')).toBeInTheDocument();
-    expect(screen.getByText(/3 digits/)).toBeInTheDocument();
+    expect(
+      screen.getByText("Kaprekar's Constant · 3 digits")
+    ).toBeInTheDocument();
   });
 
-  it('should respond to ArrowUp key', () => {
-    render(<Kaprekar onClose={jest.fn()} />);
+  it('increments with the ArrowUp key', () => {
+    render(<Kaprekar />);
     const input = screen.getByRole('spinbutton');
     fireEvent.change(input, { target: { value: '3524' } });
     fireEvent.keyDown(window, { key: 'ArrowUp' });
     expect((input as HTMLInputElement).value).toBe('3525');
   });
 
-  it('should respond to ArrowDown key', () => {
-    render(<Kaprekar onClose={jest.fn()} />);
+  it('decrements with the ArrowDown key', () => {
+    render(<Kaprekar />);
     const input = screen.getByRole('spinbutton');
     fireEvent.change(input, { target: { value: '3524' } });
     fireEvent.keyDown(window, { key: 'ArrowDown' });
     expect((input as HTMLInputElement).value).toBe('3523');
   });
 
-  it('should reset on Space key', () => {
-    render(<Kaprekar onClose={jest.fn()} />);
+  it('resets on the Space key', () => {
+    render(<Kaprekar />);
     const input = screen.getByRole('spinbutton');
     fireEvent.change(input, { target: { value: '3524' } });
     fireEvent.keyDown(window, { key: ' ' });
     expect((input as HTMLInputElement).value).toBe('6174');
   });
 
-  it('should show ignored digits message for repdigit 111', () => {
-    render(<Kaprekar onClose={jest.fn()} />);
+  it('rejects repdigit input', () => {
+    render(<Kaprekar />);
     const input = screen.getByRole('spinbutton');
     fireEvent.change(input, { target: { value: '111' } });
     expect(

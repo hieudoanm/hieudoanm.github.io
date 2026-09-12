@@ -171,8 +171,6 @@
 │   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/utilities/create-zip/page.tsx)
 │   │   │   │   │   ├── emojis/
 │   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/utilities/emojis/page.tsx)
-│   │   │   │   │   ├── kaprekar/
-│   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/utilities/kaprekar/page.tsx)
 │   │   │   │   │   ├── lorem-ipsum/
 │   │   │   │   │   │   └── [page.tsx](./src/app/(products)/apps/utilities/lorem-ipsum/page.tsx)
 │   │   │   │   │   ├── no-sleep/
@@ -1822,10 +1820,6 @@
 │   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/utilities/Emojis/AGENTS.md)
 │   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/utilities/Emojis/index.tsx)
 │   │   │   │   │   │   └── [utils.ts](./src/components/routes/apps/utilities/Emojis/utils.ts)
-│   │   │   │   │   ├── Kaprekar/
-│   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/utilities/Kaprekar/AGENTS.md)
-│   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/utilities/Kaprekar/index.tsx)
-│   │   │   │   │   │   └── [utils.ts](./src/components/routes/apps/utilities/Kaprekar/utils.ts)
 │   │   │   │   │   ├── LoremIpsum/
 │   │   │   │   │   │   ├── [AGENTS.md](./src/components/routes/apps/utilities/LoremIpsum/AGENTS.md)
 │   │   │   │   │   │   ├── [index.tsx](./src/components/routes/apps/utilities/LoremIpsum/index.tsx)
@@ -1839,10 +1833,8 @@
 │   │   │   │   │   │   └── [index.tsx](./src/components/routes/apps/utilities/ScreenRecorder/index.tsx)
 │   │   │   │   │   ├── __tests__/
 │   │   │   │   │   │   ├── __snapshots__/
-│   │   │   │   │   │   │   ├── [Emojis.test.tsx.snap](./src/components/routes/apps/utilities/__tests__/__snapshots__/Emojis.test.tsx.snap)
-│   │   │   │   │   │   │   └── [Kaprekar.test.tsx.snap](./src/components/routes/apps/utilities/__tests__/__snapshots__/Kaprekar.test.tsx.snap)
+│   │   │   │   │   │   │   └── [Emojis.test.tsx.snap](./src/components/routes/apps/utilities/__tests__/__snapshots__/Emojis.test.tsx.snap)
 │   │   │   │   │   │   ├── [Emojis.test.tsx](./src/components/routes/apps/utilities/__tests__/Emojis.test.tsx)
-│   │   │   │   │   │   ├── [Kaprekar.test.tsx](./src/components/routes/apps/utilities/__tests__/Kaprekar.test.tsx)
 │   │   │   │   │   │   ├── [LoremIpsum.test.tsx](./src/components/routes/apps/utilities/__tests__/LoremIpsum.test.tsx)
 │   │   │   │   │   │   └── [NoSleep.test.tsx](./src/components/routes/apps/utilities/__tests__/NoSleep.test.tsx)
 │   │   │   │   │   └── data/
@@ -2007,4 +1999,4 @@
 └── [tsconfig.json](./tsconfig.json)
 ```
 
-412 directories, 1665 files
+410 directories, 1659 files

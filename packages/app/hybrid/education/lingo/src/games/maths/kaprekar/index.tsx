@@ -1,3 +1,5 @@
+'use client';
+
 import { FC, useEffect, useState } from 'react';
 import {
   IGNORE_NUMBERS_3,
@@ -7,7 +9,7 @@ import {
   kaprekarRoutine,
 } from './utils';
 
-export const Kaprekar: FC<{ onClose: () => void }> = ({ onClose }) => {
+export const Kaprekar: FC = () => {
   const [number, setNumber] = useState(KAPREKAR_CONSTANT_4);
 
   const routines = kaprekarRoutine(number, [], {
@@ -33,9 +35,8 @@ export const Kaprekar: FC<{ onClose: () => void }> = ({ onClose }) => {
         setNumber(KAPREKAR_CONSTANT_4);
       }
     };
-    globalThis.window.addEventListener('keydown', handleKeyDown);
-    return () =>
-      globalThis.window.removeEventListener('keydown', handleKeyDown);
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
   return (

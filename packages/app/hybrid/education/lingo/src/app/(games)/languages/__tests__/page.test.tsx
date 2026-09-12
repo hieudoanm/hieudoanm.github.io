@@ -3,11 +3,6 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { FC, ReactNode } from 'react';
 import LanguagesPage from '@/app/(games)/languages/page';
 
-const mockPush = jest.fn();
-jest.mock('next/navigation', () => ({
-  useRouter: () => ({ push: mockPush }),
-}));
-
 const WORDS = [
   { language: 'korean', front: '안녕', back: 'hello' },
   { language: 'spanish', front: 'hola', back: 'hello' },
@@ -31,7 +26,7 @@ const Wrapper: FC<{ children: ReactNode }> = ({ children }) => {
 };
 
 describe('LanguagesPage', () => {
-  it('renders a Duolingo-style list of languages with flag links', async () => {
+  it('renders a list of language cards with flag links', async () => {
     render(
       <Wrapper>
         <LanguagesPage />
@@ -39,7 +34,7 @@ describe('LanguagesPage', () => {
     );
     expect(screen.getByText('Choose a language')).toBeInTheDocument();
 
-    const korean = await screen.findByTestId('language-korean');
+    const korean = await screen.findByTestId(`language-korean`);
     expect(korean).toHaveTextContent('Korean');
     expect(korean.getAttribute('href')).toContain('/languages/korean');
 
@@ -54,13 +49,6 @@ describe('LanguagesPage', () => {
     expect(screen.getByTestId('language-spanish')).toHaveTextContent('Spanish');
     expect(screen.getByTestId('language-myanmar_(burmese)')).toHaveTextContent(
       'Myanmar (Burmese)'
-    );
-
-    const learnButton = korean.closest('li')?.querySelector('button');
-    expect(learnButton).toHaveTextContent('Learn');
-    fireEvent.click(learnButton as HTMLElement);
-    await waitFor(() =>
-      expect(mockPush).toHaveBeenCalledWith('/languages/korean/')
     );
   });
 

@@ -532,6 +532,50 @@
         ]
       },
       {
+        "label": "Casino",
+        "primaryCategory": "Games",
+        "secondaryCategory": "Entertainment",
+        "icon": "PiDiceOne",
+        "href": "https://hieudoanm.github.io/free/casino",
+        "version": "latest",
+        "lastUpdated": "2025-01-01",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".aab",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-casino-latest/casino.aab"
+          },
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-casino-latest/casino.apk"
+          },
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-casino-latest/casino.dmg"
+          },
+          {
+            "label": ".AppImage",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-casino-latest/casino.AppImage"
+          },
+          {
+            "label": ".deb",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-casino-latest/casino.deb"
+          },
+          {
+            "label": ".x86_64.rpm",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-casino-latest/casino.rpm"
+          },
+          {
+            "label": ".msi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-casino-latest/casino.msi"
+          },
+          {
+            "label": ".exe",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-games-casino-latest/casino.exe"
+          }
+        ]
+      },
+      {
         "label": "Memory",
         "primaryCategory": "Games",
         "secondaryCategory": "Entertainment",

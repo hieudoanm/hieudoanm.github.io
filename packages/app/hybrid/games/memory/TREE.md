@@ -8,7 +8,15 @@
 │   ├── [PACKAGING.md](./docs/PACKAGING.md)
 │   └── [ROADMAP.md](./docs/ROADMAP.md)
 ├── e2e/
-│   └── [home.spec.ts](./e2e/home.spec.ts)
+│   ├── screenshots/
+│   │   ├── [about.png](./e2e/screenshots/about.png)
+│   │   ├── [downloads.png](./e2e/screenshots/downloads.png)
+│   │   ├── [home.png](./e2e/screenshots/home.png)
+│   │   └── [version.png](./e2e/screenshots/version.png)
+│   ├── [about.spec.ts](./e2e/about.spec.ts)
+│   ├── [downloads.spec.ts](./e2e/downloads.spec.ts)
+│   ├── [home.spec.ts](./e2e/home.spec.ts)
+│   └── [version.spec.ts](./e2e/version.spec.ts)
 ├── public/
 │   ├── icons/
 │   │   ├── [icon-128x128.png](./public/icons/icon-128x128.png)
@@ -120,6 +128,8 @@
 │   │   │   ├── about/
 │   │   │   │   └── [page.tsx](./src/app/(info)/about/page.tsx)
 │   │   │   ├── downloads/
+│   │   │   │   ├── __tests__/
+│   │   │   │   │   └── [page.test.tsx](./src/app/(info)/downloads/__tests__/page.test.tsx)
 │   │   │   │   └── [page.tsx](./src/app/(info)/downloads/page.tsx)
 │   │   │   └── version/
 │   │   │       └── [page.tsx](./src/app/(info)/version/page.tsx)
@@ -147,8 +157,11 @@
 │   │   └── [unauthorized.tsx](./src/app/unauthorized.tsx)
 │   ├── components/
 │   │   ├── atoms/
+│   │   │   ├── __tests__/
+│   │   │   │   └── [Dropzone.test.tsx](./src/components/atoms/__tests__/Dropzone.test.tsx)
 │   │   │   ├── [Dropzone.tsx](./src/components/atoms/Dropzone.tsx)
 │   │   │   └── [index.ts](./src/components/atoms/index.ts)
+│   │   ├── molecules/
 │   │   ├── organisms/
 │   │   │   ├── __tests__/
 │   │   │   │   └── [Header.test.tsx](./src/components/organisms/__tests__/Header.test.tsx)
@@ -158,11 +171,17 @@
 │   │       │   ├── [AboutTemplate.test.tsx](./src/components/templates/__tests__/AboutTemplate.test.tsx)
 │   │       │   ├── [DownloadsTemplate.test.tsx](./src/components/templates/__tests__/DownloadsTemplate.test.tsx)
 │   │       │   ├── [ErrorTemplate.test.tsx](./src/components/templates/__tests__/ErrorTemplate.test.tsx)
+│   │       │   ├── [GamesTemplate.test.tsx](./src/components/templates/__tests__/GamesTemplate.test.tsx)
 │   │       │   └── [VersionTemplate.test.tsx](./src/components/templates/__tests__/VersionTemplate.test.tsx)
 │   │       ├── [AboutTemplate.tsx](./src/components/templates/AboutTemplate.tsx)
 │   │       ├── [DownloadsTemplate.tsx](./src/components/templates/DownloadsTemplate.tsx)
 │   │       ├── [ErrorTemplate.tsx](./src/components/templates/ErrorTemplate.tsx)
+│   │       ├── [GamesTemplate.tsx](./src/components/templates/GamesTemplate.tsx)
 │   │       └── [VersionTemplate.tsx](./src/components/templates/VersionTemplate.tsx)
+│   ├── content/
+│   │   ├── [about.ts](./src/content/about.ts)
+│   │   ├── [download.ts](./src/content/download.ts)
+│   │   └── [version.ts](./src/content/version.ts)
 │   ├── data/
 │   │   └── [pi.ts](./src/data/pi.ts)
 │   ├── games/
@@ -198,12 +217,12 @@
 │   │   │   │   ├── [index.tsx](./src/games/8-bit/Snake/index.tsx)
 │   │   │   │   ├── [snake.ts](./src/games/8-bit/Snake/snake.ts)
 │   │   │   │   └── [types.ts](./src/games/8-bit/Snake/types.ts)
-│   │   │   ├── _shared/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   ├── [GameInstructions.test.tsx](./src/games/8-bit/_shared/__tests__/GameInstructions.test.tsx)
-│   │   │   │   │   └── [gameData.test.ts](./src/games/8-bit/_shared/__tests__/gameData.test.ts)
-│   │   │   │   ├── [GameInstructions.tsx](./src/games/8-bit/_shared/GameInstructions.tsx)
-│   │   │   │   └── [gameData.tsx](./src/games/8-bit/_shared/gameData.tsx)
+│   │   │   └── _shared/
+│   │   │       ├── __tests__/
+│   │   │       │   ├── [GameInstructions.test.tsx](./src/games/8-bit/_shared/__tests__/GameInstructions.test.tsx)
+│   │   │       │   └── [gameData.test.ts](./src/games/8-bit/_shared/__tests__/gameData.test.ts)
+│   │   │       ├── [GameInstructions.tsx](./src/games/8-bit/_shared/GameInstructions.tsx)
+│   │   │       └── [gameData.tsx](./src/games/8-bit/_shared/gameData.tsx)
 │   │   ├── memory/
 │   │   │   ├── MemoryMatch/
 │   │   │   │   ├── __tests__/
@@ -240,12 +259,6 @@
 │   │   │       ├── [useHighStreak.ts](./src/games/memory/Recall/useHighStreak.ts)
 │   │   │       └── [useRecall.ts](./src/games/memory/Recall/useRecall.ts)
 │   │   ├── nikoli/
-│   │   │   ├── _shared/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   ├── [GameInstructions.test.tsx](./src/games/nikoli/_shared/__tests__/GameInstructions.test.tsx)
-│   │   │   │   │   └── [gameData.test.tsx](./src/games/nikoli/_shared/__tests__/gameData.test.tsx)
-│   │   │   │   ├── [GameInstructions.tsx](./src/games/nikoli/_shared/GameInstructions.tsx)
-│   │   │   │   └── [gameData.tsx](./src/games/nikoli/_shared/gameData.tsx)
 │   │   │   ├── Fillomino/
 │   │   │   │   ├── __tests__/
 │   │   │   │   │   ├── [Fillomino.test.tsx](./src/games/nikoli/Fillomino/__tests__/Fillomino.test.tsx)
@@ -314,6 +327,12 @@
 │   │   │   │   ├── [index.tsx](./src/games/nikoli/Sudoku/index.tsx)
 │   │   │   │   ├── [types.ts](./src/games/nikoli/Sudoku/types.ts)
 │   │   │   │   └── [useSudoku.ts](./src/games/nikoli/Sudoku/useSudoku.ts)
+│   │   │   └── _shared/
+│   │   │       ├── __tests__/
+│   │   │       │   ├── [GameInstructions.test.tsx](./src/games/nikoli/_shared/__tests__/GameInstructions.test.tsx)
+│   │   │       │   └── [gameData.test.tsx](./src/games/nikoli/_shared/__tests__/gameData.test.tsx)
+│   │   │       ├── [GameInstructions.tsx](./src/games/nikoli/_shared/GameInstructions.tsx)
+│   │   │       └── [gameData.tsx](./src/games/nikoli/_shared/gameData.tsx)
 │   │   ├── puzzles/
 │   │   │   ├── Game2048/
 │   │   │   │   ├── __tests__/
@@ -426,9 +445,55 @@
 │   ├── capabilities/
 │   │   └── [default.json](./src-tauri/capabilities/default.json)
 │   ├── icons/
+│   │   ├── android/
+│   │   │   ├── mipmap-anydpi-v26/
+│   │   │   │   └── [ic_launcher.xml](./src-tauri/icons/android/mipmap-anydpi-v26/ic_launcher.xml)
+│   │   │   ├── mipmap-hdpi/
+│   │   │   │   ├── [ic_launcher.png](./src-tauri/icons/android/mipmap-hdpi/ic_launcher.png)
+│   │   │   │   ├── [ic_launcher_foreground.png](./src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png)
+│   │   │   │   └── [ic_launcher_round.png](./src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png)
+│   │   │   ├── mipmap-mdpi/
+│   │   │   │   ├── [ic_launcher.png](./src-tauri/icons/android/mipmap-mdpi/ic_launcher.png)
+│   │   │   │   ├── [ic_launcher_foreground.png](./src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png)
+│   │   │   │   └── [ic_launcher_round.png](./src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png)
+│   │   │   ├── mipmap-xhdpi/
+│   │   │   │   ├── [ic_launcher.png](./src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png)
+│   │   │   │   ├── [ic_launcher_foreground.png](./src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png)
+│   │   │   │   └── [ic_launcher_round.png](./src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png)
+│   │   │   ├── mipmap-xxhdpi/
+│   │   │   │   ├── [ic_launcher.png](./src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png)
+│   │   │   │   ├── [ic_launcher_foreground.png](./src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png)
+│   │   │   │   └── [ic_launcher_round.png](./src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png)
+│   │   │   ├── mipmap-xxxhdpi/
+│   │   │   │   ├── [ic_launcher.png](./src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png)
+│   │   │   │   ├── [ic_launcher_foreground.png](./src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png)
+│   │   │   │   └── [ic_launcher_round.png](./src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png)
+│   │   │   └── values/
+│   │   │       └── [ic_launcher_background.xml](./src-tauri/icons/android/values/ic_launcher_background.xml)
+│   │   ├── ios/
+│   │   │   ├── [AppIcon-20x20@1x.png](./src-tauri/icons/ios/AppIcon-20x20@1x.png)
+│   │   │   ├── [AppIcon-20x20@2x-1.png](./src-tauri/icons/ios/AppIcon-20x20@2x-1.png)
+│   │   │   ├── [AppIcon-20x20@2x.png](./src-tauri/icons/ios/AppIcon-20x20@2x.png)
+│   │   │   ├── [AppIcon-20x20@3x.png](./src-tauri/icons/ios/AppIcon-20x20@3x.png)
+│   │   │   ├── [AppIcon-29x29@1x.png](./src-tauri/icons/ios/AppIcon-29x29@1x.png)
+│   │   │   ├── [AppIcon-29x29@2x-1.png](./src-tauri/icons/ios/AppIcon-29x29@2x-1.png)
+│   │   │   ├── [AppIcon-29x29@2x.png](./src-tauri/icons/ios/AppIcon-29x29@2x.png)
+│   │   │   ├── [AppIcon-29x29@3x.png](./src-tauri/icons/ios/AppIcon-29x29@3x.png)
+│   │   │   ├── [AppIcon-40x40@1x.png](./src-tauri/icons/ios/AppIcon-40x40@1x.png)
+│   │   │   ├── [AppIcon-40x40@2x-1.png](./src-tauri/icons/ios/AppIcon-40x40@2x-1.png)
+│   │   │   ├── [AppIcon-40x40@2x.png](./src-tauri/icons/ios/AppIcon-40x40@2x.png)
+│   │   │   ├── [AppIcon-40x40@3x.png](./src-tauri/icons/ios/AppIcon-40x40@3x.png)
+│   │   │   ├── [AppIcon-512@2x.png](./src-tauri/icons/ios/AppIcon-512@2x.png)
+│   │   │   ├── [AppIcon-60x60@2x.png](./src-tauri/icons/ios/AppIcon-60x60@2x.png)
+│   │   │   ├── [AppIcon-60x60@3x.png](./src-tauri/icons/ios/AppIcon-60x60@3x.png)
+│   │   │   ├── [AppIcon-76x76@1x.png](./src-tauri/icons/ios/AppIcon-76x76@1x.png)
+│   │   │   ├── [AppIcon-76x76@2x.png](./src-tauri/icons/ios/AppIcon-76x76@2x.png)
+│   │   │   └── [AppIcon-83.5x83.5@2x.png](./src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png)
 │   │   ├── [128x128.png](./src-tauri/icons/128x128.png)
 │   │   ├── [128x128@2x.png](./src-tauri/icons/128x128@2x.png)
+│   │   ├── [256x256.png](./src-tauri/icons/256x256.png)
 │   │   ├── [32x32.png](./src-tauri/icons/32x32.png)
+│   │   ├── [64x64.png](./src-tauri/icons/64x64.png)
 │   │   ├── [Square107x107Logo.png](./src-tauri/icons/Square107x107Logo.png)
 │   │   ├── [Square142x142Logo.png](./src-tauri/icons/Square142x142Logo.png)
 │   │   ├── [Square150x150Logo.png](./src-tauri/icons/Square150x150Logo.png)
@@ -439,6 +504,7 @@
 │   │   ├── [Square71x71Logo.png](./src-tauri/icons/Square71x71Logo.png)
 │   │   ├── [Square89x89Logo.png](./src-tauri/icons/Square89x89Logo.png)
 │   │   ├── [StoreLogo.png](./src-tauri/icons/StoreLogo.png)
+│   │   ├── [create-icons.sh](./src-tauri/icons/create-icons.sh)
 │   │   ├── [icon.icns](./src-tauri/icons/icon.icns)
 │   │   ├── [icon.ico](./src-tauri/icons/icon.ico)
 │   │   └── [icon.png](./src-tauri/icons/icon.png)
@@ -464,4 +530,4 @@
 └── [tsconfig.json](./tsconfig.json)
 ```
 
-136 directories, 325 files
+150 directories, 377 files

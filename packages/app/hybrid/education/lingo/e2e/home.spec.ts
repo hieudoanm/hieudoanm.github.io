@@ -11,7 +11,13 @@ test('home lists all course cards', async ({ page }) => {
   await page.goto('/');
 
   await expect(page.getByRole('heading', { name: 'Lingo' })).toBeVisible();
-  for (const slug of ['languages', 'music', 'chemistry', 'economics']) {
+  for (const slug of [
+    'languages',
+    'music',
+    'chemistry',
+    'economics',
+    'maths',
+  ]) {
     await expect(page.getByTestId(`tool-card-${slug}`)).toBeVisible();
   }
   await expect(page.getByTestId('tool-card-history')).toBeVisible();
