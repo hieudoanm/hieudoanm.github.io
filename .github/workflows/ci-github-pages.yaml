@@ -6,6 +6,8 @@ on:
       - 'master'
     paths:
       - 'packages/app/hybrid/**/*'
+      - 'packages/app/headless/*/public/**'
+      - 'packages/app/native/*/public/**'
       - 'pnpm-lock.yaml'
       - 'pnpm-workspace.yaml'
       - 'turbo.json'
