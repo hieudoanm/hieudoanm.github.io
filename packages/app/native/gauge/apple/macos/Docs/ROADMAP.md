@@ -82,7 +82,7 @@
 
 > Clipboard manager migrated from the standalone Clipper app.
 
-- [x] `ClipperItem` / `ClipperStore` models in GaugeCore (dedupe, pin, cap,
+- [x] `ClipboardItem` / `ClipboardStore` models in GaugeCore (dedupe, pin, cap,
       atomic JSON persistence at `Application Support/Clipper/clipboard.json`)
 - [x] `ClipboardMonitor` (0.5 s `changeCount` poll) and single access point
       `PasteboardManager`
@@ -105,3 +105,39 @@
       (geolocation rows, raw JSON, VPN badge, map link, DNS lookup)
 - [x] Offline state shown distinctly from generic errors
 - [ ] Custom DNS record types / IPv6 queries
+
+## Phase 10 — Running Apps (Front)
+
+> Bring any running app's windows to the front, in one click.
+
+- [x] `RunningAppInfo` model and `RunningAppProviding` protocol in GaugeCore
+- [x] `RunningAppsDiscoveryService` (NSWorkspace list filtered to regular apps,
+      on-screen window counts, sorted by localized name) with unit tests
+- [x] Dedicated Front tab in the popover (searchable list, window counts,
+      bring-all-windows-to-front)
+- [x] 2-second refresh while the tab is visible
+- [ ] Activate by bundle identifier search history / favorites
+
+## Phase 11 — Workspaces
+
+> Save the apps and window positions you use, then restore them after a boot,
+> migrated from the standalone Snap app.
+
+- [x] `Workspace` / `WorkspaceWindow` / `NormalizedRect` / `ScreenInfo` models
+      in GaugeCore
+- [x] `WorkspaceStore` (atomic JSON persistence at
+      `Application Support/Workspaces/workspaces.json`) with unit tests
+- [x] Capture via `CoreGraphicsWindowLister` (layer-0 on-screen windows,
+      bundle IDs from `NSRunningApplication`) and `WorkspaceWindowBuilder`
+      (normalize to screen visible frames) with unit tests
+- [x] `CoordinateConverter` mapping normalized ↔ absolute coordinates, with
+      unit tests
+- [x] Restore that launches missing apps in parallel and arranges windows via
+      the Accessibility (AX) APIs (`WorkspaceRestoreService`, `WindowArranger`)
+- [x] Multi-monitor: windows restore to the saved display ID, falling back to
+      the primary display
+- [x] Dedicated Workspaces tab (last) with the in-tab Accessibility Grant
+      banner and per-restore summary
+- [ ] Keyboard shortcut to toggle workspaces popover
+- [ ] Auto-arrange on login / after wake
+- [ ] Overwrite-in-place ("re-save" edits the current snapshot)

@@ -8,140 +8,153 @@
 - Clipboard history tab so nothing you copy is ever lost
 - Live network throughput and per-interface traffic in a dedicated tab
 - Public IP inspector with geolocation, ASN/org, and DNS lookups
+- Running-apps list (Front tab) to bring any app's windows forward
+- Workspaces tab to save and restore app layouts (launch apps, place windows)
 - Low resource footprint (~0% idle CPU, <50 MB memory)
-- No special permissions, local-first, no backend
+- Local-first, no backend
 - Accurate, documented metrics
 
 ## Tech Stack
 
-| Layer          | Technology                    |
-| -------------- | ----------------------------- |
-| Language       | Swift 5.9+                    |
-| UI             | SwiftUI                       |
-| Memory API     | Mach VM (`host_statistics64`) |
-| Disk API       | Foundation `URLResourceValue` |
-| Port discovery | `lsof` via `Process`          |
-| Clipboard      | `NSPasteboard` changeCount    |
-| Network        | `getifaddrs` + IOKit          |
-| IP / DNS       | `URLSession` public APIs      |
-| Persistence    | Codable + JSON + FileManager  |
-| Build          | Swift Package Manager         |
-| Min macOS      | 13 Ventura                    |
+| Layer          | Technology                                          |
+| -------------- | --------------------------------------------------- |
+| Language       | Swift 5.9+                                          |
+| UI             | SwiftUI                                             |
+| Memory API     | Mach VM (`host_statistics64`)                       |
+| Disk API       | Foundation `URLResourceValue`                       |
+| Port discovery | `lsof` via `Process`                                |
+| Clipboard      | `NSPasteboard` changeCount                          |
+| Network        | `getifaddrs` + IOKit                                |
+| IP / DNS       | `URLSession` public APIs                            |
+| Front          | `NSWorkspace` + `CGWindowListCopyWindowInfo`        |
+| Windows        | CoreGraphics (capture) + Accessibility AX (arrange) |
+| Persistence    | Codable + JSON + FileManager                        |
+| Build          | Swift Package Manager                               |
+| Min macOS      | 13 Ventura                                          |
 
 ## Directory Structure
 
+Code is organized by tab, with a `GaugeCore` target holding everything
+unit-testable (models + protocol-driven services) and the `Gauge` target
+holding system-facing services, ViewModels, and SwiftUI views.
+
 ```text
 Sources/
-├── App/
-│   ├── GaugeApp.swift
-│   ├── GaugeViewModel.swift
-│   ├── PortsViewModel.swift
-│   ├── ClipboardViewModel.swift
-│   ├── NetworkViewModel.swift
-│   ├── IPViewModel.swift
-│   ├── LaunchAtLogin.swift
-│   └── MenuBarIcon.swift
-├── Core/
+├── App/                       ViewModels (one per tab)
+│   ├── Clipboard/
+│   │   └── ClipboardViewModel.swift
+│   ├── Front/
+│   │   └── AppsViewModel.swift
+│   ├── IP/
+│   │   └── IPViewModel.swift
+│   ├── Memory/
+│   │   └── MemoryViewModel.swift
+│   ├── Network/
+│   │   └── NetworkViewModel.swift
+│   ├── Ports/
+│   │   └── PortsViewModel.swift
+│   ├── Workspaces/
+│   │   └── WorkspacesViewModel.swift
+│   └── Shared/
+│       ├── GaugeApp.swift
+│       ├── LaunchAtLogin.swift
+│       ├── MenuBarIcon.swift
+│       └── MenuBarPanelPositioner.swift
+├── Core/                      GaugeCore target (public, unit-tested)
 │   ├── Models/
-│   │   ├── MemoryStats.swift
-│   │   ├── DiskStats.swift
-│   │   ├── SwapStats.swift
-│   │   ├── CPUStats.swift
-│   │   ├── SystemInfo.swift
-│   │   ├── UsageThreshold.swift
-│   │   ├── NetworkEndpoint.swift
-│   │   ├── PortInfo.swift
-│   │   ├── ClipperItem.swift
-│   │   ├── ClipperStore.swift
-│   │   ├── NetworkStats.swift
-│   │   ├── NetworkSnapshots.swift
-│   │   ├── IPInfo.swift
-│   │   └── DNSResponse.swift
+│   │   ├── Clipboard/  ClipboardItem, ClipboardStore
+│   │   ├── Front/      RunningAppInfo
+│   │   ├── IP/         IPInfo, DNSResponse
+│   │   ├── Memory/     MemoryStats, DiskStats, SwapStats, CPUStats, SystemInfo
+│   │   ├── Network/    NetworkStats, NetworkSnapshots
+│   │   ├── Ports/      PortInfo, NetworkEndpoint
+│   │   ├── Workspaces/ Workspace, WorkspaceWindow, NormalizedRect, ScreenInfo
+│   │   └── Shared/     MenuBarDisplay, UsageThreshold
 │   ├── Services/
-│   │   ├── PortDiscovering.swift
-│   │   ├── LsofPortDiscoveryService.swift
-│   │   ├── LsofParser.swift
-│   │   ├── ProcessTerminating.swift
-│   │   ├── SignalProcessTerminator.swift
-│   │   ├── NetworkInterfaceClassifying.swift
-│   │   ├── IPLookupServicing.swift
-│   │   └── IPInfoParsing.swift
-│   ├── ByteFormatter.swift
-│   └── SettingsStore.swift
-├── Services/
-│   ├── MemoryMonitor.swift
-│   ├── DiskMonitor.swift
-│   ├── SwapMonitor.swift
-│   ├── CPUMonitor.swift
-│   ├── SystemInfoMonitor.swift
-│   ├── MonitorError.swift
-│   ├── ClipboardMonitor.swift
-│   ├── PasteboardManager.swift
-│   ├── NetworkMonitor.swift
-│   ├── IOKitNetworkInterfaceClassifier.swift
-│   └── IPLookupService.swift
+│   │   ├── Clipboard/  (store lives in Models)
+│   │   ├── Front/      RunningAppProviding, RunningAppsDiscoveryService
+│   │   ├── IP/         IPLookupServicing, IPInfoParsing
+│   │   ├── Network/    NetworkInterfaceClassifying
+│   │   ├── Ports/      PortDiscovering, LsofPortDiscoveryService, LsofParser,
+│   │   │               ProcessTerminating, SignalProcessTerminator
+│   │   └── Workspaces/ CoordinateConverter, WindowListing, WorkspaceStoring,
+│   │                   WorkspaceStore, WorkspaceCapturing, WorkspaceRestoring,
+│   │                   WorkspaceWindowBuilder
+│   ├── ByteFormatter.swift    (shared)
+│   └── SettingsStore.swift    (shared)
+├── Services/                  System-facing services (Gauge target)
+│   ├── Clipboard/  ClipboardMonitor, PasteboardManager
+│   ├── IP/         IPLookupService
+│   ├── Memory/     MemoryMonitor, DiskMonitor, SwapMonitor, CPUMonitor,
+│   │               SystemInfoMonitor, MemoryPressureMonitor
+│   ├── Network/    NetworkMonitor, IOKitNetworkInterfaceClassifier
+│   ├── Workspaces/ AccessibilityManager, CoreGraphicsWindowLister,
+│   │               ScreenManager, ApplicationLauncher, WindowArranger,
+│   │               WorkspaceCaptureService, WorkspaceRestoreService
+│   └── Shared/     MonitorError
 └── Views/
-    ├── MenuBarView.swift
-    ├── SmallView.swift
-    ├── DetailsView.swift
-    ├── ClipboardView.swift
-    ├── IPView.swift
-    ├── NetworkView.swift
-    ├── PortsView.swift
-    ├── PortListView.swift
-    ├── PortRow.swift
-    ├── ResourceMeter.swift
-    ├── MemoryView.swift
-    ├── DiskView.swift
-    ├── CPUView.swift
-    ├── SwapView.swift
-    ├── SystemInfoView.swift
-    ├── UnavailableView.swift
-    ├── UsageThresholdColor.swift
-    └── SettingsView.swift
+    ├── Clipboard/  ClipboardView
+    ├── Front/      AppsView, AppsListView, AppRow
+    ├── IP/         IPView
+    ├── Memory/     SmallView, DetailsView, CPUView, DiskView, SwapView,
+    │               SystemInfoView
+    ├── Network/    NetworkView
+    ├── Ports/      PortsView, PortListView, PortRow
+    ├── Workspaces/ WorkspacesView, WorkspaceRow
+    └── Shared/     MenuBarView, ResourceMeter, SettingsView, UnavailableView,
+                    UsageThresholdColor
 ```
+
+Tests mirror this layout under `Tests/Core/…`, one suite per tab, so parsing,
+math, and store logic are verified independently of SwiftUI.
 
 ## Application Layers
 
 ```text
-┌──────────────────────────────────┐
-│           Menu Bar               │
-│     CPU 39%   Disk 83%           │
-├──────────────────────────────────┤
-│            Views                 │
-│  MenuBarView | SmallView         │
-│  DetailsView | ResourceMeter     │
-│  ClipboardView | NetworkView     │
-│  PortsView | PortListView        │
-│  IPView | PortRow | SettingsView │
-├──────────────────────────────────┤
-│          ViewModels              │
-│  GaugeViewModel | PortsViewModel │
-│  ClipboardViewModel |            │
-│  NetworkViewModel | IPViewModel  │
-├──────────────────────────────────┤
-│           Services               │
-│  MemoryMonitor | DiskMonitor     │
-│  SwapMonitor | CPUMonitor        │
-│  SystemInfoMonitor |             │
-│  LsofPortDiscoveryService        │
-│  ClipboardMonitor |              │
-│  PasteboardManager               │
-│  NetworkMonitor |                │
-│  IPLookupService | IOKitClassifier│
-├──────────────────────────────────┤
-│             Core                 │
-│  MemoryStats | DiskStats         │
-│  SwapStats | CPUStats            │
-│  PortInfo | NetworkEndpoint      │
-│  LsofParser | SignalTerminator   │
-│  ClipperItem | ClipperStore      │
-│  NetworkStats | Snapshots        │
-│  IPInfo | DNSResponse            │
-│  IPInfoParsing | IPNetworkError  │
-│  SystemInfo | ByteFormatter      │
-│  Threshold | SettingsStore       │
-└──────────────────────────────────┘
+┌────────────────────────────────────────┐
+│              Menu Bar                  │
+│        CPU 39%   Disk 83%              │
+├────────────────────────────────────────┤
+│                Views                   │
+│  MenuBarView | SmallView | DetailsView │
+│  ClipboardView | AppsView | IPView     │
+│  NetworkView | PortsView |             │
+│  WorkspacesView | ResourceMeter |      │
+│  SettingsView | UnavailableView        │
+├────────────────────────────────────────┤
+│             ViewModels                 │
+│  MemoryViewModel | PortsViewModel      │
+│  ClipboardViewModel | AppsViewModel    │
+│  NetworkViewModel | IPViewModel |      │
+│  WorkspacesViewModel                   │
+├────────────────────────────────────────┤
+│              Services                  │
+│  MemoryMonitor | DiskMonitor |         │
+│  SwapMonitor | CPUMonitor |            │
+│  SystemInfoMonitor |                   │
+│  LsofPortDiscoveryService |            │
+│  ClipboardMonitor | PasteboardManager  │
+│  NetworkMonitor | IPLookupService |    │
+│  IOKitClassifier | RunningAppsDisc.    │
+│  WorkspaceCapture/ RestoreService |    │
+│  AccessibilityManager | CGWindowLister │
+│  ScreenManager | ApplicationLauncher   │
+│  WindowArranger                        │
+├────────────────────────────────────────┤
+│                 Core                   │
+│  MemoryStats | DiskStats | SwapStats   │
+│  CPUStats | SystemInfo | PortInfo      │
+│  NetworkEndpoint | LsofParser |        │
+│  SignalTerminator | ClipboardItem      │
+│  ClipboardStore | NetworkStats |       │
+│  IPInfo | DNSResponse | RunningAppInfo │
+│  IPInfoParsing | IPNetworkError        │
+│  SystemInfo | ByteFormatter |          │
+│  Threshold | SettingsStore |           │
+│  Workspace | WorkspaceWindow |         │
+│  NormalizedRect | ScreenInfo |         │
+│  WorkspaceStore | CoordinateConverter  │
+└────────────────────────────────────────┘
 ```
 
 ## Monitoring
@@ -260,7 +273,7 @@ are protocol-based so unit tests can substitute mocks.
 **Definition:** a searchable, local-first history of everything copied to the
 system clipboard (migrated from the standalone Clipper app). `PasteboardManager`
 is the single access point to `NSPasteboard.general`; `ClipboardMonitor` polls
-`changeCount` every 0.5 s and appends new text to `ClipperStore` when it
+`changeCount` every 0.5 s and appends new text to `ClipboardStore` when it
 changes. The store deduplicates repeated copies (bump `copiedCount`, move to
 front), supports pin/delete/clear-unpinned, searches case-insensitively, and
 persists atomically to `~/Library/Application Support/Clipper/clipboard.json`.
@@ -272,16 +285,83 @@ NSPasteboard.general.changeCount
         ↓ yes
    getLatestContent()
         ↓
-   ClipperStore.add()  →  dedupe / cap / save
+   ClipboardStore.add()  →  dedupe / cap / save
         ↓
-     ClipboardView
+      ClipboardView
 ```
 
 The system pasteboard remains the source of truth — Gauge only observes and
 never pretends to own the clipboard. A user copy from history writes back via
 `PasteboardManager.copyToClipboard`, which the monitor deduplicates on the next
-tick. Monitoring can be paused in Settings, and `ClipperStore.maxItems` caps
+tick. Monitoring can be paused in Settings, and `ClipboardStore.maxItems` caps
 retained history to the configured limit.
+
+### Front (Running Apps)
+
+**Definition:** the regular, user-facing applications currently running, used
+to bring any app's windows forward. `RunningAppsDiscoveryService` lists
+`NSWorkspace.shared.runningApplications` (filtered to `.regular` activation
+policy, excluding Gauge itself) and enriches each entry with an on-screen
+window count from `CGWindowListCopyWindowInfo`. Rows are sorted by localized
+name; the search filters by name or bundle identifier. Acting is a direct
+`NSRunningApplication.activate(options: .activateAllWindows,
+.activateIgnoringOtherApps)` — no Accessibility permission needed.
+
+```text
+NSWorkspace.runningApplications + CGWindowListCopyWindowInfo
+        ↓
+    RunningAppsDiscoveryService
+        ↓
+       [RunningAppInfo]  (sorted, searchable)
+        ↓
+        AppsView  →  activate(.activateAllWindows)
+```
+
+The list refreshes every 2 seconds while the popover is open.
+
+### Workspaces
+
+**Definition:** named snapshots of the apps on screen and their window
+positions, restored on demand — the button to hit after a clean boot or a
+device switch. `WorkspaceCaptureService` lists layer-0 on-screen windows via
+`CGWindowListCopyWindowInfo` (excluding Gauge's own windows), resolves each
+owner to a bundle identifier with `NSRunningApplication`, and converts every
+window CGRect into a `NormalizedRect` plus a `screenID` relative to the
+visible frame of the display it occupies. `WorkspaceStore` persists the list
+atomically as JSON at `~/Library/Application Support/Workspaces/workspaces.json`.
+
+```text
+CGWindowListCopyWindowInfo(.optionOnScreenOnly)
+        ↓  layer 0, self excluded, bundle id resolved
+  [CapturedWindow] (pid, bundleID, title, bounds)
+        ↓  WorkspaceWindowBuilder.normalize (per ScreenInfo visible frame)
+  [WorkspaceWindow] (bundleID, title?, screenID?, NormalizedRect)
+        ↓
+      WorkspaceStore.save → workspaces.json
+```
+
+Restoring launches missing apps in parallel (one `Task` per bundle identifier,
+waiting up to 10 s for a chosen PID) and arranges each app's windows through
+the Accessibility (AX) APIs — `AXUIElementCopyAttributeValue(kAXWindows…)` to
+find windows, `kAXPosition` / `kAXSize` to place them. Windows are matched by
+saved title when present, otherwise the first window is used. Windows restore
+to the **saved display ID** with a fallback to the primary display, so a
+layout captured on a multi-monitor setup is placed back where it was.
+
+```text
+restore(workspace)
+   for each bundleID (async group):
+       running? ─no→ launch (NSRunningApplication) → wait for PID
+                                    ↓
+                       AX window list (kAXWindows)
+                                    ↓
+              place via kAXPosition / kAXSize (WindowArranger)
+```
+
+Accessibility is the only permission Gauge can request, and only window
+arrangement needs it. The Workspaces tab shows a **Grant** banner when
+`AXIsProcessTrusted()` is false and reports a summary after each restore
+(windows placed vs. failed, apps that could not be launched).
 
 ### Network
 
@@ -359,7 +439,8 @@ runs its own lightweight discovery loop on launch, honoring the same
 `SettingsStore.refreshInterval`; the Network view behaves the same way, so
 throughput rates always divide by the configured interval. The Clipboard
 monitor is independent: a 0.5-second pasteboard poll whose only cost is a
-`changeCount` comparison.
+`changeCount` comparison. The Front (running apps) list refreshes every 2
+seconds while visible. Workspaces data is read on demand from disk.
 
 ## Formatting
 
@@ -382,13 +463,21 @@ Semantic system colors only — readable in Light and Dark Mode.
 
 ## State Management
 
-- `GaugeViewModel` — observable coordinator between Views and Services
+- `MemoryViewModel` — observable coordinator between Views and services;
+  owns the system monitor pipeline (memory, disk, swap, CPU, system, pressure)
 - `PortsViewModel` — observable coordinator for port discovery and termination
 - `ClipboardViewModel` — observable coordinator for clipboard history, owns the
-  `ClipperStore` and monitor, persists monitor/max-history preferences
+  `ClipboardStore` and monitor, persists monitor/max-history preferences
+- `AppsViewModel` — observable coordinator for the running-apps list (Front
+  tab), refreshes every 2 s while visible
 - `IPViewModel` — observable coordinator for IP/DNS lookups, classifies
   connectivity failures into an explicit Offline state
-- `SettingsStore` — persists user preferences (refresh interval, shared by the system and ports view models)
+- `NetworkViewModel` — observable coordinator for throughput and session totals
+- `WorkspacesViewModel` — observable coordinator for saved workspaces
+  (capture, list, restore, delete); owns the `WorkspaceStore`, capture service,
+  restore service, and accessibility permission state
+- `SettingsStore` — persists user preferences (refresh interval, shared by the
+  system and ports view models)
 - Models are immutable value types with computed ratio/percentage
 
 ## Styling

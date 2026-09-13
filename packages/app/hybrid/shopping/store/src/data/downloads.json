@@ -1706,22 +1706,6 @@
             "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-gauge-latest/Gauge.dmg"
           }
         ]
-      },
-      {
-        "label": "Snap",
-        "primaryCategory": "Utilities",
-        "secondaryCategory": "",
-        "icon": "PiGridFour",
-        "href": "https://hieudoanm.github.io/free/snap",
-        "version": "latest",
-        "lastUpdated": "2025-01-01",
-        "fileSize": "",
-        "actions": [
-          {
-            "label": ".dmg",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-snap-latest/Snap.dmg"
-          }
-        ]
       }
     ]
   },

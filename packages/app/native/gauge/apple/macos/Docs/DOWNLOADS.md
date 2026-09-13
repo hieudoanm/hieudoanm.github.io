@@ -8,8 +8,8 @@
 
 ## About
 
-Gauge — RAM, storage, network throughput, local ports, and clipboard history
-at a glance from your menu bar.
+Gauge — RAM, storage, network throughput, local ports, running apps, workspace
+layout save/restore, and clipboard history at a glance from your menu bar.
 
 ## Features
 
@@ -108,16 +108,45 @@ at a glance from your menu bar.
 - Dedicated IP tab between Clipboard and Memory; fetches on tab open and on
   Refresh
 
+## Front
+
+- Lists the regular running applications (Gauge itself excluded), sorted by
+  localized name
+- Per-app on-screen window count
+- Search by app name or bundle identifier
+- One-click *Bring to Front* activates all of an app's windows
+- Refreshes every 2 seconds while the tab is visible; no permission required
+
+## Workspaces
+
+- Save the current layout — every on-screen app and its window positions — as
+  a named workspace
+- Restore it later with one click: missing apps are launched automatically and
+  each app's windows are placed back to their saved positions (matching by
+  saved title, falling back to the first window)
+- Multi-monitor aware: windows restore to the saved display, falling back to
+  the primary display if the saved one is gone
+- Workspaces are stored locally at
+  `~/Library/Application Support/Workspaces/workspaces.json` — nothing leaves
+  your machine
+- Menu-bar only (no global shortcuts)
+- Arranging windows requires **Accessibility** permission; the tab shows a
+  Grant banner and a restore summary (windows placed / apps launched) when
+  permission is missing or a restore fails
+
 ## Popover
 
-- Five tabs, Clipboard, IP, Memory (default), Network and Ports:
+- Seven tabs, Clipboard, Front, IP, Memory (default), Network, Ports and
+  Workspaces:
   - Memory tab: compact percentage and used / total numbers (small view) with
     full progress-bar sections (details view) switchable from the header
   - Clipboard tab: searchable history with copy, pin, and delete actions
+  - Front tab: searchable running-apps list with one-click bring-to-front
   - IP tab: current IP, geolocation, ASN/org, VPN badge and DNS A-record lookup
   - Network tab: download / upload speeds, session totals, and per-interface
     traffic
   - Ports tab: searchable list of local listening ports with kill actions
+  - Workspaces tab: save, list, restore, and delete named app layouts
 - Memory section (details) with active / wired / compressed and cached / inactive / free breakdowns
 - Storage section (details) with free / purgeable amounts
 - CPU section (details) with load average
@@ -132,7 +161,8 @@ at a glance from your menu bar.
 - Menu Bar display style (Percentages / Values / Used-Total)
 - Clipboard: monitor on/off, max history size, saved items count
 - Launch at Login via `SMAppService`
-- No special permissions required
+- No special permissions required for the monitor/clipboard/network tabs;
+  Accessibility is requested only when you first restore a workspace
 
 ## UX
 

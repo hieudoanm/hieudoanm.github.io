@@ -30,14 +30,23 @@ Gauge, bundle ID `io.github.hieudoanm.Gauge`, version 0.0.1.
 
 Gauge requires no special permissions for its basic functionality, including
 port discovery via `lsof` and reading the shared pasteboard for clipboard
-history (the app never requests Full Disk Access, Accessibility, root
-privileges, or network extensions). Do not request any except when a future
-feature genuinely requires one.
+history (the app never requests Full Disk Access, root privileges, or network
+extensions). It never requests Screen Recording.
 
-### Launch at Login (Future)
+The **only** permission Gauge can request is **Accessibility**, and only the
+Workspaces tab needs it to arrange windows during a restore. `AccessibilityManager`
+uses `AXIsProcessTrustedWithOptions` to prompt in-app; without the permission
+the Workspaces tab shows a Grant banner and restore is skipped gracefully. The
+app runs sandboxed-off (`Gauge.entitlements` only contains
+`com.apple.security.app-sandbox = false`) — signing does **not** require an
+Accessibility entitlement, the user grants it once in System Settings.
 
-- [ ] Use `SMAppService` from `ServiceManagement`
-- [ ] Do not use shell scripts or deprecated login items
+### Launch at Login (Implemented)
+
+- [x] `SMAppService.mainApp.register()` / `unregister()` from
+      `ServiceManagement` (see `Sources/App/Shared/LaunchAtLogin.swift`)
+- [x] Toggle in Settings
+- [ ] Do not use shell scripts or deprecated login items — confirmed, none used
 
 ### App Store (Future)
 

@@ -15,7 +15,9 @@ make build
 make dev
 ```
 
-No permissions are required to run Gauge.
+No permissions are required to run Gauge. The only permission Gauge can ever
+request is **Accessibility**, and only the Workspaces tab's window arrangement
+needs it; it is never required to build, run, or use the other six tabs.
 
 ## Development Commands
 
@@ -80,12 +82,28 @@ No permissions are required to run Gauge.
 ### Clipboard Conventions
 
 - Views never touch `NSPasteboard` directly — go through `PasteboardManager`
-- Keep all history logic in `ClipperStore` (dedupe, pin, cap, save) so it stays
-  unit-testable
+- Keep all history logic in `ClipboardStore` (dedupe, pin, cap, save) so it
+  stays unit-testable
 - The system pasteboard is the source of truth; never clear or overwrite it
   except for an explicit user "copy" action
 - Persist atomically to `Application Support/Clipper/clipboard.json`
 - Never skip the `maxItems` cap — history must stay bounded
+
+### Workspaces Conventions
+
+- Views never touch window APIs directly — go through `WorkspaceCapturing`,
+  `WorkspaceRestoring`, and `WindowListing`
+- Keep coordinate math in Core (`CoordinateConverter`, `WorkspaceWindowBuilder`,
+  `NormalizedRect`) so it stays unit-testable
+- Always restore to the saved display ID with a fallback to the primary display
+  when the saved display is gone; never fail a restore because a monitor moved
+- Launch missing apps in parallel per bundle identifier; never re-signal or
+  re-launch an app that is already running
+- Only touch Accessibility APIs through `AccessibilityManager`, and only for
+  window arrangement; gate every restore on `AXIsProcessTrusted()`
+- Persist atomically to `Application Support/Workspaces/workspaces.json`
+- Restoration must never be destructive: no quitting apps, no killing PIDs,
+  no resizing windows beyond their saved bounds
 
 ### IP Conventions
 
@@ -103,12 +121,17 @@ No permissions are required to run Gauge.
 2. `make test` — all tests pass
 3. `make dev` — smoke test the app
 4. Menu-bar icon shows memory and disk percentages
-5. Popover shows all five tabs with Memory the default
+5. Popover shows all seven tabs with Memory the default
 6. Memory tab shows both progress bars with used/total values
 7. Clipboard tab captures, searches, and copies history; pin and delete work
-8. IP tab shows the current IP, geolocation, and DNS lookup; Offline and error
+8. Front tab lists running apps (Windows count) and bringing an app to the
+   front works
+9. IP tab shows the current IP, geolocation, and DNS lookup; Offline and error
    states render distinctly
-9. Network tab shows live download/upload rates, session totals, and
-   per-interface rows with Wi-Fi/Ethernet classification
-10. Ports view lists listening ports and kill actions work
-11. Verify both Light Mode and Dark Mode
+10. Network tab shows live download/upload rates, session totals, and
+    per-interface rows with Wi-Fi/Ethernet classification
+11. Ports view lists listening ports and kill actions work
+12. Workspaces tab saves a workspace, the Grant banner appears without
+    Accessibility, restore launches missing apps and places windows once
+    granted
+13. Verify both Light Mode and Dark Mode

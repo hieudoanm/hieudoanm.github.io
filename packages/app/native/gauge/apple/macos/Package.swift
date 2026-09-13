@@ -18,6 +18,7 @@ let package = Package(
             exclude: ["Core"],
             linkerSettings: [
                 .linkedFramework("Foundation"),
+                .linkedFramework("ApplicationServices"),
             ]
         ),
         .testTarget(

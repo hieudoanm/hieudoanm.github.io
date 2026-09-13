@@ -191,7 +191,6 @@
 | --- | -------- | --------- | ------- | -------------------- | ---------------------------- |
 | 46  | macOS    | Utilities | Brewery | [Free][free-brewery] | [Releases][releases-brewery] |
 | 47  | macOS    | Utilities | Gauge   | [Free][free-gauge]   | [Releases][releases-gauge]   |
-| 48  | macOS    | Utilities | Snap    | [Free][free-snap]    | [Releases][releases-snap]    |
 
 ---
 
@@ -242,7 +241,6 @@
 [free-backbone]: https://hieudoanm.github.io/free/backbone/
 [free-brewery]: https://hieudoanm.github.io/free/brewery/
 [free-gauge]: https://hieudoanm.github.io/free/gauge/
-[free-snap]: https://hieudoanm.github.io/free/snap/
 [free-kevin]: https://hieudoanm.github.io/free/kevin/
 [free-landify]: https://hieudoanm.github.io/free/landify/
 
@@ -285,7 +283,6 @@
 [releases-password]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-hybrid-utilities-password-latest
 [releases-brewery]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-macos-brewery-latest
 [releases-gauge]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-macos-gauge-latest
-[releases-snap]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-macos-snap-latest
 [releases-block]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-android-block-latest
 [releases-nfc]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-android-nfc-latest
 [releases-browserverless]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-browserverless-latest
