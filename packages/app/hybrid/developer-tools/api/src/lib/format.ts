@@ -44,10 +44,20 @@ export const METHOD_COLORS: Record<HttpMethod, string> = {
   GET: 'badge-success',
   POST: 'badge-warning',
   PUT: 'badge-info',
-  PATCH: 'badge-info',
+  PATCH: 'badge-secondary',
   DELETE: 'badge-error',
   HEAD: 'badge-neutral',
   OPTIONS: 'badge-neutral',
+};
+
+export const METHOD_SELECT_COLORS: Record<HttpMethod, string> = {
+  GET: 'bg-success text-white',
+  POST: 'bg-warning text-white',
+  PUT: 'bg-info text-white',
+  PATCH: 'bg-secondary text-white',
+  DELETE: 'bg-error text-white',
+  HEAD: 'bg-neutral',
+  OPTIONS: 'bg-neutral',
 };
 
 export const formatRelativeTime = (timestamp: number): string => {

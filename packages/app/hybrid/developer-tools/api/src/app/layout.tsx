@@ -26,7 +26,7 @@ const RootLayout: FC<{ children: ReactNode }> = ({ children }) => (
     <head>
       <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
     </head>
-    <body className="bg-base-100 text-base-content flex h-screen flex-col overflow-y-auto font-mono">
+    <body className="bg-base-100 text-base-content flex h-screen flex-col overflow-y-auto font-sans">
       <Header />
       <main className="flex-1">
         <SWProvider>{children}</SWProvider>

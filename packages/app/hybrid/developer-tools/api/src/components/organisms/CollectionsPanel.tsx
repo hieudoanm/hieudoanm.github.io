@@ -11,7 +11,14 @@ import {
   ResponseMeta,
 } from '@/types/api-client';
 import { type ChangeEvent, type FC, useState } from 'react';
-import { FiFolder, FiPlus, FiTrash2, FiUpload } from 'react-icons/fi';
+import {
+  FiArchive,
+  FiFileText,
+  FiFolder,
+  FiPlus,
+  FiTrash2,
+  FiUpload,
+} from 'react-icons/fi';
 
 interface CollectionsPanelProps {
   collections: RequestCollection[];
@@ -121,7 +128,7 @@ export const CollectionsPanel: FC<CollectionsPanelProps> = ({
 
   return (
     <div className="flex flex-col gap-3">
-      <div className="flex items-center justify-between px-2">
+      <div className="flex items-center justify-between">
         <span className="text-base-content/40 text-xs font-bold uppercase">
           Collections
         </span>
@@ -223,12 +230,15 @@ export const CollectionsPanel: FC<CollectionsPanelProps> = ({
         </div>
       )}
 
-      <ul className="menu w-full gap-0.5">
+      <ul className="flex w-full list-none flex-col gap-3">
         {collections.map((collection) => (
           <li key={collection.id}>
             <details>
               <summary className="flex items-center gap-1">
-                <span className="flex-1 font-medium">{collection.name}</span>
+                <FiArchive className="text-base-content/60 size-3.5" />
+                <span className="flex-1 truncate font-medium">
+                  {collection.name}
+                </span>
                 <button
                   type="button"
                   onClick={() => removeCollection(collection.id)}
@@ -237,11 +247,12 @@ export const CollectionsPanel: FC<CollectionsPanelProps> = ({
                   <FiTrash2 className="size-3" />
                 </button>
               </summary>
-              <ul>
+              <ul className="flex list-none flex-col gap-1.5 pl-5">
                 {collection.groups.map((group) => (
                   <li key={group.id}>
                     <details>
                       <summary className="flex items-center gap-1">
+                        <FiFolder className="text-base-content/60 size-3.5" />
                         <span className="flex-1 text-sm">{group.name}</span>
                         <button
                           type="button"
@@ -251,7 +262,7 @@ export const CollectionsPanel: FC<CollectionsPanelProps> = ({
                           <FiTrash2 className="size-3" />
                         </button>
                       </summary>
-                      <ul>
+                      <ul className="flex list-none flex-col gap-1.5 pl-5">
                         {group.entries.map((entry) => (
                           <li key={entry.id}>
                             <span
@@ -268,6 +279,7 @@ export const CollectionsPanel: FC<CollectionsPanelProps> = ({
                                   } badge-xs`}>
                                   {entry.request.method}
                                 </span>
+                                <FiFileText className="text-base-content/50 size-3" />
                                 <span className="truncate text-xs">
                                   {entry.name}
                                 </span>

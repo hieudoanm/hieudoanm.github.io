@@ -1,6 +1,7 @@
 'use client';
 
 import { useApiClient } from '@/hooks/useApiClient';
+import { DesignPanel } from '@/components/organisms/DesignPanel';
 import { GrpcPanel } from '@/components/organisms/GrpcPanel';
 import { MqttPanel } from '@/components/organisms/MqttPanel';
 import { ProtocolSwitch } from '@/components/molecules/ProtocolSwitch';
@@ -28,8 +29,6 @@ export const ApiClient: FC = () => {
       env={api.env}
       cookies={api.cookies}
       request={api.request}
-      mockEnabled={api.mockEnabled}
-      onMockToggle={api.onMockToggle}
       activeEntryId={api.activeEntryId}
       response={api.response}
       onLoadCollectionEntry={api.onLoadCollectionEntry}
@@ -38,8 +37,9 @@ export const ApiClient: FC = () => {
   );
 
   const renderWorkspace = (): ReactNode => {
+    let workspace: ReactNode;
     if (api.protocol === 'http') {
-      return (
+      workspace = (
         <Fragment>
           <RequestTabBar
             tabs={api.tabs}
@@ -70,18 +70,23 @@ export const ApiClient: FC = () => {
           />
         </Fragment>
       );
+    } else if (api.protocol === 'websocket') {
+      workspace = <WebSocketPanel />;
+    } else if (api.protocol === 'grpc') {
+      workspace = <GrpcPanel />;
+    } else {
+      workspace = <MqttPanel />;
     }
-    if (api.protocol === 'websocket') {
-      return <WebSocketPanel />;
-    }
-    if (api.protocol === 'grpc') {
-      return <GrpcPanel />;
-    }
-    return <MqttPanel />;
+    return (
+      <Fragment>
+        <ProtocolSwitch value={api.protocol} onChange={api.onProtocolChange} />
+        {workspace}
+      </Fragment>
+    );
   };
 
   return (
-    <div className="flex h-full flex-col gap-3 lg:flex-row">
+    <div className="flex h-full flex-col lg:flex-row">
       <div className="lg:hidden">
         <SidebarToggle
           tab={api.sidebarTab}
@@ -92,16 +97,46 @@ export const ApiClient: FC = () => {
           }
           onClick={api.onToggleSidebar}
         />
-        {api.showSidebar && sidebar}
+        {api.showSidebar && (
+          <div className="bg-base-100 text-base-content">{sidebar}</div>
+        )}
       </div>
 
-      <aside className="border-base-300 hidden min-h-0 w-64 shrink-0 overflow-y-auto border-r p-4 lg:block">
+      <aside className="bg-base-100 border-base-300 text-base-content hidden min-h-0 w-64 shrink-0 overflow-y-auto border-r p-4 lg:block">
         {sidebar}
       </aside>
 
-      <div className="flex min-h-0 min-w-0 flex-1 flex-col gap-3 overflow-y-auto">
-        <ProtocolSwitch value={api.protocol} onChange={api.onProtocolChange} />
-        {renderWorkspace()}
+      <div className="flex min-h-0 min-w-0 flex-1 flex-col gap-3 overflow-y-auto p-4">
+        <div className="tabs tabs-boxed tabs-sm w-fit" role="tablist">
+          <button
+            type="button"
+            role="tab"
+            aria-selected={api.workspaceView === 'request'}
+            aria-label="Request view"
+            onClick={() => api.onWorkspaceView('request')}
+            className={`tab ${api.workspaceView === 'request' ? 'tab-active' : ''}`}>
+            Request
+          </button>
+          <button
+            type="button"
+            role="tab"
+            aria-selected={api.workspaceView === 'design'}
+            aria-label="Design view"
+            onClick={() => api.onWorkspaceView('design')}
+            className={`tab ${api.workspaceView === 'design' ? 'tab-active' : ''}`}>
+            Design
+          </button>
+        </div>
+        {api.workspaceView === 'design' ? (
+          <DesignPanel
+            collections={api.collections}
+            request={api.request}
+            mockEnabled={api.mockEnabled}
+            onMockToggle={api.onMockToggle}
+          />
+        ) : (
+          renderWorkspace()
+        )}
       </div>
     </div>
   );

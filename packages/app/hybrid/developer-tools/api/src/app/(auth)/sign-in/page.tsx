@@ -1,8 +1,8 @@
 'use client';
 
-import { type FC, useState } from 'react';
 import Link from 'next/link';
-import { FiLock, FiMail, FiEye, FiEyeOff } from 'react-icons/fi';
+import { useState, type FC } from 'react';
+import { FiEye, FiEyeOff, FiLock } from 'react-icons/fi';
 
 const SignInPage: FC = () => {
   const [email, setEmail] = useState('');
@@ -11,7 +11,7 @@ const SignInPage: FC = () => {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
 
-  const handleSubmit = (event: React.FormEvent): void => {
+  const handleSubmit = (event: React.SubmitEvent): void => {
     event.preventDefault();
     if (!email.trim() || !password) {
       setError('Enter your email and password.');
@@ -27,7 +27,7 @@ const SignInPage: FC = () => {
         <div className="card bg-base-100 w-full shadow-xl">
           <div className="card-body">
             <div className="mb-2 flex items-center justify-center">
-              <div className="bg-primary/10 text-primary flex h-14 w-14 items-center justify-center rounded-2xl">
+              <div className="bg-primary/10 text-primary flex h-14 w-14 items-center justify-center rounded-lg">
                 <FiLock className="h-6 w-6" />
               </div>
             </div>

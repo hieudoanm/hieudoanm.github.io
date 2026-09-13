@@ -1,8 +1,8 @@
 'use client';
 
-import { type FC, useState } from 'react';
 import Link from 'next/link';
-import { FiUser, FiMail, FiLock, FiEye, FiEyeOff } from 'react-icons/fi';
+import { useState, type FC } from 'react';
+import { FiEye, FiEyeOff, FiUser } from 'react-icons/fi';
 
 const SignUpPage: FC = () => {
   const [name, setName] = useState('');
@@ -13,7 +13,7 @@ const SignUpPage: FC = () => {
   const [error, setError] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (event: React.FormEvent): void => {
+  const handleSubmit = (event: React.SubmitEvent): void => {
     event.preventDefault();
     if (!name.trim() || !email.trim() || !password || !confirm) {
       setError('Please fill in all fields.');
@@ -33,7 +33,7 @@ const SignUpPage: FC = () => {
         <div className="card bg-base-100 w-full shadow-xl">
           <div className="card-body">
             <div className="mb-2 flex items-center justify-center">
-              <div className="bg-primary/10 text-primary flex h-14 w-14 items-center justify-center rounded-2xl">
+              <div className="bg-primary/10 text-primary flex h-14 w-14 items-center justify-center rounded-lg">
                 <FiUser className="h-6 w-6" />
               </div>
             </div>

@@ -1,6 +1,6 @@
 'use client';
 
-import { METHOD_COLORS } from '@/lib/format';
+import { METHOD_SELECT_COLORS } from '@/lib/format';
 import { HTTP_METHODS, HttpMethod } from '@/types/api-client';
 import { type FC } from 'react';
 
@@ -14,7 +14,7 @@ export const MethodSelect: FC<MethodSelectProps> = ({ method, onChange }) => (
     value={method}
     onChange={(e) => onChange(e.target.value as HttpMethod)}
     aria-label="HTTP method"
-    className={`select select-bordered select-sm w-28 ${METHOD_COLORS[method]} border-transparent`}>
+    className={`select select-bordered select-sm w-28 ${METHOD_SELECT_COLORS[method]} border-transparent`}>
     {HTTP_METHODS.map((m) => (
       <option key={m} value={m}>
         {m}

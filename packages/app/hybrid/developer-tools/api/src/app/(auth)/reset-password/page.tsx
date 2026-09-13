@@ -31,7 +31,7 @@ const ResetPasswordPage: FC = () => {
         <div className="card bg-base-100 w-full shadow-xl">
           <div className="card-body">
             <div className="mb-2 flex items-center justify-center">
-              <div className="bg-primary/10 text-primary flex h-14 w-14 items-center justify-center rounded-2xl">
+              <div className="bg-primary/10 text-primary flex h-14 w-14 items-center justify-center rounded-lg">
                 <FiShield className="h-6 w-6" />
               </div>
             </div>

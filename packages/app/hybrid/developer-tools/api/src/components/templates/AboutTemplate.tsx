@@ -20,7 +20,7 @@ export const AboutTemplate: FC<{
 
     <p className="text-base-content/50 max-w-sm text-sm">{description}</p>
 
-    <div className="border-base-content/10 bg-base-200 w-full max-w-lg rounded-2xl border p-6">
+    <div className="border-base-content/10 bg-base-200 w-full max-w-lg rounded-lg border p-6">
       <div className="flex flex-col gap-4">
         {items.map(({ label, value }) => (
           <div key={label} className="flex items-center justify-between">
@@ -34,10 +34,10 @@ export const AboutTemplate: FC<{
     </div>
 
     <div className="flex flex-wrap justify-center gap-3">
-      <span className="border-base-content/20 text-base-content/50 rounded-full border px-3 py-1 text-xs">
+      <span className="border-base-content/20 text-base-content/50 rounded-md border px-3 py-1 text-xs">
         {version}
       </span>
-      <span className="badge badge-neutral rounded-full">Stable</span>
+      <span className="badge badge-neutral rounded-md">Stable</span>
     </div>
   </div>
 );

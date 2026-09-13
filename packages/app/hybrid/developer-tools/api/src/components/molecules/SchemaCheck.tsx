@@ -84,7 +84,7 @@ export const SchemaCheck: FC<SchemaCheckProps> = ({ body }) => {
         onChange={(e) => setSchemaText(e.target.value)}
         aria-label="JSON schema"
         spellCheck={false}
-        className="textarea textarea-bordered bg-base-200 h-32 font-mono text-xs"
+        className="textarea textarea-bordered bg-base-200 h-64 w-full font-mono text-xs"
       />
       {result.error ? (
         <p className="text-error text-xs" role="alert">

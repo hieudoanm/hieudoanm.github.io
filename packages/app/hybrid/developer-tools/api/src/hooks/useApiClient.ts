@@ -48,8 +48,9 @@ export interface UseApiClient {
   loading: boolean;
   error: string | null;
   files: FormFiles;
-  sidebarTab: 'history' | 'collections' | 'runner' | 'design';
+  sidebarTab: 'history' | 'collections' | 'runner';
   showSidebar: boolean;
+  workspaceView: 'request' | 'design';
   mockEnabled: boolean;
   activeEntryId: string | null;
   onRequestChange: (next: RequestConfig) => void;
@@ -65,7 +66,8 @@ export interface UseApiClient {
   onFilesChange: (files: FormFiles) => void;
   onCollectionsChange: (next: RequestCollection[]) => void;
   onLoadCollectionEntry: (request: RequestConfig, entryId: string) => void;
-  onSidebarTab: (tab: 'history' | 'collections' | 'runner' | 'design') => void;
+  onSidebarTab: (tab: 'history' | 'collections' | 'runner') => void;
+  onWorkspaceView: (view: 'request' | 'design') => void;
   onMockToggle: () => void;
   onToggleSidebar: () => void;
 }
@@ -93,10 +95,13 @@ export const useApiClient = (): UseApiClient => {
   const [error, setError] = useState<string | null>(null);
   const [activeEntryId, setActiveEntryId] = useState<string | null>(null);
   const [sidebarTab, setSidebarTab] = useState<
-    'history' | 'collections' | 'runner' | 'design'
-  >('history');
+    'history' | 'collections' | 'runner'
+  >('collections');
   const [mockEnabled, setMockEnabled] = useState(false);
   const [showSidebar, setShowSidebar] = useState(false);
+  const [workspaceView, setWorkspaceView] = useState<'request' | 'design'>(
+    'request'
+  );
 
   const request =
     tabs.find((tab) => tab.id === activeId)?.request ?? emptyRequest();
@@ -289,11 +294,15 @@ export const useApiClient = (): UseApiClient => {
   );
 
   const onSidebarTab = useCallback(
-    (tab: 'history' | 'collections' | 'runner' | 'design'): void => {
+    (tab: 'history' | 'collections' | 'runner'): void => {
       setSidebarTab(tab);
     },
     []
   );
+
+  const onWorkspaceView = useCallback((view: 'request' | 'design'): void => {
+    setWorkspaceView(view);
+  }, []);
 
   const onMockToggle = useCallback((): void => {
     setMockEnabled((prev) => !prev);
@@ -319,6 +328,7 @@ export const useApiClient = (): UseApiClient => {
     files,
     sidebarTab,
     showSidebar,
+    workspaceView,
     mockEnabled,
     activeEntryId,
     onRequestChange,
@@ -335,6 +345,7 @@ export const useApiClient = (): UseApiClient => {
     onCollectionsChange,
     onLoadCollectionEntry,
     onSidebarTab,
+    onWorkspaceView,
     onMockToggle,
     onToggleSidebar,
   };

@@ -1,7 +1,6 @@
 'use client';
 
 import { CollectionsPanel } from '@/components/organisms/CollectionsPanel';
-import { DesignPanel } from '@/components/organisms/DesignPanel';
 import { HistoryList } from '@/components/organisms/HistoryList';
 import { RunnerPanel } from '@/components/organisms/RunnerPanel';
 import { type SidebarSection } from '@/components/molecules/SidebarTabs';
@@ -27,8 +26,6 @@ interface SidebarProps {
   env: EnvironmentVariable[];
   cookies: StoredCookie[];
   request: RequestConfig;
-  mockEnabled: boolean;
-  onMockToggle: () => void;
   activeEntryId: string | null;
   response: ResponseMeta | null;
   onLoadCollectionEntry: (request: RequestConfig, entryId: string) => void;
@@ -46,8 +43,6 @@ export const Sidebar: FC<SidebarProps> = ({
   env,
   cookies,
   request,
-  mockEnabled,
-  onMockToggle,
   activeEntryId,
   response,
   onLoadCollectionEntry,
@@ -67,16 +62,6 @@ export const Sidebar: FC<SidebarProps> = ({
     if (tab === 'runner') {
       return (
         <RunnerPanel collections={collections} env={env} cookies={cookies} />
-      );
-    }
-    if (tab === 'design') {
-      return (
-        <DesignPanel
-          collections={collections}
-          request={request}
-          mockEnabled={mockEnabled}
-          onMockToggle={onMockToggle}
-        />
       );
     }
     return (

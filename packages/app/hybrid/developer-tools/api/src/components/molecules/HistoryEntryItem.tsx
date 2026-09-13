@@ -16,10 +16,15 @@ export const HistoryEntryItem: FC<HistoryEntryItemProps> = ({
   onSelect,
 }) => (
   <li>
-    <button
-      type="button"
+    <div
+      role="button"
       onClick={() => onSelect(entry)}
-      className={`flex flex-col items-start gap-0.5 ${active ? 'menu-active' : ''}`}>
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          onSelect(entry);
+        }
+      }}
+      className={`flex flex-col items-start gap-0.5 ${active ? 'menu-active' : ''} cursor-pointer`}>
       <span className="flex w-full items-center gap-2">
         <span
           className={`badge ${METHOD_COLORS[entry.request.method]} badge-xs`}>
@@ -30,7 +35,7 @@ export const HistoryEntryItem: FC<HistoryEntryItemProps> = ({
       <span className="text-base-content/40 text-xs">
         {formatRelativeTime(entry.timestamp)}
       </span>
-    </button>
+    </div>
   </li>
 );
 

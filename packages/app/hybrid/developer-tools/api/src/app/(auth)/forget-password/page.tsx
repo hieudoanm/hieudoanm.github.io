@@ -1,15 +1,15 @@
 'use client';
 
-import { type FC, useState } from 'react';
 import Link from 'next/link';
-import { FiMail, FiKey } from 'react-icons/fi';
+import { useState, type FC } from 'react';
+import { FiKey } from 'react-icons/fi';
 
 const ForgetPasswordPage: FC = () => {
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (event: React.FormEvent): void => {
+  const handleSubmit = (event: React.SubmitEvent): void => {
     event.preventDefault();
     if (!email.trim()) {
       setError('Enter your email address.');
@@ -25,7 +25,7 @@ const ForgetPasswordPage: FC = () => {
         <div className="card bg-base-100 w-full shadow-xl">
           <div className="card-body">
             <div className="mb-2 flex items-center justify-center">
-              <div className="bg-primary/10 text-primary flex h-14 w-14 items-center justify-center rounded-2xl">
+              <div className="bg-primary/10 text-primary flex h-14 w-14 items-center justify-center rounded-lg">
                 <FiKey className="h-6 w-6" />
               </div>
             </div>

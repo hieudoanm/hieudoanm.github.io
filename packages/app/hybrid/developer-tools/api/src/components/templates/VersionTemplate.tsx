@@ -24,7 +24,7 @@ export const VersionTemplate: FC<{ version: string }> = ({ version }) => {
 
       <h1 className="mb-1">Version</h1>
 
-      <div className="border-base-content/10 bg-base-200 w-full max-w-lg overflow-x-auto rounded-2xl border p-4 sm:p-6">
+      <div className="border-base-content/10 bg-base-200 w-full max-w-lg overflow-x-auto rounded-lg border p-4 sm:p-6">
         {hasSegments ? (
           <div className="flex min-w-max items-center justify-center gap-0">
             <Segment value={year} label="Year" primary />
@@ -61,22 +61,22 @@ export const VersionTemplate: FC<{ version: string }> = ({ version }) => {
       <div className="flex w-full flex-col items-center gap-3 sm:flex-row sm:justify-center">
         <button
           onClick={copy}
-          className={`btn btn-sm w-full rounded-full sm:w-auto ${copied ? 'btn-success' : 'btn-primary'}`}>
+          className={`btn btn-sm w-full sm:w-auto ${copied ? 'btn-success' : 'btn-primary'}`}>
           {copied ? <FiCheck /> : <FiCopy />}
           {copied ? 'Copied' : 'Copy version'}
         </button>
         <button
-          className="btn btn-neutral btn-sm w-full truncate rounded-full sm:w-auto"
+          className="btn btn-neutral btn-sm w-full truncate sm:w-auto"
           onClick={copy}>
           {version}
         </button>
       </div>
 
       <div className="flex flex-wrap justify-center gap-3">
-        <span className="border-base-content/20 text-base-content/50 rounded-full border px-3 py-1 text-xs">
+        <span className="border-base-content/20 text-base-content/50 rounded-md border px-3 py-1 text-xs">
           Format: YYYY.MM.DD.hh.mm.ss
         </span>
-        <span className="badge badge-neutral rounded-full">Stable</span>
+        <span className="badge badge-neutral rounded-md">Stable</span>
       </div>
     </div>
   );

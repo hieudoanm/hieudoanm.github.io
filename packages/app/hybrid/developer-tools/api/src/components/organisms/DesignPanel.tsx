@@ -60,7 +60,7 @@ export const DesignPanel: FC<DesignPanelProps> = ({
 
   return (
     <div className="flex flex-col gap-3">
-      <div className="flex items-center justify-between px-2">
+      <div className="flex items-center justify-between">
         <span className="text-base-content/40 text-xs font-bold uppercase">
           Design
         </span>

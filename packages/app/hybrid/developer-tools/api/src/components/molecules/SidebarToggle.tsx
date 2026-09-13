@@ -8,7 +8,6 @@ const SIDEBAR_LABELS: Record<SidebarSection, string> = {
   history: 'History',
   collections: 'Collections',
   runner: 'Runner',
-  design: 'Design',
 };
 
 interface SidebarToggleProps {

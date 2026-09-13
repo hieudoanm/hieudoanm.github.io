@@ -98,7 +98,7 @@ DownloadRow.displayName = 'DownloadRow';
 
 const MinimalDownloads: FC<{ items: DownloadItem[] }> = ({ items }) => (
   <div className="mx-auto flex w-full max-w-md items-stretch">
-    <div className="card bg-base-200 border-base-content/10 flex w-full flex-col gap-4 rounded-2xl border p-6">
+    <div className="card bg-base-200 border-base-content/10 flex w-full flex-col gap-4 rounded-lg border p-6">
       {items.map((item) => (
         <DownloadRow key={`${item.platform}-${item.label}`} item={item} />
       ))}
@@ -112,7 +112,7 @@ const DownloadsSection: FC<{ os: string; items: DownloadItem[] }> = ({
   os,
   items,
 }) => (
-  <section className="border-base-content/10 bg-base-200 flex w-full flex-col gap-4 rounded-2xl border p-6">
+  <section className="border-base-content/10 bg-base-200 flex w-full flex-col gap-4 rounded-lg border p-6">
     <h2 className="text-base-content text-start text-sm font-bold tracking-[0.2em] uppercase">
       {os}
     </h2>
@@ -133,10 +133,10 @@ DownloadsSection.displayName = 'DownloadsSection';
 
 const DownloadsMeta: FC<{ version: string }> = ({ version }) => (
   <div className="flex flex-wrap justify-center gap-3">
-    <span className="border-base-content/20 text-base-content/50 rounded-full border px-3 py-1 text-xs">
+    <span className="border-base-content/20 text-base-content/50 rounded-md border px-3 py-1 text-xs">
       {version}
     </span>
-    <span className="badge badge-neutral rounded-full">Stable</span>
+    <span className="badge badge-neutral rounded-md">Stable</span>
   </div>
 );
 

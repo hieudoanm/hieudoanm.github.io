@@ -25,6 +25,9 @@ describe('ApiClient', () => {
 
   it('renders composer, tabs and empty states', () => {
     render(<ApiClient />);
+    fireEvent.change(screen.getByLabelText('Sidebar section'), {
+      target: { value: 'history' },
+    });
     expect(screen.getByLabelText('HTTP method')).toHaveValue('GET');
     expect(screen.getByText('No requests yet')).toBeInTheDocument();
     expect(
@@ -56,6 +59,9 @@ describe('ApiClient', () => {
       target: { value: 'https://api.example.com/users' },
     });
     fireEvent.click(screen.getByText('Send'));
+    fireEvent.change(screen.getByLabelText('Sidebar section'), {
+      target: { value: 'history' },
+    });
 
     expect(
       await screen.findByText('https://api.example.com/users')
@@ -68,6 +74,9 @@ describe('ApiClient', () => {
       target: { value: 'https://api.example.com/users' },
     });
     fireEvent.click(screen.getByText('Send'));
+    fireEvent.change(screen.getByLabelText('Sidebar section'), {
+      target: { value: 'history' },
+    });
     await screen.findByText('https://api.example.com/users');
 
     fireEvent.change(screen.getByLabelText('Request URL'), {
@@ -133,6 +142,9 @@ describe('ApiClient', () => {
       target: { value: 'https://api.example.com/users' },
     });
     fireEvent.click(screen.getByText('Send'));
+    fireEvent.change(screen.getByLabelText('Sidebar section'), {
+      target: { value: 'history' },
+    });
     await screen.findByText('https://api.example.com/users');
 
     fireEvent.click(screen.getByText('Clear'));
@@ -141,6 +153,9 @@ describe('ApiClient', () => {
 
   it('toggles the history list on mobile', () => {
     render(<ApiClient />);
+    fireEvent.change(screen.getByLabelText('Sidebar section'), {
+      target: { value: 'history' },
+    });
     const toggle = screen.getByRole('button', { name: /History/ });
     expect(screen.getAllByText('No requests yet')).toHaveLength(1);
     fireEvent.click(toggle);
@@ -318,9 +333,7 @@ describe('ApiClient', () => {
     });
     fireEvent.click(screen.getByText('Save'));
 
-    fireEvent.change(screen.getByLabelText('Sidebar section'), {
-      target: { value: 'design' },
-    });
+    fireEvent.click(screen.getByRole('tab', { name: 'Design view' }));
     expect(screen.getByText('Mock server')).toBeInTheDocument();
     expect(screen.getByTitle('API documentation preview')).toBeInTheDocument();
   });

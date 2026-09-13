@@ -2,7 +2,7 @@
 
 import { type FC } from 'react';
 
-type SidebarSection = 'history' | 'collections' | 'runner' | 'design';
+type SidebarSection = 'history' | 'collections' | 'runner';
 
 export type { SidebarSection };
 
@@ -20,7 +20,6 @@ export const SidebarTabs: FC<SidebarTabsProps> = ({ value, onChange }) => (
     <option value="history">History</option>
     <option value="collections">Collections</option>
     <option value="runner">Runner</option>
-    <option value="design">Design</option>
   </select>
 );
 
