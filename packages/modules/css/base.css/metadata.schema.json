@@ -1,0 +1,6 @@
+{
+  "base.css": { "size": "<bytes>", "kb": "<kilobytes>" },
+  "base.css.map": { "size": "<bytes>", "kb": "<kilobytes>" },
+  "base.min.css": { "size": "<bytes>", "kb": "<kilobytes>" },
+  "base.min.css.map": { "size": "<bytes>", "kb": "<kilobytes>" }
+}

@@ -1,0 +1,11 @@
+// Element-only base stylesheet for HTML tags. No classes, no scoping — every
+// tag gets neutral, themeable defaults resolved through `--base-*` tokens
+// (light defaults + `prefers-color-scheme: dark`), mirroring the element
+// rules previously duplicated across the hybrid apps' `src/styles/base.css`.
+//
+// Usage:
+//   <link rel="stylesheet" href="dist/base.css" />
+
+@use 'base-core';
+
+@include base-core.base-core;

@@ -2,5 +2,4 @@
 @import 'tailwindcss';
 @plugin 'daisyui';
 
-@import './base.css';
 @import './themes.css';
