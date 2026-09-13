@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="A Servo-powered browser runtime that works as a library, a CLI, and an HTTP server." />
+    <meta
+      name="description"
+      content="A Servo-powered browser runtime that works as a library, a CLI, and an HTTP server." />
     <title>Browserverless</title>
     <style>
       :root {
@@ -27,7 +29,6 @@
         --success: #10b981;
         --warning: #f59e0b;
       }
-
       * {
         box-sizing: border-box;
       }
@@ -185,7 +186,6 @@
         background: var(--base-300);
       }
 
-       
       .hero-media,
       .demo-media {
         display: block;
@@ -328,7 +328,8 @@
         <span>Browserverless</span>
       </a>
       <nav>
-        <a href="#features">Features</a><a href="#demo">Demo</a><a href="#cta">Get started</a>
+        <a href="#features">Features</a><a href="#demo">Demo</a
+        ><a href="#cta">Get started</a>
       </nav>
     </header>
 
@@ -337,56 +338,86 @@
         <div>
           <span class="badge">🌐 Servo-powered</span>
           <h1>A browser, without the window.</h1>
-          <p class="lead">Drive the Servo engine headlessly from your terminal, open a headed window when you want pixels, or serve the same runtime over HTTP.</p>
+          <p class="lead">
+            Drive the Servo engine headlessly from your terminal, open a headed
+            window when you want pixels, or serve the same runtime over HTTP.
+          </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-browserverless-latest">Get the engine</a>
+            <a
+              class="btn btn-primary"
+              href="https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-browserverless-latest"
+              >Get the engine</a
+            >
             <a class="btn btn-ghost" href="#demo">Watch the demo</a>
           </div>
         </div>
-        <img class="hero-media" src="demo.png" alt="Browserverless terminal: serve, shot, render, and version" />
+        <img
+          class="hero-media"
+          src="demo.png"
+          alt="Browserverless terminal: serve, shot, render, and version" />
       </section>
 
       <section id="features" class="block">
         <div class="block-head">
           <h2>One engine, three faces</h2>
-          <p class="sub">The same Servo runtime, exposed however your project needs it.</p>
+          <p class="sub">
+            The same Servo runtime, exposed however your project needs it.
+          </p>
         </div>
         <div class="features">
-          
           <div class="feature">
             <span class="icon">🖥️</span>
             <h3>Headless rendering</h3>
-            <p>Render pages to PNG or HTML without ever opening a window — perfect for screenshots and scrapers.</p>
+            <p>
+              Render pages to PNG or HTML without ever opening a window —
+              perfect for screenshots and scrapers.
+            </p>
           </div>
-          
+
           <div class="feature">
             <span class="icon">🪟</span>
             <h3>Headed window</h3>
-            <p>Dial in a real 1280 × 800 window for debugging and demos while you develop.</p>
+            <p>
+              Dial in a real 1280 × 800 window for debugging and demos while you
+              develop.
+            </p>
           </div>
-          
+
           <div class="feature">
             <span class="icon">📡</span>
             <h3>HTTP server</h3>
-            <p>`browserverless serve` puts the same engine behind an endpoint your other apps can call.</p>
+            <p>
+              `browserverless serve` puts the same engine behind an endpoint
+              your other apps can call.
+            </p>
           </div>
-          
+
           <div class="feature">
             <span class="icon">📦</span>
             <h3>Library API</h3>
-            <p>Embed the runtime as a Rust library and drive it from code instead of the CLI.</p>
+            <p>
+              Embed the runtime as a Rust library and drive it from code instead
+              of the CLI.
+            </p>
           </div>
-          
         </div>
       </section>
 
       <section id="demo" class="block">
         <div class="block-head">
           <h2>Demo</h2>
-          <p class="sub">Serve, screenshot, render — the whole headless workflow, end to end.</p>
+          <p class="sub">
+            Serve, screenshot, render — the whole headless workflow, end to end.
+          </p>
         </div>
         <video class="demo-media" controls preload="metadata" poster="demo.png">
           <source src="demo.mp4" type="video/mp4" />
+          <track
+            kind="descriptions"
+            label="English descriptions"
+            srclang="en"
+            src="demo-en-descriptions.vtt"
+            default />
           Your browser does not support the video tag.
         </video>
       </section>
@@ -395,16 +426,24 @@
         <div class="cta">
           <span class="icon" aria-hidden="true">🌐</span>
           <h2>Put a browser in your pipeline.</h2>
-          <p>Grab the engine, run `browserverless serve`, and start scripting pages from anywhere.</p>
+          <p>
+            Grab the engine, run `browserverless serve`, and start scripting
+            pages from anywhere.
+          </p>
           <div class="actions">
-            <a class="btn btn-primary" href="https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-browserverless-latest">Get the engine</a>
+            <a
+              class="btn btn-primary"
+              href="https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-browserverless-latest"
+              >Get the engine</a
+            >
           </div>
         </div>
       </section>
 
       <footer>
         <span>© 2026 Browserverless</span>
-        <a href="#features">Features</a><a href="#demo">Demo</a><a href="#cta">Get started</a>
+        <a href="#features">Features</a><a href="#demo">Demo</a
+        ><a href="#cta">Get started</a>
       </footer>
     </main>
   </body>

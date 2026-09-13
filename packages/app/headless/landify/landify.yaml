@@ -91,6 +91,7 @@ demo: # a video walkthrough, also at 1280 × 720 (16:9)
   video:
     src: 'demo.mp4' #   [required] MP4 video path or URL
     poster: 'demo.png' #   [optional] poster frame shown before playback
+    track: 'demo-en-descriptions.vtt' #   [optional] WebVTT descriptions/captions for accessibility (S4084)
 
 cta: # the closing call to action
   icon: '🪄' # [optional] emoji above the heading

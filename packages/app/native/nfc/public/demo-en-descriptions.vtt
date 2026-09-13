@@ -1,0 +1,34 @@
+WEBVTT
+
+NOTE Animated terminal (1280x720, dark slate) showing the NFC build and
+scan workflow. Cues are timed to the line animations in demo.svg.
+
+00:00.900 --> 00:03.400
+Command: ./gradlew assembleDebug
+
+00:01.600 --> 00:02.300
+Output: Building NFC...
+
+00:02.300 --> 00:03.400
+Output: nfc-v0.0.1.apk, 1.3 MiB
+
+00:03.400 --> 00:05.200
+Command: adb install nfc.apk
+
+00:04.100 --> 00:05.200
+Output: NFC installed on device
+
+00:05.200 --> 00:07.200
+Command: adb shell am start -n .MainActivity
+
+00:05.900 --> 00:07.200
+Output: Foreground dispatch ready, tap a tag
+
+00:07.200 --> 00:09.200
+Command: adb logcat -s NfcReader
+
+00:07.900 --> 00:09.200
+Output: Tag read: NDEF, 4 records
+
+00:09.200 --> 00:14.800
+Blank prompt: ~/nfc $

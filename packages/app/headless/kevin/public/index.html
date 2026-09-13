@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="An in-memory key/value store with a Redis-style protocol, written in C and C&#43;&#43;." />
+    <meta
+      name="description"
+      content="An in-memory key/value store with a Redis-style protocol, written in C and C&#43;&#43;." />
     <title>KeVIN</title>
     <style>
       :root {
@@ -27,7 +29,6 @@
         --success: #10b981;
         --warning: #f59e0b;
       }
-
       * {
         box-sizing: border-box;
       }
@@ -185,7 +186,6 @@
         background: var(--base-300);
       }
 
-       
       .hero-media,
       .demo-media {
         display: block;
@@ -328,7 +328,8 @@
         <span>KeVIN</span>
       </a>
       <nav>
-        <a href="#features">Features</a><a href="#demo">Demo</a><a href="#cta">Get started</a>
+        <a href="#features">Features</a><a href="#demo">Demo</a
+        ><a href="#cta">Get started</a>
       </nav>
     </header>
 
@@ -337,56 +338,89 @@
         <div>
           <span class="badge">⚡ In-memory</span>
           <h1>A tiny key/value store that speaks Redis.</h1>
-          <p class="lead">KeVIN keeps the whole store in RAM and talks the simple protocol Redis clients already speak — PING, SET, GET, KEYS, DEL — in C and C&#43;&#43;.</p>
+          <p class="lead">
+            KeVIN keeps the whole store in RAM and talks the simple protocol
+            Redis clients already speak — PING, SET, GET, KEYS, DEL — in C and
+            C&#43;&#43;.
+          </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-kevin-latest">Get the server</a>
+            <a
+              class="btn btn-primary"
+              href="https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-kevin-latest"
+              >Get the server</a
+            >
             <a class="btn btn-ghost" href="#demo">Watch the demo</a>
           </div>
         </div>
-        <img class="hero-media" src="demo.png" alt="KeVIN terminal: start server, SET, GET, and KEYS" />
+        <img
+          class="hero-media"
+          src="demo.png"
+          alt="KeVIN terminal: start server, SET, GET, and KEYS" />
       </section>
 
       <section id="features" class="block">
         <div class="block-head">
           <h2>Small, fast, familiar</h2>
-          <p class="sub">Everything a Redis-style store needs, minus the heap of moving parts.</p>
+          <p class="sub">
+            Everything a Redis-style store needs, minus the heap of moving
+            parts.
+          </p>
         </div>
         <div class="features">
-          
           <div class="feature">
             <span class="icon">🔌</span>
             <h3>Redis-style protocol</h3>
-            <p>PING, SET, GET, KEYS, and DEL use the simple framing existing clients and tools understand.</p>
+            <p>
+              PING, SET, GET, KEYS, and DEL use the simple framing existing
+              clients and tools understand.
+            </p>
           </div>
-          
+
           <div class="feature">
             <span class="icon">⚡</span>
             <h3>In-memory storage</h3>
-            <p>Every value lives in RAM, so reads and writes never touch the disk — lookups served in microseconds.</p>
+            <p>
+              Every value lives in RAM, so reads and writes never touch the disk
+              — lookups served in microseconds.
+            </p>
           </div>
-          
+
           <div class="feature">
             <span class="icon">🔁</span>
             <h3>Two implementations</h3>
-            <p>The same store, written twice — once in C and once in C&#43;&#43; — for the implementation that suits your build.</p>
+            <p>
+              The same store, written twice — once in C and once in C&#43;&#43;
+              — for the implementation that suits your build.
+            </p>
           </div>
-          
+
           <div class="feature">
             <span class="icon">📚</span>
             <h3>Server or library</h3>
-            <p>Run it as a `kv --port 6379` server or link it in as a library and drive the store from code.</p>
+            <p>
+              Run it as a `kv --port 6379` server or link it in as a library and
+              drive the store from code.
+            </p>
           </div>
-          
         </div>
       </section>
 
       <section id="demo" class="block">
         <div class="block-head">
           <h2>Demo</h2>
-          <p class="sub">Start the server, then SET, GET, and KEYS — a Redis client&#39;s home turf.</p>
+          <p class="sub">
+            Start the server, then SET, GET, and KEYS — a Redis client&#39;s
+            home turf.
+          </p>
         </div>
         <video class="demo-media" controls preload="metadata" poster="demo.png">
           <source src="demo.mp4" type="video/mp4" />
+          <track
+            kind="descriptions"
+            label="English descriptions"
+            srclang="en"
+            src="demo-en-descriptions.vtt"
+            default />
           Your browser does not support the video tag.
         </video>
       </section>
@@ -395,16 +429,24 @@
         <div class="cta">
           <span class="icon" aria-hidden="true">🔑</span>
           <h2>Keep it in memory.</h2>
-          <p>Start `kv --port 6379`, point your Redis client at it, and watch lookups come back in microseconds.</p>
+          <p>
+            Start `kv --port 6379`, point your Redis client at it, and watch
+            lookups come back in microseconds.
+          </p>
           <div class="actions">
-            <a class="btn btn-primary" href="https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-kevin-latest">Get the server</a>
+            <a
+              class="btn btn-primary"
+              href="https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-kevin-latest"
+              >Get the server</a
+            >
           </div>
         </div>
       </section>
 
       <footer>
         <span>© 2026 KeVIN</span>
-        <a href="#features">Features</a><a href="#demo">Demo</a><a href="#cta">Get started</a>
+        <a href="#features">Features</a><a href="#demo">Demo</a
+        ><a href="#cta">Get started</a>
       </footer>
     </main>
   </body>

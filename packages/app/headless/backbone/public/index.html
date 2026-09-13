@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="A self-hosted back-end as a service with auth, a database, cron jobs, and webhooks." />
+    <meta
+      name="description"
+      content="A self-hosted back-end as a service with auth, a database, cron jobs, and webhooks." />
     <title>Backbone</title>
     <style>
       :root {
@@ -27,7 +29,6 @@
         --success: #10b981;
         --warning: #f59e0b;
       }
-
       * {
         box-sizing: border-box;
       }
@@ -185,7 +186,6 @@
         background: var(--base-300);
       }
 
-       
       .hero-media,
       .demo-media {
         display: block;
@@ -328,7 +328,8 @@
         <span>Backbone</span>
       </a>
       <nav>
-        <a href="#features">Features</a><a href="#demo">Demo</a><a href="#cta">Get started</a>
+        <a href="#features">Features</a><a href="#demo">Demo</a
+        ><a href="#cta">Get started</a>
       </nav>
     </header>
 
@@ -337,56 +338,89 @@
         <div>
           <span class="badge">🖥️ Self-hosted</span>
           <h1>Your own back-end as a service.</h1>
-          <p class="lead">Host auth, a database, cron jobs, and webhooks in one server — no cloud account required. Ships as native servers and libraries for Go, Kotlin, and Rust.</p>
+          <p class="lead">
+            Host auth, a database, cron jobs, and webhooks in one server — no
+            cloud account required. Ships as native servers and libraries for
+            Go, Kotlin, and Rust.
+          </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-backbone-latest">Get the server</a>
+            <a
+              class="btn btn-primary"
+              href="https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-backbone-latest"
+              >Get the server</a
+            >
             <a class="btn btn-ghost" href="#demo">Watch the demo</a>
           </div>
         </div>
-        <img class="hero-media" src="demo.png" alt="Backbone terminal: init, serve, job, and notify" />
+        <img
+          class="hero-media"
+          src="demo.png"
+          alt="Backbone terminal: init, serve, job, and notify" />
       </section>
 
       <section id="features" class="block">
         <div class="block-head">
           <h2>Batteries included</h2>
-          <p class="sub">Everything a self-hosted back end needs, wired to one `ffi` — no cloud lock-in.</p>
+          <p class="sub">
+            Everything a self-hosted back end needs, wired to one `ffi` — no
+            cloud lock-in.
+          </p>
         </div>
         <div class="features">
-          
           <div class="feature">
             <span class="icon">🔐</span>
             <h3>BackboneAuth</h3>
-            <p>Built-in, no-account authentication with JSON Web Tokens and a Cognito drop-in for AWS-style identity flows.</p>
+            <p>
+              Built-in, no-account authentication with JSON Web Tokens and a
+              Cognito drop-in for AWS-style identity flows.
+            </p>
           </div>
-          
+
           <div class="feature">
             <span class="icon">🗃️</span>
             <h3>BackboneBase</h3>
-            <p>A data API over SQLite (or Amazon RDS) that serves JSON Straight from one port.</p>
+            <p>
+              A data API over SQLite (or Amazon RDS) that serves JSON Straight
+              from one port.
+            </p>
           </div>
-          
+
           <div class="feature">
             <span class="icon">⏰</span>
             <h3>BackboneJobs</h3>
-            <p>In-process cron scheduling — register jobs like nightly-report and they just run, on time.</p>
+            <p>
+              In-process cron scheduling — register jobs like nightly-report and
+              they just run, on time.
+            </p>
           </div>
-          
+
           <div class="feature">
             <span class="icon">🔔</span>
             <h3>BackboneHooks</h3>
-            <p>Webhook delivery with retries and hard, typed callbacks for consuming CloudWatch-style events.</p>
+            <p>
+              Webhook delivery with retries and hard, typed callbacks for
+              consuming CloudWatch-style events.
+            </p>
           </div>
-          
         </div>
       </section>
 
       <section id="demo" class="block">
         <div class="block-head">
           <h2>Demo</h2>
-          <p class="sub">Init, serve, schedule, and notify — the whole workflow in one terminal.</p>
+          <p class="sub">
+            Init, serve, schedule, and notify — the whole workflow in one
+            terminal.
+          </p>
         </div>
         <video class="demo-media" controls preload="metadata" poster="demo.png">
           <source src="demo.mp4" type="video/mp4" />
+          <track
+            kind="descriptions"
+            label="English descriptions"
+            srclang="en"
+            src="demo-en-descriptions.vtt"
+            default />
           Your browser does not support the video tag.
         </video>
       </section>
@@ -395,16 +429,24 @@
         <div class="cta">
           <span class="icon" aria-hidden="true">🖥️</span>
           <h2>Spin up your back end.</h2>
-          <p>Download the server, run `backbone init`, and go live with auth, data, and jobs on your own hardware.</p>
+          <p>
+            Download the server, run `backbone init`, and go live with auth,
+            data, and jobs on your own hardware.
+          </p>
           <div class="actions">
-            <a class="btn btn-primary" href="https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-backbone-latest">Get the server</a>
+            <a
+              class="btn btn-primary"
+              href="https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-backbone-latest"
+              >Get the server</a
+            >
           </div>
         </div>
       </section>
 
       <footer>
         <span>© 2026 Backbone</span>
-        <a href="#features">Features</a><a href="#demo">Demo</a><a href="#cta">Get started</a>
+        <a href="#features">Features</a><a href="#demo">Demo</a
+        ><a href="#cta">Get started</a>
       </footer>
     </main>
   </body>

@@ -1,30 +1,30 @@
 theme:
-  base: "#f8fafc"
-  primary: "#1e293b"
-  secondary: "#475569"
-  neutral: "#64748b"
-  info: "#0ea5e9"
-  warning: "#f59e0b"
-  success: "#10b981"
-  error: "#ef4444"
-  radius: "10px"
+  base: '#f8fafc'
+  primary: '#1e293b'
+  secondary: '#475569'
+  neutral: '#64748b'
+  info: '#0ea5e9'
+  warning: '#f59e0b'
+  success: '#10b981'
+  error: '#ef4444'
+  radius: '10px'
 
 site:
   name: Browserverless
-  mark: "🌐"
+  mark: '🌐'
   description: >-
     A Servo-powered browser runtime that works as a library, a CLI, and an
     HTTP server.
   nav:
     - label: Features
-      href: "#features"
+      href: '#features'
     - label: Demo
-      href: "#demo"
+      href: '#demo'
     - label: Get started
-      href: "#cta"
+      href: '#cta'
 
 hero:
-  badge: "🌐 Servo-powered"
+  badge: '🌐 Servo-powered'
   headline: A browser, without the window.
   subheadline: >-
     Drive the Servo engine headlessly from your terminal, open a headed window
@@ -34,31 +34,31 @@ hero:
     href: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-browserverless-latest
   secondary:
     label: Watch the demo
-    href: "#demo"
+    href: '#demo'
   image:
-    src: "demo.png"
-    alt: "Browserverless terminal: serve, shot, render, and version"
+    src: 'demo.png'
+    alt: 'Browserverless terminal: serve, shot, render, and version'
 
 features:
   heading: One engine, three faces
   sub: The same Servo runtime, exposed however your project needs it.
   items:
-    - icon: "🖥️"
+    - icon: '🖥️'
       title: Headless rendering
       body: >-
         Render pages to PNG or HTML without ever opening a window — perfect
         for screenshots and scrapers.
-    - icon: "🪟"
+    - icon: '🪟'
       title: Headed window
       body: >-
         Dial in a real 1280 × 800 window for debugging and demos while you
         develop.
-    - icon: "📡"
+    - icon: '📡'
       title: HTTP server
       body: >-
         `browserverless serve` puts the same engine behind an endpoint your
         other apps can call.
-    - icon: "📦"
+    - icon: '📦'
       title: Library API
       body: >-
         Embed the runtime as a Rust library and drive it from code instead of
@@ -68,11 +68,12 @@ demo:
   heading: Demo
   sub: Serve, screenshot, render — the whole headless workflow, end to end.
   video:
-    src: "demo.mp4"
-    poster: "demo.png"
+    src: 'demo.mp4'
+    poster: 'demo.png'
+    track: 'demo-en-descriptions.vtt'
 
 cta:
-  icon: "🌐"
+  icon: '🌐'
   heading: Put a browser in your pipeline.
   body: >-
     Grab the engine, run `browserverless serve`, and start scripting pages
@@ -82,11 +83,11 @@ cta:
     href: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-browserverless-latest
 
 footer:
-  copyright: "© 2026 Browserverless"
+  copyright: '© 2026 Browserverless'
   links:
     - label: Features
-      href: "#features"
+      href: '#features'
     - label: Demo
-      href: "#demo"
+      href: '#demo'
     - label: Get started
-      href: "#cta"
+      href: '#cta'

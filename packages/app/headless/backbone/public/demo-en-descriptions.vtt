@@ -1,0 +1,37 @@
+WEBVTT
+
+NOTE Animated terminal (1280x720, dark slate) showing the Backbone workflow.
+Cues are timed to the line animations in demo.svg.
+
+00:00.900 --> 00:01.700
+Command: backbone init
+
+00:01.700 --> 00:02.400
+Output: project ready · database at
+
+00:02.400 --> 00:03.600
+Output: sqlite schema applied
+
+00:03.600 --> 00:04.400
+Command: backbone serve --host 0.0.0.0:8080
+
+00:04.400 --> 00:05.600
+Output: listening on 0.0.0.0:8080
+
+00:05.600 --> 00:06.400
+Command: backbone job add nightly-report
+
+00:06.400 --> 00:07.600
+Output: ok scheduled · next run every day 00:00
+
+00:07.600 --> 00:08.400
+Command: backbone notify send --to slack
+
+00:08.400 --> 00:09.400
+Output: ok webhook delivered (200)
+
+00:09.400 --> 00:11.000
+Output: auth token signed · expires in 1h
+
+00:11.000 --> 00:14.800
+Blank prompt

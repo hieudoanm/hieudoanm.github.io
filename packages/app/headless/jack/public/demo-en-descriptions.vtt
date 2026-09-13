@@ -1,0 +1,34 @@
+WEBVTT
+
+NOTE Animated terminal (1280x720, dark slate) showing the J.A.C.K. CLI
+workflow. Cues are timed to the line animations in demo.svg.
+
+00:00.900 --> 00:01.700
+Command: jack calc loan --amount 25000 --rate 0.062 --term 60
+
+00:01.700 --> 00:03.100
+Output: ok monthly payment $486.64
+
+00:03.100 --> 00:03.900
+Command: jack crypto totp
+
+00:03.900 --> 00:05.300
+Output: 845 372 (30s)
+
+00:05.300 --> 00:06.100
+Command: jack convert base64 "J.A.C.K."
+
+00:06.100 --> 00:07.600
+Output: SkEuQy5LLg==
+
+00:07.600 --> 00:08.400
+Command: jack time pomodoro
+
+00:08.400 --> 00:09.400
+Output: ok focus started · 25:00
+
+00:09.400 --> 00:11.000
+Output: session logged locally
+
+00:11.000 --> 00:14.800
+Blank prompt

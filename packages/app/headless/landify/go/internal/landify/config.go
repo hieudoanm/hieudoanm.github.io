@@ -156,10 +156,11 @@ type Demo struct {
 }
 
 // Video is the required demo video; Poster is an optional frame shown before
-// playback.
+// playback. Track points to a WebVTT descriptions or captions file (S4084).
 type Video struct {
 	Src    string `yaml:"src"`
 	Poster string `yaml:"poster"`
+	Track  string `yaml:"track"`
 }
 
 // CTA is the closing call to action.

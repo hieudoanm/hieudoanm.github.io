@@ -1,0 +1,94 @@
+type: product
+
+theme:
+  base: "#f8fafc"
+  primary: "#e5484d"
+  secondary: "#7c3aed"
+  neutral: "#475569"
+  info: "#0ea5e9"
+  warning: "#f59e0b"
+  success: "#10b981"
+  error: "#ef4444"
+  radius: "10px"
+
+site:
+  name: Block
+  mark: "🚫"
+  description: >-
+    Block distracting apps so your phone stops stealing your focus.
+  nav:
+    - label: Features
+      href: "#features"
+    - label: Demo
+      href: "#demo"
+    - label: Source
+      href: "https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/app/native/block"
+
+hero:
+  badge: "🚫 Android · GPL-3.0"
+  headline: Block distracting apps and reclaim your focus.
+  subheadline: >-
+    When a blocked app opens, Block intercepts it with a full-screen reminder
+    to stay on task — everything stays on your device.
+  primary:
+    label: Download for Android
+    href: "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-android-block-latest"
+  secondary:
+    label: View source
+    href: "https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/app/native/block"
+  image:
+    src: demo.png
+    alt: Block terminal preview of build, install, and run
+
+features:
+  heading: Why Block
+  sub: Pick the apps that waste your time and intercept them the moment they open.
+  items:
+    - icon: "🚫"
+      title: Full-screen block
+      body: >-
+        When a blocked app launches, the accessibility service intercepts it
+        and shows a full-screen overlay prompting you to stay on task.
+    - icon: "⏱️"
+      title: Time saved dashboard
+      body: >-
+        The home dashboard shows blocking status, blocked-app count, and time
+        saved since the last block.
+    - icon: "🔍"
+      title: Curated app list
+      body: >-
+        Browse every installed app with search, icons, and labels — and filter
+        out system apps you cannot block anyway.
+    - icon: "🎛️"
+      title: Works your way
+      body: >-
+        Toggle blocking, enable dark mode, launch on boot, and choose how the
+        full-screen block looks.
+
+demo:
+  heading: See it in action
+  sub: Build, install, and run — the focus-blocking workflow end to end.
+  video:
+    src: demo.mp4
+    poster: demo.png
+    track: demo-en-descriptions.vtt
+
+cta:
+  icon: "🚫"
+  heading: Take back your focus.
+  body: >-
+    Block distracting apps, watch the time saved add up — and nothing ever
+    leaves your phone.
+  button:
+    label: Download for Android
+    href: "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-native-android-block-latest"
+
+footer:
+  copyright: "© 2026 Hieu Doan"
+  links:
+    - label: Features
+      href: "#features"
+    - label: Demo
+      href: "#demo"
+    - label: Source
+      href: "https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/app/native/block"

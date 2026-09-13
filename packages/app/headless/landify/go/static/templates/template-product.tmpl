@@ -51,6 +51,7 @@
         </div>
         <video class="demo-media" controls preload="metadata"{{if .Demo.Video.Poster}} poster="{{.Demo.Video.Poster}}"{{end}}>
           <source src="{{.Demo.Video.Src}}" type="video/mp4" />
+          {{if .Demo.Video.Track}}<track kind="descriptions" label="English descriptions" srclang="en" src="{{.Demo.Video.Track}}" default />{{end}}
           Your browser does not support the video tag.
         </video>
       </section>

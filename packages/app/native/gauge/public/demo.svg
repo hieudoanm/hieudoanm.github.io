@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+  <title>Gauge terminal: build, save, restore</title>
+  <desc>Animated terminal window showing make app, open, gauge workspace save, and gauge workspace restore with their output.</desc>
+
+  <style>
+    .line { opacity: 0; }
+    .line.l0 { animation: rise 0.4s ease-out 0.9s forwards; }
+    .line.l1 { animation: rise 0.4s ease-out 1.6s forwards; }
+    .line.l2 { animation: rise 0.4s ease-out 2.3s forwards; }
+    .line.l3 { animation: rise 0.4s ease-out 3.4s forwards; }
+    .line.l4 { animation: rise 0.4s ease-out 4.1s forwards; }
+    .line.l5 { animation: rise 0.4s ease-out 5.2s forwards; }
+    .line.l6 { animation: rise 0.4s ease-out 5.9s forwards; }
+    .line.l7 { animation: rise 0.4s ease-out 6.6s forwards; }
+    .line.l8 { animation: rise 0.4s ease-out 7.3s forwards; }
+    .line.l9 { animation: rise 0.4s ease-out 8.0s forwards; }
+    .line.l10 { animation: rise 0.4s ease-out 9.1s forwards; }
+    .line.l11 { animation: rise 0.4s ease-out 9.8s forwards; }
+    .line.l12 { animation: rise 0.4s ease-out 10.5s forwards; }
+    .line.l13 { animation: rise 0.4s ease-out 11.6s forwards; }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+
+  <rect x="0" y="0" width="1280" height="720" fill="#0f172a"/>
+  <rect x="0" y="0" width="1280" height="48" fill="#1e293b"/>
+  <line x1="0" y1="48" x2="1280" y2="48" stroke="#334155" stroke-width="1"/>
+
+  <circle cx="32" cy="24" r="8" fill="#ef4444"/>
+  <circle cx="58" cy="24" r="8" fill="#f59e0b"/>
+  <circle cx="84" cy="24" r="8" fill="#22c55e"/>
+
+  <text x="640" y="32" font-size="20" fill="#94a3b8" text-anchor="middle">Gauge — zsh</text>
+
+  <g font-size="27" transform-origin="48 108">
+    <g class="line l0" transform-origin="48 108">
+      <text x="48" y="108">
+        <tspan fill="#475569">~/gauge </tspan><tspan fill="#e2e8f0">$ </tspan><tspan fill="#14b8a6">make </tspan><tspan fill="#e2e8f0">app</tspan>
+      </text>
+    </g>
+
+    <g class="line l1" transform-origin="48 148">
+      <text x="48" y="148" fill="#94a3b8">Building Gauge.app... Done</text>
+    </g>
+    <g class="line l2" transform-origin="48 188">
+      <text x="48" y="188"><tspan fill="#34d399">✅ </tspan><tspan fill="#94a3b8">Built build/Gauge.app</tspan></text>
+    </g>
+
+    <g class="line l3" transform-origin="48 228">
+      <text x="48" y="228">
+        <tspan fill="#475569">~/gauge </tspan><tspan fill="#e2e8f0">$ </tspan><tspan fill="#14b8a6">open </tspan><tspan fill="#e2e8f0">build/Gauge.app</tspan>
+      </text>
+    </g>
+    <g class="line l4" transform-origin="48 268">
+      <text x="48" y="268"><tspan fill="#34d399">✅ </tspan><tspan fill="#94a3b8">Gauge running in the menu bar</tspan></text>
+    </g>
+
+    <g class="line l5" transform-origin="48 308">
+      <text x="48" y="308">
+        <tspan fill="#475569">~/gauge </tspan><tspan fill="#e2e8f0">$ </tspan><tspan fill="#14b8a6">gauge </tspan><tspan fill="#e2e8f0">workspace save</tspan>
+      </text>
+    </g>
+    <g class="line l6" transform-origin="48 348">
+      <text x="48" y="348"><tspan fill="#34d399">✅ </tspan><tspan fill="#94a3b8">Saved workspace "primary-dev"</tspan></text>
+    </g>
+    <g class="line l7" transform-origin="48 388">
+      <text x="48" y="388" fill="#94a3b8">Chrome — 3 windows</text>
+    </g>
+    <g class="line l8" transform-origin="48 428">
+      <text x="48" y="428" fill="#94a3b8">Terminal — 1 window</text>
+    </g>
+    <g class="line l9" transform-origin="48 468">
+      <text x="48" y="468" fill="#94a3b8">VS Code — 2 windows</text>
+    </g>
+
+    <g class="line l10" transform-origin="48 508">
+      <text x="48" y="508">
+        <tspan fill="#475569">~/gauge </tspan><tspan fill="#e2e8f0">$ </tspan><tspan fill="#14b8a6">gauge </tspan><tspan fill="#e2e8f0">workspace restore</tspan>
+      </text>
+    </g>
+    <g class="line l11" transform-origin="48 548">
+      <text x="48" y="548"><tspan fill="#34d399">✅ </tspan><tspan fill="#94a3b8">Restored "primary-dev" in 2.3s</tspan></text>
+    </g>
+    <g class="line l12" transform-origin="48 588">
+      <text x="48" y="588"><tspan fill="#34d399">↗ </tspan><tspan fill="#94a3b8">Launched: Chrome, Terminal, VS Code</tspan></text>
+    </g>
+
+    <g class="line l13" transform-origin="48 648">
+      <text x="48" y="648">
+        <tspan fill="#475569">~/gauge </tspan><tspan fill="#e2e8f0">$ </tspan>
+      </text>
+    </g>
+  </g>
+
+</svg>

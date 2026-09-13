@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+  <title>NFC terminal: build, install, scan</title>
+  <desc>Animated terminal window showing gradlew assembleDebug, adb install, adb shell am start, and adb logcat with their output.</desc>
+
+  <style>
+    .line { opacity: 0; }
+    .line.l0 { animation: rise 0.4s ease-out 0.9s forwards; }
+    .line.l1 { animation: rise 0.4s ease-out 1.6s forwards; }
+    .line.l2 { animation: rise 0.4s ease-out 2.3s forwards; }
+    .line.l3 { animation: rise 0.4s ease-out 3.4s forwards; }
+    .line.l4 { animation: rise 0.4s ease-out 4.1s forwards; }
+    .line.l5 { animation: rise 0.4s ease-out 5.2s forwards; }
+    .line.l6 { animation: rise 0.4s ease-out 5.9s forwards; }
+    .line.l7 { animation: rise 0.4s ease-out 7.2s forwards; }
+    .line.l8 { animation: rise 0.4s ease-out 7.9s forwards; }
+    .line.l9 { animation: rise 0.4s ease-out 9.2s forwards; }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+
+  <rect x="0" y="0" width="1280" height="720" fill="#0f172a"/>
+  <rect x="0" y="0" width="1280" height="48" fill="#1e293b"/>
+  <line x1="0" y1="48" x2="1280" y2="48" stroke="#334155" stroke-width="1"/>
+
+  <circle cx="32" cy="24" r="8" fill="#ef4444"/>
+  <circle cx="58" cy="24" r="8" fill="#f59e0b"/>
+  <circle cx="84" cy="24" r="8" fill="#22c55e"/>
+
+  <text x="640" y="32" font-size="20" fill="#94a3b8" text-anchor="middle">nfc — zsh</text>
+
+  <g font-size="27" transform-origin="48 108">
+    <g class="line l0" transform-origin="48 108">
+      <text x="48" y="108">
+        <tspan fill="#475569">~/nfc </tspan><tspan fill="#e2e8f0">$ </tspan><tspan fill="#14b8a6">./gradlew </tspan><tspan fill="#e2e8f0">assembleDebug</tspan>
+      </text>
+    </g>
+    <g class="line l1" transform-origin="48 148">
+      <text x="48" y="148" fill="#94a3b8">Building NFC...</text>
+    </g>
+    <g class="line l2" transform-origin="48 188">
+      <text x="48" y="188"><tspan fill="#34d399">✅ </tspan><tspan fill="#94a3b8">nfc-v0.0.1.apk (1.3 MiB)</tspan></text>
+    </g>
+
+    <g class="line l3" transform-origin="48 228">
+      <text x="48" y="228">
+        <tspan fill="#475569">~/nfc </tspan><tspan fill="#e2e8f0">$ </tspan><tspan fill="#14b8a6">adb </tspan><tspan fill="#e2e8f0">install nfc.apk</tspan>
+      </text>
+    </g>
+    <g class="line l4" transform-origin="48 268">
+      <text x="48" y="268"><tspan fill="#34d399">✅ </tspan><tspan fill="#94a3b8">NFC installed on device</tspan></text>
+    </g>
+
+    <g class="line l5" transform-origin="48 308">
+      <text x="48" y="308">
+        <tspan fill="#475569">~/nfc </tspan><tspan fill="#e2e8f0">$ </tspan><tspan fill="#14b8a6">adb shell am start </tspan><tspan fill="#e2e8f0">-n .MainActivity</tspan>
+      </text>
+    </g>
+    <g class="line l6" transform-origin="48 348">
+      <text x="48" y="348"><tspan fill="#34d399">✅ </tspan><tspan fill="#94a3b8">Foreground dispatch ready · tap a tag</tspan></text>
+    </g>
+
+    <g class="line l7" transform-origin="48 388">
+      <text x="48" y="388">
+        <tspan fill="#475569">~/nfc </tspan><tspan fill="#e2e8f0">$ </tspan><tspan fill="#14b8a6">adb logcat </tspan><tspan fill="#e2e8f0">-s NfcReader</tspan>
+      </text>
+    </g>
+    <g class="line l8" transform-origin="48 428">
+      <text x="48" y="428"><tspan fill="#fbbf24">📡 </tspan><tspan fill="#94a3b8">Tag read: NDEF (4 records)</tspan></text>
+    </g>
+
+    <g class="line l9" transform-origin="48 468">
+      <text x="48" y="468">
+        <tspan fill="#475569">~/nfc </tspan><tspan fill="#e2e8f0">$ </tspan>
+      </text>
+    </g>
+  </g>
+
+</svg>
