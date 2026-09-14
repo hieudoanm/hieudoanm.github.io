@@ -19,6 +19,7 @@ const ChemistryPage: NextPage = () => (
     title="Chemistry"
     subtitle="Build and explore the periodic table of elements."
     items={ITEMS}
+    searchable
   />
 );
 

@@ -15,11 +15,12 @@ describe('HomePage', () => {
       'geography',
       'maths',
       'psychology',
+      'ophthalmology',
     ].forEach((slug) => {
       expect(screen.getByTestId(`tool-card-${slug}`)).toBeInTheDocument();
     });
     expect(screen.getByTestId('tool-card-history')).toBeInTheDocument();
-    ['Humanities', 'STEM', 'Arts'].forEach((group) => {
+    ['Humanities', 'Health', 'STEM', 'Arts'].forEach((group) => {
       expect(
         screen.getByRole('heading', { level: 2, name: group })
       ).toBeInTheDocument();

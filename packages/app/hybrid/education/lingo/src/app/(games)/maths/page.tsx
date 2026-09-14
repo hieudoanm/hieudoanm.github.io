@@ -20,6 +20,7 @@ const MathsPage: NextPage = () => (
     title="Maths games"
     subtitle="Number puzzles that reveal surprising patterns."
     items={ITEMS}
+    searchable
   />
 );
 

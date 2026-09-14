@@ -28,6 +28,7 @@ const HistoryPage: NextPage = () => (
     title="History games"
     subtitle="Test your historical knowledge with these games."
     items={ITEMS}
+    searchable
   />
 );
 

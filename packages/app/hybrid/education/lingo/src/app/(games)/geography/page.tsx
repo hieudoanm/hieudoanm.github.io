@@ -58,6 +58,7 @@ const GeographyPage: NextPage = () => (
     title="Geography games"
     subtitle="Test your knowledge of countries with these games."
     items={ITEMS}
+    searchable
   />
 );
 

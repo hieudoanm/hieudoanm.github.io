@@ -19,25 +19,24 @@
 | 15  | svg         | [SVG][svg]                 | Adobe Illustrator / CorelDRAW                                                | No       | DONE   | Graphics & Design | Photo & Video      |
 | 16  | video       | [Video Tools][video]       | CapCut                                                                       | No       | DONE   | Graphics & Design | Photo & Video      |
 | 17  | brainbow    | [Brainbow][brainbow]       | All-in-one Brainbow Software                                                 | No       | DONE   | Medical           | Health & Fitness   |
-| 18  | eyes        | [Eyes][eyes]               | Snellen / LogMAR / Tumbling E Vision Charts                                  | No       | DONE   | Medical           | Health & Fitness   |
-| 19  | mri         | [MRI][mri]                 | MRI Viewer / Imaging Software                                                | No       | DONE   | Medical           | Health & Fitness   |
-| 20  | calendar    | [Calendar][calendar]       | Google Calendar / Outlook Calendar                                           | No       | DONE   | Productivity      | Business           |
-| 21  | csv         | [CSV][csv]                 | Excel / Google Sheets                                                        | No       | DONE   | Productivity      | Business           |
-| 22  | keynotes    | [Keynotes][keynotes]       | PowerPoint / Google Slides / Apple Keynote                                   | No       | DONE   | Productivity      | Education          |
-| 23  | markdown    | [Markdown][markdown]       | Obsidian                                                                     | No       | DONE   | Productivity      | Education          |
-| 24  | pdf         | [PDF][pdf]                 | Adobe Acrobat PDF                                                            | No       | DONE   | Productivity      | Business           |
-| 25  | projects    | [Projects][projects]       | Atlassian Trello / Kanban                                                    | Required | DONE   | Productivity      | Business           |
-| 26  | resume      | [Resume][resume]           | Resume Builder                                                               | No       | DONE   | Productivity      | Business           |
-| 27  | store       | [Store][store]             | App Store / Play Store                                                       | No       | DONE   | Shopping          | Business           |
-| 28  | chat        | [Chat][chat]               | Chat like Codex / Claude                                                     | Required | DONE   | Social Networking | Business           |
-| 29  | messaging   | [Messaging][messaging]     | Telegram / WhatsApp / Messenger / Signal                                     | Required | DONE   | Social Networking | Business           |
-| 30  | chess       | [Chess][chess]             | chess.com / lichess.org                                                      | No       | DONE   | Sports            | Games              |
-| 31  | football    | [Football][football]       | Football Formation / Analysis                                                | No       | DONE   | Sports            | Games              |
-| 32  | tourney     | [Tourney][tourney]         | Tournament management app for creating and tracking competitions             | No       | DONE   | Sports            | Games              |
-| 33  | clock       | [Clock][clock]             | Pomodoro / Watchface / World Clock / Timer / Stopwatch                       | No       | DONE   | Utilities         | Productivity       |
-| 34  | docs        | [Docs][docs]               | TinyWow                                                                      | No       | DONE   | Utilities         | Productivity       |
-| 35  | password    | [Password][password]       | BitWarden / 1Password                                                        | Required | DONE   | Utilities         | Productivity       |
-| 36  | doi         | [DOI][doi]                 | Crossref Citation Network Visualizer                                         | No       | DONE   | Education         | Developer Tools    |
+| 18  | mri         | [MRI][mri]                 | MRI Viewer / Imaging Software                                                | No       | DONE   | Medical           | Health & Fitness   |
+| 19  | calendar    | [Calendar][calendar]       | Google Calendar / Outlook Calendar                                           | No       | DONE   | Productivity      | Business           |
+| 20  | csv         | [CSV][csv]                 | Excel / Google Sheets                                                        | No       | DONE   | Productivity      | Business           |
+| 21  | keynotes    | [Keynotes][keynotes]       | PowerPoint / Google Slides / Apple Keynote                                   | No       | DONE   | Productivity      | Education          |
+| 22  | markdown    | [Markdown][markdown]       | Obsidian                                                                     | No       | DONE   | Productivity      | Education          |
+| 23  | pdf         | [PDF][pdf]                 | Adobe Acrobat PDF                                                            | No       | DONE   | Productivity      | Business           |
+| 24  | projects    | [Projects][projects]       | Atlassian Trello / Kanban                                                    | Required | DONE   | Productivity      | Business           |
+| 25  | resume      | [Resume][resume]           | Resume Builder                                                               | No       | DONE   | Productivity      | Business           |
+| 26  | store       | [Store][store]             | App Store / Play Store                                                       | No       | DONE   | Shopping          | Business           |
+| 27  | chat        | [Chat][chat]               | Chat like Codex / Claude                                                     | Required | DONE   | Social Networking | Business           |
+| 28  | messaging   | [Messaging][messaging]     | Telegram / WhatsApp / Messenger / Signal                                     | Required | DONE   | Social Networking | Business           |
+| 29  | chess       | [Chess][chess]             | chess.com / lichess.org                                                      | No       | DONE   | Sports            | Games              |
+| 30  | football    | [Football][football]       | Football Formation / Analysis                                                | No       | DONE   | Sports            | Games              |
+| 31  | tourney     | [Tourney][tourney]         | Tournament management app for creating and tracking competitions             | No       | DONE   | Sports            | Games              |
+| 32  | clock       | [Clock][clock]             | Pomodoro / Watchface / World Clock / Timer / Stopwatch                       | No       | DONE   | Utilities         | Productivity       |
+| 33  | docs        | [Docs][docs]               | TinyWow                                                                      | No       | DONE   | Utilities         | Productivity       |
+| 34  | password    | [Password][password]       | BitWarden / 1Password                                                        | Required | DONE   | Utilities         | Productivity       |
+| 35  | doi         | [DOI][doi]                 | Crossref Citation Network Visualizer                                         | No       | DONE   | Education         | Developer Tools    |
 
 [menu]: https://hieudoanm.github.io/free/menu/
 [pos]: https://hieudoanm.github.io/free/pos/
@@ -55,7 +54,6 @@
 [svg]: https://hieudoanm.github.io/free/svg/
 [video]: https://hieudoanm.github.io/free/video/
 [brainbow]: https://hieudoanm.github.io/free/brainbow/
-[eyes]: https://hieudoanm.github.io/free/eyes/
 [mri]: https://hieudoanm.github.io/free/mri/
 [calendar]: https://hieudoanm.github.io/free/calendar/
 [csv]: https://hieudoanm.github.io/free/csv/

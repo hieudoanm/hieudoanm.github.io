@@ -17,6 +17,8 @@ export interface GamesTemplateProps {
   title: string;
   subtitle: string;
   items: GameItem[];
+  children?: ReactNode;
+  searchable?: boolean;
 }
 
 interface ItemGroup {
@@ -42,6 +44,8 @@ export const GamesTemplate: FC<GamesTemplateProps> = ({
   title = '',
   subtitle = '',
   items = [],
+  children,
+  searchable = false,
 }) => {
   const [query, setQuery] = useState('');
   const groups = useMemo(() => {
@@ -70,22 +74,26 @@ export const GamesTemplate: FC<GamesTemplateProps> = ({
         <p className="text-base-content/60 mt-2 text-sm">{subtitle}</p>
       </div>
 
-      <div className="w-full max-w-3xl">
-        <label className="input input-bordered flex w-full items-center gap-2">
-          <PiMagnifyingGlass className="text-base-content/50 shrink-0" />
-          <input
-            type="search"
-            value={query}
-            onChange={(event) => setQuery(event.target.value)}
-            placeholder="Search games..."
-            aria-label="Search games"
-            data-testid="games-search"
-            className="grow"
-          />
-        </label>
-      </div>
+      {children}
 
-      {total === 0 ? (
+      {searchable && (
+        <div className="w-full max-w-3xl">
+          <label className="input input-bordered flex w-full items-center gap-2">
+            <PiMagnifyingGlass className="text-base-content/50 shrink-0" />
+            <input
+              type="search"
+              value={query}
+              onChange={(event) => setQuery(event.target.value)}
+              placeholder="Search games..."
+              aria-label="Search games"
+              data-testid="games-search"
+              className="grow"
+            />
+          </label>
+        </div>
+      )}
+
+      {searchable && total === 0 ? (
         <p className="text-base-content/60 text-sm">
           No games match your search.
         </p>

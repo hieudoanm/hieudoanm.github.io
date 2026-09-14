@@ -81,6 +81,7 @@ describe('GamesTemplate', () => {
             group: 'STEM',
           },
         ]}
+        searchable
       />
     );
     await user.type(screen.getByTestId('games-search'), 'chem');
@@ -96,7 +97,9 @@ describe('GamesTemplate', () => {
 
   it('shows a message when no items match the search', async () => {
     const user = userEvent.setup();
-    render(<GamesTemplate title="Lingo" subtitle="desc" items={ITEMS} />);
+    render(
+      <GamesTemplate title="Lingo" subtitle="desc" items={ITEMS} searchable />
+    );
     await user.type(screen.getByTestId('games-search'), 'zzz');
     expect(screen.getByText('No games match your search.')).toBeInTheDocument();
     expect(screen.queryByTestId('tool-card-languages')).not.toBeInTheDocument();

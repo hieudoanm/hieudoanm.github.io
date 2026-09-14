@@ -97,6 +97,7 @@ const EconomicsPage: NextPage = () => (
     title="Economics"
     subtitle="Explore game theory, markets, behavioral economics, and macro concepts."
     items={ITEMS}
+    searchable
   />
 );
 

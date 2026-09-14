@@ -19,11 +19,12 @@ test('home lists all course cards', async ({ page }) => {
     'geography',
     'maths',
     'psychology',
+    'ophthalmology',
   ]) {
     await expect(page.getByTestId(`tool-card-${slug}`)).toBeVisible();
   }
   await expect(page.getByTestId('tool-card-history')).toBeVisible();
-  for (const group of ['Humanities', 'STEM', 'Arts']) {
+  for (const group of ['Humanities', 'Health', 'STEM', 'Arts']) {
     await expect(page.getByRole('heading', { name: group })).toBeVisible();
   }
 });
@@ -38,7 +39,7 @@ test('language hub flow completes from home', async ({ page }) => {
 
   await page.getByTestId('language-korean').click();
   await expect(page.getByTestId('flashcard')).toBeVisible();
-  await page.getByRole('button', { name: 'Next' }).click();
+  await page.getByRole('button', { name: 'Next', exact: true }).click();
   await expect(page.getByText(/2 \//)).toBeVisible();
 
   await page.getByTestId('theme-toggle').click();

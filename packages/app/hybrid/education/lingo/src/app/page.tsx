@@ -6,6 +6,7 @@ import {
   PiBank,
   PiCalendar,
   PiCards,
+  PiEye,
   PiFlask,
   PiGlobeStand,
   PiMathOperations,
@@ -57,11 +58,18 @@ const ITEMS = [
     group: 'Humanities',
   },
   {
+    name: 'Ophthalmology',
+    description: 'Vision training tools',
+    icon: PiEye,
+    href: '/ophthalmology/',
+    group: 'Health',
+  },
+  {
     name: 'Psychology',
     description: 'Validated self-report assessment scales',
     icon: PiUsers,
     href: '/psychology/',
-    group: 'Humanities',
+    group: 'Health',
   },
   {
     name: 'Music',

@@ -57,13 +57,13 @@ pnpm tauri dev|build # Desktop app via Tauri CLI
 ## Structure
 
 ```
-src/app/            # App Router pages — /languages /music /history /economics /geography /psychology + info routes
+src/app/            # App Router pages — /languages /music /history /economics /geography /psychology /ophthalmology + info routes
 src/components/
   atoms/            # Button, Badge, OfflineBadge, ThemeToggle
   organisms/        # Header
   templates/        # HomeTemplate, About/Downloads/Version/ErrorTemplate
 src/content/        # about/download/version copy
-src/games/          # languages (incl. sign/, english/), music, history, economics, geography, psychology
+src/games/          # languages (incl. sign/, english/), music, history, economics, geography, psychology, ophthalmology
 src/hooks/          # useTheme, useSWRegister, useUpdater
 src/lib/            # progress (IndexedDB), native bridge, publicPaths
 src/providers/      # SWProvider, NativeProvider, QueryProvider
@@ -88,3 +88,7 @@ recognition), `/history` (history hub), `/history/myth-vs-fact`,
 experiences-in-close-relationships, generalized-anxiety-disorder,
 patient-health-questionnaire, relationship-closeness-inventory,
 satisfaction-with-life); scales are screening tools, not diagnostics.
+Ophthalmology: `/ophthalmology` (hub), `/ophthalmology/vision` (theory),
+`/ophthalmology/vision/<chart>` for each visual acuity test (snellen, logmar,
+tumbling-e) — migrated from the `eyes` app; migrated as standalone components
+under `src/games/ophthalmology/`.

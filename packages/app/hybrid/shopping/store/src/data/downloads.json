@@ -796,50 +796,6 @@
         ]
       },
       {
-        "label": "Eyes",
-        "primaryCategory": "Medical",
-        "secondaryCategory": "Health & Fitness",
-        "icon": "PiEye",
-        "href": "https://hieudoanm.github.io/free/eyes",
-        "version": "latest",
-        "lastUpdated": "2025-01-01",
-        "fileSize": "",
-        "actions": [
-          {
-            "label": ".aab",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-eyes-latest/eyes.aab"
-          },
-          {
-            "label": ".apk",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-eyes-latest/eyes.apk"
-          },
-          {
-            "label": ".dmg",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-eyes-latest/eyes.dmg"
-          },
-          {
-            "label": ".AppImage",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-eyes-latest/eyes.AppImage"
-          },
-          {
-            "label": ".deb",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-eyes-latest/eyes.deb"
-          },
-          {
-            "label": ".x86_64.rpm",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-eyes-latest/eyes.rpm"
-          },
-          {
-            "label": ".msi",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-eyes-latest/eyes.msi"
-          },
-          {
-            "label": ".exe",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-medical-eyes-latest/eyes.exe"
-          }
-        ]
-      },
-      {
         "label": "MRI",
         "primaryCategory": "Medical",
         "secondaryCategory": "Health & Fitness",
