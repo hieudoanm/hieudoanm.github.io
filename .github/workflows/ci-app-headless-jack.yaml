@@ -26,9 +26,7 @@ jobs:
     uses: ./.github/workflows/ci-app-headless-go-template.yaml
     with:
       package: packages/app/headless/jack/go
-      runsOn: macos-latest
       installZig: true
-      buildCommand: make build-all
       releaseName: app-headless-jack-latest
       releaseTitle: App - Headless - Jack (latest)
       artifactName: app-headless-jack

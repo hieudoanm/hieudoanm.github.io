@@ -23,50 +23,11 @@ on:
         required: true
         type: string
         description: Artifact path glob, e.g. packages/app/headless/backbone/go/bin/*
-      runsOn:
-        required: false
-        type: string
-        default: ubuntu-latest
-        description: Runner image for the Go job
-      goVersion:
-        required: false
-        type: string
-        default: '1.27.0'
-        description: Go toolchain version to install
-      buildCommand:
-        required: false
-        type: string
-        default: make build
-        description: Command that produces the binary under bin/
-      testCommand:
-        required: false
-        type: string
-        default: make test
-        description: Command that runs the test suite
-      lintCommand:
-        required: false
-        type: string
-        default: make lint
-        description: Command that runs static analysis
       installZig:
         required: false
         type: boolean
         default: false
         description: Install zig 0.14.0 for cross-compilation (build-all)
-      gofmtCheck:
-        required: false
-        type: boolean
-        default: true
-        description: Fail the build if gofmt reports unformatted files
-      notesFile:
-        required: false
-        type: string
-        description: Optional path to a release notes file, e.g. packages/app/headless/landify/README.md
-      publish:
-        required: false
-        type: boolean
-        default: true
-        description: Whether this call creates the GitHub release (set false when the caller aggregates multiple languages)
 
 permissions:
   contents: write
@@ -74,7 +35,7 @@ permissions:
 jobs:
   go:
     name: Go
-    runs-on: ${{ inputs.runsOn }}
+    runs-on: macos-latest
     timeout-minutes: 30
     defaults:
       run:
@@ -85,7 +46,7 @@ jobs:
       - name: Install Go
         uses: actions/setup-go@v7.0.0
         with:
-          go-version: ${{ inputs.goVersion }}
+          go-version: '1.27.0'
           cache-dependency-path: ${{ inputs.package }}/go.sum
       - name: Install Dependencies
         run: go mod download
@@ -107,21 +68,12 @@ jobs:
             curl -fsSL "$url" | tar xJ -C /tmp
           fi
           echo "/tmp/$dir" >> "$GITHUB_PATH"
-      - name: Check Formatting
-        if: inputs.gofmtCheck
-        run: |
-          files="$(gofmt -l .)"
-          if [ -n "$files" ]; then
-            echo "gofmt wants to reformat:"
-            echo "$files"
-            exit 1
-          fi
       - name: Lint
-        run: ${{ inputs.lintCommand }}
+        run: make lint
       - name: Test
-        run: ${{ inputs.testCommand }}
+        run: make test
       - name: Build
-        run: ${{ inputs.buildCommand }}
+        run: make build-all
       - name: Upload Build Artifacts
         uses: actions/upload-artifact@v7.0.1
         with:
@@ -132,7 +84,6 @@ jobs:
   publish:
     name: Publish to GitHub Release
     needs: [go]
-    if: inputs.publish
     runs-on: ubuntu-latest
     timeout-minutes: 15
     permissions:
@@ -155,11 +106,7 @@ jobs:
         run: |
           RELEASE_NAME="${{ inputs.releaseName }}"
           RELEASE_TITLE="${{ inputs.releaseTitle }}"
-          if [[ -n "${{ inputs.notesFile }}" ]]; then
-            NOTES_FILE="${{ inputs.notesFile }}"
-          else
-            NOTES_FILE="${{ inputs.package }}/docs/DOWNLOADS.md"
-          fi
+          NOTES_FILE="${{ inputs.package }}/docs/DOWNLOADS.md"
           RELEASE_NOTES="release-notes.md"
           {
             echo "Auto-built from commit ${{ github.sha }}"

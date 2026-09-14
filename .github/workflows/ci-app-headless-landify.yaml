@@ -26,9 +26,7 @@ jobs:
     uses: ./.github/workflows/ci-app-headless-go-template.yaml
     with:
       package: packages/app/headless/landify/go
-      runsOn: macos-latest
       installZig: false
-      buildCommand: make build-all
       releaseName: app-headless-landify-latest
       releaseTitle: App - Headless - Landify (latest)
       artifactName: app-headless-landify
