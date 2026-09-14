@@ -2,9 +2,9 @@
 
 set -euo pipefail
 
-BIN_NAME="kv"
+BIN_NAME="kevin"
 RELEASE="app-headless-kevin-latest"
-ASSET_PREFIX="app-headless-kevin-go"
+ASSET_PREFIX="app-headless-kevin"
 REPO="${REPO:-hieudoanm/hieudoanm.github.io}"
 INSTALL_DIR="${INSTALL_DIR:-$HOME/bin}"
 

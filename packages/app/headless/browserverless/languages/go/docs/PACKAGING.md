@@ -53,14 +53,18 @@ docker run -p 8080:8080 browserverless
 
 ### Release build (`docker/Dockerfile`)
 
-Skips the Go toolchain entirely: a `debian:trixie-slim` download stage runs
-`scripts/install.sh`, which pulls `app-headless-browserverless-browserverless-
-{os}-{arch}` from the `app-headless-browserverless-latest` GitHub release.
-The runtime stage is the same `scratch` image as the source build.
+Skips the Go toolchain entirely: a `debian:trixie-slim` download stage fetches
+`scripts/install.sh` from the repo and runs it, which pulls
+`app-headless-browserverless-browserverless-{os}-{arch}` from the
+`app-headless-browserverless-latest` GitHub release. The runtime stage is the
+same `scratch` image as the source build.
 
-- `--platform=$TARGETPLATFORM` makes `uname` report the target arch under
-  buildx, so `install.sh` picks the right asset (multi-arch build supported)
-- `ARG REPO` overrides the GitHub repo; the build context is the module root
+- Self-contained: `install.sh` is fetched over HTTPS at build time, so the
+  image builds with any context — including just the `docker/` directory, as
+  deploy platforms use
+- The stage defaults to `$TARGETPLATFORM`, so `uname` reports the target arch
+  and `install.sh` picks the right asset (multi-arch build supported)
+- `ARG REPO` overrides the GitHub repo
 
 ```bash
 cd packages/app/headless/browserverless/languages/go

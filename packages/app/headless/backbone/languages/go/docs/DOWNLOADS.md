@@ -22,14 +22,20 @@
 
 Pick the option that fits your environment.
 
+### Install script
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/master/packages/app/headless/backbone/languages/go/scripts/install.sh | bash
+```
+
 ### Prebuilt binary
 
-| No  | Platform | Architecture | Download Link                                    | Note                          |
-| --- | -------- | ------------ | ------------------------------------------------ | ----------------------------- |
-| 1   | Linux    | amd64        | [Download `backbone`][download-linux-amd64]      | Static binary, no deps needed |
-| 2   | Linux    | arm64        | [Download `backbone`][download-linux-arm64]      | Static binary, no deps needed |
-| 3   | macOS    | amd64        | [Download `backbone`][download-darwin-amd64]     | Static binary, no deps needed |
-| 4   | macOS    | arm64        | [Download `backbone`][download-darwin-arm64]     | Static binary, no deps needed |
+| No  | Platform | Architecture | Download Link                                | Note                          |
+| --- | -------- | ------------ | -------------------------------------------- | ----------------------------- |
+| 1   | Linux    | amd64        | [Download `backbone`][download-linux-amd64]  | Static binary, no deps needed |
+| 2   | Linux    | arm64        | [Download `backbone`][download-linux-arm64]  | Static binary, no deps needed |
+| 3   | macOS    | amd64        | [Download `backbone`][download-darwin-amd64] | Static binary, no deps needed |
+| 4   | macOS    | arm64        | [Download `backbone`][download-darwin-arm64] | Static binary, no deps needed |
 
 [download-linux-amd64]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-backbone-latest/app-headless-backbone-backbone-linux-amd64
 [download-linux-arm64]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-backbone-latest/app-headless-backbone-backbone-linux-arm64

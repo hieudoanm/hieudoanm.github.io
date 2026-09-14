@@ -21,6 +21,12 @@
 
 Pick the option that fits your environment.
 
+### Install script
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/master/packages/app/headless/jack/languages/go/scripts/install.sh | bash
+```
+
 ### Prebuilt binaries
 
 | No  | Platform | Architecture | Download Link                            | Note                          |

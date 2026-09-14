@@ -21,6 +21,12 @@
 
 Pick the option that fits your environment.
 
+### Install script
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/master/packages/app/headless/landify/languages/go/scripts/install.sh | bash
+```
+
 ### Prebuilt binary
 
 | No  | Platform | Architecture | Download Link                               | Note                          |

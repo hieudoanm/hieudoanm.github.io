@@ -34,8 +34,9 @@ Verification before handoff: `make all` passes — `go fmt` produces no diff,
   `validate`, `build`, `themes`, `serve`. `--file` (`-f`, default
   `landify.yaml`) is a persistent root flag; `build` adds `--output`/`-o`
   (`index.html`) and `--theme`/`-t`; `new` adds `--type`/`-t` (`product`) and
-  `--force`/`-F`; `serve` adds `--dir`/`-d` (`.`) and `--port`/`-p` (`8080`).
-  `serve` binds `127.0.0.1` and shuts down gracefully on `SIGINT`/`SIGTERM`.
+  `--force`/`-F`; `serve` adds `--dir`/`-d` (`.`), `--bind`/`-b`
+  (`127.0.0.1`) and `--port`/`-p` (`8080`).
+  `serve` shuts down gracefully on `SIGINT`/`SIGTERM`.
 - Follow repo-wide Go rules from the root [AGENTS.md](../../../../../AGENTS.md):
   `error` last, handle errors explicitly, `var` zero-init over `:=`, no global
   state, table-driven tests, return early.

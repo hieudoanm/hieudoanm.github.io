@@ -7,5 +7,4 @@ docs
 LICENSE
 Makefile
 Dockerfile
-scripts/*
-!scripts/install.sh
+scripts

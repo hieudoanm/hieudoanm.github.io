@@ -24,7 +24,7 @@ Pick the option that fits your environment.
 ### Install script
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/main/packages/app/headless/browserverless/languages/go/scripts/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/master/packages/app/headless/browserverless/languages/go/scripts/install.sh | bash
 ```
 
 ### Prebuilt binary
