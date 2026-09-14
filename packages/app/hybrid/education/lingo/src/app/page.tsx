@@ -11,6 +11,7 @@ import {
   PiGlobeStand,
   PiMathOperations,
   PiMusicNote,
+  PiPalette,
   PiUsers,
 } from 'react-icons/pi';
 
@@ -30,20 +31,6 @@ const ITEMS = [
     group: 'STEM',
   },
   {
-    name: 'Languages',
-    description: 'Vocabulary decks across languages',
-    icon: PiCards,
-    href: '/languages/',
-    group: 'Humanities',
-  },
-  {
-    name: 'History',
-    description: 'Timeline and myth-vs-fact history games',
-    icon: PiCalendar,
-    href: '/history/',
-    group: 'Humanities',
-  },
-  {
     name: 'Economics',
     description: 'Game theory, markets, behavioral and macro concepts',
     icon: PiBank,
@@ -55,6 +42,20 @@ const ITEMS = [
     description: 'Countries, continents, flags and capitals',
     icon: PiGlobeStand,
     href: '/geography/',
+    group: 'Humanities',
+  },
+  {
+    name: 'History',
+    description: 'Timeline and myth-vs-fact history games',
+    icon: PiCalendar,
+    href: '/history/',
+    group: 'Humanities',
+  },
+  {
+    name: 'Languages',
+    description: 'Vocabulary decks across languages',
+    icon: PiCards,
+    href: '/languages/',
     group: 'Humanities',
   },
   {
@@ -70,6 +71,13 @@ const ITEMS = [
     icon: PiUsers,
     href: '/psychology/',
     group: 'Health',
+  },
+  {
+    name: 'Colors',
+    description: 'Tools for picking, tuning and shipping color',
+    icon: PiPalette,
+    href: '/colors/',
+    group: 'Arts',
   },
   {
     name: 'Music',

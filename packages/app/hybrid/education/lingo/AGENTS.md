@@ -57,13 +57,13 @@ pnpm tauri dev|build # Desktop app via Tauri CLI
 ## Structure
 
 ```
-src/app/            # App Router pages — /languages /music /history /economics /geography /psychology /ophthalmology + info routes
+src/app/            # App Router pages — /languages /music /colors /history /economics /geography /psychology /ophthalmology + info routes
 src/components/
   atoms/            # Button, Badge, OfflineBadge, ThemeToggle
   organisms/        # Header
   templates/        # HomeTemplate, About/Downloads/Version/ErrorTemplate
 src/content/        # about/download/version copy
-src/games/          # languages (incl. sign/, english/), music, history, economics, geography, psychology, ophthalmology
+src/games/          # languages (incl. sign/, english/), music, colors, history, economics, geography, psychology, ophthalmology
 src/hooks/          # useTheme, useSWRegister, useUpdater
 src/lib/            # progress (IndexedDB), native bridge, publicPaths
 src/providers/      # SWProvider, NativeProvider, QueryProvider
@@ -91,4 +91,10 @@ satisfaction-with-life); scales are screening tools, not diagnostics.
 Ophthalmology: `/ophthalmology` (hub), `/ophthalmology/vision` (theory),
 `/ophthalmology/vision/<chart>` for each visual acuity test (snellen, logmar,
 tumbling-e) — migrated from the `eyes` app; migrated as standalone components
-under `src/games/ophthalmology/`.
+under `src/games/ophthalmology/`. Colors: `/colors` (hub), `/colors/<theory>`
+(theory: models, harmony, perception, scales, css), `/colors/<theory>/<tool>`
+(tool: converter, adjuster, random, wheel, schemes, mixer, contrast,
+color-blindness, temperature, shades-tints, tint-shade-tone, opacity, css-scale,
+gradient, palette, theme) — migrated from the `colors` app; tools live as
+standalone components under `src/games/colors/` with shared atoms in
+`src/games/colors/shared/` and pure color math in `src/games/colors/colors.ts`.

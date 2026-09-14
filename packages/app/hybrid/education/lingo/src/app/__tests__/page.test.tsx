@@ -10,6 +10,7 @@ describe('HomePage', () => {
     [
       'languages',
       'music',
+      'colors',
       'chemistry',
       'economics',
       'geography',

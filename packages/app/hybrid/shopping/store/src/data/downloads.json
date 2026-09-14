@@ -576,50 +576,6 @@
         ]
       },
       {
-        "label": "Colors",
-        "primaryCategory": "Graphics & Design",
-        "secondaryCategory": "Photo & Video",
-        "icon": "PiPaintBucket",
-        "href": "https://hieudoanm.github.io/free/colors",
-        "version": "latest",
-        "lastUpdated": "2026-09-04",
-        "fileSize": "",
-        "actions": [
-          {
-            "label": ".aab",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-colors-latest/colors.aab"
-          },
-          {
-            "label": ".apk",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-colors-latest/colors.apk"
-          },
-          {
-            "label": ".dmg",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-colors-latest/colors.dmg"
-          },
-          {
-            "label": ".AppImage",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-colors-latest/colors.AppImage"
-          },
-          {
-            "label": ".deb",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-colors-latest/colors.deb"
-          },
-          {
-            "label": ".x86_64.rpm",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-colors-latest/colors.rpm"
-          },
-          {
-            "label": ".msi",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-colors-latest/colors.msi"
-          },
-          {
-            "label": ".exe",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-hybrid-graphics-design-colors-latest/colors.exe"
-          }
-        ]
-      },
-      {
         "label": "Photo",
         "primaryCategory": "Graphics & Design",
         "secondaryCategory": "Photo & Video",

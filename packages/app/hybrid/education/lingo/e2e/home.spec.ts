@@ -14,6 +14,7 @@ test('home lists all course cards', async ({ page }) => {
   for (const slug of [
     'languages',
     'music',
+    'colors',
     'chemistry',
     'economics',
     'geography',

@@ -20,12 +20,9 @@ export const viewport: Viewport = {
   maximumScale: 1,
 };
 
-const THEME_INIT = `(function(){try{var t=localStorage.getItem('memory-theme');document.documentElement.dataset.theme=t==='memory-dark'?'memory-dark':'memory-light';}catch(e){document.documentElement.dataset.theme='memory-light';}})();`;
-
 const RootLayout: FC<{ children: ReactNode }> = ({ children }) => (
   <html lang="en" data-theme="memory-light">
     <head>
-      <script dangerouslySetInnerHTML={{ __html: THEME_INIT }} />
       <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
     </head>
     <body className="bg-base-100 text-base-content h-screen overflow-y-auto font-mono">
