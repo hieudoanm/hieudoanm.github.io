@@ -1,0 +1,33 @@
+name: CI - App - Headless - Browserverless
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/headless/browserverless/go/**'
+      - '.github/workflows/ci-app-headless-go-browserverless.yaml'
+      - '.github/workflows/ci-app-headless-go-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-headless-browserverless-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-headless-go-template.yaml
+    with:
+      package: packages/app/headless/browserverless/languages/go
+      installZig: false
+      releaseName: app-headless-browserverless-latest
+      releaseTitle: App - Headless - Browserverless (latest)
+      artifactName: app-headless-browserverless
+      artifactPath: packages/app/headless/browserverless/languages/go/bin/*

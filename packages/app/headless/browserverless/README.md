@@ -1,3 +1,4 @@
 # Browser
 
-1. Rust
+1. Go
+2. Rust

@@ -1,0 +1,11 @@
+.git
+.gitignore
+bin
+coverage
+docs
+*.md
+LICENSE
+Makefile
+Dockerfile
+scripts/*
+!scripts/install.sh
