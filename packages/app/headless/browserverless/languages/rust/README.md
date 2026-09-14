@@ -94,7 +94,8 @@ x-browserverless-duration-ms:  wall time for the request
 
 Only `http`/`https` targets are allowed (400 otherwise); missing `url` or invalid
 JSON body is 400; a non-POST on `/api/v1/scrape` or `/api/v1/screenshot` is 405;
-unknown paths are 404; render timeouts are 504. Details in `docs/SERVER.md`.
+unknown paths are 404; render timeouts are 504. Details in `docs/ARCHITECTURE.md`
+§Server Mode.
 
 ## Test / check
 
@@ -108,12 +109,11 @@ CI runs these gates in `.github/workflows/ci-app-native-rust-browserverless.yaml
 
 ## Docs for agents
 
-- `docs/ARCHITECTURE.md` — real architecture, data flow, invariants.
-- `docs/HEADLESS.md` — headless pipeline + public API + pixel capture.
-- `docs/DEVELOPMENT.md` — build/run/test, troubleshooting, Servo upgrade steps.
-- `docs/SERVER.md` — server-mode design and the hard constraints that shape it.
-- `docs/COMPATIBILITY.md` — verified render targets and known limitations.
-- `docs/servo-patches.md` — Servo-specific workarounds and regression evidence.
+- `docs/ARCHITECTURE.md` — architecture, data flow, headed/headless/server pipelines,
+  Servo integration notes/workarounds, verified compatibility.
+- `docs/CONTRIBUTING.md` — build/run/test, troubleshooting, Servo upgrade steps.
+- `docs/DOWNLOADS.md` — get the binary, container image, or build from source.
+- `docs/PACKAGING.md` — binary + container + CI artifact pipeline.
 - `docs/ROADMAP.md` — phase status vs `AGENTS.md` §46.
 
 ## Known constraints (summary)
@@ -122,7 +122,7 @@ CI runs these gates in `.github/workflows/ci-app-native-rust-browserverless.yaml
 - Use one page per `BrowserContext`; multi-page in one context is unreliable today.
 - Initial navigation must be passed via `WebViewBuilder::url()`, not `webview.load()`
   afterwards (a load race produced the all-white-screenshot bug; now fixed with a
-  regression test). Details in `docs/servo-patches.md`.
+  regression test). Details in `docs/ARCHITECTURE.md` §Servo Integration Notes.
 
 ## License
 

@@ -11,7 +11,7 @@ on:
       - 'dependabot/**'
     paths:
       - 'packages/app/headless/backbone/go/**'
-      - '.github/workflows/ci-app-headless-backbone.yaml'
+      - '.github/workflows/ci-app-headless-go-backbone.yaml'
       - '.github/workflows/ci-app-headless-go-template.yaml'
 
 permissions:
@@ -25,9 +25,9 @@ jobs:
   ci:
     uses: ./.github/workflows/ci-app-headless-go-template.yaml
     with:
-      package: packages/app/headless/backbone/go
+      package: packages/app/headless/backbone/languages/go
       installZig: false
       releaseName: app-headless-backbone-latest
       releaseTitle: App - Headless - Backbone (latest)
       artifactName: app-headless-backbone
-      artifactPath: packages/app/headless/backbone/go/bin/*
+      artifactPath: packages/app/headless/backbone/languages/go/bin/*

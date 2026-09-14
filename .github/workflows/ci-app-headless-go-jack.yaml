@@ -11,7 +11,7 @@ on:
       - 'dependabot/**'
     paths:
       - 'packages/app/headless/jack/go/**'
-      - '.github/workflows/ci-app-headless-jack.yaml'
+      - '.github/workflows/ci-app-headless-go-jack.yaml'
       - '.github/workflows/ci-app-headless-go-template.yaml'
 
 permissions:
@@ -25,9 +25,9 @@ jobs:
   ci:
     uses: ./.github/workflows/ci-app-headless-go-template.yaml
     with:
-      package: packages/app/headless/jack/go
+      package: packages/app/headless/jack/languages/go
       installZig: true
       releaseName: app-headless-jack-latest
       releaseTitle: App - Headless - Jack (latest)
       artifactName: app-headless-jack
-      artifactPath: packages/app/headless/jack/go/bin/*
+      artifactPath: packages/app/headless/jack/languages/go/bin/*

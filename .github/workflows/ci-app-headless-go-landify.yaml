@@ -11,7 +11,7 @@ on:
       - 'dependabot/**'
     paths:
       - 'packages/app/headless/landify/go/**'
-      - '.github/workflows/ci-app-headless-landify.yaml'
+      - '.github/workflows/ci-app-headless-go-landify.yaml'
       - '.github/workflows/ci-app-headless-go-template.yaml'
 
 permissions:
@@ -25,9 +25,9 @@ jobs:
   ci:
     uses: ./.github/workflows/ci-app-headless-go-template.yaml
     with:
-      package: packages/app/headless/landify/go
+      package: packages/app/headless/landify/languages/go
       installZig: false
       releaseName: app-headless-landify-latest
       releaseTitle: App - Headless - Landify (latest)
       artifactName: app-headless-landify
-      artifactPath: packages/app/headless/landify/go/bin/*
+      artifactPath: packages/app/headless/landify/languages/go/bin/*

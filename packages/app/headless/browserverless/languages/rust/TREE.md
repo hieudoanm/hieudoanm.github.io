@@ -58,21 +58,16 @@
 │       ├── src/
 │       │   └── [lib.rs](./crates/style/src/lib.rs)
 │       └── [Cargo.toml](./crates/style/Cargo.toml)
+├── api/
+│   └── [openapi.json](./api/openapi.json)
 ├── docker/
 │   └── [Dockerfile](./docker/Dockerfile)
 ├── docs/
 │   ├── [ARCHITECTURE.md](./docs/ARCHITECTURE.md)
-│   ├── [COMPATIBILITY.md](./docs/COMPATIBILITY.md)
 │   ├── [CONTRIBUTING.md](./docs/CONTRIBUTING.md)
-│   ├── [DEVELOPMENT.md](./docs/DEVELOPMENT.md)
 │   ├── [DOWNLOADS.md](./docs/DOWNLOADS.md)
-│   ├── [FEATURES.md](./docs/FEATURES.md)
-│   ├── [HEADLESS.md](./docs/HEADLESS.md)
 │   ├── [PACKAGING.md](./docs/PACKAGING.md)
-│   ├── [ROADMAP.md](./docs/ROADMAP.md)
-│   ├── [SERVER.md](./docs/SERVER.md)
-│   ├── [openapi.json](./docs/openapi.json)
-│   └── [servo-patches.md](./docs/servo-patches.md)
+│   └── [ROADMAP.md](./docs/ROADMAP.md)
 ├── tasks/
 │   ├── [001-project-scaffolding.md](./tasks/001-project-scaffolding.md)
 │   ├── [002-dom.md](./tasks/002-dom.md)

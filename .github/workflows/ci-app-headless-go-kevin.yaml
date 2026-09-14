@@ -11,7 +11,7 @@ on:
       - 'dependabot/**'
     paths:
       - 'packages/app/headless/kevin/go/**'
-      - '.github/workflows/ci-app-headless-kevin.yaml'
+      - '.github/workflows/ci-app-headless-go-kevin.yaml'
       - '.github/workflows/ci-app-headless-go-template.yaml'
 
 permissions:
@@ -25,9 +25,9 @@ jobs:
   ci:
     uses: ./.github/workflows/ci-app-headless-go-template.yaml
     with:
-      package: packages/app/headless/kevin/go
+      package: packages/app/headless/kevin/languages/go
       installZig: false
       releaseName: app-headless-kevin-latest
       releaseTitle: App - Headless - KeVIn (latest)
       artifactName: app-headless-kevin
-      artifactPath: packages/app/headless/kevin/go/bin/*
+      artifactPath: packages/app/headless/kevin/languages/go/bin/*

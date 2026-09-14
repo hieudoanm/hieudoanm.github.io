@@ -10,7 +10,7 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/headless/browserverless/rust/**'
+      - 'packages/app/headless/browserverless/languages/rust/**'
 
 permissions:
   contents: write
@@ -25,17 +25,17 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: packages/app/headless/browserverless/rust
+        working-directory: packages/app/headless/browserverless/languages/rust
     env:
       RUSTC_WRAPPER: sccache
-      SCCACHE_GHA_ENABLED: "true"
-      CARGO_INCREMENTAL: "0"
+      SCCACHE_GHA_ENABLED: 'true'
+      CARGO_INCREMENTAL: '0'
     steps:
       - name: Checkout
         uses: actions/checkout@v7.0.1
         with:
           sparse-checkout: |
-            packages/app/headless/browserverless/rust
+            packages/app/headless/browserverless/languages/rust
       - name: Install System Dependencies
         run: |
           sudo apt-get update
@@ -60,7 +60,7 @@ jobs:
         uses: actions/cache@v6.1.0
         with:
           path: ~/.cargo/registry
-          key: ${{ runner.os }}-cargo-registry-app-headless-browserverless-${{ hashFiles('packages/app/headless/browserverless/rust/Cargo.lock') }}
+          key: ${{ runner.os }}-cargo-registry-app-headless-browserverless-${{ hashFiles('packages/app/headless/browserverless/languages/rust/Cargo.lock') }}
           restore-keys: ${{ runner.os }}-cargo-registry-app-headless-browserverless-
       # Each cargo invocation compiles a different profile/compiler
       # (clippy-driver / dev-rustc / release-rustc), so the three steps cannot
@@ -76,7 +76,7 @@ jobs:
         uses: actions/upload-artifact@v7.0.1
         with:
           name: app-headless-browserverless
-          path: packages/app/headless/browserverless/rust/target/release/browserverless
+          path: packages/app/headless/browserverless/languages/rust/target/release/browserverless
 
   publish:
     name: Publish to GitHub Release

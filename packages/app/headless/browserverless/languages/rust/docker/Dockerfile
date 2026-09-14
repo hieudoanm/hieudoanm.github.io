@@ -26,7 +26,7 @@ RUN groupadd -r browserverless && useradd -r -g browserverless -m -d /home/brows
     && chmod 700 /run/browserverless
 
 RUN wget -q -O /usr/local/bin/browserverless \
-    "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-rust-browserverless-latest/app-native-rust-browserverless-browserverless" \
+    "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-browserverless-latest/app-headless-browserverless-browserverless" \
     && chmod +x /usr/local/bin/browserverless
 
 USER browserverless

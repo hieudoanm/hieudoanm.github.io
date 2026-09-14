@@ -1311,11 +1311,11 @@ Maintain:
 
 ```text
 README.md
-docs/architecture.md
-docs/headless.md
-docs/server.md
-docs/compatibility.md
-docs/development.md
+docs/ARCHITECTURE.md
+docs/CONTRIBUTING.md
+docs/DOWNLOADS.md
+docs/PACKAGING.md
+docs/ROADMAP.md
 ```
 
 README should answer:
@@ -1881,10 +1881,10 @@ Use:
 Maintain:
 
 ```text
-docs/compatibility.md
+docs/ARCHITECTURE.md
 ```
 
-with explicit known limitations.
+with explicit known limitations (see §Compatibility).
 
 ---
 
@@ -2269,8 +2269,10 @@ Application-specific behavior stays in this repository.
 Maintain a record of upstream patches/workarounds in:
 
 ```text
-docs/servo-patches.md
+docs/ARCHITECTURE.md
 ```
+
+under §Servo Integration Notes and Workarounds.
 
 ---
 
