@@ -17,13 +17,7 @@ const ITEMS: GameItem[] = [
     description: 'Identify countries by flag, emoji or borders',
     icon: PiMapPin,
     href: '/geography/guess/',
-  },
-  {
-    testId: 'geography-higher-or-lower',
-    name: 'Higher or Lower',
-    description: 'Compare country population and passport statistics',
-    icon: PiChartLineUp,
-    href: '/geography/higher-or-lower/',
+    group: 'Guessing',
   },
   {
     testId: 'geography-wordle',
@@ -31,6 +25,15 @@ const ITEMS: GameItem[] = [
     description: 'Guess the daily country name in six tries',
     icon: PiTextAa,
     href: '/geography/wordle/',
+    group: 'Guessing',
+  },
+  {
+    testId: 'geography-higher-or-lower',
+    name: 'Higher or Lower',
+    description: 'Compare country population and passport statistics',
+    icon: PiChartLineUp,
+    href: '/geography/higher-or-lower/',
+    group: 'Comparing',
   },
   {
     testId: 'geography-connections',
@@ -38,6 +41,7 @@ const ITEMS: GameItem[] = [
     description: 'Group sixteen countries into four themed sets',
     icon: PiGridFour,
     href: '/geography/connections/',
+    group: 'Classifying',
   },
   {
     testId: 'geography-sort-continents',
@@ -45,6 +49,7 @@ const ITEMS: GameItem[] = [
     description: 'Drag countries into their correct continent',
     icon: PiGlobeStand,
     href: '/geography/sort-continents/',
+    group: 'Classifying',
   },
 ];
 

@@ -10,6 +10,7 @@ const ITEMS: GameItem[] = [
     description: 'Interactive periodic table of elements',
     icon: PiFlask,
     href: '/chemistry/periodic-table/',
+    group: 'Elements',
   },
 ];
 

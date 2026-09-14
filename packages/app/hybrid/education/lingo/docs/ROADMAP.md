@@ -18,6 +18,8 @@
 - [x] Sign: webcam recognition with MediaPipe Hands + ONNX inference
 - [x] Music: piano note recognition ear-training game (migrated from `music`)
 - [x] XP/streak progress layer in IndexedDB
+- [x] Psychology: 8 validated self-report scales (BDI-II, BFI, DAS, ECR-R,
+      GAD-7, PHQ-9, RCI, SWLS) migrated from the psychology app
 
 ## Phase 3 — Learning experience
 

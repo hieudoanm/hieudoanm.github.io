@@ -11,6 +11,7 @@ const ITEMS: GameItem[] = [
     description: 'Separate historical myths from facts',
     icon: PiCalendar,
     href: '/history/myth-vs-fact/',
+    group: 'Quizzes',
   },
   {
     testId: 'history-through-the-years',
@@ -18,6 +19,7 @@ const ITEMS: GameItem[] = [
     description: 'Place historical events on a timeline',
     icon: PiClock,
     href: '/history/through-the-years/',
+    group: 'Quizzes',
   },
 ];
 

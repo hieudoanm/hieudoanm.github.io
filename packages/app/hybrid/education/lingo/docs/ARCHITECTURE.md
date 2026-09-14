@@ -22,7 +22,7 @@ src/
 │   ├── organisms/  # Header
 │   └── templates/  # HomeTemplate, info/error templates
 ├── content/    # about/download/version copy
-├── games/      # languages/ (incl. sign/, english/), music/, history/, economics/
+├── games/      # languages/ (incl. sign/, english/), music/, history/, economics/, psychology/
 │               #   — index.tsx + utils.ts each
 ├── hooks/      # useTheme, useProgress, useOffline, useSWRegister, useUpdater
 ├── lib/        # progress.ts, native/, publicPaths.ts
@@ -35,8 +35,8 @@ src/
 App Router with static export:
 
 - `/` — home hub (course grid)
-- `/languages`, `/music`, `/history`, `/economics` — one page per game (or hub)
-  under `(games)/`, rendering its feature directly
+- `/languages`, `/music`, `/history`, `/economics`, `/psychology` — one page per
+  game (or hub) under `(games)/`, rendering its feature directly
 - `/languages/english` — dictionary under the languages hub
 - `/languages/sign` — sign-language recognition under the languages hub
 - `/economics/<category>` — theory page (from the `economics` app's `(theory)`)

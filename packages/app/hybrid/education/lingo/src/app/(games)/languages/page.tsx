@@ -82,9 +82,8 @@ const LanguagesPage: NextPage = () => {
     <GamesTemplate
       title="Choose a language"
       subtitle="Pick a course to start learning vocabulary — one language, one deck."
-      items={items}>
-      <SearchBar />
-    </GamesTemplate>
+      items={items}
+    />
   );
 };
 

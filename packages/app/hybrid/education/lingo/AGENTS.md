@@ -57,13 +57,13 @@ pnpm tauri dev|build # Desktop app via Tauri CLI
 ## Structure
 
 ```
-src/app/            # App Router pages — /languages /music /history /economics /geography + info routes
+src/app/            # App Router pages — /languages /music /history /economics /geography /psychology + info routes
 src/components/
   atoms/            # Button, Badge, OfflineBadge, ThemeToggle
   organisms/        # Header
   templates/        # HomeTemplate, About/Downloads/Version/ErrorTemplate
 src/content/        # about/download/version copy
-src/games/          # languages (incl. sign/, english/), music, history, economics, geography
+src/games/          # languages (incl. sign/, english/), music, history, economics, geography, psychology
 src/hooks/          # useTheme, useSWRegister, useUpdater
 src/lib/            # progress (IndexedDB), native bridge, publicPaths
 src/providers/      # SWProvider, NativeProvider, QueryProvider
@@ -82,4 +82,9 @@ recognition), `/history` (history hub), `/history/myth-vs-fact`,
 `/economics/<category>` (theory), `/economics/<category>/<game>` (game),
 `/geography` (geography hub), `/geography/guess`, `/geography/higher-or-lower`,
 `/geography/wordle`, `/geography/connections`, `/geography/sort-continents`,
-`/music` plus `/about`, `/downloads`, `/version`.
+`/music` plus `/about`, `/downloads`, `/version`. Psychology: `/psychology`
+(hub) followed by `/psychology/<scale>` for each instrument
+(beck-depression-inventory, big-five-inventory, dyadic-adjustment-scale,
+experiences-in-close-relationships, generalized-anxiety-disorder,
+patient-health-questionnaire, relationship-closeness-inventory,
+satisfaction-with-life); scales are screening tools, not diagnostics.

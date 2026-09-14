@@ -1,12 +1,26 @@
 'use client';
 
-import { Music } from '@/games/music';
+import { GameItem, GamesTemplate } from '@/components/templates/GamesTemplate';
 import { NextPage } from 'next';
+import { PiMathOperations } from 'react-icons/pi';
+
+const ITEMS: GameItem[] = [
+  {
+    testId: 'music-pitch',
+    name: 'Pitch Trainer',
+    description: 'Train your pitch recognition skills',
+    icon: PiMathOperations,
+    href: '/music/pitch/',
+    group: 'Music',
+  },
+];
 
 const MusicPage: NextPage = () => (
-  <div className="p-4 md:p-6">
-    <Music />
-  </div>
+  <GamesTemplate
+    title="Music games"
+    subtitle="Train your music skills"
+    items={ITEMS}
+  />
 );
 
 export default MusicPage;

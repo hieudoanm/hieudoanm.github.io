@@ -11,6 +11,7 @@ const ITEMS: GameItem[] = [
     description: 'Explore the Kaprekar constant routine',
     icon: PiMathOperations,
     href: '/maths/kaprekar/',
+    group: 'Puzzles',
   },
 ];
 

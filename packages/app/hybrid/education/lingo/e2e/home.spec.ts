@@ -16,11 +16,16 @@ test('home lists all course cards', async ({ page }) => {
     'music',
     'chemistry',
     'economics',
+    'geography',
     'maths',
+    'psychology',
   ]) {
     await expect(page.getByTestId(`tool-card-${slug}`)).toBeVisible();
   }
   await expect(page.getByTestId('tool-card-history')).toBeVisible();
+  for (const group of ['Humanities', 'STEM', 'Arts']) {
+    await expect(page.getByRole('heading', { name: group })).toBeVisible();
+  }
 });
 
 test('language hub flow completes from home', async ({ page }) => {
