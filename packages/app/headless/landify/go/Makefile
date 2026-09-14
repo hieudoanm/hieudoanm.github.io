@@ -1,41 +1,69 @@
-BUILD_DIR ?= bin
-BINARY ?= $(BUILD_DIR)/landify
+GO           ?= go
+BIN_DIR      ?= bin
+BIN_NAME     ?= landify
+BINARY       ?= $(BIN_DIR)/$(BIN_NAME)
+COVERAGE_DIR ?= coverage
+PLATFORMS    := linux/amd64 linux/arm64 darwin/amd64 darwin/arm64
 
-.PHONY: help build new validate generate test vet fmt clean
+.PHONY: help all format lint test build build-all coverage clean tidy install
 
 help:
 	@echo "landify — build a landing page from YAML"
-	@echo "  make build     compile the CLI to ./$(BINARY)"
-	@echo "  make new       create landify.yaml placeholder"
-	@echo "  make validate  validate landify.yaml"
-	@echo "  make generate  generate index.html from landify.yaml"
-	@echo "  make test      run go tests"
-	@echo "  make vet       run go vet"
-	@echo "  make fmt       run gofmt"
-	@echo "  make clean     remove build artifacts"
+	@echo ""
+	@echo "Targets:"
+	@echo "  all        format + lint + test + build"
+	@echo "  format     go fmt ./..."
+	@echo "  lint       go vet ./..."
+	@echo "  test       go test ./..."
+	@echo "  build      build $(BINARY)"
+	@echo "  build-all  cross-compile for $(PLATFORMS) into $(BIN_DIR)"
+	@echo "  coverage   generate HTML coverage report"
+	@echo "  tidy       go mod tidy"
+	@echo "  install    build and install to $(HOME)/bin"
+	@echo "  clean      remove build artifacts"
 
-build:
-	@mkdir -p $(BUILD_DIR)
-	go build -o $(BINARY) .
-	@du -h $(BINARY) | awk '{print "built ./$(BINARY) (" $$1 ")"}'
+all: format lint test build
 
-new:
-	go run . new
+format:
+	$(GO) fmt ./...
 
-validate:
-	go run . validate
-
-generate:
-	go run . build
+lint:
+	$(GO) vet ./...
 
 test:
-	go test ./...
+	$(GO) test ./...
 
-vet:
-	go vet ./...
+build:
+	@mkdir -p $(BIN_DIR)
+	$(GO) build -o $(BINARY) .
+	@echo "built $(BINARY)"
 
-fmt:
-	gofmt -l -w .
+build-all:
+	@mkdir -p $(BIN_DIR)
+	@for p in $(PLATFORMS); do \
+		os=$${p%/*}; arch=$${p#*/}; \
+		ext=; [ $$os = windows ] && ext=.exe; \
+		printf "  %s/%s... " $$os $$arch; \
+		GOOS=$$os GOARCH=$$arch CGO_ENABLED=0 \
+		go build -o $(BIN_DIR)/$(BIN_NAME)-$$os-$$arch$$ext . && echo "ok"; \
+	done
+	@echo "Binaries in $(BIN_DIR)/:"
+	@ls -1 $(BIN_DIR)/
+
+coverage:
+	@mkdir -p $(COVERAGE_DIR)
+	$(GO) test -coverprofile=$(COVERAGE_DIR)/coverage.out -covermode=atomic ./...
+	@$(GO) tool cover -html=$(COVERAGE_DIR)/coverage.out -o $(COVERAGE_DIR)/coverage.html
+	@$(GO) tool cover -func=$(COVERAGE_DIR)/coverage.out | tail -1
+	@echo "Coverage report: file://$(abspath $(COVERAGE_DIR))/coverage.html"
+
+tidy:
+	$(GO) mod tidy
+
+install:
+	@mkdir -p $(HOME)/bin
+	$(GO) build -o $(HOME)/bin/$(BIN_NAME) .
+	@echo "Installed to $(HOME)/bin/$(BIN_NAME)"
 
 clean:
-	rm -rf $(BUILD_DIR) index.html
+	@rm -rf $(BIN_DIR) $(COVERAGE_DIR) index.html

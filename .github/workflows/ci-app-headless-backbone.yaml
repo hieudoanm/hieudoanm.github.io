@@ -10,8 +10,9 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/headless/backbone/**'
+      - 'packages/app/headless/backbone/go/**'
       - '.github/workflows/ci-app-headless-backbone.yaml'
+      - '.github/workflows/ci-app-headless-go-template.yaml'
 
 permissions:
   contents: write
@@ -21,94 +22,14 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  rust:
-    name: Rust
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: packages/app/headless/backbone/rust
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v7.0.1
-      - name: Install Rust
-        uses: actions-rust-lang/setup-rust-toolchain@v1.17.0
-        with:
-          components: clippy
-      - name: Cache Cargo
-        uses: actions/cache@v6.1.0
-        with:
-          path: |
-            ~/.cargo/registry
-            ~/.cargo/git
-            target
-          key: ${{ runner.os }}-cargo-app-headless-backbone-rust-${{ hashFiles('packages/app/headless/backbone/rust/Cargo.lock') }}
-          restore-keys: ${{ runner.os }}-cargo-app-headless-backbone-rust-
-      - name: Lint
-        run: cargo clippy -- -D warnings
-      - name: Test
-        run: cargo test
-      - name: Build
-        run: cargo build --release
-      - name: Upload Build Artifacts
-        uses: actions/upload-artifact@v7.0.1
-        with:
-          name: app-headless-backbone-rust
-          path: packages/app/headless/backbone/rust/target/release/backbone
-
-  go:
-    name: Go
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: packages/app/headless/backbone/go
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v7.0.1
-      - name: Install Go
-        uses: actions/setup-go@v7.0.0
-        with:
-          go-version: '1.27.0'
-          cache-dependency-path: packages/app/headless/backbone/go/go.sum
-      - name: Lint
-        run: go vet ./...
-      - name: Test
-        run: go test ./... -v -count=1
-      - name: Build
-        run: mkdir -p bin && CGO_ENABLED=0 go build -o bin/backbone ./src
-      - name: Upload Build Artifacts
-        uses: actions/upload-artifact@v7.0.1
-        with:
-          name: app-headless-backbone-go
-          path: packages/app/headless/backbone/go/bin/backbone
-
-  publish:
-    name: Publish to GitHub Release
-    needs: [rust, go]
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v7.0.1
-      - name: Download Build Artifacts
-        uses: actions/download-artifact@v8.0.1
-        with:
-          path: artifacts
-      - name: Collect Release Artifacts
-        run: |
-          mkdir -p release
-          for dir in artifacts/*/; do
-            artifact_name=$(basename "$dir")
-            for file in "$dir"*; do
-              cp "$file" "release/${artifact_name}-$(basename "$file")"
-            done
-          done
-      - name: Publish Release
-        run: |
-          gh release delete app-headless-backbone-latest --yes --cleanup-tag 2>/dev/null || true
-          gh release create app-headless-backbone-latest \
-            --title "App - Headless - Backbone (latest)" \
-            --notes "Auto-built headless app binaries from commit ${{ github.sha }}" \
-            release/*
-        env:
-          GH_TOKEN: ${{ github.token }}
+  ci:
+    uses: ./.github/workflows/ci-app-headless-go-template.yaml
+    with:
+      package: packages/app/headless/backbone/go
+      runsOn: ubuntu-latest
+      installZig: false
+      buildCommand: make build-all
+      releaseName: app-headless-backbone-latest
+      releaseTitle: App - Headless - Backbone (latest)
+      artifactName: app-headless-backbone
+      artifactPath: packages/app/headless/backbone/go/bin/*

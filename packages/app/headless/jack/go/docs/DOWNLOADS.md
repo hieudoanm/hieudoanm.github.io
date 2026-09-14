@@ -1,0 +1,113 @@
+# Jack CLI (Go)
+
+> A personal CLI toolbox — 33 modules with 189 MCP-exposed tools: system,
+> crypto, files, networking, PDFs, AI chat, games, time and more.
+
+![Linux](https://img.shields.io/badge/platform-linux-blue)
+![macOS](https://img.shields.io/badge/platform-macos-blue)
+![Go](https://img.shields.io/badge/go-1.26%2B-blue)
+
+---
+
+## Latest release
+
+- **Version:** `app-headless-jack-latest` — rebuilt automatically on every
+  push (see [PACKAGING](PACKAGING)).
+- **What's new:** see the [ROADMAP](ROADMAP) and [CONTRIBUTING](CONTRIBUTING).
+
+---
+
+## Installation
+
+Pick the option that fits your environment.
+
+### Prebuilt binaries
+
+| No  | Platform | Architecture | Download Link                            | Note                          |
+| --- | -------- | ------------ | ---------------------------------------- | ----------------------------- |
+| 1   | Linux    | amd64        | [Download `jack`][download-linux-amd64]  | Cross-compiled with zig (CGO) |
+| 2   | Linux    | arm64        | [Download `jack`][download-linux-arm64]  | Cross-compiled with zig (CGO) |
+| 3   | macOS    | amd64        | [Download `jack`][download-darwin-amd64] | Cross-compiled with zig (CGO) |
+| 4   | macOS    | arm64        | [Download `jack`][download-darwin-arm64] | Cross-compiled with zig (CGO) |
+
+[download-linux-amd64]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-jack-latest/app-headless-jack-jack-linux-amd64
+[download-linux-arm64]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-jack-latest/app-headless-jack-jack-linux-arm64
+[download-darwin-amd64]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-jack-latest/app-headless-jack-jack-darwin-amd64
+[download-darwin-arm64]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-jack-latest/app-headless-jack-jack-darwin-arm64
+
+```
+chmod +x jack
+./jack version
+```
+
+### Build from source
+
+Prefer to build it yourself? Clone, build, and run in three steps:
+
+```bash
+git clone https://github.com/hieudoanm/hieudoanm.github.io.git
+cd packages/app/headless/jack/go
+make build          # native build → bin/jack
+# or cross-compile all four platforms:
+# make build-all    # requires zig (see PACKAGING)
+./bin/jack version
+```
+
+See [PACKAGING](PACKAGING) for the CI artifact pipeline and
+[CONTRIBUTING](CONTRIBUTING) for setup and dev commands.
+
+---
+
+## About
+
+Jack is a batteries-included CLI. Everything is one command away: system
+monitoring, network diagnostics, PDF/image/video processing, crypto hashes,
+semver, color conversion, search, chess analysis, Telegram, time tools, games,
+and AI chat — via cobra subcommands with a uniform `--json` flag.
+
+---
+
+## Features
+
+- **33 modules** — from `calc`, `crypto`, `file` and `search` to `pdf`,
+  `video`, `image`, `web`, `telegram` and `write`
+- **`--json`** — machine-readable output on 28 modules for scripts
+- **AI chat** — `gemini code` and `openrouter code` TUI sessions
+- **MCP server** — `jack mcp serve` exposes all 189 leaf commands as tools to
+  AI agents (Claude Code, Cursor, VS Code) over stdio
+- **Command history** — every invocation tracked in `~/.jack/history.jsonl`
+  (`jack history list/search/stats`, `jack history clear`)
+- **Shell completion** — `jack completion <bash|zsh|fish|powershell>`
+- **Cross-platform** — linux/macOS × amd64/arm64 binaries
+
+---
+
+## MCP setup
+
+```json
+{ "mcpServers": { "jack": { "command": "jack", "args": ["mcp", "serve"] } } }
+```
+
+Tools are named with dot notation matching the CLI path — `file.read`,
+`search.files`, `calc.bmi`, `time.clock.now`.
+
+---
+
+## First run
+
+- `jack --help` and `jack <module> --help` show the full module tree
+- Command history is written to `~/.jack/history.jsonl` (managed with
+  `jack history clear`)
+
+---
+
+## Next steps
+
+- Want to contribute? Read [CONTRIBUTING](CONTRIBUTING).
+- Curious what's coming? Check the [ROADMAP](ROADMAP).
+
+---
+
+## License
+
+See [LICENSE](../LICENSE).

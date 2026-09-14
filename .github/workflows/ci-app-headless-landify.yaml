@@ -10,8 +10,9 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/headless/landify/**'
+      - 'packages/app/headless/landify/go/**'
       - '.github/workflows/ci-app-headless-landify.yaml'
+      - '.github/workflows/ci-app-headless-go-template.yaml'
 
 permissions:
   contents: write
@@ -21,78 +22,14 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  go:
-    name: Go
-    runs-on: macos-latest
-    defaults:
-      run:
-        working-directory: packages/app/headless/landify/go
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v7.0.1
-      - name: Install Go
-        uses: actions/setup-go@v7.0.0
-        with:
-          go-version: '1.27.0'
-          cache-dependency-path: packages/app/headless/landify/go/go.sum
-      - name: Install Dependencies
-        run: go mod download
-      - name: Lint
-        run: |
-          files="$(gofmt -l .)"
-          if [ -n "$files" ]; then
-            echo "gofmt wants to reformat:"
-            echo "$files"
-            exit 1
-          fi
-      - name: Vet
-        run: make vet
-      - name: Test
-        run: make test
-      - name: Build
-        run: make build
-      - name: Upload Build Artifacts
-        uses: actions/upload-artifact@v7.0.1
-        with:
-          name: app-headless-landify
-          path: packages/app/headless/landify/go/bin/landify
-
-  publish:
-    name: Publish to GitHub Release
-    needs: [go]
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v7.0.1
-      - name: Download Build Artifacts
-        uses: actions/download-artifact@v8.0.1
-        with:
-          path: artifacts
-      - name: Collect Release Artifacts
-        run: |
-          mkdir -p release
-          if [[ -d artifacts ]]; then
-            while IFS= read -r -d '' file; do
-              name="${file#artifacts/}"
-              name="${name//\//-}"
-              cp "$file" "release/$name"
-            done < <(find artifacts -type f -print0)
-          fi
-          if compgen -G "release/*" >/dev/null; then
-            echo "Collected release artifacts:"
-            ls -1 release
-          else
-            echo "No artifacts to publish" >&2
-            exit 1
-          fi
-      - name: Publish Release
-        run: |
-          gh release delete app-headless-landify-latest --yes --cleanup-tag 2>/dev/null || true
-          gh release create app-headless-landify-latest \
-            --title "App - Headless - Landify (latest)" \
-            --notes-file packages/app/headless/landify/README.md \
-            release/*
-        env:
-          GH_TOKEN: ${{ github.token }}
+  ci:
+    uses: ./.github/workflows/ci-app-headless-go-template.yaml
+    with:
+      package: packages/app/headless/landify/go
+      runsOn: macos-latest
+      installZig: false
+      buildCommand: make build-all
+      releaseName: app-headless-landify-latest
+      releaseTitle: App - Headless - Landify (latest)
+      artifactName: app-headless-landify
+      artifactPath: packages/app/headless/landify/go/bin/*

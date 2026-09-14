@@ -1,29 +1,60 @@
-# BackboneServer (Go)
+# Backbone (Go)
 
-A lightweight Supabase/PocketBase-like backend in Go with SQLite, featuring 22+ modules.
+> A lightweight Back-end as a Service — SQLite-backed storage, a full REST API,
+> an Admin Dashboard, WebSockets, SSE, cron jobs, webhooks, encrypted secrets
+> and pub/sub, all in a single static Go binary.
 
-| Language | Status | Tests |
-| -------- | ------ | ----- |
-| Go       | ✅     | 74    |
-| Rust     | ✅     | 74    |
+## Features
 
-## Quick start
+- **Database** — dynamic JSON-schema collections with column migrations,
+  paginated record CRUD, search
+- **Auth** — register/login with bcrypt + HS256 JWT
+- **Real-time** — WebSocket `/ws` (broadcast/history), SSE streams for
+  notifications, logs and pub/sub
+- **Automation** — cron jobs with manual triggers, webhooks with HMAC signing,
+  pub/sub topics and messages
+- **Files** — buckets, uploads, downloads, image thumbnails
+- **Ops** — encrypted secrets (AES-256-GCM), in-memory cache, structured logs,
+  RBAC permissions, JSON import/export, SQLite backup, OpenAPI + Swagger
+- **Admin Dashboard** — HTMX + Tailwind UI served at `/`
+
+See [docs/](./docs/) for architecture, contributing, downloads, packaging and
+roadmap.
+
+## Development
 
 ```bash
-make build
-./bin/backbone
-# → http://localhost:8080
+make build        # build bin/backbone (CGO_ENABLED=0)
+make build-all    # cross-compile 4 platforms into bin/ (CGO_ENABLED=0)
+make test         # go test ./...
+make lint         # go vet ./...
+make format       # go fmt ./...
+make coverage     # HTML coverage report
+make all          # format + lint + test + build
+make install      # install to ~/bin/backbone
 ```
 
-## Admin Dashboard
+Run straight from source:
 
-A web-based admin UI is served at `GET /`. Built with HTMX + Tailwind CSS (CDN).
+```bash
+go build -o bin/backbone .
+./bin/backbone     # → http://localhost:8080
+```
 
-Manage collections, records, buckets, files, webhooks, secrets, cron jobs, and more — all from the browser. No build step required.
+## Docker
+
+```bash
+docker build -t backbone-server -f Dockerfile .
+docker run -p 8080:8080 -v backbone-data:/data backbone-server
+```
+
+Docker Compose at the repo root runs both the Go (:8080) and Rust (:8081)
+implementations.
 
 ## API Reference
 
-All endpoints (except health, register, login, OpenAPI docs, and Swagger UI) require:
+All endpoints (except health, register, login, OpenAPI docs, Swagger UI, and
+the dashboard) require:
 
 ```
 Authorization: Bearer <token>
@@ -51,96 +82,49 @@ POST /api/auth/login
 ### Collections
 
 ```bash
-# Create (optionally with JSON schema)
 POST /api/collections
 {"name":"notes","schema":"{\"title\":\"string\",\"count?\":\"number\"}"}
-# {"name":"notes","schema":"{...}","created_at":"...","updated_at":"..."}
 
-# List
 GET /api/collections
-# [{"name":"notes","schema":"{}","created_at":"...","updated_at":"..."}]
-
-# Get
 GET /api/collections/notes
-
-# Update schema (triggers column migration)
-PATCH /api/collections/notes
-{"schema":"{\"title\":\"string\",\"body\":\"string\"}"}
-
-# Delete
+PATCH /api/collections/notes    # schema update triggers column migration
 DELETE /api/collections/notes
 ```
 
-Schema types: `string`, `number`, `integer`, `boolean`, `array`, `object`, `email`, `url`. Append `?` for optional.
+Schema types: `string`, `number`, `integer`, `boolean`, `array`, `object`,
+`email`, `url`. Append `?` for optional.
 
 ### Records
 
 ```bash
-# Create
 POST /api/collections/notes/records
 {"data":{"title":"Hello","body":"World"}}
-# {"id":"...","data":{"title":"Hello","body":"World"},"collection":"notes","created_at":"...","updated_at":"..."}
 
-# List (paginated)
 GET /api/collections/notes/records?page=1&per_page=20
-# {"records":[...],"total":1,"page":1,"per_page":20,"total_pages":1}
-
-# List with search
 GET /api/collections/notes/records?search=hello
-
-# Get
 GET /api/collections/notes/records/<id>
-
-# Update
 PATCH /api/collections/notes/records/<id>
-{"data":{"title":"Updated"}}
-
-# Delete
 DELETE /api/collections/notes/records/<id>
 ```
 
-### Buckets (File Storage)
+### Buckets & Files
 
 ```bash
-POST /api/buckets
-{"name":"avatars","is_public":false}
-
+POST /api/buckets       {"name":"avatars","is_public":false}
 GET /api/buckets
 GET /api/buckets/avatars
 DELETE /api/buckets/avatars
-```
 
-### Files
-
-```bash
-# Upload (multipart/form-data with "file" field, max 10 MB)
-POST /api/buckets/avatars/files
-
-# List
-GET /api/buckets/avatars/files?page=1&per_page=20
-# {"files":[...],"total":1,"page":1,"per_page":20,"total_pages":1}
-
-# Download
+POST /api/buckets/avatars/files           # multipart "file", max 10 MB
+GET /api/buckets/avatars/files
 GET /api/buckets/avatars/files/<id>
-
-# Thumbnail (image types: jpeg, png, webp, gif → 256px JPEG)
-GET /api/buckets/avatars/files/<id>/thumb
-
-# Delete
+GET /api/buckets/avatars/files/<id>/thumb # jpeg/png/webp/gif → 256px JPEG
 DELETE /api/buckets/avatars/files/<id>
 ```
 
 ### Webhooks
 
 ```bash
-# Create (events: record.create, record.update, record.delete,
-#        collection.create, collection.delete,
-#        bucket.create, bucket.delete,
-#        notification.create, log.create,
-#        secret.create, secret.update, secret.delete,
-#        cronjob.create, cronjob.delete,
-#        pubsub.topic.create, pubsub.topic.delete,
-#        pubsub.message.create)
 POST /api/webhooks
 {"name":"order webhook","url":"https://example.com/hook","events":["record.create"],"secret":"mysecret"}
 
@@ -151,18 +135,18 @@ DELETE /api/webhooks/<id>
 GET /api/webhooks/<id>/logs
 ```
 
-Webhooks deliver with HMAC-SHA256 signature in `X-Webhook-Signature-256` header when a secret is configured.
+Events: `record.*`, `collection.*`, `bucket.*`, `notification.create`,
+`log.create`, `secret.*`, `cronjob.*`, `pubsub.*`. Deliveries include an
+HMAC-SHA256 `X-Webhook-Signature-256` header when a secret is set.
 
-### Secrets (Encrypted Storage)
+### Secrets
 
 Values are encrypted with AES-256-GCM at rest.
 
 ```bash
-POST /api/secrets
-{"name":"api key","value":"sk-...","scope":"general"}
-
-GET /api/secrets            # value omitted from list
-GET /api/secrets/<id>       # value decrypted
+POST /api/secrets         {"name":"api key","value":"sk-...","scope":"general"}
+GET /api/secrets          # value omitted from list
+GET /api/secrets/<id>     # value decrypted
 PATCH /api/secrets/<id>
 DELETE /api/secrets/<id>
 ```
@@ -184,17 +168,13 @@ GET /api/cronjobs/<id>/logs
 ### WebSockets
 
 ```bash
-# Upgrade to WebSocket
-GET /ws
+GET /ws                          # upgrade
 
-# Management API
-GET /api/websockets
+GET /api/websockets              # management API
 GET /api/websockets/<id>
 DELETE /api/websockets/<id>
-
-# Messaging
-POST /api/websockets/broadcast  {"content":"hello all"}
-POST /api/websockets/<id>/send  {"content":"hello"}
+POST /api/websockets/broadcast   {"content":"hello all"}
+POST /api/websockets/<id>/send   {"content":"hello"}
 GET /api/websockets/messages
 GET /api/websockets/<id>/messages
 ```
@@ -202,32 +182,28 @@ GET /api/websockets/<id>/messages
 ### In-Memory Cache
 
 ```bash
-POST /api/cache   {"key":"mykey","value":"myvalue","ttl":3600}
-
+POST /api/cache          {"key":"mykey","value":"myvalue","ttl":3600}
 GET /api/cache
 GET /api/cache/mykey
 DELETE /api/cache/mykey
-DELETE /api/cache              # flush all
-GET /api/cache/stats           # total + expired entries
+DELETE /api/cache        # flush all
+GET /api/cache/stats     # total + expired
 ```
 
-Cache supports TTL-based expiry with periodic eviction (30s interval) and SQLite persistence.
+Cache supports TTL-based expiry with periodic eviction and SQLite persistence.
 
 ### Notifications
 
 Types: `info`, `success`, `warning`, `error`.
 
 ```bash
-POST /api/notifications  {"title":"Server Started","body":"The server is running","type":"success"}
-
+POST /api/notifications   {"title":"Server Started","body":"...","type":"success"}
 GET /api/notifications
 GET /api/notifications/<id>
 PATCH /api/notifications/<id>   # mark as read
 DELETE /api/notifications/<id>
 DELETE /api/notifications       # clear all
-
-# SSE stream for real-time notifications
-GET /api/notifications/stream
+GET /api/notifications/stream   # SSE
 ```
 
 ### Logs
@@ -235,29 +211,23 @@ GET /api/notifications/stream
 Levels: `debug`, `info`, `warn`, `error`.
 
 ```bash
-POST /api/logs  {"level":"info","message":"User logged in","meta":{"user_id":"..."}}
-
+POST /api/logs           {"level":"info","message":"User logged in","meta":{...}}
 GET /api/logs
-DELETE /api/logs                # clear all
-
-# SSE stream for real-time logs
-GET /api/logs/stream
+DELETE /api/logs
+GET /api/logs/stream     # SSE
 ```
 
 ### Pub/Sub
 
 ```bash
-POST /api/pubsub/topics         {"name":"orders"}
-
+POST /api/pubsub/topics   {"name":"orders"}
 GET /api/pubsub/topics
 GET /api/pubsub/topics/orders
 DELETE /api/pubsub/topics/orders
 
-POST /api/pubsub/topics/orders/messages  {"body":"New order received"}
+POST /api/pubsub/topics/orders/messages   {"body":"New order received"}
 GET /api/pubsub/topics/orders/messages
-
-# SSE stream for real-time topic messages
-GET /api/pubsub/orders/stream
+GET /api/pubsub/orders/stream             # SSE fan-out
 ```
 
 ### RBAC Permissions
@@ -265,103 +235,53 @@ GET /api/pubsub/orders/stream
 Roles: `admin`, `editor`, `viewer`. Collection `*` grants the role globally.
 
 ```bash
-POST /api/permissions  {"user_id":"<id>","collection":"*","role":"admin"}
-
+POST /api/permissions   {"user_id":"<id>","collection":"*","role":"admin"}
 GET /api/permissions
 DELETE /api/permissions/<id>
 ```
 
-### Import/Export
+### Import / Export / Backup
 
 ```bash
-# Export all data as JSON
-GET /api/export
-
-# Import data (use skip_existing to avoid conflicts)
+GET /api/export                  # full JSON export
 POST /api/import?skip_existing=true
-```
-
-### Database Backup
-
-```bash
-# Download a full SQLite backup (admin only)
-GET /api/backup
+GET /api/backup                  # SQLite backup (admin only)
 ```
 
 ### OpenAPI / Swagger
 
 ```bash
-# OpenAPI 3.0 spec
 GET /api/openapi.json
-
-# Swagger UI
-GET /api/docs
+GET /api/docs                    # Swagger UI
 ```
 
-## Config
+## Configuration
 
-| Env             | Default                           | Description     |
-| --------------- | --------------------------------- | --------------- |
-| `PORT`          | `8080`                            | Server port     |
-| `JWT_SECRET`    | `dev-secret-change-in-production` | JWT signing key |
-| `BACKBONE_DATA` | `~/.backbone`                     | Data directory  |
-
-## Build
-
-```bash
-make build      # build binary
-make test       # run 74 tests
-make lint       # go vet
-make format     # go fmt
-make clean      # remove bin/
-make all        # format + lint + test + build
-```
-
-## Docker
-
-```bash
-docker build -t backbone-go -f Dockerfile .
-docker run -p 8080:8080 -v backbone-data:/data backbone-go
-```
-
-Or use Docker Compose (includes both Go and Rust):
-
-```bash
-docker compose up
-# Go on :8080, Rust on :8081
-```
+| Env                    | Default                           | Purpose                |
+| ---------------------- | --------------------------------- | ---------------------- |
+| `PORT`                 | `8080`                            | Server port            |
+| `BACKBONE_DATA`        | `~/.backbone`                     | Data dir               |
+| `JWT_SECRET`           | `dev-secret-change-in-production` | JWT signing key        |
+| `BACKBONE_SECRETS_KEY` | (generated file)                  | AES-256 key for Secrets|
 
 ## Architecture
 
 - **Database:** SQLite via `modernc.org/sqlite` (pure Go, no CGO)
-- **Routing:** Standard `net/http` with hand-written route matching
-- **Auth:** bcrypt password hashing, HS256 JWT tokens (72h expiry)
+- **Routing:** standard `net/http` with method+path patterns
+- **Auth:** bcrypt password hashing, HS256 JWT (72h expiry)
 - **Encryption:** AES-256-GCM for secrets storage
-- **Rate Limiting:** Token bucket per IP (200 capacity, 100 refill/s)
-- **Static Files:** Served from disk via `http.FileServer`
-- **Middleware:** Rate limiting, auth, RBAC, content-type validation, request logging
-- **Cron:** `robfig/cron` scheduler polling every 30s
-- **WebSocket:** `gorilla/websocket` with ping/keepalive (30s)
+- **Rate limiting:** token bucket per IP
+- **Static files:** dashboard served from disk via `http.FileServer`
+- **Middleware:** rate limiting, auth, RBAC, content-type validation
+- **Cron:** `robfig/cron` scheduler with per-job run logs
+- **WebSocket:** `gorilla/websocket` with ping/keepalive
 
-## Test Coverage (74 tests)
+## Documentation
 
-| Module        | Tests |
-| ------------- | ----- |
-| Health        | 1     |
-| Auth          | 6     |
-| Collections   | 5     |
-| Records       | 6     |
-| Buckets/Files | 6     |
-| Webhooks      | 8     |
-| Secrets       | 3     |
-| Cron Jobs     | 2     |
-| WebSocket     | 5     |
-| Cache         | 7     |
-| Notifications | 7     |
-| Logs          | 5     |
-| Pub/Sub       | 7     |
-| Permissions   | 1     |
-| Import/Export | 1     |
-| Cache Stats   | 2     |
-| Backup        | —     |
-| OpenAPI       | —     |
+| Document                              | Description                          |
+| ------------------------------------- | ------------------------------------ |
+| [Architecture](./docs/ARCHITECTURE.md)| Tech stack, module map, request flow |
+| [Contributing](./docs/CONTRIBUTING.md)| Setup, commands, conventions, testing|
+| [Downloads](./docs/DOWNLOADS.md)      | Binary, Docker image, or source      |
+| [Packaging](./docs/PACKAGING.md)      | Build + CI artifact pipeline         |
+| [Roadmap](./docs/ROADMAP.md)          | Phased feature roadmap               |

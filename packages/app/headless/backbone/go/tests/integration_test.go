@@ -24,7 +24,10 @@ func buildBinary(t *testing.T) string {
 	if _, err := os.Stat(binPath); err == nil {
 		return binPath
 	}
-	cmd := exec.Command("go", "build", "-o", binPath, "./../src")
+	if err := os.MkdirAll(binDir, 0o755); err != nil {
+		t.Fatalf("mkdir bin: %v", err)
+	}
+	cmd := exec.Command("go", "build", "-o", binPath, "./..")
 	cmd.Stderr = &bytes.Buffer{}
 	if err := cmd.Run(); err != nil {
 		t.Fatalf("build binary: %v\nstderr: %s", err, cmd.Stderr.(*bytes.Buffer).String())

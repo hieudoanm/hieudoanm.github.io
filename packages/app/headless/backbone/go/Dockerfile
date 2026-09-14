@@ -3,10 +3,11 @@ FROM golang:1.27-alpine AS builder
 WORKDIR /app
 
 COPY go.mod go.sum ./
-COPY src/ src/
+COPY internal/ internal/
 COPY public/ public/
+COPY main.go ./
 
-RUN CGO_ENABLED=0 go build -o /app/backbone ./src
+RUN CGO_ENABLED=0 go build -o /app/backbone .
 
 FROM scratch
 

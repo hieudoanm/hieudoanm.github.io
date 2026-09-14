@@ -1,28 +1,28 @@
-GO=go
-BUILD_DIR=bin
-BINARY=backbone
-COVERAGE_DIR=coverage
+GO           ?= go
+BIN_DIR      ?= bin
+BIN_NAME     ?= backbone
+BINARY       ?= $(BIN_DIR)/$(BIN_NAME)
+COVERAGE_DIR ?= coverage
+PLATFORMS    := linux/amd64 linux/arm64 darwin/amd64 darwin/arm64
 
-.PHONY: all build clean test format lint tidy start docker-start coverage
+.PHONY: help all format lint test build build-all coverage clean tidy install
+
+help:
+	@echo "backbone — lightweight backend-as-a-service"
+	@echo ""
+	@echo "Targets:"
+	@echo "  all        format + lint + test + build"
+	@echo "  format     go fmt ./..."
+	@echo "  lint       go vet ./..."
+	@echo "  test       go test ./..."
+	@echo "  build      build $(BINARY) (CGO_ENABLED=0)"
+	@echo "  build-all  cross-compile for $(PLATFORMS) into $(BIN_DIR)"
+	@echo "  coverage   generate HTML coverage report"
+	@echo "  tidy       go mod tidy"
+	@echo "  install    build and install to $(HOME)/bin"
+	@echo "  clean      remove build artifacts"
 
 all: format lint test build
-
-build:
-	mkdir -p $(BUILD_DIR)
-	CGO_ENABLED=0 $(GO) build -o $(BUILD_DIR)/$(BINARY) ./src
-
-test:
-	$(GO) test ./... -v -count=1
-
-coverage:
-	@mkdir -p $(COVERAGE_DIR)
-	go test -coverprofile=$(COVERAGE_DIR)/coverage.out -covermode=atomic ./...
-	@go tool cover -html=$(COVERAGE_DIR)/coverage.out -o $(COVERAGE_DIR)/coverage.html
-	@go tool cover -func=$(COVERAGE_DIR)/coverage.out | tail -1
-	@echo "📊 Coverage report: file://$(abspath $(COVERAGE_DIR))/coverage.html"
-
-clean:
-	rm -rf $(BUILD_DIR)
 
 format:
 	$(GO) fmt ./...
@@ -30,14 +30,40 @@ format:
 lint:
 	$(GO) vet ./...
 
+test:
+	$(GO) test ./...
+
+build:
+	@mkdir -p $(BIN_DIR)
+	CGO_ENABLED=0 $(GO) build -o $(BINARY) .
+	@echo "built $(BINARY)"
+
+build-all:
+	@mkdir -p $(BIN_DIR)
+	@for p in $(PLATFORMS); do \
+		os=$${p%/*}; arch=$${p#*/}; \
+		ext=; [ $$os = windows ] && ext=.exe; \
+		printf "  %s/%s... " $$os $$arch; \
+		GOOS=$$os GOARCH=$$arch CGO_ENABLED=0 \
+		go build -o $(BIN_DIR)/$(BIN_NAME)-$$os-$$arch$$ext . && echo "ok"; \
+	done
+	@echo "Binaries in $(BIN_DIR)/:"
+	@ls -1 $(BIN_DIR)/
+
+coverage:
+	@mkdir -p $(COVERAGE_DIR)
+	$(GO) test -coverprofile=$(COVERAGE_DIR)/coverage.out -covermode=atomic ./...
+	@$(GO) tool cover -html=$(COVERAGE_DIR)/coverage.out -o $(COVERAGE_DIR)/coverage.html
+	@$(GO) tool cover -func=$(COVERAGE_DIR)/coverage.out | tail -1
+	@echo "Coverage report: file://$(abspath $(COVERAGE_DIR))/coverage.html"
+
 tidy:
 	$(GO) mod tidy
 
-PORT ?= 8080
+install:
+	@mkdir -p $(HOME)/bin
+	$(GO) build -o $(HOME)/bin/$(BIN_NAME) .
+	@echo "Installed to $(HOME)/bin/$(BIN_NAME)"
 
-start: build
-	PORT=$(PORT) ./bin/backbone
-
-docker-start:
-	docker build -t backbone-server .
-	docker run --rm -p $(PORT):$(PORT) -e PORT=$(PORT) -v backbone-data:/data backbone-server
+clean:
+	@rm -rf $(BIN_DIR) $(COVERAGE_DIR)
