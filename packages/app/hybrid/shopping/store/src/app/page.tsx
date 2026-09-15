@@ -8,6 +8,7 @@ import { SearchBar } from '@/components/molecules/SearchBar';
 import { SortBar } from '@/components/molecules/SortBar';
 import { Featured } from '@/components/molecules/sections/Featured';
 import downloadsJson from '@/data/downloads.json';
+import { useArchitectureDetect } from '@/hooks/useArchitectureDetect';
 import { useBrowserDetect } from '@/hooks/useBrowserDetect';
 import { useFilters } from '@/hooks/useFilters';
 import { useSearch } from '@/hooks/useSearch';
@@ -15,7 +16,12 @@ import { BROWSER_LABELS, ENGINE_LABELS } from '@/lib/browser';
 import { parseDownloads, type AppData } from '@/lib/downloads';
 import { isFeatured } from '@/lib/featured';
 import { useFavorites, useRecentlyViewed, useSearchHistory } from '@/lib/hooks';
-import { PLATFORM_LABELS, detectPlatform, type Platform } from '@/lib/os';
+import {
+  ARCH_LABELS,
+  PLATFORM_LABELS,
+  detectPlatform,
+  type Platform,
+} from '@/lib/os';
 import { useEffect, useMemo, useState } from 'react';
 
 const ALL_APPS = parseDownloads(
@@ -33,6 +39,7 @@ const formatToday = (): string =>
 const HomePage = () => {
   const [today, setToday] = useState('');
   const [platform, setPlatform] = useState<Platform>('unknown');
+  const architecture = useArchitectureDetect();
   const { isFavorite } = useFavorites();
   const { slugs: recentSlugs } = useRecentlyViewed();
   const {
@@ -127,6 +134,7 @@ const HomePage = () => {
           {platform !== 'unknown'
             ? `Detected: ${PLATFORM_LABELS[platform]}`
             : 'Browse all apps'}
+          {architecture !== 'unknown' && ` \u00b7 ${ARCH_LABELS[architecture]}`}
           {browserInfo.browser !== 'unknown' &&
             ` \u00b7 ${BROWSER_LABELS[browserInfo.browser]} \u00b7 ${ENGINE_LABELS[browserInfo.engine]}`}
         </p>

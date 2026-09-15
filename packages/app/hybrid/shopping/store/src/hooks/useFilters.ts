@@ -1,9 +1,19 @@
 'use client';
 
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import type { AppData } from '@/lib/downloads';
 import type { Platform } from '@/lib/os';
+import { storage } from '@/lib/storage';
 import type { SortKey, ViewMode } from '@/lib/types';
+
+const VIEW_MODE_KEY = 'view-mode';
+const DEFAULT_VIEW_MODE: ViewMode = 'grid';
+const VALID_VIEW_MODES = new Set<ViewMode>(['grid', 'gallery', 'list']);
+
+const getInitialViewMode = (): ViewMode => {
+  const stored = storage.get<ViewMode>(VIEW_MODE_KEY, DEFAULT_VIEW_MODE);
+  return VALID_VIEW_MODES.has(stored) ? stored : DEFAULT_VIEW_MODE;
+};
 
 interface UseFiltersOptions {
   apps: AppData[];
@@ -60,8 +70,12 @@ export const useFilters = ({
   const [activeCategory, setActiveCategory] = useState<string>('all');
   const [sortKey, setSortKey] = useState<SortKey>('name');
   const [sortAsc, setSortAsc] = useState(true);
-  const [viewMode, setViewMode] = useState<ViewMode>('grid');
+  const [viewMode, setViewMode] = useState<ViewMode>(getInitialViewMode);
   const [showFavoritesOnly, setShowFavoritesOnly] = useState(false);
+
+  useEffect(() => {
+    storage.set(VIEW_MODE_KEY, viewMode);
+  }, [viewMode]);
 
   const categories = useMemo(
     () => [...new Set(apps.map((a) => a.primaryCategory))].sort(),

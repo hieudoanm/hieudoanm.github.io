@@ -1,5 +1,6 @@
-import type { DownloadOption } from './downloads';
-import { getDownloadFormat } from './downloads';
+import type { AppData, DownloadOption } from './downloads';
+import { getDownloadFormat, getRecommendedDownload } from './downloads';
+import type { Platform } from './os';
 
 export type Browser =
   | 'chrome'
@@ -145,3 +146,11 @@ export const recommendExtension = (
   downloads.find(
     (download) => getDownloadFormat(download) === BROWSER_TO_FORMAT[browser]
   );
+
+export const recommendDownload = (
+  app: AppData,
+  platform: Platform,
+  browser: Browser
+): DownloadOption | undefined =>
+  recommendExtension(app.downloads, browser) ??
+  getRecommendedDownload(app, platform);

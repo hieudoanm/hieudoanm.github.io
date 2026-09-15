@@ -4,39 +4,29 @@ import { join } from 'node:path';
 const DATA_DIR = join(__dirname, '..');
 const CSV_DIR = join(DATA_DIR, 'csv');
 const JSON_PATH = join(DATA_DIR, 'downloads.json');
-const COLUMNS = [
-  'section',
-  'sectionId',
-  'appId',
-  'label',
-  'primaryCategory',
-  'secondaryCategory',
-  'icon',
-  'version',
-  'lastUpdated',
-  'fileSize',
-  'href',
-  'releasesAction',
-  'releasesUrl',
-  'aabUrl',
-  'apkUrl',
-  'dmgUrl',
-  'appImageUrl',
-  'debUrl',
-  'rpmUrl',
-  'msiUrl',
-  'exeUrl',
-  'crxV2Url',
-  'xpiV2Url',
-  'zipV2Url',
-  'crxV3Url',
-  'xpiV3Url',
-  'zipV3Url',
-] as const;
+const APPS_FILE = join(CSV_DIR, 'apps.csv');
+const LINKS_FILE = join(CSV_DIR, 'links.csv');
 
-type Column = (typeof COLUMNS)[number];
-
-type CsvRow = Record<Column, string>;
+const LINK_LABELS: Record<string, string> = {
+  aab: '.aab',
+  apk: '.apk',
+  dmg: '.dmg',
+  appimage: '.AppImage',
+  deb: '.deb',
+  rpm: '.x86_64.rpm',
+  msi: '.msi',
+  exe: '.exe',
+  'crx-v2': 'v2.crx',
+  'xpi-v2': 'v2.xpi',
+  'zip-v2': 'v2.zip',
+  'crx-v3': 'v3.crx',
+  'xpi-v3': 'v3.xpi',
+  'zip-v3': 'v3.zip',
+  'darwin-amd64': 'macOS (Intel)',
+  'darwin-arm64': 'macOS (Apple Silicon)',
+  'linux-amd64': 'Linux x64',
+  'linux-arm64': 'Linux ARM64',
+};
 
 type DownloadAction = {
   label: string;
@@ -96,67 +86,47 @@ const parseCsvRows = (csv: string): string[][] => {
   return rows;
 };
 
-const readCsvRows = (): CsvRow[] => {
-  const files = ['hybrid.csv', 'native.csv', 'headless.csv', 'extensions.csv'];
-  const rows: CsvRow[] = [];
-  for (const file of files) {
-    const csv = readFileSync(join(CSV_DIR, file), 'utf8')
-      .replaceAll('\r\n', '\n')
-      .replaceAll('\r', '');
-    const [header, ...body] = parseCsvRows(csv);
-    for (const values of body) {
-      if (!values.some((value) => value.trim() !== '')) continue;
-      const row = {} as CsvRow;
-      for (const column of COLUMNS) row[column] = '';
-      header.forEach((column, index) => {
-        row[column as Column] = values[index] ?? '';
-      });
-      rows.push(row);
-    }
+const readCsv = (file: string): Record<string, string>[] => {
+  const csv = readFileSync(file, 'utf8')
+    .replaceAll('\r\n', '\n')
+    .replaceAll('\r', '');
+  const [header, ...body] = parseCsvRows(csv);
+  const rows: Record<string, string>[] = [];
+  for (const values of body) {
+    if (!values.some((value) => value.trim() !== '')) continue;
+    const row: Record<string, string> = {};
+    header.forEach((column, index) => {
+      row[column as string] = (values[index] ?? '').trim();
+    });
+    rows.push(row);
   }
   return rows;
 };
 
-const toActions = (row: CsvRow): DownloadAction[] => {
-  const actions: DownloadAction[] = [];
+const toJson = (
+  apps: Record<string, string>[],
+  links: Record<string, string>[]
+): DownloadSection[] => {
+  const byAppId = (appId: string) =>
+    links.filter((link) => link.appId === appId && link.url !== '');
 
-  const platformMap: [string, string][] = [
-    ['.aab', row.aabUrl],
-    ['.apk', row.apkUrl],
-    ['.dmg', row.dmgUrl],
-    ['.AppImage', row.appImageUrl],
-    ['.deb', row.debUrl],
-    ['.x86_64.rpm', row.rpmUrl],
-    ['.msi', row.msiUrl],
-    ['.exe', row.exeUrl],
-    ['v2.crx', row.crxV2Url],
-    ['v2.xpi', row.xpiV2Url],
-    ['v2.zip', row.zipV2Url],
-    ['v3.crx', row.crxV3Url],
-    ['v3.xpi', row.xpiV3Url],
-    ['v3.zip', row.zipV3Url],
-  ];
-
-  for (const [label, url] of platformMap) {
-    if (url.trim() !== '') {
-      actions.push({ label, url: url.trim() });
+  const toActions = (appId: string, releasesUrl: string): DownloadAction[] => {
+    const actions = byAppId(appId).map((link) => ({
+      label: LINK_LABELS[link.type] ?? link.type,
+      url: link.url,
+    }));
+    if (actions.length === 0 && releasesUrl !== '') {
+      actions.push({ label: 'View Releases', url: releasesUrl });
     }
-  }
+    return actions;
+  };
 
-  if (actions.length === 0 && row.releasesUrl.trim() !== '') {
-    actions.push({ label: 'View Releases', url: row.releasesUrl.trim() });
-  }
-
-  return actions;
-};
-
-const toJson = (rows: CsvRow[]): DownloadSection[] => {
   const sections: DownloadSection[] = [];
-  for (const row of rows) {
-    if (row.label === '') continue;
+  for (const row of apps) {
+    if (row.app === '') continue;
     const section = sections.find((entry) => entry.id === row.sectionId);
     const item: DownloadItem = {
-      label: row.label,
+      label: row.app,
       primaryCategory: row.primaryCategory,
       secondaryCategory: row.secondaryCategory,
       icon: row.icon,
@@ -164,7 +134,7 @@ const toJson = (rows: CsvRow[]): DownloadSection[] => {
       version: row.version || '1.0.0',
       lastUpdated: row.lastUpdated || '',
       fileSize: row.fileSize || '',
-      actions: toActions(row),
+      actions: toActions(row.appId, row.releasesUrl),
     };
     if (section) {
       section.items.push(item);
@@ -182,7 +152,8 @@ const toJson = (rows: CsvRow[]): DownloadSection[] => {
 export const main = (): void => {
   writeFileSync(
     JSON_PATH,
-    JSON.stringify(toJson(readCsvRows()), null, 2) + '\n'
+    JSON.stringify(toJson(readCsv(APPS_FILE), readCsv(LINKS_FILE)), null, 2) +
+      '\n'
   );
   console.log(`Wrote ${JSON_PATH}`);
 };

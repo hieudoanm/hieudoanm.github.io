@@ -2,6 +2,63 @@ import { renderHook, act } from '@testing-library/react';
 import { matchesQuery, useFilters } from '../useFilters';
 import type { AppData } from '@/lib/downloads';
 
+const VIEW_MODE_KEY = 'store:view-mode';
+
+describe('useFilters viewMode persistence', () => {
+  it('defaults to grid when nothing is stored', () => {
+    const { result } = renderHook(() =>
+      useFilters({
+        apps: mockApps,
+        deferredQuery: '',
+        filtering: false,
+        isFavorite: () => false,
+      })
+    );
+    expect(result.current.viewMode).toBe('grid');
+  });
+
+  it('reads stored viewMode from localStorage', () => {
+    localStorage.setItem(VIEW_MODE_KEY, JSON.stringify('list'));
+    const { result } = renderHook(() =>
+      useFilters({
+        apps: mockApps,
+        deferredQuery: '',
+        filtering: false,
+        isFavorite: () => false,
+      })
+    );
+    expect(result.current.viewMode).toBe('list');
+  });
+
+  it('ignores invalid stored viewMode', () => {
+    localStorage.setItem(VIEW_MODE_KEY, JSON.stringify('bogus'));
+    const { result } = renderHook(() =>
+      useFilters({
+        apps: mockApps,
+        deferredQuery: '',
+        filtering: false,
+        isFavorite: () => false,
+      })
+    );
+    expect(result.current.viewMode).toBe('grid');
+  });
+
+  it('persists viewMode changes to localStorage', () => {
+    const { result } = renderHook(() =>
+      useFilters({
+        apps: mockApps,
+        deferredQuery: '',
+        filtering: false,
+        isFavorite: () => false,
+      })
+    );
+    act(() => {
+      result.current.setViewMode('gallery');
+    });
+    expect(localStorage.getItem(VIEW_MODE_KEY)).toBe(JSON.stringify('gallery'));
+  });
+});
+
 const mockApps: AppData[] = [
   {
     slug: 'app-a',

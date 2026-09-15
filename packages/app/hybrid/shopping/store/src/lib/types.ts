@@ -8,30 +8,19 @@ export interface SectionMeta {
 }
 
 export const SECTION_META: Record<string, SectionMeta> = {
-  hybrid: {
-    label: 'Hybrid',
+  extension: {
+    label: 'Extensions',
     description:
-      'Cross-platform apps for macOS, Windows, Linux, Android, and iOS',
-  },
-  android: {
-    label: 'Android',
-    description: 'Native apps built for Android',
-  },
-  macos: {
-    label: 'macOS',
-    description: 'Native apps built for macOS',
-  },
-  cli: {
-    label: 'CLIs',
-    description: 'Command-line tools and binaries',
+      'Browser extensions for Browsers or Native Apps (Android and macOS)',
   },
   headless: {
     label: 'Headless',
     description: 'Headless services and in-memory data apps',
   },
-  extension: {
-    label: 'Extensions',
-    description: 'Browser extensions for Chrome, Firefox, and Edge',
+  hybrid: {
+    label: 'Hybrid',
+    description:
+      'Cross-platform apps for macOS, Windows, Linux, Android, and iOS',
   },
 };
 

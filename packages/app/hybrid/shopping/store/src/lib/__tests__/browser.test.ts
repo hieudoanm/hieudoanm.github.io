@@ -2,8 +2,10 @@ import {
   detectBrowser,
   BROWSER_LABELS,
   ENGINE_LABELS,
+  recommendDownload,
   recommendExtension,
 } from '../browser';
+import type { AppData, DownloadOption } from '../downloads';
 
 describe('detectBrowser', () => {
   it('detects Chrome', () => {
@@ -160,5 +162,46 @@ describe('recommendExtension', () => {
       'firefox'
     );
     expect(rec).toBeUndefined();
+  });
+});
+
+describe('recommendDownload', () => {
+  const downloads: DownloadOption[] = [
+    {
+      platform: 'macos',
+      label: 'v2.crx',
+      url: 'https://example.com/releases/snapshot-v2.crx',
+    },
+    {
+      platform: 'windows',
+      label: 'v2.xpi',
+      url: 'https://example.com/releases/snapshot-v2.xpi',
+    },
+  ];
+
+  const makeApp = (section: AppData['section']): AppData => ({
+    slug: 'demo',
+    label: 'Demo',
+    primaryCategory: 'Utility',
+    secondaryCategory: 'General',
+    section,
+    icon: 'PiPackage',
+    href: '/app/demo/',
+    platforms: ['macos', 'windows'],
+    downloads,
+    version: '1.0.0',
+    lastUpdated: '2024-01-01',
+    fileSize: '10 MB',
+    screenshots: [],
+  });
+
+  it('uses browser format for any section', () => {
+    const rec = recommendDownload(makeApp('hybrid'), 'windows', 'chrome');
+    expect(rec?.label).toBe('v2.crx');
+  });
+
+  it('falls back to platform when no browser match exists', () => {
+    const rec = recommendDownload(makeApp('hybrid'), 'windows', 'firefox');
+    expect(rec?.platform).toBe('windows');
   });
 });

@@ -1,7 +1,81 @@
 [
   {
-    "id": "apps-hybrid",
-    "label": "Apps (Hybrid)",
+    "id": "extensions",
+    "label": "Extensions",
+    "items": [
+      {
+        "label": "BrowserX",
+        "primaryCategory": "Extensions",
+        "secondaryCategory": "Utilities",
+        "icon": "PiTabs",
+        "href": "https://hieudoanm.github.io/free/browserx",
+        "version": "latest",
+        "lastUpdated": "2026-09-09",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": "v2.crx",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-browserx-latest/browserx-v2.crx"
+          },
+          {
+            "label": "v2.xpi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-browserx-latest/browserx-v2.xpi"
+          },
+          {
+            "label": "v2.zip",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-browserx-latest/browserx-v2.zip"
+          },
+          {
+            "label": "v3.crx",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-browserx-latest/browserx-v3.crx"
+          },
+          {
+            "label": "v3.xpi",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-browserx-latest/browserx-v3.xpi"
+          },
+          {
+            "label": "v3.zip",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-browserx-latest/browserx-v3.zip"
+          }
+        ]
+      },
+      {
+        "label": "AndroidX",
+        "primaryCategory": "Extensions",
+        "secondaryCategory": "Utilities",
+        "icon": "PiAndroidLogo",
+        "href": "https://hieudoanm.github.io/free/androidx",
+        "version": "latest",
+        "lastUpdated": "2026-09-15",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".apk",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-android-androidx-latest/app-release.apk"
+          }
+        ]
+      },
+      {
+        "label": "MacOSX",
+        "primaryCategory": "Extensions",
+        "secondaryCategory": "Utilities",
+        "icon": "PiGauge",
+        "href": "https://hieudoanm.github.io/free/macosx",
+        "version": "latest",
+        "lastUpdated": "2026-08-29",
+        "fileSize": "",
+        "actions": [
+          {
+            "label": ".dmg",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-macos-macosx-latest/MacOSX-0.0.1.dmg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hybrid",
+    "label": "Hybrid",
     "items": [
       {
         "label": "Menu",
@@ -1502,50 +1576,6 @@
     ]
   },
   {
-    "id": "apps-native-android",
-    "label": "Apps (Android)",
-    "items": [
-      {
-        "label": "AndroidX",
-        "primaryCategory": "Utilities",
-        "secondaryCategory": "",
-        "icon": "PiAndroidLogo",
-        "href": "https://hieudoanm.github.io/free/androidx",
-        "version": "latest",
-        "lastUpdated": "2026-09-15",
-        "fileSize": "",
-        "actions": [
-          {
-            "label": ".apk",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-android-androidx-latest/app-release.apk"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "apps-native-macos",
-    "label": "Apps (macOS)",
-    "items": [
-      {
-        "label": "MacOSX",
-        "primaryCategory": "Utilities",
-        "secondaryCategory": "",
-        "icon": "PiGauge",
-        "href": "https://hieudoanm.github.io/free/macosx",
-        "version": "latest",
-        "lastUpdated": "2026-08-29",
-        "fileSize": "",
-        "actions": [
-          {
-            "label": ".dmg",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-macos-macosx-latest/MacOSX-0.0.1.dmg"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "id": "headless",
     "label": "Headless",
     "items": [
@@ -1560,8 +1590,20 @@
         "fileSize": "",
         "actions": [
           {
-            "label": "View Releases",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-backbone-latest"
+            "label": "macOS (Intel)",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-backbone-latest/app-headless-backbone-backbone-darwin-amd64"
+          },
+          {
+            "label": "macOS (Apple Silicon)",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-backbone-latest/app-headless-backbone-backbone-darwin-arm64"
+          },
+          {
+            "label": "Linux x64",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-backbone-latest/app-headless-backbone-backbone-linux-amd64"
+          },
+          {
+            "label": "Linux ARM64",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-backbone-latest/app-headless-backbone-backbone-linux-arm64"
           }
         ]
       },
@@ -1576,8 +1618,20 @@
         "fileSize": "",
         "actions": [
           {
-            "label": "View Releases",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-browserverless-latest"
+            "label": "macOS (Intel)",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-browserverless-latest/app-headless-browserverless-browserverless-darwin-amd64"
+          },
+          {
+            "label": "macOS (Apple Silicon)",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-browserverless-latest/app-headless-browserverless-browserverless-darwin-arm64"
+          },
+          {
+            "label": "Linux x64",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-browserverless-latest/app-headless-browserverless-browserverless-linux-amd64"
+          },
+          {
+            "label": "Linux ARM64",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-browserverless-latest/app-headless-browserverless-browserverless-linux-arm64"
           }
         ]
       },
@@ -1592,8 +1646,20 @@
         "fileSize": "",
         "actions": [
           {
-            "label": "View Releases",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-jack-latest"
+            "label": "macOS (Intel)",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-jack-latest/app-headless-jack-jack-darwin-amd64"
+          },
+          {
+            "label": "macOS (Apple Silicon)",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-jack-latest/app-headless-jack-jack-darwin-arm64"
+          },
+          {
+            "label": "Linux x64",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-jack-latest/app-headless-jack-jack-linux-amd64"
+          },
+          {
+            "label": "Linux ARM64",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-jack-latest/app-headless-jack-jack-linux-arm64"
           }
         ]
       },
@@ -1608,8 +1674,20 @@
         "fileSize": "",
         "actions": [
           {
-            "label": "View Releases",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-kevin-latest"
+            "label": "macOS (Intel)",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-kevin-latest/app-headless-kevin-kevin-darwin-amd64"
+          },
+          {
+            "label": "macOS (Apple Silicon)",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-kevin-latest/app-headless-kevin-kevin-darwin-arm64"
+          },
+          {
+            "label": "Linux x64",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-kevin-latest/app-headless-kevin-kevin-linux-amd64"
+          },
+          {
+            "label": "Linux ARM64",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-kevin-latest/app-headless-kevin-kevin-linux-arm64"
           }
         ]
       },
@@ -1624,50 +1702,20 @@
         "fileSize": "",
         "actions": [
           {
-            "label": "View Releases",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-landify-latest"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "extensions",
-    "label": "Extensions",
-    "items": [
-      {
-        "label": "BrowserX",
-        "primaryCategory": "Extensions",
-        "secondaryCategory": "",
-        "icon": "PiTabs",
-        "href": "https://hieudoanm.github.io/free/browserx",
-        "version": "latest",
-        "lastUpdated": "2026-09-09",
-        "fileSize": "",
-        "actions": [
-          {
-            "label": "v2.crx",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-browserx-latest/browserx-v2.crx"
+            "label": "macOS (Intel)",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-landify-latest/app-headless-landify-landify-darwin-amd64"
           },
           {
-            "label": "v2.xpi",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-browserx-latest/browserx-v2.xpi"
+            "label": "macOS (Apple Silicon)",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-landify-latest/app-headless-landify-landify-darwin-arm64"
           },
           {
-            "label": "v2.zip",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-browserx-latest/browserx-v2.zip"
+            "label": "Linux x64",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-landify-latest/app-headless-landify-landify-linux-amd64"
           },
           {
-            "label": "v3.crx",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-browserx-latest/browserx-v3.crx"
-          },
-          {
-            "label": "v3.xpi",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-browserx-latest/browserx-v3.xpi"
-          },
-          {
-            "label": "v3.zip",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-browserx-latest/browserx-v3.zip"
+            "label": "Linux ARM64",
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-landify-latest/app-headless-landify-landify-linux-arm64"
           }
         ]
       }

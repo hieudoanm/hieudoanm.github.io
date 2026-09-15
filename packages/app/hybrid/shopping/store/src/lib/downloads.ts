@@ -7,12 +7,14 @@ export interface DownloadOption {
   recommended?: boolean;
 }
 
+type Section = 'hybrid' | 'headless' | 'extension';
+
 export interface AppData {
   slug: string;
   label: string;
   primaryCategory: string;
   secondaryCategory: string;
-  section: 'hybrid' | 'android' | 'macos' | 'headless' | 'extension';
+  section: Section;
   icon: string;
   href: string;
   platforms: Platform[];
@@ -25,7 +27,7 @@ export interface AppData {
 
 const parsePlatformFromUrl = (url: string): Platform => {
   if (/android|apk|aab/.test(url)) return 'android';
-  if (/macos|dmg/.test(url)) return 'macos';
+  if (/macos|darwin|dmg/.test(url)) return 'macos';
   if (/ios/.test(url)) return 'ios';
   if (/windows|msi|exe/.test(url)) return 'windows';
   if (/linux|appimage|deb/.test(url)) return 'linux';
@@ -35,10 +37,10 @@ const parsePlatformFromUrl = (url: string): Platform => {
 const parsePlatformFromLabel = (label: string): Platform => {
   const lower = label.toLowerCase();
   if (/apk|aab/.test(lower)) return 'android';
-  if (/dmg/.test(lower)) return 'macos';
+  if (/macos|darwin|dmg/.test(lower)) return 'macos';
   if (/ipa/.test(lower)) return 'ios';
   if (/msi|exe/.test(lower)) return 'windows';
-  if (/appimage|deb|rpm/.test(lower)) return 'linux';
+  if (/linux|appimage|deb|rpm/.test(lower)) return 'linux';
   return 'unknown';
 };
 
@@ -46,13 +48,17 @@ const parsePlatformFromSection = (
   sectionId: string,
   _url: string
 ): Platform[] => {
-  if (sectionId === 'apps-hybrid')
+  if (sectionId === 'hybrid')
     return ['macos', 'windows', 'linux', 'android', 'ios'];
-  if (sectionId === 'apps-native-android') return ['android'];
-  if (sectionId === 'apps-native-macos') return ['macos'];
   if (sectionId === 'headless') return ['macos', 'linux', 'windows'];
   if (sectionId === 'extensions') return ['macos', 'windows', 'linux'];
   return ['unknown'];
+};
+
+const parseSection = (id: string): Section => {
+  if (id === 'hybrid' || id === 'apps-hybrid') return 'hybrid';
+  if (id === 'headless') return 'headless';
+  return 'extension';
 };
 
 const parseSlug = (label: string): string =>
@@ -120,20 +126,12 @@ export const parseDownloads = (sections: RawSection[]): AppData[] => {
         url: action.url,
       }));
 
-      const sectionKey = section.id.startsWith('apps-native-')
-        ? (section.id.replace('apps-native-', '') as 'android' | 'macos')
-        : section.id === 'apps-hybrid'
-          ? 'hybrid'
-          : section.id === 'headless'
-            ? 'headless'
-            : 'extension';
-
       apps.push({
         slug: parseSlugFromItem(item.label, item.href),
         label: item.label,
         primaryCategory: item.primaryCategory,
         secondaryCategory: item.secondaryCategory,
-        section: sectionKey,
+        section: parseSection(section.id),
         icon: item.icon,
         href: item.href,
         platforms,

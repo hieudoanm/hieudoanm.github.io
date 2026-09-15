@@ -7,8 +7,8 @@ import type { AppData, RawSection } from '../downloads';
 
 const mockSections: RawSection[] = [
   {
-    id: 'apps-hybrid',
-    label: 'Apps (Hybrid)',
+    id: 'hybrid',
+    label: 'Hybrid',
     items: [
       {
         label: 'Test App',
@@ -22,50 +22,6 @@ const mockSections: RawSection[] = [
         actions: [
           { label: '.dmg', url: 'https://example.com/test.dmg' },
           { label: '.apk', url: 'https://example.com/test.apk' },
-        ],
-      },
-    ],
-  },
-  {
-    id: 'apps-native-macos',
-    label: 'Apps (macOS)',
-    items: [
-      {
-        label: 'Native Mac App',
-        primaryCategory: 'Utilities',
-        secondaryCategory: 'System',
-        icon: 'PiGear',
-        href: 'https://github.com/test',
-        version: '1.0.0',
-        lastUpdated: '2025-01-01',
-        fileSize: '',
-        actions: [
-          {
-            label: '.dmg',
-            url: 'https://github.com/test/releases/download/v1/MacApp-1.0.dmg',
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: 'apps-native-android',
-    label: 'Apps (Android)',
-    items: [
-      {
-        label: 'Native Android App',
-        primaryCategory: 'Utilities',
-        secondaryCategory: 'System',
-        icon: 'PiGear',
-        href: 'https://github.com/test',
-        version: '1.0.0',
-        lastUpdated: '2025-01-01',
-        fileSize: '',
-        actions: [
-          {
-            label: '.apk',
-            url: 'https://github.com/test/releases/download/v1/app-release.apk',
-          },
         ],
       },
     ],
@@ -115,25 +71,21 @@ const mockSections: RawSection[] = [
 describe('parseDownloads', () => {
   it('parses all sections into flat app list', () => {
     const apps = parseDownloads(mockSections);
-    expect(apps).toHaveLength(5);
+    expect(apps).toHaveLength(3);
   });
 
   it('generates correct slugs', () => {
     const apps = parseDownloads(mockSections);
     expect(apps[0].slug).toBe('test-app');
-    expect(apps[1].slug).toBe('native-mac-app');
-    expect(apps[2].slug).toBe('native-android-app');
-    expect(apps[3].slug).toBe('cli-tool');
-    expect(apps[4].slug).toBe('browser-extension');
+    expect(apps[1].slug).toBe('cli-tool');
+    expect(apps[2].slug).toBe('browser-extension');
   });
 
   it('assigns correct section keys', () => {
     const apps = parseDownloads(mockSections);
     expect(apps[0].section).toBe('hybrid');
-    expect(apps[1].section).toBe('macos');
-    expect(apps[2].section).toBe('android');
-    expect(apps[3].section).toBe('headless');
-    expect(apps[4].section).toBe('extension');
+    expect(apps[1].section).toBe('headless');
+    expect(apps[2].section).toBe('extension');
   });
 
   it('detects platforms from section id for hybrid apps', () => {
@@ -145,20 +97,14 @@ describe('parseDownloads', () => {
     expect(apps[0].platforms).toContain('ios');
   });
 
-  it('detects platforms from section id for native apps', () => {
-    const apps = parseDownloads(mockSections);
-    expect(apps[1].platforms).toEqual(['macos']);
-    expect(apps[2].platforms).toEqual(['android']);
-  });
-
   it('detects platforms for headless section', () => {
     const apps = parseDownloads(mockSections);
-    expect(apps[3].platforms).toEqual(['macos', 'linux', 'windows']);
+    expect(apps[1].platforms).toEqual(['macos', 'linux', 'windows']);
   });
 
   it('detects platforms for extension section', () => {
     const apps = parseDownloads(mockSections);
-    expect(apps[4].platforms).toEqual(['macos', 'windows', 'linux']);
+    expect(apps[2].platforms).toEqual(['macos', 'windows', 'linux']);
   });
 
   it('parses download platforms from label extensions', () => {
@@ -168,22 +114,16 @@ describe('parseDownloads', () => {
     expect(hybrid.downloads[1].platform).toBe('android');
   });
 
-  it('parses download platforms from URL for native apps', () => {
-    const apps = parseDownloads(mockSections);
-    const macNative = apps[1];
-    expect(macNative.downloads[0].platform).toBe('macos');
-  });
-
   it('parses headless download platforms from labels', () => {
     const apps = parseDownloads(mockSections);
-    expect(apps[3].downloads[0].platform).toBe('macos');
-    expect(apps[3].downloads[1].platform).toBe('linux');
+    expect(apps[1].downloads[0].platform).toBe('macos');
+    expect(apps[1].downloads[1].platform).toBe('linux');
   });
 
   it('parses extension download platforms from labels', () => {
     const apps = parseDownloads(mockSections);
-    expect(apps[4].downloads[0].platform).toBe('windows');
-    expect(apps[4].downloads[1].platform).toBe('linux');
+    expect(apps[2].downloads[0].platform).toBe('windows');
+    expect(apps[2].downloads[1].platform).toBe('linux');
   });
 
   it('returns unknown platform for unrecognized section', () => {
@@ -214,7 +154,7 @@ describe('parseDownloads', () => {
   it('parses ios download from label', () => {
     const sections: RawSection[] = [
       {
-        id: 'apps-hybrid',
+        id: 'hybrid',
         label: 'Apps',
         items: [
           {
@@ -264,7 +204,7 @@ describe('parseDownloads', () => {
   it('returns unknown platform for unrecognized label', () => {
     const sections: RawSection[] = [
       {
-        id: 'apps-hybrid',
+        id: 'hybrid',
         label: 'Apps',
         items: [
           {
@@ -316,7 +256,7 @@ describe('parseDownloads', () => {
   it('handles slug with leading/trailing dashes', () => {
     const sections: RawSection[] = [
       {
-        id: 'apps-hybrid',
+        id: 'hybrid',
         label: 'Apps',
         items: [
           {
@@ -364,7 +304,7 @@ describe('parseDownloads', () => {
   it('parses real-world label format', () => {
     const sections: RawSection[] = [
       {
-        id: 'apps-hybrid',
+        id: 'hybrid',
         label: 'Apps',
         items: [
           {
