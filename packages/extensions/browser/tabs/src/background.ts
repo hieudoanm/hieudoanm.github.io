@@ -14,6 +14,7 @@ import {
   SHOPIFY_RESULT_ACTION,
   type ShopifyDetectionResult,
 } from './lib/shopify';
+import { stitchChunks, type SnapshotChunk } from './lib/snapshot';
 import {
   GET_SOUND_STATE_ACTION,
   SOUND_MUTE_ALL_ACTION,
@@ -24,7 +25,6 @@ import {
   toSoundTabInfo,
   type SoundState,
 } from './lib/sounds';
-import { stitchChunks, type SnapshotChunk } from './lib/snapshot';
 import { createLogger } from './utils/log';
 
 type BadgeAction = {
@@ -57,6 +57,23 @@ const SETTLE_EXTRA_MS = 80;
 const ADS_RULESET_ID = 'ruleset_block';
 
 const SNAP_ACTIONS = new Set(['captureView', 'captureFullPage']);
+const SNAP_PING = 'SNAP_PING';
+const CAPTURE_HARD_TIMEOUT_MS = 150_000;
+
+const withHardTimeout = <T>(
+  promise: Promise<T>,
+  ms: number,
+  label: string
+): Promise<T> =>
+  Promise.race([
+    promise,
+    new Promise<T>((_resolve, reject) =>
+      window.setTimeout(
+        () => reject(new Error(`Snapshot: ${label} timed out after ${ms} ms`)),
+        ms
+      )
+    ),
+  ]);
 
 const shopifyResults = new Map<number, ShopifyDetectionResult>();
 const contentAudibleTabs = new Set<number>();
@@ -95,12 +112,40 @@ if (typeof chrome.webRequest !== 'undefined') {
 registerNewTabRedirect();
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (message?.action === SNAP_PING) {
+    sendResponse({ pong: true, alarm: `${sender.tab?.url ?? 'no tab'}` });
+    return;
+  }
   if (SNAP_ACTIONS.has(message?.action)) {
-    void handleCapture(message as CaptureRequest)
-      .then((dataUrl) => sendResponse({ dataUrl }))
-      .catch((err: unknown) =>
-        sendResponse({ error: (err as Error).message || 'Capture failed' })
-      );
+    const request = message as CaptureRequest;
+    appLog.info('capture requested', {
+      action: request.action,
+      format: request.format,
+      quality: request.quality,
+      tabId: sender.tab?.id,
+      url: sender.tab?.url,
+    });
+    void withHardTimeout(
+      handleCapture(request),
+      CAPTURE_HARD_TIMEOUT_MS,
+      'capture'
+    )
+      .then((dataUrl) => {
+        appLog.info('capture succeeded', {
+          action: request.action,
+          dataUrlLength: dataUrl.length,
+        });
+        sendResponse({ dataUrl });
+      })
+      .catch((err: unknown) => {
+        const error = err as Error;
+        appLog.error('capture failed', {
+          action: request.action,
+          message: error?.message,
+          stack: error?.stack,
+        });
+        sendResponse({ error: error?.message || 'Capture failed' });
+      });
     return true;
   }
 
@@ -132,7 +177,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       playing,
       audibleTabs: contentAudibleTabs.size,
     });
-    void pushSoundState();
+    schedulePushSoundState();
     return;
   }
 
@@ -180,14 +225,24 @@ chrome.tabs.onRemoved.addListener((tabId) => {
   shopifyResults.delete(tabId);
   contentAudibleTabs.delete(tabId);
   void chrome.action.setBadgeText({ tabId, text: '' });
-  void pushSoundState();
+  schedulePushSoundState();
 });
 
 chrome.tabs.onUpdated.addListener((_tabId, changeInfo) => {
   if (changeInfo.audible !== undefined || changeInfo.mutedInfo !== undefined) {
-    void pushSoundState();
+    schedulePushSoundState();
   }
 });
+
+let soundPushTimer: number | undefined;
+
+const schedulePushSoundState = (): void => {
+  if (soundPushTimer !== undefined) return;
+  soundPushTimer = window.setTimeout(() => {
+    soundPushTimer = undefined;
+    void pushSoundState();
+  }, 300);
+};
 
 const applyClaudeBadge = (tabId: number, data: ClaudeLimitData): void => {
   if (!badgeAction) return;
@@ -261,11 +316,12 @@ const handleMuteAll = async (message: {
 }): Promise<SoundState> => {
   const muted = message.muted === true;
   const tabs = await queryTabs();
-  for (const tab of tabs) {
-    if (tab.id != null && (tab.mutedInfo?.muted ?? false) !== muted) {
-      await chrome.tabs.update(tab.id, { muted });
-    }
-  }
+  const updates = tabs
+    .filter(
+      (tab) => tab.id != null && (tab.mutedInfo?.muted ?? false) !== muted
+    )
+    .map((tab) => chrome.tabs.update(tab.id!, { muted }));
+  await Promise.all(updates);
   soundLog.info(`muteAll=${muted} tabs=${tabs.length}`);
   return collectSoundState();
 };
@@ -276,12 +332,12 @@ const handleMuteOthers = async (message: {
 }): Promise<SoundState> => {
   const keepId = message.tabId;
   const tabs = await queryTabs();
-  for (const tab of tabs) {
-    if (tab.id == null || tab.id === keepId) continue;
-    if (!tab.mutedInfo?.muted) {
-      await chrome.tabs.update(tab.id, { muted: true });
-    }
-  }
+  const updates = tabs
+    .filter(
+      (tab) => tab.id != null && tab.id !== keepId && !tab.mutedInfo?.muted
+    )
+    .map((tab) => chrome.tabs.update(tab.id!, { muted: true }));
+  await Promise.all(updates);
   soundLog.info(`muteOthers keep=${keepId} tabs=${tabs.length}`);
   return collectSoundState();
 };
@@ -387,6 +443,10 @@ const detectShopifyInPage = (): {
 
 const handleCaptureView = async (request: CaptureRequest): Promise<string> => {
   const captureOptions = buildCaptureOptions(request);
+  appLog.info('captureView options', {
+    format: captureOptions.format,
+    quality: captureOptions.quality,
+  });
   const dataUrl = await captureVisibleTab(captureOptions);
   if (request.format !== 'png' && request.format !== 'jpeg') {
     return reencode(dataUrl, request.format, request.quality ?? 92);
@@ -401,12 +461,26 @@ const handleCaptureFullPage = async (
   const layout = await sendToContent<LayoutInfo>(tabId, {
     action: `${SNAP}GET_LAYOUT`,
   });
-  if (!layout || layout.scrollHeight <= 0) {
+  if (!layout) {
+    throw new Error(
+      'Snapshot: content script did not respond (is the page fully loaded?)'
+    );
+  }
+  if (layout.scrollHeight <= 0) {
     throw new Error('Snapshot: no page to capture');
   }
 
   const dpr = layout.dpr || 1;
   const chunkCount = Math.ceil(layout.scrollHeight / layout.clientHeight);
+  appLog.info('full-page layout', {
+    tabId,
+    scrollHeight: layout.scrollHeight,
+    clientHeight: layout.clientHeight,
+    scrollY: layout.scrollY,
+    dpr,
+    chunkCount,
+  });
+
   const chunks: SnapshotChunk[] = [];
   let widthPx = 0;
 
@@ -427,11 +501,23 @@ const handleCaptureFullPage = async (
 
     const y = Math.round((scroll?.scrollY ?? target) * dpr);
     chunks.push({ dataUrl, y });
+    appLog.debug('full-page chunk captured', {
+      index: i,
+      target,
+      capturedY: scroll?.scrollY,
+      y,
+      dataUrlLength: dataUrl.length,
+    });
   }
 
   await sendToContent(tabId, { action: `${SNAP}SCROLL_TO`, y: 0 });
 
   const heightPx = Math.round(layout.scrollHeight * dpr);
+  appLog.info('full-page stitching', {
+    chunkCount: chunks.length,
+    widthPx,
+    heightPx,
+  });
   const stitched = await stitchChunks(chunks, widthPx, heightPx);
 
   if (request.format === 'png') {
@@ -464,7 +550,9 @@ const captureVisibleTab = (options: {
       options,
       (dataUrl) => {
         if (chrome.runtime.lastError) {
-          reject(new Error(chrome.runtime.lastError.message));
+          const message = chrome.runtime.lastError.message;
+          appLog.error('captureVisibleTab failed', { message, options });
+          reject(new Error(`Snapshot: ${message}`));
           return;
         }
         resolve(dataUrl);
@@ -475,6 +563,7 @@ const captureVisibleTab = (options: {
 const getActiveTabId = async (): Promise<number> => {
   const [tab] = await queryTabs({ active: true, currentWindow: true });
   if (!tab?.id) {
+    appLog.error('no active tab for capture');
     throw new Error('Snapshot: no active tab');
   }
   return tab.id;
@@ -487,6 +576,12 @@ const sendToContent = <T>(
   new Promise((resolve) => {
     chrome.tabs.sendMessage(tabId, message, (response) => {
       if (chrome.runtime.lastError) {
+        const lastError = chrome.runtime.lastError.message;
+        appLog.warn('sendToContent failed', {
+          tabId,
+          action: (message as { action?: string }).action,
+          lastError,
+        });
         resolve(undefined);
         return;
       }
@@ -498,6 +593,12 @@ const getBitmapSize = async (
   dataUrl: string
 ): Promise<{ width: number; height: number }> => {
   const response = await fetch(dataUrl);
+  if (!response.ok) {
+    appLog.error('getBitmapSize fetch failed', {
+      status: response.status,
+      statusText: response.statusText,
+    });
+  }
   const blob = await response.blob();
   const bitmap = await createImageBitmap(blob);
   return { width: bitmap.width, height: bitmap.height };

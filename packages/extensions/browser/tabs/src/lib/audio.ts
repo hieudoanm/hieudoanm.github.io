@@ -2,22 +2,15 @@ import { createLogger } from '../utils/log';
 
 export const SOUND_AUDIBLE_ACTION = 'SOUND_AUDIBLE';
 
-const SOUND_SWEEP_MS = 1000;
+// Low-frequency safety net; the event listeners below do the real work.
+const FALLBACK_SWEEP_MS = 5000;
+const MEDIA_SELECTOR = 'video,audio';
 
 const log = createLogger('Audio:');
 
 const isProducingAudio = (): boolean => {
-  const elements = document.querySelectorAll('video,audio');
-  log.debug('sweep', `media elements: ${elements.length}`);
-  for (const element of elements) {
-    const media = element as HTMLMediaElement;
-    log.debug('element', {
-      paused: media.paused,
-      ended: media.ended,
-      muted: media.muted,
-      volume: media.volume,
-      src: media.currentSrc || media.src,
-    });
+  const elements = document.querySelectorAll<HTMLMediaElement>(MEDIA_SELECTOR);
+  for (const media of elements) {
     if (!media.paused && !media.ended && !media.muted && media.volume > 0) {
       return true;
     }
@@ -46,9 +39,33 @@ const report = (playing: boolean): void => {
 };
 
 const sweep = (): void => {
-  const playing = isProducingAudio();
-  log.debug('sweep →', playing);
-  report(playing);
+  report(isProducingAudio());
+};
+
+const touchesMedia = (nodes: readonly Node[]): boolean => {
+  for (const node of nodes) {
+    if (
+      node instanceof Element &&
+      (node.matches(MEDIA_SELECTOR) || node.querySelector(MEDIA_SELECTOR))
+    ) {
+      return true;
+    }
+  }
+  return false;
+};
+
+const observeMedia = (): void => {
+  const observer = new MutationObserver((mutations) => {
+    for (const mutation of mutations) {
+      const added = Array.from(mutation.addedNodes);
+      const removed = Array.from(mutation.removedNodes);
+      if (touchesMedia(added) || touchesMedia(removed)) {
+        sweep();
+        return;
+      }
+    }
+  });
+  observer.observe(document, { childList: true, subtree: true });
 };
 
 export const registerAudioDetection = (): void => {
@@ -56,7 +73,12 @@ export const registerAudioDetection = (): void => {
     log.debug('skipping (not top frame)');
     return;
   }
-  log.info(`starting media sweep every ${SOUND_SWEEP_MS}ms`);
+  log.info('registering media play/pause listeners');
+  document.addEventListener('play', sweep, true);
+  document.addEventListener('pause', sweep, true);
+  document.addEventListener('ended', sweep, true);
+  document.addEventListener('volumechange', sweep, true);
+  observeMedia();
   sweep();
-  window.setInterval(sweep, SOUND_SWEEP_MS);
+  window.setInterval(sweep, FALLBACK_SWEEP_MS);
 };

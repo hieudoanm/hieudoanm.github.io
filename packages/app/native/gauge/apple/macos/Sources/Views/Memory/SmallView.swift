@@ -48,7 +48,7 @@ struct SmallView: View {
 
     private var header: some View {
         HStack {
-            Label("Gauge", systemImage: "gauge.with.dots.needle.50percent")
+            Label("Memory", systemImage: "gauge.with.dots.needle.50percent")
                 .font(.headline)
                 .accessibilityElement(children: .combine)
             Spacer()

@@ -8,6 +8,10 @@ public final class ClipboardStore: ObservableObject {
     public var maxItems: Int = 0
 
     private let storageURL: URL
+    private let saveQueue = DispatchQueue(label: "io.github.hieudoanm.Gauge.clipboard-save")
+    private var pendingSaveWork: DispatchWorkItem?
+
+    private static let saveDebounceInterval: TimeInterval = 0.15
 
     public init(directoryURL: URL? = nil) {
         let dir: URL
@@ -64,7 +68,28 @@ public final class ClipboardStore: ObservableObject {
         return items.filter { $0.content.localizedCaseInsensitiveContains(query) }
     }
 
+    /// Persists the current history asynchronously. Calls are coalesced so a
+    /// burst of edits performs a single write of the latest state, and the
+    /// (potentially large) JSON encode never blocks the main thread.
     private func save() {
+        let snapshot = items
+        let targetURL = storageURL
+        pendingSaveWork?.cancel()
+        let workItem = DispatchWorkItem {
+            let encoder = JSONEncoder()
+            encoder.dateEncodingStrategy = .iso8601
+            guard let data = try? encoder.encode(snapshot) else { return }
+            try? data.write(to: targetURL, options: .atomic)
+        }
+        pendingSaveWork = workItem
+        saveQueue.asyncAfter(deadline: .now() + Self.saveDebounceInterval, execute: workItem)
+    }
+
+    /// Writes any pending state synchronously; used on teardown so a debounced
+    /// save is not lost when the app exits.
+    public func flushPendingSave() {
+        pendingSaveWork?.cancel()
+        pendingSaveWork = nil
         let encoder = JSONEncoder()
         encoder.dateEncodingStrategy = .iso8601
         guard let data = try? encoder.encode(items) else { return }
@@ -76,5 +101,9 @@ public final class ClipboardStore: ObservableObject {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
         items = (try? decoder.decode([ClipboardItem].self, from: data)) ?? []
+    }
+
+    deinit {
+        flushPendingSave()
     }
 }

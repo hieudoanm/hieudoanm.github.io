@@ -2,13 +2,13 @@ import GaugeCore
 import SwiftUI
 
 struct MenuBarView: View {
-    @ObservedObject var clipboardViewModel: ClipboardViewModel
-    @ObservedObject var ipViewModel: IPViewModel
-    @ObservedObject var viewModel: MemoryViewModel
-    @ObservedObject var networkViewModel: NetworkViewModel
-    @ObservedObject var portsViewModel: PortsViewModel
-    @ObservedObject var appsViewModel: AppsViewModel
-    @ObservedObject var workspacesViewModel: WorkspacesViewModel
+    let clipboardViewModel: ClipboardViewModel
+    let ipViewModel: IPViewModel
+    let viewModel: MemoryViewModel
+    let networkViewModel: NetworkViewModel
+    let portsViewModel: PortsViewModel
+    let appsViewModel: AppsViewModel
+    let workspacesViewModel: WorkspacesViewModel
 
     private enum Tab: Hashable {
         case clipboard

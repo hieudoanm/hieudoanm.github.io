@@ -39,6 +39,7 @@
 │   │   ├── [snapshot.ts](./src/lib/snapshot.ts)
 │   │   └── [sounds.ts](./src/lib/sounds.ts)
 │   ├── utils/
+│   │   ├── [frame.ts](./src/utils/frame.ts)
 │   │   └── [log.ts](./src/utils/log.ts)
 │   ├── [background.ts](./src/background.ts)
 │   ├── [content.ts](./src/content.ts)
@@ -54,4 +55,4 @@
 └── [webpack.config.ts](./webpack.config.ts)
 ```
 
-9 directories, 42 files
+9 directories, 43 files

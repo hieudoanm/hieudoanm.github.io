@@ -1,4 +1,5 @@
 import { createLogger } from '../utils/log';
+import { onNextFrame } from '../utils/frame';
 
 export interface ClaudePeriod {
   used: number;
@@ -377,6 +378,17 @@ const applyPatch = (patch: PeriodPatch): void => {
 };
 
 let monitoring = false;
+let mountRetryScheduled = false;
+
+const scheduleMountRetry = (): void => {
+  if (mountRetryScheduled) return;
+  mountRetryScheduled = true;
+  onNextFrame(() => {
+    mountRetryScheduled = false;
+    if (document.getElementById(INDICATOR_ID)) return;
+    tryMount();
+  });
+};
 
 const startMonitoring = (): void => {
   if (monitoring) return;
@@ -389,9 +401,7 @@ const startMonitoring = (): void => {
       }
     ).WebKitMutationObserver;
   if (MutationObserverCtor) {
-    const observer = new MutationObserverCtor(() => {
-      if (!document.getElementById(INDICATOR_ID)) tryMount();
-    });
+    const observer = new MutationObserverCtor(scheduleMountRetry);
     observer.observe(document, { childList: true, subtree: true });
   }
   window.setTimeout(tryMount, 1000);

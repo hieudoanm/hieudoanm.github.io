@@ -1,5 +1,6 @@
 import CopyPlugin from 'copy-webpack-plugin';
 import path from 'node:path';
+import webpack from 'webpack';
 
 const isProduction = process.env.NODE_ENV === 'production';
 const mode = isProduction ? 'production' : 'development';
@@ -27,6 +28,10 @@ const versionHtmlPatterns = [
     transform: { transformer: stampBuildVersion, cache: false },
   },
 ];
+
+const definePlugin = new webpack.DefinePlugin({
+  'process.env.NODE_ENV': JSON.stringify(mode),
+});
 
 const baseConfig = {
   mode,
@@ -67,6 +72,7 @@ export default [
       clean: true,
     },
     plugins: [
+      definePlugin,
       new CopyPlugin({
         patterns: [
           {
@@ -96,6 +102,7 @@ export default [
       clean: true,
     },
     plugins: [
+      definePlugin,
       new CopyPlugin({
         patterns: [
           {

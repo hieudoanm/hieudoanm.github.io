@@ -142,6 +142,7 @@ struct ClipboardStoreTests {
             .appendingPathComponent("ClipperTests/persist-\(UUID().uuidString)")
         let s1 = ClipboardStore(directoryURL: dir)
         s1.add("persisted")
+        s1.flushPendingSave()
         let s2 = ClipboardStore(directoryURL: dir)
         #expect(s2.totalCount == 1)
         #expect(s2.items[0].content == "persisted")

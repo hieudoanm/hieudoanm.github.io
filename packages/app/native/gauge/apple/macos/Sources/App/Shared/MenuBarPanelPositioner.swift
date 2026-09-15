@@ -12,6 +12,7 @@ final class MenuBarPanelPositioner {
 
     private var observations: [NSObjectProtocol] = []
     private var isStarted = false
+    private var pendingRecenter: DispatchWorkItem?
 
     private init() {}
 
@@ -23,16 +24,42 @@ final class MenuBarPanelPositioner {
             forName: NSWindow.didBecomeKeyNotification,
             object: nil,
             queue: .main
-        ) { [weak self] _ in
-            Task { @MainActor in self?.recenter() }
+        ) { [weak self] notification in
+            Task { @MainActor in self?.windowNotification(notification) }
         })
         observations.append(center.addObserver(
             forName: NSWindow.didMoveNotification,
             object: nil,
             queue: .main
-        ) { [weak self] _ in
-            Task { @MainActor in self?.recenter() }
+        ) { [weak self] notification in
+            Task { @MainActor in self?.windowNotification(notification) }
         })
+    }
+
+    private func windowNotification(_ notification: Notification) {
+        // Only react to our own menu-bar panel, and skip work while it is hidden.
+        guard let window = notification.object as? NSWindow,
+              isMenuBarPanel(window),
+              window.isVisible else { return }
+        scheduleRecenter()
+    }
+
+    private func isMenuBarPanel(_ window: NSWindow) -> Bool {
+        // MenuBarExtra's `.window` style is backed by a floating panel; it is
+        // the only NSPanel this app owns. The Settings scene is a plain window.
+        guard window is NSPanel else { return false }
+        return true
+    }
+
+    /// Coalesces bursts of window events (any app moving a window fires
+    /// `didMove`) into a single recenter per run-loop turn.
+    private func scheduleRecenter() {
+        pendingRecenter?.cancel()
+        let workItem = DispatchWorkItem { [weak self] in
+            Task { @MainActor in self?.recenter() }
+        }
+        pendingRecenter = workItem
+        DispatchQueue.main.async(execute: workItem)
     }
 
     private func recenter() {

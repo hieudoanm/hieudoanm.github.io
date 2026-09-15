@@ -1,3 +1,5 @@
+import { onNextFrame } from '../utils/frame';
+
 export const CHESS_KEY = 'chessFocus';
 
 const HIDE_CLASSES = [
@@ -8,17 +10,23 @@ const HIDE_CLASSES = [
   'user-rating',
 ] as const;
 
-const hideElement = (className: string): void => {
-  const elements = document.getElementsByClassName(className);
-  for (const element of elements) {
-    (element as HTMLElement).style.display = 'none';
+const HIDE_SELECTOR = HIDE_CLASSES.map((className) => `.${className}`).join(
+  ', '
+);
+
+const hideRoots = (roots: readonly Element[]): void => {
+  for (const root of roots) {
+    if (root.matches(HIDE_SELECTOR)) {
+      (root as HTMLElement).style.display = 'none';
+    }
+    const matches = root.querySelectorAll<HTMLElement>(HIDE_SELECTOR);
+    for (const el of matches) el.style.display = 'none';
   }
 };
 
-const hideRatings = (): void => {
-  for (const className of HIDE_CLASSES) {
-    hideElement(className);
-  }
+const hideAll = (): void => {
+  const matches = document.querySelectorAll<HTMLElement>(HIDE_SELECTOR);
+  for (const el of matches) el.style.display = 'none';
 };
 
 const MutationObserverCtor =
@@ -27,24 +35,32 @@ const MutationObserverCtor =
     .WebKitMutationObserver;
 
 let observer: MutationObserver | null = null;
+let scheduledHide = false;
+const pendingRoots: Element[] = [];
+
+const scheduleHide = (mutations: MutationRecord[]): void => {
+  for (const mutation of mutations) {
+    for (const node of mutation.addedNodes) {
+      if (node instanceof Element) pendingRoots.push(node);
+    }
+  }
+  if (pendingRoots.length === 0) return;
+  if (scheduledHide) return;
+  scheduledHide = true;
+  onNextFrame(() => {
+    scheduledHide = false;
+    hideRoots(pendingRoots.splice(0));
+  });
+};
 
 const observe = (): void => {
   if (observer !== null || !MutationObserverCtor) return;
-  observer = new MutationObserverCtor((mutations: MutationRecord[]) => {
-    if (
-      mutations.some(
-        (mutation) =>
-          mutation.addedNodes.length > 0 || mutation.removedNodes.length > 0
-      )
-    ) {
-      hideRatings();
-    }
-  });
+  observer = new MutationObserverCtor(scheduleHide);
   observer.observe(document, { childList: true, subtree: true });
 };
 
 const start = (): void => {
-  hideRatings();
+  hideAll();
   observe();
 };
 

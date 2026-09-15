@@ -19,13 +19,26 @@ final class MemoryViewModel: ObservableObject {
     private let pressureMonitor = MemoryPressureMonitor()
     private let settingsStore: SettingsStore
     private var refreshTimer: Timer?
+    private var visibilityObservation: NSObjectProtocol?
+    private var isPanelVisible: Bool
 
     init(settingsStore: SettingsStore = SettingsStore()) {
         self.settingsStore = settingsStore
         self.refreshInterval = settingsStore.refreshInterval
         self.menuBarDisplay = settingsStore.menuBarDisplay
+        self.isPanelVisible = PanelVisibilityMonitor.shared.isPanelVisible
+
+        if case let .success(info) = systemMonitor.read() {
+            systemInfo = info
+        }
+
         refresh()
         startAutoRefresh()
+        visibilityObservation = PanelVisibilityMonitor.shared.observeVisibilityChange { [weak self] visible in
+            DispatchQueue.main.async {
+                self?.handleVisibilityChange(visible)
+            }
+        }
     }
 
     var memoryPercentText: String {
@@ -92,9 +105,6 @@ final class MemoryViewModel: ObservableObject {
         if case let .success(stats) = cpuMonitor.read() {
             cpuStats = stats
         }
-        if case let .success(info) = systemMonitor.read() {
-            systemInfo = info
-        }
         if case let .success(status) = pressureMonitor.read() {
             memoryPressure = status
         }
@@ -113,7 +123,7 @@ final class MemoryViewModel: ObservableObject {
     }
 
     private func startAutoRefresh() {
-        refreshTimer = Timer.scheduledTimer(withTimeInterval: refreshInterval, repeats: true) { [weak self] _ in
+        refreshTimer = Timer.scheduledTimer(withTimeInterval: effectiveInterval(), repeats: true) { [weak self] _ in
             self?.refresh()
         }
     }
@@ -123,8 +133,26 @@ final class MemoryViewModel: ObservableObject {
         startAutoRefresh()
     }
 
+    private func handleVisibilityChange(_ visible: Bool) {
+        isPanelVisible = visible
+        if visible {
+            refresh()
+        }
+        restartAutoRefresh()
+    }
+
+    /// While the panel is closed only the menu-bar label needs data, so the
+    /// ticker slows down (never faster than 2s, never slower than 5s) and
+    /// resumes the user-selected interval as soon as the panel opens.
+    private func effectiveInterval() -> TimeInterval {
+        isPanelVisible ? refreshInterval : max(min(refreshInterval * 2, 5), 2)
+    }
+
     deinit {
         refreshTimer?.invalidate()
+        if let visibilityObservation {
+            NotificationCenter.default.removeObserver(visibilityObservation)
+        }
     }
 }
 

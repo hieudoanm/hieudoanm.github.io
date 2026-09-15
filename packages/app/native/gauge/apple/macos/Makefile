@@ -10,7 +10,7 @@ CONTENTS_DIR := $(APP_DIR)/Contents
 MACOS_DIR := $(CONTENTS_DIR)/MacOS
 RESOURCES_DIR := $(CONTENTS_DIR)/Resources
 
-SWIFT_BUILD_DIR := .build/arm64-apple-macosx/release
+SWIFT_BUILD_DIR := .build/release
 BINARY := $(SWIFT_BUILD_DIR)/$(APP_NAME)
 
 DMG_NAME := $(APP_NAME)-$(VERSION).dmg

@@ -3,13 +3,13 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg: #0a0a0b;
-      --surface: #111114;
-      --border: #222228;
-      --accent: #47ffe8;
-      --accent2: #356bff;
-      --text: #e8e8ec;
-      --muted: #5a5a68;
+      --bg: #12090a;
+      --surface: #1a0d0e;
+      --border: #331416;
+      --accent: #D71921;
+      --accent2: #FFD700;
+      --text: #f0e6e6;
+      --muted: #6f5a5f;
       --danger: #ff4757;
       --radius: 8px;
     }
@@ -34,7 +34,7 @@
       position: absolute;
       top: -30px; right: -30px;
       width: 100px; height: 100px;
-      background: radial-gradient(circle, rgba(71,255,232,0.12) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(215,25,33,0.18) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -246,7 +246,7 @@
       font-size: 10px;
       pointer-events: none;
     }
-    .select-wrap select option { background: #1a1a20; }
+    .select-wrap select option { background: #241012; }
 
     .divider { height: 1px; background: var(--border); }
 
@@ -274,7 +274,7 @@
     .preview-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(10,10,11,0.6) 0%, transparent 50%);
+      background: linear-gradient(to top, rgba(18,9,10,0.6) 0%, transparent 50%);
       display: flex;
       align-items: flex-end;
       padding: 8px 10px;

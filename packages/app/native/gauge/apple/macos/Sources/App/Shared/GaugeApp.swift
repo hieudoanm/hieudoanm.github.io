@@ -63,9 +63,13 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     @MainActor
     static let menuBarPanelPositioner = MenuBarPanelPositioner.shared
 
+    @MainActor
+    static let panelVisibilityMonitor = PanelVisibilityMonitor.shared
+
     func applicationDidFinishLaunching(_ notification: Notification) {
         NSApp.setActivationPolicy(.accessory)
         Task { @MainActor in
+            Self.panelVisibilityMonitor.start()
             Self.networkViewModel.start()
             Self.portsViewModel.start()
             Self.menuBarPanelPositioner.start()

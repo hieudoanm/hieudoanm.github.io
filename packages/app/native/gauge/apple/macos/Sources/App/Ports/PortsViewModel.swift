@@ -19,6 +19,12 @@ final class PortsViewModel: ObservableObject {
     private let discovery: any PortDiscovering
     private let terminator: any ProcessTerminating
     private var refreshTask: Task<Void, Never>?
+    private var visibilityObservation: NSObjectProtocol?
+    private var isPanelVisible = false
+
+    /// `lsof` is expensive (two subprocess spawns per poll), so it is never
+    /// polled faster than this, and not at all while the panel is closed.
+    private static let pollingInterval: TimeInterval = 5
 
     init(
         settingsStore: SettingsStore,
@@ -28,10 +34,23 @@ final class PortsViewModel: ObservableObject {
         self.settingsStore = settingsStore
         self.discovery = discovery
         self.terminator = terminator
+        self.isPanelVisible = PanelVisibilityMonitor.shared.isPanelVisible
+        self.visibilityObservation = PanelVisibilityMonitor.shared.observeVisibilityChange { [weak self] visible in
+            Task { @MainActor in self?.handleVisibilityChange(visible) }
+        }
     }
 
     deinit {
         refreshTask?.cancel()
+        if let visibilityObservation {
+            NotificationCenter.default.removeObserver(visibilityObservation)
+        }
+    }
+
+    private func handleVisibilityChange(_ visible: Bool) {
+        isPanelVisible = visible
+        guard visible else { return }
+        Task { await refresh() }
     }
 
     var listeningCount: Int {
@@ -52,8 +71,10 @@ final class PortsViewModel: ObservableObject {
         guard refreshTask == nil else { return }
         refreshTask = Task { @MainActor [weak self] in
             while let self, !Task.isCancelled {
-                await self.refresh()
-                try? await Task.sleep(for: .seconds(self.settingsStore.refreshInterval))
+                if self.isPanelVisible {
+                    await self.refresh()
+                }
+                try? await Task.sleep(for: .seconds(Self.pollingInterval))
             }
         }
     }

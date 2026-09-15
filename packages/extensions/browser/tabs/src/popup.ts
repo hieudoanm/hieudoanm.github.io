@@ -420,6 +420,8 @@ claudeUsage?.addEventListener('change', () => {
   chrome.storage.sync.set({ [CLAUDE_KEY]: claudeUsage.checked });
 });
 
+let soundPanelActive = false;
+
 const activateTab = (tabId: string): void => {
   tabButtons.forEach((btn) => {
     const active = btn.dataset.tab === tabId;
@@ -429,6 +431,12 @@ const activateTab = (tabId: string): void => {
   panes.forEach((pane) => {
     pane.classList.toggle('active', pane.id === `pane-${tabId}`);
   });
+  soundPanelActive = tabId === 'sound';
+  if (soundPanelActive) {
+    startSoundPolling();
+  } else {
+    stopSoundPolling();
+  }
 };
 
 tabButtons.forEach((btn) => {
@@ -494,10 +502,39 @@ const setBusy = (busy: boolean): void => {
   captureFullBtn.disabled = busy;
 };
 
+const SNAP_PING = 'SNAP_PING';
+const CAPTURE_VIEW_TIMEOUT_MS = 20_000;
+const CAPTURE_FULL_TIMEOUT_MS = 150_000;
+const PING_TIMEOUT_MS = 2_000;
+
+const withTimeout = <T>(
+  promise: Promise<T>,
+  ms: number
+): Promise<T | undefined> =>
+  Promise.race([
+    promise,
+    new Promise<undefined>((resolve) =>
+      window.setTimeout(() => resolve(undefined), ms)
+    ),
+  ]);
+
+const pingBackground = (): Promise<boolean> =>
+  withTimeout(
+    chrome.runtime.sendMessage({ action: SNAP_PING }),
+    PING_TIMEOUT_MS
+  )
+    .then((reply) => (reply as { pong?: boolean } | undefined)?.pong === true)
+    .catch((): false => {
+      log.warn('background ping failed');
+      return false;
+    });
+
 const capture = async (mode: 'view' | 'full'): Promise<void> => {
   if (isBusy) return;
   const format = formatSelect.value;
   const quality = format === 'png' ? undefined : 92;
+
+  log.info('capture starting', { mode, format, quality });
 
   setBusy(true);
   setStatus(mode === 'full' ? 'Capturing full page...' : 'Capturing view...');
@@ -505,14 +542,44 @@ const capture = async (mode: 'view' | 'full'): Promise<void> => {
   lastDataUrl = null;
 
   try {
-    const response = await chrome.runtime.sendMessage({
-      action: mode === 'full' ? 'captureFullPage' : 'captureView',
-      format,
-      quality,
+    const timeoutMs =
+      mode === 'full' ? CAPTURE_FULL_TIMEOUT_MS : CAPTURE_VIEW_TIMEOUT_MS;
+    let response: { dataUrl?: string; error?: string } | undefined;
+    try {
+      response = await withTimeout(
+        chrome.runtime.sendMessage({
+          action: mode === 'full' ? 'captureFullPage' : 'captureView',
+          format,
+          quality,
+        }),
+        timeoutMs
+      );
+    } catch (err: unknown) {
+      const reason = (err as Error)?.message || String(err);
+      log.error('capture sendMessage rejected', { mode, reason });
+      setStatus(`Capture failed: ${reason}`, 'err');
+      return;
+    }
+
+    log.info('capture reply received', {
+      mode,
+      hasDataUrl: typeof response?.dataUrl === 'string',
+      error: response?.error,
     });
 
     if (!response?.dataUrl) {
-      throw new Error(response?.error || 'Capture failed.');
+      if (response?.error) {
+        log.error('capture returned an error', { mode, error: response.error });
+        setStatus(`Capture failed: ${response.error}`, 'err');
+        return;
+      }
+      const backgroundAlive = await pingBackground();
+      const detail = backgroundAlive
+        ? 'background got the request but never replied (inspect the service worker console)'
+        : 'extension background did not respond — reload the extension and retry';
+      log.error('capture got no response', { mode, backgroundAlive });
+      setStatus(`Capture failed: ${detail}`, 'err');
+      return;
     }
 
     const dataUrl = response.dataUrl as string;
@@ -531,8 +598,6 @@ const capture = async (mode: 'view' | 'full'): Promise<void> => {
     if (autoDownload?.checked) {
       triggerDownload(dataUrl, lastFilename);
     }
-  } catch (err: unknown) {
-    setStatus((err as Error).message || 'Capture failed.', 'err');
   } finally {
     setBusy(false);
   }
@@ -684,7 +749,7 @@ document.addEventListener('visibilitychange', () => {
   soundLog.debug('visibility change →', document.visibilityState);
   if (document.visibilityState === 'hidden') {
     stopSoundPolling();
-  } else {
+  } else if (soundPanelActive) {
     startSoundPolling();
   }
 });
@@ -705,6 +770,8 @@ chrome.runtime.onMessage.addListener((message) => {
   applySoundReply(message.state);
 });
 
-startSoundPolling();
+// Polling starts only when the Sound tab is opened (see `activateTab`); the
+// push-based `SOUND_STATE_CHANGED_ACTION` keeps the list live whenever the
+// popup is open.
 soundLog.debug('popup ready, visibility', document.visibilityState);
 sendSoundAction({ action: GET_SOUND_STATE_ACTION });

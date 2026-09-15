@@ -191,16 +191,29 @@ const primeWhenProbeReady = (): void => {
   });
 };
 
+const isWebProtocol = (): boolean => {
+  const protocol = location.protocol;
+  return protocol === 'http:' || protocol === 'https:';
+};
+
+let lastVisibilityReportAt = 0;
+const VISIBILITY_REPORT_MIN_MS = 2000;
+
 const bindReportTriggers = (): void => {
   window.addEventListener('load', () => {
     window.setTimeout(primeAndReport, 600);
   });
   document.addEventListener('visibilitychange', () => {
-    if (!document.hidden) primeAndReport();
+    if (document.hidden) return;
+    const now = Date.now();
+    if (now - lastVisibilityReportAt < VISIBILITY_REPORT_MIN_MS) return;
+    lastVisibilityReportAt = now;
+    primeAndReport();
   });
 };
 
 export const registerShopifyDetection = (): void => {
+  if (!isWebProtocol()) return;
   injectWhenProbeReady();
   primeWhenProbeReady();
   bindReportTriggers();

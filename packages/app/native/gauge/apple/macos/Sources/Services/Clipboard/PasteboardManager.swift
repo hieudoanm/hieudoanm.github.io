@@ -23,5 +23,8 @@ final class PasteboardManager {
     func copyToClipboard(_ content: String) {
         pasteboard.clearContents()
         pasteboard.setString(content, forType: .string)
+        // Ignore our own writes so the poller doesn't re-import what the app
+        // itself just put on the clipboard (self-copy feedback loop).
+        lastChangeCount = pasteboard.changeCount
     }
 }

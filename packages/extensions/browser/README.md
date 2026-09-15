@@ -14,9 +14,9 @@
 
 ## Extensions
 
-| No  | Group | Extension          |
-| --- | ----- | ------------------ |
-| 1   | Tabs  | [tabs][tabs]       |
+| No  | Group | Extension    |
+| --- | ----- | ------------ |
+| 1   | Tabs  | [tabs][tabs] |
 
 [tabs]: https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/extensions/browser/tabs
 

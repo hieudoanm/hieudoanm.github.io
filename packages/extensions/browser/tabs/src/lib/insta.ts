@@ -22,12 +22,9 @@ chrome.storage.onChanged.addListener((changes, area) => {
 
 let lastGestureAt = 0;
 
-const isInstagramPage = (): boolean => {
+const isInstagramHostname = (): boolean => {
   const hostname = location.hostname;
-  const isInstagram =
-    hostname === 'instagram.com' || hostname.endsWith('.instagram.com');
-  log.debug(`hostname="${hostname}" isInstagram=${isInstagram}`);
-  return isInstagram;
+  return hostname === 'instagram.com' || hostname.endsWith('.instagram.com');
 };
 
 const collectImageSources = (target: Element): string[] => {
@@ -70,16 +67,16 @@ const openInNewTabs = (sources: string[]): void => {
 };
 
 export const registerInstaGesture = (): void => {
+  if (!isInstagramHostname()) {
+    log.debug('not on Instagram, skipping gesture registration');
+    return;
+  }
   log.debug('registering listeners');
 
   const handleRightButtonDown = (event: MouseEvent): void => {
     if (event.button !== 2 || !event.shiftKey) return;
     if (!gestureEnabled) {
       log.debug('gesture disabled, ignoring');
-      return;
-    }
-    if (!isInstagramPage()) {
-      log.debug('not on Instagram, ignoring');
       return;
     }
 
