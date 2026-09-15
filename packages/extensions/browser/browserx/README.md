@@ -1,4 +1,4 @@
-# Tabs - Tabs Extension
+# BrowserX - Browser Extension
 
 Redirect every new tab to the hieudoanm home page, block distracting sites and
 ads, keep GitHub routing external links to new tabs, detect Shopify stores,

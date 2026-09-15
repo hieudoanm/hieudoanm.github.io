@@ -1668,38 +1668,38 @@
     "label": "Extensions (Browser)",
     "items": [
       {
-        "label": "Tabs",
+        "label": "BrowserX",
         "primaryCategory": "Productivity",
         "secondaryCategory": "",
         "icon": "PiTabs",
-        "href": "https://hieudoanm.github.io/free/tabs",
+        "href": "https://hieudoanm.github.io/free/browserx",
         "version": "latest",
         "lastUpdated": "2026-09-09",
         "fileSize": "",
         "actions": [
           {
             "label": "v2.crx",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-tabs-latest/tabs-v2.crx"
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-browserx-latest/browserx-v2.crx"
           },
           {
             "label": "v2.xpi",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-tabs-latest/tabs-v2.xpi"
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-browserx-latest/browserx-v2.xpi"
           },
           {
             "label": "v2.zip",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-tabs-latest/tabs-v2.zip"
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-browserx-latest/browserx-v2.zip"
           },
           {
             "label": "v3.crx",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-tabs-latest/tabs-v3.crx"
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-browserx-latest/browserx-v3.crx"
           },
           {
             "label": "v3.xpi",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-tabs-latest/tabs-v3.xpi"
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-browserx-latest/browserx-v3.xpi"
           },
           {
             "label": "v3.zip",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-tabs-latest/tabs-v3.zip"
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-browserx-latest/browserx-v3.zip"
           }
         ]
       }

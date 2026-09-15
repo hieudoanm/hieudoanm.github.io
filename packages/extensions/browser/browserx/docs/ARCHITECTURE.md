@@ -59,6 +59,77 @@ public/
 docs/               # Architecture, roadmap, contributing, packaging, downloads
 ```
 
+### Extension Scaffold Reference
+
+The generic scaffold this project is generated from — the template layout,
+script roles, and manifest templates below stay valid across any extension in
+the browser package:
+
+```txt
+extension/
+├── public/
+│   ├── manifest.json
+│   ├── popup.html
+│   ├── options.html
+│   └── icons/
+│       ├── 16x16.png
+│       ├── 48x48.png
+│       └── 128x128.png
+│
+├── src/
+│   ├── background.ts
+│   ├── content.ts
+│   ├── devtools.ts
+│   ├── inject.ts
+│   ├── options.ts
+│   ├── popup.ts
+│   │
+│   ├── styles/
+│   │   ├── popup.css
+│   │   ├── options.css
+│   │   └── content.css
+│   │
+│   ├── lib/
+│   │   ├── storage.ts
+│   │   ├── messaging.ts
+│   │   ├── tabs.ts
+│   │   └── utils.ts
+│   │
+│   ├── components/
+│   └── types/
+│
+├── package.json
+├── tsconfig.json
+├── webpack.config.ts
+└── README.md
+```
+
+**Script roles**
+
+- `src/background.ts`: handles background events, browser API lifecycles, and
+  maintains long-running orchestrations (e.g. cross-origin requests, tab
+  notifications, persistent states).
+- `src/content.ts`: runs in the context of specific web pages (shares DOM
+  access), executes content scraping, acts as DOM observers, and interacts with
+  page structures.
+- `src/devtools.ts`: integrates customized panels, sidebars, or inspector
+  panels into the browser's Developer Tools.
+- `src/inject.ts`: embedded directly in the webpage runtime to access
+  page-level variables and functions content scripts cannot ordinarily reach.
+- `src/options.ts`: coordinates configuration values, settings state, and
+  preferences on the extension's Options page.
+- `src/popup.ts`: logic driving the interactive toolbar dropdown menu shown on
+  clicking the extension's icon.
+- `src/styles/`: stylesheets tailored to each display view (`popup.css`,
+  `options.css`, `content.css`).
+- `src/lib/`: reusable low-level wrappers abstracting platform actions:
+  `storage.ts` (local/synced settings), `messaging.ts` (background↔content
+  messaging), `tabs.ts` (query/modify/create tabs), `utils.ts` (generic
+  string/DOM/array utilities).
+- `src/components/`: reusable component views used by the popup or options
+  interfaces.
+- `src/types/`: ambient types, namespaces, and TypeScript definitions.
+
 ## Build Pipeline
 
 ```txt
@@ -159,6 +230,46 @@ directory.
 | Content script | `content.js`, `run_at: document_start`                                          | `content.js`, `run_at: document_start`                                                                |
 | Background     | `background.scripts` + `persistent: false`                                      | `background.service_worker`                                                                           |
 | Network ads    | `webRequest` + `webRequestBlocking` listener                                    | static DNR ruleset `rules.json`                                                                       |
+
+### Manifest V2 (template)
+
+```json
+{
+  "manifest_version": 2,
+  "name": "Name of the extension",
+  "version": "1.0.0",
+  "description": "Description of the extension",
+  "icons": {
+    "48": "icons/48x48.png",
+    "128": "icons/128x128.png"
+  },
+  "permissions": ["tabs", "<all_urls>"],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "icons/48x48.png"
+  }
+}
+```
+
+### Manifest V3 (template)
+
+```json
+{
+  "manifest_version": 3,
+  "name": "Name of the extension",
+  "version": "1.0.0",
+  "description": "Description of the extension",
+  "icons": {
+    "48": "icons/48x48.png",
+    "128": "icons/128x128.png"
+  },
+  "permissions": ["scripting", "activeTab"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icons/48x48.png"
+  }
+}
+```
 
 ## New-Tab Redirect Strategy
 

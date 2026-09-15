@@ -1,4 +1,4 @@
-# Tabs - redirect new tabs to the hieudoanm home page and capture the current view or the full scrolling page as PNG/JPEG/WebP, copy or download.
+# BrowserX - redirect new tabs to the hieudoanm home page and capture the current view or the full scrolling page as PNG/JPEG/WebP, copy or download
 
 ## Documentation
 
@@ -10,7 +10,7 @@ Reference docs live in `docs/`:
 | `docs/ROADMAP.md`      | Phased feature roadmap with progress tracking       |
 | `docs/CONTRIBUTING.md` | Setup, dev commands, coding and testing conventions |
 | `docs/PACKAGING.md`    | Packaging and store-submission checklist            |
-| `docs/DOWNLOADS.md`    | Download links per browser                          |
+| `docs/DOWNLOADS.md`    | Download links and supported browsers               |
 
 ## Key Conventions
 

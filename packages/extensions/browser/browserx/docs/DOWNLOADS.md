@@ -1,4 +1,4 @@
-# Tabs
+# BrowserX
 
 > Redirect every new tab to your home page, block distracting sites and ads, capture the current view or the full page, open external links from GitHub pages in new tabs, open every photo of an Instagram post on Shift + right-click, detect Shopify stores as you browse, track Claude.ai API rate-limit usage, and control tab sound — in one extension.
 
@@ -10,7 +10,7 @@
 
 ## Latest release
 
-- **Version:** `0.0.1` — tag `extensions-browser-tabs-latest`.
+- **Version:** `0.0.1` — tag `extensions-browser-browserx-latest`.
 - **What's new:** see the [ROADMAP](ROADMAP) and [CONTRIBUTING](CONTRIBUTING).
 
 ---
@@ -30,12 +30,12 @@ Pick the file that matches your browser and manifest version.
 | 5   | V2       | `.zip` | [Download][download-zip-v2] |
 | 6   | V3       | `.zip` | [Download][download-zip-v3] |
 
-[download-crx-v2]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-tabs-latest/tabs-v2.crx
-[download-crx-v3]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-tabs-latest/tabs-v3.crx
-[download-xpi-v2]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-tabs-latest/tabs-v2.xpi
-[download-xpi-v3]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-tabs-latest/tabs-v3.xpi
-[download-zip-v2]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-tabs-latest/tabs-v2.zip
-[download-zip-v3]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-tabs-latest/tabs-v3.zip
+[download-crx-v2]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-browserx-latest/tabs-v2.crx
+[download-crx-v3]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-browserx-latest/tabs-v3.crx
+[download-xpi-v2]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-browserx-latest/tabs-v2.xpi
+[download-xpi-v3]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-browserx-latest/tabs-v3.xpi
+[download-zip-v2]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-browserx-latest/tabs-v2.zip
+[download-zip-v3]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-browserx-latest/tabs-v3.zip
 
 ### Installation by browser
 
@@ -49,12 +49,35 @@ Pick the file that matches your browser and manifest version.
 - Firefox temporarily ignores signing for debugging; the `.xpi` from the
   release is signed for permanent use.
 
+### Supported browsers
+
+| No  | Ext   | Engine               | Browser                                           |
+| --- | ----- | -------------------- | ------------------------------------------------- |
+| 01  | `crx` | [Chromium][chromium] | [Chrome](https://www.google.com/chrome/)          |
+| 02  | `crx` | [Chromium][chromium] | [Microsoft Edge](https://www.microsoft.com/edge/) |
+| 03  | `crx` | [Chromium][chromium] | [Brave](https://brave.com/)                       |
+| 04  | `crx` | [Chromium][chromium] | [Opera](https://www.opera.com/)                   |
+| 05  | `crx` | [Chromium][chromium] | [Vivaldi](https://vivaldi.com/)                   |
+| 06  | `crx` | [Chromium][chromium] | [Arc](https://arc.net/)                           |
+| 07  | `xpi` | [Gecko][gecko]       | [Firefox](https://www.mozilla.org/firefox/)       |
+| 08  | `xpi` | [Gecko][gecko]       | [Tor Browser](https://www.torproject.org/)        |
+| 09  | `xpi` | [Gecko][gecko]       | [Zed Browser](https://zed.dev/)                   |
+| 10  |       | [WebKit][webkit]     | [Safari](https://www.apple.com/safari/)           |
+
+[chromium]: https://www.chromium.org/
+[gecko]: https://developer.mozilla.org/en-US/docs/Glossary/Gecko
+[webkit]: https://webkit.org/
+
+Chromium browsers run the MV3 build, Gecko browsers the MV2 build, and Safari
+(WebKit) is not currently published. See [ARCHITECTURE](ARCHITECTURE) for how
+the MV2/MV3 builds are produced.
+
 ### Checksums
 
 > 🛡️ **Verify your download.** Every asset ships with a SHA-256 digest. See
 > [SHA256SUMS.txt][checksums].
 
-[checksums]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-tabs-latest/SHA256SUMS.txt
+[checksums]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/extensions-browser-browserx-latest/SHA256SUMS.txt
 
 ### Build from Source
 
@@ -62,7 +85,7 @@ Prefer to build it yourself? Clone, install, and build in three steps:
 
 ```bash
 git clone https://github.com/hieudoanm/hieudoanm.github.io.git
-cd packages/extensions/browser/tabs
+cd packages/extensions/browser/browserx
 pnpm install
 pnpm build
 ```
@@ -196,7 +219,7 @@ machine.
 
 ## First run
 
-- Pin Tabs to the toolbar.
+- Pin BrowserX to the toolbar.
 - Open a new tab — it lands on your home page (toggle it off in the popup if
   you prefer the browser default).
 - Visit a distracting site — the focus wall appears (toggleable from the popup).

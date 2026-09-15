@@ -1,17 +1,17 @@
-# Tabs — Packaging Checklist
+# BrowserX — Packaging Checklist
 
-Checklist for shipping Tabs to users as a loadable extension: MV2/MV3
+Checklist for shipping BrowserX to users as a loadable extension: MV2/MV3
 artifact builds, store submission (Chrome Web Store, Edge Add-ons, Mozilla
 AMO), and the `web-ext` lint gate.
 
-App: `tabs`, version 0.0.1. Manifest IDs:
+App: `browserx`, version 0.0.1. Manifest IDs:
 `tabs-extension@hieudoanm.github.io` (Gecko).
 
 ## Common
 
 - [ ] Bump `version` in `package.json` and both `public/manifest/*/manifest.json`
       in sync
-- [ ] Run `pnpm build --filter=@hieudoanm.github.io/tabs` and confirm
+- [ ] Run `pnpm build --filter=@hieudoanm.github.io/browserx` and confirm
       `dist/v2` and `dist/v3` both emit `background.js`, `content.js`,
       `popup.js`, `popup.html`, and `manifest.json`
 - [ ] Run `make lint` (web-ext) on both `dist/v2` and `dist/v3` — resolve all
@@ -29,8 +29,8 @@ App: `tabs`, version 0.0.1. Manifest IDs:
       `--pack-extension` (skips gracefully when Chrome is absent)
 - [ ] `download/README.md` copied alongside artifacts by `make build`
 - [ ] Release assets uploaded under the tag
-      `extensions-browser-tabs-latest` with the naming scheme
-      `tabs-v{2|3}.{crx,xpi,zip}`
+      `extensions-browser-browserx-latest` with the naming scheme
+      `browserx-v{2|3}.{crx,xpi,zip}`
 
 ## Chrome Web Store (MV3)
 
@@ -67,7 +67,7 @@ App: `tabs`, version 0.0.1. Manifest IDs:
 
 ## Release Automation
 
-- [ ] Tag a release `extensions-browser-tabs-<version>` on GitHub
+- [ ] Tag a release `extensions-browser-browserx-<version>` on GitHub
 - [ ] Attach `download/v2/*` and `download/v3/*` artifacts to the release
 - [ ] Keep the rolling `-latest` tag pointed at the newest artifacts so store
       download links (see [DOWNLOADS](DOWNLOADS)) stay current

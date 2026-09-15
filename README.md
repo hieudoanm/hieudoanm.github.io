@@ -37,9 +37,9 @@
 
 ### Browser Extensions (1)
 
-| No  | Platform | Category  | Name | Free              | Releases                  |
-| --- | -------- | --------- | ---- | ----------------- | ------------------------- |
-| 3   | Browser  | Extension | Tabs | [Free][free-tabs] | [Releases][releases-tabs] |
+| No  | Platform | Category  | Name     | Free                  | Releases                      |
+| --- | -------- | --------- | -------- | --------------------- | ----------------------------- |
+| 3   | Browser  | Extension | BrowserX | [Free][free-browserx] | [Releases][releases-browserx] |
 
 ---
 
@@ -194,7 +194,7 @@
 <!-- Free -->
 
 [free-block]: https://hieudoanm.github.io/free/block/
-[free-tabs]: https://hieudoanm.github.io/free/tabs/
+[free-browserx]: https://hieudoanm.github.io/free/browserx/
 [free-menu]: https://hieudoanm.github.io/free/menu/
 [free-pos]: https://hieudoanm.github.io/free/pos/
 [free-api]: https://hieudoanm.github.io/free/api/
@@ -283,4 +283,4 @@
 [releases-backbone]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-backbone-latest
 [releases-kevin]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-kevin-latest
 [releases-landify]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-landify-latest
-[releases-tabs]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/extensions-browser-tabs-latest
+[releases-browserx]: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/extensions-browser-browserx-latest

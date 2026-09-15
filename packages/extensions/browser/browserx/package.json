@@ -1,8 +1,8 @@
 {
-  "name": "@hieudoanm.github.io/tabs",
+  "name": "@hieudoanm.github.io/browserx",
   "version": "0.0.1",
   "private": true,
-  "description": "Tabs Extension - redirect new tabs to the hieudoanm home page, capture the current view or the full scrolling page, and block distracting sites and ads.",
+  "description": "Browser Extension - redirect new tabs to the hieudoanm home page, capture the current view or the full scrolling page, and block distracting sites and ads.",
   "main": "dist/background.js",
   "repository": {
     "type": "git",
@@ -51,7 +51,7 @@
     "webpack-cli": "7.2.3"
   },
   "keywords": [
-    "tabs",
+    "browserx",
     "new-tab",
     "redirect",
     "snapshot",

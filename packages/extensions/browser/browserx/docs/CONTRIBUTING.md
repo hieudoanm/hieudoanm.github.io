@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for contributing to **Tabs**, a cross-browser extension that redirects
+Thanks for contributing to **BrowserX**, a cross-browser extension that redirects
 every new tab to the hieudoanm home page, blocks distracting sites with an
 offline focus wall, hides ads and tracking requests, routes external links from
 GitHub pages into new tabs, detects Shopify stores as you browse, tracks
@@ -21,18 +21,18 @@ Manifest V3 builds.
 3. **Build this extension**:
 
    ```bash
-   pnpm build --filter=@hieudoanm.github.io/tabs
+   pnpm build --filter=@hieudoanm.github.io/browserx
    ```
 
 ## Development Commands
 
 | Task    | Command                                                   |
 | ------- | --------------------------------------------------------- |
-| Build   | `pnpm build --filter=@hieudoanm.github.io/tabs`           |
-| Lint    | `pnpm lint --filter=@hieudoanm.github.io/tabs`            |
-| Format  | `pnpm format --filter=@hieudoanm.github.io/tabs`          |
+| Build   | `pnpm build --filter=@hieudoanm.github.io/browserx`       |
+| Lint    | `pnpm lint --filter=@hieudoanm.github.io/browserx`        |
+| Format  | `pnpm format --filter=@hieudoanm.github.io/browserx`      |
 | Web-ext | `pnpm web-ext lint --source-dir dist/v3` (also `dist/v2`) |
-| Clean   | `pnpm clean --filter=@hieudoanm.github.io/tabs`           |
+| Clean   | `pnpm clean --filter=@hieudoanm.github.io/browserx`       |
 
 `pnpm build` runs clean → lint → format → webpack → `make build` (zip/xpi/crx).
 Run lint and format before pushing — CI enforces them.
@@ -103,7 +103,7 @@ every change.
    `src/lib/newtab.ts`; users can override it per-install from the popup's New
    Tab tab (stored in `storage.sync` as `newTabTargetUrl`), and the background
    falls back to the default whenever the stored value is empty or invalid.
-10. Prefix debug logs with `[Tabs]` and keep them minimal, and prefix errors
+10. Prefix debug logs with `[BrowserX]` and keep them minimal, and prefix errors
     with `Block:` / `BlockAds:` / `Snapshot:` consistently; the Insta gesture,
     GitHub routing, Shopify detection, Chess focus, Claude usage, and Sound
     debug logs use `Insta:`, `GitHub:`, `Shopify:`, `Chess:`, `Claude:`, and
@@ -208,8 +208,8 @@ quality gates are:
 
 ## Before You Push
 
-1. `pnpm lint --filter=@hieudoanm.github.io/tabs`
-2. `pnpm format --filter=@hieudoanm.github.io/tabs`
-3. `pnpm build --filter=@hieudoanm.github.io/tabs`
+1. `pnpm lint --filter=@hieudoanm.github.io/browserx`
+2. `pnpm format --filter=@hieudoanm.github.io/browserx`
+3. `pnpm build --filter=@hieudoanm.github.io/browserx`
 4. `make lint` (web-ext) against `dist/v2` and `dist/v3`
 5. Smoke-test the manual matrix above

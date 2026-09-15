@@ -1,5 +1,5 @@
 {
-  "name": "Tabs",
+  "name": "BrowserX",
   "version": "0.0.1",
   "description": "Redirect new tabs to the hieudoanm home page, capture the current view or the full scrolling page, block distracting sites and ads, open external links from GitHub pages in new tabs, detect Shopify stores as you browse, hide ratings and overlays on Chess.com, track Claude.ai API rate-limit usage, and control tab sound: mute or unmute any tab, mute all, or mute everything except the active tab.",
   "author": "Hieu Doan",
@@ -12,7 +12,7 @@
   },
   "browser_specific_settings": {
     "gecko": {
-      "id": "tabs-extension@hieudoanm.github.io"
+      "id": "browserx-extension@hieudoanm.github.io"
     }
   },
   "homepage_url": "https://hieudoanm.github.io",
@@ -23,30 +23,19 @@
     "downloads",
     "storage",
     "scripting",
-    "declarativeNetRequest",
-    "declarativeNetRequestFeedback"
-  ],
-  "host_permissions": [
+    "webRequest",
+    "webRequestBlocking",
     "<all_urls>"
   ],
-  "declarative_net_request": {
-    "rule_resources": [
-      {
-        "id": "ruleset_block",
-        "enabled": true,
-        "path": "rules.json"
-      }
-    ]
-  },
   "background": {
-    "service_worker": "background.js",
     "scripts": [
       "background.js"
-    ]
+    ],
+    "persistent": false
   },
-  "action": {
+  "browser_action": {
     "default_popup": "popup.html",
-    "default_title": "Tabs",
+    "default_title": "BrowserX",
     "default_icon": {
       "16": "icons/16x16.png",
       "32": "icons/32x32.png",
@@ -65,5 +54,5 @@
       "run_at": "document_start"
     }
   ],
-  "manifest_version": 3
+  "manifest_version": 2
 }
