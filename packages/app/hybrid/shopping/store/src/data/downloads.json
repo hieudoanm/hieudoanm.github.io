@@ -1544,34 +1544,18 @@
     "label": "Apps (macOS)",
     "items": [
       {
-        "label": "Brewery",
-        "primaryCategory": "Utilities",
-        "secondaryCategory": "",
-        "icon": "PiBeerStein",
-        "href": "https://hieudoanm.github.io/free/brewery",
-        "version": "latest",
-        "lastUpdated": "2026-08-29",
-        "fileSize": "",
-        "actions": [
-          {
-            "label": ".dmg",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-brewery-latest/Brewery.dmg"
-          }
-        ]
-      },
-      {
-        "label": "Gauge",
+        "label": "MacOSX",
         "primaryCategory": "Utilities",
         "secondaryCategory": "",
         "icon": "PiGauge",
-        "href": "https://hieudoanm.github.io/free/gauge",
+        "href": "https://hieudoanm.github.io/free/macosx",
         "version": "latest",
         "lastUpdated": "2026-08-29",
         "fileSize": "",
         "actions": [
           {
             "label": ".dmg",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-gauge-latest/Gauge.dmg"
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-macos-macosx-latest/MacOSX-0.0.1.dmg"
           }
         ]
       }

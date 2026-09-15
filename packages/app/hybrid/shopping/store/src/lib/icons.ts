@@ -1,7 +1,6 @@
 import type { IconType } from 'react-icons';
 import {
   PiAtom,
-  PiBeerStein,
   PiBooks,
   PiBrain,
   PiBrowser,
@@ -72,7 +71,6 @@ export const ICON_MAP: Record<string, IconType> = {
   PiChat,
   PiAtom,
   PiCrown,
-  PiBeerStein,
   PiGameController,
   PiDatabase,
   PiGlobeHemisphereWest,
