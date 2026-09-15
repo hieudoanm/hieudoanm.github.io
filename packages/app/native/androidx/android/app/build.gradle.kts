@@ -59,9 +59,6 @@ android {
 }
 
 dependencies {
-    implementation(project(":block"))
-    implementation(project(":nfc"))
-
     val composeBom = platform("androidx.compose:compose-bom:2026.08.00")
     implementation(composeBom)
     implementation("androidx.compose.ui:ui")
@@ -77,6 +74,18 @@ dependencies {
 
     val lifecycleVersion = "2.11.0"
     implementation("androidx.lifecycle:lifecycle-runtime-compose:$lifecycleVersion")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycleVersion")
+
+    val navigationComposeVersion = "2.10.0"
+    implementation("androidx.navigation:navigation-compose:$navigationComposeVersion")
+
+    val roomVersion = "2.8.4"
+    implementation("androidx.room:room-runtime:$roomVersion")
+    implementation("androidx.room:room-ktx:$roomVersion")
+    ksp("androidx.room:room-compiler:$roomVersion")
+
+    val datastoreVersion = "1.2.1"
+    implementation("androidx.datastore:datastore-preferences:$datastoreVersion")
 
     val hiltVersion = "2.60.1"
     implementation("com.google.dagger:hilt-android:$hiltVersion")
@@ -88,7 +97,12 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     testImplementation("org.jetbrains.kotlin:kotlin-test")
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.11.0")
+    testImplementation("app.cash.turbine:turbine:1.2.1")
+    testImplementation("io.mockk:mockk:1.14.11")
+    testImplementation("androidx.arch.core:core-testing:2.2.0")
+    testImplementation("androidx.room:room-testing:2.8.4")
     testImplementation("androidx.test:core-ktx:1.7.0")
     testImplementation("org.robolectric:robolectric:4.16.1")
     testImplementation("androidx.compose.ui:ui-test-junit4")
+    testImplementation("androidx.navigation:navigation-testing:2.10.0")
 }

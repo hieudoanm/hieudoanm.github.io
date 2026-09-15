@@ -34,13 +34,14 @@ echo "sdk.dir=$HOME/Library/Android/sdk" > local.properties
 | `./gradlew connectedDebugAndroidTest` | Run instrumented tests               |
 | `./gradlew clean`                     | Clean build artifacts                |
 
-## Module Commands
+## Test Commands
 
-| Command                    | Description                             |
-| -------------------------- | --------------------------------------- |
-| `:app:testDebugUnitTest`   | Hub unit tests (includes `:block/:nfc`) |
-| `:block:testDebugUnitTest` | Focus Blocker unit tests                |
-| `:nfc:testDebugUnitTest`   | NFC Toolkit unit tests                  |
+The single `:app` module runs all unit tests, including Robolectric with
+Android resources (`unitTests.isIncludeAndroidResources = true`):
+
+| Command                      | Description                        |
+| ---------------------------- | ---------------------------------- |
+| `./gradlew testDebugUnitTest`| Run all unit tests (hub + block + nfc) |
 
 ## Coding Conventions
 
@@ -71,16 +72,15 @@ Unit tests use:
 ### Test structure
 
 ```text
-app/src/test/kotlin/io/github/hieudoanm/androidx/
-├── activity/MainActivityTest.kt
-└── ui/home/HomeScreenTest.kt
-
-block/src/test/kotlin/io/github/hieudoanm/block/
-├── ui/home/HomeScreenTest.kt
-└── ...
-
-nfc/src/test/kotlin/io/github/hieudoanm/nfc/
-└── NfcModuleSmokeTest.kt
+app/src/test/kotlin/io/github/hieudoanm/
+├── androidx/
+│   ├── activity/MainActivityTest.kt
+│   └── ui/home/HomeScreenTest.kt
+├── block/
+│   ├── ui/home/HomeScreenTest.kt
+│   └── ...
+└── nfc/
+    └── NfcModuleSmokeTest.kt
 ```
 
 ## Project Structure

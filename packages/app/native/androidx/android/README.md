@@ -1,14 +1,16 @@
 # AndroidX (Android)
 
-A Kotlin + Jetpack Compose Android "super app" that bundles two applications under one launcher icon. The first screen lists both apps — **Focus Blocker** and **NFC Toolkit** — and opens each inside the shared AndroidX process.
+A Kotlin + Jetpack Compose Android "super app" that bundles two applications under one launcher icon and one APK. The first screen lists both apps — **Focus Blocker** and **NFC Toolkit** — and opens each inside the shared AndroidX process.
 
 ## Apps
 
-| App | Module | Package |
-| --- | ------ | ------- |
-| AndroidX (hub) | `:app` | `io.github.hieudoanm.androidx` |
-| Focus Blocker | `:block` | `io.github.hieudoanm.block` |
-| NFC Toolkit | `:nfc` | `io.github.hieudoanm.nfc` |
+One Gradle *application* module hosts everything; each app is a source package tree inside it.
+
+| App | Package |
+| --- | ------- |
+| AndroidX (hub) | `io.github.hieudoanm.androidx` |
+| Focus Blocker | `io.github.hieudoanm.block` |
+| NFC Toolkit | `io.github.hieudoanm.nfc` |
 
 ### Focus Blocker
 
@@ -34,7 +36,7 @@ Reads, scans, and emulates NFC tags.
 | UI           | Jetpack Compose + Material 3 |
 | Navigation   | Compose Navigation           |
 | DI           | Dagger Hilt                  |
-| Local DB     | Room (per module)            |
+| Local DB     | Room (per feature)           |
 | Preferences  | DataStore Preferences        |
 | Blocking     | Accessibility Service        |
 | NFC          | Android NFC + HCE            |
@@ -51,17 +53,26 @@ Reads, scans, and emulates NFC tags.
 ## Test
 
 ```bash
-./gradlew test                 # unit tests for :app, :block, :nfc
+./gradlew test                 # unit tests for all packages
 ./gradlew lint                 # Android lint
 ```
 
 ## Project Structure
 
 ```text
-app/      AndroidX hub — launcher activity, home screen listing both apps
-block/    Focus Blocker feature (android library)
-nfc/      NFC Toolkit feature (android library)
+app/
+└── src/
+    ├── main/
+    │   ├── kotlin/io/github/hieudoanm/
+    │   │   ├── androidx/   AndroidX hub — launcher activity, home screen
+    │   │   ├── block/      Focus Blocker feature
+    │   │   └── nfc/        NFC Toolkit feature
+    │   └── res/            shared resources (merged across features)
+    └── test/kotlin/io/github/hieudoanm/
+        ├── androidx/   hub tests
+        ├── block/      Focus Blocker tests
+        └── nfc/        NFC Toolkit tests
 ```
 
-See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the module layout and
+See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the package layout and
 [AGENTS.md](AGENTS.md) for engineering details.

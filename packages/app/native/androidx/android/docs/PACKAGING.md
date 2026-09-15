@@ -19,15 +19,14 @@ The release build expects a keystore configured via environment variables:
 | `RELEASE_KEY_PASSWORD`   | `android`          |
 
 For CI, set these in the environment. For local development, place a
-`release.keystore` in the `android/` directory.
+`release.keystore` in the `app/` directory (the default path is resolved
+relative to the `:app` module).
 
 ## ProGuard / R8
 
-Release builds use `proguard-android-optimize.txt` plus:
-
-- `app/proguard-rules.pro` — hub rules
-- `block/proguard-rules.pro` — consumer rules (merged from `:block`)
-- `nfc/proguard-rules.pro` — consumer rules (merged from `:nfc`)
+Release builds use `proguard-android-optimize.txt` plus `app/proguard-rules.pro`,
+which carries the combined keep rules for the block and nfc feature data
+(Room entities + DAO classes).
 
 ## Output
 

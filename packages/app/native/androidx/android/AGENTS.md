@@ -12,9 +12,9 @@ applications:
 - **Focus Blocker** — block access to selected apps using Accessibility Service.
 - **NFC Toolkit** — read, scan, and emulate NFC tags.
 
-Both apps live in the same Gradle project as Android **library** modules; the
-`app` module hosts the hub UI, the single `@HiltAndroidApp` (`AndroidXApp`),
-and the launcher activity.
+Both apps are bundled in one Gradle **application** module (`:app`). The module
+hosts the hub UI, the single `@HiltAndroidApp` (`AndroidXApp`), the launcher
+activity, and both feature source trees.
 
 ---
 
@@ -30,51 +30,65 @@ and the launcher activity.
                  ┌──────┴───────────────┐
                  │  :app (hub)          │
                  │  MainActivity        │
-                 │  HomeScreen          │  - Focus Blocker card -> startActivity(:block)
-   │  - NFC Toolkit card  -> startActivity(:nfc)
+                 │  HomeScreen          │  - Focus Blocker card -> startActivity(block MainActivity)
+                 │                      │  - NFC Toolkit card   -> startActivity(nfc MainActivity)
                  └──┬───────────────────┘
         ┌──────────┴──────────────┐
         ▼                         ▼
-   :block (library)          :nfc (library)
-   Focus Blocker app         NFC Toolkit app
+  io.github.hieudoanm.block   io.github.hieudoanm.nfc
+   Focus Blocker app          NFC Toolkit app
+   (source package)           (source package)
 ```
 
 # Module Layout
 
 ```text
 android/
-├── app/       AndroidX hub — `io.github.hieudoanm.androidx`
-├── block/     Focus Blocker feature — `io.github.hieudoanm.block`
-└── nfc/       NFC Toolkit feature — `io.github.hieudoanm.nfc`
+└── app/
+    ├── build.gradle.kts           # single application module
+    └── src/
+        ├── main/
+        │   ├── AndroidManifest.xml  # one merged manifest
+        │   ├── kotlin/io/github/hieudoanm/
+        │   │   ├── androidx/  # AndroidX hub
+        │   │   ├── block/     # Focus Blocker feature
+        │   │   └── nfc/       # NFC Toolkit feature
+        │   └── res/           # merged resources
+        └── test/kotlin/io/github/hieudoanm/
+            ├── androidx/      # hub tests
+            ├── block/         # Focus Blocker tests
+            └── nfc/           # NFC Toolkit tests
 ```
 
-Each feature has its own namespace, `AndroidManifest.xml`, resources, Room
-database, DataStore, Hilt modules, and Compose UI. The hub launches each
-feature `MainActivity` with an explicit `Intent` — no shared classes across
-feature packages, so identical class names (e.g. `MainActivity`,
-`HomeViewModel`) are independent.
+Each feature keeps its own package namespace, Room database, DataStore, Hilt
+modules, and Compose UI. The hub launches each feature `MainActivity` with an
+explicit class-based `Intent` — no shared classes across feature packages, so
+identical class names (e.g. `MainActivity`, `HomeViewModel`) are independent.
 
-# Feature Manifests
+# Manifest
 
-Library manifests keep only the components the hub does not provide:
+A single merged `AndroidManifest.xml` declares:
 
-- **`:block`** — `MainActivity` (exported=false, opened by the hub),
-  `BlockActivity` (overlay, singleInstance), `FocusAccessibilityService`,
-  and the `queries` element for the app picker.
-- **`:nfc`** — `MainActivity` (exported=true with `NDEF_DISCOVERED`,
+- the hub — `AndroidXApp` (Application), `MainActivity` with the launcher
+  intent-filter and the AndroidX theme;
+- **block** — `io.github.hieudoanm.block.activity.MainActivity` (exported=false,
+  opened by the hub), `BlockActivity` (overlay, singleInstance),
+  `FocusAccessibilityService`, and the `queries` element for the app picker;
+- **nfc** — `MainActivity` (exported=true with `NDEF_DISCOVERED`,
   `TECH_DISCOVERED`, `TAG_DISCOVERED` intent filters), `HceApduService`
   (HOST_APDU_SERVICE), NFC permission + feature declarations.
 
-Libraries must **not** declare `android:name` on `<application>` or set a
-launcher intent-filter — `:app` owns the Application class and the icon.
+Feature components use fully-qualified names so they resolve independently of
+the module namespace. Only the hub sets `android:name` on `<application>` and
+ships the launcher intent-filter + icon.
 
 # Resource Conventions
 
-- Launcher icon lives only in `:app` (`res/mipmap-anydpi-v26/ic_launcher.xml`).
-- Feature string labels are namespaced to avoid AAPT2 collisions:
+- Launcher icon lives in `res/mipmap-anydpi-v26/ic_launcher.xml` (hub).
+- Feature string labels are namespaced to avoid collisions:
   `block_app_name`, `nfc_app_name`. The hub label is `app_name` (AndroidX).
 - Feature theme names stay distinct: `Theme.FocusBlock`, `Theme.NfcToolkit`,
-  `Theme.AndroidX` — no merge conflicts.
+  `Theme.AndroidX` — merged into one `themes.xml`.
 
 # Dependencies
 
@@ -86,45 +100,48 @@ launcher intent-filter — `:app` owns the Application class and the icon.
 | Hilt          | 2.60.1  |
 | Compose BOM   | 2026.08.00 |
 
-`build.gradle.kts` at the root applies all plugins with `apply false`; each
-module applies the ones it needs. `com.android.library` is declared for the
-two feature modules.
+`build.gradle.kts` at the root applies all plugins with `apply false`; the
+single `:app` module applies the ones it needs. There are no library modules.
 
 # Build & Test
 
 ```bash
 ./gradlew assembleDebug     # APK
 ./gradlew lint              # static analysis
-./gradlew test              # all unit tests (:app, :block, :nfc)
+./gradlew test              # all unit tests
 ./gradlew assembleRelease   # release APK (requires keystore env)
 ./gradlew bundleRelease     # release AAB (requires keystore env)
 ```
 
 Release signing reads `RELEASE_STORE_FILE`, `RELEASE_STORE_PASSWORD`,
 `RELEASE_KEY_ALIAS`, `RELEASE_KEY_PASSWORD` from the environment (defaults:
-`release.keystore` / `android`). CI generates the keystore with keytool.
+`release.keystore` / `android`, resolved inside `app/`). CI generates the
+keystore with keytool.
 
 # Testing
 
-- **`:app`** — hub [HomeScreenTest](app/src/test) - cards render and fire
+- **hub** — `androidx/activity`, `androidx/ui/home` — cards render and fire
   their `Open` callbacks.
-- **`:block`** — full suite: repository, DataStore, Room DAO, services,
-  screens, ViewModels (Robolectric + MockK + Turbine).
-- **`:nfc`** — smoke test that core classes load.
+- **block** — full suite: repository, DataStore, Room DAO, services, screens,
+  ViewModels (Robolectric + MockK + Turbine).
+- **nfc** — smoke test that core classes load.
 
-Robolectric tests pin `@Config(sdk = [34])`.
+Robolectric tests pin `@Config(sdk = [34])` (see `app/src/test/resources/robolectric.properties`).
 
 # Repository Responsibilities
 
-- `:block` — `FocusRepository` gates Room + package queries; the
+- `block` — `FocusRepository` gates Room + package queries; the
   AccessibilityService asks `isBlocked(packageName)` and launches
   `BlockActivity`.
-- `:nfc` — `NfcRepository` wraps NFC tag IO + tag history (Room);
+- `nfc` — `NfcRepository` wraps NFC tag IO + tag history (Room);
   `HceApduService` responds to reader APDUs.
 
 # Streamlined by the merger
 
 - `NfcToolkitApp` and `FocusBlockApp` `@HiltAndroidApp` classes were removed —
   `AndroidXApp` is now the single Application.
+- Features were merged from separate `:block` / `:nfc` library modules into the
+  single `:app` module; manifests, resources, and proguard keep-rules were
+  merged (feature components keep fully-qualified package names).
 - Launcher icons + `app_name` strings were moved out of the features and into
   the hub to guarantee clean manifest/resource merges.

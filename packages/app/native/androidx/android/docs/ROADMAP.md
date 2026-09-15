@@ -6,13 +6,13 @@
 
 ## Phase 1 — Super App Merge (Shipped)
 
-- [x] Merge `block` and `nfc` into one Gradle project: `:app` hub +
-  `:block` + `:nfc` library modules
+- [x] Merge `block` and `nfc` into one Gradle project: single `:app` module
+  bundling the hub + `block` + `nfc` source packages
 - [x] Single `AndroidXApp` `@HiltAndroidApp` (removed old application classes)
 - [x] Hub home screen — card list launching each feature activity
-- [x] Remove launcher icons/filters from features; move to `:app`
+- [x] Remove launcher icons/filters from features; move to the hub
 - [x] Namespaced feature string labels (`block_app_name`, `nfc_app_name`)
-- [x] Keep full `:block` unit suite + add hub + `:nfc` smoke tests
+- [x] Keep full `block` unit suite + add hub + `nfc` smoke tests
 - [x] AndroidX branding: workflows, store entry, landing page, docs
 
 ## Phase 2 — Blocker Polish

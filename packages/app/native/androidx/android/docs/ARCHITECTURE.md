@@ -1,7 +1,7 @@
 # Architecture
 
 > AndroidX — Kotlin + Jetpack Compose super app bundling Focus Blocker and
-> NFC Toolkit under one launcher icon.
+> NFC Toolkit under one launcher icon and one APK.
 
 ## Tech Stack
 
@@ -10,7 +10,7 @@
 | Language             | Kotlin 2.x                   |
 | UI                   | Jetpack Compose + Material 3 |
 | Architecture         | MVVM                         |
-| Navigation           | Navigation Compose (per mod) |
+| Navigation           | Navigation Compose (per feature) |
 | Persistence          | Room (per feature)           |
 | Preferences          | DataStore                    |
 | Async                | Kotlin Coroutines + Flow     |
@@ -21,37 +21,39 @@
 | Min SDK              | 26 (Android 8.0)             |
 | Target / Compile SDK | 37 (Android 15+)             |
 
-## Module Structure
+## Package Structure
+
+One Gradle *application* module (`:app`) with three independent source
+package trees:
 
 ```text
 android/
-├── app/                       # AndroidX hub  (io.github.hieudoanm.androidx)
-│   └── src/main/kotlin/.../
-│       ├── AndroidXApp.kt     # @HiltAndroidApp — single Application
-│       ├── activity/MainActivity.kt
-│       └── ui/home/HomeScreen.kt   # cards for Block + NFC
-│
-├── block/                     # Focus Blocker (io.github.hieudoanm.block)
-│   └── src/main/kotlin/.../
-│       ├── accessibility/FocusAccessibilityService.kt
-│       ├── activity/{MainActivity, BlockActivity}.kt
-│       ├── data/database/     # Room: BlockedApp, Schedule
-│       ├── data/preferences/SettingsDataStore.kt
-│       ├── di/AppModule.kt
-│       ├── navigation/NavGraph.kt
-│       ├── repository/FocusRepository.kt
-│       └── ui/{home, apps, block, settings, theme}/
-│
-└── nfc/                       # NFC Toolkit   (io.github.hieudoanm.nfc)
-    └── src/main/kotlin/.../
-        ├── activity/MainActivity.kt
-        ├── data/nfc/HceApduService.kt
-        ├── data/database/     # Room: tag history
-        ├── data/preferences/SettingsDataStore.kt
-        ├── di/AppModule.kt
-        ├── navigation/NavGraph.kt
-        ├── domain/model/
-        └── ui/{home, history, settings, theme}/
+└── app/
+    └── src/main/kotlin/io/github/hieudoanm/
+        ├── androidx/               # AndroidX hub
+        │   ├── AndroidXApp.kt      # @HiltAndroidApp — single Application
+        │   ├── activity/MainActivity.kt
+        │   └── ui/home/HomeScreen.kt   # cards for Block + NFC
+        │
+        ├── block/                  # Focus Blocker
+        │   ├── accessibility/FocusAccessibilityService.kt
+        │   ├── activity/{MainActivity, BlockActivity}.kt
+        │   ├── data/database/      # Room: BlockedApp, Schedule
+        │   ├── data/preferences/SettingsDataStore.kt
+        │   ├── di/AppModule.kt
+        │   ├── navigation/NavGraph.kt
+        │   ├── repository/FocusRepository.kt
+        │   └── ui/{home, apps, block, settings, theme}/
+        │
+        └── nfc/                    # NFC Toolkit
+            ├── activity/MainActivity.kt
+            ├── data/nfc/HceApduService.kt
+            ├── data/database/      # Room: tag history
+            ├── data/preferences/SettingsDataStore.kt
+            ├── di/AppModule.kt
+            ├── navigation/NavGraph.kt
+            ├── domain/model/
+            └── ui/{home, history, settings, theme}/
 ```
 
 ## Hub Launch Flow
@@ -60,27 +62,29 @@ android/
 Launcher
    │
    ▼
-app: MainActivity (HomeScreen)
+MainActivity (HomeScreen)
    │
-   ├── "Focus Blocker" card  ──► startActivity(:block MainActivity)
-   └── "NFC Toolkit" card    ──► startActivity(:nfc MainActivity)
+   ├── "Focus Blocker" card  ──► startActivity(MainActivity in io.github.hieudoanm.block)
+   └── "NFC Toolkit" card    ──► startActivity(MainActivity in io.github.hieudoanm.nfc)
 ```
 
-The `:app` module is the only Gradle *application* module. Features are
-*android library* modules with their own namespaces; identical class names
-across features (e.g. `MainActivity`) are independent and never collide.
+The module has a single namespace (`io.github.hieudoanm.androidx`) and one
+merged manifest. Feature components are declared with fully-qualified names
+(`io.github.hieudoanm.block.activity.MainActivity`, etc.) so they resolve
+independently. Identical class names across features are independent and never
+collide.
 
-## Feature Manifests
+## Feature Components
 
-Libraries contribute components via manifest merge but stay launcher-less:
+The merged manifest contributes the parts the hub does not provide:
 
-- `:block` — `MainActivity` (exported=false), `BlockActivity` (singleInstance
+- **block** — `MainActivity` (exported=false), `BlockActivity` (singleInstance
   overlay), `FocusAccessibilityService`, `queries`.
-- `:nfc` — `MainActivity` (exported=true, NDEF/TECH/TAG filters),
+- **nfc** — `MainActivity` (exported=true, NDEF/TECH/TAG filters),
   `HceApduService` (HOST_APDU_SERVICE), NFC permission/feature.
 
-Neither library sets `android:name` on `<application>` nor includes a launcher
-intent-filter, and neither ships a launcher icon.
+Only the hub sets `android:name` on `<application>` and includes the launcher
+intent-filter and icon.
 
 ## Blocking Data Flow
 
@@ -113,9 +117,9 @@ Each feature owns a Compose `NavGraph` inside its own `MainActivity`:
 
 Room instances are per-feature (distinct DB names):
 
-- `:block` — `focus_blocker.db`, entity `BlockedApp(packageName, label, enabled)`
-  and future `Schedule`.
-- `:nfc` — tag history, entity persisted on read/write.
+- `focus_blocker.db` — entity `BlockedApp(packageName, label, enabled)` and
+  future `Schedule`.
+- nfc tag history — entity persisted on read/write.
 
 ## DataStore Preferences
 
@@ -131,15 +135,15 @@ Room instances are per-feature (distinct DB names):
 
 ## Dependency Injection
 
-Per-module Hilt `@Module` provides that feature's Room database, DAO, and
+Per-feature Hilt `@Module` provides that feature's Room database, DAO, and
 `SettingsDataStore`. The hub's `AndroidXApp` is the single @HiltAndroidApp and
 roots the shared `AppComponent`.
 
 ## Key Design Decisions
 
-- **Hub + feature libraries** — the second screen is one `startActivity` away,
-  with no cross-feature class dependencies.
-- **Single Application subclass** — features declare no `<application>`
+- **One module, three packages** — every app ships in a single APK; features
+  stay isolated by package namespace with no cross-feature class dependencies.
+- **Single Application subclass** — features don't declare `<application>`
   `android:name`; `AndroidXApp` owns the process.
 - **AccessibilityService uses Hilt** — `@AndroidEntryPoint` with field injection.
 - **No network calls** — everything is local-first (Room + DataStore).

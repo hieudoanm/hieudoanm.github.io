@@ -23947,138 +23947,162 @@
 │   │   │   │   │   │   │   │   │   └── io/
 │   │   │   │   │   │   │   │   │       └── github/
 │   │   │   │   │   │   │   │   │           └── hieudoanm/
-│   │   │   │   │   │   │   │   │               └── androidx/
+│   │   │   │   │   │   │   │   │               ├── androidx/
+│   │   │   │   │   │   │   │   │               │   ├── activity/
+│   │   │   │   │   │   │   │   │               │   │   └── [MainActivity.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/androidx/activity/MainActivity.kt)
+│   │   │   │   │   │   │   │   │               │   ├── ui/
+│   │   │   │   │   │   │   │   │               │   │   ├── home/
+│   │   │   │   │   │   │   │   │               │   │   │   └── [HomeScreen.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/androidx/ui/home/HomeScreen.kt)
+│   │   │   │   │   │   │   │   │               │   │   └── theme/
+│   │   │   │   │   │   │   │   │               │   │       ├── [Color.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/androidx/ui/theme/Color.kt)
+│   │   │   │   │   │   │   │   │               │   │       └── [Theme.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/androidx/ui/theme/Theme.kt)
+│   │   │   │   │   │   │   │   │               │   └── [AndroidXApp.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/androidx/AndroidXApp.kt)
+│   │   │   │   │   │   │   │   │               ├── block/
+│   │   │   │   │   │   │   │   │               │   ├── accessibility/
+│   │   │   │   │   │   │   │   │               │   │   └── [FocusAccessibilityService.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/block/accessibility/FocusAccessibilityService.kt)
+│   │   │   │   │   │   │   │   │               │   ├── activity/
+│   │   │   │   │   │   │   │   │               │   │   ├── [BlockActivity.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/block/activity/BlockActivity.kt)
+│   │   │   │   │   │   │   │   │               │   │   └── [MainActivity.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/block/activity/MainActivity.kt)
+│   │   │   │   │   │   │   │   │               │   ├── data/
+│   │   │   │   │   │   │   │   │               │   │   ├── database/
+│   │   │   │   │   │   │   │   │               │   │   │   ├── [AppDao.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/block/data/database/AppDao.kt)
+│   │   │   │   │   │   │   │   │               │   │   │   └── [FocusDatabase.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/block/data/database/FocusDatabase.kt)
+│   │   │   │   │   │   │   │   │               │   │   ├── entity/
+│   │   │   │   │   │   │   │   │               │   │   │   ├── [BlockedApp.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/block/data/entity/BlockedApp.kt)
+│   │   │   │   │   │   │   │   │               │   │   │   └── [Schedule.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/block/data/entity/Schedule.kt)
+│   │   │   │   │   │   │   │   │               │   │   └── preferences/
+│   │   │   │   │   │   │   │   │               │   │       └── [SettingsDataStore.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/block/data/preferences/SettingsDataStore.kt)
+│   │   │   │   │   │   │   │   │               │   ├── di/
+│   │   │   │   │   │   │   │   │               │   │   └── [AppModule.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/block/di/AppModule.kt)
+│   │   │   │   │   │   │   │   │               │   ├── navigation/
+│   │   │   │   │   │   │   │   │               │   │   └── [NavGraph.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/block/navigation/NavGraph.kt)
+│   │   │   │   │   │   │   │   │               │   ├── repository/
+│   │   │   │   │   │   │   │   │               │   │   └── [FocusRepository.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/block/repository/FocusRepository.kt)
+│   │   │   │   │   │   │   │   │               │   └── ui/
+│   │   │   │   │   │   │   │   │               │       ├── apps/
+│   │   │   │   │   │   │   │   │               │       │   ├── [AppListScreen.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/block/ui/apps/AppListScreen.kt)
+│   │   │   │   │   │   │   │   │               │       │   └── [AppListViewModel.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/block/ui/apps/AppListViewModel.kt)
+│   │   │   │   │   │   │   │   │               │       ├── block/
+│   │   │   │   │   │   │   │   │               │       │   └── [BlockScreen.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/block/ui/block/BlockScreen.kt)
+│   │   │   │   │   │   │   │   │               │       ├── home/
+│   │   │   │   │   │   │   │   │               │       │   ├── [HomeScreen.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/block/ui/home/HomeScreen.kt)
+│   │   │   │   │   │   │   │   │               │       │   └── [HomeViewModel.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/block/ui/home/HomeViewModel.kt)
+│   │   │   │   │   │   │   │   │               │       ├── settings/
+│   │   │   │   │   │   │   │   │               │       │   ├── [SettingsScreen.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/block/ui/settings/SettingsScreen.kt)
+│   │   │   │   │   │   │   │   │               │       │   └── [SettingsViewModel.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/block/ui/settings/SettingsViewModel.kt)
+│   │   │   │   │   │   │   │   │               │       └── theme/
+│   │   │   │   │   │   │   │   │               │           ├── [Color.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/block/ui/theme/Color.kt)
+│   │   │   │   │   │   │   │   │               │           └── [Theme.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/block/ui/theme/Theme.kt)
+│   │   │   │   │   │   │   │   │               └── nfc/
 │   │   │   │   │   │   │   │   │                   ├── activity/
-│   │   │   │   │   │   │   │   │                   │   └── [MainActivity.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/androidx/activity/MainActivity.kt)
-│   │   │   │   │   │   │   │   │                   ├── ui/
-│   │   │   │   │   │   │   │   │                   │   ├── home/
-│   │   │   │   │   │   │   │   │                   │   │   └── [HomeScreen.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/androidx/ui/home/HomeScreen.kt)
-│   │   │   │   │   │   │   │   │                   │   └── theme/
-│   │   │   │   │   │   │   │   │                   │       ├── [Color.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/androidx/ui/theme/Color.kt)
-│   │   │   │   │   │   │   │   │                   │       └── [Theme.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/androidx/ui/theme/Theme.kt)
-│   │   │   │   │   │   │   │   │                   └── [AndroidXApp.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/androidx/AndroidXApp.kt)
+│   │   │   │   │   │   │   │   │                   │   └── [MainActivity.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/nfc/activity/MainActivity.kt)
+│   │   │   │   │   │   │   │   │                   ├── data/
+│   │   │   │   │   │   │   │   │                   │   ├── database/
+│   │   │   │   │   │   │   │   │                   │   │   ├── [AppDatabase.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/nfc/data/database/AppDatabase.kt)
+│   │   │   │   │   │   │   │   │                   │   │   ├── [TagHistoryDao.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/nfc/data/database/TagHistoryDao.kt)
+│   │   │   │   │   │   │   │   │                   │   │   └── [TagProfileDao.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/nfc/data/database/TagProfileDao.kt)
+│   │   │   │   │   │   │   │   │                   │   ├── entity/
+│   │   │   │   │   │   │   │   │                   │   │   ├── [TagHistory.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/nfc/data/entity/TagHistory.kt)
+│   │   │   │   │   │   │   │   │                   │   │   └── [TagProfile.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/nfc/data/entity/TagProfile.kt)
+│   │   │   │   │   │   │   │   │                   │   ├── nfc/
+│   │   │   │   │   │   │   │   │                   │   │   ├── [HceApduService.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/nfc/data/nfc/HceApduService.kt)
+│   │   │   │   │   │   │   │   │                   │   │   ├── [NdefReader.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/nfc/data/nfc/NdefReader.kt)
+│   │   │   │   │   │   │   │   │                   │   │   ├── [NdefWriter.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/nfc/data/nfc/NdefWriter.kt)
+│   │   │   │   │   │   │   │   │                   │   │   ├── [TagDispatcher.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/nfc/data/nfc/TagDispatcher.kt)
+│   │   │   │   │   │   │   │   │                   │   │   └── [TagTechInspector.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/nfc/data/nfc/TagTechInspector.kt)
+│   │   │   │   │   │   │   │   │                   │   ├── preferences/
+│   │   │   │   │   │   │   │   │                   │   │   └── [SettingsDataStore.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/nfc/data/preferences/SettingsDataStore.kt)
+│   │   │   │   │   │   │   │   │                   │   └── repository/
+│   │   │   │   │   │   │   │   │                   │       └── [NfcRepository.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/nfc/data/repository/NfcRepository.kt)
+│   │   │   │   │   │   │   │   │                   ├── di/
+│   │   │   │   │   │   │   │   │                   │   └── [AppModule.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/nfc/di/AppModule.kt)
+│   │   │   │   │   │   │   │   │                   ├── domain/
+│   │   │   │   │   │   │   │   │                   │   └── model/
+│   │   │   │   │   │   │   │   │                   │       ├── [NdefRecordModel.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/nfc/domain/model/NdefRecordModel.kt)
+│   │   │   │   │   │   │   │   │                   │       └── [TagInfo.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/nfc/domain/model/TagInfo.kt)
+│   │   │   │   │   │   │   │   │                   ├── navigation/
+│   │   │   │   │   │   │   │   │                   │   └── [NavGraph.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/nfc/navigation/NavGraph.kt)
+│   │   │   │   │   │   │   │   │                   └── ui/
+│   │   │   │   │   │   │   │   │                       ├── history/
+│   │   │   │   │   │   │   │   │                       │   ├── [HistoryScreen.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/nfc/ui/history/HistoryScreen.kt)
+│   │   │   │   │   │   │   │   │                       │   └── [HistoryViewModel.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/nfc/ui/history/HistoryViewModel.kt)
+│   │   │   │   │   │   │   │   │                       ├── home/
+│   │   │   │   │   │   │   │   │                       │   ├── [HomeScreen.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/nfc/ui/home/HomeScreen.kt)
+│   │   │   │   │   │   │   │   │                       │   └── [HomeViewModel.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/nfc/ui/home/HomeViewModel.kt)
+│   │   │   │   │   │   │   │   │                       ├── settings/
+│   │   │   │   │   │   │   │   │                       │   ├── [SettingsScreen.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/nfc/ui/settings/SettingsScreen.kt)
+│   │   │   │   │   │   │   │   │                       │   └── [SettingsViewModel.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/nfc/ui/settings/SettingsViewModel.kt)
+│   │   │   │   │   │   │   │   │                       └── theme/
+│   │   │   │   │   │   │   │   │                           ├── [Color.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/nfc/ui/theme/Color.kt)
+│   │   │   │   │   │   │   │   │                           └── [Theme.kt](./packages/app/native/androidx/android/app/src/main/kotlin/io/github/hieudoanm/nfc/ui/theme/Theme.kt)
 │   │   │   │   │   │   │   │   ├── res/
 │   │   │   │   │   │   │   │   │   ├── drawable/
 │   │   │   │   │   │   │   │   │   │   ├── [ic_launcher_background.xml](./packages/app/native/androidx/android/app/src/main/res/drawable/ic_launcher_background.xml)
 │   │   │   │   │   │   │   │   │   │   └── [ic_launcher_foreground.xml](./packages/app/native/androidx/android/app/src/main/res/drawable/ic_launcher_foreground.xml)
 │   │   │   │   │   │   │   │   │   ├── mipmap-anydpi-v26/
 │   │   │   │   │   │   │   │   │   │   └── [ic_launcher.xml](./packages/app/native/androidx/android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml)
-│   │   │   │   │   │   │   │   │   └── values/
-│   │   │   │   │   │   │   │   │       ├── [colors.xml](./packages/app/native/androidx/android/app/src/main/res/values/colors.xml)
-│   │   │   │   │   │   │   │   │       ├── [strings.xml](./packages/app/native/androidx/android/app/src/main/res/values/strings.xml)
-│   │   │   │   │   │   │   │   │       └── [themes.xml](./packages/app/native/androidx/android/app/src/main/res/values/themes.xml)
-│   │   │   │   │   │   │   │   └── [AndroidManifest.xml](./packages/app/native/androidx/android/app/src/main/AndroidManifest.xml)
-│   │   │   │   │   │   │   └── test/
-│   │   │   │   │   │   │       └── kotlin/
-│   │   │   │   │   │   │           └── io/
-│   │   │   │   │   │   │               └── github/
-│   │   │   │   │   │   │                   └── hieudoanm/
-│   │   │   │   │   │   │                       └── androidx/
-│   │   │   │   │   │   │                           ├── activity/
-│   │   │   │   │   │   │                           │   └── [MainActivityTest.kt](./packages/app/native/androidx/android/app/src/test/kotlin/io/github/hieudoanm/androidx/activity/MainActivityTest.kt)
-│   │   │   │   │   │   │                           └── ui/
-│   │   │   │   │   │   │                               └── home/
-│   │   │   │   │   │   │                                   └── [HomeScreenTest.kt](./packages/app/native/androidx/android/app/src/test/kotlin/io/github/hieudoanm/androidx/ui/home/HomeScreenTest.kt)
-│   │   │   │   │   │   ├── [build.gradle.kts](./packages/app/native/androidx/android/app/build.gradle.kts)
-│   │   │   │   │   │   ├── [lint.xml](./packages/app/native/androidx/android/app/lint.xml)
-│   │   │   │   │   │   └── [proguard-rules.pro](./packages/app/native/androidx/android/app/proguard-rules.pro)
-│   │   │   │   │   ├── block/
-│   │   │   │   │   │   ├── src/
-│   │   │   │   │   │   │   ├── main/
-│   │   │   │   │   │   │   │   ├── kotlin/
-│   │   │   │   │   │   │   │   │   └── io/
-│   │   │   │   │   │   │   │   │       └── github/
-│   │   │   │   │   │   │   │   │           └── hieudoanm/
-│   │   │   │   │   │   │   │   │               └── block/
-│   │   │   │   │   │   │   │   │                   ├── accessibility/
-│   │   │   │   │   │   │   │   │                   │   └── [FocusAccessibilityService.kt](./packages/app/native/androidx/android/block/src/main/kotlin/io/github/hieudoanm/block/accessibility/FocusAccessibilityService.kt)
-│   │   │   │   │   │   │   │   │                   ├── activity/
-│   │   │   │   │   │   │   │   │                   │   ├── [BlockActivity.kt](./packages/app/native/androidx/android/block/src/main/kotlin/io/github/hieudoanm/block/activity/BlockActivity.kt)
-│   │   │   │   │   │   │   │   │                   │   └── [MainActivity.kt](./packages/app/native/androidx/android/block/src/main/kotlin/io/github/hieudoanm/block/activity/MainActivity.kt)
-│   │   │   │   │   │   │   │   │                   ├── data/
-│   │   │   │   │   │   │   │   │                   │   ├── database/
-│   │   │   │   │   │   │   │   │                   │   │   ├── [AppDao.kt](./packages/app/native/androidx/android/block/src/main/kotlin/io/github/hieudoanm/block/data/database/AppDao.kt)
-│   │   │   │   │   │   │   │   │                   │   │   └── [FocusDatabase.kt](./packages/app/native/androidx/android/block/src/main/kotlin/io/github/hieudoanm/block/data/database/FocusDatabase.kt)
-│   │   │   │   │   │   │   │   │                   │   ├── entity/
-│   │   │   │   │   │   │   │   │                   │   │   ├── [BlockedApp.kt](./packages/app/native/androidx/android/block/src/main/kotlin/io/github/hieudoanm/block/data/entity/BlockedApp.kt)
-│   │   │   │   │   │   │   │   │                   │   │   └── [Schedule.kt](./packages/app/native/androidx/android/block/src/main/kotlin/io/github/hieudoanm/block/data/entity/Schedule.kt)
-│   │   │   │   │   │   │   │   │                   │   └── preferences/
-│   │   │   │   │   │   │   │   │                   │       └── [SettingsDataStore.kt](./packages/app/native/androidx/android/block/src/main/kotlin/io/github/hieudoanm/block/data/preferences/SettingsDataStore.kt)
-│   │   │   │   │   │   │   │   │                   ├── di/
-│   │   │   │   │   │   │   │   │                   │   └── [AppModule.kt](./packages/app/native/androidx/android/block/src/main/kotlin/io/github/hieudoanm/block/di/AppModule.kt)
-│   │   │   │   │   │   │   │   │                   ├── navigation/
-│   │   │   │   │   │   │   │   │                   │   └── [NavGraph.kt](./packages/app/native/androidx/android/block/src/main/kotlin/io/github/hieudoanm/block/navigation/NavGraph.kt)
-│   │   │   │   │   │   │   │   │                   ├── repository/
-│   │   │   │   │   │   │   │   │                   │   └── [FocusRepository.kt](./packages/app/native/androidx/android/block/src/main/kotlin/io/github/hieudoanm/block/repository/FocusRepository.kt)
-│   │   │   │   │   │   │   │   │                   └── ui/
-│   │   │   │   │   │   │   │   │                       ├── apps/
-│   │   │   │   │   │   │   │   │                       │   ├── [AppListScreen.kt](./packages/app/native/androidx/android/block/src/main/kotlin/io/github/hieudoanm/block/ui/apps/AppListScreen.kt)
-│   │   │   │   │   │   │   │   │                       │   └── [AppListViewModel.kt](./packages/app/native/androidx/android/block/src/main/kotlin/io/github/hieudoanm/block/ui/apps/AppListViewModel.kt)
-│   │   │   │   │   │   │   │   │                       ├── block/
-│   │   │   │   │   │   │   │   │                       │   └── [BlockScreen.kt](./packages/app/native/androidx/android/block/src/main/kotlin/io/github/hieudoanm/block/ui/block/BlockScreen.kt)
-│   │   │   │   │   │   │   │   │                       ├── home/
-│   │   │   │   │   │   │   │   │                       │   ├── [HomeScreen.kt](./packages/app/native/androidx/android/block/src/main/kotlin/io/github/hieudoanm/block/ui/home/HomeScreen.kt)
-│   │   │   │   │   │   │   │   │                       │   └── [HomeViewModel.kt](./packages/app/native/androidx/android/block/src/main/kotlin/io/github/hieudoanm/block/ui/home/HomeViewModel.kt)
-│   │   │   │   │   │   │   │   │                       ├── settings/
-│   │   │   │   │   │   │   │   │                       │   ├── [SettingsScreen.kt](./packages/app/native/androidx/android/block/src/main/kotlin/io/github/hieudoanm/block/ui/settings/SettingsScreen.kt)
-│   │   │   │   │   │   │   │   │                       │   └── [SettingsViewModel.kt](./packages/app/native/androidx/android/block/src/main/kotlin/io/github/hieudoanm/block/ui/settings/SettingsViewModel.kt)
-│   │   │   │   │   │   │   │   │                       └── theme/
-│   │   │   │   │   │   │   │   │                           ├── [Color.kt](./packages/app/native/androidx/android/block/src/main/kotlin/io/github/hieudoanm/block/ui/theme/Color.kt)
-│   │   │   │   │   │   │   │   │                           └── [Theme.kt](./packages/app/native/androidx/android/block/src/main/kotlin/io/github/hieudoanm/block/ui/theme/Theme.kt)
-│   │   │   │   │   │   │   │   ├── res/
 │   │   │   │   │   │   │   │   │   ├── values/
-│   │   │   │   │   │   │   │   │   │   ├── [colors.xml](./packages/app/native/androidx/android/block/src/main/res/values/colors.xml)
-│   │   │   │   │   │   │   │   │   │   ├── [strings.xml](./packages/app/native/androidx/android/block/src/main/res/values/strings.xml)
-│   │   │   │   │   │   │   │   │   │   └── [themes.xml](./packages/app/native/androidx/android/block/src/main/res/values/themes.xml)
+│   │   │   │   │   │   │   │   │   │   ├── [colors.xml](./packages/app/native/androidx/android/app/src/main/res/values/colors.xml)
+│   │   │   │   │   │   │   │   │   │   ├── [strings.xml](./packages/app/native/androidx/android/app/src/main/res/values/strings.xml)
+│   │   │   │   │   │   │   │   │   │   └── [themes.xml](./packages/app/native/androidx/android/app/src/main/res/values/themes.xml)
 │   │   │   │   │   │   │   │   │   └── xml/
-│   │   │   │   │   │   │   │   │       └── [accessibility_service_config.xml](./packages/app/native/androidx/android/block/src/main/res/xml/accessibility_service_config.xml)
-│   │   │   │   │   │   │   │   └── [AndroidManifest.xml](./packages/app/native/androidx/android/block/src/main/AndroidManifest.xml)
+│   │   │   │   │   │   │   │   │       ├── [accessibility_service_config.xml](./packages/app/native/androidx/android/app/src/main/res/xml/accessibility_service_config.xml)
+│   │   │   │   │   │   │   │   │       └── [apduservice.xml](./packages/app/native/androidx/android/app/src/main/res/xml/apduservice.xml)
+│   │   │   │   │   │   │   │   └── [AndroidManifest.xml](./packages/app/native/androidx/android/app/src/main/AndroidManifest.xml)
 │   │   │   │   │   │   │   └── test/
 │   │   │   │   │   │   │       ├── kotlin/
 │   │   │   │   │   │   │       │   └── io/
 │   │   │   │   │   │   │       │       └── github/
 │   │   │   │   │   │   │       │           └── hieudoanm/
-│   │   │   │   │   │   │       │               └── block/
-│   │   │   │   │   │   │       │                   ├── accessibility/
-│   │   │   │   │   │   │       │                   │   └── [FocusAccessibilityServiceTest.kt](./packages/app/native/androidx/android/block/src/test/kotlin/io/github/hieudoanm/block/accessibility/FocusAccessibilityServiceTest.kt)
-│   │   │   │   │   │   │       │                   ├── activity/
-│   │   │   │   │   │   │       │                   │   ├── [BlockActivityTest.kt](./packages/app/native/androidx/android/block/src/test/kotlin/io/github/hieudoanm/block/activity/BlockActivityTest.kt)
-│   │   │   │   │   │   │       │                   │   └── [MainActivityTest.kt](./packages/app/native/androidx/android/block/src/test/kotlin/io/github/hieudoanm/block/activity/MainActivityTest.kt)
-│   │   │   │   │   │   │       │                   ├── data/
-│   │   │   │   │   │   │       │                   │   ├── database/
-│   │   │   │   │   │   │       │                   │   │   ├── [AppDaoTest.kt](./packages/app/native/androidx/android/block/src/test/kotlin/io/github/hieudoanm/block/data/database/AppDaoTest.kt)
-│   │   │   │   │   │   │       │                   │   │   └── [FocusDatabaseTest.kt](./packages/app/native/androidx/android/block/src/test/kotlin/io/github/hieudoanm/block/data/database/FocusDatabaseTest.kt)
-│   │   │   │   │   │   │       │                   │   ├── entity/
-│   │   │   │   │   │   │       │                   │   │   ├── [BlockedAppTest.kt](./packages/app/native/androidx/android/block/src/test/kotlin/io/github/hieudoanm/block/data/entity/BlockedAppTest.kt)
-│   │   │   │   │   │   │       │                   │   │   └── [ScheduleTest.kt](./packages/app/native/androidx/android/block/src/test/kotlin/io/github/hieudoanm/block/data/entity/ScheduleTest.kt)
-│   │   │   │   │   │   │       │                   │   └── preferences/
-│   │   │   │   │   │   │       │                   │       └── [SettingsDataStoreTest.kt](./packages/app/native/androidx/android/block/src/test/kotlin/io/github/hieudoanm/block/data/preferences/SettingsDataStoreTest.kt)
-│   │   │   │   │   │   │       │                   ├── di/
-│   │   │   │   │   │   │       │                   │   └── [AppModuleTest.kt](./packages/app/native/androidx/android/block/src/test/kotlin/io/github/hieudoanm/block/di/AppModuleTest.kt)
-│   │   │   │   │   │   │       │                   ├── navigation/
-│   │   │   │   │   │   │       │                   │   └── [NavGraphTest.kt](./packages/app/native/androidx/android/block/src/test/kotlin/io/github/hieudoanm/block/navigation/NavGraphTest.kt)
-│   │   │   │   │   │   │       │                   ├── repository/
-│   │   │   │   │   │   │       │                   │   └── [FocusRepositoryTest.kt](./packages/app/native/androidx/android/block/src/test/kotlin/io/github/hieudoanm/block/repository/FocusRepositoryTest.kt)
-│   │   │   │   │   │   │       │                   └── ui/
-│   │   │   │   │   │   │       │                       ├── apps/
-│   │   │   │   │   │   │       │                       │   ├── [AppListScreenTest.kt](./packages/app/native/androidx/android/block/src/test/kotlin/io/github/hieudoanm/block/ui/apps/AppListScreenTest.kt)
-│   │   │   │   │   │   │       │                       │   └── [AppListViewModelTest.kt](./packages/app/native/androidx/android/block/src/test/kotlin/io/github/hieudoanm/block/ui/apps/AppListViewModelTest.kt)
-│   │   │   │   │   │   │       │                       ├── block/
-│   │   │   │   │   │   │       │                       │   └── [BlockScreenTest.kt](./packages/app/native/androidx/android/block/src/test/kotlin/io/github/hieudoanm/block/ui/block/BlockScreenTest.kt)
-│   │   │   │   │   │   │       │                       ├── home/
-│   │   │   │   │   │   │       │                       │   ├── [HomeScreenTest.kt](./packages/app/native/androidx/android/block/src/test/kotlin/io/github/hieudoanm/block/ui/home/HomeScreenTest.kt)
-│   │   │   │   │   │   │       │                       │   └── [HomeViewModelTest.kt](./packages/app/native/androidx/android/block/src/test/kotlin/io/github/hieudoanm/block/ui/home/HomeViewModelTest.kt)
-│   │   │   │   │   │   │       │                       ├── settings/
-│   │   │   │   │   │   │       │                       │   ├── [SettingsScreenTest.kt](./packages/app/native/androidx/android/block/src/test/kotlin/io/github/hieudoanm/block/ui/settings/SettingsScreenTest.kt)
-│   │   │   │   │   │   │       │                       │   └── [SettingsViewModelTest.kt](./packages/app/native/androidx/android/block/src/test/kotlin/io/github/hieudoanm/block/ui/settings/SettingsViewModelTest.kt)
-│   │   │   │   │   │   │       │                       └── theme/
-│   │   │   │   │   │   │       │                           ├── [ColorTest.kt](./packages/app/native/androidx/android/block/src/test/kotlin/io/github/hieudoanm/block/ui/theme/ColorTest.kt)
-│   │   │   │   │   │   │       │                           └── [ThemeTest.kt](./packages/app/native/androidx/android/block/src/test/kotlin/io/github/hieudoanm/block/ui/theme/ThemeTest.kt)
+│   │   │   │   │   │   │       │               ├── androidx/
+│   │   │   │   │   │   │       │               │   ├── activity/
+│   │   │   │   │   │   │       │               │   │   └── [MainActivityTest.kt](./packages/app/native/androidx/android/app/src/test/kotlin/io/github/hieudoanm/androidx/activity/MainActivityTest.kt)
+│   │   │   │   │   │   │       │               │   └── ui/
+│   │   │   │   │   │   │       │               │       └── home/
+│   │   │   │   │   │   │       │               │           └── [HomeScreenTest.kt](./packages/app/native/androidx/android/app/src/test/kotlin/io/github/hieudoanm/androidx/ui/home/HomeScreenTest.kt)
+│   │   │   │   │   │   │       │               ├── block/
+│   │   │   │   │   │   │       │               │   ├── accessibility/
+│   │   │   │   │   │   │       │               │   │   └── [FocusAccessibilityServiceTest.kt](./packages/app/native/androidx/android/app/src/test/kotlin/io/github/hieudoanm/block/accessibility/FocusAccessibilityServiceTest.kt)
+│   │   │   │   │   │   │       │               │   ├── activity/
+│   │   │   │   │   │   │       │               │   │   ├── [BlockActivityTest.kt](./packages/app/native/androidx/android/app/src/test/kotlin/io/github/hieudoanm/block/activity/BlockActivityTest.kt)
+│   │   │   │   │   │   │       │               │   │   └── [MainActivityTest.kt](./packages/app/native/androidx/android/app/src/test/kotlin/io/github/hieudoanm/block/activity/MainActivityTest.kt)
+│   │   │   │   │   │   │       │               │   ├── data/
+│   │   │   │   │   │   │       │               │   │   ├── database/
+│   │   │   │   │   │   │       │               │   │   │   ├── [AppDaoTest.kt](./packages/app/native/androidx/android/app/src/test/kotlin/io/github/hieudoanm/block/data/database/AppDaoTest.kt)
+│   │   │   │   │   │   │       │               │   │   │   └── [FocusDatabaseTest.kt](./packages/app/native/androidx/android/app/src/test/kotlin/io/github/hieudoanm/block/data/database/FocusDatabaseTest.kt)
+│   │   │   │   │   │   │       │               │   │   ├── entity/
+│   │   │   │   │   │   │       │               │   │   │   ├── [BlockedAppTest.kt](./packages/app/native/androidx/android/app/src/test/kotlin/io/github/hieudoanm/block/data/entity/BlockedAppTest.kt)
+│   │   │   │   │   │   │       │               │   │   │   └── [ScheduleTest.kt](./packages/app/native/androidx/android/app/src/test/kotlin/io/github/hieudoanm/block/data/entity/ScheduleTest.kt)
+│   │   │   │   │   │   │       │               │   │   └── preferences/
+│   │   │   │   │   │   │       │               │   │       └── [SettingsDataStoreTest.kt](./packages/app/native/androidx/android/app/src/test/kotlin/io/github/hieudoanm/block/data/preferences/SettingsDataStoreTest.kt)
+│   │   │   │   │   │   │       │               │   ├── di/
+│   │   │   │   │   │   │       │               │   │   └── [AppModuleTest.kt](./packages/app/native/androidx/android/app/src/test/kotlin/io/github/hieudoanm/block/di/AppModuleTest.kt)
+│   │   │   │   │   │   │       │               │   ├── navigation/
+│   │   │   │   │   │   │       │               │   │   └── [NavGraphTest.kt](./packages/app/native/androidx/android/app/src/test/kotlin/io/github/hieudoanm/block/navigation/NavGraphTest.kt)
+│   │   │   │   │   │   │       │               │   ├── repository/
+│   │   │   │   │   │   │       │               │   │   └── [FocusRepositoryTest.kt](./packages/app/native/androidx/android/app/src/test/kotlin/io/github/hieudoanm/block/repository/FocusRepositoryTest.kt)
+│   │   │   │   │   │   │       │               │   └── ui/
+│   │   │   │   │   │   │       │               │       ├── apps/
+│   │   │   │   │   │   │       │               │       │   ├── [AppListScreenTest.kt](./packages/app/native/androidx/android/app/src/test/kotlin/io/github/hieudoanm/block/ui/apps/AppListScreenTest.kt)
+│   │   │   │   │   │   │       │               │       │   └── [AppListViewModelTest.kt](./packages/app/native/androidx/android/app/src/test/kotlin/io/github/hieudoanm/block/ui/apps/AppListViewModelTest.kt)
+│   │   │   │   │   │   │       │               │       ├── block/
+│   │   │   │   │   │   │       │               │       │   └── [BlockScreenTest.kt](./packages/app/native/androidx/android/app/src/test/kotlin/io/github/hieudoanm/block/ui/block/BlockScreenTest.kt)
+│   │   │   │   │   │   │       │               │       ├── home/
+│   │   │   │   │   │   │       │               │       │   ├── [HomeScreenTest.kt](./packages/app/native/androidx/android/app/src/test/kotlin/io/github/hieudoanm/block/ui/home/HomeScreenTest.kt)
+│   │   │   │   │   │   │       │               │       │   └── [HomeViewModelTest.kt](./packages/app/native/androidx/android/app/src/test/kotlin/io/github/hieudoanm/block/ui/home/HomeViewModelTest.kt)
+│   │   │   │   │   │   │       │               │       ├── settings/
+│   │   │   │   │   │   │       │               │       │   ├── [SettingsScreenTest.kt](./packages/app/native/androidx/android/app/src/test/kotlin/io/github/hieudoanm/block/ui/settings/SettingsScreenTest.kt)
+│   │   │   │   │   │   │       │               │       │   └── [SettingsViewModelTest.kt](./packages/app/native/androidx/android/app/src/test/kotlin/io/github/hieudoanm/block/ui/settings/SettingsViewModelTest.kt)
+│   │   │   │   │   │   │       │               │       └── theme/
+│   │   │   │   │   │   │       │               │           ├── [ColorTest.kt](./packages/app/native/androidx/android/app/src/test/kotlin/io/github/hieudoanm/block/ui/theme/ColorTest.kt)
+│   │   │   │   │   │   │       │               │           └── [ThemeTest.kt](./packages/app/native/androidx/android/app/src/test/kotlin/io/github/hieudoanm/block/ui/theme/ThemeTest.kt)
+│   │   │   │   │   │   │       │               └── nfc/
+│   │   │   │   │   │   │       │                   └── [NfcModuleSmokeTest.kt](./packages/app/native/androidx/android/app/src/test/kotlin/io/github/hieudoanm/nfc/NfcModuleSmokeTest.kt)
 │   │   │   │   │   │   │       └── resources/
-│   │   │   │   │   │   │           └── [robolectric.properties](./packages/app/native/androidx/android/block/src/test/resources/robolectric.properties)
-│   │   │   │   │   │   ├── [build.gradle.kts](./packages/app/native/androidx/android/block/build.gradle.kts)
-│   │   │   │   │   │   ├── [lint.xml](./packages/app/native/androidx/android/block/lint.xml)
-│   │   │   │   │   │   └── [proguard-rules.pro](./packages/app/native/androidx/android/block/proguard-rules.pro)
+│   │   │   │   │   │   │           └── [robolectric.properties](./packages/app/native/androidx/android/app/src/test/resources/robolectric.properties)
+│   │   │   │   │   │   ├── [build.gradle.kts](./packages/app/native/androidx/android/app/build.gradle.kts)
+│   │   │   │   │   │   ├── [lint.xml](./packages/app/native/androidx/android/app/lint.xml)
+│   │   │   │   │   │   └── [proguard-rules.pro](./packages/app/native/androidx/android/app/proguard-rules.pro)
 │   │   │   │   │   ├── docs/
 │   │   │   │   │   │   ├── [ARCHITECTURE.md](./packages/app/native/androidx/android/docs/ARCHITECTURE.md)
 │   │   │   │   │   │   ├── [CONTRIBUTING.md](./packages/app/native/androidx/android/docs/CONTRIBUTING.md)
@@ -24089,72 +24113,6 @@
 │   │   │   │   │   │   └── wrapper/
 │   │   │   │   │   │       ├── [gradle-wrapper.jar](./packages/app/native/androidx/android/gradle/wrapper/gradle-wrapper.jar)
 │   │   │   │   │   │       └── [gradle-wrapper.properties](./packages/app/native/androidx/android/gradle/wrapper/gradle-wrapper.properties)
-│   │   │   │   │   ├── nfc/
-│   │   │   │   │   │   ├── src/
-│   │   │   │   │   │   │   ├── main/
-│   │   │   │   │   │   │   │   ├── kotlin/
-│   │   │   │   │   │   │   │   │   └── io/
-│   │   │   │   │   │   │   │   │       └── github/
-│   │   │   │   │   │   │   │   │           └── hieudoanm/
-│   │   │   │   │   │   │   │   │               └── nfc/
-│   │   │   │   │   │   │   │   │                   ├── activity/
-│   │   │   │   │   │   │   │   │                   │   └── [MainActivity.kt](./packages/app/native/androidx/android/nfc/src/main/kotlin/io/github/hieudoanm/nfc/activity/MainActivity.kt)
-│   │   │   │   │   │   │   │   │                   ├── data/
-│   │   │   │   │   │   │   │   │                   │   ├── database/
-│   │   │   │   │   │   │   │   │                   │   │   ├── [AppDatabase.kt](./packages/app/native/androidx/android/nfc/src/main/kotlin/io/github/hieudoanm/nfc/data/database/AppDatabase.kt)
-│   │   │   │   │   │   │   │   │                   │   │   ├── [TagHistoryDao.kt](./packages/app/native/androidx/android/nfc/src/main/kotlin/io/github/hieudoanm/nfc/data/database/TagHistoryDao.kt)
-│   │   │   │   │   │   │   │   │                   │   │   └── [TagProfileDao.kt](./packages/app/native/androidx/android/nfc/src/main/kotlin/io/github/hieudoanm/nfc/data/database/TagProfileDao.kt)
-│   │   │   │   │   │   │   │   │                   │   ├── entity/
-│   │   │   │   │   │   │   │   │                   │   │   ├── [TagHistory.kt](./packages/app/native/androidx/android/nfc/src/main/kotlin/io/github/hieudoanm/nfc/data/entity/TagHistory.kt)
-│   │   │   │   │   │   │   │   │                   │   │   └── [TagProfile.kt](./packages/app/native/androidx/android/nfc/src/main/kotlin/io/github/hieudoanm/nfc/data/entity/TagProfile.kt)
-│   │   │   │   │   │   │   │   │                   │   ├── nfc/
-│   │   │   │   │   │   │   │   │                   │   │   ├── [HceApduService.kt](./packages/app/native/androidx/android/nfc/src/main/kotlin/io/github/hieudoanm/nfc/data/nfc/HceApduService.kt)
-│   │   │   │   │   │   │   │   │                   │   │   ├── [NdefReader.kt](./packages/app/native/androidx/android/nfc/src/main/kotlin/io/github/hieudoanm/nfc/data/nfc/NdefReader.kt)
-│   │   │   │   │   │   │   │   │                   │   │   ├── [NdefWriter.kt](./packages/app/native/androidx/android/nfc/src/main/kotlin/io/github/hieudoanm/nfc/data/nfc/NdefWriter.kt)
-│   │   │   │   │   │   │   │   │                   │   │   ├── [TagDispatcher.kt](./packages/app/native/androidx/android/nfc/src/main/kotlin/io/github/hieudoanm/nfc/data/nfc/TagDispatcher.kt)
-│   │   │   │   │   │   │   │   │                   │   │   └── [TagTechInspector.kt](./packages/app/native/androidx/android/nfc/src/main/kotlin/io/github/hieudoanm/nfc/data/nfc/TagTechInspector.kt)
-│   │   │   │   │   │   │   │   │                   │   ├── preferences/
-│   │   │   │   │   │   │   │   │                   │   │   └── [SettingsDataStore.kt](./packages/app/native/androidx/android/nfc/src/main/kotlin/io/github/hieudoanm/nfc/data/preferences/SettingsDataStore.kt)
-│   │   │   │   │   │   │   │   │                   │   └── repository/
-│   │   │   │   │   │   │   │   │                   │       └── [NfcRepository.kt](./packages/app/native/androidx/android/nfc/src/main/kotlin/io/github/hieudoanm/nfc/data/repository/NfcRepository.kt)
-│   │   │   │   │   │   │   │   │                   ├── di/
-│   │   │   │   │   │   │   │   │                   │   └── [AppModule.kt](./packages/app/native/androidx/android/nfc/src/main/kotlin/io/github/hieudoanm/nfc/di/AppModule.kt)
-│   │   │   │   │   │   │   │   │                   ├── domain/
-│   │   │   │   │   │   │   │   │                   │   └── model/
-│   │   │   │   │   │   │   │   │                   │       ├── [NdefRecordModel.kt](./packages/app/native/androidx/android/nfc/src/main/kotlin/io/github/hieudoanm/nfc/domain/model/NdefRecordModel.kt)
-│   │   │   │   │   │   │   │   │                   │       └── [TagInfo.kt](./packages/app/native/androidx/android/nfc/src/main/kotlin/io/github/hieudoanm/nfc/domain/model/TagInfo.kt)
-│   │   │   │   │   │   │   │   │                   ├── navigation/
-│   │   │   │   │   │   │   │   │                   │   └── [NavGraph.kt](./packages/app/native/androidx/android/nfc/src/main/kotlin/io/github/hieudoanm/nfc/navigation/NavGraph.kt)
-│   │   │   │   │   │   │   │   │                   └── ui/
-│   │   │   │   │   │   │   │   │                       ├── history/
-│   │   │   │   │   │   │   │   │                       │   ├── [HistoryScreen.kt](./packages/app/native/androidx/android/nfc/src/main/kotlin/io/github/hieudoanm/nfc/ui/history/HistoryScreen.kt)
-│   │   │   │   │   │   │   │   │                       │   └── [HistoryViewModel.kt](./packages/app/native/androidx/android/nfc/src/main/kotlin/io/github/hieudoanm/nfc/ui/history/HistoryViewModel.kt)
-│   │   │   │   │   │   │   │   │                       ├── home/
-│   │   │   │   │   │   │   │   │                       │   ├── [HomeScreen.kt](./packages/app/native/androidx/android/nfc/src/main/kotlin/io/github/hieudoanm/nfc/ui/home/HomeScreen.kt)
-│   │   │   │   │   │   │   │   │                       │   └── [HomeViewModel.kt](./packages/app/native/androidx/android/nfc/src/main/kotlin/io/github/hieudoanm/nfc/ui/home/HomeViewModel.kt)
-│   │   │   │   │   │   │   │   │                       ├── settings/
-│   │   │   │   │   │   │   │   │                       │   ├── [SettingsScreen.kt](./packages/app/native/androidx/android/nfc/src/main/kotlin/io/github/hieudoanm/nfc/ui/settings/SettingsScreen.kt)
-│   │   │   │   │   │   │   │   │                       │   └── [SettingsViewModel.kt](./packages/app/native/androidx/android/nfc/src/main/kotlin/io/github/hieudoanm/nfc/ui/settings/SettingsViewModel.kt)
-│   │   │   │   │   │   │   │   │                       └── theme/
-│   │   │   │   │   │   │   │   │                           ├── [Color.kt](./packages/app/native/androidx/android/nfc/src/main/kotlin/io/github/hieudoanm/nfc/ui/theme/Color.kt)
-│   │   │   │   │   │   │   │   │                           └── [Theme.kt](./packages/app/native/androidx/android/nfc/src/main/kotlin/io/github/hieudoanm/nfc/ui/theme/Theme.kt)
-│   │   │   │   │   │   │   │   ├── res/
-│   │   │   │   │   │   │   │   │   ├── values/
-│   │   │   │   │   │   │   │   │   │   ├── [colors.xml](./packages/app/native/androidx/android/nfc/src/main/res/values/colors.xml)
-│   │   │   │   │   │   │   │   │   │   ├── [strings.xml](./packages/app/native/androidx/android/nfc/src/main/res/values/strings.xml)
-│   │   │   │   │   │   │   │   │   │   └── [themes.xml](./packages/app/native/androidx/android/nfc/src/main/res/values/themes.xml)
-│   │   │   │   │   │   │   │   │   └── xml/
-│   │   │   │   │   │   │   │   │       └── [apduservice.xml](./packages/app/native/androidx/android/nfc/src/main/res/xml/apduservice.xml)
-│   │   │   │   │   │   │   │   └── [AndroidManifest.xml](./packages/app/native/androidx/android/nfc/src/main/AndroidManifest.xml)
-│   │   │   │   │   │   │   └── test/
-│   │   │   │   │   │   │       └── kotlin/
-│   │   │   │   │   │   │           └── io/
-│   │   │   │   │   │   │               └── github/
-│   │   │   │   │   │   │                   └── hieudoanm/
-│   │   │   │   │   │   │                       └── nfc/
-│   │   │   │   │   │   │                           └── [NfcModuleSmokeTest.kt](./packages/app/native/androidx/android/nfc/src/test/kotlin/io/github/hieudoanm/nfc/NfcModuleSmokeTest.kt)
-│   │   │   │   │   │   ├── [build.gradle.kts](./packages/app/native/androidx/android/nfc/build.gradle.kts)
-│   │   │   │   │   │   └── [proguard-rules.pro](./packages/app/native/androidx/android/nfc/proguard-rules.pro)
 │   │   │   │   │   ├── [AGENTS.md](./packages/app/native/androidx/android/AGENTS.md)
 │   │   │   │   │   ├── [README.md](./packages/app/native/androidx/android/README.md)
 │   │   │   │   │   ├── [build.gradle.kts](./packages/app/native/androidx/android/build.gradle.kts)
@@ -26739,4 +26697,4 @@
 └── [turbo.json](./turbo.json)
 ```
 
-5842 directories, 20894 files
+5813 directories, 20881 files

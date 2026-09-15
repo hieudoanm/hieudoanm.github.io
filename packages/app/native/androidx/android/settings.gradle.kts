@@ -28,5 +28,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "androidx"
 include(":app")
-include(":block")
-include(":nfc")
