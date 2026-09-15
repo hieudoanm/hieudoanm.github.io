@@ -38,7 +38,7 @@ struct MenuBarView: View {
 
             footer
         }
-        .frame(width: 480)
+        .frame(width: 600)
         .onAppear {
             viewModel.refresh()
             networkViewModel.start()
@@ -53,7 +53,7 @@ struct MenuBarView: View {
             Button {
                 openWindow(id: HomebrewView.windowID)
             } label: {
-                Label("Homebrew Manager…", systemImage: "hammer")
+                Label("Applications Manager…", systemImage: "hammer")
             }
             .buttonStyle(.borderless)
             Spacer()

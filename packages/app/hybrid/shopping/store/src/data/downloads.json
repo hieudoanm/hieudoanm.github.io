@@ -1506,34 +1506,18 @@
     "label": "Apps (Android)",
     "items": [
       {
-        "label": "Block",
+        "label": "AndroidX",
         "primaryCategory": "Utilities",
         "secondaryCategory": "",
-        "icon": "PiProhibit",
-        "href": "https://hieudoanm.github.io/free/block",
+        "icon": "PiAndroidLogo",
+        "href": "https://hieudoanm.github.io/free/androidx",
         "version": "latest",
-        "lastUpdated": "2025-01-01",
+        "lastUpdated": "2026-09-15",
         "fileSize": "",
         "actions": [
           {
             "label": ".apk",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-block-latest/app-universal-release.apk"
-          }
-        ]
-      },
-      {
-        "label": "NFC",
-        "primaryCategory": "Utilities",
-        "secondaryCategory": "",
-        "icon": "PiCardholder",
-        "href": "https://hieudoanm.github.io/free/nfc",
-        "version": "latest",
-        "lastUpdated": "2025-01-01",
-        "fileSize": "",
-        "actions": [
-          {
-            "label": ".apk",
-            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-nfc-latest/app-universal-release.apk"
+            "url": "https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-android-androidx-latest/app-release.apk"
           }
         ]
       }
@@ -1649,11 +1633,11 @@
   },
   {
     "id": "extensions",
-    "label": "Extensions (Browser)",
+    "label": "Extensions",
     "items": [
       {
         "label": "BrowserX",
-        "primaryCategory": "Productivity",
+        "primaryCategory": "Extensions",
         "secondaryCategory": "",
         "icon": "PiTabs",
         "href": "https://hieudoanm.github.io/free/browserx",
