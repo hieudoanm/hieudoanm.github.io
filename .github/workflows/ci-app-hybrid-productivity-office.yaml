@@ -1,0 +1,33 @@
+name: CI - App - Hybrid - Productivity - Office
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/productivity/office/**/*'
+      - '.github/workflows/ci-app-hybrid-productivity-office.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-hybrid-productivity-office-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/productivity/office
+      filter: '@hieudoanm.github.io/office'
+      releaseName: app-hybrid-productivity-office-latest
+      releaseTitle: App - Hybrid - Productivity - Office (latest)
+      artifactPrefix: productivity-office
+      artifactName: office
