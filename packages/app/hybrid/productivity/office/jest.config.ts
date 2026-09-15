@@ -12,6 +12,9 @@ const config = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   testTimeout: 30000,
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
+  transformIgnorePatterns: [
+    '/node_modules/(?!\\.pnpm|@codemirror|@lezer|marked|dompurify|d3-force|d3-dispatch|d3-quadtree|d3-timer)/',
+  ],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
   },

@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 
-jest.mock('@/components/organisms/CalendarApp', () => ({
+jest.mock('@/components/calendar/organisms/CalendarApp', () => ({
   CalendarApp: () => <div data-testid="calendar-app">CalendarApp</div>,
 }));
 

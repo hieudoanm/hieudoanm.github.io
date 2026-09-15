@@ -3,9 +3,9 @@
 import {
   HomeTemplate,
   type CourseItem,
-} from '@/components/templates/HomeTemplate';
+} from '@/components/shared/templates/HomeTemplate';
 import { NextPage } from 'next';
-import { PiCalendarBlank, PiTable } from 'react-icons/pi';
+import { PiCalendarBlank, PiMarkdownLogo, PiTable } from 'react-icons/pi';
 
 const ITEMS: CourseItem[] = [
   {
@@ -19,6 +19,12 @@ const ITEMS: CourseItem[] = [
     description: 'A minimal spreadsheet editor for CSV files',
     icon: PiTable,
     href: '/csv/',
+  },
+  {
+    label: 'Markdown',
+    description: 'A minimal Obsidian-style markdown knowledge base',
+    icon: PiMarkdownLogo,
+    href: '/md/',
   },
 ];
 

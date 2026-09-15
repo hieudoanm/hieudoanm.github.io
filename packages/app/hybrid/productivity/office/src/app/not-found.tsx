@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ErrorTemplate } from '@/components/templates/ErrorTemplate';
+import { ErrorTemplate } from '@/components/shared/templates/ErrorTemplate';
 
 const NotFoundPage = () => (
   <ErrorTemplate

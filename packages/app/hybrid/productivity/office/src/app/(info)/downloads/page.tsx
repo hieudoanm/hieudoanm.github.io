@@ -1,4 +1,4 @@
-import { DownloadsTemplate } from '@/components/templates/DownloadsTemplate';
+import { DownloadsTemplate } from '@/components/shared/templates/DownloadsTemplate';
 import { download } from '@/content/download';
 
 const DownloadsPage = () => <DownloadsTemplate {...download} />;

@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 
-jest.mock('@/lib/fonts', () => ({
+jest.mock('@/lib/calendar/fonts', () => ({
   sans: { variable: '--font-sans' },
   mono: { variable: '--font-mono' },
   serif: { variable: '--font-serif' },
@@ -8,7 +8,7 @@ jest.mock('@/lib/fonts', () => ({
 
 jest.mock('@/styles/globals.css', () => ({}));
 
-jest.mock('@/components/organisms/Header', () => ({
+jest.mock('@/components/shared/organisms/Header', () => ({
   Header: () => <div data-testid="header">Header</div>,
 }));
 

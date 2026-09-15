@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 
-jest.mock('@/components/editor/Editor', () => ({
+jest.mock('@/components/csv/organisms/Editor', () => ({
   __esModule: true,
   default: () => <div data-testid="csv-editor">Editor</div>,
 }));

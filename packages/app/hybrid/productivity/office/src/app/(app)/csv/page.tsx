@@ -1,7 +1,7 @@
 'use client';
 
 import { FC } from 'react';
-import Editor from '@/components/editor/Editor';
+import Editor from '@/components/csv/organisms/Editor';
 
 const CsvPage: FC = () => (
   <main className="bg-base-100 flex flex-col">

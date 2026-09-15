@@ -1,4 +1,4 @@
-import { daysBetween } from '@/lib/daysBetween';
+import { daysBetween } from '@/lib/calendar/daysBetween';
 
 describe('daysBetween', () => {
   it('returns 0 for same date', () => {

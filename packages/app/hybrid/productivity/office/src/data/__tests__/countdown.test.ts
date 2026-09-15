@@ -1,4 +1,8 @@
-import { diffParts, calcProgress, toDateInputValue } from '@/lib/countdown';
+import {
+  diffParts,
+  calcProgress,
+  toDateInputValue,
+} from '@/lib/calendar/countdown';
 
 describe('diffParts', () => {
   it('returns zeros for same date', () => {

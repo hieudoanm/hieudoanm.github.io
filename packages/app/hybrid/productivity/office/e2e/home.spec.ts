@@ -36,6 +36,16 @@ test.describe('Office Hub', () => {
     await expect(page.getByRole('grid')).toBeVisible();
   });
 
+  test('md tool card is visible', async ({ page }) => {
+    await expect(page.getByTestId('tool-card-md')).toBeVisible();
+  });
+
+  test('clicking md card navigates to md app', async ({ page }) => {
+    await page.getByTestId('tool-card-md').click();
+    await expect(page).toHaveURL('/md/');
+    await expect(page.getByLabel('Search notes')).toBeVisible();
+  });
+
   test('header navigation links are visible', async ({ page }) => {
     await expect(page.getByText('About')).toBeVisible();
     await expect(page.getByText('Downloads')).toBeVisible();

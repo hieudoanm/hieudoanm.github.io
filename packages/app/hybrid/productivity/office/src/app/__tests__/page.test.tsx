@@ -24,4 +24,14 @@ describe('HomePage', () => {
     render(<HomePage />);
     expect(screen.getByTestId('tool-card-csv')).toHaveAttribute('href', '/csv');
   });
+
+  it('renders the md tool card', () => {
+    render(<HomePage />);
+    expect(screen.getByTestId('tool-card-md')).toBeInTheDocument();
+  });
+
+  it('links the md card to the md route', () => {
+    render(<HomePage />);
+    expect(screen.getByTestId('tool-card-md')).toHaveAttribute('href', '/md');
+  });
 });
