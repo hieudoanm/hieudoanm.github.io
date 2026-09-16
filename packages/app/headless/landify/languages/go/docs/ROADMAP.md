@@ -31,14 +31,26 @@
       the parent `landify/examples/` directory
 - [x] Rolling GitHub Release via the reusable Go CI template
 
-## Phase 4 — Polish
+## Phase 4 — Desktop studio (shipped)
+
+- [x] `landify studio` fyne app behind the `gui` build tag (`make build-gui`)
+- [x] Split YAML editor / live HTML preview with inline validation issues
+- [x] Theme studio: 64 presets, color pickers, derived-token and WCAG contrast
+      readouts
+- [x] Forms mode with per-section labelled fields
+- [x] Generic collection editors (add / remove / reorder) wired to the YAML
+- [x] 12 page-type selector with scaffold/apply per type
+- [x] One-click build + preview server + browser open + file-watch auto-rebuild
+- [x] Multi-document tabs (new / open / close / save / save-as)
+
+## Phase 5 — Polish
 
 - [ ] Configurable favicon / social meta (Open Graph, Twitter cards)
 - [ ] Custom fonts and typography scale options in `theme:`
 - [ ] Analytical components (countdown, announcement bar, lead form handler)
 - [ ] Accessibility audit (keyboard nav, focus states, contrast ratios)
 
-## Phase 5 — Ecosystem
+## Phase 6 — Ecosystem
 
 - [ ] Multi-page site builds (a directory of `landify.yaml` files → sitemap)
 - [ ] JSON schema export (`landify schema`) for editor tooling

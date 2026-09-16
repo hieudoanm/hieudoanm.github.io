@@ -10,6 +10,7 @@ commands, layout and content rules specific to this Go module.
 | ---------------- | ------------------------------------------------- |
 | `make all`       | `format` + `lint` + `test` + `build`              |
 | `make build`     | Compile the CLI to `./bin/landify`                |
+| `make build-gui` | Build `./bin/landify-gui` (fyne studio, needs CGO) |
 | `make build-all` | Cross-compile 4 platforms into `bin/`             |
 | `make test`      | `go test ./...`                                   |
 | `make lint`      | `go vet ./...`                                    |
@@ -30,13 +31,20 @@ Verification before handoff: `make all` passes — `go fmt` produces no diff,
 - Standard Go layout: `main.go` + `cmd/` + `internal/landify/`. Keep commands
   thin: `cmd/*.go` parse flags and delegate to `internal/landify` (e.g.
   `BuildFile`, `ValidateFile`, `WritePlaceholder`).
-- The `cmd/` files register exactly five subcommands on the root: `new`,
-  `validate`, `build`, `themes`, `serve`. `--file` (`-f`, default
+- The `cmd/` files register exactly six subcommands on the root: `new`,
+  `validate`, `build`, `themes`, `serve`, `studio`. `--file` (`-f`, default
   `landify.yaml`) is a persistent root flag; `build` adds `--output`/`-o`
   (`index.html`) and `--theme`/`-t`; `new` adds `--type`/`-t` (`product`) and
   `--force`/`-F`; `serve` adds `--dir`/`-d` (`.`), `--bind`/`-b`
   (`127.0.0.1`) and `--port`/`-p` (`8080`).
   `serve` shuts down gracefully on `SIGINT`/`SIGTERM`.
+- `studio` takes an optional positional `[path]` (defaults to a new blank
+  product scaffold) and delegates to `internal/gui.Run`. It is the only
+  subcommand gated by a build tag: the default build ships a stub that returns
+  `gui.ErrUnavailable`, while `-tags gui` (via `make build-gui`, CGO enabled)
+  compiles the fyne desktop app. Pure logic in `internal/gui` (doc.go,
+  nodeops.go, schema.go, wcag.go) must never import fyne so the default build
+  and tests stay CGO-free.
 - Follow repo-wide Go rules from the root [AGENTS.md](../../../../../AGENTS.md):
   `error` last, handle errors explicitly, `var` zero-init over `:=`, no global
   state, table-driven tests, return early.

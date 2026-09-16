@@ -8,10 +8,13 @@
 | CLI          | `github.com/spf13/cobra`                  |
 | YAML parsing | `gopkg.in/yaml.v3` (strict `KnownFields`) |
 | Rendering    | `html/template` (stdlib)                  |
+| Desktop GUI  | `fyne.io/fyne/v2` (behind the `gui` tag)  |
 | Assets       | `embed.FS` via `//go:embed`               |
 | Testing      | Standard `go test`, table-driven tests    |
 
-No CGO, no network calls, no external services. The binary is pure static.
+No network calls, no external services. The default `landify` binary is pure
+static (no CGO); the optional `landify-gui` studio binary is built with
+`-tags gui` and CGO enabled (fyne), everything else behind the tag is stubbed.
 
 ## Directory Structure
 
@@ -24,7 +27,8 @@ go/
 │   ├── validate.go      # landify validate [-f file]
 │   ├── build.go         # landify build [-f file] [-o output] [-t theme]
 │   ├── themes.go        # landify themes
-│   └── serve.go         # landify serve [-d dir] [-p port]
+│   ├── serve.go         # landify serve [-d dir] [-p port]
+│   └── studio.go        # landify studio [path]
 ├── internal/landify/    # Schema, validation, rendering, themes, scaffolding
 │   ├── config.go        # Config/Theme structs, Load/LoadFile (strict decode)
 │   ├── sections.go      # Per-page-type section types (Pricing, App, FAQ, …)
@@ -34,6 +38,20 @@ go/
 │   ├── build.go         # Render, BuildFile, themeCSS, @LANDIFY_THEME@ splice
 │   ├── placeholder.go   # WritePlaceholder (landify new scaffolding)
 │   └── serve.go         # Serve(ctx, dir, ln): static file server
+├── internal/gui/        # Desktop studio (fyne, gated behind gui build tag)
+│   ├── gui.go           # !gui stub: Run → ErrUnavailable
+│   ├── gui_fyne.go      # gui build: Run (opens editor window)
+│   ├── doc.go           # Doc model, YAML ↔ Config, scaffold / save / render
+│   ├── nodeops.go       # yaml.v3 node-level collection ops (add/remove/move/set)
+│   ├── schema.go        # collection catalog, section forms, field templates
+│   ├── wcag.go          # WCAG 2.1 contrast ratio + level helpers
+│   ├── studio.go        # controller: AppTabs, menus, toolbar, status, watch loop
+│   ├── page.go          # per-tab editor / preview / type-scaffold widgets
+│   ├── actions.go       # add / close / open / save / save-as actions
+│   ├── forms.go         # per-section labelled field forms (forms mode)
+│   ├── collections.go   # generic collection editors (add/remove/reorder)
+│   ├── themestudio.go   # theme studio: presets, color pickers, token + WCAG
+│   └── build.go         # one-click build + preview server + browser open
 ├── static/              # Embedded templates, partials, examples
 │   ├── templates/       # template-<type>.tmpl — one per page type (12)
 │   ├── partials/        # base-css, header, footer
@@ -108,6 +126,27 @@ the `--force` flag overrides).
 context cancellation (`SIGINT`/`SIGTERM`). Used only for previewing built
 pages.
 
+### Desktop studio (`internal/gui/`)
+
+The studio is a fyne app compiled only with the `gui` build tag
+(`make build-gui`, CGO enabled). The default build ships `gui.go` with
+`//go:build !gui` — `Run(path)` returns `ErrUnavailable` — so CI, tests and the
+static CLI never pull in fyne. Pure logic shared with the GUI (`doc.go`,
+`nodeops.go`, `schema.go`, `wcag.go`) must stay fyne-free so it compiles and
+tests in both builds.
+
+The `Doc` model in `doc.go` is the single source of truth: it keeps the raw
+YAML plus a decoded `landify.Config`, and every mutation (type scaffold,
+`SetTheme`, `ApplySectionFields`, collection edits) rewrites the YAML through
+the yaml.v3 node helpers in `nodeops.go` while `Replace` round-trips any raw
+editor text through parse → validate → re-serialize. The controller in
+`studio.go` owns a `container.DocTabs` of pages plus the theme-studio / forms
+panes; a background file-watcher reloads the active document and rebuilds the
+preview server on disk changes. `build.go` composes `landify.Render`,
+`landify.Serve`-style on-demand preview (writes `index.html` into a per-tab
+temp dir, serves it, opens the browser) — exactly the same pipeline the CLI
+uses, so the GUI can never render something the CLI can't.
+
 ## Configuration
 
 Landify reads no environment variables and writes no config files. Everything
@@ -122,3 +161,4 @@ is expressed through the YAML content file and CLI flags:
 | `--force` / `-F` (new)    | `false`        | Overwrite existing file      |
 | `--dir` / `-d` (serve)    | `.`            | Directory to serve           |
 | `--port` / `-p` (serve)   | `8080`         | Listen port (127.0.0.1)      |
+| `[path]` (studio)         | (new product)  | YAML file to open in the GUI |

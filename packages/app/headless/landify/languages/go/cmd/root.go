@@ -21,7 +21,8 @@ Commands:
   validate  check the schema of landify.yaml
   build     generate index.html from landify.yaml
   themes    list the sixty-four built-in theme presets
-  serve     preview the result over HTTP`,
+  serve     preview the result over HTTP
+  studio    open the optional desktop editor (GUI build)`,
 	SilenceUsage:  true,
 	SilenceErrors: true,
 }
@@ -36,5 +37,5 @@ func Execute() {
 
 func init() {
 	rootCmd.PersistentFlags().StringP("file", "f", "landify.yaml", "path to the YAML content file")
-	rootCmd.AddCommand(newCmd, validateCmd, buildCmd, themesCmd, serveCmd)
+	rootCmd.AddCommand(newCmd, validateCmd, buildCmd, themesCmd, serveCmd, studioCmd)
 }

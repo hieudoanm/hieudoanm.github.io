@@ -20,10 +20,10 @@ standalone or embedded in other tooling.
 
 `.github/workflows/ci-app-headless-landify.yaml` (reusable Go template):
 
-| Stage     | What it does                                                         |
-| --------- | -------------------------------------------------------------------- |
+| Stage     | What it does                                                            |
+| --------- | ----------------------------------------------------------------------- |
 | `ci`      | gofmt check, `make lint`, `make test`, `make build-all`, upload `bin/*` |
-| `publish` | Publishes a rolling GitHub Release from the uploaded artifact        |
+| `publish` | Publishes a rolling GitHub Release from the uploaded artifact           |
 
 Artifacts (upload name `app-headless-landify`):
 
