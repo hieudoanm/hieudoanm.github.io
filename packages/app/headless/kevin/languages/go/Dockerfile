@@ -2,14 +2,17 @@ FROM golang:1.27-alpine AS builder
 
 WORKDIR /app
 
+COPY go.mod go.sum ./
+RUN go mod download
+
 COPY . .
 
-RUN CGO_ENABLED=0 go build -o /app/kv .
+RUN CGO_ENABLED=0 go build -o /app/kevin .
 
 FROM scratch
 
-COPY --from=builder /app/kv /kv
+COPY --from=builder /app/kevin /kevin
 
 EXPOSE 6379
 
-ENTRYPOINT ["/kv"]
+ENTRYPOINT ["/kevin", "serve"]

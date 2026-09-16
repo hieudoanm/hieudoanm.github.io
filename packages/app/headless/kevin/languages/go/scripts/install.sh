@@ -38,4 +38,4 @@ printf "Installed %s to %s/%s\n" "$BIN_NAME" "$INSTALL_DIR" "$BIN_NAME"
 if [[ ":$PATH:" != *":$INSTALL_DIR:"* ]]; then
   printf '  Add it to your PATH: export PATH="%s:$PATH"\n' "$INSTALL_DIR"
 fi
-printf "Try '%s --port 6379'\n" "$BIN_NAME"
+printf "Try '%s serve --port 6379'\n" "$BIN_NAME"

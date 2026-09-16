@@ -6,32 +6,42 @@ SET, GET, KEYS, DEL over TCP, behaviour-identical to the C (`kevin/c`) and C++
 
 ## Commands
 
-| Command                | Description                                  |
-| ---------------------- | -------------------------------------------- |
-| `go build ./...`       | Compile all packages                         |
-| `go test ./...`        | All unit + TCP integration tests             |
-| `go vet ./...`         | Static analysis                              |
-| `gofmt -w .`           | Format all Go files                          |
-| `make all`             | `format` + `lint` + `test` + `build`         |
-| `make build`           | Build `bin/kv` (CGO disabled)                |
-| `make build-all`       | Cross-compile 4 platforms into `bin/`        |
-| `make test`            | `go test ./...`                              |
-| `make lint`            | `go vet ./...`                               |
-| `make format`          | `go fmt ./...`                               |
-| `make coverage`        | Generate HTML coverage report                |
-| `make tidy`            | `go mod tidy`                                |
-| `make install`         | Install to `~/bin/kv`                        |
-| `make clean`           | Remove `./bin` and `./coverage`              |
+| Command          | Description                               |
+| ---------------- | ----------------------------------------- |
+| `go build ./...` | Compile all packages                      |
+| `go test ./...`  | All unit + TCP integration tests          |
+| `go vet ./...`   | Static analysis                           |
+| `gofmt -w .`     | Format all Go files                       |
+| `make all`       | `format` + `lint` + `test` + `build`      |
+| `make build`     | Build `bin/kevin` (CGO disabled)          |
+| `make build-gui` | Build `bin/kevin-gui` with fyne (`--gui`) |
+| `make build-all` | Cross-compile 4 platforms into `bin/`     |
+| `make test`      | `go test ./...`                           |
+| `make lint`      | `go vet ./...`                            |
+| `make format`    | `go fmt ./...`                            |
+| `make coverage`  | Generate HTML coverage report             |
+| `make tidy`      | `go mod tidy`                             |
+| `make install`   | Install to `~/bin/kevin`                  |
+| `make clean`     | Remove `./bin` and `./coverage`           |
 
 ## Key Conventions
 
-- Entrypoint is the module root `main.go` (`package main`); it parses `--port`
-  (default 6379), opens a TCP listener, and hands everything to
-  `server.New(db.New()).Serve(ctx, ln)`. Keep the entrypoint thin.
-- Standard Go layout: `main.go` + `internal/db` (store) + `internal/server`
-  (TCP accept loop + protocol handler). Storage lives in `internal/db`;
-  parsing lives in `internal/server/handler.go`. `internal/db` must not
-  import `internal/server` (avoid cycles).
+- CLI is built with cobra: `main.go` (`package main`) stays thin and calls
+  `cmd.NewRootCommand().Execute()`. The root command declares one subcommand,
+  `serve`, wire in `cmd/root.go` + `cmd/serve.go`. `serve` dialogs `--port`
+  (default 6379) and `--gui`. Without `--gui`, `serve` calls
+  `server.New(db.New()).Serve(ctx, ln)`.
+- Standard Go layout: `main.go` + `cmd/` (cobra CLI) + `internal/db` (store) +
+  `internal/server` (TCP accept loop + protocol handler) + `internal/gui`
+  (fyne key/value manager). Storage lives in `internal/db`; parsing lives in
+  `internal/server/handler.go`. `internal/db` must not import `internal/server`
+  (avoid cycles).
+- `--gui` opens the fyne window on the same `db.DB` as the TCP server. fyne
+  requires CGO, so the window lives behind the `gui` build tag:
+  `internal/gui/gui_fyne.go` (`//go:build gui`) is the real window;
+  `internal/gui/gui.go` (no tag) is a stub whose `Run` returns
+  `gui.ErrUnavailable`. Default builds stay CGO-free; `make build-gui` links
+  the window.
 - Protocol parsing mirrors the C reference exactly: strip trailing `\r\n`,
   skip empty/whitespace lines, tokenise on spaces, case-insensitive commands,
   `SET` preserves internal value spaces, `GET`/`DEL` require exactly one arg.
@@ -40,7 +50,9 @@ SET, GET, KEYS, DEL over TCP, behaviour-identical to the C (`kevin/c`) and C++
   (empty/whitespace lines return `ok=false`). Keep it table-testable.
 - Follow repo-wide Go rules from the root [AGENTS.md](../../../../../AGENTS.md):
   `error` last, handle errors explicitly, `var` zero-init over `:=`, no global
-  state, table-driven tests, return early.
+  state, table-driven tests, return early. Follow the cobra subsection: `RunE`
+  over `Run`, thin `RunE` bodies, nested commands via `AddCommand`, persistent
+  flags for shared options.
 - Tests: `internal/db` colocated unit tests; `internal/server` has table-driven
   handler tests (no TCP) plus a real TCP `Server.Serve` integration test with
   concurrent clients.
@@ -54,16 +66,17 @@ SET, GET, KEYS, DEL over TCP, behaviour-identical to the C (`kevin/c`) and C++
 
 - In-memory `map[string]string` guarded by a `sync.RWMutex` — no persistence,
   no external storage.
-- `--port` flag (default `6379`) is the only configuration; no env vars.
+- `serve --port` (default `6379`) and `serve --gui` are the only
+  configuration; no env vars.
 - `bin/` and `coverage/` are gitignored (build output).
 
 ## Documentation
 
-| Document        | Description                                  |
-| --------------- | -------------------------------------------- |
-| [docs](./docs/) | Architecture, contributing, downloads, packaging, roadmap |
-| [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md) | Tech stack, module map, request flow |
-| [docs/CONTRIBUTING.md](./docs/CONTRIBUTING.md) | Setup, commands, conventions, testing |
-| [docs/DOWNLOADS.md](./docs/DOWNLOADS.md) | Get the binary, Docker image, or source |
-| [docs/PACKAGING.md](./docs/PACKAGING.md) | Binary + container + CI artifact pipeline |
-| [docs/ROADMAP.md](./docs/ROADMAP.md) | Phased feature roadmap |
+| Document                                       | Description                                               |
+| ---------------------------------------------- | --------------------------------------------------------- |
+| [docs](./docs/)                                | Architecture, contributing, downloads, packaging, roadmap |
+| [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md) | Tech stack, module map, request flow                      |
+| [docs/CONTRIBUTING.md](./docs/CONTRIBUTING.md) | Setup, commands, conventions, testing                     |
+| [docs/DOWNLOADS.md](./docs/DOWNLOADS.md)       | Get the binary, Docker image, or source                   |
+| [docs/PACKAGING.md](./docs/PACKAGING.md)       | Binary + container + CI artifact pipeline                 |
+| [docs/ROADMAP.md](./docs/ROADMAP.md)           | Phased feature roadmap                                    |

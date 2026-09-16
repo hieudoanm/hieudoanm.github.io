@@ -40,8 +40,8 @@ Pick the option that fits your environment.
 [darwin-arm64]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-kevin-latest/app-headless-kevin-go-kv-darwin-arm64
 
 ```
-chmod +x kv
-./kv --port 6379
+chmod +x kevin
+./kevin serve --port 6379
 ```
 
 ### Docker
@@ -61,8 +61,8 @@ Prefer to build it yourself? Clone, build, and run in three steps:
 ```bash
 git clone https://github.com/hieudoanm/hieudoanm.github.io.git
 cd packages/app/headless/kevin/go
-go build -o bin/kv .
-./bin/kv --port 6379
+go build -o bin/kevin .
+./bin/kevin serve --port 6379
 ```
 
 See [PACKAGING](PACKAGING) for the CI artifact pipeline and
@@ -72,9 +72,15 @@ See [PACKAGING](PACKAGING) for the CI artifact pipeline and
 
 ## Usage
 
+The CLI is built with [cobra](https://cobra.dev) and exposes a single
+subcommand:
+
 ```bash
 # Start the server on the Redis default port
-./kv --port 6379
+./kevin serve --port 6379
+
+# Open the key/value manager GUI alongside the server (see build-gui below)
+./kevin serve --gui
 
 # Talk to it with any Redis-cli-compatible tool or plain TCP:
 #   printf 'SET foo bar\nGET foo\n' | nc 127.0.0.1 6379
@@ -95,12 +101,27 @@ Redis-style `ERR unknown command` / `ERR usage: ...` response.
 
 ## Configuration
 
-| Flag   | Default | Purpose         |
-| ------ | ------- | --------------- |
-| `--port` | `6379` | TCP listen port |
+| Flag      | Default | Purpose                                            |
+| --------- | ------- | -------------------------------------------------- |
+| `--port`  | `6379`  | TCP listen port                                    |
+| `--gui`   | `false` | Open the key/value manager GUI alongside the server |
 
 The server is stateless and in-memory — all data is lost on shutdown, matching
 the C and C++ implementations.
+
+## GUI
+
+`kevin serve --gui` opens a minimal [fyne](https://fyne.io) window to inspect
+and edit key/value pairs while the TCP server runs in the background. Because
+fyne requires CGO, the GUI-linked binary is built separately:
+
+```bash
+make build-gui       # builds bin/kevin-gui
+./bin/kevin-gui serve --gui --port 6379
+```
+
+Plain `make build` / `make build-all` remain CGO-free; `serve --gui` then
+reports that GUI support is not compiled in.
 
 ## Documentation
 

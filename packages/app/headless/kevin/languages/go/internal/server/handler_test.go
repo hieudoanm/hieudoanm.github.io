@@ -3,6 +3,7 @@ package server
 import (
 	"strings"
 	"testing"
+	"time"
 
 	"github.com/hieudoanm/kevin/internal/db"
 )
@@ -18,8 +19,11 @@ func TestHandleLine(t *testing.T) {
 		{name: "ping", line: "PING", want: "PONG\n", reply: true},
 		{name: "ping case-insensitive", line: "ping", want: "PONG\n", reply: true},
 		{name: "set", line: "SET mykey myvalue", want: "OK\n", reply: true},
-		{name: "set no args", line: "SET", want: "ERR usage: SET key value\n", reply: true},
-		{name: "set one arg", line: "SET key", want: "ERR usage: SET key value\n", reply: true},
+		{name: "set no args", line: "SET", want: "ERR usage: SET key value [EX seconds]\n", reply: true},
+		{name: "set one arg", line: "SET key", want: "ERR usage: SET key value [EX seconds]\n", reply: true},
+		{name: "set ex", line: "SET mykey myvalue EX 10", want: "OK\n", reply: true},
+		{name: "set ex invalid", line: "SET mykey myvalue EX abc", want: "ERR invalid expire time\n", reply: true},
+		{name: "set ex zero", line: "SET mykey myvalue EX 0", want: "ERR invalid expire time\n", reply: true},
 		{name: "get", setup: func(k *db.DB) { k.Set("mykey", "myvalue") }, line: "GET mykey", want: "myvalue\n", reply: true},
 		{name: "get missing", line: "GET nonexistent", want: "(nil)\n", reply: true},
 		{name: "get no args", line: "GET", want: "ERR usage: GET key\n", reply: true},
@@ -27,8 +31,22 @@ func TestHandleLine(t *testing.T) {
 		{name: "get trailing space ok", setup: func(k *db.DB) { k.Set("mykey", "myvalue") }, line: "GET mykey ", want: "myvalue\n", reply: true},
 		{name: "del", setup: func(k *db.DB) { k.Set("mykey", "myvalue") }, line: "DEL mykey", want: "1\n", reply: true},
 		{name: "del missing", line: "DEL nonexistent", want: "0\n", reply: true},
-		{name: "del no args", line: "DEL", want: "ERR usage: DEL key\n", reply: true},
-		{name: "del too many args", line: "DEL a b", want: "ERR usage: DEL key\n", reply: true},
+		{name: "del no args", line: "DEL", want: "ERR usage: DEL key [key ...]\n", reply: true},
+		{name: "del variadic", setup: func(k *db.DB) { k.Set("a", "1"); k.Set("b", "2"); k.Set("c", "3") }, line: "DEL a b c", want: "3\n", reply: true},
+		{name: "del variadic partial", setup: func(k *db.DB) { k.Set("a", "1") }, line: "DEL a missing", want: "1\n", reply: true},
+		{name: "exists", setup: func(k *db.DB) { k.Set("a", "1") }, line: "EXISTS a", want: "1\n", reply: true},
+		{name: "exists missing", line: "EXISTS a", want: "0\n", reply: true},
+		{name: "exists no args", line: "EXISTS", want: "ERR usage: EXISTS key\n", reply: true},
+		{name: "len", setup: func(k *db.DB) { k.Set("a", "1"); k.Set("b", "2") }, line: "LEN", want: "2\n", reply: true},
+		{name: "len empty", line: "LEN", want: "0\n", reply: true},
+		{name: "flushall", setup: func(k *db.DB) { k.Set("a", "1") }, line: "FLUSHALL", want: "OK\n", reply: true},
+		{name: "flushdb", setup: func(k *db.DB) { k.Set("a", "1") }, line: "FLUSHDB", want: "OK\n", reply: true},
+		{name: "expire", setup: func(k *db.DB) { k.Set("a", "1") }, line: "EXPIRE a 100", want: "1\n", reply: true},
+		{name: "expire missing", line: "EXPIRE a 100", want: "0\n", reply: true},
+		{name: "expire invalid", line: "EXPIRE a abc", want: "ERR invalid expire time\n", reply: true},
+		{name: "ttl persistent", setup: func(k *db.DB) { k.Set("a", "1") }, line: "TTL a", want: "-1\n", reply: true},
+		{name: "ttl missing", line: "TTL a", want: "-2\n", reply: true},
+		{name: "ttl expiry", setup: func(k *db.DB) { k.SetWithTTL("a", "1", time.Second*10) }, line: "TTL a", want: "10\n", reply: true},
 		{name: "unknown command", line: "FOO", want: "ERR unknown command\n", reply: true},
 		{name: "empty line", line: "", want: "", reply: false},
 		{name: "whitespace line", line: "   ", want: "", reply: false},

@@ -17,6 +17,7 @@ go build ./...
 | `gofmt -w .`     | Format all Go files                   |
 | `go mod tidy`    | Tidy dependencies                     |
 | `make build`     | Build `bin/kevin` (CGO disabled)      |
+| `make build-gui` | Build `bin/kevin-gui` with fyne (`--gui`) |
 | `make build-all` | Cross-compile 4 platforms into `bin/` |
 | `make test`      | `go test ./...`                       |
 | `make lint`      | `go vet ./...`                        |
@@ -37,9 +38,11 @@ Follow the repo-wide [Go conventions](../../../../../AGENTS.md) — in short:
 Package layout:
 
 ```
-main.go                  # entrypoint (package main)
+main.go                  # entrypoint (package main) → cmd
+cmd/                     # cobra CLI (root + serve subcommand)
 internal/
   db/                    # key/value store (RWMutex + map)
+  gui/                   # fyne key/value manager (`gui` build tag)
   server/                # TCP server, protocol handler
 ```
 

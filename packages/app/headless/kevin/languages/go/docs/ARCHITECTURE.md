@@ -14,13 +14,19 @@
 
 ```txt
 go/
-├── main.go                 # Entrypoint (package main)
-├── Makefile                # build, test, format, lint, build-all, coverage, install
+├── main.go                 # Entrypoint (package main) → calls cmd
+├── cmd/                    # cobra CLI (root + serve subcommand)
+│   ├── root.go
+│   └── serve.go
+├── Makefile                # build, build-gui, test, format, lint, build-all, coverage, install
 ├── Dockerfile              # Multi-stage scratch image
 ├── internal/
 │   ├── db/                 # In-memory key/value store (RWMutex + map)
 │   │   ├── db.go
 │   │   └── db_test.go
+│   ├── gui/                # fyne key/value manager (build tag `gui`)
+│   │   ├── gui.go          #   non-gui stub → ErrUnavailable
+│   │   └── gui_fyne.go     #   `//go:build gui` fyne window
 │   └── server/             # TCP accept loop and protocol handler
 │       ├── server.go
 │       ├── handler.go
@@ -31,15 +37,26 @@ go/
 
 ## Entrypoint (`main.go`)
 
-`main.go` is the module root (`package main`). It:
+`main.go` is the module root (`package main`) and stays thin: it calls
+`cmd.NewRootCommand().Execute()` and exits on error. All CLI wiring lives in
+`cmd/`, built on [cobra](https://cobra.dev).
 
-1. Parses `--port` (default `6379`)
-2. Opens a TCP listener on `:<port>`
-3. Creates a `db.DB` and passes it to `server.New`
-4. Calls `Serve(ctx, ln)` which accepts connections until SIGINT/SIGTERM
-5. Logs the listening address; exits on error
+### `cmd` (CLI)
 
-The entrypoint is thin — all protocol and storage logic lives in `internal/`.
+The root command (`cmd/root.go`) declares the binary and registers a single
+subcommand, `serve` (`cmd/serve.go`). `serve`:
+
+1. Parses `--port` (default `6379`) and `--gui` (default `false`)
+2. Opens a TCP listener on `:<port>` and creates a `db.DB`
+3. Without `--gui`: calls `server.Serve(ctx, ln)` until SIGINT/SIGTERM
+4. With `--gui`: runs the server in a goroutine and opens the fyne window
+   (`internal/gui`) on the same `db.DB`, so keys edited in the GUI are visible
+   over TCP immediately
+
+The fyne GUI lives behind the `gui` build tag because it requires CGO. The
+default (CGO-free) build compiles `internal/gui/gui.go`, a stub whose `Run`
+returns `ErrUnavailable`; `make build-gui` compiles the real window via
+`//go:build gui`.
 
 ## Request Flow
 
@@ -80,9 +97,10 @@ dispatches on the first token and writes a single-line response per command.
 
 ## Configuration
 
-| Flag | Default | Purpose         |
-| ---- | ------- | --------------- |
-| port | 6379    | TCP listen port |
+| Flag    | Default | Purpose                                            |
+| ------- | ------- | -------------------------------------------------- |
+| `--port` | `6379` | TCP listen port                                    |
+| `--gui`  | `false` | Open the fyne key/value manager alongside the server |
 
 No environment variables are read; behaviour is identical to the C and C++
-implementations.
+implementations (the GUI is Go-only).

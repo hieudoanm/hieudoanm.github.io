@@ -44,7 +44,7 @@ curl -fsSL https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/maste
 
 ```bash
 chmod +x kevin
-./kevin --port 6379
+./kevin serve --port 6379
 ```
 
 ### Docker
@@ -65,7 +65,7 @@ Prefer to build it yourself? Clone, build, and run in three steps:
 git clone https://github.com/hieudoanm/hieudoanm.github.io.git
 cd packages/app/headless/kevin/go
 go build -o bin/kevin .
-./bin/kevin --port 6379
+./bin/kevin serve --port 6379
 ```
 
 See [PACKAGING](PACKAGING) for the CI artifact pipeline and
@@ -107,7 +107,7 @@ the C and C++ implementations in this package, kept behaviour-identical.
 
 ## First run
 
-- Start with `./kevin --port 6379` (Redis default port)
+- Start with `./kevin serve --port 6379` (Redis default port)
 - Point any Redis tool or client at `localhost:6379` and send commands
 
 ---

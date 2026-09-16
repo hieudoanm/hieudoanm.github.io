@@ -12,26 +12,34 @@
 - [x] Redis-style errors (`ERR unknown command`, `ERR usage: ...`)
 - [x] Value-with-spaces support and exact C/C++ parity
 - [x] Tests: DB unit tests, handler table tests, TCP integration + concurrent clients
-- [x] Makefile: format, lint, test, build, build-all, coverage, install, clean
+- [x] Makefile: format, lint, test, build, build-gui, build-all, coverage, install, clean
 - [x] Multi-stage `Dockerfile` (scratch image, `EXPOSE 6379`)
 - [x] CI: `go` job in `ci-app-headless-kevin.yaml` + rolling GitHub Release
+- [x] cobra CLI (`cmd/`) with a single `serve` subcommand (`--port`, `--gui`)
+- [x] fyne key/value manager GUI behind the `gui` build tag (`serve --gui`)
 
 ## Phase 2 — Protocol & behaviour
 
-- [ ] `--port` flag parity documented in the C/C++ READMEs (currently Go-only)
-- [ ] `TTL`/`EXPIRE` support (per-key expiry)
-- [ ] `DEL` variadic keys (`DEL k1 k2`) for Redis-cli compatibility
-- [ ] `FLUSHALL`/`FLUSHDB`
-- [ ] `EXISTS` / `LEN`
-- [ ] RESP2/RESP3 serialisation for full Redis client compatibility
+- [x] `TTL`/`EXPIRE` support (per-key expiry, lazy deletion of expired keys)
+- [x] `SET key value EX N` to store a value with an expiry
+- [x] `DEL` variadic keys (`DEL k1 k2`) for Redis-cli compatibility
+- [x] `FLUSHALL`/`FLUSHDB`
+- [x] `EXISTS` / `LEN`
+- [x] ~~RESP2/RESP3 serialisation~~ — skipped by decision (inline protocol only;
+      RESP-speaking Redis clients will not work)
+- [x] ~~`--port` flag parity documented in the C/C++ READMEs~~ — skipped by
+      decision (docs parity deferred)
 
 ## Phase 3 — Reliability & ops
 
-- [ ] Shutdown persistence (snapshot on exit, load on start)
-- [ ] `SIGINT`/`SIGTERM` graceful shutdown (present; verify + test)
-- [ ] Structured logging to stdout/stderr with levels
-- [ ] `--bind` flag for address selection
-- [ ] Benchmarks (`BenchmarkSet`, `BenchmarkGet`, `BenchmarkKeys`) in CI
+- [x] Shutdown persistence via `serve --data <file>` (JSON snapshot on exit,
+      load on start, atomic temp-file write)
+- [x] `SIGINT`/`SIGTERM` graceful shutdown (verified + tested)
+- [x] Structured logging with `log/slog` (INFO/WARN/ERROR by default,
+      DEBUG per-command)
+- [x] `--bind` flag for address selection (default `0.0.0.0`)
+- [x] Benchmarks (`BenchmarkSet`, `BenchmarkGet`, `BenchmarkKeys`)
+- [ ] Benchmarks wired into CI (`ci-app-headless-kevin.yaml`)
 
 ## Phase 4 — Ecosystem
 
