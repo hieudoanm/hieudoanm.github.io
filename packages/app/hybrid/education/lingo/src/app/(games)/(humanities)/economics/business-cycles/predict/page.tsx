@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { NextPage } from 'next';
-import { BusinessCyclesGame } from '@/games/economics/business-cycles';
+import { BusinessCyclesGame } from '@/games/humanities/economics/business-cycles';
 
 const BusinessCyclesPage: NextPage = () => (
   <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 p-4 md:p-6">

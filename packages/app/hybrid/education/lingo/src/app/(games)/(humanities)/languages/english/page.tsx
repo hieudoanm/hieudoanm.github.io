@@ -1,6 +1,6 @@
 'use client';
 
-import { LanguagesEnglish } from '@/games/languages/english';
+import { LanguagesEnglish } from '@/games/humanities/languages/english';
 import { NextPage } from 'next';
 
 const EnglishPage: NextPage = () => (

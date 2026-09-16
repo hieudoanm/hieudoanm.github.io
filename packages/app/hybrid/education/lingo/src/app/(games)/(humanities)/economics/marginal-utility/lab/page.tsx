@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { NextPage } from 'next';
-import { MarginalUtilityLab } from '@/games/economics/marginal-utility';
+import { MarginalUtilityLab } from '@/games/humanities/economics/marginal-utility';
 
 const MarginalUtilityLabPage: NextPage = () => (
   <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 p-4 md:p-6">

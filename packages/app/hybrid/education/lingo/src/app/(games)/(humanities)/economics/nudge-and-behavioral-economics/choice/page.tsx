@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { NextPage } from 'next';
-import { NudgeGame } from '@/games/economics/nudge';
+import { NudgeGame } from '@/games/humanities/economics/nudge';
 
 const NudgeChoicePage: NextPage = () => (
   <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 p-4 md:p-6">

@@ -1,6 +1,6 @@
 'use client';
 
-import { ContinentsSort } from '@/games/geography/sort-continents';
+import { ContinentsSort } from '@/games/humanities/geography/sort-continents';
 import { NextPage } from 'next';
 
 const ContinentsSortPage: NextPage = () => {

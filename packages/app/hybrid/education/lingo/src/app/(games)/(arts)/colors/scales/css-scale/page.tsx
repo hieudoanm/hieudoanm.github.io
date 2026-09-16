@@ -2,8 +2,8 @@
 
 import Link from 'next/link';
 import { NextPage } from 'next';
-import { CssScaleExporter } from '@/games/colors/css-scale';
-import { DEFAULT_BASE_COLOR } from '@/games/colors/shared/ColorsTool';
+import { CssScaleExporter } from '@/games/arts/colors/css-scale';
+import { DEFAULT_BASE_COLOR } from '@/games/arts/colors/shared/ColorsTool';
 
 const CssScalePage: NextPage = () => (
   <main className="flex min-h-dvh flex-col items-center gap-8 p-8">

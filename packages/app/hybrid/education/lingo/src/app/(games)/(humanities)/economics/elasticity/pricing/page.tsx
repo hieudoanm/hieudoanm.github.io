@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import type { NextPage } from 'next';
-import { RevenueExplorerGame } from '@/games/economics/elasticity';
+import { RevenueExplorerGame } from '@/games/humanities/economics/elasticity';
 
 const PricingPage: NextPage = () => (
   <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 p-4 md:p-6">

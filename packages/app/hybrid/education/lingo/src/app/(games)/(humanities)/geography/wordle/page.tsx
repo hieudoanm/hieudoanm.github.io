@@ -1,6 +1,6 @@
 'use client';
 
-import { Wordle } from '@/games/geography/nyt-wordle';
+import { Wordle } from '@/games/humanities/geography/nyt-wordle';
 import { NextPage } from 'next';
 
 const WordlePage: NextPage = () => {

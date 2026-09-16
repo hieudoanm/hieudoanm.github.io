@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Move } from '@/games/economics/prisoners-dilemma/types';
+import { Move } from '@/games/humanities/economics/prisoners-dilemma/types';
 
 interface MoveButtonsProps {
   onMove: (move: Move) => void;

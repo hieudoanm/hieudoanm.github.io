@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import GradientPage from '@/app/(games)/(arts)/colors/css/gradient/page';
 
-jest.mock('@/games/colors/shared/useClipboard', () => ({
+jest.mock('@/games/arts/colors/shared/useClipboard', () => ({
   useClipboard: () => ({ copied: null, copy: jest.fn() }),
 }));
 

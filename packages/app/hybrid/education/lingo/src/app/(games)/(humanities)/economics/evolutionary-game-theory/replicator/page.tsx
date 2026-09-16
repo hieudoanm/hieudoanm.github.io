@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import type { NextPage } from 'next';
-import { ReplicatorGame } from '@/games/economics/evolution';
+import { ReplicatorGame } from '@/games/humanities/economics/evolution';
 
 const ReplicatorPage: NextPage = () => (
   <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 p-4 md:p-6">

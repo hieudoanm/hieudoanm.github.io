@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import { STRATEGIES } from '@/games/economics/prisoners-dilemma/constants';
-import type { Stance } from '@/games/economics/prisoners-dilemma/types';
-import type { Standing } from '@/games/economics/prisoners-dilemma/tournament';
+import { STRATEGIES } from '@/games/humanities/economics/prisoners-dilemma/constants';
+import type { Stance } from '@/games/humanities/economics/prisoners-dilemma/types';
+import type { Standing } from '@/games/humanities/economics/prisoners-dilemma/tournament';
 
 const rankClass = (rank: number): string => {
   if (rank === 1) return 'text-yellow-500 font-bold';

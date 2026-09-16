@@ -864,6 +864,15 @@
         "toolId": "emojis"
       },
       {
+        "label": "Legislation",
+        "description": "Visualization",
+        "icon": "PiBuildings",
+        "type": "app",
+        "typeId": "App",
+        "sectionId": "utilities",
+        "toolId": "legislation"
+      },
+      {
         "label": "Lorem Ipsum",
         "description": "Dummy text",
         "icon": "PiNotePencil",
@@ -892,29 +901,5 @@
       }
     ],
     "id": "utilities"
-  },
-  {
-    "label": "Visualization",
-    "items": [
-      {
-        "label": "Attractors",
-        "description": "Strange Attractors",
-        "icon": "PiSpiral",
-        "type": "app",
-        "typeId": "App",
-        "sectionId": "visualization",
-        "toolId": "attractors"
-      },
-      {
-        "label": "Legislation",
-        "description": "Visualization",
-        "icon": "PiBuildings",
-        "type": "app",
-        "typeId": "App",
-        "sectionId": "visualization",
-        "toolId": "legislation"
-      }
-    ],
-    "id": "visualization"
   }
 ]

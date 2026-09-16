@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { NextPage } from 'next';
-import { PriceLab } from '@/games/economics/price-lab';
+import { PriceLab } from '@/games/humanities/economics/price-lab';
 
 const PriceLabPage: NextPage = () => (
   <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 p-4 md:p-6">

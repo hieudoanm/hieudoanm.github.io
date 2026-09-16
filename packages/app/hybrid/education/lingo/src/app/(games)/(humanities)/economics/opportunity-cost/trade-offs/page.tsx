@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { NextPage } from 'next';
-import { OpportunityCostGame } from '@/games/economics/opportunity-cost';
+import { OpportunityCostGame } from '@/games/humanities/economics/opportunity-cost';
 
 const TradeOffsPage: NextPage = () => (
   <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 p-4 md:p-6">

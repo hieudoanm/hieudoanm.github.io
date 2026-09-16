@@ -1,6 +1,9 @@
 import { FC } from 'react';
-import { Phase, Round } from '@/games/economics/prisoners-dilemma/types';
-import { formatScore } from '@/games/economics/prisoners-dilemma/game';
+import {
+  Phase,
+  Round,
+} from '@/games/humanities/economics/prisoners-dilemma/types';
+import { formatScore } from '@/games/humanities/economics/prisoners-dilemma/game';
 
 interface RoundHistoryProps {
   history: Round[];

@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { NextPage } from 'next';
-import { MoralHazardGame } from '@/games/economics/moral-hazard';
+import { MoralHazardGame } from '@/games/humanities/economics/moral-hazard';
 
 const InsurancePage: NextPage = () => (
   <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 p-4 md:p-6">

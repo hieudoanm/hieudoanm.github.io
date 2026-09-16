@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { NextPage } from 'next';
-import { ProductionGame } from '@/games/economics/production';
+import { ProductionGame } from '@/games/humanities/economics/production';
 
 const ProductionLabPage: NextPage = () => (
   <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 p-4 md:p-6">

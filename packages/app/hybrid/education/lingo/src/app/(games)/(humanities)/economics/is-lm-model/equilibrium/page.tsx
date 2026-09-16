@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { NextPage } from 'next';
-import { ISLMExplorer } from '@/games/economics/is-lm';
+import { ISLMExplorer } from '@/games/humanities/economics/is-lm';
 
 const EquilibriumPage: NextPage = () => (
   <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 p-4 md:p-6">

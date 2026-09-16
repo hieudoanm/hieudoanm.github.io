@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import type { NextPage } from 'next';
-import { StagHuntGame } from '@/games/economics/stag-hunt';
+import { StagHuntGame } from '@/games/humanities/economics/stag-hunt';
 
 const StagHuntPage: NextPage = () => (
   <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 p-4 md:p-6">

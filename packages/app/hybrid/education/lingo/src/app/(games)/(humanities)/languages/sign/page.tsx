@@ -1,6 +1,6 @@
 'use client';
 
-import { Sign } from '@/games/languages/sign';
+import { Sign } from '@/games/humanities/languages/sign';
 import { NextPage } from 'next';
 
 const SignPage: NextPage = () => <Sign />;

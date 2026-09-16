@@ -2,8 +2,8 @@
 
 import Link from 'next/link';
 import { NextPage } from 'next';
-import { ColorWheel } from '@/games/colors/wheel';
-import { DEFAULT_BASE_COLOR } from '@/games/colors/shared/ColorsTool';
+import { ColorWheel } from '@/games/arts/colors/wheel';
+import { DEFAULT_BASE_COLOR } from '@/games/arts/colors/shared/ColorsTool';
 
 const WheelPage: NextPage = () => (
   <main className="flex min-h-dvh flex-col items-center gap-8 p-8">

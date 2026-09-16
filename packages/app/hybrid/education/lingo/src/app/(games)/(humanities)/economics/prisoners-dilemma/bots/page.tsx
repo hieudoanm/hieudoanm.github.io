@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useMemo, useState } from 'react';
 import { NextPage } from 'next';
 import { StrategyList } from '@/components/molecules/StrategyList';
-import { STRATEGIES } from '@/games/economics/prisoners-dilemma/constants';
+import { STRATEGIES } from '@/games/humanities/economics/prisoners-dilemma/constants';
 
 const BotsPage: NextPage = () => {
   const [query, setQuery] = useState('');

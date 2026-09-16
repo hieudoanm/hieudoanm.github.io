@@ -2,16 +2,32 @@
 
 import { GameItem, GamesTemplate } from '@/components/templates/GamesTemplate';
 import { NextPage } from 'next';
-import { PiMathOperations } from 'react-icons/pi';
+import { PiAtom, PiInfinity, PiMathOperations } from 'react-icons/pi';
 
 const ITEMS: GameItem[] = [
   {
-    testId: 'maths-kaprekar',
-    name: 'Kaprekar',
+    testId: 'maths-attractors',
+    name: 'Attractors',
+    description: 'Explore strange attractors as 3D particle flows',
+    icon: PiAtom,
+    href: '/maths/attractors/',
+    group: 'Visuals',
+  },
+  {
+    testId: 'maths-cyclic',
+    name: 'Cyclic number',
+    description: 'Visualise the cyclic number 142857',
+    icon: PiInfinity,
+    href: '/maths/cyclic/',
+    group: 'Number Theory',
+  },
+  {
+    testId: 'maths-kaprekar-constant',
+    name: 'Kaprekar constant',
     description: 'Explore the Kaprekar constant routine',
     icon: PiMathOperations,
-    href: '/maths/kaprekar/',
-    group: 'Puzzles',
+    href: '/maths/kaprekar-constant/',
+    group: 'Number Theory',
   },
 ];
 

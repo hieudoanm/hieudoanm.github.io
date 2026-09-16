@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { NextPage } from 'next';
-import { PortfolioGame } from '@/games/economics/portfolio';
+import { PortfolioGame } from '@/games/humanities/economics/portfolio';
 
 const FrontierPage: NextPage = () => (
   <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 p-4 md:p-6">

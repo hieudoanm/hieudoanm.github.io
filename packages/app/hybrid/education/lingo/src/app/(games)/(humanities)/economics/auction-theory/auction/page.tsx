@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { NextPage } from 'next';
-import { AuctionGame } from '@/games/economics/auction';
+import { AuctionGame } from '@/games/humanities/economics/auction';
 
 const AuctionPage: NextPage = () => (
   <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 p-4 md:p-6">

@@ -1,6 +1,6 @@
 'use client';
 
-import { GeneralizedAnxietyDisorderScale } from '@/games/psychology/GeneralizedAnxietyDisorderScale';
+import { GeneralizedAnxietyDisorderScale } from '@/games/health/psychology/GeneralizedAnxietyDisorderScale';
 import { NextPage } from 'next';
 
 const GeneralizedAnxietyDisorderScalePage: NextPage = () => (

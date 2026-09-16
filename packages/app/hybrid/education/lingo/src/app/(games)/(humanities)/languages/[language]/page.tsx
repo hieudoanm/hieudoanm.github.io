@@ -1,12 +1,12 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import Link from 'next/link';
-import { Languages } from '@/games/languages';
+import { Languages } from '@/games/humanities/languages';
 import {
   FlashCard,
   formatLanguage,
   getLanguages,
-} from '@/games/languages/utils';
+} from '@/games/humanities/languages/utils';
 
 interface Params {
   language: string;

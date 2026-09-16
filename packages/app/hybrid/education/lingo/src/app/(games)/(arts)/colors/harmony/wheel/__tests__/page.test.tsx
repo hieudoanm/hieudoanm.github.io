@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import WheelPage from '@/app/(games)/(arts)/colors/harmony/wheel/page';
 
-jest.mock('@/games/colors/shared/useClipboard', () => ({
+jest.mock('@/games/arts/colors/shared/useClipboard', () => ({
   useClipboard: () => ({ copied: null, copy: jest.fn() }),
 }));
 

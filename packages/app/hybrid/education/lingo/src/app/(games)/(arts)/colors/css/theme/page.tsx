@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { NextPage } from 'next';
-import { ColorsTool } from '@/games/colors/shared/ColorsTool';
+import { ColorsTool } from '@/games/arts/colors/shared/ColorsTool';
 
 const ThemePage: NextPage = () => (
   <main className="flex min-h-dvh flex-col items-center gap-8 p-8">

@@ -1,11 +1,11 @@
 import { render, screen } from '@testing-library/react';
 import PalettePage from '@/app/(games)/(arts)/colors/css/palette/page';
 
-jest.mock('@/games/colors/shared/useClipboard', () => ({
+jest.mock('@/games/arts/colors/shared/useClipboard', () => ({
   useClipboard: () => ({ copied: null, copy: jest.fn() }),
 }));
 
-jest.mock('@/games/colors/colors', () => ({
+jest.mock('@/games/arts/colors/colors', () => ({
   randomPalette: jest.fn(() => ['#ff0000', '#00ff00', '#0000ff']),
 }));
 

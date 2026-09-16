@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { NextPage } from 'next';
-import { TimeValueGame } from '@/games/economics/time-value';
+import { TimeValueGame } from '@/games/humanities/economics/time-value';
 
 const LabPage: NextPage = () => (
   <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 p-4 md:p-6">

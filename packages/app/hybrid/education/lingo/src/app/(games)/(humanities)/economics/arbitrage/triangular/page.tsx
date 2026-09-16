@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import type { NextPage } from 'next';
-import { TriangularArbitrageGame } from '@/games/economics/arbitrage';
+import { TriangularArbitrageGame } from '@/games/humanities/economics/arbitrage';
 
 const TriangularArbitragePage: NextPage = () => (
   <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 p-4 md:p-6">

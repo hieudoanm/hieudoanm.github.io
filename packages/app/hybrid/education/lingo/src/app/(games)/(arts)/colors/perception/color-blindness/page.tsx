@@ -2,8 +2,8 @@
 
 import Link from 'next/link';
 import { NextPage } from 'next';
-import { ColorBlindnessSimulator } from '@/games/colors/color-blindness';
-import { DEFAULT_BASE_COLOR } from '@/games/colors/shared/ColorsTool';
+import { ColorBlindnessSimulator } from '@/games/arts/colors/color-blindness';
+import { DEFAULT_BASE_COLOR } from '@/games/arts/colors/shared/ColorsTool';
 
 const ColorBlindnessPage: NextPage = () => (
   <main className="flex min-h-dvh flex-col items-center gap-8 p-8">

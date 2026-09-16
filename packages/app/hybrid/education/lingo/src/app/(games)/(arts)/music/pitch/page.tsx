@@ -1,6 +1,6 @@
 'use client';
 
-import { Music } from '@/games/music';
+import { Music } from '@/games/arts/music';
 import { NextPage } from 'next';
 
 const MusicPage: NextPage = () => (

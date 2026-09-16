@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import type { NextPage } from 'next';
-import { LaborMarketLab } from '@/games/economics/labor';
+import { LaborMarketLab } from '@/games/humanities/economics/labor';
 
 const WagePage: NextPage = () => (
   <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 p-4 md:p-6">

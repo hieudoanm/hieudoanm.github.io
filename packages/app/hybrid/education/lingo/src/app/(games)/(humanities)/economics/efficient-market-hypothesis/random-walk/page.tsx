@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { NextPage } from 'next';
-import { EmhGame } from '@/games/economics/emh';
+import { EmhGame } from '@/games/humanities/economics/emh';
 
 const RandomWalkPage: NextPage = () => (
   <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 p-4 md:p-6">

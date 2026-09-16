@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { NextPage } from 'next';
-import { InstitutionsGame } from '@/games/economics/institutions';
+import { InstitutionsGame } from '@/games/humanities/economics/institutions';
 
 const InstitutionsLabPage: NextPage = () => (
   <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 p-4 md:p-6">

@@ -2,8 +2,8 @@
 
 import Link from 'next/link';
 import { NextPage } from 'next';
-import { GradientBuilder } from '@/games/colors/gradient';
-import { DEFAULT_BASE_COLOR } from '@/games/colors/shared/ColorsTool';
+import { GradientBuilder } from '@/games/arts/colors/gradient';
+import { DEFAULT_BASE_COLOR } from '@/games/arts/colors/shared/ColorsTool';
 
 const GradientPage: NextPage = () => (
   <main className="flex min-h-dvh flex-col items-center gap-8 p-8">

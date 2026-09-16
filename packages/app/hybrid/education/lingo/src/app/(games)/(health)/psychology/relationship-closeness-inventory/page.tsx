@@ -1,6 +1,6 @@
 'use client';
 
-import { RelationshipClosenessInventory } from '@/games/psychology/RelationshipClosenessInventory';
+import { RelationshipClosenessInventory } from '@/games/health/psychology/RelationshipClosenessInventory';
 import { NextPage } from 'next';
 
 const RelationshipClosenessInventoryPage: NextPage = () => (

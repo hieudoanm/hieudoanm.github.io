@@ -2,8 +2,8 @@
 
 import Link from 'next/link';
 import { NextPage } from 'next';
-import { ColorConverter } from '@/games/colors/converter';
-import { DEFAULT_BASE_COLOR } from '@/games/colors/shared/ColorsTool';
+import { ColorConverter } from '@/games/arts/colors/converter';
+import { DEFAULT_BASE_COLOR } from '@/games/arts/colors/shared/ColorsTool';
 
 const ConverterPage: NextPage = () => (
   <main className="flex min-h-dvh flex-col items-center gap-8 p-8">

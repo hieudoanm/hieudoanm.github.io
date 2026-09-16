@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import TintShadeTonePage from '@/app/(games)/(arts)/colors/scales/tint-shade-tone/page';
 
-jest.mock('@/games/colors/shared/useClipboard', () => ({
+jest.mock('@/games/arts/colors/shared/useClipboard', () => ({
   useClipboard: () => ({ copied: null, copy: jest.fn() }),
 }));
 

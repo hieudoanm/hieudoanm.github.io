@@ -2,8 +2,8 @@
 
 import Link from 'next/link';
 import { NextPage } from 'next';
-import { ColorTemperature } from '@/games/colors/temperature';
-import { DEFAULT_BASE_COLOR } from '@/games/colors/shared/ColorsTool';
+import { ColorTemperature } from '@/games/arts/colors/temperature';
+import { DEFAULT_BASE_COLOR } from '@/games/arts/colors/shared/ColorsTool';
 
 const TemperaturePage: NextPage = () => (
   <main className="flex min-h-dvh flex-col items-center gap-8 p-8">

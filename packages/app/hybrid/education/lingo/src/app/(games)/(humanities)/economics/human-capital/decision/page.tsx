@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { NextPage } from 'next';
-import { HumanCapitalGame } from '@/games/economics/human-capital';
+import { HumanCapitalGame } from '@/games/humanities/economics/human-capital';
 
 const HumanCapitalPage: NextPage = () => (
   <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 p-4 md:p-6">

@@ -18,7 +18,7 @@ import {
 const ITEMS = [
   {
     name: 'Maths',
-    description: 'Kaprekar constant routine explorer',
+    description: 'Number curiosities and visual math games',
     icon: PiMathOperations,
     href: '/maths/',
     group: 'STEM',

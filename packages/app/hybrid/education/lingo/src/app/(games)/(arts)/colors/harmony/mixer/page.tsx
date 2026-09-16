@@ -2,8 +2,8 @@
 
 import Link from 'next/link';
 import { NextPage } from 'next';
-import { ColorMixer } from '@/games/colors/mixer';
-import { DEFAULT_BASE_COLOR } from '@/games/colors/shared/ColorsTool';
+import { ColorMixer } from '@/games/arts/colors/mixer';
+import { DEFAULT_BASE_COLOR } from '@/games/arts/colors/shared/ColorsTool';
 
 const MixerPage: NextPage = () => (
   <main className="flex min-h-dvh flex-col items-center gap-8 p-8">

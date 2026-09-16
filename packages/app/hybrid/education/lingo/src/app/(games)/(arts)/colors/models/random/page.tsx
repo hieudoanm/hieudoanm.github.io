@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { NextPage } from 'next';
-import { RandomColor } from '@/games/colors/random';
+import { RandomColor } from '@/games/arts/colors/random';
 
 const RandomPage: NextPage = () => (
   <main className="flex min-h-dvh flex-col items-center gap-8 p-8">

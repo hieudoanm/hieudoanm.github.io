@@ -1,6 +1,6 @@
 'use client';
 
-import { PatientHealthQuestionnaire } from '@/games/psychology/PatientHealthQuestionnaire';
+import { PatientHealthQuestionnaire } from '@/games/health/psychology/PatientHealthQuestionnaire';
 import { NextPage } from 'next';
 
 const PatientHealthQuestionnairePage: NextPage = () => (

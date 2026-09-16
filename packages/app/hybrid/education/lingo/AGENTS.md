@@ -56,8 +56,8 @@ pnpm tauri dev|build # Desktop app via Tauri CLI
 
 ## Structure
 
-```
-src/app/            # App Router pages — /languages /music /colors /history /economics /geography /psychology /ophthalmology + info routes
+```txt
+src/app/            # App Router pages — /languages /music /maths /colors /history /economics /geography /psychology /ophthalmology + info routes
 src/components/
   atoms/            # Button, Badge, OfflineBadge, ThemeToggle
   organisms/        # Header
@@ -75,26 +75,67 @@ e2e/                # Playwright specs
 
 ## Routes
 
-`/` (home hub), `/languages` (language hub), `/languages/[language]`,
-`/languages/english` (dictionary), `/languages/sign` (sign-language
-recognition), `/history` (history hub), `/history/myth-vs-fact`,
-`/history/through-the-years`, `/economics` (economics hub),
-`/economics/<category>` (theory), `/economics/<category>/<game>` (game),
-`/geography` (geography hub), `/geography/guess`, `/geography/higher-or-lower`,
-`/geography/wordle`, `/geography/connections`, `/geography/sort-continents`,
-`/music` plus `/about`, `/downloads`, `/version`. Psychology: `/psychology`
-(hub) followed by `/psychology/<scale>` for each instrument
-(beck-depression-inventory, big-five-inventory, dyadic-adjustment-scale,
-experiences-in-close-relationships, generalized-anxiety-disorder,
-patient-health-questionnaire, relationship-closeness-inventory,
-satisfaction-with-life); scales are screening tools, not diagnostics.
-Ophthalmology: `/ophthalmology` (hub), `/ophthalmology/vision` (theory),
-`/ophthalmology/vision/<chart>` for each visual acuity test (snellen, logmar,
-tumbling-e) — migrated from the `eyes` app; migrated as standalone components
-under `src/games/ophthalmology/`. Colors: `/colors` (hub), `/colors/<theory>`
-(theory: models, harmony, perception, scales, css), `/colors/<theory>/<tool>`
-(tool: converter, adjuster, random, wheel, schemes, mixer, contrast,
-color-blindness, temperature, shades-tints, tint-shade-tone, opacity, css-scale,
-gradient, palette, theme) — migrated from the `colors` app; tools live as
-standalone components under `src/games/colors/` with shared atoms in
-`src/games/colors/shared/` and pure color math in `src/games/colors/colors.ts`.
+Routes are sorted alphabetically; hub descendants are nested bullets.
+
+- `/` — home hub
+- `/about` — about page
+- `/chemistry`
+  - `/chemistry/periodic-table` — periodic table explorer
+- `/colors` — migrated from the `colors` app
+  - `/colors/<theory>` — theory: models, harmony, perception, scales, css
+  - `/colors/<theory>/<tool>` — tools as standalone components under
+    `src/games/colors/` with shared atoms in `src/games/colors/shared/` and pure
+    color math in `src/games/colors/colors.ts`, broken down per theory:
+    - models: converter, adjuster, random
+    - harmony: wheel, schemes, mixer
+    - perception: contrast, color-blindness, temperature
+    - scales: shades-tints, tint-shade-tone, opacity, css-scale
+    - css: gradient, palette, theme
+- `/downloads` — downloads page
+- `/economics` — economics hub
+  - `/economics/<category>` — theory per category
+  - `/economics/<category>/<game>` — interactive game per topic
+- `/forget-password` — password recovery
+- `/geography` — geography hub
+  - `/geography/connections`
+  - `/geography/guess`
+  - `/geography/higher-or-lower`
+  - `/geography/sort-continents`
+  - `/geography/wordle`
+- `/history` — history hub
+  - `/history/myth-vs-fact`
+  - `/history/through-the-years`
+- `/languages` — language hub (Duolingo-style list)
+  - `/languages/[language]` — flashcard deck, pre-rendered via
+    `generateStaticParams`
+  - `/languages/english` — dictionary
+  - `/languages/sign` — sign-language recognition
+- `/maths` — maths hub
+  - `/maths/attractors` — 3-D strange-attractor particle visualisation (migrated
+    from the docs app)
+  - `/maths/cyclic` — cyclic number 142857
+  - `/maths/kaprekar-constant` — Kaprekar constant routine
+- `/music` — ear-training game (migrated from the `music` app)
+  - `/music/pitch` — pitch training
+- `/ophthalmology` — migrated from the `eyes` app as standalone components under
+  `src/games/ophthalmology/`
+  - `/ophthalmology/vision` — theory
+  - `/ophthalmology/vision/<chart>` — visual acuity tests:
+    - logmar
+    - snellen
+    - tumbling-e
+- `/profile` — user profile
+- `/psychology` — psychology hub
+  - `/psychology/<scale>` — screening instruments, not diagnostics:
+    - beck-depression-inventory
+    - big-five-inventory
+    - dyadic-adjustment-scale
+    - experiences-in-close-relationships
+    - generalized-anxiety-disorder
+    - patient-health-questionnaire
+    - relationship-closeness-inventory
+    - satisfaction-with-life
+- `/reset-password` — password reset
+- `/sign-in` — login
+- `/sign-up` — registration
+- `/version` — version info

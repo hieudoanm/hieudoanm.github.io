@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { NextPage } from 'next';
-import { LogMARChart } from '@/games/ophthalmology/logmar';
+import { LogMARChart } from '@/games/health/ophthalmology/logmar';
 
 const LogMARPage: NextPage = () => (
   <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 p-4 md:p-6">

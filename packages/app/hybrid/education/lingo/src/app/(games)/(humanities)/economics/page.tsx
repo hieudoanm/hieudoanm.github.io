@@ -1,7 +1,7 @@
 'use client';
 
 import { GameItem, GamesTemplate } from '@/components/templates/GamesTemplate';
-import { ECONOMICS_CATEGORIES } from '@/games/economics/data';
+import { ECONOMICS_CATEGORIES } from '@/games/humanities/economics/data';
 import { NextPage } from 'next';
 import { PiCoins } from 'react-icons/pi';
 

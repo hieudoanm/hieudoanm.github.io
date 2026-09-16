@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import ShadesTintsPage from '@/app/(games)/(arts)/colors/scales/shades-tints/page';
 
-jest.mock('@/games/colors/shared/useClipboard', () => ({
+jest.mock('@/games/arts/colors/shared/useClipboard', () => ({
   useClipboard: () => ({ copied: null, copy: jest.fn() }),
 }));
 

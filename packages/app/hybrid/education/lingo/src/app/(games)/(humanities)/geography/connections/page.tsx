@@ -1,6 +1,6 @@
 'use client';
 
-import { Connections } from '@/games/geography/nyt-connections';
+import { Connections } from '@/games/humanities/geography/nyt-connections';
 import { NextPage } from 'next';
 
 const ConnectionsPage: NextPage = () => {

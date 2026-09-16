@@ -1,11 +1,11 @@
 import { render, screen } from '@testing-library/react';
 import ThemePage from '@/app/(games)/(arts)/colors/css/theme/page';
 
-jest.mock('@/games/colors/shared/useClipboard', () => ({
+jest.mock('@/games/arts/colors/shared/useClipboard', () => ({
   useClipboard: () => ({ copied: null, copy: jest.fn() }),
 }));
 
-jest.mock('@/games/colors/themeColors', () => ({
+jest.mock('@/games/arts/colors/themeColors', () => ({
   useThemeColors: () => [
     { key: 'primary', label: 'Primary', value: '#6366f1' },
   ],

@@ -2,8 +2,8 @@
 
 import Link from 'next/link';
 import { NextPage } from 'next';
-import { TintShadeTone } from '@/games/colors/tint-shade-tone';
-import { DEFAULT_BASE_COLOR } from '@/games/colors/shared/ColorsTool';
+import { TintShadeTone } from '@/games/arts/colors/tint-shade-tone';
+import { DEFAULT_BASE_COLOR } from '@/games/arts/colors/shared/ColorsTool';
 
 const TintShadeTonePage: NextPage = () => (
   <main className="flex min-h-dvh flex-col items-center gap-8 p-8">

@@ -1,6 +1,6 @@
 'use client';
 
-import { Guess } from '@/games/geography/guess';
+import { Guess } from '@/games/humanities/geography/guess';
 import { NextPage } from 'next';
 
 const GuessPage: NextPage = () => {

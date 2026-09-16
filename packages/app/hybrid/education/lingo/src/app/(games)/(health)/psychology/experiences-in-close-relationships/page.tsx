@@ -1,6 +1,6 @@
 'use client';
 
-import { ExperiencesInCloseRelationships } from '@/games/psychology/ExperiencesInCloseRelationships';
+import { ExperiencesInCloseRelationships } from '@/games/health/psychology/ExperiencesInCloseRelationships';
 import { NextPage } from 'next';
 
 const ExperiencesInCloseRelationshipsPage: NextPage = () => (

@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { STRATEGIES } from '@/games/economics/prisoners-dilemma/constants';
+import { STRATEGIES } from '@/games/humanities/economics/prisoners-dilemma/constants';
 import { StrategyList } from '../StrategyList';
 
 describe('StrategyList', () => {

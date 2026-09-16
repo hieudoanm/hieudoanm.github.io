@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import ConnectionsPage from '../page';
 
-jest.mock('@/games/geography/nyt-connections', () => ({
+jest.mock('@/games/humanities/geography/nyt-connections', () => ({
   Connections: () => <div data-testid="connections-mock" />,
 }));
 

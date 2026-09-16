@@ -1,6 +1,6 @@
 'use client';
 
-import { HigherOrLower } from '@/games/geography/higher-or-lower';
+import { HigherOrLower } from '@/games/humanities/geography/higher-or-lower';
 import { NextPage } from 'next';
 
 const HigherOrLowerPage: NextPage = () => {

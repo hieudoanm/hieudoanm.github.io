@@ -2,8 +2,8 @@
 
 import Link from 'next/link';
 import { NextPage } from 'next';
-import { ContrastChecker } from '@/games/colors/contrast';
-import { DEFAULT_BASE_COLOR } from '@/games/colors/shared/ColorsTool';
+import { ContrastChecker } from '@/games/arts/colors/contrast';
+import { DEFAULT_BASE_COLOR } from '@/games/arts/colors/shared/ColorsTool';
 
 const ContrastPage: NextPage = () => (
   <main className="flex min-h-dvh flex-col items-center gap-8 p-8">

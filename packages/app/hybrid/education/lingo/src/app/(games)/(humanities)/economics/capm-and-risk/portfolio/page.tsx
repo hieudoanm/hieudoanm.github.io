@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { NextPage } from 'next';
-import { CapmGame } from '@/games/economics/capm';
+import { CapmGame } from '@/games/humanities/economics/capm';
 
 const PortfolioPage: NextPage = () => (
   <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 p-4 md:p-6">

@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import { Move } from '@/games/economics/prisoners-dilemma/types';
-import { formatScore } from '@/games/economics/prisoners-dilemma/game';
+import { Move } from '@/games/humanities/economics/prisoners-dilemma/types';
+import { formatScore } from '@/games/humanities/economics/prisoners-dilemma/game';
 
 interface RoundRevealProps {
   playerMove: Move;

@@ -1,6 +1,6 @@
 'use client';
 
-import { SatisfactionWithLifeScale } from '@/games/psychology/SatisfactionWithLifeScale';
+import { SatisfactionWithLifeScale } from '@/games/health/psychology/SatisfactionWithLifeScale';
 import { NextPage } from 'next';
 
 const SatisfactionWithLifeScalePage: NextPage = () => (

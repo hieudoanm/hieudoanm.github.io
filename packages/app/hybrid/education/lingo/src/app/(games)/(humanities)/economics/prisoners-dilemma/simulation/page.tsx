@@ -4,17 +4,17 @@ import Link from 'next/link';
 import { FC, useEffect, useMemo, useState } from 'react';
 import { NextPage } from 'next';
 import { RankingTable } from '@/components/molecules/RankingTable';
-import { STRATEGIES } from '@/games/economics/prisoners-dilemma/constants';
+import { STRATEGIES } from '@/games/humanities/economics/prisoners-dilemma/constants';
 import {
   DEFAULT_PAYOFF,
   DEFAULT_ROUNDS,
   MAX_ROUNDS,
   runTournament,
-} from '@/games/economics/prisoners-dilemma/tournament';
+} from '@/games/humanities/economics/prisoners-dilemma/tournament';
 import type {
   MatchupResult,
   PayoffConfig,
-} from '@/games/economics/prisoners-dilemma/tournament';
+} from '@/games/humanities/economics/prisoners-dilemma/tournament';
 
 const TOTAL_MATCHES = (STRATEGIES.length * (STRATEGIES.length - 1)) / 2;
 

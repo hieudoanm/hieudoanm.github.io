@@ -1,6 +1,6 @@
 'use client';
 
-import { BeckDepressionInventory } from '@/games/psychology/BeckDepressionInventory';
+import { BeckDepressionInventory } from '@/games/health/psychology/BeckDepressionInventory';
 import { NextPage } from 'next';
 
 const BeckDepressionInventoryPage: NextPage = () => (

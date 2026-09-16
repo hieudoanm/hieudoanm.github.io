@@ -1,6 +1,6 @@
 'use client';
 
-import { DyadicAdjustmentScale } from '@/games/psychology/DyadicAdjustmentScale';
+import { DyadicAdjustmentScale } from '@/games/health/psychology/DyadicAdjustmentScale';
 import { NextPage } from 'next';
 
 const DyadicAdjustmentScalePage: NextPage = () => (

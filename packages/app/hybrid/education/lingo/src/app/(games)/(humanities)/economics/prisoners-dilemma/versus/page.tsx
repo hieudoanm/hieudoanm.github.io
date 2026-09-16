@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { PrisonerDilemma } from '@/games/economics/prisoners-dilemma';
+import { PrisonerDilemma } from '@/games/humanities/economics/prisoners-dilemma';
 import { NextPage } from 'next';
 
 const PrisonerDilemmaPage: NextPage = () => (

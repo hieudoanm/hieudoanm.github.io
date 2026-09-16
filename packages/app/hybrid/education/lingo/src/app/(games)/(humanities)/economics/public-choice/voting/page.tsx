@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { NextPage } from 'next';
-import { VotingPowerLab } from '@/games/economics/public-choice';
+import { VotingPowerLab } from '@/games/humanities/economics/public-choice';
 
 const VotingPage: NextPage = () => (
   <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 p-4 md:p-6">

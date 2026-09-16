@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { NextPage } from 'next';
-import { MonopolyGame } from '@/games/economics/monopoly';
+import { MonopolyGame } from '@/games/humanities/economics/monopoly';
 
 const MonopolyPricingPage: NextPage = () => (
   <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 p-4 md:p-6">

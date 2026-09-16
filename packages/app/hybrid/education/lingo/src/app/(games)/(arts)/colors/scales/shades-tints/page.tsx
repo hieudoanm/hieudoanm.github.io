@@ -2,8 +2,8 @@
 
 import Link from 'next/link';
 import { NextPage } from 'next';
-import { ShadesTints } from '@/games/colors/shades-tints';
-import { DEFAULT_BASE_COLOR } from '@/games/colors/shared/ColorsTool';
+import { ShadesTints } from '@/games/arts/colors/shades-tints';
+import { DEFAULT_BASE_COLOR } from '@/games/arts/colors/shared/ColorsTool';
 
 const ShadesTintsPage: NextPage = () => (
   <main className="flex min-h-dvh flex-col items-center gap-8 p-8">

@@ -6,13 +6,13 @@ import { NextPage } from 'next';
 import { useMemo, useState } from 'react';
 import { PiMagnifyingGlass } from 'react-icons/pi';
 import { GameItem, GamesTemplate } from '@/components/templates/GamesTemplate';
-import { LANGUAGE_FLAGS } from '@/games/languages/flags';
+import { LANGUAGE_FLAGS } from '@/games/humanities/languages/flags';
 import {
   FlashCard,
   WORDS_URL,
   formatLanguage,
   getHubLanguages,
-} from '@/games/languages/utils';
+} from '@/games/humanities/languages/utils';
 
 const FEATURE_DESCRIPTIONS: Record<string, string> = {
   english: 'Look up words and their definitions',

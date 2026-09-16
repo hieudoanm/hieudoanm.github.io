@@ -1,6 +1,6 @@
 'use client';
 
-import { BigFiveInventory } from '@/games/psychology/BigFiveInventory';
+import { BigFiveInventory } from '@/games/health/psychology/BigFiveInventory';
 import { NextPage } from 'next';
 
 const BigFiveInventoryPage: NextPage = () => (

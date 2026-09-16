@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import type { NextPage } from 'next';
-import { CommonsHarvest } from '@/games/economics/commons';
+import { CommonsHarvest } from '@/games/humanities/economics/commons';
 
 const HarvestPage: NextPage = () => (
   <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 p-4 md:p-6">

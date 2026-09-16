@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { NextPage } from 'next';
-import { BackwardInductionGame } from '@/games/economics/sequential';
+import { BackwardInductionGame } from '@/games/humanities/economics/sequential';
 
 const RollbackPage: NextPage = () => (
   <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 p-4 md:p-6">

@@ -889,6 +889,9 @@ importers:
       react-icons:
         specifier: 5.7.0
         version: 5.7.0(react@19.3.0)
+      three:
+        specifier: 0.186.0
+        version: 0.186.0
       zustand:
         specifier: 5.0.15
         version: 5.0.15(@types/react@19.3.0)(immer@11.1.15)(react@19.3.0)(use-sync-external-store@1.6.0(react@19.3.0))
@@ -923,6 +926,9 @@ importers:
       '@types/react-dom':
         specifier: 19.3.0
         version: 19.3.0(@types/react@19.3.0)
+      '@types/three':
+        specifier: 0.186.0
+        version: 0.186.0
       daisyui:
         specifier: 5.7.38
         version: 5.7.38

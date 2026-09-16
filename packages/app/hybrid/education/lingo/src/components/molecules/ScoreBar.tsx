@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import { TOTAL_ROUNDS } from '@/games/economics/prisoners-dilemma/constants';
-import { Phase } from '@/games/economics/prisoners-dilemma/types';
-import { formatScore } from '@/games/economics/prisoners-dilemma/game';
+import { TOTAL_ROUNDS } from '@/games/humanities/economics/prisoners-dilemma/constants';
+import { Phase } from '@/games/humanities/economics/prisoners-dilemma/types';
+import { formatScore } from '@/games/humanities/economics/prisoners-dilemma/game';
 
 interface ScoreBarProps {
   phase: Phase;

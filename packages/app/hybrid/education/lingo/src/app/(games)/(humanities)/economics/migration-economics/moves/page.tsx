@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { NextPage } from 'next';
-import { MigrationGame } from '@/games/economics/migration';
+import { MigrationGame } from '@/games/humanities/economics/migration';
 
 const MigrationMovesPage: NextPage = () => (
   <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 p-4 md:p-6">

@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { NextPage } from 'next';
-import { PaletteGenerator } from '@/games/colors/palette';
+import { PaletteGenerator } from '@/games/arts/colors/palette';
 
 const PalettePage: NextPage = () => (
   <main className="flex min-h-dvh flex-col items-center gap-8 p-8">

@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { NextPage } from 'next';
-import { KeynesianGame } from '@/games/economics/keynesian';
+import { KeynesianGame } from '@/games/humanities/economics/keynesian';
 
 const KeynesianCrossPage: NextPage = () => (
   <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 p-4 md:p-6">

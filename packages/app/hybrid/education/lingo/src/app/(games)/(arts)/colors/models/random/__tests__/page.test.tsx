@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import RandomPage from '@/app/(games)/(arts)/colors/models/random/page';
 
-jest.mock('@/games/colors/colors', () => ({
+jest.mock('@/games/arts/colors/colors', () => ({
   randomColor: jest.fn(() => '#123456'),
 }));
 

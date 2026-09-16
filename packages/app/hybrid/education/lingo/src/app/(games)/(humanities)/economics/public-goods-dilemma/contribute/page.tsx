@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { NextPage } from 'next';
-import { PublicGoodsGame } from '@/games/economics/public-goods';
+import { PublicGoodsGame } from '@/games/humanities/economics/public-goods';
 
 const ContributePage: NextPage = () => (
   <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 p-4 md:p-6">
