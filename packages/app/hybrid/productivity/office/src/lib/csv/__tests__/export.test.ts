@@ -103,4 +103,12 @@ describe('downloadWorkbook', () => {
     downloadWorkbook(buildWorkbook('My/Sneaky:Name!'), 'csv');
     expect(jest.mocked(saveAs).mock.calls[0][1]).toBe('My_Sneaky_Name_.csv');
   });
+
+  it('exports HTML for an empty sheet', async () => {
+    const workbook = createWorkbook([createSheet('Empty', 0, 2)]);
+    downloadWorkbook(workbook, 'html');
+    const html = await readBlob(lastBlob());
+    expect(html).toContain('<thead><tr></tr></thead>');
+    expect(html).toContain('<h1>Empty</h1>');
+  });
 });

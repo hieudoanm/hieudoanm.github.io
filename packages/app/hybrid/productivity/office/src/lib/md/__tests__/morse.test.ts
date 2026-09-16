@@ -85,4 +85,11 @@ describe('playMorse', () => {
     jest.runAllTimers();
     expect(onDone).toHaveBeenCalledTimes(1);
   });
+
+  it('handles word gaps and slashes during playback', () => {
+    const onDone = jest.fn();
+    playMorse('a b', onDone);
+    jest.runAllTimers();
+    expect(onDone).toHaveBeenCalledTimes(1);
+  });
 });

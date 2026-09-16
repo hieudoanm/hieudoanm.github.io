@@ -35,6 +35,10 @@ describe('formatNumber', () => {
     expect(formatNumber('abc', 'percent')).toBe('abc');
     expect(formatNumber('=', 'scientific')).toBe('=');
   });
+
+  it('falls back to the raw value for an unknown format', () => {
+    expect(formatNumber('42', 'bogus' as never)).toBe('42');
+  });
 });
 
 describe('applyNumberFormats', () => {

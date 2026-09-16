@@ -80,4 +80,12 @@ describe('Header', () => {
     fireEvent.click(screen.getByRole('button', { name: /toggle theme/i }));
     expect(localStorage.getItem('office-theme')).toBe('office-dark');
   });
+
+  it('restores the saved theme from localStorage', () => {
+    localStorage.setItem('office-theme', 'office-dark');
+    render(<Header />);
+    expect(document.documentElement.getAttribute('data-theme')).toBe(
+      'office-dark'
+    );
+  });
 });

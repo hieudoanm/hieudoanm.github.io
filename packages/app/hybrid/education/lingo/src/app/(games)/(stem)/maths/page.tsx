@@ -11,7 +11,7 @@ const ITEMS: GameItem[] = [
     description: 'Explore strange attractors as 3D particle flows',
     icon: PiAtom,
     href: '/maths/attractors/',
-    group: 'Visuals',
+    group: 'Dynamical Systems',
   },
   {
     testId: 'maths-cyclic',

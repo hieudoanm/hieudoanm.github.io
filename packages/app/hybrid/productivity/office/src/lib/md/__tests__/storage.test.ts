@@ -1,4 +1,10 @@
-import { loadNotes, saveNotes, STORAGE_KEY } from '@/lib/md/storage';
+import {
+  loadNotes,
+  loadUiPreference,
+  saveNotes,
+  saveUiPreference,
+  STORAGE_KEY,
+} from '@/lib/md/storage';
 import { seedNotes } from '@/data/md/seed';
 import type { Note } from '@/lib/md/types';
 
@@ -61,5 +67,52 @@ describe('storage', () => {
     );
     setItem.mockRestore();
     warn.mockRestore();
+  });
+});
+
+describe('loadUiPreference', () => {
+  beforeEach(() => {
+    window.localStorage.clear();
+  });
+
+  it('returns the fallback when nothing is stored', () => {
+    expect(loadUiPreference('pref', true)).toBe(true);
+    expect(loadUiPreference('pref', false)).toBe(false);
+  });
+
+  it('parses stored boolean strings', () => {
+    window.localStorage.setItem('pref', 'true');
+    expect(loadUiPreference('pref', false)).toBe(true);
+    window.localStorage.setItem('pref', 'false');
+    expect(loadUiPreference('pref', true)).toBe(false);
+  });
+
+  it('returns the fallback when storage access throws', () => {
+    const getItem = jest
+      .spyOn(Storage.prototype, 'getItem')
+      .mockImplementation(() => {
+        throw new Error('denied');
+      });
+    expect(loadUiPreference('pref', true)).toBe(true);
+    getItem.mockRestore();
+  });
+});
+
+describe('saveUiPreference', () => {
+  it('persists a boolean as a string', () => {
+    saveUiPreference('pref', true);
+    expect(window.localStorage.getItem('pref')).toBe('true');
+    saveUiPreference('pref', false);
+    expect(window.localStorage.getItem('pref')).toBe('false');
+  });
+
+  it('swallows storage errors', () => {
+    const setItem = jest
+      .spyOn(Storage.prototype, 'setItem')
+      .mockImplementation(() => {
+        throw new Error('quota');
+      });
+    expect(() => saveUiPreference('pref', true)).not.toThrow();
+    setItem.mockRestore();
   });
 });

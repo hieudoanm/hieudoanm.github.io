@@ -66,6 +66,24 @@ describe('workbook', () => {
     expect(deleteActiveColumn(workbook, 0)).toEqual(workbook);
   });
 
+  it('removes entry from sized rowHeights and colWidths on delete', () => {
+    const sheet = {
+      ...getActiveSheet(createWorkbook()),
+      grid: [
+        ['a', 'b'],
+        ['c', 'd'],
+      ],
+      rowHeights: [100, 200],
+      colWidths: [50, 60],
+    };
+    let workbook = createWorkbook([sheet]);
+    workbook = deleteActiveRow(workbook, 0);
+    expect(getActiveSheet(workbook).rowHeights).toEqual([200]);
+    workbook = deleteActiveColumn(workbook, 0);
+    expect(getActiveSheet(workbook).colWidths).toEqual([60]);
+    expect(getActiveSheet(workbook).grid).toEqual([['d']]);
+  });
+
   it('replaces the active sheet grid', () => {
     const workbook = setActiveSheetGrid(createWorkbook(), [['x']]);
     expect(getActiveSheet(workbook).grid).toEqual([['x']]);

@@ -98,6 +98,27 @@ describe('applyCaseNodes', () => {
     expect(root.textContent).toBe('Hello World');
   });
 
+  it('applies camelCase to text nodes', () => {
+    const root = document.createElement('div');
+    root.innerHTML = '<p>hello world</p>';
+    applyCaseNodes(root, 'camel');
+    expect(root.textContent).toBe('helloWorld');
+  });
+
+  it('applies snake_case to text nodes', () => {
+    const root = document.createElement('div');
+    root.innerHTML = '<p>Hello World</p>';
+    applyCaseNodes(root, 'snake');
+    expect(root.textContent).toBe('hello_world');
+  });
+
+  it('applies kebab-case to text nodes', () => {
+    const root = document.createElement('div');
+    root.innerHTML = '<p>Hello World</p>';
+    applyCaseNodes(root, 'kebab');
+    expect(root.textContent).toBe('hello-world');
+  });
+
   it('skips text inside code elements', () => {
     const root = document.createElement('div');
     root.innerHTML = '<code>hello</code>';
