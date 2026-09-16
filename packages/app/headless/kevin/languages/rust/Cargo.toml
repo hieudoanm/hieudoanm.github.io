@@ -1,0 +1,57 @@
+[package]
+name = "kevin"
+version = "0.0.1"
+edition = "2021"
+description = "Redis-style in-memory key/value store, behaviour-identical to the C, C++ and Go implementations"
+license = "GPL-3.0"
+
+[[bin]]
+name = "kevin"
+path = "src/main.rs"
+
+[lib]
+name = "kevin"
+path = "src/lib.rs"
+
+[features]
+default = []
+# Material-design slint key/value manager (serve --gui). Needs CGO-free winit
+# backend; build with: cargo build --features gui
+gui = ["dep:slint", "dep:arboard"]
+
+[dependencies]
+anyhow = "1"
+arboard = { version = "3", optional = true }
+clap = { version = "4", features = ["derive"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+signal-hook = "0.3"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+slint = { version = "1", optional = true }
+
+[build-dependencies]
+slint-build = "1"
+
+[dev-dependencies]
+criterion = "0.5"
+tempfile = "3"
+
+[[bench]]
+name = "bench"
+harness = false
+
+[[test]]
+name = "handler"
+path = "tests/handler.rs"
+
+[[test]]
+name = "persist"
+path = "tests/persist.rs"
+
+[[test]]
+name = "server"
+path = "tests/server.rs"
+
+[profile.release]
+lto = true

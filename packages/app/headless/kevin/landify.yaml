@@ -13,8 +13,8 @@ site:
   name: KeVIN
   mark: '🔑'
   description: >-
-    An in-memory key/value store with a Redis-style protocol, written in C
-    and C++.
+    An in-memory key/value store with a Redis-style protocol, written in C,
+    C++, Go, and Rust.
   nav:
     - label: Features
       href: '#features'
@@ -28,7 +28,7 @@ hero:
   headline: A tiny key/value store that speaks Redis.
   subheadline: >-
     KeVIN keeps the whole store in RAM and talks the simple protocol Redis
-    clients already speak — PING, SET, GET, KEYS, DEL — in C and C++.
+    clients already speak — PING, SET, GET, KEYS, DEL — in C, C++, Go, and Rust.
   primary:
     label: Get the server
     href: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-kevin-latest
@@ -54,15 +54,15 @@ features:
         Every value lives in RAM, so reads and writes never touch the disk —
         lookups served in microseconds.
     - icon: '🔁'
-      title: Two implementations
+      title: Four implementations
       body: >-
-        The same store, written twice — once in C and once in C++ — for the
-        implementation that suits your build.
+        The same store, written four ways — once each in C, C++, Go and Rust —
+        so you can pick the implementation that suits your build.
     - icon: '📚'
       title: Server or library
       body: >-
-        Run it as a `kv --port 6379` server or link it in as a library and
-        drive the store from code.
+        Run it as a `kevin serve --port 6379` server or link it in as a library
+        and drive the store from code.
 
 demo:
   heading: Demo
@@ -76,8 +76,8 @@ cta:
   icon: '🔑'
   heading: Keep it in memory.
   body: >-
-    Start `kv --port 6379`, point your Redis client at it, and watch lookups
-    come back in microseconds.
+    Start `kevin serve --port 6379`, point your Redis client at it, and watch
+    lookups come back in microseconds.
   button:
     label: Get the server
     href: https://github.com/hieudoanm/hieudoanm.github.io/releases/tag/app-headless-kevin-latest

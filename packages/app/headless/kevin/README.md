@@ -13,6 +13,7 @@
 1. [C](https://www.iso.org/standard/82075.html)
 2. [C++](https://isocpp.org/)
 3. [Go](https://go.dev/)
+4. [Rust](https://www.rust-lang.org/)
 
 ## API
 

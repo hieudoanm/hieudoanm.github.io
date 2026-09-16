@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN curl -fsSL "${INSTALL_SCRIPT_URL}" -o /install.sh \
     && chmod +x /install.sh \
     && INSTALL_DIR=/usr/local/bin REPO="${REPO}" /install.sh \
-    && kevin -h
+    && kevin --help
 
 # runtime stage
 FROM scratch
@@ -25,4 +25,4 @@ EXPOSE 6379
 USER 65532:65532
 
 ENTRYPOINT ["/kevin"]
-CMD ["--port", "6379"]
+CMD ["serve", "--port", "6379", "--bind", "0.0.0.0"]

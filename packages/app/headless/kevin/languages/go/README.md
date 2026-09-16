@@ -27,19 +27,19 @@ Pick the option that fits your environment.
 
 ### Prebuilt binary
 
-| No  | Platform | Architecture | Download Link                        | Note                          |
-| --- | -------- | ------------ | ------------------------------------ | ----------------------------- |
-| 1   | Linux    | amd64        | [Download `kv`][linux-amd64]         | Static binary, no deps needed |
-| 2   | Linux    | arm64        | [Download `kv`][linux-arm64]         | Static binary, no deps needed |
-| 3   | macOS    | amd64        | [Download `kv`][darwin-amd64]        | Static binary, no deps needed |
-| 4   | macOS    | arm64        | [Download `kv`][darwin-arm64]        | Static binary, no deps needed |
+| No  | Platform | Architecture | Download Link                    | Note                          |
+| --- | -------- | ------------ | -------------------------------- | ----------------------------- |
+| 1   | Linux    | amd64        | [Download `kevin`][linux-amd64]  | Static binary, no deps needed |
+| 2   | Linux    | arm64        | [Download `kevin`][linux-arm64]  | Static binary, no deps needed |
+| 3   | macOS    | amd64        | [Download `kevin`][darwin-amd64] | Static binary, no deps needed |
+| 4   | macOS    | arm64        | [Download `kevin`][darwin-arm64] | Static binary, no deps needed |
 
 [linux-amd64]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-kevin-latest/app-headless-kevin-go-kv-linux-amd64
 [linux-arm64]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-kevin-latest/app-headless-kevin-go-kv-linux-arm64
 [darwin-amd64]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-kevin-latest/app-headless-kevin-go-kv-darwin-amd64
 [darwin-arm64]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-kevin-latest/app-headless-kevin-go-kv-darwin-arm64
 
-```
+```bash
 chmod +x kevin
 ./kevin serve --port 6379
 ```
@@ -88,23 +88,23 @@ subcommand:
 
 ## Commands
 
-| Command        | Description                                      | Example                          |
-| -------------- | ------------------------------------------------ | -------------------------------- |
-| `PING`         | Liveness check                                   | `PING` → `PONG`                 |
-| `SET key value`| Store a value (value may contain spaces)         | `SET foo bar` → `OK`            |
-| `GET key`      | Retrieve a value                                | `GET foo` → `bar`, or `(nil)`   |
-| `KEYS`         | List all keys (space-separated)                  | `KEYS` → `foo bar`              |
-| `DEL key`      | Delete a key                                    | `DEL foo` → `1` or `0`          |
+| Command         | Description                              | Example                       |
+| --------------- | ---------------------------------------- | ----------------------------- |
+| `PING`          | Liveness check                           | `PING` → `PONG`               |
+| `SET key value` | Store a value (value may contain spaces) | `SET foo bar` → `OK`          |
+| `GET key`       | Retrieve a value                         | `GET foo` → `bar`, or `(nil)` |
+| `KEYS`          | List all keys (space-separated)          | `KEYS` → `foo bar`            |
+| `DEL key`       | Delete a key                             | `DEL foo` → `1` or `0`        |
 
 Commands are case-insensitive. Unknown commands and missing arguments return a
 Redis-style `ERR unknown command` / `ERR usage: ...` response.
 
 ## Configuration
 
-| Flag      | Default | Purpose                                            |
-| --------- | ------- | -------------------------------------------------- |
-| `--port`  | `6379`  | TCP listen port                                    |
-| `--gui`   | `false` | Open the key/value manager GUI alongside the server |
+| Flag     | Default | Purpose                                             |
+| -------- | ------- | --------------------------------------------------- |
+| `--port` | `6379`  | TCP listen port                                     |
+| `--gui`  | `false` | Open the key/value manager GUI alongside the server |
 
 The server is stateless and in-memory — all data is lost on shutdown, matching
 the C and C++ implementations.
@@ -125,13 +125,13 @@ reports that GUI support is not compiled in.
 
 ## Documentation
 
-| Document                                | Description                            |
-| --------------------------------------- | ------------------------------------- |
-| [Architecture](./docs/ARCHITECTURE.md)  | Tech stack, module map, request flow  |
-| [Contributing](./docs/CONTRIBUTING.md)  | Setup, commands, conventions, testing |
-| [Downloads](./docs/DOWNLOADS.md)        | Binary, Docker image, or source       |
-| [Packaging](./docs/PACKAGING.md)        | Build + CI artifact pipeline          |
-| [Roadmap](./docs/ROADMAP.md)            | Phased feature roadmap                |
+| Document                               | Description                           |
+| -------------------------------------- | ------------------------------------- |
+| [Architecture](./docs/ARCHITECTURE.md) | Tech stack, module map, request flow  |
+| [Contributing](./docs/CONTRIBUTING.md) | Setup, commands, conventions, testing |
+| [Downloads](./docs/DOWNLOADS.md)       | Binary, Docker image, or source       |
+| [Packaging](./docs/PACKAGING.md)       | Build + CI artifact pipeline          |
+| [Roadmap](./docs/ROADMAP.md)           | Phased feature roadmap                |
 
 ## License
 
