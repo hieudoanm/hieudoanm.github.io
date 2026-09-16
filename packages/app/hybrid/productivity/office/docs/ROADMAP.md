@@ -1,43 +1,46 @@
 # Roadmap
 
-## v1.0 — MVP ✅
+## v1.0 — Calendar MVP ✅
 
 - [x] 7 calendar views (3-day, daily, weekly, monthly, quarterly, half, yearly)
 - [x] Year navigation with arrow buttons
 - [x] View switcher dropdown
 - [x] Weekday filter toggle
 - [x] Month navigation in monthly view
-- [x] Dark theme (nothing theme)
+- [x] Dark/light themes (office-dark, office-light)
 - [x] Header with nav links (About, Downloads, Version)
 - [x] Tauri desktop config
 - [x] PWA manifest
-- [x] Jest test suite (15 suites, 79 tests)
+- [x] Jest test suite
 - [x] Static export
 
-## v1.1 — Data & Polish
+## v1.1 — Office Suite ✅
 
-- [ ] Move calendar events data to local `src/data/calendar/`
-- [ ] Update imports to use local data
+- [x] CSV spreadsheet sub-app (full + lite)
+- [x] Markdown knowledge base sub-app (full + lite)
+- [x] Home hub page with app cards
+- [x] Lite hub page
+- [x] Auth pages (sign-in, sign-up, profile, password reset)
+- [x] Info pages (about, downloads, version)
+- [x] Playwright e2e suite
+
+## v1.2 — Tasks ✅
+
+- [x] Kanban board sub-app (`/tasks/`)
+- [x] Sidebar with board list, search, member switcher, archive
+- [x] 4 board views: Kanban, List, Calendar, Timeline
+- [x] Board filter bar (labels, members, priority, due date, presets)
+- [x] Card CRUD, drag-and-drop, labels, assignees, cover, due dates
+- [x] IndexedDB persistence (`office-db` via idb)
+- [x] Lite to-do list (`/lite/tasks/`) — Google Tasks style
+- [x] Empty, signed-out, and loading states
+
+## v1.3 — Data & Polish
+
 - [ ] Add more event categories
 - [ ] Improve event detail modal
-- [ ] Add keyboard shortcuts for view switching
-- [ ] Add keyboard shortcuts for year navigation
-
-## v1.2 — Interactivity
-
-- [ ] Click event to see details
-- [ ] Create/edit events inline
-- [ ] Drag to select date range
-- [ ] Export events as JSON/CSV
-- [ ] Import events from file
+- [ ] Keyboard shortcuts for view/year switching
 - [ ] Search events by text
-
-## v1.3 — Sync & Storage
-
-- [ ] Local storage persistence (IndexedDB)
-- [ ] Sync across devices via URL hash
-- [ ] Export/import full calendar state
-- [ ] Print-friendly view
 
 ## v2.0 — Advanced
 
@@ -45,5 +48,5 @@
 - [ ] Recurring events
 - [ ] Reminders and notifications
 - [ ] Integration with external calendars (Google, Apple)
-- [ ] Collaborative editing
-- [ ] Mobile app (Tauri Mobile)
+- [ ] Collaborative editing / realtime sync
+- [ ] Mobile app builds via Tauri Mobile

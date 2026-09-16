@@ -1,6 +1,6 @@
 # Office
 
-> Your events, visualized seven ways — from daily cards to yearly heatmaps.
+> A suite of productivity tools — Calendar, CSV, Markdown, and Tasks.
 > Runs on phone, tablet, laptop, and desktop so you never lose track of what
 > matters.
 
@@ -69,64 +69,50 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-A multi-view event calendar with GitHub-style activity visualization that puts
-300+ events at your fingertips — from holiday to cultural to seasonal — across
-daily, weekly, monthly, quarterly, half-year, and yearly views.
+A privacy-first, offline-first office suite. Four productivity sub-apps — a
+multi-view event **Calendar**, a **CSV** spreadsheet editor, a **Markdown**
+knowledge base, and a **Tasks** kanban board — plus lightweight lite versions of
+each. Data lives in your browser (localStorage / IndexedDB), so everything
+works offline and never leaves your device.
 
 ---
 
 ## Features
 
-### 📅 Calendar Views
+### 📅 Calendar
 
-7 calendar views to visualise your data from different perspectives:
+A multi-view event calendar with GitHub-style activity visualization that puts
+300+ events at your fingertips — from holiday to cultural to seasonal — across
+daily, weekly, monthly, quarterly, half-year, and yearly views.
 
-#### 3-Day View
+### 📊 CSV
 
-Yesterday, today, and tomorrow in card format. Quick glance at upcoming events.
+A minimal spreadsheet editor for CSV files with formula support, filters,
+comments, sheets, and export.
 
-#### Daily View
+### ✍️ Markdown
 
-Full-year grid with GitHub-style activity dots. Each day is a cell in a 52×7 grid
-(weeks × weekdays). Shows event intensity with dot colour.
+An Obsidian-style markdown knowledge base with live preview, TOC, word counts,
+graph view, and your own notes bundled as content.
 
-#### Weekly View
+### ✅ Tasks
 
-Month-by-month grid where each row is a week. See how events cluster by week
-across the year.
+A kanban board for planning and tracking work — sidebar with board search and
+member switcher, four views (Kanban, List, Calendar, Timeline), labels,
+assignees, priorities, due dates, and an archive. Persisted to IndexedDB.
 
-#### Monthly View
+### ⚡ Lite versions
 
-12-month dot grid. Each month is a row, each day is a dot. Quickly identify
-busy periods across the year.
+Lightweight variants of every sub-app under `/lite/` — a monthly calendar, a
+quick table editor, a markdown editor with live preview, and a Google
+Tasks-style to-do list.
 
-#### Quarterly View
-
-Four quarterly rows showing event distribution. Each row covers one quarter
-(13 weeks). Good for high-level trend analysis.
-
-#### Half View
-
-Two half-year rows. Each row covers 26 weeks. Ideal for spotting seasonal
-patterns.
-
-#### Yearly View
-
-12-month overview with category labels. Shows event counts per month with
-visual bars.
-
-### 🧭 Navigation
+### 🧭 Calendar Navigation
 
 - **Year selector** — cycle through years with arrow buttons
 - **View switcher** — dropdown to change between all 7 views
 - **Weekday filter** — toggle individual weekdays on/off in Daily/Weekly views
 - **Month navigation** — prev/next arrows in Monthly calendar
-
-### 📊 Data
-
-- 300+ events across multiple categories (holiday, cultural, seasonal, international)
-- Events grouped by month and year for efficient lookup
-- Date-based filtering with helper functions
 
 ### 📄 Additional Pages
 
@@ -136,7 +122,55 @@ visual bars.
 
 ---
 
-# First run
+## Comparison — Google Workspace & Microsoft Office
+
+A simple feature mapping between the sub-apps in this Office suite and their
+counterparts in Google Workspace and Microsoft Office. An app that does not
+exist shows `X`.
+
+### Apps in Office
+
+| Office        | Google Workspace | Microsoft Office           |
+| ------------- | ---------------- | -------------------------- |
+| Calendar      | Google Calendar  | Microsoft Outlook Calendar |
+| CSV           | Google Sheets    | Microsoft Excel            |
+| Markdown      | Google Docs      | Microsoft Word             |
+| Tasks         | Google Tasks     | Microsoft To Do            |
+
+### Lite Variants
+
+Each full sub-app ships a lite variant under `/lite/`:
+
+| Office (lite) | Google Workspace | Microsoft Office                |
+| ------------- | ---------------- | ------------------------------- |
+| Lite Calendar | Google Calendar  | Microsoft Outlook Calendar      |
+| Lite CSV      | Google Sheets    | Microsoft Excel                 |
+| Lite Markdown | Google Docs      | Microsoft Word                  |
+| Lite Tasks    | Google Tasks     | Microsoft To Do                 |
+
+### Common office services not covered
+
+| Google Workspace | Microsoft Office             | Office   |
+| ---------------- | ---------------------------- | -------- |
+| Google Docs      | Microsoft Word               | Markdown |
+| Google Sheets    | Microsoft Excel              | CSV      |
+| Google Slides    | Microsoft PowerPoint         | X        |
+| Google Calendar  | Microsoft (Outlook) Calendar | Calendar |
+| Google Gmail     | Microsoft Outlook            | X        |
+| Google Drive     | Microsoft OneDrive           | X        |
+| Google Meet      | Microsoft Teams              | X        |
+| Google Keep      | Microsoft OneNote            | X        |
+| Google Tasks     | Microsoft To Do              | Tasks    |
+| Google Forms     | Microsoft Forms              | X        |
+| Google Sites     | Microsoft SharePoint         | X        |
+| Google Chat      | Microsoft Teams (Chat)       | X        |
+
+Rows where our Office app is `X` indicate services that do not exist in this
+suite yet.
+
+---
+
+## First run
 
 A few things to know before your first launch:
 

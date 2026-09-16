@@ -2,32 +2,45 @@
 
 ## Prerequisites
 
-- [Node.js](https://nodejs.org/) >= 18
-- [pnpm](https://pnpm.io/)
+- [Node.js](https://nodejs.org/) 26.x (see `.nvmrc`)
+- [pnpm](https://pnpm.io/) 11.x
 - [Tauri CLI](https://tauri.app/) (for desktop builds)
 
 ## Getting Started
+
+The office package is part of a pnpm workspace. From the repo root:
 
 ```bash
 # Install dependencies
 pnpm install
 
-# Start dev server
-pnpm dev
+# Start dev server (filtered to this package)
+pnpm --filter @hieudoanm.github.io/office dev
+
+# Typecheck
+pnpm --filter @hieudoanm.github.io/office typecheck
 
 # Build for production
-pnpm build
+pnpm --filter @hieudoanm.github.io/office build
 
-# Run tests
-pnpm test
+# Lint + fix
+pnpm --filter @hieudoanm.github.io/office lint
 
-# Run e2e tests
-pnpm test:e2e
+# Unit tests
+pnpm --filter @hieudoanm.github.io/office test
+
+# E2E tests
+pnpm --filter @hieudoanm.github.io/office test:e2e
 ```
+
+Run scripts directly from `packages/app/hybrid/productivity/office` without the
+filter prefix if you prefer.
 
 ## Project Structure
 
 Follow the directory structure in [ARCHITECTURE.md](./ARCHITECTURE.md).
+Each feature (calendar, csv, md, tasks) is confined to its own `src/components/<feature>/`,
+`src/lib/<feature>/`, and `src/data/<feature>/` folders.
 
 ## Code Style
 
@@ -40,38 +53,31 @@ Follow the directory structure in [ARCHITECTURE.md](./ARCHITECTURE.md).
 
 ## Component Guidelines
 
-- Use Tailwind CSS for styling (no inline styles)
-- Use DaisyUI component classes (`btn`, `card`, `select`, `badge`)
+- Use arrow functions and the `FC` type for all components
+- Use `@/*` path aliases for imports
+- Use Tailwind CSS for styling (no inline styles beyond dynamic values such as
+  card cover colours)
+- Use DaisyUI component classes (`btn`, `card`, `select`, `badge`, `table`)
 - Mark client components with `"use client"` only when needed (state, events)
 - Break tests into small per-file suites colocated in `__tests__/`:
   `Component.tsx` → `__tests__/Component.test.tsx`; one `*.test.ts(x)` per unit
   (component, page, hook, util, provider) — never merge multiple units into one
   file. App pages are tested under `src/app/__tests__/`; route-group pages
-  colocate `__tests__/page.test.tsx` in the same folder.
+  colocate `__tests__/page.test.tsx` in the same folder. Unit tests live in
+  `src/lib/<feature>/__tests__/` and component tests under the component folder.
 
-## Calendar Data
+## Feature Data
 
-Calendar events are stored in `src/data/calendar/events.ts`. Each event has:
-
-```typescript
-{
-  date: string;           // YYYY-MM-DD format
-  description: string;    // Event description
-  category: "holiday" | "cultural" | "seasonal" | "international";
-}
-```
+- Calendar events live in `src/data/calendar/events.ts`
+- Tasks seed data lives in `src/data/tasks/` (`models.ts`, `seed.ts`)
+- Markdown seed content lives in `src/data/md/seed.ts`
+- The Tasks sub-app persists to IndexedDB under the `office-db` database
 
 ## Running Tests
 
 ```bash
 # Unit tests
 pnpm test
-
-# Watch mode
-pnpm test:watch
-
-# Coverage
-pnpm test:coverage
 
 # E2E tests (requires dev server running)
 pnpm dev &
@@ -82,6 +88,6 @@ pnpm test:e2e
 
 1. Create a feature branch from `main`
 2. Make your changes with tests
-3. Run `pnpm lint` and `pnpm test` — all must pass
+3. Run `pnpm lint`, `pnpm typecheck`, and `pnpm test` — all must pass
 4. Update docs if adding features
 5. Open a PR with a clear title and description

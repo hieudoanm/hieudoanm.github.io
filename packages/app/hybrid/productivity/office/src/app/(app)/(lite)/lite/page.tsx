@@ -1,11 +1,16 @@
 'use client';
 
 import {
-  HomeTemplate,
+  AppsHub,
   type CourseItem,
-} from '@/components/shared/templates/HomeTemplate';
+} from '@/components/shared/organisms/AppsHub';
 import { NextPage } from 'next';
-import { PiCalendarBlank, PiMarkdownLogo, PiTable } from 'react-icons/pi';
+import {
+  PiCalendarBlank,
+  PiListChecks,
+  PiMarkdownLogo,
+  PiTable,
+} from 'react-icons/pi';
 
 const ITEMS: CourseItem[] = [
   {
@@ -26,11 +31,17 @@ const ITEMS: CourseItem[] = [
     icon: PiMarkdownLogo,
     href: '/lite/md',
   },
+  {
+    label: 'Tasks',
+    description: 'A lite to-do list for quick task tracking',
+    icon: PiListChecks,
+    href: '/lite/tasks',
+  },
 ];
 
 const LiteHomePage: NextPage = () => {
   return (
-    <HomeTemplate
+    <AppsHub
       title="Lite"
       description="Lightweight versions of your favorite productivity tools"
       items={ITEMS}

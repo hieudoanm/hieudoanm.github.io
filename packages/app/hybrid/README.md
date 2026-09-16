@@ -22,18 +22,17 @@
 | 18  | office      | [Office][office]           | Productivity suite                                                           | No       | DONE   | Productivity      | Business           |
 | 19  | keynotes    | [Keynotes][keynotes]       | PowerPoint / Google Slides / Apple Keynote                                   | No       | DONE   | Productivity      | Education          |
 | 20  | pdf         | [PDF][pdf]                 | Adobe Acrobat PDF                                                            | No       | DONE   | Productivity      | Business           |
-| 21  | projects    | [Projects][projects]       | Atlassian Trello / Kanban                                                    | Required | DONE   | Productivity      | Business           |
-| 22  | resume      | [Resume][resume]           | Resume Builder                                                               | No       | DONE   | Productivity      | Business           |
-| 23  | store       | [Store][store]             | App Store / Play Store                                                       | No       | DONE   | Shopping          | Business           |
-| 24  | chat        | [Chat][chat]               | Chat like Codex / Claude                                                     | Required | DONE   | Social Networking | Business           |
-| 25  | messaging   | [Messaging][messaging]     | Telegram / WhatsApp / Messenger / Signal                                     | Required | DONE   | Social Networking | Business           |
-| 26  | chess       | [Chess][chess]             | chess.com / lichess.org                                                      | No       | DONE   | Sports            | Games              |
-| 27  | football    | [Football][football]       | Football Formation / Analysis                                                | No       | DONE   | Sports            | Games              |
-| 28  | tourney     | [Tourney][tourney]         | Tournament management app for creating and tracking competitions             | No       | DONE   | Sports            | Games              |
-| 29  | clock       | [Clock][clock]             | Pomodoro / Watchface / World Clock / Timer / Stopwatch                       | No       | DONE   | Utilities         | Productivity       |
-| 30  | docs        | [Docs][docs]               | TinyWow                                                                      | No       | DONE   | Utilities         | Productivity       |
-| 31  | password    | [Password][password]       | BitWarden / 1Password                                                        | Required | DONE   | Utilities         | Productivity       |
-| 32  | doi         | [DOI][doi]                 | Crossref Citation Network Visualizer                                         | No       | DONE   | Education         | Developer Tools    |
+| 21  | resume      | [Resume][resume]           | Resume Builder                                                               | No       | DONE   | Productivity      | Business           |
+| 22  | store       | [Store][store]             | App Store / Play Store                                                       | No       | DONE   | Shopping          | Business           |
+| 23  | chat        | [Chat][chat]               | Chat like Codex / Claude                                                     | Required | DONE   | Social Networking | Business           |
+| 24  | messaging   | [Messaging][messaging]     | Telegram / WhatsApp / Messenger / Signal                                     | Required | DONE   | Social Networking | Business           |
+| 25  | chess       | [Chess][chess]             | chess.com / lichess.org                                                      | No       | DONE   | Sports            | Games              |
+| 26  | football    | [Football][football]       | Football Formation / Analysis                                                | No       | DONE   | Sports            | Games              |
+| 27  | tourney     | [Tourney][tourney]         | Tournament management app for creating and tracking competitions             | No       | DONE   | Sports            | Games              |
+| 28  | clock       | [Clock][clock]             | Pomodoro / Watchface / World Clock / Timer / Stopwatch                       | No       | DONE   | Utilities         | Productivity       |
+| 29  | docs        | [Docs][docs]               | TinyWow                                                                      | No       | DONE   | Utilities         | Productivity       |
+| 30  | password    | [Password][password]       | BitWarden / 1Password                                                        | Required | DONE   | Utilities         | Productivity       |
+| 31  | doi         | [DOI][doi]                 | Crossref Citation Network Visualizer                                         | No       | DONE   | Education         | Developer Tools    |
 
 [menu]: https://hieudoanm.github.io/free/menu/
 [pos]: https://hieudoanm.github.io/free/pos/
@@ -55,7 +54,6 @@
 [office]: https://hieudoanm.github.io/free/office/
 [keynotes]: https://hieudoanm.github.io/free/keynotes/
 [pdf]: https://hieudoanm.github.io/free/pdf/
-[projects]: https://hieudoanm.github.io/free/projects/
 [resume]: https://hieudoanm.github.io/free/resume/
 [store]: https://hieudoanm.github.io/free/store/
 [chat]: https://hieudoanm.github.io/free/chat/

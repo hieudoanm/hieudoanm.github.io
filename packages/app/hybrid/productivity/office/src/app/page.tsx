@@ -1,11 +1,17 @@
 'use client';
 
 import {
-  HomeTemplate,
+  AppsHub,
   type CourseItem,
-} from '@/components/shared/templates/HomeTemplate';
+} from '@/components/shared/organisms/AppsHub';
+import { AppsComparison } from '@/components/shared/organisms/AppsComparison';
 import { NextPage } from 'next';
-import { PiCalendarBlank, PiMarkdownLogo, PiTable } from 'react-icons/pi';
+import {
+  PiCalendarBlank,
+  PiListChecks,
+  PiMarkdownLogo,
+  PiTable,
+} from 'react-icons/pi';
 
 const ITEMS: CourseItem[] = [
   {
@@ -26,15 +32,24 @@ const ITEMS: CourseItem[] = [
     icon: PiMarkdownLogo,
     href: '/md/',
   },
+  {
+    label: 'Tasks',
+    description: 'A full kanban board for planning and tracking work',
+    icon: PiListChecks,
+    href: '/tasks/',
+  },
 ];
 
 const HomePage: NextPage = () => {
   return (
-    <HomeTemplate
-      title="Office"
-      description="A suite of productivity tools for planning your work"
-      items={ITEMS}
-    />
+    <div className="flex h-full flex-col">
+      <AppsHub
+        title="Office"
+        description="A suite of productivity tools for planning your work"
+        items={ITEMS}
+      />
+      <AppsComparison />
+    </div>
   );
 };
 
