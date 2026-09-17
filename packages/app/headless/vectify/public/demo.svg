@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" role="img" aria-labelledby="title desc">
+  <title id="title">Vectify terminal: inspect, trace, simplify, debug, serve</title>
+  <desc id="desc">Animated terminal window showing vectify info, a default trace, a two-colour trace, the debug artefacts it writes, and vectify serve with its routes.</desc>
+
+  <style>
+    .line { opacity: 0; }
+    .line.cmd-info { animation: rise 0.4s ease-out 0.9s forwards; }
+    .line.info-size { animation: rise 0.4s ease-out 1.5s forwards; }
+    .line.info-pal { animation: rise 0.4s ease-out 2.1s forwards; }
+    .line.info-swatch1 { animation: rise 0.4s ease-out 2.5s forwards; }
+    .line.info-swatch2 { animation: rise 0.4s ease-out 2.7s forwards; }
+    .line.info-swatch3 { animation: rise 0.4s ease-out 2.9s forwards; }
+    .line.info-note { animation: rise 0.4s ease-out 3.3s forwards; }
+
+    .line.cmd-trace { animation: rise 0.4s ease-out 4.1s forwards; }
+    .line.trace-out { animation: rise 0.4s ease-out 4.9s forwards; }
+
+    .line.cmd-bw { animation: rise 0.4s ease-out 5.7s forwards; }
+    .line.bw-out { animation: rise 0.4s ease-out 6.5s forwards; }
+
+    .line.cmd-debug { animation: rise 0.4s ease-out 7.3s forwards; }
+    .line.debug-out { animation: rise 0.4s ease-out 8.1s forwards; }
+    .line.debug-art { animation: rise 0.4s ease-out 8.5s forwards; }
+
+    .line.cmd-serve { animation: rise 0.4s ease-out 9.5s forwards; }
+    .line.serve-out { animation: rise 0.4s ease-out 10.3s forwards; }
+    .line.prompt { animation: rise 0.4s ease-out 11.1s forwards; }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .line { opacity: 1; animation: none; }
+    }
+  </style>
+
+  <rect x="0" y="0" width="1280" height="720" fill="#0f172a"/>
+  <rect x="0" y="0" width="1280" height="48" fill="#1e293b"/>
+  <line x1="0" y1="48" x2="1280" y2="48" stroke="#334155" stroke-width="1"/>
+
+  <circle cx="32" cy="24" r="8" fill="#ef4444"/>
+  <circle cx="58" cy="24" r="8" fill="#f59e0b"/>
+  <circle cx="84" cy="24" r="8" fill="#22c55e"/>
+
+  <text x="640" y="32" font-size="20" fill="#94a3b8" text-anchor="middle">vectify — zsh</text>
+
+  <g font-size="24" transform-origin="48 96">
+    <g class="line cmd-info" transform-origin="48 96">
+      <text x="48" y="96">
+        <tspan fill="#475569">~/vectify </tspan><tspan fill="#e2e8f0">$ </tspan><tspan fill="#2dd4bf">vectify </tspan><tspan fill="#e2e8f0">info</tspan><tspan fill="#94a3b8"> logo.png</tspan>
+      </text>
+    </g>
+    <g class="line info-size" transform-origin="48 132">
+      <text x="48" y="132" fill="#e2e8f0">500x129 pixels</text>
+    </g>
+    <g class="line info-pal" transform-origin="48 162">
+      <text x="48" y="162" fill="#94a3b8">palette (8 colors):</text>
+    </g>
+    <g class="line info-swatch1" transform-origin="48 190">
+      <text x="48" y="190" fill="#cbd5e1">  <tspan fill="#fefefe">#fefefe</tspan><tspan fill="#64748b">      44520 px</tspan></text>
+    </g>
+    <g class="line info-swatch2" transform-origin="48 214">
+      <text x="48" y="214" fill="#cbd5e1">  <tspan fill="#4d8ab2">#4d8ab2</tspan><tspan fill="#64748b">        947 px</tspan></text>
+    </g>
+    <g class="line info-swatch3" transform-origin="48 238">
+      <text x="48" y="238" fill="#cbd5e1">  <tspan fill="#005791">#005791</tspan><tspan fill="#64748b">      15411 px</tspan></text>
+    </g>
+    <g class="line info-note" transform-origin="48 276">
+      <text x="48" y="276" fill="#64748b"># index 0 is the lightest, so it becomes the background</text>
+    </g>
+
+    <g class="line cmd-trace" transform-origin="48 326">
+      <text x="48" y="326">
+        <tspan fill="#475569">~/vectify </tspan><tspan fill="#e2e8f0">$ </tspan><tspan fill="#2dd4bf">vectify </tspan><tspan fill="#e2e8f0">logo.png logo.svg</tspan>
+      </text>
+    </g>
+    <g class="line trace-out" transform-origin="48 356">
+      <text x="48" y="356" fill="#34d399">✅ 8 colors → 7148 bytes of SVG</text>
+    </g>
+
+    <g class="line cmd-bw" transform-origin="48 396">
+      <text x="48" y="396">
+        <tspan fill="#475569">~/vectify </tspan><tspan fill="#e2e8f0">$ </tspan><tspan fill="#2dd4bf">vectify </tspan><tspan fill="#e2e8f0">logo.png logo.svg</tspan><tspan fill="#fbbf24"> --colors 2</tspan>
+      </text>
+    </g>
+    <g class="line bw-out" transform-origin="48 426">
+      <text x="48" y="426" fill="#34d399">✅ 2 colors → 2973 bytes of SVG</text>
+    </g>
+
+    <g class="line cmd-debug" transform-origin="48 466">
+      <text x="48" y="466">
+        <tspan fill="#475569">~/vectify </tspan><tspan fill="#e2e8f0">$ </tspan><tspan fill="#2dd4bf">vectify </tspan><tspan fill="#e2e8f0">logo.png out.svg</tspan><tspan fill="#fbbf24"> --debug-dir</tspan><tspan fill="#94a3b8"> ./trace</tspan>
+      </text>
+    </g>
+    <g class="line debug-out" transform-origin="48 496">
+      <text x="48" y="496" fill="#34d399">🔍 debug stages written to ./trace</text>
+    </g>
+    <g class="line debug-art" transform-origin="48 526">
+      <text x="48" y="526" fill="#64748b">01-quantized.png  02-regions.png  03-curves.png  04-curves.svg</text>
+    </g>
+
+    <g class="line cmd-serve" transform-origin="48 574">
+      <text x="48" y="574">
+        <tspan fill="#475569">~/vectify </tspan><tspan fill="#e2e8f0">$ </tspan><tspan fill="#2dd4bf">vectify </tspan><tspan fill="#e2e8f0">serve</tspan>
+      </text>
+    </g>
+    <g class="line serve-out" transform-origin="48 604">
+      <text x="48" y="604" fill="#34d399">🌐 serving on http://127.0.0.1:8080</text>
+    </g>
+    <g class="line serve-out" transform-origin="48 630">
+      <text x="48" y="630" fill="#64748b">   POST /vectify · GET /health · GET /info</text>
+    </g>
+
+    <g class="line prompt" transform-origin="48 674">
+      <text x="48" y="674">
+        <tspan fill="#475569">~/vectify </tspan><tspan fill="#e2e8f0">$ </tspan><tspan fill="#2dd4bf">▊</tspan>
+      </text>
+    </g>
+  </g>
+
+</svg>

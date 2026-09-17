@@ -1,0 +1,40 @@
+WEBVTT
+
+NOTE Animated terminal (1280x720, dark slate) showing the DBML CLI
+workflow. Cues are timed to the line animations in demo.svg.
+
+00:00.900 --> 00:01.700
+Command: dbml sql schema.dbml -o schema.sql
+
+00:01.700 --> 00:02.400
+Output: Generated initial_schema.sql
+
+00:02.400 --> 00:03.100
+Command: dbml mermaid schema.dbml -o diagram.mmd
+
+00:03.100 --> 00:03.800
+Output: Generated database-erd.mmd
+
+00:03.800 --> 00:04.500
+Command: dbml svg schema.dbml -o diagram.svg
+
+00:04.500 --> 00:05.200
+Output: Generated schema.svg
+
+00:05.200 --> 00:05.900
+Command: dbml all schema.dbml --output-dir ./output
+
+00:05.900 --> 00:06.600
+Output: Generated SQL, Mermaid, and SVG
+
+00:06.600 --> 00:07.300
+Command: dbml serve --port 8080
+
+00:07.300 --> 00:08.000
+Output: HTTP server listening on http://localhost:8080
+
+00:08.000 --> 00:08.700
+Output: Ctrl+C to stop
+
+00:08.700 --> 00:15.000
+Blank prompt

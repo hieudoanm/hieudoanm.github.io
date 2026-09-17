@@ -4,12 +4,15 @@
 
 - Monitor RAM and disk usage at a glance from the menu bar
 - Compact native macOS menu-bar utility with popover details
+- Full dashboard window for detailed, long-lived monitoring
 - Separate Ports view for monitoring and managing local listening ports
 - Clipboard history tab so nothing you copy is ever lost
 - Live network throughput and per-interface traffic in a dedicated tab
 - Public IP inspector with geolocation, ASN/org, and DNS lookups
-- Running-apps list (Front tab) to bring any app's windows forward
-- Workspaces tab to save and restore app layouts (launch apps, place windows)
+- Battery tab for charge level, power state, and battery health
+- Running-apps list (Apps section) to bring any app's windows forward
+- Workspaces section to save and restore app layouts (launch apps, place windows)
+- One window hosting both monitoring and the Applications Manager
 - Low resource footprint (~0% idle CPU, <50 MB memory)
 - Local-first, no backend
 - Accurate, documented metrics
@@ -25,6 +28,7 @@
 | Port discovery | `lsof` via `Process`                                |
 | Clipboard      | `NSPasteboard` changeCount                          |
 | Network        | `getifaddrs` + IOKit                                |
+| Battery        | IOKit power sources + smart battery registry        |
 | IP / DNS       | `URLSession` public APIs                            |
 | Front          | `NSWorkspace` + `CGWindowListCopyWindowInfo`        |
 | Windows        | CoreGraphics (capture) + Accessibility AX (arrange) |
@@ -41,6 +45,8 @@ holding system-facing services, ViewModels, and SwiftUI views.
 ```text
 Sources/
 ├── App/                       ViewModels (one per tab)
+│   ├── Battery/
+│   │   └── BatteryViewModel.swift
 │   ├── Clipboard/
 │   │   └── ClipboardViewModel.swift
 │   ├── Front/
@@ -62,6 +68,7 @@ Sources/
 │       └── MenuBarPanelPositioner.swift
 ├── Core/                      MacOSXCore target (public, unit-tested)
 │   ├── Models/
+│   │   ├── Battery/    BatteryInfo
 │   │   ├── Clipboard/  ClipboardItem, ClipboardStore
 │   │   ├── Front/      RunningAppInfo
 │   │   ├── IP/         IPInfo, DNSResponse
@@ -71,6 +78,7 @@ Sources/
 │   │   ├── Workspaces/ Workspace, WorkspaceWindow, NormalizedRect, ScreenInfo
 │   │   └── Shared/     MenuBarDisplay, UsageThreshold
 │   ├── Services/
+│   │   ├── Battery/    BatteryInfoParsing
 │   │   ├── Clipboard/  (store lives in Models)
 │   │   ├── Front/      RunningAppProviding, RunningAppsDiscoveryService
 │   │   ├── IP/         IPLookupServicing, IPInfoParsing
@@ -83,6 +91,7 @@ Sources/
 │   ├── ByteFormatter.swift    (shared)
 │   └── SettingsStore.swift    (shared)
 ├── Services/                  System-facing services (MacOSX target)
+│   ├── Battery/    BatteryMonitor
 │   ├── Clipboard/  ClipboardMonitor, PasteboardManager
 │   ├── IP/         IPLookupService
 │   ├── Memory/     MemoryMonitor, DiskMonitor, SwapMonitor, CPUMonitor,
@@ -93,6 +102,7 @@ Sources/
 │   │               WorkspaceCaptureService, WorkspaceRestoreService
 │   └── Shared/     MonitorError
 └── Views/
+    ├── Battery/    BatteryView
     ├── Clipboard/  ClipboardView
     ├── Front/      AppsView, AppsListView, AppRow
     ├── IP/         IPView
@@ -101,8 +111,9 @@ Sources/
     ├── Network/    NetworkView
     ├── Ports/      PortsView, PortListView, PortRow
     ├── Workspaces/ WorkspacesView, WorkspaceRow
-    └── Shared/     MenuBarView, ResourceMeter, SettingsView, UnavailableView,
-                    UsageThresholdColor
+    └── Shared/     MenuBarView, DashboardView, ResourceMeter, SettingsView,
+                    SurfaceLayout, UnavailableView, UsageThresholdColor,
+                    WindowIdentifierTag
 ```
 
 Tests mirror this layout under `Tests/Core/…`, one suite per tab, so parsing,
@@ -112,27 +123,30 @@ math, and store logic are verified independently of SwiftUI.
 
 ```text
 ┌────────────────────────────────────────┐
-│              Menu Bar                  │
+│         Menu Bar · Dashboard           │
 │        CPU 39%   Disk 83%              │
 ├────────────────────────────────────────┤
 │                Views                   │
-│  MenuBarView | SmallView | DetailsView │
-│  ClipboardView | AppsView | IPView     │
+│  MenuBarView | DashboardView |         │
+│  SmallView | DetailsView               │
+│  BatteryView | ClipboardView |         │
+│  AppsView | IPView                     │
 │  NetworkView | PortsView |             │
 │  WorkspacesView | ResourceMeter |      │
 │  SettingsView | UnavailableView        │
 ├────────────────────────────────────────┤
 │             ViewModels                 │
 │  MemoryViewModel | PortsViewModel      │
-│  ClipboardViewModel | AppsViewModel    │
-│  NetworkViewModel | IPViewModel |      │
-│  WorkspacesViewModel                   │
+│  BatteryViewModel | ClipboardViewModel │
+│  AppsViewModel | NetworkViewModel |    │
+│  IPViewModel | WorkspacesViewModel     │
 ├────────────────────────────────────────┤
 │              Services                  │
 │  MemoryMonitor | DiskMonitor |         │
 │  SwapMonitor | CPUMonitor |            │
 │  SystemInfoMonitor |                   │
 │  LsofPortDiscoveryService |            │
+│  BatteryMonitor |                      │
 │  ClipboardMonitor | PasteboardManager  │
 │  NetworkMonitor | IPLookupService |    │
 │  IOKitClassifier | RunningAppsDisc.    │
@@ -144,6 +158,7 @@ math, and store logic are verified independently of SwiftUI.
 │                 Core                   │
 │  MemoryStats | DiskStats | SwapStats   │
 │  CPUStats | SystemInfo | PortInfo      │
+│  BatteryInfo | BatteryInfoParsing |    │
 │  NetworkEndpoint | LsofParser |        │
 │  SignalTerminator | ClipboardItem      │
 │  ClipboardStore | NetworkStats |       │
@@ -317,7 +332,7 @@ NSWorkspace.runningApplications + CGWindowListCopyWindowInfo
         AppsView  →  activate(.activateAllWindows)
 ```
 
-The list refreshes every 2 seconds while the popover is open.
+The list refreshes every 2 seconds while a live surface is showing it.
 
 ### Workspaces
 
@@ -430,17 +445,108 @@ ipinfo.io ──fail──→ ipapi.co
 message, satisfying "offline shows offline, errors show the error". The IP tab
 does not auto-refresh — data is fetched when the tab appears and on Refresh.
 
-### Refresh
+### Battery
 
-A single coordinated 1-second timer drives all five system monitors. When the
-popover is closed the menu-bar percentages still refresh in place (they are
+**Definition:** the internal battery's charge level, power source, and health.
+`BatteryMonitor` reads the live state through the IOKit power-source APIs —
+`IOPSCopyPowerSourcesInfo` / `IOPSCopyPowerSourcesList` /
+`IOPSGetPowerSourceDescription` for capacity, power-source state, charging,
+time-to-empty/full, and health condition, and
+`IOPSCopyExternalPowerAdapterDetails` for the connected charger's wattage.
+Wear data (cycle count, temperature) comes from the `AppleSmartBattery` IOKit
+registry entry on Intel Macs, falling back to `PowerManagementController` on
+Apple Silicon; Intel reports temperature in deci-kelvin, which the monitor
+normalises to deci-celsius before parsing. `BatteryInfoParsing` is a pure
+Core function that folds IOKit's unknown/unlimited time sentinels (`-1`/`-2`)
+into `nil` and computes the model, so it is unit-tested without a real battery.
+
+```text
+IOPSCopyPowerSourcesInfo / IOPSGetPowerSourceDescription
+IOPSCopyExternalPowerAdapterDetails
+AppleSmartBattery | PowerManagementController (registry)
+        ↓
+BatteryInfoParsing  (normalise sentinels, temperature units)
+        ↓
+     BatteryInfo
+        ↓
+   BatteryViewModel  (refreshes while a live surface is visible)
+        ↓
+      BatteryView
+```
+
+`BatteryViewModel` exposes `.unavailable` for Macs without a readable battery
+and `.loaded(BatteryInfo)` otherwise, mirroring the other tab view models.
+
+### Sidebar search
+
+`DashboardSidebar` turns a query into the window's navigation: the section groups
+that survive the filter, and the installed apps the query names
+(`DashboardRoute.app(name:)`, which opens the Apps screen already filtered). It
+is a pure value built from a query and the app list, so the view only renders it.
+The field itself is the shared `SearchField`.
+
+### Design system
+
+`Views/Shared/DesignSystem/` holds the tokens the whole UI draws with —
+`Spacing`, `Radius`, `Palette`, `Typography`, `Motion`, `SurfaceMetrics` — plus
+the components that repeat across sections (`ChipButton`, `CapsuleBadge`,
+`CircleIconButton`). The rules, patterns and anti-patterns are written down in
+`Docs/DESIGN-SYSTEM.md`, and `Tests/Core/DesignSystemTests.swift` fails the build
+if a raw spacing, radius, colour opacity or duration literal appears in a view,
+so the tokens cannot quietly stop being the source of truth.
+
+### Surfaces
+
+Two surfaces share one set of view models, and they are deliberately *not*
+mirror images of each other:
+
+| Surface | Scene | Navigation | Sub-sections |
+| ------- | ----- | ---------- | ------------ |
+| Menu bar | `MenuBarExtra` + `MenuBarView` | Segmented tab strip (the panel is 600 pt wide) | One at a time behind a picker |
+| Dashboard | `Window` + `DashboardView` | One sidebar, no tabs | Side by side as cards |
+
+The dashboard is the app's **only** content window. It hosts the monitoring
+sections *and* the Applications Manager: `DashboardRoute` selects a
+`SurfaceSection`, a `ClipboardViewModel.Section`, a
+`ClockViewModel.Section`, or a `HomebrewViewModel.Section`, and the sidebar
+renders them as four alphabetical groups (Applications, Clipboard, Clock,
+Monitor): Clipboard and Clock get their own groups because the window gives each
+filter and each clock a full screen instead of the panel's single tab with a
+picker. The former standalone Homebrew window and
+its nested sidebar are gone, so the Applications Manager is a route in this
+window — reached from the sidebar or `⇧⌘A` — rather than a second window. That
+also keeps one button per window in the menu-bar footer.
+
+Sub-section navigation follows the surface, via `ContentLayout`:
+
+- `.panel` — header, segmented picker, one sub-section (menu bar)
+- `.window` — no picker; `SectionGrid` flows the sub-sections into cards
+  (`SectionCard`) across as many columns as the width allows
+
+`AppViewModels.shared` owns the long-lived view models and registers an
+`OpenWindowAction` so the `⇧⌘D`, `⇧⌘A`, and `⌘,` commands can open the
+dashboard and settings windows even though the app launches with a `.accessory`
+activation policy (`WindowPresenter` temporarily promotes itself to `.regular`).
+`DashboardRouter` holds the sidebar selection outside the view hierarchy so the
+menu bar can navigate a window it does not own.
+
+## Refresh
+
+A single coordinated 1-second timer drives all five system monitors. When both
+surfaces are closed the menu-bar percentages still refresh in place (they are
 cheap host/FS reads); no independent per-metric timers exist. The Ports view
 runs its own lightweight discovery loop on launch, honoring the same
 `SettingsStore.refreshInterval`; the Network view behaves the same way, so
-throughput rates always divide by the configured interval. The Clipboard
+throughput rates always divide by the configured interval. The Battery view also
+refreshes on the same interval, gated on panel visibility. The Clipboard
 monitor is independent: a 0.5-second pasteboard poll whose only cost is a
 `changeCount` comparison. The Front (running apps) list refreshes every 2
 seconds while visible. Workspaces data is read on demand from disk.
+
+Per-tab refresh is gated by `SurfaceVisibilityMonitor`, which reports a surface
+as live when the menu-bar panel or the dashboard window (`MacOSX.dashboard`,
+tagged by `WindowIdentifierTag`) is on screen. Timers keep running while the
+dashboard window is open even if the panel is closed.
 
 ## Formatting
 
@@ -472,12 +578,22 @@ Semantic system colors only — readable in Light and Dark Mode.
   tab), refreshes every 2 s while visible
 - `IPViewModel` — observable coordinator for IP/DNS lookups, classifies
   connectivity failures into an explicit Offline state
+- `BatteryViewModel` — observable coordinator for battery state, refreshes on
+  the shared interval while visible, exposes `.unavailable` when unreadable
 - `NetworkViewModel` — observable coordinator for throughput and session totals
 - `WorkspacesViewModel` — observable coordinator for saved workspaces
   (capture, list, restore, delete); owns the `WorkspaceStore`, capture service,
   restore service, and accessibility permission state
-- `SettingsStore` — persists user preferences (refresh interval, shared by the
-  system and ports view models)
+- `SettingsStore` — persists user preferences (refresh interval, menu-bar
+  metrics and display, shared by the system and ports view models)
+- `DashboardRouter` — the dashboard sidebar selection, owned outside the view
+  hierarchy so the menu-bar panel can send the window to a route
+- `ContentLayout` / `SectionGrid` / `SectionCard` — panel-vs-window layout
+  switch and the card grid the window uses instead of tabs
+- `MenuBarMetrics` — persisted, order-preserving menu-bar metric selection;
+  always non-empty so the status item keeps a label
+- `AppViewModels` — `@MainActor` container holding every tab view model as a
+  singleton, plus app-level actions (refresh all, open dashboard, open settings)
 - Models are immutable value types with computed ratio/percentage
 
 ## Styling
@@ -485,4 +601,11 @@ Semantic system colors only — readable in Light and Dark Mode.
 - Native SwiftUI with SF Symbols for the menu bar
 - `.monospacedDigit()` for stable menu-bar width
 - SF Symbols and system colors throughout
-- `MenuBarExtra` popover as the primary UI surface
+- `MenuBarExtra` popover for quick checks, dashboard window for detail work
+- Cards in the window use `Color.primary` opacity for fill and stroke, so they
+  read correctly in Light Mode, Dark Mode, and increased transparency
+- Menu-bar labels follow `MenuBarDisplay` (percentage, GB, or ratio) for every
+  selected metric, and tint orange/red once a metric crosses its
+  `UsageThreshold` so a menu-bar glance needs no popover
+- The Settings / Quit footer is shared by every tab in the panel instead of being
+  repeated per tab; the window puts the same actions in the toolbar

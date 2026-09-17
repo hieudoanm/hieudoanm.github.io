@@ -1,4 +1,5 @@
 import { createLogger } from './utils/log';
+import { BACK_TO_TOP_KEY } from './lib/backtotop';
 import { GET_SHOPIFY_ACTION, GET_SHOPIFY_STATE_ACTION } from './lib/shopify';
 import {
   CLAUDE_KEY,
@@ -47,6 +48,7 @@ const blockDistractingSites = document.getElementById(
   'blockDistractingSites'
 ) as HTMLInputElement;
 const blockAds = document.getElementById('blockAds') as HTMLInputElement;
+const backToTop = document.getElementById('backToTop') as HTMLInputElement;
 const newTabTargetUrl = document.getElementById(
   'newTabTargetUrl'
 ) as HTMLInputElement;
@@ -330,6 +332,17 @@ blockAds?.addEventListener('change', () => {
   chrome.storage.sync.set({
     blockAds: blockAds.checked,
   });
+});
+
+chrome.storage.sync.get(BACK_TO_TOP_KEY, (result) => {
+  if (chrome.runtime.lastError) return;
+  if (backToTop) {
+    backToTop.checked = result[BACK_TO_TOP_KEY] !== false;
+  }
+});
+
+backToTop?.addEventListener('change', () => {
+  chrome.storage.sync.set({ [BACK_TO_TOP_KEY]: backToTop.checked });
 });
 
 chrome.storage.sync.get('instaGesture', (result) => {

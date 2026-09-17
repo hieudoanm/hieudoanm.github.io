@@ -10,12 +10,13 @@ final class AppsViewModel: ObservableObject {
     private let provider: any RunningAppProviding
     private var refreshTask: Task<Void, Never>?
     private var visibilityObservation: NSObjectProtocol?
-    private var isPanelVisible = false
+    private var isLiveSurfaceVisible = false
 
     init(provider: any RunningAppProviding = RunningAppsDiscoveryService()) {
         self.provider = provider
-        self.isPanelVisible = PanelVisibilityMonitor.shared.isPanelVisible
-        self.visibilityObservation = PanelVisibilityMonitor.shared.observeVisibilityChange { [weak self] visible in
+        let surfaces = SurfaceVisibilityMonitor.shared
+        self.isLiveSurfaceVisible = surfaces.isLiveSurfaceVisible
+        self.visibilityObservation = surfaces.observeVisibilityChange { [weak self] visible in
             Task { @MainActor in self?.handleVisibilityChange(visible) }
         }
     }
@@ -28,7 +29,7 @@ final class AppsViewModel: ObservableObject {
     }
 
     private func handleVisibilityChange(_ visible: Bool) {
-        isPanelVisible = visible
+        isLiveSurfaceVisible = visible
         guard visible else { return }
         refresh()
     }
@@ -50,7 +51,7 @@ final class AppsViewModel: ObservableObject {
         guard refreshTask == nil else { return }
         refreshTask = Task { @MainActor [weak self] in
             while let self, !Task.isCancelled {
-                if self.isPanelVisible {
+                if self.isLiveSurfaceVisible {
                     self.refresh()
                 }
                 try? await Task.sleep(for: .seconds(2))

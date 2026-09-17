@@ -1,12 +1,7 @@
-'use client';
+import { NoteTemplate } from '@/components/templates/NoteTemplate';
+import { parseNote } from '@/lib/notes';
+import source from '@/notes/stem/chemistry/periodic-table.md';
 
-import { Chemistry } from '@/games/stem/chemistry/periodic-table';
-import { NextPage } from 'next';
+const PeriodicTablePage = () => <NoteTemplate note={parseNote(source)} />;
 
-const ChemistryPage: NextPage = () => (
-  <div className="p-4 md:p-6">
-    <Chemistry />
-  </div>
-);
-
-export default ChemistryPage;
+export default PeriodicTablePage;

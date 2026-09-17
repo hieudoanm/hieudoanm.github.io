@@ -16,6 +16,7 @@ $backdrop-contrasts: (
 @each $name, $value in $backdrop-contrasts {
   .backdrop-contrast-#{$name} {
     --tw-backdrop-contrast: contrast(#{math.div($value, 100)});
+
     -webkit-backdrop-filter: #{$backdrop-filter-composite};
     backdrop-filter: #{$backdrop-filter-composite};
   }

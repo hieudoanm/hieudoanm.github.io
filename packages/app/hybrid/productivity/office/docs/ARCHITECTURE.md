@@ -6,7 +6,8 @@
   **mobile app** (Tauri Mobile)
 - Static export for offline-first PWA support
 - Office productivity suite with four sub-apps — **Calendar**, **CSV**,
-  **Markdown**, and **Tasks** — each available in a full and a lite variant
+  **Markdown**, and **Tasks** — each available in a full and a lite variant,
+  plus **Keynotes**, an offline-first presentation editor
 - Type-safe throughout with strict TypeScript
 
 ## Tech Stack
@@ -33,6 +34,7 @@ src/
 │   │   ├── csv/            # Full spreadsheet editor
 │   │   ├── md/             # Full markdown knowledge base
 │   │   ├── tasks/          # Full kanban board (4 views)
+│   │   ├── keynotes/       # Deck gallery, templates, editor, present…
 │   │   └── (lite)/lite/    # Lite route group
 │   │       ├── calendar/   # Lite calendar (monthly view)
 │   │       ├── csv/        # Lite table editor
@@ -49,16 +51,19 @@ src/
 │   ├── csv/                # CSV/sheet feature module
 │   ├── md/                 # Markdown feature module
 │   ├── tasks/              # Tasks feature module
+│   ├── keynotes/           # Keynotes feature module + Providers
 │   └── shared/             # Header, page templates
 ├── content/                # about.ts, download.ts, version.ts
 ├── data/                   # Static/cached data per feature
 │   ├── calendar/           # Events, months, years, time blocks
 │   ├── md/                 # Markdown seed content
-│   └── tasks/              # models.ts + seed.ts
-├── hooks/                  # Feature hooks (calendar, csv, md, shared)
-├── lib/                    # Feature libs (calendar, csv, md, tasks)
+│   ├── tasks/              # models.ts + seed.ts
+│   └── keynotes/           # charts, icons, presets, templates, themes
+├── hooks/                  # Feature hooks (csv, md, shared, keynotes)
+├── lib/                    # Feature libs (calendar, csv, md, tasks, keynotes)
 ├── notes/                  # Personal notes consumed by the md app
-└── styles/                 # globals.css, themes.css
+├── styles/                 # globals.css, themes.css, keynotes-*.css
+└── types/keynotes/         # Keynotes domain types
 ```
 
 ## Feature Modules
@@ -73,6 +78,7 @@ colocated in `__tests__/` next to each unit.
 | CSV       | csv/            | lite/csv                     | `lib/csv/`                | —                            |
 | Markdown  | md/             | lite/md                      | `lib/md/`                 | `data/md/`, `notes/`         |
 | Tasks     | tasks/          | lite/tasks                   | `lib/tasks/`              | `data/tasks/`                |
+| Keynotes  | keynotes/       | —                            | `lib/keynotes/`           | `data/keynotes/`             |
 
 ## Application Layers
 
@@ -100,6 +106,13 @@ colocated in `__tests__/` next to each unit.
 | `/csv/`                | `(app)/csv/page.tsx`              | Yes    | Full spreadsheet sub-app   |
 | `/md/`                 | `(app)/md/page.tsx`               | Yes    | Full markdown sub-app      |
 | `/tasks/`              | `(app)/tasks/page.tsx`            | Yes    | Full kanban board sub-app  |
+| `/keynotes/`           | `(app)/keynotes/page.tsx`         | Yes    | Keynotes deck gallery      |
+| `/keynotes/templates/` | `(app)/keynotes/templates/page.tsx` | Yes | Keynotes template gallery |
+| `/keynotes/editor/[id]/` | `(app)/keynotes/editor/[id]/page.tsx` | Yes | Slide editor (SSG)    |
+| `/keynotes/present/[id]/` | `(app)/keynotes/present/[id]/page.tsx` | Yes | Present mode (SSG)   |
+| `/keynotes/presenter/[id]/` | `(app)/keynotes/presenter/[id]/page.tsx` | Yes | Presenter view (SSG) |
+| `/keynotes/handouts/[id]/` | `(app)/keynotes/handouts/[id]/page.tsx` | Yes | Handouts (SSG)      |
+| `/keynotes/print/[id]/` | `(app)/keynotes/print/[id]/page.tsx` | Yes   | Print / PDF view (SSG)     |
 | `/lite/`               | `(app)/(lite)/lite/page.tsx`      | Yes    | Lite hub                   |
 | `/lite/calendar/`      | `(app)/(lite)/lite/calendar/page.tsx` | Yes | Lite calendar          |
 | `/lite/csv/`           | `(app)/(lite)/lite/csv/page.tsx`  | Yes    | Lite spreadsheet           |
@@ -133,6 +146,31 @@ The Tasks module is a kanban board (full) and Google Tasks-style to-do list
 - Lite page renders a single `TasksView` with `TaskInput`, `TaskItem`, and
   states for loading, signed-out (`TaskSignInState`), and empty (`TaskEmptyState`)
 
+## Keynotes Sub-app
+
+Keynotes is a presentation editor (deck gallery, slide canvas, presenter view,
+handouts, print/PDF). It was migrated in from a standalone `keynotes` package.
+
+- `app/(app)/keynotes/layout.tsx` — mounts `KeynotesProviders`
+  (`ToastProvider > DeckProvider`) for every Keynotes route
+- `components/keynotes/Providers.tsx` — the provider wrapper
+- `components/keynotes/organisms/DeckProvider.tsx` — deck state, undo/redo,
+  autosave, and a `BroadcastChannel` realtime mock
+- `components/keynotes/organisms/SlideCanvas.tsx` — WYSIWYG canvas;
+  `ObjectRenderer` renders each `SlideObject`
+- `lib/keynotes/db.ts` — idb wrapper around the `office-keynotes-db` IndexedDB
+  database, separate from Tasks' `office-db`
+- `lib/keynotes/idb.ts` — one-line re-export of `idb`; the indirection exists so
+  Jest's `moduleNameMapper` can swap in `lib/keynotes/__mocks__/idb.ts` without
+  affecting Tasks' own `idb` usage. Keynotes code must import `openDB` from here
+- `lib/keynotes/` — exporters, importers, animation/transition model, geometry,
+  shapes, rehearsal, sections, slide backgrounds, markdown/highlight renderers
+- `types/keynotes/deck.ts` — `Deck`, `Slide`, `SlideObject`, `ShapeType`,
+  `AnimationTrigger`, `DeckSnapshot`
+- `styles/keynotes-animations.css` / `styles/keynotes-utilities.css` — the
+  `kn-*` keyframes plus the `anim-*` and `trans-*` utility classes. Keynotes
+  reuses the suite's `office-light` / `office-dark` themes
+
 ## Rendering Strategy
 
 - Static export (`output: 'export'` in `next.config.ts`) — all pages rendered
@@ -144,7 +182,8 @@ The Tasks module is a kanban board (full) and Google Tasks-style to-do list
 ## State Management
 
 - Local state with `useState`/`useReducer` per feature component
-- Persistence via IndexedDB (`idb`) for tasks, and localStorage for md/csv
+- Persistence via IndexedDB (`idb`) for tasks and keynotes, and localStorage
+  for md/csv
 - Calendar uses static data with helper libs for date math
 - Settings (default view, weekday filters) persisted and restored on load
 
@@ -155,4 +194,6 @@ The Tasks module is a kanban board (full) and Google Tasks-style to-do list
 - Theming via `data-theme` on `<html>` (`office-dark` / `office-light`) in
   `src/styles/themes.css`
 - Consistent colour tokens: `bg-base-100`, `text-primary`, `bg-base-200`
+- Keynotes animation/transition keyframes and utilities in
+  `src/styles/keynotes-animations.css` and `src/styles/keynotes-utilities.css`
 - `prettier-plugin-tailwindcss` sorts utility classes

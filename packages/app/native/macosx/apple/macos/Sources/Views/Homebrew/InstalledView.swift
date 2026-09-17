@@ -50,7 +50,7 @@ struct InstalledView: View {
                 .frame(width: 120)
                 .accessibilityLabel("Sort order")
             }
-            .padding(12)
+            .padding(Spacing.md)
 
             Divider()
 
@@ -69,30 +69,11 @@ struct InstalledView: View {
                 .font(.largeTitle.bold())
             Spacer()
         }
-        .padding(20)
+        .padding(Spacing.xl)
     }
 
     private var searchField: some View {
-        HStack(spacing: 6) {
-            Image(systemName: "magnifyingglass")
-                .foregroundStyle(.secondary)
-                .accessibilityHidden(true)
-            TextField("Search installed", text: $searchText)
-                .textFieldStyle(.plain)
-                .accessibilityLabel("Search installed packages")
-            if !searchText.isEmpty {
-                Button {
-                    searchText = ""
-                } label: {
-                    Image(systemName: "xmark.circle.fill")
-                        .foregroundStyle(.secondary)
-                        .accessibilityLabel("Clear search")
-                }
-                .buttonStyle(.borderless)
-            }
-        }
-        .padding(8)
-        .background(.quaternary.opacity(0.4), in: RoundedRectangle(cornerRadius: 8))
+        SearchField(prompt: "Search installed", text: $searchText)
     }
 
     private var packageList: some View {
@@ -131,9 +112,9 @@ struct InstalledView: View {
     }
 
     private var emptyView: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: Spacing.md) {
             Image(systemName: "shippingbox")
-                .font(.system(size: 44))
+                .font(Typography.emptyStateTitle)
                 .foregroundStyle(.secondary)
             Text("Nothing installed")
                 .font(.headline)

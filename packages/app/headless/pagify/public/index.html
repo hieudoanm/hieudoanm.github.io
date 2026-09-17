@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Write Markdown. Run one command. Get a beautiful website." />
+    <title>pagify</title>
+    <meta property="og:title" content="Write Markdown. Run one command. Get a beautiful website." />
+    <meta property="og:description" content="pagify turns a directory of Markdown files into a complete, static website with navigation, search, dark mode, and a polished theme — all from one binary with no Node.js and no configuration." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="pagify" />
+    <meta property="og:url" content="https://hieudoanm.github.io/packages/app/headless/pagify/public/" />
+    <meta property="og:image" content="https://hieudoanm.github.io/packages/app/headless/pagify/public/og/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="pagify — Write Markdown, run one command, get a beautiful website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://hieudoanm.github.io/packages/app/headless/pagify/public/og/og.png" />
+
+    <style>
+      :root {
+        --base-100: #fafafa;
+        --base-200: #fefefe;
+        --base-300: #f3f3f3;
+        --base-content: #181d25;
+        --border: #52525b;
+        --border-soft: #b7b7ba;
+        --error: #dc2626;
+        --info: #2563eb;
+        --neutral: #52525b;
+        --neutral-faint: #9e9ea3;
+        --primary: #2563eb;
+        --primary-content: #ffffff;
+        --primary-dark: #1f54c8;
+        --primary-soft: #e0e8f8;
+        --radius: 10px;
+        --secondary: #7c3aed;
+        --secondary-content: #ffffff;
+        --success: #16a34a;
+        --warning: #d97706;
+      }
+* {
+        box-sizing: border-box;
+      }
+      html {
+        margin: 0;
+        scroll-behavior: smooth;
+        scroll-padding-top: 76px;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background: var(--base-100);
+        color: var(--base-content);
+        font-family:
+          system-ui,
+          -apple-system,
+          'Segoe UI',
+          Roboto,
+          'Helvetica Neue',
+          Arial,
+          sans-serif;
+        line-height: 1.55;
+        -webkit-font-smoothing: antialiased;
+      }
+      a {
+        color: var(--primary);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        padding: 0 24px;
+        height: 60px;
+        background: var(--base-200);
+        border-bottom: 1px solid var(--border-soft);
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--base-content);
+      }
+      .brand:hover {
+        text-decoration: none;
+      }
+      .brand .mark {
+        font-size: 20px;
+        line-height: 1;
+      }
+      nav {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        font-size: 14px;
+      }
+      nav a {
+        color: var(--neutral);
+      }
+      nav a:hover {
+        color: var(--base-content);
+        text-decoration: none;
+      }
+
+      main {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 32px 24px 64px;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 28px;
+        justify-items: center;
+        max-width: 760px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 16px 0 8px;
+      }
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 4px 12px;
+        border-radius: 999px;
+        border: 1px solid var(--border-soft);
+        background: var(--primary-soft);
+        color: var(--primary-dark);
+      }
+      .hero h1 {
+        margin: 14px 0 8px;
+        font-size: 34px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        line-height: 1.15;
+      }
+      .lead {
+        margin: 0 auto;
+        max-width: 58ch;
+        font-size: 16px;
+        color: var(--neutral);
+      }
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 22px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        border: 1px solid transparent;
+        border-radius: var(--radius);
+        padding: 12px 22px;
+        font-size: 15px;
+        font-weight: 600;
+        font-family: inherit;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .btn:hover {
+        text-decoration: none;
+      }
+      .btn-primary {
+        color: var(--primary-content);
+        background: var(--primary);
+        border-color: var(--primary);
+      }
+      .btn-primary:hover {
+        background: var(--primary-dark);
+        border-color: var(--primary-dark);
+      }
+      .btn-ghost {
+        color: var(--base-content);
+        background: var(--base-200);
+        border-color: var(--border);
+      }
+      .btn-ghost:hover {
+        background: var(--base-300);
+      }
+
+       
+      .hero-media,
+      .demo-media {
+        display: block;
+        width: 100%;
+        max-width: 720px;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        margin-inline: auto;
+        background: var(--base-300);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+      }
+
+      section.block {
+        margin-top: 32px;
+      }
+      .block-head {
+        margin: 0 0 18px;
+        text-align: center;
+      }
+      .block-head h2 {
+        margin: 0;
+        font-size: 22px;
+        font-weight: 800;
+        letter-spacing: -0.01em;
+      }
+      .block-head .sub {
+        margin: 6px auto 0;
+        max-width: 60ch;
+        color: var(--neutral);
+        font-size: 14.5px;
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+      .feature {
+        background: var(--base-200);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+        padding: 24px 24px;
+        text-align: center;
+      }
+      .feature .icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        font-size: 22px;
+        border-radius: var(--radius);
+        background: var(--primary-soft);
+        border: 1px solid var(--border-soft);
+      }
+      .feature h3 {
+        margin: 14px 0 8px;
+        font-size: 16px;
+        font-weight: 700;
+      }
+      .feature p {
+        margin: 0;
+        font-size: 13.5px;
+        color: var(--neutral);
+      }
+
+      .cta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 6px;
+        background: var(--base-200);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+        padding: 48px 32px;
+      }
+      .cta .icon {
+        font-size: 34px;
+        line-height: 1;
+      }
+      .cta h2 {
+        margin: 10px 0 6px;
+        font-size: 26px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+      .cta p {
+        margin: 0;
+        max-width: 52ch;
+        color: var(--neutral);
+        font-size: 15px;
+      }
+      .cta .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      footer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 24px;
+        align-items: center;
+        justify-content: center;
+        border-top: 1px solid var(--border-soft);
+        margin-top: 48px;
+        padding: 24px 0 4px;
+        font-size: 13px;
+        color: var(--neutral-faint);
+      }
+      footer a {
+        color: var(--neutral-faint);
+      }
+      footer a:hover {
+        color: var(--base-content);
+      }
+
+      @media (max-width: 900px) {
+        .features {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 560px) {
+        nav {
+          display: none;
+        }
+        .hero h1 {
+          font-size: 26px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="#top">
+        <span class="mark">📄</span>
+        <span>pagify</span>
+      </a>
+      <nav>
+        <a href="#features">Features</a><a href="#demo">Demo</a><a href="#cta">Download</a><a href="https://github.com/hieudoanm/pagify">GitHub</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div>
+          <span class="badge">🚀 v0.1</span>
+          <h1>Write Markdown. Run one command. Get a beautiful website.</h1>
+          <p class="lead">pagify turns a directory of Markdown files into a complete, static website: navigation, page rendering, search and a polished default theme, all from one binary with no Node.js and no configuration.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#cta">Get Started</a>
+            <a class="btn btn-ghost" href="https://github.com/hieudoanm/pagify">View on GitHub</a>
+          </div>
+        </div>
+        <img class="hero-media" src="demo.png" alt="pagify terminal showing build command and generated site" />
+      </section>
+
+      <section id="features" class="block">
+        <div class="block-head">
+          <h2>Features</h2>
+          <p class="sub">Everything you need for beautiful documentation sites.</p>
+        </div>
+        <div class="features">
+          
+          <div class="feature">
+            <span class="icon">⚡</span>
+            <h3>Zero Configuration</h3>
+            <p>Point pagify at a directory of Markdown files and get a complete site. No config files, no build step, no dependencies.</p>
+          </div>
+          
+          <div class="feature">
+            <span class="icon">📝</span>
+            <h3>Markdown First</h3>
+            <p>Write content in standard Markdown with GitHub-flavored extensions: tables, task lists, footnotes, callouts, and more.</p>
+          </div>
+          
+          <div class="feature">
+            <span class="icon">🔍</span>
+            <h3>Built-in Search</h3>
+            <p>Client-side search index generated at build time. No backend required, works on any static host.</p>
+          </div>
+          
+          <div class="feature">
+            <span class="icon">🌙</span>
+            <h3>Dark Mode</h3>
+            <p>Automatic OS detection with manual toggle. Persists preference in localStorage.</p>
+          </div>
+          
+          <div class="feature">
+            <span class="icon">📱</span>
+            <h3>Responsive</h3>
+            <p>Sidebar navigation on desktop, collapsible drawer on mobile. Works on all screen sizes.</p>
+          </div>
+          
+          <div class="feature">
+            <span class="icon">🚀</span>
+            <h3>Single Binary</h3>
+            <p>One Go binary with embedded assets. No Node.js, no Python, no runtime dependencies. Install and run.</p>
+          </div>
+          
+        </div>
+      </section>
+
+      <section id="demo" class="block">
+        <div class="block-head">
+          <h2>Demo</h2>
+          <p class="sub">Watch pagify build a documentation site in seconds.</p>
+        </div>
+        <video class="demo-media" controls preload="metadata" poster="demo.png">
+          <source src="demo.mp4" type="video/mp4" />
+          <track kind="descriptions" label="English descriptions" srclang="en" src="demo-en-descriptions.vtt" default />
+          Your browser does not support the video tag.
+        </video>
+      </section>
+
+      <section id="cta" class="block">
+        <div class="cta">
+          <span class="icon" aria-hidden="true">📄</span>
+          <h2>Start writing documentation today.</h2>
+          <p>Install pagify, create a docs folder, and run one command. Your documentation site is live before your coffee cools.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://github.com/hieudoanm/pagify#install">Install pagify</a>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <span>© 2026 pagify</span>
+        <a href="#features">Features</a><a href="#demo">Demo</a><a href="#cta">Download</a><a href="https://github.com/hieudoanm/pagify">GitHub</a><a href="https://github.com/hieudoanm/pagify/blob/main/LICENSE">License</a>
+      </footer>
+    </main>
+  </body>
+</html>

@@ -2,7 +2,7 @@
 
 // Text decoration color utilities — Tailwind v3 default scale
 
-$text-decoration-color-default: currentColor;
+$text-decoration-color-default: currentcolor;
 
 @each $name, $value in colors.$palette {
   .decoration-#{$name} {

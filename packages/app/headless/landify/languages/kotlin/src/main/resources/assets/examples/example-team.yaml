@@ -1,0 +1,110 @@
+# landify.yaml — the single content source for your landing page.
+#
+#   landify validate   # check that this file is valid
+#   landify build      # generate index.html from this file
+#
+# Every field below has placeholder text and a short "what to do" hint.
+# Attributes like mark, badge, and icon are emoji; keep them quoted so the
+# intent is explicit. All fields marked "required" must be non-empty for
+# `landify validate` to pass.
+#
+# Type: the "team" layout is a people page with an optional values strip and a
+# member card grid.
+#
+# Media: this layout ships no media — no hero image, no demo video. Member
+# avatars are emoji. If you switch the type, regenerate with
+# `landify new -t <type>` for the matching example.
+#
+# Colors: theme is the only design input. List the eight base colors (and,
+# optionally, the corner radius); every other CSS token the page uses —
+# surfaces (base-100/200/300, base-content), accent shades and tints
+# (primary-dark/soft/content, secondary-content), and hairlines derived from
+# neutral (neutral-faint, border, border-soft) — is calculated from them.
+# Values below are the defaults; any field left empty keeps its default.
+
+type: team               # team | status | linktree | faq | product (default) | waitlist | event | download | app | pricing | portfolio | docs
+
+theme:
+  base: "#f7f8fa"         #   backgrounds and surface family
+  primary: "#0d9488"      #   brand accent
+  secondary: "#7c3aed"    #   secondary accent
+  neutral: "#555f6e"      #   muted text and hairline base
+  info: "#2563eb"
+  warning: "#d97706"
+  success: "#16a34a"
+  error: "#dc2626"
+  radius: "10px"          #   corner radius (not a color)
+
+site:                     # used in the navbar, <title>, and meta description
+  name: Landify Studio     # [required] your product or site name
+  mark: "🦊"              # [optional] emoji shown next to the name
+  description: >-          # [required] one sentence used for <meta name="description">
+    The people behind Landify, a tiny landing-page generator.
+  nav:                     # [required] links shown in the top navbar
+    - label: Values
+      href: "#values"
+    - label: Team
+      href: "#team"
+    - label: Join us
+      href: "#cta"
+
+hero:                     # the first thing visitors see
+  badge: "🦊 The crew"    # [optional] small pill above the headline
+  headline: Small team, big pages.   # [required] the big title
+  subheadline: >-          # [required] one or two sentences of supporting text
+    Four people, one YAML file, and an unreasonable fondness for flat web pages.
+
+features:                 # [optional] heading block for the values strip; skip both to hide it
+  heading: What we stand for
+  sub: The principles behind every page we ship.
+
+team:                     # the member grid plus optional values
+  heading: Meet the team   # [optional] section title
+  sub: Spread across three time zones.   # [optional] section subtitle
+  values:                 # [optional] values cards shown above the members
+    - icon: "🧪"          # [optional] emoji shown as the card icon
+      title: Experiment   # [required] value title
+      body: >-            # [required] short description
+        Try the cheap prototype first; polish after it survives contact.
+    - icon: "📐"
+      title: Design rigorously
+      body: >-
+        Eight colors become a full design system through derivation, nothing more.
+    - icon: "♻️"
+      title: Reuse everything
+      body: >-
+        Shared partials and presets mean the same look across every page.
+  members:                # [required] the member cards; add or remove freely
+    - name: Ana Ruiz       # [required] person's name
+      role: Design engineer   # [required] role or title
+      bio: Leads the generator and writes too many YAML validator tests.
+      avatar: "🦊"        # [optional] emoji shown as the avatar
+    - name: Sam Lee
+      role: Product designer
+      bio: Turns support questions into annotated placeholder examples.
+      avatar: "🐨"
+    - name: Mila Aoki
+      role: Frontend engineer
+      bio: Owns the CSS token pipeline and the 64-theme gallery.
+      avatar: "🐼"
+    - name: Theo Brooks
+      role: Docs & community
+      bio: Keeps the README honest and the examples runnable.
+      avatar: "🦉"
+
+cta:                      # the closing call to action
+  icon: "💌"              # [optional] emoji above the heading
+  heading: Want to build with us?   # [required]
+  body: >-                 # [required]
+    We are hiring a second design engineer. Show us something flat.
+  button:                  # [required] the single main action
+    label: See open roles
+    href: https://example.com/jobs
+
+footer:                   # the simple footer row
+  copyright: "© 2026 Landify Studio"   # [required] shown first in the footer
+  links:                  # [optional] footer links; use the same items as nav
+    - label: Team
+      href: "#team"
+    - label: Join us
+      href: "#cta"

@@ -9,6 +9,30 @@ import { SWProvider } from '@/providers/SWProvider';
 export const metadata: Metadata = {
   title: 'Foody',
   description: 'Spin the reel and let fate pick your next meal',
+  metadataBase: new URL('https://hieudoanm.github.io/open/foody/'),
+  openGraph: {
+    type: 'website',
+    siteName: 'Foody',
+    url: 'https://hieudoanm.github.io/open/foody/',
+    title: 'Spin the wheel, eat better',
+    description:
+      'Spin the reel and let fate pick your next meal, with a weekly schedule and a reusable dish list.',
+    images: [
+      {
+        url: '/og/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Foody — Spin the wheel, eat better',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Spin the wheel, eat better',
+    description:
+      'Spin the reel and let fate pick your next meal, with a weekly schedule and a reusable dish list.',
+    images: ['/og/og.png'],
+  },
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,

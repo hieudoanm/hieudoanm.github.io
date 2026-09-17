@@ -1,6 +1,6 @@
 'use client';
 
-import { Attractors } from '@/games/maths/attractors';
+import { Attractors } from '@/games/stem/maths/attractors';
 import { NextPage } from 'next';
 
 const AttractorsPage: NextPage = () => (

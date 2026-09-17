@@ -34,7 +34,7 @@ describe('RootLayout', () => {
     );
     expect(document.documentElement).toHaveAttribute(
       'data-theme',
-      'store-light'
+      'store-dark'
     );
   });
 });
@@ -55,8 +55,13 @@ describe('metadata', () => {
   });
 
   it('has openGraph config', () => {
-    const og = metadata.openGraph as { title: string; type: string };
-    expect(og.title).toBe('Store');
+    const og = metadata.openGraph as {
+      title: string;
+      siteName: string;
+      type: string;
+    };
+    expect(og.title).toBe('Browse and download apps');
+    expect(og.siteName).toBe('Store');
     expect(og.type).toBe('website');
   });
 });

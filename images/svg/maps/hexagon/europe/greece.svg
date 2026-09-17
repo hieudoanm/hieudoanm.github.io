@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 359.59 285.42" width="359.59" height="285.42" role="img" aria-labelledby="greece-title greece-desc">
+  <title id="greece-title">Greece hex map</title>
+  <desc id="greece-desc">Hexagon map with 14 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.40; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 11.87 8.48; }
+    .label { fill: #52525b; font: 600 9.61px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="AN">
+    <title>Voreio Aigaio</title>
+    <polygon class="tile inset" points="326.64,93.26 351.11,107.39 351.11,135.65 326.64,149.78 302.16,135.65 302.16,107.39" aria-label="Voreio Aigaio"/>
+    <text class="label" x="326.64" y="121.52">AN</text>
+  </g>
+  <g class="state" data-state="AS">
+    <title>Notio Aigaio</title>
+    <polygon class="tile inset" points="277.69,178.04 302.16,192.17 302.16,220.43 277.69,234.56 253.21,220.43 253.21,192.17" aria-label="Notio Aigaio"/>
+    <text class="label" x="277.69" y="206.30">AS</text>
+  </g>
+  <g class="state" data-state="MT">
+    <title>Anatoliki Makedonia kai Thraki</title>
+    <polygon class="tile" points="228.74,8.48 253.21,22.61 253.21,50.87 228.74,65.00 204.27,50.87 204.27,22.61" aria-label="Anatoliki Makedonia kai Thraki"/>
+    <text class="label" x="228.74" y="36.74">MT</text>
+  </g>
+  <g class="state" data-state="AT">
+    <title>Attiki</title>
+    <polygon class="tile" points="228.74,93.26 253.21,107.39 253.21,135.65 228.74,149.78 204.27,135.65 204.27,107.39" aria-label="Attiki"/>
+    <text class="label" x="228.74" y="121.52">AT</text>
+  </g>
+  <g class="state" data-state="MA">
+    <title>Ayion Oros</title>
+    <polygon class="tile" points="204.27,50.87 228.74,65.00 228.74,93.26 204.27,107.39 179.79,93.26 179.79,65.00" aria-label="Ayion Oros"/>
+    <text class="label" x="204.27" y="79.13">MA</text>
+  </g>
+  <g class="state" data-state="CR">
+    <title>Kriti</title>
+    <polygon class="tile inset" points="204.27,220.43 228.74,234.56 228.74,262.82 204.27,276.95 179.79,262.82 179.79,234.56" aria-label="Kriti"/>
+    <text class="label" x="204.27" y="248.69">CR</text>
+  </g>
+  <g class="state" data-state="MC">
+    <title>Kentriki Makedonia</title>
+    <polygon class="tile" points="179.79,8.48 204.27,22.61 204.27,50.87 179.79,65.00 155.32,50.87 155.32,22.61" aria-label="Kentriki Makedonia"/>
+    <text class="label" x="179.79" y="36.74">MC</text>
+  </g>
+  <g class="state" data-state="GC">
+    <title>Stereá Elláda</title>
+    <polygon class="tile" points="179.79,93.26 204.27,107.39 204.27,135.65 179.79,149.78 155.32,135.65 155.32,107.39" aria-label="Stereá Elláda"/>
+    <text class="label" x="179.79" y="121.52">GC</text>
+  </g>
+  <g class="state" data-state="TS">
+    <title>Thessalia</title>
+    <polygon class="tile" points="155.32,50.87 179.79,65.00 179.79,93.26 155.32,107.39 130.85,93.26 130.85,65.00" aria-label="Thessalia"/>
+    <text class="label" x="155.32" y="79.13">TS</text>
+  </g>
+  <g class="state" data-state="PP">
+    <title>Peloponnisos</title>
+    <polygon class="tile" points="155.32,135.65 179.79,149.78 179.79,178.04 155.32,192.17 130.85,178.04 130.85,149.78" aria-label="Peloponnisos"/>
+    <text class="label" x="155.32" y="163.91">PP</text>
+  </g>
+  <g class="state" data-state="MW">
+    <title>Dytiki Makedonia</title>
+    <polygon class="tile" points="130.85,8.48 155.32,22.61 155.32,50.87 130.85,65.00 106.37,50.87 106.37,22.61" aria-label="Dytiki Makedonia"/>
+    <text class="label" x="130.85" y="36.74">MW</text>
+  </g>
+  <g class="state" data-state="GW">
+    <title>Dytiki Ellada</title>
+    <polygon class="tile" points="130.85,93.26 155.32,107.39 155.32,135.65 130.85,149.78 106.37,135.65 106.37,107.39" aria-label="Dytiki Ellada"/>
+    <text class="label" x="130.85" y="121.52">GW</text>
+  </g>
+  <g class="state" data-state="EP">
+    <title>Ipeiros</title>
+    <polygon class="tile" points="106.37,50.87 130.85,65.00 130.85,93.26 106.37,107.39 81.90,93.26 81.90,65.00" aria-label="Ipeiros"/>
+    <text class="label" x="106.37" y="79.13">EP</text>
+  </g>
+  <g class="state" data-state="II">
+    <title>Ionioi Nisoi</title>
+    <polygon class="tile inset" points="32.95,93.26 57.43,107.39 57.43,135.65 32.95,149.78 8.48,135.65 8.48,107.39" aria-label="Ionioi Nisoi"/>
+    <text class="label" x="32.95" y="121.52">II</text>
+  </g>
+</svg>

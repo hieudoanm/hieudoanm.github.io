@@ -21,7 +21,7 @@ struct ServicesView: View {
 
     private var header: some View {
         HStack {
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: Spacing.xxs) {
                 Text("Services")
                     .font(.largeTitle.bold())
                 Text("Manage Homebrew services")
@@ -35,12 +35,12 @@ struct ServicesView: View {
             }
             .disabled(viewModel.isLoading)
         }
-        .padding(20)
+        .padding(Spacing.xl)
     }
 
     private var serviceList: some View {
         List(viewModel.services) { service in
-            HStack(spacing: 12) {
+            HStack(spacing: Spacing.md) {
                 Circle()
                     .fill(statusColor(service.status))
                     .frame(width: 10, height: 10)
@@ -65,14 +65,14 @@ struct ServicesView: View {
                     Button("Restart") { Task { await viewModel.restartService(service.name) } }
                 }
             }
-            .padding(.vertical, 4)
+            .padding(.vertical, Spacing.xxs)
         }
     }
 
     private var emptyView: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: Spacing.md) {
             Image(systemName: "gearshape.2")
-                .font(.system(size: 44))
+                .font(Typography.emptyStateTitle)
                 .foregroundStyle(.secondary)
             Text("No services")
                 .font(.headline)

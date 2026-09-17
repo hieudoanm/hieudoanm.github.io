@@ -2,14 +2,20 @@
 
 ## Installation
 
-| Platform | Minimum Version | Download                                                                                                                    |
-| -------- | --------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| Platform | Minimum Version | Download                                                                                                                      |
+| -------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | macOS    | 13 Ventura      | [Download .dmg](https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-macosx-latest/MacOSX-0.0.1.dmg) |
 
 ## About
 
-MacOSX — RAM, storage, network throughput, local ports, running apps, workspace
-layout save/restore, and clipboard history at a glance from your menu bar.
+MacOSX is a native menu-bar utility for system and app oversight.
+
+- **RAM and storage** usage.
+- **Network throughput**, live per interface.
+- **Local ports** — what is listening, and by which process.
+- **Running apps** with their window counts.
+- **Workspace layouts** — save and restore.
+- **Clipboard history**.
 
 ## Features
 
@@ -59,6 +65,17 @@ layout save/restore, and clipboard history at a glance from your menu bar.
 - Used / total swap
 - Progress bar tinted by usage threshold
 - Shown only when swap is configured
+
+## Battery
+
+- Charge level as a large percentage with a progress bar and charge-tinted SF
+  Symbol
+- Status (`Charging` / `On battery` / `Fully charged`) and power source
+- Time remaining (discharging) or time to full charge (charging)
+- Capacity (`current / max mAh`), cycle count, temperature, health condition
+- Connected adapter wattage
+- Distinct **Battery unavailable** state on Macs without a readable battery
+- Dedicated Battery tab, refreshing while the popover is open
 
 ## Network
 
@@ -114,7 +131,7 @@ layout save/restore, and clipboard history at a glance from your menu bar.
   localized name
 - Per-app on-screen window count
 - Search by app name or bundle identifier
-- One-click *Bring to Front* activates all of an app's windows
+- One-click _Bring to Front_ activates all of an app's windows
 - Refreshes every 2 seconds while the tab is visible; no permission required
 
 ## Workspaces
@@ -136,8 +153,10 @@ layout save/restore, and clipboard history at a glance from your menu bar.
 
 ## Popover
 
-- Seven tabs, Clipboard, Front, IP, Memory (default), Network, Ports and
+- Eight tabs, Battery, Clipboard, Front, IP, Memory (default), Network, Ports and
   Workspaces:
+  - Battery tab: charge level, power state, time remaining/full, capacity, cycle
+    count, temperature, health condition and adapter wattage
   - Memory tab: compact percentage and used / total numbers (small view) with
     full progress-bar sections (details view) switchable from the header
   - Clipboard tab: searchable history with copy, pin, and delete actions

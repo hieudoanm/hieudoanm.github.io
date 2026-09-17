@@ -1,6 +1,6 @@
 import { cleanup, render, screen } from '@testing-library/react';
 
-import { mockThree } from '@/games/maths/attractors/three.mock';
+import { mockThree } from '@/games/stem/maths/attractors/three.mock';
 import AttractorsPage from '../page';
 
 jest.mock('three', () => mockThree);

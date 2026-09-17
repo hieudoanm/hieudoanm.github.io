@@ -84,8 +84,12 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-Can't decide what to eat? Spin the slot-machine reel and let fate pick from 32
-dishes across six world cuisines. Quick, fun, and runs on any device.
+Can't decide what to eat? Spin the slot-machine reel and let fate pick.
+
+- **32 dishes** — the reel draws from every one of them.
+- **Six world cuisines** — the dishes span six cuisines around the world.
+
+Quick, fun, and runs on any device.
 
 ---
 
@@ -130,7 +134,7 @@ Let the reel decide your next meal.
 
 ---
 
-# First run
+## First run
 
 - **macOS:** Right-click the `.dmg` → "Open" to bypass Gatekeeper, then drag the
   app to your Applications folder.

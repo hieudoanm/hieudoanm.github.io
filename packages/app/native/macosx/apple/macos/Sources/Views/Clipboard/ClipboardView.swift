@@ -1,45 +1,70 @@
 import MacOSXCore
 import SwiftUI
 
-/// The Clipboard tab for searchable, one-click copy history.
+/// The Clipboard section for searchable, one-click copy history.
+///
+/// The panel is one Clipboard tab with a filter picker, because a popover only
+/// has room for one list. The window gives every filter its own screen
+/// (`focus`), driven by the sidebar's Clipboard group, and drops the picker.
 struct ClipboardView: View {
     @ObservedObject var viewModel: ClipboardViewModel
     @ObservedObject private var store: ClipboardStore
 
-    init(viewModel: ClipboardViewModel) {
+    let layout: ContentLayout
+    private var focus: ClipboardViewModel.Section?
+
+    init(
+        viewModel: ClipboardViewModel,
+        layout: ContentLayout = .panel,
+        focus: ClipboardViewModel.Section? = nil
+    ) {
         self.viewModel = viewModel
         self.store = viewModel.store
+        self.layout = layout
+        self.focus = focus
     }
 
-    private var filteredItems: [ClipboardItem] {
-        store.search(viewModel.searchQuery)
-    }
+    @State private var section: ClipboardViewModel.Section = .all
 
     var body: some View {
+        switch layout {
+        case .panel:
+            panelLayout
+        case .window:
+            listPane(for: focus ?? .all)
+        }
+    }
+
+    private var panelLayout: some View {
         VStack(alignment: .leading, spacing: 0) {
             header
 
             Divider()
 
-            searchField
+            filterPicker
 
             Divider()
 
-            if filteredItems.isEmpty {
-                emptyState
-            } else {
-                ClipboardItemList(
-                    items: filteredItems,
-                    store: store,
-                    onCopy: { viewModel.copyToClipboard($0) }
-                )
-            }
-
-            Divider()
-
-            footer
+            listPane(for: section)
         }
-        .padding(14)
+        .padding(Spacing.inset)
+    }
+
+    private func listPane(for section: ClipboardViewModel.Section) -> some View {
+        ClipboardListPane(
+            viewModel: viewModel,
+            items: displayedItems(for: section),
+            emptyTitle: emptyTitle(for: section)
+        )
+        .padding(layout == .panel ? 0 : 16)
+    }
+
+    private func displayedItems(for section: ClipboardViewModel.Section) -> [ClipboardItem] {
+        store.search(viewModel.searchQuery).filter(section.matches)
+    }
+
+    private func emptyTitle(for section: ClipboardViewModel.Section) -> String {
+        viewModel.searchQuery.isEmpty ? section.emptyTitle : "No matching results"
     }
 
     private var header: some View {
@@ -61,131 +86,17 @@ struct ClipboardView: View {
             .buttonStyle(.borderless)
             .help("Refresh")
         }
-        .padding(.bottom, 16)
+        .padding(.bottom, Spacing.lg)
     }
 
-    private var searchField: some View {
-        HStack(spacing: 6) {
-            Image(systemName: "magnifyingglass")
-                .foregroundColor(.secondary)
-                .accessibilityHidden(true)
-            TextField("Search clipboard history", text: $viewModel.searchQuery)
-                .textFieldStyle(.plain)
-            if !viewModel.searchQuery.isEmpty {
-                Button {
-                    viewModel.searchQuery = ""
-                } label: {
-                    Image(systemName: "xmark.circle.fill")
-                        .foregroundColor(.secondary)
-                        .accessibilityLabel("Clear search")
-                }
-                .buttonStyle(.borderless)
-                .help("Clear search")
+    private var filterPicker: some View {
+        Picker("Filter", selection: $section) {
+            ForEach(ClipboardViewModel.Section.allCases, id: \.self) { item in
+                Text(item.title).tag(item)
             }
         }
-        .padding(.vertical, 8)
-    }
-
-    private var emptyState: some View {
-        VStack(spacing: 12) {
-            Image(systemName: "doc.on.clipboard")
-                .font(.system(size: 36))
-                .foregroundColor(.secondary)
-            Text(viewModel.searchQuery.isEmpty ? "Nothing copied yet" : "No matching results")
-                .font(.caption)
-                .foregroundColor(.secondary)
-        }
-        .frame(maxWidth: .infinity)
-        .padding(.vertical, 48)
-    }
-
-    private var footer: some View {
-        HStack {
-            Text("\(store.pinnedCount) pinned")
-                .font(.caption)
-                .foregroundColor(.secondary)
-            Spacer()
-            Button("Clear Unpinned") {
-                store.clearUnpinned()
-            }
-            .buttonStyle(.borderless)
-            .font(.caption)
-            .disabled(store.pinnedCount == store.totalCount)
-            .help("Remove all unpinned items")
-        }
-        .padding(.top, 10)
-    }
-}
-
-private struct ClipboardItemList: View {
-    let items: [ClipboardItem]
-    @ObservedObject var store: ClipboardStore
-    let onCopy: (ClipboardItem) -> Void
-
-    var body: some View {
-        List(items) { item in
-            ClipboardItemRow(item: item, store: store, onCopy: onCopy)
-        }
-        .listStyle(.plain)
-        .frame(maxHeight: 420)
-    }
-}
-
-private struct ClipboardItemRow: View {
-    let item: ClipboardItem
-    @ObservedObject var store: ClipboardStore
-    let onCopy: (ClipboardItem) -> Void
-
-    var body: some View {
-        HStack(alignment: .top, spacing: 10) {
-            VStack(alignment: .leading, spacing: 4) {
-                HStack(spacing: 4) {
-                    if item.pinned {
-                        Image(systemName: "pin.fill")
-                            .font(.caption2)
-                            .foregroundColor(.orange)
-                    }
-                    Text(String(item.content.prefix(160)))
-                        .lineLimit(3)
-                        .font(.system(.caption, design: .monospaced))
-                }
-                HStack(spacing: 8) {
-                    Text(item.createdAt, style: .relative)
-                        .font(.caption2)
-                        .foregroundColor(.secondary)
-                    Text("\(item.copiedCount)x copied")
-                        .font(.caption2)
-                        .foregroundColor(.secondary)
-                }
-            }
-
-            Spacer(minLength: 8)
-
-            HStack(spacing: 6) {
-                Button {
-                    onCopy(item)
-                } label: {
-                    Image(systemName: "doc.on.doc")
-                }
-                .help("Copy to clipboard")
-
-                Button {
-                    store.togglePin(item)
-                } label: {
-                    Image(systemName: item.pinned ? "pin.slash" : "pin")
-                }
-                .help(item.pinned ? "Unpin" : "Pin")
-
-                Button {
-                    store.delete(item)
-                } label: {
-                    Image(systemName: "trash")
-                }
-                .help("Delete")
-            }
-            .buttonStyle(.plain)
-            .foregroundColor(.secondary)
-        }
-        .padding(.vertical, 4)
+        .pickerStyle(.segmented)
+        .labelsHidden()
+        .accessibilityLabel("Clipboard filter")
     }
 }

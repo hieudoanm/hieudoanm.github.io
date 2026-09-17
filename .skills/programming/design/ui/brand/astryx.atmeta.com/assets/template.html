@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en" data-astryx-theme="astryx">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A small, token-driven Astryx interface reference."
+    />
+    <title>Astryx component workspace</title>
+    <link rel="stylesheet" href="../references/tokens.css" />
+    <style>
+      :root {
+        font-family: var(--font-family-body);
+        color: var(--color-text-primary);
+        background: var(--color-background-body);
+        font-size: var(--text-body-size);
+        line-height: var(--text-body-leading);
+        font-synthesis: none;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-width: 320px;
+        min-height: 100vh;
+        margin: 0;
+      }
+
+      a {
+        color: var(--color-text-accent);
+      }
+
+      button,
+      input {
+        font: inherit;
+      }
+
+      button {
+        cursor: pointer;
+      }
+
+      :focus-visible {
+        outline: var(--focus-outline-width) var(--focus-outline-style)
+          var(--focus-outline-color);
+        outline-offset: var(--focus-outline-offset);
+      }
+
+      .skip-link {
+        position: absolute;
+        z-index: 1;
+        inset-block-start: var(--spacing-2);
+        inset-inline-start: var(--spacing-2);
+        transform: translateY(-180%);
+        padding: var(--spacing-2) var(--spacing-3);
+        border-radius: var(--radius-inner);
+        background: var(--color-background-surface);
+        color: var(--color-text-primary);
+      }
+
+      .skip-link:focus {
+        transform: translateY(0);
+      }
+
+      .shell {
+        width: min(100% - 2 * var(--spacing-6), 1120px);
+        margin-inline: auto;
+      }
+
+      .topbar {
+        border-block-end: var(--border-width) solid var(--color-border);
+        background: var(--color-background-surface);
+      }
+
+      .topbar-inner,
+      .nav,
+      .nav-links,
+      .actions,
+      .button-row {
+        display: flex;
+        align-items: center;
+      }
+
+      .topbar-inner {
+        min-height: 64px;
+        justify-content: space-between;
+        gap: var(--spacing-4);
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--spacing-2);
+        color: var(--color-text-primary);
+        font-weight: var(--font-weight-semibold);
+        text-decoration: none;
+      }
+
+      .brand-mark {
+        display: grid;
+        width: 28px;
+        aspect-ratio: 1;
+        place-items: center;
+        border-radius: var(--radius-element);
+        background: var(--color-accent);
+        color: var(--color-on-accent);
+        font-weight: var(--font-weight-bold);
+      }
+
+      .nav,
+      .nav-links,
+      .actions {
+        gap: var(--spacing-4);
+      }
+
+      .nav-links a {
+        color: var(--color-text-secondary);
+        text-decoration: none;
+      }
+
+      .nav-links a[aria-current="page"] {
+        color: var(--color-text-primary);
+        font-weight: var(--font-weight-semibold);
+      }
+
+      .button {
+        display: inline-flex;
+        min-height: var(--size-element-lg);
+        align-items: center;
+        justify-content: center;
+        gap: var(--spacing-2);
+        padding: var(--spacing-2) var(--spacing-4);
+        border: var(--border-width) solid var(--color-border-emphasized);
+        border-radius: var(--radius-element);
+        background: var(--color-background-surface);
+        color: var(--color-text-primary);
+        font-weight: var(--font-weight-medium);
+        text-decoration: none;
+      }
+
+      .button-primary {
+        border-color: var(--color-accent);
+        background: var(--color-accent);
+        color: var(--color-on-accent);
+      }
+
+      .button-quiet {
+        border-color: transparent;
+        background: transparent;
+      }
+
+      main {
+        padding-block: clamp(var(--spacing-8), 7vw, 80px);
+      }
+
+      .intro {
+        max-width: 720px;
+        margin-block-end: var(--spacing-8);
+      }
+
+      .eyebrow {
+        margin: 0 0 var(--spacing-2);
+        color: var(--color-text-accent);
+        font-size: var(--font-size-sm);
+        font-weight: var(--font-weight-semibold);
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      p {
+        margin-block-start: 0;
+      }
+
+      h1 {
+        margin-block-end: var(--spacing-3);
+        font-family: var(--font-family-heading);
+        font-size: clamp(2rem, 5vw, 3.3125rem);
+        line-height: 1.12;
+      }
+
+      h2 {
+        margin-block-end: var(--spacing-2);
+        font-size: var(--text-heading-1-size);
+        line-height: var(--text-heading-1-leading);
+      }
+
+      .lede,
+      .muted {
+        color: var(--color-text-secondary);
+      }
+
+      .lede {
+        max-width: 62ch;
+        font-size: var(--text-large-size, 1.125rem);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.8fr);
+        gap: var(--spacing-5);
+      }
+
+      .card {
+        padding: clamp(var(--spacing-4), 4vw, var(--spacing-6));
+        border: var(--border-width) solid var(--color-border);
+        border-radius: var(--radius-container);
+        background: var(--color-background-surface);
+        box-shadow: var(--shadow-low);
+      }
+
+      .card-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: var(--spacing-3);
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        min-height: 24px;
+        padding-inline: var(--spacing-2);
+        border-radius: var(--radius-full);
+        background: var(--color-accent-muted);
+        color: var(--color-text-accent);
+        font-size: var(--font-size-sm);
+        font-weight: var(--font-weight-semibold);
+      }
+
+      .button-row {
+        flex-wrap: wrap;
+        gap: var(--spacing-2);
+        margin-block: var(--spacing-4);
+      }
+
+      .field {
+        display: grid;
+        gap: var(--spacing-1);
+        margin-block-start: var(--spacing-4);
+      }
+
+      .field label {
+        font-weight: var(--font-weight-medium);
+      }
+
+      .field input {
+        width: 100%;
+        min-height: var(--size-element-lg);
+        padding-inline: var(--spacing-3);
+        border: var(--border-width) solid var(--color-border-emphasized);
+        border-radius: var(--radius-element);
+        background: var(--color-background-surface);
+        color: var(--color-text-primary);
+      }
+
+      .field input::placeholder {
+        color: var(--color-text-disabled);
+      }
+
+      .status {
+        display: flex;
+        align-items: flex-start;
+        gap: var(--spacing-2);
+        margin-block-start: var(--spacing-4);
+        padding: var(--spacing-3);
+        border-radius: var(--radius-element);
+        background: var(--color-success-muted);
+        color: var(--color-text-primary);
+      }
+
+      .status strong {
+        color: var(--color-success);
+      }
+
+      .note {
+        margin-block-start: var(--spacing-5);
+        padding-inline-start: var(--spacing-3);
+        border-inline-start: 3px solid var(--color-accent);
+        color: var(--color-text-secondary);
+        font-size: var(--text-supporting-size);
+      }
+
+      footer {
+        padding-block: var(--spacing-5);
+        border-block-start: var(--border-width) solid var(--color-border);
+        color: var(--color-text-secondary);
+        font-size: var(--text-supporting-size);
+      }
+
+      @media (max-width: 720px) {
+        .nav-links {
+          display: none;
+        }
+
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="topbar">
+      <div class="shell topbar-inner">
+        <a class="brand" href="#" aria-label="Astryx workspace home">
+          <span class="brand-mark" aria-hidden="true">A</span>
+          <span>Astryx</span>
+        </a>
+        <nav class="nav" aria-label="Main navigation">
+          <div class="nav-links">
+            <a href="#components" aria-current="page">Components</a>
+            <a href="#tokens">Tokens</a>
+            <a href="#themes">Themes</a>
+          </div>
+          <a class="button button-quiet" href="https://astryx.atmeta.com/docs/getting-started">
+            Documentation
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="shell" id="main">
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">Design system workspace</p>
+        <h1 id="page-title">Build with a system, not a pile of overrides.</h1>
+        <p class="lede">
+          A small, theme-aware component surface using semantic tokens. Use the
+          live Astryx documentation for production component APIs.
+        </p>
+        <div class="button-row">
+          <a class="button button-primary" href="#components">Explore components</a>
+          <a class="button" href="https://astryx.atmeta.com/themes">Browse themes</a>
+        </div>
+      </section>
+
+      <div class="grid" id="components">
+        <section class="card" aria-labelledby="actions-title">
+          <div class="card-header">
+            <div>
+              <p class="eyebrow">Actions</p>
+              <h2 id="actions-title">Buttons and state</h2>
+            </div>
+            <span class="badge">Token-driven</span>
+          </div>
+          <p class="muted">
+            Prefer documented component variants. Keep the semantic role clear
+            and retain a visible keyboard focus state.
+          </p>
+          <div class="button-row">
+            <button class="button button-primary" type="button">Primary action</button>
+            <button class="button" type="button">Secondary action</button>
+            <button class="button button-quiet" type="button">Quiet action</button>
+          </div>
+          <div class="status" role="status">
+            <span aria-hidden="true">●</span>
+            <span><strong>Saved.</strong> Your changes are up to date.</span>
+          </div>
+        </section>
+
+        <section class="card" id="tokens" aria-labelledby="field-title">
+          <p class="eyebrow">Form control</p>
+          <h2 id="field-title">A labeled field</h2>
+          <p class="muted">
+            Labels, help, and validation should remain visible beyond the
+            placeholder.
+          </p>
+          <div class="field">
+            <label for="workspace-name">Workspace name</label>
+            <input
+              id="workspace-name"
+              name="workspace-name"
+              type="text"
+              placeholder="Design systems"
+              aria-describedby="workspace-help"
+            />
+            <small class="muted" id="workspace-help">
+              Use a short name teammates can recognize.
+            </small>
+          </div>
+          <p class="note" id="themes">
+            This is a standalone reference page, not an official Astryx
+            component implementation.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="shell">
+        Reference only · Verify components and theme integration against the
+        installed Astryx version.
+      </div>
+    </footer>
+  </body>
+</html>

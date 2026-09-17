@@ -27,7 +27,7 @@ cargo build --release
 
 ## Coding Conventions
 
-Follow the repo-wide [Rust conventions](../../../../../AGENTS.md#-rust-rs):
+Follow the repo-wide [Rust conventions](../../../../../../../.skills/languages/rust/rust.md):
 
 - `Result<T, E>` for fallible functions, never `panic!`
 - `Option<T>` over sentinel values (`-1`, `null`, empty strings)
@@ -55,12 +55,17 @@ Crate-specific:
 ## Testing Conventions
 
 - Colocate `#[cfg(test)] mod tests` with the code they test (`src/db.rs`,
-  `src/handler.rs`)
-- Integration tests in `tests/` (`handler.rs`, `persist.rs`, `server.rs`)
+  `src/handler.rs`, `src/mcp/`)
+- Integration tests in `tests/` (`handler.rs`, `persist.rs`, `server.rs`,
+  `mcp.rs`) — 129 tests in total
 - `tests/handler.rs` exercises `handle_line` with table-driven cases — no TCP
 - `tests/server.rs` runs end-to-end tests over a real TCP connection with
   graceful shutdown verification
 - `tests/persist.rs` verifies atomic save/load and expired-key pruning
+- `tests/mcp.rs` drives the tool contract through the wire protocol against
+  both store backends, checks snapshot persistence across a restart, and spawns
+  the real binary to assert stdout carries only JSON-RPC — an in-process test
+  cannot catch log lines leaking into the protocol stream
 - Each test creates its own `DB::new()` — no shared mutable state
 
 ## Docs

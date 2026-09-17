@@ -9,6 +9,10 @@ public final class SettingsStore: ObservableObject {
         didSet { save() }
     }
 
+    @Published public var menuBarMetrics: MenuBarMetrics {
+        didSet { save() }
+    }
+
     private let settingsURL: URL
 
     public init(directoryURL: URL? = nil) {
@@ -26,14 +30,20 @@ public final class SettingsStore: ObservableObject {
            let settings = try? JSONDecoder().decode(SettingsData.self, from: data) {
             self.refreshInterval = settings.refreshInterval
             self.menuBarDisplay = settings.menuBarDisplay ?? .percentage
+            self.menuBarMetrics = settings.menuBarMetrics ?? .standard
         } else {
             self.refreshInterval = 1.0
             self.menuBarDisplay = .percentage
+            self.menuBarMetrics = .standard
         }
     }
 
     public func save() {
-        let data = SettingsData(refreshInterval: refreshInterval, menuBarDisplay: menuBarDisplay)
+        let data = SettingsData(
+            refreshInterval: refreshInterval,
+            menuBarDisplay: menuBarDisplay,
+            menuBarMetrics: menuBarMetrics
+        )
         if let encoded = try? JSONEncoder().encode(data) {
             try? encoded.write(to: settingsURL)
         }
@@ -43,9 +53,15 @@ public final class SettingsStore: ObservableObject {
 private struct SettingsData: Codable {
     let refreshInterval: TimeInterval
     let menuBarDisplay: MenuBarDisplay?
+    let menuBarMetrics: MenuBarMetrics?
 
-    init(refreshInterval: TimeInterval, menuBarDisplay: MenuBarDisplay) {
+    init(
+        refreshInterval: TimeInterval,
+        menuBarDisplay: MenuBarDisplay,
+        menuBarMetrics: MenuBarMetrics
+    ) {
         self.refreshInterval = refreshInterval
         self.menuBarDisplay = menuBarDisplay
+        self.menuBarMetrics = menuBarMetrics
     }
 }

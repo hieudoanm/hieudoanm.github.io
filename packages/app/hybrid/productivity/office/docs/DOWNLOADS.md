@@ -69,11 +69,18 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-A privacy-first, offline-first office suite. Four productivity sub-apps — a
-multi-view event **Calendar**, a **CSV** spreadsheet editor, a **Markdown**
-knowledge base, and a **Tasks** kanban board — plus lightweight lite versions of
-each. Data lives in your browser (localStorage / IndexedDB), so everything
-works offline and never leaves your device.
+A privacy-first, offline-first office suite — four productivity sub-apps with
+lightweight lite versions of each, plus a presentation editor.
+
+- **Calendar** — a multi-view event calendar.
+- **CSV** — a spreadsheet editor.
+- **Markdown** — a knowledge base.
+- **Tasks** — a kanban board.
+- **Keynotes** — a presentation editor.
+- **Lite versions** — a lightweight variant of each sub-app.
+
+Data lives in your browser (localStorage / IndexedDB), so everything works
+offline and never leaves your device.
 
 ---
 
@@ -100,6 +107,17 @@ graph view, and your own notes bundled as content.
 A kanban board for planning and tracking work — sidebar with board search and
 member switcher, four views (Kanban, List, Calendar, Timeline), labels,
 assignees, priorities, due dates, and an archive. Persisted to IndexedDB.
+
+### 🎤 Keynotes
+
+An offline-first presentation editor under `/keynotes/` — deck gallery and
+template gallery, a WYSIWYG slide editor with rulers, guides, multi-select,
+undo/redo and autosave, plus charts, tables, diagrams, icons and equations.
+Decks carry entrance, emphasis and exit animations with triggers and motion
+paths, a slide master, sections, speaker notes, and an outline view. Present
+mode has a presenter view, Q&A and a rehearsal summary; separate routes render
+handouts and a print/PDF view. Export to native JSON, PPTX, HTML, PNG or SVG.
+Persisted to IndexedDB.
 
 ### ⚡ Lite versions
 
@@ -136,6 +154,7 @@ exist shows `X`.
 | CSV           | Google Sheets    | Microsoft Excel            |
 | Markdown      | Google Docs      | Microsoft Word             |
 | Tasks         | Google Tasks     | Microsoft To Do            |
+| Keynotes      | Google Slides    | Microsoft PowerPoint       |
 
 ### Lite Variants
 

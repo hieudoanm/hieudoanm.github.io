@@ -18,6 +18,20 @@
 - [x] CI: `go` job in `ci-app-headless-browserverless.yaml` + rolling GitHub Release
 - [x] `scripts/install.sh` downloading the rolling release
 
+## Phase 1.5 — MCP server (shipped)
+
+- [x] `internal/mcp`: newline-delimited JSON-RPC 2.0 over stdio, no MCP SDK
+- [x] Tools: `browserverless_scrape`, `browserverless_screenshot`, `browserverless_version`
+- [x] Screenshot PNG returned as an `image` content block, not inlined text
+- [x] Two render backends behind one `Renderer` seam: in-process and `--addr` HTTP proxy
+- [x] Tool failures as `isError` results; JSON-RPC errors reserved for protocol faults
+- [x] `headless.ValidateURL` and `headless.IsTimeout` shared with the HTTP API
+- [x] `IsTimeout` fix: `TimeoutError` matches directly, so an engine timeout
+      reports 504 instead of 500 even when the engine error does not wrap
+      `context.DeadlineExceeded`
+- [x] Tests: protocol frames, both backends, argument validation, and binary E2E
+      over stdio pipes in both modes
+
 ## Phase 2 — Rendering hardening
 
 - [ ] Full-page (off-viewport) screenshot support
@@ -53,3 +67,4 @@
 - [ ] Persistent session state (cookies, local storage) via `--session-id`
 - [ ] Prometheus metrics endpoint (`/metrics`)
 - [ ] Multi-language parity: ensure new features ship in Rust and Go
+      (MCP server: Go shipped, Rust pending)

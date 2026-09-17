@@ -7,6 +7,30 @@ import { FC, ReactNode } from 'react';
 export const metadata: Metadata = {
   title: 'Code Editor',
   description: 'A web-based code editor',
+  metadataBase: new URL('https://hieudoanm.github.io/open/code/'),
+  openGraph: {
+    type: 'website',
+    siteName: 'Code Editor',
+    url: 'https://hieudoanm.github.io/open/code/',
+    title: 'A code editor in the tab',
+    description:
+      'A web-based code editor with highlighting for JavaScript, TypeScript, Python, Rust and more.',
+    images: [
+      {
+        url: '/og/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Code Editor — A code editor in the tab',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'A code editor in the tab',
+    description:
+      'A web-based code editor with highlighting for JavaScript, TypeScript, Python, Rust and more.',
+    images: ['/og/og.png'],
+  },
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,

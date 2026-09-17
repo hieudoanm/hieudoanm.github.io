@@ -32,7 +32,7 @@ Releases must be signed with the key whose public half is embedded in
 ## Web
 
 The site's root post-build script rebuilds each hybrid app with
-`BASE_PATH=/free/doi` and copies `out/` to `docs/free/doi/`.
+`BASE_PATH=/open/doi` and copies `out/` to `docs/open/doi/`.
 
 ## Icons
 

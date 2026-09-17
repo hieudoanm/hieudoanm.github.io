@@ -1,35 +1,75 @@
 import MacOSXCore
 import SwiftUI
 
-/// The MacOSX Network tab for live download / upload throughput and per-interface traffic.
+/// The Network section: live traffic, listening ports, and IP / DNS lookups.
 struct NetworkView: View {
-    @ObservedObject var viewModel: NetworkViewModel
+    @ObservedObject var networkViewModel: NetworkViewModel
+    @ObservedObject var portsViewModel: PortsViewModel
+    @ObservedObject var ipViewModel: IPViewModel
+
+    let layout: ContentLayout
+
+    init(
+        networkViewModel: NetworkViewModel,
+        portsViewModel: PortsViewModel,
+        ipViewModel: IPViewModel,
+        layout: ContentLayout = .panel
+    ) {
+        self.networkViewModel = networkViewModel
+        self.portsViewModel = portsViewModel
+        self.ipViewModel = ipViewModel
+        self.layout = layout
+    }
+
+    private enum Section: Hashable, CaseIterable {
+        case traffic
+        case ports
+        case ip
+
+        var title: String {
+            switch self {
+            case .traffic: return "Traffic"
+            case .ports: return "Ports"
+            case .ip: return "IP & DNS"
+            }
+        }
+    }
+
+    @State private var section: Section = .traffic
 
     var body: some View {
+        switch layout {
+        case .panel:
+            panelLayout
+        case .window:
+            windowLayout
+        }
+    }
+
+    private var panelLayout: some View {
         VStack(alignment: .leading, spacing: 0) {
             header
 
             Divider()
 
-            if let stats = viewModel.stats {
-                ScrollView {
-                    VStack(alignment: .leading, spacing: 14) {
-                        speedsSection(stats: stats)
+            sectionPicker
 
-                        totalsSection
+            Divider()
 
-                        interfacesSection(stats: stats)
-                    }
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                }
-                .frame(maxHeight: 420)
-            } else {
-                emptyState
-            }
+            sectionContent(section)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         }
-        .padding(14)
-        .task {
-            viewModel.start()
+        .padding(Spacing.inset)
+    }
+
+    private var windowLayout: some View {
+        SectionGrid(
+            items: Section.allCases,
+            title: \.title,
+            minimumColumnWidth: 340,
+            cardHeight: 380
+        ) { item in
+            sectionContent(item)
         }
     }
 
@@ -39,7 +79,7 @@ struct NetworkView: View {
                 .font(.headline)
                 .accessibilityElement(children: .combine)
             Spacer()
-            Button(action: { viewModel.refresh() }) {
+            Button(action: refreshAll) {
                 Image(systemName: "arrow.clockwise")
                     .frame(width: 24, height: 24)
                     .contentShape(Rectangle())
@@ -48,198 +88,35 @@ struct NetworkView: View {
             .buttonStyle(.borderless)
             .help("Refresh")
         }
-        .padding(.bottom, 16)
+        .padding(.bottom, Spacing.lg)
     }
 
-    private func speedsSection(stats: NetworkStats) -> some View {
-        HStack(spacing: 16) {
-            speedColumn(
-                title: "Download",
-                symbol: "arrow.down",
-                rate: stats.totalReceiveBytesPerSecond
-            )
-            Divider()
-                .frame(height: 34)
-            speedColumn(
-                title: "Upload",
-                symbol: "arrow.up",
-                rate: stats.totalSendBytesPerSecond
-            )
-        }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .accessibilityElement(children: .combine)
-        .accessibilityLabel("\(accessibilitySpeedsLabel(stats))")
-    }
-
-    private func speedColumn(title: String, symbol: String, rate: Double?) -> some View {
-        VStack(alignment: .leading, spacing: 4) {
-            Label(title, systemImage: symbol)
-                .font(.caption)
-                .foregroundColor(.secondary)
-                .padding(.top, 8)
-            Text(ByteFormatter.rate(rate))
-                .font(.system(.title3, design: .monospaced))
-                .fontWeight(.semibold)
-                .monospacedDigit()
-        }
-    }
-
-    private var totalsSection: some View {
-        VStack(alignment: .leading, spacing: 4) {
-            Text("Total (this session)")
-                .font(.caption)
-                .foregroundColor(.secondary)
-            HStack(spacing: 16) {
-                totalValue(label: "Received", bytes: viewModel.totalReceivedBytes)
-                totalValue(label: "Sent", bytes: viewModel.totalSentBytes)
+    private var sectionPicker: some View {
+        Picker("Section", selection: $section) {
+            ForEach(Section.allCases, id: \.self) { item in
+                Text(item.title).tag(item)
             }
         }
-        .accessibilityElement(children: .combine)
-        .accessibilityLabel("\(accessibilityTotalsLabel)")
+        .pickerStyle(.segmented)
+        .labelsHidden()
+        .accessibilityLabel("Network section")
     }
 
-    private func totalValue(label: String, bytes: UInt64) -> some View {
-        VStack(alignment: .leading, spacing: 2) {
-            Text(label)
-                .font(.caption2)
-                .foregroundColor(.secondary)
-            Text(ByteFormatter.humanReadable(bytes))
-                .font(.system(.callout, design: .monospaced))
-                .monospacedDigit()
+    @ViewBuilder
+    private func sectionContent(_ section: Section) -> some View {
+        switch section {
+        case .traffic:
+            TrafficView(viewModel: networkViewModel)
+        case .ports:
+            PortsSectionView(viewModel: portsViewModel)
+        case .ip:
+            IPSectionView(viewModel: ipViewModel, layout: layout)
         }
     }
 
-    private func interfacesSection(stats: NetworkStats) -> some View {
-        let interfaces = relevantInterfaces(stats)
-        return VStack(alignment: .leading, spacing: 6) {
-            ForEach(Array(interfaces.enumerated()), id: \.element.sample.name) { _, interface in
-                NetworkInterfaceRow(interface: interface)
-            }
-        }
-    }
-
-    private func relevantInterfaces(_ stats: NetworkStats) -> [NetworkInterfaceStats] {
-        stats.interfaces.filter { interface in
-            let sample = interface.sample
-            return sample.isUp
-                && (sample.hasAddress || sample.receivedBytes > 0 || sample.sentBytes > 0)
-        }
-    }
-
-    private var emptyState: some View {
-        VStack(spacing: 12) {
-            Image(systemName: "network.slash")
-                .font(.system(size: 36))
-                .foregroundColor(.secondary)
-            Text("Unable to read network stats")
-                .font(.caption)
-                .foregroundColor(.secondary)
-        }
-        .frame(maxWidth: .infinity)
-        .padding(.vertical, 48)
-    }
-
-    private var accessibilityTotalsLabel: String {
-        "Total received \(ByteFormatter.humanReadable(viewModel.totalReceivedBytes)), "
-            + "total sent \(ByteFormatter.humanReadable(viewModel.totalSentBytes))"
-    }
-
-    private func accessibilitySpeedsLabel(_ stats: NetworkStats) -> String {
-        "Download \(ByteFormatter.rate(stats.totalReceiveBytesPerSecond)), "
-            + "upload \(ByteFormatter.rate(stats.totalSendBytesPerSecond))"
-    }
-}
-
-private struct NetworkInterfaceRow: View {
-    let interface: NetworkInterfaceStats
-
-    var body: some View {
-        HStack(spacing: 10) {
-            Image(systemName: interface.sample.kind.systemImage)
-                .font(.system(size: 15))
-                .foregroundColor(.secondary)
-                .frame(width: 20)
-
-            VStack(alignment: .leading, spacing: 2) {
-                HStack(spacing: 6) {
-                    Text(interface.sample.name)
-                        .font(.system(.callout, design: .monospaced))
-                    Text(interface.sample.kind.displayName)
-                        .font(.caption2)
-                        .foregroundColor(.secondary)
-                }
-                HStack(spacing: 4) {
-                    statusDot
-                    Text(statusText)
-                        .font(.caption2)
-                        .foregroundColor(.secondary)
-                }
-            }
-
-            Spacer()
-
-            VStack(alignment: .trailing, spacing: 2) {
-                Text("↓ \(ByteFormatter.rate(interface.receiveBytesPerSecond))")
-                    .font(.system(.caption, design: .monospaced))
-                    .monospacedDigit()
-                Text("↑ \(ByteFormatter.rate(interface.sendBytesPerSecond))")
-                    .font(.system(.caption, design: .monospaced))
-                    .monospacedDigit()
-            }
-        }
-        .padding(.vertical, 5)
-        .accessibilityElement(children: .combine)
-        .accessibilityLabel("\(accessibilityLabel)")
-    }
-
-    private var statusText: String {
-        switch status {
-        case .connected: return "Connected"
-        case .up: return "Link up"
-        case .down: return "Down"
-        }
-    }
-
-    private var statusDot: some View {
-        Image(systemName: "circle.fill")
-            .font(.system(size: 7))
-            .foregroundColor(dotColor)
-    }
-
-    private var dotColor: Color {
-        switch status {
-        case .connected: return .green
-        case .up: return .orange
-        case .down: return .secondary
-        }
-    }
-
-    private var status: ConnectionStatus {
-        if !interface.sample.isUp {
-            return .down
-        }
-        return interface.sample.hasAddress ? .connected : .up
-    }
-
-    private var accessibilityLabel: String {
-        "\(interface.sample.name) \(interface.sample.kind.displayName), \(statusText), "
-            + "download \(ByteFormatter.rate(interface.receiveBytesPerSecond)), "
-            + "upload \(ByteFormatter.rate(interface.sendBytesPerSecond))"
-    }
-}
-
-private enum ConnectionStatus {
-    case connected
-    case up
-    case down
-}
-
-private extension NetworkInterfaceKind {
-    var systemImage: String {
-        switch self {
-        case .wifi: return "wifi"
-        case .ethernet: return "cable.connector"
-        case .other: return "network"
-        }
+    private func refreshAll() {
+        networkViewModel.refresh()
+        Task { await portsViewModel.refresh() }
+        Task { await ipViewModel.refresh() }
     }
 }

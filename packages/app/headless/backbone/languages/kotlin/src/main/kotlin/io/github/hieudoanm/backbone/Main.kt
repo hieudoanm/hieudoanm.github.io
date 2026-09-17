@@ -7,6 +7,7 @@ import io.github.hieudoanm.backbone.core.AppState
 import io.github.hieudoanm.backbone.cron.startCronScheduler
 import io.github.hieudoanm.backbone.database.Database
 import io.github.hieudoanm.backbone.http.createHttpClient
+import io.github.hieudoanm.backbone.mcp.runMcpServer
 import io.github.hieudoanm.backbone.ratelimit.RateLimiter
 import io.github.hieudoanm.backbone.routes.configureRoutes
 import io.github.hieudoanm.backbone.ws.SSEHub
@@ -29,9 +30,56 @@ import java.io.File
 import java.security.SecureRandom
 import java.time.Duration
 
-fun main() {
+/** The name reported to an MCP client during initialize. */
+const val SERVER_NAME: String = "backbone-mcp"
+
+/** The version reported to an MCP client during initialize. */
+const val VERSION: String = "1.0.0"
+
+/** USAGE lists the accepted command lines. The default is the HTTP server. */
+val USAGE: String = """
+    |Backbone - Back-end as a Service
+    |
+    |Usage:
+    |  backbone              Start the HTTP server
+    |  backbone serve        Start the HTTP server
+    |  backbone mcp serve    Start the MCP server on stdio
+    |  backbone --help       Show this message
+    |  backbone --version    Show the version
+""".trimMargin()
+
+fun main(args: Array<String>) {
     val config = AppConfig()
     val database = Database(config)
+
+    // `backbone mcp serve` speaks MCP on stdio and never starts the HTTP server,
+    // so it is dispatched before any Netty state is built.
+    if (args.size == 2 && args[0] == "mcp" && args[1] == "serve") {
+        runMcpServer(database, System.out, System.err, SERVER_NAME, VERSION)
+        database.close()
+        return
+    }
+    if (args.any { it == "--help" || it == "-h" }) {
+        println(USAGE)
+        database.close()
+        return
+    }
+    if (args.any { it == "--version" || it == "-V" }) {
+        println("backbone $VERSION")
+        database.close()
+        return
+    }
+    if (args.isNotEmpty() && !(args.size == 1 && args[0] == "serve")) {
+        System.err.println(USAGE)
+        database.close()
+        kotlin.system.exitProcess(2)
+    }
+
+    serve(config, database)
+}
+
+/** Starts the Ktor HTTP server. Split from main so argument handling stays separate. */
+private fun serve(config: AppConfig, database: Database) {
     val cache = CacheStore(config, database)
     val rateLimiter = RateLimiter()
     val wsHub = WebSocketHub(database)

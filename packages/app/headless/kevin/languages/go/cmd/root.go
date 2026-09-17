@@ -4,6 +4,8 @@ import (
 	"github.com/spf13/cobra"
 )
 
+var version = "dev"
+
 // NewRootCommand returns the kevin CLI root command.
 func NewRootCommand() *cobra.Command {
 	cmd := &cobra.Command{
@@ -12,7 +14,10 @@ func NewRootCommand() *cobra.Command {
 		Long: "kevin is a Redis-style in-memory key/value store shipped as a\n" +
 			"single static Go binary, behaviour-identical to the C and C++\n" +
 			"implementations.",
+		Version: version,
 	}
+	cmd.SetVersionTemplate("kevin {{.Version}}\n")
 	cmd.AddCommand(newServeCommand())
+	cmd.AddCommand(newMCPCommand())
 	return cmd
 }

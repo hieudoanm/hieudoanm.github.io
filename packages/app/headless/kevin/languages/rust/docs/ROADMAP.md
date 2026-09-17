@@ -36,7 +36,22 @@
 - [x] slint Material GUI behind the `gui` cargo feature (`serve --gui`)
 - [x] ratatui TUI compiled into every build (`serve --tui`, conflicts with `--gui`)
 
-## Phase 4 — Ecosystem
+## Phase 4 — Model Context Protocol (shipped)
+
+- [x] `kevin mcp serve` speaking newline-delimited JSON-RPC 2.0 on stdio
+- [x] `initialize` / `tools/list` / `tools/call`, MCP revision `2025-11-25`
+- [x] Ten tools: `kevin_ping`, `kevin_set`, `kevin_get`, `kevin_del`,
+      `kevin_exists`, `kevin_keys`, `kevin_len`, `kevin_ttl`, `kevin_expire`,
+      `kevin_flush`
+- [x] Tool failures surfaced as `isError` results rather than transport errors
+- [x] Notifications (null/absent `id`) never answered
+- [x] `Store` trait with two backends: in-process `DbStore` and `TcpStore`
+- [x] `--data` snapshot persistence for a server-owned store
+- [x] `--addr` proxy mode against a running `kevin serve`
+- [x] Logs pinned to stderr so stdout carries only protocol frames
+- [ ] MCP resources and prompts (tools only today)
+
+## Phase 5 — Ecosystem
 
 - [ ] CI integration: add a `rust` job to `ci-app-headless-kevin.yaml`
 - [ ] Cross-compilation for all four platforms in the CI pipeline
@@ -46,7 +61,7 @@
 - [ ] Multi-language parity: ensure every new protocol command ships in C,
       C++, Go and Rust simultaneously
 
-## Phase 5 — Production
+## Phase 6 — Production
 
 - [ ] Pluggable storage backend (append-only file, on-disk)
 - [ ] Authentication (`AUTH`)

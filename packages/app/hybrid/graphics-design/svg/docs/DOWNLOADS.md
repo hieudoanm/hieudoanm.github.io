@@ -86,8 +86,13 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-A pocket-sized vector editor with paths, symbols, and export — think Illustrator
-stripped to the essentials, running natively on every device you own.
+A pocket-sized vector editor — think Illustrator stripped to the essentials.
+
+- **Paths** — draw and edit vector paths.
+- **Symbols** — build a symbol library and place instances from it.
+- **Export** — export the finished vector work.
+
+Running natively on every device you own.
 
 ---
 

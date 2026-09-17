@@ -85,9 +85,14 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-Your one-stop apps storefront — browse and download apps across all platforms
-with OS detection, recommended downloads, and detailed info pages. Fast,
-beautiful, and works on anything.
+Your one-stop apps storefront.
+
+- Browse and download apps across all platforms.
+- OS detection.
+- Recommended downloads.
+- Detailed info pages.
+
+Fast, beautiful, and works on anything.
 
 ---
 
@@ -166,7 +171,7 @@ Everything you need to discover, compare, and download apps.
 
 ---
 
-# First run
+## First run
 
 - **macOS:** Right-click the `.dmg` → "Open" to bypass Gatekeeper, then drag the
   app to your Applications folder.

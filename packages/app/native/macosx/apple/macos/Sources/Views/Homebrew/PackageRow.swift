@@ -6,7 +6,7 @@ struct PackageRow: View {
     let package: Package
 
     var body: some View {
-        HStack(spacing: 12) {
+        HStack(spacing: Spacing.md) {
             Image(systemName: symbolName)
                 .symbolRenderingMode(.hierarchical)
                 .font(.title3)
@@ -14,8 +14,8 @@ struct PackageRow: View {
                 .frame(width: 24)
                 .accessibilityHidden(true)
 
-            VStack(alignment: .leading, spacing: 2) {
-                HStack(spacing: 6) {
+            VStack(alignment: .leading, spacing: Spacing.hairline) {
+                HStack(spacing: Spacing.xs) {
                     Text(package.name)
                         .font(.headline)
                     Text(typeLabel)
@@ -38,7 +38,7 @@ struct PackageRow: View {
                     .foregroundStyle(.secondary)
             }
         }
-        .padding(.vertical, 2)
+        .padding(.vertical, Spacing.hairline)
     }
 
     private var symbolName: String {

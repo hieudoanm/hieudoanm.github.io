@@ -1,0 +1,119 @@
+/*
+ * Astryx published base-layer token snapshot, checked 2026-10-10.
+ * The live product also applies theme-scoped overrides. This file is a
+ * reference, not a full theme package or a substitute for the installed API.
+ */
+
+:root {
+  color-scheme: light dark;
+
+  /* Semantic colors: light value / dark value. */
+  --color-accent: light-dark(#0064e0, #2694fe);
+  --color-accent-muted: light-dark(rgb(0 130 251 / 20%), rgb(0 130 251 / 25%));
+  --color-on-accent: #fff;
+  --color-neutral: light-dark(rgb(5 54 89 / 10%), rgb(223 226 229 / 20%));
+
+  --color-background-body: light-dark(#f1f4f7, #111112);
+  --color-background-surface: light-dark(#fff, #1f1f22);
+  --color-background-card: light-dark(#fff, #1f1f22);
+  --color-background-popover: light-dark(#fff, #28292c);
+  --color-background-muted: light-dark(rgb(5 54 89 / 5%), rgb(17 17 18 / 50%));
+  --color-background-inverted: light-dark(#0a1317, #fff);
+  --color-overlay: light-dark(rgb(1 18 40 / 40%), rgb(17 17 18 / 60%));
+  --color-overlay-hover: light-dark(rgb(5 54 89 / 5%), rgb(255 255 255 / 5%));
+  --color-overlay-pressed: light-dark(rgb(5 54 89 / 10%), rgb(255 255 255 / 10%));
+
+  --color-text-primary: light-dark(#0a1317, #dfe2e5);
+  --color-text-secondary: light-dark(#4e606f, #aaafb5);
+  --color-text-disabled: light-dark(#a4b0bc, #6f747c);
+  --color-text-accent: light-dark(#0064e0, #3e9efb);
+  --color-icon-primary: light-dark(#0a1317, #dfe2e5);
+  --color-icon-secondary: light-dark(#4e606f, #aaafb5);
+  --color-icon-disabled: light-dark(#a4b0bc, #6f747c);
+  --color-icon-accent: light-dark(#0064e0, #2694fe);
+  --color-border: light-dark(rgb(5 54 89 / 10%), rgb(242 244 246 / 10%));
+  --color-border-emphasized: light-dark(#ccd3db, #494d53);
+
+  --color-success: #0d8626;
+  --color-success-muted: rgb(11 153 31 / 20%);
+  --color-on-success: #fff;
+  --color-error: light-dark(#e3193b, #f5394f);
+  --color-error-muted: light-dark(rgb(227 25 59 / 20%), rgb(245 57 79 / 25%));
+  --color-on-error: #fff;
+  --color-warning: light-dark(#e9af08, #f2c00b);
+  --color-warning-muted: light-dark(rgb(226 164 0 / 20%), rgb(226 164 0 / 25%));
+  --color-on-warning: #0a1317;
+
+  --color-skeleton: light-dark(#ccd3db, #5a5e66);
+  --color-track: light-dark(#ccd3db, #5a5e66);
+  --color-shadow: light-dark(rgb(5 54 89 / 10%), rgb(0 0 0 / 30%));
+
+  /* Base typography. Specific themes may override these values. */
+  --font-family-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+  --font-family-heading: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+  --font-family-code: "SF Mono", Monaco, Consolas, monospace;
+  --font-size-xs: 0.625rem;
+  --font-size-sm: 0.75rem;
+  --font-size-base: 0.875rem;
+  --font-size-lg: 1.0625rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.8125rem;
+  --font-size-4xl: 2.1875rem;
+  --font-size-5xl: 2.625rem;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --text-body-size: var(--font-size-base);
+  --text-body-leading: 1.4286;
+  --text-heading-1-size: var(--font-size-2xl);
+  --text-heading-1-weight: var(--font-weight-semibold);
+  --text-heading-1-leading: 1.3333;
+  --text-code-size: var(--font-size-base);
+  --text-code-leading: 1.4286;
+  --text-supporting-size: 0.75rem;
+
+  /* Spacing, shape, focus, and motion. */
+  --spacing-0: 0;
+  --spacing-0-5: 2px;
+  --spacing-1: 4px;
+  --spacing-1-5: 6px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+  --spacing-7: 28px;
+  --spacing-8: 32px;
+  --spacing-9: 36px;
+  --spacing-10: 40px;
+  --spacing-11: 44px;
+  --spacing-12: 48px;
+  --border-width: 1px;
+  --radius-none: 0;
+  --radius-inner: 4px;
+  --radius-element: 8px;
+  --radius-container: 12px;
+  --radius-page: 28px;
+  --radius-full: 9999px;
+  --size-element-sm: 28px;
+  --size-element-md: 32px;
+  --size-element-lg: 36px;
+  --focus-outline-width: 2px;
+  --focus-outline-style: solid;
+  --focus-outline-color: var(--color-accent);
+  --focus-outline-offset: 3px;
+  --duration-fast-min: 130ms;
+  --duration-fast: 175ms;
+  --duration-fast-max: 230ms;
+  --duration-medium-min: 310ms;
+  --duration-medium: 410ms;
+  --duration-medium-max: 550ms;
+  --duration-slow-min: 730ms;
+  --duration-slow: 975ms;
+  --duration-slow-max: 1300ms;
+  --ease-standard: cubic-bezier(0.24, 1, 0.4, 1);
+}

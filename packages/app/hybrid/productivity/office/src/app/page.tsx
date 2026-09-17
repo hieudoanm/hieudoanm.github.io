@@ -10,6 +10,7 @@ import {
   PiCalendarBlank,
   PiListChecks,
   PiMarkdownLogo,
+  PiPresentation,
   PiTable,
 } from 'react-icons/pi';
 
@@ -37,6 +38,12 @@ const ITEMS: CourseItem[] = [
     description: 'A full kanban board for planning and tracking work',
     icon: PiListChecks,
     href: '/tasks/',
+  },
+  {
+    label: 'Keynotes',
+    description: 'An offline-first presentation editor for slides and decks',
+    icon: PiPresentation,
+    href: '/keynotes/',
   },
 ];
 

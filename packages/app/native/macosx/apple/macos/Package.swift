@@ -19,6 +19,7 @@ let package = Package(
             linkerSettings: [
                 .linkedFramework("Foundation"),
                 .linkedFramework("ApplicationServices"),
+                .linkedFramework("IOKit"),
             ]
         ),
         .testTarget(

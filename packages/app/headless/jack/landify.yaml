@@ -23,6 +23,21 @@ site:
     - label: Get started
       href: '#cta'
 
+  og: # social card: build writes public/og/og.svg, image below is its PNG
+    title: 'A jack-of-all-trades for your terminal.'
+    kicker: '180+ commands, one binary'
+    tags:
+      - '14 modules'
+      - 'Calculator'
+      - 'Converter & crypto'
+      - 'Timers'
+    description: >-
+      A personal CLI toolbox with 180+ commands across 14 modules — calculate,
+      convert, encrypt, and time anything from your terminal.
+    image: 'https://hieudoanm.github.io/packages/app/headless/jack/public/og/og.png'
+    image_alt: 'J.A.C.K. — A jack-of-all-trades for your terminal.'
+    url: 'https://hieudoanm.github.io/packages/app/headless/jack/public/'
+
 hero:
   badge: '🃏 180+ commands'
   headline: A jack-of-all-trades for your terminal.

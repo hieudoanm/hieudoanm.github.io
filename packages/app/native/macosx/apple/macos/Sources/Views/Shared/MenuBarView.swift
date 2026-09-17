@@ -1,30 +1,17 @@
 import MacOSXCore
 import SwiftUI
 
+/// The menu-bar panel: a fixed-size popover over the same sections the
+/// dashboard window shows, with surface-level actions in one footer.
+///
+/// The footer opens the window surfaces, so it carries one button per window:
+/// the Applications Manager is a destination inside the dashboard window
+/// (`⇧⌘A`), not a window of its own.
 struct MenuBarView: View {
-    let clipboardViewModel: ClipboardViewModel
-    let ipViewModel: IPViewModel
-    let viewModel: MemoryViewModel
-    let networkViewModel: NetworkViewModel
-    let portsViewModel: PortsViewModel
-    let appsViewModel: AppsViewModel
-    let workspacesViewModel: WorkspacesViewModel
-    let homebrewViewModel: HomebrewViewModel
+    let models: AppViewModels
 
+    @AppStorage(SurfaceSection.storageKey) private var section = SurfaceSection.default
     @Environment(\.openWindow) private var openWindow
-
-    private enum Tab: Hashable {
-        case clipboard
-        case ip
-        case memory
-        case network
-        case ports
-        case front
-        case workspaces
-    }
-
-    @State private var selectedTab: Tab = .memory
-    @State private var showsDetails = false
 
     var body: some View {
         VStack(spacing: 0) {
@@ -33,88 +20,99 @@ struct MenuBarView: View {
             Divider()
 
             content
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+                .frame(height: SurfaceLayout.panelContentHeight)
 
             Divider()
 
             footer
         }
-        .frame(width: 600)
+        .frame(width: SurfaceLayout.panelWidth)
         .onAppear {
-            viewModel.refresh()
-            networkViewModel.start()
-            portsViewModel.start()
+            models.register(openWindow: openWindow)
+            models.memory.refresh()
         }
-        .animation(.easeInOut(duration: 0.15), value: selectedTab)
-        .animation(.easeInOut(duration: 0.15), value: showsDetails)
-    }
-
-    private var footer: some View {
-        HStack {
-            Button {
-                openWindow(id: HomebrewView.windowID)
-            } label: {
-                Label("Applications Manager…", systemImage: "hammer")
-            }
-            .buttonStyle(.borderless)
-            Spacer()
-        }
-        .padding(.horizontal, 12)
-        .padding(.vertical, 8)
+        .animation(.easeInOut(duration: Motion.crossfade), value: section)
     }
 
     private var tabBar: some View {
-        Picker("Tab", selection: $selectedTab) {
-            Text("Clipboard").tag(Tab.clipboard)
-            Text("Front").tag(Tab.front)
-            Text("IP").tag(Tab.ip)
-            Text("Memory").tag(Tab.memory)
-            Text("Network").tag(Tab.network)
-            Text("Ports").tag(Tab.ports)
-            Text("Workspaces").tag(Tab.workspaces)
+        Picker("Tab", selection: $section) {
+            ForEach(SurfaceSection.allCases, id: \.self) { entry in
+                Text(entry.title).tag(entry)
+            }
         }
         .pickerStyle(.segmented)
         .labelsHidden()
-        .padding(.horizontal, 12)
-        .padding(.vertical, 8)
+        .accessibilityLabel("Section")
+        .padding(.horizontal, Spacing.md)
+        .padding(.vertical, Spacing.sm)
     }
 
     @ViewBuilder
     private var content: some View {
-        switch selectedTab {
+        switch section {
         case .clipboard:
-            ClipboardView(viewModel: clipboardViewModel)
+            ClipboardView(viewModel: models.clipboard)
                 .transition(.opacity)
-        case .ip:
-            IPView(viewModel: ipViewModel)
+        case .clock:
+            ClockView(viewModel: models.clock)
                 .transition(.opacity)
-        case .memory:
-            Group {
-                if showsDetails {
-                    DetailsView(
-                        viewModel: viewModel,
-                        showSmall: { showsDetails = false }
-                    )
-                    .transition(.move(edge: .leading).combined(with: .opacity))
-                } else {
-                    SmallView(
-                        viewModel: viewModel,
-                        showDetails: { showsDetails = true }
-                    )
-                    .transition(.move(edge: .trailing).combined(with: .opacity))
-                }
-            }
+        case .resources:
+            ResourcesView(
+                memoryViewModel: models.memory,
+                batteryViewModel: models.battery
+            )
+            .transition(.opacity)
         case .network:
-            NetworkView(viewModel: networkViewModel)
-                .transition(.opacity)
-        case .ports:
-            PortsView(viewModel: portsViewModel)
-                .transition(.opacity)
-        case .front:
-            AppsView(viewModel: appsViewModel)
-                .transition(.opacity)
-        case .workspaces:
-            WorkspacesView(viewModel: workspacesViewModel)
-                .transition(.opacity)
+            NetworkView(
+                networkViewModel: models.network,
+                portsViewModel: models.ports,
+                ipViewModel: models.ip
+            )
+            .transition(.opacity)
+        case .apps:
+            AppsView(
+                appsViewModel: models.apps,
+                workspacesViewModel: models.workspaces
+            )
+            .transition(.opacity)
         }
+    }
+
+    private var footer: some View {
+        HStack(spacing: Spacing.compact) {
+            iconButton(
+                "rectangle.on.rectangle",
+                help: "Open Dashboard (⇧⌘D)",
+                id: DashboardView.windowID
+            )
+            iconButton("gear", help: "Settings (⌘,)", id: SettingsView.windowID)
+
+            Spacer()
+
+            Button("Quit") {
+                NSApplication.shared.terminate(nil)
+            }
+            .buttonStyle(.borderless)
+            .help("Quit MacOSX")
+        }
+        .padding(.horizontal, Spacing.md)
+        .padding(.vertical, Spacing.sm)
+    }
+
+    private func iconButton(_ systemImage: String, help: String, id: String) -> some View {
+        Button {
+            WindowPresenter.present(openWindow, id: id)
+        } label: {
+            Image(systemName: systemImage)
+                .frame(
+                    width: SurfaceMetrics.iconButtonWidth,
+                    height: SurfaceMetrics.iconButtonHeight
+                )
+                .contentShape(Rectangle())
+                .accessibilityLabel(help)
+        }
+        .buttonStyle(.borderless)
+        .help(help)
     }
 }

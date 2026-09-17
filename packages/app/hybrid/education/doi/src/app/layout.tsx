@@ -6,6 +6,30 @@ import Shell from '@/providers/Shell';
 export const metadata: Metadata = {
   title: 'DOI - Citation Graph',
   description: 'Explore the Crossref citation network interactively',
+  metadataBase: new URL('https://hieudoanm.github.io/open/doi/'),
+  openGraph: {
+    type: 'website',
+    siteName: 'DOI',
+    url: 'https://hieudoanm.github.io/open/doi/',
+    title: 'Explore the citation network',
+    description:
+      'Explore the Crossref citation network interactively: search works, trace references, follow clusters.',
+    images: [
+      {
+        url: '/og/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'DOI — Explore the citation network',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Explore the citation network',
+    description:
+      'Explore the Crossref citation network interactively: search works, trace references, follow clusters.',
+    images: ['/og/og.png'],
+  },
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,

@@ -66,7 +66,6 @@ final class HomebrewViewModel: ObservableObject {
 
     // MARK: - Published state
 
-    @Published var selectedSection: Section = .discover
     @Published private(set) var isHomebrewAvailable = false
     @Published private(set) var homebrewMissing = false
     @Published var searchQuery = ""
@@ -95,13 +94,18 @@ final class HomebrewViewModel: ObservableObject {
     private let service: any BrewService
     private let settingsStore: BrewSettingsStore
     private var searchTask: Task<Void, Never>?
+    private var hasStarted = false
 
     init(service: any BrewService = HomebrewService(), settingsStore: BrewSettingsStore = BrewSettingsStore()) {
         self.service = service
         self.settingsStore = settingsStore
     }
 
-    func start() async {
+    /// The Applications Manager now lives inside the dashboard window, so the
+    /// host view is recreated on every route change. Detect Homebrew once.
+    func startIfNeeded() async {
+        guard !hasStarted else { return }
+        hasStarted = true
         await checkHomebrew()
     }
 

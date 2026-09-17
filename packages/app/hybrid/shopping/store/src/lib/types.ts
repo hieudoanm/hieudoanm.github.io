@@ -1,6 +1,6 @@
 export type SortKey = 'name' | 'category' | 'recent';
 
-export type ViewMode = 'grid' | 'list' | 'gallery';
+export type ViewMode = 'grid' | 'list' | 'gallery' | 'hexagon';
 
 export interface SectionMeta {
   label: string;

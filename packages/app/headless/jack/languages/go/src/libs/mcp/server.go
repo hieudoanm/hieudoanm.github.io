@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"context"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"io"
 	"log"
@@ -50,33 +51,63 @@ func (s *Server) runWithReader(ctx context.Context, stdin io.Reader) error {
 		default:
 		}
 
-		lineCh := make(chan string, 1)
-		errCh := make(chan error, 1)
+		// A read can block indefinitely, so it runs on its own goroutine to keep
+		// the loop cancellable. Its outcome is one of exactly two values, so a
+		// single struct channel replaces the two channels this used to need.
+		type readResult struct {
+			frame   string
+			tooLong bool
+			err     error
+		}
+		resultCh := make(chan readResult, 1)
 
 		go func() {
-			line, err := reader.ReadString('\n')
-			if err != nil {
-				errCh <- err
-				return
-			}
-			lineCh <- line
+			frame, tooLong, err := readFrame(reader)
+			resultCh <- readResult{frame: frame, tooLong: tooLong, err: err}
 		}()
 
 		select {
-		case line := <-lineCh:
-			line = strings.TrimSpace(line)
-			if line == "" {
+		case res := <-resultCh:
+			if res.tooLong {
+				s.write(NewErrorResponse(nil, ErrCodeParse, "parse error: frame too large"))
 				continue
 			}
-			s.handleMessage([]byte(line))
-		case err := <-errCh:
-			if err == io.EOF {
-				return nil
+			if res.err != nil {
+				if errors.Is(res.err, io.EOF) {
+					return nil
+				}
+				return fmt.Errorf("read stdin: %w", res.err)
 			}
-			return fmt.Errorf("read stdin: %w", err)
+			frame := strings.TrimSpace(res.frame)
+			if frame == "" {
+				continue
+			}
+			s.handleMessage([]byte(frame))
 		case <-ctx.Done():
 			return ctx.Err()
 		}
+	}
+}
+
+// readFrame reads one newline-terminated frame, refusing anything larger than
+// MaxFrameBytes so a hostile or broken client cannot grow the heap without
+// bound. An over-long frame leaves the reader on its remaining bytes, so the
+// tail is discarded as junk and the stream resynchronises on the next newline.
+func readFrame(reader *bufio.Reader) (string, bool, error) {
+	var frame strings.Builder
+	for {
+		chunk, err := reader.ReadSlice('\n')
+		if frame.Len()+len(chunk) > MaxFrameBytes {
+			return "", true, nil
+		}
+		frame.Write(chunk)
+		if err == nil {
+			return frame.String(), false, nil
+		}
+		if errors.Is(err, bufio.ErrBufferFull) {
+			continue
+		}
+		return frame.String(), false, err
 	}
 }
 
@@ -92,12 +123,19 @@ func (s *Server) handleMessage(raw []byte) {
 		return
 	}
 
+	// A notification carries no id, so it must never be answered. Answering one
+	// desynchronises the client, so this check precedes the jsonrpc version
+	// check and covers every method, not just unknown ones.
+	isNotification := msg.ID == nil || len(msg.ID) == 0 || string(msg.ID) == "null"
+	if isNotification {
+		log.Printf("ignoring notification for method %s", msg.Method)
+		return
+	}
+
 	if msg.JSONRPC != "2.0" {
 		s.write(NewErrorResponse(msg.ID, ErrCodeInvalidRequest, "invalid jsonrpc version"))
 		return
 	}
-
-	isNotification := msg.ID == nil || len(msg.ID) == 0 || string(msg.ID) == "null"
 
 	switch msg.Method {
 	case "initialize":
@@ -109,20 +147,26 @@ func (s *Server) handleMessage(raw []byte) {
 	case "tools/call":
 		s.handleCallTool(msg.ID, msg.Params)
 	default:
-		if !isNotification {
-			s.write(NewErrorResponse(msg.ID, ErrCodeMethodNotFound, "method not found: "+msg.Method))
-		}
+		s.write(NewErrorResponse(msg.ID, ErrCodeMethodNotFound, "method not found: "+msg.Method))
 	}
 }
 
 func (s *Server) handleInitialize(id json.RawMessage, params json.RawMessage) {
+	// A revision this server speaks is echoed back; anything else falls back to
+	// ProtocolVersion and the client disconnects if it cannot speak that.
+	version := ProtocolVersion
 	var initParams InitializeParams
-	if params != nil {
-		json.Unmarshal(params, &initParams)
+	if err := json.Unmarshal(ObjectOrEmpty(params), &initParams); err == nil {
+		for _, supported := range SupportedProtocolVersions() {
+			if initParams.ProtocolVersion == supported {
+				version = supported
+				break
+			}
+		}
 	}
 
 	result := InitializeResult{
-		ProtocolVersion: ProtocolVersion,
+		ProtocolVersion: version,
 		Capabilities: ServerCapabilities{
 			Tools: &ToolsCapabilities{ListChanged: false},
 		},
@@ -145,8 +189,10 @@ func (s *Server) handleListTools(id json.RawMessage, _ json.RawMessage) {
 }
 
 func (s *Server) handleCallTool(id json.RawMessage, params json.RawMessage) {
+	// Absent or null params are an empty object, so a call with no params names
+	// no tool rather than failing to decode.
 	var callParams ToolCallParams
-	if err := json.Unmarshal(params, &callParams); err != nil {
+	if err := json.Unmarshal(ObjectOrEmpty(params), &callParams); err != nil {
 		s.write(NewErrorResponse(id, ErrCodeInvalidParams, "invalid params: "+err.Error()))
 		return
 	}

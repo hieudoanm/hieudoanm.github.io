@@ -13,6 +13,7 @@ describe('HomePage', () => {
       'colors',
       'chemistry',
       'economics',
+      'engineering',
       'geography',
       'maths',
       'psychology',

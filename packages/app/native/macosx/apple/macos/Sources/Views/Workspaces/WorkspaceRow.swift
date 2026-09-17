@@ -7,8 +7,8 @@ struct WorkspaceRow: View {
     let onRestore: () -> Void
 
     var body: some View {
-        HStack(spacing: 12) {
-            VStack(alignment: .leading, spacing: 2) {
+        HStack(spacing: Spacing.md) {
+            VStack(alignment: .leading, spacing: Spacing.hairline) {
                 Text(workspace.name)
                     .font(.callout)
                     .foregroundColor(.primary)
@@ -28,8 +28,8 @@ struct WorkspaceRow: View {
             .disabled(!restorable)
             .help(restorable ? "Restore \(workspace.name)" : "Nothing to restore")
         }
-        .padding(.vertical, 6)
-        .padding(.horizontal, 10)
+        .padding(.vertical, Spacing.xs)
+        .padding(.horizontal, Spacing.compact)
         .accessibilityElement(children: .combine)
         .accessibilityLabel("\(workspace.name), \(workspace.windows.count) windows")
         .accessibilityHint("Restores this workspace")

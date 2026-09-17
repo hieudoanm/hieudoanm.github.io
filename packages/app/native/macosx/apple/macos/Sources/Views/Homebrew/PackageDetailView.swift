@@ -11,13 +11,13 @@ struct PackageDetailView: View {
     @State private var confirmUninstall = false
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
-            HStack(alignment: .top, spacing: 14) {
+        VStack(alignment: .leading, spacing: Spacing.xl) {
+            HStack(alignment: .top, spacing: Spacing.inset) {
                 Image(systemName: package.type == .formula ? "terminal" : "app.dashed")
                     .font(.system(size: 40))
                     .foregroundStyle(.tint)
                     .accessibilityHidden(true)
-                VStack(alignment: .leading, spacing: 4) {
+                VStack(alignment: .leading, spacing: Spacing.xxs) {
                     Text(package.name)
                         .font(.largeTitle.bold())
                     Text(typeDescription)
@@ -35,7 +35,7 @@ struct PackageDetailView: View {
             infoGrid
 
             if !package.dependencies.isEmpty {
-                VStack(alignment: .leading, spacing: 6) {
+                VStack(alignment: .leading, spacing: Spacing.xs) {
                     Text("Dependencies")
                         .font(.headline)
                     Text(package.dependencies.joined(separator: ", "))
@@ -52,7 +52,7 @@ struct PackageDetailView: View {
 
             actionBar
         }
-        .padding(24)
+        .padding(Spacing.xxl)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         .confirmationDialog(
             "Uninstall \(package.name)?",

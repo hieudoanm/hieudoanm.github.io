@@ -7,10 +7,10 @@ struct AppRow: View {
 
     var body: some View {
         Button(action: onSelect) {
-            HStack(spacing: 12) {
+            HStack(spacing: Spacing.md) {
                 appIcon
 
-                VStack(alignment: .leading, spacing: 2) {
+                VStack(alignment: .leading, spacing: Spacing.hairline) {
                     Text(app.name)
                         .font(.callout)
                         .foregroundColor(.primary)
@@ -29,8 +29,8 @@ struct AppRow: View {
                         .foregroundColor(.secondary)
                 }
             }
-            .padding(.vertical, 6)
-            .padding(.horizontal, 10)
+            .padding(.vertical, Spacing.xs)
+            .padding(.horizontal, Spacing.compact)
         }
         .buttonStyle(.plain)
         .help("Bring all of \(app.name)'s windows to the front")

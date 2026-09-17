@@ -5,13 +5,17 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 STORE_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 CSV_DIR="$STORE_DIR/src/data/csv"
-CSV_SOURCES="${CSV_SOURCES:-hybrid.csv|home,about,downloads,version
-extensions.csv|home
-native.csv|home
-headless.csv|home}"
-SOURCE_SPECS="$(printf '%s\n' "$CSV_SOURCES" | sed '/^[[:space:]]*$/d')"
-SOURCE_PAGES="$(printf '%s\n' "$SOURCE_SPECS" | cut -d'|' -f2- | tr ',' '\n' | sed 's/^[[:space:]]*//; s/[[:space:]]*$//' | grep -v '^$' | sort -u | tr '\n' ' ')"
-SOURCE_FILES="$(printf '%s\n' "$SOURCE_SPECS" | cut -d'|' -f1 | sed 's/^[[:space:]]*//; s/[[:space:]]*$//' | grep -v '^$' | sort -u | sed 's/\.csv$//' | tr '\n' ' ')"
+APPS_CSV="apps.csv"
+
+# Which store pages to capture per sectionId from src/data/csv/apps.csv.
+# Sections missing from this list are reported and skipped.
+SECTION_PAGES="${SECTION_PAGES:-hybrid=home,about,downloads,version
+extensions=home
+headless=home
+native=home}"
+SECTION_SPECS="$(printf '%s\n' "$SECTION_PAGES" | sed '/^[[:space:]]*$/d')"
+SOURCE_SECTIONS="$(printf '%s\n' "$SECTION_SPECS" | cut -d'=' -f1 | sed 's/^[[:space:]]*//; s/[[:space:]]*$//' | grep -v '^$' | sort -u | tr '\n' ' ')"
+SOURCE_PAGES="$(printf '%s\n' "$SECTION_SPECS" | cut -d'=' -f2- | tr ',' '\n' | sed 's/^[[:space:]]*//; s/[[:space:]]*$//' | grep -v '^$' | sort -u | tr '\n' ' ')"
 OUT_DIR="$STORE_DIR/public/screenshots"
 VIEWPORT="${VIEWPORT:-1280,720}"
 WAIT_MS="${WAIT_MS:-2000}"
@@ -21,35 +25,35 @@ usage() {
     cat <<'EOF'
 Usage: screenshots.sh [options] [OUT_DIR]
 
-Capture 1280x720 screenshots of every app web page into
-OUT_DIR/<app>/{home,about,downloads,version}.png.
+Capture 1280x720 screenshots of every store page into
+OUT_DIR/<appId>/<page>.png.
 
-Sources (set CSV_SOURCES to override):
-    hybrid.csv      home, about, downloads, version pages
-    extensions.csv  landing page (home)
-    native.csv      landing page (home)
-    headless.csv    landing page (home)
+Source: src/data/csv/apps.csv — one row per app. Each row's
+sectionId selects which pages are captured, via SECTION_PAGES.
+
+    hybrid=home,about,downloads,version
+    extensions=home
+    headless=home
+    native=home
 
 Default output: public/screenshots
 
 Page flags (combinable; default is --all):
-    --all         capture every page listed in the sources
-    --<page>      capture only <page> for the sources that declare it.
-                  Page flags are derived from the CSV_SOURCES page
-                  lists (e.g. --home, --about, --downloads, --version
-                  with the default sources).
+    --all         capture every page listed in SECTION_PAGES
+    --<page>      capture only <page> for the sections that declare it.
+                  Page flags are derived from the SECTION_PAGES lists
+                  (e.g. --home, --about, --downloads, --version).
 
-File flags (combinable; default is all CSV files):
-    --<file>      capture only the apps from <file>, using the CSV
-                  basename without .csv (e.g. --hybrid, --extensions,
-                  --native, --headless). File flags are derived from
-                  CSV_SOURCES.
+Section flags (combinable):
+    --<section>   capture only apps whose sectionId matches (e.g.
+                  --hybrid, --extensions, --headless, --native).
+                  Section flags are derived from SECTION_PAGES.
 
 Environment:
-    VIEWPORT     viewport size (default 1280,720)
-    WAIT_MS      wait after navigation in ms (default 2000)
-    BROWSER      chromium | firefox | webkit | chrome | msedge (default firefox)
-    CSV_SOURCES  newline-separated "file.csv|page1,page2" list (default above)
+    VIEWPORT       viewport size (default 1280,720)
+    WAIT_MS        wait after navigation in ms (default 2000)
+    BROWSER        chromium | firefox | webkit | chrome | msedge (default firefox)
+    SECTION_PAGES  newline-separated "sectionId=page1,page2" list (default above)
 EOF
 }
 
@@ -62,7 +66,7 @@ require() {
 
 CAPTURE_ALL=0
 SELECTED_PAGES=""
-SELECTED_FILES=""
+SELECTED_SECTIONS=""
 
 while [[ $# -gt 0 ]]; do
     case "$1" in
@@ -75,8 +79,8 @@ while [[ $# -gt 0 ]]; do
             name="${1#--}"
             if [[ " $SOURCE_PAGES " == *" $name "* ]]; then
                 SELECTED_PAGES="$SELECTED_PAGES $name"
-            elif [[ " $SOURCE_FILES " == *" $name "* ]]; then
-                SELECTED_FILES="$SELECTED_FILES $name"
+            elif [[ " $SOURCE_SECTIONS " == *" $name "* ]]; then
+                SELECTED_SECTIONS="$SELECTED_SECTIONS $name"
             else
                 printf 'Error: unknown option %s\n' "$1" >&2
                 usage >&2
@@ -93,19 +97,6 @@ while [[ $# -gt 0 ]]; do
     shift
 done
 
-if [[ -n "$SELECTED_FILES" ]]; then
-    FILTERED=""
-    while IFS= read -r spec; do
-        [[ -z "$spec" ]] && continue
-        file="${spec%%|*}"
-        file="${file%.csv}"
-        if [[ " $SELECTED_FILES " == *" $file "* ]]; then
-            FILTERED="$FILTERED$spec"$'\n'
-        fi
-    done <<< "$SOURCE_SPECS"
-    CSV_SOURCES="$FILTERED"
-fi
-
 if [[ "$CAPTURE_ALL" -eq 1 ]]; then
     PAGES="$SOURCE_PAGES"
 else
@@ -116,19 +107,23 @@ else
 fi
 PAGES="$(printf '%s\n' "$PAGES" | sed 's/^ *//; s/ *$//')"
 
-require node
+if [[ -n "$SELECTED_SECTIONS" ]]; then
+    FILTERED=""
+    while IFS= read -r spec; do
+        [[ -z "$spec" ]] && continue
+        section="${spec%%=*}"
+        if [[ " $SELECTED_SECTIONS " == *" $section "* ]]; then
+            FILTERED="$FILTERED$spec"$'\n'
+        fi
+    done <<< "$SECTION_SPECS"
+    SECTION_SPECS="$FILTERED"
+fi
 
-missing=()
-local_csv=""
-while IFS= read -r spec; do
-    [[ -z "$spec" ]] && continue
-    local_csv="${spec%%|*}"
-    if [[ ! -f "$CSV_DIR/$local_csv" ]]; then
-        missing+=("$local_csv")
-    fi
-done <<< "$CSV_SOURCES"
-if [[ ${#missing[@]} -gt 0 ]]; then
-    printf 'Error: CSV not found: %s\n' "${missing[*]}" >&2
+require node
+require python3
+
+if [[ ! -f "$CSV_DIR/$APPS_CSV" ]]; then
+    printf 'Error: CSV not found: %s\n' "$CSV_DIR/$APPS_CSV" >&2
     exit 1
 fi
 
@@ -137,44 +132,61 @@ mkdir -p "$OUT_DIR"
 TARGETS="$(mktemp)"
 trap 'rm -f "$TARGETS"' EXIT
 
-PAGES="$PAGES" CSV_SOURCES="$CSV_SOURCES" python3 - "$CSV_DIR" > "$TARGETS" <<'PY'
+PAGES="$PAGES" SECTION_SPECS="$SECTION_SPECS" python3 - "$CSV_DIR/$APPS_CSV" > "$TARGETS" <<'PY'
 import csv
 import os
 import sys
 
 pages = set(os.environ["PAGES"].split())
-csv_dir = sys.argv[1]
 
-
-def suffix(name):
-    return "" if name == "home" else "/" + name
-
-
-for spec in os.environ["CSV_SOURCES"].splitlines():
-    spec = spec.strip()
-    if not spec:
+# "sectionId=page1,page2" -> {sectionId: {page, ...}}
+sections = {}
+for line in os.environ["SECTION_SPECS"].splitlines():
+    line = line.strip()
+    if not line or "=" not in line:
         continue
-    rel_path, _, valid = spec.partition("|")
-    valid_pages = {p.strip() for p in valid.split(",") if p.strip()}
-    csv_path = os.path.join(csv_dir, rel_path)
-    try:
-        f = open(csv_path, encoding="utf-8", newline="")
-    except OSError as err:
-        print(f"Warning: skipping {rel_path}: {err}", file=sys.stderr)
-        continue
-    with f:
-        for row in csv.DictReader(f):
-            app_id = (row.get("appId") or "").strip()
-            href = (row.get("href") or "").strip()
-            if not app_id or not href:
-                continue
-            for name in pages:
-                if name not in valid_pages:
-                    continue
-                print(f"{app_id}\t{name}\t{href}{suffix(name)}")
+    section, _, valid = line.partition("=")
+    sections[section.strip()] = {p.strip() for p in valid.split(",") if p.strip()}
+
+seen_sections = set()
+with open(sys.argv[1], encoding="utf-8", newline="") as f:
+    for row in csv.DictReader(f):
+        app_id = (row.get("appId") or "").strip()
+        href = (row.get("href") or "").strip()
+        section = (row.get("sectionId") or "").strip()
+        if not app_id or not href or not section:
+            continue
+        if section not in sections:
+            seen_sections.add(section)
+            continue
+        wanted = sections[section] & pages
+        if not wanted:
+            continue
+        # Some hrefs already end in "/" (headless), so normalise before
+        # appending a page to avoid a double slash.
+        base = href.rstrip("/")
+        for name in sorted(wanted):
+            suffix = "" if name == "home" else "/" + name
+            print(f"{app_id}\t{name}\t{base}{suffix}")
+
+if seen_sections:
+    known = ", ".join(sorted(sections))
+    print(
+        f"Warning: skipping sectionId(s) with no SECTION_PAGES entry: "
+        f"{', '.join(sorted(seen_sections))}. Known sections: {known}",
+        file=sys.stderr,
+    )
 PY
 
-printf 'Capturing pages: %s\n' "$PAGES"
+TARGET_COUNT="$(grep -c . "$TARGETS" || true)"
+if [[ "$TARGET_COUNT" -eq 0 ]]; then
+    printf 'Error: no pages selected. Try --all, or check SECTION_PAGES.\n' >&2
+    exit 1
+fi
+
+# Report the pages actually targeted, not the union across all sections.
+TARGET_PAGES="$(cut -f2 "$TARGETS" | sort -u | tr '\n' ' ')"
+printf 'Capturing %s page(s): %s\n' "$TARGET_COUNT" "$TARGET_PAGES"
 printf 'Launching %s\n' "$BROWSER"
 OUT_DIR="$OUT_DIR" WAIT_MS="$WAIT_MS" VIEWPORT="$VIEWPORT" BROWSER="$BROWSER" node - "$TARGETS" <<'JS'
 const fs = require("fs");

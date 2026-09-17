@@ -180,22 +180,24 @@ mod tests {
     async fn make_rate_limit_app(
         capacity: f64,
         refill_rate: f64,
-    ) -> (axum::Router, std::sync::Arc<crate::handlers::AppState>, PathBuf) {
+    ) -> (
+        axum::Router,
+        std::sync::Arc<crate::handlers::AppState>,
+        PathBuf,
+    ) {
+        use crate::db::ConnectionManager;
         use axum::{Router, middleware, routing::get};
         use deadpool::managed::Pool;
-        use crate::db::ConnectionManager;
 
-        let tmp_dir =
-            std::env::temp_dir().join(format!("backbone-rate-{}", uuid::Uuid::new_v4()));
+        let tmp_dir = std::env::temp_dir().join(format!("backbone-rate-{}", uuid::Uuid::new_v4()));
         std::fs::create_dir_all(&tmp_dir).unwrap();
         let db_path = tmp_dir.join("test.db");
         let conn = rusqlite::Connection::open(&db_path).unwrap();
         crate::db::migrate_db(&conn).unwrap();
         drop(conn);
-        let pool: Pool<ConnectionManager> =
-            Pool::builder(ConnectionManager { path: db_path })
-                .build()
-                .unwrap();
+        let pool: Pool<ConnectionManager> = Pool::builder(ConnectionManager { path: db_path })
+            .build()
+            .unwrap();
         let rate_limiter = std::sync::Arc::new(RateLimiter::new(capacity, refill_rate));
         let state = std::sync::Arc::new(crate::handlers::AppState {
             db: pool,
@@ -349,7 +351,11 @@ pub async fn rate_limit_middleware(
         });
 
     if !state.rate_limiter.check(&ip) {
-        return (StatusCode::TOO_MANY_REQUESTS, Json(serde_json::json!({"error": "rate limit exceeded"}))).into_response();
+        return (
+            StatusCode::TOO_MANY_REQUESTS,
+            Json(serde_json::json!({"error": "rate limit exceeded"})),
+        )
+            .into_response();
     }
 
     next.run(request).await

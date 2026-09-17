@@ -7,7 +7,8 @@
 
 - [x] Go module layout (`main.go` + `cmd/` + `internal/landify/`)
 - [x] Strict YAML parsing (`KnownFields(true)`)
-- [x] Cobra CLI (`new`, `validate`, `build`, `themes`, `serve`)
+- [x] Cobra CLI (`new`, `validate`, `build`, `themes`, `preview`, `serve`,
+      `tui`, `studio`)
 - [x] Embedded asset pipeline (`static/` via `//go:embed`)
 - [x] Shared `base-css`/`header`/`footer` partials
 
@@ -26,7 +27,7 @@
 - [x] `landify themes` listing command
 - [x] `build --theme <name>` preset override + validation
 - [x] Annotated `landify new` scaffolding per page type
-- [x] `landify serve` local preview server (127.0.0.1)
+- [x] `landify preview` local preview server (127.0.0.1)
 - [x] Theme gallery (64 built pages + screenshots) and page-type gallery in
       the parent `landify/examples/` directory
 - [x] Rolling GitHub Release via the reusable Go CI template
@@ -42,10 +43,22 @@
 - [x] 12 page-type selector with scaffold/apply per type
 - [x] One-click build + preview server + browser open + file-watch auto-rebuild
 - [x] Multi-document tabs (new / open / close / save / save-as)
+- [x] `landify tui` terminal editor (bubbletea) — a CGO-free, every-build
+      stand-in for the studio: YAML pane + `:` command line (save, reload,
+      validate, build, generate, theme) with dirty tracking, mirroring the
+      studio's pipeline
 
 ## Phase 5 — Polish
 
-- [ ] Configurable favicon / social meta (Open Graph, Twitter cards)
+- [x] MCP server (`landify mcp serve`) — six sandboxed tools over stdio for
+      LLM clients: scaffold, validate, build, types, themes, theme tokens
+- [x] Social meta (`site.og`) — Open Graph + Twitter card tags in every layout,
+      with site-level fallbacks for title, description and site name
+- [x] Generated social card (`og/og.svg`) — 1200 × 630 SVG from the theme and
+      the card copy, written beside the page on every build
+- [x] Card identity copy (`og.kicker`, `og.tags`) — per-card eyebrow and chip
+      list in the identity panel, card-only fields with no meta tag
+- [ ] Configurable favicon
 - [ ] Custom fonts and typography scale options in `theme:`
 - [ ] Analytical components (countdown, announcement bar, lead form handler)
 - [ ] Accessibility audit (keyboard nav, focus states, contrast ratios)

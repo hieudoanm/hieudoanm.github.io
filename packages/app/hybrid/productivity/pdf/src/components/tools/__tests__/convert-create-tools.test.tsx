@@ -222,7 +222,9 @@ describe('PdfToImagesTool', () => {
     render(<PdfToImagesTool />);
     await upload();
     await waitFor(() =>
-      expect(pdfjs.getDocument).toHaveBeenCalledWith(expect.any(ArrayBuffer))
+      expect(pdfjs.getDocument).toHaveBeenCalledWith({
+        data: expect.any(ArrayBuffer),
+      })
     );
   });
 

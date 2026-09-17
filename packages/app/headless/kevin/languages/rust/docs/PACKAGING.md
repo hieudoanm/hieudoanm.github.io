@@ -57,7 +57,7 @@ the download URLs in [DOWNLOADS](DOWNLOADS) always point at the newest build.
 
 1. `cargo clippy --all-targets -- -D warnings` clean
 2. `cargo fmt -- --check` empty
-3. `cargo test --all-targets` green (55 tests)
+3. `cargo test --all-targets` green (129 tests)
 4. `cargo build --release` succeeds and
    `printf 'PING\r\n' | nc 127.0.0.1 <port>` replies `PONG`
 5. `docker build -t kevin-server .` succeeds and the image serves `PONG`

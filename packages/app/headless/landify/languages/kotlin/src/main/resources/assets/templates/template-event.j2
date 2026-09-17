@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{{ config.site.description }}" />
+    <title>{{ config.site.name }}</title>
+    <style>
+      :root {
+@LANDIFY_THEME@      }
+{% include 'base-css.j2' %}
+      .event-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 18px;
+      }
+      .event-meta span {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--base-content);
+        background: var(--base-200);
+        border: 1px solid var(--border-soft);
+        border-radius: 999px;
+        padding: 6px 14px;
+      }
+      .agenda {
+        list-style: none;
+        margin: 0 auto;
+        padding: 0;
+        max-width: 760px;
+        display: grid;
+        gap: 12px;
+      }
+      .agenda li {
+        display: grid;
+        grid-template-columns: 96px 1fr;
+        gap: 14px;
+        align-items: start;
+        background: var(--base-200);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+        padding: 18px 20px;
+      }
+      .agenda .time {
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--primary-dark);
+        background: var(--primary-soft);
+        border: 1px solid var(--border-soft);
+        border-radius: 999px;
+        padding: 6px 0;
+        text-align: center;
+      }
+      .agenda h3 {
+        margin: 0 0 6px;
+        font-size: 16px;
+        font-weight: 700;
+      }
+      .agenda .who {
+        margin: 0 0 6px;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--primary);
+      }
+      .agenda p {
+        margin: 0;
+        font-size: 13.5px;
+        color: var(--neutral);
+      }
+      .speakers {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+      .speaker {
+        background: var(--base-200);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+        padding: 24px;
+        text-align: center;
+      }
+      .speaker .avatar {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 56px;
+        height: 56px;
+        font-size: 28px;
+        border-radius: 999px;
+        background: var(--primary-soft);
+        border: 1px solid var(--border-soft);
+      }
+      .speaker h3 {
+        margin: 12px 0 4px;
+        font-size: 16px;
+        font-weight: 700;
+      }
+      .speaker .role {
+        margin: 0;
+        font-size: 13px;
+        color: var(--neutral);
+      }
+      @media (max-width: 900px) {
+        .speakers {
+          grid-template-columns: 1fr;
+        }
+        .agenda li {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    {% include 'header.j2' %}
+
+    <main id="top">
+      <section class="hero">
+        <div>
+          {% if config.hero.badge %}<span class="badge">{{ config.hero.badge }}</span>{% endif %}
+          <h1>{{ config.hero.headline }}</h1>
+          <p class="lead">{{ config.hero.subheadline }}</p>
+          <div class="event-meta">
+            <span>📅 {{ config.event.date }}</span>
+            {% if config.event.time %}<span>🕒 {{ config.event.time }}</span>{% endif %}
+            <span>📍 {{ config.event.venue.name }}{% if config.event.venue.city %}, {{ config.event.venue.city }}{% endif %}</span>
+          </div>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="{{ config.event.primary.href }}">{{ config.event.primary.label }}</a>
+            {% if config.hero.secondary.href %}<a class="btn btn-ghost" href="{{ config.hero.secondary.href }}">{{ config.hero.secondary.label }}</a>{% endif %}
+          </div>
+        </div>
+      </section>
+
+      <section id="agenda" class="block">
+        <div class="block-head">
+          <h2>{{ config.features.heading }}</h2>
+          <p class="sub">{{ config.features.sub }}</p>
+        </div>
+        <ul class="agenda">
+          {% for entry in config.event.agenda %}
+          <li>
+            <span class="time">{{ entry.time }}</span>
+            <div>
+              <h3>{{ entry.title }}</h3>
+              {% if entry.speaker %}<p class="who">{{ entry.speaker }}</p>{% endif %}
+              {% if entry.body %}<p>{{ entry.body }}</p>{% endif %}
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </section>
+
+      {% if config.event.speakers_heading %}
+      <section id="speakers" class="block">
+        <div class="block-head">
+          <h2>{{ config.event.speakers_heading }}</h2>
+          {% if config.event.speakers_sub %}<p class="sub">{{ config.event.speakers_sub }}</p>{% endif %}
+        </div>
+        <div class="speakers">
+          {% for speaker in config.event.speakers %}
+          <div class="speaker">
+            {% if speaker.avatar %}<span class="avatar">{{ speaker.avatar }}</span>{% endif %}
+            <h3>{{ speaker.name }}</h3>
+            <p class="role">{{ speaker.role }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+      {% endif %}
+
+      {% if config.cta.heading %}
+      <section id="cta" class="block">
+        <div class="cta">
+          <span class="icon" aria-hidden="true">{{ config.cta.icon }}</span>
+          <h2>{{ config.cta.heading }}</h2>
+          <p>{{ config.cta.body }}</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="{{ config.cta.button.href }}">{{ config.cta.button.label }}</a>
+          </div>
+        </div>
+      </section>
+      {% endif %}
+
+      {% include 'footer.j2' %}
+    </main>
+  </body>
+</html>

@@ -85,8 +85,12 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-A minimal VSCode / Zed you can carry anywhere — browse files, edit with
-multi-cursor, find across projects, and ship code from any device.
+A minimal VSCode / Zed you can carry anywhere.
+
+- Browse files.
+- Edit with multi-cursor.
+- Find across projects.
+- Ship code from any device.
 
 ---
 
@@ -134,7 +138,7 @@ All the essentials for editing code on the go.
 
 ---
 
-# First run
+## First run
 
 - **macOS:** Right-click the `.dmg` and choose **Open** to bypass Gatekeeper.
 - **Linux AppImage:** `chmod +x code.AppImage && ./code.AppImage`

@@ -3,6 +3,7 @@ package headless
 import (
 	"context"
 	"errors"
+	"fmt"
 	"image"
 	"net/http"
 	"net/http/httptest"
@@ -41,6 +42,8 @@ func TestIsTimeout(t *testing.T) {
 		{"nil", nil, false},
 		{"deadline", context.DeadlineExceeded, true},
 		{"wrapped deadline", &TimeoutError{Err: context.DeadlineExceeded}, true},
+		{"timeout wrapping engine error", &TimeoutError{Err: errors.New("engine gave up")}, true},
+		{"double wrapped timeout", fmt.Errorf("scrape: %w", &TimeoutError{Err: errors.New("boom")}), true},
 		{"other", errors.New("boom"), false},
 	}
 	for _, tt := range tests {

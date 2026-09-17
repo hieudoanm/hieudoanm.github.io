@@ -5,6 +5,7 @@ import {
   PiArrowUp,
   PiArrowDown,
   PiGridFour,
+  PiHexagon,
   PiImageSquare,
   PiList,
 } from 'react-icons/pi';
@@ -77,6 +78,13 @@ export const SortBar: FC<SortBarProps> = ({
           aria-label="List view"
           className={`btn btn-ghost btn-xs ${viewMode === 'list' ? 'btn-active' : ''}`}>
           <PiList />
+        </button>
+        <button
+          type="button"
+          onClick={() => setViewMode('hexagon')}
+          aria-label="Hexagon view"
+          className={`btn btn-ghost btn-xs ${viewMode === 'hexagon' ? 'btn-active' : ''}`}>
+          <PiHexagon />
         </button>
       </div>
     </div>

@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Getting Started · basic-docs</title>
+    
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="header">
+      <div class="header__bar">
+        
+        <button
+          class="header__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="sidebar"
+          data-nav-toggle
+        >
+          <span class="header__toggle-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Menu</span>
+        </button>
+        
+        <a class="header__title" href="/">basic-docs</a>
+        <div class="header__actions">
+          <label class="header__search" for="search">
+            <span class="visually-hidden">Search</span>
+            <input
+              id="search"
+              type="search"
+              placeholder="Search"
+              autocomplete="off"
+              data-search
+              data-search-index="/assets/search-index.json"
+            />
+          </label>
+          <button class="header__theme" type="button" data-theme-toggle>
+            <span class="visually-hidden">Toggle colour theme</span>
+          </button>
+        </div>
+      </div>
+      <div class="search" data-search-panel hidden>
+        <p class="search__status" role="status" data-search-status></p>
+        <ul class="search__results" data-search-results></ul>
+      </div>
+    </header>
+
+    <div class="layout">
+      
+      <nav class="sidebar" id="sidebar" aria-label="Site">
+        <ul class="nav">
+  <li class="nav__item">
+  <a
+    class="nav__link"
+    href="/docs/"
+    >Basic Docs</a
+  > <ul class="nav nav--nested">
+  <li class="nav__item">
+  <a
+    class="nav__link nav__link--current"
+    href="/docs/getting-started/"
+    aria-current="page">Getting Started</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/docs/guide/"
+    >Guide</a
+  > <ul class="nav nav--nested">
+  <li class="nav__item">
+  <a
+    class="nav__link"
+    href="/docs/guide/configuration/"
+    >Configuration</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/docs/guide/installation/"
+    >Installation</a
+  > 
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+      </nav>
+      
+
+      <main class="main" id="main">
+        <article class="markdown"><h1 id="page-title" class="markdown__title">Getting Started</h1>
+          
+          <p>Learn how to use <strong>pagify</strong> to build your documentation site.</p>
+<h2 id="installation">Installation</h2>
+<pre><code class="language-bash"># Install via Go
+go install github.com/hieudoanm/pagify@latest
+
+# Or build from source
+make build
+</code></pre>
+<h2 id="create-your-first-site">Create Your First Site</h2>
+<pre><code class="language-bash"># Scaffold a starter project
+pagify init my-docs
+
+# Build it
+pagify build ./my-docs/docs
+
+# Preview locally
+pagify serve ./my-docs/docs
+</code></pre>
+<h2 id="write-content">Write Content</h2>
+<p>Create <code>.md</code> files in your content directory:</p>
+<pre><code class="language-markdown">---
+title: My Page
+description: A helpful description
+order: 1
+---
+
+# Page Title
+
+Your content here...
+</code></pre>
+<h2 id="frontmatter-options">Frontmatter Options</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>title</code></td>
+<td>Page title (overrides first <code># Heading</code>)</td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>SEO meta description</td>
+</tr>
+<tr>
+<td><code>order</code></td>
+<td>Sort order in navigation</td>
+</tr>
+<tr>
+<td><code>label</code></td>
+<td>Custom nav label</td>
+</tr>
+<tr>
+<td><code>draft</code></td>
+<td>Set <code>true</code> to exclude from build</td>
+</tr>
+</tbody>
+</table>
+<h2 id="build--deploy">Build &amp; Deploy</h2>
+<pre><code class="language-bash"># Build for production
+pagify build ./docs --output ./dist
+
+# Deploy ./dist to GitHub Pages, Netlify, Vercel, Cloudflare Pages...
+</code></pre>
+<aside class="callout callout--tip" role="note">
+<p class="callout__title" data-no-search><span class="callout__icon" aria-hidden="true">✓</span>Tip</p>
+<p>
+The <code>dist/</code> directory contains only static files — no server required.</p>
+</aside>
+
+          
+        </article>
+        
+<aside class="outline" aria-label="On this page">
+  <h2 class="outline__title">On this page</h2>
+  <ul class="outline__list">
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#installation">Installation</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#create-your-first-site">Create Your First Site</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#write-content">Write Content</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#frontmatter-options">Frontmatter Options</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#build--deploy">Build &amp; Deploy</a>
+    </li>
+    
+  </ul>
+</aside>
+
+      </main>
+    </div>
+
+    <footer class="footer">
+      <p>Built with pagify</p>
+    </footer>
+
+    <script src="/assets/script.js" defer></script>
+    <script src="/assets/search.js" defer></script>
+  </body>
+</html>

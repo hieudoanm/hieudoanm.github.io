@@ -26,8 +26,10 @@ pnpm dev --filter=@hieudoanm.github.io/lingo   # dev server on :3000
   `secondary`, …) from `themes.css`, no hardcoded colors
 - Atomic design: `atoms/` → `features/` → `templates/`
 - Features are self-contained folders: pure logic in `utils.ts` (no React), UI
-  in `index.tsx`. Pages never import feature internals besides the default
-  export.
+  in `index.tsx`. Interactive subject features under `src/games/stem/` use
+  `game.ts` for that same pure-logic slot (`utils.ts` is reserved for
+  non-interactive maths features). Pages never import feature internals besides
+  the default export.
 - Explicit types at boundaries; prefer interfaces for object shapes
 - No comments unless explaining a non-obvious invariant
 

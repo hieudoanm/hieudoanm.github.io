@@ -5,21 +5,21 @@ struct HomebrewMissingView: View {
     let onRetry: () -> Void
 
     var body: some View {
-        VStack(spacing: 14) {
+        VStack(spacing: Spacing.inset) {
             Image(systemName: "exclamationmark.triangle")
-                .font(.system(size: 48))
+                .font(Typography.emptyStateIconLarge)
                 .foregroundStyle(.orange)
             Text("Homebrew not found")
                 .font(.title.bold())
             Text("MacOSX requires Homebrew to manage packages.")
                 .foregroundStyle(.secondary)
-            HStack(spacing: 12) {
+            HStack(spacing: Spacing.md) {
                 Button("Retry", action: onRetry)
                 Link("Learn More", destination: URL(string: "https://brew.sh")!)
             }
-            .padding(.top, 8)
+            .padding(.top, Spacing.sm)
         }
-        .padding(40)
+        .padding(Spacing.huge)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }

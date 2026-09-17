@@ -7,6 +7,7 @@ import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.TestInstance
 import java.io.File
+import kotlin.io.path.createTempDirectory
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNotNull
@@ -20,7 +21,7 @@ class CacheStoreTest {
 
     @BeforeAll
     fun setup() {
-        tempDir = createTempDir("cache-test-")
+        tempDir = createTempDirectory("cache-test-").toFile()
         val config = AppConfig(
             port = 0, jwtSecret = "test-secret-32-characters-long!!!!",
             backboneData = tempDir.absolutePath, secretsKeyHex = null,

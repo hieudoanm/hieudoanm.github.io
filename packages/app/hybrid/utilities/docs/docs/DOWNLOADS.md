@@ -98,8 +98,11 @@ Per-platform launch tips:
 ## About
 
 All your tools, one polished surface. Hieu Doan is a personal documentation and
-apps site that packs developer tools, games, and medical apps into a single
-docs-style interface you can open on any screen.
+apps site.
+
+- **Developer tools, games, and medical apps** — all packed into one site.
+- **Docs-style interface** — a single polished surface you can open on any
+  screen.
 
 ---
 

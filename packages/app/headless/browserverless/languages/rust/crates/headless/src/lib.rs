@@ -80,15 +80,26 @@ impl HeadlessBrowser {
     }
 
     pub fn dump_html(&self, url: &str) -> Result<String, HeadlessError> {
-        let (page, _) = self.render_url_best_effort(url)?;
+        let (page, _) = self.render_url_best_effort(url, self.config.load_timeout_ms)?;
         page.dump_html(Duration::from_secs(15))
             .map_err(HeadlessError::from)
     }
 
     pub fn scrape(&self, url: &str) -> Result<ScrapeResult, HeadlessError> {
+        self.scrape_with_timeout(url, self.config.load_timeout_ms)
+    }
+
+    /// scrape_with_timeout is scrape with an explicit load timeout. Servo owns
+    /// one event loop per process, so callers reuse a single browser and vary
+    /// the deadline per request instead of building a new browser.
+    pub fn scrape_with_timeout(
+        &self,
+        url: &str,
+        load_timeout_ms: u64,
+    ) -> Result<ScrapeResult, HeadlessError> {
         let started = Instant::now();
         let peak_before = peak_rss_kb();
-        let (page, timed_out) = self.render_url_best_effort(url)?;
+        let (page, timed_out) = self.render_url_best_effort(url, load_timeout_ms)?;
         let timeout = Duration::from_secs(15);
 
         let html = page.dump_html(timeout).map_err(HeadlessError::from)?;
@@ -111,11 +122,21 @@ impl HeadlessBrowser {
     }
 
     pub fn screenshot_bytes(&self, url: &str) -> Result<ScreenshotResult, HeadlessError> {
+        self.screenshot_bytes_with_timeout(url, self.config.load_timeout_ms)
+    }
+
+    /// screenshot_bytes_with_timeout is screenshot_bytes with an explicit load
+    /// timeout, for callers that reuse one browser across requests.
+    pub fn screenshot_bytes_with_timeout(
+        &self,
+        url: &str,
+        load_timeout_ms: u64,
+    ) -> Result<ScreenshotResult, HeadlessError> {
         use std::io::Cursor;
 
         let started = Instant::now();
         let peak_before = peak_rss_kb();
-        let (page, timed_out) = self.render_url_best_effort(url)?;
+        let (page, timed_out) = self.render_url_best_effort(url, load_timeout_ms)?;
         let timeout = Duration::from_secs(15);
 
         let img = page.screenshot()?;
@@ -141,10 +162,14 @@ impl HeadlessBrowser {
         })
     }
 
-    fn render_url_best_effort(&self, url: &str) -> Result<(Page, bool), HeadlessError> {
+    fn render_url_best_effort(
+        &self,
+        url: &str,
+        load_timeout_ms: u64,
+    ) -> Result<(Page, bool), HeadlessError> {
         let page = self.ctx.new_page(url)?;
 
-        let timed_out = match page.wait_for_load(self.config.load_timeout_ms) {
+        let timed_out = match page.wait_for_load(load_timeout_ms) {
             Ok(()) => false,
             Err(BrowserError::Timeout(_)) => {
                 log::warn!("load did not complete before timeout; dumping partial DOM");

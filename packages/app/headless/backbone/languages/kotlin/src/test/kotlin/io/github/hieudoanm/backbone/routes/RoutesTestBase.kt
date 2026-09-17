@@ -25,6 +25,7 @@ import kotlin.test.assertEquals
 import kotlinx.serialization.json.*
 import org.junit.jupiter.api.*
 import java.io.File
+import kotlin.io.path.createTempDirectory
 import java.security.SecureRandom
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
@@ -35,7 +36,7 @@ abstract class RoutesTestBase {
 
     @BeforeAll
     fun setup() {
-        tempDir = createTempDir("backbone-test-")
+        tempDir = createTempDirectory("backbone-test-").toFile()
         val config = AppConfig(
             port = 0,
             jwtSecret = "test-secret-at-least-32-characters-long!!",

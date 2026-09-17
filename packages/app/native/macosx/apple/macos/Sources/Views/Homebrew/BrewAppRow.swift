@@ -8,14 +8,14 @@ struct BrewAppRow: View {
     let app: InstalledApp
 
     var body: some View {
-        HStack(spacing: 12) {
+        HStack(spacing: Spacing.md) {
             Image(nsImage: icon)
                 .resizable()
                 .frame(width: 28, height: 28)
                 .accessibilityHidden(true)
 
-            VStack(alignment: .leading, spacing: 2) {
-                HStack(spacing: 6) {
+            VStack(alignment: .leading, spacing: Spacing.hairline) {
+                HStack(spacing: Spacing.xs) {
                     Text(app.name)
                         .font(.headline)
                     if let token = app.caskToken {
@@ -38,7 +38,7 @@ struct BrewAppRow: View {
                     .foregroundStyle(.secondary)
             }
         }
-        .padding(.vertical, 2)
+        .padding(.vertical, Spacing.hairline)
     }
 
     private var icon: NSImage {

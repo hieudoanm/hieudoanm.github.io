@@ -133,6 +133,21 @@ func captureRun(cmd *cobra.Command, posArgs []string) (string, string, error) {
 	stderrR, stderrW, _ := os.Pipe()
 	os.Stderr = stderrW
 
+	// Drain both pipes while the command runs. Reading only after RunE returns
+	// deadlocks as soon as a tool writes more than the pipe buffer, which hangs
+	// the whole MCP server on a large result.
+	var wg sync.WaitGroup
+	var stdoutRaw, stderrRaw []byte
+	wg.Add(2)
+	go func() {
+		defer wg.Done()
+		stdoutRaw, _ = io.ReadAll(stdoutR)
+	}()
+	go func() {
+		defer wg.Done()
+		stderrRaw, _ = io.ReadAll(stderrR)
+	}()
+
 	var cmdBuf bytes.Buffer
 	cmd.SetOut(&cmdBuf)
 	cmd.SetErr(&cmdBuf)
@@ -140,12 +155,10 @@ func captureRun(cmd *cobra.Command, posArgs []string) (string, string, error) {
 	err := cmd.RunE(cmd, posArgs)
 
 	stdoutW.Close()
-	os.Stdout = oldStdout
-	stdoutRaw, _ := io.ReadAll(stdoutR)
-
 	stderrW.Close()
+	wg.Wait()
+	os.Stdout = oldStdout
 	os.Stderr = oldStderr
-	stderrRaw, _ := io.ReadAll(stderrR)
 
 	stdout := string(stdoutRaw) + cmdBuf.String()
 	stderr := string(stderrRaw)

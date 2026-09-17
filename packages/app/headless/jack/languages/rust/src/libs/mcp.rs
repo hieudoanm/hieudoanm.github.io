@@ -1,9 +1,17 @@
 use serde::{Deserialize, Serialize};
 use serde_json::Value;
 use std::collections::HashMap;
-use std::io::{self, BufRead, Write};
+use std::io::{self, Write};
 
 pub const PROTOCOL_VERSION: &str = "2025-11-25";
+
+/// The MCP revisions this server can speak, newest first.
+pub const SUPPORTED_PROTOCOL_VERSIONS: &[&str] = &[PROTOCOL_VERSION];
+
+/// Caps a single JSON-RPC frame. A larger frame is reported as a parse error
+/// instead of being buffered, so a client cannot grow the heap without bound.
+/// It matches the cap the other headless MCP servers use.
+pub const MAX_FRAME_BYTES: usize = 8 << 20;
 
 #[derive(Deserialize)]
 pub struct Request {
@@ -60,6 +68,84 @@ pub struct PropertySchema {
     pub items: Option<Box<PropertySchema>>,
 }
 
+/// Why a frame could not be turned into a line.
+pub enum FrameError {
+    /// The frame exceeded MAX_FRAME_BYTES, so its tail is discarded as junk and
+    /// the stream resynchronises on the next newline.
+    TooLong,
+    Io(std::io::Error),
+}
+
+/// Reads newline-delimited frames, refusing any frame larger than
+/// MAX_FRAME_BYTES so a client cannot grow the heap without bound. Unlike
+/// `BufRead::lines`, this never buffers an unbounded line.
+pub fn read_frames<R: io::BufRead>(
+    mut reader: R,
+) -> impl Iterator<Item = Result<String, FrameError>> {
+    let mut carried: Option<String> = None;
+    std::iter::from_fn(move || {
+        if let Some(pending) = carried.take() {
+            return Some(Ok(pending));
+        }
+
+        let mut frame = String::new();
+        loop {
+            let (chunk, done) = {
+                let available = match reader.fill_buf() {
+                    Ok(buf) => buf,
+                    Err(e) => return Some(Err(FrameError::Io(e))),
+                };
+                if available.is_empty() {
+                    (Vec::new(), true)
+                } else {
+                    match available.iter().position(|b| *b == b'\n') {
+                        Some(index) => (available[..=index].to_vec(), true),
+                        None => (available.to_vec(), false),
+                    }
+                }
+            };
+            reader.consume(chunk.len());
+
+            if frame.len() + chunk.len() > MAX_FRAME_BYTES {
+                // Discard the remainder of the over-long line so the next frame
+                // starts at a real newline.
+                carried = Some(discard_to_newline(&mut reader));
+                return Some(Err(FrameError::TooLong));
+            }
+            frame.push_str(&String::from_utf8_lossy(&chunk));
+
+            if done {
+                break;
+            }
+        }
+        Some(Ok(frame))
+    })
+}
+
+/// Consumes bytes up to and including the next newline, returning the discarded
+/// text. Used to resynchronise after an over-long frame.
+fn discard_to_newline<R: io::BufRead>(reader: &mut R) -> String {
+    let mut discarded = String::new();
+    loop {
+        let buf = match reader.fill_buf() {
+            Ok(buf) if buf.is_empty() => break,
+            Ok(buf) => buf,
+            Err(_) => break,
+        };
+        let (head, found) = match buf.iter().position(|b| *b == b'\n') {
+            Some(index) => (&buf[..=index], true),
+            None => (buf, false),
+        };
+        let head = head.to_vec();
+        reader.consume(head.len());
+        discarded.push_str(&String::from_utf8_lossy(&head));
+        if found {
+            break;
+        }
+    }
+    discarded
+}
+
 pub struct Server {
     tools: Vec<Tool>,
     handlers: HashMap<String, Box<dyn Fn(Value) -> Value + Send + Sync>>,
@@ -85,15 +171,21 @@ impl Server {
         let stdin = io::stdin();
         let stdout = io::stdout();
 
-        for line in stdin.lock().lines() {
-            let line = line?;
-            let line = line.trim().to_string();
-            if line.is_empty() {
-                continue;
+        for frame in read_frames(stdin.lock()) {
+            match frame {
+                Ok(line) => {
+                    let line = line.trim();
+                    if line.is_empty() {
+                        continue;
+                    }
+                    self.handle_message(line.as_bytes(), &stdout)?;
+                }
+                Err(FrameError::TooLong) => {
+                    let resp = new_error(None, -32700, "parse error: frame too large");
+                    write_response(&stdout, &resp)?;
+                }
+                Err(FrameError::Io(e)) => return Err(e.into()),
             }
-
-            let raw = line.as_bytes().to_vec();
-            self.handle_message(&raw, &stdout)?;
         }
 
         Ok(())
@@ -109,16 +201,22 @@ impl Server {
             }
         };
 
+        // A notification carries no id, so it must never be answered. Answering
+        // one desynchronises the client, so this check precedes the jsonrpc
+        // version check and covers every method, not just unknown ones.
+        if msg.id.is_none() || msg.id.as_ref().is_some_and(|v| v.is_null()) {
+            eprintln!("[mcp] ignoring notification for method {}", msg.method);
+            return Ok(());
+        }
+
         if msg.jsonrpc != "2.0" {
             let resp = new_error(msg.id, -32600, "invalid jsonrpc version");
             write_response(stdout, &resp)?;
             return Ok(());
         }
 
-        let is_notification = msg.id.is_none() || msg.id.as_ref().is_some_and(|v| v.is_null());
-
         match msg.method.as_str() {
-            "initialize" => self.handle_initialize(msg.id, stdout)?,
+            "initialize" => self.handle_initialize(msg.id, msg.params, stdout)?,
             "ping" => {
                 let resp = new_success(msg.id, Value::Object(Default::default()));
                 write_response(stdout, &resp)?;
@@ -126,20 +224,33 @@ impl Server {
             "tools/list" => self.handle_list_tools(msg.id, stdout)?,
             "tools/call" => self.handle_call_tool(msg.id, msg.params, stdout)?,
             _ => {
-                if !is_notification {
-                    let resp =
-                        new_error(msg.id, -32601, &format!("method not found: {}", msg.method));
-                    write_response(stdout, &resp)?;
-                }
+                let resp = new_error(msg.id, -32601, &format!("method not found: {}", msg.method));
+                write_response(stdout, &resp)?;
             }
         }
 
         Ok(())
     }
 
-    fn handle_initialize(&self, id: Option<Value>, stdout: &io::Stdout) -> anyhow::Result<()> {
+    fn handle_initialize(
+        &self,
+        id: Option<Value>,
+        params: Option<Value>,
+        stdout: &io::Stdout,
+    ) -> anyhow::Result<()> {
+        // A revision this server speaks is echoed back; anything else falls back
+        // to PROTOCOL_VERSION and the client disconnects if it cannot speak it.
+        let requested = params
+            .as_ref()
+            .and_then(|p| p.get("protocolVersion"))
+            .and_then(|v| v.as_str());
+        let version = match requested {
+            Some(v) if SUPPORTED_PROTOCOL_VERSIONS.contains(&v) => v,
+            _ => PROTOCOL_VERSION,
+        };
+
         let result = serde_json::json!({
-            "protocolVersion": PROTOCOL_VERSION,
+            "protocolVersion": version,
             "capabilities": {
                 "tools": { "listChanged": false }
             },
@@ -166,10 +277,17 @@ impl Server {
         params: Option<Value>,
         stdout: &io::Stdout,
     ) -> anyhow::Result<()> {
+        // Absent or null params are an empty object, so a call with no params
+        // names no tool rather than being rejected as malformed.
         let params = match params {
-            Some(p) => p,
-            None => {
-                let resp = new_error(id.clone(), -32602, "missing params");
+            Some(Value::Object(map)) => Value::Object(map),
+            Some(Value::Null) | None => Value::Object(Default::default()),
+            Some(other) => {
+                let resp = new_error(
+                    id.clone(),
+                    -32602,
+                    &format!("invalid params: expected an object, got {other}"),
+                );
                 write_response(stdout, &resp)?;
                 return Ok(());
             }

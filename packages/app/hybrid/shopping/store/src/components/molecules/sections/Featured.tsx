@@ -3,6 +3,7 @@
 import { Highlight } from '@/components/atoms/Highlight';
 import { TaggedStoreCard } from '@/components/atoms/StoreCard';
 import { getRecommendedDownload, type AppData } from '@/lib/downloads';
+import { HexagonGrid } from '@/components/molecules/HexagonGrid';
 import type { Platform } from '@/lib/os';
 import { getHomeScreenshotUrl } from '@/lib/screenshots';
 import type { ViewMode } from '@/lib/types';
@@ -40,7 +41,7 @@ export const Featured: FC<FeaturedProps> = ({
             <Link
               key={app.slug}
               href={`/app/${app.slug}/`}
-              className="card bg-base-200 border-base-300 hover:bg-base-300 group block overflow-hidden border transition-all duration-300 hover:scale-[1.03] hover:shadow-lg">
+              className="card bg-base-200 border-base-300 hover:bg-base-300 group block overflow-hidden border transition-colors duration-300">
               <div className="bg-base-100 aspect-video overflow-hidden">
                 <img
                   src={getHomeScreenshotUrl(app.slug)}
@@ -88,6 +89,8 @@ export const Featured: FC<FeaturedProps> = ({
             </Link>
           ))}
         </div>
+      ) : viewMode === 'hexagon' ? (
+        <HexagonGrid apps={apps} />
       ) : (
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
           {apps.map((app) => (

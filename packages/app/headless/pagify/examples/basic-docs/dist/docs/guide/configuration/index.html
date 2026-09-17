@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Configuration · basic-docs</title>
+    
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="header">
+      <div class="header__bar">
+        
+        <button
+          class="header__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="sidebar"
+          data-nav-toggle
+        >
+          <span class="header__toggle-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Menu</span>
+        </button>
+        
+        <a class="header__title" href="/">basic-docs</a>
+        <div class="header__actions">
+          <label class="header__search" for="search">
+            <span class="visually-hidden">Search</span>
+            <input
+              id="search"
+              type="search"
+              placeholder="Search"
+              autocomplete="off"
+              data-search
+              data-search-index="/assets/search-index.json"
+            />
+          </label>
+          <button class="header__theme" type="button" data-theme-toggle>
+            <span class="visually-hidden">Toggle colour theme</span>
+          </button>
+        </div>
+      </div>
+      <div class="search" data-search-panel hidden>
+        <p class="search__status" role="status" data-search-status></p>
+        <ul class="search__results" data-search-results></ul>
+      </div>
+    </header>
+
+    <div class="layout">
+      
+      <nav class="sidebar" id="sidebar" aria-label="Site">
+        <ul class="nav">
+  <li class="nav__item">
+  <a
+    class="nav__link"
+    href="/docs/"
+    >Basic Docs</a
+  > <ul class="nav nav--nested">
+  <li class="nav__item">
+  <a
+    class="nav__link"
+    href="/docs/getting-started/"
+    >Getting Started</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/docs/guide/"
+    >Guide</a
+  > <ul class="nav nav--nested">
+  <li class="nav__item">
+  <a
+    class="nav__link nav__link--current"
+    href="/docs/guide/configuration/"
+    aria-current="page">Configuration</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/docs/guide/installation/"
+    >Installation</a
+  > 
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+      </nav>
+      
+
+      <main class="main" id="main">
+        <article class="markdown"><h1 id="page-title" class="markdown__title">Configuration</h1>
+          
+          <p>Create <code>pagify.yaml</code> at your content root to customize the site. All fields are optional.</p>
+<pre><code class="language-yaml">title: My Documentation
+language: en
+basePath: /my-repo # For GitHub Pages project sites
+theme: light # light | dark | auto
+footer: '© 2024 Example'
+</code></pre>
+<h2 id="fields">Fields</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>title</code></td>
+<td>Directory name</td>
+<td>Site title in header/meta</td>
+</tr>
+<tr>
+<td><code>language</code></td>
+<td><code>en</code></td>
+<td>HTML lang attribute</td>
+</tr>
+<tr>
+<td><code>basePath</code></td>
+<td><code>/</code></td>
+<td>URL prefix for GitHub Pages project sites</td>
+</tr>
+<tr>
+<td><code>theme</code></td>
+<td><code>auto</code></td>
+<td>Initial color scheme</td>
+</tr>
+<tr>
+<td><code>footer</code></td>
+<td>—</td>
+<td>Footer text (supports Markdown)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example-github-pages">Example: GitHub Pages</h2>
+<p>For a repo at <code>github.com/user/my-docs</code>:</p>
+<pre><code class="language-yaml">title: My Project Docs
+basePath: /my-docs
+</code></pre>
+<p>Then in your repo settings, enable GitHub Pages from the <code>dist/</code> folder.</p>
+<h2 id="no-config-needed">No Config Needed</h2>
+<p>A site with no <code>pagify.yaml</code> builds with sensible defaults:</p>
+<ul>
+<li>Title from directory name</li>
+<li>Auto theme (follows OS)</li>
+<li>No footer</li>
+<li>Root path <code>/</code></li>
+</ul>
+
+          
+        </article>
+        
+<aside class="outline" aria-label="On this page">
+  <h2 class="outline__title">On this page</h2>
+  <ul class="outline__list">
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#fields">Fields</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#example-github-pages">Example: GitHub Pages</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#no-config-needed">No Config Needed</a>
+    </li>
+    
+  </ul>
+</aside>
+
+      </main>
+    </div>
+
+    <footer class="footer">
+      <p>Built with pagify</p>
+    </footer>
+
+    <script src="/assets/script.js" defer></script>
+    <script src="/assets/search.js" defer></script>
+  </body>
+</html>

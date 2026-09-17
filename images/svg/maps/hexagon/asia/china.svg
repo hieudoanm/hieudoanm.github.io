@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357.71 475.11" width="357.71" height="475.11" role="img" aria-labelledby="china-title china-desc">
+  <title id="china-title">China hex map</title>
+  <desc id="china-desc">Hexagon map with 32 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.77; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 13.67 9.76; }
+    .label { fill: #52525b; font: 600 11.06px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="TJ">
+    <title>Tianjin</title>
+    <polygon class="tile" points="319.76,58.57 347.94,74.85 347.94,107.39 319.76,123.66 291.58,107.39 291.58,74.85" aria-label="Tianjin"/>
+    <text class="label" x="319.76" y="91.12">TJ</text>
+  </g>
+  <g class="state" data-state="SD">
+    <title>Shandong</title>
+    <polygon class="tile" points="291.58,107.39 319.76,123.66 319.76,156.20 291.58,172.47 263.40,156.20 263.40,123.66" aria-label="Shandong"/>
+    <text class="label" x="291.58" y="139.93">SD</text>
+  </g>
+  <g class="state" data-state="SH">
+    <title>Shanghai</title>
+    <polygon class="tile" points="291.58,205.01 319.76,221.28 319.76,253.82 291.58,270.09 263.40,253.82 263.40,221.28" aria-label="Shanghai"/>
+    <text class="label" x="291.58" y="237.55">SH</text>
+  </g>
+  <g class="state" data-state="PI">
+    <title>Paracel Islands</title>
+    <polygon class="tile inset" points="291.58,400.26 319.76,416.53 319.76,449.07 291.58,465.34 263.40,449.07 263.40,416.53" aria-label="Paracel Islands"/>
+    <text class="label" x="291.58" y="432.80">PI</text>
+  </g>
+  <g class="state" data-state="LN">
+    <title>Liaoning</title>
+    <polygon class="tile" points="263.40,58.57 291.58,74.85 291.58,107.39 263.40,123.66 235.22,107.39 235.22,74.85" aria-label="Liaoning"/>
+    <text class="label" x="263.40" y="91.12">LN</text>
+  </g>
+  <g class="state" data-state="JS">
+    <title>Jiangsu</title>
+    <polygon class="tile" points="263.40,156.20 291.58,172.47 291.58,205.01 263.40,221.28 235.22,205.01 235.22,172.47" aria-label="Jiangsu"/>
+    <text class="label" x="263.40" y="188.74">JS</text>
+  </g>
+  <g class="state" data-state="ZJ">
+    <title>Zhejiang</title>
+    <polygon class="tile" points="263.40,253.82 291.58,270.09 291.58,302.64 263.40,318.91 235.22,302.64 235.22,270.09" aria-label="Zhejiang"/>
+    <text class="label" x="263.40" y="286.37">ZJ</text>
+  </g>
+  <g class="state" data-state="JL">
+    <title>Jilin</title>
+    <polygon class="tile" points="235.22,9.76 263.40,26.03 263.40,58.57 235.22,74.85 207.04,58.57 207.04,26.03" aria-label="Jilin"/>
+    <text class="label" x="235.22" y="42.30">JL</text>
+  </g>
+  <g class="state" data-state="HE">
+    <title>Hebei</title>
+    <polygon class="tile" points="235.22,107.39 263.40,123.66 263.40,156.20 235.22,172.47 207.04,156.20 207.04,123.66" aria-label="Hebei"/>
+    <text class="label" x="235.22" y="139.93">HE</text>
+  </g>
+  <g class="state" data-state="AH">
+    <title>Anhui</title>
+    <polygon class="tile" points="235.22,205.01 263.40,221.28 263.40,253.82 235.22,270.09 207.04,253.82 207.04,221.28" aria-label="Anhui"/>
+    <text class="label" x="235.22" y="237.55">AH</text>
+  </g>
+  <g class="state" data-state="FJ">
+    <title>Fujian</title>
+    <polygon class="tile" points="235.22,302.64 263.40,318.91 263.40,351.45 235.22,367.72 207.04,351.45 207.04,318.91" aria-label="Fujian"/>
+    <text class="label" x="235.22" y="335.18">FJ</text>
+  </g>
+  <g class="state" data-state="NM">
+    <title>Inner Mongol</title>
+    <polygon class="tile" points="207.04,58.57 235.22,74.85 235.22,107.39 207.04,123.66 178.85,107.39 178.85,74.85" aria-label="Inner Mongol"/>
+    <text class="label" x="207.04" y="91.12">NM</text>
+  </g>
+  <g class="state" data-state="HA">
+    <title>Henan</title>
+    <polygon class="tile" points="207.04,156.20 235.22,172.47 235.22,205.01 207.04,221.28 178.85,205.01 178.85,172.47" aria-label="Henan"/>
+    <text class="label" x="207.04" y="188.74">HA</text>
+  </g>
+  <g class="state" data-state="JX">
+    <title>Jiangxi</title>
+    <polygon class="tile" points="207.04,253.82 235.22,270.09 235.22,302.64 207.04,318.91 178.85,302.64 178.85,270.09" aria-label="Jiangxi"/>
+    <text class="label" x="207.04" y="286.37">JX</text>
+  </g>
+  <g class="state" data-state="HL">
+    <title>Heilongjiang</title>
+    <polygon class="tile" points="178.85,9.76 207.04,26.03 207.04,58.57 178.85,74.85 150.67,58.57 150.67,26.03" aria-label="Heilongjiang"/>
+    <text class="label" x="178.85" y="42.30">HL</text>
+  </g>
+  <g class="state" data-state="SX">
+    <title>Shanxi</title>
+    <polygon class="tile" points="178.85,107.39 207.04,123.66 207.04,156.20 178.85,172.47 150.67,156.20 150.67,123.66" aria-label="Shanxi"/>
+    <text class="label" x="178.85" y="139.93">SX</text>
+  </g>
+  <g class="state" data-state="HB">
+    <title>Hubei</title>
+    <polygon class="tile" points="178.85,205.01 207.04,221.28 207.04,253.82 178.85,270.09 150.67,253.82 150.67,221.28" aria-label="Hubei"/>
+    <text class="label" x="178.85" y="237.55">HB</text>
+  </g>
+  <g class="state" data-state="GD">
+    <title>Guangdong</title>
+    <polygon class="tile" points="178.85,302.64 207.04,318.91 207.04,351.45 178.85,367.72 150.67,351.45 150.67,318.91" aria-label="Guangdong"/>
+    <text class="label" x="178.85" y="335.18">GD</text>
+  </g>
+  <g class="state" data-state="HI">
+    <title>Hainan</title>
+    <polygon class="tile inset" points="178.85,400.26 207.04,416.53 207.04,449.07 178.85,465.34 150.67,449.07 150.67,416.53" aria-label="Hainan"/>
+    <text class="label" x="178.85" y="432.80">HI</text>
+  </g>
+  <g class="state" data-state="BJ">
+    <title>Beijing</title>
+    <polygon class="tile" points="150.67,58.57 178.85,74.85 178.85,107.39 150.67,123.66 122.49,107.39 122.49,74.85" aria-label="Beijing"/>
+    <text class="label" x="150.67" y="91.12">BJ</text>
+  </g>
+  <g class="state" data-state="SN">
+    <title>Shaanxi</title>
+    <polygon class="tile" points="150.67,156.20 178.85,172.47 178.85,205.01 150.67,221.28 122.49,205.01 122.49,172.47" aria-label="Shaanxi"/>
+    <text class="label" x="150.67" y="188.74">SN</text>
+  </g>
+  <g class="state" data-state="HN">
+    <title>Hunan</title>
+    <polygon class="tile" points="150.67,253.82 178.85,270.09 178.85,302.64 150.67,318.91 122.49,302.64 122.49,270.09" aria-label="Hunan"/>
+    <text class="label" x="150.67" y="286.37">HN</text>
+  </g>
+  <g class="state" data-state="NX">
+    <title>Ningxia</title>
+    <polygon class="tile" points="122.49,107.39 150.67,123.66 150.67,156.20 122.49,172.47 94.31,156.20 94.31,123.66" aria-label="Ningxia"/>
+    <text class="label" x="122.49" y="139.93">NX</text>
+  </g>
+  <g class="state" data-state="CQ">
+    <title>Chongqing</title>
+    <polygon class="tile" points="122.49,205.01 150.67,221.28 150.67,253.82 122.49,270.09 94.31,253.82 94.31,221.28" aria-label="Chongqing"/>
+    <text class="label" x="122.49" y="237.55">CQ</text>
+  </g>
+  <g class="state" data-state="GX">
+    <title>Guangxi</title>
+    <polygon class="tile" points="122.49,302.64 150.67,318.91 150.67,351.45 122.49,367.72 94.31,351.45 94.31,318.91" aria-label="Guangxi"/>
+    <text class="label" x="122.49" y="335.18">GX</text>
+  </g>
+  <g class="state" data-state="GS">
+    <title>Gansu</title>
+    <polygon class="tile" points="94.31,156.20 122.49,172.47 122.49,205.01 94.31,221.28 66.13,205.01 66.13,172.47" aria-label="Gansu"/>
+    <text class="label" x="94.31" y="188.74">GS</text>
+  </g>
+  <g class="state" data-state="GZ">
+    <title>Guizhou</title>
+    <polygon class="tile" points="94.31,253.82 122.49,270.09 122.49,302.64 94.31,318.91 66.13,302.64 66.13,270.09" aria-label="Guizhou"/>
+    <text class="label" x="94.31" y="286.37">GZ</text>
+  </g>
+  <g class="state" data-state="XJ">
+    <title>Xinjiang</title>
+    <polygon class="tile" points="66.13,107.39 94.31,123.66 94.31,156.20 66.13,172.47 37.94,156.20 37.94,123.66" aria-label="Xinjiang"/>
+    <text class="label" x="66.13" y="139.93">XJ</text>
+  </g>
+  <g class="state" data-state="SC">
+    <title>Sichuan</title>
+    <polygon class="tile" points="66.13,205.01 94.31,221.28 94.31,253.82 66.13,270.09 37.94,253.82 37.94,221.28" aria-label="Sichuan"/>
+    <text class="label" x="66.13" y="237.55">SC</text>
+  </g>
+  <g class="state" data-state="YN">
+    <title>Yunnan</title>
+    <polygon class="tile" points="66.13,302.64 94.31,318.91 94.31,351.45 66.13,367.72 37.94,351.45 37.94,318.91" aria-label="Yunnan"/>
+    <text class="label" x="66.13" y="335.18">YN</text>
+  </g>
+  <g class="state" data-state="QH">
+    <title>Qinghai</title>
+    <polygon class="tile" points="37.94,156.20 66.13,172.47 66.13,205.01 37.94,221.28 9.76,205.01 9.76,172.47" aria-label="Qinghai"/>
+    <text class="label" x="37.94" y="188.74">QH</text>
+  </g>
+  <g class="state" data-state="XZ">
+    <title>Xizang</title>
+    <polygon class="tile" points="37.94,253.82 66.13,270.09 66.13,302.64 37.94,318.91 9.76,302.64 9.76,270.09" aria-label="Xizang"/>
+    <text class="label" x="37.94" y="286.37">XZ</text>
+  </g>
+</svg>

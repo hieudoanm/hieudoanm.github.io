@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Workspace page</title>
+    <link rel="stylesheet" href="../references/tokens.css" />
+    <style>
+      body { margin: 0; font: 1rem/1.5 var(--app-font); }
+      .shell { min-height: 100vh; display: grid; grid-template-columns: minmax(12rem, var(--app-sidebar-width)) 1fr; background: var(--app-bg); color: var(--app-ink); }
+      aside { padding: 1rem; background: var(--app-sidebar); border-right: 1px solid var(--app-border); }
+      main { min-width: 0; }
+      header { min-height: var(--app-topbar-height); padding: .75rem 1.5rem; border-bottom: 1px solid var(--app-border); }
+      .content { max-width: var(--app-content-width); margin-inline: auto; padding: clamp(1rem, 4vw, 3rem); }
+      nav a, summary { display: block; padding: .35rem; color: inherit; text-decoration: none; }
+      a:hover, summary:hover { background: var(--app-hover); }
+      table { width: 100%; border-collapse: collapse; }
+      th, td { padding: .6rem; border-bottom: 1px solid var(--app-border); text-align: start; }
+      :focus-visible { outline: 2px solid var(--app-link); outline-offset: 2px; }
+      @media (max-width: 700px) { .shell { grid-template-columns: 1fr; } aside { border-right: 0; border-bottom: 1px solid var(--app-border); } }
+    </style>
+  </head>
+  <body>
+    <div class="shell" data-app>
+      <aside>
+        <strong>Workspace</strong>
+        <nav aria-label="Workspace pages">
+          <a href="#home">🏠 Home</a><a href="#inbox">Inbox</a>
+          <details open><summary>⭐ Favorites</summary><a href="#project">📁 Project</a></details>
+          <details><summary>🔒 Private</summary><a href="#notes">📝 Notes</a></details>
+        </nav>
+      </aside>
+      <main id="home">
+        <header><nav aria-label="Breadcrumb"><a href="#home">Workspace</a> / Project</nav></header>
+        <article class="content">
+          <p><small>Project · Updated today</small></p>
+          <h1>Project home</h1>
+          <p>Write a short introduction. Keep the document column readable and let content define the page.</p>
+          <h2>Next steps</h2>
+          <ul><li><label><input type="checkbox" /> Confirm scope</label></li><li><label><input type="checkbox" /> Assign an owner</label></li></ul>
+          <h2>Tasks</h2>
+          <table>
+            <caption>Open work</caption>
+            <thead><tr><th scope="col">Task</th><th scope="col">Status</th><th scope="col">Owner</th></tr></thead>
+            <tbody><tr><th scope="row">Draft brief</th><td>In progress</td><td>Alex</td></tr></tbody>
+          </table>
+          <details><summary>Show notes</summary><p>Use native disclosure until a richer accessible interaction is needed.</p></details>
+        </article>
+      </main>
+    </div>
+  </body>
+</html>

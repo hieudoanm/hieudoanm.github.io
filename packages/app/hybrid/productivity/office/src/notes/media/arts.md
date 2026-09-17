@@ -1,5 +1,0 @@
-# Arts
-
-- Drawing
-- Painting
-- Photography

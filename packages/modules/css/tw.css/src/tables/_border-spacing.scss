@@ -40,32 +40,38 @@ $border-spacing-steps: (
 .border-spacing-0 {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
+
   border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
 }
 
 .border-spacing-x-0 {
   --tw-border-spacing-x: 0;
+
   border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
 }
 
 .border-spacing-y-0 {
   --tw-border-spacing-y: 0;
+
   border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
 }
 
 .border-spacing-px {
   --tw-border-spacing-x: 1px;
   --tw-border-spacing-y: 1px;
+
   border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
 }
 
 .border-spacing-x-px {
   --tw-border-spacing-x: 1px;
+
   border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
 }
 
 .border-spacing-y-px {
   --tw-border-spacing-y: 1px;
+
   border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
 }
 
@@ -73,16 +79,19 @@ $border-spacing-steps: (
   .border-spacing-#{$class} {
     --tw-border-spacing-x: #{$step * $border-spacing-unit};
     --tw-border-spacing-y: #{$step * $border-spacing-unit};
+
     border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
   }
 
   .border-spacing-x-#{$class} {
     --tw-border-spacing-x: #{$step * $border-spacing-unit};
+
     border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
   }
 
   .border-spacing-y-#{$class} {
     --tw-border-spacing-y: #{$step * $border-spacing-unit};
+
     border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
   }
 }

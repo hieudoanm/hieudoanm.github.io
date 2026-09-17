@@ -6,6 +6,7 @@ import org.junit.jupiter.api.AfterAll
 import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.TestInstance
 import java.io.File
+import kotlin.io.path.createTempDirectory
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNull
@@ -18,7 +19,7 @@ class WebSocketHubTest {
 
     @BeforeAll
     fun setup() {
-        tempDir = createTempDir("ws-test-")
+        tempDir = createTempDirectory("ws-test-").toFile()
         val config = AppConfig(
             port = 0, jwtSecret = "test-secret-32-characters-long!!!!",
             backboneData = tempDir.absolutePath, secretsKeyHex = null,

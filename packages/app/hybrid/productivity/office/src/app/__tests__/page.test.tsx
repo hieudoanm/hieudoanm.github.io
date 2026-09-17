@@ -34,4 +34,17 @@ describe('HomePage', () => {
     render(<HomePage />);
     expect(screen.getByTestId('tool-card-md')).toHaveAttribute('href', '/md');
   });
+
+  it('renders the keynotes tool card', () => {
+    render(<HomePage />);
+    expect(screen.getByTestId('tool-card-keynotes')).toBeInTheDocument();
+  });
+
+  it('links the keynotes card to the keynotes route', () => {
+    render(<HomePage />);
+    expect(screen.getByTestId('tool-card-keynotes')).toHaveAttribute(
+      'href',
+      '/keynotes'
+    );
+  });
 });

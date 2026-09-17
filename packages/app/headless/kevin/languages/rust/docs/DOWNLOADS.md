@@ -102,7 +102,9 @@ the C, C++ and Go implementations in this package, kept behaviour-identical.
 
 ### 🖥️ Optional GUI
 
-- slint Material window behind the `gui` cargo feature (`--features gui`)
+- slint Material window behind the `gui` cargo feature (`--features gui`) —
+  Material by default (follows the OS theme); set `SLINT_STYLE` to
+  `material-light` or `material-dark` to pin a variant
 
 ### ⌨️ Built-in TUI
 

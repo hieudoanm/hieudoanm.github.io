@@ -7,6 +7,30 @@ import { FC, ReactNode } from 'react';
 export const metadata: Metadata = {
   title: 'API Client',
   description: 'A minimal API client built with Next.js',
+  metadataBase: new URL('https://hieudoanm.github.io/open/api/'),
+  openGraph: {
+    type: 'website',
+    siteName: 'API Client',
+    url: 'https://hieudoanm.github.io/open/api/',
+    title: 'Debug any API in the browser',
+    description:
+      'REST, GraphQL, gRPC, WebSocket and MQTT in one client, with collections and saved history.',
+    images: [
+      {
+        url: '/og/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'API Client — Debug any API in the browser',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Debug any API in the browser',
+    description:
+      'REST, GraphQL, gRPC, WebSocket and MQTT in one client, with collections and saved history.',
+    images: ['/og/og.png'],
+  },
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,

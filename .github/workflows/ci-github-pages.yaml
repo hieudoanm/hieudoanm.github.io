@@ -8,6 +8,7 @@ on:
       - 'packages/app/hybrid/**/*'
       - 'packages/app/headless/*/public/**'
       - 'packages/app/native/*/public/**'
+      - 'packages/data/uob/research-project/projects/public/**'
       - 'pnpm-lock.yaml'
       - 'pnpm-workspace.yaml'
       - 'turbo.json'
@@ -33,13 +34,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7.0.1
       - name: Install pnpm
-        uses: pnpm/action-setup@v6.0.10
+        uses: pnpm/action-setup@v6.1.0
         with:
-          version: '11.24.0'
+          version: '12.11.2'
       - name: Install Node.js
-        uses: actions/setup-node@v7.0.0
+        uses: actions/setup-node@v7.1.0
         with:
           node-version-file: .nvmrc
+      - name: Install Go
+        uses: actions/setup-go@v7.0.0
+        with:
+          go-version-file: 'packages/app/headless/pagify/languages/go/go.mod'
+          cache-dependency-path: 'packages/app/headless/pagify/languages/go/go.sum'
       - name: Cache pnpm
         uses: actions/cache@v6.1.0
         with:
@@ -49,9 +55,9 @@ jobs:
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
       - name: Build Site
-        run: ./scripts/build-docs.sh --all
+        run: ./scripts/build-docs.sh
       - name: Upload Pages Artifact
-        uses: actions/upload-pages-artifact@v3.0.1
+        uses: actions/upload-pages-artifact@v5.0.0
         with:
           path: docs/
           retention-days: 1
@@ -68,4 +74,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4.0.5
+        uses: actions/deploy-pages@v5.0.1

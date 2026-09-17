@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 358.71 305.52" width="358.71" height="305.52" role="img" aria-labelledby="iran-title iran-desc">
+  <title id="iran-title">Iran hex map</title>
+  <desc id="iran-desc">Hexagon map with 31 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.57; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 12.70 9.07; }
+    .label { fill: #52525b; font: 600 10.28px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="KV">
+    <title>Razavi Khorasan</title>
+    <polygon class="tile" points="323.44,99.82 349.64,114.95 349.64,145.20 323.44,160.32 297.24,145.20 297.24,114.95" aria-label="Razavi Khorasan"/>
+    <text class="label" x="323.44" y="130.07">KV</text>
+  </g>
+  <g class="state" data-state="KJ">
+    <title>South Khorasan</title>
+    <polygon class="tile" points="323.44,190.57 349.64,205.70 349.64,235.95 323.44,251.07 297.24,235.95 297.24,205.70" aria-label="South Khorasan"/>
+    <text class="label" x="323.44" y="220.82">KJ</text>
+  </g>
+  <g class="state" data-state="KS">
+    <title>North Khorasan</title>
+    <polygon class="tile" points="297.24,54.45 323.44,69.57 323.44,99.82 297.24,114.95 271.05,99.82 271.05,69.57" aria-label="North Khorasan"/>
+    <text class="label" x="297.24" y="84.70">KS</text>
+  </g>
+  <g class="state" data-state="YA">
+    <title>Yazd</title>
+    <polygon class="tile" points="297.24,145.20 323.44,160.32 323.44,190.57 297.24,205.70 271.05,190.57 271.05,160.32" aria-label="Yazd"/>
+    <text class="label" x="297.24" y="175.45">YA</text>
+  </g>
+  <g class="state" data-state="SB">
+    <title>Sistan and Baluchestan</title>
+    <polygon class="tile" points="297.24,235.95 323.44,251.07 323.44,281.32 297.24,296.45 271.05,281.32 271.05,251.07" aria-label="Sistan and Baluchestan"/>
+    <text class="label" x="297.24" y="266.20">SB</text>
+  </g>
+  <g class="state" data-state="GO">
+    <title>Golestan</title>
+    <polygon class="tile" points="271.05,9.07 297.24,24.20 297.24,54.45 271.05,69.57 244.85,54.45 244.85,24.20" aria-label="Golestan"/>
+    <text class="label" x="271.05" y="39.32">GO</text>
+  </g>
+  <g class="state" data-state="SM">
+    <title>Semnan</title>
+    <polygon class="tile" points="271.05,99.82 297.24,114.95 297.24,145.20 271.05,160.32 244.85,145.20 244.85,114.95" aria-label="Semnan"/>
+    <text class="label" x="271.05" y="130.07">SM</text>
+  </g>
+  <g class="state" data-state="KE">
+    <title>Kerman</title>
+    <polygon class="tile" points="271.05,190.57 297.24,205.70 297.24,235.95 271.05,251.07 244.85,235.95 244.85,205.70" aria-label="Kerman"/>
+    <text class="label" x="271.05" y="220.82">KE</text>
+  </g>
+  <g class="state" data-state="MN">
+    <title>Mazandaran</title>
+    <polygon class="tile" points="244.85,54.45 271.05,69.57 271.05,99.82 244.85,114.95 218.65,99.82 218.65,69.57" aria-label="Mazandaran"/>
+    <text class="label" x="244.85" y="84.70">MN</text>
+  </g>
+  <g class="state" data-state="QM">
+    <title>Qom</title>
+    <polygon class="tile" points="244.85,145.20 271.05,160.32 271.05,190.57 244.85,205.70 218.65,190.57 218.65,160.32" aria-label="Qom"/>
+    <text class="label" x="244.85" y="175.45">QM</text>
+  </g>
+  <g class="state" data-state="HG">
+    <title>Hormozgan</title>
+    <polygon class="tile" points="244.85,235.95 271.05,251.07 271.05,281.32 244.85,296.45 218.65,281.32 218.65,251.07" aria-label="Hormozgan"/>
+    <text class="label" x="244.85" y="266.20">HG</text>
+  </g>
+  <g class="state" data-state="QZ">
+    <title>Qazvin</title>
+    <polygon class="tile" points="218.65,9.07 244.85,24.20 244.85,54.45 218.65,69.57 192.46,54.45 192.46,24.20" aria-label="Qazvin"/>
+    <text class="label" x="218.65" y="39.32">QZ</text>
+  </g>
+  <g class="state" data-state="TH">
+    <title>Tehran</title>
+    <polygon class="tile" points="218.65,99.82 244.85,114.95 244.85,145.20 218.65,160.32 192.46,145.20 192.46,114.95" aria-label="Tehran"/>
+    <text class="label" x="218.65" y="130.07">TH</text>
+  </g>
+  <g class="state" data-state="CM">
+    <title>Chahar Mahall and Bakhtiari</title>
+    <polygon class="tile" points="218.65,190.57 244.85,205.70 244.85,235.95 218.65,251.07 192.46,235.95 192.46,205.70" aria-label="Chahar Mahall and Bakhtiari"/>
+    <text class="label" x="218.65" y="220.82">CM</text>
+  </g>
+  <g class="state" data-state="ALB">
+    <title>Alborz</title>
+    <polygon class="tile" points="192.46,54.45 218.65,69.57 218.65,99.82 192.46,114.95 166.26,99.82 166.26,69.57" aria-label="Alborz"/>
+    <text class="label" x="192.46" y="84.70">ALB</text>
+  </g>
+  <g class="state" data-state="ES">
+    <title>Esfahan</title>
+    <polygon class="tile" points="192.46,145.20 218.65,160.32 218.65,190.57 192.46,205.70 166.26,190.57 166.26,160.32" aria-label="Esfahan"/>
+    <text class="label" x="192.46" y="175.45">ES</text>
+  </g>
+  <g class="state" data-state="FA">
+    <title>Fars</title>
+    <polygon class="tile" points="192.46,235.95 218.65,251.07 218.65,281.32 192.46,296.45 166.26,281.32 166.26,251.07" aria-label="Fars"/>
+    <text class="label" x="192.46" y="266.20">FA</text>
+  </g>
+  <g class="state" data-state="GI">
+    <title>Gilan</title>
+    <polygon class="tile" points="166.26,9.07 192.46,24.20 192.46,54.45 166.26,69.57 140.06,54.45 140.06,24.20" aria-label="Gilan"/>
+    <text class="label" x="166.26" y="39.32">GI</text>
+  </g>
+  <g class="state" data-state="MK">
+    <title>Markazi</title>
+    <polygon class="tile" points="166.26,99.82 192.46,114.95 192.46,145.20 166.26,160.32 140.06,145.20 140.06,114.95" aria-label="Markazi"/>
+    <text class="label" x="166.26" y="130.07">MK</text>
+  </g>
+  <g class="state" data-state="KB">
+    <title>Kohgiluyeh and Buyer Ahmad</title>
+    <polygon class="tile" points="166.26,190.57 192.46,205.70 192.46,235.95 166.26,251.07 140.06,235.95 140.06,205.70" aria-label="Kohgiluyeh and Buyer Ahmad"/>
+    <text class="label" x="166.26" y="220.82">KB</text>
+  </g>
+  <g class="state" data-state="ZA">
+    <title>Zanjan</title>
+    <polygon class="tile" points="140.06,54.45 166.26,69.57 166.26,99.82 140.06,114.95 113.86,99.82 113.86,69.57" aria-label="Zanjan"/>
+    <text class="label" x="140.06" y="84.70">ZA</text>
+  </g>
+  <g class="state" data-state="LO">
+    <title>Lorestan</title>
+    <polygon class="tile" points="140.06,145.20 166.26,160.32 166.26,190.57 140.06,205.70 113.86,190.57 113.86,160.32" aria-label="Lorestan"/>
+    <text class="label" x="140.06" y="175.45">LO</text>
+  </g>
+  <g class="state" data-state="BS">
+    <title>Bushehr</title>
+    <polygon class="tile" points="140.06,235.95 166.26,251.07 166.26,281.32 140.06,296.45 113.86,281.32 113.86,251.07" aria-label="Bushehr"/>
+    <text class="label" x="140.06" y="266.20">BS</text>
+  </g>
+  <g class="state" data-state="AR">
+    <title>Ardebil</title>
+    <polygon class="tile" points="113.86,9.07 140.06,24.20 140.06,54.45 113.86,69.57 87.67,54.45 87.67,24.20" aria-label="Ardebil"/>
+    <text class="label" x="113.86" y="39.32">AR</text>
+  </g>
+  <g class="state" data-state="HD">
+    <title>Hamadan</title>
+    <polygon class="tile" points="113.86,99.82 140.06,114.95 140.06,145.20 113.86,160.32 87.67,145.20 87.67,114.95" aria-label="Hamadan"/>
+    <text class="label" x="113.86" y="130.07">HD</text>
+  </g>
+  <g class="state" data-state="KZ">
+    <title>Khuzestan</title>
+    <polygon class="tile" points="113.86,190.57 140.06,205.70 140.06,235.95 113.86,251.07 87.67,235.95 87.67,205.70" aria-label="Khuzestan"/>
+    <text class="label" x="113.86" y="220.82">KZ</text>
+  </g>
+  <g class="state" data-state="KD">
+    <title>Kordestan</title>
+    <polygon class="tile" points="87.67,54.45 113.86,69.57 113.86,99.82 87.67,114.95 61.47,99.82 61.47,69.57" aria-label="Kordestan"/>
+    <text class="label" x="87.67" y="84.70">KD</text>
+  </g>
+  <g class="state" data-state="IL">
+    <title>Ilam</title>
+    <polygon class="tile" points="87.67,145.20 113.86,160.32 113.86,190.57 87.67,205.70 61.47,190.57 61.47,160.32" aria-label="Ilam"/>
+    <text class="label" x="87.67" y="175.45">IL</text>
+  </g>
+  <g class="state" data-state="EA">
+    <title>East Azarbaijan</title>
+    <polygon class="tile" points="61.47,9.07 87.67,24.20 87.67,54.45 61.47,69.57 35.27,54.45 35.27,24.20" aria-label="East Azarbaijan"/>
+    <text class="label" x="61.47" y="39.32">EA</text>
+  </g>
+  <g class="state" data-state="BK">
+    <title>Kermanshah</title>
+    <polygon class="tile" points="61.47,99.82 87.67,114.95 87.67,145.20 61.47,160.32 35.27,145.20 35.27,114.95" aria-label="Kermanshah"/>
+    <text class="label" x="61.47" y="130.07">BK</text>
+  </g>
+  <g class="state" data-state="WA">
+    <title>West Azarbaijan</title>
+    <polygon class="tile" points="35.27,54.45 61.47,69.57 61.47,99.82 35.27,114.95 9.07,99.82 9.07,69.57" aria-label="West Azarbaijan"/>
+    <text class="label" x="35.27" y="84.70">WA</text>
+  </g>
+</svg>

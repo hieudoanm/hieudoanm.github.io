@@ -1,11 +1,12 @@
 'use client';
 
-import { type FC } from 'react';
-import Link from 'next/link';
-import { getIcon } from '@/lib/icons';
+import { HexagonGrid } from '@/components/molecules/HexagonGrid';
 import type { AppData } from '@/lib/downloads';
+import { getIcon } from '@/lib/icons';
 import { getHomeScreenshotUrl } from '@/lib/screenshots';
 import type { ViewMode } from '@/lib/types';
+import Link from 'next/link';
+import { type FC } from 'react';
 
 interface RecentlyViewedProps {
   apps: AppData[];
@@ -33,7 +34,7 @@ export const RecentlyViewed: FC<RecentlyViewedProps> = ({
             <Link
               key={app.slug}
               href={`/app/${app.slug}/`}
-              className="card bg-base-200 border-base-300 hover:bg-base-300 group block overflow-hidden border transition-all duration-300 hover:scale-[1.03] hover:shadow-lg">
+              className="card bg-base-200 border-base-300 hover:bg-base-300 group block overflow-hidden border transition-colors duration-300">
               <div className="bg-base-100 aspect-video overflow-hidden">
                 <img
                   src={getHomeScreenshotUrl(app.slug)}
@@ -76,6 +77,8 @@ export const RecentlyViewed: FC<RecentlyViewedProps> = ({
             </Link>
           ))}
         </div>
+      ) : viewMode === 'hexagon' ? (
+        <HexagonGrid apps={apps} />
       ) : (
         <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
           {apps.map((app) => {

@@ -10,7 +10,7 @@ export const PdfToImagesTool: FC = () => {
     setLoading(true);
     try {
       const { pdfjs } = await import('react-pdf');
-      const loadingTask = pdfjs.getDocument(await file.arrayBuffer());
+      const loadingTask = pdfjs.getDocument({ data: await file.arrayBuffer() });
       const pdf = await loadingTask.promise;
       for (let i = 1; i <= pdf.numPages; i++) {
         const page = await pdf.getPage(i);

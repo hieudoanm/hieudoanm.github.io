@@ -1,0 +1,351 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 364.20 339.02" width="364.20" height="339.02" role="img" aria-labelledby="malta-title malta-desc">
+  <title id="malta-title">Malta hex map</title>
+  <desc id="malta-desc">Hexagon map with 68 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 1.51; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 7.45 5.32; }
+    .label { fill: #52525b; font: 600 6.03px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="GAR">
+    <title>Għarb</title>
+    <polygon class="tile inset" points="343.51,138.45 358.88,147.32 358.88,165.07 343.51,173.95 328.13,165.07 328.13,147.32" aria-label="Għarb"/>
+    <text class="label" x="343.51" y="156.20">GAR</text>
+  </g>
+  <g class="state" data-state="MARB">
+    <title>Marsaskala</title>
+    <polygon class="tile" points="312.76,191.70 328.13,200.57 328.13,218.32 312.76,227.20 297.39,218.32 297.39,200.57" aria-label="Marsaskala"/>
+    <text class="label" x="312.76" y="209.45">MARB</text>
+  </g>
+  <g class="state" data-state="GAS">
+    <title>Għasri</title>
+    <polygon class="tile inset" points="312.76,85.20 328.13,94.07 328.13,111.82 312.76,120.70 297.39,111.82 297.39,94.07" aria-label="Għasri"/>
+    <text class="label" x="312.76" y="102.95">GAS</text>
+  </g>
+  <g class="state" data-state="XGA">
+    <title>Xgħajra</title>
+    <polygon class="tile" points="297.39,165.07 312.76,173.95 312.76,191.70 297.39,200.57 282.02,191.70 282.02,173.95" aria-label="Xgħajra"/>
+    <text class="label" x="297.39" y="182.82">XGA</text>
+  </g>
+  <g class="state" data-state="EJT">
+    <title>Żejtun</title>
+    <polygon class="tile" points="297.39,218.32 312.76,227.20 312.76,244.95 297.39,253.82 282.02,244.95 282.02,227.20" aria-label="Żejtun"/>
+    <text class="label" x="297.39" y="236.07">EJT</text>
+  </g>
+  <g class="state" data-state="KAL">
+    <title>Kalkara</title>
+    <polygon class="tile" points="282.02,138.45 297.39,147.32 297.39,165.07 282.02,173.95 266.65,165.07 266.65,147.32" aria-label="Kalkara"/>
+    <text class="label" x="282.02" y="156.20">KAL</text>
+  </g>
+  <g class="state" data-state="ABB">
+    <title>Żabbar</title>
+    <polygon class="tile" points="282.02,191.70 297.39,200.57 297.39,218.32 282.02,227.20 266.65,218.32 266.65,200.57" aria-label="Żabbar"/>
+    <text class="label" x="282.02" y="209.45">ABB</text>
+  </g>
+  <g class="state" data-state="MARA">
+    <title>Marsaxlokk</title>
+    <polygon class="tile" points="282.02,244.95 297.39,253.82 297.39,271.57 282.02,280.45 266.65,271.57 266.65,253.82" aria-label="Marsaxlokk"/>
+    <text class="label" x="282.02" y="262.70">MARA</text>
+  </g>
+  <g class="state" data-state="BIRB">
+    <title>Birgu</title>
+    <polygon class="tile" points="266.65,111.82 282.02,120.70 282.02,138.45 266.65,147.32 251.28,138.45 251.28,120.70" aria-label="Birgu"/>
+    <text class="label" x="266.65" y="129.57">BIRB</text>
+  </g>
+  <g class="state" data-state="COS">
+    <title>Cospicua</title>
+    <polygon class="tile" points="266.65,165.07 282.02,173.95 282.02,191.70 266.65,200.57 251.28,191.70 251.28,173.95" aria-label="Cospicua"/>
+    <text class="label" x="266.65" y="182.82">COS</text>
+  </g>
+  <g class="state" data-state="TAR">
+    <title>Tarxien</title>
+    <polygon class="tile" points="266.65,218.32 282.02,227.20 282.02,244.95 266.65,253.82 251.28,244.95 251.28,227.20" aria-label="Tarxien"/>
+    <text class="label" x="266.65" y="236.07">TAR</text>
+  </g>
+  <g class="state" data-state="VIC">
+    <title>Victoria</title>
+    <polygon class="tile inset" points="266.65,58.57 282.02,67.45 282.02,85.20 266.65,94.07 251.28,85.20 251.28,67.45" aria-label="Victoria"/>
+    <text class="label" x="266.65" y="76.32">VIC</text>
+  </g>
+  <g class="state" data-state="ISL">
+    <title>Isla</title>
+    <polygon class="tile" points="251.28,138.45 266.65,147.32 266.65,165.07 251.28,173.95 235.90,165.07 235.90,147.32" aria-label="Isla"/>
+    <text class="label" x="251.28" y="156.20">ISL</text>
+  </g>
+  <g class="state" data-state="FGU">
+    <title>Fgura</title>
+    <polygon class="tile" points="251.28,191.70 266.65,200.57 266.65,218.32 251.28,227.20 235.90,218.32 235.90,200.57" aria-label="Fgura"/>
+    <text class="label" x="251.28" y="209.45">FGU</text>
+  </g>
+  <g class="state" data-state="BIR">
+    <title>Birżebbuġa</title>
+    <polygon class="tile" points="251.28,244.95 266.65,253.82 266.65,271.57 251.28,280.45 235.90,271.57 235.90,253.82" aria-label="Birżebbuġa"/>
+    <text class="label" x="251.28" y="262.70">BIR</text>
+  </g>
+  <g class="state" data-state="VAL">
+    <title>Valletta</title>
+    <polygon class="tile" points="235.90,111.82 251.28,120.70 251.28,138.45 235.90,147.32 220.53,138.45 220.53,120.70" aria-label="Valletta"/>
+    <text class="label" x="235.90" y="129.57">VAL</text>
+  </g>
+  <g class="state" data-state="PAO">
+    <title>Paola</title>
+    <polygon class="tile" points="235.90,165.07 251.28,173.95 251.28,191.70 235.90,200.57 220.53,191.70 220.53,173.95" aria-label="Paola"/>
+    <text class="label" x="235.90" y="182.82">PAO</text>
+  </g>
+  <g class="state" data-state="GAX">
+    <title>Għaxaq</title>
+    <polygon class="tile" points="235.90,218.32 251.28,227.20 251.28,244.95 235.90,253.82 220.53,244.95 220.53,227.20" aria-label="Għaxaq"/>
+    <text class="label" x="235.90" y="236.07">GAX</text>
+  </g>
+  <g class="state" data-state="EBB">
+    <title>Żebbuġ</title>
+    <polygon class="tile inset" points="235.90,5.32 251.28,14.20 251.28,31.95 235.90,40.82 220.53,31.95 220.53,14.20" aria-label="Żebbuġ"/>
+    <text class="label" x="235.90" y="23.07">EBB</text>
+  </g>
+  <g class="state" data-state="SLI">
+    <title>Sliema</title>
+    <polygon class="tile" points="220.53,85.20 235.90,94.07 235.90,111.82 220.53,120.70 205.16,111.82 205.16,94.07" aria-label="Sliema"/>
+    <text class="label" x="220.53" y="102.95">SLI</text>
+  </g>
+  <g class="state" data-state="FLO">
+    <title>Floriana</title>
+    <polygon class="tile" points="220.53,138.45 235.90,147.32 235.90,165.07 220.53,173.95 205.16,165.07 205.16,147.32" aria-label="Floriana"/>
+    <text class="label" x="220.53" y="156.20">FLO</text>
+  </g>
+  <g class="state" data-state="SLA">
+    <title>Santa Luċija</title>
+    <polygon class="tile" points="220.53,191.70 235.90,200.57 235.90,218.32 220.53,227.20 205.16,218.32 205.16,200.57" aria-label="Santa Luċija"/>
+    <text class="label" x="220.53" y="209.45">SLA</text>
+  </g>
+  <g class="state" data-state="SAF">
+    <title>Safi</title>
+    <polygon class="tile" points="220.53,244.95 235.90,253.82 235.90,271.57 220.53,280.45 205.16,271.57 205.16,253.82" aria-label="Safi"/>
+    <text class="label" x="220.53" y="262.70">SAF</text>
+  </g>
+  <g class="state" data-state="SG">
+    <title>San Giljan</title>
+    <polygon class="tile" points="205.16,58.57 220.53,67.45 220.53,85.20 205.16,94.07 189.79,85.20 189.79,67.45" aria-label="San Giljan"/>
+    <text class="label" x="205.16" y="76.32">SG</text>
+  </g>
+  <g class="state" data-state="TX">
+    <title>Ta' Xbiex</title>
+    <polygon class="tile" points="205.16,111.82 220.53,120.70 220.53,138.45 205.16,147.32 189.79,138.45 189.79,120.70" aria-label="Ta' Xbiex"/>
+    <text class="label" x="205.16" y="129.57">TX</text>
+  </g>
+  <g class="state" data-state="PIE">
+    <title>Pietà</title>
+    <polygon class="tile" points="205.16,165.07 220.53,173.95 220.53,191.70 205.16,200.57 189.79,191.70 189.79,173.95" aria-label="Pietà"/>
+    <text class="label" x="205.16" y="182.82">PIE</text>
+  </g>
+  <g class="state" data-state="GUD">
+    <title>Gudja</title>
+    <polygon class="tile" points="205.16,218.32 220.53,227.20 220.53,244.95 205.16,253.82 189.79,244.95 189.79,227.20" aria-label="Gudja"/>
+    <text class="label" x="205.16" y="236.07">GUD</text>
+  </g>
+  <g class="state" data-state="GIR">
+    <title>Gżira</title>
+    <polygon class="tile" points="189.79,85.20 205.16,94.07 205.16,111.82 189.79,120.70 174.42,111.82 174.42,94.07" aria-label="Gżira"/>
+    <text class="label" x="189.79" y="102.95">GIR</text>
+  </g>
+  <g class="state" data-state="MSI">
+    <title>Msida</title>
+    <polygon class="tile" points="189.79,138.45 205.16,147.32 205.16,165.07 189.79,173.95 174.42,165.07 174.42,147.32" aria-label="Msida"/>
+    <text class="label" x="189.79" y="156.20">MSI</text>
+  </g>
+  <g class="state" data-state="AMR">
+    <title>Ħamrun</title>
+    <polygon class="tile" points="189.79,191.70 205.16,200.57 205.16,218.32 189.79,227.20 174.42,218.32 174.42,200.57" aria-label="Ħamrun"/>
+    <text class="label" x="189.79" y="209.45">AMR</text>
+  </g>
+  <g class="state" data-state="KIR">
+    <title>Kirkop</title>
+    <polygon class="tile" points="189.79,244.95 205.16,253.82 205.16,271.57 189.79,280.45 174.42,271.57 174.42,253.82" aria-label="Kirkop"/>
+    <text class="label" x="189.79" y="262.70">KIR</text>
+  </g>
+  <g class="state" data-state="SL">
+    <title>San Lawrenz</title>
+    <polygon class="tile inset" points="189.79,298.20 205.16,307.07 205.16,324.82 189.79,333.70 174.42,324.82 174.42,307.07" aria-label="San Lawrenz"/>
+    <text class="label" x="189.79" y="315.95">SL</text>
+  </g>
+  <g class="state" data-state="PEM">
+    <title>Pembroke</title>
+    <polygon class="tile" points="174.42,58.57 189.79,67.45 189.79,85.20 174.42,94.07 159.04,85.20 159.04,67.45" aria-label="Pembroke"/>
+    <text class="label" x="174.42" y="76.32">PEM</text>
+  </g>
+  <g class="state" data-state="SĠ">
+    <title>San Ġwann</title>
+    <polygon class="tile" points="174.42,111.82 189.79,120.70 189.79,138.45 174.42,147.32 159.04,138.45 159.04,120.70" aria-label="San Ġwann"/>
+    <text class="label" x="174.42" y="129.57">SĠ</text>
+  </g>
+  <g class="state" data-state="SV">
+    <title>Santa Venera</title>
+    <polygon class="tile" points="174.42,165.07 189.79,173.95 189.79,191.70 174.42,200.57 159.04,191.70 159.04,173.95" aria-label="Santa Venera"/>
+    <text class="label" x="174.42" y="182.82">SV</text>
+  </g>
+  <g class="state" data-state="LUQ">
+    <title>Luqa</title>
+    <polygon class="tile" points="174.42,218.32 189.79,227.20 189.79,244.95 174.42,253.82 159.04,244.95 159.04,227.20" aria-label="Luqa"/>
+    <text class="label" x="174.42" y="236.07">LUQ</text>
+  </g>
+  <g class="state" data-state="XAG">
+    <title>Xagħra</title>
+    <polygon class="tile inset" points="174.42,5.32 189.79,14.20 189.79,31.95 174.42,40.82 159.04,31.95 159.04,14.20" aria-label="Xagħra"/>
+    <text class="label" x="174.42" y="23.07">XAG</text>
+  </g>
+  <g class="state" data-state="GARA">
+    <title>Għargħur</title>
+    <polygon class="tile" points="159.04,85.20 174.42,94.07 174.42,111.82 159.04,120.70 143.67,111.82 143.67,94.07" aria-label="Għargħur"/>
+    <text class="label" x="159.04" y="102.95">GARA</text>
+  </g>
+  <g class="state" data-state="BIRA">
+    <title>Birkirkara</title>
+    <polygon class="tile" points="159.04,138.45 174.42,147.32 174.42,165.07 159.04,173.95 143.67,165.07 143.67,147.32" aria-label="Birkirkara"/>
+    <text class="label" x="159.04" y="156.20">BIRA</text>
+  </g>
+  <g class="state" data-state="MARC">
+    <title>Marsa</title>
+    <polygon class="tile" points="159.04,191.70 174.42,200.57 174.42,218.32 159.04,227.20 143.67,218.32 143.67,200.57" aria-label="Marsa"/>
+    <text class="label" x="159.04" y="209.45">MARC</text>
+  </g>
+  <g class="state" data-state="URR">
+    <title>Żurrieq</title>
+    <polygon class="tile" points="159.04,244.95 174.42,253.82 174.42,271.57 159.04,280.45 143.67,271.57 143.67,253.82" aria-label="Żurrieq"/>
+    <text class="label" x="159.04" y="262.70">URR</text>
+  </g>
+  <g class="state" data-state="SWI">
+    <title>Swieqi</title>
+    <polygon class="tile" points="143.67,58.57 159.04,67.45 159.04,85.20 143.67,94.07 128.30,85.20 128.30,67.45" aria-label="Swieqi"/>
+    <text class="label" x="143.67" y="76.32">SWI</text>
+  </g>
+  <g class="state" data-state="IKL">
+    <title>Iklin</title>
+    <polygon class="tile" points="143.67,111.82 159.04,120.70 159.04,138.45 143.67,147.32 128.30,138.45 128.30,120.70" aria-label="Iklin"/>
+    <text class="label" x="143.67" y="129.57">IKL</text>
+  </g>
+  <g class="state" data-state="QOR">
+    <title>Qormi</title>
+    <polygon class="tile" points="143.67,165.07 159.04,173.95 159.04,191.70 143.67,200.57 128.30,191.70 128.30,173.95" aria-label="Qormi"/>
+    <text class="label" x="143.67" y="182.82">QOR</text>
+  </g>
+  <g class="state" data-state="MQA">
+    <title>Mqabba</title>
+    <polygon class="tile" points="143.67,218.32 159.04,227.20 159.04,244.95 143.67,253.82 128.30,244.95 128.30,227.20" aria-label="Mqabba"/>
+    <text class="label" x="143.67" y="236.07">MQA</text>
+  </g>
+  <g class="state" data-state="NAX">
+    <title>Naxxar</title>
+    <polygon class="tile" points="128.30,85.20 143.67,94.07 143.67,111.82 128.30,120.70 112.93,111.82 112.93,94.07" aria-label="Naxxar"/>
+    <text class="label" x="128.30" y="102.95">NAX</text>
+  </g>
+  <g class="state" data-state="BAL">
+    <title>Balzan</title>
+    <polygon class="tile" points="128.30,138.45 143.67,147.32 143.67,165.07 128.30,173.95 112.93,165.07 112.93,147.32" aria-label="Balzan"/>
+    <text class="label" x="128.30" y="156.20">BAL</text>
+  </g>
+  <g class="state" data-state="EBBA">
+    <title>Żebbuġ</title>
+    <polygon class="tile" points="128.30,191.70 143.67,200.57 143.67,218.32 128.30,227.20 112.93,218.32 112.93,200.57" aria-label="Żebbuġ"/>
+    <text class="label" x="128.30" y="209.45">EBBA</text>
+  </g>
+  <g class="state" data-state="QRE">
+    <title>Qrendi</title>
+    <polygon class="tile" points="128.30,244.95 143.67,253.82 143.67,271.57 128.30,280.45 112.93,271.57 112.93,253.82" aria-label="Qrendi"/>
+    <text class="label" x="128.30" y="262.70">QRE</text>
+  </g>
+  <g class="state" data-state="KER">
+    <title>Kerċem</title>
+    <polygon class="tile inset" points="128.30,298.20 143.67,307.07 143.67,324.82 128.30,333.70 112.93,324.82 112.93,307.07" aria-label="Kerċem"/>
+    <text class="label" x="128.30" y="315.95">KER</text>
+  </g>
+  <g class="state" data-state="SPIB">
+    <title>San Pawl il-Bahar</title>
+    <polygon class="tile" points="112.93,58.57 128.30,67.45 128.30,85.20 112.93,94.07 97.56,85.20 97.56,67.45" aria-label="San Pawl il-Bahar"/>
+    <text class="label" x="112.93" y="76.32">SPIB</text>
+  </g>
+  <g class="state" data-state="LIJ">
+    <title>Lija</title>
+    <polygon class="tile" points="112.93,111.82 128.30,120.70 128.30,138.45 112.93,147.32 97.56,138.45 97.56,120.70" aria-label="Lija"/>
+    <text class="label" x="112.93" y="129.57">LIJ</text>
+  </g>
+  <g class="state" data-state="ATT">
+    <title>Attard</title>
+    <polygon class="tile" points="112.93,165.07 128.30,173.95 128.30,191.70 112.93,200.57 97.56,191.70 97.56,173.95" aria-label="Attard"/>
+    <text class="label" x="112.93" y="182.82">ATT</text>
+  </g>
+  <g class="state" data-state="SII">
+    <title>Siġġiewi</title>
+    <polygon class="tile" points="112.93,218.32 128.30,227.20 128.30,244.95 112.93,253.82 97.56,244.95 97.56,227.20" aria-label="Siġġiewi"/>
+    <text class="label" x="112.93" y="236.07">SII</text>
+  </g>
+  <g class="state" data-state="QAL">
+    <title>Qala</title>
+    <polygon class="tile inset" points="112.93,5.32 128.30,14.20 128.30,31.95 112.93,40.82 97.56,31.95 97.56,14.20" aria-label="Qala"/>
+    <text class="label" x="112.93" y="23.07">QAL</text>
+  </g>
+  <g class="state" data-state="MOS">
+    <title>Mosta</title>
+    <polygon class="tile" points="97.56,85.20 112.93,94.07 112.93,111.82 97.56,120.70 82.18,111.82 82.18,94.07" aria-label="Mosta"/>
+    <text class="label" x="97.56" y="102.95">MOS</text>
+  </g>
+  <g class="state" data-state="MTA">
+    <title>Mtarfa</title>
+    <polygon class="tile" points="97.56,138.45 112.93,147.32 112.93,165.07 97.56,173.95 82.18,165.07 82.18,147.32" aria-label="Mtarfa"/>
+    <text class="label" x="97.56" y="156.20">MTA</text>
+  </g>
+  <g class="state" data-state="DIN">
+    <title>Dingli</title>
+    <polygon class="tile" points="97.56,191.70 112.93,200.57 112.93,218.32 97.56,227.20 82.18,218.32 82.18,200.57" aria-label="Dingli"/>
+    <text class="label" x="97.56" y="209.45">DIN</text>
+  </g>
+  <g class="state" data-state="MEL">
+    <title>Mellieħa</title>
+    <polygon class="tile" points="82.18,58.57 97.56,67.45 97.56,85.20 82.18,94.07 66.81,85.20 66.81,67.45" aria-label="Mellieħa"/>
+    <text class="label" x="82.18" y="76.32">MEL</text>
+  </g>
+  <g class="state" data-state="MAR">
+    <title>Mġarr</title>
+    <polygon class="tile" points="82.18,111.82 97.56,120.70 97.56,138.45 82.18,147.32 66.81,138.45 66.81,120.70" aria-label="Mġarr"/>
+    <text class="label" x="82.18" y="129.57">MAR</text>
+  </g>
+  <g class="state" data-state="MDI">
+    <title>Mdina</title>
+    <polygon class="tile" points="82.18,165.07 97.56,173.95 97.56,191.70 82.18,200.57 66.81,191.70 66.81,173.95" aria-label="Mdina"/>
+    <text class="label" x="82.18" y="182.82">MDI</text>
+  </g>
+  <g class="state" data-state="MUN">
+    <title>Munxar</title>
+    <polygon class="tile inset" points="82.18,271.57 97.56,280.45 97.56,298.20 82.18,307.07 66.81,298.20 66.81,280.45" aria-label="Munxar"/>
+    <text class="label" x="82.18" y="289.32">MUN</text>
+  </g>
+  <g class="state" data-state="RAB">
+    <title>Rabat</title>
+    <polygon class="tile" points="66.81,138.45 82.18,147.32 82.18,165.07 66.81,173.95 51.44,165.07 51.44,147.32" aria-label="Rabat"/>
+    <text class="label" x="66.81" y="156.20">RAB</text>
+  </g>
+  <g class="state" data-state="NAD">
+    <title>Nadur</title>
+    <polygon class="tile inset" points="51.44,5.32 66.81,14.20 66.81,31.95 51.44,40.82 36.07,31.95 36.07,14.20" aria-label="Nadur"/>
+    <text class="label" x="51.44" y="23.07">NAD</text>
+  </g>
+  <g class="state" data-state="FG">
+    <title>Fontana, Gozo</title>
+    <polygon class="tile inset" points="51.44,218.32 66.81,227.20 66.81,244.95 51.44,253.82 36.07,244.95 36.07,227.20" aria-label="Fontana, Gozo"/>
+    <text class="label" x="51.44" y="236.07">FG</text>
+  </g>
+  <g class="state" data-state="GAJ">
+    <title>Għajnsielem</title>
+    <polygon class="tile inset" points="20.70,58.57 36.07,67.45 36.07,85.20 20.70,94.07 5.32,85.20 5.32,67.45" aria-label="Għajnsielem"/>
+    <text class="label" x="20.70" y="76.32">GAJ</text>
+  </g>
+  <g class="state" data-state="XEW">
+    <title>Xewkija</title>
+    <polygon class="tile inset" points="20.70,111.82 36.07,120.70 36.07,138.45 20.70,147.32 5.32,138.45 5.32,120.70" aria-label="Xewkija"/>
+    <text class="label" x="20.70" y="129.57">XEW</text>
+  </g>
+  <g class="state" data-state="SAN">
+    <title>Sannat</title>
+    <polygon class="tile inset" points="20.70,165.07 36.07,173.95 36.07,191.70 20.70,200.57 5.32,191.70 5.32,173.95" aria-label="Sannat"/>
+    <text class="label" x="20.70" y="182.82">SAN</text>
+  </g>
+</svg>

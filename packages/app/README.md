@@ -1,14 +1,5 @@
 # App
 
-- [App](#app)
-  - [Categories](#categories)
-  - [Techstack](#techstack)
-    - [Hybrid](#hybrid)
-    - [Native](#native)
-  - [Platform](#platform)
-
-## Categories
-
 | No  | Category               | Examples                                                                                                                                                                                                              |
 | --- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 01  | Books                  | stories, comics, eReaders, coffee table books, graphic novels                                                                                                                                                         |
@@ -40,67 +31,3 @@
 | 27  | Weather                | radar, forecast, storms, tides, severe weather, local weather                                                                                                                                                         |
 
 Reference: [App Store - Categories](https://developer.apple.com/app-store/categories/)
-
-## Techstack
-
-### Hybrid
-
-| No  | Category            | Name                       | Version | Alternative          |
-| --- | ------------------- | -------------------------- | ------- | -------------------- |
-| 01  | Language            | [TypeScript]               | 6.+     |                      |
-| 02  | Runtime             | [Node.js][node.js]         | 26.+    | [Bun]                |
-| 03  | Package Manager     | [pnpm][pnpm]               | 11.+    | [npm]                |
-| 04  | Linter              | [ESLint][eslint]           | 9.+     | [Biome]              |
-| 05  | Formatter           | [Prettier][prettier]       | 3.+     | [Biome]              |
-| 06  | Testing Framework   | [Jest][jest]               | 30.+    |                      |
-| 07  | Testing Framework   | [Playwright][playwright]   | 1.+     |                      |
-| 08  | Framework           | [React][react]             | 19.+    | [Solid]              |
-| 09  | Framework           | [Next.js][next.js]         |         | [SolidStart]         |
-| 10  | Styling             | [TailwindCSS][tailwindcss] | 4.+     |                      |
-| 11  | Styling             | [DaisyUI][daisyui]         | 5.+     |                      |
-| 12  | Desktop Application | [Tauri][tauri]             | 2.+     | [Electron][electron] |
-
-[node.js]: https://nodejs.org/
-[pnpm]: https://pnpm.io/
-[eslint]: https://eslint.org/
-[prettier]: https://prettier.io/
-[jest]: https://jestjs.io/
-[playwright]: https://playwright.dev/
-[react]: https://react.dev/
-[next.js]: https://nextjs.org/
-[tailwindcss]: https://tailwindcss.com/
-[daisyui]: https://daisyui.com/
-[tauri]: https://tauri.app/
-[electron]: https://www.electronjs.org/
-
-### Native
-
-| No  | Language | Styling   | Operating System           |
-| --- | -------- | --------- | -------------------------- |
-| 01  | [Kotlin] | [Jetpack] | [Android]                  |
-| 02  | [Swift]  | [SwiftUI] | [iOS] / [iPadOS] / [macOS] |
-
-[kotlin]: https://kotlinlang.org
-[jetpack]: https://developer.android.com/jetpack
-[android]: https://developer.android.com
-[swift]: https://www.swift.org
-[swiftui]: https://developer.apple.com/xcode/swiftui/
-[ios]: https://developer.apple.com/ios
-
-## Platform
-
-| No  | Group   | Category | Name      |
-| --- | ------- | -------- | --------- |
-| 01  | Desktop | [Linux]  | [Arch]    |
-| 02  | Desktop | [Linux]  | [Debian]  |
-| 03  | Desktop | [Linux]  | [Ubuntu]  |
-| 04  | Desktop |          | [macOS]   |
-| 05  | Desktop |          | [Windows] |
-| 06  | Tablet  |          | [iPadOS]  |
-| 07  | Mobile  |          | [iOS]     |
-| 08  | Mobile  |          | [Android] |
-
-[Linux]: https://linux.org/
-[Ubuntu]: https://ubuntu.com/
-[Arch]: https://archlinux.org/
-[macOS]: https://www.apple.com/mac/

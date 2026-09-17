@@ -1,0 +1,69 @@
+Project MyDatabase {
+  database_type: 'PostgreSQL'
+  Note: 'Sample database schema for testing dbml CLI'
+}
+
+Table users {
+  id integer [pk, increment]
+  email varchar(255) [unique, not_null]
+  name varchar(100) [not_null]
+  password_hash varchar(255) [not_null]
+  created_at timestamp [not_null, default: `now()`]
+  updated_at timestamp [not_null, default: `now()`]
+  Note: 'User accounts table'
+}
+
+Table posts {
+  id integer [pk, increment]
+  user_id integer [not_null, ref: > users.id]
+  title varchar(200) [not_null]
+  content text
+  status varchar(20) [not_null, default: 'draft']
+  published_at timestamp
+  created_at timestamp [not_null, default: `now()`]
+  updated_at timestamp [not_null, default: `now()`]
+  Note: 'Blog posts table'
+}
+
+Table categories {
+  id integer [pk, increment]
+  name varchar(50) [unique, not_null]
+  slug varchar(50) [unique, not_null]
+  description text
+  Note: 'Post categories'
+}
+
+Table post_categories {
+  post_id integer [not_null, ref: > posts.id]
+  category_id integer [not_null, ref: > categories.id]
+  Note: 'Many-to-many relationship between posts and categories'
+}
+
+Table comments {
+  id integer [pk, increment]
+  post_id integer [not_null, ref: > posts.id]
+  user_id integer [not_null, ref: > users.id]
+  content text [not_null]
+  created_at timestamp [not_null, default: `now()`]
+  Note: 'Comments on posts'
+}
+
+Enum post_status {
+  draft
+  published
+  archived
+}
+
+Ref: user_posts users.id < posts.user_id
+Ref: post_categories_post post_categories.post_id > posts.id
+Ref: post_categories_category post_categories.category_id > categories.id
+Ref: post_comments comments.post_id > posts.id
+Ref: user_comments comments.user_id > users.id
+
+Indexes {
+  (users.email) [unique]
+  (posts.user_id)
+  (posts.status)
+  (comments.post_id)
+  (post_categories.post_id, post_categories.category_id) [unique]
+}

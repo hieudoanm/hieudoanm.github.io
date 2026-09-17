@@ -1,1 +1,0 @@
-# [RethinkDB](https://rethinkdb.com/)

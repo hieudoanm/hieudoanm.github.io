@@ -115,13 +115,23 @@ needs it; it is never required to build, run, or use the other six tabs.
 - Distinguish an explicit Offline state from generic errors — never show a
   misleading value when the lookup fails
 
+### Battery Conventions
+
+- Views never touch IOKit directly — go through `BatteryMonitor`
+- Keep all parsing in `BatteryInfoParsing` (fold IOKit's `-1`/`-2` time
+  sentinels into `nil`) so it stays unit-testable
+- Normalise battery temperature to one unit (celsius) before parsing; Intel's
+  `AppleSmartBattery` reports deci-kelvin, Apple Silicon reports deci-celsius
+- Treat a missing/zero capacity as unreadable rather than showing `0%`
+- Show a distinct `Battery unavailable` state, never a blank or zero battery
+
 ## Before You Push
 
 1. `make build` — clean compile
 2. `make test` — all tests pass
 3. `make dev` — smoke test the app
 4. Menu-bar icon shows memory and disk percentages
-5. Popover shows all seven tabs with Memory the default
+5. Popover shows all eight tabs with Memory the default
 6. Memory tab shows both progress bars with used/total values
 7. Clipboard tab captures, searches, and copies history; pin and delete work
 8. Front tab lists running apps (Windows count) and bringing an app to the
@@ -130,8 +140,10 @@ needs it; it is never required to build, run, or use the other six tabs.
    states render distinctly
 10. Network tab shows live download/upload rates, session totals, and
     per-interface rows with Wi-Fi/Ethernet classification
-11. Ports view lists listening ports and kill actions work
-12. Workspaces tab saves a workspace, the Grant banner appears without
+11. Battery tab shows charge, power source, and health rows; `Battery
+    unavailable` renders on Macs without a battery
+12. Ports view lists listening ports and kill actions work
+13. Workspaces tab saves a workspace, the Grant banner appears without
     Accessibility, restore launches missing apps and places windows once
     granted
-13. Verify both Light Mode and Dark Mode
+14. Verify both Light Mode and Dark Mode

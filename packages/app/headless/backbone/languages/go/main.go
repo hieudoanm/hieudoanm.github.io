@@ -14,6 +14,7 @@ import (
 	"time"
 
 	"github.com/hieudoanm/backbone/internal/httpapi"
+	"github.com/hieudoanm/backbone/internal/mcp"
 	"github.com/hieudoanm/backbone/internal/secrets"
 	"github.com/hieudoanm/backbone/internal/store"
 )
@@ -44,6 +45,15 @@ func getLocalIP() string {
 }
 
 func main() {
+	args := os.Args[1:]
+
+	if len(args) > 0 && args[0] == "mcp" {
+		if err := runMCP(args[1:]); err != nil {
+			log.Fatalf("mcp server: %v", err)
+		}
+		return
+	}
+
 	db, err := store.OpenDB()
 	if err != nil {
 		log.Fatalf("open db: %v", err)
@@ -94,4 +104,33 @@ func main() {
 	if err := httpServer.ListenAndServe(); err != nil && err != http.ErrServerClosed {
 		log.Fatalf("server: %v", err)
 	}
+}
+
+// runMCP serves the Model Context Protocol over stdio. The database is opened
+// and migrated once here and handed to the tools, so a tool call reuses the one
+// connection instead of opening and leaking its own.
+//
+// `serve` is accepted so `backbone mcp serve` works, matching the Rust and
+// Kotlin ports and the wording MCP clients expect.
+func runMCP(args []string) error {
+	for _, arg := range args {
+		if arg != "serve" {
+			return fmt.Errorf("unknown mcp argument %q", arg)
+		}
+	}
+
+	db, err := store.OpenDB()
+	if err != nil {
+		return fmt.Errorf("open db: %w", err)
+	}
+	defer db.Close()
+	if err := store.MigrateDB(db); err != nil {
+		return fmt.Errorf("migrate db: %w", err)
+	}
+
+	s := mcp.NewServer()
+	mcp.Register(s, mcp.ServerDeps{DB: db})
+
+	fmt.Fprintln(os.Stderr, "backbone-mcp server running on stdio")
+	return s.Run()
 }

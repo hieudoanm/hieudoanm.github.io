@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+  <title>dbml conversion flow</title>
+  <desc>DBML file converted to SQL, Mermaid, and SVG formats</desc>
+
+  <rect x="0" y="0" width="1280" height="720" fill="#f7f8fa"/>
+
+  <!-- Title -->
+  <text x="640" y="80" font-size="48" fill="#7c3aed" text-anchor="middle" font-weight="bold">DBML → Multiple Formats</text>
+
+  <!-- DBML Input Box -->
+  <rect x="160" y="140" width="280" height="200" rx="10" fill="#e0e7ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="300" y="180" font-size="24" fill="#7c3aed" text-anchor="middle" font-weight="bold">schema.dbml</text>
+  <text x="180" y="220" font-size="16" fill="#555f6e">Table users {</text>
+  <text x="200" y="245" font-size="16" fill="#555f6e">id integer [pk]</text>
+  <text x="200" y="270" font-size="16" fill="#555f6e">email varchar(255)</text>
+  <text x="180" y="295" font-size="16" fill="#555f6e">}</text>
+
+  <!-- Arrow 1 -->
+  <path d="M 460 240 L 520 240" stroke="#7c3aed" stroke-width="3" marker-end="url(#arrowhead)"/>
+
+  <!-- SQL Output Box -->
+  <rect x="540" y="140" width="280" height="200" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="680" y="180" font-size="24" fill="#2563eb" text-anchor="middle" font-weight="bold">schema.sql</text>
+  <text x="560" y="220" font-size="16" fill="#555f6e">CREATE TABLE users (</text>
+  <text x="580" y="245" font-size="16" fill="#555f6e">id INTEGER PRIMARY KEY,</text>
+  <text x="580" y="270" font-size="16" fill="#555f6e">email VARCHAR(255)</text>
+  <text x="560" y="295" font-size="16" fill="#555f6e">);</text>
+
+  <!-- Arrow 2 -->
+  <path d="M 840 240 L 900 240" stroke="#7c3aed" stroke-width="3" marker-end="url(#arrowhead)"/>
+
+  <!-- Mermaid Output Box -->
+  <rect x="920" y="140" width="280" height="200" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="1060" y="180" font-size="24" fill="#16a34a" text-anchor="middle" font-weight="bold">diagram.mmd</text>
+  <text x="940" y="220" font-size="16" fill="#555f6e">erDiagram</text>
+  <text x="940" y="245" font-size="16" fill="#555f6e">users {</text>
+  <text x="960" y="270" font-size="16" fill="#555f6e">PK INTEGER id</text>
+  <text x="940" y="295" font-size="16" fill="#555f6e">}</text>
+
+  <!-- CLI Command -->
+  <rect x="240" y="420" width="800" height="80" rx="10" fill="#1e293b"/>
+  <text x="640" y="465" font-size="28" fill="#e2e8f0" text-anchor="middle" font-family="ui-monospace, monospace">$ dbml all schema.dbml</text>
+
+  <!-- Feature badges -->
+  <rect x="240" y="540" width="240" height="50" rx="25" fill="#7c3aed"/>
+  <text x="360" y="572" font-size="20" fill="white" text-anchor="middle">CLI Tool</text>
+
+  <rect x="520" y="540" width="240" height="50" rx="25" fill="#0ea5e9"/>
+  <text x="640" y="572" font-size="20" fill="white" text-anchor="middle">HTTP API</text>
+
+  <rect x="800" y="540" width="240" height="50" rx="25" fill="#16a34a"/>
+  <text x="920" y="572" font-size="20" fill="white" text-anchor="middle">Zero Config</text>
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#7c3aed"/>
+    </marker>
+  </defs>
+
+</svg>

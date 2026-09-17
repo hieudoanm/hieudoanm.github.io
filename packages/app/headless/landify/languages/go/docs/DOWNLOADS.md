@@ -47,7 +47,10 @@ chmod +x landify
 ```
 
 > The pipeline cross-compiles all four platforms with `make build-all`; see
-> [PACKAGING](PACKAGING).
+> [PACKAGING](PACKAGING). Every plain binary includes the terminal editor
+> (`landify tui`) — build commands and editing work without CGO or a display.
+> The `studio` desktop GUI ships separately as `landify-gui`
+> (`make build-gui`, needs CGO).
 
 ### Build from source
 
@@ -72,7 +75,7 @@ See [PACKAGING](PACKAGING) for the CI artifact pipeline and
 ./bin/landify new                 # writes landify.yaml (product layout)
 ./bin/landify validate            # strict schema check
 ./bin/landify build               # writes index.html
-./bin/landify serve -p 8080       # preview at http://localhost:8080
+./bin/landify preview -p 8080     # preview at http://localhost:8080
 ```
 
 Everything is embeddable — copy the generated HTML and CSS anywhere.
@@ -81,9 +84,11 @@ Everything is embeddable — copy the generated HTML and CSS anywhere.
 
 ## About
 
-Landify turns one annotated YAML file into a complete single-file landing page:
-theme, hero, features, pricing, FAQ, and more. Output is plain HTML and CSS
-with no JavaScript, so it renders anywhere and never goes stale.
+Landify turns one annotated YAML file into a complete single-file landing page.
+
+- **Sections from one file** — theme, hero, features, pricing, FAQ, and more.
+- **Plain HTML and CSS output** — no JavaScript.
+- **Renders anywhere** — and never goes stale.
 
 ---
 

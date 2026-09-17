@@ -1,0 +1,6 @@
+Dimension,Weight,Notes
+Programme relevance,0.40,Relevance to your chosen programme
+Interest match,0.40,Does the project topic match your interests
+Supervisor focus match,0.10,Does the supervisor's broader research agenda match your interests
+Method match,0.05,Only counts once you list method preferences
+Feasibility,0.05,Only counts once every project has all three ratings
