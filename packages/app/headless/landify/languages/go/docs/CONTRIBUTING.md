@@ -67,6 +67,8 @@ static/                  # embedded templates, partials, examples
 - `themes_test.go` — 64 presets, lookup, sorted names
 - `placeholder_test.go` — scaffolding writes the right annotated example
 - `serve_test.go` — file server serves bytes and shuts down on cancel
+- `internal/tui/tui_test.go` — editor command parsing, validate/build/theming
+  via `renderConfig`, dirty tracking and scaffold generation
 - Keep tests isolated; never depend on the real `bin/landify` or `index.html`
 
 ## Docs

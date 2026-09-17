@@ -6,19 +6,19 @@ commands, layout and content rules specific to this Go module.
 
 ## Commands
 
-| Command          | Description                                       |
-| ---------------- | ------------------------------------------------- |
-| `make all`       | `format` + `lint` + `test` + `build`              |
-| `make build`     | Compile the CLI to `./bin/landify`                |
+| Command          | Description                                        |
+| ---------------- | -------------------------------------------------- |
+| `make all`       | `format` + `lint` + `test` + `build`               |
+| `make build`     | Compile the CLI to `./bin/landify`                 |
 | `make build-gui` | Build `./bin/landify-gui` (fyne studio, needs CGO) |
-| `make build-all` | Cross-compile 4 platforms into `bin/`             |
-| `make test`      | `go test ./...`                                   |
-| `make lint`      | `go vet ./...`                                    |
-| `make format`    | `go fmt ./...`                                    |
-| `make coverage`  | Generate HTML coverage report in `./coverage`     |
-| `make tidy`      | `go mod tidy`                                     |
-| `make install`   | Build to `~/bin/landify`                          |
-| `make clean`     | Remove `./bin`, `./coverage` and `index.html`     |
+| `make build-all` | Cross-compile 4 platforms into `bin/`              |
+| `make test`      | `go test ./...`                                    |
+| `make lint`      | `go vet ./...`                                     |
+| `make format`    | `go fmt ./...`                                     |
+| `make coverage`  | Generate HTML coverage report in `./coverage`      |
+| `make tidy`      | `go mod tidy`                                      |
+| `make install`   | Build to `~/bin/landify`                           |
+| `make clean`     | Remove `./bin`, `./coverage` and `index.html`      |
 
 Verification before handoff: `make all` passes — `go fmt` produces no diff,
 `go vet` exits 0, and `go test ./...` is green.
@@ -31,13 +31,21 @@ Verification before handoff: `make all` passes — `go fmt` produces no diff,
 - Standard Go layout: `main.go` + `cmd/` + `internal/landify/`. Keep commands
   thin: `cmd/*.go` parse flags and delegate to `internal/landify` (e.g.
   `BuildFile`, `ValidateFile`, `WritePlaceholder`).
-- The `cmd/` files register exactly six subcommands on the root: `new`,
-  `validate`, `build`, `themes`, `serve`, `studio`. `--file` (`-f`, default
-  `landify.yaml`) is a persistent root flag; `build` adds `--output`/`-o`
-  (`index.html`) and `--theme`/`-t`; `new` adds `--type`/`-t` (`product`) and
-  `--force`/`-F`; `serve` adds `--dir`/`-d` (`.`), `--bind`/`-b`
+- The `cmd/` files register exactly seven subcommands on the root: `new`,
+  `validate`, `build`, `themes`, `serve`, `tui`, `studio`. `--file` (`-f`,
+  default `landify.yaml`) is a persistent root flag; `build` adds
+  `--output`/`-o` (`index.html`) and `--theme`/`-t`; `new` adds `--type`/`-t`
+  (`product`) and `--force`/`-F`; `serve` adds `--dir`/`-d` (`.`), `--bind`/`-b`
   (`127.0.0.1`) and `--port`/`-p` (`8080`).
   `serve` shuts down gracefully on `SIGINT`/`SIGTERM`.
+- `tui` takes an optional positional `[path]` (defaults to `landify.yaml`)
+  and delegates to `internal/tui.Run`. It is a bubbletea editor that ships in
+  **every** build with no build tag: a `textarea` YAML pane plus a `:`
+  command line (`save`, `reload`, `validate`, `build [out]`,
+  `generate <type>`, `theme <name>`, `help`, `quit`), Esc toggles modes,
+  Ctrl-C/Ctrl-Q quit. Pure logic lives in `internal/tui/action.go`
+  (`parseCommand`, `renderConfig`) so the editor's pipeline is unit-tested;
+  `cmd/tui.go` only parses the optional argument.
 - `studio` takes an optional positional `[path]` (defaults to a new blank
   product scaffold) and delegates to `internal/gui.Run`. It is the only
   subcommand gated by a build tag: the default build ships a stub that returns
@@ -49,9 +57,9 @@ Verification before handoff: `make all` passes — `go fmt` produces no diff,
   `error` last, handle errors explicitly, `var` zero-init over `:=`, no global
   state, table-driven tests, return early.
 - Tests: colocated `*_test.go`, table-driven, behaviour-spec names.
-  `config_test.go`, `build_test.go`, `themes_test.go`, `placeholder_test.go`
-  and `serve_test.go` cover parsing, rendering, themes, scaffolding and the
-  file server.
+  `config_test.go`, `build_test.go`, `themes_test.go`, `placeholder_test.go`,
+  `serve_test.go` and `internal/tui/tui_test.go` cover parsing, rendering,
+  themes, scaffolding, the file server and the terminal editor.
 - `.gitignore` excludes `bin/`, `index.html`, and `landify.yaml` (all build
   output or generated scaffolding) plus `.DS_Store`.
 
@@ -112,11 +120,11 @@ Verification before handoff: `make all` passes — `go fmt` produces no diff,
 
 ## Documentation
 
-| Document        | Description                                  |
-| --------------- | -------------------------------------------- |
-| [docs](./docs/) | Architecture, contributing, downloads, packaging, roadmap |
-| [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md) | Pipeline, types, themes, CLI wiring |
-| [docs/CONTRIBUTING.md](./docs/CONTRIBUTING.md) | Setup, commands, conventions, testing |
-| [docs/DOWNLOADS.md](./docs/DOWNLOADS.md) | Get the binary or build from source |
-| [docs/PACKAGING.md](./docs/PACKAGING.md) | Build + CI artifact pipeline |
-| [docs/ROADMAP.md](./docs/ROADMAP.md) | Phased feature roadmap |
+| Document                                       | Description                                               |
+| ---------------------------------------------- | --------------------------------------------------------- |
+| [docs](./docs/)                                | Architecture, contributing, downloads, packaging, roadmap |
+| [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md) | Pipeline, types, themes, CLI wiring                       |
+| [docs/CONTRIBUTING.md](./docs/CONTRIBUTING.md) | Setup, commands, conventions, testing                     |
+| [docs/DOWNLOADS.md](./docs/DOWNLOADS.md)       | Get the binary or build from source                       |
+| [docs/PACKAGING.md](./docs/PACKAGING.md)       | Build + CI artifact pipeline                              |
+| [docs/ROADMAP.md](./docs/ROADMAP.md)           | Phased feature roadmap                                    |

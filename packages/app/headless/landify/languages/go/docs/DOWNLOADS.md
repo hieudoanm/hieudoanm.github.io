@@ -47,7 +47,10 @@ chmod +x landify
 ```
 
 > The pipeline cross-compiles all four platforms with `make build-all`; see
-> [PACKAGING](PACKAGING).
+> [PACKAGING](PACKAGING). Every plain binary includes the terminal editor
+> (`landify tui`) — build commands and editing work without CGO or a display.
+> The `studio` desktop GUI ships separately as `landify-gui`
+> (`make build-gui`, needs CGO).
 
 ### Build from source
 

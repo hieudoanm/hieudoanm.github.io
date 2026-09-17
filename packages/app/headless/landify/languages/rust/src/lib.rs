@@ -9,6 +9,7 @@ pub mod placeholder;
 pub mod render;
 pub mod serve;
 pub mod themes;
+pub mod tui;
 pub mod validate;
 
 pub use cli::run;

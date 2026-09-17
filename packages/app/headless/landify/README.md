@@ -131,14 +131,16 @@ make build
 ./bin/landify validate                # check it, then:
 ./bin/landify build --theme ocean     # ocean-colored index.html
 ./bin/landify serve                   # preview on http://localhost:8080
+./bin/landify tui                     # edit landify.yaml in the terminal
 ```
 
 ## Commands
 
-| Command                                              | What it does                                                                                                                 |
-| ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `landify new -t <type>`                              | Generate a commented `landify.yaml` placeholder for a page type (`-t` default `product`, refuses to overwrite without `-F`). |
-| `landify validate -f <file>`                         | Check the schema; lists every problem and exits 1 on failure.                                                                |
-| `landify build -f <file> -o <output> --theme <name>` | Validate and render the page (defaults: `landify.yaml` → `index.html`; `--theme` applies a built-in preset).                 |
-| `landify themes`                                     | List the sixty-four built-in theme presets.                                                                                  |
-| `landify serve -d <dir> -p <port>`                   | Serve a directory of static files over HTTP (default `.` and port `8080`); stops on Ctrl+C.                                  |
+| Command                                              | What it does                                                                                                                                |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `landify new -t <type>`                              | Generate a commented `landify.yaml` placeholder for a page type (`-t` default `product`, refuses to overwrite without `-F`).                |
+| `landify validate -f <file>`                         | Check the schema; lists every problem and exits 1 on failure.                                                                               |
+| `landify build -f <file> -o <output> --theme <name>` | Validate and render the page (defaults: `landify.yaml` → `index.html`; `--theme` applies a built-in preset).                                |
+| `landify themes`                                     | List the sixty-four built-in theme presets.                                                                                                 |
+| `landify serve -d <dir> -p <port>`                   | Serve a directory of static files over HTTP (default `.` and port `8080`); stops on Ctrl+C.                                                 |
+| `landify tui [path]`                                 | Terminal editor: edit YAML and run save / reload / validate / build / generate / theme from a `:` command line (Esc toggles, Ctrl+C quits). |

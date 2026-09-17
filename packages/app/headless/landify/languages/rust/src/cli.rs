@@ -1,8 +1,8 @@
-//! clap.rs CLI: the root `landify` command with six subcommands, mirroring
+//! clap.rs CLI: the root `landify` command with seven subcommands, mirroring
 //! the Go cobra wiring: `new`, `validate`, `build`, `themes`, `serve`,
-//! `studio`. `--file`/`-f` (default `landify.yaml`) is a global flag.
+//! `tui`, `studio`. `--file`/`-f` (default `landify.yaml`) is a global flag.
 
-use crate::{gui, placeholder, render, serve, validate};
+use crate::{gui, placeholder, render, serve, tui, validate};
 use anyhow::{anyhow, Result};
 use clap::{Parser, Subcommand};
 use std::path::Path;
@@ -13,7 +13,7 @@ use std::path::Path;
     name = "landify",
     version,
     about = "Build a landing page from a YAML file",
-    long_about = "Landify generates a flat, dependency-free landing page from a\nsingle YAML file. No build tooling is required to serve the result — just\nHTML and CSS.\n\nCommands:\n  new       create a landify.yaml with placeholder content\n  validate  check the schema of landify.yaml\n  build     generate index.html from landify.yaml\n  themes    list the sixty-four built-in theme presets\n  serve     preview the result over HTTP\n  studio    open the optional desktop editor (GUI build)"
+    long_about = "Landify generates a flat, dependency-free landing page from a\nsingle YAML file. No build tooling is required to serve the result — just\nHTML and CSS.\n\nCommands:\n  new       create a landify.yaml with placeholder content\n  validate  check the schema of landify.yaml\n  build     generate index.html from landify.yaml\n  themes    list the sixty-four built-in theme presets\n  serve     preview the result over HTTP\n  tui       open the terminal editor (ships with every build)\n  studio    open the optional desktop editor (GUI build)"
 )]
 pub struct Cli {
     /// Path to the YAML content file
@@ -36,6 +36,8 @@ pub enum Command {
     Themes,
     /// Serve the current directory over HTTP
     Serve(ServeArgs),
+    /// Open the landify terminal editor
+    Tui(TuiArgs),
     /// Open the landify studio desktop app
     Studio(StudioArgs),
 }
@@ -80,6 +82,12 @@ pub struct StudioArgs {
     pub path: Option<String>,
 }
 
+#[derive(Debug, Default, clap::Args)]
+pub struct TuiArgs {
+    #[arg(value_name = "path")]
+    pub path: Option<String>,
+}
+
 /// Parses the CLI and dispatches to the subcommand.
 pub fn run() -> Result<()> {
     let cli = Cli::parse();
@@ -89,6 +97,7 @@ pub fn run() -> Result<()> {
         Command::Build(args) => run_build(&cli.file, &args),
         Command::Themes => run_themes(),
         Command::Serve(args) => run_serve(&args),
+        Command::Tui(args) => run_tui(&args),
         Command::Studio(args) => run_studio(&args),
     }
 }
@@ -129,6 +138,10 @@ fn run_serve(args: &ServeArgs) -> Result<()> {
 
 fn run_studio(args: &StudioArgs) -> Result<()> {
     gui::run(args.path.as_deref())
+}
+
+fn run_tui(args: &TuiArgs) -> Result<()> {
+    tui::run(args.path.as_deref())
 }
 
 #[cfg(test)]
@@ -195,6 +208,15 @@ mod tests {
         match cmd {
             Command::Studio(a) => assert_eq!(a.path.as_deref(), Some("x.yaml")),
             _ => panic!("expected studio"),
+        }
+    }
+
+    #[test]
+    fn tui_optional_path() {
+        let (_, cmd) = parse(&["landify", "tui", "custom.yaml"]);
+        match cmd {
+            Command::Tui(a) => assert_eq!(a.path.as_deref(), Some("custom.yaml")),
+            _ => panic!("expected tui"),
         }
     }
 

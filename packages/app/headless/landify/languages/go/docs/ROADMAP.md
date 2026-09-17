@@ -7,7 +7,8 @@
 
 - [x] Go module layout (`main.go` + `cmd/` + `internal/landify/`)
 - [x] Strict YAML parsing (`KnownFields(true)`)
-- [x] Cobra CLI (`new`, `validate`, `build`, `themes`, `serve`)
+- [x] Cobra CLI (`new`, `validate`, `build`, `themes`, `serve`, `tui`,
+      `studio`)
 - [x] Embedded asset pipeline (`static/` via `//go:embed`)
 - [x] Shared `base-css`/`header`/`footer` partials
 
@@ -42,6 +43,10 @@
 - [x] 12 page-type selector with scaffold/apply per type
 - [x] One-click build + preview server + browser open + file-watch auto-rebuild
 - [x] Multi-document tabs (new / open / close / save / save-as)
+- [x] `landify tui` terminal editor (bubbletea) — a CGO-free, every-build
+      stand-in for the studio: YAML pane + `:` command line (save, reload,
+      validate, build, generate, theme) with dirty tracking, mirroring the
+      studio's pipeline
 
 ## Phase 5 — Polish
 

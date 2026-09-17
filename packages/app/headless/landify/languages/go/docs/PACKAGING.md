@@ -13,8 +13,11 @@ make build    # go build -o bin/landify .
 
 The binary is pure Go (no CGO) — templates, partials and examples are embedded
 with `//go:embed`, so the resulting binary is self-contained and needs no
-external assets. There is no Dockerfile for landify; it is intended to be run
-standalone or embedded in other tooling.
+external assets. The `landify tui` terminal editor (bubbletea) is a plain
+dependency and ships in this single artifact with no build tag. The optional
+`studio` fyne GUI is the only CGO binary, produced separately by
+`make build-gui` as `bin/landify-gui`. There is no Dockerfile for landify; it
+is intended to be run standalone or embedded in other tooling.
 
 ## CI Pipeline
 

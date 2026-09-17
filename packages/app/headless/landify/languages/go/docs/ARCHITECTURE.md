@@ -9,12 +9,14 @@
 | YAML parsing | `gopkg.in/yaml.v3` (strict `KnownFields`) |
 | Rendering    | `html/template` (stdlib)                  |
 | Desktop GUI  | `fyne.io/fyne/v2` (behind the `gui` tag)  |
+| Terminal UI  | charmbracelet bubbletea + bubbles         |
 | Assets       | `embed.FS` via `//go:embed`               |
 | Testing      | Standard `go test`, table-driven tests    |
 
 No network calls, no external services. The default `landify` binary is pure
-static (no CGO); the optional `landify-gui` studio binary is built with
-`-tags gui` and CGO enabled (fyne), everything else behind the tag is stubbed.
+static (no CGO); it ships the `tui` terminal editor in every build, while the
+optional `landify-gui` studio binary is built with `-tags gui` and CGO
+enabled (fyne), everything else behind the tag is stubbed.
 
 ## Directory Structure
 
@@ -28,6 +30,7 @@ go/
 │   ├── build.go         # landify build [-f file] [-o output] [-t theme]
 │   ├── themes.go        # landify themes
 │   ├── serve.go         # landify serve [-d dir] [-p port]
+│   ├── tui.go           # landify tui [path] — terminal editor
 │   └── studio.go        # landify studio [path]
 ├── internal/landify/    # Schema, validation, rendering, themes, scaffolding
 │   ├── config.go        # Config/Theme structs, Load/LoadFile (strict decode)
@@ -45,13 +48,16 @@ go/
 │   ├── nodeops.go       # yaml.v3 node-level collection ops (add/remove/move/set)
 │   ├── schema.go        # collection catalog, section forms, field templates
 │   ├── wcag.go          # WCAG 2.1 contrast ratio + level helpers
-│   ├── studio.go        # controller: AppTabs, menus, toolbar, status, watch loop
+│   ├── studio.go       # controller: AppTabs, menus, toolbar, status, watch loop
 │   ├── page.go          # per-tab editor / preview / type-scaffold widgets
 │   ├── actions.go       # add / close / open / save / save-as actions
 │   ├── forms.go         # per-section labelled field forms (forms mode)
 │   ├── collections.go   # generic collection editors (add/remove/reorder)
 │   ├── themestudio.go   # theme studio: presets, color pickers, token + WCAG
 │   └── build.go         # one-click build + preview server + browser open
+├── internal/tui/        # Terminal editor (bubbletea, ships in every build)
+│   ├── tui.go           # model, Run, Update/View loop, editor + command modes
+│   └── action.go        # :command parsing, save/validate/build/generate/theme
 ├── static/              # Embedded templates, partials, examples
 │   ├── templates/       # template-<type>.tmpl — one per page type (12)
 │   ├── partials/        # base-css, header, footer
@@ -147,18 +153,32 @@ preview server on disk changes. `build.go` composes `landify.Render`,
 temp dir, serves it, opens the browser) — exactly the same pipeline the CLI
 uses, so the GUI can never render something the CLI can't.
 
+### Terminal editor (`internal/tui/`)
+
+`landify tui [path]` is a bubbletea app that ships in every build (no build
+tag, no CGO). The `model` owns a `textarea` YAML pane, a `textinput` command
+line, and an `active` mode selecting which widget receives keystrokes: editor
+(typing edits the buffer) or command (Esc toggles, Enter runs). Ctrl-C/Ctrl-Q
+quit. A dirty `•` marks unsaved edits (buffer vs. the last save/reload point).
+Pure helpers in `action.go` keep the pipeline testable: `parseCommand` splits
+`:command` lines, `renderConfig` runs load → optional theme override →
+validate → render (the same path as `landify build`), and `doSave` /
+`doGenerate` / `doTheme` mutate state. Like the studio, the TUI is a front-end
+to the CLI pipeline — anything it builds passes strict validation first.
+
 ## Configuration
 
 Landify reads no environment variables and writes no config files. Everything
 is expressed through the YAML content file and CLI flags:
 
-| Flag (command)            | Default        | Purpose                      |
-| ------------------------- | -------------- | ---------------------------- |
-| `--file` / `-f` (all)     | `landify.yaml` | YAML content file            |
-| `--output` / `-o` (build) | `index.html`   | Generated page path          |
-| `--theme` / `-t` (build)  | (YAML theme)   | Override with a named preset |
-| `--type` / `-t` (new)     | `product`      | Page type to scaffold        |
-| `--force` / `-F` (new)    | `false`        | Overwrite existing file      |
-| `--dir` / `-d` (serve)    | `.`            | Directory to serve           |
-| `--port` / `-p` (serve)   | `8080`         | Listen port (127.0.0.1)      |
-| `[path]` (studio)         | (new product)  | YAML file to open in the GUI |
+| Flag (command)            | Default        | Purpose                       |
+| ------------------------- | -------------- | ----------------------------- |
+| `--file` / `-f` (all)     | `landify.yaml` | YAML content file             |
+| `--output` / `-o` (build) | `index.html`   | Generated page path           |
+| `--theme` / `-t` (build)  | (YAML theme)   | Override with a named preset  |
+| `--type` / `-t` (new)     | `product`      | Page type to scaffold         |
+| `--force` / `-F` (new)    | `false`        | Overwrite existing file       |
+| `--dir` / `-d` (serve)    | `.`            | Directory to serve            |
+| `--port` / `-p` (serve)   | `8080`         | Listen port (127.0.0.1)       |
+| `[path]` (studio)         | (new product)  | YAML file to open in the GUI  |
+| `[path]` (tui)            | `landify.yaml` | YAML file to open in terminal |
