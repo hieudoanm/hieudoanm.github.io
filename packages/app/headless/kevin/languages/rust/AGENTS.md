@@ -63,7 +63,9 @@ optional slint Material GUI (`--gui` feature).
 - `slint-build` is a non-optional build dependency. `build.rs` uses a runtime
   gate (`CARGO_FEATURE_GUI` env var) to skip compilation when the feature is
   off, avoiding `cfg` in the build script while keeping the slint compiler
-  available when the feature is enabled.
+  available when the feature is enabled. The GUI compiles with the Material
+  style by default (`"material"`, follows the OS theme); set `SLINT_STYLE`
+  to `material-light` or `material-dark` for a pinned variant.
 - Tests: 55 tests across `src/` (unit), `tests/handler.rs` (protocol table
   tests), `tests/persist.rs` (atomic save/load), `tests/server.rs` (TCP
   integration + graceful shutdown). Each test creates its own `DB::new()`.

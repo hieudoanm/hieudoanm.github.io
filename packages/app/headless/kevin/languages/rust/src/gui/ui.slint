@@ -1,9 +1,19 @@
 // kevin key/value manager — built with the Material design style.
 //
 // All display strings (row numbers, count) are pre-formatted in Rust to keep
-// the markup free of string interpolation.
+// the markup free of string interpolation. Custom colours come from the
+// style's Palette, spacing from an 8dp Material token set, and the table rows
+// sit on a level-1 elevated card so the window chrome reads as flat.
 
-import { Button, LineEdit, ScrollView, VerticalBox, HorizontalBox, ListView } from "std-widgets.slint";
+import { Button, LineEdit, ScrollView, VerticalBox, HorizontalBox, ListView, Palette } from "std-widgets.slint";
+
+/// Material 8dp spacing grid, reused instead of ad-hoc pixel values.
+export global Spacing {
+    out property <length> xs: 4px;
+    out property <length> sm: 8px;
+    out property <length> md: 16px;
+    out property <length> lg: 24px;
+}
 
 export struct RowData {
     index: int,
@@ -32,11 +42,13 @@ export component MainWindow inherits Window {
     callback delete(int);
 
     VerticalBox {
-        padding: 8px;
-        spacing: 8px;
+        min-width: 480px;
+        min-height: 360px;
+        padding: Spacing.sm;
+        spacing: Spacing.md;
 
         HorizontalBox {
-            spacing: 8px;
+            spacing: Spacing.sm;
             LineEdit {
                 placeholder-text: "key / search";
                 text <=> key-text;
@@ -48,6 +60,7 @@ export component MainWindow inherits Window {
             }
             Button {
                 text: "Set";
+                primary: true;
                 clicked => { root.set-clicked(); }
             }
             Button {
@@ -60,46 +73,72 @@ export component MainWindow inherits Window {
             }
         }
 
-        // column headers
-        HorizontalBox {
-            spacing: 4px;
-            Text { text: "No"; width: 40px; horizontal-alignment: center; }
-            Text { text: "Key"; width: 220px; }
-            Text { text: "Value"; }
-            Text { text: "Edit"; width: 64px; horizontal-alignment: center; }
-            Text { text: "Copy"; width: 64px; horizontal-alignment: center; }
-            Text { text: "Delete"; width: 64px; horizontal-alignment: center; }
-        }
+        // data grid on a level-1 elevated surface — the card colour and
+        // shadow separate it from the flat window background
+        Rectangle {
+            border-radius: 12px;
+            background: Palette.alternate-background;
+            drop-shadow-blur: 4px;
+            drop-shadow-color: #00000022;
+            drop-shadow-offset-y: 1px;
 
-        ScrollView {
-            ListView {
-                for row in root.rows: HorizontalBox {
-                    spacing: 4px;
-                    Text { text: row.no; width: 40px; horizontal-alignment: center; }
-                    Text { text: row.key; width: 220px; }
-                    Text { text: row.value; }
-                    Button {
-                        width: 64px;
-                        text: "Edit";
-                        clicked => { root.edit(row.index); }
-                    }
-                    Button {
-                        width: 64px;
-                        text: "Copy";
-                        clicked => { root.copy(row.index); }
-                    }
-                    Button {
-                        width: 64px;
-                        text: "Delete";
-                        clicked => { root.delete(row.index); }
+            VerticalBox {
+                padding: Spacing.sm;
+                spacing: Spacing.xs;
+
+                // column headings as a caption-size grid header
+                HorizontalBox {
+                    spacing: Spacing.xs;
+                    Text { text: "No"; width: 40px; font-size: 12px; font-weight: 600; horizontal-alignment: center; }
+                    Text { text: "Key"; width: 220px; font-size: 12px; font-weight: 600; }
+                    Text { text: "Value"; font-size: 12px; font-weight: 600; }
+                    Text { text: "Edit"; width: 64px; font-size: 12px; font-weight: 600; horizontal-alignment: center; }
+                    Text { text: "Copy"; width: 64px; font-size: 12px; font-weight: 600; horizontal-alignment: center; }
+                    Text { text: "Delete"; width: 64px; font-size: 12px; font-weight: 600; horizontal-alignment: center; }
+                }
+
+                ScrollView {
+                    ListView {
+                        for row in root.rows: HorizontalBox {
+                            spacing: Spacing.xs;
+                            Text { text: row.no; width: 40px; horizontal-alignment: center; }
+                            Text { text: row.key; width: 220px; }
+                            Text { text: row.value; }
+                            Button {
+                                width: 64px;
+                                text: "Edit";
+                                clicked => { root.edit(row.index); }
+                            }
+                            Button {
+                                width: 64px;
+                                text: "Copy";
+                                clicked => { root.copy(row.index); }
+                            }
+                            Button {
+                                width: 64px;
+                                text: "Delete";
+                                clicked => { root.delete(row.index); }
+                            }
+                        }
                     }
                 }
             }
         }
 
+        // footer — status (body) on the left, key count as a small label right
         HorizontalBox {
-            Text { text: root.status-text; }
-            Text { text: root.count-text; }
+            spacing: Spacing.sm;
+            Text {
+                text: root.status-text;
+                vertical-alignment: center;
+            }
+            Rectangle { }
+            Text {
+                text: root.count-text;
+                font-size: 12px;
+                font-weight: 600;
+                vertical-alignment: center;
+            }
         }
     }
 }

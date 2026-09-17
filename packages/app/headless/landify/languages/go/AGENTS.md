@@ -45,7 +45,12 @@ Verification before handoff: `make all` passes — `go fmt` produces no diff,
   `generate <type>`, `theme <name>`, `help`, `quit`), Esc toggles modes,
   Ctrl-C/Ctrl-Q quit. Pure logic lives in `internal/tui/action.go`
   (`parseCommand`, `renderConfig`) so the editor's pipeline is unit-tested;
-  `cmd/tui.go` only parses the optional argument.
+  `cmd/tui.go` only parses the optional argument. Styling lives in
+  `internal/tui/styles.go` (Lip Gloss) per the bubbletea design skill in
+  `packages/app/headless/skills/go/bubbletea.md`: an adaptive dark/light
+  palette, a rounded border whose colour tracks the active mode (editor vs
+  `:command`), bold-primary title, and a status bar coloured by meaning
+  (red errors, green successes, muted hints).
 - `studio` takes an optional positional `[path]` (defaults to a new blank
   product scaffold) and delegates to `internal/gui.Run`. It is the only
   subcommand gated by a build tag: the default build ships a stub that returns

@@ -41,8 +41,10 @@ SET, GET, KEYS, DEL over TCP, behaviour-identical to the C (`kevin/c`) and C++
   requires CGO, so the window lives behind the `gui` build tag:
   `internal/gui/gui_fyne.go` (`//go:build gui`) is the real window;
   `internal/gui/gui.go` (no tag) is a stub whose `Run` returns
-  `gui.ErrUnavailable`. Default builds stay CGO-free; `make build-gui` links
-  the window.
+  `gui.ErrUnavailable`. The UI uses the custom theme in
+  `internal/gui/theme.go` (both variants) per
+  `packages/app/headless/FYNE.md`. Default builds stay CGO-free;
+  `make build-gui` links the window.
 - `--tui` opens the bubbletea terminal manager (`internal/tui`) on the same
   `db.DB` as the TCP server. It is pure Go (no CGO) so it compiles into every
   build; `serveWithTUI` mirrors `serveWithGUI` (server in a goroutine, TUI on

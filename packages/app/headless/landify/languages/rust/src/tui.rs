@@ -5,10 +5,10 @@
 
 use anyhow::{anyhow, Context, Result};
 use crossterm::event::{self, Event, KeyCode, KeyEvent, KeyEventKind, KeyModifiers};
-use ratatui::layout::{Constraint, Layout};
+use ratatui::layout::{Alignment, Constraint, Layout};
 use ratatui::style::{Color, Modifier, Style};
-use ratatui::text::Line;
-use ratatui::widgets::{Block, Borders, Paragraph};
+use ratatui::text::{Line, Span};
+use ratatui::widgets::{Block, BorderType, Borders, Paragraph, Wrap};
 use ratatui::{DefaultTerminal, Frame};
 use std::fs;
 
@@ -150,6 +150,86 @@ impl Editor {
     }
 }
 
+/// The ratatui palette, defined once and threaded through `render` so colour
+/// never scatters across the UI. Matches the shared design tokens (dark
+/// variant); truecolour `Color::Rgb` so broad terminal support is automatic.
+#[derive(Debug, Clone, Copy)]
+struct UiTheme {
+    background: Color,
+    surface: Color,
+    primary: Color,
+    accent: Color,
+    foreground: Color,
+    muted: Color,
+    border: Color,
+    border_focused: Color,
+    error: Color,
+    success: Color,
+}
+
+impl UiTheme {
+    fn dark() -> Self {
+        Self {
+            background: Color::Rgb(0x1a, 0x1a, 0x1e),
+            surface: Color::Rgb(0x26, 0x26, 0x2c),
+            primary: Color::Rgb(0x4f, 0x9c, 0xff),
+            accent: Color::Rgb(0xa7, 0x8b, 0xfa),
+            foreground: Color::Rgb(0xe8, 0xe8, 0xec),
+            muted: Color::Rgb(0x9a, 0x9a, 0xa5),
+            border: Color::Rgb(0x3a, 0x3a, 0x42),
+            border_focused: Color::Rgb(0x4f, 0x9c, 0xff),
+            error: Color::Rgb(0xff, 0x5c, 0x5c),
+            success: Color::Rgb(0x4f, 0xd6, 0x8c),
+        }
+    }
+}
+
+/// The status bar tone for a message: errors red, confirms green, hints muted.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+enum StatusTone {
+    Ok,
+    Error,
+    Hint,
+}
+
+/// Classifies a status message so the footer colours match its meaning.
+fn status_tone(status: &str) -> StatusTone {
+    const ERRORS: [&str; 5] = [
+        "could not read",
+        "save failed",
+        "build failed",
+        "invalid",
+        "unknown",
+    ];
+    if ERRORS.iter().any(|prefix| status.starts_with(prefix)) {
+        return StatusTone::Error;
+    }
+    const OK: [&str; 6] = [
+        "Saved",
+        "Reloaded",
+        "Built",
+        "Generated",
+        "valid",
+        "Build theme:",
+    ];
+    if OK.iter().any(|prefix| status.starts_with(prefix)) {
+        return StatusTone::Ok;
+    }
+    StatusTone::Hint
+}
+
+fn status_style(tone: StatusTone, theme: UiTheme) -> Style {
+    match tone {
+        StatusTone::Ok => Style::default()
+            .fg(theme.success)
+            .add_modifier(Modifier::BOLD),
+        StatusTone::Error => Style::default()
+            .fg(theme.error)
+            .add_modifier(Modifier::BOLD),
+        StatusTone::Hint => Style::default().fg(theme.muted).add_modifier(Modifier::DIM),
+    }
+}
+
 struct App {
     file: String,
     editor: Editor,
@@ -190,34 +270,88 @@ impl App {
     }
 
     fn render(&self, frame: &mut Frame) {
+        let theme = UiTheme::dark();
+        let area = frame.area();
+        frame.render_widget(
+            Block::default().style(Style::default().bg(theme.background)),
+            area,
+        );
         let chunks = Layout::vertical([
             Constraint::Length(1),
             Constraint::Min(4),
-            Constraint::Length(3),
+            Constraint::Length(1),
         ])
-        .split(frame.area());
+        .split(area);
 
-        let dirty_mark = if self.dirty { "•" } else { " " };
-        let theme = if self.theme_override.is_empty() {
+        let build_theme = if self.theme_override.is_empty() {
             "yaml".to_string()
         } else {
             self.theme_override.clone()
         };
+        let title = Line::from(vec![
+            Span::styled(
+                "landify tui",
+                Style::default()
+                    .fg(theme.primary)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(
+                format!("  build theme: {build_theme} "),
+                Style::default().fg(theme.muted),
+            ),
+        ]);
         frame.render_widget(
-            Paragraph::new(Line::from(format!(
-                "{} {}  build theme: {theme}",
-                self.file, dirty_mark
-            )))
-            .style(Style::default().add_modifier(Modifier::BOLD)),
+            Paragraph::new(title).style(Style::default().bg(theme.surface)),
             chunks[0],
         );
 
+        let dirty_mark = if self.dirty { " •" } else { " " };
+        let mode_label = if self.mode == Mode::Command {
+            "COMMAND"
+        } else {
+            "EDIT"
+        };
+        let edge_color = if self.mode == Mode::Edit {
+            theme.border_focused
+        } else {
+            theme.border
+        };
+        let file_title = Line::from(vec![
+            Span::styled(
+                format!(" {} ", self.file),
+                Style::default()
+                    .fg(theme.primary)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(dirty_mark, Style::default().fg(theme.accent)),
+        ]);
+        let mode_title = Line::from(format!(" {mode_label} "))
+            .alignment(Alignment::Right)
+            .style(
+                Style::default()
+                    .fg(theme.accent)
+                    .add_modifier(Modifier::BOLD),
+            );
         let content: Vec<Line> = self
             .editor
             .lines
             .iter()
             .enumerate()
-            .map(|(no, line)| Line::from(format!("{:>4} │ {line}", no + 1)))
+            .map(|(no, line)| {
+                let at_cursor = no == self.editor.row;
+                let gutter = if at_cursor {
+                    Style::default()
+                        .fg(theme.primary)
+                        .add_modifier(Modifier::BOLD)
+                } else {
+                    Style::default().fg(theme.muted)
+                };
+                Line::from(vec![
+                    Span::styled(format!("{:>4} ", no + 1), gutter),
+                    Span::styled("│ ", Style::default().fg(theme.muted)),
+                    Span::styled(line, Style::default().fg(theme.foreground)),
+                ])
+            })
             .collect();
         let height = chunks[1].height.saturating_sub(2) as usize;
         let scroll = self.editor.row.saturating_sub(height);
@@ -226,21 +360,43 @@ impl App {
                 .block(
                     Block::default()
                         .borders(Borders::ALL)
-                        .title(self.file.clone())
-                        .border_style(Style::default().fg(Color::Cyan)),
+                        .border_type(BorderType::Rounded)
+                        .title(file_title)
+                        .title(mode_title)
+                        .border_style(Style::default().fg(edge_color)),
                 )
+                .style(Style::default().bg(theme.surface))
+                .wrap(Wrap { trim: true })
                 .scroll((scroll as u16, 0)),
             chunks[1],
         );
 
         let bottom = if self.mode == Mode::Command {
-            format!(": {}▏", self.command)
+            Line::from(vec![
+                Span::styled(
+                    ": ",
+                    Style::default()
+                        .fg(theme.primary)
+                        .add_modifier(Modifier::BOLD),
+                ),
+                Span::styled(self.command.clone(), Style::default().fg(theme.foreground)),
+                Span::styled("▏", Style::default().fg(theme.muted)),
+            ])
         } else if self.status.is_empty() {
-            "type to edit — Esc for :commands, Ctrl-C to quit".to_string()
+            Line::from(vec![Span::styled(
+                "type to edit — Esc for :commands · Ctrl-C to quit",
+                Style::default().fg(theme.muted).add_modifier(Modifier::DIM),
+            )])
         } else {
-            self.status.clone()
+            Line::from(vec![Span::styled(
+                self.status.clone(),
+                status_style(status_tone(&self.status), theme),
+            )])
         };
-        frame.render_widget(Paragraph::new(Line::from(bottom)), chunks[2]);
+        frame.render_widget(
+            Paragraph::new(bottom).style(Style::default().bg(theme.surface)),
+            chunks[2],
+        );
     }
 
     fn on_key(&mut self, key: KeyEvent) -> bool {
@@ -651,5 +807,25 @@ mod tests {
         assert_eq!(app.editor.text(), "ab");
         app.do_save();
         assert!(!app.dirty);
+    }
+
+    #[test]
+    fn ui_theme_dark_palette_matches_tokens() {
+        let theme = UiTheme::dark();
+        assert_eq!(theme.background, Color::Rgb(0x1a, 0x1a, 0x1e));
+        assert_eq!(theme.primary, Color::Rgb(0x4f, 0x9c, 0xff));
+        assert_eq!(theme.error, Color::Rgb(0xff, 0x5c, 0x5c));
+        assert_eq!(theme.success, Color::Rgb(0x4f, 0xd6, 0x8c));
+        assert_eq!(theme.border_focused, theme.primary);
+    }
+
+    #[test]
+    fn status_tone_classifies_messages() {
+        assert_eq!(status_tone("Saved x.yaml (3 bytes)"), StatusTone::Ok);
+        assert_eq!(status_tone("valid — landify.yaml conforms"), StatusTone::Ok);
+        assert_eq!(status_tone("could not read x.yaml"), StatusTone::Error);
+        assert_eq!(status_tone("invalid — 2 problems"), StatusTone::Error);
+        assert_eq!(status_tone("unknown command \"wibble\""), StatusTone::Error);
+        assert_eq!(status_tone("something else"), StatusTone::Hint);
     }
 }

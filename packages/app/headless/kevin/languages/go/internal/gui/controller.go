@@ -63,7 +63,9 @@ func newController(kv *db.DB, setTitle func(string), confirm func(string, string
 	}
 	c.status = widget.NewLabel("")
 	c.status.Alignment = fyne.TextAlignTrailing
+	c.status.Importance = widget.LowImportance
 	c.count = widget.NewLabel("")
+	c.count.TextStyle = fyne.TextStyle{Bold: true}
 
 	c.keyEntry = widget.NewEntry()
 	c.keyEntry.SetPlaceHolder("key / search")
@@ -77,8 +79,10 @@ func newController(kv *db.DB, setTitle func(string), confirm func(string, string
 	c.valueEntry.SetPlaceHolder("value")
 
 	c.setBtn = widget.NewButtonWithIcon("", theme.DocumentSaveIcon(), c.doSet)
+	c.setBtn.Importance = widget.HighImportance
 	c.refreshBtn = widget.NewButtonWithIcon("", theme.ViewRefreshIcon(), c.refresh)
 	c.delAllBtn = widget.NewButtonWithIcon("", theme.ContentClearIcon(), c.confirmDeleteAll)
+	c.delAllBtn.Importance = widget.DangerImportance
 	c.actionWide = maxButtonWidth(c.setBtn, c.refreshBtn, c.delAllBtn)
 
 	c.keyTable = widget.NewTableWithHeaders(

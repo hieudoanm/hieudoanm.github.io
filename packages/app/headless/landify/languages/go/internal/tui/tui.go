@@ -45,14 +45,15 @@ func Run(path string) error {
 
 func newModel(path string) model {
 	area := textarea.New()
-	area.Placeholder = "landify.yaml — type to edit, Esc opens the :command line, ctrl+c quits"
+	area.Placeholder = "landify.yaml — type to edit, Esc opens the :command line"
 	area.CharLimit = 0
 	area.ShowLineNumbers = true
-	area.SetWidth(80)
+	area.SetWidth(editorInnerWidth(contentWidth(80)))
 
 	cmd := textinput.New()
-	cmd.Placeholder = "command"
+	cmd.Placeholder = ""
 	cmd.CharLimit = 256
+	cmd.Width = commandWidth(contentWidth(80))
 
 	m := model{path: path, area: area, cmd: cmd}
 	m.reload() // load early so the editor starts with the current file
@@ -66,8 +67,14 @@ func (m model) Init() tea.Cmd {
 func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	switch msg := msg.(type) {
 	case tea.WindowSizeMsg:
-		m.area.SetWidth(msg.Width)
-		m.area.SetHeight(msg.Height - 4)
+		cw := contentWidth(msg.Width)
+		m.area.SetWidth(editorInnerWidth(cw))
+		if h := msg.Height - 8; h > 3 {
+			m.area.SetHeight(h)
+		} else {
+			m.area.SetHeight(3)
+		}
+		m.cmd.Width = commandWidth(cw)
 		return m, nil
 	case tea.KeyMsg:
 		return m.handleKey(msg)
@@ -123,33 +130,46 @@ func (m model) toggleMode() (model, tea.Cmd) {
 	return m, blink
 }
 
-// View renders the editor: an info row, the YAML pane, and a command/status
-// row. In editor mode the bottom row shows the status (or a hint); in command
-// mode it becomes a ": " prompt.
+// View renders the editor: a styled header, a bordered YAML pane, and a
+// status/command row. The active mode owns the primary border colour, and the
+// status bar colours failures red and successes green.
 func (m model) View() string {
-	width := m.area.Width()
-	if width < 1 {
-		width = 80
+	cw := contentWidth(m.area.Width() + 4)
+
+	mode := accentStyle.Render(" [COMMAND]")
+	edge := unfocusedStyle
+	if m.active == modeEditor {
+		mode = titleStyle.Render(" [EDIT]")
+		edge = focusedStyle
 	}
-	rule := strings.Repeat("─", width)
+
+	dirty := mutedStyle.Render(" ")
+	if m.dirty {
+		dirty = dirtyStyle.Render("•")
+	}
 	theme := m.themeOverride
 	if theme == "" {
 		theme = "yaml"
 	}
-	dirty := " "
-	if m.dirty {
-		dirty = "•"
-	}
-	info := fmt.Sprintf("%s %s  build theme: %s", m.path, dirty, theme)
+	title := titleStyle.Render(m.path)
+	themeInfo := mutedStyle.Render("  build theme: " + theme)
+	header := distribute(title+" "+dirty, themeInfo+mode, cw)
 
-	var bottom string
+	rule := ruleStyle.Render(strings.Repeat("─", cw))
+
+	var left, right string
 	if m.active == modeCommand {
-		bottom = ": " + m.cmd.View()
+		left = promptStyle.Render(": ") + m.cmd.View()
 	} else {
-		bottom = m.status
-		if bottom == "" {
-			bottom = "type to edit — Esc for :commands, ctrl+c to quit"
+		left = hintStyle.Render("type to edit the YAML pane")
+		if m.status != "" {
+			left = statusStyle(m.status).Render(m.status)
 		}
+		right = hintStyle.Render("esc :command · ctrl+c quit")
 	}
-	return info + "\n" + rule + "\n" + m.area.View() + "\n" + rule + "\n" + bottom
+	bottom := distribute(left, right, cw)
+
+	return rootStyle.Render(strings.Join([]string{
+		header, rule, edge.Render(m.area.View()), rule, bottom,
+	}, "\n"))
 }
