@@ -48,6 +48,9 @@ Crate-specific:
 - GUI closures: `Arc<Mutex<App>>` (slint callbacks must be `Send + 'static`)
 - `slint-build` is always in `[build-dependencies]`; `build.rs` skips
   compilation at runtime when the `gui` feature is off
+- TUI (`src/tui.rs`) uses `ratatui` + `crossterm`; it is always compiled, so
+  `serve --tui` works in every build. Key input is filtered on
+  `KeyEventKind::Press`, and `--gui`/`--tui` are declared `conflicts_with`.
 
 ## Testing Conventions
 

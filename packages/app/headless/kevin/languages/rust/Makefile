@@ -13,7 +13,7 @@ help:
 	@echo "  lint       cargo clippy --all-targets -- -D warnings"
 	@echo "  test       cargo test --all-targets"
 	@echo "  bench      cargo bench"
-	@echo "  build      cargo build --release (CLI only)"
+	@echo "  build      cargo build --release (no GUI; includes --tui)"
 	@echo "  build-gui  cargo build --release --features gui"
 	@echo "  install    cargo install --path ."
 	@echo "  clean      cargo clean"

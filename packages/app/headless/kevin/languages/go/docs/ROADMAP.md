@@ -17,6 +17,7 @@
 - [x] CI: `go` job in `ci-app-headless-kevin.yaml` + rolling GitHub Release
 - [x] cobra CLI (`cmd/`) with a single `serve` subcommand (`--port`, `--gui`)
 - [x] fyne key/value manager GUI behind the `gui` build tag (`serve --gui`)
+- [x] bubbletea key/value manager TUI compiled into every build (`serve --tui`)
 
 ## Phase 2 — Protocol & behaviour
 

@@ -2,7 +2,7 @@
 
 > A Redis-style in-memory key/value store — PING, SET, GET, KEYS, DEL — in a
 > single static Rust binary. Same protocol as the C, C++ and Go builds, with
-> optional slint Material GUI and JSON persistence.
+> a built-in ratatui TUI, optional slint Material GUI and JSON persistence.
 
 ![Platform](https://img.shields.io/badge/platform-cross--platform-blue)
 ![Build](https://img.shields.io/badge/build-release-blue)
@@ -24,12 +24,12 @@ Pick the option that fits your environment.
 
 ### Prebuilt binary
 
-| No  | Platform | Architecture | Download Link                          | Note                          |
-| --- | -------- | ------------ | -------------------------------------- | ----------------------------- |
-| 1   | Linux    | amd64        | [Download `kevin`][linux-amd64]        | Static binary, no deps needed |
-| 2   | Linux    | arm64        | [Download `kevin`][linux-arm64]        | Static binary, no deps needed |
-| 3   | macOS    | amd64        | [Download `kevin`][darwin-amd64]       | Static binary, no deps needed |
-| 4   | macOS    | arm64        | [Download `kevin`][darwin-arm64]       | Static binary, no deps needed |
+| No  | Platform | Architecture | Download Link                    | Note                          |
+| --- | -------- | ------------ | -------------------------------- | ----------------------------- |
+| 1   | Linux    | amd64        | [Download `kevin`][linux-amd64]  | Static binary, no deps needed |
+| 2   | Linux    | arm64        | [Download `kevin`][linux-arm64]  | Static binary, no deps needed |
+| 3   | macOS    | amd64        | [Download `kevin`][darwin-amd64] | Static binary, no deps needed |
+| 4   | macOS    | arm64        | [Download `kevin`][darwin-arm64] | Static binary, no deps needed |
 
 [linux-amd64]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-kevin-latest/app-headless-kevin-rust-kevin-linux-amd64
 [linux-arm64]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-kevin-latest/app-headless-kevin-rust-kevin-linux-arm64
@@ -103,6 +103,13 @@ the C, C++ and Go implementations in this package, kept behaviour-identical.
 ### 🖥️ Optional GUI
 
 - slint Material window behind the `gui` cargo feature (`--features gui`)
+
+### ⌨️ Built-in TUI
+
+- ratatui terminal manager (`serve --tui`) compiled into every binary; pure
+  Rust, no extra deps. Keys: `tab` cycles focus, `enter` sets/edits, `d`
+  deletes, `D` deletes all, `r` refreshes, `q`/`Ctrl-C` quits. `--gui` and
+  `--tui` are mutually exclusive.
 
 ### 🚀 Portable
 

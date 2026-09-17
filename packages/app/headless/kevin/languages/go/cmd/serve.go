@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"context"
+	"errors"
 	"fmt"
 	"log/slog"
 	"net"
@@ -12,6 +13,7 @@ import (
 	"github.com/hieudoanm/kevin/internal/db"
 	"github.com/hieudoanm/kevin/internal/gui"
 	"github.com/hieudoanm/kevin/internal/server"
+	"github.com/hieudoanm/kevin/internal/tui"
 	"github.com/spf13/cobra"
 )
 
@@ -20,6 +22,7 @@ func newServeCommand() *cobra.Command {
 		port string
 		bind string
 		gui  bool
+		tui  bool
 		data string
 	)
 
@@ -27,6 +30,9 @@ func newServeCommand() *cobra.Command {
 		Use:   "serve",
 		Short: "Run the Redis-style TCP server",
 		RunE: func(_ *cobra.Command, _ []string) error {
+			if gui && tui {
+				return errors.New("--gui and --tui are mutually exclusive")
+			}
 			ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt, syscall.SIGTERM)
 			defer stop()
 
@@ -54,6 +60,9 @@ func newServeCommand() *cobra.Command {
 				return fmt.Errorf("listen on %s: %w", addr, err)
 			}
 
+			if tui {
+				return serveWithTUI(ctx, ln, addr, kv)
+			}
 			if gui {
 				return serveWithGUI(ctx, ln, addr, kv)
 			}
@@ -66,6 +75,7 @@ func newServeCommand() *cobra.Command {
 	serve.Flags().StringVar(&port, "port", "6379", "TCP port to listen on")
 	serve.Flags().StringVar(&bind, "bind", "0.0.0.0", "Address to bind to")
 	serve.Flags().BoolVar(&gui, "gui", false, "open the key/value manager GUI alongside the server")
+	serve.Flags().BoolVar(&tui, "tui", false, "open the key/value manager TUI alongside the server")
 	serve.Flags().StringVar(&data, "data", "", "path to JSON data file for persistence")
 	return serve
 }
@@ -78,6 +88,19 @@ func serveWithGUI(ctx context.Context, ln net.Listener, addr string, kv *db.DB) 
 
 	slog.Info("server listening", "addr", addr)
 	if err := gui.Run(ctx, kv); err != nil {
+		return err
+	}
+	return <-serverErr
+}
+
+func serveWithTUI(ctx context.Context, ln net.Listener, addr string, kv *db.DB) error {
+	serverErr := make(chan error, 1)
+	go func() {
+		serverErr <- server.New(kv).Serve(ctx, ln)
+	}()
+
+	slog.Info("server listening", "addr", addr)
+	if err := tui.Run(ctx, kv); err != nil {
 		return err
 	}
 	return <-serverErr

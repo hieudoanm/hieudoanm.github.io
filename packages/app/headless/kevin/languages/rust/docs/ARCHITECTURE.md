@@ -11,6 +11,7 @@
 | Persistence | Atomic JSON snapshot (`serde_json`, tmp + rename)         |
 | Protocol    | Redis-style (PING, SET, GET, KEYS, DEL + TTL commands)    |
 | GUI         | slint 1 (Material design, opt-in `gui` feature)           |
+| TUI         | ratatui 0.30 + crossterm (compiled into every build)      |
 | Testing     | `cargo test` + criterion benchmarks                       |
 
 ## Directory Structure
@@ -29,6 +30,7 @@ rust/
 ├── gui.rs               # GUI entry point (stub when feature off)
 │   └── real.rs          # slint Material window (when feature on)
 │   └── ui.slint         # slint markup
+├── tui.rs               # ratatui terminal manager (serve --tui)
 ├── benches/
 │   └── bench.rs         # criterion benchmarks (set/get/keys)
 ├── tests/
@@ -48,15 +50,16 @@ All CLI wiring lives in `cli.rs`, built on clap derive.
 ### `cli` (CLI)
 
 `src/cli.rs` declares `Cli` with a single subcommand, `Serve(ServeArgs)`.
-`ServeArgs` has `--port` (default 6379), `--bind`, `--data` and `--gui` flags.
-`run_serve`:
+`ServeArgs` has `--port` (default 6379), `--bind`, `--data`, `--gui` and
+`--tui` flags (`--gui` conflicts with `--tui`). `run_serve`:
 
 1. Creates `Arc<DB>` and optionally loads a `--data` JSON file
 2. Opens a `TcpListener` on the bind address
 3. Registers SIGINT/SIGTERM signal flags for graceful shutdown
-4. Without `--gui`: calls `server::serve(listener, kv, stop)`
-5. With `--gui`: spawns the server in a thread and runs `gui::run(kv)` on the
-   main thread — closing the GUI window stops the server
+4. Without `--gui`/`--tui`: calls `server::serve(listener, kv, stop)`
+5. With `--gui` or `--tui`: spawns the server in a thread and runs the UI
+   (`gui::run` / `tui::run`) on the main thread — closing the UI stops the
+   server
 
 ### `db` (Storage)
 
@@ -101,5 +104,6 @@ client → TcpListener::accept → std::thread per conn
 | `--bind` | `0.0.0.0` | Address to bind to                           |
 | `--data` |           | Path to JSON persistence file                |
 | `--gui`  | `false`   | Open slint Material GUI alongside the server |
+| `--tui`  | `false`   | Open ratatui TUI alongside the server        |
 
 `RUST_LOG` overrides the default `info` tracing level.

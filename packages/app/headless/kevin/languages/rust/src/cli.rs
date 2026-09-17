@@ -1,8 +1,8 @@
 //! clap.rs CLI: a single `serve` subcommand with `--port`, `--bind`,
-//! `--data` and `--gui` flags. `run()` is the application entry point.
+//! `--data`, `--gui` and `--tui` flags. `run()` is the application entry point.
 
 use crate::db::DB;
-use crate::{gui, server};
+use crate::{gui, server, tui};
 use anyhow::Context;
 use clap::{Parser, Subcommand};
 use std::net::TcpListener;
@@ -46,6 +46,10 @@ pub struct ServeArgs {
     /// Open the key/value manager GUI alongside the server
     #[arg(long)]
     pub gui: bool,
+
+    /// Open the key/value manager TUI alongside the server
+    #[arg(long, conflicts_with = "gui")]
+    pub tui: bool,
 }
 
 /// Parses the CLI, initialises logging and dispatches to the subcommand.
@@ -79,8 +83,10 @@ fn run_serve(args: ServeArgs) -> anyhow::Result<()> {
     let stop = Arc::new(AtomicBool::new(false));
     register_signals(&stop)?;
 
-    let serve_result = if args.gui {
-        run_with_gui(listener, &kv, &stop)
+    let serve_result = if args.tui {
+        run_with_ui(listener, &kv, &stop, tui::run)
+    } else if args.gui {
+        run_with_ui(listener, &kv, &stop, gui::run)
     } else {
         server::serve(listener, kv.clone(), stop).map_err(anyhow::Error::from)
     };
@@ -94,9 +100,14 @@ fn run_serve(args: ServeArgs) -> anyhow::Result<()> {
     serve_result
 }
 
-/// Serves in a background thread while the GUI runs on the main thread,
-/// mirroring the Go implementation. Closing the window stops the server.
-fn run_with_gui(listener: TcpListener, kv: &Arc<DB>, stop: &Arc<AtomicBool>) -> anyhow::Result<()> {
+/// Serves in a background thread while the UI runs on the main thread,
+/// mirroring the Go implementation. Closing the UI stops the server.
+fn run_with_ui(
+    listener: TcpListener,
+    kv: &Arc<DB>,
+    stop: &Arc<AtomicBool>,
+    ui: fn(Arc<DB>) -> anyhow::Result<()>,
+) -> anyhow::Result<()> {
     let kv_server = kv.clone();
     let stop_server = stop.clone();
     let handle = std::thread::Builder::new()
@@ -104,11 +115,11 @@ fn run_with_gui(listener: TcpListener, kv: &Arc<DB>, stop: &Arc<AtomicBool>) -> 
         .spawn(move || server::serve(listener, kv_server, stop_server))
         .context("spawn server thread")?;
 
-    let gui_result = gui::run(kv.clone()).context("failed to open GUI");
+    let ui_result = ui(kv.clone()).context("UI failed");
 
     stop.store(true, Ordering::Relaxed);
     let _ = handle.join();
-    gui_result
+    ui_result
 }
 
 /// Sets `stop` true when SIGINT or SIGTERM is received.
@@ -136,6 +147,7 @@ mod tests {
         assert_eq!(args.port, 6379);
         assert_eq!(args.bind, "0.0.0.0");
         assert!(!args.gui);
+        assert!(!args.tui);
         assert!(args.data.is_none());
     }
 
@@ -153,6 +165,19 @@ mod tests {
         assert_eq!(args.port, 8090);
         assert_eq!(args.bind, "127.0.0.1");
         assert!(args.gui);
+        assert!(!args.tui);
+    }
+
+    #[test]
+    fn tui_flag_parsed() {
+        let args = serve_args(&["kevin", "serve", "--tui"]);
+        assert!(args.tui);
+        assert!(!args.gui);
+    }
+
+    #[test]
+    fn gui_and_tui_conflict() {
+        assert!(Cli::try_parse_from(["kevin", "serve", "--gui", "--tui"]).is_err());
     }
 
     #[test]

@@ -34,6 +34,7 @@
 - [x] `--bind` flag for address selection (default `0.0.0.0`)
 - [x] Criterion benchmarks (`set`, `get`, `keys`)
 - [x] slint Material GUI behind the `gui` cargo feature (`serve --gui`)
+- [x] ratatui TUI compiled into every build (`serve --tui`, conflicts with `--gui`)
 
 ## Phase 4 — Ecosystem
 

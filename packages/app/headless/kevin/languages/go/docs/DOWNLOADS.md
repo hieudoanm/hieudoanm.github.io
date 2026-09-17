@@ -1,8 +1,8 @@
 # KeVIN (Go)
 
 > A Redis-style in-memory key/value store — PING, SET, GET, KEYS, DEL — in a
-> single static Go binary. Same protocol as the C and C++ builds, no external
-> dependencies.
+> single static Go binary. Same protocol as the C and C++ builds, with a
+> built-in bubbletea TUI and an optional fyne GUI.
 
 ![Platform](https://img.shields.io/badge/platform-cross--platform-blue)
 ![Build](https://img.shields.io/badge/build-CGO_ENABLED%3D0-blue)
@@ -97,6 +97,14 @@ the C and C++ implementations in this package, kept behaviour-identical.
 ### 🧵 Concurrency
 
 - Goroutine-per-connection accept loop handles many clients at once
+
+### ⌨️ Built-in TUI
+
+- bubbletea terminal manager (`serve --tui`) compiled into every binary; pure
+  Go, no CGO. Keys: `tab` cycles focus, `enter` sets/edits, `d` deletes, `D`
+  deletes all, `r` refreshes, `q`/`Ctrl-C` quits. `--gui` and `--tui` are
+  mutually exclusive. An optional fyne GUI (`serve --gui`) is built via
+  `make build-gui` (needs CGO).
 
 ### 🚀 Portable
 

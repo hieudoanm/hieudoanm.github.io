@@ -9,21 +9,21 @@ go build ./...
 
 ## Commands
 
-| Command          | Purpose                               |
-| ---------------- | ------------------------------------- |
-| `go build ./...` | Compile all packages                  |
-| `go test ./...`  | Unit tests (all packages)             |
-| `go vet ./...`   | Static analysis                       |
-| `gofmt -w .`     | Format all Go files                   |
-| `go mod tidy`    | Tidy dependencies                     |
-| `make build`     | Build `bin/kevin` (CGO disabled)      |
-| `make build-gui` | Build `bin/kevin-gui` with fyne (`--gui`) |
-| `make build-all` | Cross-compile 4 platforms into `bin/` |
-| `make test`      | `go test ./...`                       |
-| `make lint`      | `go vet ./...`                        |
-| `make format`    | `go fmt ./...`                        |
-| `make coverage`  | HTML coverage report                  |
-| `make install`   | Install to `~/bin/kevin`              |
+| Command          | Purpose                                        |
+| ---------------- | ---------------------------------------------- |
+| `go build ./...` | Compile all packages                           |
+| `go test ./...`  | Unit tests (all packages)                      |
+| `go vet ./...`   | Static analysis                                |
+| `gofmt -w .`     | Format all Go files                            |
+| `go mod tidy`    | Tidy dependencies                              |
+| `make build`     | Build `bin/kevin` (CGO disabled, includes TUI) |
+| `make build-gui` | Build `bin/kevin-gui` with fyne (`--gui`)      |
+| `make build-all` | Cross-compile 4 platforms into `bin/`          |
+| `make test`      | `go test ./...`                                |
+| `make lint`      | `go vet ./...`                                 |
+| `make format`    | `go fmt ./...`                                 |
+| `make coverage`  | HTML coverage report                           |
+| `make install`   | Install to `~/bin/kevin`                       |
 
 ## Coding Conventions
 
@@ -43,6 +43,7 @@ cmd/                     # cobra CLI (root + serve subcommand)
 internal/
   db/                    # key/value store (RWMutex + map)
   gui/                   # fyne key/value manager (`gui` build tag)
+  tui/                   # bubbletea terminal key/value manager
   server/                # TCP server, protocol handler
 ```
 

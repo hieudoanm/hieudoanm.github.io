@@ -13,8 +13,8 @@ SET, GET, KEYS, DEL over TCP, behaviour-identical to the C (`kevin/c`) and C++
 | `go vet ./...`   | Static analysis                           |
 | `gofmt -w .`     | Format all Go files                       |
 | `make all`       | `format` + `lint` + `test` + `build`      |
-| `make build`     | Build `bin/kevin` (CGO disabled)          |
-| `make build-gui` | Build `bin/kevin-gui` with fyne (`--gui`) |
+| `make build`     | Build `bin/kevin` (CGO disabled, includes `--tui`) |
+| `make build-gui` | Build `bin/kevin-gui` with fyne (`--gui`)          |
 | `make build-all` | Cross-compile 4 platforms into `bin/`     |
 | `make test`      | `go test ./...`                           |
 | `make lint`      | `go vet ./...`                            |
@@ -29,11 +29,12 @@ SET, GET, KEYS, DEL over TCP, behaviour-identical to the C (`kevin/c`) and C++
 - CLI is built with cobra: `main.go` (`package main`) stays thin and calls
   `cmd.NewRootCommand().Execute()`. The root command declares one subcommand,
   `serve`, wire in `cmd/root.go` + `cmd/serve.go`. `serve` dialogs `--port`
-  (default 6379) and `--gui`. Without `--gui`, `serve` calls
+  (default 6379), `--gui` and `--tui`. Without either UI flag, `serve` calls
   `server.New(db.New()).Serve(ctx, ln)`.
 - Standard Go layout: `main.go` + `cmd/` (cobra CLI) + `internal/db` (store) +
   `internal/server` (TCP accept loop + protocol handler) + `internal/gui`
-  (fyne key/value manager). Storage lives in `internal/db`; parsing lives in
+  (fyne key/value manager) + `internal/tui` (bubbletea terminal manager).
+  Storage lives in `internal/db`; parsing lives in
   `internal/server/handler.go`. `internal/db` must not import `internal/server`
   (avoid cycles).
 - `--gui` opens the fyne window on the same `db.DB` as the TCP server. fyne
@@ -42,6 +43,11 @@ SET, GET, KEYS, DEL over TCP, behaviour-identical to the C (`kevin/c`) and C++
   `internal/gui/gui.go` (no tag) is a stub whose `Run` returns
   `gui.ErrUnavailable`. Default builds stay CGO-free; `make build-gui` links
   the window.
+- `--tui` opens the bubbletea terminal manager (`internal/tui`) on the same
+  `db.DB` as the TCP server. It is pure Go (no CGO) so it compiles into every
+  build; `serveWithTUI` mirrors `serveWithGUI` (server in a goroutine, TUI on
+  the main thread, quitting it stops the server). `--gui` and `--tui` are
+  mutually exclusive (`errors.New` in `serve`'s `RunE`).
 - Protocol parsing mirrors the C reference exactly: strip trailing `\r\n`,
   skip empty/whitespace lines, tokenise on spaces, case-insensitive commands,
   `SET` preserves internal value spaces, `GET`/`DEL` require exactly one arg.
@@ -66,8 +72,8 @@ SET, GET, KEYS, DEL over TCP, behaviour-identical to the C (`kevin/c`) and C++
 
 - In-memory `map[string]string` guarded by a `sync.RWMutex` — no persistence,
   no external storage.
-- `serve --port` (default `6379`) and `serve --gui` are the only
-  configuration; no env vars.
+- `serve --port` (default `6379`), `serve --gui` and `serve --tui` are the
+  only configuration; no env vars.
 - `bin/` and `coverage/` are gitignored (build output).
 
 ## Documentation

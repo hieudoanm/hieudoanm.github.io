@@ -7,7 +7,9 @@ the C and C++ builds in the same rolling release.
 
 `make build` produces `bin/kevin` with `CGO_ENABLED=0`, so the binary is
 self-contained (no glibc/musl dependency) and runs on any Linux/macOS host on
-amd64 and arm64.
+amd64 and arm64. The bubbletea TUI is pure Go and ships in this binary
+(`serve --tui`); the fyne GUI is only in the `--tags gui` build
+(`make build-gui`).
 
 ```bash
 CGO_ENABLED=0 go build -o bin/kevin .

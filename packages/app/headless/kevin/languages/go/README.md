@@ -82,6 +82,9 @@ subcommand:
 # Open the key/value manager GUI alongside the server (see build-gui below)
 ./kevin serve --gui
 
+# Open the key/value manager TUI alongside the server (compiled into every build)
+./kevin serve --tui
+
 # Talk to it with any Redis-cli-compatible tool or plain TCP:
 #   printf 'SET foo bar\nGET foo\n' | nc 127.0.0.1 6379
 ```
@@ -105,6 +108,7 @@ Redis-style `ERR unknown command` / `ERR usage: ...` response.
 | -------- | ------- | --------------------------------------------------- |
 | `--port` | `6379`  | TCP listen port                                     |
 | `--gui`  | `false` | Open the key/value manager GUI alongside the server |
+| `--tui`  | `false` | Open the key/value manager TUI alongside the server |
 
 The server is stateless and in-memory — all data is lost on shutdown, matching
 the C and C++ implementations.
@@ -122,6 +126,24 @@ make build-gui       # builds bin/kevin-gui
 
 Plain `make build` / `make build-all` remain CGO-free; `serve --gui` then
 reports that GUI support is not compiled in.
+
+## TUI
+
+`kevin serve --tui` opens a terminal UI built with
+[bubbletea](https://github.com/charmbracelet/bubbletea) to inspect and edit
+key/value pairs while the TCP server runs in the background. Because the TUI is
+pure Go (no CGO), it is compiled into every build:
+
+```bash
+make build            # the default bin/kevin already includes the TUI
+./bin/kevin serve --tui --port 6379
+```
+
+Keys: `tab` cycles Key/Search → Value → table; `enter` sets the inputs or loads
+the selected row into them; `↑/↓` move through the table; `d` deletes the
+selected row; `D` deletes all keys (with confirmation); `r` refreshes the
+fields; `q` or `Ctrl-C` quits and stops the server. `--gui` and `--tui` are
+mutually exclusive.
 
 ## Documentation
 

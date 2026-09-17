@@ -6,7 +6,8 @@ the C, C++ and Go builds in the same rolling release.
 ## Binary
 
 `make build` (or `cargo build --release`) produces an optimised binary in
-`target/release/kevin`. The default build is CLI-only with no GUI dependencies.
+`target/release/kevin`. The default build is CLI-only with no GUI dependencies;
+the ratatui TUI (`serve --tui`) is included because it is pure Rust.
 
 ```bash
 cargo build --release
@@ -56,7 +57,7 @@ the download URLs in [DOWNLOADS](DOWNLOADS) always point at the newest build.
 
 1. `cargo clippy --all-targets -- -D warnings` clean
 2. `cargo fmt -- --check` empty
-3. `cargo test --all-targets` green (47 tests)
+3. `cargo test --all-targets` green (55 tests)
 4. `cargo build --release` succeeds and
    `printf 'PING\r\n' | nc 127.0.0.1 <port>` replies `PONG`
 5. `docker build -t kevin-server .` succeeds and the image serves `PONG`
