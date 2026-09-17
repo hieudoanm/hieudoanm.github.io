@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357.71 279.86" width="357.71" height="279.86" role="img" aria-labelledby="malaysia-title malaysia-desc">
+  <title id="malaysia-title">Malaysia hex map</title>
+  <desc id="malaysia-desc">Hexagon map with 16 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.77; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 13.67 9.76; }
+    .label { fill: #52525b; font: 600 11.06px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="SK">
+    <title>Sarawak</title>
+    <polygon class="tile inset" points="319.76,107.39 347.94,123.66 347.94,156.20 319.76,172.47 291.58,156.20 291.58,123.66" aria-label="Sarawak"/>
+    <text class="label" x="319.76" y="139.93">SK</text>
+  </g>
+  <g class="state" data-state="SA">
+    <title>Sabah</title>
+    <polygon class="tile inset" points="319.76,205.01 347.94,221.28 347.94,253.82 319.76,270.09 291.58,253.82 291.58,221.28" aria-label="Sabah"/>
+    <text class="label" x="319.76" y="237.55">SA</text>
+  </g>
+  <g class="state" data-state="LA">
+    <title>Labuan</title>
+    <polygon class="tile inset" points="263.40,9.76 291.58,26.03 291.58,58.57 263.40,74.85 235.22,58.57 235.22,26.03" aria-label="Labuan"/>
+    <text class="label" x="263.40" y="42.30">LA</text>
+  </g>
+  <g class="state" data-state="KL">
+    <title>Kuala Lumpur</title>
+    <polygon class="tile" points="207.04,107.39 235.22,123.66 235.22,156.20 207.04,172.47 178.85,156.20 178.85,123.66" aria-label="Kuala Lumpur"/>
+    <text class="label" x="207.04" y="139.93">KL</text>
+  </g>
+  <g class="state" data-state="JH">
+    <title>Johor</title>
+    <polygon class="tile" points="207.04,205.01 235.22,221.28 235.22,253.82 207.04,270.09 178.85,253.82 178.85,221.28" aria-label="Johor"/>
+    <text class="label" x="207.04" y="237.55">JH</text>
+  </g>
+  <g class="state" data-state="TE">
+    <title>Terengganu</title>
+    <polygon class="tile" points="178.85,58.57 207.04,74.85 207.04,107.39 178.85,123.66 150.67,107.39 150.67,74.85" aria-label="Terengganu"/>
+    <text class="label" x="178.85" y="91.12">TE</text>
+  </g>
+  <g class="state" data-state="NS">
+    <title>Negeri Sembilan</title>
+    <polygon class="tile" points="178.85,156.20 207.04,172.47 207.04,205.01 178.85,221.28 150.67,205.01 150.67,172.47" aria-label="Negeri Sembilan"/>
+    <text class="label" x="178.85" y="188.74">NS</text>
+  </g>
+  <g class="state" data-state="PH">
+    <title>Pahang</title>
+    <polygon class="tile" points="150.67,107.39 178.85,123.66 178.85,156.20 150.67,172.47 122.49,156.20 122.49,123.66" aria-label="Pahang"/>
+    <text class="label" x="150.67" y="139.93">PH</text>
+  </g>
+  <g class="state" data-state="ME">
+    <title>Melaka</title>
+    <polygon class="tile" points="150.67,205.01 178.85,221.28 178.85,253.82 150.67,270.09 122.49,253.82 122.49,221.28" aria-label="Melaka"/>
+    <text class="label" x="150.67" y="237.55">ME</text>
+  </g>
+  <g class="state" data-state="KN">
+    <title>Kelantan</title>
+    <polygon class="tile" points="122.49,58.57 150.67,74.85 150.67,107.39 122.49,123.66 94.31,107.39 94.31,74.85" aria-label="Kelantan"/>
+    <text class="label" x="122.49" y="91.12">KN</text>
+  </g>
+  <g class="state" data-state="SL">
+    <title>Selangor</title>
+    <polygon class="tile" points="122.49,156.20 150.67,172.47 150.67,205.01 122.49,221.28 94.31,205.01 94.31,172.47" aria-label="Selangor"/>
+    <text class="label" x="122.49" y="188.74">SL</text>
+  </g>
+  <g class="state" data-state="KH">
+    <title>Kedah</title>
+    <polygon class="tile" points="94.31,9.76 122.49,26.03 122.49,58.57 94.31,74.85 66.13,58.57 66.13,26.03" aria-label="Kedah"/>
+    <text class="label" x="94.31" y="42.30">KH</text>
+  </g>
+  <g class="state" data-state="PK">
+    <title>Perak</title>
+    <polygon class="tile" points="94.31,107.39 122.49,123.66 122.49,156.20 94.31,172.47 66.13,156.20 66.13,123.66" aria-label="Perak"/>
+    <text class="label" x="94.31" y="139.93">PK</text>
+  </g>
+  <g class="state" data-state="PG">
+    <title>Pulau Pinang</title>
+    <polygon class="tile" points="66.13,58.57 94.31,74.85 94.31,107.39 66.13,123.66 37.94,107.39 37.94,74.85" aria-label="Pulau Pinang"/>
+    <text class="label" x="66.13" y="91.12">PG</text>
+  </g>
+  <g class="state" data-state="PJ">
+    <title>Putrajaya</title>
+    <polygon class="tile" points="66.13,156.20 94.31,172.47 94.31,205.01 66.13,221.28 37.94,205.01 37.94,172.47" aria-label="Putrajaya"/>
+    <text class="label" x="66.13" y="188.74">PJ</text>
+  </g>
+  <g class="state" data-state="PL">
+    <title>Perlis</title>
+    <polygon class="tile" points="37.94,9.76 66.13,26.03 66.13,58.57 37.94,74.85 9.76,58.57 9.76,26.03" aria-label="Perlis"/>
+    <text class="label" x="37.94" y="42.30">PL</text>
+  </g>
+</svg>

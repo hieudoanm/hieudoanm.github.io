@@ -1,1 +1,0 @@
-# [SWC](https://swc.rs/)

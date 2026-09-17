@@ -1,0 +1,571 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 365.06 301.63" width="365.06" height="301.63" role="img" aria-labelledby="uganda-title uganda-desc">
+  <title id="uganda-title">Uganda hex map</title>
+  <desc id="uganda-desc">Hexagon map with 112 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 1.34; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 6.63 4.74; }
+    .label { fill: #52525b; font: 600 5.37px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="KO">
+    <title>Bukwa</title>
+    <polygon class="tile" points="346.65,99.49 360.33,107.39 360.33,123.18 346.65,131.08 332.97,123.18 332.97,107.39" aria-label="Bukwa"/>
+    <text class="label" x="346.65" y="115.28">KO</text>
+  </g>
+  <g class="state" data-state="NP">
+    <title>Amudat</title>
+    <polygon class="tile" points="332.97,75.80 346.65,83.70 346.65,99.49 332.97,107.39 319.30,99.49 319.30,83.70" aria-label="Amudat"/>
+    <text class="label" x="332.97" y="91.59">NP</text>
+  </g>
+  <g class="state" data-state="KP">
+    <title>Kapchorwa</title>
+    <polygon class="tile" points="332.97,123.18 346.65,131.08 346.65,146.87 332.97,154.76 319.30,146.87 319.30,131.08" aria-label="Kapchorwa"/>
+    <text class="label" x="332.97" y="138.97">KP</text>
+  </g>
+  <g class="state" data-state="NAK">
+    <title>Nakapiripirit</title>
+    <polygon class="tile" points="319.30,52.11 332.97,60.01 332.97,75.80 319.30,83.70 305.62,75.80 305.62,60.01" aria-label="Nakapiripirit"/>
+    <text class="label" x="319.30" y="67.91">NAK</text>
+  </g>
+  <g class="state" data-state="KWE">
+    <title>Kween</title>
+    <polygon class="tile" points="319.30,99.49 332.97,107.39 332.97,123.18 319.30,131.08 305.62,123.18 305.62,107.39" aria-label="Kween"/>
+    <text class="label" x="319.30" y="115.28">KWE</text>
+  </g>
+  <g class="state" data-state="BUD">
+    <title>Bududa</title>
+    <polygon class="tile" points="319.30,146.87 332.97,154.76 332.97,170.56 319.30,178.45 305.62,170.56 305.62,154.76" aria-label="Bududa"/>
+    <text class="label" x="319.30" y="162.66">BUD</text>
+  </g>
+  <g class="state" data-state="NAP">
+    <title>Napak</title>
+    <polygon class="tile" points="305.62,28.43 319.30,36.32 319.30,52.11 305.62,60.01 291.94,52.11 291.94,36.32" aria-label="Napak"/>
+    <text class="label" x="305.62" y="44.22">NAP</text>
+  </g>
+  <g class="state" data-state="BD">
+    <title>Bulambuli</title>
+    <polygon class="tile" points="305.62,75.80 319.30,83.70 319.30,99.49 305.62,107.39 291.94,99.49 291.94,83.70" aria-label="Bulambuli"/>
+    <text class="label" x="305.62" y="91.59">BD</text>
+  </g>
+  <g class="state" data-state="SIR">
+    <title>Sironko</title>
+    <polygon class="tile" points="305.62,123.18 319.30,131.08 319.30,146.87 305.62,154.76 291.94,146.87 291.94,131.08" aria-label="Sironko"/>
+    <text class="label" x="305.62" y="138.97">SIR</text>
+  </g>
+  <g class="state" data-state="MF">
+    <title>Manafwa</title>
+    <polygon class="tile" points="305.62,170.56 319.30,178.45 319.30,194.24 305.62,202.14 291.94,194.24 291.94,178.45" aria-label="Manafwa"/>
+    <text class="label" x="305.62" y="186.35">MF</text>
+  </g>
+  <g class="state" data-state="MT">
+    <title>Moroto</title>
+    <polygon class="tile" points="291.94,4.74 305.62,12.63 305.62,28.43 291.94,36.32 278.27,28.43 278.27,12.63" aria-label="Moroto"/>
+    <text class="label" x="291.94" y="20.53">MT</text>
+  </g>
+  <g class="state" data-state="KAT">
+    <title>Katakwi</title>
+    <polygon class="tile" points="291.94,52.11 305.62,60.01 305.62,75.80 291.94,83.70 278.27,75.80 278.27,60.01" aria-label="Katakwi"/>
+    <text class="label" x="291.94" y="67.91">KAT</text>
+  </g>
+  <g class="state" data-state="BUKA">
+    <title>Bukedea</title>
+    <polygon class="tile" points="291.94,99.49 305.62,107.39 305.62,123.18 291.94,131.08 278.27,123.18 278.27,107.39" aria-label="Bukedea"/>
+    <text class="label" x="291.94" y="115.28">BUKA</text>
+  </g>
+  <g class="state" data-state="MBAA">
+    <title>Mbale</title>
+    <polygon class="tile" points="291.94,146.87 305.62,154.76 305.62,170.56 291.94,178.45 278.27,170.56 278.27,154.76" aria-label="Mbale"/>
+    <text class="label" x="291.94" y="162.66">MBAA</text>
+  </g>
+  <g class="state" data-state="TR">
+    <title>Tororo</title>
+    <polygon class="tile" points="291.94,194.24 305.62,202.14 305.62,217.93 291.94,225.83 278.27,217.93 278.27,202.14" aria-label="Tororo"/>
+    <text class="label" x="291.94" y="210.04">TR</text>
+  </g>
+  <g class="state" data-state="JE">
+    <title>Kotido</title>
+    <polygon class="tile" points="278.27,28.43 291.94,36.32 291.94,52.11 278.27,60.01 264.59,52.11 264.59,36.32" aria-label="Kotido"/>
+    <text class="label" x="278.27" y="44.22">JE</text>
+  </g>
+  <g class="state" data-state="KU">
+    <title>Kumi</title>
+    <polygon class="tile" points="278.27,75.80 291.94,83.70 291.94,99.49 278.27,107.39 264.59,99.49 264.59,83.70" aria-label="Kumi"/>
+    <text class="label" x="278.27" y="91.59">KU</text>
+  </g>
+  <g class="state" data-state="BUDA">
+    <title>Budaka</title>
+    <polygon class="tile" points="278.27,123.18 291.94,131.08 291.94,146.87 278.27,154.76 264.59,146.87 264.59,131.08" aria-label="Budaka"/>
+    <text class="label" x="278.27" y="138.97">BUDA</text>
+  </g>
+  <g class="state" data-state="BUTA">
+    <title>Butaleja</title>
+    <polygon class="tile" points="278.27,170.56 291.94,178.45 291.94,194.24 278.27,202.14 264.59,194.24 264.59,178.45" aria-label="Butaleja"/>
+    <text class="label" x="278.27" y="186.35">BUTA</text>
+  </g>
+  <g class="state" data-state="BU">
+    <title>Busia</title>
+    <polygon class="tile" points="278.27,217.93 291.94,225.83 291.94,241.62 278.27,249.52 264.59,241.62 264.59,225.83" aria-label="Busia"/>
+    <text class="label" x="278.27" y="233.72">BU</text>
+  </g>
+  <g class="state" data-state="AB">
+    <title>Kaabong</title>
+    <polygon class="tile" points="264.59,4.74 278.27,12.63 278.27,28.43 264.59,36.32 250.91,28.43 250.91,12.63" aria-label="Kaabong"/>
+    <text class="label" x="264.59" y="20.53">AB</text>
+  </g>
+  <g class="state" data-state="AM">
+    <title>Amuria</title>
+    <polygon class="tile" points="264.59,52.11 278.27,60.01 278.27,75.80 264.59,83.70 250.91,75.80 250.91,60.01" aria-label="Amuria"/>
+    <text class="label" x="264.59" y="67.91">AM</text>
+  </g>
+  <g class="state" data-state="NGO">
+    <title>Ngora</title>
+    <polygon class="tile" points="264.59,99.49 278.27,107.39 278.27,123.18 264.59,131.08 250.91,123.18 250.91,107.39" aria-label="Ngora"/>
+    <text class="label" x="264.59" y="115.28">NGO</text>
+  </g>
+  <g class="state" data-state="KIB">
+    <title>Kibuku</title>
+    <polygon class="tile" points="264.59,146.87 278.27,154.76 278.27,170.56 264.59,178.45 250.91,170.56 250.91,154.76" aria-label="Kibuku"/>
+    <text class="label" x="264.59" y="162.66">KIB</text>
+  </g>
+  <g class="state" data-state="BUG">
+    <title>Bugiri</title>
+    <polygon class="tile" points="264.59,194.24 278.27,202.14 278.27,217.93 264.59,225.83 250.91,217.93 250.91,202.14" aria-label="Bugiri"/>
+    <text class="label" x="264.59" y="210.04">BUG</text>
+  </g>
+  <g class="state" data-state="BG">
+    <title>Namayingo</title>
+    <polygon class="tile" points="264.59,241.62 278.27,249.52 278.27,265.31 264.59,273.21 250.91,265.31 250.91,249.52" aria-label="Namayingo"/>
+    <text class="label" x="264.59" y="257.41">BG</text>
+  </g>
+  <g class="state" data-state="LB">
+    <title>Abim</title>
+    <polygon class="tile" points="250.91,28.43 264.59,36.32 264.59,52.11 250.91,60.01 237.24,52.11 237.24,36.32" aria-label="Abim"/>
+    <text class="label" x="250.91" y="44.22">LB</text>
+  </g>
+  <g class="state" data-state="SOR">
+    <title>Soroti</title>
+    <polygon class="tile" points="250.91,75.80 264.59,83.70 264.59,99.49 250.91,107.39 237.24,99.49 237.24,83.70" aria-label="Soroti"/>
+    <text class="label" x="250.91" y="91.59">SOR</text>
+  </g>
+  <g class="state" data-state="PL">
+    <title>Pallisa</title>
+    <polygon class="tile" points="250.91,123.18 264.59,131.08 264.59,146.87 250.91,154.76 237.24,146.87 237.24,131.08" aria-label="Pallisa"/>
+    <text class="label" x="250.91" y="138.97">PL</text>
+  </g>
+  <g class="state" data-state="NAM">
+    <title>Namutumba</title>
+    <polygon class="tile" points="250.91,170.56 264.59,178.45 264.59,194.24 250.91,202.14 237.24,194.24 237.24,178.45" aria-label="Namutumba"/>
+    <text class="label" x="250.91" y="186.35">NAM</text>
+  </g>
+  <g class="state" data-state="MG">
+    <title>Mayuge</title>
+    <polygon class="tile" points="250.91,217.93 264.59,225.83 264.59,241.62 250.91,249.52 237.24,241.62 237.24,225.83" aria-label="Mayuge"/>
+    <text class="label" x="250.91" y="233.72">MG</text>
+  </g>
+  <g class="state" data-state="TG">
+    <title>Kitgum</title>
+    <polygon class="tile" points="237.24,4.74 250.91,12.63 250.91,28.43 237.24,36.32 223.56,28.43 223.56,12.63" aria-label="Kitgum"/>
+    <text class="label" x="237.24" y="20.53">TG</text>
+  </g>
+  <g class="state" data-state="OTU">
+    <title>Otuke</title>
+    <polygon class="tile" points="237.24,52.11 250.91,60.01 250.91,75.80 237.24,83.70 223.56,75.80 223.56,60.01" aria-label="Otuke"/>
+    <text class="label" x="237.24" y="67.91">OTU</text>
+  </g>
+  <g class="state" data-state="SR">
+    <title>Serere</title>
+    <polygon class="tile" points="237.24,99.49 250.91,107.39 250.91,123.18 237.24,131.08 223.56,123.18 223.56,107.39" aria-label="Serere"/>
+    <text class="label" x="237.24" y="115.28">SR</text>
+  </g>
+  <g class="state" data-state="KALA">
+    <title>Kaliro</title>
+    <polygon class="tile" points="237.24,146.87 250.91,154.76 250.91,170.56 237.24,178.45 223.56,170.56 223.56,154.76" aria-label="Kaliro"/>
+    <text class="label" x="237.24" y="162.66">KALA</text>
+  </g>
+  <g class="state" data-state="IGA">
+    <title>Iganga</title>
+    <polygon class="tile" points="237.24,194.24 250.91,202.14 250.91,217.93 237.24,225.83 223.56,217.93 223.56,202.14" aria-label="Iganga"/>
+    <text class="label" x="237.24" y="210.04">IGA</text>
+  </g>
+  <g class="state" data-state="MN">
+    <title>Buvuma</title>
+    <polygon class="tile" points="237.24,241.62 250.91,249.52 250.91,265.31 237.24,273.21 223.56,265.31 223.56,249.52" aria-label="Buvuma"/>
+    <text class="label" x="237.24" y="257.41">MN</text>
+  </g>
+  <g class="state" data-state="AGA">
+    <title>Agago</title>
+    <polygon class="tile" points="223.56,28.43 237.24,36.32 237.24,52.11 223.56,60.01 209.88,52.11 209.88,36.32" aria-label="Agago"/>
+    <text class="label" x="223.56" y="44.22">AGA</text>
+  </g>
+  <g class="state" data-state="ALE">
+    <title>Alebtong</title>
+    <polygon class="tile" points="223.56,75.80 237.24,83.70 237.24,99.49 223.56,107.39 209.88,99.49 209.88,83.70" aria-label="Alebtong"/>
+    <text class="label" x="223.56" y="91.59">ALE</text>
+  </g>
+  <g class="state" data-state="BUY">
+    <title>Buyende</title>
+    <polygon class="tile" points="223.56,123.18 237.24,131.08 237.24,146.87 223.56,154.76 209.88,146.87 209.88,131.08" aria-label="Buyende"/>
+    <text class="label" x="223.56" y="138.97">BUY</text>
+  </g>
+  <g class="state" data-state="IN">
+    <title>Luuka</title>
+    <polygon class="tile" points="223.56,170.56 237.24,178.45 237.24,194.24 223.56,202.14 209.88,194.24 209.88,178.45" aria-label="Luuka"/>
+    <text class="label" x="223.56" y="186.35">IN</text>
+  </g>
+  <g class="state" data-state="JI">
+    <title>Jinja</title>
+    <polygon class="tile" points="223.56,217.93 237.24,225.83 237.24,241.62 223.56,249.52 209.88,241.62 209.88,225.83" aria-label="Jinja"/>
+    <text class="label" x="223.56" y="233.72">JI</text>
+  </g>
+  <g class="state" data-state="LAM">
+    <title>Lamwo</title>
+    <polygon class="tile" points="209.88,4.74 223.56,12.63 223.56,28.43 209.88,36.32 196.21,28.43 196.21,12.63" aria-label="Lamwo"/>
+    <text class="label" x="209.88" y="20.53">LAM</text>
+  </g>
+  <g class="state" data-state="LA">
+    <title>Lira</title>
+    <polygon class="tile" points="209.88,52.11 223.56,60.01 223.56,75.80 209.88,83.70 196.21,75.80 196.21,60.01" aria-label="Lira"/>
+    <text class="label" x="209.88" y="67.91">LA</text>
+  </g>
+  <g class="state" data-state="KD">
+    <title>Kaberamaido</title>
+    <polygon class="tile" points="209.88,99.49 223.56,107.39 223.56,123.18 209.88,131.08 196.21,123.18 196.21,107.39" aria-label="Kaberamaido"/>
+    <text class="label" x="209.88" y="115.28">KD</text>
+  </g>
+  <g class="state" data-state="KX">
+    <title>Kamuli</title>
+    <polygon class="tile" points="209.88,146.87 223.56,154.76 223.56,170.56 209.88,178.45 196.21,170.56 196.21,154.76" aria-label="Kamuli"/>
+    <text class="label" x="209.88" y="162.66">KX</text>
+  </g>
+  <g class="state" data-state="KM">
+    <title>Kampala</title>
+    <polygon class="tile" points="209.88,194.24 223.56,202.14 223.56,217.93 209.88,225.83 196.21,217.93 196.21,202.14" aria-label="Kampala"/>
+    <text class="label" x="209.88" y="210.04">KM</text>
+  </g>
+  <g class="state" data-state="BUI">
+    <title>Buikwe</title>
+    <polygon class="tile" points="209.88,241.62 223.56,249.52 223.56,265.31 209.88,273.21 196.21,265.31 196.21,249.52" aria-label="Buikwe"/>
+    <text class="label" x="209.88" y="257.41">BUI</text>
+  </g>
+  <g class="state" data-state="PD">
+    <title>Pader</title>
+    <polygon class="tile" points="196.21,28.43 209.88,36.32 209.88,52.11 196.21,60.01 182.53,52.11 182.53,36.32" aria-label="Pader"/>
+    <text class="label" x="196.21" y="44.22">PD</text>
+  </g>
+  <g class="state" data-state="DK">
+    <title>Dokolo</title>
+    <polygon class="tile" points="196.21,75.80 209.88,83.70 209.88,99.49 196.21,107.39 182.53,99.49 182.53,83.70" aria-label="Dokolo"/>
+    <text class="label" x="196.21" y="91.59">DK</text>
+  </g>
+  <g class="state" data-state="KY">
+    <title>Kayunga</title>
+    <polygon class="tile" points="196.21,123.18 209.88,131.08 209.88,146.87 196.21,154.76 182.53,146.87 182.53,131.08" aria-label="Kayunga"/>
+    <text class="label" x="196.21" y="138.97">KY</text>
+  </g>
+  <g class="state" data-state="WA">
+    <title>Wakiso</title>
+    <polygon class="tile" points="196.21,170.56 209.88,178.45 209.88,194.24 196.21,202.14 182.53,194.24 182.53,178.45" aria-label="Wakiso"/>
+    <text class="label" x="196.21" y="186.35">WA</text>
+  </g>
+  <g class="state" data-state="MUK">
+    <title>Mukono</title>
+    <polygon class="tile" points="196.21,217.93 209.88,225.83 209.88,241.62 196.21,249.52 182.53,241.62 182.53,225.83" aria-label="Mukono"/>
+    <text class="label" x="196.21" y="233.72">MUK</text>
+  </g>
+  <g class="state" data-state="AW">
+    <title>Gulu</title>
+    <polygon class="tile" points="182.53,4.74 196.21,12.63 196.21,28.43 182.53,36.32 168.86,28.43 168.86,12.63" aria-label="Gulu"/>
+    <text class="label" x="182.53" y="20.53">AW</text>
+  </g>
+  <g class="state" data-state="KOL">
+    <title>Kole</title>
+    <polygon class="tile" points="182.53,52.11 196.21,60.01 196.21,75.80 182.53,83.70 168.86,75.80 168.86,60.01" aria-label="Kole"/>
+    <text class="label" x="182.53" y="67.91">KOL</text>
+  </g>
+  <g class="state" data-state="AMO">
+    <title>Amolatar</title>
+    <polygon class="tile" points="182.53,99.49 196.21,107.39 196.21,123.18 182.53,131.08 168.86,123.18 168.86,107.39" aria-label="Amolatar"/>
+    <text class="label" x="182.53" y="115.28">AMO</text>
+  </g>
+  <g class="state" data-state="BM">
+    <title>Luweero</title>
+    <polygon class="tile" points="182.53,146.87 196.21,154.76 196.21,170.56 182.53,178.45 168.86,170.56 168.86,154.76" aria-label="Luweero"/>
+    <text class="label" x="182.53" y="162.66">BM</text>
+  </g>
+  <g class="state" data-state="MI">
+    <title>Mpigi</title>
+    <polygon class="tile" points="182.53,194.24 196.21,202.14 196.21,217.93 182.53,225.83 168.86,217.93 168.86,202.14" aria-label="Mpigi"/>
+    <text class="label" x="182.53" y="210.04">MI</text>
+  </g>
+  <g class="state" data-state="KN">
+    <title>Kalangala</title>
+    <polygon class="tile" points="182.53,241.62 196.21,249.52 196.21,265.31 182.53,273.21 168.86,265.31 168.86,249.52" aria-label="Kalangala"/>
+    <text class="label" x="182.53" y="257.41">KN</text>
+  </g>
+  <g class="state" data-state="GL">
+    <title>Amuru</title>
+    <polygon class="tile" points="168.86,28.43 182.53,36.32 182.53,52.11 168.86,60.01 155.18,52.11 155.18,36.32" aria-label="Amuru"/>
+    <text class="label" x="168.86" y="44.22">GL</text>
+  </g>
+  <g class="state" data-state="AC">
+    <title>Apac</title>
+    <polygon class="tile" points="168.86,75.80 182.53,83.70 182.53,99.49 168.86,107.39 155.18,99.49 155.18,83.70" aria-label="Apac"/>
+    <text class="label" x="168.86" y="91.59">AC</text>
+  </g>
+  <g class="state" data-state="NK">
+    <title>Nakaseke</title>
+    <polygon class="tile" points="168.86,123.18 182.53,131.08 182.53,146.87 168.86,154.76 155.18,146.87 155.18,131.08" aria-label="Nakaseke"/>
+    <text class="label" x="168.86" y="138.97">NK</text>
+  </g>
+  <g class="state" data-state="MIT">
+    <title>Mityana</title>
+    <polygon class="tile" points="168.86,170.56 182.53,178.45 182.53,194.24 168.86,202.14 155.18,194.24 155.18,178.45" aria-label="Mityana"/>
+    <text class="label" x="168.86" y="186.35">MIT</text>
+  </g>
+  <g class="state" data-state="KAL">
+    <title>Kalungu</title>
+    <polygon class="tile" points="168.86,217.93 182.53,225.83 182.53,241.62 168.86,249.52 155.18,241.62 155.18,225.83" aria-label="Kalungu"/>
+    <text class="label" x="168.86" y="233.72">KAL</text>
+  </g>
+  <g class="state" data-state="MY">
+    <title>Moyo</title>
+    <polygon class="tile" points="155.18,4.74 168.86,12.63 168.86,28.43 155.18,36.32 141.50,28.43 141.50,12.63" aria-label="Moyo"/>
+    <text class="label" x="155.18" y="20.53">MY</text>
+  </g>
+  <g class="state" data-state="OA">
+    <title>Oyam</title>
+    <polygon class="tile" points="155.18,52.11 168.86,60.01 168.86,75.80 155.18,83.70 141.50,75.80 141.50,60.01" aria-label="Oyam"/>
+    <text class="label" x="155.18" y="67.91">OA</text>
+  </g>
+  <g class="state" data-state="NA">
+    <title>Nakasongola</title>
+    <polygon class="tile" points="155.18,99.49 168.86,107.39 168.86,123.18 155.18,131.08 141.50,123.18 141.50,107.39" aria-label="Nakasongola"/>
+    <text class="label" x="155.18" y="115.28">NA</text>
+  </g>
+  <g class="state" data-state="KG">
+    <title>Kiboga</title>
+    <polygon class="tile" points="155.18,146.87 168.86,154.76 168.86,170.56 155.18,178.45 141.50,170.56 141.50,154.76" aria-label="Kiboga"/>
+    <text class="label" x="155.18" y="162.66">KG</text>
+  </g>
+  <g class="state" data-state="BUT">
+    <title>Butambala</title>
+    <polygon class="tile" points="155.18,194.24 168.86,202.14 168.86,217.93 155.18,225.83 141.50,217.93 141.50,202.14" aria-label="Butambala"/>
+    <text class="label" x="155.18" y="210.04">BUT</text>
+  </g>
+  <g class="state" data-state="MAS">
+    <title>Masaka</title>
+    <polygon class="tile" points="155.18,241.62 168.86,249.52 168.86,265.31 155.18,273.21 141.50,265.31 141.50,249.52" aria-label="Masaka"/>
+    <text class="label" x="155.18" y="257.41">MAS</text>
+  </g>
+  <g class="state" data-state="AD">
+    <title>Adjumani</title>
+    <polygon class="tile" points="141.50,28.43 155.18,36.32 155.18,52.11 141.50,60.01 127.83,52.11 127.83,36.32" aria-label="Adjumani"/>
+    <text class="label" x="141.50" y="44.22">AD</text>
+  </g>
+  <g class="state" data-state="KIR">
+    <title>Kiryandongo</title>
+    <polygon class="tile" points="141.50,75.80 155.18,83.70 155.18,99.49 141.50,107.39 127.83,99.49 127.83,83.70" aria-label="Kiryandongo"/>
+    <text class="label" x="141.50" y="91.59">KIR</text>
+  </g>
+  <g class="state" data-state="KYA">
+    <title>Kyankwanzi</title>
+    <polygon class="tile" points="141.50,123.18 155.18,131.08 155.18,146.87 141.50,154.76 127.83,146.87 127.83,131.08" aria-label="Kyankwanzi"/>
+    <text class="label" x="141.50" y="138.97">KYA</text>
+  </g>
+  <g class="state" data-state="GOM">
+    <title>Gomba</title>
+    <polygon class="tile" points="141.50,170.56 155.18,178.45 155.18,194.24 141.50,202.14 127.83,194.24 127.83,178.45" aria-label="Gomba"/>
+    <text class="label" x="141.50" y="186.35">GOM</text>
+  </g>
+  <g class="state" data-state="BUK">
+    <title>Bukomansimbi</title>
+    <polygon class="tile" points="141.50,217.93 155.18,225.83 155.18,241.62 141.50,249.52 127.83,241.62 127.83,225.83" aria-label="Bukomansimbi"/>
+    <text class="label" x="141.50" y="233.72">BUK</text>
+  </g>
+  <g class="state" data-state="RA">
+    <title>Rakai</title>
+    <polygon class="tile" points="141.50,265.31 155.18,273.21 155.18,289.00 141.50,296.89 127.83,289.00 127.83,273.21" aria-label="Rakai"/>
+    <text class="label" x="141.50" y="281.10">RA</text>
+  </g>
+  <g class="state" data-state="YU">
+    <title>Yumbe</title>
+    <polygon class="tile" points="127.83,4.74 141.50,12.63 141.50,28.43 127.83,36.32 114.15,28.43 114.15,12.63" aria-label="Yumbe"/>
+    <text class="label" x="127.83" y="20.53">YU</text>
+  </g>
+  <g class="state" data-state="NE">
+    <title>Zombo</title>
+    <polygon class="tile" points="127.83,52.11 141.50,60.01 141.50,75.80 127.83,83.70 114.15,75.80 114.15,60.01" aria-label="Zombo"/>
+    <text class="label" x="127.83" y="67.91">NE</text>
+  </g>
+  <g class="state" data-state="MC">
+    <title>Masindi</title>
+    <polygon class="tile" points="127.83,99.49 141.50,107.39 141.50,123.18 127.83,131.08 114.15,123.18 114.15,107.39" aria-label="Masindi"/>
+    <text class="label" x="127.83" y="115.28">MC</text>
+  </g>
+  <g class="state" data-state="MD">
+    <title>Mubende</title>
+    <polygon class="tile" points="127.83,146.87 141.50,154.76 141.50,170.56 127.83,178.45 114.15,170.56 114.15,154.76" aria-label="Mubende"/>
+    <text class="label" x="127.83" y="162.66">MD</text>
+  </g>
+  <g class="state" data-state="SE">
+    <title>Sembabule</title>
+    <polygon class="tile" points="127.83,194.24 141.50,202.14 141.50,217.93 127.83,225.83 114.15,217.93 114.15,202.14" aria-label="Sembabule"/>
+    <text class="label" x="127.83" y="210.04">SE</text>
+  </g>
+  <g class="state" data-state="MA">
+    <title>Lwengo</title>
+    <polygon class="tile" points="127.83,241.62 141.50,249.52 141.50,265.31 127.83,273.21 114.15,265.31 114.15,249.52" aria-label="Lwengo"/>
+    <text class="label" x="127.83" y="257.41">MA</text>
+  </g>
+  <g class="state" data-state="AU">
+    <title>Arua</title>
+    <polygon class="tile" points="114.15,28.43 127.83,36.32 127.83,52.11 114.15,60.01 100.47,52.11 100.47,36.32" aria-label="Arua"/>
+    <text class="label" x="114.15" y="44.22">AU</text>
+  </g>
+  <g class="state" data-state="NWO">
+    <title>Nwoya</title>
+    <polygon class="tile" points="114.15,75.80 127.83,83.70 127.83,99.49 114.15,107.39 100.47,99.49 100.47,83.70" aria-label="Nwoya"/>
+    <text class="label" x="114.15" y="91.59">NWO</text>
+  </g>
+  <g class="state" data-state="KI">
+    <title>Kibale</title>
+    <polygon class="tile" points="114.15,123.18 127.83,131.08 127.83,146.87 114.15,154.76 100.47,146.87 100.47,131.08" aria-label="Kibale"/>
+    <text class="label" x="114.15" y="138.97">KI</text>
+  </g>
+  <g class="state" data-state="KYE">
+    <title>Kyegegwa</title>
+    <polygon class="tile" points="114.15,170.56 127.83,178.45 127.83,194.24 114.15,202.14 100.47,194.24 100.47,178.45" aria-label="Kyegegwa"/>
+    <text class="label" x="114.15" y="186.35">KYE</text>
+  </g>
+  <g class="state" data-state="LYA">
+    <title>Lyantonde</title>
+    <polygon class="tile" points="114.15,217.93 127.83,225.83 127.83,241.62 114.15,249.52 100.47,241.62 100.47,225.83" aria-label="Lyantonde"/>
+    <text class="label" x="114.15" y="233.72">LYA</text>
+  </g>
+  <g class="state" data-state="BK">
+    <title>Isingiro</title>
+    <polygon class="tile" points="114.15,265.31 127.83,273.21 127.83,289.00 114.15,296.89 100.47,289.00 100.47,273.21" aria-label="Isingiro"/>
+    <text class="label" x="114.15" y="281.10">BK</text>
+  </g>
+  <g class="state" data-state="KB">
+    <title>Koboko</title>
+    <polygon class="tile" points="100.47,4.74 114.15,12.63 114.15,28.43 100.47,36.32 86.80,28.43 86.80,12.63" aria-label="Koboko"/>
+    <text class="label" x="100.47" y="20.53">KB</text>
+  </g>
+  <g class="state" data-state="NEB">
+    <title>Nebbi</title>
+    <polygon class="tile" points="100.47,52.11 114.15,60.01 114.15,75.80 100.47,83.70 86.80,75.80 86.80,60.01" aria-label="Nebbi"/>
+    <text class="label" x="100.47" y="67.91">NEB</text>
+  </g>
+  <g class="state" data-state="HO">
+    <title>Hoima</title>
+    <polygon class="tile" points="100.47,99.49 114.15,107.39 114.15,123.18 100.47,131.08 86.80,123.18 86.80,107.39" aria-label="Hoima"/>
+    <text class="label" x="100.47" y="115.28">HO</text>
+  </g>
+  <g class="state" data-state="KJ">
+    <title>Kyenjojo</title>
+    <polygon class="tile" points="100.47,146.87 114.15,154.76 114.15,170.56 100.47,178.45 86.80,170.56 86.80,154.76" aria-label="Kyenjojo"/>
+    <text class="label" x="100.47" y="162.66">KJ</text>
+  </g>
+  <g class="state" data-state="RR">
+    <title>Mbarara</title>
+    <polygon class="tile" points="100.47,194.24 114.15,202.14 114.15,217.93 100.47,225.83 86.80,217.93 86.80,202.14" aria-label="Mbarara"/>
+    <text class="label" x="100.47" y="210.04">RR</text>
+  </g>
+  <g class="state" data-state="MBA">
+    <title>Mbarara</title>
+    <polygon class="tile" points="100.47,241.62 114.15,249.52 114.15,265.31 100.47,273.21 86.80,265.31 86.80,249.52" aria-label="Mbarara"/>
+    <text class="label" x="100.47" y="257.41">MBA</text>
+  </g>
+  <g class="state" data-state="MH">
+    <title>Maracha</title>
+    <polygon class="tile" points="86.80,28.43 100.47,36.32 100.47,52.11 86.80,60.01 73.12,52.11 73.12,36.32" aria-label="Maracha"/>
+    <text class="label" x="86.80" y="44.22">MH</text>
+  </g>
+  <g class="state" data-state="BL">
+    <title>Buliisa</title>
+    <polygon class="tile" points="86.80,75.80 100.47,83.70 100.47,99.49 86.80,107.39 73.12,99.49 73.12,83.70" aria-label="Buliisa"/>
+    <text class="label" x="86.80" y="91.59">BL</text>
+  </g>
+  <g class="state" data-state="BN">
+    <title>Ntoroko</title>
+    <polygon class="tile" points="86.80,123.18 100.47,131.08 100.47,146.87 86.80,154.76 73.12,146.87 73.12,131.08" aria-label="Ntoroko"/>
+    <text class="label" x="86.80" y="138.97">BN</text>
+  </g>
+  <g class="state" data-state="KE">
+    <title>Kamwenge</title>
+    <polygon class="tile" points="86.80,170.56 100.47,178.45 100.47,194.24 86.80,202.14 73.12,194.24 73.12,178.45" aria-label="Kamwenge"/>
+    <text class="label" x="86.80" y="186.35">KE</text>
+  </g>
+  <g class="state" data-state="BUH">
+    <title>Buhweju</title>
+    <polygon class="tile" points="86.80,217.93 100.47,225.83 100.47,241.62 86.80,249.52 73.12,241.62 73.12,225.83" aria-label="Buhweju"/>
+    <text class="label" x="86.80" y="233.72">BUH</text>
+  </g>
+  <g class="state" data-state="NT">
+    <title>Ntungamo</title>
+    <polygon class="tile" points="86.80,265.31 100.47,273.21 100.47,289.00 86.80,296.89 73.12,289.00 73.12,273.21" aria-label="Ntungamo"/>
+    <text class="label" x="86.80" y="281.10">NT</text>
+  </g>
+  <g class="state" data-state="BR">
+    <title>Kabarole</title>
+    <polygon class="tile" points="73.12,146.87 86.80,154.76 86.80,170.56 73.12,178.45 59.44,170.56 59.44,154.76" aria-label="Kabarole"/>
+    <text class="label" x="73.12" y="162.66">BR</text>
+  </g>
+  <g class="state" data-state="IA">
+    <title>Ibanda</title>
+    <polygon class="tile" points="73.12,194.24 86.80,202.14 86.80,217.93 73.12,225.83 59.44,217.93 59.44,202.14" aria-label="Ibanda"/>
+    <text class="label" x="73.12" y="210.04">IA</text>
+  </g>
+  <g class="state" data-state="SHE">
+    <title>Sheema</title>
+    <polygon class="tile" points="73.12,241.62 86.80,249.52 86.80,265.31 73.12,273.21 59.44,265.31 59.44,249.52" aria-label="Sheema"/>
+    <text class="label" x="73.12" y="257.41">SHE</text>
+  </g>
+  <g class="state" data-state="KS">
+    <title>Kasese</title>
+    <polygon class="tile" points="59.44,170.56 73.12,178.45 73.12,194.24 59.44,202.14 45.77,194.24 45.77,178.45" aria-label="Kasese"/>
+    <text class="label" x="59.44" y="186.35">KS</text>
+  </g>
+  <g class="state" data-state="BUS">
+    <title>Bushenyi</title>
+    <polygon class="tile" points="59.44,217.93 73.12,225.83 73.12,241.62 59.44,249.52 45.77,241.62 45.77,225.83" aria-label="Bushenyi"/>
+    <text class="label" x="59.44" y="233.72">BUS</text>
+  </g>
+  <g class="state" data-state="KA">
+    <title>Kabale</title>
+    <polygon class="tile" points="59.44,265.31 73.12,273.21 73.12,289.00 59.44,296.89 45.77,289.00 45.77,273.21" aria-label="Kabale"/>
+    <text class="label" x="59.44" y="281.10">KA</text>
+  </g>
+  <g class="state" data-state="BUN">
+    <title>Bundibugyo</title>
+    <polygon class="tile" points="45.77,146.87 59.44,154.76 59.44,170.56 45.77,178.45 32.09,170.56 32.09,154.76" aria-label="Bundibugyo"/>
+    <text class="label" x="45.77" y="162.66">BUN</text>
+  </g>
+  <g class="state" data-state="BS">
+    <title>Rubirizi</title>
+    <polygon class="tile" points="45.77,194.24 59.44,202.14 59.44,217.93 45.77,225.83 32.09,217.93 32.09,202.14" aria-label="Rubirizi"/>
+    <text class="label" x="45.77" y="210.04">BS</text>
+  </g>
+  <g class="state" data-state="MITA">
+    <title>Mitooma</title>
+    <polygon class="tile" points="45.77,241.62 59.44,249.52 59.44,265.31 45.77,273.21 32.09,265.31 32.09,249.52" aria-label="Mitooma"/>
+    <text class="label" x="45.77" y="257.41">MITA</text>
+  </g>
+  <g class="state" data-state="RK">
+    <title>Rukungiri</title>
+    <polygon class="tile" points="32.09,217.93 45.77,225.83 45.77,241.62 32.09,249.52 18.41,241.62 18.41,225.83" aria-label="Rukungiri"/>
+    <text class="label" x="32.09" y="233.72">RK</text>
+  </g>
+  <g class="state" data-state="KR">
+    <title>Kisoro</title>
+    <polygon class="tile" points="32.09,265.31 45.77,273.21 45.77,289.00 32.09,296.89 18.41,289.00 18.41,273.21" aria-label="Kisoro"/>
+    <text class="label" x="32.09" y="281.10">KR</text>
+  </g>
+  <g class="state" data-state="UU">
+    <title>Kanungu</title>
+    <polygon class="tile" points="18.41,241.62 32.09,249.52 32.09,265.31 18.41,273.21 4.74,265.31 4.74,249.52" aria-label="Kanungu"/>
+    <text class="label" x="18.41" y="257.41">UU</text>
+  </g>
+</svg>

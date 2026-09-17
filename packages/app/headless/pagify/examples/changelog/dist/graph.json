@@ -1,0 +1,229 @@
+{
+  "version": 1,
+  "root": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/app/headless/pagify/examples/changelog/docs",
+  "nodes": [
+    {
+      "id": "index.md",
+      "path": "index.md",
+      "extension": ".md"
+    },
+    {
+      "id": "v0-0-1.md",
+      "path": "v0-0-1.md",
+      "extension": ".md"
+    },
+    {
+      "id": "v0-0-2.md",
+      "path": "v0-0-2.md",
+      "extension": ".md"
+    },
+    {
+      "id": "v0-0-3.md",
+      "path": "v0-0-3.md",
+      "extension": ".md"
+    },
+    {
+      "id": "v0-1-0.md",
+      "path": "v0-1-0.md",
+      "extension": ".md"
+    },
+    {
+      "id": "v0-2-0.md",
+      "path": "v0-2-0.md",
+      "extension": ".md"
+    },
+    {
+      "id": "v0-3-0.md",
+      "path": "v0-3-0.md",
+      "extension": ".md"
+    },
+    {
+      "id": "v1-0-0.md",
+      "path": "v1-0-0.md",
+      "extension": ".md"
+    },
+    {
+      "id": "v2-0-0.md",
+      "path": "v2-0-0.md",
+      "extension": ".md"
+    },
+    {
+      "id": "v3-0-0.md",
+      "path": "v3-0-0.md",
+      "extension": ".md"
+    }
+  ],
+  "edges": [
+    {
+      "source": "index.md",
+      "target": "v0-0-1.md",
+      "raw_link": "v0-0-1.md",
+      "line": 33,
+      "status": "resolved"
+    },
+    {
+      "source": "index.md",
+      "target": "v0-0-2.md",
+      "raw_link": "v0-0-2.md",
+      "line": 34,
+      "status": "resolved"
+    },
+    {
+      "source": "index.md",
+      "target": "v0-0-3.md",
+      "raw_link": "v0-0-3.md",
+      "line": 35,
+      "status": "resolved"
+    },
+    {
+      "source": "index.md",
+      "target": "v0-1-0.md",
+      "raw_link": "v0-1-0.md",
+      "line": 36,
+      "status": "resolved"
+    },
+    {
+      "source": "index.md",
+      "target": "v0-2-0.md",
+      "raw_link": "v0-2-0.md",
+      "line": 37,
+      "status": "resolved"
+    },
+    {
+      "source": "index.md",
+      "target": "v0-3-0.md",
+      "raw_link": "v0-3-0.md",
+      "line": 38,
+      "status": "resolved"
+    },
+    {
+      "source": "index.md",
+      "target": "v1-0-0.md",
+      "raw_link": "v1-0-0.md",
+      "line": 39,
+      "status": "resolved"
+    },
+    {
+      "source": "index.md",
+      "target": "v2-0-0.md",
+      "raw_link": "v2-0-0.md",
+      "line": 40,
+      "status": "resolved"
+    },
+    {
+      "source": "index.md",
+      "target": "v3-0-0.md",
+      "raw_link": "v3-0-0.md",
+      "line": 41,
+      "status": "resolved"
+    },
+    {
+      "source": "v0-0-1.md",
+      "target": "v0-0-2.md",
+      "raw_link": "v0-0-2.md",
+      "line": 29,
+      "status": "resolved"
+    },
+    {
+      "source": "v0-0-2.md",
+      "target": "v0-0-3.md",
+      "raw_link": "v0-0-3.md",
+      "line": 31,
+      "status": "resolved"
+    },
+    {
+      "source": "v0-0-3.md",
+      "target": "v0-1-0.md",
+      "raw_link": "v0-1-0.md",
+      "line": 32,
+      "status": "resolved"
+    },
+    {
+      "source": "v0-1-0.md",
+      "target": "v0-2-0.md",
+      "raw_link": "v0-2-0.md",
+      "line": 39,
+      "status": "resolved"
+    },
+    {
+      "source": "v0-2-0.md",
+      "target": "v0-3-0.md",
+      "raw_link": "v0-3-0.md",
+      "line": 36,
+      "status": "resolved"
+    },
+    {
+      "source": "v0-3-0.md",
+      "target": "v1-0-0.md",
+      "raw_link": "v1-0-0.md",
+      "line": 38,
+      "status": "resolved"
+    },
+    {
+      "source": "v1-0-0.md",
+      "target": "../reference/server.md",
+      "raw_link": "../reference/server.md",
+      "line": 39,
+      "status": "outside_root"
+    },
+    {
+      "source": "v1-0-0.md",
+      "target": "../reference/site.md",
+      "raw_link": "../reference/site.md",
+      "line": 40,
+      "status": "outside_root"
+    },
+    {
+      "source": "v1-0-0.md",
+      "target": "v2-0-0.md",
+      "raw_link": "v2-0-0.md",
+      "line": 38,
+      "status": "resolved"
+    },
+    {
+      "source": "v2-0-0.md",
+      "target": "../reference/build.md",
+      "raw_link": "../reference/build.md",
+      "line": 39,
+      "status": "outside_root"
+    },
+    {
+      "source": "v2-0-0.md",
+      "target": "../reference/theme.md",
+      "raw_link": "../reference/theme.md",
+      "line": 38,
+      "status": "outside_root"
+    },
+    {
+      "source": "v2-0-0.md",
+      "target": "v3-0-0.md",
+      "raw_link": "v3-0-0.md",
+      "line": 37,
+      "status": "resolved"
+    },
+    {
+      "source": "v3-0-0.md",
+      "target": "../reference/build.md",
+      "raw_link": "../reference/build.md",
+      "line": 34,
+      "status": "outside_root"
+    },
+    {
+      "source": "v3-0-0.md",
+      "target": "../reference/server.md",
+      "raw_link": "../reference/server.md",
+      "line": 33,
+      "status": "outside_root"
+    }
+  ],
+  "stats": {
+    "files": 10,
+    "ignored_files": 0,
+    "links": 23,
+    "broken_links": 0,
+    "resolved_links": 17,
+    "self_links": 0,
+    "orphan_files": 1,
+    "components": 0
+  }
+}

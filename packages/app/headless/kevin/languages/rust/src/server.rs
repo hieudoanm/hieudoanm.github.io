@@ -46,6 +46,14 @@ pub fn serve(listener: TcpListener, kv: Arc<DB>, stop: Arc<AtomicBool>) -> std::
 
 /// Reads protocol lines and writes responses until the client disconnects.
 fn handle_connection(stream: TcpStream, kv: Arc<DB>) {
+    // The listener is non-blocking so the accept loop can poll `stop`, and on
+    // some platforms an accepted socket inherits that flag. Left set, an idle
+    // client would surface a spurious WouldBlock read error and be dropped
+    // mid-session, so each connection is put back into blocking mode.
+    if let Err(e) = stream.set_nonblocking(false) {
+        warn!(%e, "could not clear non-blocking mode on connection");
+        return;
+    }
     let peer = stream
         .peer_addr()
         .map(|a| a.to_string())
@@ -123,6 +131,28 @@ mod tests {
             .unwrap();
         assert!(buf.contains("OK\n"));
         assert!(buf.contains("hello world\n"));
+        stop.store(true, Ordering::Relaxed);
+    }
+
+    #[test]
+    fn an_idle_connection_stays_open_between_commands() {
+        let (addr, stop, _) = start();
+        let mut stream = TcpStream::connect(addr).unwrap();
+        let mut reader = BufReader::new(stream.try_clone().unwrap());
+        let mut line = String::new();
+
+        let exchange = [("PING\n", "PONG"), ("SET k v\n", "OK"), ("GET k\n", "v")];
+        for (request, expected) in exchange {
+            stream.write_all(request.as_bytes()).unwrap();
+            stream.flush().unwrap();
+            // Idle longer than the accept loop's 10ms poll, so a read on a
+            // wrongly non-blocking socket would surface as a dropped
+            // connection rather than a delayed reply.
+            std::thread::sleep(Duration::from_millis(120));
+            line.clear();
+            reader.read_line(&mut line).unwrap();
+            assert_eq!(line.trim_end(), expected, "reply to {request:?}");
+        }
         stop.store(true, Ordering::Relaxed);
     }
 

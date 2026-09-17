@@ -49,6 +49,9 @@ cargo run -p browserverless-cli -- memory \
 # Serve the headless rendering web API on http://127.0.0.1:8080
 cargo run -p browserverless-cli -- serve --bind 127.0.0.1:8080
 
+# Serve the Model Context Protocol on stdio
+cargo run -p browserverless-cli -- mcp serve
+
 # Headed window (currently loads a hardcoded https://example.com)
 cargo run -p browserverless-cli -- open
 ```
@@ -58,6 +61,7 @@ CLI flags: `screenshot <url> [--output screenshot.png] [--width 1280]
 (omit `-o` to print to stdout); `memory <url> [--timeout 30000] [--observe 5000]`;
 `serve [--bind 127.0.0.1:8080] [--port 8080] [--width 1280] [--height 720]
 [--timeout 30000]` (`--port` overrides the port in `--bind`).
+`mcp serve [--width 1280] [--height 720] [--timeout 30000]`.
 The URL is positional and must be absolute (`file://`, `http://`, `https://`).
 Use a release build for meaningful timings (`cargo build --release`).
 
@@ -96,6 +100,33 @@ Only `http`/`https` targets are allowed (400 otherwise); missing `url` or invali
 JSON body is 400; a non-POST on `/api/v1/scrape` or `/api/v1/screenshot` is 405;
 unknown paths are 404; render timeouts are 504. Details in `docs/ARCHITECTURE.md`
 §Server Mode.
+
+### MCP
+
+`mcp serve` speaks MCP over stdio using newline-delimited JSON-RPC 2.0. Requests
+are read from stdin; every reply is written as a single line to stdout, and
+diagnostics go to stderr so they can never corrupt the protocol stream.
+
+| Tool | Arguments | Result |
+| --- | --- | --- |
+| `browserverless_scrape` | `url`, optional `timeout_ms` | text block with the page's final URL, title, HTML, and request cost |
+| `browserverless_screenshot` | `url`, optional `timeout_ms` | a text summary plus a base64 `image/png` block |
+| `browserverless_version` | none | the server name and crate version |
+
+`timeout_ms` overrides `--timeout` for that call. Zero means "use the server
+default". A missing `url`, a negative or oversized `timeout_ms`, and any
+non-`http`/`https` scheme are returned to the model as tool errors
+(`isError: true`) so it can correct the call, rather than as JSON-RPC errors.
+Only `http` and `https` are accepted, matching the server API; a client-supplied
+URL is not otherwise restricted, so this mode renders private addresses if asked
+to. Frames are capped at 8 MiB and the reader resynchronises on the next
+newline, so an oversized frame cannot exhaust memory or be executed as a second
+command. A JSON-RPC request without an `id` is a notification and is never
+answered.
+
+Servo initialises process-wide state that panics if a second browser is
+constructed, so the server builds one browser on first use and gives each tool
+call a fresh page within it. Details in `docs/ARCHITECTURE.md` §MCP.
 
 ## Test / check
 

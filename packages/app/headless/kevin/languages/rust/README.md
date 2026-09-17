@@ -72,8 +72,8 @@ See [PACKAGING](PACKAGING) for the CI artifact pipeline and
 
 ## Usage
 
-The CLI is built with [clap](https://docs.rs/clap/) (derive API) and exposes a
-single subcommand:
+The CLI is built with [clap](https://docs.rs/clap/) (derive API) and exposes
+two subcommands, `serve` and `mcp serve`:
 
 ```bash
 # Start the server on the Redis default port
@@ -85,8 +85,14 @@ single subcommand:
 # Open the key/value manager GUI alongside the server (requires --features gui build)
 ./kevin serve --gui
 
+# Open the key/value manager TUI alongside the server (compiled into every build)
+./kevin serve --tui
+
 # Talk to it with any Redis-cli-compatible tool or plain TCP:
 #   printf 'SET foo bar\nGET foo\n' | nc 127.0.0.1 6379
+
+# Expose the store to LLM clients over the Model Context Protocol
+./kevin mcp serve
 ```
 
 ## Commands
@@ -108,7 +114,74 @@ single subcommand:
 Commands are case-insensitive. Unknown commands and missing arguments return a
 Redis-style `ERR unknown command` / `ERR usage: ...` response.
 
+## MCP (Model Context Protocol)
+
+`kevin mcp serve` speaks newline-delimited
+[JSON-RPC 2.0](https://www.jsonrpc.org/specification) on stdin/stdout — the
+transport MCP clients expect. Logs go to stderr so stdout carries only
+protocol frames.
+
+```bash
+# Back the tools with an in-process store (fastest, nothing else to run)
+./kevin mcp serve
+
+# Back the tools with an in-process store persisted to a JSON snapshot
+./kevin mcp serve --data store.json
+
+# Proxy a running server instead of holding data locally
+kevin serve --port 6379 &
+./kevin mcp serve --addr 127.0.0.1:6379
+```
+
+`--addr` and `--data` are mutually exclusive: one proxies a remote server, the
+other owns local data. There is no MCP SDK dependency — the protocol is a few
+hundred lines of `serde_json` over two pipes.
+
+### Tools
+
+| No  | Tool            | Description                                     |
+| --- | --------------- | ----------------------------------------------- |
+| 1   | `kevin_ping`    | Check that the store is reachable              |
+| 2   | `kevin_set`     | Store a value, optionally with a TTL           |
+| 3   | `kevin_get`     | Read a value                                    |
+| 4   | `kevin_del`     | Delete one or more keys, reporting the count   |
+| 5   | `kevin_exists`  | Test whether keys exist, reporting which        |
+| 6   | `kevin_keys`    | List all keys, sorted                           |
+| 7   | `kevin_len`     | Count the keys                                  |
+| 8   | `kevin_ttl`     | Report a key's state: `missing`, `no-expiry` or `expiring` |
+| 9   | `kevin_expire`  | Set a key's TTL in seconds                      |
+| 10  | `kevin_flush`   | Delete every key                                |
+
+Results are JSON documents, so a model can act on them without parsing prose.
+Tool failures come back as an error result the model can read, not as a
+transport error.
+
+### Client configuration
+
+Point any MCP client at the binary:
+
+```json
+{
+  "mcpServers": {
+    "kevin": {
+      "command": "kevin",
+      "args": ["mcp", "serve"]
+    }
+  }
+}
+```
+
+### Proxy mode limits
+
+The inline KeVIN protocol is whitespace-tokenised, so keys and values cannot
+contain spaces or newlines when `kevin mcp serve --addr` proxies over TCP. With
+the default in-process store there is no such restriction, because nothing is
+re-encoded. `kevin mcp serve --addr` reports the offending token rather than
+silently corrupting it.
+
 ## Configuration
+
+`serve` flags:
 
 | Flag     | Default   | Purpose                                                  |
 | -------- | --------- | -------------------------------------------------------- |
@@ -116,8 +189,19 @@ Redis-style `ERR unknown command` / `ERR usage: ...` response.
 | `--bind` | `0.0.0.0` | Address to bind to                                       |
 | `--data` |           | Path to JSON data file (load on start, save on shutdown) |
 | `--gui`  | `false`   | Open the slint Material GUI alongside the server         |
+| `--tui`  | `false`   | Open the ratatui TUI alongside the server                |
 
-`RUST_LOG` controls logging level (default: `info`).
+`mcp serve` flags:
+
+| Flag     | Default | Purpose                                                        |
+| -------- | ------- | -------------------------------------------------------------- |
+| `--addr` |         | Proxy a `kevin serve` at this `host:port` instead of storing data |
+| `--data` |         | Path to a JSON snapshot, loaded on start and saved on exit      |
+
+`--addr` conflicts with `--data`.
+
+`RUST_LOG` controls logging level (default: `info`). Logs are written to stderr
+so they never mix into the MCP protocol stream.
 
 ## GUI
 
@@ -133,6 +217,24 @@ cargo build --release --features gui   # builds with GUI support
 
 Plain `cargo build --release` / `make build` stay GUI-free; `serve --gui` then
 reports that GUI support is not compiled in.
+
+## TUI
+
+`kevin serve --tui` opens a terminal UI built with
+[ratatui](https://ratatui.rs) + [crossterm](https://crates.io/crates/crossterm)
+to inspect and edit key/value pairs while the TCP server runs in the
+background. ratatui is pure Rust, so the TUI ships in every build:
+
+```bash
+make build            # the default release binary already includes the TUI
+./target/release/kevin serve --tui --port 6379
+```
+
+Keys: `tab` cycles Key/Search → Value → table; `enter` sets the inputs or loads
+the selected row into them; `↑/↓` move through the table; `d` deletes the
+selected row; `D` deletes all keys (with confirmation); `r` refreshes the
+fields; `q` or `Ctrl-C` quits and stops the server. `--gui` and `--tui` are
+mutually exclusive (`clap conflicts_with`).
 
 ## Documentation
 

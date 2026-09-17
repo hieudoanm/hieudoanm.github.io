@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{{ config.site.description }}" />
+    <title>{{ config.site.name }}</title>
+    <style>
+      :root {
+@LANDIFY_THEME@      }
+{% include 'base-css.j2' %}
+    </style>
+  </head>
+  <body>
+    {% include 'header.j2' %}
+
+    <main id="top">
+      <section class="hero">
+        <div>
+          <span class="badge">{{ config.hero.badge }}</span>
+          <h1>{{ config.hero.headline }}</h1>
+          <p class="lead">{{ config.hero.subheadline }}</p>
+          <div class="hero-actions">
+            {% if config.hero.primary.href %}<a class="btn btn-primary" href="{{ config.hero.primary.href }}">{{ config.hero.primary.label }}</a>{% endif %}
+            {% if config.hero.secondary.href %}<a class="btn btn-ghost" href="{{ config.hero.secondary.href }}">{{ config.hero.secondary.label }}</a>{% endif %}
+          </div>
+        </div>
+        <img class="hero-media" src="{{ config.hero.image.src }}" alt="{{ config.hero.image.alt }}" />
+      </section>
+
+      <section id="features" class="block">
+        <div class="block-head">
+          <h2>{{ config.features.heading }}</h2>
+          <p class="sub">{{ config.features.sub }}</p>
+        </div>
+        <div class="features">
+          {% for feature in config.features.items %}
+          <div class="feature">
+            <span class="icon">{{ feature.icon }}</span>
+            <h3>{{ feature.title }}</h3>
+            <p>{{ feature.body }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+
+      <section id="demo" class="block">
+        <div class="block-head">
+          <h2>{{ config.demo.heading }}</h2>
+          <p class="sub">{{ config.demo.sub }}</p>
+        </div>
+        <video class="demo-media" controls preload="metadata"{% if config.demo.video.poster %} poster="{{ config.demo.video.poster }}"{% endif %}>
+          <source src="{{ config.demo.video.src }}" type="video/mp4" />
+          {% if config.demo.video.track %}<track kind="descriptions" label="English descriptions" srclang="en" src="{{ config.demo.video.track }}" default />{% endif %}
+          Your browser does not support the video tag.
+        </video>
+      </section>
+
+      <section id="cta" class="block">
+        <div class="cta">
+          <span class="icon" aria-hidden="true">{{ config.cta.icon }}</span>
+          <h2>{{ config.cta.heading }}</h2>
+          <p>{{ config.cta.body }}</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="{{ config.cta.button.href }}">{{ config.cta.button.label }}</a>
+          </div>
+        </div>
+      </section>
+
+      {% include 'footer.j2' %}
+    </main>
+  </body>
+</html>

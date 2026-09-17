@@ -1,0 +1,251 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 361.63 273.78" width="361.63" height="273.78" role="img" aria-labelledby="algeria-title algeria-desc">
+  <title id="algeria-title">Algeria hex map</title>
+  <desc id="algeria-desc">Hexagon map with 48 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.01; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 9.91 7.08; }
+    .label { fill: #52525b; font: 600 8.02px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="SA">
+    <title>Souk Ahras</title>
+    <polygon class="tile" points="334.11,77.89 354.55,89.69 354.55,113.29 334.11,125.09 313.67,113.29 313.67,89.69" aria-label="Souk Ahras"/>
+    <text class="label" x="334.11" y="101.49">SA</text>
+  </g>
+  <g class="state" data-state="ET">
+    <title>El Tarf</title>
+    <polygon class="tile" points="313.67,42.48 334.11,54.28 334.11,77.89 313.67,89.69 293.23,77.89 293.23,54.28" aria-label="El Tarf"/>
+    <text class="label" x="313.67" y="66.08">ET</text>
+  </g>
+  <g class="state" data-state="TB">
+    <title>Tébessa</title>
+    <polygon class="tile" points="313.67,113.29 334.11,125.09 334.11,148.69 313.67,160.49 293.23,148.69 293.23,125.09" aria-label="Tébessa"/>
+    <text class="label" x="313.67" y="136.89">TB</text>
+  </g>
+  <g class="state" data-state="AN">
+    <title>Annaba</title>
+    <polygon class="tile" points="293.23,7.08 313.67,18.88 313.67,42.48 293.23,54.28 272.79,42.48 272.79,18.88" aria-label="Annaba"/>
+    <text class="label" x="293.23" y="30.68">AN</text>
+  </g>
+  <g class="state" data-state="GL">
+    <title>Guelma</title>
+    <polygon class="tile" points="293.23,77.89 313.67,89.69 313.67,113.29 293.23,125.09 272.79,113.29 272.79,89.69" aria-label="Guelma"/>
+    <text class="label" x="293.23" y="101.49">GL</text>
+  </g>
+  <g class="state" data-state="BB">
+    <title>Bordj Bou Arréridj</title>
+    <polygon class="tile" points="293.23,148.69 313.67,160.49 313.67,184.09 293.23,195.89 272.79,184.09 272.79,160.49" aria-label="Bordj Bou Arréridj"/>
+    <text class="label" x="293.23" y="172.29">BB</text>
+  </g>
+  <g class="state" data-state="SK">
+    <title>Skikda</title>
+    <polygon class="tile" points="272.79,42.48 293.23,54.28 293.23,77.89 272.79,89.69 252.36,77.89 252.36,54.28" aria-label="Skikda"/>
+    <text class="label" x="272.79" y="66.08">SK</text>
+  </g>
+  <g class="state" data-state="OB">
+    <title>Oum el Bouaghi</title>
+    <polygon class="tile" points="272.79,113.29 293.23,125.09 293.23,148.69 272.79,160.49 252.36,148.69 252.36,125.09" aria-label="Oum el Bouaghi"/>
+    <text class="label" x="272.79" y="136.89">OB</text>
+  </g>
+  <g class="state" data-state="BJ">
+    <title>Béjaïa</title>
+    <polygon class="tile" points="272.79,184.09 293.23,195.89 293.23,219.49 272.79,231.30 252.36,219.49 252.36,195.89" aria-label="Béjaïa"/>
+    <text class="label" x="272.79" y="207.69">BJ</text>
+  </g>
+  <g class="state" data-state="JJ">
+    <title>Jijel</title>
+    <polygon class="tile" points="252.36,7.08 272.79,18.88 272.79,42.48 252.36,54.28 231.92,42.48 231.92,18.88" aria-label="Jijel"/>
+    <text class="label" x="252.36" y="30.68">JJ</text>
+  </g>
+  <g class="state" data-state="CO">
+    <title>Constantine</title>
+    <polygon class="tile" points="252.36,77.89 272.79,89.69 272.79,113.29 252.36,125.09 231.92,113.29 231.92,89.69" aria-label="Constantine"/>
+    <text class="label" x="252.36" y="101.49">CO</text>
+  </g>
+  <g class="state" data-state="KH">
+    <title>Khenchela</title>
+    <polygon class="tile" points="252.36,148.69 272.79,160.49 272.79,184.09 252.36,195.89 231.92,184.09 231.92,160.49" aria-label="Khenchela"/>
+    <text class="label" x="252.36" y="172.29">KH</text>
+  </g>
+  <g class="state" data-state="IL">
+    <title>Illizi</title>
+    <polygon class="tile" points="252.36,219.49 272.79,231.30 272.79,254.90 252.36,266.70 231.92,254.90 231.92,231.30" aria-label="Illizi"/>
+    <text class="label" x="252.36" y="243.10">IL</text>
+  </g>
+  <g class="state" data-state="ML">
+    <title>Mila</title>
+    <polygon class="tile" points="231.92,42.48 252.36,54.28 252.36,77.89 231.92,89.69 211.48,77.89 211.48,54.28" aria-label="Mila"/>
+    <text class="label" x="231.92" y="66.08">ML</text>
+  </g>
+  <g class="state" data-state="BT">
+    <title>Batna</title>
+    <polygon class="tile" points="231.92,113.29 252.36,125.09 252.36,148.69 231.92,160.49 211.48,148.69 211.48,125.09" aria-label="Batna"/>
+    <text class="label" x="231.92" y="136.89">BT</text>
+  </g>
+  <g class="state" data-state="EO">
+    <title>El Oued</title>
+    <polygon class="tile" points="231.92,184.09 252.36,195.89 252.36,219.49 231.92,231.30 211.48,219.49 211.48,195.89" aria-label="El Oued"/>
+    <text class="label" x="231.92" y="207.69">EO</text>
+  </g>
+  <g class="state" data-state="TO">
+    <title>Tizi Ouzou</title>
+    <polygon class="tile" points="211.48,7.08 231.92,18.88 231.92,42.48 211.48,54.28 191.04,42.48 191.04,18.88" aria-label="Tizi Ouzou"/>
+    <text class="label" x="211.48" y="30.68">TO</text>
+  </g>
+  <g class="state" data-state="SF">
+    <title>Sétif</title>
+    <polygon class="tile" points="211.48,77.89 231.92,89.69 231.92,113.29 211.48,125.09 191.04,113.29 191.04,89.69" aria-label="Sétif"/>
+    <text class="label" x="211.48" y="101.49">SF</text>
+  </g>
+  <g class="state" data-state="BS">
+    <title>Biskra</title>
+    <polygon class="tile" points="211.48,148.69 231.92,160.49 231.92,184.09 211.48,195.89 191.04,184.09 191.04,160.49" aria-label="Biskra"/>
+    <text class="label" x="211.48" y="172.29">BS</text>
+  </g>
+  <g class="state" data-state="OG">
+    <title>Ouargla</title>
+    <polygon class="tile" points="211.48,219.49 231.92,231.30 231.92,254.90 211.48,266.70 191.04,254.90 191.04,231.30" aria-label="Ouargla"/>
+    <text class="label" x="211.48" y="243.10">OG</text>
+  </g>
+  <g class="state" data-state="BU">
+    <title>Bouira</title>
+    <polygon class="tile" points="191.04,42.48 211.48,54.28 211.48,77.89 191.04,89.69 170.60,77.89 170.60,54.28" aria-label="Bouira"/>
+    <text class="label" x="191.04" y="66.08">BU</text>
+  </g>
+  <g class="state" data-state="MS">
+    <title>M'Sila</title>
+    <polygon class="tile" points="191.04,113.29 211.48,125.09 211.48,148.69 191.04,160.49 170.60,148.69 170.60,125.09" aria-label="M'Sila"/>
+    <text class="label" x="191.04" y="136.89">MS</text>
+  </g>
+  <g class="state" data-state="DJ">
+    <title>Djelfa</title>
+    <polygon class="tile" points="191.04,184.09 211.48,195.89 211.48,219.49 191.04,231.30 170.60,219.49 170.60,195.89" aria-label="Djelfa"/>
+    <text class="label" x="191.04" y="207.69">DJ</text>
+  </g>
+  <g class="state" data-state="BM">
+    <title>Boumerdès</title>
+    <polygon class="tile" points="170.60,7.08 191.04,18.88 191.04,42.48 170.60,54.28 150.16,42.48 150.16,18.88" aria-label="Boumerdès"/>
+    <text class="label" x="170.60" y="30.68">BM</text>
+  </g>
+  <g class="state" data-state="BL">
+    <title>Blida</title>
+    <polygon class="tile" points="170.60,77.89 191.04,89.69 191.04,113.29 170.60,125.09 150.16,113.29 150.16,89.69" aria-label="Blida"/>
+    <text class="label" x="170.60" y="101.49">BL</text>
+  </g>
+  <g class="state" data-state="MD">
+    <title>Médéa</title>
+    <polygon class="tile" points="170.60,148.69 191.04,160.49 191.04,184.09 170.60,195.89 150.16,184.09 150.16,160.49" aria-label="Médéa"/>
+    <text class="label" x="170.60" y="172.29">MD</text>
+  </g>
+  <g class="state" data-state="TM">
+    <title>Tamanghasset</title>
+    <polygon class="tile" points="170.60,219.49 191.04,231.30 191.04,254.90 170.60,266.70 150.16,254.90 150.16,231.30" aria-label="Tamanghasset"/>
+    <text class="label" x="170.60" y="243.10">TM</text>
+  </g>
+  <g class="state" data-state="TP">
+    <title>Tipaza</title>
+    <polygon class="tile" points="150.16,42.48 170.60,54.28 170.60,77.89 150.16,89.69 129.72,77.89 129.72,54.28" aria-label="Tipaza"/>
+    <text class="label" x="150.16" y="66.08">TP</text>
+  </g>
+  <g class="state" data-state="TS">
+    <title>Tissemsilt</title>
+    <polygon class="tile" points="150.16,113.29 170.60,125.09 170.60,148.69 150.16,160.49 129.72,148.69 129.72,125.09" aria-label="Tissemsilt"/>
+    <text class="label" x="150.16" y="136.89">TS</text>
+  </g>
+  <g class="state" data-state="LG">
+    <title>Laghouat</title>
+    <polygon class="tile" points="150.16,184.09 170.60,195.89 170.60,219.49 150.16,231.30 129.72,219.49 129.72,195.89" aria-label="Laghouat"/>
+    <text class="label" x="150.16" y="207.69">LG</text>
+  </g>
+  <g class="state" data-state="AL">
+    <title>Alger</title>
+    <polygon class="tile" points="129.72,7.08 150.16,18.88 150.16,42.48 129.72,54.28 109.28,42.48 109.28,18.88" aria-label="Alger"/>
+    <text class="label" x="129.72" y="30.68">AL</text>
+  </g>
+  <g class="state" data-state="AD">
+    <title>Aïn Defla</title>
+    <polygon class="tile" points="129.72,77.89 150.16,89.69 150.16,113.29 129.72,125.09 109.28,113.29 109.28,89.69" aria-label="Aïn Defla"/>
+    <text class="label" x="129.72" y="101.49">AD</text>
+  </g>
+  <g class="state" data-state="TR">
+    <title>Tiaret</title>
+    <polygon class="tile" points="129.72,148.69 150.16,160.49 150.16,184.09 129.72,195.89 109.28,184.09 109.28,160.49" aria-label="Tiaret"/>
+    <text class="label" x="129.72" y="172.29">TR</text>
+  </g>
+  <g class="state" data-state="GR">
+    <title>Ghardaïa</title>
+    <polygon class="tile" points="129.72,219.49 150.16,231.30 150.16,254.90 129.72,266.70 109.28,254.90 109.28,231.30" aria-label="Ghardaïa"/>
+    <text class="label" x="129.72" y="243.10">GR</text>
+  </g>
+  <g class="state" data-state="CH">
+    <title>Chlef</title>
+    <polygon class="tile" points="109.28,42.48 129.72,54.28 129.72,77.89 109.28,89.69 88.84,77.89 88.84,54.28" aria-label="Chlef"/>
+    <text class="label" x="109.28" y="66.08">CH</text>
+  </g>
+  <g class="state" data-state="SD">
+    <title>Saïda</title>
+    <polygon class="tile" points="109.28,113.29 129.72,125.09 129.72,148.69 109.28,160.49 88.84,148.69 88.84,125.09" aria-label="Saïda"/>
+    <text class="label" x="109.28" y="136.89">SD</text>
+  </g>
+  <g class="state" data-state="EB">
+    <title>El Bayadh</title>
+    <polygon class="tile" points="109.28,184.09 129.72,195.89 129.72,219.49 109.28,231.30 88.84,219.49 88.84,195.89" aria-label="El Bayadh"/>
+    <text class="label" x="109.28" y="207.69">EB</text>
+  </g>
+  <g class="state" data-state="RE">
+    <title>Relizane</title>
+    <polygon class="tile" points="88.84,7.08 109.28,18.88 109.28,42.48 88.84,54.28 68.40,42.48 68.40,18.88" aria-label="Relizane"/>
+    <text class="label" x="88.84" y="30.68">RE</text>
+  </g>
+  <g class="state" data-state="MC">
+    <title>Mascara</title>
+    <polygon class="tile" points="88.84,77.89 109.28,89.69 109.28,113.29 88.84,125.09 68.40,113.29 68.40,89.69" aria-label="Mascara"/>
+    <text class="label" x="88.84" y="101.49">MC</text>
+  </g>
+  <g class="state" data-state="NA">
+    <title>Naâma</title>
+    <polygon class="tile" points="88.84,148.69 109.28,160.49 109.28,184.09 88.84,195.89 68.40,184.09 68.40,160.49" aria-label="Naâma"/>
+    <text class="label" x="88.84" y="172.29">NA</text>
+  </g>
+  <g class="state" data-state="AR">
+    <title>Adrar</title>
+    <polygon class="tile" points="88.84,219.49 109.28,231.30 109.28,254.90 88.84,266.70 68.40,254.90 68.40,231.30" aria-label="Adrar"/>
+    <text class="label" x="88.84" y="243.10">AR</text>
+  </g>
+  <g class="state" data-state="MG">
+    <title>Mostaganem</title>
+    <polygon class="tile" points="68.40,42.48 88.84,54.28 88.84,77.89 68.40,89.69 47.96,77.89 47.96,54.28" aria-label="Mostaganem"/>
+    <text class="label" x="68.40" y="66.08">MG</text>
+  </g>
+  <g class="state" data-state="SB">
+    <title>Sidi Bel Abbès</title>
+    <polygon class="tile" points="68.40,113.29 88.84,125.09 88.84,148.69 68.40,160.49 47.96,148.69 47.96,125.09" aria-label="Sidi Bel Abbès"/>
+    <text class="label" x="68.40" y="136.89">SB</text>
+  </g>
+  <g class="state" data-state="BC">
+    <title>Béchar</title>
+    <polygon class="tile" points="68.40,184.09 88.84,195.89 88.84,219.49 68.40,231.30 47.96,219.49 47.96,195.89" aria-label="Béchar"/>
+    <text class="label" x="68.40" y="207.69">BC</text>
+  </g>
+  <g class="state" data-state="OR">
+    <title>Oran</title>
+    <polygon class="tile" points="47.96,77.89 68.40,89.69 68.40,113.29 47.96,125.09 27.52,113.29 27.52,89.69" aria-label="Oran"/>
+    <text class="label" x="47.96" y="101.49">OR</text>
+  </g>
+  <g class="state" data-state="TL">
+    <title>Tlemcen</title>
+    <polygon class="tile" points="47.96,148.69 68.40,160.49 68.40,184.09 47.96,195.89 27.52,184.09 27.52,160.49" aria-label="Tlemcen"/>
+    <text class="label" x="47.96" y="172.29">TL</text>
+  </g>
+  <g class="state" data-state="TN">
+    <title>Tindouf</title>
+    <polygon class="tile" points="47.96,219.49 68.40,231.30 68.40,254.90 47.96,266.70 27.52,254.90 27.52,231.30" aria-label="Tindouf"/>
+    <text class="label" x="47.96" y="243.10">TN</text>
+  </g>
+  <g class="state" data-state="AT">
+    <title>Aïn Témouchent</title>
+    <polygon class="tile" points="27.52,113.29 47.96,125.09 47.96,148.69 27.52,160.49 7.08,148.69 7.08,125.09" aria-label="Aïn Témouchent"/>
+    <text class="label" x="27.52" y="136.89">AT</text>
+  </g>
+</svg>

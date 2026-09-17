@@ -5,27 +5,25 @@ ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 SASS="$ROOT/node_modules/.bin/sass"
 DIST="$ROOT/dist"
 
+# Each tier compiles one entry into dist/<dir>/<stem>.css and .min.css.
+# `full` is the only tier whose output directory differs from its entry stem.
+TIER_DIRS=(nano micro lite standard full)
+ENTRY_STEMS=(tailwind.nano tailwind.micro tailwind.lite tailwind.standard tailwind)
+
 clean() {
   rm -rf "$DIST"
 }
 
 build() {
-  mkdir -p "$DIST/nano" "$DIST/micro" "$DIST/lite" "$DIST/standard" "$DIST/full"
+  local index dir stem
+  for index in "${!TIER_DIRS[@]}"; do
+    dir="${TIER_DIRS[$index]}"
+    stem="${ENTRY_STEMS[$index]}"
+    mkdir -p "$DIST/$dir"
 
-  "$SASS" src/tailwind.nano.scss "$DIST/nano/tailwind.nano.css"
-  "$SASS" --style=compressed src/tailwind.nano.scss "$DIST/nano/tailwind.nano.min.css"
-
-  "$SASS" src/tailwind.micro.scss "$DIST/micro/tailwind.micro.css"
-  "$SASS" --style=compressed src/tailwind.micro.scss "$DIST/micro/tailwind.micro.min.css"
-
-  "$SASS" src/tailwind.lite.scss "$DIST/lite/tailwind.lite.css"
-  "$SASS" --style=compressed src/tailwind.lite.scss "$DIST/lite/tailwind.lite.min.css"
-
-  "$SASS" src/tailwind.standard.scss "$DIST/standard/tailwind.standard.css"
-  "$SASS" --style=compressed src/tailwind.standard.scss "$DIST/standard/tailwind.standard.min.css"
-
-  "$SASS" src/tailwind.scss "$DIST/full/tailwind.css"
-  "$SASS" --style=compressed src/tailwind.scss "$DIST/full/tailwind.min.css"
+    "$SASS" --source-map "src/$stem.scss" "$DIST/$dir/$stem.css"
+    "$SASS" --source-map --style=compressed "src/$stem.scss" "$DIST/$dir/$stem.min.css"
+  done
 }
 
 cd "$ROOT"

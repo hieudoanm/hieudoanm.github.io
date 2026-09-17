@@ -28,12 +28,29 @@ Everything runs client-side from a static export; no server at runtime.
 
 ## Context (Verified)
 
-| Item                      | Value                                                                                                                             |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `database/doi.db`         | Valid SQLite 3.x, ~4.87 MB, **12,500 works / 19,198 references**                                                                  |
-| Sibling apps              | Standalone Next.js 16.3.3, `output: 'export'`, `'use client'` pages, Tailwind 4 + daisyUI, `@/*` → `./src/*`, `BASE_PATH` env     |
-| In-browser sqlite pattern | `developer-tools/database`: sql.js loads `.db` from `public/`; `next.config.ts` aliases `fs`/`path`/`crypto` → Node-builtin stubs |
-| DOI package today         | Prisma generators (`dbml`, `jsonSchema`) + Python pipeline. **No** `src/`, **no** Next.js.                                        |
+| Item                      | Value                                                                                                                                                 |
+| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `database/doi.db`         | Valid SQLite 3.x, ~4.87 MB, **12,500 works / 19,198 references**                                                                                      |
+| Sibling apps              | Standalone Next.js 16.3.3, `output: 'export'`, `'use client'` pages, Tailwind 4 + daisyUI, `@/*` → `./src/*`, `BASE_PATH` env                         |
+| In-browser sqlite pattern | `developer-tools/database`: sql.js loads `.db` from `public/`; `next.config.ts` aliases `fs`/`crypto` → Node-builtin stubs (never `path` — see below) |
+| DOI package today         | Prisma generators (`dbml`, `jsonSchema`) + Python pipeline. **No** `src/`, **no** Next.js.                                                            |
+
+### Never alias `path`
+
+`resolveAlias` applies to every compilation, including the server bundle that
+static export prerenders with — not just the browser bundle. Next.js's own
+internals require `path`, so aliasing it to an empty stub makes
+`next/dist/esm/lib/metadata/resolvers/resolve-url.js` call `path.join` on
+`undefined` and kills **every** prerendered route:
+
+```
+TypeError: Cannot read properties of undefined (reading 'join')
+```
+
+`fs` and `crypto` are safe to stub — Next.js does not `require` them from its
+metadata resolver. Nothing in this app needs them stubbed either: `sql.js`
+reaches for `node:fs`, which no `fs` alias matches, and only behind a Node-only
+guard.
 
 ## Data Model (from `prisma/schema.prisma`)
 

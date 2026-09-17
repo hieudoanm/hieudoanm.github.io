@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 361.03 252.23" width="361.03" height="252.23" role="img" aria-labelledby="guinea-title guinea-desc">
+  <title id="guinea-title">Guinea hex map</title>
+  <desc id="guinea-desc">Hexagon map with 34 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.12; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 10.49 7.49; }
+    .label { fill: #52525b; font: 600 8.49px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="BE">
+    <title>Beyla</title>
+    <polygon class="tile" points="331.91,119.87 353.54,132.36 353.54,157.33 331.91,169.82 310.28,157.33 310.28,132.36" aria-label="Beyla"/>
+    <text class="label" x="331.91" y="144.85">BE</text>
+  </g>
+  <g class="state" data-state="KAN">
+    <title>Kankan</title>
+    <polygon class="tile" points="310.28,82.41 331.91,94.90 331.91,119.87 310.28,132.36 288.65,119.87 288.65,94.90" aria-label="Kankan"/>
+    <text class="label" x="310.28" y="107.39">KAN</text>
+  </g>
+  <g class="state" data-state="LO">
+    <title>Lola</title>
+    <polygon class="tile" points="310.28,157.33 331.91,169.82 331.91,194.80 310.28,207.28 288.65,194.80 288.65,169.82" aria-label="Lola"/>
+    <text class="label" x="310.28" y="182.31">LO</text>
+  </g>
+  <g class="state" data-state="MD">
+    <title>Mandiana</title>
+    <polygon class="tile" points="288.65,44.95 310.28,57.44 310.28,82.41 288.65,94.90 267.03,82.41 267.03,57.44" aria-label="Mandiana"/>
+    <text class="label" x="288.65" y="69.93">MD</text>
+  </g>
+  <g class="state" data-state="KE">
+    <title>Kérouané</title>
+    <polygon class="tile" points="288.65,119.87 310.28,132.36 310.28,157.33 288.65,169.82 267.03,157.33 267.03,132.36" aria-label="Kérouané"/>
+    <text class="label" x="288.65" y="144.85">KE</text>
+  </g>
+  <g class="state" data-state="NZ">
+    <title>Nzérékoré</title>
+    <polygon class="tile" points="288.65,194.80 310.28,207.28 310.28,232.26 288.65,244.74 267.03,232.26 267.03,207.28" aria-label="Nzérékoré"/>
+    <text class="label" x="288.65" y="219.77">NZ</text>
+  </g>
+  <g class="state" data-state="SI">
+    <title>Siguiri</title>
+    <polygon class="tile" points="267.03,7.49 288.65,19.98 288.65,44.95 267.03,57.44 245.40,44.95 245.40,19.98" aria-label="Siguiri"/>
+    <text class="label" x="267.03" y="32.47">SI</text>
+  </g>
+  <g class="state" data-state="KO">
+    <title>Kouroussa</title>
+    <polygon class="tile" points="267.03,82.41 288.65,94.90 288.65,119.87 267.03,132.36 245.40,119.87 245.40,94.90" aria-label="Kouroussa"/>
+    <text class="label" x="267.03" y="107.39">KO</text>
+  </g>
+  <g class="state" data-state="MC">
+    <title>Macenta</title>
+    <polygon class="tile" points="267.03,157.33 288.65,169.82 288.65,194.80 267.03,207.28 245.40,194.80 245.40,169.82" aria-label="Macenta"/>
+    <text class="label" x="267.03" y="182.31">MC</text>
+  </g>
+  <g class="state" data-state="DI">
+    <title>Dinguiraye</title>
+    <polygon class="tile" points="245.40,44.95 267.03,57.44 267.03,82.41 245.40,94.90 223.77,82.41 223.77,57.44" aria-label="Dinguiraye"/>
+    <text class="label" x="245.40" y="69.93">DI</text>
+  </g>
+  <g class="state" data-state="KS">
+    <title>Kissidougou</title>
+    <polygon class="tile" points="245.40,119.87 267.03,132.36 267.03,157.33 245.40,169.82 223.77,157.33 223.77,132.36" aria-label="Kissidougou"/>
+    <text class="label" x="245.40" y="144.85">KS</text>
+  </g>
+  <g class="state" data-state="YO">
+    <title>Yomou</title>
+    <polygon class="tile" points="245.40,194.80 267.03,207.28 267.03,232.26 245.40,244.74 223.77,232.26 223.77,207.28" aria-label="Yomou"/>
+    <text class="label" x="245.40" y="219.77">YO</text>
+  </g>
+  <g class="state" data-state="KB">
+    <title>Koubia</title>
+    <polygon class="tile" points="223.77,7.49 245.40,19.98 245.40,44.95 223.77,57.44 202.14,44.95 202.14,19.98" aria-label="Koubia"/>
+    <text class="label" x="223.77" y="32.47">KB</text>
+  </g>
+  <g class="state" data-state="DB">
+    <title>Dabola</title>
+    <polygon class="tile" points="223.77,82.41 245.40,94.90 245.40,119.87 223.77,132.36 202.14,119.87 202.14,94.90" aria-label="Dabola"/>
+    <text class="label" x="223.77" y="107.39">DB</text>
+  </g>
+  <g class="state" data-state="GU">
+    <title>Guéckédou</title>
+    <polygon class="tile" points="223.77,157.33 245.40,169.82 245.40,194.80 223.77,207.28 202.14,194.80 202.14,169.82" aria-label="Guéckédou"/>
+    <text class="label" x="223.77" y="182.31">GU</text>
+  </g>
+  <g class="state" data-state="TO">
+    <title>Tougué</title>
+    <polygon class="tile" points="202.14,44.95 223.77,57.44 223.77,82.41 202.14,94.90 180.52,82.41 180.52,57.44" aria-label="Tougué"/>
+    <text class="label" x="202.14" y="69.93">TO</text>
+  </g>
+  <g class="state" data-state="FA">
+    <title>Faranah</title>
+    <polygon class="tile" points="202.14,119.87 223.77,132.36 223.77,157.33 202.14,169.82 180.52,157.33 180.52,132.36" aria-label="Faranah"/>
+    <text class="label" x="202.14" y="144.85">FA</text>
+  </g>
+  <g class="state" data-state="ML">
+    <title>Mali</title>
+    <polygon class="tile" points="180.52,7.49 202.14,19.98 202.14,44.95 180.52,57.44 158.89,44.95 158.89,19.98" aria-label="Mali"/>
+    <text class="label" x="180.52" y="32.47">ML</text>
+  </g>
+  <g class="state" data-state="MM">
+    <title>Mamou</title>
+    <polygon class="tile" points="180.52,82.41 202.14,94.90 202.14,119.87 180.52,132.36 158.89,119.87 158.89,94.90" aria-label="Mamou"/>
+    <text class="label" x="180.52" y="107.39">MM</text>
+  </g>
+  <g class="state" data-state="CON">
+    <title>Conakry</title>
+    <polygon class="tile" points="180.52,157.33 202.14,169.82 202.14,194.80 180.52,207.28 158.89,194.80 158.89,169.82" aria-label="Conakry"/>
+    <text class="label" x="180.52" y="182.31">CON</text>
+  </g>
+  <g class="state" data-state="LA">
+    <title>Labé</title>
+    <polygon class="tile" points="158.89,44.95 180.52,57.44 180.52,82.41 158.89,94.90 137.26,82.41 137.26,57.44" aria-label="Labé"/>
+    <text class="label" x="158.89" y="69.93">LA</text>
+  </g>
+  <g class="state" data-state="DL">
+    <title>Dalaba</title>
+    <polygon class="tile" points="158.89,119.87 180.52,132.36 180.52,157.33 158.89,169.82 137.26,157.33 137.26,132.36" aria-label="Dalaba"/>
+    <text class="label" x="158.89" y="144.85">DL</text>
+  </g>
+  <g class="state" data-state="KN">
+    <title>Koundara</title>
+    <polygon class="tile" points="137.26,7.49 158.89,19.98 158.89,44.95 137.26,57.44 115.63,44.95 115.63,19.98" aria-label="Koundara"/>
+    <text class="label" x="137.26" y="32.47">KN</text>
+  </g>
+  <g class="state" data-state="PI">
+    <title>Pita</title>
+    <polygon class="tile" points="137.26,82.41 158.89,94.90 158.89,119.87 137.26,132.36 115.63,119.87 115.63,94.90" aria-label="Pita"/>
+    <text class="label" x="137.26" y="107.39">PI</text>
+  </g>
+  <g class="state" data-state="FO">
+    <title>Forécariah</title>
+    <polygon class="tile" points="137.26,157.33 158.89,169.82 158.89,194.80 137.26,207.28 115.63,194.80 115.63,169.82" aria-label="Forécariah"/>
+    <text class="label" x="137.26" y="182.31">FO</text>
+  </g>
+  <g class="state" data-state="LE">
+    <title>Lélouma</title>
+    <polygon class="tile" points="115.63,44.95 137.26,57.44 137.26,82.41 115.63,94.90 94.00,82.41 94.00,57.44" aria-label="Lélouma"/>
+    <text class="label" x="115.63" y="69.93">LE</text>
+  </g>
+  <g class="state" data-state="KD">
+    <title>Kindia</title>
+    <polygon class="tile" points="115.63,119.87 137.26,132.36 137.26,157.33 115.63,169.82 94.00,157.33 94.00,132.36" aria-label="Kindia"/>
+    <text class="label" x="115.63" y="144.85">KD</text>
+  </g>
+  <g class="state" data-state="GA">
+    <title>Gaoual</title>
+    <polygon class="tile" points="94.00,7.49 115.63,19.98 115.63,44.95 94.00,57.44 72.38,44.95 72.38,19.98" aria-label="Gaoual"/>
+    <text class="label" x="94.00" y="32.47">GA</text>
+  </g>
+  <g class="state" data-state="FR">
+    <title>Fria</title>
+    <polygon class="tile" points="94.00,82.41 115.63,94.90 115.63,119.87 94.00,132.36 72.38,119.87 72.38,94.90" aria-label="Fria"/>
+    <text class="label" x="94.00" y="107.39">FR</text>
+  </g>
+  <g class="state" data-state="CO">
+    <title>Coyah</title>
+    <polygon class="tile" points="94.00,157.33 115.63,169.82 115.63,194.80 94.00,207.28 72.38,194.80 72.38,169.82" aria-label="Coyah"/>
+    <text class="label" x="94.00" y="182.31">CO</text>
+  </g>
+  <g class="state" data-state="TE">
+    <title>Télimélé</title>
+    <polygon class="tile" points="72.38,44.95 94.00,57.44 94.00,82.41 72.38,94.90 50.75,82.41 50.75,57.44" aria-label="Télimélé"/>
+    <text class="label" x="72.38" y="69.93">TE</text>
+  </g>
+  <g class="state" data-state="DU">
+    <title>Dubréka</title>
+    <polygon class="tile" points="72.38,119.87 94.00,132.36 94.00,157.33 72.38,169.82 50.75,157.33 50.75,132.36" aria-label="Dubréka"/>
+    <text class="label" x="72.38" y="144.85">DU</text>
+  </g>
+  <g class="state" data-state="BF">
+    <title>Boffa</title>
+    <polygon class="tile" points="50.75,82.41 72.38,94.90 72.38,119.87 50.75,132.36 29.12,119.87 29.12,94.90" aria-label="Boffa"/>
+    <text class="label" x="50.75" y="107.39">BF</text>
+  </g>
+  <g class="state" data-state="BK">
+    <title>Boke</title>
+    <polygon class="tile" points="29.12,44.95 50.75,57.44 50.75,82.41 29.12,94.90 7.49,82.41 7.49,57.44" aria-label="Boke"/>
+    <text class="label" x="29.12" y="69.93">BK</text>
+  </g>
+</svg>

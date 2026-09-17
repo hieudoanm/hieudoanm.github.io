@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="en" data-theme="pagify-light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Content page · pagify</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Code+Pro:wght@400;500&display=swap"
+      rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --font-sans:
+          Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+        --font-mono:
+          'Source Code Pro', ui-monospace, SFMono-Regular, Menlo, Monaco,
+          Consolas, 'Liberation Mono', monospace;
+        --color-background: #FFFFFF;
+        --color-on-background: #18181B;
+        --color-surface: #FAFAFA;
+        --color-surface-container: #F3F4F6;
+        --color-surface-container-highest: #E4E4E7;
+        --color-surface-dim: #E4E4E7;
+        --color-surface-bright: #FFFFFF;
+        --color-on-surface: #18181B;
+        --color-primary: #2563EB;
+        --color-on-primary: #FFFFFF;
+        --color-primary-container: #DBEAFE;
+        --color-on-primary-container: #1D4ED8;
+        --color-secondary: #71717A;
+        --color-on-secondary: #FFFFFF;
+        --color-secondary-container: #E4E4E7;
+        --color-on-secondary-container: #404040;
+        --color-tertiary: #6B7280;
+        --color-on-tertiary: #FFFFFF;
+        --color-tertiary-container: #E5E7EB;
+        --color-on-tertiary-container: #374151;
+        --color-error: #DC2626;
+        --color-on-error: #FFFFFF;
+        --color-error-container: #FEE2E2;
+        --color-on-error-container: #991B1B;
+        --color-outline: #71717A;
+        --color-outline-variant: #E4E4E7;
+        --color-inverse-surface: #18181B;
+        --color-inverse-on-surface: #FAFAFA;
+        --color-inverse-primary: #60A5FA;
+      }
+    </style>
+    <style>
+      [data-theme='pagify-dark'] {
+        color-scheme: dark;
+        --color-background: #18181B;
+        --color-on-background: #F3F4F6;
+        --color-surface: #18181B;
+        --color-surface-container: #27272A;
+        --color-surface-container-highest: #3F3F46;
+        --color-surface-dim: #18181B;
+        --color-surface-bright: #18181B;
+        --color-on-surface: #F3F4F6;
+        --color-primary: #60A5FA;
+        --color-on-primary: #18181B;
+        --color-primary-container: #1D4ED8;
+        --color-on-primary-container: #DBEAFE;
+        --color-secondary: #A1A1AA;
+        --color-on-secondary: #18181B;
+        --color-secondary-container: #3F3F46;
+        --color-on-secondary-container: #E4E4E7;
+        --color-tertiary: #A1A1AA;
+        --color-on-tertiary: #18181B;
+        --color-tertiary-container: #3F3F46;
+        --color-on-tertiary-container: #E5E7EB;
+        --color-error: #F87171;
+        --color-on-error: #18181B;
+        --color-error-container: #450A0A;
+        --color-on-error-container: #FEE2E2;
+        --color-outline: #A1A1AA;
+        --color-outline-variant: #3F3F46;
+        --color-inverse-surface: #F3F4F6;
+        --color-inverse-on-surface: #18181B;
+        --color-inverse-primary: #2563EB;
+      }
+      body {
+        background-color: var(--color-background);
+        color: var(--color-on-surface);
+        font-family: var(--font-sans);
+        font-size: 16px;
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        margin: 0;
+        min-height: 100vh;
+      }
+      :focus-visible {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+      }
+      .md3-type-headline-large {
+        font-size: 32px;
+        line-height: 40px;
+        font-weight: 300;
+        letter-spacing: 0;
+      }
+      .md3-type-title-large {
+        font-size: 22px;
+        line-height: 28px;
+        font-weight: 300;
+        letter-spacing: 0;
+      }
+      .md3-type-body-large {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+      }
+      .md3-type-body-medium {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+        letter-spacing: 0.25px;
+      }
+      .md3-type-body-small {
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 400;
+        letter-spacing: 0.4px;
+      }
+      .md3-type-label-large {
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 500;
+        letter-spacing: 0.1px;
+      }
+      .md3-type-label-small {
+        font-size: 11px;
+        line-height: 12px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        overflow-wrap: anywhere;
+        max-width: 100%;
+      }
+      .theme-switcher {
+        position: fixed;
+        right: 1rem;
+        bottom: 1rem;
+        z-index: 60;
+        display: inline-flex;
+        gap: 0.25rem;
+        padding: 0.25rem;
+        border-radius: 999px;
+        border: 1px solid var(--color-outline-variant);
+        background: var(--color-surface);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08),
+          0 8px 24px rgba(0, 0, 0, 0.12);
+      }
+      .theme-switcher button {
+        font: inherit;
+        font-size: 11px;
+        line-height: 1;
+        padding: 0.35rem 0.7rem;
+        border-radius: 999px;
+        border: 0;
+        background: transparent;
+        color: var(--color-on-surface);
+        opacity: 0.65;
+        cursor: pointer;
+      }
+      .theme-switcher button[aria-pressed='true'] {
+        background: var(--color-surface-container);
+        opacity: 1;
+      }
+      .icon {
+        display: inline-block;
+        line-height: 1;
+        vertical-align: -0.125em;
+      }
+      .icon-sm {
+        font-size: 18px;
+      }
+      .section {
+        padding: 0 1rem;
+        max-width: 760px;
+        margin: 0 auto;
+      }
+      .section-title {
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.1px;
+        color: var(--color-on-surface);
+        margin: 0 0 16px 0;
+      }
+      .section-card {
+        border: 1px solid var(--color-outline-variant);
+        border-radius: 14px;
+        background: var(--color-surface);
+        padding: 24px;
+      }
+      .btn-md3 {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        height: 40px;
+        padding: 0 16px;
+        border-radius: 12px;
+        border: 0;
+        font: inherit;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.1px;
+        cursor: pointer;
+        white-space: nowrap;
+      }
+      .btn-filled {
+        background: var(--color-primary);
+        color: var(--color-on-primary);
+      }
+      .btn-tonal {
+        background: var(--color-secondary-container);
+        color: var(--color-on-secondary-container);
+      }
+      .btn-outlined {
+        background: transparent;
+        color: var(--color-on-surface);
+        border: 1px solid var(--color-outline);
+      }
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        height: 32px;
+        padding: 0 12px;
+        border-radius: 16px;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        border: 0;
+      }
+      .chip-filled {
+        background: var(--color-secondary-container);
+        color: var(--color-on-secondary-container);
+      }
+      .field {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        width: 260px;
+      }
+      .field label {
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.1px;
+        color: var(--color-on-surface);
+      }
+      .field-input {
+        height: 40px;
+        padding: 0 16px;
+        border-radius: 12px;
+        border: 1px solid var(--color-outline-variant);
+        background: var(--color-surface);
+        color: var(--color-on-surface);
+        font: inherit;
+        font-size: 16px;
+      }
+      .field-input:focus {
+        border-color: var(--color-primary);
+        outline: none;
+      }
+      .field-helper {
+        font-size: 12px;
+        color: var(--color-outline);
+      }
+      .markdown h1 {
+        font-size: 32px;
+        font-weight: 600;
+        margin: 0 0 12px 0;
+        letter-spacing: -0.25px;
+        color: var(--color-on-surface);
+      }
+      .markdown h2 {
+        font-size: 22px;
+        font-weight: 600;
+        margin: 20px 0 8px 0;
+        color: var(--color-on-surface);
+      }
+      .markdown p {
+        margin: 0 0 12px 0;
+        color: var(--color-on-surface);
+        opacity: 0.9;
+      }
+      .markdown code {
+        font-family: var(--font-mono);
+        font-size: 13px;
+        background: var(--color-surface-container);
+        padding: 2px 6px;
+        border-radius: 6px;
+      }
+      .markdown pre {
+        background: var(--color-surface-container);
+        border-radius: 10px;
+        padding: 12px 16px;
+        overflow: auto;
+        font-family: var(--font-mono);
+        font-size: 13px;
+        line-height: 1.5;
+      }
+      .markdown pre code {
+        background: transparent;
+        padding: 0;
+      }
+      .callout {
+        border-radius: 10px;
+        padding: 12px 16px;
+        margin: 12px 0;
+        font-size: 14px;
+      }
+      .callout-info {
+        background: var(--color-primary-container);
+        color: var(--color-on-primary-container);
+        border-left: 4px solid var(--color-primary);
+      }
+      .markdown table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 12px 0;
+        font-size: 14px;
+      }
+      .markdown th,
+      .markdown td {
+        border: 1px solid var(--color-outline-variant);
+        padding: 8px 12px;
+        text-align: left;
+      }
+    </style>
+    <script>
+      (function () {
+        try {
+          var t = window.localStorage.getItem('pagify-theme');
+          if (t !== 'pagify-light' && t !== 'pagify-dark') {
+            t = window.matchMedia('(prefers-color-scheme: dark)').matches
+              ? 'pagify-dark'
+              : 'pagify-light';
+          }
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="theme-switcher" role="group" aria-label="Colour theme">
+      <button type="button" data-theme-value="pagify-light" aria-pressed="true">
+        Light
+      </button>
+      <button type="button" data-theme-value="pagify-dark" aria-pressed="false">
+        Dark
+      </button>
+    </div>
+    <script>
+      (function () {
+        var key = 'pagify-theme';
+        function apply(theme) {
+          document.documentElement.setAttribute('data-theme', theme);
+          Array.prototype.forEach.call(
+            document.querySelectorAll('.theme-switcher button'),
+            function (button) {
+              button.setAttribute(
+                'aria-pressed',
+                String(button.getAttribute('data-theme-value') === theme)
+              );
+            }
+          );
+        }
+        apply(
+          document.documentElement.getAttribute('data-theme') || 'pagify-light'
+        );
+        Array.prototype.forEach.call(
+          document.querySelectorAll('.theme-switcher button'),
+          function (button) {
+            button.addEventListener('click', function () {
+              var theme = button.getAttribute('data-theme-value');
+              try {
+                window.localStorage.setItem(key, theme);
+              } catch (error) {}
+              apply(theme);
+            });
+          }
+        );
+      })();
+    </script>
+
+    <header class="border-b border-outline-variant px-4 py-3">
+      <div class="max-w-6xl mx-auto flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span
+            class="bg-primary text-on-primary flex h-8 w-8 items-center justify-center rounded-extra-large text-xs font-semibold"
+            aria-hidden="true"
+          >
+            PG
+          </span>
+          <span class="ml-2 text-title-large font-medium">pagify</span>
+        </div>
+        <nav class="hidden md:flex items-center gap-6" aria-label="Primary">
+          <a
+            href="01-landing.html"
+            class="text-label-medium text-outline hover:text-primary"
+            >Home</a
+          >
+          <a
+            href="02-page.html"
+            class="text-label-medium text-primary hover:text-primary"
+            >Content page</a
+          >
+          <a
+            href="00-components.html"
+            class="text-label-medium text-outline hover:text-primary"
+            >Design system</a
+          >
+        </nav>
+        <a href="03-builder.html" class="btn-filled btn-md3">Open builder</a>
+      </div>
+    </header>
+
+    <main class="section flex-1">
+      <article class="markdown section-card">
+        <header class="mb-6">
+          <span class="chip chip-filled md3-type-label-small">Guide</span>
+          <h1 class="md3-type-headline-large mb-4 text-on-surface font-medium">
+            Creating your first page
+          </h1>
+          <p class="md3-type-body-medium text-outline">
+            A walkthrough of authoring, theming, and building a static site.
+          </p>
+        </header>
+        <p class="md3-type-body-large mb-6">
+          pagify turns Markdown files into a navigable static website with a
+          single command. No build step, no frontend framework, no runtime
+          dependency.
+        </p>
+        <h2 class="md3-type-title-large mb-3 text-on-surface">Authoring</h2>
+        <p class="md3-type-body-medium mb-4">
+          Start with an <code>index.md</code> in your <code>docs/</code>
+          directory. pagify discovers Markdown files, parses them, and renders
+          each page with the default theme.
+        </p>
+        <pre class="mb-6"><code># Welcome
+
+This is your first pagify page.
+
+- Item one
+- Item two
+
+```bash
+pagify build ./docs
+```
+</code></pre>
+        <div class="callout callout-info mb-6">
+          The generated site works on GitHub Pages, Cloudflare Pages, Netlify,
+          Vercel, or any static host.
+        </div>
+        <h2 class="md3-type-title-large mb-3 text-on-surface">Theming</h2>
+        <p class="md3-type-body-medium mb-4">
+          Colours, type scale, and shapes come from the pagify design system
+          (light and dark themes) defined in <code>docs/07-ui-ux-design.md</code>.
+        </p>
+        <table class="mb-6">
+          <thead>
+            <tr>
+              <th style="width: 40%">Token</th>
+              <th>Light</th>
+              <th>Dark</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="font-medium">Background</td>
+              <td>#FFFFFF</td>
+              <td>#18181B</td>
+            </tr>
+            <tr>
+              <td class="font-medium">Surface</td>
+              <td>#FAFAFA</td>
+              <td>#18181B</td>
+            </tr>
+            <tr>
+              <td class="font-medium">Primary</td>
+              <td>#2563EB</td>
+              <td>#60A5FA</td>
+            </tr>
+            <tr>
+              <td class="font-medium">Outline</td>
+              <td>#71717A</td>
+              <td>#A1A1AA</td>
+            </tr>
+          </tbody>
+        </table>
+        <footer class="mt-8 pt-6 border-t border-outline-variant">
+          <div class="flex flex-wrap items-center gap-4">
+            <span class="md3-type-label-small text-outline">Next: Build &rarr;</span>
+            <button class="btn-filled btn-md3">Build site</button>
+          </div>
+        </footer>
+      </article>
+    </main>
+  </body>
+</html>

@@ -8,7 +8,12 @@ use rusqlite::{Connection, params};
 use crate::handlers::AppState;
 use crate::models::*;
 
-pub fn require_role(conn: &Connection, user_id: &str, collection: &str, required: &str) -> std::result::Result<(), AppError> {
+pub fn require_role(
+    conn: &Connection,
+    user_id: &str,
+    collection: &str,
+    required: &str,
+) -> std::result::Result<(), AppError> {
     let mut stmt = conn
         .prepare("SELECT role FROM _permissions WHERE user_id = ?1 AND (collection = ?2 OR collection = '*')")
         .map_err(|e| AppError::Internal(e.to_string()))?;
@@ -45,7 +50,11 @@ pub async fn handle_list_permissions(
     State(state): State<std::sync::Arc<AppState>>,
 ) -> std::result::Result<Json<Vec<Permission>>, AppError> {
     crate::handlers::extract_claims(&headers)?;
-    let conn = state.db.get().await.map_err(|e| AppError::Internal(e.to_string()))?;
+    let conn = state
+        .db
+        .get()
+        .await
+        .map_err(|e| AppError::Internal(e.to_string()))?;
     let mut stmt = conn
         .prepare("SELECT id, user_id, collection, role, created_at, updated_at FROM _permissions ORDER BY collection")
         .map_err(|e| AppError::Internal(e.to_string()))?;
@@ -75,19 +84,28 @@ pub async fn handle_create_permission(
 ) -> std::result::Result<(StatusCode, Json<Permission>), AppError> {
     crate::handlers::extract_claims(&headers)?;
     if req.user_id.is_empty() || req.collection.is_empty() || req.role.is_empty() {
-        return Err(AppError::BadRequest("user_id, collection, and role are required".into()));
+        return Err(AppError::BadRequest(
+            "user_id, collection, and role are required".into(),
+        ));
     }
     if !matches!(req.role.as_str(), "admin" | "editor" | "viewer") {
-        return Err(AppError::BadRequest("role must be admin, editor, or viewer".into()));
+        return Err(AppError::BadRequest(
+            "role must be admin, editor, or viewer".into(),
+        ));
     }
     let id = uuid::Uuid::new_v4().to_string().replace('-', "");
-    let conn = state.db.get().await.map_err(|e| AppError::Internal(e.to_string()))?;
+    let conn = state
+        .db
+        .get()
+        .await
+        .map_err(|e| AppError::Internal(e.to_string()))?;
     conn.execute(
         "INSERT INTO _permissions (id, user_id, collection, role) VALUES (?1, ?2, ?3, ?4)",
         params![id, req.user_id, req.collection, req.role],
     )
     .map_err(|e| AppError::Internal(format!("insert permission: {e}")))?;
-    let perm = find_permission_by_id(&conn, &id)?.ok_or_else(|| AppError::Internal("permission not found after create".into()))?;
+    let perm = find_permission_by_id(&conn, &id)?
+        .ok_or_else(|| AppError::Internal("permission not found after create".into()))?;
     Ok((StatusCode::CREATED, Json(perm)))
 }
 
@@ -97,7 +115,11 @@ pub async fn handle_delete_permission(
     Path(id): Path<String>,
 ) -> std::result::Result<StatusCode, AppError> {
     crate::handlers::extract_claims(&headers)?;
-    let conn = state.db.get().await.map_err(|e| AppError::Internal(e.to_string()))?;
+    let conn = state
+        .db
+        .get()
+        .await
+        .map_err(|e| AppError::Internal(e.to_string()))?;
     let n = conn
         .execute("DELETE FROM _permissions WHERE id = ?1", params![id])
         .map_err(|e| AppError::Internal(e.to_string()))?;
@@ -107,7 +129,10 @@ pub async fn handle_delete_permission(
     Ok(StatusCode::NO_CONTENT)
 }
 
-fn find_permission_by_id(conn: &Connection, id: &str) -> std::result::Result<Option<Permission>, AppError> {
+fn find_permission_by_id(
+    conn: &Connection,
+    id: &str,
+) -> std::result::Result<Option<Permission>, AppError> {
     let mut stmt = conn
         .prepare("SELECT id, user_id, collection, role, created_at, updated_at FROM _permissions WHERE id = ?1")
         .map_err(|e| AppError::Internal(e.to_string()))?;
@@ -300,7 +325,11 @@ mod tests {
     fn test_find_permission_by_id_not_found() {
         let conn = rusqlite::Connection::open_in_memory().unwrap();
         create_perms_table(&conn);
-        assert!(find_permission_by_id(&conn, "nonexistent").unwrap().is_none());
+        assert!(
+            find_permission_by_id(&conn, "nonexistent")
+                .unwrap()
+                .is_none()
+        );
     }
 
     // --- handler tests ---
@@ -327,18 +356,16 @@ mod tests {
     }
 
     async fn test_rbac_app() -> (axum::Router, std::sync::Arc<crate::handlers::AppState>) {
+        use crate::db::ConnectionManager;
         use axum::routing::{delete, get};
         use deadpool::managed::Pool;
-        use crate::db::ConnectionManager;
 
-        let tmp_dir =
-            std::env::temp_dir().join(format!("backbone-rbac-{}", uuid::Uuid::new_v4()));
+        let tmp_dir = std::env::temp_dir().join(format!("backbone-rbac-{}", uuid::Uuid::new_v4()));
         std::fs::create_dir_all(&tmp_dir).ok();
         let db_path = tmp_dir.join("test.db");
-        let pool: Pool<ConnectionManager> =
-            Pool::builder(ConnectionManager { path: db_path })
-                .build()
-                .unwrap();
+        let pool: Pool<ConnectionManager> = Pool::builder(ConnectionManager { path: db_path })
+            .build()
+            .unwrap();
         let conn = pool.get().await.unwrap();
         crate::db::migrate_db(&conn).expect("migrate");
         drop(conn);
@@ -355,7 +382,10 @@ mod tests {
             rate_limiter: std::sync::Arc::new(crate::rate_limit::RateLimiter::new(200.0, 100.0)),
         });
         let app = axum::Router::new()
-            .route("/api/permissions", get(handle_list_permissions).post(handle_create_permission))
+            .route(
+                "/api/permissions",
+                get(handle_list_permissions).post(handle_create_permission),
+            )
             .route("/api/permissions/{id}", delete(handle_delete_permission))
             .with_state(state.clone());
         (app, state)
@@ -386,7 +416,8 @@ mod tests {
         let body_bytes = axum::body::to_bytes(resp.into_body(), 1024 * 1024)
             .await
             .unwrap();
-        let value: serde_json::Value = serde_json::from_slice(&body_bytes).unwrap_or(serde_json::Value::Null);
+        let value: serde_json::Value =
+            serde_json::from_slice(&body_bytes).unwrap_or(serde_json::Value::Null);
         (status, value)
     }
 
@@ -394,7 +425,14 @@ mod tests {
     async fn test_handle_list_permissions_empty() {
         let (app, _state) = test_rbac_app().await;
         let token = test_token();
-        let (status, value) = request_with_auth(&app, axum::http::Method::GET, "/api/permissions", &token, None).await;
+        let (status, value) = request_with_auth(
+            &app,
+            axum::http::Method::GET,
+            "/api/permissions",
+            &token,
+            None,
+        )
+        .await;
         assert_eq!(status, axum::http::StatusCode::OK);
         assert_eq!(value.as_array().unwrap().len(), 0);
     }
@@ -404,7 +442,14 @@ mod tests {
         let (app, _state) = test_rbac_app().await;
         let token = test_token();
         let body = serde_json::json!({"user_id": "user1", "collection": "docs", "role": "viewer"});
-        let (status, value) = request_with_auth(&app, axum::http::Method::POST, "/api/permissions", &token, Some(body)).await;
+        let (status, value) = request_with_auth(
+            &app,
+            axum::http::Method::POST,
+            "/api/permissions",
+            &token,
+            Some(body),
+        )
+        .await;
         assert_eq!(status, axum::http::StatusCode::CREATED);
         assert!(value["id"].as_str().unwrap_or("").len() > 0);
         assert_eq!(value["user_id"], "user1");
@@ -417,9 +462,23 @@ mod tests {
         let (app, _state) = test_rbac_app().await;
         let token = test_token();
         let body = serde_json::json!({"user_id": "user1", "collection": "docs", "role": "viewer"});
-        let (status, _) = request_with_auth(&app, axum::http::Method::POST, "/api/permissions", &token, Some(body)).await;
+        let (status, _) = request_with_auth(
+            &app,
+            axum::http::Method::POST,
+            "/api/permissions",
+            &token,
+            Some(body),
+        )
+        .await;
         assert_eq!(status, axum::http::StatusCode::CREATED);
-        let (status, value) = request_with_auth(&app, axum::http::Method::GET, "/api/permissions", &token, None).await;
+        let (status, value) = request_with_auth(
+            &app,
+            axum::http::Method::GET,
+            "/api/permissions",
+            &token,
+            None,
+        )
+        .await;
         assert_eq!(status, axum::http::StatusCode::OK);
         let perms = value.as_array().unwrap();
         assert_eq!(perms.len(), 1);
@@ -431,10 +490,24 @@ mod tests {
         let (app, _state) = test_rbac_app().await;
         let token = test_token();
         let body = serde_json::json!({"user_id": "user1", "collection": "docs", "role": "viewer"});
-        let (status, value) = request_with_auth(&app, axum::http::Method::POST, "/api/permissions", &token, Some(body)).await;
+        let (status, value) = request_with_auth(
+            &app,
+            axum::http::Method::POST,
+            "/api/permissions",
+            &token,
+            Some(body),
+        )
+        .await;
         assert_eq!(status, axum::http::StatusCode::CREATED);
         let perm_id = value["id"].as_str().unwrap().to_string();
-        let (status, _) = request_with_auth(&app, axum::http::Method::DELETE, &format!("/api/permissions/{perm_id}"), &token, None).await;
+        let (status, _) = request_with_auth(
+            &app,
+            axum::http::Method::DELETE,
+            &format!("/api/permissions/{perm_id}"),
+            &token,
+            None,
+        )
+        .await;
         assert_eq!(status, axum::http::StatusCode::NO_CONTENT);
     }
 
@@ -442,7 +515,14 @@ mod tests {
     async fn test_handle_delete_permission_not_found() {
         let (app, _state) = test_rbac_app().await;
         let token = test_token();
-        let (status, value) = request_with_auth(&app, axum::http::Method::DELETE, "/api/permissions/nonexistent-id", &token, None).await;
+        let (status, value) = request_with_auth(
+            &app,
+            axum::http::Method::DELETE,
+            "/api/permissions/nonexistent-id",
+            &token,
+            None,
+        )
+        .await;
         assert_eq!(status, axum::http::StatusCode::NOT_FOUND);
         assert_eq!(value["error"], "permission not found");
     }
@@ -452,7 +532,14 @@ mod tests {
         let (app, _state) = test_rbac_app().await;
         let token = test_token();
         let body = serde_json::json!({"user_id": "", "collection": "docs", "role": "viewer"});
-        let (status, value) = request_with_auth(&app, axum::http::Method::POST, "/api/permissions", &token, Some(body)).await;
+        let (status, value) = request_with_auth(
+            &app,
+            axum::http::Method::POST,
+            "/api/permissions",
+            &token,
+            Some(body),
+        )
+        .await;
         assert_eq!(status, axum::http::StatusCode::BAD_REQUEST);
         assert!(value["error"].as_str().unwrap_or("").contains("required"));
     }
@@ -461,10 +548,23 @@ mod tests {
     async fn test_handle_create_permission_invalid_role() {
         let (app, _state) = test_rbac_app().await;
         let token = test_token();
-        let body = serde_json::json!({"user_id": "user1", "collection": "docs", "role": "superadmin"});
-        let (status, value) = request_with_auth(&app, axum::http::Method::POST, "/api/permissions", &token, Some(body)).await;
+        let body =
+            serde_json::json!({"user_id": "user1", "collection": "docs", "role": "superadmin"});
+        let (status, value) = request_with_auth(
+            &app,
+            axum::http::Method::POST,
+            "/api/permissions",
+            &token,
+            Some(body),
+        )
+        .await;
         assert_eq!(status, axum::http::StatusCode::BAD_REQUEST);
-        assert!(value["error"].as_str().unwrap_or("").contains("role must be"));
+        assert!(
+            value["error"]
+                .as_str()
+                .unwrap_or("")
+                .contains("role must be")
+        );
     }
 
     #[tokio::test]
@@ -474,7 +574,10 @@ mod tests {
         use axum::http::Request;
         use tower::ServiceExt;
 
-        let req = Request::builder().uri("/api/permissions").body(Body::empty()).unwrap();
+        let req = Request::builder()
+            .uri("/api/permissions")
+            .body(Body::empty())
+            .unwrap();
         let resp = app.clone().oneshot(req).await.unwrap();
         assert_eq!(resp.status(), axum::http::StatusCode::UNAUTHORIZED);
 
@@ -502,26 +605,41 @@ mod tests {
         let (app, _state) = test_rbac_app().await;
         let token = test_token();
         let body = serde_json::json!({"user_id": "user1", "collection": "docs", "role": "viewer"});
-        let (status, _) = request_with_auth(&app, axum::http::Method::POST, "/api/permissions", &token, Some(body.clone())).await;
+        let (status, _) = request_with_auth(
+            &app,
+            axum::http::Method::POST,
+            "/api/permissions",
+            &token,
+            Some(body.clone()),
+        )
+        .await;
         assert_eq!(status, axum::http::StatusCode::CREATED);
-        let (status, _) = request_with_auth(&app, axum::http::Method::POST, "/api/permissions", &token, Some(body)).await;
+        let (status, _) = request_with_auth(
+            &app,
+            axum::http::Method::POST,
+            "/api/permissions",
+            &token,
+            Some(body),
+        )
+        .await;
         assert_eq!(status, axum::http::StatusCode::INTERNAL_SERVER_ERROR);
     }
 
     #[tokio::test]
     async fn test_handle_permissions_db_error_returns_internal_error() {
-        use deadpool::managed::Pool;
-        use deadpool::Runtime::Tokio1;
         use crate::db::ConnectionManager;
+        use deadpool::Runtime::Tokio1;
+        use deadpool::managed::Pool;
 
-        let pool: Pool<ConnectionManager> =
-            Pool::builder(ConnectionManager { path: std::path::PathBuf::from(":memory:") })
-                .max_size(1)
-                .runtime(Tokio1)
-                .create_timeout(Some(std::time::Duration::from_millis(1)))
-                .wait_timeout(Some(std::time::Duration::from_millis(1)))
-                .build()
-                .unwrap();
+        let pool: Pool<ConnectionManager> = Pool::builder(ConnectionManager {
+            path: std::path::PathBuf::from(":memory:"),
+        })
+        .max_size(1)
+        .runtime(Tokio1)
+        .create_timeout(Some(std::time::Duration::from_millis(1)))
+        .wait_timeout(Some(std::time::Duration::from_millis(1)))
+        .build()
+        .unwrap();
         let _conn = pool.get().await.unwrap();
         tokio::time::sleep(std::time::Duration::from_millis(10)).await;
         let state = std::sync::Arc::new(crate::handlers::AppState {
@@ -537,7 +655,10 @@ mod tests {
             rate_limiter: std::sync::Arc::new(crate::rate_limit::RateLimiter::new(200.0, 100.0)),
         });
         let app = axum::Router::new()
-            .route("/api/permissions", axum::routing::get(handle_list_permissions))
+            .route(
+                "/api/permissions",
+                axum::routing::get(handle_list_permissions),
+            )
             .with_state(state.clone());
         let token = test_token();
         use axum::body::Body;
@@ -553,18 +674,19 @@ mod tests {
     }
 
     async fn exhausted_pool_app() -> (axum::Router, std::sync::Arc<crate::handlers::AppState>) {
-        use deadpool::managed::Pool;
-        use deadpool::Runtime::Tokio1;
         use crate::db::ConnectionManager;
+        use deadpool::Runtime::Tokio1;
+        use deadpool::managed::Pool;
 
-        let pool: Pool<ConnectionManager> =
-            Pool::builder(ConnectionManager { path: std::path::PathBuf::from(":memory:") })
-                .max_size(1)
-                .runtime(Tokio1)
-                .create_timeout(Some(std::time::Duration::from_millis(1)))
-                .wait_timeout(Some(std::time::Duration::from_millis(1)))
-                .build()
-                .unwrap();
+        let pool: Pool<ConnectionManager> = Pool::builder(ConnectionManager {
+            path: std::path::PathBuf::from(":memory:"),
+        })
+        .max_size(1)
+        .runtime(Tokio1)
+        .create_timeout(Some(std::time::Duration::from_millis(1)))
+        .wait_timeout(Some(std::time::Duration::from_millis(1)))
+        .build()
+        .unwrap();
         let _conn = pool.get().await.unwrap();
         tokio::time::sleep(std::time::Duration::from_millis(10)).await;
         let state = std::sync::Arc::new(crate::handlers::AppState {
@@ -580,8 +702,14 @@ mod tests {
             rate_limiter: std::sync::Arc::new(crate::rate_limit::RateLimiter::new(200.0, 100.0)),
         });
         let app = axum::Router::new()
-            .route("/api/permissions", axum::routing::get(handle_list_permissions).post(handle_create_permission))
-            .route("/api/permissions/{id}", axum::routing::delete(handle_delete_permission))
+            .route(
+                "/api/permissions",
+                axum::routing::get(handle_list_permissions).post(handle_create_permission),
+            )
+            .route(
+                "/api/permissions/{id}",
+                axum::routing::delete(handle_delete_permission),
+            )
             .with_state(state.clone());
         (app, state)
     }
@@ -591,7 +719,14 @@ mod tests {
         let (app, _state) = exhausted_pool_app().await;
         let token = test_token();
         let body = serde_json::json!({"user_id": "u1", "collection": "c1", "role": "viewer"});
-        let (status, _) = request_with_auth(&app, axum::http::Method::POST, "/api/permissions", &token, Some(body)).await;
+        let (status, _) = request_with_auth(
+            &app,
+            axum::http::Method::POST,
+            "/api/permissions",
+            &token,
+            Some(body),
+        )
+        .await;
         assert_eq!(status, axum::http::StatusCode::INTERNAL_SERVER_ERROR);
     }
 
@@ -599,7 +734,14 @@ mod tests {
     async fn test_handle_delete_permission_db_error() {
         let (app, _state) = exhausted_pool_app().await;
         let token = test_token();
-        let (status, _) = request_with_auth(&app, axum::http::Method::DELETE, "/api/permissions/some-id", &token, None).await;
+        let (status, _) = request_with_auth(
+            &app,
+            axum::http::Method::DELETE,
+            "/api/permissions/some-id",
+            &token,
+            None,
+        )
+        .await;
         assert_eq!(status, axum::http::StatusCode::INTERNAL_SERVER_ERROR);
     }
 }

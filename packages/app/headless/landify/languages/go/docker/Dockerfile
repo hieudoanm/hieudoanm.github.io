@@ -30,4 +30,4 @@ USER 65532:65532
 # default bind is 127.0.0.1 for local use; the image exposes the site on all
 # interfaces so Deploy platforms can reach it
 ENTRYPOINT ["/landify"]
-CMD ["serve", "--bind", "0.0.0.0", "-p", "8080"]
+CMD ["serve", "--bind", "0.0.0.0", "-p", "8080", "--dir", "/site"]

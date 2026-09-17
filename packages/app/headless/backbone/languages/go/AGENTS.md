@@ -61,11 +61,10 @@ in a single static binary.
 
 ## Documentation
 
-| Document        | Description                                  |
-| --------------- | -------------------------------------------- |
-| [docs](./docs/) | Architecture, contributing, downloads, packaging, roadmap |
-| [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md) | Tech stack, module map, request flow |
-| [docs/CONTRIBUTING.md](./docs/CONTRIBUTING.md) | Setup, commands, conventions, testing |
-| [docs/DOWNLOADS.md](./docs/DOWNLOADS.md) | Get the binary, Docker image, or source |
-| [docs/PACKAGING.md](./docs/PACKAGING.md) | Binary + container + CI artifact pipeline |
-| [docs/ROADMAP.md](./docs/ROADMAP.md) | Phased feature roadmap |
+| Document                              | Description                                  |
+| ------------------------------------- | -------------------------------------------- |
+| [docs/](./docs/) | Product specification: numbered `00`–`12` normative documents |
+| [docs/04-architecture.md](./docs/04-architecture.md) | Tech stack, module map, request flow |
+| [docs/08-tech-stack.md](./docs/08-tech-stack.md) | Allowed technologies and dependency policy |
+| [docs/10-implementation-plan.md](./docs/10-implementation-plan.md) | Phased delivery roadmap |
+| [docs/11-deployment.md](./docs/11-deployment.md) | CI, Docker, packaging |

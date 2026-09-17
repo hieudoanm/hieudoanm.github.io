@@ -6,6 +6,8 @@ ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 HYBRID_DIR="$ROOT_DIR/packages/app/hybrid"
 DOCS_DIR="$ROOT_DIR/docs"
 ROOT_APP="utilities/docs"
+PAGIFY_DIR="$ROOT_DIR/packages/app/headless/pagify/languages/go"
+PAGIFY_BIN="$PAGIFY_DIR/bin/pagify"
 
 build_app() {
     local app_path="$1"
@@ -22,8 +24,8 @@ build_app() {
     local dest_dir="$DOCS_DIR"
 
     if [[ "$app_path" != "$ROOT_APP" ]]; then
-        base_path="/free/$app_name"
-        dest_dir="$DOCS_DIR/free/$app_name"
+        base_path="/open/$app_name"
+        dest_dir="$DOCS_DIR/open/$app_name"
     fi
 
     if [[ -n "$base_path" ]]; then
@@ -72,7 +74,7 @@ build_hybrid_apps() {
             build_app "$app_path"
         fi
     done
-    verify_free
+    verify_open
 }
 
 copy_landing_pages() {
@@ -89,7 +91,7 @@ copy_landing_pages() {
         slug="${src_file%/public/index.html}"
         slug="${slug##*/}"
         pub_dir="$(dirname "$src_file")"
-        dest_dir="$DOCS_DIR/free/$slug"
+        dest_dir="$DOCS_DIR/open/$slug"
 
         echo "Copying $pub_dir -> $dest_dir"
         rm -rf "$dest_dir"
@@ -99,51 +101,75 @@ copy_landing_pages() {
     done
 }
 
-init_docsify() {
-    local docsify_lib="$ROOT_DIR/node_modules/docsify/lib"
-    local free_dir="$DOCS_DIR/free"
-    local assets_dir="$free_dir/docsify"
+copy_data_public() {
+    local src_dir="$ROOT_DIR/packages/data/uob/research-project/projects/public"
+    local dest_dir="$DOCS_DIR/uob/research-projects"
 
-    if [[ ! -f "$docsify_lib/docsify.min.js" ]]; then
-        echo "Error: docsify is not installed. Run 'pnpm add -D docsify'." >&2
-        exit 1
+    if [[ ! -f "$src_dir/index.html" ]]; then
+        echo "Skipping UOB research projects: $src_dir/index.html not found."
+        echo "Run 'make' in packages/data/uob/research-project/projects first."
+        return
     fi
 
-    echo "Initializing docsify at $free_dir..."
-    mkdir -p "$assets_dir"
-    cp "$docsify_lib/docsify.min.js" "$assets_dir/docsify.min.js"
-    cp "$docsify_lib/themes/vue.css" "$assets_dir/vue.css"
-
-    cat > "$free_dir/index.html" <<'HTML'
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>hieudoanm · Free</title>
-    <link rel="stylesheet" href="./docsify/vue.css" />
-  </head>
-  <body>
-    <div id="app">Loading...</div>
-    <script>
-      window.$docsify = {
-        name: 'hieudoanm',
-        repo: 'https://github.com/hieudoanm/hieudoanm.github.io',
-        loadSidebar: false,
-        maxLevel: 3
-      };
-    </script>
-    <script src="./docsify/docsify.min.js"></script>
-  </body>
-</html>
-HTML
-
-    echo "Copying $ROOT_DIR/README.md -> $free_dir/README.md"
-    cp "$ROOT_DIR/README.md" "$free_dir/README.md"
-    touch "$free_dir/.nojekyll"
+    echo "Copying $src_dir -> $dest_dir"
+    rm -rf "$dest_dir"
+    mkdir -p "$dest_dir"
+    cp -R "$src_dir"/. "$dest_dir"
+    touch "$dest_dir/.nojekyll"
 }
 
-verify_free() {
+ensure_pagify() {
+    if [[ ! -x "$PAGIFY_BIN" ]]; then
+        echo "Building pagify..."
+        (
+            cd "$PAGIFY_DIR"
+            make build
+        )
+    fi
+}
+
+build_pagify_docs() {
+    ensure_pagify
+    local content_dir="$DOCS_DIR/content"
+    local output_dir="$DOCS_DIR/open"
+    local temp_dir="$DOCS_DIR/.pagify-tmp"
+
+    echo "Building documentation with pagify..."
+
+    mkdir -p "$content_dir"
+
+    # Copy README.md as index.md (like docsify default)
+    cp "$ROOT_DIR/README.md" "$content_dir/index.md"
+
+    # Add frontmatter to the README
+    cat > "$content_dir/index.md.tmp" <<'EOF'
+---
+title: 👨‍💻 I'm Hieu Doan
+language: en
+theme: auto
+basePath: /open
+footer: "© 2026 hieudoanm · Built with pagify"
+---
+
+EOF
+    cat "$content_dir/index.md" >> "$content_dir/index.md.tmp"
+    mv "$content_dir/index.md.tmp" "$content_dir/index.md"
+
+    # Build with pagify to a temp directory to avoid cleaning the open/ directory
+    # which already contains Next.js apps from copy_landing_pages
+    rm -rf "$temp_dir"
+    mkdir -p "$temp_dir"
+    "$PAGIFY_BIN" build "$content_dir" --output "$temp_dir"
+
+    # Copy pagify output to open/ (preserving existing Next.js apps)
+    echo "Merging pagify output into $output_dir..."
+    cp -R "$temp_dir"/* "$output_dir"/
+    touch "$output_dir/.nojekyll"
+    rm -rf "$temp_dir"
+    echo "Documentation built to $output_dir"
+}
+
+verify_open() {
     local missing=()
     for category_dir in "$HYBRID_DIR"/*/; do
         [[ ! -d "$category_dir" ]] && continue
@@ -158,13 +184,13 @@ verify_free() {
             if [[ ! -f "$app_dir/package.json" ]] || [[ ! -f "$app_dir/next.config.ts" ]]; then
                 continue
             fi
-            if [[ ! -d "$DOCS_DIR/free/$app_name" ]]; then
+            if [[ ! -d "$DOCS_DIR/open/$app_name" ]]; then
                 missing+=("$category/$app_name")
             fi
         done
     done
     if [[ ${#missing[@]} -gt 0 ]]; then
-        echo "Error: missing build outputs in $DOCS_DIR/free: ${missing[*]}" >&2
+        echo "Error: missing build outputs in $DOCS_DIR/open: ${missing[*]}" >&2
         echo "Each Next.js app in $HYBRID_DIR (except '$ROOT_APP') must be copied there." >&2
         exit 1
     fi
@@ -220,7 +246,9 @@ copy_landing_pages "$ROOT_DIR/packages/app/headless"
 copy_landing_pages "$ROOT_DIR/packages/app/native"
 copy_landing_pages "$ROOT_DIR/packages/extensions/browser"
 
-init_docsify
+copy_data_public
+
+build_pagify_docs
 
 echo "Done."
 

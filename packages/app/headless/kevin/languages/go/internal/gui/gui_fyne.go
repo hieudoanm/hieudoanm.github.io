@@ -13,39 +13,22 @@ import (
 	"fyne.io/fyne/v2/container"
 	"fyne.io/fyne/v2/dialog"
 	"fyne.io/fyne/v2/theme"
+	"fyne.io/fyne/v2/widget"
 
 	"github.com/hieudoanm/kevin/internal/db"
 )
 
-// lightSepTheme wraps the default theme and lightens separator lines so the
-// table grid feels subtle rather than heavy.
-type lightSepTheme struct{ fyne.Theme }
-
-func (lightSepTheme) Color(name fyne.ThemeColorName, v fyne.ThemeVariant) color.Color {
-	if name == theme.ColorNameSeparator {
-		if v == theme.VariantDark {
-			return color.NRGBA{R: 0x1F, G: 0x20, B: 0x29, A: 0xFF}
-		}
-		return color.NRGBA{R: 0xE8, G: 0xEB, B: 0xF0, A: 0xFF}
-	}
-	return theme.DefaultTheme().Color(name, v)
-}
-
-// lighterSepColor returns the same lighter separator colour used by
-// lightSepTheme, so hand-drawn border lines match the table grid.
+// lighterSepColor returns the separator colour from the app theme, so
+// hand-drawn border lines match the table grid in both variants.
 func lighterSepColor() color.Color {
-	v := fyne.CurrentApp().Settings().ThemeVariant()
-	if v == theme.VariantDark {
-		return color.NRGBA{R: 0x1F, G: 0x20, B: 0x29, A: 0xFF}
-	}
-	return color.NRGBA{R: 0xE8, G: 0xEB, B: 0xF0, A: 0xFF}
+	return appTheme{}.Color(theme.ColorNameSeparator, fyne.CurrentApp().Settings().ThemeVariant())
 }
 
 // Run opens the key/value manager window backed by kv and blocks until the
 // window is closed.
 func Run(_ context.Context, kv *db.DB) error {
 	a := app.New()
-	a.Settings().SetTheme(lightSepTheme{Theme: theme.DefaultTheme()})
+	a.Settings().SetTheme(appTheme{})
 	w := a.NewWindow("kevin — Key/Value")
 	w.Resize(fyne.NewSize(900, 600))
 	w.SetPadded(true)
@@ -85,8 +68,9 @@ func Run(_ context.Context, kv *db.DB) error {
 }
 
 // buildContent assembles the control bar, the key/value table, and a bottom
-// border line. The control bar shares the table's column widths so the inputs
-// line up with Key/Value.
+// border line, framed in a card so the app reads as a single surface panel.
+// The control bar shares the table's column widths so the inputs line up with
+// Key/Value and the buttons line up with the per-row actions.
 func buildContent(c *controller) fyne.CanvasObject {
 	controls := container.New(
 		controlLayout{actionWidth: c.actionWide},
@@ -94,5 +78,6 @@ func buildContent(c *controller) fyne.CanvasObject {
 	)
 	bottom := canvas.NewLine(lighterSepColor())
 	tableArea := container.NewBorder(nil, bottom, nil, nil, c.tableView)
-	return container.NewBorder(controls, c.status, nil, nil, tableArea)
+	inner := container.NewBorder(controls, c.status, nil, nil, tableArea)
+	return widget.NewCard("", "", inner)
 }

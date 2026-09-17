@@ -5,10 +5,12 @@ pub mod cli;
 pub mod color;
 pub mod config;
 pub mod gui;
+pub mod mcp;
 pub mod placeholder;
 pub mod render;
 pub mod serve;
 pub mod themes;
+pub mod tui;
 pub mod validate;
 
 pub use cli::run;

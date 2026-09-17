@@ -4,11 +4,19 @@
 ├── languages/
 │   ├── go/
 │   │   ├── docs/
-│   │   │   ├── [ARCHITECTURE.md](./languages/go/docs/ARCHITECTURE.md)
-│   │   │   ├── [CONTRIBUTING.md](./languages/go/docs/CONTRIBUTING.md)
-│   │   │   ├── [DOWNLOADS.md](./languages/go/docs/DOWNLOADS.md)
-│   │   │   ├── [PACKAGING.md](./languages/go/docs/PACKAGING.md)
-│   │   │   └── [ROADMAP.md](./languages/go/docs/ROADMAP.md)
+│   │   │   ├── [00-overview.md](./languages/go/docs/00-overview.md)
+│   │   │   ├── [01-requirements.md](./languages/go/docs/01-requirements.md)
+│   │   │   ├── [02-features.md](./languages/go/docs/02-features.md)
+│   │   │   ├── [03-user-stories.md](./languages/go/docs/03-user-stories.md)
+│   │   │   ├── [04-architecture.md](./languages/go/docs/04-architecture.md)
+│   │   │   ├── [05-data-model.md](./languages/go/docs/05-data-model.md)
+│   │   │   ├── [06-api-specification.md](./languages/go/docs/06-api-specification.md)
+│   │   │   ├── [07-ui-ux-design.md](./languages/go/docs/07-ui-ux-design.md)
+│   │   │   ├── [08-tech-stack.md](./languages/go/docs/08-tech-stack.md)
+│   │   │   ├── [09-testing-strategy.md](./languages/go/docs/09-testing-strategy.md)
+│   │   │   ├── [10-implementation-plan.md](./languages/go/docs/10-implementation-plan.md)
+│   │   │   ├── [11-deployment.md](./languages/go/docs/11-deployment.md)
+│   │   │   └── [12-operations.md](./languages/go/docs/12-operations.md)
 │   │   ├── internal/
 │   │   │   ├── auth/
 │   │   │   │   ├── [auth.go](./languages/go/internal/auth/auth.go)

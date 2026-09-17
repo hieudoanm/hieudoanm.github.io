@@ -3,6 +3,7 @@
 import { TaggedStoreCard } from '@/components/atoms/StoreCard';
 import { detectBrowser, recommendDownload } from '@/lib/browser';
 import type { AppData } from '@/lib/downloads';
+import { HexagonGrid } from '@/components/molecules/HexagonGrid';
 import type { Platform } from '@/lib/os';
 import { SECTION_META, type ViewMode } from '@/lib/types';
 import type { FC } from 'react';
@@ -98,6 +99,10 @@ const AppSectionViews: FC<AppSectionViewsProps> = ({
         ))}
       </div>
     );
+  }
+
+  if (viewMode === 'hexagon') {
+    return <HexagonGrid apps={apps} />;
   }
 
   return (

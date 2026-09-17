@@ -63,11 +63,9 @@ mod tests {
     fn test_app_state(hub: Arc<RwLock<SSEHub>>) -> Arc<AppState> {
         let tmp_dir = std::env::temp_dir().join("backbone-test-pubsub");
         let _ = std::fs::create_dir_all(&tmp_dir);
-        let pool = deadpool::managed::Pool::builder(
-            crate::db::ConnectionManager {
-                path: tmp_dir.join("test.db"),
-            },
-        )
+        let pool = deadpool::managed::Pool::builder(crate::db::ConnectionManager {
+            path: tmp_dir.join("test.db"),
+        })
         .build()
         .unwrap();
         Arc::new(AppState {
@@ -130,8 +128,12 @@ mod tests {
 
         {
             let mut guard = hub.write().await;
-            guard.clients.insert("alive".into(), SSEClient { sender: tx1 });
-            guard.clients.insert("dead".into(), SSEClient { sender: tx2 });
+            guard
+                .clients
+                .insert("alive".into(), SSEClient { sender: tx1 });
+            guard
+                .clients
+                .insert("dead".into(), SSEClient { sender: tx2 });
         }
 
         drop(rx2);

@@ -9,6 +9,8 @@ import (
 	"github.com/spf13/cobra"
 )
 
+var version = "dev"
+
 var rootCmd = &cobra.Command{
 	Use:   "landify",
 	Short: "Build a landing page from a YAML file",
@@ -21,10 +23,14 @@ Commands:
   validate  check the schema of landify.yaml
   build     generate index.html from landify.yaml
   themes    list the sixty-four built-in theme presets
-  serve     preview the result over HTTP
-  studio    open the optional desktop editor (GUI build)`,
+  preview   serve the built files over HTTP
+  serve     start the JSON API server (render, validate, themes)
+  tui       open the terminal editor (ships with every build)
+  studio    open the optional desktop editor (GUI build)
+  mcp       run the Model Context Protocol server for LLM clients`,
 	SilenceUsage:  true,
 	SilenceErrors: true,
+	Version:       version,
 }
 
 // Execute runs the root command and exits non-zero on failure.
@@ -36,6 +42,8 @@ func Execute() {
 }
 
 func init() {
+	rootCmd.SetVersionTemplate("landify {{.Version}}\n")
+
 	rootCmd.PersistentFlags().StringP("file", "f", "landify.yaml", "path to the YAML content file")
-	rootCmd.AddCommand(newCmd, validateCmd, buildCmd, themesCmd, serveCmd, studioCmd)
+	rootCmd.AddCommand(newCmd, validateCmd, buildCmd, themesCmd, previewCmd, serveCmd, tuiCmd, studioCmd, mcpCmd)
 }

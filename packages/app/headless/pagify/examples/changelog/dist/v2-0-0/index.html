@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en" data-theme="auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>v2.0.0 · Changelog</title>
+    
+    <meta name="description" content="Major rewrite with a pluggable architecture" />
+    
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="header">
+      <div class="header__bar">
+        
+        <button
+          class="header__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="sidebar"
+          data-nav-toggle
+        >
+          <span class="header__toggle-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Menu</span>
+        </button>
+        
+        <a class="header__title" href="/">Changelog</a>
+        <div class="header__actions">
+          <label class="header__search" for="search">
+            <span class="visually-hidden">Search</span>
+            <input
+              id="search"
+              type="search"
+              placeholder="Search"
+              autocomplete="off"
+              data-search
+              data-search-index="/assets/search-index.json"
+            />
+          </label>
+          <button class="header__theme" type="button" data-theme-toggle>
+            <span class="visually-hidden">Toggle colour theme</span>
+          </button>
+        </div>
+      </div>
+      <div class="search" data-search-panel hidden>
+        <p class="search__status" role="status" data-search-status></p>
+        <ul class="search__results" data-search-results></ul>
+      </div>
+    </header>
+
+    <div class="layout">
+      
+      <nav class="sidebar" id="sidebar" aria-label="Site">
+        <ul class="nav">
+  <li class="nav__item">
+  <a
+    class="nav__link"
+    href="/"
+    >Changelog</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v0-0-1/"
+    >v0.0.1</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v0-0-2/"
+    >v0.0.2</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v0-0-3/"
+    >v0.0.3</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v0-1-0/"
+    >v0.1.0</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v0-2-0/"
+    >v0.2.0</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v0-3-0/"
+    >v0.3.0</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v1-0-0/"
+    >v1.0.0</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link nav__link--current"
+    href="/v2-0-0/"
+    aria-current="page">v2.0.0</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v3-0-0/"
+    >v3.0.0</a
+  > 
+</li>
+</ul>
+      </nav>
+      
+
+      <main class="main" id="main">
+        <article class="markdown"><h1 id="page-title" class="markdown__title">v2.0.0</h1>
+          
+          <p class="markdown__lede">Major rewrite with a pluggable architecture</p>
+          
+          <p>Released: February 10, 2025</p>
+<h2 id="added">Added</h2>
+<ul>
+<li><strong>Pluggable architecture</strong> — Themes, renderers and resolvers are now first-class extensions</li>
+<li><strong>Custom themes</strong> — Embed a template + asset tree and resolve it by name in <code>build.Build</code></li>
+<li><strong>Plugin hooks</strong> — Before/after build, before/after render, custom link resolution</li>
+<li><strong>Asset tree API</strong> — <code>fs.FS</code>-based asset copying with no directory walking</li>
+<li><strong>Config validation</strong> — <code>pagify.yaml</code> is validated against a schema; unparsable configs fail loudly</li>
+</ul>
+<h2 id="changed">Changed</h2>
+<ul>
+<li><code>internal/theme</code> replaces the monolithic default theme with a composable <code>Theme</code> type</li>
+<li><code>internal/build</code> restructured around <code>loadSite</code> and <code>writePages</code></li>
+<li><code>pagify preview</code> rebuilds on every request instead of watching the filesystem</li>
+</ul>
+<h2 id="removed">Removed</h2>
+<ul>
+<li>Legacy <code>serve</code> command (replaced by <code>pagify serve</code> with OpenAPI)</li>
+</ul>
+<h2 id="security">Security</h2>
+<ul>
+<li>N/A</li>
+</ul>
+<h2 id="related">Related</h2>
+<ul>
+<li><a href="/">Changelog home</a></li>
+<li><a href="/v1-0-0/">v1.0.0</a> — previous release</li>
+<li><a href="/v3-0-0/">v3.0.0</a> — next release</li>
+<li><a href="../reference/theme.md">theme Package</a> — theme architecture</li>
+<li><a href="../reference/build.md">build Package</a> — build pipeline</li>
+</ul>
+
+          
+        </article>
+        
+<aside class="outline" aria-label="On this page">
+  <h2 class="outline__title">On this page</h2>
+  <ul class="outline__list">
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#added">Added</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#changed">Changed</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#removed">Removed</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#security">Security</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#related">Related</a>
+    </li>
+    
+  </ul>
+</aside>
+
+      </main>
+    </div>
+
+    <footer class="footer">
+      <p>Built with pagify · © 2024 pagify</p>
+    </footer>
+
+    <script src="/assets/script.js" defer></script>
+    <script src="/assets/search.js" defer></script>
+  </body>
+</html>

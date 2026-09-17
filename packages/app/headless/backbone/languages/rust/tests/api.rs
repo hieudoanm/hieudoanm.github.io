@@ -24,8 +24,7 @@ impl Svr {
     async fn start() -> Self {
         let port = find_port();
         let base = format!("http://127.0.0.1:{port}");
-        let tmp = std::env::temp_dir()
-            .join(format!("backbone-test-{}", uuid::Uuid::new_v4()));
+        let tmp = std::env::temp_dir().join(format!("backbone-test-{}", uuid::Uuid::new_v4()));
         std::fs::create_dir_all(&tmp).ok();
 
         let child = Command::new(env!("CARGO_BIN_EXE_backbone"))
@@ -133,11 +132,22 @@ impl Svr {
 
     async fn register(&self) -> String {
         let r = self
-            .post("/api/auth/register", json!({"email": "admin@test.com", "password": "admin123"}))
+            .post(
+                "/api/auth/register",
+                json!({"email": "admin@test.com", "password": "admin123"}),
+            )
             .await;
-        assert_eq!(r.status(), StatusCode::OK, "register failed: {:?}", r.text().await);
+        assert_eq!(
+            r.status(),
+            StatusCode::OK,
+            "register failed: {:?}",
+            r.text().await
+        );
         let r = self
-            .post("/api/auth/login", json!({"email": "admin@test.com", "password": "admin123"}))
+            .post(
+                "/api/auth/login",
+                json!({"email": "admin@test.com", "password": "admin123"}),
+            )
             .await;
         assert_eq!(r.status(), StatusCode::OK);
         let login: Value = r.json().await.unwrap();
@@ -146,9 +156,18 @@ impl Svr {
 
         // Grant the user global admin so they can create collections etc.
         let r = self
-            .post_auth("/api/permissions", &token, json!({"user_id": user_id, "collection": "*", "role": "admin"}))
+            .post_auth(
+                "/api/permissions",
+                &token,
+                json!({"user_id": user_id, "collection": "*", "role": "admin"}),
+            )
             .await;
-        assert_eq!(r.status(), StatusCode::CREATED, "grant permission failed: {:?}", r.text().await);
+        assert_eq!(
+            r.status(),
+            StatusCode::CREATED,
+            "grant permission failed: {:?}",
+            r.text().await
+        );
 
         token
     }
@@ -175,7 +194,10 @@ async fn test_health_and_auth() {
 
     // Register
     let r = svr
-        .post("/api/auth/register", json!({"email": "user@test.com", "password": "pass123"}))
+        .post(
+            "/api/auth/register",
+            json!({"email": "user@test.com", "password": "pass123"}),
+        )
         .await;
     assert_eq!(r.status(), StatusCode::OK);
     let body = r.json::<Value>().await.unwrap();
@@ -184,13 +206,19 @@ async fn test_health_and_auth() {
 
     // Duplicate register
     let r = svr
-        .post("/api/auth/register", json!({"email": "user@test.com", "password": "pass123"}))
+        .post(
+            "/api/auth/register",
+            json!({"email": "user@test.com", "password": "pass123"}),
+        )
         .await;
     assert_eq!(r.status(), StatusCode::CONFLICT);
 
     // Login
     let r = svr
-        .post("/api/auth/login", json!({"email": "user@test.com", "password": "pass123"}))
+        .post(
+            "/api/auth/login",
+            json!({"email": "user@test.com", "password": "pass123"}),
+        )
         .await;
     assert_eq!(r.status(), StatusCode::OK);
     let body = r.json::<Value>().await.unwrap();
@@ -199,14 +227,15 @@ async fn test_health_and_auth() {
 
     // Bad password
     let r = svr
-        .post("/api/auth/login", json!({"email": "user@test.com", "password": "wrong"}))
+        .post(
+            "/api/auth/login",
+            json!({"email": "user@test.com", "password": "wrong"}),
+        )
         .await;
     assert_eq!(r.status(), StatusCode::UNAUTHORIZED);
 
     // Missing fields
-    let r = svr
-        .post("/api/auth/register", json!({}))
-        .await;
+    let r = svr.post("/api/auth/register", json!({})).await;
     assert_eq!(r.status(), StatusCode::BAD_REQUEST);
 
     // Auth guard — /api/collections without token
@@ -214,9 +243,7 @@ async fn test_health_and_auth() {
     assert_eq!(r.status(), StatusCode::UNAUTHORIZED);
 
     // Invalid token
-    let r = svr
-        .get_auth("/api/collections", "invalid-token")
-        .await;
+    let r = svr.get_auth("/api/collections", "invalid-token").await;
     assert_eq!(r.status(), StatusCode::UNAUTHORIZED);
 }
 
@@ -236,7 +263,12 @@ async fn test_crud_collections_and_records() {
     let r = svr.get_auth("/api/collections", &token).await;
     assert_eq!(r.status(), StatusCode::OK);
     let cols = r.json::<Value>().await.unwrap();
-    assert!(cols.as_array().unwrap().iter().any(|c| c["name"] == "articles"));
+    assert!(
+        cols.as_array()
+            .unwrap()
+            .iter()
+            .any(|c| c["name"] == "articles")
+    );
 
     // Get collection
     let r = svr.get_auth("/api/collections/articles", &token).await;
@@ -251,7 +283,11 @@ async fn test_crud_collections_and_records() {
 
     // Create record
     let r = svr
-        .post_auth("/api/collections/articles/records", &token, json!({"data": {"title": "Hello", "views": 42}}))
+        .post_auth(
+            "/api/collections/articles/records",
+            &token,
+            json!({"data": {"title": "Hello", "views": 42}}),
+        )
         .await;
     assert_eq!(r.status(), StatusCode::OK);
     let rec = r.json::<Value>().await.unwrap();
@@ -260,7 +296,10 @@ async fn test_crud_collections_and_records() {
 
     // List records
     let r = svr
-        .get_auth("/api/collections/articles/records?page=1&per_page=20", &token)
+        .get_auth(
+            "/api/collections/articles/records?page=1&per_page=20",
+            &token,
+        )
         .await;
     assert_eq!(r.status(), StatusCode::OK);
     let page = r.json::<Value>().await.unwrap();
@@ -269,7 +308,10 @@ async fn test_crud_collections_and_records() {
 
     // Get record
     let r = svr
-        .get_auth(&format!("/api/collections/articles/records/{rec_id}"), &token)
+        .get_auth(
+            &format!("/api/collections/articles/records/{rec_id}"),
+            &token,
+        )
         .await;
     assert_eq!(r.status(), StatusCode::OK);
     assert_eq!(r.json::<Value>().await.unwrap()["id"], rec_id);
@@ -293,24 +335,26 @@ async fn test_crud_collections_and_records() {
 
     // Delete record
     let r = svr
-        .delete_auth(&format!("/api/collections/articles/records/{rec_id}"), &token)
+        .delete_auth(
+            &format!("/api/collections/articles/records/{rec_id}"),
+            &token,
+        )
         .await;
     assert_eq!(r.status(), StatusCode::NO_CONTENT);
 
     let r = svr
-        .get_auth(&format!("/api/collections/articles/records/{rec_id}"), &token)
+        .get_auth(
+            &format!("/api/collections/articles/records/{rec_id}"),
+            &token,
+        )
         .await;
     assert_eq!(r.status(), StatusCode::NOT_FOUND);
 
     // Delete collection
-    let r = svr
-        .delete_auth("/api/collections/articles", &token)
-        .await;
+    let r = svr.delete_auth("/api/collections/articles", &token).await;
     assert_eq!(r.status(), StatusCode::NO_CONTENT);
 
-    let r = svr
-        .get_auth("/api/collections/articles", &token)
-        .await;
+    let r = svr.get_auth("/api/collections/articles", &token).await;
     assert_eq!(r.status(), StatusCode::NOT_FOUND);
 }
 
@@ -329,7 +373,10 @@ async fn test_buckets_and_files() {
     // List buckets
     let r = svr.get_auth("/api/buckets", &token).await;
     assert_eq!(r.status(), StatusCode::OK);
-    assert_eq!(r.json::<Value>().await.unwrap().as_array().unwrap().len(), 1);
+    assert_eq!(
+        r.json::<Value>().await.unwrap().as_array().unwrap().len(),
+        1
+    );
 
     // Get bucket
     let r = svr.get_auth("/api/buckets/photos", &token).await;
@@ -339,7 +386,13 @@ async fn test_buckets_and_files() {
     // Upload file
     let content = b"hello world file content";
     let r = svr
-        .post_multipart("/api/buckets/photos/files", &token, "hello.txt", content, "text/plain")
+        .post_multipart(
+            "/api/buckets/photos/files",
+            &token,
+            "hello.txt",
+            content,
+            "text/plain",
+        )
         .await;
     assert_eq!(r.status(), StatusCode::OK);
     let file = r.json::<Value>().await.unwrap();
@@ -362,7 +415,13 @@ async fn test_buckets_and_files() {
 
     // Upload to nonexistent bucket
     let r = svr
-        .post_multipart("/api/buckets/nonexistent/files", &token, "f.txt", b"x", "text/plain")
+        .post_multipart(
+            "/api/buckets/nonexistent/files",
+            &token,
+            "f.txt",
+            b"x",
+            "text/plain",
+        )
         .await;
     assert_eq!(r.status(), StatusCode::NOT_FOUND);
 
@@ -398,14 +457,22 @@ async fn test_cache_operations() {
 
     // Set cache
     let r = svr
-        .post_auth("/api/cache", &token, json!({"key": "greeting", "value": "hello world"}))
+        .post_auth(
+            "/api/cache",
+            &token,
+            json!({"key": "greeting", "value": "hello world"}),
+        )
         .await;
     assert_eq!(r.status(), StatusCode::OK);
     assert_eq!(r.json::<Value>().await.unwrap()["value"], "hello world");
 
     // Overwrite
     let r = svr
-        .post_auth("/api/cache", &token, json!({"key": "greeting", "value": "updated"}))
+        .post_auth(
+            "/api/cache",
+            &token,
+            json!({"key": "greeting", "value": "updated"}),
+        )
         .await;
     assert_eq!(r.status(), StatusCode::OK);
 
@@ -451,7 +518,11 @@ async fn test_notifications_and_logs() {
 
     // Create notification
     let r = svr
-        .post_auth("/api/notifications", &token, json!({"title": "Test", "body": "Body", "type": "info"}))
+        .post_auth(
+            "/api/notifications",
+            &token,
+            json!({"title": "Test", "body": "Body", "type": "info"}),
+        )
         .await;
     assert_eq!(r.status(), StatusCode::OK);
     let n = r.json::<Value>().await.unwrap();
@@ -462,14 +533,21 @@ async fn test_notifications_and_logs() {
     // List
     let r = svr.get_auth("/api/notifications", &token).await;
     assert_eq!(r.status(), StatusCode::OK);
-    assert_eq!(r.json::<Value>().await.unwrap().as_array().unwrap().len(), 1);
+    assert_eq!(
+        r.json::<Value>().await.unwrap().as_array().unwrap().len(),
+        1
+    );
 
     // Mark read
     let r = svr
         .patch_auth(&format!("/api/notifications/{nid}"), &token, json!({}))
         .await;
     assert_eq!(r.status(), StatusCode::OK);
-    assert!(r.json::<Value>().await.unwrap()["is_read"].as_bool().unwrap());
+    assert!(
+        r.json::<Value>().await.unwrap()["is_read"]
+            .as_bool()
+            .unwrap()
+    );
 
     // Delete
     let r = svr
@@ -479,7 +557,11 @@ async fn test_notifications_and_logs() {
 
     // Clear
     let r = svr
-        .post_auth("/api/notifications", &token, json!({"title": "X", "type": "warning"}))
+        .post_auth(
+            "/api/notifications",
+            &token,
+            json!({"title": "X", "type": "warning"}),
+        )
         .await;
     assert_eq!(r.status(), StatusCode::OK);
     let r = svr.delete_auth("/api/notifications", &token).await;
@@ -487,19 +569,32 @@ async fn test_notifications_and_logs() {
 
     let r = svr.get_auth("/api/notifications", &token).await;
     assert_eq!(r.status(), StatusCode::OK);
-    assert_eq!(r.json::<Value>().await.unwrap().as_array().unwrap().len(), 0);
+    assert_eq!(
+        r.json::<Value>().await.unwrap().as_array().unwrap().len(),
+        0
+    );
 
     // Create log
     let r = svr
-        .post_auth("/api/logs", &token, json!({"level": "info", "message": "test log entry"}))
+        .post_auth(
+            "/api/logs",
+            &token,
+            json!({"level": "info", "message": "test log entry"}),
+        )
         .await;
     assert_eq!(r.status(), StatusCode::OK);
-    assert_eq!(r.json::<Value>().await.unwrap()["message"], "test log entry");
+    assert_eq!(
+        r.json::<Value>().await.unwrap()["message"],
+        "test log entry"
+    );
 
     // List logs
     let r = svr.get_auth("/api/logs", &token).await;
     assert_eq!(r.status(), StatusCode::OK);
-    assert_eq!(r.json::<Value>().await.unwrap().as_array().unwrap().len(), 1);
+    assert_eq!(
+        r.json::<Value>().await.unwrap().as_array().unwrap().len(),
+        1
+    );
 
     // Clear logs
     let r = svr.delete_auth("/api/logs", &token).await;
@@ -507,7 +602,10 @@ async fn test_notifications_and_logs() {
 
     let r = svr.get_auth("/api/logs", &token).await;
     assert_eq!(r.status(), StatusCode::OK);
-    assert_eq!(r.json::<Value>().await.unwrap().as_array().unwrap().len(), 0);
+    assert_eq!(
+        r.json::<Value>().await.unwrap().as_array().unwrap().len(),
+        0
+    );
 }
 
 #[tokio::test]
@@ -521,5 +619,3 @@ async fn test_openapi_spec() {
     assert!(spec.get("paths").is_some());
     assert!(spec["paths"].get("/api/health").is_some());
 }
-
-

@@ -1,4 +1,0 @@
-# Vehicles
-
-- [[Cars]]
-- [[Motorcycles]]

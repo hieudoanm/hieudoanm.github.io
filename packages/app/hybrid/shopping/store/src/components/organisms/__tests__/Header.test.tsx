@@ -66,18 +66,18 @@ describe('Header', () => {
     const toggle = screen.getByTestId('theme-toggle');
     await user.click(toggle);
     expect(document.documentElement.getAttribute('data-theme')).toBe(
-      'store-dark'
+      'store-light'
     );
   });
 
-  it('toggles back to light theme', async () => {
+  it('toggles back to dark theme', async () => {
     const user = userEvent.setup();
     render(<Header />);
     const toggle = screen.getByTestId('theme-toggle');
     await user.click(toggle);
     await user.click(toggle);
     expect(document.documentElement.getAttribute('data-theme')).toBe(
-      'store-light'
+      'store-dark'
     );
   });
 

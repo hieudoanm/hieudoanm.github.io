@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357.71 182.23" width="357.71" height="182.23" role="img" aria-labelledby="jamaica-title jamaica-desc">
+  <title id="jamaica-title">Jamaica hex map</title>
+  <desc id="jamaica-desc">Hexagon map with 14 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.77; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 13.67 9.76; }
+    .label { fill: #52525b; font: 600 11.06px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="ST">
+    <title>Saint Thomas</title>
+    <polygon class="tile" points="319.76,107.39 347.94,123.66 347.94,156.20 319.76,172.47 291.58,156.20 291.58,123.66" aria-label="Saint Thomas"/>
+    <text class="label" x="319.76" y="139.93">ST</text>
+  </g>
+  <g class="state" data-state="PO">
+    <title>Portland</title>
+    <polygon class="tile" points="291.58,58.57 319.76,74.85 319.76,107.39 291.58,123.66 263.40,107.39 263.40,74.85" aria-label="Portland"/>
+    <text class="label" x="291.58" y="91.12">PO</text>
+  </g>
+  <g class="state" data-state="SM">
+    <title>Saint Mary</title>
+    <polygon class="tile" points="263.40,9.76 291.58,26.03 291.58,58.57 263.40,74.85 235.22,58.57 235.22,26.03" aria-label="Saint Mary"/>
+    <text class="label" x="263.40" y="42.30">SM</text>
+  </g>
+  <g class="state" data-state="KI">
+    <title>Kingston</title>
+    <polygon class="tile" points="263.40,107.39 291.58,123.66 291.58,156.20 263.40,172.47 235.22,156.20 235.22,123.66" aria-label="Kingston"/>
+    <text class="label" x="263.40" y="139.93">KI</text>
+  </g>
+  <g class="state" data-state="SD">
+    <title>Saint Andrew</title>
+    <polygon class="tile" points="235.22,58.57 263.40,74.85 263.40,107.39 235.22,123.66 207.04,107.39 207.04,74.85" aria-label="Saint Andrew"/>
+    <text class="label" x="235.22" y="91.12">SD</text>
+  </g>
+  <g class="state" data-state="SN">
+    <title>Saint Ann</title>
+    <polygon class="tile" points="207.04,9.76 235.22,26.03 235.22,58.57 207.04,74.85 178.85,58.57 178.85,26.03" aria-label="Saint Ann"/>
+    <text class="label" x="207.04" y="42.30">SN</text>
+  </g>
+  <g class="state" data-state="SC">
+    <title>Saint Catherine</title>
+    <polygon class="tile" points="207.04,107.39 235.22,123.66 235.22,156.20 207.04,172.47 178.85,156.20 178.85,123.66" aria-label="Saint Catherine"/>
+    <text class="label" x="207.04" y="139.93">SC</text>
+  </g>
+  <g class="state" data-state="CL">
+    <title>Clarendon</title>
+    <polygon class="tile" points="178.85,58.57 207.04,74.85 207.04,107.39 178.85,123.66 150.67,107.39 150.67,74.85" aria-label="Clarendon"/>
+    <text class="label" x="178.85" y="91.12">CL</text>
+  </g>
+  <g class="state" data-state="TR">
+    <title>Trelawny</title>
+    <polygon class="tile" points="150.67,9.76 178.85,26.03 178.85,58.57 150.67,74.85 122.49,58.57 122.49,26.03" aria-label="Trelawny"/>
+    <text class="label" x="150.67" y="42.30">TR</text>
+  </g>
+  <g class="state" data-state="MA">
+    <title>Manchester</title>
+    <polygon class="tile" points="150.67,107.39 178.85,123.66 178.85,156.20 150.67,172.47 122.49,156.20 122.49,123.66" aria-label="Manchester"/>
+    <text class="label" x="150.67" y="139.93">MA</text>
+  </g>
+  <g class="state" data-state="SE">
+    <title>Saint Elizabeth</title>
+    <polygon class="tile" points="122.49,58.57 150.67,74.85 150.67,107.39 122.49,123.66 94.31,107.39 94.31,74.85" aria-label="Saint Elizabeth"/>
+    <text class="label" x="122.49" y="91.12">SE</text>
+  </g>
+  <g class="state" data-state="SJ">
+    <title>Saint James</title>
+    <polygon class="tile" points="94.31,9.76 122.49,26.03 122.49,58.57 94.31,74.85 66.13,58.57 66.13,26.03" aria-label="Saint James"/>
+    <text class="label" x="94.31" y="42.30">SJ</text>
+  </g>
+  <g class="state" data-state="WE">
+    <title>Westmoreland</title>
+    <polygon class="tile" points="66.13,58.57 94.31,74.85 94.31,107.39 66.13,123.66 37.94,107.39 37.94,74.85" aria-label="Westmoreland"/>
+    <text class="label" x="66.13" y="91.12">WE</text>
+  </g>
+  <g class="state" data-state="HA">
+    <title>Hanover</title>
+    <polygon class="tile" points="37.94,9.76 66.13,26.03 66.13,58.57 37.94,74.85 9.76,58.57 9.76,26.03" aria-label="Hanover"/>
+    <text class="label" x="37.94" y="42.30">HA</text>
+  </g>
+</svg>

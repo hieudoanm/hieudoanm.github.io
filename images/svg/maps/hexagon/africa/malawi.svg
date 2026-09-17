@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 314.85 598.40" width="314.85" height="598.40" role="img" aria-labelledby="malawi-title malawi-desc">
+  <title id="malawi-title">Malawi hex map</title>
+  <desc id="malawi-desc">Hexagon map with 28 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.89; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 14.28 10.20; }
+    .label { fill: #52525b; font: 600 11.56px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="PH">
+    <title>Phalombe</title>
+    <polygon class="tile" points="275.20,418.20 304.65,435.20 304.65,469.20 275.20,486.20 245.76,469.20 245.76,435.20" aria-label="Phalombe"/>
+    <text class="label" x="275.20" y="452.20">PH</text>
+  </g>
+  <g class="state" data-state="MH">
+    <title>Machinga</title>
+    <polygon class="tile" points="245.76,367.20 275.20,384.20 275.20,418.20 245.76,435.20 216.31,418.20 216.31,384.20" aria-label="Machinga"/>
+    <text class="label" x="245.76" y="401.20">MH</text>
+  </g>
+  <g class="state" data-state="MU">
+    <title>Mulanje</title>
+    <polygon class="tile" points="245.76,469.20 275.20,486.20 275.20,520.20 245.76,537.20 216.31,520.20 216.31,486.20" aria-label="Mulanje"/>
+    <text class="label" x="245.76" y="503.20">MU</text>
+  </g>
+  <g class="state" data-state="NB">
+    <title>Nkhata Bay</title>
+    <polygon class="tile" points="216.31,214.20 245.76,231.20 245.76,265.20 216.31,282.20 186.87,265.20 186.87,231.20" aria-label="Nkhata Bay"/>
+    <text class="label" x="216.31" y="248.20">NB</text>
+  </g>
+  <g class="state" data-state="MG">
+    <title>Mangochi</title>
+    <polygon class="tile" points="216.31,316.20 245.76,333.20 245.76,367.20 216.31,384.20 186.87,367.20 186.87,333.20" aria-label="Mangochi"/>
+    <text class="label" x="216.31" y="350.20">MG</text>
+  </g>
+  <g class="state" data-state="ZO">
+    <title>Zomba</title>
+    <polygon class="tile" points="216.31,418.20 245.76,435.20 245.76,469.20 216.31,486.20 186.87,469.20 186.87,435.20" aria-label="Zomba"/>
+    <text class="label" x="216.31" y="452.20">ZO</text>
+  </g>
+  <g class="state" data-state="TH">
+    <title>Thyolo</title>
+    <polygon class="tile" points="216.31,520.20 245.76,537.20 245.76,571.20 216.31,588.20 186.87,571.20 186.87,537.20" aria-label="Thyolo"/>
+    <text class="label" x="216.31" y="554.20">TH</text>
+  </g>
+  <g class="state" data-state="LK">
+    <title>Likoma</title>
+    <polygon class="tile inset" points="216.31,10.20 245.76,27.20 245.76,61.20 216.31,78.20 186.87,61.20 186.87,27.20" aria-label="Likoma"/>
+    <text class="label" x="216.31" y="44.20">LK</text>
+  </g>
+  <g class="state" data-state="RU">
+    <title>Rumphi</title>
+    <polygon class="tile" points="186.87,163.20 216.31,180.20 216.31,214.20 186.87,231.20 157.42,214.20 157.42,180.20" aria-label="Rumphi"/>
+    <text class="label" x="186.87" y="197.20">RU</text>
+  </g>
+  <g class="state" data-state="SA">
+    <title>Salima</title>
+    <polygon class="tile" points="186.87,265.20 216.31,282.20 216.31,316.20 186.87,333.20 157.42,316.20 157.42,282.20" aria-label="Salima"/>
+    <text class="label" x="186.87" y="299.20">SA</text>
+  </g>
+  <g class="state" data-state="BA">
+    <title>Balaka</title>
+    <polygon class="tile" points="186.87,367.20 216.31,384.20 216.31,418.20 186.87,435.20 157.42,418.20 157.42,384.20" aria-label="Balaka"/>
+    <text class="label" x="186.87" y="401.20">BA</text>
+  </g>
+  <g class="state" data-state="CR">
+    <title>Chiradzulu</title>
+    <polygon class="tile" points="186.87,469.20 216.31,486.20 216.31,520.20 186.87,537.20 157.42,520.20 157.42,486.20" aria-label="Chiradzulu"/>
+    <text class="label" x="186.87" y="503.20">CR</text>
+  </g>
+  <g class="state" data-state="CT">
+    <title>Chitipa</title>
+    <polygon class="tile" points="157.42,112.20 186.87,129.20 186.87,163.20 157.42,180.20 127.98,163.20 127.98,129.20" aria-label="Chitipa"/>
+    <text class="label" x="157.42" y="146.20">CT</text>
+  </g>
+  <g class="state" data-state="NK">
+    <title>Nkhotakota</title>
+    <polygon class="tile" points="157.42,214.20 186.87,231.20 186.87,265.20 157.42,282.20 127.98,265.20 127.98,231.20" aria-label="Nkhotakota"/>
+    <text class="label" x="157.42" y="248.20">NK</text>
+  </g>
+  <g class="state" data-state="DE">
+    <title>Dedza</title>
+    <polygon class="tile" points="157.42,316.20 186.87,333.20 186.87,367.20 157.42,384.20 127.98,367.20 127.98,333.20" aria-label="Dedza"/>
+    <text class="label" x="157.42" y="350.20">DE</text>
+  </g>
+  <g class="state" data-state="BL">
+    <title>Blantyre</title>
+    <polygon class="tile" points="157.42,418.20 186.87,435.20 186.87,469.20 157.42,486.20 127.98,469.20 127.98,435.20" aria-label="Blantyre"/>
+    <text class="label" x="157.42" y="452.20">BL</text>
+  </g>
+  <g class="state" data-state="NS">
+    <title>Nsanje</title>
+    <polygon class="tile" points="157.42,520.20 186.87,537.20 186.87,571.20 157.42,588.20 127.98,571.20 127.98,537.20" aria-label="Nsanje"/>
+    <text class="label" x="157.42" y="554.20">NS</text>
+  </g>
+  <g class="state" data-state="MZ">
+    <title>Mzimba</title>
+    <polygon class="tile" points="127.98,163.20 157.42,180.20 157.42,214.20 127.98,231.20 98.53,214.20 98.53,180.20" aria-label="Mzimba"/>
+    <text class="label" x="127.98" y="197.20">MZ</text>
+  </g>
+  <g class="state" data-state="NI">
+    <title>Ntchisi</title>
+    <polygon class="tile" points="127.98,265.20 157.42,282.20 157.42,316.20 127.98,333.20 98.53,316.20 98.53,282.20" aria-label="Ntchisi"/>
+    <text class="label" x="127.98" y="299.20">NI</text>
+  </g>
+  <g class="state" data-state="NU">
+    <title>Ntcheu</title>
+    <polygon class="tile" points="127.98,367.20 157.42,384.20 157.42,418.20 127.98,435.20 98.53,418.20 98.53,384.20" aria-label="Ntcheu"/>
+    <text class="label" x="127.98" y="401.20">NU</text>
+  </g>
+  <g class="state" data-state="CK">
+    <title>Chikwawa</title>
+    <polygon class="tile" points="127.98,469.20 157.42,486.20 157.42,520.20 127.98,537.20 98.53,520.20 98.53,486.20" aria-label="Chikwawa"/>
+    <text class="label" x="127.98" y="503.20">CK</text>
+  </g>
+  <g class="state" data-state="CHI">
+    <title>Chitipa</title>
+    <polygon class="tile" points="98.53,112.20 127.98,129.20 127.98,163.20 98.53,180.20 69.09,163.20 69.09,129.20" aria-label="Chitipa"/>
+    <text class="label" x="98.53" y="146.20">CHI</text>
+  </g>
+  <g class="state" data-state="KS">
+    <title>Kasungu</title>
+    <polygon class="tile" points="98.53,214.20 127.98,231.20 127.98,265.20 98.53,282.20 69.09,265.20 69.09,231.20" aria-label="Kasungu"/>
+    <text class="label" x="98.53" y="248.20">KS</text>
+  </g>
+  <g class="state" data-state="LI">
+    <title>Lilongwe</title>
+    <polygon class="tile" points="98.53,316.20 127.98,333.20 127.98,367.20 98.53,384.20 69.09,367.20 69.09,333.20" aria-label="Lilongwe"/>
+    <text class="label" x="98.53" y="350.20">LI</text>
+  </g>
+  <g class="state" data-state="MW">
+    <title>Mwanza</title>
+    <polygon class="tile" points="98.53,418.20 127.98,435.20 127.98,469.20 98.53,486.20 69.09,469.20 69.09,435.20" aria-label="Mwanza"/>
+    <text class="label" x="98.53" y="452.20">MW</text>
+  </g>
+  <g class="state" data-state="DO">
+    <title>Dowa</title>
+    <polygon class="tile" points="69.09,265.20 98.53,282.20 98.53,316.20 69.09,333.20 39.64,316.20 39.64,282.20" aria-label="Dowa"/>
+    <text class="label" x="69.09" y="299.20">DO</text>
+  </g>
+  <g class="state" data-state="NE">
+    <title>Neno</title>
+    <polygon class="tile" points="69.09,367.20 98.53,384.20 98.53,418.20 69.09,435.20 39.64,418.20 39.64,384.20" aria-label="Neno"/>
+    <text class="label" x="69.09" y="401.20">NE</text>
+  </g>
+  <g class="state" data-state="MC">
+    <title>Mchinji</title>
+    <polygon class="tile" points="39.64,316.20 69.09,333.20 69.09,367.20 39.64,384.20 10.20,367.20 10.20,333.20" aria-label="Mchinji"/>
+    <text class="label" x="39.64" y="350.20">MC</text>
+  </g>
+</svg>

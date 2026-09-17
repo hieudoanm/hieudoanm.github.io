@@ -613,6 +613,15 @@
         "typeId": "App",
         "sectionId": "calculator",
         "toolId": "split-bill"
+      },
+      {
+        "label": "Tax",
+        "description": "Vietnamese PIT",
+        "icon": "PiReceipt",
+        "type": "app",
+        "typeId": "App",
+        "sectionId": "calculator",
+        "toolId": "tax"
       }
     ],
     "id": "calculator"

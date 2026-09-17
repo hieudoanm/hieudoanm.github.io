@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 314.85 445.40" width="314.85" height="445.40" role="img" aria-labelledby="egypt-title egypt-desc">
+  <title id="egypt-title">Egypt hex map</title>
+  <desc id="egypt-desc">Hexagon map with 27 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.89; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 14.28 10.20; }
+    .label { fill: #52525b; font: 600 11.56px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="SIN">
+    <title>Shamal Sina'</title>
+    <polygon class="tile" points="275.20,112.20 304.65,129.20 304.65,163.20 275.20,180.20 245.76,163.20 245.76,129.20" aria-label="Shamal Sina'"/>
+    <text class="label" x="275.20" y="146.20">SIN</text>
+  </g>
+  <g class="state" data-state="BA">
+    <title>Al Bahr al Ahmar</title>
+    <polygon class="tile" points="275.20,316.20 304.65,333.20 304.65,367.20 275.20,384.20 245.76,367.20 245.76,333.20" aria-label="Al Bahr al Ahmar"/>
+    <text class="label" x="275.20" y="350.20">BA</text>
+  </g>
+  <g class="state" data-state="PTS">
+    <title>Bur Sa`id</title>
+    <polygon class="tile" points="245.76,61.20 275.20,78.20 275.20,112.20 245.76,129.20 216.31,112.20 216.31,78.20" aria-label="Bur Sa`id"/>
+    <text class="label" x="245.76" y="95.20">PTS</text>
+  </g>
+  <g class="state" data-state="JS">
+    <title>Janub Sina'</title>
+    <polygon class="tile" points="245.76,163.20 275.20,180.20 275.20,214.20 245.76,231.20 216.31,214.20 216.31,180.20" aria-label="Janub Sina'"/>
+    <text class="label" x="245.76" y="197.20">JS</text>
+  </g>
+  <g class="state" data-state="SUZ">
+    <title>As Suways</title>
+    <polygon class="tile" points="245.76,265.20 275.20,282.20 275.20,316.20 245.76,333.20 216.31,316.20 216.31,282.20" aria-label="As Suways"/>
+    <text class="label" x="245.76" y="299.20">SUZ</text>
+  </g>
+  <g class="state" data-state="LX">
+    <title>Luxor</title>
+    <polygon class="tile" points="245.76,367.20 275.20,384.20 275.20,418.20 245.76,435.20 216.31,418.20 216.31,384.20" aria-label="Luxor"/>
+    <text class="label" x="245.76" y="401.20">LX</text>
+  </g>
+  <g class="state" data-state="DT">
+    <title>Dumyat</title>
+    <polygon class="tile" points="216.31,10.20 245.76,27.20 245.76,61.20 216.31,78.20 186.87,61.20 186.87,27.20" aria-label="Dumyat"/>
+    <text class="label" x="216.31" y="44.20">DT</text>
+  </g>
+  <g class="state" data-state="IS">
+    <title>Al Isma`iliyah</title>
+    <polygon class="tile" points="216.31,112.20 245.76,129.20 245.76,163.20 216.31,180.20 186.87,163.20 186.87,129.20" aria-label="Al Isma`iliyah"/>
+    <text class="label" x="216.31" y="146.20">IS</text>
+  </g>
+  <g class="state" data-state="QH">
+    <title>Al Qahirah</title>
+    <polygon class="tile" points="216.31,214.20 245.76,231.20 245.76,265.20 216.31,282.20 186.87,265.20 186.87,231.20" aria-label="Al Qahirah"/>
+    <text class="label" x="216.31" y="248.20">QH</text>
+  </g>
+  <g class="state" data-state="KN">
+    <title>Qina</title>
+    <polygon class="tile" points="216.31,316.20 245.76,333.20 245.76,367.20 216.31,384.20 186.87,367.20 186.87,333.20" aria-label="Qina"/>
+    <text class="label" x="216.31" y="350.20">KN</text>
+  </g>
+  <g class="state" data-state="SHR">
+    <title>Ash Sharqiyah</title>
+    <polygon class="tile" points="186.87,61.20 216.31,78.20 216.31,112.20 186.87,129.20 157.42,112.20 157.42,78.20" aria-label="Ash Sharqiyah"/>
+    <text class="label" x="186.87" y="95.20">SHR</text>
+  </g>
+  <g class="state" data-state="KB">
+    <title>Al Qalyubiyah</title>
+    <polygon class="tile" points="186.87,163.20 216.31,180.20 216.31,214.20 186.87,231.20 157.42,214.20 157.42,180.20" aria-label="Al Qalyubiyah"/>
+    <text class="label" x="186.87" y="197.20">KB</text>
+  </g>
+  <g class="state" data-state="SHG">
+    <title>Suhaj</title>
+    <polygon class="tile" points="186.87,265.20 216.31,282.20 216.31,316.20 186.87,333.20 157.42,316.20 157.42,282.20" aria-label="Suhaj"/>
+    <text class="label" x="186.87" y="299.20">SHG</text>
+  </g>
+  <g class="state" data-state="ASN">
+    <title>Aswan</title>
+    <polygon class="tile" points="186.87,367.20 216.31,384.20 216.31,418.20 186.87,435.20 157.42,418.20 157.42,384.20" aria-label="Aswan"/>
+    <text class="label" x="186.87" y="401.20">ASN</text>
+  </g>
+  <g class="state" data-state="DK">
+    <title>Ad Daqahliyah</title>
+    <polygon class="tile" points="157.42,10.20 186.87,27.20 186.87,61.20 157.42,78.20 127.98,61.20 127.98,27.20" aria-label="Ad Daqahliyah"/>
+    <text class="label" x="157.42" y="44.20">DK</text>
+  </g>
+  <g class="state" data-state="MNF">
+    <title>Al Minufiyah</title>
+    <polygon class="tile" points="157.42,112.20 186.87,129.20 186.87,163.20 157.42,180.20 127.98,163.20 127.98,129.20" aria-label="Al Minufiyah"/>
+    <text class="label" x="157.42" y="146.20">MNF</text>
+  </g>
+  <g class="state" data-state="MN">
+    <title>Al Minya</title>
+    <polygon class="tile" points="157.42,214.20 186.87,231.20 186.87,265.20 157.42,282.20 127.98,265.20 127.98,231.20" aria-label="Al Minya"/>
+    <text class="label" x="157.42" y="248.20">MN</text>
+  </g>
+  <g class="state" data-state="WAD">
+    <title>Al Wadi at Jadid</title>
+    <polygon class="tile" points="157.42,316.20 186.87,333.20 186.87,367.20 157.42,384.20 127.98,367.20 127.98,333.20" aria-label="Al Wadi at Jadid"/>
+    <text class="label" x="157.42" y="350.20">WAD</text>
+  </g>
+  <g class="state" data-state="GH">
+    <title>Al Gharbiyah</title>
+    <polygon class="tile" points="127.98,61.20 157.42,78.20 157.42,112.20 127.98,129.20 98.53,112.20 98.53,78.20" aria-label="Al Gharbiyah"/>
+    <text class="label" x="127.98" y="95.20">GH</text>
+  </g>
+  <g class="state" data-state="GZ">
+    <title>Al Jizah</title>
+    <polygon class="tile" points="127.98,163.20 157.42,180.20 157.42,214.20 127.98,231.20 98.53,214.20 98.53,180.20" aria-label="Al Jizah"/>
+    <text class="label" x="127.98" y="197.20">GZ</text>
+  </g>
+  <g class="state" data-state="AST">
+    <title>Asyut</title>
+    <polygon class="tile" points="127.98,265.20 157.42,282.20 157.42,316.20 127.98,333.20 98.53,316.20 98.53,282.20" aria-label="Asyut"/>
+    <text class="label" x="127.98" y="299.20">AST</text>
+  </g>
+  <g class="state" data-state="KFS">
+    <title>Kafr ash Shaykh</title>
+    <polygon class="tile" points="98.53,10.20 127.98,27.20 127.98,61.20 98.53,78.20 69.09,61.20 69.09,27.20" aria-label="Kafr ash Shaykh"/>
+    <text class="label" x="98.53" y="44.20">KFS</text>
+  </g>
+  <g class="state" data-state="BH">
+    <title>Al Buhayrah</title>
+    <polygon class="tile" points="98.53,112.20 127.98,129.20 127.98,163.20 98.53,180.20 69.09,163.20 69.09,129.20" aria-label="Al Buhayrah"/>
+    <text class="label" x="98.53" y="146.20">BH</text>
+  </g>
+  <g class="state" data-state="BNS">
+    <title>Bani Suwayf</title>
+    <polygon class="tile" points="98.53,214.20 127.98,231.20 127.98,265.20 98.53,282.20 69.09,265.20 69.09,231.20" aria-label="Bani Suwayf"/>
+    <text class="label" x="98.53" y="248.20">BNS</text>
+  </g>
+  <g class="state" data-state="ALX">
+    <title>Al Iskandariyah</title>
+    <polygon class="tile" points="69.09,61.20 98.53,78.20 98.53,112.20 69.09,129.20 39.64,112.20 39.64,78.20" aria-label="Al Iskandariyah"/>
+    <text class="label" x="69.09" y="95.20">ALX</text>
+  </g>
+  <g class="state" data-state="FYM">
+    <title>Al Fayyum</title>
+    <polygon class="tile" points="69.09,163.20 98.53,180.20 98.53,214.20 69.09,231.20 39.64,214.20 39.64,180.20" aria-label="Al Fayyum"/>
+    <text class="label" x="69.09" y="197.20">FYM</text>
+  </g>
+  <g class="state" data-state="MT">
+    <title>Matruh</title>
+    <polygon class="tile" points="39.64,112.20 69.09,129.20 69.09,163.20 39.64,180.20 10.20,163.20 10.20,129.20" aria-label="Matruh"/>
+    <text class="label" x="39.64" y="146.20">MT</text>
+  </g>
+</svg>

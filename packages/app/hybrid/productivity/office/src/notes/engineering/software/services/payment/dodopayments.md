@@ -1,1 +1,0 @@
-# [DodoPayments](https://dodopayments.com/)

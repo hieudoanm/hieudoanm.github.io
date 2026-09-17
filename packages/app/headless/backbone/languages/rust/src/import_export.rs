@@ -12,11 +12,21 @@ use crate::db;
 use crate::handlers::AppState;
 use crate::models::*;
 
-#[derive(Debug, Serialize, Deserialize)]
+/// The wire shape of an export payload, and the payload an import accepts.
+///
+/// Every field defaults so a caller can import a hand-written partial payload,
+/// and so an export written by one port can be read by another that carries
+/// fewer sections. Without the defaults a payload missing a single key fails to
+/// parse outright instead of importing the sections it does carry.
+#[derive(Debug, Default, Serialize, Deserialize)]
 pub struct ExportData {
+    #[serde(default)]
     pub collections: Vec<Collection>,
+    #[serde(default)]
     pub records: HashMap<String, Vec<Record>>,
+    #[serde(default)]
     pub buckets: Vec<Bucket>,
+    #[serde(default)]
     pub files: Vec<FileRecord>,
 }
 
@@ -30,7 +40,11 @@ pub async fn handle_export(
     State(state): State<std::sync::Arc<AppState>>,
 ) -> std::result::Result<Json<ExportData>, AppError> {
     crate::handlers::extract_claims(&headers)?;
-    let conn = state.db.get().await.map_err(|e| AppError::Internal(e.to_string()))?;
+    let conn = state
+        .db
+        .get()
+        .await
+        .map_err(|e| AppError::Internal(e.to_string()))?;
 
     let collections = db::list_collections(&conn)?;
     let mut records = HashMap::new();
@@ -60,7 +74,11 @@ pub async fn handle_import(
 ) -> std::result::Result<Json<Value>, AppError> {
     crate::handlers::extract_claims(&headers)?;
     let skip_existing = query.skip_existing.unwrap_or(false);
-    let conn = state.db.get().await.map_err(|e| AppError::Internal(e.to_string()))?;
+    let conn = state
+        .db
+        .get()
+        .await
+        .map_err(|e| AppError::Internal(e.to_string()))?;
 
     let mut created_collections = 0i64;
     let mut created_records = 0i64;
@@ -73,7 +91,10 @@ pub async fn handle_import(
             if skip_existing {
                 continue;
             }
-            return Err(AppError::Conflict(format!("collection '{}' already exists", col.name)));
+            return Err(AppError::Conflict(format!(
+                "collection '{}' already exists",
+                col.name
+            )));
         }
         db::insert_collection(&conn, &col.name, &col.schema)?;
         db::create_collection_table(&conn, &col.name, &col.schema)?;
@@ -100,7 +121,10 @@ pub async fn handle_import(
             if skip_existing {
                 continue;
             }
-            return Err(AppError::Conflict(format!("bucket '{}' already exists", bucket.name)));
+            return Err(AppError::Conflict(format!(
+                "bucket '{}' already exists",
+                bucket.name
+            )));
         }
         db::insert_bucket(&conn, &bucket.name, bucket.is_public)?;
         created_buckets += 1;

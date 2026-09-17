@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en" data-theme="auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>v0.0.2 · Changelog</title>
+    
+    <meta name="description" content="Added themes, navigation and link rewriting" />
+    
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="header">
+      <div class="header__bar">
+        
+        <button
+          class="header__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="sidebar"
+          data-nav-toggle
+        >
+          <span class="header__toggle-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Menu</span>
+        </button>
+        
+        <a class="header__title" href="/">Changelog</a>
+        <div class="header__actions">
+          <label class="header__search" for="search">
+            <span class="visually-hidden">Search</span>
+            <input
+              id="search"
+              type="search"
+              placeholder="Search"
+              autocomplete="off"
+              data-search
+              data-search-index="/assets/search-index.json"
+            />
+          </label>
+          <button class="header__theme" type="button" data-theme-toggle>
+            <span class="visually-hidden">Toggle colour theme</span>
+          </button>
+        </div>
+      </div>
+      <div class="search" data-search-panel hidden>
+        <p class="search__status" role="status" data-search-status></p>
+        <ul class="search__results" data-search-results></ul>
+      </div>
+    </header>
+
+    <div class="layout">
+      
+      <nav class="sidebar" id="sidebar" aria-label="Site">
+        <ul class="nav">
+  <li class="nav__item">
+  <a
+    class="nav__link"
+    href="/"
+    >Changelog</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v0-0-1/"
+    >v0.0.1</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link nav__link--current"
+    href="/v0-0-2/"
+    aria-current="page">v0.0.2</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v0-0-3/"
+    >v0.0.3</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v0-1-0/"
+    >v0.1.0</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v0-2-0/"
+    >v0.2.0</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v0-3-0/"
+    >v0.3.0</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v1-0-0/"
+    >v1.0.0</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v2-0-0/"
+    >v2.0.0</a
+  > 
+</li><li class="nav__item">
+  <a
+    class="nav__link"
+    href="/v3-0-0/"
+    >v3.0.0</a
+  > 
+</li>
+</ul>
+      </nav>
+      
+
+      <main class="main" id="main">
+        <article class="markdown"><h1 id="page-title" class="markdown__title">v0.0.2</h1>
+          
+          <p class="markdown__lede">Added themes, navigation and link rewriting</p>
+          
+          <p>Released: December 20, 2023</p>
+<h2 id="added">Added</h2>
+<ul>
+<li><strong>Themes</strong> — Pluggable template + asset tree, embedded via <code>go:embed</code></li>
+<li><strong>Navigation</strong> — Generated from the file tree; <code>index.md</code> becomes a section landing page</li>
+<li><strong>Link rewriting</strong> — <code>.md</code> links rewritten to clean URLs</li>
+<li><strong>Frontmatter</strong> — Page metadata: title, description, order, label, draft</li>
+<li><strong>Site config</strong> — <code>pagify.yaml</code> at the content root</li>
+</ul>
+<h2 id="fixed">Fixed</h2>
+<ul>
+<li>Output directory now cleared before each build so deleted pages do not survive</li>
+</ul>
+<h2 id="security">Security</h2>
+<ul>
+<li>N/A</li>
+</ul>
+<h2 id="related">Related</h2>
+<ul>
+<li><a href="/">Changelog home</a></li>
+<li><a href="/v0-0-1/">v0.0.1</a> — previous release</li>
+<li><a href="/v0-0-3/">v0.0.3</a> — next release</li>
+</ul>
+
+          
+        </article>
+        
+<aside class="outline" aria-label="On this page">
+  <h2 class="outline__title">On this page</h2>
+  <ul class="outline__list">
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#added">Added</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#fixed">Fixed</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#security">Security</a>
+    </li>
+    
+    <li class="outline__item outline__item--2">
+      <a class="outline__link" href="#related">Related</a>
+    </li>
+    
+  </ul>
+</aside>
+
+      </main>
+    </div>
+
+    <footer class="footer">
+      <p>Built with pagify · © 2024 pagify</p>
+    </footer>
+
+    <script src="/assets/script.js" defer></script>
+    <script src="/assets/search.js" defer></script>
+  </body>
+</html>

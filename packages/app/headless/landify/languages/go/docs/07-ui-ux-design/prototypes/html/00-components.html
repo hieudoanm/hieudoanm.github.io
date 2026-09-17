@@ -1,0 +1,772 @@
+<!doctype html>
+<html lang="en" data-theme="landify-light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Components · Landify</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;500&display=swap"
+      rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --font-sans:
+          Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+        --font-mono:
+          'Source Code Pro', ui-monospace, SFMono-Regular, Menlo, Monaco,
+          Consolas, 'Liberation Mono', monospace;
+
+        /* Landify design tokens — teal primary (#0d9488) to match brand */
+        --color-background: #FFFFFF;
+        --color-on-background: #18181B;
+        --color-surface: #FAFAFA;
+        --color-surface-container: #F3F4F6;
+        --color-surface-container-highest: #E4E4E7;
+        --color-surface-dim: #E4E4E7;
+        --color-surface-bright: #FFFFFF;
+        --color-on-surface: #18181B;
+        --color-primary: #0D9488;
+        --color-on-primary: #FFFFFF;
+        --color-primary-container: #CCFBF1;
+        --color-on-primary-container: #115E59;
+        --color-secondary: #71717A;
+        --color-on-secondary: #FFFFFF;
+        --color-secondary-container: #E4E4E7;
+        --color-on-secondary-container: #404040;
+        --color-tertiary: #6B7280;
+        --color-on-tertiary: #FFFFFF;
+        --color-tertiary-container: #E5E7EB;
+        --color-on-tertiary-container: #374151;
+        --color-error: #DC2626;
+        --color-on-error: #FFFFFF;
+        --color-error-container: #FEE2E2;
+        --color-on-error-container: #991B1B;
+        --color-outline: #71717A;
+        --color-outline-variant: #E4E4E7;
+        --color-inverse-surface: #18181B;
+        --color-inverse-on-surface: #FAFAFA;
+        --color-inverse-primary: #14B8A6;
+        --radius-small: 6px;
+        --radius-medium: 10px;
+        --radius-large: 14px;
+        --radius-extra-large: 28px;
+      }
+    </style>
+    <style>
+      [data-theme='landify-dark'] {
+        color-scheme: dark;
+        --color-background: #18181B;
+        --color-on-background: #F3F4F6;
+        --color-surface: #18181B;
+        --color-surface-container: #27272A;
+        --color-surface-container-highest: #3F3F46;
+        --color-surface-dim: #18181B;
+        --color-surface-bright: #18181B;
+        --color-on-surface: #F3F4F6;
+        --color-primary: #14B8A6;
+        --color-on-primary: #18181B;
+        --color-primary-container: #115E59;
+        --color-on-primary-container: #CCFBF1;
+        --color-secondary: #A1A1AA;
+        --color-on-secondary: #18181B;
+        --color-secondary-container: #3F3F46;
+        --color-on-secondary-container: #E4E4E7;
+        --color-tertiary: #A1A1AA;
+        --color-on-tertiary: #18181B;
+        --color-tertiary-container: #3F3F46;
+        --color-on-tertiary-container: #E5E7EB;
+        --color-error: #F87171;
+        --color-on-error: #18181B;
+        --color-error-container: #450A0A;
+        --color-on-error-container: #FEE2E2;
+        --color-outline: #A1A1AA;
+        --color-outline-variant: #3F3F46;
+        --color-inverse-surface: #F3F4F6;
+        --color-inverse-on-surface: #18181B;
+        --color-inverse-primary: #0D9488;
+      }
+      body {
+        background-color: var(--color-background);
+        color: var(--color-on-surface);
+        font-family: var(--font-sans);
+        font-size: 16px;
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        margin: 0;
+      }
+      :focus-visible {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+      }
+      .md3-type-display-large {
+        font-size: 57px;
+        line-height: 64px;
+        font-weight: 400;
+        letter-spacing: -0.25px;
+      }
+      .md3-type-headline-large {
+        font-size: 32px;
+        line-height: 40px;
+        font-weight: 300;
+        letter-spacing: 0;
+      }
+      .md3-type-title-large {
+        font-size: 22px;
+        line-height: 28px;
+        font-weight: 300;
+        letter-spacing: 0;
+      }
+      .md3-type-body-large {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+      }
+      .md3-type-body-medium {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+        letter-spacing: 0.25px;
+      }
+      .md3-type-body-small {
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 400;
+        letter-spacing: 0.4px;
+      }
+      .md3-type-label-large {
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 500;
+        letter-spacing: 0.1px;
+      }
+      .md3-type-label-medium {
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+      }
+      .md3-type-label-small {
+        font-size: 11px;
+        line-height: 12px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        overflow-wrap: anywhere;
+        max-width: 100%;
+      }
+      .theme-switcher {
+        position: fixed;
+        right: 1rem;
+        bottom: 1rem;
+        z-index: 60;
+        display: inline-flex;
+        gap: 0.25rem;
+        padding: 0.25rem;
+        border-radius: 999px;
+        border: 1px solid var(--color-outline-variant);
+        background: var(--color-surface);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08),
+          0 8px 24px rgba(0, 0, 0, 0.12);
+      }
+      .theme-switcher button {
+        font: inherit;
+        font-size: 11px;
+        line-height: 1;
+        padding: 0.35rem 0.7rem;
+        border-radius: 999px;
+        border: 0;
+        background: transparent;
+        color: var(--color-on-surface);
+        opacity: 0.65;
+        cursor: pointer;
+      }
+      .theme-switcher button[aria-pressed='true'] {
+        background: var(--color-surface-container);
+        opacity: 1;
+      }
+      .icon {
+        display: inline-block;
+        line-height: 1;
+        vertical-align: -0.125em;
+      }
+      .icon-sm {
+        font-size: 18px;
+      }
+      .icon-md {
+        font-size: 24px;
+      }
+      .section {
+        padding: 0 1rem;
+        max-width: 760px;
+        margin: 0 auto;
+      }
+      .section-title {
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.1px;
+        color: var(--color-on-surface);
+        margin: 0 0 16px 0;
+      }
+      .section-card {
+        border: 1px solid var(--color-outline-variant);
+        border-radius: 14px;
+        background: var(--color-surface);
+        padding: 24px;
+      }
+      .color-row {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 0;
+        min-width: 0;
+        flex-direction: column;
+        align-items: center;
+      }
+      .color-swatch {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        border: 1px solid var(--color-outline-variant);
+        flex-shrink: 0;
+        margin-bottom: 6px;
+      }
+      .color-name {
+        font-size: 13px;
+        font-weight: 500;
+        text-align: center;
+        margin: 0;
+        min-width: 0;
+      }
+      .color-value {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        color: var(--color-outline);
+        margin-top: 2px;
+        white-space: nowrap;
+      }
+      .btn-md3 {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        height: 40px;
+        padding: 0 16px;
+        border-radius: 12px;
+        border: 0;
+        font: inherit;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.1px;
+        cursor: pointer;
+        white-space: nowrap;
+      }
+      .btn-md3:disabled {
+        opacity: 0.38;
+        cursor: default;
+      }
+      .btn-filled {
+        background: var(--color-primary);
+        color: var(--color-on-primary);
+      }
+      .btn-tonal {
+        background: var(--color-secondary-container);
+        color: var(--color-on-secondary-container);
+      }
+      .btn-outlined {
+        background: transparent;
+        color: var(--color-on-surface);
+        border: 1px solid var(--color-outline);
+      }
+      .btn-text {
+        background: transparent;
+        color: var(--color-primary);
+        border: 0;
+        padding: 0 12px;
+        height: 36px;
+        border-radius: 8px;
+      }
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        height: 32px;
+        padding: 0 12px;
+        border-radius: 16px;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        border: 0;
+      }
+      .chip-filled {
+        background: var(--color-secondary-container);
+        color: var(--color-on-secondary-container);
+      }
+      .chip-outline {
+        background: transparent;
+        color: var(--color-on-surface);
+        border: 1px solid var(--color-outline-variant);
+      }
+      .field {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        width: 260px;
+      }
+      .field label {
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.1px;
+        color: var(--color-on-surface);
+      }
+      .field-input {
+        height: 40px;
+        padding: 0 16px;
+        border-radius: 12px;
+        border: 1px solid var(--color-outline-variant);
+        background: var(--color-surface);
+        color: var(--color-on-surface);
+        font: inherit;
+        font-size: 16px;
+      }
+      .field-input:focus {
+        border-color: var(--color-primary);
+        outline: none;
+      }
+      .field-input.error {
+        border-color: var(--color-error);
+      }
+      .field-helper {
+        font-size: 12px;
+        color: var(--color-outline);
+      }
+      .field-helper.error {
+        color: var(--color-error);
+      }
+      .table-wrap {
+        border: 1px solid var(--color-outline-variant);
+        border-radius: 14px;
+        overflow: hidden;
+        background: var(--color-surface);
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+      }
+      th,
+      td {
+        text-align: left;
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--color-outline-variant);
+      }
+      th {
+        font-weight: 500;
+        letter-spacing: 0.1px;
+        color: var(--color-on-surface);
+        background: var(--color-surface-container);
+      }
+      tr:last-child td {
+        border-bottom: 0;
+      }
+      .action-btn {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        border: 0;
+        background: transparent;
+        color: var(--color-on-surface);
+        cursor: pointer;
+        opacity: 0.7;
+      }
+      .card-demo {
+        border: 1px solid var(--color-outline-variant);
+        border-radius: 14px;
+        background: var(--color-surface);
+        padding: 20px;
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+      }
+      .skeleton {
+        background: var(--color-surface-container-highest);
+        border-radius: 8px;
+        opacity: 0.5;
+      }
+      .skeleton-text {
+        height: 16px;
+      }
+      .skeleton-title {
+        height: 22px;
+        width: 40%;
+      }
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        height: 24px;
+        padding: 0 10px;
+        border-radius: 10px;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.4px;
+        border: 0;
+      }
+      .badge-draft {
+        background: #FEF3C7;
+        color: #92400E;
+      }
+      .badge-published {
+        background: #D1FAE5;
+        color: #065F46;
+      }
+      .markdown {
+        font-family: var(--font-sans);
+        color: var(--color-on-surface);
+        line-height: 1.6;
+      }
+      .markdown h1 {
+        font-size: 32px;
+        font-weight: 600;
+        margin: 0 0 12px 0;
+        letter-spacing: -0.25px;
+      }
+      .markdown h2 {
+        font-size: 22px;
+        font-weight: 600;
+        margin: 20px 0 8px 0;
+      }
+      .markdown p {
+        margin: 0 0 12px 0;
+        color: var(--color-on-surface);
+        opacity: 0.9;
+      }
+    </style>
+    <script>
+      (function () {
+        try {
+          var t = window.localStorage.getItem('landify-theme');
+          if (t !== 'landify-light' && t !== 'landify-dark') {
+            t = window.matchMedia('(prefers-color-scheme: dark)').matches
+              ? 'landify-dark'
+              : 'landify-light';
+          }
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="theme-switcher" role="group" aria-label="Colour theme">
+      <button type="button" data-theme-value="landify-light" aria-pressed="true">
+        Light
+      </button>
+      <button type="button" data-theme-value="landify-dark" aria-pressed="false">
+        Dark
+      </button>
+    </div>
+    <script>
+      (function () {
+        var key = 'landify-theme';
+        function apply(theme) {
+          document.documentElement.setAttribute('data-theme', theme);
+          Array.prototype.forEach.call(
+            document.querySelectorAll('.theme-switcher button'),
+            function (button) {
+              button.setAttribute(
+                'aria-pressed',
+                String(button.getAttribute('data-theme-value') === theme)
+              );
+            }
+          );
+        }
+        apply(
+          document.documentElement.getAttribute('data-theme') || 'landify-light'
+        );
+        Array.prototype.forEach.call(
+          document.querySelectorAll('.theme-switcher button'),
+          function (button) {
+            button.addEventListener('click', function () {
+              var theme = button.getAttribute('data-theme-value');
+              try {
+                window.localStorage.setItem(key, theme);
+              } catch (error) {}
+              apply(theme);
+            });
+          }
+        };
+      })();
+    </script>
+
+    <header class="border-b border-outline-variant px-4 py-3">
+      <div class="max-w-6xl mx-auto flex items-center gap-2">
+        <span
+          class="bg-primary text-on-primary flex h-8 w-8 items-center justify-center rounded-large text-xs font-semibold"
+          aria-hidden="true"
+        >
+          LF
+        </span>
+        <span class="ml-2 text-title-large font-medium">Landify</span>
+        <span class="ml-auto text-label-small text-outline" aria-hidden="true">&nbsp;</span>
+        <a
+          href="#"
+          class="text-decoration-none text-label-medium text-primary hover:underline"
+          >Open landing page builder &rarr;</a
+        >
+      </div>
+    </header>
+
+    <main class="section">
+      <h1 class="md3-type-headline-large mb-2 text-on-surface font-medium">
+        Landify design system
+      </h1>
+      <p class="md3-type-body-large mb-8 text-outline">
+        Component showcase for Landify landing page builder — flat landing pages
+        from a single YAML file. Teal primary to match the brand. Light and dark
+        themes.
+      </p>
+
+      <section class="section-card mb-8">
+        <h2 class="section-title">Color tokens</h2>
+        <div class="grid gap-4 md:grid-cols-5 lg:grid-cols-6">
+          <div class="color-row">
+            <div class="color-swatch" style="background: var(--color-primary)"></div>
+            <span class="color-name">Primary</span>
+            <span class="color-value">#0D9488</span>
+          </div>
+          <div class="color-row">
+            <div class="color-swatch" style="background: var(--color-primary-container)"></div>
+            <span class="color-name">Primary container</span>
+            <span class="color-value">#CCFBF1</span>
+          </div>
+          <div class="color-row">
+            <div class="color-swatch" style="background: var(--color-secondary)"></div>
+            <span class="color-name">Secondary</span>
+            <span class="color-value">#71717A</span>
+          </div>
+          <div class="color-row">
+            <div class="color-swatch" style="background: var(--color-secondary-container)"></div>
+            <span class="color-name">Secondary container</span>
+            <span class="color-value">#E4E4E7</span>
+          </div>
+          <div class="color-row">
+            <div class="color-swatch" style="background: var(--color-tertiary)"></div>
+            <span class="color-name">Tertiary</span>
+            <span class="color-value">#6B7280</span>
+          </div>
+          <div class="color-row">
+            <div class="color-swatch" style="background: var(--color-tertiary-container)"></div>
+            <span class="color-name">Tertiary container</span>
+            <span class="color-value">#E5E7EB</span>
+          </div>
+          <div class="color-row">
+            <div class="color-swatch" style="background: var(--color-error)"></div>
+            <span class="color-name">Error</span>
+            <span class="color-value">#DC2626</span>
+          </div>
+          <div class="color-row">
+            <div class="color-swatch" style="background: var(--color-error-container)"></div>
+            <span class="color-name">Error container</span>
+            <span class="color-value">#FEE2E2</span>
+          </div>
+          <div class="color-row">
+            <div class="color-swatch" style="background: var(--color-surface)"></div>
+            <span class="color-name">Surface</span>
+            <span class="color-value">#FAFAFA</span>
+          </div>
+          <div class="color-row">
+            <div class="color-swatch" style="background: var(--color-surface-container)"></div>
+            <span class="color-name">Surface container</span>
+            <span class="color-value">#F3F4F6</span>
+          </div>
+          <div class="color-row">
+            <div class="color-swatch" style="background: var(--color-surface-container-highest)"></div>
+            <span class="color-name">Surface container highest</span>
+            <span class="color-value">#E4E4E7</span>
+          </div>
+          <div class="color-row">
+            <div class="color-swatch" style="background: var(--color-outline)"></div>
+            <span class="color-name">Outline</span>
+            <span class="color-value">#71717A</span>
+          </div>
+          <div class="color-row">
+            <div class="color-swatch" style="background: var(--color-outline-variant)"></div>
+            <span class="color-name">Outline variant</span>
+            <span class="color-value">#E4E4E7</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-card mb-8">
+        <h2 class="section-title">Typography</h2>
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-2">
+          <div>
+            <div class="md3-type-display-large mb-1">Display large</div>
+            <div class="md3-type-label-small text-outline">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+          </div>
+          <div>
+            <div class="md3-type-headline-large mb-1">Headline large</div>
+            <div class="md3-type-label-small text-outline">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+          </div>
+          <div>
+            <div class="md3-type-title-large mb-1">Title large</div>
+            <div class="md3-type-label-small text-outline">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+          </div>
+          <div>
+            <div class="md3-type-body-large mb-1">Body large</div>
+            <div class="md3-type-label-small text-outline">The quick brown fox jumps over the lazy dog.</div>
+          </div>
+          <div>
+            <div class="md3-type-body-medium mb-1">Body medium</div>
+            <div class="md3-type-label-small text-outline">The quick brown fox jumps over the lazy dog.</div>
+          </div>
+          <div>
+            <div class="md3-type-body-small mb-1">Body small</div>
+            <div class="md3-type-label-small text-outline">The quick brown fox jumps over the lazy dog.</div>
+          </div>
+          <div>
+            <div class="md3-type-label-large mb-1">Label large</div>
+            <div class="md3-type-label-small text-outline">Button text</div>
+          </div>
+          <div>
+            <div class="md3-type-label-medium mb-1">Label medium</div>
+            <div class="md3-type-label-small text-outline">Helper text</div>
+          </div>
+          <div>
+            <div class="md3-type-label-small mb-1">Label small</div>
+            <div class="md3-type-label-small text-outline">Caption text</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-card mb-8">
+        <h2 class="section-title">Buttons</h2>
+        <div class="flex flex-wrap gap-4">
+          <button class="btn-md3 btn-filled"><i class="ph ph-plus icon-sm" aria-hidden="true"></i> New page</button>
+          <button class="btn-md3 btn-tonal"><i class="ph ph-refresh icon-sm" aria-hidden="true"></i> Preview</button>
+          <button class="btn-md3 btn-outlined">Outline</button>
+          <button class="btn-text">Text button</button>
+          <button class="btn-md3 btn-filled" disabled>Disabled</button>
+        </div>
+      </section>
+
+      <section class="section-card mb-8">
+        <h2 class="section-title">Chips</h2>
+        <div class="flex flex-wrap gap-3">
+          <span class="chip chip-filled">Draft</span>
+          <span class="chip chip-outline">Published</span>
+          <button class="chip chip-outline" disabled>Disabled</button>
+        </div>
+      </section>
+
+      <section class="section-card mb-8">
+        <h2 class="section-title">Status badges</h2>
+        <div class="flex flex-wrap gap-3">
+          <span class="badge badge-draft"><i class="ph ph-pencil icon-sm" aria-hidden="true"></i> Draft</span>
+          <span class="badge badge-published"><i class="ph ph-check icon-sm" aria-hidden="true"></i> Published</span>
+        </div>
+      </section>
+
+      <section class="section-card mb-8">
+        <h2 class="section-title">Cards</h2>
+        <div class="card-demo">
+          <div class="bg-primary-container text-on-primary-container flex h-10 w-10 items-center justify-center rounded-large text-xs font-semibold" aria-hidden="true">LF</div>
+          <div>
+            <div class="md3-type-title-large mb-1">Page title</div>
+            <p class="md3-type-body-medium mb-3 text-outline">Supporting text describes the section.</p>
+            <button class="btn-text">Action</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-card mb-8">
+        <h2 class="section-title">Text fields</h2>
+        <div class="flex flex-wrap gap-8 items-end">
+          <div class="field">
+            <label>Site title</label>
+            <input class="field-input" placeholder="My site" />
+            <p class="field-helper">Shown in the header and browser tab.</p>
+          </div>
+          <div class="field">
+            <label>Theme</label>
+            <input class="field-input" placeholder="slate" />
+            <p class="field-helper">One of 64 named themes.</p>
+          </div>
+          <div class="field">
+            <label>Error</label>
+            <input class="field-input error" value="bad value" />
+            <p class="field-helper error">Enter a valid value.</p>
+          </div>
+          <div class="field">
+            <label>Disabled</label>
+            <input class="field-input" value="read-only" disabled />
+          </div>
+        </div>
+      </section>
+
+      <section class="section-card mb-8">
+        <h2 class="section-title">Pages table</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th style="width: 56px">No</th>
+                <th>Page</th>
+                <th>Type</th>
+                <th>Status</th>
+                <th style="width: 170px">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="no">1</td>
+                <td class="key">index.html</td>
+                <td>Product</td>
+                <td><span class="badge badge-published">Published</span></td>
+                <td class="actions">
+                  <button class="action-btn" aria-label="Edit index.html"><i class="ph ph-pencil icon-sm" aria-hidden="true"></i></button>
+                  <button class="action-btn" aria-label="Preview index.html"><i class="ph ph-eye icon-sm" aria-hidden="true"></i></button>
+                  <button class="action-btn" aria-label="Delete index.html"><i class="ph ph-trash icon-sm" aria-hidden="true"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td class="no">2</td>
+                <td class="key">about.html</td>
+                <td>Docs</td>
+                <td><span class="badge badge-draft">Draft</span></td>
+                <td class="actions">
+                  <button class="action-btn" aria-label="Edit about.html"><i class="ph ph-pencil icon-sm" aria-hidden="true"></i></button>
+                  <button class="action-btn" aria-label="Preview about.html"><i class="ph ph-eye icon-sm" aria-hidden="true"></i></button>
+                  <button class="action-btn" aria-label="Delete about.html"><i class="ph ph-trash icon-sm" aria-hidden="true"></i></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section-card mb-8">
+        <h2 class="section-title">States</h2>
+        <div class="grid gap-6 md:grid-cols-3">
+          <div class="bg-surface-container rounded-large p-6">
+            <div class="skeleton skeleton-title mb-3"></div>
+            <div class="skeleton skeleton-text mb-2" style="width: 60%"></div>
+            <div class="skeleton skeleton-text" style="width: 90%"></div>
+          </div>
+          <div class="bg-surface-container rounded-large p-6 flex flex-col items-center justify-center text-center">
+            <i class="ph ph-layout icon-md mb-3 text-outline-variant" aria-hidden="true"></i>
+            <p class="md3-type-label-large mb-1 text-on-surface">No pages yet</p>
+            <p class="md3-type-body-small text-outline">Create a landing page from a YAML file to get started.</p>
+          </div>
+          <div class="bg-error-container text-on-error-container rounded-large p-6 flex flex-col items-center justify-center text-center">
+            <i class="ph ph-warning-circle icon-md mb-3" aria-hidden="true"></i>
+            <p class="md3-type-label-large mb-1">Build failed</p>
+            <button class="btn-md3 btn-outlined mt-3">Retry</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

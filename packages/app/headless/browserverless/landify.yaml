@@ -23,6 +23,21 @@ site:
     - label: Get started
       href: '#cta'
 
+  og: # social card: build writes public/og/og.svg, image below is its PNG
+    title: 'A browser, without the window.'
+    kicker: 'Servo-powered runtime'
+    tags:
+      - 'Headless rendering'
+      - 'Headed window'
+      - 'HTTP server'
+      - 'Rust library'
+    description: >-
+      A Servo-powered browser runtime that works as a library, a CLI, and an
+      HTTP server.
+    image: 'https://hieudoanm.github.io/packages/app/headless/browserverless/public/og/og.png'
+    image_alt: 'Browserverless — A browser, without the window.'
+    url: 'https://hieudoanm.github.io/packages/app/headless/browserverless/public/'
+
 hero:
   badge: '🌐 Servo-powered'
   headline: A browser, without the window.

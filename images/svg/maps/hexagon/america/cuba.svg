@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 362.66 150.98" width="362.66" height="150.98" role="img" aria-labelledby="cuba-title cuba-desc">
+  <title id="cuba-title">Cuba hex map</title>
+  <desc id="cuba-desc">Hexagon map with 16 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 1.81; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 8.93 6.38; }
+    .label { fill: #52525b; font: 600 7.23px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="GU">
+    <title>Guantánamo</title>
+    <polygon class="tile" points="337.86,102.07 356.28,112.70 356.28,133.97 337.86,144.60 319.45,133.97 319.45,112.70" aria-label="Guantánamo"/>
+    <text class="label" x="337.86" y="123.34">GU</text>
+  </g>
+  <g class="state" data-state="HO">
+    <title>Holguín</title>
+    <polygon class="tile" points="319.45,70.17 337.86,80.81 337.86,102.07 319.45,112.70 301.03,102.07 301.03,80.81" aria-label="Holguín"/>
+    <text class="label" x="319.45" y="91.44">HO</text>
+  </g>
+  <g class="state" data-state="SC">
+    <title>Santiago de Cuba</title>
+    <polygon class="tile" points="301.03,102.07 319.45,112.70 319.45,133.97 301.03,144.60 282.62,133.97 282.62,112.70" aria-label="Santiago de Cuba"/>
+    <text class="label" x="301.03" y="123.34">SC</text>
+  </g>
+  <g class="state" data-state="LT">
+    <title>Las Tunas</title>
+    <polygon class="tile" points="282.62,70.17 301.03,80.81 301.03,102.07 282.62,112.70 264.20,102.07 264.20,80.81" aria-label="Las Tunas"/>
+    <text class="label" x="282.62" y="91.44">LT</text>
+  </g>
+  <g class="state" data-state="GR">
+    <title>Granma</title>
+    <polygon class="tile" points="264.20,102.07 282.62,112.70 282.62,133.97 264.20,144.60 245.79,133.97 245.79,112.70" aria-label="Granma"/>
+    <text class="label" x="264.20" y="123.34">GR</text>
+  </g>
+  <g class="state" data-state="CM">
+    <title>Camagüey</title>
+    <polygon class="tile" points="245.79,70.17 264.20,80.81 264.20,102.07 245.79,112.70 227.37,102.07 227.37,80.81" aria-label="Camagüey"/>
+    <text class="label" x="245.79" y="91.44">CM</text>
+  </g>
+  <g class="state" data-state="CA">
+    <title>Ciego de Ávila</title>
+    <polygon class="tile" points="227.37,38.28 245.79,48.91 245.79,70.17 227.37,80.81 208.95,70.17 208.95,48.91" aria-label="Ciego de Ávila"/>
+    <text class="label" x="227.37" y="59.54">CA</text>
+  </g>
+  <g class="state" data-state="SS">
+    <title>Sancti Spíritus</title>
+    <polygon class="tile" points="208.95,70.17 227.37,80.81 227.37,102.07 208.95,112.70 190.54,102.07 190.54,80.81" aria-label="Sancti Spíritus"/>
+    <text class="label" x="208.95" y="91.44">SS</text>
+  </g>
+  <g class="state" data-state="VC">
+    <title>Villa Clara</title>
+    <polygon class="tile" points="190.54,38.28 208.95,48.91 208.95,70.17 190.54,80.81 172.12,70.17 172.12,48.91" aria-label="Villa Clara"/>
+    <text class="label" x="190.54" y="59.54">VC</text>
+  </g>
+  <g class="state" data-state="CF">
+    <title>Cienfuegos</title>
+    <polygon class="tile" points="172.12,6.38 190.54,17.01 190.54,38.28 172.12,48.91 153.71,38.28 153.71,17.01" aria-label="Cienfuegos"/>
+    <text class="label" x="172.12" y="27.64">CF</text>
+  </g>
+  <g class="state" data-state="MA">
+    <title>Matanzas</title>
+    <polygon class="tile" points="153.71,38.28 172.12,48.91 172.12,70.17 153.71,80.81 135.29,70.17 135.29,48.91" aria-label="Matanzas"/>
+    <text class="label" x="153.71" y="59.54">MA</text>
+  </g>
+  <g class="state" data-state="CH">
+    <title>Ciudad de la Habana</title>
+    <polygon class="tile" points="135.29,6.38 153.71,17.01 153.71,38.28 135.29,48.91 116.87,38.28 116.87,17.01" aria-label="Ciudad de la Habana"/>
+    <text class="label" x="135.29" y="27.64">CH</text>
+  </g>
+  <g class="state" data-state="MQ">
+    <title>Mayabeque</title>
+    <polygon class="tile" points="116.87,38.28 135.29,48.91 135.29,70.17 116.87,80.81 98.46,70.17 98.46,48.91" aria-label="Mayabeque"/>
+    <text class="label" x="116.87" y="59.54">MQ</text>
+  </g>
+  <g class="state" data-state="AR">
+    <title>Artemisa</title>
+    <polygon class="tile" points="98.46,6.38 116.87,17.01 116.87,38.28 98.46,48.91 80.04,38.28 80.04,17.01" aria-label="Artemisa"/>
+    <text class="label" x="98.46" y="27.64">AR</text>
+  </g>
+  <g class="state" data-state="PR">
+    <title>Pinar del Río</title>
+    <polygon class="tile" points="80.04,38.28 98.46,48.91 98.46,70.17 80.04,80.81 61.63,70.17 61.63,48.91" aria-label="Pinar del Río"/>
+    <text class="label" x="80.04" y="59.54">PR</text>
+  </g>
+  <g class="state" data-state="IJ">
+    <title>Isla de la Juventud</title>
+    <polygon class="tile inset" points="24.80,70.17 43.21,80.81 43.21,102.07 24.80,112.70 6.38,102.07 6.38,80.81" aria-label="Isla de la Juventud"/>
+    <text class="label" x="24.80" y="91.44">IJ</text>
+  </g>
+</svg>

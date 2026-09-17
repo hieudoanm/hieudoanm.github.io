@@ -1,0 +1,10 @@
+.git
+.gitignore
+.gradle
+build
+dist
+docs
+*.md
+LICENSE
+Dockerfile
+.dockerignore

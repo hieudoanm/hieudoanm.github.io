@@ -1,0 +1,930 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Notion Style, App Template</title>
+    <style>
+      /* tokens: keep in sync with references/tokens.css */
+      [data-app='notion'] {
+        --app-bg: #fff;
+        --app-sidebar: #f7f6f3;
+        --app-fg: rgb(55, 53, 47);
+        --app-fg-60: rgba(55, 53, 47, 0.6);
+        --app-fg-40: rgba(55, 53, 47, 0.4);
+        --app-line: rgba(55, 53, 47, 0.09);
+        --app-line-strong: rgba(55, 53, 47, 0.16);
+        --app-hover: rgba(55, 53, 47, 0.08);
+        --app-pressed: rgba(55, 53, 47, 0.16);
+        --app-blue: #2383e2;
+        --app-selection: rgba(45, 170, 219, 0.3);
+        --app-popover-shadow:
+          rgba(15, 15, 15, 0.05) 0 0 0 1px, rgba(15, 15, 15, 0.1) 0 3px 6px,
+          rgba(15, 15, 15, 0.2) 0 9px 24px;
+        --c-gray: rgb(155, 154, 151);
+        --c-gray-bg: rgb(241, 241, 239);
+        --c-brown: rgb(100, 71, 58);
+        --c-brown-bg: rgb(233, 229, 227);
+        --c-orange: rgb(217, 115, 13);
+        --c-orange-bg: rgb(250, 235, 221);
+        --c-yellow: rgb(223, 171, 1);
+        --c-yellow-bg: rgb(251, 243, 219);
+        --c-green: rgb(15, 123, 108);
+        --c-green-bg: rgb(221, 237, 234);
+        --c-blue: rgb(11, 110, 153);
+        --c-blue-bg: rgb(221, 235, 241);
+        --c-purple: rgb(105, 64, 165);
+        --c-purple-bg: rgb(234, 228, 242);
+        --c-pink: rgb(173, 26, 114);
+        --c-pink-bg: rgb(244, 223, 235);
+        --c-red: rgb(224, 62, 62);
+        --c-red-bg: rgb(251, 228, 228);
+        --app-font:
+          ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+          Helvetica, 'Apple Color Emoji', Arial, sans-serif, 'Segoe UI Emoji',
+          'Segoe UI Symbol';
+        --app-mono:
+          SFMono-Regular, Menlo, Consolas, 'PT Mono', 'Liberation Mono',
+          Courier, monospace;
+        --app-radius: 3px;
+        --app-radius-row: 4px;
+        --app-radius-pop: 6px;
+        --app-sidebar-w: 240px;
+        --app-topbar-h: 45px;
+        --app-page-w: 708px;
+        --app-page-pad: 96px;
+      }
+      @media (prefers-color-scheme: dark) {
+        [data-app='notion'] {
+          --app-bg: #191919;
+          --app-sidebar: #202020;
+          --app-fg: rgba(255, 255, 255, 0.81);
+          --app-fg-60: rgba(255, 255, 255, 0.46);
+          --app-fg-40: rgba(255, 255, 255, 0.3);
+          --app-line: rgba(255, 255, 255, 0.094);
+          --app-line-strong: rgba(255, 255, 255, 0.16);
+          --app-hover: rgba(255, 255, 255, 0.055);
+          --app-pressed: rgba(255, 255, 255, 0.1);
+          --app-blue: #529cca;
+          --app-popover-shadow:
+            rgba(15, 15, 15, 0.1) 0 0 0 1px, rgba(15, 15, 15, 0.2) 0 3px 6px,
+            rgba(15, 15, 15, 0.4) 0 9px 24px;
+          --c-gray-bg: rgba(255, 255, 255, 0.055);
+          --c-brown-bg: rgba(140, 100, 80, 0.28);
+          --c-orange-bg: rgba(217, 115, 13, 0.22);
+          --c-yellow-bg: rgba(223, 171, 1, 0.2);
+          --c-green-bg: rgba(15, 123, 108, 0.3);
+          --c-blue-bg: rgba(11, 110, 153, 0.3);
+          --c-purple-bg: rgba(105, 64, 165, 0.32);
+          --c-pink-bg: rgba(173, 26, 114, 0.3);
+          --c-red-bg: rgba(224, 62, 62, 0.28);
+          --c-gray: rgb(155, 155, 155);
+          --c-brown: rgb(186, 133, 111);
+          --c-orange: rgb(255, 163, 68);
+          --c-yellow: rgb(255, 220, 73);
+          --c-green: rgb(77, 171, 154);
+          --c-blue: rgb(82, 156, 202);
+          --c-purple: rgb(154, 109, 215);
+          --c-pink: rgb(226, 85, 161);
+          --c-red: rgb(255, 115, 105);
+        }
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      html {
+        -webkit-font-smoothing: antialiased;
+      }
+      [data-app='notion'] {
+        height: 100%;
+        display: grid;
+        grid-template-columns: var(--app-sidebar-w) 1fr;
+        background: var(--app-bg);
+        color: var(--app-fg);
+        font-family: var(--app-font);
+        font-size: 16px;
+        line-height: 1.5;
+      }
+      [data-app='notion'] ::selection {
+        background: var(--app-selection);
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      button {
+        font: inherit;
+        color: inherit;
+      }
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+      a:focus-visible,
+      button:focus-visible,
+      summary:focus-visible,
+      [contenteditable]:focus-visible {
+        outline: 2px solid var(--app-blue);
+        outline-offset: -2px;
+      }
+
+      /* sidebar */
+      .sb {
+        background: var(--app-sidebar);
+        overflow-y: auto;
+        padding: 8px 0 16px;
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+      .row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        height: 28px;
+        margin: 0 6px;
+        padding: 0 8px;
+        border-radius: var(--app-radius-row);
+        cursor: pointer;
+        color: var(--app-fg-60);
+        background: none;
+        border: 0;
+        text-align: left;
+        width: calc(100% - 12px);
+      }
+      .row:hover {
+        background: var(--app-hover);
+      }
+      .row.on {
+        background: var(--app-hover);
+        color: var(--app-fg);
+        font-weight: 500;
+      }
+      .row .ic {
+        width: 20px;
+        text-align: center;
+        flex: none;
+      }
+      .row .t {
+        flex: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .row .act {
+        opacity: 0;
+        color: var(--app-fg-60);
+      }
+      .row:hover .act {
+        opacity: 1;
+      }
+      .ws {
+        color: var(--app-fg);
+        font-weight: 500;
+        height: 34px;
+      }
+      .ws .av {
+        width: 20px;
+        height: 20px;
+        border-radius: 4px;
+        background: var(--c-orange-bg);
+        color: var(--c-orange);
+        display: grid;
+        place-items: center;
+        font-size: 12px;
+        font-weight: 700;
+      }
+      .sec {
+        padding: 14px 14px 4px;
+        font-size: 12px;
+        font-weight: 500;
+        color: var(--app-fg-40);
+      }
+      .tree details > summary {
+        list-style: none;
+      }
+      .tree summary::-webkit-details-marker {
+        display: none;
+      }
+      .tree summary .tg {
+        display: inline-block;
+        width: 16px;
+        text-align: center;
+        color: var(--app-fg-40);
+        transition: transform 0.12s ease;
+        flex: none;
+      }
+      .tree details[open] > summary .tg {
+        transform: rotate(90deg);
+      }
+      .tree .kids {
+        padding-left: 16px;
+      }
+
+      /* main */
+      .main {
+        overflow-y: auto;
+        position: relative;
+      }
+      .top {
+        position: sticky;
+        top: 0;
+        z-index: 5;
+        height: var(--app-topbar-h);
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        padding: 0 12px;
+        background: color-mix(in srgb, var(--app-bg) 92%, transparent);
+        backdrop-filter: blur(8px);
+        font-size: 14px;
+      }
+      .top .crumb {
+        padding: 2px 6px;
+        border-radius: var(--app-radius-row);
+        color: var(--app-fg);
+        background: none;
+        border: 0;
+        cursor: pointer;
+      }
+      .top .crumb:hover {
+        background: var(--app-hover);
+      }
+      .top .sp {
+        flex: 1;
+      }
+      .top .btn {
+        padding: 3px 8px;
+        border-radius: var(--app-radius-row);
+        background: none;
+        border: 0;
+        cursor: pointer;
+        color: var(--app-fg-60);
+      }
+      .top .btn:hover {
+        background: var(--app-hover);
+      }
+      .cover {
+        height: 30vh;
+        min-height: 140px;
+        background: linear-gradient(
+          135deg,
+          var(--c-orange-bg),
+          var(--c-purple-bg) 60%,
+          var(--c-blue-bg)
+        );
+      }
+      .page {
+        max-width: calc(var(--app-page-w) + 2 * var(--app-page-pad));
+        margin-inline: auto;
+        padding: 0 var(--app-page-pad) 30vh;
+      }
+      .icon {
+        font-size: 78px;
+        line-height: 1;
+        margin-top: -39px;
+        margin-bottom: 8px;
+        position: relative;
+      }
+      .title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 12px;
+      }
+      .title:empty::before {
+        content: 'Untitled';
+        color: var(--app-fg-40);
+      }
+      .props {
+        display: grid;
+        gap: 2px;
+        margin-bottom: 24px;
+        font-size: 14px;
+      }
+      .prop {
+        display: grid;
+        grid-template-columns: 160px 1fr;
+        align-items: center;
+        min-height: 32px;
+      }
+      .prop .k {
+        color: var(--app-fg-60);
+      }
+      .prop .v {
+        padding: 4px 6px;
+        border-radius: var(--app-radius-row);
+      }
+      .prop .v:hover {
+        background: var(--app-hover);
+      }
+      .tag {
+        display: inline-block;
+        padding: 0 6px;
+        border-radius: var(--app-radius);
+        font-size: 14px;
+        line-height: 20px;
+        margin-right: 4px;
+      }
+
+      /* blocks */
+      .blk {
+        position: relative;
+        padding: 3px 2px;
+      }
+      .blk .hd {
+        position: absolute;
+        left: -52px;
+        top: 3px;
+        display: flex;
+        opacity: 0;
+        transition: opacity 0.1s;
+      }
+      .blk:hover .hd {
+        opacity: 1;
+      }
+      .hd span {
+        width: 24px;
+        height: 24px;
+        display: grid;
+        place-items: center;
+        border-radius: var(--app-radius-row);
+        color: var(--app-fg-40);
+        cursor: pointer;
+        font-size: 14px;
+      }
+      .hd span:hover {
+        background: var(--app-hover);
+      }
+      h1.blk {
+        font-size: 1.875em;
+        font-weight: 600;
+        line-height: 1.3;
+        margin-top: 2em;
+        padding-block: 3px;
+      }
+      h2.blk {
+        font-size: 1.5em;
+        font-weight: 600;
+        line-height: 1.3;
+        margin-top: 1.4em;
+      }
+      h3.blk {
+        font-size: 1.25em;
+        font-weight: 600;
+        line-height: 1.3;
+        margin-top: 1em;
+      }
+      .ph {
+        color: var(--app-fg-40);
+      }
+      .bul {
+        padding-left: 24px;
+        position: relative;
+      }
+      .bul::before {
+        content: '•';
+        position: absolute;
+        left: 6px;
+      }
+      .todo {
+        display: flex;
+        gap: 8px;
+        align-items: flex-start;
+      }
+      .todo input {
+        appearance: none;
+        width: 16px;
+        height: 16px;
+        margin: 5px 0 0;
+        border: 2px solid var(--app-fg);
+        border-radius: 3px;
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+        flex: none;
+      }
+      .todo input:checked {
+        background: var(--app-blue);
+        border-color: var(--app-blue);
+      }
+      .todo input:checked::after {
+        content: '✓';
+        color: #fff;
+        font-size: 11px;
+        line-height: 1;
+      }
+      .todo input:checked + span {
+        color: var(--app-fg-60);
+        text-decoration: line-through;
+      }
+      details.tog > summary {
+        list-style: none;
+        display: flex;
+        gap: 6px;
+        cursor: pointer;
+        padding: 3px 2px;
+      }
+      details.tog > summary::-webkit-details-marker {
+        display: none;
+      }
+      details.tog > summary::before {
+        content: '▸';
+        width: 18px;
+        text-align: center;
+        color: var(--app-fg-60);
+        transition: transform 0.12s ease;
+      }
+      details.tog[open] > summary::before {
+        transform: rotate(90deg);
+      }
+      details.tog .in {
+        padding: 3px 2px 3px 26px;
+      }
+      .quote {
+        border-left: 3px solid var(--app-fg);
+        padding: 2px 14px;
+        font-size: 1.2em;
+        margin: 4px 0;
+      }
+      .callout {
+        display: flex;
+        gap: 10px;
+        padding: 16px 16px 16px 12px;
+        border-radius: var(--app-radius);
+        border: 1px solid var(--app-line);
+        background: var(--c-gray-bg);
+        margin: 6px 0;
+      }
+      .callout.y {
+        background: var(--c-yellow-bg);
+        border-color: transparent;
+      }
+      .div {
+        height: 1px;
+        background: var(--app-line);
+        margin: 10px 0;
+      }
+      .code {
+        font-family: var(--app-mono);
+        font-size: 85%;
+        background: var(--c-gray-bg);
+        padding: 30px 16px 30px 20px;
+        border-radius: 6px;
+        white-space: pre;
+        overflow-x: auto;
+        margin: 6px 0;
+      }
+      code {
+        font-family: var(--app-mono);
+        font-size: 85%;
+        background: rgba(135, 131, 120, 0.15);
+        color: #eb5757;
+        padding: 0.2em 0.4em;
+        border-radius: 3px;
+      }
+
+      /* database */
+      .dbh {
+        display: flex;
+        gap: 2px;
+        border-bottom: 1px solid var(--app-line);
+        margin-top: 2em;
+        font-size: 14px;
+      }
+      .dbh button {
+        padding: 6px 8px;
+        background: none;
+        border: 0;
+        border-bottom: 2px solid transparent;
+        color: var(--app-fg-60);
+        cursor: pointer;
+        margin-bottom: -1px;
+      }
+      .dbh button[aria-selected='true'] {
+        color: var(--app-fg);
+        border-bottom-color: var(--app-fg);
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+      }
+      th {
+        text-align: left;
+        font-weight: 400;
+        color: var(--app-fg-60);
+        padding: 6px 8px;
+        border-bottom: 1px solid var(--app-line);
+        white-space: nowrap;
+      }
+      td {
+        padding: 6px 8px;
+        border-bottom: 1px solid var(--app-line);
+      }
+      tbody tr:hover {
+        background: var(--app-hover);
+      }
+      .new {
+        padding: 6px 8px;
+        color: var(--app-fg-60);
+        font-size: 14px;
+        cursor: pointer;
+        border-radius: var(--app-radius-row);
+      }
+      .new:hover {
+        background: var(--app-hover);
+      }
+
+      /* slash menu */
+      .slash {
+        position: absolute;
+        display: none;
+        width: 320px;
+        max-height: 330px;
+        overflow: auto;
+        padding: 6px;
+        background: var(--app-bg);
+        border-radius: var(--app-radius-pop);
+        box-shadow: var(--app-popover-shadow);
+        z-index: 20;
+      }
+      .slash.open {
+        display: block;
+      }
+      .slash .grp {
+        padding: 6px 8px 4px;
+        font-size: 12px;
+        color: var(--app-fg-60);
+      }
+      .slash .it {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        padding: 4px 8px;
+        border-radius: var(--app-radius-row);
+        cursor: pointer;
+      }
+      .slash .it:hover,
+      .slash .it.f {
+        background: var(--app-hover);
+      }
+      .slash .tile {
+        width: 44px;
+        height: 44px;
+        flex: none;
+        border: 1px solid var(--app-line);
+        border-radius: var(--app-radius);
+        display: grid;
+        place-items: center;
+        font-weight: 600;
+      }
+      .slash .it b {
+        display: block;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.3;
+      }
+      .slash .it small {
+        color: var(--app-fg-60);
+        font-size: 12px;
+      }
+
+      @media (max-width: 860px) {
+        [data-app='notion'] {
+          grid-template-columns: 1fr;
+        }
+        .sb {
+          display: none;
+        }
+        .page {
+          padding-inline: 24px;
+        }
+        .blk .hd {
+          display: none;
+        }
+        .prop {
+          grid-template-columns: 110px 1fr;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          transition: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div data-app="notion">
+      <aside class="sb" aria-label="Sidebar">
+        <button class="row ws">
+          <span class="av">Y</span><span class="t">Your Workspace</span
+          ><span class="act">⌄</span>
+        </button>
+        <button class="row">
+          <span class="ic">🔍</span><span class="t">Search</span>
+        </button>
+        <button class="row">
+          <span class="ic">🏠</span><span class="t">Home</span>
+        </button>
+        <button class="row">
+          <span class="ic">📥</span><span class="t">Inbox</span>
+        </button>
+
+        <div class="sec">Favorites</div>
+        <button class="row on">
+          <span class="ic">📓</span><span class="t">Product handbook</span
+          ><span class="act">⋯</span>
+        </button>
+
+        <div class="sec">Private</div>
+        <div class="tree">
+          <details open>
+            <summary class="row">
+              <span class="tg">▸</span><span class="ic">🗂️</span
+              ><span class="t">Projects</span><span class="act">+</span>
+            </summary>
+            <div class="kids">
+              <button class="row">
+                <span class="ic">🚀</span><span class="t">Launch plan</span>
+              </button>
+              <button class="row">
+                <span class="ic">🧪</span><span class="t">Research notes</span>
+              </button>
+            </div>
+          </details>
+          <details>
+            <summary class="row">
+              <span class="tg">▸</span><span class="ic">📅</span
+              ><span class="t">Meetings</span><span class="act">+</span>
+            </summary>
+            <div class="kids">
+              <button class="row">
+                <span class="ic">📝</span><span class="t">Weekly sync</span>
+              </button>
+            </div>
+          </details>
+        </div>
+        <button class="row">
+          <span class="ic">＋</span><span class="t">Add a page</span>
+        </button>
+      </aside>
+
+      <div class="main">
+        <div class="top">
+          <button class="crumb">📓 Product handbook</button>
+          <span class="sp"></span>
+          <button class="btn">Share</button><button class="btn">☆</button
+          ><button class="btn">⋯</button>
+        </div>
+        <div class="cover" role="img" aria-label="Cover"></div>
+
+        <div class="page">
+          <div class="icon" aria-hidden="true">📓</div>
+          <h1
+            class="title"
+            contenteditable="true"
+            spellcheck="false"
+            aria-label="Page title">
+            Product handbook
+          </h1>
+
+          <div class="props">
+            <div class="prop">
+              <span class="k">☰ Status</span
+              ><span class="v"
+                ><span
+                  class="tag"
+                  style="background: var(--c-blue-bg); color: var(--c-blue)"
+                  >In progress</span
+                ></span
+              >
+            </div>
+            <div class="prop">
+              <span class="k">📅 Updated</span
+              ><span class="v">October 9, 2026</span>
+            </div>
+            <div class="prop">
+              <span class="k">👤 Owner</span><span class="v">You</span>
+            </div>
+          </div>
+
+          <p class="blk">
+            <span class="hd" aria-hidden="true"
+              ><span>+</span><span>⋮⋮</span></span
+            >A calm, document-first page. Hover a block to see its handle; text
+            uses the ink color at full strength, secondary text at 60%.
+          </p>
+
+          <h1 class="blk">
+            <span class="hd" aria-hidden="true"
+              ><span>+</span><span>⋮⋮</span></span
+            >Heading 1
+          </h1>
+          <p class="blk">
+            <span class="hd" aria-hidden="true"
+              ><span>+</span><span>⋮⋮</span></span
+            >Inline <code>code</code>,
+            <span style="color: var(--c-red)">colored text</span> and
+            <span style="background: var(--c-yellow-bg)">highlighted text</span>
+            come from the block palette.
+          </p>
+
+          <h2 class="blk">
+            <span class="hd" aria-hidden="true"
+              ><span>+</span><span>⋮⋮</span></span
+            >Heading 2
+          </h2>
+          <div class="blk bul">
+            <span class="hd" aria-hidden="true"
+              ><span>+</span><span>⋮⋮</span></span
+            >A bulleted item
+          </div>
+          <div class="blk bul">
+            <span class="hd" aria-hidden="true"
+              ><span>+</span><span>⋮⋮</span></span
+            >Another bulleted item
+          </div>
+          <label class="blk todo"
+            ><input type="checkbox" checked /><span
+              >A completed to-do</span
+            ></label
+          >
+          <label class="blk todo"
+            ><input type="checkbox" /><span>An open to-do</span></label
+          >
+
+          <h3 class="blk">
+            <span class="hd" aria-hidden="true"
+              ><span>+</span><span>⋮⋮</span></span
+            >Heading 3
+          </h3>
+          <details class="tog blk">
+            <summary>A toggle block</summary>
+            <div class="in">Hidden content, indented under the toggle.</div>
+          </details>
+          <div class="quote">A quote block with a 3px left rule.</div>
+          <div class="callout">
+            <span aria-hidden="true">💡</span>
+            <div>
+              A callout. Gray by default, tinted when a color is chosen.
+            </div>
+          </div>
+          <div class="callout y">
+            <span aria-hidden="true">⚠️</span>
+            <div>A yellow callout using the block palette background.</div>
+          </div>
+          <div class="div"></div>
+          <div class="code">
+            const page = { icon: "📓", title: "Product handbook" };
+          </div>
+
+          <div class="dbh" role="tablist" aria-label="Views">
+            <button role="tab" aria-selected="true">Table</button
+            ><button role="tab" aria-selected="false">Board</button
+            ><button role="tab" aria-selected="false">Calendar</button>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Aa Name</th>
+                <th>◉ Status</th>
+                <th>📅 Due</th>
+                <th>👤 Owner</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>🚀 Launch plan</td>
+                <td>
+                  <span
+                    class="tag"
+                    style="background: var(--c-green-bg); color: var(--c-green)"
+                    >Done</span
+                  >
+                </td>
+                <td>Oct 1</td>
+                <td>You</td>
+              </tr>
+              <tr>
+                <td>🧪 Research notes</td>
+                <td>
+                  <span
+                    class="tag"
+                    style="background: var(--c-blue-bg); color: var(--c-blue)"
+                    >In progress</span
+                  >
+                </td>
+                <td>Oct 14</td>
+                <td>You</td>
+              </tr>
+              <tr>
+                <td>📝 Weekly sync</td>
+                <td>
+                  <span
+                    class="tag"
+                    style="background: var(--c-gray-bg); color: var(--c-gray)"
+                    >Not started</span
+                  >
+                </td>
+                <td>Oct 20</td>
+                <td>Sam</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="new">＋ New</div>
+
+          <p
+            class="blk ph"
+            id="slashline"
+            contenteditable="true"
+            spellcheck="false"
+            aria-label="Type slash for commands"
+            data-ph="Type '/' for commands"
+            style="margin-top: 24px"></p>
+          <div class="slash" id="slash" role="listbox">
+            <div class="grp">Basic blocks</div>
+            <div class="it f" role="option">
+              <span class="tile">Aa</span
+              ><span
+                ><b>Text</b
+                ><small>Just start writing with plain text.</small></span
+              >
+            </div>
+            <div class="it" role="option">
+              <span class="tile">H1</span
+              ><span><b>Heading 1</b><small>Big section heading.</small></span>
+            </div>
+            <div class="it" role="option">
+              <span class="tile">☐</span
+              ><span
+                ><b>To-do list</b
+                ><small>Track tasks with a to-do list.</small></span
+              >
+            </div>
+            <div class="it" role="option">
+              <span class="tile">▸</span
+              ><span
+                ><b>Toggle list</b
+                ><small>Toggles can hide and show content.</small></span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      (function () {
+        var line = document.getElementById('slashline'),
+          menu = document.getElementById('slash');
+        function sync() {
+          var t = line.textContent;
+          line.classList.toggle('ph', t.length === 0);
+          if (t.charAt(0) === '/') {
+            var r = line.getBoundingClientRect(),
+              m = line.closest('.main').getBoundingClientRect();
+            menu.style.left = r.left - m.left + 'px';
+            menu.style.top =
+              r.bottom - m.top + line.closest('.main').scrollTop + 4 + 'px';
+            menu.classList.add('open');
+          } else menu.classList.remove('open');
+        }
+        line.addEventListener('input', sync);
+        line.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') {
+            menu.classList.remove('open');
+          }
+        });
+        document.querySelectorAll('.dbh button').forEach(function (b) {
+          b.addEventListener('click', function () {
+            document.querySelectorAll('.dbh button').forEach(function (x) {
+              x.setAttribute('aria-selected', 'false');
+            });
+            b.setAttribute('aria-selected', 'true');
+          });
+        });
+      })();
+    </script>
+    <style>
+      #slashline:empty::before {
+        content: attr(data-ph);
+        color: var(--app-fg-40);
+      }
+      .main {
+        position: relative;
+      }
+    </style>
+  </body>
+</html>

@@ -262,7 +262,12 @@ pub fn get_schema_fields(schema: &str) -> Vec<(String, String)> {
     fields
 }
 
-pub fn migrate_collection_schema(conn: &Connection, name: &str, old_schema: &str, new_schema: &str) -> Result<()> {
+pub fn migrate_collection_schema(
+    conn: &Connection,
+    name: &str,
+    old_schema: &str,
+    new_schema: &str,
+) -> Result<()> {
     let old_fields: HashMap<String, String> = get_schema_fields(old_schema).into_iter().collect();
     let new_fields: HashMap<String, String> = get_schema_fields(new_schema).into_iter().collect();
     for (field, sql_type) in &new_fields {
@@ -288,17 +293,29 @@ pub fn migrate_collection_schema(conn: &Connection, name: &str, old_schema: &str
     Ok(())
 }
 
-pub fn update_collection(conn: &Connection, name: &str, schema: Option<&str>) -> Result<Collection> {
-    let existing = get_collection(conn, name)?.ok_or_else(|| AppError::NotFound("not found".into()))?;
+pub fn update_collection(
+    conn: &Connection,
+    name: &str,
+    schema: Option<&str>,
+) -> Result<Collection> {
+    let existing =
+        get_collection(conn, name)?.ok_or_else(|| AppError::NotFound("not found".into()))?;
     if let Some(new_schema) = schema
-        && !new_schema.is_empty() && new_schema != existing.schema
+        && !new_schema.is_empty()
+        && new_schema != existing.schema
     {
         migrate_collection_schema(conn, name, &existing.schema, new_schema)?;
     }
-    get_collection(conn, name)?.ok_or_else(|| AppError::Internal("collection not found after update".into()))
+    get_collection(conn, name)?
+        .ok_or_else(|| AppError::Internal("collection not found after update".into()))
 }
 
-pub fn sync_schema_columns(conn: &Connection, collection: &str, id: &str, schema: &str) -> Result<()> {
+pub fn sync_schema_columns(
+    conn: &Connection,
+    collection: &str,
+    id: &str,
+    schema: &str,
+) -> Result<()> {
     if schema.is_empty() || schema == "{}" {
         return Ok(());
     }
@@ -400,7 +417,11 @@ pub fn validate_data(data: &Value, schema: &str) -> Result<()> {
     for (field, type_val) in &schema_map {
         let type_str = type_val.as_str().unwrap_or("string");
         let is_optional = field.ends_with('?');
-        let field_name = if is_optional { &field[..field.len() - 1] } else { field.as_str() };
+        let field_name = if is_optional {
+            &field[..field.len() - 1]
+        } else {
+            field.as_str()
+        };
         if is_optional && data.get(field_name).is_none_or(|v| v.is_null()) {
             continue;
         }
@@ -570,8 +591,10 @@ pub fn list_records(
         conn.query_row(&count_sql, [], |row| row.get(0))
             .map_err(|e| AppError::Internal(e.to_string()))?
     } else {
-        let param_refs: Vec<&dyn rusqlite::types::ToSql> =
-            params_list.iter().map(|s| s as &dyn rusqlite::types::ToSql).collect();
+        let param_refs: Vec<&dyn rusqlite::types::ToSql> = params_list
+            .iter()
+            .map(|s| s as &dyn rusqlite::types::ToSql)
+            .collect();
         conn.query_row(&count_sql, param_refs.as_slice(), |row| row.get(0))
             .map_err(|e| AppError::Internal(e.to_string()))?
     };
@@ -1769,18 +1792,27 @@ pub fn update_cron_job(
         params![name, schedule, command, method, headers, body, active, now, id],
     )
     .map_err(|e| AppError::Internal(format!("update cron job: {e}")))?;
-    get_cron_job(conn, id)?.ok_or_else(|| AppError::Internal("cron job not found after update".into()))
+    get_cron_job(conn, id)?
+        .ok_or_else(|| AppError::Internal("cron job not found after update".into()))
 }
 
 pub fn delete_cron_job(conn: &Connection, id: &str) -> Result<()> {
-    conn.execute("DELETE FROM _cronjob_logs WHERE cronjob_id = ?1", params![id])
-        .map_err(|e| AppError::Internal(e.to_string()))?;
+    conn.execute(
+        "DELETE FROM _cronjob_logs WHERE cronjob_id = ?1",
+        params![id],
+    )
+    .map_err(|e| AppError::Internal(e.to_string()))?;
     conn.execute("DELETE FROM _cronjobs WHERE id = ?1", params![id])
         .map_err(|e| AppError::Internal(e.to_string()))?;
     Ok(())
 }
 
-pub fn update_cron_job_last_run(conn: &Connection, id: &str, last_run_at: &str, status: &str) -> Result<()> {
+pub fn update_cron_job_last_run(
+    conn: &Connection,
+    id: &str,
+    last_run_at: &str,
+    status: &str,
+) -> Result<()> {
     let now = Utc::now().to_rfc3339();
     conn.execute(
         "UPDATE _cronjobs SET last_run_at = ?1, last_run_status = ?2, updated_at = ?3 WHERE id = ?4",
@@ -1853,12 +1885,13 @@ mod tests {
 
     #[test]
     fn test_get_schema_fields_type_mappings() {
-        let fields: Vec<(String, String)> = get_schema_fields(
-            r#"{"a": "string", "b": "number", "c": "integer", "d": "boolean"}"#,
-        );
+        let fields: Vec<(String, String)> =
+            get_schema_fields(r#"{"a": "string", "b": "number", "c": "integer", "d": "boolean"}"#);
         assert_eq!(fields.len(), 4);
-        let map: std::collections::HashMap<&str, &str> =
-            fields.iter().map(|(k, v)| (k.as_str(), v.as_str())).collect();
+        let map: std::collections::HashMap<&str, &str> = fields
+            .iter()
+            .map(|(k, v)| (k.as_str(), v.as_str()))
+            .collect();
         assert_eq!(map.get("a"), Some(&"TEXT"));
         assert_eq!(map.get("b"), Some(&"REAL"));
         assert_eq!(map.get("c"), Some(&"INTEGER"));
@@ -1873,9 +1906,13 @@ mod tests {
 
     #[test]
     fn test_get_schema_fields_mixed_types() {
-        let fields = get_schema_fields(r#"{"email": "email", "url": "url", "tags": "array", "meta": "object"}"#);
-        let map: std::collections::HashMap<&str, &str> =
-            fields.iter().map(|(k, v)| (k.as_str(), v.as_str())).collect();
+        let fields = get_schema_fields(
+            r#"{"email": "email", "url": "url", "tags": "array", "meta": "object"}"#,
+        );
+        let map: std::collections::HashMap<&str, &str> = fields
+            .iter()
+            .map(|(k, v)| (k.as_str(), v.as_str()))
+            .collect();
         assert_eq!(map.len(), 4);
         for (_, v) in &map {
             assert_eq!(*v, "TEXT");
@@ -1988,7 +2025,10 @@ mod tests {
 
     #[test]
     fn test_validate_field_email_valid() {
-        assert_eq!(validate_field(&json!("user@example.com"), "email", "e"), None);
+        assert_eq!(
+            validate_field(&json!("user@example.com"), "email", "e"),
+            None
+        );
     }
 
     #[test]
@@ -2005,12 +2045,18 @@ mod tests {
 
     #[test]
     fn test_validate_field_url_valid_http() {
-        assert_eq!(validate_field(&json!("http://example.com"), "url", "u"), None);
+        assert_eq!(
+            validate_field(&json!("http://example.com"), "url", "u"),
+            None
+        );
     }
 
     #[test]
     fn test_validate_field_url_valid_https() {
-        assert_eq!(validate_field(&json!("https://example.com"), "url", "u"), None);
+        assert_eq!(
+            validate_field(&json!("https://example.com"), "url", "u"),
+            None
+        );
     }
 
     #[test]
@@ -2083,15 +2129,21 @@ mod tests {
 
     #[test]
     fn test_data_dir_default() {
-        unsafe { std::env::set_var("BACKBONE_DATA", "/tmp/test_backbone"); }
+        unsafe {
+            std::env::set_var("BACKBONE_DATA", "/tmp/test_backbone");
+        }
         let d = data_dir();
         assert_eq!(d, std::path::PathBuf::from("/tmp/test_backbone"));
-        unsafe { std::env::remove_var("BACKBONE_DATA"); }
+        unsafe {
+            std::env::remove_var("BACKBONE_DATA");
+        }
     }
 
     #[test]
     fn test_data_dir_fallback_home() {
-        unsafe { std::env::remove_var("BACKBONE_DATA"); }
+        unsafe {
+            std::env::remove_var("BACKBONE_DATA");
+        }
         let home = std::env::var("HOME").unwrap_or_else(|_| "/tmp".to_string());
         let d = data_dir();
         assert_eq!(d, std::path::PathBuf::from(home).join(".backbone"));
@@ -2154,7 +2206,13 @@ mod tests {
         insert_collection(&conn, "schema_test", r#"{"name": "string"}"#).unwrap();
         create_collection_table(&conn, "schema_test", r#"{"name": "string"}"#).unwrap();
 
-        migrate_collection_schema(&conn, "schema_test", r#"{"name": "string"}"#, r#"{"name": "string", "age": "integer"}"#).unwrap();
+        migrate_collection_schema(
+            &conn,
+            "schema_test",
+            r#"{"name": "string"}"#,
+            r#"{"name": "string", "age": "integer"}"#,
+        )
+        .unwrap();
 
         let col = get_collection(&conn, "schema_test").unwrap().unwrap();
         assert_eq!(col.schema, r#"{"name": "string", "age": "integer"}"#);
@@ -2168,7 +2226,12 @@ mod tests {
         insert_collection(&conn, "upd_coll", r#"{"name": "string"}"#).unwrap();
         create_collection_table(&conn, "upd_coll", r#"{"name": "string"}"#).unwrap();
 
-        let updated = update_collection(&conn, "upd_coll", Some(r#"{"name": "string", "active": "boolean"}"#)).unwrap();
+        let updated = update_collection(
+            &conn,
+            "upd_coll",
+            Some(r#"{"name": "string", "active": "boolean"}"#),
+        )
+        .unwrap();
         assert!(updated.schema.contains("active"));
     }
 
@@ -2192,7 +2255,13 @@ mod tests {
         insert_collection(&conn, "sync_coll", r#"{"val": "string"}"#).unwrap();
         create_collection_table(&conn, "sync_coll", r#"{"val": "string"}"#).unwrap();
 
-        let rec = insert_record(&conn, "sync_coll", "r1", &serde_json::json!({"val": "hello"})).unwrap();
+        let rec = insert_record(
+            &conn,
+            "sync_coll",
+            "r1",
+            &serde_json::json!({"val": "hello"}),
+        )
+        .unwrap();
         assert_eq!(rec.id, "r1");
 
         sync_schema_columns(&conn, "sync_coll", "r1", r#"{"val": "string"}"#).unwrap();
@@ -2239,8 +2308,20 @@ mod tests {
         insert_collection(&conn, "search_test", "{}").unwrap();
         create_collection_table(&conn, "search_test", "{}").unwrap();
 
-        insert_record(&conn, "search_test", "a", &serde_json::json!({"text": "hello world"})).unwrap();
-        insert_record(&conn, "search_test", "b", &serde_json::json!({"text": "goodbye world"})).unwrap();
+        insert_record(
+            &conn,
+            "search_test",
+            "a",
+            &serde_json::json!({"text": "hello world"}),
+        )
+        .unwrap();
+        insert_record(
+            &conn,
+            "search_test",
+            "b",
+            &serde_json::json!({"text": "goodbye world"}),
+        )
+        .unwrap();
 
         let page = list_records(&conn, "search_test", 1, 10, "hello").unwrap();
         assert_eq!(page.total, 1);
@@ -2258,7 +2339,13 @@ mod tests {
         create_collection_table(&conn, "pagination", "{}").unwrap();
 
         for i in 0..5 {
-            insert_record(&conn, "pagination", &format!("r{i}"), &serde_json::json!({"n": i})).unwrap();
+            insert_record(
+                &conn,
+                "pagination",
+                &format!("r{i}"),
+                &serde_json::json!({"n": i}),
+            )
+            .unwrap();
         }
 
         let page = list_records(&conn, "pagination", 1, 2, "").unwrap();
@@ -2275,7 +2362,11 @@ mod tests {
         insert_collection(&conn, "nf_test", "{}").unwrap();
         create_collection_table(&conn, "nf_test", "{}").unwrap();
 
-        assert!(get_record(&conn, "nf_test", "nonexistent").unwrap().is_none());
+        assert!(
+            get_record(&conn, "nf_test", "nonexistent")
+                .unwrap()
+                .is_none()
+        );
     }
 
     // --- Bucket CRUD ---
@@ -2448,7 +2539,15 @@ mod tests {
         let conn = Connection::open_in_memory().unwrap();
         migrate_db(&conn).unwrap();
 
-        let wh = insert_webhook(&conn, "wh1", "test hook", "http://example.com", &["event.a".to_string()], "sec123").unwrap();
+        let wh = insert_webhook(
+            &conn,
+            "wh1",
+            "test hook",
+            "http://example.com",
+            &["event.a".to_string()],
+            "sec123",
+        )
+        .unwrap();
         assert_eq!(wh.name, "test hook");
         assert!(wh.is_active);
 
@@ -2458,7 +2557,16 @@ mod tests {
         let fetched = get_webhook(&conn, "wh1").unwrap().unwrap();
         assert_eq!(fetched.url, "http://example.com");
 
-        let updated = update_webhook(&conn, "wh1", "updated hook", "http://example.net", &["event.b".to_string()], "newsec", false).unwrap();
+        let updated = update_webhook(
+            &conn,
+            "wh1",
+            "updated hook",
+            "http://example.net",
+            &["event.b".to_string()],
+            "newsec",
+            false,
+        )
+        .unwrap();
         assert!(!updated.is_active);
         assert_eq!(updated.name, "updated hook");
 
@@ -2556,7 +2664,9 @@ mod tests {
         let topics = list_pubsub_topics(&conn).unwrap();
         assert_eq!(topics.len(), 1);
 
-        let by_name = get_pubsub_topic_by_name(&conn, "my_topic").unwrap().unwrap();
+        let by_name = get_pubsub_topic_by_name(&conn, "my_topic")
+            .unwrap()
+            .unwrap();
         assert_eq!(by_name.id, "t1");
 
         delete_pubsub_topic(&conn, "my_topic").unwrap();
@@ -2585,7 +2695,17 @@ mod tests {
         let conn = Connection::open_in_memory().unwrap();
         migrate_db(&conn).unwrap();
 
-        let job = insert_cron_job(&conn, "cj1", "daily_task", "0 0 * * *", "echo hi", "GET", "", "").unwrap();
+        let job = insert_cron_job(
+            &conn,
+            "cj1",
+            "daily_task",
+            "0 0 * * *",
+            "echo hi",
+            "GET",
+            "",
+            "",
+        )
+        .unwrap();
         assert_eq!(job.name, "daily_task");
         assert!(job.is_active);
 
@@ -2595,7 +2715,18 @@ mod tests {
         let fetched = get_cron_job(&conn, "cj1").unwrap().unwrap();
         assert_eq!(fetched.schedule, "0 0 * * *");
 
-        let updated = update_cron_job(&conn, "cj1", "nightly", "0 0 * * 0", "echo bye", "POST", "{}", "{}", false).unwrap();
+        let updated = update_cron_job(
+            &conn,
+            "cj1",
+            "nightly",
+            "0 0 * * 0",
+            "echo bye",
+            "POST",
+            "{}",
+            "{}",
+            false,
+        )
+        .unwrap();
         assert!(!updated.is_active);
         assert_eq!(updated.name, "nightly");
 
@@ -2680,7 +2811,9 @@ mod tests {
 
         insert_user(&conn, "u1", "user@example.com", "hashed_pw").unwrap();
 
-        let found = find_user_by_email(&conn, "user@example.com").unwrap().unwrap();
+        let found = find_user_by_email(&conn, "user@example.com")
+            .unwrap()
+            .unwrap();
         assert_eq!(found.0, "u1");
         assert_eq!(found.1, "user@example.com");
         assert_eq!(found.4, "hashed_pw");
@@ -2690,7 +2823,11 @@ mod tests {
     fn test_find_user_by_email_not_found() {
         let conn = Connection::open_in_memory().unwrap();
         migrate_db(&conn).unwrap();
-        assert!(find_user_by_email(&conn, "noone@example.com").unwrap().is_none());
+        assert!(
+            find_user_by_email(&conn, "noone@example.com")
+                .unwrap()
+                .is_none()
+        );
     }
 
     #[test]
@@ -2753,7 +2890,18 @@ mod tests {
     fn test_update_cron_job_not_found() {
         let conn = Connection::open_in_memory().unwrap();
         migrate_db(&conn).unwrap();
-        let err = update_cron_job(&conn, "nojob", "n", "* * * * *", "cmd", "GET", "", "", false).unwrap_err();
+        let err = update_cron_job(
+            &conn,
+            "nojob",
+            "n",
+            "* * * * *",
+            "cmd",
+            "GET",
+            "",
+            "",
+            false,
+        )
+        .unwrap_err();
         assert!(matches!(err, AppError::Internal(_)));
     }
 
@@ -2827,7 +2975,11 @@ mod tests {
     fn test_list_pubsub_messages_empty() {
         let conn = Connection::open_in_memory().unwrap();
         migrate_db(&conn).unwrap();
-        assert!(list_pubsub_messages(&conn, "nonexistent").unwrap().is_empty());
+        assert!(
+            list_pubsub_messages(&conn, "nonexistent")
+                .unwrap()
+                .is_empty()
+        );
     }
 
     #[test]
@@ -2841,7 +2993,11 @@ mod tests {
     fn test_get_pubsub_topic_by_name_not_found() {
         let conn = Connection::open_in_memory().unwrap();
         migrate_db(&conn).unwrap();
-        assert!(get_pubsub_topic_by_name(&conn, "nonexistent").unwrap().is_none());
+        assert!(
+            get_pubsub_topic_by_name(&conn, "nonexistent")
+                .unwrap()
+                .is_none()
+        );
     }
 
     #[test]

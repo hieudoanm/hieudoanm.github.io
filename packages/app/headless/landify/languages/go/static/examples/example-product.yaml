@@ -17,6 +17,14 @@
 # Media: only the "product" layout requires a hero image and demo video.
 # Both render in the same 16:9 frame (1280 × 720).
 #
+# Open Graph: the optional site.og block fills the <head> so a shared link
+# renders a card. title, description and site_name fall back to the site
+# values, and url and image only appear when you set them. `landify build`
+# also writes a 1200 x 630 og/og.svg from the card copy and the theme above:
+# kicker becomes the small line above the title, tags the chips in the right
+# panel, and site.name the monogram. Convert it to the PNG that image points
+# at, e.g. rsvg-convert -o og/og.png og/og.svg
+#
 # Colors: theme is the only design input. List the eight base colors (and,
 # optionally, the corner radius); every other CSS token the page uses —
 # surfaces (base-100/200/300, base-content), accent shades and tints
@@ -49,6 +57,22 @@ site:                     # used in the navbar, <title>, and meta description
       href: "#demo"
     - label: Get started
       href: "#cta"
+
+  og:                        # [optional] social card: build writes og/og.svg and the <head> tags
+    title: Your page in one link   #   og:title — defaults to site.name
+    description: >-          #   og:description — defaults to site.description
+      One sentence a link preview can show.
+    image: "https://example.com/og/og.png"   #   og:image — omit to emit no image tags (1200 × 630)
+    image_alt: ""            #   og:image:alt — describe the card for screen readers
+    url: "https://example.com"   #   og:url — the canonical address of this page
+    type: "website"          #   og:type — defaults to website
+    site_name: ""            #   og:site_name — defaults to site.name
+    twitter_card: ""         #   twitter:card — defaults to summary_large_image
+    kicker: "One file, one page"   #   card only: the small line above the title
+    tags:                    #   card only: chips in the right panel, first 4 shown
+      - "Zero build step"
+      - "12 layouts"
+      - "HTML + CSS only"
 
 hero:                     # the first thing visitors see
   badge: "🚀 New"         # [optional] small pill above the headline

@@ -16,8 +16,8 @@ const THEME_DARK: string = 'store-dark';
 const THEME_LIGHT: string = 'store-light';
 
 const getInitialTheme = (): string => {
-  if (typeof window === 'undefined') return THEME_LIGHT;
-  return localStorage.getItem(THEME_KEY) || THEME_LIGHT;
+  if (typeof window === 'undefined') return THEME_DARK;
+  return localStorage.getItem(THEME_KEY) || THEME_DARK;
 };
 
 export const Header: FC = () => {
@@ -63,7 +63,7 @@ export const Header: FC = () => {
             <ul
               tabIndex={0}
               role="menu"
-              className="dropdown-content bg-base-100 border-base-300 menu rounded-box border px-2 py-2 shadow">
+              className="dropdown-content bg-base-100 border-base-300 menu rounded-box border px-2 py-2">
               {NAV_LINKS.map(({ href, label }) => (
                 <li key={href}>
                   <Link href={href} className="text-xs">

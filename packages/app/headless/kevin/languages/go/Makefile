@@ -15,7 +15,7 @@ help:
 	@echo "  format     go fmt ./..."
 	@echo "  lint       go vet ./..."
 	@echo "  test       go test ./..."
-	@echo "  build      build $(BINARY) (CGO_ENABLED=0)"
+	@echo "  build      build $(BINARY) (CGO_ENABLED=0, includes --tui)"
 	@echo "  build-gui  build $(BINARY) with the fyne GUI (--gui flag, needs CGO)"
 	@echo "  build-all  cross-compile for $(PLATFORMS) into $(BIN_DIR)"
 	@echo "  coverage   generate HTML coverage report"

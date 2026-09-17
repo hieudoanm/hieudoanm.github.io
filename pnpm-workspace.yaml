@@ -1,5 +1,7 @@
 packages:
   - packages/**
+  - '!packages/**/.venv'
+
 allowBuilds:
   '@parcel/watcher': true
   '@prisma/engines': true
@@ -18,3 +20,7 @@ allowBuilds:
   tesseract.js: true
   unrs-resolver: true
 minimumReleaseAge: 0
+
+overrides:
+  '@codemirror/state': 6.7.6
+  '@codemirror/view': 6.43.15

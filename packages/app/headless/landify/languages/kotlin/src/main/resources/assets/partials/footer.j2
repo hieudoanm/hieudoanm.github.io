@@ -1,0 +1,4 @@
+<footer>
+        <span>{{ config.footer.copyright }}</span>
+        {% for item in config.footer.links %}<a href="{{ item.href }}">{{ item.label }}</a>{% endfor %}
+      </footer>

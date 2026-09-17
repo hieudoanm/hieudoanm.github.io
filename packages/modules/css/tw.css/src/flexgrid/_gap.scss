@@ -36,7 +36,6 @@ $gap-steps: (
   ('80', 80),
   ('96', 96)
 );
-
 $gap-axes: (('', gap), ('-x', column-gap), ('-y', row-gap));
 
 @each $axis, $property in $gap-axes {

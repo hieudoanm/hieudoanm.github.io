@@ -1,0 +1,37 @@
+name: CI - App - Headless - Landify
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/headless/landify/languages/go/**'
+      - 'packages/app/headless/landify/languages/rust/**'
+      - '.github/workflows/ci-app-headless-landify.yaml'
+      - '.github/workflows/ci-app-headless-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-headless-landify-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-headless-template.yaml
+    with:
+      package: packages/app/headless/landify/languages/go
+      rustPackage: packages/app/headless/landify/languages/rust
+      releaseName: app-headless-landify-latest
+      releaseTitle: App - Headless - Landify (latest)
+      artifactName: app-headless-landify
+      artifactPath: packages/app/headless/landify/languages/go/bin/*
+      rustArtifactPath: packages/app/headless/landify/languages/rust/target/release/landify
+      installZig: false
+      installRustDeps: false

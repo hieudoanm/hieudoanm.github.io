@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif">
+  <title>DBML - Database Markup Language Converter</title>
+  <desc>Convert DBML to SQL, Mermaid ER diagrams, and SVG with CLI and REST API.</desc>
+  <defs>
+    <linearGradient id="og-base" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7f8fa" />
+      <stop offset="1" stop-color="#fefefe" />
+    </linearGradient>
+    <radialGradient id="og-glow" cx="0.88" cy="0.04" r="0.58">
+      <stop offset="0" stop-color="#4570eb" stop-opacity="0.17" />
+      <stop offset="1" stop-color="#4570eb" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="og-accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7c3aed" />
+      <stop offset="1" stop-color="#6931c9" />
+    </linearGradient>
+    <filter id="og-shadow" x="-20%" y="-20%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#000000" flood-opacity="0.16" />
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="630" fill="url(#og-base)" />
+  <rect x="0" y="0" width="1200" height="630" fill="url(#og-glow)" />
+  <rect x="0" y="0" width="12" height="630" fill="url(#og-accent)" />
+
+  <g>
+    <rect x="96" y="84" width="56" height="56" rx="16" fill="url(#og-accent)" />
+    <text x="124" y="121" text-anchor="middle" font-size="26" font-weight="800" fill="#ffffff">DB</text>
+    <text x="172" y="121" font-size="26" font-weight="600" fill="#181d25">DBML</text>
+    <text x="1104" y="119" text-anchor="end" font-size="22" fill="#555f6e">hieudoanm.github.io</text>
+  </g>
+  <line x1="96" y1="176" x2="1104" y2="176" stroke="#9ea4ad" stroke-width="2" />
+
+  <g font-size="17" font-weight="700" letter-spacing="0.16em" fill="#7c3aed">
+    <text x="96" y="252">CLI + HTTP API</text>
+  </g>
+  <g font-size="58" font-weight="800" fill="#181d25" letter-spacing="-0.022em">
+  <text x="96" y="327">DBML - Database</text>
+  <text x="96" y="389">Markup Language</text>
+  <text x="96" y="451">Converter</text>
+  </g>
+  <g font-size="25" fill="#555f6e">
+  <text x="96" y="503">Convert DBML to SQL, Mermaid ER diagrams,</text>
+  <text x="96" y="538">and SVG with CLI and REST API.</text>
+  </g>
+
+  <g>
+    <rect x="748" y="202" width="356" height="382" rx="24" fill="#e8e1f8" stroke="#b6bbc2" stroke-width="1.5" filter="url(#og-shadow)" />
+    <rect x="778" y="262" width="84" height="84" rx="24" fill="url(#og-accent)" />
+    <text x="820" y="319" text-anchor="middle" font-size="42" font-weight="800" fill="#ffffff">DB</text>
+    <rect x="778" y="372" width="227" height="44" rx="22" fill="#f7f8fa" />
+    <circle cx="798" cy="394" r="4" fill="#7c3aed" />
+    <text x="818" y="401" font-size="19" font-weight="500" fill="#181d25">Database schemas</text>
+    <rect x="778" y="426" width="200" height="44" rx="22" fill="#f7f8fa" />
+    <circle cx="798" cy="448" r="4" fill="#7c3aed" />
+    <text x="818" y="455" font-size="19" font-weight="500" fill="#181d25">SQL generation</text>
+    <rect x="778" y="480" width="178" height="44" rx="22" fill="#f7f8fa" />
+    <circle cx="798" cy="502" r="4" fill="#7c3aed" />
+    <text x="818" y="509" font-size="19" font-weight="500" fill="#181d25">ER diagrams</text>
+  </g>
+</svg>

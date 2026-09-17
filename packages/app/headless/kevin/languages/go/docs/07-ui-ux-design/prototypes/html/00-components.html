@@ -1,0 +1,770 @@
+<!doctype html>
+<html lang="en" data-theme="sml-light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Components · kevin GUI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;500&display=swap"
+      rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --font-sans:
+          Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+        --font-mono:
+          'Source Code Pro', ui-monospace, SFMono-Regular, Menlo, Monaco,
+          Consolas, 'Liberation Mono', monospace;
+
+        /* Material Design 3 — light */
+        --color-background: #FBF9FE;
+        --color-on-background: #1D1B20;
+        --color-surface: #FFFFFF;
+        --color-surface-container: #E7E0EC;
+        --color-surface-container-highest: #DCD4E1;
+        --color-surface-dim: #DAD8E1;
+        --color-surface-bright: #FBF9FE;
+        --color-on-surface: #1D1B20;
+        --color-primary: #6750A4;
+        --color-on-primary: #FFFFFF;
+        --color-primary-container: #EADDFF;
+        --color-on-primary-container: #21005E;
+        --color-secondary: #625B71;
+        --color-on-secondary: #FFFFFF;
+        --color-secondary-container: #E8DEF8;
+        --color-on-secondary-container: #1E1B29;
+        --color-tertiary: #7D5260;
+        --color-on-tertiary: #FFFFFF;
+        --color-tertiary-container: #FFD8E4;
+        --color-on-tertiary-container: #31111D;
+        --color-error: #B3261E;
+        --color-on-error: #FFFFFF;
+        --color-error-container: #F9DEDC;
+        --color-on-error-container: #410E0B;
+        --color-outline: #79747E;
+        --color-outline-variant: #CAC4D0;
+        --color-inverse-surface: #312F37;
+        --color-inverse-on-surface: #F6EFF7;
+        --color-inverse-primary: #D0BCFF;
+
+        --radius-small: 4px;
+        --radius-medium: 12px;
+        --radius-large: 16px;
+        --radius-extra-large: 28px;
+      }
+    </style>
+    <style>
+      [data-theme='sml-dark'] {
+        color-scheme: dark;
+        --color-background: #1C1B1F;
+        --color-on-background: #E6E1E5;
+        --color-surface: #1C1B1F;
+        --color-surface-container: #28252E;
+        --color-surface-container-highest: #434049;
+        --color-surface-dim: #1C1B1F;
+        --color-surface-bright: #1C1B1F;
+        --color-on-surface: #E6E1E5;
+        --color-primary: #D0BCFF;
+        --color-on-primary: #381E72;
+        --color-primary-container: #4F378B;
+        --color-on-primary-container: #EADDFF;
+        --color-secondary: #CCC2DC;
+        --color-on-secondary: #332E3E;
+        --color-secondary-container: #4F485F;
+        --color-on-secondary-container: #E8DEF8;
+        --color-tertiary: #EFB8C9;
+        --color-on-tertiary: #492532;
+        --color-tertiary-container: #63414E;
+        --color-on-tertiary-container: #FFD8E4;
+        --color-error: #F2B8B5;
+        --color-on-error: #600701;
+        --color-error-container: #69140D;
+        --color-on-error-container: #F9DEDC;
+        --color-outline: #8C8993;
+        --color-outline-variant: #49444E;
+        --color-inverse-surface: #E6E1E5;
+        --color-inverse-on-surface: #1C1B1F;
+        --color-inverse-primary: #6750A4;
+      }
+      body {
+        background-color: var(--color-background);
+        color: var(--color-on-surface);
+        font-family: var(--font-sans);
+        font-size: 16px;
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        margin: 0;
+      }
+      :focus-visible {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+      }
+      .md3-type-display-large {
+        font-size: 57px;
+        line-height: 64px;
+        font-weight: 400;
+        letter-spacing: -0.25px;
+      }
+      .md3-type-headline-large {
+        font-size: 32px;
+        line-height: 40px;
+        font-weight: 300;
+        letter-spacing: 0;
+      }
+      .md3-type-title-large {
+        font-size: 22px;
+        line-height: 28px;
+        font-weight: 300;
+        letter-spacing: 0;
+      }
+      .md3-type-body-large {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+      }
+      .md3-type-body-medium {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+        letter-spacing: 0.25px;
+      }
+      .md3-type-body-small {
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 400;
+        letter-spacing: 0.4px;
+      }
+      .md3-type-label-large {
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 500;
+        letter-spacing: 0.1px;
+      }
+      .md3-type-label-medium {
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+      }
+      .md3-type-label-small {
+        font-size: 11px;
+        line-height: 12px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        overflow-wrap: anywhere;
+        max-width: 100%;
+      }
+      .theme-switcher {
+        position: fixed;
+        right: 1rem;
+        bottom: 1rem;
+        z-index: 60;
+        display: inline-flex;
+        gap: 0.25rem;
+        padding: 0.25rem;
+        border-radius: 999px;
+        border: 1px solid var(--color-outline-variant);
+        background: var(--color-surface);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08),
+          0 8px 24px rgba(0, 0, 0, 0.12);
+      }
+      .theme-switcher button {
+        font: inherit;
+        font-size: 11px;
+        line-height: 1;
+        padding: 0.35rem 0.7rem;
+        border-radius: 999px;
+        border: 0;
+        background: transparent;
+        color: var(--color-on-surface);
+        opacity: 0.65;
+        cursor: pointer;
+      }
+      .theme-switcher button[aria-pressed='true'] {
+        background: var(--color-surface-container);
+        opacity: 1;
+      }
+      .icon {
+        display: inline-block;
+        line-height: 1;
+        vertical-align: -0.125em;
+      }
+      .icon-sm {
+        font-size: 18px;
+      }
+      .icon-md {
+        font-size: 24px;
+      }
+      .section {
+        padding: 0 1rem;
+        max-width: 760px;
+        margin: 0 auto;
+      }
+      .section-title {
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.1px;
+        color: var(--color-on-surface);
+        margin: 0 0 16px 0;
+      }
+      .section-card {
+        border: 1px solid var(--color-outline-variant);
+        border-radius: 16px;
+        background: var(--color-surface);
+        padding: 24px;
+      }
+      .color-row {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 10px 0;
+        min-width: 0;
+        flex-direction: column;
+        align-items: center;
+      }
+      .color-swatch {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        border: 1px solid var(--color-outline-variant);
+        flex-shrink: 0;
+        margin-bottom: 6px;
+      }
+      .color-name {
+        font-size: 14px;
+        font-weight: 500;
+        text-align: center;
+        margin: 0;
+      }
+      .color-value {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        color: var(--color-outline);
+        margin-top: 2px;
+        white-space: nowrap;
+      }
+      .btn-md3 {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        height: 40px;
+        padding: 0 16px;
+        border-radius: 12px;
+        border: 0;
+        font: inherit;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.1px;
+        cursor: pointer;
+      }
+      .btn-md3:disabled {
+        opacity: 0.38;
+        cursor: default;
+      }
+      .btn-filled {
+        background: var(--color-primary);
+        color: var(--color-on-primary);
+      }
+      .btn-tonal {
+        background: var(--color-secondary-container);
+        color: var(--color-on-secondary-container);
+      }
+      .btn-outlined {
+        background: transparent;
+        color: var(--color-on-surface);
+        border: 1px solid var(--color-outline);
+      }
+      .btn-text {
+        background: transparent;
+        color: var(--color-primary);
+        border: 0;
+        padding: 0 12px;
+        height: 36px;
+        border-radius: 8px;
+      }
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        height: 32px;
+        padding: 0 12px;
+        border-radius: 16px;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        border: 0;
+      }
+      .chip-filled {
+        background: var(--color-secondary-container);
+        color: var(--color-on-secondary-container);
+      }
+      .chip-outline {
+        background: transparent;
+        color: var(--color-on-surface);
+        border: 1px solid var(--color-outline-variant);
+      }
+      .field {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        width: 260px;
+      }
+      .field label {
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.1px;
+        color: var(--color-on-surface);
+      }
+      .field-input {
+        height: 40px;
+        padding: 0 16px;
+        border-radius: 12px;
+        border: 1px solid var(--color-outline-variant);
+        background: var(--color-surface);
+        color: var(--color-on-surface);
+        font: inherit;
+        font-size: 16px;
+      }
+      .field-input:focus {
+        border-color: var(--color-primary);
+        outline: none;
+      }
+      .field-input.error {
+        border-color: var(--color-error);
+      }
+      .field-helper {
+        font-size: 12px;
+        color: var(--color-outline);
+      }
+      .field-helper.error {
+        color: var(--color-error);
+      }
+      .table-wrap {
+        border: 1px solid var(--color-outline-variant);
+        border-radius: 16px;
+        overflow: hidden;
+        background: var(--color-surface);
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+      }
+      th,
+      td {
+        text-align: left;
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--color-outline-variant);
+      }
+      th {
+        font-weight: 500;
+        letter-spacing: 0.1px;
+        color: var(--color-on-surface);
+        background: var(--color-surface-container);
+      }
+      tr:last-child td {
+        border-bottom: 0;
+      }
+      .action-btn {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        border: 0;
+        background: transparent;
+        color: var(--color-on-surface);
+        cursor: pointer;
+        opacity: 0.7;
+      }
+      .card-demo {
+        border: 1px solid var(--color-outline-variant);
+        border-radius: 16px;
+        background: var(--color-surface);
+        padding: 20px;
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+      }
+      .skeleton {
+        background: var(--color-surface-container-highest);
+        border-radius: 8px;
+        opacity: 0.5;
+      }
+      .skeleton-text {
+        height: 16px;
+      }
+      .skeleton-title {
+        height: 22px;
+        width: 40%;
+      }
+    </style>
+    <script>
+      (function () {
+        try {
+          var t = window.localStorage.getItem('sml-theme');
+          if (t !== 'sml-light' && t !== 'sml-dark') {
+            t = window.matchMedia('(prefers-color-scheme: dark)').matches
+              ? 'sml-dark'
+              : 'sml-light';
+          }
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="theme-switcher" role="group" aria-label="Colour theme">
+      <button type="button" data-theme-value="sml-light" aria-pressed="true">
+        Light
+      </button>
+      <button type="button" data-theme-value="sml-dark" aria-pressed="false">
+        Dark
+      </button>
+    </div>
+    <script>
+      (function () {
+        var key = 'sml-theme';
+        function apply(theme) {
+          document.documentElement.setAttribute('data-theme', theme);
+          Array.prototype.forEach.call(
+            document.querySelectorAll('.theme-switcher button'),
+            function (button) {
+              button.setAttribute(
+                'aria-pressed',
+                String(button.getAttribute('data-theme-value') === theme)
+              );
+            }
+          );
+        }
+        apply(
+          document.documentElement.getAttribute('data-theme') || 'sml-light'
+        );
+        Array.prototype.forEach.call(
+          document.querySelectorAll('.theme-switcher button'),
+          function (button) {
+            button.addEventListener('click', function () {
+              var theme = button.getAttribute('data-theme-value');
+              try {
+                window.localStorage.setItem(key, theme);
+              } catch (error) {}
+              apply(theme);
+            });
+          }
+        );
+      })();
+    </script>
+
+    <header class="border-b border-outline-variant px-4 py-3">
+      <div class="max-w-6xl mx-auto flex items-center gap-2">
+        <span
+          class="bg-primary text-on-primary flex h-8 w-8 items-center justify-center rounded-extra-large text-xs font-semibold"
+          aria-hidden="true"
+        >
+          KV
+        </span>
+        <span class="ml-2 text-title-large font-medium">kevin</span>
+        <span
+          class="ml-auto text-label-small text-outline"
+          aria-hidden="true"
+        >&nbsp;</span>
+        <a
+          href="01-gui.html"
+          class="text-decoration-none text-label-medium text-primary hover:underline"
+          >View GUI prototype &rarr;</a
+        >
+      </div>
+    </header>
+
+    <main class="section">
+      <h1
+        class="md3-type-headline-large mb-2 text-on-surface font-medium"
+      >
+        Material Design 3
+      </h1>
+      <p class="md3-type-body-large mb-8 text-outline">
+        Component showcase for the kevin key/value manager GUI, built on the
+        Material Design 3 colour system and type scale. Renders identically in
+        light and dark themes.
+      </p>
+
+      <section class="section-card mb-8">
+        <h2 class="section-title">Color tokens</h2>
+        <div class="grid gap-4 md:grid-cols-5 lg:grid-cols-6">
+          <div class="color-row">
+            <div class="color-swatch" style="background: var(--color-primary)"></div>
+            <span class="color-name">Primary</span>
+            <span class="color-value">#6750A4</span>
+          </div>
+          <div class="color-row">
+            <div class="color-swatch" style="background: var(--color-primary-container)"></div>
+            <span class="color-name">Primary container</span>
+            <span class="color-value">#EADDFF</span>
+          </div>
+          <div class="color-row">
+            <div class="color-swatch" style="background: var(--color-secondary)"></div>
+            <span class="color-name">Secondary</span>
+            <span class="color-value">#625B71</span>
+          </div>
+          <div class="color-row">
+            <div class="color-swatch" style="background: var(--color-secondary-container)"></div>
+            <span class="color-name">Secondary container</span>
+            <span class="color-value">#E8DEF8</span>
+          </div>
+          <div class="color-row">
+            <div class="color-swatch" style="background: var(--color-tertiary)"></div>
+            <span class="color-name">Tertiary</span>
+            <span class="color-value">#7D5260</span>
+          </div>
+          <div class="color-row">
+            <div class="color-swatch" style="background: var(--color-tertiary-container)"></div>
+            <span class="color-name">Tertiary container</span>
+            <span class="color-value">#FFD8E4</span>
+          </div>
+          <div class="color-row">
+            <div class="color-swatch" style="background: var(--color-error)"></div>
+            <span class="color-name">Error</span>
+            <span class="color-value">#B3261E</span>
+          </div>
+          <div class="color-row">
+            <div class="color-swatch" style="background: var(--color-error-container)"></div>
+            <span class="color-name">Error container</span>
+            <span class="color-value">#F9DEDC</span>
+          </div>
+          <div class="color-row">
+            <div class="color-swatch" style="background: var(--color-surface)"></div>
+            <span class="color-name">Surface</span>
+            <span class="color-value">#FFFFFF</span>
+          </div>
+          <div class="color-row">
+            <div class="color-swatch" style="background: var(--color-surface-container)"></div>
+            <span class="color-name">Surface container</span>
+            <span class="color-value">#E7E0EC</span>
+          </div>
+          <div class="color-row">
+            <div class="color-swatch" style="background: var(--color-surface-container-highest)"></div>
+            <span class="color-name">Surface container highest</span>
+            <span class="color-value">#DCD4E1</span>
+          </div>
+          <div class="color-row">
+            <div class="color-swatch" style="background: var(--color-outline)"></div>
+            <span class="color-name">Outline</span>
+            <span class="color-value">#79747E</span>
+          </div>
+          <div class="color-row">
+            <div class="color-swatch" style="background: var(--color-outline-variant)"></div>
+            <span class="color-name">Outline variant</span>
+            <span class="color-value">#CAC4D0</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-card mb-8">
+        <h2 class="section-title">Typography</h2>
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-2">
+          <div>
+            <div class="md3-type-display-large mb-1">Display large</div>
+            <div class="md3-type-label-small text-outline">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+          </div>
+          <div>
+            <div class="md3-type-headline-large mb-1">Headline large</div>
+            <div class="md3-type-label-small text-outline">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+          </div>
+          <div>
+            <div class="md3-type-title-large mb-1">Title large</div>
+            <div class="md3-type-label-small text-outline">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+          </div>
+          <div>
+            <div class="md3-type-body-large mb-1">Body large</div>
+            <div class="md3-type-label-small text-outline">The quick brown fox jumps over the lazy dog.</div>
+          </div>
+          <div>
+            <div class="md3-type-body-medium mb-1">Body medium</div>
+            <div class="md3-type-label-small text-outline">The quick brown fox jumps over the lazy dog.</div>
+          </div>
+          <div>
+            <div class="md3-type-body-small mb-1">Body small</div>
+            <div class="md3-type-label-small text-outline">The quick brown fox jumps over the lazy dog.</div>
+          </div>
+          <div>
+            <div class="md3-type-label-large mb-1">Label large</div>
+            <div class="md3-type-label-small text-outline">Button text</div>
+          </div>
+          <div>
+            <div class="md3-type-label-medium mb-1">Label medium</div>
+            <div class="md3-type-label-small text-outline">Helper text</div>
+          </div>
+          <div>
+            <div class="md3-type-label-small mb-1">Label small</div>
+            <div class="md3-type-label-small text-outline">Caption text</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-card mb-8">
+        <h2 class="section-title">Buttons</h2>
+        <div class="flex flex-wrap gap-4">
+          <button class="btn-md3 btn-filled">
+            <i class="ph ph-plus icon-sm" aria-hidden="true"></i>
+            Add entry
+          </button>
+          <button class="btn-md3 btn-tonal">
+            <i class="ph ph-refresh icon-sm" aria-hidden="true"></i>
+            Refresh
+          </button>
+          <button class="btn-md3 btn-outlined">Outline</button>
+          <button class="btn-text">Text button</button>
+          <button class="btn-md3 btn-filled" disabled>Disabled</button>
+        </div>
+        <p class="md3-type-body-small mt-4 text-outline">
+          Filled = primary action, Tonal = secondary, Outlined = tertiary,
+          Text = low emphasis.
+        </p>
+      </section>
+
+      <section class="section-card mb-8">
+        <h2 class="section-title">Chips</h2>
+        <div class="flex flex-wrap gap-3">
+          <span class="chip chip-filled">Ready</span>
+          <span class="chip chip-outline">Idle</span>
+          <button class="chip chip-outline" disabled>Disabled</button>
+        </div>
+      </section>
+
+      <section class="section-card mb-8">
+        <h2 class="section-title">Cards</h2>
+        <div class="card-demo">
+          <div class="bg-primary-container text-on-primary-container flex h-10 w-10 items-center justify-center rounded-large text-xs font-semibold" aria-hidden="true">KV</div>
+          <div>
+            <div class="md3-type-title-large mb-1">Application title</div>
+            <p class="md3-type-body-medium mb-3 text-outline">
+              Supporting text describes the purpose of this card.
+            </p>
+            <button class="btn-text">Action</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-card mb-8">
+        <h2 class="section-title">Text fields</h2>
+        <div class="flex flex-wrap gap-8 items-end">
+          <div class="field">
+            <label>Key / search</label>
+            <input class="field-input" placeholder="user:session" />
+            <p class="field-helper">Filter entries by key or value.</p>
+          </div>
+          <div class="field">
+            <label>Value</label>
+            <input class="field-input" placeholder="hello world" />
+            <p class="field-helper">Stored value for the selected key.</p>
+          </div>
+          <div class="field">
+            <label>Error</label>
+            <input class="field-input error" value="invalid-email" />
+            <p class="field-helper error">Enter a valid email address.</p>
+          </div>
+          <div class="field">
+            <label>Disabled</label>
+            <input class="field-input" value="read-only" disabled />
+          </div>
+        </div>
+      </section>
+
+      <section class="section-card mb-8">
+        <h2 class="section-title">Table</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th style="width: 56px">No</th>
+                <th>Key</th>
+                <th>Value</th>
+                <th style="width: 150px">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>user:session</td>
+                <td>abc123def456</td>
+                <td>
+                  <button class="action-btn" title="Edit" aria-label="Edit user:session">
+                    <i class="ph ph-pencil icon-sm" aria-hidden="true"></i>
+                  </button>
+                  <button class="action-btn" title="Copy value" aria-label="Copy value">
+                    <i class="ph ph-copy icon-sm" aria-hidden="true"></i>
+                  </button>
+                  <button class="action-btn" title="Delete" aria-label="Delete user:session">
+                    <i class="ph ph-trash icon-sm" aria-hidden="true"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>config:theme</td>
+                <td>sml-dark</td>
+                <td>
+                  <button class="action-btn" aria-label="Edit config:theme">
+                    <i class="ph ph-pencil icon-sm" aria-hidden="true"></i>
+                  </button>
+                  <button class="action-btn" aria-label="Copy value">
+                    <i class="ph ph-copy icon-sm" aria-hidden="true"></i>
+                  </button>
+                  <button class="action-btn" aria-label="Delete config:theme">
+                    <i class="ph ph-trash icon-sm" aria-hidden="true"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>cache:ttl</td>
+                <td>300</td>
+                <td>
+                  <button class="action-btn" aria-label="Edit cache:ttl">
+                    <i class="ph ph-pencil icon-sm" aria-hidden="true"></i>
+                  </button>
+                  <button class="action-btn" aria-label="Copy value">
+                    <i class="ph ph-copy icon-sm" aria-hidden="true"></i>
+                  </button>
+                  <button class="action-btn" aria-label="Delete cache:ttl">
+                    <i class="ph ph-trash icon-sm" aria-hidden="true"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section-card mb-8">
+        <h2 class="section-title">States</h2>
+        <div class="grid gap-6 md:grid-cols-3">
+          <div class="bg-surface-container rounded-large p-6">
+            <div class="skeleton skeleton-title mb-3"></div>
+            <div class="skeleton skeleton-text mb-2" style="width: 60%"></div>
+            <div class="skeleton skeleton-text" style="width: 90%"></div>
+          </div>
+          <div
+            class="bg-surface-container rounded-large p-6 flex flex-col items-center justify-center text-center"
+          >
+            <i class="ph ph-inbox icon-md mb-3 text-outline-variant" aria-hidden="true"></i>
+            <p class="md3-type-label-large mb-1 text-on-surface">No entries yet</p>
+            <p class="md3-type-body-small text-outline">
+              Your keys will appear here once set.
+            </p>
+          </div>
+          <div
+            class="bg-error-container text-on-error-container rounded-large p-6 flex flex-col items-center justify-center text-center"
+          >
+            <i class="ph ph-warning-circle icon-md mb-3" aria-hidden="true"></i>
+            <p class="md3-type-label-large mb-1">Couldn&rsquo;t load balance</p>
+            <button class="btn-md3 btn-outlined mt-3">Retry</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

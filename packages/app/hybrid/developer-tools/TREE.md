@@ -3,19 +3,89 @@
 ```text
 ├── api/
 │   ├── docs/
-│   │   ├── [ARCHITECTURE.md](./api/docs/ARCHITECTURE.md)
-│   │   ├── [CONTRIBUTING.md](./api/docs/CONTRIBUTING.md)
-│   │   ├── [DOWNLOADS.md](./api/docs/DOWNLOADS.md)
-│   │   ├── [PACKAGING.md](./api/docs/PACKAGING.md)
-│   │   └── [ROADMAP.md](./api/docs/ROADMAP.md)
+│   │   ├── 00-overview/
+│   │   │   └── [README.md](./api/docs/00-overview/README.md)
+│   │   ├── 01-requirements/
+│   │   │   ├── [README.md](./api/docs/01-requirements/README.md)
+│   │   │   ├── [functional-requirements.md](./api/docs/01-requirements/functional-requirements.md)
+│   │   │   └── [non-functional-requirements.md](./api/docs/01-requirements/non-functional-requirements.md)
+│   │   ├── 02-features/
+│   │   │   └── [README.md](./api/docs/02-features/README.md)
+│   │   ├── 03-user-stories/
+│   │   │   └── [README.md](./api/docs/03-user-stories/README.md)
+│   │   ├── 04-architecture/
+│   │   │   └── [README.md](./api/docs/04-architecture/README.md)
+│   │   ├── 05-data-model/
+│   │   │   └── [README.md](./api/docs/05-data-model/README.md)
+│   │   ├── 06-api-specification/
+│   │   │   └── [README.md](./api/docs/06-api-specification/README.md)
+│   │   ├── 07-ui-ux-design/
+│   │   │   ├── brand/
+│   │   │   │   ├── images/
+│   │   │   │   │   ├── [logo-mark-dark.png](./api/docs/07-ui-ux-design/brand/images/logo-mark-dark.png)
+│   │   │   │   │   ├── [logo-mark-light.png](./api/docs/07-ui-ux-design/brand/images/logo-mark-light.png)
+│   │   │   │   │   ├── [logo-text-dark.png](./api/docs/07-ui-ux-design/brand/images/logo-text-dark.png)
+│   │   │   │   │   └── [logo-text-light.png](./api/docs/07-ui-ux-design/brand/images/logo-text-light.png)
+│   │   │   │   ├── svg/
+│   │   │   │   │   ├── [logo-mark-dark.svg](./api/docs/07-ui-ux-design/brand/svg/logo-mark-dark.svg)
+│   │   │   │   │   ├── [logo-mark-light.svg](./api/docs/07-ui-ux-design/brand/svg/logo-mark-light.svg)
+│   │   │   │   │   ├── [logo-text-dark.svg](./api/docs/07-ui-ux-design/brand/svg/logo-text-dark.svg)
+│   │   │   │   │   └── [logo-text-light.svg](./api/docs/07-ui-ux-design/brand/svg/logo-text-light.svg)
+│   │   │   │   └── [brand.sh](./api/docs/07-ui-ux-design/brand/brand.sh)
+│   │   │   ├── prototypes/
+│   │   │   ├── system/
+│   │   │   │   ├── [accessibility.md](./api/docs/07-ui-ux-design/system/accessibility.md)
+│   │   │   │   ├── [animation.md](./api/docs/07-ui-ux-design/system/animation.md)
+│   │   │   │   ├── [components.md](./api/docs/07-ui-ux-design/system/components.md)
+│   │   │   │   ├── [design-tokens.md](./api/docs/07-ui-ux-design/system/design-tokens.md)
+│   │   │   │   ├── [iconography.md](./api/docs/07-ui-ux-design/system/iconography.md)
+│   │   │   │   ├── [layout.md](./api/docs/07-ui-ux-design/system/layout.md)
+│   │   │   │   ├── [responsive.md](./api/docs/07-ui-ux-design/system/responsive.md)
+│   │   │   │   ├── [screens.md](./api/docs/07-ui-ux-design/system/screens.md)
+│   │   │   │   └── [states.md](./api/docs/07-ui-ux-design/system/states.md)
+│   │   │   └── [README.md](./api/docs/07-ui-ux-design/README.md)
+│   │   ├── 08-tech-stack/
+│   │   │   └── [README.md](./api/docs/08-tech-stack/README.md)
+│   │   ├── 09-testing-strategy/
+│   │   │   └── [README.md](./api/docs/09-testing-strategy/README.md)
+│   │   ├── 10-implementation-plan/
+│   │   │   └── [README.md](./api/docs/10-implementation-plan/README.md)
+│   │   ├── 11-deployment/
+│   │   │   └── [README.md](./api/docs/11-deployment/README.md)
+│   │   ├── 12-operations/
+│   │   │   └── [README.md](./api/docs/12-operations/README.md)
+│   │   ├── [00-overview.md](./api/docs/00-overview.md)
+│   │   ├── [01-requirements.md](./api/docs/01-requirements.md)
+│   │   ├── [02-features.md](./api/docs/02-features.md)
+│   │   ├── [03-user-stories.md](./api/docs/03-user-stories.md)
+│   │   ├── [04-architecture.md](./api/docs/04-architecture.md)
+│   │   ├── [05-data-model.md](./api/docs/05-data-model.md)
+│   │   ├── [06-api-specification.md](./api/docs/06-api-specification.md)
+│   │   ├── [07-ui-ux-design.md](./api/docs/07-ui-ux-design.md)
+│   │   ├── [08-tech-stack.md](./api/docs/08-tech-stack.md)
+│   │   ├── [09-testing-strategy.md](./api/docs/09-testing-strategy.md)
+│   │   ├── [10-implementation-plan.md](./api/docs/10-implementation-plan.md)
+│   │   ├── [11-deployment.md](./api/docs/11-deployment.md)
+│   │   ├── [12-operations.md](./api/docs/12-operations.md)
+│   │   └── [README.md](./api/docs/README.md)
 │   ├── e2e/
+│   │   ├── screenshots/
+│   │   │   ├── [about.png](./api/e2e/screenshots/about.png)
+│   │   │   ├── [downloads.png](./api/e2e/screenshots/downloads.png)
+│   │   │   ├── [home.png](./api/e2e/screenshots/home.png)
+│   │   │   └── [version.png](./api/e2e/screenshots/version.png)
 │   │   ├── [about.spec.ts](./api/e2e/about.spec.ts)
 │   │   ├── [api-client.spec.ts](./api/e2e/api-client.spec.ts)
+│   │   ├── [downloads.spec.ts](./api/e2e/downloads.spec.ts)
 │   │   ├── [home.spec.ts](./api/e2e/home.spec.ts)
 │   │   ├── [navigation.spec.ts](./api/e2e/navigation.spec.ts)
 │   │   ├── [settings.spec.ts](./api/e2e/settings.spec.ts)
 │   │   └── [version.spec.ts](./api/e2e/version.spec.ts)
 │   ├── public/
+│   │   ├── collections/
+│   │   │   ├── [bored.collection.json](./api/public/collections/bored.collection.json)
+│   │   │   ├── [chess.collection.json](./api/public/collections/chess.collection.json)
+│   │   │   └── [crossref.collection.json](./api/public/collections/crossref.collection.json)
 │   │   ├── icons/
 │   │   │   ├── [icon-128x128.png](./api/public/icons/icon-128x128.png)
 │   │   │   ├── [icon-144x144.png](./api/public/icons/icon-144x144.png)
@@ -32,6 +102,13 @@
 │   │   │   ├── [icon-72x72.png](./api/public/icons/icon-72x72.png)
 │   │   │   ├── [icon-96x96.png](./api/public/icons/icon-96x96.png)
 │   │   │   └── [icon.svg](./api/public/icons/icon.svg)
+│   │   ├── og/
+│   │   │   ├── [og.png](./api/public/og/og.png)
+│   │   │   └── [og.svg](./api/public/og/og.svg)
+│   │   ├── swagger/
+│   │   │   ├── [bored.swagger.yaml](./api/public/swagger/bored.swagger.yaml)
+│   │   │   ├── [chess.swagger.yaml](./api/public/swagger/chess.swagger.yaml)
+│   │   │   └── [crossref.swagger.yaml](./api/public/swagger/crossref.swagger.yaml)
 │   │   ├── [apple-touch-icon.png](./api/public/apple-touch-icon.png)
 │   │   ├── [favicon.ico](./api/public/favicon.ico)
 │   │   ├── [manifest.json](./api/public/manifest.json)
@@ -63,15 +140,18 @@
 │   │   │   │       └── [page.tsx](./api/src/app/(auth)/sign-up/page.tsx)
 │   │   │   ├── (info)/
 │   │   │   │   ├── about/
+│   │   │   │   │   ├── __tests__/
+│   │   │   │   │   │   └── [page.test.tsx](./api/src/app/(info)/about/__tests__/page.test.tsx)
 │   │   │   │   │   └── [page.tsx](./api/src/app/(info)/about/page.tsx)
 │   │   │   │   ├── downloads/
 │   │   │   │   │   ├── __tests__/
 │   │   │   │   │   │   └── [page.test.tsx](./api/src/app/(info)/downloads/__tests__/page.test.tsx)
 │   │   │   │   │   └── [page.tsx](./api/src/app/(info)/downloads/page.tsx)
 │   │   │   │   └── version/
+│   │   │   │       ├── __tests__/
+│   │   │   │       │   └── [page.test.tsx](./api/src/app/(info)/version/__tests__/page.test.tsx)
 │   │   │   │       └── [page.tsx](./api/src/app/(info)/version/page.tsx)
 │   │   │   ├── __tests__/
-│   │   │   │   ├── [about-page.test.tsx](./api/src/app/__tests__/about-page.test.tsx)
 │   │   │   │   ├── [default.test.tsx](./api/src/app/__tests__/default.test.tsx)
 │   │   │   │   ├── [error.test.tsx](./api/src/app/__tests__/error.test.tsx)
 │   │   │   │   ├── [forbidden.test.tsx](./api/src/app/__tests__/forbidden.test.tsx)
@@ -81,12 +161,8 @@
 │   │   │   │   ├── [not-found.test.tsx](./api/src/app/__tests__/not-found.test.tsx)
 │   │   │   │   ├── [page.test.tsx](./api/src/app/__tests__/page.test.tsx)
 │   │   │   │   ├── [robots.test.ts](./api/src/app/__tests__/robots.test.ts)
-│   │   │   │   ├── [settings.test.tsx](./api/src/app/__tests__/settings.test.tsx)
 │   │   │   │   ├── [template.test.tsx](./api/src/app/__tests__/template.test.tsx)
-│   │   │   │   ├── [unauthorized.test.tsx](./api/src/app/__tests__/unauthorized.test.tsx)
-│   │   │   │   └── [version-page.test.tsx](./api/src/app/__tests__/version-page.test.tsx)
-│   │   │   ├── settings/
-│   │   │   │   └── [page.tsx](./api/src/app/settings/page.tsx)
+│   │   │   │   └── [unauthorized.test.tsx](./api/src/app/__tests__/unauthorized.test.tsx)
 │   │   │   ├── [default.tsx](./api/src/app/default.tsx)
 │   │   │   ├── [error.tsx](./api/src/app/error.tsx)
 │   │   │   ├── [favicon.ico](./api/src/app/favicon.ico)
@@ -139,8 +215,13 @@
 │   │   │   │   ├── [ProtocolSwitch.tsx](./api/src/components/molecules/ProtocolSwitch.tsx)
 │   │   │   │   ├── [RequestComposer.tsx](./api/src/components/molecules/RequestComposer.tsx)
 │   │   │   │   ├── [RequestTabBar.tsx](./api/src/components/molecules/RequestTabBar.tsx)
+│   │   │   │   ├── [ResponseDiffView.tsx](./api/src/components/molecules/ResponseDiffView.tsx)
+│   │   │   │   ├── [ResponseHeadersTable.tsx](./api/src/components/molecules/ResponseHeadersTable.tsx)
+│   │   │   │   ├── [ResponseHtmlView.tsx](./api/src/components/molecules/ResponseHtmlView.tsx)
+│   │   │   │   ├── [ResponseJsonView.tsx](./api/src/components/molecules/ResponseJsonView.tsx)
 │   │   │   │   ├── [SchemaCheck.tsx](./api/src/components/molecules/SchemaCheck.tsx)
-│   │   │   │   └── [SidebarTabs.tsx](./api/src/components/molecules/SidebarTabs.tsx)
+│   │   │   │   ├── [SidebarTabs.tsx](./api/src/components/molecules/SidebarTabs.tsx)
+│   │   │   │   └── [SidebarToggle.tsx](./api/src/components/molecules/SidebarToggle.tsx)
 │   │   │   ├── organisms/
 │   │   │   │   ├── __tests__/
 │   │   │   │   │   ├── [ApiClient.test.tsx](./api/src/components/organisms/__tests__/ApiClient.test.tsx)
@@ -157,11 +238,13 @@
 │   │   │   │   ├── [CollectionsPanel.tsx](./api/src/components/organisms/CollectionsPanel.tsx)
 │   │   │   │   ├── [DesignPanel.tsx](./api/src/components/organisms/DesignPanel.tsx)
 │   │   │   │   ├── [GrpcPanel.tsx](./api/src/components/organisms/GrpcPanel.tsx)
+│   │   │   │   ├── [Header.tsx](./api/src/components/organisms/Header.tsx)
 │   │   │   │   ├── [HistoryList.tsx](./api/src/components/organisms/HistoryList.tsx)
 │   │   │   │   ├── [MqttPanel.tsx](./api/src/components/organisms/MqttPanel.tsx)
 │   │   │   │   ├── [RequestTabs.tsx](./api/src/components/organisms/RequestTabs.tsx)
 │   │   │   │   ├── [ResponsePanel.tsx](./api/src/components/organisms/ResponsePanel.tsx)
 │   │   │   │   ├── [RunnerPanel.tsx](./api/src/components/organisms/RunnerPanel.tsx)
+│   │   │   │   ├── [Sidebar.tsx](./api/src/components/organisms/Sidebar.tsx)
 │   │   │   │   └── [WebSocketPanel.tsx](./api/src/components/organisms/WebSocketPanel.tsx)
 │   │   │   └── templates/
 │   │   │       ├── __tests__/
@@ -175,6 +258,10 @@
 │   │   │       ├── [ErrorTemplate.tsx](./api/src/components/templates/ErrorTemplate.tsx)
 │   │   │       ├── [PageTransition.tsx](./api/src/components/templates/PageTransition.tsx)
 │   │   │       └── [VersionTemplate.tsx](./api/src/components/templates/VersionTemplate.tsx)
+│   │   ├── content/
+│   │   │   ├── [about.ts](./api/src/content/about.ts)
+│   │   │   ├── [download.ts](./api/src/content/download.ts)
+│   │   │   └── [version.ts](./api/src/content/version.ts)
 │   │   ├── hooks/
 │   │   │   ├── __tests__/
 │   │   │   │   ├── [useApiClient.test.tsx](./api/src/hooks/__tests__/useApiClient.test.tsx)
@@ -263,7 +350,6 @@
 │   │   │       ├── [index.ts](./api/src/server/rest/index.ts)
 │   │   │       └── [types.ts](./api/src/server/rest/types.ts)
 │   │   ├── styles/
-│   │   │   ├── [base.css](./api/src/styles/base.css)
 │   │   │   ├── [globals.css](./api/src/styles/globals.css)
 │   │   │   └── [themes.css](./api/src/styles/themes.css)
 │   │   └── types/
@@ -272,9 +358,55 @@
 │   │   ├── capabilities/
 │   │   │   └── [default.json](./api/src-tauri/capabilities/default.json)
 │   │   ├── icons/
+│   │   │   ├── android/
+│   │   │   │   ├── mipmap-anydpi-v26/
+│   │   │   │   │   └── [ic_launcher.xml](./api/src-tauri/icons/android/mipmap-anydpi-v26/ic_launcher.xml)
+│   │   │   │   ├── mipmap-hdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./api/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./api/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./api/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-mdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./api/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./api/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./api/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./api/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./api/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./api/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xxhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./api/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./api/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./api/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xxxhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./api/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./api/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./api/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png)
+│   │   │   │   └── values/
+│   │   │   │       └── [ic_launcher_background.xml](./api/src-tauri/icons/android/values/ic_launcher_background.xml)
+│   │   │   ├── ios/
+│   │   │   │   ├── [AppIcon-20x20@1x.png](./api/src-tauri/icons/ios/AppIcon-20x20@1x.png)
+│   │   │   │   ├── [AppIcon-20x20@2x-1.png](./api/src-tauri/icons/ios/AppIcon-20x20@2x-1.png)
+│   │   │   │   ├── [AppIcon-20x20@2x.png](./api/src-tauri/icons/ios/AppIcon-20x20@2x.png)
+│   │   │   │   ├── [AppIcon-20x20@3x.png](./api/src-tauri/icons/ios/AppIcon-20x20@3x.png)
+│   │   │   │   ├── [AppIcon-29x29@1x.png](./api/src-tauri/icons/ios/AppIcon-29x29@1x.png)
+│   │   │   │   ├── [AppIcon-29x29@2x-1.png](./api/src-tauri/icons/ios/AppIcon-29x29@2x-1.png)
+│   │   │   │   ├── [AppIcon-29x29@2x.png](./api/src-tauri/icons/ios/AppIcon-29x29@2x.png)
+│   │   │   │   ├── [AppIcon-29x29@3x.png](./api/src-tauri/icons/ios/AppIcon-29x29@3x.png)
+│   │   │   │   ├── [AppIcon-40x40@1x.png](./api/src-tauri/icons/ios/AppIcon-40x40@1x.png)
+│   │   │   │   ├── [AppIcon-40x40@2x-1.png](./api/src-tauri/icons/ios/AppIcon-40x40@2x-1.png)
+│   │   │   │   ├── [AppIcon-40x40@2x.png](./api/src-tauri/icons/ios/AppIcon-40x40@2x.png)
+│   │   │   │   ├── [AppIcon-40x40@3x.png](./api/src-tauri/icons/ios/AppIcon-40x40@3x.png)
+│   │   │   │   ├── [AppIcon-512@2x.png](./api/src-tauri/icons/ios/AppIcon-512@2x.png)
+│   │   │   │   ├── [AppIcon-60x60@2x.png](./api/src-tauri/icons/ios/AppIcon-60x60@2x.png)
+│   │   │   │   ├── [AppIcon-60x60@3x.png](./api/src-tauri/icons/ios/AppIcon-60x60@3x.png)
+│   │   │   │   ├── [AppIcon-76x76@1x.png](./api/src-tauri/icons/ios/AppIcon-76x76@1x.png)
+│   │   │   │   ├── [AppIcon-76x76@2x.png](./api/src-tauri/icons/ios/AppIcon-76x76@2x.png)
+│   │   │   │   └── [AppIcon-83.5x83.5@2x.png](./api/src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png)
 │   │   │   ├── [128x128.png](./api/src-tauri/icons/128x128.png)
 │   │   │   ├── [128x128@2x.png](./api/src-tauri/icons/128x128@2x.png)
+│   │   │   ├── [256x256.png](./api/src-tauri/icons/256x256.png)
 │   │   │   ├── [32x32.png](./api/src-tauri/icons/32x32.png)
+│   │   │   ├── [64x64.png](./api/src-tauri/icons/64x64.png)
 │   │   │   ├── [Square107x107Logo.png](./api/src-tauri/icons/Square107x107Logo.png)
 │   │   │   ├── [Square142x142Logo.png](./api/src-tauri/icons/Square142x142Logo.png)
 │   │   │   ├── [Square150x150Logo.png](./api/src-tauri/icons/Square150x150Logo.png)
@@ -285,6 +417,7 @@
 │   │   │   ├── [Square71x71Logo.png](./api/src-tauri/icons/Square71x71Logo.png)
 │   │   │   ├── [Square89x89Logo.png](./api/src-tauri/icons/Square89x89Logo.png)
 │   │   │   ├── [StoreLogo.png](./api/src-tauri/icons/StoreLogo.png)
+│   │   │   ├── [create-icons.sh](./api/src-tauri/icons/create-icons.sh)
 │   │   │   ├── [icon.icns](./api/src-tauri/icons/icon.icns)
 │   │   │   ├── [icon.ico](./api/src-tauri/icons/icon.ico)
 │   │   │   └── [icon.png](./api/src-tauri/icons/icon.png)
@@ -311,26 +444,92 @@
 │   └── [tsconfig.json](./api/tsconfig.json)
 ├── boilerplate/
 │   ├── docs/
-│   │   ├── api/
-│   │   │   ├── [ADDING.md](./boilerplate/docs/api/ADDING.md)
-│   │   │   ├── [API.md](./boilerplate/docs/api/API.md)
-│   │   │   ├── [ATOMIC.md](./boilerplate/docs/api/ATOMIC.md)
-│   │   │   ├── [ATOMS.md](./boilerplate/docs/api/ATOMS.md)
-│   │   │   ├── [CONVENTIONS.md](./boilerplate/docs/api/CONVENTIONS.md)
-│   │   │   ├── [MOLECULES.md](./boilerplate/docs/api/MOLECULES.md)
-│   │   │   ├── [ORGANISMS.md](./boilerplate/docs/api/ORGANISMS.md)
-│   │   │   ├── [PAGES.md](./boilerplate/docs/api/PAGES.md)
-│   │   │   ├── [README.md](./boilerplate/docs/api/README.md)
-│   │   │   ├── [REFERENCES.md](./boilerplate/docs/api/REFERENCES.md)
-│   │   │   └── [TEMPLATES.md](./boilerplate/docs/api/TEMPLATES.md)
-│   │   ├── [ARCHITECTURE.md](./boilerplate/docs/ARCHITECTURE.md)
-│   │   ├── [CONTRIBUTING.md](./boilerplate/docs/CONTRIBUTING.md)
-│   │   ├── [DOWNLOADS.md](./boilerplate/docs/DOWNLOADS.md)
-│   │   ├── [PACKAGING.md](./boilerplate/docs/PACKAGING.md)
-│   │   ├── [ROADMAP.md](./boilerplate/docs/ROADMAP.md)
-│   │   └── [SETUP.md](./boilerplate/docs/SETUP.md)
+│   │   ├── 00-overview/
+│   │   │   └── [README.md](./boilerplate/docs/00-overview/README.md)
+│   │   ├── 01-requirements/
+│   │   │   ├── [README.md](./boilerplate/docs/01-requirements/README.md)
+│   │   │   ├── [functional-requirements.md](./boilerplate/docs/01-requirements/functional-requirements.md)
+│   │   │   └── [non-functional-requirements.md](./boilerplate/docs/01-requirements/non-functional-requirements.md)
+│   │   ├── 02-features/
+│   │   │   ├── api/
+│   │   │   │   ├── [ADDING.md](./boilerplate/docs/02-features/api/ADDING.md)
+│   │   │   │   ├── [API.md](./boilerplate/docs/02-features/api/API.md)
+│   │   │   │   ├── [ATOMIC.md](./boilerplate/docs/02-features/api/ATOMIC.md)
+│   │   │   │   ├── [ATOMS.md](./boilerplate/docs/02-features/api/ATOMS.md)
+│   │   │   │   ├── [CONVENTIONS.md](./boilerplate/docs/02-features/api/CONVENTIONS.md)
+│   │   │   │   ├── [MOLECULES.md](./boilerplate/docs/02-features/api/MOLECULES.md)
+│   │   │   │   ├── [ORGANISMS.md](./boilerplate/docs/02-features/api/ORGANISMS.md)
+│   │   │   │   ├── [PAGES.md](./boilerplate/docs/02-features/api/PAGES.md)
+│   │   │   │   ├── [README.md](./boilerplate/docs/02-features/api/README.md)
+│   │   │   │   ├── [REFERENCES.md](./boilerplate/docs/02-features/api/REFERENCES.md)
+│   │   │   │   └── [TEMPLATES.md](./boilerplate/docs/02-features/api/TEMPLATES.md)
+│   │   │   └── [README.md](./boilerplate/docs/02-features/README.md)
+│   │   ├── 03-user-stories/
+│   │   │   └── [README.md](./boilerplate/docs/03-user-stories/README.md)
+│   │   ├── 04-architecture/
+│   │   │   └── [README.md](./boilerplate/docs/04-architecture/README.md)
+│   │   ├── 05-data-model/
+│   │   │   └── [README.md](./boilerplate/docs/05-data-model/README.md)
+│   │   ├── 06-api-specification/
+│   │   │   └── [README.md](./boilerplate/docs/06-api-specification/README.md)
+│   │   ├── 07-ui-ux-design/
+│   │   │   ├── brand/
+│   │   │   │   ├── images/
+│   │   │   │   │   ├── [logo-mark-dark.png](./boilerplate/docs/07-ui-ux-design/brand/images/logo-mark-dark.png)
+│   │   │   │   │   ├── [logo-mark-light.png](./boilerplate/docs/07-ui-ux-design/brand/images/logo-mark-light.png)
+│   │   │   │   │   ├── [logo-text-dark.png](./boilerplate/docs/07-ui-ux-design/brand/images/logo-text-dark.png)
+│   │   │   │   │   └── [logo-text-light.png](./boilerplate/docs/07-ui-ux-design/brand/images/logo-text-light.png)
+│   │   │   │   ├── svg/
+│   │   │   │   │   ├── [logo-mark-dark.svg](./boilerplate/docs/07-ui-ux-design/brand/svg/logo-mark-dark.svg)
+│   │   │   │   │   ├── [logo-mark-light.svg](./boilerplate/docs/07-ui-ux-design/brand/svg/logo-mark-light.svg)
+│   │   │   │   │   ├── [logo-text-dark.svg](./boilerplate/docs/07-ui-ux-design/brand/svg/logo-text-dark.svg)
+│   │   │   │   │   └── [logo-text-light.svg](./boilerplate/docs/07-ui-ux-design/brand/svg/logo-text-light.svg)
+│   │   │   │   └── [brand.sh](./boilerplate/docs/07-ui-ux-design/brand/brand.sh)
+│   │   │   ├── system/
+│   │   │   │   ├── [accessibility.md](./boilerplate/docs/07-ui-ux-design/system/accessibility.md)
+│   │   │   │   ├── [animation.md](./boilerplate/docs/07-ui-ux-design/system/animation.md)
+│   │   │   │   ├── [components.md](./boilerplate/docs/07-ui-ux-design/system/components.md)
+│   │   │   │   ├── [design-tokens.md](./boilerplate/docs/07-ui-ux-design/system/design-tokens.md)
+│   │   │   │   ├── [iconography.md](./boilerplate/docs/07-ui-ux-design/system/iconography.md)
+│   │   │   │   ├── [layout.md](./boilerplate/docs/07-ui-ux-design/system/layout.md)
+│   │   │   │   ├── [responsive.md](./boilerplate/docs/07-ui-ux-design/system/responsive.md)
+│   │   │   │   ├── [screens.md](./boilerplate/docs/07-ui-ux-design/system/screens.md)
+│   │   │   │   └── [states.md](./boilerplate/docs/07-ui-ux-design/system/states.md)
+│   │   │   └── [README.md](./boilerplate/docs/07-ui-ux-design/README.md)
+│   │   ├── 08-tech-stack/
+│   │   │   └── [README.md](./boilerplate/docs/08-tech-stack/README.md)
+│   │   ├── 09-testing-strategy/
+│   │   │   └── [README.md](./boilerplate/docs/09-testing-strategy/README.md)
+│   │   ├── 10-implementation-plan/
+│   │   │   └── [README.md](./boilerplate/docs/10-implementation-plan/README.md)
+│   │   ├── 11-deployment/
+│   │   │   └── [README.md](./boilerplate/docs/11-deployment/README.md)
+│   │   ├── 12-operations/
+│   │   │   └── [README.md](./boilerplate/docs/12-operations/README.md)
+│   │   ├── [00-overview.md](./boilerplate/docs/00-overview.md)
+│   │   ├── [01-requirements.md](./boilerplate/docs/01-requirements.md)
+│   │   ├── [02-features.md](./boilerplate/docs/02-features.md)
+│   │   ├── [03-user-stories.md](./boilerplate/docs/03-user-stories.md)
+│   │   ├── [04-architecture.md](./boilerplate/docs/04-architecture.md)
+│   │   ├── [05-data-model.md](./boilerplate/docs/05-data-model.md)
+│   │   ├── [06-api-specification.md](./boilerplate/docs/06-api-specification.md)
+│   │   ├── [07-ui-ux-design.md](./boilerplate/docs/07-ui-ux-design.md)
+│   │   ├── [08-tech-stack.md](./boilerplate/docs/08-tech-stack.md)
+│   │   ├── [09-testing-strategy.md](./boilerplate/docs/09-testing-strategy.md)
+│   │   ├── [10-implementation-plan.md](./boilerplate/docs/10-implementation-plan.md)
+│   │   ├── [11-deployment.md](./boilerplate/docs/11-deployment.md)
+│   │   ├── [12-operations.md](./boilerplate/docs/12-operations.md)
+│   │   └── [README.md](./boilerplate/docs/README.md)
 │   ├── e2e/
-│   │   └── [index.spec.ts](./boilerplate/e2e/index.spec.ts)
+│   │   ├── screenshots/
+│   │   │   ├── [about.png](./boilerplate/e2e/screenshots/about.png)
+│   │   │   ├── [downloads.png](./boilerplate/e2e/screenshots/downloads.png)
+│   │   │   └── [version.png](./boilerplate/e2e/screenshots/version.png)
+│   │   ├── [about.spec.ts](./boilerplate/e2e/about.spec.ts)
+│   │   ├── [downloads.spec.ts](./boilerplate/e2e/downloads.spec.ts)
+│   │   ├── [home.spec.ts](./boilerplate/e2e/home.spec.ts)
+│   │   ├── [index.spec.ts](./boilerplate/e2e/index.spec.ts)
+│   │   └── [version.spec.ts](./boilerplate/e2e/version.spec.ts)
 │   ├── public/
 │   │   ├── icons/
 │   │   │   ├── [icon-128x128.png](./boilerplate/public/icons/icon-128x128.png)
@@ -338,18 +537,19 @@
 │   │   │   ├── [icon-152x152.png](./boilerplate/public/icons/icon-152x152.png)
 │   │   │   ├── [icon-16x16.png](./boilerplate/public/icons/icon-16x16.png)
 │   │   │   ├── [icon-180x180.png](./boilerplate/public/icons/icon-180x180.png)
-│   │   │   ├── [icon-192.png](./boilerplate/public/icons/icon-192.png)
 │   │   │   ├── [icon-192x192.png](./boilerplate/public/icons/icon-192x192.png)
 │   │   │   ├── [icon-256x256.png](./boilerplate/public/icons/icon-256x256.png)
 │   │   │   ├── [icon-32x32.png](./boilerplate/public/icons/icon-32x32.png)
 │   │   │   ├── [icon-384x384.png](./boilerplate/public/icons/icon-384x384.png)
 │   │   │   ├── [icon-48x48.png](./boilerplate/public/icons/icon-48x48.png)
-│   │   │   ├── [icon-512.png](./boilerplate/public/icons/icon-512.png)
 │   │   │   ├── [icon-512x512.png](./boilerplate/public/icons/icon-512x512.png)
 │   │   │   ├── [icon-64x64.png](./boilerplate/public/icons/icon-64x64.png)
 │   │   │   ├── [icon-72x72.png](./boilerplate/public/icons/icon-72x72.png)
 │   │   │   ├── [icon-96x96.png](./boilerplate/public/icons/icon-96x96.png)
 │   │   │   └── [icon.svg](./boilerplate/public/icons/icon.svg)
+│   │   ├── og/
+│   │   │   ├── [og.png](./boilerplate/public/og/og.png)
+│   │   │   └── [og.svg](./boilerplate/public/og/og.svg)
 │   │   ├── [apple-touch-icon.png](./boilerplate/public/apple-touch-icon.png)
 │   │   ├── [favicon.ico](./boilerplate/public/favicon.ico)
 │   │   ├── [manifest.json](./boilerplate/public/manifest.json)
@@ -359,10 +559,6 @@
 │   ├── src/
 │   │   ├── app/
 │   │   │   ├── (app)/
-│   │   │   │   ├── colors/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [colors-page.test.tsx](./boilerplate/src/app/(app)/colors/__tests__/colors-page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./boilerplate/src/app/(app)/colors/page.tsx)
 │   │   │   │   └── [page.tsx](./boilerplate/src/app/(app)/page.tsx)
 │   │   │   ├── (templates)/
 │   │   │   │   ├── app/
@@ -3096,56 +3292,6 @@
 │   │   │   │   │   └── [index.ts](./boilerplate/src/components/organisms/travel/index.ts)
 │   │   │   │   └── [index.ts](./boilerplate/src/components/organisms/index.ts)
 │   │   │   ├── pages/
-│   │   │   │   ├── colors/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [Colors.test.tsx](./boilerplate/src/components/pages/colors/__tests__/Colors.test.tsx)
-│   │   │   │   │   ├── hooks/
-│   │   │   │   │   │   └── [useClipboard.ts](./boilerplate/src/components/pages/colors/hooks/useClipboard.ts)
-│   │   │   │   │   ├── tools/
-│   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   ├── [ColorAdjuster.test.tsx](./boilerplate/src/components/pages/colors/tools/__tests__/ColorAdjuster.test.tsx)
-│   │   │   │   │   │   │   ├── [ColorBlindnessSimulator.test.tsx](./boilerplate/src/components/pages/colors/tools/__tests__/ColorBlindnessSimulator.test.tsx)
-│   │   │   │   │   │   │   ├── [ColorConverter.test.tsx](./boilerplate/src/components/pages/colors/tools/__tests__/ColorConverter.test.tsx)
-│   │   │   │   │   │   │   ├── [ColorMixer.test.tsx](./boilerplate/src/components/pages/colors/tools/__tests__/ColorMixer.test.tsx)
-│   │   │   │   │   │   │   ├── [ColorSchemes.test.tsx](./boilerplate/src/components/pages/colors/tools/__tests__/ColorSchemes.test.tsx)
-│   │   │   │   │   │   │   ├── [ColorTemperature.test.tsx](./boilerplate/src/components/pages/colors/tools/__tests__/ColorTemperature.test.tsx)
-│   │   │   │   │   │   │   ├── [ColorWheel.test.tsx](./boilerplate/src/components/pages/colors/tools/__tests__/ColorWheel.test.tsx)
-│   │   │   │   │   │   │   ├── [ColorsTool.test.tsx](./boilerplate/src/components/pages/colors/tools/__tests__/ColorsTool.test.tsx)
-│   │   │   │   │   │   │   ├── [ContrastChecker.test.tsx](./boilerplate/src/components/pages/colors/tools/__tests__/ContrastChecker.test.tsx)
-│   │   │   │   │   │   │   ├── [CssScaleExporter.test.tsx](./boilerplate/src/components/pages/colors/tools/__tests__/CssScaleExporter.test.tsx)
-│   │   │   │   │   │   │   ├── [GradientBuilder.test.tsx](./boilerplate/src/components/pages/colors/tools/__tests__/GradientBuilder.test.tsx)
-│   │   │   │   │   │   │   ├── [OpacityOverlay.test.tsx](./boilerplate/src/components/pages/colors/tools/__tests__/OpacityOverlay.test.tsx)
-│   │   │   │   │   │   │   ├── [PaletteGenerator.test.tsx](./boilerplate/src/components/pages/colors/tools/__tests__/PaletteGenerator.test.tsx)
-│   │   │   │   │   │   │   ├── [RandomColor.test.tsx](./boilerplate/src/components/pages/colors/tools/__tests__/RandomColor.test.tsx)
-│   │   │   │   │   │   │   ├── [ShadesTints.test.tsx](./boilerplate/src/components/pages/colors/tools/__tests__/ShadesTints.test.tsx)
-│   │   │   │   │   │   │   ├── [Swatch.test.tsx](./boilerplate/src/components/pages/colors/tools/__tests__/Swatch.test.tsx)
-│   │   │   │   │   │   │   ├── [TheoryNote.test.tsx](./boilerplate/src/components/pages/colors/tools/__tests__/TheoryNote.test.tsx)
-│   │   │   │   │   │   │   └── [TintShadeTone.test.tsx](./boilerplate/src/components/pages/colors/tools/__tests__/TintShadeTone.test.tsx)
-│   │   │   │   │   │   ├── [ColorAdjuster.tsx](./boilerplate/src/components/pages/colors/tools/ColorAdjuster.tsx)
-│   │   │   │   │   │   ├── [ColorBlindnessSimulator.tsx](./boilerplate/src/components/pages/colors/tools/ColorBlindnessSimulator.tsx)
-│   │   │   │   │   │   ├── [ColorConverter.tsx](./boilerplate/src/components/pages/colors/tools/ColorConverter.tsx)
-│   │   │   │   │   │   ├── [ColorMixer.tsx](./boilerplate/src/components/pages/colors/tools/ColorMixer.tsx)
-│   │   │   │   │   │   ├── [ColorSchemes.tsx](./boilerplate/src/components/pages/colors/tools/ColorSchemes.tsx)
-│   │   │   │   │   │   ├── [ColorTemperature.tsx](./boilerplate/src/components/pages/colors/tools/ColorTemperature.tsx)
-│   │   │   │   │   │   ├── [ColorWheel.tsx](./boilerplate/src/components/pages/colors/tools/ColorWheel.tsx)
-│   │   │   │   │   │   ├── [ColorsTool.tsx](./boilerplate/src/components/pages/colors/tools/ColorsTool.tsx)
-│   │   │   │   │   │   ├── [ContrastChecker.tsx](./boilerplate/src/components/pages/colors/tools/ContrastChecker.tsx)
-│   │   │   │   │   │   ├── [CopyRow.tsx](./boilerplate/src/components/pages/colors/tools/CopyRow.tsx)
-│   │   │   │   │   │   ├── [CssScaleExporter.tsx](./boilerplate/src/components/pages/colors/tools/CssScaleExporter.tsx)
-│   │   │   │   │   │   ├── [GradientBuilder.tsx](./boilerplate/src/components/pages/colors/tools/GradientBuilder.tsx)
-│   │   │   │   │   │   ├── [OpacityOverlay.tsx](./boilerplate/src/components/pages/colors/tools/OpacityOverlay.tsx)
-│   │   │   │   │   │   ├── [PaletteGenerator.tsx](./boilerplate/src/components/pages/colors/tools/PaletteGenerator.tsx)
-│   │   │   │   │   │   ├── [RandomColor.tsx](./boilerplate/src/components/pages/colors/tools/RandomColor.tsx)
-│   │   │   │   │   │   ├── [ShadesTints.tsx](./boilerplate/src/components/pages/colors/tools/ShadesTints.tsx)
-│   │   │   │   │   │   ├── [Swatch.tsx](./boilerplate/src/components/pages/colors/tools/Swatch.tsx)
-│   │   │   │   │   │   ├── [TheoryNote.tsx](./boilerplate/src/components/pages/colors/tools/TheoryNote.tsx)
-│   │   │   │   │   │   └── [TintShadeTone.tsx](./boilerplate/src/components/pages/colors/tools/TintShadeTone.tsx)
-│   │   │   │   │   ├── utils/
-│   │   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   │   └── [colors.test.ts](./boilerplate/src/components/pages/colors/utils/__tests__/colors.test.ts)
-│   │   │   │   │   │   └── [colors.ts](./boilerplate/src/components/pages/colors/utils/colors.ts)
-│   │   │   │   │   ├── [Colors.tsx](./boilerplate/src/components/pages/colors/Colors.tsx)
-│   │   │   │   │   └── [index.ts](./boilerplate/src/components/pages/colors/index.ts)
 │   │   │   │   └── home/
 │   │   │   │       ├── __tests__/
 │   │   │   │       │   └── [home.test.tsx](./boilerplate/src/components/pages/home/__tests__/home.test.tsx)
@@ -3754,7 +3900,6 @@
 │   │   │   │   └── [SWProvider.test.tsx](./boilerplate/src/providers/__tests__/SWProvider.test.tsx)
 │   │   │   └── [SWProvider.tsx](./boilerplate/src/providers/SWProvider.tsx)
 │   │   └── styles/
-│   │       ├── [base.css](./boilerplate/src/styles/base.css)
 │   │       ├── [globals.css](./boilerplate/src/styles/globals.css)
 │   │       └── [themes.css](./boilerplate/src/styles/themes.css)
 │   ├── src-tauri/
@@ -3767,9 +3912,55 @@
 │   │   │       ├── [desktop-schema.json](./boilerplate/src-tauri/gen/schemas/desktop-schema.json)
 │   │   │       └── [macOS-schema.json](./boilerplate/src-tauri/gen/schemas/macOS-schema.json)
 │   │   ├── icons/
+│   │   │   ├── android/
+│   │   │   │   ├── mipmap-anydpi-v26/
+│   │   │   │   │   └── [ic_launcher.xml](./boilerplate/src-tauri/icons/android/mipmap-anydpi-v26/ic_launcher.xml)
+│   │   │   │   ├── mipmap-hdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./boilerplate/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./boilerplate/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./boilerplate/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-mdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./boilerplate/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./boilerplate/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./boilerplate/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./boilerplate/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./boilerplate/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./boilerplate/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xxhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./boilerplate/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./boilerplate/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./boilerplate/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xxxhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./boilerplate/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./boilerplate/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./boilerplate/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png)
+│   │   │   │   └── values/
+│   │   │   │       └── [ic_launcher_background.xml](./boilerplate/src-tauri/icons/android/values/ic_launcher_background.xml)
+│   │   │   ├── ios/
+│   │   │   │   ├── [AppIcon-20x20@1x.png](./boilerplate/src-tauri/icons/ios/AppIcon-20x20@1x.png)
+│   │   │   │   ├── [AppIcon-20x20@2x-1.png](./boilerplate/src-tauri/icons/ios/AppIcon-20x20@2x-1.png)
+│   │   │   │   ├── [AppIcon-20x20@2x.png](./boilerplate/src-tauri/icons/ios/AppIcon-20x20@2x.png)
+│   │   │   │   ├── [AppIcon-20x20@3x.png](./boilerplate/src-tauri/icons/ios/AppIcon-20x20@3x.png)
+│   │   │   │   ├── [AppIcon-29x29@1x.png](./boilerplate/src-tauri/icons/ios/AppIcon-29x29@1x.png)
+│   │   │   │   ├── [AppIcon-29x29@2x-1.png](./boilerplate/src-tauri/icons/ios/AppIcon-29x29@2x-1.png)
+│   │   │   │   ├── [AppIcon-29x29@2x.png](./boilerplate/src-tauri/icons/ios/AppIcon-29x29@2x.png)
+│   │   │   │   ├── [AppIcon-29x29@3x.png](./boilerplate/src-tauri/icons/ios/AppIcon-29x29@3x.png)
+│   │   │   │   ├── [AppIcon-40x40@1x.png](./boilerplate/src-tauri/icons/ios/AppIcon-40x40@1x.png)
+│   │   │   │   ├── [AppIcon-40x40@2x-1.png](./boilerplate/src-tauri/icons/ios/AppIcon-40x40@2x-1.png)
+│   │   │   │   ├── [AppIcon-40x40@2x.png](./boilerplate/src-tauri/icons/ios/AppIcon-40x40@2x.png)
+│   │   │   │   ├── [AppIcon-40x40@3x.png](./boilerplate/src-tauri/icons/ios/AppIcon-40x40@3x.png)
+│   │   │   │   ├── [AppIcon-512@2x.png](./boilerplate/src-tauri/icons/ios/AppIcon-512@2x.png)
+│   │   │   │   ├── [AppIcon-60x60@2x.png](./boilerplate/src-tauri/icons/ios/AppIcon-60x60@2x.png)
+│   │   │   │   ├── [AppIcon-60x60@3x.png](./boilerplate/src-tauri/icons/ios/AppIcon-60x60@3x.png)
+│   │   │   │   ├── [AppIcon-76x76@1x.png](./boilerplate/src-tauri/icons/ios/AppIcon-76x76@1x.png)
+│   │   │   │   ├── [AppIcon-76x76@2x.png](./boilerplate/src-tauri/icons/ios/AppIcon-76x76@2x.png)
+│   │   │   │   └── [AppIcon-83.5x83.5@2x.png](./boilerplate/src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png)
 │   │   │   ├── [128x128.png](./boilerplate/src-tauri/icons/128x128.png)
 │   │   │   ├── [128x128@2x.png](./boilerplate/src-tauri/icons/128x128@2x.png)
+│   │   │   ├── [256x256.png](./boilerplate/src-tauri/icons/256x256.png)
 │   │   │   ├── [32x32.png](./boilerplate/src-tauri/icons/32x32.png)
+│   │   │   ├── [64x64.png](./boilerplate/src-tauri/icons/64x64.png)
 │   │   │   ├── [Square107x107Logo.png](./boilerplate/src-tauri/icons/Square107x107Logo.png)
 │   │   │   ├── [Square142x142Logo.png](./boilerplate/src-tauri/icons/Square142x142Logo.png)
 │   │   │   ├── [Square150x150Logo.png](./boilerplate/src-tauri/icons/Square150x150Logo.png)
@@ -3780,6 +3971,7 @@
 │   │   │   ├── [Square71x71Logo.png](./boilerplate/src-tauri/icons/Square71x71Logo.png)
 │   │   │   ├── [Square89x89Logo.png](./boilerplate/src-tauri/icons/Square89x89Logo.png)
 │   │   │   ├── [StoreLogo.png](./boilerplate/src-tauri/icons/StoreLogo.png)
+│   │   │   ├── [create-icons.sh](./boilerplate/src-tauri/icons/create-icons.sh)
 │   │   │   ├── [icon.icns](./boilerplate/src-tauri/icons/icon.icns)
 │   │   │   ├── [icon.ico](./boilerplate/src-tauri/icons/icon.ico)
 │   │   │   └── [icon.png](./boilerplate/src-tauri/icons/icon.png)
@@ -3804,910 +3996,8 @@
 │   ├── [playwright.config.ts](./boilerplate/playwright.config.ts)
 │   ├── [postcss.config.mjs](./boilerplate/postcss.config.mjs)
 │   └── [tsconfig.json](./boilerplate/tsconfig.json)
-├── code/
-│   ├── docs/
-│   │   ├── [ARCHITECTURE.md](./code/docs/ARCHITECTURE.md)
-│   │   ├── [CONTRIBUTING.md](./code/docs/CONTRIBUTING.md)
-│   │   ├── [DOWNLOADS.md](./code/docs/DOWNLOADS.md)
-│   │   ├── [PACKAGING.md](./code/docs/PACKAGING.md)
-│   │   └── [ROADMAP.md](./code/docs/ROADMAP.md)
-│   ├── e2e/
-│   │   ├── [about.spec.ts](./code/e2e/about.spec.ts)
-│   │   ├── [activity-bar.spec.ts](./code/e2e/activity-bar.spec.ts)
-│   │   ├── [file-explorer.spec.ts](./code/e2e/file-explorer.spec.ts)
-│   │   ├── [global-search.spec.ts](./code/e2e/global-search.spec.ts)
-│   │   ├── [home.spec.ts](./code/e2e/home.spec.ts)
-│   │   ├── [navigation.spec.ts](./code/e2e/navigation.spec.ts)
-│   │   ├── [responsive.spec.ts](./code/e2e/responsive.spec.ts)
-│   │   ├── [status-bar.spec.ts](./code/e2e/status-bar.spec.ts)
-│   │   └── [version.spec.ts](./code/e2e/version.spec.ts)
-│   ├── public/
-│   │   ├── icons/
-│   │   │   ├── [icon-128x128.png](./code/public/icons/icon-128x128.png)
-│   │   │   ├── [icon-144x144.png](./code/public/icons/icon-144x144.png)
-│   │   │   ├── [icon-152x152.png](./code/public/icons/icon-152x152.png)
-│   │   │   ├── [icon-16x16.png](./code/public/icons/icon-16x16.png)
-│   │   │   ├── [icon-180x180.png](./code/public/icons/icon-180x180.png)
-│   │   │   ├── [icon-192x192.png](./code/public/icons/icon-192x192.png)
-│   │   │   ├── [icon-256x256.png](./code/public/icons/icon-256x256.png)
-│   │   │   ├── [icon-32x32.png](./code/public/icons/icon-32x32.png)
-│   │   │   ├── [icon-384x384.png](./code/public/icons/icon-384x384.png)
-│   │   │   ├── [icon-48x48.png](./code/public/icons/icon-48x48.png)
-│   │   │   ├── [icon-512x512.png](./code/public/icons/icon-512x512.png)
-│   │   │   ├── [icon-64x64.png](./code/public/icons/icon-64x64.png)
-│   │   │   ├── [icon-72x72.png](./code/public/icons/icon-72x72.png)
-│   │   │   ├── [icon-96x96.png](./code/public/icons/icon-96x96.png)
-│   │   │   └── [icon.svg](./code/public/icons/icon.svg)
-│   │   ├── [apple-touch-icon.png](./code/public/apple-touch-icon.png)
-│   │   ├── [favicon.ico](./code/public/favicon.ico)
-│   │   ├── [manifest.json](./code/public/manifest.json)
-│   │   ├── [robots.txt](./code/public/robots.txt)
-│   │   ├── [sitemap.xml](./code/public/sitemap.xml)
-│   │   └── [sw.js](./code/public/sw.js)
-│   ├── src/
-│   │   ├── app/
-│   │   │   ├── (auth)/
-│   │   │   │   ├── forget-password/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./code/src/app/(auth)/forget-password/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./code/src/app/(auth)/forget-password/page.tsx)
-│   │   │   │   ├── profile/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./code/src/app/(auth)/profile/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./code/src/app/(auth)/profile/page.tsx)
-│   │   │   │   ├── reset-password/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./code/src/app/(auth)/reset-password/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./code/src/app/(auth)/reset-password/page.tsx)
-│   │   │   │   ├── sign-in/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./code/src/app/(auth)/sign-in/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./code/src/app/(auth)/sign-in/page.tsx)
-│   │   │   │   └── sign-up/
-│   │   │   │       ├── __tests__/
-│   │   │   │       │   └── [page.test.tsx](./code/src/app/(auth)/sign-up/__tests__/page.test.tsx)
-│   │   │   │       └── [page.tsx](./code/src/app/(auth)/sign-up/page.tsx)
-│   │   │   ├── (info)/
-│   │   │   │   ├── about/
-│   │   │   │   │   └── [page.tsx](./code/src/app/(info)/about/page.tsx)
-│   │   │   │   ├── downloads/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./code/src/app/(info)/downloads/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./code/src/app/(info)/downloads/page.tsx)
-│   │   │   │   └── version/
-│   │   │   │       └── [page.tsx](./code/src/app/(info)/version/page.tsx)
-│   │   │   ├── __tests__/
-│   │   │   │   ├── [about-page.test.tsx](./code/src/app/__tests__/about-page.test.tsx)
-│   │   │   │   ├── [default.test.tsx](./code/src/app/__tests__/default.test.tsx)
-│   │   │   │   ├── [error.test.tsx](./code/src/app/__tests__/error.test.tsx)
-│   │   │   │   ├── [forbidden.test.tsx](./code/src/app/__tests__/forbidden.test.tsx)
-│   │   │   │   ├── [global-error.test.tsx](./code/src/app/__tests__/global-error.test.tsx)
-│   │   │   │   ├── [layout.test.tsx](./code/src/app/__tests__/layout.test.tsx)
-│   │   │   │   ├── [loading.test.tsx](./code/src/app/__tests__/loading.test.tsx)
-│   │   │   │   ├── [not-found.test.tsx](./code/src/app/__tests__/not-found.test.tsx)
-│   │   │   │   ├── [page.test.tsx](./code/src/app/__tests__/page.test.tsx)
-│   │   │   │   ├── [robots.test.ts](./code/src/app/__tests__/robots.test.ts)
-│   │   │   │   ├── [template.test.tsx](./code/src/app/__tests__/template.test.tsx)
-│   │   │   │   ├── [unauthorized.test.tsx](./code/src/app/__tests__/unauthorized.test.tsx)
-│   │   │   │   └── [version-page.test.tsx](./code/src/app/__tests__/version-page.test.tsx)
-│   │   │   ├── [default.tsx](./code/src/app/default.tsx)
-│   │   │   ├── [error.tsx](./code/src/app/error.tsx)
-│   │   │   ├── [favicon.ico](./code/src/app/favicon.ico)
-│   │   │   ├── [forbidden.tsx](./code/src/app/forbidden.tsx)
-│   │   │   ├── [global-error.tsx](./code/src/app/global-error.tsx)
-│   │   │   ├── [layout.tsx](./code/src/app/layout.tsx)
-│   │   │   ├── [loading.tsx](./code/src/app/loading.tsx)
-│   │   │   ├── [not-found.tsx](./code/src/app/not-found.tsx)
-│   │   │   ├── [page.tsx](./code/src/app/page.tsx)
-│   │   │   ├── [robots.ts](./code/src/app/robots.ts)
-│   │   │   ├── [template.tsx](./code/src/app/template.tsx)
-│   │   │   └── [unauthorized.tsx](./code/src/app/unauthorized.tsx)
-│   │   ├── components/
-│   │   │   ├── __tests__/
-│   │   │   │   ├── [ActivityBar.test.tsx](./code/src/components/__tests__/ActivityBar.test.tsx)
-│   │   │   │   ├── [Breadcrumb.test.tsx](./code/src/components/__tests__/Breadcrumb.test.tsx)
-│   │   │   │   ├── [CodeEditor.test.tsx](./code/src/components/__tests__/CodeEditor.test.tsx)
-│   │   │   │   ├── [ConfirmModal.test.tsx](./code/src/components/__tests__/ConfirmModal.test.tsx)
-│   │   │   │   ├── [ContextMenu.test.tsx](./code/src/components/__tests__/ContextMenu.test.tsx)
-│   │   │   │   ├── [EmptyExplorer.test.tsx](./code/src/components/__tests__/EmptyExplorer.test.tsx)
-│   │   │   │   ├── [ErrorModal.test.tsx](./code/src/components/__tests__/ErrorModal.test.tsx)
-│   │   │   │   ├── [ExplorerToolbar.test.tsx](./code/src/components/__tests__/ExplorerToolbar.test.tsx)
-│   │   │   │   ├── [FileTree.test.tsx](./code/src/components/__tests__/FileTree.test.tsx)
-│   │   │   │   ├── [GlobalSearchPanel.test.tsx](./code/src/components/__tests__/GlobalSearchPanel.test.tsx)
-│   │   │   │   ├── [GoToLinePrompt.test.tsx](./code/src/components/__tests__/GoToLinePrompt.test.tsx)
-│   │   │   │   ├── [InputPrompt.test.tsx](./code/src/components/__tests__/InputPrompt.test.tsx)
-│   │   │   │   ├── [QuickOpen.test.tsx](./code/src/components/__tests__/QuickOpen.test.tsx)
-│   │   │   │   ├── [SWProvider.test.tsx](./code/src/components/__tests__/SWProvider.test.tsx)
-│   │   │   │   ├── [ShortcutsModal.test.tsx](./code/src/components/__tests__/ShortcutsModal.test.tsx)
-│   │   │   │   ├── [StatusBar.test.tsx](./code/src/components/__tests__/StatusBar.test.tsx)
-│   │   │   │   ├── [TabBar.test.tsx](./code/src/components/__tests__/TabBar.test.tsx)
-│   │   │   │   ├── [TreeNode.test.tsx](./code/src/components/__tests__/TreeNode.test.tsx)
-│   │   │   │   └── [WelcomeScreen.test.tsx](./code/src/components/__tests__/WelcomeScreen.test.tsx)
-│   │   │   ├── templates/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   ├── [AboutTemplate.test.tsx](./code/src/components/templates/__tests__/AboutTemplate.test.tsx)
-│   │   │   │   │   ├── [DownloadsTemplate.test.tsx](./code/src/components/templates/__tests__/DownloadsTemplate.test.tsx)
-│   │   │   │   │   ├── [ErrorTemplate.test.tsx](./code/src/components/templates/__tests__/ErrorTemplate.test.tsx)
-│   │   │   │   │   └── [VersionTemplate.test.tsx](./code/src/components/templates/__tests__/VersionTemplate.test.tsx)
-│   │   │   │   ├── [AboutTemplate.tsx](./code/src/components/templates/AboutTemplate.tsx)
-│   │   │   │   ├── [DownloadsTemplate.tsx](./code/src/components/templates/DownloadsTemplate.tsx)
-│   │   │   │   ├── [ErrorTemplate.tsx](./code/src/components/templates/ErrorTemplate.tsx)
-│   │   │   │   └── [VersionTemplate.tsx](./code/src/components/templates/VersionTemplate.tsx)
-│   │   │   ├── [ActivityBar.tsx](./code/src/components/ActivityBar.tsx)
-│   │   │   ├── [Breadcrumb.tsx](./code/src/components/Breadcrumb.tsx)
-│   │   │   ├── [CodeEditor.tsx](./code/src/components/CodeEditor.tsx)
-│   │   │   ├── [ConfirmModal.tsx](./code/src/components/ConfirmModal.tsx)
-│   │   │   ├── [ContextMenu.tsx](./code/src/components/ContextMenu.tsx)
-│   │   │   ├── [EmptyExplorer.tsx](./code/src/components/EmptyExplorer.tsx)
-│   │   │   ├── [ErrorModal.tsx](./code/src/components/ErrorModal.tsx)
-│   │   │   ├── [ExplorerToolbar.tsx](./code/src/components/ExplorerToolbar.tsx)
-│   │   │   ├── [FileTree.tsx](./code/src/components/FileTree.tsx)
-│   │   │   ├── [GlobalSearchPanel.tsx](./code/src/components/GlobalSearchPanel.tsx)
-│   │   │   ├── [GoToLinePrompt.tsx](./code/src/components/GoToLinePrompt.tsx)
-│   │   │   ├── [InputPrompt.tsx](./code/src/components/InputPrompt.tsx)
-│   │   │   ├── [QuickOpen.tsx](./code/src/components/QuickOpen.tsx)
-│   │   │   ├── [SWProvider.tsx](./code/src/components/SWProvider.tsx)
-│   │   │   ├── [ShortcutsModal.tsx](./code/src/components/ShortcutsModal.tsx)
-│   │   │   ├── [StatusBar.tsx](./code/src/components/StatusBar.tsx)
-│   │   │   ├── [TabBar.tsx](./code/src/components/TabBar.tsx)
-│   │   │   ├── [TreeNode.tsx](./code/src/components/TreeNode.tsx)
-│   │   │   └── [WelcomeScreen.tsx](./code/src/components/WelcomeScreen.tsx)
-│   │   ├── hooks/
-│   │   │   ├── __tests__/
-│   │   │   │   ├── [useCodePage.dialogUnavailable.test.ts](./code/src/hooks/__tests__/useCodePage.dialogUnavailable.test.ts)
-│   │   │   │   ├── [useCodePage.fsUnavailable.test.ts](./code/src/hooks/__tests__/useCodePage.fsUnavailable.test.ts)
-│   │   │   │   ├── [useCodePage.test.ts](./code/src/hooks/__tests__/useCodePage.test.ts)
-│   │   │   │   ├── [useErrorModal.test.ts](./code/src/hooks/__tests__/useErrorModal.test.ts)
-│   │   │   │   └── [useSWRegister.test.ts](./code/src/hooks/__tests__/useSWRegister.test.ts)
-│   │   │   ├── [useCodePage.ts](./code/src/hooks/useCodePage.ts)
-│   │   │   ├── [useErrorModal.ts](./code/src/hooks/useErrorModal.ts)
-│   │   │   └── [useSWRegister.ts](./code/src/hooks/useSWRegister.ts)
-│   │   ├── routes/
-│   │   │   ├── __tests__/
-│   │   │   │   ├── [CodePage.test.tsx](./code/src/routes/__tests__/CodePage.test.tsx)
-│   │   │   │   └── [ErrorPage.test.tsx](./code/src/routes/__tests__/ErrorPage.test.tsx)
-│   │   │   ├── [CodePage.tsx](./code/src/routes/CodePage.tsx)
-│   │   │   └── [ErrorPage.tsx](./code/src/routes/ErrorPage.tsx)
-│   │   ├── styles/
-│   │   │   ├── [base.css](./code/src/styles/base.css)
-│   │   │   ├── [globals.css](./code/src/styles/globals.css)
-│   │   │   └── [themes.css](./code/src/styles/themes.css)
-│   │   └── utils/
-│   │       ├── __tests__/
-│   │       │   ├── [editor-languages.test.tsx](./code/src/utils/__tests__/editor-languages.test.tsx)
-│   │       │   ├── [tree.test.ts](./code/src/utils/__tests__/tree.test.ts)
-│   │       │   └── [try-catch.test.ts](./code/src/utils/__tests__/try-catch.test.ts)
-│   │       ├── [editor-languages.tsx](./code/src/utils/editor-languages.tsx)
-│   │       ├── [tree.ts](./code/src/utils/tree.ts)
-│   │       └── [try-catch.ts](./code/src/utils/try-catch.ts)
-│   ├── src-tauri/
-│   │   ├── capabilities/
-│   │   │   └── [default.json](./code/src-tauri/capabilities/default.json)
-│   │   ├── icons/
-│   │   │   ├── [128x128.png](./code/src-tauri/icons/128x128.png)
-│   │   │   ├── [128x128@2x.png](./code/src-tauri/icons/128x128@2x.png)
-│   │   │   ├── [32x32.png](./code/src-tauri/icons/32x32.png)
-│   │   │   ├── [Square107x107Logo.png](./code/src-tauri/icons/Square107x107Logo.png)
-│   │   │   ├── [Square142x142Logo.png](./code/src-tauri/icons/Square142x142Logo.png)
-│   │   │   ├── [Square150x150Logo.png](./code/src-tauri/icons/Square150x150Logo.png)
-│   │   │   ├── [Square284x284Logo.png](./code/src-tauri/icons/Square284x284Logo.png)
-│   │   │   ├── [Square30x30Logo.png](./code/src-tauri/icons/Square30x30Logo.png)
-│   │   │   ├── [Square310x310Logo.png](./code/src-tauri/icons/Square310x310Logo.png)
-│   │   │   ├── [Square44x44Logo.png](./code/src-tauri/icons/Square44x44Logo.png)
-│   │   │   ├── [Square71x71Logo.png](./code/src-tauri/icons/Square71x71Logo.png)
-│   │   │   ├── [Square89x89Logo.png](./code/src-tauri/icons/Square89x89Logo.png)
-│   │   │   ├── [StoreLogo.png](./code/src-tauri/icons/StoreLogo.png)
-│   │   │   ├── [icon.icns](./code/src-tauri/icons/icon.icns)
-│   │   │   ├── [icon.ico](./code/src-tauri/icons/icon.ico)
-│   │   │   └── [icon.png](./code/src-tauri/icons/icon.png)
-│   │   ├── src/
-│   │   │   ├── [lib.rs](./code/src-tauri/src/lib.rs)
-│   │   │   └── [main.rs](./code/src-tauri/src/main.rs)
-│   │   ├── [Cargo.lock](./code/src-tauri/Cargo.lock)
-│   │   ├── [Cargo.toml](./code/src-tauri/Cargo.toml)
-│   │   ├── [build.rs](./code/src-tauri/build.rs)
-│   │   └── [tauri.conf.json](./code/src-tauri/tauri.conf.json)
-│   ├── [AGENTS.md](./code/AGENTS.md)
-│   ├── [Dockerfile](./code/Dockerfile)
-│   ├── [LICENSE](./code/LICENSE)
-│   ├── [README.md](./code/README.md)
-│   ├── [TREE.md](./code/TREE.md)
-│   ├── [docker-compose.yaml](./code/docker-compose.yaml)
-│   ├── [eslint.config.mts](./code/eslint.config.mts)
-│   ├── [jest.config.ts](./code/jest.config.ts)
-│   ├── [jest.setup.ts](./code/jest.setup.ts)
-│   ├── [next.config.ts](./code/next.config.ts)
-│   ├── [package.json](./code/package.json)
-│   ├── [playwright.config.ts](./code/playwright.config.ts)
-│   ├── [postcss.config.mjs](./code/postcss.config.mjs)
-│   └── [tsconfig.json](./code/tsconfig.json)
-├── database/
-│   ├── docs/
-│   │   ├── other/
-│   │   │   └── [DATABASES.md](./database/docs/other/DATABASES.md)
-│   │   ├── [ARCHITECTURE.md](./database/docs/ARCHITECTURE.md)
-│   │   ├── [CONTRIBUTING.md](./database/docs/CONTRIBUTING.md)
-│   │   ├── [DOWNLOADS.md](./database/docs/DOWNLOADS.md)
-│   │   ├── [PACKAGING.md](./database/docs/PACKAGING.md)
-│   │   └── [ROADMAP.md](./database/docs/ROADMAP.md)
-│   ├── e2e/
-│   │   ├── [about.spec.ts](./database/e2e/about.spec.ts)
-│   │   ├── [connection-management.spec.ts](./database/e2e/connection-management.spec.ts)
-│   │   ├── [db-page.spec.ts](./database/e2e/db-page.spec.ts)
-│   │   ├── [home.spec.ts](./database/e2e/home.spec.ts)
-│   │   ├── [navigation.spec.ts](./database/e2e/navigation.spec.ts)
-│   │   ├── [profile.spec.ts](./database/e2e/profile.spec.ts)
-│   │   ├── [search.spec.ts](./database/e2e/search.spec.ts)
-│   │   ├── [settings.spec.ts](./database/e2e/settings.spec.ts)
-│   │   └── [version.spec.ts](./database/e2e/version.spec.ts)
-│   ├── public/
-│   │   ├── examples/
-│   │   │   └── sqlite/
-│   │   │       ├── [blog-cms.sqlite](./database/public/examples/sqlite/blog-cms.sqlite)
-│   │   │       ├── [chinook.sqlite](./database/public/examples/sqlite/chinook.sqlite)
-│   │   │       ├── [classicmodels.sqlite](./database/public/examples/sqlite/classicmodels.sqlite)
-│   │   │       ├── [e-commerce.sqlite](./database/public/examples/sqlite/e-commerce.sqlite)
-│   │   │       ├── [hr.sqlite](./database/public/examples/sqlite/hr.sqlite)
-│   │   │       ├── [index.json](./database/public/examples/sqlite/index.json)
-│   │   │       ├── [music-streaming.sqlite](./database/public/examples/sqlite/music-streaming.sqlite)
-│   │   │       ├── [northwind.sqlite](./database/public/examples/sqlite/northwind.sqlite)
-│   │   │       ├── [project-management.sqlite](./database/public/examples/sqlite/project-management.sqlite)
-│   │   │       ├── [sakila.sqlite](./database/public/examples/sqlite/sakila.sqlite)
-│   │   │       └── [social-media.sqlite](./database/public/examples/sqlite/social-media.sqlite)
-│   │   ├── icons/
-│   │   │   ├── [icon-128x128.png](./database/public/icons/icon-128x128.png)
-│   │   │   ├── [icon-144x144.png](./database/public/icons/icon-144x144.png)
-│   │   │   ├── [icon-152x152.png](./database/public/icons/icon-152x152.png)
-│   │   │   ├── [icon-16x16.png](./database/public/icons/icon-16x16.png)
-│   │   │   ├── [icon-180x180.png](./database/public/icons/icon-180x180.png)
-│   │   │   ├── [icon-192x192.png](./database/public/icons/icon-192x192.png)
-│   │   │   ├── [icon-256x256.png](./database/public/icons/icon-256x256.png)
-│   │   │   ├── [icon-32x32.png](./database/public/icons/icon-32x32.png)
-│   │   │   ├── [icon-384x384.png](./database/public/icons/icon-384x384.png)
-│   │   │   ├── [icon-48x48.png](./database/public/icons/icon-48x48.png)
-│   │   │   ├── [icon-512x512.png](./database/public/icons/icon-512x512.png)
-│   │   │   ├── [icon-64x64.png](./database/public/icons/icon-64x64.png)
-│   │   │   ├── [icon-72x72.png](./database/public/icons/icon-72x72.png)
-│   │   │   ├── [icon-96x96.png](./database/public/icons/icon-96x96.png)
-│   │   │   └── [icon.svg](./database/public/icons/icon.svg)
-│   │   ├── wasm/
-│   │   │   └── [sql-wasm.wasm](./database/public/wasm/sql-wasm.wasm)
-│   │   ├── [apple-touch-icon.png](./database/public/apple-touch-icon.png)
-│   │   ├── [favicon.ico](./database/public/favicon.ico)
-│   │   ├── [manifest.json](./database/public/manifest.json)
-│   │   ├── [robots.txt](./database/public/robots.txt)
-│   │   ├── [sitemap.xml](./database/public/sitemap.xml)
-│   │   └── [sw.js](./database/public/sw.js)
-│   ├── src/
-│   │   ├── app/
-│   │   │   ├── (auth)/
-│   │   │   │   ├── forget-password/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./database/src/app/(auth)/forget-password/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./database/src/app/(auth)/forget-password/page.tsx)
-│   │   │   │   ├── profile/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./database/src/app/(auth)/profile/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./database/src/app/(auth)/profile/page.tsx)
-│   │   │   │   ├── reset-password/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./database/src/app/(auth)/reset-password/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./database/src/app/(auth)/reset-password/page.tsx)
-│   │   │   │   ├── sign-in/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./database/src/app/(auth)/sign-in/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./database/src/app/(auth)/sign-in/page.tsx)
-│   │   │   │   └── sign-up/
-│   │   │   │       ├── __tests__/
-│   │   │   │       │   └── [page.test.tsx](./database/src/app/(auth)/sign-up/__tests__/page.test.tsx)
-│   │   │   │       └── [page.tsx](./database/src/app/(auth)/sign-up/page.tsx)
-│   │   │   ├── (info)/
-│   │   │   │   ├── about/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./database/src/app/(info)/about/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./database/src/app/(info)/about/page.tsx)
-│   │   │   │   ├── downloads/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./database/src/app/(info)/downloads/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./database/src/app/(info)/downloads/page.tsx)
-│   │   │   │   └── version/
-│   │   │   │       ├── __tests__/
-│   │   │   │       │   └── [page.test.tsx](./database/src/app/(info)/version/__tests__/page.test.tsx)
-│   │   │   │       └── [page.tsx](./database/src/app/(info)/version/page.tsx)
-│   │   │   ├── __tests__/
-│   │   │   │   ├── [default.test.tsx](./database/src/app/__tests__/default.test.tsx)
-│   │   │   │   ├── [error.test.tsx](./database/src/app/__tests__/error.test.tsx)
-│   │   │   │   ├── [forbidden.test.tsx](./database/src/app/__tests__/forbidden.test.tsx)
-│   │   │   │   ├── [global-error.test.tsx](./database/src/app/__tests__/global-error.test.tsx)
-│   │   │   │   ├── [home-page.test.tsx](./database/src/app/__tests__/home-page.test.tsx)
-│   │   │   │   ├── [layout.test.tsx](./database/src/app/__tests__/layout.test.tsx)
-│   │   │   │   ├── [loading.test.tsx](./database/src/app/__tests__/loading.test.tsx)
-│   │   │   │   ├── [not-found.test.tsx](./database/src/app/__tests__/not-found.test.tsx)
-│   │   │   │   ├── [page.test.tsx](./database/src/app/__tests__/page.test.tsx)
-│   │   │   │   ├── [robots.test.ts](./database/src/app/__tests__/robots.test.ts)
-│   │   │   │   ├── [template.test.tsx](./database/src/app/__tests__/template.test.tsx)
-│   │   │   │   └── [unauthorized.test.tsx](./database/src/app/__tests__/unauthorized.test.tsx)
-│   │   │   ├── db/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   └── [db-page.test.tsx](./database/src/app/db/__tests__/db-page.test.tsx)
-│   │   │   │   └── [page.tsx](./database/src/app/db/page.tsx)
-│   │   │   ├── posts/
-│   │   │   │   ├── [slug]/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./database/src/app/posts/[slug]/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./database/src/app/posts/[slug]/page.tsx)
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   └── [page.test.tsx](./database/src/app/posts/__tests__/page.test.tsx)
-│   │   │   │   └── [page.tsx](./database/src/app/posts/page.tsx)
-│   │   │   ├── redis/
-│   │   │   │   ├── __tests__/
-│   │   │   │   └── editor/
-│   │   │   │       └── __tests__/
-│   │   │   ├── settings/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   └── [page.test.tsx](./database/src/app/settings/__tests__/page.test.tsx)
-│   │   │   │   └── [page.tsx](./database/src/app/settings/page.tsx)
-│   │   │   ├── [default.tsx](./database/src/app/default.tsx)
-│   │   │   ├── [error.tsx](./database/src/app/error.tsx)
-│   │   │   ├── [favicon.ico](./database/src/app/favicon.ico)
-│   │   │   ├── [forbidden.tsx](./database/src/app/forbidden.tsx)
-│   │   │   ├── [global-error.tsx](./database/src/app/global-error.tsx)
-│   │   │   ├── [layout.tsx](./database/src/app/layout.tsx)
-│   │   │   ├── [loading.tsx](./database/src/app/loading.tsx)
-│   │   │   ├── [not-found.tsx](./database/src/app/not-found.tsx)
-│   │   │   ├── [page.tsx](./database/src/app/page.tsx)
-│   │   │   ├── [robots.ts](./database/src/app/robots.ts)
-│   │   │   ├── [template.tsx](./database/src/app/template.tsx)
-│   │   │   └── [unauthorized.tsx](./database/src/app/unauthorized.tsx)
-│   │   ├── components/
-│   │   │   ├── __tests__/
-│   │   │   │   └── [SWProvider.test.tsx](./database/src/components/__tests__/SWProvider.test.tsx)
-│   │   │   ├── atoms/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   ├── [CellValue.test.tsx](./database/src/components/atoms/__tests__/CellValue.test.tsx)
-│   │   │   │   │   └── [SortIcon.test.tsx](./database/src/components/atoms/__tests__/SortIcon.test.tsx)
-│   │   │   │   ├── [CellValue.tsx](./database/src/components/atoms/CellValue.tsx)
-│   │   │   │   └── [SortIcon.tsx](./database/src/components/atoms/SortIcon.tsx)
-│   │   │   ├── molecules/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   ├── [DataView.test.tsx](./database/src/components/molecules/__tests__/DataView.test.tsx)
-│   │   │   │   │   ├── [DbModals.test.tsx](./database/src/components/molecules/__tests__/DbModals.test.tsx)
-│   │   │   │   │   ├── [DbSidePanel.test.tsx](./database/src/components/molecules/__tests__/DbSidePanel.test.tsx)
-│   │   │   │   │   ├── [EmptyState.test.tsx](./database/src/components/molecules/__tests__/EmptyState.test.tsx)
-│   │   │   │   │   ├── [ErDiagramView.test.tsx](./database/src/components/molecules/__tests__/ErDiagramView.test.tsx)
-│   │   │   │   │   ├── [ExportModal.test.tsx](./database/src/components/molecules/__tests__/ExportModal.test.tsx)
-│   │   │   │   │   ├── [ImportModal.test.tsx](./database/src/components/molecules/__tests__/ImportModal.test.tsx)
-│   │   │   │   │   ├── [SheetsSidebar.test.tsx](./database/src/components/molecules/__tests__/SheetsSidebar.test.tsx)
-│   │   │   │   │   ├── [SheetsToolbar.test.tsx](./database/src/components/molecules/__tests__/SheetsToolbar.test.tsx)
-│   │   │   │   │   ├── [SqlEditor.test.tsx](./database/src/components/molecules/__tests__/SqlEditor.test.tsx)
-│   │   │   │   │   └── [StatsView.test.tsx](./database/src/components/molecules/__tests__/StatsView.test.tsx)
-│   │   │   │   ├── redis/
-│   │   │   │   │   └── __tests__/
-│   │   │   │   ├── [ConnectionModal.tsx](./database/src/components/molecules/ConnectionModal.tsx)
-│   │   │   │   ├── [DataView.tsx](./database/src/components/molecules/DataView.tsx)
-│   │   │   │   ├── [DbBookmarkDialog.tsx](./database/src/components/molecules/DbBookmarkDialog.tsx)
-│   │   │   │   ├── [DbDropOverlay.tsx](./database/src/components/molecules/DbDropOverlay.tsx)
-│   │   │   │   ├── [DbEditorPanel.tsx](./database/src/components/molecules/DbEditorPanel.tsx)
-│   │   │   │   ├── [DbFooter.tsx](./database/src/components/molecules/DbFooter.tsx)
-│   │   │   │   ├── [DbHeader.tsx](./database/src/components/molecules/DbHeader.tsx)
-│   │   │   │   ├── [DbModals.tsx](./database/src/components/molecules/DbModals.tsx)
-│   │   │   │   ├── [DbSchemaSidebar.tsx](./database/src/components/molecules/DbSchemaSidebar.tsx)
-│   │   │   │   ├── [DbSidePanel.tsx](./database/src/components/molecules/DbSidePanel.tsx)
-│   │   │   │   ├── [EmptyState.tsx](./database/src/components/molecules/EmptyState.tsx)
-│   │   │   │   ├── [ErDiagramView.tsx](./database/src/components/molecules/ErDiagramView.tsx)
-│   │   │   │   ├── [ExportModal.tsx](./database/src/components/molecules/ExportModal.tsx)
-│   │   │   │   ├── [ImportModal.tsx](./database/src/components/molecules/ImportModal.tsx)
-│   │   │   │   ├── [SheetsSidebar.tsx](./database/src/components/molecules/SheetsSidebar.tsx)
-│   │   │   │   ├── [SheetsToolbar.tsx](./database/src/components/molecules/SheetsToolbar.tsx)
-│   │   │   │   ├── [SqlEditor.tsx](./database/src/components/molecules/SqlEditor.tsx)
-│   │   │   │   └── [StatsView.tsx](./database/src/components/molecules/StatsView.tsx)
-│   │   │   ├── organisms/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   ├── [Markdown.test.tsx](./database/src/components/organisms/__tests__/Markdown.test.tsx)
-│   │   │   │   │   └── [TableDesignerModal.test.tsx](./database/src/components/organisms/__tests__/TableDesignerModal.test.tsx)
-│   │   │   │   ├── [Markdown.tsx](./database/src/components/organisms/Markdown.tsx)
-│   │   │   │   ├── [TableDesignerModal.tsx](./database/src/components/organisms/TableDesignerModal.tsx)
-│   │   │   │   ├── [ToastContainer.tsx](./database/src/components/organisms/ToastContainer.tsx)
-│   │   │   │   └── [VisualizationModal.tsx](./database/src/components/organisms/VisualizationModal.tsx)
-│   │   │   ├── templates/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   ├── [AboutTemplate.test.tsx](./database/src/components/templates/__tests__/AboutTemplate.test.tsx)
-│   │   │   │   │   ├── [DownloadsTemplate.test.tsx](./database/src/components/templates/__tests__/DownloadsTemplate.test.tsx)
-│   │   │   │   │   ├── [ErrorTemplate.test.tsx](./database/src/components/templates/__tests__/ErrorTemplate.test.tsx)
-│   │   │   │   │   ├── [PostView.test.tsx](./database/src/components/templates/__tests__/PostView.test.tsx)
-│   │   │   │   │   └── [VersionTemplate.test.tsx](./database/src/components/templates/__tests__/VersionTemplate.test.tsx)
-│   │   │   │   ├── [AboutTemplate.tsx](./database/src/components/templates/AboutTemplate.tsx)
-│   │   │   │   ├── [DownloadsTemplate.tsx](./database/src/components/templates/DownloadsTemplate.tsx)
-│   │   │   │   ├── [ErrorTemplate.tsx](./database/src/components/templates/ErrorTemplate.tsx)
-│   │   │   │   ├── [PostView.tsx](./database/src/components/templates/PostView.tsx)
-│   │   │   │   └── [VersionTemplate.tsx](./database/src/components/templates/VersionTemplate.tsx)
-│   │   │   └── [SWProvider.tsx](./database/src/components/SWProvider.tsx)
-│   │   ├── data/
-│   │   │   ├── __tests__/
-│   │   │   │   ├── [models.test.ts](./database/src/data/__tests__/models.test.ts)
-│   │   │   │   └── [seed.test.ts](./database/src/data/__tests__/seed.test.ts)
-│   │   │   ├── [models.ts](./database/src/data/models.ts)
-│   │   │   └── [seed.ts](./database/src/data/seed.ts)
-│   │   ├── hooks/
-│   │   │   ├── __tests__/
-│   │   │   │   ├── [useDbPageHooks.test.ts](./database/src/hooks/__tests__/useDbPageHooks.test.ts)
-│   │   │   │   ├── [useSWRegister.test.ts](./database/src/hooks/__tests__/useSWRegister.test.ts)
-│   │   │   │   └── [useSqlDatabase.test.ts](./database/src/hooks/__tests__/useSqlDatabase.test.ts)
-│   │   │   ├── [sqlDatabaseHelpers.ts](./database/src/hooks/sqlDatabaseHelpers.ts)
-│   │   │   ├── [useDbPage.ts](./database/src/hooks/useDbPage.ts)
-│   │   │   ├── [useDbPageActions.ts](./database/src/hooks/useDbPageActions.ts)
-│   │   │   ├── [useDbPageLayout.ts](./database/src/hooks/useDbPageLayout.ts)
-│   │   │   ├── [useDbPageQuery.ts](./database/src/hooks/useDbPageQuery.ts)
-│   │   │   ├── [useDbPageSelection.ts](./database/src/hooks/useDbPageSelection.ts)
-│   │   │   ├── [useDbPageState.ts](./database/src/hooks/useDbPageState.ts)
-│   │   │   ├── [useSWRegister.ts](./database/src/hooks/useSWRegister.ts)
-│   │   │   ├── [useSqlDatabase.ts](./database/src/hooks/useSqlDatabase.ts)
-│   │   │   ├── [useSqlDatabaseIo.ts](./database/src/hooks/useSqlDatabaseIo.ts)
-│   │   │   ├── [useSqlDatabaseMutations.ts](./database/src/hooks/useSqlDatabaseMutations.ts)
-│   │   │   ├── [useSqlDatabaseQuery.ts](./database/src/hooks/useSqlDatabaseQuery.ts)
-│   │   │   ├── [useSqlDatabaseSchema.ts](./database/src/hooks/useSqlDatabaseSchema.ts)
-│   │   │   └── [useSqlDatabaseState.ts](./database/src/hooks/useSqlDatabaseState.ts)
-│   │   ├── lib/
-│   │   │   ├── __tests__/
-│   │   │   │   └── [db.test.ts](./database/src/lib/__tests__/db.test.ts)
-│   │   │   ├── redis/
-│   │   │   │   └── __tests__/
-│   │   │   ├── stubs/
-│   │   │   │   └── [node-builtins.ts](./database/src/lib/stubs/node-builtins.ts)
-│   │   │   ├── [db.ts](./database/src/lib/db.ts)
-│   │   │   └── [examples.ts](./database/src/lib/examples.ts)
-│   │   ├── posts/
-│   │   │   ├── __tests__/
-│   │   │   │   └── [posts.test.ts](./database/src/posts/__tests__/posts.test.ts)
-│   │   │   ├── [blog-cms.md](./database/src/posts/blog-cms.md)
-│   │   │   ├── [chinook.md](./database/src/posts/chinook.md)
-│   │   │   ├── [classicmodels.md](./database/src/posts/classicmodels.md)
-│   │   │   ├── [content.ts](./database/src/posts/content.ts)
-│   │   │   ├── [e-commerce.md](./database/src/posts/e-commerce.md)
-│   │   │   ├── [hr.md](./database/src/posts/hr.md)
-│   │   │   ├── [index.ts](./database/src/posts/index.ts)
-│   │   │   ├── [music-streaming.md](./database/src/posts/music-streaming.md)
-│   │   │   ├── [northwind.md](./database/src/posts/northwind.md)
-│   │   │   ├── [project-management.md](./database/src/posts/project-management.md)
-│   │   │   ├── [sakila.md](./database/src/posts/sakila.md)
-│   │   │   └── [social-media.md](./database/src/posts/social-media.md)
-│   │   ├── providers/
-│   │   │   ├── __tests__/
-│   │   │   │   ├── [DataProvider.test.tsx](./database/src/providers/__tests__/DataProvider.test.tsx)
-│   │   │   │   ├── [Providers.test.tsx](./database/src/providers/__tests__/Providers.test.tsx)
-│   │   │   │   └── [ToastProvider.test.tsx](./database/src/providers/__tests__/ToastProvider.test.tsx)
-│   │   │   ├── [DataProvider.tsx](./database/src/providers/DataProvider.tsx)
-│   │   │   ├── [Providers.tsx](./database/src/providers/Providers.tsx)
-│   │   │   └── [ToastProvider.tsx](./database/src/providers/ToastProvider.tsx)
-│   │   ├── styles/
-│   │   │   ├── [base.css](./database/src/styles/base.css)
-│   │   │   ├── [globals.css](./database/src/styles/globals.css)
-│   │   │   └── [themes.css](./database/src/styles/themes.css)
-│   │   ├── types/
-│   │   │   ├── [index.ts](./database/src/types/index.ts)
-│   │   │   └── [sqlite.ts](./database/src/types/sqlite.ts)
-│   │   └── utils/
-│   │       ├── __tests__/
-│   │       │   ├── [autocomplete.test.ts](./database/src/utils/__tests__/autocomplete.test.ts)
-│   │       │   ├── [csv.test.ts](./database/src/utils/__tests__/csv.test.ts)
-│   │       │   ├── [er.test.ts](./database/src/utils/__tests__/er.test.ts)
-│   │       │   ├── [format.test.ts](./database/src/utils/__tests__/format.test.ts)
-│   │       │   ├── [import.test.ts](./database/src/utils/__tests__/import.test.ts)
-│   │       │   ├── [markdown.test.ts](./database/src/utils/__tests__/markdown.test.ts)
-│   │       │   ├── [mermaid.test.ts](./database/src/utils/__tests__/mermaid.test.ts)
-│   │       │   ├── [opfs.test.ts](./database/src/utils/__tests__/opfs.test.ts)
-│   │       │   ├── [schema.test.ts](./database/src/utils/__tests__/schema.test.ts)
-│   │       │   ├── [seedData.test.ts](./database/src/utils/__tests__/seedData.test.ts)
-│   │       │   ├── [sqlDump.test.ts](./database/src/utils/__tests__/sqlDump.test.ts)
-│   │       │   ├── [sqlExport.test.ts](./database/src/utils/__tests__/sqlExport.test.ts)
-│   │       │   ├── [sqlFormat.test.ts](./database/src/utils/__tests__/sqlFormat.test.ts)
-│   │       │   ├── [sqlHighlight.test.ts](./database/src/utils/__tests__/sqlHighlight.test.ts)
-│   │       │   ├── [stats.test.ts](./database/src/utils/__tests__/stats.test.ts)
-│   │       │   └── [tableData.test.ts](./database/src/utils/__tests__/tableData.test.ts)
-│   │       ├── [autocomplete.ts](./database/src/utils/autocomplete.ts)
-│   │       ├── [csv.ts](./database/src/utils/csv.ts)
-│   │       ├── [er.ts](./database/src/utils/er.ts)
-│   │       ├── [format.ts](./database/src/utils/format.ts)
-│   │       ├── [import.ts](./database/src/utils/import.ts)
-│   │       ├── [markdown.ts](./database/src/utils/markdown.ts)
-│   │       ├── [mermaid.ts](./database/src/utils/mermaid.ts)
-│   │       ├── [opfs.ts](./database/src/utils/opfs.ts)
-│   │       ├── [schema.ts](./database/src/utils/schema.ts)
-│   │       ├── [seedData.ts](./database/src/utils/seedData.ts)
-│   │       ├── [sqlDump.ts](./database/src/utils/sqlDump.ts)
-│   │       ├── [sqlExport.ts](./database/src/utils/sqlExport.ts)
-│   │       ├── [sqlFormat.ts](./database/src/utils/sqlFormat.ts)
-│   │       ├── [sqlHighlight.ts](./database/src/utils/sqlHighlight.ts)
-│   │       ├── [sqlStatements.ts](./database/src/utils/sqlStatements.ts)
-│   │       ├── [stats.ts](./database/src/utils/stats.ts)
-│   │       └── [tableData.ts](./database/src/utils/tableData.ts)
-│   ├── src-tauri/
-│   │   ├── capabilities/
-│   │   │   └── [default.json](./database/src-tauri/capabilities/default.json)
-│   │   ├── icons/
-│   │   │   ├── [128x128.png](./database/src-tauri/icons/128x128.png)
-│   │   │   ├── [128x128@2x.png](./database/src-tauri/icons/128x128@2x.png)
-│   │   │   ├── [32x32.png](./database/src-tauri/icons/32x32.png)
-│   │   │   ├── [Square107x107Logo.png](./database/src-tauri/icons/Square107x107Logo.png)
-│   │   │   ├── [Square142x142Logo.png](./database/src-tauri/icons/Square142x142Logo.png)
-│   │   │   ├── [Square150x150Logo.png](./database/src-tauri/icons/Square150x150Logo.png)
-│   │   │   ├── [Square284x284Logo.png](./database/src-tauri/icons/Square284x284Logo.png)
-│   │   │   ├── [Square30x30Logo.png](./database/src-tauri/icons/Square30x30Logo.png)
-│   │   │   ├── [Square310x310Logo.png](./database/src-tauri/icons/Square310x310Logo.png)
-│   │   │   ├── [Square44x44Logo.png](./database/src-tauri/icons/Square44x44Logo.png)
-│   │   │   ├── [Square71x71Logo.png](./database/src-tauri/icons/Square71x71Logo.png)
-│   │   │   ├── [Square89x89Logo.png](./database/src-tauri/icons/Square89x89Logo.png)
-│   │   │   ├── [StoreLogo.png](./database/src-tauri/icons/StoreLogo.png)
-│   │   │   ├── [icon.icns](./database/src-tauri/icons/icon.icns)
-│   │   │   ├── [icon.ico](./database/src-tauri/icons/icon.ico)
-│   │   │   └── [icon.png](./database/src-tauri/icons/icon.png)
-│   │   ├── src/
-│   │   │   ├── [lib.rs](./database/src-tauri/src/lib.rs)
-│   │   │   └── [main.rs](./database/src-tauri/src/main.rs)
-│   │   ├── [Cargo.lock](./database/src-tauri/Cargo.lock)
-│   │   ├── [Cargo.toml](./database/src-tauri/Cargo.toml)
-│   │   ├── [build.rs](./database/src-tauri/build.rs)
-│   │   └── [tauri.conf.json](./database/src-tauri/tauri.conf.json)
-│   ├── [AGENTS.md](./database/AGENTS.md)
-│   ├── [Dockerfile](./database/Dockerfile)
-│   ├── [LICENSE](./database/LICENSE)
-│   ├── [README.md](./database/README.md)
-│   ├── [TREE.md](./database/TREE.md)
-│   ├── [docker-compose.yaml](./database/docker-compose.yaml)
-│   ├── [eslint.config.mts](./database/eslint.config.mts)
-│   ├── [jest.config.ts](./database/jest.config.ts)
-│   ├── [jest.setup.ts](./database/jest.setup.ts)
-│   ├── [next.config.ts](./database/next.config.ts)
-│   ├── [package.json](./database/package.json)
-│   ├── [playwright.config.ts](./database/playwright.config.ts)
-│   ├── [postcss.config.mjs](./database/postcss.config.mjs)
-│   └── [tsconfig.json](./database/tsconfig.json)
-├── diagram/
-│   ├── docs/
-│   │   ├── other/
-│   │   │   ├── [DIAGRAMS.md](./diagram/docs/other/DIAGRAMS.md)
-│   │   │   └── [SYNTAX.md](./diagram/docs/other/SYNTAX.md)
-│   │   ├── [ARCHITECTURE.md](./diagram/docs/ARCHITECTURE.md)
-│   │   ├── [CONTRIBUTING.md](./diagram/docs/CONTRIBUTING.md)
-│   │   ├── [DOWNLOADS.md](./diagram/docs/DOWNLOADS.md)
-│   │   ├── [PACKAGING.md](./diagram/docs/PACKAGING.md)
-│   │   └── [ROADMAP.md](./diagram/docs/ROADMAP.md)
-│   ├── e2e/
-│   │   ├── [posts.spec.ts](./diagram/e2e/posts.spec.ts)
-│   │   └── [smoke.spec.ts](./diagram/e2e/smoke.spec.ts)
-│   ├── public/
-│   │   ├── icons/
-│   │   │   ├── [icon-128x128.png](./diagram/public/icons/icon-128x128.png)
-│   │   │   ├── [icon-144x144.png](./diagram/public/icons/icon-144x144.png)
-│   │   │   ├── [icon-152x152.png](./diagram/public/icons/icon-152x152.png)
-│   │   │   ├── [icon-16x16.png](./diagram/public/icons/icon-16x16.png)
-│   │   │   ├── [icon-180x180.png](./diagram/public/icons/icon-180x180.png)
-│   │   │   ├── [icon-192x192.png](./diagram/public/icons/icon-192x192.png)
-│   │   │   ├── [icon-256x256.png](./diagram/public/icons/icon-256x256.png)
-│   │   │   ├── [icon-32x32.png](./diagram/public/icons/icon-32x32.png)
-│   │   │   ├── [icon-384x384.png](./diagram/public/icons/icon-384x384.png)
-│   │   │   ├── [icon-48x48.png](./diagram/public/icons/icon-48x48.png)
-│   │   │   ├── [icon-512x512.png](./diagram/public/icons/icon-512x512.png)
-│   │   │   ├── [icon-64x64.png](./diagram/public/icons/icon-64x64.png)
-│   │   │   ├── [icon-72x72.png](./diagram/public/icons/icon-72x72.png)
-│   │   │   ├── [icon-96x96.png](./diagram/public/icons/icon-96x96.png)
-│   │   │   └── [icon.svg](./diagram/public/icons/icon.svg)
-│   │   ├── [apple-touch-icon.png](./diagram/public/apple-touch-icon.png)
-│   │   ├── [favicon.ico](./diagram/public/favicon.ico)
-│   │   ├── [manifest.json](./diagram/public/manifest.json)
-│   │   ├── [robots.txt](./diagram/public/robots.txt)
-│   │   ├── [sitemap.xml](./diagram/public/sitemap.xml)
-│   │   └── [sw.js](./diagram/public/sw.js)
-│   ├── src/
-│   │   ├── app/
-│   │   │   ├── (auth)/
-│   │   │   │   ├── forget-password/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./diagram/src/app/(auth)/forget-password/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./diagram/src/app/(auth)/forget-password/page.tsx)
-│   │   │   │   ├── profile/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./diagram/src/app/(auth)/profile/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./diagram/src/app/(auth)/profile/page.tsx)
-│   │   │   │   ├── reset-password/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./diagram/src/app/(auth)/reset-password/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./diagram/src/app/(auth)/reset-password/page.tsx)
-│   │   │   │   ├── sign-in/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./diagram/src/app/(auth)/sign-in/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./diagram/src/app/(auth)/sign-in/page.tsx)
-│   │   │   │   └── sign-up/
-│   │   │   │       ├── __tests__/
-│   │   │   │       │   └── [page.test.tsx](./diagram/src/app/(auth)/sign-up/__tests__/page.test.tsx)
-│   │   │   │       └── [page.tsx](./diagram/src/app/(auth)/sign-up/page.tsx)
-│   │   │   ├── (info)/
-│   │   │   │   ├── about/
-│   │   │   │   │   └── [page.tsx](./diagram/src/app/(info)/about/page.tsx)
-│   │   │   │   ├── downloads/
-│   │   │   │   │   ├── __tests__/
-│   │   │   │   │   │   └── [page.test.tsx](./diagram/src/app/(info)/downloads/__tests__/page.test.tsx)
-│   │   │   │   │   └── [page.tsx](./diagram/src/app/(info)/downloads/page.tsx)
-│   │   │   │   └── version/
-│   │   │   │       └── [page.tsx](./diagram/src/app/(info)/version/page.tsx)
-│   │   │   ├── __tests__/
-│   │   │   │   ├── [default.test.tsx](./diagram/src/app/__tests__/default.test.tsx)
-│   │   │   │   ├── [error.test.tsx](./diagram/src/app/__tests__/error.test.tsx)
-│   │   │   │   ├── [forbidden.test.tsx](./diagram/src/app/__tests__/forbidden.test.tsx)
-│   │   │   │   ├── [global-error.test.tsx](./diagram/src/app/__tests__/global-error.test.tsx)
-│   │   │   │   ├── [layout.test.tsx](./diagram/src/app/__tests__/layout.test.tsx)
-│   │   │   │   ├── [loading.test.tsx](./diagram/src/app/__tests__/loading.test.tsx)
-│   │   │   │   ├── [not-found.test.tsx](./diagram/src/app/__tests__/not-found.test.tsx)
-│   │   │   │   ├── [page.test.tsx](./diagram/src/app/__tests__/page.test.tsx)
-│   │   │   │   ├── [robots.test.ts](./diagram/src/app/__tests__/robots.test.ts)
-│   │   │   │   ├── [template.test.tsx](./diagram/src/app/__tests__/template.test.tsx)
-│   │   │   │   └── [unauthorized.test.tsx](./diagram/src/app/__tests__/unauthorized.test.tsx)
-│   │   │   ├── posts/
-│   │   │   │   ├── [slug]/
-│   │   │   │   │   └── [page.tsx](./diagram/src/app/posts/[slug]/page.tsx)
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   ├── [page.test.tsx](./diagram/src/app/posts/__tests__/page.test.tsx)
-│   │   │   │   │   └── [post-page.test.tsx](./diagram/src/app/posts/__tests__/post-page.test.tsx)
-│   │   │   │   └── [page.tsx](./diagram/src/app/posts/page.tsx)
-│   │   │   ├── [default.tsx](./diagram/src/app/default.tsx)
-│   │   │   ├── [error.tsx](./diagram/src/app/error.tsx)
-│   │   │   ├── [favicon.ico](./diagram/src/app/favicon.ico)
-│   │   │   ├── [forbidden.tsx](./diagram/src/app/forbidden.tsx)
-│   │   │   ├── [global-error.tsx](./diagram/src/app/global-error.tsx)
-│   │   │   ├── [layout.tsx](./diagram/src/app/layout.tsx)
-│   │   │   ├── [loading.tsx](./diagram/src/app/loading.tsx)
-│   │   │   ├── [not-found.tsx](./diagram/src/app/not-found.tsx)
-│   │   │   ├── [page.tsx](./diagram/src/app/page.tsx)
-│   │   │   ├── [robots.ts](./diagram/src/app/robots.ts)
-│   │   │   ├── [template.tsx](./diagram/src/app/template.tsx)
-│   │   │   └── [unauthorized.tsx](./diagram/src/app/unauthorized.tsx)
-│   │   ├── components/
-│   │   │   ├── editor/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   ├── [Canvas.test.tsx](./diagram/src/components/editor/__tests__/Canvas.test.tsx)
-│   │   │   │   │   ├── [Editor.test.tsx](./diagram/src/components/editor/__tests__/Editor.test.tsx)
-│   │   │   │   │   ├── [ErrorStrip.test.tsx](./diagram/src/components/editor/__tests__/ErrorStrip.test.tsx)
-│   │   │   │   │   ├── [ExamplesModal.test.tsx](./diagram/src/components/editor/__tests__/ExamplesModal.test.tsx)
-│   │   │   │   │   ├── [HelpModal.test.tsx](./diagram/src/components/editor/__tests__/HelpModal.test.tsx)
-│   │   │   │   │   ├── [StatusBar.test.tsx](./diagram/src/components/editor/__tests__/StatusBar.test.tsx)
-│   │   │   │   │   ├── [TextPane.test.tsx](./diagram/src/components/editor/__tests__/TextPane.test.tsx)
-│   │   │   │   │   └── [Toolbar.test.tsx](./diagram/src/components/editor/__tests__/Toolbar.test.tsx)
-│   │   │   │   ├── [Canvas.tsx](./diagram/src/components/editor/Canvas.tsx)
-│   │   │   │   ├── [Editor.tsx](./diagram/src/components/editor/Editor.tsx)
-│   │   │   │   ├── [ErrorStrip.tsx](./diagram/src/components/editor/ErrorStrip.tsx)
-│   │   │   │   ├── [ExamplesModal.tsx](./diagram/src/components/editor/ExamplesModal.tsx)
-│   │   │   │   ├── [HelpModal.tsx](./diagram/src/components/editor/HelpModal.tsx)
-│   │   │   │   ├── [StatusBar.tsx](./diagram/src/components/editor/StatusBar.tsx)
-│   │   │   │   ├── [TextPane.tsx](./diagram/src/components/editor/TextPane.tsx)
-│   │   │   │   └── [Toolbar.tsx](./diagram/src/components/editor/Toolbar.tsx)
-│   │   │   ├── posts/
-│   │   │   │   ├── __tests__/
-│   │   │   │   │   ├── [PostContent.test.tsx](./diagram/src/components/posts/__tests__/PostContent.test.tsx)
-│   │   │   │   │   ├── [PostDiagram.test.tsx](./diagram/src/components/posts/__tests__/PostDiagram.test.tsx)
-│   │   │   │   │   └── [PostsBrowser.test.tsx](./diagram/src/components/posts/__tests__/PostsBrowser.test.tsx)
-│   │   │   │   ├── [PostContent.tsx](./diagram/src/components/posts/PostContent.tsx)
-│   │   │   │   ├── [PostDiagram.tsx](./diagram/src/components/posts/PostDiagram.tsx)
-│   │   │   │   ├── [PostPageView.tsx](./diagram/src/components/posts/PostPageView.tsx)
-│   │   │   │   └── [PostsBrowser.tsx](./diagram/src/components/posts/PostsBrowser.tsx)
-│   │   │   └── templates/
-│   │   │       ├── __tests__/
-│   │   │       │   ├── [AboutTemplate.test.tsx](./diagram/src/components/templates/__tests__/AboutTemplate.test.tsx)
-│   │   │       │   ├── [DownloadsTemplate.test.tsx](./diagram/src/components/templates/__tests__/DownloadsTemplate.test.tsx)
-│   │   │       │   ├── [ErrorTemplate.test.tsx](./diagram/src/components/templates/__tests__/ErrorTemplate.test.tsx)
-│   │   │       │   └── [VersionTemplate.test.tsx](./diagram/src/components/templates/__tests__/VersionTemplate.test.tsx)
-│   │   │       ├── [AboutTemplate.tsx](./diagram/src/components/templates/AboutTemplate.tsx)
-│   │   │       ├── [DownloadsTemplate.tsx](./diagram/src/components/templates/DownloadsTemplate.tsx)
-│   │   │       ├── [ErrorTemplate.tsx](./diagram/src/components/templates/ErrorTemplate.tsx)
-│   │   │       └── [VersionTemplate.tsx](./diagram/src/components/templates/VersionTemplate.tsx)
-│   │   ├── hooks/
-│   │   │   ├── __tests__/
-│   │   │   │   ├── [useDiagramState.test.ts](./diagram/src/hooks/__tests__/useDiagramState.test.ts)
-│   │   │   │   └── [useTheme.test.ts](./diagram/src/hooks/__tests__/useTheme.test.ts)
-│   │   │   ├── [useDiagramState.ts](./diagram/src/hooks/useDiagramState.ts)
-│   │   │   └── [useTheme.ts](./diagram/src/hooks/useTheme.ts)
-│   │   ├── lib/
-│   │   │   ├── __tests__/
-│   │   │   │   ├── [examples.test.ts](./diagram/src/lib/__tests__/examples.test.ts)
-│   │   │   │   ├── [export.test.ts](./diagram/src/lib/__tests__/export.test.ts)
-│   │   │   │   ├── [icons.test.ts](./diagram/src/lib/__tests__/icons.test.ts)
-│   │   │   │   ├── [layout.test.ts](./diagram/src/lib/__tests__/layout.test.ts)
-│   │   │   │   ├── [parser.test.ts](./diagram/src/lib/__tests__/parser.test.ts)
-│   │   │   │   ├── [posts.test.ts](./diagram/src/lib/__tests__/posts.test.ts)
-│   │   │   │   └── [special-layouts.test.ts](./diagram/src/lib/__tests__/special-layouts.test.ts)
-│   │   │   ├── [colors.ts](./diagram/src/lib/colors.ts)
-│   │   │   ├── [dates.ts](./diagram/src/lib/dates.ts)
-│   │   │   ├── [default.ts](./diagram/src/lib/default.ts)
-│   │   │   ├── [examples.ts](./diagram/src/lib/examples.ts)
-│   │   │   ├── [export.ts](./diagram/src/lib/export.ts)
-│   │   │   ├── [fonts.ts](./diagram/src/lib/fonts.ts)
-│   │   │   ├── [force.ts](./diagram/src/lib/force.ts)
-│   │   │   ├── [icons.ts](./diagram/src/lib/icons.ts)
-│   │   │   ├── [layout.ts](./diagram/src/lib/layout.ts)
-│   │   │   ├── [measure.ts](./diagram/src/lib/measure.ts)
-│   │   │   ├── [parser.ts](./diagram/src/lib/parser.ts)
-│   │   │   ├── [posts.ts](./diagram/src/lib/posts.ts)
-│   │   │   ├── [sequence.ts](./diagram/src/lib/sequence.ts)
-│   │   │   ├── [timeline.ts](./diagram/src/lib/timeline.ts)
-│   │   │   ├── [types.ts](./diagram/src/lib/types.ts)
-│   │   │   ├── [venn.ts](./diagram/src/lib/venn.ts)
-│   │   │   └── [xml.ts](./diagram/src/lib/xml.ts)
-│   │   ├── posts/
-│   │   │   ├── [ad-serving.md](./diagram/src/posts/ad-serving.md)
-│   │   │   ├── [airbnb.md](./diagram/src/posts/airbnb.md)
-│   │   │   ├── [amazon.md](./diagram/src/posts/amazon.md)
-│   │   │   ├── [anomaly-detection.md](./diagram/src/posts/anomaly-detection.md)
-│   │   │   ├── [api-gateway.md](./diagram/src/posts/api-gateway.md)
-│   │   │   ├── [app-store.md](./diagram/src/posts/app-store.md)
-│   │   │   ├── [backup-service.md](./diagram/src/posts/backup-service.md)
-│   │   │   ├── [batch-processing.md](./diagram/src/posts/batch-processing.md)
-│   │   │   ├── [bot-detection.md](./diagram/src/posts/bot-detection.md)
-│   │   │   ├── [cdn.md](./diagram/src/posts/cdn.md)
-│   │   │   ├── [change-data-capture.md](./diagram/src/posts/change-data-capture.md)
-│   │   │   ├── [code-search.md](./diagram/src/posts/code-search.md)
-│   │   │   ├── [comments-service.md](./diagram/src/posts/comments-service.md)
-│   │   │   ├── [config-service.md](./diagram/src/posts/config-service.md)
-│   │   │   ├── [container-registry.md](./diagram/src/posts/container-registry.md)
-│   │   │   ├── [content-moderation.md](./diagram/src/posts/content-moderation.md)
-│   │   │   ├── [crm.md](./diagram/src/posts/crm.md)
-│   │   │   ├── [crypto-exchange.md](./diagram/src/posts/crypto-exchange.md)
-│   │   │   ├── [customer-support.md](./diagram/src/posts/customer-support.md)
-│   │   │   ├── [data-warehouse.md](./diagram/src/posts/data-warehouse.md)
-│   │   │   ├── [datadog.md](./diagram/src/posts/datadog.md)
-│   │   │   ├── [discord.md](./diagram/src/posts/discord.md)
-│   │   │   ├── [distributed-cache.md](./diagram/src/posts/distributed-cache.md)
-│   │   │   ├── [distributed-cron.md](./diagram/src/posts/distributed-cron.md)
-│   │   │   ├── [distributed-database.md](./diagram/src/posts/distributed-database.md)
-│   │   │   ├── [distributed-file-system.md](./diagram/src/posts/distributed-file-system.md)
-│   │   │   ├── [distributed-lock.md](./diagram/src/posts/distributed-lock.md)
-│   │   │   ├── [doordash.md](./diagram/src/posts/doordash.md)
-│   │   │   ├── [dropbox.md](./diagram/src/posts/dropbox.md)
-│   │   │   ├── [ebay.md](./diagram/src/posts/ebay.md)
-│   │   │   ├── [email-delivery.md](./diagram/src/posts/email-delivery.md)
-│   │   │   ├── [experimentation.md](./diagram/src/posts/experimentation.md)
-│   │   │   ├── [facebook.md](./diagram/src/posts/facebook.md)
-│   │   │   ├── [fantasy-sports.md](./diagram/src/posts/fantasy-sports.md)
-│   │   │   ├── [feature-flag.md](./diagram/src/posts/feature-flag.md)
-│   │   │   ├── [fitness-tracker.md](./diagram/src/posts/fitness-tracker.md)
-│   │   │   ├── [flight-booking.md](./diagram/src/posts/flight-booking.md)
-│   │   │   ├── [fraud-detection.md](./diagram/src/posts/fraud-detection.md)
-│   │   │   ├── [game-matchmaking.md](./diagram/src/posts/game-matchmaking.md)
-│   │   │   ├── [git-hosting.md](./diagram/src/posts/git-hosting.md)
-│   │   │   ├── [gmail.md](./diagram/src/posts/gmail.md)
-│   │   │   ├── [google-analytics.md](./diagram/src/posts/google-analytics.md)
-│   │   │   ├── [google-calendar.md](./diagram/src/posts/google-calendar.md)
-│   │   │   ├── [google-docs.md](./diagram/src/posts/google-docs.md)
-│   │   │   ├── [google-maps.md](./diagram/src/posts/google-maps.md)
-│   │   │   ├── [google-photos.md](./diagram/src/posts/google-photos.md)
-│   │   │   ├── [google-search.md](./diagram/src/posts/google-search.md)
-│   │   │   ├── [grammar-checker.md](./diagram/src/posts/grammar-checker.md)
-│   │   │   ├── [graph-database.md](./diagram/src/posts/graph-database.md)
-│   │   │   ├── [grocery-delivery.md](./diagram/src/posts/grocery-delivery.md)
-│   │   │   ├── [hotel-booking.md](./diagram/src/posts/hotel-booking.md)
-│   │   │   ├── [iam.md](./diagram/src/posts/iam.md)
-│   │   │   ├── [id-generator.md](./diagram/src/posts/id-generator.md)
-│   │   │   ├── [incident-management.md](./diagram/src/posts/incident-management.md)
-│   │   │   ├── [instagram.md](./diagram/src/posts/instagram.md)
-│   │   │   ├── [iot-hub.md](./diagram/src/posts/iot-hub.md)
-│   │   │   ├── [issue-tracker.md](./diagram/src/posts/issue-tracker.md)
-│   │   │   ├── [key-value-store.md](./diagram/src/posts/key-value-store.md)
-│   │   │   ├── [leaderboard.md](./diagram/src/posts/leaderboard.md)
-│   │   │   ├── [ledger-system.md](./diagram/src/posts/ledger-system.md)
-│   │   │   ├── [linkedin.md](./diagram/src/posts/linkedin.md)
-│   │   │   ├── [load-balancer.md](./diagram/src/posts/load-balancer.md)
-│   │   │   ├── [log-aggregation.md](./diagram/src/posts/log-aggregation.md)
-│   │   │   ├── [medium.md](./diagram/src/posts/medium.md)
-│   │   │   ├── [message-queue.md](./diagram/src/posts/message-queue.md)
-│   │   │   ├── [multiplayer-game.md](./diagram/src/posts/multiplayer-game.md)
-│   │   │   ├── [netflix.md](./diagram/src/posts/netflix.md)
-│   │   │   ├── [news-aggregator.md](./diagram/src/posts/news-aggregator.md)
-│   │   │   ├── [newsletter.md](./diagram/src/posts/newsletter.md)
-│   │   │   ├── [notes-app.md](./diagram/src/posts/notes-app.md)
-│   │   │   ├── [notification-service.md](./diagram/src/posts/notification-service.md)
-│   │   │   ├── [oauth-provider.md](./diagram/src/posts/oauth-provider.md)
-│   │   │   ├── [object-storage.md](./diagram/src/posts/object-storage.md)
-│   │   │   ├── [online-banking.md](./diagram/src/posts/online-banking.md)
-│   │   │   ├── [online-ide.md](./diagram/src/posts/online-ide.md)
-│   │   │   ├── [online-judge.md](./diagram/src/posts/online-judge.md)
-│   │   │   ├── [online-learning.md](./diagram/src/posts/online-learning.md)
-│   │   │   ├── [otp-service.md](./diagram/src/posts/otp-service.md)
-│   │   │   ├── [package-delivery.md](./diagram/src/posts/package-delivery.md)
-│   │   │   ├── [package-registry.md](./diagram/src/posts/package-registry.md)
-│   │   │   ├── [password-manager.md](./diagram/src/posts/password-manager.md)
-│   │   │   ├── [payroll-service.md](./diagram/src/posts/payroll-service.md)
-│   │   │   ├── [photo-editing.md](./diagram/src/posts/photo-editing.md)
-│   │   │   ├── [podcast.md](./diagram/src/posts/podcast.md)
-│   │   │   ├── [quiz-game.md](./diagram/src/posts/quiz-game.md)
-│   │   │   ├── [quora.md](./diagram/src/posts/quora.md)
-│   │   │   ├── [rate-limiter.md](./diagram/src/posts/rate-limiter.md)
-│   │   │   ├── [read-it-later.md](./diagram/src/posts/read-it-later.md)
-│   │   │   ├── [realtime-analytics.md](./diagram/src/posts/realtime-analytics.md)
-│   │   │   ├── [recommendation-system.md](./diagram/src/posts/recommendation-system.md)
-│   │   │   ├── [reddit.md](./diagram/src/posts/reddit.md)
-│   │   │   ├── [restaurant-reservation.md](./diagram/src/posts/restaurant-reservation.md)
-│   │   │   ├── [reviews-service.md](./diagram/src/posts/reviews-service.md)
-│   │   │   ├── [sentiment-analysis.md](./diagram/src/posts/sentiment-analysis.md)
-│   │   │   ├── [sentry.md](./diagram/src/posts/sentry.md)
-│   │   │   ├── [service-discovery.md](./diagram/src/posts/service-discovery.md)
-│   │   │   ├── [session-service.md](./diagram/src/posts/session-service.md)
-│   │   │   ├── [shopify.md](./diagram/src/posts/shopify.md)
-│   │   │   ├── [slack.md](./diagram/src/posts/slack.md)
-│   │   │   ├── [sms-gateway.md](./diagram/src/posts/sms-gateway.md)
-│   │   │   ├── [speech-recognition.md](./diagram/src/posts/speech-recognition.md)
-│   │   │   ├── [spell-checker.md](./diagram/src/posts/spell-checker.md)
-│   │   │   ├── [spotify.md](./diagram/src/posts/spotify.md)
-│   │   │   ├── [stock-trading.md](./diagram/src/posts/stock-trading.md)
-│   │   │   ├── [stream-processing.md](./diagram/src/posts/stream-processing.md)
-│   │   │   ├── [stripe.md](./diagram/src/posts/stripe.md)
-│   │   │   ├── [telehealth.md](./diagram/src/posts/telehealth.md)
-│   │   │   ├── [ticketmaster.md](./diagram/src/posts/ticketmaster.md)
-│   │   │   ├── [tiktok.md](./diagram/src/posts/tiktok.md)
-│   │   │   ├── [time-series.md](./diagram/src/posts/time-series.md)
-│   │   │   ├── [tinder.md](./diagram/src/posts/tinder.md)
-│   │   │   ├── [translation-service.md](./diagram/src/posts/translation-service.md)
-│   │   │   ├── [twitch.md](./diagram/src/posts/twitch.md)
-│   │   │   ├── [twitter.md](./diagram/src/posts/twitter.md)
-│   │   │   ├── [typeahead.md](./diagram/src/posts/typeahead.md)
-│   │   │   ├── [uber.md](./diagram/src/posts/uber.md)
-│   │   │   ├── [url-shortener.md](./diagram/src/posts/url-shortener.md)
-│   │   │   ├── [vector-database.md](./diagram/src/posts/vector-database.md)
-│   │   │   ├── [video-editing.md](./diagram/src/posts/video-editing.md)
-│   │   │   ├── [voice-assistant.md](./diagram/src/posts/voice-assistant.md)
-│   │   │   ├── [voting-system.md](./diagram/src/posts/voting-system.md)
-│   │   │   ├── [wallet.md](./diagram/src/posts/wallet.md)
-│   │   │   ├── [weather-service.md](./diagram/src/posts/weather-service.md)
-│   │   │   ├── [web-crawler.md](./diagram/src/posts/web-crawler.md)
-│   │   │   ├── [webhook-delivery.md](./diagram/src/posts/webhook-delivery.md)
-│   │   │   ├── [whatsapp.md](./diagram/src/posts/whatsapp.md)
-│   │   │   ├── [wiki.md](./diagram/src/posts/wiki.md)
-│   │   │   ├── [youtube.md](./diagram/src/posts/youtube.md)
-│   │   │   └── [zoom.md](./diagram/src/posts/zoom.md)
-│   │   ├── styles/
-│   │   │   ├── [globals.css](./diagram/src/styles/globals.css)
-│   │   │   └── [themes.css](./diagram/src/styles/themes.css)
-│   │   └── test/
-│   │       └── [style-mock.js](./diagram/src/test/style-mock.js)
-│   ├── src-tauri/
-│   │   ├── capabilities/
-│   │   │   └── [default.json](./diagram/src-tauri/capabilities/default.json)
-│   │   ├── icons/
-│   │   │   ├── [128x128.png](./diagram/src-tauri/icons/128x128.png)
-│   │   │   ├── [128x128@2x.png](./diagram/src-tauri/icons/128x128@2x.png)
-│   │   │   ├── [32x32.png](./diagram/src-tauri/icons/32x32.png)
-│   │   │   ├── [Square107x107Logo.png](./diagram/src-tauri/icons/Square107x107Logo.png)
-│   │   │   ├── [Square142x142Logo.png](./diagram/src-tauri/icons/Square142x142Logo.png)
-│   │   │   ├── [Square150x150Logo.png](./diagram/src-tauri/icons/Square150x150Logo.png)
-│   │   │   ├── [Square284x284Logo.png](./diagram/src-tauri/icons/Square284x284Logo.png)
-│   │   │   ├── [Square30x30Logo.png](./diagram/src-tauri/icons/Square30x30Logo.png)
-│   │   │   ├── [Square310x310Logo.png](./diagram/src-tauri/icons/Square310x310Logo.png)
-│   │   │   ├── [Square44x44Logo.png](./diagram/src-tauri/icons/Square44x44Logo.png)
-│   │   │   ├── [Square71x71Logo.png](./diagram/src-tauri/icons/Square71x71Logo.png)
-│   │   │   ├── [Square89x89Logo.png](./diagram/src-tauri/icons/Square89x89Logo.png)
-│   │   │   ├── [StoreLogo.png](./diagram/src-tauri/icons/StoreLogo.png)
-│   │   │   ├── [icon.icns](./diagram/src-tauri/icons/icon.icns)
-│   │   │   ├── [icon.ico](./diagram/src-tauri/icons/icon.ico)
-│   │   │   └── [icon.png](./diagram/src-tauri/icons/icon.png)
-│   │   ├── src/
-│   │   │   ├── [lib.rs](./diagram/src-tauri/src/lib.rs)
-│   │   │   └── [main.rs](./diagram/src-tauri/src/main.rs)
-│   │   ├── [Cargo.lock](./diagram/src-tauri/Cargo.lock)
-│   │   ├── [Cargo.toml](./diagram/src-tauri/Cargo.toml)
-│   │   ├── [build.rs](./diagram/src-tauri/build.rs)
-│   │   └── [tauri.conf.json](./diagram/src-tauri/tauri.conf.json)
-│   ├── [AGENTS.md](./diagram/AGENTS.md)
-│   ├── [Dockerfile](./diagram/Dockerfile)
-│   ├── [LICENSE](./diagram/LICENSE)
-│   ├── [README.md](./diagram/README.md)
-│   ├── [docker-compose.yaml](./diagram/docker-compose.yaml)
-│   ├── [eslint.config.mts](./diagram/eslint.config.mts)
-│   ├── [jest.config.ts](./diagram/jest.config.ts)
-│   ├── [jest.setup.ts](./diagram/jest.setup.ts)
-│   ├── [next.config.ts](./diagram/next.config.ts)
-│   ├── [package.json](./diagram/package.json)
-│   ├── [playwright.config.ts](./diagram/playwright.config.ts)
-│   ├── [postcss.config.mjs](./diagram/postcss.config.mjs)
-│   └── [tsconfig.json](./diagram/tsconfig.json)
 ├── [README.md](./README.md)
 └── [TREE.md](./TREE.md)
 ```
 
-911 directories, 3796 files
+803 directories, 3194 files

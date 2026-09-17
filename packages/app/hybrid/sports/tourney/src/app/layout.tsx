@@ -7,6 +7,30 @@ import { Header } from '@/components/organisms/Header';
 export const metadata: Metadata = {
   title: 'Tourney - Tournaments Manager',
   description: 'Create and manage tournaments across multiple formats',
+  metadataBase: new URL('https://hieudoanm.github.io/open/tourney/'),
+  openGraph: {
+    type: 'website',
+    siteName: 'Tourney',
+    url: 'https://hieudoanm.github.io/open/tourney/',
+    title: 'Run a tournament',
+    description:
+      'Create and manage tournaments across multiple formats, from participants to standings and brackets.',
+    images: [
+      {
+        url: '/og/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Tourney — Run a tournament',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Run a tournament',
+    description:
+      'Create and manage tournaments across multiple formats, from participants to standings and brackets.',
+    images: ['/og/og.png'],
+  },
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,

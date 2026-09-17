@@ -1,0 +1,311 @@
+{
+  "version": 1,
+  "root": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/app/headless/landify/languages/go/docs",
+  "nodes": [
+    {
+      "id": "00-overview.md",
+      "path": "00-overview.md",
+      "extension": ".md"
+    },
+    {
+      "id": "01-requirements.md",
+      "path": "01-requirements.md",
+      "extension": ".md"
+    },
+    {
+      "id": "01-requirements/functional-requirements.md",
+      "path": "01-requirements/functional-requirements.md",
+      "extension": ".md"
+    },
+    {
+      "id": "01-requirements/non-functional-requirements.md",
+      "path": "01-requirements/non-functional-requirements.md",
+      "extension": ".md"
+    },
+    {
+      "id": "02-features.md",
+      "path": "02-features.md",
+      "extension": ".md"
+    },
+    {
+      "id": "02-features/FEATURE-01-Page-Types.md",
+      "path": "02-features/FEATURE-01-Page-Types.md",
+      "extension": ".md"
+    },
+    {
+      "id": "02-features/FEATURE-02-Themes.md",
+      "path": "02-features/FEATURE-02-Themes.md",
+      "extension": ".md"
+    },
+    {
+      "id": "02-features/FEATURE-03-Validation.md",
+      "path": "02-features/FEATURE-03-Validation.md",
+      "extension": ".md"
+    },
+    {
+      "id": "02-features/FEATURE-04-Social-Meta.md",
+      "path": "02-features/FEATURE-04-Social-Meta.md",
+      "extension": ".md"
+    },
+    {
+      "id": "03-user-stories.md",
+      "path": "03-user-stories.md",
+      "extension": ".md"
+    },
+    {
+      "id": "03-user-stories/US-001.md",
+      "path": "03-user-stories/US-001.md",
+      "extension": ".md"
+    },
+    {
+      "id": "03-user-stories/US-002.md",
+      "path": "03-user-stories/US-002.md",
+      "extension": ".md"
+    },
+    {
+      "id": "03-user-stories/US-003.md",
+      "path": "03-user-stories/US-003.md",
+      "extension": ".md"
+    },
+    {
+      "id": "04-architecture.md",
+      "path": "04-architecture.md",
+      "extension": ".md"
+    },
+    {
+      "id": "05-data-model.md",
+      "path": "05-data-model.md",
+      "extension": ".md"
+    },
+    {
+      "id": "06-api-specification.md",
+      "path": "06-api-specification.md",
+      "extension": ".md"
+    },
+    {
+      "id": "07-ui-ux-design.md",
+      "path": "07-ui-ux-design.md",
+      "extension": ".md"
+    },
+    {
+      "id": "08-tech-stack.md",
+      "path": "08-tech-stack.md",
+      "extension": ".md"
+    },
+    {
+      "id": "09-testing-strategy.md",
+      "path": "09-testing-strategy.md",
+      "extension": ".md"
+    },
+    {
+      "id": "10-implementation-plan.md",
+      "path": "10-implementation-plan.md",
+      "extension": ".md"
+    },
+    {
+      "id": "10-implementation-plan/definition-of-done.md",
+      "path": "10-implementation-plan/definition-of-done.md",
+      "extension": ".md"
+    },
+    {
+      "id": "10-implementation-plan/milestones.md",
+      "path": "10-implementation-plan/milestones.md",
+      "extension": ".md"
+    },
+    {
+      "id": "10-implementation-plan/phase-1-foundation.md",
+      "path": "10-implementation-plan/phase-1-foundation.md",
+      "extension": ".md"
+    },
+    {
+      "id": "10-implementation-plan/phase-2-layouts.md",
+      "path": "10-implementation-plan/phase-2-layouts.md",
+      "extension": ".md"
+    },
+    {
+      "id": "10-implementation-plan/phase-3-themes-delivery.md",
+      "path": "10-implementation-plan/phase-3-themes-delivery.md",
+      "extension": ".md"
+    },
+    {
+      "id": "10-implementation-plan/phase-4-desktop-studio.md",
+      "path": "10-implementation-plan/phase-4-desktop-studio.md",
+      "extension": ".md"
+    },
+    {
+      "id": "10-implementation-plan/phase-5-polish.md",
+      "path": "10-implementation-plan/phase-5-polish.md",
+      "extension": ".md"
+    },
+    {
+      "id": "10-implementation-plan/phase-6-ecosystem.md",
+      "path": "10-implementation-plan/phase-6-ecosystem.md",
+      "extension": ".md"
+    },
+    {
+      "id": "10-implementation-plan/risk-mitigation.md",
+      "path": "10-implementation-plan/risk-mitigation.md",
+      "extension": ".md"
+    },
+    {
+      "id": "11-deployment.md",
+      "path": "11-deployment.md",
+      "extension": ".md"
+    },
+    {
+      "id": "12-operations.md",
+      "path": "12-operations.md",
+      "extension": ".md"
+    },
+    {
+      "id": "README.md",
+      "path": "README.md",
+      "extension": ".md"
+    }
+  ],
+  "edges": [
+    {
+      "source": "00-overview.md",
+      "target": "09-testing-strategy.md",
+      "raw_link": "09-testing-strategy.md",
+      "line": 30,
+      "status": "resolved"
+    },
+    {
+      "source": "00-overview.md",
+      "target": "10-implementation-plan.md",
+      "raw_link": "10-implementation-plan.md",
+      "line": 29,
+      "status": "resolved"
+    },
+    {
+      "source": "00-overview.md",
+      "target": "11-deployment.md",
+      "raw_link": "11-deployment.md",
+      "line": 28,
+      "status": "resolved"
+    },
+    {
+      "source": "00-overview.md",
+      "target": "LICENSE",
+      "raw_link": "LICENSE",
+      "line": 101,
+      "status": "resolved"
+    },
+    {
+      "source": "08-tech-stack.md",
+      "target": "04-architecture.md",
+      "raw_link": "04-architecture.md",
+      "line": 24,
+      "status": "resolved"
+    },
+    {
+      "source": "10-implementation-plan.md",
+      "target": "04-architecture.md",
+      "raw_link": "04-architecture.md",
+      "line": 4,
+      "status": "resolved"
+    },
+    {
+      "source": "README.md",
+      "target": "00-overview.md",
+      "raw_link": "00-overview.md",
+      "line": 8,
+      "status": "resolved"
+    },
+    {
+      "source": "README.md",
+      "target": "01-requirements.md",
+      "raw_link": "01-requirements.md",
+      "line": 9,
+      "status": "resolved"
+    },
+    {
+      "source": "README.md",
+      "target": "02-features.md",
+      "raw_link": "02-features.md",
+      "line": 10,
+      "status": "resolved"
+    },
+    {
+      "source": "README.md",
+      "target": "03-user-stories.md",
+      "raw_link": "03-user-stories.md",
+      "line": 11,
+      "status": "resolved"
+    },
+    {
+      "source": "README.md",
+      "target": "04-architecture.md",
+      "raw_link": "04-architecture.md",
+      "line": 12,
+      "status": "resolved"
+    },
+    {
+      "source": "README.md",
+      "target": "05-data-model.md",
+      "raw_link": "05-data-model.md",
+      "line": 13,
+      "status": "resolved"
+    },
+    {
+      "source": "README.md",
+      "target": "06-api-specification.md",
+      "raw_link": "06-api-specification.md",
+      "line": 14,
+      "status": "resolved"
+    },
+    {
+      "source": "README.md",
+      "target": "07-ui-ux-design.md",
+      "raw_link": "07-ui-ux-design.md",
+      "line": 15,
+      "status": "resolved"
+    },
+    {
+      "source": "README.md",
+      "target": "08-tech-stack.md",
+      "raw_link": "08-tech-stack.md",
+      "line": 16,
+      "status": "resolved"
+    },
+    {
+      "source": "README.md",
+      "target": "09-testing-strategy.md",
+      "raw_link": "09-testing-strategy.md",
+      "line": 17,
+      "status": "resolved"
+    },
+    {
+      "source": "README.md",
+      "target": "10-implementation-plan.md",
+      "raw_link": "10-implementation-plan.md",
+      "line": 18,
+      "status": "resolved"
+    },
+    {
+      "source": "README.md",
+      "target": "11-deployment.md",
+      "raw_link": "11-deployment.md",
+      "line": 19,
+      "status": "resolved"
+    },
+    {
+      "source": "README.md",
+      "target": "12-operations.md",
+      "raw_link": "12-operations.md",
+      "line": 20,
+      "status": "resolved"
+    }
+  ],
+  "stats": {
+    "files": 32,
+    "ignored_files": 0,
+    "links": 19,
+    "broken_links": 0,
+    "resolved_links": 19,
+    "self_links": 0,
+    "orphan_files": 19,
+    "components": 0
+  }
+}

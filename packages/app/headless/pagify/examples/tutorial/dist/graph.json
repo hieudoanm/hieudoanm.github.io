@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "root": "/Users/hieudoan/git/github.com/hieudoanm/hieudoanm.github.io/packages/app/headless/pagify/examples/tutorial/docs",
+  "nodes": [
+    {
+      "id": "getting-started.md",
+      "path": "getting-started.md",
+      "extension": ".md"
+    },
+    {
+      "id": "index.md",
+      "path": "index.md",
+      "extension": ".md"
+    },
+    {
+      "id": "reference/index.md",
+      "path": "reference/index.md",
+      "extension": ".md"
+    }
+  ],
+  "edges": [
+    {
+      "source": "getting-started.md",
+      "target": "index.md",
+      "raw_link": "index.md",
+      "line": 29,
+      "status": "resolved"
+    },
+    {
+      "source": "getting-started.md",
+      "target": "reference/index.md",
+      "raw_link": "reference/index.md",
+      "line": 28,
+      "status": "resolved"
+    },
+    {
+      "source": "index.md",
+      "target": "../blog/index.md",
+      "raw_link": "../blog/index.md",
+      "line": 139,
+      "status": "outside_root"
+    },
+    {
+      "source": "index.md",
+      "target": "reference/index.md",
+      "raw_link": "reference/index.md",
+      "line": 138,
+      "status": "resolved"
+    }
+  ],
+  "stats": {
+    "files": 3,
+    "ignored_files": 0,
+    "links": 4,
+    "broken_links": 0,
+    "resolved_links": 3,
+    "self_links": 0,
+    "orphan_files": 1,
+    "components": 0
+  }
+}

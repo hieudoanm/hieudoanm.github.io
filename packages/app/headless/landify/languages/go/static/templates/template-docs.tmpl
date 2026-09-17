@@ -5,6 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="{{.Site.Description}}" />
     <title>{{.Site.Name}}</title>
+    {{- $og := .Social}}
+    <meta property="og:title" content="{{$og.Title}}" />
+    <meta property="og:description" content="{{$og.Description}}" />
+    <meta property="og:type" content="{{$og.Type}}" />
+    <meta property="og:site_name" content="{{$og.SiteName}}" />
+    {{- if $og.URL}}
+    <meta property="og:url" content="{{$og.URL}}" />
+    {{- end}}
+    {{- if $og.Image}}
+    <meta property="og:image" content="{{$og.Image}}" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    {{- end}}
+    {{- if $og.ImageAlt}}
+    <meta property="og:image:alt" content="{{$og.ImageAlt}}" />
+    {{- end}}
+    <meta name="twitter:card" content="{{$og.TwitterCard}}" />
+    {{- if $og.Image}}
+    <meta name="twitter:image" content="{{$og.Image}}" />
+    {{- end}}
+
     <style>
       :root {
 @LANDIFY_THEME@      }
@@ -94,7 +115,21 @@
           <pre><code>{{.Docs.Sample}}</code></pre>
         </div>
         {{end}}
-      </section>
+      </section>{{if .Demo.Video.Src}}
+
+      <section id="demo" class="block">
+        {{if or .Demo.Heading .Demo.Sub}}
+        <div class="block-head">
+          <h2>{{.Demo.Heading}}</h2>
+          {{if .Demo.Sub}}<p class="sub">{{.Demo.Sub}}</p>{{end}}
+        </div>
+        {{end}}
+        <video class="demo-media" controls preload="metadata"{{if .Demo.Video.Poster}} poster="{{.Demo.Video.Poster}}"{{end}}>
+          <source src="{{.Demo.Video.Src}}" type="video/mp4" />
+          {{if .Demo.Video.Track}}<track kind="descriptions" label="English descriptions" srclang="en" src="{{.Demo.Video.Track}}" default />{{end}}
+          Your browser does not support the video tag.
+        </video>
+      </section>{{end}}
 
       {{if .CTA.Heading}}
       <section id="cta" class="block">

@@ -15,12 +15,14 @@ import (
 
 var serveCmd = &cobra.Command{
 	Use:   "serve",
-	Short: "Serve the current directory over HTTP",
-	Long: `Serves index.html (and any other files) from a directory over HTTP so
-the built landing page can be previewed in a browser. Stops on Ctrl+C.`,
+	Short: "Start the landify JSON API server",
+	Long: `Serves the landify JSON API over HTTP: render and validate landing
+pages and list the built-in themes, alongside an OpenAPI document and a Swagger
+UI. All file access is confined to --root. To preview the built files instead,
+use the "preview" command.`,
 	Args: cobra.NoArgs,
 	RunE: func(cmd *cobra.Command, args []string) error {
-		dir, err := cmd.Flags().GetString("dir")
+		root, err := cmd.Flags().GetString("root")
 		if err != nil {
 			return err
 		}
@@ -36,15 +38,16 @@ the built landing page can be previewed in a browser. Stops on Ctrl+C.`,
 		if err != nil {
 			return fmt.Errorf("listen on %s:%d: %w", bind, port, err)
 		}
-		cmd.Printf("Serving %s on http://%s:%d\n", dir, bind, port)
+		base := "http://" + net.JoinHostPort(bind, strconv.Itoa(port))
+		printServerBox(cmd.OutOrStdout(), serveLinks(base, !isLoopbackHost(bind)))
 		ctx, stop := signal.NotifyContext(cmd.Context(), os.Interrupt, syscall.SIGTERM)
 		defer stop()
-		return landify.Serve(ctx, dir, ln)
+		return landify.ServeAPI(ctx, root, ln)
 	},
 }
 
 func init() {
-	serveCmd.Flags().StringP("dir", "d", ".", "directory to serve")
+	serveCmd.Flags().StringP("root", "r", ".", "directory the API is confined to")
 	serveCmd.Flags().StringP("bind", "b", "127.0.0.1", "address to bind")
 	serveCmd.Flags().IntP("port", "p", 8080, "port to listen on")
 }

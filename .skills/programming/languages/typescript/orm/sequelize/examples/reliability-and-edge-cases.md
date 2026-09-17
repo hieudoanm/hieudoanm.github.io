@@ -1,0 +1,23 @@
+# Sequelize Best Practices: 7. Performance
+
+## Source guidance
+
+This example applies the **7. Performance** section of [SKILL.md](../SKILL.md). Use the excerpt as a pattern and adapt project-specific names, versions, validation, and error handling.
+
+- **N+1 is the first suspect** — `include` eagerly or batch by ID list:
+- **`findAll({ raw: true })` for read-only payloads** — skip instance wrapping when you render JSON only.
+- **Bulk**: `bulkCreate` with `{ transaction: true }`/`chunkSize` for load; updates via `update`/`increment` (single statement) over read-modify-write.
+- **Indexes for `where`/`order` keys declared in a migration** — an unindexed `findAll` is the usual "slow query" story.
+- **`EXPLAIN ANALYZE`/`EXPLAIN` the generated SQL (`logging: console.log` in dev) before optimizing anything else.**
+
+## Example
+
+```ts
+const visits = await Visit.findAll({ where: { userId: { [Op.in]: ids } } });
+```
+
+## Apply it
+
+- Confirm that the project version, runtime, and conventions match the assumptions in this reliability and edge cases example for sequelize-best-practices.
+- Replace sample identifiers and settings with project-owned values; keep credentials and environment-specific secrets out of committed files.
+- Exercise a representative boundary or failure case, such as invalid input, an unavailable dependency, or a timeout, and verify the recovery behavior.

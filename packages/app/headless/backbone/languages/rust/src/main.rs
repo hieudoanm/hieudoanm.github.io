@@ -9,6 +9,7 @@ mod handlers;
 mod image;
 mod import_export;
 mod log;
+mod mcp;
 mod models;
 mod notification;
 mod openapi;
@@ -22,8 +23,7 @@ mod websocket;
 use std::sync::Arc;
 
 use axum::{
-    Router,
-    middleware,
+    Router, middleware,
     routing::{delete, get, post},
 };
 use handlers::AppState;
@@ -190,10 +190,22 @@ fn app(state: Arc<AppState>) -> Router {
         .route("/api/backup", get(handlers::get_backup))
         .route("/api/export", get(crate::import_export::handle_export))
         .route("/api/import", post(crate::import_export::handle_import))
-        .route("/api/permissions", get(crate::rbac::handle_list_permissions).post(crate::rbac::handle_create_permission))
-        .route("/api/permissions/{id}", delete(crate::rbac::handle_delete_permission))
-        .route("/api/buckets/{name}/files/{id}/thumb", get(handlers::get_thumbnail))
-        .layer(middleware::from_fn_with_state(state.clone(), rate_limit::rate_limit_middleware))
+        .route(
+            "/api/permissions",
+            get(crate::rbac::handle_list_permissions).post(crate::rbac::handle_create_permission),
+        )
+        .route(
+            "/api/permissions/{id}",
+            delete(crate::rbac::handle_delete_permission),
+        )
+        .route(
+            "/api/buckets/{name}/files/{id}/thumb",
+            get(handlers::get_thumbnail),
+        )
+        .layer(middleware::from_fn_with_state(
+            state.clone(),
+            rate_limit::rate_limit_middleware,
+        ))
         .layer(middleware::from_fn(content_type::require_json_content_type))
         .layer(RequestBodyLimitLayer::new(10 * 1024 * 1024));
 
@@ -210,13 +222,11 @@ fn app(state: Arc<AppState>) -> Router {
         .route("/api/logs/stream", get(crate::log::handle_log_stream))
         .route(
             "/api/pubsub/topics",
-            get(handlers::handle_pubsub_topics_list)
-                .post(handlers::handle_pubsub_topics_create),
+            get(handlers::handle_pubsub_topics_list).post(handlers::handle_pubsub_topics_create),
         )
         .route(
             "/api/pubsub/topics/{name}",
-            get(handlers::handle_pubsub_topics_get)
-                .delete(handlers::handle_pubsub_topics_delete),
+            get(handlers::handle_pubsub_topics_get).delete(handlers::handle_pubsub_topics_delete),
         )
         .route(
             "/api/pubsub/topics/{name}/messages",
@@ -252,8 +262,61 @@ async fn log_request(
     response
 }
 
+/// USAGE lists the accepted command lines. The default is the HTTP server, so
+/// `backbone` and `backbone serve` both start it.
+const USAGE: &str = "\
+Backbone - Back-end as a Service
+
+Usage:
+  backbone              Start the HTTP server
+  backbone serve        Start the HTTP server
+  backbone mcp serve    Start the MCP server on stdio
+  backbone --help       Show this message
+  backbone --version    Show the version";
+
+/// Reports whether the arguments select the stdio MCP server.
+///
+/// `mcp serve` is checked as a pair so an argument list of `mcp` alone falls
+/// through to the help text rather than starting a server that ignores it.
+fn is_mcp_serve(args: &[String]) -> bool {
+    args.len() == 2 && args[0] == "mcp" && args[1] == "serve"
+}
+
 #[tokio::main]
 async fn main() {
+    let args: Vec<String> = std::env::args().skip(1).collect();
+
+    if args.iter().any(|arg| arg == "--help" || arg == "-h") {
+        println!("{USAGE}");
+        return;
+    }
+    if args.iter().any(|arg| arg == "--version" || arg == "-V") {
+        println!("backbone {}", env!("CARGO_PKG_VERSION"));
+        return;
+    }
+    if is_mcp_serve(&args) {
+        // The MCP server is synchronous and reads stdin to EOF, so it runs on
+        // this thread. It opens the same SQLite database as the HTTP server.
+        if let Err(err) = mcp::run(&mut std::io::stderr()) {
+            eprintln!("backbone mcp serve: {err}");
+            std::process::exit(1);
+        }
+        return;
+    }
+    // Bare `serve` and no arguments both start the HTTP server; anything else
+    // is a typo worth reporting rather than silently ignoring.
+    let starts_http = args.is_empty() || (args.len() == 1 && args[0] == "serve");
+    if !starts_http {
+        eprintln!("{USAGE}");
+        std::process::exit(2);
+    }
+
+    serve_http().await
+}
+
+/// Starts the HTTP server. Split from main so argument handling stays separate
+/// from server setup.
+async fn serve_http() {
     let db_path = db::data_dir().join("data.db");
     let pool: deadpool::managed::Pool<db::ConnectionManager> =
         deadpool::managed::Pool::builder(db::ConnectionManager { path: db_path })
@@ -367,8 +430,7 @@ mod tests {
     }
 
     async fn test_app_with_state() -> (Router, Arc<AppState>) {
-        let tmp_dir =
-            std::env::temp_dir().join(format!("backbone-test-{}", uuid::Uuid::new_v4()));
+        let tmp_dir = std::env::temp_dir().join(format!("backbone-test-{}", uuid::Uuid::new_v4()));
         std::fs::create_dir_all(&tmp_dir).ok();
         let db_path = tmp_dir.join("test.db");
         let pool: deadpool::managed::Pool<db::ConnectionManager> =
@@ -472,7 +534,10 @@ mod tests {
     async fn register_admin(app: &Router, state: &Arc<AppState>) -> String {
         let body = serde_json::json!({"email": "admin@test.com", "password": "admin123"});
         let (_, resp) = post_json(app, "/api/auth/register", body).await;
-        assert!(resp["email"].as_str().unwrap_or("").len() > 0, "register should succeed");
+        assert!(
+            resp["email"].as_str().unwrap_or("").len() > 0,
+            "register should succeed"
+        );
 
         let body = serde_json::json!({"email": "admin@test.com", "password": "admin123"});
         let (_, resp) = post_json(app, "/api/auth/login", body).await;
@@ -1655,14 +1720,7 @@ mod tests {
         let token = register_token(&app).await;
 
         let body = serde_json::json!({"name": "chat"});
-        request(
-            &app,
-            "POST",
-            "/api/pubsub/topics",
-            Some(&token),
-            Some(body),
-        )
-        .await;
+        request(&app, "POST", "/api/pubsub/topics", Some(&token), Some(body)).await;
 
         let body = serde_json::json!({"body": "hello world"});
         let (status, value) = request(
@@ -1710,14 +1768,7 @@ mod tests {
         let app = test_app().await;
         let token = register_token(&app).await;
         let body = serde_json::json!({"name": "t"});
-        request(
-            &app,
-            "POST",
-            "/api/pubsub/topics",
-            Some(&token),
-            Some(body),
-        )
-        .await;
+        request(&app, "POST", "/api/pubsub/topics", Some(&token), Some(body)).await;
         let body = serde_json::json!({});
         let (status, _) = request(
             &app,
@@ -1736,14 +1787,7 @@ mod tests {
         let token = register_token(&app).await;
 
         let body = serde_json::json!({"name": "tmp"});
-        request(
-            &app,
-            "POST",
-            "/api/pubsub/topics",
-            Some(&token),
-            Some(body),
-        )
-        .await;
+        request(&app, "POST", "/api/pubsub/topics", Some(&token), Some(body)).await;
 
         let body = serde_json::json!({"body": "m1"});
         request(
@@ -1765,14 +1809,7 @@ mod tests {
         )
         .await;
 
-        request(
-            &app,
-            "DELETE",
-            "/api/pubsub/topics/tmp",
-            Some(&token),
-            None,
-        )
-        .await;
+        request(&app, "DELETE", "/api/pubsub/topics/tmp", Some(&token), None).await;
 
         let (status, _) = request(
             &app,
@@ -1811,7 +1848,14 @@ mod tests {
         let app = test_app().await;
         let token = register_token(&app).await;
         let body = serde_json::json!({"content": "hello all"});
-        let (status, value) = request(&app, "POST", "/api/websockets/broadcast", Some(&token), Some(body)).await;
+        let (status, value) = request(
+            &app,
+            "POST",
+            "/api/websockets/broadcast",
+            Some(&token),
+            Some(body),
+        )
+        .await;
         assert_eq!(status, StatusCode::OK);
         assert!(value.get("sent").is_some());
         let (status, _value) = get_json(&app, "/api/websockets/messages", Some(&token)).await;
@@ -1824,7 +1868,14 @@ mod tests {
         let token = register_token(&app).await;
         let (status, _) = get_json(&app, "/api/websockets/nonexistent", Some(&token)).await;
         assert_eq!(status, StatusCode::NOT_FOUND);
-        let (status, _) = request(&app, "DELETE", "/api/websockets/nonexistent", Some(&token), None).await;
+        let (status, _) = request(
+            &app,
+            "DELETE",
+            "/api/websockets/nonexistent",
+            Some(&token),
+            None,
+        )
+        .await;
         assert_eq!(status, StatusCode::NOT_FOUND);
     }
 
@@ -1833,7 +1884,14 @@ mod tests {
         let app = test_app().await;
         let token = register_token(&app).await;
         let body = serde_json::json!({"content": "hello"});
-        let (status, _) = request(&app, "POST", "/api/websockets/nonexistent/send", Some(&token), Some(body)).await;
+        let (status, _) = request(
+            &app,
+            "POST",
+            "/api/websockets/nonexistent/send",
+            Some(&token),
+            Some(body),
+        )
+        .await;
         assert_eq!(status, StatusCode::NOT_FOUND);
     }
 
@@ -1841,7 +1899,8 @@ mod tests {
     async fn test_websocket_messages_list() {
         let app = test_app().await;
         let token = register_token(&app).await;
-        let (status, _value) = get_json(&app, "/api/websockets/nonexistent/messages", Some(&token)).await;
+        let (status, _value) =
+            get_json(&app, "/api/websockets/nonexistent/messages", Some(&token)).await;
         assert_eq!(status, StatusCode::NOT_FOUND);
     }
 
@@ -1909,7 +1968,9 @@ mod tests {
                     match buf_reader.read_line(&mut line).await {
                         Ok(0) => break,
                         Ok(_) => {
-                            if line.trim().is_empty() { break; }
+                            if line.trim().is_empty() {
+                                break;
+                            }
                             if line.to_lowercase().starts_with("x-webhook-signature-256") {
                                 got.store(true, Ordering::SeqCst);
                             }
@@ -1936,11 +1997,21 @@ mod tests {
         assert_eq!(status, StatusCode::OK);
 
         let body = serde_json::json!({"data": {"x": 1}});
-        let (status, _) = request(&app, "POST", "/api/collections/sig_test/records", Some(&token), Some(body)).await;
+        let (status, _) = request(
+            &app,
+            "POST",
+            "/api/collections/sig_test/records",
+            Some(&token),
+            Some(body),
+        )
+        .await;
         assert_eq!(status, StatusCode::OK);
 
         tokio::time::sleep(std::time::Duration::from_millis(500)).await;
-        assert!(got_sig.load(Ordering::SeqCst), "should have received signature header");
+        assert!(
+            got_sig.load(Ordering::SeqCst),
+            "should have received signature header"
+        );
     }
 
     #[tokio::test]
@@ -1970,7 +2041,11 @@ mod tests {
                         line.clear();
                         match buf_reader.read_line(&mut line).await {
                             Ok(0) => break,
-                            Ok(_) => { if line.trim().is_empty() { break; } }
+                            Ok(_) => {
+                                if line.trim().is_empty() {
+                                    break;
+                                }
+                            }
                             Err(_) => break,
                         }
                     }
@@ -1986,12 +2061,20 @@ mod tests {
             "url": format!("http://{addr}/hook"),
             "events": ["record.create"]
         });
-        let (status, value) = request(&app, "POST", "/api/webhooks", Some(&token), Some(wh_body)).await;
+        let (status, value) =
+            request(&app, "POST", "/api/webhooks", Some(&token), Some(wh_body)).await;
         assert_eq!(status, StatusCode::OK);
         let hook_id = value["id"].as_str().unwrap_or("").to_string();
 
         let body = serde_json::json!({"is_active": false});
-        let (status, _) = request(&app, "PATCH", &format!("/api/webhooks/{hook_id}"), Some(&token), Some(body)).await;
+        let (status, _) = request(
+            &app,
+            "PATCH",
+            &format!("/api/webhooks/{hook_id}"),
+            Some(&token),
+            Some(body),
+        )
+        .await;
         assert_eq!(status, StatusCode::OK);
 
         let body = serde_json::json!({"name": "inact_test"});
@@ -1999,11 +2082,22 @@ mod tests {
         assert_eq!(status, StatusCode::OK);
 
         let body = serde_json::json!({"data": {"x": 1}});
-        let (status, _) = request(&app, "POST", "/api/collections/inact_test/records", Some(&token), Some(body)).await;
+        let (status, _) = request(
+            &app,
+            "POST",
+            "/api/collections/inact_test/records",
+            Some(&token),
+            Some(body),
+        )
+        .await;
         assert_eq!(status, StatusCode::OK);
 
         tokio::time::sleep(std::time::Duration::from_millis(500)).await;
-        assert_eq!(received.load(Ordering::SeqCst), 0, "inactive webhook should not deliver");
+        assert_eq!(
+            received.load(Ordering::SeqCst),
+            0,
+            "inactive webhook should not deliver"
+        );
     }
 
     #[tokio::test]
@@ -2011,7 +2105,14 @@ mod tests {
         let app = test_app().await;
         let token = register_token(&app).await;
         let body = serde_json::json!({"name": "nope"});
-        let (status, _) = request(&app, "PATCH", "/api/webhooks/nonexistent", Some(&token), Some(body)).await;
+        let (status, _) = request(
+            &app,
+            "PATCH",
+            "/api/webhooks/nonexistent",
+            Some(&token),
+            Some(body),
+        )
+        .await;
         assert_eq!(status, StatusCode::NOT_FOUND);
     }
 
@@ -2019,7 +2120,14 @@ mod tests {
     async fn test_webhook_delete_not_found() {
         let app = test_app().await;
         let token = register_token(&app).await;
-        let (status, _) = request(&app, "DELETE", "/api/webhooks/nonexistent", Some(&token), None).await;
+        let (status, _) = request(
+            &app,
+            "DELETE",
+            "/api/webhooks/nonexistent",
+            Some(&token),
+            None,
+        )
+        .await;
         assert_eq!(status, StatusCode::NOT_FOUND);
     }
 
@@ -2039,8 +2147,12 @@ mod tests {
             let mut line = String::new();
             loop {
                 line.clear();
-                if buf_reader.read_line(&mut line).await.unwrap_or(0) == 0 { break; }
-                if line.trim().is_empty() { break; }
+                if buf_reader.read_line(&mut line).await.unwrap_or(0) == 0 {
+                    break;
+                }
+                if line.trim().is_empty() {
+                    break;
+                }
             }
             let resp = "HTTP/1.1 200 OK\r\nContent-Length: 4\r\n\r\npong";
             let _ = writer.write_all(resp.as_bytes()).await;
@@ -2052,16 +2164,25 @@ mod tests {
             "command": format!("http://{addr}/ping"),
             "method": "GET"
         });
-        let (status, value) = request(&app, "POST", "/api/cronjobs", Some(&token), Some(body)).await;
+        let (status, value) =
+            request(&app, "POST", "/api/cronjobs", Some(&token), Some(body)).await;
         assert_eq!(status, StatusCode::CREATED);
         let id = value["id"].as_str().unwrap_or("").to_string();
 
-        let (status, _) = request(&app, "POST", &format!("/api/cronjobs/{id}/run"), Some(&token), None).await;
+        let (status, _) = request(
+            &app,
+            "POST",
+            &format!("/api/cronjobs/{id}/run"),
+            Some(&token),
+            None,
+        )
+        .await;
         assert_eq!(status, StatusCode::OK);
 
         tokio::time::sleep(std::time::Duration::from_millis(500)).await;
 
-        let (status, value) = get_json(&app, &format!("/api/cronjobs/{id}/logs"), Some(&token)).await;
+        let (status, value) =
+            get_json(&app, &format!("/api/cronjobs/{id}/logs"), Some(&token)).await;
         assert_eq!(status, StatusCode::OK);
         let logs = value.as_array().unwrap();
         assert!(!logs.is_empty());
@@ -2073,11 +2194,13 @@ mod tests {
         let app = test_app().await;
         let token = register_token(&app).await;
         let body = serde_json::json!({"title": "Get Me", "body": "Find me", "type": "info"});
-        let (status, value) = request(&app, "POST", "/api/notifications", Some(&token), Some(body)).await;
+        let (status, value) =
+            request(&app, "POST", "/api/notifications", Some(&token), Some(body)).await;
         assert_eq!(status, StatusCode::OK);
         let id = value["id"].as_str().unwrap_or("").to_string();
 
-        let (status, value) = get_json(&app, &format!("/api/notifications/{id}"), Some(&token)).await;
+        let (status, value) =
+            get_json(&app, &format!("/api/notifications/{id}"), Some(&token)).await;
         assert_eq!(status, StatusCode::OK);
         assert_eq!(value["title"], "Get Me");
         assert_eq!(value["body"], "Find me");
@@ -2138,11 +2261,25 @@ mod tests {
         assert_eq!(status, StatusCode::OK);
 
         let body = serde_json::json!({"id": "myid", "data": {"x": 1}});
-        let (status, _) = request(&app, "POST", "/api/collections/items/records", Some(&token), Some(body)).await;
+        let (status, _) = request(
+            &app,
+            "POST",
+            "/api/collections/items/records",
+            Some(&token),
+            Some(body),
+        )
+        .await;
         assert_eq!(status, StatusCode::OK);
 
         let body = serde_json::json!({"id": "myid", "data": {"x": 2}});
-        let (status, _) = request(&app, "POST", "/api/collections/items/records", Some(&token), Some(body)).await;
+        let (status, _) = request(
+            &app,
+            "POST",
+            "/api/collections/items/records",
+            Some(&token),
+            Some(body),
+        )
+        .await;
         assert_eq!(status, StatusCode::CONFLICT);
     }
 
@@ -2155,7 +2292,14 @@ mod tests {
         assert_eq!(status, StatusCode::OK);
 
         let body = serde_json::json!({"data": {"x": 1}});
-        let (status, _) = request(&app, "PATCH", "/api/collections/items/records/nonexistent", Some(&token), Some(body)).await;
+        let (status, _) = request(
+            &app,
+            "PATCH",
+            "/api/collections/items/records/nonexistent",
+            Some(&token),
+            Some(body),
+        )
+        .await;
         assert_eq!(status, StatusCode::NOT_FOUND);
     }
 
@@ -2168,12 +2312,26 @@ mod tests {
         assert_eq!(status, StatusCode::OK);
 
         let body = serde_json::json!({"data": {"x": 1}});
-        let (status, value) = request(&app, "POST", "/api/collections/items/records", Some(&token), Some(body)).await;
+        let (status, value) = request(
+            &app,
+            "POST",
+            "/api/collections/items/records",
+            Some(&token),
+            Some(body),
+        )
+        .await;
         assert_eq!(status, StatusCode::OK);
         let id = value["id"].as_str().unwrap_or("").to_string();
 
         let body = serde_json::json!({});
-        let (status, _) = request(&app, "PATCH", &format!("/api/collections/items/records/{id}"), Some(&token), Some(body)).await;
+        let (status, _) = request(
+            &app,
+            "PATCH",
+            &format!("/api/collections/items/records/{id}"),
+            Some(&token),
+            Some(body),
+        )
+        .await;
         assert_eq!(status, StatusCode::OK);
     }
 
@@ -2191,7 +2349,8 @@ mod tests {
         let token = register_admin(&app, &state).await;
 
         let body = serde_json::json!({"user_id": "user1", "collection": "*", "role": "viewer"});
-        let (status, value) = request(&app, "POST", "/api/permissions", Some(&token), Some(body)).await;
+        let (status, value) =
+            request(&app, "POST", "/api/permissions", Some(&token), Some(body)).await;
         assert_eq!(status, StatusCode::CREATED);
         let perm_id = value["id"].as_str().unwrap_or("").to_string();
 
@@ -2200,7 +2359,14 @@ mod tests {
         let perms = value.as_array().unwrap();
         assert!(!perms.is_empty());
 
-        let (status, _) = request(&app, "DELETE", &format!("/api/permissions/{perm_id}"), Some(&token), None).await;
+        let (status, _) = request(
+            &app,
+            "DELETE",
+            &format!("/api/permissions/{perm_id}"),
+            Some(&token),
+            None,
+        )
+        .await;
         assert_eq!(status, StatusCode::NO_CONTENT);
     }
 
@@ -2214,14 +2380,28 @@ mod tests {
         assert_eq!(status, StatusCode::OK);
 
         let body = serde_json::json!({"data": {"val": 1}});
-        let (status, _) = request(&app, "POST", "/api/collections/export_test/records", Some(&token), Some(body)).await;
+        let (status, _) = request(
+            &app,
+            "POST",
+            "/api/collections/export_test/records",
+            Some(&token),
+            Some(body),
+        )
+        .await;
         assert_eq!(status, StatusCode::OK);
 
         let (status, export_data) = get_json(&app, "/api/export", Some(&token)).await;
         assert_eq!(status, StatusCode::OK);
         assert!(export_data.get("collections").is_some());
 
-        let (status, _) = request(&app, "POST", "/api/import?skip_existing=true", Some(&token), Some(export_data)).await;
+        let (status, _) = request(
+            &app,
+            "POST",
+            "/api/import?skip_existing=true",
+            Some(&token),
+            Some(export_data),
+        )
+        .await;
         assert_eq!(status, StatusCode::OK);
     }
 }

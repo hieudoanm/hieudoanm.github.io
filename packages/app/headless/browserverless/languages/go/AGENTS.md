@@ -25,8 +25,9 @@
 ## Key Conventions
 
 - CLI entrypoint is `main.go`; subcommands `screenshot`, `scrape`, `serve`,
-  `health`, `help`, `version` dispatched by hand-rolled `flag.NewFlagSet`.
-  Keep the entrypoint thin — all logic lives in `internal/`.
+  `health`, `mcp`, `help`, `version` dispatched by hand-rolled `flag.NewFlagSet`.
+  Keep the entrypoint thin — all logic lives in `internal/`. The `mcp` group is
+  entered from `mcp.go` and follows the same `flag.NewFlagSet` style.
 - Standard Go layout: `main.go` + `internal/headless` (engine wrapper) +
   `internal/server` (HTTP handler + server lifecycle) + `internal/version`.
   Packages must not form import cycles.
@@ -52,6 +53,27 @@
   (`version`/`help`/`scrape`/`screenshot`/`health`) — the slow but
   authoritative gate. Renders target a local `httptest` fixture server, so no
   external network is required.
+- MCP: `browserverless mcp serve` speaks newline-delimited JSON-RPC 2.0 over
+  stdio. `internal/mcp` holds the protocol, tools, and both render backends.
+  Keep it hand-rolled — do not add an MCP SDK, and do not convert the root CLI
+  to cobra.
+  - Tools: `browserverless_scrape`, `browserverless_screenshot` (PNG in an
+    `image` content block, never inlined as text), `browserverless_version`.
+  - The `Renderer` interface in `internal/mcp` has two backends:
+    `localRenderer` (in-process `headless.Browser`) and `httpRenderer` (proxies
+    `--addr` through the real HTTP API). Tools must not branch on backend.
+  - Tool failures return `ToolResult` with `isError`; JSON-RPC errors are only
+    for parse errors, unknown methods, and unknown tools.
+  - `headless.ValidateURL` is the single URL validation point shared by
+    `internal/server` and the MCP tools, and `headless.IsTimeout` is the single
+    timeout classification point. Do not duplicate either.
+  - The reported server version comes from `internal/version.Version` so
+    `-ldflags` stamps stay accurate.
+  - Tests: `internal/mcp` covers protocol frames, both render backends (the HTTP
+    one against a real `server.Handler`), and argument validation.
+    `tests/mcp_test.go` drives the built binary over pipes in both in-process
+    and `--addr` modes, and builds a **fresh** binary into a temp dir because
+    the shared `buildBinary` reuses `../bin`, which can be stale.
 - API surface mirrors the Rust reference: GET `/api/v1/health`,
   `/api/v1/version`, `/api/v1/openapi.json`, `/docs`; POST `/api/v1/scrape`,
   `/api/v1/screenshot`. Meta headers (`x-browserverless-*`) on 200 responses.
@@ -72,8 +94,9 @@
 | Document                                       | Description                                               |
 | ---------------------------------------------- | --------------------------------------------------------- |
 | [docs](./docs/)                                | Architecture, contributing, downloads, packaging, roadmap |
-| [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md) | Tech stack, module map, request flow                      |
-| [docs/CONTRIBUTING.md](./docs/CONTRIBUTING.md) | Setup, commands, conventions, testing                     |
-| [docs/DOWNLOADS.md](./docs/DOWNLOADS.md)       | Get the binary, Docker image, or source                   |
-| [docs/PACKAGING.md](./docs/PACKAGING.md)       | Binary + container + CI artifact pipeline                 |
-| [docs/ROADMAP.md](./docs/ROADMAP.md)           | Phased feature roadmap                                    |
+| [docs/00-overview.md](./docs/00-overview.md)   | Project overview, installation, and getting started       |
+| [docs/04-architecture.md](./docs/04-architecture.md) | Tech stack, module map, request flow                      |
+| [docs/09-testing-strategy.md](./docs/09-testing-strategy.md) | Testing conventions and strategies                        |
+| [docs/10-implementation-plan.md](./docs/10-implementation-plan.md) | Phased feature roadmap                                    |
+| [docs/10-implementation-plan/development.md](./docs/10-implementation-plan/development.md) | Setup, commands, conventions                              |
+| [docs/11-deployment.md](./docs/11-deployment.md) | Binary + container + CI artifact pipeline                 |

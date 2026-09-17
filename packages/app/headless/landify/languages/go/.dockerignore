@@ -1,0 +1,12 @@
+.git
+.gitignore
+bin
+coverage
+docs
+scripts
+*.md
+LICENSE
+Makefile
+Dockerfile
+docker
+.dockerignore
