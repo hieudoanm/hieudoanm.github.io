@@ -1,1 +1,0 @@
-# [Fauna](https://faunadb.org/)

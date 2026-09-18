@@ -1,4 +1,4 @@
 # Vehicles
 
-- [[Cars]]
-- [[Motorcycles]]
+- Cars
+- Motorcycles

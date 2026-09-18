@@ -1,25 +1,24 @@
 # Sports
 
-- [[american-football|American Football]]
-- [[badminton]]
-- [[baseball]]
-- [[basketball]]
-- [[bicycling]]
-- [[checker]]
-- [[chess]]
-- [[entertainment/sports/board/go]]
-- [[cricket]]
-- [[f1]]
-- [[entertainment/sports/football/football]]
-- [[futsal]]
-- [[marathon]]
-- [[motorcycle]]
-- [[netball]]
-- [[pickleball]]
-- [[rugby]]
-- [[shogi]]
-- [[squash]]
-- [[swimming]]
-- [[table-tennis|Table Tennis]]
-- [[tennis]]
-- [[xiangqi]]
+- American Football
+- Badminton
+- Baseball
+- Basketball
+- Bicycling
+- Checker
+- Chess
+- Cricket
+- F1
+- Football
+- Futsal
+- Marathon
+- Motorcycle
+- Netball
+- Pickleball
+- Rugby
+- Shogi
+- Squash
+- Swimming
+- Table Tennis
+- Tennis
+- Xiangqi

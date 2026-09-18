@@ -19,14 +19,14 @@
 
 ### Bachelor of Psychology
 
-- [[University]]:
+- University:
   [Royal Melbourne Institute of Technology (RMIT)](https://www.rmit.edu.au/)
 - Location: Ho Chi Minh City, [[Vietnam]]
 - Period: October 2022 - September 2025
 
 ### Bachelor of Business Information Technology
 
-- [[University]]: [LAB University of Applied Sciences](https://lab.fi/en)
+- University: [LAB University of Applied Sciences](https://lab.fi/en)
 - Location: Lahti, [[finland]]
 - Period: September 2013 - December 2016
 

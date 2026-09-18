@@ -1,1 +1,0 @@
-# [NativeScript](https://nativescript.org/)

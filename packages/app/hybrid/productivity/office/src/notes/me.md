@@ -1,9 +1,9 @@
 # Me
 
-- [[Bored]]
-- [[Cities]]
-- [[f&b|F&B]]
-- [[Minimalism]]
-- [[random-research|Random Research]]
-- [[Resolutions]]
+- Bored
+- Cities
+- F&B
+- Minimalism
+- Random Research
+- Resolutions
 - [[Resume]]

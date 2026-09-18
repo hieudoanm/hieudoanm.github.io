@@ -1,1 +1,0 @@
-# [RocksDB](https://rocksdb.org/)

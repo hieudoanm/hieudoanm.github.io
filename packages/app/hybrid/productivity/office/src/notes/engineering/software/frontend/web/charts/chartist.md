@@ -1,1 +1,0 @@
-# [Chartist](https://chartist.dev/)

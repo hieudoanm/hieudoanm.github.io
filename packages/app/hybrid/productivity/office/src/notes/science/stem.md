@@ -17,7 +17,7 @@ technology.
 - [[Design]]
 - [[LLM]]
 - [[Messaging]]
-- [[NeuroScience]]
+- NeuroScience
 - [[Workspaces]]
 - [[Devices]]
 - [[Vehicles]]
@@ -25,7 +25,7 @@ technology.
 ## Engineering
 
 - [[data-structures-and-algorithms|Data Structures and Algorithms]]
-- [[API]]
+- API
 - [[os|OS (Operating System)]]
 - [[ide|IDE (Integrated Development Environment)]]
 - [[Languages]]
@@ -35,6 +35,6 @@ technology.
 - [[Databases]]
 - [[game-engines|Game Engines]]
 - [[Hosting]]
-- [[system-design|System Design]]
+- System Design
 
 ## Mathematics

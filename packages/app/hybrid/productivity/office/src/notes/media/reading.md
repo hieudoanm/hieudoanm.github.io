@@ -1,4 +1,4 @@
 # Reading
 
-- [[Books]]
-- [[Comics]]
+- Books
+- Comics

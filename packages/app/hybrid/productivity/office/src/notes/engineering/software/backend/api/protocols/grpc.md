@@ -1,1 +1,0 @@
-# [gRPC](https://grpc.io/)
