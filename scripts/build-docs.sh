@@ -22,8 +22,8 @@ build_app() {
     local dest_dir="$DOCS_DIR"
 
     if [[ "$app_path" != "$ROOT_APP" ]]; then
-        base_path="/free/$app_name"
-        dest_dir="$DOCS_DIR/free/$app_name"
+        base_path="/open/$app_name"
+        dest_dir="$DOCS_DIR/open/$app_name"
     fi
 
     if [[ -n "$base_path" ]]; then
@@ -72,7 +72,7 @@ build_hybrid_apps() {
             build_app "$app_path"
         fi
     done
-    verify_free
+    verify_open
 }
 
 copy_landing_pages() {
@@ -89,7 +89,7 @@ copy_landing_pages() {
         slug="${src_file%/public/index.html}"
         slug="${slug##*/}"
         pub_dir="$(dirname "$src_file")"
-        dest_dir="$DOCS_DIR/free/$slug"
+        dest_dir="$DOCS_DIR/open/$slug"
 
         echo "Copying $pub_dir -> $dest_dir"
         rm -rf "$dest_dir"
@@ -101,20 +101,20 @@ copy_landing_pages() {
 
 init_docsify() {
     local docsify_lib="$ROOT_DIR/node_modules/docsify/lib"
-    local free_dir="$DOCS_DIR/free"
-    local assets_dir="$free_dir/docsify"
+    local open_dir="$DOCS_DIR/open"
+    local assets_dir="$open_dir/docsify"
 
     if [[ ! -f "$docsify_lib/docsify.min.js" ]]; then
         echo "Error: docsify is not installed. Run 'pnpm add -D docsify'." >&2
         exit 1
     fi
 
-    echo "Initializing docsify at $free_dir..."
+    echo "Initializing docsify at $open_dir..."
     mkdir -p "$assets_dir"
     cp "$docsify_lib/docsify.min.js" "$assets_dir/docsify.min.js"
     cp "$docsify_lib/themes/vue.css" "$assets_dir/vue.css"
 
-    cat > "$free_dir/index.html" <<'HTML'
+    cat > "$open_dir/index.html" <<'HTML'
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -138,12 +138,12 @@ init_docsify() {
 </html>
 HTML
 
-    echo "Copying $ROOT_DIR/README.md -> $free_dir/README.md"
-    cp "$ROOT_DIR/README.md" "$free_dir/README.md"
-    touch "$free_dir/.nojekyll"
+    echo "Copying $ROOT_DIR/README.md -> $open_dir/README.md"
+    cp "$ROOT_DIR/README.md" "$open_dir/README.md"
+    touch "$open_dir/.nojekyll"
 }
 
-verify_free() {
+verify_open() {
     local missing=()
     for category_dir in "$HYBRID_DIR"/*/; do
         [[ ! -d "$category_dir" ]] && continue
@@ -158,13 +158,13 @@ verify_free() {
             if [[ ! -f "$app_dir/package.json" ]] || [[ ! -f "$app_dir/next.config.ts" ]]; then
                 continue
             fi
-            if [[ ! -d "$DOCS_DIR/free/$app_name" ]]; then
+            if [[ ! -d "$DOCS_DIR/open/$app_name" ]]; then
                 missing+=("$category/$app_name")
             fi
         done
     done
     if [[ ${#missing[@]} -gt 0 ]]; then
-        echo "Error: missing build outputs in $DOCS_DIR/free: ${missing[*]}" >&2
+        echo "Error: missing build outputs in $DOCS_DIR/open: ${missing[*]}" >&2
         echo "Each Next.js app in $HYBRID_DIR (except '$ROOT_APP') must be copied there." >&2
         exit 1
     fi

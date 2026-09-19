@@ -26,27 +26,27 @@
 
 ---
 
-## [Free Releases](https://hieudoanm.github.io/free)
+## [Open Releases](https://hieudoanm.github.io/open)
 
 ### Browser Extensions and Native Apps (3)
 
-| No  | Platform         | Category  | Name     | Free                  | Releases                      |
+| No  | Platform         | Category  | Name     | Open                  | Releases                      |
 | --- | ---------------- | --------- | -------- | --------------------- | ----------------------------- |
-| 1   | Browser          | Extension | BrowserX | [Free][free-browserx] | [Releases][releases-browserx] |
-| 2   | Native - Android | Extension | AndroidX | [Free][free-androidx] | [Releases][releases-androidx] |
-| 3   | Native - MacOS   | Extension | MacOSX   | [Free][free-macosx]   | [Releases][releases-macosx]   |
+| 1   | Browser          | Extension | BrowserX | [Open][open-browserx] | [Releases][releases-browserx] |
+| 2   | Native - Android | Extension | AndroidX | [Open][open-androidx] | [Releases][releases-androidx] |
+| 3   | Native - MacOS   | Extension | MacOSX   | [Open][open-macosx]   | [Releases][releases-macosx]   |
 
 ---
 
 ### Headless (5)
 
-| No  | Platform | Category        | Name           | Free                        | Releases                            |
+| No  | Platform | Category        | Name           | Open                        | Releases                            |
 | --- | -------- | --------------- | -------------- | --------------------------- | ----------------------------------- |
-| 4   | Headless | Developer Tools | Backbone       | [Free][free-backbone]       | [Releases][releases-backbone]       |
-| 5   | Headless | Developer Tools | Browserverless | [Free][free-browserverless] | [Releases][releases-browserverless] |
-| 6   | Headless | Developer Tools | J.A.C.K.       | [Free][free-jack]           | [Releases][releases-jack]           |
-| 7   | Headless | Developer Tools | KeVIN          | [Free][free-kevin]          | [Releases][releases-kevin]          |
-| 8   | Headless | Developer Tools | Landify        | [Free][free-landify]        | [Releases][releases-landify]        |
+| 4   | Headless | Developer Tools | Backbone       | [Open][open-backbone]       | [Releases][releases-backbone]       |
+| 5   | Headless | Developer Tools | Browserverless | [Open][open-browserverless] | [Releases][releases-browserverless] |
+| 6   | Headless | Developer Tools | J.A.C.K.       | [Open][open-jack]           | [Releases][releases-jack]           |
+| 7   | Headless | Developer Tools | KeVIN          | [Open][open-kevin]          | [Releases][releases-kevin]          |
+| 8   | Headless | Developer Tools | Landify        | [Open][open-landify]        | [Releases][releases-landify]        |
 
 ---
 
@@ -54,167 +54,167 @@
 
 #### Business (2)
 
-| No  | Platform | Category | Name | Free              | Releases                  |
+| No  | Platform | Category | Name | Open              | Releases                  |
 | --- | -------- | -------- | ---- | ----------------- | ------------------------- |
-| 9   | Hybrid   | Business | Menu | [Free][free-menu] | [Releases][releases-menu] |
-| 10  | Hybrid   | Business | POS  | [Free][free-pos]  | [Releases][releases-pos]  |
+| 9   | Hybrid   | Business | Menu | [Open][open-menu] | [Releases][releases-menu] |
+| 10  | Hybrid   | Business | POS  | [Open][open-pos]  | [Releases][releases-pos]  |
 
 ---
 
 #### Developer Tools (5)
 
-| No  | Platform | Category        | Name        | Free                     | Releases                         |
+| No  | Platform | Category        | Name        | Open                     | Releases                         |
 | --- | -------- | --------------- | ----------- | ------------------------ | -------------------------------- |
-| 11  | Hybrid   | Developer Tools | API         | [Free][free-api]         | [Releases][releases-api]         |
-| 12  | Hybrid   | Developer Tools | Boilerplate | [Free][free-boilerplate] | [Releases][releases-boilerplate] |
-| 13  | Hybrid   | Developer Tools | Code        | [Free][free-code]        | [Releases][releases-code]        |
-| 14  | Hybrid   | Developer Tools | Database    | [Free][free-database]    | [Releases][releases-database]    |
-| 15  | Hybrid   | Developer Tools | Diagram     | [Free][free-diagram]     | [Releases][releases-diagram]     |
+| 11  | Hybrid   | Developer Tools | API         | [Open][open-api]         | [Releases][releases-api]         |
+| 12  | Hybrid   | Developer Tools | Boilerplate | [Open][open-boilerplate] | [Releases][releases-boilerplate] |
+| 13  | Hybrid   | Developer Tools | Code        | [Open][open-code]        | [Releases][releases-code]        |
+| 14  | Hybrid   | Developer Tools | Database    | [Open][open-database]    | [Releases][releases-database]    |
+| 15  | Hybrid   | Developer Tools | Diagram     | [Open][open-diagram]     | [Releases][releases-diagram]     |
 
 ---
 
 #### Education (2)
 
-| No  | Platform | Category  | Name  | Free               | Releases                   |
+| No  | Platform | Category  | Name  | Open               | Releases                   |
 | --- | -------- | --------- | ----- | ------------------ | -------------------------- |
-| 16  | Hybrid   | Education | DOI   | [Free][free-doi]   | [Releases][releases-doi]   |
-| 17  | Hybrid   | Education | Lingo | [Free][free-lingo] | [Releases][releases-lingo] |
+| 16  | Hybrid   | Education | DOI   | [Open][open-doi]   | [Releases][releases-doi]   |
+| 17  | Hybrid   | Education | Lingo | [Open][open-lingo] | [Releases][releases-lingo] |
 
 ---
 
 #### Finance (2)
 
-| No  | Platform | Category | Name   | Free                | Releases                    |
+| No  | Platform | Category | Name   | Open                | Releases                    |
 | --- | -------- | -------- | ------ | ------------------- | --------------------------- |
-| 18  | Hybrid   | Finance  | Tax    | [Free][free-tax]    | [Releases][releases-tax]    |
-| 19  | Hybrid   | Finance  | Wallet | [Free][free-wallet] | [Releases][releases-wallet] |
+| 18  | Hybrid   | Finance  | Tax    | [Open][open-tax]    | [Releases][releases-tax]    |
+| 19  | Hybrid   | Finance  | Wallet | [Open][open-wallet] | [Releases][releases-wallet] |
 
 ---
 
 #### Food & Drink (1)
 
-| No  | Platform | Category     | Name  | Free               | Releases                   |
+| No  | Platform | Category     | Name  | Open               | Releases                   |
 | --- | -------- | ------------ | ----- | ------------------ | -------------------------- |
-| 20  | Hybrid   | Food & Drink | Foody | [Free][free-foody] | [Releases][releases-foody] |
+| 20  | Hybrid   | Food & Drink | Foody | [Open][open-foody] | [Releases][releases-foody] |
 
 ---
 
 #### Games (1)
 
-| No  | Platform | Category | Name   | Free                | Releases                    |
+| No  | Platform | Category | Name   | Open                | Releases                    |
 | --- | -------- | -------- | ------ | ------------------- | --------------------------- |
-| 21  | Hybrid   | Games    | Memory | [Free][free-memory] | [Releases][releases-memory] |
+| 21  | Hybrid   | Games    | Memory | [Open][open-memory] | [Releases][releases-memory] |
 
 ---
 
 #### Graphics & Design (3)
 
-| No  | Platform | Category          | Name  | Free               | Releases                   |
+| No  | Platform | Category          | Name  | Open               | Releases                   |
 | --- | -------- | ----------------- | ----- | ------------------ | -------------------------- |
-| 22  | Hybrid   | Graphics & Design | Photo | [Free][free-photo] | [Releases][releases-photo] |
-| 23  | Hybrid   | Graphics & Design | SVG   | [Free][free-svg]   | [Releases][releases-svg]   |
-| 24  | Hybrid   | Graphics & Design | Video | [Free][free-video] | [Releases][releases-video] |
+| 22  | Hybrid   | Graphics & Design | Photo | [Open][open-photo] | [Releases][releases-photo] |
+| 23  | Hybrid   | Graphics & Design | SVG   | [Open][open-svg]   | [Releases][releases-svg]   |
+| 24  | Hybrid   | Graphics & Design | Video | [Open][open-video] | [Releases][releases-video] |
 
 ---
 
 #### Medical (3)
 
-| No  | Platform | Category | Name     | Free                  | Releases                      |
+| No  | Platform | Category | Name     | Open                  | Releases                      |
 | --- | -------- | -------- | -------- | --------------------- | ----------------------------- |
-| 25  | Hybrid   | Medical  | Brainbow | [Free][free-brainbow] | [Releases][releases-brainbow] |
-| 26  | Hybrid   | Medical  | MRI      | [Free][free-mri]      | [Releases][releases-mri]      |
+| 25  | Hybrid   | Medical  | Brainbow | [Open][open-brainbow] | [Releases][releases-brainbow] |
+| 26  | Hybrid   | Medical  | MRI      | [Open][open-mri]      | [Releases][releases-mri]      |
 
 ---
 
 #### Productivity (4)
 
-| No  | Platform | Category     | Name     | Free                  | Releases                      |
+| No  | Platform | Category     | Name     | Open                  | Releases                      |
 | --- | -------- | ------------ | -------- | --------------------- | ----------------------------- |
-| 27  | Hybrid   | Productivity | Office   | [Free][free-office]   | [Releases][releases-office]   |
-| 28  | Hybrid   | Productivity | Keynotes | [Free][free-keynotes] | [Releases][releases-keynotes] |
-| 29  | Hybrid   | Productivity | PDF      | [Free][free-pdf]      | [Releases][releases-pdf]      |
-| 30  | Hybrid   | Productivity | Resume   | [Free][free-resume]   | [Releases][releases-resume]   |
+| 27  | Hybrid   | Productivity | Office   | [Open][open-office]   | [Releases][releases-office]   |
+| 28  | Hybrid   | Productivity | Keynotes | [Open][open-keynotes] | [Releases][releases-keynotes] |
+| 29  | Hybrid   | Productivity | PDF      | [Open][open-pdf]      | [Releases][releases-pdf]      |
+| 30  | Hybrid   | Productivity | Resume   | [Open][open-resume]   | [Releases][releases-resume]   |
 
 ---
 
 #### Shopping (1)
 
-| No  | Platform | Category | Name  | Free               | Releases                   |
+| No  | Platform | Category | Name  | Open               | Releases                   |
 | --- | -------- | -------- | ----- | ------------------ | -------------------------- |
-| 31  | Hybrid   | Shopping | Store | [Free][free-store] | [Releases][releases-store] |
+| 31  | Hybrid   | Shopping | Store | [Open][open-store] | [Releases][releases-store] |
 
 ---
 
 #### Social Networking (2)
 
-| No  | Platform | Category          | Name      | Free                   | Releases                       |
+| No  | Platform | Category          | Name      | Open                   | Releases                       |
 | --- | -------- | ----------------- | --------- | ---------------------- | ------------------------------ |
-| 32  | Hybrid   | Social Networking | Chat      | [Free][free-chat]      | [Releases][releases-chat]      |
-| 33  | Hybrid   | Social Networking | Messaging | [Free][free-messaging] | [Releases][releases-messaging] |
+| 32  | Hybrid   | Social Networking | Chat      | [Open][open-chat]      | [Releases][releases-chat]      |
+| 33  | Hybrid   | Social Networking | Messaging | [Open][open-messaging] | [Releases][releases-messaging] |
 
 ---
 
 #### Sports (3)
 
-| No  | Platform | Category | Name     | Free                  | Releases                      |
+| No  | Platform | Category | Name     | Open                  | Releases                      |
 | --- | -------- | -------- | -------- | --------------------- | ----------------------------- |
-| 34  | Hybrid   | Sports   | Chess    | [Free][free-chess]    | [Releases][releases-chess]    |
-| 35  | Hybrid   | Sports   | Football | [Free][free-football] | [Releases][releases-football] |
-| 36  | Hybrid   | Sports   | Tourney  | [Free][free-tourney]  | [Releases][releases-tourney]  |
+| 34  | Hybrid   | Sports   | Chess    | [Open][open-chess]    | [Releases][releases-chess]    |
+| 35  | Hybrid   | Sports   | Football | [Open][open-football] | [Releases][releases-football] |
+| 36  | Hybrid   | Sports   | Tourney  | [Open][open-tourney]  | [Releases][releases-tourney]  |
 
 ---
 
 #### Utilities (3)
 
-| No  | Platform | Category  | Name     | Free                  | Releases                      |
+| No  | Platform | Category  | Name     | Open                  | Releases                      |
 | --- | -------- | --------- | -------- | --------------------- | ----------------------------- |
-| 37  | Hybrid   | Utilities | Clock    | [Free][free-clock]    | [Releases][releases-clock]    |
-| 38  | Hybrid   | Utilities | Docs     | [Free][free-docs]     | [Releases][releases-docs]     |
-| 39  | Hybrid   | Utilities | Password | [Free][free-password] | [Releases][releases-password] |
+| 37  | Hybrid   | Utilities | Clock    | [Open][open-clock]    | [Releases][releases-clock]    |
+| 38  | Hybrid   | Utilities | Docs     | [Open][open-docs]     | [Releases][releases-docs]     |
+| 39  | Hybrid   | Utilities | Password | [Open][open-password] | [Releases][releases-password] |
 
 ---
 
-<!-- Free -->
+<!-- Open -->
 
-[free-androidx]: https://hieudoanm.github.io/free/androidx/
-[free-browserx]: https://hieudoanm.github.io/free/browserx/
-[free-menu]: https://hieudoanm.github.io/free/menu/
-[free-pos]: https://hieudoanm.github.io/free/pos/
-[free-api]: https://hieudoanm.github.io/free/api/
-[free-boilerplate]: https://hieudoanm.github.io/free/boilerplate/
-[free-code]: https://hieudoanm.github.io/free/code/
-[free-database]: https://hieudoanm.github.io/free/database/
-[free-diagram]: https://hieudoanm.github.io/free/diagram/
-[free-lingo]: https://hieudoanm.github.io/free/lingo/
-[free-doi]: https://hieudoanm.github.io/free/doi/
-[free-tax]: https://hieudoanm.github.io/free/tax/
-[free-wallet]: https://hieudoanm.github.io/free/wallet/
-[free-foody]: https://hieudoanm.github.io/free/foody/
-[free-memory]: https://hieudoanm.github.io/free/memory/
-[free-photo]: https://hieudoanm.github.io/free/photo/
-[free-svg]: https://hieudoanm.github.io/free/svg/
-[free-video]: https://hieudoanm.github.io/free/video/
-[free-brainbow]: https://hieudoanm.github.io/free/brainbow/
-[free-mri]: https://hieudoanm.github.io/free/mri/
-[free-office]: https://hieudoanm.github.io/free/office/
-[free-keynotes]: https://hieudoanm.github.io/free/keynotes/
-[free-pdf]: https://hieudoanm.github.io/free/pdf/
-[free-resume]: https://hieudoanm.github.io/free/resume/
-[free-store]: https://hieudoanm.github.io/free/store/
-[free-chat]: https://hieudoanm.github.io/free/chat/
-[free-messaging]: https://hieudoanm.github.io/free/messaging/
-[free-chess]: https://hieudoanm.github.io/free/chess/
-[free-football]: https://hieudoanm.github.io/free/football/
-[free-tourney]: https://hieudoanm.github.io/free/tourney/
-[free-clock]: https://hieudoanm.github.io/free/clock/
-[free-docs]: https://hieudoanm.github.io/
-[free-password]: https://hieudoanm.github.io/free/password/
-[free-jack]: https://hieudoanm.github.io/free/jack/
-[free-browserverless]: https://hieudoanm.github.io/free/browserverless/
-[free-backbone]: https://hieudoanm.github.io/free/backbone/
-[free-macosx]: https://hieudoanm.github.io/free/macosx/
-[free-kevin]: https://hieudoanm.github.io/free/kevin/
-[free-landify]: https://hieudoanm.github.io/free/landify/
+[open-androidx]: https://hieudoanm.github.io/open/androidx/
+[open-browserx]: https://hieudoanm.github.io/open/browserx/
+[open-menu]: https://hieudoanm.github.io/open/menu/
+[open-pos]: https://hieudoanm.github.io/open/pos/
+[open-api]: https://hieudoanm.github.io/open/api/
+[open-boilerplate]: https://hieudoanm.github.io/open/boilerplate/
+[open-code]: https://hieudoanm.github.io/open/code/
+[open-database]: https://hieudoanm.github.io/open/database/
+[open-diagram]: https://hieudoanm.github.io/open/diagram/
+[open-lingo]: https://hieudoanm.github.io/open/lingo/
+[open-doi]: https://hieudoanm.github.io/open/doi/
+[open-tax]: https://hieudoanm.github.io/open/tax/
+[open-wallet]: https://hieudoanm.github.io/open/wallet/
+[open-foody]: https://hieudoanm.github.io/open/foody/
+[open-memory]: https://hieudoanm.github.io/open/memory/
+[open-photo]: https://hieudoanm.github.io/open/photo/
+[open-svg]: https://hieudoanm.github.io/open/svg/
+[open-video]: https://hieudoanm.github.io/open/video/
+[open-brainbow]: https://hieudoanm.github.io/open/brainbow/
+[open-mri]: https://hieudoanm.github.io/open/mri/
+[open-office]: https://hieudoanm.github.io/open/office/
+[open-keynotes]: https://hieudoanm.github.io/open/keynotes/
+[open-pdf]: https://hieudoanm.github.io/open/pdf/
+[open-resume]: https://hieudoanm.github.io/open/resume/
+[open-store]: https://hieudoanm.github.io/open/store/
+[open-chat]: https://hieudoanm.github.io/open/chat/
+[open-messaging]: https://hieudoanm.github.io/open/messaging/
+[open-chess]: https://hieudoanm.github.io/open/chess/
+[open-football]: https://hieudoanm.github.io/open/football/
+[open-tourney]: https://hieudoanm.github.io/open/tourney/
+[open-clock]: https://hieudoanm.github.io/open/clock/
+[open-docs]: https://hieudoanm.github.io/
+[open-password]: https://hieudoanm.github.io/open/password/
+[open-jack]: https://hieudoanm.github.io/open/jack/
+[open-browserverless]: https://hieudoanm.github.io/open/browserverless/
+[open-backbone]: https://hieudoanm.github.io/open/backbone/
+[open-macosx]: https://hieudoanm.github.io/open/macosx/
+[open-kevin]: https://hieudoanm.github.io/open/kevin/
+[open-landify]: https://hieudoanm.github.io/open/landify/
 
 <!-- Releases -->
 
