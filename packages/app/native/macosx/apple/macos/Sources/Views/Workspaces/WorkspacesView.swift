@@ -140,7 +140,7 @@ struct WorkspacesView: View {
                 }
             }
         }
-        .frame(maxHeight: 420)
+        .frame(maxHeight: .infinity)
     }
 
     private var emptyState: some View {

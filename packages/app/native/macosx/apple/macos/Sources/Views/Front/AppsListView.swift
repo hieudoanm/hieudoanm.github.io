@@ -19,6 +19,6 @@ struct AppsListView: View {
                 }
             }
         }
-        .frame(maxHeight: 420)
+        .frame(maxHeight: .infinity)
     }
 }

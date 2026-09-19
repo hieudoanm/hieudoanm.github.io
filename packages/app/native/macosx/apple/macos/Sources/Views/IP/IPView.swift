@@ -97,7 +97,7 @@ struct IPView: View {
             }
             .frame(maxWidth: .infinity, alignment: .leading)
         }
-        .frame(maxHeight: 420)
+        .frame(maxHeight: .infinity)
     }
 
     private func badges(_ info: IPInfo) -> some View {

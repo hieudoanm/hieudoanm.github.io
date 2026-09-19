@@ -6,5 +6,6 @@ public enum MonitorError: Error {
     case unableToReadCPU
     case unableToReadMemoryPressure
     case unableToReadNetwork
+    case unableToReadBattery
     case unavailableFileSystem
 }

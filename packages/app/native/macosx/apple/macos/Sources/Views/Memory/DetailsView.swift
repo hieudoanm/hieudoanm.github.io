@@ -7,28 +7,36 @@ struct DetailsView: View {
     @Environment(\.openWindow) private var openWindow
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 14) {
+        VStack(alignment: .leading, spacing: 0) {
             header
+                .padding(.horizontal, 16)
+                .padding(.top, 16)
+                .padding(.bottom, 14)
 
             Divider()
 
-            CPUView(stats: viewModel.cpuStats)
+            ScrollView {
+                VStack(alignment: .leading, spacing: 14) {
+                    CPUView(stats: viewModel.cpuStats)
 
-            MemoryView(stats: viewModel.memoryStats)
+                    MemoryView(stats: viewModel.memoryStats)
 
-            pressureRow
+                    pressureRow
 
-            DiskView(stats: viewModel.diskStats)
+                    DiskView(stats: viewModel.diskStats)
 
-            SwapView(stats: viewModel.swapStats)
+                    SwapView(stats: viewModel.swapStats)
 
-            SystemInfoView(info: viewModel.systemInfo)
+                    SystemInfoView(info: viewModel.systemInfo)
 
-            Divider()
+                    Divider()
 
-            footer
+                    footer
+                }
+                .padding(16)
+            }
         }
-        .padding(16)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
     }
 
     private var header: some View {

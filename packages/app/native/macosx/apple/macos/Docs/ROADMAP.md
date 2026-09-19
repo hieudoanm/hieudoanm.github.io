@@ -56,7 +56,9 @@
 - [x] CPU load average (1/5/15 min)
 - [x] Full RAM breakdown (active / wired / compressed / cached / inactive / free)
 - [x] System info (chip / cores / uptime)
-- [ ] Additional metrics (battery, network, temperature)
+- [x] Network monitoring (throughput and per-interface traffic)
+- [x] Battery monitoring (charge, health, cycle count, battery temperature)
+- [ ] Additional sensors (ambient / CPU temperature)
 - [x] Launch at login via `SMAppService`
 - [x] Configurable refresh interval (presets shipped in v1)
 - [x] Configurable menu-bar display
@@ -141,3 +143,19 @@
 - [ ] Keyboard shortcut to toggle workspaces popover
 - [ ] Auto-arrange on login / after wake
 - [ ] Overwrite-in-place ("re-save" edits the current snapshot)
+
+## Phase 12 — Battery
+
+> Full battery monitoring via the IOKit power-source APIs.
+
+- [x] `BatteryInfo` model and pure `BatteryInfoParsing` in MacOSXCore (folds
+      unknown/unlimited time sentinels into `nil`) with unit tests
+- [x] `BatteryMonitor` reading charge, power source, charging, time to
+      empty/full, health condition and adapter wattage
+- [x] `AppleSmartBattery` / `PowerManagementController` registry read for cycle
+      count and temperature (deci-kelvin normalised on Intel)
+- [x] Dedicated Battery tab (first, alphabetical) with charge bar, overview and
+      detail rows, refreshing while the popover is open
+- [x] `Battery unavailable` state on Macs without a readable battery
+- [ ] Charge history / time-series chart
+- [ ] Low-battery and charge-limit notifications

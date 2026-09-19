@@ -22,7 +22,7 @@ struct NetworkView: View {
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                 }
-                .frame(maxHeight: 420)
+                .frame(maxHeight: .infinity)
             } else {
                 emptyState
             }

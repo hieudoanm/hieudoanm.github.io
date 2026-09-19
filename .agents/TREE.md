@@ -17,7 +17,11 @@
 │   └── solution/
 │       ├── [architect.md](./persona/solution/architect.md)
 │       └── [design.md](./persona/solution/design.md)
+├── workflows/
+│   ├── [feature.md](./workflows/feature.md)
+│   ├── [fix.md](./workflows/fix.md)
+│   └── [refactor.md](./workflows/refactor.md)
 └── [TREE.md](./TREE.md)
 ```
 
-5 directories, 12 files
+6 directories, 15 files

@@ -16,6 +16,8 @@
 │   └── [Info.plist](./Resources/Info.plist)
 ├── Sources/
 │   ├── App/
+│   │   ├── Battery/
+│   │   │   └── [BatteryViewModel.swift](./Sources/App/Battery/BatteryViewModel.swift)
 │   │   ├── Clipboard/
 │   │   │   └── [ClipboardViewModel.swift](./Sources/App/Clipboard/ClipboardViewModel.swift)
 │   │   ├── Front/
@@ -37,6 +39,8 @@
 │   │       └── [WorkspacesViewModel.swift](./Sources/App/Workspaces/WorkspacesViewModel.swift)
 │   ├── Core/
 │   │   ├── Models/
+│   │   │   ├── Battery/
+│   │   │   │   └── [BatteryInfo.swift](./Sources/Core/Models/Battery/BatteryInfo.swift)
 │   │   │   ├── Clipboard/
 │   │   │   │   ├── [ClipboardItem.swift](./Sources/Core/Models/Clipboard/ClipboardItem.swift)
 │   │   │   │   └── [ClipboardStore.swift](./Sources/Core/Models/Clipboard/ClipboardStore.swift)
@@ -66,6 +70,8 @@
 │   │   │       ├── [Workspace.swift](./Sources/Core/Models/Workspaces/Workspace.swift)
 │   │   │       └── [WorkspaceWindow.swift](./Sources/Core/Models/Workspaces/WorkspaceWindow.swift)
 │   │   ├── Services/
+│   │   │   ├── Battery/
+│   │   │   │   └── [BatteryInfoParsing.swift](./Sources/Core/Services/Battery/BatteryInfoParsing.swift)
 │   │   │   ├── Front/
 │   │   │   │   ├── [RunningAppProviding.swift](./Sources/Core/Services/Front/RunningAppProviding.swift)
 │   │   │   │   └── [RunningAppsDiscoveryService.swift](./Sources/Core/Services/Front/RunningAppsDiscoveryService.swift)
@@ -91,6 +97,8 @@
 │   │   ├── [ByteFormatter.swift](./Sources/Core/ByteFormatter.swift)
 │   │   └── [SettingsStore.swift](./Sources/Core/SettingsStore.swift)
 │   ├── Services/
+│   │   ├── Battery/
+│   │   │   └── [BatteryMonitor.swift](./Sources/Services/Battery/BatteryMonitor.swift)
 │   │   ├── Clipboard/
 │   │   │   ├── [ClipboardMonitor.swift](./Sources/Services/Clipboard/ClipboardMonitor.swift)
 │   │   │   └── [PasteboardManager.swift](./Sources/Services/Clipboard/PasteboardManager.swift)
@@ -117,6 +125,8 @@
 │   │       ├── [WorkspaceCaptureService.swift](./Sources/Services/Workspaces/WorkspaceCaptureService.swift)
 │   │       └── [WorkspaceRestoreService.swift](./Sources/Services/Workspaces/WorkspaceRestoreService.swift)
 │   └── Views/
+│       ├── Battery/
+│       │   └── [BatteryView.swift](./Sources/Views/Battery/BatteryView.swift)
 │       ├── Clipboard/
 │       │   └── [ClipboardView.swift](./Sources/Views/Clipboard/ClipboardView.swift)
 │       ├── Front/
@@ -143,6 +153,7 @@
 │           ├── [MenuBarView.swift](./Sources/Views/Shared/MenuBarView.swift)
 │           ├── [ResourceMeter.swift](./Sources/Views/Shared/ResourceMeter.swift)
 │           ├── [SettingsView.swift](./Sources/Views/Shared/SettingsView.swift)
+│           ├── [TabLayout.swift](./Sources/Views/Shared/TabLayout.swift)
 │           ├── [UnavailableView.swift](./Sources/Views/Shared/UnavailableView.swift)
 │           └── [UsageThresholdColor.swift](./Sources/Views/Shared/UsageThresholdColor.swift)
 │       └── Workspaces/
@@ -151,6 +162,8 @@
 ├── Tests/
 │   └── Core/
 │       ├── Models/
+│       │   ├── Battery/
+│       │   │   └── [BatteryInfoTests.swift](./Tests/Core/Models/Battery/BatteryInfoTests.swift)
 │       │   ├── Clipboard/
 │       │   │   ├── [ClipboardItemTests.swift](./Tests/Core/Models/Clipboard/ClipboardItemTests.swift)
 │       │   │   └── [ClipboardStoreTests.swift](./Tests/Core/Models/Clipboard/ClipboardStoreTests.swift)
@@ -174,6 +187,8 @@
 │       │       ├── [WorkspaceTests.swift](./Tests/Core/Models/Workspaces/WorkspaceTests.swift)
 │       │       └── [WorkspaceWindowTests.swift](./Tests/Core/Models/Workspaces/WorkspaceWindowTests.swift)
 │       ├── Services/
+│       │   ├── Battery/
+│       │   │   └── [BatteryInfoParsingTests.swift](./Tests/Core/Services/Battery/BatteryInfoParsingTests.swift)
 │       │   ├── Front/
 │       │   │   └── [RunningAppsDiscoveryTests.swift](./Tests/Core/Services/Front/RunningAppsDiscoveryTests.swift)
 │       │   ├── IP/
@@ -195,4 +210,4 @@
 └── [TREE.md](./TREE.md)
 ```
 
-59 directories, 133 files
+66 directories, 141 files

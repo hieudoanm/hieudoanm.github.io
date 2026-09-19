@@ -8,6 +8,7 @@
 - Clipboard history tab so nothing you copy is ever lost
 - Live network throughput and per-interface traffic in a dedicated tab
 - Public IP inspector with geolocation, ASN/org, and DNS lookups
+- Battery tab for charge level, power state, and battery health
 - Running-apps list (Front tab) to bring any app's windows forward
 - Workspaces tab to save and restore app layouts (launch apps, place windows)
 - Low resource footprint (~0% idle CPU, <50 MB memory)
@@ -25,6 +26,7 @@
 | Port discovery | `lsof` via `Process`                                |
 | Clipboard      | `NSPasteboard` changeCount                          |
 | Network        | `getifaddrs` + IOKit                                |
+| Battery        | IOKit power sources + smart battery registry        |
 | IP / DNS       | `URLSession` public APIs                            |
 | Front          | `NSWorkspace` + `CGWindowListCopyWindowInfo`        |
 | Windows        | CoreGraphics (capture) + Accessibility AX (arrange) |
@@ -41,6 +43,8 @@ holding system-facing services, ViewModels, and SwiftUI views.
 ```text
 Sources/
 ├── App/                       ViewModels (one per tab)
+│   ├── Battery/
+│   │   └── BatteryViewModel.swift
 │   ├── Clipboard/
 │   │   └── ClipboardViewModel.swift
 │   ├── Front/
@@ -62,6 +66,7 @@ Sources/
 │       └── MenuBarPanelPositioner.swift
 ├── Core/                      MacOSXCore target (public, unit-tested)
 │   ├── Models/
+│   │   ├── Battery/    BatteryInfo
 │   │   ├── Clipboard/  ClipboardItem, ClipboardStore
 │   │   ├── Front/      RunningAppInfo
 │   │   ├── IP/         IPInfo, DNSResponse
@@ -71,6 +76,7 @@ Sources/
 │   │   ├── Workspaces/ Workspace, WorkspaceWindow, NormalizedRect, ScreenInfo
 │   │   └── Shared/     MenuBarDisplay, UsageThreshold
 │   ├── Services/
+│   │   ├── Battery/    BatteryInfoParsing
 │   │   ├── Clipboard/  (store lives in Models)
 │   │   ├── Front/      RunningAppProviding, RunningAppsDiscoveryService
 │   │   ├── IP/         IPLookupServicing, IPInfoParsing
@@ -83,6 +89,7 @@ Sources/
 │   ├── ByteFormatter.swift    (shared)
 │   └── SettingsStore.swift    (shared)
 ├── Services/                  System-facing services (MacOSX target)
+│   ├── Battery/    BatteryMonitor
 │   ├── Clipboard/  ClipboardMonitor, PasteboardManager
 │   ├── IP/         IPLookupService
 │   ├── Memory/     MemoryMonitor, DiskMonitor, SwapMonitor, CPUMonitor,
@@ -93,6 +100,7 @@ Sources/
 │   │               WorkspaceCaptureService, WorkspaceRestoreService
 │   └── Shared/     MonitorError
 └── Views/
+    ├── Battery/    BatteryView
     ├── Clipboard/  ClipboardView
     ├── Front/      AppsView, AppsListView, AppRow
     ├── IP/         IPView
@@ -101,8 +109,8 @@ Sources/
     ├── Network/    NetworkView
     ├── Ports/      PortsView, PortListView, PortRow
     ├── Workspaces/ WorkspacesView, WorkspaceRow
-    └── Shared/     MenuBarView, ResourceMeter, SettingsView, UnavailableView,
-                    UsageThresholdColor
+    └── Shared/     MenuBarView, ResourceMeter, SettingsView, TabLayout,
+                    UnavailableView, UsageThresholdColor
 ```
 
 Tests mirror this layout under `Tests/Core/…`, one suite per tab, so parsing,
@@ -117,22 +125,24 @@ math, and store logic are verified independently of SwiftUI.
 ├────────────────────────────────────────┤
 │                Views                   │
 │  MenuBarView | SmallView | DetailsView │
-│  ClipboardView | AppsView | IPView     │
+│  BatteryView | ClipboardView |         │
+│  AppsView | IPView                     │
 │  NetworkView | PortsView |             │
 │  WorkspacesView | ResourceMeter |      │
 │  SettingsView | UnavailableView        │
 ├────────────────────────────────────────┤
 │             ViewModels                 │
 │  MemoryViewModel | PortsViewModel      │
-│  ClipboardViewModel | AppsViewModel    │
-│  NetworkViewModel | IPViewModel |      │
-│  WorkspacesViewModel                   │
+│  BatteryViewModel | ClipboardViewModel │
+│  AppsViewModel | NetworkViewModel |    │
+│  IPViewModel | WorkspacesViewModel     │
 ├────────────────────────────────────────┤
 │              Services                  │
 │  MemoryMonitor | DiskMonitor |         │
 │  SwapMonitor | CPUMonitor |            │
 │  SystemInfoMonitor |                   │
 │  LsofPortDiscoveryService |            │
+│  BatteryMonitor |                      │
 │  ClipboardMonitor | PasteboardManager  │
 │  NetworkMonitor | IPLookupService |    │
 │  IOKitClassifier | RunningAppsDisc.    │
@@ -144,6 +154,7 @@ math, and store logic are verified independently of SwiftUI.
 │                 Core                   │
 │  MemoryStats | DiskStats | SwapStats   │
 │  CPUStats | SystemInfo | PortInfo      │
+│  BatteryInfo | BatteryInfoParsing |    │
 │  NetworkEndpoint | LsofParser |        │
 │  SignalTerminator | ClipboardItem      │
 │  ClipboardStore | NetworkStats |       │
@@ -430,6 +441,38 @@ ipinfo.io ──fail──→ ipapi.co
 message, satisfying "offline shows offline, errors show the error". The IP tab
 does not auto-refresh — data is fetched when the tab appears and on Refresh.
 
+### Battery
+
+**Definition:** the internal battery's charge level, power source, and health.
+`BatteryMonitor` reads the live state through the IOKit power-source APIs —
+`IOPSCopyPowerSourcesInfo` / `IOPSCopyPowerSourcesList` /
+`IOPSGetPowerSourceDescription` for capacity, power-source state, charging,
+time-to-empty/full, and health condition, and
+`IOPSCopyExternalPowerAdapterDetails` for the connected charger's wattage.
+Wear data (cycle count, temperature) comes from the `AppleSmartBattery` IOKit
+registry entry on Intel Macs, falling back to `PowerManagementController` on
+Apple Silicon; Intel reports temperature in deci-kelvin, which the monitor
+normalises to deci-celsius before parsing. `BatteryInfoParsing` is a pure
+Core function that folds IOKit's unknown/unlimited time sentinels (`-1`/`-2`)
+into `nil` and computes the model, so it is unit-tested without a real battery.
+
+```text
+IOPSCopyPowerSourcesInfo / IOPSGetPowerSourceDescription
+IOPSCopyExternalPowerAdapterDetails
+AppleSmartBattery | PowerManagementController (registry)
+        ↓
+BatteryInfoParsing  (normalise sentinels, temperature units)
+        ↓
+     BatteryInfo
+        ↓
+   BatteryViewModel  (refreshes while the popover is open)
+        ↓
+      BatteryView
+```
+
+`BatteryViewModel` exposes `.unavailable` for Macs without a readable battery
+and `.loaded(BatteryInfo)` otherwise, mirroring the other tab view models.
+
 ### Refresh
 
 A single coordinated 1-second timer drives all five system monitors. When the
@@ -437,7 +480,8 @@ popover is closed the menu-bar percentages still refresh in place (they are
 cheap host/FS reads); no independent per-metric timers exist. The Ports view
 runs its own lightweight discovery loop on launch, honoring the same
 `SettingsStore.refreshInterval`; the Network view behaves the same way, so
-throughput rates always divide by the configured interval. The Clipboard
+throughput rates always divide by the configured interval. The Battery view also
+refreshes on the same interval, gated on panel visibility. The Clipboard
 monitor is independent: a 0.5-second pasteboard poll whose only cost is a
 `changeCount` comparison. The Front (running apps) list refreshes every 2
 seconds while visible. Workspaces data is read on demand from disk.
@@ -472,6 +516,8 @@ Semantic system colors only — readable in Light and Dark Mode.
   tab), refreshes every 2 s while visible
 - `IPViewModel` — observable coordinator for IP/DNS lookups, classifies
   connectivity failures into an explicit Offline state
+- `BatteryViewModel` — observable coordinator for battery state, refreshes on
+  the shared interval while visible, exposes `.unavailable` when unreadable
 - `NetworkViewModel` — observable coordinator for throughput and session totals
 - `WorkspacesViewModel` — observable coordinator for saved workspaces
   (capture, list, restore, delete); owns the `WorkspaceStore`, capture service,

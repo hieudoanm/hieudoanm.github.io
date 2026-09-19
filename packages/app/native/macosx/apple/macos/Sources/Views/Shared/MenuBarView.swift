@@ -10,10 +10,12 @@ struct MenuBarView: View {
     let appsViewModel: AppsViewModel
     let workspacesViewModel: WorkspacesViewModel
     let homebrewViewModel: HomebrewViewModel
+    let batteryViewModel: BatteryViewModel
 
     @Environment(\.openWindow) private var openWindow
 
     private enum Tab: Hashable {
+        case battery
         case clipboard
         case ip
         case memory
@@ -33,12 +35,14 @@ struct MenuBarView: View {
             Divider()
 
             content
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+                .frame(height: TabLayout.contentHeight)
 
             Divider()
 
             footer
         }
-        .frame(width: 600)
+        .frame(width: TabLayout.width)
         .onAppear {
             viewModel.refresh()
             networkViewModel.start()
@@ -64,6 +68,7 @@ struct MenuBarView: View {
 
     private var tabBar: some View {
         Picker("Tab", selection: $selectedTab) {
+            Text("Battery").tag(Tab.battery)
             Text("Clipboard").tag(Tab.clipboard)
             Text("Front").tag(Tab.front)
             Text("IP").tag(Tab.ip)
@@ -81,6 +86,9 @@ struct MenuBarView: View {
     @ViewBuilder
     private var content: some View {
         switch selectedTab {
+        case .battery:
+            BatteryView(viewModel: batteryViewModel)
+                .transition(.opacity)
         case .clipboard:
             ClipboardView(viewModel: clipboardViewModel)
                 .transition(.opacity)

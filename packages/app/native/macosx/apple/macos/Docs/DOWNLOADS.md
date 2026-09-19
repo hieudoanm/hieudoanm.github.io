@@ -60,6 +60,17 @@ layout save/restore, and clipboard history at a glance from your menu bar.
 - Progress bar tinted by usage threshold
 - Shown only when swap is configured
 
+## Battery
+
+- Charge level as a large percentage with a progress bar and charge-tinted SF
+  Symbol
+- Status (`Charging` / `On battery` / `Fully charged`) and power source
+- Time remaining (discharging) or time to full charge (charging)
+- Capacity (`current / max mAh`), cycle count, temperature, health condition
+- Connected adapter wattage
+- Distinct **Battery unavailable** state on Macs without a readable battery
+- Dedicated Battery tab, refreshing while the popover is open
+
 ## Network
 
 - Live download / upload rates (`↓` / `↑`)
@@ -136,8 +147,10 @@ layout save/restore, and clipboard history at a glance from your menu bar.
 
 ## Popover
 
-- Seven tabs, Clipboard, Front, IP, Memory (default), Network, Ports and
+- Eight tabs, Battery, Clipboard, Front, IP, Memory (default), Network, Ports and
   Workspaces:
+  - Battery tab: charge level, power state, time remaining/full, capacity, cycle
+    count, temperature, health condition and adapter wattage
   - Memory tab: compact percentage and used / total numbers (small view) with
     full progress-bar sections (details view) switchable from the header
   - Clipboard tab: searchable history with copy, pin, and delete actions

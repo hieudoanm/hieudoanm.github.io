@@ -127,7 +127,7 @@ private struct ClipboardItemList: View {
             ClipboardItemRow(item: item, store: store, onCopy: onCopy)
         }
         .listStyle(.plain)
-        .frame(maxHeight: 420)
+        .frame(maxHeight: .infinity)
     }
 }
 

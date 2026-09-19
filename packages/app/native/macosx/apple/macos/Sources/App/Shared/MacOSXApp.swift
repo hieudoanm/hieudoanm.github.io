@@ -11,6 +11,7 @@ struct MacOSXApp: App {
     @StateObject private var appsViewModel = AppDelegate.appsViewModel
     @StateObject private var workspacesViewModel = AppDelegate.workspacesViewModel
     @StateObject private var homebrewViewModel = AppDelegate.homebrewViewModel
+    @StateObject private var batteryViewModel = AppDelegate.batteryViewModel
     @NSApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
 
     var body: some Scene {
@@ -23,7 +24,8 @@ struct MacOSXApp: App {
                 portsViewModel: portsViewModel,
                 appsViewModel: appsViewModel,
                 workspacesViewModel: workspacesViewModel,
-                homebrewViewModel: homebrewViewModel
+                homebrewViewModel: homebrewViewModel,
+                batteryViewModel: batteryViewModel
             )
         } label: {
             MenuBarIcon(viewModel: viewModel)
@@ -71,6 +73,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     static let homebrewViewModel = HomebrewViewModel()
 
     @MainActor
+    static let batteryViewModel = BatteryViewModel(settingsStore: settingsStore)
+
+    @MainActor
     static let menuBarPanelPositioner = MenuBarPanelPositioner.shared
 
     @MainActor
@@ -82,6 +87,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             Self.panelVisibilityMonitor.start()
             Self.networkViewModel.start()
             Self.portsViewModel.start()
+            Self.batteryViewModel.start()
             Self.menuBarPanelPositioner.start()
         }
     }

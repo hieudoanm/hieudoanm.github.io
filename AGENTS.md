@@ -45,10 +45,17 @@
       - [Docker Compose](#docker-compose)
     - [Makefile](#makefile)
   - [📦 Projects](#-projects)
+  - [📚 Agent Library](#-agent-library)
+    - [Personas](#personas)
+    - [Workflows](#workflows)
+    - [Skills](#skills)
 
 ## SDLC (Software Development Lifecycle)
 
 ### Planning
+
+Use the [product-owner](./.agents/persona/product/product-owner.md) persona to establish outcomes and
+prioritise the backlog before scoping work. Keep items small enough to plan and testable enough to accept.
 
 [Back to Table of Contents](#-table-of-contents)
 
@@ -56,11 +63,18 @@
 
 ### Analysis
 
+Turn ambiguity into requirements with the [business-analyst](./.agents/persona/product/business-analyst.md)
+persona. Produce acceptance criteria in Given/When/Then form with explicit assumptions.
+
 [Back to Table of Contents](#-table-of-contents)
 
 ---
 
 ### Design
+
+Confirm system design with [architect](./.agents/persona/solution/architect.md) and UI/UX with
+[design](./.agents/persona/solution/design.md). Favour existing patterns; document trade-offs instead of
+silent shortcuts.
 
 [Back to Table of Contents](#-table-of-contents)
 
@@ -68,17 +82,26 @@
 
 ### Development
 
+Start with the workflow matching the change type — [feature](./.agents/workflows/feature.md),
+[fix](./.agents/workflows/fix.md), or [refactor](./.agents/workflows/refactor.md) — under an
+[engineering persona](./.agents/persona/engineer/senior.md). Apply the Coding Convention below and the
+technology-specific playbooks in [`.skills/`](./.skills/TREE.md).
+
 [Back to Table of Contents](#-table-of-contents)
 
 ---
 
 ### Testing
 
-[Back to Table of Contents](#-table-of-contents)
-
----
+Write tests that encode the contract, naming them as specifications. Consult the testing playbooks in
+[`.skills/`](./.skills/) for framework rules (e.g.
+[jest](./.skills/languages/typescript/testing/unit/jest.js.md),
+[playwright](./.skills/languages/typescript/testing/e2e/playwright.md)).
 
 #### Unit Tests
+
+Run unit tests locally on every change. Prefer table-driven, behaviour-focused cases over implementation
+mocking.
 
 [Back to Table of Contents](#-table-of-contents)
 
@@ -86,11 +109,16 @@
 
 #### Integration Tests
 
+Exercise boundaries across modules and services. Cover failure and edge paths, not just the happy path.
+
 [Back to Table of Contents](#-table-of-contents)
 
 ---
 
 ### Review
+
+Review with [lead](./.agents/persona/engineer/lead.md) rigour: correctness, contracts, and scope. Confirm
+the Definition of Done of the matching workflow before considering work complete.
 
 [Back to Table of Contents](#-table-of-contents)
 
@@ -614,6 +642,54 @@
 | 4   | [Extensions](./packages/extensions) | [Browser](./packages/extensions/browser) | `hieudoanm.ext`  |                          |                      |                |                  |                                    |                                                |
 | 5   | [Server](./packages/server)         |                                          | `backbone`       |                          | `net/http`           | [Axum][axum]   |                  | [Ktor][ktor]                       |                                                |
 | 6   | [Serverless](./packages/serverless) |                                          | `browserverless` |                          |                      |                |                  |                                    |                                                |
+
+[Back to Table of Content](#-table-of-contents)
+
+---
+
+## 📚 Agent Library
+
+Two directories drive how agents work in this repo. For every task: adopt a **persona**, follow a
+**workflow**, and consult the matching **skill**.
+
+### Personas
+
+Adopt the persona that matches the task before starting — it defines identity, priorities, boundaries, and
+quality standards.
+
+| Task                    | Persona                                                                                                                                    |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| Planning / backlog      | [product-owner](./.agents/persona/product/product-owner.md)                                                                                |
+| Requirements / analysis | [business-analyst](./.agents/persona/product/business-analyst.md)                                                                          |
+| Architecture            | [architect](./.agents/persona/solution/architect.md)                                                                                       |
+| UI / UX                 | [design](./.agents/persona/solution/design.md)                                                                                             |
+| Implementation          | [senior](./.agents/persona/engineer/senior.md), [lead](./.agents/persona/engineer/lead.md)                                                 |
+| Delivery cadence        | [scrum-master](./.agents/persona/delivery/scrum-master.md), [release-train-engineer](./.agents/persona/delivery/release-train-engineer.md) |
+
+### Workflows
+
+Follow the workflow matching the change type before touching code.
+
+| Change type    | Workflow                                    |
+| -------------- | ------------------------------------------- |
+| New capability | [feature](./.agents/workflows/feature.md)   |
+| Bug / defect   | [fix](./.agents/workflows/fix.md)           |
+| Restructuring  | [refactor](./.agents/workflows/refactor.md) |
+
+### Skills
+
+Consult a skill before working in a matching domain — skills encode the technology-specific conventions
+not covered in Coding Convention above.
+
+| Domain    | Root                               |
+| --------- | ---------------------------------- |
+| Languages | [languages/](./.skills/languages/) |
+| Databases | [database/](./.skills/database/)   |
+| Events    | [events/](./.skills/events/)       |
+| GraphQL   | [graphql/](./.skills/graphql/)     |
+| SaaS      | [saas/](./.skills/saas/)           |
+
+Index: [`.agents/TREE.md`](./.agents/TREE.md) · [`.skills/TREE.md`](./.skills/TREE.md)
 
 [Back to Table of Content](#-table-of-contents)
 
