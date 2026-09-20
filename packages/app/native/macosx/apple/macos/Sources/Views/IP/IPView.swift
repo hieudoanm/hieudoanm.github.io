@@ -2,8 +2,8 @@ import AppKit
 import MacOSXCore
 import SwiftUI
 
-/// The MacOSX IP tab: current public IP, geolocation, ASN/org, and a DNS lookup.
-struct IPView: View {
+/// IP and DNS section within the Network tab.
+struct IPSectionView: View {
     @ObservedObject var viewModel: IPViewModel
 
     private enum Section: Hashable {
@@ -15,40 +15,16 @@ struct IPView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            header
-
-            Divider()
-
             sectionPicker
 
             Divider()
 
             content
         }
-        .padding(14)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .task {
             await viewModel.refresh()
         }
-    }
-
-    private var header: some View {
-        HStack {
-            Label("IP", systemImage: "globe")
-                .font(.headline)
-                .accessibilityElement(children: .combine)
-            Spacer()
-            Button {
-                Task { await viewModel.refresh() }
-            } label: {
-                Image(systemName: "arrow.clockwise")
-                    .frame(width: 24, height: 24)
-                    .contentShape(Rectangle())
-                    .accessibilityLabel("Refresh")
-            }
-            .buttonStyle(.borderless)
-            .help("Refresh IP lookup")
-        }
-        .padding(.bottom, 16)
     }
 
     private var sectionPicker: some View {

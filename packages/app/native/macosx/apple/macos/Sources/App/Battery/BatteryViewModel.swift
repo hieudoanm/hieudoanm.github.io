@@ -11,6 +11,16 @@ final class BatteryViewModel: ObservableObject {
 
     @Published private(set) var state: State = .unavailable
 
+    var chargePercentText: String? {
+        guard case .loaded(let info) = state else { return nil }
+        return "\(Int(info.chargePercentage.rounded()))%"
+    }
+
+    var statusText: String? {
+        guard case .loaded(let info) = state else { return nil }
+        return info.statusText
+    }
+
     private let monitor: BatteryMonitor
     private let settingsStore: SettingsStore
     private var refreshTask: Task<Void, Never>?

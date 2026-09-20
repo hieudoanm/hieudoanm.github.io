@@ -1,9 +1,8 @@
 import MacOSXCore
 import SwiftUI
 
-/// The Workspaces tab: save the current apps and window positions, then
-/// restore them later (launching missing apps) with one click.
-struct WorkspacesView: View {
+/// Saved workspaces section within the Apps tab.
+struct WorkspacesSectionView: View {
     @ObservedObject var viewModel: WorkspacesViewModel
 
     @State private var showingSaveDialog = false
@@ -11,7 +10,7 @@ struct WorkspacesView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            header
+            actionRow
 
             Divider()
 
@@ -34,7 +33,7 @@ struct WorkspacesView: View {
                 workspaceList
             }
         }
-        .padding(14)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .onAppear {
             viewModel.refresh()
             viewModel.checkAccessibilityPermission()
@@ -53,16 +52,13 @@ struct WorkspacesView: View {
         }
     }
 
-    private var header: some View {
+    private var actionRow: some View {
         HStack {
-            Label("Workspaces", systemImage: "square.grid.2x2")
-                .font(.headline)
-                .accessibilityElement(children: .combine)
-            Spacer()
             Text("\(viewModel.workspaces.count) saved")
                 .font(.caption)
                 .monospacedDigit()
                 .foregroundColor(.secondary)
+            Spacer()
             Button {
                 showingSaveDialog = true
             } label: {
@@ -74,7 +70,7 @@ struct WorkspacesView: View {
             .buttonStyle(.borderless)
             .help("Save Current Workspace")
         }
-        .padding(.bottom, 16)
+        .padding(.vertical, 8)
     }
 
     private var permissionBanner: some View {

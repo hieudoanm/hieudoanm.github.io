@@ -20,14 +20,13 @@ struct MacOSXApp: App {
             MenuBarView(
                 clipboardViewModel: clipboardViewModel,
                 clockViewModel: clockViewModel,
-                ipViewModel: ipViewModel,
-                viewModel: viewModel,
+                memoryViewModel: viewModel,
+                batteryViewModel: batteryViewModel,
                 networkViewModel: networkViewModel,
                 portsViewModel: portsViewModel,
+                ipViewModel: ipViewModel,
                 appsViewModel: appsViewModel,
-                workspacesViewModel: workspacesViewModel,
-                homebrewViewModel: homebrewViewModel,
-                batteryViewModel: batteryViewModel
+                workspacesViewModel: workspacesViewModel
             )
         } label: {
             MenuBarIcon(viewModel: viewModel)

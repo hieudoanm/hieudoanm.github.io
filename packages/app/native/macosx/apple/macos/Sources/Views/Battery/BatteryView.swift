@@ -1,40 +1,16 @@
 import MacOSXCore
 import SwiftUI
 
-/// The MacOSX Battery tab: charge level, power state, and full battery health.
-struct BatteryView: View {
+/// Battery health section within the Resources tab.
+struct BatterySectionView: View {
     @ObservedObject var viewModel: BatteryViewModel
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            header
-
-            Divider()
-
-            content
-        }
-        .padding(14)
-        .task {
-            viewModel.start()
-        }
-    }
-
-    private var header: some View {
-        HStack {
-            Label("Battery", systemImage: "battery.100percent")
-                .font(.headline)
-                .accessibilityElement(children: .combine)
-            Spacer()
-            Button(action: { viewModel.refresh() }) {
-                Image(systemName: "arrow.clockwise")
-                    .frame(width: 24, height: 24)
-                    .contentShape(Rectangle())
-                    .accessibilityLabel("Refresh")
+        content
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+            .task {
+                viewModel.start()
             }
-            .buttonStyle(.borderless)
-            .help("Refresh")
-        }
-        .padding(.bottom, 16)
     }
 
     @ViewBuilder

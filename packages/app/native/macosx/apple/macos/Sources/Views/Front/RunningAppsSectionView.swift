@@ -1,16 +1,12 @@
 import MacOSXCore
 import SwiftUI
 
-/// The Apps tab: bring all of a running app's windows to the front.
-struct AppsView: View {
+/// Running apps section within the Apps tab: bring an app's windows to the front.
+struct RunningAppsSectionView: View {
     @ObservedObject var viewModel: AppsViewModel
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            header
-
-            Divider()
-
             searchField
 
             Divider()
@@ -24,33 +20,7 @@ struct AppsView: View {
                 )
             }
         }
-        .padding(14)
-        .onAppear { viewModel.start() }
-        .onDisappear { viewModel.stop() }
-    }
-
-    private var header: some View {
-        HStack {
-            Label("Front", systemImage: "macwindow")
-                .font(.headline)
-                .accessibilityElement(children: .combine)
-            Spacer()
-            Text("\(viewModel.apps.count) running")
-                .font(.caption)
-                .monospacedDigit()
-                .foregroundColor(.secondary)
-            Button {
-                viewModel.refresh()
-            } label: {
-                Image(systemName: "arrow.clockwise")
-                    .frame(width: 24, height: 24)
-                    .contentShape(Rectangle())
-                    .accessibilityLabel("Refresh")
-            }
-            .buttonStyle(.borderless)
-            .help("Refresh")
-        }
-        .padding(.bottom, 16)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
     }
 
     private var searchField: some View {
@@ -72,6 +42,11 @@ struct AppsView: View {
                 .buttonStyle(.borderless)
                 .help("Clear search")
             }
+            Spacer()
+            Text("\(viewModel.apps.count) running")
+                .font(.caption)
+                .monospacedDigit()
+                .foregroundColor(.secondary)
         }
         .padding(.vertical, 8)
     }

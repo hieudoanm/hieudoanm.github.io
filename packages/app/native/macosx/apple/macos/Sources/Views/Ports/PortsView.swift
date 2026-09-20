@@ -18,8 +18,8 @@ private enum KillRequest {
     }
 }
 
-/// The MacOSX Ports tab for monitoring and managing listening ports.
-struct PortsView: View {
+/// Listening ports section within the Network tab.
+struct PortsSectionView: View {
     @ObservedObject var viewModel: PortsViewModel
 
     @State private var pendingKill: KillRequest?
@@ -27,10 +27,6 @@ struct PortsView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            header
-
-            Divider()
-
             searchField
 
             Divider()
@@ -44,7 +40,7 @@ struct PortsView: View {
                 onForceKill: { pendingKill = .forceKill($0) }
             )
         }
-        .padding(14)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .task {
             viewModel.start()
         }
@@ -67,30 +63,6 @@ struct PortsView: View {
         } message: {
             Text(killError ?? "")
         }
-    }
-
-    private var header: some View {
-        HStack {
-            Label("Ports", systemImage: "cable.connector")
-                .font(.headline)
-                .accessibilityElement(children: .combine)
-            Spacer()
-            Text("\(viewModel.listeningCount) listening")
-                .font(.caption)
-                .monospacedDigit()
-                .foregroundColor(.secondary)
-            Button {
-                Task { await viewModel.refresh() }
-            } label: {
-                Image(systemName: "arrow.clockwise")
-                    .frame(width: 24, height: 24)
-                    .contentShape(Rectangle())
-                    .accessibilityLabel("Refresh")
-            }
-            .buttonStyle(.borderless)
-            .help("Refresh")
-        }
-        .padding(.bottom, 16)
     }
 
     private var searchField: some View {

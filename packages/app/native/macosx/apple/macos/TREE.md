@@ -163,6 +163,8 @@
 │   │       ├── [WorkspaceCaptureService.swift](./Sources/Services/Workspaces/WorkspaceCaptureService.swift)
 │   │       └── [WorkspaceRestoreService.swift](./Sources/Services/Workspaces/WorkspaceRestoreService.swift)
 │   └── Views/
+│       ├── Apps/
+│       │   └── [AppsView.swift](./Sources/Views/Apps/AppsView.swift)
 │       ├── Battery/
 │       │   └── [BatteryView.swift](./Sources/Views/Battery/BatteryView.swift)
 │       ├── Clipboard/
@@ -179,7 +181,7 @@
 │       ├── Front/
 │       │   ├── [AppRow.swift](./Sources/Views/Front/AppRow.swift)
 │       │   ├── [AppsListView.swift](./Sources/Views/Front/AppsListView.swift)
-│       │   └── [AppsView.swift](./Sources/Views/Front/AppsView.swift)
+│       │   └── [RunningAppsSectionView.swift](./Sources/Views/Front/RunningAppsSectionView.swift)
 │       ├── Homebrew/
 │       │   ├── [AppTile.swift](./Sources/Views/Homebrew/AppTile.swift)
 │       │   ├── [BrewAppRow.swift](./Sources/Views/Homebrew/BrewAppRow.swift)
@@ -197,18 +199,20 @@
 │       │   └── [IPView.swift](./Sources/Views/IP/IPView.swift)
 │       ├── Memory/
 │       │   ├── [CPUView.swift](./Sources/Views/Memory/CPUView.swift)
-│       │   ├── [DetailsView.swift](./Sources/Views/Memory/DetailsView.swift)
 │       │   ├── [DiskView.swift](./Sources/Views/Memory/DiskView.swift)
 │       │   ├── [MemoryView.swift](./Sources/Views/Memory/MemoryView.swift)
-│       │   ├── [SmallView.swift](./Sources/Views/Memory/SmallView.swift)
 │       │   ├── [SwapView.swift](./Sources/Views/Memory/SwapView.swift)
 │       │   └── [SystemInfoView.swift](./Sources/Views/Memory/SystemInfoView.swift)
 │       ├── Network/
-│       │   └── [NetworkView.swift](./Sources/Views/Network/NetworkView.swift)
+│       │   ├── [NetworkView.swift](./Sources/Views/Network/NetworkView.swift)
+│       │   └── [TrafficView.swift](./Sources/Views/Network/TrafficView.swift)
 │       ├── Ports/
 │       │   ├── [PortListView.swift](./Sources/Views/Ports/PortListView.swift)
 │       │   ├── [PortRow.swift](./Sources/Views/Ports/PortRow.swift)
 │       │   └── [PortsView.swift](./Sources/Views/Ports/PortsView.swift)
+│       ├── Resources/
+│       │   ├── [OverviewView.swift](./Sources/Views/Resources/OverviewView.swift)
+│       │   └── [ResourcesView.swift](./Sources/Views/Resources/ResourcesView.swift)
 │       ├── Shared/
 │       │   ├── [MenuBarView.swift](./Sources/Views/Shared/MenuBarView.swift)
 │       │   ├── [ResourceMeter.swift](./Sources/Views/Shared/ResourceMeter.swift)

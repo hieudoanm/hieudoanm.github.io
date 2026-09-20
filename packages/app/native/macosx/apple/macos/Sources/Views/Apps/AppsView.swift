@@ -1,19 +1,17 @@
 import MacOSXCore
 import SwiftUI
 
-/// The Network tab: live traffic, listening ports, and IP / DNS lookups.
-struct NetworkView: View {
-    @ObservedObject var networkViewModel: NetworkViewModel
-    @ObservedObject var portsViewModel: PortsViewModel
-    @ObservedObject var ipViewModel: IPViewModel
+/// The Apps tab: running apps and saved workspaces.
+struct AppsView: View {
+    @ObservedObject var appsViewModel: AppsViewModel
+    @ObservedObject var workspacesViewModel: WorkspacesViewModel
 
     private enum Section: Hashable {
-        case traffic
-        case ports
-        case ip
+        case running
+        case workspaces
     }
 
-    @State private var section: Section = .traffic
+    @State private var section: Section = .running
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -29,11 +27,17 @@ struct NetworkView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         }
         .padding(14)
+        .task {
+            appsViewModel.start()
+        }
+        .onDisappear {
+            appsViewModel.stop()
+        }
     }
 
     private var header: some View {
         HStack {
-            Label("Network", systemImage: "network")
+            Label("Apps", systemImage: "macwindow")
                 .font(.headline)
                 .accessibilityElement(children: .combine)
             Spacer()
@@ -51,33 +55,28 @@ struct NetworkView: View {
 
     private var sectionPicker: some View {
         Picker("Section", selection: $section) {
-            Text("Traffic").tag(Section.traffic)
-            Text("Ports").tag(Section.ports)
-            Text("IP & DNS").tag(Section.ip)
+            Text("Running").tag(Section.running)
+            Text("Workspaces").tag(Section.workspaces)
         }
         .pickerStyle(.segmented)
         .labelsHidden()
-        .accessibilityLabel("Network section")
+        .accessibilityLabel("Apps section")
     }
 
     @ViewBuilder
     private var content: some View {
         switch section {
-        case .traffic:
-            TrafficView(viewModel: networkViewModel)
+        case .running:
+            RunningAppsSectionView(viewModel: appsViewModel)
                 .transition(.opacity)
-        case .ports:
-            PortsSectionView(viewModel: portsViewModel)
-                .transition(.opacity)
-        case .ip:
-            IPSectionView(viewModel: ipViewModel)
+        case .workspaces:
+            WorkspacesSectionView(viewModel: workspacesViewModel)
                 .transition(.opacity)
         }
     }
 
     private func refreshAll() {
-        networkViewModel.refresh()
-        Task { await portsViewModel.refresh() }
-        Task { await ipViewModel.refresh() }
+        appsViewModel.refresh()
+        workspacesViewModel.refresh()
     }
 }
