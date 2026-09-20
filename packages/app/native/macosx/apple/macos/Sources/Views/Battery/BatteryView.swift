@@ -29,7 +29,7 @@ struct BatterySectionView: View {
 
     private func loadedContent(_ info: BatteryInfo) -> some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 14) {
+            VStack(alignment: .leading, spacing: Spacing.inset) {
                 overview(info)
 
                 details(info)
@@ -40,11 +40,11 @@ struct BatterySectionView: View {
     }
 
     private func overview(_ info: BatteryInfo) -> some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: Spacing.sm) {
             HStack(alignment: .center) {
-                VStack(alignment: .leading, spacing: 2) {
+                VStack(alignment: .leading, spacing: Spacing.hairline) {
                     Text("\(Int(info.chargePercentage.rounded()))%")
-                        .font(.system(size: 30, weight: .semibold))
+                        .font(Typography.percentage)
                         .monospacedDigit()
                     Text(info.statusText)
                         .font(.caption)
@@ -78,9 +78,9 @@ struct BatterySectionView: View {
     }
 
     private func statusState(symbol: String, title: String, detail: String) -> some View {
-        VStack(spacing: 8) {
+        VStack(spacing: Spacing.sm) {
             Image(systemName: symbol)
-                .font(.system(size: 28, weight: .regular))
+                .font(Typography.emptyStateIcon)
                 .foregroundColor(.secondary)
                 .accessibilityHidden(true)
             Text(title)
@@ -92,7 +92,7 @@ struct BatterySectionView: View {
                 .multilineTextAlignment(.center)
         }
         .frame(maxWidth: .infinity)
-        .padding(.vertical, 40)
+        .padding(.vertical, Spacing.huge)
         .accessibilityElement(children: .combine)
     }
 
@@ -131,11 +131,11 @@ private struct BatteryRow: View {
             Text(value ?? "—")
                 .font(mono ? .system(.caption, design: .monospaced) : .caption)
                 .fontWeight(value == nil ? .regular : .medium)
-                .foregroundColor(value == nil ? Color.secondary.opacity(0.4) : .primary)
+                .foregroundColor(value == nil ? Palette.dimmed : .primary)
                 .multilineTextAlignment(.trailing)
                 .textSelection(.enabled)
         }
-        .padding(.vertical, 5)
+        .padding(.vertical, Spacing.tight)
         .overlay(alignment: .bottom) {
             Divider()
         }

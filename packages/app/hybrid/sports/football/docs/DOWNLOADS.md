@@ -85,9 +85,13 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-A squad and tactics manager with an interactive pitch, drag-and-drop
-substitutions, and match-day clock — a football bench that fits in your pocket
-and runs on every device you own.
+A squad and tactics manager — a football bench that fits in your pocket.
+
+- **Interactive pitch** — place your players and see the shape.
+- **Drag-and-drop substitutions** — swap players in and out.
+- **Match-day clock** — track the match as it runs.
+
+Runs on every device you own.
 
 ---
 

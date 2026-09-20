@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import { STRATEGIES } from '@/games/humanities/economics/prisoners-dilemma/constants';
-import { Strategy } from '@/games/humanities/economics/prisoners-dilemma/types';
-import { formatScore } from '@/games/humanities/economics/prisoners-dilemma/game';
+import { STRATEGIES } from '@/games/humanities/economics/game-theory/prisoners-dilemma/constants';
+import { Strategy } from '@/games/humanities/economics/game-theory/prisoners-dilemma/types';
+import { formatScore } from '@/games/humanities/economics/game-theory/prisoners-dilemma/game';
 
 export type ResultKind = 'win' | 'lose' | 'draw';
 

@@ -21,6 +21,23 @@ RethinkDB is a **JSON document database that pushes real-time updates to applica
 - Range scans: `between(...)` with `index` parameter to avoid table scans.
 - Write operations: `.insert`, `.update`, `.replace`, `.delete` with `conflict` policy (`'replace'`/`'update'`/`'error'`), and `durability` (`'hard'` default vs `'soft'`).
 
+```javascript
+const conn = r.connect({ host: 'db', port: 28015 });
+
+// compound index => ordered range scan, no table scan
+const recent = await conn
+  .table('orders')
+  .between(
+    { left: 'cus_42', right: r.minval },
+    { left: 'cus_42', right: r.maxval },
+    { index: 'customer_created' }
+  )
+  .orderBy({ index: 'customer_created' })
+  .filter(r.row('status').eq('paid'))
+  .pluck('id', 'total', 'created_at')
+  .limit(50);
+```
+
 ## 3. Secondary Indexes and Performance
 
 - Add indexes via `table.indexCreate('field')`; drop unused indexes.
@@ -36,6 +53,23 @@ RethinkDB is a **JSON document database that pushes real-time updates to applica
 - Filter changefeeds to reduce payload: `changes().filter(...)` on the change object.
 - For complex projections, compose changefeeds on a query, but keep the base query indexable.
 - Maintain a client-side store (state) that applies change events to stay consistent.
+
+```javascript
+// feed the base query stays indexable; squash coalesces write bursts
+const feed = await conn
+  .table('chat')
+  .between(
+    { left: 'room:eng', right: r.minval },
+    { left: 'room:eng', right: r.maxval },
+    { index: 'room_sentAt' }
+  )
+  .changes({ includeInitial: true, squash: 500 })
+  .filter((change) => change.new_val && change.new_val.hidden !== true);
+
+for await (const change of feed) {
+  store.apply(change); // idempotent: same client store on every reconnect
+}
+```
 
 ## 5. Operations and Architecture
 

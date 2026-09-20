@@ -17,6 +17,34 @@ CouchDB is a **JSON document database with a pure HTTP API**, built around **mas
 
 - REST API: `GET/PUT/POST/DELETE /db/{docid}`.
 - Maintenance: `GET /_all_dbs`, `_changes` feed, `_compact`, `_replicate`.
+
+```bash
+# optimistic concurrency: create, then always send _rev back on update
+curl -sS -X PUT "$CB/orders" -H 'Content-Type: application/json' \
+  -d '{"_id":"order:1001","status":"pending","total":99.00}'
+
+REV=$(curl -sS "$CB/orders/order:1001" | jq -r ._rev)
+
+curl -sS -X PUT "$CB/orders/order:1001" -H 'Content-Type: application/json' \
+  -H "If-Match: $REV" \
+  -d "{\"_rev\":\"$REV\",\"status\":\"paid\",\"total\":99.00}"
+```
+
+```bash
+services:
+  couchdb:
+    image: couchdb:3.5 # pin a stable version for reproducibility
+    ports:
+      - "5984:5984"
+    environment:
+      COUCHDB_USER: admin
+      COUCHDB_PASSWORD: StrongPassword123!
+    volumes:
+      - couchdb_data:/opt/couchdb/data
+```
+
+Runnable: [`examples/docker/compose/databases/documental/couchdb/docker-compose.yaml`](../../../examples/docker/compose/databases/documental/couchdb/docker-compose.yaml)
+
 - Authentication: `Basic`, `JWT`, or `Cookie` (session) vs. `PW` / `Local` (DB setup). Use `_users` DB for `_design` docs? (Create dedicated users.)
 - Use `ETag`/If-Match and `_rev` to implement optimistic concurrency: always send `_rev` on update; a `409 Conflict` means a revision mismatch.
 - Bulk operations: `_bulk_docs` with `all_or_nothing`; transactions not supported — use independent documents.
@@ -28,6 +56,26 @@ CouchDB is a **JSON document database with a pure HTTP API**, built around **mas
 - For range lookups pass `startkey`/`endkey`, `include_docs=true`.
 - Mango (Query Server) indexes (`_index`) provide `$eq`, `$gt`, `$regex`-style selectors; create via `_index` endpoint.
 - Prefer views over full scan for hot paths; sparse views (only emit needed docs) reduce index size.
+
+```javascript
+// sparse view: only emit for documents that actually matter to this query
+function ordersByCustomer(doc) {
+  if (doc.type !== 'order' || !doc.customerId) return null; // no emit = not indexed
+  emit([doc.customerId, doc.createdAt], {
+    total: doc.total,
+    status: doc.status,
+  });
+}
+```
+
+```bash
+# range read over the view: one customer, all their orders
+curl -sS -G "$CB/orders/_design/orders/_view/by-customer" \
+  --data-urlencode 'group=true' \
+  --data-urlencode 'startkey=["cus_42"]' \
+  --data-urlencode 'endkey=["cus_42",{}]' \
+  --data-urlencode 'include_docs=true'
+```
 
 ## 4. Conflicts and Replication
 

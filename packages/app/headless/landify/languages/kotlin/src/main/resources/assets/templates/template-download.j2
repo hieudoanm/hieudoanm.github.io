@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{{ config.site.description }}" />
+    <title>{{ config.site.name }}</title>
+    <style>
+      :root {
+@LANDIFY_THEME@      }
+{% include 'base-css.j2' %}
+      .dl-badges {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 18px;
+      }
+      .dl-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 4px 12px;
+        border-radius: 999px;
+        border: 1px solid var(--border-soft);
+        background: var(--primary-soft);
+        color: var(--primary-dark);
+      }
+      .dl-platforms {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 22px;
+      }
+      .dl-platform {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 20px;
+        border-radius: var(--radius);
+        border: 1px solid var(--border-soft);
+        background: var(--base-200);
+        color: var(--base-content);
+        font-weight: 600;
+        font-size: 14px;
+      }
+      .dl-platform:hover {
+        background: var(--base-300);
+        text-decoration: none;
+      }
+      .install-block {
+        max-width: 560px;
+        margin: 22px auto 0;
+        text-align: left;
+        background: var(--base-200);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+        padding: 14px 18px;
+        overflow-x: auto;
+      }
+      .install-block pre {
+        margin: 0;
+        font-size: 13.5px;
+        line-height: 1.55;
+        color: var(--base-content);
+        font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+      }
+    </style>
+  </head>
+  <body>
+    {% include 'header.j2' %}
+
+    <main id="top">
+      <section class="hero">
+        <div>
+          {% if config.hero.badge %}<span class="badge">{{ config.hero.badge }}</span>{% endif %}
+          <h1>{{ config.hero.headline }}</h1>
+          <p class="lead">{{ config.hero.subheadline }}</p>
+          <div class="dl-badges">
+            {% if config.download.version %}<span class="dl-badge">⛁ v{{ config.download.version }}</span>{% endif %}
+            {% if config.download.license %}<span class="dl-badge">🪪 {{ config.download.license }}</span>{% endif %}
+          </div>
+          <div class="dl-platforms">
+            {% for platform in config.download.platforms %}<a class="dl-platform" href="{{ platform.href }}">{% if platform.icon %}{{ platform.icon }} {% endif %}{{ platform.name }}</a>{% endfor %}
+          </div>
+          {% if config.download.install %}
+          <div class="install-block">
+            <pre><code>{{ config.download.install }}</code></pre>
+          </div>
+          {% endif %}
+          <div class="hero-actions">
+            {% if config.download.repo %}<a class="btn btn-ghost" href="{{ config.download.repo }}">⭐ View source</a>{% endif %}
+            {% if config.hero.secondary.href %}<a class="btn btn-ghost" href="{{ config.hero.secondary.href }}">{{ config.hero.secondary.label }}</a>{% endif %}
+          </div>
+        </div>
+        {% if config.hero.image.src %}<img class="hero-media" src="{{ config.hero.image.src }}" alt="{{ config.hero.image.alt }}" />{% endif %}
+      </section>
+
+      <section id="features" class="block">
+        <div class="block-head">
+          <h2>{{ config.features.heading }}</h2>
+          <p class="sub">{{ config.features.sub }}</p>
+        </div>
+        <div class="features">
+          {% for feature in config.features.items %}
+          <div class="feature">
+            <span class="icon">{{ feature.icon }}</span>
+            <h3>{{ feature.title }}</h3>
+            <p>{{ feature.body }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+
+      <section id="cta" class="block">
+        <div class="cta">
+          <span class="icon" aria-hidden="true">{{ config.cta.icon }}</span>
+          <h2>{{ config.cta.heading }}</h2>
+          <p>{{ config.cta.body }}</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="{{ config.cta.button.href }}">{{ config.cta.button.label }}</a>
+          </div>
+        </div>
+      </section>
+
+      {% include 'footer.j2' %}
+    </main>
+  </body>
+</html>

@@ -1,10 +1,11 @@
-const CACHE_NAME = 'office-v1';
+const CACHE_NAME = 'office-v2';
 const STATIC_ASSETS = [
   '/',
   '/about/',
   '/calendar/',
   '/csv/',
   '/downloads/',
+  '/keynotes/',
   '/md/',
   '/version/',
 ];

@@ -4,6 +4,7 @@
 ├── Docs/
 │   ├── [ARCHITECTURE.md](./Docs/ARCHITECTURE.md)
 │   ├── [CONTRIBUTING.md](./Docs/CONTRIBUTING.md)
+│   ├── [DESIGN-SYSTEM.md](./Docs/DESIGN-SYSTEM.md)
 │   ├── [DOWNLOADS.md](./Docs/DOWNLOADS.md)
 │   ├── [PACKAGING.md](./Docs/PACKAGING.md)
 │   └── [ROADMAP.md](./Docs/ROADMAP.md)
@@ -33,17 +34,24 @@
 │   │   ├── IP/
 │   │   │   └── [IPViewModel.swift](./Sources/App/IP/IPViewModel.swift)
 │   │   ├── Memory/
+│   │   │   ├── [MemoryViewModel+MenuBar.swift](./Sources/App/Memory/MemoryViewModel+MenuBar.swift)
 │   │   │   └── [MemoryViewModel.swift](./Sources/App/Memory/MemoryViewModel.swift)
 │   │   ├── Network/
 │   │   │   └── [NetworkViewModel.swift](./Sources/App/Network/NetworkViewModel.swift)
 │   │   ├── Ports/
 │   │   │   └── [PortsViewModel.swift](./Sources/App/Ports/PortsViewModel.swift)
 │   │   ├── Shared/
+│   │   │   ├── [AppViewModels.swift](./Sources/App/Shared/AppViewModels.swift)
+│   │   │   ├── [DashboardRoute.swift](./Sources/App/Shared/DashboardRoute.swift)
+│   │   ├── [DashboardSidebar.swift](./Sources/App/Shared/DashboardSidebar.swift)
+│   │   │   ├── [DashboardRouter.swift](./Sources/App/Shared/DashboardRouter.swift)
 │   │   │   ├── [LaunchAtLogin.swift](./Sources/App/Shared/LaunchAtLogin.swift)
 │   │   │   ├── [MacOSXApp.swift](./Sources/App/Shared/MacOSXApp.swift)
 │   │   │   ├── [MenuBarIcon.swift](./Sources/App/Shared/MenuBarIcon.swift)
+│   │   │   ├── [MenuBarItemValue.swift](./Sources/App/Shared/MenuBarItemValue.swift)
 │   │   │   ├── [MenuBarPanelPositioner.swift](./Sources/App/Shared/MenuBarPanelPositioner.swift)
-│   │   │   └── [PanelVisibilityMonitor.swift](./Sources/App/Shared/PanelVisibilityMonitor.swift)
+│   │   │   ├── [SurfaceVisibilityMonitor.swift](./Sources/App/Shared/SurfaceVisibilityMonitor.swift)
+│   │   │   └── [WindowPresenter.swift](./Sources/App/Shared/WindowPresenter.swift)
 │   │   └── Workspaces/
 │   │       └── [WorkspacesViewModel.swift](./Sources/App/Workspaces/WorkspacesViewModel.swift)
 │   ├── Core/
@@ -82,6 +90,9 @@
 │   │   │   │   └── [PortInfo.swift](./Sources/Core/Models/Ports/PortInfo.swift)
 │   │   │   ├── Shared/
 │   │   │   │   ├── [MenuBarDisplay.swift](./Sources/Core/Models/Shared/MenuBarDisplay.swift)
+│   │   │   │   ├── [MenuBarMetric.swift](./Sources/Core/Models/Shared/MenuBarMetric.swift)
+│   │   │   │   ├── [MenuBarMetrics.swift](./Sources/Core/Models/Shared/MenuBarMetrics.swift)
+│   │   │   │   ├── [SurfaceSection.swift](./Sources/Core/Models/Shared/SurfaceSection.swift)
 │   │   │   │   └── [UsageThreshold.swift](./Sources/Core/Models/Shared/UsageThreshold.swift)
 │   │   │   └── Workspaces/
 │   │   │       ├── [NormalizedRect.swift](./Sources/Core/Models/Workspaces/NormalizedRect.swift)
@@ -169,9 +180,13 @@
 │       │   └── [BatteryView.swift](./Sources/Views/Battery/BatteryView.swift)
 │       ├── Clipboard/
 │       │   ├── [ClipboardItemList.swift](./Sources/Views/Clipboard/ClipboardItemList.swift)
+│       │   ├── [ClipboardListPane.swift](./Sources/Views/Clipboard/ClipboardListPane.swift)
+│       │   ├── [ClipboardSidebarGroup.swift](./Sources/Views/Clipboard/ClipboardSidebarGroup.swift)
 │       │   └── [ClipboardView.swift](./Sources/Views/Clipboard/ClipboardView.swift)
 │       ├── Clock/
+│       │   ├── [ClockFaceSizing.swift](./Sources/Views/Clock/ClockFaceSizing.swift)
 │       │   ├── [ClockRing.swift](./Sources/Views/Clock/ClockRing.swift)
+│       │   ├── [ClockSidebarGroup.swift](./Sources/Views/Clock/ClockSidebarGroup.swift)
 │       │   ├── [ClockView.swift](./Sources/Views/Clock/ClockView.swift)
 │       │   ├── [PomodoroView.swift](./Sources/Views/Clock/PomodoroView.swift)
 │       │   ├── [StopwatchView.swift](./Sources/Views/Clock/StopwatchView.swift)
@@ -184,6 +199,7 @@
 │       │   └── [RunningAppsSectionView.swift](./Sources/Views/Front/RunningAppsSectionView.swift)
 │       ├── Homebrew/
 │       │   ├── [AppTile.swift](./Sources/Views/Homebrew/AppTile.swift)
+│       │   ├── [ApplicationsSidebarGroup.swift](./Sources/Views/Homebrew/ApplicationsSidebarGroup.swift)
 │       │   ├── [BrewAppRow.swift](./Sources/Views/Homebrew/BrewAppRow.swift)
 │       │   ├── [BrewAppsView.swift](./Sources/Views/Homebrew/BrewAppsView.swift)
 │       │   ├── [DiscoverView.swift](./Sources/Views/Homebrew/DiscoverView.swift)
@@ -193,10 +209,13 @@
 │       │   ├── [PackageDetailView.swift](./Sources/Views/Homebrew/PackageDetailView.swift)
 │       │   ├── [PackageRow.swift](./Sources/Views/Homebrew/PackageRow.swift)
 │       │   ├── [ServicesView.swift](./Sources/Views/Homebrew/ServicesView.swift)
-│       │   ├── [SidebarView.swift](./Sources/Views/Homebrew/SidebarView.swift)
 │       │   └── [UpdatesView.swift](./Sources/Views/Homebrew/UpdatesView.swift)
 │       ├── IP/
-│       │   └── [IPView.swift](./Sources/Views/IP/IPView.swift)
+│       │   ├── [IPDetailsView.swift](./Sources/Views/IP/IPDetailsView.swift)
+│       │   ├── [IPDNSLookupView.swift](./Sources/Views/IP/IPDNSLookupView.swift)
+│       │   ├── [InfoRow.swift](./Sources/Views/IP/InfoRow.swift)
+│       │   ├── [IPView.swift](./Sources/Views/IP/IPView.swift)
+│       │   └── [JSONText.swift](./Sources/Views/IP/JSONText.swift)
 │       ├── Memory/
 │       │   ├── [CPUView.swift](./Sources/Views/Memory/CPUView.swift)
 │       │   ├── [DiskView.swift](./Sources/Views/Memory/DiskView.swift)
@@ -214,12 +233,28 @@
 │       │   ├── [OverviewView.swift](./Sources/Views/Resources/OverviewView.swift)
 │       │   └── [ResourcesView.swift](./Sources/Views/Resources/ResourcesView.swift)
 │       ├── Shared/
+│       │   ├── [ContentLayout.swift](./Sources/Views/Shared/ContentLayout.swift)
+│       │   ├── [DashboardView.swift](./Sources/Views/Shared/DashboardView.swift)
+│       │   ├── DesignSystem/
+│       │   │   ├── [CapsuleBadge.swift](./Sources/Views/Shared/DesignSystem/CapsuleBadge.swift)
+│       │   │   ├── [ChipButton.swift](./Sources/Views/Shared/DesignSystem/ChipButton.swift)
+│       │   │   ├── [CircleIconButton.swift](./Sources/Views/Shared/DesignSystem/CircleIconButton.swift)
+│       │   │   ├── [Motion.swift](./Sources/Views/Shared/DesignSystem/Motion.swift)
+│       │   │   ├── [Palette.swift](./Sources/Views/Shared/DesignSystem/Palette.swift)
+│       │   │   ├── [Radius.swift](./Sources/Views/Shared/DesignSystem/Radius.swift)
+│       │   │   ├── [SearchField.swift](./Sources/Views/Shared/DesignSystem/SearchField.swift)
+│       │   │   ├── [Spacing.swift](./Sources/Views/Shared/DesignSystem/Spacing.swift)
+│       │   │   ├── [SurfaceMetrics.swift](./Sources/Views/Shared/DesignSystem/SurfaceMetrics.swift)
+│       │   │   └── [Typography.swift](./Sources/Views/Shared/DesignSystem/Typography.swift)
 │       │   ├── [MenuBarView.swift](./Sources/Views/Shared/MenuBarView.swift)
 │       │   ├── [ResourceMeter.swift](./Sources/Views/Shared/ResourceMeter.swift)
+│       │   ├── [SectionCard.swift](./Sources/Views/Shared/SectionCard.swift)
+│       │   ├── [SectionGrid.swift](./Sources/Views/Shared/SectionGrid.swift)
 │       │   ├── [SettingsView.swift](./Sources/Views/Shared/SettingsView.swift)
-│       │   ├── [TabLayout.swift](./Sources/Views/Shared/TabLayout.swift)
+│       │   ├── [SurfaceLayout.swift](./Sources/Views/Shared/SurfaceLayout.swift)
 │       │   ├── [UnavailableView.swift](./Sources/Views/Shared/UnavailableView.swift)
-│       │   └── [UsageThresholdColor.swift](./Sources/Views/Shared/UsageThresholdColor.swift)
+│       │   ├── [UsageThresholdColor.swift](./Sources/Views/Shared/UsageThresholdColor.swift)
+│       │   └── [WindowIdentifierTag.swift](./Sources/Views/Shared/WindowIdentifierTag.swift)
 │       └── Workspaces/
 │           ├── [WorkspaceRow.swift](./Sources/Views/Workspaces/WorkspaceRow.swift)
 │           └── [WorkspacesView.swift](./Sources/Views/Workspaces/WorkspacesView.swift)
@@ -248,6 +283,9 @@
 │       │   │   └── [PortTests.swift](./Tests/Core/Models/Ports/PortTests.swift)
 │       │   ├── Shared/
 │       │   │   ├── [MenuBarDisplayTests.swift](./Tests/Core/Models/Shared/MenuBarDisplayTests.swift)
+│       │   │   ├── [MenuBarMetricTests.swift](./Tests/Core/Models/Shared/MenuBarMetricTests.swift)
+│       │   │   ├── [MenuBarMetricsTests.swift](./Tests/Core/Models/Shared/MenuBarMetricsTests.swift)
+│       │   │   ├── [SurfaceSectionTests.swift](./Tests/Core/Models/Shared/SurfaceSectionTests.swift)
 │       │   │   └── [UsageThresholdTests.swift](./Tests/Core/Models/Shared/UsageThresholdTests.swift)
 │       │   └── Workspaces/
 │       │       ├── [NormalizedRectTests.swift](./Tests/Core/Models/Workspaces/NormalizedRectTests.swift)
@@ -275,6 +313,7 @@
 │       │       └── [WorkspaceWindowBuilderTests.swift](./Tests/Core/Services/Workspaces/WorkspaceWindowBuilderTests.swift)
 │       ├── [ByteFormatterTests.swift](./Tests/Core/ByteFormatterTests.swift)
 │       ├── [ClockFormatterTests.swift](./Tests/Core/ClockFormatterTests.swift)
+│       ├── [DesignSystemTests.swift](./Tests/Core/DesignSystemTests.swift)
 │       └── [SettingsStoreTests.swift](./Tests/Core/SettingsStoreTests.swift)
 ├── [AGENTS.md](./AGENTS.md)
 ├── [LICENSE](./LICENSE)
@@ -284,4 +323,4 @@
 └── [TREE.md](./TREE.md)
 ```
 
-80 directories, 197 files
+82 directories, 236 files

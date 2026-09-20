@@ -4,10 +4,12 @@
 
 .grayscale-0 {
   --tw-grayscale: grayscale(0);
+
   filter: #{$filter-composite};
 }
 
 .grayscale {
   --tw-grayscale: grayscale(100%);
+
   filter: #{$filter-composite};
 }

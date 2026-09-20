@@ -6,48 +6,50 @@ struct TimerView: View {
     @ObservedObject var viewModel: TimerViewModel
 
     var body: some View {
-        VStack(spacing: 24) {
-            presetRow
+        GeometryReader { geometry in
+            let ringSize = ClockFaceSizing.ring(in: geometry.size)
+            VStack(spacing: Spacing.xxl) {
+                presetRow
 
-            Spacer()
+                Spacer()
 
-            ring
+                ring(size: ringSize)
 
-            controls
+                controls
 
-            Spacer()
+                Spacer()
 
-            presetBadge
+                presetBadge
+            }
+            .padding(.vertical, Spacing.md)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .padding(.vertical, 12)
     }
 
     private var presetRow: some View {
-        HStack(spacing: 8) {
+        HStack(spacing: Spacing.sm) {
             ForEach(TimerViewModel.presets) { preset in
                 let isSelected = viewModel.selectedPreset == preset
-                Button {
+                ChipButton(
+                    title: preset.label,
+                    isSelected: isSelected,
+                    accessibilityLabel: "Set timer to \(preset.label)"
+                ) {
                     viewModel.applyPreset(preset)
-                } label: {
-                    Text(preset.label)
-                        .font(.system(.caption, design: .monospaced))
-                        .padding(.horizontal, 10)
-                        .padding(.vertical, 6)
-                        .background(isSelected ? Color.accentColor : Color.primary.opacity(0.08), in: Capsule())
-                        .foregroundColor(isSelected ? .white : .primary)
                 }
-                .buttonStyle(.plain)
-                .accessibilityLabel("Set timer to \(preset.label)")
             }
         }
     }
 
-    private var ring: some View {
-        ClockRing(progress: viewModel.progress, color: viewModel.isFinished ? .green : Color.accentColor) {
-            VStack(spacing: 4) {
+    private func ring(size: CGFloat) -> some View {
+        ClockRing(
+            size: size,
+            progress: viewModel.progress,
+            color: viewModel.isFinished ? .green : Color.accentColor
+        ) {
+            VStack(spacing: Spacing.xxs) {
                 Text(viewModel.timeText)
-                    .font(.system(size: 34, weight: .medium, design: .monospaced))
+                    .font(.system(size: min(size * 0.21, Typography.readoutCap), weight: .medium, design: .monospaced))
                     .monospacedDigit()
                 Text(viewModel.isFinished ? "done" : "remaining")
                     .font(.caption)
@@ -59,13 +61,13 @@ struct TimerView: View {
     }
 
     private var controls: some View {
-        HStack(spacing: 24) {
-            circleButton(systemImage: "arrow.counterclockwise", size: 30) {
+        HStack(spacing: Spacing.xxl) {
+            CircleIconButton(systemImage: "arrow.counterclockwise", size: 30) {
                 viewModel.reset()
             }
             .disabled(viewModel.timeText == ClockFormatter.timer(viewModel.totalSeconds) && !viewModel.isFinished) 
 
-            circleButton(
+            CircleIconButton(
                 systemImage: viewModel.isRunning ? "pause.fill" : "play.fill",
                 size: 64,
                 color: viewModel.isRunning ? .red : .accentColor
@@ -76,22 +78,7 @@ struct TimerView: View {
     }
 
     private var presetBadge: some View {
-        Text(viewModel.selectedPreset.label)
-            .font(.caption2)
-            .padding(.horizontal, 10)
-            .padding(.vertical, 4)
-            .background(Color.accentColor.opacity(0.15), in: Capsule())
-            .foregroundColor(.secondary)
+        CapsuleBadge(text: viewModel.selectedPreset.label, labelColor: .secondary)
     }
 
-    private func circleButton(systemImage: String, size: CGFloat, color: Color = .accentColor, action: @escaping () -> Void) -> some View {
-        Button(action: action) {
-            Image(systemName: systemImage)
-                .font(.system(size: size >= 60 ? 22 : 14, weight: .semibold))
-                .foregroundColor(.white)
-                .frame(width: size, height: size)
-                .background(color, in: Circle())
-        }
-        .buttonStyle(.plain)
-    }
 }

@@ -2,7 +2,7 @@ import MacOSXCore
 import SwiftUI
 
 struct SettingsView: View {
-    @ObservedObject var viewModel: MemoryViewModel
+    @ObservedObject var memoryViewModel: MemoryViewModel
     @ObservedObject var clipboardViewModel: ClipboardViewModel
     @State private var launchAtLogin = LaunchAtLogin.isEnabled
 
@@ -18,8 +18,8 @@ struct SettingsView: View {
 
             Section("Monitoring") {
                 Picker("Refresh Interval", selection: Binding(
-                    get: { SelectableInterval(seconds: viewModel.refreshInterval) },
-                    set: { viewModel.updateRefreshInterval($0.rawValue) }
+                    get: { SelectableInterval(seconds: memoryViewModel.refreshInterval) },
+                    set: { memoryViewModel.updateRefreshInterval($0.rawValue) }
                 )) {
                     ForEach(SelectableInterval.allCases, id: \.self) { interval in
                         Text(interval.label).tag(interval)
@@ -28,13 +28,19 @@ struct SettingsView: View {
             }
 
             Section("Menu Bar") {
-                Picker("Display", selection: Binding(
-                    get: { viewModel.menuBarDisplay },
-                    set: { viewModel.updateMenuBarDisplay($0) }
+                Picker("Values", selection: Binding(
+                    get: { memoryViewModel.menuBarDisplay },
+                    set: { memoryViewModel.updateMenuBarDisplay($0) }
                 )) {
                     ForEach(MenuBarDisplay.allCases, id: \.self) { display in
                         Text(display.title).tag(display)
                     }
+                }
+                ForEach(MenuBarMetric.allCases, id: \.self) { metric in
+                    Toggle(metric.title, isOn: Binding(
+                        get: { memoryViewModel.menuBarMetrics.contains(metric) },
+                        set: { isOn in updateMenuBarMetric(metric, isOn: isOn) }
+                    ))
                 }
             }
 
@@ -65,7 +71,7 @@ struct SettingsView: View {
             }
         }
         .formStyle(.grouped)
-        .frame(width: 400, height: 400)
+        .frame(width: 400, height: 480)
         .onChange(of: launchAtLogin) { newValue in
             launchAtLogin = LaunchAtLogin.setEnabled(newValue) ? newValue : LaunchAtLogin.isEnabled
         }
@@ -73,8 +79,17 @@ struct SettingsView: View {
             launchAtLogin = LaunchAtLogin.isEnabled
         }
         .onDisappear {
-            NSApp.setActivationPolicy(.accessory)
+            WindowPresenter.restoreMenuBarOnlyMode()
         }
+    }
+
+    /// The last remaining metric cannot be switched off: an empty menu bar
+    /// would leave the app with nothing to show.
+    private func updateMenuBarMetric(_ metric: MenuBarMetric, isOn: Bool) {
+        let metrics = memoryViewModel.menuBarMetrics
+        memoryViewModel.updateMenuBarMetrics(
+            isOn ? metrics.adding(metric) : metrics.removing(metric)
+        )
     }
 }
 

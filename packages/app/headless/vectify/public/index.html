@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A raster-to-vector tracer written from scratch in Rust. PNG and JPEG in, SVG out — pixels to regions to contours to Bezier curves." />
+    <title>Vectify</title>
+    <style>
+      :root {
+        --base-100: #f6f7f9;
+        --base-200: #fefefe;
+        --base-300: #eff0f2;
+        --base-content: #181d25;
+        --border: #4b5563;
+        --border-soft: #b2b6bd;
+        --error: #dc2626;
+        --info: #2563eb;
+        --neutral: #4b5563;
+        --neutral-faint: #989ea7;
+        --primary: #0f766e;
+        --primary-content: #ffffff;
+        --primary-dark: #0d645e;
+        --primary-soft: #dae8e8;
+        --radius: 8px;
+        --secondary: #4f46e5;
+        --secondary-content: #ffffff;
+        --success: #16a34a;
+        --warning: #d97706;
+      }
+* {
+        box-sizing: border-box;
+      }
+      html {
+        margin: 0;
+        scroll-behavior: smooth;
+        scroll-padding-top: 76px;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background: var(--base-100);
+        color: var(--base-content);
+        font-family:
+          system-ui,
+          -apple-system,
+          'Segoe UI',
+          Roboto,
+          'Helvetica Neue',
+          Arial,
+          sans-serif;
+        line-height: 1.55;
+        -webkit-font-smoothing: antialiased;
+      }
+      a {
+        color: var(--primary);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        padding: 0 24px;
+        height: 60px;
+        background: var(--base-200);
+        border-bottom: 1px solid var(--border-soft);
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--base-content);
+      }
+      .brand:hover {
+        text-decoration: none;
+      }
+      .brand .mark {
+        font-size: 20px;
+        line-height: 1;
+      }
+      nav {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        font-size: 14px;
+      }
+      nav a {
+        color: var(--neutral);
+      }
+      nav a:hover {
+        color: var(--base-content);
+        text-decoration: none;
+      }
+
+      main {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 32px 24px 64px;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 28px;
+        justify-items: center;
+        max-width: 760px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 16px 0 8px;
+      }
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 4px 12px;
+        border-radius: 999px;
+        border: 1px solid var(--border-soft);
+        background: var(--primary-soft);
+        color: var(--primary-dark);
+      }
+      .hero h1 {
+        margin: 14px 0 8px;
+        font-size: 34px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        line-height: 1.15;
+      }
+      .lead {
+        margin: 0 auto;
+        max-width: 58ch;
+        font-size: 16px;
+        color: var(--neutral);
+      }
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 22px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        border: 1px solid transparent;
+        border-radius: var(--radius);
+        padding: 12px 22px;
+        font-size: 15px;
+        font-weight: 600;
+        font-family: inherit;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .btn:hover {
+        text-decoration: none;
+      }
+      .btn-primary {
+        color: var(--primary-content);
+        background: var(--primary);
+        border-color: var(--primary);
+      }
+      .btn-primary:hover {
+        background: var(--primary-dark);
+        border-color: var(--primary-dark);
+      }
+      .btn-ghost {
+        color: var(--base-content);
+        background: var(--base-200);
+        border-color: var(--border);
+      }
+      .btn-ghost:hover {
+        background: var(--base-300);
+      }
+
+       
+      .hero-media,
+      .demo-media {
+        display: block;
+        width: 100%;
+        max-width: 720px;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        margin-inline: auto;
+        background: var(--base-300);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+      }
+
+      section.block {
+        margin-top: 32px;
+      }
+      .block-head {
+        margin: 0 0 18px;
+        text-align: center;
+      }
+      .block-head h2 {
+        margin: 0;
+        font-size: 22px;
+        font-weight: 800;
+        letter-spacing: -0.01em;
+      }
+      .block-head .sub {
+        margin: 6px auto 0;
+        max-width: 60ch;
+        color: var(--neutral);
+        font-size: 14.5px;
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+      .feature {
+        background: var(--base-200);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+        padding: 24px 24px;
+        text-align: center;
+      }
+      .feature .icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        font-size: 22px;
+        border-radius: var(--radius);
+        background: var(--primary-soft);
+        border: 1px solid var(--border-soft);
+      }
+      .feature h3 {
+        margin: 14px 0 8px;
+        font-size: 16px;
+        font-weight: 700;
+      }
+      .feature p {
+        margin: 0;
+        font-size: 13.5px;
+        color: var(--neutral);
+      }
+
+      .cta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 6px;
+        background: var(--base-200);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+        padding: 48px 32px;
+      }
+      .cta .icon {
+        font-size: 34px;
+        line-height: 1;
+      }
+      .cta h2 {
+        margin: 10px 0 6px;
+        font-size: 26px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+      .cta p {
+        margin: 0;
+        max-width: 52ch;
+        color: var(--neutral);
+        font-size: 15px;
+      }
+      .cta .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      footer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 24px;
+        align-items: center;
+        justify-content: center;
+        border-top: 1px solid var(--border-soft);
+        margin-top: 48px;
+        padding: 24px 0 4px;
+        font-size: 13px;
+        color: var(--neutral-faint);
+      }
+      footer a {
+        color: var(--neutral-faint);
+      }
+      footer a:hover {
+        color: var(--base-content);
+      }
+
+      @media (max-width: 900px) {
+        .features {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 560px) {
+        nav {
+          display: none;
+        }
+        .hero h1 {
+          font-size: 26px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="#top">
+        <span class="mark">🔷</span>
+        <span>Vectify</span>
+      </a>
+      <nav>
+        <a href="#features">Pipeline</a><a href="#demo">Demo</a><a href="https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/app/headless/vectify/languages/rust">Source</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div>
+          <span class="badge">🦀 Rust · GPL-3.0</span>
+          <h1>Pixels, on purpose.</h1>
+          <p class="lead">Vectify traces flat art into SVG by implementing the whole chain itself — quantisation, region growing, boundary walking, simplification, and least-squares Bezier fitting. No tracing library underneath.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://github.com/hieudoanm/hieudoanm.github.io/blob/master/packages/app/headless/vectify/languages/rust/docs/ARCHITECTURE.md">Read the architecture</a>
+            <a class="btn btn-ghost" href="https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/app/headless/vectify/languages/rust">Source on GitHub</a>
+          </div>
+        </div>
+        <img class="hero-media" src="demo.png" alt="Vectify terminal: info, a default trace, a two-colour trace, the debug artefacts, and the HTTP routes" />
+      </section>
+
+      <section id="features" class="block">
+        <div class="block-head">
+          <h2>The pipeline</h2>
+          <p class="sub">One card per stage of the tracer, in the order the data flows.</p>
+        </div>
+        <div class="features">
+          
+          <div class="feature">
+            <span class="icon">🎨</span>
+            <h3>Quantise</h3>
+            <p>A luminance threshold, or a median-cut palette assigned to the nearest swatch. Deterministic, and flattened onto the backdrop first so a transparent pixel cannot leak a bogus colour.</p>
+          </div>
+          
+          <div class="feature">
+            <span class="icon">🧩</span>
+            <h3>Segment</h3>
+            <p>An 8-connected flood fill groups pixels into regions, dropping any below the area floor. Traced per region, so two blobs sharing a colour never inherit each other&#39;s outlines.</p>
+          </div>
+          
+          <div class="feature">
+            <span class="icon">✏️</span>
+            <h3>Contour</h3>
+            <p>Boundary edges are emitted per exposed side, then chained into closed loops. Direction is preserved so holes cut out without relying on winding order.</p>
+          </div>
+          
+          <div class="feature">
+            <span class="icon">📉</span>
+            <h3>Simplify</h3>
+            <p>Douglas–Peucker over each closed loop, with a fallback split at the point furthest from the start so the loop can recurse into open chains.</p>
+          </div>
+          
+          <div class="feature">
+            <span class="icon">📈</span>
+            <h3>Fit</h3>
+            <p>Least-squares fit, measure, split. With both end tangents fixed the fit is linear, so the optimal control points come from one small solve.</p>
+          </div>
+          
+          <div class="feature">
+            <span class="icon">✅</span>
+            <h3>Measure it</h3>
+            <p>The emitted SVG is rasterized by an independent renderer and scored against the source: MAE, SSIM, edge similarity, and the primitive count it cost.</p>
+          </div>
+          
+        </div>
+      </section>
+
+      <section id="demo" class="block">
+        <div class="block-head">
+          <h2>Watch it trace</h2>
+          <p class="sub">Five commands, roughly fifteen seconds. The CLI is a thin shell over the same library the HTTP API serves, so nothing here is a mock.</p>
+        </div>
+        <video class="demo-media" controls preload="metadata" poster="demo.png">
+          <source src="demo.mp4" type="video/mp4" />
+          <track kind="descriptions" label="English descriptions" srclang="en" src="demo-en-descriptions.vtt" default />
+          Your browser does not support the video tag.
+        </video>
+      </section>
+
+      <section id="cta" class="block">
+        <div class="cta">
+          <span class="icon" aria-hidden="true">🧮</span>
+          <h2>Start from the pixels.</h2>
+          <p>Build the binary, point it at a flat logo, and compare the SVG next to the original. If the shapes are wrong, open 02-regions.png first.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/app/headless/vectify/languages/rust">Clone and build</a>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <span>© 2026 Vectify</span>
+        <a href="#features">Pipeline</a><a href="#demo">Demo</a><a href="https://github.com/hieudoanm/hieudoanm.github.io/tree/master/packages/app/headless/vectify/languages/rust">Source</a><a href="https://github.com/hieudoanm/hieudoanm.github.io/blob/master/LICENSE">License</a>
+      </footer>
+    </main>
+  </body>
+</html>

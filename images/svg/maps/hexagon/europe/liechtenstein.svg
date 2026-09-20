@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 226.51 292.40" width="226.51" height="292.40" role="img" aria-labelledby="liechtenstein-title liechtenstein-desc">
+  <title id="liechtenstein-title">Liechtenstein hex map</title>
+  <desc id="liechtenstein-desc">Hexagon map with 11 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.89; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 14.28 10.20; }
+    .label { fill: #52525b; font: 600 11.56px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="TRIA">
+    <title>Triesenberg</title>
+    <polygon class="tile" points="186.87,163.20 216.31,180.20 216.31,214.20 186.87,231.20 157.42,214.20 157.42,180.20" aria-label="Triesenberg"/>
+    <text class="label" x="186.87" y="197.20">TRIA</text>
+  </g>
+  <g class="state" data-state="PLA">
+    <title>Planken</title>
+    <polygon class="tile" points="157.42,112.20 186.87,129.20 186.87,163.20 157.42,180.20 127.98,163.20 127.98,129.20" aria-label="Planken"/>
+    <text class="label" x="157.42" y="146.20">PLA</text>
+  </g>
+  <g class="state" data-state="TRI">
+    <title>Triesen</title>
+    <polygon class="tile" points="157.42,214.20 186.87,231.20 186.87,265.20 157.42,282.20 127.98,265.20 127.98,231.20" aria-label="Triesen"/>
+    <text class="label" x="157.42" y="248.20">TRI</text>
+  </g>
+  <g class="state" data-state="MAU">
+    <title>Mauren</title>
+    <polygon class="tile" points="127.98,61.20 157.42,78.20 157.42,112.20 127.98,129.20 98.53,112.20 98.53,78.20" aria-label="Mauren"/>
+    <text class="label" x="127.98" y="95.20">MAU</text>
+  </g>
+  <g class="state" data-state="VAD">
+    <title>Vaduz</title>
+    <polygon class="tile" points="127.98,163.20 157.42,180.20 157.42,214.20 127.98,231.20 98.53,214.20 98.53,180.20" aria-label="Vaduz"/>
+    <text class="label" x="127.98" y="197.20">VAD</text>
+  </g>
+  <g class="state" data-state="SCHA">
+    <title>Schellenberg</title>
+    <polygon class="tile" points="98.53,10.20 127.98,27.20 127.98,61.20 98.53,78.20 69.09,61.20 69.09,27.20" aria-label="Schellenberg"/>
+    <text class="label" x="98.53" y="44.20">SCHA</text>
+  </g>
+  <g class="state" data-state="ESC">
+    <title>Eschen</title>
+    <polygon class="tile" points="98.53,112.20 127.98,129.20 127.98,163.20 98.53,180.20 69.09,163.20 69.09,129.20" aria-label="Eschen"/>
+    <text class="label" x="98.53" y="146.20">ESC</text>
+  </g>
+  <g class="state" data-state="BAL">
+    <title>Balzers</title>
+    <polygon class="tile" points="98.53,214.20 127.98,231.20 127.98,265.20 98.53,282.20 69.09,265.20 69.09,231.20" aria-label="Balzers"/>
+    <text class="label" x="98.53" y="248.20">BAL</text>
+  </g>
+  <g class="state" data-state="RUG">
+    <title>Ruggell</title>
+    <polygon class="tile" points="69.09,61.20 98.53,78.20 98.53,112.20 69.09,129.20 39.64,112.20 39.64,78.20" aria-label="Ruggell"/>
+    <text class="label" x="69.09" y="95.20">RUG</text>
+  </g>
+  <g class="state" data-state="SCH">
+    <title>Schaan</title>
+    <polygon class="tile" points="69.09,163.20 98.53,180.20 98.53,214.20 69.09,231.20 39.64,214.20 39.64,180.20" aria-label="Schaan"/>
+    <text class="label" x="69.09" y="197.20">SCH</text>
+  </g>
+  <g class="state" data-state="GAM">
+    <title>Gamprin</title>
+    <polygon class="tile" points="39.64,112.20 69.09,129.20 69.09,163.20 39.64,180.20 10.20,163.20 10.20,129.20" aria-label="Gamprin"/>
+    <text class="label" x="39.64" y="146.20">GAM</text>
+  </g>
+</svg>

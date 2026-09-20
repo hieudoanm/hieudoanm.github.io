@@ -42,7 +42,7 @@ curl -fsSL https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/maste
 [download-darwin-amd64]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-backbone-latest/app-headless-backbone-backbone-darwin-amd64
 [download-darwin-arm64]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-backbone-latest/app-headless-backbone-backbone-darwin-arm64
 
-```
+```bash
 chmod +x backbone
 ./backbone
 # → http://localhost:8080
@@ -76,10 +76,14 @@ See [PACKAGING](PACKAGING) for the CI artifact pipeline and
 
 ## About
 
-Backbone is a Supabase/PocketBase-style backend you run yourself. Drop an admin
-dashboard on `/`, a full REST API under `/api`, real-time streams over
-WebSockets and Server-Sent Events, scheduled jobs, webhooks and encrypted
-secrets — all backed by a single SQLite file.
+Backbone is a Supabase/PocketBase-style backend you run yourself.
+
+- **Admin dashboard** — dropped on `/`.
+- **REST API** — the full thing, under `/api`.
+- **Real-time streams** — over WebSockets and Server-Sent Events.
+- **Scheduled jobs** and **webhooks**, with **encrypted secrets**.
+
+All backed by a single SQLite file.
 
 ---
 
@@ -157,7 +161,7 @@ Everything you can manage from the Admin Dashboard or the REST API.
 
 ---
 
-# First run
+## First run
 
 - Uses `~/.backbone/` for its SQLite database and uploads by default
 - Override with `BACKBONE_DATA`, port with `PORT`, JWT key with `JWT_SECRET`

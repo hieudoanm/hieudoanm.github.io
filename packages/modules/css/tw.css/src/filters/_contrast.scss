@@ -16,6 +16,7 @@ $contrasts: (
 @each $name, $value in $contrasts {
   .contrast-#{$name} {
     --tw-contrast: contrast(#{math.div($value, 100)});
+
     filter: #{$filter-composite};
   }
 }

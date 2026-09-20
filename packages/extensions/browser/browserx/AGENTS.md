@@ -76,6 +76,14 @@ Reference docs live in `docs/`:
   `tabs.onUpdated` when `audible` / `mutedInfo` change and on `tabs.onRemoved`
   (fire-and-forget, `lastError` swallowed) so the open popup stays live.
   There is no toggle for this feature
+- Back to Top lives in `src/lib/backtotop.ts` (`registerBackToTop()`): adds a
+  "Back to Top" button to the bottom-right corner of scrollable pages. The button
+  appears when the user scrolls past `SCROLL_THRESHOLD` (300px) and smoothly
+  scrolls back to the top when clicked. It only activates on pages where
+  `scrollHeight > clientHeight` (truly scrollable pages). The feature is gated
+  by the `backToTop` toggle (default on, `storage.sync`) and uses frame-scheduled
+  scroll handling via `onNextFrame` for performance. The button has a high
+  z-index (2147483647) to appear above other page content
 - Firefox audibility fallback — Firefox's `tabs.Tab.audible` is unreliable (it
   is decoupled from the real audio state; speaker-visible tabs can report
   `false`). So on Firefox only (detected per-page via
@@ -88,7 +96,7 @@ Reference docs live in `docs/`:
   change-only). `background.ts` merges those per-tab reports into the sound
   state, so a row counts as audible if **either** the API says so **or** the
   page is audibly playing media; reports are dropped on `tabs.onRemoved`
-- The popup is a 10-tab bar ordered alphabetically: **Ads, Block, Chess,
+- The popup is an 11-tab bar ordered alphabetically: **Ads, BackToTop, Block, Chess,
   Claude, GitHub, Insta, New Tab, Shopify, Snap, Sound** — keep data-tab ids,
   buttons, and panes in this order. Contextual tabs (GitHub, Insta, Chess,
   Claude, Shopify) start with class `hidden` in `popup.html` and are shown only

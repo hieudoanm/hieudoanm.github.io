@@ -21,6 +21,27 @@ Neo4j is a **property graph database** built on the principle of **index-free ad
 - Index lookups: `CREATE INDEX FOR (u:User) ON (u.email)`; Cypher picks the best index automatically.
 - `PROFILE` / `EXPLAIN` to inspect query plans and check index usage.
 
+```cypher
+// shape the question as a pattern, then let the graph answer it
+MATCH (u:User {email: $email})-[r:PURCHASED]->(p:Product)
+WHERE r.purchasedAt > datetime() - duration('P90D')
+RETURN p.name, p.price, r.quantity
+ORDER BY p.price DESC
+LIMIT 20;
+```
+
+```cypher
+// MERGE is idempotent: safe to replay on an append-style job
+MERGE (u:User {id: $userId})
+  ON CREATE SET u.createdAt = timestamp()
+SET u.lastSeenAt = timestamp()
+WITH u
+MATCH (p:Product {sku: $sku})
+MERGE (u)-[r:PURCHASED {sku: $sku}]->(p)
+  ON CREATE SET r.purchasedAt = timestamp()
+RETURN elementId(r) AS purchaseId;
+```
+
 ## 3. Data Modeling
 
 - Think **use-case-first**: model the question as a graph pattern, not as a canonical schema.
@@ -34,6 +55,17 @@ Neo4j is a **property graph database** built on the principle of **index-free ad
 - Use **composite indexes** for multi-field lookups; avoid creating one index per field blindly.
 - Use `CREATE CONSTRAINT` for uniqueness and existence requirements.
 - Check `CALL db.indexes()` for unused indexes; remove them to reduce overhead.
+
+```cypher
+CREATE CONSTRAINT user_email_unique IF NOT EXISTS
+FOR (u:User) REQUIRE u.email IS UNIQUE;
+
+CREATE INDEX user_status_created IF NOT EXISTS
+FOR (u:User) ON (u.status, u.createdAt);
+
+// verify the planner actually used it before trusting the plan
+PROFILE MATCH (u:User {status: 'active'}) RETURN count(u);
+```
 
 ## 5. Operations and Architecture
 

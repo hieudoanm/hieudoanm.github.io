@@ -15,7 +15,7 @@ export const SplitExcel: FC<{ onClose: () => void }> = ({ onClose }) => {
     setError(null);
     setFileCount(0);
     try {
-      const XLSX = await import('xlsx');
+      const XLSX = await import('@e965/xlsx');
       const buf = await readFile(file);
       const wb = XLSX.read(new Uint8Array(buf), { type: 'array' });
       const ws = wb.Sheets[wb.SheetNames[0]];

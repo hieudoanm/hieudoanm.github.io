@@ -24,7 +24,7 @@ struct RunningAppsSectionView: View {
     }
 
     private var searchField: some View {
-        HStack(spacing: 6) {
+        HStack(spacing: Spacing.xs) {
             Image(systemName: "magnifyingglass")
                 .foregroundColor(.secondary)
                 .accessibilityHidden(true)
@@ -48,13 +48,13 @@ struct RunningAppsSectionView: View {
                 .monospacedDigit()
                 .foregroundColor(.secondary)
         }
-        .padding(.vertical, 8)
+        .padding(.vertical, Spacing.sm)
     }
 
     private var emptyState: some View {
-        VStack(spacing: 8) {
+        VStack(spacing: Spacing.sm) {
             Image(systemName: "macwindow")
-                .font(.system(size: 28, weight: .regular))
+                .font(Typography.emptyStateIcon)
                 .foregroundColor(.secondary)
                 .accessibilityHidden(true)
             Text(title)
@@ -65,7 +65,7 @@ struct RunningAppsSectionView: View {
                 .multilineTextAlignment(.center)
         }
         .frame(maxWidth: .infinity)
-        .padding(.vertical, 40)
+        .padding(.vertical, Spacing.huge)
         .accessibilityElement(children: .combine)
     }
 

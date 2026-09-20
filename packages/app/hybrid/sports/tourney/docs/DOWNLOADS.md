@@ -85,8 +85,13 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-A tournament organizer packed with every bracket format you can think of —
-Swiss, elimination, round-robin — running natively on every device you own.
+A tournament organizer packed with every bracket format you can think of.
+
+- **Swiss** — Swiss System pairing, round by round.
+- **Elimination** — single or double elimination brackets.
+- **Round-robin** — where every participant meets every other.
+
+Running natively on every device you own.
 
 ---
 

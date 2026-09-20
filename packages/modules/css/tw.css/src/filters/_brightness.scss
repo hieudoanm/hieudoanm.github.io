@@ -20,6 +20,7 @@ $brightnesses: (
 @each $name, $value in $brightnesses {
   .brightness-#{$name} {
     --tw-brightness: brightness(#{math.div($value, 100)});
+
     filter: #{$filter-composite};
   }
 }

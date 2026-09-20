@@ -8,11 +8,20 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   output: 'export',
   basePath: BASE_PATH,
+  transpilePackages: ['marked'],
   env: {
     NEXT_PUBLIC_BASE_PATH: BASE_PATH,
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
+  },
+  turbopack: {
+    rules: {
+      '*.md': {
+        loaders: ['raw-loader'],
+        as: '*.js',
+      },
+    },
   },
 };
 

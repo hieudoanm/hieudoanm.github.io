@@ -12,7 +12,7 @@ export const ExcelToXml: FC<{ onClose: () => void }> = ({ onClose }) => {
     setLoading(true);
     setError(null);
     try {
-      const XLSX = await import('xlsx');
+      const XLSX = await import('@e965/xlsx');
       const buf = await readFile(file);
       const wb = XLSX.read(new Uint8Array(buf), { type: 'array' });
       const ws = wb.Sheets[wb.SheetNames[0]];

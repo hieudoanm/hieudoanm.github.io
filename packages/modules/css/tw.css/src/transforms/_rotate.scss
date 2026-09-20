@@ -18,6 +18,7 @@ $rotates: (
 @each $name, $value in $rotates {
   .rotate-#{$name} {
     --tw-rotate: #{$value * $rotate-unit};
+
     transform: #{$transform-composite};
   }
 }
@@ -26,6 +27,7 @@ $rotates: (
   @if $name != '0' {
     .-rotate-#{$name} {
       --tw-rotate: #{$value * -1 * $rotate-unit};
+
       transform: #{$transform-composite};
     }
   }

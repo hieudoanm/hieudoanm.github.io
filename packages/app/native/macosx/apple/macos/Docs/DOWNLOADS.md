@@ -2,14 +2,20 @@
 
 ## Installation
 
-| Platform | Minimum Version | Download                                                                                                                    |
-| -------- | --------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| Platform | Minimum Version | Download                                                                                                                      |
+| -------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | macOS    | 13 Ventura      | [Download .dmg](https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-native-macosx-latest/MacOSX-0.0.1.dmg) |
 
 ## About
 
-MacOSX — RAM, storage, network throughput, local ports, running apps, workspace
-layout save/restore, and clipboard history at a glance from your menu bar.
+MacOSX is a native menu-bar utility for system and app oversight.
+
+- **RAM and storage** usage.
+- **Network throughput**, live per interface.
+- **Local ports** — what is listening, and by which process.
+- **Running apps** with their window counts.
+- **Workspace layouts** — save and restore.
+- **Clipboard history**.
 
 ## Features
 
@@ -125,7 +131,7 @@ layout save/restore, and clipboard history at a glance from your menu bar.
   localized name
 - Per-app on-screen window count
 - Search by app name or bundle identifier
-- One-click *Bring to Front* activates all of an app's windows
+- One-click _Bring to Front_ activates all of an app's windows
 - Refreshes every 2 seconds while the tab is visible; no permission required
 
 ## Workspaces

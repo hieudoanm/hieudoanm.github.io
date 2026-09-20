@@ -43,6 +43,8 @@ func run(args []string, stdout, stderr io.Writer) int {
 		return cmdServe(args[1:], stderr)
 	case "health":
 		return cmdHealth(args[1:], stdout, stderr)
+	case "mcp":
+		return cmdMCP(args[1:], stdout, stderr)
 	default:
 		fmt.Fprintf(stderr, "browserverless: unknown command %q\n\n", args[0])
 		fmt.Fprint(stderr, usage)

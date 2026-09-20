@@ -15,8 +15,65 @@ description: graphql-go — the reference GraphQL server implementation for Go (
 ## 2. Defining a Schema
 
 - Define types: `graphql.NewObject(graphql.ObjectConfig{ Name: "User", Fields: graphql.Fields{ "name": &graphql.Field{ Type: graphql.String, Resolve: ... } }})`.
+
+```go
+package users
+
+import "github.com/graphql-go/graphql"
+
+// newSchema builds the schema once at startup; the result is immutable and safe to share.
+func newSchema() (graphql.Schema, error) {
+	userType := graphql.NewObject(graphql.ObjectConfig{
+		Name: "User",
+		Fields: graphql.Fields{
+			"id":    &graphql.Field{Type: graphql.NewNonNull(graphql.ID)},
+			"name":  &graphql.Field{Type: graphql.NewNonNull(graphql.String)},
+			"email": &graphql.Field{Type: graphql.NewNonNull(graphql.String)},
+		},
+	})
+	queryType := graphql.NewObject(graphql.ObjectConfig{
+		Name: "Query",
+		Fields: graphql.Fields{
+			"user": &graphql.Field{
+				Type:    userType,
+				Args:    graphql.FieldConfigArgument{"id": &graphql.ArgumentConfig{Type: graphql.NewNonNull(graphql.ID)}},
+				Resolve: resolveUser,
+			},
+		},
+	})
+
+	return graphql.NewSchema(graphql.SchemaConfig{Query: queryType})
+}
+```
+
 - Wire root query object into `graphql.NewSchema(graphql.SchemaConfig{ Query: query })`.
 - Execute with `result := graphql.Do(graphql.Params{ Schema: schema, RequestString: query, VariableValues: vars })`; check `result.Errors`.
+
+```go
+package users
+
+import (
+	"context"
+	"log"
+
+	"github.com/graphql-go/graphql"
+)
+
+// execute runs one operation; the schema is built once and shared by every request.
+func execute(ctx context.Context, schema graphql.Schema, query string, vars map[string]interface{}) *graphql.Result {
+	result := graphql.Do(graphql.Params{
+		Schema:         schema,
+		RequestString:  query,
+		VariableValues: vars,
+		Context:        ctx, // request-scoped ctx: auth, tracing, loaders
+	})
+	for _, err := range result.Errors {
+		log.Printf("graphql error: %v", err) // never swallow result.Errors
+	}
+
+	return result
+}
+```
 
 ## 3. Types and Inputs
 
@@ -29,6 +86,44 @@ description: graphql-go — the reference GraphQL server implementation for Go (
 ## 4. Resolvers
 
 - Access params: `graphql.ResolveParams{ Args, Source, Context, Info }`.
+
+```go
+package users
+
+import (
+	"context"
+	"errors"
+	"fmt"
+
+	"github.com/graphql-go/graphql"
+)
+
+var errUserNotFound = errors.New("user not found") // sentinel returned by userSvc
+
+// resolveUser returns the row for one user. Args arrive as interface{}, so assert then validate.
+func resolveUser(p graphql.ResolveParams) (interface{}, error) {
+	id, ok := p.Args["id"].(string)
+	if !ok || id == "" {
+		return nil, fmt.Errorf("id must be a non-empty string")
+	}
+
+	ctx, ok := p.Context.(context.Context)
+	if !ok {
+		return nil, fmt.Errorf("missing request context")
+	}
+
+	user, err := userSvc.GetByID(ctx, id) // service layer, not raw SQL in the resolver
+	if errors.Is(err, errUserNotFound) {
+		return nil, nil // nullable field: return nil, do not raise an error
+	}
+	if err != nil {
+		return nil, fmt.Errorf("get user %s: %w", id, err) // wrap, never swallow
+	}
+
+	return user, nil
+}
+```
+
 - Read args through `p.Args["id"]` (assert type carefully: Go `interface{}`); validate with `graphql.NewInputObject` types.
 - Use `p.Context` (e.g., a request-scoped `context.Context`) for auth, tracing, DataLoader.
 - Fetch N+1: loaders via `graphql-go-tools`/DataLoader pattern — batch per request tick.

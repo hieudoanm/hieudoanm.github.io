@@ -227,7 +227,7 @@ func TestReloadMissingFile(t *testing.T) {
 
 func TestViewRendersShell(t *testing.T) {
 	m := newModel(filepath.Join(t.TempDir(), "landify.yaml"))
-	view := m.View()
+	view := m.View().Content
 	for _, want := range []string{"landify.yaml", "build theme: yaml", "[EDIT]", "type to edit"} {
 		if !strings.Contains(view, want) {
 			t.Errorf("View missing %q", want)
@@ -235,13 +235,13 @@ func TestViewRendersShell(t *testing.T) {
 	}
 
 	m.dirty = true
-	view = m.View()
+	view = m.View().Content
 	if !strings.Contains(view, "•") {
 		t.Errorf("dirty marker missing from View")
 	}
 
 	m, _ = m.toggleMode()
-	view = m.View()
+	view = m.View().Content
 	for _, want := range []string{"[COMMAND]", ": "} {
 		if !strings.Contains(view, want) {
 			t.Errorf("command-mode View missing %q", want)

@@ -93,9 +93,13 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-A minimal, offline-first resume builder with 64 templates, live paper-size
-preview, and export to HTML/PDF — no account, no cloud, no tracking, just your
-next resume ready in minutes.
+A minimal, offline-first resume builder.
+
+- 64 templates.
+- Live paper-size preview.
+- Export to HTML/PDF.
+
+No account, no cloud, no tracking, just your next resume ready in minutes.
 
 ---
 

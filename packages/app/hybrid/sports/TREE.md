@@ -10,6 +10,16 @@
 │   │   ├── [DOWNLOADS.md](./chess/docs/DOWNLOADS.md)
 │   │   ├── [PACKAGING.md](./chess/docs/PACKAGING.md)
 │   │   └── [ROADMAP.md](./chess/docs/ROADMAP.md)
+│   ├── e2e/
+│   │   ├── screenshots/
+│   │   │   ├── [about.png](./chess/e2e/screenshots/about.png)
+│   │   │   ├── [downloads.png](./chess/e2e/screenshots/downloads.png)
+│   │   │   ├── [home.png](./chess/e2e/screenshots/home.png)
+│   │   │   └── [version.png](./chess/e2e/screenshots/version.png)
+│   │   ├── [about.spec.ts](./chess/e2e/about.spec.ts)
+│   │   ├── [downloads.spec.ts](./chess/e2e/downloads.spec.ts)
+│   │   ├── [home.spec.ts](./chess/e2e/home.spec.ts)
+│   │   └── [version.spec.ts](./chess/e2e/version.spec.ts)
 │   ├── public/
 │   │   ├── db/
 │   │   │   └── [chess.db](./chess/public/db/chess.db)
@@ -315,8 +325,9 @@
 │   │   │   │   ├── [ChessPairing.test.tsx](./chess/src/components/__tests__/ChessPairing.test.tsx)
 │   │   │   │   └── [ChessReview.test.tsx](./chess/src/components/__tests__/ChessReview.test.tsx)
 │   │   │   ├── organisms/
-│   │   │   │   └── chess/
-│   │   │   │       └── [ChessBoard.tsx](./chess/src/components/organisms/chess/ChessBoard.tsx)
+│   │   │   │   ├── chess/
+│   │   │   │   │   └── [ChessBoard.tsx](./chess/src/components/organisms/chess/ChessBoard.tsx)
+│   │   │   │   └── [Header.tsx](./chess/src/components/organisms/Header.tsx)
 │   │   │   ├── templates/
 │   │   │   │   ├── __tests__/
 │   │   │   │   │   ├── [AboutTemplate.test.tsx](./chess/src/components/templates/__tests__/AboutTemplate.test.tsx)
@@ -329,6 +340,10 @@
 │   │   │   │   └── [VersionTemplate.tsx](./chess/src/components/templates/VersionTemplate.tsx)
 │   │   │   ├── [ChessClock.test.tsx](./chess/src/components/ChessClock.test.tsx)
 │   │   │   └── [ToolPage.tsx](./chess/src/components/ToolPage.tsx)
+│   │   ├── content/
+│   │   │   ├── [about.ts](./chess/src/content/about.ts)
+│   │   │   ├── [download.ts](./chess/src/content/download.ts)
+│   │   │   └── [version.ts](./chess/src/content/version.ts)
 │   │   ├── lib/
 │   │   │   ├── chess/
 │   │   │   │   └── [openings.ts](./chess/src/lib/chess/openings.ts)
@@ -345,9 +360,55 @@
 │   │   ├── capabilities/
 │   │   │   └── [default.json](./chess/src-tauri/capabilities/default.json)
 │   │   ├── icons/
+│   │   │   ├── android/
+│   │   │   │   ├── mipmap-anydpi-v26/
+│   │   │   │   │   └── [ic_launcher.xml](./chess/src-tauri/icons/android/mipmap-anydpi-v26/ic_launcher.xml)
+│   │   │   │   ├── mipmap-hdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./chess/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./chess/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./chess/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-mdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./chess/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./chess/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./chess/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./chess/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./chess/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./chess/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xxhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./chess/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./chess/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./chess/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xxxhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./chess/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./chess/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./chess/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png)
+│   │   │   │   └── values/
+│   │   │   │       └── [ic_launcher_background.xml](./chess/src-tauri/icons/android/values/ic_launcher_background.xml)
+│   │   │   ├── ios/
+│   │   │   │   ├── [AppIcon-20x20@1x.png](./chess/src-tauri/icons/ios/AppIcon-20x20@1x.png)
+│   │   │   │   ├── [AppIcon-20x20@2x-1.png](./chess/src-tauri/icons/ios/AppIcon-20x20@2x-1.png)
+│   │   │   │   ├── [AppIcon-20x20@2x.png](./chess/src-tauri/icons/ios/AppIcon-20x20@2x.png)
+│   │   │   │   ├── [AppIcon-20x20@3x.png](./chess/src-tauri/icons/ios/AppIcon-20x20@3x.png)
+│   │   │   │   ├── [AppIcon-29x29@1x.png](./chess/src-tauri/icons/ios/AppIcon-29x29@1x.png)
+│   │   │   │   ├── [AppIcon-29x29@2x-1.png](./chess/src-tauri/icons/ios/AppIcon-29x29@2x-1.png)
+│   │   │   │   ├── [AppIcon-29x29@2x.png](./chess/src-tauri/icons/ios/AppIcon-29x29@2x.png)
+│   │   │   │   ├── [AppIcon-29x29@3x.png](./chess/src-tauri/icons/ios/AppIcon-29x29@3x.png)
+│   │   │   │   ├── [AppIcon-40x40@1x.png](./chess/src-tauri/icons/ios/AppIcon-40x40@1x.png)
+│   │   │   │   ├── [AppIcon-40x40@2x-1.png](./chess/src-tauri/icons/ios/AppIcon-40x40@2x-1.png)
+│   │   │   │   ├── [AppIcon-40x40@2x.png](./chess/src-tauri/icons/ios/AppIcon-40x40@2x.png)
+│   │   │   │   ├── [AppIcon-40x40@3x.png](./chess/src-tauri/icons/ios/AppIcon-40x40@3x.png)
+│   │   │   │   ├── [AppIcon-512@2x.png](./chess/src-tauri/icons/ios/AppIcon-512@2x.png)
+│   │   │   │   ├── [AppIcon-60x60@2x.png](./chess/src-tauri/icons/ios/AppIcon-60x60@2x.png)
+│   │   │   │   ├── [AppIcon-60x60@3x.png](./chess/src-tauri/icons/ios/AppIcon-60x60@3x.png)
+│   │   │   │   ├── [AppIcon-76x76@1x.png](./chess/src-tauri/icons/ios/AppIcon-76x76@1x.png)
+│   │   │   │   ├── [AppIcon-76x76@2x.png](./chess/src-tauri/icons/ios/AppIcon-76x76@2x.png)
+│   │   │   │   └── [AppIcon-83.5x83.5@2x.png](./chess/src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png)
 │   │   │   ├── [128x128.png](./chess/src-tauri/icons/128x128.png)
 │   │   │   ├── [128x128@2x.png](./chess/src-tauri/icons/128x128@2x.png)
+│   │   │   ├── [256x256.png](./chess/src-tauri/icons/256x256.png)
 │   │   │   ├── [32x32.png](./chess/src-tauri/icons/32x32.png)
+│   │   │   ├── [64x64.png](./chess/src-tauri/icons/64x64.png)
 │   │   │   ├── [Square107x107Logo.png](./chess/src-tauri/icons/Square107x107Logo.png)
 │   │   │   ├── [Square142x142Logo.png](./chess/src-tauri/icons/Square142x142Logo.png)
 │   │   │   ├── [Square150x150Logo.png](./chess/src-tauri/icons/Square150x150Logo.png)
@@ -358,6 +419,7 @@
 │   │   │   ├── [Square71x71Logo.png](./chess/src-tauri/icons/Square71x71Logo.png)
 │   │   │   ├── [Square89x89Logo.png](./chess/src-tauri/icons/Square89x89Logo.png)
 │   │   │   ├── [StoreLogo.png](./chess/src-tauri/icons/StoreLogo.png)
+│   │   │   ├── [create-icons.sh](./chess/src-tauri/icons/create-icons.sh)
 │   │   │   ├── [icon.icns](./chess/src-tauri/icons/icon.icns)
 │   │   │   ├── [icon.ico](./chess/src-tauri/icons/icon.ico)
 │   │   │   └── [icon.png](./chess/src-tauri/icons/icon.png)
@@ -390,8 +452,17 @@
 │   │   ├── [PACKAGING.md](./football/docs/PACKAGING.md)
 │   │   └── [ROADMAP.md](./football/docs/ROADMAP.md)
 │   ├── e2e/
+│   │   ├── screenshots/
+│   │   │   ├── [about.png](./football/e2e/screenshots/about.png)
+│   │   │   ├── [downloads.png](./football/e2e/screenshots/downloads.png)
+│   │   │   ├── [home.png](./football/e2e/screenshots/home.png)
+│   │   │   └── [version.png](./football/e2e/screenshots/version.png)
+│   │   ├── [about.spec.ts](./football/e2e/about.spec.ts)
+│   │   ├── [downloads.spec.ts](./football/e2e/downloads.spec.ts)
+│   │   ├── [home.spec.ts](./football/e2e/home.spec.ts)
 │   │   ├── [matchday.spec.ts](./football/e2e/matchday.spec.ts)
 │   │   ├── [squad-manager.spec.ts](./football/e2e/squad-manager.spec.ts)
+│   │   ├── [version.spec.ts](./football/e2e/version.spec.ts)
 │   │   └── [visual.spec.ts](./football/e2e/visual.spec.ts)
 │   ├── public/
 │   │   ├── data/
@@ -579,6 +650,7 @@
 │   │   │   │   │   ├── [SquadManager.test.tsx](./football/src/components/organisms/__tests__/SquadManager.test.tsx)
 │   │   │   │   │   └── [SquadManagerMatch.test.tsx](./football/src/components/organisms/__tests__/SquadManagerMatch.test.tsx)
 │   │   │   │   ├── [Breadcrumbs.tsx](./football/src/components/organisms/Breadcrumbs.tsx)
+│   │   │   │   ├── [Header.tsx](./football/src/components/organisms/Header.tsx)
 │   │   │   │   └── [SquadManager.tsx](./football/src/components/organisms/SquadManager.tsx)
 │   │   │   └── templates/
 │   │   │       ├── __tests__/
@@ -630,6 +702,10 @@
 │   │   │       ├── [DownloadsTemplate.tsx](./football/src/components/templates/DownloadsTemplate.tsx)
 │   │   │       ├── [ErrorTemplate.tsx](./football/src/components/templates/ErrorTemplate.tsx)
 │   │   │       └── [VersionTemplate.tsx](./football/src/components/templates/VersionTemplate.tsx)
+│   │   ├── content/
+│   │   │   ├── [about.ts](./football/src/content/about.ts)
+│   │   │   ├── [download.ts](./football/src/content/download.ts)
+│   │   │   └── [version.ts](./football/src/content/version.ts)
 │   │   ├── data/
 │   │   │   └── touraments/
 │   │   │       ├── __tests__/
@@ -1028,7 +1104,6 @@
 │   │   │   ├── [stats.ts](./football/src/lib/stats.ts)
 │   │   │   └── [tactics.ts](./football/src/lib/tactics.ts)
 │   │   ├── styles/
-│   │   │   ├── [base.css](./football/src/styles/base.css)
 │   │   │   ├── [globals.css](./football/src/styles/globals.css)
 │   │   │   └── [themes.css](./football/src/styles/themes.css)
 │   │   ├── test/
@@ -1039,9 +1114,55 @@
 │   │   ├── capabilities/
 │   │   │   └── [default.json](./football/src-tauri/capabilities/default.json)
 │   │   ├── icons/
+│   │   │   ├── android/
+│   │   │   │   ├── mipmap-anydpi-v26/
+│   │   │   │   │   └── [ic_launcher.xml](./football/src-tauri/icons/android/mipmap-anydpi-v26/ic_launcher.xml)
+│   │   │   │   ├── mipmap-hdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./football/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./football/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./football/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-mdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./football/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./football/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./football/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./football/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./football/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./football/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xxhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./football/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./football/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./football/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xxxhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./football/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./football/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./football/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png)
+│   │   │   │   └── values/
+│   │   │   │       └── [ic_launcher_background.xml](./football/src-tauri/icons/android/values/ic_launcher_background.xml)
+│   │   │   ├── ios/
+│   │   │   │   ├── [AppIcon-20x20@1x.png](./football/src-tauri/icons/ios/AppIcon-20x20@1x.png)
+│   │   │   │   ├── [AppIcon-20x20@2x-1.png](./football/src-tauri/icons/ios/AppIcon-20x20@2x-1.png)
+│   │   │   │   ├── [AppIcon-20x20@2x.png](./football/src-tauri/icons/ios/AppIcon-20x20@2x.png)
+│   │   │   │   ├── [AppIcon-20x20@3x.png](./football/src-tauri/icons/ios/AppIcon-20x20@3x.png)
+│   │   │   │   ├── [AppIcon-29x29@1x.png](./football/src-tauri/icons/ios/AppIcon-29x29@1x.png)
+│   │   │   │   ├── [AppIcon-29x29@2x-1.png](./football/src-tauri/icons/ios/AppIcon-29x29@2x-1.png)
+│   │   │   │   ├── [AppIcon-29x29@2x.png](./football/src-tauri/icons/ios/AppIcon-29x29@2x.png)
+│   │   │   │   ├── [AppIcon-29x29@3x.png](./football/src-tauri/icons/ios/AppIcon-29x29@3x.png)
+│   │   │   │   ├── [AppIcon-40x40@1x.png](./football/src-tauri/icons/ios/AppIcon-40x40@1x.png)
+│   │   │   │   ├── [AppIcon-40x40@2x-1.png](./football/src-tauri/icons/ios/AppIcon-40x40@2x-1.png)
+│   │   │   │   ├── [AppIcon-40x40@2x.png](./football/src-tauri/icons/ios/AppIcon-40x40@2x.png)
+│   │   │   │   ├── [AppIcon-40x40@3x.png](./football/src-tauri/icons/ios/AppIcon-40x40@3x.png)
+│   │   │   │   ├── [AppIcon-512@2x.png](./football/src-tauri/icons/ios/AppIcon-512@2x.png)
+│   │   │   │   ├── [AppIcon-60x60@2x.png](./football/src-tauri/icons/ios/AppIcon-60x60@2x.png)
+│   │   │   │   ├── [AppIcon-60x60@3x.png](./football/src-tauri/icons/ios/AppIcon-60x60@3x.png)
+│   │   │   │   ├── [AppIcon-76x76@1x.png](./football/src-tauri/icons/ios/AppIcon-76x76@1x.png)
+│   │   │   │   ├── [AppIcon-76x76@2x.png](./football/src-tauri/icons/ios/AppIcon-76x76@2x.png)
+│   │   │   │   └── [AppIcon-83.5x83.5@2x.png](./football/src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png)
 │   │   │   ├── [128x128.png](./football/src-tauri/icons/128x128.png)
 │   │   │   ├── [128x128@2x.png](./football/src-tauri/icons/128x128@2x.png)
+│   │   │   ├── [256x256.png](./football/src-tauri/icons/256x256.png)
 │   │   │   ├── [32x32.png](./football/src-tauri/icons/32x32.png)
+│   │   │   ├── [64x64.png](./football/src-tauri/icons/64x64.png)
 │   │   │   ├── [Square107x107Logo.png](./football/src-tauri/icons/Square107x107Logo.png)
 │   │   │   ├── [Square142x142Logo.png](./football/src-tauri/icons/Square142x142Logo.png)
 │   │   │   ├── [Square150x150Logo.png](./football/src-tauri/icons/Square150x150Logo.png)
@@ -1052,6 +1173,7 @@
 │   │   │   ├── [Square71x71Logo.png](./football/src-tauri/icons/Square71x71Logo.png)
 │   │   │   ├── [Square89x89Logo.png](./football/src-tauri/icons/Square89x89Logo.png)
 │   │   │   ├── [StoreLogo.png](./football/src-tauri/icons/StoreLogo.png)
+│   │   │   ├── [create-icons.sh](./football/src-tauri/icons/create-icons.sh)
 │   │   │   ├── [icon.icns](./football/src-tauri/icons/icon.icns)
 │   │   │   ├── [icon.ico](./football/src-tauri/icons/icon.ico)
 │   │   │   └── [icon.png](./football/src-tauri/icons/icon.png)
@@ -1087,6 +1209,8 @@
 │   │   ├── [bracket.spec.ts](./tourney/e2e/bracket.spec.ts)
 │   │   ├── [create.spec.ts](./tourney/e2e/create.spec.ts)
 │   │   ├── [dashboard.spec.ts](./tourney/e2e/dashboard.spec.ts)
+│   │   ├── [downloads.spec.ts](./tourney/e2e/downloads.spec.ts)
+│   │   ├── [home.spec.ts](./tourney/e2e/home.spec.ts)
 │   │   ├── [matches.spec.ts](./tourney/e2e/matches.spec.ts)
 │   │   ├── [navigation.spec.ts](./tourney/e2e/navigation.spec.ts)
 │   │   ├── [participants.spec.ts](./tourney/e2e/participants.spec.ts)
@@ -1349,6 +1473,10 @@
 │   │   │       ├── [ErrorTemplate.tsx](./tourney/src/components/templates/ErrorTemplate.tsx)
 │   │   │       ├── [SettingsTemplate.tsx](./tourney/src/components/templates/SettingsTemplate.tsx)
 │   │   │       └── [VersionTemplate.tsx](./tourney/src/components/templates/VersionTemplate.tsx)
+│   │   ├── content/
+│   │   │   ├── [about.ts](./tourney/src/content/about.ts)
+│   │   │   ├── [download.ts](./tourney/src/content/download.ts)
+│   │   │   └── [version.ts](./tourney/src/content/version.ts)
 │   │   ├── data/
 │   │   │   ├── __tests__/
 │   │   │   │   └── [models.test.ts](./tourney/src/data/__tests__/models.test.ts)
@@ -1400,7 +1528,6 @@
 │   │   │   ├── [SWProvider.tsx](./tourney/src/providers/SWProvider.tsx)
 │   │   │   └── [ToastProvider.tsx](./tourney/src/providers/ToastProvider.tsx)
 │   │   ├── styles/
-│   │   │   ├── [base.css](./tourney/src/styles/base.css)
 │   │   │   ├── [globals.css](./tourney/src/styles/globals.css)
 │   │   │   └── [themes.css](./tourney/src/styles/themes.css)
 │   │   └── types/
@@ -1409,9 +1536,55 @@
 │   │   ├── capabilities/
 │   │   │   └── [default.json](./tourney/src-tauri/capabilities/default.json)
 │   │   ├── icons/
+│   │   │   ├── android/
+│   │   │   │   ├── mipmap-anydpi-v26/
+│   │   │   │   │   └── [ic_launcher.xml](./tourney/src-tauri/icons/android/mipmap-anydpi-v26/ic_launcher.xml)
+│   │   │   │   ├── mipmap-hdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./tourney/src-tauri/icons/android/mipmap-hdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./tourney/src-tauri/icons/android/mipmap-hdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./tourney/src-tauri/icons/android/mipmap-hdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-mdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./tourney/src-tauri/icons/android/mipmap-mdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./tourney/src-tauri/icons/android/mipmap-mdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./tourney/src-tauri/icons/android/mipmap-mdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./tourney/src-tauri/icons/android/mipmap-xhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./tourney/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./tourney/src-tauri/icons/android/mipmap-xhdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xxhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./tourney/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./tourney/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./tourney/src-tauri/icons/android/mipmap-xxhdpi/ic_launcher_round.png)
+│   │   │   │   ├── mipmap-xxxhdpi/
+│   │   │   │   │   ├── [ic_launcher.png](./tourney/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png)
+│   │   │   │   │   ├── [ic_launcher_foreground.png](./tourney/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_foreground.png)
+│   │   │   │   │   └── [ic_launcher_round.png](./tourney/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher_round.png)
+│   │   │   │   └── values/
+│   │   │   │       └── [ic_launcher_background.xml](./tourney/src-tauri/icons/android/values/ic_launcher_background.xml)
+│   │   │   ├── ios/
+│   │   │   │   ├── [AppIcon-20x20@1x.png](./tourney/src-tauri/icons/ios/AppIcon-20x20@1x.png)
+│   │   │   │   ├── [AppIcon-20x20@2x-1.png](./tourney/src-tauri/icons/ios/AppIcon-20x20@2x-1.png)
+│   │   │   │   ├── [AppIcon-20x20@2x.png](./tourney/src-tauri/icons/ios/AppIcon-20x20@2x.png)
+│   │   │   │   ├── [AppIcon-20x20@3x.png](./tourney/src-tauri/icons/ios/AppIcon-20x20@3x.png)
+│   │   │   │   ├── [AppIcon-29x29@1x.png](./tourney/src-tauri/icons/ios/AppIcon-29x29@1x.png)
+│   │   │   │   ├── [AppIcon-29x29@2x-1.png](./tourney/src-tauri/icons/ios/AppIcon-29x29@2x-1.png)
+│   │   │   │   ├── [AppIcon-29x29@2x.png](./tourney/src-tauri/icons/ios/AppIcon-29x29@2x.png)
+│   │   │   │   ├── [AppIcon-29x29@3x.png](./tourney/src-tauri/icons/ios/AppIcon-29x29@3x.png)
+│   │   │   │   ├── [AppIcon-40x40@1x.png](./tourney/src-tauri/icons/ios/AppIcon-40x40@1x.png)
+│   │   │   │   ├── [AppIcon-40x40@2x-1.png](./tourney/src-tauri/icons/ios/AppIcon-40x40@2x-1.png)
+│   │   │   │   ├── [AppIcon-40x40@2x.png](./tourney/src-tauri/icons/ios/AppIcon-40x40@2x.png)
+│   │   │   │   ├── [AppIcon-40x40@3x.png](./tourney/src-tauri/icons/ios/AppIcon-40x40@3x.png)
+│   │   │   │   ├── [AppIcon-512@2x.png](./tourney/src-tauri/icons/ios/AppIcon-512@2x.png)
+│   │   │   │   ├── [AppIcon-60x60@2x.png](./tourney/src-tauri/icons/ios/AppIcon-60x60@2x.png)
+│   │   │   │   ├── [AppIcon-60x60@3x.png](./tourney/src-tauri/icons/ios/AppIcon-60x60@3x.png)
+│   │   │   │   ├── [AppIcon-76x76@1x.png](./tourney/src-tauri/icons/ios/AppIcon-76x76@1x.png)
+│   │   │   │   ├── [AppIcon-76x76@2x.png](./tourney/src-tauri/icons/ios/AppIcon-76x76@2x.png)
+│   │   │   │   └── [AppIcon-83.5x83.5@2x.png](./tourney/src-tauri/icons/ios/AppIcon-83.5x83.5@2x.png)
 │   │   │   ├── [128x128.png](./tourney/src-tauri/icons/128x128.png)
 │   │   │   ├── [128x128@2x.png](./tourney/src-tauri/icons/128x128@2x.png)
+│   │   │   ├── [256x256.png](./tourney/src-tauri/icons/256x256.png)
 │   │   │   ├── [32x32.png](./tourney/src-tauri/icons/32x32.png)
+│   │   │   ├── [64x64.png](./tourney/src-tauri/icons/64x64.png)
 │   │   │   ├── [Square107x107Logo.png](./tourney/src-tauri/icons/Square107x107Logo.png)
 │   │   │   ├── [Square142x142Logo.png](./tourney/src-tauri/icons/Square142x142Logo.png)
 │   │   │   ├── [Square150x150Logo.png](./tourney/src-tauri/icons/Square150x150Logo.png)
@@ -1451,4 +1624,4 @@
 └── [TREE.md](./TREE.md)
 ```
 
-264 directories, 1184 files
+297 directories, 1324 files

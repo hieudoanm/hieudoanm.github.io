@@ -53,9 +53,7 @@ async fn handle_socket(mut socket: WebSocket, state: Arc<AppState>, user_agent: 
 
     let (msg_sender, mut msg_receiver) = mpsc::unbounded_channel::<Message>();
 
-    let consumer = WSConsumer {
-        sender: msg_sender,
-    };
+    let consumer = WSConsumer { sender: msg_sender };
 
     state
         .ws_hub
@@ -164,7 +162,10 @@ mod tests {
         let (tx, mut rx) = mpsc::unbounded_channel();
         let id = Uuid::new_v4().to_string();
 
-        hub.write().await.clients.insert(id.clone(), WSConsumer { sender: tx });
+        hub.write()
+            .await
+            .clients
+            .insert(id.clone(), WSConsumer { sender: tx });
 
         let msg = Message::Text("hello from test".into());
         let result = send_to_client(&hub, &id, msg.clone()).await;
@@ -179,7 +180,10 @@ mod tests {
         drop(rx);
         let id = Uuid::new_v4().to_string();
 
-        hub.write().await.clients.insert(id.clone(), WSConsumer { sender: tx });
+        hub.write()
+            .await
+            .clients
+            .insert(id.clone(), WSConsumer { sender: tx });
 
         let result = send_to_client(&hub, &id, Message::Text("hello".into())).await;
         assert!(!result);
@@ -198,7 +202,10 @@ mod tests {
         let (tx, _rx) = mpsc::unbounded_channel();
         let id = Uuid::new_v4().to_string();
 
-        hub.write().await.clients.insert(id.clone(), WSConsumer { sender: tx });
+        hub.write()
+            .await
+            .clients
+            .insert(id.clone(), WSConsumer { sender: tx });
 
         let result = close_client(&hub, &id).await;
         assert!(result);
@@ -309,10 +316,16 @@ mod tests {
         let db = state.db.get().await.unwrap();
         let connections = crate::db::list_ws_connections(&db).unwrap();
         assert_eq!(connections.len(), 1, "should have one connection");
-        assert!(!connections[0].is_active, "connection should be inactive after close");
+        assert!(
+            !connections[0].is_active,
+            "connection should be inactive after close"
+        );
 
         let guard = ws_hub.read().await;
-        assert!(guard.clients.is_empty(), "client should be removed from hub");
+        assert!(
+            guard.clients.is_empty(),
+            "client should be removed from hub"
+        );
 
         std::fs::remove_dir_all(&tmp_dir).ok();
     }
@@ -367,7 +380,9 @@ mod tests {
         let (mut ws_stream, _) = tokio_tungstenite::connect_async(&url).await.unwrap();
 
         ws_stream
-            .send(tokio_tungstenite::tungstenite::Message::Text("hello world".into()))
+            .send(tokio_tungstenite::tungstenite::Message::Text(
+                "hello world".into(),
+            ))
             .await
             .unwrap();
 
@@ -466,5 +481,3 @@ mod tests {
         std::fs::remove_dir_all(&tmp_dir).ok();
     }
 }
-
-

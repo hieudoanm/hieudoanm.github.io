@@ -97,10 +97,22 @@ Per-platform launch tips:
 
 ## About
 
-Import, understand, validate, compare, analyze — then reproduce and export. MRI
-is a research workspace and orchestration layer for MRI data: study
-intelligence, quantitative analysis, and scientific-tool orchestration, all
+MRI is a research workspace and orchestration layer for MRI data — all
 local-first and ready wherever you work.
+
+- **Import** — bring studies into a local workspace.
+- **Understand** — study intelligence that reads modality, sequence, and
+  geometry off every study.
+- **Validate** — user-defined protocols and automated QC, machine-readable.
+- **Compare** — cross-study registration, overlays, and difference maps.
+- **Analyze** — quantitative analysis: T1/T2/T2\*, ADC, DTI, perfusion, ASL,
+  susceptibility, relaxometry.
+- **Reproduce** — versioned pipelines and provenance for every derived artifact.
+- **Export** — research-friendly datasets, reports, and standards-based
+  segmentation.
+
+The orchestration layer drives mature scientific tools — dcm2niix, ANTs,
+FSL/MRtrix, MONAI, qMRLab — instead of reimplementing them.
 
 ---
 

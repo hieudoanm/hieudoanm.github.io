@@ -9,7 +9,7 @@ Fauna is a **serverless, distributed, multi-model database** offering **relation
 
 - **Tables** hold documents; each document has a unique `ref`, a schema-driven shape, and automatic timestamps/versions.
 - **FQL is the primary query language**: chaining structured operations with an elegant, C#-like syntax.
-- **Temporal database**: every document keeps its full history via *time travel* — you can query any point in the past.
+- **Temporal database**: every document keeps its full history via _time travel_ — you can query any point in the past.
 - **Consistency**: Fauna provides strong (linearizable) consistency for single-document reads/writes by default.
 - **Serverless**: no server provisioning, auto-scaling, pay-per-query pricing model.
 
@@ -21,17 +21,57 @@ Fauna is a **serverless, distributed, multi-model database** offering **relation
 - Conditional logic: `If`, `Let`.
 - Transactions: Fauna supports multi-document ACID transactions via FQL transactions and eventual consistency between query steps.
 
+```javascript
+import { Client, Field, FQL } from 'fauna-js';
+
+const client = new Client({
+  secret: process.env.FAUNA_SECRET,
+});
+
+// point read by id, then a scoped, indexed collection read
+const order = await client.query(FQL`
+  Order.byId("ord_1001").select({ id, status, total })
+`);
+```
+
+```javascript
+// multi-document write in one ACID transaction — no partial state
+await client.query(FQL`
+  let order = Order.create({
+    customer: Customer.byId("cus_42"),
+    total: 99.00,
+    status: "pending"
+  });
+
+  Customer.byId("cus_42").update({
+    orderCount: Field.increment(1)
+  });
+
+  return order;
+`);
+```
+
 ## 3. Data Modeling and Indexes
 
 - **Indexes**: keep secondary lookups fast — create an index on the fields you query by (e.g., `by_user`, `by_status_created_at`).
 - Model **relationships** explicitly using the document graph (like edges) rather than keeping arrays of ids awkwardly.
-- Use **schemas** to validate shapes and create *freeform* or *schema* (strict) document definitions.
+- Use **schemas** to validate shapes and create _freeform_ or _schema_ (strict) document definitions.
 - **Temporal**: store the `ts` (timestamp) and version; use `DocumentVersion` / `Snapshot` to retrieve history.
+
+```javascript
+// relationships are explicit document refs — walk the graph, do not join
+const orders = await client.query(FQL`
+  Order.sorted()
+    .filter(.customer.id == "cus_42" && .status == "paid")
+    .take(20)
+    .select({ id, total, ts })
+`);
+```
 
 ## 4. Authorization
 
 - Fauna has a role-based access control with **role documents** and built-in **JWT** client auth.
-- Create collections then roles; attach *privileges* per collection/database.
+- Create collections then roles; attach _privileges_ per collection/database.
 - External signup/auth: Fauna has integrations; or wire your own JWT provider.
 
 ## 5. Operations and Deployment

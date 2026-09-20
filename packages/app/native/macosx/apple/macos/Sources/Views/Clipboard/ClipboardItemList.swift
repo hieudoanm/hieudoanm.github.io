@@ -21,9 +21,9 @@ struct ClipboardItemRow: View {
     let onCopy: (ClipboardItem) -> Void
 
     var body: some View {
-        HStack(alignment: .top, spacing: 10) {
-            VStack(alignment: .leading, spacing: 4) {
-                HStack(spacing: 4) {
+        HStack(alignment: .top, spacing: Spacing.compact) {
+            VStack(alignment: .leading, spacing: Spacing.xxs) {
+                HStack(spacing: Spacing.xxs) {
                     if item.pinned {
                         Image(systemName: "pin.fill")
                             .font(.caption2)
@@ -33,7 +33,7 @@ struct ClipboardItemRow: View {
                         .lineLimit(3)
                         .font(.system(.caption, design: .monospaced))
                 }
-                HStack(spacing: 8) {
+                HStack(spacing: Spacing.sm) {
                     Text(item.createdAt, style: .relative)
                         .font(.caption2)
                         .foregroundColor(.secondary)
@@ -45,7 +45,7 @@ struct ClipboardItemRow: View {
 
             Spacer(minLength: 8)
 
-            HStack(spacing: 6) {
+            HStack(spacing: Spacing.xs) {
                 Button {
                     onCopy(item)
                 } label: {
@@ -70,6 +70,6 @@ struct ClipboardItemRow: View {
             .buttonStyle(.plain)
             .foregroundColor(.secondary)
         }
-        .padding(.vertical, 4)
+        .padding(.vertical, Spacing.xxs)
     }
 }

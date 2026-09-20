@@ -85,8 +85,11 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-Type a diagram DSL and watch it render — a minimal text-based editor with
-deterministic auto-layout, live SVG preview, and 16 built-in examples.
+Type a diagram DSL and watch it render — a minimal text-based editor with:
+
+- **Deterministic auto-layout** — the same source always lays out the same way.
+- **Live SVG preview** — the diagram renders as SVG while you type.
+- **16 built-in examples** — ready-made diagrams to start from.
 
 ---
 
@@ -150,7 +153,7 @@ Everything from syntax parsing to sequence diagrams, all auto-laid-out for you.
 
 ---
 
-# First run
+## First run
 
 - **macOS:** Right-click the `.dmg` and choose **Open** to bypass Gatekeeper.
 - **Linux AppImage:** `chmod +x diagram.AppImage && ./diagram.AppImage`

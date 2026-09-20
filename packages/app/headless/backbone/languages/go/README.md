@@ -17,6 +17,8 @@
 - **Ops** — encrypted secrets (AES-256-GCM), in-memory cache, structured logs,
   RBAC permissions, JSON import/export, SQLite backup, OpenAPI + Swagger
 - **Admin Dashboard** — HTMX + Tailwind UI served at `/`
+- **MCP** — `backbone mcp serve` speaks JSON-RPC over stdio and exposes the same
+  eleven tools as the Rust and Kotlin ports, all backed by the real database
 
 See [docs/](./docs/) for architecture, contributing, downloads, packaging and
 roadmap.

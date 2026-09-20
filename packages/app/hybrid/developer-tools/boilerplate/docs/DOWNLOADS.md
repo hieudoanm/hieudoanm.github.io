@@ -85,9 +85,13 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-A batteries-included Next.js + Tauri starter — app shell, atomic design system
-with 90+ components, DaisyUI theming, PWA support, and a desktop build, all
-ready to go.
+A batteries-included Next.js + Tauri starter, all ready to go.
+
+- **App shell** — a Next.js + Tauri scaffold you can build on.
+- **Atomic design system** — 90+ components.
+- **DaisyUI theming** — wired up out of the box.
+- **PWA support** — installable and offline-capable.
+- **Desktop build** — desktop target via Tauri.
 
 ---
 
@@ -148,7 +152,7 @@ A full design system and app shell, pre-wired and ready to extend.
 
 ---
 
-# First run
+## First run
 
 - **macOS:** Right-click the `.dmg` and choose **Open** to bypass Gatekeeper.
 - **Linux AppImage:** `chmod +x boilerplate.AppImage && ./boilerplate.AppImage`

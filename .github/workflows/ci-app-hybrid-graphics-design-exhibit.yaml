@@ -1,0 +1,33 @@
+name: CI - App - Hybrid - Graphics & Design - Exhibit
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+      - 'hotfix/**'
+      - 'feature/**'
+      - 'renovate/**'
+      - 'dependabot/**'
+    paths:
+      - 'packages/app/hybrid/graphics-design/exhibit/**/*'
+      - '.github/workflows/ci-app-hybrid-graphics-design-exhibit.yaml'
+      - '.github/workflows/ci-app-hybrid-template.yaml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-app-hybrid-graphics-design-exhibit-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci-app-hybrid-template.yaml
+    with:
+      package: packages/app/hybrid/graphics-design/exhibit
+      filter: '@hieudoanm.github.io/exhibit'
+      releaseName: app-hybrid-graphics-design-exhibit-latest
+      releaseTitle: App - Hybrid - Graphics & Design - Exhibit (latest)
+      artifactPrefix: graphics-design-exhibit
+      artifactName: exhibit

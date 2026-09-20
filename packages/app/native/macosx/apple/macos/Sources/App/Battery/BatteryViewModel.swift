@@ -1,7 +1,7 @@
 import MacOSXCore
 import SwiftUI
 
-/// Drives the Battery tab: a battery snapshot refreshed while the panel is open.
+/// Drives the Battery tab: a battery snapshot refreshed while metrics are on screen.
 @MainActor
 final class BatteryViewModel: ObservableObject {
     enum State: Equatable {
@@ -25,13 +25,14 @@ final class BatteryViewModel: ObservableObject {
     private let settingsStore: SettingsStore
     private var refreshTask: Task<Void, Never>?
     private var visibilityObservation: NSObjectProtocol?
-    private var isPanelVisible: Bool
+    private var isLiveSurfaceVisible: Bool
 
     init(settingsStore: SettingsStore = SettingsStore(), monitor: BatteryMonitor = BatteryMonitor()) {
         self.settingsStore = settingsStore
         self.monitor = monitor
-        self.isPanelVisible = PanelVisibilityMonitor.shared.isPanelVisible
-        self.visibilityObservation = PanelVisibilityMonitor.shared.observeVisibilityChange { [weak self] visible in
+        let surfaces = SurfaceVisibilityMonitor.shared
+        self.isLiveSurfaceVisible = surfaces.isLiveSurfaceVisible
+        self.visibilityObservation = surfaces.observeVisibilityChange { [weak self] visible in
             Task { @MainActor in self?.handleVisibilityChange(visible) }
         }
     }
@@ -47,7 +48,7 @@ final class BatteryViewModel: ObservableObject {
         guard refreshTask == nil else { return }
         refreshTask = Task { @MainActor [weak self] in
             while let self, !Task.isCancelled {
-                if self.isPanelVisible {
+                if self.isLiveSurfaceVisible {
                     self.refresh()
                 }
                 try? await Task.sleep(for: .seconds(self.settingsStore.refreshInterval))
@@ -64,7 +65,7 @@ final class BatteryViewModel: ObservableObject {
     }
 
     private func handleVisibilityChange(_ visible: Bool) {
-        isPanelVisible = visible
+        isLiveSurfaceVisible = visible
         guard visible else { return }
         refresh()
     }

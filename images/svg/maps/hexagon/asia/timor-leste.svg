@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 359.59 158.25" width="359.59" height="158.25" role="img" aria-labelledby="timor-leste-title timor-leste-desc">
+  <title id="timor-leste-title">Timor-Leste hex map</title>
+  <desc id="timor-leste-desc">Hexagon map with 13 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.40; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 11.87 8.48; }
+    .label { fill: #52525b; font: 600 9.61px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="LA">
+    <title>Lautém</title>
+    <polygon class="tile" points="326.64,8.48 351.11,22.61 351.11,50.87 326.64,65.00 302.16,50.87 302.16,22.61" aria-label="Lautém"/>
+    <text class="label" x="326.64" y="36.74">LA</text>
+  </g>
+  <g class="state" data-state="BA">
+    <title>Baucau</title>
+    <polygon class="tile" points="277.69,8.48 302.16,22.61 302.16,50.87 277.69,65.00 253.21,50.87 253.21,22.61" aria-label="Baucau"/>
+    <text class="label" x="277.69" y="36.74">BA</text>
+  </g>
+  <g class="state" data-state="VI">
+    <title>Viqueque</title>
+    <polygon class="tile" points="253.21,50.87 277.69,65.00 277.69,93.26 253.21,107.39 228.74,93.26 228.74,65.00" aria-label="Viqueque"/>
+    <text class="label" x="253.21" y="79.13">VI</text>
+  </g>
+  <g class="state" data-state="MT">
+    <title>Manatuto</title>
+    <polygon class="tile" points="228.74,8.48 253.21,22.61 253.21,50.87 228.74,65.00 204.27,50.87 204.27,22.61" aria-label="Manatuto"/>
+    <text class="label" x="228.74" y="36.74">MT</text>
+  </g>
+  <g class="state" data-state="MF">
+    <title>Manufahi</title>
+    <polygon class="tile" points="228.74,93.26 253.21,107.39 253.21,135.65 228.74,149.78 204.27,135.65 204.27,107.39" aria-label="Manufahi"/>
+    <text class="label" x="228.74" y="121.52">MF</text>
+  </g>
+  <g class="state" data-state="AL">
+    <title>Aileu</title>
+    <polygon class="tile" points="204.27,50.87 228.74,65.00 228.74,93.26 204.27,107.39 179.79,93.26 179.79,65.00" aria-label="Aileu"/>
+    <text class="label" x="204.27" y="79.13">AL</text>
+  </g>
+  <g class="state" data-state="DI">
+    <title>Dili</title>
+    <polygon class="tile" points="179.79,8.48 204.27,22.61 204.27,50.87 179.79,65.00 155.32,50.87 155.32,22.61" aria-label="Dili"/>
+    <text class="label" x="179.79" y="36.74">DI</text>
+  </g>
+  <g class="state" data-state="AN">
+    <title>Ainaro</title>
+    <polygon class="tile" points="179.79,93.26 204.27,107.39 204.27,135.65 179.79,149.78 155.32,135.65 155.32,107.39" aria-label="Ainaro"/>
+    <text class="label" x="179.79" y="121.52">AN</text>
+  </g>
+  <g class="state" data-state="ER">
+    <title>Ermera</title>
+    <polygon class="tile" points="155.32,50.87 179.79,65.00 179.79,93.26 155.32,107.39 130.85,93.26 130.85,65.00" aria-label="Ermera"/>
+    <text class="label" x="155.32" y="79.13">ER</text>
+  </g>
+  <g class="state" data-state="LI">
+    <title>Liquica</title>
+    <polygon class="tile" points="130.85,8.48 155.32,22.61 155.32,50.87 130.85,65.00 106.37,50.87 106.37,22.61" aria-label="Liquica"/>
+    <text class="label" x="130.85" y="36.74">LI</text>
+  </g>
+  <g class="state" data-state="CO">
+    <title>Cova Lima</title>
+    <polygon class="tile" points="130.85,93.26 155.32,107.39 155.32,135.65 130.85,149.78 106.37,135.65 106.37,107.39" aria-label="Cova Lima"/>
+    <text class="label" x="130.85" y="121.52">CO</text>
+  </g>
+  <g class="state" data-state="BO">
+    <title>Bobonaro</title>
+    <polygon class="tile" points="106.37,50.87 130.85,65.00 130.85,93.26 106.37,107.39 81.90,93.26 81.90,65.00" aria-label="Bobonaro"/>
+    <text class="label" x="106.37" y="79.13">BO</text>
+  </g>
+  <g class="state" data-state="OE">
+    <title>Ambeno</title>
+    <polygon class="tile inset" points="32.95,93.26 57.43,107.39 57.43,135.65 32.95,149.78 8.48,135.65 8.48,107.39" aria-label="Ambeno"/>
+    <text class="label" x="32.95" y="121.52">OE</text>
+  </g>
+</svg>

@@ -1,5 +1,6 @@
 # Graphics & Design
 
-1. Photo
-2. SVG
-3. Video
+1. Exhibit
+2. Photo
+3. SVG
+4. Video

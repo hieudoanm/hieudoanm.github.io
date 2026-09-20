@@ -70,11 +70,11 @@ struct WorkspacesSectionView: View {
             .buttonStyle(.borderless)
             .help("Save Current Workspace")
         }
-        .padding(.vertical, 8)
+        .padding(.vertical, Spacing.sm)
     }
 
     private var permissionBanner: some View {
-        HStack(spacing: 8) {
+        HStack(spacing: Spacing.sm) {
             Image(systemName: "hand.raised.fill")
                 .foregroundColor(.orange)
                 .accessibilityHidden(true)
@@ -87,22 +87,22 @@ struct WorkspacesSectionView: View {
             }
             .controlSize(.small)
         }
-        .padding(.vertical, 8)
+        .padding(.vertical, Spacing.sm)
     }
 
     private var restoringBanner: some View {
-        HStack(spacing: 8) {
+        HStack(spacing: Spacing.sm) {
             ProgressView()
                 .controlSize(.small)
             Text("Restoring workspace…")
                 .font(.caption)
                 .foregroundColor(.secondary)
         }
-        .padding(.vertical, 8)
+        .padding(.vertical, Spacing.sm)
     }
 
     private func messageBanner(_ message: String) -> some View {
-        HStack(spacing: 8) {
+        HStack(spacing: Spacing.sm) {
             Image(systemName: "info.circle")
                 .foregroundColor(.secondary)
                 .accessibilityHidden(true)
@@ -110,7 +110,7 @@ struct WorkspacesSectionView: View {
                 .font(.caption)
                 .foregroundColor(.secondary)
         }
-        .padding(.vertical, 8)
+        .padding(.vertical, Spacing.sm)
     }
 
     private var workspaceList: some View {
@@ -140,9 +140,9 @@ struct WorkspacesSectionView: View {
     }
 
     private var emptyState: some View {
-        VStack(spacing: 8) {
+        VStack(spacing: Spacing.sm) {
             Image(systemName: "square.grid.2x2")
-                .font(.system(size: 28, weight: .regular))
+                .font(Typography.emptyStateIcon)
                 .foregroundColor(.secondary)
                 .accessibilityHidden(true)
             Text("No saved workspaces")
@@ -153,7 +153,7 @@ struct WorkspacesSectionView: View {
                 .multilineTextAlignment(.center)
         }
         .frame(maxWidth: .infinity)
-        .padding(.vertical, 40)
+        .padding(.vertical, Spacing.huge)
         .accessibilityElement(children: .combine)
     }
 }

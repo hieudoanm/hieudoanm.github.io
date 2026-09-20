@@ -1,0 +1,326 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360.35 585.99" width="360.35" height="585.99" role="img" aria-labelledby="vietnam-title vietnam-desc">
+  <title id="vietnam-title">Vietnam hex map</title>
+  <desc id="vietnam-desc">Hexagon map with 63 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.25; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 11.14 7.95; }
+    .label { fill: #52525b; font: 600 9.02px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="PY">
+    <title>Phú Yên</title>
+    <polygon class="tile" points="329.44,326.14 352.40,339.40 352.40,365.91 329.44,379.17 306.47,365.91 306.47,339.40" aria-label="Phú Yên"/>
+    <text class="label" x="329.44" y="352.65">PY</text>
+  </g>
+  <g class="state" data-state="GL">
+    <title>Gia Lai</title>
+    <polygon class="tile" points="306.47,286.37 329.44,299.62 329.44,326.14 306.47,339.40 283.51,326.14 283.51,299.62" aria-label="Gia Lai"/>
+    <text class="label" x="306.47" y="312.88">GL</text>
+  </g>
+  <g class="state" data-state="KH">
+    <title>Khánh Hòa</title>
+    <polygon class="tile" points="306.47,365.91 329.44,379.17 329.44,405.68 306.47,418.94 283.51,405.68 283.51,379.17" aria-label="Khánh Hòa"/>
+    <text class="label" x="306.47" y="392.43">KH</text>
+  </g>
+  <g class="state" data-state="BD">
+    <title>Bình Định</title>
+    <polygon class="tile" points="283.51,246.59 306.47,259.85 306.47,286.37 283.51,299.62 260.55,286.37 260.55,259.85" aria-label="Bình Định"/>
+    <text class="label" x="283.51" y="273.11">BD</text>
+  </g>
+  <g class="state" data-state="ĐL">
+    <title>Đắk Lắk</title>
+    <polygon class="tile" points="283.51,326.14 306.47,339.40 306.47,365.91 283.51,379.17 260.55,365.91 260.55,339.40" aria-label="Đắk Lắk"/>
+    <text class="label" x="283.51" y="352.65">ĐL</text>
+  </g>
+  <g class="state" data-state="NT">
+    <title>Ninh Thuận</title>
+    <polygon class="tile" points="283.51,405.68 306.47,418.94 306.47,445.46 283.51,458.72 260.55,445.46 260.55,418.94" aria-label="Ninh Thuận"/>
+    <text class="label" x="283.51" y="432.20">NT</text>
+  </g>
+  <g class="state" data-state="HP">
+    <title>Hải Phòng</title>
+    <polygon class="tile" points="260.55,127.27 283.51,140.53 283.51,167.05 260.55,180.30 237.58,167.05 237.58,140.53" aria-label="Hải Phòng"/>
+    <text class="label" x="260.55" y="153.79">HP</text>
+  </g>
+  <g class="state" data-state="DN">
+    <title>Đà Nẵng</title>
+    <polygon class="tile" points="260.55,206.82 283.51,220.08 283.51,246.59 260.55,259.85 237.58,246.59 237.58,220.08" aria-label="Đà Nẵng"/>
+    <text class="label" x="260.55" y="233.34">DN</text>
+  </g>
+  <g class="state" data-state="QG">
+    <title>Quảng Ngãi</title>
+    <polygon class="tile" points="260.55,286.37 283.51,299.62 283.51,326.14 260.55,339.40 237.58,326.14 237.58,299.62" aria-label="Quảng Ngãi"/>
+    <text class="label" x="260.55" y="312.88">QG</text>
+  </g>
+  <g class="state" data-state="LD">
+    <title>Lâm Đồng</title>
+    <polygon class="tile" points="260.55,365.91 283.51,379.17 283.51,405.68 260.55,418.94 237.58,405.68 237.58,379.17" aria-label="Lâm Đồng"/>
+    <text class="label" x="260.55" y="392.43">LD</text>
+  </g>
+  <g class="state" data-state="BN">
+    <title>Bắc Ninh</title>
+    <polygon class="tile" points="260.55,445.46 283.51,458.72 283.51,485.23 260.55,498.49 237.58,485.23 237.58,458.72" aria-label="Bắc Ninh"/>
+    <text class="label" x="260.55" y="471.97">BN</text>
+  </g>
+  <g class="state" data-state="QN">
+    <title>Quảng Ninh</title>
+    <polygon class="tile" points="237.58,87.50 260.55,100.76 260.55,127.27 237.58,140.53 214.62,127.27 214.62,100.76" aria-label="Quảng Ninh"/>
+    <text class="label" x="237.58" y="114.02">QN</text>
+  </g>
+  <g class="state" data-state="HD">
+    <title>Hải Dương</title>
+    <polygon class="tile" points="237.58,167.05 260.55,180.30 260.55,206.82 237.58,220.08 214.62,206.82 214.62,180.30" aria-label="Hải Dương"/>
+    <text class="label" x="237.58" y="193.56">HD</text>
+  </g>
+  <g class="state" data-state="DA">
+    <title>Quàng Nam</title>
+    <polygon class="tile" points="237.58,246.59 260.55,259.85 260.55,286.37 237.58,299.62 214.62,286.37 214.62,259.85" aria-label="Quàng Nam"/>
+    <text class="label" x="237.58" y="273.11">DA</text>
+  </g>
+  <g class="state" data-state="ĐN">
+    <title>Đắk Nông</title>
+    <polygon class="tile" points="237.58,326.14 260.55,339.40 260.55,365.91 237.58,379.17 214.62,365.91 214.62,339.40" aria-label="Đắk Nông"/>
+    <text class="label" x="237.58" y="352.65">ĐN</text>
+  </g>
+  <g class="state" data-state="BU">
+    <title>Bình Thuận</title>
+    <polygon class="tile" points="237.58,405.68 260.55,418.94 260.55,445.46 237.58,458.72 214.62,445.46 214.62,418.94" aria-label="Bình Thuận"/>
+    <text class="label" x="237.58" y="432.20">BU</text>
+  </g>
+  <g class="state" data-state="TV">
+    <title>Trà Vinh</title>
+    <polygon class="tile" points="237.58,485.23 260.55,498.49 260.55,525.00 237.58,538.26 214.62,525.00 214.62,498.49" aria-label="Trà Vinh"/>
+    <text class="label" x="237.58" y="511.75">TV</text>
+  </g>
+  <g class="state" data-state="BG">
+    <title>Bắc Giang</title>
+    <polygon class="tile" points="214.62,47.73 237.58,60.99 237.58,87.50 214.62,100.76 191.66,87.50 191.66,60.99" aria-label="Bắc Giang"/>
+    <text class="label" x="214.62" y="74.24">BG</text>
+  </g>
+  <g class="state" data-state="BSH">
+    <title>Đồng Bằng Sông Hồng</title>
+    <polygon class="tile" points="214.62,127.27 237.58,140.53 237.58,167.05 214.62,180.30 191.66,167.05 191.66,140.53" aria-label="Đồng Bằng Sông Hồng"/>
+    <text class="label" x="214.62" y="153.79">BSH</text>
+  </g>
+  <g class="state" data-state="TT">
+    <title>Thừa Thiên - Huế</title>
+    <polygon class="tile" points="214.62,206.82 237.58,220.08 237.58,246.59 214.62,259.85 191.66,246.59 191.66,220.08" aria-label="Thừa Thiên - Huế"/>
+    <text class="label" x="214.62" y="233.34">TT</text>
+  </g>
+  <g class="state" data-state="KT">
+    <title>Kon Tum</title>
+    <polygon class="tile" points="214.62,286.37 237.58,299.62 237.58,326.14 214.62,339.40 191.66,326.14 191.66,299.62" aria-label="Kon Tum"/>
+    <text class="label" x="214.62" y="312.88">KT</text>
+  </g>
+  <g class="state" data-state="NB">
+    <title>Đông Nam Bộ</title>
+    <polygon class="tile" points="214.62,365.91 237.58,379.17 237.58,405.68 214.62,418.94 191.66,405.68 191.66,379.17" aria-label="Đông Nam Bộ"/>
+    <text class="label" x="214.62" y="392.43">NB</text>
+  </g>
+  <g class="state" data-state="BV">
+    <title>Bà Rịa - Vũng Tàu</title>
+    <polygon class="tile" points="214.62,445.46 237.58,458.72 237.58,485.23 214.62,498.49 191.66,485.23 191.66,458.72" aria-label="Bà Rịa - Vũng Tàu"/>
+    <text class="label" x="214.62" y="471.97">BV</text>
+  </g>
+  <g class="state" data-state="BR">
+    <title>Bến Tre</title>
+    <polygon class="tile" points="214.62,525.00 237.58,538.26 237.58,564.78 214.62,578.03 191.66,564.78 191.66,538.26" aria-label="Bến Tre"/>
+    <text class="label" x="214.62" y="551.52">BR</text>
+  </g>
+  <g class="state" data-state="LS">
+    <title>Lạng Sơn</title>
+    <polygon class="tile" points="191.66,7.95 214.62,21.21 214.62,47.73 191.66,60.99 168.70,47.73 168.70,21.21" aria-label="Lạng Sơn"/>
+    <text class="label" x="191.66" y="34.47">LS</text>
+  </g>
+  <g class="state" data-state="TY">
+    <title>Thái Nguyên</title>
+    <polygon class="tile" points="191.66,87.50 214.62,100.76 214.62,127.27 191.66,140.53 168.70,127.27 168.70,100.76" aria-label="Thái Nguyên"/>
+    <text class="label" x="191.66" y="114.02">TY</text>
+  </g>
+  <g class="state" data-state="TB">
+    <title>Thái Bình</title>
+    <polygon class="tile" points="191.66,167.05 214.62,180.30 214.62,206.82 191.66,220.08 168.70,206.82 168.70,180.30" aria-label="Thái Bình"/>
+    <text class="label" x="191.66" y="193.56">TB</text>
+  </g>
+  <g class="state" data-state="QT">
+    <title>Quảng Trị</title>
+    <polygon class="tile" points="191.66,246.59 214.62,259.85 214.62,286.37 191.66,299.62 168.70,286.37 168.70,259.85" aria-label="Quảng Trị"/>
+    <text class="label" x="191.66" y="273.11">QT</text>
+  </g>
+  <g class="state" data-state="BP">
+    <title>Bình Phước</title>
+    <polygon class="tile" points="191.66,326.14 214.62,339.40 214.62,365.91 191.66,379.17 168.70,365.91 168.70,339.40" aria-label="Bình Phước"/>
+    <text class="label" x="191.66" y="352.65">BP</text>
+  </g>
+  <g class="state" data-state="SG">
+    <title>Hồ Chí Minh city</title>
+    <polygon class="tile" points="191.66,405.68 214.62,418.94 214.62,445.46 191.66,458.72 168.70,445.46 168.70,418.94" aria-label="Hồ Chí Minh city"/>
+    <text class="label" x="191.66" y="432.20">SG</text>
+  </g>
+  <g class="state" data-state="VL">
+    <title>Vĩnh Long</title>
+    <polygon class="tile" points="191.66,485.23 214.62,498.49 214.62,525.00 191.66,538.26 168.70,525.00 168.70,498.49" aria-label="Vĩnh Long"/>
+    <text class="label" x="191.66" y="511.75">VL</text>
+  </g>
+  <g class="state" data-state="ĐB">
+    <title>Đông Bắc</title>
+    <polygon class="tile" points="168.70,47.73 191.66,60.99 191.66,87.50 168.70,100.76 145.73,87.50 145.73,60.99" aria-label="Đông Bắc"/>
+    <text class="label" x="168.70" y="74.24">ĐB</text>
+  </g>
+  <g class="state" data-state="HM">
+    <title>Hà Nam</title>
+    <polygon class="tile" points="168.70,127.27 191.66,140.53 191.66,167.05 168.70,180.30 145.73,167.05 145.73,140.53" aria-label="Hà Nam"/>
+    <text class="label" x="168.70" y="153.79">HM</text>
+  </g>
+  <g class="state" data-state="ND">
+    <title>Nam Định</title>
+    <polygon class="tile" points="168.70,206.82 191.66,220.08 191.66,246.59 168.70,259.85 145.73,246.59 145.73,220.08" aria-label="Nam Định"/>
+    <text class="label" x="168.70" y="233.34">ND</text>
+  </g>
+  <g class="state" data-state="QB">
+    <title>Quảng Bình</title>
+    <polygon class="tile" points="168.70,286.37 191.66,299.62 191.66,326.14 168.70,339.40 145.73,326.14 145.73,299.62" aria-label="Quảng Bình"/>
+    <text class="label" x="168.70" y="312.88">QB</text>
+  </g>
+  <g class="state" data-state="BI">
+    <title>Bình Dương</title>
+    <polygon class="tile" points="168.70,365.91 191.66,379.17 191.66,405.68 168.70,418.94 145.73,405.68 145.73,379.17" aria-label="Bình Dương"/>
+    <text class="label" x="168.70" y="392.43">BI</text>
+  </g>
+  <g class="state" data-state="TG">
+    <title>Tiền Giang</title>
+    <polygon class="tile" points="168.70,445.46 191.66,458.72 191.66,485.23 168.70,498.49 145.73,485.23 145.73,458.72" aria-label="Tiền Giang"/>
+    <text class="label" x="168.70" y="471.97">TG</text>
+  </g>
+  <g class="state" data-state="CM">
+    <title>Cà Mau</title>
+    <polygon class="tile" points="168.70,525.00 191.66,538.26 191.66,564.78 168.70,578.03 145.73,564.78 145.73,538.26" aria-label="Cà Mau"/>
+    <text class="label" x="168.70" y="551.52">CM</text>
+  </g>
+  <g class="state" data-state="CB">
+    <title>Cao Bằng</title>
+    <polygon class="tile" points="145.73,7.95 168.70,21.21 168.70,47.73 145.73,60.99 122.77,47.73 122.77,21.21" aria-label="Cao Bằng"/>
+    <text class="label" x="145.73" y="34.47">CB</text>
+  </g>
+  <g class="state" data-state="HN">
+    <title>Ha Noi</title>
+    <polygon class="tile" points="145.73,87.50 168.70,100.76 168.70,127.27 145.73,140.53 122.77,127.27 122.77,100.76" aria-label="Ha Noi"/>
+    <text class="label" x="145.73" y="114.02">HN</text>
+  </g>
+  <g class="state" data-state="NBA">
+    <title>Ninh Bình</title>
+    <polygon class="tile" points="145.73,167.05 168.70,180.30 168.70,206.82 145.73,220.08 122.77,206.82 122.77,180.30" aria-label="Ninh Bình"/>
+    <text class="label" x="145.73" y="193.56">NBA</text>
+  </g>
+  <g class="state" data-state="HT">
+    <title>Ha Tinh</title>
+    <polygon class="tile" points="145.73,246.59 168.70,259.85 168.70,286.37 145.73,299.62 122.77,286.37 122.77,259.85" aria-label="Ha Tinh"/>
+    <text class="label" x="145.73" y="273.11">HT</text>
+  </g>
+  <g class="state" data-state="TN">
+    <title>Tây Ninh</title>
+    <polygon class="tile" points="145.73,326.14 168.70,339.40 168.70,365.91 145.73,379.17 122.77,365.91 122.77,339.40" aria-label="Tây Ninh"/>
+    <text class="label" x="145.73" y="352.65">TN</text>
+  </g>
+  <g class="state" data-state="DT">
+    <title>Ðong Tháp</title>
+    <polygon class="tile" points="145.73,405.68 168.70,418.94 168.70,445.46 145.73,458.72 122.77,445.46 122.77,418.94" aria-label="Ðong Tháp"/>
+    <text class="label" x="145.73" y="432.20">DT</text>
+  </g>
+  <g class="state" data-state="BL">
+    <title>Bạc Liêu</title>
+    <polygon class="tile" points="145.73,485.23 168.70,498.49 168.70,525.00 145.73,538.26 122.77,525.00 122.77,498.49" aria-label="Bạc Liêu"/>
+    <text class="label" x="145.73" y="511.75">BL</text>
+  </g>
+  <g class="state" data-state="TQ">
+    <title>Tuyên Quang</title>
+    <polygon class="tile" points="122.77,47.73 145.73,60.99 145.73,87.50 122.77,100.76 99.81,87.50 99.81,60.99" aria-label="Tuyên Quang"/>
+    <text class="label" x="122.77" y="74.24">TQ</text>
+  </g>
+  <g class="state" data-state="HO">
+    <title>Hòa Bình</title>
+    <polygon class="tile" points="122.77,127.27 145.73,140.53 145.73,167.05 122.77,180.30 99.81,167.05 99.81,140.53" aria-label="Hòa Bình"/>
+    <text class="label" x="122.77" y="153.79">HO</text>
+  </g>
+  <g class="state" data-state="NA">
+    <title>Nghệ An</title>
+    <polygon class="tile" points="122.77,206.82 145.73,220.08 145.73,246.59 122.77,259.85 99.81,246.59 99.81,220.08" aria-label="Nghệ An"/>
+    <text class="label" x="122.77" y="233.34">NA</text>
+  </g>
+  <g class="state" data-state="LA">
+    <title>Long An</title>
+    <polygon class="tile" points="122.77,365.91 145.73,379.17 145.73,405.68 122.77,418.94 99.81,405.68 99.81,379.17" aria-label="Long An"/>
+    <text class="label" x="122.77" y="392.43">LA</text>
+  </g>
+  <g class="state" data-state="CT">
+    <title>Can Tho</title>
+    <polygon class="tile" points="122.77,445.46 145.73,458.72 145.73,485.23 122.77,498.49 99.81,485.23 99.81,458.72" aria-label="Can Tho"/>
+    <text class="label" x="122.77" y="471.97">CT</text>
+  </g>
+  <g class="state" data-state="ST">
+    <title>Sóc Trăng</title>
+    <polygon class="tile" points="122.77,525.00 145.73,538.26 145.73,564.78 122.77,578.03 99.81,564.78 99.81,538.26" aria-label="Sóc Trăng"/>
+    <text class="label" x="122.77" y="551.52">ST</text>
+  </g>
+  <g class="state" data-state="HG">
+    <title>Hà Giang</title>
+    <polygon class="tile" points="99.81,7.95 122.77,21.21 122.77,47.73 99.81,60.99 76.84,47.73 76.84,21.21" aria-label="Hà Giang"/>
+    <text class="label" x="99.81" y="34.47">HG</text>
+  </g>
+  <g class="state" data-state="PT">
+    <title>Phú Thọ</title>
+    <polygon class="tile" points="99.81,87.50 122.77,100.76 122.77,127.27 99.81,140.53 76.84,127.27 76.84,100.76" aria-label="Phú Thọ"/>
+    <text class="label" x="99.81" y="114.02">PT</text>
+  </g>
+  <g class="state" data-state="TH">
+    <title>Thanh Hóa</title>
+    <polygon class="tile" points="99.81,167.05 122.77,180.30 122.77,206.82 99.81,220.08 76.84,206.82 76.84,180.30" aria-label="Thanh Hóa"/>
+    <text class="label" x="99.81" y="193.56">TH</text>
+  </g>
+  <g class="state" data-state="AG">
+    <title>An Giang</title>
+    <polygon class="tile" points="99.81,405.68 122.77,418.94 122.77,445.46 99.81,458.72 76.84,445.46 76.84,418.94" aria-label="An Giang"/>
+    <text class="label" x="99.81" y="432.20">AG</text>
+  </g>
+  <g class="state" data-state="HGA">
+    <title>Hau Giang</title>
+    <polygon class="tile" points="99.81,485.23 122.77,498.49 122.77,525.00 99.81,538.26 76.84,525.00 76.84,498.49" aria-label="Hau Giang"/>
+    <text class="label" x="99.81" y="511.75">HGA</text>
+  </g>
+  <g class="state" data-state="YB">
+    <title>Yên Bái</title>
+    <polygon class="tile" points="76.84,47.73 99.81,60.99 99.81,87.50 76.84,100.76 53.88,87.50 53.88,60.99" aria-label="Yên Bái"/>
+    <text class="label" x="76.84" y="74.24">YB</text>
+  </g>
+  <g class="state" data-state="SL">
+    <title>Son La</title>
+    <polygon class="tile" points="76.84,127.27 99.81,140.53 99.81,167.05 76.84,180.30 53.88,167.05 53.88,140.53" aria-label="Son La"/>
+    <text class="label" x="76.84" y="153.79">SL</text>
+  </g>
+  <g class="state" data-state="KG">
+    <title>Kiên Giang</title>
+    <polygon class="tile" points="76.84,445.46 99.81,458.72 99.81,485.23 76.84,498.49 53.88,485.23 53.88,458.72" aria-label="Kiên Giang"/>
+    <text class="label" x="76.84" y="471.97">KG</text>
+  </g>
+  <g class="state" data-state="LO">
+    <title>Lào Cai</title>
+    <polygon class="tile" points="53.88,7.95 76.84,21.21 76.84,47.73 53.88,60.99 30.92,47.73 30.92,21.21" aria-label="Lào Cai"/>
+    <text class="label" x="53.88" y="34.47">LO</text>
+  </g>
+  <g class="state" data-state="DB">
+    <title>Điện Biên</title>
+    <polygon class="tile" points="53.88,87.50 76.84,100.76 76.84,127.27 53.88,140.53 30.92,127.27 30.92,100.76" aria-label="Điện Biên"/>
+    <text class="label" x="53.88" y="114.02">DB</text>
+  </g>
+  <g class="state" data-state="LI">
+    <title>Lai Chau</title>
+    <polygon class="tile" points="30.92,47.73 53.88,60.99 53.88,87.50 30.92,100.76 7.95,87.50 7.95,60.99" aria-label="Lai Chau"/>
+    <text class="label" x="30.92" y="74.24">LI</text>
+  </g>
+  <g class="state" data-state="VC">
+    <title>Vĩnh Phúc</title>
+    <polygon class="tile" points="30.92,127.27 53.88,140.53 53.88,167.05 30.92,180.30 7.95,167.05 7.95,140.53" aria-label="Vĩnh Phúc"/>
+    <text class="label" x="30.92" y="153.79">VC</text>
+  </g>
+</svg>

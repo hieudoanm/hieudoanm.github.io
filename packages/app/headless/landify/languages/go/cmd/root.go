@@ -23,7 +23,8 @@ Commands:
   themes    list the sixty-four built-in theme presets
   serve     preview the result over HTTP
   tui       open the terminal editor (ships with every build)
-  studio    open the optional desktop editor (GUI build)`,
+  studio    open the optional desktop editor (GUI build)
+  mcp       run the Model Context Protocol server for LLM clients`,
 	SilenceUsage:  true,
 	SilenceErrors: true,
 }
@@ -38,5 +39,5 @@ func Execute() {
 
 func init() {
 	rootCmd.PersistentFlags().StringP("file", "f", "landify.yaml", "path to the YAML content file")
-	rootCmd.AddCommand(newCmd, validateCmd, buildCmd, themesCmd, serveCmd, tuiCmd, studioCmd)
+	rootCmd.AddCommand(newCmd, validateCmd, buildCmd, themesCmd, serveCmd, tuiCmd, studioCmd, mcpCmd)
 }

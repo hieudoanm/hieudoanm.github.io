@@ -15,6 +15,14 @@ describe('MathsPage', () => {
       'href',
       '/maths/cyclic'
     );
+    expect(screen.getByTestId('maths-fibonacci-sequence')).toHaveAttribute(
+      'href',
+      '/maths/fibonacci-sequence'
+    );
+    expect(screen.getByTestId('maths-prime-numbers')).toHaveAttribute(
+      'href',
+      '/maths/prime-numbers'
+    );
     expect(screen.getByTestId('maths-kaprekar-constant')).toHaveAttribute(
       'href',
       '/maths/kaprekar-constant'

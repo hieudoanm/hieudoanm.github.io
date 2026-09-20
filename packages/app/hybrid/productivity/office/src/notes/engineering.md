@@ -1,56 +1,29 @@
 # Engineering
 
+> The engineers apply their knowledge of science and mathematics to develop a
+> new technology.
+
 ## Table of Contents
 
 - [Engineering](#engineering)
   - [Table of Contents](#table-of-contents)
-  - [Child Pages](#child-pages)
-  - [Software Development](#software-development)
-  - [CI/CD (Continue Integration / Continue Delivery)](#cicd-continue-integration--continue-delivery)
-  - [Servers](#servers)
+  - [Mathematics](#mathematics)
   - [Version Control](#version-control)
+  - [DNS (Domain Name System)](#dns-domain-name-system)
+  - [Blockchain](#blockchain)
+  - [Science Prizes](#science-prizes)
 
-## Child Pages
+## Mathematics
 
-1. [[data-structures-and-algorithms|Data Structures and Algorithms]]
-2. API
-3. [[os|OS (Operating System)]]
-4. [[ide|IDE (Integrated Development Environment)]]
-5. [[Languages]]
-6. [[front-end|Front-end]]
-7. [[back-end|Back-end]]
-8. [[CLI]]
-9. [[Databases]]
-10. [[game-engines|Game Engines]]
-11. [[Hosting]]
-12. System Design
-
-## Software Development
-
-| No  | Category          | Language   | Primary   | Secondary  | Language | Primary     |
-| --- | ----------------- | ---------- | --------- | ---------- | -------- | ----------- |
-| 1   | CLI               | TypeScript | Commander | oclif      |          |             |
-| 2   | Web               | TypeScript | Next.js   | SolidStart | Go       |             |
-| 3   | Mobile (Android)  |            |           |            | Kotlin   |             |
-| 4   | Mobile (iOS)      |            |           |            | Swift    |             |
-| 5   | Desktop (Linux)   |            |           |            | Java     |             |
-| 5   | Desktop (macOS)   |            |           |            | Swift    |             |
-| 6   | Desktop (Windows) |            |           |            | C#       |             |
-| 7   | Server            | TypeScript | Nest.js   |            | Java     | Spring Boot |
-
-## CI/CD (Continue Integration / Continue Delivery)
-
-- [CircleCI](https://circleci.com/)
-- [GitHub Actions](https://github.com/features/actions)
-- [GitLab CI](https://docs.gitlab.com/ee/ci/)
-- [Harness](https://harness.io/)
-- [Jenkins](https://www.jenkins.io/)
-- [TravisCI](https://docs.travis-ci.com/)
-
-## Servers
-
-- [Apache HTTP Server](https://httpd.apache.org/)
-- [Nginx](https://nginx.org/)
+- Arithmetic: Basic number operations
+- Algebra: Symbols and rules for manipulating them
+- Geometry: Shapes, sizes, and spatial reasoning
+- Trigonometry: Relationships in triangles
+- Calculus: Change and motion (includes differential and integral calculus)
+- Number Theory: Properties of integers
+- Set Theory: Study of sets (collections of objects)
+- Linear Algebra: Vector spaces and linear equations
+- Analysis
 
 ## Version Control
 
@@ -60,3 +33,24 @@
    2. [GitHub](https://github.com/)
    3. [GitLab](https://gitlab.com/)
 3. [Mercurial](https://www.mercurial-scm.org/)
+
+## DNS (Domain Name System)
+
+- [1.1.1.1](https://one.one.one.one/)
+- [8.8.8.8](https://developers.google.com/speed/public-dns/docs/using)
+- [9.9.9.9](https://www.quad9.net/)
+- [185.228.168.9](https://cleanbrowsing.org/)
+- [208.67.222.222](https://www.opendns.com/)
+
+## Blockchain
+
+1. [Bitcoin](https://bitcoin.org)
+2. [Ethereum](https://ethereum.org)
+3. [Solana](https://solana.com)
+4. [Monero](https://www.getmonero.org)
+5. [Polygon](https://polygon.technology)
+
+## Science Prizes
+
+- Fields
+- Nobel

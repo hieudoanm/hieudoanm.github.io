@@ -66,7 +66,7 @@ struct PortsSectionView: View {
     }
 
     private var searchField: some View {
-        HStack(spacing: 6) {
+        HStack(spacing: Spacing.xs) {
             Image(systemName: "magnifyingglass")
                 .foregroundColor(.secondary)
                 .accessibilityHidden(true)
@@ -85,7 +85,7 @@ struct PortsSectionView: View {
                 .help("Clear search")
             }
         }
-        .padding(.vertical, 8)
+        .padding(.vertical, Spacing.sm)
     }
 
     private var killDialogPresented: Binding<Bool> {

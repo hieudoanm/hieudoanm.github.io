@@ -86,8 +86,13 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-A pocket-sized image editor with layers, AI tools, and social export presets —
-Photoshop stripped to the essentials, running natively on every device you own.
+A pocket-sized image editor — Photoshop stripped to the essentials.
+
+- **Layers** — build the image up in parts.
+- **AI tools** — AI-assisted editing, built in.
+- **Social export presets** — export sizes for the platforms you post to.
+
+Running natively on every device you own.
 
 ---
 

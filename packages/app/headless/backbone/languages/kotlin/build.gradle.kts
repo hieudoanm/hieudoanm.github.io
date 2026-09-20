@@ -1,6 +1,6 @@
 plugins {
-    kotlin("jvm") version "2.4.10"
-    kotlin("plugin.serialization") version "2.4.10"
+    kotlin("jvm") version "2.4.20"
+    kotlin("plugin.serialization") version "2.4.20"
     application
 }
 
@@ -11,7 +11,7 @@ repositories {
     mavenCentral()
 }
 
-val ktorVersion = "3.5.2"
+val ktorVersion = "3.6.0"
 val exposedVersion = "0.57.0"
 
 dependencies {
@@ -39,12 +39,12 @@ dependencies {
     runtimeOnly("io.jsonwebtoken:jjwt-jackson:0.13.0")
 
     // Logging
-    implementation("ch.qos.logback:logback-classic:1.6.3")
+    implementation("ch.qos.logback:logback-classic:1.6.5")
 
     // Testing
     testImplementation("io.ktor:ktor-server-test-host:$ktorVersion")
-    testImplementation("org.jetbrains.kotlin:kotlin-test:2.4.10")
-    testImplementation("org.jetbrains.kotlin:kotlin-test-junit5:2.4.10")
+    testImplementation("org.jetbrains.kotlin:kotlin-test:2.4.20")
+    testImplementation("org.jetbrains.kotlin:kotlin-test-junit5:2.4.20")
 }
 
 application {
@@ -57,4 +57,8 @@ tasks.test {
 
 kotlin {
     jvmToolchain(21)
+}
+
+dependencyLocking {
+    lockAllConfigurations()
 }

@@ -21,6 +21,24 @@ Microsoft SQL Server is a **relational database management system** with a rich 
 - **Index hints**: restrict only with deep understanding of the plan; prefer letting the optimizer decide.
 - Use **temporary tables**, CTEs, and `MERGE` for upsert logic (or `INSERT ... ON CONFLICT` in newer SQLite incompatible, here: SQL Server 2008+ upsert via MERGE).
 
+```sql
+-- SARGable: compare the bare column so the index on OrderedAt stays seekable
+DECLARE @from date = '2026-01-01', @to date = '2026-04-01', @OrderId int = 1042;
+SELECT o.OrderId, o.Total
+FROM dbo.Orders AS o
+WHERE o.OrderedAt >= @from AND o.OrderedAt < @to AND o.Status = 'paid'
+ORDER BY o.OrderedAt DESC;   -- NOT WHERE YEAR(o.OrderedAt) = 2026
+
+SET STATISTICS IO ON;        -- logical reads, not just the optimizer's guess
+SET STATISTICS TIME ON;      -- CPU and elapsed time per statement
+
+-- set-based upsert: one statement, one transaction, no cursor loop
+MERGE dbo.OrderStatus WITH (HOLDLOCK) AS tgt
+USING (VALUES (@OrderId, 'shipped')) AS src (OrderId, Status) ON tgt.OrderId = src.OrderId
+WHEN MATCHED AND tgt.Status <> src.Status THEN UPDATE SET tgt.Status = src.Status
+WHEN NOT MATCHED BY TARGET THEN INSERT (OrderId, Status) VALUES (src.OrderId, src.Status);
+```
+
 ## 3. Indexing
 
 - **Clustered index**: defines physical order — typically on a monotonically increasing key (identity, rowguid) to avoid page splits.
@@ -28,6 +46,17 @@ Microsoft SQL Server is a **relational database management system** with a rich 
 - Composite indexes: order columns left-to-right; leading column should match the most selective/filtered predicate.
 - **Filters**: filtered indexes for sparse data patterns reduce subject set and size.
 - Use the **Database Tuning Advisor** (DTA) as a start, but hand-tune for real workloads; drop unused/duplicate indexes.
+
+```sql
+-- clustered index = physical row order; keep it narrow so the nonclustered ones can hold the key
+CREATE UNIQUE CLUSTERED INDEX CX_Orders_OrderId ON dbo.Orders (OrderId);
+
+-- covering index: INCLUDE payloads are read from the index, never the base table
+CREATE NONCLUSTERED INDEX IX_Orders_OrderedAt
+  ON dbo.Orders (OrderedAt DESC, Status)
+  INCLUDE (Total)
+  WHERE Status = 'paid';      -- filtered: smaller, and stays dense as the table grows
+```
 
 ## 4. Concurrency
 
@@ -43,6 +72,22 @@ Microsoft SQL Server is a **relational database management system** with a rich 
 - **Index fragmentation**: `ALTER INDEX REORGANIZE`/`REBUILD` on a schedule; inspect via `sys.dm_db_index_physical_stats`.
 - Memory: cap and tune max server memory; avoid OS memory pressure.
 - Right-size `MAXDOP` and `Cost Threshold for Parallelism` for mixed workloads.
+
+```sql
+-- FULL recovery plus an unbroken log chain is what makes point-in-time restore possible
+ALTER DATABASE shop SET RECOVERY FULL;
+BACKUP DATABASE shop TO DISK = '/var/opt/mssql/backup/shop_full.bak' WITH INIT, COMPRESSION;
+BACKUP DATABASE shop TO DISK = '/var/opt/mssql/backup/shop_diff.bak' WITH DIFFERENTIAL;
+BACKUP LOG shop TO DISK = '/var/opt/mssql/backup/shop_log.trn' WITH NOINIT;  -- WITH INIT breaks the chain
+
+-- fragmentation: only rebuild what is actually fragmented
+SELECT s.name AS index_name, ps.avg_fragmentation_in_percent, ps.page_count
+FROM sys.dm_db_index_physical_stats(DB_ID(), 'dbo', 'Orders', DEFAULT, 'LIMITED') AS ps
+JOIN sys.indexes AS s ON s.object_id = ps.object_id AND s.index_id = ps.index_id
+WHERE ps.avg_fragmentation_in_percent > 30;
+
+ALTER INDEX IX_Orders_OrderedAt ON dbo.Orders REBUILD;  -- REORGANIZE is cheaper below ~30%
+```
 
 ## 6. Common Pitfalls
 

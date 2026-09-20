@@ -21,6 +21,30 @@ LevelDB is a **lightweight, embedded key-value store** providing **ordered strin
 - Batch: `batch.Put(...)`, `batch.Delete(...)`, then `db.Write(batch, nil)`.
 - Compact range: `db.CompactRange(util.Range{Start: from, Limit: to})` to reclaim space.
 
+```go
+opt := &opt.Options{
+    BlockCacheCapacity: 64 << 20,   // 1/3 of a 256 MB budget
+    WriteBuffer:        16 << 20,   // memtable before flush
+    CompactionTableSize: 32 << 20,  // SSTable target
+    Compression:        opt.SnappyCompression,
+    OpenFilesCacheCapacity: 256,
+}
+
+db, err := leveldb.OpenFile("/var/lib/leveldb", opt)
+if err != nil {
+    return fmt.Errorf("open leveldb: %w", err)
+}
+defer db.Close()
+
+batch := new(leveldb.Batch)
+batch.Put([]byte("order:1001:status"), []byte("paid"))
+batch.Put([]byte("order:1001:total"), []byte("99.00"))
+batch.Delete([]byte("order:1001:note"))
+if err := db.Write(batch, nil); err != nil {
+    return fmt.Errorf("write batch: %w", err)
+}
+```
+
 ## 3. Tuning Options
 
 - `BlockCacheCapacity`: size of the block cache in bytes (default 8 MB); set to ~1/3 of available RAM.
@@ -35,6 +59,30 @@ LevelDB is a **lightweight, embedded key-value store** providing **ordered strin
 - `iter.Release()` must be called after use to close internal resources.
 - Filter: check `iter.Valid()` and `iter.Error()` before accessing `iter.Key()`/`iter.Value()`.
 - Prefix scans are efficient: `opt.Prefix = []byte("user:")`.
+
+```go
+// snapshot read: stable view even while other goroutines write
+snapshot, err := db.GetSnapshot()
+if err != nil {
+    return fmt.Errorf("snapshot: %w", err)
+}
+defer snapshot.Release()
+
+prefix := []byte("order:")
+iter := snapshot.NewIterator(util.BytesPrefix(prefix), nil)
+defer iter.Release() // mandatory: leaks memory and file descriptors
+
+for iter.Next() {
+    status, err := snapshot.Get(iter.Key(), nil) // resolves the value
+    if err != nil {
+        return fmt.Errorf("get %s: %w", iter.Key(), err)
+    }
+    log.Printf("%s = %s", iter.Key(), status)
+}
+if err := iter.Error(); err != nil {
+    return fmt.Errorf("iterate: %w", err)
+}
+```
 
 ## 5. Operations and Pitfalls
 

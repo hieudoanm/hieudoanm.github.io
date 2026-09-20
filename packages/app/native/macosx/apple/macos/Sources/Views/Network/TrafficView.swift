@@ -8,7 +8,7 @@ struct TrafficView: View {
     var body: some View {
         if let stats = viewModel.stats {
             ScrollView {
-                VStack(alignment: .leading, spacing: 14) {
+                VStack(alignment: .leading, spacing: Spacing.inset) {
                     speedsSection(stats: stats)
 
                     totalsSection
@@ -24,7 +24,7 @@ struct TrafficView: View {
     }
 
     private func speedsSection(stats: NetworkStats) -> some View {
-        HStack(spacing: 16) {
+        HStack(spacing: Spacing.lg) {
             speedColumn(
                 title: "Download",
                 symbol: "arrow.down",
@@ -44,11 +44,11 @@ struct TrafficView: View {
     }
 
     private func speedColumn(title: String, symbol: String, rate: Double?) -> some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: Spacing.xxs) {
             Label(title, systemImage: symbol)
                 .font(.caption)
                 .foregroundColor(.secondary)
-                .padding(.top, 8)
+                .padding(.top, Spacing.sm)
             Text(ByteFormatter.rate(rate))
                 .font(.system(.title3, design: .monospaced))
                 .fontWeight(.semibold)
@@ -57,11 +57,11 @@ struct TrafficView: View {
     }
 
     private var totalsSection: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: Spacing.xxs) {
             Text("Total (this session)")
                 .font(.caption)
                 .foregroundColor(.secondary)
-            HStack(spacing: 16) {
+            HStack(spacing: Spacing.lg) {
                 totalValue(label: "Received", bytes: viewModel.totalReceivedBytes)
                 totalValue(label: "Sent", bytes: viewModel.totalSentBytes)
             }
@@ -71,7 +71,7 @@ struct TrafficView: View {
     }
 
     private func totalValue(label: String, bytes: UInt64) -> some View {
-        VStack(alignment: .leading, spacing: 2) {
+        VStack(alignment: .leading, spacing: Spacing.hairline) {
             Text(label)
                 .font(.caption2)
                 .foregroundColor(.secondary)
@@ -83,7 +83,7 @@ struct TrafficView: View {
 
     private func interfacesSection(stats: NetworkStats) -> some View {
         let interfaces = relevantInterfaces(stats)
-        return VStack(alignment: .leading, spacing: 6) {
+        return VStack(alignment: .leading, spacing: Spacing.xs) {
             ForEach(Array(interfaces.enumerated()), id: \.element.sample.name) { _, interface in
                 NetworkInterfaceRow(interface: interface)
             }
@@ -99,7 +99,7 @@ struct TrafficView: View {
     }
 
     private var emptyState: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: Spacing.md) {
             Image(systemName: "network.slash")
                 .font(.system(size: 36))
                 .foregroundColor(.secondary)
@@ -108,7 +108,7 @@ struct TrafficView: View {
                 .foregroundColor(.secondary)
         }
         .frame(maxWidth: .infinity)
-        .padding(.vertical, 48)
+        .padding(.vertical, Spacing.giant)
     }
 
     private var accessibilityTotalsLabel: String {
@@ -126,21 +126,21 @@ private struct NetworkInterfaceRow: View {
     let interface: NetworkInterfaceStats
 
     var body: some View {
-        HStack(spacing: 10) {
+        HStack(spacing: Spacing.compact) {
             Image(systemName: interface.sample.kind.systemImage)
                 .font(.system(size: 15))
                 .foregroundColor(.secondary)
                 .frame(width: 20)
 
-            VStack(alignment: .leading, spacing: 2) {
-                HStack(spacing: 6) {
+            VStack(alignment: .leading, spacing: Spacing.hairline) {
+                HStack(spacing: Spacing.xs) {
                     Text(interface.sample.name)
                         .font(.system(.callout, design: .monospaced))
                     Text(interface.sample.kind.displayName)
                         .font(.caption2)
                         .foregroundColor(.secondary)
                 }
-                HStack(spacing: 4) {
+                HStack(spacing: Spacing.xxs) {
                     statusDot
                     Text(statusText)
                         .font(.caption2)
@@ -150,7 +150,7 @@ private struct NetworkInterfaceRow: View {
 
             Spacer()
 
-            VStack(alignment: .trailing, spacing: 2) {
+            VStack(alignment: .trailing, spacing: Spacing.hairline) {
                 Text("↓ \(ByteFormatter.rate(interface.receiveBytesPerSecond))")
                     .font(.system(.caption, design: .monospaced))
                     .monospacedDigit()
@@ -159,7 +159,7 @@ private struct NetworkInterfaceRow: View {
                     .monospacedDigit()
             }
         }
-        .padding(.vertical, 5)
+        .padding(.vertical, Spacing.tight)
         .accessibilityElement(children: .combine)
         .accessibilityLabel("\(accessibilityLabel)")
     }

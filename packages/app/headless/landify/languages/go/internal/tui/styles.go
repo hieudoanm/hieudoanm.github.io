@@ -3,19 +3,20 @@ package tui
 import (
 	"strings"
 
-	"github.com/charmbracelet/lipgloss"
+	"charm.land/lipgloss/v2"
+	compat "charm.land/lipgloss/v2/compat"
 )
 
 // Adaptive colour palette from the shared design tokens; Lip Gloss picks the
 // light or dark value from the terminal background automatically.
 var (
-	cPrimary = lipgloss.AdaptiveColor{Light: "#3B7DD8", Dark: "#4F9CFF"}
-	cAccent  = lipgloss.AdaptiveColor{Light: "#7C3AED", Dark: "#A78BFA"}
-	cMuted   = lipgloss.AdaptiveColor{Light: "#6B6B75", Dark: "#9A9AA5"}
-	cSurface = lipgloss.AdaptiveColor{Light: "#FFFFFF", Dark: "#26262C"}
-	cBorder  = lipgloss.AdaptiveColor{Light: "#D0D0D5", Dark: "#3A3A42"}
-	cError   = lipgloss.AdaptiveColor{Light: "#D64545", Dark: "#FF5C5C"}
-	cSuccess = lipgloss.AdaptiveColor{Light: "#2FA968", Dark: "#4FD68C"}
+	cPrimary = compat.AdaptiveColor{Light: lipgloss.Color("#3B7DD8"), Dark: lipgloss.Color("#4F9CFF")}
+	cAccent  = compat.AdaptiveColor{Light: lipgloss.Color("#7C3AED"), Dark: lipgloss.Color("#A78BFA")}
+	cMuted   = compat.AdaptiveColor{Light: lipgloss.Color("#6B6B75"), Dark: lipgloss.Color("#9A9AA5")}
+	cSurface = compat.AdaptiveColor{Light: lipgloss.Color("#FFFFFF"), Dark: lipgloss.Color("#26262C")}
+	cBorder  = compat.AdaptiveColor{Light: lipgloss.Color("#D0D0D5"), Dark: lipgloss.Color("#3A3A42")}
+	cError   = compat.AdaptiveColor{Light: lipgloss.Color("#D64545"), Dark: lipgloss.Color("#FF5C5C")}
+	cSuccess = compat.AdaptiveColor{Light: lipgloss.Color("#2FA968"), Dark: lipgloss.Color("#4FD68C")}
 )
 
 // Styles used by View. The editor and :command prompt share a rounded border;

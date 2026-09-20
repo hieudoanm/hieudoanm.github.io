@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 358.71 260.15" width="358.71" height="260.15" role="img" aria-labelledby="libya-title libya-desc">
+  <title id="libya-title">Libya hex map</title>
+  <desc id="libya-desc">Hexagon map with 22 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.57; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 12.70 9.07; }
+    .label { fill: #52525b; font: 600 10.28px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="QB">
+    <title>Al Qubbah</title>
+    <polygon class="tile" points="323.44,9.07 349.64,24.20 349.64,54.45 323.44,69.57 297.24,54.45 297.24,24.20" aria-label="Al Qubbah"/>
+    <text class="label" x="323.44" y="39.32">QB</text>
+  </g>
+  <g class="state" data-state="BU">
+    <title>Al Butnan</title>
+    <polygon class="tile" points="297.24,54.45 323.44,69.57 323.44,99.82 297.24,114.95 271.05,99.82 271.05,69.57" aria-label="Al Butnan"/>
+    <text class="label" x="297.24" y="84.70">BU</text>
+  </g>
+  <g class="state" data-state="JA">
+    <title>Al Jabal al Akhdar</title>
+    <polygon class="tile" points="271.05,9.07 297.24,24.20 297.24,54.45 271.05,69.57 244.85,54.45 244.85,24.20" aria-label="Al Jabal al Akhdar"/>
+    <text class="label" x="271.05" y="39.32">JA</text>
+  </g>
+  <g class="state" data-state="BA">
+    <title>Benghazi</title>
+    <polygon class="tile" points="271.05,99.82 297.24,114.95 297.24,145.20 271.05,160.32 244.85,145.20 244.85,114.95" aria-label="Benghazi"/>
+    <text class="label" x="271.05" y="130.07">BA</text>
+  </g>
+  <g class="state" data-state="AJ">
+    <title>Ajdabiya</title>
+    <polygon class="tile" points="244.85,54.45 271.05,69.57 271.05,99.82 244.85,114.95 218.65,99.82 218.65,69.57" aria-label="Ajdabiya"/>
+    <text class="label" x="244.85" y="84.70">AJ</text>
+  </g>
+  <g class="state" data-state="MJ">
+    <title>Al Marj</title>
+    <polygon class="tile" points="218.65,9.07 244.85,24.20 244.85,54.45 218.65,69.57 192.46,54.45 192.46,24.20" aria-label="Al Marj"/>
+    <text class="label" x="218.65" y="39.32">MJ</text>
+  </g>
+  <g class="state" data-state="JU">
+    <title>Al Jufrah</title>
+    <polygon class="tile" points="218.65,99.82 244.85,114.95 244.85,145.20 218.65,160.32 192.46,145.20 192.46,114.95" aria-label="Al Jufrah"/>
+    <text class="label" x="218.65" y="130.07">JU</text>
+  </g>
+  <g class="state" data-state="SR">
+    <title>Surt</title>
+    <polygon class="tile" points="192.46,54.45 218.65,69.57 218.65,99.82 192.46,114.95 166.26,99.82 166.26,69.57" aria-label="Surt"/>
+    <text class="label" x="192.46" y="84.70">SR</text>
+  </g>
+  <g class="state" data-state="MQ">
+    <title>Murzuq</title>
+    <polygon class="tile" points="192.46,145.20 218.65,160.32 218.65,190.57 192.46,205.70 166.26,190.57 166.26,160.32" aria-label="Murzuq"/>
+    <text class="label" x="192.46" y="175.45">MQ</text>
+  </g>
+  <g class="state" data-state="MB">
+    <title>Al Marqab</title>
+    <polygon class="tile" points="166.26,9.07 192.46,24.20 192.46,54.45 166.26,69.57 140.06,54.45 140.06,24.20" aria-label="Al Marqab"/>
+    <text class="label" x="166.26" y="39.32">MB</text>
+  </g>
+  <g class="state" data-state="SB">
+    <title>Sabha</title>
+    <polygon class="tile" points="166.26,99.82 192.46,114.95 192.46,145.20 166.26,160.32 140.06,145.20 140.06,114.95" aria-label="Sabha"/>
+    <text class="label" x="166.26" y="130.07">SB</text>
+  </g>
+  <g class="state" data-state="KF">
+    <title>Al Kufrah</title>
+    <polygon class="tile" points="166.26,190.57 192.46,205.70 192.46,235.95 166.26,251.07 140.06,235.95 140.06,205.70" aria-label="Al Kufrah"/>
+    <text class="label" x="166.26" y="220.82">KF</text>
+  </g>
+  <g class="state" data-state="MI">
+    <title>Misratah</title>
+    <polygon class="tile" points="140.06,54.45 166.26,69.57 166.26,99.82 140.06,114.95 113.86,99.82 113.86,69.57" aria-label="Misratah"/>
+    <text class="label" x="140.06" y="84.70">MI</text>
+  </g>
+  <g class="state" data-state="WD">
+    <title>Wadi al Hayaa</title>
+    <polygon class="tile" points="140.06,145.20 166.26,160.32 166.26,190.57 140.06,205.70 113.86,190.57 113.86,160.32" aria-label="Wadi al Hayaa"/>
+    <text class="label" x="140.06" y="175.45">WD</text>
+  </g>
+  <g class="state" data-state="JI">
+    <title>Al Jifarah</title>
+    <polygon class="tile" points="113.86,9.07 140.06,24.20 140.06,54.45 113.86,69.57 87.67,54.45 87.67,24.20" aria-label="Al Jifarah"/>
+    <text class="label" x="113.86" y="39.32">JI</text>
+  </g>
+  <g class="state" data-state="WS">
+    <title>Ash Shati'</title>
+    <polygon class="tile" points="113.86,99.82 140.06,114.95 140.06,145.20 113.86,160.32 87.67,145.20 87.67,114.95" aria-label="Ash Shati'"/>
+    <text class="label" x="113.86" y="130.07">WS</text>
+  </g>
+  <g class="state" data-state="MZ">
+    <title>Mizdah</title>
+    <polygon class="tile" points="87.67,54.45 113.86,69.57 113.86,99.82 87.67,114.95 61.47,99.82 61.47,69.57" aria-label="Mizdah"/>
+    <text class="label" x="87.67" y="84.70">MZ</text>
+  </g>
+  <g class="state" data-state="GT">
+    <title>Ghat</title>
+    <polygon class="tile" points="87.67,145.20 113.86,160.32 113.86,190.57 87.67,205.70 61.47,190.57 61.47,160.32" aria-label="Ghat"/>
+    <text class="label" x="87.67" y="175.45">GT</text>
+  </g>
+  <g class="state" data-state="TN">
+    <title>Tajura' wa an Nawahi al Arba</title>
+    <polygon class="tile" points="61.47,9.07 87.67,24.20 87.67,54.45 61.47,69.57 35.27,54.45 35.27,24.20" aria-label="Tajura' wa an Nawahi al Arba"/>
+    <text class="label" x="61.47" y="39.32">TN</text>
+  </g>
+  <g class="state" data-state="GD">
+    <title>Ghadamis</title>
+    <polygon class="tile" points="61.47,99.82 87.67,114.95 87.67,145.20 61.47,160.32 35.27,145.20 35.27,114.95" aria-label="Ghadamis"/>
+    <text class="label" x="61.47" y="130.07">GD</text>
+  </g>
+  <g class="state" data-state="ZA">
+    <title>Az Zawiyah</title>
+    <polygon class="tile" points="35.27,54.45 61.47,69.57 61.47,99.82 35.27,114.95 9.07,99.82 9.07,69.57" aria-label="Az Zawiyah"/>
+    <text class="label" x="35.27" y="84.70">ZA</text>
+  </g>
+  <g class="state" data-state="NQ">
+    <title>An Nuqat al Khams</title>
+    <polygon class="tile" points="35.27,145.20 61.47,160.32 61.47,190.57 35.27,205.70 9.07,190.57 9.07,160.32" aria-label="An Nuqat al Khams"/>
+    <text class="label" x="35.27" y="175.45">NQ</text>
+  </g>
+</svg>

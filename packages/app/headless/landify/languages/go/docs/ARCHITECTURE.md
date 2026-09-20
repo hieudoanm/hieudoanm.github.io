@@ -11,6 +11,7 @@
 | Desktop GUI  | `fyne.io/fyne/v2` (behind the `gui` tag)  |
 | Terminal UI  | charmbracelet bubbletea + bubbles         |
 | Assets       | `embed.FS` via `//go:embed`               |
+| MCP          | Hand-rolled JSON-RPC 2.0 over stdio        |
 | Testing      | Standard `go test`, table-driven tests    |
 
 No network calls, no external services. The default `landify` binary is pure
@@ -31,7 +32,8 @@ go/
 │   ├── themes.go        # landify themes
 │   ├── serve.go         # landify serve [-d dir] [-p port]
 │   ├── tui.go           # landify tui [path] — terminal editor
-│   └── studio.go        # landify studio [path]
+│   ├── studio.go        # landify studio [path]
+│   └── mcp.go           # landify mcp serve [--root]
 ├── internal/landify/    # Schema, validation, rendering, themes, scaffolding
 │   ├── config.go        # Config/Theme structs, Load/LoadFile (strict decode)
 │   ├── sections.go      # Per-page-type section types (Pricing, App, FAQ, …)
@@ -58,6 +60,16 @@ go/
 ├── internal/tui/        # Terminal editor (bubbletea, ships in every build)
 │   ├── tui.go           # model, Run, Update/View loop, editor + command modes
 │   └── action.go        # :command parsing, save/validate/build/generate/theme
+├── internal/mcp/       # Model Context Protocol server (no SDK dependency)
+│   ├── protocol.go      # JSON-RPC 2.0 envelope + MCP result types
+│   ├── transport.go     # newline-delimited stdio framing, ctx-aware read loop
+│   ├── server.go        # method dispatch, tools/list, tools/call
+│   ├── workspace.go     # Workspace: root-confined Read/Write/Exists
+│   ├── tools.go         # tool catalogue (names, descriptions, JSON Schemas)
+│   ├── args.go          # argument decoding + yaml/path source resolution
+│   ├── handlers.go      # scaffold, validate handlers + result helpers
+│   ├── handlers_catalog.go # types, themes handlers + layout descriptions
+│   └── handlers_build.go# build, theme_tokens handlers
 ├── static/              # Embedded templates, partials, examples
 │   ├── templates/       # template-<type>.tmpl — one per page type (12)
 │   ├── partials/        # base-css, header, footer
@@ -166,6 +178,43 @@ validate → render (the same path as `landify build`), and `doSave` /
 `doGenerate` / `doTheme` mutate state. Like the studio, the TUI is a front-end
 to the CLI pipeline — anything it builds passes strict validation first.
 
+### Model Context Protocol (`internal/mcp/`)
+
+`landify mcp serve` runs an MCP server on stdio so an LLM client can drive the
+same pipeline the CLI uses. The transport is newline-delimited
+[JSON-RPC 2.0](https://www.jsonrpc.org/specification): one JSON object per line
+in each direction, with `initialize`, `ping`, `tools/list` and `tools/call`
+implemented by hand. There is no MCP SDK dependency.
+
+```txt
+MCP client → stdin line (JSON-RPC 2.0)
+  → Server.handleMessage: validate envelope, drop notifications
+  → tools/call: decode args → Workspace (root-confined) → internal/landify
+  ← ToolResult{content:[{type:"text",text:<indented JSON>}],isError?}
+```
+
+A model chooses every path that reaches a tool, so `workspace.go` is the
+security boundary: the root is canonicalised once at startup and every read,
+write and stat must stay inside it. Absolute paths and `..` escapes are rejected
+rather than rewritten, so a bug in a client surfaces as an error instead of
+silently serving a different file. Symlinks are resolved before the containment
+check — a link inside the root pointing out of it is refused, a link that stays
+inside is allowed — because a lexical prefix check is otherwise bypassable with
+a single symlink. `landify_scaffold` additionally refuses to replace an existing
+file without `overwrite`.
+
+Failures are split by audience. Framing problems — bad JSON, a wrong `jsonrpc`
+version, an unknown method or tool, undecodable params — are JSON-RPC errors. A
+tool that fails for a domain reason (an unknown theme, an escaping path) returns
+`isError: true` with readable text, and a config that fails validation returns
+the same `validateResult` payload `landify validate` produces, so the model can
+read the problems and fix them.
+
+The six tools map onto the existing pipeline: `landify_scaffold` →
+`Placeholder`, `landify_validate` → `Load` + `Errors`, `landify_build` →
+`Render`, `landify_themes`/`landify_theme_tokens` → `Themes`/`Tokens`, and
+`landify_types` returns the 12 layouts with a one-line description each.
+
 ## Configuration
 
 Landify reads no environment variables and writes no config files. Everything
@@ -182,3 +231,4 @@ is expressed through the YAML content file and CLI flags:
 | `--port` / `-p` (serve)   | `8080`         | Listen port (127.0.0.1)       |
 | `[path]` (studio)         | (new product)  | YAML file to open in the GUI  |
 | `[path]` (tui)            | `landify.yaml` | YAML file to open in terminal |
+| `--root` (mcp serve)      | `.`            | Directory the MCP tools may touch |

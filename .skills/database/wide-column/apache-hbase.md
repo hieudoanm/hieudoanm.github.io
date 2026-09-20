@@ -28,6 +28,18 @@ Apache HBase is a **distributed, BigTable-style NoSQL database** running on **Ha
 - Compression (LZO/LZ4/ZSTD) per family in `COMPRESSION` column.
 - TTL per family for automatic expiry of old data (`TTL`), and `IN_MEMORY` for hot families (default off).
 
+```bash
+# hbase shell -n runs non-interactively; in 2.x every table lives in a namespace
+create_namespace 'shop'
+# two families, not many columns: d is the hot scalar payload, i the sparse lookup index
+create 'shop.orders',
+       {NAME => 'd', VERSIONS => 1, COMPRESSION => 'ZSTD', TTL => 7776000},   # 90 days
+       {NAME => 'i', VERSIONS => 1, COMPRESSION => 'SNAPPY'},
+       SPLITS => ['03-', '07-', '0b-']                    # pre-split on the salt prefix
+# retention and compression are family properties, adjustable after creation
+alter 'shop.orders', {NAME => 'd', TTL => 2592000}
+```
+
 ## 4. Reads and Writes
 
 - `get` needs row key; `scan` supports range by start/stop row; use `setFilter`/filters (`SingleColumnValueFilter`, `PrefixFilter`) for filtering.
@@ -35,12 +47,45 @@ Apache HBase is a **distributed, BigTable-style NoSQL database** running on **Ha
 - **Batching**: use multi-get/multi-put to reduce RPC round trips.
 - **Co-Processor**: you can add a custom observer, but mostly avoid unless needed for complex computed columns.
 
+```java
+try (Connection connection = ConnectionFactory.createConnection(conf);
+     Table table = connection.getTable(TableName.valueOf("shop.orders"))) {
+  // get() needs the exact row key; read only the families and columns you need
+  Get byKey = new Get(Bytes.toBytes("03-7f3c1e4a")).addFamily(Bytes.toBytes("d"));
+  for (Result row : table.get(byKey)) { /* ... */ }
+
+  // scan() is a range over row-key order: the stop row is inclusive, filters run server-side
+  Scan range = new Scan().withStartRow(Bytes.toBytes("03-7f3c1e4a")).withStopRow(Bytes.toBytes("03-7f3c1e4b"), true).setCaching(500);
+  try (ResultScanner rows = table.getScanner(range)) { /* ... */ }
+
+  // one RPC for many puts - BufferedMutator replaces the 1.x HTable.put(List)
+  try (BufferedMutator mutator = connection.getBufferedMutator(TableName.valueOf("shop.orders"))) {
+    mutator.mutate(new Put(Bytes.toBytes("03-7f3c1e4a")).addColumn(Bytes.toBytes("d"), Bytes.toBytes("total"), Bytes.toBytes("129.90")));
+  }
+}
+```
+
 ## 5. Operations and Tuning
 
 - **Compactions**: L0 + major compaction in the background; monitor `compactions` status; schedule idle-time major compactions.
 - **Block cache**: `hbase.blockcache` and in-table `BLOCKCACHE` for hot reads; `hfile.block.cache.size` (~40% recommended) tunes cache vs memstore.
 - RegionServer heap: set in `hbase-env.sh`; monitor GC and `HBase` UI for region size/regions-per-server.
 - Snapshot backup: `snapshot` command provides point-in-time copy on HDFS; integrate with HDFS-level backup.
+
+```yaml
+services:
+  hbase:
+    image: openeuler/hbase:2.6.5-oe2403sp3
+    environment:
+      - HBASE_MANAGES_ZK=true # single-container cluster runs its own ZooKeeper
+    ports:
+      - '16010:16010' # HMaster web UI and master RPC
+      - '2181:2181' # ZooKeeper
+    volumes:
+      - hbase_data:/hbase-data
+```
+
+Runnable: [`examples/docker/compose/databases/columns/apache-hbase/docker-compose.yaml`](../../../examples/docker/compose/databases/columns/apache-hbase/docker-compose.yaml)
 
 ## 6. Common Pitfalls
 

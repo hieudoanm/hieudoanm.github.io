@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 344.29 292.40" width="344.29" height="292.40" role="img" aria-labelledby="australia-title australia-desc">
+  <title id="australia-title">Australia hex map</title>
+  <desc id="australia-desc">Hexagon map with 11 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.89; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 14.28 10.20; }
+    .label { fill: #52525b; font: 600 11.56px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="NS">
+    <title>Lord Howe Island</title>
+    <polygon class="tile inset" points="304.65,61.20 334.09,78.20 334.09,112.20 304.65,129.20 275.20,112.20 275.20,78.20" aria-label="Lord Howe Island"/>
+    <text class="label" x="304.65" y="95.20">NS</text>
+  </g>
+  <g class="state" data-state="TAS">
+    <title>Tasmania</title>
+    <polygon class="tile inset" points="216.31,214.20 245.76,231.20 245.76,265.20 216.31,282.20 186.87,265.20 186.87,231.20" aria-label="Tasmania"/>
+    <text class="label" x="216.31" y="248.20">TAS</text>
+  </g>
+  <g class="state" data-state="JB">
+    <title>Jervis Bay Territory</title>
+    <polygon class="tile" points="186.87,61.20 216.31,78.20 216.31,112.20 186.87,129.20 157.42,112.20 157.42,78.20" aria-label="Jervis Bay Territory"/>
+    <text class="label" x="186.87" y="95.20">JB</text>
+  </g>
+  <g class="state" data-state="QLD">
+    <title>Queensland</title>
+    <polygon class="tile" points="157.42,10.20 186.87,27.20 186.87,61.20 157.42,78.20 127.98,61.20 127.98,27.20" aria-label="Queensland"/>
+    <text class="label" x="157.42" y="44.20">QLD</text>
+  </g>
+  <g class="state" data-state="ACT">
+    <title>Australian Capital Territory</title>
+    <polygon class="tile" points="157.42,112.20 186.87,129.20 186.87,163.20 157.42,180.20 127.98,163.20 127.98,129.20" aria-label="Australian Capital Territory"/>
+    <text class="label" x="157.42" y="146.20">ACT</text>
+  </g>
+  <g class="state" data-state="NSW">
+    <title>New South Wales</title>
+    <polygon class="tile" points="127.98,61.20 157.42,78.20 157.42,112.20 127.98,129.20 98.53,112.20 98.53,78.20" aria-label="New South Wales"/>
+    <text class="label" x="127.98" y="95.20">NSW</text>
+  </g>
+  <g class="state" data-state="NT">
+    <title>Northern Territory</title>
+    <polygon class="tile" points="98.53,10.20 127.98,27.20 127.98,61.20 98.53,78.20 69.09,61.20 69.09,27.20" aria-label="Northern Territory"/>
+    <text class="label" x="98.53" y="44.20">NT</text>
+  </g>
+  <g class="state" data-state="VIC">
+    <title>Victoria</title>
+    <polygon class="tile" points="98.53,112.20 127.98,129.20 127.98,163.20 98.53,180.20 69.09,163.20 69.09,129.20" aria-label="Victoria"/>
+    <text class="label" x="98.53" y="146.20">VIC</text>
+  </g>
+  <g class="state" data-state="MI">
+    <title>Macquarie Island</title>
+    <polygon class="tile inset" points="98.53,214.20 127.98,231.20 127.98,265.20 98.53,282.20 69.09,265.20 69.09,231.20" aria-label="Macquarie Island"/>
+    <text class="label" x="98.53" y="248.20">MI</text>
+  </g>
+  <g class="state" data-state="SA">
+    <title>South Australia</title>
+    <polygon class="tile" points="69.09,61.20 98.53,78.20 98.53,112.20 69.09,129.20 39.64,112.20 39.64,78.20" aria-label="South Australia"/>
+    <text class="label" x="69.09" y="95.20">SA</text>
+  </g>
+  <g class="state" data-state="WA">
+    <title>Western Australia</title>
+    <polygon class="tile" points="39.64,10.20 69.09,27.20 69.09,61.20 39.64,78.20 10.20,61.20 10.20,27.20" aria-label="Western Australia"/>
+    <text class="label" x="39.64" y="44.20">WA</text>
+  </g>
+</svg>

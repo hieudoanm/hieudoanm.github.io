@@ -33,11 +33,11 @@ struct DiscoverView: View {
                 .font(.largeTitle.bold())
             Spacer()
         }
-        .padding(20)
+        .padding(Spacing.xl)
     }
 
     private var searchField: some View {
-        HStack(spacing: 8) {
+        HStack(spacing: Spacing.sm) {
             Image(systemName: "magnifyingglass")
                 .foregroundStyle(.secondary)
                 .accessibilityHidden(true)
@@ -58,7 +58,7 @@ struct DiscoverView: View {
                 .buttonStyle(.borderless)
             }
         }
-        .padding(14)
+        .padding(Spacing.inset)
         .onChange(of: viewModel.searchQuery) { _ in
             viewModel.search()
         }
@@ -83,9 +83,9 @@ struct DiscoverView: View {
     }
 
     private var emptyPrompt: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: Spacing.md) {
             Image(systemName: "magnifyingglass")
-                .font(.system(size: 44))
+                .font(Typography.emptyStateTitle)
                 .foregroundStyle(.secondary)
             Text("Search Homebrew packages")
                 .font(.headline)

@@ -85,8 +85,11 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-A stripped-down Codex / Claude client — talk to any AI, switch models on the
-fly, and keep your conversations organised without the cruft.
+A stripped-down Codex / Claude client without the cruft.
+
+- Talk to any AI.
+- Switch models on the fly.
+- Keep your conversations organised.
 
 ---
 
@@ -137,7 +140,7 @@ All the pieces you need for a focused AI chat workflow.
 
 ---
 
-# First run
+## First run
 
 - **macOS:** Right-click the `.dmg` and choose **Open** to bypass Gatekeeper.
 - **Linux AppImage:** `chmod +x chat.AppImage && ./chat.AppImage`

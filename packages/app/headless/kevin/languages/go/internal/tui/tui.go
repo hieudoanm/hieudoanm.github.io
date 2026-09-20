@@ -6,8 +6,8 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/charmbracelet/bubbles/textinput"
-	tea "github.com/charmbracelet/bubbletea"
+	"charm.land/bubbles/v2/textinput"
+	tea "charm.land/bubbletea/v2"
 
 	"github.com/hieudoanm/kevin/internal/db"
 )
@@ -110,7 +110,7 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 				m.refresh()
 			}
 			return m, nil
-		case " ":
+		case "space":
 			if m.focus == focusTable {
 				m.editSelected()
 			}
@@ -129,7 +129,7 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	return m, nil
 }
 
-func (m model) View() string {
+func (m model) View() tea.View {
 	var b strings.Builder
 	fmt.Fprintf(&b, "kevin — Key/Value (%d keys)\n", m.kv.Len())
 	b.WriteString(strings.Repeat("─", m.lineWidth()))
@@ -159,7 +159,7 @@ func (m model) View() string {
 		b.WriteRune('\n')
 	}
 	b.WriteString("tab cycle focus · enter set/edit · ↑/↓ move · d delete · D delete-all · r refresh · q quit")
-	return b.String()
+	return tea.NewView(b.String())
 }
 
 func (m *model) rebuild() {
@@ -311,7 +311,7 @@ func (m *model) columnWidths() (int, int) {
 }
 
 func (m model) field(in textinput.Model, w int) string {
-	in.Width = w
+	in.SetWidth(w)
 	view := in.View()
 	if view == "" {
 		return strings.Repeat(" ", w)

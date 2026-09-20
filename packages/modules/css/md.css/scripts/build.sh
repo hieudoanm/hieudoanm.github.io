@@ -12,8 +12,8 @@ clean() {
 build() {
   mkdir -p "$DIST"
 
-  "$SASS" src/md.scss "$DIST/md.css"
-  "$SASS" --style=compressed src/md.scss "$DIST/md.min.css"
+  "$SASS" --source-map src/md.scss "$DIST/md.css"
+  "$SASS" --source-map --style=compressed src/md.scss "$DIST/md.min.css"
 }
 
 cd "$ROOT"

@@ -1,15 +1,12 @@
 use axum::{
+    Json,
+    extract::Request,
     http::{Method, StatusCode},
     middleware::Next,
     response::{IntoResponse, Response},
-    Json,
-    extract::Request,
 };
 
-pub async fn require_json_content_type(
-    request: Request,
-    next: Next,
-) -> Response {
+pub async fn require_json_content_type(request: Request, next: Next) -> Response {
     if request.method() == Method::POST
         || request.method() == Method::PATCH
         || request.method() == Method::PUT

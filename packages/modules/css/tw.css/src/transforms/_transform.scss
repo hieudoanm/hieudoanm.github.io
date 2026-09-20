@@ -10,6 +10,7 @@
   --tw-skew-y: 0deg;
   --tw-scale-x: 1;
   --tw-scale-y: 1;
+
   transform: #{$transform-composite};
 }
 
@@ -21,6 +22,7 @@
   --tw-skew-y: 0deg;
   --tw-scale-x: 1;
   --tw-scale-y: 1;
+
   transform: #{$transform-composite};
 }
 
@@ -32,6 +34,7 @@
   --tw-skew-y: 0deg;
   --tw-scale-x: 1;
   --tw-scale-y: 1;
+
   transform: #{$transform-composite-gpu};
 }
 

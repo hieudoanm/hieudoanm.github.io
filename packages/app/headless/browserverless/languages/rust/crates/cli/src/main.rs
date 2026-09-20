@@ -104,6 +104,12 @@ enum Commands {
         observe: u64,
     },
 
+    /// Model Context Protocol server exposing rendering as tools
+    Mcp {
+        #[command(subcommand)]
+        command: McpCommand,
+    },
+
     /// Start an HTTP server exposing the headless rendering web API
     Serve {
         /// Address to bind, e.g. 127.0.0.1:8080
@@ -123,6 +129,25 @@ enum Commands {
         height: u32,
 
         /// Per-request load timeout in milliseconds
+        #[arg(long, default_value = "30000")]
+        timeout: u64,
+    },
+}
+
+/// The `browserverless mcp` command tree.
+#[derive(Subcommand)]
+enum McpCommand {
+    /// Start the browserverless MCP server on stdio
+    Serve {
+        /// Viewport width
+        #[arg(long, default_value = "1280")]
+        width: u32,
+
+        /// Viewport height
+        #[arg(long, default_value = "720")]
+        height: u32,
+
+        /// Load timeout in milliseconds
         #[arg(long, default_value = "30000")]
         timeout: u64,
     },
@@ -232,6 +257,18 @@ fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
 
             println!("peak RSS: {} MB", peak_rss_mb());
             println!("elapsed: {:.3} s", started.elapsed().as_secs_f64());
+        }
+
+        Commands::Mcp {
+            command:
+                McpCommand::Serve {
+                    width,
+                    height,
+                    timeout,
+                },
+        } => {
+            // Diagnostics go to stderr so stdout carries nothing but frames.
+            browserverless_cli::mcp::run(width, height, timeout, &mut std::io::stderr())?;
         }
 
         Commands::Serve {

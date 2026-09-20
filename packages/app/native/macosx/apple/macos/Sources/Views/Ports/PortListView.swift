@@ -36,9 +36,9 @@ struct PortListView: View {
     }
 
     private func errorState(_ message: String) -> some View {
-        VStack(spacing: 8) {
+        VStack(spacing: Spacing.sm) {
             Image(systemName: "exclamationmark.triangle")
-                .font(.system(size: 28, weight: .regular))
+                .font(Typography.emptyStateIcon)
                 .foregroundColor(.secondary)
                 .accessibilityHidden(true)
             Text(message)
@@ -49,12 +49,12 @@ struct PortListView: View {
                 .multilineTextAlignment(.center)
         }
         .frame(maxWidth: .infinity)
-        .padding(.vertical, 40)
+        .padding(.vertical, Spacing.huge)
         .accessibilityElement(children: .combine)
     }
 
     private var loadingState: some View {
-        VStack(spacing: 8) {
+        VStack(spacing: Spacing.sm) {
             ProgressView()
                 .controlSize(.small)
             Text("Loading ports…")
@@ -62,14 +62,14 @@ struct PortListView: View {
                 .foregroundColor(.secondary)
         }
         .frame(maxWidth: .infinity)
-        .padding(.vertical, 40)
+        .padding(.vertical, Spacing.huge)
         .accessibilityElement(children: .combine)
     }
 
     private var emptyState: some View {
-        VStack(spacing: 8) {
+        VStack(spacing: Spacing.sm) {
             Image(systemName: "cable.connector")
-                .font(.system(size: 28, weight: .regular))
+                .font(Typography.emptyStateIcon)
                 .foregroundColor(.secondary)
                 .accessibilityHidden(true)
             Text(title)
@@ -80,7 +80,7 @@ struct PortListView: View {
                 .multilineTextAlignment(.center)
         }
         .frame(maxWidth: .infinity)
-        .padding(.vertical, 40)
+        .padding(.vertical, Spacing.huge)
         .accessibilityElement(children: .combine)
     }
 

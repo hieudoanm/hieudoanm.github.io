@@ -15,19 +15,19 @@ struct WatchfaceView: View {
         VStack(spacing: 0) {
             faceContent
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .animation(.linear(duration: 1), value: now)
+                .animation(Motion.linear(Motion.face), value: now)
 
             Divider()
 
-            HStack(spacing: 16) {
-                faceButton("DOT", isSelected: face == .dot) {
+            HStack(spacing: Spacing.lg) {
+                ChipButton(title: "DOT", isSelected: face == .dot) {
                     face = .dot
                 }
-                faceButton("MINIMAL", isSelected: face == .minimal) {
+                ChipButton(title: "MINIMAL", isSelected: face == .minimal) {
                     face = .minimal
                 }
             }
-            .padding(.vertical, 12)
+            .padding(.vertical, Spacing.md)
         }
         .task {
             while !Task.isCancelled {
@@ -49,14 +49,14 @@ struct WatchfaceView: View {
 
     private var analogFace: some View {
         GeometryReader { geometry in
-            let minDimension = min(geometry.size.width, geometry.size.height)
+            let minDimension = ClockFaceSizing.face(in: geometry.size)
             ZStack {
                 Circle()
                     .fill(Color(nsColor: .controlBackgroundColor))
                     .overlay {
-                        Circle().stroke(Color.primary.opacity(0.15), lineWidth: 2)
+                        Circle().stroke(Palette.stroke, lineWidth: 2)
                     }
-                    .shadow(color: .black.opacity(0.15), radius: 12, y: 6)
+                    .shadow(color: Palette.shadow, radius: 12, y: 6)
 
                 handDot(
                     angle: hourAngle,
@@ -68,27 +68,29 @@ struct WatchfaceView: View {
                     angle: minuteAngle,
                     radius: minDimension * 0.34,
                     size: 18,
-                    color: Color.primary.opacity(0.6)
+                    color: Palette.muted
                 )
                 handDot(
                     angle: secondAngle,
                     radius: minDimension * 0.38,
                     size: 10,
-                    color: Color.primary.opacity(0.4)
+                    color: Palette.faint
                 )
 
                 Circle()
-                    .fill(Color.primary.opacity(0.2))
+                    .fill(Palette.pin)
                     .frame(width: 5, height: 5)
             }
+            .frame(width: minDimension, height: minDimension)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
-        .padding(20)
+        .padding(Spacing.xl)
     }
 
     private func handDot(angle: Double, radius: CGFloat, size: CGFloat, color: Color) -> some View {
         Circle()
             .fill(color)
-            .shadow(color: .black.opacity(0.15), radius: 4, y: 2)
+            .shadow(color: Palette.shadow, radius: 4, y: 2)
             .frame(width: size, height: size)
             .offset(
                 x: radius * sin(angle * .pi / 180),
@@ -98,27 +100,27 @@ struct WatchfaceView: View {
 
     private var minimalFace: some View {
         VStack(spacing: 0) {
-            HStack(alignment: .firstTextBaseline, spacing: 8) {
+            HStack(alignment: .firstTextBaseline, spacing: Spacing.sm) {
                 Text(hourText)
                     .foregroundColor(.primary)
                 Text(":")
-                    .foregroundColor(.secondary.opacity(0.4))
+                    .foregroundColor(Palette.dimmed)
                 Text(minuteText)
-                    .foregroundColor(Color.primary.opacity(0.8))
+                    .foregroundColor(Palette.lead)
                 Text(":")
-                    .foregroundColor(.secondary.opacity(0.4))
+                    .foregroundColor(Palette.dimmed)
                 Text(secondText)
                     .foregroundColor(.secondary)
             }
-            .font(.system(size: 52, weight: .regular, design: .monospaced))
+            .font(Typography.digitalReadout)
             .monospacedDigit()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .padding(24)
+        .padding(Spacing.xxl)
         .overlay {
             Circle()
-                .stroke(Color.primary.opacity(0.15), lineWidth: 2)
-                .padding(20)
+                .stroke(Palette.stroke, lineWidth: 2)
+                .padding(Spacing.xl)
         }
     }
 
@@ -150,17 +152,4 @@ struct WatchfaceView: View {
         Double(Calendar.current.component(.second, from: now)) * 6
     }
 
-    private func faceButton(_ title: String, isSelected: Bool, action: @escaping () -> Void) -> some View {
-        Button(action: action) {
-            Text(title)
-                .font(.system(.caption, design: .monospaced))
-                .tracking(2)
-                .padding(.horizontal, 20)
-                .padding(.vertical, 7)
-                .background(isSelected ? Color.accentColor : Color.primary.opacity(0.08), in: Capsule())
-                .foregroundColor(isSelected ? .white : .primary)
-        }
-        .buttonStyle(.plain)
-        .accessibilityLabel("\(title) face")
-    }
 }

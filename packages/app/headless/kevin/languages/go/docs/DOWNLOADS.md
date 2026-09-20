@@ -76,9 +76,12 @@ See [PACKAGING](PACKAGING) for the CI artifact pipeline and
 ## About
 
 KeVIN is a tiny in-memory key/value store that speaks the wire protocol Redis
-already understands. Everything lives in RAM — reads and writes never touch the
-disk — and one connection gets its own goroutine. It is the Go counterpart of
-the C and C++ implementations in this package, kept behaviour-identical.
+already understands.
+
+- **Everything lives in RAM** — reads and writes never touch the disk.
+- **One connection, one goroutine** — every client gets its own.
+- **Go counterpart** — of the C and C++ implementations in this package, kept
+  behaviour-identical.
 
 ## Features
 

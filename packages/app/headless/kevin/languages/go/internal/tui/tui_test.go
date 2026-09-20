@@ -3,7 +3,7 @@ package tui
 import (
 	"testing"
 
-	tea "github.com/charmbracelet/bubbletea"
+	tea "charm.land/bubbletea/v2"
 
 	"github.com/hieudoanm/kevin/internal/db"
 )
@@ -113,7 +113,7 @@ func TestConfirmDeleteAllRequiresTwoPresses(t *testing.T) {
 	m := newModel(kv)
 	m.focus = focusTable
 
-	got, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune("D")})
+	got, _ := m.Update(tea.KeyPressMsg{Code: 'D'})
 	m, _ = got.(model)
 	if !m.confirmDelete {
 		t.Fatalf("first D should arm confirmation")
@@ -122,7 +122,7 @@ func TestConfirmDeleteAllRequiresTwoPresses(t *testing.T) {
 		t.Fatalf("store should be untouched before second D, got %d keys", kv.Len())
 	}
 
-	got, _ = m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune("D")})
+	got, _ = m.Update(tea.KeyPressMsg{Code: 'D'})
 	m, _ = got.(model)
 	if m.confirmDelete {
 		t.Fatalf("second D should execute the delete")
@@ -179,7 +179,7 @@ func TestCycleFocus(t *testing.T) {
 func TestQuitOnlyFromTable(t *testing.T) {
 	m := newModel(db.New())
 
-	got, _ := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune("q")})
+	got, _ := m.Update(tea.KeyPressMsg{Code: 'q', Text: "q"})
 	typing, _ := got.(model)
 	if typing.keyIn.Value() != "q" {
 		t.Fatalf("typing q in the key field should be input, got %q", typing.keyIn.Value())
@@ -187,7 +187,7 @@ func TestQuitOnlyFromTable(t *testing.T) {
 
 	m = newModel(db.New())
 	m.focus = focusTable
-	_, cmd := m.Update(tea.KeyMsg{Type: tea.KeyRunes, Runes: []rune("q")})
+	_, cmd := m.Update(tea.KeyPressMsg{Code: 'q'})
 	if cmd == nil {
 		t.Fatalf("q in the table should quit")
 	}

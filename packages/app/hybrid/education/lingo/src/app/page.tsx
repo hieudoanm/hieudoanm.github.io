@@ -4,6 +4,7 @@ import { GamesTemplate } from '@/components/templates/GamesTemplate';
 import { NextPage } from 'next';
 import {
   PiBank,
+  PiBrain,
   PiCalendar,
   PiCards,
   PiEye,
@@ -12,6 +13,7 @@ import {
   PiMathOperations,
   PiMusicNote,
   PiPalette,
+  PiTreeStructure,
   PiUsers,
 } from 'react-icons/pi';
 
@@ -28,6 +30,20 @@ const ITEMS = [
     description: 'Interactive periodic table of elements',
     icon: PiFlask,
     href: '/chemistry/',
+    group: 'STEM',
+  },
+  {
+    name: 'Neuroscience',
+    description: 'Computational models of perception and decision-making',
+    icon: PiBrain,
+    href: '/neuroscience/',
+    group: 'STEM',
+  },
+  {
+    name: 'Engineering',
+    description: 'Data structures and algorithms, visualised step by step',
+    icon: PiTreeStructure,
+    href: '/engineering/',
     group: 'STEM',
   },
   {

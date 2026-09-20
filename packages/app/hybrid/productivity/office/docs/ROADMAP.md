@@ -35,7 +35,23 @@
 - [x] Lite to-do list (`/lite/tasks/`) — Google Tasks style
 - [x] Empty, signed-out, and loading states
 
-## v1.3 — Data & Polish
+## v1.3 — Keynotes ✅
+
+Migrated in from the standalone `keynotes` package.
+
+- [x] Deck gallery with templates and import (`/keynotes/`)
+- [x] Template gallery (`/keynotes/templates/`)
+- [x] WYSIWYG slide editor with ruler, guides, multi-select, undo/redo, autosave
+- [x] Formatting panel: fills, strokes, effects, arrange, group, position
+- [x] Content objects: images, media, charts, tables, diagrams, icons, equations
+- [x] Entrance / emphasis / exit animations with triggers, timing, motion paths
+- [x] Slide master, sections, speaker notes, outline view
+- [x] Present mode, presenter view, Q&A, rehearsal summary
+- [x] Handouts (`/keynotes/handouts/[id]/`) and print / PDF (`/keynotes/print/[id]/`)
+- [x] Export to native JSON, PPTX (mock), HTML, PNG, SVG
+- [x] IndexedDB persistence (`office-keynotes-db` via idb)
+
+## v1.4 — Data & Polish
 
 - [ ] Add more event categories
 - [ ] Improve event detail modal

@@ -16,6 +16,7 @@
 ```txt
 go/
 ├── main.go                     # Entrypoint (package main), CLI dispatch
+├── mcp.go                      # `mcp` command group (serve, help)
 ├── go.mod / go.sum             # Module definition
 ├── Makefile                    # build, test, format, lint, build-all, coverage
 ├── Dockerfile                  # Multi-stage scratch image
@@ -25,6 +26,15 @@ go/
 │   ├── headless/               # go-webengine wrapper (Browser, Scrape, Screenshot)
 │   │   ├── headless.go
 │   │   └── headless_test.go
+│   ├── mcp/                    # Model Context Protocol server over stdio
+│   │   ├── protocol.go         # JSON-RPC 2.0 + MCP envelope types
+│   │   ├── server.go           # Request dispatch, stdio transport
+│   │   ├── renderer.go         # Renderer seam + in-process backend
+│   │   ├── httprenderer.go     # --addr HTTP proxy backend
+│   │   ├── tools.go            # Tool schemas and registry
+│   │   ├── handlers.go         # Tool implementations
+│   │   ├── args.go             # Argument decoding and validation
+│   │   └── *_test.go           # Protocol, both backends, validation
 │   ├── server/                 # HTTP handler, server lifecycle, OpenAPI, docs page
 │   │   ├── handler.go
 │   │   ├── handler_test.go
@@ -36,7 +46,9 @@ go/
 │   └── version/
 │       └── version.go          # var Version (override with -ldflags)
 ├── tests/
-│   └── integration_test.go     # E2E: real binary, live serve API + CLI
+│   ├── integration_test.go     # E2E: real binary, live serve API + CLI
+│   ├── cli_test.go
+│   └── mcp_test.go             # E2E: real binary, MCP over stdio pipes
 ├── docs/                       # These documents
 └── AGENTS.md / README.md
 ```
@@ -45,7 +57,8 @@ go/
 
 `main.go` is the module root (`package main`). It:
 
-1. Dispatches to `screenshot`, `scrape`, `serve`, `health`, `help`, `version`
+1. Dispatches to `screenshot`, `scrape`, `serve`, `health`, `mcp`, `help`,
+   `version`
 2. Parses flags with `flag.NewFlagSet` per subcommand
 3. Creates an `internal/headless.Browser` (or passes it to `internal/server.Serve`)
 4. `health` performs an HTTP GET against `/api/v1/health` — used for Docker
@@ -90,6 +103,27 @@ x-browserverless-memory-kb    heap allocation increase for the request
 x-browserverless-duration-ms  wall time in milliseconds
 ```
 
+## Request Flow (MCP)
+
+```
+browserverless mcp serve
+  → mcp.Server.runWithReader        # one JSON-RPC frame per line, stdout only
+    → handleMessage
+      ├─ initialize / ping / tools/list
+      └─ tools/call
+        → handleScrape | handleScreenshot | handleVersion
+          → Renderer.Scrape | Renderer.Screenshot
+            ├─ localRenderer  → headless.Browser → engine
+            └─ httpRenderer   → POST /api/v1/{scrape,screenshot} on a running server
+```
+
+Tool failures become `ToolResult` with `isError` so the model can read and
+react to them. JSON-RPC errors are reserved for parse errors, unknown methods,
+and unknown tools. A screenshot returns the PNG as an `image` content block so
+base64 never lands in the text a model reads.
+
+Closing stdin is the shutdown signal, matching how MCP clients end a session.
+
 ## Modules
 
 ### `internal/headless`
@@ -101,8 +135,15 @@ Thin wrapper around `go-webengine/engine`. Exposes `Browser` with two methods:
 - `Screenshot(ctx, url) (ScreenshotResult, error)` — renders to the viewport
   rectangle then encodes as PNG.
 
-Timeouts are applied via `context.WithTimeout` and classified with
-`errors.Is(err, context.DeadlineExceeded)`.
+Timeouts are applied via `context.WithTimeout` and classified by `IsTimeout`,
+which matches `*TimeoutError` directly and also accepts a bare
+`context.DeadlineExceeded`. Matching the wrapper directly matters because the
+engine's own error need not wrap the context error; relying on unwrapping alone
+reported genuine render timeouts as HTTP 500.
+
+`ValidateURL` is the single URL validation point, shared with `internal/server`
+so the HTTP API and the MCP tools reject the same targets with the same
+messages.
 
 ### `internal/server`
 
@@ -122,6 +163,28 @@ Request logging writes to stdout in Rust-compatible format:
 ```
 
 ANSI color when stdout is a TTY.
+
+### `internal/mcp`
+
+A hand-rolled Model Context Protocol server: newline-delimited JSON-RPC 2.0 over
+stdio, no SDK dependency.
+
+- `protocol.go` — envelope types (`Request`, `Response`, `Tool`, `ToolResult`,
+  `ContentItem`) and the error codes.
+- `server.go` — `Server` with the tool registry, method dispatch, and the stdio
+  reader loop. Writes only to the injected writer, so stdout stays
+  protocol-only.
+- `renderer.go` — the `Renderer` seam plus `localRenderer`, which wraps an
+  in-process `headless.Browser`.
+- `httprenderer.go` — `httpRenderer`, which proxies a running server over the
+  public HTTP API and rebuilds outcomes from the `x-browserverless-*` headers.
+- `tools.go` / `handlers.go` — tool schemas and implementations.
+- `args.go` — shared argument decoding and validation for the render tools.
+
+Two backends sit behind one `Renderer` interface, so the tool surface is
+identical whether rendering happens in-process or on a shared server. A 504 from
+the proxied server is mapped back to `*headless.TimeoutError`, keeping timeout
+classification identical across backends.
 
 ### `internal/version`
 
@@ -147,5 +210,6 @@ localhost/private-network blocking is implemented yet (see ROADMAP).
 | `--height`  | `720`             | Viewport height               |
 | `--timeout` | `30000` ms        | Per-request load timeout (ms) |
 | `--output`  | `screenshot.png`  | Screenshot output path        |
+| `--addr`    | (empty)           | `mcp serve` only: proxy a running server instead of rendering in-process |
 
 No environment variables are read.
