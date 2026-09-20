@@ -1,5 +1,4 @@
 # Utilities
 
-1. Clock
-2. Docs
-3. Password
+1. Docs
+2. Password

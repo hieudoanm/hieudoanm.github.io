@@ -10,20 +10,11 @@ start-brainbow:
 start-chat:
 	pnpm run dev --filter=@hieudoanm.github.io/chat
 
-start-chemistry:
-	pnpm run dev --filter=@hieudoanm.github.io/chemistry
-
 start-chess:
 	pnpm run dev --filter=@hieudoanm.github.io/chess
 
 start-code:
 	pnpm run dev --filter=@hieudoanm.github.io/code
-
-start-countries:
-	pnpm run dev --filter=@hieudoanm.github.io/countries
-
-start-csv:
-	pnpm run dev --filter=@hieudoanm.github.io/csv
 
 start-database:
 	pnpm run dev --filter=@hieudoanm.github.io/database
@@ -33,9 +24,6 @@ start-diagram:
 
 start-docs:
 	pnpm run dev --filter=@hieudoanm.github.io/docs
-
-start-eyes:
-	pnpm run dev --filter=@hieudoanm.github.io/eyes
 
 start-football:
 	pnpm run dev --filter=@hieudoanm.github.io/football
@@ -49,9 +37,6 @@ start-keynotes:
 start-lingo:
 	pnpm run dev --filter=@hieudoanm.github.io/lingo
 
-start-markdown:
-	pnpm run dev --filter=@hieudoanm.github.io/markdown
-
 start-memory:
 	pnpm run dev --filter=@hieudoanm.github.io/memory
 
@@ -60,9 +45,6 @@ start-messaging:
 
 start-mri:
 	pnpm run dev --filter=@hieudoanm.github.io/mri
-
-start-music:
-	pnpm run dev --filter=@hieudoanm.github.io/music
 
 start-password:
 	pnpm run dev --filter=@hieudoanm.github.io/password
@@ -75,12 +57,6 @@ start-photo:
 
 start-pos:
 	pnpm run dev --filter=@hieudoanm.github.io/pos
-
-start-projects:
-	pnpm run dev --filter=@hieudoanm.github.io/projects
-
-start-psychology:
-	pnpm run dev --filter=@hieudoanm.github.io/psychology
 
 start-resume:
 	pnpm run dev --filter=@hieudoanm.github.io/resume

@@ -29,10 +29,9 @@
 | 25  | chess       | [Chess][chess]             | chess.com / lichess.org                                                      | No       | DONE   | Sports            | Games              |
 | 26  | football    | [Football][football]       | Football Formation / Analysis                                                | No       | DONE   | Sports            | Games              |
 | 27  | tourney     | [Tourney][tourney]         | Tournament management app for creating and tracking competitions             | No       | DONE   | Sports            | Games              |
-| 28  | clock       | [Clock][clock]             | Pomodoro / Watchface / World Clock / Timer / Stopwatch                       | No       | DONE   | Utilities         | Productivity       |
-| 29  | docs        | [Docs][docs]               | TinyWow                                                                      | No       | DONE   | Utilities         | Productivity       |
-| 30  | password    | [Password][password]       | BitWarden / 1Password                                                        | Required | DONE   | Utilities         | Productivity       |
-| 31  | doi         | [DOI][doi]                 | Crossref Citation Network Visualizer                                         | No       | DONE   | Education         | Developer Tools    |
+| 28  | docs        | [Docs][docs]               | TinyWow                                                                      | No       | DONE   | Utilities         | Productivity       |
+| 29  | password    | [Password][password]       | BitWarden / 1Password                                                        | Required | DONE   | Utilities         | Productivity       |
+| 30  | doi         | [DOI][doi]                 | Crossref Citation Network Visualizer                                         | No       | DONE   | Education         | Developer Tools    |
 
 [menu]: https://hieudoanm.github.io/open/menu/
 [pos]: https://hieudoanm.github.io/open/pos/
@@ -61,7 +60,6 @@
 [chess]: https://hieudoanm.github.io/open/chess/
 [football]: https://hieudoanm.github.io/open/football/
 [tourney]: https://hieudoanm.github.io/open/tourney/
-[clock]: https://hieudoanm.github.io/open/clock/
 [docs]: https://hieudoanm.github.io/open/docs/
 [password]: https://hieudoanm.github.io/open/password/
 [doi]: https://hieudoanm.github.io/open/doi/

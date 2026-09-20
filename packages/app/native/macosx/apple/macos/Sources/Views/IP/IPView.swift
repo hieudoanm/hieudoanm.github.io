@@ -6,9 +6,20 @@ import SwiftUI
 struct IPView: View {
     @ObservedObject var viewModel: IPViewModel
 
+    private enum Section: Hashable {
+        case myIP
+        case dnsLookup
+    }
+
+    @State private var section: Section = .myIP
+
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             header
+
+            Divider()
+
+            sectionPicker
 
             Divider()
 
@@ -40,8 +51,28 @@ struct IPView: View {
         .padding(.bottom, 16)
     }
 
+    private var sectionPicker: some View {
+        Picker("Section", selection: $section) {
+            Text("My IP").tag(Section.myIP)
+            Text("DNS Lookup").tag(Section.dnsLookup)
+        }
+        .pickerStyle(.segmented)
+        .labelsHidden()
+        .accessibilityLabel("IP section")
+    }
+
     @ViewBuilder
     private var content: some View {
+        switch section {
+        case .myIP:
+            myIPContent
+        case .dnsLookup:
+            dnsContent
+        }
+    }
+
+    @ViewBuilder
+    private var myIPContent: some View {
         switch viewModel.state {
         case .idle, .loading:
             loadingState
@@ -52,6 +83,31 @@ struct IPView: View {
         case .loaded(let info):
             loadedContent(info)
         }
+    }
+
+    private var dnsContent: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 8) {
+                HStack(spacing: 6) {
+                    TextField("example.com", text: $viewModel.domain)
+                        .textFieldStyle(.roundedBorder)
+                        .font(.system(.caption, design: .monospaced))
+                        .onSubmit { runDNSLookup() }
+                    Button {
+                        runDNSLookup()
+                    } label: {
+                        Text("Lookup")
+                            .font(.caption)
+                    }
+                    .disabled(viewModel.domain.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
+                }
+
+                dnsResult
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.top, 4)
+        }
+        .frame(maxHeight: .infinity)
     }
 
     private var loadingState: some View {
@@ -92,8 +148,6 @@ struct IPView: View {
                 badges(info)
 
                 infoSection(info)
-
-                dnsSection
             }
             .frame(maxWidth: .infinity, alignment: .leading)
         }
@@ -157,31 +211,6 @@ struct IPView: View {
             .font(.caption)
             .padding(.top, 6)
         }
-    }
-
-    private var dnsSection: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            Text("DNS Lookup")
-                .font(.caption)
-                .foregroundColor(.secondary)
-
-            HStack(spacing: 6) {
-                TextField("example.com", text: $viewModel.domain)
-                    .textFieldStyle(.roundedBorder)
-                    .font(.system(.caption, design: .monospaced))
-                    .onSubmit { runDNSLookup() }
-                Button {
-                    runDNSLookup()
-                } label: {
-                    Text("Lookup")
-                        .font(.caption)
-                }
-                .disabled(viewModel.domain.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
-            }
-
-            dnsResult
-        }
-        .padding(.top, 4)
     }
 
     @ViewBuilder

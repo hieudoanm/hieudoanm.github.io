@@ -3,6 +3,7 @@ import SwiftUI
 
 struct MenuBarView: View {
     let clipboardViewModel: ClipboardViewModel
+    let clockViewModel: ClockViewModel
     let ipViewModel: IPViewModel
     let viewModel: MemoryViewModel
     let networkViewModel: NetworkViewModel
@@ -17,6 +18,7 @@ struct MenuBarView: View {
     private enum Tab: Hashable {
         case battery
         case clipboard
+        case clock
         case ip
         case memory
         case network
@@ -70,6 +72,7 @@ struct MenuBarView: View {
         Picker("Tab", selection: $selectedTab) {
             Text("Battery").tag(Tab.battery)
             Text("Clipboard").tag(Tab.clipboard)
+            Text("Clock").tag(Tab.clock)
             Text("Front").tag(Tab.front)
             Text("IP").tag(Tab.ip)
             Text("Memory").tag(Tab.memory)
@@ -91,6 +94,9 @@ struct MenuBarView: View {
                 .transition(.opacity)
         case .clipboard:
             ClipboardView(viewModel: clipboardViewModel)
+                .transition(.opacity)
+        case .clock:
+            ClockView(viewModel: clockViewModel)
                 .transition(.opacity)
         case .ip:
             IPView(viewModel: ipViewModel)

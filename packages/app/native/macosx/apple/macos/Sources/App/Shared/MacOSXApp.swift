@@ -4,6 +4,7 @@ import SwiftUI
 @main
 struct MacOSXApp: App {
     @StateObject private var clipboardViewModel = AppDelegate.clipboardViewModel
+    @StateObject private var clockViewModel = AppDelegate.clockViewModel
     @StateObject private var ipViewModel = AppDelegate.ipViewModel
     @StateObject private var viewModel = AppDelegate.viewModel
     @StateObject private var networkViewModel = AppDelegate.networkViewModel
@@ -18,6 +19,7 @@ struct MacOSXApp: App {
         MenuBarExtra {
             MenuBarView(
                 clipboardViewModel: clipboardViewModel,
+                clockViewModel: clockViewModel,
                 ipViewModel: ipViewModel,
                 viewModel: viewModel,
                 networkViewModel: networkViewModel,
@@ -50,6 +52,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
     @MainActor
     static let clipboardViewModel = ClipboardViewModel()
+
+    @MainActor
+    static let clockViewModel = ClockViewModel()
 
     @MainActor
     static let ipViewModel = IPViewModel()
