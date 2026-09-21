@@ -34,7 +34,7 @@
     "@types/jest": "30.0.0",
     "@types/node": "26.5.1",
     "@types/react": "19.3.0",
-    "eslint": "10.10.0",
+    "eslint": "10.11.0",
     "eslint-plugin-react": "7.37.5",
     "fake-indexeddb": "6.2.5",
     "globals": "17.12.0",
