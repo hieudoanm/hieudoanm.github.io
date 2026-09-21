@@ -69,7 +69,7 @@
     "jest": "30.5.1",
     "jest-environment-jsdom": "30.5.1",
     "kill-port": "2.0.1",
-    "prettier": "3.9.6",
+    "prettier": "3.9.8",
     "prettier-plugin-tailwindcss": "0.8.1",
     "prisma": "7.10.0",
     "prisma-dbml-generator": "0.12.0",
