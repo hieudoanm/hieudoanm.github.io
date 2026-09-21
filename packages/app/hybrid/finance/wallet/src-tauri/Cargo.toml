@@ -22,6 +22,6 @@ serde_json = "=1.0.151"
 serde = { version = "=1.0.229", features = ["derive"] }
 log = "=0.4.34"
 tauri = { version = "=2.11.6", features = [] }
-tauri-plugin-log = "=2.9.0"
+tauri-plugin-log = "=2.9.2"
 tauri-plugin-shell = "=2.3.5"
 
