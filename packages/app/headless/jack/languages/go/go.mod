@@ -17,7 +17,7 @@ require (
 	github.com/mattn/go-sqlite3 v1.14.52
 	github.com/notnil/chess v1.10.0
 	github.com/pdfcpu/pdfcpu v0.15.0
-	github.com/shirou/gopsutil/v4 v4.26.7
+	github.com/shirou/gopsutil/v4 v4.26.8
 	github.com/spf13/cobra v1.10.2
 	golang.org/x/text v0.41.0
 	gopkg.in/yaml.v3 v3.0.1
