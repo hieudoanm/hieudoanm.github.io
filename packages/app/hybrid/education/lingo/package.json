@@ -69,7 +69,7 @@
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
     "@types/three": "0.186.0",
-    "daisyui": "5.7.38",
+    "daisyui": "5.7.42",
     "eslint": "10.11.0",
     "eslint-config-next": "16.3.5",
     "fake-indexeddb": "6.2.5",
