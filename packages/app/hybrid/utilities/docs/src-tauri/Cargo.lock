@@ -633,6 +633,19 @@ dependencies = [
 ]
 
 [[package]]
+name = "docs"
+version = "0.0.1"
+dependencies = [
+ "log",
+ "serde",
+ "serde_json",
+ "tauri",
+ "tauri-build",
+ "tauri-plugin-log",
+ "tauri-plugin-shell",
+]
+
+[[package]]
 name = "dom_query"
 version = "0.27.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1253,19 +1266,6 @@ name = "hex"
 version = "0.4.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7f24254aa9a54b5c858eaee2f5bccdb46aaf0e486a595ed5fd8f86ba55232a70"
-
-[[package]]
-name = "hieudoanm"
-version = "0.0.1"
-dependencies = [
- "log",
- "serde",
- "serde_json",
- "tauri",
- "tauri-build",
- "tauri-plugin-log",
- "tauri-plugin-shell",
-]
 
 [[package]]
 name = "html5ever"
@@ -3099,9 +3099,9 @@ checksum = "61c41af27dd6d1e27b1b16b489db798443478cef1f06a660c96db617ba5de3b1"
 
 [[package]]
 name = "tauri"
-version = "2.11.5"
+version = "2.11.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "667b20e2726d572dea2de7370da16e188eb06008faf9a92fab7cdc46791190b5"
+checksum = "6fa5bacdb9bbad5954af3d1bd6cf6ae9192cab1b2e270f4a07f904610b9e85f4"
 dependencies = [
  "anyhow",
  "bytes",
@@ -3228,9 +3228,9 @@ dependencies = [
 
 [[package]]
 name = "tauri-plugin-log"
-version = "2.9.0"
+version = "2.9.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6792296e6f389268016c77db21ebae1fc0568f2fccf88b1ec7e2ea71330afb4c"
+checksum = "86f2e3c40b77fd1eb7f8e1b6900fb036aee2da1ea2d3783c91255a82c636649d"
 dependencies = [
  "android_logger",
  "fern",
