@@ -18,17 +18,17 @@ jsonwebtoken = { version = "=11.0.0", features = ["rust_crypto"] }
 bcrypt = "=0.19.3"
 uuid = { version = "=1.26.1", features = ["v4"] }
 chrono = { version = "=0.4.45", features = ["serde"] }
-tower-http = { version = "=0.7.0", features = ["cors", "fs", "limit"] }
+tower-http = { version = "=0.7.1", features = ["cors", "fs", "limit"] }
 tower = "=0.5.3"
 multer = "=3.1.0"
 http-body-util = "=0.1.5"
 infer = "=0.22.0"
-reqwest = { version = "=0.13.4", features = ["json", "multipart"] }
+reqwest = { version = "=0.13.5", features = ["json", "multipart"] }
 hmac = "=0.13.0"
 sha2 = "=0.11.0"
 hex = "=0.4.3"
 aes-gcm = "=0.11.1"
-rand = "=0.10.2"
+rand = "=0.10.3"
 tokio-stream = "=0.1.19"
 cron = "=0.17.0"
 rust-embed = "=8.12.0"

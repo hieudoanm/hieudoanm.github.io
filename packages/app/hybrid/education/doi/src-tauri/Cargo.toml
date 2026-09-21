@@ -19,7 +19,7 @@ tauri-build = { version = "=2.6.3", features = [] }
 
 [dependencies]
 log = "0.4.29"
-tauri = { version = "=2.11.5", features = [] }
+tauri = { version = "=2.11.6", features = [] }
 tauri-plugin-dialog = "2.7.2"
 tauri-plugin-log = "2.9.0"
 tauri-plugin-notification = "2.3.3"
