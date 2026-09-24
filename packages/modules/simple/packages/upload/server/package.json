@@ -17,9 +17,9 @@
   ],
   "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
   "license": "GPL-3.0",
-  "packageManager": "pnpm@11.24.0",
+  "packageManager": "pnpm@11.27.1",
   "engines": {
-    "node": "26.9.0"
+    "node": "26.10.0"
   },
   "scripts": {
     "format": "prettier --cache --write .",
@@ -29,9 +29,9 @@
     "test": "jest"
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "3.1136.0",
-    "@aws-sdk/s3-presigned-post": "3.1136.0",
-    "@aws-sdk/s3-request-presigner": "3.1136.0"
+    "@aws-sdk/client-s3": "3.1139.0",
+    "@aws-sdk/s3-presigned-post": "3.1139.0",
+    "@aws-sdk/s3-request-presigner": "3.1139.0"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",

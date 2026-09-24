@@ -16,9 +16,9 @@
   },
   "license": "GPL-3.0",
   "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
-  "packageManager": "pnpm@11.24.0",
+  "packageManager": "pnpm@11.27.1",
   "engines": {
-    "node": "26.9.0"
+    "node": "26.10.0"
   },
   "scripts": {
     "lint": "eslint . --fix",
@@ -38,10 +38,10 @@
     "@simple-upload/react": "workspace:*",
     "@simple-upload/server": "workspace:*",
     "@tanstack/react-query": "5.103.2",
-    "@trpc/client": "11.18.0",
-    "@trpc/next": "11.18.0",
-    "@trpc/react-query": "11.18.0",
-    "@trpc/server": "11.18.0",
+    "@trpc/client": "11.19.0",
+    "@trpc/next": "11.19.0",
+    "@trpc/react-query": "11.19.0",
+    "@trpc/server": "11.19.0",
     "next": "16.3.5",
     "react": "19.3.0",
     "react-dom": "19.3.0",
@@ -56,7 +56,7 @@
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
     "babel-plugin-react-compiler": "1.0.0",
-    "daisyui": "5.7.42",
+    "daisyui": "5.7.44",
     "eslint": "10.11.0",
     "eslint-config-next": "16.3.5",
     "jest": "30.5.2",

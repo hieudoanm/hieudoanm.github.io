@@ -16,9 +16,9 @@
   },
   "license": "GPL-3.0",
   "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",
-  "packageManager": "pnpm@11.24.0",
+  "packageManager": "pnpm@11.27.1",
   "engines": {
-    "node": "26.9.0"
+    "node": "26.10.0"
   },
   "scripts": {
     "lint": "eslint . --fix",
@@ -40,9 +40,9 @@
     "@ericblade/quagga2": "1.12.1",
     "@lodashx/ts": "workspace:*",
     "@tauri-apps/api": "2.11.1",
-    "@trpc/client": "11.18.0",
-    "@trpc/next": "11.18.0",
-    "@trpc/server": "11.18.0",
+    "@trpc/client": "11.19.0",
+    "@trpc/next": "11.19.0",
+    "@trpc/server": "11.19.0",
     "idb": "8.0.3",
     "jsbarcode": "3.12.3",
     "jsqr": "1.4.0",
@@ -68,7 +68,7 @@
     "@types/qrcode": "1.5.6",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
-    "daisyui": "5.7.42",
+    "daisyui": "5.7.44",
     "eslint": "10.11.0",
     "eslint-config-next": "16.3.5",
     "jest": "30.5.2",

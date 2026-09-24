@@ -22,9 +22,9 @@
     "url": "https://github.com/hieudoanm/svg/issues"
   },
   "homepage": "https://hieudoanm.github.io/svg",
-  "packageManager": "pnpm@11.24.0",
+  "packageManager": "pnpm@11.27.1",
   "engines": {
-    "node": "26.9.0",
+    "node": "26.10.0",
     "vscode": "1.999.0"
   },
   "scripts": {
@@ -32,7 +32,7 @@
     "package": "rimraf build && mkdir build && vsce package --out \"./build/nothing-vscode-theme-0.0.1.vsix\""
   },
   "devDependencies": {
-    "@vscode/vsce": "3.9.2",
+    "@vscode/vsce": "4.0.0",
     "prettier": "3.9.9",
     "rimraf": "6.1.3"
   },
