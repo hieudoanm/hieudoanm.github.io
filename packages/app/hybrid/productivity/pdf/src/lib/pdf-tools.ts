@@ -104,7 +104,7 @@ export const splitPDF = async (
 
 export const extractText = async (file: File): Promise<string> => {
   const { pdfjs } = await import('react-pdf');
-  const loadingTask = pdfjs.getDocument(await file.arrayBuffer());
+  const loadingTask = pdfjs.getDocument({ data: await file.arrayBuffer() });
   const pdf = await loadingTask.promise;
   const parts: string[] = [];
   for (let i = 1; i <= pdf.numPages; i++) {
@@ -120,7 +120,7 @@ export const extractText = async (file: File): Promise<string> => {
 
 export const extractImages = async (file: File): Promise<Blob[]> => {
   const { pdfjs } = await import('react-pdf');
-  const loadingTask = pdfjs.getDocument(await file.arrayBuffer());
+  const loadingTask = pdfjs.getDocument({ data: await file.arrayBuffer() });
   const pdf = await loadingTask.promise;
   const blobs: Blob[] = [];
   for (let i = 1; i <= pdf.numPages; i++) {
