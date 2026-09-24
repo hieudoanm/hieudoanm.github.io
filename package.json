@@ -34,6 +34,6 @@
     "@types/react-dom": "19.3.0",
     "docsify": "5.0.0",
     "husky": "9.1.7",
-    "turbo": "2.11.2"
+    "turbo": "2.11.3"
   }
 }
