@@ -2423,8 +2423,8 @@ importers:
         specifier: 16.3.5
         version: 16.3.5(@babel/core@7.29.7(supports-color@10.2.2))(@opentelemetry/api@1.4.1)(@playwright/test@1.63.0)(@types/node@26.6.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(sass@1.104.1)
       openai:
-        specifier: 7.20.0
-        version: 7.20.0(@aws-sdk/credential-provider-node@3.972.83)(@smithy/signature-v4@5.7.3)(undici@7.28.0)(ws@8.21.3)(zod@4.6.5)
+        specifier: 7.23.0
+        version: 7.23.0(@aws-sdk/credential-provider-node@3.972.83)(@smithy/signature-v4@5.7.3)(undici@7.28.0)(ws@8.21.3)(zod@4.6.5)
       react:
         specifier: 19.3.0
         version: 19.3.0
@@ -3016,8 +3016,8 @@ importers:
         specifier: 16.3.5
         version: 16.3.5(@babel/core@7.29.7(supports-color@10.2.2))(@opentelemetry/api@1.4.1)(@playwright/test@1.63.0)(@types/node@26.6.2)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(sass@1.104.1)
       openai:
-        specifier: 7.20.0
-        version: 7.20.0(@aws-sdk/credential-provider-node@3.972.83)(@smithy/signature-v4@5.7.3)(undici@7.28.0)(ws@8.21.3)(zod@4.6.5)
+        specifier: 7.23.0
+        version: 7.23.0(@aws-sdk/credential-provider-node@3.972.83)(@smithy/signature-v4@5.7.3)(undici@7.28.0)(ws@8.21.3)(zod@4.6.5)
       pdf-lib:
         specifier: 1.17.1
         version: 1.17.1
@@ -12301,8 +12301,8 @@ packages:
     resolution: {integrity: sha512-MVHddDVweXZF3awtlAS+6pgKLlm/JgxZ90+/NBurBoQctVOOB/zDdVjcyPzQ+0laDGbsWgrRkflI65sQeOgT9Q==}
     engines: {node: '>=8'}
 
-  openai@7.20.0:
-    resolution: {integrity: sha512-5x5ru4cKEvEqHqYZbdIbT57OE7KqmP9YYxZiUKuKng016grOHXqom1vmu34MTPPW30q+lcP9RhxAbaRse+Xlcw==}
+  openai@7.23.0:
+    resolution: {integrity: sha512-0ecOXnFSMNWZq6cUBcTV6Lf93y+fm8BH/+QzFvpoP1UGNOE5pnytRa6HAPGCw+3IS9SIAW7rc1M8yyzN1PiBAQ==}
     engines: {node: '>=22.0.0'}
     peerDependencies:
       '@aws-sdk/credential-provider-node': '>=3.972.0 <4'
@@ -25011,7 +25011,7 @@ snapshots:
       is-docker: 2.2.1
       is-wsl: 2.2.0
 
-  openai@7.20.0(@aws-sdk/credential-provider-node@3.972.83)(@smithy/signature-v4@5.7.3)(undici@7.28.0)(ws@8.21.3)(zod@4.6.5):
+  openai@7.23.0(@aws-sdk/credential-provider-node@3.972.83)(@smithy/signature-v4@5.7.3)(undici@7.28.0)(ws@8.21.3)(zod@4.6.5):
     optionalDependencies:
       '@aws-sdk/credential-provider-node': 3.972.83
       '@smithy/signature-v4': 5.7.3
