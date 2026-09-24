@@ -55,7 +55,7 @@
     "@types/qrcode": "1.5.6",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
-    "daisyui": "5.7.42",
+    "daisyui": "5.7.44",
     "eslint": "10.11.0",
     "eslint-config-next": "16.3.5",
     "jest": "30.5.2",
