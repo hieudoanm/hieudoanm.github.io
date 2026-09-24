@@ -7,9 +7,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/charmbracelet/bubbles/textarea"
-	"github.com/charmbracelet/bubbles/textinput"
-	tea "github.com/charmbracelet/bubbletea"
+	"charm.land/bubbles/v2/textarea"
+	"charm.land/bubbles/v2/textinput"
+	tea "charm.land/bubbletea/v2"
 )
 
 // mode selects where typed characters go.
@@ -37,7 +37,7 @@ func Run(path string) error {
 	if path == "" {
 		path = "landify.yaml"
 	}
-	if _, err := tea.NewProgram(newModel(path), tea.WithAltScreen()).Run(); err != nil {
+	if _, err := tea.NewProgram(newModel(path)).Run(); err != nil {
 		return fmt.Errorf("tui: %w", err)
 	}
 	return nil
@@ -53,7 +53,7 @@ func newModel(path string) model {
 	cmd := textinput.New()
 	cmd.Placeholder = ""
 	cmd.CharLimit = 256
-	cmd.Width = commandWidth(contentWidth(80))
+	cmd.SetWidth(commandWidth(contentWidth(80)))
 
 	m := model{path: path, area: area, cmd: cmd}
 	m.reload() // load early so the editor starts with the current file
@@ -74,7 +74,7 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		} else {
 			m.area.SetHeight(3)
 		}
-		m.cmd.Width = commandWidth(cw)
+		m.cmd.SetWidth(commandWidth(cw))
 		return m, nil
 	case tea.KeyMsg:
 		return m.handleKey(msg)
@@ -133,7 +133,7 @@ func (m model) toggleMode() (model, tea.Cmd) {
 // View renders the editor: a styled header, a bordered YAML pane, and a
 // status/command row. The active mode owns the primary border colour, and the
 // status bar colours failures red and successes green.
-func (m model) View() string {
+func (m model) View() tea.View {
 	cw := contentWidth(m.area.Width() + 4)
 
 	mode := accentStyle.Render(" [COMMAND]")
@@ -169,7 +169,9 @@ func (m model) View() string {
 	}
 	bottom := distribute(left, right, cw)
 
-	return rootStyle.Render(strings.Join([]string{
+	v := tea.NewView(rootStyle.Render(strings.Join([]string{
 		header, rule, edge.Render(m.area.View()), rule, bottom,
-	}, "\n"))
+	}, "\n")))
+	v.AltScreen = true
+	return v
 }
