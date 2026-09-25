@@ -16,6 +16,7 @@ $backdrop-blurs: (
 @each $name, $value in $backdrop-blurs {
   .backdrop-blur {
     --tw-backdrop-blur: #{$value};
+
     -webkit-backdrop-filter: #{$backdrop-filter-composite};
     backdrop-filter: #{$backdrop-filter-composite};
   }
@@ -25,6 +26,7 @@ $backdrop-blurs: (
   @if $name != 'DEFAULT' {
     .backdrop-blur-#{$name} {
       --tw-backdrop-blur: #{$value};
+
       -webkit-backdrop-filter: #{$backdrop-filter-composite};
       backdrop-filter: #{$backdrop-filter-composite};
     }

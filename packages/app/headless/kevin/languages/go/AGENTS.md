@@ -27,16 +27,22 @@ SET, GET, KEYS, DEL over TCP, behaviour-identical to the C (`kevin/c`) and C++
 ## Key Conventions
 
 - CLI is built with cobra: `main.go` (`package main`) stays thin and calls
-  `cmd.NewRootCommand().Execute()`. The root command declares one subcommand,
-  `serve`, wire in `cmd/root.go` + `cmd/serve.go`. `serve` dialogs `--port`
-  (default 6379), `--gui` and `--tui`. Without either UI flag, `serve` calls
-  `server.New(db.New()).Serve(ctx, ln)`.
+  `cmd.NewRootCommand().Execute()`. The root command declares two subcommands,
+  `serve` and `mcp`, wired in `cmd/root.go` + `cmd/serve.go` +
+  `cmd/mcp_serve.go`. `serve` dialogs `--port` (default 6379), `--gui` and
+  `--tui`. Without either UI flag, `serve` calls
+  `server.New(db.New()).Serve(ctx, ln)`. `mcp serve` dialogs `--data` and
+  `--addr`, which are mutually exclusive.
 - Standard Go layout: `main.go` + `cmd/` (cobra CLI) + `internal/db` (store) +
   `internal/server` (TCP accept loop + protocol handler) + `internal/gui`
   (fyne key/value manager) + `internal/tui` (bubbletea terminal manager).
   Storage lives in `internal/db`; parsing lives in
   `internal/server/handler.go`. `internal/db` must not import `internal/server`
-  (avoid cycles).
+  (avoid cycles). The MCP server is a parallel tree under `internal/mcp`:
+  `protocol.go` (JSON-RPC envelope) + `server.go` (dispatch + stdio) +
+  `store.go` (`Store` interface, in-process backend) + `tcpstore.go` (TCP
+  proxy) + `tools.go` (catalogue + handlers). `internal/mcp` must not import
+  `internal/server`.
 - `--gui` opens the fyne window on the same `db.DB` as the TCP server. fyne
   requires CGO, so the window lives behind the `gui` build tag:
   `internal/gui/gui_fyne.go` (`//go:build gui`) is the real window;
@@ -61,9 +67,19 @@ SET, GET, KEYS, DEL over TCP, behaviour-identical to the C (`kevin/c`) and C++
   state, table-driven tests, return early. Follow the cobra subsection: `RunE`
   over `Run`, thin `RunE` bodies, nested commands via `AddCommand`, persistent
   flags for shared options.
+- MCP speaks newline-delimited JSON-RPC 2.0 on **stdout**; every log line must
+  go to **stderr**, or the client sees a corrupt stream. Notifications — a
+  request with a nil `ID` — are never answered, whatever the method.
+- MCP tool failures are reported as a `ToolResult` with `IsError: true` rather
+  than as JSON-RPC errors, so the model can read and react to them. Only
+  framing problems (bad JSON, unknown method, unknown tool) become JSON-RPC
+  errors. `tools.go` must build every `text` field with
+  `json.Marshal`/`fmt.Sprintf` on marshalled JSON — never `fmt.Sprintf` on raw
+  values, which breaks on quotes and newlines.
 - Tests: `internal/db` colocated unit tests; `internal/server` has table-driven
   handler tests (no TCP) plus a real TCP `Server.Serve` integration test with
-  concurrent clients.
+  concurrent clients; `internal/mcp` has table-driven store and tool tests
+  driven through the wire protocol against both backends.
 - The binary listens on `:<port>` (default 6379). Server is stateless and
   in-memory; all data is lost on shutdown (same as C/C++).
 - CI (`.github/workflows/ci-app-headless-kevin.yaml`) runs the `go` job with
@@ -74,8 +90,9 @@ SET, GET, KEYS, DEL over TCP, behaviour-identical to the C (`kevin/c`) and C++
 
 - In-memory `map[string]string` guarded by a `sync.RWMutex` — no persistence,
   no external storage.
-- `serve --port` (default `6379`), `serve --gui` and `serve --tui` are the
-  only configuration; no env vars.
+- `serve --port` (default `6379`), `serve --gui` and `serve --tui` configure
+  the TCP server; `mcp serve --data` and `mcp serve --addr` configure the MCP
+  server; no env vars.
 - `bin/` and `coverage/` are gitignored (build output).
 
 ## Documentation

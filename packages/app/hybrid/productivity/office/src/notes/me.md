@@ -5,5 +5,4 @@
 - F&B
 - Minimalism
 - Random Research
-- Resolutions
-- [[Resume]]
+- Resume

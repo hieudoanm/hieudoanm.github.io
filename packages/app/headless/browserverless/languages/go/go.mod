@@ -1,6 +1,6 @@
 module github.com/hieudoanm/browserverless
 
-go 1.26.5
+go 1.27.1
 
 require github.com/go-webengine/engine v0.3.11
 

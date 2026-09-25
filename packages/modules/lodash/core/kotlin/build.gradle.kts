@@ -48,3 +48,7 @@ tasks.check {
 kotlin {
     jvmToolchain(21)
 }
+
+dependencyLocking {
+    lockAllConfigurations()
+}

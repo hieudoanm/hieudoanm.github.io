@@ -173,22 +173,28 @@ mod tests {
 
         {
             let mut data = cache.data.write().unwrap();
-            data.insert("expired".to_string(), CacheEntry {
-                key: "expired".to_string(),
-                value: "old".to_string(),
-                ttl: 3600,
-                expires_at: past.to_rfc3339(),
-                created_at: past.to_rfc3339(),
-                updated_at: past.to_rfc3339(),
-            });
-            data.insert("valid".to_string(), CacheEntry {
-                key: "valid".to_string(),
-                value: "fresh".to_string(),
-                ttl: 3600,
-                expires_at: future.to_rfc3339(),
-                created_at: now.to_rfc3339(),
-                updated_at: now.to_rfc3339(),
-            });
+            data.insert(
+                "expired".to_string(),
+                CacheEntry {
+                    key: "expired".to_string(),
+                    value: "old".to_string(),
+                    ttl: 3600,
+                    expires_at: past.to_rfc3339(),
+                    created_at: past.to_rfc3339(),
+                    updated_at: past.to_rfc3339(),
+                },
+            );
+            data.insert(
+                "valid".to_string(),
+                CacheEntry {
+                    key: "valid".to_string(),
+                    value: "fresh".to_string(),
+                    ttl: 3600,
+                    expires_at: future.to_rfc3339(),
+                    created_at: now.to_rfc3339(),
+                    updated_at: now.to_rfc3339(),
+                },
+            );
         }
 
         let entries = cache.list();
@@ -205,22 +211,28 @@ mod tests {
 
         {
             let mut data = cache.data.write().unwrap();
-            data.insert("expired".to_string(), CacheEntry {
-                key: "expired".to_string(),
-                value: "old".to_string(),
-                ttl: 3600,
-                expires_at: past.to_rfc3339(),
-                created_at: past.to_rfc3339(),
-                updated_at: past.to_rfc3339(),
-            });
-            data.insert("valid".to_string(), CacheEntry {
-                key: "valid".to_string(),
-                value: "fresh".to_string(),
-                ttl: 3600,
-                expires_at: future.to_rfc3339(),
-                created_at: now.to_rfc3339(),
-                updated_at: now.to_rfc3339(),
-            });
+            data.insert(
+                "expired".to_string(),
+                CacheEntry {
+                    key: "expired".to_string(),
+                    value: "old".to_string(),
+                    ttl: 3600,
+                    expires_at: past.to_rfc3339(),
+                    created_at: past.to_rfc3339(),
+                    updated_at: past.to_rfc3339(),
+                },
+            );
+            data.insert(
+                "valid".to_string(),
+                CacheEntry {
+                    key: "valid".to_string(),
+                    value: "fresh".to_string(),
+                    ttl: 3600,
+                    expires_at: future.to_rfc3339(),
+                    created_at: now.to_rfc3339(),
+                    updated_at: now.to_rfc3339(),
+                },
+            );
         }
 
         cache.evict_expired();
@@ -236,14 +248,17 @@ mod tests {
 
         {
             let mut data = cache.data.write().unwrap();
-            data.insert("valid".to_string(), CacheEntry {
-                key: "valid".to_string(),
-                value: "fresh".to_string(),
-                ttl: 3600,
-                expires_at: future.to_rfc3339(),
-                created_at: now.to_rfc3339(),
-                updated_at: now.to_rfc3339(),
-            });
+            data.insert(
+                "valid".to_string(),
+                CacheEntry {
+                    key: "valid".to_string(),
+                    value: "fresh".to_string(),
+                    ttl: 3600,
+                    expires_at: future.to_rfc3339(),
+                    created_at: now.to_rfc3339(),
+                    updated_at: now.to_rfc3339(),
+                },
+            );
         }
 
         cache.evict_expired();
@@ -259,22 +274,28 @@ mod tests {
 
         {
             let mut data = cache.data.write().unwrap();
-            data.insert("expired".to_string(), CacheEntry {
-                key: "expired".to_string(),
-                value: "old".to_string(),
-                ttl: 3600,
-                expires_at: past.to_rfc3339(),
-                created_at: past.to_rfc3339(),
-                updated_at: past.to_rfc3339(),
-            });
-            data.insert("valid".to_string(), CacheEntry {
-                key: "valid".to_string(),
-                value: "fresh".to_string(),
-                ttl: 3600,
-                expires_at: future.to_rfc3339(),
-                created_at: now.to_rfc3339(),
-                updated_at: now.to_rfc3339(),
-            });
+            data.insert(
+                "expired".to_string(),
+                CacheEntry {
+                    key: "expired".to_string(),
+                    value: "old".to_string(),
+                    ttl: 3600,
+                    expires_at: past.to_rfc3339(),
+                    created_at: past.to_rfc3339(),
+                    updated_at: past.to_rfc3339(),
+                },
+            );
+            data.insert(
+                "valid".to_string(),
+                CacheEntry {
+                    key: "valid".to_string(),
+                    value: "fresh".to_string(),
+                    ttl: 3600,
+                    expires_at: future.to_rfc3339(),
+                    created_at: now.to_rfc3339(),
+                    updated_at: now.to_rfc3339(),
+                },
+            );
         }
 
         let stats = cache.stats();

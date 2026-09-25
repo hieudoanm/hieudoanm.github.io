@@ -85,9 +85,12 @@ See [PACKAGING](PACKAGING) for the CI artifact pipeline and
 ## About
 
 Browserverless is a headless browser server powered by go-webengine — a
-pure-Go, CGO-free browser engine. It renders real web pages and serves the
-results over an HTTP API or as a CLI tool. No Chromium, no system browser,
-no OS graphics dependency.
+pure-Go, CGO-free browser engine.
+
+- **Renders real web pages** — then serves the results.
+- **HTTP API or CLI tool** — your choice of interface.
+- **No dependencies** — no Chromium, no system browser, no OS graphics
+  dependency.
 
 ## Features
 

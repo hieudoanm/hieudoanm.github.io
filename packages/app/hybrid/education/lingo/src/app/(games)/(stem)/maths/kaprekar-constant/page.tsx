@@ -1,6 +1,6 @@
 'use client';
 
-import { KaprekarConstant } from '@/games/maths/kaprekar-constant';
+import { KaprekarConstant } from '@/games/stem/maths/kaprekar-constant';
 import { NextPage } from 'next';
 
 const KaprekarConstantPage: NextPage = () => (

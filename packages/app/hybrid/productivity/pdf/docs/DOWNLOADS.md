@@ -93,8 +93,14 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 ## About
 
 A minimal Adobe Acrobat alternative that lets you view, annotate, edit, sign,
-and manage PDFs entirely offline — text editing, stamps, form filling, and page
-reorder all running in your browser or as a native desktop app.
+and manage PDFs entirely offline.
+
+- Text editing.
+- Stamps.
+- Form filling.
+- Page reorder.
+
+All running in your browser or as a native desktop app.
 
 ---
 

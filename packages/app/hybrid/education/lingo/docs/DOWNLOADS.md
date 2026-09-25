@@ -85,9 +85,14 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-Your pocket language coach — flashcard drills, a built-in dictionary, real-time
-sign-language recognition, and an ear-training piano game, all in a beautiful
-hybrid web/desktop app that runs on any device.
+Your pocket language coach.
+
+- **Flashcard drills** — drill vocabulary with flashcards.
+- **Built-in dictionary** — look words up as you learn them.
+- **Sign-language recognition** — recognise signs in real time.
+- **Ear-training piano game** — train your ear on the piano.
+
+All in a beautiful hybrid web/desktop app that runs on any device.
 
 ---
 
@@ -162,7 +167,7 @@ Learn words, look them up, and recognise signs — all in one app.
 
 ---
 
-# First run
+## First run
 
 - **macOS:** Right-click the `.dmg` → "Open" to bypass Gatekeeper, then drag the
   app to your Applications folder.

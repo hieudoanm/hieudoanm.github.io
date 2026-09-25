@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 358.71 396.27" width="358.71" height="396.27" role="img" aria-labelledby="laos-title laos-desc">
+  <title id="laos-title">Laos hex map</title>
+  <desc id="laos-desc">Hexagon map with 17 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.57; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 12.70 9.07; }
+    .label { fill: #52525b; font: 600 10.28px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="XE">
+    <title>Xékong</title>
+    <polygon class="tile" points="323.44,281.32 349.64,296.45 349.64,326.70 323.44,341.82 297.24,326.70 297.24,296.45" aria-label="Xékong"/>
+    <text class="label" x="323.44" y="311.57">XE</text>
+  </g>
+  <g class="state" data-state="AT">
+    <title>Attapu</title>
+    <polygon class="tile" points="297.24,326.70 323.44,341.82 323.44,372.07 297.24,387.20 271.05,372.07 271.05,341.82" aria-label="Attapu"/>
+    <text class="label" x="297.24" y="356.95">AT</text>
+  </g>
+  <g class="state" data-state="SL">
+    <title>Saravan</title>
+    <polygon class="tile" points="271.05,281.32 297.24,296.45 297.24,326.70 271.05,341.82 244.85,326.70 244.85,296.45" aria-label="Saravan"/>
+    <text class="label" x="271.05" y="311.57">SL</text>
+  </g>
+  <g class="state" data-state="SV">
+    <title>Savannakhét</title>
+    <polygon class="tile" points="244.85,235.95 271.05,251.07 271.05,281.32 244.85,296.45 218.65,281.32 218.65,251.07" aria-label="Savannakhét"/>
+    <text class="label" x="244.85" y="266.20">SV</text>
+  </g>
+  <g class="state" data-state="CH">
+    <title>Champasak</title>
+    <polygon class="tile" points="244.85,326.70 271.05,341.82 271.05,372.07 244.85,387.20 218.65,372.07 218.65,341.82" aria-label="Champasak"/>
+    <text class="label" x="244.85" y="356.95">CH</text>
+  </g>
+  <g class="state" data-state="KH">
+    <title>Khammouan</title>
+    <polygon class="tile" points="218.65,190.57 244.85,205.70 244.85,235.95 218.65,251.07 192.46,235.95 192.46,205.70" aria-label="Khammouan"/>
+    <text class="label" x="218.65" y="220.82">KH</text>
+  </g>
+  <g class="state" data-state="XI">
+    <title>Xiangkhoang</title>
+    <polygon class="tile" points="192.46,145.20 218.65,160.32 218.65,190.57 192.46,205.70 166.26,190.57 166.26,160.32" aria-label="Xiangkhoang"/>
+    <text class="label" x="192.46" y="175.45">XI</text>
+  </g>
+  <g class="state" data-state="HO">
+    <title>Houaphan</title>
+    <polygon class="tile" points="166.26,99.82 192.46,114.95 192.46,145.20 166.26,160.32 140.06,145.20 140.06,114.95" aria-label="Houaphan"/>
+    <text class="label" x="166.26" y="130.07">HO</text>
+  </g>
+  <g class="state" data-state="BL">
+    <title>Bolikhamxai</title>
+    <polygon class="tile" points="166.26,190.57 192.46,205.70 192.46,235.95 166.26,251.07 140.06,235.95 140.06,205.70" aria-label="Bolikhamxai"/>
+    <text class="label" x="166.26" y="220.82">BL</text>
+  </g>
+  <g class="state" data-state="VIE">
+    <title>Vientiane</title>
+    <polygon class="tile" points="140.06,145.20 166.26,160.32 166.26,190.57 140.06,205.70 113.86,190.57 113.86,160.32" aria-label="Vientiane"/>
+    <text class="label" x="140.06" y="175.45">VIE</text>
+  </g>
+  <g class="state" data-state="PH">
+    <title>Phôngsali</title>
+    <polygon class="tile" points="113.86,9.07 140.06,24.20 140.06,54.45 113.86,69.57 87.67,54.45 87.67,24.20" aria-label="Phôngsali"/>
+    <text class="label" x="113.86" y="39.32">PH</text>
+  </g>
+  <g class="state" data-state="LP">
+    <title>Louangphrabang</title>
+    <polygon class="tile" points="113.86,99.82 140.06,114.95 140.06,145.20 113.86,160.32 87.67,145.20 87.67,114.95" aria-label="Louangphrabang"/>
+    <text class="label" x="113.86" y="130.07">LP</text>
+  </g>
+  <g class="state" data-state="VI">
+    <title>Vientiane [prefecture]</title>
+    <polygon class="tile" points="113.86,190.57 140.06,205.70 140.06,235.95 113.86,251.07 87.67,235.95 87.67,205.70" aria-label="Vientiane [prefecture]"/>
+    <text class="label" x="113.86" y="220.82">VI</text>
+  </g>
+  <g class="state" data-state="OU">
+    <title>Oudômxai</title>
+    <polygon class="tile" points="87.67,54.45 113.86,69.57 113.86,99.82 87.67,114.95 61.47,99.82 61.47,69.57" aria-label="Oudômxai"/>
+    <text class="label" x="87.67" y="84.70">OU</text>
+  </g>
+  <g class="state" data-state="XA">
+    <title>Xaignabouri</title>
+    <polygon class="tile" points="87.67,145.20 113.86,160.32 113.86,190.57 87.67,205.70 61.47,190.57 61.47,160.32" aria-label="Xaignabouri"/>
+    <text class="label" x="87.67" y="175.45">XA</text>
+  </g>
+  <g class="state" data-state="BK">
+    <title>Bokeo</title>
+    <polygon class="tile" points="61.47,99.82 87.67,114.95 87.67,145.20 61.47,160.32 35.27,145.20 35.27,114.95" aria-label="Bokeo"/>
+    <text class="label" x="61.47" y="130.07">BK</text>
+  </g>
+  <g class="state" data-state="LM">
+    <title>Louang Namtha</title>
+    <polygon class="tile" points="35.27,54.45 61.47,69.57 61.47,99.82 35.27,114.95 9.07,99.82 9.07,69.57" aria-label="Louang Namtha"/>
+    <text class="label" x="35.27" y="84.70">LM</text>
+  </g>
+</svg>

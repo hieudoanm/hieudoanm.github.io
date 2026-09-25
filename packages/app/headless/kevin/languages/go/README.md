@@ -72,8 +72,8 @@ See [PACKAGING](PACKAGING) for the CI artifact pipeline and
 
 ## Usage
 
-The CLI is built with [cobra](https://cobra.dev) and exposes a single
-subcommand:
+The CLI is built with [cobra](https://cobra.dev) and exposes two subcommands,
+`serve` and `mcp serve`:
 
 ```bash
 # Start the server on the Redis default port
@@ -87,6 +87,9 @@ subcommand:
 
 # Talk to it with any Redis-cli-compatible tool or plain TCP:
 #   printf 'SET foo bar\nGET foo\n' | nc 127.0.0.1 6379
+
+# Expose the store to LLM clients over the Model Context Protocol
+./kevin mcp serve
 ```
 
 ## Commands
@@ -102,7 +105,74 @@ subcommand:
 Commands are case-insensitive. Unknown commands and missing arguments return a
 Redis-style `ERR unknown command` / `ERR usage: ...` response.
 
+## MCP (Model Context Protocol)
+
+`kevin mcp serve` speaks newline-delimited
+[JSON-RPC 2.0](https://www.jsonrpc.org/specification) on stdin/stdout — the
+transport MCP clients expect. Logs go to stderr so stdout carries only protocol
+frames.
+
+```bash
+# Back the tools with an in-process store
+./kevin mcp serve
+
+# Back the tools with an in-process store persisted to a JSON snapshot
+./kevin mcp serve --data store.json
+
+# Proxy a running server instead of holding data locally
+kevin serve --port 6379 &
+./kevin mcp serve --addr 127.0.0.1:6379
+```
+
+`--addr` and `--data` are mutually exclusive: one proxies a remote server, the
+other owns local data. There is no MCP SDK dependency — the protocol is a few
+hundred lines of `encoding/json` over two pipes.
+
+### Tools
+
+| No  | Tool           | Description                                                 |
+| --- | -------------- | ----------------------------------------------------------- |
+| 1   | `kevin_ping`   | Check that the store is reachable                           |
+| 2   | `kevin_set`    | Store a value, optionally with a TTL                        |
+| 3   | `kevin_get`    | Read a value                                                 |
+| 4   | `kevin_del`    | Delete one or more keys, reporting the count                |
+| 5   | `kevin_exists` | Test whether keys exist, reporting which                     |
+| 6   | `kevin_keys`   | List all keys, sorted                                        |
+| 7   | `kevin_len`    | Count the keys                                               |
+| 8   | `kevin_ttl`    | Report a key's state: `missing`, `no-expiry` or `expiring`  |
+| 9   | `kevin_expire` | Set a key's TTL in seconds                                   |
+| 10  | `kevin_flush`  | Delete every key                                             |
+
+Results are JSON documents, so a model can act on them without parsing prose.
+Tool failures come back as an error result the model can read, not as a
+transport error.
+
+### Client configuration
+
+Point any MCP client at the binary:
+
+```json
+{
+  "mcpServers": {
+    "kevin": {
+      "command": "kevin",
+      "args": ["mcp", "serve"]
+    }
+  }
+}
+```
+
+### Proxy mode limits
+
+The inline KeVIN protocol is whitespace-tokenised, so keys and values cannot
+contain spaces or newlines when `kevin mcp serve --addr` proxies over TCP. With
+the default in-process store there is no such restriction, because nothing is
+re-encoded. The proxy reports the offending token rather than silently
+corrupting it.
+
 ## Configuration
+
+`serve` flags:
 
 | Flag     | Default | Purpose                                             |
 | -------- | ------- | --------------------------------------------------- |
@@ -110,8 +180,18 @@ Redis-style `ERR unknown command` / `ERR usage: ...` response.
 | `--gui`  | `false` | Open the key/value manager GUI alongside the server |
 | `--tui`  | `false` | Open the key/value manager TUI alongside the server |
 
-The server is stateless and in-memory — all data is lost on shutdown, matching
-the C and C++ implementations.
+`mcp serve` flags:
+
+| Flag     | Default | Purpose                                                       |
+| -------- | ------- | ------------------------------------------------------------- |
+| `--data` |         | Path to a JSON snapshot, loaded on start and saved on exit     |
+| `--addr` |         | Proxy a `kevin serve` at this `address` instead of storing data |
+
+`--data` conflicts with `--addr`.
+
+The TCP server is stateless and in-memory — all data is lost on shutdown,
+matching the C and C++ implementations. (`kevin mcp serve --data` is the
+exception: it snapshots on exit.)
 
 ## GUI
 

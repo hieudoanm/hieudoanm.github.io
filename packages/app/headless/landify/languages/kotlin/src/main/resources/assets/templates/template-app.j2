@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{{ config.site.description }}" />
+    <title>{{ config.site.name }}</title>
+    <style>
+      :root {
+@LANDIFY_THEME@      }
+{% include 'base-css.j2' %}
+      .app-stores {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 22px;
+      }
+      .store-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 18px;
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+        background: var(--base-200);
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--base-content);
+        text-decoration: none;
+      }
+      .store-badge:hover {
+        border-color: var(--primary);
+        color: var(--primary);
+      }
+      .rating {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin-top: 16px;
+        font-size: 14px;
+        color: var(--neutral);
+      }
+      .rating .stars {
+        letter-spacing: 2px;
+        color: var(--warning);
+      }
+      .shots {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 16px;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      .shot {
+        margin: 0;
+        text-align: center;
+      }
+      .shot img {
+        width: 100%;
+        aspect-ratio: 9 / 16;
+        object-fit: cover;
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+        background: var(--base-300);
+      }
+      .shot figcaption {
+        margin-top: 8px;
+        font-size: 13px;
+        color: var(--neutral);
+      }
+    </style>
+  </head>
+  <body>
+    {% include 'header.j2' %}
+
+    <main id="top">
+      <section class="hero">
+        <div>
+          {% if config.hero.badge %}<span class="badge">{{ config.hero.badge }}</span>{% endif %}
+          <h1>{{ config.hero.headline }}</h1>
+          <p class="lead">{{ config.hero.subheadline }}</p>
+          <div class="app-stores">
+            {% for store in config.app.stores %}<a class="store-badge" href="{{ store.href }}">{% if store.icon %}<span aria-hidden="true">{{ store.icon }}</span> {% endif %}{{ store.name }}</a>{% endfor %}
+          </div>
+          {% if config.app.ratings or config.app.reviews %}
+          <p class="rating">
+            <span class="stars" aria-hidden="true">★★★★★</span>
+            {{ config.app.ratings }}{% if config.app.ratings and config.app.reviews %} · {% endif %}{{ config.app.reviews }}
+          </p>
+          {% endif %}
+          {% if config.hero.image.src %}<img class="hero-media" src="{{ config.hero.image.src }}" alt="{{ config.hero.image.alt }}" />{% endif %}
+        </div>
+      </section>
+
+      {% if config.app.shots %}
+      <section id="screenshots" class="block">
+        {% if config.features.heading or config.features.sub %}
+        <div class="block-head">
+          <h2>{{ config.features.heading }}</h2>
+          {% if config.features.sub %}<p class="sub">{{ config.features.sub }}</p>{% endif %}
+        </div>
+        {% endif %}
+        <div class="shots">
+          {% for shot in config.app.shots %}
+          <figure class="shot">
+            <img src="{{ shot.src }}" alt="{{ shot.title }}" />
+            {% if shot.title %}<figcaption>{{ shot.title }}</figcaption>{% endif %}
+          </figure>
+          {% endfor %}
+        </div>
+      </section>
+      {% endif %}
+
+      {% if config.features.items %}
+      <section id="features" class="block">
+        <div class="block-head">
+          <h2>{{ config.features.heading }}</h2>
+          {% if config.features.sub %}<p class="sub">{{ config.features.sub }}</p>{% endif %}
+        </div>
+        <div class="features">
+          {% for feature in config.features.items %}
+          <div class="feature">
+            <span class="icon" aria-hidden="true">{{ feature.icon }}</span>
+            <h3>{{ feature.title }}</h3>
+            <p>{{ feature.body }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+      {% endif %}
+
+      {% if config.cta.heading %}
+      <section id="cta" class="block">
+        <div class="cta">
+          <span class="icon" aria-hidden="true">{{ config.cta.icon }}</span>
+          <h2>{{ config.cta.heading }}</h2>
+          <p>{{ config.cta.body }}</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="{{ config.cta.button.href }}">{{ config.cta.button.label }}</a>
+          </div>
+        </div>
+      </section>
+      {% endif %}
+
+      {% include 'footer.j2' %}
+    </main>
+  </body>
+</html>

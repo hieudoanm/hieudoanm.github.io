@@ -16,19 +16,104 @@ GraphQL Yoga (by The Guild, formerly `graphql-yoga`) is a **batteries-included G
 
 - Deps: `graphql-yoga`, `graphql`, `@graphql-tools/schema` (optional but recommended).
 - Standalone: `const yoga = createYoga({ schema, graphiql: true }); Bun.serve({ fetch: yoga })` or Node `createServer`.
+
+```ts
+import { createServer } from 'node:http'
+
+// Node: `yoga` is a request listener, so it plugs straight into node:http
+createServer(yoga).listen(4000)
+
+// Edge runtimes: it is also a fetch handler
+Bun.serve({ port: 4000, fetch: yoga })
+
+// Express: mount it as middleware
+app.use('/graphql', yoga)
+```
+
 - With Express: `app.use('/graphql', yoga)`.
 - Change path with `graphqlEndpoint`.
 
 ## 3. Schema & Resolvers
 
 - Use `createSchema({ typeDefs, resolvers })` for schema-first; or `GraphQLSchema` directly.
+
+```graphql
+type User {
+  id: ID!
+  name: String!
+  posts(first: Int = 10, after: String): [Post!]!
+}
+type Post {
+  id: ID!
+  title: String!
+  author: User!
+}
+input CreatePostInput {
+  title: String!
+  authorId: ID!
+}
+type Query {
+  user(id: ID!): User
+  posts(first: Int = 10, after: String): [Post!]!
+}
+type Mutation {
+  createPost(input: CreatePostInput!): Post!
+}
+type Subscription {
+  postAdded(authorId: ID!): Post!
+}
+```
+
 - Resolvers: plain JS/TS objects; async anywhere; args/context injected.
 - Context: build from `context: async ({ request, params }) => ({ user, loaders })`.
+
+```ts
+import { createSchema, createYoga } from 'graphql-yoga'
+import { useResponseCache } from '@graphql-yoga/plugin-response-cache'
+import { usePersistedOperations } from '@graphql-yoga/plugin-persisted-operations'
+
+export const schema = createSchema({ typeDefs, resolvers })
+
+export const yoga = createYoga({
+  schema,
+  graphqlEndpoint: '/graphql',
+  // Keep context cheap: auth, DB handle, loaders — no slow work per request
+  context: async ({ request }) => ({ user: await authenticate(request.headers.authorization) }),
+  plugins: [useResponseCache(), usePersistedOperations({ getHash: (req) => req.headers.get('x-query-id') ?? '' })],
+})
+```
+
 - Add middleware via plugins: `useLogger`, `useTiming`, `useAuth`, `useResponseCache`, `useGraphiQL`.
 
 ## 4. Subscriptions
 
 - Add `Subscription` root type with `subscribe` returning an `AsyncIterable` (use `PubSub` from `graphql-yoga` or `graphql-subscriptions`).
+
+```ts
+import { createPubSub } from 'graphql-yoga'
+
+const pubSub = createPubSub<{ postAdded: [post: Post] }>()
+
+const resolvers = {
+  Subscription: {
+    postAdded: {
+      subscribe: async function* (_parent, { authorId }: { authorId: string }) {
+        for await (const post of pubSub.subscribe('postAdded')) {
+          if (post.authorId === authorId) yield { postAdded: post }
+        }
+      },
+    },
+  },
+  Mutation: {
+    createPost: async (_parent, { input }: { input: CreatePostInput }, { postService }) => {
+      const post = await postService.create(input)
+      pubSub.publish('postAdded', post) // Yoga serves this over both SSE and WS
+      return post
+    },
+  },
+}
+```
+
 - Yoga exposes WS and SSE during runtime; configure `subscriptions: { path, ... }`.
 - For multi-instance, wire pubsub to Redis (`graphql-redis-subscriptions` or custom async iterator).
 

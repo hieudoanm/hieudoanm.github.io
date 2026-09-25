@@ -2,8 +2,8 @@
 
 ## Installation
 
-| Platform | Requirements  | Download Link                      |
-| -------- | ------------- | ---------------------------------- |
+| Platform | Requirements  | Download Link                   |
+| -------- | ------------- | ------------------------------- |
 | Android  | 8.0+ (API 26) | [Download `.aab`][download-aab] |
 | Android  | 8.0+ (API 26) | [Download `.apk`][download-apk] |
 

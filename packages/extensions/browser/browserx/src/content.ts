@@ -1,5 +1,6 @@
 import { maybeRunAdsBlocker } from './lib/ads';
 import { registerAudioDetection } from './lib/audio';
+import { registerBackToTop } from './lib/backtotop';
 import { maybeRenderBlockWall } from './lib/block';
 import { registerChessFocus } from './lib/chess';
 import { registerClaudeUsage } from './lib/claude';
@@ -19,6 +20,7 @@ const SCROLL_SETTLE_MS = 120;
 
 maybeRenderBlockWall();
 maybeRunAdsBlocker();
+registerBackToTop();
 registerChessFocus();
 registerClaudeUsage();
 registerExternalLinkRouting();

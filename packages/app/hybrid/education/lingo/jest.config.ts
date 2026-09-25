@@ -35,4 +35,15 @@ const config = {
   },
 };
 
-export default createJestConfig(config);
+const withMarkdownNotes = (
+  resolved: import('jest').Config
+): import('jest').Config => ({
+  ...resolved,
+  moduleFileExtensions: [...(resolved.moduleFileExtensions ?? []), 'md'],
+  transform: {
+    ...resolved.transform,
+    '^.+\\.md$': '<rootDir>/jest.markdown-transform.js',
+  },
+});
+
+export default async () => withMarkdownNotes(await createJestConfig(config)());

@@ -2,7 +2,13 @@
 
 import { GameItem, GamesTemplate } from '@/components/templates/GamesTemplate';
 import { NextPage } from 'next';
-import { PiAtom, PiInfinity, PiMathOperations } from 'react-icons/pi';
+import {
+  PiAtom,
+  PiGridFour,
+  PiInfinity,
+  PiMathOperations,
+  PiSpiral,
+} from 'react-icons/pi';
 
 const ITEMS: GameItem[] = [
   {
@@ -19,6 +25,22 @@ const ITEMS: GameItem[] = [
     description: 'Visualise the cyclic number 142857',
     icon: PiInfinity,
     href: '/maths/cyclic/',
+    group: 'Number Theory',
+  },
+  {
+    testId: 'maths-fibonacci-sequence',
+    name: 'Fibonacci sequence',
+    description: 'Watch the ratios converge on the golden ratio',
+    icon: PiSpiral,
+    href: '/maths/fibonacci-sequence/',
+    group: 'Sequences',
+  },
+  {
+    testId: 'maths-prime-numbers',
+    name: 'Prime numbers',
+    description: 'Sieve the primes and explore prime gaps',
+    icon: PiGridFour,
+    href: '/maths/prime-numbers/',
     group: 'Number Theory',
   },
   {

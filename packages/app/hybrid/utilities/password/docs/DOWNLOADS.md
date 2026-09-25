@@ -86,8 +86,13 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-A vault packed into your pocket — store, generate, and manage every password you
-own, running natively on every device you own.
+A vault packed into your pocket.
+
+- Store every password you own.
+- Generate passwords.
+- Manage them all.
+
+Running natively on every device you own.
 
 ---
 

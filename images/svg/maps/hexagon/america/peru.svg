@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357.71 377.48" width="357.71" height="377.48" role="img" aria-labelledby="peru-title peru-desc">
+  <title id="peru-title">Peru hex map</title>
+  <desc id="peru-desc">Hexagon map with 26 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.77; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 13.67 9.76; }
+    .label { fill: #52525b; font: 600 11.06px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="PUN">
+    <title>Puno</title>
+    <polygon class="tile" points="319.76,253.82 347.94,270.09 347.94,302.64 319.76,318.91 291.58,302.64 291.58,270.09" aria-label="Puno"/>
+    <text class="label" x="319.76" y="286.37">PUN</text>
+  </g>
+  <g class="state" data-state="CUS">
+    <title>Cusco</title>
+    <polygon class="tile" points="291.58,205.01 319.76,221.28 319.76,253.82 291.58,270.09 263.40,253.82 263.40,221.28" aria-label="Cusco"/>
+    <text class="label" x="291.58" y="237.55">CUS</text>
+  </g>
+  <g class="state" data-state="TAC">
+    <title>Tacna</title>
+    <polygon class="tile" points="291.58,302.64 319.76,318.91 319.76,351.45 291.58,367.72 263.40,351.45 263.40,318.91" aria-label="Tacna"/>
+    <text class="label" x="291.58" y="335.18">TAC</text>
+  </g>
+  <g class="state" data-state="MDD">
+    <title>Madre de Dios</title>
+    <polygon class="tile" points="263.40,156.20 291.58,172.47 291.58,205.01 263.40,221.28 235.22,205.01 235.22,172.47" aria-label="Madre de Dios"/>
+    <text class="label" x="263.40" y="188.74">MDD</text>
+  </g>
+  <g class="state" data-state="ARE">
+    <title>Arequipa</title>
+    <polygon class="tile" points="263.40,253.82 291.58,270.09 291.58,302.64 263.40,318.91 235.22,302.64 235.22,270.09" aria-label="Arequipa"/>
+    <text class="label" x="263.40" y="286.37">ARE</text>
+  </g>
+  <g class="state" data-state="LOR">
+    <title>Loreto</title>
+    <polygon class="tile" points="235.22,9.76 263.40,26.03 263.40,58.57 235.22,74.85 207.04,58.57 207.04,26.03" aria-label="Loreto"/>
+    <text class="label" x="235.22" y="42.30">LOR</text>
+  </g>
+  <g class="state" data-state="UCA">
+    <title>Ucayali</title>
+    <polygon class="tile" points="235.22,107.39 263.40,123.66 263.40,156.20 235.22,172.47 207.04,156.20 207.04,123.66" aria-label="Ucayali"/>
+    <text class="label" x="235.22" y="139.93">UCA</text>
+  </g>
+  <g class="state" data-state="APU">
+    <title>Apurímac</title>
+    <polygon class="tile" points="235.22,205.01 263.40,221.28 263.40,253.82 235.22,270.09 207.04,253.82 207.04,221.28" aria-label="Apurímac"/>
+    <text class="label" x="235.22" y="237.55">APU</text>
+  </g>
+  <g class="state" data-state="MOQ">
+    <title>Moquegua</title>
+    <polygon class="tile" points="235.22,302.64 263.40,318.91 263.40,351.45 235.22,367.72 207.04,351.45 207.04,318.91" aria-label="Moquegua"/>
+    <text class="label" x="235.22" y="335.18">MOQ</text>
+  </g>
+  <g class="state" data-state="HUC">
+    <title>Huánuco</title>
+    <polygon class="tile" points="207.04,58.57 235.22,74.85 235.22,107.39 207.04,123.66 178.85,107.39 178.85,74.85" aria-label="Huánuco"/>
+    <text class="label" x="207.04" y="91.12">HUC</text>
+  </g>
+  <g class="state" data-state="JUN">
+    <title>Junín</title>
+    <polygon class="tile" points="207.04,156.20 235.22,172.47 235.22,205.01 207.04,221.28 178.85,205.01 178.85,172.47" aria-label="Junín"/>
+    <text class="label" x="207.04" y="188.74">JUN</text>
+  </g>
+  <g class="state" data-state="AYA">
+    <title>Ayacucho</title>
+    <polygon class="tile" points="207.04,253.82 235.22,270.09 235.22,302.64 207.04,318.91 178.85,302.64 178.85,270.09" aria-label="Ayacucho"/>
+    <text class="label" x="207.04" y="286.37">AYA</text>
+  </g>
+  <g class="state" data-state="SAM">
+    <title>San Martín</title>
+    <polygon class="tile" points="178.85,9.76 207.04,26.03 207.04,58.57 178.85,74.85 150.67,58.57 150.67,26.03" aria-label="San Martín"/>
+    <text class="label" x="178.85" y="42.30">SAM</text>
+  </g>
+  <g class="state" data-state="PAS">
+    <title>Pasco</title>
+    <polygon class="tile" points="178.85,107.39 207.04,123.66 207.04,156.20 178.85,172.47 150.67,156.20 150.67,123.66" aria-label="Pasco"/>
+    <text class="label" x="178.85" y="139.93">PAS</text>
+  </g>
+  <g class="state" data-state="HUV">
+    <title>Huancavelica</title>
+    <polygon class="tile" points="178.85,205.01 207.04,221.28 207.04,253.82 178.85,270.09 150.67,253.82 150.67,221.28" aria-label="Huancavelica"/>
+    <text class="label" x="178.85" y="237.55">HUV</text>
+  </g>
+  <g class="state" data-state="LAL">
+    <title>La Libertad</title>
+    <polygon class="tile" points="150.67,58.57 178.85,74.85 178.85,107.39 150.67,123.66 122.49,107.39 122.49,74.85" aria-label="La Libertad"/>
+    <text class="label" x="150.67" y="91.12">LAL</text>
+  </g>
+  <g class="state" data-state="LIM">
+    <title>Lima</title>
+    <polygon class="tile" points="150.67,156.20 178.85,172.47 178.85,205.01 150.67,221.28 122.49,205.01 122.49,172.47" aria-label="Lima"/>
+    <text class="label" x="150.67" y="188.74">LIM</text>
+  </g>
+  <g class="state" data-state="ICA">
+    <title>Ica</title>
+    <polygon class="tile" points="150.67,253.82 178.85,270.09 178.85,302.64 150.67,318.91 122.49,302.64 122.49,270.09" aria-label="Ica"/>
+    <text class="label" x="150.67" y="286.37">ICA</text>
+  </g>
+  <g class="state" data-state="AMA">
+    <title>Amazonas</title>
+    <polygon class="tile" points="122.49,9.76 150.67,26.03 150.67,58.57 122.49,74.85 94.31,58.57 94.31,26.03" aria-label="Amazonas"/>
+    <text class="label" x="122.49" y="42.30">AMA</text>
+  </g>
+  <g class="state" data-state="ANC">
+    <title>Áncash</title>
+    <polygon class="tile" points="122.49,107.39 150.67,123.66 150.67,156.20 122.49,172.47 94.31,156.20 94.31,123.66" aria-label="Áncash"/>
+    <text class="label" x="122.49" y="139.93">ANC</text>
+  </g>
+  <g class="state" data-state="LMA">
+    <title>Lima Province</title>
+    <polygon class="tile" points="122.49,205.01 150.67,221.28 150.67,253.82 122.49,270.09 94.31,253.82 94.31,221.28" aria-label="Lima Province"/>
+    <text class="label" x="122.49" y="237.55">LMA</text>
+  </g>
+  <g class="state" data-state="LAM">
+    <title>Lambayeque</title>
+    <polygon class="tile" points="94.31,58.57 122.49,74.85 122.49,107.39 94.31,123.66 66.13,107.39 66.13,74.85" aria-label="Lambayeque"/>
+    <text class="label" x="94.31" y="91.12">LAM</text>
+  </g>
+  <g class="state" data-state="CAL">
+    <title>Callao</title>
+    <polygon class="tile" points="94.31,156.20 122.49,172.47 122.49,205.01 94.31,221.28 66.13,205.01 66.13,172.47" aria-label="Callao"/>
+    <text class="label" x="94.31" y="188.74">CAL</text>
+  </g>
+  <g class="state" data-state="CAJ">
+    <title>Cajamarca</title>
+    <polygon class="tile" points="66.13,9.76 94.31,26.03 94.31,58.57 66.13,74.85 37.94,58.57 37.94,26.03" aria-label="Cajamarca"/>
+    <text class="label" x="66.13" y="42.30">CAJ</text>
+  </g>
+  <g class="state" data-state="TUM">
+    <title>Tumbes</title>
+    <polygon class="tile" points="66.13,107.39 94.31,123.66 94.31,156.20 66.13,172.47 37.94,156.20 37.94,123.66" aria-label="Tumbes"/>
+    <text class="label" x="66.13" y="139.93">TUM</text>
+  </g>
+  <g class="state" data-state="PIU">
+    <title>Piura</title>
+    <polygon class="tile" points="37.94,58.57 66.13,74.85 66.13,107.39 37.94,123.66 9.76,107.39 9.76,74.85" aria-label="Piura"/>
+    <text class="label" x="37.94" y="91.12">PIU</text>
+  </g>
+</svg>

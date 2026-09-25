@@ -4,12 +4,14 @@
 
 .backdrop-grayscale-0 {
   --tw-backdrop-grayscale: grayscale(0);
+
   -webkit-backdrop-filter: #{$backdrop-filter-composite};
   backdrop-filter: #{$backdrop-filter-composite};
 }
 
 .backdrop-grayscale {
   --tw-backdrop-grayscale: grayscale(100%);
+
   -webkit-backdrop-filter: #{$backdrop-filter-composite};
   backdrop-filter: #{$backdrop-filter-composite};
 }

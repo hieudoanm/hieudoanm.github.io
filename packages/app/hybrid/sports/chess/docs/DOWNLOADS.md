@@ -85,8 +85,14 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-A chess workhorse — play, analyse, train, and run tournaments — powered by
-`@chess/ts` and running natively on every device you own.
+A chess workhorse, powered by `@chess/ts`.
+
+- Play chess.
+- Analyse games.
+- Train tactics.
+- Run tournaments.
+
+Running natively on every device you own.
 
 ---
 

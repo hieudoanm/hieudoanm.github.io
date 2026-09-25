@@ -2,7 +2,7 @@
 //! the Go cobra wiring: `new`, `validate`, `build`, `themes`, `serve`,
 //! `tui`, `studio`. `--file`/`-f` (default `landify.yaml`) is a global flag.
 
-use crate::{gui, placeholder, render, serve, tui, validate};
+use crate::{gui, mcp, placeholder, render, serve, tui, validate};
 use anyhow::{anyhow, Result};
 use clap::{Parser, Subcommand};
 use std::path::Path;
@@ -40,6 +40,32 @@ pub enum Command {
     Tui(TuiArgs),
     /// Open the landify studio desktop app
     Studio(StudioArgs),
+    /// Run the Model Context Protocol server for LLM clients
+    Mcp(McpCommand),
+}
+
+/// The `landify mcp` command tree: the server and its stdio transport.
+#[derive(Debug, clap::Args)]
+#[command(
+    about = "Model Context Protocol server that exposes Landify as tools",
+    long_about = "Runs an MCP server on stdio so an LLM client can scaffold, validate and\nbuild landing pages through the same code paths as the CLI.\n\nFile access is confined to --root, so a client cannot read or write\nanything outside that directory."
+)]
+pub struct McpCommand {
+    #[command(subcommand)]
+    pub command: McpSubcommand,
+}
+
+#[derive(Debug, clap::Subcommand)]
+pub enum McpSubcommand {
+    /// Start the Landify MCP server on stdio
+    Serve(McpServeArgs),
+}
+
+#[derive(Debug, Default, clap::Args)]
+pub struct McpServeArgs {
+    /// Root directory every tool path is confined to
+    #[arg(long, default_value = crate::mcp::workspace::DEFAULT_ROOT)]
+    pub root: String,
 }
 
 #[derive(Debug, clap::Args)]
@@ -99,6 +125,9 @@ pub fn run() -> Result<()> {
         Command::Serve(args) => run_serve(&args),
         Command::Tui(args) => run_tui(&args),
         Command::Studio(args) => run_studio(&args),
+        Command::Mcp(args) => match args.command {
+            McpSubcommand::Serve(serve) => mcp::run(&serve.root),
+        },
     }
 }
 

@@ -6,7 +6,6 @@ import (
 	"fmt"
 	"io"
 	"net/http"
-	"net/url"
 	"strings"
 	"sync/atomic"
 	"time"
@@ -140,20 +139,14 @@ func parseURLFromJSON(w http.ResponseWriter, r *http.Request) (string, int, []by
 	return validateURL(req.URL)
 }
 
+// validateURL defers to headless.ValidateURL so the HTTP API and the MCP tools
+// reject the same targets with the same messages.
 func validateURL(raw string) (string, int, []byte, error) {
-	parsed, err := url.Parse(raw)
+	validated, err := headless.ValidateURL(raw)
 	if err != nil {
-		return "", 400, errorBody(fmt.Sprintf("invalid url: %v", err)), err
+		return "", 400, errorBody(err.Error()), err
 	}
-	if parsed.Scheme == "" {
-		return "", 400, errorBody("invalid url"), fmt.Errorf("invalid url: missing scheme")
-	}
-	switch parsed.Scheme {
-	case "http", "https":
-		return parsed.String(), 200, nil, nil
-	default:
-		return "", 400, errorBody(fmt.Sprintf("unsupported scheme: %s", parsed.Scheme)), fmt.Errorf("unsupported scheme")
-	}
+	return validated, 200, nil, nil
 }
 
 func headerSafe(value string) string {

@@ -83,19 +83,26 @@ the `health` subcommand.
 ## CI Pipeline
 
 `.github/workflows/ci-app-headless-browserverless.yaml` runs a `go` job that
-calls the reusable workflow `ci-app-headless-go-template.yaml`:
+calls the reusable workflow `ci-app-headless-template.yaml`:
 
-| Input        | Value                                                     |
-| ------------ | --------------------------------------------------------- |
-| package      | `packages/app/headless/browserverless/languages/go`       |
-| releaseName  | `app-headless-browserverless-latest`                      |
-| releaseTitle | `App - Headless - Browserverless (latest)`                |
-| artifactName | `app-headless-browserverless`                             |
-| artifactPath | `packages/app/headless/browserverless/languages/go/bin/*` |
-| installZig   | `false`                                                   |
+| Input            | Value                                                                    |
+| ---------------- | ------------------------------------------------------------------------ |
+| package          | `packages/app/headless/browserverless/languages/go`                      |
+| rustPackage      | `packages/app/headless/browserverless/languages/rust`                    |
+| releaseName      | `app-headless-browserverless-latest`                                     |
+| releaseTitle     | `App - Headless - Browserverless (latest)`                               |
+| artifactName     | `app-headless-browserverless`                                            |
+| artifactPath     | `packages/app/headless/browserverless/languages/go/bin/*`                |
+| rustArtifactPath | `packages/app/headless/browserverless/languages/rust/target/release/browserverless` |
+| installZig       | `false`                                                                  |
 
-The job runs: `make lint` → `make test` → `make build-all`, then uploads
+The `go` job runs: `make lint` → `make test` → `make build-all`, then uploads
 `bin/*` as the `app-headless-browserverless` artifact.
+
+The template also runs a `rust` job (`cargo fmt --check`, `cargo clippy`,
+`cargo test`, `cargo build --release`) that uploads an
+`app-headless-browserverless-rust` CI artifact. Rust is **not** published to the
+GitHub release and does **not** gate the `publish` job.
 
 The release tag `app-headless-browserverless-latest` is force-updated on every
 push, so the download URLs in [DOWNLOADS](DOWNLOADS) always point at the

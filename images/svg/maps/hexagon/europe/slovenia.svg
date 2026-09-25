@@ -1,0 +1,976 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 367.63 264.49" width="367.63" height="264.49" role="img" aria-labelledby="slovenia-title slovenia-desc">
+  <title id="slovenia-title">Slovenia hex map</title>
+  <desc id="slovenia-desc">Hexagon map with 193 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 0.85; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 4.18 2.98; }
+    .label { fill: #52525b; font: 600 3.38px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="LE">
+    <title>Lendava</title>
+    <polygon class="tile" points="356.04,47.73 364.65,52.70 364.65,62.64 356.04,67.61 347.43,62.64 347.43,52.70" aria-label="Lendava"/>
+    <text class="label" x="356.04" y="57.67">LE</text>
+  </g>
+  <g class="state" data-state="DO">
+    <title>Dobrovnik</title>
+    <polygon class="tile" points="347.43,32.81 356.04,37.78 356.04,47.73 347.43,52.70 338.82,47.73 338.82,37.78" aria-label="Dobrovnik"/>
+    <text class="label" x="347.43" y="42.76">DO</text>
+  </g>
+  <g class="state" data-state="VP">
+    <title>Velika Polana</title>
+    <polygon class="tile" points="347.43,62.64 356.04,67.61 356.04,77.56 347.43,82.53 338.82,77.56 338.82,67.61" aria-label="Velika Polana"/>
+    <text class="label" x="347.43" y="72.59">VP</text>
+  </g>
+  <g class="state" data-state="KO">
+    <title>Kobilje</title>
+    <polygon class="tile" points="338.82,17.90 347.43,22.87 347.43,32.81 338.82,37.78 330.21,32.81 330.21,22.87" aria-label="Kobilje"/>
+    <text class="label" x="338.82" y="27.84">KO</text>
+  </g>
+  <g class="state" data-state="TU">
+    <title>Turnišče</title>
+    <polygon class="tile" points="338.82,47.73 347.43,52.70 347.43,62.64 338.82,67.61 330.21,62.64 330.21,52.70" aria-label="Turnišče"/>
+    <text class="label" x="338.82" y="57.67">TU</text>
+  </g>
+  <g class="state" data-state="SA">
+    <title>Šalovci</title>
+    <polygon class="tile" points="330.21,2.98 338.82,7.95 338.82,17.90 330.21,22.87 321.59,17.90 321.59,7.95" aria-label="Šalovci"/>
+    <text class="label" x="330.21" y="12.93">SA</text>
+  </g>
+  <g class="state" data-state="OD">
+    <title>Odranci</title>
+    <polygon class="tile" points="330.21,32.81 338.82,37.78 338.82,47.73 330.21,52.70 321.59,47.73 321.59,37.78" aria-label="Odranci"/>
+    <text class="label" x="330.21" y="42.76">OD</text>
+  </g>
+  <g class="state" data-state="CR">
+    <title>Črenšovci</title>
+    <polygon class="tile" points="330.21,62.64 338.82,67.61 338.82,77.56 330.21,82.53 321.59,77.56 321.59,67.61" aria-label="Črenšovci"/>
+    <text class="label" x="330.21" y="72.59">CR</text>
+  </g>
+  <g class="state" data-state="MT">
+    <title>Moravske Toplice</title>
+    <polygon class="tile" points="321.59,17.90 330.21,22.87 330.21,32.81 321.59,37.78 312.98,32.81 312.98,22.87" aria-label="Moravske Toplice"/>
+    <text class="label" x="321.59" y="27.84">MT</text>
+  </g>
+  <g class="state" data-state="BEL">
+    <title>Beltinci</title>
+    <polygon class="tile" points="321.59,47.73 330.21,52.70 330.21,62.64 321.59,67.61 312.98,62.64 312.98,52.70" aria-label="Beltinci"/>
+    <text class="label" x="321.59" y="57.67">BEL</text>
+  </g>
+  <g class="state" data-state="RZ">
+    <title>Razkrižje</title>
+    <polygon class="tile" points="321.59,77.56 330.21,82.53 330.21,92.47 321.59,97.44 312.98,92.47 312.98,82.53" aria-label="Razkrižje"/>
+    <text class="label" x="321.59" y="87.50">RZ</text>
+  </g>
+  <g class="state" data-state="GP">
+    <title>Gornji Petrovci</title>
+    <polygon class="tile" points="312.98,2.98 321.59,7.95 321.59,17.90 312.98,22.87 304.37,17.90 304.37,7.95" aria-label="Gornji Petrovci"/>
+    <text class="label" x="312.98" y="12.93">GP</text>
+  </g>
+  <g class="state" data-state="PM">
+    <title>Murska Sobota</title>
+    <polygon class="tile" points="312.98,32.81 321.59,37.78 321.59,47.73 312.98,52.70 304.37,47.73 304.37,37.78" aria-label="Murska Sobota"/>
+    <text class="label" x="312.98" y="42.76">PM</text>
+  </g>
+  <g class="state" data-state="LJ">
+    <title>Ljutomer</title>
+    <polygon class="tile" points="312.98,62.64 321.59,67.61 321.59,77.56 312.98,82.53 304.37,77.56 304.37,67.61" aria-label="Ljutomer"/>
+    <text class="label" x="312.98" y="72.59">LJ</text>
+  </g>
+  <g class="state" data-state="ZA">
+    <title>Zavrc</title>
+    <polygon class="tile" points="312.98,92.47 321.59,97.44 321.59,107.39 312.98,112.36 304.37,107.39 304.37,97.44" aria-label="Zavrc"/>
+    <text class="label" x="312.98" y="102.42">ZA</text>
+  </g>
+  <g class="state" data-state="PUC">
+    <title>Puconci</title>
+    <polygon class="tile" points="304.37,17.90 312.98,22.87 312.98,32.81 304.37,37.78 295.76,32.81 295.76,22.87" aria-label="Puconci"/>
+    <text class="label" x="304.37" y="27.84">PUC</text>
+  </g>
+  <g class="state" data-state="KRI">
+    <title>Križevci</title>
+    <polygon class="tile" points="304.37,47.73 312.98,52.70 312.98,62.64 304.37,67.61 295.76,62.64 295.76,52.70" aria-label="Križevci"/>
+    <text class="label" x="304.37" y="57.67">KRI</text>
+  </g>
+  <g class="state" data-state="OR">
+    <title>Ormož</title>
+    <polygon class="tile" points="304.37,77.56 312.98,82.53 312.98,92.47 304.37,97.44 295.76,92.47 295.76,82.53" aria-label="Ormož"/>
+    <text class="label" x="304.37" y="87.50">OR</text>
+  </g>
+  <g class="state" data-state="GO">
+    <title>Gorišnica</title>
+    <polygon class="tile" points="304.37,107.39 312.98,112.36 312.98,122.30 304.37,127.27 295.76,122.30 295.76,112.36" aria-label="Gorišnica"/>
+    <text class="label" x="304.37" y="117.33">GO</text>
+  </g>
+  <g class="state" data-state="GD">
+    <title>Grad</title>
+    <polygon class="tile" points="295.76,2.98 304.37,7.95 304.37,17.90 295.76,22.87 287.15,17.90 287.15,7.95" aria-label="Grad"/>
+    <text class="label" x="295.76" y="12.93">GD</text>
+  </g>
+  <g class="state" data-state="CA">
+    <title>Cankova</title>
+    <polygon class="tile" points="295.76,32.81 304.37,37.78 304.37,47.73 295.76,52.70 287.15,47.73 287.15,37.78" aria-label="Cankova"/>
+    <text class="label" x="295.76" y="42.76">CA</text>
+  </g>
+  <g class="state" data-state="SJA">
+    <title>Sveti Jurij</title>
+    <polygon class="tile" points="295.76,62.64 304.37,67.61 304.37,77.56 295.76,82.53 287.15,77.56 287.15,67.61" aria-label="Sveti Jurij"/>
+    <text class="label" x="295.76" y="72.59">SJA</text>
+  </g>
+  <g class="state" data-state="DOR">
+    <title>Dornava</title>
+    <polygon class="tile" points="295.76,92.47 304.37,97.44 304.37,107.39 295.76,112.36 287.15,107.39 287.15,97.44" aria-label="Dornava"/>
+    <text class="label" x="295.76" y="102.42">DOR</text>
+  </g>
+  <g class="state" data-state="RO">
+    <title>Rogašovci</title>
+    <polygon class="tile" points="287.15,17.90 295.76,22.87 295.76,32.81 287.15,37.78 278.54,32.81 278.54,22.87" aria-label="Rogašovci"/>
+    <text class="label" x="287.15" y="27.84">RO</text>
+  </g>
+  <g class="state" data-state="RADA">
+    <title>Radenci</title>
+    <polygon class="tile" points="287.15,47.73 295.76,52.70 295.76,62.64 287.15,67.61 278.54,62.64 278.54,52.70" aria-label="Radenci"/>
+    <text class="label" x="287.15" y="57.67">RADA</text>
+  </g>
+  <g class="state" data-state="JUR">
+    <title>Juršinci</title>
+    <polygon class="tile" points="287.15,77.56 295.76,82.53 295.76,92.47 287.15,97.44 278.54,92.47 278.54,82.53" aria-label="Juršinci"/>
+    <text class="label" x="287.15" y="87.50">JUR</text>
+  </g>
+  <g class="state" data-state="MAR">
+    <title>Markovci</title>
+    <polygon class="tile" points="287.15,107.39 295.76,112.36 295.76,122.30 287.15,127.27 278.54,122.30 278.54,112.36" aria-label="Markovci"/>
+    <text class="label" x="287.15" y="117.33">MAR</text>
+  </g>
+  <g class="state" data-state="GR">
+    <title>Gornja Radgona</title>
+    <polygon class="tile" points="278.54,32.81 287.15,37.78 287.15,47.73 278.54,52.70 269.93,47.73 269.93,37.78" aria-label="Gornja Radgona"/>
+    <text class="label" x="278.54" y="42.76">GR</text>
+  </g>
+  <g class="state" data-state="CE">
+    <title>Cerkvenjak</title>
+    <polygon class="tile" points="278.54,62.64 287.15,67.61 287.15,77.56 278.54,82.53 269.93,77.56 269.93,67.61" aria-label="Cerkvenjak"/>
+    <text class="label" x="278.54" y="72.59">CE</text>
+  </g>
+  <g class="state" data-state="DE">
+    <title>Destrnik</title>
+    <polygon class="tile" points="278.54,92.47 287.15,97.44 287.15,107.39 278.54,112.36 269.93,107.39 269.93,97.44" aria-label="Destrnik"/>
+    <text class="label" x="278.54" y="102.42">DE</text>
+  </g>
+  <g class="state" data-state="KU">
+    <title>Kuzma</title>
+    <polygon class="tile" points="269.93,17.90 278.54,22.87 278.54,32.81 269.93,37.78 261.32,32.81 261.32,22.87" aria-label="Kuzma"/>
+    <text class="label" x="269.93" y="27.84">KU</text>
+  </g>
+  <g class="state" data-state="BE">
+    <title>Benedikt</title>
+    <polygon class="tile" points="269.93,47.73 278.54,52.70 278.54,62.64 269.93,67.61 261.32,62.64 261.32,52.70" aria-label="Benedikt"/>
+    <text class="label" x="269.93" y="57.67">BE</text>
+  </g>
+  <g class="state" data-state="SAVS">
+    <title>Sveti Andraž v Slovenskih Goricah</title>
+    <polygon class="tile" points="269.93,77.56 278.54,82.53 278.54,92.47 269.93,97.44 261.32,92.47 261.32,82.53" aria-label="Sveti Andraž v Slovenskih Goricah"/>
+    <text class="label" x="269.93" y="87.50">SAVS</text>
+  </g>
+  <g class="state" data-state="VI">
+    <title>Videm</title>
+    <polygon class="tile" points="269.93,107.39 278.54,112.36 278.54,122.30 269.93,127.27 261.32,122.30 261.32,112.36" aria-label="Videm"/>
+    <text class="label" x="269.93" y="117.33">VI</text>
+  </g>
+  <g class="state" data-state="SAA">
+    <title>Sveta Ana</title>
+    <polygon class="tile" points="261.32,32.81 269.93,37.78 269.93,47.73 261.32,52.70 252.71,47.73 252.71,37.78" aria-label="Sveta Ana"/>
+    <text class="label" x="261.32" y="42.76">SAA</text>
+  </g>
+  <g class="state" data-state="TV">
+    <title>Trnovska vas</title>
+    <polygon class="tile" points="261.32,62.64 269.93,67.61 269.93,77.56 261.32,82.53 252.71,77.56 252.71,67.61" aria-label="Trnovska vas"/>
+    <text class="label" x="261.32" y="72.59">TV</text>
+  </g>
+  <g class="state" data-state="PT">
+    <title>Ptuj</title>
+    <polygon class="tile" points="261.32,92.47 269.93,97.44 269.93,107.39 261.32,112.36 252.71,107.39 252.71,97.44" aria-label="Ptuj"/>
+    <text class="label" x="261.32" y="102.42">PT</text>
+  </g>
+  <g class="state" data-state="POD">
+    <title>Podlehnik</title>
+    <polygon class="tile" points="261.32,122.30 269.93,127.27 269.93,137.22 261.32,142.19 252.71,137.22 252.71,127.27" aria-label="Podlehnik"/>
+    <text class="label" x="261.32" y="132.25">POD</text>
+  </g>
+  <g class="state" data-state="APA">
+    <title>Apace</title>
+    <polygon class="tile" points="252.71,17.90 261.32,22.87 261.32,32.81 252.71,37.78 244.09,32.81 244.09,22.87" aria-label="Apace"/>
+    <text class="label" x="252.71" y="27.84">APA</text>
+  </g>
+  <g class="state" data-state="LEN">
+    <title>Lenart</title>
+    <polygon class="tile" points="252.71,47.73 261.32,52.70 261.32,62.64 252.71,67.61 244.09,62.64 244.09,52.70" aria-label="Lenart"/>
+    <text class="label" x="252.71" y="57.67">LEN</text>
+  </g>
+  <g class="state" data-state="STA">
+    <title>Starše</title>
+    <polygon class="tile" points="252.71,77.56 261.32,82.53 261.32,92.47 252.71,97.44 244.09,92.47 244.09,82.53" aria-label="Starše"/>
+    <text class="label" x="252.71" y="87.50">STA</text>
+  </g>
+  <g class="state" data-state="HA">
+    <title>Hajdina</title>
+    <polygon class="tile" points="252.71,107.39 261.32,112.36 261.32,122.30 252.71,127.27 244.09,122.30 244.09,112.36" aria-label="Hajdina"/>
+    <text class="label" x="252.71" y="117.33">HA</text>
+  </g>
+  <g class="state" data-state="ENT">
+    <title>Šentilj</title>
+    <polygon class="tile" points="244.09,32.81 252.71,37.78 252.71,47.73 244.09,52.70 235.48,47.73 235.48,37.78" aria-label="Šentilj"/>
+    <text class="label" x="244.09" y="42.76">ENT</text>
+  </g>
+  <g class="state" data-state="DU">
+    <title>Duplek</title>
+    <polygon class="tile" points="244.09,62.64 252.71,67.61 252.71,77.56 244.09,82.53 235.48,77.56 235.48,67.61" aria-label="Duplek"/>
+    <text class="label" x="244.09" y="72.59">DU</text>
+  </g>
+  <g class="state" data-state="RF">
+    <title>Race-Fram</title>
+    <polygon class="tile" points="244.09,92.47 252.71,97.44 252.71,107.39 244.09,112.36 235.48,107.39 235.48,97.44" aria-label="Race-Fram"/>
+    <text class="label" x="244.09" y="102.42">RF</text>
+  </g>
+  <g class="state" data-state="ZE">
+    <title>Žetale</title>
+    <polygon class="tile" points="244.09,122.30 252.71,127.27 252.71,137.22 244.09,142.19 235.48,137.22 235.48,127.27" aria-label="Žetale"/>
+    <text class="label" x="244.09" y="132.25">ZE</text>
+  </g>
+  <g class="state" data-state="HO">
+    <title>Hodoš</title>
+    <polygon class="tile" points="244.09,152.13 252.71,157.10 252.71,167.05 244.09,172.02 235.48,167.05 235.48,157.10" aria-label="Hodoš"/>
+    <text class="label" x="244.09" y="162.08">HO</text>
+  </g>
+  <g class="state" data-state="VER">
+    <title>Veržej</title>
+    <polygon class="tile" points="244.09,181.96 252.71,186.93 252.71,196.88 244.09,201.85 235.48,196.88 235.48,186.93" aria-label="Veržej"/>
+    <text class="label" x="244.09" y="191.90">VER</text>
+  </g>
+  <g class="state" data-state="MB">
+    <title>Maribor</title>
+    <polygon class="tile" points="235.48,47.73 244.09,52.70 244.09,62.64 235.48,67.61 226.87,62.64 226.87,52.70" aria-label="Maribor"/>
+    <text class="label" x="235.48" y="57.67">MB</text>
+  </g>
+  <g class="state" data-state="MD">
+    <title>Miklavž na Dravskem polju</title>
+    <polygon class="tile" points="235.48,77.56 244.09,82.53 244.09,92.47 235.48,97.44 226.87,92.47 226.87,82.53" aria-label="Miklavž na Dravskem polju"/>
+    <text class="label" x="235.48" y="87.50">MD</text>
+  </g>
+  <g class="state" data-state="KI">
+    <title>Kidricevo</title>
+    <polygon class="tile" points="235.48,107.39 244.09,112.36 244.09,122.30 235.48,127.27 226.87,122.30 226.87,112.36" aria-label="Kidricevo"/>
+    <text class="label" x="235.48" y="117.33">KI</text>
+  </g>
+  <g class="state" data-state="ROG">
+    <title>Rogatec</title>
+    <polygon class="tile" points="235.48,137.22 244.09,142.19 244.09,152.13 235.48,157.10 226.87,152.13 226.87,142.19" aria-label="Rogatec"/>
+    <text class="label" x="235.48" y="147.16">ROG</text>
+  </g>
+  <g class="state" data-state="PD">
+    <title>Podcetrtek</title>
+    <polygon class="tile" points="235.48,167.05 244.09,172.02 244.09,181.96 235.48,186.93 226.87,181.96 226.87,172.02" aria-label="Podcetrtek"/>
+    <text class="label" x="235.48" y="176.99">PD</text>
+  </g>
+  <g class="state" data-state="PE">
+    <title>Pesnica</title>
+    <polygon class="tile" points="226.87,32.81 235.48,37.78 235.48,47.73 226.87,52.70 218.26,47.73 218.26,37.78" aria-label="Pesnica"/>
+    <text class="label" x="226.87" y="42.76">PE</text>
+  </g>
+  <g class="state" data-state="RU">
+    <title>Ruše</title>
+    <polygon class="tile" points="226.87,62.64 235.48,67.61 235.48,77.56 226.87,82.53 218.26,77.56 218.26,67.61" aria-label="Ruše"/>
+    <text class="label" x="226.87" y="72.59">RU</text>
+  </g>
+  <g class="state" data-state="SB">
+    <title>Slovenska Bistrica</title>
+    <polygon class="tile" points="226.87,92.47 235.48,97.44 235.48,107.39 226.87,112.36 218.26,107.39 218.26,97.44" aria-label="Slovenska Bistrica"/>
+    <text class="label" x="226.87" y="102.42">SB</text>
+  </g>
+  <g class="state" data-state="MJ">
+    <title>Majšperk</title>
+    <polygon class="tile" points="226.87,122.30 235.48,127.27 235.48,137.22 226.87,142.19 218.26,137.22 218.26,127.27" aria-label="Majšperk"/>
+    <text class="label" x="226.87" y="132.25">MJ</text>
+  </g>
+  <g class="state" data-state="BS">
+    <title>Bistrica ob Sotli</title>
+    <polygon class="tile" points="226.87,152.13 235.48,157.10 235.48,167.05 226.87,172.02 218.26,167.05 218.26,157.10" aria-label="Bistrica ob Sotli"/>
+    <text class="label" x="226.87" y="162.08">BS</text>
+  </g>
+  <g class="state" data-state="BRE">
+    <title>Brežice</title>
+    <polygon class="tile" points="226.87,181.96 235.48,186.93 235.48,196.88 226.87,201.85 218.26,196.88 218.26,186.93" aria-label="Brežice"/>
+    <text class="label" x="226.87" y="191.90">BRE</text>
+  </g>
+  <g class="state" data-state="SD">
+    <title>Selnica ob Dravi</title>
+    <polygon class="tile" points="218.26,47.73 226.87,52.70 226.87,62.64 218.26,67.61 209.65,62.64 209.65,52.70" aria-label="Selnica ob Dravi"/>
+    <text class="label" x="218.26" y="57.67">SD</text>
+  </g>
+  <g class="state" data-state="HS">
+    <title>Hoce-Slivnica</title>
+    <polygon class="tile" points="218.26,77.56 226.87,82.53 226.87,92.47 218.26,97.44 209.65,92.47 209.65,82.53" aria-label="Hoce-Slivnica"/>
+    <text class="label" x="218.26" y="87.50">HS</text>
+  </g>
+  <g class="state" data-state="SK">
+    <title>Slovenske Konjice</title>
+    <polygon class="tile" points="218.26,107.39 226.87,112.36 226.87,122.30 218.26,127.27 209.65,122.30 209.65,112.36" aria-label="Slovenske Konjice"/>
+    <text class="label" x="218.26" y="117.33">SK</text>
+  </g>
+  <g class="state" data-state="RS">
+    <title>Rogaška Slatina</title>
+    <polygon class="tile" points="218.26,137.22 226.87,142.19 226.87,152.13 218.26,157.10 209.65,152.13 209.65,142.19" aria-label="Rogaška Slatina"/>
+    <text class="label" x="218.26" y="147.16">RS</text>
+  </g>
+  <g class="state" data-state="KOZ">
+    <title>Kozje</title>
+    <polygon class="tile" points="218.26,167.05 226.87,172.02 226.87,181.96 218.26,186.93 209.65,181.96 209.65,172.02" aria-label="Kozje"/>
+    <text class="label" x="218.26" y="176.99">KOZ</text>
+  </g>
+  <g class="state" data-state="KRS">
+    <title>Krsko</title>
+    <polygon class="tile" points="218.26,196.88 226.87,201.85 226.87,211.79 218.26,216.76 209.65,211.79 209.65,201.85" aria-label="Krsko"/>
+    <text class="label" x="218.26" y="206.82">KRS</text>
+  </g>
+  <g class="state" data-state="KUN">
+    <title>Kungota</title>
+    <polygon class="tile" points="209.65,32.81 218.26,37.78 218.26,47.73 209.65,52.70 201.04,47.73 201.04,37.78" aria-label="Kungota"/>
+    <text class="label" x="209.65" y="42.76">KUN</text>
+  </g>
+  <g class="state" data-state="LNP">
+    <title>Lovrenc na Pohorju</title>
+    <polygon class="tile" points="209.65,62.64 218.26,67.61 218.26,77.56 209.65,82.53 201.04,77.56 201.04,67.61" aria-label="Lovrenc na Pohorju"/>
+    <text class="label" x="209.65" y="72.59">LNP</text>
+  </g>
+  <g class="state" data-state="OPL">
+    <title>Oplotnica</title>
+    <polygon class="tile" points="209.65,92.47 218.26,97.44 218.26,107.39 209.65,112.36 201.04,107.39 201.04,97.44" aria-label="Oplotnica"/>
+    <text class="label" x="209.65" y="102.42">OPL</text>
+  </g>
+  <g class="state" data-state="SJ">
+    <title>Šmarje pri Jelšah</title>
+    <polygon class="tile" points="209.65,122.30 218.26,127.27 218.26,137.22 209.65,142.19 201.04,137.22 201.04,127.27" aria-label="Šmarje pri Jelšah"/>
+    <text class="label" x="209.65" y="132.25">SJ</text>
+  </g>
+  <g class="state" data-state="SC">
+    <title>Šentjur pri Celju</title>
+    <polygon class="tile" points="209.65,152.13 218.26,157.10 218.26,167.05 209.65,172.02 201.04,167.05 201.04,157.10" aria-label="Šentjur pri Celju"/>
+    <text class="label" x="209.65" y="162.08">SC</text>
+  </g>
+  <g class="state" data-state="PS">
+    <title>Krško</title>
+    <polygon class="tile" points="209.65,181.96 218.26,186.93 218.26,196.88 209.65,201.85 201.04,196.88 201.04,186.93" aria-label="Krško"/>
+    <text class="label" x="209.65" y="191.90">PS</text>
+  </g>
+  <g class="state" data-state="PO">
+    <title>Podvelka</title>
+    <polygon class="tile" points="201.04,47.73 209.65,52.70 209.65,62.64 201.04,67.61 192.43,62.64 192.43,52.70" aria-label="Podvelka"/>
+    <text class="label" x="201.04" y="57.67">PO</text>
+  </g>
+  <g class="state" data-state="ZR">
+    <title>Zrece</title>
+    <polygon class="tile" points="201.04,77.56 209.65,82.53 209.65,92.47 201.04,97.44 192.43,92.47 192.43,82.53" aria-label="Zrece"/>
+    <text class="label" x="201.04" y="87.50">ZR</text>
+  </g>
+  <g class="state" data-state="VOJ">
+    <title>Vojnik</title>
+    <polygon class="tile" points="201.04,107.39 209.65,112.36 209.65,122.30 201.04,127.27 192.43,122.30 192.43,112.36" aria-label="Vojnik"/>
+    <text class="label" x="201.04" y="117.33">VOJ</text>
+  </g>
+  <g class="state" data-state="ST">
+    <title>Štore</title>
+    <polygon class="tile" points="201.04,137.22 209.65,142.19 209.65,152.13 201.04,157.10 192.43,152.13 192.43,142.19" aria-label="Štore"/>
+    <text class="label" x="201.04" y="147.16">ST</text>
+  </g>
+  <g class="state" data-state="DJ">
+    <title>Dobje</title>
+    <polygon class="tile" points="201.04,167.05 209.65,172.02 209.65,181.96 201.04,186.93 192.43,181.96 192.43,172.02" aria-label="Dobje"/>
+    <text class="label" x="201.04" y="176.99">DJ</text>
+  </g>
+  <g class="state" data-state="SN">
+    <title>Šentjernej</title>
+    <polygon class="tile" points="201.04,196.88 209.65,201.85 209.65,211.79 201.04,216.76 192.43,211.79 192.43,201.85" aria-label="Šentjernej"/>
+    <text class="label" x="201.04" y="206.82">SN</text>
+  </g>
+  <g class="state" data-state="MET">
+    <title>Metlika</title>
+    <polygon class="tile" points="201.04,226.71 209.65,231.68 209.65,241.62 201.04,246.59 192.43,241.62 192.43,231.68" aria-label="Metlika"/>
+    <text class="label" x="201.04" y="236.65">MET</text>
+  </g>
+  <g class="state" data-state="RD">
+    <title>Radlje ob Dravi</title>
+    <polygon class="tile" points="192.43,32.81 201.04,37.78 201.04,47.73 192.43,52.70 183.82,47.73 183.82,37.78" aria-label="Radlje ob Dravi"/>
+    <text class="label" x="192.43" y="42.76">RD</text>
+  </g>
+  <g class="state" data-state="RP">
+    <title>Ribnica na Pohorju</title>
+    <polygon class="tile" points="192.43,62.64 201.04,67.61 201.04,77.56 192.43,82.53 183.82,77.56 183.82,67.61" aria-label="Ribnica na Pohorju"/>
+    <text class="label" x="192.43" y="72.59">RP</text>
+  </g>
+  <g class="state" data-state="VIT">
+    <title>Vitanje</title>
+    <polygon class="tile" points="192.43,92.47 201.04,97.44 201.04,107.39 192.43,112.36 183.82,107.39 183.82,97.44" aria-label="Vitanje"/>
+    <text class="label" x="192.43" y="102.42">VIT</text>
+  </g>
+  <g class="state" data-state="CEL">
+    <title>Celje</title>
+    <polygon class="tile" points="192.43,122.30 201.04,127.27 201.04,137.22 192.43,142.19 183.82,137.22 183.82,127.27" aria-label="Celje"/>
+    <text class="label" x="192.43" y="132.25">CEL</text>
+  </g>
+  <g class="state" data-state="LA">
+    <title>Laško</title>
+    <polygon class="tile" points="192.43,152.13 201.04,157.10 201.04,167.05 192.43,172.02 183.82,167.05 183.82,157.10" aria-label="Laško"/>
+    <text class="label" x="192.43" y="162.08">LA</text>
+  </g>
+  <g class="state" data-state="KOC">
+    <title>Škocjan</title>
+    <polygon class="tile" points="192.43,181.96 201.04,186.93 201.04,196.88 192.43,201.85 183.82,196.88 183.82,186.93" aria-label="Škocjan"/>
+    <text class="label" x="192.43" y="191.90">KOC</text>
+  </g>
+  <g class="state" data-state="SM">
+    <title>Semic</title>
+    <polygon class="tile" points="192.43,211.79 201.04,216.76 201.04,226.71 192.43,231.68 183.82,226.71 183.82,216.76" aria-label="Semic"/>
+    <text class="label" x="192.43" y="221.73">SM</text>
+  </g>
+  <g class="state" data-state="VU">
+    <title>Vuzenica</title>
+    <polygon class="tile" points="183.82,47.73 192.43,52.70 192.43,62.64 183.82,67.61 175.21,62.64 175.21,52.70" aria-label="Vuzenica"/>
+    <text class="label" x="183.82" y="57.67">VU</text>
+  </g>
+  <g class="state" data-state="MI">
+    <title>Mislinja</title>
+    <polygon class="tile" points="183.82,77.56 192.43,82.53 192.43,92.47 183.82,97.44 175.21,92.47 175.21,82.53" aria-label="Mislinja"/>
+    <text class="label" x="183.82" y="87.50">MI</text>
+  </g>
+  <g class="state" data-state="DOB">
+    <title>Dobrna</title>
+    <polygon class="tile" points="183.82,107.39 192.43,112.36 192.43,122.30 183.82,127.27 175.21,122.30 175.21,112.36" aria-label="Dobrna"/>
+    <text class="label" x="183.82" y="117.33">DOB</text>
+  </g>
+  <g class="state" data-state="ALE">
+    <title>Žalec</title>
+    <polygon class="tile" points="183.82,137.22 192.43,142.19 192.43,152.13 183.82,157.10 175.21,152.13 175.21,142.19" aria-label="Žalec"/>
+    <text class="label" x="183.82" y="147.16">ALE</text>
+  </g>
+  <g class="state" data-state="RA">
+    <title>Radece</title>
+    <polygon class="tile" points="183.82,167.05 192.43,172.02 192.43,181.96 183.82,186.93 175.21,181.96 175.21,172.02" aria-label="Radece"/>
+    <text class="label" x="183.82" y="176.99">RA</text>
+  </g>
+  <g class="state" data-state="NM">
+    <title>Novo Mesto</title>
+    <polygon class="tile" points="183.82,196.88 192.43,201.85 192.43,211.79 183.82,216.76 175.21,211.79 175.21,201.85" aria-label="Novo Mesto"/>
+    <text class="label" x="183.82" y="206.82">NM</text>
+  </g>
+  <g class="state" data-state="CRN">
+    <title>Crnomelj</title>
+    <polygon class="tile" points="183.82,226.71 192.43,231.68 192.43,241.62 183.82,246.59 175.21,241.62 175.21,231.68" aria-label="Crnomelj"/>
+    <text class="label" x="183.82" y="236.65">CRN</text>
+  </g>
+  <g class="state" data-state="MU">
+    <title>Muta</title>
+    <polygon class="tile" points="175.21,32.81 183.82,37.78 183.82,47.73 175.21,52.70 166.59,47.73 166.59,37.78" aria-label="Muta"/>
+    <text class="label" x="175.21" y="42.76">MU</text>
+  </g>
+  <g class="state" data-state="SG">
+    <title>Slovenj Gradec</title>
+    <polygon class="tile" points="175.21,62.64 183.82,67.61 183.82,77.56 175.21,82.53 166.59,77.56 166.59,67.61" aria-label="Slovenj Gradec"/>
+    <text class="label" x="175.21" y="72.59">SG</text>
+  </g>
+  <g class="state" data-state="VE">
+    <title>Velenje</title>
+    <polygon class="tile" points="175.21,92.47 183.82,97.44 183.82,107.39 175.21,112.36 166.59,107.39 166.59,97.44" aria-label="Velenje"/>
+    <text class="label" x="175.21" y="102.42">VE</text>
+  </g>
+  <g class="state" data-state="PREA">
+    <title>Prebold</title>
+    <polygon class="tile" points="175.21,122.30 183.82,127.27 183.82,137.22 175.21,142.19 166.59,137.22 166.59,127.27" aria-label="Prebold"/>
+    <text class="label" x="175.21" y="132.25">PREA</text>
+  </g>
+  <g class="state" data-state="HR">
+    <title>Hrastnik</title>
+    <polygon class="tile" points="175.21,152.13 183.82,157.10 183.82,167.05 175.21,172.02 166.59,167.05 166.59,157.10" aria-label="Hrastnik"/>
+    <text class="label" x="175.21" y="162.08">HR</text>
+  </g>
+  <g class="state" data-state="SEV">
+    <title>Sevnica</title>
+    <polygon class="tile" points="175.21,181.96 183.82,186.93 183.82,196.88 175.21,201.85 166.59,196.88 166.59,186.93" aria-label="Sevnica"/>
+    <text class="label" x="175.21" y="191.90">SEV</text>
+  </g>
+  <g class="state" data-state="KC">
+    <title>Kocevje</title>
+    <polygon class="tile" points="175.21,211.79 183.82,216.76 183.82,226.71 175.21,231.68 166.59,226.71 166.59,216.76" aria-label="Kocevje"/>
+    <text class="label" x="175.21" y="221.73">KC</text>
+  </g>
+  <g class="state" data-state="DR">
+    <title>Dravograd</title>
+    <polygon class="tile" points="166.59,47.73 175.21,52.70 175.21,62.64 166.59,67.61 157.98,62.64 157.98,52.70" aria-label="Dravograd"/>
+    <text class="label" x="166.59" y="57.67">DR</text>
+  </g>
+  <g class="state" data-state="SS">
+    <title>Šoštanj</title>
+    <polygon class="tile" points="166.59,77.56 175.21,82.53 175.21,92.47 166.59,97.44 157.98,92.47 157.98,82.53" aria-label="Šoštanj"/>
+    <text class="label" x="166.59" y="87.50">SS</text>
+  </g>
+  <g class="state" data-state="PL">
+    <title>Polzela</title>
+    <polygon class="tile" points="166.59,107.39 175.21,112.36 175.21,122.30 166.59,127.27 157.98,122.30 157.98,112.36" aria-label="Polzela"/>
+    <text class="label" x="166.59" y="117.33">PL</text>
+  </g>
+  <g class="state" data-state="TRB">
+    <title>Trbovlje</title>
+    <polygon class="tile" points="166.59,137.22 175.21,142.19 175.21,152.13 166.59,157.10 157.98,152.13 157.98,142.19" aria-label="Trbovlje"/>
+    <text class="label" x="166.59" y="147.16">TRB</text>
+  </g>
+  <g class="state" data-state="LI">
+    <title>Litija</title>
+    <polygon class="tile" points="166.59,167.05 175.21,172.02 175.21,181.96 166.59,186.93 157.98,181.96 157.98,172.02" aria-label="Litija"/>
+    <text class="label" x="166.59" y="176.99">LI</text>
+  </g>
+  <g class="state" data-state="MP">
+    <title>Mirna Pec</title>
+    <polygon class="tile" points="166.59,196.88 175.21,201.85 175.21,211.79 166.59,216.76 157.98,211.79 157.98,201.85" aria-label="Mirna Pec"/>
+    <text class="label" x="166.59" y="206.82">MP</text>
+  </g>
+  <g class="state" data-state="KS">
+    <title>Kostel</title>
+    <polygon class="tile" points="166.59,226.71 175.21,231.68 175.21,241.62 166.59,246.59 157.98,241.62 157.98,231.68" aria-label="Kostel"/>
+    <text class="label" x="166.59" y="236.65">KS</text>
+  </g>
+  <g class="state" data-state="RK">
+    <title>Ravne na Koroškem</title>
+    <polygon class="tile" points="157.98,62.64 166.59,67.61 166.59,77.56 157.98,82.53 149.37,77.56 149.37,67.61" aria-label="Ravne na Koroškem"/>
+    <text class="label" x="157.98" y="72.59">RK</text>
+  </g>
+  <g class="state" data-state="OP">
+    <title>Šmartno ob Paki</title>
+    <polygon class="tile" points="157.98,92.47 166.59,97.44 166.59,107.39 157.98,112.36 149.37,107.39 149.37,97.44" aria-label="Šmartno ob Paki"/>
+    <text class="label" x="157.98" y="102.42">OP</text>
+  </g>
+  <g class="state" data-state="BRA">
+    <title>Braslovce</title>
+    <polygon class="tile" points="157.98,122.30 166.59,127.27 166.59,137.22 157.98,142.19 149.37,137.22 149.37,127.27" aria-label="Braslovce"/>
+    <text class="label" x="157.98" y="132.25">BRA</text>
+  </g>
+  <g class="state" data-state="ZS">
+    <title>Zasavska</title>
+    <polygon class="tile" points="157.98,152.13 166.59,157.10 166.59,167.05 157.98,172.02 149.37,167.05 149.37,157.10" aria-label="Zasavska"/>
+    <text class="label" x="157.98" y="162.08">ZS</text>
+  </g>
+  <g class="state" data-state="TRE">
+    <title>Trebnje</title>
+    <polygon class="tile" points="157.98,181.96 166.59,186.93 166.59,196.88 157.98,201.85 149.37,196.88 149.37,186.93" aria-label="Trebnje"/>
+    <text class="label" x="157.98" y="191.90">TRE</text>
+  </g>
+  <g class="state" data-state="DT">
+    <title>Dolenjske Toplice</title>
+    <polygon class="tile" points="157.98,211.79 166.59,216.76 166.59,226.71 157.98,231.68 149.37,226.71 149.37,216.76" aria-label="Dolenjske Toplice"/>
+    <text class="label" x="157.98" y="221.73">DT</text>
+  </g>
+  <g class="state" data-state="PR">
+    <title>Prevalje</title>
+    <polygon class="tile" points="149.37,47.73 157.98,52.70 157.98,62.64 149.37,67.61 140.76,62.64 140.76,52.70" aria-label="Prevalje"/>
+    <text class="label" x="149.37" y="57.67">PR</text>
+  </g>
+  <g class="state" data-state="MO">
+    <title>Mozirje</title>
+    <polygon class="tile" points="149.37,77.56 157.98,82.53 157.98,92.47 149.37,97.44 140.76,92.47 140.76,82.53" aria-label="Mozirje"/>
+    <text class="label" x="149.37" y="87.50">MO</text>
+  </g>
+  <g class="state" data-state="NAZ">
+    <title>Nazarje</title>
+    <polygon class="tile" points="149.37,107.39 157.98,112.36 157.98,122.30 149.37,127.27 140.76,122.30 140.76,112.36" aria-label="Nazarje"/>
+    <text class="label" x="149.37" y="117.33">NAZ</text>
+  </g>
+  <g class="state" data-state="TA">
+    <title>Tabor</title>
+    <polygon class="tile" points="149.37,137.22 157.98,142.19 157.98,152.13 149.37,157.10 140.76,152.13 140.76,142.19" aria-label="Tabor"/>
+    <text class="label" x="149.37" y="147.16">TA</text>
+  </g>
+  <g class="state" data-state="IL">
+    <title>Šmartno in Litiji</title>
+    <polygon class="tile" points="149.37,167.05 157.98,172.02 157.98,181.96 149.37,186.93 140.76,181.96 140.76,172.02" aria-label="Šmartno in Litiji"/>
+    <text class="label" x="149.37" y="176.99">IL</text>
+  </g>
+  <g class="state" data-state="ZU">
+    <title>Žužemberk</title>
+    <polygon class="tile" points="149.37,196.88 157.98,201.85 157.98,211.79 149.37,216.76 140.76,211.79 140.76,201.85" aria-label="Žužemberk"/>
+    <text class="label" x="149.37" y="206.82">ZU</text>
+  </g>
+  <g class="state" data-state="SO">
+    <title>Sodražica</title>
+    <polygon class="tile" points="149.37,226.71 157.98,231.68 157.98,241.62 149.37,246.59 140.76,241.62 140.76,231.68" aria-label="Sodražica"/>
+    <text class="label" x="149.37" y="236.65">SO</text>
+  </g>
+  <g class="state" data-state="ME">
+    <title>Mežica</title>
+    <polygon class="tile" points="140.76,62.64 149.37,67.61 149.37,77.56 140.76,82.53 132.15,77.56 132.15,67.61" aria-label="Mežica"/>
+    <text class="label" x="140.76" y="72.59">ME</text>
+  </g>
+  <g class="state" data-state="LJU">
+    <title>Ljubno</title>
+    <polygon class="tile" points="140.76,92.47 149.37,97.44 149.37,107.39 140.76,112.36 132.15,107.39 132.15,97.44" aria-label="Ljubno"/>
+    <text class="label" x="140.76" y="102.42">LJU</text>
+  </g>
+  <g class="state" data-state="VRA">
+    <title>Vransko</title>
+    <polygon class="tile" points="140.76,122.30 149.37,127.27 149.37,137.22 140.76,142.19 132.15,137.22 132.15,127.27" aria-label="Vransko"/>
+    <text class="label" x="140.76" y="132.25">VRA</text>
+  </g>
+  <g class="state" data-state="MOR">
+    <title>Moravce</title>
+    <polygon class="tile" points="140.76,152.13 149.37,157.10 149.37,167.05 140.76,172.02 132.15,167.05 132.15,157.10" aria-label="Moravce"/>
+    <text class="label" x="140.76" y="162.08">MOR</text>
+  </g>
+  <g class="state" data-state="IV">
+    <title>Ivancna Gorica</title>
+    <polygon class="tile" points="140.76,181.96 149.37,186.93 149.37,196.88 140.76,201.85 132.15,196.88 132.15,186.93" aria-label="Ivancna Gorica"/>
+    <text class="label" x="140.76" y="191.90">IV</text>
+  </g>
+  <g class="state" data-state="CK">
+    <title>Črna na Koroškem</title>
+    <polygon class="tile" points="132.15,77.56 140.76,82.53 140.76,92.47 132.15,97.44 123.54,92.47 123.54,82.53" aria-label="Črna na Koroškem"/>
+    <text class="label" x="132.15" y="87.50">CK</text>
+  </g>
+  <g class="state" data-state="GG">
+    <title>Gornji Grad</title>
+    <polygon class="tile" points="132.15,107.39 140.76,112.36 140.76,122.30 132.15,127.27 123.54,122.30 123.54,112.36" aria-label="Gornji Grad"/>
+    <text class="label" x="132.15" y="117.33">GG</text>
+  </g>
+  <g class="state" data-state="LUK">
+    <title>Lukovica</title>
+    <polygon class="tile" points="132.15,137.22 140.76,142.19 140.76,152.13 132.15,157.10 123.54,152.13 123.54,142.19" aria-label="Lukovica"/>
+    <text class="label" x="132.15" y="147.16">LUK</text>
+  </g>
+  <g class="state" data-state="GRO">
+    <title>Grosuplje</title>
+    <polygon class="tile" points="132.15,167.05 140.76,172.02 140.76,181.96 132.15,186.93 123.54,181.96 123.54,172.02" aria-label="Grosuplje"/>
+    <text class="label" x="132.15" y="176.99">GRO</text>
+  </g>
+  <g class="state" data-state="DB">
+    <title>Dobrepolje</title>
+    <polygon class="tile" points="132.15,196.88 140.76,201.85 140.76,211.79 132.15,216.76 123.54,211.79 123.54,201.85" aria-label="Dobrepolje"/>
+    <text class="label" x="132.15" y="206.82">DB</text>
+  </g>
+  <g class="state" data-state="LU">
+    <title>Luce</title>
+    <polygon class="tile" points="123.54,92.47 132.15,97.44 132.15,107.39 123.54,112.36 114.93,107.39 114.93,97.44" aria-label="Luce"/>
+    <text class="label" x="123.54" y="102.42">LU</text>
+  </g>
+  <g class="state" data-state="MN">
+    <title>Mengeš</title>
+    <polygon class="tile" points="123.54,122.30 132.15,127.27 132.15,137.22 123.54,142.19 114.93,137.22 114.93,127.27" aria-label="Mengeš"/>
+    <text class="label" x="123.54" y="132.25">MN</text>
+  </g>
+  <g class="state" data-state="DL">
+    <title>Dol pri Ljubljani</title>
+    <polygon class="tile" points="123.54,152.13 132.15,157.10 132.15,167.05 123.54,172.02 114.93,167.05 114.93,157.10" aria-label="Dol pri Ljubljani"/>
+    <text class="label" x="123.54" y="162.08">DL</text>
+  </g>
+  <g class="state" data-state="VL">
+    <title>Velike Lašče</title>
+    <polygon class="tile" points="123.54,181.96 132.15,186.93 132.15,196.88 123.54,201.85 114.93,196.88 114.93,186.93" aria-label="Velike Lašče"/>
+    <text class="label" x="123.54" y="191.90">VL</text>
+  </g>
+  <g class="state" data-state="RI">
+    <title>Ribnica</title>
+    <polygon class="tile" points="123.54,211.79 132.15,216.76 132.15,226.71 123.54,231.68 114.93,226.71 114.93,216.76" aria-label="Ribnica"/>
+    <text class="label" x="123.54" y="221.73">RI</text>
+  </g>
+  <g class="state" data-state="SL">
+    <title>Solcava</title>
+    <polygon class="tile" points="114.93,77.56 123.54,82.53 123.54,92.47 114.93,97.44 106.32,92.47 106.32,82.53" aria-label="Solcava"/>
+    <text class="label" x="114.93" y="87.50">SL</text>
+  </g>
+  <g class="state" data-state="KOM">
+    <title>Komenda</title>
+    <polygon class="tile" points="114.93,107.39 123.54,112.36 123.54,122.30 114.93,127.27 106.32,122.30 106.32,112.36" aria-label="Komenda"/>
+    <text class="label" x="114.93" y="117.33">KOM</text>
+  </g>
+  <g class="state" data-state="DM">
+    <title>Domžale</title>
+    <polygon class="tile" points="114.93,137.22 123.54,142.19 123.54,152.13 114.93,157.10 106.32,152.13 106.32,142.19" aria-label="Domžale"/>
+    <text class="label" x="114.93" y="147.16">DM</text>
+  </g>
+  <g class="state" data-state="KOF">
+    <title>Škofljica</title>
+    <polygon class="tile" points="114.93,167.05 123.54,172.02 123.54,181.96 114.93,186.93 106.32,181.96 106.32,172.02" aria-label="Škofljica"/>
+    <text class="label" x="114.93" y="176.99">KOF</text>
+  </g>
+  <g class="state" data-state="BLO">
+    <title>Bloke</title>
+    <polygon class="tile" points="114.93,196.88 123.54,201.85 123.54,211.79 114.93,216.76 106.32,211.79 106.32,201.85" aria-label="Bloke"/>
+    <text class="label" x="114.93" y="206.82">BLO</text>
+  </g>
+  <g class="state" data-state="LP">
+    <title>Loški Potok</title>
+    <polygon class="tile" points="114.93,226.71 123.54,231.68 123.54,241.62 114.93,246.59 106.32,241.62 106.32,231.68" aria-label="Loški Potok"/>
+    <text class="label" x="114.93" y="236.65">LP</text>
+  </g>
+  <g class="state" data-state="KAM">
+    <title>Kamnik</title>
+    <polygon class="tile" points="106.32,92.47 114.93,97.44 114.93,107.39 106.32,112.36 97.71,107.39 97.71,97.44" aria-label="Kamnik"/>
+    <text class="label" x="106.32" y="102.42">KAM</text>
+  </g>
+  <g class="state" data-state="VO">
+    <title>Vodice</title>
+    <polygon class="tile" points="106.32,122.30 114.93,127.27 114.93,137.22 106.32,142.19 97.71,137.22 97.71,127.27" aria-label="Vodice"/>
+    <text class="label" x="106.32" y="132.25">VO</text>
+  </g>
+  <g class="state" data-state="LJUA">
+    <title>Ljubljana</title>
+    <polygon class="tile" points="106.32,152.13 114.93,157.10 114.93,167.05 106.32,172.02 97.71,167.05 97.71,157.10" aria-label="Ljubljana"/>
+    <text class="label" x="106.32" y="162.08">LJUA</text>
+  </g>
+  <g class="state" data-state="IG">
+    <title>Ig</title>
+    <polygon class="tile" points="106.32,181.96 114.93,186.93 114.93,196.88 106.32,201.85 97.71,196.88 97.71,186.93" aria-label="Ig"/>
+    <text class="label" x="106.32" y="191.90">IG</text>
+  </g>
+  <g class="state" data-state="LD">
+    <title>Loška dolina</title>
+    <polygon class="tile" points="106.32,211.79 114.93,216.76 114.93,226.71 106.32,231.68 97.71,226.71 97.71,216.76" aria-label="Loška dolina"/>
+    <text class="label" x="106.32" y="221.73">LD</text>
+  </g>
+  <g class="state" data-state="JZ">
+    <title>Jezersko</title>
+    <polygon class="tile" points="97.71,77.56 106.32,82.53 106.32,92.47 97.71,97.44 89.09,92.47 89.09,82.53" aria-label="Jezersko"/>
+    <text class="label" x="97.71" y="87.50">JZ</text>
+  </g>
+  <g class="state" data-state="CG">
+    <title>Cerklje na Gorenjskem</title>
+    <polygon class="tile" points="97.71,107.39 106.32,112.36 106.32,122.30 97.71,127.27 89.09,122.30 89.09,112.36" aria-label="Cerklje na Gorenjskem"/>
+    <text class="label" x="97.71" y="117.33">CG</text>
+  </g>
+  <g class="state" data-state="TRZ">
+    <title>Trzin</title>
+    <polygon class="tile" points="97.71,137.22 106.32,142.19 106.32,152.13 97.71,157.10 89.09,152.13 89.09,142.19" aria-label="Trzin"/>
+    <text class="label" x="97.71" y="147.16">TRZ</text>
+  </g>
+  <g class="state" data-state="BREA">
+    <title>Brezovica</title>
+    <polygon class="tile" points="97.71,167.05 106.32,172.02 106.32,181.96 97.71,186.93 89.09,181.96 89.09,172.02" aria-label="Brezovica"/>
+    <text class="label" x="97.71" y="176.99">BREA</text>
+  </g>
+  <g class="state" data-state="CER">
+    <title>Cerknica</title>
+    <polygon class="tile" points="97.71,196.88 106.32,201.85 106.32,211.79 97.71,216.76 89.09,211.79 89.09,201.85" aria-label="Cerknica"/>
+    <text class="label" x="97.71" y="206.82">CER</text>
+  </g>
+  <g class="state" data-state="IZ">
+    <title>Izola</title>
+    <polygon class="tile" points="97.71,226.71 106.32,231.68 106.32,241.62 97.71,246.59 89.09,241.62 89.09,231.68" aria-label="Izola"/>
+    <text class="label" x="97.71" y="236.65">IZ</text>
+  </g>
+  <g class="state" data-state="PRE">
+    <title>Preddvor</title>
+    <polygon class="tile" points="89.09,92.47 97.71,97.44 97.71,107.39 89.09,112.36 80.48,107.39 80.48,97.44" aria-label="Preddvor"/>
+    <text class="label" x="89.09" y="102.42">PRE</text>
+  </g>
+  <g class="state" data-state="ENU">
+    <title>Šenčur</title>
+    <polygon class="tile" points="89.09,122.30 97.71,127.27 97.71,137.22 89.09,142.19 80.48,137.22 80.48,127.27" aria-label="Šenčur"/>
+    <text class="label" x="89.09" y="132.25">ENU</text>
+  </g>
+  <g class="state" data-state="HOR">
+    <title>Horjul</title>
+    <polygon class="tile" points="89.09,152.13 97.71,157.10 97.71,167.05 89.09,172.02 80.48,167.05 80.48,157.10" aria-label="Horjul"/>
+    <text class="label" x="89.09" y="162.08">HOR</text>
+  </g>
+  <g class="state" data-state="BOR">
+    <title>Borovnica</title>
+    <polygon class="tile" points="89.09,181.96 97.71,186.93 97.71,196.88 89.09,201.85 80.48,196.88 80.48,186.93" aria-label="Borovnica"/>
+    <text class="label" x="89.09" y="191.90">BOR</text>
+  </g>
+  <g class="state" data-state="IB">
+    <title>Ilirska Bistrica</title>
+    <polygon class="tile" points="89.09,211.79 97.71,216.76 97.71,226.71 89.09,231.68 80.48,226.71 80.48,216.76" aria-label="Ilirska Bistrica"/>
+    <text class="label" x="89.09" y="221.73">IB</text>
+  </g>
+  <g class="state" data-state="TR">
+    <title>Tržič</title>
+    <polygon class="tile" points="80.48,77.56 89.09,82.53 89.09,92.47 80.48,97.44 71.87,92.47 71.87,82.53" aria-label="Tržič"/>
+    <text class="label" x="80.48" y="87.50">TR</text>
+  </g>
+  <g class="state" data-state="KR">
+    <title>Kranj</title>
+    <polygon class="tile" points="80.48,107.39 89.09,112.36 89.09,122.30 80.48,127.27 71.87,122.30 71.87,112.36" aria-label="Kranj"/>
+    <text class="label" x="80.48" y="117.33">KR</text>
+  </g>
+  <g class="state" data-state="MED">
+    <title>Medvode</title>
+    <polygon class="tile" points="80.48,137.22 89.09,142.19 89.09,152.13 80.48,157.10 71.87,152.13 71.87,142.19" aria-label="Medvode"/>
+    <text class="label" x="80.48" y="147.16">MED</text>
+  </g>
+  <g class="state" data-state="VR">
+    <title>Vrhnika</title>
+    <polygon class="tile" points="80.48,167.05 89.09,172.02 89.09,181.96 80.48,186.93 71.87,181.96 71.87,172.02" aria-label="Vrhnika"/>
+    <text class="label" x="80.48" y="176.99">VR</text>
+  </g>
+  <g class="state" data-state="NO">
+    <title>Pivka</title>
+    <polygon class="tile" points="80.48,196.88 89.09,201.85 89.09,211.79 80.48,216.76 71.87,211.79 71.87,201.85" aria-label="Pivka"/>
+    <text class="label" x="80.48" y="206.82">NO</text>
+  </g>
+  <g class="state" data-state="PI">
+    <title>Piran</title>
+    <polygon class="tile" points="80.48,226.71 89.09,231.68 89.09,241.62 80.48,246.59 71.87,241.62 71.87,231.68" aria-label="Piran"/>
+    <text class="label" x="80.48" y="236.65">PI</text>
+  </g>
+  <g class="state" data-state="RAD">
+    <title>Radovljica</title>
+    <polygon class="tile" points="71.87,92.47 80.48,97.44 80.48,107.39 71.87,112.36 63.26,107.39 63.26,97.44" aria-label="Radovljica"/>
+    <text class="label" x="71.87" y="102.42">RAD</text>
+  </g>
+  <g class="state" data-state="ŠL">
+    <title>Škofja Loka</title>
+    <polygon class="tile" points="71.87,122.30 80.48,127.27 80.48,137.22 71.87,142.19 63.26,137.22 63.26,127.27" aria-label="Škofja Loka"/>
+    <text class="label" x="71.87" y="132.25">ŠL</text>
+  </g>
+  <g class="state" data-state="DP">
+    <title>Dobrova-Polhov Gradec</title>
+    <polygon class="tile" points="71.87,152.13 80.48,157.10 80.48,167.05 71.87,172.02 63.26,167.05 63.26,157.10" aria-label="Dobrova-Polhov Gradec"/>
+    <text class="label" x="71.87" y="162.08">DP</text>
+  </g>
+  <g class="state" data-state="POS">
+    <title>Postojna</title>
+    <polygon class="tile" points="71.87,181.96 80.48,186.93 80.48,196.88 71.87,201.85 63.26,196.88 63.26,186.93" aria-label="Postojna"/>
+    <text class="label" x="71.87" y="191.90">POS</text>
+  </g>
+  <g class="state" data-state="DI">
+    <title>Divaca</title>
+    <polygon class="tile" points="71.87,211.79 80.48,216.76 80.48,226.71 71.87,231.68 63.26,226.71 63.26,216.76" aria-label="Divaca"/>
+    <text class="label" x="71.87" y="221.73">DI</text>
+  </g>
+  <g class="state" data-state="KP">
+    <title>Koper</title>
+    <polygon class="tile" points="71.87,241.62 80.48,246.59 80.48,256.54 71.87,261.51 63.26,256.54 63.26,246.59" aria-label="Koper"/>
+    <text class="label" x="71.87" y="251.56">KP</text>
+  </g>
+  <g class="state" data-state="ZV">
+    <title>Žirovnica</title>
+    <polygon class="tile" points="63.26,77.56 71.87,82.53 71.87,92.47 63.26,97.44 54.65,92.47 54.65,82.53" aria-label="Žirovnica"/>
+    <text class="label" x="63.26" y="87.50">ZV</text>
+  </g>
+  <g class="state" data-state="NA">
+    <title>Naklo</title>
+    <polygon class="tile" points="63.26,107.39 71.87,112.36 71.87,122.30 63.26,127.27 54.65,122.30 54.65,112.36" aria-label="Naklo"/>
+    <text class="label" x="63.26" y="117.33">NA</text>
+  </g>
+  <g class="state" data-state="GV">
+    <title>Gorenja vas-Poljane</title>
+    <polygon class="tile" points="63.26,137.22 71.87,142.19 71.87,152.13 63.26,157.10 54.65,152.13 54.65,142.19" aria-label="Gorenja vas-Poljane"/>
+    <text class="label" x="63.26" y="147.16">GV</text>
+  </g>
+  <g class="state" data-state="LO">
+    <title>Logatec</title>
+    <polygon class="tile" points="63.26,167.05 71.87,172.02 71.87,181.96 63.26,186.93 54.65,181.96 54.65,172.02" aria-label="Logatec"/>
+    <text class="label" x="63.26" y="176.99">LO</text>
+  </g>
+  <g class="state" data-state="VIP">
+    <title>Vipava</title>
+    <polygon class="tile" points="63.26,196.88 71.87,201.85 71.87,211.79 63.26,216.76 54.65,211.79 54.65,201.85" aria-label="Vipava"/>
+    <text class="label" x="63.26" y="206.82">VIP</text>
+  </g>
+  <g class="state" data-state="HK">
+    <title>Hrpelje-Kozina</title>
+    <polygon class="tile" points="63.26,226.71 71.87,231.68 71.87,241.62 63.26,246.59 54.65,241.62 54.65,231.68" aria-label="Hrpelje-Kozina"/>
+    <text class="label" x="63.26" y="236.65">HK</text>
+  </g>
+  <g class="state" data-state="BL">
+    <title>Bled</title>
+    <polygon class="tile" points="54.65,92.47 63.26,97.44 63.26,107.39 54.65,112.36 46.04,107.39 46.04,97.44" aria-label="Bled"/>
+    <text class="label" x="54.65" y="102.42">BL</text>
+  </g>
+  <g class="state" data-state="ELE">
+    <title>Železniki</title>
+    <polygon class="tile" points="54.65,122.30 63.26,127.27 63.26,137.22 54.65,142.19 46.04,137.22 46.04,127.27" aria-label="Železniki"/>
+    <text class="label" x="54.65" y="132.25">ELE</text>
+  </g>
+  <g class="state" data-state="ZI">
+    <title>Žiri</title>
+    <polygon class="tile" points="54.65,152.13 63.26,157.10 63.26,167.05 54.65,172.02 46.04,167.05 46.04,157.10" aria-label="Žiri"/>
+    <text class="label" x="54.65" y="162.08">ZI</text>
+  </g>
+  <g class="state" data-state="AJ">
+    <title>Ajdovščina</title>
+    <polygon class="tile" points="54.65,181.96 63.26,186.93 63.26,196.88 54.65,201.85 46.04,196.88 46.04,186.93" aria-label="Ajdovščina"/>
+    <text class="label" x="54.65" y="191.90">AJ</text>
+  </g>
+  <g class="state" data-state="SE">
+    <title>Sežana</title>
+    <polygon class="tile" points="54.65,211.79 63.26,216.76 63.26,226.71 54.65,231.68 46.04,226.71 46.04,216.76" aria-label="Sežana"/>
+    <text class="label" x="54.65" y="221.73">SE</text>
+  </g>
+  <g class="state" data-state="JS">
+    <title>Jesenice</title>
+    <polygon class="tile" points="46.04,77.56 54.65,82.53 54.65,92.47 46.04,97.44 37.43,92.47 37.43,82.53" aria-label="Jesenice"/>
+    <text class="label" x="46.04" y="87.50">JS</text>
+  </g>
+  <g class="state" data-state="BOH">
+    <title>Bohinj</title>
+    <polygon class="tile" points="46.04,107.39 54.65,112.36 54.65,122.30 46.04,127.27 37.43,122.30 37.43,112.36" aria-label="Bohinj"/>
+    <text class="label" x="46.04" y="117.33">BOH</text>
+  </g>
+  <g class="state" data-state="CERA">
+    <title>Cerkno</title>
+    <polygon class="tile" points="46.04,137.22 54.65,142.19 54.65,152.13 46.04,157.10 37.43,152.13 37.43,142.19" aria-label="Cerkno"/>
+    <text class="label" x="46.04" y="147.16">CERA</text>
+  </g>
+  <g class="state" data-state="ID">
+    <title>Idrija</title>
+    <polygon class="tile" points="46.04,167.05 54.65,172.02 54.65,181.96 46.04,186.93 37.43,181.96 37.43,172.02" aria-label="Idrija"/>
+    <text class="label" x="46.04" y="176.99">ID</text>
+  </g>
+  <g class="state" data-state="KM">
+    <title>Komen</title>
+    <polygon class="tile" points="46.04,196.88 54.65,201.85 54.65,211.79 46.04,216.76 37.43,211.79 37.43,201.85" aria-label="Komen"/>
+    <text class="label" x="46.04" y="206.82">KM</text>
+  </g>
+  <g class="state" data-state="KG">
+    <title>Kranjska Gora</title>
+    <polygon class="tile" points="37.43,92.47 46.04,97.44 46.04,107.39 37.43,112.36 28.82,107.39 28.82,97.44" aria-label="Kranjska Gora"/>
+    <text class="label" x="37.43" y="102.42">KG</text>
+  </g>
+  <g class="state" data-state="TO">
+    <title>Tolmin</title>
+    <polygon class="tile" points="37.43,122.30 46.04,127.27 46.04,137.22 37.43,142.19 28.82,137.22 28.82,127.27" aria-label="Tolmin"/>
+    <text class="label" x="37.43" y="132.25">TO</text>
+  </g>
+  <g class="state" data-state="MK">
+    <title>Miren-Kostanjevica</title>
+    <polygon class="tile" points="37.43,152.13 46.04,157.10 46.04,167.05 37.43,172.02 28.82,167.05 28.82,157.10" aria-label="Miren-Kostanjevica"/>
+    <text class="label" x="37.43" y="162.08">MK</text>
+  </g>
+  <g class="state" data-state="BO">
+    <title>Bovec</title>
+    <polygon class="tile" points="28.82,107.39 37.43,112.36 37.43,122.30 28.82,127.27 20.21,122.30 20.21,112.36" aria-label="Bovec"/>
+    <text class="label" x="28.82" y="117.33">BO</text>
+  </g>
+  <g class="state" data-state="KA">
+    <title>Kanal</title>
+    <polygon class="tile" points="28.82,137.22 37.43,142.19 37.43,152.13 28.82,157.10 20.21,152.13 20.21,142.19" aria-label="Kanal"/>
+    <text class="label" x="28.82" y="147.16">KA</text>
+  </g>
+  <g class="state" data-state="SV">
+    <title>Šempeter-Vrtojba</title>
+    <polygon class="tile" points="28.82,167.05 37.43,172.02 37.43,181.96 28.82,186.93 20.21,181.96 20.21,172.02" aria-label="Šempeter-Vrtojba"/>
+    <text class="label" x="28.82" y="176.99">SV</text>
+  </g>
+  <g class="state" data-state="KOB">
+    <title>Kobarid</title>
+    <polygon class="tile" points="20.21,122.30 28.82,127.27 28.82,137.22 20.21,142.19 11.59,137.22 11.59,127.27" aria-label="Kobarid"/>
+    <text class="label" x="20.21" y="132.25">KOB</text>
+  </g>
+  <g class="state" data-state="SP">
+    <title>Nova Goriška</title>
+    <polygon class="tile" points="20.21,152.13 28.82,157.10 28.82,167.05 20.21,172.02 11.59,167.05 11.59,157.10" aria-label="Nova Goriška"/>
+    <text class="label" x="20.21" y="162.08">SP</text>
+  </g>
+  <g class="state" data-state="BR">
+    <title>Brda</title>
+    <polygon class="tile" points="11.59,137.22 20.21,142.19 20.21,152.13 11.59,157.10 2.98,152.13 2.98,142.19" aria-label="Brda"/>
+    <text class="label" x="11.59" y="147.16">BR</text>
+  </g>
+</svg>

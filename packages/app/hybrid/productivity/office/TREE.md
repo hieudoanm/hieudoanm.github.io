@@ -306,6 +306,70 @@
 │   │   │   ├── [months.ts](./src/data/calendar/months.ts)
 │   │   │   ├── [timeBlocks.ts](./src/data/calendar/timeBlocks.ts)
 │   │   │   └── [years.ts](./src/data/calendar/years.ts)
+│   │   ├── csv/
+│   │   │   ├── [anime.csv](./src/data/csv/anime.csv)
+│   │   │   ├── [api-protocols.csv](./src/data/csv/api-protocols.csv)
+│   │   │   ├── [api-styles.csv](./src/data/csv/api-styles.csv)
+│   │   │   ├── [apis.csv](./src/data/csv/apis.csv)
+│   │   │   ├── [arts.csv](./src/data/csv/arts.csv)
+│   │   │   ├── [biology.csv](./src/data/csv/biology.csv)
+│   │   │   ├── [books.csv](./src/data/csv/books.csv)
+│   │   │   ├── [bored.csv](./src/data/csv/bored.csv)
+│   │   │   ├── [build-tools.csv](./src/data/csv/build-tools.csv)
+│   │   │   ├── [cars.csv](./src/data/csv/cars.csv)
+│   │   │   ├── [chess-engines.csv](./src/data/csv/chess-engines.csv)
+│   │   │   ├── [chess-players.csv](./src/data/csv/chess-players.csv)
+│   │   │   ├── [chess-titles.csv](./src/data/csv/chess-titles.csv)
+│   │   │   ├── [cities.csv](./src/data/csv/cities.csv)
+│   │   │   ├── [comics.csv](./src/data/csv/comics.csv)
+│   │   │   ├── [commerce.csv](./src/data/csv/commerce.csv)
+│   │   │   ├── [database-hosting.csv](./src/data/csv/database-hosting.csv)
+│   │   │   ├── [degrees.csv](./src/data/csv/degrees.csv)
+│   │   │   ├── [dota.csv](./src/data/csv/dota.csv)
+│   │   │   ├── [e-sports.csv](./src/data/csv/e-sports.csv)
+│   │   │   ├── [fandb-beverages.csv](./src/data/csv/fandb-beverages.csv)
+│   │   │   ├── [fandb-foods.csv](./src/data/csv/fandb-foods.csv)
+│   │   │   ├── [fields-medal.csv](./src/data/csv/fields-medal.csv)
+│   │   │   ├── [football-competitions.csv](./src/data/csv/football-competitions.csv)
+│   │   │   ├── [football.csv](./src/data/csv/football.csv)
+│   │   │   ├── [futsal.csv](./src/data/csv/futsal.csv)
+│   │   │   ├── [game-of-thrones.csv](./src/data/csv/game-of-thrones.csv)
+│   │   │   ├── [games.csv](./src/data/csv/games.csv)
+│   │   │   ├── [grammy-tracks.csv](./src/data/csv/grammy-tracks.csv)
+│   │   │   ├── [grammy.csv](./src/data/csv/grammy.csv)
+│   │   │   ├── [hardwares.csv](./src/data/csv/hardwares.csv)
+│   │   │   ├── [hybrid-frameworks.csv](./src/data/csv/hybrid-frameworks.csv)
+│   │   │   ├── [instruments.csv](./src/data/csv/instruments.csv)
+│   │   │   ├── [languages.csv](./src/data/csv/languages.csv)
+│   │   │   ├── [league-of-legends.csv](./src/data/csv/league-of-legends.csv)
+│   │   │   ├── [literature.csv](./src/data/csv/literature.csv)
+│   │   │   ├── [marathon-distances.csv](./src/data/csv/marathon-distances.csv)
+│   │   │   ├── [marathon-majors.csv](./src/data/csv/marathon-majors.csv)
+│   │   │   ├── [minimalism.csv](./src/data/csv/minimalism.csv)
+│   │   │   ├── [motorcycle.csv](./src/data/csv/motorcycle.csv)
+│   │   │   ├── [motorcycles.csv](./src/data/csv/motorcycles.csv)
+│   │   │   ├── [movies.csv](./src/data/csv/movies.csv)
+│   │   │   ├── [music-artists.csv](./src/data/csv/music-artists.csv)
+│   │   │   ├── [musical.csv](./src/data/csv/musical.csv)
+│   │   │   ├── [native-mobile-styling.csv](./src/data/csv/native-mobile-styling.csv)
+│   │   │   ├── [negative-thoughts.csv](./src/data/csv/negative-thoughts.csv)
+│   │   │   ├── [neuroscience.csv](./src/data/csv/neuroscience.csv)
+│   │   │   ├── [news.csv](./src/data/csv/news.csv)
+│   │   │   ├── [nobel.csv](./src/data/csv/nobel.csv)
+│   │   │   ├── [podcasts.csv](./src/data/csv/podcasts.csv)
+│   │   │   ├── [pub-sub.csv](./src/data/csv/pub-sub.csv)
+│   │   │   ├── [random-research.csv](./src/data/csv/random-research.csv)
+│   │   │   ├── [science-subjects.csv](./src/data/csv/science-subjects.csv)
+│   │   │   ├── [series.csv](./src/data/csv/series.csv)
+│   │   │   ├── [softwares.csv](./src/data/csv/softwares.csv)
+│   │   │   ├── [sports.csv](./src/data/csv/sports.csv)
+│   │   │   ├── [system-design.csv](./src/data/csv/system-design.csv)
+│   │   │   ├── [tennis.csv](./src/data/csv/tennis.csv)
+│   │   │   ├── [typescript-web-sockets.csv](./src/data/csv/typescript-web-sockets.csv)
+│   │   │   ├── [university.csv](./src/data/csv/university.csv)
+│   │   │   ├── [web-frameworks.csv](./src/data/csv/web-frameworks.csv)
+│   │   │   ├── [web-styling.csv](./src/data/csv/web-styling.csv)
+│   │   │   └── [yearly-resolutions.csv](./src/data/csv/yearly-resolutions.csv)
 │   │   ├── md/
 │   │   │   ├── [cheat-sheet.ts](./src/data/md/cheat-sheet.ts)
 │   │   │   ├── [seed.gen.json](./src/data/md/seed.gen.json)
@@ -330,7 +394,6 @@
 │   │   │   ├── [useMarkdownRender.ts](./src/hooks/md/useMarkdownRender.ts)
 │   │   │   └── [useScrollSync.ts](./src/hooks/md/useScrollSync.ts)
 │   │   └── shared/
-│   │       ├── __tests__/
 │   │       ├── [useRegisterServiceWorker.ts](./src/hooks/shared/useRegisterServiceWorker.ts)
 │   │       └── [useTheme.ts](./src/hooks/shared/useTheme.ts)
 │   ├── lib/
@@ -415,720 +478,26 @@
 │   │       ├── [toast.tsx](./src/lib/tasks/toast.tsx)
 │   │       └── [types.ts](./src/lib/tasks/types.ts)
 │   ├── notes/
-│   │   ├── devices/
-│   │   │   ├── [devices.md](./src/notes/devices/devices.md)
-│   │   │   ├── [headphones.md](./src/notes/devices/headphones.md)
-│   │   │   ├── [laptops.md](./src/notes/devices/laptops.md)
-│   │   │   ├── [phones.md](./src/notes/devices/phones.md)
-│   │   │   ├── [tablets.md](./src/notes/devices/tablets.md)
-│   │   │   └── [watches.md](./src/notes/devices/watches.md)
-│   │   ├── engineering/
-│   │   │   ├── data/
-│   │   │   │   ├── analyst/
-│   │   │   │   │   ├── non-technical/
-│   │   │   │   │   │   ├── [powerbi.md](./src/notes/engineering/data/analyst/non-technical/powerbi.md)
-│   │   │   │   │   │   └── [tableau.md](./src/notes/engineering/data/analyst/non-technical/tableau.md)
-│   │   │   │   │   └── technical/
-│   │   │   │   │       ├── [matplotlib.md](./src/notes/engineering/data/analyst/technical/matplotlib.md)
-│   │   │   │   │       ├── [numpy.md](./src/notes/engineering/data/analyst/technical/numpy.md)
-│   │   │   │   │       ├── [pandas.md](./src/notes/engineering/data/analyst/technical/pandas.md)
-│   │   │   │   │       └── [statsmodels.md](./src/notes/engineering/data/analyst/technical/statsmodels.md)
-│   │   │   │   ├── engineer/
-│   │   │   │   │   ├── [apache-airflow.md](./src/notes/engineering/data/engineer/apache-airflow.md)
-│   │   │   │   │   ├── [apache-iceberg.md](./src/notes/engineering/data/engineer/apache-iceberg.md)
-│   │   │   │   │   ├── [apache-spark.md](./src/notes/engineering/data/engineer/apache-spark.md)
-│   │   │   │   │   └── [apache-trino.md](./src/notes/engineering/data/engineer/apache-trino.md)
-│   │   │   │   └── scientist/
-│   │   │   │       ├── python/
-│   │   │   │       │   ├── [hugging-face.md](./src/notes/engineering/data/scientist/python/hugging-face.md)
-│   │   │   │       │   ├── [pytorch.md](./src/notes/engineering/data/scientist/python/pytorch.md)
-│   │   │   │       │   ├── [scikit-learn.md](./src/notes/engineering/data/scientist/python/scikit-learn.md)
-│   │   │   │       │   ├── [tensorflow.md](./src/notes/engineering/data/scientist/python/tensorflow.md)
-│   │   │   │       │   └── [xgboost.md](./src/notes/engineering/data/scientist/python/xgboost.md)
-│   │   │   │       └── typescript/
-│   │   │   │           ├── [brain.js.md](./src/notes/engineering/data/scientist/typescript/brain.js.md)
-│   │   │   │           ├── [mind.js.md](./src/notes/engineering/data/scientist/typescript/mind.js.md)
-│   │   │   │           ├── [ml5.js.md](./src/notes/engineering/data/scientist/typescript/ml5.js.md)
-│   │   │   │           └── [synaptic.js.md](./src/notes/engineering/data/scientist/typescript/synaptic.js.md)
-│   │   │   ├── developer-tools/
-│   │   │   │   ├── api/
-│   │   │   │   │   ├── clients/
-│   │   │   │   │   │   ├── [bruno.md](./src/notes/engineering/developer-tools/api/clients/bruno.md)
-│   │   │   │   │   │   ├── [insomnia.md](./src/notes/engineering/developer-tools/api/clients/insomnia.md)
-│   │   │   │   │   │   └── [postman.md](./src/notes/engineering/developer-tools/api/clients/postman.md)
-│   │   │   │   │   └── documentation/
-│   │   │   │   │       ├── [rapi-doc.md](./src/notes/engineering/developer-tools/api/documentation/rapi-doc.md)
-│   │   │   │   │       ├── [redoc.md](./src/notes/engineering/developer-tools/api/documentation/redoc.md)
-│   │   │   │   │       ├── [stoplight.md](./src/notes/engineering/developer-tools/api/documentation/stoplight.md)
-│   │   │   │   │       └── [swagger.md](./src/notes/engineering/developer-tools/api/documentation/swagger.md)
-│   │   │   │   ├── code-editors/
-│   │   │   │   │   ├── [cursor.md](./src/notes/engineering/developer-tools/code-editors/cursor.md)
-│   │   │   │   │   ├── [vscode.md](./src/notes/engineering/developer-tools/code-editors/vscode.md)
-│   │   │   │   │   ├── [vscodium.md](./src/notes/engineering/developer-tools/code-editors/vscodium.md)
-│   │   │   │   │   └── [windsurf.md](./src/notes/engineering/developer-tools/code-editors/windsurf.md)
-│   │   │   │   ├── ide/
-│   │   │   │   │   ├── jetbrains/
-│   │   │   │   │   │   ├── [clion.md](./src/notes/engineering/developer-tools/ide/jetbrains/clion.md)
-│   │   │   │   │   │   ├── [intellij-idea.md](./src/notes/engineering/developer-tools/ide/jetbrains/intellij-idea.md)
-│   │   │   │   │   │   ├── [php-storm.md](./src/notes/engineering/developer-tools/ide/jetbrains/php-storm.md)
-│   │   │   │   │   │   ├── [py-charm.md](./src/notes/engineering/developer-tools/ide/jetbrains/py-charm.md)
-│   │   │   │   │   │   ├── [rider.md](./src/notes/engineering/developer-tools/ide/jetbrains/rider.md)
-│   │   │   │   │   │   ├── [ruby-mine.md](./src/notes/engineering/developer-tools/ide/jetbrains/ruby-mine.md)
-│   │   │   │   │   │   ├── [rust-rover.md](./src/notes/engineering/developer-tools/ide/jetbrains/rust-rover.md)
-│   │   │   │   │   │   └── [web-storm.md](./src/notes/engineering/developer-tools/ide/jetbrains/web-storm.md)
-│   │   │   │   │   ├── [android-studio.md](./src/notes/engineering/developer-tools/ide/android-studio.md)
-│   │   │   │   │   ├── [visual-studio.md](./src/notes/engineering/developer-tools/ide/visual-studio.md)
-│   │   │   │   │   └── [xcode.md](./src/notes/engineering/developer-tools/ide/xcode.md)
-│   │   │   │   ├── languages/
-│   │   │   │   │   ├── c/
-│   │   │   │   │   │   └── tools/
-│   │   │   │   │   │       └── [clang-format.md](./src/notes/engineering/developer-tools/languages/c/tools/clang-format.md)
-│   │   │   │   │   ├── go/
-│   │   │   │   │   │   └── tools/
-│   │   │   │   │   │       └── [gofmt.md](./src/notes/engineering/developer-tools/languages/go/tools/gofmt.md)
-│   │   │   │   │   ├── python/
-│   │   │   │   │   │   └── tools/
-│   │   │   │   │   │       ├── [black.md](./src/notes/engineering/developer-tools/languages/python/tools/black.md)
-│   │   │   │   │   │       ├── [flake8.md](./src/notes/engineering/developer-tools/languages/python/tools/flake8.md)
-│   │   │   │   │   │       ├── [pylint.md](./src/notes/engineering/developer-tools/languages/python/tools/pylint.md)
-│   │   │   │   │   │       └── [ruff.md](./src/notes/engineering/developer-tools/languages/python/tools/ruff.md)
-│   │   │   │   │   ├── shell/
-│   │   │   │   │   │   └── tools/
-│   │   │   │   │   │       └── [shell-check.md](./src/notes/engineering/developer-tools/languages/shell/tools/shell-check.md)
-│   │   │   │   │   └── typescript/
-│   │   │   │   │       ├── engines/
-│   │   │   │   │       │   ├── [hermes.md](./src/notes/engineering/developer-tools/languages/typescript/engines/hermes.md)
-│   │   │   │   │       │   ├── [javascript-core.md](./src/notes/engineering/developer-tools/languages/typescript/engines/javascript-core.md)
-│   │   │   │   │       │   ├── [quick.js.md](./src/notes/engineering/developer-tools/languages/typescript/engines/quick.js.md)
-│   │   │   │   │       │   ├── [spider-monkey.md](./src/notes/engineering/developer-tools/languages/typescript/engines/spider-monkey.md)
-│   │   │   │   │       │   └── [v8.md](./src/notes/engineering/developer-tools/languages/typescript/engines/v8.md)
-│   │   │   │   │       ├── monorepo/
-│   │   │   │   │       │   ├── [bit.md](./src/notes/engineering/developer-tools/languages/typescript/monorepo/bit.md)
-│   │   │   │   │       │   ├── [lerna.js.md](./src/notes/engineering/developer-tools/languages/typescript/monorepo/lerna.js.md)
-│   │   │   │   │       │   ├── [nx.md](./src/notes/engineering/developer-tools/languages/typescript/monorepo/nx.md)
-│   │   │   │   │       │   ├── [pnpm-workspaces.md](./src/notes/engineering/developer-tools/languages/typescript/monorepo/pnpm-workspaces.md)
-│   │   │   │   │       │   ├── [turborepo.md](./src/notes/engineering/developer-tools/languages/typescript/monorepo/turborepo.md)
-│   │   │   │   │       │   └── [yarn-workspaces.md](./src/notes/engineering/developer-tools/languages/typescript/monorepo/yarn-workspaces.md)
-│   │   │   │   │       ├── packages/
-│   │   │   │   │       │   ├── managers/
-│   │   │   │   │       │   │   ├── [npm.md](./src/notes/engineering/developer-tools/languages/typescript/packages/managers/npm.md)
-│   │   │   │   │       │   │   ├── [pnpm.md](./src/notes/engineering/developer-tools/languages/typescript/packages/managers/pnpm.md)
-│   │   │   │   │       │   │   ├── [volt.md](./src/notes/engineering/developer-tools/languages/typescript/packages/managers/volt.md)
-│   │   │   │   │       │   │   └── [yarn.md](./src/notes/engineering/developer-tools/languages/typescript/packages/managers/yarn.md)
-│   │   │   │   │       │   └── registries/
-│   │   │   │   │       │       ├── [github-packages.md](./src/notes/engineering/developer-tools/languages/typescript/packages/registries/github-packages.md)
-│   │   │   │   │       │       └── [jsr.md](./src/notes/engineering/developer-tools/languages/typescript/packages/registries/jsr.md)
-│   │   │   │   │       ├── runtimes/
-│   │   │   │   │       │   ├── [bun.md](./src/notes/engineering/developer-tools/languages/typescript/runtimes/bun.md)
-│   │   │   │   │       │   ├── [deno.md](./src/notes/engineering/developer-tools/languages/typescript/runtimes/deno.md)
-│   │   │   │   │       │   ├── [llrt.md](./src/notes/engineering/developer-tools/languages/typescript/runtimes/llrt.md)
-│   │   │   │   │       │   ├── [node.js.md](./src/notes/engineering/developer-tools/languages/typescript/runtimes/node.js.md)
-│   │   │   │   │       │   └── [winter.js.md](./src/notes/engineering/developer-tools/languages/typescript/runtimes/winter.js.md)
-│   │   │   │   │       └── tools/
-│   │   │   │   │           ├── [biome.md](./src/notes/engineering/developer-tools/languages/typescript/tools/biome.md)
-│   │   │   │   │           ├── [eslint.md](./src/notes/engineering/developer-tools/languages/typescript/tools/eslint.md)
-│   │   │   │   │           ├── [oxc.md](./src/notes/engineering/developer-tools/languages/typescript/tools/oxc.md)
-│   │   │   │   │           └── [prettier.md](./src/notes/engineering/developer-tools/languages/typescript/tools/prettier.md)
-│   │   │   │   └── version-control/
-│   │   │   │       ├── platform/
-│   │   │   │       │   └── [launchpad.md](./src/notes/engineering/developer-tools/version-control/platform/launchpad.md)
-│   │   │   │       └── system/
-│   │   │   │           ├── [helix-core.md](./src/notes/engineering/developer-tools/version-control/system/helix-core.md)
-│   │   │   │           └── [svn.md](./src/notes/engineering/developer-tools/version-control/system/svn.md)
-│   │   │   ├── devops/
-│   │   │   │   ├── container/
-│   │   │   │   │   ├── desktop/
-│   │   │   │   │   │   └── [rancher.md](./src/notes/engineering/devops/container/desktop/rancher.md)
-│   │   │   │   │   ├── orchestration/
-│   │   │   │   │   │   ├── [kubernetes.md](./src/notes/engineering/devops/container/orchestration/kubernetes.md)
-│   │   │   │   │   │   └── [nomad.md](./src/notes/engineering/devops/container/orchestration/nomad.md)
-│   │   │   │   │   └── runtimes/
-│   │   │   │   │       ├── [containerd.md](./src/notes/engineering/devops/container/runtimes/containerd.md)
-│   │   │   │   │       ├── [docker.md](./src/notes/engineering/devops/container/runtimes/docker.md)
-│   │   │   │   │       ├── [hadolint.md](./src/notes/engineering/devops/container/runtimes/hadolint.md)
-│   │   │   │   │       └── [podman.md](./src/notes/engineering/devops/container/runtimes/podman.md)
-│   │   │   │   ├── delivery/
-│   │   │   │   │   └── iac/
-│   │   │   │   │       ├── [aws-cloudformation.md](./src/notes/engineering/devops/delivery/iac/aws-cloudformation.md)
-│   │   │   │   │       ├── [open-tofu.md](./src/notes/engineering/devops/delivery/iac/open-tofu.md)
-│   │   │   │   │       └── [terraform.md](./src/notes/engineering/devops/delivery/iac/terraform.md)
-│   │   │   │   ├── hosting/
-│   │   │   │   │   ├── baas/
-│   │   │   │   │   │   ├── [appwrite.md](./src/notes/engineering/devops/hosting/baas/appwrite.md)
-│   │   │   │   │   │   ├── [firebase.md](./src/notes/engineering/devops/hosting/baas/firebase.md)
-│   │   │   │   │   │   ├── [nhost.md](./src/notes/engineering/devops/hosting/baas/nhost.md)
-│   │   │   │   │   │   ├── [pocketbase.md](./src/notes/engineering/devops/hosting/baas/pocketbase.md)
-│   │   │   │   │   │   └── [supabase.md](./src/notes/engineering/devops/hosting/baas/supabase.md)
-│   │   │   │   │   ├── iaas/
-│   │   │   │   │   │   ├── [aws.md](./src/notes/engineering/devops/hosting/iaas/aws.md)
-│   │   │   │   │   │   ├── [azure.md](./src/notes/engineering/devops/hosting/iaas/azure.md)
-│   │   │   │   │   │   ├── [digital-ocean.md](./src/notes/engineering/devops/hosting/iaas/digital-ocean.md)
-│   │   │   │   │   │   ├── [google-cloud.md](./src/notes/engineering/devops/hosting/iaas/google-cloud.md)
-│   │   │   │   │   │   └── [ibm-cloud.md](./src/notes/engineering/devops/hosting/iaas/ibm-cloud.md)
-│   │   │   │   │   ├── paas/
-│   │   │   │   │   │   ├── [google-app-engine.md](./src/notes/engineering/devops/hosting/paas/google-app-engine.md)
-│   │   │   │   │   │   ├── [heroku.md](./src/notes/engineering/devops/hosting/paas/heroku.md)
-│   │   │   │   │   │   ├── [open-shift.md](./src/notes/engineering/devops/hosting/paas/open-shift.md)
-│   │   │   │   │   │   ├── [railway.md](./src/notes/engineering/devops/hosting/paas/railway.md)
-│   │   │   │   │   │   └── [render.md](./src/notes/engineering/devops/hosting/paas/render.md)
-│   │   │   │   │   ├── serverless/
-│   │   │   │   │   │   ├── [cloudflare-workers.md](./src/notes/engineering/devops/hosting/serverless/cloudflare-workers.md)
-│   │   │   │   │   │   ├── [deno-deploy.md](./src/notes/engineering/devops/hosting/serverless/deno-deploy.md)
-│   │   │   │   │   │   ├── [fly.md](./src/notes/engineering/devops/hosting/serverless/fly.md)
-│   │   │   │   │   │   ├── [netlify.md](./src/notes/engineering/devops/hosting/serverless/netlify.md)
-│   │   │   │   │   │   └── [vercel.md](./src/notes/engineering/devops/hosting/serverless/vercel.md)
-│   │   │   │   │   └── static/
-│   │   │   │   │       ├── [cloudflare-pages.md](./src/notes/engineering/devops/hosting/static/cloudflare-pages.md)
-│   │   │   │   │       └── [github-pages.md](./src/notes/engineering/devops/hosting/static/github-pages.md)
-│   │   │   │   ├── observability/
-│   │   │   │   │   ├── [aws-cloudwatch.md](./src/notes/engineering/devops/observability/aws-cloudwatch.md)
-│   │   │   │   │   ├── [datadog.md](./src/notes/engineering/devops/observability/datadog.md)
-│   │   │   │   │   ├── [grafana.md](./src/notes/engineering/devops/observability/grafana.md)
-│   │   │   │   │   ├── [kibana.md](./src/notes/engineering/devops/observability/kibana.md)
-│   │   │   │   │   └── [splunk.md](./src/notes/engineering/devops/observability/splunk.md)
-│   │   │   │   └── secrets/
-│   │   │   │       ├── [aws-secrets-manager.md](./src/notes/engineering/devops/secrets/aws-secrets-manager.md)
-│   │   │   │       ├── [azure-key-vault.md](./src/notes/engineering/devops/secrets/azure-key-vault.md)
-│   │   │   │       ├── [hashicorp-vault.md](./src/notes/engineering/devops/secrets/hashicorp-vault.md)
-│   │   │   │       ├── [infisical.md](./src/notes/engineering/devops/secrets/infisical.md)
-│   │   │   │       ├── [kubernetes-secrets.md](./src/notes/engineering/devops/secrets/kubernetes-secrets.md)
-│   │   │   │       └── [open-bao.md](./src/notes/engineering/devops/secrets/open-bao.md)
-│   │   │   ├── game/
-│   │   │   │   └── engines/
-│   │   │   │       ├── [cocos.md](./src/notes/engineering/game/engines/cocos.md)
-│   │   │   │       ├── [godot.md](./src/notes/engineering/game/engines/godot.md)
-│   │   │   │       ├── [unity.md](./src/notes/engineering/game/engines/unity.md)
-│   │   │   │       └── [unreal.md](./src/notes/engineering/game/engines/unreal.md)
-│   │   │   ├── hardware/
-│   │   │   │   ├── chip/
-│   │   │   │   │   ├── apple/
-│   │   │   │   │   │   ├── [a-series.md](./src/notes/engineering/hardware/chip/apple/a-series.md)
-│   │   │   │   │   │   └── [m-series.md](./src/notes/engineering/hardware/chip/apple/m-series.md)
-│   │   │   │   │   └── [snapdragon.md](./src/notes/engineering/hardware/chip/snapdragon.md)
-│   │   │   │   ├── microcontroller/
-│   │   │   │   │   ├── [arduino.md](./src/notes/engineering/hardware/microcontroller/arduino.md)
-│   │   │   │   │   ├── [esp32.md](./src/notes/engineering/hardware/microcontroller/esp32.md)
-│   │   │   │   │   └── [raspberry-pi-pico.md](./src/notes/engineering/hardware/microcontroller/raspberry-pi-pico.md)
-│   │   │   │   ├── tpu/
-│   │   │   │   │   └── [google.md](./src/notes/engineering/hardware/tpu/google.md)
-│   │   │   │   └── [raspberry-pi.md](./src/notes/engineering/hardware/raspberry-pi.md)
-│   │   │   ├── languages/
-│   │   │   │   ├── compiled/
-│   │   │   │   │   ├── [c.md](./src/notes/engineering/languages/compiled/c.md)
-│   │   │   │   │   ├── [cplusplus.md](./src/notes/engineering/languages/compiled/cplusplus.md)
-│   │   │   │   │   ├── [go.md](./src/notes/engineering/languages/compiled/go.md)
-│   │   │   │   │   └── [rust.md](./src/notes/engineering/languages/compiled/rust.md)
-│   │   │   │   ├── data/
-│   │   │   │   │   ├── [javascript.md](./src/notes/engineering/languages/data/javascript.md)
-│   │   │   │   │   ├── [matlab.md](./src/notes/engineering/languages/data/matlab.md)
-│   │   │   │   │   ├── [python.md](./src/notes/engineering/languages/data/python.md)
-│   │   │   │   │   └── [r.md](./src/notes/engineering/languages/data/r.md)
-│   │   │   │   ├── full-stack/
-│   │   │   │   │   ├── [dart.md](./src/notes/engineering/languages/full-stack/dart.md)
-│   │   │   │   │   ├── [php.md](./src/notes/engineering/languages/full-stack/php.md)
-│   │   │   │   │   ├── [ruby.md](./src/notes/engineering/languages/full-stack/ruby.md)
-│   │   │   │   │   └── [typescript.md](./src/notes/engineering/languages/full-stack/typescript.md)
-│   │   │   │   ├── jvm/
-│   │   │   │   │   ├── [groovy.md](./src/notes/engineering/languages/jvm/groovy.md)
-│   │   │   │   │   ├── [java.md](./src/notes/engineering/languages/jvm/java.md)
-│   │   │   │   │   ├── [kotlin.md](./src/notes/engineering/languages/jvm/kotlin.md)
-│   │   │   │   │   └── [scala.md](./src/notes/engineering/languages/jvm/scala.md)
-│   │   │   │   ├── native/
-│   │   │   │   │   ├── [csharp.md](./src/notes/engineering/languages/native/csharp.md)
-│   │   │   │   │   └── [swift.md](./src/notes/engineering/languages/native/swift.md)
-│   │   │   │   └── terminal/
-│   │   │   │       ├── [bash.md](./src/notes/engineering/languages/terminal/bash.md)
-│   │   │   │       └── [power-shell.md](./src/notes/engineering/languages/terminal/power-shell.md)
-│   │   │   ├── roles/
-│   │   │   │   ├── delivery/
-│   │   │   │   │   ├── [release-train-engineer.md](./src/notes/engineering/roles/delivery/release-train-engineer.md)
-│   │   │   │   │   └── [scrum-master.md](./src/notes/engineering/roles/delivery/scrum-master.md)
-│   │   │   │   ├── engineer/
-│   │   │   │   │   ├── [distinguished.md](./src/notes/engineering/roles/engineer/distinguished.md)
-│   │   │   │   │   ├── [lead.md](./src/notes/engineering/roles/engineer/lead.md)
-│   │   │   │   │   ├── [manager.md](./src/notes/engineering/roles/engineer/manager.md)
-│   │   │   │   │   └── [principal.md](./src/notes/engineering/roles/engineer/principal.md)
-│   │   │   │   ├── product/
-│   │   │   │   │   ├── [business-analyst.md](./src/notes/engineering/roles/product/business-analyst.md)
-│   │   │   │   │   └── [product-owner.md](./src/notes/engineering/roles/product/product-owner.md)
-│   │   │   │   └── solution/
-│   │   │   │       ├── [architect.md](./src/notes/engineering/roles/solution/architect.md)
-│   │   │   │       └── [design.md](./src/notes/engineering/roles/solution/design.md)
-│   │   │   ├── software/
-│   │   │   │   ├── backend/
-│   │   │   │   │   ├── api/
-│   │   │   │   │   │   ├── protocols/
-│   │   │   │   │   │   │   ├── [amqp.md](./src/notes/engineering/software/backend/api/protocols/amqp.md)
-│   │   │   │   │   │   │   ├── [grpc.md](./src/notes/engineering/software/backend/api/protocols/grpc.md)
-│   │   │   │   │   │   │   ├── [https.md](./src/notes/engineering/software/backend/api/protocols/https.md)
-│   │   │   │   │   │   │   ├── [mqtt.md](./src/notes/engineering/software/backend/api/protocols/mqtt.md)
-│   │   │   │   │   │   │   ├── [tcp.md](./src/notes/engineering/software/backend/api/protocols/tcp.md)
-│   │   │   │   │   │   │   ├── [udp.md](./src/notes/engineering/software/backend/api/protocols/udp.md)
-│   │   │   │   │   │   │   └── [web-socket.md](./src/notes/engineering/software/backend/api/protocols/web-socket.md)
-│   │   │   │   │   │   └── styles/
-│   │   │   │   │   │       ├── https/
-│   │   │   │   │   │       │   ├── [graphql.md](./src/notes/engineering/software/backend/api/styles/https/graphql.md)
-│   │   │   │   │   │       │   ├── [rest.md](./src/notes/engineering/software/backend/api/styles/https/rest.md)
-│   │   │   │   │   │       │   └── [webhook.md](./src/notes/engineering/software/backend/api/styles/https/webhook.md)
-│   │   │   │   │   │       └── [rpc.md](./src/notes/engineering/software/backend/api/styles/rpc.md)
-│   │   │   │   │   ├── architecture/
-│   │   │   │   │   │   ├── [cqrs.md](./src/notes/engineering/software/backend/architecture/cqrs.md)
-│   │   │   │   │   │   ├── [event-driven.md](./src/notes/engineering/software/backend/architecture/event-driven.md)
-│   │   │   │   │   │   ├── [hexagonal.md](./src/notes/engineering/software/backend/architecture/hexagonal.md)
-│   │   │   │   │   │   ├── [microservices.md](./src/notes/engineering/software/backend/architecture/microservices.md)
-│   │   │   │   │   │   └── [monolith.md](./src/notes/engineering/software/backend/architecture/monolith.md)
-│   │   │   │   │   ├── database/
-│   │   │   │   │   │   ├── hosting/
-│   │   │   │   │   │   │   ├── [neon.md](./src/notes/engineering/software/backend/database/hosting/neon.md)
-│   │   │   │   │   │   │   └── [planet-scale.md](./src/notes/engineering/software/backend/database/hosting/planet-scale.md)
-│   │   │   │   │   │   ├── orm/
-│   │   │   │   │   │   │   ├── python/
-│   │   │   │   │   │   │   │   └── [sql-alchemy.md](./src/notes/engineering/software/backend/database/orm/python/sql-alchemy.md)
-│   │   │   │   │   │   │   └── typescript/
-│   │   │   │   │   │   │       ├── [drizzle.md](./src/notes/engineering/software/backend/database/orm/typescript/drizzle.md)
-│   │   │   │   │   │   │       ├── [mikro-orm.md](./src/notes/engineering/software/backend/database/orm/typescript/mikro-orm.md)
-│   │   │   │   │   │   │       ├── [mongoose.md](./src/notes/engineering/software/backend/database/orm/typescript/mongoose.md)
-│   │   │   │   │   │   │       ├── [prisma.md](./src/notes/engineering/software/backend/database/orm/typescript/prisma.md)
-│   │   │   │   │   │   │       ├── [sequelize.md](./src/notes/engineering/software/backend/database/orm/typescript/sequelize.md)
-│   │   │   │   │   │   │       └── [type-orm.md](./src/notes/engineering/software/backend/database/orm/typescript/type-orm.md)
-│   │   │   │   │   │   └── paradigms/
-│   │   │   │   │   │       ├── cache/
-│   │   │   │   │   │       │   ├── [badger.md](./src/notes/engineering/software/backend/database/paradigms/cache/badger.md)
-│   │   │   │   │   │       │   ├── [leveldb.md](./src/notes/engineering/software/backend/database/paradigms/cache/leveldb.md)
-│   │   │   │   │   │       │   ├── [memcached.md](./src/notes/engineering/software/backend/database/paradigms/cache/memcached.md)
-│   │   │   │   │   │       │   ├── [redis.md](./src/notes/engineering/software/backend/database/paradigms/cache/redis.md)
-│   │   │   │   │   │       │   ├── [rocksdb.md](./src/notes/engineering/software/backend/database/paradigms/cache/rocksdb.md)
-│   │   │   │   │   │       │   └── [valkey.md](./src/notes/engineering/software/backend/database/paradigms/cache/valkey.md)
-│   │   │   │   │   │       ├── graph/
-│   │   │   │   │   │       │   ├── [dgraph.md](./src/notes/engineering/software/backend/database/paradigms/graph/dgraph.md)
-│   │   │   │   │   │       │   └── [neo4j.md](./src/notes/engineering/software/backend/database/paradigms/graph/neo4j.md)
-│   │   │   │   │   │       ├── multi/
-│   │   │   │   │   │       │   └── [fauna.md](./src/notes/engineering/software/backend/database/paradigms/multi/fauna.md)
-│   │   │   │   │   │       ├── nosql/
-│   │   │   │   │   │       │   ├── [couchbase.md](./src/notes/engineering/software/backend/database/paradigms/nosql/couchbase.md)
-│   │   │   │   │   │       │   ├── [couchdb.md](./src/notes/engineering/software/backend/database/paradigms/nosql/couchdb.md)
-│   │   │   │   │   │       │   ├── [dynamodb.md](./src/notes/engineering/software/backend/database/paradigms/nosql/dynamodb.md)
-│   │   │   │   │   │       │   ├── [mongodb.md](./src/notes/engineering/software/backend/database/paradigms/nosql/mongodb.md)
-│   │   │   │   │   │       │   └── [rethinkdb.md](./src/notes/engineering/software/backend/database/paradigms/nosql/rethinkdb.md)
-│   │   │   │   │   │       ├── search/
-│   │   │   │   │   │       │   ├── [apache-solr.md](./src/notes/engineering/software/backend/database/paradigms/search/apache-solr.md)
-│   │   │   │   │   │       │   ├── [elasticsearch.md](./src/notes/engineering/software/backend/database/paradigms/search/elasticsearch.md)
-│   │   │   │   │   │       │   └── [opensearch.md](./src/notes/engineering/software/backend/database/paradigms/search/opensearch.md)
-│   │   │   │   │   │       ├── sql/
-│   │   │   │   │   │       │   ├── [cockroachdb.md](./src/notes/engineering/software/backend/database/paradigms/sql/cockroachdb.md)
-│   │   │   │   │   │       │   ├── [libsql.md](./src/notes/engineering/software/backend/database/paradigms/sql/libsql.md)
-│   │   │   │   │   │       │   ├── [mariadb.md](./src/notes/engineering/software/backend/database/paradigms/sql/mariadb.md)
-│   │   │   │   │   │       │   ├── [mssql.md](./src/notes/engineering/software/backend/database/paradigms/sql/mssql.md)
-│   │   │   │   │   │       │   ├── [mysql.md](./src/notes/engineering/software/backend/database/paradigms/sql/mysql.md)
-│   │   │   │   │   │       │   ├── [postgresql.md](./src/notes/engineering/software/backend/database/paradigms/sql/postgresql.md)
-│   │   │   │   │   │       │   └── [sqlite.md](./src/notes/engineering/software/backend/database/paradigms/sql/sqlite.md)
-│   │   │   │   │   │       └── wide-column/
-│   │   │   │   │   │           ├── [apache-cassandra.md](./src/notes/engineering/software/backend/database/paradigms/wide-column/apache-cassandra.md)
-│   │   │   │   │   │           └── [apache-hbase.md](./src/notes/engineering/software/backend/database/paradigms/wide-column/apache-hbase.md)
-│   │   │   │   │   ├── events/
-│   │   │   │   │   │   ├── pub-sub/
-│   │   │   │   │   │   │   ├── [mqtt.md](./src/notes/engineering/software/backend/events/pub-sub/mqtt.md)
-│   │   │   │   │   │   │   └── [nats.md](./src/notes/engineering/software/backend/events/pub-sub/nats.md)
-│   │   │   │   │   │   ├── queue/
-│   │   │   │   │   │   │   ├── [activemq.md](./src/notes/engineering/software/backend/events/queue/activemq.md)
-│   │   │   │   │   │   │   └── [rabbitmq.md](./src/notes/engineering/software/backend/events/queue/rabbitmq.md)
-│   │   │   │   │   │   └── streaming/
-│   │   │   │   │   │       ├── [apache-kafka.md](./src/notes/engineering/software/backend/events/streaming/apache-kafka.md)
-│   │   │   │   │   │       └── [apache-pulsar.md](./src/notes/engineering/software/backend/events/streaming/apache-pulsar.md)
-│   │   │   │   │   ├── languages/
-│   │   │   │   │   │   ├── csharp/
-│   │   │   │   │   │   │   └── [dotnet.md](./src/notes/engineering/software/backend/languages/csharp/dotnet.md)
-│   │   │   │   │   │   ├── go/
-│   │   │   │   │   │   │   ├── frameworks/
-│   │   │   │   │   │   │   │   ├── [beego.md](./src/notes/engineering/software/backend/languages/go/frameworks/beego.md)
-│   │   │   │   │   │   │   │   ├── [chi.md](./src/notes/engineering/software/backend/languages/go/frameworks/chi.md)
-│   │   │   │   │   │   │   │   ├── [echo.md](./src/notes/engineering/software/backend/languages/go/frameworks/echo.md)
-│   │   │   │   │   │   │   │   ├── [gin.md](./src/notes/engineering/software/backend/languages/go/frameworks/gin.md)
-│   │   │   │   │   │   │   │   └── [gorilla.md](./src/notes/engineering/software/backend/languages/go/frameworks/gorilla.md)
-│   │   │   │   │   │   │   └── graphql/
-│   │   │   │   │   │   │       └── [graphql-go.md](./src/notes/engineering/software/backend/languages/go/graphql/graphql-go.md)
-│   │   │   │   │   │   ├── jvm/
-│   │   │   │   │   │   │   ├── java/
-│   │   │   │   │   │   │   │   ├── [helidon.md](./src/notes/engineering/software/backend/languages/jvm/java/helidon.md)
-│   │   │   │   │   │   │   │   ├── [javalin.md](./src/notes/engineering/software/backend/languages/jvm/java/javalin.md)
-│   │   │   │   │   │   │   │   ├── [micronaut.md](./src/notes/engineering/software/backend/languages/jvm/java/micronaut.md)
-│   │   │   │   │   │   │   │   ├── [quarkus.md](./src/notes/engineering/software/backend/languages/jvm/java/quarkus.md)
-│   │   │   │   │   │   │   │   └── [spring-boot.md](./src/notes/engineering/software/backend/languages/jvm/java/spring-boot.md)
-│   │   │   │   │   │   │   ├── kotlin/
-│   │   │   │   │   │   │   │   └── [ktor.md](./src/notes/engineering/software/backend/languages/jvm/kotlin/ktor.md)
-│   │   │   │   │   │   │   └── scala/
-│   │   │   │   │   │   │       ├── [akka.md](./src/notes/engineering/software/backend/languages/jvm/scala/akka.md)
-│   │   │   │   │   │   │       ├── [http4s.md](./src/notes/engineering/software/backend/languages/jvm/scala/http4s.md)
-│   │   │   │   │   │   │       └── [play.md](./src/notes/engineering/software/backend/languages/jvm/scala/play.md)
-│   │   │   │   │   │   ├── php/
-│   │   │   │   │   │   │   └── [laravel.md](./src/notes/engineering/software/backend/languages/php/laravel.md)
-│   │   │   │   │   │   ├── python/
-│   │   │   │   │   │   │   ├── [fastapi.md](./src/notes/engineering/software/backend/languages/python/fastapi.md)
-│   │   │   │   │   │   │   ├── [flask.md](./src/notes/engineering/software/backend/languages/python/flask.md)
-│   │   │   │   │   │   │   ├── [pyramid.md](./src/notes/engineering/software/backend/languages/python/pyramid.md)
-│   │   │   │   │   │   │   └── [tonardo.md](./src/notes/engineering/software/backend/languages/python/tonardo.md)
-│   │   │   │   │   │   ├── ruby/
-│   │   │   │   │   │   │   └── [rails.md](./src/notes/engineering/software/backend/languages/ruby/rails.md)
-│   │   │   │   │   │   ├── rust/
-│   │   │   │   │   │   │   ├── [actix.md](./src/notes/engineering/software/backend/languages/rust/actix.md)
-│   │   │   │   │   │   │   ├── [gotham.md](./src/notes/engineering/software/backend/languages/rust/gotham.md)
-│   │   │   │   │   │   │   ├── [hyper.md](./src/notes/engineering/software/backend/languages/rust/hyper.md)
-│   │   │   │   │   │   │   ├── [rocket.md](./src/notes/engineering/software/backend/languages/rust/rocket.md)
-│   │   │   │   │   │   │   └── [wrap.md](./src/notes/engineering/software/backend/languages/rust/wrap.md)
-│   │   │   │   │   │   └── typescript/
-│   │   │   │   │   │       ├── frameworks/
-│   │   │   │   │   │       │   ├── [express.js.md](./src/notes/engineering/software/backend/languages/typescript/frameworks/express.js.md)
-│   │   │   │   │   │       │   ├── [fastify.js.md](./src/notes/engineering/software/backend/languages/typescript/frameworks/fastify.js.md)
-│   │   │   │   │   │       │   ├── [hapi.js.md](./src/notes/engineering/software/backend/languages/typescript/frameworks/hapi.js.md)
-│   │   │   │   │   │       │   ├── [hono.js.md](./src/notes/engineering/software/backend/languages/typescript/frameworks/hono.js.md)
-│   │   │   │   │   │       │   ├── [koa.js.md](./src/notes/engineering/software/backend/languages/typescript/frameworks/koa.js.md)
-│   │   │   │   │   │       │   └── [nest.js.md](./src/notes/engineering/software/backend/languages/typescript/frameworks/nest.js.md)
-│   │   │   │   │   │       ├── graphql/
-│   │   │   │   │   │       │   ├── [apollo-server.md](./src/notes/engineering/software/backend/languages/typescript/graphql/apollo-server.md)
-│   │   │   │   │   │       │   ├── [garph.md](./src/notes/engineering/software/backend/languages/typescript/graphql/garph.md)
-│   │   │   │   │   │       │   ├── [mercurius.md](./src/notes/engineering/software/backend/languages/typescript/graphql/mercurius.md)
-│   │   │   │   │   │       │   └── [yoga.md](./src/notes/engineering/software/backend/languages/typescript/graphql/yoga.md)
-│   │   │   │   │   │       ├── native/
-│   │   │   │   │   │       │   ├── [bun.http.md](./src/notes/engineering/software/backend/languages/typescript/native/bun.http.md)
-│   │   │   │   │   │       │   ├── [deno.http.md](./src/notes/engineering/software/backend/languages/typescript/native/deno.http.md)
-│   │   │   │   │   │       │   └── [node.http.md](./src/notes/engineering/software/backend/languages/typescript/native/node.http.md)
-│   │   │   │   │   │       └── web-socket/
-│   │   │   │   │   │           ├── [sock.js.md](./src/notes/engineering/software/backend/languages/typescript/web-socket/sock.js.md)
-│   │   │   │   │   │           ├── [socket.io.md](./src/notes/engineering/software/backend/languages/typescript/web-socket/socket.io.md)
-│   │   │   │   │   │           └── [ws.md](./src/notes/engineering/software/backend/languages/typescript/web-socket/ws.md)
-│   │   │   │   │   └── security/
-│   │   │   │   │       ├── [jwt.md](./src/notes/engineering/software/backend/security/jwt.md)
-│   │   │   │   │       ├── [oauth2.md](./src/notes/engineering/software/backend/security/oauth2.md)
-│   │   │   │   │       └── [oidc.md](./src/notes/engineering/software/backend/security/oidc.md)
-│   │   │   │   ├── cli/
-│   │   │   │   │   ├── go/
-│   │   │   │   │   │   └── [cobra.md](./src/notes/engineering/software/cli/go/cobra.md)
-│   │   │   │   │   ├── python/
-│   │   │   │   │   │   ├── [argparse.md](./src/notes/engineering/software/cli/python/argparse.md)
-│   │   │   │   │   │   └── [click.md](./src/notes/engineering/software/cli/python/click.md)
-│   │   │   │   │   ├── rust/
-│   │   │   │   │   │   ├── [argh.md](./src/notes/engineering/software/cli/rust/argh.md)
-│   │   │   │   │   │   └── [clap.md](./src/notes/engineering/software/cli/rust/clap.md)
-│   │   │   │   │   └── typescript/
-│   │   │   │   │       ├── [commander.md](./src/notes/engineering/software/cli/typescript/commander.md)
-│   │   │   │   │       ├── [oclif.md](./src/notes/engineering/software/cli/typescript/oclif.md)
-│   │   │   │   │       └── [yargs.md](./src/notes/engineering/software/cli/typescript/yargs.md)
-│   │   │   │   ├── frontend/
-│   │   │   │   │   ├── bff/
-│   │   │   │   │   │   ├── [graphql.md](./src/notes/engineering/software/frontend/bff/graphql.md)
-│   │   │   │   │   │   └── [trpc.md](./src/notes/engineering/software/frontend/bff/trpc.md)
-│   │   │   │   │   ├── hybrid/
-│   │   │   │   │   │   ├── desktop/
-│   │   │   │   │   │   │   ├── [electron.md](./src/notes/engineering/software/frontend/hybrid/desktop/electron.md)
-│   │   │   │   │   │   │   ├── [tauri.md](./src/notes/engineering/software/frontend/hybrid/desktop/tauri.md)
-│   │   │   │   │   │   │   └── [wails.md](./src/notes/engineering/software/frontend/hybrid/desktop/wails.md)
-│   │   │   │   │   │   ├── mobile/
-│   │   │   │   │   │   │   ├── frameworks/
-│   │   │   │   │   │   │   │   ├── [capacitor.js.md](./src/notes/engineering/software/frontend/hybrid/mobile/frameworks/capacitor.js.md)
-│   │   │   │   │   │   │   │   ├── [expo.md](./src/notes/engineering/software/frontend/hybrid/mobile/frameworks/expo.md)
-│   │   │   │   │   │   │   │   ├── [ionic.md](./src/notes/engineering/software/frontend/hybrid/mobile/frameworks/ionic.md)
-│   │   │   │   │   │   │   │   ├── [lynx.md](./src/notes/engineering/software/frontend/hybrid/mobile/frameworks/lynx.md)
-│   │   │   │   │   │   │   │   ├── [native-script.md](./src/notes/engineering/software/frontend/hybrid/mobile/frameworks/native-script.md)
-│   │   │   │   │   │   │   │   ├── [react-native.md](./src/notes/engineering/software/frontend/hybrid/mobile/frameworks/react-native.md)
-│   │   │   │   │   │   │   │   └── [svelte-native.md](./src/notes/engineering/software/frontend/hybrid/mobile/frameworks/svelte-native.md)
-│   │   │   │   │   │   │   └── styling/
-│   │   │   │   │   │   │       └── [nativewind.md](./src/notes/engineering/software/frontend/hybrid/mobile/styling/nativewind.md)
-│   │   │   │   │   │   ├── multi/
-│   │   │   │   │   │   │   ├── [meteor.md](./src/notes/engineering/software/frontend/hybrid/multi/meteor.md)
-│   │   │   │   │   │   │   └── [quasar.md](./src/notes/engineering/software/frontend/hybrid/multi/quasar.md)
-│   │   │   │   │   │   └── [flutter.md](./src/notes/engineering/software/frontend/hybrid/flutter.md)
-│   │   │   │   │   ├── native/
-│   │   │   │   │   │   ├── desktop/
-│   │   │   │   │   │   │   ├── linux/
-│   │   │   │   │   │   │   │   ├── [alpine-linux.md](./src/notes/engineering/software/frontend/native/desktop/linux/alpine-linux.md)
-│   │   │   │   │   │   │   │   ├── [arch-linux.md](./src/notes/engineering/software/frontend/native/desktop/linux/arch-linux.md)
-│   │   │   │   │   │   │   │   ├── [chromeos.md](./src/notes/engineering/software/frontend/native/desktop/linux/chromeos.md)
-│   │   │   │   │   │   │   │   ├── [debian.md](./src/notes/engineering/software/frontend/native/desktop/linux/debian.md)
-│   │   │   │   │   │   │   │   ├── [fedora.md](./src/notes/engineering/software/frontend/native/desktop/linux/fedora.md)
-│   │   │   │   │   │   │   │   ├── [freebsd.md](./src/notes/engineering/software/frontend/native/desktop/linux/freebsd.md)
-│   │   │   │   │   │   │   │   ├── [kali.md](./src/notes/engineering/software/frontend/native/desktop/linux/kali.md)
-│   │   │   │   │   │   │   │   ├── [kernel.md](./src/notes/engineering/software/frontend/native/desktop/linux/kernel.md)
-│   │   │   │   │   │   │   │   ├── [linux.md](./src/notes/engineering/software/frontend/native/desktop/linux/linux.md)
-│   │   │   │   │   │   │   │   ├── [mint.md](./src/notes/engineering/software/frontend/native/desktop/linux/mint.md)
-│   │   │   │   │   │   │   │   ├── [red-hat-enterprise-linux.md](./src/notes/engineering/software/frontend/native/desktop/linux/red-hat-enterprise-linux.md)
-│   │   │   │   │   │   │   │   └── [ubuntu.md](./src/notes/engineering/software/frontend/native/desktop/linux/ubuntu.md)
-│   │   │   │   │   │   │   ├── [macos.md](./src/notes/engineering/software/frontend/native/desktop/macos.md)
-│   │   │   │   │   │   │   └── [windows.md](./src/notes/engineering/software/frontend/native/desktop/windows.md)
-│   │   │   │   │   │   └── mobile/
-│   │   │   │   │   │       ├── operating-systems/
-│   │   │   │   │   │       │   ├── [android.md](./src/notes/engineering/software/frontend/native/mobile/operating-systems/android.md)
-│   │   │   │   │   │       │   ├── [harmonyos.md](./src/notes/engineering/software/frontend/native/mobile/operating-systems/harmonyos.md)
-│   │   │   │   │   │       │   ├── [ios.md](./src/notes/engineering/software/frontend/native/mobile/operating-systems/ios.md)
-│   │   │   │   │   │       │   ├── [kaios.md](./src/notes/engineering/software/frontend/native/mobile/operating-systems/kaios.md)
-│   │   │   │   │   │       │   └── [ubuntu-touch.md](./src/notes/engineering/software/frontend/native/mobile/operating-systems/ubuntu-touch.md)
-│   │   │   │   │   │       └── styling/
-│   │   │   │   │   │           ├── [material3.md](./src/notes/engineering/software/frontend/native/mobile/styling/material3.md)
-│   │   │   │   │   │           └── [swift-ui.md](./src/notes/engineering/software/frontend/native/mobile/styling/swift-ui.md)
-│   │   │   │   │   └── web/
-│   │   │   │   │       ├── authentication/
-│   │   │   │   │       │   ├── [auth.js.md](./src/notes/engineering/software/frontend/web/authentication/auth.js.md)
-│   │   │   │   │       │   └── [better-auth.md](./src/notes/engineering/software/frontend/web/authentication/better-auth.md)
-│   │   │   │   │       ├── build-tools/
-│   │   │   │   │       │   ├── bundler/
-│   │   │   │   │       │   │   ├── [esbuild.md](./src/notes/engineering/software/frontend/web/build-tools/bundler/esbuild.md)
-│   │   │   │   │       │   │   ├── [parcel.js.md](./src/notes/engineering/software/frontend/web/build-tools/bundler/parcel.js.md)
-│   │   │   │   │       │   │   ├── [rollup.js.md](./src/notes/engineering/software/frontend/web/build-tools/bundler/rollup.js.md)
-│   │   │   │   │       │   │   ├── [rspack.md](./src/notes/engineering/software/frontend/web/build-tools/bundler/rspack.md)
-│   │   │   │   │       │   │   └── [webpack.js.md](./src/notes/engineering/software/frontend/web/build-tools/bundler/webpack.js.md)
-│   │   │   │   │       │   ├── compiler/
-│   │   │   │   │       │   │   ├── [babel.js.md](./src/notes/engineering/software/frontend/web/build-tools/compiler/babel.js.md)
-│   │   │   │   │       │   │   └── [swc.md](./src/notes/engineering/software/frontend/web/build-tools/compiler/swc.md)
-│   │   │   │   │       │   ├── [storybook.md](./src/notes/engineering/software/frontend/web/build-tools/storybook.md)
-│   │   │   │   │       │   └── [vite.md](./src/notes/engineering/software/frontend/web/build-tools/vite.md)
-│   │   │   │   │       ├── charts/
-│   │   │   │   │       │   ├── [chart.js.md](./src/notes/engineering/software/frontend/web/charts/chart.js.md)
-│   │   │   │   │       │   ├── [chartist.md](./src/notes/engineering/software/frontend/web/charts/chartist.md)
-│   │   │   │   │       │   ├── [d3.js.md](./src/notes/engineering/software/frontend/web/charts/d3.js.md)
-│   │   │   │   │       │   ├── [google-charts.md](./src/notes/engineering/software/frontend/web/charts/google-charts.md)
-│   │   │   │   │       │   ├── [highcharts.md](./src/notes/engineering/software/frontend/web/charts/highcharts.md)
-│   │   │   │   │       │   ├── [plotly.md](./src/notes/engineering/software/frontend/web/charts/plotly.md)
-│   │   │   │   │       │   ├── [recharts.md](./src/notes/engineering/software/frontend/web/charts/recharts.md)
-│   │   │   │   │       │   └── [tanstack-charts.md](./src/notes/engineering/software/frontend/web/charts/tanstack-charts.md)
-│   │   │   │   │       ├── frameworks/
-│   │   │   │   │       │   ├── csr/
-│   │   │   │   │       │   │   ├── jsx/
-│   │   │   │   │       │   │   │   ├── [preact.md](./src/notes/engineering/software/frontend/web/frameworks/csr/jsx/preact.md)
-│   │   │   │   │       │   │   │   ├── [qwik.md](./src/notes/engineering/software/frontend/web/frameworks/csr/jsx/qwik.md)
-│   │   │   │   │       │   │   │   ├── [react.md](./src/notes/engineering/software/frontend/web/frameworks/csr/jsx/react.md)
-│   │   │   │   │       │   │   │   └── [solid.md](./src/notes/engineering/software/frontend/web/frameworks/csr/jsx/solid.md)
-│   │   │   │   │       │   │   ├── [angular.js.md](./src/notes/engineering/software/frontend/web/frameworks/csr/angular.js.md)
-│   │   │   │   │       │   │   ├── [angular.md](./src/notes/engineering/software/frontend/web/frameworks/csr/angular.md)
-│   │   │   │   │       │   │   ├── [backbone.md](./src/notes/engineering/software/frontend/web/frameworks/csr/backbone.md)
-│   │   │   │   │       │   │   ├── [ember.md](./src/notes/engineering/software/frontend/web/frameworks/csr/ember.md)
-│   │   │   │   │       │   │   ├── [svelte.md](./src/notes/engineering/software/frontend/web/frameworks/csr/svelte.md)
-│   │   │   │   │       │   │   └── [vue.md](./src/notes/engineering/software/frontend/web/frameworks/csr/vue.md)
-│   │   │   │   │       │   ├── ssg/
-│   │   │   │   │       │   │   ├── [astro.md](./src/notes/engineering/software/frontend/web/frameworks/ssg/astro.md)
-│   │   │   │   │       │   │   ├── [gatsby.md](./src/notes/engineering/software/frontend/web/frameworks/ssg/gatsby.md)
-│   │   │   │   │       │   │   └── [vuepress.md](./src/notes/engineering/software/frontend/web/frameworks/ssg/vuepress.md)
-│   │   │   │   │       │   └── ssr/
-│   │   │   │   │       │       ├── [angular-ssr.md](./src/notes/engineering/software/frontend/web/frameworks/ssr/angular-ssr.md)
-│   │   │   │   │       │       ├── [htmx.md](./src/notes/engineering/software/frontend/web/frameworks/ssr/htmx.md)
-│   │   │   │   │       │       ├── [next.md](./src/notes/engineering/software/frontend/web/frameworks/ssr/next.md)
-│   │   │   │   │       │       ├── [nuxt.md](./src/notes/engineering/software/frontend/web/frameworks/ssr/nuxt.md)
-│   │   │   │   │       │       ├── [remix.md](./src/notes/engineering/software/frontend/web/frameworks/ssr/remix.md)
-│   │   │   │   │       │       ├── [solid-start.md](./src/notes/engineering/software/frontend/web/frameworks/ssr/solid-start.md)
-│   │   │   │   │       │       └── [svelte-kit.md](./src/notes/engineering/software/frontend/web/frameworks/ssr/svelte-kit.md)
-│   │   │   │   │       ├── query/
-│   │   │   │   │       │   ├── [apollo-client.md](./src/notes/engineering/software/frontend/web/query/apollo-client.md)
-│   │   │   │   │       │   ├── [axios.md](./src/notes/engineering/software/frontend/web/query/axios.md)
-│   │   │   │   │       │   ├── [swr.md](./src/notes/engineering/software/frontend/web/query/swr.md)
-│   │   │   │   │       │   └── [tanstack-query.md](./src/notes/engineering/software/frontend/web/query/tanstack-query.md)
-│   │   │   │   │       ├── state-management/
-│   │   │   │   │       │   ├── [jotai.md](./src/notes/engineering/software/frontend/web/state-management/jotai.md)
-│   │   │   │   │       │   ├── [nano-stores.md](./src/notes/engineering/software/frontend/web/state-management/nano-stores.md)
-│   │   │   │   │       │   ├── [redux.md](./src/notes/engineering/software/frontend/web/state-management/redux.md)
-│   │   │   │   │       │   ├── [xstate.md](./src/notes/engineering/software/frontend/web/state-management/xstate.md)
-│   │   │   │   │       │   └── [zustand.md](./src/notes/engineering/software/frontend/web/state-management/zustand.md)
-│   │   │   │   │       ├── styling/
-│   │   │   │   │       │   ├── css-in-js/
-│   │   │   │   │       │   │   ├── [emotion.md](./src/notes/engineering/software/frontend/web/styling/css-in-js/emotion.md)
-│   │   │   │   │       │   │   ├── [styled-components.md](./src/notes/engineering/software/frontend/web/styling/css-in-js/styled-components.md)
-│   │   │   │   │       │   │   └── [stylex.md](./src/notes/engineering/software/frontend/web/styling/css-in-js/stylex.md)
-│   │   │   │   │       │   ├── css-preprocessor/
-│   │   │   │   │       │   │   ├── [less.md](./src/notes/engineering/software/frontend/web/styling/css-preprocessor/less.md)
-│   │   │   │   │       │   │   └── [sass.md](./src/notes/engineering/software/frontend/web/styling/css-preprocessor/sass.md)
-│   │   │   │   │       │   ├── css-tooling/
-│   │   │   │   │       │   │   ├── [postcss.md](./src/notes/engineering/software/frontend/web/styling/css-tooling/postcss.md)
-│   │   │   │   │       │   │   └── [stylelint.md](./src/notes/engineering/software/frontend/web/styling/css-tooling/stylelint.md)
-│   │   │   │   │       │   ├── css-utilities/
-│   │   │   │   │       │   │   ├── [tailwindcss.md](./src/notes/engineering/software/frontend/web/styling/css-utilities/tailwindcss.md)
-│   │   │   │   │       │   │   └── [unocss.md](./src/notes/engineering/software/frontend/web/styling/css-utilities/unocss.md)
-│   │   │   │   │       │   └── ui-components/
-│   │   │   │   │       │       ├── css/
-│   │   │   │   │       │       │   ├── [bootstrap.md](./src/notes/engineering/software/frontend/web/styling/ui-components/css/bootstrap.md)
-│   │   │   │   │       │       │   ├── [bulma.md](./src/notes/engineering/software/frontend/web/styling/ui-components/css/bulma.md)
-│   │   │   │   │       │       │   ├── [daisyui.md](./src/notes/engineering/software/frontend/web/styling/ui-components/css/daisyui.md)
-│   │   │   │   │       │       │   ├── [materializecss.md](./src/notes/engineering/software/frontend/web/styling/ui-components/css/materializecss.md)
-│   │   │   │   │       │       │   ├── [tailwindcss-plus.md](./src/notes/engineering/software/frontend/web/styling/ui-components/css/tailwindcss-plus.md)
-│   │   │   │   │       │       │   └── [uikit.md](./src/notes/engineering/software/frontend/web/styling/ui-components/css/uikit.md)
-│   │   │   │   │       │       └── react/
-│   │   │   │   │       │           ├── [ant-design.md](./src/notes/engineering/software/frontend/web/styling/ui-components/react/ant-design.md)
-│   │   │   │   │       │           ├── [charka-ui.md](./src/notes/engineering/software/frontend/web/styling/ui-components/react/charka-ui.md)
-│   │   │   │   │       │           ├── [hero-ui.md](./src/notes/engineering/software/frontend/web/styling/ui-components/react/hero-ui.md)
-│   │   │   │   │       │           ├── [mui.md](./src/notes/engineering/software/frontend/web/styling/ui-components/react/mui.md)
-│   │   │   │   │       │           ├── [shadcn-ui.md](./src/notes/engineering/software/frontend/web/styling/ui-components/react/shadcn-ui.md)
-│   │   │   │   │       │           └── [theme-ui.md](./src/notes/engineering/software/frontend/web/styling/ui-components/react/theme-ui.md)
-│   │   │   │   │       └── testing/
-│   │   │   │   │           ├── e2e/
-│   │   │   │   │           │   ├── [cypress.md](./src/notes/engineering/software/frontend/web/testing/e2e/cypress.md)
-│   │   │   │   │           │   ├── [karma.md](./src/notes/engineering/software/frontend/web/testing/e2e/karma.md)
-│   │   │   │   │           │   ├── [playwright.md](./src/notes/engineering/software/frontend/web/testing/e2e/playwright.md)
-│   │   │   │   │           │   ├── [puppeteer.md](./src/notes/engineering/software/frontend/web/testing/e2e/puppeteer.md)
-│   │   │   │   │           │   └── [selenium.md](./src/notes/engineering/software/frontend/web/testing/e2e/selenium.md)
-│   │   │   │   │           └── unit/
-│   │   │   │   │               ├── [jasmine.js.md](./src/notes/engineering/software/frontend/web/testing/unit/jasmine.js.md)
-│   │   │   │   │               ├── [jest.js.md](./src/notes/engineering/software/frontend/web/testing/unit/jest.js.md)
-│   │   │   │   │               ├── [mocha.js.md](./src/notes/engineering/software/frontend/web/testing/unit/mocha.js.md)
-│   │   │   │   │               ├── [testing-library.md](./src/notes/engineering/software/frontend/web/testing/unit/testing-library.md)
-│   │   │   │   │               └── [vitest.md](./src/notes/engineering/software/frontend/web/testing/unit/vitest.md)
-│   │   │   │   └── services/
-│   │   │   │       ├── auth/
-│   │   │   │       │   ├── [auth0.md](./src/notes/engineering/software/services/auth/auth0.md)
-│   │   │   │       │   ├── [clerk.md](./src/notes/engineering/software/services/auth/clerk.md)
-│   │   │   │       │   ├── [keycloak.md](./src/notes/engineering/software/services/auth/keycloak.md)
-│   │   │   │       │   ├── [okta.md](./src/notes/engineering/software/services/auth/okta.md)
-│   │   │   │       │   ├── [one-login.md](./src/notes/engineering/software/services/auth/one-login.md)
-│   │   │   │       │   ├── [osso.md](./src/notes/engineering/software/services/auth/osso.md)
-│   │   │   │       │   └── [zitadel.md](./src/notes/engineering/software/services/auth/zitadel.md)
-│   │   │   │       ├── email/
-│   │   │   │       │   ├── [mail-gun.md](./src/notes/engineering/software/services/email/mail-gun.md)
-│   │   │   │       │   ├── [mailchimp.md](./src/notes/engineering/software/services/email/mailchimp.md)
-│   │   │   │       │   ├── [postmark.md](./src/notes/engineering/software/services/email/postmark.md)
-│   │   │   │       │   ├── [resend.md](./src/notes/engineering/software/services/email/resend.md)
-│   │   │   │       │   └── [send-grid.md](./src/notes/engineering/software/services/email/send-grid.md)
-│   │   │   │       └── payment/
-│   │   │   │           ├── [braintree.md](./src/notes/engineering/software/services/payment/braintree.md)
-│   │   │   │           ├── [dodopayments.md](./src/notes/engineering/software/services/payment/dodopayments.md)
-│   │   │   │           ├── [klarna.md](./src/notes/engineering/software/services/payment/klarna.md)
-│   │   │   │           ├── [lemonsqueezy.md](./src/notes/engineering/software/services/payment/lemonsqueezy.md)
-│   │   │   │           ├── [paddle.md](./src/notes/engineering/software/services/payment/paddle.md)
-│   │   │   │           ├── [paypal.md](./src/notes/engineering/software/services/payment/paypal.md)
-│   │   │   │           ├── [polar.md](./src/notes/engineering/software/services/payment/polar.md)
-│   │   │   │           ├── [revenuecat.md](./src/notes/engineering/software/services/payment/revenuecat.md)
-│   │   │   │           ├── [square.md](./src/notes/engineering/software/services/payment/square.md)
-│   │   │   │           └── [stripe.md](./src/notes/engineering/software/services/payment/stripe.md)
-│   │   │   ├── [agents.md](./src/notes/engineering/agents.md)
-│   │   │   ├── [ai.md](./src/notes/engineering/ai.md)
-│   │   │   ├── [algorithms.md](./src/notes/engineering/algorithms.md)
-│   │   │   ├── [api.md](./src/notes/engineering/api.md)
-│   │   │   ├── [back-end.md](./src/notes/engineering/back-end.md)
-│   │   │   ├── [blockchain.md](./src/notes/engineering/blockchain.md)
-│   │   │   ├── [browsers.md](./src/notes/engineering/browsers.md)
-│   │   │   ├── [c.md](./src/notes/engineering/c.md)
-│   │   │   ├── [cli.md](./src/notes/engineering/cli.md)
-│   │   │   ├── [data-structures-and-algorithms.md](./src/notes/engineering/data-structures-and-algorithms.md)
-│   │   │   ├── [data-structures.md](./src/notes/engineering/data-structures.md)
-│   │   │   ├── [databases.md](./src/notes/engineering/databases.md)
-│   │   │   ├── [design.md](./src/notes/engineering/design.md)
-│   │   │   ├── [foss.md](./src/notes/engineering/foss.md)
-│   │   │   ├── [front-end.md](./src/notes/engineering/front-end.md)
-│   │   │   ├── [game-engines.md](./src/notes/engineering/game-engines.md)
-│   │   │   ├── [go.md](./src/notes/engineering/go.md)
-│   │   │   ├── [hosting.md](./src/notes/engineering/hosting.md)
-│   │   │   ├── [ide.md](./src/notes/engineering/ide.md)
-│   │   │   ├── [javascript.md](./src/notes/engineering/javascript.md)
-│   │   │   ├── [languages.md](./src/notes/engineering/languages.md)
-│   │   │   ├── [llm.md](./src/notes/engineering/llm.md)
-│   │   │   ├── [messaging.md](./src/notes/engineering/messaging.md)
-│   │   │   ├── [os.md](./src/notes/engineering/os.md)
-│   │   │   ├── [rust.md](./src/notes/engineering/rust.md)
-│   │   │   ├── [system-design.md](./src/notes/engineering/system-design.md)
-│   │   │   ├── [technology.md](./src/notes/engineering/technology.md)
-│   │   │   ├── [techstack.md](./src/notes/engineering/techstack.md)
-│   │   │   ├── [ui-components.md](./src/notes/engineering/ui-components.md)
-│   │   │   └── [workspaces.md](./src/notes/engineering/workspaces.md)
-│   │   ├── games/
-│   │   │   ├── [board-go.md](./src/notes/games/board-go.md)
-│   │   │   ├── [checker.md](./src/notes/games/checker.md)
-│   │   │   ├── [chess.md](./src/notes/games/chess.md)
-│   │   │   ├── [dota.md](./src/notes/games/dota.md)
-│   │   │   ├── [e-sports.md](./src/notes/games/e-sports.md)
-│   │   │   ├── [games.md](./src/notes/games/games.md)
-│   │   │   ├── [gaming-consoles.md](./src/notes/games/gaming-consoles.md)
-│   │   │   ├── [league-of-legends.md](./src/notes/games/league-of-legends.md)
-│   │   │   ├── [shogi.md](./src/notes/games/shogi.md)
-│   │   │   └── [xiangqi.md](./src/notes/games/xiangqi.md)
-│   │   ├── geography/
-│   │   │   ├── [cities.md](./src/notes/geography/cities.md)
-│   │   │   └── [geography.md](./src/notes/geography/geography.md)
-│   │   ├── humanities/
-│   │   │   ├── [books.md](./src/notes/humanities/books.md)
-│   │   │   ├── [grammy.md](./src/notes/humanities/grammy.md)
-│   │   │   ├── [humanity-languages.md](./src/notes/humanities/humanity-languages.md)
-│   │   │   ├── [humanity.md](./src/notes/humanities/humanity.md)
-│   │   │   ├── [languages-languages.md](./src/notes/humanities/languages-languages.md)
-│   │   │   ├── [literature.md](./src/notes/humanities/literature.md)
-│   │   │   ├── [news.md](./src/notes/humanities/news.md)
-│   │   │   ├── [nobel.md](./src/notes/humanities/nobel.md)
-│   │   │   └── [random-research.md](./src/notes/humanities/random-research.md)
 │   │   ├── life/
-│   │   │   ├── [bored.md](./src/notes/life/bored.md)
-│   │   │   ├── [degrees.md](./src/notes/life/degrees.md)
-│   │   │   ├── [education.md](./src/notes/life/education.md)
-│   │   │   ├── [f&b.md](./src/notes/life/f&b.md)
 │   │   │   ├── [maslow-hierarchy.md](./src/notes/life/maslow-hierarchy.md)
-│   │   │   ├── [minimalism.md](./src/notes/life/minimalism.md)
 │   │   │   ├── [monday-fear.md](./src/notes/life/monday-fear.md)
-│   │   │   ├── [negative-thoughts.md](./src/notes/life/negative-thoughts.md)
 │   │   │   ├── [nothing.md](./src/notes/life/nothing.md)
-│   │   │   ├── [resolutions.md](./src/notes/life/resolutions.md)
 │   │   │   ├── [sample.md](./src/notes/life/sample.md)
-│   │   │   └── [university.md](./src/notes/life/university.md)
+│   │   │   └── [sports.md](./src/notes/life/sports.md)
 │   │   ├── marketing/
-│   │   │   ├── copy-writer/
-│   │   │   │   ├── commerce/
-│   │   │   │   │   ├── [gumroad.md](./src/notes/marketing/copy-writer/commerce/gumroad.md)
-│   │   │   │   │   └── [shopify.md](./src/notes/marketing/copy-writer/commerce/shopify.md)
-│   │   │   │   └── sites/
-│   │   │   │       ├── [acquire.md](./src/notes/marketing/copy-writer/sites/acquire.md)
-│   │   │   │       ├── [hacker-news.md](./src/notes/marketing/copy-writer/sites/hacker-news.md)
-│   │   │   │       ├── [indie-hackers.md](./src/notes/marketing/copy-writer/sites/indie-hackers.md)
-│   │   │   │       └── [product-hunt.md](./src/notes/marketing/copy-writer/sites/product-hunt.md)
-│   │   │   └── ui-ux-designer/
-│   │   │       ├── [canva.md](./src/notes/marketing/ui-ux-designer/canva.md)
-│   │   │       └── [figma.md](./src/notes/marketing/ui-ux-designer/figma.md)
-│   │   ├── media/
-│   │   │   ├── [anime.md](./src/notes/media/anime.md)
-│   │   │   ├── [arts.md](./src/notes/media/arts.md)
-│   │   │   ├── [comics.md](./src/notes/media/comics.md)
-│   │   │   ├── [entertainment.md](./src/notes/media/entertainment.md)
-│   │   │   ├── [game-of-thrones.md](./src/notes/media/game-of-thrones.md)
-│   │   │   ├── [instruments.md](./src/notes/media/instruments.md)
-│   │   │   ├── [listening.md](./src/notes/media/listening.md)
-│   │   │   ├── [movies.md](./src/notes/media/movies.md)
-│   │   │   ├── [music.md](./src/notes/media/music.md)
-│   │   │   ├── [musical.md](./src/notes/media/musical.md)
-│   │   │   ├── [podcasts.md](./src/notes/media/podcasts.md)
-│   │   │   ├── [reading.md](./src/notes/media/reading.md)
-│   │   │   ├── [series.md](./src/notes/media/series.md)
-│   │   │   └── [watching.md](./src/notes/media/watching.md)
-│   │   ├── science/
-│   │   │   ├── [biology.md](./src/notes/science/biology.md)
-│   │   │   ├── [brain.md](./src/notes/science/brain.md)
-│   │   │   ├── [chemistry.md](./src/notes/science/chemistry.md)
-│   │   │   ├── [economics.md](./src/notes/science/economics.md)
-│   │   │   ├── [fields.md](./src/notes/science/fields.md)
-│   │   │   ├── [mathematics.md](./src/notes/science/mathematics.md)
-│   │   │   ├── [neuroscience.md](./src/notes/science/neuroscience.md)
-│   │   │   ├── [physics.md](./src/notes/science/physics.md)
-│   │   │   ├── [psychology.md](./src/notes/science/psychology.md)
-│   │   │   ├── [sciences.md](./src/notes/science/sciences.md)
-│   │   │   └── [stem.md](./src/notes/science/stem.md)
-│   │   ├── sports/
-│   │   │   ├── [american-football.md](./src/notes/sports/american-football.md)
-│   │   │   ├── [badminton.md](./src/notes/sports/badminton.md)
-│   │   │   ├── [baseball.md](./src/notes/sports/baseball.md)
-│   │   │   ├── [basketball.md](./src/notes/sports/basketball.md)
-│   │   │   ├── [bicycling.md](./src/notes/sports/bicycling.md)
-│   │   │   ├── [cricket.md](./src/notes/sports/cricket.md)
-│   │   │   ├── [f1.md](./src/notes/sports/f1.md)
-│   │   │   ├── [football.md](./src/notes/sports/football.md)
-│   │   │   ├── [futsal.md](./src/notes/sports/futsal.md)
-│   │   │   ├── [marathon.md](./src/notes/sports/marathon.md)
-│   │   │   ├── [netball.md](./src/notes/sports/netball.md)
-│   │   │   ├── [pickleball.md](./src/notes/sports/pickleball.md)
-│   │   │   ├── [rugby.md](./src/notes/sports/rugby.md)
-│   │   │   ├── [sports.md](./src/notes/sports/sports.md)
-│   │   │   ├── [squash.md](./src/notes/sports/squash.md)
-│   │   │   ├── [swimming.md](./src/notes/sports/swimming.md)
-│   │   │   ├── [table-tennis.md](./src/notes/sports/table-tennis.md)
-│   │   │   └── [tennis.md](./src/notes/sports/tennis.md)
-│   │   ├── transport/
-│   │   │   ├── [cars.md](./src/notes/transport/cars.md)
-│   │   │   ├── [motorcycle.md](./src/notes/transport/motorcycle.md)
-│   │   │   ├── [motorcycles.md](./src/notes/transport/motorcycles.md)
-│   │   │   └── [vehicles.md](./src/notes/transport/vehicles.md)
+│   │   │   └── copy-writer/
+│   │   │       └── sites/
+│   │   │           ├── [acquire.md](./src/notes/marketing/copy-writer/sites/acquire.md)
+│   │   │           ├── [hacker-news.md](./src/notes/marketing/copy-writer/sites/hacker-news.md)
+│   │   │           ├── [indie-hackers.md](./src/notes/marketing/copy-writer/sites/indie-hackers.md)
+│   │   │           └── [product-hunt.md](./src/notes/marketing/copy-writer/sites/product-hunt.md)
+│   │   ├── [TREE.md](./src/notes/TREE.md)
+│   │   ├── [bored.md](./src/notes/bored.md)
 │   │   ├── [engineering.md](./src/notes/engineering.md)
 │   │   ├── [intro.md](./src/notes/intro.md)
 │   │   ├── [me.md](./src/notes/me.md)
+│   │   ├── [minimalism.md](./src/notes/minimalism.md)
 │   │   └── [resume.md](./src/notes/resume.md)
-│   ├── scripts/
 │   ├── styles/
 │   │   ├── [globals.css](./src/styles/globals.css)
 │   │   └── [themes.css](./src/styles/themes.css)
@@ -1224,4 +593,4 @@
 └── [tsconfig.json](./tsconfig.json)
 ```
 
-298 directories, 923 files
+127 directories, 463 files

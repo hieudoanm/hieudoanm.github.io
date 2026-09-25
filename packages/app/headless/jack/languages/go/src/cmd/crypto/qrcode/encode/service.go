@@ -9,7 +9,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/mdp/qrterminal/v3"
+	"github.com/mdp/qrterminal/v4"
 	"rsc.io/qr"
 )
 

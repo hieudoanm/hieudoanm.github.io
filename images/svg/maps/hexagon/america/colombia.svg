@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357.71 475.11" width="357.71" height="475.11" role="img" aria-labelledby="colombia-title colombia-desc">
+  <title id="colombia-title">Colombia hex map</title>
+  <desc id="colombia-desc">Hexagon map with 33 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.77; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 13.67 9.76; }
+    .label { fill: #52525b; font: 600 11.06px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="VID">
+    <title>Vichada</title>
+    <polygon class="tile" points="319.76,205.01 347.94,221.28 347.94,253.82 319.76,270.09 291.58,253.82 291.58,221.28" aria-label="Vichada"/>
+    <text class="label" x="319.76" y="237.55">VID</text>
+  </g>
+  <g class="state" data-state="ARA">
+    <title>Arauca</title>
+    <polygon class="tile" points="291.58,156.20 319.76,172.47 319.76,205.01 291.58,221.28 263.40,205.01 263.40,172.47" aria-label="Arauca"/>
+    <text class="label" x="291.58" y="188.74">ARA</text>
+  </g>
+  <g class="state" data-state="VAU">
+    <title>Vaupés</title>
+    <polygon class="tile" points="291.58,351.45 319.76,367.72 319.76,400.26 291.58,416.53 263.40,400.26 263.40,367.72" aria-label="Vaupés"/>
+    <text class="label" x="291.58" y="383.99">VAU</text>
+  </g>
+  <g class="state" data-state="NSA">
+    <title>Norte de Santander</title>
+    <polygon class="tile" points="263.40,107.39 291.58,123.66 291.58,156.20 263.40,172.47 235.22,156.20 235.22,123.66" aria-label="Norte de Santander"/>
+    <text class="label" x="263.40" y="139.93">NSA</text>
+  </g>
+  <g class="state" data-state="CAS">
+    <title>Casanare</title>
+    <polygon class="tile" points="263.40,205.01 291.58,221.28 291.58,253.82 263.40,270.09 235.22,253.82 235.22,221.28" aria-label="Casanare"/>
+    <text class="label" x="263.40" y="237.55">CAS</text>
+  </g>
+  <g class="state" data-state="GUA">
+    <title>Guainía</title>
+    <polygon class="tile" points="263.40,302.64 291.58,318.91 291.58,351.45 263.40,367.72 235.22,351.45 235.22,318.91" aria-label="Guainía"/>
+    <text class="label" x="263.40" y="335.18">GUA</text>
+  </g>
+  <g class="state" data-state="AMA">
+    <title>Amazonas</title>
+    <polygon class="tile" points="263.40,400.26 291.58,416.53 291.58,449.07 263.40,465.34 235.22,449.07 235.22,416.53" aria-label="Amazonas"/>
+    <text class="label" x="263.40" y="432.80">AMA</text>
+  </g>
+  <g class="state" data-state="CES">
+    <title>Cesar</title>
+    <polygon class="tile" points="235.22,58.57 263.40,74.85 263.40,107.39 235.22,123.66 207.04,107.39 207.04,74.85" aria-label="Cesar"/>
+    <text class="label" x="235.22" y="91.12">CES</text>
+  </g>
+  <g class="state" data-state="BOY">
+    <title>Boyacá</title>
+    <polygon class="tile" points="235.22,156.20 263.40,172.47 263.40,205.01 235.22,221.28 207.04,205.01 207.04,172.47" aria-label="Boyacá"/>
+    <text class="label" x="235.22" y="188.74">BOY</text>
+  </g>
+  <g class="state" data-state="MET">
+    <title>Meta</title>
+    <polygon class="tile" points="235.22,253.82 263.40,270.09 263.40,302.64 235.22,318.91 207.04,302.64 207.04,270.09" aria-label="Meta"/>
+    <text class="label" x="235.22" y="286.37">MET</text>
+  </g>
+  <g class="state" data-state="GUV">
+    <title>Guaviare</title>
+    <polygon class="tile" points="235.22,351.45 263.40,367.72 263.40,400.26 235.22,416.53 207.04,400.26 207.04,367.72" aria-label="Guaviare"/>
+    <text class="label" x="235.22" y="383.99">GUV</text>
+  </g>
+  <g class="state" data-state="LAG">
+    <title>La Guajira</title>
+    <polygon class="tile" points="207.04,9.76 235.22,26.03 235.22,58.57 207.04,74.85 178.85,58.57 178.85,26.03" aria-label="La Guajira"/>
+    <text class="label" x="207.04" y="42.30">LAG</text>
+  </g>
+  <g class="state" data-state="SAN">
+    <title>Santander</title>
+    <polygon class="tile" points="207.04,107.39 235.22,123.66 235.22,156.20 207.04,172.47 178.85,156.20 178.85,123.66" aria-label="Santander"/>
+    <text class="label" x="207.04" y="139.93">SAN</text>
+  </g>
+  <g class="state" data-state="CU">
+    <title>Cundinamarca</title>
+    <polygon class="tile" points="207.04,205.01 235.22,221.28 235.22,253.82 207.04,270.09 178.85,253.82 178.85,221.28" aria-label="Cundinamarca"/>
+    <text class="label" x="207.04" y="237.55">CU</text>
+  </g>
+  <g class="state" data-state="HUI">
+    <title>Huila</title>
+    <polygon class="tile" points="207.04,302.64 235.22,318.91 235.22,351.45 207.04,367.72 178.85,351.45 178.85,318.91" aria-label="Huila"/>
+    <text class="label" x="207.04" y="335.18">HUI</text>
+  </g>
+  <g class="state" data-state="MAG">
+    <title>Magdalena</title>
+    <polygon class="tile" points="178.85,58.57 207.04,74.85 207.04,107.39 178.85,123.66 150.67,107.39 150.67,74.85" aria-label="Magdalena"/>
+    <text class="label" x="178.85" y="91.12">MAG</text>
+  </g>
+  <g class="state" data-state="CAL">
+    <title>Caldas</title>
+    <polygon class="tile" points="178.85,156.20 207.04,172.47 207.04,205.01 178.85,221.28 150.67,205.01 150.67,172.47" aria-label="Caldas"/>
+    <text class="label" x="178.85" y="188.74">CAL</text>
+  </g>
+  <g class="state" data-state="CUN">
+    <title>Bogota</title>
+    <polygon class="tile" points="178.85,253.82 207.04,270.09 207.04,302.64 178.85,318.91 150.67,302.64 150.67,270.09" aria-label="Bogota"/>
+    <text class="label" x="178.85" y="286.37">CUN</text>
+  </g>
+  <g class="state" data-state="CAQ">
+    <title>Caquetá</title>
+    <polygon class="tile" points="178.85,351.45 207.04,367.72 207.04,400.26 178.85,416.53 150.67,400.26 150.67,367.72" aria-label="Caquetá"/>
+    <text class="label" x="178.85" y="383.99">CAQ</text>
+  </g>
+  <g class="state" data-state="ATL">
+    <title>Atlántico</title>
+    <polygon class="tile" points="150.67,9.76 178.85,26.03 178.85,58.57 150.67,74.85 122.49,58.57 122.49,26.03" aria-label="Atlántico"/>
+    <text class="label" x="150.67" y="42.30">ATL</text>
+  </g>
+  <g class="state" data-state="BOL">
+    <title>Bolívar</title>
+    <polygon class="tile" points="150.67,107.39 178.85,123.66 178.85,156.20 150.67,172.47 122.49,156.20 122.49,123.66" aria-label="Bolívar"/>
+    <text class="label" x="150.67" y="139.93">BOL</text>
+  </g>
+  <g class="state" data-state="TOL">
+    <title>Tolima</title>
+    <polygon class="tile" points="150.67,205.01 178.85,221.28 178.85,253.82 150.67,270.09 122.49,253.82 122.49,221.28" aria-label="Tolima"/>
+    <text class="label" x="150.67" y="237.55">TOL</text>
+  </g>
+  <g class="state" data-state="CAU">
+    <title>Cauca</title>
+    <polygon class="tile" points="150.67,302.64 178.85,318.91 178.85,351.45 150.67,367.72 122.49,351.45 122.49,318.91" aria-label="Cauca"/>
+    <text class="label" x="150.67" y="335.18">CAU</text>
+  </g>
+  <g class="state" data-state="SUC">
+    <title>Sucre</title>
+    <polygon class="tile" points="122.49,58.57 150.67,74.85 150.67,107.39 122.49,123.66 94.31,107.39 94.31,74.85" aria-label="Sucre"/>
+    <text class="label" x="122.49" y="91.12">SUC</text>
+  </g>
+  <g class="state" data-state="ANT">
+    <title>Antioquia</title>
+    <polygon class="tile" points="122.49,156.20 150.67,172.47 150.67,205.01 122.49,221.28 94.31,205.01 94.31,172.47" aria-label="Antioquia"/>
+    <text class="label" x="122.49" y="188.74">ANT</text>
+  </g>
+  <g class="state" data-state="VAC">
+    <title>Valle del Cauca</title>
+    <polygon class="tile" points="122.49,253.82 150.67,270.09 150.67,302.64 122.49,318.91 94.31,302.64 94.31,270.09" aria-label="Valle del Cauca"/>
+    <text class="label" x="122.49" y="286.37">VAC</text>
+  </g>
+  <g class="state" data-state="PUT">
+    <title>Putumayo</title>
+    <polygon class="tile" points="122.49,351.45 150.67,367.72 150.67,400.26 122.49,416.53 94.31,400.26 94.31,367.72" aria-label="Putumayo"/>
+    <text class="label" x="122.49" y="383.99">PUT</text>
+  </g>
+  <g class="state" data-state="COR">
+    <title>Córdoba</title>
+    <polygon class="tile" points="94.31,107.39 122.49,123.66 122.49,156.20 94.31,172.47 66.13,156.20 66.13,123.66" aria-label="Córdoba"/>
+    <text class="label" x="94.31" y="139.93">COR</text>
+  </g>
+  <g class="state" data-state="RIS">
+    <title>Risaralda</title>
+    <polygon class="tile" points="94.31,205.01 122.49,221.28 122.49,253.82 94.31,270.09 66.13,253.82 66.13,221.28" aria-label="Risaralda"/>
+    <text class="label" x="94.31" y="237.55">RIS</text>
+  </g>
+  <g class="state" data-state="NAR">
+    <title>Nariño</title>
+    <polygon class="tile" points="94.31,302.64 122.49,318.91 122.49,351.45 94.31,367.72 66.13,351.45 66.13,318.91" aria-label="Nariño"/>
+    <text class="label" x="94.31" y="335.18">NAR</text>
+  </g>
+  <g class="state" data-state="CHO">
+    <title>Chocó</title>
+    <polygon class="tile" points="66.13,156.20 94.31,172.47 94.31,205.01 66.13,221.28 37.94,205.01 37.94,172.47" aria-label="Chocó"/>
+    <text class="label" x="66.13" y="188.74">CHO</text>
+  </g>
+  <g class="state" data-state="QUI">
+    <title>Quindío</title>
+    <polygon class="tile" points="66.13,253.82 94.31,270.09 94.31,302.64 66.13,318.91 37.94,302.64 37.94,270.09" aria-label="Quindío"/>
+    <text class="label" x="66.13" y="286.37">QUI</text>
+  </g>
+  <g class="state" data-state="SAP">
+    <title>San Andrés y Providencia</title>
+    <polygon class="tile inset" points="37.94,9.76 66.13,26.03 66.13,58.57 37.94,74.85 9.76,58.57 9.76,26.03" aria-label="San Andrés y Providencia"/>
+    <text class="label" x="37.94" y="42.30">SAP</text>
+  </g>
+</svg>

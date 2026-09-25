@@ -132,8 +132,13 @@ func (e *TimeoutError) Unwrap() error {
 	return e.Err
 }
 
+// IsTimeout reports whether err is a render timeout. TimeoutError is matched
+// directly: Scrape and Screenshot wrap whatever error the engine returned, and
+// that error need not wrap context.DeadlineExceeded. The deadline check still
+// covers bare context errors arriving from elsewhere.
 func IsTimeout(err error) bool {
-	return errors.Is(err, context.DeadlineExceeded)
+	var timeout *TimeoutError
+	return errors.As(err, &timeout) || errors.Is(err, context.DeadlineExceeded)
 }
 
 func heapKB() uint64 {

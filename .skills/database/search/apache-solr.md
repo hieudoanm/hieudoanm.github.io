@@ -13,6 +13,20 @@ Apache Solr is a **mature, extensible enterprise search platform** built on **Ap
 - **Query via the JSON Request API**: `start`, `rows`, `q`, `fq`, `fl`, `sort`, `facet`, `hl`.
 - SolrCloud provides **distributed indexing** with sharding + replication and software load balancing via ZooKeeper.
 
+```json
+{
+  "q": "title:postgres OR body:indexing",
+  "fq": ["status:published", "published_at:[2024-01-01T00:00:00Z TO NOW]"],
+  "fl": "id,title,score",
+  "sort": "published_at desc",
+  "start": 0,
+  "rows": 20,
+  "facet": { "field": ["category", "author"] },
+  "hl": "true",
+  "hl.fields": ["title", "body"]
+}
+```
+
 ## 2. Indexing Documents
 
 - Add externally: `POST /solr/collection/update` with JSON documents; batch via commit (`softCommit: true` for near-real-time).
@@ -34,6 +48,18 @@ Apache Solr is a **mature, extensible enterprise search platform** built on **Ap
 - Choose between **string** (exact, facetable, sortable) vs **text** (analyzed).
 - Use **docValues=true** for faceting/grouping/sorting on large fields for performance.
 - **CopyFields** for catch-all search over multiple source fields.
+
+```xml
+<field name="id"       type="string" indexed="true" stored="true"/>
+<field name="sku"      type="string" indexed="true" stored="true"/>
+<field name="category" type="string" indexed="true" stored="false" docValues="true"/>
+<field name="author"   type="string" indexed="true" stored="true"    docValues="true"/>
+<field name="title"    type="text_general" indexed="true" stored="true">
+  <copyField source="title"/>
+  <copyField source="summary"/>
+</field>
+<field name="published_at" type="pdate" indexed="true" stored="true" docValues="true"/>
+```
 
 ## 5. SolrCloud & Operations
 

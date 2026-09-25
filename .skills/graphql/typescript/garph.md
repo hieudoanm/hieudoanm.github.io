@@ -17,9 +17,51 @@ Garph is a **type-safe, schema-first GraphQL framework for TypeScript** (by Dax 
 - Deps: `garph`, `graphql`, and a server adapter (pairs with `graphql-yoga` or an HTTP server via `graphql`).
 - Build a `g.schema(...)` and a resolver map, then `g.resolve()` to get executable schema.
 
+```ts
+import { buildSchema, g } from 'garph'
+import { createYoga } from 'graphql-yoga'
+import { createServer } from 'node:http'
+
+// `g` is the shared type registry; buildSchema turns types + resolvers into one executable schema
+const schema = buildSchema({ g, resolvers })
+const yoga = createYoga({ schema })
+
+createServer(yoga).listen(4000)
+```
+
 ## 3. Definitions
 
 - Scalars: `g.string()`, `g.int()`, `g.float()`, `g.boolean()`, `g.id()`.
+
+```ts
+import { g } from 'garph'
+
+const roleType = g.enumType('Role', ['ADMIN', 'EDITOR', 'VIEWER'] as const) // as const for inference
+
+// Garph fields are non-null by default; `.optional()` opts into nullability
+const userType = g.type('User', {
+  id: g.id(),
+  name: g.string(),
+  role: g.ref(roleType),
+  posts: g.ref(() => postType).list(), // thunk form breaks the cycle
+})
+
+const postType = g.type('Post', {
+  id: g.id(),
+  title: g.string(),
+  author: g.ref(userType),
+  publishedAt: g.string().optional(),
+})
+
+const createUserInput = g.inputType('CreateUserInput', {
+  name: g.string(),
+  role: g.ref(roleType).optional(),
+})
+
+const queryType = g.type('Query', { user: g.ref(userType).args({ id: g.id() }) })
+const mutationType = g.type('Mutation', { createUser: g.ref(userType).args({ input: g.ref(createUserInput) }) })
+```
+
 - Types: `g.type('User', { name: g.string(), age: g.int().optional() })` (`Nullable`/`optional` modifiers).
 - Inputs: `g.input('UserInput', { name: g.string() })` for mutations args.
 - Enums: `g.enum('Role', [...], { 'ADMIN': 'admin', ... })` — last arg maps names to values.
@@ -28,6 +70,30 @@ Garph is a **type-safe, schema-first GraphQL framework for TypeScript** (by Dax 
 ## 4. Resolvers
 
 - Pass a resolver map aligned with schema keys: `const resolvers = { Query: { hello: () => 'hi' } }`.
+
+```ts
+import { Infer, InferResolvers } from 'garph'
+
+type AppContext = { userService: UserService }
+
+const resolvers: InferResolvers<
+  { Query: typeof queryType; Mutation: typeof mutationType },
+  { context: AppContext }
+> = {
+  Query: {
+    // args is inferred as { id: string } — a renamed arg becomes a compile error
+    user: async (_parent, args, context) => context.userService.getById(args.id),
+  },
+  Mutation: {
+    // args.input is typed from CreateUserInput
+    createUser: async (_parent, args, context) => context.userService.create(args.input),
+  },
+}
+
+// The row shape your services return is derived the same way
+type User = Infer<typeof userType>
+```
+
 - Typed args: read `args` from resolver signature — TS knows their types.
 - Async returns automatic.
 - Errors: throw GraphQL-safe errors; provide consistent return types against schema.
@@ -51,6 +117,10 @@ Garph is a **type-safe, schema-first GraphQL framework for TypeScript** (by Dax 
 - Use explicit input types for all mutation arguments.
 - Pair with `graphql-yoga` for a full production server (middleware, subscriptions, plugins).
 - Verify types with `tsc --noEmit` before shipping.
+
+```bash
+pnpm exec tsc --noEmit # schema/resolver drift is a compile error, not a 500 at runtime
+```
 
 ## Quick-Start Checklist
 

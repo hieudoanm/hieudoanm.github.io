@@ -6,16 +6,19 @@
 
 .snap-x {
   --tw-scroll-snap-strictness: proximity;
+
   scroll-snap-type: x var(--tw-scroll-snap-strictness);
 }
 
 .snap-y {
   --tw-scroll-snap-strictness: proximity;
+
   scroll-snap-type: y var(--tw-scroll-snap-strictness);
 }
 
 .snap-both {
   --tw-scroll-snap-strictness: proximity;
+
   scroll-snap-type: both var(--tw-scroll-snap-strictness);
 }
 

@@ -258,6 +258,61 @@ Separate `server` crate + `browserverless-server` bin, concurrency limits, reque
 cancellation, JSON + full render (PNG) endpoints, SSRF hardening (private-network blocking,
 allowlists), graceful shutdown, memory limits.
 
+## MCP
+
+Implemented as the `browserverless mcp serve` subcommand
+(`crates/cli/src/mcp/`), exposed through the `browserverless_cli::mcp` lib module.
+A thin JSON-RPC layer over `headless::HeadlessBrowser` — the same real Servo
+rendering path as Server Mode, never a custom renderer or a stub.
+
+### Transport
+
+Newline-delimited JSON-RPC 2.0 over stdio. stdin is the request stream, stdout
+carries replies as one line per frame, stderr carries diagnostics. Diagnostics
+never go to stdout: a stray line on stdout would desynchronise the client.
+
+`FrameReader` (`mcp/transport.rs`) caps a frame at 8 MiB. On overflow it discards
+bytes until the next newline instead of parsing the tail, so an oversized frame
+cannot be executed as a second command. Bytes read at EOF without a trailing
+newline are a final frame, not a parse error, because a client whose last frame
+lacks the newline is normal.
+
+### Protocol
+
+A request without an `id` is a notification: it is never answered, and the
+notification check precedes the `jsonrpc` version check so a client cannot
+receive an unmatched reply. `tools/call` `arguments` arrive as a JSON object and
+are passed to handlers verbatim. A failure inside a tool — a bad URL, a refused
+scheme, a render error — returns `isError: true` with a message the model can act
+on; a protocol failure (unknown method, bad version, unparseable frame) returns a
+JSON-RPC error. `tools/list` is sorted by name.
+
+### One Browser per Process
+
+`servo-config` `opts` are process-global and panic on second initialisation, so
+building a `HeadlessBrowser` per tool call crashed the second call
+(`Already initialized: Opts {...}`). `ServeRenderer` therefore holds
+`Mutex<Option<HeadlessBrowser>>`, builds the browser on first use, and reuses it;
+each call gets a fresh page within it. The lock is held for the whole render,
+which keeps the thread-affine `BrowserContext` (it holds an `Rc`) owned by one
+caller. Consequently `Renderer` does **not** require `Send`/`Sync`, and the stdio
+server is single-threaded by design.
+
+A per-call `timeout_ms` therefore cannot be expressed by rebuilding the browser.
+`headless` gained `scrape_with_timeout`/`screenshot_bytes_with_timeout` so the
+cached browser can honour a per-request deadline; the existing `scrape` and
+`screenshot_bytes` delegate to them with the configured default.
+
+### Regression Tests
+
+`crates/cli/tests/mcp.rs` drives the server over a stub renderer (24 tests:
+initialize, ping, `tools/list`, `tools/call`, notifications, frame errors,
+single-line output, `isError`, image blocks).
+`crates/cli/tests/mcp_render.rs` exercises the real Servo renderer against a
+local fixture and contains a **single** test, for the one-Servo-per-process
+reason above: it renders twice in one session, which is the regression that
+previously panicked.
+
 ## Surface Semantics (Important for Pixel Work)
 
 - The software surface is **double-buffered** (surfman). `present()` swaps in a cleared
@@ -348,6 +403,7 @@ initialization (`Already initialized: Opts {...}`). Because of this:
 - The headless rendering test is a single test (second `HeadlessBrowser::new` would panic).
 - Server/concurrency code must keep to one Servo per process or fork processes (see
   [Server Mode](#server-mode)).
+- The MCP server builds one browser and reuses it (see [MCP](#mcp)).
 
 ### 6. Multiple Pages in One Context Are Not Reliable
 

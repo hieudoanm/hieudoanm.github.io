@@ -11,6 +11,8 @@
 │   │   ├── [manager.md](./persona/engineer/manager.md)
 │   │   ├── [principal.md](./persona/engineer/principal.md)
 │   │   └── [senior.md](./persona/engineer/senior.md)
+│   ├── marketing/
+│   │   └── [copy-writer.md](./persona/marketing/copy-writer.md)
 │   ├── product/
 │   │   ├── [business-analyst.md](./persona/product/business-analyst.md)
 │   │   └── [product-owner.md](./persona/product/product-owner.md)
@@ -24,4 +26,4 @@
 └── [TREE.md](./TREE.md)
 ```
 
-6 directories, 15 files
+7 directories, 16 files

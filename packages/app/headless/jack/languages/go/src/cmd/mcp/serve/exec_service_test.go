@@ -4,7 +4,9 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
+	"strings"
 	"testing"
+	"time"
 
 	"github.com/spf13/cobra"
 )
@@ -341,5 +343,38 @@ func TestExecuteTool_resetFlagsBetweenCalls(t *testing.T) {
 	}
 	if r2.Content[0].Text != "default" {
 		t.Errorf("second call text = %q, want %q (should be default after reset)", r2.Content[0].Text, "default")
+	}
+}
+
+// A tool writing more than the pipe buffer would deadlock the server if the
+// pipes were only drained after RunE returned.
+func TestCaptureRun_largeOutputDoesNotDeadlock(t *testing.T) {
+	large := strings.Repeat("x", 1<<20) // 1 MiB, well past the 64 KiB pipe buffer
+
+	cmd := &cobra.Command{Use: "big"}
+	cmd.RunE = func(c *cobra.Command, args []string) error {
+		fmt.Fprint(os.Stdout, large)
+		return nil
+	}
+
+	done := make(chan struct{})
+	var stdout string
+	var err error
+	go func() {
+		defer close(done)
+		stdout, _, err = captureRun(cmd, nil)
+	}()
+
+	select {
+	case <-done:
+	case <-time.After(10 * time.Second):
+		t.Fatal("captureRun deadlocked on output larger than the pipe buffer")
+	}
+
+	if err != nil {
+		t.Fatalf("unexpected error: %v", err)
+	}
+	if len(stdout) != len(large) {
+		t.Fatalf("expected %d bytes, got %d", len(large), len(stdout))
 	}
 }

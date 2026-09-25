@@ -15,6 +15,46 @@ cargo run
 # → http://localhost:8080
 ```
 
+## MCP server
+
+The same binary speaks the Model Context Protocol over stdio:
+
+```bash
+cargo run -- mcp serve
+```
+
+It speaks newline-delimited JSON-RPC 2.0 on stdin/stdout, writes diagnostics to
+stderr, and opens the same SQLite database as the HTTP server, so a model and
+the REST API see one set of data.
+
+```json
+{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-11-25"}}
+{"jsonrpc":"2.0","method":"notifications/initialized"}
+{"jsonrpc":"2.0","id":2,"method":"tools/call","params":{"name":"backbone_collections_list","arguments":{}}}
+```
+
+| Tool                        | Arguments                              |
+| --------------------------- | -------------------------------------- |
+| `backbone_health`           | none                                   |
+| `backbone_collections_list` | none                                   |
+| `backbone_collections_create` | `name`, `schema`                     |
+| `backbone_collections_delete` | `name`                                |
+| `backbone_records_list`     | `collection`, `page`, `per_page`, `search` |
+| `backbone_records_get`      | `collection`, `id`                     |
+| `backbone_records_create`   | `collection`, `id?`, `data`             |
+| `backbone_records_update`   | `collection`, `id`, `data`             |
+| `backbone_records_delete`   | `collection`, `id`                     |
+| `backbone_export`           | `format`                               |
+| `backbone_import`           | `format`, `data`                       |
+
+Every tool runs real queries against the database; there are no stubbed
+handlers. `backbone_export` and `backbone_import` produce and consume the same
+payload as the HTTP `GET /export` and `POST /import` routes, and both accept
+`format: "json"` — asking for another format returns an error rather than
+silently handing back JSON.
+
+`per_page` is capped at 200 so a single call cannot pull a whole table.
+
 ## Admin Dashboard
 
 A web-based admin UI is served at `GET /`. Built with HTMX + Tailwind CSS (CDN).

@@ -18,6 +18,7 @@ interface TheoryTemplateProps {
   sections: TheorySection[];
   links?: TheoryLink[];
   references?: TheoryLink[];
+  parentLink?: { href: string; label: string };
 }
 
 const SectionHeading: FC<{ children: ReactNode }> = ({ children }) => (
@@ -32,8 +33,16 @@ export const TheoryTemplate: FC<TheoryTemplateProps> = ({
   sections,
   links = [],
   references = [],
+  parentLink,
 }) => (
   <div className="mx-auto flex w-full max-w-5xl flex-col gap-8 p-4 md:p-6">
+    {parentLink && (
+      <Link
+        href={parentLink.href}
+        className="text-primary -mb-4 text-sm hover:underline">
+        ← Back to {parentLink.label}
+      </Link>
+    )}
     <header className="flex flex-col items-center gap-4 text-center">
       <h1 className="text-primary font-serif text-4xl font-bold tracking-tight">
         {title}

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 255.96 190.40" width="255.96" height="190.40" role="img" aria-labelledby="south-sudan-title south-sudan-desc">
+  <title id="south-sudan-title">South Sudan hex map</title>
+  <desc id="south-sudan-desc">Hexagon map with 10 first-level administrative divisions, one hexagon each. Regions that border each other share an edge.</desc>
+  <style>
+    .tile { fill: #fff; stroke: #1b1b1f; stroke-width: 2.89; stroke-linejoin: round; transition: fill .15s; }
+    .tile.inset { stroke-dasharray: 14.28 10.20; }
+    .label { fill: #52525b; font: 600 11.56px system-ui, -apple-system, "Segoe UI", sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+    .state:hover .tile { fill: #2563eb; }
+    .state:hover .label { fill: #fff; }
+  </style>
+  <g class="state" data-state="NU">
+    <title>Upper Nile</title>
+    <polygon class="tile" points="216.31,10.20 245.76,27.20 245.76,61.20 216.31,78.20 186.87,61.20 186.87,27.20" aria-label="Upper Nile"/>
+    <text class="label" x="216.31" y="44.20">NU</text>
+  </g>
+  <g class="state" data-state="EE">
+    <title>Eastern Equatoria</title>
+    <polygon class="tile" points="216.31,112.20 245.76,129.20 245.76,163.20 216.31,180.20 186.87,163.20 186.87,129.20" aria-label="Eastern Equatoria"/>
+    <text class="label" x="216.31" y="146.20">EE</text>
+  </g>
+  <g class="state" data-state="JG">
+    <title>Jonglei</title>
+    <polygon class="tile" points="186.87,61.20 216.31,78.20 216.31,112.20 186.87,129.20 157.42,112.20 157.42,78.20" aria-label="Jonglei"/>
+    <text class="label" x="186.87" y="95.20">JG</text>
+  </g>
+  <g class="state" data-state="UY">
+    <title>Unity</title>
+    <polygon class="tile" points="157.42,10.20 186.87,27.20 186.87,61.20 157.42,78.20 127.98,61.20 127.98,27.20" aria-label="Unity"/>
+    <text class="label" x="157.42" y="44.20">UY</text>
+  </g>
+  <g class="state" data-state="EC">
+    <title>Central Equatoria</title>
+    <polygon class="tile" points="157.42,112.20 186.87,129.20 186.87,163.20 157.42,180.20 127.98,163.20 127.98,129.20" aria-label="Central Equatoria"/>
+    <text class="label" x="157.42" y="146.20">EC</text>
+  </g>
+  <g class="state" data-state="LK">
+    <title>Lakes</title>
+    <polygon class="tile" points="127.98,61.20 157.42,78.20 157.42,112.20 127.98,129.20 98.53,112.20 98.53,78.20" aria-label="Lakes"/>
+    <text class="label" x="127.98" y="95.20">LK</text>
+  </g>
+  <g class="state" data-state="WR">
+    <title>Warrap</title>
+    <polygon class="tile" points="98.53,10.20 127.98,27.20 127.98,61.20 98.53,78.20 69.09,61.20 69.09,27.20" aria-label="Warrap"/>
+    <text class="label" x="98.53" y="44.20">WR</text>
+  </g>
+  <g class="state" data-state="EW">
+    <title>Western Equatoria</title>
+    <polygon class="tile" points="98.53,112.20 127.98,129.20 127.98,163.20 98.53,180.20 69.09,163.20 69.09,129.20" aria-label="Western Equatoria"/>
+    <text class="label" x="98.53" y="146.20">EW</text>
+  </g>
+  <g class="state" data-state="BW">
+    <title>Western Bahr el Ghazal</title>
+    <polygon class="tile" points="69.09,61.20 98.53,78.20 98.53,112.20 69.09,129.20 39.64,112.20 39.64,78.20" aria-label="Western Bahr el Ghazal"/>
+    <text class="label" x="69.09" y="95.20">BW</text>
+  </g>
+  <g class="state" data-state="BN">
+    <title>Northern Bahr el Ghazal</title>
+    <polygon class="tile" points="39.64,10.20 69.09,27.20 69.09,61.20 39.64,78.20 10.20,61.20 10.20,27.20" aria-label="Northern Bahr el Ghazal"/>
+    <text class="label" x="39.64" y="44.20">BN</text>
+  </g>
+</svg>

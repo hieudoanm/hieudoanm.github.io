@@ -5,6 +5,7 @@ pub mod cli;
 pub mod color;
 pub mod config;
 pub mod gui;
+pub mod mcp;
 pub mod placeholder;
 pub mod render;
 pub mod serve;

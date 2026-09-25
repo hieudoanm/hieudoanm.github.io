@@ -86,6 +86,9 @@ See [PACKAGING](PACKAGING) for the CI artifact pipeline and
 
 # Check a running server
 ./browserverless health
+
+# Expose the render tools to an MCP client
+./browserverless mcp serve
 ```
 
 ## CLI Commands
@@ -96,6 +99,7 @@ See [PACKAGING](PACKAGING) for the CI artifact pipeline and
 | `scrape`      | Dump the full HTML of a URL to stdout or a file   | `browserverless scrape --output page.html <url>`        |
 | `serve`       | Start an HTTP rendering API server                | `browserverless serve --bind 0.0.0.0:8080`             |
 | `health`      | Check a running server's `/api/v1/health`         | `browserverless health`                                 |
+| `mcp`         | Serve the Model Context Protocol over stdio       | `browserverless mcp serve`                              |
 | `version`     | Print the version                                 | `browserverless version`                                |
 | `help`        | Show usage text                                   | `browserverless help`                                   |
 
@@ -111,6 +115,55 @@ See [PACKAGING](PACKAGING) for the CI artifact pipeline and
 | GET    | `/docs`               | Interactive API docs (Redoc)               | 200    |
 
 Request body for scrape/screenshot: `{"url": "https://example.com/"}`.
+
+## MCP Server
+
+`browserverless mcp serve` speaks the Model Context Protocol over stdio
+(newline-delimited JSON-RPC 2.0) so an LLM client can drive the same render
+engine the CLI and HTTP API use. It is hand-rolled: no MCP SDK dependency.
+
+| Tool                        | Arguments                        | Returns                                    |
+| --------------------------- | -------------------------------- | ------------------------------------------ |
+| `browserverless_scrape`     | `url`, `timeout_ms` (optional)   | Full HTML plus URL, title, render metrics  |
+| `browserverless_screenshot` | `url`, `timeout_ms` (optional)   | PNG as an image block plus render metrics  |
+| `browserverless_version`    | none                             | Binary version backing the server          |
+
+By default the server renders in-process, so it needs no running HTTP server.
+Point `--addr` at a running instance to share one warm engine instead:
+
+```bash
+browserverless serve --port 8080 &
+browserverless mcp serve --addr http://127.0.0.1:8080
+```
+
+| Flag        | Default          | Purpose                                       |
+| ----------- | ---------------- | --------------------------------------------- |
+| `--addr`    | (empty)          | Proxy a running server; render in-process when empty |
+| `--width`   | `1280`           | Viewport width (in-process rendering only)    |
+| `--height`  | `720`            | Viewport height (in-process rendering only)   |
+| `--timeout` | `30000` ms       | Load timeout (in-process rendering only)      |
+
+Client configuration:
+
+```json
+{
+  "mcpServers": {
+    "browserverless": {
+      "command": "browserverless",
+      "args": ["mcp", "serve"]
+    }
+  }
+}
+```
+
+Notes:
+
+- stdout carries JSON-RPC frames only; diagnostics go to stderr.
+- Closing stdin is the shutdown signal, so clients should just close the pipe.
+- Tool failures come back as `isError` results the model can read, not as
+  JSON-RPC errors. JSON-RPC errors are reserved for protocol and framing faults.
+- `timeout_ms` adds a per-call deadline on top of the server default; omit it to
+  use `--timeout`.
 
 ## Configuration
 

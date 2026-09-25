@@ -94,7 +94,11 @@ pub async fn get_backup(
 ) -> std::result::Result<(HeaderMap, Vec<u8>), AppError> {
     let claims = extract_claims(&headers)?;
     {
-        let conn = state.db.get().await.map_err(|e| AppError::Internal(e.to_string()))?;
+        let conn = state
+            .db
+            .get()
+            .await
+            .map_err(|e| AppError::Internal(e.to_string()))?;
         rbac::require_role(&conn, &claims.user_id, "*", "admin")?;
     }
     let path = std::env::temp_dir().join(format!("backbone-backup-{}.db", uuid::Uuid::new_v4()));
@@ -134,7 +138,11 @@ pub async fn post_register(
             "email and password are required".into(),
         ));
     }
-    let conn = state.db.get().await.map_err(|e| AppError::Internal(e.to_string()))?;
+    let conn = state
+        .db
+        .get()
+        .await
+        .map_err(|e| AppError::Internal(e.to_string()))?;
     let user = auth::register_user(&conn, &req.email, &req.password)?;
     Ok(Json(user))
 }
@@ -148,7 +156,11 @@ pub async fn post_login(
             "email and password are required".into(),
         ));
     }
-    let conn = state.db.get().await.map_err(|e| AppError::Internal(e.to_string()))?;
+    let conn = state
+        .db
+        .get()
+        .await
+        .map_err(|e| AppError::Internal(e.to_string()))?;
     let resp = auth::login_user(&conn, &req.email, &req.password)?;
     Ok(Json(resp))
 }
@@ -658,8 +670,8 @@ pub async fn get_thumbnail(
             .get()
             .await
             .map_err(|e| AppError::Internal(e.to_string()))?;
-        let f = db::get_file(&conn, &file_id)?
-            .ok_or_else(|| AppError::NotFound("not found".into()))?;
+        let f =
+            db::get_file(&conn, &file_id)?.ok_or_else(|| AppError::NotFound("not found".into()))?;
         if f.bucket != bucket {
             return Err(AppError::NotFound("not found".into()));
         }
@@ -857,8 +869,8 @@ pub async fn create_secret(
     } else {
         req.scope
     };
-    let encrypted = secrets::encrypt_secret(&state.secrets_key, &req.value)
-        .map_err(AppError::Internal)?;
+    let encrypted =
+        secrets::encrypt_secret(&state.secrets_key, &req.value).map_err(AppError::Internal)?;
     let id = uuid::Uuid::new_v4().to_string().replace('-', "");
     let conn = state
         .db
@@ -887,8 +899,8 @@ pub async fn get_secret(
         .map_err(|e| AppError::Internal(e.to_string()))?;
     let mut secret =
         db::get_secret(&conn, &id)?.ok_or_else(|| AppError::NotFound("not found".into()))?;
-    secret.value = secrets::decrypt_secret(&state.secrets_key, &secret.value)
-        .map_err(AppError::Internal)?;
+    secret.value =
+        secrets::decrypt_secret(&state.secrets_key, &secret.value).map_err(AppError::Internal)?;
     Ok(Json(secret))
 }
 
@@ -913,8 +925,8 @@ pub async fn update_secret(
         Some(v) if !v.is_empty() => v,
         _ => secrets::decrypt_secret(&state.secrets_key, &existing.value).unwrap_or_default(),
     };
-    let encrypted = secrets::encrypt_secret(&state.secrets_key, &plaintext)
-        .map_err(AppError::Internal)?;
+    let encrypted =
+        secrets::encrypt_secret(&state.secrets_key, &plaintext).map_err(AppError::Internal)?;
     let secret = db::update_secret(&conn, &id, &name, &encrypted, &scope)?;
     webhook::dispatch_event(
         &state,
@@ -1576,7 +1588,16 @@ pub async fn create_cron_job(
         .get()
         .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
-    let job = db::insert_cron_job(&conn, &id, &req.name, &req.schedule, &req.command, &method, &req.headers, &req.body)?;
+    let job = db::insert_cron_job(
+        &conn,
+        &id,
+        &req.name,
+        &req.schedule,
+        &req.command,
+        &method,
+        &req.headers,
+        &req.body,
+    )?;
     webhook::dispatch_event(
         &state,
         crate::cronjobs::EVENT_CRONJOB_CREATE,
@@ -1596,7 +1617,8 @@ pub async fn get_cron_job(
         .get()
         .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
-    let job = db::get_cron_job(&conn, &id)?.ok_or_else(|| AppError::NotFound("not found".into()))?;
+    let job =
+        db::get_cron_job(&conn, &id)?.ok_or_else(|| AppError::NotFound("not found".into()))?;
     Ok(Json(job))
 }
 
@@ -1612,7 +1634,8 @@ pub async fn update_cron_job(
         .get()
         .await
         .map_err(|e| AppError::Internal(e.to_string()))?;
-    let existing = db::get_cron_job(&conn, &id)?.ok_or_else(|| AppError::NotFound("not found".into()))?;
+    let existing =
+        db::get_cron_job(&conn, &id)?.ok_or_else(|| AppError::NotFound("not found".into()))?;
 
     let name = req.name.unwrap_or(existing.name);
     let schedule = req.schedule.unwrap_or(existing.schedule);
@@ -1622,7 +1645,9 @@ pub async fn update_cron_job(
     let body = req.body.unwrap_or(existing.body);
     let is_active = req.is_active.unwrap_or(existing.is_active);
 
-    let job = db::update_cron_job(&conn, &id, &name, &schedule, &command, &method, &headers, &body, is_active)?;
+    let job = db::update_cron_job(
+        &conn, &id, &name, &schedule, &command, &method, &headers, &body, is_active,
+    )?;
     webhook::dispatch_event(
         &state,
         crate::cronjobs::EVENT_CRONJOB_UPDATE,
@@ -1780,8 +1805,7 @@ mod tests {
     #[test]
     fn test_extract_claims_invalid_token() {
         let mut headers = HeaderMap::new();
-        headers
-            .insert("Authorization", "Bearer garbage-token".parse().unwrap());
+        headers.insert("Authorization", "Bearer garbage-token".parse().unwrap());
         match extract_claims(&headers).unwrap_err() {
             AppError::Unauthorized(_) => {}
             other => panic!("expected Unauthorized, got {other:?}"),
@@ -1801,10 +1825,8 @@ mod tests {
 
     #[tokio::test]
     async fn test_get_openapi_json_returns_json() {
-        let app = axum::Router::new().route(
-            "/api/openapi.json",
-            axum::routing::get(get_openapi_json),
-        );
+        let app =
+            axum::Router::new().route("/api/openapi.json", axum::routing::get(get_openapi_json));
         let resp = app
             .oneshot(
                 Request::builder()
@@ -1821,7 +1843,10 @@ mod tests {
             .unwrap()
             .to_str()
             .unwrap();
-        assert!(ct.contains("application/json"), "expected json content type, got {ct}");
+        assert!(
+            ct.contains("application/json"),
+            "expected json content type, got {ct}"
+        );
     }
 
     // --- get_swagger_ui ---
@@ -1845,12 +1870,18 @@ mod tests {
             .unwrap()
             .to_str()
             .unwrap();
-        assert!(ct.contains("text/html"), "expected html content type, got {ct}");
+        assert!(
+            ct.contains("text/html"),
+            "expected html content type, got {ct}"
+        );
         let body = axum::body::to_bytes(resp.into_body(), 1024 * 1024)
             .await
             .unwrap();
         let html = String::from_utf8_lossy(&body);
-        assert!(html.contains("SwaggerUIBundle"), "expected SwaggerUIBundle in body");
+        assert!(
+            html.contains("SwaggerUIBundle"),
+            "expected SwaggerUIBundle in body"
+        );
     }
 
     // --- get_health ---
