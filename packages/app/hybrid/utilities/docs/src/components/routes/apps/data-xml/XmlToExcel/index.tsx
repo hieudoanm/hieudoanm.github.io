@@ -12,7 +12,7 @@ export const XmlToExcel: FC<{ onClose: () => void }> = ({ onClose }) => {
     setLoading(true);
     setError(null);
     try {
-      const XLSX = await import('xlsx');
+      const XLSX = await import('@e965/xlsx');
       const text = await readFileAsText(file);
       const parser = new DOMParser();
       const doc = parser.parseFromString(text, 'text/xml');

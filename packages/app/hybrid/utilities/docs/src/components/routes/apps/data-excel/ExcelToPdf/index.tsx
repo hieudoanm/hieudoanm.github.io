@@ -15,7 +15,7 @@ export const ExcelToPdf: FC<{ onClose: () => void }> = ({ onClose }) => {
     setLoading(true);
     setError('');
     try {
-      const XLSX = await import('xlsx');
+      const XLSX = await import('@e965/xlsx');
       const data = await file.arrayBuffer();
       const workbook = XLSX.read(data, { type: 'array' });
       const sheet = workbook.Sheets[workbook.SheetNames[0]];
