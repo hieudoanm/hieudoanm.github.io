@@ -46,7 +46,7 @@
     "@lodashx/ts": "workspace:*",
     "@tauri-apps/api": "2.11.1",
     "d3-force": "3.0.0",
-    "dompurify": "3.4.15",
+    "dompurify": "3.4.16",
     "file-saver": "2.0.5",
     "github-markdown-css": "5.9.0",
     "idb": "8.0.3",
