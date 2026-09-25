@@ -29,7 +29,7 @@
     "examples": "ts-node ./scripts/examples.ts"
   },
   "devDependencies": {
-    "@types/node": "26.6.2",
+    "@types/node": "26.6.3",
     "prettier": "3.9.9",
     "rimraf": "6.1.3",
     "sass": "1.105.0",
