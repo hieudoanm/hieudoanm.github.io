@@ -8,8 +8,8 @@ let package = Package(
         .executable(name: "jack", targets: ["jack"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/apple/swift-argument-parser.git", from: "1.8.2"),
-        .package(url: "https://github.com/scinfu/SwiftSoup.git", from: "2.13.9"),
+        .package(url: "https://github.com/apple/swift-argument-parser.git", exact: "1.8.2"),
+        .package(url: "https://github.com/scinfu/SwiftSoup.git", exact: "2.13.9"),
     ],
     targets: [
         .executableTarget(
