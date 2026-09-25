@@ -14,8 +14,8 @@
 # runner (unprivileged nginx).
 # =============================================================================
 
-ARG NODE_VERSION=26.7.0
-ARG NGINX_VERSION=1.27.4
+ARG NODE_VERSION=26.10.0
+ARG NGINX_VERSION=1.31.6
 
 # ---- base ------------------------------------------------------------------
 # Node runtime with pnpm (via corepack). Dependencies in package.json are
