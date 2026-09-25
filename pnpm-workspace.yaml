@@ -20,5 +20,5 @@ allowBuilds:
 minimumReleaseAge: 0
 
 overrides:
-  '@codemirror/state': 6.7.5
-  '@codemirror/view': 6.43.12
+  '@codemirror/state': 6.7.6
+  '@codemirror/view': 6.43.13
