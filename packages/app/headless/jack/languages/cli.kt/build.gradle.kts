@@ -59,3 +59,7 @@ tasks.jacocoTestReport {
 kotlin {
     jvmToolchain(21)
 }
+
+dependencyLocking {
+    lockAllConfigurations()
+}

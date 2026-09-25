@@ -52,7 +52,7 @@ PY
 # androidx/com.android/com.google coordinates, Maven Central otherwise.
 resolve_latest() {
     local group="$1" artifact="$2"
-    local path="${1//./\/}/${2}" url v
+    local path="$(printf '%s' "$1" | tr '.' '/')/${2}" url v
     local -a urls
     if [[ "$group" == androidx.* || "$group" == com.android.* || "$group" == com.google.* ]]; then
         urls=(
@@ -212,11 +212,30 @@ done < <(
 )
 
 # 2) Enable dependency locking (already done per file) and generate
-#    gradle.lockfile for every Gradle project root (dir with settings file).
+#    gradle.lockfile for every Gradle project root. `gradle dependencies`
+#    only reports the root project, so an init script registers a
+#    resolveAllLocks task that resolves every configuration of every
+#    project and persists per-project lockfiles.
 echo
 echo "=================================================="
 echo "Generating gradle.lockfile"
 echo "=================================================="
+
+INIT_SCRIPT="$(mktemp "${TMPDIR:-/tmp}/gradle-resolve-locks.XXXXXX.gradle")"
+trap 'rm -f "$RESOLVER" "$CACHE_FILE" "$INIT_SCRIPT"' EXIT
+cat > "$INIT_SCRIPT" <<'GRADLE'
+allprojects {
+    tasks.register("resolveAllLocks") {
+        doFirst {
+            configurations.each { c ->
+                try { c.resolve() } catch (Exception ignored) {
+                    println "Skipping unresolved configuration ${c.name}"
+                }
+            }
+        }
+    }
+}
+GRADLE
 
 [[ -n "${ANDROID_HOME:-}" ]] || export ANDROID_HOME="${ANDROID_HOME:-${HOME}/Library/Android/sdk}"
 
@@ -228,7 +247,7 @@ find "$ROOT_DIR" -type f \( -name settings.gradle.kts -o -name settings.gradle \
     echo "--------------------------------------------------"
     echo "Generating gradle.lockfile for $root"
     echo "--------------------------------------------------"
-    if (cd "$root" && if [[ -x ./gradlew ]]; then ./gradlew dependencies --write-locks --no-daemon --console=plain; else gradle dependencies --write-locks --no-daemon --console=plain; fi); then
+    if (cd "$root" && if [[ -x ./gradlew ]]; then ./gradlew --init-script "$INIT_SCRIPT" resolveAllLocks --write-locks --no-daemon --console=plain; else gradle --init-script "$INIT_SCRIPT" resolveAllLocks --write-locks --no-daemon --console=plain; fi); then
         echo "  OK: gradle.lockfile generated for $root."
     else
         echo "  WARNING: could not generate lockfile for $root."

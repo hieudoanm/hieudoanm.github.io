@@ -106,3 +106,6 @@ dependencies {
     testImplementation("androidx.compose.ui:ui-test-junit4")
     testImplementation("androidx.navigation:navigation-testing:2.10.2")
 }
+dependencyLocking {
+    lockAllConfigurations()
+}
