@@ -13,6 +13,19 @@ require cargo
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
+# Log a timestamped transcript of the run under $ROOT_DIR/logs, mirroring all
+# output to the console so both stdout and stderr (including cargo's messages)
+# are captured. Nested invocations (e.g. from cargo-update.sh) inherit
+# CARGO_SCRIPT_LOG_RUN and skip this redirection.
+if [[ "${CARGO_SCRIPT_LOG_RUN:-0}" != "1" ]]; then
+    LOG_DIR="$ROOT_DIR/logs"
+    mkdir -p "$LOG_DIR"
+    LOG_FILE="$LOG_DIR/cargo-lock-$(date +%Y%m%d-%H%M%S).log"
+    export CARGO_SCRIPT_LOG_RUN=1
+    echo "Log file: $LOG_FILE"
+    exec > >(tee -a "$LOG_FILE") 2>&1
+fi
+
 # Collect every Cargo.toml that owns a lockfile:
 #  - manifests declaring their own [workspace] are roots (kept);
 #  - manifests inside an ancestor [workspace] are members (skipped, they share

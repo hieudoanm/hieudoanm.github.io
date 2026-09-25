@@ -20,6 +20,6 @@ servo = { workspace = true }
 winit = { workspace = true }
 dpi = { workspace = true }
 tracing = { workspace = true }
-euclid = "0.22"
-libc = "0.2"
+euclid = "=0.22.14"
+libc = "=0.2.189"
 tiny_http = { workspace = true }
