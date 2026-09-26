@@ -12,7 +12,8 @@ require() {
 require go
 require perl
 
-ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+# This script lives in scripts/renovate/, so the repo root is two levels up.
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 
 # Log a timestamped transcript of the run under $ROOT_DIR/logs, mirroring all
 # output to the console.
@@ -31,6 +32,49 @@ CACHE_FILE="$(mktemp "${TMPDIR:-/tmp}/gomod-update-cache.XXXXXX")"
 trap 'rm -f "$CACHE_FILE"' EXIT
 
 updated=0
+go_bumps=0
+
+# The `go` directive pins the language version and is resolved independently of
+# module requirements, so it needs its own step. The release feed is
+# authoritative; GO_LATEST_OVERRIDE pins the target when it is unreachable, and
+# the installed toolchain is the last resort so a run still converges offline.
+resolve_latest_go() {
+    if [[ -n "${GO_LATEST_OVERRIDE:-}" ]]; then
+        printf '%s' "${GO_LATEST_OVERRIDE#go}"
+        return 0
+    fi
+
+    local version=""
+    if command -v curl >/dev/null 2>&1; then
+        # Only top-level release objects carry a `stable` flag; the nested
+        # `files` entries repeat `version` without one.
+        version="$(
+            curl -fsSL 'https://go.dev/dl/?mode=json' 2>/dev/null \
+                | perl -0777 -ne '
+                    while (/"version":\s*"(go[\d.]+)",\s*"stable":\s*true/g) {
+                        $v = $1; $v =~ s/^go//; print "$v\n";
+                    }
+                ' \
+                | sort -V \
+                | tail -1 || true
+        )"
+    fi
+
+    if [[ -z "$version" ]]; then
+        version="$(go env GOVERSION 2>/dev/null | sed 's/^go//')"
+    fi
+    printf '%s' "$version"
+}
+
+LATEST_GO="$(resolve_latest_go)"
+
+# True when $1 sorts strictly before $2, so a module already ahead of the feed
+# is never downgraded.
+version_lt() {
+    [[ "$1" != "$2" && "$(printf '%s\n%s\n' "$1" "$2" | sort -V | head -1)" == "$1" ]]
+}
+
+echo "Latest stable Go: ${LATEST_GO:-<unresolved, skipping go directive>}"
 
 # 1) Find every go.mod and bump each *direct* dependency to its newest stable
 #    tagged release (module paths declared in a `replace` directive are kept as
@@ -111,7 +155,35 @@ while IFS= read -r manifest; do
         fi
     done <<< "$deps"
 
-    # 2) Regenerate go.mod / go.sum (Go's lockfile) for this module.
+    # 2) Bump the `go` language directive to the latest stable release, plus the
+    #    `toolchain` directive when one is present, since a stale toolchain line
+    #    would silently pin the build back to the older release.
+    if [[ -n "$LATEST_GO" ]]; then
+        current_go="$(awk '$1 == "go" { print $2; exit }' "$manifest")"
+        if [[ -z "$current_go" ]]; then
+            echo "  No go directive found."
+        elif version_lt "$current_go" "$LATEST_GO"; then
+            if perl -i -pe "s/^go \Q$current_go\E\$/go $LATEST_GO/" "$manifest"; then
+                echo "  Bumping go $current_go -> $LATEST_GO"
+                go_bumps=$((go_bumps + 1))
+            else
+                echo "  WARNING: failed to bump the go directive in $manifest."
+            fi
+        else
+            echo "  go directive already at $current_go."
+        fi
+
+        current_toolchain="$(awk '$1 == "toolchain" { print $2; exit }' "$manifest")"
+        if [[ -n "$current_toolchain" ]] && version_lt "${current_toolchain#go}" "$LATEST_GO"; then
+            if perl -i -pe "s/^toolchain \Q$current_toolchain\E\$/toolchain go$LATEST_GO/" "$manifest"; then
+                echo "  Bumping toolchain $current_toolchain -> go$LATEST_GO"
+            else
+                echo "  WARNING: failed to bump the toolchain directive in $manifest."
+            fi
+        fi
+    fi
+
+    # 3) Regenerate go.mod / go.sum (Go's lockfile) for this module.
     echo "  Regenerating go.sum..."
     if (cd "$dir" && go mod tidy >/dev/null 2>&1); then
         echo "  OK: go.sum regenerated for $dir."
@@ -127,4 +199,4 @@ done < <(
 )
 
 echo
-echo "Done (updated $updated dependency pins)."
+echo "Done (updated $updated dependency pins, $go_bumps go directives)."

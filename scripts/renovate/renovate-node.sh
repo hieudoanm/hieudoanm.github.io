@@ -12,7 +12,8 @@ require() {
 require curl
 require jq
 
-ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+# This script lives in scripts/renovate/, so the repo root is two levels up.
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 
 # Log a timestamped transcript of the run under $ROOT_DIR/logs, mirroring all
 # output to the console.

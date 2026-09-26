@@ -14,8 +14,10 @@ require mktemp
 require date
 require tee
 
-ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-SCRIPTS_DIR="$ROOT_DIR/scripts"
+# This script lives in scripts/renovate/, so the repo root is two levels up and
+# its siblings sit alongside it rather than one level up.
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+SCRIPTS_DIR="$ROOT_DIR/scripts/renovate"
 
 usage() {
     printf '%s\n' \
