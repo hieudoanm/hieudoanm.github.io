@@ -25546,6 +25546,11 @@
 ├── scripts/
 │   ├── [build-docs.sh](./scripts/build-docs.sh)
 │   └── renovate/
+│       ├── lib/
+│       │   ├── [cargo-index.sh](./scripts/renovate/lib/cargo-index.sh)
+│       │   ├── [cargo-manifest.sh](./scripts/renovate/lib/cargo-manifest.sh)
+│       │   ├── [cargo-msrv.sh](./scripts/renovate/lib/cargo-msrv.sh)
+│       │   └── [shell.sh](./scripts/renovate/lib/shell.sh)
 │       ├── [renovate-docker.sh](./scripts/renovate/renovate-docker.sh)
 │       ├── [renovate-github-actions.sh](./scripts/renovate/renovate-github-actions.sh)
 │       ├── [renovate-go-mod.sh](./scripts/renovate/renovate-go-mod.sh)
