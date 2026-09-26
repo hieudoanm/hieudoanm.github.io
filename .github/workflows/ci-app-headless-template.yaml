@@ -1,4 +1,4 @@
-name: CI - App - Headless - Go - Template
+name: CI - App - Headless - Template
 
 on:
   workflow_call:
@@ -6,7 +6,11 @@ on:
       package:
         required: true
         type: string
-        description: Go module directory, e.g. packages/app/headless/backbone/go
+        description: Go module directory, e.g. packages/app/headless/backbone/languages/go
+      rustPackage:
+        required: true
+        type: string
+        description: Rust crate directory, e.g. packages/app/headless/backbone/languages/rust
       releaseName:
         required: true
         type: string
@@ -22,7 +26,13 @@ on:
       artifactPath:
         required: true
         type: string
-        description: Artifact path glob, e.g. packages/app/headless/backbone/go/bin/*
+        description: Artifact path glob, e.g. packages/app/headless/backbone/languages/go/bin/*
+      rustArtifactPath:
+        required: true
+        type: string
+        description: >-
+          Rust binary path, e.g.
+          packages/app/headless/backbone/languages/rust/target/release/backbone
       installZig:
         required: false
         type: boolean
@@ -81,6 +91,50 @@ jobs:
           path: ${{ inputs.artifactPath }}
           if-no-files-found: error
 
+  rust:
+    name: Rust
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    defaults:
+      run:
+        working-directory: ${{ inputs.rustPackage }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7.0.1
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+      - name: Cache Cargo
+        uses: actions/cache@v4.0.0
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            ${{ inputs.rustPackage }}/target
+          key: ${{ runner.os }}-rust-${{ hashFiles(format('{0}/**/Cargo.lock', inputs.rustPackage)) }}
+          restore-keys: ${{ runner.os }}-rust-
+      # Advisory only: backbone and jack have pre-existing formatting debt.
+      - name: Check Formatting
+        continue-on-error: true
+        run: cargo fmt --check
+      # Advisory only: backbone pins clippy to non-blocking in its Makefile.
+      - name: Lint
+        continue-on-error: true
+        run: cargo clippy --all-targets -- -D warnings
+      - name: Test
+        run: cargo test --locked
+      - name: Build
+        run: cargo build --release --locked
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: ${{ inputs.artifactName }}-rust
+          path: ${{ inputs.rustArtifactPath }}
+          if-no-files-found: error
+
+  # Go binaries only. The rust job uploads a CI artifact but is not released,
+  # and does not gate this job.
   publish:
     name: Publish to GitHub Release
     needs: [go]

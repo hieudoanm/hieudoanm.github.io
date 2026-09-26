@@ -10,9 +10,10 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/headless/jack/go/**'
-      - '.github/workflows/ci-app-headless-go-jack.yaml'
-      - '.github/workflows/ci-app-headless-go-template.yaml'
+      - 'packages/app/headless/jack/languages/go/**'
+      - 'packages/app/headless/jack/languages/rust/**'
+      - '.github/workflows/ci-app-headless-jack.yaml'
+      - '.github/workflows/ci-app-headless-template.yaml'
 
 permissions:
   contents: write
@@ -23,11 +24,13 @@ concurrency:
 
 jobs:
   ci:
-    uses: ./.github/workflows/ci-app-headless-go-template.yaml
+    uses: ./.github/workflows/ci-app-headless-template.yaml
     with:
       package: packages/app/headless/jack/languages/go
-      installZig: true
+      rustPackage: packages/app/headless/jack/languages/rust
       releaseName: app-headless-jack-latest
       releaseTitle: App - Headless - Jack (latest)
       artifactName: app-headless-jack
       artifactPath: packages/app/headless/jack/languages/go/bin/*
+      rustArtifactPath: packages/app/headless/jack/languages/rust/target/release/jack
+      installZig: true

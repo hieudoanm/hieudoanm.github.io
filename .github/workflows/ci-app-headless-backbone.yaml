@@ -10,9 +10,10 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/headless/backbone/go/**'
-      - '.github/workflows/ci-app-headless-go-backbone.yaml'
-      - '.github/workflows/ci-app-headless-go-template.yaml'
+      - 'packages/app/headless/backbone/languages/go/**'
+      - 'packages/app/headless/backbone/languages/rust/**'
+      - '.github/workflows/ci-app-headless-backbone.yaml'
+      - '.github/workflows/ci-app-headless-template.yaml'
 
 permissions:
   contents: write
@@ -23,11 +24,13 @@ concurrency:
 
 jobs:
   ci:
-    uses: ./.github/workflows/ci-app-headless-go-template.yaml
+    uses: ./.github/workflows/ci-app-headless-template.yaml
     with:
       package: packages/app/headless/backbone/languages/go
-      installZig: false
+      rustPackage: packages/app/headless/backbone/languages/rust
       releaseName: app-headless-backbone-latest
       releaseTitle: App - Headless - Backbone (latest)
       artifactName: app-headless-backbone
       artifactPath: packages/app/headless/backbone/languages/go/bin/*
+      rustArtifactPath: packages/app/headless/backbone/languages/rust/target/release/backbone
+      installZig: false

@@ -10,9 +10,10 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/headless/landify/go/**'
-      - '.github/workflows/ci-app-headless-go-landify.yaml'
-      - '.github/workflows/ci-app-headless-go-template.yaml'
+      - 'packages/app/headless/landify/languages/go/**'
+      - 'packages/app/headless/landify/languages/rust/**'
+      - '.github/workflows/ci-app-headless-landify.yaml'
+      - '.github/workflows/ci-app-headless-template.yaml'
 
 permissions:
   contents: write
@@ -23,11 +24,13 @@ concurrency:
 
 jobs:
   ci:
-    uses: ./.github/workflows/ci-app-headless-go-template.yaml
+    uses: ./.github/workflows/ci-app-headless-template.yaml
     with:
       package: packages/app/headless/landify/languages/go
-      installZig: false
+      rustPackage: packages/app/headless/landify/languages/rust
       releaseName: app-headless-landify-latest
       releaseTitle: App - Headless - Landify (latest)
       artifactName: app-headless-landify
       artifactPath: packages/app/headless/landify/languages/go/bin/*
+      rustArtifactPath: packages/app/headless/landify/languages/rust/target/release/landify
+      installZig: false

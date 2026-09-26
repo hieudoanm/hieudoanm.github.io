@@ -10,9 +10,10 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/headless/browserverless/go/**'
-      - '.github/workflows/ci-app-headless-go-browserverless.yaml'
-      - '.github/workflows/ci-app-headless-go-template.yaml'
+      - 'packages/app/headless/browserverless/languages/go/**'
+      - 'packages/app/headless/browserverless/languages/rust/**'
+      - '.github/workflows/ci-app-headless-browserverless.yaml'
+      - '.github/workflows/ci-app-headless-template.yaml'
 
 permissions:
   contents: write
@@ -23,11 +24,13 @@ concurrency:
 
 jobs:
   ci:
-    uses: ./.github/workflows/ci-app-headless-go-template.yaml
+    uses: ./.github/workflows/ci-app-headless-template.yaml
     with:
       package: packages/app/headless/browserverless/languages/go
-      installZig: false
+      rustPackage: packages/app/headless/browserverless/languages/rust
       releaseName: app-headless-browserverless-latest
       releaseTitle: App - Headless - Browserverless (latest)
       artifactName: app-headless-browserverless
       artifactPath: packages/app/headless/browserverless/languages/go/bin/*
+      rustArtifactPath: packages/app/headless/browserverless/languages/rust/target/release/browserverless
+      installZig: false

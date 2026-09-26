@@ -10,9 +10,10 @@ on:
       - 'renovate/**'
       - 'dependabot/**'
     paths:
-      - 'packages/app/headless/kevin/go/**'
-      - '.github/workflows/ci-app-headless-go-kevin.yaml'
-      - '.github/workflows/ci-app-headless-go-template.yaml'
+      - 'packages/app/headless/kevin/languages/go/**'
+      - 'packages/app/headless/kevin/languages/rust/**'
+      - '.github/workflows/ci-app-headless-kevin.yaml'
+      - '.github/workflows/ci-app-headless-template.yaml'
 
 permissions:
   contents: write
@@ -23,11 +24,13 @@ concurrency:
 
 jobs:
   ci:
-    uses: ./.github/workflows/ci-app-headless-go-template.yaml
+    uses: ./.github/workflows/ci-app-headless-template.yaml
     with:
       package: packages/app/headless/kevin/languages/go
-      installZig: false
+      rustPackage: packages/app/headless/kevin/languages/rust
       releaseName: app-headless-kevin-latest
       releaseTitle: App - Headless - KeVIn (latest)
       artifactName: app-headless-kevin
       artifactPath: packages/app/headless/kevin/languages/go/bin/*
+      rustArtifactPath: packages/app/headless/kevin/languages/rust/target/release/kevin
+      installZig: false
