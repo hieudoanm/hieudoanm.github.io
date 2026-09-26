@@ -34,3 +34,4 @@ jobs:
       artifactPath: packages/app/headless/landify/languages/go/bin/*
       rustArtifactPath: packages/app/headless/landify/languages/rust/target/release/landify
       installZig: false
+      installRustDeps: false

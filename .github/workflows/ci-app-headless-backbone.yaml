@@ -34,3 +34,4 @@ jobs:
       artifactPath: packages/app/headless/backbone/languages/go/bin/*
       rustArtifactPath: packages/app/headless/backbone/languages/rust/target/release/backbone
       installZig: false
+      installRustDeps: false

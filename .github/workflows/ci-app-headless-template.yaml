@@ -38,6 +38,13 @@ on:
         type: boolean
         default: false
         description: Install zig 0.14.0 for cross-compilation (build-all)
+      installRustDeps:
+        required: false
+        type: boolean
+        default: false
+        description: >-
+          Install the X11/Wayland/GL/fontconfig -dev packages that embedded
+          engines (Servo) need to compile
 
 permissions:
   contents: write
@@ -101,19 +108,47 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v7.0.1
+      # The repo Dockerfile lists runtime libs; compiling needs the matching
+      # headers plus the -sys build tools. Without these, yeslogic-fontconfig-sys
+      # fails at pkg-config before anything else is attempted.
+      - name: Install System Dependencies
+        if: inputs.installRustDeps
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            pkg-config \
+            cmake \
+            libfontconfig1-dev \
+            libfreetype6-dev \
+            libharfbuzz-dev \
+            libglib2.0-dev \
+            libdbus-1-dev \
+            libpango1.0-dev \
+            libcairo2-dev \
+            libgtk-3-dev \
+            libx11-dev \
+            libxcb-shape0-dev \
+            libxcb-xfixes0-dev \
+            libwayland-dev \
+            libwayland-bin \
+            libegl-dev \
+            libgl-dev \
+            zlib1g-dev
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable
         with:
           components: rustfmt, clippy
+      # Source only. target/ is deliberately not cached: browserverless's
+      # target/debug alone is 9.9 GB, which would exceed the 10 GB repository
+      # cache limit and evict every other project's entry.
       - name: Cache Cargo
         uses: actions/cache@v6.1.0
         with:
           path: |
             ~/.cargo/registry
             ~/.cargo/git
-            ${{ inputs.rustPackage }}/target
-          key: ${{ runner.os }}-rust-${{ hashFiles(format('{0}/**/Cargo.lock', inputs.rustPackage)) }}
-          restore-keys: ${{ runner.os }}-rust-
+          key: ${{ runner.os }}-cargo-${{ hashFiles(format('{0}/**/Cargo.lock', inputs.rustPackage)) }}
+          restore-keys: ${{ runner.os }}-cargo-
       # Advisory only: backbone and jack have pre-existing formatting debt.
       - name: Check Formatting
         continue-on-error: true

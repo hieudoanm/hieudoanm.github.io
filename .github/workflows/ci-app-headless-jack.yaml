@@ -34,3 +34,4 @@ jobs:
       artifactPath: packages/app/headless/jack/languages/go/bin/*
       rustArtifactPath: packages/app/headless/jack/languages/rust/target/release/jack
       installZig: true
+      installRustDeps: false

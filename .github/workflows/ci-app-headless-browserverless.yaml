@@ -34,3 +34,4 @@ jobs:
       artifactPath: packages/app/headless/browserverless/languages/go/bin/*
       rustArtifactPath: packages/app/headless/browserverless/languages/rust/target/release/browserverless
       installZig: false
+      installRustDeps: true

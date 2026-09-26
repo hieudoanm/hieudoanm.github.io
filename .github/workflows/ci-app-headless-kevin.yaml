@@ -34,3 +34,4 @@ jobs:
       artifactPath: packages/app/headless/kevin/languages/go/bin/*
       rustArtifactPath: packages/app/headless/kevin/languages/rust/target/release/kevin
       installZig: false
+      installRustDeps: false
