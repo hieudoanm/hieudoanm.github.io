@@ -1,0 +1,16 @@
+# Build artifacts
+build/
+dist/
+bin/
+coverage/
+.gradle/
+*.log
+
+# Generated from `landify build`
+/index.html
+
+# Generated from `landify new`
+/landify.yaml
+
+# macOS
+.DS_Store

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{{ config.site.description }}" />
+    <title>{{ config.site.name }}</title>
+    <style>
+      :root {
+@LANDIFY_THEME@      }
+{% include 'base-css.j2' %}
+      .docs-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      .doc-card {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        background: var(--base-200);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
+        padding: 22px 20px;
+        color: var(--base-content);
+        text-decoration: none;
+      }
+      .doc-card:hover {
+        border-color: var(--primary);
+        color: var(--primary);
+      }
+      .doc-card h3 {
+        font-size: 16px;
+        font-weight: 700;
+        margin: 0;
+      }
+      .doc-card p {
+        margin: 0;
+        font-size: 14px;
+        color: var(--neutral);
+      }
+      .docs-sample {
+        max-width: 640px;
+        margin: 40px auto 0;
+      }
+      .docs-sample pre {
+        margin: 0;
+      }
+      @media (max-width: 900px) {
+        .docs-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    {% include 'header.j2' %}
+
+    <main id="top">
+      <section class="hero">
+        <div>
+          {% if config.hero.badge %}<span class="badge">{{ config.hero.badge }}</span>{% endif %}
+          <h1>{{ config.hero.headline }}</h1>
+          <p class="lead">{{ config.hero.subheadline }}</p>
+          {% if config.hero.primary.href or config.hero.secondary.href %}
+          <div class="hero-actions">
+            {% if config.hero.primary.href %}<a class="btn btn-primary" href="{{ config.hero.primary.href }}">{{ config.hero.primary.label }}</a>{% endif %}
+            {% if config.hero.secondary.href %}<a class="btn btn-ghost" href="{{ config.hero.secondary.href }}">{{ config.hero.secondary.label }}</a>{% endif %}
+          </div>
+          {% endif %}
+        </div>
+      </section>
+
+      <section id="docs" class="block">
+        {% if config.docs.heading or config.docs.sub %}
+        <div class="block-head">
+          <h2>{{ config.docs.heading }}</h2>
+          {% if config.docs.sub %}<p class="sub">{{ config.docs.sub }}</p>{% endif %}
+        </div>
+        {% endif %}
+        <div class="docs-grid">
+          {% for package in config.docs.packages %}
+          <a class="doc-card" href="{{ package.href }}">
+            <span class="icon" aria-hidden="true">{{ package.icon }}</span>
+            <h3>{{ package.title }}</h3>
+            <p>{{ package.body }}</p>
+          </a>
+          {% endfor %}
+        </div>
+        {% if config.docs.sample %}
+        <div class="docs-sample install-block">
+          <pre><code>{{ config.docs.sample }}</code></pre>
+        </div>
+        {% endif %}
+      </section>
+
+      {% if config.cta.heading %}
+      <section id="cta" class="block">
+        <div class="cta">
+          <span class="icon" aria-hidden="true">{{ config.cta.icon }}</span>
+          <h2>{{ config.cta.heading }}</h2>
+          <p>{{ config.cta.body }}</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="{{ config.cta.button.href }}">{{ config.cta.button.label }}</a>
+          </div>
+        </div>
+      </section>
+      {% endif %}
+
+      {% include 'footer.j2' %}
+    </main>
+  </body>
+</html>
