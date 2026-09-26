@@ -39,7 +39,7 @@
   "dependencies": {
     "@ericblade/quagga2": "1.12.1",
     "@lodashx/ts": "workspace:*",
-    "@tauri-apps/api": "2.11.1",
+    "@tauri-apps/api": "2.12.0",
     "@trpc/client": "11.19.0",
     "@trpc/next": "11.19.0",
     "@trpc/server": "11.19.0",
