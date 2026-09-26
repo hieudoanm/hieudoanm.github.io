@@ -3,7 +3,9 @@ name: material-design-m3
 description: Material Design 3 (Material You) — Google's third design system for Android/Kotlin (and cross-platform), with dynamic color, expressive components, and adaptive layouts.
 ---
 
-Material Design 3 (M3, "Material You") is Google's **evolved design system** for Android (Jetpack Compose) and the web. It centers on **dynamic color, expression, and adaptability** while keeping the strong token-based theming of M2.
+# Material Design 3
+
+(M3, "Material You") is Google's **evolved design system** for Android (Jetpack Compose) and the web. It centers on **dynamic color, expression, and adaptability** while keeping the strong token-based theming of M2.
 
 ## 1. Core Concepts
 
