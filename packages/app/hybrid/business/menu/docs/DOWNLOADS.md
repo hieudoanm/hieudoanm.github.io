@@ -87,9 +87,11 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-One menu, one QR code, zero checkout friction. Designed for phones first, Menu
-lets you build a menu in seconds, share a QR code, and take orders without a
-backend — everything travels in the link itself.
+One menu, one QR code, zero checkout friction.
+
+- Build a menu in seconds, designed for phones first.
+- Share a QR code.
+- Take orders without a backend — everything travels in the link itself.
 
 ---
 

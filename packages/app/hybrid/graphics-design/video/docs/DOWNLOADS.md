@@ -86,9 +86,12 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-A stripped-down video editor with playback speed control and a clean theme
-picker — CapCut stripped to the essentials, running natively on every device you
-own.
+A stripped-down video editor — CapCut stripped to the essentials.
+
+- **Playback speed control** — adjust playback speed.
+- **Theme picker** — a clean way to switch themes.
+
+Running natively on every device you own.
 
 ---
 

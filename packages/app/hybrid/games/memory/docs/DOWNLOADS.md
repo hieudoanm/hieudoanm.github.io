@@ -94,9 +94,14 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-Four brain-training games in one offline-first app — match emoji pairs, memorise
-digits of Pi, train working memory with N-Back, and push your recall further
-with progressive digit challenges. Runs on any device.
+Four brain-training games in one offline-first app.
+
+- **Memory Match** — match emoji pairs.
+- **Pi** — memorise digits of Pi.
+- **N-Back** — train working memory.
+- **Recall** — push your recall further with progressive digit challenges.
+
+Runs on any device.
 
 ---
 

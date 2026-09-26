@@ -94,8 +94,14 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 ## About
 
 An offline-first, in-browser presentation tool modeled on PowerPoint, Google
-Slides, and Apple Keynote — full WYSIWYG canvas, rich animations, presenter
-view, and export to PPTX/PDF/HTML, all running without a server.
+Slides, and Apple Keynote.
+
+- Full WYSIWYG canvas.
+- Rich animations.
+- Presenter view.
+- Export to PPTX/PDF/HTML.
+
+All running without a server.
 
 ---
 

@@ -97,8 +97,13 @@ Per-platform launch tips:
 ## About
 
 From gross-to-net in seconds to full compliance tracking. Tax is a Vietnamese
-tax management application — PIT calculator, tax submissions, and audits — that
-works offline and on any screen, with login, dashboards, and responsive design
+tax management application.
+
+- **PIT calculator** — personal income tax, gross to net.
+- **Tax submissions** — file and track company submissions.
+- **Audits** — track audits for full compliance.
+
+Works offline and on any screen, with login, dashboards, and responsive design
 built in.
 
 ---

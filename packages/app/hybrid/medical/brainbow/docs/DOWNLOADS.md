@@ -97,8 +97,15 @@ Per-platform launch tips:
 ## About
 
 From import to publication-ready figures in one seat. Brainbow is an all-in-one
-microscopy image analysis tool for neuron reconstruction — trace, count,
-measure, annotate, and export from your own Brainbow images, on any screen.
+microscopy image analysis tool for neuron reconstruction.
+
+- **Trace** — follow neurons through the image.
+- **Count** — tally cells and neurons.
+- **Measure** — distances, areas, and angles.
+- **Annotate** — layer annotations on top.
+- **Export** — take the finished figures out.
+
+Every step runs on your own Brainbow images, on any screen.
 
 ---
 

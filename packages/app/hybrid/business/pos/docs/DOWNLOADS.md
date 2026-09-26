@@ -86,8 +86,10 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-One counter, five screens. Built for speed and simplicity, POS stays out of your
-way while you run your shop — on Android, macOS, Windows, or Linux.
+One counter, five screens.
+
+- **Speed and simplicity** — POS stays out of your way while you run your shop.
+- **Platforms** — Android, macOS, Windows, or Linux.
 
 ---
 

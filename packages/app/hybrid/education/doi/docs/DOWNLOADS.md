@@ -82,8 +82,11 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-Explore the Crossref citation network interactively — search works, browse
-citation statistics, and navigate the force-directed citation graph.
+Explore the Crossref citation network interactively.
+
+- **Search** — look up works in the network.
+- **Citation statistics** — browse the numbers behind the network.
+- **Force-directed citation graph** — navigate how works cite one another.
 
 ---
 

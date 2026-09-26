@@ -84,9 +84,11 @@ Everything is embeddable — copy the generated HTML and CSS anywhere.
 
 ## About
 
-Landify turns one annotated YAML file into a complete single-file landing page:
-theme, hero, features, pricing, FAQ, and more. Output is plain HTML and CSS
-with no JavaScript, so it renders anywhere and never goes stale.
+Landify turns one annotated YAML file into a complete single-file landing page.
+
+- **Sections from one file** — theme, hero, features, pricing, FAQ, and more.
+- **Plain HTML and CSS output** — no JavaScript.
+- **Renders anywhere** — and never goes stale.
 
 ---
 

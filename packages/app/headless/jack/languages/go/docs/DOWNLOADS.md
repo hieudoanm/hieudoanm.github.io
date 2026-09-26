@@ -41,7 +41,7 @@ curl -fsSL https://raw.githubusercontent.com/hieudoanm/hieudoanm.github.io/maste
 [download-darwin-amd64]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-jack-latest/app-headless-jack-jack-darwin-amd64
 [download-darwin-arm64]: https://github.com/hieudoanm/hieudoanm.github.io/releases/download/app-headless-jack-latest/app-headless-jack-jack-darwin-arm64
 
-```
+```bash
 chmod +x jack
 ./jack version
 ```
@@ -66,10 +66,15 @@ See [PACKAGING](PACKAGING) for the CI artifact pipeline and
 
 ## About
 
-Jack is a batteries-included CLI. Everything is one command away: system
-monitoring, network diagnostics, PDF/image/video processing, crypto hashes,
-semver, color conversion, search, chess analysis, Telegram, time tools, games,
-and AI chat — via cobra subcommands with a uniform `--json` flag.
+Jack is a batteries-included CLI. Everything is one command away:
+
+- **System monitoring** and **network diagnostics**.
+- **PDF, image, and video processing**.
+- **Crypto hashes** and **semver**.
+- **Color conversion**, **search**, and **time tools**.
+- **Chess analysis**, **Telegram**, **games**, and **AI chat**.
+
+All via cobra subcommands with a uniform `--json` flag.
 
 ---
 

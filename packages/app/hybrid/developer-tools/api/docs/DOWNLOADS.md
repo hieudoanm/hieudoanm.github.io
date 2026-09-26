@@ -92,9 +92,11 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-Full-scale API client in your pocket — compose, send, and inspect HTTP,
-WebSocket, gRPC, and MQTT requests from any device. Built with Tauri so it ships
-everywhere: phone, tablet, laptop, desktop.
+Full-scale API client in your pocket.
+
+- **Compose and send** — requests over HTTP, WebSocket, gRPC, and MQTT.
+- **Inspect** — every response, right on the device.
+- **Tauri** — ships everywhere: phone, tablet, laptop, desktop.
 
 ---
 

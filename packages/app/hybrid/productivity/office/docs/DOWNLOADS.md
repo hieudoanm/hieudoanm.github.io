@@ -69,11 +69,17 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-A privacy-first, offline-first office suite. Four productivity sub-apps — a
-multi-view event **Calendar**, a **CSV** spreadsheet editor, a **Markdown**
-knowledge base, and a **Tasks** kanban board — plus lightweight lite versions of
-each. Data lives in your browser (localStorage / IndexedDB), so everything
-works offline and never leaves your device.
+A privacy-first, offline-first office suite — four productivity sub-apps, plus
+lightweight lite versions of each.
+
+- **Calendar** — a multi-view event calendar.
+- **CSV** — a spreadsheet editor.
+- **Markdown** — a knowledge base.
+- **Tasks** — a kanban board.
+- **Lite versions** — a lightweight variant of each sub-app.
+
+Data lives in your browser (localStorage / IndexedDB), so everything works
+offline and never leaves your device.
 
 ---
 

@@ -85,8 +85,10 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-Telegram / WhatsApp / Signal in one package — peer-to-peer, encrypted messaging
-with no back-end server. Your messages go straight to the other side.
+Telegram / WhatsApp / Signal in one package.
+
+- **Peer-to-peer** — encrypted messaging with no back-end server; your messages
+  go straight to the other side.
 
 ---
 
@@ -159,7 +161,7 @@ app.
 
 ---
 
-# First run
+## First run
 
 - **macOS:** Right-click the `.dmg` and choose **Open** to bypass Gatekeeper.
 - **Linux AppImage:** `chmod +x messaging.AppImage && ./messaging.AppImage`

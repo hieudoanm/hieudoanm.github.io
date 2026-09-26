@@ -85,8 +85,12 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-A pocket-sized SQL studio — browse schemas, write queries, inspect ER diagrams,
-and manage SQLite databases right from your phone or desktop.
+A pocket-sized SQL studio.
+
+- Browse schemas.
+- Write queries.
+- Inspect ER diagrams.
+- Manage SQLite databases right from your phone or desktop.
 
 ---
 
@@ -183,7 +187,7 @@ Mock in-browser Redis engine, consistent with the offline-first SQLite path. See
 
 ---
 
-# First run
+## First run
 
 - **macOS:** Right-click the `.dmg` and choose **Open** to bypass Gatekeeper.
 - **Linux AppImage:** `chmod +x database.AppImage && ./database.AppImage`

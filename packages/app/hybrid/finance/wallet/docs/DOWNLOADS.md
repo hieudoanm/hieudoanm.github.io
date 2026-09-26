@@ -84,8 +84,13 @@ See [PACKAGING](PACKAGING) for per-platform build checklists and
 
 ## About
 
-A dead-simple Momo / Techcombank-style mobile banking app — track your balance,
-move money, split bills, and keep an eye on budgets from any device.
+A dead-simple Momo / Techcombank-style mobile banking app that runs on any
+device.
+
+- Track your balance.
+- Move money.
+- Split bills.
+- Keep an eye on budgets.
 
 ---
 
@@ -169,7 +174,7 @@ Everything you need to manage money without the bloat.
 
 ---
 
-# First run
+## First run
 
 - **macOS:** Right-click the `.dmg` and choose **Open** to bypass Gatekeeper.
 - **Linux AppImage:** `chmod +x wallet.AppImage && ./wallet.AppImage`
